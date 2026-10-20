@@ -1368,7 +1368,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   and with the dependence as it was the formation ends, unseen by every member coupled only into
   the family. In balanced steps raising the family is lowering the beyond with the loss, unit for
   unit; restricted to outcomes keeping each dependence, the optimum takes exactly the slack.
-  Witnesses on `Diversion`: the drive, no room, a satisficing order, keeping.
+  Read off one step of exchange, where a part's members take at most their capacity, give only
+  to the family and gain nothing on it, the rest exchanging as it does, there is room above any
+  floors, and every optimum stands at each condition beyond at what the rest leaves less the
+  part's capacity there, or at its floor: no drive where no member may take, the drain exactly
+  where one may and something stands, and on a web a dependence beyond broken exactly where its
+  need exceeds what the rest leaves less the capacity.
+  Witnesses on `Diversion`: the drive, no room, a satisficing order, keeping, a taker of
+  capacity `k` whose optimum breaks the dweller exactly where `0 < k`.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
