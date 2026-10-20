@@ -1,0 +1,221 @@
+{
+ "level": {
+  "stocks": 26,
+  "F0": {
+   "stocks": 26,
+   "median_excess_reduction": -0.039640096792338056,
+   "quartiles": [
+    -0.05406968674890652,
+    -0.037254654581548786,
+    -0.0027468964046489935
+   ],
+   "median_residual_lag1_autocorrelation": -0.04004643038497439,
+   "verdict": "passed"
+  },
+  "F1": {
+   "origins": 370,
+   "stocks": 26,
+   "accuracy": {
+    "RM": 0.9,
+    "FR": 0.8837837837837837,
+    "MO": 0.7810810810810811
+   },
+   "median_abs_log_error": {
+    "RM": 0.029842161816728576,
+    "FR": 0.04910729349730427,
+    "RW": 0.1185401332131496
+   },
+   "stock_mean_accuracy": {
+    "RM": 0.8952068764568765,
+    "FR": 0.8830565268065268,
+    "MO": 0.7816247321055013
+   },
+   "verdict": "passed"
+  },
+  "F2": {
+   "origins": 266,
+   "stocks": 26,
+   "accuracy": {
+    "RM": 0.9097744360902256,
+    "FR": 0.8646616541353384,
+    "MO": 0.462406015037594
+   },
+   "median_abs_log_error": {
+    "RM": 0.07769868087528753,
+    "FR": 0.24671699573040018,
+    "RW": 0.3890733434767216
+   },
+   "stock_mean_accuracy": {
+    "RM": 0.9064241314241315,
+    "FR": 0.8759587634587634,
+    "MO": 0.4508019758019758
+   },
+   "verdict": "passed"
+  },
+  "F3": {
+   "below": 63,
+   "below_stocks": 18,
+   "above": 114,
+   "below_fell": 0.9365079365079365,
+   "below_fell_every_step": 0.8412698412698413,
+   "below_beyond_giving": 59,
+   "below_fr_called_fall": 0.9365079365079365,
+   "above_held": 1.0,
+   "above_fell": 0.12280701754385964,
+   "verdict": "passed"
+  },
+  "F4": {
+   "stocks": 26,
+   "negative_slopes": 15,
+   "share_negative": 0.5769230769230769,
+   "sign_test_p_two_sided": 0.557197093963623,
+   "note": "descriptive: a falling productivity with sticky catches raises the exploitation rate too"
+  }
+ },
+ "regimes": {
+  "stocks": 42,
+  "F0": {
+   "stocks": 42,
+   "median_excess_reduction": 0.01213153466178776,
+   "quartiles": [
+    -0.03552108679813479,
+    0.014352069339441192,
+    0.06656887867787228
+   ],
+   "median_residual_lag1_autocorrelation": 0.3228586453339142,
+   "verdict": "passed"
+  },
+  "F1": {
+   "origins": 645,
+   "stocks": 42,
+   "accuracy": {
+    "RM": 0.7410852713178294,
+    "FR": 0.7333333333333333,
+    "MO": 0.6697674418604651
+   },
+   "median_abs_log_error": {
+    "RM": 0.08123081415656132,
+    "FR": 0.0526617386682696,
+    "RW": 0.08962460232632642
+   },
+   "stock_mean_accuracy": {
+    "RM": 0.7379464450893022,
+    "FR": 0.721470460756175,
+    "MO": 0.6580919080919081
+   },
+   "verdict": "passed"
+  },
+  "F2": {
+   "origins": 477,
+   "stocks": 42,
+   "accuracy": {
+    "RM": 0.6750524109014675,
+    "FR": 0.7190775681341719,
+    "MO": 0.48846960167714887
+   },
+   "median_abs_log_error": {
+    "RM": 0.30023545932856666,
+    "FR": 0.3486045589893196,
+    "RW": 0.27920636367005514
+   },
+   "stock_mean_accuracy": {
+    "RM": 0.6740981240981241,
+    "FR": 0.7206048581048581,
+    "MO": 0.4815338761767333
+   },
+   "verdict": "failed"
+  },
+  "F3": {
+   "below": 93,
+   "below_stocks": 26,
+   "above": 245,
+   "below_fell": 0.6774193548387096,
+   "below_fell_every_step": 0.43010752688172044,
+   "below_beyond_giving": 92,
+   "below_fr_called_fall": 0.6666666666666666,
+   "above_held": 0.9918367346938776,
+   "above_fell": 0.31020408163265306,
+   "verdict": "failed"
+  },
+  "F4": {
+   "stocks": 42,
+   "negative_slopes": 12,
+   "share_negative": 0.2857142857142857,
+   "sign_test_p_two_sided": 0.007915897334896727,
+   "note": "descriptive: a falling productivity with sticky catches raises the exploitation rate too"
+  }
+ },
+ "lag": {
+  "stocks": 33,
+  "F0": {
+   "stocks": 33,
+   "median_excess_reduction": 0.43283094689889906,
+   "quartiles": [
+    0.38187541157433985,
+    0.43283094689889906,
+    0.4924286022024089
+   ],
+   "median_residual_lag1_autocorrelation": 0.3207861000935618,
+   "verdict": "failed"
+  },
+  "F1": {
+   "origins": 494,
+   "stocks": 33,
+   "accuracy": {
+    "RM": 0.9149797570850202,
+    "FR": 0.9109311740890689,
+    "MO": 0.7834008097165992
+   },
+   "median_abs_log_error": {
+    "RM": 0.04957609741773113,
+    "FR": 0.0443054654239044,
+    "RW": 0.1163082711760619
+   },
+   "stock_mean_accuracy": {
+    "RM": 0.9154810306548274,
+    "FR": 0.9158562693990502,
+    "MO": 0.7850799082082505
+   },
+   "verdict": "passed"
+  },
+  "F2": {
+   "origins": 362,
+   "stocks": 33,
+   "accuracy": {
+    "RM": 0.8977900552486188,
+    "FR": 0.7928176795580111,
+    "MO": 0.3729281767955801
+   },
+   "median_abs_log_error": {
+    "RM": 0.17264432591727835,
+    "FR": 0.26070266470718256,
+    "RW": 0.3775983445246105
+   },
+   "stock_mean_accuracy": {
+    "RM": 0.9065551451915088,
+    "FR": 0.797811531902441,
+    "MO": 0.36503404003404005
+   },
+   "verdict": "passed"
+  },
+  "F3": {
+   "below": 100,
+   "below_stocks": 30,
+   "above": 138,
+   "below_fell": 0.93,
+   "below_fell_every_step": 0.81,
+   "below_beyond_giving": 90,
+   "below_fr_called_fall": 0.9,
+   "above_held": 1.0,
+   "above_fell": 0.06521739130434782,
+   "verdict": "passed"
+  },
+  "F4": {
+   "stocks": 33,
+   "negative_slopes": 3,
+   "share_negative": 0.09090909090909091,
+   "sign_test_p_two_sided": 1.4011748135089874e-06,
+   "note": "descriptive: a falling productivity with sticky catches raises the exploitation rate too"
+  }
+ }
+}
