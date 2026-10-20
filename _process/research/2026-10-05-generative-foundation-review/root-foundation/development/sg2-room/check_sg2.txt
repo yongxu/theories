@@ -1,0 +1,19 @@
+<a id="room-check"></a>
+## A check: room read off the exchange (21 October 2026, SG2)
+
+An AI check (one session, 21 October), made while the Lean was written, of the premise SG1 left supplied ([optimum check](#optimum-check)): room, that lowering a condition beyond leaves what couples in room to rise. Thesis T3's standing named it a supplied premise, and chapter §8.1 item 10 kept its derivation from a law of exchange open. **Verdict: the mathematics is known. Zhuang and Hadfield-Menell's Theorem 1 assumes a resource constraint strictly increasing in each attribute, which is room supplied; saturation of capacity at an optimum is the saturated cut of a maximum flow and the binding constraints of a corner solution. What the spine's form adds is where the constraint comes from, checked: over one step of exchange, a part's members taking at most their capacity and giving no more than they take, the rest exchanging as it does, room holds with no further premise, every optimum of every rising order stands at each condition beyond at what the rest leaves less the part's capacity, and a condition from which the part may take nothing is untouched.** The drain at an optimum lies exactly where the part shares units with what lies beyond, by its capacity there; this is new as a statement on the spine, not as mathematics.
+
+| Known form | Where | Bearing |
+|---|---|---|
+| A continuous proxy strictly increasing in the referenced attributes, with a resource constraint strictly increasing in each attribute, drives every unmentioned attribute to its lower bound at any limit of the optimization path (Theorem 1) | Zhuang and Hadfield-Menell, "Consequences of Misaligned AI", NeurIPS 2020 ([arXiv 2102.03896](https://arxiv.org/abs/2102.03896), v1 HTML read for SG1) | Their constraint is room supplied; `Optimum.Above.room` derives it from conservation per member with capacity, and an attribute outside the constraint, outside their hypotheses, is untouched (`Optimum.optimum_untouched`) |
+| At a maximum flow every arc from the source side of a minimum cut to the sink side is saturated | Ford and Fulkerson, "Maximal flow through a network", Canadian Journal of Mathematics 8 (1956) (from memory) | The members' capacities are the arcs from what lies beyond into what couples in; their saturation at an optimum is `Optimum.Above.full` |
+| An optimum of a linear or monotone objective over capacity constraints lies at a vertex where the constraints through which it can still rise bind (corner solutions; the greedy solution of the fractional knapsack) | classical linear programming (for example Dantzig, *Linear Programming and Extensions*, 1963) (from memory) | The exact level beyond, `Optimum.optimum_beyond`: what stands less the capacity, or nothing |
+
+```text
+Result(s): new record room-read-off-the-exchange (SG2, new laws of Becoming.Optimum)
+Delta: room derived from one step of exchange; every optimum beyond exactly at what the rest leaves less the capacity; untouched where no units are shared; on a web the break exactly where the need exceeds that
+Supplied premises / correspondence: one step; the part and its capacities; the rest exchanging as it does; listings without repetition. Correspondence: Zhuang and Hadfield-Menell 2020; Ford and Fulkerson 1956; corner solutions of linear programs
+Evidence: Zhuang and Hadfield-Menell read for SG1; the others from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; one step with the rest fixed; capacities supplied; a course of steps and a responding rest not stated
+Integration: chapter §3.4, §7.1, T3's standing, §8.1 item 10 and the relation-to-known-results row 6
+```
