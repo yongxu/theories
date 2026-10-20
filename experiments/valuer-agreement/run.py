@@ -35,7 +35,7 @@ CONFIG = {
         "openai/gpt-6-luna": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": True},
         "anthropic/claude-haiku-5.5": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": False},
         "qwen/qwen3.8-flash": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": True},
-        "mistralai/mistral-small-2603": {"parallel": 4, "rpm": None, "json_mode": "json_schema", "seed": True},
+        "nvidia/nemotron-3.5-lightning": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": True},
     },
 }
 

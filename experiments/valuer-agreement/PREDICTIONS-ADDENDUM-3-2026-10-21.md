@@ -83,4 +83,12 @@ Unchanged: the run ends when every configured model has every presentation, or s
 
 ## Notes before the new models' first calls
 
-(None yet.)
+**21 October, 05:36 (+07): Mistral not served at a usable rate; Nemotron replaces it.**
+
+- *Mistral.* Standpoint 0 for the two new models started at about 05:04. Mistral replied four times in the first minute (all four valid). For the next thirty minutes it gave no reply: every attempt returned HTTP 429, "temporarily rate-limited upstream". Its only provider is Mistral, through a pool shared by every key without its own Mistral key ("add your own key to accumulate your rate limits"). At that pace its 1,920 calls cannot finish within the run's seven days.
+- *Rule applied.* That is a model not served to this account, judged from availability alone, so the rule above applies. The stage was stopped at 05:35. Mistral's four rows are kept and committed outside the analysed design, as Meta's are.
+- *Qwen* had finished standpoint 0 (112 valid of 112).
+- *Replacement.* The cheapest current model of a family not yet in the design is `nvidia/nemotron-3.5-lightning`: listed 11 Aug 2026 (UTC), $0.07 / $0.20 per million tokens, structured outputs, reasoning and seed, served by four providers. It replaces Mistral, with eight calls at a time like the others.
+- *Its check* ([`check.py`](check.py)'s test prompt, not the experiment's) returned a valid reply under the strict schema with low reasoning, served by CoreWeave. It took 53 prompt and 1,175 completion tokens (1,142 of them reasoning) and cost $0.00024.
+- *Valuers now.* DeepSeek, GLM, Qwen (China); GPT-6 luna, Claude Haiku, Nemotron (United States). That is six families from two regions; the European family is lost.
+- *What runs next.* Nemotron runs every standpoint, standpoint 0 first, under the same stop rule. The projection then counts Mistral's spend among the models outside the configuration. No judgment of any model has been read.
