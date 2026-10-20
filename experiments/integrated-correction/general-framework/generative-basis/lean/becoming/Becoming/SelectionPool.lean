@@ -51,6 +51,21 @@ theorem names.
   pool's members and each member's coupling of the two flows is decided, a pool whose selection
   separates the two flows has a member that couples them apart, lying beyond the closure
   (`Flow.separating_member_beyond`).
+* **Reading another's couplings.** A formation `o` reads `a`'s couplings where, beside its own,
+  it is coupled by level into every condition coupled into `a` (`Web.ReadsCouplings`). Two
+  histories `o` then couples alike at a step, `o` and `a` both couple alike there
+  (`Web.AlikeThrough.of_reads`), so every selection through the pooled coupling of the two is one
+  through `o`'s reading (`Web.SelectsThroughAll.reads`), and a law reading through a coupling
+  reads through every larger one (`ExchangeLaw.Through.widen`). `o`'s coupling closure lies
+  within the pool's of `o` and `a` (`Flow.withinCoupling_reads`), and is exactly that, the union
+  of the two closures, where `a` exchanges with a condition coupled into it
+  (`Flow.withinCoupling_reads_iff`; a closure read through another's steps,
+  `WithinClosure.of_reads`, `WithinClosureOf.to_reads`). So, with the rest of the exchange
+  fixed, a part beyond the pool's closure is selected alike by every selection through `o`'s
+  reading (`Flow.unselected_beyond_reads`); with the rest following a law reading through `o`'s
+  reading, an act differing only beyond the pool's closure, drawn through both flows, is too
+  (`Flow.act_unselected_reads`). Reading another's couplings reaches no further than pooling
+  with it.
 * **`Clearing`.** The source and the dweller follow one law in the cleared and the spared world,
   reading no level (`Clearing.restLaw`), and the clearer's act differs only on the habitat, which
   nothing within its coupling closure couples into (`Clearing.acts_alike`). So the pool of the
@@ -59,7 +74,10 @@ theorem names.
   its admission at the third step (`Clearing.pool_closes_gap`). The clearer's own part lies within
   its coupling closure, and the clearer couples the levels with and without it alike at every
   step, while the dweller separates them (`Clearing.within_closure_unseparated`): lying within a
-  pool's closure does not make a difference separated.
+  pool's closure does not make a difference separated. The source, reading the clearer's
+  couplings, selects the two worlds alike at every step (`Clearing.reading_clearer_unselected`);
+  reading the dweller's, it separates them through the dweller's admission at the third step
+  (`Clearing.reading_dweller_selects`).
 
 **Readings (the AI's).**
 - What a pool can select for or against is bounded by the union of its members' coupling
@@ -72,12 +90,19 @@ theorem names.
   formation whose support the act changes. Difference among the members is what a pool adds: a
   pool whose members all couple alike what one member couples alike selects no more than that
   member.
+- Read for oversight: an overseer reading a system's internal states, read as conditions the
+  system couples into, pools with the system. What the system's own act does beyond its coupling
+  closure, and beyond the overseer's, no reading of the system separates; it is separated by
+  reading a formation the act reaches, as reading the dweller does in `Clearing`.
 
 What is not derived: which formations pool, how a pool forms, lasts or resists capture; which law
 the rest follows, or that it reads through coupling (a hypothesis wherever it enters, as in
 `Becoming.SelectionGap`); balance; that a selection goes through a pool's coupling at all
 (supplied as `Web.SelectsThroughAll`); that a pool's selection corrects anything, which is
-selection, not response. The converse direction of a pool separating only what some member
+selection, not response; which conditions a reader can read, and that a system's internal states
+are conditions coupled into it (a correspondence, supplied); reading a formation's law, how it
+would exchange under histories not taken, rather than the levels of the conditions it couples
+into. The converse direction of a pool separating only what some member
 separates takes the members as listed and each member's coupling of the two histories as decided,
 hypotheses named where they enter. The selections here are of level histories up to a step; no
 law is stated of a claim about every later step, such as a formation's ending. The representation
@@ -339,6 +364,159 @@ theorem act_courses_unselected_pool {act act' : ExchangeLaw F C} {present : Nat 
 
 end PoolGap
 
+/-! ## Reading another's couplings -/
+
+namespace Web
+
+/-- `o` reads `a`'s couplings: beside the coupling by level `obs`, `o` is coupled by level into
+every condition coupled into `a`, by threshold or by level. -/
+def ReadsCouplings (W : Web F C) (obs : F → C → Prop) (o a : F) : F → C → Prop :=
+  fun g c => obs g c ∨ (g = o ∧ W.CoupledInto obs a c)
+
+variable {W : Web F C} {obs : F → C → Prop} {o a : F} {l l' : Nat → C → Nat} {t : Nat}
+  {select : (Nat → C → Nat) → Prop}
+
+/-- **What the reader couples alike, both couple alike.** Two histories alike at a step through
+`o`'s couplings, `o` reading `a`'s, are alike there through `o`'s own couplings and through `a`'s:
+`a`'s admission is fixed by the levels of what it requires, which `o` reads. -/
+theorem AlikeThrough.of_reads (alike : W.AlikeThrough (W.ReadsCouplings obs o a) o l l' t) :
+    W.AlikeThrough obs o l l' t ∧ W.AlikeThrough obs a l l' t :=
+  have same : ∀ c, W.CoupledInto obs a c → l t c = l' t c :=
+    fun c couples => alike.2 c (.inr ⟨rfl, couples⟩)
+  ⟨⟨alike.1, fun c observed => alike.2 c (.inl observed)⟩,
+   ⟨⟨fun admits c requires => Nat.le_trans (admits c requires)
+       (Nat.le_of_eq (same c (.inl ⟨t, requires⟩))),
+     fun admits c requires => Nat.le_trans (admits c requires)
+       (Nat.le_of_eq (same c (.inl ⟨t, requires⟩)).symm)⟩,
+    fun c observed => same c (.inr observed)⟩⟩
+
+/-- **Reading another's couplings pools them.** Every selection through the pooled coupling of `o`
+and `a` is a selection through `o`'s couplings with `o` reading `a`'s: what the pool separates,
+the reader separates. -/
+theorem SelectsThroughAll.reads
+    (through : W.SelectsThroughAll obs (fun x => x = o ∨ x = a) t select) :
+    W.SelectsThrough (W.ReadsCouplings obs o a) o t select :=
+  fun l l' alike => through l l' fun _ member s le => match member with
+    | .inl same => same ▸ (AlikeThrough.of_reads (alike s le)).1
+    | .inr same => same ▸ (AlikeThrough.of_reads (alike s le)).2
+
+end Web
+
+/-- A law reading through a coupling reads through every coupling holding it. -/
+theorem ExchangeLaw.Through.widen {law : ExchangeLaw F C} {W : Web F C}
+    {obs obs' : F → C → Prop} {part : F → Bool} (larger : ∀ g c, obs g c → obs' g c)
+    (through : law.Through W obs part) : law.Through W obs' part :=
+  fun h outside t l l' alike => through h outside t l l' (alike.of_obs larger)
+
+/-- **A closure read through another's steps is the pool's.** Where every step of `rel'` is a step
+of `rel`, or a step of `rel` from `a` taken at `o`, what lies within `o`'s closure under `rel'`
+lies within the closure of `o` and `a` under `rel`. -/
+theorem WithinClosure.of_reads {rel rel' : F → F → Prop} {o a g : F}
+    (split : ∀ g h, rel' g h → rel g h ∨ (g = o ∧ rel a h))
+    (within : WithinClosure rel' o g) : WithinClosureOf rel (fun x => x = o ∨ x = a) g :=
+  within _ (fun g h inside related => match split g h related with
+      | .inl step => closedUnder_withinClosureOf g h inside step
+      | .inr ⟨_, step⟩ => closedUnder_withinClosureOf a h
+          (WithinClosureOf.of_member (.inr rfl) (WithinClosure.refl a)) step)
+    (WithinClosureOf.of_member (.inl rfl) (WithinClosure.refl o))
+
+/-- Conversely, where `rel'` holds `rel` and `o` reaches `a` under it, the closure of `o` and `a`
+under `rel` lies within `o`'s under `rel'`. -/
+theorem WithinClosureOf.to_reads {rel rel' : F → F → Prop} {o a g : F}
+    (larger : ∀ g h, rel g h → rel' g h) (reaches : WithinClosure rel' o a)
+    (within : WithinClosureOf rel (fun x => x = o ∨ x = a) g) : WithinClosure rel' o g :=
+  match withinClosureOf_iff.mp within with
+  | ⟨_, .inl same, inside⟩ => same ▸ WithinClosure.mono larger inside
+  | ⟨_, .inr same, inside⟩ => reaches.trans (same ▸ WithinClosure.mono larger inside)
+
+namespace Flow
+
+variable {L L' : Flow F C} {W W' : Web F C} {obs : F → C → Prop} {o a : F}
+
+/-- What affects `g` through its couplings, `o` reading `a`'s, affects `g` through its own, or `g`
+is `o` and it affects `a` through `a`'s. -/
+theorem CoupledFrom.of_reads {g h : F}
+    (related : L.CoupledFrom W (W.ReadsCouplings obs o a) g h) :
+    L.CoupledFrom W obs g h ∨ (g = o ∧ L.CoupledFrom W obs a h) :=
+  match related with
+  | ⟨c, .inl depends, exchanges⟩ => .inl ⟨c, .inl depends, exchanges⟩
+  | ⟨c, .inr (.inl observed), exchanges⟩ => .inl ⟨c, .inr observed, exchanges⟩
+  | ⟨c, .inr (.inr ⟨same, couples⟩), exchanges⟩ => .inr ⟨same, c, couples, exchanges⟩
+
+/-- `o`'s coupling closure, `o` reading `a`'s couplings, lies within the pool's of `o` and `a`. -/
+theorem withinCoupling_reads {g : F}
+    (within : L.WithinCoupling W (W.ReadsCouplings obs o a) o g) :
+    L.WithinPoolCoupling W obs (fun x => x = o ∨ x = a) g :=
+  WithinClosure.of_reads (fun _ _ related => CoupledFrom.of_reads related) within
+
+/-- **Reading another's couplings joins its coupling closure.** Where `a` exchanges with a
+condition coupled into it, `o`'s coupling closure with `o` reading `a`'s couplings is exactly the
+pool's coupling closure of `o` and `a`, the union of their closures. -/
+theorem withinCoupling_reads_iff (acts : ∃ c, W.CoupledInto obs a c ∧ L.Exchanges a c) {g : F} :
+    L.WithinCoupling W (W.ReadsCouplings obs o a) o g ↔
+      L.WithinPoolCoupling W obs (fun x => x = o ∨ x = a) g :=
+  ⟨withinCoupling_reads,
+   WithinClosureOf.to_reads
+    (fun _ _ ⟨c, couples, exchanges⟩ => ⟨c, couples.imp id .inl, exchanges⟩)
+    (match acts with
+      | ⟨c, couples, exchanges⟩ => WithinClosure.of_rel ⟨c, .inr (.inr ⟨rfl, couples⟩), exchanges⟩)⟩
+
+/-- **A reader is blind beyond the pool's closure.** With the rest of the exchange fixed, where
+every member of a part lies beyond the pool's coupling closure of `o` and `a`, every selection
+through `o`'s couplings, `o` reading `a`'s, selects the levels with and without the part alike:
+reading `a`'s couplings reaches no further than pooling with `a`. -/
+theorem unselected_beyond_reads {part : F → Bool} {l : Nat → C → Nat}
+    (without : L.WithheldLevels part W l)
+    (balanced : ∀ t g c, L.WithinPoolCoupling W obs (fun x => x = o ∨ x = a) g →
+      W.CoupledInto obs g c → L.BalancesOn W [c] t)
+    (beyond : ∀ h, part h = true → ¬ L.WithinPoolCoupling W obs (fun x => x = o ∨ x = a) h)
+    {t : Nat} {select : (Nat → C → Nat) → Prop}
+    (through : W.SelectsThrough (W.ReadsCouplings obs o a) o t select) :
+    select W.level ↔ select l :=
+  unselected_beyond_coupling without
+    (fun t g c within couples => match couples with
+      | .inl depends => balanced t g c (withinCoupling_reads within) (.inl depends)
+      | .inr (.inl observed) => balanced t g c (withinCoupling_reads within) (.inr observed)
+      | .inr (.inr ⟨_, coupled⟩) => balanced t a c
+          (WithinClosureOf.of_member (.inr rfl) (WithinClosure.refl a)) coupled)
+    (fun h inPart within => beyond h inPart (withinCoupling_reads within))
+    (WithinClosure.refl o) through
+
+end Flow
+
+section Reading
+
+variable {law : ExchangeLaw F C} {L L' : Flow F C} {W W' : Web F C} {obs : F → C → Prop}
+  {part : F → Bool} {o a : F} {select : (Nat → C → Nat) → Prop}
+
+/-- **A reader misses an act beyond both closures.** Let the rest follow one law reading through
+the couplings with `o` reading `a`'s (a law reading through `obs` does, `ExchangeLaw.Through.widen`),
+in two balanced flows with the same formations present, starting alike, and let the part's act
+differ only beyond the pool's coupling closure of `o` and `a`, drawn through both flows. Then every
+selection through `o`'s couplings, `o` reading `a`'s, selects the two flows alike. -/
+theorem Flow.act_unselected_reads (through : law.Through W (W.ReadsCouplings obs o a) part)
+    (follows : L.Follows law part W.level) (follows' : L'.Follows law part W'.level)
+    (balances : L.Balances W) (balances' : L'.Balances W')
+    (present : ∀ t, L.present t = L'.present t) (start : ∀ c, W.level 0 c = W'.level 0 c)
+    (acts : L.ActsAlikeOnPoolCoupled L' W obs part (fun x => x = o ∨ x = a))
+    {t : Nat} (selects : W.SelectsThrough (W.ReadsCouplings obs o a) o t select) :
+    select W.level ↔ select W'.level :=
+  Flow.act_unselected_of_coupled through follows follows' balances balances' present start
+    (fun h inPart t c ⟨g, within, couples⟩ =>
+      have pooled : WithinClosureOf (L.CoupledFromEither W L' obs) (fun x => x = o ∨ x = a) g :=
+        WithinClosure.of_reads (fun _ _ related => match related with
+          | .inl step => (Flow.CoupledFrom.of_reads step).imp .inl fun ⟨same, s⟩ => ⟨same, .inl s⟩
+          | .inr step => (Flow.CoupledFrom.of_reads step).imp .inr fun ⟨same, s⟩ => ⟨same, .inr s⟩)
+          within
+      match couples with
+      | .inl depends => acts h inPart t c ⟨g, pooled, .inl depends⟩
+      | .inr (.inl observed) => acts h inPart t c ⟨g, pooled, .inr observed⟩
+      | .inr (.inr ⟨_, coupled⟩) => acts h inPart t c
+          ⟨a, WithinClosureOf.of_member (.inr rfl) (WithinClosure.refl a), coupled⟩)
+    (WithinClosure.refl o) selects
+
+end Reading
+
 /-! ## Witness: pooling with the dweller in `Clearing` -/
 
 namespace Clearing
@@ -464,6 +642,46 @@ theorem within_closure_unseparated :
    fun t _ through => through _ _ (withheld_alike_for_clearer t),
    fun _ member _ le => Web.admission_separates_all member le
      fun same => unsupported_with 0 (same.mpr (admitted_without withheld 2))⟩
+
+/-- **Reading the actor does not reach what it misses.** The source, reading the clearer's
+couplings, follows with the dweller the rest's law, which reads no level, and the clearer's act
+differs only on the habitat, which no member of the pool of the source and the clearer couples
+into. So every selection through the source's couplings, the source reading the clearer's,
+selects the cleared and the spared world alike at every step (`Flow.act_unselected_reads`), while
+the dweller is admitted at the third step in the spared world and not in the cleared one. -/
+theorem reading_clearer_unselected :
+    (∀ t select,
+        web.SelectsThrough (web.ReadsCouplings thresholdOnly .source .clearer) .source t select →
+          (select web.level ↔ select sparedWeb.level)) ∧
+      web.Admits (sparedWeb.level 2) 2 .dweller ∧ ¬ web.Admits (web.level 2) 2 .dweller :=
+  ⟨fun _ _ selects => Flow.act_unselected_reads (law := restLaw) (o := .source) (a := .clearer)
+      (fun _ _ _ _ _ _ _ => ⟨rfl, rfl⟩)
+      rest_follows rest_follows_spared balances spared_balances (fun _ => rfl) start_alike
+      (fun h inPart _ c ⟨_, within, couples⟩ => match h, inPart with
+        | .clearer, _ =>
+          match c, couples_resource (within clearerSide clearerSide_closed_either
+              (fun f member => match f, member with
+                | .source, _ => trivial
+                | .clearer, _ => trivial
+                | .dweller, .inl no => (nomatch no)
+                | .dweller, .inr no => (nomatch no))) couples with
+          | _, rfl => ⟨rfl, rfl⟩
+        | .source, no => (nomatch no)
+        | .dweller, no => (nomatch no))
+      selects,
+   dweller_spared, unsupported_with 0⟩
+
+/-- **Reading the formation the act ends separates.** The dweller's admission at the third step is
+a selection through the source's couplings with the source reading the dweller's
+(`Web.SelectsThroughAll.reads`); it holds in the spared world and fails in the cleared one. -/
+theorem reading_dweller_selects :
+    web.SelectsThrough (web.ReadsCouplings thresholdOnly .source .dweller) .source 2
+        (fun l => web.Admits (l 2) 2 .dweller) ∧
+      web.Admits (sparedWeb.level 2) 2 .dweller ∧ ¬ web.Admits (web.level 2) 2 .dweller :=
+  ⟨Web.SelectsThroughAll.reads
+      (Web.SelectsThrough.all (g := Formation.dweller) (.inr rfl)
+        (Web.admits_through (Nat.le_refl 2))),
+   dweller_spared, unsupported_with 0⟩
 
 end Clearing
 

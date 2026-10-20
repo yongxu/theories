@@ -1364,8 +1364,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   exchange reading through coupling and a pool's act differs only beyond the pool's coupling
   closure, every selection through the pooled coupling of a group within the closure selects the
   flows with and without the act alike, and a formation whose admission the act changes lies
-  beyond the closure and separates the two through every pool holding it. In `Clearing`, pooling
-  with the dweller closes the clearer's gap.
+  beyond the closure and separates the two through every pool holding it. A formation reading
+  another's couplings, coupled by level into everything the other couples into, selects through
+  at least the pooled coupling of the two, and its coupling closure is the pool's where the other
+  exchanges with a condition coupled into it, so it is blind beyond the union of the two closures:
+  reading another's couplings reaches no further than pooling with it. In `Clearing`, pooling
+  with the dweller closes the clearer's gap; reading the clearer's couplings does not, and reading
+  the dweller's does.
 * `Becoming.PoolResponse` (L1): what a pool's acts respond to. Where a law of exchange reads
   through the coupling of each formation outside a part, a selection through the acts of a group
   outside it is a selection through the group's pooled coupling, and what the pool's acts

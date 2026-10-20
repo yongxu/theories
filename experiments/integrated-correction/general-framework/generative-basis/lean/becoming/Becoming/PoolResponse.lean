@@ -97,8 +97,9 @@ wherever it enters); that a pool's response corrects anything, or which response
 formations pool, or how a pool forms, lasts or resists capture; that the law marking a formation's
 class is feasible (it takes one unit of each condition whatever stands). The exactness takes the
 coupling classes as decided and a condition to exchange with, hypotheses named where they enter.
-Members coordinate only through conditions they couple into: a member's law reading another's
-coupling directly is not treated. The representation commits to discrete steps and natural
+Members coordinate only through conditions they couple into: a member reading another's coupling
+is coupled by level into what the other couples into, which `Becoming.SelectionPool` shows is
+pooling with it (`Web.ReadsCouplings`, `Flow.withinCoupling_reads_iff`). The representation commits to discrete steps and natural
 amounts. No ethical predicate, ranking or axiom occurs.
 -/
 
