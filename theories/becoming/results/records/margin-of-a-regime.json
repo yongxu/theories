@@ -104,8 +104,13 @@
   ],
   "does_not_show": [
     {
-      "en": "How giving depends on the draw, or that a system's giving is read off its level within a regime: MQ1 and MQ2 measured both on Dai et al.'s yeast; neither is a theorem.",
-      "zh": "所给怎样依赖于汲取，或某系统在一个体制内的所给读自其水平：MQ1 与 MQ2 在 Dai 等的酵母上测得两者；两者都不是定理。",
+      "en": "How giving depends on the draw, or that giving is read off the level within a regime: both are premises, measured in yeast, not theorems.",
+      "zh": "所给怎样依赖于汲取，或所给在一个体制内读自水平：两者都是前提，在酵母上测得，不是定理。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the regime's point predicts a field system: in 113 assessed fish stocks giving persisted beyond what the level gives, and the frozen rest forecast better over one to five years.",
+      "zh": "体制的点能预测野外系统：在 113 个经评估的鱼类种群中，所给的持续超出水平所给，一至五年内冻结其余预测得更好。",
       "kind": "scope"
     },
     {
@@ -145,12 +150,12 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T135509.239302Z）：Becoming.RegimeMargin 的 49 项声明（36 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 270 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A frozen test of a draw-dependent giving law on data not yet read; the join to Flow.Balances; the fold over Archimedean amounts; several conditions coupled; an independent review.",
-    "zh": "在尚未读过的数据上对依赖汲取的所给规律做冻结检验；与 Flow.Balances 相接；阿基米德量上的折叠；多个相互耦合的条件；独立审查。"
+    "en": "A state of level and recent giving, frozen and tested on data not yet read (MQ3's level-plus-anomaly reading came between and did not beat the frozen rest); field series measured rather than assessed; the join to Flow.Balances; the fold over Archimedean amounts; several conditions coupled; an independent review.",
+    "zh": "由水平与近期所给构成的状态，在尚未读过的数据上冻结并检验（MQ3 的水平加异常的读法居于其间，未胜过冻结其余）；测量而非评估得到的野外序列；与 Flow.Balances 相接；阿基米德量上的折叠；多个相互耦合的条件；独立审查。"
   },
   "correspondence": {
-    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. MQ1 (study section 253) measured each law in a simulated Allee yeast and in a gridworld; MQ2 (section 266) found on real yeast that the need predicted from a fitted growth map separates fates in held-out regimes, and that giving falls with the draw.",
-    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合损害的超可加即凹的增函数更新之逆的凸性。MQ1（研究第 253 节）在模拟的 Allee 酵母与网格世界中测量了每条规律；MQ2（第 266 节）在真实酵母上发现，由拟合的生长映射预测的需求在留出体制中区分命运，且所给随汲取下降。"
+    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS).",
+    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合损害的超可加即凹的增函数更新之逆的凸性。每条规律都在模拟的 Allee 酵母与网格世界中测量过，这一步又以冻结的预测在 Dai 等的真实酵母与 RAM Legacy 种群评估数据库 v4.66 上检验过；已评估种群中生产力的体制转换是已知的（Vert-pre 等 2013，PNAS）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
   "aliases": [
@@ -255,7 +260,7 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "380bac0d96df55f79fae4596bba253c3de070cf65701be7fb202a152b0382026"
+      "sha256": "42717597f21a5a7dab0441d6f063f74b9f85b21bbb0bd357341f016956f150a6"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
@@ -276,6 +281,10 @@
     {
       "en": "20 October 2026: added (RM1), the margin with the condition's own giving read off its level, after MQ1 found the frozen-rest margin an identity on measured data; comparisons across draws take one giving law per draw after MQ2; study section 270.",
       "zh": "2026年10月20日：新增（RM1），条件自身的所给读自其水平时的余量，此前 MQ1 发现冻结其余的余量在测量数据上是恒等式；研究第 270 节。"
+    },
+    {
+      "en": "20 October 2026: MQ3 (study section 272), a frozen field test on 113 assessed fish stocks, failed every verdict; the premise that giving is read off the level is recorded as false there over one to five years, and the next step names a state of level and recent giving. MQ1 (section 253) and MQ2 (section 266) are the earlier measurements.",
+      "zh": "2026年10月20日：MQ3（研究第 272 节），在 113 个经评估鱼类种群上的冻结野外检验，每项判定都未通过；所给读自水平这一前提记为在那里一至五年内不成立，下一步指向由水平与近期所给构成的状态。"
     }
   ]
 }

@@ -14,8 +14,9 @@ Thermodynamics became more than formal when temperature and heat became measured
 | [run.py](run.py), [analyze.py](analyze.py) | Frozen configurations and verdict rules |
 | [yeast_data.py](yeast_data.py), [synth_null.py](synth_null.py), [posthoc_data.py](posthoc_data.py) | D1-D2 (and D1′, D2′) on the real data; the synthetic null; the post-hoc floor analysis (not a verdict) |
 | [PREDICTIONS-2026-10-20-MQ2.md](PREDICTIONS-2026-10-20-MQ2.md), [mq2.py](mq2.py), [posthoc_mq2.py](posthoc_mq2.py) | MQ2: the equation of state fitted on four dilution factors and tested on held-out regimes (four DFs, the salt shock, the indicator experiment). Frozen at `6deda4fb7` with the numerical predictions in `results/mq2/fit.json`, before any held-out value was read (`refs/salvage/mq2-freeze`; on main `5cf9e9e9d`); post-hoc analyses (not verdicts) |
+| [PREDICTIONS-2026-10-20-MQ3.md](PREDICTIONS-2026-10-20-MQ3.md), [mq3.py](mq3.py), [ram_read.py](ram_read.py), [posthoc_mq3.py](posthoc_mq3.py) | MQ3: the regime's step in the field, on 113 assessed fish stocks of the RAM Legacy database, against the frozen-rest reading. Frozen at `13af39133` with the presence-only layout and synthetic dry runs, before any time-series value was read (`refs/salvage/mq3-freeze`; on main `9e2e8ec2a`); post-hoc analyses (not verdicts) |
 | [calibrate_yeast.py](calibrate_yeast.py), [calibrate_learners.py](calibrate_learners.py) | Test bed A's calibration (before the freeze); the post-hoc learner calibration on the reference variant (after round 1) |
-| [results/](results/) | Round 1 (`*.json`, `VERDICTS.json`), round 2 (`round2/`), real data (`data/`: `VERDICTS-data.json`, the null, the post-hoc floor), `FROZEN-AT` |
+| [results/](results/) | Round 1 (`*.json`, `VERDICTS.json`), round 2 (`round2/`), real data (`data/`: `VERDICTS-data.json`, the null, the post-hoc floor), MQ2 (`mq2/`), MQ3 (`mq3/`), `FROZEN-AT` |
 
 To reproduce (Python 3.11, standard library only, CPU; about 13 minutes over 12 cores, almost all of it test bed B's learners):
 
@@ -37,6 +38,12 @@ MQ2 needs the three archives extracted, each in its own directory:
 
 ```bash
 python3 -I mq2.py fit /path/to/bifurcation && python3 -I mq2.py test /path/to/bifurcation /path/to/saltshock /path/to/indicator
+```
+
+MQ3 needs `RAMLDB v4.66.zip` (Zenodo record 14043031, CC-BY-4.0; md5 `ed6d7cd3f7da1fdcbc60015c3d65014b`) extracted outside the repository:
+
+```bash
+python3 -I mq3.py test '/path/to/RAMLDB v4.66/Excel/RAMLDB v4.66 (assessment data only).xlsx'
 ```
 
 ## The reading that sets what can be tested
@@ -120,6 +127,49 @@ The class is Dai et al.'s two-phase growth, against a logistic no-need null. The
 
 For the theory: the margin is a measured equation of state for the need, across held-out regimes of one experiment. But the renewal curve is a function of the regime, the draw included, not of the level alone. The draw does more than remove: it lowers what is given back at the same level. Read in Lean terms, giving depends on the level and the standing draw, so a regime's need rises faster with the draw than removal alone accounts for. The margin-of-a-regime core module (board item RM1, `Becoming.RegimeMargin`, being built) should allow this.
 
+## MQ3: the margin of a regime in the field
+
+Board item MQ3, 20 October 2026; study section 272. RM1 put the regime's step on the spine (`Becoming.RegimeMargin.step g H x = (x - H) + g (x - H)`). MQ3 reads it in a fishery:
+- the year's catch is the draw;
+- the escapement E = TB − C is what is left;
+- the observed surplus production SP_t = TB_{t+1} − E_t is the giving.
+
+A giving law g(E) = aE + bE² (through the origin) is fitted on each stock's first 60% of years and tested on the rest. It competes with the theory's own frozen-rest reading (giving held at its last observed value), with momentum and with persistence.
+
+The data are the RAM Legacy Stock Assessment Database v4.66, with TB and catch in tonnes from each stock's most recent assessment, over at least 25 consecutive years. The stocks fall into three groups:
+- 113 primary stocks (age- or length-structured, integrated and VPA assessments);
+- 22 production-model assessments as a positive control;
+- 52 of unknown method.
+
+Rules, code, a presence-only layout and synthetic dry runs were committed before any value was read. The dry runs showed the rules pass when giving is read off the level and fail under productivity regimes.
+
+| Prediction (primary group) | Result |
+|---|---|
+| F0: last year's escapement adds < 0.10 of the residual variance beyond chance | **failed**: median 0.22; residual lag-1 autocorrelation 0.55 |
+| F1: one year ahead, the regime margin calls TB's direction at ≥ 0.60 and better than the frozen rest and momentum | **failed**: 0.64 against 0.77 and 0.75 (2,483 origins) |
+| F2: five years ahead, better direction and smaller log error than the frozen rest and persistence | **failed**: 0.62 against 0.68 (momentum 0.61); median log error 0.30 against 0.19 and 0.19 |
+| F3: under a held catch, ≥ 80% below the regime's point fall and ≥ 90% above hold | **failed**: 63% of 754 below fell (43% at every step); 99.5% of 425 above held |
+| F4 (descriptive): giving at equal escapement against the recent exploitation rate | rises with it in 76 of 113 stocks (p = 0.0003), the opposite of MQ2's direction |
+
+The control and the unknown-method group fail the same way. In the control the frozen rest scores 0.82 (one year) and 0.73 (five years), against the regime margin's 0.63 and 0.60.
+
+**Post hoc** ([`posthoc_mq3.py`](posthoc_mq3.py), [`results/mq3/posthoc-mq3.json`](results/mq3/posthoc-mq3.json), not verdicts):
+- **In sample.** Fitted on every year, the level law still loses to the frozen rest: 0.68 against 0.77 at one year; at five years 0.67 against 0.68, with log error 0.21 against 0.19.
+- **Inside the training range.** It also loses inside the training range of escapement, so neither extrapolation nor a change across the split explains the failure.
+- **Other readings.**
+  - Refitting at every origin does not help.
+  - The level law plus a persisting anomaly comes in between.
+  - Giving read off TB before the draw (the usual production-model order) changes little out of sample.
+- **The regime point.** Below the regime's point but within giving, 57% of held-catch episodes fell, so the point does not separate fates.
+
+**What it says.** In assessed fish stocks, giving is not read off the level over one to five years. The stock's state carries its recent giving, and the frozen-rest reading is the better forecast because giving persists. MQ1 had found that same reading to be accounting on a model. So the regime margin is a measured state quantity in the lab (MQ2: the need of held-out regimes) but not in these field data. RM1's premise, "giving a function of what is left, within a regime", fails where the regime itself moves on the forecast's timescale.
+
+Two things limit the reading:
+- **Assessed biomass is a model output.** The test years are held out from the giving law's fit, not from the assessment, and smoothed recruitment deviations favour persistence.
+- **The control failed too.** So the frozen reading (draw first, quadratic) does not recover even a production model's dynamics out of sample.
+
+F4's sign differs from yeast. Giving rises with recent exploitation, which fits compensation through a younger stock and also fits assessment artefacts; these data cannot separate the two.
+
 ## Limits
 
-Test bed A is a simulation: the parameters are set from the paper's reported facts, not its table S1. Near the fold the model's fluctuations (CV 0.06 at DF 1400) are below the paper's (about 0.2). The culture volume is assumed. The hidden lag state of A1m is invented to give the test something to detect, not measured biology. Test bed B is deterministic and small (14 cells, horizon 45, two lawn cells). Its best responses are exact, and its learners are tabular with modest training. B6's environment did not create the end-of-coupling situation for the best response. On the real data, the population layout (same plate position = same population across days) is an assumption read from the files, since the README PDFs were not downloaded. D2's measurement floor was misjudged before the run, and the floor of 0.01 is post hoc in MQ1 (pre-registered in MQ2). MQ2's held-out bifurcation DFs had been read in MQ1, and the masked layouts of the salt-shock and indicator files showed exponent signs (disclosed in the MQ2 freeze). The salt-shock column order (DF 250, 500, 750, 825) is read from the paper's figure legend, and its day-5 reading is assumed to be the first after the shock day. Day 9 is only four days after the shock, too short to settle fates near the need. The two-phase class is Dai et al.'s. Their own full-diagram fit (table S1) was not available for comparison.
+Test bed A is a simulation: the parameters are set from the paper's reported facts, not its table S1. Near the fold the model's fluctuations (CV 0.06 at DF 1400) are below the paper's (about 0.2). The culture volume is assumed. The hidden lag state of A1m is invented to give the test something to detect, not measured biology. Test bed B is deterministic and small (14 cells, horizon 45, two lawn cells). Its best responses are exact, and its learners are tabular with modest training. B6's environment did not create the end-of-coupling situation for the best response. On the real data, the population layout (same plate position = same population across days) is an assumption read from the files, since the README PDFs were not downloaded. D2's measurement floor was misjudged before the run, and the floor of 0.01 is post hoc in MQ1 (pre-registered in MQ2). MQ2's held-out bifurcation DFs had been read in MQ1, and the masked layouts of the salt-shock and indicator files showed exponent signs (disclosed in the MQ2 freeze). The salt-shock column order (DF 250, 500, 750, 825) is read from the paper's figure legend, and its day-5 reading is assumed to be the first after the shock day. Day 9 is only four days after the shock, too short to settle fates near the need. The two-phase class is Dai et al.'s. Their own full-diagram fit (table S1) was not available for comparison. MQ3's field series are assessment outputs, not measurements; most of the database (stocks with spawning biomass only) is not used; one giving class and one split were frozen.

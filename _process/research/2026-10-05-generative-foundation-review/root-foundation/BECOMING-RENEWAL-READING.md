@@ -11595,3 +11595,70 @@ Output → input: a growth along Flow.GrownBy within one world can now be compar
 - **The chain asks nothing of activity.** The stretch uses `Linked`, as tenure does in R50, so a formation admitted but inactive is still read through the continuation; a continuation that should follow activity says so in its relation.
 
 **Self-review.** Near-definitional, like R47, of which it is the derived-reading counterpart within one unfolding. Its use is that item 5's "reading derived from the course" now has its formal statement, and that `Bud` makes exact why counting new kinds depends on what is read as continuing what.
+
+## 272. The margin of a regime in the field (MQ3)
+
+```text
+Result(s): none new about the unfolding; a frozen field test of Becoming.RegimeMargin's step on the RAM
+       Legacy Stock Assessment Database v4.66 (assessment data only), rules, code and dry runs committed
+       before any time-series value was read (freeze 13af39133, on main 9e2e8ec2a, kept as
+       refs/salvage/mq3-freeze); every verdict kept. All four verdicts failed.
+Delta: MQ2 (section 266) found on yeast that a giving law fitted on some regimes predicts the need of
+       held-out ones; RM1 (section 270) put the regime's step on the spine. MQ3 reads the step in a
+       fishery: the catch is the draw, the escapement E = TB - C is what is left, the observed surplus
+       production SP_t = TB_{t+1} - E_t is the giving. A giving law g(E) = aE + bE^2 (through the
+       origin) is fitted on each stock's first 60% of years and tested on the rest, against the theory's
+       own frozen-rest reading (giving held at its last observed value, Flow.WithheldLevels as a
+       forecast), momentum and persistence. 113 primary stocks (age-, length-structured, integrated and
+       VPA assessments, 25 or more consecutive years of TB and catch in tonnes from one assessment),
+       22 production-model assessments as a positive control, 52 of unknown method.
+Premises / bridges: the assessment's biomass and catch read as the condition's level and draw (model
+       outputs, not measurements); the draw taken first (RM1's order); the quadratic class; the split.
+Verdicts (primary): F0 failed: adding last year's escapement removes a median 0.22 of the residual
+       variance beyond chance (frozen bound 0.10); residual lag-1 autocorrelation 0.55. F1 failed: one
+       year ahead, the regime margin calls the direction of TB right at 0.64 of 2,483 origins, the
+       frozen rest at 0.77, momentum at 0.75. F2 failed: five years ahead, 0.62 against 0.68 and 0.61;
+       median |log error| 0.30 against the frozen rest's 0.19 and persistence's 0.19. F3 failed: under a
+       held catch (three years within a factor 1.25), of 754 episodes below the regime's point (75
+       stocks; 456 where the fitted law never meets the catch), 63% fell (frozen bound 80%), 43% at every
+       step; 99.5% of 425 above held. F4 (descriptive): giving at equal escapement rises with the recent
+       exploitation rate in 76 of 113 stocks (sign test p = 0.0003), the opposite of MQ2's direction.
+       The control and the unknown-method group fail the same way (control: frozen rest 0.82 and 0.73
+       against 0.63 and 0.60).
+Post hoc (not verdicts; posthoc_mq3.py): fitted on every year (in sample), the level law still loses
+       to the frozen rest (one year 0.68 against 0.77; five years 0.67 against 0.68, log error 0.21
+       against 0.19); within the training range of escapement it loses too (0.61 against 0.72; 0.59
+       against 0.63), so neither extrapolation nor a change across the split explains it. Refitting at
+       every origin does not help (0.66, 0.62). The level law plus a persisting anomaly (phi median
+       0.42) comes between (0.74, 0.66). The other order (giving read off TB before the draw, the usual
+       production-model order) changes little out of sample; in sample it ties the frozen rest (0.68,
+       log error 0.19) and in the control beats its log error (0.13 against 0.14). Below the regime's
+       point but within giving, 57% of held-catch episodes fell, so the point does not separate fates.
+Evidence: experiments/margin-measured (PREDICTIONS-2026-10-20-MQ3.md, mq3.py, ram_read.py,
+       posthoc_mq3.py, results/mq3: layout.json, dry-runs.json, VERDICTS-mq3.json, posthoc-mq3.json,
+       run.out; README section "MQ3"); data Zenodo 14043031 (CC-BY-4.0, md5
+       ed6d7cd3f7da1fdcbc60015c3d65014b), downloaded under Ren's approval of 20 October, extracted
+       outside the repository; standard library, CPU, under a minute.
+Boundary: assessed biomass is the output of each assessment's model fitted to all years, so the test
+       years are held out from the giving law's fit, not from the assessment; estimated recruitment
+       deviations are often autocorrelated and smoothed, which favours a persistence forecast. Catch
+       is taken over the year, not first. One class (quadratic through the origin) and one split were
+       frozen; the positive control also failed, so the reading is not shown to recover even a
+       production model's dynamics out of sample. Stocks with SSB only (no TB in tonnes), most of the
+       database, are not used. Closest prior results (from memory, not checked against the texts):
+       productivity regime shifts in assessed stocks are common and often dominate biomass-driven
+       production (Vert-pre, Amoroso, Jensen and Hilborn 2013, PNAS); depensation is rarely detected
+       (Myers, Barrowman, Hutchings and Rosenberg 1995, Science); constant-catch harvesting has an
+       unstable point (Beddington and May 1977, Science).
+Output -> input: in assessed fish stocks, giving is not read off the level at one to five years: the
+       condition's state carries its recent giving, and the frozen-rest reading, which MQ1 found to be
+       accounting on a model, is the better forecast there because giving persists. So the regime
+       margin is a measured state quantity in the lab (MQ2: the need of held-out regimes) and not in
+       these field data; RM1's premise "giving a function of what is left, within a regime" fails where
+       the regime itself moves on the forecast's timescale. The margin-of-a-regime record and chapter
+       section 8.7 now say so. Open: a state of level and recent giving, frozen and tested on data not
+       yet read (P4 points there but did not beat the frozen rest); the order of draw and giving read
+       per assessment; field series measured rather than assessed (survey biomass).
+```
+
+**Self-review.** The test had real stakes. The dry runs showed that the rules pass where giving is read off the level and fail under productivity regimes, and the field data behave like the second generator. The post hoc readings were chosen after the verdicts and change none of them; they rule out two easy explanations (extrapolation, the split) and leave a third that cannot be removed with these data: assessed biomass is itself a smoothed model output. The most informative number may be F4's sign. In yeast, giving at equal density fell with the draw (MQ2), but here it rises with the recent exploitation rate in two thirds of stocks. That fits compensation through a younger, faster-renewing stock, and it also fits assessment artefacts; the data cannot separate them.

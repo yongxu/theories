@@ -26,7 +26,8 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- How giving depends on the draw, or that a system's giving is read off its level within a regime: MQ1 and MQ2 measured both on Dai et al.'s yeast; neither is a theorem.
+- How giving depends on the draw, or that giving is read off the level within a regime: both are premises, measured in yeast, not theorems.
+- That the regime's point predicts a field system: in 113 assessed fish stocks giving persisted beyond what the level gives, and the frozen rest forecast better over one to five years.
 - Super-additivity for every concave giving law: the hypothesis is subadditivity above the need, and the whole numbers lose one unit.
 - The fold over the reals, or the other order of a step (giving before the draw): neither is stated.
 - That drawing beyond the margin is worse: these laws locate where a condition ends, and order nothing.
@@ -44,14 +45,14 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-A frozen test of a draw-dependent giving law on data not yet read; the join to Flow.Balances; the fold over Archimedean amounts; several conditions coupled; an independent review.
+A state of level and recent giving, frozen and tested on data not yet read (MQ3's level-plus-anomaly reading came between and did not beat the frozen rest); field series measured rather than assessed; the join to Flow.Balances; the fold over Archimedean amounts; several conditions coupled; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. MQ1 (study section 253) measured each law in a simulated Allee yeast and in a gridworld; MQ2 (section 266) found on real yeast that the need predicted from a fitted growth map separates fates in held-out regimes, and that giving falls with the draw.
+Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -78,6 +79,7 @@ Aliases: `margin of a regime`, `一个体制的余量`, `point of no return unde
 ### History
 
 - 20 October 2026: added (RM1), the margin with the condition's own giving read off its level, after MQ1 found the frozen-rest margin an identity on measured data; comparisons across draws take one giving law per draw after MQ2; study section 270.
+- 20 October 2026: MQ3 (study section 272), a frozen field test on 113 assessed fish stocks, failed every verdict; the premise that giving is read off the level is recorded as false there over one to five years, and the next step names a state of level and recent giving. MQ1 (section 253) and MQ2 (section 266) are the earlier measurements.
 
 </details>
 

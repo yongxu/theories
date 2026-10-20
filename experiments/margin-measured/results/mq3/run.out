@@ -1,0 +1,30 @@
+{
+ "stocks": {
+  "other": 52,
+  "primary": 113,
+  "control": 22
+ },
+ "verdicts": {
+  "primary": {
+   "F0": "failed",
+   "F1": "failed",
+   "F2": "failed",
+   "F3": "failed",
+   "F4": "reported"
+  },
+  "control": {
+   "F0": "failed",
+   "F1": "failed",
+   "F2": "failed",
+   "F3": "failed",
+   "F4": "reported"
+  },
+  "other": {
+   "F0": "failed",
+   "F1": "failed",
+   "F2": "failed",
+   "F3": "failed",
+   "F4": "reported"
+  }
+ }
+}
