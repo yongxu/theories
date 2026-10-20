@@ -9,8 +9,9 @@ Thesis T6's uncoupled side ([chapter](../../theories/becoming/chapters/THE-THEOR
 | [PREDICTIONS-2026-10-21-EW2.md](PREDICTIONS-2026-10-21-EW2.md) | Source, extraction and disclosure; scope from Saraux et al.'s (2021) consumption data; the layout; the stop rule and its best-case power; the test; verdicts V1-V2 and reading rules; dry runs and the first design's failed acceptance; limits. Frozen before any statistic of a field series was computed (`results/FROZEN-AT`) |
 | [ew2.py](ew2.py) | Extraction, presence-only layout, the generators and dry runs, the frozen test |
 | [power_bestcase.py](power_bestcase.py) | Step 1: the best-case power at the field's series lengths, which decided that a test could be supported |
+| [posthoc_ew2.py](posthoc_ew2.py) | After the run, not a verdict: the combined partial correlation and its 95% interval, from `test.json` alone |
 | [pdftext.js](pdftext.js) | Reads the SOM's text layer (macOS PDFKit) |
-| [results/](results/) | `power_bestcase.log`, `layout.json`, `dry.json`, `FROZEN-AT`; after the run, `test.json` |
+| [results/](results/) | `power_bestcase.log`, `layout.json`, `dry.json`, `FROZEN-AT` (the freeze, `44ced15e8`, landed on main before the run); after the run, `test.json` and `posthoc.json` |
 
 To reproduce (Python 3.11, standard library only; the dry runs take about three minutes over 12 cores):
 
@@ -34,4 +35,30 @@ python3 -I ew2.py test cury2011_som_data.csv
 
 ## Results
 
-Not yet run: the predictions are frozen and the test has not read the field series.
+Run once, after the freeze landed on main (`44ced15e8`), with nothing changed. Study section [289](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#289-early-warnings-before-seabird-breeding-failures-in-the-field-ew2).
+
+| Verdict | Statistic | Result |
+|---|---|---|
+| V1 | lag-1 autocorrelation of the prey's 8-year window before the year, given the level path; Benguela (14 years, 5 poor) and Røst (29 years, 10 poor) | **passed**: Z = 1.66, one-sided p = 0.048 ≥ 0.025; partial r 0.43 (Benguela), 0.26 (Røst) |
+| V2 | variance of the same window | **passed**: Z = 1.43, p = 0.076; partial r 0.40, 0.23 |
+
+**What the pass says.** At the frozen level, no information on the birds' poor years was found in the prey's statistics beyond the prey's level path, in the two stocks where the birds' feedback on the observed series is small. The pass is weak. Every estimate lies in the direction the refutation clause names. The combined partial correlation is 0.30 for autocorrelation (95% interval −0.06 to 0.59) and 0.26 for variance (−0.10 to 0.57), computed after the run from the frozen statistic (`posthoc_ew2.py`, not a verdict). The interval runs from no association to a partial correlation of about 0.6 between the poor years and the statistic. AR1's one-sided p would have been below 0.05 as a single test; the frozen familywise rule set 0.025 for each of two.
+
+**Reported only (`test.json`).**
+
+| Report | AR1: combined r (95% interval) | Variance |
+|---|---|---|
+| R1, no level adjustment | 0.23 (−0.10 to 0.52) | 0.10 (−0.23 to 0.42) |
+| R2, 6-year window | 0.30 (−0.04 to 0.57) | 0.27 (−0.07 to 0.55) |
+| R2, 10-year window | 0.01 (−0.39 to 0.40) | 0.19 (−0.23 to 0.54) |
+| R3, Benguela alone | 0.43 (−0.28 to 0.83) | 0.40 (−0.37 to 0.84) |
+| R3, Røst alone | 0.26 (−0.15 to 0.59) | 0.23 (−0.19 to 0.57) |
+| R3, Røst with its kittiwakes | 0.16 (−0.27 to 0.54) | 0.32 (−0.09 to 0.64) |
+| R3, Farallon (share unmeasured) | 0.12 (−0.46 to 0.63) | −0.04 (−0.58 to 0.53) |
+| R3, Shetland (the coupled case) | 0.01 (−0.55 to 0.57) | −0.04 (−0.63 to 0.58) |
+
+Three points. Adjusting for the level raised Røst's association (unadjusted r 0.08 for AR1, adjusted 0.26), so what the estimate carries is not the stock's decline. The 10-year window loses Røst's autocorrelation (−0.08) and keeps Benguela's. Shetland, where the seabirds take a large share and T6 forbids nothing, shows nothing, as do the Farallon birds.
+
+**Limits.** Two short series (14 and 29 usable years) and power about 0.7 only against an association explaining a quarter to a half of breeding success beyond the level. The draw is not adjusted for. The data are z-scores, and Røst's prey is an assessment output. Feedback cannot be seen by this design; that the birds take little was measured apart (Saraux et al. 2021). The frozen limits are in section 8 of the predictions.
+
+**Next.** The same frozen test on longer and unread series: Sydeman et al.'s breeding success to 2023 (BCO-DMO 985565) with the Benguela surveys, the Norwegian herring assessments and the Farallon juvenile rockfish index brought forward, with the catch as the draw. The design is fixed already; only the series and the dry runs' layout change.

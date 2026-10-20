@@ -757,3 +757,5 @@ Evidence: Cury et al. (with SOM), Saraux et al. and Burthe et al. read in full t
 Boundary: AI check, one session; the draw (catch) is not in the data; series are z-scored, short (14 and 29 usable years), partly assessment output; penguins' and Farallon birds' shares unmeasured
 Integration: experiments/break-warnings (frozen predictions, dry runs); results, study section and T6's evidence line follow the run
 ```
+
+**Outcome (after the run, 21 October).** Frozen and landed on main at `44ced15e8`, then run once. Both verdicts passed: lag-1 autocorrelation p = 0.048, variance p = 0.076, at 0.025 each. Every estimate lay in the refuting direction (combined partial correlation 0.30 and 0.26; 95% intervals −0.06 to 0.59 and −0.10 to 0.57), so the pass rules out little. T6 stays conjectured, with this pass recorded as one of low power ([experiment](../../../../experiments/break-warnings/README.md#results), [study §289](BECOMING-RENEWAL-READING.md#289-early-warnings-before-seabird-breeding-failures-in-the-field-ew2)).
