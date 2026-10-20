@@ -237,12 +237,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "9fb002c11cb180f95720060b9b4faac63eefa3ba9969b64de25596ae0954ecb3"
+      "sha256": "9d2ce69d0d7dd1eeab6f56e3f1305bee28eac4292e4ead3a93168b66797f65fb"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "1718cb973463da641e0ba8c019ddf63c0a74ff5318e2e5757f9179901070b17b"
+      "sha256": "f59b6d42a8f5220286b6d902babe26c3ca5a8002cbdf114a422faab71fd4f37a"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/Uses.lean",

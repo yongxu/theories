@@ -78,7 +78,7 @@ The accounting is a conservation law on a closed whole, as in material-flow and 
 - related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). The broken dependence lies on a condition no member couples into, so by the gap no selection through a member registers it.
 - related, not a proved adapter: [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md). What an optimum, not a rise, does beyond what couples in.
 
-**Used by:** [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md)
+**Used by:** [room-read-off-the-exchange](room-read-off-the-exchange.md) · [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md)
 
 <a id="sources--来源"></a>
 ### Sources

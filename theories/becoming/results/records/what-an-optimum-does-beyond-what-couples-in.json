@@ -108,8 +108,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Room derived from a law of exchange: which outcomes an actor's takes and gives make eligible, with the rest responding, is not stated; room is a hypothesis.",
-      "zh": "由交换之律导出余地：行动者的取与给、其余者的回应使哪些结果可选，未陈述；余地是假设。",
+      "en": "Room derived from a law of exchange: which outcomes an actor's takes and gives make eligible, with the rest responding, is not stated here; room is a hypothesis (derived for one step in room-read-off-the-exchange, SG2).",
+      "zh": "由交换之律导出余地：行动者的取与给、其余者的回应使哪些结果可选，此处未陈述；余地是假设。对其余者照常交换的一步，room-read-off-the-exchange 导出它（SG2）。",
       "kind": "scope"
     },
     {
@@ -150,8 +150,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T195445.913199Z）：Becoming.Optimum 的 39 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 283 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Room derived from a law of exchange, the actor's takes and gives with the rest responding; optima over a run, where the beyond renews from its own level; an independent review.",
-    "zh": "由交换之律导出余地，即行动者的取与给及其余者的回应；一段运行上的最优，其中之外依其自身水平更新；独立审查。"
+    "en": "Room over a course of steps, the actor choosing again at each with the rest responding (one step: room-read-off-the-exchange); optima over a run, where the beyond renews from its own level; an independent review.",
+    "zh": "一个过程中的余地，行动者每步重新选择、其余者回应（一步的情形：room-read-off-the-exchange）；一段运行上的最优，其中之外依其自身水平更新；独立审查。"
   },
   "correspondence": {
     "en": "Zhuang and Hadfield-Menell (NeurIPS 2020), Theorem 1: optimizing a proxy that references only some attributes drives the others to their lower bounds; here in discrete, conserved form over every order rising with what couples in, exact on any set of outcomes, with the degradation read as dependences broken. Mild optimization (Taylor 2016) is the satisficing witness: it neither drives nor protects. Reading (the AI's): blindness alone leaves the beyond unselected; with competition for the same units an optimum takes it to the floor.",
@@ -229,6 +229,13 @@
         "en": "Raising what couples in is paid from beyond; an optimum takes the beyond to the least level where that leaves room.",
         "zh": "升高耦合入者由之外支付；最优在留有余地时把之外压到最低水平。"
       }
+    },
+    {
+      "id": "room-read-off-the-exchange",
+      "detail": {
+        "en": "Derives the room this record supplies, for one step of exchange.",
+        "zh": "对一步交换导出本记录所给定的余地。"
+      }
     }
   ],
   "references": [
@@ -276,7 +283,7 @@
         "Becoming.Web.optimum_broken_iff",
         "Becoming.Web.optimum_ends_beyond"
       ],
-      "sha256": "a6ed5555f8f84446632f35a238d651bc55975e031f4983d73ef249bf94059fe3"
+      "sha256": "4bc270b4e4dbaa25c964018f70bf15e5e5011bcb317b03278f454456af9a5cfa"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
@@ -312,23 +319,29 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "02d63053f091dd8fa1a9020285684f453b525b0b9df065bf1582b0549bc86716"
+      "sha256": "9d2ce69d0d7dd1eeab6f56e3f1305bee28eac4292e4ead3a93168b66797f65fb"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
       "role": "integration",
-      "sha256": "77db53dac0aaac9352a0469d389cd491bed0b57f73552631a765d6bd6c4f0225"
+      "sha256": "91a5b3a1197868a4f3a655354720297be996b47179374b0d69143498953152fa"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "c14ca252f9ed8f35112b3c0c45fb44ea59a4f4746700562114ac4379cbad8d6c"
+      "sha256": "f59b6d42a8f5220286b6d902babe26c3ca5a8002cbdf114a422faab71fd4f37a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "role": "receipt",
+      "sha256": "045bda785197d01841e756765d5121bc11f9d61515be3e65cb4464c33d4a76ca",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T195445.913199Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -352,6 +365,10 @@
     {
       "en": "21 October 2026: added (SG1), what an optimum does beyond what couples in: the drive to the least level exactly where there is room, the breaks exactly those some outcome makes, the conservation identity and the slack under keeping; study section 283.",
       "zh": "2026年10月21日：新增（SG1），最优对耦合入者之外做什么：恰在有余地时压到最低水平，打断恰为某个结果所打断者，守恒等式与保持下的余量；研究第 283 节。"
+    },
+    {
+      "en": "21 October 2026, SG2: room derived for one step of exchange (record room-read-off-the-exchange, study section 288); the scope note and the next delta say so; this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG2：对一步交换导出余地（记录 room-read-off-the-exchange，研究第 288 节）；范围说明与下一步注明此事；本记录的定律及其陈述不变。"
     }
   ]
 }

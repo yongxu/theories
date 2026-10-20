@@ -1,0 +1,492 @@
+{
+  "schema_version": 2,
+  "id": "room-read-off-the-exchange",
+  "title": {
+    "en": "Room read off the exchange",
+    "zh": "从交换读出的余地"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-20T22:26:12+00:00",
+  "statement": {
+    "en": "Over one step of exchange, where a part's members take at most their capacity and give at most what they take, room holds; every optimum of every order rising with what couples in stands beyond at what the rest leaves less the part's capacity, lowering a condition just where the part has capacity.",
+    "zh": "一步交换中，部分的成员至多取其容量、所给不多于所取时，余地成立；每个随耦合入者升高的序的最优，在之外立于其余者所留减去容量处，部分无可取处不动。"
+  },
+  "laws": [
+    {
+      "en": "The outcomes open to a part across one step are the levels after every balanced step in which the formations outside the part exchange as they do and each member takes from each condition at most its capacity, gives only to the listed conditions and gives them no more than it takes from them; the step that happened is one, and what such a step takes from a condition is what the rest takes with at most the capacity.",
+      "zh": "部分跨一步可达的结果：凡部分之外的构成照常交换、每个成员从每个条件至多取其容量、只给所列条件且所给不多于所取的平衡步之后的水平；发生的那一步即其一；这样的步从一个条件所取，是其余者所取加至多容量。",
+      "declarations": [
+        "Becoming.Flow.restTaken",
+        "Becoming.Flow.restGiven",
+        "Becoming.Flow.capacity",
+        "Becoming.Flow.ActsWithin",
+        "Becoming.Flow.Outcome",
+        "Becoming.Flow.Outcome.of_balances",
+        "Becoming.Flow.capacity_eq_zero",
+        "Becoming.Flow.ActsWithin.taken_eq",
+        "Becoming.Flow.ActsWithin.given_eq",
+        "Becoming.Flow.ActsWithin.part_taken_le",
+        "Becoming.Flow.other_of_out",
+        "Becoming.total_split"
+      ]
+    },
+    {
+      "en": "A member with capacity to spare at a condition can take one more unit there and give it to a condition of the family, and a member giving a unit at a condition can give it to the family instead; either step stays within the part's capacity and balances into the transfer of one unit from that condition into the family.",
+      "zh": "在某条件上容量有余的成员可在那里多取一个单位并给予族中某个条件；在某条件上给出一个单位的成员可改给族；两种步都在部分的容量之内，并平衡成把一个单位从该条件移入族。",
+      "declarations": [
+        "Becoming.total_raise_at",
+        "Becoming.Flow.moveUnit",
+        "Becoming.Flow.redirect",
+        "Becoming.Flow.moveUnit_take",
+        "Becoming.Flow.moveUnit_give",
+        "Becoming.Flow.redirect_give",
+        "Becoming.Flow.moveUnit_taken_at",
+        "Becoming.Flow.moveUnit_taken_off",
+        "Becoming.Flow.moveUnit_given_at",
+        "Becoming.Flow.moveUnit_given_off",
+        "Becoming.Flow.redirect_given_at",
+        "Becoming.Flow.redirect_given_to",
+        "Becoming.Flow.redirect_given_off",
+        "Becoming.Flow.moveUnit_balances",
+        "Becoming.Flow.redirect_balances",
+        "Becoming.Flow.ActsWithin.moveUnit",
+        "Becoming.Flow.ActsWithin.redirect"
+      ]
+    },
+    {
+      "en": "Among the outcomes open to a part above any floors beyond, an outcome above another at a condition beyond is exceeded on the family by an outcome open to the part: under the other step some member takes more there or gives less there, and this step can move or redirect a unit into the family. Room holds with no premise beyond listings without repetition.",
+      "zh": "在部分可达、之外不低于任何底线的结果中，在之外某条件上高于另一结果者，在族上被一个部分可达的结果超过：另一步中某成员在那里取得更多或给得更少，本步即可把一个单位移入或改给族。余地成立，除列表无重复外不加前提。",
+      "declarations": [
+        "Becoming.Optimum.Above",
+        "Becoming.Optimum.transfer_above",
+        "Becoming.Optimum.Above.transfer",
+        "Becoming.Optimum.member_below",
+        "Becoming.Optimum.Above.room"
+      ]
+    },
+    {
+      "en": "Above its floor, at every step to an optimum of every order rising with the family, each member takes its whole capacity at a condition beyond and gives nothing there, so the optimum stands at its floor or at what the rest leaves less the capacity; with no floor, every optimum stands at each condition beyond at the level before with what the rest gives, less what it takes, less the part's capacity, or at nothing.",
+      "zh": "在底线之上，达到每个随族升高之序的最优的每一步，每个成员在之外条件上取其全部容量且不给予，故最优立于其底线，或立于其余者所留减去容量处；无底线时，每个最优在之外每个条件上立于先前水平加其余者所给、减其所取、减部分的容量处，或为零。",
+      "declarations": [
+        "Becoming.Optimum.Above.full",
+        "Becoming.Optimum.Above.floor_or_full",
+        "Becoming.Optimum.above_nothing",
+        "Becoming.Optimum.optimum_beyond"
+      ]
+    },
+    {
+      "en": "Where no member may take from a condition beyond, every optimum leaves it where the rest leaves it; an optimum lowers it below that exactly where the part has some capacity there and the rest leaves something there; on a web, a dependence beyond met at the step is broken exactly where its need exceeds what the rest leaves less the capacity.",
+      "zh": "没有成员可从之外某条件取时，每个最优把它留在其余者所留之处；最优使它低于此处，恰当部分在那里有容量且其余者在那里留有东西；在依存网上，该步被满足的之外依存被打断，恰当其需要超过其余者所留减去容量。",
+      "declarations": [
+        "Becoming.Optimum.optimum_untouched",
+        "Becoming.Optimum.optimum_lowers_iff",
+        "Becoming.sub_lt_self_iff",
+        "Becoming.Web.optimum_broken_iff_capacity"
+      ]
+    },
+    {
+      "en": "Witness on Diversion: a taker with capacity k at the source and none at the store draws k from the source into the store; for k at most two this is an optimum of the store's order among the outcomes open to it, and the dweller's dependence on the source at need two breaks exactly where k is positive.",
+      "zh": "Diversion 上的见证：在源有容量 k、在库无容量的取者，把 k 从源取入库；k 至多为二时，这是库的序在其可达结果中的最优，居住者以需要二对源的依存恰在 k 为正时被打断。",
+      "declarations": [
+        "Becoming.Optimum.Drain.takerPart",
+        "Becoming.Optimum.Drain.takerCap",
+        "Becoming.Optimum.Drain.drawing",
+        "Becoming.Optimum.Drain.before",
+        "Becoming.Optimum.Drain.drawnTo",
+        "Becoming.Optimum.Drain.drawnLevel",
+        "Becoming.Optimum.Drain.formations_distinct",
+        "Becoming.Optimum.Drain.store_source_distinct",
+        "Becoming.Optimum.Drain.drawing_within",
+        "Becoming.Optimum.Drain.drawing_optimum",
+        "Becoming.Optimum.Drain.drawing_broken_iff"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. One step; the part (a Boolean on formations) and its members' capacities; the family and the beyond listed apart without repetition, the family holding a condition; the formations taking part listed without repetition, those outside the part exchanging as they do; a member may give what it takes to any listed condition; for breaks, each condition beyond met at its need at the step; decidable equality.",
+      "zh": "不加公理。一步；部分（构成上的布尔值）与每个成员在每个条件上的容量；族与之外分开列出且无重复，族含一个条件；参与的构成列出无重复；部分之外的构成照常交换；成员可把所取给予任何所列条件；打断需之外每个条件在该步被以其满足的需要依存；构成与条件的相等可判定。"
+    },
+    {
+      "en": "That a given optimizer's order rises with just the couplings listed, and that its part's capacities are these, are supplied; the core asserts them of no actual optimizer.",
+      "zh": "某个优化者的序恰随所列耦合升高、其部分的容量即此，是给定的；核心不对任何实际的优化者断言它们。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "A course of steps: an optimizer choosing again at each step, the levels before moving with it, and a rest responding to the part (the pool laws) are not stated.",
+      "zh": "一个过程：优化者每步重新选择、先前水平随之变动、其余者回应部分（池的规律），均未陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "Capacities enter as supplied amounts, as the levels before do; a member giving only to some listed conditions lies outside the outcomes stated.",
+      "zh": "构成有何容量是给定的，不由构成之律导出；只能给予部分所列条件的成员不在其内。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the drain is a harm, or that a smaller capacity is better: no evaluation enters.",
+      "zh": "抽干是伤害、容量更小更好：没有评价进入。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Where the eligible outcomes are supplied otherwise, room can fail and the drive with it (Optimum.Drain.room_needed).",
+      "zh": "可选结果另行给定时，余地可以不成立，压低随之不成立（Optimum.Drain.room_needed）。",
+      "kind": "converse"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "detail": {
+        "en": "drawing 0: a taker with no capacity at the source; the store's optimum leaves the source at two and the dweller's dependence unbroken (Optimum.Drain.drawing_broken_iff at k = 0): no drive where no units are shared.",
+        "zh": "drawing 0：在源无容量的取者；库的最优把源留在二，居住者的依存不被打断（Optimum.Drain.drawing_broken_iff 于 k = 0）：不共享单位处没有压低。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T222228.243650Z): the 53 declarations Becoming.Optimum gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 288; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T222228.243650Z）：Becoming.Optimum 新增的 53 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 288 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Optima over a course of steps, the optimizer choosing again at each, with the rest responding and the beyond renewing; capacities from a law of the formations; an independent review.",
+    "zh": "一个过程上的最优：优化者每步重新选择，其余者回应，之外更新；由构成之律得出容量；独立审查。"
+  },
+  "correspondence": {
+    "en": "Zhuang and Hadfield-Menell (NeurIPS 2020) assume, for their Theorem 1, a resource constraint strictly increasing in each attribute: room, supplied. Here it is read off conservation per member with capacity, the rest exchanging as it does. Saturation at an optimum is the saturated cut of a maximum flow (Ford and Fulkerson 1956) and the binding constraints of a corner solution. Reading (the AI's): at an optimum the drain at a condition beyond is the part's capacity there or all that stands, whichever is less; what the order registers of the beyond does not enter, what the part can take does.",
+    "zh": "Zhuang 与 Hadfield-Menell（NeurIPS 2020）的定理 1 假设资源约束在每个属性上严格递增：即给定的余地。此处它从每个成员的守恒与容量读出，其余者照常交换。最优处的饱和即最大流的饱和割（Ford 与 Fulkerson 1956）与角点解的紧约束。读法（AI 的）：最优处之外某条件的抽干，是部分在那里的容量与那里所有者中较小者；序对之外记录什么不进入，部分能取什么进入。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "room read off the exchange",
+    "room from conservation with capacity",
+    "the drain where units are shared",
+    "从交换读出的余地",
+    "Becoming.Optimum.Above.room",
+    "Becoming.Optimum.optimum_beyond",
+    "Becoming.Web.optimum_broken_iff_capacity"
+  ],
+  "dependencies": [
+    {
+      "id": "what-an-optimum-does-beyond-what-couples-in",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Room is SG1's Optimum.Room, derived here; the transfer of one unit and transfer_exceeds give the beating outcome; the orders are SG1's rising orders; the witness reuses its store's order.",
+        "zh": "余地即 SG1 的 Optimum.Room，此处导出；一个单位的转移与 transfer_exceeds 给出胜过者；序为 SG1 的升高之序；见证复用其库的序。"
+      },
+      "interface": {
+        "output": {
+          "en": "Rising orders, room, the transfer of a unit, the frontier of optima.",
+          "zh": "升高之序、余地、单位的转移、最优的前沿。"
+        },
+        "input": {
+          "en": "Room among the outcomes open to a part, and the optimum's level beyond.",
+          "zh": "部分可达结果中的余地，以及最优在之外的水平。"
+        },
+        "conditions": {
+          "en": "The family apart from the beyond and holding a condition.",
+          "zh": "族与之外分开且含一个条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    },
+    {
+      "id": "what-a-rise-draws-from-beyond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The breaks use Web.MetOn; the witness reuses Diversion's dweller, its dependence on the source and the source apart from the store.",
+        "zh": "打断用 Web.MetOn；见证复用 Diversion 的居住者、其对源的依存，以及源与库分开。"
+      },
+      "interface": {
+        "output": {
+          "en": "Dependences met beyond; the Diversion witnesses.",
+          "zh": "之外被满足的依存；Diversion 的见证。"
+        },
+        "input": {
+          "en": "The break exactly where the need exceeds what the rest leaves less the capacity.",
+          "zh": "恰在需要超过其余者所留减去容量处打断。"
+        },
+        "conditions": {
+          "en": "Each condition beyond depended on at a need it meets at the step.",
+          "zh": "之外每个条件在该步被以其满足的需要依存。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-an-optimum-does-beyond-what-couples-in",
+      "detail": {
+        "en": "What an optimum does beyond what couples in, with room supplied; this record derives room for one step of exchange.",
+        "zh": "最优对耦合入者之外做什么（余地给定）；本记录对一步交换导出余地。"
+      }
+    },
+    {
+      "id": "what-a-rise-draws-from-beyond",
+      "detail": {
+        "en": "What a rise draws from beyond; here the optimum's draw is exact, by capacity.",
+        "zh": "上升从其外汲取什么；此处最优的汲取按容量恰定。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.ActsWithin",
+        "Becoming.Flow.ActsWithin.given_eq",
+        "Becoming.Flow.ActsWithin.moveUnit",
+        "Becoming.Flow.ActsWithin.part_taken_le",
+        "Becoming.Flow.ActsWithin.redirect",
+        "Becoming.Flow.ActsWithin.taken_eq",
+        "Becoming.Flow.Outcome",
+        "Becoming.Flow.Outcome.of_balances",
+        "Becoming.Flow.capacity",
+        "Becoming.Flow.capacity_eq_zero",
+        "Becoming.Flow.moveUnit",
+        "Becoming.Flow.moveUnit_balances",
+        "Becoming.Flow.moveUnit_give",
+        "Becoming.Flow.moveUnit_given_at",
+        "Becoming.Flow.moveUnit_given_off",
+        "Becoming.Flow.moveUnit_take",
+        "Becoming.Flow.moveUnit_taken_at",
+        "Becoming.Flow.moveUnit_taken_off",
+        "Becoming.Flow.other_of_out",
+        "Becoming.Flow.redirect",
+        "Becoming.Flow.redirect_balances",
+        "Becoming.Flow.redirect_give",
+        "Becoming.Flow.redirect_given_at",
+        "Becoming.Flow.redirect_given_off",
+        "Becoming.Flow.redirect_given_to",
+        "Becoming.Flow.restGiven",
+        "Becoming.Flow.restTaken",
+        "Becoming.Optimum.Above",
+        "Becoming.Optimum.Above.floor_or_full",
+        "Becoming.Optimum.Above.full",
+        "Becoming.Optimum.Above.room",
+        "Becoming.Optimum.Above.transfer",
+        "Becoming.Optimum.Drain.before",
+        "Becoming.Optimum.Drain.drawing",
+        "Becoming.Optimum.Drain.drawing_broken_iff",
+        "Becoming.Optimum.Drain.drawing_optimum",
+        "Becoming.Optimum.Drain.drawing_within",
+        "Becoming.Optimum.Drain.drawnLevel",
+        "Becoming.Optimum.Drain.drawnTo",
+        "Becoming.Optimum.Drain.formations_distinct",
+        "Becoming.Optimum.Drain.storeOrder",
+        "Becoming.Optimum.Drain.storeOrder_rising",
+        "Becoming.Optimum.Drain.store_source_distinct",
+        "Becoming.Optimum.Drain.takerCap",
+        "Becoming.Optimum.Drain.takerPart",
+        "Becoming.Optimum.Exceeds",
+        "Becoming.Optimum.Rising",
+        "Becoming.Optimum.Room",
+        "Becoming.Optimum.above_nothing",
+        "Becoming.Optimum.member_below",
+        "Becoming.Optimum.optimum_beyond",
+        "Becoming.Optimum.optimum_lowers_iff",
+        "Becoming.Optimum.optimum_untouched",
+        "Becoming.Optimum.transfer",
+        "Becoming.Optimum.transfer_above",
+        "Becoming.Optimum.transfer_exceeds",
+        "Becoming.Web.optimum_broken_iff_capacity",
+        "Becoming.sub_lt_self_iff",
+        "Becoming.total_raise_at",
+        "Becoming.total_split"
+      ],
+      "sha256": "4bc270b4e4dbaa25c964018f70bf15e5e5011bcb317b03278f454456af9a5cfa"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.given",
+        "Becoming.Flow.taken",
+        "Becoming.total_add",
+        "Becoming.total_congr",
+        "Becoming.total_zero"
+      ],
+      "sha256": "790cf03bbfa755bde10d6a0c3086e797844c92ff11e0528e7f4b761eb5d439f4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow"
+      ],
+      "sha256": "9d05b714c28d3497235330e5d5fb4221415ea3ae25ec32d730425299b5479428"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Distinct",
+        "Becoming.sub_eq_zero_of_le",
+        "Becoming.total"
+      ],
+      "sha256": "806e95fad20b5a22ad532429698511ec066b63e9160a1018f1b7a736e6724176"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.exists_lt_of_total_lt"
+      ],
+      "sha256": "236b6eb72050fd5c70c720cd5ccd82d732b7c90f423fe12b9f10849cdc4b2ea8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.total_congr_on"
+      ],
+      "sha256": "df1e36a3a90ebab3af01572de71f5aa14c3d32f1c015b209e29114fda2385e7d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.Broken"
+      ],
+      "sha256": "1c85d21fa7ec00debcac668785b51fdd7cdc3a97a66d50c6700047956cdaf5df"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.DrawnBeyond.dwellerOn",
+        "Becoming.DrawnBeyond.met_source",
+        "Becoming.DrawnBeyond.source_apart",
+        "Becoming.Web.MetOn"
+      ],
+      "sha256": "3f86d159bbc36f8027394c5b8ce89fb80312d482ccede3ab5b15ad5574a3502c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Diversion.Formation",
+        "Becoming.Diversion.Place",
+        "Becoming.Diversion.web"
+      ],
+      "sha256": "8f41fcf1bdbab92ede8b09ba5e9ce414ef8c42ea7be46f596eaf54bfec2287ce"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Requirement.Frontier"
+      ],
+      "sha256": "bf3ecf28d3d7dd5b196ff64a69e1a8cfc7fcd329c7c35732aa77f650c6648525"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "role": "receipt",
+      "sha256": "045bda785197d01841e756765d5121bc11f9d61515be3e65cb4464c33d4a76ca"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "9d2ce69d0d7dd1eeab6f56e3f1305bee28eac4292e4ead3a93168b66797f65fb"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "91a5b3a1197868a4f3a655354720297be996b47179374b0d69143498953152fa"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "f59b6d42a8f5220286b6d902babe26c3ca5a8002cbdf114a422faab71fd4f37a"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.World",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Locality.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Locality",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Population",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Dependence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.DrawnBeyond",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Selection",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frontier",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (SG2), room read off one step of exchange: room among the outcomes open to a part within its capacity, every optimum beyond exactly at what the rest leaves less the capacity, untouched where no units are shared; study section 288.",
+      "zh": "2026年10月21日：新增（SG2），从一步交换读出的余地：部分在其容量内可达的结果中有余地，每个最优在之外恰立于其余者所留减去容量处，不共享单位处不动；研究第 288 节。"
+    }
+  ]
+}

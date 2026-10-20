@@ -317,12 +317,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "6267fa344533726e75ba9e1c9adc6f47cc2247518da3bf9d7d26d9af77cbf564"
+      "sha256": "9d2ce69d0d7dd1eeab6f56e3f1305bee28eac4292e4ead3a93168b66797f65fb"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "678d0f06a67b91815de825389917bbc6e6b05a606d4c7e40e023c0c979883bd1"
+      "sha256": "f59b6d42a8f5220286b6d902babe26c3ca5a8002cbdf114a422faab71fd4f37a"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-10-axiom-route-levels-and-possibilities.md",
@@ -397,7 +397,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
       "role": "review",
-      "sha256": "1e07f9b0f6d13a4b8b6900db28676b9b7824cbeb3031d9c6e16caf2a6e4a3102",
+      "sha256": "91a5b3a1197868a4f3a655354720297be996b47179374b0d69143498953152fa",
       "declarations": []
     }
   ],

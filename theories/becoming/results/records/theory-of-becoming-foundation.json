@@ -271,13 +271,13 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "6267fa344533726e75ba9e1c9adc6f47cc2247518da3bf9d7d26d9af77cbf564",
+      "sha256": "9d2ce69d0d7dd1eeab6f56e3f1305bee28eac4292e4ead3a93168b66797f65fb",
       "declarations": []
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-20-fix-all-twentieth-review.md",
       "role": "provenance",
-      "sha256": "5ff15f83cc8b5cee577c84eb5b97f6314a65eefe5051787bb4a49fe4d3249451",
+      "sha256": "f25641d6b227ef71f6e6505b0925b7d5b39ac0627a7428458a5f41f41f780e23",
       "declarations": []
     }
   ],

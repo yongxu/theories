@@ -27,7 +27,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Room derived from a law of exchange: which outcomes an actor's takes and gives make eligible, with the rest responding, is not stated; room is a hypothesis.
+- Room derived from a law of exchange: which outcomes an actor's takes and gives make eligible, with the rest responding, is not stated here; room is a hypothesis (derived for one step in room-read-off-the-exchange, SG2).
 - Zhuang and Hadfield-Menell's continuous setting, their compactness characterization of guaranteed overoptimization, and their improvement by a proxy updated over time are not reached.
 - That the beyond's fall is a harm, or that keeping is better: no evaluation enters; that a widening move is chosen is the direction's (chapter 7.5), under C and the continuation condition.
 - Without room the drive fails: keeping can be an optimum (Optimum.Drain.room_needed); and an order rising only to a target need not drive or keep (Optimum.Drain.satisficing_either).
@@ -45,7 +45,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-Room derived from a law of exchange, the actor's takes and gives with the rest responding; optima over a run, where the beyond renews from its own level; an independent review.
+Room over a course of steps, the actor choosing again at each with the rest responding (one step: room-read-off-the-exchange); optima over a run, where the beyond renews from its own level; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -67,6 +67,9 @@ Zhuang and Hadfield-Menell (NeurIPS 2020), Theorem 1: optimizing a proxy that re
   - Preserved conditions: Every condition a member couples into in the family; the beyond apart. [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
 - related, not a proved adapter: [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md). What a rise draws from beyond; this record states what an optimum does there.
 - related, not a proved adapter: [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md). Raising what couples in is paid from beyond; an optimum takes the beyond to the least level where that leaves room.
+- related, not a proved adapter: [room-read-off-the-exchange](room-read-off-the-exchange.md). Derives the room this record supplies, for one step of exchange.
+
+**Used by:** [room-read-off-the-exchange](room-read-off-the-exchange.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -80,6 +83,7 @@ Zhuang and Hadfield-Menell (NeurIPS 2020), Theorem 1: optimizing a proxy that re
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json) | — |
 
 Aliases: `what an optimum does beyond what couples in`, `the drive to the least level`, `optimizing a proxy`, `最优对耦合入者之外做什么`, `Becoming.Optimum.least_iff`, `Becoming.Web.optimum_broken_iff`, `Becoming.Flow.keeping_optimum_takes_slack`
 
@@ -87,6 +91,7 @@ Aliases: `what an optimum does beyond what couples in`, `the drive to the least 
 ### History
 
 - 21 October 2026: added (SG1), what an optimum does beyond what couples in: the drive to the least level exactly where there is room, the breaks exactly those some outcome makes, the conservation identity and the slack under keeping; study section 283.
+- 21 October 2026, SG2: room derived for one step of exchange (record room-read-off-the-exchange, study section 288); the scope note and the next delta say so; this record's laws and their statements are unchanged.
 
 </details>
 
