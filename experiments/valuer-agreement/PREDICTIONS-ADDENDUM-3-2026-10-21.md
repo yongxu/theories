@@ -92,3 +92,9 @@ Unchanged: the run ends when every configured model has every presentation, or s
 - *Its check* ([`check.py`](check.py)'s test prompt, not the experiment's) returned a valid reply under the strict schema with low reasoning, served by CoreWeave. It took 53 prompt and 1,175 completion tokens (1,142 of them reasoning) and cost $0.00024.
 - *Valuers now.* DeepSeek, GLM, Qwen (China); GPT-6 luna, Claude Haiku, Nemotron (United States). That is six families from two regions; the European family is lost.
 - *What runs next.* Nemotron runs every standpoint, standpoint 0 first, under the same stop rule. The projection then counts Mistral's spend among the models outside the configuration. No judgment of any model has been read.
+
+**21 October, about 05:45 (+07): the projection, and the run continues.**
+
+- Nemotron's standpoint 0: 112 valid of 112.
+- The projection ([`run.project`](run.py), costs only) is $3.99 in all: DeepSeek $0.51, GLM $0.18, GPT-6 luna $0.27, Claude Haiku $0.36, Qwen $0.97, Nemotron $0.95, plus $0.75 already spent on Meta, StepFun and Mistral.
+- That is under the $10 line, so all six models continue to the end, with the guard at $10.
