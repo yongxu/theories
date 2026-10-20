@@ -76,6 +76,7 @@ Metapopulation dynamics (Levins 1969; Hanski 1998): patches linked by recoloniza
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json) | — |
 
 Aliases: `groups whose conditions are coupled`, `条件相互耦合的组`, `coupled gate`, `family excess`, `Becoming.Flow.family_excess_ends`, `Becoming.Flow.family_excess_bounded`, `Becoming.Coupled.all_end`, `Becoming.GroupEnding.Flow.coupled_end_together`, `Becoming.GroupEnding.Flow.ended_of_family`
 

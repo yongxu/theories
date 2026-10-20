@@ -390,6 +390,7 @@
         "selection-within-and-among-groups",
         "selection-among-groups-by-ending",
         "groups-whose-conditions-are-coupled",
+        "selection-within-and-among-groups-of-any-sizes",
         "transmission-is-inheritance-and-need"
       ],
       "declarations": [
@@ -404,7 +405,7 @@
         "Becoming.Reproduction.Flow.number_within_take",
         "Becoming.Reproduction.Flow.lineage_ends",
         "Becoming.Reproduction.Flow.closed_lineage_lowered",
-        "Becoming.SelectionLevels.levels",
+        "Becoming.SelectionLevels.levels_sized",
         "Becoming.SelectionLevels.rises_exact_iff_levels",
         "Becoming.GroupEnding.Flow.rises_iff_inactive",
         "Becoming.GroupEnding.Flow.family_childless",
@@ -419,11 +420,11 @@
         "Becoming.SelectionTerm.covariation": [
           "Becoming.SelectionTerm.Flow.support_not_against"
         ],
-        "Becoming.SelectionLevels.levels": [
-          "Becoming.GroupEnding.Flow.raises_of_inactive"
-        ],
         "Becoming.SelectionLevels.rises_exact_iff_levels": [
           "Becoming.GroupEnding.Flow.rises_iff_inactive"
+        ],
+        "Becoming.SelectionLevels.levels_sized": [
+          "Becoming.GroupEnding.Flow.rises_iff_inactive_sized"
         ]
       }
     },

@@ -211,6 +211,13 @@
         "en": "Groups whose conditions are coupled end together; excess_childless is now the family of one.",
         "zh": "条件相互耦合的组一同终结；excess_childless 现为单元族的情形。"
       }
+    },
+    {
+      "id": "selection-within-and-among-groups-of-any-sizes",
+      "detail": {
+        "en": "Ending for groups of any sizes, and a witness of ending using up the differences among groups it acts on.",
+        "zh": "任意大小之组的终止，以及终止耗尽其所作用的组间差异的见证。"
+      }
     }
   ],
   "references": [
@@ -244,12 +251,12 @@
         "Becoming.GroupEnding.rises_of_ended",
         "Becoming.GroupEnding.uniform"
       ],
-      "sha256": "dda45b0d0c6e4d5c5c1b14d34a3b98c9a73659e2e99ad3be1e566f90578ffe06"
+      "sha256": "7c05d56b6569b13d17851b995673142d06dc11879da86cdf6303000f0f996d5e"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
       "role": "proof",
-      "sha256": "246a8b7e2e1f643c44626e6a5991ec412293fda673422002878d30e2029e6602"
+      "sha256": "8091ee28285e667c4b00955c9318b7062c26fd0e19dba5a8a3ce6e2a1e8ecd7d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
@@ -269,19 +276,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "c49bd6b826db6a20787f21a7b6efc8c3ec840fff810cf8f9fe8eccf3ec0bc914"
+      "sha256": "5933ffb52e621e403664dc30679ad225d266ce122ca1e5b15e5fff7aa811cef2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
       "role": "receipt",
       "sha256": "114b5ba1b619d4e81c138d098005583ee56aa8bd6d2295d9fb279cd92c2c3f9a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
+      "role": "receipt",
+      "sha256": "687e540fc23d8795c2daa940d7ad073ef97b52c07a040e5a7d70999b591df612",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GroupEnding",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -299,6 +312,10 @@
     {
       "en": "20 October 2026, EV6: groups whose conditions are coupled are stated in Becoming.GroupEnding (Flow.family_childless, Flow.coupled_end_together, Flow.ended_of_family; record groups-whose-conditions-are-coupled, study section 265); Flow.excess_childless is now derived from Flow.family_childless, its statement unchanged. The claim is unchanged; its open item on coupled groups is answered there.",
       "zh": "2026年10月20日，EV6：条件相互耦合的组陈述于 Becoming.GroupEnding（Flow.family_childless、Flow.coupled_end_together、Flow.ended_of_family；记录 groups-whose-conditions-are-coupled，研究第 265 节）；Flow.excess_childless 现由 Flow.family_childless 推出，陈述不变。论断不变；其关于耦合之组的开放项在那里回答。"
+    },
+    {
+      "en": "20 October 2026, EV7: Becoming.GroupEnding gains ending for groups of any sizes (EndedBy, means_not_against, Flow.rises_iff_inactive_sized) and the two-generation witness Exhausted (record selection-within-and-among-groups-of-any-sizes, study section 273); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月20日，EV7：Becoming.GroupEnding 增加任意大小之组的终止（EndedBy、means_not_against、Flow.rises_iff_inactive_sized）与跨两代的见证 Exhausted（记录 selection-within-and-among-groups-of-any-sizes，研究第 273 节）；本记录的定律及其陈述不变。"
     }
   ]
 }

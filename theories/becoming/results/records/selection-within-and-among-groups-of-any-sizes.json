@@ -1,0 +1,408 @@
+{
+  "schema_version": 2,
+  "id": "selection-within-and-among-groups-of-any-sizes",
+  "title": {
+    "en": "Selection within and among groups of any sizes",
+    "zh": "大小任意之组的组内与组间选择"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-20T15:52:03+00:00",
+  "statement": {
+    "en": "For groups of any sizes the selection term divides into the groups' own terms and the term of their means; groups alike in mean leave selection within alone, so the next generation's listing fixes the next step's among-group part, which ending can use up.",
+    "zh": "对大小任意的组，选择项分为各组自身之项与其均值之项；各组均值相同时只剩组内选择，故下一代的列法决定下一步的组间部分，而终止可能将其耗尽。"
+  },
+  "laws": [
+    {
+      "en": "For groups of any sizes, with n a common multiple of the sizes and each group's own term by n over its size, n squared times the whole's term balances n times the whole's size times the groups' own terms with the term of the groups' means read member by member: the law of total covariance with size weights.",
+      "zh": "各组大小任意：取各组大小的公倍数 n，各组自身之项乘以 n 除以其大小，n 的平方乘整体之项，与 n 乘整体大小乘各组自身之项、以及逐成员读出的组均值之项相平衡：以大小加权的总协方差律。",
+      "declarations": [
+        "Becoming.SelectionLevels.context",
+        "Becoming.SelectionLevels.context_total",
+        "Becoming.SelectionLevels.context_length",
+        "Becoming.SelectionLevels.mem_of_mem_context",
+        "Becoming.SelectionLevels.concordWithinBy",
+        "Becoming.SelectionLevels.discordWithinBy",
+        "Becoming.SelectionLevels.concordMeans",
+        "Becoming.SelectionLevels.discordMeans",
+        "Becoming.SelectionLevels.shuffle_left",
+        "Becoming.SelectionLevels.shuffle_right",
+        "Becoming.SelectionLevels.meet",
+        "Becoming.SelectionLevels.square_split",
+        "Becoming.SelectionLevels.levels_sized"
+      ]
+    },
+    {
+      "en": "The division for k groups of equal size is its case with every factor one: the family read as its groups counts each pair of groups m times m times.",
+      "zh": "k 个大小相等之组的划分是每个因子为一的情形：读作其组的族把每对组计 m 乘 m 次。",
+      "declarations": [
+        "Becoming.SelectionLevels.pairs_context",
+        "Becoming.SelectionLevels.within_by_one",
+        "Becoming.SelectionLevels.among_by_one",
+        "Becoming.SelectionLevels.nil_of_length_zero",
+        "Becoming.SelectionLevels.whole_nil",
+        "Becoming.SelectionLevels.levels"
+      ]
+    },
+    {
+      "en": "So the whole selects for the amount exactly where the means' concordance with the scaled within-group concordances exceeds the same for the discordances, and nothing exactly where they balance.",
+      "zh": "故整体恰在均值之一致度加上缩放后的组内一致度超过相应的不一致度时选择该量，恰在两者平衡时不作选择。",
+      "declarations": [
+        "Becoming.SelectionLevels.square_lt_iff",
+        "Becoming.SelectionLevels.square_eq_iff",
+        "Becoming.SelectionLevels.rises_iff_sized",
+        "Becoming.SelectionLevels.none_iff_sized"
+      ]
+    },
+    {
+      "en": "Where the groups' means are alike, nothing is selected among them; a generation listed as groups alike in mean, with exact transmission, raises its mean exactly as selection within them goes. How the next generation is listed does not enter a step, but fixes the next step's among-group part.",
+      "zh": "各组均值相同时组间无选择；传递精确、列为均值相同之组的一代，其均值恰按组内选择变化。下一代如何列出不进入这一步，却决定下一步的组间部分。",
+      "declarations": [
+        "Becoming.SelectionLevels.means_none_of_alike",
+        "Becoming.SelectionLevels.rises_iff_within_of_alike",
+        "Becoming.SelectionLevels.rises_exact_iff_sized",
+        "Becoming.SelectionLevels.rises_exact_iff_within_of_alike"
+      ]
+    },
+    {
+      "en": "Ending for any sizes: where every group with a lower mean leaves no offspring, nothing is discordant among the means; on the base, where those groups' members are not active, the mean rises exactly as the scaled division with no among-group part against it goes.",
+      "zh": "各组大小任意时的终止：每个均值较低的组都不留后代时，均值之间无不一致；在流上，这些组的成员不活跃时，均值恰按不含逆向组间部分的缩放划分变化。",
+      "declarations": [
+        "Becoming.GroupEnding.EndedBy",
+        "Becoming.GroupEnding.means_not_against",
+        "Becoming.GroupEnding.rises_iff_ended_sized",
+        "Becoming.GroupEnding.Flow.endedBy_of_inactive",
+        "Becoming.GroupEnding.Flow.rises_iff_inactive_sized"
+      ]
+    },
+    {
+      "en": "Witness: groups of one and of three, alike in their totals of holding back (one each) but not in their means: the reading by totals sees nothing among them, while the whole's selection for holding back is all among the means.",
+      "zh": "见证：一人之组与三人之组，保留的总量相同（各为一）而均值不同：按总量读看不出组间选择，而整体对保留的选择全在均值之间。",
+      "declarations": [
+        "Becoming.SelectionLevels.ByMeans.unequal",
+        "Becoming.SelectionLevels.ByMeans.holding",
+        "Becoming.SelectionLevels.ByMeans.offspring",
+        "Becoming.SelectionLevels.ByMeans.factor",
+        "Becoming.SelectionLevels.ByMeans.common",
+        "Becoming.SelectionLevels.ByMeans.by_means"
+      ]
+    },
+    {
+      "en": "Witness: two keeping groups beside a group leaving nothing; holding back rises by selection among groups, the offspring of each keeping group form groups alike in it, and at the next step it falls below where it started.",
+      "zh": "见证：两个保留之组旁有一个不留后代之组；保留经由组间选择上升，各保留之组的后代组成的组在保留上相同，下一步保留降到起点以下。",
+      "declarations": [
+        "Becoming.GroupEnding.Exhausted.firstKids",
+        "Becoming.GroupEnding.Exhausted.laterKids",
+        "Becoming.GroupEnding.Exhausted.kids",
+        "Becoming.GroupEnding.Exhausted.holding",
+        "Becoming.GroupEnding.Exhausted.G",
+        "Becoming.GroupEnding.Exhausted.first",
+        "Becoming.GroupEnding.Exhausted.next",
+        "Becoming.GroupEnding.Exhausted.first_listed",
+        "Becoming.GroupEnding.Exhausted.next_listed",
+        "Becoming.GroupEnding.Exhausted.first_step",
+        "Becoming.GroupEnding.Exhausted.alike",
+        "Becoming.GroupEnding.Exhausted.next_step"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A common multiple of the groups' sizes, positive for the verdicts; a family with members where the groups are alike in mean; over generations, exact transmission and the generation listed as the groups; for ending, the groups with a lower mean leaving nothing, on the base their members not active, only active formations giving and descent.",
+      "zh": "不加公理。各组大小的公倍数，作判断时为正；各组均值相同时族有成员；世代：传递精确、该代列为这些组；终止：均值较低之组不留后代，在流上其成员不活跃、只有活跃的形成给予、世系。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Another weighting of the groups: the among-group part is the covariance of means with each member counted once (size weights); with each group counted once the decomposition differs and is not stated.",
+      "zh": "对组的另一种加权：组间部分是每个成员计一次（以大小加权）的均值协方差；每组计一次时分解不同，未陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "Mixing beyond the listing of the next generation: transmission that is not exact across groups, and how groups form and keep their differences (assortment), are not stated.",
+      "zh": "下一代列法之外的混合：跨组不精确的传递，以及组如何形成并保持其差异（同类聚合），未陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "That ending among groups in general leaves the surviving groups alike: shown in one witness only; surviving groups can differ in their within-group composition.",
+      "zh": "组间终止一般会使幸存之组相同：只在一个见证中显示；幸存之组可能在组内构成上不同。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+      "detail": {
+        "en": "The equal-size reading by totals does not carry to unequal sizes: in ByMeans the groups' totals of holding back are alike, so concordAmong and discordAmong are zero, while the means' concordance carries all the whole's selection for it (ByMeans.by_means).",
+        "zh": "按总量读的等大小读法不能推到大小不等的组：ByMeans 中各组保留的总量相同，故 concordAmong 与 discordAmong 为零，而均值之一致度承载整体对保留的全部选择（ByMeans.by_means）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T155100.105164Z): every declaration of Becoming.SelectionLevels and Becoming.GroupEnding has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 273; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T155100.105164Z）：Becoming.SelectionLevels 与 Becoming.GroupEnding 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 273 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "How groups form and keep their differences (assortment); transmission that is not exact across groups; the additive part of Fisher's theorem; an independent review.",
+    "zh": "组如何形成并保持其差异（同类聚合）；跨组不精确的传递；Fisher 定理的加性部分；独立审查。"
+  },
+  "correspondence": {
+    "en": "The multilevel Price equation with unequal group sizes (Price 1972; Hamilton 1975; Okasha 2006, MLS1): the whole's covariance is the size-weighted mean within-group covariance plus the covariance of group means; contextual analysis reads each member by its group's mean (Heisler and Damuth 1987). Selection among groups needs variance among groups, which group formation must regenerate (the haystack model, Maynard Smith 1964; trait groups, Wilson 1975). Readings (the AI's): what among-group selection acts on is used up by it unless descent keeps groups apart.",
+    "zh": "组大小不等的多层 Price 方程（Price 1972；Hamilton 1975；Okasha 2006，MLS1）：整体协方差是以大小加权的组内协方差均值加上组均值的协方差；情境分析以组均值读每个成员（Heisler 与 Damuth 1987）。组间选择需要组间差异，须由组的形成重新产生（干草堆模型，Maynard Smith 1964；性状组，Wilson 1975）。读法（AI 的）：组间选择所作用的差异会被它耗尽，除非世系使各组保持分开。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+  "aliases": [
+    "selection within and among groups of any sizes",
+    "大小任意之组的组内与组间选择",
+    "multilevel Price equation with unequal group sizes",
+    "contextual reading",
+    "Becoming.SelectionLevels.levels_sized",
+    "Becoming.SelectionLevels.rises_exact_iff_within_of_alike",
+    "Becoming.GroupEnding.Flow.rises_iff_inactive_sized",
+    "Becoming.GroupEnding.Exhausted.next_step"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-within-and-among-groups",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Generalizes Becoming.SelectionLevels' division (levels) from groups of equal size to groups of any sizes; levels is now derived from levels_sized, its statement unchanged.",
+        "zh": "将 Becoming.SelectionLevels 的划分（levels）从大小相等的组推广到大小任意的组；levels 现由 levels_sized 推出，陈述不变。"
+      },
+      "interface": {
+        "output": {
+          "en": "The division for groups of equal size.",
+          "zh": "大小相等之组的划分。"
+        },
+        "input": {
+          "en": "The division for groups of any sizes, its among-group part read by means.",
+          "zh": "大小任意之组的划分，组间部分以均值读出。"
+        },
+        "conditions": {
+          "en": "A common multiple of the sizes.",
+          "zh": "各组大小的公倍数。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean"
+      }
+    },
+    {
+      "id": "selection-among-groups-by-ending",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Becoming.GroupEnding's base laws of descent (group_childless, mem_whole) and SelectionTerm's discord_zero_of_below.",
+        "zh": "复用 Becoming.GroupEnding 关于世系的流上定律（group_childless、mem_whole）以及 SelectionTerm 的 discord_zero_of_below。"
+      },
+      "interface": {
+        "output": {
+          "en": "Groups whose members are not active leave no offspring.",
+          "zh": "成员不活跃的组不留后代。"
+        },
+        "input": {
+          "en": "Ending fixes the among-group part for groups of any sizes.",
+          "zh": "终止决定大小任意之组的组间部分。"
+        },
+        "conditions": {
+          "en": "Only active formations give; descent.",
+          "zh": "只有活跃的形成给予；世系。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "selection-within-and-among-groups",
+      "detail": {
+        "en": "Its division, now the case of equal sizes.",
+        "zh": "其划分，现为大小相等的情形。"
+      }
+    },
+    {
+      "id": "selection-among-groups-by-ending",
+      "detail": {
+        "en": "Ending among groups, here for any sizes and over two generations.",
+        "zh": "组间终止，此处对任意大小并跨两代。"
+      }
+    },
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "detail": {
+        "en": "Groups on coupled conditions end together; here groups alike in mean are not selected among.",
+        "zh": "依存于耦合条件的组一同终结；此处均值相同的组之间无选择。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SelectionLevels.AmongWins.among_wins",
+        "Becoming.SelectionLevels.AmongWins.offspring",
+        "Becoming.SelectionLevels.ByMeans.by_means",
+        "Becoming.SelectionLevels.ByMeans.common",
+        "Becoming.SelectionLevels.ByMeans.factor",
+        "Becoming.SelectionLevels.ByMeans.holding",
+        "Becoming.SelectionLevels.ByMeans.offspring",
+        "Becoming.SelectionLevels.ByMeans.unequal",
+        "Becoming.SelectionLevels.Member",
+        "Becoming.SelectionLevels.WithinWins.offspring",
+        "Becoming.SelectionLevels.WithinWins.within_wins",
+        "Becoming.SelectionLevels.among_by_one",
+        "Becoming.SelectionLevels.among_for_of_raises",
+        "Becoming.SelectionLevels.among_for_of_rises",
+        "Becoming.SelectionLevels.among_none_of_alike",
+        "Becoming.SelectionLevels.concordAmong",
+        "Becoming.SelectionLevels.concordMeans",
+        "Becoming.SelectionLevels.concordWithin",
+        "Becoming.SelectionLevels.concordWithinBy",
+        "Becoming.SelectionLevels.context",
+        "Becoming.SelectionLevels.context_length",
+        "Becoming.SelectionLevels.context_total",
+        "Becoming.SelectionLevels.discordAmong",
+        "Becoming.SelectionLevels.discordMeans",
+        "Becoming.SelectionLevels.discordWithin",
+        "Becoming.SelectionLevels.discordWithinBy",
+        "Becoming.SelectionLevels.equal",
+        "Becoming.SelectionLevels.groups",
+        "Becoming.SelectionLevels.holds",
+        "Becoming.SelectionLevels.levels",
+        "Becoming.SelectionLevels.levels_of_alike",
+        "Becoming.SelectionLevels.levels_of_uniform",
+        "Becoming.SelectionLevels.levels_sized",
+        "Becoming.SelectionLevels.means_none_of_alike",
+        "Becoming.SelectionLevels.meet",
+        "Becoming.SelectionLevels.mem_of_mem_context",
+        "Becoming.SelectionLevels.nil_of_length_zero",
+        "Becoming.SelectionLevels.none_iff",
+        "Becoming.SelectionLevels.none_iff_sized",
+        "Becoming.SelectionLevels.pairs_context",
+        "Becoming.SelectionLevels.rises_exact_iff_levels",
+        "Becoming.SelectionLevels.rises_exact_iff_sized",
+        "Becoming.SelectionLevels.rises_exact_iff_within_of_alike",
+        "Becoming.SelectionLevels.rises_iff",
+        "Becoming.SelectionLevels.rises_iff_sized",
+        "Becoming.SelectionLevels.rises_iff_within_of_alike",
+        "Becoming.SelectionLevels.shuffle_left",
+        "Becoming.SelectionLevels.shuffle_right",
+        "Becoming.SelectionLevels.square_eq_iff",
+        "Becoming.SelectionLevels.square_lt_iff",
+        "Becoming.SelectionLevels.square_split",
+        "Becoming.SelectionLevels.total_eq_of_mem",
+        "Becoming.SelectionLevels.whole",
+        "Becoming.SelectionLevels.whole_length",
+        "Becoming.SelectionLevels.whole_length_of_equal",
+        "Becoming.SelectionLevels.whole_nil",
+        "Becoming.SelectionLevels.whole_total",
+        "Becoming.SelectionLevels.whole_weighted",
+        "Becoming.SelectionLevels.within_by_one",
+        "Becoming.SelectionLevels.within_for_of_rises",
+        "Becoming.SelectionLevels.within_none_of_uniform"
+      ],
+      "sha256": "8091ee28285e667c4b00955c9318b7062c26fd0e19dba5a8a3ce6e2a1e8ecd7d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.GroupEnding.Ended",
+        "Becoming.GroupEnding.EndedBy",
+        "Becoming.GroupEnding.Exhausted.G",
+        "Becoming.GroupEnding.Exhausted.alike",
+        "Becoming.GroupEnding.Exhausted.first",
+        "Becoming.GroupEnding.Exhausted.firstKids",
+        "Becoming.GroupEnding.Exhausted.first_listed",
+        "Becoming.GroupEnding.Exhausted.first_step",
+        "Becoming.GroupEnding.Exhausted.holding",
+        "Becoming.GroupEnding.Exhausted.kids",
+        "Becoming.GroupEnding.Exhausted.laterKids",
+        "Becoming.GroupEnding.Exhausted.next",
+        "Becoming.GroupEnding.Exhausted.next_listed",
+        "Becoming.GroupEnding.Exhausted.next_step",
+        "Becoming.GroupEnding.Flow.all_end",
+        "Becoming.GroupEnding.Flow.coupled_end_together",
+        "Becoming.GroupEnding.Flow.endedBy_of_inactive",
+        "Becoming.GroupEnding.Flow.ended_of_family",
+        "Becoming.GroupEnding.Flow.ended_of_inactive",
+        "Becoming.GroupEnding.Flow.excess_childless",
+        "Becoming.GroupEnding.Flow.family_childless",
+        "Becoming.GroupEnding.Flow.group_childless",
+        "Becoming.GroupEnding.Flow.inactive_childless",
+        "Becoming.GroupEnding.Flow.offspring_zero",
+        "Becoming.GroupEnding.Flow.raises_of_inactive",
+        "Becoming.GroupEnding.Flow.rises_iff_inactive",
+        "Becoming.GroupEnding.Flow.rises_iff_inactive_sized",
+        "Becoming.GroupEnding.Outweighed.keeping_rises",
+        "Becoming.GroupEnding.Outweighed.offspring",
+        "Becoming.GroupEnding.Outweighed.outweighed",
+        "Becoming.GroupEnding.Outweighs.offspring",
+        "Becoming.GroupEnding.Outweighs.outweighs",
+        "Becoming.GroupEnding.among_not_against",
+        "Becoming.GroupEnding.equal",
+        "Becoming.GroupEnding.excess_pos_of_lt",
+        "Becoming.GroupEnding.keepingFirst",
+        "Becoming.GroupEnding.keeps",
+        "Becoming.GroupEnding.means_not_against",
+        "Becoming.GroupEnding.mem_whole",
+        "Becoming.GroupEnding.not_against_of_ended",
+        "Becoming.GroupEnding.pairs_pos",
+        "Becoming.GroupEnding.rises_iff_ended",
+        "Becoming.GroupEnding.rises_iff_ended_sized",
+        "Becoming.GroupEnding.rises_of_ended",
+        "Becoming.GroupEnding.uniform"
+      ],
+      "sha256": "7c05d56b6569b13d17851b995673142d06dc11879da86cdf6303000f0f996d5e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
+      "role": "receipt",
+      "sha256": "687e540fc23d8795c2daa940d7ad073ef97b52c07a040e5a7d70999b591df612"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "262911f9c02ab07ce82e891ea021057ccfb08f16f477aede0d1a279aa6392236"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "5933ffb52e621e403664dc30679ad225d266ce122ca1e5b15e5fff7aa811cef2"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "role": "statement",
+      "sha256": "a85c84435a2e0c30fac2aa26f954b67ce0b1f7b66cacf0505b4ff4e1c30dbbdd"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GroupEnding",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "20 October 2026: added (EV7), selection within and among groups of any sizes, groups alike in mean, and ending for any sizes with a two-generation witness; study section 273.",
+      "zh": "2026年10月20日：新增（EV7），大小任意之组的组内与组间选择、均值相同的组，以及任意大小的终止与跨两代的见证；研究第 273 节。"
+    }
+  ]
+}

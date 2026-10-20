@@ -30,8 +30,10 @@
       "zh": "除各组大小相等外不加前提：整体的一致度，加上 k 倍各组自身的不一致度与以组总量读的组间不一致度，等于整体的不一致度加上 k 倍各组自身的一致度与组间一致度。除尽后，整体的协方差等于各组协方差的均值加组均值的协方差。",
       "declarations": [
         "Becoming.SelectionLevels.levels",
-        "Becoming.SelectionLevels.lhs_shape",
-        "Becoming.SelectionLevels.rhs_shape"
+        "Becoming.SelectionLevels.levels_sized",
+        "Becoming.SelectionLevels.pairs_context",
+        "Becoming.SelectionLevels.within_by_one",
+        "Becoming.SelectionLevels.among_by_one"
       ]
     },
     {
@@ -80,8 +82,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Groups of unequal size: there the division weights each group's own term by the whole's size over the group's, which is not stated.",
-      "zh": "大小不等的组：此时划分以整体规模比组规模来加权各组自身的项，未陈述。",
+      "en": "Groups of unequal size here: they are stated in record selection-within-and-among-groups-of-any-sizes, of which this division is the case of equal sizes, the among-group part read there by the groups' means.",
+      "zh": "此处不含大小不等的组：它们陈述于记录 selection-within-and-among-groups-of-any-sizes，本划分是其大小相等的情形，组间部分在那里以各组均值读出。",
       "kind": "scope"
     },
     {
@@ -122,8 +124,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T094300.398321Z）：Becoming.SelectionLevels 的 31 项声明（21 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 248 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Groups of unequal size; groups read on the base as lineages within their own families, with what each draws from a shared condition (DrawnBeyond); transmission that is not exact; an independent review.",
-    "zh": "大小不等的组；在流上把组读作各自族内的世系，连同各自从共同条件所取之量（DrawnBeyond）；不精确的传递；独立审查。"
+    "en": "Groups read on the base as lineages within their own families, with what each draws from a shared condition (DrawnBeyond); transmission that is not exact; an independent review.",
+    "zh": "在流上把组读作各自族内的世系，连同各自从共同条件所取之量（DrawnBeyond）；不精确的传递；独立审查。"
   },
   "correspondence": {
     "en": "The multilevel form of Price's equation (Price 1972; Hamilton 1975), the law of total covariance: with equal group sizes, Cov(w, z) = E_g[Cov_g(w, z)] + Cov_g(E[w], E[z]). levels is this with denominators cleared over ordered pairs (the whole's pairs number (km)^2, a group's m^2, the groups' k^2). Readings (the AI's): where selection within each group goes against what keeps a shared condition, the whole keeps it only through selection among groups.",
@@ -186,6 +188,13 @@
         "en": "The among-group part fixed by ending: groups whose own condition ran into joint excess leave no offspring.",
         "zh": "由终止所定的组间部分：自身条件遭遇共同过度的组不留后代。"
       }
+    },
+    {
+      "id": "selection-within-and-among-groups-of-any-sizes",
+      "detail": {
+        "en": "The division for groups of any sizes, of which this is the case of equal sizes.",
+        "zh": "大小任意之组的划分，本记录是其大小相等的情形。"
+      }
     }
   ],
   "references": [
@@ -195,37 +204,67 @@
       "declarations": [
         "Becoming.SelectionLevels.AmongWins.among_wins",
         "Becoming.SelectionLevels.AmongWins.offspring",
+        "Becoming.SelectionLevels.ByMeans.by_means",
+        "Becoming.SelectionLevels.ByMeans.common",
+        "Becoming.SelectionLevels.ByMeans.factor",
+        "Becoming.SelectionLevels.ByMeans.holding",
+        "Becoming.SelectionLevels.ByMeans.offspring",
+        "Becoming.SelectionLevels.ByMeans.unequal",
         "Becoming.SelectionLevels.Member",
         "Becoming.SelectionLevels.WithinWins.offspring",
         "Becoming.SelectionLevels.WithinWins.within_wins",
+        "Becoming.SelectionLevels.among_by_one",
         "Becoming.SelectionLevels.among_for_of_raises",
         "Becoming.SelectionLevels.among_for_of_rises",
         "Becoming.SelectionLevels.among_none_of_alike",
         "Becoming.SelectionLevels.concordAmong",
+        "Becoming.SelectionLevels.concordMeans",
         "Becoming.SelectionLevels.concordWithin",
+        "Becoming.SelectionLevels.concordWithinBy",
+        "Becoming.SelectionLevels.context",
+        "Becoming.SelectionLevels.context_length",
+        "Becoming.SelectionLevels.context_total",
         "Becoming.SelectionLevels.discordAmong",
+        "Becoming.SelectionLevels.discordMeans",
         "Becoming.SelectionLevels.discordWithin",
+        "Becoming.SelectionLevels.discordWithinBy",
         "Becoming.SelectionLevels.equal",
         "Becoming.SelectionLevels.groups",
         "Becoming.SelectionLevels.holds",
         "Becoming.SelectionLevels.levels",
         "Becoming.SelectionLevels.levels_of_alike",
         "Becoming.SelectionLevels.levels_of_uniform",
-        "Becoming.SelectionLevels.lhs_shape",
+        "Becoming.SelectionLevels.levels_sized",
+        "Becoming.SelectionLevels.means_none_of_alike",
+        "Becoming.SelectionLevels.meet",
+        "Becoming.SelectionLevels.mem_of_mem_context",
+        "Becoming.SelectionLevels.nil_of_length_zero",
         "Becoming.SelectionLevels.none_iff",
-        "Becoming.SelectionLevels.rhs_shape",
+        "Becoming.SelectionLevels.none_iff_sized",
+        "Becoming.SelectionLevels.pairs_context",
         "Becoming.SelectionLevels.rises_exact_iff_levels",
+        "Becoming.SelectionLevels.rises_exact_iff_sized",
+        "Becoming.SelectionLevels.rises_exact_iff_within_of_alike",
         "Becoming.SelectionLevels.rises_iff",
+        "Becoming.SelectionLevels.rises_iff_sized",
+        "Becoming.SelectionLevels.rises_iff_within_of_alike",
+        "Becoming.SelectionLevels.shuffle_left",
+        "Becoming.SelectionLevels.shuffle_right",
+        "Becoming.SelectionLevels.square_eq_iff",
+        "Becoming.SelectionLevels.square_lt_iff",
+        "Becoming.SelectionLevels.square_split",
         "Becoming.SelectionLevels.total_eq_of_mem",
         "Becoming.SelectionLevels.whole",
         "Becoming.SelectionLevels.whole_length",
         "Becoming.SelectionLevels.whole_length_of_equal",
+        "Becoming.SelectionLevels.whole_nil",
         "Becoming.SelectionLevels.whole_total",
         "Becoming.SelectionLevels.whole_weighted",
+        "Becoming.SelectionLevels.within_by_one",
         "Becoming.SelectionLevels.within_for_of_rises",
         "Becoming.SelectionLevels.within_none_of_uniform"
       ],
-      "sha256": "246a8b7e2e1f643c44626e6a5991ec412293fda673422002878d30e2029e6602"
+      "sha256": "8091ee28285e667c4b00955c9318b7062c26fd0e19dba5a8a3ce6e2a1e8ecd7d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
@@ -245,13 +284,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "c49bd6b826db6a20787f21a7b6efc8c3ec840fff810cf8f9fe8eccf3ec0bc914"
+      "sha256": "5933ffb52e621e403664dc30679ad225d266ce122ca1e5b15e5fff7aa811cef2"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
+      "role": "receipt",
+      "sha256": "687e540fc23d8795c2daa940d7ad073ef97b52c07a040e5a7d70999b591df612",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T094300.398321Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -265,6 +310,10 @@
     {
       "en": "20 October 2026, EV5: the base reading of groups, by ending, is stated in Becoming.GroupEnding (record selection-among-groups-by-ending, study section 249). The claim is unchanged.",
       "zh": "2026年10月20日，EV5：组在流上的读法（经由终止）陈述于 Becoming.GroupEnding（记录 selection-among-groups-by-ending，研究第 249 节）。论断不变。"
+    },
+    {
+      "en": "20 October 2026, EV7: the division is stated for groups of any sizes (SelectionLevels.levels_sized; record selection-within-and-among-groups-of-any-sizes, study section 273), and levels is now derived from it as the case of equal sizes, its statement unchanged; the old proof's helpers lhs_shape and rhs_shape are gone, so the law's declarations name the derivation instead. The claim is unchanged; its open item on groups of unequal size is answered there.",
+      "zh": "2026年10月20日，EV7：划分陈述于大小任意的组（SelectionLevels.levels_sized；记录 selection-within-and-among-groups-of-any-sizes，研究第 273 节），levels 现作为大小相等的情形由其推出，陈述不变；旧证明的辅助引理 lhs_shape 与 rhs_shape 已删，故该定律的声明改列推导所用者。论断不变；其关于大小不等之组的开放项在那里回答。"
     }
   ]
 }

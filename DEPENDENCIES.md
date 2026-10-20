@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-301 registered results: 282 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 759 curated edges join 254 results to the results they draw on.
+302 registered results: 283 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 761 curated edges join 255 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -209,6 +209,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [selection-through-couplings][] ← <a id="selection-through-couplings--testing-within-couplings"></a>[testing-within-couplings][] · <a id="selection-through-couplings--levels-of-closure"></a>[levels-of-closure][] · <a id="selection-through-couplings--feedback-and-reach"></a>[feedback-and-reach][] · <a id="selection-through-couplings--target-capture"></a>[target-capture][]
 - [selection-under-registration-revision][] ← <a id="selection-under-registration-revision--selection-through-couplings"></a>[selection-through-couplings][] · <a id="selection-under-registration-revision--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="selection-under-registration-revision--process-and-frame-as-readings"></a>[process-and-frame-as-readings][]
 - [selection-within-and-among-groups][] ← <a id="selection-within-and-among-groups--selection-term-over-generations"></a>[selection-term-over-generations][]
+- [selection-within-and-among-groups-of-any-sizes][] ← <a id="selection-within-and-among-groups-of-any-sizes--selection-within-and-among-groups"></a>[selection-within-and-among-groups][] · <a id="selection-within-and-among-groups-of-any-sizes--selection-among-groups-by-ending"></a>[selection-among-groups-by-ending][]
 - [sensitivity-is-the-least-coupling][] ← <a id="sensitivity-is-the-least-coupling--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="sensitivity-is-the-least-coupling--testing-within-couplings"></a>[testing-within-couplings][]
 - [separation-loses-the-relation][] ← <a id="separation-loses-the-relation--claims-shown-in-context"></a>[claims-shown-in-context][]
 - [significance-retained-within-margin][] ← <a id="significance-retained-within-margin--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="significance-retained-within-margin--four-cases-of-a-part"></a>[four-cases-of-a-part][] · <a id="significance-retained-within-margin--continuation-condition-yields-living-significance"></a>[continuation-condition-yields-living-significance][]
@@ -486,6 +487,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [selection-through-couplings]: theories/becoming/results/records/selection-through-couplings.md
 [selection-under-registration-revision]: theories/becoming/results/records/selection-under-registration-revision.md
 [selection-within-and-among-groups]: theories/becoming/results/records/selection-within-and-among-groups.md
+[selection-within-and-among-groups-of-any-sizes]: theories/becoming/results/records/selection-within-and-among-groups-of-any-sizes.md
 [sensitivity-is-the-least-coupling]: theories/becoming/results/records/sensitivity-is-the-least-coupling.md
 [separation-loses-the-relation]: theories/becoming/results/records/separation-loses-the-relation.md
 [significance-retained-within-margin]: theories/becoming/results/records/significance-retained-within-margin.md
