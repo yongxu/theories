@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "module": "FeedbackAtlas",
+  "checked_at_utc": "2026-10-20T14:56:23+00:00",
+  "lean_version": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
+  "lean_binary_sha256": "b48bc5ab229bd8b320a224b87e20fc428dba6fa8a1c054bd4fa6def846e19997",
+  "theorems": 41,
+  "declarations": 83,
+  "axiom_dependencies": {},
+  "modules_compiled": 45,
+  "core": {
+    "path": "experiments/integrated-correction/general-framework/generative-basis/lean",
+    "checked_against_commit": "c3f912268c89ec93c2ba7b723e54824b9eb5bb8f",
+    "tree": "af54e0e18faaf1702de95921e40b5950b10b0da4"
+  },
+  "own_sha256": {
+    "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean": "6965890aa4e75b94348c32d615453288d1e3560128c32ede7e834d7c61740a0c",
+    "experiments/feedback-repair-atlas/model/verify_atlas.py": "e96db3cc76670a63106d667fe0694e391e154872e3d9c3e3719faf5e9b8d491c"
+  },
+  "not_established": [
+    "Empirical validity or fitted values of the update laws, probe or example histories",
+    "Anything about actual motives, worth or safety, or an obligation to keep engaging",
+    "The core package's own environment and purity audits, which only check_becoming.py runs"
+  ]
+}

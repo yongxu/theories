@@ -1,0 +1,190 @@
+<section id="atlas" aria-labelledby="atlas-title">
+<style>
+#atlas .map {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0;padding:0;list-style:none}
+#atlas .map a {display:block;height:100%;padding:14px 16px;border:1px solid var(--border);border-radius:12px;color:inherit;text-decoration:none}
+#atlas .map a:hover {background:var(--accent)}
+#atlas .map li:nth-child(1) a {border-top:3px solid var(--blue)}
+#atlas .map li:nth-child(2) a {border-top:3px solid var(--orange)}
+#atlas .map li:nth-child(3) a {border-top:3px solid var(--green)}
+#atlas .map b {display:block;font-weight:500;margin-bottom:4px}
+#atlas .part {margin:48px 0 0;padding-top:24px;border-top:1px solid var(--border)}
+#atlas .tag {font-size:13px;color:var(--muted-foreground);letter-spacing:.04em}
+#part1 .tag {color:var(--blue)} #part2 .tag {color:var(--orange)} #part3 .tag {color:var(--green)}
+#atlas .grid4 {display:grid;grid-template-columns:auto repeat(2,minmax(0,1fr));gap:6px;max-width:560px;margin:16px 0;font-size:14px}
+#atlas .grid4 .head {color:var(--muted-foreground);padding:6px;align-self:end}
+#atlas .cell {padding:12px;border-radius:10px;border:2px solid transparent;background:var(--muted);min-height:56px}
+#atlas .cell.g0 {border-color:var(--viz-series-1)}
+#atlas .cell.g1 {border-color:var(--viz-series-2)}
+#atlas .cell.g2 {border-color:var(--green)}
+#atlas .cell.g3 {border-style:dashed;border-color:var(--primary)}
+#atlas .cell.out {opacity:.35}
+#atlas .cell.wrong {background:var(--orange-soft);border-color:var(--orange)}
+#atlas .verdicts {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0}
+#atlas .verdicts > div {padding:12px;border-radius:10px;background:var(--muted);border-left:3px solid var(--border)}
+#atlas .verdicts > .yes {background:var(--green-soft);border-left-color:var(--green)}
+#atlas .verdicts > .no {background:var(--red-soft);border-left-color:var(--red)}
+#atlas .yes::before {content:"✓ ";color:var(--green)} #atlas .no::before {content:"✗ ";color:var(--red)}
+#atlas .people {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:20px 0}
+#atlas .values {display:flex;gap:18px;flex-wrap:wrap;font-variant-numeric:tabular-nums;margin:12px 0}
+#atlas .values strong {display:block;font-size:1.3em}
+#atlas .course {display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+#atlas .plot {width:100%;height:240px;display:block;margin:16px 0}
+#atlas pre {white-space:pre-wrap;overflow-wrap:anywhere;background:var(--muted);padding:16px;border-radius:10px;font-size:13px}
+#atlas .outcome {min-height:48px;margin:12px 0}
+#atlas .thm {font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;background:var(--muted);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+#atlas .bridge {padding:14px 16px;border-left:3px solid var(--green);background:var(--green-soft);border-radius:0 10px 10px 0;margin:20px 0}
+#atlas [hidden] {display:none!important}
+@media(max-width:700px){#atlas .map{grid-template-columns:1fr}#atlas .people{grid-template-columns:1fr}}
+</style>
+
+<div class="tag">ONE LEAN MODULE · THREE CONNECTED PARTS · SYNTHETIC EXAMPLES</div>
+<h2 id="atlas-title">One exchange, read and learned from</h2>
+<p>Alex and Maya work together. Alex hands back Maya's draft with four words: <q>This needs work.</q> This page follows that one exchange through a single checked model in three steps. Each step builds on the one before.</p>
+<ol class="map">
+<li><a href="#part1"><b>1 · Reading one remark</b>What can the wording settle about the situation behind it?</a></li>
+<li><a href="#part2"><b>2 · Learning across exchanges</b>How does each side's reading of the other change as exchanges add up?</a></li>
+<li><a href="#part3"><b>3 · The link</b>Maya's reading decides her reply. Can any history make that reply read the remark correctly?</a></li>
+</ol>
+
+<section class="part" id="part1" aria-labelledby="part1-title">
+<div class="tag">PART 1 OF 3</div>
+<h3 id="part1-title">Reading one remark</h3>
+<p>Two separate facts lie behind the remark: whether the draft has an error, and whether the delivery was personal. Both can be true at once. Together they give four situations, and the remark reads the same in all of them. Choose what Maya has to go on.</p>
+<div class="viz-controls"><label class="form-label">Maya's evidence<select class="form-select" id="p1-evidence">
+<option value="remark">The remark only</option>
+<option value="finding">The remark, plus a checked finding that the draft has an error</option>
+<option value="context">Context that tells all four situations apart</option>
+</select></label></div>
+<div class="grid4" id="p1-grid" aria-label="The four situations; cells with the same outline look the same to Maya"></div>
+<p class="text-small text-muted" id="p1-key"></p>
+<div class="verdicts" id="p1-verdicts" aria-live="polite"></div>
+<p class="text-small">Checked: <span class="thm" id="p1-theorems"></span></p>
+</section>
+
+<section class="part" id="part2" aria-labelledby="part2-title">
+<div class="tag">PART 2 OF 3</div>
+<h3 id="part2-title">Learning across exchanges</h3>
+<p>A single remark settles little, so each side reads it through what has passed between them before. In every exchange, Alex makes a move, Maya reads that move and replies, and Alex reads her reply. Each side's reading of the other has three numbers:</p>
+<ul>
+<li><b>expectation</b>: the share of the other's moves it expects to be constructive;</li>
+<li><b>confidence</b>: how much evidence stands behind that expectation;</li>
+<li><b>credibility</b>: how much weight the other's explanations get.</li>
+</ul>
+<div class="viz-controls"><label class="form-label">Start from a checked example<select class="form-select" id="p2-preset">
+<option value="short-short">Both short histories · a defense is returned</option>
+<option value="short-long">Maya's long history · she replies constructively</option>
+<option value="long-short">Alex's long history · he breaks the cycle on the next turn</option>
+<option value="pause">Maya pauses instead of defending</option>
+<option value="guarded-short">Alex has a guarded history · one constructive move</option>
+<option value="reliable">Alex's explanations have checked out</option>
+<option value="misleading">Alex's explanations have proved misleading</option>
+</select></label><button class="btn" type="button" id="p2-reset">Restart</button></div>
+<div class="people">
+<section><h4 style="color:var(--blue)">● Alex's reading of Maya</h4>
+<label class="form-label">History<select class="form-select" id="p2-alex-history"><option value="short">Short · 2 constructive moves</option><option value="long">Long · 10 constructive moves</option><option value="guarded">Guarded · 3 defensive moves</option></select></label>
+<label class="form-label">Her explanations, checked<select class="form-select" id="p2-alex-checks"><option value="none">Not yet checked</option><option value="reliable">Twice reliable</option><option value="misleading">Twice misleading</option></select></label>
+<div class="values" id="p2-alex-values"></div></section>
+<section><h4 style="color:var(--orange)">■ Maya's reading of Alex</h4>
+<label class="form-label">History<select class="form-select" id="p2-maya-history"><option value="short">Short · 2 constructive moves</option><option value="long">Long · 10 constructive moves</option><option value="guarded">Guarded · 3 defensive moves</option></select></label>
+<label class="form-label">His explanations, checked<select class="form-select" id="p2-maya-checks"><option value="none">Not yet checked</option><option value="reliable">Twice reliable</option><option value="misleading">Twice misleading</option></select></label>
+<div class="values" id="p2-maya-values"></div></section>
+</div>
+<div class="viz-controls"><label class="form-check"><input class="form-check-input" id="p2-alex-pause" type="checkbox"><span>When guarded, Alex pauses instead of defending</span></label><label class="form-check"><input class="form-check-input" id="p2-maya-pause" type="checkbox"><span>When guarded, Maya pauses instead of defending</span></label><label class="form-check"><input class="form-check-input" id="p2-fresh" type="checkbox" checked><span>The explanation is new</span></label></div>
+<div class="viz-controls" aria-label="Alex's next move"><button type="button" class="btn btn-primary" data-move="lapse">Alex lapses into defense</button><button type="button" class="btn" data-move="cooperate">Alex acts constructively</button><button type="button" class="btn" data-move="habitual">Alex replies by habit</button><button type="button" class="btn" data-move="explain">Alex explains favorably</button></div>
+<div class="course" id="p2-course" aria-label="Exchanges so far; choose one to branch from it"></div>
+<div class="outcome" id="p2-outcome" aria-live="polite"></div>
+<svg class="plot" id="p2-plot" role="img" aria-label="Both expectations across the exchanges"></svg>
+<p class="text-small">Blue circles: Alex's expectation of Maya. Orange squares: Maya's expectation of Alex. Dashed line: the 2/3 probe. At or above it, a side replies constructively; below it, the side is guarded. The probe is a supplied choice, not a measured threshold.</p>
+<details><summary>The update laws</summary>
+<p>c is confidence, q is expectation, r is credibility and k is the evidence behind credibility.</p>
+<ul>
+<li>Constructive move: q′ = (c q + 1)/(c + 1), and c′ = c + 1.</li>
+<li>Defensive move: q′ = c q/(c + 1), and c′ = ⌊c/2⌋ + 1. A defensive move lowers confidence along with expectation, so a reading built from defense stays easy to revise.</li>
+<li>New favorable explanation: q′ = (c q + r)/(c + r). It adds no confidence, and it does not certify itself.</li>
+<li>Checked explanation: r′ = (k r + v)/(k + 1), and k′ = k + 1, with v = 1 if it proved reliable and 0 if it proved misleading.</li>
+<li>Pause: nothing changes.</li>
+</ul>
+<p>The form of each law comes from trust-learning research, but none of the numbers is fitted to data. <a href="model/EVIDENCE.md">What each law draws on, and its limits</a>.</p></details>
+</section>
+
+<section class="part" id="part3" aria-labelledby="part3-title">
+<div class="tag">PART 3 OF 3</div>
+<h3 id="part3-title">The link: Maya's reply is a reading of the remark</h3>
+<p>Go back to Part 1, at the exchange selected in Part 2. Alex says <q>This needs work.</q> again. Maya's reply comes from her current reading of Alex. A guarded reply treats the remark as personal; a constructive reply treats it as not personal. Either way, the reply is an answer to Part 1's question.</p>
+<div class="bridge" id="p3-verdict" aria-live="polite"></div>
+<div class="grid4" id="p3-grid" aria-label="Situations in which Maya's reply misreads the remark"></div>
+<p>Learning can change which way the reply errs. It cannot remove the error. In every course of exchanges, from every starting point, some admitted situation is misread. The remark is the same in all four situations, so a history adds nothing that tells them apart. Only evidence about the situation itself can settle it, such as the context in Part 1.</p>
+<p class="text-small">Checked: <span class="thm">every_reading_misreads_some_case</span>, <span class="thm">every_course_misreads_some_case</span>, <span class="thm">no_reading_settles_personal</span>.</p>
+</section>
+
+<section class="part" aria-labelledby="lean-title">
+<h3 id="lean-title">What is checked, and what is supplied</h3>
+<p>All three parts are a single Lean module, <code>FeedbackAtlas.lean</code>. It reuses three laws of the Becoming core: no reduction can judge between situations that it merges (Parts 1 and 3); a coupled whole changes by the one move it forms (Part 2); and a reduction that commutes with one move commutes with every course of moves (Part 2). No other law of the theory is carried into this application.</p>
+<p>The situations, the update laws, the 2/3 probe and the example histories are supplied. The proofs show what follows from them. They say nothing about anyone's actual motives, worth or safety, or about whether anyone should stay in an exchange.</p>
+<p>The model has two positions, but they are not two independent people: both readings change through the same exchange. The model leaves out everything else either side takes part in.</p>
+<label class="form-label">Inspect a checked component<select class="form-select" id="lean-component"></select></label>
+<p id="lean-label" class="text-small"></p><pre><code id="lean-code"></code></pre><p id="lean-boundary" class="text-small text-muted"></p>
+<p class="text-small text-muted" id="lean-verification"></p>
+<p class="text-small text-muted">This page runs a JavaScript copy of the laws, which is tested against the Lean examples. The JavaScript is not compiled from Lean.</p>
+</section>
+
+<script type="application/json" id="atlas-data">__ATLAS_DATA__</script>
+<script>
+window.addEventListener('DOMContentLoaded',()=>{
+const root=document.getElementById('atlas'),$=s=>root.querySelector(s),$$=s=>[...root.querySelectorAll(s)],M=globalThis.atlasLearning,ns='http://www.w3.org/2000/svg';
+const data=JSON.parse(document.getElementById('atlas-data').textContent);
+const SITUATIONS=[[false,false],[false,true],[true,false],[true,true]];
+const name=([e,p])=>(e?'error':'no error')+' · '+(p?'personal':'not personal');
+function grid(el,cls){el.replaceChildren();const head=t=>{const d=document.createElement('div');d.className='head';d.textContent=t;el.append(d);};head('');head('Delivery not personal');head('Delivery personal');
+ for(const e of [false,true]){head(e?'Draft has an error':'Draft has no error');for(const p of [false,true]){const d=document.createElement('div');d.className='cell '+cls([e,p]);d.textContent=name([e,p]);el.append(d);}}}
+
+// Part 1: what the evidence lets Maya tell apart, and what it permits.
+const P1={
+ remark:{group:()=>'g3',remaining:()=>true,key:'All four situations have the same outline: the remark looks identical in each.',
+  verdicts:[['yes','Ask for specifics: permitted in every situation'],['no','Acknowledge the error: not permitted everywhere (the draft may be fine)'],['no','Name the delivery as personal: not permitted everywhere'],['no','Is there an error? Cannot be settled'],['no','Was it personal? Cannot be settled']],
+  theorems:'no_personal_judge_from_remark, request_without_verdict, cannot_always_accept_fault, cannot_always_name_personal'},
+ finding:{group:([e])=>e?'g0':'g0 out',remaining:([e])=>e,key:'Only the two situations with an error remain. They still share an outline, because the finding is about the draft, not the delivery.',
+  verdicts:[['yes','Ask for specifics: permitted'],['yes','Acknowledge the error: permitted in every remaining situation'],['no','Name the delivery as personal: still not permitted everywhere'],['yes','Is there an error? Settled: yes'],['no','Was it personal? Still cannot be settled']],
+  theorems:'confirmed_error_supports_accountability, task_error_does_not_settle_personal, confirmed_error_still_not_personal'},
+ context:{group:([e,p])=>'g'+(2*e+p),remaining:()=>true,key:'Every situation has its own outline: the evidence tells all four apart.',
+  verdicts:[['yes','Is there an error? Can be read correctly'],['yes','Was it personal? Can be read correctly']],
+  theorems:'task_judge_exists, personal_judge_exists'}};
+function part1(){const m=P1[$('#p1-evidence').value];grid($('#p1-grid'),s=>m.group(s));$('#p1-key').textContent=m.key;const v=$('#p1-verdicts');v.replaceChildren();for(const[c,t]of m.verdicts){const d=document.createElement('div');d.className=c;d.textContent=t;v.append(d);}$('#p1-theorems').textContent=m.theorems;}
+$('#p1-evidence').onchange=part1;part1();
+
+// Part 2: exchanges.
+let states=[],moves=[],selected=0;
+const words={constructive:'a constructive move',defensive:'a defensive move',pause:'a pause',explanation:'a favorable explanation'};
+function reset(){moves=[];selected=0;states=[{pair:[M.initial($('#p2-alex-history').value,$('#p2-alex-checks').value),M.initial($('#p2-maya-history').value,$('#p2-maya-checks').value)],event:null}];render();}
+function values(el,b){el.replaceChildren();for(const[label,value]of[['Expectation',M.exact(b.q)+' ≈ '+M.ratio(b.q).toFixed(3)],['Confidence',String(b.c)],['Credibility',M.exact(b.r)]]){const d=document.createElement('div'),s=document.createElement('span'),v=document.createElement('strong');s.className='text-small';s.textContent=label;v.textContent=value;d.append(s,v);el.append(d);}}
+function node(tag,attrs,text){const n=document.createElementNS(ns,tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,v);if(text!==undefined)n.textContent=text;return n;}
+function draw(){const svg=$('#p2-plot'),w=Math.max(svg.clientWidth,280),h=240,left=38,right=w-16,top=14,bottom=202;svg.setAttribute('viewBox',`0 0 ${w} ${h}`);svg.replaceChildren(node('title',{},'Expectations from 0 to 1 across exchanges'));
+ const x=i=>left+(right-left)*i/Math.max(1,states.length-1),y=q=>bottom-(bottom-top)*q;
+ for(const v of[0,.5,1])svg.append(node('line',{x1:left,y1:y(v),x2:right,y2:y(v),stroke:'var(--border)'}),node('text',{x:left-8,y:y(v)+4,'text-anchor':'end',fill:'var(--foreground)','font-size':12},String(v)));
+ svg.append(node('line',{x1:left,y1:y(2/3),x2:right,y2:y(2/3),stroke:'var(--muted-foreground)','stroke-dasharray':'5 5'}));
+ for(const j of[0,1]){const color=j?'var(--viz-series-2)':'var(--viz-series-1)';svg.append(node('polyline',{points:states.map((s,i)=>`${x(i)},${y(M.ratio(s.pair[j].reading.q))}`).join(' '),fill:'none',stroke:color,'stroke-width':2}));
+  states.forEach((s,i)=>{const xx=x(i),yy=y(M.ratio(s.pair[j].reading.q)),r=i===selected?5:3;svg.append(j?node('rect',{x:xx-r,y:yy-r,width:2*r,height:2*r,fill:color}):node('circle',{cx:xx,cy:yy,r,fill:color}));});}
+ states.forEach((s,i)=>{if(states.length>8&&i%2&&i!==states.length-1)return;svg.append(node('text',{x:x(i),y:222,'text-anchor':'middle',fill:'var(--foreground)','font-size':12},String(i)));});}
+function render(){const s=states[selected];values($('#p2-alex-values'),s.pair[0].reading);values($('#p2-maya-values'),s.pair[1].reading);
+ $('#p2-outcome').textContent=s.event?`Exchange ${selected}: Alex made ${words[s.event.first]}; Maya read it and replied with ${words[s.event.reply]}.`:'Before any exchange. Choose Alex\'s move.';
+ const course=$('#p2-course');course.replaceChildren();states.forEach((_,i)=>{const b=document.createElement('button');b.type='button';b.className='btn';b.textContent=i===0?'Start':`${i} · ${moves[i-1].action}`;b.setAttribute('aria-pressed',String(i===selected));b.onclick=()=>{selected=i;render();};course.append(b);});
+ $$('[data-move]').forEach(b=>b.disabled=selected>=12);draw();part3();}
+function preset(){const p=$('#p2-preset').value;$('#p2-alex-history').value=p==='long-short'?'long':p==='guarded-short'?'guarded':'short';$('#p2-maya-history').value=p==='short-long'?'long':'short';$('#p2-alex-checks').value='none';$('#p2-maya-checks').value=p==='reliable'?'reliable':p==='misleading'?'misleading':'none';$('#p2-alex-pause').checked=false;$('#p2-maya-pause').checked=p==='pause';$('#p2-fresh').checked=true;reset();}
+$$('[data-move]').forEach(b=>b.onclick=()=>{if(selected>=12)return;const input={action:b.dataset.move,initiatorGuard:$('#p2-alex-pause').checked?'pause':'defend',responderGuard:$('#p2-maya-pause').checked?'pause':'defend',fresh:$('#p2-fresh').checked};moves=moves.slice(0,selected).concat(input);states=states.slice(0,selected+1).concat(M.step(states[selected].pair,input));selected++;render();});
+for(const id of['alex-history','maya-history','alex-checks','maya-checks'])$('#p2-'+id).onchange=reset;$('#p2-preset').onchange=preset;$('#p2-reset').onclick=preset;
+
+// Part 3: Maya's reply to the next terse remark, read as a verdict on Part 1's question.
+function part3(){const b=states[selected].pair[1].reading,guard=$('#p2-maya-pause').checked?'pause':'defend',personal=M.readsPersonal(b,guard);
+ $('#p3-verdict').textContent=`At exchange ${selected}, Maya expects ${M.exact(b.q)} ≈ ${M.ratio(b.q).toFixed(3)} of Alex's moves to be constructive, which is ${personal?'below':'at or above'} the 2/3 probe. Her reply to "This needs work." is ${personal?(guard==='pause'?'a guarded pause':'defensive'):'constructive'}, so it treats the remark as ${personal?'personal':'not personal'}. That reading is wrong in the two highlighted situations, where the delivery was ${personal?'not personal':'personal'}.`;
+ grid($('#p3-grid'),([,p])=>p!==personal?'wrong':'out');}
+
+// Checked components.
+const select=$('#lean-component'),parts=['Becoming core','Part 1 · Reading one remark','Part 2 · Learning across exchanges','Part 3 · The link'];
+for(const n of[1,2,3,0]){const g=document.createElement('optgroup');g.label=parts[n];for(const c of data.components.filter(c=>c.part===n)){const o=document.createElement('option');o.value=c.id;o.textContent=c.label;g.append(o);}select.append(g);}
+function source(){const c=data.components.find(c=>c.id===select.value);$('#lean-code').textContent=c.code;$('#lean-label').textContent=c.path.split('/').pop()+' · lines '+c.line+'–'+c.end+(c.commit?' at core commit '+c.commit.slice(0,10):'');$('#lean-boundary').textContent=c.boundary;}
+select.onchange=source;source();
+const v=data.verification;$('#lean-verification').textContent=`${v.theorems} theorems · ${v.declarations} declarations · Lean ${(v.lean_version.match(/version ([0-9.]+)/)||[,'?'])[1]} · no compiler warnings and no reported axiom dependencies · checked against core commit ${v.core_commit.slice(0,10)}`;
+new ResizeObserver(draw).observe($('#p2-plot'));root.atlasTest={state:()=>({states,moves,selected}),reset};preset();
+});
+</script>
+</section>

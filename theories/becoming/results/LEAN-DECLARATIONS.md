@@ -23,7 +23,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 | [Concern and shared activity](lean-declarations/concern.md) | 15 | 246 |
 | [Organizational formation through revisable evaluation](lean-declarations/shared.md) | 66 | 1,480 |
 | [Generative core and relational structure](lean-declarations/core.md) | 137 | 1,907 |
-| [Other formal studies](lean-declarations/other.md) | 29 | 873 |
+| [Other formal studies](lean-declarations/other.md) | 30 | 914 |
 
 <a id="按名称查找--find-by-name"></a>
 ## Find by name
@@ -329,6 +329,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [FaultTolerantCorrection.lean](lean-declarations/ethics.md#module-a06a1493760d) | Normative grounding and generative direction |
 | [FaultTolerantCorrectionCases.lean](lean-declarations/ethics.md#module-b9ae5b1bfe94) | Normative grounding and generative direction |
 | [Feedback.lean](lean-declarations/becoming-core.md#module-cfe2b12d408e) | Becoming pure core |
+| [FeedbackAtlas.lean](lean-declarations/other.md#module-e3088037c799) | Other formal studies |
 | [FeedbackDynamics.lean](lean-declarations/learning.md#module-95c70a079b33) | Learning, prediction and dynamics |
 | [FeedbackExamples.lean](lean-declarations/learning.md#module-0db80602d519) | Learning, prediction and dynamics |
 | [FeedbackMemory.lean](lean-declarations/learning.md#module-9889c88e9097) | Learning, prediction and dynamics |

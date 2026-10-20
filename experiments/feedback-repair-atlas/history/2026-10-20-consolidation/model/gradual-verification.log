@@ -1,0 +1,18 @@
+{
+  "tree": "/Users/bird/.codex/worktrees/feedback-repair-atlas/theories/experiments/feedback-repair-atlas/model",
+  "modules": 50,
+  "ran": [
+    "Becoming.Copying",
+    "GradualInteractionTrial",
+    "GradualInteractionTrialAxiomAudit"
+  ],
+  "reused": 48,
+  "unclean": [],
+  "audits": {
+    "GradualInteractionTrial": {
+      "theorems": 23,
+      "declarations": 45,
+      "with_axioms": {}
+    }
+  }
+}

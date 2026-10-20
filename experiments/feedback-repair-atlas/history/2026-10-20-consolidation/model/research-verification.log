@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/bird/.codex/worktrees/feedback-repair-atlas/theories/experiments/feedback-repair-atlas/model",
+  "modules": 51,
+  "ran": [
+    "ResearchInteractionTrial",
+    "ResearchInteractionTrialAxiomAudit"
+  ],
+  "reused": 50,
+  "unclean": [],
+  "audits": {
+    "ResearchInteractionTrial": {
+      "theorems": 22,
+      "declarations": 52,
+      "with_axioms": {}
+    }
+  }
+}

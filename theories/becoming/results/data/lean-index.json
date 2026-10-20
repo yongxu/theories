@@ -18,18 +18,18 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 1736,
-    "distinct_byte_contents": 1367,
+    "lean_paths": 1737,
+    "distinct_byte_contents": 1368,
     "byte_identical_duplicate_groups": 110,
     "roles": {
       "audit-driver": 13,
       "development-attempt": 832,
       "historical-draft": 3,
       "imported-archive": 23,
-      "working-source": 865
+      "working-source": 866
     },
-    "working_named_theorem_lemma_occurrences": 23262,
-    "working_explicit_named_declaration_occurrences": 34854,
+    "working_named_theorem_lemma_occurrences": 23303,
+    "working_explicit_named_declaration_occurrences": 34937,
     "working_groups": {
       "abstraction": 45,
       "becoming-core": 281,
@@ -39,7 +39,7 @@
       "ethics": 139,
       "inquiry": 71,
       "learning": 51,
-      "other": 29,
+      "other": 30,
       "renewal": 12,
       "shared": 66,
       "valuation": 19
@@ -4105,6 +4105,18 @@
       "group": "other",
       "package_readme": null,
       "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+      "sha256": "6965890aa4e75b94348c32d615453288d1e3560128c32ede7e834d7c61740a0c",
+      "role": "working-source",
+      "group": "other",
+      "package_readme": "experiments/feedback-repair-atlas/README.md",
+      "direct_documentation_links_from": [
+        "experiments/feedback-repair-atlas/README.md",
+        "experiments/feedback-repair-atlas/model/EVIDENCE.md"
+      ],
       "proof_status": "not_assessed_by_catalogue"
     },
     {
@@ -154846,6 +154858,530 @@
       "declaration_counts": {
         "def": 1,
         "theorem": 9
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "6965890aa4e75b94348c32d615453288d1e3560128c32ede7e834d7c61740a0c": {
+      "byte_size": 26265,
+      "line_count": 534,
+      "imports": [
+        "Becoming.Readout",
+        "Becoming.Inquiry",
+        "Becoming.MoveFormation"
+      ],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "Situation",
+          "qualified_name_hint": "FeedbackAtlas.Situation",
+          "line": 46
+        },
+        {
+          "kind": "def",
+          "name": "possibilities",
+          "qualified_name_hint": "FeedbackAtlas.possibilities",
+          "line": 52
+        },
+        {
+          "kind": "def",
+          "name": "remark",
+          "qualified_name_hint": "FeedbackAtlas.remark",
+          "line": 56
+        },
+        {
+          "kind": "def",
+          "name": "taskEvidence",
+          "qualified_name_hint": "FeedbackAtlas.taskEvidence",
+          "line": 59
+        },
+        {
+          "kind": "def",
+          "name": "contextEvidence",
+          "qualified_name_hint": "FeedbackAtlas.contextEvidence",
+          "line": 62
+        },
+        {
+          "kind": "theorem",
+          "name": "no_personal_judge_from_remark",
+          "qualified_name_hint": "FeedbackAtlas.no_personal_judge_from_remark",
+          "line": 65
+        },
+        {
+          "kind": "theorem",
+          "name": "task_error_does_not_settle_personal",
+          "qualified_name_hint": "FeedbackAtlas.task_error_does_not_settle_personal",
+          "line": 72
+        },
+        {
+          "kind": "theorem",
+          "name": "task_judge_exists",
+          "qualified_name_hint": "FeedbackAtlas.task_judge_exists",
+          "line": 79
+        },
+        {
+          "kind": "theorem",
+          "name": "personal_judge_exists",
+          "qualified_name_hint": "FeedbackAtlas.personal_judge_exists",
+          "line": 86
+        },
+        {
+          "kind": "inductive",
+          "name": "Response",
+          "qualified_name_hint": "FeedbackAtlas.Response",
+          "line": 92
+        },
+        {
+          "kind": "def",
+          "name": "EvidencePermits",
+          "qualified_name_hint": "FeedbackAtlas.EvidencePermits",
+          "line": 101
+        },
+        {
+          "kind": "def",
+          "name": "Common",
+          "qualified_name_hint": "FeedbackAtlas.Common",
+          "line": 108
+        },
+        {
+          "kind": "theorem",
+          "name": "request_without_verdict",
+          "qualified_name_hint": "FeedbackAtlas.request_without_verdict",
+          "line": 113
+        },
+        {
+          "kind": "theorem",
+          "name": "cannot_always_accept_fault",
+          "qualified_name_hint": "FeedbackAtlas.cannot_always_accept_fault",
+          "line": 117
+        },
+        {
+          "kind": "theorem",
+          "name": "cannot_always_name_personal",
+          "qualified_name_hint": "FeedbackAtlas.cannot_always_name_personal",
+          "line": 123
+        },
+        {
+          "kind": "def",
+          "name": "updated",
+          "qualified_name_hint": "FeedbackAtlas.updated",
+          "line": 129
+        },
+        {
+          "kind": "theorem",
+          "name": "update_narrows",
+          "qualified_name_hint": "FeedbackAtlas.update_narrows",
+          "line": 132
+        },
+        {
+          "kind": "theorem",
+          "name": "sound_update_keeps_actual",
+          "qualified_name_hint": "FeedbackAtlas.sound_update_keeps_actual",
+          "line": 136
+        },
+        {
+          "kind": "theorem",
+          "name": "confirmed_error_supports_accountability",
+          "qualified_name_hint": "FeedbackAtlas.confirmed_error_supports_accountability",
+          "line": 141
+        },
+        {
+          "kind": "theorem",
+          "name": "common_survives_update",
+          "qualified_name_hint": "FeedbackAtlas.common_survives_update",
+          "line": 146
+        },
+        {
+          "kind": "theorem",
+          "name": "confirmed_error_still_not_personal",
+          "qualified_name_hint": "FeedbackAtlas.confirmed_error_still_not_personal",
+          "line": 154
+        },
+        {
+          "kind": "theorem",
+          "name": "wrong_prior_can_empty_update",
+          "qualified_name_hint": "FeedbackAtlas.wrong_prior_can_empty_update",
+          "line": 161
+        },
+        {
+          "kind": "structure",
+          "name": "Share",
+          "qualified_name_hint": "FeedbackAtlas.Share",
+          "line": 169
+        },
+        {
+          "kind": "def",
+          "name": "Same",
+          "qualified_name_hint": "FeedbackAtlas.Same",
+          "line": 175
+        },
+        {
+          "kind": "def",
+          "name": "zero",
+          "qualified_name_hint": "FeedbackAtlas.zero",
+          "line": 180
+        },
+        {
+          "kind": "def",
+          "name": "one",
+          "qualified_name_hint": "FeedbackAtlas.one",
+          "line": 181
+        },
+        {
+          "kind": "def",
+          "name": "half",
+          "qualified_name_hint": "FeedbackAtlas.half",
+          "line": 182
+        },
+        {
+          "kind": "def",
+          "name": "twoThirds",
+          "qualified_name_hint": "FeedbackAtlas.twoThirds",
+          "line": 183
+        },
+        {
+          "kind": "theorem",
+          "name": "distribute",
+          "qualified_name_hint": "FeedbackAtlas.distribute",
+          "line": 185
+        },
+        {
+          "kind": "theorem",
+          "name": "weighted_bound",
+          "qualified_name_hint": "FeedbackAtlas.weighted_bound",
+          "line": 193
+        },
+        {
+          "kind": "def",
+          "name": "weighted",
+          "qualified_name_hint": "FeedbackAtlas.weighted",
+          "line": 203
+        },
+        {
+          "kind": "def",
+          "name": "halve",
+          "qualified_name_hint": "FeedbackAtlas.halve",
+          "line": 211
+        },
+        {
+          "kind": "theorem",
+          "name": "halve_le",
+          "qualified_name_hint": "FeedbackAtlas.halve_le",
+          "line": 216
+        },
+        {
+          "kind": "structure",
+          "name": "Reading",
+          "qualified_name_hint": "FeedbackAtlas.Reading",
+          "line": 228
+        },
+        {
+          "kind": "inductive",
+          "name": "Signal",
+          "qualified_name_hint": "FeedbackAtlas.Signal",
+          "line": 237
+        },
+        {
+          "kind": "def",
+          "name": "learn",
+          "qualified_name_hint": "FeedbackAtlas.learn",
+          "line": 257
+        },
+        {
+          "kind": "theorem",
+          "name": "halve_add_one_le",
+          "qualified_name_hint": "FeedbackAtlas.halve_add_one_le",
+          "line": 276
+        },
+        {
+          "kind": "theorem",
+          "name": "defense_does_not_consolidate",
+          "qualified_name_hint": "FeedbackAtlas.defense_does_not_consolidate",
+          "line": 280
+        },
+        {
+          "kind": "theorem",
+          "name": "halve_small",
+          "qualified_name_hint": "FeedbackAtlas.halve_small",
+          "line": 285
+        },
+        {
+          "kind": "theorem",
+          "name": "defense_keeps_confidence_low",
+          "qualified_name_hint": "FeedbackAtlas.defense_keeps_confidence_low",
+          "line": 295
+        },
+        {
+          "kind": "theorem",
+          "name": "direct_move_ignores_credibility",
+          "qualified_name_hint": "FeedbackAtlas.direct_move_ignores_credibility",
+          "line": 304
+        },
+        {
+          "kind": "theorem",
+          "name": "explanation_adds_no_confidence",
+          "qualified_name_hint": "FeedbackAtlas.explanation_adds_no_confidence",
+          "line": 307
+        },
+        {
+          "kind": "theorem",
+          "name": "explanation_does_not_certify_itself",
+          "qualified_name_hint": "FeedbackAtlas.explanation_does_not_certify_itself",
+          "line": 310
+        },
+        {
+          "kind": "theorem",
+          "name": "stale_explanation_changes_nothing",
+          "qualified_name_hint": "FeedbackAtlas.stale_explanation_changes_nothing",
+          "line": 313
+        },
+        {
+          "kind": "theorem",
+          "name": "checking_separate_from_behavior",
+          "qualified_name_hint": "FeedbackAtlas.checking_separate_from_behavior",
+          "line": 317
+        },
+        {
+          "kind": "structure",
+          "name": "Position",
+          "qualified_name_hint": "FeedbackAtlas.Position",
+          "line": 323
+        },
+        {
+          "kind": "def",
+          "name": "observe",
+          "qualified_name_hint": "FeedbackAtlas.observe",
+          "line": 327
+        },
+        {
+          "kind": "abbrev",
+          "name": "Joint",
+          "qualified_name_hint": "FeedbackAtlas.Joint",
+          "line": 330
+        },
+        {
+          "kind": "def",
+          "name": "readings",
+          "qualified_name_hint": "FeedbackAtlas.readings",
+          "line": 332
+        },
+        {
+          "kind": "inductive",
+          "name": "Guard",
+          "qualified_name_hint": "FeedbackAtlas.Guard",
+          "line": 335
+        },
+        {
+          "kind": "def",
+          "name": "choose",
+          "qualified_name_hint": "FeedbackAtlas.choose",
+          "line": 343
+        },
+        {
+          "kind": "inductive",
+          "name": "Initiative",
+          "qualified_name_hint": "FeedbackAtlas.Initiative",
+          "line": 349
+        },
+        {
+          "kind": "structure",
+          "name": "Input",
+          "qualified_name_hint": "FeedbackAtlas.Input",
+          "line": 356
+        },
+        {
+          "kind": "structure",
+          "name": "Exchange",
+          "qualified_name_hint": "FeedbackAtlas.Exchange",
+          "line": 364
+        },
+        {
+          "kind": "def",
+          "name": "form",
+          "qualified_name_hint": "FeedbackAtlas.form",
+          "line": 371
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "FeedbackAtlas.step",
+          "line": 381
+        },
+        {
+          "kind": "def",
+          "name": "readingStep",
+          "qualified_name_hint": "FeedbackAtlas.readingStep",
+          "line": 386
+        },
+        {
+          "kind": "theorem",
+          "name": "step_commutes",
+          "qualified_name_hint": "FeedbackAtlas.step_commutes",
+          "line": 390
+        },
+        {
+          "kind": "theorem",
+          "name": "readings_evolve_without_record",
+          "qualified_name_hint": "FeedbackAtlas.readings_evolve_without_record",
+          "line": 396
+        },
+        {
+          "kind": "theorem",
+          "name": "records_retained",
+          "qualified_name_hint": "FeedbackAtlas.records_retained",
+          "line": 400
+        },
+        {
+          "kind": "def",
+          "name": "seed",
+          "qualified_name_hint": "FeedbackAtlas.seed",
+          "line": 406
+        },
+        {
+          "kind": "def",
+          "name": "fromRecord",
+          "qualified_name_hint": "FeedbackAtlas.fromRecord",
+          "line": 408
+        },
+        {
+          "kind": "def",
+          "name": "short",
+          "qualified_name_hint": "FeedbackAtlas.short",
+          "line": 411
+        },
+        {
+          "kind": "def",
+          "name": "long",
+          "qualified_name_hint": "FeedbackAtlas.long",
+          "line": 413
+        },
+        {
+          "kind": "def",
+          "name": "guarded",
+          "qualified_name_hint": "FeedbackAtlas.guarded",
+          "line": 415
+        },
+        {
+          "kind": "def",
+          "name": "lapse",
+          "qualified_name_hint": "FeedbackAtlas.lapse",
+          "line": 417
+        },
+        {
+          "kind": "def",
+          "name": "habitual",
+          "qualified_name_hint": "FeedbackAtlas.habitual",
+          "line": 418
+        },
+        {
+          "kind": "theorem",
+          "name": "example_readings",
+          "qualified_name_hint": "FeedbackAtlas.example_readings",
+          "line": 420
+        },
+        {
+          "kind": "theorem",
+          "name": "same_lapse_different_updates",
+          "qualified_name_hint": "FeedbackAtlas.same_lapse_different_updates",
+          "line": 427
+        },
+        {
+          "kind": "theorem",
+          "name": "guarded_reading_is_revisable",
+          "qualified_name_hint": "FeedbackAtlas.guarded_reading_is_revisable",
+          "line": 434
+        },
+        {
+          "kind": "theorem",
+          "name": "responder_history_changes_reply",
+          "qualified_name_hint": "FeedbackAtlas.responder_history_changes_reply",
+          "line": 440
+        },
+        {
+          "kind": "theorem",
+          "name": "responder_history_changes_initiator_reading",
+          "qualified_name_hint": "FeedbackAtlas.responder_history_changes_initiator_reading",
+          "line": 444
+        },
+        {
+          "kind": "theorem",
+          "name": "initiator_history_interrupts_returned_defense",
+          "qualified_name_hint": "FeedbackAtlas.initiator_history_interrupts_returned_defense",
+          "line": 451
+        },
+        {
+          "kind": "theorem",
+          "name": "pause_alternative",
+          "qualified_name_hint": "FeedbackAtlas.pause_alternative",
+          "line": 459
+        },
+        {
+          "kind": "def",
+          "name": "checkedReliable",
+          "qualified_name_hint": "FeedbackAtlas.checkedReliable",
+          "line": 466
+        },
+        {
+          "kind": "def",
+          "name": "checkedMisleading",
+          "qualified_name_hint": "FeedbackAtlas.checkedMisleading",
+          "line": 469
+        },
+        {
+          "kind": "theorem",
+          "name": "credibility_is_separate",
+          "qualified_name_hint": "FeedbackAtlas.credibility_is_separate",
+          "line": 472
+        },
+        {
+          "kind": "theorem",
+          "name": "same_explanation_different_effect",
+          "qualified_name_hint": "FeedbackAtlas.same_explanation_different_effect",
+          "line": 480
+        },
+        {
+          "kind": "def",
+          "name": "readsPersonal",
+          "qualified_name_hint": "FeedbackAtlas.readsPersonal",
+          "line": 492
+        },
+        {
+          "kind": "theorem",
+          "name": "every_reading_misreads_some_case",
+          "qualified_name_hint": "FeedbackAtlas.every_reading_misreads_some_case",
+          "line": 503
+        },
+        {
+          "kind": "theorem",
+          "name": "no_reading_settles_personal",
+          "qualified_name_hint": "FeedbackAtlas.no_reading_settles_personal",
+          "line": 512
+        },
+        {
+          "kind": "theorem",
+          "name": "every_course_misreads_some_case",
+          "qualified_name_hint": "FeedbackAtlas.every_course_misreads_some_case",
+          "line": 522
+        },
+        {
+          "kind": "theorem",
+          "name": "examples_err_in_opposite_directions",
+          "qualified_name_hint": "FeedbackAtlas.examples_err_in_opposite_directions",
+          "line": 530
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 31,
+        "inductive": 4,
+        "structure": 6,
+        "theorem": 41
       },
       "textual_markers": {
         "sorry": [],

@@ -1,0 +1,127 @@
+{
+ "components": [
+  {
+   "id": "remark",
+   "part": 1,
+   "label": "The remark and its four situations",
+   "path": "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+   "line": 44,
+   "end": 59,
+   "boundary": "The situations and evidence functions are supplied."
+  },
+  {
+   "id": "no-judge",
+   "part": 1,
+   "label": "What the wording cannot settle",
+   "path": "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+   "line": 64,
+   "end": 76,
+   "boundary": "Uses the core law no_judge_of_merged."
+  },
+  {
+   "id": "permits",
+   "part": 1,
+   "label": "Which replies the evidence permits",
+   "path": "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+   "line": 98,
+   "end": 126,
+   "boundary": "The permission rules are supplied; the inquiry is the core one-step judgment."
+  },
+  {
+   "id": "reading",
+   "part": 2,
+   "label": "A reading of the other end",
+   "path": "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+   "line": 221,
+   "end": 244,
+   "boundary": "Expectation, confidence and credibility are model quantities, not measurements."
+  },
+  {
+   "id": "learn",
+   "part": 2,
+   "label": "The update laws",
+   "path": "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+   "line": 246,
+   "end": 274,
+   "boundary": "The laws are supplied and not fitted; EVIDENCE.md lists what motivates each."
+  },
+  {
+   "id": "defense",
+   "part": 2,
+   "label": "Defense keeps a reading revisable",
+   "path": "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+   "line": 279,
+   "end": 301,
+   "boundary": "Holds for every reading and every run length, under the supplied law."
+  },
+  {
+   "id": "exchange",
+   "part": 2,
+   "label": "How one exchange forms",
+   "path": "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+   "line": 368,
+   "end": 388,
+   "boundary": "Both ends change by the one move the whole forms (core wholeNext)."
+  },
+  {
+   "id": "readout",
+   "part": 2,
+   "label": "Readings evolve without the record",
+   "path": "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+   "line": 390,
+   "end": 398,
+   "boundary": "The records do no work in these laws; the readings are self-contained."
+  },
+  {
+   "id": "examples",
+   "part": 2,
+   "label": "Worked examples",
+   "path": "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+   "line": 410,
+   "end": 455,
+   "boundary": "Synthetic histories; every number is checked by decide."
+  },
+  {
+   "id": "link",
+   "part": 3,
+   "label": "The link: a reply reads the remark",
+   "path": "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+   "line": 490,
+   "end": 526,
+   "boundary": "Holds for every reading, hence every course of exchanges."
+  },
+  {
+   "id": "core-merged",
+   "part": 0,
+   "label": "Core: no judge through a merging reduction",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean",
+   "commit": "c3f912268c89ec93c2ba7b723e54824b9eb5bb8f",
+   "line": 287,
+   "end": 292,
+   "boundary": "§1 and §3 apply it.",
+   "code": "/-- **No judge of a family reads through a reduction that merges two of its members the\nobservable tells apart.** -/\ntheorem no_judge_of_merged {family : List S} {π : S → K} {f : S → V} {s s' : S}\n    (mem : s ∈ family) (mem' : s' ∈ family) (merged : π s = π s') (apart : f s ≠ f s') :\n    ¬ ∃ judge, Judges family π f judge :=\n  fun ⟨_, judges⟩ => apart (lumpedOn_of_judges judges s s' mem mem' merged)"
+  },
+  {
+   "id": "core-whole",
+   "part": 0,
+   "label": "Core: the coupled whole",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveFormation.lean",
+   "commit": "c3f912268c89ec93c2ba7b723e54824b9eb5bb8f",
+   "line": 348,
+   "end": 351,
+   "boundary": "§2 builds each exchange with it.",
+   "code": "/-- The whole's law where the part's and the rest's laws are functions: both go by the move the\nwhole forms. -/\ndef wholeNext (F : S → A → S) (G : E → A → E) (form : S × E → A) (x : S × E) : S × E :=\n  (F x.1 (form x), G x.2 (form x))"
+  },
+  {
+   "id": "core-fold",
+   "part": 0,
+   "label": "Core: a commuting reduction commutes with every course",
+   "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean",
+   "commit": "c3f912268c89ec93c2ba7b723e54824b9eb5bb8f",
+   "line": 114,
+   "end": 121,
+   "boundary": "§2 applies it to readings.",
+   "code": "/-- **A reduced law that commutes with every move commutes with every course of moves.** -/\ntheorem foldl_semiconj (next : S → A → S) (π : S → K) (reduced : K → A → K)\n    (commutes : ∀ s a, π (next s a) = reduced (π s) a) :\n    ∀ (plan : List A) (s : S), π (plan.foldl next s) = plan.foldl reduced (π s)\n  | [], _ => rfl\n  | a :: rest, s =>\n    (foldl_semiconj next π reduced commutes rest (next s a)).trans\n      (congrArg (fun k => rest.foldl reduced k) (commutes s a))"
+  }
+ ]
+}

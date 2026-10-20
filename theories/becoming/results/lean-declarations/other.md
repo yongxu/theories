@@ -12,6 +12,108 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 <a id="其他形式研究--other-formal-studies"></a>
 ## Other formal studies
 
+<a id="module-e3088037c799"></a>
+
+<details>
+<summary>FeedbackAtlas.lean — 83 explicit declarations</summary>
+
+[Source](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean) · [Package notes](../../../../experiments/feedback-repair-atlas/README.md)
+
+`experiments/feedback-repair-atlas/model/FeedbackAtlas.lean`
+
+Imports: `Becoming.Readout`, `Becoming.Inquiry`, `Becoming.MoveFormation`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [FeedbackAtlas.no_personal_judge_from_remark](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L65) | 65 |
+| [FeedbackAtlas.task_error_does_not_settle_personal](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L72) | 72 |
+| [FeedbackAtlas.task_judge_exists](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L79) | 79 |
+| [FeedbackAtlas.personal_judge_exists](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L86) | 86 |
+| [FeedbackAtlas.request_without_verdict](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L113) | 113 |
+| [FeedbackAtlas.cannot_always_accept_fault](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L117) | 117 |
+| [FeedbackAtlas.cannot_always_name_personal](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L123) | 123 |
+| [FeedbackAtlas.update_narrows](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L132) | 132 |
+| [FeedbackAtlas.sound_update_keeps_actual](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L136) | 136 |
+| [FeedbackAtlas.confirmed_error_supports_accountability](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L141) | 141 |
+| [FeedbackAtlas.common_survives_update](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L146) | 146 |
+| [FeedbackAtlas.confirmed_error_still_not_personal](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L154) | 154 |
+| [FeedbackAtlas.wrong_prior_can_empty_update](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L161) | 161 |
+| [FeedbackAtlas.distribute](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L185) | 185 |
+| [FeedbackAtlas.weighted_bound](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L193) | 193 |
+| [FeedbackAtlas.halve_le](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L216) | 216 |
+| [FeedbackAtlas.halve_add_one_le](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L276) | 276 |
+| [FeedbackAtlas.defense_does_not_consolidate](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L280) | 280 |
+| [FeedbackAtlas.halve_small](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L285) | 285 |
+| [FeedbackAtlas.defense_keeps_confidence_low](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L295) | 295 |
+| [FeedbackAtlas.direct_move_ignores_credibility](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L304) | 304 |
+| [FeedbackAtlas.explanation_adds_no_confidence](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L307) | 307 |
+| [FeedbackAtlas.explanation_does_not_certify_itself](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L310) | 310 |
+| [FeedbackAtlas.stale_explanation_changes_nothing](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L313) | 313 |
+| [FeedbackAtlas.checking_separate_from_behavior](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L317) | 317 |
+| [FeedbackAtlas.step_commutes](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L390) | 390 |
+| [FeedbackAtlas.readings_evolve_without_record](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L396) | 396 |
+| [FeedbackAtlas.records_retained](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L400) | 400 |
+| [FeedbackAtlas.example_readings](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L420) | 420 |
+| [FeedbackAtlas.same_lapse_different_updates](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L427) | 427 |
+| [FeedbackAtlas.guarded_reading_is_revisable](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L434) | 434 |
+| [FeedbackAtlas.responder_history_changes_reply](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L440) | 440 |
+| [FeedbackAtlas.responder_history_changes_initiator_reading](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L444) | 444 |
+| [FeedbackAtlas.initiator_history_interrupts_returned_defense](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L451) | 451 |
+| [FeedbackAtlas.pause_alternative](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L459) | 459 |
+| [FeedbackAtlas.credibility_is_separate](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L472) | 472 |
+| [FeedbackAtlas.same_explanation_different_effect](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L480) | 480 |
+| [FeedbackAtlas.every_reading_misreads_some_case](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L503) | 503 |
+| [FeedbackAtlas.no_reading_settles_personal](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L512) | 512 |
+| [FeedbackAtlas.every_course_misreads_some_case](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L522) | 522 |
+| [FeedbackAtlas.examples_err_in_opposite_directions](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L530) | 530 |
+
+Definitions and types:
+
+- `structure` [FeedbackAtlas.Situation](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L46) (L46)
+- `def` [FeedbackAtlas.possibilities](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L52) (L52)
+- `def` [FeedbackAtlas.remark](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L56) (L56)
+- `def` [FeedbackAtlas.taskEvidence](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L59) (L59)
+- `def` [FeedbackAtlas.contextEvidence](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L62) (L62)
+- `inductive` [FeedbackAtlas.Response](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L92) (L92)
+- `def` [FeedbackAtlas.EvidencePermits](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L101) (L101)
+- `def` [FeedbackAtlas.Common](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L108) (L108)
+- `def` [FeedbackAtlas.updated](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L129) (L129)
+- `structure` [FeedbackAtlas.Share](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L169) (L169)
+- `def` [FeedbackAtlas.Same](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L175) (L175)
+- `def` [FeedbackAtlas.zero](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L180) (L180)
+- `def` [FeedbackAtlas.one](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L181) (L181)
+- `def` [FeedbackAtlas.half](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L182) (L182)
+- `def` [FeedbackAtlas.twoThirds](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L183) (L183)
+- `def` [FeedbackAtlas.weighted](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L203) (L203)
+- `def` [FeedbackAtlas.halve](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L211) (L211)
+- `structure` [FeedbackAtlas.Reading](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L228) (L228)
+- `inductive` [FeedbackAtlas.Signal](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L237) (L237)
+- `def` [FeedbackAtlas.learn](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L257) (L257)
+- `structure` [FeedbackAtlas.Position](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L323) (L323)
+- `def` [FeedbackAtlas.observe](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L327) (L327)
+- `abbrev` [FeedbackAtlas.Joint](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L330) (L330)
+- `def` [FeedbackAtlas.readings](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L332) (L332)
+- `inductive` [FeedbackAtlas.Guard](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L335) (L335)
+- `def` [FeedbackAtlas.choose](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L343) (L343)
+- `inductive` [FeedbackAtlas.Initiative](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L349) (L349)
+- `structure` [FeedbackAtlas.Input](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L356) (L356)
+- `structure` [FeedbackAtlas.Exchange](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L364) (L364)
+- `def` [FeedbackAtlas.form](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L371) (L371)
+- `def` [FeedbackAtlas.step](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L381) (L381)
+- `def` [FeedbackAtlas.readingStep](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L386) (L386)
+- `def` [FeedbackAtlas.seed](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L406) (L406)
+- `def` [FeedbackAtlas.fromRecord](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L408) (L408)
+- `def` [FeedbackAtlas.short](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L411) (L411)
+- `def` [FeedbackAtlas.long](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L413) (L413)
+- `def` [FeedbackAtlas.guarded](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L415) (L415)
+- `def` [FeedbackAtlas.lapse](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L417) (L417)
+- `def` [FeedbackAtlas.habitual](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L418) (L418)
+- `def` [FeedbackAtlas.checkedReliable](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L466) (L466)
+- `def` [FeedbackAtlas.checkedMisleading](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L469) (L469)
+- `def` [FeedbackAtlas.readsPersonal](../../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean#L492) (L492)
+
+</details>
+
 <a id="module-db86581947bf"></a>
 
 <details>

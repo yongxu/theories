@@ -1,0 +1,28 @@
+name: Feedback atlas
+# Runs when the atlas changes. The core is not in the path filter: the verification record names
+# the core commit it was checked against, so core landings do not invalidate it.
+on:
+  push:
+    paths:
+      - 'experiments/feedback-repair-atlas/**'
+      - '.github/workflows/feedback-atlas.yml'
+  pull_request:
+    paths:
+      - 'experiments/feedback-repair-atlas/**'
+      - '.github/workflows/feedback-atlas.yml'
+permissions:
+  contents: read
+jobs:
+  reproducible-atlas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check the page against the verification record
+        run: python3 -B experiments/feedback-repair-atlas/build.py --check
+      - name: Check the browser copy of the laws against the Lean examples
+        run: node --test experiments/feedback-repair-atlas/tests/*.cjs
+      - name: Check fail-closed binding
+        run: python3 -B -m unittest discover -s experiments/feedback-repair-atlas/tests -p 'test_*.py'

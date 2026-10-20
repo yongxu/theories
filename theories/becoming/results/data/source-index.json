@@ -1436,6 +1436,26 @@
         "theories/becoming/history/UNIFIED-ETHICAL-GROUNDING.md"
       ]
     },
+    "experiments/feedback-repair-atlas/README.md": {
+      "title": "Feedback and repair atlas",
+      "local_links": [
+        "experiments/feedback-repair-atlas/bind_components.py",
+        "experiments/feedback-repair-atlas/components.json",
+        "experiments/feedback-repair-atlas/history/INDEX.md",
+        "experiments/feedback-repair-atlas/index.html",
+        "experiments/feedback-repair-atlas/model/EVIDENCE.md",
+        "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean",
+        "experiments/feedback-repair-atlas/model/atlas-verification.json",
+        "experiments/feedback-repair-atlas/src/learning.js"
+      ]
+    },
+    "experiments/feedback-repair-atlas/model/EVIDENCE.md": {
+      "title": "Evidence behind the update laws",
+      "local_links": [
+        "experiments/feedback-repair-atlas/history/2026-10-20-consolidation/model/PSYCHOLOGICAL-GROUNDING.md",
+        "experiments/feedback-repair-atlas/model/FeedbackAtlas.lean"
+      ]
+    },
     "experiments/integrated-correction/general-framework/generative-basis/ecological-selection/contextual-establishment/README.md": {
       "title": "Establishment observations and surface-selection correspondence",
       "local_links": [

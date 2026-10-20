@@ -1,0 +1,71 @@
+<section id="research-atlas" aria-labelledby="research-title">
+<style>
+#research-atlas .people {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:24px 0}
+#research-atlas .values {display:flex;gap:18px;flex-wrap:wrap;font-variant-numeric:tabular-nums;margin:12px 0}
+#research-atlas .values strong {display:block;font-size:1.4em}
+#research-atlas .values > div {min-width:0;max-width:100%;overflow-wrap:anywhere}
+#research-atlas .course {display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+#research-atlas .plot {width:100%;height:240px;display:block;margin:16px 0}
+#research-atlas pre {white-space:pre-wrap;overflow-wrap:anywhere;background:var(--muted);padding:16px}
+#research-atlas .compare {width:100%;border-collapse:collapse;margin:16px 0;font-variant-numeric:tabular-nums}
+#research-atlas td,#research-atlas th {text-align:left;vertical-align:top;padding:10px 6px;border-bottom:1px solid var(--border);overflow-wrap:anywhere}
+#research-atlas [hidden] {display:none!important}
+#research-atlas .outcome {min-height:72px;margin:16px 0}
+@media(max-width:600px){#research-atlas .people{grid-template-columns:1fr}#research-atlas .compare{font-size:13px}}
+</style>
+<div class="text-small text-muted">RESEARCH-INFORMED CANDIDATE · EXACT LEAN EXAMPLES</div>
+<h2 id="research-title">The same lapse, different histories</h2>
+<p>One exchange unfolds through two people's histories. Alex acts, Maya updates her expectation and responds, and Alex learns from her reply. Separate what each expects, how much evidence supports it, and how credible they find the other's explanations.</p>
+<p class="text-small">The structure draws on psychological research. The numbers and decision rules are illustrative, not fitted human parameters. “Confidence” means prior evidence weight here.</p>
+<div class="viz-controls"><label class="form-label">Checked comparison<select class="form-select" id="research-preset">
+<option value="short-short">Both histories short · defense returned</option><option value="short-long">Maya's longer history · constructive reply</option><option value="long-short">Alex's longer history · interrupt next turn</option><option value="pause">Maya pauses instead of defending</option><option value="credible">High explanation credibility</option><option value="misleading">Low explanation credibility</option>
+</select></label><button class="btn" type="button" id="research-reset">Reset comparison</button></div>
+<div class="people">
+<section><h3>Alex's view of Maya</h3><label class="form-label">Behavioral history<select class="form-select" id="research-alex-history"><option value="short">Short · 2 constructive observations</option><option value="long">Longer · 11 constructive, then 3 defensive</option></select></label>
+<label class="form-label">Her explanations' credibility<select class="form-select" id="research-alex-cred"><option value="neutral">Unverified · 1/2</option><option value="high">Two verified reliable · 7/8</option><option value="low">Two verified misleading · 1/8</option></select></label><div class="values" id="research-alex-values"></div></section>
+<section><h3>Maya's view of Alex</h3><label class="form-label">Behavioral history<select class="form-select" id="research-maya-history"><option value="short">Short · 2 constructive observations</option><option value="long">Longer · 11 constructive, then 3 defensive</option></select></label>
+<label class="form-label">His explanations' credibility<select class="form-select" id="research-maya-cred"><option value="neutral">Unverified · 1/2</option><option value="high">Two verified reliable · 7/8</option><option value="low">Two verified misleading · 1/8</option></select></label><div class="values" id="research-maya-values"></div></section>
+</div>
+<div class="viz-controls"><label class="form-check"><input class="form-check-input" id="research-alex-pause" type="checkbox"><span>Alex pauses when guarded</span></label><label class="form-check"><input class="form-check-input" id="research-maya-pause" type="checkbox"><span>Maya pauses when guarded</span></label><label class="form-check"><input class="form-check-input" id="research-fresh" type="checkbox" checked><span>Explanation supplies fresh evidence</span></label></div>
+<p class="text-small text-muted">History or credibility selection restarts the episode. Both start at expectation 3/4; the history choices give confidence 4 or 16. Habit uses a supplied 2/3 decision probe. A guarded response may be defense or pause.</p>
+<div class="viz-controls" aria-label="Alex's next action"><button type="button" class="btn btn-primary" data-research-action="lapse">Same defensive lapse</button><button type="button" class="btn" data-research-action="cooperate">Constructive action</button><button type="button" class="btn" data-research-action="habitual">Use habitual response</button><button type="button" class="btn" data-research-action="explain">Favorable explanation</button></div>
+<div class="course" id="research-course" aria-label="Selected exchange; choose a point to branch"></div>
+<div class="outcome" id="research-outcome" aria-live="polite"></div>
+<svg class="plot" id="research-plot" role="img" aria-label="Both expectations over the selected interaction sequence"></svg>
+<p class="text-small">Blue circles: Alex's expectation of Maya. Orange squares: Maya's expectation of Alex. The dashed line is the chosen decision probe, not a measured human threshold.</p>
+<details><summary>Compare the identical lapse and explanation directly</summary>
+<table class="compare"><caption>Exact single-person comparisons proved in Lean</caption><thead><tr><th>Behavior history</th><th>Before lapse</th><th>After lapse</th></tr></thead><tbody><tr><td>Short · confidence 4</td><td>3/4</td><td>3/5 = 0.600</td></tr><tr><td>Longer · confidence 16</td><td>3/4</td><td>12/17 ≈ 0.706</td></tr></tbody></table>
+<table class="compare"><thead><tr><th>Explanation credibility</th><th>After lapse</th><th>After same fresh explanation</th></tr></thead><tbody><tr><td>High · 7/8</td><td>3/5</td><td>31/47 ≈ 0.660</td></tr><tr><td>Low · 1/8</td><td>3/5</td><td>25/41 ≈ 0.610</td></tr></tbody></table>
+<p class="text-small">Observed defense has equal weight at either credibility. An explanation does not certify its own reliability or add independent behavioral confidence.</p></details>
+<details><summary>Learning rules, research and assumptions</summary>
+<p>Direct behavior: q′ = (c q + y)/(c + 1), c′ = c + 1, with y = 1 for constructive behavior and 0 for defense. Fresh favorable explanation: q′ = (c q + r)/(c + r), with confidence and credibility unchanged. Externally verified reports change credibility separately, halfway toward reliable or misleading under an illustrative rule.</p>
+<p><a href="https://doi.org/10.1016/j.cogpsych.2010.03.001">Chang et al. (2010)</a> motivates prior-plus-experience trust learning; <a href="https://doi.org/10.1038/s41562-018-0425-1">Siegel et al. (2018)</a> distinguishes impressions and uncertainty; <a href="https://faculty.wharton.upenn.edu/wp-content/uploads/2014/06/Promises-and-Lies.pdf">Schweitzer et al. (2006)</a> studies how deception affects trust recovery. None calibrates these fictional people or proves these particular equations.</p>
+<p>No forgetting, inferred volatility, severity weighting, context transfer, or dependence correction is included. “Fresh” and “verified” are supplied interpretations. Growing evidence weight can be inappropriate when a partner changes. Multiple distinct explanations can accumulate influence. No inference of motives, safety guarantee, maturity score, or obligation to remain engaged follows.</p>
+<p><a href="model/RESEARCH-INFORMED-MODEL.md">Full walkthrough</a> · <a href="model/PSYCHOLOGICAL-GROUNDING.md">Research and assumption map</a></p></details>
+<details><summary>Inspect the checked Lean components</summary><label class="form-label">Research-informed component<select class="form-select" id="research-component"></select></label><p id="research-source-label" class="text-small"></p><pre><code id="research-code"></code></pre><p id="research-boundary" class="text-small"></p></details>
+<p class="text-small text-muted" id="research-verification">22 theorems · 52 audited declarations · Lean 4.29.1 · no reported axiom dependencies. Browser interpretation is separately tested, not formally compiled from Lean.</p>
+<hr>
+<script>
+window.addEventListener('DOMContentLoaded',()=>{
+const root=document.getElementById('research-atlas'),$=s=>root.querySelector(s),$$=s=>[...root.querySelectorAll(s)],M=globalThis.researchDynamics,ns='http://www.w3.org/2000/svg';
+let states=[],inputs=[],selected=0;
+const labels={constructive:'constructive',defensive:'defensive',unresolved:'a pause',explanation:'a favorable explanation'};
+function reset(){inputs=[];selected=0;states=[{pair:[M.initial($('#research-alex-history').value,$('#research-alex-cred').value),M.initial($('#research-maya-history').value,$('#research-maya-cred').value)],event:null}];render();}
+function values(el,b){el.replaceChildren();for(const [label,value]of [['Expectation',M.ratio(b.q).toFixed(3)+' · '+M.exact(b.q)],['Confidence',b.c],['Credibility',M.exact(b.r)]]){const d=document.createElement('div'),small=document.createElement('span'),strong=document.createElement('strong');small.className='text-small';small.textContent=label;strong.textContent=value;d.append(small,strong);el.append(d);}}
+function node(tag,attrs,text){const n=document.createElementNS(ns,tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,v);if(text!==undefined)n.textContent=text;return n;}
+function draw(){const svg=$('#research-plot'),w=svg.clientWidth,h=240,left=38,right=w-16,top=14,bottom=202;svg.setAttribute('viewBox',`0 0 ${w} ${h}`);svg.replaceChildren(node('title',{},'Expectations from 0 to 1 across completed exchanges'));const x=i=>left+(right-left)*i/Math.max(1,states.length-1),y=q=>bottom-(bottom-top)*q;
+for(const v of [0,.5,1]){svg.append(node('line',{x1:left,y1:y(v),x2:right,y2:y(v),stroke:'var(--border)'}),node('text',{x:left-8,y:y(v)+4,'text-anchor':'end',fill:'var(--foreground)','font-size':12},String(v)));}
+svg.append(node('line',{x1:left,y1:y(2/3),x2:right,y2:y(2/3),stroke:'var(--muted-foreground)','stroke-dasharray':'5 5'}));
+for(const j of [0,1]){const color=j===0?'var(--viz-series-1)':'var(--viz-series-2)';svg.append(node('polyline',{points:states.map((s,i)=>`${x(i)},${y(M.ratio(s.pair[j].belief.q))}`).join(' '),fill:'none',stroke:color,'stroke-width':2}));states.forEach((s,i)=>{const xx=x(i),yy=y(M.ratio(s.pair[j].belief.q));const mark=j===0?node('circle',{cx:xx,cy:yy,r:i===selected?5:3,fill:color}):node('rect',{x:xx-4,y:yy-4,width:8,height:8,fill:color});svg.append(mark);});}
+for(let i=0;i<states.length;i++){if(states.length>7&&i%2&&i!==states.length-1)continue;svg.append(node('text',{x:x(i),y:222,'text-anchor':'middle',fill:'var(--foreground)','font-size':12},String(i)));}}
+function render(){const s=states[selected];values($('#research-alex-values'),s.pair[0].belief);values($('#research-maya-values'),s.pair[1].belief);$('#research-outcome').textContent=s.event?`Exchange ${selected}: Alex offered ${labels[s.event.first]}; Maya replied with ${labels[s.event.reply]}. Both histories retain the observed events.`:'Initial state: equal expectations, separately selected evidence and credibility histories. Choose the same lapse to compare their effects.';const course=$('#research-course');course.replaceChildren();states.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.className='btn';b.textContent=i===0?'Start':`${i} · ${inputs[i-1].action}`;b.setAttribute('aria-pressed',String(i===selected));b.onclick=()=>{selected=i;render();};course.append(b);});$$('[data-research-action]').forEach(b=>b.disabled=selected>=12);draw();}
+function preset(){const name=$('#research-preset').value;$('#research-alex-history').value=name==='long-short'?'long':'short';$('#research-maya-history').value=name==='short-long'?'long':'short';$('#research-alex-cred').value='neutral';$('#research-maya-cred').value=name==='credible'?'high':name==='misleading'?'low':'neutral';$('#research-alex-pause').checked=false;$('#research-maya-pause').checked=name==='pause';$('#research-fresh').checked=true;reset();}
+$$('[data-research-action]').forEach(b=>b.onclick=()=>{if(selected>=12)return;const input={action:b.dataset.researchAction,alexRetaliates:!$('#research-alex-pause').checked,mayaRetaliates:!$('#research-maya-pause').checked,fresh:$('#research-fresh').checked};inputs=inputs.slice(0,selected).concat(input);states=states.slice(0,selected+1).concat(M.step(states[selected].pair,input));selected++;render();});
+for(const id of ['alex-history','maya-history','alex-cred','maya-cred'])$('#research-'+id).onchange=reset;$('#research-preset').onchange=preset;$('#research-reset').onclick=preset;
+const components=document.getElementById('retry-atlas').atlasTest.data.components.filter(c=>c.id.startsWith('research-'));
+for(const c of components){const o=document.createElement('option');o.value=c.id;o.textContent=c.label;$('#research-component').append(o);}
+function source(){const c=components.find(c=>c.id===$('#research-component').value);if(!c)return;$('#research-code').textContent=c.code;$('#research-source-label').textContent=c.name+' · '+c.file+':'+c.line+'–'+c.end;$('#research-boundary').textContent=c.boundary;}
+$('#research-component').onchange=source;source();new ResizeObserver(draw).observe($('#research-plot'));root.researchTest={state:()=>({states,inputs,selected}),reset};reset();
+});
+</script>
+</section>

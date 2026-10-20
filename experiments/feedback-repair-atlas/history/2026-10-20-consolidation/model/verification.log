@@ -1,0 +1,25 @@
+{
+  "tree": "/Users/bird/.codex/worktrees/feedback-repair-atlas/theories/experiments/feedback-repair-atlas/model",
+  "modules": 42,
+  "ran": [
+    "Becoming.Experiment",
+    "Becoming.Mechanism",
+    "Becoming.Feedback",
+    "Becoming.Testing",
+    "Becoming.Capture",
+    "Becoming.Selection",
+    "Becoming.Learning",
+    "Becoming.Readout",
+    "FeedbackReadingTrial",
+    "FeedbackReadingTrialAxiomAudit"
+  ],
+  "reused": 33,
+  "unclean": [],
+  "audits": {
+    "FeedbackReadingTrial": {
+      "theorems": 15,
+      "declarations": 25,
+      "with_axioms": {}
+    }
+  }
+}

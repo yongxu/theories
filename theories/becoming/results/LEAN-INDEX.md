@@ -19,7 +19,7 @@ Warrant of ethical premises, valid inference, recognition, motivation and implem
 <a id="覆盖范围--coverage"></a>
 ## Coverage
 
-The inventory contains **1,736 `.lean` paths and 1,367 distinct byte contents**, including 110 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
+The inventory contains **1,737 `.lean` paths and 1,368 distinct byte contents**, including 110 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
 
 | File role | Paths |
 |---|---:|
@@ -27,9 +27,9 @@ The inventory contains **1,736 `.lean` paths and 1,367 distinct byte contents**,
 | Development attempt | 832 |
 | Historical draft | 3 |
 | Imported archive | 23 |
-| Working source | 865 |
+| Working source | 866 |
 
-The working-source and audit entries contain **23,262 explicit theorem/lemma occurrences** and 34,854 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
+The working-source and audit entries contain **23,303 explicit theorem/lemma occurrences** and 34,937 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
 
 Hidden, ignored and untracked files are included; `.git`, `.lake`, `node_modules`, `.venv`, `venv`, `__pycache__` and other sessions' worktrees (`.claude/worktrees`) are excluded, and directory symlinks are not followed. Archives and attempts remain in the JSON inventory without repeating them in the main table; saved copies in run, check, snapshot and history folders are neither read nor listed, each being bound by its own run's receipt, so a checker run leaves this catalogue unchanged. Working-source is a documentary role, not acceptance or verification status.
 
@@ -51,7 +51,7 @@ The scan lists explicit theorem, lemma, def, abbrev, structure, inductive, opaqu
 | [Concern and shared activity](#group-concern) | 15 |
 | [Organizational formation through revisable evaluation](#group-shared) | 66 |
 | [Generative core and relational structure](#group-core) | 137 |
-| [Other formal studies](#group-other) | 29 |
+| [Other formal studies](#group-other) | 30 |
 
 <a id="group-becoming-core"></a>
 
@@ -1043,6 +1043,7 @@ Conceptual entry: [GENERATIVE-GROUNDING](../history/GENERATIVE-GROUNDING.md) (ea
 
 | Module | theorem/lemma | Other declarations | Interpretation and existing evidence |
 |---|---:|---:|---|
+| [FeedbackAtlas](../../../experiments/feedback-repair-atlas/model/FeedbackAtlas.lean) · [Names](lean-declarations/other.md#module-e3088037c799) | 41 | 42 | [Package notes](../../../experiments/feedback-repair-atlas/README.md) |
 | [Driver](../../../experiments/integrated-correction/general-framework/generative-basis/ecological-selection/network-comparison/Driver.lean) · [Names](lean-declarations/other.md#module-db86581947bf) | 0 | 5 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/ecological-selection/network-comparison/README.md) |
 | [FiniteSupportObstruction](../../../experiments/market-generativity/formal/FiniteSupportObstruction.lean) · [Names](lean-declarations/other.md#module-805a098f4dbd) | 17 | 5 | [Study](../../../_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md) · [Package notes](../../../experiments/market-generativity/formal/README.md) |
 | [MarketGenerativity](../../../experiments/market-generativity/formal/MarketGenerativity.lean) · [Names](lean-declarations/other.md#module-e2e5c347dc5a) | 39 | 32 | [Theory](../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-LEAN-REVIEW.md) · [Package notes](../../../experiments/market-generativity/formal/README.md) |

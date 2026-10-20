@@ -1,0 +1,186 @@
+<div id="retry-atlas">
+<style>
+  #retry-atlas { color:var(--foreground); }
+  #retry-atlas .heading { padding-right:90px; }
+  #retry-atlas .levels,#retry-atlas .legend,#retry-atlas .trace { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; }
+  #retry-atlas .legend { gap:18px; }
+  #retry-atlas .meta { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; margin:12px 0; }
+  #retry-atlas .key { display:inline-block; width:22px; border-top:2px solid var(--viz-series-1); vertical-align:middle; margin-right:6px; }
+  #retry-atlas .key.assumed { border-top-style:dashed; border-color:var(--viz-series-2); }
+  #retry-atlas .key.proposed { border-top-style:dotted; border-color:var(--muted-foreground); }
+  #retry-atlas .tallies { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin:18px 0; }
+  #retry-atlas .tally-label { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; margin-bottom:8px; }
+  #retry-atlas .tally-note { margin-top:6px; }
+  #retry-atlas .scope-title { margin:24px 0 8px; }
+  #retry-atlas .graph { position:relative; height:205px; margin:8px 0; }
+  #retry-atlas .edges { position:absolute; inset:0; width:100%; height:100%; overflow:visible; }
+  #retry-atlas .node { position:absolute; width:28%; top:40px; }
+  #retry-atlas .node:nth-of-type(1) { left:0; }
+  #retry-atlas .node:nth-of-type(2) { left:36%; }
+  #retry-atlas .node:nth-of-type(3) { right:0; }
+  #retry-atlas .node-note { margin-top:9px; text-align:center; overflow-wrap:anywhere; white-space:pre-line; }
+  #retry-atlas .detail { margin:12px 0; }
+  #retry-atlas .detail dd { margin:5px 0 12px; overflow-wrap:anywhere; }
+  #retry-atlas .detail dt { font-weight:500; }
+  #retry-atlas .cases { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:12px 0; }
+  #retry-atlas .case { border-bottom:1px solid var(--border); padding:10px 0; }
+  #retry-atlas .case.excluded { opacity:.4; text-decoration:line-through; }
+  #retry-atlas .code { margin:14px 0; padding:14px; background:var(--muted); color:var(--foreground); white-space:pre-wrap; overflow-wrap:anywhere; tab-size:2; }
+  #retry-atlas .code code { font-size:inherit; }
+  #retry-atlas .foot { margin:18px 0 6px; }
+  #retry-atlas [hidden] { display:none !important; }
+  @media(max-width:520px) {
+    #retry-atlas .graph { height:450px; }
+    #retry-atlas .node { left:6% !important; right:auto !important; width:88%; }
+    #retry-atlas .node:nth-of-type(1) { top:8px; }
+    #retry-atlas .node:nth-of-type(2) { top:158px; }
+    #retry-atlas .node:nth-of-type(3) { top:308px; }
+    #retry-atlas .tallies { grid-template-columns:1fr; gap:16px; }
+    #retry-atlas .cases { grid-template-columns:1fr; }
+  }
+</style>
+<div class="heading"><div class="text-small text-muted">ONE EPISODE · SIX LEVELS · GRADUAL LEARNING</div><h2>Repair can take another try</h2></div>
+<p>This example starts with two people whose different histories shape the same feedback exchange: Alex expects attack, while Maya expects dismissal. Under explicitly chosen rules, supporting experiences gradually build evidence for a different response, while defensive exchanges can set that learning back. Explore the same episode at six levels: <strong>Raw Lean</strong> shows the actual definitions and proofs; <strong>Abstraction</strong> shows why retained histories and their smaller evidence-tally model agree; <strong>Two people</strong> shows the exchanges, thresholds, lapses, and retries; <strong>Evidence &amp; repair</strong> separates a confirmed task error from an unsupported personal verdict; <strong>Team</strong> sketches shared repair practices; and <strong>Society</strong> sketches institutional memory and wider consequences. The conclusion is conditional: an early lapse can restart the defensive loop, another clarifying attempt can reopen repair, and accumulated experience can help an interaction recover from a later lapse. These are checked consequences of supplied toy rules, not validated psychological laws or a guarantee that clarification is safe or effective; the team and society levels remain proposals.</p>
+<div class="meta"><span>Alex &amp; Maya · “This needs work.”</span><span class="text-small">Updated from the checked gradual trial · 19 Oct 2026</span></div>
+<nav class="levels" aria-label="Abstraction levels">
+  <button type="button" class="btn" data-level="0" aria-pressed="false">1 · Raw Lean</button>
+  <button type="button" class="btn" data-level="1" aria-pressed="false">2 · Abstraction</button>
+  <button type="button" class="btn" data-level="2" aria-pressed="true">3 · Two people</button>
+  <button type="button" class="btn" data-level="3" aria-pressed="false">4 · Evidence &amp; repair</button>
+  <button type="button" class="btn" data-level="4" aria-pressed="false">5 · Team</button>
+  <button type="button" class="btn" data-level="5" aria-pressed="false">6 · Society</button>
+</nav>
+<div class="viz-controls">
+  <label class="form-label">Course<select class="form-select" id="retry-course">
+    <option value="retry">Early lapse → retry → recovery</option>
+    <option value="trap">Early lapse → habit alone</option>
+    <option value="buffered">Later lapse → ordinary recovery</option>
+    <option value="cooperate">Five cooperative exchanges</option>
+    <option value="double">Two closely spaced lapses</option>
+    <option value="severe">A larger setback</option>
+    <option value="nonreceptive">Clarify · Maya not receptive</option>
+    <option value="notcredible">Clarify · no credible engagement</option>
+    <option value="custom" disabled>Your response sequence</option>
+  </select></label>
+  <label class="form-label">Completed exchanges: <span class="tabular-nums" id="retry-round-value">0 / 8</span><input type="range" class="form-range" id="retry-round" min="0" max="8" value="0" step="1" aria-label="Completed exchanges"></label>
+  <button type="button" class="btn" id="retry-play">Replay course</button>
+</div>
+<div class="text-small text-muted" id="retry-rules"></div>
+<div class="tallies" aria-label="Stipulated evidence tallies and response thresholds">
+  <div><div class="tally-label"><span>Alex · supporting evidence tally</span><strong class="tabular-nums" id="retry-alex-value">0 · threshold 3</strong></div><div class="progress" role="progressbar" aria-label="Alex response threshold" aria-valuemin="0" aria-valuemax="3" aria-valuenow="0" id="retry-alex-meter"><div class="progress-bar" style="width:0%"></div></div><div class="text-small tally-note" id="retry-alex-note"></div></div>
+  <div><div class="tally-label"><span>Maya · supporting evidence tally</span><strong class="tabular-nums" id="retry-maya-value">0 · threshold 2</strong></div><div class="progress" role="progressbar" aria-label="Maya response threshold" aria-valuemin="0" aria-valuemax="2" aria-valuenow="0" id="retry-maya-meter"><div class="progress-bar" style="width:0%"></div></div><div class="text-small tally-note" id="retry-maya-note"></div></div>
+</div>
+<div class="text-small text-muted">Chosen evidence weights—not measured trust, maturity, or probabilities. Thresholds are response conditions, not maxima.</div>
+<div class="trace" id="retry-trace" aria-label="Exchange sequence; select a step"></div>
+<div class="viz-controls" aria-label="Choose the next response from the selected exchange">
+  <span class="text-small">From here:</span>
+  <button type="button" class="btn btn-primary" data-action="clarify">Try clarification</button>
+  <button type="button" class="btn" data-action="habitual">Use habitual response</button>
+  <button type="button" class="btn" data-action="defend">Defensive lapse</button>
+</div>
+<div class="scope-title"><h3 id="retry-level-title">Two people, repeated experiences</h3><span class="viz-badge" id="retry-status">Conditional human dynamics</span></div>
+<div class="legend text-small"><span><span class="key"></span>Checked formal relation</span><span><span class="key assumed"></span>Supplied human dynamics</span><span><span class="key proposed"></span>Proposed extension</span></div>
+<div class="graph" id="retry-graph">
+  <svg class="edges" role="img" aria-label="Connections at the selected abstraction level"><title>One episode at the selected level</title></svg>
+  <div class="node"><button type="button" class="btn btn-block" data-node="0">Alex’s retained history</button><div class="text-small node-note" data-note="0"></div></div>
+  <div class="node"><button type="button" class="btn btn-block" data-node="1">Shared exchange</button><div class="text-small node-note" data-note="1"></div></div>
+  <div class="node"><button type="button" class="btn btn-block" data-node="2">Maya’s retained history</button><div class="text-small node-note" data-note="2"></div></div>
+</div>
+<div class="card detail" aria-live="polite"><strong id="retry-detail-title"></strong><dl id="retry-detail"></dl></div>
+<section id="retry-evidence" hidden>
+  <label class="form-check"><input type="checkbox" class="form-check-input" id="retry-finding"><span class="form-check-label">A reliable check confirms a task error</span></label>
+  <div class="cases" id="retry-cases"></div><div class="text-small" id="retry-evidence-result" aria-live="polite"></div>
+</section>
+<section id="retry-source" hidden>
+  <div class="viz-controls"><label class="form-label">Actual Lean component<select class="form-select" id="retry-component"></select></label></div>
+  <div class="meta text-small"><strong id="retry-source-name"></strong><span id="retry-source-location"></span></div>
+  <pre class="code text-small"><code id="retry-code"></code></pre><div class="text-small" id="retry-source-boundary"></div>
+</section>
+<div class="foot text-small text-muted" id="retry-foot"></div>
+<script>
+(() => {
+  const root=document.getElementById('retry-atlas'),data=__RETRY_DATA__;
+  const $=s=>root.querySelector(s),$$=s=>Array.from(root.querySelectorAll(s)),ns='http://www.w3.org/2000/svg';
+  const C='clarify',H='habitual',D='defend';
+  const presets={
+    retry:{plan:[C,C,C,D,C,H,H,H],receptive:true,credible:true,penalty:2},
+    trap:{plan:[C,C,C,D,H,H,H,H],receptive:true,credible:true,penalty:2},
+    buffered:{plan:[C,C,C,C,C,D,H,H],receptive:true,credible:true,penalty:2},
+    cooperate:{plan:[C,C,C,C,C],receptive:true,credible:true,penalty:2},
+    double:{plan:[C,C,C,C,C,D,D,H],receptive:true,credible:true,penalty:2},
+    severe:{plan:[C,C,C,C,C,D,H,H],receptive:true,credible:true,penalty:6},
+    nonreceptive:{plan:[C,C,C,C,C],receptive:false,credible:true,penalty:2},
+    notcredible:{plan:[C,C,C,C,C],receptive:true,credible:false,penalty:2}
+  };
+  let level=2,round=0,course='retry',config={...presets.retry,plan:[...presets.retry.plan]},selected=1,component='rules',timer=null,animation=0;
+  const {learned}=globalThis.feedbackDynamics;
+  const compute=(cfg=config)=>globalThis.feedbackDynamics.compute(cfg);
+  const pair=q=>'('+q.join(', ')+')';
+  const short=e=>({supporting:'S',defensive:'D',unresolved:'U'}[e]);
+  const history=h=>'['+h.map(short).join(', ')+']';
+  const actionName=c=>({clarify:'Clarify',habitual:'Habit',defend:'Lapse'}[c]);
+  function phase(s){return s.q[0]<3&&s.q[1]<2?'Both below threshold · habit repeats defense':s.q[0]>=3&&s.q[1]>=2?'Both response thresholds reached':s.q[1]>=2?'Maya supplies specifics · Alex can clarify habitually':'Alex can clarify · Maya still below threshold';}
+  function current(){const states=compute();return {states,s:states[round]};}
+  function entries(){const {s}=current(),e=s.event,q=s.q;
+    return [
+      {title:'Raw Lean: compose, accumulate, recover',status:'23 gradual-trial theorems · 45 declaration audits',kind:'checked',nodes:['Existing proof library','Gradual application laws','Checked consequences'],notes:['wholeNext · foldl_semiconj\nsub_add_back · le_sub_of_add','Experience histories → weighted tallies\nclarify / habitual / defend','Retry · basin · setback margins\nexact abstraction'],details:[
+        ['Imported building blocks','wholeNext composes updates; foldl_semiconj lifts the exact abstraction; arithmetic lemmas support restoration and threshold margins.','Existing theorem hypotheses still apply; imports alone do not justify human learning laws.','coupling'],
+        ['The human laws are supplied','Support adds one, defense subtracts a configured weight with a floor at zero, and unresolved experience leaves the tally unchanged.','These are chosen evidence weights, not measurements of trust, character, or psychological damage.','rules'],
+        ['Conditional conclusions','The model proves accumulation, recovery after support, a habitually closed defensive basin, setback margins, and concrete early/late-lapse courses.','The 50 transitive source hashes match the recorded local receipt. This visualization does not rerun Lean.','retry']
+      ],foot:'GradualInteractionTrial extends the earlier interaction and evidence models. Recorded Lean 4.29.1 application check, 19 Oct 2026; empty reported axiom dependencies. Not the full package environment/purity audit.'},
+      {title:'Histories → tallies → response conditions',status:'Exact formal abstraction · all finite response plans',kind:'checked',nodes:['Retained experiences','Weighted interpretation','Response-ready summary'],notes:['Alex '+history(s.a)+'\nMaya '+history(s.m),'learned folds oldest → newest\nSupport +1 · defense −'+config.penalty,'Tallies '+pair(q)+'\nThresholds (3, 2)'],details:[
+        ['Detailed state is retained','New experiences are prepended. S = supporting, D = defensive, U = unresolved. A lapse reduces a tally without deleting earlier records.','Older experiences affect decisions only through the stipulated weighted fold; no fatigue or older-detail dependence is included.','history'],
+        ['The projection follows the same update','view r (step r s control) = reducedStep r (view r s) control','step_commutes is checked; histories_and_scores_agree imports foldl_semiconj to lift it to every finite plan.','projection'],
+        ['What the summary preserves','The two natural-number tallies preserve exactly the information these supplied response laws read, for fixed rules.','The summary loses the order and content beyond what the fold retains. Its sufficiency for actual humans is not established.','projection']
+      ],foot:'The browser computes the retained-history fold and reduced tally update independently and checks agreement at each displayed exchange. That runtime check is distinct from the recorded general Lean proof.'},
+      {title:'Two people, repeated experiences, another try',status:'Illustrative human reading · supplied learning dynamics',kind:'assumed',nodes:['Alex’s retained history','The shared exchange','Maya’s retained history'],notes:[q[0]<3?'Below threshold: '+q[0]+' / 3\nStill expects the old threat pattern':'Threshold reached: '+q[0]+' ≥ 3\nHabit permits clarification',!e?'Initial cue: “This needs work.”':(e.specific?'Specific cue':'Terse cue')+' → '+(e.humble?'clarifying reply':'defensive reply'),q[1]<2?'Below threshold: '+q[1]+' / 2\nNext cue is terse':'Threshold reached: '+q[1]+' ≥ 2\nNext cue supplies specifics'],details:[
+        ['Alex: behavior can change before expectation',history(s.a)+'. His tally is '+q[0]+'. He receives supporting evidence only after a clarifying reply to a specific cue with credible engagement.','He may choose clarification below threshold. Capacity, safety, and freedom to do so are assumed.','rules'],
+        [!e?'Initial exchange':('After exchange '+round+' · '+actionName(e.control)),!e?'Alex begins with a defensive record; Maya begins with unresolved and defensive records. Both tallies are zero.':('Alex records '+e.ae+'; Maya records '+e.me+'. '+phase(s)+'.'),config.receptive?(config.credible?'Receptivity and credible engagement hold in this course.':'Maya is receptive, but credible engagement is absent. Alex cannot accumulate supporting evidence.'):'Maya is not receptive in this course. Repeating clarification does not supply her supporting evidence.','retry'],
+        ['Maya: her history changes Alex’s next cue',history(s.m)+'. Her tally is '+q[1]+'. '+(q[1]>=2?'Her next specific cue permits Alex to clarify habitually even when his own tally is low.':'A deliberate retry can add supporting evidence if she is receptive.'),'This reciprocal mechanism does not assign her responsibility to absorb mistreatment.','margins']
+      ],foot:'Fixed trial thresholds: Alex 3, Maya 2. Defense subtracts the selected weight from both tallies, floored at zero. No forgetting, saturation, lapse probability, coercion, or new environmental shocks are modeled.'},
+      {title:'Retry does not settle whether criticism was an attack',status:'Checked evidence distinctions · separate from learning tallies',kind:'checked',nodes:['Ambiguous wording','Reliable task evidence','Bounded accountability'],notes:['Task error × personal attack\nFour stipulated possibilities','Confirmed error narrows possibilities\nIt does not settle delivery','Clarify without conceding fault\nAcknowledge an established error'],details:[
+        ['Words and interpretations differ','The same terse wording is recorded in attacking and non-attacking situations. Learned expectation does not resolve this ambiguity.','no_attack_judge_from_remark imports the core obstruction for merged observations.','observation'],
+        ['Evidence can narrow one distinction','A reliable error finding removes the two no-error cases. Both attacking and non-attacking delivery remain possible.','The actual situation must remain covered by the prior; evidence reliability is supplied.','evidence'],
+        ['What repair is warranted to acknowledge','A task-specific acknowledgement is permitted under the supplied evidential rules after confirmation.','A supporting-experience tally is not proof of good intent or a command to keep engaging. Safety and obligation are separate.','evidence']
+      ],foot:'The factual evidence model is unchanged. Repeated experiences concern the supplied response dynamics, not a new method for discovering hidden motives.'},
+      {title:'Team repair: retry as an explicit practice',status:'Proposed extension · no team-level theorem',kind:'proposed',nodes:['Situated exchanges','Repair and re-entry practice','Team learning conditions'],notes:['Different histories and thresholds','Check effects · revisit a lapse\nClarify again when appropriate','Reporting · role clarity · support\nLimits and exit'],details:[
+        ['Local inputs','Candidate interface: observed incident, uncertainty, response, and whether repair remains appropriate.','Toy tallies are not team-member ratings; aggregation has not been formalized.','history'],
+        ['A retry can change the next opportunity','Candidate practice: distinguish a lapse from total failure, check whether engagement is safe, and offer a new repair opportunity.','A formal retry is a chosen control input. The model proves no obligation to supply it.','retry'],
+        ['Conditions matter beyond the individual','Team procedures could affect receptivity, credibility, workload, and capacity to engage.','Those influences need new definitions, correspondence evidence, and interface proofs.','rules']
+      ],foot:'Team procedures are a design proposal. The exact history-to-tally proof does not automatically lift to groups.'},
+      {title:'Institutions: recovery without erasing history',status:'Proposed extension · no societal theorem',kind:'proposed',nodes:['Many local histories','Institutional memory and response','Wider learning and consequences'],notes:['Heterogeneous contexts\nUnequal exposure and power','Reports · correction · recurrence\nRe-entry and safeguards','What is repaired?\nWhose history stays visible?'],details:[
+        ['Different histories remain different','Candidate input: local evidence and repair processes, with provenance and uncertainty.','No population mapping from personal tallies is supplied.','history'],
+        ['A changed response need not delete the past','Candidate distinction: preserve evidence while changing an institution’s present practice after correction.','The retained-history analogy is an interpretation, not a proved institutional repair law.','projection'],
+        ['A lapse can expose missing conditions','Candidate inquiry: whether repeated failures reflect incentives, unequal burdens, or ineffective repair channels.','Social recovery, justice, sanctions, and acceptable risk require additional models and ethical commitments.','basin']
+      ],foot:'Institutional and societal connections remain proposed. No guarantee of improvement or ethical necessity follows from the toy retry mechanism.'}
+    ];
+  }
+  function showDetail(){const d=entries()[level].details[selected];$('#retry-detail-title').textContent=d[0];const dl=$('#retry-detail');dl.replaceChildren();for(const [k,v] of [['Reading',d[1]],['Boundary / evidence',d[2]]]){const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=k;dd.textContent=v;dl.append(dt,dd);}}
+  function source(){const c=data.components.find(x=>x.id===component)||data.components[0];$('#retry-component').value=c.id;$('#retry-source-name').textContent=c.name;$('#retry-source-location').textContent=c.file+':'+c.line;$('#retry-code').textContent=c.code;$('#retry-source-boundary').textContent=c.boundary;}
+  function evidence(){const finding=$('#retry-finding').checked;$('#retry-cases').replaceChildren();for(const error of [false,true])for(const attack of [false,true]){const d=document.createElement('div');d.className='case'+(finding&&!error?' excluded':'');d.textContent=(error?'Task error':'No task error')+' · '+(attack?'Personal attack':'No personal attack');$('#retry-cases').append(d);}$('#retry-evidence-result').textContent=finding?'2 candidates remain · error acknowledgement permitted · personal attack unresolved':'4 candidates remain · requesting specifics permitted · neither factual verdict is common';}
+  function meters(s){for(const [who,i,threshold] of [['alex',0,3],['maya',1,2]]){const val=s.q[i],m=$('#retry-'+who+'-meter');$('#retry-'+who+'-value').textContent=val+' · threshold '+threshold;m.setAttribute('aria-valuenow',Math.min(val,threshold));m.setAttribute('aria-valuetext',val+' supporting-evidence units; response threshold '+threshold);m.firstElementChild.style.width=Math.min(100,val/threshold*100)+'%';}$('#retry-alex-note').textContent=s.q[0]>=3?'Habitual clarification available':s.q[1]>=2?'Below own threshold; Maya’s specifics still permit clarification':'Habit is defensive; clarification requires an explicit choice';$('#retry-maya-note').textContent=s.q[1]>=2?'Next cue supplies specifics':'Next cue remains terse';}
+  function timeline(states){const tr=$('#retry-trace');tr.replaceChildren();states.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.className='btn';b.setAttribute('aria-pressed',String(i===round));b.textContent=(i===0?'Start':i+' · '+actionName(config.plan[i-1]))+' '+pair(s.q);b.setAttribute('aria-label',(i===0?'Initial state':'After exchange '+i+', '+actionName(config.plan[i-1]))+', Alex tally '+s.q[0]+', Maya tally '+s.q[1]);b.onclick=()=>{stop();round=i;render(true);save();};tr.append(b);});}
+  function draw(){
+    const g=$('#retry-graph'),svg=$('.edges'),w=g.clientWidth,h=g.clientHeight,small=w<520,entry=entries()[level];svg.setAttribute('viewBox',`0 0 ${w} ${h}`);svg.replaceChildren();
+    const defs=document.createElementNS(ns,'defs'),marker=document.createElementNS(ns,'marker');marker.id='retry-arrow';for(const [k,v] of Object.entries({viewBox:'0 0 10 10',refX:'9',refY:'5',markerWidth:'6',markerHeight:'6',orient:'auto'}))marker.setAttribute(k,v);const tip=document.createElementNS(ns,'path');tip.setAttribute('d','M 0 0 L 10 5 L 0 10 z');tip.setAttribute('fill','var(--muted-foreground)');marker.append(tip);defs.append(marker);svg.append(defs);
+    const bounds=g.getBoundingClientRect(),boxes=$$('.node button').map(el=>{const b=el.getBoundingClientRect();return{x:b.x-bounds.x,y:b.y-bounds.y,w:b.width,h:b.height};});
+    function edge(a,b,curve,id){const p=document.createElementNS(ns,'path'),forward=a<b;let d;if(small){const x=boxes[a].x+boxes[a].w/2,y=forward?boxes[a].y+boxes[a].h+6:boxes[a].y-6,end=forward?boxes[b].y-8:boxes[b].y+boxes[b].h+8;d=curve?`M ${x} ${y} C ${x+curve} ${y},${x+curve} ${end},${x} ${end}`:`M ${x} ${y} L ${x} ${end}`;}else{const x=forward?boxes[a].x+boxes[a].w+6:boxes[a].x-6,y=boxes[a].y+boxes[a].h/2,end=forward?boxes[b].x-8:boxes[b].x+boxes[b].w+8,ey=boxes[b].y+boxes[b].h/2;d=curve?`M ${x} ${y} C ${x} ${y+curve},${end} ${ey+curve},${end} ${ey}`:`M ${x} ${y} L ${end} ${ey}`;}p.id=id;p.setAttribute('d',d);p.setAttribute('fill','none');p.setAttribute('stroke',entry.kind==='checked'?'var(--viz-series-1)':entry.kind==='assumed'?'var(--viz-series-2)':'var(--muted-foreground)');p.setAttribute('stroke-width','1.5');p.setAttribute('marker-end','url(#retry-arrow)');if(entry.kind!=='checked')p.setAttribute('stroke-dasharray',entry.kind==='assumed'?'6 5':'2 5');svg.append(p);}
+    edge(0,1,level===2?-24:0,'retry-path-a');edge(1,2,level===2?-24:0,'retry-path-b');if(level===2){edge(1,0,24,'retry-path-c');edge(2,1,24,'retry-path-d');}
+  }
+  function pulse(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;cancelAnimationFrame(animation);$$('.particle').forEach(x=>x.remove());const svg=$('.edges'),dot=document.createElementNS(ns,'circle');dot.classList.add('particle');dot.setAttribute('r','4');dot.setAttribute('fill','var(--viz-series-1)');svg.append(dot);let start;function tick(now){if(!start)start=now;const t=(now-start)/900;if(t>=1){dot.remove();return;}const p=$('#'+(t<.5?'retry-path-a':'retry-path-b'));if(!p){dot.remove();return;}const pt=p.getPointAtLength(p.getTotalLength()*((t*2)%1));dot.setAttribute('cx',pt.x);dot.setAttribute('cy',pt.y);animation=requestAnimationFrame(tick);}animation=requestAnimationFrame(tick);}
+  function render(animate=false){const {states,s}=current(),en=entries()[level];$('#retry-course').value=course;$('#retry-round').max=config.plan.length;$('#retry-round').value=round;$('#retry-round-value').textContent=round+' / '+config.plan.length;$('#retry-rules').textContent='Assumed: support +1 · defensive setback −'+config.penalty+' (floor 0) · Maya '+(config.receptive?'receptive':'not receptive')+' · engagement '+(config.credible?'credible':'not credible');$('#retry-level-title').textContent=en.title;$('#retry-status').textContent=en.status;$('#retry-foot').textContent=en.foot;$$('[data-level]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.level===level)));$$('[data-node]').forEach((b,i)=>{b.textContent=en.nodes[i];b.setAttribute('aria-pressed',String(i===selected));});$$('[data-note]').forEach((e,i)=>e.textContent=en.notes[i]);$('#retry-source').hidden=level!==0;$('#retry-evidence').hidden=level!==3;$$('[data-action]').forEach(b=>b.disabled=round>=12);meters(s);timeline(states);showDetail();if(level===0)source();if(level===3)evidence();requestAnimationFrame(()=>{draw();if(animate)pulse();});}
+  function save(){try{const p=window.openai?.setWidgetState?.({modelContent:{version:2,episode:'Gradual feedback learning and retry',level:level+1,course,completedExchanges:round,plan:config.plan,receptive:config.receptive,credibleEngagement:config.credible,setback:config.penalty,component},privateContent:{selected,finding:$('#retry-finding').checked}});p?.catch(()=>{});}catch{}}
+  function restore(v){const m=v?.modelContent,p=v?.privateContent||{};if(!m||m.version!==2)return;if(presets[m.course]){course=m.course;config={...presets[course],plan:[...presets[course].plan]};}else if(m.course==='custom'&&Array.isArray(m.plan)&&m.plan.length<=12&&m.plan.every(c=>[C,H,D].includes(c))){course='custom';config={plan:[...m.plan],receptive:m.receptive!==false,credible:m.credibleEngagement!==false,penalty:m.setback===6?6:2};}if(Number.isInteger(m.level)&&m.level>=1&&m.level<=6)level=m.level-1;if(Number.isInteger(m.completedExchanges))round=Math.max(0,Math.min(config.plan.length,m.completedExchanges));if(data.components.some(c=>c.id===m.component))component=m.component;if([0,1,2].includes(p.selected))selected=p.selected;$('#retry-finding').checked=!!p.finding;render();}
+  function stop(){if(timer)clearInterval(timer);timer=null;$('#retry-play').textContent='Replay course';}
+  for(const c of data.components){const o=document.createElement('option');o.value=c.id;o.textContent=c.label;$('#retry-component').append(o);}
+  $$('[data-level]').forEach(b=>b.onclick=()=>{stop();level=+b.dataset.level;selected=1;render();save();});
+  $$('[data-node]').forEach(b=>b.onclick=()=>{selected=+b.dataset.node;$$('[data-node]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));showDetail();if(level===0){component=entries()[level].details[selected][3];source();}save();});
+  $$('[data-action]').forEach(b=>b.onclick=()=>{if(round>=12)return;stop();config={...config,plan:config.plan.slice(0,round).concat(b.dataset.action)};course='custom';round=config.plan.length;render(true);save();});
+  $('#retry-course').onchange=e=>{if(!presets[e.target.value])return;stop();course=e.target.value;config={...presets[course],plan:[...presets[course].plan]};round=0;render();save();};
+  $('#retry-round').oninput=e=>{stop();round=+e.target.value;render(true);save();};$('#retry-component').onchange=e=>{component=e.target.value;source();save();};$('#retry-finding').onchange=()=>{evidence();save();};
+  $('#retry-play').onclick=()=>{if(timer){stop();return;}round=0;render();$('#retry-play').textContent='Pause';timer=setInterval(()=>{round++;render(true);save();if(round>=config.plan.length)stop();},1300);};
+  new ResizeObserver(draw).observe($('#retry-graph'));window.addEventListener('openai:set_globals',e=>{if(e.detail?.globals?.widgetState)restore(e.detail.globals.widgetState);});
+  root.atlasTest={compute,learned,presets,state:()=>({level,round,course,config}),data};render();restore(window.openai?.widgetState);
+})();
+</script>
+</div>
