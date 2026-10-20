@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-303 registered results: 284 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 764 curated edges join 256 results to the results they draw on.
+304 registered results: 285 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 766 curated edges join 257 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -85,6 +85,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [finite-fallible-inquiry-necessity][] ← <a id="finite-fallible-inquiry-necessity--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="finite-fallible-inquiry-necessity--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="finite-fallible-inquiry-necessity--imbalance-as-relatum"></a>[imbalance-as-relatum][]
 - [finite-granularity-question-recovery][] ← <a id="finite-granularity-question-recovery--branching-tests-bisimulation"></a>[branching-tests-bisimulation][] · <a id="finite-granularity-question-recovery--retained-reference-joining-recovery"></a>[retained-reference-joining-recovery][]
 - [finite-joining-tree-lifting][] ← <a id="finite-joining-tree-lifting--multivalued-joining-common-structure"></a>[multivalued-joining-common-structure][]
+- [fixation-by-drift][] ← <a id="fixation-by-drift--drift-offspring-sampled"></a>[drift-offspring-sampled][] · <a id="fixation-by-drift--typicality-by-counting"></a>[typicality-by-counting][]
 - [fixed-places-and-sole-lines][] ← <a id="fixed-places-and-sole-lines--place-relations-in-context"></a>[place-relations-in-context][] · <a id="fixed-places-and-sole-lines--hexagrams-on-the-spine"></a>[hexagrams-on-the-spine][] · <a id="fixed-places-and-sole-lines--claims-shown-in-context"></a>[claims-shown-in-context][] · <a id="fixed-places-and-sole-lines--generalization-through-lumping"></a>[generalization-through-lumping][]
 - [formed-copying-correction][] ← <a id="formed-copying-correction--formed-copying-registration"></a>[formed-copying-registration][]
 - [formed-copying-registration][] ← <a id="formed-copying-registration--inherited-structural-copying"></a>[inherited-structural-copying][]
@@ -351,6 +352,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [finite-granularity-question-recovery]: theories/becoming/results/records/finite-granularity-question-recovery.md
 [finite-joining-tree-lifting]: theories/becoming/results/records/finite-joining-tree-lifting.md
 [finite-trace-transport]: theories/becoming/results/records/finite-trace-transport.md
+[fixation-by-drift]: theories/becoming/results/records/fixation-by-drift.md
 [fixed-places-and-sole-lines]: theories/becoming/results/records/fixed-places-and-sole-lines.md
 [formed-copying-correction]: theories/becoming/results/records/formed-copying-correction.md
 [formed-copying-registration]: theories/becoming/results/records/formed-copying-registration.md

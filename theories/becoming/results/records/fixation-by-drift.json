@@ -1,0 +1,324 @@
+{
+  "schema_version": 2,
+  "id": "fixation-by-drift",
+  "title": {
+    "en": "Fixation by drift",
+    "zh": "漂变导致的固定"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-20T16:52:16+00:00",
+  "statement": {
+    "en": "Sampled generation after generation with no selection, a population keeps each count on average, its still-varied histories vanish geometrically, and each kind is fixed with exactly its starting share in the limit.",
+    "zh": "无选择地逐代抽样，种群平均保持每个计数，仍有差异的历史按几何速率消失，各类在极限中恰以其起始份额被固定。"
+  },
+  "laws": [
+    {
+      "en": "Sampled generations: a population of N, h of the first kind, each next generation N draws from the last weighted by its counts; over the histories of k generations, each weighed by its ways of drawing, the total of a reading of the final count is linear and monotone in the reading, and the histories weigh (N^N)^k together.",
+      "zh": "抽样的世代：N 个成员、第一类 h 个，每个下一代从上一代按其计数加权抽取 N 次；在 k 代的各历史上（各以其抽法数为权重），最终计数之读数的总和对读数线性且单调，各历史共重 (N^N)^k。",
+      "declarations": [
+        "Becoming.Drift.sampled",
+        "Becoming.Drift.sampled_succ",
+        "Becoming.Drift.ones_le",
+        "Becoming.Drift.sampled_le",
+        "Becoming.Drift.sampled_add",
+        "Becoming.Drift.sampled_mul",
+        "Becoming.Drift.sampled_one"
+      ]
+    },
+    {
+      "en": "No direction without selection: summed over the histories the final count is h (N^N)^k, its start times the whole weight.",
+      "zh": "无选择即无方向：各历史的最终计数之和为 h (N^N)^k，即起点乘总权重。",
+      "declarations": [
+        "Becoming.Drift.weighted_ones",
+        "Becoming.Drift.sampled_count"
+      ]
+    },
+    {
+      "en": "The ends absorb: from none or from all of the first kind every history stays there.",
+      "zh": "两端吸收：从第一类为零或为全部出发，每个历史都停在那里。",
+      "declarations": [
+        "Becoming.Drift.from_none",
+        "Becoming.Drift.from_all",
+        "Becoming.Drift.sub_self_zero",
+        "Becoming.Drift.sampled_none",
+        "Becoming.Drift.sampled_all"
+      ]
+    },
+    {
+      "en": "Drift ends variation: from a varied population the samplings fixing and losing the first kind weigh at least one each, so the histories still varied after k generations weigh at most r^k with r + 2 = N^N.",
+      "zh": "漂变终结差异：从有差异的种群出发，固定与失去第一类的抽样各至少重一，故 k 代后仍有差异的历史之权重至多为 r^k，其中 r + 2 = N^N。",
+      "declarations": [
+        "Becoming.Drift.whole",
+        "Becoming.Drift.whole_true",
+        "Becoming.Drift.whole_false",
+        "Becoming.Drift.whole_weight",
+        "Becoming.Drift.varied",
+        "Becoming.Drift.varied_zero",
+        "Becoming.Drift.varied_self",
+        "Becoming.Drift.varied_step",
+        "Becoming.Drift.one_le_pow",
+        "Becoming.Drift.varied_vanishes"
+      ]
+    },
+    {
+      "en": "Fixation: N times the histories fixing the first kind is at most h (N^N)^k and with N r^k at least it, so the fixing share tends to h/N, the neutral fixation probability.",
+      "zh": "固定：N 乘固定第一类的历史至多为 h (N^N)^k，加上 N r^k 则至少为它，故固定的份额趋于 h/N，即中性固定概率。",
+      "declarations": [
+        "Becoming.Drift.fixed",
+        "Becoming.Drift.count_le",
+        "Becoming.Drift.fixed_le",
+        "Becoming.Drift.fixation"
+      ]
+    },
+    {
+      "en": "Witness: two members, one of each kind, one generation: of the four histories one fixes, one loses and two stay varied.",
+      "zh": "见证：两个成员、各属一类、一代：四个历史中一个固定、一个失去、两个仍有差异。",
+      "declarations": [
+        "Becoming.Drift.TwoMembers.one_generation"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Two kinds; a constant population of N; each generation N draws with replacement from the last, weighted by its counts, with no selection or mutation in the draw (the neutral Wright-Fisher course); natural-number counts; discrete generations; for the rate, r + 2 = N^N (N at least two).",
+      "zh": "不加公理。两类；种群大小 N 不变；每代从上一代按其计数有放回地抽取 N 次，抽取中无选择与突变（中性 Wright-Fisher 进程）；自然数计数；离散世代；速率需 r + 2 = N^N（N 至少为二）。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which history happens: counting weighs histories and supposes no chance of the unfolding.",
+      "zh": "哪一个历史发生：计数为各历史加权，不设想展开中的机会。",
+      "kind": "scope"
+    },
+    {
+      "en": "The time to fixation: the rate r/N^N is crude (it uses only the samplings of one kind alone), so the time is bounded, not stated.",
+      "zh": "固定所需的时间：速率 r/N^N 很粗（只用了全为一类的抽样），故时间只有上界，未陈述。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Selection or mutation in the draw, more than two kinds, and a changing population size are not stated; with selection the fixing share is not the starting share.",
+      "zh": "抽取中的选择或突变、多于两类、种群大小变化，未陈述；有选择时固定份额不等于起始份额。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+      "detail": {
+        "en": "Drift does not keep variation: in TwoMembers, from one of each kind, half the histories after one generation have lost or fixed the first kind (TwoMembers.one_generation).",
+        "zh": "漂变不保持差异：TwoMembers 中，从各类一个出发，一代后一半历史已失去或固定第一类（TwoMembers.one_generation）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T164822.720919Z): every declaration of Becoming.Drift has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 278; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T164822.720919Z）：Becoming.Drift 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 278 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Drift with selection in one draw (the fixing share with selection); mutation (transmission not exact); the time to fixation; an independent review.",
+    "zh": "同一次抽取中的漂变与选择（有选择时的固定份额）；突变（不精确的传递）；固定所需时间；独立审查。"
+  },
+  "correspondence": {
+    "en": "The neutral fixation probability of the Wright-Fisher model (Kimura 1962; Moran 1958 for the overlapping case): the allele count is a martingale, the ends absorb, so the probability of fixation is the starting frequency; heterozygosity decays geometrically (Wright 1931). Readings (the AI's): drift gives no direction and ends variation, as ending among groups uses up the differences it acts on; variation is kept only where something renews it.",
+    "zh": "Wright-Fisher 模型的中性固定概率（Kimura 1962；重叠世代见 Moran 1958）：等位基因计数是鞅，两端吸收，故固定概率等于起始频率；杂合度按几何速率衰减（Wright 1931）。读法（AI 的）：漂变不给方向而终结差异，正如组间终止耗尽它所作用的差异；差异只在有所更新之处得以保持。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+  "aliases": [
+    "fixation by drift",
+    "neutral fixation probability",
+    "漂变导致的固定",
+    "genetic drift over generations",
+    "Becoming.Drift.fixation",
+    "Becoming.Drift.sampled_count",
+    "Becoming.Drift.varied_vanishes"
+  ],
+  "dependencies": [
+    {
+      "id": "drift-offspring-sampled",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Each generation is Becoming.Drift's one generation of sampling: its first moment (expected_ones) gives the count kept, and its lost_weight one end of the samplings of one kind alone.",
+        "zh": "每一代都是 Becoming.Drift 的一代抽样：其一阶矩（expected_ones）给出计数保持，其 lost_weight 给出全为一类之抽样的一端。"
+      },
+      "interface": {
+        "output": {
+          "en": "One generation sampled from listed offspring, unbiased.",
+          "zh": "从所列后代中抽样的一代，无偏。"
+        },
+        "input": {
+          "en": "The count kept over many generations, and the varied histories bounded.",
+          "zh": "多代中计数保持，以及仍有差异的历史之界。"
+        },
+        "conditions": {
+          "en": "Two kinds, draws with replacement.",
+          "zh": "两类，有放回地抽取。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean"
+      }
+    },
+    {
+      "id": "typicality-by-counting",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The histories are built from Becoming.Typicality's courses and weights.",
+        "zh": "各历史由 Becoming.Typicality 的进程与权重构成。"
+      },
+      "interface": {
+        "output": {
+          "en": "The courses of n steps and their total weight.",
+          "zh": "n 步的进程及其总权重。"
+        },
+        "input": {
+          "en": "The histories of k sampled generations.",
+          "zh": "k 代抽样的各历史。"
+        },
+        "conditions": {
+          "en": "Natural weights.",
+          "zh": "自然数权重。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "drift-offspring-sampled",
+      "detail": {
+        "en": "One generation of sampling, here iterated.",
+        "zh": "一代抽样，此处迭代。"
+      }
+    },
+    {
+      "id": "selection-within-and-among-groups-of-any-sizes",
+      "detail": {
+        "en": "Ending among groups uses up the differences it acts on; drift uses up variation too.",
+        "zh": "组间终止耗尽其所作用的差异；漂变同样耗尽差异。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Drift.Flow.ended_falls_back",
+        "Becoming.Drift.Generations.expected_sampled",
+        "Becoming.Drift.Generations.raised_falls_back",
+        "Becoming.Drift.OneDraw.falls_back",
+        "Becoming.Drift.TwoMembers.one_generation",
+        "Becoming.Drift.count_le",
+        "Becoming.Drift.expected_ones",
+        "Becoming.Drift.expected_zeros",
+        "Becoming.Drift.fallsBack",
+        "Becoming.Drift.falls_back",
+        "Becoming.Drift.falls_back_ge",
+        "Becoming.Drift.falls_back_le",
+        "Becoming.Drift.far_back",
+        "Becoming.Drift.fixation",
+        "Becoming.Drift.fixed",
+        "Becoming.Drift.fixed_le",
+        "Becoming.Drift.from_all",
+        "Becoming.Drift.from_none",
+        "Becoming.Drift.gap_le",
+        "Becoming.Drift.lost",
+        "Becoming.Drift.lost_false",
+        "Becoming.Drift.lost_le",
+        "Becoming.Drift.lost_true",
+        "Becoming.Drift.lost_weight",
+        "Becoming.Drift.one_le_pow",
+        "Becoming.Drift.ones_le",
+        "Becoming.Drift.sampled",
+        "Becoming.Drift.sampled_add",
+        "Becoming.Drift.sampled_all",
+        "Becoming.Drift.sampled_count",
+        "Becoming.Drift.sampled_le",
+        "Becoming.Drift.sampled_mul",
+        "Becoming.Drift.sampled_none",
+        "Becoming.Drift.sampled_one",
+        "Becoming.Drift.sampled_succ",
+        "Becoming.Drift.square_mul",
+        "Becoming.Drift.step_expected",
+        "Becoming.Drift.step_ones",
+        "Becoming.Drift.step_zeros",
+        "Becoming.Drift.sub_self_zero",
+        "Becoming.Drift.varied",
+        "Becoming.Drift.varied_self",
+        "Becoming.Drift.varied_step",
+        "Becoming.Drift.varied_vanishes",
+        "Becoming.Drift.varied_zero",
+        "Becoming.Drift.weighted_ones",
+        "Becoming.Drift.weighted_ones_step",
+        "Becoming.Drift.weighted_zeros_step",
+        "Becoming.Drift.whole",
+        "Becoming.Drift.whole_false",
+        "Becoming.Drift.whole_true",
+        "Becoming.Drift.whole_weight"
+      ],
+      "sha256": "4aad9f6d7701fec29527ad9556e0e9bdf64fa145aca2aa878b9df4e9f93b379a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Typicality.courses",
+        "Becoming.Typicality.weight",
+        "Becoming.Typicality.total_extend",
+        "Becoming.Typicality.total_weight",
+        "Becoming.Typicality.total_congr_mem"
+      ],
+      "sha256": "904976890149379d5d5e061cebf97235035ed94091985003ff51801b52e1d8a3"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T164822.720919Z/verification.json",
+      "role": "receipt",
+      "sha256": "472f22eb151515ef908623bb53b9caa4eed75fd26e3c24268327cee3e3d92494"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "bb5706a504b03355c07e7d22678f643f013c79ec61def07d91bf26c9beb1b4c9"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "d6495d3d9723c413e9749f989ce3eb81b792a15a2058ed5b852957c0ff988b17"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "role": "statement",
+      "sha256": "9414fdacb3863e127cdd886acd2c031b2cbd9885952a1ea7ad52757b3ee9633a"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T164822.720919Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Drift",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T164822.720919Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Typicality",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "20 October 2026: added (EV9), fixation by drift over many sampled generations: the count kept, the ends absorbing, variation ending geometrically, the fixing share h/N; study section 278.",
+      "zh": "2026年10月20日：新增（EV9），多代抽样中漂变导致的固定：计数保持、两端吸收、差异按几何速率终结、固定份额 h/N；研究第 278 节。"
+    }
+  ]
+}

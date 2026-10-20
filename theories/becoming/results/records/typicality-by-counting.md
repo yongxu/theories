@@ -70,7 +70,7 @@ Ren, 15 October 2026: “"What this line doesn’t reach" is also worth doing”
 - related, not a proved adapter: [weights-count-situations](weights-count-situations.md). Weights are the numbers of situations taking each step; the law of large numbers counts situations.
 - related, not a proved adapter: [drift-offspring-sampled](drift-offspring-sampled.md). Its courses read as samplings of a next generation: drift (Becoming.Drift).
 
-**Used by:** [drift-offspring-sampled](drift-offspring-sampled.md) · [weights-count-situations](weights-count-situations.md)
+**Used by:** [drift-offspring-sampled](drift-offspring-sampled.md) · [fixation-by-drift](fixation-by-drift.md) · [weights-count-situations](weights-count-situations.md)
 
 <a id="sources--来源"></a>
 ### Sources

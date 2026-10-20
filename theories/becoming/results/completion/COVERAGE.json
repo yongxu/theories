@@ -392,6 +392,7 @@
         "groups-whose-conditions-are-coupled",
         "selection-within-and-among-groups-of-any-sizes",
         "drift-offspring-sampled",
+        "fixation-by-drift",
         "transmission-is-inheritance-and-need"
       ],
       "declarations": [

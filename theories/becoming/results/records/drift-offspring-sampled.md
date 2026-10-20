@@ -41,7 +41,7 @@ Canonical source: [Drift.lean](../../../../experiments/integrated-correction/gen
 <a id="next--下一步"></a>
 ## Next
 
-Fixation and loss over many sampled generations; drift with selection in one draw; mutation (transmission not exact); an independent review.
+drift with selection in one draw; mutation (transmission not exact); an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -68,6 +68,9 @@ Wright-Fisher sampling (Fisher 1930; Wright 1931): binomial sampling of a two-al
 - related, not a proved adapter: [typicality-by-counting](typicality-by-counting.md). Its courses and spread, read as samplings of a next generation.
 - related, not a proved adapter: [selection-term-over-generations](selection-term-over-generations.md). The step of selection a sampled generation can undo.
 - related, not a proved adapter: [selection-among-groups-by-ending](selection-among-groups-by-ending.md). A rise by ending among groups, subject to drift.
+- related, not a proved adapter: [fixation-by-drift](fixation-by-drift.md). Many generations of sampling: the count kept, variation ending, each kind fixed with its starting share.
+
+**Used by:** [fixation-by-drift](fixation-by-drift.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -82,6 +85,7 @@ Wright-Fisher sampling (Fisher 1930; Wright 1931): binomial sampling of a two-al
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T164822.720919Z/verification.json) | — |
 
 Aliases: `drift`, `genetic drift`, `Wright-Fisher sampling`, `漂变`, `offspring sampled rather than listed`, `Becoming.Drift.falls_back`, `Becoming.Drift.expected_ones`, `Becoming.Drift.falls_back_ge`, `Becoming.Drift.Flow.ended_falls_back`
 
@@ -89,6 +93,7 @@ Aliases: `drift`, `genetic drift`, `Wright-Fisher sampling`, `漂变`, `offsprin
 ### History
 
 - 20 October 2026: added (EV8), one generation of offspring sampled rather than listed: unbiased, the spread exact, falling back bounded above and below, over listed generations and on the base; study section 276.
+- 20 October 2026, EV9: Becoming.Drift gains many sampled generations (record fixation-by-drift, study section 278): fixation and loss over many generations, this record's first open item, is stated there in the neutral case; this record's laws and their statements are unchanged.
 
 </details>
 
