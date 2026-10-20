@@ -1,11 +1,11 @@
 {
- "commit": "e8cea3f419c1dfdac900aa8b63210ffbc82e85dc",
+ "commit": "c31434fc92947864e6472dd87bae47aa45a190bd",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261020T222228.243650Z",
+ "core_receipt_at_commit": "20261020T224903.262106Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 300,
- "constants": 38006,
- "spine_theorems": 12334,
+ "constants": 38084,
+ "spine_theorems": 12351,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,10 +28,10 @@
  "classes": {
   "statement on both families": 976,
   "statement on Process/Frame/Run/Trace": 2881,
-  "statement on World/Flow/Web": 2897,
+  "statement on World/Flow/Web": 2911,
   "statement on the base only through a law of its own module": 193,
   "proof through a base family": 155,
-  "used by a theorem on the base": 4430,
+  "used by a theorem on the base": 4433,
   "instance on the base recorded": 151,
   "apart: own vocabulary": 595,
   "apart: prelude-only statement": 56
@@ -509,7 +509,7 @@
   ],
   "Becoming.Optimum": [
    1,
-   62
+   79
   ],
   "Becoming.LoopReturn": [
    1,
@@ -579,15 +579,15 @@
  "rings": {
   "core": {
    "modules": 284,
-   "theorems": 11588,
+   "theorems": 11605,
    "apart": 571,
    "classes": {
     "statement on both families": 962,
     "statement on Process/Frame/Run/Trace": 2670,
-    "statement on World/Flow/Web": 2872,
+    "statement on World/Flow/Web": 2886,
     "statement on the base only through a law of its own module": 147,
     "proof through a base family": 144,
-    "used by a theorem on the base": 4071,
+    "used by a theorem on the base": 4074,
     "instance on the base recorded": 151,
     "apart: own vocabulary": 516,
     "apart: prelude-only statement": 55
@@ -686,7 +686,7 @@
  "records_by_best_alias_class": {
   "statement on both families": 68,
   "statement on Process/Frame/Run/Trace": 115,
-  "statement on World/Flow/Web": 83,
+  "statement on World/Flow/Web": 84,
   "statement on the base only through a law of its own module": 2,
   "proof through a base family": 1,
   "used by a theorem on the base": 7,
@@ -6468,6 +6468,23 @@
   "Becoming.Optimum.Drain.drawing_within": "statement on World/Flow/Web",
   "Becoming.Optimum.Drain.drawing_optimum": "statement on World/Flow/Web",
   "Becoming.Optimum.Drain.drawing_broken_iff": "statement on World/Flow/Web",
+  "Becoming.Optimum.alone_self": "used by a theorem on the base",
+  "Becoming.Optimum.MutualBest.full": "statement on World/Flow/Web",
+  "Becoming.Optimum.mutual_beyond": "statement on World/Flow/Web",
+  "Becoming.Optimum.mutual_as_one": "statement on World/Flow/Web",
+  "Becoming.Optimum.mutual_lowers_iff": "statement on World/Flow/Web",
+  "Becoming.Web.mutual_broken_iff_capacity": "statement on World/Flow/Web",
+  "Becoming.Optimum.TwoTakers.members_distinct": "used by a theorem on the base",
+  "Becoming.Optimum.TwoTakers.joint_within": "statement on World/Flow/Web",
+  "Becoming.Optimum.TwoTakers.joint_balances": "statement on World/Flow/Web",
+  "Becoming.Optimum.TwoTakers.gives_at_most_one": "statement on World/Flow/Web",
+  "Becoming.Optimum.TwoTakers.joint_optimum": "statement on World/Flow/Web",
+  "Becoming.Optimum.TwoTakers.joint_best": "statement on World/Flow/Web",
+  "Becoming.Optimum.TwoTakers.lists": "used by a theorem on the base",
+  "Becoming.Optimum.TwoTakers.joint_drains": "statement on World/Flow/Web",
+  "Becoming.Optimum.TwoTakers.within_slack_jointly_below": "statement on World/Flow/Web",
+  "Becoming.Optimum.TwoTakers.restrained_balances": "statement on World/Flow/Web",
+  "Becoming.Optimum.TwoTakers.restrained_not_mutual": "statement on World/Flow/Web",
   "Becoming.Web.pooledClass_selects": "statement on World/Flow/Web",
   "Becoming.Web.separates_all_iff": "statement on World/Flow/Web",
   "Becoming.Web.member_separates_all": "statement on World/Flow/Web",
