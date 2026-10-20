@@ -283,3 +283,10 @@ for n, q in PIN.items():
 print('second and third passes applied')
 with open(F, 'w', encoding='utf-8') as fh:
     w = csv.DictWriter(fh, fieldnames=FIELDS, delimiter='\t', lineterminator='\n'); w.writeheader(); w.writerows(by.values())
+# fourth pass (21 October, at the chapter): a row the table itself marks as no name leaves it
+drop('大一', '对照条目，不是名：惠施「至大无外，謂之大一」作「兼」的相合条目；整体之名是「兼」')
+with open(F, 'w', encoding='utf-8') as fh:
+    w = csv.DictWriter(fh, fieldnames=FIELDS, delimiter='\t', lineterminator='\n'); w.writeheader(); w.writerows(by.values())
+with open(H + '/names-dropped.tsv', 'w', encoding='utf-8') as fh:
+    d = csv.DictWriter(fh, fieldnames=['名', '篇', '所名', '理由'], delimiter='\t', lineterminator='\n'); d.writeheader(); d.writerows(dropped)
+print('fourth pass:', len(by), 'names;', len(dropped), 'dropped')

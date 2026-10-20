@@ -5009,33 +5009,6 @@
   ]
  },
  {
-  "名": "大一",
-  "篇": "C01",
-  "所名": "（对照条目）至大无外",
-  "锚": "World.withRest",
-  "引": "至大无外，謂之大一",
-  "式": "复",
-  "注": "不立为名，作「兼」的相合条目",
-  "anchors": [
-   "Becoming.World.withRest"
-  ],
-  "quotes": [
-   {
-    "phrase": "至大无外，謂之大一",
-    "found": [
-     {
-      "source_id": "MI1-S-HS",
-      "text": "至大无外，謂之大一"
-     },
-     {
-      "source_id": "ZH1-S33",
-      "text": "至大无外，謂之大一"
-     }
-    ]
-   }
-  ]
- },
- {
   "名": "兩行",
   "篇": "C01",
   "所名": "语境中的读法共成一个世界（contextual readings compose one world）",
