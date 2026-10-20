@@ -1,0 +1,54 @@
+## {N}. Groups of any sizes, and regrouping (EV7)
+
+```text
+Result(s): Becoming.SelectionLevels divides the selection term proper for groups of any sizes: with n a common
+       multiple of the sizes and each group's factor n over its size, n squared times the whole's concordance, with n
+       times the whole's size times the groups' own discordances, each by its factor, and the discordance of the
+       groups' means read member by member (the family read as its groups, context), is the same with concordance
+       and discordance exchanged (levels_sized, through meet: three covariations in one balance); the equal-size
+       division (levels) is now its case with every factor one (pairs_context, within_by_one, among_by_one); which
+       level wins for any sizes (rises_iff_sized, none_iff_sized); groups alike in mean leave selection within alone
+       (means_none_of_alike, rises_iff_within_of_alike); over generations with exact transmission, for any sizes
+       (rises_exact_iff_sized) and listed as groups alike in mean (rises_exact_iff_within_of_alike); the witness
+       ByMeans: groups of one and of three, alike in their totals of holding back but not in their means, where the
+       whole's selection for holding back is all among the means and the reading by totals sees none. In
+       Becoming.GroupEnding: for groups of any sizes, where the groups with a lower mean leave nothing (EndedBy),
+       nothing is discordant among the means (means_not_against), so the sized division has no among-group part
+       against the amount (rises_iff_ended_sized), on the base where those groups' members are not active
+       (Flow.endedBy_of_inactive, Flow.rises_iff_inactive_sized); the witness Exhausted: two keeping groups and a
+       group leaving nothing; the mean of holding back rises at the first step by selection among groups, the
+       offspring of each keeping group form groups alike in it, and at the next step the mean falls below its start;
+       record {RID}.
+Delta: the evolution chapter's next connection 1 in part (groups of unequal size; mixing read as how the next
+       generation is listed) and chapter section 8.1 item 9's "groups of unequal size". No new module: the general
+       division lands below the equal-size law in the same module, which is derived from it (board rule 9).
+Premises: a common multiple of the groups' sizes (in place of rational means); for the verdicts a positive multiple,
+       and for groups alike in mean a family with members; over generations, exact transmission and the generation
+       listed as the groups; for ending, the groups with a lower mean leaving nothing, on the base their members not
+       active, only active formations giving and descent.
+Evidence: core receipt {RECEIPT} (passed; Becoming.SelectionLevels {SL_THEOREMS} theorems in {SL_DECLS} declarations
+       and Becoming.GroupEnding {THEOREMS} in {DECLS}, every axiom report empty; {CORE_LINE}); the connectivity rerun
+       ({APART}); render, check, links and tests.
+Boundary: the among-group part is the covariance of group means member by member (each member read by its group's
+       mean): Price's partition with size weights, not the reading of groups by their totals, which agrees with it
+       only for equal sizes (ByMeans). Mixing is stated only as the listing of the next generation: a step's change of
+       mean does not depend on how its offspring are grouped, and the next step's among-group part is fixed by that
+       listing; how groups form, and transmission that is not exact across groups (migration that changes what is
+       carried), are not stated. Exhausted is a witness, not a law: that selection among groups by ending removes the
+       differences it acts on in general is not proved. Discrete steps, natural-number amounts, finite lists.
+Output → input: the multilevel division is now general in group size, its among-group part read by means; the
+       regrouping law states the classical condition for selection among groups to keep winning, read off the
+       counts: the next generation's groups must differ in the amount, which ending among groups does not supply.
+       Next: how groups form and keep their differences (assortment), transmission that is not exact across groups,
+       and the additive part of Fisher's theorem.
+```
+
+The kit is [`development/ev7-unequal-groups/`](development/ev7-unequal-groups/): this landing's text (`apply_text.py`, `study_ev7.txt`) and record (`make_record.py`), and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **The division for any sizes.** Three covariations meet (`meet`). The whole's: `N` times the weighted total with its discordance is `W A` with its concordance. Each group's, multiplied by its factor and summed: since `|g| c_g = n`, the left side is `n` times the weighted total with the scaled within-group discordances, the right side `Σ c_g W_g A_g` with the scaled concordances. The family read as its groups (`context`), each member read by `c_g W_g` and `c_g A_g`: it has `N` members, its totals are `n W` and `n A`, and its weighted total is `n Σ c_g W_g A_g`. Multiplying the first by `n²` and the second by `n N`, the three share the terms `n² N S`, `n N Σ c_g W_g A_g` and `n² W A`, which cancel (`shuffle_left`, `shuffle_right`). Divided by `n² N²`, the identity is the law of total covariance with size weights: the whole's covariance is `Σ (n_g/N) Cov_g` plus the size-weighted covariance of the group means.
+- **The equal-size law as its case.** With every factor one and every size `m`, the family read as its groups counts each pair of groups `m · m` times (`pairs_context`), the scaled within terms are the within terms (`within_by_one`), and the means' terms are `m²` times the terms among groups by their totals (`among_by_one`); dividing by `m²` gives `levels` with its statement unchanged, and `m = 0` (all groups empty) is checked directly. Every law of the module and of `GroupEnding` that used `levels` is unchanged. The two arithmetic helpers of the old proof (`lhs_shape`, `rhs_shape`) are gone; the record that listed them is updated.
+- **Groups alike in mean.** Where `c_g A_g` is the same for every group, every member read as its group carries the same amount, so the means' terms vanish (`concord_alike`, `discord_alike` on `context`), and the whole selects exactly as the scaled within terms go. Over generations this is the regrouping law: the listing of generation `t + 1` does not enter step `t` (the step's change of mean is `Raises t`, which reads only `G`), but it fixes the among-group part of step `t + 1`.
+- **Ending, for any sizes.** `EndedBy` compares groups by `c_g A_g`; a group below another leaves nothing, so in every pair of members read as their groups the one with the lower mean has weight zero, and `discord_zero_of_below` gives no discordance among the means. The base form composes `group_childless` as before.
+- **Witnesses.** `ByMeans`: `[[held], [mate, first, second]]`, holding back at `held` and `mate`, offspring 3, 1, 1, 1, factors 3 and 1 (n = 3). Totals of holding back are 1 and 1, so `concordAmong` and `discordAmong` are 0; means are 1 and 1/3, the means' concordance is 36, within-group terms are 0, and the whole's concordance is 4 against 0 (`9 · 4 = 36`). `Exhausted`: generation 0 is `[[0, 1], [2, 3], [5, 7]]` with even members holding back; 0 and 2 leave two offspring, 1 and 3 three, 5 and 7 none. Within: discordance 2; among: concordance 10; the mean rises from 2/6 to 4/10. Generation 1, listed by descent as `[[10, 12, 11, 13, 15], [20, 22, 21, 23, 25]]`, holds back alike (two of five in each); a member holding back leaves one offspring, any other two; among: nothing; within: discordance 12; the mean falls to 4/16, below 2/6 (`G.size 0 * G.sum 2 < G.size 2 * G.sum 0`, 24 < 32). Offspring carry their parent's parity, so transmission is exact; the theorems compute the counts and verdicts directly.
+
+**Self-review.** The general law is exact and the special one is derived, so nothing is stated twice. Reading the among-group part by group means is a choice of weighting: it is the size-weighted partition (each member counted once), the standard multilevel Price partition (Price 1972; Okasha 2006's MLS1 with group means); another weighting (each group counted once) is a different decomposition and is not stated. The common multiple is a modelling device for rational means; the statement holds for any common multiple, the least giving the smallest counts. The regrouping law is a corollary of the division with an identity of listing, kept because it states the reading the evolution chapter asks for: once the next groups are alike, selection among them is gone and only selection within acts. That ending tends to make the surviving groups alike is shown only in the witness; in general the surviving groups can differ (if keeping groups differ in their within-group composition), and how much among-group difference descent keeps is the open question of assortment.

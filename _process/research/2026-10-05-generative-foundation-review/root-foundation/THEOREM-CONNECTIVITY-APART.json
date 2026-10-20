@@ -2066,6 +2066,51 @@
    "module": "Becoming.Weightings",
    "category": "model-witness",
    "reason": "in the same listing prior_transfer decides the comparison: the general law applied to one constructed listing"
+  },
+  "Becoming.SelectionLevels.none_iff_sized": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "the whole selects nothing exactly where the means' and the scaled within-group terms balance: a law of any finite family listed as groups of any sizes with a common multiple of the sizes, read with weights and amounts, with no world; on the base, groups whose members are not active leave no offspring (GroupEnding.Flow.endedBy_of_inactive), which is one case"
+  },
+  "Becoming.SelectionLevels.rises_exact_iff_within_of_alike": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "over generations with exact transmission, a generation listed as groups alike in mean raises its mean exactly as the scaled within-group terms go: a law of any finite family listed as groups of any sizes with a common multiple of the sizes, read with weights and amounts, with no world; on the base, groups whose members are not active leave no offspring (GroupEnding.Flow.endedBy_of_inactive), which is one case"
+  },
+  "Becoming.GroupEnding.rises_iff_ended_sized": {
+   "module": "Becoming.GroupEnding",
+   "category": "general-structure",
+   "reason": "where the groups with a lower mean leave nothing, the whole selects for the amount exactly where the scaled within-group discordance is below the scaled within-group concordance with the means' concordance: a law of any finite family listed as groups of any sizes with a common multiple of the sizes, read with weights and amounts, with no world; on the base, groups whose members are not active leave no offspring (GroupEnding.Flow.endedBy_of_inactive), which is one case"
+  },
+  "Becoming.SelectionLevels.ByMeans.common": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "the groups of one and of three have the common multiple three: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.SelectionLevels.ByMeans.by_means": {
+   "module": "Becoming.SelectionLevels",
+   "category": "model-witness",
+   "reason": "groups of one and of three alike in their totals of holding back but not in their means: the whole's selection for it is all among the means, and the reading by totals sees none; a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.GroupEnding.Exhausted.first_listed": {
+   "module": "Becoming.GroupEnding",
+   "category": "model-witness",
+   "reason": "the first generation of the two-generation family is listed by its three groups: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.GroupEnding.Exhausted.next_listed": {
+   "module": "Becoming.GroupEnding",
+   "category": "model-witness",
+   "reason": "the next generation is listed by the offspring of each keeping group: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.GroupEnding.Exhausted.first_step": {
+   "module": "Becoming.GroupEnding",
+   "category": "model-witness",
+   "reason": "at the first step the group leaving nothing makes selection among groups go for holding back and the mean rises: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.GroupEnding.Exhausted.next_step": {
+   "module": "Becoming.GroupEnding",
+   "category": "model-witness",
+   "reason": "at the next step the groups formed by descent are alike in holding back, selection within goes against it and the mean falls below its start: a fact about one constructed family, not a law of the unfolding"
   }
  },
  "instances": {
