@@ -1,11 +1,11 @@
 {
- "commit": "cc2ab8df8a6e4df634aefdcf23abd004035d1541",
+ "commit": "139e98ec36d529d1f9bba7fe62e2fae40afee65d",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261020T181337.294917Z",
+ "core_receipt_at_commit": "20261020T185635.903489Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 299,
- "constants": 37675,
- "spine_theorems": 12200,
+ "constants": 37717,
+ "spine_theorems": 12219,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,16 +28,16 @@
  "classes": {
   "statement on both families": 976,
   "statement on Process/Frame/Run/Trace": 2881,
-  "statement on World/Flow/Web": 2804,
+  "statement on World/Flow/Web": 2815,
   "statement on the base only through a law of its own module": 193,
   "proof through a base family": 154,
-  "used by a theorem on the base": 4396,
+  "used by a theorem on the base": 4399,
   "instance on the base recorded": 151,
-  "apart: own vocabulary": 589,
+  "apart: own vocabulary": 594,
   "apart: prelude-only statement": 56
  },
- "apart": 645,
- "apart_general_structure_by_design": 175,
+ "apart": 650,
+ "apart_general_structure_by_design": 180,
  "apart_otherwise": 470,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 64,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 433,
- "apart_roots": 434,
+ "apart_used_by_nothing": 435,
+ "apart_roots": 436,
  "apart_roots_by_category": {
   "model-witness": 240,
   "support": 87,
-  "general-structure": 84,
+  "general-structure": 86,
   "logical-strength": 12,
   "restates": 9,
   "calibration": 2
@@ -156,8 +156,8 @@
  },
  "apart_by_module": {
   "Becoming.Weightings": [
-   45,
-   69
+   50,
+   76
   ],
   "Becoming.Drift": [
    34,
@@ -575,17 +575,17 @@
  "rings": {
   "core": {
    "modules": 283,
-   "theorems": 11454,
-   "apart": 565,
+   "theorems": 11473,
+   "apart": 570,
    "classes": {
     "statement on both families": 962,
     "statement on Process/Frame/Run/Trace": 2670,
-    "statement on World/Flow/Web": 2779,
+    "statement on World/Flow/Web": 2790,
     "statement on the base only through a law of its own module": 147,
     "proof through a base family": 143,
-    "used by a theorem on the base": 4037,
+    "used by a theorem on the base": 4040,
     "instance on the base recorded": 151,
-    "apart: own vocabulary": 510,
+    "apart: own vocabulary": 515,
     "apart: prelude-only statement": 55
    }
   },
@@ -682,7 +682,7 @@
  "records_by_best_alias_class": {
   "statement on both families": 68,
   "statement on Process/Frame/Run/Trace": 115,
-  "statement on World/Flow/Web": 77,
+  "statement on World/Flow/Web": 79,
   "statement on the base only through a law of its own module": 2,
   "proof through a base family": 1,
   "used by a theorem on the base": 7,
@@ -6390,6 +6390,16 @@
   "Becoming.Flow.separating_member_beyond": "statement on World/Flow/Web",
   "Becoming.Flow.act_selected_by_pool": "statement on World/Flow/Web",
   "Becoming.act_courses_unselected_pool": "statement on World/Flow/Web",
+  "Becoming.Web.AlikeThrough.of_reads": "statement on World/Flow/Web",
+  "Becoming.Web.SelectsThroughAll.reads": "statement on World/Flow/Web",
+  "Becoming.ExchangeLaw.Through.widen": "statement on World/Flow/Web",
+  "Becoming.WithinClosure.of_reads": "used by a theorem on the base",
+  "Becoming.WithinClosureOf.to_reads": "used by a theorem on the base",
+  "Becoming.Flow.CoupledFrom.of_reads": "statement on World/Flow/Web",
+  "Becoming.Flow.withinCoupling_reads": "statement on World/Flow/Web",
+  "Becoming.Flow.withinCoupling_reads_iff": "statement on World/Flow/Web",
+  "Becoming.Flow.unselected_beyond_reads": "statement on World/Flow/Web",
+  "Becoming.Flow.act_unselected_reads": "statement on World/Flow/Web",
   "Becoming.Clearing.restLaw_through": "statement on World/Flow/Web",
   "Becoming.Clearing.rest_follows": "statement on World/Flow/Web",
   "Becoming.Clearing.rest_follows_spared": "statement on World/Flow/Web",
@@ -6400,6 +6410,8 @@
   "Becoming.Clearing.pool_closes_gap": "statement on World/Flow/Web",
   "Becoming.Clearing.withheld_alike_for_clearer": "statement on World/Flow/Web",
   "Becoming.Clearing.within_closure_unseparated": "statement on World/Flow/Web",
+  "Becoming.Clearing.reading_clearer_unselected": "statement on World/Flow/Web",
+  "Becoming.Clearing.reading_dweller_selects": "statement on World/Flow/Web",
   "Becoming.ExchangeLaw.Through.acts_alike_all": "statement on World/Flow/Web",
   "Becoming.ExchangeLaw.Through.selectsThroughAll": "statement on World/Flow/Web",
   "Becoming.ExchangeLaw.Through.apart_of_acts": "statement on World/Flow/Web",
@@ -9347,7 +9359,13 @@
   "Becoming.Weighting.mul_lt_mul_pos": "apart: prelude-only statement",
   "Becoming.Weighting.lt_of_mul_lt": "apart: prelude-only statement",
   "Becoming.Weighting.neutral_ranks_by_number": "apart: own vocabulary",
+  "Becoming.Weighting.increasing_ranks": "apart: own vocabulary",
+  "Becoming.Weighting.widens_iff_every_of_class": "used by a theorem on the base",
+  "Becoming.Weighting.widens_iff_every_increasing": "apart: own vocabulary",
+  "Becoming.Weighting.widens_iff_every_score": "apart: own vocabulary",
+  "Becoming.Weighting.mixed_either_way_of_class": "apart: own vocabulary",
   "Becoming.Web.widens_iff_every_weighting": "statement on World/Flow/Web",
+  "Becoming.Web.widens_iff_every_of_class": "statement on World/Flow/Web",
   "Becoming.Web.not_widens_of_closes": "statement on World/Flow/Web",
   "Becoming.atCenters_standpointInvariant": "used by a theorem on the base",
   "Becoming.atCenters_presupposed": "used by a theorem on the base",
@@ -9384,6 +9402,7 @@
   "Becoming.Weighting.level_lt_of_includes_at": "apart: own vocabulary",
   "Becoming.Weighting.le_of_strict": "apart: prelude-only statement",
   "Becoming.Weighting.prior_lt_of_widens": "apart: own vocabulary",
+  "Becoming.Weighting.increasing_prior": "apart: own vocabulary",
   "Becoming.Weighting.perm4": "apart: prelude-only statement",
   "Becoming.Weighting.concave_gap": "apart: own vocabulary",
   "Becoming.Weighting.prior_transfer": "apart: own vocabulary",
