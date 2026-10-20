@@ -11325,7 +11325,7 @@ The kit is [`development/ev6-coupled-ending/`](development/ev6-coupled-ending/):
 ```text
 Result(s): none new about the unfolding; one renewal curve of real yeast, fitted on some regimes,
        tested on held-out regimes, rules and numerical predictions frozen before any held-out value
-       was read (freeze 6deda4fb7, on main bc45d668f, kept as refs/salvage/mq2-freeze); every verdict kept.
+       was read (freeze 6deda4fb7, on main 5cf9e9e9d, kept as refs/salvage/mq2-freeze); every verdict kept.
 Delta: MQ1 (section 253) found that a point prediction needs the renewal curve (the equation of state)
        and that the need belongs to the regime. MQ2 fits the daily growth map G (n_{t+1} = G(n_t / DF);
        the dilution is the standing draw) on DF 250, 500, 1000 and 1266 of Dai et al. 2012's bifurcation
@@ -11371,7 +11371,7 @@ Output → input: the need is a measured equation of state across held-out regim
        given back at the same level (P1), so the need rises with the draw faster than removal
        alone gives, and the level falls faster near the fold. A separate experiment's regime differs
        (P3). For the spine: giving as a function of level and standing draw, the extension the
-       margin-of-a-regime module (parent session) should allow; MQ1's "the need is the regime's"
+       margin-of-a-regime module (RM1, Becoming.RegimeMargin, being built) should allow; MQ1's "the need is the regime's"
        now holds on real data in this stronger sense. Open: the mechanism of P1 (carryover of
        hexose or invertase is a candidate); a frozen test of a draw-dependent G on data not yet
        read (Dai, Korolev and Gore 2015's deteriorating environments would also test D, the time to
