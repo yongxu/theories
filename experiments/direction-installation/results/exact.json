@@ -1,0 +1,215 @@
+{
+ "COMM": {
+  "course": [
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   }
+  ],
+  "season_catch": 600,
+  "bed_kept": false,
+  "lake_kept": true,
+  "min_left": 50
+ },
+ "DIR_SEEN": {
+  "course": [
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   },
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   },
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   },
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   },
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   },
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   },
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   },
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   },
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   },
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   },
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   },
+   {
+    "stock": 100,
+    "total_catch": 30,
+    "left": 70
+   }
+  ],
+  "season_catch": 360,
+  "bed_kept": true,
+  "lake_kept": true,
+  "min_left": 70
+ },
+ "DIR_UNSEEN": {
+  "course": [
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   },
+   {
+    "stock": 100,
+    "total_catch": 50,
+    "left": 50
+   }
+  ],
+  "season_catch": 600,
+  "bed_kept": false,
+  "lake_kept": true,
+  "min_left": 50
+ },
+ "note": "COMM and DIR_UNSEEN are the same selection: the bed lies beyond the selector's coupling.",
+ "parameters": {
+  "capacity": 100,
+  "collapse": 5,
+  "need": 70,
+  "months": 12,
+  "seasons_after": 1
+ },
+ "direction_cost_share": 0.4
+}

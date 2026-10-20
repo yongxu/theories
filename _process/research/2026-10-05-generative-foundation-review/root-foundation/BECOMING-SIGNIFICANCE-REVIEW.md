@@ -523,3 +523,33 @@ Boundary: AI check, one session; SafeLife not run (package install and deep RL);
        searched once, read by abstract; no design-time forecast found there or elsewhere
 Integration: experiments/side-effect-benchmarks; study §263; board SE1
 ```
+
+<a id="installation-check"></a>
+## A check before building: installing the direction in LLM agents, a dependent with no seat (21 October 2026, IN1)
+
+An AI check (one session, 21 October; the follow-up of the session that set the alignment claim's strongest form), made before any experimental model call. The strongest alignment claim the work supports has a premise-free part and a part under the condition. The premise-free part: every strategy is a selection through couplings and is bound by §7.1–§7.4. The part under the condition: the direction is exactly what every positive weighting shares, and preference-coupled pools are blind to a formation with no seat. Its open rung is installation (§7.7, "coupling is not compliance"). Tabular learners (CG1–CG3) say nothing about actual AI systems. The question: has the installation of a scope that counts losses returning to no one been tested on LLM agents? **Verdict: not found. LLM-agent commons work models only the agents who harvest. Built as experiment IN1 with predictions frozen before any experimental call.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| LLM agents in a fishery, pasture or pollution commons: most fail to sustain it (best survival 53.3%, GPT-4o); communication reduces overuse by 21%; prompting universalization ("if everyone fishes more than F tons, the lake population will shrink") lengthens survival by about four months | Piatti et al., "Cooperate or Collapse", NeurIPS 2024 ([arXiv 2404.16698](https://arxiv.org/abs/2404.16698), v4 HTML read: capacity 100, doubling, collapse below 5, five fishers, 12 months) | The environment adapted here. Only the harvesters are modelled: no party outside them depends on the resource |
+| Nine models in prisoner's dilemma and public goods games in morally charged contexts: no model consistently moral (cooperation 7.9%–76.3%); game structure and moral framing drive behaviour | Backmann et al., "When Ethics and Payoffs Diverge", 2025 ([arXiv 2505.19212](https://arxiv.org/abs/2505.19212), abstract read) | Moral framing against payoff, among the players only |
+| Externality as harm to those not party to the decision, in multi-agent RL | "The Problem of Social Cost in Multi-Agent General Reinforcement Learning", 2024 ([arXiv 2412.02091](https://arxiv.org/abs/2412.02091), listing read) | The framing, no experiment on LLM agents |
+| Reward exchange in Commons Harvest: the self-interest level at which cooperation becomes every agent's preferred response | Willis, Du, Leibo and Luck, IJCAI 2025 (read for CG2) | Coupling rewards into the other harvesters, not into a party outside them |
+| Wildlife hunting and conservation as dual collective-action problems with spillovers | experimental economics with human subjects (search result, not read) | Not LLM agents |
+
+**What the theory's statement adds, read exactly.** Two distinctions the prior work does not separate, and one scope:
+
+- *Seeing is not valuing*: the dependent is told to the agents, or it is not counted.
+- *Counting is not reaching*: the dependent is counted by an abstract principle, but not told.
+- *The scope*: the dependent gives the fishers nothing, so its loss returns to no one.
+
+The direction's verdict is determinate by construction. Keeping the dependent widens the community's course at a cost in catch, and ends no fisher. So a failure is a failure of installation, not a mixed case. The exact selector of each instruction is computed first. That a selector blind to the dependent selects as if it were absent holds by construction (§7.2 law 1). What is empirical is whether these models follow the account in each cell.
+
+```text
+Result(s): none yet; experiment IN1 frozen (experiments/direction-installation, PREDICTIONS-2026-10-21.md)
+Delta: the installation rung of the alignment claim tested on actual AI systems: scope (counting a dependent with no seat) and coupling (observing it) crossed, the direction stated abstractly
+Supplied premises / correspondence: Piatti et al. 2024 (GovSim); Backmann et al. 2025; arXiv 2412.02091; Willis et al. 2025
+Evidence: web searches on 21 October 2026; GovSim v4 read in the HTML (environment and results); Backmann et al. by abstract; the others by listing
+Boundary: AI check, one session; the 2026 LLM-commons papers found (power asymmetry, energy commons, CoopEval, social welfare functions) read by search snippet only, none models a dependent outside the players
+Integration: experiments/direction-installation; board IN1
+```
