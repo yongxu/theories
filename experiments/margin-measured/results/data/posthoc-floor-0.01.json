@@ -1,0 +1,331 @@
+{
+ "note": "post hoc, floor 0.01; not a frozen verdict",
+ "real": {
+  "floor": 0.01,
+  "smallest_positive": [
+   0.001,
+   0.002001,
+   0.003002,
+   0.004004,
+   0.005007
+  ],
+  "d1": {
+   "D1": "passed",
+   "floor": 0.01,
+   "by_df": {
+    "250": {
+     "n": 414,
+     "tested": true,
+     "reduction": 0.015948199066078694,
+     "F": 6.6285264778090704,
+     "p": 0.010386567519654617,
+     "coef_log_prev_scaled": 0.02151850224186035,
+     "failed": false
+    },
+    "500": {
+     "n": 364,
+     "tested": true,
+     "reduction": 0.00045693114651734756,
+     "F": 0.16411327006439608,
+     "p": 0.6856387118336803,
+     "coef_log_prev_scaled": -0.007416642597136145,
+     "failed": false
+    },
+    "750": {
+     "n": 355,
+     "tested": true,
+     "reduction": 0.021781539418317508,
+     "F": 7.7932886196789894,
+     "p": 0.0055318579873031275,
+     "coef_log_prev_scaled": -0.1101786144544868,
+     "failed": false
+    },
+    "1000": {
+     "n": 320,
+     "tested": true,
+     "reduction": 0.0555566169174716,
+     "F": 18.52978658380238,
+     "p": 2.236098184718738e-05,
+     "coef_log_prev_scaled": -0.09150067266650053,
+     "failed": false
+    },
+    "1133": {
+     "n": 326,
+     "tested": true,
+     "reduction": 0.008529096166372985,
+     "F": 2.7613920477339136,
+     "p": 0.09754040926972773,
+     "coef_log_prev_scaled": -0.02707009536623147,
+     "failed": false
+    },
+    "1266": {
+     "n": 322,
+     "tested": true,
+     "reduction": 0.07947000090141587,
+     "F": 27.36683248825973,
+     "p": 3.0649931566233583e-07,
+     "coef_log_prev_scaled": 0.1046756948248992,
+     "failed": false
+    },
+    "1400": {
+     "n": 319,
+     "tested": true,
+     "reduction": 0.09109857956461542,
+     "F": 31.472009329226058,
+     "p": 4.443593188118271e-08,
+     "coef_log_prev_scaled": 0.15673990523506756,
+     "failed": false
+    },
+    "1600": {
+     "n": 308,
+     "tested": true,
+     "reduction": 0.023700498757504795,
+     "F": 7.355582087653102,
+     "p": 0.007067392973699809,
+     "coef_log_prev_scaled": 0.08933199595333416,
+     "failed": false
+    }
+   }
+  },
+  "d2": {
+   "D2": "failed",
+   "floor": 0.01,
+   "by_df": {
+    "250": {
+     "pairs": 414,
+     "testable": false,
+     "reason": "no upward crossing in range"
+    },
+    "500": {
+     "pairs": 364,
+     "testable": false,
+     "reason": "no upward crossing in range"
+    },
+    "750": {
+     "pairs": 356,
+     "need": 0.010848128650823415,
+     "high_n": 69,
+     "low_n": 16,
+     "high_alive": 1.0,
+     "low_extinct": 1.0,
+     "testable": true,
+     "passed": true
+    },
+    "1000": {
+     "pairs": 321,
+     "need": 0.02772552184550044,
+     "high_n": 64,
+     "low_n": 23,
+     "high_alive": 1.0,
+     "low_extinct": 1.0,
+     "testable": true,
+     "passed": true
+    },
+    "1133": {
+     "pairs": 331,
+     "need": 0.02594896845746278,
+     "high_n": 69,
+     "low_n": 15,
+     "high_alive": 0.927536231884058,
+     "low_extinct": 1.0,
+     "testable": true,
+     "passed": true
+    },
+    "1266": {
+     "pairs": 327,
+     "need": 0.03445446419947704,
+     "high_n": 64,
+     "low_n": 22,
+     "high_alive": 1.0,
+     "low_extinct": 1.0,
+     "testable": true,
+     "passed": true
+    },
+    "1400": {
+     "pairs": 323,
+     "need": 0.07409815998610177,
+     "high_n": 56,
+     "low_n": 24,
+     "high_alive": 1.0,
+     "low_extinct": 1.0,
+     "testable": true,
+     "passed": true
+    },
+    "1600": {
+     "pairs": 316,
+     "need": 0.16213326303834094,
+     "high_n": 56,
+     "low_n": 32,
+     "high_alive": 1.0,
+     "low_extinct": 0.875,
+     "testable": true,
+     "passed": false
+    }
+   }
+  }
+ },
+ "null": {
+  "floor": 1000.0,
+  "smallest_positive": [
+   0.101012,
+   0.16619,
+   0.216953,
+   0.298595,
+   0.353748
+  ],
+  "d1": {
+   "D1": "passed",
+   "floor": 1000.0,
+   "by_df": {
+    "250": {
+     "n": 409,
+     "tested": true,
+     "reduction": 0.002385388457200821,
+     "F": 0.966001224880582,
+     "p": 0.3262677123957356,
+     "coef_log_prev_scaled": 0.011465298997979897,
+     "failed": false
+    },
+    "500": {
+     "n": 353,
+     "tested": true,
+     "reduction": 1.1409563735131911e-05,
+     "F": 0.003970573482326578,
+     "p": 0.9497927378426892,
+     "coef_log_prev_scaled": 0.0014023058674969393,
+     "failed": false
+    },
+    "750": {
+     "n": 315,
+     "tested": true,
+     "reduction": 0.0034420949843113613,
+     "F": 1.0707350167672687,
+     "p": 0.3015860082574432,
+     "coef_log_prev_scaled": 0.036298301220303364,
+     "failed": false
+    },
+    "1000": {
+     "n": 279,
+     "tested": true,
+     "reduction": 2.1272744260447674e-05,
+     "F": 0.005828855923137536,
+     "p": 0.939198794519417,
+     "coef_log_prev_scaled": -0.002880050487031568,
+     "failed": false
+    },
+    "1133": {
+     "n": 253,
+     "tested": true,
+     "reduction": 0.00016259824597208983,
+     "F": 0.040330922738384345,
+     "p": 0.840999544486161,
+     "coef_log_prev_scaled": -0.006878534396791219,
+     "failed": false
+    },
+    "1266": {
+     "n": 242,
+     "tested": true,
+     "reduction": 0.002300576879525784,
+     "F": 0.5464939718440345,
+     "p": 0.46048534790429496,
+     "coef_log_prev_scaled": 0.025501675361998478,
+     "failed": false
+    },
+    "1400": {
+     "n": 229,
+     "tested": true,
+     "reduction": 0.0062831344205092066,
+     "F": 1.4163210457068225,
+     "p": 0.23526967283238942,
+     "coef_log_prev_scaled": 0.05456089201904672,
+     "failed": false
+    },
+    "1600": {
+     "n": 213,
+     "tested": true,
+     "reduction": 0.00023161590922315956,
+     "F": 0.04818727005678031,
+     "p": 0.8264633963487471,
+     "coef_log_prev_scaled": 0.010289387072760668,
+     "failed": false
+    }
+   }
+  },
+  "d2": {
+   "D2": "passed",
+   "floor": 1000.0,
+   "by_df": {
+    "250": {
+     "pairs": 409,
+     "testable": false,
+     "reason": "no upward crossing in range"
+    },
+    "500": {
+     "pairs": 353,
+     "testable": false,
+     "reason": "no upward crossing in range"
+    },
+    "750": {
+     "pairs": 317,
+     "need": 1535.883717835256,
+     "high_n": 56,
+     "low_n": 24,
+     "high_alive": 1.0,
+     "low_extinct": 1.0,
+     "testable": true,
+     "passed": true
+    },
+    "1000": {
+     "pairs": 280,
+     "need": 4125.169254153461,
+     "high_n": 48,
+     "low_n": 32,
+     "high_alive": 1.0,
+     "low_extinct": 1.0,
+     "testable": true,
+     "passed": true
+    },
+    "1133": {
+     "pairs": 261,
+     "need": 6595.5471764628355,
+     "high_n": 48,
+     "low_n": 40,
+     "high_alive": 1.0,
+     "low_extinct": 1.0,
+     "testable": true,
+     "passed": true
+    },
+    "1266": {
+     "pairs": 250,
+     "need": 10028.64827913199,
+     "high_n": 40,
+     "low_n": 40,
+     "high_alive": 1.0,
+     "low_extinct": 1.0,
+     "testable": true,
+     "passed": true
+    },
+    "1400": {
+     "pairs": 245,
+     "need": 14966.159620636747,
+     "high_n": 40,
+     "low_n": 48,
+     "high_alive": 1.0,
+     "low_extinct": 1.0,
+     "testable": true,
+     "passed": true
+    },
+    "1600": {
+     "pairs": 221,
+     "need": 30227.668614585444,
+     "high_n": 32,
+     "low_n": 48,
+     "high_alive": 1.0,
+     "low_extinct": 1.0,
+     "testable": true,
+     "passed": true
+    }
+   }
+  }
+ }
+}
