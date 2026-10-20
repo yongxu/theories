@@ -1,0 +1,1564 @@
+{
+ "values_reached": [
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Nat.hasNotBit"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.feedback._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "GoalFormationRevision.feedback._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.feedback.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.revised",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "GoalFormationRevision.reform",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.completed"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.VersionedTaskInstances.clears._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.feedback",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.experience"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instAddCancelCommMonoid._proof_1"
+     ],
+     "sink": "carried by AddCancelCommMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Nat.instAddCancelCommMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instAddCommMonoid"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.feedback",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.predictFeedback"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instAddMonoidWithOne"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.acquire",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.revised"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [],
+   "name": "Nat.land"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.experience",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.acquire"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.cycle",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "GoalFormationRevision.feedback",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.operate"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.VersionedTaskInstances.clears._sparseCasesOn_2"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.feedback",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.cycle"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instAddMonoid"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CommonTaskRevision.enact",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CommonTaskRevision.deliverAndAct"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.completed",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "CommonTaskRevision.deliverAndAct",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CommonTaskRevision.continuation"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CommonTaskRevision.enact",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "PendingTaskApplicability.reviewAndAct"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Becoming.VersionedTaskInstances.clears._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Becoming.VersionedTaskInstances.clears._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.VersionedTaskInstances.clears.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.predictFeedback",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.proposedSelector"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.feedback._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.feedback.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.feedback"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.feedback._sparseCasesOn_2"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.operate",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CommonTaskRevision.enact"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.proposedSelector",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.reform"
+  }
+ ],
+ "declarations": [
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.VersionedTaskInstances.Delivered",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.VersionedTaskInstances.Pending",
+   "kind": "def"
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Becoming.VersionedTaskInstances.clears.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.VersionedTaskInstances.clears",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CommonTaskRevision.continuation"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.continuation_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.continuation",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.completed",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.deliverAndAct",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.true_eq_false",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.enact",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.continuation_of_completed",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "and_false",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CommonTaskRevision.continuation"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.continuation_isSome_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.continuation",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.continuation_eq",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Option.isSome_map",
+     "module": "Init.Data.Option.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "iff_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.completed"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CommonTaskRevision.continuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CommonTaskRevision.enact"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.continuation_of_completed",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.completed",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.one_le_ofNat._simp_1",
+     "module": "Mathlib.Data.Nat.Cast.Order.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Nat.instAddMonoidWithOne",
+     "module": "Mathlib.Algebra.Ring.Nat"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Nat.instAddCommMonoid",
+     "module": "Mathlib.Algebra.Group.Nat.Defs"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instIsOrderedAddMonoid",
+     "module": "Mathlib.Algebra.Order.Group.Nat"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instCharZero",
+     "module": "Mathlib.Algebra.Ring.Nat"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instNeZeroSucc",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.continuation",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.enact",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.deliverAndAct",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "proof": true,
+     "name": "CommonTaskRevision.retargeted_act_uses_delivered_revision",
+     "module": "CommonTaskRevision"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "PendingTaskApplicability.reviewAndAct"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.covered_review_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "PendingTaskApplicability.reviewAndAct",
+     "module": "PendingTaskApplicability"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_losses",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Nat.instAddMonoid",
+     "module": "Mathlib.Algebra.Group.Nat.Defs"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.drain_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.drain_eq._f",
+     "module": "VersionedTaskInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CommonTaskRevision.enact"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.enact_isSome_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.enact",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.cycle",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.feedback",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.and_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "PendingTaskApplicability.funded_operation_exists",
+     "module": "PendingTaskApplicability"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CommonTaskRevision.enact"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.enact_losses",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.enact",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.cycle",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.feedback",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "Bool.and_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Option.bind_congr'",
+     "module": "Mathlib.Data.Option.Basic"
+    },
+    {
+     "proof": true,
+     "name": "eq_false'",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Option.some.injEq",
+     "module": "Init.Core"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Nat.instAddMonoid",
+     "module": "Mathlib.Algebra.Group.Nat.Defs"
+    },
+    {
+     "proof": true,
+     "name": "and_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_left_cancel_iff._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_false",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CommonTaskRevision.continuation"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.harmful_continuation_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.continuation",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.continuation_eq",
+     "module": "VersionedTaskInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.head_advances",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "lt_self_iff_false._simp_1",
+     "module": "Mathlib.Order.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.append_nil",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "CorrectionVersioned.drop_after_hop",
+     "module": "CorrectionVersioned"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_left_cancel_iff._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.head_completes",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.head_advances",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.valid_pending",
+     "module": "VersionedTaskInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.head_pending_before",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.drain_eq",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.head_advances",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.valid_pending",
+     "module": "VersionedTaskInstances"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.VersionedTaskInstances.hop",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.VersionedTaskInstances.reviews"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.VersionedTaskInstances.clears"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.losses_kept",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.VersionedTaskInstances.reviews",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.VersionedTaskInstances.clears",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "PendingTaskApplicability.reviewAndAct",
+     "module": "PendingTaskApplicability"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.enact",
+     "module": "CommonTaskRevision"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.VersionedTaskInstances.reviews"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.VersionedTaskInstances.clears"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.losses_kept_along",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.VersionedTaskInstances.reviews",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.VersionedTaskInstances.clears",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.losses_kept",
+     "module": "VersionedTaskInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.relevant_risk_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.VersionedTaskInstances.remaining",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.retarget_pending",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "CommonTaskRevision.retarget_head_invariant",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.mem_cons._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "true_or",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "PendingTaskApplicability.reviewAndAct"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.review_adds_loss_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "PendingTaskApplicability.reviewAndAct",
+     "module": "PendingTaskApplicability"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_losses",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_course_covered_iff",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_left_cancel_iff._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "iff_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_adds_loss_iff._proof_1_1",
+     "module": "VersionedTaskInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "PendingTaskApplicability.reviewAndAct"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.review_completes_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "PendingTaskApplicability.reviewAndAct",
+     "module": "PendingTaskApplicability"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_course_covered_iff",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.enact",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_completes_iff._proof_1_3",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_false'",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.true_eq_false",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "false_iff",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_completes_iff._simp_1_4",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_completes_iff._proof_1_5",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_completes_iff._proof_1_6",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "true_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.enact_isSome_iff",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_completes_iff._proof_1_7",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "true_iff",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_completes_iff._proof_1_8",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "false_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "iff_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.review_course_covered_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_course_covered_iff._proof_1_1",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_course_covered_iff._proof_1_2",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_course_covered_iff._proof_1_3",
+     "module": "VersionedTaskInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "PendingTaskApplicability.reviewAndAct"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.review_losses",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "PendingTaskApplicability.reviewAndAct",
+     "module": "PendingTaskApplicability"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CommonTaskRevision.enact",
+     "module": "CommonTaskRevision"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_losses._proof_1_3",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_false'",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_losses._proof_1_6",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Nat.instAddMonoid",
+     "module": "Mathlib.Algebra.Group.Nat.Defs"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_losses._proof_1_7",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "true_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.enact_isSome_iff",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_losses._proof_1_8",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "false_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.review_losses._proof_1_9",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.enact_losses",
+     "module": "VersionedTaskInstances"
+    }
+   ]
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "PendingTaskApplicability.reviewAndAct",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.VersionedTaskInstances.reviews",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.revised_head_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.retarget_pending",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.head_advances",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.drain_eq",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.VersionedTaskInstances.tickOut",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.valid_head_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.head_completes",
+     "module": "VersionedTaskInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.VersionedTaskInstances.drain_eq",
+     "module": "VersionedTaskInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.VersionedTaskInstances.valid_pending",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.mem_cons._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "true_or",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.VersionedTaskInstances.withQueue",
+   "kind": "def"
+  }
+ ],
+ "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-verification.json",
+ "receipt_utc": "20261014T092502.891314Z",
+ "target": "VersionedTaskInstances",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 30,
+ "recorded_on_propext": 24,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 24,
+ "compiled": []
+}

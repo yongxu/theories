@@ -1,0 +1,1796 @@
+{
+ "values_reached": [
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Nat.hasNotBit"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.commit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.prepare"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "EvidenceQualifiedCorrection.respond",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "TemporalInspection.respond"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.use._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "ReservedShutdown.Armed",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "RecoverableControl.Safe",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "ReservedShutdown.Valid"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.SourceLaw._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.SourceLaw.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.faultTouched._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.faultTouched.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "AcquiredCorrection.locate.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "AcquiredCorrection.locate"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "FaultTolerantCorrection.execute",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "FaultTolerantCorrection.guardedExecute"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "AcquiredCorrection.locate._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "AcquiredCorrection.locate._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "AcquiredCorrection.locate._sparseCasesOn_3",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "AcquiredCorrection.locate.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.SourceLaw._sparseCasesOn_2"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.permitted._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.permitted.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "AcquiredCorrection.locate",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "FaultTolerantCorrection.observed"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [],
+   "name": "Nat.land"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.SourceLaw._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.modelTouched._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.faultTouched._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RecoverableControl.SourceLaw.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "MediatedControl.SourceLaw",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.SourceLaw"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "AcquiredCorrection.locate._sparseCasesOn_3"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.authorized",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "MediatedControl.installed",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.commit"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "AcquiredCorrection.locate._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.modelTouched",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "MediatedControl.faultTouched",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.effect"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "AcquiredCorrection.locate._sparseCasesOn_2"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RecoverableControl.Coherent",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.Safe"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "FaultTolerantCorrection.observed",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "EvidenceQualifiedCorrection.physicalReads"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.writes",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "MediatedControl.image",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "MediatedControl.effect",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.installed"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.writes",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.image"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RecoverableControl.SourceLaw",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "RecoverableControl.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.History"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.permitted.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.oneWrite"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.SourceLaw",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "MediatedControl.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.History"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "ReservedShutdown.attempt",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "ReservedShutdown.cycle"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.faultTouched.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.faultTouched"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RecoverableControl.tick",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "ReservedShutdown.attempt"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.SourceLaw.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.SourceLaw"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.permitted.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.permitted"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RecoverableControl.prepare",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "RecoverableControl.tick",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "RecoverableControl.use",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.step"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RecoverableControl.Safe",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "ReservedShutdown.Armed"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RecoverableControl.use.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "MediatedControl.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.use"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.permitted",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.authorized"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "FaultTolerantCorrection.guardedExecute",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "EvidenceQualifiedCorrection.physicalReads",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "EvidenceQualifiedCorrection.respond"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RecoverableControl.use._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.use.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.permitted._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.modelTouched._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.modelTouched.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.modelTouched",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "MediatedControl.faultTouched",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.SameUntouched"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "ReservedShutdown.cycle",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "ReservedShutdown.run"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.oneWrite",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.tick"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.oneWrite",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.writes"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RecoverableControl.SourceLaw._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "RecoverableControl.SourceLaw._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.SourceLaw.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.modelTouched.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.modelTouched"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.SourceLaw._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "AcquiredCorrection.locate",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "FaultTolerantCorrection.execute"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RecoverableControl.tick",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.resumeSteps"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.commit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "TemporalInspection.respond",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "MediatedControl.step"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "MediatedControl.writes",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "RecoverableControl.SameUntouched",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RecoverableControl.Coherent"
+  }
+ ],
+ "declarations": [
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "MediatedControl.oneWrite",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.ProtocolInstances.advanced",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ProtocolInstances.afterUnit",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ProtocolInstances.busy",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.tick"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.counts",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.tick",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "Nat.min_le_left",
+     "module": "Init.Data.Nat.MinMax"
+    },
+    {
+     "proof": true,
+     "name": "Nat.min_le_right",
+     "module": "Init.Data.Nat.MinMax"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.counts._proof_1_1",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "Nat.lt_irrefl._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.ProtocolInstances.advanced",
+     "module": "ProtocolInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "MediatedControl.oneWrite",
+     "module": "MediatedControl"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.unit_drawn",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_left_cancel_iff._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.counts._proof_1_11",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.stalls_unsupported",
+     "module": "ProtocolInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.ProtocolInstances.mediated"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.coverage_along",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "MediatedControl.SourceLaw",
+     "module": "MediatedControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "MediatedControl.step",
+     "module": "MediatedControl"
+    },
+    {
+     "proof": true,
+     "name": "MediatedControl.mediated_step_preserves_coverage",
+     "module": "MediatedControl"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ProtocolInstances.done",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ProtocolInstances.exit",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ProtocolInstances.fuel",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.History"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.Safe"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.interrupted_history_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.History",
+     "module": "RecoverableControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.Safe",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.safety_along",
+     "module": "ProtocolInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.ProtocolInstances.recoverable",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.recoverable_history_iff",
+     "module": "ProtocolInstances"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ProtocolInstances.margin",
+   "kind": "def"
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "MediatedControl.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "MediatedControl.SourceLaw",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.ProtocolInstances.mediated",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.ProtocolInstances.mediated"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "MediatedControl.History"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.mediated_history_cons",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.ProtocolInstances.mediated",
+     "module": "ProtocolInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "MediatedControl.History",
+     "module": "MediatedControl"
+    },
+    {
+     "proof": true,
+     "name": "MediatedControl.History.rec",
+     "module": "MediatedControl"
+    },
+    {
+     "proof": true,
+     "name": "MediatedControl.History.step",
+     "module": "MediatedControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "MediatedControl.SourceLaw",
+     "module": "MediatedControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "MediatedControl.step",
+     "module": "MediatedControl"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "MediatedControl.History"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.ProtocolInstances.mediated"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.mediated_history_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "MediatedControl.History",
+     "module": "MediatedControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.ProtocolInstances.mediated",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "MediatedControl.History.rec",
+     "module": "MediatedControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "MediatedControl.SourceLaw",
+     "module": "MediatedControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "MediatedControl.step",
+     "module": "MediatedControl"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.mediated_history_cons",
+     "module": "ProtocolInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "MediatedControl.History"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.mediated_history_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "MediatedControl.History",
+     "module": "MediatedControl"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.coverage_along",
+     "module": "ProtocolInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.ProtocolInstances.mediated",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.mediated_history_iff",
+     "module": "ProtocolInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.resumeSteps"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.pending_until_published",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.resumeSteps",
+     "module": "RecoverableControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.tick",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.counts",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.resumeSteps_eq",
+     "module": "ProtocolInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.resumeSteps"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.publishes_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.tick",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.counts",
+     "module": "ProtocolInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.resumeSteps",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "Nat.le_min",
+     "module": "Init.Data.Nat.MinMax"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.publishes_iff._simp_1_6",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.publishes_iff._proof_1_7",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.publishes_iff._proof_1_8",
+     "module": "ProtocolInstances"
+    }
+   ]
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "RecoverableControl.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "RecoverableControl.SourceLaw",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.ProtocolInstances.recoverable",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.ProtocolInstances.recoverable"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.History"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.recoverable_history_cons",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.ProtocolInstances.recoverable",
+     "module": "ProtocolInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.History",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "RecoverableControl.History.rec",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "RecoverableControl.History.next",
+     "module": "RecoverableControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.SourceLaw",
+     "module": "RecoverableControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.step",
+     "module": "RecoverableControl"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.History"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.ProtocolInstances.recoverable"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.recoverable_history_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.History",
+     "module": "RecoverableControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.ProtocolInstances.recoverable",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "RecoverableControl.History.rec",
+     "module": "RecoverableControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.SourceLaw",
+     "module": "RecoverableControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.step",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.recoverable_history_cons",
+     "module": "ProtocolInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "ReservedShutdown.cycle"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.ProtocolInstances.valid"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.reserved",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.cycle",
+     "module": "ReservedShutdown"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.ProtocolInstances.valid",
+     "module": "ProtocolInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.Armed",
+     "module": "ReservedShutdown"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.Valid",
+     "module": "ReservedShutdown"
+    },
+    {
+     "proof": true,
+     "name": "ReservedShutdown.cycle_keeps_access_or_stops",
+     "module": "ReservedShutdown"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.Safe",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.reserved._proof_1_4",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "Option.some.injEq",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.resumeSteps"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.tick"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.resumeSteps_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.resumeSteps",
+     "module": "RecoverableControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.tick",
+     "module": "RecoverableControl"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "ReservedShutdown.run"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "ReservedShutdown.cycle"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.run_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.run",
+     "module": "ReservedShutdown"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.cycle",
+     "module": "ReservedShutdown"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.ProtocolInstances.recoverable"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.Safe"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.safety_along",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.SourceLaw",
+     "module": "RecoverableControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.step",
+     "module": "RecoverableControl"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.Safe",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "RecoverableControl.step_preserves_safety",
+     "module": "RecoverableControl"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "ReservedShutdown.Armed"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "ReservedShutdown.run"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.Safe"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.schedule_stops",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.Armed",
+     "module": "ReservedShutdown"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.cycle",
+     "module": "ReservedShutdown"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.ProtocolInstances.valid",
+     "module": "ProtocolInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.run",
+     "module": "ReservedShutdown"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.Safe",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.reserved",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.run_eq",
+     "module": "ProtocolInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "ReservedShutdown.Armed"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "ReservedShutdown.run"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.ProtocolInstances.valid"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.schedule_valid",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.Armed",
+     "module": "ReservedShutdown"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.cycle",
+     "module": "ReservedShutdown"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.ProtocolInstances.valid",
+     "module": "ProtocolInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.run",
+     "module": "ReservedShutdown"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.reserved",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.run_eq",
+     "module": "ProtocolInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.stalls_unsupported",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Nat.le_min",
+     "module": "Init.Data.Nat.MinMax"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.stalls_unsupported._proof_1_1",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.stalls_unsupported._proof_1_2",
+     "module": "ProtocolInstances"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "ReservedShutdown.Armed"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "ReservedShutdown.run"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "RecoverableControl.Safe"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.supported_schedule_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "ReservedShutdown.Armed",
+     "module": "ReservedShutdown"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.schedule_stops",
+     "module": "ProtocolInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RecoverableControl.Safe",
+     "module": "RecoverableControl"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ProtocolInstances.supported_schedule_instance._proof_1_1",
+     "module": "ProtocolInstances"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ProtocolInstances.unitState",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProtocolInstances.unit_drawn",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "ReservedShutdown.Armed",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "RecoverableControl.Safe",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.ProtocolInstances.valid",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ProtocolInstances.work",
+   "kind": "def"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-verification.json",
+ "receipt_utc": "20261014T141016.373278Z",
+ "target": "ProtocolInstances",
+ "toolchain": "leanprover/lean4:v4.29.1",
+ "audited": 31,
+ "recorded_on_propext": 23,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 23,
+ "compiled": []
+}

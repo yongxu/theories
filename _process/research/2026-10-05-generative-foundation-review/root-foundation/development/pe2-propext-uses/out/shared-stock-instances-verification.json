@@ -1,0 +1,45 @@
+{
+ "values_reached": [],
+ "declarations": [
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "SharedStockInstances.each_within_alone_not_together",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "SharedStockInstances.every_selection_within_iff_total_within",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "SharedStockInstances.firstDraws",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "SharedStockInstances.selectedTotal_eq_mass",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "SharedStockInstances.total_eq_mass",
+   "kind": "theorem"
+  }
+ ],
+ "receipt": "experiments/market-generativity/meta-attractor/shared-stock-instances-verification.json",
+ "receipt_utc": "20261015T151857.892080Z",
+ "target": "SharedStockInstances",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 5,
+ "recorded_on_propext": 0,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 28,
+ "compiled": []
+}

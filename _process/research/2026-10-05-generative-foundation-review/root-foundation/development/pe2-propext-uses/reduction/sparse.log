@@ -1,0 +1,20 @@
+# Lean 4.29.1
+'two' depends on axioms: [propext]
+'three' depends on axioms: [propext]
+'four' depends on axioms: [propext]
+'six' depends on axioms: [propext]
+'sixFull' does not depend on any axioms
+'sixIf' depends on axioms: [propext]
+'natOffset' does not depend on any axioms
+'natLit' does not depend on any axioms
+# exit 0
+# Lean 4.30.0-rc2
+'two' depends on axioms: [propext]
+'three' depends on axioms: [propext]
+'four' depends on axioms: [propext]
+'six' depends on axioms: [propext]
+'sixFull' does not depend on any axioms
+'sixIf' depends on axioms: [propext]
+'natOffset' does not depend on any axioms
+'natLit' does not depend on any axioms
+# exit 0

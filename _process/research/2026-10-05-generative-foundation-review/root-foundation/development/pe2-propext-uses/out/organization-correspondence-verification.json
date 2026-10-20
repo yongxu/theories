@@ -1,0 +1,242 @@
+{
+ "values_reached": [
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Nat.hasNotBit"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RelationalOrganization.linked._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RelationalOrganization.linked.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RelationalOrganization.linked"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [],
+   "name": "Nat.land"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RelationalOrganization.renewed",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RelationalOrganization.protect"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RelationalOrganization.linked",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RelationalOrganization.formed"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RelationalOrganization.protect",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RelationalOrganization.better"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RelationalOrganization.linked._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RelationalOrganization.linked.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "RelationalOrganization.linked",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "RelationalOrganization.renewed"
+  }
+ ],
+ "declarations": [
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "RelationalOrganization.better"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "RelationalOrganization.formed"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.OrganizationCorrespondence.coordination_is_required_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.OrganizationCorrespondence.formation_required_by_core",
+     "module": "OrganizationCorrespondence"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RelationalOrganization.better",
+     "module": "RelationalOrganization"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RelationalOrganization.formed",
+     "module": "RelationalOrganization"
+    },
+    {
+     "proof": true,
+     "name": "eq_false'",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.zero_le._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.mem_cons._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.not_mem_nil._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "or_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "or_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "iff_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true_of_decide",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "or_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "RelationalOrganization.protect",
+     "module": "RelationalOrganization"
+    },
+    {
+     "proof": true,
+     "name": "RelationalOrganization.every_unformed_continuation_has_a_better_one",
+     "module": "RelationalOrganization"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.OrganizationCorrespondence.formation_required_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Classical.em",
+     "module": "Init.Classical"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.OrganizationCorrespondence.frontier_iff_undominated",
+   "kind": "theorem"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-verification.json",
+ "receipt_utc": "20261015T163336.437151Z",
+ "target": "OrganizationCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 3,
+ "recorded_on_propext": 2,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 21,
+ "compiled": []
+}

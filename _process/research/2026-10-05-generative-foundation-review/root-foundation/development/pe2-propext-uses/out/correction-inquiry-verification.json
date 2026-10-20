@@ -1,0 +1,63 @@
+{
+ "values_reached": [],
+ "declarations": [
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.cell",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.cell_refines",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.commonAction_iff_commonResponse",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.implements_iff_commonResponse",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.implements_refine",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.safeOn_iff_commonResponse",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.safeOn_refine",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.sees_antitone",
+   "kind": "theorem"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-verification.json",
+ "receipt_utc": "20261015T164111.081887Z",
+ "target": "CorrectionInquiry",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 8,
+ "recorded_on_propext": 0,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 113,
+ "compiled": []
+}

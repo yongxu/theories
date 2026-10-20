@@ -1,0 +1,447 @@
+{
+ "values_reached": [],
+ "declarations": [
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.all_tied_forces_withholding_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.alone_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.first_lt",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.full_tie_equal_weights_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.lotteryAlike_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.pointMass_one",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.point_mass_not_alike_at_tie_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.servable_iff_untied_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.tied_equal_weight_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.tied_not_served_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.transpose_eq_swap",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.treatsAlike_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SelectionRelabelCorrespondence.uniform_alike_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.Alone",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.Injective",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.LeastRecent",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.Record",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.Rule",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.ServesOpenClaim",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.TreatsAlike",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.alike_nonforeclosing_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.all_tied_forces_withholding",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.alone_alike",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.exists_min",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.fin_other",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.find?_none_false",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.find?_some_true",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.leastRecent",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.leastRecent_alike",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.leastRecent_serves",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.leastRecent_unique",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.mem_finRange'",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.mem_finRange_loop",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.one_ne_zero'",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.pick",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.pick_alike",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.pick_none",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.pick_some",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.pick_unique",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.recent_entry_was_served",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.relabel",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.relabel_of_tie",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.renewing_claims_need_initial_order",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.renewing_claims_served_in_turn",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.run",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.run_injective",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.run_lt",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.run_mono",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.run_mono_le",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.run_succ_apply",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.servable_iff_untied",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.served",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.step",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.tied_not_served",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "PluralRecords.transpose",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.transpose_inj",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.transpose_left",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.transpose_other",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.transpose_right",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.transpose_transpose",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.unequal_claims_leave_priority_open",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "PluralRecords.withholding_alike",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "TieBreaking.Chances",
+   "kind": "inductive"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "TieBreaking.Lottery",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "TieBreaking.LotteryAlike",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "TieBreaking.full_tie_equal_weights",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "TieBreaking.full_tie_open_uniform",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "TieBreaking.pointMass",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "TieBreaking.point_mass_not_alike_at_tie",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "TieBreaking.tied_equal_weight",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "TieBreaking.uniform",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "TieBreaking.uniform_alike",
+   "kind": "theorem"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-verification.json",
+ "receipt_utc": "20261015T203012.189070Z",
+ "target": "SelectionRelabelCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 72,
+ "recorded_on_propext": 0,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 39,
+ "compiled": []
+}

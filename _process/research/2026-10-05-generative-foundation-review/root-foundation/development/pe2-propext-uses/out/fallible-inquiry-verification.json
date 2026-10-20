@@ -1,0 +1,655 @@
+{
+ "values_reached": [],
+ "declarations": [
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.Witness.balanced",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_left_cancel_iff._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.Witness.common_nonzero_imbalance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.Witness.omitted_exchange_unbalanced",
+     "module": "Becoming.FallibleInquiry"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.Witness.connected",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.mem_cons._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.true_eq_false",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "List.not_mem_nil._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "or_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "or_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.lt_irrefl._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.lt_add_one._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "or_true",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.correct_answers",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.counted_residual_balances",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.counted_residual_differs",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.counted_residual_not_response",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.counted_residual_reaches",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.flow",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.Witness.follows",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Bool.and_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "false_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.true_eq_false",
+     "module": "Init.Data.Bool"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.ignored_signal",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.law",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.law_through",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.Witness.omitted_exchange_follows",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.Witness.follows",
+     "module": "Becoming.FallibleInquiry"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.omitted_exchange_keeps_task",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.Witness.omitted_exchange_no_reach",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.Witness.omitted_exchange_none",
+     "module": "Becoming.FallibleInquiry"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.Witness.omitted_exchange_none",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "Nat.lt_irrefl._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "or_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.Witness.omitted_exchange_unbalanced",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "Nat.succ_ne_self._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.read",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.read_through",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.Witness.web",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.alike_with_common_imbalance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.closed_with_imbalance",
+     "module": "Becoming.FallibleInquiry"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.answer_alike_beyond_law",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.answer_alike_beyond_response",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.answer_alike_with_common_imbalance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.alike_with_common_imbalance",
+     "module": "Becoming.FallibleInquiry"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.beyond_reach_coverage_eq_errors",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Generative.ScientificInquiryNecessity.tally_mono",
+     "module": "ScientificInquiryNecessity"
+    },
+    {
+     "proof": true,
+     "name": "Generative.ScientificInquiryNecessity.blind_coverage_bound",
+     "module": "ScientificInquiryNecessity"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.closed_with_imbalance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.mem_cons._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false'",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.mem_map._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Option.some.injEq",
+     "module": "Init.Core"
+    },
+    {
+     "proof": true,
+     "name": "exists_eq_right._simp_1",
+     "module": "Init.PropLemmas"
+    },
+    {
+     "proof": true,
+     "name": "false_or",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.common_imbalance_of_balanced",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.coverage_le_errors_add_reach",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Generative.ScientificInquiryNecessity.fallible_inquiry_bound",
+     "module": "ScientificInquiryNecessity"
+    },
+    {
+     "proof": true,
+     "name": "Generative.ScientificInquiryNecessity.tally_mono",
+     "module": "ScientificInquiryNecessity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.coverage_le_errors_add_reach._proof_1_2",
+     "module": "Becoming.FallibleInquiry"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.coverage_le_errors_add_reach._proof_1_1",
+     "module": "Becoming.FallibleInquiry"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Std.le_refl._simp_1",
+     "module": "Init.Data.Order.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Lean.Grind.instIsPreorderNat",
+     "module": "Init.GrindInstances.Ring.Nat"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Generative.ScientificInquiryNecessity.fallible_inquiry_bound",
+     "module": "ScientificInquiryNecessity"
+    },
+    {
+     "proof": true,
+     "name": "Generative.ScientificInquiryNecessity.tally_mono",
+     "module": "ScientificInquiryNecessity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach._proof_1_2",
+     "module": "Becoming.FallibleInquiry"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach._proof_1_1",
+     "module": "Becoming.FallibleInquiry"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Std.le_refl._simp_1",
+     "module": "Init.Data.Order.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Lean.Grind.instIsPreorderNat",
+     "module": "Init.GrindInstances.Ring.Nat"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.different_answers_not_beyond",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.error_bounds_require_reach",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.coverage_le_errors_add_reach",
+     "module": "Becoming.FallibleInquiry"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.error_bounds_require_reach._proof_1_1",
+     "module": "Becoming.FallibleInquiry"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.error_bounds_require_timed_reach",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.coverage_le_errors_add_timed_reach",
+     "module": "Becoming.FallibleInquiry"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.FallibleInquiry.error_bounds_require_timed_reach._proof_1_1",
+     "module": "Becoming.FallibleInquiry"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.observeWithResidual",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.regionWithResidual",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FallibleInquiry.residual_couples_nothing",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FallibleInquiry.unreached_in_time_coverage_eq_errors",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Generative.ScientificInquiryNecessity.tally_mono",
+     "module": "ScientificInquiryNecessity"
+    },
+    {
+     "proof": true,
+     "name": "Generative.ScientificInquiryNecessity.blind_coverage_bound",
+     "module": "ScientificInquiryNecessity"
+    }
+   ]
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-verification.json",
+ "receipt_utc": "20261019T000109.055377Z",
+ "target": "Becoming.FallibleInquiry",
+ "toolchain": "leanprover/lean4:v4.29.1",
+ "audited": 37,
+ "recorded_on_propext": 17,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 46,
+ "compiled": []
+}

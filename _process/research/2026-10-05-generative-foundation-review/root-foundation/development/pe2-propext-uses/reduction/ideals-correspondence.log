@@ -1,0 +1,6 @@
+# leanprover/lean4:v4.30.0-rc2; target IdealsCorrespondence as experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-verification.json
+# exit 0
+'Becoming.IdealsCorrespondence.ofList' depends on axioms: [propext, Quot.sound]
+'ofList_letter' depends on axioms: [propext, Quot.sound]
+'ofList_letter_rfl' depends on axioms: [propext, Quot.sound]
+'ofList_length' depends on axioms: [propext, Quot.sound]

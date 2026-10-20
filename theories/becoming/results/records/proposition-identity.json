@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F11",
-  "reviewed_at_utc": "2026-10-20T11:56:00+00:00",
+  "reviewed_at_utc": "2026-10-20T13:40:41+00:00",
   "statement": {
     "en": "propext holds exactly where every reading of propositions is lumped by interderivability, and exactly where the reading by name is; readings built from relations need no axiom. The identification forgets no witness and keeps every outcome; what it stops is the course.",
     "zh": "propext 恰在命题的每个读法都按可互推归并之处成立，也恰在按名的读法如此之处；由关系构成的读法不需公理。这一等同不丢失见证、保留每个结果；它停下的是进程。"
@@ -116,8 +116,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T115028.794691Z）：Becoming.PropositionIdentity 的 22 项声明（12 项定理）公理报告为空；内核观察以 Lean 4.29.1 检查（工具包 stuck/StuckTransport.lean 与 stuck.log）。在一个会话中构建并审查；作者审查见研究第 258 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Whether the periphery's uses of propext are all of this kind (an identification of interderivable propositions in a proof, with no value computed through it), checked use by use; the same account for function extensionality and quotient soundness; an independent review.",
-    "zh": "外围对 propext 的使用是否都属此类（证明中对可互推命题的等同，不经它计算任何值），逐一检查；对函数外延性与商的可靠性作同样的说明；独立审查。"
+    "en": "The same account for function extensionality and quotient soundness, which the periphery's reports show beside propext; the periphery's uses rechecked once its receipts are renewed against the current core; the inherited periphery modules' own declarations; an independent review.",
+    "zh": "对函数外延性与商的可靠性作同样的说明（外围的报告中它们与 propext 并列）；外围回执对当前核心更新后重查其使用；继承的外围模块自身的声明；独立审查。"
   },
   "correspondence": {
     "en": "Lean's propext and proof irrelevance; the extensionality of propositions in Martin-Löf type theory with univalence restricted to propositions (homotopy type theory's propositional univalence), where an equivalence of mere propositions is a pair of maps and, for types in general, univalence keeps which equivalence; the loss of canonicity under axioms (a closed term built with an axiom need not reduce to a canonical form), which cubical type theory recovers by giving the identification a computation. The delta is the reading in the theory's terms: propext as the lumping of every reading by interderivability, and the core's exclusion as keeping courses that compute.",
@@ -237,12 +237,47 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "318b08913e7acfaf6992aa220dd0626814d83f87b9ae13dbb42e38368819d40b"
+      "sha256": "9fb002c11cb180f95720060b9b4faac63eefa3ba9969b64de25596ae0954ecb3"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "sha256": "1718cb973463da641e0ba8c019ddf63c0a74ff5318e2e5757f9179901070b17b"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/Uses.lean",
+      "role": "review",
+      "sha256": "3fe9a7c3e5180d1f4b7b721bcbaa39ab981629154096bc919977a788babc1237"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/summary.json",
+      "role": "review",
+      "sha256": "eeb4ca19430c7ef438d166b50ee58e5c530b78430c6a66c4bed2bc52c302cb34"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/machine-instances.log",
+      "role": "review",
+      "sha256": "84b00df6adcbb448c7f80d2591cd6130d52dfaa580147ba6e6d95e54672aebfe"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/learning-correspondence.log",
+      "role": "review",
+      "sha256": "8b705d25c43f7650727574cf777ea95a05e3293b11154a273464283aec4bda08"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/ideals-correspondence.log",
+      "role": "review",
+      "sha256": "f7438992743aeae1843768a3577fccfb6bc623b7fbc91176f49a8d836f77f176"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/continuation-correspondence.log",
+      "role": "review",
+      "sha256": "34029c815118b395c9c08d0b5b15ccf6e457b5f3a17de8194f9e0d5eb02ce5d3"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/sparse.log",
+      "role": "review",
+      "sha256": "d6dfe75625573cdf1e61635089e4074a9eb46689a0a0791bf99882cc7ff39805"
     }
   ],
   "proof_bindings": [
@@ -258,6 +293,10 @@
     {
       "en": "20 October 2026: added (PE1), on the question whether propext can be approved as a practical approach or explained within the theory; first checked in scratch (_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe1-propext/Propext.lean, Stuck.lean); study section 258.",
       "zh": "2026年10月20日：新增（PE1），针对 propext 能否作为实用做法被认可、或在理论之内被说明的问题；先在草稿中检查（_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe1-propext/Propext.lean、Stuck.lean）；研究第 258 节。"
+    },
+    {
+      "en": "20 October 2026: the periphery's uses of propext checked use by use (PE2, study section 268): in the 23 periphery receipts, 489 of 762 audited declarations and the core's 196 generated injEq lemmas, read from their kernel terms at the receipts' bytes. Every proof gets propext only inside a proof, as an identification of interderivable propositions; none of the 45 definitions on propext computes a value through one (propext enters them through Lean's compilation of wildcard matches, a Fin recursion and list indexing, and Mathlib's measure structures; closed values compute). next_delta narrowed; review references added.",
+      "zh": "2026年10月20日：逐一检查外围对 propext 的使用（PE2，研究第 268 节）：23 个外围回执中所审 762 项声明的 489 项，以及核心生成的 196 个 injEq 引理，按回执的字节从其内核项读取。每个证明只在证明之内得到 propext，作为对可互推命题的等同；依赖 propext 的 45 个定义无一经它计算值（propext 经 Lean 对通配匹配、一个 Fin 递归与列表索引的编译，以及 Mathlib 的测度结构进入；闭值可计算）。next_delta 收窄；新增审查引用。"
     }
   ]
 }

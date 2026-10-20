@@ -1,0 +1,2206 @@
+{
+ "values_reached": [
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CompletionRole.truthDcpo._proof_1"
+     ],
+     "sink": "carried by CompletionRole.Dcpo.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "CompletionRole.truthDcpo._proof_2"
+     ],
+     "sink": "carried by CompletionRole.Dcpo.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CompletionRole.truthDcpo"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CompletionRole.truthPoset._proof_2"
+     ],
+     "sink": "carried by CompletionWarrant.Poset.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CompletionRole.truthPoset"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CompletionWarrant.Ideal.le_antisymm"
+     ],
+     "sink": "carried by CompletionWarrant.Poset.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CompletionRole.idealPoset"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CompletionWarrant.HistoryIdeals.traceIdeal._proof_2"
+     ],
+     "sink": "carried by CompletionWarrant.Ideal.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CompletionWarrant.HistoryIdeals.traceIdeal"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CompletionRole.toDirectedFamily"
+     ],
+     "sink": "argument 3 of CompletionWarrant.familyUnion",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "CompletionRole.idealDcpo._proof_1"
+     ],
+     "sink": "carried by CompletionRole.Dcpo.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "CompletionRole.idealDcpo._proof_2"
+     ],
+     "sink": "carried by CompletionRole.Dcpo.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CompletionRole.idealDcpo"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CompletionWarrant.HistoryIdeals.PropertyClass"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Classical.propDecidable._proof_1"
+     ],
+     "sink": "carried by Classical.choice",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Classical.propDecidable"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CompletionWarrant.HistoryIdeals.historyIdeal"
+  }
+ ],
+ "declarations": [
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.admits_empty_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.admits_iff",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.admits_refutable_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Classical.byContradiction",
+     "module": "Init.Classical"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.avoidingBasis_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.basisRole_compactBasis",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.basis_eq_content_by_core",
+   "kind": "theorem",
+   "entries": []
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.closed_of_finiteRefutable",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Classical.byContradiction",
+     "module": "Init.Classical"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.compact_iff",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealPoset"
+    },
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealDcpo"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.compact_iff_principal_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealPoset",
+     "module": "CompletionRole"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealDcpo",
+     "module": "CompletionRole"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.idealCompact_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "CompletionWarrant.Ideal.ext",
+     "module": "IdealWarrant"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.content_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.coreClass",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.decided_classical",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Classical.propDecidable",
+     "module": "Init.Classical"
+    },
+    {
+     "proof": true,
+     "name": "Classical.byContradiction",
+     "module": "Init.Classical"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.settles_of_bounded",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.directedFamily_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.directed_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.empty_finiteRefutable_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.empty_lower_no_ideal_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.empty_scottClosed_by_core",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealPoset"
+    },
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealDcpo"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.extend_continuous_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealPoset",
+     "module": "CompletionRole"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealDcpo",
+     "module": "CompletionRole"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.idealDirected_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "CompletionRole.toDirectedFamily",
+     "module": "CompletionRole"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.extend_eq",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.extend_principal_by_core",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealPoset"
+    },
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealDcpo"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.extend_unique_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealPoset",
+     "module": "CompletionRole"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealDcpo",
+     "module": "CompletionRole"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.idealDirected_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.extend_unique_by_core.match_1_3",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.familyUnion_same",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.finiteOnly_not_refutable_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.refutable_of_wordIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.wordIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.finiteOnly_wordIdeal_iff",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.IdealsCorrespondence.wordIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.finiteOnly_wordIdeal_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.wordIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.finiteOnly_wordIdeal_iff.match_1_1",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.wordIdeal_mem_ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.le_toList_of_prefix",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_of_le_toList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "CompletionWarrant.Ideal.ext",
+     "module": "IdealWarrant"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_ofList_of_le",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.le_of_prefix_ofList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.finiteRefutable_iff_lower_basis_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.finiteRefutable_iff_scottClosed_by_core",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.finiteRefutable_iff_refutable",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.finiteRefutable_iff_scottClosed_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.refutable_scottClosed_by_core",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.scottClosed_refutable_by_core",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.getElem_toList",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.getElem_ofFn",
+     "module": "Init.Data.List.OfFn"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionWarrant.HistoryIdeals.historyIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.historyIdeal_injective_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionWarrant.HistoryIdeals.historyIdeal",
+     "module": "HistoryIdeals"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.history_order_iff_by_core",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.historyPrefix_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.initial_toList_iff",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionWarrant.HistoryIdeals.historyIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.history_admitted_iff_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.ofList_prefix_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionWarrant.HistoryIdeals.historyIdeal",
+     "module": "HistoryIdeals"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.history_listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_ofList_toList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.listIdeal_mem_toList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.ofList_toList_prefix",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.tracePrefix_prefix_initialWord",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.initialWord_prefix_tracePrefix",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.listIdeal"
+    },
+    {
+     "verdict": "carried",
+     "value": "CompletionWarrant.HistoryIdeals.historyIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.history_listIdeal",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionWarrant.HistoryIdeals.historyIdeal",
+     "module": "HistoryIdeals"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.principal_listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.trace_listIdeal",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionWarrant.HistoryIdeals.historyIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.history_order_iff_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionWarrant.HistoryIdeals.historyIdeal",
+     "module": "HistoryIdeals"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.le_iff_listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.history_listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.historyPrefix_iff",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.hull_joint_content_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.hull_least_by_core",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.hull_preserves_content_by_core",
+   "kind": "theorem",
+   "entries": []
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.hull_unique_by_core",
+   "kind": "theorem",
+   "entries": []
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealPoset"
+    },
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealDcpo"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.idealCompact_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealPoset",
+     "module": "CompletionRole"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealDcpo",
+     "module": "CompletionRole"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.idealCompact_iff.match_1_3",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.idealDirected_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.idealCompact_iff.match_1_5",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealPoset"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.idealDirected_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealPoset",
+     "module": "CompletionRole"
+    },
+    {
+     "proof": true,
+     "name": "CompletionRole.toDirectedFamily",
+     "module": "CompletionRole"
+    },
+    {
+     "proof": true,
+     "name": "CompletionRole.fromDirectedFamily",
+     "module": "CompletionRole"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionWarrant.HistoryIdeals.traceIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.ideal_classification_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.ideal_classification_by_core.match_1_1",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionWarrant.HistoryIdeals.traceIdeal",
+     "module": "HistoryIdeals"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.decided_classical",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "CompletionWarrant.Ideal.ext",
+     "module": "IdealWarrant"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.listIdeal_mem_toList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_ofList_of_le",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.le_of_prefix_ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.initial_toList_iff",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.ofList"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.initialWord_prefix_tracePrefix",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_of_le_toList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.initial_toList_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_length",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.initial_toList_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_length",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.getElem_toList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "CompletionRole.idealPoset",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "via": [
+      "Becoming.IdealsCorrespondence.isoEquivalence._proof_1"
+     ],
+     "sink": "carried by Becoming.Ideals.OrderEquivalence.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Becoming.IdealsCorrespondence.isoEquivalence._proof_2"
+     ],
+     "sink": "carried by Becoming.Ideals.OrderEquivalence.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Becoming.IdealsCorrespondence.isoEquivalence._proof_3"
+     ],
+     "sink": "carried by Becoming.Ideals.OrderEquivalence.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Becoming.IdealsCorrespondence.isoEquivalence._proof_4"
+     ],
+     "sink": "carried by Becoming.Ideals.OrderEquivalence.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Becoming.IdealsCorrespondence.isoEquivalence",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.le_iff",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.listIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.le_iff_listIdeal",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.listIdeal_mem_toList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.ofList"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.le_of_prefix_ofList",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_ofList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.ofList"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.le_toList_of_prefix",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_ofList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.letter_eq_getElem",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.lift_admits_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.lift_order_iff_by_core",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.lift_restrict_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "CompletionWarrant.Ideal.ext",
+     "module": "IdealWarrant"
+    }
+   ]
+  },
+  {
+   "verdict": "eliminated",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Becoming.IdealsCorrespondence.ofList",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    },
+    {
+     "via": [
+      "Becoming.IdealsCorrespondence.listIdeal._proof_1"
+     ],
+     "sink": "carried by Becoming.Ideals.Ideal.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Becoming.IdealsCorrespondence.listIdeal._proof_2"
+     ],
+     "sink": "carried by Becoming.Ideals.Ideal.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Becoming.IdealsCorrespondence.listIdeal._proof_3"
+     ],
+     "sink": "carried by Becoming.Ideals.Ideal.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Becoming.IdealsCorrespondence.listIdeal",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.listIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.listIdeal_mem_toList",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_ofList_toList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.ofList_toList_prefix",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.lowerBasis_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.lowerPoset_order",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.lower_basis_unique_by_core",
+   "kind": "theorem",
+   "entries": []
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.monotone_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.ofCore",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.ofCore_toCore",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.ofHistory",
+   "kind": "def"
+  },
+  {
+   "verdict": "eliminated",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "via": [
+      "Becoming.IdealsCorrespondence.ofList._proof_2"
+     ],
+     "sink": "argument 7 of GetElem.getElem",
+     "route": "GetElem.getElem → a local function (a well-founded recursive call)",
+     "kind": "eliminated"
+    }
+   ],
+   "name": "Becoming.IdealsCorrespondence.ofList",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.ofList"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.ofList_prefix_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_ofList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.ofList"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.ofList_toList_prefix",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_ofList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.order",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.permitted_eq_content_by_core",
+   "kind": "theorem",
+   "entries": []
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.truthPoset"
+    },
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.truthDcpo"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.positive_reading_membership_by_core",
+   "kind": "theorem",
+   "entries": []
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.truthPoset"
+    },
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.truthDcpo"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.positive_readings_separate_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.truthPoset",
+     "module": "CompletionRole"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.truthDcpo",
+     "module": "CompletionRole"
+    },
+    {
+     "proof": true,
+     "name": "CompletionRole.positive_reading_monotone",
+     "module": "CompletionRole"
+    },
+    {
+     "proof": true,
+     "name": "CompletionWarrant.Ideal.ext",
+     "module": "IdealWarrant"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.prefix_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.prefix_iff_getElem",
+     "module": "Init.Data.List.Sublist"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_length",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.getElem_toList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.ofList"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.prefix_ofList_of_le",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_ofList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.ofList"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.prefix_ofList_toList",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_ofList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.ofList"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.prefix_of_le_toList",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_ofList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.listIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.principal_listIdeal",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.le_toList_of_prefix",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_of_le_toList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionWarrant.HistoryIdeals.PropertyClass"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.propertyClass_not_refutable_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionWarrant.HistoryIdeals.PropertyClass",
+     "module": "HistoryIdeals"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.refutable_of_wordIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.propertyClass_wordIdeal_iff",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionWarrant.HistoryIdeals.PropertyClass"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.IdealsCorrespondence.wordIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.propertyClass_wordIdeal_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionWarrant.HistoryIdeals.PropertyClass",
+     "module": "HistoryIdeals"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.wordIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.propertyClass_wordIdeal_iff.match_1_1",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.finiteOnly_wordIdeal_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionWarrant.HistoryIdeals.traceIdeal",
+     "module": "HistoryIdeals"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.trace_wordIdeal_iff",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionWarrant.HistoryIdeals.PropertyClass"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.recurrence_ideal_not_refutable_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionWarrant.HistoryIdeals.PropertyClass",
+     "module": "HistoryIdeals"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.refutable_of_wordIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.propertyClass_wordIdeal_iff",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.refutable_eq_admits_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.closed_of_finiteRefutable",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.IdealsCorrespondence.wordIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.refutable_of_wordIdeal",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.wordIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.refutable_of_wordIdeal.match_1_1",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.refutable_scottClosed_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.closed_of_finiteRefutable",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionWarrant.HistoryIdeals.PropertyClass"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.represented_ideal_not_refutable_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.propertyClass_not_refutable_by_core",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.respects_iff_admits_avoiding_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.respects_iff_avoids",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.respects_scottClosed_by_core",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.respects_unique_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.closed_of_finiteRefutable",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.restrict_lift_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "CompletionWarrant.Ideal.ext",
+     "module": "IdealWarrant"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.scottClosed_iff_closed",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.scottClosed_iff_lower_basis_by_core",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.scottClosed_refutable_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Classical.byContradiction",
+     "module": "Init.Classical"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.scottHull_iff_hull",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.settles_of_bounded",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.settles_of_bounded._f",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.toComplete",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.toCore",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.toCore_ofCore",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.toCore_principal",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.IdealsCorrespondence.toList",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.toList_length",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.length_ofFn",
+     "module": "Init.Data.List.OfFn"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.ofList"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.toList_ofList",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.ofFn_getElem",
+     "module": "Init.Data.List.OfFn"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.ofList"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.tracePrefix_prefix_initialWord",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.prefix_ofList_of_le",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.initial_toList_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_length",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.listIdeal"
+    },
+    {
+     "verdict": "carried",
+     "value": "CompletionWarrant.HistoryIdeals.traceIdeal"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.trace_listIdeal",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionWarrant.HistoryIdeals.traceIdeal",
+     "module": "HistoryIdeals"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.initial_toList_iff",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_ofList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.IdealsCorrespondence.wordIdeal"
+    },
+    {
+     "verdict": "carried",
+     "value": "CompletionWarrant.HistoryIdeals.traceIdeal"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.trace_wordIdeal_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.wordIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionWarrant.HistoryIdeals.traceIdeal",
+     "module": "HistoryIdeals"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.wordIdeal_mem_ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.trace_listIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "CompletionWarrant.Ideal.ext",
+     "module": "IdealWarrant"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.initial_toList_iff",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealPoset"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.unique_basis_representation_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealPoset",
+     "module": "CompletionRole"
+    },
+    {
+     "proof": true,
+     "name": "CompletionWarrant.Ideal.ext",
+     "module": "IdealWarrant"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.isoEquivalence",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealPoset"
+    },
+    {
+     "verdict": "carried",
+     "value": "CompletionRole.idealDcpo"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.unique_continuous_extension_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealPoset",
+     "module": "CompletionRole"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CompletionRole.idealDcpo",
+     "module": "CompletionRole"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.extend_continuous_by_core",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.extend_unique_by_core",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "via": [
+      "Becoming.IdealsCorrespondence.wordIdeal._proof_1"
+     ],
+     "sink": "carried by CompletionWarrant.Ideal.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Becoming.IdealsCorrespondence.wordIdeal._proof_2"
+     ],
+     "sink": "carried by CompletionWarrant.Ideal.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Becoming.IdealsCorrespondence.wordIdeal._proof_3"
+     ],
+     "sink": "carried by CompletionWarrant.Ideal.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Becoming.IdealsCorrespondence.wordIdeal",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.IdealsCorrespondence.wordIdeal"
+    },
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.IdealsCorrespondence.ofList"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.IdealsCorrespondence.wordIdeal_mem_ofList",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.wordIdeal",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.IdealsCorrespondence.ofList",
+     "module": "IdealsCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.IdealsCorrespondence.toList_ofList",
+     "module": "IdealsCorrespondence"
+    }
+   ]
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-verification.json",
+ "receipt_utc": "20261019T020352.033083Z",
+ "target": "IdealsCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 103,
+ "recorded_on_propext": 63,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 33,
+ "compiled": []
+}

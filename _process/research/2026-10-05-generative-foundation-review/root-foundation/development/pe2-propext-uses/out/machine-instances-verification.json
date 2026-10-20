@@ -1,0 +1,6248 @@
+{
+ "values_reached": [
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Nat.hasNotBit"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EncounterChoice.complete",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "via": [
+      "Generative.EncounterChoice.choose._proof_1"
+     ],
+     "sink": "argument 2 of List.instDecidableMemOfLawfulBEq",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Generative.EncounterChoice.choose"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.decodeChunk.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.decodeChunk"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.decodeChunk._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredSegmentation.decodeChunk._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredSegmentation.decodeChunk._sparseCasesOn_3",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredSegmentation.decodeChunk._sparseCasesOn_4",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredSegmentation.decodeChunk._sparseCasesOn_5",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.decodeChunk.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.revised",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "GoalFormationRevision.reform",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.completed"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.RetrospectiveBinding.start",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.RetrospectiveBinding.named"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_5"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "JointPracticeContinuation.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "JointPracticeContinuation.run"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.feedback",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.experience"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Generative.AcquiredBinding.candidates"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.get?Internal",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "List.get!Internal",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "List.instGetElem?NatLtLength"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.acquire",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.revised"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_3"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [],
+   "name": "Nat.land"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.get?Internal.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "List.get!Internal"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.feedback",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.cycle"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredBinding.readForms",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredSegmentation.bond",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.interpret"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.departures",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredSegmentation.edgeCount",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.bond"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EnactedScene.naming",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.EnactedScene.start",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EnactedScene.stationary"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.operate",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.operateMany"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "List.instDecidableMemOfLawfulBEq._proof_1"
+     ],
+     "sink": "argument 3 of decidable_of_decidable_of_iff",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "List.instDecidableMemOfLawfulBEq"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.predictFeedback",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.proposedSelector"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.heard._sparseCasesOn_2"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.CompositionalAcquisition.readEvidence.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalAcquisition.readEvidence"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.feedback.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.feedback"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredBinding.encounter",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.teach"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.CompositionalAcquisition.interpretationFromRecords",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalAcquisition.train"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.decodeChunk._sparseCasesOn_4"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.resolve._sparseCasesOn_2"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Becoming.MachineInstances.revises._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.revises.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.get?Internal._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "List.get?Internal.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EnactedScene.start",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EncounterChoice.initial"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EnactedScene.naming",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.EnactedScene.start",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EnactedScene.coordinated"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.cycle",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.cycles"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.edges.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.edges"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_6"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.cycle",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "GoalFormationRevision.feedback",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.operate"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.edges",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.departures"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_3",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_4",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_5",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_6",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalAcquisition.readEvidence.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredBinding.emptyBinding",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EnactedScene.start"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.revises._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredBinding.resolve",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.readForms"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instLawfulBEq"
+     ],
+     "sink": "argument 2 of List.instDecidableMemOfLawfulBEq",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.compatible"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.adoptsRule._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.RetrospectiveBinding.start",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.RetrospectiveBinding.changedRouteHistory"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredBinding.encounter.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredSegmentation.bond",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.encounter"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredBinding.resolve._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredBinding.resolve._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.resolve.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.decodeChunk._sparseCasesOn_5"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.feedback._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "JointPracticeContinuation.after",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "JointPracticeContinuation.first",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "JointPracticeContinuation.second"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.experienced",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.emptyBinding"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EnactedScene.naming",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.EnactedScene.start",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EnactedScene.mistimed"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.decodeChunk._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EnactedScene.nameForm",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredBinding.encounter",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EncounterChoice.speak"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.RetrospectiveBinding.named",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.RetrospectiveBinding.retrospective"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.decodeChunk._sparseCasesOn_3"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Becoming.MachineInstances.adoptsRule._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Becoming.MachineInstances.adoptsRule._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.adoptsRule.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EncounterChoice.localNaming",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EncounterChoice.visit"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.feedback._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "GoalFormationRevision.feedback._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.feedback.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "List.get?Internal._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.edges._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.edges.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.ready",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.experienced"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.heard._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.experience",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.acquire"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "JointPracticeContinuation.step._sparseCasesOn_5",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "JointPracticeContinuation.step.match_5"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.resolve._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_4"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.edges._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EncounterChoice.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EncounterChoice.run"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredBinding.teach",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredBinding.emptyBinding",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.learned"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.feedback._sparseCasesOn_2"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Becoming.MachineInstances.heard._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Becoming.MachineInstances.heard._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.heard.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "JointPracticeContinuation.after",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "JointPracticeContinuation.second",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "JointPracticeContinuation.continued"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.get?Internal.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "List.get?Internal"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.CompositionalAcquisition.readEvidence",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalFormation.develop"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.instGetElem?NatLtLength",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.EnactedScene.nameForm",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredBinding.encounter",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EnactedScene.naming"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EncounterChoice.speak",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EncounterChoice.localNaming"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.feedback",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.predictFeedback"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EncounterChoice.choose",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.EncounterChoice.visit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EncounterChoice.step"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Generative.EncounterChoice.informative"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EncounterChoice.initial",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EncounterChoice.calibrated"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.adoptsRule._sparseCasesOn_2"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EnactedScene.nameForm.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EnactedScene.nameForm"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EnactedScene.nameForm._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredBinding.resolve._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredBinding.resolve._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.encounter.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EncounterChoice.run",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.EncounterChoice.calibrated",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EncounterChoice.acquired"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredBinding.resolve",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EncounterChoice.complete"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "JointPracticeContinuation.step._sparseCasesOn_5"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "JointPracticeContinuation.after",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "JointPracticeContinuation.first"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "JointPracticeContinuation.step.match_5",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "JointPracticeContinuation.step"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.edges",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.edgeCount"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredBinding.resolve.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredBinding.resolve"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "JointPracticeContinuation.run",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "JointPracticeContinuation.after"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.decodeChunk",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.decodeChunks"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.EnactedScene.nameForm._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.EnactedScene.nameForm.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.CompositionalFormation.develop",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.CompositionalFormation.prepared",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.ready"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "JointPracticeContinuation.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "JointPracticeContinuation.process"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.CompositionalAcquisition.train",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalFormation.prepared"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_2"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.CompositionalAcquisition.readEvidence",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalAcquisition.interpretationFromRecords"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredBinding.emptyBinding",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.RetrospectiveBinding.start"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.decodeChunk._sparseCasesOn_2"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.decodeChunks",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Generative.AcquiredSegmentation.bond",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.AcquiredSegmentation.parse"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Generative.CompositionalAcquisition.readEvidence._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.proposedSelector",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "GoalFormationRevision.reform"
+  }
+ ],
+ "declarations": [
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Generative.AcquiredSegmentation.bond",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.Groups",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.SceneMove",
+   "kind": "inductive"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.Separated",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EncounterChoice.acquired"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.acquired_distinct",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EncounterChoice.acquired",
+     "module": "EncounterChoice"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.acquired_repertoire",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.start_distinct",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EncounterChoice.acquired"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.acquired_from_separation",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EncounterChoice.acquired",
+     "module": "EncounterChoice"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.interprets_every_iff_separated",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.acquired_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.acquired_distinct",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.acquired_separated",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EncounterChoice.acquired"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.acquired_groups",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EncounterChoice.acquired",
+     "module": "EncounterChoice"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EncounterChoice.acquired"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.acquired_interprets_every",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EncounterChoice.acquired",
+     "module": "EncounterChoice"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.interprets_every_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.acquired_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.acquired_resolves",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EncounterChoice.acquired"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.acquired_repertoire",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EncounterChoice.acquired",
+     "module": "EncounterChoice"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.resolve"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EncounterChoice.acquired"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.acquired_resolves",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EncounterChoice.acquired",
+     "module": "EncounterChoice"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EncounterChoice.acquired"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.acquired_separated",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EncounterChoice.acquired",
+     "module": "EncounterChoice"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.adopts",
+   "kind": "def"
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Becoming.MachineInstances.adoptsRule.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.adoptsRule",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.afterRound",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.apply_false",
+   "kind": "theorem"
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "List.instDecidableMemOfLawfulBEq",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "via": [
+      "Nat.instLawfulBEq"
+     ],
+     "sink": "argument 2 of List.instDecidableMemOfLawfulBEq",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Becoming.MachineInstances.bearsOn",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.beq_pair",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.beq_sound",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.better_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "GoalFormationRevision.harmless_practices_incomparable",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "GoalFormationRevision.crossed_losses_incomparable",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "GoalFormationRevision.warranted_revision",
+     "module": "GoalFormationRevision"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredSegmentation.bond"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.bond_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.departures",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.edges",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.edges_all_eq",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.countP_eq",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.edgeCount",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredSegmentation.bond"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.bond_functional",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.bond_eq",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Generative.AcquiredBinding.candidates"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MachineInstances.bearsOn"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MachineInstances.offersOf"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.candidates_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.candidates",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.bearsOn",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.offersOf",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.compatible",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.compatible_eq",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.RetrospectiveBinding.changedRouteHistory"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.changed_route_unproduced",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.RetrospectiveBinding.changedRouteHistory",
+     "module": "RetrospectiveBinding"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.chunks_eq",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Generative.AcquiredBinding.compatible"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MachineInstances.bearsOn"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MachineInstances.offersOf"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.compatible_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.compatible",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.bearsOn",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.offersOf",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "not_true_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "or_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "or_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "or_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_false",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.process"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.continued"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.complete_history_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.process",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.continued",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.run",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.practice_trace_iff_run",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.run"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.first"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.after"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.second"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.complete_history_rounds",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.run",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.first",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.after",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.second",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.round_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.completed"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.completed_iff_better",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.completed",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.completed_isSome_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.better_iff",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.completed"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.completed_isSome_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.completed",
+     "module": "GoalFormationRevision"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.coordinatedMoves",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.coordinated"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.enact"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.start"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.coordinated_enacts",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.coordinated",
+     "module": "EnactedScene"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.coordinated"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.coordinated_from_history",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.coordinated",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.enact",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.start",
+     "module": "EnactedScene"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.coordinated_enacts",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.heardAlong",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.scene_interprets_every_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.start_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.start_distinct",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.coordinated_separated",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.coordinated"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.coordinated_groups",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.coordinated",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.heardAlong"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.start"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.coordinated_heard",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.heardAlong",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.start",
+     "module": "EnactedScene"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.coordinated"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.coordinated_interprets_every",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.coordinated",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.interprets_every_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.coordinated_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.coordinated_resolves",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.resolve"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.coordinated"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.coordinated_resolves",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.coordinated",
+     "module": "EnactedScene"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.start"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.heardAlong"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.coordinated_separated",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.start",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.heardAlong",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.coordinated_heard",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.countP_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.countP_cons",
+     "module": "Init.Data.List.Count"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_left_cancel_iff._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.resolve"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.coverage_from_law",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.produced_of_calibration",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "decide_eq_true_eq",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.mem_alternatives",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.candidates",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.view_candidates",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.resolve_eq",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.cycle"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.feedback"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.cycle_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.cycle",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.feedback",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "true_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.sub_add_cancel",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.cycles"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.feedback"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.cycles_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.cycles",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.feedback",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.cycle",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycle_eq",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_iff._proof_1_3",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_iff._proof_1_4",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_iff._proof_1_5",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_iff._proof_1_6",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_iff._proof_1_7",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_iff._proof_1_8",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_iff.match_1_9",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_iff._proof_1_11",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.cycles"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.cycles_learning_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.feedback",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.cycles",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_iff",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.cycles"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.cycles_unselected_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.feedback",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_unselected_iff.match_1_1",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.cycles",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_unselected_iff._proof_1_3",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_unselected_iff._proof_1_4",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredSegmentation.edges"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.edges_all_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.edges",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.edges_eq",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredSegmentation.edges"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.edges_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.edges",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Becoming.MachineInstances.sceneStep",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.enact",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.enact"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.enact_inputs",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.enact",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.sceneStep",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.step_inputs",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.enact"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.heardAlong"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.enact_records",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.enact",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.heardAlong",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.enact_records.match_1_1",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.append_nil",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.sceneStep",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.step_inputs",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.heard",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.step_records",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.append_assoc",
+     "module": "Init.Data.List.Basic"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.encode_eq",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.encounter"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.encounter_inputs",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.encounter",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.encounter.match_1",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.encounter"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.encounter_records",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.encounter",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.encounter.match_1",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.single_word",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.encounter"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.encounter_support",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.encounter",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.encounter.match_1",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.encounter_support._proof_1_1",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredSegmentation.experienced"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.experienced_groups",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.experienced",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredSegmentation.parse"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredSegmentation.experienced"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.experienced_parses_every",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.parse",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.experienced",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.decodeChunks",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.segments_of_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.experienced_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Generative.AcquiredSegmentation.decoded_word_sequence",
+     "module": "AcquiredSegmentation"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.fields_of",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Prod.mk.injEq",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.flatten_eq_join",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.completed"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.operateMany"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.revised"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.harmful_bounds",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.completed",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.operateMany",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.revised",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.revision_continues",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.acquire"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.completed"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.operateMany"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.harmful_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.completed",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.operateMany",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.revised",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.revision_continues",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.acquire",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "GoalFormationRevision.warranted_revision",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "GoalFormationRevision.goal_depends_on_actual_formative_rule",
+     "module": "GoalFormationRevision"
+    }
+   ]
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Becoming.MachineInstances.heard.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "List.instGetElem?NatLtLength",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.heard",
+   "kind": "def"
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Becoming.MachineInstances.heard",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Becoming.MachineInstances.sceneStep",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.heardAlong",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.infer_false",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.resolve"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.interprets_every_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "eq_false'",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.readForms",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.segments_of_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Option.some.injEq",
+     "module": "Init.Core"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.readForms_eq",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.interprets_every_iff_separated",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.interprets_every_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.resolve_iff",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.ite_some",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.learned"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.learned_groups",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.learned",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.learned"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.learned_interprets_every",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.learned",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.interprets_every_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.learned_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Generative.AcquiredBinding.actual_encounters_acquire_both_bindings",
+     "module": "AcquiredBinding"
+    }
+   ]
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "GoalFormationRevision.feedback",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.learningRecord",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.learning_loss",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "carried",
+     "value": "Generative.AcquiredBinding.candidates"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EncounterChoice.localNaming"
+    },
+    {
+     "verdict": "carried",
+     "value": "List.instDecidableMemOfLawfulBEq"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.local_naming_narrows",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.naming_narrows",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.lossPer",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.mem_alternatives",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.mem_alternatives._simp_1_1",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.mem_alternatives._simp_1_2",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.mem_alternatives._simp_1_3",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.mem_alternatives._simp_1_4",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Prod.instLawfulBEq",
+     "module": "Init.Data.Prod"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.process"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.revises"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.methods_inherited",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.process",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.revises",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.methods_kept",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.process"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.revises"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.methods_kept",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.process",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.revises",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.step",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "proof": true,
+     "name": "eq_false'",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Option.some.injEq",
+     "module": "Init.Core"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.contains_eq_mem",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.and_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "decide_eq_true_eq",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "bne_iff_ne._simp_1",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "beq_iff_eq._simp_1",
+     "module": "Init.Core"
+    },
+    {
+     "proof": true,
+     "name": "Bool.true_eq_false",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "Option.map_eq_some_iff",
+     "module": "Init.Data.Option.Lemmas"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.mistimedMoves",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.mistimed"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.enact"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.start"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.mistimed_enacts",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.mistimed",
+     "module": "EnactedScene"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.mistimed"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.mistimed_fails",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.mistimed",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.enact",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.start",
+     "module": "EnactedScene"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.mistimed_enacts",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.heardAlong",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.scene_interprets_every_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.start_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.start_distinct",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.namedRecords",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "carried",
+     "value": "Generative.AcquiredBinding.candidates"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EncounterChoice.speak"
+    },
+    {
+     "verdict": "carried",
+     "value": "List.instDecidableMemOfLawfulBEq"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.naming_narrows",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EncounterChoice.speak",
+     "module": "EncounterChoice"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.candidates",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.speak_records",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.bearsOn",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.offersOf",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.candidates_eq",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.stands_named",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "List.instDecidableMemOfLawfulBEq",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.MachineInstances.offersOf",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.operateMany"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.cycles"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.operateMany_learning",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.operateMany",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.cycles",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.operate",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.cycle",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.learningRecord",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.feedback",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.operateMany_learning.match_1_3",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.operateMany_learning._proof_1_5",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.length_append",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.operateMany_learning._proof_1_6",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.process"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.step"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.practice_process_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.process",
+     "module": "JointPracticeContinuation"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.process"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.adoptsRule"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.practice_rule_inherited",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.process",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.adoptsRule",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.practice_rule_kept",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.process"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.adoptsRule"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.practice_rule_kept",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.process",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.adoptsRule",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.step",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "proof": true,
+     "name": "eq_false'",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Option.some.injEq",
+     "module": "Init.Core"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.contains_eq_mem",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.and_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "decide_eq_true_eq",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "bne_iff_ne._simp_1",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "beq_iff_eq._simp_1",
+     "module": "Init.Core"
+    },
+    {
+     "proof": true,
+     "name": "Option.map_eq_some_iff",
+     "module": "Init.Data.Option.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.true_eq_false",
+     "module": "Init.Data.Bool"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.run"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.step"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.practice_run_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.run",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.step",
+     "module": "JointPracticeContinuation"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.process"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.run"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.practice_trace_iff_run",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.step",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.run",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.practice_run_eq",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.produced_of_calibration",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Generative.SourceReliance.actual_route_retained",
+     "module": "SourceReliance"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.readForms"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.resolve"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.readForms_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.readForms",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.resolve"
+    },
+    {
+     "verdict": "carried",
+     "value": "Generative.AcquiredBinding.candidates"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.resolve_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.candidates",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve.match_1",
+     "module": "AcquiredBinding"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.resolve"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.resolve_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.candidates",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.resolve_eq",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.bearsOn",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.offersOf",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.candidates_eq",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "decide_eq_true_eq",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "decide_eq_false_iff_not._simp_1",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.RetrospectiveBinding.retrospective"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.retrospective_distinct",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.RetrospectiveBinding.retrospective",
+     "module": "RetrospectiveBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.retrospective_repertoire",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.start_distinct",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.RetrospectiveBinding.retrospective"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.retrospective_from_separation",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.RetrospectiveBinding.retrospective",
+     "module": "RetrospectiveBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.interprets_every_iff_separated",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.retrospective_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.retrospective_distinct",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.retrospective_separated",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.RetrospectiveBinding.retrospective"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.retrospective_groups",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.RetrospectiveBinding.retrospective",
+     "module": "RetrospectiveBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.RetrospectiveBinding.retrospective"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.retrospective_interprets_every",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.RetrospectiveBinding.retrospective",
+     "module": "RetrospectiveBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.interprets_every_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.retrospective_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Generative.RetrospectiveBinding.late_calibration_changes_both_bindings",
+     "module": "RetrospectiveBinding"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.RetrospectiveBinding.retrospective"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.retrospective_repertoire",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.RetrospectiveBinding.retrospective",
+     "module": "RetrospectiveBinding"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.resolve"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.retrospective_resolves_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.resolve",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.candidates",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.resolve_eq",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.view_candidates",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "decide_eq_true_eq",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.mem_alternatives",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.RetrospectiveBinding.retrospective"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.retrospective_separated",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.RetrospectiveBinding.retrospective",
+     "module": "RetrospectiveBinding"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.revised"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.completed"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.revised_class",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.revised",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.completed",
+     "module": "GoalFormationRevision"
+    }
+   ]
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Becoming.MachineInstances.revises.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.revises",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.completed"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.operateMany"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "GoalFormationRevision.revised"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.revision_continues",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.completed",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.operateMany",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.revised",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.fields_of",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.revised_class",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "GoalFormationRevision.cycles",
+     "module": "GoalFormationRevision"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.operateMany_learning",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_learning_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.revision_continues._proof_1_1",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.revision_continues._proof_1_2",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.cycles_unselected_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.revision_continues._proof_1_3",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.revision_continues._proof_1_4",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.run"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.round_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.run",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.step",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.contains_eq_mem",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.and_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "decide_eq_true_eq",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "bne_iff_ne._simp_1",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "beq_iff_eq._simp_1",
+     "module": "Init.Core"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "not_true_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "false_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false'",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "iff_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.find?_cons_of_pos",
+     "module": "Init.Data.List.Find"
+    },
+    {
+     "proof": true,
+     "name": "Std.LawfulBEqOrd.equivBEq",
+     "module": "Init.Data.Order.Ord"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulEqOrd",
+     "module": "Init.Data.Order.Ord"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instTransOrd",
+     "module": "Init.Data.Order.Ord"
+    },
+    {
+     "proof": true,
+     "name": "Option.some.injEq",
+     "module": "Init.Core"
+    },
+    {
+     "proof": true,
+     "name": "true_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.run"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.round_trains",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.run",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.round_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.find?_cons_of_pos",
+     "module": "Init.Data.List.Find"
+    },
+    {
+     "proof": true,
+     "name": "Std.LawfulBEqOrd.equivBEq",
+     "module": "Init.Data.Order.Ord"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulEqOrd",
+     "module": "Init.Data.Order.Ord"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instTransOrd",
+     "module": "Init.Data.Order.Ord"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.rule_kept",
+   "kind": "theorem"
+  },
+  {
+   "verdict": "kernel-native",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Generative.EnactedScene.naming",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.MachineInstances.sceneStep",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.enact"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.heardAlong"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.scene_interprets_every_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.enact",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.heardAlong",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.enact_inputs",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.interprets_every_iff_separated",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.enact_records",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredSegmentation.bond"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.segments_of_groups",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredSegmentation.bond"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.single_word",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.segments_of_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.flatMap_cons",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.flatMap_nil",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.append_nil",
+     "module": "Init.Data.List.Basic"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EncounterChoice.speak"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.speak_records",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EncounterChoice.speak",
+     "module": "EncounterChoice"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.speak_records.match_1_1",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.append_nil",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.speak_records._proof_1_3",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.encounter",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.encounter_records",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.encounter_inputs",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.encounter_support",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.speak_records._proof_1_4",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.append_assoc",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.speak_records._proof_1_10",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.spelled",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.MachineInstances.bearsOn"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MachineInstances.offersOf"
+    },
+    {
+     "verdict": "carried",
+     "value": "List.instDecidableMemOfLawfulBEq"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.stands_named",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.bearsOn",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.offersOf",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.not_mem_nil._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.mem_cons._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "true_or",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.stands_named._simp_1_11",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "and_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Generative.CompositionalAcquisition.Expr.atom.injEq",
+     "module": "CompositionalAcquisition"
+    },
+    {
+     "proof": true,
+     "name": "or_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "or_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false'",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "false_or",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.start"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.start_distinct",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.start",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.start"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.start_groups",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.start",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredSegmentation.bond",
+     "module": "AcquiredSegmentation"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.stationaryMoves",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.stationary"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.enact"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.start"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.stationary_enacts",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.stationary",
+     "module": "EnactedScene"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.AcquiredBinding.interpret"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Generative.EnactedScene.stationary"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.stationary_fails",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.interpret",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.stationary",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.enact",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.start",
+     "module": "EnactedScene"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.stationary_enacts",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.heardAlong",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.scene_interprets_every_iff",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.start_groups",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.start_distinct",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.sceneStep"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.step_inputs",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.sceneStep",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.naming",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.nameForm",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.encounter",
+     "module": "AcquiredBinding"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.encounter_inputs",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.Groups"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.sceneStep"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.heard"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.step_records",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.Groups",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.sceneStep",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.heard",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.append_nil",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.naming",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.EnactedScene.nameForm",
+     "module": "EnactedScene"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.encounter",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.heard.match_1",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.encounter_records",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.summary_carries_law",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Generative.RelationalReduction.summary_update_exact",
+     "module": "RelationalReduction"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.summary_every_word",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Generative.RelationalReduction.summary_update_exact",
+     "module": "RelationalReduction"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.process"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "Becoming.MachineInstances.revises"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.trained_along",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.process",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "Becoming.MachineInstances.revises",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.methods_inherited",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "JointPracticeContinuation.run"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.trained_round_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "JointPracticeContinuation.run",
+     "module": "JointPracticeContinuation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.round_iff",
+     "module": "MachineInstances"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.two_word_iff",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Generative.AcquiredBinding.candidates"
+    },
+    {
+     "verdict": "carried",
+     "value": "List.instDecidableMemOfLawfulBEq"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MachineInstances.view_candidates",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Generative.AcquiredBinding.candidates",
+     "module": "AcquiredBinding"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.bearsOn",
+     "module": "MachineInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MachineInstances.offersOf",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MachineInstances.candidates_eq",
+     "module": "MachineInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.not_mem_nil._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "true_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.all_map",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.wordFirst",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.wordRest",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.MachineInstances.word_eq_iff",
+   "kind": "theorem"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-verification.json",
+ "receipt_utc": "20261019T001148.333281Z",
+ "target": "MachineInstances",
+ "toolchain": "leanprover/lean4:v4.29.1",
+ "audited": 124,
+ "recorded_on_propext": 100,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 70,
+ "compiled": []
+}

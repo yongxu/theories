@@ -1,0 +1,87 @@
+{
+ "values_reached": [],
+ "declarations": [
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.LivingOrganizationCorrespondence.empty_pool_preserved_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Generative.LivingOrganization.closed_step_preserves_absence",
+     "module": "LivingOrganization"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.LivingOrganizationCorrespondence.entryDecidable",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.LivingOrganizationCorrespondence.entryGate",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.LivingOrganizationCorrespondence.entry_then_present",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.LivingOrganizationCorrespondence.presence_reflected",
+     "module": "LivingOrganizationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.LivingOrganizationCorrespondence.presence_reflected",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Generative.LivingOrganization.step_pool_origin",
+     "module": "LivingOrganization"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.LivingOrganizationCorrespondence.trace_pool_origin_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.LivingOrganizationCorrespondence.presence_reflected",
+     "module": "LivingOrganizationCorrespondence"
+    }
+   ]
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-verification.json",
+ "receipt_utc": "20261015T182331.625376Z",
+ "target": "LivingOrganizationCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 6,
+ "recorded_on_propext": 4,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 5,
+ "compiled": []
+}

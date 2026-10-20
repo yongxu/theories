@@ -1,0 +1,6 @@
+# leanprover/lean4:v4.30.0-rc2; target LearningCorrespondence as experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json
+# exit 0
+'vecCons_last' depends on axioms: [propext]
+'vecCons_first' depends on axioms: [propext]
+'first_computes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DevelopmentalMemory.first' depends on axioms: [propext, Classical.choice, Quot.sound]

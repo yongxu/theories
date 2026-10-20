@@ -1,0 +1,9 @@
+# leanprover/lean4:v4.29.1; target MachineInstances as experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-verification.json
+# exit 0
+'Becoming.MachineInstances.revises' depends on axioms: [propext]
+'Nat.land' depends on axioms: [propext]
+'revise_computes' depends on axioms: [propext]
+'retry_computes' depends on axioms: [propext]
+'retry_by_rfl' depends on axioms: [propext]
+'land_computes' depends on axioms: [propext]
+'hasNotBit_computes' depends on axioms: [propext]

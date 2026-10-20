@@ -1,0 +1,5 @@
+# leanprover/lean4:v4.30.0-rc2; target ContinuationCorrespondence as experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-verification.json
+# exit 0
+'JointContinuation.zipPlan' depends on axioms: [propext]
+'zip_computes' depends on axioms: [propext]
+'compatible_stop' depends on axioms: [propext]

@@ -1,0 +1,299 @@
+{
+ "values_reached": [
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Generative.WisdomFallibleJudgment.uniformLaw._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Generative.WisdomFallibleJudgment.uniformLaw"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Generative.WisdomFallibleJudgment.uniformLaw._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Generative.WisdomFallibleJudgment.biasedLaw"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "List.instDecidableMemOfLawfulBEq._proof_1"
+     ],
+     "sink": "argument 3 of decidable_of_decidable_of_iff",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "List.instDecidableMemOfLawfulBEq"
+  }
+ ],
+ "declarations": [
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "via": [
+      "Becoming.JudgingCorrespondence.endpoint._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Becoming.JudgingCorrespondence.certificate",
+   "kind": "def"
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "via": [
+      "Becoming.JudgingCorrespondence.endpoint._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Becoming.JudgingCorrespondence.endpoint",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.JudgingCorrespondence.endpoint"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.JudgingCorrespondence.certificate"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.JudgingCorrespondence.endpoint_judge_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Nat.instNeZeroSucc",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.JudgingCorrespondence.endpoint",
+     "module": "JudgingCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.JudgingCorrespondence.certificate",
+     "module": "JudgingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.JudgingCorrespondence.endpoint_judge_iff.match_1_1",
+     "module": "JudgingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.JudgingCorrespondence.judges_iff",
+     "module": "JudgingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.JudgingCorrespondence.endpoint_judge_iff.match_1_3",
+     "module": "JudgingCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.JudgingCorrespondence.endpoint"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.JudgingCorrespondence.certificate"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.JudgingCorrespondence.judges_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Nat.instNeZeroSucc",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.JudgingCorrespondence.endpoint",
+     "module": "JudgingCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.JudgingCorrespondence.certificate",
+     "module": "JudgingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.JudgingCorrespondence.mem_realizations",
+     "module": "JudgingCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.JudgingCorrespondence.mem_realizations",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.mem_flatMap._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.mem_map._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Prod.mk.injEq",
+     "module": "Init.Core"
+    },
+    {
+     "proof": true,
+     "name": "exists_eq_right_right._simp_1",
+     "module": "Init.PropLemmas"
+    },
+    {
+     "proof": true,
+     "name": "iff_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Generative.WisdomFallibleJudgment.uniformLaw"
+    },
+    {
+     "verdict": "carried",
+     "value": "Generative.WisdomFallibleJudgment.biasedLaw"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Generative.WisdomFallibleJudgment.uniformLaw",
+     "module": "WisdomFallibleJudgment"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Generative.WisdomFallibleJudgment.biasedLaw",
+     "module": "WisdomFallibleJudgment"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instNeZeroSucc",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core.match_1_1",
+     "module": "JudgingCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.JudgingCorrespondence.endpoint",
+     "module": "JudgingCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.JudgingCorrespondence.certificate",
+     "module": "JudgingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.JudgingCorrespondence.mem_realizations",
+     "module": "JudgingCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.instLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.JudgingCorrespondence.judges_iff",
+     "module": "JudgingCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.JudgingCorrespondence.realizations",
+   "kind": "def"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-verification.json",
+ "receipt_utc": "20261015T161403.083389Z",
+ "target": "JudgingCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 7,
+ "recorded_on_propext": 6,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 45,
+ "compiled": []
+}

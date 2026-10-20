@@ -1,0 +1,3920 @@
+{
+ "values_reached": [
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Nat.hasNotBit"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingRegistration.tick.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "CopyingRegistration.readAt",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingRegistration.tick"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.defects._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingRegistration.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingRegistration.run"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingRegistration.tick._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.get?Internal.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "List.get?Internal"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.get?Internal._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "List.get?Internal.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "List.get?Internal._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingCorrection.defects.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.defects"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "StructuralCopying.copy"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.instGetElem?NatLtLength",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.exchange"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingCorrection.inspect",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.scan"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.get?Internal",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "List.get!Internal",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "List.instGetElem?NatLtLength"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingRegistration.tick",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingRegistration.step"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingCorrection.reference",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "List.instGetElem?NatLtLength",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.Faithful"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RecurrentAssembly.reproduce"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.instGetElem?NatLtLength",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.reference"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.inspect._sparseCasesOn_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingCorrection.inspect.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "CopyingCorrection.reference",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "List.instGetElem?NatLtLength",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "CopyingCorrection.exchange",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.inspect"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [],
+   "name": "Nat.land"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingRegistration.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingRegistration.process"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.instGetElem?NatLtLength",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingRegistration.readAt"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingCorrection.inspect._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.inspect.match_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RecurrentAssembly.rounds"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "StructuralCopying.descendants"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "List.get?Internal.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "List.get!Internal"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingCorrection.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.run"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "StructuralCopying.tick"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingRegistration.tick._sparseCasesOn_2"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "StructuralCopying.steps"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingCorrection.defects._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.defects.match_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "List.instDecidableMemOfLawfulBEq._proof_1"
+     ],
+     "sink": "argument 3 of decidable_of_decidable_of_iff",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "List.instDecidableMemOfLawfulBEq"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "_private.CopyingInstances.0.CopyingRegistration.tick.match_1.splitter._sparseCasesOn_3"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingRegistration.step",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "CopyingCorrection.inspect",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingCorrection.step"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingRegistration.readAt",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "List.instGetElem?NatLtLength",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingRegistration.Registered"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RecurrentAssembly.grow"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RecurrentAssembly.attach"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "StructuralCopying.batch"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingRegistration.run",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingRegistration.prepared"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingRegistration.tick._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "CopyingRegistration.tick._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingRegistration.tick.match_1"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "_private.CopyingInstances.0.CopyingRegistration.tick.match_1.splitter._sparseCasesOn_2"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "_private.CopyingInstances.0.CopyingRegistration.tick.match_1.splitter._sparseCasesOn_2",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "_private.CopyingInstances.0.CopyingRegistration.tick.match_1.splitter._sparseCasesOn_3",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "_private.CopyingInstances.0.CopyingRegistration.tick.match_1.splitter"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RecurrentAssembly.generation"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CopyingRegistration.tick",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CopyingRegistration.operate"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "StructuralCopying.reproduce"
+  }
+ ],
+ "declarations": [
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "StructuralCopying.reproduce",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.CopyingInstances.AllReleased",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.PathShaped",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.CopyingInstances.AllReleased"
+    },
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.batch"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.all_released_iff_batch",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.CopyingInstances.AllReleased",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.batch",
+     "module": "StructuralCopying"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.reproduce",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.all_released_iff_batch.match_1_3",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_built",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.all_released_iff_batch.match_1_5",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.alternatingFrom",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.attach"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.attach_path_shaped",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.attach",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.length_append",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "List.length_eq_zero_iff._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_eq_zero_iff._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.succ_ne_self._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "and_false",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.attach"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.attach_used",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.attach",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_left_cancel_iff._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.length_append",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.attach_used._proof_1_1",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.batch"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.batch_all_released_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.batch",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.batch_view",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.batch"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.batch_all_released_swap",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.batch_all_released_swap._simp_1_1",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.batch_all_released_swap._simp_1_2",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.batch",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.batch_view",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.map_append",
+     "module": "Init.Data.List.Lemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.batch"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.batch_view",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.batch",
+     "module": "StructuralCopying"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.copy",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.copy_tracks",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.append_nil",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.batch_view.match_1_5",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.release_view",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.view_copy",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.reproduce",
+     "module": "StructuralCopying"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.process"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.contact_course_keeps_product",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.process",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.product_gated",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.copied",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.copyGate",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.copy"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.copy_cells_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.copy",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.view_copy",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.copy"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.copy_tracks",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.steps",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "StructuralCopying.steps_invariants",
+     "module": "StructuralCopying"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.copy",
+     "module": "StructuralCopying"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.copy"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.copy_used_le",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.steps",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "StructuralCopying.steps_cost_balance",
+     "module": "StructuralCopying"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.copy",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.copy_used_le._proof_1_1",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.defects"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.defects_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.defects",
+     "module": "CopyingCorrection"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.draw_eq",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.erase_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.erase_cons_head",
+     "module": "Init.Data.List.Erase"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.erase_cons_tail",
+     "module": "Init.Data.List.Erase"
+    },
+    {
+     "proof": true,
+     "name": "beq_iff_eq._simp_1",
+     "module": "Init.Core"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.exchange"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.exchange_view",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.exchange",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.nth_eq",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.mem_iff_pos",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.erase_eq",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.setAt_eq",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.final_eq",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.extend_path",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.length_append",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "List.length_eq_zero_iff._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_eq_zero_iff._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.succ_ne_self._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "and_false",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.Faithful"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.reference"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.faithfulAt_of_faithful",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.Faithful",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.reference",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.nth_eq",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.final_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.getLast?_cons_cons",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.CopyingInstances.AllReleased"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.finite_lineage_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.CopyingInstances.AllReleased",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.lineage_released_iff",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.generation"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.generation_used",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.generation",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.reproduce",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_used",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "RecurrentAssembly.size_append",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "List.length_append",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.generation_used._proof_1_3",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.attach"
+    },
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.grow"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.grow_fixed",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.attach",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.grow",
+     "module": "RecurrentAssembly"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.grow"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.grow_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.grow",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.grow_view",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.grow"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.grow_path_shaped",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.grow",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.attach",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.attach_path_shaped",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.grow"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.grow_strand_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.grow",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.grow_iff",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.grow_path_shaped",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.strand_eq",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.grow"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.grow_used",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.grow",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.attach",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.attach_used",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.grow_used._proof_1_3",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.grow"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.grow_view",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.grow",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.grow_view._proof_1_3",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.attach",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.mem_iff_pos",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.isEmpty_iff._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.erase_eq",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.getLast?_append",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.length_append",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.grow_view._proof_1_5",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.grow_fixed",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.reference"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.inspect"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.inspect_keeps_reference",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.inspect",
+     "module": "CopyingCorrection"
+    },
+    {
+     "proof": true,
+     "name": "CopyingCorrection.inspection_preserves_organization",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.reference",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.defects"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.inspect"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.reference"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.inspect_le_iff_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.inspect",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.reference",
+     "module": "CopyingCorrection"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.inspect_view",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.defects",
+     "module": "CopyingCorrection"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.defects_eq",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.inspect"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.reference"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.inspect_view",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.inspect",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.reference",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.inspect.match_1",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.exchange",
+     "module": "CopyingCorrection"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.nth_eq",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.exchange_view",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.length_alternatingFrom",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.CopyingInstances.AllReleased"
+    },
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.descendants"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.lineage_of_released",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.CopyingInstances.AllReleased",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.descendants",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.lineage_of_released.match_1_1",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.reproduce",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_built",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_strand_used",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.lineage_of_released._proof_1_3",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.CopyingInstances.AllReleased"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.lineage_released_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.CopyingInstances.AllReleased",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.batch",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.all_released_iff_batch",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.batch_view",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.eq_of_mem_replicate",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.map_replicate",
+     "module": "Init.Data.List.Lemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.descendants"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.CopyingInstances.AllReleased"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.lineage_used_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.descendants",
+     "module": "StructuralCopying"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.CopyingInstances.AllReleased",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.reproduce",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_strand_used",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "false_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "iff_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.lineage_used_iff._proof_1_8",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_built",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "true_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.lineage_used_iff._proof_1_6",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.lineage_used_iff._proof_1_7",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.local_ranking_from_law",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.reference"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "List.instGetElem?NatLtLength"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.inspect"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.matches_reference_from_law",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.reference",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.nth_eq",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.inspect",
+     "module": "CopyingCorrection"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.mem_iff_pos",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.inspect_view",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.grow"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.mature_forms_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.grow_iff",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.grow"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.mature_strand_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.grow_strand_iff",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.mem_iff_pos",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.not_mem_nil._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.lt_irrefl._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "iff_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.mem_cons._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "true_or",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.zero_lt_succ._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "false_or",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "List.instGetElem?NatLtLength"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.nth_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.ofCopy",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.ofGrow",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.ofScan",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.operate"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.readAt"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.operate_copies_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.readAt",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.operate",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.operate_view",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.operate"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.operate_path_shaped",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.operate",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.tick",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.tick_path_shaped",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.operate"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.readAt"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.operate_strand_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.operate",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.readAt",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.operate_copies_iff",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.operate_path_shaped",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.strand_eq",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.operate"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.readAt"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.operate_view",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.operate",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.readAt",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.tick",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.readAt_tick",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.tick_work_view",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.process"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.path_shaped_along",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.process",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.product_gated",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.step",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.tick_path_shaped",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.process"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.product_change_passes_copy",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.process",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.product_gated",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.process"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.product_extends",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.process",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.step",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "CopyingRegistration.step_retains_built_prefix",
+     "module": "CopyingRegistration"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.process"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.product_extends_along",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.process",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.product_extends",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.process"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.product_gated",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.process",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.step",
+     "module": "CopyingRegistration"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.defects"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.product_is_template_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.defects",
+     "module": "CopyingCorrection"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.defects_eq",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.readAt"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.tick"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.readAt_tick",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.readAt",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.tick",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "proof": true,
+     "name": "CopyingRegistration.tick_accounts",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.tick_template",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "List.instGetElem?NatLtLength"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.reads_of_getElem",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reads_of_getElem.match_1_1",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.instLawfulGetElemNatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "proof": true,
+     "name": "Nat.zero_lt_succ._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reads_of_getElem._proof_1_3",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_lt_add_iff_right._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.Registered"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.operate"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.registered_copy_cells",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.Registered",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.operate",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.readAt",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.operate_copies_iff",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reads_of_getElem",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.Registered"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.operate"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.registered_copy_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.Registered",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.operate",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.registered_copy_cells",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.operate_path_shaped",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.strand_eq",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.Registered"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.operate"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.registered_inheritance_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.Registered",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.operate",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.registered_copy_iff",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.release_view",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "ite_cond_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "ite_cond_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "and_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false'",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "false_and",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.repeatedFeed_eq",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.reproduce"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.reproduce_built",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.reproduce",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_iff",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.copy",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.copy_cells_iff",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.steps",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "StructuralCopying.steps_preserve_path",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_built_eq",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.strand_eq",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.reproduce"
+    },
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.copy"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.reproduce_built_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.reproduce",
+     "module": "StructuralCopying"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.copy",
+     "module": "StructuralCopying"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.reproduce"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.reproduce_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.reproduce",
+     "module": "StructuralCopying"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.copy",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_iff.match_1_1",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.view_copy",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_iff.match_1_3",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.copy_cells_iff",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.reproduce"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.reproduce_strand_used",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.copy",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.copy_used_le",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.reproduce",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    },
+    {
+     "proof": true,
+     "name": "StructuralCopying.completed_copy_requires_cost",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_strand_used._proof_1_1",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Bool.true_eq_false",
+     "module": "Init.Data.Bool"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.reproduce"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.reproduce_used",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.reproduce",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.grow",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_left_cancel_iff._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.grow_used",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_used._proof_1_1",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.length_take",
+     "module": "Init.Data.List.Nat.TakeDrop"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.required_eq",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.rounds"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.rounds_follow_doubling",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.rounds",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.rounds_mature_iff",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.rounds"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.rounds_mature_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.rounds",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.rounds_used",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "RecurrentAssembly.rounds_accounts",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "RecurrentAssembly.required_as_growth",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.rounds_mature_iff._proof_1_1",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.length_replicate",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "RecurrentAssembly.size_replicate",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "RecurrentAssembly.supported_rounds",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Nat.sub_add_cancel",
+     "module": "Init.Data.Nat.Basic"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RecurrentAssembly.rounds"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.rounds_used",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.rounds",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RecurrentAssembly.generation",
+     "module": "RecurrentAssembly"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.generation_used",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.rounds_used._proof_1_3",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.Faithful"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.defects"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.scan"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.scan_faithful_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.Faithful",
+     "module": "CopyingCorrection"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.scan_le_from_law",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.faithfulAt_of_faithful",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.reference"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.defects"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.scan"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.scan_le_from_law",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.reference",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.defects",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.scan",
+     "module": "CopyingCorrection"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.scan_template",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.defects_eq",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.scan_view",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.scan"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.scan_template",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.scan",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.inspect",
+     "module": "CopyingCorrection"
+    },
+    {
+     "proof": true,
+     "name": "CopyingCorrection.inspection_preserves_organization",
+     "module": "CopyingCorrection"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.scan"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.reference"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.scan_view",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.scan",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.reference",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.inspect",
+     "module": "CopyingCorrection"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.inspect_keeps_reference",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.inspect_view",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.setAt_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.strand_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.descendants"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.CopyingInstances.AllReleased"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.strands_do_not_show_release",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.descendants",
+     "module": "StructuralCopying"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.CopyingInstances.AllReleased",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.strands_do_not_show_release.match_1_1",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.reproduce",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "StructuralCopying.full_copy_need_not_be_released",
+     "module": "StructuralCopying"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.supplies_prefix",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.reproduce"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.template_pool_reproduce_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.reproduce",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.reproduce_iff",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.third_structure_from_law",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.third_structure_from_law._proof_1_1",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.tick"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.tick_path_shaped",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.tick",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "_private.CopyingInstances.0.CopyingRegistration.tick.match_1.splitter",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.readAt",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.tick.match_1",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.extend_path",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "_private.CopyingInstances.0.CopyingRegistration.tick.match_1.eq_2",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.tick"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.tick_template",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.tick",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "_private.CopyingInstances.0.CopyingRegistration.tick.match_1.splitter",
+     "module": "CopyingInstances"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.readAt",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.tick.match_1",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "_private.CopyingInstances.0.CopyingRegistration.tick.match_1.eq_2",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.tick"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.readAt"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.tick_work_view",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.tick",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.readAt",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.tick.match_1",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.mem_iff_pos",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.isEmpty_iff._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.erase_eq",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.totals",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.process"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.totals_along",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.process",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.totals_kept",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.process"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.totals_kept",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.process",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.step",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.totals_kept.match_1_1",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "CopyingRegistration.step_accounts",
+     "module": "CopyingRegistration"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.unit",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.use_eq",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.use_pair_eq",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.use_unit",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.view",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.copy"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.view_copy",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.copy",
+     "module": "StructuralCopying"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.steps",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.view_steps",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.steps"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.view_steps",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.steps",
+     "module": "StructuralCopying"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.tick",
+     "module": "StructuralCopying"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.view_tick",
+     "module": "CopyingInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "StructuralCopying.tick"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.view_tick",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "StructuralCopying.tick",
+     "module": "StructuralCopying"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "List.instDecidableMemOfLawfulBEq",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.mem_iff_pos",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "List.isEmpty_iff._simp_1",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.erase_eq",
+     "module": "CopyingInstances"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.CopyingInstances.withWork",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.run"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingRegistration.prepared"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.run"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "CopyingCorrection.reference"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CopyingInstances.wrong_reference_unfaithful",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.run",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingRegistration.prepared",
+     "module": "CopyingRegistration"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.run",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "CopyingCorrection.reference",
+     "module": "CopyingCorrection"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "List.instGetElem?NatLtLength",
+     "module": "Init.GetElem"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.CopyingInstances.nth_eq",
+     "module": "CopyingInstances"
+    }
+   ]
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-verification.json",
+ "receipt_utc": "20261014T092443.150338Z",
+ "target": "CopyingInstances",
+ "toolchain": "leanprover/lean4:v4.29.1",
+ "audited": 98,
+ "recorded_on_propext": 78,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 24,
+ "compiled": []
+}

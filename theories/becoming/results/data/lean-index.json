@@ -18,12 +18,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 1742,
-    "distinct_byte_contents": 1370,
+    "lean_paths": 1748,
+    "distinct_byte_contents": 1376,
     "byte_identical_duplicate_groups": 113,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 836,
+      "development-attempt": 842,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 867
@@ -4029,6 +4029,60 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe1-propext/tree/Becoming/PropositionIdentity.lean",
       "sha256": "24868a6344ef67d71193d8e963de346f2bc45572348e1a20b924eaafe2bfb8e5",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/Uses.lean",
+      "sha256": "3fe9a7c3e5180d1f4b7b721bcbaa39ab981629154096bc919977a788babc1237",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/continuation-correspondence.lean",
+      "sha256": "c04deb10155975925854250d16263f1dcf5e35c056d4baddee40daca0aa06791",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/ideals-correspondence.lean",
+      "sha256": "5e78767cc4e4cabb52b8994343a039c7802c5e00091e56a0f87a9a5e70008a7b",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/learning-correspondence.lean",
+      "sha256": "7f1c3b40ace08eeab29bb9f26d3270cc577fafeba385633a6d8dfada21406ad0",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/machine-instances.lean",
+      "sha256": "3b15d5930d10487bae1752ea677036bdefcbe70b2ebd923a422e1b263ca19513",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/sparse.lean",
+      "sha256": "7b7f95818407c18f384a52a4a349fccd7c74b3a8a6eb5ade70571c59b535ddb0",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -94353,6 +94407,56 @@
       },
       "print_axioms_commands": 0
     },
+    "3b15d5930d10487bae1752ea677036bdefcbe70b2ebd923a422e1b263ca19513": {
+      "byte_size": 1054,
+      "line_count": 20,
+      "imports": [
+        "MachineInstances"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "revise_computes",
+          "qualified_name_hint": "revise_computes",
+          "line": 9
+        },
+        {
+          "kind": "theorem",
+          "name": "retry_computes",
+          "qualified_name_hint": "retry_computes",
+          "line": 10
+        },
+        {
+          "kind": "theorem",
+          "name": "retry_by_rfl",
+          "qualified_name_hint": "retry_by_rfl",
+          "line": 11
+        },
+        {
+          "kind": "theorem",
+          "name": "land_computes",
+          "qualified_name_hint": "land_computes",
+          "line": 12
+        },
+        {
+          "kind": "theorem",
+          "name": "hasNotBit_computes",
+          "qualified_name_hint": "hasNotBit_computes",
+          "line": 13
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 5
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 7
+    },
     "3b25d41ace43dee151b03139a9df47b464991525fc7d0f2f463ba5f1b2b7eae0": {
       "byte_size": 30656,
       "line_count": 610,
@@ -105352,6 +105456,143 @@
       ],
       "declarations": [],
       "declaration_counts": {},
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
+    },
+    "3fe9a7c3e5180d1f4b7b721bcbaa39ab981629154096bc919977a788babc1237": {
+      "byte_size": 13354,
+      "line_count": 304,
+      "imports": [
+        "Lean"
+      ],
+      "declarations": [
+        {
+          "kind": "structure",
+          "name": "State",
+          "qualified_name_hint": "PE2.State",
+          "line": 33
+        },
+        {
+          "kind": "abbrev",
+          "name": "M",
+          "qualified_name_hint": "PE2.M",
+          "line": 39
+        },
+        {
+          "kind": "def",
+          "name": "onPropext",
+          "qualified_name_hint": "PE2.onPropext",
+          "line": 41
+        },
+        {
+          "kind": "def",
+          "name": "exprOnPropext",
+          "qualified_name_hint": "PE2.exprOnPropext",
+          "line": 61
+        },
+        {
+          "kind": "def",
+          "name": "eliminators",
+          "qualified_name_hint": "PE2.eliminators",
+          "line": 68
+        },
+        {
+          "kind": "def",
+          "name": "carriers",
+          "qualified_name_hint": "PE2.carriers",
+          "line": 75
+        },
+        {
+          "kind": "def",
+          "name": "isPropRecursor",
+          "qualified_name_hint": "PE2.isPropRecursor",
+          "line": 80
+        },
+        {
+          "kind": "inductive",
+          "name": "Sink",
+          "qualified_name_hint": "PE2.Sink",
+          "line": 93
+        },
+        {
+          "kind": "def",
+          "name": "Sink.str",
+          "qualified_name_hint": "PE2.Sink.str",
+          "line": 100
+        },
+        {
+          "kind": "def",
+          "name": "sinkOf",
+          "qualified_name_hint": "PE2.sinkOf",
+          "line": 106
+        },
+        {
+          "kind": "def",
+          "name": "walk",
+          "qualified_name_hint": "PE2.walk",
+          "line": 119
+        },
+        {
+          "kind": "def",
+          "name": "reaches",
+          "qualified_name_hint": "PE2.reaches",
+          "line": 145
+        },
+        {
+          "kind": "def",
+          "name": "rank",
+          "qualified_name_hint": "PE2.rank",
+          "line": 171
+        },
+        {
+          "kind": "def",
+          "name": "kernelNat",
+          "qualified_name_hint": "PE2.kernelNat",
+          "line": 180
+        },
+        {
+          "kind": "def",
+          "name": "moduleOf",
+          "qualified_name_hint": "PE2.moduleOf",
+          "line": 184
+        },
+        {
+          "kind": "def",
+          "name": "valueVerdict",
+          "qualified_name_hint": "PE2.valueVerdict",
+          "line": 193
+        },
+        {
+          "kind": "def",
+          "name": "analyse",
+          "qualified_name_hint": "PE2.analyse",
+          "line": 243
+        },
+        {
+          "kind": "def",
+          "name": "parseName",
+          "qualified_name_hint": "PE2.parseName",
+          "line": 289
+        },
+        {
+          "kind": "def",
+          "name": "main",
+          "qualified_name_hint": "PE2.main",
+          "line": 292
+        }
+      ],
+      "declaration_counts": {
+        "abbrev": 1,
+        "def": 16,
+        "inductive": 1,
+        "structure": 1
+      },
       "textual_markers": {
         "sorry": [],
         "admit": [],
@@ -143743,6 +143984,44 @@
       },
       "print_axioms_commands": 29
     },
+    "5e78767cc4e4cabb52b8994343a039c7802c5e00091e56a0f87a9a5e70008a7b": {
+      "byte_size": 759,
+      "line_count": 11,
+      "imports": [
+        "IdealsCorrespondence"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "ofList_letter",
+          "qualified_name_hint": "ofList_letter",
+          "line": 5
+        },
+        {
+          "kind": "theorem",
+          "name": "ofList_letter_rfl",
+          "qualified_name_hint": "ofList_letter_rfl",
+          "line": 6
+        },
+        {
+          "kind": "theorem",
+          "name": "ofList_length",
+          "qualified_name_hint": "ofList_length",
+          "line": 7
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 3
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 4
+    },
     "5e7cce23a057c545aa11e92e232cb567520bc7ba6103eab54232ce5576f001ad": {
       "byte_size": 2043,
       "line_count": 44,
@@ -182112,6 +182391,97 @@
       },
       "print_axioms_commands": 24
     },
+    "7b7f95818407c18f384a52a4a349fccd7c74b3a8a6eb5ade70571c59b535ddb0": {
+      "byte_size": 1110,
+      "line_count": 21,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "inductive",
+          "name": "Two",
+          "qualified_name_hint": "Two",
+          "line": 2
+        },
+        {
+          "kind": "inductive",
+          "name": "Three",
+          "qualified_name_hint": "Three",
+          "line": 3
+        },
+        {
+          "kind": "inductive",
+          "name": "Four",
+          "qualified_name_hint": "Four",
+          "line": 4
+        },
+        {
+          "kind": "inductive",
+          "name": "Six",
+          "qualified_name_hint": "Six",
+          "line": 5
+        },
+        {
+          "kind": "def",
+          "name": "two",
+          "qualified_name_hint": "two",
+          "line": 6
+        },
+        {
+          "kind": "def",
+          "name": "three",
+          "qualified_name_hint": "three",
+          "line": 7
+        },
+        {
+          "kind": "def",
+          "name": "four",
+          "qualified_name_hint": "four",
+          "line": 8
+        },
+        {
+          "kind": "def",
+          "name": "six",
+          "qualified_name_hint": "six",
+          "line": 9
+        },
+        {
+          "kind": "def",
+          "name": "sixFull",
+          "qualified_name_hint": "sixFull",
+          "line": 10
+        },
+        {
+          "kind": "def",
+          "name": "sixIf",
+          "qualified_name_hint": "sixIf",
+          "line": 11
+        },
+        {
+          "kind": "def",
+          "name": "natOffset",
+          "qualified_name_hint": "natOffset",
+          "line": 12
+        },
+        {
+          "kind": "def",
+          "name": "natLit",
+          "qualified_name_hint": "natLit",
+          "line": 13
+        }
+      ],
+      "declaration_counts": {
+        "def": 8,
+        "inductive": 4
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 8
+    },
     "7baafebe18026ff238a73f10a45f1efce1e6b55d6f451434949fb2c5b42ce04f": {
       "byte_size": 1749,
       "line_count": 43,
@@ -183100,6 +183470,44 @@
         "unsafe": []
       },
       "print_axioms_commands": 0
+    },
+    "7f1c3b40ace08eeab29bb9f26d3270cc577fafeba385633a6d8dfada21406ad0": {
+      "byte_size": 758,
+      "line_count": 13,
+      "imports": [
+        "LearningCorrespondence"
+      ],
+      "declarations": [
+        {
+          "kind": "theorem",
+          "name": "vecCons_last",
+          "qualified_name_hint": "vecCons_last",
+          "line": 7
+        },
+        {
+          "kind": "theorem",
+          "name": "vecCons_first",
+          "qualified_name_hint": "vecCons_first",
+          "line": 8
+        },
+        {
+          "kind": "theorem",
+          "name": "first_computes",
+          "qualified_name_hint": "first_computes",
+          "line": 9
+        }
+      ],
+      "declaration_counts": {
+        "theorem": 3
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 4
     },
     "7f26d67c47ee6f716d56be6fe3d79ffa769110bc976f3732bdd6256e672f3edb": {
       "byte_size": 4010,
@@ -275408,6 +275816,45 @@
         "unsafe": []
       },
       "print_axioms_commands": 0
+    },
+    "c04deb10155975925854250d16263f1dcf5e35c056d4baddee40daca0aa06791": {
+      "byte_size": 850,
+      "line_count": 14,
+      "imports": [
+        "ContinuationCorrespondence"
+      ],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "p",
+          "qualified_name_hint": "p",
+          "line": 7
+        },
+        {
+          "kind": "theorem",
+          "name": "zip_computes",
+          "qualified_name_hint": "zip_computes",
+          "line": 8
+        },
+        {
+          "kind": "theorem",
+          "name": "compatible_stop",
+          "qualified_name_hint": "compatible_stop",
+          "line": 9
+        }
+      ],
+      "declaration_counts": {
+        "def": 1,
+        "theorem": 2
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 3
     },
     "c0e6ba1c9f3adb1980121e2e0e2f55358256acdae356921638bffd4d8d212b55": {
       "byte_size": 5216,
