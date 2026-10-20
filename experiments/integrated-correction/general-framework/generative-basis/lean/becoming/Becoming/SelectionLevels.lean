@@ -7,10 +7,29 @@ import Becoming.SelectionTerm
 discordance of weight and amount over ordered pairs of members, the covariance with its
 denominators cleared. Where the family is listed group by group, the same term divides into
 selection within the groups and selection among them. This module states that division, the
-multilevel form of Price's equation (Price 1972), for groups of equal size.
+multilevel form of Price's equation (Price 1972), for groups of any sizes, and reads off the case
+of equal sizes.
+
+* **Groups of any sizes.** Let `n` be a common multiple of the groups' sizes, and give each group
+  the factor `n` over its size. Read the family with each member read as its group (`context`),
+  each group by its factor times its totals of weight and amount: `n` times its means
+  (`concordMeans`, `discordMeans`). Read each group's own term by its factor (`concordWithinBy`,
+  `discordWithinBy`). Then `n` squared times the whole's concordance, with `n` times the whole's
+  size times the groups' own discordances and the discordance of the means, is `n` squared times
+  the whole's discordance with the same for the concordances (`levels_sized`). Divided through,
+  the whole's covariance is the size-weighted mean of the groups' covariances with the
+  size-weighted covariance of their means: Price's partition for groups of unequal size, the
+  among-group part the covariance of group means member by member (the contextual reading). It
+  rests on three covariations, the whole's, each group's and the family read by groups'
+  (`SelectionTerm.covariation`), meeting in one balance (`meet`). So the whole selects for the
+  amount exactly where the means' concordance with the scaled within-group concordances exceeds
+  the same for the discordances (`rises_iff_sized`, `none_iff_sized`); where the groups' means are
+  alike nothing is selected among them (`means_none_of_alike`) and the whole selects exactly as
+  the groups' own terms, each by its factor, go (`rises_iff_within_of_alike`).
 
 * **The division, an arithmetic identity.** List a family as `k` groups of `m` members each
-  (`whole`). Read each group by its own concordance and discordance, summed over the groups
+  (`whole`): the case of `levels_sized` with every factor one, the family read by groups counting
+  each pair of groups `m` times `m` times (`pairs_context`). Read each group by its own concordance and discordance, summed over the groups
   (`concordWithin`, `discordWithin`), and the groups as members read by their totals of weight
   and amount (`concordAmong`, `discordAmong`). Then the whole's concordance, with `k` times the
   groups' discordance and the discordance among groups, is the whole's discordance, with `k`
@@ -36,20 +55,28 @@ multilevel form of Price's equation (Price 1972), for groups of equal size.
   exactly where, read by offspring number, the among-group and `k` times the within-group
   concordance exceed the corresponding discordances (`rises_exact_iff_levels`); so an amount
   selected against within the groups has its mean rise only where selection among them goes for
-  it (`among_for_of_raises`).
+  it (`among_for_of_raises`). For groups of any sizes the same holds with the sized terms
+  (`rises_exact_iff_sized`). How the next generation is listed does not enter a step: listed as
+  groups alike in mean, it raises its mean exactly as the groups' own terms go
+  (`rises_exact_iff_within_of_alike`), so an amount selected for among groups at one step is
+  selected against at the next wherever the next groups are alike in it and selection within them
+  goes against it.
 * **Witnesses.** Two groups of two, the amount one at a member that holds back and none at the
   others. In both, the one holding back leaves fewer offspring than its groupmate, so selection
   within goes against holding back. Where the group without it leaves no offspring, selection
   among groups goes for holding back and outweighs it: the whole selects for it (`AmongWins`).
   Where the group without it leaves as many as its members can, selection among groups goes
-  against holding back as well, and the whole selects against it (`WithinWins`).
+  against holding back as well, and the whole selects against it (`WithinWins`). With a member
+  holding back alone beside a group of three, one of them holding back, the two groups' totals of
+  holding back are alike, so the reading by totals sees nothing among them; their means differ
+  (one against a third), and the whole's selection for holding back is all among the means
+  (`ByMeans`).
 
 The weights are any natural numbers; with offspring numbers they are the selection term proper
 of `Becoming.SelectionTerm` divided by level. Nothing is supposed about what the groups are or
 why their members' offspring numbers differ: which level wins is read off the counts, not
 explained. Modelling choices: natural-number weights and amounts, finite families as lists,
-groups of equal size (with unequal sizes the division weights each group's own term by the
-whole's size over the group's, which is not stated). No ethical predicate, ranking or axiom
+a common multiple of the groups' sizes in place of rational means. No ethical predicate, ranking or axiom
 occurs; every declaration has an empty axiom report.
 -/
 
@@ -109,58 +136,242 @@ def concordAmong (gs : List (List α)) (w a : α → Nat) : Nat :=
 def discordAmong (gs : List (List α)) (w a : α → Nat) : Nat :=
   discord gs (fun g => total g w) (fun g => total g a)
 
+/-! ## Groups of any sizes -/
+
+/-- The family with each member read as its group: each group listed once for each of its
+members. -/
+def context (gs : List (List α)) : List (List α) := gs.flatMap fun g => g.map fun _ => g
+
+/-- A total over the members read as their groups counts each group once for each member. -/
+theorem context_total (q : List α → Nat) :
+    ∀ gs : List (List α), total (context gs) q = total gs fun g => g.length * q g
+  | [] => rfl
+  | g :: gs => (total_append q (context gs) (g.map fun _ => g)).trans
+      (Naturals.add_congr ((total_map (fun _ => g) q g).trans (total_const (q g) g))
+        (context_total q gs))
+
+/-- So the family read by groups has as many members as the family. -/
+theorem context_length (gs : List (List α)) : (context gs).length = (whole gs).length :=
+  (total_ones (context gs)).symm.trans ((context_total (fun _ => 1) gs).trans
+    ((total_congr (p := fun g => g.length * 1) (q := fun g => g.length)
+      (fun g => Nat.mul_one g.length) gs).trans (whole_length gs).symm))
+
+/-- A member read as its group reads a group of the family. -/
+theorem mem_of_mem_context : ∀ {gs : List (List α)} {x : List α}, x ∈ context gs → x ∈ gs
+  | g :: _, _, mem => match mem_append_cases mem with
+    | .inl here => match preimage_of_mem_map here with
+      | ⟨_, _, same⟩ => same ▸ .head _
+    | .inr there => .tail g (mem_of_mem_context there)
+
+/-- Each group's own concordance, by a factor of its own, summed over the groups. -/
+def concordWithinBy (gs : List (List α)) (c : List α → Nat) (w a : α → Nat) : Nat :=
+  total gs fun g => c g * concord g w a
+
+/-- Each group's own discordance, by a factor of its own, summed over the groups. -/
+def discordWithinBy (gs : List (List α)) (c : List α → Nat) (w a : α → Nat) : Nat :=
+  total gs fun g => c g * discord g w a
+
+/-- Concordance of the groups' means, member by member: each member read by its group's totals
+of weight and amount, each by the group's factor. -/
+def concordMeans (gs : List (List α)) (c : List α → Nat) (w a : α → Nat) : Nat :=
+  concord (context gs) (fun g => c g * total g w) (fun g => c g * total g a)
+
+/-- Discordance of the groups' means, member by member. -/
+def discordMeans (gs : List (List α)) (c : List α → Nat) (w a : α → Nat) : Nat :=
+  discord (context gs) (fun g => c g * total g w) (fun g => c g * total g a)
+
+theorem shuffle_left (c dw d' q s p : Nat) :
+    c + (dw + d') + (q + (s + p)) = q + c + (s + dw + (p + d')) :=
+  (Nat.add_add_add_comm c (dw + d') q (s + p)).trans (Naturals.add_congr (Nat.add_comm c q)
+    ((Nat.add_add_add_comm dw d' s p).trans
+      (Naturals.add_congr (Nat.add_comm dw s) (Nat.add_comm d' p))))
+
+theorem shuffle_right (s d p cw q c' : Nat) :
+    s + d + (p + cw + (q + c')) = d + (cw + c') + (q + (s + p)) :=
+  (congrArg (s + d + ·) (Nat.add_add_add_comm p cw q c')).trans
+    ((Nat.add_add_add_comm s d (p + q) (cw + c')).trans ((Nat.add_comm _ _).trans
+      (congrArg (d + (cw + c') + ·) ((congrArg (s + ·) (Nat.add_comm p q)).trans
+        (Nat.add_left_comm s q p)))))
+
+/-- Three balances meeting: the whole's, the groups' and the means'. -/
+theorem meet {s d q c dw p cw d' c' : Nat} (whole : s + d = q + c) (groups : s + dw = p + cw)
+    (means : p + d' = q + c') : c + (dw + d') = d + (cw + c') :=
+  Naturals.add_right_cancel (k := q + (s + p)) ((shuffle_left c dw d' q s p).trans
+    ((Naturals.add_congr whole.symm (Naturals.add_congr groups means)).trans
+      (shuffle_right s d p cw q c')))
+
+theorem square_split (n x y : Nat) : n * x * (n * y) = n * n * (x * y) :=
+  (mul_assoc_nat n x (n * y)).trans ((congrArg (n * ·) (mul_turn x n y)).trans
+    (mul_assoc_nat n n (x * y)).symm)
+
+/-- Selection within groups and among them, for groups of any sizes: with `n` a common multiple
+of the groups' sizes and each group's factor `n` over its size, `n` squared times the whole's
+concordance, with `n` times the whole's size times the groups' own discordances, each by its
+factor, and the discordance of the groups' means, is `n` squared times the whole's discordance,
+with the same for the concordances. Divided through by `n` squared times the whole's size squared,
+the whole's covariance is the size-weighted mean of the groups' covariances with the size-weighted
+covariance of their means: Price's partition for groups of unequal size. No premise beyond the
+common multiple. -/
+theorem levels_sized (gs : List (List α)) (w a : α → Nat) (c : List α → Nat) {n : Nat}
+    (common : ∀ g, g ∈ gs → g.length * c g = n) :
+    n * n * concord (whole gs) w a +
+        (n * (whole gs).length * discordWithinBy gs c w a + discordMeans gs c w a) =
+      n * n * discord (whole gs) w a +
+        (n * (whole gs).length * concordWithinBy gs c w a + concordMeans gs c w a) :=
+  have whole_cov : (whole gs).length * (total gs fun g => weighted g w a) + discord (whole gs) w a =
+      (total gs fun g => total g w) * (total gs fun g => total g a) + concord (whole gs) w a := by
+    have h := covariation (whole gs) w a
+    rw [whole_weighted, whole_total, whole_total] at h
+    exact h
+  have groups : n * (total gs fun g => weighted g w a) + discordWithinBy gs c w a =
+      (total gs fun g => c g * (total g w * total g a)) + concordWithinBy gs c w a :=
+    (Naturals.add_congr (total_mul n _ gs).symm rfl).trans ((total_add _ _ gs).symm.trans
+      ((total_eq_of_mem fun g mg =>
+        have h := congrArg (c g * ·) (covariation g w a)
+        have own : c g * (g.length * weighted g w a) = n * weighted g w a :=
+          (mul_assoc_nat _ _ _).symm.trans (congrArg (· * weighted g w a)
+            ((Nat.mul_comm _ _).trans (common g mg)))
+        (Naturals.add_congr own.symm rfl).trans ((Nat.left_distrib _ _ _).symm.trans
+          (h.trans (Nat.left_distrib _ _ _)))).trans (total_add _ _ gs)))
+  have means : (whole gs).length * (n * total gs fun g => c g * (total g w * total g a)) +
+      discordMeans gs c w a =
+        n * (total gs fun g => total g w) * (n * total gs fun g => total g a) +
+          concordMeans gs c w a := by
+    have h := covariation (context gs) (fun g => c g * total g w) (fun g => c g * total g a)
+    have wt : weighted (context gs) (fun g => c g * total g w) (fun g => c g * total g a) =
+        n * total gs fun g => c g * (total g w * total g a) :=
+      (context_total _ gs).trans ((total_eq_of_mem fun g mg =>
+        ((congrArg (g.length * ·) (square_split (c g) (total g w) (total g a))).trans
+          ((mul_assoc_nat _ _ _).symm.trans ((congrArg (· * (total g w * total g a))
+            ((mul_assoc_nat _ _ _).symm.trans (congrArg (· * c g) (common g mg)))).trans
+            (mul_assoc_nat _ _ _))))).trans (total_mul n _ gs))
+    have tw : ∀ q : α → Nat, total (context gs) (fun g => c g * total g q) =
+        n * total gs fun g => total g q := fun q =>
+      (context_total _ gs).trans ((total_eq_of_mem fun g mg =>
+        (mul_assoc_nat _ _ _).symm.trans (congrArg (· * total g q) (common g mg))).trans
+        (total_mul n _ gs))
+    rw [context_length, wt, tw w, tw a] at h
+    exact h
+  have e1 : n * n * ((whole gs).length * (total gs fun g => weighted g w a)) +
+      n * n * discord (whole gs) w a =
+        n * n * ((total gs fun g => total g w) * (total gs fun g => total g a)) +
+          n * n * concord (whole gs) w a :=
+    (Nat.left_distrib _ _ _).symm.trans ((congrArg (n * n * ·) whole_cov).trans
+      (Nat.left_distrib _ _ _))
+  have e2 : n * n * ((whole gs).length * (total gs fun g => weighted g w a)) +
+      n * (whole gs).length * discordWithinBy gs c w a =
+        (whole gs).length * (n * total gs fun g => c g * (total g w * total g a)) +
+          n * (whole gs).length * concordWithinBy gs c w a := by
+    have h : n * (whole gs).length * (n * total gs fun g => weighted g w a) +
+        n * (whole gs).length * discordWithinBy gs c w a =
+          n * (whole gs).length * (total gs fun g => c g * (total g w * total g a)) +
+            n * (whole gs).length * concordWithinBy gs c w a :=
+      (Nat.left_distrib _ _ _).symm.trans ((congrArg (n * (whole gs).length * ·) groups).trans
+        (Nat.left_distrib _ _ _))
+    have sq : n * (whole gs).length * (n * total gs fun g => weighted g w a) =
+        n * n * ((whole gs).length * total gs fun g => weighted g w a) :=
+      square_split n _ _ |>.trans rfl
+    have pr : n * (whole gs).length * (total gs fun g => c g * (total g w * total g a)) =
+        (whole gs).length * (n * total gs fun g => c g * (total g w * total g a)) :=
+      (congrArg (· * _) (Nat.mul_comm n _)).trans (mul_assoc_nat _ _ _)
+    rw [sq, pr] at h
+    exact h
+  have e3 : (whole gs).length * (n * total gs fun g => c g * (total g w * total g a)) +
+      discordMeans gs c w a =
+        n * n * ((total gs fun g => total g w) * (total gs fun g => total g a)) +
+          concordMeans gs c w a := by
+    rw [← square_split]
+    exact means
+  meet e1 e2 e3
+
 /-! ## The division -/
 
-theorem lhs_shape (a c s x p y : Nat) : a + c + (s + x) + (p + y) = c + x + y + (a + s + p) :=
-  (congrArg (· + (p + y)) (Nat.add_add_add_comm a c s x)).trans
-    ((Nat.add_add_add_comm (a + s) (c + x) p y).trans (Nat.add_comm _ _))
+/-- The family read as its groups, each group listed once for each of its `m` members: totals
+over ordered pairs count each pair of groups `m` times `m` times. -/
+theorem pairs_context {gs : List (List α)} {m : Nat} (equal : ∀ g, g ∈ gs → g.length = m)
+    (F : List α → List α → Nat) :
+    (total (context gs) fun x => total (context gs) (F x)) =
+      m * m * total gs fun g => total gs (F g) :=
+  (total_congr (fun x => (context_total (F x) gs).trans ((total_eq_of_mem fun h mh =>
+      congrArg (· * F x h) (equal h mh)).trans (total_mul m _ gs))) (context gs)).trans
+    ((context_total _ gs).trans ((total_eq_of_mem fun g mg =>
+      (congrArg (· * (m * total gs (F g))) (equal g mg)).trans (mul_assoc_nat _ _ _).symm).trans
+      (total_mul (m * m) _ gs)))
 
-theorem rhs_shape (s d p x a y : Nat) : s + d + (p + x) + (a + y) = d + x + y + (a + s + p) :=
-  (congrArg (· + (a + y)) (Nat.add_add_add_comm s d p x)).trans
-    ((Nat.add_add_add_comm (s + p) (d + x) a y).trans
-      ((Nat.add_comm _ _).trans (congrArg (d + x + y + ·)
-        ((Nat.add_comm (s + p) a).trans (Nat.add_assoc a s p).symm))))
+/-- Each factor one: each group's own term once. -/
+theorem within_by_one (gs : List (List α)) (w a : α → Nat) :
+    concordWithinBy gs (fun _ => 1) w a = concordWithin gs w a ∧
+      discordWithinBy gs (fun _ => 1) w a = discordWithin gs w a :=
+  ⟨total_congr (fun g => Nat.one_mul (concord g w a)) gs,
+    total_congr (fun g => Nat.one_mul (discord g w a)) gs⟩
+
+/-- Groups read by their totals, each by the factor one, are read by their totals. -/
+theorem among_by_one (gs : List (List α)) (w a : α → Nat) :
+    concord gs (fun g => 1 * total g w) (fun g => 1 * total g a) = concordAmong gs w a ∧
+      discord gs (fun g => 1 * total g w) (fun g => 1 * total g a) = discordAmong gs w a :=
+  ⟨total_congr (fun g => total_congr (fun h => by
+      show excess (1 * total g w) (1 * total h w) * excess (1 * total g a) (1 * total h a) =
+        excess (total g w) (total h w) * excess (total g a) (total h a)
+      rw [Nat.one_mul (total g w), Nat.one_mul (total h w), Nat.one_mul (total g a),
+        Nat.one_mul (total h a)]) gs) gs,
+    total_congr (fun g => total_congr (fun h => by
+      show excess (1 * total g w) (1 * total h w) * excess (1 * total h a) (1 * total g a) =
+        excess (total g w) (total h w) * excess (total h a) (total g a)
+      rw [Nat.one_mul (total g w), Nat.one_mul (total h w), Nat.one_mul (total g a),
+        Nat.one_mul (total h a)]) gs) gs⟩
+
+/-- An empty group adds nothing and has no members. -/
+theorem nil_of_length_zero : ∀ {g : List α}, g.length = 0 → g = []
+  | [], _ => rfl
+  | _ :: _, len => Nat.noConfusion len
+
+/-- Groups all empty leave the family empty. -/
+theorem whole_nil : ∀ {gs : List (List α)}, (∀ g, g ∈ gs → g.length = 0) → whole gs = []
+  | [], _ => rfl
+  | g :: gs, empty => (congrArg (· ++ whole gs) (nil_of_length_zero (empty g (.head gs)))).trans
+      (whole_nil fun h mh => empty h (.tail g mh))
 
 /-- Selection within groups and among them, for `k` groups of equal size: the whole's
 concordance, with `k` times the groups' own discordance and the discordance among groups, is the
 whole's discordance, with `k` times the groups' own concordance and the concordance among groups.
 Divided through, the whole's covariance is the mean of the groups' covariances with the
-covariance of their means. No premise beyond the equal sizes. -/
+covariance of their means. No premise beyond the equal sizes: the case of `levels_sized` with
+every factor one. -/
 theorem levels (gs : List (List α)) (w a : α → Nat) {m : Nat}
     (equal : ∀ g, g ∈ gs → g.length = m) :
     concord (whole gs) w a + (gs.length * discordWithin gs w a + discordAmong gs w a) =
       discord (whole gs) w a + (gs.length * concordWithin gs w a + concordAmong gs w a) :=
-  have whole_cov : gs.length * m * (total gs fun g => weighted g w a) + discord (whole gs) w a =
-      (total gs fun g => total g w) * (total gs fun g => total g a) + concord (whole gs) w a := by
-    have h := covariation (whole gs) w a
-    rw [whole_length_of_equal equal, whole_weighted, whole_total, whole_total] at h
-    exact h
-  have groups : m * (total gs fun g => weighted g w a) + discordWithin gs w a =
-      (total gs fun g => total g w * total g a) + concordWithin gs w a :=
-    (Naturals.add_congr (total_mul m _ gs).symm rfl).trans ((total_add _ _ gs).symm.trans
-      ((total_eq_of_mem fun g mg => by
-        have h := covariation g w a
-        rw [equal g mg] at h
-        exact h).trans (total_add _ _ gs)))
-  have scaled : gs.length * m * (total gs fun g => weighted g w a) + gs.length * discordWithin gs w a =
-      gs.length * (total gs fun g => total g w * total g a) + gs.length * concordWithin gs w a :=
-    (Naturals.add_congr (mul_assoc_nat _ _ _) rfl).trans
-      ((Nat.left_distrib _ _ _).symm.trans ((congrArg (gs.length * ·) groups).trans
-        (Nat.left_distrib _ _ _)))
-  have among : gs.length * (total gs fun g => total g w * total g a) + discordAmong gs w a =
-      (total gs fun g => total g w) * (total gs fun g => total g a) + concordAmong gs w a :=
-    covariation gs (fun g => total g w) (fun g => total g a)
-  have summed :
-      (total gs fun g => total g w) * (total gs fun g => total g a) + concord (whole gs) w a +
-          (gs.length * m * (total gs fun g => weighted g w a) + gs.length * discordWithin gs w a) +
-          (gs.length * (total gs fun g => total g w * total g a) + discordAmong gs w a) =
-        gs.length * m * (total gs fun g => weighted g w a) + discord (whole gs) w a +
-          (gs.length * (total gs fun g => total g w * total g a) + gs.length * concordWithin gs w a) +
-          ((total gs fun g => total g w) * (total gs fun g => total g a) + concordAmong gs w a) := by
-    rw [← whole_cov, scaled, among]
-  (Nat.add_assoc _ _ _).symm.trans ((Naturals.add_right_cancel
-    ((lhs_shape _ _ _ _ _ _).symm.trans (summed.trans (rhs_shape _ _ _ _ _ _)))).trans
-    (Nat.add_assoc _ _ _))
+  match m, equal with
+  | 0, equal =>
+    have nil := whole_nil equal
+    have zero : ∀ g, g ∈ gs → total g w = 0 := fun g mg => by
+      rw [nil_of_length_zero (equal g mg)]; rfl
+    have within : ∀ g, g ∈ gs → concord g w a = 0 ∧ discord g w a = 0 := fun g mg => by
+      rw [nil_of_length_zero (equal g mg)]; exact ⟨rfl, rfl⟩
+    have cw : concordWithin gs w a = 0 := total_zero_of fun g mg => (within g mg).1
+    have dw : discordWithin gs w a = 0 := total_zero_of fun g mg => (within g mg).2
+    have ca : concordAmong gs w a = 0 := concord_uniform zero _
+    have da : discordAmong gs w a = 0 := discord_uniform zero _
+    by rw [nil, cw, dw, ca, da]; rfl
+  | m + 1, equal =>
+    have sized := levels_sized gs w a (fun _ => 1) (n := m + 1)
+      fun g mg => (Nat.mul_one _).trans (equal g mg)
+    have scale : (m + 1) * (whole gs).length = (m + 1) * (m + 1) * gs.length :=
+      (congrArg ((m + 1) * ·) ((whole_length_of_equal equal).trans (Nat.mul_comm _ _))).trans
+        (mul_assoc_nat _ _ _).symm
+    have among : ∀ F H : List α → Nat,
+        concord (context gs) F H = (m + 1) * (m + 1) * concord gs F H ∧
+          discord (context gs) F H = (m + 1) * (m + 1) * discord gs F H := fun F H =>
+      ⟨pairs_context equal fun x y => excess (F x) (F y) * excess (H x) (H y),
+        pairs_context equal fun x y => excess (F x) (F y) * excess (H y) (H x)⟩
+    by
+      unfold concordMeans discordMeans at sized
+      rw [(within_by_one gs w a).1, (within_by_one gs w a).2, scale,
+        (among _ _).1, (among _ _).2, (among_by_one gs w a).1, (among_by_one gs w a).2, mul_assoc_nat _ gs.length, mul_assoc_nat _ gs.length,
+        ← Nat.left_distrib, ← Nat.left_distrib, ← Nat.left_distrib, ← Nat.left_distrib] at sized
+      exact Nat.le_antisymm
+        (le_of_mul_le_mul (Nat.mul_pos (Nat.succ_pos m) (Nat.succ_pos m)) (Nat.le_of_eq sized))
+        (le_of_mul_le_mul (Nat.mul_pos (Nat.succ_pos m) (Nat.succ_pos m)) (Nat.le_of_eq sized.symm))
 
 /-- The whole selects for the amount exactly where the concordance among groups with `k` times
 the groups' concordance exceeds the discordance among groups with `k` times the groups'
@@ -179,6 +390,54 @@ theorem none_iff (gs : List (List α)) (w a : α → Nat) {m : Nat}
       gs.length * discordWithin gs w a + discordAmong gs w a =
         gs.length * concordWithin gs w a + concordAmong gs w a :=
   eq_iff_of_balance (levels gs w a equal)
+
+/-! ## Which level wins, for groups of any sizes -/
+
+/-- A positive square keeps the order both ways. -/
+theorem square_lt_iff {n x y : Nat} (pos : 0 < n) : n * n * x < n * n * y ↔ x < y :=
+  ⟨lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt (Nat.mul_pos pos pos)⟩
+
+/-- And equality. -/
+theorem square_eq_iff {n x y : Nat} (pos : 0 < n) : n * n * x = n * n * y ↔ x = y :=
+  ⟨Nat.eq_of_mul_eq_mul_left (Nat.mul_pos pos pos), congrArg (n * n * ·)⟩
+
+/-- For groups of any sizes, the whole selects for the amount exactly where the concordance of
+the groups' means with `n` times the whole's size times the groups' own concordances, each by its
+factor, exceeds the same for the discordances. -/
+theorem rises_iff_sized (gs : List (List α)) (w a : α → Nat) (c : List α → Nat) {n : Nat}
+    (common : ∀ g, g ∈ gs → g.length * c g = n) (pos : 0 < n) :
+    discord (whole gs) w a < concord (whole gs) w a ↔
+      n * (whole gs).length * discordWithinBy gs c w a + discordMeans gs c w a <
+        n * (whole gs).length * concordWithinBy gs c w a + concordMeans gs c w a :=
+  (square_lt_iff pos).symm.trans (lt_iff_of_balance (levels_sized gs w a c common))
+
+/-- And selects nothing exactly where they are equal. -/
+theorem none_iff_sized (gs : List (List α)) (w a : α → Nat) (c : List α → Nat) {n : Nat}
+    (common : ∀ g, g ∈ gs → g.length * c g = n) (pos : 0 < n) :
+    discord (whole gs) w a = concord (whole gs) w a ↔
+      n * (whole gs).length * discordWithinBy gs c w a + discordMeans gs c w a =
+        n * (whole gs).length * concordWithinBy gs c w a + concordMeans gs c w a :=
+  (square_eq_iff pos).symm.trans (eq_iff_of_balance (levels_sized gs w a c common))
+
+/-- Where the groups' means of amount are all alike, nothing is selected among them. -/
+theorem means_none_of_alike {gs : List (List α)} {w a : α → Nat} {c : List α → Nat} {d : Nat}
+    (alike : ∀ g, g ∈ gs → c g * total g a = d) :
+    concordMeans gs c w a = 0 ∧ discordMeans gs c w a = 0 :=
+  ⟨concord_alike (fun x mx => alike x (mem_of_mem_context mx)) _,
+    discord_alike (fun x mx => alike x (mem_of_mem_context mx)) _⟩
+
+/-- So, for a family with members, the whole selects for the amount exactly where the groups' own
+concordances, each by its factor, exceed their discordances: with the groups alike in mean,
+selection within them is all there is. -/
+theorem rises_iff_within_of_alike (gs : List (List α)) (w a : α → Nat) (c : List α → Nat)
+    {n d : Nat} (common : ∀ g, g ∈ gs → g.length * c g = n)
+    (pos : 0 < n * (whole gs).length) (alike : ∀ g, g ∈ gs → c g * total g a = d) :
+    discord (whole gs) w a < concord (whole gs) w a ↔
+      discordWithinBy gs c w a < concordWithinBy gs c w a := by
+  have h := rises_iff_sized gs w a c common (pos_of_mul_pos pos)
+  rw [(means_none_of_alike alike).1, (means_none_of_alike alike).2, Nat.add_zero,
+    Nat.add_zero] at h
+  exact h.trans ⟨lt_of_mul_lt_mul, fun lt => Nat.mul_lt_mul_of_pos_left lt pos⟩
 
 /-- Where selection within the groups goes against the amount, the whole selects for it only
 where selection among the groups goes for it. -/
@@ -252,6 +511,42 @@ theorem rises_exact_iff_levels (G : Generations α) {t m : Nat} (gs : List (List
     unfold Generations.concordAt Generations.discordAt
     rw [← listed]
     exact rises_iff gs _ _ equal)
+
+/-- Over listed generations with exact transmission, a generation listed as groups of any sizes,
+with `n` a common multiple of their sizes: its mean amount rises across the step exactly where,
+read by offspring number, the concordance of the groups' means with `n` times the generation's
+size times the groups' own concordances, each by its factor, exceeds the same for the
+discordances. -/
+theorem rises_exact_iff_sized (G : Generations α) {t n : Nat} (gs : List (List α))
+    (c : List α → Nat) (listed : whole gs = G.family t) (common : ∀ g, g ∈ gs → g.length * c g = n)
+    (pos : 0 < n) (exact : Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) :
+    G.Raises t ↔
+      n * (whole gs).length * discordWithinBy gs c (G.offspringNumber t) (G.amount t) +
+          discordMeans gs c (G.offspringNumber t) (G.amount t) <
+        n * (whole gs).length * concordWithinBy gs c (G.offspringNumber t) (G.amount t) +
+          concordMeans gs c (G.offspringNumber t) (G.amount t) :=
+  (G.raises_exact_iff exact).trans (by
+    unfold Generations.concordAt Generations.discordAt
+    rw [← listed]
+    exact rises_iff_sized gs _ _ c common pos)
+
+/-- How the next generation is listed does not enter the step: listed as groups alike in mean,
+a generation with exact transmission raises its mean across the step exactly where, read by
+offspring number, the groups' own concordances, each by its factor, exceed their discordances. So
+an amount selected for among groups at one step is selected against at the next wherever the next
+generation's groups are alike in it and selection within them goes against it. -/
+theorem rises_exact_iff_within_of_alike (G : Generations α) {t n d : Nat} (gs : List (List α))
+    (c : List α → Nat) (listed : whole gs = G.family t) (common : ∀ g, g ∈ gs → g.length * c g = n)
+    (pos : 0 < n * (whole gs).length)
+    (alike : ∀ g, g ∈ gs → c g * total g (G.amount t) = d)
+    (exact : Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) :
+    G.Raises t ↔
+      discordWithinBy gs c (G.offspringNumber t) (G.amount t) <
+        concordWithinBy gs c (G.offspringNumber t) (G.amount t) :=
+  (G.raises_exact_iff exact).trans (by
+    unfold Generations.concordAt Generations.discordAt
+    rw [← listed]
+    exact rises_iff_within_of_alike gs _ _ c common pos alike)
 
 /-- So, with exact transmission, where selection within the groups goes against the amount, its
 mean rises only where selection among the groups goes for it. -/
@@ -335,6 +630,49 @@ theorem within_wins :
   ⟨rfl, rfl, rfl, rfl, rfl, rfl⟩
 
 end WithinWins
+
+namespace ByMeans
+
+/-- Groups of unequal size: the member holding back alone, and its three neighbours, one of them
+holding back as well. -/
+def unequal : List (List Member) := [[held], [mate, first, second]]
+
+/-- One at the two members holding back. -/
+def holding : Member → Nat
+  | held => 1
+  | mate => 1
+  | first => 0
+  | second => 0
+
+/-- The member alone leaves three offspring, each of the others one. -/
+def offspring : Member → Nat
+  | held => 3
+  | mate => 1
+  | first => 1
+  | second => 1
+
+/-- The factors: three over one, three over three. -/
+def factor (g : List Member) : Nat := 3 / g.length
+
+theorem common : ∀ g, g ∈ unequal → g.length * factor g = 3
+  | _, .head _ => rfl
+  | _, .tail _ (.head _) => rfl
+  | _, .tail _ (.tail _ mem) => nomatch mem
+
+/-- Read by their totals the two groups hold back alike (one each), so nothing is concordant
+among them; read by their means (one against a third) they are, and the whole selects for holding
+back with nothing selected within the groups: the reading by totals misses selection among groups
+of unequal size. -/
+theorem by_means :
+    concordAmong unequal offspring holding = 0 ∧ discordAmong unequal offspring holding = 0 ∧
+      concordWithinBy unequal factor offspring holding = 0 ∧
+      discordWithinBy unequal factor offspring holding = 0 ∧
+      concordMeans unequal factor offspring holding = 36 ∧
+      discordMeans unequal factor offspring holding = 0 ∧
+      concord (whole unequal) offspring holding = 4 ∧ discord (whole unequal) offspring holding = 0 :=
+  ⟨rfl, rfl, rfl, rfl, rfl, rfl, rfl, rfl⟩
+
+end ByMeans
 
 end SelectionLevels
 

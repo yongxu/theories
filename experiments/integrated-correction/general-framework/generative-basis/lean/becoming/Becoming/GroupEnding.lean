@@ -19,7 +19,11 @@ leaves no descendant.
   among groups (`rises_iff_ended`): what is left against the amount is selection within the
   groups that go on. With groups uniform in the amount, nothing is selected within them, so the
   whole never selects against it (`not_against_of_ended`), and selects for it wherever a group
-  with more of it leaves offspring beside one with less (`rises_of_ended`).
+  with more of it leaves offspring beside one with less (`rises_of_ended`). For groups of any
+  sizes, where every group with a lower mean leaves no offspring (`EndedBy`), nothing is
+  discordant among the groups' means (`means_not_against`), and the sized division of
+  `SelectionLevels.levels_sized` has no among-group part against the amount
+  (`rises_iff_ended_sized`).
 * **On the base.** Where only active formations give, a formation not active at a step leaves no
   descendant across it (`Flow.inactive_childless`). A member depending, at a need of at least `m`,
   on a condition whose gated renewal ran into joint excess (as in `Flow.joint_excess_ends`) is not
@@ -32,7 +36,9 @@ leaves no descendant.
   with less of it are not active and a group with more of it leaves offspring beside one with
   less, the mean amount rises across the step (`Flow.raises_of_inactive`). With groups not
   uniform, it rises exactly where `k` times the within-group discordance is below `k` times the
-  within-group concordance with the concordance among groups (`Flow.rises_iff_inactive`).
+  within-group concordance with the concordance among groups (`Flow.rises_iff_inactive`). For
+  groups of any sizes, where the groups with a lower mean are not active (`Flow.endedBy_of_inactive`),
+  the same holds with the sized terms (`Flow.rises_iff_inactive_sized`).
 * **A condition shared by every group.** Where every member of a generation is not active (every
   group depending on one condition that ran into joint excess), the next generation is empty
   (`Flow.all_end`): one shared condition gives no selection among the groups that keeps it; every
@@ -52,13 +58,18 @@ leaves no descendant.
   leaves one offspring and its groupmate two, so within the group selection goes against holding
   back; among the groups it goes for it and outweighs (`Outweighed`). With the groupmate leaving
   five, selection within outweighs and the whole goes against holding back although the other
-  group ended (`Outweighs`).
+  group ended (`Outweighs`). Over two generations (`Exhausted`): two keeping groups and a group
+  leaving nothing; at the first step selection among groups goes for holding back and the mean
+  rises; the offspring of each keeping group, forming the next groups, are alike in holding back,
+  so at the next step nothing is selected among them, selection within goes against it, and the
+  mean falls below where it started. Selection among groups by ending uses up the differences
+  among groups it acts on.
 
 The amount is any reading; which group's condition, or which family of conditions, runs into
 joint excess, and why, is a hypothesis wherever it enters, as is which conditions the groups'
 members depend on.
 Modelling choices: natural-number weights, amounts and levels, discrete steps, finite families as
-lists, groups of equal size. No ethical predicate, ranking or axiom occurs; every declaration has
+lists, groups of equal size or, for the sized laws, a common multiple of the sizes. No ethical predicate, ranking or axiom occurs; every declaration has
 an empty axiom report.
 -/
 
@@ -128,6 +139,34 @@ theorem rises_of_ended (gs : List (List α)) (w a : α → Nat) {m : Nat}
   have lv := levels_of_uniform gs w a equal uniform
   rw [among_not_against ended, Nat.add_zero] at lv
   exact Nat.lt_of_lt_of_le (Nat.lt_add_of_pos_right among) (Nat.le_of_eq lv.symm)
+
+/-! ## Groups of any sizes -/
+
+/-- Every group with a lower mean of the amount than another leaves no offspring: groups of any
+sizes, each read by its factor (`n` over its size, `n` a common multiple of the sizes). -/
+def EndedBy (gs : List (List α)) (c : List α → Nat) (w a : α → Nat) : Prop :=
+  ∀ g h, g ∈ gs → h ∈ gs → c h * total h a < c g * total g a → total h w = 0
+
+/-- Where the groups with a lower mean leave nothing, nothing is discordant among the groups'
+means. -/
+theorem means_not_against {gs : List (List α)} {c : List α → Nat} {w a : α → Nat}
+    (ended : EndedBy gs c w a) : discordMeans gs c w a = 0 :=
+  discord_zero_of_below fun x y mx my less =>
+    Nat.le_trans (Nat.le_of_eq ((congrArg (c x * ·)
+      (ended y x (mem_of_mem_context my) (mem_of_mem_context mx) less)).trans (Nat.mul_zero _)))
+      (Nat.zero_le _)
+
+/-- So, for groups of any sizes, the whole selects for the amount exactly where `n` times the
+whole's size times the groups' own discordances, each by its factor, is below the same for the
+concordances with the concordance of the groups' means. -/
+theorem rises_iff_ended_sized (gs : List (List α)) (w a : α → Nat) (c : List α → Nat) {n : Nat}
+    (common : ∀ g, g ∈ gs → g.length * c g = n) (pos : 0 < n) (ended : EndedBy gs c w a) :
+    discord (whole gs) w a < concord (whole gs) w a ↔
+      n * (whole gs).length * discordWithinBy gs c w a <
+        n * (whole gs).length * concordWithinBy gs c w a + concordMeans gs c w a := by
+  have h := rises_iff_sized gs w a c common pos
+  rw [means_not_against ended, Nat.add_zero] at h
+  exact h
 
 /-- A member of a group is a member of the family listed by groups. -/
 theorem mem_whole : ∀ {gs : List (List α)} {h : List α} {p : α}, h ∈ gs → p ∈ h → p ∈ whole gs
@@ -238,6 +277,35 @@ theorem rises_iff_inactive (acting : L.Acting W) {G : Generations X}
           concordAmong gs (G.offspringNumber t) (G.amount t) := by
   have h := rises_exact_iff_levels G gs listed equal exact
   rw [among_not_against (ended_of_inactive acting descended listed inactive), Nat.add_zero] at h
+  exact h
+
+/-- For groups of any sizes: where every group with a lower mean of the amount than another has
+its members not active, the groups with a lower mean leave nothing. -/
+theorem endedBy_of_inactive (acting : L.Acting W) {G : Generations X}
+    (descended : SelectionTerm.Flow.Descended L W G) {t : Nat} {gs : List (List X)}
+    (listed : whole gs = G.family t) {c : List X → Nat} {a : X → Nat}
+    (inactive : ∀ g h, g ∈ gs → h ∈ gs → c h * total h a < c g * total g a →
+      ∀ p, p ∈ h → ¬ W.active t p) :
+    EndedBy gs c (G.offspringNumber t) a :=
+  fun g h mg mh less => group_childless acting descended
+    (fun _ mp => listed ▸ mem_whole mh mp) (inactive g h mg mh less)
+
+/-- Over generations of descent with exact transmission, a generation listed as groups of any
+sizes: where the groups with a lower mean of the amount are not active, the mean rises across the
+step exactly where `n` times the generation's size times the groups' own discordances, each by its
+factor, is below the same for the concordances with the concordance of the groups' means. -/
+theorem rises_iff_inactive_sized (acting : L.Acting W) {G : Generations X}
+    (descended : SelectionTerm.Flow.Descended L W G) {t n : Nat} (gs : List (List X))
+    (c : List X → Nat) (listed : whole gs = G.family t) (common : ∀ g, g ∈ gs → g.length * c g = n)
+    (pos : 0 < n) (exact : Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    (inactive : ∀ g h, g ∈ gs → h ∈ gs → c h * total h (G.amount t) < c g * total g (G.amount t) →
+      ∀ p, p ∈ h → ¬ W.active t p) :
+    G.Raises t ↔
+      n * (whole gs).length * discordWithinBy gs c (G.offspringNumber t) (G.amount t) <
+        n * (whole gs).length * concordWithinBy gs c (G.offspringNumber t) (G.amount t) +
+          concordMeans gs c (G.offspringNumber t) (G.amount t) := by
+  have h := rises_exact_iff_sized G gs c listed common pos exact
+  rw [means_not_against (endedBy_of_inactive acting descended listed inactive), Nat.add_zero] at h
   exact h
 
 /-- Groups whose conditions are coupled end together: where every member of every group depends,
@@ -390,6 +458,68 @@ theorem outweighs :
     rfl, rfl, rfl, rfl, rfl, rfl⟩
 
 end Outweighs
+
+namespace Exhausted
+
+/-- The first generation: two keeping groups, each a member holding back (even) beside a
+groupmate (odd), and a group whose members leave nothing. -/
+def firstKids (p : Nat) : List Nat :=
+  bif p == 0 then [10, 12] else bif p == 1 then [11, 13, 15] else
+    bif p == 2 then [20, 22] else bif p == 3 then [21, 23, 25] else []
+
+/-- Later, a member holding back leaves one offspring and any other two, each like its parent. -/
+def laterKids (p : Nat) : List Nat := bif p % 2 == 0 then [p + 100] else [p + 100, p + 200]
+
+def kids : Nat → Nat → List Nat
+  | 0, p => firstKids p
+  | _ + 1, p => laterKids p
+
+/-- Holding back: one at the even members, none at the odd; offspring keep their parent's. -/
+def holding (_ p : Nat) : Nat := (p + 1) % 2
+
+def G : Generations Nat := ⟨[0, 1, 2, 3, 5, 7], kids, holding⟩
+
+/-- The first generation by groups, and the next listed by descent: the offspring of each keeping
+group form a group. -/
+def first : List (List Nat) := [[0, 1], [2, 3], [5, 7]]
+
+def next : List (List Nat) := [[10, 12, 11, 13, 15], [20, 22, 21, 23, 25]]
+
+theorem first_listed : whole first = G.family 0 := rfl
+
+theorem next_listed : whole next = G.family 1 := rfl
+
+/-- At the first step the group without holding back leaves nothing: within the keeping groups
+holding back is selected against (discordance two), among the groups for it (concordance ten),
+and the mean rises (from a third to two fifths). -/
+theorem first_step :
+    total [5, 7] (G.offspringNumber 0) = 0 ∧
+      concordWithin first (G.offspringNumber 0) (G.amount 0) = 0 ∧
+      discordWithin first (G.offspringNumber 0) (G.amount 0) = 2 ∧
+      concordAmong first (G.offspringNumber 0) (G.amount 0) = 10 ∧
+      discordAmong first (G.offspringNumber 0) (G.amount 0) = 0 ∧ G.Raises 0 :=
+  ⟨rfl, rfl, rfl, rfl, rfl, by decide⟩
+
+/-- The groups formed by descent hold back alike: two in each. -/
+theorem alike : ∀ g, g ∈ next → total g (G.amount 1) = 2
+  | _, .head _ => rfl
+  | _, .tail _ (.head _) => rfl
+  | _, .tail _ (.tail _ mem) => nomatch mem
+
+/-- At the next step the groups formed by descent are alike in holding back (two of five each),
+so nothing is selected among them; within them holding back is selected against (discordance
+twelve), and the mean falls (from two fifths to a quarter), below where it started: selection
+among groups by ending used up the differences among groups it acted on. -/
+theorem next_step :
+    (∀ g, g ∈ next → total g (G.amount 1) = 2) ∧
+      concordAmong next (G.offspringNumber 1) (G.amount 1) = 0 ∧
+      discordAmong next (G.offspringNumber 1) (G.amount 1) = 0 ∧
+      concordWithin next (G.offspringNumber 1) (G.amount 1) = 0 ∧
+      discordWithin next (G.offspringNumber 1) (G.amount 1) = 12 ∧ ¬ G.Raises 1 ∧
+      G.size 0 * G.sum 2 < G.size 2 * G.sum 0 :=
+  ⟨alike, rfl, rfl, rfl, rfl, by decide, by decide⟩
+
+end Exhausted
 
 end GroupEnding
 
