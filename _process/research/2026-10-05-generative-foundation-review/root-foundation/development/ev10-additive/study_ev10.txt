@@ -1,0 +1,48 @@
+## {N}. The additive part of Fisher's theorem (EV10)
+
+```text
+Result(s): Becoming.Reproduction ({THEOREMS} theorems in {DECLS} declarations in the module) states the additive part.
+       Counted Cauchy-Schwarz over any finite list: the square of the total of products is at most the product of the
+       totals of the squares (bound_sq, from twice_le pair by pair and pairs_cross). Over the ordered pairs of a family
+       (pairsOf, total_pairsOf), how far apart the weights are times how far apart the amounts are (dist) totals twice
+       the concordance with the discordance (total_dist), and on the weights themselves twice their squared
+       differences (discord_self). So (concord + discord)^2 is at most concord(w, w) concord(a, a) (additive_le), and
+       the covariance either way, concordance less discordance or discordance less concordance, squared, likewise
+       (covariance_sq_le). Divided by N^4, the squared covariance of offspring number with a carried amount is at
+       most the product of their variances: the additive part of the variance in offspring number through the amount
+       (the squared covariance over the amount's variance) is at most the whole, and all of it where the amount is
+       offspring number itself (additive_self: Fisher's exact case, variation). Over generations with exact
+       transmission of the amount, the cross-multiplied rise or fall of its mean, squared, is at most that product
+       (Generations.response_sq_le, through mean_step and sub_le_of_le_add). Witness Unrelated: offspring numbers
+       one, two, three, the middle member alone carrying an amount: concordance and discordance one each, no
+       covariance, against spreads six and two. Record {RID}.
+Delta: the evolution chapter's next connection 2 and chapter section 8.1 item 9's "the additive part of Fisher's
+       theorem". No new module: the bound lies below the variance form in Becoming.Reproduction (board rule 9), whose
+       docstring said the additive part was not stated.
+Premises: none for the bounds (natural-number weights and amounts over a finite list); over generations, exact
+       transmission of the amount.
+Evidence: core receipt {RECEIPT} (passed; Becoming.Reproduction every axiom report empty; {CORE_LINE}); the
+       connectivity rerun ({APART}); render, check, links and tests.
+Boundary: one carried amount: the additive variance through several amounts at once (the multiple regression of
+       Fisher's breeding value) is not stated; nor is the equality case (offspring number affine in the amount pair
+       by pair) beyond the amount being offspring number itself. The identity "the mean of the predicted offspring
+       number rises by the additive variance over the mean offspring number" needs the regression coefficient, a
+       ratio, and is not stated; the bound is its natural-number content. Natural-number amounts, finite lists,
+       discrete generations.
+Output → input: Fisher's exact case is now one end of a general bound: any carried amount moves with offspring number
+       at most as far as the spreads allow, and the share of the variance in offspring number it carries is its
+       squared correlation, at most one, one where it is offspring number itself. Read with the selection laws: how
+       fast selection moves what is carried is bounded by how much offspring numbers and the amount vary, and an amount
+       can vary beside varying offspring numbers and not be selected at all. Next: drift with selection in one draw,
+       mutation (transmission not exact), dependences formed by descent.
+```
+
+The kit is [`development/ev10-additive/`](development/ev10-additive/): this landing's text (`apply_text.py`, `study_ev10.txt`) and record (`make_record.py`), and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **Cauchy–Schwarz, counted.** For each two indices `i`, `j`: `2 · (x_i y_j)(x_j y_i) ≤ (x_i y_j)² + (x_j y_i)²` (`twice_le`: `u² + v² = 2uv + (v − u)²`), rearranged as `2 · (x_i y_i)(x_j y_j) ≤ x_i² y_j² + x_j² y_i²` (`cross_mul`, `square_mul`). Summed over both indices, the left is `2 (Σ x y)²` and the right `2 Σ x² Σ y²` (`pairs_cross`, `pairs_cross'`); halve.
+- **On pairs.** `dist x y = excess x y + excess y x`. Expanding `dist(w_p, w_q) · dist(a_p, a_q)` gives four terms whose totals over ordered pairs are the concordance, the discordance, the discordance read from the second member (`discord_swap`) and the concordance so read (`concord_swap`). On the weights themselves the discordance is nothing. With `x = dist w`, `y = dist a` over `pairsOf ps`, Cauchy–Schwarz reads `(2S)² ≤ (2 C_ww)(2 C_aa)`, `S` the concordance with the discordance; divide by four (`twice_mul`).
+- **Covariance.** Concordance less discordance is `N²` times the covariance and the concordance of a weight with itself `N²` times its variance (`variation`); the bound is `Cov² ≤ Var(w) Var(a)`. With the regression coefficient `β = Cov/Var(a)`, Fisher's additive genetic variance in offspring number through the amount is `β² Var(a) = Cov²/Var(a)`, so the bound says it is at most `Var(w)`.
+- **Over generations.** With exact transmission, `mean_step` reads `size_t · sum_{t+1} + D = size_{t+1} · sum_t + C`, so the rise is at most `C` and the fall at most `D`, each at most `C + D`.
+- **Witness.** `Unrelated`: members 0, 1, 2 with offspring numbers 1, 2, 3; the amount is one at member 1 only. Pairs (0,1): both rise, concordance 1; (0,2): the amount does not change; (1,2): offspring number rises, the amount falls, discordance 1. Squared differences: offspring numbers 1 + 4 + 1 = 6, the amount 1 + 0 + 1 = 2.
+
+**Self-review.** Cauchy–Schwarz is classical; what is stated is its counting form over ordered pairs, which joins it to the spine's concordance and discordance with no subtraction and no rational number, and its reading as Fisher's additive part through one amount (Fisher 1930's additive genetic variance; Price 1972's reading of the fundamental theorem as the regression of offspring number on what is carried). The statement is an inequality, not Fisher's identity: the identity needs the ratio `β`. The equality case is shown only at the top (the amount offspring number itself); that equality holds exactly where offspring number is affine in the amount pair by pair (Lagrange's identity) is not stated. Several carried amounts at once, the actual breeding value, are not stated; the bound for each amount separately holds.

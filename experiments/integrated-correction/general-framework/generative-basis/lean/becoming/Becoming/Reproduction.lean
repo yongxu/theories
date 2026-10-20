@@ -32,12 +32,26 @@ module states both and joins them.
   exactly where offspring numbers vary and is kept exactly where they are uniform
   (`ByNumber.rises_exact_iff`, `ByNumber.kept_exact_iff`). This is the counting form of Fisher's
   fundamental theorem (Fisher 1930) in its case of exact transmission: the mean offspring number
-  rises by the variance of offspring number over its mean. The general theorem's additive part
-  (the regression of offspring number on what is carried, Price 1972) is not stated. Where a
+  rises by the variance of offspring number over its mean. Where a
   mean fell over a stretch, a step of the stretch fell, found by deciding each step
   (`Generations.fell_step`), and a step falls exactly where what transmission lowered, with
   the discordant pairs, exceeds the concordance with what transmission raised
   (`Generations.falls_step_iff`).
+* **The additive part: what any carried amount transmits is at most the whole.** Counted,
+  Cauchy–Schwarz holds over any finite list (`bound_sq`). Over ordered pairs, how far apart the
+  weights are times how far apart the amounts are totals twice the concordance with the
+  discordance (`total_dist`), and on the weights themselves twice their squared differences, so
+  the concordance with the discordance of offspring number with any carried amount, squared, is
+  at most the squared differences of offspring numbers over pairs times those of the amount
+  (`additive_le`; the covariance either way, `covariance_sq_le`). Divided through, the squared
+  covariance is at most the product of the variances: the additive part of the variance in
+  offspring number through the amount (Fisher's additive genetic variance, the squared covariance
+  over the amount's variance, Price 1972) is at most the whole variance, and all of it where the
+  amount is offspring number itself (`additive_self`, the exact case above). Over generations with
+  exact transmission of the amount, the cross-multiplied rise or fall of its mean, squared, is at
+  most that product (`Generations.response_sq_le`). The bound is attained only where offspring
+  number goes with the amount pair by pair in one proportion; an amount can vary beside varying
+  offspring numbers with no covariance at all (`Unrelated`).
 * **What bounds offspring numbers.** A descendant is given to by its parent across the step
   (`Flow.DescendsAt`), at least one unit, so a parent's offspring number is at most what it
   gives them (`Flow.born_le_given`, over a family `Flow.born_le_given_family`). Where its
@@ -67,7 +81,8 @@ module states both and joins them.
   offspring are balanced and dissipated on, the lineage ends, and at the giving step
   transmission lowered offspring number by four (`OnePool`). Without dissipation a lineage
   within a family of stock one goes on at every step: two relata each give their one unit to
-  the other in turn, losing nothing (`Relay`).
+  the other in turn, losing nothing (`Relay`). Three members with offspring numbers one to three,
+  the middle one alone carrying an amount: no covariance, while both vary (`Unrelated`).
 
 Nothing is supposed about what the offspring are; descent is `Flow.DescendsAt` (the parent
 takes part, gives to the offspring, and the offspring comes to stand). Modelling choices:
@@ -176,6 +191,134 @@ theorem number_none_iff (ps : List α) (kids : α → List α) :
       ∀ p q, p ∈ ps → q ∈ ps → (kids p).length = (kids q).length :=
   none_iff_uniform ps fun p => (kids p).length
 
+/-! ## The additive part -/
+
+theorem twice_le_of_le {x y : Nat} (le : x ≤ y) : 2 * (x * y) ≤ x * x + y * y :=
+  match le_dest le with
+  | ⟨e, at_y⟩ => by
+    rw [at_y]
+    have same : x * x + (x + e) * (x + e) = 2 * (x * (x + e)) + e * e := by
+      rw [add_mul_split x e (x + e), Nat.mul_add e x e, Nat.mul_comm e x, Nat.add_left_comm,
+        ← Nat.add_assoc (x * x) (x * e) (e * e), ← Nat.mul_add x x e, ← Nat.add_assoc, Nat.two_mul]
+    rw [same]
+    exact Nat.le_add_right _ _
+
+/-- Twice a product is at most the sum of the squares. -/
+theorem twice_le (x y : Nat) : 2 * (x * y) ≤ x * x + y * y :=
+  match Nat.le_total x y with
+  | .inl le => twice_le_of_le le
+  | .inr le => by
+    rw [Nat.mul_comm x y, Nat.add_comm (x * x)]
+    exact twice_le_of_le le
+
+theorem square_mul (a b : Nat) : a * b * (a * b) = a * a * (b * b) :=
+  (mul_assoc_nat a b (a * b)).trans ((congrArg (a * ·) (mul_turn b a b)).trans (mul_assoc_nat a a (b * b)).symm)
+
+theorem cross_mul (a b c d : Nat) : a * b * (c * d) = a * d * (c * b) :=
+  (mul_assoc_nat a b (c * d)).trans ((congrArg (a * ·) ((mul_assoc_nat b c d).symm.trans
+    ((Nat.mul_comm (b * c) d).trans (congrArg (d * ·) (Nat.mul_comm b c))))).trans
+      (mul_assoc_nat a d (c * b)).symm)
+
+theorem twice_mul (a b : Nat) : (a + a) * (b + b) = 2 * 2 * (a * b) := by
+  rw [← Nat.two_mul a, ← Nat.two_mul b, mul_assoc_nat, mul_turn a 2 b, ← mul_assoc_nat]
+
+/-- **Cauchy–Schwarz, counted.** Over any finite list, the square of the total of products is at
+most the product of the totals of the squares. No premise. -/
+theorem bound_sq (L : List β) (x y : β → Nat) :
+    total L (fun i => x i * y i) * total L (fun i => x i * y i) ≤
+      total L (fun i => x i * x i) * total L (fun i => y i * y i) :=
+  have point : ∀ i j, 2 * (x i * y i * (x j * y j)) ≤ x i * x i * (y j * y j) + x j * x j * (y i * y i) :=
+    fun i j => Nat.le_trans (Nat.le_of_eq (congrArg (2 * ·) (cross_mul (x i) (y j) (x j) (y i)).symm))
+      (Nat.le_trans (twice_le (x i * y j) (x j * y i))
+        (Nat.le_of_eq (by rw [square_mul, square_mul])))
+  have summed := total_le L fun i _ => total_le L fun j _ => point i j
+  have left : (total L fun i => total L fun j => 2 * (x i * y i * (x j * y j))) =
+      2 * (total L (fun i => x i * y i) * total L (fun i => x i * y i)) := by
+    rw [total_congr (fun i => total_mul 2 (fun j => x i * y i * (x j * y j)) L), total_mul,
+      pairs_cross L (fun i => x i * y i) (fun i => x i * y i)]
+  have right : (total L fun i => total L fun j => x i * x i * (y j * y j) + x j * x j * (y i * y i)) =
+      2 * (total L (fun i => x i * x i) * total L (fun i => y i * y i)) := by
+    rw [pairs_add, pairs_cross L (fun i => x i * x i) (fun i => y i * y i),
+      pairs_cross' L (fun i => x i * x i) (fun i => y i * y i), ← Nat.two_mul]
+  le_of_mul_le_mul (Nat.succ_pos 1) (Nat.le_trans (Nat.le_of_eq left.symm)
+    (Nat.le_trans summed (Nat.le_of_eq right)))
+
+/-- The ordered pairs of a list. -/
+def pairsOf (ps : List α) : List (α × α) := ps.flatMap fun p => ps.map fun q => (p, q)
+
+theorem total_bind (f : α → List β) (q : β → Nat) :
+    ∀ ps : List α, total (ps.flatMap f) q = total ps fun p => total (f p) q
+  | [] => rfl
+  | p :: ps => (total_append q (ps.flatMap f) (f p)).trans
+      (congrArg (total (f p) q + ·) (total_bind f q ps))
+
+theorem total_pairsOf (ps : List α) (F : α → α → Nat) :
+    total (pairsOf ps) (fun pq => F pq.1 pq.2) = total ps fun p => total ps (F p) :=
+  (total_bind _ _ ps).trans (total_congr (fun p => total_map (fun q => (p, q)) _ ps) ps)
+
+/-- How far apart two numbers are. -/
+def dist (x y : Nat) : Nat := excess x y + excess y x
+
+theorem dist_mul (a b c d : Nat) : (a + b) * (c + d) = a * c + a * d + (b * c + b * d) :=
+  (add_mul_split a b (c + d)).trans (Naturals.add_congr (Nat.left_distrib a c d) (Nat.left_distrib b c d))
+
+/-- Over ordered pairs, how far apart the weights are times how far apart the amounts are totals
+twice the concordance with the discordance. -/
+theorem total_dist (ps : List α) (w a : α → Nat) :
+    (total ps fun p => total ps fun q => dist (w p) (w q) * dist (a p) (a q)) =
+      (concord ps w a + discord ps w a) + (concord ps w a + discord ps w a) := by
+  unfold dist
+  rw [total_congr (fun p => total_congr (fun q => dist_mul (excess (w p) (w q)) (excess (w q) (w p))
+      (excess (a p) (a q)) (excess (a q) (a p))) ps) ps, pairs_add, pairs_add, pairs_add,
+    discord_swap, concord_swap]
+  show concord ps w a + discord ps w a + (discord ps w a + concord ps w a) = _
+  rw [Nat.add_comm (discord ps w a) (concord ps w a)]
+
+/-- **The additive part is at most the whole.** The concordance with the discordance of offspring
+number (or any weight) with a carried amount, squared, is at most the squared differences of the
+weights over pairs times those of the amount: divided through, the squared covariance is at most
+the product of the variances, so the part of the variance in offspring number carried by the
+amount (its additive part, the squared covariance over the amount's variance) is at most the
+whole. No premise. -/
+theorem additive_le (ps : List α) (w a : α → Nat) :
+    (concord ps w a + discord ps w a) * (concord ps w a + discord ps w a) ≤
+      concord ps w w * concord ps a a :=
+  have cs := bound_sq (pairsOf ps) (fun pq => dist (w pq.1) (w pq.2)) (fun pq => dist (a pq.1) (a pq.2))
+  have uv := (total_pairsOf ps fun p q => dist (w p) (w q) * dist (a p) (a q)).trans (total_dist ps w a)
+  have uu := (total_pairsOf ps fun p q => dist (w p) (w q) * dist (w p) (w q)).trans
+    ((total_dist ps w w).trans (by rw [discord_self, Nat.add_zero]))
+  have vv := (total_pairsOf ps fun p q => dist (a p) (a q) * dist (a p) (a q)).trans
+    ((total_dist ps a a).trans (by rw [discord_self, Nat.add_zero]))
+  le_of_mul_le_mul (Nat.mul_pos (Nat.succ_pos 1) (Nat.succ_pos 1)) (by
+    rw [← twice_mul, ← twice_mul, ← uv, ← uu, ← vv]
+    exact cs)
+
+/-- So the covariance squared, whichever way it goes, is at most the product of the squared
+differences: concordance less discordance, and discordance less concordance. -/
+theorem covariance_sq_le (ps : List α) (w a : α → Nat) :
+    (concord ps w a - discord ps w a) * (concord ps w a - discord ps w a) ≤
+        concord ps w w * concord ps a a ∧
+      (discord ps w a - concord ps w a) * (discord ps w a - concord ps w a) ≤
+        concord ps w w * concord ps a a :=
+  have up : concord ps w a - discord ps w a ≤ concord ps w a + discord ps w a :=
+    Nat.le_trans (Nat.sub_le _ _) (Nat.le_add_right _ _)
+  have down : discord ps w a - concord ps w a ≤ concord ps w a + discord ps w a :=
+    Nat.le_trans (Nat.sub_le _ _) (Nat.le_add_left _ _)
+  ⟨Nat.le_trans (Nat.mul_le_mul up up) (additive_le ps w a),
+    Nat.le_trans (Nat.mul_le_mul down down) (additive_le ps w a)⟩
+
+/-- **All of it is additive where the amount is the weight itself:** read on offspring number, the
+bound is attained (Fisher's exact case, `variation`). -/
+theorem additive_self (ps : List α) (w : α → Nat) :
+    (concord ps w w + discord ps w w) * (concord ps w w + discord ps w w) = concord ps w w * concord ps w w := by
+  rw [discord_self, Nat.add_zero]
+
+theorem sub_le_of_le_add : ∀ {x y c : Nat}, x ≤ y + c → x - y ≤ c
+  | _, 0, _, le => Nat.le_trans le (Nat.le_of_eq (Nat.zero_add _))
+  | 0, _ + 1, _, _ => Nat.le_trans (Nat.le_of_eq (Nat.zero_sub _)) (Nat.zero_le _)
+  | x + 1, y + 1, _, le => (Nat.succ_sub_succ x y).symm ▸
+      sub_le_of_le_add (Nat.le_of_succ_le_succ (Nat.le_trans le (Nat.le_of_eq (Nat.succ_add y _))))
+
 /-! ## Over generations -/
 
 /-- A bounded search: a decidable property that does not fail at every number below `T` holds
@@ -219,6 +362,35 @@ theorem fell_step {T : Nat} (fell : G.size 0 * G.sum T < G.size T * G.sum 0) :
 theorem empty_from {t : Nat} (empty : G.size t = 0) : ∀ n, G.size (t + n) = 0
   | 0 => empty
   | n + 1 => (G.empty_after (empty_from empty n)).1
+
+/-- **The response is at most what the spreads allow.** With exact transmission at a step, the
+size times the next total exceeds the next size times the total (the mean's rise, cross-multiplied)
+by at most the concordance, and falls short of it by at most the discordance; either, squared, is at
+most the squared differences of offspring numbers over pairs times those of the amount. -/
+theorem response_sq_le {t : Nat}
+    (exact : SelectionTerm.Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1))) :
+    (G.size t * G.sum (t + 1) - G.size (t + 1) * G.sum t) *
+          (G.size t * G.sum (t + 1) - G.size (t + 1) * G.sum t) ≤
+        concord (G.family t) (G.offspringNumber t) (G.offspringNumber t) *
+          concord (G.family t) (G.amount t) (G.amount t) ∧
+      (G.size (t + 1) * G.sum t - G.size t * G.sum (t + 1)) *
+          (G.size (t + 1) * G.sum t - G.size t * G.sum (t + 1)) ≤
+        concord (G.family t) (G.offspringNumber t) (G.offspringNumber t) *
+          concord (G.family t) (G.amount t) (G.amount t) := by
+  have step := G.mean_step t
+  unfold SelectionTerm.Generations.raisedAt SelectionTerm.Generations.loweredAt at step
+  rw [raised_exact exact, lowered_exact exact, Nat.mul_zero, Nat.zero_add, Nat.add_zero] at step
+  have up : G.size t * G.sum (t + 1) - G.size (t + 1) * G.sum t ≤
+      G.concordAt t + G.discordAt t :=
+    Nat.le_trans (sub_le_of_le_add (Nat.le_trans (Nat.le_add_right _ (G.discordAt t)) (Nat.le_of_eq step)))
+      (Nat.le_add_right _ _)
+  have down : G.size (t + 1) * G.sum t - G.size t * G.sum (t + 1) ≤
+      G.concordAt t + G.discordAt t :=
+    Nat.le_trans (sub_le_of_le_add (Nat.le_trans (Nat.le_add_right _ (G.concordAt t))
+      (Nat.le_of_eq (step.symm.trans (Nat.add_comm _ _) |>.trans (Nat.add_comm _ _)))))
+      (Nat.le_add_left _ _)
+  exact ⟨Nat.le_trans (Nat.mul_le_mul up up) (additive_le _ _ _),
+    Nat.le_trans (Nat.mul_le_mul down down) (additive_le _ _ _)⟩
 
 namespace ByNumber
 
@@ -738,6 +910,23 @@ theorem relay : flow.Balances web ∧ (∀ t, ¬ flow.DissipatesOn family t) ∧
     cases turn n <;> rfl⟩⟩
 
 end Relay
+
+namespace Unrelated
+
+/-- Three members with offspring numbers one, two and three, the middle one alone carrying an
+amount: concordance and discordance are one each, so the covariance is nothing while offspring
+number varies (six) and so does the amount (two): none of the variance in offspring number is
+carried by the amount, against the bound's twelve. -/
+def amount : Nat → Nat
+  | 1 => 1
+  | _ => 0
+
+theorem unrelated :
+    concord [0, 1, 2] (fun p => p + 1) amount = 1 ∧ discord [0, 1, 2] (fun p => p + 1) amount = 1 ∧
+      concord [0, 1, 2] (fun p => p + 1) (fun p => p + 1) = 6 ∧ concord [0, 1, 2] amount amount = 2 :=
+  ⟨rfl, rfl, rfl, rfl⟩
+
+end Unrelated
 
 end Reproduction
 

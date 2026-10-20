@@ -710,7 +710,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   balanced and dissipated on number, with the formations taking from it, at most its stock. A
   lineage within a family balanced and dissipated on at each step reproduces at most its stock
   many steps and ends; read by offspring number, one that began reproducing has a step at which
-  transmission lowered offspring number by more than selection on it and what it raised.
+  transmission lowered offspring number by more than selection on it and what it raised. The
+  additive part: counted, Cauchy–Schwarz holds over any finite list, so the concordance with the
+  discordance of offspring number with any carried amount, squared, is at most the squared
+  differences of offspring numbers over pairs times those of the amount (the additive variance at
+  most the whole, all of it where the amount is offspring number itself); with exact
+  transmission the rise of the amount's mean, cross-multiplied and squared, is at most that.
 * `Becoming.SelectionLevels` (L1): selection within groups and among them, the multilevel form
   of Price's equation (no premise beyond groups of equal size). Over a family listed as k groups
   of m members, the whole's concordance, with k times the groups' own discordance and the

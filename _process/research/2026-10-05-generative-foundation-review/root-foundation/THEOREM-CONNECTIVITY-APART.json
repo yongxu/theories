@@ -2136,6 +2136,26 @@
    "module": "Becoming.Drift",
    "category": "model-witness",
    "reason": "two members, one of each kind, one generation: one history fixes, one loses, two stay varied; a fact about one constructed population, not a law of the unfolding"
+  },
+  "Becoming.Reproduction.covariance_sq_le": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "the covariance either way, squared, is at most the squared differences of the weights times those of the amount: a law of any finite family read with natural-number weights and amounts, with no world"
+  },
+  "Becoming.Reproduction.additive_self": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "read on the weights themselves the bound is attained, Fisher's exact case: a law of any finite family read with natural-number weights and amounts, with no world"
+  },
+  "Becoming.Reproduction.Generations.response_sq_le": {
+   "module": "Becoming.Reproduction",
+   "category": "general-structure",
+   "reason": "over listed generations with exact transmission the cross-multiplied rise or fall of the mean, squared, is at most the product of the spreads: a law of any finite family read with natural-number weights and amounts, with no world beyond the listed generations"
+  },
+  "Becoming.Reproduction.Unrelated.unrelated": {
+   "module": "Becoming.Reproduction",
+   "category": "model-witness",
+   "reason": "three members with offspring numbers one to three, the middle one alone carrying an amount: no covariance while both vary; a fact about one constructed family, not a law of the unfolding"
   }
  },
  "instances": {
