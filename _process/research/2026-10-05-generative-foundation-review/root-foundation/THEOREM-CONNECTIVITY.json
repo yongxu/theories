@@ -1,11 +1,11 @@
 {
- "commit": "df1d7de03d5f685ef9bdd923028b9097431363df",
+ "commit": "7d9937efc1cf5df42d7b5afabcebeb61c6c37e57",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261020T125112.981373Z",
+ "core_receipt_at_commit": "20261020T130550.714830Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 295,
- "constants": 36974,
- "spine_theorems": 11924,
+ "constants": 37058,
+ "spine_theorems": 11944,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,27 +28,27 @@
  "classes": {
   "statement on both families": 941,
   "statement on Process/Frame/Run/Trace": 2881,
-  "statement on World/Flow/Web": 2736,
+  "statement on World/Flow/Web": 2755,
   "statement on the base only through a law of its own module": 182,
   "proof through a base family": 154,
-  "used by a theorem on the base": 4293,
+  "used by a theorem on the base": 4296,
   "instance on the base recorded": 154,
-  "apart: own vocabulary": 538,
+  "apart: own vocabulary": 536,
   "apart: prelude-only statement": 45
  },
- "apart": 583,
- "apart_general_structure_by_design": 117,
+ "apart": 581,
+ "apart_general_structure_by_design": 115,
  "apart_otherwise": 466,
  "pure_forwarders": {
-  "spine theorems that are pure forwarders": 63,
-  "of them on the base": 54,
+  "spine theorems that are pure forwarders": 65,
+  "of them on the base": 56,
   "their targets, by class": {
    "statement on Process/Frame/Run/Trace": 11,
    "instance on the base recorded": 10,
    "statement on both families": 1,
    "used by a theorem on the base": 23,
-   "statement on the base only through a law of its own module": 1,
-   "statement on World/Flow/Web": 6
+   "statement on World/Flow/Web": 8,
+   "statement on the base only through a law of its own module": 1
   }
  },
  "recorded_instances": {
@@ -171,13 +171,13 @@
    18,
    70
   ],
-  "Becoming.SelectionTerm": [
-   17,
-   67
-  ],
   "Becoming.Reproduction": [
    16,
    50
+  ],
+  "Becoming.SelectionTerm": [
+   15,
+   67
   ],
   "Becoming.Ideals": [
    15,
@@ -261,7 +261,7 @@
   ],
   "Becoming.GroupEnding": [
    7,
-   20
+   23
   ],
   "Becoming.Reconfiguration": [
    7,
@@ -563,17 +563,17 @@
  "rings": {
   "core": {
    "modules": 279,
-   "theorems": 11178,
-   "apart": 503,
+   "theorems": 11198,
+   "apart": 501,
    "classes": {
     "statement on both families": 927,
     "statement on Process/Frame/Run/Trace": 2670,
-    "statement on World/Flow/Web": 2711,
+    "statement on World/Flow/Web": 2730,
     "statement on the base only through a law of its own module": 136,
     "proof through a base family": 143,
-    "used by a theorem on the base": 3934,
+    "used by a theorem on the base": 3937,
     "instance on the base recorded": 154,
-    "apart: own vocabulary": 459,
+    "apart: own vocabulary": 457,
     "apart: prelude-only statement": 44
    }
   },
@@ -3565,8 +3565,8 @@
   "Becoming.SelectionTerm.none_iff": "apart: own vocabulary",
   "Becoming.SelectionTerm.total_zero_of": "used by a theorem on the base",
   "Becoming.SelectionTerm.pairs_zero": "used by a theorem on the base",
-  "Becoming.SelectionTerm.concord_uniform": "apart: own vocabulary",
-  "Becoming.SelectionTerm.discord_uniform": "apart: own vocabulary",
+  "Becoming.SelectionTerm.concord_uniform": "used by a theorem on the base",
+  "Becoming.SelectionTerm.discord_uniform": "used by a theorem on the base",
   "Becoming.SelectionTerm.concord_alike": "used by a theorem on the base",
   "Becoming.SelectionTerm.discord_alike": "used by a theorem on the base",
   "Becoming.SelectionTerm.selection_covariation": "used by a theorem on the base",
@@ -3687,12 +3687,15 @@
   "Becoming.GroupEnding.rises_of_ended": "used by a theorem on the base",
   "Becoming.GroupEnding.mem_whole": "used by a theorem on the base",
   "Becoming.GroupEnding.Flow.inactive_childless": "statement on World/Flow/Web",
+  "Becoming.GroupEnding.Flow.family_childless": "statement on World/Flow/Web",
   "Becoming.GroupEnding.Flow.excess_childless": "statement on World/Flow/Web",
   "Becoming.GroupEnding.Flow.offspring_zero": "statement on World/Flow/Web",
   "Becoming.GroupEnding.Flow.group_childless": "statement on World/Flow/Web",
   "Becoming.GroupEnding.Flow.ended_of_inactive": "statement on World/Flow/Web",
   "Becoming.GroupEnding.Flow.raises_of_inactive": "statement on World/Flow/Web",
   "Becoming.GroupEnding.Flow.rises_iff_inactive": "statement on World/Flow/Web",
+  "Becoming.GroupEnding.Flow.coupled_end_together": "statement on World/Flow/Web",
+  "Becoming.GroupEnding.Flow.ended_of_family": "statement on World/Flow/Web",
   "Becoming.GroupEnding.Flow.all_end": "statement on World/Flow/Web",
   "Becoming.GroupEnding.uniform": "apart: own vocabulary",
   "Becoming.GroupEnding.equal": "apart: own vocabulary",
@@ -4916,20 +4919,29 @@
   "Becoming.Flow.rising_fed_from_beyond": "statement on World/Flow/Web",
   "Becoming.Flow.joint_keeps_at": "statement on World/Flow/Web",
   "Becoming.Flow.joint_keeps": "statement on World/Flow/Web",
+  "Becoming.Flow.family_excess_lowers_at": "statement on World/Flow/Web",
   "Becoming.Flow.excess_lowers_at": "statement on World/Flow/Web",
   "Becoming.Flow.excess_lowers": "statement on World/Flow/Web",
+  "Becoming.Flow.family_excess_bounded_at": "statement on World/Flow/Web",
+  "Becoming.Flow.family_excess_bounded": "statement on World/Flow/Web",
   "Becoming.Flow.excess_bounded_at": "statement on World/Flow/Web",
   "Becoming.Flow.excess_bounded": "statement on World/Flow/Web",
   "Becoming.Flow.net_give_raises_at": "statement on World/Flow/Web",
   "Becoming.Flow.net_give_bounded_at": "statement on World/Flow/Web",
   "Becoming.Flow.restores_at": "statement on World/Flow/Web",
   "Becoming.Flow.restores": "statement on World/Flow/Web",
+  "Becoming.Flow.of_single": "used by a theorem on the base",
+  "Becoming.Flow.gate_single": "statement on World/Flow/Web",
+  "Becoming.Flow.family_stays_below_at": "statement on World/Flow/Web",
   "Becoming.Flow.stays_below_at": "statement on World/Flow/Web",
   "Becoming.Flow.stays_below": "statement on World/Flow/Web",
+  "Becoming.Flow.family_ends_below_at": "statement on World/Flow/Web",
   "Becoming.Flow.ends_below_at": "statement on World/Flow/Web",
   "Becoming.Flow.ends_below": "statement on World/Flow/Web",
+  "Becoming.Flow.family_excess_ends_at": "statement on World/Flow/Web",
   "Becoming.Flow.joint_excess_ends_at": "statement on World/Flow/Web",
   "Becoming.Flow.joint_excess_ends": "statement on World/Flow/Web",
+  "Becoming.Flow.family_excess_ends": "statement on World/Flow/Web",
   "Becoming.Web.embodiedArising_fed_from_beyond": "statement on World/Flow/Web",
   "Becoming.Lone.fed": "statement on World/Flow/Web",
   "Becoming.Lone.each_fuel_once": "statement on World/Flow/Web",
@@ -4943,6 +4955,14 @@
   "Becoming.Exceeding.gated": "statement on World/Flow/Web",
   "Becoming.Exceeding.own_not_joint": "statement on World/Flow/Web",
   "Becoming.Exceeding.all_end": "statement on World/Flow/Web",
+  "Becoming.Coupled.balances": "statement on World/Flow/Web",
+  "Becoming.Coupled.acting": "statement on World/Flow/Web",
+  "Becoming.Coupled.dependent": "statement on World/Flow/Web",
+  "Becoming.Coupled.alone_within": "statement on World/Flow/Web",
+  "Becoming.Coupled.alone_ungated": "statement on World/Flow/Web",
+  "Becoming.Coupled.gated": "statement on World/Flow/Web",
+  "Becoming.Coupled.excess": "statement on World/Flow/Web",
+  "Becoming.Coupled.all_end": "statement on World/Flow/Web",
   "Becoming.Alone.balances": "statement on World/Flow/Web",
   "Becoming.Alone.dependent": "statement on World/Flow/Web",
   "Becoming.Alone.all_continue": "statement on World/Flow/Web",

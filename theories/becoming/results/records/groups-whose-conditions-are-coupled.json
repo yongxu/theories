@@ -1,0 +1,399 @@
+{
+  "schema_version": 2,
+  "id": "groups-whose-conditions-are-coupled",
+  "title": {
+    "en": "Groups whose conditions are coupled",
+    "zh": "条件相互耦合的组"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-20T13:23:10+00:00",
+  "statement": {
+    "en": "Joint excess and gated ending hold of a family of conditions read as one; a patch a neighbour renews shows no excess alone yet ends with the pair. Groups depending on one such family end together, unselected among; ending selects only between families.",
+    "zh": "共同过度与门控终结对读作一体的条件族成立；由邻居补充的地块单独读出时无过度，却与该对一同终结。依存于同一个这样的族的各组一同终结，组间无选择；终止只在族与族之间选择。"
+  },
+  "laws": [
+    {
+      "en": "Read as one, a family of conditions balanced across a step at which its uptake exceeds its replenishment loses at least one from its stock; n such steps lower it by at least n.",
+      "zh": "读作一体的条件族，在其取用超过补充且平衡的一步中，存量至少下降一；n 步这样的过度至少使其下降 n。",
+      "declarations": [
+        "Becoming.Flow.family_excess_lowers_at",
+        "Becoming.Flow.family_excess_bounded_at",
+        "Becoming.Flow.family_excess_bounded"
+      ]
+    },
+    {
+      "en": "The coupled gate: where whatever gives to a member depends on some member at a need of at least m, a stock below m stays below m, and a formation depending on any member at such a need is not active; so n steps of family excess from a stock below n + m end every such formation from then on.",
+      "zh": "耦合门控：给予某成员的都以至少 m 的需要依存于某个成员时，低于 m 的存量保持低于 m，以这样的需要依存于任一成员的形成不活跃；故自低于 n + m 的存量起 n 步族过度，此后终结每个这样的形成。",
+      "declarations": [
+        "Becoming.Flow.family_stays_below_at",
+        "Becoming.Flow.family_ends_below_at",
+        "Becoming.Flow.family_excess_ends_at",
+        "Becoming.Flow.family_excess_ends"
+      ]
+    },
+    {
+      "en": "The laws of one condition are the family of that condition alone: a gate on one condition is the coupled gate on its family of one, and joint excess ends gated renewal through the family law.",
+      "zh": "单个条件的定律即只含该条件之族的情形：一个条件上的门控就是其单元族上的耦合门控，共同过度经由族定律终结门控更新。",
+      "declarations": [
+        "Becoming.Flow.of_single",
+        "Becoming.Flow.gate_single",
+        "Becoming.Flow.excess_lowers_at",
+        "Becoming.Flow.excess_bounded_at",
+        "Becoming.Flow.stays_below_at",
+        "Becoming.Flow.ends_below_at",
+        "Becoming.Flow.joint_excess_ends_at"
+      ]
+    },
+    {
+      "en": "Witness: a taker on a patch renewed by a formation drawing on a neighbour. Read alone, the patch shows no joint excess while renewed and its renewal is not gated on it; read as one with the neighbour, the renewal is gated, the uptake exceeds the replenishment at every step, and both formations end.",
+      "zh": "见证：地块上的取用者，由一个汲取邻居的形成补充该地块。单独读出时，地块在被补充期间无联合超出，其更新也不以它为门控；与邻居读作一体时，更新以族为门控，取用每步都超过补充，两个形成都终结。",
+      "declarations": [
+        "Becoming.Coupled.Condition",
+        "Becoming.Coupled.Formation",
+        "Becoming.Coupled.pair",
+        "Becoming.Coupled.present",
+        "Becoming.Coupled.flow",
+        "Becoming.Coupled.web",
+        "Becoming.Coupled.balances",
+        "Becoming.Coupled.acting",
+        "Becoming.Coupled.dependent",
+        "Becoming.Coupled.alone_within",
+        "Becoming.Coupled.alone_ungated",
+        "Becoming.Coupled.gated",
+        "Becoming.Coupled.excess",
+        "Becoming.Coupled.all_end"
+      ]
+    },
+    {
+      "en": "A member depending on any condition of such a family leaves no descendant after the family's excess; groups whose members depend on one such family end together, each leaving no offspring and nothing selected among them, for any amount.",
+      "zh": "依存于这样的族任一条件的成员，在族的过度之后不留后代；成员依存于同一个这样的族的各组一同终结，各不留后代，对任何量组间都无选择。",
+      "declarations": [
+        "Becoming.GroupEnding.Flow.family_childless",
+        "Becoming.GroupEnding.Flow.excess_childless",
+        "Becoming.GroupEnding.Flow.coupled_end_together"
+      ]
+    },
+    {
+      "en": "So ending selects among groups only between families: where the groups with less of an amount depend on a family that ran into excess, they leave nothing.",
+      "zh": "故终止只在族与族之间选择组：某量较少的组依存于遭遇过度的族时，它们不留任何后代。",
+      "declarations": [
+        "Becoming.GroupEnding.Flow.ended_of_family"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Balance on the family across the steps used; the coupled gate (whatever gives to a member depends on some member at a need of at least m), givers supported, or globally only active formations giving and activity needing support; n steps of family excess from a stock below n + m; members depending on some condition of the family at such a need; over generations, descent and the generation's members in the groups listed.",
+      "zh": "不加公理。所用各步上族的平衡；耦合门控（给予某成员的都以至少 m 的需要依存于某个成员）、给予者得到支持，或全局地只有活跃的形成给予且活动需要支持；自低于 n + m 的存量起 n 步族过度；成员以这样的需要依存于族的某个条件；世代：世系，且该代成员在所列的组中。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the family law is tight: its start counts the whole stock, so a family whose members are drawn down in turn ends only after as many steps of excess as its stock holds.",
+      "zh": "族定律是紧的：其起点计入整个存量，故成员依次被耗尽的族，只有在过度步数与其存量相当之后才终结。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which conditions are coupled into a family, or why the excess comes: hypotheses wherever they enter. Mixing between groups and how groups and their couplings form are not stated.",
+      "zh": "哪些条件耦合为一族，或过度为何到来：凡出现处都是假设。组间混合以及组与其耦合如何形成未陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "That learners in a commons run into family excess: the commons test measured it; here it is supposed.",
+      "zh": "公地中的学习者会遭遇族过度：公地检验测得了它；此处是假设。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "detail": {
+        "en": "Read on one condition, the gated law can fail to apply where it applies to the family: in Coupled the patch shows no joint excess at the first two steps and its giver does not depend on it (Coupled.alone_within, Coupled.alone_ungated), while the pair ends both formations (Coupled.all_end).",
+        "zh": "在单个条件上读，门控定律可能在族上适用之处不适用：Coupled 中地块前两步无联合超出，其给予者也不依存于它（Coupled.alone_within、Coupled.alone_ungated），而该对终结两个形成（Coupled.all_end）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T130550.714830Z): every declaration of Becoming.Continuation and Becoming.GroupEnding has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 265; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T130550.714830Z）：Becoming.Continuation 与 Becoming.GroupEnding 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 265 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Mixing between groups; how groups and their couplings form; a tighter family law where members are drawn down in turn; an independent review.",
+    "zh": "组间混合；组与其耦合如何形成；成员依次被耗尽时更紧的族定律；独立审查。"
+  },
+  "correspondence": {
+    "en": "Metapopulation dynamics (Levins 1969; Hanski 1998): patches linked by recolonization persist or go extinct together, and a patch read alone can look sustained while the network is in deficit; group selection requires groups that differ in their fate (Wilson and Sober 1994), which coupled groups do not. Readings (the AI's): coupling, not sharing one condition, is what makes groups end together; a commons is a family, not a single pool.",
+    "zh": "集合种群动态（Levins 1969；Hanski 1998）：由再定殖相连的斑块一同存续或一同灭绝，单独读出的斑块可能看似可持续，而网络整体处于亏空；组选择需要命运不同的组（Wilson 与 Sober 1994），耦合的组则不然。读法（AI 的）：使各组一同终结的是耦合，而非共享一个条件；公地是一个族，而非单一池。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+  "aliases": [
+    "groups whose conditions are coupled",
+    "条件相互耦合的组",
+    "coupled gate",
+    "family excess",
+    "Becoming.Flow.family_excess_ends",
+    "Becoming.Flow.family_excess_bounded",
+    "Becoming.Coupled.all_end",
+    "Becoming.GroupEnding.Flow.coupled_end_together",
+    "Becoming.GroupEnding.Flow.ended_of_family"
+  ],
+  "dependencies": [
+    {
+      "id": "own-count-misses-joint-excess",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Generalizes Becoming.Continuation's joint count and gated ending (excess_bounded, stays_below, joint_excess_ends) from one condition to a family read as one; the one-condition laws are now derived from the family laws.",
+        "zh": "将 Becoming.Continuation 的联合计入与门控终结（excess_bounded、stays_below、joint_excess_ends）从单个条件推广到读作一体的条件族；单个条件的定律现由族定律推出。"
+      },
+      "interface": {
+        "output": {
+          "en": "Joint excess and gated renewal for one condition.",
+          "zh": "单个条件的共同过度与门控更新。"
+        },
+        "input": {
+          "en": "The same over a family, the coupled gate.",
+          "zh": "对条件族的同一定律，耦合门控。"
+        },
+        "conditions": {
+          "en": "Balance on the family, the coupled gate, family excess.",
+          "zh": "族上的平衡、耦合门控、族过度。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean"
+      }
+    },
+    {
+      "id": "selection-among-groups-by-ending",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Becoming.GroupEnding's base laws of descent (inactive_childless, group_childless, ended_of_inactive) and SelectionTerm's concord_uniform and discord_uniform.",
+        "zh": "复用 Becoming.GroupEnding 关于世系的流上定律（inactive_childless、group_childless、ended_of_inactive）以及 SelectionTerm 的 concord_uniform、discord_uniform。"
+      },
+      "interface": {
+        "output": {
+          "en": "Inactive members leave no descendants; groups of them no offspring.",
+          "zh": "不活跃的成员不留后代；由其组成的组不留后代。"
+        },
+        "input": {
+          "en": "Groups on one coupled family end together.",
+          "zh": "依存于同一耦合族的组一同终结。"
+        },
+        "conditions": {
+          "en": "Only active formations give; descent.",
+          "zh": "只有活跃的形成给予；世系。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "own-count-misses-joint-excess",
+      "detail": {
+        "en": "Its one-condition laws, now the family of one.",
+        "zh": "其单个条件的定律，现为单元族的情形。"
+      }
+    },
+    {
+      "id": "selection-among-groups-by-ending",
+      "detail": {
+        "en": "Groups on conditions of their own; here groups on coupled conditions.",
+        "zh": "依存于自身条件的组；此处为依存于耦合条件的组。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Alone.all_continue",
+        "Becoming.Alone.balances",
+        "Becoming.Alone.dependent",
+        "Becoming.Alone.flow",
+        "Becoming.Alone.web",
+        "Becoming.Coupled.Condition",
+        "Becoming.Coupled.Formation",
+        "Becoming.Coupled.acting",
+        "Becoming.Coupled.all_end",
+        "Becoming.Coupled.alone_ungated",
+        "Becoming.Coupled.alone_within",
+        "Becoming.Coupled.balances",
+        "Becoming.Coupled.dependent",
+        "Becoming.Coupled.excess",
+        "Becoming.Coupled.flow",
+        "Becoming.Coupled.gated",
+        "Becoming.Coupled.pair",
+        "Becoming.Coupled.present",
+        "Becoming.Coupled.web",
+        "Becoming.Downstream.Condition",
+        "Becoming.Downstream.Formation",
+        "Becoming.Downstream.balances",
+        "Becoming.Downstream.dependent",
+        "Becoming.Downstream.downLive",
+        "Becoming.Downstream.flow",
+        "Becoming.Downstream.one_way",
+        "Becoming.Downstream.outputLevel",
+        "Becoming.Downstream.present",
+        "Becoming.Downstream.web",
+        "Becoming.Exceeding.Member",
+        "Becoming.Exceeding.acting",
+        "Becoming.Exceeding.all_end",
+        "Becoming.Exceeding.balances",
+        "Becoming.Exceeding.dependent",
+        "Becoming.Exceeding.flow",
+        "Becoming.Exceeding.gated",
+        "Becoming.Exceeding.level",
+        "Becoming.Exceeding.live",
+        "Becoming.Exceeding.live_of_present",
+        "Becoming.Exceeding.own_not_joint",
+        "Becoming.Exceeding.present",
+        "Becoming.Exceeding.web",
+        "Becoming.Flow.Conveys",
+        "Becoming.Flow.FedBy",
+        "Becoming.Flow.FedFromBeyond",
+        "Becoming.Flow.WithinJoint",
+        "Becoming.Flow.WithinOwn",
+        "Becoming.Flow.ends_below",
+        "Becoming.Flow.ends_below_at",
+        "Becoming.Flow.excess_bounded",
+        "Becoming.Flow.excess_bounded_at",
+        "Becoming.Flow.excess_lowers",
+        "Becoming.Flow.excess_lowers_at",
+        "Becoming.Flow.family_ends_below_at",
+        "Becoming.Flow.family_excess_bounded",
+        "Becoming.Flow.family_excess_bounded_at",
+        "Becoming.Flow.family_excess_ends",
+        "Becoming.Flow.family_excess_ends_at",
+        "Becoming.Flow.family_excess_lowers_at",
+        "Becoming.Flow.family_stays_below_at",
+        "Becoming.Flow.fed_from_beyond",
+        "Becoming.Flow.fed_from_beyond_from",
+        "Becoming.Flow.fed_of_not_inward",
+        "Becoming.Flow.gate_single",
+        "Becoming.Flow.inward_iff_not_fed",
+        "Becoming.Flow.inward_of_not_fed",
+        "Becoming.Flow.joint_excess_ends",
+        "Becoming.Flow.joint_excess_ends_at",
+        "Becoming.Flow.joint_keeps",
+        "Becoming.Flow.joint_keeps_at",
+        "Becoming.Flow.net_give_bounded_at",
+        "Becoming.Flow.net_give_raises_at",
+        "Becoming.Flow.not_inward_of_fed",
+        "Becoming.Flow.of_single",
+        "Becoming.Flow.restores",
+        "Becoming.Flow.restores_at",
+        "Becoming.Flow.rising_fed_from_beyond",
+        "Becoming.Flow.rising_fed_from_beyond_from",
+        "Becoming.Flow.stays_below",
+        "Becoming.Flow.stays_below_at",
+        "Becoming.Lone.each_fuel_once",
+        "Becoming.Lone.fed",
+        "Becoming.Lone.fed_not_recurring",
+        "Becoming.Mortal.Member",
+        "Becoming.Mortal.after_its_end",
+        "Becoming.Mortal.balances",
+        "Becoming.Mortal.dependent",
+        "Becoming.Mortal.flow",
+        "Becoming.Mortal.kept",
+        "Becoming.Mortal.level",
+        "Becoming.Mortal.live",
+        "Becoming.Mortal.present",
+        "Becoming.Mortal.web",
+        "Becoming.Mortal.without",
+        "Becoming.Mortal.without_continues",
+        "Becoming.Pair.flow",
+        "Becoming.Pair.no_web",
+        "Becoming.Pair.own_not_joint",
+        "Becoming.Web.embodiedArising_fed_from_beyond"
+      ],
+      "sha256": "15a506ddb8d4768886e94227d868c300c8932ce3f489c48981f0f5777cf528f7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.GroupEnding.Ended",
+        "Becoming.GroupEnding.Flow.all_end",
+        "Becoming.GroupEnding.Flow.coupled_end_together",
+        "Becoming.GroupEnding.Flow.ended_of_family",
+        "Becoming.GroupEnding.Flow.ended_of_inactive",
+        "Becoming.GroupEnding.Flow.excess_childless",
+        "Becoming.GroupEnding.Flow.family_childless",
+        "Becoming.GroupEnding.Flow.group_childless",
+        "Becoming.GroupEnding.Flow.inactive_childless",
+        "Becoming.GroupEnding.Flow.offspring_zero",
+        "Becoming.GroupEnding.Flow.raises_of_inactive",
+        "Becoming.GroupEnding.Flow.rises_iff_inactive",
+        "Becoming.GroupEnding.Outweighed.keeping_rises",
+        "Becoming.GroupEnding.Outweighed.offspring",
+        "Becoming.GroupEnding.Outweighed.outweighed",
+        "Becoming.GroupEnding.Outweighs.offspring",
+        "Becoming.GroupEnding.Outweighs.outweighs",
+        "Becoming.GroupEnding.among_not_against",
+        "Becoming.GroupEnding.equal",
+        "Becoming.GroupEnding.excess_pos_of_lt",
+        "Becoming.GroupEnding.keepingFirst",
+        "Becoming.GroupEnding.keeps",
+        "Becoming.GroupEnding.mem_whole",
+        "Becoming.GroupEnding.not_against_of_ended",
+        "Becoming.GroupEnding.pairs_pos",
+        "Becoming.GroupEnding.rises_iff_ended",
+        "Becoming.GroupEnding.rises_of_ended",
+        "Becoming.GroupEnding.uniform"
+      ],
+      "sha256": "dda45b0d0c6e4d5c5c1b14d34a3b98c9a73659e2e99ad3be1e566f90578ffe06"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
+      "role": "receipt",
+      "sha256": "114b5ba1b619d4e81c138d098005583ee56aa8bd6d2295d9fb279cd92c2c3f9a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "61999fa8c8a96b4e049cb7546c0f3266a8cbf3579b2a2f56d37e07e1df099acf"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "c49bd6b826db6a20787f21a7b6efc8c3ec840fff810cf8f9fe8eccf3ec0bc914"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "role": "statement",
+      "sha256": "cfa95a45734f297ea7283453c1b67cf3ca31ab3517311f1858d835d8f744421e"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Continuation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GroupEnding",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "20 October 2026: added (EV6), the joint count and gated ending over a family of conditions read as one, and groups whose conditions are coupled; study section 265.",
+      "zh": "2026年10月20日：新增（EV6），读作一体的条件族上的联合计入与门控终结，以及条件相互耦合的组；研究第 265 节。"
+    }
+  ]
+}

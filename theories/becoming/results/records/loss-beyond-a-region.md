@@ -99,6 +99,7 @@ Of levels Ren wrote: “i think it should be the whole, and a weaker version is 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json) | — |
 
 Aliases: `Becoming.Web.AdmitsWithin`, `Becoming.Web.LosesBeyond`, `Becoming.Web.includes_iff_within_whole`, `Becoming.Web.AdmitsWithin.narrow`, `Becoming.Web.LosesBeyond.narrow`, `Becoming.Web.not_losesBeyond_whole`, `Becoming.Web.AdmitsWithin.not_losesBeyond`, `Becoming.Web.admitsWithin_self`, `Becoming.Clearing.alongDependence`, `Becoming.Clearing.loses_beyond`, `Becoming.Web.includes_iff_within_every`
 

@@ -178,8 +178,8 @@ rec = {
         {'id': OWN, 'detail': {'en': 'Its one-condition laws, now the family of one.', 'zh': '其单个条件的定律，现为单元族的情形。'}},
         {'id': EV5, 'detail': {'en': 'Groups on conditions of their own; here groups on coupled conditions.',
                                'zh': '依存于自身条件的组；此处为依存于耦合条件的组。'}}],
-    'references': [{'path': src('Continuation'), 'role': 'proof', 'sha256': sha(src('Continuation'))},
-                   {'path': src('GroupEnding'), 'role': 'proof', 'sha256': sha(src('GroupEnding'))},
+    'references': [{'path': src(mod), 'role': 'proof', 'declarations': sorted(d['name'] for d in decls(mod)['declarations']),
+                    'sha256': sha(src(mod))} for mod in ('Continuation', 'GroupEnding')] + [
                    {'path': RECEIPT, 'role': 'receipt', 'sha256': sha(RECEIPT)},
                    {'path': STUDY, 'role': 'integration', 'sha256': sha(STUDY)},
                    {'path': CHAPTER, 'role': 'statement', 'sha256': sha(CHAPTER)},

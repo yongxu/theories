@@ -75,8 +75,9 @@ Ren's proposal says that the self can become rigid and “has to count the dynam
 - related, not a proved adapter: [joint-difference-making](joint-difference-making.md). In joint excess no single part need make the difference while the joint draw still ends the dependents; attribution and loss come apart.
 - related, not a proved adapter: [derived-extent-limits](derived-extent-limits.md). What the derived extent does not reach: one way, the horizon of the want and the clearer.
 - related, not a proved adapter: [relational-renewal-classification](relational-renewal-classification.md). RenewalBridge gives the support-gated family's staying below for good and ending as instances of Flow.stays_below_at and ends_below_at, with jointly_ends.
+- related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). The same laws over a family of conditions read as one, from which these are now derived.
 
-**Used by:** [consumption-ends-with-feeders](consumption-ends-with-feeders.md) · [derived-extent-limits](derived-extent-limits.md) · [place-transition-nets-on-the-spine](place-transition-nets-on-the-spine.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [selection-among-groups-by-ending](selection-among-groups-by-ending.md) · [the-rest-outruns-the-renewal](the-rest-outruns-the-renewal.md)
+**Used by:** [consumption-ends-with-feeders](consumption-ends-with-feeders.md) · [derived-extent-limits](derived-extent-limits.md) · [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md) · [place-transition-nets-on-the-spine](place-transition-nets-on-the-spine.md) · [relative-position-is-zero-sum](relative-position-is-zero-sum.md) · [selection-among-groups-by-ending](selection-among-groups-by-ending.md) · [the-rest-outruns-the-renewal](the-rest-outruns-the-renewal.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -100,6 +101,7 @@ Ren's proposal says that the self can become rigid and “has to count the dynam
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json) | — |
 | review | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json) | — |
 
 Aliases: `Becoming.Flow.WithinOwn`, `Becoming.Flow.WithinJoint`, `Becoming.Flow.joint_keeps`, `Becoming.Flow.excess_lowers`, `Becoming.Flow.excess_bounded`, `Becoming.Flow.stays_below`, `Becoming.Flow.ends_below`, `Becoming.Flow.joint_excess_ends`, `Becoming.Pair.no_web`, `Becoming.Exceeding.all_end`, `Becoming.Alone.all_continue`
 
@@ -119,6 +121,7 @@ Aliases: `Becoming.Flow.WithinOwn`, `Becoming.Flow.WithinJoint`, `Becoming.Flow.
 - 20 October 2026, R25 (the twentieth review's step 1, docs now): Its statement now says that the amounts are natural numbers (twentieth review D5).
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Continuation.lean, Flow.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Continuation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Flow.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one does_not_show item added. The claim and its premises are unchanged.
+- 20 October 2026, EV6: the joint count and the gated ending are stated over a family of conditions read as one (Flow.family_excess_bounded, Flow.family_excess_ends; record groups-whose-conditions-are-coupled, study section 265); excess_lowers_at, excess_bounded_at, stays_below_at, ends_below_at and joint_excess_ends_at are now derived as the family of one condition, their statements unchanged. The claim is unchanged.
 - 2 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](own-count-misses-joint-excess.json).
 
 <a id="earlier-text--早期文本"></a>

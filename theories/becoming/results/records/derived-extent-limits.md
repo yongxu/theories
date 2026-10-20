@@ -116,6 +116,7 @@ Ren's proposal says “all above does not require any axiom” and that the one 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T005554.047169Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | review | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json) | — |
 
 Aliases: `Becoming.Downstream.one_way`, `Becoming.Mortal.after_its_end`, `Becoming.Mortal.without_continues`, `Becoming.Clearing.undermines_within_renewal`, `Becoming.Flow.FedBy`, `Becoming.Clearing.fedBy_source`, `Becoming.Clearing.clearer_not_living`, `Becoming.Clearing.center_not_derived`
 

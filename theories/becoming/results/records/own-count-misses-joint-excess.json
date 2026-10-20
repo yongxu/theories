@@ -275,13 +275,20 @@
         "zh": "RenewalBridge 把支持门控族的永久低于所需与终结作为 Flow.stays_below_at、ends_below_at 的实例，并给出 jointly_ends。",
         "en": "RenewalBridge gives the support-gated family's staying below for good and ending as instances of Flow.stays_below_at and ends_below_at, with jointly_ends."
       }
+    },
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "detail": {
+        "en": "The same laws over a family of conditions read as one, from which these are now derived.",
+        "zh": "对读作一体的条件族的同一定律，现由其推出本记录的定律。"
+      }
     }
   ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
       "role": "proof",
-      "sha256": "b7405bce742da657308ed1cb3a962823d9aaa3a560f9aaa92b1c3ad1338b4ed1",
+      "sha256": "15a506ddb8d4768886e94227d868c300c8932ce3f489c48981f0f5777cf528f7",
       "declarations": [
         "Becoming.Flow.WithinOwn",
         "Becoming.Flow.WithinJoint",
@@ -410,12 +417,18 @@
       "role": "review",
       "sha256": "1e07f9b0f6d13a4b8b6900db28676b9b7824cbeb3031d9c6e16caf2a6e4a3102",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
+      "role": "receipt",
+      "sha256": "114b5ba1b619d4e81c138d098005583ee56aa8bd6d2295d9fb279cd92c2c3f9a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Continuation",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -487,6 +500,10 @@
     {
       "en": "20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one does_not_show item added. The claim and its premises are unchanged.",
       "zh": "2026年10月20日，LK1（研究第237节）：按意义审查（研究 SA1）的裁定指名最接近的先前结果，使本记录不被当作新发现来领头；增加一条 does_not_show。主张与其前提不变。"
+    },
+    {
+      "en": "20 October 2026, EV6: the joint count and the gated ending are stated over a family of conditions read as one (Flow.family_excess_bounded, Flow.family_excess_ends; record groups-whose-conditions-are-coupled, study section 265); excess_lowers_at, excess_bounded_at, stays_below_at, ends_below_at and joint_excess_ends_at are now derived as the family of one condition, their statements unchanged. The claim is unchanged.",
+      "zh": "2026年10月20日，EV6：联合计入与门控终结陈述于读作一体的条件族（Flow.family_excess_bounded、Flow.family_excess_ends；记录 groups-whose-conditions-are-coupled，研究第 265 节）；excess_lowers_at、excess_bounded_at、stays_below_at、ends_below_at、joint_excess_ends_at 现作为单元族的情形推出，陈述不变。论断不变。"
     }
   ],
   "text_versions": [

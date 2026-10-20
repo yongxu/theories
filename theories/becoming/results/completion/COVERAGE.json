@@ -387,6 +387,7 @@
         "what-bounds-offspring-numbers",
         "selection-within-and-among-groups",
         "selection-among-groups-by-ending",
+        "groups-whose-conditions-are-coupled",
         "transmission-is-inheritance-and-need"
       ],
       "declarations": [
@@ -404,7 +405,8 @@
         "Becoming.SelectionLevels.levels",
         "Becoming.SelectionLevels.rises_exact_iff_levels",
         "Becoming.GroupEnding.Flow.rises_iff_inactive",
-        "Becoming.GroupEnding.Flow.excess_childless",
+        "Becoming.GroupEnding.Flow.family_childless",
+        "Becoming.GroupEnding.Flow.coupled_end_together",
         "Becoming.GroupEnding.Flow.all_end"
       ],
       "status": "proved",

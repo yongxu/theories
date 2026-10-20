@@ -27,7 +27,7 @@
 ## Does not show
 
 - Which group's condition runs into joint excess, or why: it is a hypothesis wherever it enters, as is that members depend on their own group's condition.
-- Mixed groups and inexact transmission: there selection within the surviving groups enters and can outweigh (Outweighs); mixing between groups and groups whose conditions are coupled are not stated.
+- Mixed groups and inexact transmission: there selection within the surviving groups enters and can outweigh (Outweighs); mixing between groups is not stated (groups whose conditions are coupled: record groups-whose-conditions-are-coupled).
 - How groups form, or that keeping a condition is better: ending is read in the counts; ranking goes through the comparison C.
 - **Counterexample:** Ending among groups does not decide the whole: with the other group ended, a groupmate leaving five against one holding back leaving one makes the whole select against holding back (Outweighs.outweighs). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean)
 
@@ -43,7 +43,7 @@ Canonical source: [GroupEnding.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-Groups whose conditions are coupled (a neighbour reseeding); mixing between groups; how groups form; an independent review.
+Mixing between groups; how groups form; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -65,6 +65,9 @@ Group selection by differential extinction (Wright 1945; Levins 1970 on metapopu
   - Preserved conditions: Balance, only active formations giving, activity needing support, the gate. [Continuation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean)
 - related, not a proved adapter: [selection-within-and-among-groups](selection-within-and-among-groups.md). Its among-group part fixed by ending on the base.
 - related, not a proved adapter: [what-bounds-offspring-numbers](what-bounds-offspring-numbers.md). Lineages ending within closed families, read here for groups on conditions of their own.
+- related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). Groups whose conditions are coupled end together; excess_childless is now the family of one.
+
+**Used by:** [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -77,6 +80,7 @@ Group selection by differential extinction (Wright 1945; Levins 1970 on metapopu
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T115958.613759Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json) | — |
 
 Aliases: `selection among groups by ending`, `经由终止的组间选择`, `group selection by extinction`, `Becoming.GroupEnding.rises_iff_ended`, `Becoming.GroupEnding.Flow.excess_childless`, `Becoming.GroupEnding.Flow.raises_of_inactive`, `Becoming.GroupEnding.Flow.all_end`
 
@@ -85,6 +89,7 @@ Aliases: `selection among groups by ending`, `经由终止的组间选择`, `gro
 
 - 20 October 2026: added (EV5), selection among groups fixed by ending on the base; study section 249.
 - 20 October 2026, EV5b: the base law Flow.rises_iff_inactive added (mixed groups, through SelectionLevels.rises_exact_iff_levels), so the evolution row's central laws reach the base; receipt 20261020T115958.613759Z, study section 259. The claim is unchanged.
+- 20 October 2026, EV6: groups whose conditions are coupled are stated in Becoming.GroupEnding (Flow.family_childless, Flow.coupled_end_together, Flow.ended_of_family; record groups-whose-conditions-are-coupled, study section 265); Flow.excess_childless is now derived from Flow.family_childless, its statement unchanged. The claim is unchanged; its open item on coupled groups is answered there.
 
 </details>
 

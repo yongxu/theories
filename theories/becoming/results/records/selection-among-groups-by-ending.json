@@ -93,8 +93,8 @@
       "kind": "scope"
     },
     {
-      "en": "Mixed groups and inexact transmission: there selection within the surviving groups enters and can outweigh (Outweighs); mixing between groups and groups whose conditions are coupled are not stated.",
-      "zh": "混合的组与不精确的传递：此时幸存组内的选择进入并可能胜出（Outweighs）；组间混合与条件相互耦合的组未陈述。",
+      "en": "Mixed groups and inexact transmission: there selection within the surviving groups enters and can outweigh (Outweighs); mixing between groups is not stated (groups whose conditions are coupled: record groups-whose-conditions-are-coupled).",
+      "zh": "混合的组与不精确的传递：此时幸存组内的选择进入并可能胜出（Outweighs）；组间混合未陈述（条件相互耦合的组：记录 groups-whose-conditions-are-coupled）。",
       "kind": "scope"
     },
     {
@@ -125,8 +125,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T115958.613759Z）：Becoming.GroupEnding 的 25 项声明（20 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 249 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Groups whose conditions are coupled (a neighbour reseeding); mixing between groups; how groups form; an independent review.",
-    "zh": "条件相互耦合的组（邻居补种）；组间混合；组如何形成；独立审查。"
+    "en": "Mixing between groups; how groups form; an independent review.",
+    "zh": "组间混合；组如何形成；独立审查。"
   },
   "correspondence": {
     "en": "Group selection by differential extinction (Wright 1945; Levins 1970 on metapopulation extinction; Wilson and Sober 1994): groups whose members overuse a resource of their own go extinct, while within each group selection may favour overuse. Here extinction is the gated ending of the group's own condition, and the shared-condition corollary is the tragedy of the commons read with descent (Hardin 1968). Readings (the AI's): a condition of one's own is what lets ending select among groups; a commons shared by all ends all.",
@@ -204,6 +204,13 @@
         "en": "Lineages ending within closed families, read here for groups on conditions of their own.",
         "zh": "在封闭族内终止的世系，此处对依存于自身条件的组读出。"
       }
+    },
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "detail": {
+        "en": "Groups whose conditions are coupled end together; excess_childless is now the family of one.",
+        "zh": "条件相互耦合的组一同终结；excess_childless 现为单元族的情形。"
+      }
     }
   ],
   "references": [
@@ -237,7 +244,7 @@
         "Becoming.GroupEnding.rises_of_ended",
         "Becoming.GroupEnding.uniform"
       ],
-      "sha256": "1849dba544512a5f2196f7b933324d324283dd7334ebf9ffe1e55ae2e0809a9c"
+      "sha256": "dda45b0d0c6e4d5c5c1b14d34a3b98c9a73659e2e99ad3be1e566f90578ffe06"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
@@ -247,7 +254,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
       "role": "proof",
-      "sha256": "b7405bce742da657308ed1cb3a962823d9aaa3a560f9aaa92b1c3ad1338b4ed1"
+      "sha256": "15a506ddb8d4768886e94227d868c300c8932ce3f489c48981f0f5777cf528f7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T115958.613759Z/verification.json",
@@ -262,13 +269,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "793e7df88160590b5be3b0dcd23a7fd7bde922b168f8e04fbbcc3b5bb13971c9"
+      "sha256": "c49bd6b826db6a20787f21a7b6efc8c3ec840fff810cf8f9fe8eccf3ec0bc914"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
+      "role": "receipt",
+      "sha256": "114b5ba1b619d4e81c138d098005583ee56aa8bd6d2295d9fb279cd92c2c3f9a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T115958.613759Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GroupEnding",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -282,6 +295,10 @@
     {
       "en": "20 October 2026, EV5b: the base law Flow.rises_iff_inactive added (mixed groups, through SelectionLevels.rises_exact_iff_levels), so the evolution row's central laws reach the base; receipt 20261020T115958.613759Z, study section 259. The claim is unchanged.",
       "zh": "2026年10月20日，EV5b：新增流上之律 Flow.rises_iff_inactive（混合的组，经由 SelectionLevels.rises_exact_iff_levels），演化一行的中心之律因而达到流上；回执 20261020T115958.613759Z，研究第 259 节。论断不变。"
+    },
+    {
+      "en": "20 October 2026, EV6: groups whose conditions are coupled are stated in Becoming.GroupEnding (Flow.family_childless, Flow.coupled_end_together, Flow.ended_of_family; record groups-whose-conditions-are-coupled, study section 265); Flow.excess_childless is now derived from Flow.family_childless, its statement unchanged. The claim is unchanged; its open item on coupled groups is answered there.",
+      "zh": "2026年10月20日，EV6：条件相互耦合的组陈述于 Becoming.GroupEnding（Flow.family_childless、Flow.coupled_end_together、Flow.ended_of_family；记录 groups-whose-conditions-are-coupled，研究第 265 节）；Flow.excess_childless 现由 Flow.family_childless 推出，陈述不变。论断不变；其关于耦合之组的开放项在那里回答。"
     }
   ]
 }

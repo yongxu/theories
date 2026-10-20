@@ -234,6 +234,11 @@ cells = row.split(' | ')
 assert len(cells) == 5, len(cells)
 cells[2] = (f'landed 2026-10-20, core receipt `{receipt_id}`; {n_cont_thm} theorems in Becoming.Continuation and '
             f'{n_mod_thm} in Becoming.GroupEnding (no new module, rule 9), empty axiom reports; record {RID}; study §{N}')
+cells[0] = cells[0].replace('New core module `Becoming.CoupledEnding` on `Becoming.GroupEnding` and `Becoming.Continuation`:',
+                            'Claimed as a new module `Becoming.CoupledEnding`; landed with no new module, under rule 9: the '
+                            'family laws in `Becoming.Continuation`, its one-condition laws derived from them, and the groups '
+                            'in `Becoming.GroupEnding`:')
+assert 'landed with no new module' in cells[0], cells[0][:200]
 row = ' | '.join(cells).replace('](../', '](../../../').replace('](research/', '](../../research/')
 hist = history.split('\n')
 stop = next((i for i, line in enumerate(hist) if line.startswith('## Lapsed claims')), len(hist))
