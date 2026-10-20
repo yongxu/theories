@@ -480,3 +480,44 @@ Evidence: web searches of 20 October 2026 (Cappelen-Dever's agency chapter; agen
 Boundary: AI check, one session; Dreier 2018 and Howard 2022 read by abstract only; Magidor's venue not confirmed by the search; Castañeda's later papers not reread
 Integration: the chapter THE-STEP-OF-INVARIANCE §4.1, §6.2, §6.5 and §7; canonical chapter §8.9
 ```
+
+---
+
+<a id="side-effect-benchmarks-check"></a>
+## A check before building: blind draw against margin and the impact measures (20 October 2026, line E, SE1)
+
+An AI check (one session, started from the significance-aim session), made before any comparison run. The question: does blind draw against margin predict side effects better than the established impact measures, as well as they do, or in a way that complements them? MQ1 (§253) found it predicted an exact best response's side effects out of sample in five thin variants (B4: 8/8). Blind draw is an optimizer's draw on a condition its reward has zero measured coupling into. **Verdict: it is relative reachability on a replayed course, bounded. It does not beat the known measures and adds nothing as a measure. Given the same information, reachability forecasts exactly where the margin band leaves cells open. The forecast's working part is the transfer of the reference course, which is known: the invariance of an optimal policy to state its reward does not read.** Tested as experiment SE1 ([experiments/side-effect-benchmarks](../../../../experiments/side-effect-benchmarks/README.md), study §263), predictions frozen before the run, all six passed as predicted. Line E stops: the predictor is shown no better than the known measures. No CPU-feasible established benchmark has a renewable condition with a margin.
+
+| Known form | Where | Relation to blind draw against margin |
+|---|---|---|
+| Side-effects environments (Box: the shortest path corners a box; a hidden performance function) | Leike et al., arXiv 1711.09883 (2017) | Side effects discrete and irreversible: margin 0, so blind draw reduces to unreachability on the course; the box is blind or coupled according to the perturbation set (SE1 R6) |
+| Relative reachability: baseline + deviation, d_RR the mean truncated loss of reachability; unreachability; attainable utility as a deviation | Krakovna, Orseau, Kumar, Martic, Legg, arXiv 1806.01186 (2018/2019), text read | The margin is reachability of the alive set under the inaction baseline restricted to one condition; on the same replay, RR gives MQ1's verdicts and settles its open cells (SE1 R1-R3) |
+| Attainable utility preservation; AUP in SafeLife; SafeLife's density-based side-effect score against the inaction distribution | Turner, Hadfield-Menell, Tadepalli, AIES 2020 (arXiv 1902.09725); Turner, Ratzlaff, Tadepalli, NeurIPS 2020 (arXiv 2006.06547); Wainwright and Eckersley, arXiv 1912.01217, text read | AU on the replay ranks dying above surviving cells (SE1 R4); Correction's off switch is reward-coupled, where blind draw is silent; SafeLife's spawners are the only established renewal, beyond the standard library and exact best responses |
+| Future tasks (same incentives as RR in the deterministic case) | Krakovna, Orseau, Ngo, Martic, Legg, NeurIPS 2020 (arXiv 2010.07877), text read | Same family; no renewable quantity in Sushi, Vase, Box, Soko-coin |
+| Impact regularizers: baseline, deviation, scale | Lindner, Matoba, Meulemans, arXiv 2101.12509 (2021) | No forecasting use found |
+| A proxy on a subset of attributes spends the omitted ones under shared resources | Zhuang and Hadfield-Menell, NeurIPS 2020 (arXiv 2102.03896) | The qualitative content of "blind draw" |
+| Negative side effects arise from what a model omits as unrelated to the task, and are hard to identify at design time; they are learned from feedback during deployment, or predicted by a model learned from labelled trajectories | Saisubramanian, Zilberstein, Kamar, *JAIR* 74 (2022) and IJCAI 2020; Srivastava et al., AAAI 2023 (by abstract and secondary description) | The same diagnosis as blind draw (zero coupling ⇒ unmodelled draw); prediction there is learned from observed effects, not forecast from a reference run |
+| π*-irrelevance; model minimization | Li, Walsh, Littman, ISAIM 2006; Dean and Givan 1997 | MQ1's bridge B3: an optimizer's course does not depend on what its reward and the relevant dynamics do not read, which is what lets a draw transfer across margins |
+| Time to depletion from stock and sustained yield | Schaefer 1954; fisheries; ruin theory | The band |
+
+**What the theory's statement adds, read exactly.** Two things, neither new. (1) The margin band needs less of a model than reachability: two numbers per condition, measurable by intervention (pulse margin, largest sustained draw), instead of the condition's transition rule. That is the stock-and-yield arithmetic, and on the lawn it decided 8 of 10 cells where reachability decided 10. (2) It frames impact as an ex-ante forecast from a sandbox run, where the impact measures are used as penalties or ex-post scores. The framing is open to any deviation measure once the transfer holds. The transfer holds for an exact optimizer by π*-irrelevance. For learners it fails for every measure alike: exact replay is right on 61% of rows, against 60% for forecasting no death at all (SE1 R5). So the alignment-side candidate MQ1 left, "blind draw against margin as a side-effect predictor outsiders could use", does not survive the comparison. What survives is MQ1's measurement content (the need is the regime's, harms are super-additive though draws add), which is not about side-effect prediction.
+
+```text
+Result(s): none new; MQ1's B4 forecast is relative reachability (unreachability of the alive set) on the
+       reference course replayed on the target condition, coarsened to a band; the transfer it rests on is π*-irrelevance
+Delta: the significance aim's best remaining candidate for a result outsiders use is shown no better than the known measures:
+       same verdicts where it decides, fewer decided (8 of 10 against 10 of 10), silent on reward-coupled side effects,
+       and failing with them for learners
+Supplied premises / correspondence: Leike et al. 2017; Krakovna et al. 2018/2019, 2020; Turner et al. 2020 (two);
+       Wainwright-Eckersley 2019/2020; Lindner et al. 2021; Zhuang-Hadfield-Menell 2020; Li-Walsh-Littman 2006;
+       Dean-Givan 1997; Saisubramanian-Zilberstein-Kamar 2020, 2022; Srivastava et al. 2023; Schaefer 1954;
+       Perolat et al. 2017 (renewable gridworlds, as social dilemmas)
+Evidence: web searches of 20 October 2026; Krakovna et al. 2018/2019 and 2020, Turner et al. 2020 (AIES) and
+       SafeLife 1.0 read in the text (ar5iv); the others by abstract or secondary description; experiment SE1
+       (frozen at 0b158e1b9, R1-R6 passed)
+Boundary: AI check, one session; SafeLife not run (package install and deep RL); Sushi, Vase, Survival, Damage,
+       Correction, Offset, Interference and Soko-coin classified from their descriptions, not rebuilt; the
+       Box layout rebuilt from the published description; the negative-side-effects line (Saisubramanian et al.)
+       searched once, read by abstract; no design-time forecast found there or elsewhere
+Integration: experiments/side-effect-benchmarks; study §263; board SE1
+```

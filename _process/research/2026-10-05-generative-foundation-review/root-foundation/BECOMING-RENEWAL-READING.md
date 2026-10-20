@@ -11197,3 +11197,36 @@ Output → input: with Persistence's conservation continuation, a world's classe
 - **The witness.** In `MergeClass` a formation drawing only on a condition kept at its need renews as named; merged with a formation drawing on a spent condition into one that draws on it, it consumes along the merge. Read along its name, the first formation ends unharmed; read along what continues it, it is part of a consuming formation.
 
 **Self-review.** The laws are short and near-definitional once the inductive relation is given; their use is that classes under splits and merges are stated at all, with the two directions of inheritance exact, and that "transformation becomes a law, not a choice of names" holds for the two classes once the continuation is read off the world. The witness is minimal. No decidability or choice is used: lineages are not chosen, and the relation is read through finitely many steps.
+
+## 263. Blind draw against margin and the established impact measures (SE1)
+
+```text
+Result(s): none new; MQ1's B4 forecast (§253) shown to be relative reachability on a replayed course,
+       coarsened to a band. Experiment experiments/side-effect-benchmarks, predictions frozen at 0b158e1b9
+       before the run, R1-R6 passed; literature check in the significance review (side-effect-benchmarks-check).
+Delta: §253 left blind draw against margin as the theory's best candidate for a result outsiders use (side
+       effects of an optimizer predicted out of sample, 8/8, reference outcome 0/8). Given the same
+       information (the reference course's entries and the target cell's own dynamics), unreachability of the
+       alive set forecasts all 10 best-response cells with exact death steps, where the band decides 8 and
+       leaves 2 open (R1, R2); Krakovna et al.'s relative reachability gives the same verdicts and is exact on
+       any lost level (R3); discounted RR and attainable utility rank dying above surviving cells, AUC 1.0 (R4).
+       For learners every replay forecast fails together: 61% right, the no-death forecast 60% (R5). In Box
+       (AI Safety Gridworlds) the box is blind under removal and coupled under displacement (R6), so blind
+       draw's coverage on discrete benchmarks hangs on a perturbation set, and it is silent on reward-coupled
+       side effects (Correction's off switch).
+Premises / bridges: MQ1's B3 (the best response's course is the same in every variant); the cell's own
+       control (take or wait) for the cell-level reachability and attainable utility; Box rebuilt from the
+       published level 0, irreversibility as ground truth.
+Boundary: SafeLife (the one established benchmark with renewal) not run: package install and deep RL, no
+       exact best response; the other published environments classified from their descriptions.
+Output → input: the alignment side of the margin (Flow.Balances.loses_iff_beyond_margin with
+       Flow.act_unselected as the transfer) is a known measure plus a known invariance; line E stops. What stays
+       of MQ1 is its measurement content (the need is the regime's, harms super-additive though draws add),
+       which is not a side-effect predictor.
+```
+
+- **Why the band is a coarsening, not an alternative.** `garden.death_band` already replays the reference entries on the target cell, then bounds the regrowth before step t by floor(t/r). Running the regrowth instead gives the exact death step. That is undiscounted reachability of the alive set against the inaction course, the deviation relative reachability uses, restricted to one condition. The margin is the largest one-shot removal the condition's undrawn course survives, so it is a reachability quantity of the same kind.
+- **Where the content lies.** Every replay forecast assumes that the target's course is the reference's. For an exact optimizer, `Flow.act_unselected` and B3 make that hold, and abstraction theory knows it as π*-irrelevance. For learners nothing makes it hold, and the measures fail together: all 78 errors of the exact replay forecast a death in a variant where the learner drew less.
+- **What would have changed the verdict.** A cell where the band decides right and reachability on the same replay decides wrong, which R2's identity excludes once the cell's dynamics are known. Or an established benchmark with a renewable condition whose dynamics are unknown and measurable only by intervention, where the band's model-light bound would be the only forecast available. SafeLife's spawners come closest, and there the transfer rests on deep RL learners.
+
+**Self-review.** R1-R3 and R5 are identities, and the frozen predictions said so. What the run adds is that they hold on MQ1's own data, and that the graded measures (R4) and the Box coupling (R6), which could have failed, did not. The conclusion is negative for the significance aim and stated as such. It does not touch the margin's laws in Lean, which keep their scope as identities of the balance (§253).
