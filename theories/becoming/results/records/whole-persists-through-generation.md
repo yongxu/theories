@@ -62,8 +62,9 @@ Contains no ethical predicate; Whole is coincidence of activity, not constitutio
 - Related, not a proved adapter: [generation-is-replenishment](generation-is-replenishment.md). Both place 生 in relations: there an embodied arising is itself replenishment, here a whole's persistence needs its parts' arising.
 - Related, not a proved adapter: [more-needs-renewers](more-needs-renewers.md). “More” is read there as the number of takers; this result speaks only of the parts' arising, not of growth in number.
 - Related, not a proved adapter: [theory-of-becoming-foundation](theory-of-becoming-foundation.md). Whole and parts: where parts are brief, or end with finitely many active at once, a whole persists through the generation of its parts. The whole deduction remains open.
+- Related, not a proved adapter: [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md). How a whole of ending listed parts ends where their arising stops, and a draw beyond renewal that stops it.
 
-**Used by:** [a-pattern-lasts-through-passing](a-pattern-lasts-through-passing.md)
+**Used by:** [a-pattern-lasts-through-passing](a-pattern-lasts-through-passing.md) · [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts
@@ -89,6 +90,7 @@ Contains no ethical predicate; Whole is coincidence of activity, not constitutio
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json) | — |
 | review | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T214133.732004Z/verification.json) | — |
 
 Hashes in the editable record bind the reviewed source versions. The checker does not audit transitive Lean imports or establish premise warrant.
 
@@ -115,4 +117,5 @@ Aliases: `Becoming.Web.Whole`, `Becoming.Web.Listed`, `Becoming.Web.Ends`, `Beco
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Renamed: Generation.lean (now Arising.lean). Proof bindings (World.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Arising.lean, the module Generation renamed Arising; Web.generation_* are Web.embodiedArising_*, Web.Regenerating is Web.ActiveRenewer; statements unchanged; Identity.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; World.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): Shifts.half (now Pulse.half). Proof bindings (Wholes.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Arising.lean, Identity.lean, Wholes.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.
 - 20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one limitations clause rewritten within the growth ratchet. The claim and its premises are unchanged.
+- 21 October 2026, WE1: Covered.needs_arising is now proved from Listed.end_without_arising, the law below it (record whole-drawing-beyond-renewal-ends, study section 287); this record's statement, laws and declarations are unchanged.
 - 3 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](whole-persists-through-generation.json).

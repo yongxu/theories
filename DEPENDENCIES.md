@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-310 registered results: 290 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 777 curated edges join 263 results to the results they draw on.
+311 registered results: 291 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 779 curated edges join 264 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -266,6 +266,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [where-two-courses-rejoin][] ← <a id="where-two-courses-rejoin--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="where-two-courses-rejoin--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
 - [whether-a-loop-closes-a-difference][] ← <a id="whether-a-loop-closes-a-difference--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="whether-a-loop-closes-a-difference--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="whether-a-loop-closes-a-difference--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="whether-a-loop-closes-a-difference--where-two-courses-rejoin"></a>[where-two-courses-rejoin][]
 - [which-links-a-closure-needs][] ← <a id="which-links-a-closure-needs--levels-of-closure"></a>[levels-of-closure][]
+- [whole-drawing-beyond-renewal-ends][] ← <a id="whole-drawing-beyond-renewal-ends--whole-persists-through-generation"></a>[whole-persists-through-generation][] · <a id="whole-drawing-beyond-renewal-ends--groups-whose-conditions-are-coupled"></a>[groups-whose-conditions-are-coupled][]
 - [whole-first-and-bounded-centers][] ← <a id="whole-first-and-bounded-centers--loss-beyond-a-region"></a>[loss-beyond-a-region][] · <a id="whole-first-and-bounded-centers--significance-retained-within-margin"></a>[significance-retained-within-margin][] · <a id="whole-first-and-bounded-centers--continuation-condition-yields-living-significance"></a>[continuation-condition-yields-living-significance][] · <a id="whole-first-and-bounded-centers--derived-extent-limits"></a>[derived-extent-limits][] *(interpretive)*
 - [whole-law-of-counting][] ← <a id="whole-law-of-counting--census-balance"></a>[census-balance][] · <a id="whole-law-of-counting--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="whole-law-of-counting--map-of-premises"></a>[map-of-premises][] · <a id="whole-law-of-counting--life-as-condition-of-life"></a>[life-as-condition-of-life][] · <a id="whole-law-of-counting--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="whole-law-of-counting--space-and-its-parts"></a>[space-and-its-parts][] · <a id="whole-law-of-counting--laws-of-one-step"></a>[laws-of-one-step][]
 - [whole-persists-through-generation][] ← <a id="whole-persists-through-generation--unceasing-generation-needs-renewal"></a>[unceasing-generation-needs-renewal][] · <a id="whole-persists-through-generation--identity-across-steps"></a>[identity-across-steps][]
@@ -558,6 +559,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [where-two-courses-rejoin]: theories/becoming/results/records/where-two-courses-rejoin.md
 [whether-a-loop-closes-a-difference]: theories/becoming/results/records/whether-a-loop-closes-a-difference.md
 [which-links-a-closure-needs]: theories/becoming/results/records/which-links-a-closure-needs.md
+[whole-drawing-beyond-renewal-ends]: theories/becoming/results/records/whole-drawing-beyond-renewal-ends.md
 [whole-first-and-bounded-centers]: theories/becoming/results/records/whole-first-and-bounded-centers.md
 [whole-law-of-counting]: theories/becoming/results/records/whole-law-of-counting.md
 [whole-persists-through-generation]: theories/becoming/results/records/whole-persists-through-generation.md

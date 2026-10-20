@@ -126,6 +126,13 @@
         "zh": "整体与部分：部分短暂，或部分终结且同时活跃的部分有限时，整体经由部分的生成而持续。整体的演绎仍开放。",
         "en": "Whole and parts: where parts are brief, or end with finitely many active at once, a whole persists through the generation of its parts. The whole deduction remains open."
       }
+    },
+    {
+      "id": "whole-drawing-beyond-renewal-ends",
+      "detail": {
+        "en": "How a whole of ending listed parts ends where their arising stops, and a draw beyond renewal that stops it.",
+        "zh": "可列出的终结部分之整体在其生起停止时如何终结，以及使之停止的超过更新的汲取。"
+      }
     }
   ],
   "counterexamples": [
@@ -177,7 +184,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
       "role": "proof",
-      "sha256": "b79a2125bbdfc3b5ec9dd254a14232535259e98cd3468675e45a41609e75eedd",
+      "sha256": "454216066bedcf870b0cbaab4a6fb0928f59cb8d60cbd6c4088d8c8d0ea89bb3",
       "declarations": [
         "Becoming.Web.Whole",
         "Becoming.Web.Listed",
@@ -351,12 +358,18 @@
       "role": "review",
       "sha256": "1e07f9b0f6d13a4b8b6900db28676b9b7824cbeb3031d9c6e16caf2a6e4a3102",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T214133.732004Z/verification.json",
+      "role": "receipt",
+      "sha256": "b91163af840baf72dbc7a935df3c659d66cde8d85bf231ad2f3f661880ff7569",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T214133.732004Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Wholes",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -442,6 +455,10 @@
     {
       "en": "20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one limitations clause rewritten within the growth ratchet. The claim and its premises are unchanged.",
       "zh": "2026年10月20日，LK1（研究第237节）：按意义审查（研究 SA1）的裁定指名最接近的先前结果，使本记录不被当作新发现来领头；在增长限制之内改写 limitations 的一句。主张与其前提不变。"
+    },
+    {
+      "en": "21 October 2026, WE1: Covered.needs_arising is now proved from Listed.end_without_arising, the law below it (record whole-drawing-beyond-renewal-ends, study section 287); this record's statement, laws and declarations are unchanged.",
+      "zh": "2026年10月21日，WE1：Covered.needs_arising 现由其下的律 Listed.end_without_arising 证明（记录 whole-drawing-beyond-renewal-ends，研究第 287 节）；本记录的陈述、定律与声明不变。"
     }
   ]
 }

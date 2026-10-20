@@ -594,7 +594,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   end with finitely many active at once, persists only through their generation: parts
   never active at two steps `d` apart arise within every `d` steps, possibly the same
   parts again, and parts whose activity ends arise at arbitrarily late steps when the
-  active ones are listed, ever new ones.
+  active ones are listed, ever new ones: where none arises from some step on, such parts end
+  together, and their whole with them. Read with a flow, a whole whose parts arise only where
+  they depend on a family of conditions, the family's renewal gated on it, ends after the
+  family's uptake exceeds its replenishment for more consecutive steps than its stock stands
+  above the need: no part arises from then on. The uptake is the joint draw, the whole's with
+  whatever else takes.
 * `Becoming.Dissipation` (L1): when every formation gives a closed family less than it
   takes from it, the family runs down and taking from it stops. A finite family from
   which taking recurs, whether of more, of generation or of maintenance, is open at

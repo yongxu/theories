@@ -1,0 +1,331 @@
+{
+  "schema_version": 2,
+  "id": "whole-drawing-beyond-renewal-ends",
+  "title": {
+    "en": "A whole that draws its parts' arising beyond its renewal ends",
+    "zh": "汲取其部分之生起超过更新的整体终结"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-20T21:58:15+00:00",
+  "statement": {
+    "en": "Listed parts that each end, none arising from some step on, end with their whole; so a whole whose parts arise only where they depend on a family whose renewal is gated on it ends after the joint draw exceeds the renewal for longer than the margin.",
+    "zh": "各自终结、可列出、从某步起无一生起的部分，与其整体一同终结；所以部分只在依存于更新以其为门控的条件族时生起的整体，在联合汲取超过更新长于余量之后终结。"
+  },
+  "laws": [
+    {
+      "en": "Parts each of whose activity ends, with the active ones listed at each step, none arising from some step on, are all inactive from a later step, and a whole of such parts ends; Covered.needs_arising and Whole.needs_arising are the case of a whole that persists.",
+      "zh": "各自终结、每步活跃者可列出的部分，从某步起无一生起时，从更晚的某步起全都不活跃，这样的部分的整体终结；Covered.needs_arising 与 Whole.needs_arising 是整体持续的情形。",
+      "declarations": [
+        "Becoming.Web.Listed.end_without_arising",
+        "Becoming.Web.Whole.ends_without_arising"
+      ]
+    },
+    {
+      "en": "With a flow, under balance, only active formations giving and activity needing support: a whole of such parts arising only where they then depend on some condition of a family at a need of at least m, the family's renewal gated on it, has no part arising after n steps of excess of the family's uptake over its replenishment from a stock below n + m, and ends; the family of one condition is the joint-excess form.",
+      "zh": "在带流的同一世界上，在平衡、只有活跃者给予、活动需要支持之下：部分只在以至少 m 的需要依存于某条件族时生起、族的更新以族为门控的这样的整体，在族的取用超过补充 n 步、起始存量低于 n + m 之后再无部分生起并终结；单个条件之族即联合超出的形式。",
+      "declarations": [
+        "Becoming.Web.Whole.family_excess_ends",
+        "Becoming.Web.Whole.joint_excess_ends"
+      ]
+    },
+    {
+      "en": "Witness WholeExceeding: a lineage of members that each end, each arising where the condition it then depends on stands at its need and giving it one, the lineage taking two; every premise holds, the lineage is active at steps zero to two, and, through the law, no member arises from step two on and the lineage ends.",
+      "zh": "见证 WholeExceeding：成员各自终结、各在其所依存的条件处于其需要时生起并给予它一，谱系取二；每个前提成立，谱系在第零至二步活跃，经由该律，从第二步起无成员生起，谱系终结。",
+      "declarations": [
+        "Becoming.WholeExceeding.alive",
+        "Becoming.WholeExceeding.web",
+        "Becoming.WholeExceeding.flow",
+        "Becoming.WholeExceeding.balances",
+        "Becoming.WholeExceeding.acting",
+        "Becoming.WholeExceeding.dependent",
+        "Becoming.WholeExceeding.gated",
+        "Becoming.WholeExceeding.arising",
+        "Becoming.WholeExceeding.whole",
+        "Becoming.WholeExceeding.member_ne",
+        "Becoming.WholeExceeding.lineage_ne",
+        "Becoming.WholeExceeding.not_mem_pair",
+        "Becoming.WholeExceeding.listed",
+        "Becoming.WholeExceeding.ends",
+        "Becoming.WholeExceeding.excess",
+        "Becoming.WholeExceeding.drawn"
+      ]
+    },
+    {
+      "en": "The excess, ending parts and the arising's dependence are each needed: drawing within what the members give, the lineage is active at every step (WholeWithin); with a part that never ends (WholeUnending), or members arising without depending on the drawn condition (WholeUngated), the whole persists through the same excess.",
+      "zh": "超出、部分终结与生起的依存各自必要：在成员所给之内汲取，谱系每步活跃（WholeWithin）；有一个永不终结的部分（WholeUnending），或成员不依存于被汲取的条件而生起（WholeUngated），整体经历同样的超出而持续。",
+      "declarations": [
+        "Becoming.WholeWithin.web",
+        "Becoming.WholeWithin.flow",
+        "Becoming.WholeWithin.balances",
+        "Becoming.WholeWithin.acting",
+        "Becoming.WholeWithin.dependent",
+        "Becoming.WholeWithin.gated",
+        "Becoming.WholeWithin.arising",
+        "Becoming.WholeWithin.kept",
+        "Becoming.WholeUnending.web",
+        "Becoming.WholeUnending.flow",
+        "Becoming.WholeUnending.balances",
+        "Becoming.WholeUnending.persists",
+        "Becoming.WholeUngated.web",
+        "Becoming.WholeUngated.flow",
+        "Becoming.WholeUngated.balances",
+        "Becoming.WholeUngated.persists"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The whole (Web.Whole, coincidence of activity) and its parts are a representational premise; the parts are listed at each step (finitely many active at once) and each part's activity ends.",
+      "zh": "不加公理。整体（Web.Whole，活动的重合）与其部分是表示前提；部分每步可列出（同时活跃者有限），每个部分的活动终结。"
+    },
+    {
+      "en": "For the join: balance, only active formations giving (Acting), activity needing support (Dependent); the family's renewal gated on it (whatever gives to a member depends on some member at a need of at least m); a part arising across a step depends, at its first active step, on some member at such a need; n steps of excess of the family's uptake over its replenishment from a stock below n + m.",
+      "zh": "对于结合：平衡、只有活跃者给予（Acting）、活动需要支持（Dependent）；族的更新以族为门控（凡给予某成员者都以至少 m 的需要依存于某个成员）；跨某步生起的部分在其首个活跃步以这样的需要依存于某个成员；族的取用超过补充 n 步，起始存量低于 n + m。"
+    },
+    {
+      "en": "Discrete steps and natural-number amounts, as in Becoming.Continuation; the uptake counts every taker, so no taker, the whole included, is singled out.",
+      "zh": "离散的步与自然数的量，与 Becoming.Continuation 同；取用计入每个取用者，所以没有哪个取用者（整体在内）被单独挑出。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the gate on renewal and the finite listing are needed for this law: Countless shows the listing needed for Whole.needs_arising, with no flow; no witness here drops either with every other premise kept.",
+      "zh": "更新的门控与有限列出对本律必要：Countless 表明列出对 Whole.needs_arising 必要，但没有流；此处没有见证在保持其余前提时去掉其中之一。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the whole ends at T + n: it ends once the parts active then have ended, at a step the listing fixes.",
+      "zh": "整体在 T + n 终结：它在那时活跃的部分都终结之后终结，在列出所定的某一步。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the collective is the consumer, or that its ending is a loss: the draw is joint, and no evaluation enters; a loss is a loss under a significance (chapter 6).",
+      "zh": "集体是消耗者，或其终结是损失：汲取是联合的，没有评价进入；损失是在某种意义之下的损失（第 6 章）。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That actual collectives meet the premises, above all that new members arise only where what is drawn stands at their need: that is the reading carried by OPENING's sentence.",
+      "zh": "实际的集体满足这些前提，尤其是新成员只在被汲取者处于其需要时生起：这是 OPENING 那句话所承载的读法。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "detail": {
+        "en": "WholeWithin, WholeUnending and WholeUngated: with the excess, ending parts or the arising's dependence dropped and every other premise kept, the whole is active at every step.",
+        "zh": "WholeWithin、WholeUnending 与 WholeUngated：去掉超出、部分终结或生起的依存而保持其余前提时，整体每步活跃。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T214133.732004Z): the 36 declarations WE1 added to Becoming.Wholes have empty axiom reports, as does every declaration of the module; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 287; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T214133.732004Z）：WE1 加入 Becoming.Wholes 的 36 项声明公理报告为空，该模块每项声明亦然；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 287 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Witnesses for the gate on renewal and the finite listing; a whole whose parts' arising draws on the family only in part (some arising through what is drawn, some through another renewal); an independent review.",
+    "zh": "更新门控与有限列出的见证；部分的生起只部分地取自该族的整体（一些经被汲取者生起，一些经另一更新）；独立审查。"
+  },
+  "correspondence": {
+    "en": "OPENING note collective: \"a collective made of lives that each end goes on only as new lives keep arising; one that consumes them consumes what it goes on through\" (Ren's body sentence), read with a collective as the whole of its lives, the lives' renewal as the drawn family and consuming as the joint draw exceeding it (the AI's readings); TH1's revised proposal 8, its second clause. Reading: joint consumption has no single consumer (joint-difference-making).",
+    "zh": "OPENING 注 collective：“由各自终结的生命构成的集体，只在新生命不断生起时延续；消耗它们的集体消耗了它所赖以延续者”（Ren 的正文），读法为：集体是其生命的整体，生命的更新是被汲取的族，消耗是联合汲取超过它（AI 的读法）；TH1 修订的提议 8 的第二句。读法：联合消耗没有单一的消耗者。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+  "aliases": [
+    "a whole that draws its parts' arising beyond its renewal ends",
+    "a collective consuming what it goes on through",
+    "ending parts end together without arising",
+    "汲取其部分之生起超过更新的整体终结",
+    "Becoming.Web.Whole.family_excess_ends",
+    "Becoming.Web.Whole.joint_excess_ends",
+    "Becoming.Web.Listed.end_without_arising",
+    "Becoming.Web.Whole.ends_without_arising"
+  ],
+  "dependencies": [
+    {
+      "id": "whole-persists-through-generation",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Web.Whole, Web.Listed, Web.Ends, active_back and Ends.all; Covered.needs_arising is now proved from Listed.end_without_arising; the witnesses reuse Generations.",
+        "zh": "复用 Web.Whole、Web.Listed、Web.Ends、active_back 与 Ends.all；Covered.needs_arising 现由 Listed.end_without_arising 证明；见证复用 Generations。"
+      },
+      "interface": {
+        "output": {
+          "en": "A whole is active exactly while some part is; a part active after a step at which nothing arose was not inactive at it; finitely many endings end by one step.",
+          "zh": "整体恰在某部分活跃时活跃；在无生起之后活跃的部分，在那一步并非不活跃；有限个终结在同一步之前终结。"
+        },
+        "input": {
+          "en": "Ending parts end together without arising, and their whole.",
+          "zh": "无生起时终结的部分一同终结，其整体亦然。"
+        },
+        "conditions": {
+          "en": "Listed; each part ends.",
+          "zh": "可列出；每个部分终结。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean"
+      }
+    },
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The join applies Flow.family_excess_ends at the step after a part's arising; the one-condition form goes through Flow.gate_single.",
+        "zh": "结合在部分生起后的一步应用 Flow.family_excess_ends；单条件形式经 Flow.gate_single。"
+      },
+      "interface": {
+        "output": {
+          "en": "After n steps of the family's excess from a stock below n + m, every formation depending on a member at a need of at least m is inactive from T + n on.",
+          "zh": "族超出 n 步、起始存量低于 n + m 之后，凡以至少 m 的需要依存于某成员的形成，从 T + n 起都不活跃。"
+        },
+        "input": {
+          "en": "No part arises from T + n on.",
+          "zh": "从 T + n 起没有部分生起。"
+        },
+        "conditions": {
+          "en": "Balance, Acting, Dependent, the coupled gate.",
+          "zh": "平衡、Acting、Dependent、耦合的门控。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "whole-persists-through-generation",
+      "detail": {
+        "en": "A persisting whole needs its parts' arising; this record says how a whole ends where that arising stops, and what stops it.",
+        "zh": "持续的整体需要部分的生起；本记录说生起停止时整体如何终结，以及什么使它停止。"
+      }
+    },
+    {
+      "id": "own-count-misses-joint-excess",
+      "detail": {
+        "en": "Joint excess ends gated renewal; read for a whole, it ends what the whole goes on through.",
+        "zh": "联合超出终结门控的更新；对整体读，它终结整体赖以延续者。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Generations.alive",
+        "Becoming.Generations.ends",
+        "Becoming.Generations.generations",
+        "Becoming.Generations.listed",
+        "Becoming.Generations.parts",
+        "Becoming.Generations.whole",
+        "Becoming.Web.Covered.needs_arising",
+        "Becoming.Web.Ends",
+        "Becoming.Web.Ends.all",
+        "Becoming.Web.Listed",
+        "Becoming.Web.Listed.end_without_arising",
+        "Becoming.Web.Whole",
+        "Becoming.Web.Whole.ends_without_arising",
+        "Becoming.Web.Whole.family_excess_ends",
+        "Becoming.Web.Whole.joint_excess_ends",
+        "Becoming.Web.active_back",
+        "Becoming.WholeExceeding.acting",
+        "Becoming.WholeExceeding.alive",
+        "Becoming.WholeExceeding.arising",
+        "Becoming.WholeExceeding.balances",
+        "Becoming.WholeExceeding.dependent",
+        "Becoming.WholeExceeding.drawn",
+        "Becoming.WholeExceeding.ends",
+        "Becoming.WholeExceeding.excess",
+        "Becoming.WholeExceeding.flow",
+        "Becoming.WholeExceeding.gated",
+        "Becoming.WholeExceeding.lineage_ne",
+        "Becoming.WholeExceeding.listed",
+        "Becoming.WholeExceeding.member_ne",
+        "Becoming.WholeExceeding.not_mem_pair",
+        "Becoming.WholeExceeding.web",
+        "Becoming.WholeExceeding.whole",
+        "Becoming.WholeUnending.balances",
+        "Becoming.WholeUnending.flow",
+        "Becoming.WholeUnending.persists",
+        "Becoming.WholeUnending.web",
+        "Becoming.WholeUngated.balances",
+        "Becoming.WholeUngated.flow",
+        "Becoming.WholeUngated.persists",
+        "Becoming.WholeUngated.web",
+        "Becoming.WholeWithin.acting",
+        "Becoming.WholeWithin.arising",
+        "Becoming.WholeWithin.balances",
+        "Becoming.WholeWithin.dependent",
+        "Becoming.WholeWithin.flow",
+        "Becoming.WholeWithin.gated",
+        "Becoming.WholeWithin.kept",
+        "Becoming.WholeWithin.web"
+      ],
+      "sha256": "454216066bedcf870b0cbaab4a6fb0928f59cb8d60cbd6c4088d8c8d0ea89bb3"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.family_excess_ends",
+        "Becoming.Flow.gate_single"
+      ],
+      "sha256": "15a506ddb8d4768886e94227d868c300c8932ce3f489c48981f0f5777cf528f7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T214133.732004Z/verification.json",
+      "role": "receipt",
+      "sha256": "b91163af840baf72dbc7a935df3c659d66cde8d85bf231ad2f3f661880ff7569"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "449dbb4a55768ddd6fdedc5b17f1f746086c88baeb5092b1620cc53fae3de5fc"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "538fd5ef9caf716f7f7cd757416fb13f365f872c3aabcf36a4582077c69f0482"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "fe684d9e9ed6e58bf193535e0cc80ec445f0a432044e6141cf202f497dd327e2"
+    },
+    {
+      "path": "theories/becoming/OPENING.md",
+      "role": "statement",
+      "sha256": "7f3fb7921d12f5b177da0d83df6c3b55abec8058ef5cecebf9c0ad9a0426ea8f"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T214133.732004Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Wholes",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T214133.732004Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Continuation",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (WE1), a whole that draws its parts' arising beyond its renewal ends: the law below Whole.needs_arising (ending listed parts end together without arising, and their whole) and its join with Flow.family_excess_ends; OPENING note collective restated; study section 287.",
+      "zh": "2026年10月21日：新增（WE1），汲取其部分之生起超过更新的整体终结：Whole.needs_arising 之下的律（无生起时可列出的终结部分一同终结，其整体亦然）及其与 Flow.family_excess_ends 的结合；OPENING 注 collective 重述；研究第 287 节。"
+    }
+  ]
+}

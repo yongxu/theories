@@ -65,6 +65,8 @@ Metapopulation dynamics (Levins 1969; Hanski 1998): patches linked by recoloniza
 - related, not a proved adapter: [own-count-misses-joint-excess](own-count-misses-joint-excess.md). Its one-condition laws, now the family of one.
 - related, not a proved adapter: [selection-among-groups-by-ending](selection-among-groups-by-ending.md). Groups on conditions of their own; here groups on coupled conditions.
 
+**Used by:** [whole-drawing-beyond-renewal-ends](whole-drawing-beyond-renewal-ends.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

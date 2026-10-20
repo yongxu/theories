@@ -487,7 +487,8 @@
         "a-code-formed-between-formations",
         "relative-position-is-zero-sum",
         "capture-through-the-rule",
-        "closed-capture"
+        "closed-capture",
+        "whole-drawing-beyond-renewal-ends"
       ],
       "declarations": [
         "Becoming.Flow.mutuallyDependent_iff_reach",
@@ -495,7 +496,8 @@
         "Becoming.SharedCodes.run_agrees_every_start_iff",
         "Becoming.RelativePosition.rise_needs_fall",
         "Becoming.RuleCapture.uniform_locks",
-        "Becoming.ClosedCapture.lock_outlives_loss"
+        "Becoming.ClosedCapture.lock_outlives_loss",
+        "Becoming.Web.Whole.family_excess_ends"
       ],
       "status": "proved",
       "open_items": [

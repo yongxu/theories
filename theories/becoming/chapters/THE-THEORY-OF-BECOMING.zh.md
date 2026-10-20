@@ -187,9 +187,9 @@
 
 **要点。** 一个家族无尽地取用者，从其外得到供给；各自在一步所给之内的汲取合起来可以超出它，使水平低于更新者之所需的联合超出，终结它们以及在那一需要上依存于该条件的一切。取尽所给者排除其他每个取用者；每步上升的取用耗尽它所取自者并终结。
 
-**定理。** 本节陈述 `Flow.fed_from_beyond`、`Flow.excess_bounded`、`Flow.joint_excess_ends`、`Flow.continuing_excludes`、`Flow.outrun_below`、`Flow.seeking_ends`，以及一个体制的余量：在常设汲取下所给读自水平时，不可回返点是确切的（`RegimeMargin.ends_iff_below`），它高出需求至少一份汲取、恰在需求处所给不足汲取时更多（`RegimeMargin.beyond_draw_iff`），体制降低所给即抬高需求（`RegimeMargin.lowered_raises_strictly`），联合汲取下的所给次可加且不大于各自汲取下的所给时损害在一单位之内超可加（`RegimeMargin.harms_superadditive`）；完整陈述见[英文版 §2.3](THE-THEORY-OF-BECOMING.md#23-joint-excess-taking-all-and-what-is-fed-from-beyond)。
+**定理。** 本节陈述 `Flow.fed_from_beyond`、`Flow.excess_bounded`、`Flow.joint_excess_ends`、`Web.Whole.family_excess_ends`（部分各自终结、只在依存于某条件族时生起的整体，在族的取用超过其补充长于余量之后再无部分生起并终结；取用是联合的，整体不必是取用者）、`Flow.continuing_excludes`、`Flow.outrun_below`、`Flow.seeking_ends`，以及一个体制的余量：在常设汲取下所给读自水平时，不可回返点是确切的（`RegimeMargin.ends_iff_below`），它高出需求至少一份汲取、恰在需求处所给不足汲取时更多（`RegimeMargin.beyond_draw_iff`），体制降低所给即抬高需求（`RegimeMargin.lowered_raises_strictly`），联合汲取下的所给次可加且不大于各自汲取下的所给时损害在一单位之内超可加（`RegimeMargin.harms_superadditive`）；完整陈述见[英文版 §2.3](THE-THEORY-OF-BECOMING.md#23-joint-excess-taking-all-and-what-is-fed-from-beyond)。
 
-记录：[continuing-self-fed-from-beyond](../results/records/continuing-self-fed-from-beyond.md)、[own-count-misses-joint-excess](../results/records/own-count-misses-joint-excess.md)、[derived-extent-limits](../results/records/derived-extent-limits.md)、[what-taking-all-excludes](../results/records/what-taking-all-excludes.md)、[the-rest-outruns-the-renewal](../results/records/the-rest-outruns-the-renewal.md)、[where-a-rising-take-ends](../results/records/where-a-rising-take-ends.md)。
+记录：[continuing-self-fed-from-beyond](../results/records/continuing-self-fed-from-beyond.md)、[own-count-misses-joint-excess](../results/records/own-count-misses-joint-excess.md)、[whole-drawing-beyond-renewal-ends](../results/records/whole-drawing-beyond-renewal-ends.md)、[derived-extent-limits](../results/records/derived-extent-limits.md)、[what-taking-all-excludes](../results/records/what-taking-all-excludes.md)、[the-rest-outruns-the-renewal](../results/records/the-rest-outruns-the-renewal.md)、[where-a-rising-take-ends](../results/records/where-a-rising-take-ends.md)。
 
 ### 2.4 演化与传递
 
@@ -616,6 +616,7 @@
 | [整体经由部分的生成而持续](../results/records/whole-persists-through-generation.md) | 不加前提的定理 | — | §2.2 |
 | [推出范围的界限](../results/records/derived-extent-limits.md) | 不加前提的定理 | — | §2.3 |
 | [只计自身的取用漏掉联合超出](../results/records/own-count-misses-joint-excess.md) | 在所述前提下的定理 | 活动需要支持 | §2.3 |
+| [汲取其部分之生起超过更新的整体终结](../results/records/whole-drawing-beyond-renewal-ends.md) | 在所述前提下的定理 | 平衡、活动需要支持 | §2.3 |
 | [取尽所给所排除的](../results/records/what-taking-all-excludes.md) | 不加前提的定理 | — | §2.3 |
 | [其余者超出更新](../results/records/the-rest-outruns-the-renewal.md) | 在所述前提下的定理 | 活动需要支持 | §2.3 |
 | [多于此刻的取用终于何处](../results/records/where-a-rising-take-ends.md) | 不加前提的定理 | — | §2.3 |
@@ -856,8 +857,8 @@
 
 *主张。* 凡在它所依存的条件的许多次更新中持续者，只要该条件的更新在某个需要之下停止，这一条件上的联合净汲取（它自己的与其他每个汲取者的合起来）就一直保持在条件的余量之内：没有长于余量的联合超出连续发生过。这样的条件一旦低于其需要，没有来自其外的给予就不会回来；凡持续从围住它的族中取者，都由该族之外供给。余量属于体制而不属于水平：在持续的汲取下，凡在需要处的给予不及汲取，不可回返之点就比需要高出多于汲取。持续证明的是联合汲取；自己的汲取在更新之内什么也不证明。
 
-- *地位。* 在模型中、在其前提下已证：`Flow.joint_excess_ends`、`Flow.outrun_ends`、`Pair.own_not_joint`（构造的）、`Flow.fed_from_beyond`、`RegimeMargin.ends_iff_below`、`RegimeMargin.beyond_draw_iff`。实际有需要的条件满足这些前提，在实验室中有支持，在野外未检验。
-- *禁止。* 有已测需要的条件跌到需要之下、没有来自其外的任何给予而回来；依存者在其条件低于需要的各步中仍然活动；从封闭的族中长久取用而无流入；在需要处给予不及汲取时，不可回返之点不高于需要加汲取。
+- *地位。* 在模型中、在其前提下已证：`Flow.joint_excess_ends`、`Web.Whole.family_excess_ends`（部分各自终结、只在依存于该条件时生起的整体随之终结，汲取按联合计，[研究第 287 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#287-a-whole-that-draws-its-parts-arising-beyond-its-renewal-ends-we1)）、`Flow.outrun_ends`、`Pair.own_not_joint`（构造的）、`Flow.fed_from_beyond`、`RegimeMargin.ends_iff_below`、`RegimeMargin.beyond_draw_iff`。实际有需要的条件满足这些前提，在实验室中有支持，在野外未检验。
+- *禁止。* 有已测需要的条件跌到需要之下、没有来自其外的任何给予而回来；依存者在其条件低于需要的各步中仍然活动；成员各自终结、同时有限、只在所汲取的条件处于其需要时生起的集体，经历长于余量的联合超出而延续；从封闭的族中长久取用而无流入；在需要处给予不及汲取时，不可回返之点不高于需要加汲取。
 - *驳倒它的观察。* 事先（以干预）测得需要的种群、存量或储备，被压到需要之下，无测得的外来给予而回到其上；或预测的不可回返点两侧的命运，分得并不比没有需要的零模型更好。
 - *至今的证据。* 通过：真实酵母的留出体制上，预测的需要以每侧 93–100% 分开命运，零模型 68–81%（MQ2，[研究 §266](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#266-the-margins-equation-of-state-against-held-out-regimes-mq2)）；模拟的 Allee 酵母中断裂日落在余量所给的带内 22/22，持续汲取下的不可回返点在需要之上 1.4–4.1 个汲取 12/12（MQ1，[研究 §253](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#253-the-margin-as-a-measured-quantity-mq1)）；门控公地中联合超出之律在约 980 万个窗口中成立，并如其范围所要求，在邻块补种之处对单块不成立、对两块合读成立（CG1，[研究 §240](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#240-a-commons-with-gated-renewal-the-first-falsifiable-test-on-learning-agents-cg1)）。失败：酵母密度上冻结的锐利需要，败于仪器下限（MQ1 D2）；盐冲击后需要之上的存活（MQ2 C1，这是本论题不主张的逆命题，显示冲击改变体制也改变需要）；评估的鱼类存量中体制之点不分开命运（MQ3 F3，[研究 §272](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#272-the-margin-of-a-regime-in-the-field-mq3)），那里的余量读自同一检验证明为错的给予之律。尚无事先测得需要的野外检验。评估的鱼类存量很少检出减损（Myers 等 1995），多数在本论题的范围之外，而非与之相反。
 
@@ -1003,16 +1004,16 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261020T204155.924362Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 285 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#285-what-dependence-alone-carries-of-a-level-ob1)）。
+**当前回执**是运行 [`20261020T214133.732004Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T214133.732004Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 287 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#287-a-whole-that-draws-its-parts-arising-beyond-its-renewal-ends-we1)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Becoming`） | 284 个模块，11,522 条定理 |
+| 核心模块（含根 `Becoming`） | 284 个模块，11,549 条定理 |
 | 实例模块 | 7 个模块，567 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 300 个模块，12,342 条定理 |
-| 审计的脊柱声明 | 16,893 |
+| 闭包（核心、环与根基） | 300 个模块，12,369 条定理 |
+| 审计的脊柱声明 | 16,929 |
 | 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 197 条 |
 | 被取代的外围模块（不在运行中，字节保留） | 75 |
 
