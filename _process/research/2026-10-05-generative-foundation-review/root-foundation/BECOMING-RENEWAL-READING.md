@@ -10811,7 +10811,8 @@ The kit is [`development/r46-one-renumbering/`](development/r46-one-renumbering/
 ```text
 Result(s): none new about the unfolding; the margin operationalized by intervention and the laws
        written in it tested on two test beds, predictions frozen before the runs (run from 6b29f6ac0, on main e6b456cfc;
-       round 2 for A1 and A3 from 037683ad8, on main 0031223b3; originals under refs/salvage/mq1-*) and every verdict kept.
+       round 2 for A1 and A3 from 037683ad8, on main 0031223b3; originals under refs/salvage/mq1-*;
+       the real-data analysis from 00d7408c4, before any value was read) and every verdict kept.
 Delta: SA1 found the central laws near-definitional, and CG1 (section 240) measured one margin and
        one collapse-rate bound. A margin law holds the rest's exchanges fixed (Flow.WithheldLevels),
        and under that counterfactual (2) draws add / time to break = margin / net draw and (3) damage
@@ -10839,15 +10840,22 @@ Verdicts: A2 passed 22/22 (mean break day inside [m0/H - 1, (m0 - H)/(H - Y) + 1
        at 3, its route shut by A; every route-limiting cell left at level 1, the need) and on the
        learners' transfer clause (74% < 80%) while learners kept 160/160 cells alive; B6 vacuous for
        the best response, passed for learners (2 deaths, both at H - 4); B7 passed for the best
-       response (4/5), failed for learners (6/50) and for the band (3/13). D1-D2 on Dai et al.'s
-       Dryad data frozen, not run: Ren approved the download ("please"), Dryad's bot check blocks it.
+       response (4/5), failed for learners (6/50) and for the band (3/13). Real data (Dai et al.
+       2012 via Zenodo 5003142, Dryad's mirror, approved by Ren after Dryad's bot check blocked the
+       download): D1 passed (yesterday's density adds < 10% at all eight dilution factors, at most
+       9.5%); D2 failed (19-46% of low starters read > 0 on day 7); the addendum's floor from
+       negative readings came out 0, so D1' = D1 and D2' = D2. Post hoc (not a verdict): readings
+       are quantized at 0.001 and non-regrowing wells read 0.001-0.009; with a floor of 0.01 the
+       need separates fates at 5 of 6 testable DFs and fails next to the fold (DF 1600, 87.5%).
 Evidence: experiments/margin-measured (README with the verdict table, both freezes, results,
        VERDICTS.json per round, calibrations); Python standard library, CPU, about 13 minutes over
        12 cores.
 Boundary: A is a simulation (near-fold fluctuations below the paper's; culture volume assumed;
        A1m's lag state invented to give the test power); A2 and A3 hold by the mathematics in the
        deterministic limit, so they test the measurements under noise, not new dynamics. B is small
-       and deterministic; its learners are a bridge that did not hold. No real data were analysed.
+       and deterministic; its learners are a bridge that did not hold. On the real data the
+       population layout is read from the files (README PDFs not downloaded), D2's floor was
+       misjudged before the run, and the working floor is post hoc.
 Output → input: the margin is a measurable state quantity of the regime, not of the condition
        alone: measurable by intervention, and with Y it bounds time to break whatever the history
        where the state is the level; its need moves with standing draws (A3), so the theory's
@@ -10857,12 +10865,14 @@ Output → input: the margin is a measurable state quantity of the regime, not o
        the optimizer spend the margin to the need (B4, B5): own widening at zero margin
        (Flow.Balances.mixed_of_tight), the case two such agents together break (B7; post hoc, also
        V0). CG2's open stochastic form of the law (section 250) has its measured counterpart in A2's
-       band. Open: D1-D2 on real yeast (whether density is the state), a learner that reaches the
+       band. On real yeast density carries the history to within 10%, a little more than a
+       Markov null (D1, post-hoc comparison). Open: whether that excess is biology or measurement;
+       a frozen D2 with the instrument's floor read in advance; a learner that reaches the
        best response in B, and a statement of the need under standing draws on the spine (the
        withheld levels' need against the responsive run's).
 ```
 
-**Self-review.** Everything in round 1 was frozen and committed before any test run. Before the freeze I ran test bed A's calibration, one best-response solve of the reference variant, a learner timing and a smoke run (all disclosed). Round 1 exposed two configuration errors, both in my code, not in the theory: A1's harvest exceeded the starting margin, and A3 grew one unharvested day. They were corrected in a second freeze that changed configurations only. Round 1's verdicts stand. The strongest results are A4 (beyond the frozen-rest law, could have been sub-additive, was not in any cell) and B4 for the best response (an out-of-sample prediction that the reference outcome gets 0/8 right). The strongest negatives are the learners (B3, B4, B7), whose failures are H2's: CG1's lesson again, in a smaller world. A2 and A3 test measurements, not dynamics. The one test against nature, D1-D2, did not run, so nothing here is yet empirical support beyond a simulation set from a paper.
+**Self-review.** Everything in round 1 was frozen and committed before any test run. Before the freeze I ran test bed A's calibration, one best-response solve of the reference variant, a learner timing and a smoke run (all disclosed). Round 1 exposed two configuration errors, both in my code, not in the theory: A1's harvest exceeded the starting margin, and A3 grew one unharvested day. They were corrected in a second freeze that changed configurations only. Round 1's verdicts stand. The strongest results are A4 (beyond the frozen-rest law, could have been sub-additive, was not in any cell) and B4 for the best response (an out-of-sample prediction that the reference outcome gets 0/8 right). The strongest negatives are the learners (B3, B4, B7), whose failures are H2's: CG1's lesson again, in a smaller world. A2 and A3 test measurements, not dynamics. The one test against nature, D1-D2 on Dai et al.'s densities, ran from a freeze made before any value was read: D1 passed and D2 failed. The failure came from the instrument's floor, which my addendum misjudged (I expected negative readings; the data are quantized at 0.001). The post-hoc floor makes D2 hold except next to the fold, but that is post hoc, and a fresh frozen test on other data would be needed to count it.
 
 ## 254. One learner's own later acts are not a rest: where a stepwise learner outruns the renewal (CG3)
 
