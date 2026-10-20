@@ -69,8 +69,9 @@ Price's equation (Price 1970): with mean offspring number w̄, w̄Δz̄ = Cov(w,
 - related, not a proved adapter: [evolution-on-descent](evolution-on-descent.md). The selection term proper that evolution-on-descent left unstated, and selection through support read over generations.
 - related, not a proved adapter: [what-bounds-offspring-numbers](what-bounds-offspring-numbers.md). Selection on offspring number itself (the variance form), offspring numbers bounded by what is given and taken, and a lineage within a closed family that ends.
 - related, not a proved adapter: [selection-within-and-among-groups](selection-within-and-among-groups.md). The selection term divided into selection within groups and among them, for groups of equal size.
+- related, not a proved adapter: [drift-offspring-sampled](drift-offspring-sampled.md). Drift: a sampled next generation undoes a step that Raises with a bounded weight.
 
-**Used by:** [selection-within-and-among-groups](selection-within-and-among-groups.md) · [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md) · [what-bounds-offspring-numbers](what-bounds-offspring-numbers.md)
+**Used by:** [drift-offspring-sampled](drift-offspring-sampled.md) · [selection-within-and-among-groups](selection-within-and-among-groups.md) · [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md) · [what-bounds-offspring-numbers](what-bounds-offspring-numbers.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -94,6 +95,7 @@ Aliases: `the selection term proper, over generations`, `真正的选择项及�
 - 20 October 2026, EV2: the variance form and the bound on offspring numbers are stated in Becoming.Reproduction (record what-bounds-offspring-numbers, study section 244); the scope item naming them now points there and the next step is revised. The claim is unchanged.
 - 20 October 2026, EV4: the multilevel form of the selection term is stated in Becoming.SelectionLevels (record selection-within-and-among-groups, study section 248). The claim is unchanged.
 - 20 October 2026, EV4 and EV5 (selection within and among groups; among groups by ending): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV4's and EV5's additions: in 2.4 a bullet for each of Becoming.SelectionLevels and Becoming.GroupEnding and the record list; two rows of the record table; 8.1 item 9; and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.
+- 20 October 2026, EV8: Becoming.Drift bounds the samplings undoing a step that Raises (record drift-offspring-sampled, study section 276); this record's laws and their statements are unchanged.
 
 </details>
 

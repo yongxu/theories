@@ -218,6 +218,13 @@
         "en": "Ending for groups of any sizes, and a witness of ending using up the differences among groups it acts on.",
         "zh": "任意大小之组的终止，以及终止耗尽其所作用的组间差异的见证。"
       }
+    },
+    {
+      "id": "drift-offspring-sampled",
+      "detail": {
+        "en": "A rise by ending among groups, undone by a sampled generation with a bounded weight (Drift.Flow.ended_falls_back).",
+        "zh": "组间终止带来的上升，被抽样的一代以有界的权重撤销（Drift.Flow.ended_falls_back）。"
+      }
     }
   ],
   "references": [
@@ -276,7 +283,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "5933ffb52e621e403664dc30679ad225d266ce122ca1e5b15e5fff7aa811cef2"
+      "sha256": "a20457436a4923cd96e61e22a4e165c9dd7f85e40f405d17f031a66f93bac220"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json",
@@ -316,6 +323,10 @@
     {
       "en": "20 October 2026, EV7: Becoming.GroupEnding gains ending for groups of any sizes (EndedBy, means_not_against, Flow.rises_iff_inactive_sized) and the two-generation witness Exhausted (record selection-within-and-among-groups-of-any-sizes, study section 273); this record's laws and their statements are unchanged.",
       "zh": "2026年10月20日，EV7：Becoming.GroupEnding 增加任意大小之组的终止（EndedBy、means_not_against、Flow.rises_iff_inactive_sized）与跨两代的见证 Exhausted（记录 selection-within-and-among-groups-of-any-sizes，研究第 273 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "20 October 2026, EV8: Becoming.Drift states that a rise by ending among groups (raises_of_inactive) is undone by a sampled generation with a weight between q^n and a share falling as 1/n (record drift-offspring-sampled, study section 276); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月20日，EV8：Becoming.Drift 陈述组间终止带来的上升（raises_of_inactive）被抽样的一代撤销，其权重介于 q^n 与随 1/n 下降的份额之间（记录 drift-offspring-sampled，研究第 276 节）；本记录的定律及其陈述不变。"
     }
   ]
 }

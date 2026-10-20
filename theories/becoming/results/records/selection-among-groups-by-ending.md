@@ -67,8 +67,9 @@ Group selection by differential extinction (Wright 1945; Levins 1970 on metapopu
 - related, not a proved adapter: [what-bounds-offspring-numbers](what-bounds-offspring-numbers.md). Lineages ending within closed families, read here for groups on conditions of their own.
 - related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). Groups whose conditions are coupled end together; excess_childless is now the family of one.
 - related, not a proved adapter: [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md). Ending for groups of any sizes, and a witness of ending using up the differences among groups it acts on.
+- related, not a proved adapter: [drift-offspring-sampled](drift-offspring-sampled.md). A rise by ending among groups, undone by a sampled generation with a bounded weight (Drift.Flow.ended_falls_back).
 
-**Used by:** [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md) · [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md)
+**Used by:** [drift-offspring-sampled](drift-offspring-sampled.md) · [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md) · [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -93,6 +94,7 @@ Aliases: `selection among groups by ending`, `经由终止的组间选择`, `gro
 - 20 October 2026, EV5b: the base law Flow.rises_iff_inactive added (mixed groups, through SelectionLevels.rises_exact_iff_levels), so the evolution row's central laws reach the base; receipt 20261020T115958.613759Z, study section 259. The claim is unchanged.
 - 20 October 2026, EV6: groups whose conditions are coupled are stated in Becoming.GroupEnding (Flow.family_childless, Flow.coupled_end_together, Flow.ended_of_family; record groups-whose-conditions-are-coupled, study section 265); Flow.excess_childless is now derived from Flow.family_childless, its statement unchanged. The claim is unchanged; its open item on coupled groups is answered there.
 - 20 October 2026, EV7: Becoming.GroupEnding gains ending for groups of any sizes (EndedBy, means_not_against, Flow.rises_iff_inactive_sized) and the two-generation witness Exhausted (record selection-within-and-among-groups-of-any-sizes, study section 273); this record's laws and their statements are unchanged.
+- 20 October 2026, EV8: Becoming.Drift states that a rise by ending among groups (raises_of_inactive) is undone by a sampled generation with a weight between q^n and a share falling as 1/n (record drift-offspring-sampled, study section 276); this record's laws and their statements are unchanged.
 
 </details>
 

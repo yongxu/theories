@@ -258,6 +258,13 @@
         "en": "The selection term divided into selection within groups and among them, for groups of equal size.",
         "zh": "对等大小之组，选择项分为组内选择与组间选择。"
       }
+    },
+    {
+      "id": "drift-offspring-sampled",
+      "detail": {
+        "en": "Drift: a sampled next generation undoes a step that Raises with a bounded weight.",
+        "zh": "漂变：抽样的下一代以有界的权重撤销一步 Raises。"
+      }
     }
   ],
   "references": [
@@ -387,7 +394,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "5933ffb52e621e403664dc30679ad225d266ce122ca1e5b15e5fff7aa811cef2"
+      "sha256": "a20457436a4923cd96e61e22a4e165c9dd7f85e40f405d17f031a66f93bac220"
     }
   ],
   "proof_bindings": [
@@ -415,6 +422,10 @@
     {
       "en": "20 October 2026, EV4 and EV5 (selection within and among groups; among groups by ending): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV4's and EV5's additions: in 2.4 a bullet for each of Becoming.SelectionLevels and Becoming.GroupEnding and the record list; two rows of the record table; 8.1 item 9; and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.",
       "zh": "2026年10月20日，EV4 与 EV5（组内与组间选择；经由终止的组间选择）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因 EV4 与 EV5 的增补而改动：2.4 的 Becoming.SelectionLevels 与 Becoming.GroupEnding 各一条与记录列表；记录表的两行；8.1 第 9 项；以及第 9 节的回执与计数。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "20 October 2026, EV8: Becoming.Drift bounds the samplings undoing a step that Raises (record drift-offspring-sampled, study section 276); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月20日，EV8：Becoming.Drift 为撤销一步 Raises 的抽样给出界（记录 drift-offspring-sampled，研究第 276 节）；本记录的定律及其陈述不变。"
     }
   ]
 }

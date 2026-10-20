@@ -391,6 +391,7 @@
         "selection-among-groups-by-ending",
         "groups-whose-conditions-are-coupled",
         "selection-within-and-among-groups-of-any-sizes",
+        "drift-offspring-sampled",
         "transmission-is-inheritance-and-need"
       ],
       "declarations": [
@@ -410,7 +411,8 @@
         "Becoming.GroupEnding.Flow.rises_iff_inactive",
         "Becoming.GroupEnding.Flow.family_childless",
         "Becoming.GroupEnding.Flow.coupled_end_together",
-        "Becoming.GroupEnding.Flow.all_end"
+        "Becoming.GroupEnding.Flow.all_end",
+        "Becoming.Drift.falls_back"
       ],
       "status": "proved",
       "open_items": [
@@ -425,6 +427,9 @@
         ],
         "Becoming.SelectionLevels.levels_sized": [
           "Becoming.GroupEnding.Flow.rises_iff_inactive_sized"
+        ],
+        "Becoming.Drift.falls_back": [
+          "Becoming.Drift.Flow.ended_falls_back"
         ]
       }
     },

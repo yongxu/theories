@@ -1,0 +1,347 @@
+{
+  "schema_version": 2,
+  "id": "drift-offspring-sampled",
+  "title": {
+    "en": "Drift: offspring sampled rather than listed",
+    "zh": "漂变：从后代中抽样而非列出"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-20T16:36:56+00:00",
+  "statement": {
+    "en": "A next generation sampled from listed offspring keeps the listed share on average with an exact spread; the samplings undoing a step's selection, ending among groups included, weigh at most a share falling as 1/n and at least q^n.",
+    "zh": "从所列后代中抽样的下一代平均保持所列份额，离散度精确；撤销一步之选择（包括组间终止）的抽样之权重至多为随 1/n 下降的份额，至少为 q^n。"
+  },
+  "laws": [
+    {
+      "en": "Sampling is unbiased: drawn n times from p listed offspring of one kind and q of another, each sampling weighed by the ways of drawing it, p + q times the weighted count of the first kind is n p (p + q)^n, so on average the sampled share is the listed share.",
+      "zh": "抽样无偏：从一类 p 个、另一类 q 个的所列后代中抽取 n 次，每种抽样以抽出它的方式数为权重，p + q 乘第一类的加权计数等于 n p (p + q)^n，故平均而言抽样份额即所列份额。",
+      "declarations": [
+        "Becoming.Drift.step_ones",
+        "Becoming.Drift.step_zeros",
+        "Becoming.Drift.weighted_ones_step",
+        "Becoming.Drift.weighted_zeros_step",
+        "Becoming.Drift.step_expected",
+        "Becoming.Drift.expected_ones",
+        "Becoming.Drift.expected_zeros",
+        "Becoming.Drift.Generations.expected_sampled"
+      ]
+    },
+    {
+      "en": "Drift can undo selection with a weight falling as 1/n: where (p + q) h + g = N p, the samplings with at most h/N of the first kind weigh, times n^2 g^2, at most N^2 n p q (p + q)^n (each far back by the gap, summed against the spread).",
+      "zh": "漂变能撤销选择，其权重按 1/n 下降：(p + q) h + g = N p 时，第一类至多占 h/N 的抽样之权重乘以 n^2 g^2 至多为 N^2 n p q (p + q)^n（每种都因差距而远离，对离散度求和）。",
+      "declarations": [
+        "Becoming.Drift.fallsBack",
+        "Becoming.Drift.gap_le",
+        "Becoming.Drift.square_mul",
+        "Becoming.Drift.far_back",
+        "Becoming.Drift.falls_back_le",
+        "Becoming.Drift.falls_back"
+      ]
+    },
+    {
+      "en": "Never ruled out: the samplings with no draw of the first kind weigh exactly q^n, and each falls back, so the samplings undoing the step weigh at least q^n at every sample size.",
+      "zh": "从不被排除：没有抽到第一类的抽样之权重恰为 q^n，且每种都退回，故撤销这一步的抽样在任何样本大小下权重至少为 q^n。",
+      "declarations": [
+        "Becoming.Drift.lost",
+        "Becoming.Drift.lost_true",
+        "Becoming.Drift.lost_false",
+        "Becoming.Drift.lost_weight",
+        "Becoming.Drift.lost_le",
+        "Becoming.Drift.falls_back_ge"
+      ]
+    },
+    {
+      "en": "Over listed generations a step raising the mean of an amount held or not has a positive gap with that bound; on the base, where the step is ending among groups (the groups with less of the amount not active), both bounds hold.",
+      "zh": "在所列世代上，使持有与否之量的均值上升的一步有正的差距并满足该界；在流上，这一步是组间终止（持有较少之组不活跃）时，两个界都成立。",
+      "declarations": [
+        "Becoming.Drift.Generations.raised_falls_back",
+        "Becoming.Drift.Flow.ended_falls_back"
+      ]
+    },
+    {
+      "en": "Witness: one draw from three and two after a step raising the share from a half; the draw of the second kind falls back, weighing two of the five ways.",
+      "zh": "见证：一步把份额从一半升高后，从三与二中抽一次；抽到第二类即退回，在五种方式中权重为二。",
+      "declarations": [
+        "Becoming.Drift.OneDraw.falls_back"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Two kinds; n draws with replacement from the listed offspring, each listed offspring drawn alike (the Wright-Fisher sampling), counted by Typicality's courses; natural-number counts; the gap equation (p + q) h + g = N p; over listed generations the next generation's listed size its holders with q others, and Raises; on the base the hypotheses of GroupEnding.Flow.raises_of_inactive.",
+      "zh": "不加公理。两类；从所列后代中有放回地抽取 n 次，每个所列后代被抽到的方式相同（Wright-Fisher 抽样），以 Typicality 的进程计数；自然数计数；差距等式 (p + q) h + g = N p；所列世代上下一代的所列大小为持有者加 q 个其他，以及 Raises；在流上为 GroupEnding.Flow.raises_of_inactive 的假设。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which sampling happens: counting weighs the samplings and supposes no chance of the unfolding.",
+      "zh": "哪一种抽样发生：计数为各抽样加权，不设想展开中的机会。",
+      "kind": "scope"
+    },
+    {
+      "en": "Fixation and loss over many sampled generations (a course of samplings each drawn from the last), drift and selection in one draw, more than two kinds, and mutation are not stated.",
+      "zh": "多代抽样中的固定与丢失（每次从上一次抽出的样本中抽取的进程）、同一次抽取中的漂变与选择、多于两类，以及突变，未陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "An exponential bound on falling back: the bound is Chebyshev's, falling as 1/n; Typicality.concentrated gives the exponential one for the deviation, its form for falling back is not stated.",
+      "zh": "退回的指数界：本界是 Chebyshev 型，按 1/n 下降；Typicality.concentrated 给出偏差的指数界，其退回形式未陈述。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+      "detail": {
+        "en": "A raised share is not kept by every sampling: in OneDraw one draw of the second kind falls back below the step's start, weighing two of the five ways (OneDraw.falls_back), the lower bound q^n attained.",
+        "zh": "上升的份额并非每种抽样都保持：OneDraw 中抽到第二类的一次退回到这一步的起点以下，在五种方式中权重为二（OneDraw.falls_back），恰达下界 q^n。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T161918.649621Z): every declaration of Becoming.Drift has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 276; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T161918.649621Z）：Becoming.Drift 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 276 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Fixation and loss over many sampled generations; drift with selection in one draw; mutation (transmission not exact); an independent review.",
+    "zh": "多代抽样中的固定与丢失；同一次抽取中的漂变与选择；突变（不精确的传递）；独立审查。"
+  },
+  "correspondence": {
+    "en": "Wright-Fisher sampling (Fisher 1930; Wright 1931): binomial sampling of a two-allele population, unbiased with variance p q/((p + q)^2 n) of the share; the bound is Chebyshev's inequality for the sampled share falling back by delta = p/(p + q) - h/N, p q/((p + q)^2 delta^2 n). Selection is effective where the population size times the selection differential is large (Kimura): here n delta^2 against p q/(p + q)^2. Readings (the AI's): a rise by ending among groups is subject to the same drift as any other.",
+    "zh": "Wright-Fisher 抽样（Fisher 1930；Wright 1931）：两等位基因群体的二项抽样，无偏，份额方差 p q/((p + q)^2 n)；本界是抽样份额退回 delta = p/(p + q) - h/N 的 Chebyshev 不等式，p q/((p + q)^2 delta^2 n)。种群大小乘选择差大时选择有效（Kimura）：此处为 n delta^2 对 p q/(p + q)^2。读法（AI 的）：组间终止带来的上升与其他上升一样受漂变影响。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+  "aliases": [
+    "drift",
+    "genetic drift",
+    "Wright-Fisher sampling",
+    "漂变",
+    "offspring sampled rather than listed",
+    "Becoming.Drift.falls_back",
+    "Becoming.Drift.expected_ones",
+    "Becoming.Drift.falls_back_ge",
+    "Becoming.Drift.Flow.ended_falls_back"
+  ],
+  "dependencies": [
+    {
+      "id": "typicality-by-counting",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Samplings are Becoming.Typicality's courses weighed by Typicality.weight; the bound sums against Typicality.spread, and lost_weight and the first moment go through Typicality.total_extend.",
+        "zh": "抽样即 Becoming.Typicality 以 Typicality.weight 加权的进程；界对 Typicality.spread 求和，lost_weight 与一阶矩经由 Typicality.total_extend。"
+      },
+      "interface": {
+        "output": {
+          "en": "The courses of n steps, their weights and the exact spread.",
+          "zh": "n 步的进程、其权重与精确的离散度。"
+        },
+        "input": {
+          "en": "The first moment and the bound on falling back.",
+          "zh": "一阶矩与退回之界。"
+        },
+        "conditions": {
+          "en": "Natural weights p and q.",
+          "zh": "自然数权重 p 与 q。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean"
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "A step raising the mean (Generations.Raises) is read through rises_step_iff as the gap equation.",
+        "zh": "使均值上升的一步（Generations.Raises）经由 rises_step_iff 读作差距等式。"
+      },
+      "interface": {
+        "output": {
+          "en": "Raises t as size (t+1) times sum t below size t times sum (t+1).",
+          "zh": "Raises t 即 size (t+1) 乘 sum t 小于 size t 乘 sum (t+1)。"
+        },
+        "input": {
+          "en": "A positive gap for the bound.",
+          "zh": "界所需的正差距。"
+        },
+        "conditions": {
+          "en": "The amount read as held or not.",
+          "zh": "该量读作持有或不持有。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean"
+      }
+    },
+    {
+      "id": "selection-among-groups-by-ending",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "GroupEnding.Flow.raises_of_inactive supplies the rise on the base.",
+        "zh": "GroupEnding.Flow.raises_of_inactive 在流上给出上升。"
+      },
+      "interface": {
+        "output": {
+          "en": "Ending among groups raises the mean.",
+          "zh": "组间终止使均值上升。"
+        },
+        "input": {
+          "en": "The rise a sampled generation can undo.",
+          "zh": "抽样的一代可能撤销的上升。"
+        },
+        "conditions": {
+          "en": "Descent, exact transmission, groups of equal size uniform in the amount, the groups with less not active.",
+          "zh": "世系、精确传递、在该量上均匀的等大小之组、持有较少之组不活跃。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "typicality-by-counting",
+      "detail": {
+        "en": "Its courses and spread, read as samplings of a next generation.",
+        "zh": "其进程与离散度，读作下一代的抽样。"
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "detail": {
+        "en": "The step of selection a sampled generation can undo.",
+        "zh": "抽样的一代可能撤销的选择之步。"
+      }
+    },
+    {
+      "id": "selection-among-groups-by-ending",
+      "detail": {
+        "en": "A rise by ending among groups, subject to drift.",
+        "zh": "组间终止带来的上升，受漂变影响。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Drift.Flow.ended_falls_back",
+        "Becoming.Drift.Generations.expected_sampled",
+        "Becoming.Drift.Generations.raised_falls_back",
+        "Becoming.Drift.OneDraw.falls_back",
+        "Becoming.Drift.expected_ones",
+        "Becoming.Drift.expected_zeros",
+        "Becoming.Drift.fallsBack",
+        "Becoming.Drift.falls_back",
+        "Becoming.Drift.falls_back_ge",
+        "Becoming.Drift.falls_back_le",
+        "Becoming.Drift.far_back",
+        "Becoming.Drift.gap_le",
+        "Becoming.Drift.lost",
+        "Becoming.Drift.lost_false",
+        "Becoming.Drift.lost_le",
+        "Becoming.Drift.lost_true",
+        "Becoming.Drift.lost_weight",
+        "Becoming.Drift.square_mul",
+        "Becoming.Drift.step_expected",
+        "Becoming.Drift.step_ones",
+        "Becoming.Drift.step_zeros",
+        "Becoming.Drift.weighted_ones_step",
+        "Becoming.Drift.weighted_zeros_step"
+      ],
+      "sha256": "7e66ee1acb7d0aafa6fd79895a4836a71d2e5a945d67df7ebd44b774fc4de8d0"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Typicality.courses",
+        "Becoming.Typicality.weight",
+        "Becoming.Typicality.total_extend",
+        "Becoming.Typicality.total_weight",
+        "Becoming.Typicality.spread",
+        "Becoming.Typicality.two_mul_le"
+      ],
+      "sha256": "904976890149379d5d5e061cebf97235035ed94091985003ff51801b52e1d8a3"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SelectionTerm.Generations.Raises",
+        "Becoming.SelectionTerm.Generations.rises_step_iff"
+      ],
+      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.GroupEnding.Flow.raises_of_inactive"
+      ],
+      "sha256": "7c05d56b6569b13d17851b995673142d06dc11879da86cdf6303000f0f996d5e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T161918.649621Z/verification.json",
+      "role": "receipt",
+      "sha256": "1791743a894275ff2d4e4c3d3bd9c42b165c1fe331ec11fe08f30e3bff812238"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "687e14fbbc3d7d4ac8f504f592a7c4b75b322b5e028bfed672c58806aa28cc67"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "a20457436a4923cd96e61e22a4e165c9dd7f85e40f405d17f031a66f93bac220"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "role": "statement",
+      "sha256": "e92217b4fad21a49721a7aa2cfa8c62bb3973fdd0ecf9d78556527b518e398ee"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Drift.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T161918.649621Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Drift",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Typicality.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T161918.649621Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Typicality",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T161918.649621Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionTerm",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T161918.649621Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GroupEnding",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "20 October 2026: added (EV8), one generation of offspring sampled rather than listed: unbiased, the spread exact, falling back bounded above and below, over listed generations and on the base; study section 276.",
+      "zh": "2026年10月20日：新增（EV8），从后代中抽样而非列出的一代：无偏、离散度精确、退回有上下界，在所列世代上与流上；研究第 276 节。"
+    }
+  ]
+}

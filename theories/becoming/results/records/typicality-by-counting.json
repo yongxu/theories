@@ -277,6 +277,13 @@
         "zh": "权重是走每一步的情境之数；大数定律计数情境。",
         "en": "Weights are the numbers of situations taking each step; the law of large numbers counts situations."
       }
+    },
+    {
+      "id": "drift-offspring-sampled",
+      "detail": {
+        "en": "Its courses read as samplings of a next generation: drift (Becoming.Drift).",
+        "zh": "其进程读作下一代的抽样：漂变（Becoming.Drift）。"
+      }
     }
   ],
   "references": [
@@ -653,6 +660,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Replaced by the name stating it now, the same statement or its general form, or renamed (development/r37-lens-b/RENAME-TABLE.json): Typicality.total (now total). Proof bindings (Identification.lean, Prelude.lean, TypicalRuns.lean, Typicality.lean, Weighted.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Identification.lean, TypicalRuns.lean, Typicality.lean, Weighted.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：以现在陈述它的名称取代（陈述相同或为其一般形式）或改名（development/r37-lens-b/RENAME-TABLE.json）：Typicality.total（现为 total）。证明绑定（Identification.lean、Prelude.lean、TypicalRuns.lean、Typicality.lean、Weighted.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Identification.lean、TypicalRuns.lean、Typicality.lean、Weighted.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
+    },
+    {
+      "en": "20 October 2026, EV8: Becoming.Drift reads its courses as samplings of a next generation and sums its spread into a bound on undoing selection (record drift-offspring-sampled, study section 276); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月20日，EV8：Becoming.Drift 把其进程读作下一代的抽样，并对其离散度求和得到撤销选择的界（记录 drift-offspring-sampled，研究第 276 节）；本记录的定律及其陈述不变。"
     }
   ],
   "text_versions": [

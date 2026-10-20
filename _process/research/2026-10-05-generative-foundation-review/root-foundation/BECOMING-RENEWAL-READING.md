@@ -11799,3 +11799,60 @@ Output → input: chapter section 9 names the renewed CorrectionInquiry (2026102
 - **How the runs were landed.** The checkers ran one at a time; every Lean step of the core was restored from the shared cache except CorrectionInquiry's Lean 4.30.0-rc2 compile of the core, and each repaired module recompiled. Main moved twice during the work (R51 and its board and connectivity commits); the receipts were rerun on the final head. Main moved once more during that run, by a connectivity commit with no Lean change, so the receipts name main as a34b8412f or 6b07c9edf; `stale.py main` confirms that every receipt binds main's current bytes, the seven repaired modules aside.
 
 **Self-review.** This renews checks; it adds no claim. The repairs were chosen by the rename and removal tables of R30, R32 and R37 and by the R31 module split, and the printed-signature comparison confirms them where the earlier log exists. The comparison reads printed statements, which name definitions but do not unfold them; that a renamed definition kept its body rests on R30's, R32's and R37's own signature checks of the core.
+
+## 276. Drift: offspring sampled rather than listed (EV8)
+
+```text
+Result(s): Becoming.Drift (new core module, 21 theorems in 23 declarations) states what sampling the next
+       generation from listed offspring adds, by counting the samplings. A next generation of two kinds is drawn n
+       times from p listed offspring of the first kind and q of the second; a sampling is a course of
+       Becoming.Typicality weighed by the ways of drawing it (Typicality.weight p q), all (p + q)^n of them counted.
+       Sampling is unbiased: p + q times the weighted count of draws of the first kind is n p (p + q)^n
+       (expected_ones; expected_zeros for the second kind; over listed generations Generations.expected_sampled), so
+       on average the sampled share is the listed share; the spread is Typicality.spread, n p q (p + q)^n. Drift can
+       undo selection with a weight falling as 1/n: where (p + q) h + g = N p (a listed step raising the share from
+       h/N to p/(p + q) by the gap g), the samplings with at most h/N of the first kind (fallsBack) weigh, times
+       n^2 g^2, at most N^2 n p q (p + q)^n (falls_back, from the per-sampling bound falls_back_le through gap_le and
+       far_back, summed against the spread); and never ruled out: the samplings with no draw of the first kind
+       (lost) weigh exactly q^n (lost_weight), each falls back (lost_le), so the samplings falling back weigh at
+       least q^n at every n (falls_back_ge). Over listed generations a step that raises the mean of an amount held or
+       not (Generations.Raises) has a positive gap with that bound (Generations.raised_falls_back, via
+       rises_step_iff); on the base, where the step is ending among groups (the groups with less of the amount not
+       active, GroupEnding.Flow.raises_of_inactive), both bounds hold (Flow.ended_falls_back). Witness OneDraw: one
+       draw from three and two after a step raising the share from a half; the draw of the second kind falls back,
+       weighing two of five. Record drift-offspring-sampled.
+Delta: the evolution chapter's next connection 3 in part (offspring sampled rather than listed; mutation, transmission
+       that is not exact, stays open) and chapter section 8.1 item 9. New module on Typicality and GroupEnding: the
+       sampling is Typicality's courses, the step it can undo is SelectionTerm's Raises and GroupEnding's ending;
+       Typicality's spread is used, not restated.
+Premises: two kinds; draws with replacement from the listed offspring, each listed offspring drawn alike (the
+       Wright-Fisher sampling); natural-number counts; for the generations and base forms, the amount read as held
+       or not (the next generation's listed size is its holders with q others, a hypothesis), and the hypotheses of
+       Raises or of raises_of_inactive.
+Evidence: core receipt 20261020T161918.649621Z (passed; Becoming.Drift every axiom report empty; core 283 modules and 11,394 theorems, instances 7 and 567, applications 6 and 179; 7 Lean steps ran, 1,189 reused); the connectivity
+       rerun (593 of 12,140 apart; the new apart roots registered; register check passes); render, check, links and tests.
+Boundary: counting weighs samplings; it does not say which happens (Typicality's boundary): drift is read as a count
+       of the ways a sample can differ from its list, not as a chance supposed of the unfolding. One generation of
+       sampling only: fixation and loss over many sampled generations (the absorbing course, the probability of
+       fixation p/(p + q) for a neutral kind, the time to it) are not stated, nor drift with selection in the same
+       draw (sampling weighted by offspring number is the listing; their interplay over generations is open). The
+       bound is Chebyshev's, not the exponential one (Typicality.concentrated gives that for the deviation itself;
+       its form for falling back is not stated). Two kinds; more kinds, and mutation, are not stated.
+Output → input: the selection laws on the spine are for listed offspring; sampling adds nothing on average, a spread
+       exact in n, and a weight of undoing selection between q^n and N^2 p q/(n g^2) of the whole. So a rise by
+       selection, ending among groups included, is kept by a sampled generation except in a share of samplings that
+       falls as 1/n for a fixed gap and grows as the gap shrinks: drift dominates where n g^2 is small against
+       N^2 p q, the counting form of the classical reading that selection is effective where the population size
+       times the selection differential is large. Next: fixation over sampled generations, mutation (transmission not exact), and the additive
+       part of Fisher's theorem.
+```
+
+The kit is [`development/ev8-drift/`](development/ev8-drift/): this landing's text (`apply_text.py`, `study_ev8.txt`) and record (`make_record.py`), and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **Unbiased.** One more draw: each sampling `w` of `n` draws extends to `true :: w`, weighing `p · weight w` with one more draw of the first kind, and `false :: w`, weighing `q · weight w` (`Typicality.total_extend`). So the weighted count of the first kind at `n + 1` is `(p + q)` times that at `n` with `p (p + q)^n` (`weighted_ones_step`), and by induction `(p + q)` times it is `n p (p + q)^n` (`expected_ones`). Divided by `(p + q)^{n+1}`, the mean count of the first kind is `n p/(p + q)`.
+- **Falling back is far back.** A sampling with `a` draws of the first kind and `b` of the second (`a + b = n`) falls back where `a N ≤ h n`; then `N (q a) + n g ≤ N (p b)` (`gap_le`): its first-kind deviation `q a` is behind `p b` by at least `n g/N`. For `x ≤ y` with `N x + n g ≤ N y`, `N² · 2xy + n² g² ≤ N² (x² + y²)` (`far_back`: `x² + y² = 2xy + (y − x)²`). With `x = q a`, `y = p b` (Typicality's `ahead` and `behind`), `x² + y²` is `square` and `2xy` is `cross`, so each sampling's weight times `N²` times its squared deviation `square − cross` is at least its weight times `n² g²` where it falls back (`falls_back_le`; elsewhere `two_mul_le`). Summing and using `Typicality.spread` (`Σ weight · square = Σ weight · cross + n p q (p + q)^n`) gives `falls_back`.
+- **Never ruled out.** The sampling with every draw of the second kind weighs `q^n`; `lost` counts the samplings with no draw of the first kind, by induction `q^n` exactly (`lost_true`, `lost_false`, `lost_weight`), and with no draw of the first kind `0 · N ≤ h n` holds, so each falls back (`lost_le`).
+- **Over generations and on the base.** `rises_step_iff` reads `Raises t` as `size (t+1) · sum t < size t · sum (t+1)`; with `size (t + 1) = sum (t + 1) + q` this is `(p + q) h < N p` with `p = sum (t + 1)`, `h = sum t`, `N = size t`, so a positive gap exists (`raised_falls_back`). `GroupEnding.Flow.raises_of_inactive` supplies `Raises t` where the groups with less of the amount are not active, giving `Flow.ended_falls_back`.
+- **Witness.** `OneDraw`: `p = 3`, `q = 2`, `n = 1`, `h = 1`, `N = 2`: the gap is `2 · 3 − 5 · 1 = 1`; the draw of the first kind (`1 · 2 ≤ 1 · 1` fails) does not fall back, the draw of the second does, weighing 2 of 5 (= `q^n`, the lower bound attained); the upper bound reads `2 · 1 ≤ 4 · 30`.
+
+**Self-review.** The weights are exact counts of draws, so "on average" and "spread" are statements about counts, with no probability assumed. The variance `p q/((p + q)² n)` of the share and the bound `p q/((p + q)² δ² n)` with `δ = p/(p + q) − h/N` are the textbook Wright–Fisher sampling variance and Chebyshev's inequality applied to undoing a selected change (Fisher 1930, Wright 1931); the classical reading that selection is effective where the population size times the selection coefficient is large (Kimura) appears here as `n δ²` against `p q/(p + q)²`. What is new is only that these are stated on the spine's counting, on the same `Raises` as the selection laws, and joined on the base to ending among groups: a rise that ending supplies is subject to the same drift as any other. The lower bound `q^n` is crude (only the samplings losing the first kind) but enough to say undoing is never ruled out at any size. Fixation over many sampled generations needs a course of samplings each drawn from the last, which the module does not build; it is the next connection for drift.

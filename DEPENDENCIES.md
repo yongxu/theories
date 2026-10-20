@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-302 registered results: 283 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 761 curated edges join 255 results to the results they draw on.
+303 registered results: 284 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 764 curated edges join 256 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -68,6 +68,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [derived-history-law-exactness][] ← <a id="derived-history-law-exactness--finite-trace-transport"></a>[finite-trace-transport][]
 - [determinacy-up-to-likeness][] ← <a id="determinacy-up-to-likeness--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] · <a id="determinacy-up-to-likeness--experiment-needs-return"></a>[experiment-needs-return][] · <a id="determinacy-up-to-likeness--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="determinacy-up-to-likeness--joint-difference-making"></a>[joint-difference-making][]
 - [differences-below-threshold][] ← <a id="differences-below-threshold--testing-within-couplings"></a>[testing-within-couplings][] · <a id="differences-below-threshold--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="differences-below-threshold--levels-of-closure"></a>[levels-of-closure][]
+- [drift-offspring-sampled][] ← <a id="drift-offspring-sampled--typicality-by-counting"></a>[typicality-by-counting][] · <a id="drift-offspring-sampled--selection-term-over-generations"></a>[selection-term-over-generations][] · <a id="drift-offspring-sampled--selection-among-groups-by-ending"></a>[selection-among-groups-by-ending][]
 - [enacted-scene-binding][] ← <a id="enacted-scene-binding--acquired-binding-compositional-use"></a>[acquired-binding-compositional-use][]
 - [encounter-control-and-retention][] ← <a id="encounter-control-and-retention--encounter-selection-and-revision"></a>[encounter-selection-and-revision][] *(interpretive)* · <a id="encounter-control-and-retention--naming-attention-coverage"></a>[naming-attention-coverage][] *(interpretive)*
 - [encounter-selection-and-revision][] ← <a id="encounter-selection-and-revision--enacted-scene-binding"></a>[enacted-scene-binding][]
@@ -330,6 +331,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [derived-history-law-exactness]: theories/becoming/results/records/derived-history-law-exactness.md
 [determinacy-up-to-likeness]: theories/becoming/results/records/determinacy-up-to-likeness.md
 [differences-below-threshold]: theories/becoming/results/records/differences-below-threshold.md
+[drift-offspring-sampled]: theories/becoming/results/records/drift-offspring-sampled.md
 [enacted-scene-binding]: theories/becoming/results/records/enacted-scene-binding.md
 [encounter-control-and-retention]: theories/becoming/results/records/encounter-control-and-retention.md
 [encounter-selection-and-revision]: theories/becoming/results/records/encounter-selection-and-revision.md

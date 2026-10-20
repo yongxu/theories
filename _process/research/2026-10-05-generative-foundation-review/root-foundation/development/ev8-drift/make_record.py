@@ -47,7 +47,7 @@ def resolve(names):
     full = [d['name'] for d in decls('Drift')['declarations']]
     out = []
     for n in names:
-        hits = [f for f in full if f == 'Becoming.Drift.' + n or f.endswith('.' + n)]
+        hits = [f for f in full if f == 'Becoming.Drift.' + n] or [f for f in full if f.endswith('.' + n)]
         assert len(hits) == 1, (n, hits)
         out.append(hits[0])
     return out
@@ -64,6 +64,11 @@ def dep(rid, relation, en, zh, out_en, out_zh, in_en, in_zh, cond_en, cond_zh, e
 
 
 RID = 'drift-offspring-sampled'
+# The upstream laws Drift's proofs use, cited as the dependencies' evidence (each bound to the receipt).
+USED = {'Typicality': ['Becoming.Typicality.courses', 'Becoming.Typicality.weight', 'Becoming.Typicality.total_extend',
+                       'Becoming.Typicality.total_weight', 'Becoming.Typicality.spread', 'Becoming.Typicality.two_mul_le'],
+        'SelectionTerm': ['Becoming.SelectionTerm.Generations.Raises', 'Becoming.SelectionTerm.Generations.rises_step_iff'],
+        'GroupEnding': ['Becoming.GroupEnding.Flow.raises_of_inactive']}
 TYP = 'typicality-by-counting'
 STG = 'selection-term-over-generations'
 EV5 = 'selection-among-groups-by-ending'
@@ -178,20 +183,27 @@ rec = {
                                'zh': '组间终止带来的上升，受漂变影响。'}}],
     'references': [{'path': src('Drift'), 'role': 'proof',
                     'declarations': sorted(d['name'] for d in decls('Drift')['declarations']), 'sha256': sha(src('Drift'))},
+                  ] + [{'path': src(mod), 'role': 'proof', 'declarations': names, 'sha256': sha(src(mod))}
+                       for mod, names in USED.items()] + [
                    {'path': RECEIPT, 'role': 'receipt', 'sha256': sha(RECEIPT)},
                    {'path': STUDY, 'role': 'integration', 'sha256': sha(STUDY)},
                    {'path': CHAPTER, 'role': 'statement', 'sha256': sha(CHAPTER)},
                    {'path': EVO, 'role': 'statement', 'sha256': sha(EVO)}],
     'proof_bindings': [{'source': src('Drift'), 'receipt': RECEIPT, 'sha256_pointer': '/source_sha256/Becoming.Drift',
-                        'success_pointer': '/status', 'success_value': 'passed'}],
+                        'success_pointer': '/status', 'success_value': 'passed'}] + [
+        {'source': src(mod), 'receipt': RECEIPT, 'sha256_pointer': f'/source_sha256/Becoming.{mod}',
+         'success_pointer': '/status', 'success_value': 'passed'} for mod in USED],
     'history': [{
         'en': f'20 October 2026: added (EV8), one generation of offspring sampled rather than listed: unbiased, the spread '
               f'exact, falling back bounded above and below, over listed generations and on the base; study section {N}.',
         'zh': f'2026年10月20日：新增（EV8），从后代中抽样而非列出的一代：无偏、离散度精确、退回有上下界，在所列世代上与流上；研究第 {N} 节。'}],
 }
 assert len(rec['statement']['en']) <= 300, len(rec['statement']['en'])
+for mod, names in USED.items():
+    have = {d['name'] for d in decls(mod)['declarations']}
+    assert set(names) <= have, (mod, set(names) - have)
 path = RECORDS / f'{RID}.json'
-assert not path.exists(), ('record exists', RID)
+assert not path.exists() or '--again' in sys.argv, ('record exists', RID)
 path.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')
 print('written', RID)
 
