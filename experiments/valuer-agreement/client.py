@@ -224,7 +224,7 @@ class OpenRouterClient:
                     time.sleep(delay)
                     delay = min(120.0, delay * 2)
                     continue
-                raise RuntimeError(f"{self.model}: HTTP {e.code}")
+                raise RuntimeError(f"{self.model}: HTTP {e.code}: {text[:300]}")
             except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, KeyError, IndexError,
                     ValueError, TypeError):
                 time.sleep(delay)

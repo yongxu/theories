@@ -4,13 +4,14 @@ Board item VD1, 21 October 2026. AI-written (a Claude Code session). Predictions
 
 The ethics' order premise C, calling widening better, is what every weighting that counts every formation shares (`Weighting.widens_iff_every_positive`), and a mixed comparison is decided each way by some such weighting (`Weighting.mixed_either_way`). The prediction is that where many valuers compare outcomes, agreement falls on widening comparisons and disagreement on mixed ones, and that a widening is disputed only through a misread case.
 
-The test uses sixteen decisions in eight domains, each with six formations whose continuation depends on the plan. Pairs of plans are built from the sets each keeps: widenings, mixed pairs matched to them in size, keeps and a cross-framed widening. Every class is computed exactly before any judgment. Six models from six families judge every pair under sixteen standpoint prompts, called through OpenRouter: DeepSeek v4.1 flash, GLM 5.3 Flash, OpenAI GPT-6 luna, Claude Haiku 5.5, Meta Muse Spark 1.3 Contributor and StepFun Step 5 Preview. With each choice they report their own reading of which formations continue.
+The test uses sixteen decisions in eight domains, each with six formations whose continuation depends on the plan. Pairs of plans are built from the sets each keeps: widenings, mixed pairs matched to them in size, keeps and a cross-framed widening. Every class is computed exactly before any judgment. Six models from six families judge every pair under sixteen standpoint prompts, called through OpenRouter: DeepSeek v4.1 flash, GLM 5.3 Flash, OpenAI GPT-6 luna, Claude Haiku 5.5, Meta Muse Spark 1.3 and StepFun Step 5 Preview. With each choice they report their own reading of which formations continue.
 
 Files:
 - [`frames.py`](frames.py): the frames, standpoints, pairs, counterbalancing and prompts.
 - [`structure.py`](structure.py): the exact class of every pair, the outweighing witnesses, the 1-3-9 weighting grid and the surface balance, written to [`results/structure.json`](results/structure.json) and [`results/balance.json`](results/balance.json).
 - [`client.py`](client.py): the clients (OpenAI and headless Claude Code, never run; OpenRouter, the second addendum's), and the scripted valuers of the dry runs.
-- [`run.py`](run.py): the configuration and runs, written to `results/runs/<model>.jsonl`.
+- [`run.py`](run.py): the configuration and runs, written to `results/runs/<model>.jsonl`, with the budget guard.
+- [`check.py`](check.py): the non-experimental check of each model before its first call.
 - [`analyze.py`](analyze.py): the measures and the frozen verdict rules, written to `results/verdicts.json`.
 
 ## Boundary: six families, one of them the theory's
@@ -19,4 +20,4 @@ Five valuers (DeepSeek, GLM, OpenAI, Meta, StepFun) are families other than the 
 
 ## State
 
-Frozen (`c56f3f8d2`), then amended twice before any call. The OpenAI account had no credit (`insufficient_quota`). The Claude plan was at its weekly limit, so the first addendum was never run, and Ren then chose models through OpenRouter. No experimental call has been made. The OpenRouter key in Ren's zsh was rejected (401, "User not found."), so the runs wait for a working key.
+Frozen (`c56f3f8d2`), then amended twice before any call. The OpenAI account had no credit (`insufficient_quota`). The Claude plan was at its weekly limit, so the first addendum was never run, and Ren then chose models through OpenRouter. Ren replaced the OpenRouter key, and the checks passed for five models. Meta's contributor tier is not served to this account, so the same model's standard listing replaces it, at a higher price. The run is staged against a $10 budget: standpoint 0 first, then the rest only if the projected total is at most $10 ([note](PREDICTIONS-ADDENDUM-2-2026-10-21.md#notes-before-the-first-experimental-call)).

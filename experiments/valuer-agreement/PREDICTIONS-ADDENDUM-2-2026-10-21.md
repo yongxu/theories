@@ -28,10 +28,10 @@ AI-written (the VD1 session). Committed before any experimental model call. It s
 | `z-ai/glm-5.3-flash` | 26 Aug 2026 | $0.047 / $0.12 | GLM 5.3 Flash, paid; structured outputs and seed |
 | `openai/gpt-6-luna` | 22 Sep 2026 | $0.10 / $0.50 | OpenRouter lists no 6.1 luna (6.1 is listed only as `gpt-6.1-sol`), so the newest luna is pinned; structured outputs and seed |
 | `anthropic/claude-haiku-5.5` | 7 Oct 2026 | $0.10 / $0.50 | structured outputs; no seed listed |
-| `meta/muse-spark-1.3-contributor` | 2 Sep 2026 | $0.10 / $0.20 | structured outputs; no seed listed |
+| `meta/muse-spark-1.3` | 2 Sep 2026 | $1.25 / $4.25 | the standard listing of Muse Spark 1.3, replacing the contributor tier `meta/muse-spark-1.3-contributor` ($0.10 / $0.20), which this account is not served (note below); structured outputs; no seed listed |
 | `stepfun/step-5-preview` | 8 Oct 2026 | $1.00 / $2.70 | a preview model; structured outputs and seed |
 
-With sixteen standpoints there are 96 valuers. Each model makes 1,792 main and 128 replicate calls, 11,520 in all. At these prices the run costs about $5, most of it StepFun's, which is IN1's scale.
+With sixteen standpoints there are 96 valuers. Each model makes 1,792 main and 128 replicate calls, 11,520 in all. At the contributor tier's price the run was estimated at about $5, most of it StepFun's; Meta's standard listing raises the estimate to about $8–11, so the run is staged against a budget (note below).
 
 **Calls** ([`client.OpenRouterClient`](client.py)). Each judgment is one stateless chat completion, with the standpoint as the system prompt and the item as the user message:
 - `response_format`: the item's strict JSON schema.
@@ -96,4 +96,13 @@ If a model rejects a strict JSON schema, it is sent `{"type": "json_object"}` in
 
 ## Notes before the first experimental call
 
-(None yet.)
+**21 October: key, checks, Meta's listing and the budget.**
+
+- *Key.* Ren replaced the OpenRouter key (relayed on 21 October). OpenRouter's key endpoint answers for it: not a free-tier key, a $50 limit on the key with nothing used, and about $30 of credit on the account. No key material was printed.
+- *Checks* ([`check.py`](check.py), one test call per model, not the experiment's prompt, with the experiment's settings). Five models returned a valid reply under the strict JSON schema with low reasoning, so none falls back to `json_object`. OpenRouter served DeepSeek through InferenceNet, GLM through Wafer, GPT-6 luna through OpenAI, Claude Haiku through Azure and StepFun through DeepInfra.
+- *Meta.* `meta/muse-spark-1.3-contributor` returned HTTP 404 with no endpoint: "Paid model training violation (account settings)". The contributor tier is served only to accounts that let their prompts be used for training. That is an account setting, Ren's and not this session's, and the experiment does not need it. The same model's standard listing, `meta/muse-spark-1.3`, listed the same day with the same parameters (structured outputs, no seed), took the check validly, served by Meta. It replaces the contributor tier, so Meta stays among the six families. It costs $1.25 / $4.25 per million tokens: the test reply used 352 completion tokens (its reasoning included) and cost $0.0017.
+- *Budget.* Ren, relayed: "If spend looks set to pass about $10, stop and tell me." At Meta's standard price the estimate is near that line, so the run goes in two stages.
+  1. Standpoint 0 for all six models: 672 calls, `run.py --through 0`. It is first in every model's queue anyway, so the stage changes no order.
+  2. The total is projected from the costs OpenRouter reports in those rows alone: for each model, its stage cost × 1,920 / 112, summed. No judgment in them is read. If the projection is at most $10, the run continues as committed. If not, no further call is made, and the projection goes to Ren.
+- *Prompts.* `frames.py` is still byte-identical to `c56f3f8d2`, and the hash above, `sha256(json.dumps([[system, user, schema(labels)] for each presentation]))`, still matches.
+- *Guard.* As a backstop, `run.py` (`budget_usd`, $10) stops every model when the costs reported so far reach $10. A model stopped this way is treated by the design rule like a model stopped at any other cap.
