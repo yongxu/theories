@@ -1,0 +1,2786 @@
+[
+{
+"domain": "reservoir",
+"kind": "MIXED",
+"S": 82,
+"D": 41,
+"M": 51,
+"k": 2
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 61,
+"D": 41,
+"M": null,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "MIXED",
+"S": 72,
+"D": 45,
+"M": 60,
+"k": 3
+},
+{
+"domain": "meadow",
+"kind": "MIXED",
+"S": 56,
+"D": 28,
+"M": 29,
+"k": 3
+},
+{
+"domain": "aquifer",
+"kind": "NONE",
+"S": 59,
+"D": null,
+"M": 47,
+"k": 2
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 87,
+"D": 75,
+"M": null,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 82,
+"D": 55,
+"M": null,
+"k": 2
+},
+{
+"domain": "peat",
+"kind": "MIXED",
+"S": 150,
+"D": 92,
+"M": 113,
+"k": 3
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 6,
+"D": 5,
+"M": null,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 67,
+"D": 38,
+"M": null,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "HARMLESS",
+"S": 69,
+"D": 76,
+"M": 54,
+"k": 2
+},
+{
+"domain": "reservoir",
+"kind": "HARMLESS",
+"S": 46,
+"D": 51,
+"M": null,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "MIXED",
+"S": 10,
+"D": 3,
+"M": 9,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "NONE",
+"S": 90,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 144,
+"D": 76,
+"M": null,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "NONE",
+"S": 67,
+"D": null,
+"M": null,
+"k": 4
+},
+{
+"domain": "meadow",
+"kind": "MIXED",
+"S": 47,
+"D": 19,
+"M": 36,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 103,
+"D": 64,
+"M": null,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 118,
+"D": 56,
+"M": 45,
+"k": 3
+},
+{
+"domain": "peat",
+"kind": "NONE",
+"S": 112,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "MIXED",
+"S": 56,
+"D": 24,
+"M": 55,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "NONE",
+"S": 89,
+"D": null,
+"M": null,
+"k": 3
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 31,
+"D": 15,
+"M": null,
+"k": 4
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 27,
+"D": 9,
+"M": null,
+"k": 4
+},
+{
+"domain": "river",
+"kind": "MIXED",
+"S": 93,
+"D": 41,
+"M": 82,
+"k": 2
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 57,
+"D": 46,
+"M": 38,
+"k": 2
+},
+{
+"domain": "peat",
+"kind": "MIXED",
+"S": 130,
+"D": 69,
+"M": 129,
+"k": 2
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 97,
+"D": 43,
+"M": null,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 153,
+"D": 136,
+"M": null,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 74,
+"D": 47,
+"M": 36,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 104,
+"D": 51,
+"M": 35,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "HARMLESS",
+"S": 52,
+"D": 66,
+"M": 24,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "MIXED",
+"S": 168,
+"D": 96,
+"M": 145,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 6,
+"D": 3,
+"M": 2,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "MIXED",
+"S": 66,
+"D": 43,
+"M": 49,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 28,
+"D": 13,
+"M": null,
+"k": 2
+},
+{
+"domain": "river",
+"kind": "NONE",
+"S": 104,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 113,
+"D": 74,
+"M": null,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "MIXED",
+"S": 117,
+"D": 76,
+"M": 110,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "NONE",
+"S": 7,
+"D": null,
+"M": 3,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 8,
+"D": 4,
+"M": 2,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "HARMLESS",
+"S": 76,
+"D": 92,
+"M": null,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "HARMLESS",
+"S": 94,
+"D": 104,
+"M": 53,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 143,
+"D": 60,
+"M": 37,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "HARMLESS",
+"S": 150,
+"D": 153,
+"M": null,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "NONE",
+"S": 129,
+"D": null,
+"M": 51,
+"k": 2
+},
+{
+"domain": "salt",
+"kind": "MIXED",
+"S": 137,
+"D": 79,
+"M": 84,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "MIXED",
+"S": 50,
+"D": 30,
+"M": 41,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "HARMLESS",
+"S": 9,
+"D": 11,
+"M": 4,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "MIXED",
+"S": 35,
+"D": 16,
+"M": 22,
+"k": 2
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 96,
+"D": 56,
+"M": 49,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "MIXED",
+"S": 90,
+"D": 47,
+"M": 76,
+"k": 3
+},
+{
+"domain": "cave",
+"kind": "MIXED",
+"S": 532,
+"D": 274,
+"M": 460,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 12,
+"D": 9,
+"M": null,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "NONE",
+"S": 197,
+"D": null,
+"M": 149,
+"k": 4
+},
+{
+"domain": "harbour",
+"kind": "HARMLESS",
+"S": 77,
+"D": 88,
+"M": null,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 12,
+"D": 6,
+"M": null,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "MIXED",
+"S": 9,
+"D": 4,
+"M": 5,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 99,
+"D": 78,
+"M": null,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 95,
+"D": 48,
+"M": 42,
+"k": 2
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 59,
+"D": 27,
+"M": null,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 490,
+"D": 341,
+"M": null,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 80,
+"D": 41,
+"M": 26,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 123,
+"D": 110,
+"M": null,
+"k": 2
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 119,
+"D": 51,
+"M": null,
+"k": 4
+},
+{
+"domain": "lights",
+"kind": "MIXED",
+"S": 12,
+"D": 5,
+"M": 7,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 392,
+"D": 309,
+"M": 236,
+"k": 2
+},
+{
+"domain": "cave",
+"kind": "MIXED",
+"S": 309,
+"D": 150,
+"M": 306,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 180,
+"D": 122,
+"M": null,
+"k": 3
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 73,
+"D": 52,
+"M": 43,
+"k": 3
+},
+{
+"domain": "reservoir",
+"kind": "NONE",
+"S": 82,
+"D": null,
+"M": null,
+"k": 2
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 91,
+"D": 75,
+"M": 36,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 74,
+"D": 24,
+"M": null,
+"k": 2
+},
+{
+"domain": "turbines",
+"kind": "MIXED",
+"S": 8,
+"D": 4,
+"M": 6,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 83,
+"D": 65,
+"M": null,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 78,
+"D": 40,
+"M": null,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "NONE",
+"S": 11,
+"D": null,
+"M": 6,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "MIXED",
+"S": 33,
+"D": 23,
+"M": 24,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "MIXED",
+"S": 199,
+"D": 73,
+"M": 100,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 128,
+"D": 99,
+"M": 86,
+"k": 3
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 91,
+"D": 71,
+"M": 56,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "MIXED",
+"S": 86,
+"D": 31,
+"M": 69,
+"k": 2
+},
+{
+"domain": "salt",
+"kind": "HARMLESS",
+"S": 102,
+"D": 129,
+"M": 71,
+"k": 2
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 173,
+"D": 61,
+"M": 47,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "MIXED",
+"S": 86,
+"D": 54,
+"M": 63,
+"k": 2
+},
+{
+"domain": "meadow",
+"kind": "NONE",
+"S": 54,
+"D": null,
+"M": 20,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 584,
+"D": 508,
+"M": null,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 50,
+"D": 35,
+"M": 26,
+"k": 4
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 58,
+"D": 29,
+"M": null,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "NONE",
+"S": 9,
+"D": null,
+"M": 3,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "HARMLESS",
+"S": 167,
+"D": 204,
+"M": null,
+"k": 4
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 83,
+"D": 35,
+"M": null,
+"k": 4
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 44,
+"D": 21,
+"M": 14,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "NONE",
+"S": 91,
+"D": null,
+"M": 39,
+"k": 3
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 105,
+"D": 43,
+"M": null,
+"k": 2
+},
+{
+"domain": "lights",
+"kind": "HARMLESS",
+"S": 12,
+"D": 13,
+"M": null,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 79,
+"D": 70,
+"M": null,
+"k": 2
+},
+{
+"domain": "cave",
+"kind": "HARMLESS",
+"S": 477,
+"D": 576,
+"M": null,
+"k": 4
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 137,
+"D": 46,
+"M": 20,
+"k": 3
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 68,
+"D": 50,
+"M": 40,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 9,
+"D": 3,
+"M": null,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "NONE",
+"S": 64,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 49,
+"D": 33,
+"M": 24,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "NONE",
+"S": 100,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "NONE",
+"S": 476,
+"D": null,
+"M": 163,
+"k": 2
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 6,
+"D": 3,
+"M": null,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 6,
+"D": 5,
+"M": null,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 10,
+"D": 5,
+"M": null,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 39,
+"D": 14,
+"M": 6,
+"k": 2
+},
+{
+"domain": "turbines",
+"kind": "MIXED",
+"S": 10,
+"D": 4,
+"M": 5,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 88,
+"D": 51,
+"M": 23,
+"k": 4
+},
+{
+"domain": "meadow",
+"kind": "HARMLESS",
+"S": 78,
+"D": 82,
+"M": 24,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "NONE",
+"S": 36,
+"D": null,
+"M": 27,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 9,
+"D": 6,
+"M": null,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "HARMLESS",
+"S": 49,
+"D": 54,
+"M": null,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 81,
+"D": 70,
+"M": 32,
+"k": 2
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 99,
+"D": 36,
+"M": null,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 77,
+"D": 43,
+"M": 19,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "HARMLESS",
+"S": 6,
+"D": 7,
+"M": 4,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 32,
+"D": 14,
+"M": 12,
+"k": 3
+},
+{
+"domain": "peat",
+"kind": "MIXED",
+"S": 152,
+"D": 77,
+"M": 85,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 130,
+"D": 65,
+"M": 32,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "HARMLESS",
+"S": 48,
+"D": 50,
+"M": null,
+"k": 3
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 121,
+"D": 99,
+"M": 60,
+"k": 3
+},
+{
+"domain": "meadow",
+"kind": "NONE",
+"S": 49,
+"D": null,
+"M": 28,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 80,
+"D": 46,
+"M": 26,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 92,
+"D": 64,
+"M": null,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 81,
+"D": 63,
+"M": 42,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 47,
+"D": 15,
+"M": null,
+"k": 4
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 6,
+"D": 4,
+"M": null,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 69,
+"D": 28,
+"M": null,
+"k": 3
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 89,
+"D": 56,
+"M": 31,
+"k": 4
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 59,
+"D": 42,
+"M": 26,
+"k": 3
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 91,
+"D": 65,
+"M": 53,
+"k": 3
+},
+{
+"domain": "cave",
+"kind": "MIXED",
+"S": 598,
+"D": 206,
+"M": 375,
+"k": 3
+},
+{
+"domain": "forest",
+"kind": "HARMLESS",
+"S": 124,
+"D": 146,
+"M": 42,
+"k": 4
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 71,
+"D": 39,
+"M": null,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 138,
+"D": 110,
+"M": null,
+"k": 3
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 96,
+"D": 70,
+"M": 44,
+"k": 4
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 88,
+"D": 59,
+"M": null,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "HARMLESS",
+"S": 73,
+"D": 79,
+"M": 39,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "MIXED",
+"S": 49,
+"D": 25,
+"M": 44,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "HARMLESS",
+"S": 51,
+"D": 60,
+"M": 33,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 99,
+"D": 72,
+"M": null,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "MIXED",
+"S": 88,
+"D": 49,
+"M": 51,
+"k": 3
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 147,
+"D": 124,
+"M": 60,
+"k": 2
+},
+{
+"domain": "lights",
+"kind": "NONE",
+"S": 11,
+"D": null,
+"M": 4,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "HARMLESS",
+"S": 78,
+"D": 86,
+"M": 41,
+"k": 2
+},
+{
+"domain": "salt",
+"kind": "HARMLESS",
+"S": 126,
+"D": 127,
+"M": null,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "NONE",
+"S": 96,
+"D": null,
+"M": null,
+"k": 3
+},
+{
+"domain": "river",
+"kind": "MIXED",
+"S": 77,
+"D": 40,
+"M": 70,
+"k": 3
+},
+{
+"domain": "river",
+"kind": "NONE",
+"S": 68,
+"D": null,
+"M": null,
+"k": 3
+},
+{
+"domain": "salt",
+"kind": "NONE",
+"S": 95,
+"D": null,
+"M": 44,
+"k": 4
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 541,
+"D": 429,
+"M": null,
+"k": 2
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 84,
+"D": 74,
+"M": 58,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 68,
+"D": 21,
+"M": null,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "HARMLESS",
+"S": 116,
+"D": 125,
+"M": null,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 49,
+"D": 41,
+"M": null,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 8,
+"D": 4,
+"M": null,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 126,
+"D": 102,
+"M": 76,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 175,
+"D": 89,
+"M": 42,
+"k": 3
+},
+{
+"domain": "aquifer",
+"kind": "NONE",
+"S": 38,
+"D": null,
+"M": 24,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 363,
+"D": 273,
+"M": null,
+"k": 2
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 95,
+"D": 71,
+"M": 45,
+"k": 2
+},
+{
+"domain": "harbour",
+"kind": "HARMLESS",
+"S": 94,
+"D": 110,
+"M": null,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "HARMLESS",
+"S": 12,
+"D": 13,
+"M": null,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 133,
+"D": 45,
+"M": null,
+"k": 4
+},
+{
+"domain": "turbines",
+"kind": "MIXED",
+"S": 7,
+"D": 2,
+"M": 3,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "HARMLESS",
+"S": 77,
+"D": 81,
+"M": 59,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 43,
+"D": 20,
+"M": 11,
+"k": 3
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 6,
+"D": 5,
+"M": null,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 100,
+"D": 31,
+"M": 27,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "NONE",
+"S": 84,
+"D": null,
+"M": 65,
+"k": 2
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 154,
+"D": 132,
+"M": 105,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "MIXED",
+"S": 46,
+"D": 28,
+"M": 42,
+"k": 3
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 9,
+"D": 8,
+"M": 3,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "NONE",
+"S": 96,
+"D": null,
+"M": null,
+"k": 4
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 103,
+"D": 90,
+"M": 61,
+"k": 3
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 60,
+"D": 42,
+"M": null,
+"k": 2
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 9,
+"D": 5,
+"M": 3,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 81,
+"D": 47,
+"M": null,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "MIXED",
+"S": 63,
+"D": 30,
+"M": 36,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 7,
+"D": 4,
+"M": null,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 36,
+"D": 32,
+"M": 24,
+"k": 3
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 92,
+"D": 38,
+"M": null,
+"k": 3
+},
+{
+"domain": "river",
+"kind": "MIXED",
+"S": 103,
+"D": 46,
+"M": 58,
+"k": 2
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 72,
+"D": 50,
+"M": 34,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "NONE",
+"S": 82,
+"D": null,
+"M": null,
+"k": 4
+},
+{
+"domain": "forest",
+"kind": "HARMLESS",
+"S": 110,
+"D": 129,
+"M": null,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 360,
+"D": 257,
+"M": null,
+"k": 4
+},
+{
+"domain": "forest",
+"kind": "MIXED",
+"S": 133,
+"D": 55,
+"M": 128,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "HARMLESS",
+"S": 365,
+"D": 399,
+"M": null,
+"k": 3
+},
+{
+"domain": "reservoir",
+"kind": "MIXED",
+"S": 66,
+"D": 20,
+"M": 60,
+"k": 3
+},
+{
+"domain": "turbines",
+"kind": "HARMLESS",
+"S": 10,
+"D": 11,
+"M": null,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 70,
+"D": 37,
+"M": 31,
+"k": 3
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 45,
+"D": 38,
+"M": 30,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "HARMLESS",
+"S": 8,
+"D": 9,
+"M": 5,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "HARMLESS",
+"S": 178,
+"D": 208,
+"M": 56,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 82,
+"D": 54,
+"M": 39,
+"k": 2
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 172,
+"D": 107,
+"M": null,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "MIXED",
+"S": 324,
+"D": 188,
+"M": 191,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "MIXED",
+"S": 100,
+"D": 58,
+"M": 66,
+"k": 3
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 10,
+"D": 6,
+"M": 3,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 9,
+"D": 3,
+"M": null,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "NONE",
+"S": 7,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 75,
+"D": 47,
+"M": null,
+"k": 4
+},
+{
+"domain": "aquifer",
+"kind": "MIXED",
+"S": 49,
+"D": 20,
+"M": 47,
+"k": 2
+},
+{
+"domain": "salt",
+"kind": "HARMLESS",
+"S": 116,
+"D": 127,
+"M": 82,
+"k": 4
+},
+{
+"domain": "peat",
+"kind": "NONE",
+"S": 193,
+"D": null,
+"M": null,
+"k": 3
+},
+{
+"domain": "lights",
+"kind": "MIXED",
+"S": 12,
+"D": 5,
+"M": 8,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 75,
+"D": 30,
+"M": null,
+"k": 3
+},
+{
+"domain": "reservoir",
+"kind": "NONE",
+"S": 57,
+"D": null,
+"M": 30,
+"k": 2
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 68,
+"D": 47,
+"M": 35,
+"k": 3
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 8,
+"D": 6,
+"M": null,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 89,
+"D": 39,
+"M": 17,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 89,
+"D": 67,
+"M": 58,
+"k": 4
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 12,
+"D": 8,
+"M": null,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 56,
+"D": 18,
+"M": 11,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 34,
+"D": 24,
+"M": null,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "NONE",
+"S": 439,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "HARMLESS",
+"S": 7,
+"D": 8,
+"M": null,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 96,
+"D": 81,
+"M": null,
+"k": 2
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 50,
+"D": 34,
+"M": 26,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "HARMLESS",
+"S": 29,
+"D": 40,
+"M": 9,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 355,
+"D": 142,
+"M": 125,
+"k": 2
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 478,
+"D": 243,
+"M": null,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 149,
+"D": 132,
+"M": 63,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 94,
+"D": 70,
+"M": null,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 97,
+"D": 59,
+"M": 32,
+"k": 2
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 98,
+"D": 62,
+"M": null,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 67,
+"D": 25,
+"M": null,
+"k": 2
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 78,
+"D": 53,
+"M": 32,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "MIXED",
+"S": 10,
+"D": 7,
+"M": 9,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 111,
+"D": 97,
+"M": null,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "MIXED",
+"S": 98,
+"D": 39,
+"M": 91,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "NONE",
+"S": 155,
+"D": null,
+"M": 59,
+"k": 4
+},
+{
+"domain": "harbour",
+"kind": "HARMLESS",
+"S": 69,
+"D": 81,
+"M": null,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "NONE",
+"S": 127,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 123,
+"D": 48,
+"M": 25,
+"k": 4
+},
+{
+"domain": "peat",
+"kind": "MIXED",
+"S": 113,
+"D": 66,
+"M": 99,
+"k": 2
+},
+{
+"domain": "aquifer",
+"kind": "MIXED",
+"S": 51,
+"D": 27,
+"M": 33,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 119,
+"D": 100,
+"M": 52,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "NONE",
+"S": 98,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 422,
+"D": 154,
+"M": 66,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 303,
+"D": 211,
+"M": 168,
+"k": 3
+},
+{
+"domain": "harbour",
+"kind": "MIXED",
+"S": 76,
+"D": 47,
+"M": 48,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "HARMLESS",
+"S": 65,
+"D": 74,
+"M": 48,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "MIXED",
+"S": 10,
+"D": 3,
+"M": 6,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "HARMLESS",
+"S": 82,
+"D": 93,
+"M": null,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 73,
+"D": 41,
+"M": null,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "NONE",
+"S": 6,
+"D": null,
+"M": 3,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 438,
+"D": 293,
+"M": null,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "HARMLESS",
+"S": 119,
+"D": 141,
+"M": 88,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "NONE",
+"S": 57,
+"D": null,
+"M": 29,
+"k": 2
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 65,
+"D": 23,
+"M": 20,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "NONE",
+"S": 85,
+"D": null,
+"M": 35,
+"k": 3
+},
+{
+"domain": "peat",
+"kind": "HARMLESS",
+"S": 160,
+"D": 192,
+"M": 90,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 77,
+"D": 27,
+"M": 18,
+"k": 3
+},
+{
+"domain": "turbines",
+"kind": "HARMLESS",
+"S": 6,
+"D": 7,
+"M": null,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "HARMLESS",
+"S": 56,
+"D": 70,
+"M": 18,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 82,
+"D": 69,
+"M": 42,
+"k": 4
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 114,
+"D": 71,
+"M": 55,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 71,
+"D": 40,
+"M": null,
+"k": 3
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 72,
+"D": 63,
+"M": 26,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "NONE",
+"S": 169,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "MIXED",
+"S": 88,
+"D": 47,
+"M": 59,
+"k": 4
+},
+{
+"domain": "reservoir",
+"kind": "MIXED",
+"S": 82,
+"D": 45,
+"M": 46,
+"k": 4
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 104,
+"D": 31,
+"M": null,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 343,
+"D": 172,
+"M": null,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "MIXED",
+"S": 100,
+"D": 70,
+"M": 94,
+"k": 2
+},
+{
+"domain": "lights",
+"kind": "MIXED",
+"S": 9,
+"D": 3,
+"M": 5,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "HARMLESS",
+"S": 34,
+"D": 40,
+"M": 14,
+"k": 4
+},
+{
+"domain": "harbour",
+"kind": "HARMLESS",
+"S": 96,
+"D": 107,
+"M": null,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 53,
+"D": 46,
+"M": null,
+"k": 3
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 7,
+"D": 4,
+"M": 3,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "NONE",
+"S": 87,
+"D": null,
+"M": null,
+"k": 3
+},
+{
+"domain": "cluster",
+"kind": "NONE",
+"S": 99,
+"D": null,
+"M": null,
+"k": 3
+},
+{
+"domain": "meadow",
+"kind": "MIXED",
+"S": 61,
+"D": 31,
+"M": 42,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 49,
+"D": 19,
+"M": null,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "MIXED",
+"S": 87,
+"D": 60,
+"M": 63,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 9,
+"D": 4,
+"M": null,
+"k": 1
+},
+{
+"domain": "peat",
+"kind": "KEEP",
+"S": 164,
+"D": 129,
+"M": 89,
+"k": 2
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 449,
+"D": 391,
+"M": null,
+"k": 2
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 10,
+"D": 3,
+"M": null,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 7,
+"D": 6,
+"M": 5,
+"k": 1
+},
+{
+"domain": "harbour",
+"kind": "NONE",
+"S": 67,
+"D": null,
+"M": 50,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 10,
+"D": 7,
+"M": null,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "MIXED",
+"S": 91,
+"D": 38,
+"M": 69,
+"k": 1
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 66,
+"D": 29,
+"M": 19,
+"k": 2
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 53,
+"D": 18,
+"M": 10,
+"k": 3
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 85,
+"D": 51,
+"M": null,
+"k": 2
+},
+{
+"domain": "forest",
+"kind": "MIXED",
+"S": 149,
+"D": 61,
+"M": 89,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 432,
+"D": 244,
+"M": 215,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 29,
+"D": 20,
+"M": 13,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 97,
+"D": 48,
+"M": null,
+"k": 3
+},
+{
+"domain": "cave",
+"kind": "KEEP",
+"S": 352,
+"D": 157,
+"M": null,
+"k": 2
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 84,
+"D": 31,
+"M": 28,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "MIXED",
+"S": 84,
+"D": 52,
+"M": 84,
+"k": 4
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 78,
+"D": 37,
+"M": null,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 27,
+"D": 19,
+"M": null,
+"k": 3
+},
+{
+"domain": "forest",
+"kind": "NONE",
+"S": 108,
+"D": null,
+"M": 33,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "MIXED",
+"S": 84,
+"D": 56,
+"M": 83,
+"k": 2
+},
+{
+"domain": "harbour",
+"kind": "MIXED",
+"S": 67,
+"D": 29,
+"M": 51,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "NONE",
+"S": 10,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 42,
+"D": 25,
+"M": null,
+"k": 3
+},
+{
+"domain": "cave",
+"kind": "HARMLESS",
+"S": 297,
+"D": 328,
+"M": 130,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "HARMLESS",
+"S": 146,
+"D": 174,
+"M": null,
+"k": 4
+},
+{
+"domain": "river",
+"kind": "MIXED",
+"S": 76,
+"D": 23,
+"M": 64,
+"k": 2
+},
+{
+"domain": "harbour",
+"kind": "MIXED",
+"S": 96,
+"D": 67,
+"M": 75,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "MIXED",
+"S": 7,
+"D": 4,
+"M": 5,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "MIXED",
+"S": 29,
+"D": 15,
+"M": 27,
+"k": 2
+},
+{
+"domain": "harbour",
+"kind": "KEEP",
+"S": 74,
+"D": 38,
+"M": 16,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "MIXED",
+"S": 401,
+"D": 275,
+"M": 303,
+"k": 2
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 12,
+"D": 9,
+"M": 4,
+"k": 1
+},
+{
+"domain": "river",
+"kind": "KEEP",
+"S": 71,
+"D": 31,
+"M": 27,
+"k": 2
+},
+{
+"domain": "meadow",
+"kind": "HARMLESS",
+"S": 78,
+"D": 91,
+"M": 34,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 9,
+"D": 8,
+"M": null,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "MIXED",
+"S": 54,
+"D": 22,
+"M": 28,
+"k": 3
+},
+{
+"domain": "cave",
+"kind": "NONE",
+"S": 486,
+"D": null,
+"M": 159,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "HARMLESS",
+"S": 120,
+"D": 134,
+"M": 80,
+"k": 1
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 7,
+"D": 4,
+"M": 3,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 135,
+"D": 62,
+"M": null,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "HARMLESS",
+"S": 518,
+"D": 560,
+"M": null,
+"k": 2
+},
+{
+"domain": "peat",
+"kind": "HARMLESS",
+"S": 193,
+"D": 217,
+"M": 68,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 46,
+"D": 15,
+"M": null,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "KEEP",
+"S": 121,
+"D": 43,
+"M": 27,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 87,
+"D": 57,
+"M": 51,
+"k": 4
+},
+{
+"domain": "salt",
+"kind": "NONE",
+"S": 155,
+"D": null,
+"M": 112,
+"k": 2
+},
+{
+"domain": "lights",
+"kind": "MIXED",
+"S": 8,
+"D": 2,
+"M": 3,
+"k": 1
+},
+{
+"domain": "aquifer",
+"kind": "KEEP",
+"S": 36,
+"D": 20,
+"M": null,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "NONE",
+"S": 487,
+"D": null,
+"M": null,
+"k": 4
+},
+{
+"domain": "turbines",
+"kind": "KEEP",
+"S": 6,
+"D": 2,
+"M": null,
+"k": 1
+},
+{
+"domain": "turbines",
+"kind": "NONE",
+"S": 9,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "MIXED",
+"S": 76,
+"D": 43,
+"M": 57,
+"k": 4
+},
+{
+"domain": "lights",
+"kind": "KEEP",
+"S": 12,
+"D": 10,
+"M": 5,
+"k": 1
+},
+{
+"domain": "cave",
+"kind": "MIXED",
+"S": 388,
+"D": 194,
+"M": 325,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 115,
+"D": 78,
+"M": null,
+"k": 4
+},
+{
+"domain": "reservoir",
+"kind": "MIXED",
+"S": 65,
+"D": 24,
+"M": 35,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "KEEP",
+"S": 117,
+"D": 59,
+"M": 28,
+"k": 3
+},
+{
+"domain": "reservoir",
+"kind": "KEEP",
+"S": 62,
+"D": 22,
+"M": 9,
+"k": 1
+},
+{
+"domain": "cluster",
+"kind": "KEEP",
+"S": 71,
+"D": 39,
+"M": null,
+"k": 3
+},
+{
+"domain": "river",
+"kind": "NONE",
+"S": 113,
+"D": null,
+"M": null,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "MIXED",
+"S": 122,
+"D": 70,
+"M": 117,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "MIXED",
+"S": 140,
+"D": 49,
+"M": 83,
+"k": 1
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 76,
+"D": 50,
+"M": 22,
+"k": 2
+},
+{
+"domain": "meadow",
+"kind": "KEEP",
+"S": 43,
+"D": 21,
+"M": null,
+"k": 1
+},
+{
+"domain": "salt",
+"kind": "MIXED",
+"S": 85,
+"D": 52,
+"M": 56,
+"k": 1
+},
+{
+"domain": "forest",
+"kind": "MIXED",
+"S": 113,
+"D": 45,
+"M": 46,
+"k": 1
+}
+]
