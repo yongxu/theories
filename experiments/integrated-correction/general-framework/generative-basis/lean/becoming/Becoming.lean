@@ -274,6 +274,7 @@ import Becoming.SelectionGap
 import Becoming.SelectionReach
 import Becoming.DrawnBeyond
 import Becoming.JointDraw
+import Becoming.Optimum
 import Becoming.SelectionPool
 import Becoming.PoolResponse
 import Becoming.Rejoining
@@ -1353,6 +1354,16 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Over a run, taking no more and giving no less eases the course, so under the whole-run reading
   restraint extends overdraw for any number of drawers exactly when it includes an event the other
   withholds (`Ranking.restraint_extends_iff`); `TwoDrawers` is the instance.
+* `Becoming.Optimum` (L1): what optimizing through couplings does beyond them. Over any set of
+  outcomes, every order rising with the levels of what couples in, whatever it does beyond, has
+  its optima at the least level beyond, condition by condition, exactly where every outcome
+  standing above another beyond is not unbeaten on what couples in; shared units, a unit beyond
+  movable into the family, are one case, and counting the beyond after the family changes
+  nothing. On a web an optimum breaks exactly the dependences beyond that some outcome breaks,
+  and with the dependence as it was the formation ends, unseen by every member coupled only into
+  the family. In balanced steps raising the family is lowering the beyond with the loss, unit for
+  unit; restricted to outcomes keeping each dependence, the optimum takes exactly the slack.
+  Witnesses on `Diversion`: the drive, no room, a satisficing order, keeping.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
