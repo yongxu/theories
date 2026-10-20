@@ -452,19 +452,19 @@
 
 ### 7.3 明：及于支持所不标记者的耦合
 
-**要点。** 损失只经寻求者耦合入者到达它，所以锁定的寻求在此之外造成的损失，只经测量、模型或他者到达它。每条路线有其律与其限，每条都给一个选择接上一个耦合，及于选择者自身的耦合所不及之处。
+**要点。** 损失只经寻求者耦合入者到达它，所以锁定的寻求在此之外造成的损失，只经测量、模型或他者到达它。每条路线有其律与其限，每条都给一个选择接上一个耦合，及于选择者自身的耦合所不及之处。读取他者的耦合即与之合起来：以水平耦合入另一形成所耦合入的一切者，其耦合闭包在后者与其所耦合入的条件交换时恰为二者之池的闭包，即二者闭包之并，在此之外是盲的（`Flow.withinCoupling_reads_iff`、`Flow.unselected_beyond_reads`）。
 
 **陈述。** 完整陈述见[英文版 §7.3](THE-THEORY-OF-BECOMING.md#73-明-coupling-that-reaches-what-support-does-not-mark)。
 
-记录：[what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)、[observation-is-a-route](../results/records/observation-is-a-route.md)。
+记录：[what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)、[observation-is-a-route](../results/records/observation-is-a-route.md)、[reading-anothers-couplings-is-pooling](../results/records/reading-anothers-couplings-is-pooling.md)。
 
 ### 7.4 为一切的对齐：跨智能的合起来的耦合
 
-**要点。** 合起来把差距移到池的耦合闭包，并不去掉它。池在此闭包之外联合所做的，只经此闭包之外把差别耦合分开的形成被分开，例如其支持被该动作改变者；闭包之内没有什么响应它。耦合界定池的动作所响应者，而不固定它：在界之内，每个成员所遵循的律决定。差别是池所加的。
+**要点。** 合起来把差距移到池的耦合闭包，并不去掉它。池在此闭包之外联合所做的，只经此闭包之外把差别耦合分开的形成被分开，例如其支持被该动作改变者；闭包之内没有什么响应它。耦合界定池的动作所响应者，而不固定它：在界之内，每个成员所遵循的律决定。差别是池所加的。已知的对齐路径（RLHF 与奖励建模、宪法式 AI、辩论与可扩展监督、基于可解释性的监督、有保证的安全 AI、影响度量）都读作经耦合的选择，各有使之成为选择的前提、由这些律得出的差距，以及这些律所不给的（安装与服从）；接上系统闭包之内的耦合（同类输入的反馈、读取系统本身）只加规模或安装的证据，不加所及。这些是约束，不是策略，也不是排序 [AI 读法]（[研究第 282 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#282-alignment-approaches-under-the-selection-laws-ap1)）。
 
 **定理。** 本节陈述 `Flow.act_unselected_pool`、`Flow.act_selected_by_pool`、`ExchangeLaw.Through.selectsThroughAll`、`ExchangeLaw.response_not_fixed_by_coupling`、`Web.pool_adds`；完整陈述见[英文版 §7.4](THE-THEORY-OF-BECOMING.md#74-alignment-for-all-pooled-coupling-across-intelligences)。
 
-记录：[what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)、[what-a-pools-acts-respond-to](../results/records/what-a-pools-acts-respond-to.md)、[the-gap-for-ones-own-act](../results/records/the-gap-for-ones-own-act.md)。
+记录：[what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)、[what-a-pools-acts-respond-to](../results/records/what-a-pools-acts-respond-to.md)、[the-gap-for-ones-own-act](../results/records/the-gap-for-ones-own-act.md)、[alignment-approaches-under-the-selection-laws](../results/records/alignment-approaches-under-the-selection-laws.md)。
 
 ### 7.5 方向，在条件之下
 
@@ -801,6 +801,8 @@
 | [分级的意义与优先](../results/records/graded-significance-and-priority.md) | 在所述前提下的定理 | 有限列举；层级为所接纳的步 | §6.5 |
 | [合起来的耦合及于什么](../results/records/what-pooled-coupling-reaches.md) | 在所述前提下的定理 | 给出的交换之律 | §7.3 |
 | [一组的动作回应什么](../results/records/what-a-pools-acts-respond-to.md) | 在所述前提下的定理 | 给出的交换之律 | §7.4 |
+| [读取他者的耦合即与之合起来](../results/records/reading-anothers-couplings-is-pooling.md) | 在所述前提下的定理 | 平衡；就动作而言，经读取者耦合而读的交换之律 | §7.3 |
+| [选择之律下的对齐路径](../results/records/alignment-approaches-under-the-selection-laws.md) | 评估 | 见记录 | §7.4 |
 | [扩大与实践承诺之下的 AI 对齐方向](../results/records/alignment-direction-under-widening.md) | 论证 | 见记录 | §7.5 |
 | [三路线中的保证到达条件](../results/records/assured-route-criterion.md) | 不加前提的定理 | — | §7.6 |
 | [代码共同方案的全局支持](../results/records/code-plan-global-support.md) | 不加前提的定理 | — | §7.6 |
@@ -855,12 +857,12 @@
 4. **脊柱上的对齐方向**（进一步的证明）。已落地：作为核心模式的方向（§7.5）；R44：世界的动作读作部分在一条交换之律下的行动，平衡、在场与起点由构造成立（`Direction.exchange_direction`），交接案例作为核心中的形式实例（`Requirement.Handover.direction`）。连同 R40 从评价一行出发的方向，通向对齐之链止于脊柱。*开放：*形式部分无；链所指名的前提是根据与对应的问题。
 5. **扩大记入什么**（进一步的证明）。R47：沿一个世界的形成在另一个中的给定读法的扩大，及其在长成世界上的确切规律（`Web.grow_widensAlong_iff`、`Web.attach_widensAlong_iff`）：旧水平保持时，接纳新形成的生长扩大，而在旧形成上什么也不扩大。已落地（R51，[研究 §271](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#271-widening-across-a-stretch-along-a-continuation-r51)）：在一个展开之内，读法是导出的：沿延续关系跨一段的扩大（`Web.WidensAcross`），在每个形成延续自身处即作为名的扩大，在改名下不变，链接越多越难超出（`Bud.readings`）。*开放：*混合部分的度量（条件之外的前提，须公开陈述）；更新能力与关系丰富度的比较。
 6. **可以稠密的量**（进一步的证明）。（已陈述：量读自有限多个构形时，停息不需要最小损失，所以最小损失只为没有列表容纳的读取所需；在不合并的律中，部分的合并由其余部分承接，即 Landauer 的计数，所以外围的下限从物理只需要由计数到热的一步，`Amounts.rests_of_finite_reading`、`Law.Lossless.narrowing_spreads`；停息定理在普查的总量读自有限多个构形之处对任何量成立，否则不必，`World.InAmounts.rests_unrefuted_enclosed`、`HalvingPass.never_rests`，[研究第 267 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#267-the-rest-theorem-over-any-amounts-read-finitely-lc2)。物理给出的每种最小损失都是带有自身前提的已知物理，[最小损失的检查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#least-loss-check)。）*开放：*由核心得出以能量计的最小损失，这需要把计数读作能量；任何量上的流、依存网与世界的其他规律（停息定理已陈述）；完成报告所列的每条自然数规律现在都有稠密形式或反例（R40、R41）；实数的强度与倍率。
-7. **哪个律成立，成员的律怎样形成**（进一步的证明）。已落地（R38，[研究第 233 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#233-one-turn-around-a-cycle-and-any-two-interleavings-r38)）：重合进程在一个条件上的差距，恰在其交换按某映射回应它之处，是该映射的进程（`LoopReturn.responds_iff`），这是前提，未由交换律推出；精确环节之回路的一圈精确陈述（`LoopReturn.carried_around_exact`）。*开放：*交换之律本身，带噪声的律及其历程；成员的律怎样形成、怎样回应它所耦合入者；单个回路之外、多个条件同时之处哪个律闭合而非扩大差别；概率学习与隐含偏置。
+7. **哪个律成立，成员的律怎样形成**（进一步的证明）。已落地（R38，[研究第 233 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#233-one-turn-around-a-cycle-and-any-two-interleavings-r38)）：重合进程在一个条件上的差距，恰在其交换按某映射回应它之处，是该映射的进程（`LoopReturn.responds_iff`），这是前提，未由交换律推出；精确环节之回路的一圈精确陈述（`LoopReturn.carried_around_exact`）；以及（AP1，[研究第 282 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#282-alignment-approaches-under-the-selection-laws-ap1)）成员读取另一形成的耦合，即以水平耦合入后者所耦合入的一切，就与之合起来：其耦合闭包在后者与其所耦合入的条件交换时为二者之池的闭包，在二者闭包之并以外是盲的（`Flow.withinCoupling_reads_iff`、`Flow.unselected_beyond_reads`）。*开放：*交换之律本身，带噪声的律及其历程；成员的律怎样形成、怎样回应它所耦合入者；单个回路之外、多个条件同时之处哪个律闭合而非扩大差别；成员读取彼此的律（不止后者所耦合入者的水平）；概率学习与隐含偏置。
 8. **由连续性而非命名的同一**（进一步的证明）。已落地（R48，[研究 §261](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#261-arising-forced-over-a-run-exactly-r48)）：在每步都有普查之下，整段上的条件在数目上是精确的：每个没有分裂的延续关系在任意晚的步上迫使生起，恰当任意晚的步上一步之后活跃者多于之前（`ListedWebs.forcedAlong_iff_more`）；从某步起没有分裂的延续关系就足够（`ListedWebs.forcedAlong_of_eventually_noSplit`）。物质的连续由守恒读出（`World.Conserves`，§2.2），它固定同一，只在所立重合处不固定（`World.fixed_iff`）。已落地（R49，[研究 §262](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#262-formation-classes-along-a-continuation-splits-and-merges-r49)）：沿延续关系读出的更新与消耗两类，更新进入分裂的每一支，消耗回到合并进来的每个形成，在每次改认下由延续关系固定，在每个形成延续自身处即名的类（`Becoming.ContinuedClasses`）。已落地（R50，[研究 §269](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#269-tenure-and-undermining-along-a-continuation-and-identity-where-standings-coincide-r50)）：沿延续关系读出的任期与侵蚀，在每个形成延续自身处即作为名者，在每个搬运它的改认下不变，随链接增多（`Web.underminingAlong_reidentify`、`Web.underminingAlong_mono`）；在一步之后所立重合处，有保平衡的命名把任一关系项延续为另一个，故世界的任何记录都不决定（`World.continues_as_alike`）。于是跟随一个形成的每个读法（生起、其类、任期、侵蚀）都是延续关系的规律，世界的物质延续由守恒固定，只在所立重合处由世界留为开放。*开放：*由信息或组织关系导出的延续关系。*解决：*对由守恒读出的延续关系，形式部分已解决；转化是延续关系的规律，不是名的选择。
 9. **演化的选择项**（进一步的证明）。（已陈述：计数形式的真正选择项，即消去分母的协方差，以及均值在世代中的进程，均值移动了就有一步有真正的选择或传递，支持从不被逆向选择，`Becoming.SelectionTerm`；对后代数本身的选择、传递精确时的方差形式、受给予与所取之量约束的后代数，以及在被耗散之族内终止、其传递对后代数的降低超过选择之升高的世系，以及后代数方差中经由任一所载之量的加性部分至多为全部（计数形式的 Cauchy–Schwarz），`Becoming.Reproduction`；等大小之组的组内选择与组间选择（各组大小任意，组间部分以各组均值读出；各组均值相同时只剩组内选择），`Becoming.SelectionLevels`；由各组自身条件遭遇共同过度的终止所定的组间部分，`Becoming.GroupEnding`；由在某量上均匀之组的世系形成的组保持差异，此时选择只在世系之间，较低世系终止时均值从不低于起点，`Becoming.SelectionLevels` 与 `Becoming.GroupEnding`；条件相互耦合的组一同终结，基于 `Becoming.Continuation` 的条件族定律；从后代中抽样而非列出：平均无偏、离散度精确，撤销一步之选择（包括组间终止）的抽样之权重至多为随 1/n 下降的份额、至少为 q^n；多代抽样中平均保持计数、终结差异并以起始份额固定各类，`Becoming.Drift`。）*开放：*既必要又充分的形成之律；世系新形成的依存；同一次抽取中的漂变与选择，以及突变（不精确的传递）；下一代列法之外的组间混合（跨组不精确的传递），混合建立的组（聚合低于一，组内选择每一步重新进入），以及耦合如何形成；公分母之外的有理数的量；同时经由多个所载之量的加性部分（育种值），以及需要回归系数的 Fisher 恒等式本身。
 10. **上升从其外汲取什么**（进一步的证明）。（已陈述：其外降低上升之量加上损失；超出其外依存的余量时其中一个被打断，其构成终止或改变，奖励上升的选择看不见地奖励了这一点；升高即伸向之外，在偏向升高者的世代中其份额从不被逆向选择，传递精确时只向上移动；封闭时其外约束上升，`Becoming.DrawnBeyond`。）已落地（R52，[研究 §274](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#274-which-dependence-breaks-when-several-take-at-once-and-restraint-over-any-number-of-drawers-r52)）：多个构成同时汲取时打断依存的是共同的汲取，所需最高者先被打断，不论谁在汲取，落在某个活跃构成所汲取的条件上；每个汲取者的取量都在余量之内时，打断不属于任何一个汲取者；任意汲取者按超出之量节制即保持依存（`Becoming.JointDraw`）。*开放：*后代数与构成所给予之量相连，使份额之律的前提由流得出（与第 9 项一起）；多个构成汲取时各取多少，作为构成之律而非给定的流；来自整体之外的补充及其所维持的上升。
 11. **条件之下的实践前提**（进一步的证明）。已落地（R52，[研究 §274](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#274-which-dependence-breaks-when-several-take-at-once-and-restraint-over-any-number-of-drawers-r52)）：整段读法下对任意多个汲取者的克制：所取不多、所给不少即缓和继续，所以克制的继续扩展过度汲取的继续，恰当它记入另一个扣下的某个事件（`Ranking.restraint_extends_iff`）。*开放：*条件之下 L 的形式；逐步读法下两部分族之外的克制定理，需要所取不多之外的前提（`Ranking.ThirdParty`）；关系层读法下的比较。
-12. **根据**（哲学根据，§8.5）。扩大是否更好（C，定次序），意义是否不止于任何边界（不变的一步，定范围）？连同 A 与两种中立的根据，以及第一目标的哲学部分。没有形式工作能解决它；理论定位每一步（§6.5），并列出尚未回答的反驳（§8.9）。
+12. **根据**（哲学根据，§8.5）。扩大是否更好（C，定次序），意义是否不止于任何边界（不变的一步，定范围）？连同 A 与两种中立的根据，以及第一目标的哲学部分。没有形式工作能解决它；理论定位每一步（§6.5），并列出尚未回答的反驳（§8.9）。C 归为每个立场处的单调性：不偏的序恰为每个在接纳上递增的序所共有者，可加与否皆然（`Weighting.widens_iff_every_of_class`，AP1，[研究第 282 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#282-alignment-approaches-under-the-selection-laws-ap1)）。
 
 **完整，在有限定的意义上。** 每项都有检查过的陈述或公开的前提，空的公理报告已检查；这不是必然性的证明。完成标准 K1–K7（2026年10月20日经 Ren 批准采用）自 R39 起运行：[`completion.py`](../../../tools/research/completion.py) 读[覆盖文件](../results/completion/COVERAGE.json)、核心回执、连通性测量、记录与本节，写出[报告](../results/completion/COMPLETION.md)。在 R43 的树上，各条都满足。统一（K2）自 R43 起满足：World 族按定义及于 Process 族（世界的历史是一个运行）；定义无环，其余方向不能也按定义成立，于是按构造成立：每个进程的每个运行都是固定它的世界（`Frame.world_fixes_run`），每个网与流都是某个世界的（`World.of_web`、`World.of_flow`）；在任何量、估值或时程上陈述的每条中心规律，都有一个具名的基础族实例，其证明用到它（截断之界为 `carriedWorld_within_cut`）。这不表明前提有根据。自 R42 起，C 由层级路径上的扩大满足（`Web.paths_comparison_widens`），而由边缘读出的任何比较不满足它（`Regimes.no_comparison_through_marginals`）；可判定性不能有不满足它的世界，因为没有命题被否定为可判定（`not_not_decided`），它在有限的一段上满足（`Decided.exists_below`），并被校准：对每个运行要求它，恰是 LPO（`HistoryIdeals.cut_decided_iff_lpo`）。自 R41 起 `Flow.More.replenishment_unbounded` 是 `Amounts.replenishment_unbounded`（阿基米德量中，取用超过最小取用的每个倍数需要补充超过它的每个倍数）的整数实例；取用减半、没有最小取用时它不成立（`Halving.takes_halve`）。自 R40 起伦理之链是一个推导：`Direction.grounded_widening_selected` 从评价的根据推出 §7.5 的方向，经由 `Valuation.significant_iff` 与 `Web.unrestricted_iff_grounds_beyond`（在连通之网上、生与否可判定时，条件恰是这些根据加上不生者的意义）、路径的一个对象与合起来之耦合的规律，所以它的证明及于每一步。所以完整只在有限定的意义上成立。理论力求不用公理的最强主张，它是否最强尚未表明。
 
@@ -907,16 +909,16 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261020T181337.294917Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 281 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#281-groups-formed-by-descent-ev11)）。
+**当前回执**是运行 [`20261020T185635.903489Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 282 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#282-alignment-approaches-under-the-selection-laws-ap1)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Becoming`） | 283 个模块，11,454 条定理 |
+| 核心模块（含根 `Becoming`） | 283 个模块，11,473 条定理 |
 | 实例模块 | 7 个模块，567 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 299 个模块，12,274 条定理 |
-| 审计的脊柱声明 | 16,797 |
+| 闭包（核心、环与根基） | 299 个模块，12,293 条定理 |
+| 审计的脊柱声明 | 16,819 |
 | 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 197 条 |
 | 被取代的外围模块（不在运行中，字节保留） | 75 |
 

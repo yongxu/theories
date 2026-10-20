@@ -1,0 +1,326 @@
+{
+  "schema_version": 2,
+  "id": "reading-anothers-couplings-is-pooling",
+  "title": {
+    "en": "Reading another's couplings is pooling with it",
+    "zh": "读取他者的耦合即与之合起来"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-20T19:04:10+00:00",
+  "statement": {
+    "en": "A formation coupled by level into everything another couples into selects through at least their pooled coupling, and its coupling closure is the union of the two closures where the other exchanges with what it couples into; beyond that union it is blind.",
+    "zh": "以水平耦合入另一形成所耦合入的一切者，至少经二者合起来的耦合选择；当后者与其所耦合入者交换时，其耦合闭包为二者闭包之并；在此并之外它是盲的。"
+  },
+  "laws": [
+    {
+      "en": "Reading another's couplings: a formation coupled, besides its own coupling by level, into every condition another couples into, by threshold or by level.",
+      "zh": "读取他者的耦合：一个形成除自身按水平的耦合外，还耦合入另一形成所耦合入的每个条件，无论按阈值还是按水平。",
+      "declarations": [
+        "Becoming.Web.ReadsCouplings"
+      ]
+    },
+    {
+      "en": "Two histories the reader couples alike, the reader and the one read both couple alike, so every selection through the pooled coupling of the two is a selection through the reading.",
+      "zh": "读取者耦合相同的两段历史，读取者与被读者都耦合相同，故经二者合起来之耦合的每个选择都是经此读取的选择。",
+      "declarations": [
+        "Becoming.Web.AlikeThrough.of_reads",
+        "Becoming.Web.SelectsThroughAll.reads"
+      ]
+    },
+    {
+      "en": "The reader's coupling closure lies within the pool's, and is exactly the pool's, the union of the two closures, where the one read exchanges with a condition coupled into it; stated first for any relations.",
+      "zh": "读取者的耦合闭包在池的闭包之内；当被读者与其所耦合入的某个条件交换时，恰为池的闭包，即二者闭包之并；先对任意关系陈述。",
+      "declarations": [
+        "Becoming.WithinClosure.of_reads",
+        "Becoming.WithinClosureOf.to_reads",
+        "Becoming.Flow.CoupledFrom.of_reads",
+        "Becoming.Flow.withinCoupling_reads",
+        "Becoming.Flow.withinCoupling_reads_iff"
+      ]
+    },
+    {
+      "en": "Beyond that union a part is selected alike through every reading, the rest of the exchange fixed; so is an act differing only beyond it, the rest following a law reading through the widened coupling, which a law reading through the narrower coupling does.",
+      "zh": "在此并之外，其余交换固定时，一个部分经每个读取被同样选择；仅在其外有别的动作亦然，只要其余依循经扩大之耦合读取的律，而经较窄耦合读取的律即是。",
+      "declarations": [
+        "Becoming.Flow.unselected_beyond_reads",
+        "Becoming.Flow.act_unselected_reads",
+        "Becoming.ExchangeLaw.Through.widen"
+      ]
+    },
+    {
+      "en": "Witness: in Clearing the source reading the clearer's couplings selects the cleared and the spared world alike at every step, and reading the dweller's, a formation the act reaches, separates them.",
+      "zh": "见证：Clearing 中，源读取清除者的耦合时，在每一步同样选择被清除与被保留的世界；读取居住者（动作所及的形成）的耦合时，把它们分开。",
+      "declarations": [
+        "Becoming.Clearing.reading_clearer_unselected",
+        "Becoming.Clearing.reading_dweller_selects"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. For the closure identity, the one read exchanges at some step with a condition coupled into it. For the part beyond the union, balance and the levels without the part's exchange.",
+      "zh": "不加公理。闭包等式需被读者在某一步与其所耦合入的某个条件交换。对并之外的部分，需平衡以及去掉该部分交换后的水平。"
+    },
+    {
+      "en": "For the act, the premises of the gap for a pool's act: balance in both flows, the rest following one law of exchange reading through the reader's widened coupling, and the part acting alike within the pool's coupling closure.",
+      "zh": "对动作，需池的动作之差距的前提：两个流都平衡，其余依循一条经读取者扩大之耦合读取的交换之律，部分在池的耦合闭包内同样行动。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Reading another's law, how it would exchange under histories not taken, is not stated; the reading here is of the levels of what the other couples into.",
+      "zh": "读取他者的律（它在未取的历史下会如何交换）未陈述；此处的读取是读其所耦合入者的水平。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a system's internal states are conditions coupled into it, and which of them a reader can read, is a correspondence the laws do not supply.",
+      "zh": "系统的内部状态是其所耦合入的条件、读取者能读其中哪些，是这些律不提供的对应。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Reading a system does not close what its own act does beyond its closure, unless the reader's own couplings reach there.",
+      "zh": "读取一个系统不弥合其自身动作在其闭包之外所做的，除非读取者自身的耦合及于那里。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Without its hypothesis the closure identity can fail: where the one read exchanges with nothing it couples into, it need not lie within the reader's closure.",
+      "zh": "没有其假设，闭包等式可不成立：被读者不与其所耦合入的任何条件交换时，它不必在读取者的闭包之内。",
+      "kind": "converse"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
+      "detail": {
+        "en": "Reading another does not reach what lies beyond both closures: in Clearing the source reading the clearer's couplings still selects the cleared and the spared world alike (Clearing.reading_clearer_unselected).",
+        "zh": "读取他者不及于两个闭包之外者：Clearing 中源读取清除者的耦合，仍同样选择被清除与被保留的世界（Clearing.reading_clearer_unselected）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T185635.903489Z): every declaration of Becoming.SelectionPool has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 282; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T185635.903489Z）：Becoming.SelectionPool 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 282 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Reading another's law (how it would exchange under histories not taken); a correspondence for which internal states of a trained system are conditions coupled into it; an independent review.",
+    "zh": "读取他者的律（它在未取的历史下会如何交换）；训练出的系统哪些内部状态是其所耦合入的条件的对应；独立审查。"
+  },
+  "correspondence": {
+    "en": "Interpretability-based oversight (Olah et al. 2020; Elhage et al. 2021) and eliciting latent knowledge (Christiano, Cotra and Xu 2021) read a system's internal states. Read with those states as conditions the system couples into (the AI's reading), the law says such reading reaches no further than pooling with the system: it gives evidence of which law the system follows, and closes nothing beyond the union of the closures.",
+    "zh": "基于可解释性的监督（Olah 等 2020；Elhage 等 2021）与引出潜在知识（Christiano、Cotra 与 Xu 2021）读取系统的内部状态。以这些状态为系统所耦合入的条件来读（AI 的读法），此律说这种读取所及不超过与系统合起来：它给出系统遵循哪个律的证据，而不弥合闭包之并以外的任何东西。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
+  "aliases": [
+    "reading another's couplings",
+    "reading is pooling",
+    "reading a system",
+    "读取他者的耦合",
+    "Becoming.Flow.withinCoupling_reads_iff",
+    "Becoming.Flow.unselected_beyond_reads"
+  ],
+  "dependencies": [
+    {
+      "id": "what-pooled-coupling-reaches",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The reading laws are the pool laws applied to the widened coupling: the closure identity rests on withinClosureOf_iff, the gap on Flow.unselected_beyond_coupling.",
+        "zh": "读取诸律即把池的诸律用于扩大的耦合：闭包等式依据 withinClosureOf_iff，差距依据 Flow.unselected_beyond_coupling。"
+      },
+      "interface": {
+        "output": {
+          "en": "A pool's coupling closure is the union of its members', and everything beyond it is selected alike.",
+          "zh": "池的耦合闭包是其成员闭包之并，在此之外一切被同样选择。"
+        },
+        "input": {
+          "en": "The reader's closure as the pool's, and its gap.",
+          "zh": "读取者的闭包即池的闭包，及其差距。"
+        },
+        "conditions": {
+          "en": "The one read exchanges with a condition coupled into it; balance.",
+          "zh": "被读者与其所耦合入的条件交换；平衡。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean"
+      }
+    },
+    {
+      "id": "the-gap-for-ones-own-act",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The act law applies Flow.act_unselected_of_coupled to the reader's widened coupling, the premises carried from the pool through the closure lemma.",
+        "zh": "动作定律把 Flow.act_unselected_of_coupled 用于读取者扩大的耦合，前提经闭包引理从池转来。"
+      },
+      "interface": {
+        "output": {
+          "en": "An act differing only beyond the coupling closure is selected alike.",
+          "zh": "仅在耦合闭包之外有别的动作被同样选择。"
+        },
+        "input": {
+          "en": "The same for the reader's act-selection.",
+          "zh": "读取者对动作的选择亦然。"
+        },
+        "conditions": {
+          "en": "The rest following a law reading through the widened coupling; balance in both flows.",
+          "zh": "其余依循经扩大之耦合读取的律；两个流都平衡。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-a-pools-acts-respond-to",
+      "detail": {
+        "en": "Coupling bounds what a pool's acts respond to and does not fix it; reading the system is evidence on that response, not a bound beyond it.",
+        "zh": "耦合界定池的动作所响应者而不固定它；读取系统是关于该响应的证据，不是超出它的界。"
+      }
+    },
+    {
+      "id": "alignment-approaches-under-the-selection-laws",
+      "detail": {
+        "en": "Interpretability-based oversight read as an instance: reading the system is pooling with it.",
+        "zh": "基于可解释性的监督读作实例：读取系统即与之合起来。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Clearing.acts_alike",
+        "Becoming.Clearing.clearerSide_closed_either",
+        "Becoming.Clearing.pool_closes_gap",
+        "Becoming.Clearing.reading_clearer_unselected",
+        "Becoming.Clearing.reading_dweller_selects",
+        "Becoming.Clearing.restLaw",
+        "Becoming.Clearing.restLaw_through",
+        "Becoming.Clearing.rest_follows",
+        "Becoming.Clearing.rest_follows_spared",
+        "Becoming.Clearing.source_within",
+        "Becoming.Clearing.start_alike",
+        "Becoming.Clearing.withheld_alike_for_clearer",
+        "Becoming.Clearing.within_closure_unseparated",
+        "Becoming.ExchangeLaw.Through.widen",
+        "Becoming.Flow.ActsAlikeOnPoolCoupled",
+        "Becoming.Flow.ActsAlikeOnPoolCoupled.within",
+        "Becoming.Flow.CoupledFrom.of_reads",
+        "Becoming.Flow.act_alike_pool",
+        "Becoming.Flow.act_selected_by_pool",
+        "Becoming.Flow.act_unselected_pool",
+        "Becoming.Flow.act_unselected_reads",
+        "Becoming.Flow.apart_beyond_pool",
+        "Becoming.Flow.consequence_unselected_pool",
+        "Becoming.Flow.separating_member_beyond",
+        "Becoming.Flow.unselected_beyond_reads",
+        "Becoming.Flow.withinCoupling_reads",
+        "Becoming.Flow.withinCoupling_reads_iff",
+        "Becoming.Web.AlikeThrough.of_reads",
+        "Becoming.Web.ReadsCouplings",
+        "Becoming.Web.SelectsThroughAll.reads",
+        "Becoming.Web.admission_separates_all",
+        "Becoming.Web.member_separates_all",
+        "Becoming.Web.pool_adds",
+        "Becoming.Web.pooledClass_selects",
+        "Becoming.Web.pooled_iff_member",
+        "Becoming.Web.separates_all_iff",
+        "Becoming.Web.separates_all_iff_member",
+        "Becoming.WithinClosure.of_reads",
+        "Becoming.WithinClosureOf.to_reads",
+        "Becoming.act_courses_unselected_pool"
+      ],
+      "sha256": "3720090b16cbebf5f35e1715a56be5a8c68dfbea5138c8d6879692ddee2d47ce"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.WithinPoolCoupling",
+        "Becoming.Flow.unselected_beyond_coupling",
+        "Becoming.Flow.unselected_beyond_pool",
+        "Becoming.Web.SelectsThrough",
+        "Becoming.Web.SelectsThroughAll"
+      ],
+      "sha256": "8f41fcf1bdbab92ede8b09ba5e9ce414ef8c42ea7be46f596eaf54bfec2287ce"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.CoupledFrom",
+        "Becoming.Flow.WithinCoupling",
+        "Becoming.Web.AlikeThrough"
+      ],
+      "sha256": "aba84f9ec26501aedb0c4f266c90619fcca2305f268e843a82d5603468d51b44"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionGap.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.act_unselected",
+        "Becoming.Flow.act_unselected_of_coupled"
+      ],
+      "sha256": "400222ef8f8d216a7be6b1314193321808c9ce71d0934e86bbcd615603772ec0"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
+      "role": "receipt",
+      "sha256": "fd53371479a40d41144bb90789da0ad740bfded46e028a5b35750542dfafc699"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "daaaad6fe03767bbe87ca896e687613b6c9941f95211a52be0ab5dbc98386145"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "486b89acc1e1f370b8fc69ed050decd434c200842fc23e34ea9847d18c931c73"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionPool",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Selection",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Testing",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionGap.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionGap",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (AP1), reading another's couplings is pooling with it: in closure exactly where the one read exchanges with what it couples into, in selection at least; study section 282.",
+      "zh": "2026年10月21日：新增（AP1），读取他者的耦合即与之合起来：被读者与其所耦合入者交换时闭包恰相同，选择上至少如此；研究第 282 节。"
+    }
+  ]
+}

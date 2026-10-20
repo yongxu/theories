@@ -84,6 +84,7 @@ The step across standpoints is Gewirth's argument from the sufficiency of agency
 | integration | [DELEGATED-CHOICES.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) | — |
 | statement | [THE-STEP-OF-INVARIANCE.md](../../chapters/THE-STEP-OF-INVARIANCE.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json) | — |
 
 Aliases: `what the step across standpoints reaches`, `跨立场的一步达到哪里`, `Gewirth's step reaches the centers`, `the narrower scope as the centers`, `what wants its continuation`, `Becoming.forced_iff_center`, `Becoming.forced_iff_within`, `Becoming.unrestricted_atCenters_iff`, `the de se question`, `de se and de dicto presupposition`, `Becoming.selfAscribed_iff_withinSome`, `Becoming.forced_iff_within_some`
 

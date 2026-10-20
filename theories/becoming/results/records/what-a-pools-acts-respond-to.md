@@ -106,6 +106,7 @@ The chapter's section 7.4 read that what any member's acts do beyond its own cou
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json) | — |
 
 Aliases: `what a pool's acts respond to`, `一组的动作回应什么`, `the gap for a pool's response`, `一组之回应的缺口`, `coupling bounds response and does not fix it`, `耦合界定回应而不确定回应`, `separated, not responded`, `被分开，未被回应`
 

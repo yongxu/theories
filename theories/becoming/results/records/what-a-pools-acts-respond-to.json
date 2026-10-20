@@ -313,7 +313,7 @@
         "Becoming.TimedResponse.pool_alike_before",
         "Becoming.act_courses_response_alike_pool"
       ],
-      "sha256": "13bce2617ad84cfa4a540f657673fdf803abb323eb15ee30f0a8d3fbbdfbf873"
+      "sha256": "21bd5184154e747c084ac62053fad6e50ba9979b8425c7f4ded5dfcfb76588a7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean",
@@ -350,7 +350,7 @@
         "Becoming.Clearing.restLaw",
         "Becoming.Clearing.rest_follows_spared"
       ],
-      "sha256": "8eaa75ce391c1e3ac87a6509eb9bb7464b4c96f358f4e4d3726ab95c23e0f09e"
+      "sha256": "3720090b16cbebf5f35e1715a56be5a8c68dfbea5138c8d6879692ddee2d47ce"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionGap.lean",
@@ -470,7 +470,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "8acb26970ea0f701aa886ca245c7858c56f5554a5f1c907421edb0e8d3992966"
+      "sha256": "486b89acc1e1f370b8fc69ed050decd434c200842fc23e34ea9847d18c931c73"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-18-the-light-and-alignment-for-all.md",
@@ -505,12 +505,18 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
+      "role": "receipt",
+      "sha256": "fd53371479a40d41144bb90789da0ad740bfded46e028a5b35750542dfafc699",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolResponse.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PoolResponse",
       "success_pointer": "/status",
       "success_value": "passed"

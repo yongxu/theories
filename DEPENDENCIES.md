@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-306 registered results: 287 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 770 curated edges join 259 results to the results they draw on.
+308 registered results: 288 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 774 curated edges join 261 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -20,6 +20,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [acquired-binding-compositional-use][] ← <a id="acquired-binding-compositional-use--transition-grouping-word-partition"></a>[transition-grouping-word-partition][]
 - [acquired-revision-of-pending-task][] ← <a id="acquired-revision-of-pending-task--versioned-request-completion"></a>[versioned-request-completion][] · <a id="acquired-revision-of-pending-task--formed-goal-revision-continuation"></a>[formed-goal-revision-continuation][]
 - [additive-part-of-offspring-variance][] ← <a id="additive-part-of-offspring-variance--what-bounds-offspring-numbers"></a>[what-bounds-offspring-numbers][] · <a id="additive-part-of-offspring-variance--selection-term-over-generations"></a>[selection-term-over-generations][]
+- [alignment-approaches-under-the-selection-laws][] ← <a id="alignment-approaches-under-the-selection-laws--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] *(application)* · <a id="alignment-approaches-under-the-selection-laws--reading-anothers-couplings-is-pooling"></a>[reading-anothers-couplings-is-pooling][] *(application)*
 - [alignment-direction-under-widening][] ← <a id="alignment-direction-under-widening--practical-judgment-under-living-significance"></a>[practical-judgment-under-living-significance][] *(application)* · <a id="alignment-direction-under-widening--comparison-by-widening"></a>[comparison-by-widening][]
 - [attraction-is-not-returning][] ← <a id="attraction-is-not-returning--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [becoming-context-coherence][] ← <a id="becoming-context-coherence--finite-trace-transport"></a>[finite-trace-transport][]
@@ -179,6 +180,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [proposition-identity][] ← <a id="proposition-identity--generalization-through-lumping"></a>[generalization-through-lumping][]
 - [raising-what-couples-in-draws-from-beyond][] ← <a id="raising-what-couples-in-draws-from-beyond--selection-through-couplings"></a>[selection-through-couplings][] · <a id="raising-what-couples-in-draws-from-beyond--entropy-history-and-record"></a>[entropy-history-and-record][]
 - [ranking-under-readings][] ← <a id="ranking-under-readings--relational-reading-comparison"></a>[relational-reading-comparison][] · <a id="ranking-under-readings--becoming-stepwise-reading"></a>[becoming-stepwise-reading][] · <a id="ranking-under-readings--relational-renewal-classification"></a>[relational-renewal-classification][] · <a id="ranking-under-readings--continuation-condition-yields-living-significance"></a>[continuation-condition-yields-living-significance][] · <a id="ranking-under-readings--significance-retained-within-margin"></a>[significance-retained-within-margin][] · <a id="ranking-under-readings--closing-needs-net-draw"></a>[closing-needs-net-draw][]
+- [reading-anothers-couplings-is-pooling][] ← <a id="reading-anothers-couplings-is-pooling--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] · <a id="reading-anothers-couplings-is-pooling--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [readings-within-what-they-read][] ← <a id="readings-within-what-they-read--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [recoverable-mediated-change][] ← <a id="recoverable-mediated-change--mediated-evidence-transport"></a>[mediated-evidence-transport][]
 - [recurrence-without-decidedness][] ← <a id="recurrence-without-decidedness--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="recurrence-without-decidedness--space-and-its-parts"></a>[space-and-its-parts][]
@@ -280,6 +282,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [acquired-binding-compositional-use]: theories/becoming/results/records/acquired-binding-compositional-use.md
 [acquired-revision-of-pending-task]: theories/becoming/results/records/acquired-revision-of-pending-task.md
 [additive-part-of-offspring-variance]: theories/becoming/results/records/additive-part-of-offspring-variance.md
+[alignment-approaches-under-the-selection-laws]: theories/becoming/results/records/alignment-approaches-under-the-selection-laws.md
 [alignment-direction-under-widening]: theories/becoming/results/records/alignment-direction-under-widening.md
 [assured-route-criterion]: theories/becoming/results/records/assured-route-criterion.md
 [attraction-is-not-returning]: theories/becoming/results/records/attraction-is-not-returning.md
@@ -457,6 +460,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [proposition-identity]: theories/becoming/results/records/proposition-identity.md
 [raising-what-couples-in-draws-from-beyond]: theories/becoming/results/records/raising-what-couples-in-draws-from-beyond.md
 [ranking-under-readings]: theories/becoming/results/records/ranking-under-readings.md
+[reading-anothers-couplings-is-pooling]: theories/becoming/results/records/reading-anothers-couplings-is-pooling.md
 [readings-within-what-they-read]: theories/becoming/results/records/readings-within-what-they-read.md
 [recoverable-mediated-change]: theories/becoming/results/records/recoverable-mediated-change.md
 [recurrence-without-decidedness]: theories/becoming/results/records/recurrence-without-decidedness.md

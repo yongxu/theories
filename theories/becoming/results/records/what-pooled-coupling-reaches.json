@@ -261,6 +261,13 @@
         "en": "Derives this record's premise that a selection goes through the pooled coupling for what a pool decides by its acts, where each member's law reads through its coupling, and turns the gap for a pool's act into the gap for its response.",
         "zh": "每个成员的律都经其耦合而读时，为一组以其动作所决定者推出本成果“选择经合起来的耦合”的前提，并把一组之动作的缺口变为其回应的缺口。"
       }
+    },
+    {
+      "id": "reading-anothers-couplings-is-pooling",
+      "detail": {
+        "en": "Reading another's couplings by level is pooling with it.",
+        "zh": "按水平读取他者的耦合即与之合起来。"
+      }
     }
   ],
   "references": [
@@ -296,7 +303,7 @@
         "Becoming.Web.separates_all_iff_member",
         "Becoming.act_courses_unselected_pool"
       ],
-      "sha256": "8eaa75ce391c1e3ac87a6509eb9bb7464b4c96f358f4e4d3726ab95c23e0f09e"
+      "sha256": "3720090b16cbebf5f35e1715a56be5a8c68dfbea5138c8d6879692ddee2d47ce"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
@@ -413,7 +420,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "678d0f06a67b91815de825389917bbc6e6b05a606d4c7e40e023c0c979883bd1"
+      "sha256": "486b89acc1e1f370b8fc69ed050decd434c200842fc23e34ea9847d18c931c73"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-18-the-light-and-alignment-for-all.md",
@@ -454,12 +461,18 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
+      "role": "receipt",
+      "sha256": "fd53371479a40d41144bb90789da0ad740bfded46e028a5b35750542dfafc699",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T185632.962707Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionPool",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -521,6 +534,10 @@
     {
       "en": "2026-10-20: 32 bookkeeping notes condensed from 18 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/b487a0e38971a139/what-pooled-coupling-reaches.json and in git.",
       "zh": "2026-10-20：32 条记账性说明合并（18 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/b487a0e38971a139/what-pooled-coupling-reaches.json 和 git 中。"
+    },
+    {
+      "en": "21 October 2026, AP1: reading another's couplings is pooling with it (record reading-anothers-couplings-is-pooling, study section 282); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，AP1：读取他者的耦合即与之合起来（记录 reading-anothers-couplings-is-pooling，研究第 282 节）；本记录的定律及其陈述不变。"
     }
   ],
   "text_versions": [

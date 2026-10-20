@@ -10,8 +10,8 @@
   "family": "F07",
   "reviewed_at_utc": "2026-10-20T12:09:50+00:00",
   "statement": {
-    "en": "Over a finite listing, one course widens another exactly when every weighting positive on every item ranks it higher; a mixed comparison is decided both ways by positive weightings; a zero weight ties; one weight for all ranks by number.",
-    "zh": "在有限列举上，一条进程扩大另一条，恰当每个在每项上为正的加权都把它排得更高；混合的比较由正的加权两个方向都能决定；零权持平；一律同权即按数目排。"
+    "en": "Over a finite listing, one course widens another exactly when every order ranking each widening higher ranks it higher, additive or not, as every positive weighting does; a mixed comparison is decided both ways; a zero weight ties; one weight for all ranks by number.",
+    "zh": "在有限列举上，一条进程扩大另一条，恰当每个把每个扩大排得更高的序都把它排得更高，可加与否皆然，每个正的加权亦然；混合的比较两个方向都能决定；零权持平；一律同权即按数目排。"
   },
   "laws": [
     {
@@ -38,6 +38,21 @@
       "zh": "在所列项上，一条进程扩大另一条，恰当每个正的加权都把它排得更高。",
       "declarations": [
         "Becoming.Weighting.widens_iff_every_positive"
+      ]
+    },
+    {
+      "en": "Additivity is not needed: for any class of orders from the positive weightings up to every order ranking each widening higher (priority to the worse off among them), one course widens another exactly when every order of the class ranks it higher, every complete order included, and within each class a mixed comparison is decided both ways; on a web, the same of what level paths admit.",
+      "zh": "不需要可加：对从正的加权到一切把每个扩大排得更高的序（优先较差者在内）之间的任何一类序，一条进程扩大另一条，恰当该类中每个序（含每个完全的序）都把它排得更高；每类之内混合的比较两个方向都能决定；在依存网上，对水平路径所接纳者亦然。",
+      "declarations": [
+        "Becoming.Weighting.Increasing",
+        "Becoming.Weighting.ranks",
+        "Becoming.Weighting.increasing_ranks",
+        "Becoming.Weighting.widens_iff_every_of_class",
+        "Becoming.Weighting.widens_iff_every_increasing",
+        "Becoming.Weighting.widens_iff_every_score",
+        "Becoming.Weighting.mixed_either_way_of_class",
+        "Becoming.Weighting.increasing_prior",
+        "Becoming.Web.widens_iff_every_of_class"
       ]
     },
     {
@@ -74,14 +89,14 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom. Finite listings of items (steps and formations); admission two-valued (Bool) and, on webs, decided; weights natural numbers; a standpoint's order represented as an additive weighting, a representation supplied, not derived.",
-      "zh": "不加公理。项（步与构成）的有限列举；接纳取二值（Bool），在依存网上可判定；权重为自然数；立场的序表示为可加的加权，这一表示是所设而非推出。"
+      "en": "No axiom. Finite listings of items (steps and formations); admission two-valued (Bool) and, on webs, decided; weights natural numbers; for the weighted laws a standpoint's order represented as an additive weighting, supplied, not derived; for the class laws only that each order of the class ranks every widening higher and that the class holds the positive weightings' orders.",
+      "zh": "不加公理。项（步与构成）的有限列举；接纳取二值（Bool），在依存网上可判定；权重为自然数；加权诸律中立场的序表示为可加的加权，这是所设而非推出；类的诸律只需该类每个序把每个扩大排得更高，且该类含正的加权之序。"
     }
   ],
   "does_not_show": [
     {
-      "en": "That a standpoint's order is additive or its weights positive, or which weighting a standpoint has.",
-      "zh": "立场的序是可加的或其权重为正，或某个立场有哪一个加权。",
+      "en": "That a standpoint's order ranks every widening higher (monotone, counting every item), or which order a standpoint has.",
+      "zh": "立场的序把每个扩大排得更高（单调、计入每项），或某个立场有哪一个序。",
       "kind": "scope"
     },
     {
@@ -117,8 +132,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T120729.506720Z）：Becoming.Weightings 的 100 项声明（69 项定理）公理报告为空；检查器并核对核心纯净。动手写 Lean 之前的文献核查是显著性审查中的两节；论证见章节 THE-STEP-OF-INVARIANCE。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 256 与 260 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Graded significance and weights beyond naturals; orders that are not additive (lexical, threshold) and where they part from the shared order; a base reading of a standpoint's weighting from what its activity keeps; an independent review.",
-    "zh": "分级的意义与自然数之外的权重；不可加的序（词典式、阈值式）及其与共有之序分开之处；从立场的活动所维持者读出其加权的基底读法；独立审查。"
+    "en": "Graded significance and weights beyond naturals; orders that do not rank every widening higher (thresholds, which deny scope) and where they part from the shared order; a base reading of a standpoint's weighting from what its activity keeps; an independent review.",
+    "zh": "分级的意义与自然数之外的权重；不把每个扩大排得更高的序（阈值式，即否认范围）及其与共有之序分开之处；从立场的活动所维持者读出其加权的基底读法；独立审查。"
   },
   "correspondence": {
     "en": "Sen's intersection approach (Collective Choice and Social Welfare, 1970; \"On Weights and Measures\", 1977): the judgments every weighting in a set shares form a quasi-ordering; any quasi-ordering is an intersection of orderings (Donaldson and Weymark 1998). In multi-objective optimization, dominance in every coordinate is ranking by every positive weighted sum, here the finite 0/1 case. The inclusion order with strict monotonicity on opportunity sets is Pattanaik and Xu (1990). The reading places Scheffler's agent-centred prerogative (1982) and Williams's partiality (1976) in exactly the mixed comparisons, and Taurek's question (1977) at the equal weighting.",
@@ -212,11 +227,13 @@
         "Becoming.Web.admitsWithin_forced_within_some_iff",
         "Becoming.Web.not_widens_of_closes",
         "Becoming.Web.retains_atCenters_iff",
+        "Becoming.Web.widens_iff_every_of_class",
         "Becoming.Web.widens_iff_every_weighting",
         "Becoming.Weighting.ConcaveTo",
         "Becoming.Weighting.ExceedsOn",
         "Becoming.Weighting.GradeInvariant",
         "Becoming.Weighting.IncludesOn",
+        "Becoming.Weighting.Increasing",
         "Becoming.Weighting.MixedOn",
         "Becoming.Weighting.Positive",
         "Becoming.Weighting.StandingInvariant",
@@ -227,12 +244,15 @@
         "Becoming.Weighting.cond_one_pos",
         "Becoming.Weighting.cond_pos",
         "Becoming.Weighting.exceeds_or_includes",
+        "Becoming.Weighting.increasing_prior",
+        "Becoming.Weighting.increasing_ranks",
         "Becoming.Weighting.le_of_strict",
         "Becoming.Weighting.level",
         "Becoming.Weighting.level_le_of_includes",
         "Becoming.Weighting.level_lt_of_includes_at",
         "Becoming.Weighting.lt_of_mul_lt",
         "Becoming.Weighting.mixed_either_way",
+        "Becoming.Weighting.mixed_either_way_of_class",
         "Becoming.Weighting.mul_lt_mul_pos",
         "Becoming.Weighting.neutral_ranks_by_number",
         "Becoming.Weighting.outweighing",
@@ -244,6 +264,7 @@
         "Becoming.Weighting.prior",
         "Becoming.Weighting.prior_lt_of_widens",
         "Becoming.Weighting.prior_transfer",
+        "Becoming.Weighting.ranks",
         "Becoming.Weighting.ranks_alike_of_gradeInvariant",
         "Becoming.Weighting.standingInvariant_of_gradeInvariant",
         "Becoming.Weighting.sufficient_ties",
@@ -257,7 +278,10 @@
         "Becoming.Weighting.weighed_eq_of_unweighted",
         "Becoming.Weighting.weighed_le_of_includes",
         "Becoming.Weighting.weighed_lt_of_widens",
+        "Becoming.Weighting.widens_iff_every_increasing",
+        "Becoming.Weighting.widens_iff_every_of_class",
         "Becoming.Weighting.widens_iff_every_positive",
+        "Becoming.Weighting.widens_iff_every_score",
         "Becoming.atCenters",
         "Becoming.atCenters_least",
         "Becoming.atCenters_presupposed",
@@ -281,7 +305,7 @@
         "Becoming.unrestricted_atCenters_iff",
         "Becoming.withinSome"
       ],
-      "sha256": "0b4f25dbf330f034d6d70844c2ac767abe442a1f968fae257a7f3032e51d097b"
+      "sha256": "ebad406963f387652a5e6c086e102cb0c7069ac8f8ebbb40cb1d3a1765a52452"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
@@ -289,9 +313,9 @@
       "sha256": "a360bf56d40bb977b686bd8756651357f995c5133d22cdd231ed79a71dc5899b"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T120729.506720Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
       "role": "receipt",
-      "sha256": "d3ebc0bcd56f3b4d80941b4f4bba76d8bad7ce4b57e8de74a3b64470e69982b0"
+      "sha256": "fd53371479a40d41144bb90789da0ad740bfded46e028a5b35750542dfafc699"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
@@ -316,13 +340,13 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "6b3c34edef74380ce713ebbd6a98429fd8a33379306d0e6e54a0e6d424a12afd"
+      "sha256": "486b89acc1e1f370b8fc69ed050decd434c200842fc23e34ea9847d18c931c73"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T120729.506720Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -336,6 +360,10 @@
     {
       "en": "20 October 2026 (IV2): the module grew (grades, levels, priority, sufficiency; record graded-significance-and-priority); this record's laws and declarations are unchanged; rebound to receipt 20261020T120729.506720Z; study section 260.",
       "zh": "2026年10月20日（IV2）：模块扩充（等级、层级、优先、充足；记录 graded-significance-and-priority）；本记录的规律与声明不变；改绑到回执 20261020T120729.506720Z；研究第 260 节。"
+    },
+    {
+      "en": "21 October 2026, AP1: the class laws, so the shared order does not depend on the additive representation (study section 282); statement, the first hypothesis, the first does-not-show item and the next delta revised to match; the earlier laws are unchanged.",
+      "zh": "2026年10月21日，AP1：类的诸律，故共有的次序不依赖可加的表示（研究第 282 节）；陈述、第一个假设、第一个“未表明”项与下一步随之修订；先前诸律不变。"
     }
   ]
 }

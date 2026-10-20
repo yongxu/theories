@@ -556,12 +556,15 @@
         "the-gap-for-ones-own-act",
         "what-pooled-coupling-reaches",
         "what-a-pools-acts-respond-to",
+        "reading-anothers-couplings-is-pooling",
         "alignment-direction-under-widening",
-        "own-widening-within-the-margin"
+        "own-widening-within-the-margin",
+        "alignment-approaches-under-the-selection-laws"
       ],
       "declarations": [
         "Becoming.Flow.unselected_beyond_coupling",
         "Becoming.Flow.unselected_beyond_pool",
+        "Becoming.Flow.withinCoupling_reads_iff",
         "Becoming.Flow.act_selected_by_pool",
         "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
         "Becoming.Direction.extension_iff_widens",

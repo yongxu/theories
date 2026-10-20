@@ -1897,11 +1897,6 @@
    "category": "model-witness",
    "reason": "the halving stock in one constructed model of the amounts has values no list holds, read through Amounts.rests_of_finite_reading: falls that recur need an unbounded reading; a fact about one model, which the base does not read"
   },
-  "Becoming.Weighting.mixed_either_way": {
-   "module": "Becoming.Weightings",
-   "category": "general-structure",
-   "reason": "a mixed comparison of two courses over a finite listing is decided both ways by positive weightings: a law of any list, admission and weights, with no world; what a web's levels admit is one case (Web.widens_iff_every_weighting carries the one-way law to webs)"
-  },
   "Becoming.Weighting.neutral_ranks_by_number": {
    "module": "Becoming.Weightings",
    "category": "general-structure",
@@ -2011,11 +2006,6 @@
    "module": "Becoming.Weightings",
    "category": "general-structure",
    "reason": "invariant grades rank alike from every standpoint: a law of any finite listing and grades, with no world"
-  },
-  "Becoming.Weighting.prior_lt_of_widens": {
-   "module": "Becoming.Weightings",
-   "category": "general-structure",
-   "reason": "a strictly increasing transform of levels ranks every widening higher: a law of any finite listing of items and formations, with no world; Web.widens_iff_every_weighting carries the listing to webs"
   },
   "Becoming.Weighting.sufficient_ties": {
    "module": "Becoming.Weightings",
@@ -2186,6 +2176,26 @@
    "module": "Becoming.GroupEnding",
    "category": "model-witness",
    "reason": "with the groups formed by descent, the group not holding back ends, holding back rises and stays above where it started, where the mixed groups of Exhausted fell back: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Weighting.widens_iff_every_increasing": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "one course widens another exactly when every order increasing in admission ranks it higher: a law of any finite listing of items, any class of orders on courses and any weights, with no world; Web.widens_iff_every_of_class carries it to webs"
+  },
+  "Becoming.Weighting.widens_iff_every_score": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "one course widens another exactly when every complete order (a score) increasing in admission ranks it higher: a law of any finite listing of items, any class of orders on courses and any weights, with no world; Web.widens_iff_every_of_class carries it to webs"
+  },
+  "Becoming.Weighting.mixed_either_way_of_class": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "within any class of orders holding the positive weightings, a mixed comparison is decided both ways (from Weighting.mixed_either_way): a law of any finite listing of items, any class of orders on courses and any weights, with no world; Web.widens_iff_every_of_class carries it to webs"
+  },
+  "Becoming.Weighting.increasing_prior": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "a strictly increasing transform of levels is an order increasing in admission (from Weighting.prior_lt_of_widens), so priority to the worse off lies within the classes the shared order is taken over: a law of any finite listing of items, any class of orders on courses and any weights, with no world; Web.widens_iff_every_of_class carries it to webs"
   }
  },
  "instances": {
