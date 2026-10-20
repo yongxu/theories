@@ -18,12 +18,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 1756,
+    "lean_paths": 1757,
     "distinct_byte_contents": 1386,
-    "byte_identical_duplicate_groups": 111,
+    "byte_identical_duplicate_groups": 112,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 846,
+      "development-attempt": 847,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 871
@@ -4146,6 +4146,15 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sg1-optimum/tree/Becoming/Optimum.lean",
       "sha256": "a6ed5555f8f84446632f35a238d651bc55975e031f4983d73ef249bf94059fe3",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sg2-room/tree/Becoming/Optimum.lean",
+      "sha256": "4bc270b4e4dbaa25c964018f70bf15e5e5011bcb317b03278f454456af9a5cfa",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -370051,6 +370060,10 @@
     "4766457e81ff53ef8ab94f4b7109e4b62e138f409b8d239e0d9ecb6695565e85": [
       "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/k1-cuts/PreparationCorrespondence.lean",
       "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean"
+    ],
+    "4bc270b4e4dbaa25c964018f70bf15e5e5011bcb317b03278f454456af9a5cfa": [
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sg2-room/tree/Becoming/Optimum.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
     ],
     "4beae160632276b4995619b5a9715fc346c0b96bd935082cdd2f8e6d3274199b": [
       "_process/research/2026-10-05-generative-foundation-review/history/root-foundation/development/variation-warrant-review/20261007T234507.242662Z/Audit.lean",
