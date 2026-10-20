@@ -6,7 +6,7 @@ MQ1 ([experiments/margin-measured](../margin-measured/README.md)) found that an 
 
 | File | What it is |
 |---|---|
-| [PREDICTIONS-2026-10-20.md](PREDICTIONS-2026-10-20.md) | Step 0 literature table, the reduction stated before the run, forecasters F0-F5, predictions R1-R6 with classes and pass rules, what the verdicts decide. Frozen at `0b158e1b9`, the commit the run was made from (kept as `refs/salvage/se1-freeze`; on main, rebased, `f842c2885`) |
+| [PREDICTIONS-2026-10-20.md](PREDICTIONS-2026-10-20.md) | Step 0 literature table, the reduction stated before the run, forecasters F0-F5, predictions R1-R6 with classes and pass rules, what the verdicts decide. Frozen at `0b158e1b9`, the commit the run was made from (kept as `refs/salvage/se1-freeze`; on main, rebased, `562f1a4bb`) |
 | [se.py](se.py) | The forecasters on MQ1's lawn (part R) and the Box environment (part B) |
 | [analyze.py](analyze.py) | The frozen verdict rules |
 | [results/](results/) | `se.json` (every forecast, row by row), `VERDICTS.json`, `FROZEN-AT` |

@@ -11203,7 +11203,7 @@ Output → input: with Persistence's conservation continuation, a world's classe
 ```text
 Result(s): none new; MQ1's B4 forecast (§253) shown to be relative reachability on a replayed course,
        coarsened to a band. Experiment experiments/side-effect-benchmarks, predictions frozen at 0b158e1b9
-       (on main f842c2885) before the run, R1-R6 passed; literature check in the significance review (side-effect-benchmarks-check).
+       (on main 562f1a4bb) before the run, R1-R6 passed; literature check in the significance review (side-effect-benchmarks-check).
 Delta: §253 left blind draw against margin as the theory's best candidate for a result outsiders use (side
        effects of an optimizer predicted out of sample, 8/8, reference outcome 0/8). Given the same
        information (the reference course's entries and the target cell's own dynamics), unreachability of the
