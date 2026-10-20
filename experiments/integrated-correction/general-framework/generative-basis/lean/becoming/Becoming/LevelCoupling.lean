@@ -51,6 +51,26 @@ theorem names, how the three meet. No name is changed.
   through its couplings responds to it by level at every step and condition (`levelLaw`,
   `levelLaw_through`, `levelLaw_respondsByLevel`). So coupling by level (`obs`) is exactly where a level can couple
   into a formation within its threshold (`not_not_obs_iff_respondsByLevel`).
+* **What dependence alone carries of a level.** Read activity needing support off the law at a
+  step: a formation not admitted by the levels there exchanges nothing across it
+  (`ExchangeLaw.NeedsSupportAt`, as reading requirement as response gives it). Under a law reading
+  through dependence alone (`thresholdOnly`), such a formation takes and gives no less where the
+  levels at the step stand no lower, the history before alike (`ExchangeLaw.Through.rises_at_step`).
+  So a response carried by a family of them rises with the levels at the step
+  (`ExchangeLaw.Through.carried_rises`), and falls only where some level at the step falls
+  (`ExchangeLaw.Through.carried_fall_needs_fall`). Conversely, a response rising with one level up
+  to a bound is carried by units at thresholds, unit `j + 1` depending on the level at need `j + 1`
+  and giving the rise there (`Layers.carry`, `Layers.law_through`, `Layers.law_needsSupport`). So a
+  response to one level at the step is carried by dependence alone exactly where it rises with that
+  level (`carried_iff_rising`). Supplying what a level lacks of a positive amount (`supplyLaw`)
+  passes by level (`supplyLaw_through`) and is carried by no family through dependence alone
+  (`supply_not_carried`).
+* **With a complement at a fixed total, every response is carried.** Where `d` and a condition `e`
+  stand at the step at a fixed total `N` (a closed pair: `e` holds what `d` does not), unit `j`,
+  depending on `d` at need `j` and on `e` at need `N - j`, is admitted exactly at `d`'s level
+  (`Complement.admitted_iff`), so the units carry every response to `d`'s level
+  (`Complement.carry`, `Complement.law_through`, `Complement.law_needsSupport`), supplying a deficit
+  among them (`supply_carried_by_complement`).
 
 **Reading (the AI's).** `obs` is not a second kind of relation beside the couplings of
 `Becoming.Loops` and the readings of `Becoming.Observation`: it marks where a level can couple
@@ -58,13 +78,22 @@ into a formation by level, as `Web.DependsOn` marks where it can couple by thres
 of the need), and every coupling a response forces lies within them. "Coupled by level" names this exactly; what can
 couple in bounds what responds, and a law's actual responses are its couplings. The double negation of the last
 equivalence is the constructive form: the converse shows that a level coupling is not left out.
+Whether `obs` derives from dependence is exact at the step of the exchange: dependence alone carries
+what rises with a level and nothing that falls with it, a fall being carried only through a level
+that falls as it does. A complement at a fixed total, where the amount of the level goes, is such a
+level, and through it every response is carried. So observing a level is depending on it and on
+where its amount goes, wherever the two stand at a fixed total; where nothing holds what the level
+does not, a response falling with it needs coupling by level.
 
 What is not derived: which law the rest follows, or whether a level coupled by level is in fact
 responded to (a law reading through the couplings may ignore what couples in); a crossing
 passing where the formation's admission at the step is not decided (the decision is the
 witness's one input, and a law that responds reads no more than it); a strength's size beyond
-being positive. The representation commits to discrete steps and natural amounts. No
-ethical predicate, ranking or axiom occurs.
+being positive; which responses to levels at earlier steps dependence alone carries (a crossing
+passes, above, and the units at the step do not cover them); responses to several levels at once;
+a complement where the total is not fixed, by loss or by exchange beyond the pair. The
+representation commits to discrete steps and natural amounts. No ethical predicate, ranking or
+axiom occurs.
 -/
 
 namespace Becoming
@@ -608,5 +637,436 @@ theorem crossing_passes_of_support [DecidableEq C] [DecidableEq F] {g : F} {T : 
   crossing_passes_iff (admitsDecidableOfSupport es support)
 
 end Gate
+
+/-! ## What dependence alone carries of a level
+
+Coupling by threshold alone is `thresholdOnly`: no level couples into any formation by level. A law
+reading through it gives a formation alike wherever the levels admit it alike at every step so far.
+This section states exactly what such laws carry of a level at the step of the exchange: what rises
+with it, and, read with a complement at a fixed total, everything. -/
+
+section Carried
+
+variable {law : ExchangeLaw F C} {W : Web F C} {part : F → Bool} {t : Nat} {h : F}
+
+/-- **Under the law, `h`'s exchange at `t` needs support**: under every history whose levels at `t`
+do not admit `h`, `h` takes nothing and gives nothing across the step from `t`. Activity needing
+support (`Web.Dependent`), read off the law at one step, as the reading of requirement as response
+gives it (`ExchangeRelation.readWeb_dependent`). -/
+def ExchangeLaw.NeedsSupportAt (law : ExchangeLaw F C) (W : Web F C) (t : Nat) (h : F) : Prop :=
+  ∀ l : Nat → C → Nat, ¬ W.Admits (l t) t h → ∀ c, law.take t h l c = 0 ∧ law.give t h l c = 0
+
+/-- `l'` stands no lower than `l` at `t`, the two alike before `t`. -/
+def NoLowerAt (t : Nat) (l l' : Nat → C → Nat) : Prop :=
+  (∀ s, s < t → ∀ e, l s e = l' s e) ∧ ∀ e, l t e ≤ l' t e
+
+/-- **Through dependence alone, a response rises with the levels at its step.** For a law reading
+through dependence alone, under which a formation outside the part exchanges across the step from
+`t` only where it is supported: where the levels at `t` stand no lower, the history before alike, it
+takes from and gives to every condition no less. -/
+theorem ExchangeLaw.Through.rises_at_step (through : law.Through W thresholdOnly part)
+    (out : part h = false) (needs : law.NeedsSupportAt W t h) {l l' : Nat → C → Nat}
+    (noLower : NoLowerAt t l l') (c : C) :
+    law.take t h l c ≤ law.take t h l' c ∧ law.give t h l c ≤ law.give t h l' c :=
+  Decidable.of_not_not fun no =>
+    (fun em : ¬ ¬ (W.Admits (l t) t h ∨ ¬ W.Admits (l t) t h) => em fun decided =>
+      match decided with
+      | .inl admitted =>
+        have alike := through h out t l l' fun s le =>
+          match Nat.lt_or_eq_of_le le with
+          | .inl before => Web.alikeThrough_of_levels (noLower.1 s before)
+          | .inr same => Eq.subst (motive := fun x => W.AlikeThrough thresholdOnly h l l' x)
+              same.symm
+              ⟨⟨fun _ => Web.Admits.mono noLower.2 admitted, fun _ => admitted⟩,
+               fun _ never => False.elim never⟩
+        no ⟨Nat.le_of_eq (alike c).1, Nat.le_of_eq (alike c).2⟩
+      | .inr unadmitted =>
+        no ⟨Nat.le_trans (Nat.le_of_eq (needs l unadmitted c).1) (Nat.zero_le _),
+            Nat.le_trans (Nat.le_of_eq (needs l unadmitted c).2) (Nat.zero_le _)⟩)
+    fun n => n (.inr fun a => n (.inl a))
+
+/-- A family of formations carries a response of giving into `c` at `t` over the histories
+`within`: under each of them, what its members give to `c` across the step from `t` totals the
+response. -/
+def ExchangeLaw.CarriesGiving (law : ExchangeLaw F C) (us : List F) (t : Nat) (c : C)
+    (within : (Nat → C → Nat) → Prop) (response : (Nat → C → Nat) → Nat) : Prop :=
+  ∀ l, within l → total us (fun u => law.give t u l c) = response l
+
+/-- **What dependence alone carries rises.** A response carried by a family of formations outside
+the part, each exchanging only where supported, under a law reading through dependence alone, is no
+lower where the levels at the step stand no lower. -/
+theorem ExchangeLaw.Through.carried_rises (through : law.Through W thresholdOnly part)
+    {us : List F} (out : ∀ u, u ∈ us → part u = false)
+    (needs : ∀ u, u ∈ us → law.NeedsSupportAt W t u) {c : C}
+    {within : (Nat → C → Nat) → Prop} {response : (Nat → C → Nat) → Nat}
+    (carries : law.CarriesGiving us t c within response) {l l' : Nat → C → Nat}
+    (inside : within l) (inside' : within l') (noLower : NoLowerAt t l l') :
+    response l ≤ response l' :=
+  Nat.le_trans (Nat.le_of_eq (carries l inside).symm)
+    (Nat.le_trans
+      (total_le us fun u mem => (through.rises_at_step (out u mem) (needs u mem) noLower c).2)
+      (Nat.le_of_eq (carries l' inside')))
+
+/-- **Through dependence alone, a response falls only where a level falls.** Where a family carried
+as in `carried_rises` gives less under one history than under another alike before the step, some
+condition stands lower at the step under the first: what supplies a fall of one level reads, by
+threshold, a level that falls with it. -/
+theorem ExchangeLaw.Through.carried_fall_needs_fall (through : law.Through W thresholdOnly part)
+    {us : List F} (out : ∀ u, u ∈ us → part u = false)
+    (needs : ∀ u, u ∈ us → law.NeedsSupportAt W t u) {c : C}
+    {within : (Nat → C → Nat) → Prop} {response : (Nat → C → Nat) → Nat}
+    (carries : law.CarriesGiving us t c within response) {l l' : Nat → C → Nat}
+    (inside : within l) (inside' : within l') (before : ∀ s, s < t → ∀ e, l s e = l' s e)
+    (falls : response l' < response l) : ¬ ∀ e, l t e ≤ l' t e :=
+  fun noLower => Nat.not_le_of_gt falls
+    (through.carried_rises out needs carries inside inside' ⟨before, noLower⟩)
+
+end Carried
+
+/-! ## Totals over the first steps -/
+
+section Totals
+
+/-- Where a quantity is nothing at each of the first `n` numbers, its total over them is nothing. -/
+theorem total_steps_nothing {q : Nat → Nat} :
+    ∀ n, (∀ j, j < n → q j = 0) → total (steps 0 n) q = 0
+  | 0, _ => rfl
+  | n + 1, nothing =>
+    (total_steps_add q 0 n 1).trans
+      ((congrArg (· + (q (0 + n) + 0)) (total_steps_nothing n fun j lt =>
+          nothing j (Nat.lt_trans lt (Nat.lt_succ_self n)))).trans
+        ((congrArg (fun k => 0 + (q k + 0)) (Nat.zero_add n)).trans
+          (congrArg (fun k => 0 + (k + 0)) (nothing n (Nat.lt_succ_self n)))))
+
+/-- Where a quantity is nothing at each of the first `n` numbers but `x`, one of them, its total over
+them is its value at `x`. -/
+theorem total_steps_only {q : Nat → Nat} {x : Nat} :
+    ∀ n, (∀ j, j < n → j ≠ x → q j = 0) → x < n → total (steps 0 n) q = q x
+  | 0, _, lt => absurd lt (Nat.not_lt_zero x)
+  | n + 1, others, lt =>
+    have last : total (steps 0 (n + 1)) q = total (steps 0 n) q + q n :=
+      (total_steps_add q 0 n 1).trans
+        (congrArg (fun k => total (steps 0 n) q + (q k + 0)) (Nat.zero_add n))
+    match Nat.decLt x n with
+    | isTrue before =>
+      last.trans ((congrArg (· + q n) (total_steps_only n (fun j lt' => others j
+          (Nat.lt_trans lt' (Nat.lt_succ_self n))) before)).trans
+        (congrArg (q x + ·) (others n (Nat.lt_succ_self n)
+          fun same => Nat.lt_irrefl n (Eq.subst (motive := fun k => k < n) same.symm before))))
+    | isFalse notBefore =>
+      have same : x = n := Nat.le_antisymm (Nat.le_of_lt_succ lt) (Nat.ge_of_not_lt notBefore)
+      last.trans ((congrArg (· + q n) (total_steps_nothing n fun j lt' => others j
+          (Nat.lt_trans lt' (Nat.lt_succ_self n))
+          fun is => Nat.lt_irrefl n (Eq.subst (motive := fun k => k < n) (is.trans same) lt'))).trans
+        ((Nat.zero_add (q n)).trans (congrArg q same.symm)))
+
+end Totals
+
+/-! ## A rising response, carried by units at thresholds -/
+
+namespace Layers
+
+variable {d : C}
+
+/-- The web of the units of a response to the level of `d`: unit `j + 1` requires `d` at need
+`j + 1` at every step; unit `0` requires nothing. -/
+def web (d : C) : Web Nat C :=
+  ⟨fun _ _ => 0, fun _ _ => True, fun _ j c => 0 < j ∧ c = d, fun _ j _ => j, fun _ _ _ => False⟩
+
+/-- The units of a response `r` to the level of `d`, `r x c` being what the response gives `c` where
+`d` stands at `x`: unit `0` gives `r 0`, and unit `j + 1`, where `d` stands at `j + 1` or more, gives
+the rise `r (j + 1) - r j`. Nothing is taken. -/
+def law (d : C) (r : Nat → C → Nat) : ExchangeLaw Nat C :=
+  ⟨fun _ _ _ _ => 0, fun t j l c => match j with
+    | 0 => r 0 c
+    | j + 1 => bif Nat.ble (j + 1) (l t d) then r (j + 1) c - r j c else 0⟩
+
+/-- Unit `j + 1` is admitted exactly where `d` stands at `j + 1` or more. -/
+theorem admits_iff {l : C → Nat} {t j : Nat} : (web d).Admits l t (j + 1) ↔ j + 1 ≤ l d :=
+  ⟨fun admits => admits d ⟨Nat.succ_pos j, rfl⟩,
+   fun le _ required => Eq.subst (motive := fun x => j + 1 ≤ l x) required.2.symm le⟩
+
+/-- **The units read through dependence alone.** -/
+theorem law_through (r : Nat → C → Nat) (part : Nat → Bool) :
+    (law d r).Through (web d) thresholdOnly part :=
+  fun j _ t _ _ alike c => ⟨rfl, match j, alike with
+    | 0, _ => rfl
+    | j + 1, alike => congrArg (fun b => cond b (r (j + 1) c - r j c) 0)
+        (ble_eq_of_iff (admits_iff.symm.trans ((alike t (Nat.le_refl t)).1.trans admits_iff)))⟩
+
+/-- **Each unit exchanges only where supported.** -/
+theorem law_needsSupport (r : Nat → C → Nat) (t j : Nat) : (law d r).NeedsSupportAt (web d) t j :=
+  fun l unadmitted c => ⟨rfl, match j, unadmitted with
+    | 0, unadmitted => absurd (fun _ required => absurd required.1 (Nat.lt_irrefl 0)) unadmitted
+    | j + 1, unadmitted =>
+      have unmet : Nat.ble (j + 1) (l t d) = false :=
+        match met : Nat.ble (j + 1) (l t d) with
+        | true => absurd (admits_iff.mpr (Nat.le_of_ble_eq_true met)) unadmitted
+        | false => rfl
+      congrArg (fun b => cond b (r (j + 1) c - r j c) 0) unmet⟩
+
+/-- Each unit at a threshold couples into the condition by threshold. -/
+theorem dependsOn (j : Nat) : (web d).DependsOn (j + 1) d :=
+  ⟨0, Nat.succ_pos j, rfl⟩
+
+/-- The rises below a level, from what the response gives at nothing, add up to what it gives at
+that level. -/
+theorem rises_add {q : Nat → Nat} {x : Nat} :
+    ∀ n, n ≤ x → (∀ i, i < n → q i ≤ q (i + 1)) →
+      q 0 + total (steps 0 n) (fun i => cond (Nat.ble (i + 1) x) (q (i + 1) - q i) 0) = q n
+  | 0, _, _ => rfl
+  | n + 1, le, rising =>
+    have step : cond (Nat.ble (n + 1) x) (q (n + 1) - q n) 0 = q (n + 1) - q n :=
+      congrArg (fun b => cond b (q (n + 1) - q n) 0) (Nat.ble_eq_true_of_le le)
+    (congrArg (q 0 + ·) ((total_steps_add _ 0 n 1).trans
+        (congrArg (fun k => total (steps 0 n)
+            (fun i => cond (Nat.ble (i + 1) x) (q (i + 1) - q i) 0) +
+            (cond (Nat.ble (k + 1) x) (q (k + 1) - q k) 0 + 0)) (Nat.zero_add n)))).trans
+      ((Nat.add_assoc _ _ _).symm.trans
+        ((congrArg (· + (cond (Nat.ble (n + 1) x) (q (n + 1) - q n) 0 + 0))
+            (rises_add n (Nat.le_trans (Nat.le_succ n) le) fun i lt =>
+              rising i (Nat.lt_trans lt (Nat.lt_succ_self n)))).trans
+          ((congrArg (q n + ·) ((Nat.add_zero _).trans step)).trans
+            (Naturals.add_sub_of_le (rising n (Nat.lt_succ_self n))))))
+
+/-- Above the level, no rise is added. -/
+theorem rises_stop {q : Nat → Nat} {x : Nat} :
+    ∀ k, total (steps 0 (x + k)) (fun i => cond (Nat.ble (i + 1) x) (q (i + 1) - q i) 0) =
+      total (steps 0 x) (fun i => cond (Nat.ble (i + 1) x) (q (i + 1) - q i) 0)
+  | 0 => rfl
+  | k + 1 =>
+    have above : Nat.ble (x + k + 1) x = false :=
+      match met : Nat.ble (x + k + 1) x with
+      | true => absurd (Nat.le_of_ble_eq_true met)
+          (Nat.not_le_of_gt (Nat.lt_of_le_of_lt (Nat.le_add_right x k) (Nat.lt_succ_self _)))
+      | false => rfl
+    (total_steps_add _ 0 (x + k) 1).trans
+      ((congrArg (fun m => total (steps 0 (x + k))
+          (fun i => cond (Nat.ble (i + 1) x) (q (i + 1) - q i) 0) +
+          (cond (Nat.ble (m + 1) x) (q (m + 1) - q m) 0 + 0)) (Nat.zero_add (x + k))).trans
+        ((congrArg (fun b => total (steps 0 (x + k))
+            (fun i => cond (Nat.ble (i + 1) x) (q (i + 1) - q i) 0) +
+            (cond b (q (x + k + 1) - q (x + k)) 0 + 0)) above).trans
+          (rises_stop k)))
+
+/-- **A rising response is carried by units at thresholds.** Where what a response gives `c` rises
+with the level of `d` up to a bound, its units, one at each threshold below the bound, give `c` in
+total what it gives at every level of `d` up to the bound. -/
+theorem carry {r : Nat → C → Nat} {c : C} {N : Nat} (rising : ∀ x, x < N → r x c ≤ r (x + 1) c)
+    (t : Nat) : (law d r).CarriesGiving (steps 0 (N + 1)) t c (fun l => l t d ≤ N)
+      (fun l => r (l t d) c) :=
+  fun l within =>
+    have shifted : total (steps 1 N) (fun j => (law d r).give t j l c) =
+        total (steps 0 N) (fun i => cond (Nat.ble (i + 1) (l t d)) (r (i + 1) c - r i c) 0) :=
+      total_steps_succ (fun j => (law d r).give t j l c) 0 N
+    have stops : total (steps 0 N)
+          (fun i => cond (Nat.ble (i + 1) (l t d)) (r (i + 1) c - r i c) 0) =
+        total (steps 0 (l t d))
+          (fun i => cond (Nat.ble (i + 1) (l t d)) (r (i + 1) c - r i c) 0) :=
+      (congrArg (fun m => total (steps 0 m)
+          (fun i => cond (Nat.ble (i + 1) (l t d)) (r (i + 1) c - r i c) 0))
+          (Naturals.add_sub_of_le within).symm).trans
+        (rises_stop (q := fun i => r i c) (x := l t d) (N - l t d))
+    (congrArg (r 0 c + ·) (shifted.trans stops)).trans
+      (rises_add (q := fun x => r x c) (l t d) (Nat.le_refl _) fun i lt =>
+        rising i (Nat.lt_of_lt_of_le lt within))
+
+end Layers
+
+/-! ## Exactly what dependence alone carries of one level -/
+
+section Exactly
+
+variable [DecidableEq C]
+
+/-- The history standing at `x` at `d` at the step `t`, and at nothing elsewhere. -/
+def onlyAt (t : Nat) (d : C) (x : Nat) : Nat → C → Nat :=
+  fun s e => if s = t ∧ e = d then x else 0
+
+theorem onlyAt_self (t : Nat) (d : C) (x : Nat) : onlyAt t d x t d = x :=
+  if_pos ⟨rfl, rfl⟩
+
+/-- Standing higher at `d` at the step alone stands no lower there. -/
+theorem onlyAt_noLower (t : Nat) (d : C) (x : Nat) : NoLowerAt t (onlyAt t d x) (onlyAt t d (x + 1)) :=
+  ⟨fun s before e =>
+    have other : ¬ (s = t ∧ e = d) := fun both => Nat.lt_irrefl t (Eq.subst (motive := (· < t)) both.1 before)
+    (if_neg other).trans (if_neg other).symm,
+   fun e => match decEq e d with
+    | isTrue same => Nat.le_trans (Nat.le_of_eq (if_pos ⟨rfl, same⟩))
+        (Nat.le_trans (Nat.le_succ x) (Nat.le_of_eq (if_pos ⟨rfl, same⟩).symm))
+    | isFalse other => Nat.le_of_eq ((if_neg fun both => other both.2).trans
+        (if_neg fun both => other both.2).symm)⟩
+
+/-- **Dependence alone carries of a level exactly what rises with it.** A response giving `c` an
+amount fixed by the level of `d` at the step, up to a bound, is carried by some family of formations
+each exchanging only where supported, under a law reading through dependence alone, exactly where it
+rises with that level up to the bound. -/
+theorem carried_iff_rising (d c : C) (r : Nat → Nat) (t N : Nat) :
+    (∃ (law : ExchangeLaw Nat C) (W : Web Nat C) (us : List Nat),
+        law.Through W thresholdOnly (fun _ => false) ∧
+        (∀ u, u ∈ us → law.NeedsSupportAt W t u) ∧
+        law.CarriesGiving us t c (fun l => l t d ≤ N) (fun l => r (l t d))) ↔
+      ∀ x, x < N → r x ≤ r (x + 1) :=
+  ⟨fun ⟨_, _, _, through, needs, carries⟩ x lt =>
+    have rises := through.carried_rises (fun _ _ => rfl) needs carries
+      (Nat.le_trans (Nat.le_of_eq (onlyAt_self t d x)) (Nat.le_of_lt lt))
+      (Nat.le_trans (Nat.le_of_eq (onlyAt_self t d (x + 1))) lt) (onlyAt_noLower t d x)
+    Nat.le_trans (Nat.le_of_eq (congrArg r (onlyAt_self t d x)).symm)
+      (Nat.le_trans rises (Nat.le_of_eq (congrArg r (onlyAt_self t d (x + 1))))),
+   fun rising => ⟨Layers.law d fun x _ => r x, Layers.web d, steps 0 (N + 1),
+     Layers.law_through _ _, fun u _ => Layers.law_needsSupport _ t u,
+     Layers.carry (r := fun x _ => r x) rising t⟩⟩
+
+end Exactly
+
+/-! ## With a complement at a fixed total, every response is carried -/
+
+/-- Booleans true alike are equal. -/
+theorem eq_of_true_iff {p q : Bool} (iff : p = true ↔ q = true) : p = q :=
+  match p, q, iff with
+  | true, true, _ => rfl
+  | false, false, _ => rfl
+  | true, false, iff => Bool.noConfusion (iff.mp rfl)
+  | false, true, iff => Bool.noConfusion (iff.mpr rfl)
+
+/-- Two comparisons both hold exactly where their joint test is true. -/
+theorem ble_and_iff {a b m n : Nat} : (Nat.ble a b && Nat.ble m n) = true ↔ a ≤ b ∧ m ≤ n :=
+  ⟨fun holds => match hb : Nat.ble a b, hn : Nat.ble m n, holds with
+     | true, true, _ => ⟨Nat.le_of_ble_eq_true hb, Nat.le_of_ble_eq_true hn⟩
+     | false, _, holds => Bool.noConfusion holds
+     | true, false, holds => Bool.noConfusion holds,
+   fun ⟨first, second⟩ =>
+     (congrArg (· && Nat.ble m n) (Nat.ble_eq_true_of_le first)).trans
+       (Nat.ble_eq_true_of_le second)⟩
+
+namespace Complement
+
+variable [DecidableEq C] {d e : C} {N : Nat}
+
+/-- The web of the units of a response to the level of `d`, read with its complement `e` at the
+total `N`: unit `j` requires `d` at need `j` and `e` at need `N - j`, at every step. -/
+def web (d e : C) (N : Nat) : Web Nat C :=
+  ⟨fun _ _ => 0, fun _ _ => True, fun _ _ c => c = d ∨ c = e,
+   fun _ j c => if c = d then j else N - j, fun _ _ _ => False⟩
+
+/-- Unit `j` gives each condition `c` the amount `r j c` where `d` stands at `j` or more and `e` at
+`N - j` or more, and nothing otherwise. Nothing is taken. -/
+def law (d e : C) (N : Nat) (r : Nat → C → Nat) : ExchangeLaw Nat C :=
+  ⟨fun _ _ _ _ => 0,
+   fun t j l c => bif Nat.ble j (l t d) && Nat.ble (N - j) (l t e) then r j c else 0⟩
+
+/-- Unit `j` is admitted exactly where `d` stands at `j` or more and `e` at `N - j` or more. -/
+theorem admits_iff (apart : e ≠ d) {l : C → Nat} {t j : Nat} :
+    (web d e N).Admits l t j ↔ j ≤ l d ∧ N - j ≤ l e :=
+  ⟨fun admits => ⟨Nat.le_trans (Nat.le_of_eq (if_pos rfl).symm) (admits d (.inl rfl)),
+     Nat.le_trans (Nat.le_of_eq (if_neg apart).symm) (admits e (.inr rfl))⟩,
+   fun ⟨first, second⟩ _ required => match required with
+     | .inl same => Eq.subst (motive := fun x => (web d e N).need t j x ≤ l x) same.symm
+         (Nat.le_trans (Nat.le_of_eq (if_pos rfl)) first)
+     | .inr same => Eq.subst (motive := fun x => (web d e N).need t j x ≤ l x) same.symm
+         (Nat.le_trans (Nat.le_of_eq (if_neg apart)) second)⟩
+
+/-- **The units read through dependence alone.** -/
+theorem law_through (apart : e ≠ d) (r : Nat → C → Nat) (part : Nat → Bool) :
+    (law d e N r).Through (web d e N) thresholdOnly part :=
+  fun _ _ t _ _ alike c => ⟨rfl, congrArg (fun b => cond b (r _ c) 0)
+    (eq_of_true_iff (ble_and_iff.trans ((admits_iff apart).symm.trans
+      ((alike t (Nat.le_refl t)).1.trans ((admits_iff apart).trans ble_and_iff.symm)))))⟩
+
+/-- **Each unit exchanges only where supported.** -/
+theorem law_needsSupport (apart : e ≠ d) (r : Nat → C → Nat) (t j : Nat) :
+    (law d e N r).NeedsSupportAt (web d e N) t j :=
+  fun l unadmitted c => ⟨rfl,
+    have unmet : (Nat.ble j (l t d) && Nat.ble (N - j) (l t e)) = false :=
+      match met : (Nat.ble j (l t d) && Nat.ble (N - j) (l t e)) with
+      | true => absurd ((admits_iff apart).mpr (ble_and_iff.mp met)) unadmitted
+      | false => rfl
+    congrArg (fun b => cond b (r j c) 0) unmet⟩
+
+/-- Each unit couples into the condition and its complement by threshold. -/
+theorem dependsOn (j : Nat) : (web d e N).DependsOn j d ∧ (web d e N).DependsOn j e :=
+  ⟨⟨0, .inl rfl⟩, ⟨0, .inr rfl⟩⟩
+
+/-- At a fixed total, a unit up to the total is admitted exactly at the level of `d`. -/
+theorem admitted_iff {x y j : Nat} (total : x + y = N) (within : j ≤ N) :
+    (j ≤ x ∧ N - j ≤ y) ↔ j = x :=
+  ⟨fun ⟨below, rest⟩ => Nat.le_antisymm below (Nat.ge_of_not_lt fun lower =>
+      Nat.lt_irrefl N (Nat.lt_of_le_of_lt
+        (Nat.le_trans (Nat.le_of_eq ((Naturals.add_sub_of_le within).symm))
+          (Nat.add_le_add_left rest j))
+        (Nat.lt_of_lt_of_le (Nat.add_lt_add_right lower y) (Nat.le_of_eq total)))),
+   fun same => ⟨Nat.le_of_eq same, Eq.subst (motive := fun k => N - k ≤ y) same.symm
+     (Nat.le_of_eq ((congrArg (· - x) total.symm).trans (Naturals.add_sub_cancel_left x y)))⟩⟩
+
+omit [DecidableEq C] in
+/-- **With a complement at a fixed total, every response is carried.** Where `d` and `e` stand at
+the step at a total `N`, the units read with the complement, one for each level up to `N`, give each
+condition in total what any response `r` gives it at the level of `d`. -/
+theorem carry (r : Nat → C → Nat) (t : Nat) (c : C) :
+    (law d e N r).CarriesGiving (steps 0 (N + 1)) t c (fun l => l t d + l t e = N)
+      (fun l => r (l t d) c) :=
+  fun l total => total_steps_only (N + 1)
+    (fun j lt other =>
+      have unmet : (Nat.ble j (l t d) && Nat.ble (N - j) (l t e)) = false :=
+        match met : (Nat.ble j (l t d) && Nat.ble (N - j) (l t e)) with
+        | true => absurd ((admitted_iff total (Nat.le_of_lt_succ lt)).mp (ble_and_iff.mp met)) other
+        | false => rfl
+      congrArg (fun b => cond b (r j c) 0) unmet)
+    (Nat.lt_succ_of_le (Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq total))) |>.trans
+    (congrArg (fun b => cond b (r (l t d) c) 0)
+      (ble_and_iff.mpr ((admitted_iff total (Nat.le_trans (Nat.le_add_right _ _)
+        (Nat.le_of_eq total))).mpr rfl)))
+
+end Complement
+
+/-! ## Supplying a deficit -/
+
+section Supply
+
+/-- **Supplying a deficit.** Each marked formation gives every condition what the level of `d` at
+the step lacks of `k`. -/
+def supplyLaw (mark : F → Bool) (d : C) (k : Nat) : ExchangeLaw F C :=
+  ⟨fun _ _ _ _ => 0, fun t h l _ => bif mark h then k - l t d else 0⟩
+
+/-- **By level, supplying a deficit passes.** The law supplying the deficit of a level coupled into
+each marked formation by level reads through the couplings. -/
+theorem supplyLaw_through {W : Web F C} {obs : F → C → Prop} {part : F → Bool} {mark : F → Bool}
+    {d : C} {k : Nat} (marked : ∀ h, mark h = true → obs h d) :
+    (supplyLaw mark d k).Through W obs part :=
+  fun h _ t l l' alike _ => by
+    refine ⟨rfl, ?_⟩
+    show cond (mark h) (k - l t d) 0 = cond (mark h) (k - l' t d) 0
+    cases m : mark h with
+    | true => exact congrArg (k - ·) ((alike t (Nat.le_refl t)).2 d (marked h m))
+    | false => rfl
+
+/-- **By dependence alone, supplying a deficit is carried by nothing.** No family of formations
+each exchanging only where supported, under a law reading through dependence alone, carries, over
+the levels of `d` up to a positive bound, a response supplying what `d` lacks of a positive `k`. -/
+theorem supply_not_carried [DecidableEq C] (d c : C) {k N : Nat} (positive : 0 < k) (bound : 0 < N)
+    (t : Nat) :
+    ¬ ∃ (law : ExchangeLaw Nat C) (W : Web Nat C) (us : List Nat),
+        law.Through W thresholdOnly (fun _ => false) ∧
+        (∀ u, u ∈ us → law.NeedsSupportAt W t u) ∧
+        law.CarriesGiving us t c (fun l => l t d ≤ N) (fun l => k - l t d) :=
+  fun carried =>
+    have rising := (carried_iff_rising d c (fun x => k - x) t N).mp carried 0 bound
+    Nat.lt_irrefl (k - 1) (Nat.lt_of_lt_of_le (Nat.sub_lt positive Nat.one_pos)
+      (Nat.le_trans (Nat.le_of_eq (Nat.sub_zero k).symm) rising))
+
+/-- **With the complement, supplying a deficit is carried by dependence alone.** Where `d` and `e`
+stand at a fixed total, the units read with the complement carry the response supplying what `d`
+lacks of `k`, each unit depending on `d` and on `e`. -/
+theorem supply_carried_by_complement [DecidableEq C] {d e : C} (apart : e ≠ d) (N k t : Nat)
+    (c : C) :
+    (Complement.law d e N fun x _ => k - x).Through (Complement.web d e N) thresholdOnly
+        (fun _ => false) ∧
+      (∀ j, (Complement.law d e N fun x _ => k - x).NeedsSupportAt (Complement.web d e N) t j) ∧
+      (Complement.law d e N fun x _ => k - x).CarriesGiving (steps 0 (N + 1)) t c
+        (fun l => l t d + l t e = N) (fun l => k - l t d) :=
+  ⟨Complement.law_through apart _ _, Complement.law_needsSupport apart _ t,
+   Complement.carry _ t c⟩
+
+end Supply
 
 end Becoming

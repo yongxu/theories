@@ -2434,7 +2434,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   of its need, and that only where its other requirements at the step are met, changing its
   admission there; where that admission is decided a crossing passes exactly where the condition
   is required with a positive need; an observed one can be responded to within its need: observing
-  is exactly where a level can couple into a formation by level.
+  is exactly where a level can couple into a formation by level. Through dependence alone, a
+  formation exchanging only where supported exchanges no less where the levels at the step stand
+  no lower; so dependence alone carries of one level at the step exactly the responses rising with
+  it, each by units at thresholds, a fall only where some level falls, and supplying a deficit by
+  none; with a complement at a fixed total, units depending on the level and on its complement
+  carry every response.
 * `Becoming.Interleavings` (L1): the step index read off the relata's own courses, with no premise
   beyond a local law (an exchange changes only the relata it touches, as their states determine).
   Two lists of exchanges giving every relatum the same own course reach the same configuration, and
