@@ -1374,8 +1374,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   part's capacity there, or at its floor: no drive where no member may take, the drain exactly
   where one may and something stands, and on a web a dependence beyond broken exactly where its
   need exceeds what the rest leaves less the capacity.
+  Several optimizers at a mutual best response, each alone by its own order rising with its own
+  family, leave a condition beyond every family at what the formations outside them leave less
+  their joint capacity, or at nothing, as one part made of all of them would; where something
+  stands each takes its whole capacity there, so restraint is no mutual best response.
   Witnesses on `Diversion`: the drive, no room, a satisficing order, keeping, a taker of
-  capacity `k` whose optimum breaks the dweller exactly where `0 < k`.
+  capacity `k` whose optimum breaks the dweller exactly where `0 < k`; two takers each within
+  the slack of a need of one leave nothing at their mutual best response.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
