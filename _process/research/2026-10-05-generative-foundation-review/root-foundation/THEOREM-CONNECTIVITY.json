@@ -1,11 +1,11 @@
 {
- "commit": "139e98ec36d529d1f9bba7fe62e2fae40afee65d",
+ "commit": "f9f513bcff60de59a81ff7ac9298a63ccfe47a69",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261020T185635.903489Z",
+ "core_receipt_at_commit": "20261020T195445.913199Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
- "tracked_modules": 299,
- "constants": 37717,
- "spine_theorems": 12219,
+ "tracked_modules": 300,
+ "constants": 37776,
+ "spine_theorems": 12242,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,17 +28,17 @@
  "classes": {
   "statement on both families": 976,
   "statement on Process/Frame/Run/Trace": 2881,
-  "statement on World/Flow/Web": 2815,
+  "statement on World/Flow/Web": 2826,
   "statement on the base only through a law of its own module": 193,
-  "proof through a base family": 154,
-  "used by a theorem on the base": 4399,
+  "proof through a base family": 155,
+  "used by a theorem on the base": 4409,
   "instance on the base recorded": 151,
-  "apart: own vocabulary": 594,
+  "apart: own vocabulary": 595,
   "apart: prelude-only statement": 56
  },
- "apart": 650,
+ "apart": 651,
  "apart_general_structure_by_design": 180,
- "apart_otherwise": 470,
+ "apart_otherwise": 471,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 64,
   "of them on the base": 55,
@@ -73,10 +73,10 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 435,
- "apart_roots": 436,
+ "apart_used_by_nothing": 436,
+ "apart_roots": 437,
  "apart_roots_by_category": {
-  "model-witness": 240,
+  "model-witness": 241,
   "support": 87,
   "general-structure": 86,
   "logical-strength": 12,
@@ -507,6 +507,10 @@
    1,
    85
   ],
+  "Becoming.Optimum": [
+   1,
+   23
+  ],
   "Becoming.LoopReturn": [
    1,
    77
@@ -574,18 +578,18 @@
  },
  "rings": {
   "core": {
-   "modules": 283,
-   "theorems": 11473,
-   "apart": 570,
+   "modules": 284,
+   "theorems": 11496,
+   "apart": 571,
    "classes": {
     "statement on both families": 962,
     "statement on Process/Frame/Run/Trace": 2670,
-    "statement on World/Flow/Web": 2790,
+    "statement on World/Flow/Web": 2801,
     "statement on the base only through a law of its own module": 147,
-    "proof through a base family": 143,
-    "used by a theorem on the base": 4040,
+    "proof through a base family": 144,
+    "used by a theorem on the base": 4050,
     "instance on the base recorded": 151,
-    "apart: own vocabulary": 515,
+    "apart: own vocabulary": 516,
     "apart: prelude-only statement": 55
    }
   },
@@ -682,7 +686,7 @@
  "records_by_best_alias_class": {
   "statement on both families": 68,
   "statement on Process/Frame/Run/Trace": 115,
-  "statement on World/Flow/Web": 79,
+  "statement on World/Flow/Web": 80,
   "statement on the base only through a law of its own module": 2,
   "proof through a base family": 1,
   "used by a theorem on the base": 7,
@@ -6375,6 +6379,29 @@
   "Becoming.TwoDrawers.start": "statement on World/Flow/Web",
   "Becoming.TwoDrawers.restrained_less": "statement on World/Flow/Web",
   "Becoming.TwoDrawers.restraint_ranks": "statement on both families",
+  "Becoming.Optimum.Exceeds.total_lt": "used by a theorem on the base",
+  "Becoming.Optimum.rising_total": "used by a theorem on the base",
+  "Becoming.Optimum.Rising.mono": "used by a theorem on the base",
+  "Becoming.Optimum.least_iff": "used by a theorem on the base",
+  "Becoming.Optimum.least_of_room": "used by a theorem on the base",
+  "Becoming.Optimum.transfer_exceeds": "used by a theorem on the base",
+  "Becoming.Optimum.Shared.room": "used by a theorem on the base",
+  "Becoming.Optimum.least_of_shared": "used by a theorem on the base",
+  "Becoming.Web.optimum_broken_iff": "statement on World/Flow/Web",
+  "Becoming.Web.optimum_ends_beyond": "statement on World/Flow/Web",
+  "Becoming.Flow.Balances.family_le_iff": "statement on World/Flow/Web",
+  "Becoming.Flow.top_iff_least": "statement on World/Flow/Web",
+  "Becoming.Flow.keeping_optimum_takes_slack": "statement on World/Flow/Web",
+  "Becoming.Optimum.Drain.storeOrder_rising": "used by a theorem on the base",
+  "Becoming.Optimum.Drain.split_shared": "used by a theorem on the base",
+  "Becoming.Optimum.Drain.drained_optimum": "statement on World/Flow/Web",
+  "Becoming.Optimum.Drain.taker_couples_store": "statement on World/Flow/Web",
+  "Becoming.Optimum.Drain.drained_ends": "statement on World/Flow/Web",
+  "Becoming.Optimum.Drain.counted_after_drains": "proof through a base family",
+  "Becoming.Optimum.Drain.satisficing_either": "statement on World/Flow/Web",
+  "Becoming.Optimum.Drain.room_needed": "apart: own vocabulary",
+  "Becoming.Optimum.Drain.keeping_room": "statement on World/Flow/Web",
+  "Becoming.Optimum.Drain.kept_takes_slack": "statement on World/Flow/Web",
   "Becoming.Web.pooledClass_selects": "statement on World/Flow/Web",
   "Becoming.Web.separates_all_iff": "statement on World/Flow/Web",
   "Becoming.Web.member_separates_all": "statement on World/Flow/Web",
