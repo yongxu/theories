@@ -1,0 +1,52 @@
+## {N}. Groups whose conditions are coupled (EV6)
+
+```text
+Result(s): the joint count and the gated ending of Becoming.Continuation stated over a family of conditions read as
+       one: a step at which the family's uptake exceeds its replenishment lowers its stock by at least one
+       (Flow.family_excess_lowers_at), n such steps by at least n (Flow.family_excess_bounded_at,
+       family_excess_bounded); where whatever gives to a member depends on some member at a need of at least m (the
+       coupled gate), a stock below m stays below m (Flow.family_stays_below_at), a formation depending on any
+       member at such a need is inactive there (Flow.family_ends_below_at), so n steps of family excess from a
+       stock below n + m end every such formation from T + n on (Flow.family_excess_ends_at, family_excess_ends);
+       the one-condition laws (excess_lowers_at, excess_bounded_at, stays_below_at, ends_below_at,
+       joint_excess_ends_at) are now the family of one condition (of_single, gate_single); the witness Coupled: a
+       taker on a patch renewed by a formation drawing on a neighbour, where the patch read alone shows no joint
+       excess and its renewal is not gated on it (Coupled.alone_within, alone_ungated), while the pair read as one is
+       gated, in excess at every step, and both formations end (Coupled.gated, excess, all_end); in
+       Becoming.GroupEnding, a member depending on any condition of such a family leaves no descendant after the
+       family's excess (Flow.family_childless; excess_childless is its family of one), groups whose members depend on
+       one such family end together with nothing selected among them (Flow.coupled_end_together), and where the
+       groups with less of an amount depend on such a family they leave nothing (Flow.ended_of_family); record
+       {RID}.
+Delta: the evolution chapter's next connection 1 (groups whose conditions are coupled) and CG1's scope prediction A2
+       on the spine: the gate and the excess need not be on each condition; read on one condition the law can fail to
+       apply where it applies to the family. No new module: the family laws generalize the one-condition laws, which
+       are derived from them in the same modules (board rule 9).
+Premises: balance on the family where the excess enters; the coupled gate; only active formations give (Acting) and
+       activity needs support (Dependent) for the global forms; n steps of family excess from a stock below n + m;
+       members depending on some condition of the family at a need of at least m; over generations, descent and the
+       generation's members listed in the groups.
+Evidence: core receipt {RECEIPT} (passed; Becoming.Continuation {CONT_THEOREMS} theorems in {CONT_DECLS} declarations
+       and Becoming.GroupEnding {THEOREMS} in {DECLS}, every axiom report empty; {CORE_LINE}); the connectivity rerun
+       ({APART}); render, check, links and tests.
+Boundary: the family law reads the family by its total stock, so its start (a stock below n + m) asks the whole
+       family to be low: a family whose members fall in turn, one renewed while another is drawn down, is ended by
+       it only where the steps of family excess are counted against the whole stock (in Coupled, three steps from a
+       stock of three). Which families are coupled, and why the excess comes, are hypotheses. Groups need not share
+       a condition: members depending on different conditions of one coupled family end together. Discrete steps,
+       natural-number amounts, finite lists.
+Output → input: CG1's scope prediction (A2), measured on learners, is now a law and a witness on the spine; the
+       commons test's negative verdict (D2b) reads as coupled_end_together where every group's members depend on the
+       one coupled family. Next: mixing between groups (inexact transmission), how groups and their couplings form,
+       and the additive part of Fisher's theorem.
+```
+
+The kit is [`development/ev6-coupled-ending/`](development/ev6-coupled-ending/): the edited sources (`tree/`) and the scripts that make them from main (`edit_continuation.py`, `edit_group_ending.py`), their join to the package (`integrate.py`), the apart register's entries (`apart.py`), this landing's text (`apply_text.py`, `study_ev6.txt`) and record (`make_record.py`), and the checker and connectivity logs.
+
+- **The count over a family.** `BalancesOn.over` gives the family's stock after a step with its uptake as its stock before with its replenishment; so excess of uptake over replenishment lowers the stock by at least one (`family_excess_lowers_at`), by the same arithmetic as for one condition, and induction gives `n` (`family_excess_bounded_at`). `W.stock [c] t` and `L.replenishment [c] t` are `W.level t c` and `L.given t c` by definition (adding nothing), so `excess_lowers_at` and `excess_bounded_at` are the family law applied to `[c]` with no conversion.
+- **The coupled gate.** With the stock below `m`, every giver to a member depends on some member `e` at a need of at least `m`, is supported (`GiversSupported`), so `m ≤ need ≤ level e ≤ stock < m` (`le_total_of_mem`), a contradiction; nothing is given, the replenishment is zero, and the stock does not rise (`family_stays_below_at`). The same chain makes a formation depending on any member at such a need inactive (`family_ends_below_at`). A gate on one condition is the coupled gate on its family of one (`gate_single`), so `stays_below_at`, `ends_below_at` and `joint_excess_ends_at` are now instances, and every module using them is unchanged.
+- **The witness.** `Coupled`: the taker takes one from the patch at steps 0–2; the renewer, depending on the neighbour, takes one from it and gives one to the patch at steps 0–1. Levels: patch 1, 1, 1, 0; neighbour 2, 1, 0. Read alone, the patch is taken from exactly what it is given at steps 0 and 1 (`alone_within`), and the one giver to it does not depend on it (`alone_ungated`), so `joint_excess_ends` cannot be applied to it from step 0. Read as one, the pair's giver depends on the neighbour (`gated`), the uptake exceeds the replenishment at steps 0, 1 and 2 (2 > 1, 2 > 1, 1 > 0, `excess`), the stock 3 is below 3 + 1, and `family_excess_ends` ends both from step 3 (`all_end`). The endings are stipulated in the activity; the witness shows the law's hypotheses hold with them.
+- **Groups.** `family_childless` composes `family_excess_ends` with `inactive_childless`. `coupled_end_together` makes every group's offspring total nothing (`group_childless`), so the groups are uniform in weight and both among-group sums vanish (`concord_uniform`, `discord_uniform` on group totals), for any amount. `ended_of_family` gives `Ended` where the groups with less of the amount depend on such a family (`ended_of_inactive`), so the among-group verdicts of `rises_iff_ended` and `Flow.rises_iff_inactive` apply.
+- **Connectivity and naming.** The family laws are on the base (`Flow`, `Web`); the one-condition laws now go through them. "Patch", "neighbour", "taker" and "renewer" name the witness's parts structurally, as CG1 did; "coupled" names the gate's reading (a giver to one member depending on another), not a social relation.
+
+**Self-review.** The generalization is exact: each one-condition law is the family law at `[c]`, by definition, and the proofs moved rather than doubled. The family law is weak where members differ much in level: its start counts the whole stock, so it ends a family only after as many steps of excess as the stock holds; the witness is chosen so the count is exact, not to show the law is tight in general. What the commons test measured (learners emptying a pool they were each coupled into) is not derived: which families run into excess is supposed. The group laws are compositions, kept because they state the reading the evolution chapter asks for: coupling, not sharing one condition, is what makes groups end together.

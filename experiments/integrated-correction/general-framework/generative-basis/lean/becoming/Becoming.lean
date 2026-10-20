@@ -720,7 +720,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   gated renewal ran into joint excess leaves none from then on; over generations of descent with
   exact transmission, where the groups with less of the amount are not active and a group with
   more leaves offspring, the mean rises; where every member is not active (one condition shared
-  by every group), the next generation is empty. Witnesses: selection within the keeping group
+  by every group), the next generation is empty. Groups whose members depend on conditions of
+  one family, its renewal gated on the family read as one, end together after the family's
+  excess, with nothing selected among them, so ending selects among groups only between such
+  families. Witnesses: selection within the keeping group
   outweighed, and outweighing.
 * `Becoming.Space` (L1): the whole and its parts, one structure for Ren's proposal (an AI
   reading). The space is every world, a world being relata read with one kind, their flow
@@ -953,7 +956,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   renewal is given only by formations depending on what they renew, joint excess that
   brings the level below their need ends the renewers and every formation depending on the
   condition at such a need, a taker among them where it so depends; the joint count binds a
-  want that outlasts what the condition holds. The extent so derived runs one way, to what
+  want that outlasts what the condition holds. The same count and ending hold of a family of
+  conditions read as one, where whatever gives to a member depends on some member (the coupled
+  gate), the laws of one condition being its family of one; a patch renewed by a neighbour shows
+  no joint excess read alone, while read as one with the neighbour it does, and both end. The
+  extent so derived runs one way, to what
   one's continuation depends on; it ends with the want, and a clearer that meets every
   requirement derived here can still end a life it does not need. Ren's proposal of 10
   October 2026 (an AI reading).

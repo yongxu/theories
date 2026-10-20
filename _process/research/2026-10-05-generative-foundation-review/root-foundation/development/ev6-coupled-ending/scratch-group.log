@@ -1,0 +1,20 @@
+Becoming/GroupEnding.lean:253:47: error: Application type mismatch: The argument
+  mh
+has type
+  h ∈ gs
+of sort `Prop` but is expected to have type
+  X
+of sort `Type` in the application
+  within h mh
+
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/wonderful-grothendieck-cb9a95/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ev6-coupled-ending/tree",
+  "modules": 22,
+  "ran": [
+    "Becoming.GroupEnding"
+  ],
+  "reused": 21,
+  "unclean": [],
+  "audits": {},
+  "failed": "Becoming.GroupEnding"
+}
