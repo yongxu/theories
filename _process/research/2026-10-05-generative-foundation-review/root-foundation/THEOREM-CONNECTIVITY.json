@@ -1,11 +1,11 @@
 {
- "commit": "f4454cfe8242d40a159ac4ab8ff9df05ac901033",
+ "commit": "cc2ab8df8a6e4df634aefdcf23abd004035d1541",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261020T170500.588275Z",
+ "core_receipt_at_commit": "20261020T181337.294917Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 299,
- "constants": 37629,
- "spine_theorems": 12181,
+ "constants": 37675,
+ "spine_theorems": 12200,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,17 +28,17 @@
  "classes": {
   "statement on both families": 976,
   "statement on Process/Frame/Run/Trace": 2881,
-  "statement on World/Flow/Web": 2801,
+  "statement on World/Flow/Web": 2804,
   "statement on the base only through a law of its own module": 193,
   "proof through a base family": 154,
-  "used by a theorem on the base": 4391,
+  "used by a theorem on the base": 4396,
   "instance on the base recorded": 151,
-  "apart: own vocabulary": 578,
+  "apart: own vocabulary": 589,
   "apart: prelude-only statement": 56
  },
- "apart": 634,
- "apart_general_structure_by_design": 167,
- "apart_otherwise": 467,
+ "apart": 645,
+ "apart_general_structure_by_design": 175,
+ "apart_otherwise": 470,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 64,
   "of them on the base": 55,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 427,
- "apart_roots": 428,
+ "apart_used_by_nothing": 433,
+ "apart_roots": 434,
  "apart_roots_by_category": {
-  "model-witness": 237,
+  "model-witness": 240,
   "support": 87,
-  "general-structure": 81,
+  "general-structure": 84,
   "logical-strength": 12,
   "restates": 9,
   "calibration": 2
@@ -167,6 +167,10 @@
    32,
    66
   ],
+  "Becoming.SelectionLevels": [
+   24,
+   55
+  ],
   "Becoming.HexagramSites": [
    23,
    98
@@ -183,9 +187,9 @@
    17,
    54
   ],
-  "Becoming.SelectionLevels": [
+  "Becoming.GroupEnding": [
    16,
-   42
+   38
   ],
   "Becoming.Ideals": [
    15,
@@ -198,10 +202,6 @@
   "Becoming.SelectionTerm": [
    13,
    67
-  ],
-  "Becoming.GroupEnding": [
-   13,
-   32
   ],
   "Becoming.CodeAcquisition": [
    13,
@@ -575,17 +575,17 @@
  "rings": {
   "core": {
    "modules": 283,
-   "theorems": 11435,
-   "apart": 554,
+   "theorems": 11454,
+   "apart": 565,
    "classes": {
     "statement on both families": 962,
     "statement on Process/Frame/Run/Trace": 2670,
-    "statement on World/Flow/Web": 2776,
+    "statement on World/Flow/Web": 2779,
     "statement on the base only through a law of its own module": 147,
     "proof through a base family": 143,
-    "used by a theorem on the base": 4032,
+    "used by a theorem on the base": 4037,
     "instance on the base recorded": 151,
-    "apart: own vocabulary": 499,
+    "apart: own vocabulary": 510,
     "apart: prelude-only statement": 55
    }
   },
@@ -682,7 +682,7 @@
  "records_by_best_alias_class": {
   "statement on both families": 68,
   "statement on Process/Frame/Run/Trace": 115,
-  "statement on World/Flow/Web": 76,
+  "statement on World/Flow/Web": 77,
   "statement on the base only through a law of its own module": 2,
   "proof through a base family": 1,
   "used by a theorem on the base": 7,
@@ -3767,6 +3767,19 @@
   "Becoming.SelectionLevels.rises_exact_iff_sized": "used by a theorem on the base",
   "Becoming.SelectionLevels.rises_exact_iff_within_of_alike": "apart: own vocabulary",
   "Becoming.SelectionLevels.among_for_of_raises": "apart: own vocabulary",
+  "Becoming.SelectionLevels.within_by_none_of_uniform": "apart: own vocabulary",
+  "Becoming.SelectionLevels.rises_iff_means_of_uniform": "apart: own vocabulary",
+  "Becoming.SelectionLevels.whole_map": "apart: own vocabulary",
+  "Becoming.SelectionLevels.flatMap_flatMap": "used by a theorem on the base",
+  "Becoming.SelectionLevels.lineages_family": "used by a theorem on the base",
+  "Becoming.SelectionLevels.lineages_whole": "apart: own vocabulary",
+  "Becoming.SelectionLevels.lineage_within": "used by a theorem on the base",
+  "Becoming.SelectionLevels.lineage_keeps": "used by a theorem on the base",
+  "Becoming.SelectionLevels.lineage_total": "apart: own vocabulary",
+  "Becoming.SelectionLevels.lineage_value": "used by a theorem on the base",
+  "Becoming.SelectionLevels.lineages_uniform": "apart: own vocabulary",
+  "Becoming.SelectionLevels.lineages_within_none": "apart: own vocabulary",
+  "Becoming.SelectionLevels.rises_iff_lineages": "apart: own vocabulary",
   "Becoming.SelectionLevels.equal": "apart: own vocabulary",
   "Becoming.SelectionLevels.AmongWins.among_wins": "apart: own vocabulary",
   "Becoming.SelectionLevels.WithinWins.within_wins": "apart: own vocabulary",
@@ -3794,6 +3807,9 @@
   "Becoming.GroupEnding.Flow.coupled_end_together": "statement on World/Flow/Web",
   "Becoming.GroupEnding.Flow.ended_of_family": "statement on World/Flow/Web",
   "Becoming.GroupEnding.Flow.all_end": "statement on World/Flow/Web",
+  "Becoming.GroupEnding.Flow.lineages_none_against": "statement on World/Flow/Web",
+  "Becoming.GroupEnding.Flow.lineages_not_lower": "statement on World/Flow/Web",
+  "Becoming.GroupEnding.Flow.lineages_raises": "statement on World/Flow/Web",
   "Becoming.GroupEnding.uniform": "apart: own vocabulary",
   "Becoming.GroupEnding.equal": "apart: own vocabulary",
   "Becoming.GroupEnding.Outweighed.outweighed": "apart: own vocabulary",
@@ -3804,6 +3820,9 @@
   "Becoming.GroupEnding.Exhausted.first_step": "apart: own vocabulary",
   "Becoming.GroupEnding.Exhausted.alike": "apart: own vocabulary",
   "Becoming.GroupEnding.Exhausted.next_step": "apart: own vocabulary",
+  "Becoming.GroupEnding.Assorted.first_listed": "apart: own vocabulary",
+  "Becoming.GroupEnding.Assorted.uniform": "apart: own vocabulary",
+  "Becoming.GroupEnding.Assorted.kept": "apart: own vocabulary",
   "Becoming.Drift.step_ones": "apart: prelude-only statement",
   "Becoming.Drift.step_zeros": "apart: prelude-only statement",
   "Becoming.Drift.weighted_ones_step": "apart: own vocabulary",
