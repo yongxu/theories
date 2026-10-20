@@ -1,0 +1,24 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/brave-villani-9b2bd0/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/we1-whole-excess/tree",
+  "modules": 21,
+  "ran": [
+    "Becoming.Wholes",
+    "Becoming.PatternPassing",
+    "BecomingWholesAxiomAudit",
+    "BecomingPatternPassingAxiomAudit"
+  ],
+  "reused": 19,
+  "unclean": [],
+  "audits": {
+    "Becoming.Wholes": {
+      "theorems": 63,
+      "declarations": 87,
+      "with_axioms": {}
+    },
+    "Becoming.PatternPassing": {
+      "theorems": 19,
+      "declarations": 29,
+      "with_axioms": {}
+    }
+  }
+}
