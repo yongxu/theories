@@ -11,6 +11,13 @@ min(#A, #B) / n, n counting every valid judgment of the pair, "equal" included: 
 calls the plans equal neither agrees nor disagrees strictly, and many "equal" answers cannot
 inflate D.
 Pooled measures take every valid judgment of the main design (replicate 0) of every model.
+
+The reduced design (addendum of 21 October 2026, decided before any call). A standpoint is complete
+when every model has a valid main-design judgment of each of its 112 pairs. The analysis uses the
+complete standpoints, cut to a multiple of four by dropping the highest-numbered (order and framing
+are balanced within each block of four), and none other. With at least eight, every rule applies with
+its thresholds unchanged; with fewer, every prediction is untested. The run goes in standpoint order,
+so a run the plan's limit stops leaves a prefix of complete standpoints.
 """
 
 from __future__ import annotations
@@ -67,8 +74,16 @@ def by_pair(rows: list[dict]) -> dict:
 def measures(rows: list[dict]) -> dict:
     models = sorted({r["model"] for r in rows})
     valid = [r for r in rows if r["valid"]]
-    main = [r for r in valid if r["replicate"] == 0]
-    out = {"models": models, "n_rows": len(rows), "n_valid": len(valid)}
+    main_all = [r for r in valid if r["replicate"] == 0]
+    n_pairs = len(FRAMES) * len(CLASSES)
+    count = defaultdict(int)
+    for r in main_all:
+        count[(r["model"], r["standpoint"])] += 1
+    complete = [s for s in range(len(STANDPOINTS)) if all(count[(mod, s)] == n_pairs for mod in models)]
+    included = complete[:len(complete) // 4 * 4]
+    main = [r for r in main_all if r["standpoint"] in included]
+    out = {"models": models, "n_rows": len(rows), "n_valid": len(valid),
+           "standpoints_complete": complete, "standpoints_included": included}
     out["invalid_share"] = {m: sum(1 for r in rows if r["model"] == m and not r["valid"]) /
                             max(1, sum(1 for r in rows if r["model"] == m)) for m in models}
     out["n_main"] = {m: sum(1 for r in main if r["model"] == m) for m in models}
@@ -87,8 +102,8 @@ def measures(rows: list[dict]) -> dict:
             "W12_violation_share": sum(r["choice"] == "B" for r in w12) / max(1, len(w12)),
             "W12_wider_share": sum(r["choice"] == "A" for r in w12) / max(1, len(w12)),
             "W12_equal_share": sum(r["choice"] == "equal" for r in w12) / max(1, len(w12)),
-            "violations_per_standpoint": {str(s): per_sp[s] for s in range(len(STANDPOINTS))},
-            "standpoints_over_2": sum(1 for s in range(len(STANDPOINTS)) if per_sp[s] > 2),
+            "violations_per_standpoint": {str(s): per_sp[s] for s in included},
+            "standpoints_over_2": sum(1 for s in included if per_sp[s] > 2),
             "W_read_right_n": len(wr),
             "W_read_right_violation_share": sum(r["choice"] == "B" for r in wr) / max(1, len(wr)),
             "W1X_violation_share": sum(r["choice"] == "B" for r in mm if r["cls"] == "W1X") /
@@ -119,7 +134,8 @@ def measures(rows: list[dict]) -> dict:
         1 for r in main if r["cls"] == c)) for c in ("K", "M0")}
 
     # replicates: within-standpoint flips against the main run, M0 and M1
-    rep = {(r["model"], r["frame"], r["cls"], r["standpoint"]): r for r in valid if r["replicate"] == 1}
+    rep = {(r["model"], r["frame"], r["cls"], r["standpoint"]): r for r in valid
+           if r["replicate"] == 1 and r["standpoint"] in included}
     flips, n = 0, 0
     for r in main:
         k = (r["model"], r["frame"], r["cls"], r["standpoint"])
@@ -165,7 +181,8 @@ def spearman(pairs: list[tuple[float, float]]) -> float:
 
 
 def verdicts(m: dict) -> dict:
-    tested = {mod: m["invalid_share"][mod] <= 0.05 for mod in m["models"]}
+    enough = len(m["standpoints_included"]) >= 8
+    tested = {mod: enough and m["invalid_share"][mod] <= 0.05 for mod in m["models"]}
     all_tested = all(tested.values())
     pm = m["per_model"]
     v = {}
@@ -196,7 +213,8 @@ def verdicts(m: dict) -> dict:
     v["L4"] = locus(Dr, "M1", "W1", 0.10, 12)
     keq = m["choice_shares"]["K"]["equal"]
     v["K1"] = {"K_equal_share": keq, "pass": all_tested and keq >= 0.70}
-    v["V"] = {"tested": tested, "invalid_share": m["invalid_share"]}
+    v["V"] = {"tested": tested, "invalid_share": m["invalid_share"],
+              "standpoints_included": m["standpoints_included"], "enough_standpoints": enough}
     return v
 
 
@@ -208,7 +226,7 @@ def main():
     m = measures(load(runs))
     v = verdicts(m)
     summary = {k: x["pass"] for k, x in v.items() if "pass" in x}
-    print(json.dumps({"summary": summary, "D_mean": m["D_mean"], "choice_shares": m["choice_shares"],
+    print(json.dumps({"summary": summary, "standpoints_included": m["standpoints_included"], "D_mean": m["D_mean"], "choice_shares": m["choice_shares"],
                       "replicate_flip_share": m["replicate_flip_share"],
                       "spearman_grid_vs_D_mixed": m["spearman_grid_vs_D_mixed"]}, indent=1))
     if not args.runs:
