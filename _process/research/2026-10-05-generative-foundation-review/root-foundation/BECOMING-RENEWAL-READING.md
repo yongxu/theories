@@ -11319,3 +11319,63 @@ The kit is [`development/ev6-coupled-ending/`](development/ev6-coupled-ending/):
 - **Connectivity and naming.** The family laws are on the base (`Flow`, `Web`); the one-condition laws now go through them. "Patch", "neighbour", "taker" and "renewer" name the witness's parts structurally, as CG1 did; "coupled" names the gate's reading (a giver to one member depending on another), not a social relation.
 
 **Self-review.** The generalization is exact: each one-condition law is the family law at `[c]`, by definition, and the proofs moved rather than doubled. The family law is weak where members differ much in level: its start counts the whole stock, so it ends a family only after as many steps of excess as the stock holds; the witness is chosen so the count is exact, not to show the law is tight in general. What the commons test measured (learners emptying a pool they were each coupled into) is not derived: which families run into excess is supposed. The group laws are compositions, kept because they state the reading the evolution chapter asks for: coupling, not sharing one condition, is what makes groups end together.
+
+## 266. The margin's equation of state against held-out regimes (MQ2)
+
+```text
+Result(s): none new about the unfolding; one renewal curve of real yeast, fitted on some regimes,
+       tested on held-out regimes, rules and numerical predictions frozen before any held-out value
+       was read (freeze 6deda4fb7, on main bc45d668f, kept as refs/salvage/mq2-freeze); every verdict kept.
+Delta: MQ1 (section 253) found that a point prediction needs the renewal curve (the equation of state)
+       and that the need belongs to the regime. MQ2 fits the daily growth map G (n_{t+1} = G(n_t / DF);
+       the dilution is the standing draw) on DF 250, 500, 1000 and 1266 of Dai et al. 2012's bifurcation
+       data. G alone gives each regime's need u(DF), level s(DF), margin s - u and fold. These are
+       tested on DF 750, 1133, 1400 and 1600, on the salt-shock experiment (DF 250-825, 825 in no
+       bifurcation file) and on the indicator experiment (eight DFs at equilibrium).
+Premises / bridges: the two-phase class (Dai et al.'s) against a logistic no-need null; floor 0.01
+       (10^5 cells/ul units) pre-registered; G depends on density only (the class's premise, which P1
+       refutes); salt-shock columns read as DF 250, 500, 750, 825 from the paper's legend; the day-5
+       reading is the first after the shock.
+Verdicts: M passed (held-out RMSE 0.294 against the null's 0.355; better at all four DFs);
+       A1 passed (the predicted need separates fates at DF 1133, 1400, 1600: 93-100% each side;
+       the null classifies 68-81%); A2 passed (u/u* = 0.81, 1.26, 0.79); B2 passed (the measured
+       need rises with DF: 0.041, 0.043, 0.094); B1 reported only (fold at DF 2797, far past the
+       paper's collapse beyond 1600). S failed (indicator levels within 1.1 up to DF 1266, 1.26 at
+       1400, 1.52 at 1600; the null's summed error smaller, 0.59 against 0.79); S2 failed (1.55 at
+       DF 1600); C1 failed (accuracy 0.78, no better than the null: at DF 825, 7 of 8 died from
+       post-shock densities 0.021-0.030, above u = 0.016); C2 failed (0.81); D not testable (no run
+       passes the fold). Post hoc (not verdicts): P1 per-capita growth at equal start density
+       falls as DF^(-0.31 +- 0.01) (1,465 pairs), a factor 2-2.7 between DF 250 and 1600; P2 a map
+       whose low-density rate falls with DF, fitted on the fit set only, lowers the held-out RMSE to
+       0.269, puts the fold at 2086 and the levels near the fold within 1.2, but overshoots the
+       need at 1400 (1.9x); P3 the salt-shock experiment's pre-shock levels are 8-20% below the
+       bifurcation experiment's; locating each column on G by its own level gives needs that are
+       right at DF 825 (7/8) and wrong at 750 (3/8), where post-shock populations hover at
+       0.02-0.16 for the four remaining days (a slow return next to the need).
+Evidence: experiments/margin-measured (PREDICTIONS-2026-10-20-MQ2.md, mq2.py, posthoc_mq2.py,
+       results/mq2: fit.json frozen, VERDICTS-mq2.json, posthoc-mq2.json; README section "MQ2");
+       data Zenodo 5003142, already downloaded under Ren's approval, nothing new; standard
+       library, CPU, under a minute.
+Boundary: the held-out bifurcation DFs had been read in MQ1, so they are held out from the fit,
+       not from the analyst; the salt-shock and indicator values were unread, but their masked
+       layouts showed exponent signs (disclosed in the freeze). Day 9 is four days after the
+       shock, too short to settle fates near the need. Dai et al.'s own full-diagram fit (table S1)
+       was not available. What they already showed (both fixed points per DF; the two-phase model
+       fitted to the whole diagram; salt shock survived at low DFs only, qualitatively; early
+       warning signals) is not claimed. Closest prior results: critical depensation and harvest
+       thresholds (Clark 1976), breakpoints with multiple stable states (May 1977, Nature
+       269:471), Dai, Korolev and Gore 2015 (PNAS 112:10056) for deteriorating environments.
+Output → input: the need is a measured equation of state across held-out regimes of one experiment,
+       including next to the fold, and it is what separates survival from extinction there. The
+       renewal curve is a function of the regime, not of the level alone. The draw lowers what is
+       given back at the same level (P1), so the need rises with the draw faster than removal
+       alone gives, and the level falls faster near the fold. A separate experiment's regime differs
+       (P3). For the spine: giving as a function of level and standing draw, the extension the
+       margin-of-a-regime module (parent session) should allow; MQ1's "the need is the regime's"
+       now holds on real data in this stronger sense. Open: the mechanism of P1 (carryover of
+       hexose or invertase is a candidate); a frozen test of a draw-dependent G on data not yet
+       read (Dai, Korolev and Gore 2015's deteriorating environments would also test D, the time to
+       break past the fold); fates read more than four days after a shock.
+```
+
+**Self-review.** What passed is the need. The level failed, and the failure is informative: it shows the class premise (G depends only on density) is false at equal density, with the effect measured at 22 standard errors. The post hoc analyses are labelled as such and change no verdict. P2's model was chosen after the failures were seen, so its held-out improvement is not a test. The test's power against the null was checked before the freeze by dry runs on files generated from each model.

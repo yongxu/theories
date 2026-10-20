@@ -343,13 +343,15 @@ An AI check (one session, started from the significance-aim session), made befor
 
 **Significance, without inflation.** The operational definitions work, and the qualifications are the substance: the need depends on the standing draws, damage does not add across parts, and blind draw predicts side effects for an optimizer, not for a learner that sees the condition but is far from optimal. None of this is new mathematics. A2 and A3 hold by the mathematics in the deterministic limit. The super-additivity of harm (A4) follows from the renewal curve's concavity once posed, and fisheries and ecology would recognise it. What is new is the frozen, quantitative test of the theory's margin as an operational quantity, and the statement of where its laws need the regime and not the condition.
 
+**Follow-up, MQ2 (same day; study §266).** One growth map of the real yeast, fitted on four dilution factors, predicted the need in the held-out regimes. The predicted need separated fates at DF 1133-1600 and fell within a factor of 1.3 of the need measured from fates. It beat a model with no need. It missed the level near the fold, and it missed the fates after the salt shock in a separate experiment. Post hoc, at equal density, renewal falls with the draw (DF^−0.31), so the curve is the regime's, not the level's. Closest prior forms are critical depensation and harvest thresholds (Clark 1976, *Mathematical Bioeconomics*) and breakpoints between multiple stable states (May 1977, *Nature* 269:471). Neither treats the draw as lowering renewal at the same level. Dai et al. fitted the same model class to the whole diagram. What is new is the held-out prediction and the null comparison.
+
 ```text
 Result(s): none new as mathematics; (1)-(3) known as definition, convention and assumption respectively; experiment MQ1
 Delta: the margin's laws tested on the margin measured with the rest responding; the need is the regime's; harms super-additive though draws add; blind draw predicts side effects for an optimizer
 Supplied premises / correspondence: Holling 1973; Beisner et al. 2003; Walker et al. 2004; Scheffer et al. 2009; Dai et al. 2012, 2013, 2015; Rockström et al. 2009; Richardson et al. 2023; Lundberg 1903; Cramér 1930; Schaefer 1954; Krakovna et al. 2018; Leike et al. 2017; Turner et al. 2020 (two); Wainwright-Eckersley 2020; Altman 1999; Achiam et al. 2017; Zhuang-Hadfield-Menell 2020
 Evidence: web searches on 20 October 2026; Dai et al. 2012 read in full; the others by abstract, index or secondary description
 Boundary: AI check, one session; Dai et al.'s supplement (table S1) not available; Walker et al. 2004 and the ruin and fisheries sources from standard knowledge, not reread; the real-data test's D2 floor post hoc
-Integration: experiments/margin-measured; study §253; board MQ1
+Integration: experiments/margin-measured; study §253, §266 (MQ2); board MQ1, MQ2
 ```
 
 ---
