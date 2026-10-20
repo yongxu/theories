@@ -1,10 +1,10 @@
 # Where valuers agree and disagree (VD1)
 
-Board item VD1, 21 October 2026. AI-written (a Claude Code session). Predictions, verdict rules and code frozen before any experimental model call: [PREDICTIONS-2026-10-21.md](PREDICTIONS-2026-10-21.md). The valuers were changed before any call, first to Claude models ([first addendum](PREDICTIONS-ADDENDUM-2026-10-21.md), superseded, never run) and then to five model families through OpenRouter ([second addendum](PREDICTIONS-ADDENDUM-2-2026-10-21.md)). Prior art: [significance review, valuer check](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#valuer-check).
+Board item VD1, 21 October 2026. AI-written (a Claude Code session). Predictions, verdict rules and code frozen before any experimental model call: [PREDICTIONS-2026-10-21.md](PREDICTIONS-2026-10-21.md). The valuers were changed before any call, first to Claude models ([first addendum](PREDICTIONS-ADDENDUM-2026-10-21.md), superseded, never run) and then to six model families through OpenRouter ([second addendum](PREDICTIONS-ADDENDUM-2-2026-10-21.md)). Prior art: [significance review, valuer check](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#valuer-check).
 
 The ethics' order premise C, calling widening better, is what every weighting that counts every formation shares (`Weighting.widens_iff_every_positive`), and a mixed comparison is decided each way by some such weighting (`Weighting.mixed_either_way`). The prediction is that where many valuers compare outcomes, agreement falls on widening comparisons and disagreement on mixed ones, and that a widening is disputed only through a misread case.
 
-The test uses sixteen decisions in eight domains, each with six formations whose continuation depends on the plan. Pairs of plans are built from the sets each keeps: widenings, mixed pairs matched to them in size, keeps and a cross-framed widening. Every class is computed exactly before any judgment. Five models from five families judge every pair under sixteen standpoint prompts, called through OpenRouter: DeepSeek v4.1 flash, OpenAI GPT-6 luna, Claude Haiku 5.5, Meta Muse Spark 1.3 Contributor and StepFun Step 5 Preview. With each choice they report their own reading of which formations continue.
+The test uses sixteen decisions in eight domains, each with six formations whose continuation depends on the plan. Pairs of plans are built from the sets each keeps: widenings, mixed pairs matched to them in size, keeps and a cross-framed widening. Every class is computed exactly before any judgment. Six models from six families judge every pair under sixteen standpoint prompts, called through OpenRouter: DeepSeek v4.1 flash, GLM 5.3 Flash, OpenAI GPT-6 luna, Claude Haiku 5.5, Meta Muse Spark 1.3 Contributor and StepFun Step 5 Preview. With each choice they report their own reading of which formations continue.
 
 Files:
 - [`frames.py`](frames.py): the frames, standpoints, pairs, counterbalancing and prompts.
@@ -13,9 +13,9 @@ Files:
 - [`run.py`](run.py): the configuration and runs, written to `results/runs/<model>.jsonl`.
 - [`analyze.py`](analyze.py): the measures and the frozen verdict rules, written to `results/verdicts.json`.
 
-## Boundary: five families, one of them the theory's
+## Boundary: six families, one of them the theory's
 
-Four valuers (DeepSeek, OpenAI, Meta, StepFun) are families other than the one that built the theory. The fifth, Claude Haiku, is the theory's own family, and the items were written by a Claude session. The pooled rules are also reported without it, as a measurement. Five families are still few valuers. Their agreement shows what these models share under sixteen standpoints, not what valuers in general share, and could come from training common to current models. A pass is weaker evidence than human valuers would give; a failure is not weakened.
+Five valuers (DeepSeek, GLM, OpenAI, Meta, StepFun) are families other than the one that built the theory. The sixth, Claude Haiku, is the theory's own family, and the items were written by a Claude session. The pooled rules are also reported without it, as a measurement. Six families are still few valuers. Their agreement shows what these models share under sixteen standpoints, not what valuers in general share, and could come from training common to current models. A pass is weaker evidence than human valuers would give; a failure is not weakened.
 
 ## State
 

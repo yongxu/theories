@@ -30,6 +30,7 @@ CONFIG = {
     "provider": "openrouter",
     "models": {
         "deepseek/deepseek-v4.1-flash-1017": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": True},
+        "z-ai/glm-5.3-flash": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": True},
         "openai/gpt-6-luna": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": True},
         "anthropic/claude-haiku-5.5": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": False},
         "meta/muse-spark-1.3-contributor": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": False},
