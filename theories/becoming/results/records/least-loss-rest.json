@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T10:51:16+00:00",
+  "reviewed_at_utc": "2026-10-20T13:33:42+00:00",
   "statement": {
     "en": "In Archimedean amounts a closed amount approaches rest with no least loss: few steps lose at least any ε above nothing. Rest needs a least loss at each change counted: halving approaches rest and never reaches it. Whole numbers are the instance with ε one; a loss needs a law that merges.",
     "zh": "在阿基米德的量中，封闭的量无需最小损失即趋近停息：至少损失任一大于无的 ε 的步只有有限个。停息需要每次被计的变化有最小损失：减半趋近停息而达不到。整数是 ε 为一的实例；损失需要有所合并的规律。"
@@ -245,8 +245,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T124334.350424Z）：Becoming.LeastLoss 的 93 项声明公理报告为空；检查器并核对核心纯净。依赖审计（开发目录中的 audit/LeastLossDeps.lean）表明所列 15 条停息规律都经过 falls_not_recurring 或 falls_stop_unrefuted，六个整数重述的 Lean 类型与所重述的定理相同。作者自审见研究第 204 节；未经独立审查。"
   },
   "next_delta": {
-    "en": "Flow and World with levels in any amounts, restating the rest family there with the least loss, or a finite reading (record rest-from-a-finite-reading), as the premise of dissipation; an independent review.",
-    "zh": "以任何量为水平的 Flow 与 World，在其中以最小损失或有限读取（记录 rest-from-a-finite-reading）为耗散的前提重述停息族；独立审查。"
+    "en": "The other laws of flows and worlds over any amounts where a law needs more than the order of its amounts; an independent review.",
+    "zh": "流与世界的其他规律在任何量上的形式，凡规律需要量的序以外者；独立审查。"
   },
   "correspondence": {
     "en": "The outside review of 19 October 2026 (R20) and an outside reader named the rest laws' dependence on whole-number amounts as the main gap between the spine and our universe: with real-valued amounts losses can shrink geometrically. Reading (the AI's): what the whole numbers carry is a floor on the cost of each change counted, and the stock's being finitely many floors deep; where change has no floor a closed system can change ever more slightly for ever without exhausting what it has.",
@@ -362,6 +362,13 @@
         "en": "The converse of Law.loss_needs_merge: inside a whole that merges nothing, a part's merge is kept by the rest.",
         "zh": "Law.loss_needs_merge 的反面：在不合并的整体中，部分的合并由其余部分承接。"
       }
+    },
+    {
+      "id": "rest-theorem-in-any-amounts",
+      "detail": {
+        "en": "The rest theorem of worlds over any amounts, read finitely.",
+        "zh": "任何量上世界的停息定理，有限地读取。"
+      }
     }
   ],
   "references": [
@@ -423,7 +430,7 @@
         "Becoming.Halving.takes_within_one",
         "Becoming.Halving.takes_halve"
       ],
-      "sha256": "0cae4b8a1e5083af5c86c801ed33922101c81ff697f910e659eec1a6e868412e"
+      "sha256": "fbd8477b11994153d7acb2d0d875c9167f0c7950c7cb5cdfc0107035c861b9fc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -586,13 +593,13 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
       "declarations": [],
-      "sha256": "318b08913e7acfaf6992aa220dd0626814d83f87b9ae13dbb42e38368819d40b"
+      "sha256": "deade51c7ec6d0285ba8f98975caefd3605c20531e7a4565ed70f14e21475c44"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "declarations": [],
-      "sha256": "a0cb65122fdf607bea001aa1d0061c416623e23cba907486fc9f7a5492f56288"
+      "sha256": "01b6d51ca775420a7abac862c83439dc68f1d7ca10839021d0f25ff4deef57a1"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
@@ -646,12 +653,17 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T104831.571462Z/verification.json",
       "role": "receipt",
       "sha256": "0b850f59f635816a1b6cfafe5402f67318038f9a865d5813e5f12b93b7334095"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
+      "role": "receipt",
+      "sha256": "8854e4c1a91979fbe1e87781e6c36ed8dad448d481b7c97b8bde443463df978a"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T104831.571462Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -751,6 +763,10 @@
     {
       "en": "20 October 2026, LC1: Becoming.LeastLoss gained rest from a finite reading (record rest-from-a-finite-reading) and a part's merge kept by the rest (record merge-of-a-part-kept-by-the-rest); the proof binding re-pointed to receipt 20261020T104831.571462Z after reading the change, this record's declarations and statements unchanged; the next step names the finite reading beside the least loss and drops the least loss in expectation, which the significance review's least-loss check finds known (ranking supermartingales); study section 255.",
       "zh": "2026年10月20日，LC1：Becoming.LeastLoss 增加了由有限读取而停息（记录 rest-from-a-finite-reading）与部分的合并由其余部分承接（记录 merge-of-a-part-kept-by-the-rest）；阅读改动后证明绑定改指回执 20261020T104831.571462Z，本记录的声明与陈述不变；下一步在最小损失旁列出有限读取，并去掉期望中的最小损失，意义审查的最小损失检查认定其为已知（排序上鞅）；研究第 255 节。"
+    },
+    {
+      "en": "20 October 2026, LC2: the next step this record named, the rest theorem over any amounts with a finite reading as the premise, is stated (record rest-theorem-in-any-amounts); Becoming.LeastLoss changed only in the finite-reading law, generalized below; this record's declarations and statements unchanged; the proof binding re-pointed to receipt 20261020T133130.717227Z after reading the change; study section 267.",
+      "zh": "2026年10月20日，LC2：本记录所列的下一步，以有限读取为前提的任何量上的停息定理，已陈述（记录 rest-theorem-in-any-amounts）；Becoming.LeastLoss 只在有限读取的规律上改动，向下推广；本记录的声明与陈述不变；阅读改动后证明绑定改指回执 20261020T133130.717227Z；研究第 267 节。"
     }
   ],
   "text_versions": [

@@ -11379,3 +11379,63 @@ Output → input: the need is a measured equation of state across held-out regim
 ```
 
 **Self-review.** What passed is the need. The level failed, and the failure is informative: it shows the class premise (G depends only on density) is false at equal density, with the effect measured at 22 standard errors. The post hoc analyses are labelled as such and change no verdict. P2's model was chosen after the failures were seen, so its held-out improvement is not a test. The test's power against the null was checked before the freeze by dry runs on files generated from each model.
+
+## 267. The rest theorem over any amounts, read finitely (LC2)
+
+```text
+Result(s): the rest theorem of worlds over any amounts, where the census's total is read off
+       configurations a list holds (Becoming.InAmounts, new core module after Becoming.LeastLoss):
+       a world's standings, takes and gives read in any Amounts (World.InAmounts), its activity
+       and what takes part its own; balanced (no amount made) and dissipated on (whatever gives
+       back all it takes takes nothing), a family's total does not rise and falls strictly at
+       every rise or fall of a member's level (InAmounts.stock_still, steady_of_stock_le,
+       change_lowers), with no least loss; read finitely, change stops, unrefuted
+       (change_stops_unrefuted), and the world rests from some step on, unrefuted: enclosed with a
+       census and every relatum embodied (rests_unrefuted_enclosed), covered by one family with
+       arising embodied (rests_unrefuted_covering, rests_unrefuted_reading), finite
+       (rests_unrefuted). Whole-number worlds are the instance (World.wholeAmounts,
+       World.rests_unrefuted_enclosed_read, World.rests_unrefuted_listed). Witness HalvingPass: a
+       standing halving as it passes between two relata in dyadic amounts meets every other
+       premise and arises and ceases at every step (HalvingPass.never_rests), its levels held by
+       no list (HalvingPass.levels_unlisted). Below it, LC1's finite-reading law generalized
+       (rule 9): the list held from T on, and its unrefuted form
+       (Amounts.rests_unrefuted_of_finite_reading), from which rests_of_finite_reading follows.
+       Record rest-theorem-in-any-amounts.
+Delta: section 8.1 item 6's other half. The chapter's rest theorem took whole-number levels;
+       it now holds over any amounts wherever the census's total is read off finitely many
+       configurations, and the dense witness shows that without that reading or a least loss a
+       world in dense amounts need not rest. Rest needs a least loss or a finite reading, now
+       for worlds and not only for an amount.
+Premises: any Amounts; a list holding the configurations the total is read off, from T on;
+       balance one way (the level after with what is taken within the level before with what is
+       given); dissipation (each relatum taking part gives the family no more than it takes from
+       it, and what gives back all it takes takes nothing); for the enclosed form a census of the
+       active relata, every relatum embodied, a closed family at every step from T on; for the
+       covering form one family holding what is active from T on, whatever arises embodied.
+       Equality of relata is not decided: the enclosing family is widened only as far as can be
+       refuted, as in the whole-number proof (Flow.Enclosed.around_not_not).
+Evidence: core receipt 20261020T133130.717227Z (passed; Becoming.InAmounts 52 theorems in 74
+       declarations, Becoming.LeastLoss 54 theorems, every axiom report empty;
+       core 280 modules and 11,253 theorems, instances 7 and 567, applications 6 and 179; 7 Lean steps ran, 1,177 reused); the connectivity rerun (564 of 11,999 apart, 0 of the module's 52; no new apart root); render, check, links and tests.
+Boundary: discrete steps, Prop-valued activity; finiteness as a list. Only the rest theorem and
+       the law of one step it turns on are restated over any amounts; needs, support, gain and
+       loops keep their whole-number reading. The law bounds how often the total falls strictly,
+       not when the world rests; naming that step stays LPO (World.lpo_of_finite_ends). Known
+       mathematics restated (literature check below).
+Output → input: the modelling choice "natural-number amounts" no longer carries the rest
+       theorems; they need whole numbers only where the census's total is read off
+       configurations no list holds, and there the least loss of Amounts.rests is the premise.
+```
+
+The kit is [`development/lc2-world-amounts/`](development/lc2-world-amounts/): the two modules' sources (`tree/`), their join to the package (`integrate.py`), this landing's text (`land_text.py`, `study_lc2.txt`), the record (`make_record.py`), the board edits (`board_commit.py`), and the scratch, checker and connectivity logs.
+
+**A check before building: is this known?** Adversarially about novelty, searched 20 October 2026 (abstracts and pages). The step the theorem turns on is termination of a finite-state system under a potential that never rises and falls strictly at every non-stationary step: a ranking function on a finite state space (Turing 1949; Floyd 1967), and in dynamical systems the discrete-time LaSalle invariance principle with a Lyapunov function (LaSalle 1976; Mei and Bullo, [arXiv 1710.03710](https://arxiv.org/abs/1710.03710), a self-contained tutorial, whose finite-state case is immediate). The same potential argument proves that chip-firing games terminate (Björner, Lovász and Shor 1991; Björner and Lovász 1992 for directed graphs), where a game that does not terminate revisits a position, the pigeonhole form used here. The dense counterexample is a discrete analogue of Zeno behaviour in hybrid systems (infinitely many switches in finite time; Zhang, Johansson, Lygeros and Sastry, Int. J. Robust Nonlinear Control 11, 2001): infinitely many changes whose losses are summable. Nothing here is new mathematics; it is claimed as known results restated on the spine. What is the spine's own is where it lands: the rest theorem's whole-number premise is located exactly, and the theorem is carried to amounts that may be dense without a least loss and without a decision of equality.
+
+- **Totals over any amounts.** `Amounts.totalOf` adds over a list; it keeps the order, splits over addition, exchanges two lists (`totalOf_swap`, so what is taken from a family, totalled, is what each relatum taking part takes from it), and holds each member's amount. Two laws carry strictness with no totality of the order. `le_of_totalOf_le`: where every member's `b` is within its `a` and the total of `a` is within the total of `b`, each member's `a` is within its `b`, by cancelling the rest. `totalOf_support`: over a family without repetition and a part of it without repetition holding every member not refuted to be within nothing, the two totals are each within the other, as far as can be refuted; membership of each member in the part is decided only up to refutation.
+- **The law of one step.** Balanced one way and dissipated on, the family's total does not rise: what is given, totalled, is within what is taken, totalled, by dissipation relatum by relatum, and cancellation leaves the totals (`stock_still`). Where the total does not fall strictly (its value before within its value after), what is taken is within what is given, so by `le_of_totalOf_le` each relatum taking part took no more than it gave back, so took nothing, so gave nothing to any member; then no member's level rises (balance with nothing given), and by `le_of_totalOf_le` again none falls (`steady_of_stock_le`). So every rise or fall lowers the total strictly (`change_lowers`). In whole numbers the strictness was a least loss of one per taker (`sign` in `Flow.DissipatesOn`); here it is only that a relatum giving back all it took took nothing, and `World.dissipative_whole` shows the whole-number premise gives it.
+- **The rest theorem.** `Amounts.rests_unrefuted_of_finite_reading` (LC1's law in its unrefuted form, the list held from `T` on) gives that strict falls of the total stop, unrefuted, wherever the total is read off configurations a list holds; its proof extends a chain of strict falls inside the refutation (`extend_falls`) until it is longer than the list, and the pigeonhole (`falls_within_reading`) closes it. In the enclosed form, at each step the closed family is widened to hold what is active before and after (`InAmounts.Enclosed.around_not_not`, as `Flow.Enclosed.around_not_not`), so it is balanced and dissipated on, and its total is the census's each way at both ends (`stock_census`, from `totalOf_support` with embodiment: a relatum outside the census is not active, so its level is not refuted to be within nothing). Arising is a rise, ceasing a fall (`rises_of_arises`, `falls_of_ceases`), each lowering the census's total strictly; `World.rests_unrefuted_iff` joins the two stoppings. The covering form handles ceasing as the whole-number one does, through `World.arising_unrefuted_covering`.
+- **Whole numbers, and the witness.** `World.wholeAmounts` reads a world's own levels, takes and gives; its balance, dissipation, embodiment and enclosure are the world's (`balanced_whole`, `dissipative_whole`, `embodied_whole`, `enclosed_whole`), so `World.rests_unrefuted_enclosed_read` and `World.rests_unrefuted_listed` are proved by the laws over any amounts. They are weaker than `World.rests_unrefuted_enclosed` and `World.rests_unrefuted`, which need no reading: whole numbers carry the least loss. `HalvingPass` (dyadic amounts): the holder stands at `1 / 2 ^ t`, takes it all from itself and gives half to the other; the pair balances (as an equation), is dissipated on (`Halving.falls_strictly`), activity is a positive level, and at every step the holder ceases and the other arises (`never_rests`). By the covering form, no list holds its levels (`levels_unlisted`).
+- **Generalized below, and the cost.** `Amounts.falls_within_reading` and `Amounts.rests_of_finite_reading` now take the list from `T` on, and the first takes the amount's not rising only as not refuted; `rests_of_finite_reading` is a corollary of the unrefuted form. `Becoming.LeastLoss` had one dependent (the root), and `Becoming.InAmounts` is a leaf, so the checker ran 11 Lean steps. Stating the world's own records (`World`, `Web`, `Flow`) over an amount parameter would have recompiled 260 modules for a record that, for every law but rest, would still be read in whole numbers; the reading `World.InAmounts` keeps the world's activity and what takes part, and its whole-number instance is the world itself.
+- **Connectivity and naming.** No theorem of `Becoming.InAmounts` stands apart: the laws are stated on `World`, and LC1's finite-reading law is now used on the base. The names are structural: a world in amounts, totals, balance, dissipation, steady, change, enclosed, census; the witness is named for what it does (a standing halving as it passes), since `Shuttle` is taken in `Becoming.Persistence` and `Becoming.Roles`.
+
+**Self-review.** The mathematics is the finite-state ranking argument and its LaSalle form, and the claim is that the spine's rest theorem needs whole numbers only where the reading is not finite. The reading premise is on the census's total (the smallest the proof uses), not on the levels; reading the levels of a covering family, or a finite world's level functions, gives it (`rests_unrefuted_reading`, `rests_unrefuted`). Two choices are stated rather than hidden: balance is one way (no amount made), weaker than the whole-number equation; and dissipation's strictness is "what gives back all it takes takes nothing", which in a preorder is the constructive form of giving back strictly less. Equality of relata is not decided, so the proof widens families only up to refutation, as the whole-number proof does. What is not done: the other laws of flows, webs and worlds over any amounts, and any derivation of a finite reading for a class of physical systems.

@@ -1,0 +1,24 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/xenodochial-saha-749c76/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lc2-world-amounts/tree",
+  "modules": 39,
+  "ran": [
+    "Becoming.LeastLoss",
+    "Becoming.InAmounts",
+    "BecomingInAmountsAxiomAudit",
+    "BecomingLeastLossAxiomAudit"
+  ],
+  "reused": 37,
+  "unclean": [],
+  "audits": {
+    "Becoming.InAmounts": {
+      "theorems": 52,
+      "declarations": 74,
+      "with_axioms": {}
+    },
+    "Becoming.LeastLoss": {
+      "theorems": 54,
+      "declarations": 70,
+      "with_axioms": {}
+    }
+  }
+}

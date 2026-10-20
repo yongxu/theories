@@ -77,7 +77,7 @@ CORE = ["Becoming.Prelude", "Becoming.World", "Becoming.Witnesses", "Becoming.Fr
         "Becoming.Seeking", "Becoming.Roles", "Becoming.LabelledRoles",
         "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Space",
         "Becoming.Premises", "Becoming.Sampling", "Becoming.Tower",
-        "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.Entropy", "Becoming.Units", "Becoming.Imbalance",
+        "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.Units", "Becoming.Imbalance",
         "Becoming.Continuation", "Becoming.RenewalFlow", "Becoming.Admission", "Becoming.Exclusion", "Becoming.Exhaustion",
         "Becoming.Regions", "Becoming.Growth", "Becoming.Retaining", "Becoming.OwnWidening", "Becoming.Clearing", "Becoming.Extension",
         "Becoming.Metaethics", "Becoming.Lifting", "Becoming.Ranking", "Becoming.ActiveReading", "Becoming.LossMatching", "Becoming.StrictTransport", "Becoming.MatchedCourses",
@@ -1246,11 +1246,24 @@ SCOPE = (
     "finitely many configurations a process merging nothing loses nothing along a run, and so a "
     "law along an orbit, so a loss above nothing needs a merge; an amount read off configurations a "
     "list holds that does not rise falls strictly at most as often as the list is long, over any "
-    "amounts, so its falls do not recur with no least loss, along a run of every process too, and the "
+    "amounts, so its falls do not recur with no least loss, and with its not rising and its falls only "
+    "not refuted that they stop cannot be refuted, along a run of every process too, and the "
     "halving stock's values are no list's; under a law merging nothing, possibilities no two alike "
     "stay so, and read by a part and a rest that tell them apart number at most the part's count "
     "times the rest's, so a part reset at every step needs a whole no list holds, as in Reset, whose "
     "part merges at every step while the whole merges nothing. "
+    "InAmounts: totals over any amounts keep the order, split over addition and exchange two lists, and "
+    "where each member's amount is at least another's and the totals are the other way each member's is; "
+    "a world's standings, takes and gives read in any amounts, a family balanced with no amount made and "
+    "dissipated on, whatever gives back all it takes taking nothing, has a total that does not rise and "
+    "that falls strictly at every rise or fall of a member's level; where that total is read off "
+    "configurations a list holds its changes stop, unrefuted, and a world whose active relata lie in the "
+    "family and whose arising is embodied rests from some step on, unrefuted, as does a world with a census, "
+    "every relatum embodied, balanced, dissipative and enclosed from some step on whose census total is "
+    "read off configurations a list holds, the enclosing family widened as far as can be refuted; every "
+    "world is a world in whole-number amounts with its own premises; in HalvingPass a standing halving as "
+    "it passes between two relata meets every other premise and arises and ceases at every step, and no "
+    "list holds its levels. "
     "Units: at a unit splitting into r t finer units across each step, arising needing an active "
     "giver holds with no condition on r, the law of one exchange holds with change read in the "
     "unit and fails read in raw counts, a need counted in the same unit as the level leaves support "

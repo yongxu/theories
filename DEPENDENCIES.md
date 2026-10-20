@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-299 registered results: 280 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 757 curated edges join 253 results to the results they draw on.
+300 registered results: 281 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 759 curated edges join 254 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -190,6 +190,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [residual-continuation-correspondence][] ← <a id="residual-continuation-correspondence--guarded-program-question-recovery"></a>[guarded-program-question-recovery][] · <a id="residual-continuation-correspondence--branching-tests-bisimulation"></a>[branching-tests-bisimulation][] · <a id="residual-continuation-correspondence--finite-trace-transport"></a>[finite-trace-transport][]
 - [rest-at-every-resolution][] ← <a id="rest-at-every-resolution--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="rest-at-every-resolution--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="rest-at-every-resolution--reserve-defers-ending"></a>[reserve-defers-ending][]
 - [rest-from-a-finite-reading][] ← <a id="rest-from-a-finite-reading--least-loss-rest"></a>[least-loss-rest][] · <a id="rest-from-a-finite-reading--recurrence-without-premise"></a>[recurrence-without-premise][]
+- [rest-theorem-in-any-amounts][] ← <a id="rest-theorem-in-any-amounts--rest-from-a-finite-reading"></a>[rest-from-a-finite-reading][] · <a id="rest-theorem-in-any-amounts--least-loss-rest"></a>[least-loss-rest][]
 - [rest-with-refinement-counted][] ← <a id="rest-with-refinement-counted--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="rest-with-refinement-counted--rest-at-every-resolution"></a>[rest-at-every-resolution][]
 - [restoring-giving-from-the-worst-start][] ← <a id="restoring-giving-from-the-worst-start--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="restoring-giving-from-the-worst-start--giving-that-waits-on-giving"></a>[giving-that-waits-on-giving][]
 - [retained-reference-joining-recovery][] ← <a id="retained-reference-joining-recovery--branching-tests-bisimulation"></a>[branching-tests-bisimulation][] · <a id="retained-reference-joining-recovery--unanchored-incidence-collapse"></a>[unanchored-incidence-collapse][]
@@ -466,6 +467,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [residual-continuation-correspondence]: theories/becoming/results/records/residual-continuation-correspondence.md
 [rest-at-every-resolution]: theories/becoming/results/records/rest-at-every-resolution.md
 [rest-from-a-finite-reading]: theories/becoming/results/records/rest-from-a-finite-reading.md
+[rest-theorem-in-any-amounts]: theories/becoming/results/records/rest-theorem-in-any-amounts.md
 [rest-with-refinement-counted]: theories/becoming/results/records/rest-with-refinement-counted.md
 [restoring-giving-from-the-worst-start]: theories/becoming/results/records/restoring-giving-from-the-worst-start.md
 [retained-reference-joining-recovery]: theories/becoming/results/records/retained-reference-joining-recovery.md

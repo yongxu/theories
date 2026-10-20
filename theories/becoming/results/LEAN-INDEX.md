@@ -19,17 +19,17 @@ Warrant of ethical premises, valid inference, recognition, motivation and implem
 <a id="覆盖范围--coverage"></a>
 ## Coverage
 
-The inventory contains **2,034 `.lean` paths and 1,369 distinct byte contents**, including 383 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
+The inventory contains **1,742 `.lean` paths and 1,370 distinct byte contents**, including 113 groups of exact copies. Copies are not independent proofs, and changed bytes need not mean changed propositions.
 
 | File role | Paths |
 |---|---:|
 | Audit driver | 13 |
-| Development attempt | 834 |
+| Development attempt | 836 |
 | Historical draft | 3 |
 | Imported archive | 23 |
-| Working source | 1,161 |
+| Working source | 867 |
 
-The working-source and audit entries contain **35,300 explicit theorem/lemma occurrences** and 51,395 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
+The working-source and audit entries contain **23,357 explicit theorem/lemma occurrences** and 34,990 explicit named declarations. These are source-location counts, **not counts of distinct propositions, passed proofs or research contributions**.
 
 Hidden, ignored and untracked files are included; `.git`, `.lake`, `node_modules`, `.venv`, `venv`, `__pycache__` and other sessions' worktrees (`.claude/worktrees`) are excluded, and directory symlinks are not followed. Archives and attempts remain in the JSON inventory without repeating them in the main table; saved copies in run, check, snapshot and history folders are neither read nor listed, each being bound by its own run's receipt, so a checker run leaves this catalogue unchanged. Working-source is a documentary role, not acceptance or verification status.
 
@@ -40,7 +40,7 @@ The scan lists explicit theorem, lemma, def, abbrev, structure, inductive, opaqu
 
 | Direction | Working sources and audit entries |
 |---|---:|
-| [Becoming pure core](#group-becoming-core) | 282 |
+| [Becoming pure core](#group-becoming-core) | 283 |
 | [Becoming instances and applications](#group-becoming-ring) | 13 |
 | [Normative grounding and generative direction](#group-ethics) | 139 |
 | [Valuation development and liangzhi](#group-valuation) | 19 |
@@ -51,7 +51,7 @@ The scan lists explicit theorem, lemma, def, abbrev, structure, inductive, opaqu
 | [Concern and shared activity](#group-concern) | 15 |
 | [Organizational formation through revisable evaluation](#group-shared) | 66 |
 | [Generative core and relational structure](#group-core) | 137 |
-| [Other formal studies](#group-other) | 324 |
+| [Other formal studies](#group-other) | 29 |
 
 <a id="group-becoming-core"></a>
 
@@ -171,6 +171,7 @@ Conceptual entry: [THE-THEORY-OF-BECOMING §9](../chapters/THE-THEORY-OF-BECOMIN
 | [Identity](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Identity.lean) · [Names](lean-declarations/becoming-core.md#module-58430fdbccab) | 119 | 61 | [Theory](../chapters/THE-THEORY-OF-BECOMING.md) · [Study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [IdleRemoval](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdleRemoval.lean) · [Names](lean-declarations/becoming-core.md#module-f3b2ca6e193b) | 13 | 4 | [Theory](../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [Imbalance](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Imbalance.lean) · [Names](lean-declarations/becoming-core.md#module-3a01f3d463aa) | 14 | 1 | [Theory](../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
+| [InAmounts](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean) · [Names](lean-declarations/becoming-core.md#module-eb96e20c2ad2) | 52 | 22 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [Inquiry](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean) · [Names](lean-declarations/becoming-core.md#module-3d9eabbfea95) | 6 | 3 | [Theory](../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [IntegerOrder](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IntegerOrder.lean) · [Names](lean-declarations/becoming-core.md#module-a859e8895cf6) | 38 | 0 | [Theory](../history/THE-THEORY-OF-BECOMING-REFERENCE.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [Integers](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Integers.lean) · [Names](lean-declarations/becoming-core.md#module-6301489d5d60) | 34 | 4 | [Theory](../history/THE-THEORY-OF-BECOMING-REFERENCE.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
@@ -201,7 +202,7 @@ Conceptual entry: [THE-THEORY-OF-BECOMING §9](../chapters/THE-THEORY-OF-BECOMIN
 | [LearnedGrouping](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnedGrouping.lean) · [Names](lean-declarations/becoming-core.md#module-7e8cf18988c2) | 41 | 26 | [Theory](../history/THE-THEORY-OF-BECOMING-REFERENCE.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [Learning](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean) · [Names](lean-declarations/becoming-core.md#module-d65f42130cd4) | 78 | 32 | [Theory](../chapters/COGNITION-LEARNING-AND-EVOLUTION.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [LearningRuns](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean) · [Names](lean-declarations/becoming-core.md#module-9f33b42f8566) | 29 | 3 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
-| [LeastLoss](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean) · [Names](lean-declarations/becoming-core.md#module-359473829457) | 51 | 16 | [Theory](../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
+| [LeastLoss](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean) · [Names](lean-declarations/becoming-core.md#module-359473829457) | 54 | 16 | [Theory](../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [LevelCoupling](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelCoupling.lean) · [Names](lean-declarations/becoming-core.md#module-41d793a8ed35) | 30 | 11 | [Theory](../chapters/THE-THEORY-OF-BECOMING.md) · [Study](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/REGISTRATION-VOCABULARY-STUDY.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [Lexical](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean) · [Names](lean-declarations/becoming-core.md#module-322d77d0a344) | 39 | 19 | [Theory](../history/THE-THEORY-OF-BECOMING-REFERENCE.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
 | [Lifting](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lifting.lean) · [Names](lean-declarations/becoming-core.md#module-d94bf165cf48) | 6 | 8 | [Theory](../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked |
@@ -1044,301 +1045,6 @@ Conceptual entry: [GENERATIVE-GROUNDING](../history/GENERATIVE-GROUNDING.md) (ea
 
 | Module | theorem/lemma | Other declarations | Interpretation and existing evidence |
 |---|---:|---:|---|
-| [Becoming](../../../empty/.build/Becoming.lean) · [Names](lean-declarations/other.md#module-d3aba301331f) | 0 | 0 | No direct documentation link found |
-| [Acceptance](../../../empty/.build/Becoming/Acceptance.lean) · [Names](lean-declarations/other.md#module-158375f8aab1) | 17 | 10 | No direct documentation link found |
-| [ActivationCapacity](../../../empty/.build/Becoming/ActivationCapacity.lean) · [Names](lean-declarations/other.md#module-14a8695268f9) | 7 | 1 | No direct documentation link found |
-| [ActiveReading](../../../empty/.build/Becoming/ActiveReading.lean) · [Names](lean-declarations/other.md#module-5b0a15e47e51) | 12 | 1 | No direct documentation link found |
-| [Actuation](../../../empty/.build/Becoming/Actuation.lean) · [Names](lean-declarations/other.md#module-29999e1c8a86) | 45 | 16 | No direct documentation link found |
-| [Admission](../../../empty/.build/Becoming/Admission.lean) · [Names](lean-declarations/other.md#module-c10b27865042) | 46 | 26 | No direct documentation link found |
-| [Alternatives](../../../empty/.build/Becoming/Alternatives.lean) · [Names](lean-declarations/other.md#module-20362421e424) | 17 | 14 | No direct documentation link found |
-| [Amounts](../../../empty/.build/Becoming/Amounts.lean) · [Names](lean-declarations/other.md#module-66e81b4cbd0b) | 29 | 5 | No direct documentation link found |
-| [Arising](../../../empty/.build/Becoming/Arising.lean) · [Names](lean-declarations/other.md#module-eae16376917a) | 29 | 31 | No direct documentation link found |
-| [Assurance](../../../empty/.build/Becoming/Assurance.lean) · [Names](lean-declarations/other.md#module-e9bc0b7f9983) | 16 | 2 | No direct documentation link found |
-| [AssurancePlans](../../../empty/.build/Becoming/AssurancePlans.lean) · [Names](lean-declarations/other.md#module-358dc48d71cf) | 23 | 20 | No direct documentation link found |
-| [Attraction](../../../empty/.build/Becoming/Attraction.lean) · [Names](lean-declarations/other.md#module-1fe35713ac19) | 47 | 14 | No direct documentation link found |
-| [AttractionRuns](../../../empty/.build/Becoming/AttractionRuns.lean) · [Names](lean-declarations/other.md#module-b94ed6fabf7a) | 15 | 0 | No direct documentation link found |
-| [Boundaries](../../../empty/.build/Becoming/Boundaries.lean) · [Names](lean-declarations/other.md#module-1b88569f8dfc) | 69 | 8 | No direct documentation link found |
-| [BoundedSignificance](../../../empty/.build/Becoming/BoundedSignificance.lean) · [Names](lean-declarations/other.md#module-e608da3a5383) | 12 | 0 | No direct documentation link found |
-| [Branching](../../../empty/.build/Becoming/Branching.lean) · [Names](lean-declarations/other.md#module-93721843621f) | 107 | 32 | No direct documentation link found |
-| [BranchingCorrespondence](../../../empty/.build/Becoming/BranchingCorrespondence.lean) · [Names](lean-declarations/other.md#module-c2c1a1866959) | 10 | 0 | No direct documentation link found |
-| [Bundles](../../../empty/.build/Becoming/Bundles.lean) · [Names](lean-declarations/other.md#module-b81194c8d932) | 30 | 28 | No direct documentation link found |
-| [Capture](../../../empty/.build/Becoming/Capture.lean) · [Names](lean-declarations/other.md#module-048174c468b8) | 13 | 2 | No direct documentation link found |
-| [Carriers](../../../empty/.build/Becoming/Carriers.lean) · [Names](lean-declarations/other.md#module-e5834e23640f) | 46 | 11 | No direct documentation link found |
-| [CensusBinding](../../../empty/.build/Becoming/CensusBinding.lean) · [Names](lean-declarations/other.md#module-ca1746d1fa29) | 22 | 0 | No direct documentation link found |
-| [CensusCounts](../../../empty/.build/Becoming/CensusCounts.lean) · [Names](lean-declarations/other.md#module-c2cd8729d51d) | 20 | 0 | No direct documentation link found |
-| [CensusTable](../../../empty/.build/Becoming/CensusTable.lean) · [Names](lean-declarations/other.md#module-02686b3d0334) | 30 | 8 | No direct documentation link found |
-| [ChanceFloors](../../../empty/.build/Becoming/ChanceFloors.lean) · [Names](lean-declarations/other.md#module-84c63e82cda3) | 5 | 4 | No direct documentation link found |
-| [Change](../../../empty/.build/Becoming/Change.lean) · [Names](lean-declarations/other.md#module-6461012d74c1) | 55 | 17 | No direct documentation link found |
-| [ClassifiedBeliefProcesses](../../../empty/.build/Becoming/ClassifiedBeliefProcesses.lean) · [Names](lean-declarations/other.md#module-77521d9f522a) | 3 | 0 | No direct documentation link found |
-| [Clearing](../../../empty/.build/Becoming/Clearing.lean) · [Names](lean-declarations/other.md#module-5ab96601f03f) | 14 | 11 | No direct documentation link found |
-| [ClosedCapture](../../../empty/.build/Becoming/ClosedCapture.lean) · [Names](lean-declarations/other.md#module-ede320de146a) | 25 | 14 | No direct documentation link found |
-| [Closing](../../../empty/.build/Becoming/Closing.lean) · [Names](lean-declarations/other.md#module-cb32cf3827c1) | 50 | 10 | No direct documentation link found |
-| [CodeAcquisition](../../../empty/.build/Becoming/CodeAcquisition.lean) · [Names](lean-declarations/other.md#module-4591d881cf15) | 37 | 31 | No direct documentation link found |
-| [Commuting](../../../empty/.build/Becoming/Commuting.lean) · [Names](lean-declarations/other.md#module-db5073d68f07) | 17 | 3 | No direct documentation link found |
-| [Composition](../../../empty/.build/Becoming/Composition.lean) · [Names](lean-declarations/other.md#module-32c5d9ce9b9a) | 40 | 22 | No direct documentation link found |
-| [ContactCourses](../../../empty/.build/Becoming/ContactCourses.lean) · [Names](lean-declarations/other.md#module-c14fc33efa49) | 3 | 0 | No direct documentation link found |
-| [Contacts](../../../empty/.build/Becoming/Contacts.lean) · [Names](lean-declarations/other.md#module-3bd3fb50607b) | 23 | 6 | No direct documentation link found |
-| [Context](../../../empty/.build/Becoming/Context.lean) · [Names](lean-declarations/other.md#module-c7cbab30b3ff) | 25 | 32 | No direct documentation link found |
-| [ContextArrivalTraces](../../../empty/.build/Becoming/ContextArrivalTraces.lean) · [Names](lean-declarations/other.md#module-9d92a4206ccd) | 23 | 10 | No direct documentation link found |
-| [ContextualRuns](../../../empty/.build/Becoming/ContextualRuns.lean) · [Names](lean-declarations/other.md#module-1a7bfcc1223b) | 16 | 5 | No direct documentation link found |
-| [ContingentPlans](../../../empty/.build/Becoming/ContingentPlans.lean) · [Names](lean-declarations/other.md#module-7499cd2acf2e) | 15 | 11 | No direct documentation link found |
-| [Continuation](../../../empty/.build/Becoming/Continuation.lean) · [Names](lean-declarations/other.md#module-9e10283e6f91) | 64 | 35 | No direct documentation link found |
-| [ContinuingRevision](../../../empty/.build/Becoming/ContinuingRevision.lean) · [Names](lean-declarations/other.md#module-8f2360b68ad0) | 58 | 33 | No direct documentation link found |
-| [ContinuingRuns](../../../empty/.build/Becoming/ContinuingRuns.lean) · [Names](lean-declarations/other.md#module-dbd2460a2ead) | 12 | 0 | No direct documentation link found |
-| [CopyCourses](../../../empty/.build/Becoming/CopyCourses.lean) · [Names](lean-declarations/other.md#module-7506fee3ce2c) | 13 | 0 | No direct documentation link found |
-| [Copying](../../../empty/.build/Becoming/Copying.lean) · [Names](lean-declarations/other.md#module-567177f2d67b) | 61 | 34 | No direct documentation link found |
-| [Correspondence](../../../empty/.build/Becoming/Correspondence.lean) · [Names](lean-declarations/other.md#module-8343073458e1) | 37 | 16 | No direct documentation link found |
-| [Countdown](../../../empty/.build/Becoming/Countdown.lean) · [Names](lean-declarations/other.md#module-1a1d0c606e37) | 22 | 7 | No direct documentation link found |
-| [Counterfactual](../../../empty/.build/Becoming/Counterfactual.lean) · [Names](lean-declarations/other.md#module-2a6ae8de4c82) | 38 | 26 | No direct documentation link found |
-| [CounterfactualRuns](../../../empty/.build/Becoming/CounterfactualRuns.lean) · [Names](lean-declarations/other.md#module-bb4ef4381cbf) | 8 | 1 | No direct documentation link found |
-| [Counting](../../../empty/.build/Becoming/Counting.lean) · [Names](lean-declarations/other.md#module-c06645a4b7e5) | 249 | 81 | No direct documentation link found |
-| [CouplingTraces](../../../empty/.build/Becoming/CouplingTraces.lean) · [Names](lean-declarations/other.md#module-b082c6b85fa1) | 33 | 2 | No direct documentation link found |
-| [CourseRoles](../../../empty/.build/Becoming/CourseRoles.lean) · [Names](lean-declarations/other.md#module-9c63a97af2ec) | 10 | 0 | No direct documentation link found |
-| [CourseWorlds](../../../empty/.build/Becoming/CourseWorlds.lean) · [Names](lean-declarations/other.md#module-88becd9ab989) | 33 | 4 | No direct documentation link found |
-| [Courses](../../../empty/.build/Becoming/Courses.lean) · [Names](lean-declarations/other.md#module-16e2aba7d1d3) | 91 | 10 | No direct documentation link found |
-| [Coverage](../../../empty/.build/Becoming/Coverage.lean) · [Names](lean-declarations/other.md#module-7be558751825) | 22 | 12 | No direct documentation link found |
-| [CrossSituational](../../../empty/.build/Becoming/CrossSituational.lean) · [Names](lean-declarations/other.md#module-b1399651a9b7) | 34 | 5 | No direct documentation link found |
-| [Cuts](../../../empty/.build/Becoming/Cuts.lean) · [Names](lean-declarations/other.md#module-bafd24899b10) | 51 | 9 | No direct documentation link found |
-| [Decidedness](../../../empty/.build/Becoming/Decidedness.lean) · [Names](lean-declarations/other.md#module-1231a342ba8a) | 65 | 7 | No direct documentation link found |
-| [Dependence](../../../empty/.build/Becoming/Dependence.lean) · [Names](lean-declarations/other.md#module-7a0ad31e74a3) | 44 | 58 | No direct documentation link found |
-| [Dephasing](../../../empty/.build/Becoming/Dephasing.lean) · [Names](lean-declarations/other.md#module-7865710278ad) | 63 | 28 | No direct documentation link found |
-| [Derivation](../../../empty/.build/Becoming/Derivation.lean) · [Names](lean-declarations/other.md#module-ce566c78c140) | 26 | 8 | No direct documentation link found |
-| [Descent](../../../empty/.build/Becoming/Descent.lean) · [Names](lean-declarations/other.md#module-40ddd685f224) | 40 | 9 | No direct documentation link found |
-| [Description](../../../empty/.build/Becoming/Description.lean) · [Names](lean-declarations/other.md#module-b9bfa3d170f1) | 35 | 12 | No direct documentation link found |
-| [Diagonal](../../../empty/.build/Becoming/Diagonal.lean) · [Names](lean-declarations/other.md#module-54cff01d6e8f) | 39 | 7 | No direct documentation link found |
-| [Direction](../../../empty/.build/Becoming/Direction.lean) · [Names](lean-declarations/other.md#module-49f81e54aa53) | 14 | 3 | No direct documentation link found |
-| [Dispatch](../../../empty/.build/Becoming/Dispatch.lean) · [Names](lean-declarations/other.md#module-9b9009e716eb) | 33 | 12 | No direct documentation link found |
-| [Dissipation](../../../empty/.build/Becoming/Dissipation.lean) · [Names](lean-declarations/other.md#module-8df42eea9453) | 110 | 23 | No direct documentation link found |
-| [Distinguishing](../../../empty/.build/Becoming/Distinguishing.lean) · [Names](lean-declarations/other.md#module-362ad5e42239) | 11 | 1 | No direct documentation link found |
-| [DrawnBeyond](../../../empty/.build/Becoming/DrawnBeyond.lean) · [Names](lean-declarations/other.md#module-fa2c3328f988) | 37 | 12 | No direct documentation link found |
-| [EdgeClosure](../../../empty/.build/Becoming/EdgeClosure.lean) · [Names](lean-declarations/other.md#module-a2123551fd49) | 4 | 2 | No direct documentation link found |
-| [Enough](../../../empty/.build/Becoming/Enough.lean) · [Names](lean-declarations/other.md#module-de27398145a0) | 8 | 11 | No direct documentation link found |
-| [Entropy](../../../empty/.build/Becoming/Entropy.lean) · [Names](lean-declarations/other.md#module-1e62a443989d) | 182 | 47 | No direct documentation link found |
-| [Evolution](../../../empty/.build/Becoming/Evolution.lean) · [Names](lean-declarations/other.md#module-ae8555a287da) | 31 | 19 | No direct documentation link found |
-| [ExchangePremises](../../../empty/.build/Becoming/ExchangePremises.lean) · [Names](lean-declarations/other.md#module-737878cc24db) | 51 | 26 | No direct documentation link found |
-| [Exclusion](../../../empty/.build/Becoming/Exclusion.lean) · [Names](lean-declarations/other.md#module-61b1ec7c926d) | 36 | 7 | No direct documentation link found |
-| [Exhaustion](../../../empty/.build/Becoming/Exhaustion.lean) · [Names](lean-declarations/other.md#module-d951e82c9fcd) | 23 | 4 | No direct documentation link found |
-| [Experiment](../../../empty/.build/Becoming/Experiment.lean) · [Names](lean-declarations/other.md#module-be7b0b52a20e) | 24 | 17 | No direct documentation link found |
-| [Extension](../../../empty/.build/Becoming/Extension.lean) · [Names](lean-declarations/other.md#module-9b816a37f82c) | 10 | 5 | No direct documentation link found |
-| [FaultEnvelopes](../../../empty/.build/Becoming/FaultEnvelopes.lean) · [Names](lean-declarations/other.md#module-4d380e5d13bc) | 19 | 10 | No direct documentation link found |
-| [Feedback](../../../empty/.build/Becoming/Feedback.lean) · [Names](lean-declarations/other.md#module-a147cc5edb34) | 95 | 47 | No direct documentation link found |
-| [Feeding](../../../empty/.build/Becoming/Feeding.lean) · [Names](lean-declarations/other.md#module-623daee36d39) | 41 | 23 | No direct documentation link found |
-| [FinerTraces](../../../empty/.build/Becoming/FinerTraces.lean) · [Names](lean-declarations/other.md#module-b4986ec425d9) | 11 | 1 | No direct documentation link found |
-| [Flow](../../../empty/.build/Becoming/Flow.lean) · [Names](lean-declarations/other.md#module-f78524c5f0ae) | 97 | 37 | No direct documentation link found |
-| [FormedLoops](../../../empty/.build/Becoming/FormedLoops.lean) · [Names](lean-declarations/other.md#module-be0620f31248) | 7 | 5 | No direct documentation link found |
-| [Fragments](../../../empty/.build/Becoming/Fragments.lean) · [Names](lean-declarations/other.md#module-d49746343809) | 23 | 13 | No direct documentation link found |
-| [Frame](../../../empty/.build/Becoming/Frame.lean) · [Names](lean-declarations/other.md#module-9856d1a28124) | 11 | 6 | No direct documentation link found |
-| [Frequency](../../../empty/.build/Becoming/Frequency.lean) · [Names](lean-declarations/other.md#module-27ae3fc0d82f) | 78 | 15 | No direct documentation link found |
-| [Frontier](../../../empty/.build/Becoming/Frontier.lean) · [Names](lean-declarations/other.md#module-22b3b79ec3d1) | 70 | 33 | No direct documentation link found |
-| [FrontierFrames](../../../empty/.build/Becoming/FrontierFrames.lean) · [Names](lean-declarations/other.md#module-4b818b9f264e) | 44 | 9 | No direct documentation link found |
-| [FrontierWorlds](../../../empty/.build/Becoming/FrontierWorlds.lean) · [Names](lean-declarations/other.md#module-561b3257f59b) | 8 | 4 | No direct documentation link found |
-| [Gain](../../../empty/.build/Becoming/Gain.lean) · [Names](lean-declarations/other.md#module-722b24dbc4e2) | 29 | 5 | No direct documentation link found |
-| [Gated](../../../empty/.build/Becoming/Gated.lean) · [Names](lean-declarations/other.md#module-4b50a51adf4f) | 13 | 3 | No direct documentation link found |
-| [Gluing](../../../empty/.build/Becoming/Gluing.lean) · [Names](lean-declarations/other.md#module-baaf8f147a79) | 76 | 32 | No direct documentation link found |
-| [Granularity](../../../empty/.build/Becoming/Granularity.lean) · [Names](lean-declarations/other.md#module-6b55941edf1b) | 89 | 34 | No direct documentation link found |
-| [GroupEnding](../../../empty/.build/Becoming/GroupEnding.lean) · [Names](lean-declarations/other.md#module-931ab3feece9) | 23 | 5 | No direct documentation link found |
-| [Growth](../../../empty/.build/Becoming/Growth.lean) · [Names](lean-declarations/other.md#module-8e964f06e78e) | 12 | 7 | No direct documentation link found |
-| [GuardHorizon](../../../empty/.build/Becoming/GuardHorizon.lean) · [Names](lean-declarations/other.md#module-41d83c76eb0d) | 32 | 16 | No direct documentation link found |
-| [Handoff](../../../empty/.build/Becoming/Handoff.lean) · [Names](lean-declarations/other.md#module-20f302960e02) | 22 | 12 | No direct documentation link found |
-| [HexagramCommuting](../../../empty/.build/Becoming/HexagramCommuting.lean) · [Names](lean-declarations/other.md#module-1aec2cf65f2b) | 7 | 0 | No direct documentation link found |
-| [HexagramLaws](../../../empty/.build/Becoming/HexagramLaws.lean) · [Names](lean-declarations/other.md#module-7929dbdd8ef7) | 129 | 57 | No direct documentation link found |
-| [HexagramPlaces](../../../empty/.build/Becoming/HexagramPlaces.lean) · [Names](lean-declarations/other.md#module-29c7da5ade02) | 109 | 48 | No direct documentation link found |
-| [HexagramSequences](../../../empty/.build/Becoming/HexagramSequences.lean) · [Names](lean-declarations/other.md#module-16964b1bd2dd) | 94 | 69 | No direct documentation link found |
-| [HexagramSites](../../../empty/.build/Becoming/HexagramSites.lean) · [Names](lean-declarations/other.md#module-034f47e97e21) | 98 | 39 | No direct documentation link found |
-| [Hexagrams](../../../empty/.build/Becoming/Hexagrams.lean) · [Names](lean-declarations/other.md#module-f3f3b86ab177) | 67 | 26 | No direct documentation link found |
-| [Histories](../../../empty/.build/Becoming/Histories.lean) · [Names](lean-declarations/other.md#module-111d96b2c31c) | 26 | 14 | No direct documentation link found |
-| [HistoryIdeals](../../../empty/.build/Becoming/HistoryIdeals.lean) · [Names](lean-declarations/other.md#module-532f12629bda) | 72 | 22 | No direct documentation link found |
-| [HistoryIdealsTraces](../../../empty/.build/Becoming/HistoryIdealsTraces.lean) · [Names](lean-declarations/other.md#module-261cec0137ea) | 7 | 2 | No direct documentation link found |
-| [HistoryLanguages](../../../empty/.build/Becoming/HistoryLanguages.lean) · [Names](lean-declarations/other.md#module-6025d05f9079) | 34 | 10 | No direct documentation link found |
-| [HistorySums](../../../empty/.build/Becoming/HistorySums.lean) · [Names](lean-declarations/other.md#module-40a90053d7b1) | 39 | 12 | No direct documentation link found |
-| [Horizon](../../../empty/.build/Becoming/Horizon.lean) · [Names](lean-declarations/other.md#module-97bcafba8f4d) | 32 | 15 | No direct documentation link found |
-| [HorizonWebs](../../../empty/.build/Becoming/HorizonWebs.lean) · [Names](lean-declarations/other.md#module-f31545cda8df) | 8 | 3 | No direct documentation link found |
-| [Ideals](../../../empty/.build/Becoming/Ideals.lean) · [Names](lean-declarations/other.md#module-4010e574cd6a) | 94 | 38 | No direct documentation link found |
-| [Identification](../../../empty/.build/Becoming/Identification.lean) · [Names](lean-declarations/other.md#module-4ce7a0fd29b9) | 99 | 19 | No direct documentation link found |
-| [IdentificationRuns](../../../empty/.build/Becoming/IdentificationRuns.lean) · [Names](lean-declarations/other.md#module-11582bc80d4c) | 40 | 2 | No direct documentation link found |
-| [Identity](../../../empty/.build/Becoming/Identity.lean) · [Names](lean-declarations/other.md#module-00fe6b2b63d6) | 119 | 61 | No direct documentation link found |
-| [IdleRemoval](../../../empty/.build/Becoming/IdleRemoval.lean) · [Names](lean-declarations/other.md#module-2f9a0d0df937) | 13 | 4 | No direct documentation link found |
-| [Imbalance](../../../empty/.build/Becoming/Imbalance.lean) · [Names](lean-declarations/other.md#module-aecc2405fc54) | 14 | 1 | No direct documentation link found |
-| [Inquiry](../../../empty/.build/Becoming/Inquiry.lean) · [Names](lean-declarations/other.md#module-715dae299129) | 6 | 3 | No direct documentation link found |
-| [IntegerOrder](../../../empty/.build/Becoming/IntegerOrder.lean) · [Names](lean-declarations/other.md#module-8a124aeba1dd) | 38 | 0 | No direct documentation link found |
-| [Integers](../../../empty/.build/Becoming/Integers.lean) · [Names](lean-declarations/other.md#module-d8aa374de996) | 34 | 4 | No direct documentation link found |
-| [Interdependence](../../../empty/.build/Becoming/Interdependence.lean) · [Names](lean-declarations/other.md#module-0def525bb72c) | 25 | 6 | No direct documentation link found |
-| [Interleavings](../../../empty/.build/Becoming/Interleavings.lean) · [Names](lean-declarations/other.md#module-1da35e0d0a8e) | 162 | 35 | No direct documentation link found |
-| [Irreversibility](../../../empty/.build/Becoming/Irreversibility.lean) · [Names](lean-declarations/other.md#module-5bd9c7d1e1b0) | 3 | 1 | No direct documentation link found |
-| [Joining](../../../empty/.build/Becoming/Joining.lean) · [Names](lean-declarations/other.md#module-74d5c612316b) | 65 | 41 | No direct documentation link found |
-| [JoiningCodes](../../../empty/.build/Becoming/JoiningCodes.lean) · [Names](lean-declarations/other.md#module-0f8555d67c8e) | 10 | 2 | No direct documentation link found |
-| [JoiningContexts](../../../empty/.build/Becoming/JoiningContexts.lean) · [Names](lean-declarations/other.md#module-11cde1539c4c) | 23 | 7 | No direct documentation link found |
-| [JoiningRoles](../../../empty/.build/Becoming/JoiningRoles.lean) · [Names](lean-declarations/other.md#module-fb92e022fc7f) | 23 | 3 | No direct documentation link found |
-| [Joint](../../../empty/.build/Becoming/Joint.lean) · [Names](lean-declarations/other.md#module-26d82fc87196) | 34 | 42 | No direct documentation link found |
-| [JointCorrespondence](../../../empty/.build/Becoming/JointCorrespondence.lean) · [Names](lean-declarations/other.md#module-d436b8520dfe) | 9 | 1 | No direct documentation link found |
-| [JointKeeping](../../../empty/.build/Becoming/JointKeeping.lean) · [Names](lean-declarations/other.md#module-075c394909b6) | 22 | 17 | No direct documentation link found |
-| [JointPhase](../../../empty/.build/Becoming/JointPhase.lean) · [Names](lean-declarations/other.md#module-85ddf6de1fb0) | 23 | 15 | No direct documentation link found |
-| [JointPlans](../../../empty/.build/Becoming/JointPlans.lean) · [Names](lean-declarations/other.md#module-5c518c4d5a1e) | 4 | 6 | No direct documentation link found |
-| [Junctures](../../../empty/.build/Becoming/Junctures.lean) · [Names](lean-declarations/other.md#module-9e0871708a54) | 46 | 14 | No direct documentation link found |
-| [Keeping](../../../empty/.build/Becoming/Keeping.lean) · [Names](lean-declarations/other.md#module-61f9e63b6018) | 30 | 25 | No direct documentation link found |
-| [Labelled](../../../empty/.build/Becoming/Labelled.lean) · [Names](lean-declarations/other.md#module-6d733655ac96) | 66 | 39 | No direct documentation link found |
-| [LabelledRoles](../../../empty/.build/Becoming/LabelledRoles.lean) · [Names](lean-declarations/other.md#module-da43f6ed289a) | 11 | 1 | No direct documentation link found |
-| [Labels](../../../empty/.build/Becoming/Labels.lean) · [Names](lean-declarations/other.md#module-5bdce4609d76) | 19 | 4 | No direct documentation link found |
-| [LastChange](../../../empty/.build/Becoming/LastChange.lean) · [Names](lean-declarations/other.md#module-10d44b93b041) | 20 | 4 | No direct documentation link found |
-| [Lasting](../../../empty/.build/Becoming/Lasting.lean) · [Names](lean-declarations/other.md#module-0c915e9c7e16) | 89 | 22 | No direct documentation link found |
-| [LastingRuns](../../../empty/.build/Becoming/LastingRuns.lean) · [Names](lean-declarations/other.md#module-fe5533ed4475) | 18 | 0 | No direct documentation link found |
-| [LawAlongRun](../../../empty/.build/Becoming/LawAlongRun.lean) · [Names](lean-declarations/other.md#module-9d504f6e93b8) | 59 | 26 | No direct documentation link found |
-| [Laws](../../../empty/.build/Becoming/Laws.lean) · [Names](lean-declarations/other.md#module-ce415fa8a49c) | 3 | 6 | No direct documentation link found |
-| [Learnable](../../../empty/.build/Becoming/Learnable.lean) · [Names](lean-declarations/other.md#module-52eacd749030) | 17 | 6 | No direct documentation link found |
-| [LearnableRuns](../../../empty/.build/Becoming/LearnableRuns.lean) · [Names](lean-declarations/other.md#module-b49ab984dcf3) | 22 | 7 | No direct documentation link found |
-| [LearnedGrouping](../../../empty/.build/Becoming/LearnedGrouping.lean) · [Names](lean-declarations/other.md#module-a6e4edffcadb) | 41 | 26 | No direct documentation link found |
-| [Learning](../../../empty/.build/Becoming/Learning.lean) · [Names](lean-declarations/other.md#module-71dbeeec9ad6) | 78 | 32 | No direct documentation link found |
-| [LearningRuns](../../../empty/.build/Becoming/LearningRuns.lean) · [Names](lean-declarations/other.md#module-248ba3b089b3) | 29 | 3 | No direct documentation link found |
-| [LeastLoss](../../../empty/.build/Becoming/LeastLoss.lean) · [Names](lean-declarations/other.md#module-674d8a53fe7e) | 51 | 16 | No direct documentation link found |
-| [LevelCoupling](../../../empty/.build/Becoming/LevelCoupling.lean) · [Names](lean-declarations/other.md#module-57628c8e69dd) | 30 | 11 | No direct documentation link found |
-| [Lexical](../../../empty/.build/Becoming/Lexical.lean) · [Names](lean-declarations/other.md#module-0221e08ab6d2) | 39 | 19 | No direct documentation link found |
-| [Lifting](../../../empty/.build/Becoming/Lifting.lean) · [Names](lean-declarations/other.md#module-4725dac867b1) | 6 | 8 | No direct documentation link found |
-| [Likeness](../../../empty/.build/Becoming/Likeness.lean) · [Names](lean-declarations/other.md#module-d63a9609b4bc) | 176 | 53 | No direct documentation link found |
-| [LimitVerification](../../../empty/.build/Becoming/LimitVerification.lean) · [Names](lean-declarations/other.md#module-800e0e21056b) | 63 | 32 | No direct documentation link found |
-| [ListFootprints](../../../empty/.build/Becoming/ListFootprints.lean) · [Names](lean-declarations/other.md#module-15634115e894) | 9 | 2 | No direct documentation link found |
-| [ListedWebs](../../../empty/.build/Becoming/ListedWebs.lean) · [Names](lean-declarations/other.md#module-184f51905d5d) | 6 | 0 | No direct documentation link found |
-| [Listing](../../../empty/.build/Becoming/Listing.lean) · [Names](lean-declarations/other.md#module-ecd023d3380c) | 89 | 17 | No direct documentation link found |
-| [ListingRefutations](../../../empty/.build/Becoming/ListingRefutations.lean) · [Names](lean-declarations/other.md#module-ac0abe00f250) | 27 | 0 | No direct documentation link found |
-| [LocalUnits](../../../empty/.build/Becoming/LocalUnits.lean) · [Names](lean-declarations/other.md#module-98571538fbb7) | 45 | 15 | No direct documentation link found |
-| [Locality](../../../empty/.build/Becoming/Locality.lean) · [Names](lean-declarations/other.md#module-636d5e9dab79) | 44 | 7 | No direct documentation link found |
-| [LoopReturn](../../../empty/.build/Becoming/LoopReturn.lean) · [Names](lean-declarations/other.md#module-9a59330edece) | 77 | 12 | No direct documentation link found |
-| [Loops](../../../empty/.build/Becoming/Loops.lean) · [Names](lean-declarations/other.md#module-b649f52b73a9) | 106 | 24 | No direct documentation link found |
-| [LossMatching](../../../empty/.build/Becoming/LossMatching.lean) · [Names](lean-declarations/other.md#module-35dbd80f6d80) | 29 | 8 | No direct documentation link found |
-| [MatchedCourses](../../../empty/.build/Becoming/MatchedCourses.lean) · [Names](lean-declarations/other.md#module-10985a96c070) | 33 | 26 | No direct documentation link found |
-| [Mechanism](../../../empty/.build/Becoming/Mechanism.lean) · [Names](lean-declarations/other.md#module-4e557c76158d) | 30 | 15 | No direct documentation link found |
-| [Metaethics](../../../empty/.build/Becoming/Metaethics.lean) · [Names](lean-declarations/other.md#module-cc32985a0553) | 11 | 28 | No direct documentation link found |
-| [MoveFormation](../../../empty/.build/Becoming/MoveFormation.lean) · [Names](lean-declarations/other.md#module-53febee3e0fa) | 55 | 23 | No direct documentation link found |
-| [MoveOutcomeProcesses](../../../empty/.build/Becoming/MoveOutcomeProcesses.lean) · [Names](lean-declarations/other.md#module-f98730cc728a) | 28 | 6 | No direct documentation link found |
-| [MutualDependence](../../../empty/.build/Becoming/MutualDependence.lean) · [Names](lean-declarations/other.md#module-efa33bcfc1d3) | 30 | 9 | No direct documentation link found |
-| [Narrowing](../../../empty/.build/Becoming/Narrowing.lean) · [Names](lean-declarations/other.md#module-e6359b96afa3) | 60 | 19 | No direct documentation link found |
-| [NarrowingRuns](../../../empty/.build/Becoming/NarrowingRuns.lean) · [Names](lean-declarations/other.md#module-9728e84a0a11) | 11 | 3 | No direct documentation link found |
-| [Novelty](../../../empty/.build/Becoming/Novelty.lean) · [Names](lean-declarations/other.md#module-854de11d691a) | 19 | 1 | No direct documentation link found |
-| [Observation](../../../empty/.build/Becoming/Observation.lean) · [Names](lean-declarations/other.md#module-2b2ba6c56879) | 27 | 5 | No direct documentation link found |
-| [OneStep](../../../empty/.build/Becoming/OneStep.lean) · [Names](lean-declarations/other.md#module-0596a8c9c4e3) | 305 | 90 | No direct documentation link found |
-| [Onward](../../../empty/.build/Becoming/Onward.lean) · [Names](lean-declarations/other.md#module-2f7cfa0c6653) | 28 | 12 | No direct documentation link found |
-| [Openness](../../../empty/.build/Becoming/Openness.lean) · [Names](lean-declarations/other.md#module-50d0c83c792d) | 79 | 28 | No direct documentation link found |
-| [OrderNormal](../../../empty/.build/Becoming/OrderNormal.lean) · [Names](lean-declarations/other.md#module-7a3e89fe1e12) | 101 | 26 | No direct documentation link found |
-| [OwnWidening](../../../empty/.build/Becoming/OwnWidening.lean) · [Names](lean-declarations/other.md#module-700982a6ffc1) | 15 | 10 | No direct documentation link found |
-| [Pace](../../../empty/.build/Becoming/Pace.lean) · [Names](lean-declarations/other.md#module-2ab468580d4f) | 31 | 10 | No direct documentation link found |
-| [ParityReadings](../../../empty/.build/Becoming/ParityReadings.lean) · [Names](lean-declarations/other.md#module-a3ce0400802f) | 10 | 3 | No direct documentation link found |
-| [PartialReadout](../../../empty/.build/Becoming/PartialReadout.lean) · [Names](lean-declarations/other.md#module-1085f5815e38) | 25 | 17 | No direct documentation link found |
-| [Parting](../../../empty/.build/Becoming/Parting.lean) · [Names](lean-declarations/other.md#module-ce2e808e86a1) | 42 | 19 | No direct documentation link found |
-| [PatternPassing](../../../empty/.build/Becoming/PatternPassing.lean) · [Names](lean-declarations/other.md#module-74d3580e8cf8) | 19 | 10 | No direct documentation link found |
-| [Persistence](../../../empty/.build/Becoming/Persistence.lean) · [Names](lean-declarations/other.md#module-a68a4dfa77bf) | 70 | 19 | No direct documentation link found |
-| [PlaceTransitionNets](../../../empty/.build/Becoming/PlaceTransitionNets.lean) · [Names](lean-declarations/other.md#module-4888392020fa) | 63 | 33 | No direct documentation link found |
-| [PoolResponse](../../../empty/.build/Becoming/PoolResponse.lean) · [Names](lean-declarations/other.md#module-a26e35a30eaa) | 18 | 3 | No direct documentation link found |
-| [PooledEnvelopes](../../../empty/.build/Becoming/PooledEnvelopes.lean) · [Names](lean-declarations/other.md#module-673f84b5991d) | 44 | 25 | No direct documentation link found |
-| [Population](../../../empty/.build/Becoming/Population.lean) · [Names](lean-declarations/other.md#module-edb17aee1ed9) | 124 | 23 | No direct documentation link found |
-| [Postponement](../../../empty/.build/Becoming/Postponement.lean) · [Names](lean-declarations/other.md#module-617d0a79e983) | 16 | 1 | No direct documentation link found |
-| [Prelude](../../../empty/.build/Becoming/Prelude.lean) · [Names](lean-declarations/other.md#module-a0112c0efc6a) | 119 | 10 | No direct documentation link found |
-| [Premises](../../../empty/.build/Becoming/Premises.lean) · [Names](lean-declarations/other.md#module-4dcd4d5e7d65) | 61 | 63 | No direct documentation link found |
-| [Presentations](../../../empty/.build/Becoming/Presentations.lean) · [Names](lean-declarations/other.md#module-7f215eb0ce28) | 35 | 16 | No direct documentation link found |
-| [ProfileReach](../../../empty/.build/Becoming/ProfileReach.lean) · [Names](lean-declarations/other.md#module-91fe93eec050) | 16 | 17 | No direct documentation link found |
-| [ProjectedLaws](../../../empty/.build/Becoming/ProjectedLaws.lean) · [Names](lean-declarations/other.md#module-4f22ec4f2d06) | 28 | 15 | No direct documentation link found |
-| [Propagation](../../../empty/.build/Becoming/Propagation.lean) · [Names](lean-declarations/other.md#module-a8da15ddf411) | 75 | 21 | No direct documentation link found |
-| [PropositionIdentity](../../../empty/.build/Becoming/PropositionIdentity.lean) · [Names](lean-declarations/other.md#module-d71701cc979a) | 12 | 10 | No direct documentation link found |
-| [Quantum](../../../empty/.build/Becoming/Quantum.lean) · [Names](lean-declarations/other.md#module-144e81c2ffaa) | 35 | 32 | No direct documentation link found |
-| [Ranking](../../../empty/.build/Becoming/Ranking.lean) · [Names](lean-declarations/other.md#module-0521d26c5250) | 38 | 23 | No direct documentation link found |
-| [Reading](../../../empty/.build/Becoming/Reading.lean) · [Names](lean-declarations/other.md#module-b4c8b0ae5fff) | 28 | 16 | No direct documentation link found |
-| [Readings](../../../empty/.build/Becoming/Readings.lean) · [Names](lean-declarations/other.md#module-bfd618586a4b) | 11 | 3 | No direct documentation link found |
-| [Readout](../../../empty/.build/Becoming/Readout.lean) · [Names](lean-declarations/other.md#module-a9ad7303bdee) | 22 | 13 | No direct documentation link found |
-| [Reconfiguration](../../../empty/.build/Becoming/Reconfiguration.lean) · [Names](lean-declarations/other.md#module-844bc45f6740) | 51 | 29 | No direct documentation link found |
-| [Recurrence](../../../empty/.build/Becoming/Recurrence.lean) · [Names](lean-declarations/other.md#module-27273f3b1eae) | 71 | 21 | No direct documentation link found |
-| [ReferencePlan](../../../empty/.build/Becoming/ReferencePlan.lean) · [Names](lean-declarations/other.md#module-4633001bee13) | 55 | 26 | No direct documentation link found |
-| [ReferencePlanTraces](../../../empty/.build/Becoming/ReferencePlanTraces.lean) · [Names](lean-declarations/other.md#module-4bb05cf41d14) | 55 | 4 | No direct documentation link found |
-| [Refinement](../../../empty/.build/Becoming/Refinement.lean) · [Names](lean-declarations/other.md#module-ea2355591c0d) | 10 | 2 | No direct documentation link found |
-| [Regions](../../../empty/.build/Becoming/Regions.lean) · [Names](lean-declarations/other.md#module-9dcb789aa17a) | 20 | 8 | No direct documentation link found |
-| [Regrouping](../../../empty/.build/Becoming/Regrouping.lean) · [Names](lean-declarations/other.md#module-5ec025e2b81f) | 24 | 9 | No direct documentation link found |
-| [RegroupingSelection](../../../empty/.build/Becoming/RegroupingSelection.lean) · [Names](lean-declarations/other.md#module-c3b245511758) | 11 | 0 | No direct documentation link found |
-| [Regulation](../../../empty/.build/Becoming/Regulation.lean) · [Names](lean-declarations/other.md#module-fa4c058a961f) | 107 | 28 | No direct documentation link found |
-| [Rejoining](../../../empty/.build/Becoming/Rejoining.lean) · [Names](lean-declarations/other.md#module-b60b17f6fbb6) | 20 | 12 | No direct documentation link found |
-| [RelativePosition](../../../empty/.build/Becoming/RelativePosition.lean) · [Names](lean-declarations/other.md#module-d2864be5e341) | 39 | 19 | No direct documentation link found |
-| [Relevance](../../../empty/.build/Becoming/Relevance.lean) · [Names](lean-declarations/other.md#module-af6ee9e86a35) | 33 | 8 | No direct documentation link found |
-| [Remainder](../../../empty/.build/Becoming/Remainder.lean) · [Names](lean-declarations/other.md#module-818a2e291dda) | 56 | 8 | No direct documentation link found |
-| [Renewal](../../../empty/.build/Becoming/Renewal.lean) · [Names](lean-declarations/other.md#module-ad31d488cd17) | 1 | 4 | No direct documentation link found |
-| [RenewalBound](../../../empty/.build/Becoming/RenewalBound.lean) · [Names](lean-declarations/other.md#module-b72ffa1899e7) | 21 | 4 | No direct documentation link found |
-| [RenewalFlow](../../../empty/.build/Becoming/RenewalFlow.lean) · [Names](lean-declarations/other.md#module-8c28cbee480e) | 28 | 5 | No direct documentation link found |
-| [Reordering](../../../empty/.build/Becoming/Reordering.lean) · [Names](lean-declarations/other.md#module-ae3bf1f89f51) | 172 | 43 | No direct documentation link found |
-| [Reproduction](../../../empty/.build/Becoming/Reproduction.lean) · [Names](lean-declarations/other.md#module-d410cbecb05e) | 50 | 22 | No direct documentation link found |
-| [Reserve](../../../empty/.build/Becoming/Reserve.lean) · [Names](lean-declarations/other.md#module-b77fcb628edf) | 84 | 37 | No direct documentation link found |
-| [Resolution](../../../empty/.build/Becoming/Resolution.lean) · [Names](lean-declarations/other.md#module-48bc28f8849a) | 203 | 54 | No direct documentation link found |
-| [Response](../../../empty/.build/Becoming/Response.lean) · [Names](lean-declarations/other.md#module-930abae1fac3) | 29 | 17 | No direct documentation link found |
-| [ResponseLearning](../../../empty/.build/Becoming/ResponseLearning.lean) · [Names](lean-declarations/other.md#module-a6bcce06592c) | 62 | 22 | No direct documentation link found |
-| [Restoration](../../../empty/.build/Becoming/Restoration.lean) · [Names](lean-declarations/other.md#module-a7fa8ace69fe) | 27 | 9 | No direct documentation link found |
-| [Retaining](../../../empty/.build/Becoming/Retaining.lean) · [Names](lean-declarations/other.md#module-24e45b0db611) | 34 | 15 | No direct documentation link found |
-| [Retrodiction](../../../empty/.build/Becoming/Retrodiction.lean) · [Names](lean-declarations/other.md#module-bdabba2d71a0) | 16 | 7 | No direct documentation link found |
-| [Revision](../../../empty/.build/Becoming/Revision.lean) · [Names](lean-declarations/other.md#module-817a6ba68265) | 33 | 13 | No direct documentation link found |
-| [Roles](../../../empty/.build/Becoming/Roles.lean) · [Names](lean-declarations/other.md#module-efde9350d276) | 142 | 43 | No direct documentation link found |
-| [RouteFormation](../../../empty/.build/Becoming/RouteFormation.lean) · [Names](lean-declarations/other.md#module-1682d86d9b86) | 67 | 32 | No direct documentation link found |
-| [RouteTraces](../../../empty/.build/Becoming/RouteTraces.lean) · [Names](lean-declarations/other.md#module-e8eb720c8a18) | 6 | 0 | No direct documentation link found |
-| [Routes](../../../empty/.build/Becoming/Routes.lean) · [Names](lean-declarations/other.md#module-ca569f218bd4) | 28 | 9 | No direct documentation link found |
-| [RuleCapture](../../../empty/.build/Becoming/RuleCapture.lean) · [Names](lean-declarations/other.md#module-40f68477d1c0) | 51 | 21 | No direct documentation link found |
-| [RuleHandoff](../../../empty/.build/Becoming/RuleHandoff.lean) · [Names](lean-declarations/other.md#module-184368954bdc) | 67 | 25 | No direct documentation link found |
-| [Runaway](../../../empty/.build/Becoming/Runaway.lean) · [Names](lean-declarations/other.md#module-4048b7be441a) | 13 | 4 | No direct documentation link found |
-| [Runs](../../../empty/.build/Becoming/Runs.lean) · [Names](lean-declarations/other.md#module-2575ea6bcda7) | 17 | 11 | No direct documentation link found |
-| [Sampling](../../../empty/.build/Becoming/Sampling.lean) · [Names](lean-declarations/other.md#module-57157ad21b63) | 88 | 26 | No direct documentation link found |
-| [ScopedReach](../../../empty/.build/Becoming/ScopedReach.lean) · [Names](lean-declarations/other.md#module-ccb38802af0d) | 15 | 9 | No direct documentation link found |
-| [ScoreRepresentation](../../../empty/.build/Becoming/ScoreRepresentation.lean) · [Names](lean-declarations/other.md#module-337f1e8634eb) | 16 | 10 | No direct documentation link found |
-| [SecuredContent](../../../empty/.build/Becoming/SecuredContent.lean) · [Names](lean-declarations/other.md#module-4bfd51480b3e) | 30 | 33 | No direct documentation link found |
-| [SeedReach](../../../empty/.build/Becoming/SeedReach.lean) · [Names](lean-declarations/other.md#module-191078911a6f) | 15 | 4 | No direct documentation link found |
-| [Seeking](../../../empty/.build/Becoming/Seeking.lean) · [Names](lean-declarations/other.md#module-cde59d86246c) | 13 | 3 | No direct documentation link found |
-| [SeekingRuns](../../../empty/.build/Becoming/SeekingRuns.lean) · [Names](lean-declarations/other.md#module-3285c16bcae3) | 7 | 0 | No direct documentation link found |
-| [Segmentation](../../../empty/.build/Becoming/Segmentation.lean) · [Names](lean-declarations/other.md#module-1225b43e2c8d) | 17 | 15 | No direct documentation link found |
-| [Selection](../../../empty/.build/Becoming/Selection.lean) · [Names](lean-declarations/other.md#module-f2c22ec3f9d8) | 74 | 26 | No direct documentation link found |
-| [SelectionGap](../../../empty/.build/Becoming/SelectionGap.lean) · [Names](lean-declarations/other.md#module-83e8e73fe93b) | 7 | 2 | No direct documentation link found |
-| [SelectionLevels](../../../empty/.build/Becoming/SelectionLevels.lean) · [Names](lean-declarations/other.md#module-81918080534c) | 21 | 10 | No direct documentation link found |
-| [SelectionPool](../../../empty/.build/Becoming/SelectionPool.lean) · [Names](lean-declarations/other.md#module-c08ed259a6c4) | 25 | 2 | No direct documentation link found |
-| [SelectionReach](../../../empty/.build/Becoming/SelectionReach.lean) · [Names](lean-declarations/other.md#module-c264aefe0db0) | 13 | 0 | No direct documentation link found |
-| [SelectionRuns](../../../empty/.build/Becoming/SelectionRuns.lean) · [Names](lean-declarations/other.md#module-9ada55f2ac10) | 7 | 0 | No direct documentation link found |
-| [SelectionTerm](../../../empty/.build/Becoming/SelectionTerm.lean) · [Names](lean-declarations/other.md#module-af021d82a5ca) | 67 | 22 | No direct documentation link found |
-| [Sensitivity](../../../empty/.build/Becoming/Sensitivity.lean) · [Names](lean-declarations/other.md#module-d26dbdd71beb) | 45 | 11 | No direct documentation link found |
-| [SensitivityWebs](../../../empty/.build/Becoming/SensitivityWebs.lean) · [Names](lean-declarations/other.md#module-8b80705cd57e) | 4 | 0 | No direct documentation link found |
-| [Settling](../../../empty/.build/Becoming/Settling.lean) · [Names](lean-declarations/other.md#module-91e84d72440c) | 26 | 9 | No direct documentation link found |
-| [SharedCodes](../../../empty/.build/Becoming/SharedCodes.lean) · [Names](lean-declarations/other.md#module-55558f4b688b) | 112 | 44 | No direct documentation link found |
-| [Significance](../../../empty/.build/Becoming/Significance.lean) · [Names](lean-declarations/other.md#module-567801e3c8ed) | 16 | 1 | No direct documentation link found |
-| [SituationTraces](../../../empty/.build/Becoming/SituationTraces.lean) · [Names](lean-declarations/other.md#module-ce258754bc60) | 20 | 3 | No direct documentation link found |
-| [Situations](../../../empty/.build/Becoming/Situations.lean) · [Names](lean-declarations/other.md#module-8f620d67d945) | 37 | 15 | No direct documentation link found |
-| [Space](../../../empty/.build/Becoming/Space.lean) · [Names](lean-declarations/other.md#module-88bcabc80d28) | 64 | 63 | No direct documentation link found |
-| [Standing](../../../empty/.build/Becoming/Standing.lean) · [Names](lean-declarations/other.md#module-52bb2d57f0fb) | 44 | 15 | No direct documentation link found |
-| [Standpoints](../../../empty/.build/Becoming/Standpoints.lean) · [Names](lean-declarations/other.md#module-9df07df36fed) | 21 | 13 | No direct documentation link found |
-| [Stock](../../../empty/.build/Becoming/Stock.lean) · [Names](lean-declarations/other.md#module-059c5ec7a6a8) | 46 | 12 | No direct documentation link found |
-| [StrengthFlows](../../../empty/.build/Becoming/StrengthFlows.lean) · [Names](lean-declarations/other.md#module-c1e69495d23d) | 12 | 1 | No direct documentation link found |
-| [StrictTransport](../../../empty/.build/Becoming/StrictTransport.lean) · [Names](lean-declarations/other.md#module-9206cdfc7eae) | 18 | 7 | No direct documentation link found |
-| [Stuttering](../../../empty/.build/Becoming/Stuttering.lean) · [Names](lean-declarations/other.md#module-69687233c923) | 77 | 3 | No direct documentation link found |
-| [Substitution](../../../empty/.build/Becoming/Substitution.lean) · [Names](lean-declarations/other.md#module-dc7d60f14479) | 12 | 12 | No direct documentation link found |
-| [Succession](../../../empty/.build/Becoming/Succession.lean) · [Names](lean-declarations/other.md#module-176e5b24b7b7) | 6 | 3 | No direct documentation link found |
-| [SummaryFutures](../../../empty/.build/Becoming/SummaryFutures.lean) · [Names](lean-declarations/other.md#module-7ef2e651473b) | 3 | 2 | No direct documentation link found |
-| [Tail](../../../empty/.build/Becoming/Tail.lean) · [Names](lean-declarations/other.md#module-822916d16612) | 49 | 20 | No direct documentation link found |
-| [Testing](../../../empty/.build/Becoming/Testing.lean) · [Names](lean-declarations/other.md#module-33d02180f7dd) | 85 | 57 | No direct documentation link found |
-| [Thresholds](../../../empty/.build/Becoming/Thresholds.lean) · [Names](lean-declarations/other.md#module-6f13614d7b58) | 38 | 7 | No direct documentation link found |
-| [TimedResponse](../../../empty/.build/Becoming/TimedResponse.lean) · [Names](lean-declarations/other.md#module-faad2e64e8a1) | 22 | 8 | No direct documentation link found |
-| [Tolerance](../../../empty/.build/Becoming/Tolerance.lean) · [Names](lean-declarations/other.md#module-989cb5bac411) | 60 | 16 | No direct documentation link found |
-| [Tower](../../../empty/.build/Becoming/Tower.lean) · [Names](lean-declarations/other.md#module-24956b159c93) | 6 | 2 | No direct documentation link found |
-| [Transactions](../../../empty/.build/Becoming/Transactions.lean) · [Names](lean-declarations/other.md#module-58044e75be0d) | 59 | 32 | No direct documentation link found |
-| [Transmission](../../../empty/.build/Becoming/Transmission.lean) · [Names](lean-declarations/other.md#module-9ea456dedd40) | 64 | 19 | No direct documentation link found |
-| [TreeSearch](../../../empty/.build/Becoming/TreeSearch.lean) · [Names](lean-declarations/other.md#module-a23d196d2060) | 34 | 22 | No direct documentation link found |
-| [TypicalRuns](../../../empty/.build/Becoming/TypicalRuns.lean) · [Names](lean-declarations/other.md#module-4d3607cdebb8) | 21 | 4 | No direct documentation link found |
-| [Typicality](../../../empty/.build/Becoming/Typicality.lean) · [Names](lean-declarations/other.md#module-b9d6f98c6fb8) | 40 | 12 | No direct documentation link found |
-| [Undecided](../../../empty/.build/Becoming/Undecided.lean) · [Names](lean-declarations/other.md#module-0fca753954ff) | 63 | 25 | No direct documentation link found |
-| [Unfolding](../../../empty/.build/Becoming/Unfolding.lean) · [Names](lean-declarations/other.md#module-833318894871) | 31 | 8 | No direct documentation link found |
-| [Units](../../../empty/.build/Becoming/Units.lean) · [Names](lean-declarations/other.md#module-a1a4023f29c4) | 32 | 10 | No direct documentation link found |
-| [Unrolling](../../../empty/.build/Becoming/Unrolling.lean) · [Names](lean-declarations/other.md#module-f75daca2315e) | 15 | 7 | No direct documentation link found |
-| [ValuationFrames](../../../empty/.build/Becoming/ValuationFrames.lean) · [Names](lean-declarations/other.md#module-9d292fb45e1f) | 23 | 6 | No direct documentation link found |
-| [Verification](../../../empty/.build/Becoming/Verification.lean) · [Names](lean-declarations/other.md#module-81ec5203e3c8) | 87 | 18 | No direct documentation link found |
-| [Viability](../../../empty/.build/Becoming/Viability.lean) · [Names](lean-declarations/other.md#module-ca1602648f0f) | 24 | 8 | No direct documentation link found |
-| [Weighted](../../../empty/.build/Becoming/Weighted.lean) · [Names](lean-declarations/other.md#module-f5cb6e56c294) | 38 | 22 | No direct documentation link found |
-| [WeightedTraces](../../../empty/.build/Becoming/WeightedTraces.lean) · [Names](lean-declarations/other.md#module-5089cdcdf824) | 6 | 2 | No direct documentation link found |
-| [Weightings](../../../empty/.build/Becoming/Weightings.lean) · [Names](lean-declarations/other.md#module-5fbea0aebce3) | 69 | 31 | No direct documentation link found |
-| [Wholes](../../../empty/.build/Becoming/Wholes.lean) · [Names](lean-declarations/other.md#module-0e3a69f67a65) | 36 | 15 | No direct documentation link found |
-| [Withholding](../../../empty/.build/Becoming/Withholding.lean) · [Names](lean-declarations/other.md#module-59a43a5a29d1) | 38 | 12 | No direct documentation link found |
-| [WitnessRefinement](../../../empty/.build/Becoming/WitnessRefinement.lean) · [Names](lean-declarations/other.md#module-5f3ea24c4e6c) | 44 | 20 | No direct documentation link found |
-| [WitnessRefinementRuns](../../../empty/.build/Becoming/WitnessRefinementRuns.lean) · [Names](lean-declarations/other.md#module-5025561e1a2f) | 21 | 4 | No direct documentation link found |
-| [Witnesses](../../../empty/.build/Becoming/Witnesses.lean) · [Names](lean-declarations/other.md#module-7c16e6276131) | 0 | 9 | No direct documentation link found |
-| [World](../../../empty/.build/Becoming/World.lean) · [Names](lean-declarations/other.md#module-e062f9de2a44) | 2 | 13 | No direct documentation link found |
-| [BecomingAxiomAudit](../../../empty/.build/BecomingAxiomAudit.lean) · [Names](lean-declarations/other.md#module-0aaa39c8dbe3) | 0 | 0 | No direct documentation link found |
-| [GenerativeCore](../../../empty/.build/GenerativeCore.lean) · [Names](lean-declarations/other.md#module-46fbea219db4) | 23 | 5 | No direct documentation link found |
-| [InquirySufficiency](../../../empty/.build/InquirySufficiency.lean) · [Names](lean-declarations/other.md#module-819b81d78519) | 16 | 16 | No direct documentation link found |
-| [RelationalRenewal](../../../empty/.build/RelationalRenewal.lean) · [Names](lean-declarations/other.md#module-2e88dbd38c80) | 35 | 25 | No direct documentation link found |
 | [Driver](../../../experiments/integrated-correction/general-framework/generative-basis/ecological-selection/network-comparison/Driver.lean) · [Names](lean-declarations/other.md#module-db86581947bf) | 0 | 5 | [Package notes](../../../experiments/integrated-correction/general-framework/generative-basis/ecological-selection/network-comparison/README.md) |
 | [FiniteSupportObstruction](../../../experiments/market-generativity/formal/FiniteSupportObstruction.lean) · [Names](lean-declarations/other.md#module-805a098f4dbd) | 17 | 5 | [Study](../../../_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-INTERNET-DEGENERATION.md) · [Package notes](../../../experiments/market-generativity/formal/README.md) |
 | [MarketGenerativity](../../../experiments/market-generativity/formal/MarketGenerativity.lean) · [Names](lean-declarations/other.md#module-e2e5c347dc5a) | 39 | 32 | [Theory](../history/ARGUMENTS-M-Z-2026-10-08.md) · [Study](../../../_process/research/2026-10-05-generative-foundation-review/foundation-assessment/MARKET-LEAN-REVIEW.md) · [Package notes](../../../experiments/market-generativity/formal/README.md) |

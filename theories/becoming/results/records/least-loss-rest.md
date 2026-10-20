@@ -50,7 +50,7 @@ Canonical source: [LeastLoss.lean](../../../../experiments/integrated-correction
 <a id="next--下一步"></a>
 ## Next
 
-Flow and World with levels in any amounts, restating the rest family there with the least loss, or a finite reading (record rest-from-a-finite-reading), as the premise of dissipation; an independent review.
+The other laws of flows and worlds over any amounts where a law needs more than the order of its amounts; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -75,8 +75,9 @@ The outside review of 19 October 2026 (R20) and an outside reader named the rest
 - related, not a proved adapter: [more-needs-renewers](more-needs-renewers.md). Its law that more without end needs replenishment without bound is the whole-number instance of the law over Archimedean amounts with a least take stated here (R41).
 - related, not a proved adapter: [rest-from-a-finite-reading](rest-from-a-finite-reading.md). Read off finitely many configurations, rest needs no least loss.
 - related, not a proved adapter: [merge-of-a-part-kept-by-the-rest](merge-of-a-part-kept-by-the-rest.md). The converse of Law.loss_needs_merge: inside a whole that merges nothing, a part's merge is kept by the rest.
+- related, not a proved adapter: [rest-theorem-in-any-amounts](rest-theorem-in-any-amounts.md). The rest theorem of worlds over any amounts, read finitely.
 
-**Used by:** [rest-from-a-finite-reading](rest-from-a-finite-reading.md)
+**Used by:** [rest-from-a-finite-reading](rest-from-a-finite-reading.md) · [rest-theorem-in-any-amounts](rest-theorem-in-any-amounts.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -108,6 +109,7 @@ The outside review of 19 October 2026 (R20) and an outside reader named the rest
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T104831.571462Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json) | — |
 
 Aliases: `least loss`, `最小损失`, `approach to rest`, `趋近停息`, `exponential relaxation`, `指数弛豫`, `rest over dense amounts`, `可稠密的量上的停息`, `geometric loss never rests`, `几何损失不停息`, `Becoming.Amounts.rests`, `Becoming.Amounts.rests_unrefuted`, `Becoming.Amounts.family_rests`, `Becoming.Halving.never_rests`, `Becoming.Layered.never_rests`, `Becoming.Amounts.approaches_rest`, `Becoming.Law.loss_needs_merge`
 
@@ -118,7 +120,7 @@ Aliases: `least loss`, `最小损失`, `approach to rest`, `趋近停息`, `expo
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Proof bindings (Dissipation.lean, Flow.lean, Recurrence.lean, Space.lean) rebound to core receipt 20261019T194851.524223Z. Re-pointed after reading the change: Dissipation.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Flow.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Recurrence.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; Space.lean, declarations, namespaces and uses renamed by the R30 table (one notion, one name); statements and proofs unchanged; THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Branching.lean, Openness.lean, Prelude.lean, Recurrence.lean, Space.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Branching.lean, takes as its final section RecurrenceRuns, the module reading it, folded in with declarations, names and statements unchanged; pure forwarders and copies removed where it had them; Openness.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Prelude.lean, twelve statements stated in two or more modules each, stated here once under the name kept; Recurrence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Space.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 20 October 2026, R41 (study section 235): a law added, more without end needs replenishment without bound over Archimedean amounts with a least take (Amounts.replenishment_unbounded), with the whole-number law as its instance and the counterexample with halving takes (Halving.takes_halve); related more-needs-renewers.
-- 2 rebinding entries (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](least-loss-rest.json).
+- 3 rebinding entries (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](least-loss-rest.json).
 
 <a id="earlier-text--早期文本"></a>
 ### Earlier text
@@ -127,4 +129,4 @@ Aliases: `least loss`, `最小损失`, `approach to rest`, `趋近停息`, `expo
 
 </details>
 
-Documentary review UTC: `2026-10-20T10:51:16+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-20T13:33:42+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -1,0 +1,43 @@
+{
+ "records": 6,
+ "apply": true,
+ "by_record": {
+  "graded-significance-and-priority": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md"
+   ],
+   "rebound": []
+  },
+  "merge-of-a-part-kept-by-the-rest": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md"
+   ],
+   "rebound": []
+  },
+  "rest-from-a-finite-reading": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md"
+   ],
+   "rebound": []
+  },
+  "the-rest-outruns-the-renewal": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md"
+   ],
+   "rebound": []
+  },
+  "what-the-step-across-standpoints-reaches": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md"
+   ],
+   "rebound": []
+  },
+  "widening-as-what-every-weighting-ranks": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

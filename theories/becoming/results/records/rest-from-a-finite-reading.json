@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T10:51:16+00:00",
+  "reviewed_at_utc": "2026-10-20T13:33:42+00:00",
   "statement": {
     "en": "Read off configurations a list holds, an amount that does not rise falls strictly at most as often as the list is long, over any amounts: no least loss, Archimedean property, totality or decision. Falls that recur need a reading no list holds.",
     "zh": "读自一个列表所容纳的构形、不上升的量，严格下降的次数至多是列表的长度，对任何量成立：不需要最小损失、阿基米德性质、全序或判定。反复出现的下降需要没有列表容纳的读取。"
@@ -83,8 +83,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T104831.571462Z）：Becoming.LeastLoss 的声明公理报告为空；检查器核验核心的纯粹性。在一个会话中构建与审查，没有另外的审查者；作者自审见研究第 255 节；构建之前的文献检查是意义审查的最小损失一节；未经人独立审查。"
   },
   "next_delta": {
-    "en": "Flow, web and world with levels read off finitely many configurations, so that the rest theorem holds over any amounts there; Recurrence's Marks law derived as a case (board rule 9) at that module's next change; an independent review.",
-    "zh": "水平读自有限多个构形的流、依存网与世界，使停息定理在那里对任何量成立；在 Recurrence 下一次改动时把其 Marks 规律作为特例推出（工作板规则 9）；独立审查。"
+    "en": "Recurrence's Marks law derived as a case (board rule 9) at that module's next change; an independent review.",
+    "zh": "在 Recurrence 下一次改动时把其 Marks 规律作为特例推出（工作板规则 9）；独立审查。"
   },
   "correspondence": {
     "en": "The pigeonhole principle, and termination of a ranking function on a finite state space (Floyd 1967). Physically: where a bounded system has finitely many distinguishable states at the resolution an amount is read, a function of the state that never rises strictly falls only finitely often, with no floor on the size of a fall; exponential relaxation without end needs ever finer distinctions. Reading (the AI's): what the whole numbers carried in the rest family can be carried instead by finitely many configurations read.",
@@ -170,6 +170,13 @@
         "en": "There physical premises give a least loss; here finitely many configurations make it unnecessary.",
         "zh": "那里物理前提给出最小损失；这里有限多个构形使它不必要。"
       }
+    },
+    {
+      "id": "rest-theorem-in-any-amounts",
+      "detail": {
+        "en": "The rest theorem of worlds over any amounts, read finitely.",
+        "zh": "任何量上世界的停息定理，有限地读取。"
+      }
     }
   ],
   "references": [
@@ -181,9 +188,12 @@
         "Becoming.Amounts.falls_within_reading",
         "Becoming.Amounts.rests_of_finite_reading",
         "Becoming.Branching.rests_along_run",
-        "Becoming.Halving.stock_unlisted"
+        "Becoming.Halving.stock_unlisted",
+        "Becoming.Amounts.rests_unrefuted_of_finite_reading",
+        "Becoming.Amounts.extend_falls",
+        "Becoming.Amounts.from_start"
       ],
-      "sha256": "0cae4b8a1e5083af5c86c801ed33922101c81ff697f910e659eec1a6e868412e"
+      "sha256": "fbd8477b11994153d7acb2d0d875c9167f0c7950c7cb5cdfc0107035c861b9fc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -203,23 +213,28 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "318b08913e7acfaf6992aa220dd0626814d83f87b9ae13dbb42e38368819d40b"
+      "sha256": "deade51c7ec6d0285ba8f98975caefd3605c20531e7a4565ed70f14e21475c44"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
       "role": "review",
-      "sha256": "f81f12f9d0bbd769a06c11a472dae86704c6e00bdaf72cbeb255068675a86fb5"
+      "sha256": "6ec8b8afbf1c7720cd1f82ab7b9fa07e8a91340f1a531696f5b5fbd83cacf346"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "a0cb65122fdf607bea001aa1d0061c416623e23cba907486fc9f7a5492f56288"
+      "sha256": "01b6d51ca775420a7abac862c83439dc68f1d7ca10839021d0f25ff4deef57a1"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
+      "role": "receipt",
+      "sha256": "8854e4c1a91979fbe1e87781e6c36ed8dad448d481b7c97b8bde443463df978a"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T104831.571462Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -229,6 +244,10 @@
     {
       "en": "20 October 2026: added (LC1), section 8.1 item 6: whether the least loss can be derived; study section 255.",
       "zh": "2026年10月20日：新增（LC1），第 8.1 节第 6 项：最小损失能否推出；研究第 255 节。"
+    },
+    {
+      "en": "20 October 2026, LC2: the law generalized below (board rule 9): the list need hold the configurations only from T on, and Amounts.rests_unrefuted_of_finite_reading states the stronger form, with the amount's not rising and the falls only not refuted, from which rests_of_finite_reading follows; falls_within_reading takes the same premises; the rest theorem of worlds over any amounts is built on it (record rest-theorem-in-any-amounts). The proof binding re-pointed to receipt 20261020T133130.717227Z after reading the change; the statement is unchanged, the declarations gain the unrefuted form; study section 267.",
+      "zh": "2026年10月20日，LC2：规律向下推广（工作板规则 9）：列表只需从 T 起容纳构形，Amounts.rests_unrefuted_of_finite_reading 陈述更强的形式，量不上升与下降都只需不被否证，rests_of_finite_reading 由之得出；falls_within_reading 取同样的前提；任何量上世界的停息定理建立其上（记录 rest-theorem-in-any-amounts）。阅读改动后证明绑定改指回执 20261020T133130.717227Z；陈述不变，声明增加不可否证的形式；研究第 267 节。"
     }
   ]
 }

@@ -53,7 +53,9 @@ dense, with what the whole numbers supplied named as two premises.
 * **Rest from a finite reading.** Where a list holds the configurations an amount is read off,
   steps across which it falls strictly do not recur, and of any `l.length + 1` steps not every one
   falls (`Amounts.rests_of_finite_reading`, `Amounts.falls_within_reading`), over any amounts: no
-  least loss, no Archimedean property, no totality and no decision. A strict fall leaves a
+  least loss, no Archimedean property, no totality and no decision; with the amount's not rising
+  and the falls only not refuted, that the falls stop cannot be refuted
+  (`Amounts.rests_unrefuted_of_finite_reading`). A strict fall leaves a
   configuration the amount never reads again (pigeonhole, `revisits_within`). So falls that recur
   need a reading no list holds, as the halving stock's values (`Halving.stock_unlisted`). Along a
   run of every process held by a list (`Branching.rests_along_run`), a run's falls come to rest,
@@ -76,9 +78,9 @@ given (a least gap between the levels of a bounded quantised system, a threshold
 Landauer's bound `kT ln 2` per erased bit at a temperature bounded below are candidates), and
 fail, as in `Halving`, where losses shrink without a floor. Which physical systems have a least
 loss is not settled here; finite distinguishability (finitely many states read at a resolution) is the
-premise that makes it unnecessary. `Flow`, `Web` and `World` still read their levels in whole numbers;
-this module states the step on which the rest laws turn for any amounts, not those structures
-over any amounts. `Becoming.Resolution` reads the same boundary at a unit that may split, and its
+premise that makes it unnecessary. `Flow`, `Web` and `World` read their levels in whole numbers;
+`Becoming.InAmounts` reads a world's standings and exchanges in any amounts and states the rest
+theorem there from a finite reading (`World.InAmounts.rests_unrefuted_enclosed`). `Becoming.Resolution` reads the same boundary at a unit that may split, and its
 `Asymptote` and `Dwindle` are halving at a refining unit. Real numbers are not constructed in the
 core; dyadic amounts witness that density alone does not break the law. No ethical predicate,
 ranking or axiom occurs.
@@ -428,89 +430,108 @@ theorem rising_apart {f : Nat → Nat} {K : Nat} (rising : ∀ i, i < K → f i 
   | d + 1, within => Nat.le_trans (Nat.succ_le_succ (rising_apart rising i d
       (Nat.le_of_succ_le within))) (rising (i + d) within)
 
+/-- Steps rising one after another below `K`, the first from `T` on, are each from `T` on. -/
+theorem from_start {f : Nat → Nat} {K T : Nat} (start : T ≤ f 0)
+    (rising : ∀ i, i < K → f i < f (i + 1)) {n : Nat} (within : n ≤ K) : T ≤ f n :=
+  Nat.le_trans start (Nat.le_trans (Nat.le_add_right (f 0) n)
+    (Nat.le_trans (rising_apart rising 0 n (Nat.le_trans (Nat.le_of_eq (Nat.zero_add n)) within))
+      (Nat.le_of_eq (congrArg f (Nat.zero_add n)))))
+
 /-- **A finite reading counts the falls.** Read an amount `q` off configurations `g t` that a
-list `l` holds, and let it not rise across any step from `T` on. Then of any `l.length + 1`
-steps `f 0 < f 1 < ⋯` from `T` on, not every one is a step across which the amount falls
-strictly (is not, after the step, back within its value before): at most `l.length` steps fall
-strictly. No least loss is asked, no Archimedean property, no totality and no decision: a strict
-fall leaves a configuration the amount never reads again, and the list has room for only so many. -/
+list `l` holds from `T` on, and let it not rise across any step from `T` on, as far as can be
+refuted. Then of any `l.length + 1` steps `f 0 < f 1 < ⋯` from `T` on, not every one is a step
+across which the amount falls strictly (is not, after the step, back within its value before): at
+most `l.length` steps fall strictly. No least loss is asked, no Archimedean property, no totality
+and no decision: a strict fall leaves a configuration the amount never reads again, and the list
+has room for only so many. -/
 theorem falls_within_reading {g : Nat → S} {q : S → A} {l : List S} {T : Nat}
-    (held : ∀ t, g t ∈ l) (still : ∀ t, T ≤ t → M.le (q (g (t + 1))) (q (g t)))
+    (held : ∀ t, T ≤ t → g t ∈ l) (still : ∀ t, T ≤ t → ¬¬ M.le (q (g (t + 1))) (q (g t)))
     {f : Nat → Nat} (start : T ≤ f 0) (rising : ∀ i, i < l.length → f i < f (i + 1)) :
     ¬ ∀ i, i ≤ l.length → ¬ M.le (q (g (f i))) (q (g (f i + 1))) := fun falls =>
-  match revisits_within l (fun i => g (f i)) (fun n _ => held (f n)) with
+  match revisits_within l (fun i => g (f i))
+      (fun n within => held (f n) (from_start start rising within)) with
   | ⟨i, j, lt, le, same⟩ =>
     match gap_of_lt lt with
     | ⟨d, at_j⟩ =>
-      have from_i : T ≤ f i := Nat.le_trans start
-        (Nat.le_trans (Nat.le_add_left (f 0) i)
-          (Nat.le_trans (Nat.le_of_eq (Nat.add_comm i (f 0)))
-            (Nat.le_trans (rising_apart rising 0 i
-              (Nat.le_trans (Nat.le_of_eq (Nat.zero_add i)) (Nat.le_trans (Nat.le_of_lt lt) le)))
-              (Nat.le_of_eq (congrArg f (Nat.zero_add i))))))
+      have from_i : T ≤ f i := from_start start rising (Nat.le_trans (Nat.le_of_lt lt) le)
       have apart : f i + 1 ≤ f j :=
         Nat.le_trans (Nat.succ_le_succ (Nat.le_add_right (f i) d))
           (Nat.le_trans (rising_apart rising i (d + 1) (Nat.le_trans (Nat.le_of_eq at_j.symm) le))
             (Nat.le_of_eq (congrArg f at_j.symm)))
       match le_dest apart with
       | ⟨e, at_fj⟩ =>
-        have down : M.le (q (g (f j))) (q (g (f i + 1))) :=
-          Eq.subst (motive := fun x => M.le (q (g x)) (q (g (f i + 1)))) at_fj.symm
-            (still_within (s := fun t => q (g t)) still e (f i + 1) (Nat.le_succ_of_le from_i))
-        falls i (Nat.le_trans (Nat.le_of_lt lt) le)
-          (Eq.subst (motive := fun x => M.le (q x) (q (g (f i + 1)))) same.symm down)
+        still_le (s := fun t => q (g t)) still e (f i + 1) (Nat.le_succ_of_le from_i) fun down =>
+          falls i (Nat.le_trans (Nat.le_of_lt lt) le)
+            (Eq.subst (motive := fun x => M.le (q x) (q (g (f i + 1)))) same.symm
+              (Eq.subst (motive := fun x => M.le (q (g x)) (q (g (f i + 1)))) at_fj.symm down))
 
-/-- **Rest from a finite reading.** Where a list holds the configurations an amount is read off
-and the amount does not rise across any step from `T` on, steps across which it falls strictly
-do not recur. Over any amounts: no least loss, no Archimedean property, no totality of the order
-and no decision is asked. The least loss on which `Amounts.rests` turns is needed only where the
-amount reads configurations no list holds: falls that recur need an unbounded reading
-(`Halving.stock_unlisted`). -/
-theorem rests_of_finite_reading {g : Nat → S} {q : S → A} {l : List S} {T : Nat}
-    (held : ∀ t, g t ∈ l) (still : ∀ t, T ≤ t → M.le (q (g (t + 1))) (q (g t))) :
-    ¬ ∀ N, ∃ t, N ≤ t ∧ ¬ M.le (q (g t)) (q (g (t + 1))) := fun recurs =>
-  have chain : ∀ m, ∃ f : Nat → Nat, T ≤ f 0 ∧ (∀ i, i < m → f i < f (i + 1)) ∧
+/-- A chain of `m + 1` strict falls from `T` on, at rising steps, extended by one more strict fall
+after its last. -/
+theorem extend_falls {g : Nat → S} {q : S → A} {T m : Nat} {f : Nat → Nat} (start : T ≤ f 0)
+    (rising : ∀ i, i < m → f i < f (i + 1))
+    (falls : ∀ i, i ≤ m → ¬ M.le (q (g (f i))) (q (g (f i + 1)))) {t : Nat} (after : f m + 1 ≤ t)
+    (fall : ¬ M.le (q (g t)) (q (g (t + 1)))) :
+    ∃ f' : Nat → Nat, T ≤ f' 0 ∧ (∀ i, i < m + 1 → f' i < f' (i + 1)) ∧
+      ∀ i, i ≤ m + 1 → ¬ M.le (q (g (f' i))) (q (g (f' i + 1))) := by
+  refine ⟨fun i => if i ≤ m then f i else t, ?_, ?_, ?_⟩
+  · exact Eq.subst (motive := fun x => T ≤ x) (if_pos (Nat.zero_le m)).symm start
+  · intro i below
+    have at_i : (if i ≤ m then f i else t) = f i := if_pos (Nat.le_of_lt_succ below)
+    show (if i ≤ m then f i else t) < (if i + 1 ≤ m then f (i + 1) else t)
+    rw [at_i]
+    match Nat.decLe (i + 1) m with
+    | isTrue next =>
+      rw [if_pos next]
+      exact rising i next
+    | isFalse past =>
+      rw [if_neg past]
+      have same : i = m := Nat.le_antisymm (Nat.le_of_lt_succ below)
+        (Nat.le_of_lt_succ (Nat.gt_of_not_le past))
+      rw [same]
+      exact after
+  · intro i _
+    match Nat.decLe i m with
+    | isTrue earlier =>
+      show ¬ M.le (q (g (if i ≤ m then f i else t))) (q (g ((if i ≤ m then f i else t) + 1)))
+      rw [if_pos earlier]
+      exact falls i earlier
+    | isFalse later =>
+      show ¬ M.le (q (g (if i ≤ m then f i else t))) (q (g ((if i ≤ m then f i else t) + 1)))
+      rw [if_neg later]
+      exact fall
+
+/-- **Rest from a finite reading, unrefuted.** Where a list holds, from `T` on, the configurations
+an amount is read off, and that the amount does not rise across any step from `T` on is not
+refuted, it is not the case that after every step from `T` on a later step across which it falls
+strictly stays unrefuted. Over any amounts: no least loss, no Archimedean property, no totality of
+the order and no decision is asked. Each chain of strict falls is extended inside the refutation,
+so only the `l.length + 1` falls the list cannot hold are ever used. -/
+theorem rests_unrefuted_of_finite_reading {g : Nat → S} {q : S → A} {l : List S} {T : Nat}
+    (held : ∀ t, T ≤ t → g t ∈ l) (still : ∀ t, T ≤ t → ¬¬ M.le (q (g (t + 1))) (q (g t))) :
+    ¬ ∀ N, T ≤ N → ¬¬ ∃ t, N ≤ t ∧ ¬ M.le (q (g t)) (q (g (t + 1))) := fun recurs =>
+  have chain : ∀ m, ¬¬ ∃ f : Nat → Nat, T ≤ f 0 ∧ (∀ i, i < m → f i < f (i + 1)) ∧
       ∀ i, i ≤ m → ¬ M.le (q (g (f i))) (q (g (f i + 1))) := fun m => by
     induction m with
     | zero =>
-      match recurs T with
-      | ⟨t, after, fall⟩ =>
-        exact ⟨fun _ => t, after, fun i below => absurd below (Nat.not_lt_zero i), fun _ _ => fall⟩
+      exact fun no => recurs T (Nat.le_refl T) fun ⟨t, after, fall⟩ =>
+        no ⟨fun _ => t, after, fun i below => absurd below (Nat.not_lt_zero i), fun _ _ => fall⟩
     | succ m ih =>
-      match ih with
-      | ⟨f, start, rising, falls⟩ =>
-        match recurs (f m + 1) with
-        | ⟨t, after, fall⟩ =>
-          refine ⟨fun i => if i ≤ m then f i else t, ?_, ?_, ?_⟩
-          · exact Eq.subst (motive := fun x => T ≤ x) (if_pos (Nat.zero_le m)).symm start
-          · intro i below
-            have at_i : (if i ≤ m then f i else t) = f i := if_pos (Nat.le_of_lt_succ below)
-            show (if i ≤ m then f i else t) < (if i + 1 ≤ m then f (i + 1) else t)
-            rw [at_i]
-            match Nat.decLe (i + 1) m with
-            | isTrue next =>
-              rw [if_pos next]
-              exact rising i next
-            | isFalse past =>
-              rw [if_neg past]
-              have same : i = m := Nat.le_antisymm (Nat.le_of_lt_succ below)
-                (Nat.le_of_lt_succ (Nat.gt_of_not_le past))
-              rw [same]
-              exact after
-          · intro i within
-            match Nat.decLe i m with
-            | isTrue earlier =>
-              show ¬ M.le (q (g (if i ≤ m then f i else t)))
-                (q (g ((if i ≤ m then f i else t) + 1)))
-              rw [if_pos earlier]
-              exact falls i earlier
-            | isFalse later =>
-              show ¬ M.le (q (g (if i ≤ m then f i else t)))
-                (q (g ((if i ≤ m then f i else t) + 1)))
-              rw [if_neg later]
-              exact fall
-  match chain l.length with
-  | ⟨f, start, rising, falls⟩ => falls_within_reading held still start rising falls
+      exact fun no => ih fun ⟨f, start, rising, falls⟩ =>
+        recurs (f m + 1) (Nat.le_succ_of_le (from_start start rising (Nat.le_refl m)))
+          fun ⟨t, after, fall⟩ => no (extend_falls start rising falls after fall)
+  chain l.length fun ⟨f, start, rising, falls⟩ => falls_within_reading held still start rising falls
+
+/-- **Rest from a finite reading.** Where a list holds, from `T` on, the configurations an amount
+is read off and the amount does not rise across any step from `T` on, steps across which it falls
+strictly do not recur. Over any amounts: no least loss, no Archimedean property, no totality of the
+order and no decision is asked (`rests_unrefuted_of_finite_reading` is the stronger form). The least
+loss on which `Amounts.rests` turns is needed only where the amount reads configurations no list
+holds: falls that recur need an unbounded reading (`Halving.stock_unlisted`). -/
+theorem rests_of_finite_reading {g : Nat → S} {q : S → A} {l : List S} {T : Nat}
+    (held : ∀ t, T ≤ t → g t ∈ l) (still : ∀ t, T ≤ t → M.le (q (g (t + 1))) (q (g t))) :
+    ¬ ∀ N, ∃ t, N ≤ t ∧ ¬ M.le (q (g t)) (q (g (t + 1))) := fun recurs =>
+  rests_unrefuted_of_finite_reading held (fun t later no => no (still t later))
+    fun N _ no => no (recurs N)
 
 end Amounts
 
@@ -521,8 +542,8 @@ step, so no list holds its values: by `Amounts.rests_of_finite_reading`, a list 
 bring its falls to rest. Halving's lack of a least loss and the unbounded count of its values are
 one fact read twice. -/
 theorem stock_unlisted : ¬ ∃ l : List Dyadic, ∀ t, stock t ∈ l := fun ⟨_, held⟩ =>
-  Amounts.rests_of_finite_reading (M := Dyadic.amounts) (q := fun x => x) (T := 0) held
-    (fun t _ => never_rests.2.1 t) (fun N => ⟨N, Nat.le_refl N, falls_strictly N⟩)
+  Amounts.rests_of_finite_reading (M := Dyadic.amounts) (q := fun x => x) (T := 0)
+    (fun t _ => held t) (fun t _ => never_rests.2.1 t) (fun N => ⟨N, Nat.le_refl N, falls_strictly N⟩)
 
 end Halving
 
@@ -572,7 +593,7 @@ loses nothing (where the process merges nothing) or comes to rest, with no least
 theorem rests_along_run (r : Run P) {l : List S} (held : ∀ n, r.state n ∈ l) {q : S → A} {T : Nat}
     (still : ∀ t, T ≤ t → M.le (q (r.state (t + 1))) (q (r.state t))) :
     ¬ ∀ N, ∃ t, N ≤ t ∧ ¬ M.le (q (r.state t)) (q (r.state (t + 1))) :=
-  Amounts.rests_of_finite_reading held still
+  Amounts.rests_of_finite_reading (fun t _ => held t) still
 
 end Branching
 

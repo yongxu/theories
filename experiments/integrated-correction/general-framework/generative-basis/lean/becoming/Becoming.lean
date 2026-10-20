@@ -69,6 +69,7 @@ import Becoming.Standing
 import Becoming.Resolution
 import Becoming.Amounts
 import Becoming.LeastLoss
+import Becoming.InAmounts
 import Becoming.Entropy
 import Becoming.Units
 import Becoming.Imbalance
@@ -908,8 +909,16 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   descriptions that lump and dissipate, and a finite law that merges nothing returns
   (`Becoming.Recurrence`). Read off configurations a list holds, an amount that does not rise
   falls strictly at most as often as the list is long, over any amounts, so rest needs no least
-  loss there; and under a law that merges nothing a part's narrowing is kept by the rest, the
+  loss there, and with every premise read as far as can be refuted its falls stop, unrefuted; and under a law that merges nothing a part's narrowing is kept by the rest, the
   possibilities being kept apart, so a part reset at every step needs a whole no list holds.
+* `Becoming.InAmounts` (L1): the rest theorem over any amounts, read finitely. A world's
+  standings, takes and gives read in any amounts, its activity and what takes part its own: a
+  family balanced (no amount made) and dissipated on (whatever gives back all it takes takes
+  nothing) has a total that does not rise and falls strictly at every change of a member's
+  level, with no least loss. Where that total, or the census's, is read off configurations a
+  list holds, the world rests from some step on, unrefuted, enclosed at each step or covered by
+  one family; whole-number worlds are the instance, and a standing halving as it passes between
+  two relata arises and ceases without end, its levels held by no list.
 * `Becoming.Entropy` (L1): what becoming leaves, and what holding it costs. In a balanced
   flow every change of a level is an exchange, so the history of exchanges grows at every
   change without a dissipation premise, and an exchange and its reverse restore every level but not the
