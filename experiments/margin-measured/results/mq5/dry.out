@@ -1,0 +1,145 @@
+{
+ "level | SSB": {
+  "stocks": 41,
+  "S1": "failed",
+  "S2": "failed",
+  "S3": "passed",
+  "S4": "failed",
+  "P1": "passed",
+  "P2": "passed",
+  "D1": "passed",
+  "D2": "passed"
+ },
+ "relaxing | SSB": {
+  "stocks": 36,
+  "S1": "passed",
+  "S2": "failed",
+  "S3": "passed",
+  "S4": "failed",
+  "P1": "failed",
+  "P2": "not testable",
+  "D1": "passed",
+  "D2": "passed"
+ },
+ "hypothesis | SSB": {
+  "stocks": 145,
+  "S1": "passed",
+  "S2": "passed",
+  "S3": "passed",
+  "S4": "passed",
+  "P1": "passed",
+  "P2": "passed",
+  "D1": "passed",
+  "D2": "passed"
+ },
+ "hypothesis | TB": {
+  "stocks": 150,
+  "S1": "passed",
+  "S2": "passed",
+  "S3": "passed",
+  "S4": "passed",
+  "P1": "passed",
+  "P2": "passed",
+  "D1": "passed",
+  "D2": "passed"
+ },
+ "hypothesis-noisy | SSB": {
+  "stocks": 141,
+  "S1": "passed",
+  "S2": "failed",
+  "S3": "passed",
+  "S4": "passed",
+  "P1": "passed",
+  "P2": "passed",
+  "D1": "passed",
+  "D2": "failed"
+ },
+ "hypothesis-noisy | TB": {
+  "stocks": 150,
+  "S1": "passed",
+  "S2": "passed",
+  "S3": "passed",
+  "S4": "passed",
+  "P1": "passed",
+  "P2": "passed",
+  "D1": "passed",
+  "D2": "passed"
+ },
+ "lag-reset | SSB": {
+  "stocks": 132,
+  "S1": "passed",
+  "S2": "passed",
+  "S3": "passed",
+  "S4": "passed",
+  "P1": "passed",
+  "P2": "passed",
+  "D1": "failed",
+  "D2": "passed"
+ },
+ "blind | SSB": {
+  "stocks": 135,
+  "S1": "passed",
+  "S2": "passed",
+  "S3": "passed",
+  "S4": "passed",
+  "P1": "passed",
+  "P2": "passed",
+  "D1": "failed",
+  "D2": "failed"
+ },
+ "draw-only | SSB": {
+  "stocks": 148,
+  "S1": "passed",
+  "S2": "failed",
+  "S3": "passed",
+  "S4": "failed",
+  "P1": "passed",
+  "P2": "passed",
+  "D1": "passed",
+  "D2": "passed"
+ },
+ "two-lags | SSB": {
+  "stocks": 142,
+  "S1": "failed",
+  "S2": "passed",
+  "S3": "failed",
+  "S4": "passed",
+  "P1": "passed",
+  "P2": "passed",
+  "D1": "passed",
+  "D2": "passed"
+ },
+ "drifting | SSB": {
+  "stocks": 43,
+  "S1": "failed",
+  "S2": "failed",
+  "S3": "passed",
+  "S4": "failed",
+  "P1": "failed",
+  "P2": "not testable",
+  "D1": "failed",
+  "D2": "passed"
+ },
+ "age | SSB": {
+  "stocks": 149,
+  "S1": "passed",
+  "S2": "passed",
+  "S3": "failed",
+  "S4": "passed",
+  "P1": "passed",
+  "P2": "passed",
+  "D1": "passed",
+  "D2": "passed"
+ },
+ "age | TB": {
+  "stocks": 150,
+  "S1": "passed",
+  "S2": "passed",
+  "S3": "failed",
+  "S4": "failed",
+  "P1": "passed",
+  "P2": "passed",
+  "D1": "passed",
+  "D2": "passed"
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "choices": {
+  "lam_chosen": 0.55,
+  "lam_frozen": 0.55,
+  "eps_measured_all_groups_SSB": 0.6704802638252952,
+  "eps_pairs": 25923,
+  "eps_chosen": 0.7,
+  "eps_frozen": 0.7,
+  "eps_measured_all_groups_TB": 0.7147087854350721
+ },
+ "SSB": {
+  "stocks": {
+   "other": 101,
+   "primary": 142,
+   "control": 6
+  },
+  "primary": {
+   "S1": "passed",
+   "S2": "passed",
+   "S3": "failed",
+   "S4": "passed",
+   "P1": "passed",
+   "P2": "passed",
+   "D1": "passed",
+   "D2": "passed"
+  },
+  "control": {
+   "S1": "not testable",
+   "S2": "not testable",
+   "S3": "not testable",
+   "S4": "not testable",
+   "P1": "not testable",
+   "P2": "not testable",
+   "D1": "not testable",
+   "D2": "not testable"
+  },
+  "other": {
+   "S1": "passed",
+   "S2": "failed",
+   "S3": "passed",
+   "S4": "passed",
+   "P1": "passed",
+   "P2": "passed",
+   "D1": "passed",
+   "D2": "failed"
+  }
+ },
+ "TB": {
+  "stocks": {
+   "other": 144,
+   "primary": 189,
+   "control": 33
+  },
+  "primary": {
+   "S1": "passed",
+   "S2": "passed",
+   "S3": "passed",
+   "S4": "passed",
+   "P1": "passed",
+   "P2": "passed",
+   "D1": "passed",
+   "D2": "passed"
+  },
+  "control": {
+   "S1": "passed",
+   "S2": "passed",
+   "S3": "failed",
+   "S4": "failed",
+   "P1": "failed",
+   "P2": "not testable",
+   "D1": "passed",
+   "D2": "passed"
+  },
+  "other": {
+   "S1": "passed",
+   "S2": "passed",
+   "S3": "passed",
+   "S4": "passed",
+   "P1": "passed",
+   "P2": "passed",
+   "D1": "passed",
+   "D2": "passed"
+  }
+ },
+ "bridge": {
+  "stocks": 142,
+  "median_ssb_share_of_tb": 0.4760368173513816,
+  "kappa_quartiles": [
+   0.05,
+   0.35,
+   0.65
+  ],
+  "kappa_at_zero": 1,
+  "correlation_kappa_ssb_share": 0.3260990920246817,
+  "TB_verdicts": {
+   "S1": "passed",
+   "S2": "passed",
+   "S3": "passed",
+   "S4": "passed",
+   "P1": "passed",
+   "P2": "passed",
+   "D1": "passed",
+   "D2": "passed"
+  },
+  "SSB_verdicts": {
+   "S1": "passed",
+   "S2": "passed",
+   "S3": "failed",
+   "S4": "passed",
+   "P1": "passed",
+   "P2": "passed",
+   "D1": "passed",
+   "D2": "passed"
+  }
+ }
+}
