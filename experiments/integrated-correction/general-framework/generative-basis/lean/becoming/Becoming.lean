@@ -272,6 +272,7 @@ import Becoming.LimitVerification
 import Becoming.SelectionGap
 import Becoming.SelectionReach
 import Becoming.DrawnBeyond
+import Becoming.JointDraw
 import Becoming.SelectionPool
 import Becoming.PoolResponse
 import Becoming.Rejoining
@@ -1316,6 +1317,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   beyond has no discordant pair, does not fall where reaching is transmitted and with exact
   transmission moves only upward. Closed over a stretch, the family rises by at most what the
   beyond loses; a rise above all the whole held needs an open step. Witnesses on `Diversion`.
+* `Becoming.JointDraw` (L1): which dependence breaks when several formations take at once, and
+  restraint over any number of drawers. In a balanced flow a dependence breaks exactly where its
+  need with all that is taken exceeds the level with all that is given; the highest needs break
+  first, whoever takes; every break lies where an active formation draws; a break within each
+  drawer's slack is shared by every drawer; restraint by the excess, by any drawers, keeps it.
+  Over a run, taking no more and giving no less eases the course, so under the whole-run reading
+  restraint extends overdraw for any number of drawers exactly when it includes an event the other
+  withholds (`Ranking.restraint_extends_iff`); `TwoDrawers` is the instance.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled

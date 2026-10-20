@@ -227,6 +227,18 @@
         "Becoming.Ranking.Pause.courses",
         "Becoming.Ranking.Pause.pause_ranked_below"
       ]
+    },
+    {
+      "en": "Restraint over any number of drawers, under the whole-run reading: two balanced flows from levels at least as high at the start, the restrained one taking no more from each condition and giving no less at every step, hold every condition at least as high at every step, and with dependences, needs and draws no greater the restrained course eases the other; so where activity needs support in the overdrawing course and follows support in the restrained one, the restrained course extends the other exactly when it includes an event the other withholds, and every comparison satisfying C ranks it higher. No count of formations enters; TwoDrawers is an instance with two drawers and a third formation depending.",
+      "zh": "整段读法下对任意多个汲取者的节制：两个平衡的流，起点水平不低，节制的一方每步从每个条件所取不多、所给不少，则每步每个条件的水平不低；依存、所需与汲取不更多时，节制的继续缓和另一个；所以在过度汲取的继续中活动需要支持、在节制的继续中活动随支持而有时，节制的继续扩展另一个，恰当它记入另一个扣下的某个事件，每个满足 C 的比较都把它排得更高。其中不出现构成的数目；TwoDrawers 是两个汲取者加一个依存的第三构成的实例。",
+      "declarations": [
+        "Becoming.Flow.Balances.level_succ_le",
+        "Becoming.Flow.Balances.level_le_of_restrained",
+        "Becoming.Flow.Balances.eases_of_restrained",
+        "Becoming.Ranking.restraint_extends_iff",
+        "Becoming.Ranking.restraint_ranks_over_drawers",
+        "Becoming.TwoDrawers.restraint_ranks"
+      ]
     }
   ],
   "hypotheses": [
@@ -249,8 +261,8 @@
   ],
   "does_not_show": [
     {
-      "zh": "在场与不在场、共享与以消耗取胜、停止与过度汲取的比较，在支持门控定律族（二元：焦点形成与维持者）中作为比较之律与缓和之律的实例证明。",
-      "en": "The comparisons of absence with presence, sharing with winning and stopping with overdraw are proved in the support-gated family (two parts: the focal and the sustaining formation), as instances of the laws of comparison and easing.",
+      "zh": "在场与不在场、共享与以消耗取胜的比较，在支持门控定律族（二元：焦点形成与维持者）中作为比较之律与缓和之律的实例证明。节制在整段读法下对任意多个汲取者证明（Becoming.JointDraw）；在逐步读法下只在二元族中证明，ThirdParty 表明在那里所取不多并不足够。",
+      "en": "The comparisons of absence with presence and sharing with winning are proved in the support-gated family (two parts: the focal and the sustaining formation), as instances of the laws of comparison and easing. Restraint is proved for any number of drawers under the whole-run reading (Becoming.JointDraw); under the stepwise reading only in the two-part family, and ThirdParty shows that taking no more does not suffice there.",
       "kind": "scope"
     },
     {
@@ -331,8 +343,8 @@
     "en": "Lean 4.29.1 checks, empty axiom reports: current Becoming.Ranking and Becoming.Bridge, receipt 20261013T221720.428753Z, core purity verified; this result's 19 theorems of Becoming.Relevance, receipt 20261013T094743.528770Z. Bridge adapters are not independent results. Author counterreview (integration note); the second independent review read it only for its question 4, anticipating the restraint result; the third reviewed it whole, accepted the mathematics, scoped restraint to the two-part family and supplied the included-event hypothesis. The possibility reading awaits independent review."
   },
   "next_delta": {
-    "zh": "二元定律族之外（有多个共用者，或带数量使不取者不侵蚀）的节制定理；形式化关系层读法下的同一比较；检验基本条件优先能否在逐步读法下给出“没有恶性增殖更好”。",
-    "en": "A restraint theorem beyond the two-part family (co-drawers, or amounts so taking nothing does not undermine); the same comparison under the relation-level reading; whether the priority of basic conditions yields “better without malignant growth” stepwise."
+    "en": "A restraint theorem under the stepwise reading beyond the two-part family, with a premise beyond taking no more, since ThirdParty shows that alone does not suffice (amounts so that taking nothing does not undermine, for example); the same comparison under the relation-level reading; whether the priority of basic conditions yields “better without malignant growth” stepwise.",
+    "zh": "逐步读法下二元族之外的节制定理，需要所取不多之外的前提，因为 ThirdParty 表明单此不足（例如带数量使不取者不侵蚀）；形式化关系层读法下的同一比较；检验基本条件优先能否在逐步读法下给出“没有恶性增殖更好”。"
   },
   "correspondence": {
     "zh": "两个排序在逐步读法下分道。若 G0 与 C 共用逐步读法，C 仍把共享排在以消耗取胜之上，却不再把没有恶性增殖的继续排得更高；整段读法两者都保持，但不满足独立审查的判据 (b) 与 (c)。若 G0 的记入取逐步读法而 C 取整段读法，两者都保持，但 G0 与 C 不再共用一种 living 读法：形式上两者各以读法为参数，前提卡上 C 所说的“活的内容”却是 G0 的 living，分开取须公开。生生读作生成者生成新的生成，其方向以能形成者的扩大比较（DELEGATED-CHOICES D1，经修订由 Ren 2026-10-18 取）。可能性读法的解读（AI 论证，依 Ren 的交托采用）：它读“有意义的，就是能形成的”与 Ren 的“more possibilities of becoming”；它计能形成的，不计形成了的。在公理之下 C 以可能性读，排序来自部分失去的，而不是不计形成本身；Ren 2026-10-11 把比较的方式交 AI 决定（“Comparing courses - you decide”）：继续之间以可能性比较，理由见章节 §6.5。",
@@ -836,6 +848,24 @@
       "role": "receipt",
       "sha256": "d13bb7a8bef2993ffda38f33b45958c5824182e0d2d8e117869c45d403c19a2b",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.Balances.eases_of_restrained",
+        "Becoming.Flow.Balances.level_le_of_restrained",
+        "Becoming.Flow.Balances.level_succ_le",
+        "Becoming.Ranking.restraint_extends_iff",
+        "Becoming.Ranking.restraint_ranks_over_drawers",
+        "Becoming.TwoDrawers.restraint_ranks"
+      ],
+      "sha256": "9997647548851415a86f57d3101f5868dbf7aeab5e58bebf80c5dc7e7e02c576"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json",
+      "role": "receipt",
+      "sha256": "3466a683536b574025d775149343ebfa56316cbbc2997556b221941e387f1d35"
     }
   ],
   "proof_bindings": [
@@ -885,6 +915,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.JointDraw",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -979,6 +1016,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review): the proof bindings to the Lean files R37 changed rebound to its core receipt; 2 aliases naming declarations of modules no longer in the run, which only the earlier receipt this record was bound to elaborated, marked as R35 (E8) did: Becoming.Ranking.wholeRun_iff (retired module); Becoming.Ranking.undisturbed_eq (retired module). The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角）：对 R37 改动的 Lean 文件的证明绑定改到其核心回执；2 个指向已不在运行中的模块之声明的别名（只有本记录先前绑定的回执列出它们）按 R35（E8）的做法标出：Becoming.Ranking.wholeRun_iff (retired module)；Becoming.Ranking.undisturbed_eq (retired module)。论断不变。"
+    },
+    {
+      "en": "20 October 2026: R52 proved restraint for any number of drawers under the whole-run reading (Becoming.JointDraw), section 8.1 item 11.",
+      "zh": "2026-10-20：R52 在整段读法下对任意多个汲取者证明节制（Becoming.JointDraw），第 8.1 节第 11 项。"
     }
   ],
   "text_versions": [

@@ -11717,3 +11717,39 @@ The kit is [`development/ev7-unequal-groups/`](development/ev7-unequal-groups/):
 - **Witnesses.** `ByMeans`: `[[held], [mate, first, second]]`, holding back at `held` and `mate`, offspring 3, 1, 1, 1, factors 3 and 1 (n = 3). Totals of holding back are 1 and 1, so `concordAmong` and `discordAmong` are 0; means are 1 and 1/3, the means' concordance is 36, within-group terms are 0, and the whole's concordance is 4 against 0 (`9 · 4 = 36`). `Exhausted`: generation 0 is `[[0, 1], [2, 3], [5, 7]]` with even members holding back; 0 and 2 leave two offspring, 1 and 3 three, 5 and 7 none. Within: discordance 2; among: concordance 10; the mean rises from 2/6 to 4/10. Generation 1, listed by descent as `[[10, 12, 11, 13, 15], [20, 22, 21, 23, 25]]`, holds back alike (two of five in each); a member holding back leaves one offspring, any other two; among: nothing; within: discordance 12; the mean falls to 4/16, below 2/6 (`G.size 0 * G.sum 2 < G.size 2 * G.sum 0`, 24 < 32). Offspring carry their parent's parity, so transmission is exact; the theorems compute the counts and verdicts directly.
 
 **Self-review.** The general law is exact and the special one is derived, so nothing is stated twice. Reading the among-group part by group means is a choice of weighting: it is the size-weighted partition (each member counted once), the standard multilevel Price partition (Price 1972; Okasha 2006's MLS1 with group means); another weighting (each group counted once) is a different decomposition and is not stated. The common multiple is a modelling device for rational means; the statement holds for any common multiple, the least giving the smallest counts. The regrouping law is a corollary of the division with an identity of listing, kept because it states the reading the evolution chapter asks for: once the next groups are alike, selection among them is gone and only selection within acts. That ending tends to make the surviving groups alike is shown only in the witness; in general the surviving groups can differ (if keeping groups differ in their within-group composition), and how much among-group difference descent keeps is the open question of assortment.
+
+## 274. Which dependence breaks when several take at once, and restraint over any number of drawers (R52)
+
+```text
+Result(s): Flow.Balances.broken_iff, Flow.Balances.kept_iff, Web.Broken.of_need_le, Web.kept_of_need_le,
+       Flow.Balances.broken_drawn, Flow.Balances.breaks_beyond_drawn, Flow.Balances.broken_shared,
+       Flow.Balances.kept_of_restrained, Flow.Balances.level_succ_le, Flow.Balances.level_le_of_restrained,
+       Flow.Balances.eases_of_restrained, Ranking.restraint_extends_iff, Ranking.restraint_ranks_over_drawers,
+       TwoDrawers (broken, shared, restrained_kept, restraint_ranks)
+       (new core module Becoming.JointDraw, 22 theorems, 28 declarations, on Becoming.DrawnBeyond and
+       Becoming.Ranking); records what-a-rise-draws-from-beyond (new law), ranking-under-readings (new law);
+       chapter 3.4, 6.5 and 8.1 items 10 and 11.
+Delta: RB1 (section 241) showed that a rise above the slack breaks some dependence beyond, and left which
+       one open when several formations take at once. A dependence now breaks exactly where its need with
+       all that is taken exceeds the level with all that is given, the highest needs first whoever takes,
+       on a condition an active formation draws; where each drawer's own take is within the slack, the
+       break belongs to no one drawer. Ranking proved restraint ranked above overdraw only in the two-part
+       family; over a run, taking no more and giving no less from levels as high now eases the course
+       (Ranking.Eases), so the whole-run law of easing gives restraint over any number of drawers.
+Premises: none added. Balance at every step; the restrained flow taking no more and giving no less, its
+       dependences, needs and draws no greater (hypotheses); activity needing support in the overdrawing
+       course and following it in the restrained one; C as a hypothesis.
+Evidence: core receipt 20261020T160406.697383Z (passed, empty axiom reports).
+Boundary: the amounts each formation takes are supplied by the flow, not a law of the formations; under
+       the stepwise reading restraint beyond the two-part family stays open, and ThirdParty shows taking no
+       more is not enough there (a level kept higher can be undermined later).
+Output → input: item 10's "which dependence breaks when several formations take at once" is settled for
+       supplied flows; item 11's restraint theorem beyond the two-part family is settled under the
+       whole-run reading, leaving the stepwise reading and a law of how much each formation takes.
+```
+
+- **Why the joint draw, not a drawer, breaks.** The balance ties the level after the step to the total over every formation taking part: `level (t+1) + taken = level t + given`. A dependence is broken exactly when `level t + given < need + taken` (`broken_iff`), a condition on the totals. Where each drawer's own take is within `level t + given - need`, the break forces every take to be strictly less than the total (`broken_shared`): no drawer's take alone reaches it. `TwoDrawers` is the smallest case: two units, two drawers taking one each, a need of one.
+- **Which one breaks.** On one condition at one step what decides is the need, not the drawer: a dependence met at a need at least as high as a broken one breaks too (`Broken.of_need_le`). A drawer that itself depends on the condition at the highest need breaks its own dependence first.
+- **Why restraint over any number of drawers needs the whole-run reading.** Taking no more and giving no less holds every level at least as high at every step (`level_le_of_restrained`), which is the level clause of `Ranking.Eases`. The whole-run reading is monotone under easing (`wholeRun_mono`); the stepwise reading is not (`ThirdParty.stepwise_not_monotone`), because a level kept higher can meet a need that a later draw then undermines. So the count of formations was never what limited restraint to the two-part family under the whole-run reading; the reading is.
+
+**Self-review.** The arithmetic is elementary; the contribution is where it lands. The joint-draw laws settle item 10's question at the level the flow supplies (amounts per formation), and the restraint theorem shows that, under the whole-run reading, nothing about the number of co-drawers was needed, only easing; the stepwise case stays honestly open with its counterexample.

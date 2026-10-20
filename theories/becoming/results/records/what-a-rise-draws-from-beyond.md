@@ -18,6 +18,7 @@
 6. Where also each offspring of a reaching member reaches, the share does not fall over any stretch; with exact transmission, where it moved it rose, and at some step more offspring went with reaching beyond. (`Becoming.Flow.lowered_none`, `Becoming.Flow.share_not_lower`, `Becoming.Flow.share_moved_rises`)
 7. Over a stretch at every step of which the whole gains nothing, the family rose by at most what the beyond lost; a rise above all the whole held at the start needs a step at which it gains. (`Becoming.Flow.Balances.stock_not_rises_over`, `Becoming.Flow.Balances.rise_bounded_by_beyond`, `Becoming.Flow.Balances.open_of_rise_above`)
 8. Witnesses: in Diversion the store's rise breaks the dweller's dependence and the dweller ends, a selection through the taker that does not see it; a slack equal to the rise breaks nothing; the share rises from a half to the whole in Spreading, whose closed store never exceeds two, and falls in Lapsing, where reaching is not carried on. (`Becoming.DrawnBeyond.Dweller.rise_ends_dweller`, `Becoming.DrawnBeyond.Dweller.selected_breaks`, `Becoming.DrawnBeyond.WithinSlack.within_slack`, `Becoming.DrawnBeyond.Spreading.share_rises`, `Becoming.DrawnBeyond.Spreading.store_bounded`, `Becoming.DrawnBeyond.Lapsing.share_falls`)
+9. When several formations take at once, the joint draw breaks: in a balanced flow a dependence met at a step breaks exactly where its need with all that is taken exceeds the level with all that is given; on one condition the highest needs break first, whoever takes; every break, the one beyond the slack included, lies on a condition an active formation draws; a break where each drawer's own take is within the slack has every drawer taking strictly less than all that is taken; restraint by the excess, by any drawers, keeps the need met. TwoDrawers: each take within the slack, the joint draw breaks a third formation's dependence and it ends; one drawer restrained keeps it. (`Becoming.Flow.Balances.broken_iff`, `Becoming.Flow.Balances.kept_iff`, `Becoming.Web.Broken.of_need_le`, `Becoming.Web.kept_of_need_le`, `Becoming.Flow.Balances.broken_drawn`, `Becoming.Flow.Balances.breaks_beyond_drawn`, `Becoming.Flow.Balances.broken_shared`, `Becoming.Flow.Balances.kept_of_restrained`, `Becoming.TwoDrawers.broken`, `Becoming.TwoDrawers.shared`, `Becoming.TwoDrawers.restrained_kept`)
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -28,7 +29,7 @@
 ## Does not show
 
 - That more offspring go to raisers: a premise, not derived from the flow; the offspring relation is any listing of generations, not descent in the flow.
-- Which dependence breaks when several formations take at once, or that the selecting formation causes the break beyond the accounting; the break is read at the step's start, as in Becoming.Dependence.
+- That the selecting formation causes the break beyond the accounting; the break is read at the step's start, as in Becoming.Dependence. Which dependence breaks when several take at once is stated by the joint draw (Becoming.JointDraw), from the amounts each takes and gives, which the flow supplies.
 - Replenishment of the beyond from outside the whole, which the gainless premise excludes, and the rise it sustains; the openness law bounds the family's stock, not the share.
 - That the draw is wrong or the ending a harm: the laws say where what a rise draws lands and why a selection through the group does not register it.
 - **Counterexample:** Lapsing: with the same offspring, more going to the taker which raises the store, nothing is discordant, yet the taker's offspring do not reach beyond and the share falls from a half to nothing: selection alone does not carry the share (Lapsing.share_falls). WithinSlack: a rise equal to the slack breaks nothing. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean)
@@ -45,7 +46,7 @@ Canonical source: [DrawnBeyond.lean](../../../../experiments/integrated-correcti
 <a id="next--下一步"></a>
 ## Next
 
-Offspring numbers tied to what a formation gives, so that the share laws' premise follows from the flow; which dependence breaks when several take at once; replenishment from outside the whole; an independent review.
+Offspring numbers tied to what a formation gives, so that the share laws' premise follows from the flow; how much each formation takes when several draw, as a law of the formations rather than a supplied flow; replenishment from outside the whole; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -89,6 +90,8 @@ The accounting is a conservation law on a closed whole, as in material-flow and 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T083557.882986Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| proof | [JointDraw.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean) | `Becoming.Flow.Balances.breaks_beyond_drawn`, `Becoming.Flow.Balances.broken_drawn`, `Becoming.Flow.Balances.broken_iff`, `Becoming.Flow.Balances.broken_shared`, `Becoming.Flow.Balances.kept_iff`, `Becoming.Flow.Balances.kept_of_restrained`, `Becoming.TwoDrawers.broken`, `Becoming.TwoDrawers.restrained_kept`, `Becoming.TwoDrawers.shared`, `Becoming.Web.Broken.of_need_le`, `Becoming.Web.kept_of_need_le` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json) | — |
 
 Aliases: `what a rise draws from beyond`, `上升从其外汲取什么`, `a rise above the slack breaks a dependence beyond`, `the share that reaches beyond`, `Becoming.Flow.Balances.breaks_beyond`, `Becoming.Flow.favours_breaking_beyond`, `Becoming.Flow.share_not_against`
 
@@ -96,6 +99,7 @@ Aliases: `what a rise draws from beyond`, `上升从其外汲取什么`, `a rise
 ### History
 
 - 20 October 2026: added (RB1), section 8.1 item 10: whether what a rise draws is depended on, how much is drawn, and the share that reaches beyond; study section 241.
+- 20 October 2026: R52 added the joint draw, which dependence breaks when several formations take at once (Becoming.JointDraw), section 8.1 item 10.
 
 </details>
 

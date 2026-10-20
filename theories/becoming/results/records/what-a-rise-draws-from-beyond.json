@@ -91,6 +91,23 @@
         "Becoming.DrawnBeyond.Spreading.store_bounded",
         "Becoming.DrawnBeyond.Lapsing.share_falls"
       ]
+    },
+    {
+      "en": "When several formations take at once, the joint draw breaks: in a balanced flow a dependence met at a step breaks exactly where its need with all that is taken exceeds the level with all that is given; on one condition the highest needs break first, whoever takes; every break, the one beyond the slack included, lies on a condition an active formation draws; a break where each drawer's own take is within the slack has every drawer taking strictly less than all that is taken; restraint by the excess, by any drawers, keeps the need met. TwoDrawers: each take within the slack, the joint draw breaks a third formation's dependence and it ends; one drawer restrained keeps it.",
+      "zh": "多个构成同时汲取时，打断依存的是共同的汲取：在平衡的流中，某步被满足的依存跨该步被打断，恰当其所需加上所取的全部超过水平加上所给的全部；在同一条件上所需最高者先被打断，不论谁在汲取；每个打断，包括超出余量时其外的那一个，都落在某个活跃构成所汲取的条件上；每个汲取者自身的取量都在余量之内而依存仍被打断时，每个汲取者所取都严格少于所取的全部；任意汲取者按超出之量节制，所需即仍被满足。TwoDrawers：两者的取量各在余量之内，共同的汲取打断第三个构成的依存，它随之结束；其中一个节制则依存被保持。",
+      "declarations": [
+        "Becoming.Flow.Balances.broken_iff",
+        "Becoming.Flow.Balances.kept_iff",
+        "Becoming.Web.Broken.of_need_le",
+        "Becoming.Web.kept_of_need_le",
+        "Becoming.Flow.Balances.broken_drawn",
+        "Becoming.Flow.Balances.breaks_beyond_drawn",
+        "Becoming.Flow.Balances.broken_shared",
+        "Becoming.Flow.Balances.kept_of_restrained",
+        "Becoming.TwoDrawers.broken",
+        "Becoming.TwoDrawers.shared",
+        "Becoming.TwoDrawers.restrained_kept"
+      ]
     }
   ],
   "hypotheses": [
@@ -106,8 +123,8 @@
       "kind": "scope"
     },
     {
-      "en": "Which dependence breaks when several formations take at once, or that the selecting formation causes the break beyond the accounting; the break is read at the step's start, as in Becoming.Dependence.",
-      "zh": "多个构成同时汲取时哪个依存被打断，或除记账之外选择者导致了打断；打断按该步开始时读出，如 Becoming.Dependence。",
+      "en": "That the selecting formation causes the break beyond the accounting; the break is read at the step's start, as in Becoming.Dependence. Which dependence breaks when several take at once is stated by the joint draw (Becoming.JointDraw), from the amounts each takes and gives, which the flow supplies.",
+      "zh": "除记账之外选择者导致了打断；打断按该步开始时读出，如 Becoming.Dependence。多个构成同时汲取时哪个依存被打断，由共同的汲取说明（Becoming.JointDraw），依据每个构成所取所给之量，这些由流给出。",
       "kind": "scope"
     },
     {
@@ -143,8 +160,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T083557.882986Z）：Becoming.DrawnBeyond 的 49 项声明（37 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 241 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Offspring numbers tied to what a formation gives, so that the share laws' premise follows from the flow; which dependence breaks when several take at once; replenishment from outside the whole; an independent review.",
-    "zh": "后代数与构成所给予之量相连，使份额之律的前提由流得出；多个构成同时汲取时哪个依存被打断；来自整体之外的补充；独立审查。"
+    "en": "Offspring numbers tied to what a formation gives, so that the share laws' premise follows from the flow; how much each formation takes when several draw, as a law of the formations rather than a supplied flow; replenishment from outside the whole; an independent review.",
+    "zh": "后代数与构成所给予之量相连，使份额之律的前提由流得出；多个构成汲取时各取多少，作为构成之律而非给定的流；来自整体之外的补充；独立审查。"
   },
   "correspondence": {
     "en": "The accounting is a conservation law on a closed whole, as in material-flow and ecological budgets; the slack is the buffer of the dependences there, so a draw within it is absorbed and past it breaks one (compare thresholds in Becoming.Tolerance). The share law is the selection term proper of Price's equation on an indicator, with zero discordance. Readings (the AI's): the selection that rewards a rise rewards, past the slack beyond, ending or changing what it cannot see; reaching beyond spreads as far as it is carried and, closed, no further than the beyond holds.",
@@ -360,7 +377,30 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "ae0aa450a68c6ca6f5b9a684fc60a92752c745c4984d4ffa207f22cf46863eb8"
+      "sha256": "2e00f446090cf0bda3624f9f4844dfce850e6229feb18908eaa6c816a50f7269"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.Balances.breaks_beyond_drawn",
+        "Becoming.Flow.Balances.broken_drawn",
+        "Becoming.Flow.Balances.broken_iff",
+        "Becoming.Flow.Balances.broken_shared",
+        "Becoming.Flow.Balances.kept_iff",
+        "Becoming.Flow.Balances.kept_of_restrained",
+        "Becoming.TwoDrawers.broken",
+        "Becoming.TwoDrawers.restrained_kept",
+        "Becoming.TwoDrawers.shared",
+        "Becoming.Web.Broken.of_need_le",
+        "Becoming.Web.kept_of_need_le"
+      ],
+      "sha256": "9997647548851415a86f57d3101f5868dbf7aeab5e58bebf80c5dc7e7e02c576"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json",
+      "role": "receipt",
+      "sha256": "3466a683536b574025d775149343ebfa56316cbbc2997556b221941e387f1d35"
     }
   ],
   "proof_bindings": [
@@ -370,12 +410,23 @@
       "sha256_pointer": "/source_sha256/Becoming.DrawnBeyond",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.JointDraw",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
   "history": [
     {
       "en": "20 October 2026: added (RB1), section 8.1 item 10: whether what a rise draws is depended on, how much is drawn, and the share that reaches beyond; study section 241.",
       "zh": "2026年10月20日：新增（RB1），第 8.1 节第 10 项：上升所汲取者是否被依存、汲取多少，以及伸向之外者的份额；研究第 241 节。"
+    },
+    {
+      "en": "20 October 2026: R52 added the joint draw, which dependence breaks when several formations take at once (Becoming.JointDraw), section 8.1 item 10.",
+      "zh": "2026年10月20日：R52 新增共同的汲取，即多个构成同时汲取时哪个依存被打断（Becoming.JointDraw），第 8.1 节第 10 项。"
     }
   ]
 }
