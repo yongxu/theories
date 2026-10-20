@@ -1,0 +1,1217 @@
+{
+ "level": {
+  "stocks": 36,
+  "verdicts": {
+   "G1": "failed",
+   "G2": "passed",
+   "G3": "passed",
+   "F1a": "reported",
+   "F1b": "failed",
+   "F5a": "failed",
+   "F5b": "failed",
+   "F10a": "failed",
+   "F10b": "failed",
+   "T1": "failed",
+   "T2": "passed",
+   "R1": "failed",
+   "R2": "failed"
+  },
+  "G": {
+   "G1": {
+    "stocks": 36,
+    "median_excess_reduction": -0.01878320943208464,
+    "quartiles": [
+     -0.03023221224514433,
+     -0.017735780663732815,
+     0.015351338917509706
+    ],
+    "share_above_bound": 0.0,
+    "verdict": "failed"
+   },
+   "G2": {
+    "stocks": 36,
+    "median_excess_reduction": 0.5477618474196453,
+    "quartiles": [
+     0.39380344064328265,
+     0.5495344721827017,
+     0.6252666681351381
+    ],
+    "share_above_bound": 1.0,
+    "detected": 36,
+    "share_detected": 1.0,
+    "binomial_p": 1.455191522836688e-47,
+    "verdict": "passed"
+   },
+   "G3": {
+    "stocks": 36,
+    "median_excess_reduction": -0.03105130718430681,
+    "quartiles": [
+     -0.05572653270882913,
+     -0.027669334765075708,
+     0.0078007734168497045
+    ],
+    "share_above_bound": 0.1388888888888889,
+    "verdict": "passed"
+   }
+  },
+  "F1": {
+   "origins": 560,
+   "stocks": 36,
+   "accuracy": {
+    "LG": 0.8910714285714286,
+    "FR": 0.8875,
+    "RM": 0.8946428571428572,
+    "MO": 0.7642857142857142
+   },
+   "median_abs_log_error": {
+    "LG": 0.04807690948600042,
+    "FR": 0.04955512750800525,
+    "RM": 0.034510334626619045,
+    "RW": 0.12563414864227385
+   },
+   "sign_LG_vs_FR": {
+    "better": 36,
+    "worse": 0,
+    "p_two_sided": 2.9103830456733704e-11
+   },
+   "sign_LG_vs_RM": {
+    "better": 3,
+    "worse": 33,
+    "p_two_sided": 2.2721360437572002e-07
+   },
+   "sign_FR_vs_RM": {
+    "better": 3,
+    "worse": 33,
+    "p_two_sided": 2.2721360437572002e-07
+   },
+   "verdict_a": "reported",
+   "verdict_b": "failed"
+  },
+  "F5": {
+   "origins": 416,
+   "stocks": 36,
+   "accuracy": {
+    "LG": 0.8677884615384616,
+    "FR": 0.8365384615384616,
+    "RM": 0.9278846153846154,
+    "MO": 0.44471153846153844
+   },
+   "median_abs_log_error": {
+    "LG": 0.25886094705000384,
+    "FR": 0.2854043108346678,
+    "RM": 0.09046552030730126,
+    "RW": 0.4481213339884137
+   },
+   "sign_LG_vs_FR": {
+    "better": 36,
+    "worse": 0,
+    "p_two_sided": 2.9103830456733704e-11
+   },
+   "sign_LG_vs_RM": {
+    "better": 4,
+    "worse": 32,
+    "p_two_sided": 1.941574737429619e-06
+   },
+   "sign_FR_vs_RM": {
+    "better": 4,
+    "worse": 32,
+    "p_two_sided": 1.941574737429619e-06
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "F10": {
+   "origins": 236,
+   "stocks": 36,
+   "accuracy": {
+    "LG": 0.7076271186440678,
+    "FR": 0.6694915254237288,
+    "RM": 0.8813559322033898,
+    "MO": 0.2711864406779661
+   },
+   "median_abs_log_error": {
+    "LG": 0.6824796502600972,
+    "FR": 0.8150541485399202,
+    "RM": 0.14942021856845783,
+    "RW": 0.6638799179737855
+   },
+   "sign_LG_vs_FR": {
+    "better": 30,
+    "worse": 5,
+    "p_two_sided": 2.2361520677804947e-05
+   },
+   "sign_LG_vs_RM": {
+    "better": 4,
+    "worse": 31,
+    "p_two_sided": 3.4654513001441956e-06
+   },
+   "sign_FR_vs_RM": {
+    "better": 4,
+    "worse": 31,
+    "p_two_sided": 3.4654513001441956e-06
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "T": {
+   "classes": {
+    "0-5": {
+     "origins": 139,
+     "breaks": 131,
+     "share": 0.9424460431654677,
+     "stocks": 36
+    },
+    "D<=0": {
+     "origins": 267,
+     "breaks": 153,
+     "share": 0.5730337078651685,
+     "stocks": 36
+    },
+    "5-10": {
+     "origins": 35,
+     "breaks": 24,
+     "share": 0.6857142857142857,
+     "stocks": 18
+    },
+    "10-20": {
+     "origins": 21,
+     "breaks": 19,
+     "share": 0.9047619047619048,
+     "stocks": 14
+    },
+    "20-inf": {
+     "origins": 36,
+     "breaks": 27,
+     "share": 0.75,
+     "stocks": 19
+    }
+   },
+   "order": [
+    "0-5",
+    "5-10",
+    "10-20",
+    "20-inf"
+   ],
+   "held_catch_call_accuracy": {
+    "FR": 0.5622489959839357,
+    "LG": 0.5682730923694779,
+    "RM": 0.5662650602409639
+   },
+   "held_catch_confusion": {
+    "FR": {
+     "call=True,broke=True": 155,
+     "call=False,broke=False": 125,
+     "call=False,broke=True": 199,
+     "call=True,broke=False": 19
+    },
+    "LG": {
+     "call=True,broke=True": 157,
+     "call=False,broke=False": 126,
+     "call=False,broke=True": 197,
+     "call=True,broke=False": 18
+    },
+    "RM": {
+     "call=True,broke=True": 160,
+     "call=False,broke=False": 122,
+     "call=False,broke=True": 194,
+     "call=True,broke=False": 22
+    }
+   },
+   "verdict_T1": "failed",
+   "verdict_T2": "passed"
+  },
+  "R1": {
+   "k1": {
+    "FR_accuracy": 0.8875,
+    "RM_accuracy": 0.8946428571428572,
+    "FR_error": 0.04955512750800525,
+    "RM_error": 0.034510334626619045
+   },
+   "k5": {
+    "FR_accuracy": 0.8365384615384616,
+    "RM_accuracy": 0.9278846153846154,
+    "FR_error": 0.2854043108346678,
+    "RM_error": 0.09046552030730126
+   },
+   "verdict": "failed"
+  },
+  "R2": {
+   "stocks": 36,
+   "positive_slopes": 18,
+   "p_two_sided": 1.0,
+   "verdict": "failed"
+  }
+ },
+ "regimes": {
+  "stocks": 44,
+  "verdicts": {
+   "G1": "passed",
+   "G2": "passed",
+   "G3": "failed",
+   "F1a": "reported",
+   "F1b": "passed",
+   "F5a": "failed",
+   "F5b": "failed",
+   "F10a": "failed",
+   "F10b": "failed",
+   "T1": "failed",
+   "T2": "passed",
+   "R1": "failed",
+   "R2": "passed"
+  },
+  "G": {
+   "G1": {
+    "stocks": 44,
+    "median_excess_reduction": 0.10892227969764598,
+    "quartiles": [
+     0.0042953950871072455,
+     0.12202341381206859,
+     0.19617169937198325
+    ],
+    "share_above_bound": 0.5,
+    "verdict": "passed"
+   },
+   "G2": {
+    "stocks": 44,
+    "median_excess_reduction": 0.29920773408943524,
+    "quartiles": [
+     0.1598946541234949,
+     0.3120897928525225,
+     0.48160833350249843
+    ],
+    "share_above_bound": 0.9090909090909091,
+    "detected": 39,
+    "share_detected": 0.8863636363636364,
+    "binomial_p": 1.538663645875434e-45,
+    "verdict": "passed"
+   },
+   "G3": {
+    "stocks": 44,
+    "median_excess_reduction": 0.17238532696322836,
+    "quartiles": [
+     0.02609156503328494,
+     0.1757343750995357,
+     0.26637177185998734
+    ],
+    "share_above_bound": 0.6363636363636364,
+    "verdict": "failed"
+   }
+  },
+  "F1": {
+   "origins": 778,
+   "stocks": 44,
+   "accuracy": {
+    "LG": 0.7030848329048843,
+    "FR": 0.7005141388174807,
+    "RM": 0.7506426735218509,
+    "MO": 0.6298200514138818
+   },
+   "median_abs_log_error": {
+    "LG": 0.06081489315589521,
+    "FR": 0.06114606955078067,
+    "RM": 0.07648655366983295,
+    "RW": 0.0949913454717578
+   },
+   "sign_LG_vs_FR": {
+    "better": 41,
+    "worse": 3,
+    "p_two_sided": 1.6183321349672042e-09
+   },
+   "sign_LG_vs_RM": {
+    "better": 18,
+    "worse": 26,
+    "p_two_sided": 0.2912152365458951
+   },
+   "sign_FR_vs_RM": {
+    "better": 17,
+    "worse": 27,
+    "p_two_sided": 0.17417114727072658
+   },
+   "verdict_a": "reported",
+   "verdict_b": "passed"
+  },
+  "F5": {
+   "origins": 602,
+   "stocks": 44,
+   "accuracy": {
+    "LG": 0.6677740863787376,
+    "FR": 0.6677740863787376,
+    "RM": 0.6777408637873754,
+    "MO": 0.4186046511627907
+   },
+   "median_abs_log_error": {
+    "LG": 0.2995108917603523,
+    "FR": 0.3227267582788653,
+    "RM": 0.3051104106516639,
+    "RW": 0.2410495998562298
+   },
+   "sign_LG_vs_FR": {
+    "better": 38,
+    "worse": 6,
+    "p_two_sided": 9.430375484953402e-07
+   },
+   "sign_LG_vs_RM": {
+    "better": 21,
+    "worse": 23,
+    "p_two_sided": 0.880395821280672
+   },
+   "sign_FR_vs_RM": {
+    "better": 20,
+    "worse": 24,
+    "p_two_sided": 0.651587827208914
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "F10": {
+   "origins": 382,
+   "stocks": 44,
+   "accuracy": {
+    "LG": 0.5916230366492147,
+    "FR": 0.5497382198952879,
+    "RM": 0.5942408376963351,
+    "MO": 0.40575916230366493
+   },
+   "median_abs_log_error": {
+    "LG": 0.6836058533764746,
+    "FR": 0.8728427307121833,
+    "RM": 0.7668887725185836,
+    "RW": 0.32307165799159393
+   },
+   "sign_LG_vs_FR": {
+    "better": 28,
+    "worse": 16,
+    "p_two_sided": 0.09614175442061423
+   },
+   "sign_LG_vs_RM": {
+    "better": 21,
+    "worse": 23,
+    "p_two_sided": 0.880395821280672
+   },
+   "sign_FR_vs_RM": {
+    "better": 19,
+    "worse": 25,
+    "p_two_sided": 0.4513808323961257
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "T": {
+   "classes": {
+    "0-5": {
+     "origins": 179,
+     "breaks": 137,
+     "share": 0.7653631284916201,
+     "stocks": 43
+    },
+    "D<=0": {
+     "origins": 325,
+     "breaks": 160,
+     "share": 0.49230769230769234,
+     "stocks": 44
+    },
+    "20-inf": {
+     "origins": 49,
+     "breaks": 26,
+     "share": 0.5306122448979592,
+     "stocks": 26
+    },
+    "5-10": {
+     "origins": 52,
+     "breaks": 26,
+     "share": 0.5,
+     "stocks": 24
+    },
+    "10-20": {
+     "origins": 28,
+     "breaks": 13,
+     "share": 0.4642857142857143,
+     "stocks": 19
+    }
+   },
+   "order": [
+    "0-5",
+    "5-10",
+    "10-20",
+    "20-inf"
+   ],
+   "held_catch_call_accuracy": {
+    "FR": 0.5781990521327014,
+    "LG": 0.5797788309636651,
+    "RM": 0.5781990521327014
+   },
+   "held_catch_confusion": {
+    "FR": {
+     "call=True,broke=False": 68,
+     "call=False,broke=False": 203,
+     "call=False,broke=True": 199,
+     "call=True,broke=True": 163
+    },
+    "LG": {
+     "call=True,broke=False": 67,
+     "call=False,broke=False": 204,
+     "call=False,broke=True": 199,
+     "call=True,broke=True": 163
+    },
+    "RM": {
+     "call=True,broke=False": 75,
+     "call=False,broke=False": 196,
+     "call=False,broke=True": 192,
+     "call=True,broke=True": 170
+    }
+   },
+   "verdict_T1": "failed",
+   "verdict_T2": "passed"
+  },
+  "R1": {
+   "k1": {
+    "FR_accuracy": 0.7005141388174807,
+    "RM_accuracy": 0.7506426735218509,
+    "FR_error": 0.06114606955078067,
+    "RM_error": 0.07648655366983295
+   },
+   "k5": {
+    "FR_accuracy": 0.6677740863787376,
+    "RM_accuracy": 0.6777408637873754,
+    "FR_error": 0.3227267582788653,
+    "RM_error": 0.3051104106516639
+   },
+   "verdict": "failed"
+  },
+  "R2": {
+   "stocks": 44,
+   "positive_slopes": 31,
+   "p_two_sided": 0.009559878856634896,
+   "verdict": "passed"
+  }
+ },
+ "lag": {
+  "stocks": 39,
+  "verdicts": {
+   "G1": "passed",
+   "G2": "passed",
+   "G3": "failed",
+   "F1a": "reported",
+   "F1b": "passed",
+   "F5a": "failed",
+   "F5b": "failed",
+   "F10a": "failed",
+   "F10b": "failed",
+   "T1": "failed",
+   "T2": "passed",
+   "R1": "failed",
+   "R2": "passed"
+  },
+  "G": {
+   "G1": {
+    "stocks": 39,
+    "median_excess_reduction": 0.29875402503944065,
+    "quartiles": [
+     0.16223931854137702,
+     0.29875402503944065,
+     0.5147888720221581
+    ],
+    "share_above_bound": 0.8461538461538461,
+    "verdict": "passed"
+   },
+   "G2": {
+    "stocks": 39,
+    "median_excess_reduction": 0.1388241431019497,
+    "quartiles": [
+     0.04047684407301547,
+     0.1388241431019497,
+     0.21323433032867672
+    ],
+    "share_above_bound": 0.6153846153846154,
+    "detected": 22,
+    "share_detected": 0.5641025641025641,
+    "binomial_p": 5.291204111665309e-19,
+    "verdict": "passed"
+   },
+   "G3": {
+    "stocks": 39,
+    "median_excess_reduction": 0.2592923647559865,
+    "quartiles": [
+     0.18831300631792647,
+     0.2592923647559865,
+     0.34398587296076716
+    ],
+    "share_above_bound": 0.8974358974358975,
+    "verdict": "failed"
+   }
+  },
+  "F1": {
+   "origins": 688,
+   "stocks": 39,
+   "accuracy": {
+    "LG": 0.9084302325581395,
+    "FR": 0.9011627906976745,
+    "RM": 0.8924418604651163,
+    "MO": 0.7848837209302325
+   },
+   "median_abs_log_error": {
+    "LG": 0.05027376239427547,
+    "FR": 0.05209967389698354,
+    "RM": 0.053983592186075645,
+    "RW": 0.12567327679576995
+   },
+   "sign_LG_vs_FR": {
+    "better": 36,
+    "worse": 3,
+    "p_two_sided": 3.608874976634979e-08
+   },
+   "sign_LG_vs_RM": {
+    "better": 31,
+    "worse": 8,
+    "p_two_sided": 0.0002940768754342571
+   },
+   "sign_FR_vs_RM": {
+    "better": 31,
+    "worse": 8,
+    "p_two_sided": 0.0002940768754342571
+   },
+   "verdict_a": "reported",
+   "verdict_b": "passed"
+  },
+  "F5": {
+   "origins": 532,
+   "stocks": 39,
+   "accuracy": {
+    "LG": 0.8082706766917294,
+    "FR": 0.7706766917293233,
+    "RM": 0.8947368421052632,
+    "MO": 0.39849624060150374
+   },
+   "median_abs_log_error": {
+    "LG": 0.2570646022507888,
+    "FR": 0.2912757782870451,
+    "RM": 0.20097475063937098,
+    "RW": 0.4422171069338125
+   },
+   "sign_LG_vs_FR": {
+    "better": 38,
+    "worse": 1,
+    "p_two_sided": 1.4551915228366852e-10
+   },
+   "sign_LG_vs_RM": {
+    "better": 20,
+    "worse": 19,
+    "p_two_sided": 1.0
+   },
+   "sign_FR_vs_RM": {
+    "better": 19,
+    "worse": 20,
+    "p_two_sided": 1.0
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "F10": {
+   "origins": 337,
+   "stocks": 39,
+   "accuracy": {
+    "LG": 0.7359050445103857,
+    "FR": 0.6943620178041543,
+    "RM": 0.8130563798219584,
+    "MO": 0.3620178041543027
+   },
+   "median_abs_log_error": {
+    "LG": 0.5746269989181092,
+    "FR": 0.712542720344943,
+    "RM": 0.4536204157044684,
+    "RW": 0.5048010329814709
+   },
+   "sign_LG_vs_FR": {
+    "better": 35,
+    "worse": 4,
+    "p_two_sided": 3.353161446284503e-07
+   },
+   "sign_LG_vs_RM": {
+    "better": 14,
+    "worse": 25,
+    "p_two_sided": 0.10812902140605729
+   },
+   "sign_FR_vs_RM": {
+    "better": 14,
+    "worse": 25,
+    "p_two_sided": 0.10812902140605729
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "T": {
+   "classes": {
+    "0-5": {
+     "origins": 179,
+     "breaks": 138,
+     "share": 0.770949720670391,
+     "stocks": 39
+    },
+    "D<=0": {
+     "origins": 275,
+     "breaks": 136,
+     "share": 0.49454545454545457,
+     "stocks": 39
+    },
+    "5-10": {
+     "origins": 39,
+     "breaks": 22,
+     "share": 0.5641025641025641,
+     "stocks": 21
+    },
+    "10-20": {
+     "origins": 34,
+     "breaks": 23,
+     "share": 0.6764705882352942,
+     "stocks": 17
+    },
+    "20-inf": {
+     "origins": 29,
+     "breaks": 20,
+     "share": 0.6896551724137931,
+     "stocks": 18
+    }
+   },
+   "order": [
+    "0-5",
+    "5-10",
+    "10-20",
+    "20-inf"
+   ],
+   "held_catch_call_accuracy": {
+    "FR": 0.5719424460431655,
+    "LG": 0.5827338129496403,
+    "RM": 0.5899280575539568
+   },
+   "held_catch_confusion": {
+    "FR": {
+     "call=True,broke=True": 160,
+     "call=True,broke=False": 59,
+     "call=False,broke=False": 158,
+     "call=False,broke=True": 179
+    },
+    "LG": {
+     "call=True,broke=True": 169,
+     "call=True,broke=False": 62,
+     "call=False,broke=False": 155,
+     "call=False,broke=True": 170
+    },
+    "RM": {
+     "call=True,broke=True": 168,
+     "call=True,broke=False": 57,
+     "call=False,broke=False": 160,
+     "call=False,broke=True": 171
+    }
+   },
+   "verdict_T1": "failed",
+   "verdict_T2": "passed"
+  },
+  "R1": {
+   "k1": {
+    "FR_accuracy": 0.9011627906976745,
+    "RM_accuracy": 0.8924418604651163,
+    "FR_error": 0.05209967389698354,
+    "RM_error": 0.053983592186075645
+   },
+   "k5": {
+    "FR_accuracy": 0.7706766917293233,
+    "RM_accuracy": 0.8947368421052632,
+    "FR_error": 0.2912757782870451,
+    "RM_error": 0.20097475063937098
+   },
+   "verdict": "failed"
+  },
+  "R2": {
+   "stocks": 39,
+   "positive_slopes": 38,
+   "p_two_sided": 1.4551915228366852e-10,
+   "verdict": "passed"
+  }
+ },
+ "relaxing": {
+  "stocks": 35,
+  "verdicts": {
+   "G1": "passed",
+   "G2": "passed",
+   "G3": "passed",
+   "F1a": "reported",
+   "F1b": "passed",
+   "F5a": "passed",
+   "F5b": "passed",
+   "F10a": "passed",
+   "F10b": "passed",
+   "T1": "not testable",
+   "T2": "not testable",
+   "R1": "passed",
+   "R2": "passed"
+  },
+  "G": {
+   "G1": {
+    "stocks": 35,
+    "median_excess_reduction": 0.8329888283532233,
+    "quartiles": [
+     0.7982173733900947,
+     0.8329888283532233,
+     0.8819316056949058
+    ],
+    "share_above_bound": 1.0,
+    "verdict": "passed"
+   },
+   "G2": {
+    "stocks": 35,
+    "median_excess_reduction": 0.07448799180063732,
+    "quartiles": [
+     0.0038000258958033606,
+     0.07448799180063732,
+     0.2771363160145176
+    ],
+    "share_above_bound": 0.4857142857142857,
+    "detected": 17,
+    "share_detected": 0.4857142857142857,
+    "binomial_p": 1.4510436421101505e-13,
+    "verdict": "passed"
+   },
+   "G3": {
+    "stocks": 35,
+    "median_excess_reduction": 0.008996776897568143,
+    "quartiles": [
+     -0.03384072912214002,
+     0.008996776897568143,
+     0.06370654988095856
+    ],
+    "share_above_bound": 0.17142857142857143,
+    "verdict": "passed"
+   }
+  },
+  "F1": {
+   "origins": 599,
+   "stocks": 35,
+   "accuracy": {
+    "LG": 0.986644407345576,
+    "FR": 0.986644407345576,
+    "RM": 0.8530884808013356,
+    "MO": 0.8530884808013356
+   },
+   "median_abs_log_error": {
+    "LG": 0.01282750754145184,
+    "FR": 0.013244448298257858,
+    "RM": 0.056221193852999146,
+    "RW": 0.12491454103504465
+   },
+   "sign_LG_vs_FR": {
+    "better": 25,
+    "worse": 10,
+    "p_two_sided": 0.01667384780012071
+   },
+   "sign_LG_vs_RM": {
+    "better": 35,
+    "worse": 0,
+    "p_two_sided": 5.820766091346741e-11
+   },
+   "sign_FR_vs_RM": {
+    "better": 35,
+    "worse": 0,
+    "p_two_sided": 5.820766091346741e-11
+   },
+   "verdict_a": "reported",
+   "verdict_b": "passed"
+  },
+  "F5": {
+   "origins": 459,
+   "stocks": 35,
+   "accuracy": {
+    "LG": 0.9433551198257081,
+    "FR": 0.9368191721132898,
+    "RM": 0.8104575163398693,
+    "MO": 0.43137254901960786
+   },
+   "median_abs_log_error": {
+    "LG": 0.09491077346693354,
+    "FR": 0.10700295731697514,
+    "RM": 0.2507796843211088,
+    "RW": 0.41393252526036084
+   },
+   "sign_LG_vs_FR": {
+    "better": 26,
+    "worse": 9,
+    "p_two_sided": 0.0059881205670535564
+   },
+   "sign_LG_vs_RM": {
+    "better": 33,
+    "worse": 2,
+    "p_two_sided": 3.6729034036397934e-08
+   },
+   "sign_FR_vs_RM": {
+    "better": 33,
+    "worse": 2,
+    "p_two_sided": 3.6729034036397934e-08
+   },
+   "verdict_a": "passed",
+   "verdict_b": "passed"
+  },
+  "F10": {
+   "origins": 284,
+   "stocks": 35,
+   "accuracy": {
+    "LG": 0.8028169014084507,
+    "FR": 0.7676056338028169,
+    "RM": 0.6971830985915493,
+    "MO": 0.3767605633802817
+   },
+   "median_abs_log_error": {
+    "LG": 0.25992394346620684,
+    "FR": 0.2848184876066271,
+    "RM": 0.48480181419698787,
+    "RW": 0.49905269524597745
+   },
+   "sign_LG_vs_FR": {
+    "better": 25,
+    "worse": 10,
+    "p_two_sided": 0.01667384780012071
+   },
+   "sign_LG_vs_RM": {
+    "better": 27,
+    "worse": 8,
+    "p_two_sided": 0.001878225477412343
+   },
+   "sign_FR_vs_RM": {
+    "better": 25,
+    "worse": 10,
+    "p_two_sided": 0.01667384780012071
+   },
+   "verdict_a": "passed",
+   "verdict_b": "passed"
+  },
+  "T": {
+   "classes": {
+    "D<=0": {
+     "origins": 249,
+     "breaks": 128,
+     "share": 0.5140562248995983,
+     "stocks": 34
+    },
+    "0-5": {
+     "origins": 165,
+     "breaks": 121,
+     "share": 0.7333333333333333,
+     "stocks": 35
+    },
+    "5-10": {
+     "origins": 46,
+     "breaks": 39,
+     "share": 0.8478260869565217,
+     "stocks": 20
+    },
+    "10-20": {
+     "origins": 22,
+     "breaks": 16,
+     "share": 0.7272727272727273,
+     "stocks": 12
+    },
+    "20-inf": {
+     "origins": 18,
+     "breaks": 11,
+     "share": 0.6111111111111112,
+     "stocks": 9
+    }
+   },
+   "order": [
+    "0-5",
+    "5-10",
+    "10-20",
+    "20-inf"
+   ],
+   "held_catch_call_accuracy": {
+    "FR": 0.588,
+    "LG": 0.59,
+    "RM": 0.552
+   },
+   "held_catch_confusion": {
+    "FR": {
+     "call=False,broke=False": 134,
+     "call=True,broke=False": 51,
+     "call=False,broke=True": 155,
+     "call=True,broke=True": 160
+    },
+    "LG": {
+     "call=False,broke=False": 134,
+     "call=True,broke=False": 51,
+     "call=False,broke=True": 154,
+     "call=True,broke=True": 161
+    },
+    "RM": {
+     "call=False,broke=False": 135,
+     "call=True,broke=False": 50,
+     "call=False,broke=True": 174,
+     "call=True,broke=True": 141
+    }
+   },
+   "verdict_T1": "not testable",
+   "verdict_T2": "not testable"
+  },
+  "R1": {
+   "k1": {
+    "FR_accuracy": 0.986644407345576,
+    "RM_accuracy": 0.8530884808013356,
+    "FR_error": 0.013244448298257858,
+    "RM_error": 0.056221193852999146
+   },
+   "k5": {
+    "FR_accuracy": 0.9368191721132898,
+    "RM_accuracy": 0.8104575163398693,
+    "FR_error": 0.10700295731697514,
+    "RM_error": 0.2507796843211088
+   },
+   "verdict": "passed"
+  },
+  "R2": {
+   "stocks": 35,
+   "positive_slopes": 35,
+   "p_two_sided": 5.820766091346741e-11,
+   "verdict": "passed"
+  }
+ },
+ "drifting": {
+  "stocks": 42,
+  "verdicts": {
+   "G1": "passed",
+   "G2": "failed",
+   "G3": "passed",
+   "F1a": "reported",
+   "F1b": "failed",
+   "F5a": "failed",
+   "F5b": "failed",
+   "F10a": "failed",
+   "F10b": "failed",
+   "T1": "not testable",
+   "T2": "not testable",
+   "R1": "passed",
+   "R2": "passed"
+  },
+  "G": {
+   "G1": {
+    "stocks": 42,
+    "median_excess_reduction": 0.9362079538144221,
+    "quartiles": [
+     0.9168829258284974,
+     0.9365017387969115,
+     0.9479084393061579
+    ],
+    "share_above_bound": 1.0,
+    "verdict": "passed"
+   },
+   "G2": {
+    "stocks": 42,
+    "median_excess_reduction": -0.01714585490386166,
+    "quartiles": [
+     -0.032893539342337234,
+     -0.016782960634607134,
+     0.040756658035432755
+    ],
+    "share_above_bound": 0.047619047619047616,
+    "detected": 2,
+    "share_detected": 0.047619047619047616,
+    "binomial_p": 0.6276360263526122,
+    "verdict": "failed"
+   },
+   "G3": {
+    "stocks": 42,
+    "median_excess_reduction": -0.016241305810513106,
+    "quartiles": [
+     -0.04534946496831005,
+     -0.015025924526687356,
+     0.04012203114699617
+    ],
+    "share_above_bound": 0.16666666666666666,
+    "verdict": "passed"
+   }
+  },
+  "F1": {
+   "origins": 764,
+   "stocks": 42,
+   "accuracy": {
+    "LG": 0.975130890052356,
+    "FR": 0.9803664921465969,
+    "RM": 0.8350785340314136,
+    "MO": 0.8403141361256544
+   },
+   "median_abs_log_error": {
+    "LG": 0.008409306749479819,
+    "FR": 0.006505992988908317,
+    "RM": 0.05709299959817653,
+    "RW": 0.11366946849563456
+   },
+   "sign_LG_vs_FR": {
+    "better": 8,
+    "worse": 34,
+    "p_two_sided": 6.877111491121468e-05
+   },
+   "sign_LG_vs_RM": {
+    "better": 42,
+    "worse": 0,
+    "p_two_sided": 4.547473508864641e-13
+   },
+   "sign_FR_vs_RM": {
+    "better": 42,
+    "worse": 0,
+    "p_two_sided": 4.547473508864641e-13
+   },
+   "verdict_a": "reported",
+   "verdict_b": "failed"
+  },
+  "F5": {
+   "origins": 596,
+   "stocks": 42,
+   "accuracy": {
+    "LG": 0.9513422818791947,
+    "FR": 0.9614093959731543,
+    "RM": 0.7885906040268457,
+    "MO": 0.43288590604026844
+   },
+   "median_abs_log_error": {
+    "LG": 0.07066927864591223,
+    "FR": 0.045205853775657945,
+    "RM": 0.26225999419267787,
+    "RW": 0.3745954763665952
+   },
+   "sign_LG_vs_FR": {
+    "better": 15,
+    "worse": 27,
+    "p_two_sided": 0.08842954698775429
+   },
+   "sign_LG_vs_RM": {
+    "better": 42,
+    "worse": 0,
+    "p_two_sided": 4.547473508864641e-13
+   },
+   "sign_FR_vs_RM": {
+    "better": 42,
+    "worse": 0,
+    "p_two_sided": 4.547473508864641e-13
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "F10": {
+   "origins": 386,
+   "stocks": 42,
+   "accuracy": {
+    "LG": 0.9041450777202072,
+    "FR": 0.9300518134715026,
+    "RM": 0.7331606217616581,
+    "MO": 0.3704663212435233
+   },
+   "median_abs_log_error": {
+    "LG": 0.15082515771915062,
+    "FR": 0.1293339154200135,
+    "RM": 0.5480500197771957,
+    "RW": 0.5179162882905157
+   },
+   "sign_LG_vs_FR": {
+    "better": 12,
+    "worse": 30,
+    "p_two_sided": 0.007915897334896727
+   },
+   "sign_LG_vs_RM": {
+    "better": 39,
+    "worse": 3,
+    "p_two_sided": 5.631591193377972e-09
+   },
+   "sign_FR_vs_RM": {
+    "better": 38,
+    "worse": 4,
+    "p_two_sided": 5.65314621780999e-08
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "T": {
+   "classes": {
+    "D<=0": {
+     "origins": 371,
+     "breaks": 188,
+     "share": 0.5067385444743935,
+     "stocks": 42
+    },
+    "0-5": {
+     "origins": 193,
+     "breaks": 153,
+     "share": 0.7927461139896373,
+     "stocks": 41
+    },
+    "20-inf": {
+     "origins": 31,
+     "breaks": 11,
+     "share": 0.3548387096774194,
+     "stocks": 12
+    },
+    "5-10": {
+     "origins": 37,
+     "breaks": 19,
+     "share": 0.5135135135135135,
+     "stocks": 12
+    },
+    "10-20": {
+     "origins": 19,
+     "breaks": 12,
+     "share": 0.631578947368421,
+     "stocks": 9
+    }
+   },
+   "order": [
+    "0-5",
+    "5-10",
+    "10-20",
+    "20-inf"
+   ],
+   "held_catch_call_accuracy": {
+    "FR": 0.5867895545314901,
+    "LG": 0.6052227342549923,
+    "RM": 0.6036866359447005
+   },
+   "held_catch_confusion": {
+    "FR": {
+     "call=False,broke=False": 210,
+     "call=False,broke=True": 211,
+     "call=True,broke=True": 172,
+     "call=True,broke=False": 58
+    },
+    "LG": {
+     "call=False,broke=False": 208,
+     "call=False,broke=True": 197,
+     "call=True,broke=True": 186,
+     "call=True,broke=False": 60
+    },
+    "RM": {
+     "call=False,broke=False": 203,
+     "call=False,broke=True": 193,
+     "call=True,broke=True": 190,
+     "call=True,broke=False": 65
+    }
+   },
+   "verdict_T1": "not testable",
+   "verdict_T2": "not testable"
+  },
+  "R1": {
+   "k1": {
+    "FR_accuracy": 0.9803664921465969,
+    "RM_accuracy": 0.8350785340314136,
+    "FR_error": 0.006505992988908317,
+    "RM_error": 0.05709299959817653
+   },
+   "k5": {
+    "FR_accuracy": 0.9614093959731543,
+    "RM_accuracy": 0.7885906040268457,
+    "FR_error": 0.045205853775657945,
+    "RM_error": 0.26225999419267787
+   },
+   "verdict": "passed"
+  },
+  "R2": {
+   "stocks": 42,
+   "positive_slopes": 42,
+   "p_two_sided": 4.547473508864641e-13,
+   "verdict": "passed"
+  }
+ }
+}

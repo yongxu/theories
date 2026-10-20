@@ -1,0 +1,1681 @@
+{
+ "mq3_assessments": 256,
+ "new_current_stocks_with_an_earlier_assessment": 215,
+ "skipped": {
+  "deprecated stock": 55
+ },
+ "by_group": {
+  "control | eligible by presence": 11,
+  "control | short": 5,
+  "other | eligible by presence": 94,
+  "other | short": 20,
+  "primary | eligible by presence": 79,
+  "primary | short": 6
+ },
+ "eligible_with_recent_series_parsed_by_mq3_load": 177,
+ "eligible": {
+  "control": [
+   {
+    "stockid": "BIGEYEATL",
+    "assessid": "ICCAT-BIGEYEATL-1950-2016-PONS",
+    "method": "ASPIC",
+    "category": "Biomass dynamics model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 63
+   },
+   {
+    "stockid": "COWCODSCAL",
+    "assessid": "PFMC-COWCODSCAL-1900-2015-HIVELY",
+    "method": "XDB-SRA",
+    "category": "Biomass dynamics model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 115
+   },
+   {
+    "stockid": "REDFISHSPP3LN",
+    "assessid": "NAFO-SC-REDFISHSPP3LN-1959-2008-BAUM",
+    "method": "ASPIC",
+    "category": "Biomass dynamics model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 49
+   },
+   {
+    "stockid": "SAILEATL",
+    "assessid": "ICCAT-SAILEATL-1956-2010-CHING",
+    "method": "BSPM",
+    "category": "Biomass dynamics model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 54
+   },
+   {
+    "stockid": "SAILWATL",
+    "assessid": "ICCAT-SAILWATL-1956-2010-CHING",
+    "method": "BSPM",
+    "category": "Biomass dynamics model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 54
+   },
+   {
+    "stockid": "SKJEATL",
+    "assessid": "ICCAT-SKJEATL-1950-2010-CHING",
+    "method": "BSPM",
+    "category": "Biomass dynamics model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 60
+   },
+   {
+    "stockid": "SKJWATL",
+    "assessid": "ICCAT-SKJWATL-1950-2014-PONS",
+    "method": "ASPIC",
+    "category": "Biomass dynamics model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 64
+   },
+   {
+    "stockid": "SPANMACKSATLC",
+    "assessid": "SEFSC-SPANMACKSATLC-1950-2012-HIVELY",
+    "method": "ASPIC",
+    "category": "Biomass dynamics model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 62
+   },
+   {
+    "stockid": "SWORDSATL",
+    "assessid": "ICCAT-SWORDSATL-1950-2015-PONS",
+    "method": "ASPIC",
+    "category": "Biomass dynamics model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 65
+   },
+   {
+    "stockid": "YELL3LNO",
+    "assessid": "NAFO-SC-YELL3LNO-1960-2009-BAUM",
+    "method": "ASPIC",
+    "category": "Biomass dynamics model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 49
+   },
+   {
+    "stockid": "YFINATL",
+    "assessid": "ICCAT-YFINATL-1950-2016-PONS",
+    "method": "ASPIC",
+    "category": "Biomass dynamics model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 63
+   }
+  ],
+  "other": [
+   {
+    "stockid": "ALPLAICBSAI",
+    "assessid": "AFSC-ALPLAICBSAI-1975-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 39
+   },
+   {
+    "stockid": "ANCHOBAYB",
+    "assessid": "WGHANSA-ANCHOBAYB-1986-2014-ICESIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 26
+   },
+   {
+    "stockid": "ARFLOUNDBSAI",
+    "assessid": "AFSC-ARFLOUNDBSAI-1976-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 38
+   },
+   {
+    "stockid": "ARFLOUNDGA",
+    "assessid": "AFSC-ARFLOUNDGA-1961-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 53
+   },
+   {
+    "stockid": "ARFLOUNDPCOAST",
+    "assessid": "NWFSC-ARFLOUNDPCOAST-1916-2017-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 100
+   },
+   {
+    "stockid": "ATHAL5YZ",
+    "assessid": "NEFSC-ATHAL5YZ-1800-2007-COL",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 207
+   },
+   {
+    "stockid": "ATKABSAI",
+    "assessid": "AFSC-ATKABSAI-1977-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 37
+   },
+   {
+    "stockid": "BGROCKPCOAST",
+    "assessid": "NWFSC-BGROCKPCOAST-1950-2017-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 66
+   },
+   {
+    "stockid": "BKINGCRABPI",
+    "assessid": "AFSC-BKINGCRABPI-1960-2008-JENSEN",
+    "method": "Survey indices",
+    "category": "Survey index",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 48
+   },
+   {
+    "stockid": "BOCACCBCW",
+    "assessid": "DFO-PAC-BOCACCBCW-1935-2012-CHING",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 77
+   },
+   {
+    "stockid": "BRMSOJ",
+    "assessid": "FAFRFJ-BRMSOJ-1980-2010-ONO",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 30
+   },
+   {
+    "stockid": "BWHITNEA",
+    "assessid": "WGWIDE-BWHITNEA-1980-2020-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 38
+   },
+   {
+    "stockid": "CAPENOR",
+    "assessid": "AFWG-CAPENOR-1972-2018-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 46
+   },
+   {
+    "stockid": "COD1F-XIV",
+    "assessid": "NWWG-COD1F-XIV-1972-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 45
+   },
+   {
+    "stockid": "COD1IN",
+    "assessid": "NWWG-COD1IN-1975-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 42
+   },
+   {
+    "stockid": "COD5Zjm",
+    "assessid": "TRAC-COD5Zjm-1977-2018-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 39
+   },
+   {
+    "stockid": "CODBA2224",
+    "assessid": "WGBFAS-CODBA2224-1984-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 33
+   },
+   {
+    "stockid": "CODBA2532",
+    "assessid": "WGBFAS-CODBA2532-1964-2013-ICESIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 46
+   },
+   {
+    "stockid": "CODICE",
+    "assessid": "NWWG-CODICE-1952-2014-ICESIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 58
+   },
+   {
+    "stockid": "CODIS",
+    "assessid": "WGCSE-CODIS-1968-2017-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 48
+   },
+   {
+    "stockid": "CODNEAR",
+    "assessid": "AFWG-CODNEAR-1943-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 72
+   },
+   {
+    "stockid": "CODVIIek",
+    "assessid": "WGCSE-CODVIIek-1970-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 47
+   },
+   {
+    "stockid": "CODVIa",
+    "assessid": "WGCSE-CODVIa-1980-2017-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 35
+   },
+   {
+    "stockid": "CROCKPCOAST",
+    "assessid": "NWFSC-CROCKPCOAST-1892-2017-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 124
+   },
+   {
+    "stockid": "CUSKVa-XIV",
+    "assessid": "WGDEEP-CUSKVa-XIV-1973-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 36
+   },
+   {
+    "stockid": "DKROCKPCOAST",
+    "assessid": "NWFSC-DKROCKPCOAST-1915-2017-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 101
+   },
+   {
+    "stockid": "DUSROCKGA",
+    "assessid": "AFSC-DUSROCKGA-1977-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 37
+   },
+   {
+    "stockid": "EBASSIVbc-VII",
+    "assessid": "WGCSE-EBASSIVbc-VII-1985-2017-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 31
+   },
+   {
+    "stockid": "FLSOLEBSAI",
+    "assessid": "AFSC-FLSOLEBSAI-1977-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 37
+   },
+   {
+    "stockid": "FLSOLEGA",
+    "assessid": "AFSC-FLSOLEGA-1978-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 36
+   },
+   {
+    "stockid": "FMEG8c9a",
+    "assessid": "WGBIE-FMEG8c9a-1986-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 32
+   },
+   {
+    "stockid": "GOLDREDNEAR",
+    "assessid": "AFWG-GOLDREDNEAR-1986-2017-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 27
+   },
+   {
+    "stockid": "GOLDREDV-VI-XII-XIV",
+    "assessid": "NWWG-GOLDREDV-VI-XII-XIV-1966-2018-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 46
+   },
+   {
+    "stockid": "HADFAPL",
+    "assessid": "NWWG-HADFAPL-1956-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 61
+   },
+   {
+    "stockid": "HADIS",
+    "assessid": "WGCSE-HADIS-1993-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 25
+   },
+   {
+    "stockid": "HADROCK",
+    "assessid": "WGCSE-HADROCK-1990-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 27
+   },
+   {
+    "stockid": "HADVIIb-k",
+    "assessid": "WGCSE-HADVIIb-k-1993-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 25
+   },
+   {
+    "stockid": "HAKESOTH",
+    "assessid": "WGBIE-HAKESOTH-1982-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 36
+   },
+   {
+    "stockid": "HERR2224IIIa",
+    "assessid": "HAWG-HERR2224IIIa-1991-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 27
+   },
+   {
+    "stockid": "HERR2529-32",
+    "assessid": "WGBFAS-HERR2529-32-1973-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 44
+   },
+   {
+    "stockid": "HERR30-31",
+    "assessid": "WGBFAS-HERR30-31-1979-2017-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 36
+   },
+   {
+    "stockid": "HERRRIGA",
+    "assessid": "WGBFAS-HERRRIGA-1976-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 41
+   },
+   {
+    "stockid": "HERRSIRS",
+    "assessid": "HAWG-HERRSIRS-1957-2018-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 59
+   },
+   {
+    "stockid": "HERRVIaVIIbc",
+    "assessid": "HAWG-HERRVIaVIIbc-1956-2018-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 60
+   },
+   {
+    "stockid": "HMACKIIa-IVa-Vb-VIa-VII-VIII",
+    "assessid": "WGWIDE-HMACKIIa-IVa-Vb-VIa-VII-VIII-1982-2017-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 34
+   },
+   {
+    "stockid": "LINGCODNPCOAST",
+    "assessid": "NWFSC-LINGCODNPCOAST-1889-2017-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 127
+   },
+   {
+    "stockid": "LINGCODSPCOAST",
+    "assessid": "NWFSC-LINGCODSPCOAST-1889-2017-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 126
+   },
+   {
+    "stockid": "LINGVa",
+    "assessid": "WGDEEP-LINGVa-1982-2016-ICESIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 33
+   },
+   {
+    "stockid": "LISQUIDATLC",
+    "assessid": "SEFSC-LISQUIDATLC-1963-2009-HIVELY",
+    "method": "Survey indices",
+    "category": "Survey index",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 46
+   },
+   {
+    "stockid": "MACKNEICES",
+    "assessid": "WGWIDE-MACKNEICES-1980-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 38
+   },
+   {
+    "stockid": "MACKNWATLSA3-4",
+    "assessid": "DFO-MACKNWATLSA3-4-1968-2014-WATSON",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 45
+   },
+   {
+    "stockid": "MEG8c9a",
+    "assessid": "WGBIE-MEG8c9a-1985-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 32
+   },
+   {
+    "stockid": "MEGVII-VIIIabd",
+    "assessid": "WGBIE-MEGVII-VIIIabd-1983-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 34
+   },
+   {
+    "stockid": "NEPHMEDGSA17-18",
+    "assessid": "STECF-NEPHMEDGSA17-18-1960-2015-OSIO",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 45
+   },
+   {
+    "stockid": "NROCKBSAI",
+    "assessid": "AFSC-NROCKBSAI-1977-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 37
+   },
+   {
+    "stockid": "NROCKGA",
+    "assessid": "AFSC-NROCKGA-1961-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 53
+   },
+   {
+    "stockid": "NRSOLEEBSAI",
+    "assessid": "AFSC-NRSOLEEBSAI-1975-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 39
+   },
+   {
+    "stockid": "PANCHPERUNC",
+    "assessid": "IMARPE-PANCHPERUNC-1959-2016-HILBORN",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 52
+   },
+   {
+    "stockid": "PANDALIIIaW-IVaE",
+    "assessid": "NIPAG-PANDALIIIaW-IVaE-1988-2015-ICESIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 26
+   },
+   {
+    "stockid": "PCODAI",
+    "assessid": "AFSC-PCODAI-1991-2018-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 27
+   },
+   {
+    "stockid": "PERCHEBSAI",
+    "assessid": "AFSC-PERCHEBSAI-1960-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 54
+   },
+   {
+    "stockid": "PHAKEPCOAST",
+    "assessid": "PFMC-PHAKEPCOAST-1966-2018-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 51
+   },
+   {
+    "stockid": "PLAICCELT",
+    "assessid": "WGCSE-PLAICCELT-1977-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 41
+   },
+   {
+    "stockid": "PLAICECHW",
+    "assessid": "WGCSE-PLAICECHW-1979-2014-ICESIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 33
+   },
+   {
+    "stockid": "PLAICIS",
+    "assessid": "WGCSE-PLAICIS-1980-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 37
+   },
+   {
+    "stockid": "POLLIEG",
+    "assessid": "NWWG-POLLIEG-1977-2017-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 36
+   },
+   {
+    "stockid": "POLLNEAR",
+    "assessid": "AFWG-POLLNEAR-1957-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 58
+   },
+   {
+    "stockid": "POLLNS-VI-IIIa",
+    "assessid": "WGNSSK-POLLNS-VI-IIIa-1964-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 51
+   },
+   {
+    "stockid": "POPERCHGA",
+    "assessid": "AFSC-POPERCHGA-1961-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 53
+   },
+   {
+    "stockid": "REXSOLEGA",
+    "assessid": "AFSC-REXSOLEGA-1982-2016-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 33
+   },
+   {
+    "stockid": "RKCRABBB",
+    "assessid": "AFSC-RKCRABBB-1953-2020-SISIMP2021-2",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 44
+   },
+   {
+    "stockid": "SABLEFEBSAIGA",
+    "assessid": "AFSC-SABLEFEBSAIGA-1960-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 54
+   },
+   {
+    "stockid": "SARDPVIIIc-IXa",
+    "assessid": "WGHANSA-SARDPVIIIc-IXa-1978-2016-ICESIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 37
+   },
+   {
+    "stockid": "SDOGATLC",
+    "assessid": "NEFSC-SDOGATLC-1962-2006-SOSEBEE",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 44
+   },
+   {
+    "stockid": "SEELNSSA1",
+    "assessid": "HAWG-SEELNSSA1-1983-2015-ICESIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 31
+   },
+   {
+    "stockid": "SEELNSSA2",
+    "assessid": "HAWG-SEELNSSA2-1983-2015-ICESIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 31
+   },
+   {
+    "stockid": "SEELNSSA3",
+    "assessid": "HAWG-SEELNSSA3-1983-2015-ICESIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 31
+   },
+   {
+    "stockid": "SKJCWPAC",
+    "assessid": "SPC-SKJCWPAC-1950-2015-PONS",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 43
+   },
+   {
+    "stockid": "SOLEIIIa-2224",
+    "assessid": "WGBFAS-SOLEIIIa-2224-1983-2018-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 33
+   },
+   {
+    "stockid": "SOLENS",
+    "assessid": "WGNSSK-SOLENS-1956-2018-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 60
+   },
+   {
+    "stockid": "SOLEVIIIab",
+    "assessid": "WGBIE-SOLEVIIIab-1982-2018-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 33
+   },
+   {
+    "stockid": "SOLEVIId",
+    "assessid": "WGNSSK-SOLEVIId-1981-2018-ICESIMP2018",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 35
+   },
+   {
+    "stockid": "SOLEVIIe",
+    "assessid": "WGCSE-SOLEVIIe-1967-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 49
+   },
+   {
+    "stockid": "SPRAT22-32",
+    "assessid": "WGBFAS-SPRAT22-32-1973-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 44
+   },
+   {
+    "stockid": "SRAKEROCKGA",
+    "assessid": "AFSC-SRAKEROCKGA-1984-2017-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 25
+   },
+   {
+    "stockid": "WANGLVII-VIIIabd",
+    "assessid": "WGBIE-WANGLVII-VIIIabd-1986-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 32
+   },
+   {
+    "stockid": "WANGLVIIIc-IXa",
+    "assessid": "WGBIE-WANGLVIIIc-IXa-1980-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 38
+   },
+   {
+    "stockid": "WHITNS-VIId",
+    "assessid": "WGNSSK-WHITNS-VIId-1978-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 40
+   },
+   {
+    "stockid": "WHITVIIa",
+    "assessid": "WGCSE-WHITVIIa-1980-2019-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 38
+   },
+   {
+    "stockid": "WHITVIa",
+    "assessid": "WGCSE-WHITVIa-1980-2018-ICESIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 36
+   },
+   {
+    "stockid": "WPOLLAI",
+    "assessid": "AFSC-WPOLLAI-1978-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 36
+   },
+   {
+    "stockid": "WPOLLBOGO",
+    "assessid": "AFSC-WPOLLBOGO-1977-2017-SISIMP2021",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 25
+   },
+   {
+    "stockid": "WPOLLGA",
+    "assessid": "AFSC-WPOLLGA-1970-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 44
+   },
+   {
+    "stockid": "YSOLEBSAI",
+    "assessid": "AFSC-YSOLEBSAI-1954-2015-SISIMP2016",
+    "method": "Unknown",
+    "category": "ambiguous",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 60
+   }
+  ],
+  "primary": [
+   {
+    "stockid": "ALSKABSAI",
+    "assessid": "AFSC-ALSKABSAI-1950-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 64
+   },
+   {
+    "stockid": "ANCHMEDGSA17-18",
+    "assessid": "STECF-ANCHMEDGSA17-18-1975-2015-OSIO",
+    "method": "SAM",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 40
+   },
+   {
+    "stockid": "AUSSALMONNZ",
+    "assessid": "NIWA-AUSSALMONNZ-1975-2006-JENSEN",
+    "method": "CASAL",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 31
+   },
+   {
+    "stockid": "BLACKROCKCAL",
+    "assessid": "SWFSC-BLACKROCKCAL-1916-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 98
+   },
+   {
+    "stockid": "BLACKROCKORECOAST",
+    "assessid": "NWFSC-BLACKROCKORECOAST-1892-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 122
+   },
+   {
+    "stockid": "BLACKROCKWASH",
+    "assessid": "NWFSC-BLACKROCKWASH-1940-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 74
+   },
+   {
+    "stockid": "BLUEFISHATLC",
+    "assessid": "NEFSC-BLUEFISHATLC-1985-2014-SISIMP2016",
+    "method": "ASAP",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 29
+   },
+   {
+    "stockid": "BSBASSMATLC",
+    "assessid": "NEFSC-BSBASSMATLC-1939-2015-ASHBROOK",
+    "method": "SCA",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 25
+   },
+   {
+    "stockid": "BSBASSSATL",
+    "assessid": "SEFSC-BSBASSSATL-1950-2010-HIVELY",
+    "method": "BAM",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 60
+   },
+   {
+    "stockid": "CABEZORECOAST",
+    "assessid": "NWFSC-CABEZORECOAST-1973-2009-STACHURA",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 36
+   },
+   {
+    "stockid": "CABEZSCAL",
+    "assessid": "PFMC-CABEZSCAL-1930-2009-CHING",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 79
+   },
+   {
+    "stockid": "CHROCKCPCOAST",
+    "assessid": "NWFSC-CHROCKCPCOAST-1900-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 114
+   },
+   {
+    "stockid": "CHROCKNPCOAST",
+    "assessid": "SWFSC-CHROCKNPCOAST-1900-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 114
+   },
+   {
+    "stockid": "CHROCKSPCOAST",
+    "assessid": "NWFSC-CHROCKSPCOAST-1900-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 114
+   },
+   {
+    "stockid": "CHTRACCH",
+    "assessid": "SPRFMO-CHTRACCH-1950-2010-RICARD",
+    "method": "JJM",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 60
+   },
+   {
+    "stockid": "COBGM",
+    "assessid": "SEFSC-COBGM-1927-2011-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 84
+   },
+   {
+    "stockid": "DSOLEGA",
+    "assessid": "AFSC-DSOLEGA-1978-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 36
+   },
+   {
+    "stockid": "DSOLEPCOAST",
+    "assessid": "SWFSC-DSOLEPCOAST-1910-2011-STACHURA",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 101
+   },
+   {
+    "stockid": "ESOLEPCOAST",
+    "assessid": "NWFSC-ESOLEPCOAST-1876-2007-BRANCH",
+    "method": "SS2",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 131
+   },
+   {
+    "stockid": "GAGSATLC",
+    "assessid": "SEFSC-GAGSATLC-1962-2012-SISIMP2016",
+    "method": "BAM",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 50
+   },
+   {
+    "stockid": "GEMFISHNZ",
+    "assessid": "NZMFishMIDDEPTHSWG-GEMFISHNZ-1952-2007-JENSEN",
+    "method": "CASAL",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 55
+   },
+   {
+    "stockid": "GHAL23KLMNO",
+    "assessid": "NAFO-SC-GHAL23KLMNO-1960-2006-PREFONTAINE",
+    "method": "XSA",
+    "category": "VPA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 46
+   },
+   {
+    "stockid": "GHALBSAI",
+    "assessid": "AFSC-GHALBSAI-1960-2015-HIVELY",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 55
+   },
+   {
+    "stockid": "GRAMBERGM",
+    "assessid": "SEFSC-GRAMBERGM-1950-2012-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 62
+   },
+   {
+    "stockid": "GRAMBERSATLC",
+    "assessid": "SEFSC-GRAMBERSATLC-1946-2006-JENSEN",
+    "method": "SCA",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 60
+   },
+   {
+    "stockid": "HAD4X5Y",
+    "assessid": "DFO-HAD4X5Y-1970-2014-WATSON",
+    "method": "VPA",
+    "category": "VPA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 43
+   },
+   {
+    "stockid": "HAD5Y",
+    "assessid": "NEFSC-HAD5Y-1964-2011-CHING",
+    "method": "VPA",
+    "category": "VPA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 47
+   },
+   {
+    "stockid": "HERR4RSP",
+    "assessid": "DFO-QUE-HERR4RSP-1963-2004-PREFONTAINE",
+    "method": "SPA-ADAPT",
+    "category": "VPA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 37
+   },
+   {
+    "stockid": "HERRCC",
+    "assessid": "DFO-HERRCC-1951-2015-WATSON",
+    "method": "SCA",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 64
+   },
+   {
+    "stockid": "HERRHG",
+    "assessid": "DFO-HERRHG-1951-2015-WATSON",
+    "method": "SCA",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 64
+   },
+   {
+    "stockid": "HERRNWATLC",
+    "assessid": "NEFSC-HERRNWATLC-1964-2011-HIVELY",
+    "method": "ASAP",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 47
+   },
+   {
+    "stockid": "HERRPRD",
+    "assessid": "DFO-HERRPRD-1951-2015-WATSON",
+    "method": "SCA",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 64
+   },
+   {
+    "stockid": "HERRSOG",
+    "assessid": "DFO-HERRSOG-1951-2015-WATSON",
+    "method": "SCA",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 64
+   },
+   {
+    "stockid": "HERRWCVANI",
+    "assessid": "DFO-HERRWCVANI-1951-2015-WATSON",
+    "method": "SCA",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 64
+   },
+   {
+    "stockid": "LNOSESKAPCOAST",
+    "assessid": "NWFSC-LNOSESKAPCOAST-1915-2007-BRANCH",
+    "method": "SS2",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 92
+   },
+   {
+    "stockid": "LSTHORNHPCOAST",
+    "assessid": "NWFSC-LSTHORNHPCOAST-1964-2012-HIVELY",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 48
+   },
+   {
+    "stockid": "MONKGOMNGB",
+    "assessid": "NEFSC-MONKGOMNGB-1979-2010-SISIMP2016",
+    "method": "SCALE",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 31
+   },
+   {
+    "stockid": "MONKSGBMATL",
+    "assessid": "NEFSC-MONKSGBMATL-1979-2010-SISIMP2016",
+    "method": "SCALE",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 31
+   },
+   {
+    "stockid": "NEPHMEDGSA5",
+    "assessid": "IEO-COB-NEPHMEDGSA5-1986-2011-BANOBI",
+    "method": "XSA",
+    "category": "VPA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 25
+   },
+   {
+    "stockid": "NRSOLEGA",
+    "assessid": "AFSC-NRSOLEGA-1977-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 37
+   },
+   {
+    "stockid": "NZLINGLIN72",
+    "assessid": "NZMFishMIDDEPTHSWG-NZLINGLIN72-1972-2007-JENSEN",
+    "method": "CASAL",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 35
+   },
+   {
+    "stockid": "NZLINGLIN7WC",
+    "assessid": "NZMFishMIDDEPTHSWG-NZLINGLIN7WC-1972-2008-JENSEN",
+    "method": "CASAL",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 36
+   },
+   {
+    "stockid": "PAUAPAU5B",
+    "assessid": "NZMFishSHELLFISHWG-PAUAPAU5B-1963-2007-JENSEN",
+    "method": "LBBM",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 44
+   },
+   {
+    "stockid": "PAUAPAU5D",
+    "assessid": "NZMFishSHELLFISHWG-PAUAPAU5D-1964-2006-JENSEN",
+    "method": "LBBM",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 42
+   },
+   {
+    "stockid": "PCODBS",
+    "assessid": "AFSC-PCODBS-1977-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 37
+   },
+   {
+    "stockid": "PCODGA",
+    "assessid": "AFSC-PCODGA-1977-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 37
+   },
+   {
+    "stockid": "PHALNPAC",
+    "assessid": "IPHC-PHALNPAC-1888-2014-HIVELY",
+    "method": "AD-CAM",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 126
+   },
+   {
+    "stockid": "PLAIC7d",
+    "assessid": "WGNSSK-PLAIC7d-1979-2010-NEUBAUER",
+    "method": "XSA",
+    "category": "VPA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 31
+   },
+   {
+    "stockid": "POLL5YZ",
+    "assessid": "NEFSC-POLL5YZ-1960-2009-CHING",
+    "method": "ASAP",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 49
+   },
+   {
+    "stockid": "PSOLEPCOAST",
+    "assessid": "NWFSC-PSOLEPCOAST-1876-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 138
+   },
+   {
+    "stockid": "RGROUPSATL",
+    "assessid": "SEFSC-RGROUPSATL-1976-2009-HIVELY",
+    "method": "BAM",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 33
+   },
+   {
+    "stockid": "RPORGYSATLC",
+    "assessid": "SEFSC-RPORGYSATLC-1972-2012-HIVELY",
+    "method": "BAM",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 40
+   },
+   {
+    "stockid": "RSNAPGM",
+    "assessid": "SEFSC-RSNAPGM-1872-2013-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 141
+   },
+   {
+    "stockid": "RSNAPSATLC",
+    "assessid": "SEFSC-RSNAPSATLC-1954-2010-HIVELY",
+    "method": "BAM",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 56
+   },
+   {
+    "stockid": "RSOLEGA",
+    "assessid": "AFSC-RSOLEGA-1977-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 37
+   },
+   {
+    "stockid": "RSOLEHSTR",
+    "assessid": "DFO-PAC-RSOLEHSTR-1945-2001-COLLIE",
+    "method": "TSA",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 56
+   },
+   {
+    "stockid": "SABLEFPCOAST",
+    "assessid": "NWFSC-SABLEFPCOAST-1900-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 114
+   },
+   {
+    "stockid": "SARDMEDGSA17-18",
+    "assessid": "STECF-SARDMEDGSA17-18-1975-2015-OSIO",
+    "method": "SAM",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 40
+   },
+   {
+    "stockid": "SBT",
+    "assessid": "CCSBT-SC-SBT-1931-2016-PONS",
+    "method": "SCA",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 64
+   },
+   {
+    "stockid": "SKJCIO",
+    "assessid": "IOTC-SKJCIO-1950-2014-PONS",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 64
+   },
+   {
+    "stockid": "SNOWGROUPSATLC",
+    "assessid": "SEFSC-SNOWGROUPSATLC-1974-2013-HIVELY",
+    "method": "BAM",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 39
+   },
+   {
+    "stockid": "SPANMACKGM",
+    "assessid": "SEFSC-SPANMACKGM-1886-2011-HIVELY",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 125
+   },
+   {
+    "stockid": "SSTHORNHPCOAST",
+    "assessid": "NWFSC-SSTHORNHPCOAST-1901-2013-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 111
+   },
+   {
+    "stockid": "STMARLINSWPO",
+    "assessid": "SPC-STMARLINSWPO-1952-2011-CHING",
+    "method": "MULTIFAN-CL",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 59
+   },
+   {
+    "stockid": "STMARLINWCNPAC",
+    "assessid": "ISC-STMARLINWCNPAC-1974-2013-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 38
+   },
+   {
+    "stockid": "SURFMATLC",
+    "assessid": "NEFSC-SURFMATLC-1982-2011-SISIMP2016",
+    "method": "SS2",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 29
+   },
+   {
+    "stockid": "SWORDMED",
+    "assessid": "ICCAT-SWORDMED-1950-2009-CHING",
+    "method": "XSA",
+    "category": "VPA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 59
+   },
+   {
+    "stockid": "TILESATLC",
+    "assessid": "SEFSC-TILESATLC-1961-2011-HIVELY",
+    "method": "SCA",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 50
+   },
+   {
+    "stockid": "TREVALLYTRE7",
+    "assessid": "NZMFishINSHOREWG-TREVALLYTRE7-1944-2005-JENSEN",
+    "method": "CASAL",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 61
+   },
+   {
+    "stockid": "VSNAPGM",
+    "assessid": "SEFSC-VSNAPGM-1950-2014-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 64
+   },
+   {
+    "stockid": "VSNAPSATLC",
+    "assessid": "SEFSC-VSNAPSATLC-1945-2012-HIVELY",
+    "method": "BAM",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 67
+   },
+   {
+    "stockid": "WHAKE4T",
+    "assessid": "DFO-SG-WHAKE4T-1960-2013-OSGOOD",
+    "method": "SPA",
+    "category": "VPA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "sp_years_present": 32
+   },
+   {
+    "stockid": "WHAKEGBGOM",
+    "assessid": "NEFSC-WHAKEGBGOM-1962-2011-HIVELY",
+    "method": "ASAP",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 49
+   },
+   {
+    "stockid": "WPOLLEBS",
+    "assessid": "AFSC-WPOLLEBS-1963-2015-HIVELY",
+    "method": "IA",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 52
+   },
+   {
+    "stockid": "WPOLLNSO",
+    "assessid": "VNIRO-WPOLLNSO-1963-2012-CHING",
+    "method": "XSA",
+    "category": "VPA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 49
+   },
+   {
+    "stockid": "WPOLLWBS",
+    "assessid": "VNIRO-WPOLLWBS-1970-2008-CHING",
+    "method": "VPA",
+    "category": "VPA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 38
+   },
+   {
+    "stockid": "WROCKPCOAST",
+    "assessid": "NWFSC-WROCKPCOAST-1916-2015-SISIMP2016",
+    "method": "SS3",
+    "category": "Integrated Analysis",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 98
+   },
+   {
+    "stockid": "YELLGB",
+    "assessid": "NEFSC-YELLGB-1935-2008-BAUM",
+    "method": "VPA",
+    "category": "VPA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 73
+   },
+   {
+    "stockid": "YELLSNEMATL",
+    "assessid": "NEFSC-YELLSNEMATL-1935-2011-HIVELY",
+    "method": "ASAP",
+    "category": "Statistical catch at age model",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "sp_years_present": 76
+   }
+  ]
+ },
+ "scope": "presence of series and years only; no value was read"
+}
