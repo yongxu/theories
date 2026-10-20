@@ -1,0 +1,4555 @@
+{
+ "pairs": [
+  {
+   "A": [
+    "eel population",
+    "heron colony",
+    "water mill",
+    "willow wood"
+   ],
+   "A_beyond_B": [
+    "water mill"
+   ],
+   "B": [
+    "eel population",
+    "heron colony",
+    "willow wood"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F01",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "eel population",
+    "riverside allotments",
+    "water mill",
+    "willow wood"
+   ],
+   "A_beyond_B": [
+    "riverside allotments",
+    "water mill"
+   ],
+   "B": [
+    "eel population",
+    "heron colony",
+    "willow wood"
+   ],
+   "B_beyond_A": [
+    "heron colony"
+   ],
+   "cls": "M1",
+   "frame": "F01",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "eel population": 1,
+     "heron colony": 1,
+     "riverside allotments": 7,
+     "rowing club": 1,
+     "water mill": 7,
+     "willow wood": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "eel population": 1,
+     "heron colony": 7,
+     "riverside allotments": 1,
+     "rowing club": 1,
+     "water mill": 1,
+     "willow wood": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "eel population",
+    "heron colony",
+    "riverside allotments",
+    "water mill",
+    "willow wood"
+   ],
+   "A_beyond_B": [
+    "riverside allotments",
+    "water mill"
+   ],
+   "B": [
+    "eel population",
+    "heron colony",
+    "willow wood"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F01",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "eel population",
+    "riverside allotments",
+    "rowing club",
+    "water mill",
+    "willow wood"
+   ],
+   "A_beyond_B": [
+    "riverside allotments",
+    "rowing club",
+    "water mill"
+   ],
+   "B": [
+    "eel population",
+    "heron colony",
+    "willow wood"
+   ],
+   "B_beyond_A": [
+    "heron colony"
+   ],
+   "cls": "M2",
+   "frame": "F01",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "eel population": 1,
+     "heron colony": 1,
+     "riverside allotments": 7,
+     "rowing club": 7,
+     "water mill": 7,
+     "willow wood": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "eel population": 1,
+     "heron colony": 7,
+     "riverside allotments": 1,
+     "rowing club": 1,
+     "water mill": 1,
+     "willow wood": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "eel population",
+    "water mill",
+    "willow wood"
+   ],
+   "A_beyond_B": [
+    "water mill"
+   ],
+   "B": [
+    "eel population",
+    "heron colony",
+    "willow wood"
+   ],
+   "B_beyond_A": [
+    "heron colony"
+   ],
+   "cls": "M0",
+   "frame": "F01",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "eel population": 1,
+     "heron colony": 1,
+     "riverside allotments": 1,
+     "rowing club": 1,
+     "water mill": 7,
+     "willow wood": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "eel population": 1,
+     "heron colony": 7,
+     "riverside allotments": 1,
+     "rowing club": 1,
+     "water mill": 1,
+     "willow wood": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "eel population",
+    "heron colony",
+    "willow wood"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "eel population",
+    "heron colony",
+    "willow wood"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F01",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "eel population",
+    "heron colony",
+    "water mill",
+    "willow wood"
+   ],
+   "A_beyond_B": [
+    "water mill"
+   ],
+   "B": [
+    "eel population",
+    "heron colony",
+    "willow wood"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F01",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "crane breeding pairs",
+    "fen village pub",
+    "reed-cutting trade",
+    "windmill museum"
+   ],
+   "A_beyond_B": [
+    "reed-cutting trade"
+   ],
+   "B": [
+    "crane breeding pairs",
+    "fen village pub",
+    "windmill museum"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F02",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "crane breeding pairs",
+    "peat bog",
+    "reed-cutting trade",
+    "windmill museum"
+   ],
+   "A_beyond_B": [
+    "peat bog",
+    "reed-cutting trade"
+   ],
+   "B": [
+    "crane breeding pairs",
+    "fen village pub",
+    "windmill museum"
+   ],
+   "B_beyond_A": [
+    "fen village pub"
+   ],
+   "cls": "M1",
+   "frame": "F02",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "birdwatchers' society": 1,
+     "crane breeding pairs": 1,
+     "fen village pub": 1,
+     "peat bog": 7,
+     "reed-cutting trade": 7,
+     "windmill museum": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "birdwatchers' society": 1,
+     "crane breeding pairs": 1,
+     "fen village pub": 7,
+     "peat bog": 1,
+     "reed-cutting trade": 1,
+     "windmill museum": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "crane breeding pairs",
+    "fen village pub",
+    "peat bog",
+    "reed-cutting trade",
+    "windmill museum"
+   ],
+   "A_beyond_B": [
+    "peat bog",
+    "reed-cutting trade"
+   ],
+   "B": [
+    "crane breeding pairs",
+    "fen village pub",
+    "windmill museum"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F02",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "birdwatchers' society",
+    "crane breeding pairs",
+    "peat bog",
+    "reed-cutting trade",
+    "windmill museum"
+   ],
+   "A_beyond_B": [
+    "birdwatchers' society",
+    "peat bog",
+    "reed-cutting trade"
+   ],
+   "B": [
+    "crane breeding pairs",
+    "fen village pub",
+    "windmill museum"
+   ],
+   "B_beyond_A": [
+    "fen village pub"
+   ],
+   "cls": "M2",
+   "frame": "F02",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "birdwatchers' society": 7,
+     "crane breeding pairs": 1,
+     "fen village pub": 1,
+     "peat bog": 7,
+     "reed-cutting trade": 7,
+     "windmill museum": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "birdwatchers' society": 1,
+     "crane breeding pairs": 1,
+     "fen village pub": 7,
+     "peat bog": 1,
+     "reed-cutting trade": 1,
+     "windmill museum": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "crane breeding pairs",
+    "reed-cutting trade",
+    "windmill museum"
+   ],
+   "A_beyond_B": [
+    "reed-cutting trade"
+   ],
+   "B": [
+    "crane breeding pairs",
+    "fen village pub",
+    "windmill museum"
+   ],
+   "B_beyond_A": [
+    "fen village pub"
+   ],
+   "cls": "M0",
+   "frame": "F02",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "birdwatchers' society": 1,
+     "crane breeding pairs": 1,
+     "fen village pub": 1,
+     "peat bog": 1,
+     "reed-cutting trade": 7,
+     "windmill museum": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "birdwatchers' society": 1,
+     "crane breeding pairs": 1,
+     "fen village pub": 7,
+     "peat bog": 1,
+     "reed-cutting trade": 1,
+     "windmill museum": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "crane breeding pairs",
+    "fen village pub",
+    "windmill museum"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "crane breeding pairs",
+    "fen village pub",
+    "windmill museum"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F02",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "crane breeding pairs",
+    "fen village pub",
+    "reed-cutting trade",
+    "windmill museum"
+   ],
+   "A_beyond_B": [
+    "reed-cutting trade"
+   ],
+   "B": [
+    "crane breeding pairs",
+    "fen village pub",
+    "windmill museum"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F02",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "Saturday market",
+    "chess club",
+    "community choir",
+    "old cinema"
+   ],
+   "A_beyond_B": [
+    "community choir"
+   ],
+   "B": [
+    "Saturday market",
+    "chess club",
+    "old cinema"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F03",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "Saturday market",
+    "community choir",
+    "old cinema",
+    "swift colony"
+   ],
+   "A_beyond_B": [
+    "community choir",
+    "swift colony"
+   ],
+   "B": [
+    "Saturday market",
+    "chess club",
+    "old cinema"
+   ],
+   "B_beyond_A": [
+    "chess club"
+   ],
+   "cls": "M1",
+   "frame": "F03",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "Saturday market": 1,
+     "chess club": 1,
+     "community choir": 7,
+     "family bakery": 1,
+     "old cinema": 1,
+     "swift colony": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "Saturday market": 1,
+     "chess club": 7,
+     "community choir": 1,
+     "family bakery": 1,
+     "old cinema": 1,
+     "swift colony": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "Saturday market",
+    "chess club",
+    "community choir",
+    "old cinema",
+    "swift colony"
+   ],
+   "A_beyond_B": [
+    "community choir",
+    "swift colony"
+   ],
+   "B": [
+    "Saturday market",
+    "chess club",
+    "old cinema"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F03",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "Saturday market",
+    "community choir",
+    "family bakery",
+    "old cinema",
+    "swift colony"
+   ],
+   "A_beyond_B": [
+    "community choir",
+    "family bakery",
+    "swift colony"
+   ],
+   "B": [
+    "Saturday market",
+    "chess club",
+    "old cinema"
+   ],
+   "B_beyond_A": [
+    "chess club"
+   ],
+   "cls": "M2",
+   "frame": "F03",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "Saturday market": 1,
+     "chess club": 1,
+     "community choir": 7,
+     "family bakery": 7,
+     "old cinema": 1,
+     "swift colony": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "Saturday market": 1,
+     "chess club": 7,
+     "community choir": 1,
+     "family bakery": 1,
+     "old cinema": 1,
+     "swift colony": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "Saturday market",
+    "community choir",
+    "old cinema"
+   ],
+   "A_beyond_B": [
+    "community choir"
+   ],
+   "B": [
+    "Saturday market",
+    "chess club",
+    "old cinema"
+   ],
+   "B_beyond_A": [
+    "chess club"
+   ],
+   "cls": "M0",
+   "frame": "F03",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "Saturday market": 1,
+     "chess club": 1,
+     "community choir": 7,
+     "family bakery": 1,
+     "old cinema": 1,
+     "swift colony": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "Saturday market": 1,
+     "chess club": 7,
+     "community choir": 1,
+     "family bakery": 1,
+     "old cinema": 1,
+     "swift colony": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "Saturday market",
+    "chess club",
+    "old cinema"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "Saturday market",
+    "chess club",
+    "old cinema"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F03",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "Saturday market",
+    "chess club",
+    "community choir",
+    "old cinema"
+   ],
+   "A_beyond_B": [
+    "community choir"
+   ],
+   "B": [
+    "Saturday market",
+    "chess club",
+    "old cinema"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F03",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "bat roost",
+    "dockworkers' football club",
+    "street-art festival",
+    "tea house"
+   ],
+   "A_beyond_B": [
+    "tea house"
+   ],
+   "B": [
+    "bat roost",
+    "dockworkers' football club",
+    "street-art festival"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F04",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "dockworkers' football club",
+    "night shelter",
+    "street-art festival",
+    "tea house"
+   ],
+   "A_beyond_B": [
+    "night shelter",
+    "tea house"
+   ],
+   "B": [
+    "bat roost",
+    "dockworkers' football club",
+    "street-art festival"
+   ],
+   "B_beyond_A": [
+    "bat roost"
+   ],
+   "cls": "M1",
+   "frame": "F04",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "bat roost": 1,
+     "dockworkers' football club": 1,
+     "library branch": 1,
+     "night shelter": 7,
+     "street-art festival": 1,
+     "tea house": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "bat roost": 7,
+     "dockworkers' football club": 1,
+     "library branch": 1,
+     "night shelter": 1,
+     "street-art festival": 1,
+     "tea house": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "bat roost",
+    "dockworkers' football club",
+    "night shelter",
+    "street-art festival",
+    "tea house"
+   ],
+   "A_beyond_B": [
+    "night shelter",
+    "tea house"
+   ],
+   "B": [
+    "bat roost",
+    "dockworkers' football club",
+    "street-art festival"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F04",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "dockworkers' football club",
+    "library branch",
+    "night shelter",
+    "street-art festival",
+    "tea house"
+   ],
+   "A_beyond_B": [
+    "library branch",
+    "night shelter",
+    "tea house"
+   ],
+   "B": [
+    "bat roost",
+    "dockworkers' football club",
+    "street-art festival"
+   ],
+   "B_beyond_A": [
+    "bat roost"
+   ],
+   "cls": "M2",
+   "frame": "F04",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "bat roost": 1,
+     "dockworkers' football club": 1,
+     "library branch": 7,
+     "night shelter": 7,
+     "street-art festival": 1,
+     "tea house": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "bat roost": 7,
+     "dockworkers' football club": 1,
+     "library branch": 1,
+     "night shelter": 1,
+     "street-art festival": 1,
+     "tea house": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "dockworkers' football club",
+    "street-art festival",
+    "tea house"
+   ],
+   "A_beyond_B": [
+    "tea house"
+   ],
+   "B": [
+    "bat roost",
+    "dockworkers' football club",
+    "street-art festival"
+   ],
+   "B_beyond_A": [
+    "bat roost"
+   ],
+   "cls": "M0",
+   "frame": "F04",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "bat roost": 1,
+     "dockworkers' football club": 1,
+     "library branch": 1,
+     "night shelter": 1,
+     "street-art festival": 1,
+     "tea house": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "bat roost": 7,
+     "dockworkers' football club": 1,
+     "library branch": 1,
+     "night shelter": 1,
+     "street-art festival": 1,
+     "tea house": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "bat roost",
+    "dockworkers' football club",
+    "street-art festival"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "bat roost",
+    "dockworkers' football club",
+    "street-art festival"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F04",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "bat roost",
+    "dockworkers' football club",
+    "street-art festival",
+    "tea house"
+   ],
+   "A_beyond_B": [
+    "tea house"
+   ],
+   "B": [
+    "bat roost",
+    "dockworkers' football club",
+    "street-art festival"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F04",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "hospital chaplaincy",
+    "maternity ward",
+    "mobile dental clinic",
+    "rare-disease research team"
+   ],
+   "A_beyond_B": [
+    "hospital chaplaincy"
+   ],
+   "B": [
+    "maternity ward",
+    "mobile dental clinic",
+    "rare-disease research team"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F05",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "cancer screening programme",
+    "hospital chaplaincy",
+    "maternity ward",
+    "mobile dental clinic"
+   ],
+   "A_beyond_B": [
+    "cancer screening programme",
+    "hospital chaplaincy"
+   ],
+   "B": [
+    "maternity ward",
+    "mobile dental clinic",
+    "rare-disease research team"
+   ],
+   "B_beyond_A": [
+    "rare-disease research team"
+   ],
+   "cls": "M1",
+   "frame": "F05",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "cancer screening programme": 7,
+     "hospice": 1,
+     "hospital chaplaincy": 7,
+     "maternity ward": 1,
+     "mobile dental clinic": 1,
+     "rare-disease research team": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "cancer screening programme": 1,
+     "hospice": 1,
+     "hospital chaplaincy": 1,
+     "maternity ward": 1,
+     "mobile dental clinic": 1,
+     "rare-disease research team": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "cancer screening programme",
+    "hospital chaplaincy",
+    "maternity ward",
+    "mobile dental clinic",
+    "rare-disease research team"
+   ],
+   "A_beyond_B": [
+    "cancer screening programme",
+    "hospital chaplaincy"
+   ],
+   "B": [
+    "maternity ward",
+    "mobile dental clinic",
+    "rare-disease research team"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F05",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "cancer screening programme",
+    "hospice",
+    "hospital chaplaincy",
+    "maternity ward",
+    "mobile dental clinic"
+   ],
+   "A_beyond_B": [
+    "cancer screening programme",
+    "hospice",
+    "hospital chaplaincy"
+   ],
+   "B": [
+    "maternity ward",
+    "mobile dental clinic",
+    "rare-disease research team"
+   ],
+   "B_beyond_A": [
+    "rare-disease research team"
+   ],
+   "cls": "M2",
+   "frame": "F05",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "cancer screening programme": 7,
+     "hospice": 7,
+     "hospital chaplaincy": 7,
+     "maternity ward": 1,
+     "mobile dental clinic": 1,
+     "rare-disease research team": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "cancer screening programme": 1,
+     "hospice": 1,
+     "hospital chaplaincy": 1,
+     "maternity ward": 1,
+     "mobile dental clinic": 1,
+     "rare-disease research team": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "hospital chaplaincy",
+    "maternity ward",
+    "mobile dental clinic"
+   ],
+   "A_beyond_B": [
+    "hospital chaplaincy"
+   ],
+   "B": [
+    "maternity ward",
+    "mobile dental clinic",
+    "rare-disease research team"
+   ],
+   "B_beyond_A": [
+    "rare-disease research team"
+   ],
+   "cls": "M0",
+   "frame": "F05",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "cancer screening programme": 1,
+     "hospice": 1,
+     "hospital chaplaincy": 7,
+     "maternity ward": 1,
+     "mobile dental clinic": 1,
+     "rare-disease research team": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "cancer screening programme": 1,
+     "hospice": 1,
+     "hospital chaplaincy": 1,
+     "maternity ward": 1,
+     "mobile dental clinic": 1,
+     "rare-disease research team": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "maternity ward",
+    "mobile dental clinic",
+    "rare-disease research team"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "maternity ward",
+    "mobile dental clinic",
+    "rare-disease research team"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F05",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "hospital chaplaincy",
+    "maternity ward",
+    "mobile dental clinic",
+    "rare-disease research team"
+   ],
+   "A_beyond_B": [
+    "hospital chaplaincy"
+   ],
+   "B": [
+    "maternity ward",
+    "mobile dental clinic",
+    "rare-disease research team"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F05",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "art therapy studio",
+    "dementia day centre",
+    "eating-disorder unit",
+    "peer support groups"
+   ],
+   "A_beyond_B": [
+    "peer support groups"
+   ],
+   "B": [
+    "art therapy studio",
+    "dementia day centre",
+    "eating-disorder unit"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F06",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "addiction clinic",
+    "art therapy studio",
+    "eating-disorder unit",
+    "peer support groups"
+   ],
+   "A_beyond_B": [
+    "addiction clinic",
+    "peer support groups"
+   ],
+   "B": [
+    "art therapy studio",
+    "dementia day centre",
+    "eating-disorder unit"
+   ],
+   "B_beyond_A": [
+    "dementia day centre"
+   ],
+   "cls": "M1",
+   "frame": "F06",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "addiction clinic": 7,
+     "art therapy studio": 1,
+     "dementia day centre": 1,
+     "eating-disorder unit": 1,
+     "peer support groups": 7,
+     "youth crisis line": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "addiction clinic": 1,
+     "art therapy studio": 1,
+     "dementia day centre": 7,
+     "eating-disorder unit": 1,
+     "peer support groups": 1,
+     "youth crisis line": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "addiction clinic",
+    "art therapy studio",
+    "dementia day centre",
+    "eating-disorder unit",
+    "peer support groups"
+   ],
+   "A_beyond_B": [
+    "addiction clinic",
+    "peer support groups"
+   ],
+   "B": [
+    "art therapy studio",
+    "dementia day centre",
+    "eating-disorder unit"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F06",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "addiction clinic",
+    "art therapy studio",
+    "eating-disorder unit",
+    "peer support groups",
+    "youth crisis line"
+   ],
+   "A_beyond_B": [
+    "addiction clinic",
+    "peer support groups",
+    "youth crisis line"
+   ],
+   "B": [
+    "art therapy studio",
+    "dementia day centre",
+    "eating-disorder unit"
+   ],
+   "B_beyond_A": [
+    "dementia day centre"
+   ],
+   "cls": "M2",
+   "frame": "F06",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "addiction clinic": 7,
+     "art therapy studio": 1,
+     "dementia day centre": 1,
+     "eating-disorder unit": 1,
+     "peer support groups": 7,
+     "youth crisis line": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "addiction clinic": 1,
+     "art therapy studio": 1,
+     "dementia day centre": 7,
+     "eating-disorder unit": 1,
+     "peer support groups": 1,
+     "youth crisis line": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "art therapy studio",
+    "eating-disorder unit",
+    "peer support groups"
+   ],
+   "A_beyond_B": [
+    "peer support groups"
+   ],
+   "B": [
+    "art therapy studio",
+    "dementia day centre",
+    "eating-disorder unit"
+   ],
+   "B_beyond_A": [
+    "dementia day centre"
+   ],
+   "cls": "M0",
+   "frame": "F06",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "addiction clinic": 1,
+     "art therapy studio": 1,
+     "dementia day centre": 1,
+     "eating-disorder unit": 1,
+     "peer support groups": 7,
+     "youth crisis line": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "addiction clinic": 1,
+     "art therapy studio": 1,
+     "dementia day centre": 7,
+     "eating-disorder unit": 1,
+     "peer support groups": 1,
+     "youth crisis line": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "art therapy studio",
+    "dementia day centre",
+    "eating-disorder unit"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "art therapy studio",
+    "dementia day centre",
+    "eating-disorder unit"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F06",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "art therapy studio",
+    "dementia day centre",
+    "eating-disorder unit",
+    "peer support groups"
+   ],
+   "A_beyond_B": [
+    "peer support groups"
+   ],
+   "B": [
+    "art therapy studio",
+    "dementia day centre",
+    "eating-disorder unit"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F06",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "dairy cooperative",
+    "heirloom wheat",
+    "old hedgerows",
+    "wild bees"
+   ],
+   "A_beyond_B": [
+    "wild bees"
+   ],
+   "B": [
+    "dairy cooperative",
+    "heirloom wheat",
+    "old hedgerows"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F07",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "family orchard",
+    "heirloom wheat",
+    "old hedgerows",
+    "wild bees"
+   ],
+   "A_beyond_B": [
+    "family orchard",
+    "wild bees"
+   ],
+   "B": [
+    "dairy cooperative",
+    "heirloom wheat",
+    "old hedgerows"
+   ],
+   "B_beyond_A": [
+    "dairy cooperative"
+   ],
+   "cls": "M1",
+   "frame": "F07",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "dairy cooperative": 1,
+     "family orchard": 7,
+     "heirloom wheat": 1,
+     "old hedgerows": 1,
+     "sheepdog trials": 1,
+     "wild bees": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "dairy cooperative": 7,
+     "family orchard": 1,
+     "heirloom wheat": 1,
+     "old hedgerows": 1,
+     "sheepdog trials": 1,
+     "wild bees": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "dairy cooperative",
+    "family orchard",
+    "heirloom wheat",
+    "old hedgerows",
+    "wild bees"
+   ],
+   "A_beyond_B": [
+    "family orchard",
+    "wild bees"
+   ],
+   "B": [
+    "dairy cooperative",
+    "heirloom wheat",
+    "old hedgerows"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F07",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "family orchard",
+    "heirloom wheat",
+    "old hedgerows",
+    "sheepdog trials",
+    "wild bees"
+   ],
+   "A_beyond_B": [
+    "family orchard",
+    "sheepdog trials",
+    "wild bees"
+   ],
+   "B": [
+    "dairy cooperative",
+    "heirloom wheat",
+    "old hedgerows"
+   ],
+   "B_beyond_A": [
+    "dairy cooperative"
+   ],
+   "cls": "M2",
+   "frame": "F07",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "dairy cooperative": 1,
+     "family orchard": 7,
+     "heirloom wheat": 1,
+     "old hedgerows": 1,
+     "sheepdog trials": 7,
+     "wild bees": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "dairy cooperative": 7,
+     "family orchard": 1,
+     "heirloom wheat": 1,
+     "old hedgerows": 1,
+     "sheepdog trials": 1,
+     "wild bees": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "heirloom wheat",
+    "old hedgerows",
+    "wild bees"
+   ],
+   "A_beyond_B": [
+    "wild bees"
+   ],
+   "B": [
+    "dairy cooperative",
+    "heirloom wheat",
+    "old hedgerows"
+   ],
+   "B_beyond_A": [
+    "dairy cooperative"
+   ],
+   "cls": "M0",
+   "frame": "F07",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "dairy cooperative": 1,
+     "family orchard": 1,
+     "heirloom wheat": 1,
+     "old hedgerows": 1,
+     "sheepdog trials": 1,
+     "wild bees": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "dairy cooperative": 7,
+     "family orchard": 1,
+     "heirloom wheat": 1,
+     "old hedgerows": 1,
+     "sheepdog trials": 1,
+     "wild bees": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "dairy cooperative",
+    "heirloom wheat",
+    "old hedgerows"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "dairy cooperative",
+    "heirloom wheat",
+    "old hedgerows"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F07",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "dairy cooperative",
+    "heirloom wheat",
+    "old hedgerows",
+    "wild bees"
+   ],
+   "A_beyond_B": [
+    "wild bees"
+   ],
+   "B": [
+    "dairy cooperative",
+    "heirloom wheat",
+    "old hedgerows"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F07",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "farmers' credit union",
+    "mango grove",
+    "rice terraces",
+    "water-buffalo herds"
+   ],
+   "A_beyond_B": [
+    "farmers' credit union"
+   ],
+   "B": [
+    "mango grove",
+    "rice terraces",
+    "water-buffalo herds"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F08",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "farmers' credit union",
+    "frog population",
+    "mango grove",
+    "rice terraces"
+   ],
+   "A_beyond_B": [
+    "farmers' credit union",
+    "frog population"
+   ],
+   "B": [
+    "mango grove",
+    "rice terraces",
+    "water-buffalo herds"
+   ],
+   "B_beyond_A": [
+    "water-buffalo herds"
+   ],
+   "cls": "M1",
+   "frame": "F08",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "farmers' credit union": 7,
+     "frog population": 7,
+     "mango grove": 1,
+     "rice terraces": 1,
+     "temple water festival": 1,
+     "water-buffalo herds": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "farmers' credit union": 1,
+     "frog population": 1,
+     "mango grove": 1,
+     "rice terraces": 1,
+     "temple water festival": 1,
+     "water-buffalo herds": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "farmers' credit union",
+    "frog population",
+    "mango grove",
+    "rice terraces",
+    "water-buffalo herds"
+   ],
+   "A_beyond_B": [
+    "farmers' credit union",
+    "frog population"
+   ],
+   "B": [
+    "mango grove",
+    "rice terraces",
+    "water-buffalo herds"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F08",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "farmers' credit union",
+    "frog population",
+    "mango grove",
+    "rice terraces",
+    "temple water festival"
+   ],
+   "A_beyond_B": [
+    "farmers' credit union",
+    "frog population",
+    "temple water festival"
+   ],
+   "B": [
+    "mango grove",
+    "rice terraces",
+    "water-buffalo herds"
+   ],
+   "B_beyond_A": [
+    "water-buffalo herds"
+   ],
+   "cls": "M2",
+   "frame": "F08",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "farmers' credit union": 7,
+     "frog population": 7,
+     "mango grove": 1,
+     "rice terraces": 1,
+     "temple water festival": 7,
+     "water-buffalo herds": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "farmers' credit union": 1,
+     "frog population": 1,
+     "mango grove": 1,
+     "rice terraces": 1,
+     "temple water festival": 1,
+     "water-buffalo herds": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "farmers' credit union",
+    "mango grove",
+    "rice terraces"
+   ],
+   "A_beyond_B": [
+    "farmers' credit union"
+   ],
+   "B": [
+    "mango grove",
+    "rice terraces",
+    "water-buffalo herds"
+   ],
+   "B_beyond_A": [
+    "water-buffalo herds"
+   ],
+   "cls": "M0",
+   "frame": "F08",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "farmers' credit union": 7,
+     "frog population": 1,
+     "mango grove": 1,
+     "rice terraces": 1,
+     "temple water festival": 1,
+     "water-buffalo herds": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "farmers' credit union": 1,
+     "frog population": 1,
+     "mango grove": 1,
+     "rice terraces": 1,
+     "temple water festival": 1,
+     "water-buffalo herds": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "mango grove",
+    "rice terraces",
+    "water-buffalo herds"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "mango grove",
+    "rice terraces",
+    "water-buffalo herds"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F08",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "farmers' credit union",
+    "mango grove",
+    "rice terraces",
+    "water-buffalo herds"
+   ],
+   "A_beyond_B": [
+    "farmers' credit union"
+   ],
+   "B": [
+    "mango grove",
+    "rice terraces",
+    "water-buffalo herds"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F08",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting",
+    "village school"
+   ],
+   "A_beyond_B": [
+    "village school"
+   ],
+   "B": [
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F09",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "puffin colony",
+    "seagrass meadow",
+    "small-boat fleet",
+    "village school"
+   ],
+   "A_beyond_B": [
+    "small-boat fleet",
+    "village school"
+   ],
+   "B": [
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting"
+   ],
+   "B_beyond_A": [
+    "seaweed harvesting"
+   ],
+   "cls": "M1",
+   "frame": "F09",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "lighthouse": 1,
+     "puffin colony": 1,
+     "seagrass meadow": 1,
+     "seaweed harvesting": 1,
+     "small-boat fleet": 7,
+     "village school": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "lighthouse": 1,
+     "puffin colony": 1,
+     "seagrass meadow": 1,
+     "seaweed harvesting": 7,
+     "small-boat fleet": 1,
+     "village school": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting",
+    "small-boat fleet",
+    "village school"
+   ],
+   "A_beyond_B": [
+    "small-boat fleet",
+    "village school"
+   ],
+   "B": [
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F09",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "lighthouse",
+    "puffin colony",
+    "seagrass meadow",
+    "small-boat fleet",
+    "village school"
+   ],
+   "A_beyond_B": [
+    "lighthouse",
+    "small-boat fleet",
+    "village school"
+   ],
+   "B": [
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting"
+   ],
+   "B_beyond_A": [
+    "seaweed harvesting"
+   ],
+   "cls": "M2",
+   "frame": "F09",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "lighthouse": 7,
+     "puffin colony": 1,
+     "seagrass meadow": 1,
+     "seaweed harvesting": 1,
+     "small-boat fleet": 7,
+     "village school": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "lighthouse": 1,
+     "puffin colony": 1,
+     "seagrass meadow": 1,
+     "seaweed harvesting": 7,
+     "small-boat fleet": 1,
+     "village school": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "puffin colony",
+    "seagrass meadow",
+    "village school"
+   ],
+   "A_beyond_B": [
+    "village school"
+   ],
+   "B": [
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting"
+   ],
+   "B_beyond_A": [
+    "seaweed harvesting"
+   ],
+   "cls": "M0",
+   "frame": "F09",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "lighthouse": 1,
+     "puffin colony": 1,
+     "seagrass meadow": 1,
+     "seaweed harvesting": 1,
+     "small-boat fleet": 1,
+     "village school": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "lighthouse": 1,
+     "puffin colony": 1,
+     "seagrass meadow": 1,
+     "seaweed harvesting": 7,
+     "small-boat fleet": 1,
+     "village school": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F09",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting",
+    "village school"
+   ],
+   "A_beyond_B": [
+    "village school"
+   ],
+   "B": [
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F09",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "boatyard",
+    "coral reef",
+    "dolphin pod",
+    "sailors' chapel"
+   ],
+   "A_beyond_B": [
+    "dolphin pod"
+   ],
+   "B": [
+    "boatyard",
+    "coral reef",
+    "sailors' chapel"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F10",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "boatyard",
+    "dolphin pod",
+    "island ferry",
+    "sailors' chapel"
+   ],
+   "A_beyond_B": [
+    "dolphin pod",
+    "island ferry"
+   ],
+   "B": [
+    "boatyard",
+    "coral reef",
+    "sailors' chapel"
+   ],
+   "B_beyond_A": [
+    "coral reef"
+   ],
+   "cls": "M1",
+   "frame": "F10",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "boatyard": 1,
+     "coral reef": 1,
+     "dolphin pod": 7,
+     "fish market": 1,
+     "island ferry": 7,
+     "sailors' chapel": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "boatyard": 1,
+     "coral reef": 7,
+     "dolphin pod": 1,
+     "fish market": 1,
+     "island ferry": 1,
+     "sailors' chapel": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "boatyard",
+    "coral reef",
+    "dolphin pod",
+    "island ferry",
+    "sailors' chapel"
+   ],
+   "A_beyond_B": [
+    "dolphin pod",
+    "island ferry"
+   ],
+   "B": [
+    "boatyard",
+    "coral reef",
+    "sailors' chapel"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F10",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "boatyard",
+    "dolphin pod",
+    "fish market",
+    "island ferry",
+    "sailors' chapel"
+   ],
+   "A_beyond_B": [
+    "dolphin pod",
+    "fish market",
+    "island ferry"
+   ],
+   "B": [
+    "boatyard",
+    "coral reef",
+    "sailors' chapel"
+   ],
+   "B_beyond_A": [
+    "coral reef"
+   ],
+   "cls": "M2",
+   "frame": "F10",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "boatyard": 1,
+     "coral reef": 1,
+     "dolphin pod": 7,
+     "fish market": 7,
+     "island ferry": 7,
+     "sailors' chapel": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "boatyard": 1,
+     "coral reef": 7,
+     "dolphin pod": 1,
+     "fish market": 1,
+     "island ferry": 1,
+     "sailors' chapel": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "boatyard",
+    "dolphin pod",
+    "sailors' chapel"
+   ],
+   "A_beyond_B": [
+    "dolphin pod"
+   ],
+   "B": [
+    "boatyard",
+    "coral reef",
+    "sailors' chapel"
+   ],
+   "B_beyond_A": [
+    "coral reef"
+   ],
+   "cls": "M0",
+   "frame": "F10",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "boatyard": 1,
+     "coral reef": 1,
+     "dolphin pod": 7,
+     "fish market": 1,
+     "island ferry": 1,
+     "sailors' chapel": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "boatyard": 1,
+     "coral reef": 7,
+     "dolphin pod": 1,
+     "fish market": 1,
+     "island ferry": 1,
+     "sailors' chapel": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "boatyard",
+    "coral reef",
+    "sailors' chapel"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "boatyard",
+    "coral reef",
+    "sailors' chapel"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F10",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "boatyard",
+    "coral reef",
+    "dolphin pod",
+    "sailors' chapel"
+   ],
+   "A_beyond_B": [
+    "dolphin pod"
+   ],
+   "B": [
+    "boatyard",
+    "coral reef",
+    "sailors' chapel"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F10",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "lynx population",
+    "mountain hut",
+    "ski club",
+    "valley dialect"
+   ],
+   "A_beyond_B": [
+    "valley dialect"
+   ],
+   "B": [
+    "lynx population",
+    "mountain hut",
+    "ski club"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F11",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "lynx population",
+    "mountain hut",
+    "old-growth beech",
+    "valley dialect"
+   ],
+   "A_beyond_B": [
+    "old-growth beech",
+    "valley dialect"
+   ],
+   "B": [
+    "lynx population",
+    "mountain hut",
+    "ski club"
+   ],
+   "B_beyond_A": [
+    "ski club"
+   ],
+   "cls": "M1",
+   "frame": "F11",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "lynx population": 1,
+     "mountain hut": 1,
+     "old-growth beech": 7,
+     "ski club": 1,
+     "summer pasture": 1,
+     "valley dialect": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "lynx population": 1,
+     "mountain hut": 1,
+     "old-growth beech": 1,
+     "ski club": 7,
+     "summer pasture": 1,
+     "valley dialect": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "lynx population",
+    "mountain hut",
+    "old-growth beech",
+    "ski club",
+    "valley dialect"
+   ],
+   "A_beyond_B": [
+    "old-growth beech",
+    "valley dialect"
+   ],
+   "B": [
+    "lynx population",
+    "mountain hut",
+    "ski club"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F11",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "lynx population",
+    "mountain hut",
+    "old-growth beech",
+    "summer pasture",
+    "valley dialect"
+   ],
+   "A_beyond_B": [
+    "old-growth beech",
+    "summer pasture",
+    "valley dialect"
+   ],
+   "B": [
+    "lynx population",
+    "mountain hut",
+    "ski club"
+   ],
+   "B_beyond_A": [
+    "ski club"
+   ],
+   "cls": "M2",
+   "frame": "F11",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "lynx population": 1,
+     "mountain hut": 1,
+     "old-growth beech": 7,
+     "ski club": 1,
+     "summer pasture": 7,
+     "valley dialect": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "lynx population": 1,
+     "mountain hut": 1,
+     "old-growth beech": 1,
+     "ski club": 7,
+     "summer pasture": 1,
+     "valley dialect": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "lynx population",
+    "mountain hut",
+    "valley dialect"
+   ],
+   "A_beyond_B": [
+    "valley dialect"
+   ],
+   "B": [
+    "lynx population",
+    "mountain hut",
+    "ski club"
+   ],
+   "B_beyond_A": [
+    "ski club"
+   ],
+   "cls": "M0",
+   "frame": "F11",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "lynx population": 1,
+     "mountain hut": 1,
+     "old-growth beech": 1,
+     "ski club": 1,
+     "summer pasture": 1,
+     "valley dialect": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "lynx population": 1,
+     "mountain hut": 1,
+     "old-growth beech": 1,
+     "ski club": 7,
+     "summer pasture": 1,
+     "valley dialect": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "lynx population",
+    "mountain hut",
+    "ski club"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "lynx population",
+    "mountain hut",
+    "ski club"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F11",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "lynx population",
+    "mountain hut",
+    "ski club",
+    "valley dialect"
+   ],
+   "A_beyond_B": [
+    "valley dialect"
+   ],
+   "B": [
+    "lynx population",
+    "mountain hut",
+    "ski club"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F11",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "gorge lichen",
+    "honey producers",
+    "pilgrimage trail",
+    "rafting company"
+   ],
+   "A_beyond_B": [
+    "honey producers"
+   ],
+   "B": [
+    "gorge lichen",
+    "pilgrimage trail",
+    "rafting company"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F12",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "gorge lichen",
+    "hill village",
+    "honey producers",
+    "pilgrimage trail"
+   ],
+   "A_beyond_B": [
+    "hill village",
+    "honey producers"
+   ],
+   "B": [
+    "gorge lichen",
+    "pilgrimage trail",
+    "rafting company"
+   ],
+   "B_beyond_A": [
+    "rafting company"
+   ],
+   "cls": "M1",
+   "frame": "F12",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "gorge lichen": 1,
+     "hill village": 7,
+     "honey producers": 7,
+     "pilgrimage trail": 1,
+     "rafting company": 1,
+     "salmon run": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "gorge lichen": 1,
+     "hill village": 1,
+     "honey producers": 1,
+     "pilgrimage trail": 1,
+     "rafting company": 7,
+     "salmon run": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "gorge lichen",
+    "hill village",
+    "honey producers",
+    "pilgrimage trail",
+    "rafting company"
+   ],
+   "A_beyond_B": [
+    "hill village",
+    "honey producers"
+   ],
+   "B": [
+    "gorge lichen",
+    "pilgrimage trail",
+    "rafting company"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F12",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "gorge lichen",
+    "hill village",
+    "honey producers",
+    "pilgrimage trail",
+    "salmon run"
+   ],
+   "A_beyond_B": [
+    "hill village",
+    "honey producers",
+    "salmon run"
+   ],
+   "B": [
+    "gorge lichen",
+    "pilgrimage trail",
+    "rafting company"
+   ],
+   "B_beyond_A": [
+    "rafting company"
+   ],
+   "cls": "M2",
+   "frame": "F12",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "gorge lichen": 1,
+     "hill village": 7,
+     "honey producers": 7,
+     "pilgrimage trail": 1,
+     "rafting company": 1,
+     "salmon run": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "gorge lichen": 1,
+     "hill village": 1,
+     "honey producers": 1,
+     "pilgrimage trail": 1,
+     "rafting company": 7,
+     "salmon run": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "gorge lichen",
+    "honey producers",
+    "pilgrimage trail"
+   ],
+   "A_beyond_B": [
+    "honey producers"
+   ],
+   "B": [
+    "gorge lichen",
+    "pilgrimage trail",
+    "rafting company"
+   ],
+   "B_beyond_A": [
+    "rafting company"
+   ],
+   "cls": "M0",
+   "frame": "F12",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "gorge lichen": 1,
+     "hill village": 1,
+     "honey producers": 7,
+     "pilgrimage trail": 1,
+     "rafting company": 1,
+     "salmon run": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "gorge lichen": 1,
+     "hill village": 1,
+     "honey producers": 1,
+     "pilgrimage trail": 1,
+     "rafting company": 7,
+     "salmon run": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "gorge lichen",
+    "pilgrimage trail",
+    "rafting company"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "gorge lichen",
+    "pilgrimage trail",
+    "rafting company"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F12",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "gorge lichen",
+    "honey producers",
+    "pilgrimage trail",
+    "rafting company"
+   ],
+   "A_beyond_B": [
+    "honey producers"
+   ],
+   "B": [
+    "gorge lichen",
+    "pilgrimage trail",
+    "rafting company"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F12",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "folk dance group",
+    "manuscript archive",
+    "puppet theatre",
+    "regional newspaper"
+   ],
+   "A_beyond_B": [
+    "folk dance group"
+   ],
+   "B": [
+    "manuscript archive",
+    "puppet theatre",
+    "regional newspaper"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F13",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "folk dance group",
+    "harvest festival",
+    "manuscript archive",
+    "regional newspaper"
+   ],
+   "A_beyond_B": [
+    "folk dance group",
+    "harvest festival"
+   ],
+   "B": [
+    "manuscript archive",
+    "puppet theatre",
+    "regional newspaper"
+   ],
+   "B_beyond_A": [
+    "puppet theatre"
+   ],
+   "cls": "M1",
+   "frame": "F13",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "folk dance group": 7,
+     "harvest festival": 7,
+     "manuscript archive": 1,
+     "minority-language radio": 1,
+     "puppet theatre": 1,
+     "regional newspaper": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "folk dance group": 1,
+     "harvest festival": 1,
+     "manuscript archive": 1,
+     "minority-language radio": 1,
+     "puppet theatre": 7,
+     "regional newspaper": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "folk dance group",
+    "harvest festival",
+    "manuscript archive",
+    "puppet theatre",
+    "regional newspaper"
+   ],
+   "A_beyond_B": [
+    "folk dance group",
+    "harvest festival"
+   ],
+   "B": [
+    "manuscript archive",
+    "puppet theatre",
+    "regional newspaper"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F13",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "folk dance group",
+    "harvest festival",
+    "manuscript archive",
+    "minority-language radio",
+    "regional newspaper"
+   ],
+   "A_beyond_B": [
+    "folk dance group",
+    "harvest festival",
+    "minority-language radio"
+   ],
+   "B": [
+    "manuscript archive",
+    "puppet theatre",
+    "regional newspaper"
+   ],
+   "B_beyond_A": [
+    "puppet theatre"
+   ],
+   "cls": "M2",
+   "frame": "F13",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "folk dance group": 7,
+     "harvest festival": 7,
+     "manuscript archive": 1,
+     "minority-language radio": 7,
+     "puppet theatre": 1,
+     "regional newspaper": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "folk dance group": 1,
+     "harvest festival": 1,
+     "manuscript archive": 1,
+     "minority-language radio": 1,
+     "puppet theatre": 7,
+     "regional newspaper": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "folk dance group",
+    "manuscript archive",
+    "regional newspaper"
+   ],
+   "A_beyond_B": [
+    "folk dance group"
+   ],
+   "B": [
+    "manuscript archive",
+    "puppet theatre",
+    "regional newspaper"
+   ],
+   "B_beyond_A": [
+    "puppet theatre"
+   ],
+   "cls": "M0",
+   "frame": "F13",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "folk dance group": 7,
+     "harvest festival": 1,
+     "manuscript archive": 1,
+     "minority-language radio": 1,
+     "puppet theatre": 1,
+     "regional newspaper": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "folk dance group": 1,
+     "harvest festival": 1,
+     "manuscript archive": 1,
+     "minority-language radio": 1,
+     "puppet theatre": 7,
+     "regional newspaper": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "manuscript archive",
+    "puppet theatre",
+    "regional newspaper"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "manuscript archive",
+    "puppet theatre",
+    "regional newspaper"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F13",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "folk dance group",
+    "manuscript archive",
+    "puppet theatre",
+    "regional newspaper"
+   ],
+   "A_beyond_B": [
+    "folk dance group"
+   ],
+   "B": [
+    "manuscript archive",
+    "puppet theatre",
+    "regional newspaper"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F13",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "botanical garden",
+    "classics department",
+    "evening school",
+    "seed bank"
+   ],
+   "A_beyond_B": [
+    "evening school"
+   ],
+   "B": [
+    "botanical garden",
+    "classics department",
+    "seed bank"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F14",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "botanical garden",
+    "evening school",
+    "observatory",
+    "seed bank"
+   ],
+   "A_beyond_B": [
+    "evening school",
+    "observatory"
+   ],
+   "B": [
+    "botanical garden",
+    "classics department",
+    "seed bank"
+   ],
+   "B_beyond_A": [
+    "classics department"
+   ],
+   "cls": "M1",
+   "frame": "F14",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "botanical garden": 1,
+     "classics department": 1,
+     "evening school": 7,
+     "observatory": 7,
+     "seed bank": 1,
+     "student orchestra": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "botanical garden": 1,
+     "classics department": 7,
+     "evening school": 1,
+     "observatory": 1,
+     "seed bank": 1,
+     "student orchestra": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "botanical garden",
+    "classics department",
+    "evening school",
+    "observatory",
+    "seed bank"
+   ],
+   "A_beyond_B": [
+    "evening school",
+    "observatory"
+   ],
+   "B": [
+    "botanical garden",
+    "classics department",
+    "seed bank"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F14",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "botanical garden",
+    "evening school",
+    "observatory",
+    "seed bank",
+    "student orchestra"
+   ],
+   "A_beyond_B": [
+    "evening school",
+    "observatory",
+    "student orchestra"
+   ],
+   "B": [
+    "botanical garden",
+    "classics department",
+    "seed bank"
+   ],
+   "B_beyond_A": [
+    "classics department"
+   ],
+   "cls": "M2",
+   "frame": "F14",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "botanical garden": 1,
+     "classics department": 1,
+     "evening school": 7,
+     "observatory": 7,
+     "seed bank": 1,
+     "student orchestra": 7
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "botanical garden": 1,
+     "classics department": 7,
+     "evening school": 1,
+     "observatory": 1,
+     "seed bank": 1,
+     "student orchestra": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "botanical garden",
+    "evening school",
+    "seed bank"
+   ],
+   "A_beyond_B": [
+    "evening school"
+   ],
+   "B": [
+    "botanical garden",
+    "classics department",
+    "seed bank"
+   ],
+   "B_beyond_A": [
+    "classics department"
+   ],
+   "cls": "M0",
+   "frame": "F14",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "botanical garden": 1,
+     "classics department": 1,
+     "evening school": 7,
+     "observatory": 1,
+     "seed bank": 1,
+     "student orchestra": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "botanical garden": 1,
+     "classics department": 7,
+     "evening school": 1,
+     "observatory": 1,
+     "seed bank": 1,
+     "student orchestra": 1
+    }
+   }
+  },
+  {
+   "A": [
+    "botanical garden",
+    "classics department",
+    "seed bank"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "botanical garden",
+    "classics department",
+    "seed bank"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F14",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "botanical garden",
+    "classics department",
+    "evening school",
+    "seed bank"
+   ],
+   "A_beyond_B": [
+    "evening school"
+   ],
+   "B": [
+    "botanical garden",
+    "classics department",
+    "seed bank"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F14",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "barn owls",
+    "brass band",
+    "small brewery",
+    "union local"
+   ],
+   "A_beyond_B": [
+    "barn owls"
+   ],
+   "B": [
+    "brass band",
+    "small brewery",
+    "union local"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F15",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "barn owls",
+    "brass band",
+    "small brewery",
+    "textile mill"
+   ],
+   "A_beyond_B": [
+    "barn owls",
+    "textile mill"
+   ],
+   "B": [
+    "brass band",
+    "small brewery",
+    "union local"
+   ],
+   "B_beyond_A": [
+    "union local"
+   ],
+   "cls": "M1",
+   "frame": "F15",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "barn owls": 7,
+     "bicycle cooperative": 1,
+     "brass band": 1,
+     "small brewery": 1,
+     "textile mill": 7,
+     "union local": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "barn owls": 1,
+     "bicycle cooperative": 1,
+     "brass band": 1,
+     "small brewery": 1,
+     "textile mill": 1,
+     "union local": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "barn owls",
+    "brass band",
+    "small brewery",
+    "textile mill",
+    "union local"
+   ],
+   "A_beyond_B": [
+    "barn owls",
+    "textile mill"
+   ],
+   "B": [
+    "brass band",
+    "small brewery",
+    "union local"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F15",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "barn owls",
+    "bicycle cooperative",
+    "brass band",
+    "small brewery",
+    "textile mill"
+   ],
+   "A_beyond_B": [
+    "barn owls",
+    "bicycle cooperative",
+    "textile mill"
+   ],
+   "B": [
+    "brass band",
+    "small brewery",
+    "union local"
+   ],
+   "B_beyond_A": [
+    "union local"
+   ],
+   "cls": "M2",
+   "frame": "F15",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "barn owls": 7,
+     "bicycle cooperative": 7,
+     "brass band": 1,
+     "small brewery": 1,
+     "textile mill": 7,
+     "union local": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "barn owls": 1,
+     "bicycle cooperative": 1,
+     "brass band": 1,
+     "small brewery": 1,
+     "textile mill": 1,
+     "union local": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "barn owls",
+    "brass band",
+    "small brewery"
+   ],
+   "A_beyond_B": [
+    "barn owls"
+   ],
+   "B": [
+    "brass band",
+    "small brewery",
+    "union local"
+   ],
+   "B_beyond_A": [
+    "union local"
+   ],
+   "cls": "M0",
+   "frame": "F15",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "barn owls": 7,
+     "bicycle cooperative": 1,
+     "brass band": 1,
+     "small brewery": 1,
+     "textile mill": 1,
+     "union local": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "barn owls": 1,
+     "bicycle cooperative": 1,
+     "brass band": 1,
+     "small brewery": 1,
+     "textile mill": 1,
+     "union local": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "brass band",
+    "small brewery",
+    "union local"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "brass band",
+    "small brewery",
+    "union local"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F15",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "barn owls",
+    "brass band",
+    "small brewery",
+    "union local"
+   ],
+   "A_beyond_B": [
+    "barn owls"
+   ],
+   "B": [
+    "brass band",
+    "small brewery",
+    "union local"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F15",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "corner shop",
+    "craft circle",
+    "post office",
+    "stork nest"
+   ],
+   "A_beyond_B": [
+    "corner shop"
+   ],
+   "B": [
+    "craft circle",
+    "post office",
+    "stork nest"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1",
+   "frame": "F16",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "bus line",
+    "corner shop",
+    "craft circle",
+    "post office"
+   ],
+   "A_beyond_B": [
+    "bus line",
+    "corner shop"
+   ],
+   "B": [
+    "craft circle",
+    "post office",
+    "stork nest"
+   ],
+   "B_beyond_A": [
+    "stork nest"
+   ],
+   "cls": "M1",
+   "frame": "F16",
+   "grid_139": {
+    "A": 0.8148148148148148,
+    "B": 0.18518518518518517,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 4,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 16,
+    "B": 3,
+    "weights": {
+     "bus line": 7,
+     "corner shop": 7,
+     "craft circle": 1,
+     "fire brigade": 1,
+     "post office": 1,
+     "stork nest": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 4,
+    "B": 9,
+    "weights": {
+     "bus line": 1,
+     "corner shop": 1,
+     "craft circle": 1,
+     "fire brigade": 1,
+     "post office": 1,
+     "stork nest": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "bus line",
+    "corner shop",
+    "craft circle",
+    "post office",
+    "stork nest"
+   ],
+   "A_beyond_B": [
+    "bus line",
+    "corner shop"
+   ],
+   "B": [
+    "craft circle",
+    "post office",
+    "stork nest"
+   ],
+   "B_beyond_A": [],
+   "cls": "W2",
+   "frame": "F16",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 5,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "bus line",
+    "corner shop",
+    "craft circle",
+    "fire brigade",
+    "post office"
+   ],
+   "A_beyond_B": [
+    "bus line",
+    "corner shop",
+    "fire brigade"
+   ],
+   "B": [
+    "craft circle",
+    "post office",
+    "stork nest"
+   ],
+   "B_beyond_A": [
+    "stork nest"
+   ],
+   "cls": "M2",
+   "frame": "F16",
+   "grid_139": {
+    "A": 0.8888888888888888,
+    "B": 0.08641975308641975,
+    "equal": 0.024691358024691357
+   },
+   "margin": 2,
+   "neutral": "A",
+   "relation": "mixed",
+   "size_A": 5,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 23,
+    "B": 3,
+    "weights": {
+     "bus line": 7,
+     "corner shop": 7,
+     "craft circle": 1,
+     "fire brigade": 7,
+     "post office": 1,
+     "stork nest": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 5,
+    "B": 9,
+    "weights": {
+     "bus line": 1,
+     "corner shop": 1,
+     "craft circle": 1,
+     "fire brigade": 1,
+     "post office": 1,
+     "stork nest": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "corner shop",
+    "craft circle",
+    "post office"
+   ],
+   "A_beyond_B": [
+    "corner shop"
+   ],
+   "B": [
+    "craft circle",
+    "post office",
+    "stork nest"
+   ],
+   "B_beyond_A": [
+    "stork nest"
+   ],
+   "cls": "M0",
+   "frame": "F16",
+   "grid_139": {
+    "A": 0.3333333333333333,
+    "B": 0.3333333333333333,
+    "equal": 0.3333333333333333
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "mixed",
+   "size_A": 3,
+   "size_B": 3,
+   "witness_A_above_B": {
+    "A": 9,
+    "B": 3,
+    "weights": {
+     "bus line": 1,
+     "corner shop": 7,
+     "craft circle": 1,
+     "fire brigade": 1,
+     "post office": 1,
+     "stork nest": 1
+    }
+   },
+   "witness_B_above_A": {
+    "A": 3,
+    "B": 9,
+    "weights": {
+     "bus line": 1,
+     "corner shop": 1,
+     "craft circle": 1,
+     "fire brigade": 1,
+     "post office": 1,
+     "stork nest": 7
+    }
+   }
+  },
+  {
+   "A": [
+    "craft circle",
+    "post office",
+    "stork nest"
+   ],
+   "A_beyond_B": [],
+   "B": [
+    "craft circle",
+    "post office",
+    "stork nest"
+   ],
+   "B_beyond_A": [],
+   "cls": "K",
+   "frame": "F16",
+   "grid_139": {
+    "A": 0.0,
+    "B": 0.0,
+    "equal": 1.0
+   },
+   "margin": 0,
+   "neutral": "equal",
+   "relation": "keep",
+   "size_A": 3,
+   "size_B": 3
+  },
+  {
+   "A": [
+    "corner shop",
+    "craft circle",
+    "post office",
+    "stork nest"
+   ],
+   "A_beyond_B": [
+    "corner shop"
+   ],
+   "B": [
+    "craft circle",
+    "post office",
+    "stork nest"
+   ],
+   "B_beyond_A": [],
+   "cls": "W1X",
+   "frame": "F16",
+   "grid_139": {
+    "A": 1.0,
+    "B": 0.0,
+    "equal": 0.0
+   },
+   "margin": 1,
+   "neutral": "A",
+   "relation": "widen",
+   "size_A": 4,
+   "size_B": 3
+  }
+ ],
+ "summary": {
+  "K": {
+   "keep": 16
+  },
+  "M0": {
+   "mixed": 16
+  },
+  "M1": {
+   "mixed": 16
+  },
+  "M2": {
+   "mixed": 16
+  },
+  "W1": {
+   "widen": 16
+  },
+  "W1X": {
+   "widen": 16
+  },
+  "W2": {
+   "widen": 16
+  }
+ }
+}

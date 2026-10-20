@@ -1,0 +1,121 @@
+{
+ "by_class": {
+  "K": {
+   "max_words": 201,
+   "mean_words": 191.1875,
+   "min_words": 182,
+   "presentations": 256,
+   "share_A_first": 0.5,
+   "share_plan1_said_by_continuing": 0.5,
+   "share_plan2_said_by_continuing": 0.5
+  },
+  "M0": {
+   "max_words": 202,
+   "mean_words": 191.1875,
+   "min_words": 182,
+   "presentations": 256,
+   "share_A_first": 0.5,
+   "share_plan1_said_by_continuing": 0.5,
+   "share_plan2_said_by_continuing": 0.5
+  },
+  "M1": {
+   "max_words": 205,
+   "mean_words": 191.1875,
+   "min_words": 178,
+   "presentations": 256,
+   "share_A_first": 0.5,
+   "share_plan1_said_by_continuing": 0.5,
+   "share_plan2_said_by_continuing": 0.5
+  },
+  "M2": {
+   "max_words": 209,
+   "mean_words": 190.6875,
+   "min_words": 175,
+   "presentations": 256,
+   "share_A_first": 0.5,
+   "share_plan1_said_by_continuing": 0.5,
+   "share_plan2_said_by_continuing": 0.5
+  },
+  "W1": {
+   "max_words": 206,
+   "mean_words": 191.1875,
+   "min_words": 179,
+   "presentations": 256,
+   "share_A_first": 0.5,
+   "share_plan1_said_by_continuing": 0.5,
+   "share_plan2_said_by_continuing": 0.5
+  },
+  "W1X": {
+   "max_words": 205,
+   "mean_words": 191.1875,
+   "min_words": 179,
+   "presentations": 256,
+   "share_A_first": 0.5,
+   "share_plan1_said_by_continuing": 0.5,
+   "share_plan2_said_by_continuing": 0.5
+  },
+  "W2": {
+   "max_words": 211,
+   "mean_words": 190.6875,
+   "min_words": 174,
+   "presentations": 256,
+   "share_A_first": 0.5,
+   "share_plan1_said_by_continuing": 0.5,
+   "share_plan2_said_by_continuing": 0.5
+  }
+ },
+ "counterbalance_cells_per_pair": [
+  4
+ ],
+ "kinds_by_role": {
+  "s1": {
+   "animal": 1,
+   "enterprise": 2,
+   "heritage": 4,
+   "institution": 2,
+   "plant": 5,
+   "practice": 2
+  },
+  "s2": {
+   "animal": 3,
+   "enterprise": 1,
+   "heritage": 3,
+   "institution": 2,
+   "plant": 2,
+   "practice": 5
+  },
+  "s3": {
+   "animal": 5,
+   "community": 2,
+   "enterprise": 3,
+   "heritage": 1,
+   "institution": 4,
+   "practice": 1
+  },
+  "w": {
+   "animal": 1,
+   "community": 2,
+   "enterprise": 3,
+   "heritage": 2,
+   "institution": 4,
+   "practice": 4
+  },
+  "x": {
+   "animal": 3,
+   "community": 4,
+   "enterprise": 3,
+   "heritage": 2,
+   "institution": 2,
+   "practice": 2
+  },
+  "z": {
+   "animal": 2,
+   "community": 3,
+   "enterprise": 2,
+   "heritage": 1,
+   "institution": 4,
+   "plant": 2,
+   "practice": 2
+  }
+ }
+}
