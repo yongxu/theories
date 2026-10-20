@@ -50,6 +50,31 @@
         "Becoming.Web.attach",
         "Becoming.Web.attach_widensAlong_iff"
       ]
+    },
+    {
+      "en": "Within one unfolding the reading is derived from the course: across a stretch from step T to a later step U, the levels widen along a continuation where every formation they admit at T is linked to one they admit at U and one admitted at U is linked to none admitted at T. Along each formation continuing itself this is widening as named; it is unchanged by every re-identification carrying the continuation; more links make inclusion easier and exceeding harder, so in Bud a stretch that widens by name adds nothing along a continuation in which the old formation buds the new.",
+      "zh": "在一个展开之内，读法由进程导出：从第 T 步到较晚的第 U 步，水平沿延续关系扩大，恰当它们在 T 所接纳的每个形成都链接到一个它们在 U 所接纳的形成，且在 U 所接纳的某个形成不链接到任何在 T 所接纳者。沿每个形成延续自身，这即作为名的扩大；它在每个搬运延续关系的改认下不变；链接越多，包含越易、超出越难，故在 Bud 中按名扩大的一段，沿旧形成萌出新形成的延续关系什么也不增加。",
+      "declarations": [
+        "Becoming.Web.IncludesAcross",
+        "Becoming.Web.ExceedsAcross",
+        "Becoming.Web.WidensAcross",
+        "Becoming.Web.IncludesAcross.mono",
+        "Becoming.Web.ExceedsAcross.anti",
+        "Becoming.Web.exceedsAcross_of_unlinked",
+        "Becoming.Web.Linked.itself_same",
+        "Becoming.Web.Linked.itself_steps",
+        "Becoming.Web.Linked.itself_of_le",
+        "Becoming.Web.includesAcross_itself_iff",
+        "Becoming.Web.exceedsAcross_itself_iff",
+        "Becoming.Web.includesAcross_reidentify",
+        "Becoming.Web.exceedsAcross_reidentify",
+        "Becoming.Web.widensAcross_reidentify",
+        "Becoming.Bud.web",
+        "Becoming.Bud.bud",
+        "Becoming.Bud.widens_by_name",
+        "Becoming.Bud.bud_adds_nothing",
+        "Becoming.Bud.readings"
+      ]
     }
   ],
   "hypotheses": [
@@ -60,8 +85,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Which reading is the right one: the reading is supplied. Along a reading that merges formations, or that is not one to one, widening composes only where the later step widens.",
-      "zh": "哪个读法是对的：读法是给定的。沿合并形成或非一对一的读法，扩大只在后一步扩大时可复合。",
+      "en": "Which reading between two webs is the right one: there the reading is supplied. Within one unfolding it is the continuation (law 4), which itself is supplied or read by conservation. Along a reading that merges formations, or that is not one to one, widening composes only where the later step widens.",
+      "zh": "两个网之间哪个读法是对的：那里读法是给定的。在一个展开之内它是延续关系（第 4 条），延续关系本身是给定的或由守恒读出。沿合并形成或非一对一的读法，扩大只在后一步扩大时可复合。",
       "kind": "scope"
     },
     {
@@ -94,8 +119,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T112227.536269Z）：Becoming.Growth 的 19 项声明（其中 12 项定理）公理报告为空；检查器并核对核心纯净。作者自审见研究第 257 节；未经独立审查。"
   },
   "next_delta": {
-    "en": "A reading of one world's formations in another's derived from the course between them (identity from continuity, chapter 8.1 item 8), so that growth along Flow.GrownBy's entries is compared without a supplied reading; a measure for mixed parts; an independent review.",
-    "zh": "由两个世界之间的进程导出的、一个世界的形成在另一个中的读法（由延续而来的同一，第 8.1 节第 8 项），使沿 Flow.GrownBy 各项的生长无需给定读法即可比较；混合部分的度量；独立审查。"
+    "en": "Growth along Flow.GrownBy's entries compared across a stretch of one world along its conservation continuation; a measure for mixed parts; an independent review.",
+    "zh": "沿世界的守恒延续关系、在一个世界的一段上比较沿 Flow.GrownBy 各项的生长；混合部分的度量；独立审查。"
   },
   "correspondence": {
     "en": "Relative reachability (Krakovna et al. 2019) compares the states reachable within one environment; comparing an environment with one that gains states needs an embedding of the old states, as the reading here does. The law is near-definitional; what it adds is the exact split of a grown world's widening into the old formations' part and the new.",
@@ -185,7 +210,39 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "3ce50a939b1ac7209f6c25686bae435bc50d96bcf95be94cd055390b1c98796b",
+      "sha256": "ec11cd3df086da7d657a55240fbe4344ddc4a807a11382722c0172198c3544a1",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+      "role": "proof",
+      "sha256": "563fbf32b7533cb2fc9883b68304bc66a1af3990dc60113d1dd1dab75ddc0c95",
+      "declarations": [
+        "Becoming.Web.IncludesAcross",
+        "Becoming.Web.ExceedsAcross",
+        "Becoming.Web.WidensAcross",
+        "Becoming.Web.IncludesAcross.mono",
+        "Becoming.Web.ExceedsAcross.anti",
+        "Becoming.Web.exceedsAcross_of_unlinked",
+        "Becoming.Web.Linked.itself_same",
+        "Becoming.Web.Linked.itself_steps",
+        "Becoming.Web.Linked.itself_of_le",
+        "Becoming.Web.includesAcross_itself_iff",
+        "Becoming.Web.exceedsAcross_itself_iff",
+        "Becoming.Web.includesAcross_reidentify",
+        "Becoming.Web.exceedsAcross_reidentify",
+        "Becoming.Web.widensAcross_reidentify",
+        "Becoming.Bud.web",
+        "Becoming.Bud.bud",
+        "Becoming.Bud.widens_by_name",
+        "Becoming.Bud.bud_adds_nothing",
+        "Becoming.Bud.readings"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T152455.465323Z/verification.json",
+      "role": "receipt",
+      "sha256": "e97ac5ef8593192fab0d7ac6fd9950f9c236f1f036edb8a546173dda7fd3086d",
       "declarations": []
     }
   ],
@@ -194,6 +251,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Growth.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T112227.536269Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Growth",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T152455.465323Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ContinuedClasses",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -210,6 +274,10 @@
     {
       "en": "20 October 2026, EV5b (the evolution row's central laws on the base): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV5b's edits: the Becoming.GroupEnding bullet in 2.4 (the law for groups not uniform) and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.",
       "zh": "2026年10月20日，EV5b（演化一行的中心之律在流上）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因 EV5b 的改动而变：2.4 的 Becoming.GroupEnding 一条（各组不均匀时之律）与第 9 节的回执与计数。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "20 October 2026, R51 (study section 271): law 4 added, widening across a stretch along a continuation (the reading derived within one unfolding); does_not_show item 1 and next_delta updated.",
+      "zh": "2026 年 10 月 20 日，R51（研究第 271 节）：加第 4 条，沿延续关系跨一段的扩大（一个展开之内导出的读法）；第一个未表明项与 next_delta 更新。"
     }
   ]
 }

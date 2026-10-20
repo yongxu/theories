@@ -1,4 +1,5 @@
 import Becoming.Persistence
+import Becoming.Admission
 
 /-!
 # Classes along a continuation: splits and merges
@@ -41,6 +42,16 @@ them.
   does, a balanced naming continues `c` as `d` (`World.continues_as_alike`); every record at each
   step is kept by any re-identification, so no record of the world decides between the two, and
   with `World.fixed_iff` identity is fixed exactly where no other relatum stands alike.
+* **Widening across a stretch along a continuation.** From step `T` to step `U` a level path
+  includes along a continuation where every formation it admits at `T` is linked to one it admits at
+  `U`, and exceeds where at `U` it admits a formation linked to none it admits at `T`
+  (`Web.IncludesAcross`, `Web.ExceedsAcross`, `Web.WidensAcross`): the reading of the earlier
+  formations in the later ones is the continuation, not a supplied map. Along each formation
+  continuing itself these are inclusion and exceeding as named (`includesAcross_itself_iff`,
+  `exceedsAcross_itself_iff`); they are unchanged by every re-identification carrying the
+  continuation (`widensAcross_reidentify`); more links make inclusion easier and exceeding harder
+  (`IncludesAcross.mono`, `ExceedsAcross.anti`). In `Bud` a stretch widens by name and adds nothing
+  along a continuation in which the old formation buds the new (`Bud.readings`).
 * **A merge decides a class.** In `MergeClass` a renewer and a consumer merge into one formation:
   as named, the first renews (`MergeClass.first_renews`); along the merge it consumes, being merged
   into a formation that does (`MergeClass.first_consumes_along`).
@@ -480,5 +491,159 @@ theorem continues_as_alike [DecidableEq w.Relatum] (balanced : w.Balanced) {t : 
    (Reidentify.exchangeAfter_across t c d c).trans (transpose_left c d)⟩
 
 end World
+
+/-! ## Widening across a stretch along a continuation -/
+
+namespace Web
+
+variable (W : Web F C) (R : Nat → F → F → Prop) (l : Nat → C → Nat)
+
+/-- From step `T` to step `U`, the levels `l` include along the continuation: every formation
+they admit at `T` is linked to one they admit at `U`. -/
+def IncludesAcross (T U : Nat) : Prop :=
+  ∀ f, W.Admits (l T) T f → ∃ g, Linked R T f U g ∧ W.Admits (l U) U g
+
+/-- From `T` to `U`, the levels exceed along the continuation: at `U` they admit a formation linked
+to apart they admit at `T`. -/
+def ExceedsAcross (T U : Nat) : Prop :=
+  ∃ g, W.Admits (l U) U g ∧ ∀ f, Linked R T f U g → ¬ W.Admits (l T) T f
+
+/-- **Widening across a stretch along a continuation**: inclusion and exceeding from `T` to `U`.
+The reading of the formations at `T` in those at `U` is the continuation, not a supplied map. -/
+def WidensAcross (T U : Nat) : Prop :=
+  W.IncludesAcross R l T U ∧ W.ExceedsAcross R l T U
+
+variable {W R l}
+
+/-- **More links make inclusion easier.** -/
+theorem IncludesAcross.mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
+    {T U : Nat} (includes : W.IncludesAcross R l T U) : W.IncludesAcross S l T U :=
+  fun f admitted => match includes f admitted with
+    | ⟨g, linked, admitted'⟩ => ⟨g, Linked.mono within linked, admitted'⟩
+
+/-- **More links make exceeding harder.** What exceeds along more links exceeds along fewer. -/
+theorem ExceedsAcross.anti {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
+    {T U : Nat} : W.ExceedsAcross S l T U → W.ExceedsAcross R l T U
+  | ⟨g, admitted, apart⟩ => ⟨g, admitted, fun f linked => apart f (Linked.mono within linked)⟩
+
+/-- A formation admitted at `U` that is linked to nothing at `T` exceeds. -/
+theorem exceedsAcross_of_unlinked {T U : Nat} {g : F} (admitted : W.Admits (l U) U g)
+    (fresh : ∀ f, ¬ Linked R T f U g) : W.ExceedsAcross R l T U :=
+  ⟨g, admitted, fun f linked => absurd linked (fresh f)⟩
+
+/-! ### The name case -/
+
+theorem Linked.itself_same : ∀ {s : Nat} {h : F} {t : Nat} {g : F},
+    Linked itself s h t g → s ≤ t ∧ h = g
+  | _, _, _, _, .here s _ => ⟨Nat.le_refl s, rfl⟩
+  | s, _, _, _, .next same rest => match Linked.itself_same rest with
+    | ⟨later, same'⟩ => ⟨Nat.le_trans (Nat.le_succ s) later, same.trans same'⟩
+
+theorem Linked.itself_steps {g : F} : ∀ (k s : Nat), Linked (itself (F := F)) s g (s + k) g
+  | 0, s => .here s g
+  | k + 1, s => .next rfl ((Nat.succ_add s k ▸ Linked.itself_steps k (s + 1) :
+      Linked (itself (F := F)) (s + 1) g (Nat.succ (s + k)) g))
+
+theorem Linked.itself_of_le {s t : Nat} {g : F} (later : s ≤ t) : Linked (itself (F := F)) s g t g :=
+  match exists_steps_between later with
+  | ⟨k, apart⟩ => apart ▸ Linked.itself_steps k s
+
+/-- **Along each formation continuing itself, inclusion across a stretch is inclusion as named.** -/
+theorem includesAcross_itself_iff {T U : Nat} (later : T ≤ U) :
+    W.IncludesAcross itself l T U ↔ ∀ f, W.Admits (l T) T f → W.Admits (l U) U f :=
+  ⟨fun includes f admitted => match includes f admitted with
+     | ⟨_, linked, admitted'⟩ => (Linked.itself_same linked).2 ▸ admitted',
+   fun includes f admitted => ⟨f, Linked.itself_of_le later, includes f admitted⟩⟩
+
+/-- **Along each formation continuing itself, exceeding across a stretch is exceeding as named.** -/
+theorem exceedsAcross_itself_iff {T U : Nat} (later : T ≤ U) :
+    W.ExceedsAcross itself l T U ↔ ∃ g, W.Admits (l U) U g ∧ ¬ W.Admits (l T) T g :=
+  ⟨fun ⟨g, admitted, apart⟩ => ⟨g, admitted, apart g (Linked.itself_of_le later)⟩,
+   fun ⟨g, admitted, before⟩ => ⟨g, admitted, fun _ linked =>
+     (Linked.itself_same linked).2.symm ▸ before⟩⟩
+
+/-! ### Widening across a stretch is the continuation's -/
+
+/-- **Inclusion across a stretch is unchanged by a re-identification** carrying the continuation. -/
+theorem includesAcross_reidentify (σ : Reidentify F F') {T U : Nat} :
+    (W.reidentify σ).IncludesAcross (σ.carry R) l T U ↔ W.IncludesAcross R l T U :=
+  ⟨fun includes f admitted =>
+     match includes (σ.new T f) ((σ.old_new T f).symm ▸ admitted :
+         W.Admits (l T) T (σ.old T (σ.new T f))) with
+     | ⟨y, linked, admitted'⟩ =>
+       ⟨σ.old U y, σ.old_new T f ▸ Linked.of_carry (S := R) linked, admitted'⟩,
+   fun includes x admitted => match includes (σ.old T x) admitted with
+     | ⟨g, linked, admitted'⟩ =>
+       ⟨σ.new U g, σ.new_old T x ▸ Linked.to_carry (σ := σ) (S := R) linked,
+        ((σ.old_new U g).symm ▸ admitted' : W.Admits (l U) U (σ.old U (σ.new U g)))⟩⟩
+
+/-- **Exceeding across a stretch is unchanged by a re-identification** carrying the continuation. -/
+theorem exceedsAcross_reidentify (σ : Reidentify F F') {T U : Nat} :
+    (W.reidentify σ).ExceedsAcross (σ.carry R) l T U ↔ W.ExceedsAcross R l T U :=
+  ⟨fun ⟨y, admitted, apart⟩ => ⟨σ.old U y, admitted, fun f linked before =>
+     apart (σ.new T f) (σ.new_old U y ▸ Linked.to_carry (σ := σ) (S := R) linked)
+       ((σ.old_new T f).symm ▸ before : W.Admits (l T) T (σ.old T (σ.new T f)))⟩,
+   fun ⟨g, admitted, apart⟩ => ⟨σ.new U g,
+     ((σ.old_new U g).symm ▸ admitted : W.Admits (l U) U (σ.old U (σ.new U g))),
+     fun x linked before => apart (σ.old T x) (σ.old_new U g ▸ Linked.of_carry (S := R) linked)
+       before⟩⟩
+
+/-- **Widening across a stretch is unchanged by a re-identification** carrying the continuation. -/
+theorem widensAcross_reidentify (σ : Reidentify F F') {T U : Nat} :
+    (W.reidentify σ).WidensAcross (σ.carry R) l T U ↔ W.WidensAcross R l T U :=
+  ⟨fun ⟨includes, exceeds⟩ => ⟨(includesAcross_reidentify σ).mp includes,
+     (exceedsAcross_reidentify σ).mp exceeds⟩,
+   fun ⟨includes, exceeds⟩ => ⟨(includesAcross_reidentify σ).mpr includes,
+     (exceedsAcross_reidentify σ).mpr exceeds⟩⟩
+
+end Web
+
+/-! ### A bud adds nothing -/
+
+namespace Bud
+
+/-- A formation there from the start, and one its levels admit only after the first step. -/
+inductive Formation | old | fresh
+
+/-- The fresh formation requires the one condition at need `1`; the old one requires nothing. -/
+def requires : Nat → Formation → Unit → Prop
+  | _, .old, _ => False
+  | _, .fresh, _ => True
+
+/-- The condition stands at the step's index; both formations are active throughout. -/
+def web : Web Formation Unit := ⟨fun t _ => t, fun _ _ => True, requires, fun _ _ _ => 1,
+  fun _ _ _ => False⟩
+
+/-- The old formation continues as itself and buds the fresh one. -/
+def bud : Nat → Formation → Formation → Prop := fun _ g f => g = f ∨ (g = .old ∧ f = .fresh)
+
+theorem old_admitted (t : Nat) : web.Admits (web.level t) t .old := fun _ no => nomatch no
+
+theorem fresh_later : web.Admits (web.level 1) 1 .fresh := fun _ _ => Nat.le_refl 1
+
+theorem fresh_not_first : ¬ web.Admits (web.level 0) 0 .fresh :=
+  fun admitted => Nat.not_succ_le_zero 0 (admitted () trivial)
+
+/-- **Read by name, the stretch widens:** the fresh formation is admitted after the first step and
+not before. -/
+theorem widens_by_name : web.WidensAcross Web.itself web.level 0 1 :=
+  ⟨(Web.includesAcross_itself_iff (Nat.zero_le 1)).mpr fun
+     | .old, _ => old_admitted 1
+     | .fresh, admitted => absurd admitted fresh_not_first,
+   (Web.exceedsAcross_itself_iff (Nat.zero_le 1)).mpr ⟨.fresh, fresh_later, fresh_not_first⟩⟩
+
+/-- **Read along the bud, nothing is added:** every formation admitted after the step continues
+the old one, admitted before it. -/
+theorem bud_adds_nothing : ¬ web.ExceedsAcross bud web.level 0 1
+  | ⟨g, _, apart⟩ => apart .old (.next (f := g) (match g with
+      | .old => .inl rfl
+      | .fresh => .inr ⟨rfl, rfl⟩) (.here 1 g)) (old_admitted 0)
+
+/-- So whether a stretch widens is read off the continuation: by name it widens, along the bud it
+does not. -/
+theorem readings : web.WidensAcross Web.itself web.level 0 1 ∧ ¬ web.WidensAcross bud web.level 0 1 :=
+  ⟨widens_by_name, fun ⟨_, exceeds⟩ => bud_adds_nothing exceeds⟩
+
+end Bud
 
 end Becoming

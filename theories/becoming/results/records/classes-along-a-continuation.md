@@ -35,7 +35,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T134210.922870Z): the 52 declarations of Becoming.ContinuedClasses, 35 of them theorems, have empty axiom reports; the checker verifies core purity. Author review in study sections 262 and 269; not independently reviewed.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T152455.465323Z): the 76 declarations of Becoming.ContinuedClasses, 52 of them theorems, have empty axiom reports; the checker verifies core purity. Author review in study sections 262 and 269; not independently reviewed.
 
 Canonical source: [ContinuedClasses.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean)
 
@@ -66,9 +66,9 @@ Reading a class along lineages rather than names is the move from token identity
 | Role | Source | Declarations |
 |---|---|---|
 | proof | [ContinuedClasses.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean) | `Becoming.Web.Continuing`, `Becoming.Web.RenewingAlong`, `Becoming.Web.ConsumingAlong`, `Becoming.Web.renewingAlong_not_consumingAlong`, `Becoming.Web.renewingAlong_iff`, `Becoming.Web.RenewingAlong.branch`, `Becoming.Web.consumingAlong_iff`, `Becoming.Web.ConsumingAlong.merged`, `Becoming.Reidentify.carry`, `Becoming.Web.Continuing.of_reidentify`, `Becoming.Web.Continuing.to_reidentify`, `Becoming.Web.continuing_reidentify`, `Becoming.Web.renewingAlong_reidentify`, `Becoming.Web.consumingAlong_reidentify`, `Becoming.Web.itself`, `Becoming.Web.Continuing.itself_same`, `Becoming.Web.Continuing.itself_onward`, `Becoming.Web.Continuing.itself_from_zero`, `Becoming.Web.renewingAlong_itself_iff`, `Becoming.Web.consumingAlong_itself_iff`, `Becoming.MergeClass.web`, `Becoming.MergeClass.merge`, `Becoming.MergeClass.first_renews`, `Becoming.MergeClass.first_consumes_along`, `Becoming.MergeClass.readings`, `Becoming.Web.Linked`, `Becoming.Web.holdingOn`, `Becoming.Web.MetAboveAlong`, `Becoming.Web.UnderminingAlong`, `Becoming.Web.Linked.itself_held`, `Becoming.Web.Linked.itself_onward`, `Becoming.Web.exists_steps_between`, `Becoming.Web.metAboveAlong_itself_iff`, `Becoming.Web.underminingAlong_itself_iff`, `Becoming.Web.Linked.of_carry`, `Becoming.Web.Linked.to_carry`, `Becoming.Web.metAboveAlong_reidentify`, `Becoming.Web.underminingAlong_reidentify`, `Becoming.Web.Linked.mono`, `Becoming.Web.Continuing.mono`, `Becoming.Web.underminingAlong_mono`, `Becoming.Web.consumingAlong_mono`, `Becoming.Web.renewingAlong_mono` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T134210.922870Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T152455.465323Z/verification.json) | — |
 
 Aliases: `classes under splits and merges`, `分裂与合并下的类`, `Becoming.Web.RenewingAlong`, `Becoming.Web.ConsumingAlong`
 

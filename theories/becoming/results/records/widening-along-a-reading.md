@@ -13,6 +13,7 @@
 1. Widening along a reading: for webs W and W', a reading e of W's formations in W's', and level paths l of W and l' of W', l' includes l along e where every formation l admits is, read, admitted by l', exceeds it where l' admits a formation that is the reading of none l admits, and widens it where both hold. Along the identity these are inclusion, exceeding and widening exactly. Inclusion composes along readings; widening composes where the later step widens, or where the later reading is one to one. (`Becoming.Web.IncludesAlong`, `Becoming.Web.ExceedsAlong`, `Becoming.Web.WidensAlong`, `Becoming.Web.includesAlong_id_iff`, `Becoming.Web.exceedsAlong_id_iff`, `Becoming.Web.widensAlong_id_iff`, `Becoming.Web.IncludesAlong.comp`, `Becoming.Web.IncludesAlong.widensAlong_comp`, `Becoming.Web.WidensAlong.comp`)
 2. A growth adds formations and conditions to a web without changing the old formations' requirements; the old formations may draw on the new conditions, as the attaching formation does in Flow.GrownBy. An old formation is admitted in the grown web exactly as by the old levels. The grown web widens the old along the inclusion exactly where the old levels include the old path and either exceed it or admit a new formation at some step. (`Becoming.Web.Growth`, `Becoming.Web.grow`, `Becoming.Web.oldLevels`, `Becoming.Web.grow_admits_old`, `Becoming.Web.grow_includesAlong_iff`, `Becoming.Web.grow_widensAlong_iff`)
 3. With the old levels kept, a growth widens exactly where a new formation is admitted at some step, while on the old formations the levels neither widen nor narrow: what widening on one type of formations does not register. Attaching one formation by one new condition widens exactly where that condition meets the new formation's need at some step. (`Becoming.Web.grow_widensAlong_iff_new`, `Becoming.Web.grow_widens_unregistered`, `Becoming.Web.attach`, `Becoming.Web.attach_widensAlong_iff`)
+4. Within one unfolding the reading is derived from the course: across a stretch from step T to a later step U, the levels widen along a continuation where every formation they admit at T is linked to one they admit at U and one admitted at U is linked to none admitted at T. Along each formation continuing itself this is widening as named; it is unchanged by every re-identification carrying the continuation; more links make inclusion easier and exceeding harder, so in Bud a stretch that widens by name adds nothing along a continuation in which the old formation buds the new. (`Becoming.Web.IncludesAcross`, `Becoming.Web.ExceedsAcross`, `Becoming.Web.WidensAcross`, `Becoming.Web.IncludesAcross.mono`, `Becoming.Web.ExceedsAcross.anti`, `Becoming.Web.exceedsAcross_of_unlinked`, `Becoming.Web.Linked.itself_same`, `Becoming.Web.Linked.itself_steps`, `Becoming.Web.Linked.itself_of_le`, `Becoming.Web.includesAcross_itself_iff`, `Becoming.Web.exceedsAcross_itself_iff`, `Becoming.Web.includesAcross_reidentify`, `Becoming.Web.exceedsAcross_reidentify`, `Becoming.Web.widensAcross_reidentify`, `Becoming.Bud.web`, `Becoming.Bud.bud`, `Becoming.Bud.widens_by_name`, `Becoming.Bud.bud_adds_nothing`, `Becoming.Bud.readings`)
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -22,7 +23,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Which reading is the right one: the reading is supplied. Along a reading that merges formations, or that is not one to one, widening composes only where the later step widens.
+- Which reading between two webs is the right one: there the reading is supplied. Within one unfolding it is the continuation (law 4), which itself is supplied or read by conservation. Along a reading that merges formations, or that is not one to one, widening composes only where the later step widens.
 - A growth that changes what an old formation requires: the old formations' requirements are kept by construction, so a world whose growth changes them is compared only along a reading built for it.
 - That widening is better (C, the order) or that a grown world is generative in D1's sense: the law says where growth widens, not that it should.
 - A measure for mixed parts, or comparisons of renewal capacity and richness of relations (chapter 8.1 item 5's other open parts).
@@ -39,7 +40,7 @@ Canonical source: [Growth.lean](../../../../experiments/integrated-correction/ge
 <a id="next--下一步"></a>
 ## Next
 
-A reading of one world's formations in another's derived from the course between them (identity from continuity, chapter 8.1 item 8), so that growth along Flow.GrownBy's entries is compared without a supplied reading; a measure for mixed parts; an independent review.
+Growth along Flow.GrownBy's entries compared across a stretch of one world along its conservation continuation; a measure for mixed parts; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -66,6 +67,8 @@ Relative reachability (Krakovna et al. 2019) compares the states reachable withi
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T112227.536269Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| proof | [ContinuedClasses.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean) | `Becoming.Web.IncludesAcross`, `Becoming.Web.ExceedsAcross`, `Becoming.Web.WidensAcross`, `Becoming.Web.IncludesAcross.mono`, `Becoming.Web.ExceedsAcross.anti`, `Becoming.Web.exceedsAcross_of_unlinked`, `Becoming.Web.Linked.itself_same`, `Becoming.Web.Linked.itself_steps`, `Becoming.Web.Linked.itself_of_le`, `Becoming.Web.includesAcross_itself_iff`, `Becoming.Web.exceedsAcross_itself_iff`, `Becoming.Web.includesAcross_reidentify`, `Becoming.Web.exceedsAcross_reidentify`, `Becoming.Web.widensAcross_reidentify`, `Becoming.Bud.web`, `Becoming.Bud.bud`, `Becoming.Bud.widens_by_name`, `Becoming.Bud.bud_adds_nothing`, `Becoming.Bud.readings` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T152455.465323Z/verification.json) | — |
 
 Aliases: `widening along a reading`, `沿读法的扩大`, `widening over a grown world`, `Becoming.Web.WidensAlong`, `Becoming.Web.grow_widensAlong_iff`
 
@@ -75,6 +78,7 @@ Aliases: `widening along a reading`, `沿读法的扩大`, `widening over a grow
 - 20 October 2026: added (R47), section 8.1 item 5's widening over a grown world; study section 257.
 - 20 October 2026, PE1 (what identifying interderivable propositions keeps and loses): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the chapter changed only by PE1's edits: a sentence in section 0's proof-language row, and in section 9 a paragraph on why the core excludes propext, the receipt, counts and layers. Read before re-pointing. The claim is unchanged.
 - 20 October 2026, EV5b (the evolution row's central laws on the base): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV5b's edits: the Becoming.GroupEnding bullet in 2.4 (the law for groups not uniform) and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.
+- 20 October 2026, R51 (study section 271): law 4 added, widening across a stretch along a continuation (the reading derived within one unfolding); does_not_show item 1 and next_delta updated.
 
 </details>
 

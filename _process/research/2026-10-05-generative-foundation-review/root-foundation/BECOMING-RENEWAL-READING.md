@@ -11569,3 +11569,29 @@ Output -> input: MQ2 (the held-out test of the equation of state on Dai et al.'s
 **Self-review.** The statements are exactly the Lean ones. Three choices carry weight. The draw is taken before giving (MQ1's dilution protocol), so `step` is one of two orders; the other order (give, then draw) moves the point of no return and is not stated. The super-additivity theorem assumes subadditivity of giving above the need, which concave giving with nonnegative giving at the need implies over the reals; the whole-number witness `Concave` shows strictness, not the hypothesis. `holds` needs `Keeps`, a band the step does not leave; a giving law that overshoots above its peak can leave every band, and the module says nothing there.
 
 **The run.** Core 281 modules and 11,304 theorems, instances 7 and 567, applications 6 and 179; 9 Lean steps ran, 1,179 reused. 49 declarations of Becoming.RegimeMargin, 36 of them theorems, all with empty axiom reports. Connectivity: 573 of 12,050 apart, 9 of the module's 36; register check passes.
+
+## 271. Widening across a stretch along a continuation (R51)
+
+```text
+Result(s): Web.IncludesAcross, Web.ExceedsAcross, Web.WidensAcross, IncludesAcross.mono, ExceedsAcross.anti,
+       exceedsAcross_of_unlinked, includesAcross_itself_iff, exceedsAcross_itself_iff,
+       includesAcross_reidentify, exceedsAcross_reidentify, widensAcross_reidentify, Bud.readings
+       (Becoming.ContinuedClasses extended to 52 theorems, 76 declarations; it now imports Becoming.Admission);
+       record widening-along-a-reading law 4; chapter 6.1 and 8.1 item 5.
+Delta: R47 compared two webs along a supplied reading and left its derivation to item 8. Within one unfolding
+       the reading is now the continuation: across a stretch from T to U the levels include where every
+       formation they admit at T is linked to one they admit at U, and exceed where one admitted at U is
+       linked to none admitted at T.
+Premises: none added. The continuation is supplied (or read by conservation, R50); the level path is any.
+Evidence: core receipt 20261020T152455.465323Z (passed, empty axiom reports).
+Boundary: between two webs the reading stays supplied; the comparison is at two steps of one unfolding,
+       not between whole paths; mixed parts and renewal capacity stay open.
+Output → input: a growth along Flow.GrownBy within one world can now be compared along the world's own
+       continuation, so whether it adds a formation is a law of the continuation; whether a bud adds is
+       decided by reading it as continuing (Bud.readings).
+```
+
+- **Why exceeding is anti-monotone.** Exceeding asks for a formation at `U` linked to nothing admitted at `T`. Every link added is one more way for a later formation to count as a continuation of an earlier one, so it can only remove what exceeds. This is the formal form of budding (`Budding.growth_without_arising`): read as budding, growth adds no formation.
+- **The chain asks nothing of activity.** The stretch uses `Linked`, as tenure does in R50, so a formation admitted but inactive is still read through the continuation; a continuation that should follow activity says so in its relation.
+
+**Self-review.** Near-definitional, like R47, of which it is the derived-reading counterpart within one unfolding. Its use is that item 5's "reading derived from the course" now has its formal statement, and that `Bud` makes exact why counting new kinds depends on what is read as continuing what.
