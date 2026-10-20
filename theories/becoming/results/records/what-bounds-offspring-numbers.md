@@ -29,7 +29,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Fisher's theorem in general: the additive part (the regression of offspring number on what is carried) and the rational reading (variance over mean) are not stated; the statement is the case of exact transmission of offspring number, denominators cleared.
+- Fisher's theorem in general: the additive part through one carried amount is stated in record additive-part-of-offspring-variance (at most the whole variance, this record's case its top); several amounts at once and the rational reading (variance over mean) are not stated; the statement here is the case of exact transmission.
 - Where something flows into the family from outside, the bounds read only its stock and what flows in: without dissipation a lossless relay keeps a lineage going within a family of stock one (Relay). Whether actual lineages lie within such families is an application question.
 - How much each offspring is given beyond one unit, and a law of forming that is necessary as well as sufficient, are not stated; dependences newly formed by descent stay open.
 - Offspring number is a weight and a reading, not a measure of worth: no amount is said to be better, and that transmission lowers offspring number says nothing about what ought to be.
@@ -47,7 +47,7 @@ Canonical source: [Reproduction.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-The additive part of Fisher's theorem (a regression read in counting form); offspring numbers bounded by what a parent takes from the conditions it depends on, with support; a lineage open to inflow, bounded by what flows in; an independent review.
+The additive part through several carried amounts at once; offspring numbers bounded by what a parent takes from the conditions it depends on, with support; a lineage open to inflow, bounded by what flows in; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -69,6 +69,9 @@ Fisher's fundamental theorem (Fisher 1930) in its case of exact transmission: th
   - Preserved conditions: Balance and dissipation on the family across the steps used. [Dissipation.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean)
 - related, not a proved adapter: [selection-term-over-generations](selection-term-over-generations.md). The variance form and the bound on offspring numbers that selection-term-over-generations left open.
 - related, not a proved adapter: [evolution-on-descent](evolution-on-descent.md). Descent read with what it gives: offspring numbers bounded by giving and taking, and a lineage that ends within a closed family.
+- related, not a proved adapter: [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md). The additive part through any carried amount, of which this record's exact case is the top.
+
+**Used by:** [additive-part-of-offspring-variance](additive-part-of-offspring-variance.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -82,6 +85,7 @@ Fisher's fundamental theorem (Fisher 1930) in its case of exact transmission: th
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T091125.435056Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T170500.588275Z/verification.json) | — |
 
 Aliases: `what bounds offspring numbers`, `什么约束后代数`, `selection on offspring number itself`, `variance form of the response to selection`, `counting form of Fisher's fundamental theorem`, `a lineage within a closed family ends`, `Becoming.Reproduction.variation`, `Becoming.Reproduction.Flow.lineage_ends`, `Becoming.Reproduction.Flow.closed_lineage_lowered`
 
@@ -90,6 +94,7 @@ Aliases: `what bounds offspring numbers`, `什么约束后代数`, `selection on
 
 - 20 October 2026: added (EV2), section 8.1 item 9's bound on offspring numbers and the variance form; study section 244.
 - 20 October 2026, EV4 and EV5 (selection within and among groups; among groups by ending): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV4's and EV5's additions: in 2.4 a bullet for each of Becoming.SelectionLevels and Becoming.GroupEnding and the record list; two rows of the record table; 8.1 item 9; and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.
+- 20 October 2026, EV10: Becoming.Reproduction gains the additive part through one carried amount (record additive-part-of-offspring-variance, study section 279); this record's first open item is answered there for one amount, its does-not-show item and next delta updated; its laws and their statements are unchanged.
 
 </details>
 

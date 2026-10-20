@@ -128,8 +128,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Fisher's theorem in general: the additive part (the regression of offspring number on what is carried) and the rational reading (variance over mean) are not stated; the statement is the case of exact transmission of offspring number, denominators cleared.",
-      "zh": "一般形式的 Fisher 定理：加性部分（后代数对所载之物的回归）与有理数的读法（方差除以均值）未陈述；所陈述的是后代数精确传递的情形，分母消去。",
+      "en": "Fisher's theorem in general: the additive part through one carried amount is stated in record additive-part-of-offspring-variance (at most the whole variance, this record's case its top); several amounts at once and the rational reading (variance over mean) are not stated; the statement here is the case of exact transmission.",
+      "zh": "一般的 Fisher 定理：经由一个所载之量的加性部分陈述于记录 additive-part-of-offspring-variance（至多为全部方差，本记录的情形是其顶端）；同时经由多个量与有理数读法（方差除以均值）未陈述；此处陈述的是传递精确的情形。",
       "kind": "scope"
     },
     {
@@ -170,8 +170,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T091125.435056Z）：Becoming.Reproduction 的 72 项声明（50 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 244 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "The additive part of Fisher's theorem (a regression read in counting form); offspring numbers bounded by what a parent takes from the conditions it depends on, with support; a lineage open to inflow, bounded by what flows in; an independent review.",
-    "zh": "Fisher 定理的加性部分（以计数形式读出的回归）；以亲代从其所依存条件所取之量、连同支持来约束后代数；向流入开放的世系，受流入之量约束；独立审查。"
+    "en": "The additive part through several carried amounts at once; offspring numbers bounded by what a parent takes from the conditions it depends on, with support; a lineage open to inflow, bounded by what flows in; an independent review.",
+    "zh": "同时经由多个所载之量的加性部分；以亲代从其所依存条件所取之量、连同支持来约束后代数；向流入开放的世系，受流入之量约束；独立审查。"
   },
   "correspondence": {
     "en": "Fisher's fundamental theorem (Fisher 1930) in its case of exact transmission: the change of mean fitness is the variance of fitness over its mean. With n_t the size of generation t, number_variation and ByNumber.step say n_t n_(t+2) - n_(t+1)^2 = concordance + n_t(raised - lowered), the concordance over ordered pairs being n_t^2 times the variance of offspring number; Price (1972) reads the general theorem as the partial change, the rest left to the environment. That a finite closed resource ends reproduction is the Malthusian bound. Readings (the AI's): selection on offspring number never lowers its mean; where nothing flows in, transmission must.",
@@ -250,6 +250,13 @@
       "detail": {
         "en": "Descent read with what it gives: offspring numbers bounded by giving and taking, and a lineage that ends within a closed family.",
         "zh": "连同所给予之量读出的世系：后代数受给予与所取约束，以及在封闭族内终止的世系。"
+      }
+    },
+    {
+      "id": "additive-part-of-offspring-variance",
+      "detail": {
+        "en": "The additive part through any carried amount, of which this record's exact case is the top.",
+        "zh": "经由任一所载之量的加性部分，本记录的精确情形是其顶端。"
       }
     }
   ],
@@ -331,7 +338,7 @@
         "Becoming.Reproduction.search",
         "Becoming.Reproduction.variation"
       ],
-      "sha256": "533a79ef770db2d5675f9f71a940223751740a73a17b40b1c70ec444841e3d46"
+      "sha256": "3f1a5fb1f6697a96a0002c167a4e93a16de0bc1c9832e7cef26309abdc8f0ae9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
@@ -361,13 +368,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "d6495d3d9723c413e9749f989ce3eb81b792a15a2058ed5b852957c0ff988b17"
+      "sha256": "1fd25551b03d4582e9416f597a87943cf38b24f6f198082f998e295e995718a4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T170500.588275Z/verification.json",
+      "role": "receipt",
+      "sha256": "8328b69cfc9b6902b0fa0f04a549e018934ce1eb1493168e5ca095cf6340558a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T091125.435056Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T170500.588275Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Reproduction",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -381,6 +394,10 @@
     {
       "en": "20 October 2026, EV4 and EV5 (selection within and among groups; among groups by ending): THE-THEORY-OF-BECOMING.md re-pointed. Since this record's reviewed hash, the cited text changed only by EV4's and EV5's additions: in 2.4 a bullet for each of Becoming.SelectionLevels and Becoming.GroupEnding and the record list; two rows of the record table; 8.1 item 9; and section 9's receipt and counts. Read before re-pointing. The claim is unchanged.",
       "zh": "2026年10月20日，EV4 与 EV5（组内与组间选择；经由终止的组间选择）：THE-THEORY-OF-BECOMING.md 重新指向。自本记录所审哈希以来，所引文字只因 EV4 与 EV5 的增补而改动：2.4 的 Becoming.SelectionLevels 与 Becoming.GroupEnding 各一条与记录列表；记录表的两行；8.1 第 9 项；以及第 9 节的回执与计数。重新指向前已读。论断不变。"
+    },
+    {
+      "en": "20 October 2026, EV10: Becoming.Reproduction gains the additive part through one carried amount (record additive-part-of-offspring-variance, study section 279); this record's first open item is answered there for one amount, its does-not-show item and next delta updated; its laws and their statements are unchanged.",
+      "zh": "2026年10月20日，EV10：Becoming.Reproduction 增加经由一个所载之量的加性部分（记录 additive-part-of-offspring-variance，研究第 279 节）；本记录的第一个开放项在那里就一个量得到回答，其“未表明”项与下一步已更新；定律及其陈述不变。"
     }
   ]
 }

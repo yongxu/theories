@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-304 registered results: 285 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 766 curated edges join 257 results to the results they draw on.
+305 registered results: 286 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 768 curated edges join 258 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -19,6 +19,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [a-pattern-lasts-through-passing][] ← <a id="a-pattern-lasts-through-passing--whole-persists-through-generation"></a>[whole-persists-through-generation][]
 - [acquired-binding-compositional-use][] ← <a id="acquired-binding-compositional-use--transition-grouping-word-partition"></a>[transition-grouping-word-partition][]
 - [acquired-revision-of-pending-task][] ← <a id="acquired-revision-of-pending-task--versioned-request-completion"></a>[versioned-request-completion][] · <a id="acquired-revision-of-pending-task--formed-goal-revision-continuation"></a>[formed-goal-revision-continuation][]
+- [additive-part-of-offspring-variance][] ← <a id="additive-part-of-offspring-variance--what-bounds-offspring-numbers"></a>[what-bounds-offspring-numbers][] · <a id="additive-part-of-offspring-variance--selection-term-over-generations"></a>[selection-term-over-generations][]
 - [alignment-direction-under-widening][] ← <a id="alignment-direction-under-widening--practical-judgment-under-living-significance"></a>[practical-judgment-under-living-significance][] *(application)* · <a id="alignment-direction-under-widening--comparison-by-widening"></a>[comparison-by-widening][]
 - [attraction-is-not-returning][] ← <a id="attraction-is-not-returning--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [becoming-context-coherence][] ← <a id="becoming-context-coherence--finite-trace-transport"></a>[finite-trace-transport][]
@@ -277,6 +278,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [a-pattern-lasts-through-passing]: theories/becoming/results/records/a-pattern-lasts-through-passing.md
 [acquired-binding-compositional-use]: theories/becoming/results/records/acquired-binding-compositional-use.md
 [acquired-revision-of-pending-task]: theories/becoming/results/records/acquired-revision-of-pending-task.md
+[additive-part-of-offspring-variance]: theories/becoming/results/records/additive-part-of-offspring-variance.md
 [alignment-direction-under-widening]: theories/becoming/results/records/alignment-direction-under-widening.md
 [assured-route-criterion]: theories/becoming/results/records/assured-route-criterion.md
 [attraction-is-not-returning]: theories/becoming/results/records/attraction-is-not-returning.md

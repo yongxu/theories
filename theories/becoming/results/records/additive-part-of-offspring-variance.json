@@ -1,0 +1,352 @@
+{
+  "schema_version": 2,
+  "id": "additive-part-of-offspring-variance",
+  "title": {
+    "en": "The additive part of the variance in offspring number",
+    "zh": "后代数方差的加性部分"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-20T17:08:18+00:00",
+  "statement": {
+    "en": "The squared covariance of offspring number with any carried amount is at most the product of their variances, counted over pairs: Fisher's additive part through the amount is at most the whole variance, all of it where the amount is offspring number itself.",
+    "zh": "在各对上计数，后代数与任一所载之量的协方差平方至多为两者方差之积：经由该量的 Fisher 加性部分至多为全部方差，该量即后代数本身时为全部。"
+  },
+  "laws": [
+    {
+      "en": "Cauchy-Schwarz, counted: over any finite list the square of the total of products is at most the product of the totals of the squares.",
+      "zh": "计数形式的 Cauchy-Schwarz：在任一有限列表上，乘积之和的平方至多为平方之和的乘积。",
+      "declarations": [
+        "Becoming.Reproduction.twice_le_of_le",
+        "Becoming.Reproduction.twice_le",
+        "Becoming.Reproduction.square_mul",
+        "Becoming.Reproduction.cross_mul",
+        "Becoming.Reproduction.bound_sq"
+      ]
+    },
+    {
+      "en": "Over ordered pairs, how far apart the weights are times how far apart the amounts are totals twice the concordance with the discordance.",
+      "zh": "在有序对上，权重之差距乘量之差距的总和为一致度加不一致度的两倍。",
+      "declarations": [
+        "Becoming.Reproduction.pairsOf",
+        "Becoming.Reproduction.total_bind",
+        "Becoming.Reproduction.total_pairsOf",
+        "Becoming.Reproduction.dist",
+        "Becoming.Reproduction.dist_mul",
+        "Becoming.Reproduction.total_dist"
+      ]
+    },
+    {
+      "en": "The additive part is at most the whole: the concordance with the discordance of offspring number with any carried amount, squared, is at most the squared differences of offspring numbers over pairs times those of the amount, and so is the covariance either way; all of it where the amount is offspring number itself.",
+      "zh": "加性部分至多为全部：后代数与任一所载之量的一致度加不一致度的平方，至多为后代数各对差的平方之和乘该量的；协方差无论哪个方向亦然；该量即后代数本身时取等。",
+      "declarations": [
+        "Becoming.Reproduction.twice_mul",
+        "Becoming.Reproduction.additive_le",
+        "Becoming.Reproduction.covariance_sq_le",
+        "Becoming.Reproduction.additive_self"
+      ]
+    },
+    {
+      "en": "Over generations with exact transmission of the amount, the cross-multiplied rise or fall of its mean, squared, is at most that product.",
+      "zh": "世代上该量传递精确时，其均值经交叉相乘的升或降之平方至多为该乘积。",
+      "declarations": [
+        "Becoming.Reproduction.sub_le_of_le_add",
+        "Becoming.Reproduction.Generations.response_sq_le"
+      ]
+    },
+    {
+      "en": "Witness: offspring numbers one, two, three, the middle member alone carrying an amount: concordance and discordance one each, no covariance, while offspring number and the amount both vary.",
+      "zh": "见证：后代数为一、二、三，只有中间成员携带一个量：一致度与不一致度各为一，无协方差，而后代数与该量都有变化。",
+      "declarations": [
+        "Becoming.Reproduction.Unrelated.amount",
+        "Becoming.Reproduction.Unrelated.unrelated"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom and no premise for the bounds: natural-number weights and amounts over a finite list. Over generations, exact transmission of the amount at the step.",
+      "zh": "不加公理，界不加前提：有限列表上的自然数权重与量。世代上需该步中该量传递精确。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Several carried amounts at once (the breeding value, a multiple regression) and Fisher's identity itself (the predicted mean rising by the additive variance over the mean offspring number), which needs the regression coefficient, a ratio, are not stated.",
+      "zh": "同时经由多个所载之量（育种值，多元回归），以及需要回归系数（一个比值）的 Fisher 恒等式本身（预测均值按加性方差除以平均后代数上升），未陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "The equality case beyond the top: that the bound is attained exactly where offspring number is affine in the amount pair by pair (Lagrange's identity) is not stated.",
+      "zh": "顶端之外的取等情形：恰在后代数逐对为该量的仿射函数处取等（Lagrange 恒等式），未陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "Offspring number is a weight and a reading, not a measure of worth: that an amount is carried with more offspring says nothing about what ought to be.",
+      "zh": "后代数是权重与读数，不是价值的度量：一个量随更多后代而被携带，不说明应当如何。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "detail": {
+        "en": "Variation in offspring number need not be carried by a varying amount: in Unrelated both vary while the covariance is nothing (Unrelated.unrelated), so the additive part through that amount is nothing.",
+        "zh": "后代数的变化不必由一个变化的量携带：Unrelated 中两者都变化而协方差为零（Unrelated.unrelated），故经由该量的加性部分为零。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T170500.588275Z): every declaration of Becoming.Reproduction has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 279; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T170500.588275Z）：Becoming.Reproduction 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 279 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Several carried amounts at once (the breeding value); the equality case; Fisher's identity with rational amounts; an independent review.",
+    "zh": "同时经由多个所载之量（育种值）；取等情形；以有理数的量陈述的 Fisher 恒等式；独立审查。"
+  },
+  "correspondence": {
+    "en": "Fisher 1930's fundamental theorem in its general form, read by Price 1972: the change in mean fitness by selection is the additive genetic variance in fitness over mean fitness, the additive variance being the variance of the regression of fitness on what is carried. Through one carried amount the additive variance is Cov(w, a)^2 / Var(a), at most Var(w) by Cauchy-Schwarz, equal where fitness is affine in the amount. Readings (the AI's): how fast selection moves what is carried is bounded by how much offspring numbers and the amount vary.",
+    "zh": "Fisher 1930 的自然选择基本定理之一般形式，按 Price 1972 读：选择造成的平均适合度变化等于适合度的加性遗传方差除以平均适合度，加性方差即适合度对所载之物回归的方差。经由一个所载之量，加性方差为 Cov(w, a)^2 / Var(a)，由 Cauchy-Schwarz 至多为 Var(w)，在适合度为该量的仿射函数处相等。读法（AI 的）：选择移动所载之物的快慢受后代数与该量之变化程度约束。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+  "aliases": [
+    "additive part of Fisher's theorem",
+    "additive genetic variance",
+    "Cauchy-Schwarz counted",
+    "后代数方差的加性部分",
+    "Becoming.Reproduction.additive_le",
+    "Becoming.Reproduction.bound_sq",
+    "Becoming.Reproduction.Generations.response_sq_le"
+  ],
+  "dependencies": [
+    {
+      "id": "what-bounds-offspring-numbers",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The bound lies below Becoming.Reproduction's variance form: discord_self makes the weights' own spread their concordance, and additive_self is variation's case.",
+        "zh": "界位于 Becoming.Reproduction 的方差形式之下：discord_self 使权重自身的离散度即其一致度，additive_self 即 variation 的情形。"
+      },
+      "interface": {
+        "output": {
+          "en": "Selection on offspring number itself, the variance form.",
+          "zh": "对后代数本身的选择，方差形式。"
+        },
+        "input": {
+          "en": "The additive part through any carried amount.",
+          "zh": "经由任一所载之量的加性部分。"
+        },
+        "conditions": {
+          "en": "Natural-number weights over a finite list.",
+          "zh": "有限列表上的自然数权重。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean"
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Concordance and discordance are SelectionTerm's, read from either member of a pair (concord_swap, discord_swap); over generations mean_step with exact transmission gives the rise.",
+        "zh": "一致度与不一致度即 SelectionTerm 的，可从对的任一成员读出（concord_swap、discord_swap）；世代上传递精确的 mean_step 给出上升。"
+      },
+      "interface": {
+        "output": {
+          "en": "The selection term proper over pairs and generations.",
+          "zh": "在对与世代上的真正选择项。"
+        },
+        "input": {
+          "en": "The bound on the covariance and on the response.",
+          "zh": "协方差与响应之界。"
+        },
+        "conditions": {
+          "en": "Exact transmission for the course over generations.",
+          "zh": "世代进程需传递精确。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-bounds-offspring-numbers",
+      "detail": {
+        "en": "Fisher's exact case, the top of this bound.",
+        "zh": "Fisher 的精确情形，即本界的顶端。"
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "detail": {
+        "en": "The selection term proper, bounded here by the spreads.",
+        "zh": "真正的选择项，此处受离散度约束。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Reproduction.Flow.born_le_given",
+        "Becoming.Reproduction.Flow.born_le_given_family",
+        "Becoming.Reproduction.Flow.born_within_stock",
+        "Becoming.Reproduction.Flow.closed_lineage_lowered",
+        "Becoming.Reproduction.Flow.closed_not_exact",
+        "Becoming.Reproduction.Flow.last_reproducing",
+        "Becoming.Reproduction.Flow.lineage_ends",
+        "Becoming.Reproduction.Flow.number_within_take",
+        "Becoming.Reproduction.Flow.reproducing_le_takers",
+        "Becoming.Reproduction.Flow.reproducing_within",
+        "Becoming.Reproduction.Flow.takers_pos_of_born",
+        "Becoming.Reproduction.Generations.ByNumber",
+        "Becoming.Reproduction.Generations.ByNumber.concord_eq",
+        "Becoming.Reproduction.Generations.ByNumber.discord_none",
+        "Becoming.Reproduction.Generations.ByNumber.kept_exact_iff",
+        "Becoming.Reproduction.Generations.ByNumber.not_lower_step",
+        "Becoming.Reproduction.Generations.ByNumber.rises_exact_iff",
+        "Becoming.Reproduction.Generations.ByNumber.step",
+        "Becoming.Reproduction.Generations.ByNumber.sum_eq",
+        "Becoming.Reproduction.Generations.empty_from",
+        "Becoming.Reproduction.Generations.falls_step_iff",
+        "Becoming.Reproduction.Generations.fell_step",
+        "Becoming.Reproduction.Generations.response_sq_le",
+        "Becoming.Reproduction.OnePool.Relatum",
+        "Becoming.Reproduction.OnePool.balances",
+        "Becoming.Reproduction.OnePool.descended",
+        "Becoming.Reproduction.OnePool.dissipates",
+        "Becoming.Reproduction.OnePool.family",
+        "Becoming.Reproduction.OnePool.firstKids",
+        "Becoming.Reproduction.OnePool.flow",
+        "Becoming.Reproduction.OnePool.generations",
+        "Becoming.Reproduction.OnePool.give",
+        "Becoming.Reproduction.OnePool.giveFirst",
+        "Becoming.Reproduction.OnePool.kids",
+        "Becoming.Reproduction.OnePool.level",
+        "Becoming.Reproduction.OnePool.one_pool",
+        "Becoming.Reproduction.OnePool.present",
+        "Becoming.Reproduction.OnePool.take",
+        "Becoming.Reproduction.OnePool.takeFirst",
+        "Becoming.Reproduction.OnePool.web",
+        "Becoming.Reproduction.OnePool.within",
+        "Becoming.Reproduction.Relay.balances",
+        "Becoming.Reproduction.Relay.descended",
+        "Becoming.Reproduction.Relay.descends",
+        "Becoming.Reproduction.Relay.exchange",
+        "Becoming.Reproduction.Relay.family",
+        "Becoming.Reproduction.Relay.family_eq",
+        "Becoming.Reproduction.Relay.flow",
+        "Becoming.Reproduction.Relay.generations",
+        "Becoming.Reproduction.Relay.not_dissipates",
+        "Becoming.Reproduction.Relay.on",
+        "Becoming.Reproduction.Relay.relay",
+        "Becoming.Reproduction.Relay.turn",
+        "Becoming.Reproduction.Relay.web",
+        "Becoming.Reproduction.Spread.kids",
+        "Becoming.Reproduction.Spread.parents",
+        "Becoming.Reproduction.Spread.spread",
+        "Becoming.Reproduction.Unrelated.amount",
+        "Becoming.Reproduction.Unrelated.unrelated",
+        "Becoming.Reproduction.additive_le",
+        "Becoming.Reproduction.additive_self",
+        "Becoming.Reproduction.born_flatMap",
+        "Becoming.Reproduction.bound_sq",
+        "Becoming.Reproduction.concord_self",
+        "Becoming.Reproduction.concord_self_zero_iff",
+        "Becoming.Reproduction.covariance_sq_le",
+        "Becoming.Reproduction.cross_mul",
+        "Becoming.Reproduction.discord_self",
+        "Becoming.Reproduction.dist",
+        "Becoming.Reproduction.dist_mul",
+        "Becoming.Reproduction.excess_cross",
+        "Becoming.Reproduction.exists_mem_of_length_pos",
+        "Becoming.Reproduction.le_of_excess_zero",
+        "Becoming.Reproduction.mem_append_cases",
+        "Becoming.Reproduction.mem_flatMap_cases",
+        "Becoming.Reproduction.never_against",
+        "Becoming.Reproduction.none_iff_uniform",
+        "Becoming.Reproduction.number_never_against",
+        "Becoming.Reproduction.number_none_iff",
+        "Becoming.Reproduction.number_variation",
+        "Becoming.Reproduction.pairsOf",
+        "Becoming.Reproduction.search",
+        "Becoming.Reproduction.square_mul",
+        "Becoming.Reproduction.sub_le_of_le_add",
+        "Becoming.Reproduction.total_bind",
+        "Becoming.Reproduction.total_dist",
+        "Becoming.Reproduction.total_pairsOf",
+        "Becoming.Reproduction.twice_le",
+        "Becoming.Reproduction.twice_le_of_le",
+        "Becoming.Reproduction.twice_mul",
+        "Becoming.Reproduction.variation"
+      ],
+      "sha256": "3f1a5fb1f6697a96a0002c167a4e93a16de0bc1c9832e7cef26309abdc8f0ae9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SelectionTerm.concord",
+        "Becoming.SelectionTerm.discord",
+        "Becoming.SelectionTerm.pairs_cross",
+        "Becoming.SelectionTerm.pairs_cross'",
+        "Becoming.SelectionTerm.pairs_add",
+        "Becoming.SelectionTerm.discord_swap",
+        "Becoming.SelectionTerm.concord_swap",
+        "Becoming.SelectionTerm.Generations.mean_step",
+        "Becoming.SelectionTerm.raised_exact",
+        "Becoming.SelectionTerm.lowered_exact"
+      ],
+      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T170500.588275Z/verification.json",
+      "role": "receipt",
+      "sha256": "8328b69cfc9b6902b0fa0f04a549e018934ce1eb1493168e5ca095cf6340558a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "ddb99774448f54221489f57358cebad8d9325c8266794ab0664f862589a1cbbb"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "1fd25551b03d4582e9416f597a87943cf38b24f6f198082f998e295e995718a4"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "role": "statement",
+      "sha256": "0037da2b9f773777cfec3a571744df1bf2a1957e78e39be77d9da80404edd33d"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T170500.588275Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Reproduction",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T170500.588275Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionTerm",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "20 October 2026: added (EV10), the additive part of Fisher's theorem through one carried amount: counted Cauchy-Schwarz, the additive variance at most the whole, the response over generations bounded; study section 279.",
+      "zh": "2026年10月20日：新增（EV10），经由一个所载之量的 Fisher 定理加性部分：计数形式的 Cauchy-Schwarz、加性方差至多为全部、世代响应有界；研究第 279 节。"
+    }
+  ]
+}
