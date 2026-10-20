@@ -11230,3 +11230,39 @@ Output → input: the alignment side of the margin (Flow.Balances.loses_iff_beyo
 - **What would have changed the verdict.** A cell where the band decides right and reachability on the same replay decides wrong, which R2's identity excludes once the cell's dynamics are known. Or an established benchmark with a renewable condition whose dynamics are unknown and measurable only by intervention, where the band's model-light bound would be the only forecast available. SafeLife's spawners come closest, and there the transfer rests on deep RL learners.
 
 **Self-review.** R1-R3 and R5 are identities, and the frozen predictions said so. What the run adds is that they hold on MQ1's own data, and that the graded measures (R4) and the Box coupling (R6), which could have failed, did not. The conclusion is negative for the significance aim and stated as such. It does not touch the margin's laws in Lean, which keep their scope as identities of the balance (§253).
+
+## 264. The boundary where a stepwise learner keeps a gated patch, mapped (CG3b)
+
+```text
+Result(s): none new as mathematics; a frozen test (experiments/commons-outrun-own, round 3: design
+       997e800b9, half-B predictions 2576b3e0d) of whether the boundary section 254 left open can be
+       fitted on half of a fresh grid and predict the other half; and a failed calibration recorded
+       before it (a one-constant index from training visits: SSE 3.6 on rounds 1-2 against 0.65 for a
+       logistic; predicts nothing).
+Delta: section 254's open output (a law for the boundary as a joint function of the learner's
+       exploration coverage cov and the full draw's standing time full). Sixteen new conditions,
+       12 seeds each, split alternately within each draw cap; sigma(-4.797 + 0.431 log cov + 2.036
+       log full) fitted on rounds 1-2 and half A (21 conditions) and frozen before half B ran.
+Premises: as section 254 (CG1's environment, CG2's learner and training, uniform exploring starts,
+       30,000 episodes); cov and full exact.
+Verdicts: W1 passed (5 of 7 held-out conditions within the frozen rules: G3s6 0.00, G3s9 0.25,
+       G3s12 0.99, G2s6 0.56, G2s9 1.00 passed; G2s3 0.07 against p 0.40, G1s0.75 1.00 against p
+       0.73 failed). W2 failed: mean absolute error 0.214, below round 1's rule (0.306) but not
+       round 2's (0.195). Identity checks passed (294.7M steps, 2.36M own-excess windows, 16,722
+       emptied courses, 0 violations). Over three rounds: 22 graded conditions, 17 passed; 10
+       contrasts, 7 passed.
+Evidence: experiments/commons-outrun-own (README round 3, PREDICTIONS-ROUND3, round3-*.json);
+       46 CPU-minutes of runs, about 31 of exact computation for the index fit.
+Boundary: 12 seeds per condition; uniform starts only; the predictor is statistical (its form
+       carries no mechanism), and it had converged, so its failures are the form's.
+Output → input: post hoc over all 28 conditions with uniform starts (not counted): full <= 4.4,
+       all 9 depleted (<= 0.01) even at cov 24.5; full >= 8.4, all 10 kept (>= 0.80); between,
+       the share kept rises with cov (one inversion in nine). In the theory's terms: the
+       learner's own full draw from the start (Flow.joint_excess_ends with its own takes as the
+       part) ends the condition before the region where restraint is learned when full is short,
+       and within the band where it may not, how long its own exploration lets courses stand
+       decides how far that region reaches back. Open: this band form as a frozen prediction;
+       whether it survives other start distributions and function approximation.
+```
+
+**Self-review.** The visit index was tried and failed on finished data before any round-3 run, and is recorded rather than dropped. The grid, its split, the predictor's form and fitting procedure, and the verdict rules were committed before half A ran, and the fitted predictions before half B ran; nothing was adjusted between. The predictor's form (one sigmoid) was a design choice, and the post hoc band reading suggests it was the wrong form; that reading is labelled post hoc and not counted.
