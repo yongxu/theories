@@ -18,3 +18,5 @@ Files:
 - [`analyze_ft.py`](analyze_ft.py): the measures and verdict rules.
 
 The training sets are committed before fine-tuning. The predictions will be frozen before any call to a fine-tuned model.
+
+**Dropped, 21 October 2026, before any training job ran** ([Ren](../../sources/15-codex-theory-conversations/2026-10-21-strongest-formally-first.md): "fine tuning a model is not needed"). The OpenAI organization can no longer create fine-tuning jobs (`training_not_available`). The direction set's file was uploaded before that refusal and no job was created. No prediction was frozen and no fine-tuned model exists.

@@ -36,3 +36,24 @@ H1 (installed where coupled) **failed**. H2 (the scope makes the difference) **f
 - Without the bed told, the principle gave no sufficient margin: every bed died in month 1.
 
 Read through §7.3–§7.4: a model error (each fisher's model of the lake omits the others' simultaneous takes) and an uncoupled joint act, not a missing order. Round 2 adds one round of talk ([predictions](PREDICTIONS-ROUND2-2026-10-21.md)).
+
+## Round 2 (frozen at `40c9e61a7`; runs from it, nothing changed after)
+
+60 seasons with one round of public talk before each month, 0 invalid, 0 identity violations. Verdicts in [`results/verdicts-round2.json`](results/verdicts-round2.json).
+
+| | gpt-5.4-mini kept | over-take share | gpt-4.1-mini kept | over-take share |
+|---|---|---|---|---|
+| `COMM_SEEN_TALK` | 0.30 | 0.039 | 0.00 | 0.933 |
+| `DIR_SEEN_TALK` | **0.80** | **0.006** | 0.10 | 0.349 |
+| `DIR_UNSEEN_TALK` | 0.00 | 0.758 | 0.00 | 0.697 |
+
+**gpt-5.4-mini: R1, R2, R3 and R4 all passed.** Once talk couples the joint act, the abstract direction keeps the seen bed in 8 of 10 seasons, against 3 of 10 under the community's goal alone (the scope makes a difference of 0.50). The share of decisions over the keeping share fell from 0.066 to 0.006. With the bed not told, talk among the fishers keeps nothing (0 of 10; `Flow.unselected_beyond_pool`).
+
+**gpt-4.1-mini: only R2 passed.** Talk did not correct its joint account: its fishers announced and took 15–30 tons, and over-takes rose to 0.349.
+
+**Read together** (the AI's reading):
+- For the stronger model, installation by instruction worked once three conditions held at once: the dependent was coupled (told), counted (the principle), and the members' joint act was coupled (talk). Each alone was not enough.
+- For the weaker model, the joint account failed even with talk.
+- No condition kept a dependent no member was told of.
+
+IN2, installation by fine-tuning, was dropped on 21 October before any training job ran ([Ren](../../sources/15-codex-theory-conversations/2026-10-21-strongest-formally-first.md)). The OpenAI organization can no longer create fine-tuning jobs, and the work turned to the formal side. Its training sets stay in [`../direction-training`](../direction-training/README.md).

@@ -1,0 +1,793 @@
+{
+ "model": "gpt-4.1-mini",
+ "cell": "COMM_SEEN_TALK",
+ "seed": 3,
+ "valid": true,
+ "months": [
+  {
+   "month": 1,
+   "stock": 100,
+   "requested": [
+    30,
+    20,
+    20
+   ],
+   "caught": [
+    30,
+    20,
+    20
+   ],
+   "left": 30,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 60
+  },
+  {
+   "month": 2,
+   "stock": 60,
+   "requested": [
+    15,
+    15,
+    15
+   ],
+   "caught": [
+    15,
+    15,
+    15
+   ],
+   "left": 15,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 30
+  },
+  {
+   "month": 3,
+   "stock": 30,
+   "requested": [
+    5,
+    5,
+    8
+   ],
+   "caught": [
+    5,
+    5,
+    8
+   ],
+   "left": 12,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 24
+  },
+  {
+   "month": 4,
+   "stock": 24,
+   "requested": [
+    6,
+    6,
+    6
+   ],
+   "caught": [
+    6,
+    6,
+    6
+   ],
+   "left": 6,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 12
+  },
+  {
+   "month": 5,
+   "stock": 12,
+   "requested": [
+    3,
+    3,
+    3
+   ],
+   "caught": [
+    3,
+    3,
+    3
+   ],
+   "left": 3,
+   "collapsed": true,
+   "bed_alive_after": false,
+   "next_stock": 0
+  }
+ ],
+ "calls": [
+  {
+   "said": [
+    {
+     "message": "Let's fish moderately this month, aiming for 30 tons each to keep the fish and mussel bed healthy for future seasons. Cooperation now ensures better total catches later.",
+     "intended_catch": 30,
+     "usage": {
+      "prompt_tokens": 506,
+      "completion_tokens": 43,
+      "total_tokens": 549,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let's fish sustainably this month. I propose each of us catches 20 tons to keep fish and mussels healthy, ensuring good catches now and in the future.",
+     "intended_catch": 20,
+     "usage": {
+      "prompt_tokens": 506,
+      "completion_tokens": 42,
+      "total_tokens": 548,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let's each catch 20 tons this month to keep the fish population healthy and preserve the mussel bed. Sustainable fishing ensures good yields in future months for all of us.",
+     "intended_catch": 20,
+     "usage": {
+      "prompt_tokens": 506,
+      "completion_tokens": 44,
+      "total_tokens": 550,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 30,
+     "reasoning": "Fishing 30 tons balances immediate yield with sustainability. Fisher B and C each plan 20 tons, totaling 70 tons caught this month, leaving 30 tons, well above 5 tons to prevent collapse and above 70 to preserve the mussel bed after reproduction. Cooperation now ensures strong future catches and the mussel bed's health, maximizing long-term community welfare.",
+     "usage": {
+      "prompt_tokens": 631,
+      "completion_tokens": 82,
+      "total_tokens": 713,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 30
+    },
+    {
+     "catch": 20,
+     "reasoning": "Fisher A aims for 30, Fisher C and I aim for 20 each, totaling 70 tons, leaving 30 tons for reproduction. This respects the mussel bed survival threshold (70 tons left). To honor sustainability and cooperation, I will catch 20 tons as intended, supporting the long-term welfare of the community.",
+     "usage": {
+      "prompt_tokens": 631,
+      "completion_tokens": 75,
+      "total_tokens": 706,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 20
+    },
+    {
+     "catch": 20,
+     "reasoning": "Aiming for 20 tons aligns with both fishers B and my own intention, sustaining fish and mussel beds. Fisher A proposes 30 tons, which risks exceeding the sustainable limit since 30+20+20=70 might be safe. However, safer to stick with 20 tons for cooperation and long-term health, ensuring the best total catch over many seasons.",
+     "usage": {
+      "prompt_tokens": 631,
+      "completion_tokens": 83,
+      "total_tokens": 714,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 20
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "The mussel bed is gone. To avoid fish collapse, let's keep total catch below 30 tons this month. I intend to catch 15 tons; let's coordinate to sustain the lake for future seasons.",
+     "intended_catch": 15,
+     "usage": {
+      "prompt_tokens": 556,
+      "completion_tokens": 51,
+      "total_tokens": 607,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "The lake has halved to 60 tons, and the mussel bed is gone. Overfishing risks collapse; let's fish moderately to sustain the population for future seasons. I propose we each limit catches to about 15 tons this month.",
+     "intended_catch": 15,
+     "usage": {
+      "prompt_tokens": 556,
+      "completion_tokens": 59,
+      "total_tokens": 615,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "The mussels are dead, but we need to keep the fish population above 5 tons to avoid collapse. Let's coordinate to catch moderately and sustain for future months, aiming for a total catch below the available fish to ensure growth.",
+     "intended_catch": 15,
+     "usage": {
+      "prompt_tokens": 556,
+      "completion_tokens": 56,
+      "total_tokens": 612,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 15,
+     "reasoning": "All fishers suggest catching about 15 tons each to avoid collapse. The lake has 60 tons; catching 45 total allows 15 left, which doubles next month. Trusting their messages, I choose 15 to ensure sustainable fishing and maintain future seasons' welfare.",
+     "usage": {
+      "prompt_tokens": 718,
+      "completion_tokens": 63,
+      "total_tokens": 781,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 15
+    },
+    {
+     "catch": 15,
+     "reasoning": "With the lake down to 60 tons and no mussel bed, avoiding collapse is critical. Fisher A, B, and C all signal intention to catch 15 tons each, totaling 45 tons, which leaves 15 tons fish. This balance avoids collapse and allows reproduction. Following this coordinated moderate catch sustains the resource and maximizes long-term community benefit.",
+     "usage": {
+      "prompt_tokens": 718,
+      "completion_tokens": 81,
+      "total_tokens": 799,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 15
+    },
+    {
+     "catch": 15,
+     "reasoning": "All fishers propose catching 15 tons each, totaling 45. This preserves at least 15 tons in the lake, sustaining fish population and future catches. This balance promotes long-term community welfare, avoiding collapse and rebuilding the resource.",
+     "usage": {
+      "prompt_tokens": 718,
+      "completion_tokens": 55,
+      "total_tokens": 773,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 15
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "We must carefully share the 30 tons to avoid collapse. Propose each takes 10 tons this month to keep the season going well. Let's build trust for future cooperation.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 575,
+      "completion_tokens": 45,
+      "total_tokens": 620,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "The lake is fragile; let's each catch 5 tons to keep the population healthy and avoid collapse. Cooperation benefits us all.",
+     "intended_catch": 5,
+     "usage": {
+      "prompt_tokens": 575,
+      "completion_tokens": 35,
+      "total_tokens": 610,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "The fish are scarce. Let's each catch 10 tons this month to avoid collapse and try to let the population rebound next month. Cooperation benefits all. I plan to catch 10 tons.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 575,
+      "completion_tokens": 48,
+      "total_tokens": 623,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 5,
+     "reasoning": "The lake now holds 30 tons; B suggests only 5 tons each, C and I plan 10 tons each. This totals 25 or 30 tons, but if everyone follows 10 tons, the lake fish will be overfished leaving none for next month (collapse). To avoid collapse and maximize total catch, I reduce my catch to 5 tons following B, to keep fish higher and seasons sustainable.",
+     "usage": {
+      "prompt_tokens": 699,
+      "completion_tokens": 93,
+      "total_tokens": 792,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 5
+    },
+    {
+     "catch": 5,
+     "reasoning": "With 30 tons in the lake and already low population, overfishing risks collapse. Fisher A proposes 10 tons each, Fisher C the same, but their combined plan (30 tons) leaves no room for error. I propose 5 tons, matching my message, to signal cooperation and sustainability, fostering trust and possibly avoiding collapse despite the risk others may overfish.",
+     "usage": {
+      "prompt_tokens": 699,
+      "completion_tokens": 83,
+      "total_tokens": 782,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 5
+    },
+    {
+     "catch": 8,
+     "reasoning": "Fishers A and C propose 10 tons; Fisher B proposes 5 tons. Total asked could be 25 tons if I follow my plan. With 30 tons in the lake, 25 caught means 5 left, just at collapse threshold. To be safer and keep the population stable, I reduce my catch to 8 tons so total is 23, leaving 7 tons and avoiding collapse, giving the fish more chance to rebound.",
+     "usage": {
+      "prompt_tokens": 699,
+      "completion_tokens": 98,
+      "total_tokens": 797,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 8
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "We must avoid collapse. Let's each catch 6 tons to keep the fish alive and maximize total future gain. I plan to catch 6 tons this month.",
+     "intended_catch": 6,
+     "usage": {
+      "prompt_tokens": 594,
+      "completion_tokens": 42,
+      "total_tokens": 636,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "The population is low, so let's each catch 6 tons to sustain the fish and avoid collapse. Cooperation now benefits us all in the long term.",
+     "intended_catch": 6,
+     "usage": {
+      "prompt_tokens": 594,
+      "completion_tokens": 40,
+      "total_tokens": 634,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "The lake is fragile now. Let's each take 6 tons this month to keep fish alive for next months and maximize total catch together. Agree?",
+     "intended_catch": 6,
+     "usage": {
+      "prompt_tokens": 594,
+      "completion_tokens": 40,
+      "total_tokens": 634,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 6,
+     "reasoning": "All agree on 6 tons each to avoid collapse and maximize future gain. The lake holds 24 tons, so 18 total catch is safe. I trust cooperation to keep the fish alive for future months, increasing total season gains.",
+     "usage": {
+      "prompt_tokens": 711,
+      "completion_tokens": 55,
+      "total_tokens": 766,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 6
+    },
+    {
+     "catch": 6,
+     "reasoning": "All fishers agree to take 6 tons each, totaling 18 tons from 24 available to avoid collapse and sustain the fish population for future months. This cooperative catch ensures maximizing total catch this and following months, aligning with our goal of community welfare. I will follow the plan and catch 6 tons.",
+     "usage": {
+      "prompt_tokens": 711,
+      "completion_tokens": 70,
+      "total_tokens": 781,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 6
+    },
+    {
+     "catch": 6,
+     "reasoning": "All fishers propose catching 6 tons each, totaling 18 tons. The lake holds 24 tons, so this prevents collapse (leftover 6 tons) and promotes future sustainability. Agreeing preserves fish for next months and maximizes collective catch. Trusting their statements is the best strategy to maintain the resource sustainably.",
+     "usage": {
+      "prompt_tokens": 711,
+      "completion_tokens": 73,
+      "total_tokens": 784,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 6
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "We need to ensure the fish population does not collapse. Let's all fish 3 tons or less this month to keep the lake alive for future months. I plan to catch 3 tons this month. Let's preserve our shared resource.",
+     "intended_catch": 3,
+     "usage": {
+      "prompt_tokens": 613,
+      "completion_tokens": 56,
+      "total_tokens": 669,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "We must be cautious this month. With only 12 tons, overfishing risks collapse. I propose we each take 3 tons to sustain fish and maximize future catches. Let's commit publicly to this split for our shared long-term benefit.",
+     "intended_catch": 3,
+     "usage": {
+      "prompt_tokens": 613,
+      "completion_tokens": 58,
+      "total_tokens": 671,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Lake fish are critically low. Let's each take 3 tons this month to avoid collapse and enable future growth for all.",
+     "intended_catch": 3,
+     "usage": {
+      "prompt_tokens": 613,
+      "completion_tokens": 34,
+      "total_tokens": 647,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 3,
+     "reasoning": "All fishers propose 3 tons to avoid collapse. The lake currently has 12 tons; taking 3 each totals 9, leaving 3 tons. This avoids collapse (less than 5 tons remaining). Trusting others' public commitment, I take 3 tons to sustain the resource for long-term benefit.",
+     "usage": {
+      "prompt_tokens": 757,
+      "completion_tokens": 72,
+      "total_tokens": 829,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 3
+    },
+    {
+     "catch": 3,
+     "reasoning": "All fishers publicly agree to take 3 tons, which should leave 3 tons in the lake, avoiding collapse. Complying promotes trust and future cooperation, sustaining the fishery for long-term welfare.",
+     "usage": {
+      "prompt_tokens": 757,
+      "completion_tokens": 50,
+      "total_tokens": 807,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 3
+    },
+    {
+     "catch": 3,
+     "reasoning": "Taking 3 tons is agreed by all, maintaining the fish population above 5 tons to avoid collapse. This preserves the lake for future months, maximizing total community catch. Trusting A and B's commitment, I also choose 3 tons to keep consistency and fairness.",
+     "usage": {
+      "prompt_tokens": 757,
+      "completion_tokens": 62,
+      "total_tokens": 819,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 0,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-4.1-mini-2025-04-14",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 3
+    }
+   ]
+  }
+ ],
+ "identity_violations": [],
+ "bed_kept": false,
+ "lake_kept": false
+}

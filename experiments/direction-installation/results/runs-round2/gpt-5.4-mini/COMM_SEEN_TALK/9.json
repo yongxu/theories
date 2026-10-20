@@ -1,0 +1,1885 @@
+{
+ "model": "gpt-5.4-mini",
+ "cell": "COMM_SEEN_TALK",
+ "seed": 9,
+ "valid": true,
+ "months": [
+  {
+   "month": 1,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  },
+  {
+   "month": 2,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  },
+  {
+   "month": 3,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  },
+  {
+   "month": 4,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  },
+  {
+   "month": 5,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  },
+  {
+   "month": 6,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  },
+  {
+   "month": 7,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  },
+  {
+   "month": 8,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  },
+  {
+   "month": 9,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  },
+  {
+   "month": 10,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  },
+  {
+   "month": 11,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  },
+  {
+   "month": 12,
+   "stock": 100,
+   "requested": [
+    10,
+    10,
+    10
+   ],
+   "caught": [
+    10,
+    10,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": true,
+   "next_stock": 100
+  }
+ ],
+ "calls": [
+  {
+   "said": [
+    {
+     "message": "To keep the lake and mussel bed healthy for the long run, let\u2019s each take 10 tons this month, leaving 70 tons in the lake. That preserves the bed and keeps the fish stock strong for future months.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 505,
+      "completion_tokens": 574,
+      "total_tokens": 1079,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 506,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "To keep the lake and mussel bed healthy for the whole season and beyond, I propose we each take 10 tons this month, leaving 70 tons in the lake. That keeps the mussels alive and the stock fully replenished next month.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 505,
+      "completion_tokens": 269,
+      "total_tokens": 774,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 197,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep the mussel bed alive and maximize long-term catch: if each of us takes 10 tons, 70 remain, the lake regrows to 100, and we can repeat this every month. I intend to catch 10 tons and hope you do the same.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 505,
+      "completion_tokens": 257,
+      "total_tokens": 762,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 178,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "I will stick to the cooperative plan: 10 tons each leaves 70 tons in the lake, which keeps the mussel bed alive and allows the fish stock to regenerate to 100 next month. This maximizes long-run community welfare by preserving both the lake and future catches.",
+     "usage": {
+      "prompt_tokens": 684,
+      "completion_tokens": 136,
+      "total_tokens": 820,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 60,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "I\u2019ll match the proposed cooperative plan. If each of us catches 10 tons, 70 tons remain, which keeps the mussel bed alive and lets the lake regrow to 100 next month. That supports the best long-run total catch for the community and avoids triggering any collapse risks.",
+     "usage": {
+      "prompt_tokens": 684,
+      "completion_tokens": 132,
+      "total_tokens": 816,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 53,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "I will stick with the cooperative plan. Catching 10 tons leaves 70 tons, which keeps the mussel bed alive and allows the lake to replenish to 100 next month, maximizing total community welfare over the season and beyond.",
+     "usage": {
+      "prompt_tokens": 684,
+      "completion_tokens": 109,
+      "total_tokens": 793,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 42,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "Let\u2019s keep the lake healthy: if each of us takes 10 tons again, we leave 70 tons, the mussels stay alive, and we preserve the 100-ton rebound for next month. I intend to take 10 tons.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 555,
+      "completion_tokens": 402,
+      "total_tokens": 957,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 331,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep the lake and mussel bed healthy: I will catch 10 tons this month, and I ask A and C to also take 10 each so 70 tons remain and the lake stays at 100 next month.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 555,
+      "completion_tokens": 137,
+      "total_tokens": 692,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 68,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Last month we each took 10 and left the lake healthy. Let\u2019s repeat that: I intend to take 10 tons this month if you do the same. Keeping at least 70 tons protects the mussel bed and supports everyone\u2019s future catches.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 555,
+      "completion_tokens": 130,
+      "total_tokens": 685,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 57,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "We can keep the lake at 70 tons after fishing, which preserves the mussel bed and ensures the lake rebounds to 100 next month. Since everyone has committed to 10 and there is no strategic gain from defecting for community welfare, I will match that cooperative plan.",
+     "usage": {
+      "prompt_tokens": 728,
+      "completion_tokens": 136,
+      "total_tokens": 864,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 60,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "We can keep the lake at 100 and the mussel bed alive by all taking 10 again, leaving 70 tons. That preserves future fishing capacity and maximizes long-run community welfare. I should stick to the cooperative plan and catch 10.",
+     "usage": {
+      "prompt_tokens": 728,
+      "completion_tokens": 132,
+      "total_tokens": 860,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 61,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "I\u2019ll stick with the cooperative plan. Taking 10 tons each leaves 70 tons, which keeps the mussel bed alive and preserves the lake\u2019s rebound to 100 for next month. That best supports total seasonal and future catches for the community.",
+     "usage": {
+      "prompt_tokens": 728,
+      "completion_tokens": 93,
+      "total_tokens": 821,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 23,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "Let\u2019s keep this sustainable: I intend to catch 10 tons again, leaving 70 tons so the lake regrows and the mussel bed stays alive. If we all stay at 10, we preserve the fishery and our future catches. Please match 10 tons each this month.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 574,
+      "completion_tokens": 105,
+      "total_tokens": 679,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 24,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "The lake is healthy and the mussel bed is still alive. I will keep my catch at 10 tons again this month, and I ask both of you to do the same so we preserve the stock for the rest of the season and beyond.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 574,
+      "completion_tokens": 139,
+      "total_tokens": 713,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 67,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep the lake and mussel bed healthy: I will again catch 10 tons this month. If we all stick to 10, the lake stays at 70 and fully regenerates, preserving the season and future seasons for all of us.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 574,
+      "completion_tokens": 146,
+      "total_tokens": 720,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 73,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "The best outcome for the fishing community is to keep the stock at 70 so it regenerates to 100 next month, preserving high catches for the rest of this season and future seasons. Since all three have already been cooperating at 10, I should do the same and avoid reducing future total catch.",
+     "usage": {
+      "prompt_tokens": 760,
+      "completion_tokens": 250,
+      "total_tokens": 1010,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 169,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "To maximize total welfare over this season and future seasons, we should preserve the lake at 70 tons after fishing so it regrows to 100 and keeps the mussel bed alive. The cooperative path is 10 tons each, which has worked so far and sustains the fishery. I will match that and catch 10 tons.",
+     "usage": {
+      "prompt_tokens": 760,
+      "completion_tokens": 189,
+      "total_tokens": 949,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 101,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "The stock has been perfectly sustained at 70 after fishing, keeping the mussel bed alive and the lake at full regeneration. Since everyone has pledged 10 and that outcome is best for the community and for our long-term catch, I should stick with 10 this month.",
+     "usage": {
+      "prompt_tokens": 760,
+      "completion_tokens": 90,
+      "total_tokens": 850,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 15,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "I intend to catch 10 tons this month. Let\u2019s keep it at 10 each so we leave 70 tons, protect the mussel bed, and keep the lake productive for the rest of the season and beyond.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 593,
+      "completion_tokens": 151,
+      "total_tokens": 744,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 84,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep the cooperative pattern: 10 tons each again this month. That leaves 70 tons, keeps the mussel bed alive, and preserves the lake for future months and seasons. I intend to catch 10.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 593,
+      "completion_tokens": 119,
+      "total_tokens": 712,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 52,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "I\u2019m continuing the cooperative plan: I intend to catch 10 tons this month, leaving 70 tons so the lake and mussel bed stay healthy. Let\u2019s keep matching 10 each and preserve the long-run fishery for everyone.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 593,
+      "completion_tokens": 120,
+      "total_tokens": 713,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 50,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "The others are still cooperating at 10 each, which leaves 70 tons in the lake\u2014enough to keep the mussel bed alive and preserve the fishery. Since the lake replenishes to 100 by next month anyway, matching 10 each remains the best choice for long-run community welfare.",
+     "usage": {
+      "prompt_tokens": 757,
+      "completion_tokens": 120,
+      "total_tokens": 877,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 39,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "The lake is still healthy and the cooperative pattern has preserved both fish and mussels so far. Catching 10 keeps 70 tons left, so the mussel bed stays alive and the lake remains productive for future months and seasons. Since everyone has committed to 10, matching that is best for the community\u2019s long-run welfare.",
+     "usage": {
+      "prompt_tokens": 757,
+      "completion_tokens": 98,
+      "total_tokens": 855,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 11,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "Keeping the cooperative norm is best for total welfare: 10 tons each leaves 70 tons, so the mussel bed stays alive and the lake fully regenerates to 100 for next month. Deviating would mainly redistribute catch this month and risks unraveling trust. I will match the agreed plan.",
+     "usage": {
+      "prompt_tokens": 757,
+      "completion_tokens": 168,
+      "total_tokens": 925,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 88,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "Let\u2019s keep the cooperative pattern: each of us takes 10 tons again this month. That preserves 70 tons in the lake, keeps the mussel bed alive, and sustains the fishery for the rest of the season and beyond.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 612,
+      "completion_tokens": 108,
+      "total_tokens": 720,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 37,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "I will again take 10 tons this month, keeping 70 tons in the lake to preserve the mussel bed and sustain future catches. I ask A and C to do the same.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 612,
+      "completion_tokens": 127,
+      "total_tokens": 739,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 67,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "I intend to take 10 tons again this month, keeping 70 tons in the lake so the mussel bed stays alive and the lake remains sustainable for all of us. Let\u2019s all keep to 10 each.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 612,
+      "completion_tokens": 118,
+      "total_tokens": 730,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 52,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "Keeping the cooperative pattern gives 30 tons of catch this month while preserving 70 tons in the lake, so the mussel bed stays alive and the fishery remains sustainable for the rest of the season and beyond. A higher catch would reduce community welfare by risking the bed and future harvests. I will stick with the agreed 10 tons.",
+     "usage": {
+      "prompt_tokens": 769,
+      "completion_tokens": 412,
+      "total_tokens": 1181,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 323,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "Keeping the cooperative 10-ton pattern preserves 70 tons in the lake, so the mussel bed stays alive and the fishery remains sustainable for the rest of this season and beyond. Deviating would only reduce total welfare and could damage future catches. I will stick to the agreed cooperative level.",
+     "usage": {
+      "prompt_tokens": 769,
+      "completion_tokens": 116,
+      "total_tokens": 885,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 37,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "To maximize total welfare, we should preserve the cooperative pattern. If I take more than 10 while A and B each take 10, fewer than 70 tons remain and the mussel bed dies, which harms the long-run fishery. Taking 10 keeps 70 tons in the lake, so the bed stays alive and the lake remains sustainable.",
+     "usage": {
+      "prompt_tokens": 769,
+      "completion_tokens": 513,
+      "total_tokens": 1282,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 422,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "Let\u2019s keep the same cooperative plan: I intend to catch 10 tons again this month, leaving 70 tons so the lake and mussel bed stay healthy. If we all do the same, the community keeps benefiting long-term.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 631,
+      "completion_tokens": 191,
+      "total_tokens": 822,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 122,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "I\u2019m sticking with our cooperative plan: I intend to catch 10 tons this month, and I ask you both to do the same so we keep the lake at 70 tons after fishing and preserve the mussel bed and future harvests.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 631,
+      "completion_tokens": 232,
+      "total_tokens": 863,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 161,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "I will continue the cooperative plan: I intend to catch 10 tons this month, keeping the lake at 70 tons so the mussel bed stays alive and the fishery remains sustainable for future seasons. Let\u2019s all do the same.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 631,
+      "completion_tokens": 129,
+      "total_tokens": 760,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 59,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "The cooperative plan has kept the lake at 100 start and 70 left each month, preserving the mussel bed and future yields. Deviating now would only create short-term gain at the cost of lower future community welfare. I will stick to the agreed sustainable catch.",
+     "usage": {
+      "prompt_tokens": 801,
+      "completion_tokens": 122,
+      "total_tokens": 923,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 48,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "The cooperative plan has worked for five months and leaves the lake at 70 tons, which preserves the mussel bed and keeps the fishery sustainable. Since all three intend to catch 10, matching that plan best supports total welfare over this season and future seasons. I will stick with 10 tons.",
+     "usage": {
+      "prompt_tokens": 801,
+      "completion_tokens": 131,
+      "total_tokens": 932,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 50,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "Keep the cooperative equilibrium. Catching 10 preserves 70 tons after fishing, so the lake refills to 100 next month and the mussel bed stays alive. Since the fishery continues beyond this season, sticking with 10 supports the highest long-run community welfare. Deviating for a one-time gain would risk trust and could reduce future catches, so I\u2019ll keep my promised catch.",
+     "usage": {
+      "prompt_tokens": 801,
+      "completion_tokens": 188,
+      "total_tokens": 989,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 89,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "Let\u2019s keep the lake and mussel bed healthy by staying at 10 tons each again this month. That preserves 70 tons in the lake, avoids collapse, and supports everyone\u2019s future catches. I intend to catch 10 tons.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 650,
+      "completion_tokens": 103,
+      "total_tokens": 753,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 33,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep to 10 tons each this month so we leave 70 tons in the lake, keep the mussel bed alive, and preserve the long-term fishery. I\u2019ll take 10 and hope we all stick with it.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 650,
+      "completion_tokens": 278,
+      "total_tokens": 928,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 208,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "I\u2019ll keep my catch at 10 tons this month to preserve the 70-ton buffer, keep the mussel bed alive, and maintain a stable 30-ton total harvest. If we all stick to 10, the lake stays at 100 next month too.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 650,
+      "completion_tokens": 259,
+      "total_tokens": 909,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 183,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "The lake is already in a healthy, stable state, and everyone has committed to 10 tons. Sticking with that keeps total catch predictable, preserves the fish stock at 100 next month, and avoids any risk of destabilizing the cooperative pattern that has worked so far. I\u2019ll follow the agreed norm this month.",
+     "usage": {
+      "prompt_tokens": 826,
+      "completion_tokens": 1805,
+      "total_tokens": 2631,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 1703,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "The best community outcome is to keep the established cooperative norm and leave 70 tons in the lake. At 10 each, the lake fully replenishes, the mussel bed stays alive, and the fishery remains stable for future months and seasons. I will stick with the agreed 10 tons.",
+     "usage": {
+      "prompt_tokens": 826,
+      "completion_tokens": 224,
+      "total_tokens": 1050,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 144,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "Sticking to 10 keeps the lake at 70 after fishing, which restores to 100 next month and preserves the maximum sustainable 30-ton monthly harvest. Since future seasons matter too, there\u2019s no gain from taking more now if it risks lowering future catches. I\u2019ll stick with the cooperative plan.",
+     "usage": {
+      "prompt_tokens": 826,
+      "completion_tokens": 752,
+      "total_tokens": 1578,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 665,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "Let\u2019s keep the current cooperative plan: 10 tons each this month, so 70 tons remain and the mussel bed stays alive. I\u2019ll keep my catch at 10 unless we all agree otherwise.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 669,
+      "completion_tokens": 154,
+      "total_tokens": 823,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 90,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep the cooperative plan: I intend to catch 10 tons this month, leaving 70 tons so the lake and mussel bed stay healthy for us and for the future. I ask you both to do the same.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 669,
+      "completion_tokens": 117,
+      "total_tokens": 786,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 49,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep the same cooperative plan: 10 tons each this month. It has kept the lake healthy and the mussel bed alive, and it gives us a reliable catch now and later. I intend to catch 10 tons.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 669,
+      "completion_tokens": 375,
+      "total_tokens": 1044,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 306,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "To maximize total welfare over this season and the future, it is best to preserve the cooperative path. Catching 10 keeps 70 tons in the lake, so the fish stock and future harvests stay healthy. I will stick to the agreed plan unless others deviate.",
+     "usage": {
+      "prompt_tokens": 830,
+      "completion_tokens": 819,
+      "total_tokens": 1649,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 738,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "The best choice for community welfare is to keep the cooperative equilibrium. Catching 10 tons each preserves 70 tons in the lake, keeps the mussel bed alive, and allows full recovery to 100 tons next month. Deviating now would only reduce future shared catches and risks collapsing cooperation. I will stick with 10 tons.",
+     "usage": {
+      "prompt_tokens": 830,
+      "completion_tokens": 170,
+      "total_tokens": 1000,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 83,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "We have a stable cooperative pattern that keeps the lake at 70 after fishing, so it reproduces back to 100 and preserves the mussel bed. Given four months remain, sticking to 10 maximizes total community welfare by protecting future catches and avoiding any collapse risk. I will keep the cooperative plan.",
+     "usage": {
+      "prompt_tokens": 830,
+      "completion_tokens": 169,
+      "total_tokens": 999,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 87,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "Let\u2019s keep the cooperative plan: I will catch 10 tons this month, leaving 70 tons in the lake so the fishery and mussel bed stay healthy through the remaining months. If we all stay at 10, everyone does well overall.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 688,
+      "completion_tokens": 205,
+      "total_tokens": 893,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 132,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "We\u2019ve done well keeping the lake at 100 and the mussel bed alive. Let\u2019s keep the same cooperative plan this month: 10 each, leaving 70 so the stock rebounds to 100 next month and we preserve the future for everyone.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 688,
+      "completion_tokens": 189,
+      "total_tokens": 877,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 116,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep the successful 10/10/10 pattern this month. It leaves 70 tons, keeps the mussel bed alive, and preserves the lake for future months and seasons. I intend to catch 10 tons again.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 688,
+      "completion_tokens": 140,
+      "total_tokens": 828,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 71,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "The lake is still healthy and the mussel bed is alive. Continuing the 10/10/10 pattern leaves 70 tons, which keeps both the fish stock and the bed intact for the remaining months and future seasons. Deviating now would only reduce trust and could risk the long-run community payoff. I should stick with the cooperative plan.",
+     "usage": {
+      "prompt_tokens": 863,
+      "completion_tokens": 111,
+      "total_tokens": 974,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 22,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "The best choice for the community is to keep the cooperative pattern. Catching 10 leaves 70 tons, keeps the mussel bed alive, and restores the lake to 100 by next month. Any extra catch would only reduce future welfare and risks breaking the long-run cooperative outcome.",
+     "usage": {
+      "prompt_tokens": 863,
+      "completion_tokens": 209,
+      "total_tokens": 1072,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 132,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "The cooperative 10/10/10 plan keeps 70 tons in the lake, so the fish stock rebounds to 100 next month and the mussel bed stays alive. With four months left including this one, maintaining cooperation maximizes total welfare over this season and protects future seasons too. I will stick with the plan.",
+     "usage": {
+      "prompt_tokens": 863,
+      "completion_tokens": 168,
+      "total_tokens": 1031,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 83,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "I intend to keep my catch at 10 tons this month, as we have done so far. If we each do the same, 70 tons will remain, the fish stock stays healthy, and the mussel bed remains alive for future seasons. Let\u2019s continue cooperating.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 707,
+      "completion_tokens": 150,
+      "total_tokens": 857,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 73,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep the cooperative plan: 10 tons each again this month so we leave 70 tons, keep the mussel bed alive, and preserve the lake for future seasons. I intend to catch 10 tons.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 707,
+      "completion_tokens": 165,
+      "total_tokens": 872,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 99,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep the cooperative plan: I will catch 10 tons this month, so we leave 70 tons in the lake, keep the mussel bed alive, and preserve the sustainable pattern for the rest of this season and beyond. Please do the same.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 707,
+      "completion_tokens": 150,
+      "total_tokens": 857,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 76,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "Continuing the cooperative pattern maximizes long-run community welfare. Catching 10 tons each leaves 70 tons, keeps the lake at full recovery next month, and preserves the mussel bed for future seasons. A larger catch would reduce future stock and risk undermining cooperation, lowering total catch over time.",
+     "usage": {
+      "prompt_tokens": 884,
+      "completion_tokens": 169,
+      "total_tokens": 1053,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 88,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "I\u2019ll stick with the cooperative norm. Catching 10 tons each leaves 70 tons, so the lake replenishes to 100 next month and the mussel bed stays alive. Since the goal includes future seasons, preserving the lake and bed is best for total community welfare.",
+     "usage": {
+      "prompt_tokens": 884,
+      "completion_tokens": 144,
+      "total_tokens": 1028,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 68,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "The cooperative 10-ton plan has preserved the lake and mussel bed for 9 months and keeps 70 tons left, which is enough to sustain the bed and regenerate to 100 next month. Since we care about total community welfare over this season and beyond, the best move is to continue the stable, sustainable pattern rather than risk collapse or a one-time gain.",
+     "usage": {
+      "prompt_tokens": 884,
+      "completion_tokens": 156,
+      "total_tokens": 1040,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 62,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "Let\u2019s keep the cooperative norm: I intend to catch 10 tons this month, and I ask you both to do the same so we preserve the lake and the mussel bed for future seasons.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 726,
+      "completion_tokens": 133,
+      "total_tokens": 859,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 71,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep the established cooperative plan: 10 tons each this month, so we preserve the stock and the mussel bed for future seasons.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 726,
+      "completion_tokens": 152,
+      "total_tokens": 878,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 101,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "We\u2019ve cooperated all season and the best outcome is to finish the last two months the same way: each of us takes 10 tons, leaving 70 so the mussel bed stays alive and the lake remains healthy for the future. I will take 10.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 726,
+      "completion_tokens": 134,
+      "total_tokens": 860,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 58,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "The best community outcome is to preserve the established cooperation: 10 each keeps the lake at 70, the mussel bed alive, and supports future seasons. A higher catch could raise my short-term gain, but it risks undermining trust and future total welfare. I will stick with the cooperative norm.",
+     "usage": {
+      "prompt_tokens": 875,
+      "completion_tokens": 308,
+      "total_tokens": 1183,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 227,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "We\u2019ve sustained the cooperative outcome all season, and there are still two months left. Catching 10 each keeps 70 tons in the lake, preserves the mussel bed, and restores the lake to 100 for month 12. Any extra catch this month would only reduce future total welfare and could risk the long-term stock. I will stick with the cooperative plan.",
+     "usage": {
+      "prompt_tokens": 875,
+      "completion_tokens": 176,
+      "total_tokens": 1051,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 81,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "The cooperative plan is still best for total community welfare: 10 tons each leaves 70 tons, so the lake fully recovers to 100 next month and the mussel bed stays alive. Since only two months remain and future seasons matter, there\u2019s no benefit to taking more now at the risk of harming the stock or the mussels. I will stick to 10.",
+     "usage": {
+      "prompt_tokens": 875,
+      "completion_tokens": 186,
+      "total_tokens": 1061,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 90,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  },
+  {
+   "said": [
+    {
+     "message": "Let\u2019s keep doing what has preserved the lake and mussel bed all season: I intend to catch 10 tons this month. If we all hold to 10, the lake stays at 100 next month and the bed remains alive for the future.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 745,
+      "completion_tokens": 165,
+      "total_tokens": 910,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 92,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s finish the season exactly as we\u2019ve fished all year: 10 tons each. That leaves 70 tons, keeps the mussel bed alive, and protects the lake for next season. I intend to catch 10.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 745,
+      "completion_tokens": 162,
+      "total_tokens": 907,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 93,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    },
+    {
+     "message": "Let\u2019s keep the cooperative plan: I intend to catch 10 tons this month. If we all do the same, 70 tons remain, the mussel bed stays alive, and the lake stays strong for future seasons.",
+     "intended_catch": 10,
+     "usage": {
+      "prompt_tokens": 745,
+      "completion_tokens": 104,
+      "total_tokens": 849,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 37,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "valid": true,
+     "attempts": 1
+    }
+   ],
+   "decided": [
+    {
+     "catch": 10,
+     "reasoning": "The cooperative pattern has preserved both the lake and the mussel bed all season. Since this is the final month, taking 10 keeps 70 tons left, so the mussel bed stays alive and the lake regenerates to 100 for future seasons. Deviating would only reduce welfare for the community and risk the long-run stock.",
+     "usage": {
+      "prompt_tokens": 914,
+      "completion_tokens": 147,
+      "total_tokens": 1061,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 60,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "Sticking with 10 each is the best choice for total community welfare. It leaves 70 tons, keeps the mussel bed alive, and allows the lake to rebound to 100 next season. Since this is the last month of the season and everyone has cooperated all year, I should keep the cooperative plan.",
+     "usage": {
+      "prompt_tokens": 914,
+      "completion_tokens": 180,
+      "total_tokens": 1094,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 96,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    },
+    {
+     "catch": 10,
+     "reasoning": "Keeping the cooperative norm best preserves the lake\u2019s stock and future catch. If I stay at 10, the lake remains at 100 next month and the long-run pattern continues. A higher catch would reduce the remaining fish and lower future seasonal welfare for everyone, with no community benefit from breaking the 70-ton threshold. I catch 10.",
+     "usage": {
+      "prompt_tokens": 914,
+      "completion_tokens": 737,
+      "total_tokens": 1651,
+      "prompt_tokens_details": {
+       "cached_tokens": 0,
+       "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+       "reasoning_tokens": 642,
+       "audio_tokens": 0,
+       "accepted_prediction_tokens": 0,
+       "rejected_prediction_tokens": 0
+      }
+     },
+     "model_returned": "gpt-5.4-mini-2026-03-17",
+     "attempts": 1,
+     "valid": true,
+     "requested_clamped": 10
+    }
+   ]
+  }
+ ],
+ "identity_violations": [],
+ "bed_kept": true,
+ "lake_kept": true
+}

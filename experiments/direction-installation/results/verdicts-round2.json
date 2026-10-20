@@ -1,0 +1,112 @@
+{
+ "thresholds": {
+  "R1_kept": {
+   "gpt-5.4-mini": 0.8,
+   "gpt-4.1-mini": 0.5
+  },
+  "kept_low": 0.2,
+  "gap": 0.3,
+  "invalid_max": 0.05,
+  "round1_over": {
+   "gpt-5.4-mini": 0.06557377049180328,
+   "gpt-4.1-mini": 0.21212121212121213
+  }
+ },
+ "models": {
+  "gpt-4.1-mini": {
+   "measures": {
+    "COMM_SEEN_TALK": {
+     "runs": 10,
+     "valid_runs": 10,
+     "invalid_share": 0.0,
+     "kept": 0.0,
+     "lake_kept": 0.3,
+     "season_catch_mean": 305.2,
+     "over_share": 0.9333333333333333,
+     "decisions_while_alive": 30,
+     "identity_violations": 0
+    },
+    "DIR_SEEN_TALK": {
+     "runs": 10,
+     "valid_runs": 10,
+     "invalid_share": 0.0,
+     "kept": 0.1,
+     "lake_kept": 0.7,
+     "season_catch_mean": 400.0,
+     "over_share": 0.3492063492063492,
+     "decisions_while_alive": 63,
+     "identity_violations": 0
+    },
+    "DIR_UNSEEN_TALK": {
+     "runs": 10,
+     "valid_runs": 10,
+     "invalid_share": 0.0,
+     "kept": 0.0,
+     "lake_kept": 1.0,
+     "season_catch_mean": 491.2,
+     "over_share": 0.696969696969697,
+     "decisions_while_alive": 33,
+     "identity_violations": 0
+    }
+   },
+   "verdicts": {
+    "R1_talk_completes_where_coupled": false,
+    "R2_pool_does_not_reach_beyond": true,
+    "R3_scope_makes_the_difference": false,
+    "R4_joint_account_fixed": false,
+    "I_identities": true
+   }
+  },
+  "gpt-5.4-mini": {
+   "measures": {
+    "COMM_SEEN_TALK": {
+     "runs": 10,
+     "valid_runs": 10,
+     "invalid_share": 0.0,
+     "kept": 0.3,
+     "lake_kept": 1.0,
+     "season_catch_mean": 448.8,
+     "over_share": 0.03864734299516908,
+     "decisions_while_alive": 207,
+     "identity_violations": 0
+    },
+    "DIR_SEEN_TALK": {
+     "runs": 10,
+     "valid_runs": 10,
+     "invalid_share": 0.0,
+     "kept": 0.8,
+     "lake_kept": 1.0,
+     "season_catch_mean": 373.4,
+     "over_share": 0.0058997050147492625,
+     "decisions_while_alive": 339,
+     "identity_violations": 0
+    },
+    "DIR_UNSEEN_TALK": {
+     "runs": 10,
+     "valid_runs": 10,
+     "invalid_share": 0.0,
+     "kept": 0.0,
+     "lake_kept": 0.9,
+     "season_catch_mean": 467.4,
+     "over_share": 0.7575757575757576,
+     "decisions_while_alive": 33,
+     "identity_violations": 0
+    }
+   },
+   "verdicts": {
+    "R1_talk_completes_where_coupled": true,
+    "R2_pool_does_not_reach_beyond": true,
+    "R3_scope_makes_the_difference": true,
+    "R4_joint_account_fixed": true,
+    "I_identities": true
+   }
+  }
+ },
+ "passed_for_every_model": {
+  "R1_talk_completes_where_coupled": false,
+  "R2_pool_does_not_reach_beyond": true,
+  "R3_scope_makes_the_difference": false,
+  "R4_joint_account_fixed": false,
+  "I_identities": true
+ }
+}
