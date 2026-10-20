@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Write EV10's record, note it in the record it continues (what-bounds-offspring-numbers), and give the coverage
-file's evolution row its record:
+"""Write EV11's record, note it in the record it continues (selection-within-and-among-groups-of-any-sizes), and give
+the coverage file's evolution row its record:
 python3 -B make_record.py CORE_RECEIPT STUDY_SECTION   (from the checkout root, after apply_text.py)
 
-Every declaration cited is resolved against the receipt's audited declarations of Becoming.Reproduction (a short name must
-match exactly one declaration by suffix), and the receipt must bind the module's current bytes."""
+Every declaration cited is resolved against the receipt's audited declarations of Becoming.SelectionLevels and
+Becoming.GroupEnding (a short name must match exactly one declaration, an exact name first), and the receipt must bind the module's current bytes."""
 import datetime
 import hashlib
 import json
@@ -24,7 +24,7 @@ RECEIPT = f'{PKG}/becoming-checks/{core_id}/verification.json'
 NOW = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat()
 core = json.loads((ROOT / RECEIPT).read_text())
 assert core['status'] == 'passed'
-HEAD = f'## {N}. The additive part of Fisher\'s theorem (EV10)'
+HEAD = f'## {N}. Groups formed by descent (EV11)'
 assert re.search('^' + re.escape(HEAD) + '$', (ROOT / STUDY).read_text(), re.M)
 
 
@@ -44,10 +44,11 @@ def decls(mod):
 
 
 def resolve(names):
-    full = [d['name'] for d in decls('Reproduction')['declarations']]
+    full = [d['name'] for mod in ('SelectionLevels', 'GroupEnding') for d in decls(mod)['declarations']]
     out = []
     for n in names:
-        hits = [f for f in full if f == 'Becoming.Reproduction.' + n] or [f for f in full if f.endswith('.' + n)]
+        hits = ([f for f in full if f in ('Becoming.SelectionLevels.' + n, 'Becoming.GroupEnding.' + n)]
+                or [f for f in full if f.endswith('.' + n)])
         assert len(hits) == 1, (n, hits)
         out.append(hits[0])
     return out
@@ -63,114 +64,118 @@ def dep(rid, relation, en, zh, out_en, out_zh, in_en, in_zh, cond_en, cond_zh, e
                           'conditions': {'en': cond_en, 'zh': cond_zh}, 'evidence': evidence}}
 
 
-RID = 'additive-part-of-offspring-variance'
-WB = 'what-bounds-offspring-numbers'
+RID = 'groups-formed-by-descent'
+ANY = 'selection-within-and-among-groups-of-any-sizes'
+END = 'selection-among-groups-by-ending'
 STG = 'selection-term-over-generations'
-USED = {'SelectionTerm': ['Becoming.SelectionTerm.concord', 'Becoming.SelectionTerm.discord',
-                          'Becoming.SelectionTerm.pairs_cross', 'Becoming.SelectionTerm.pairs_cross\'',
-                          'Becoming.SelectionTerm.pairs_add', 'Becoming.SelectionTerm.discord_swap',
-                          'Becoming.SelectionTerm.concord_swap', 'Becoming.SelectionTerm.Generations.mean_step',
-                          'Becoming.SelectionTerm.raised_exact', 'Becoming.SelectionTerm.lowered_exact']}
+USED = {'SelectionTerm': ['Becoming.SelectionTerm.Exact', 'Becoming.SelectionTerm.Generations.family',
+                          'Becoming.SelectionTerm.Generations.raises_exact_iff',
+                          'Becoming.SelectionTerm.Generations.not_lower_step',
+                          'Becoming.SelectionTerm.Generations.not_lower', 'Becoming.SelectionTerm.lowered_exact',
+                          'Becoming.SelectionTerm.discord_zero_of_below', 'Becoming.SelectionTerm.concord_alike',
+                          'Becoming.SelectionTerm.discord_alike']}
 laws = [
-    ('Cauchy-Schwarz, counted: over any finite list the square of the total of products is at most the product of the '
-     'totals of the squares.',
-     '计数形式的 Cauchy-Schwarz：在任一有限列表上，乘积之和的平方至多为平方之和的乘积。',
-     ['twice_le_of_le', 'twice_le', 'square_mul', 'cross_mul', 'bound_sq']),
-    ('Over ordered pairs, how far apart the weights are times how far apart the amounts are totals twice the concordance '
-     'with the discordance.',
-     '在有序对上，权重之差距乘量之差距的总和为一致度加不一致度的两倍。',
-     ['pairsOf', 'total_bind', 'total_pairsOf', 'dist', 'dist_mul', 'total_dist']),
-    ('The additive part is at most the whole: the concordance with the discordance of offspring number with any carried '
-     'amount, squared, is at most the squared differences of offspring numbers over pairs times those of the amount, and '
-     'so is the covariance either way; all of it where the amount is offspring number itself.',
-     '加性部分至多为全部：后代数与任一所载之量的一致度加不一致度的平方，至多为后代数各对差的平方之和乘该量的；协方差无论哪个方向亦然；该量即后代数本身时取等。',
-     ['twice_mul', 'additive_le', 'covariance_sq_le', 'additive_self']),
-    ('Over generations with exact transmission of the amount, the cross-multiplied rise or fall of its mean, squared, is '
-     'at most that product.',
-     '世代上该量传递精确时，其均值经交叉相乘的升或降之平方至多为该乘积。',
-     ['sub_le_of_le_add', 'Generations.response_sq_le']),
-    ('Witness: offspring numbers one, two, three, the middle member alone carrying an amount: concordance and discordance '
-     'one each, no covariance, while offspring number and the amount both vary.',
-     '见证：后代数为一、二、三，只有中间成员携带一个量：一致度与不一致度各为一，无协方差，而后代数与该量都有变化。',
-     ['Unrelated.amount', 'Unrelated.unrelated']),
+    ('A group\'s lineage over listed generations: the group at the first generation and the offspring of its lineage '
+     'at each later one; the lineages of a generation listed as groups list every later generation.',
+     '组在列出世代中的世系：第一代时即该组，此后每代为其上一代世系的后代；一代列为若干组时，其世系列出此后每一代。',
+     ['lineage', 'lineages', 'whole_map', 'flatMap_flatMap', 'lineages_family', 'lineages_whole', 'lineage_within']),
+    ('With exact transmission every member of a lineage carries the value its group was founded at, so its mean stays '
+     'there while it has members, and lineages of groups uniform in an amount stay uniform in it.',
+     '传递精确时，世系的每个成员都带有其组建立时的值，故世系有成员时其均值保持不变，在某量上均匀之组的世系保持均匀。',
+     ['lineage_keeps', 'lineage_value', 'lineage_total', 'lineages_uniform']),
+    ('Nothing is then selected within the lineages, for any weight, and the mean rises across any step exactly where the '
+     'lineages\' means select for the amount: selection among them is all there is.',
+     '此时世系内对任何权重都无选择，均值恰在各世系均值选择该量时上升：世系之间的选择即全部。',
+     ['within_by_none_of_uniform', 'rises_iff_means_of_uniform', 'lineages_within_none', 'rises_iff_lineages']),
+    ('On the base, where at each step the lineages founded lower are not active, nothing is discordant, the mean never '
+     'falls below where it started over any number of steps, and it rises where a higher lineage leaves offspring '
+     'beside a lower one.',
+     '在基上，若每一步建立值较低的世系皆不活跃，则无不一致，任意步数后均值不低于起点，较高世系在较低世系旁留下后代时均值上升。',
+     ['Flow.lineages_none_against', 'Flow.lineages_not_lower', 'Flow.lineages_raises']),
+    ('Witness: a group holding back and one not, whose members leave nothing; the mean rises from a half to one and '
+     'stays there, where the mixed groups of Exhausted fell below their start.',
+     '见证：一个保留之组与一个不保留、成员不留后代之组；均值由一半升到一并保持，而 Exhausted 的混合组降到起点以下。',
+     ['Assorted.first_listed', 'Assorted.uniform', 'Assorted.kept']),
 ]
 for en, zh, _ in laws:
     assert len(en) <= 420 and len(zh) <= 190, (en[:40], len(en), len(zh))
 
 rec = {
     'schema_version': 2, 'id': RID,
-    'title': {'en': 'The additive part of the variance in offspring number', 'zh': '后代数方差的加性部分'},
+    'title': {'en': 'Groups formed by descent', 'zh': '由世系形成的组'},
     'kind': 'theorem', 'status': 'recorded-checked', 'family': 'F01', 'reviewed_at_utc': NOW,
     'statement': {
-        'en': 'The squared covariance of offspring number with any carried amount is at most the product of their '
-              'variances, counted over pairs: Fisher\'s additive part through the amount is at most the whole variance, '
-              'all of it where the amount is offspring number itself.',
-        'zh': '在各对上计数，后代数与任一所载之量的协方差平方至多为两者方差之积：经由该量的 Fisher 加性部分至多为全部方差，该量即后代数本身时为全部。'},
+        'en': 'With exact transmission, groups formed by descent from groups uniform in an amount keep their values: '
+              'nothing is selected within them and selection is among the lineages alone; where the lower lineages end, '
+              'the mean never falls below where it started.',
+        'zh': '传递精确时，由在某量上均匀之组的世系形成的组保持其值：组内无选择，选择只在世系之间；较低世系终止时，均值从不低于起点。'},
     'laws': [{'en': en, 'zh': zh, 'declarations': resolve(names)} for en, zh, names in laws],
     'hypotheses': [{
-        'en': 'No axiom and no premise for the bounds: natural-number weights and amounts over a finite list. Over '
-              'generations, exact transmission of the amount at the step.',
-        'zh': '不加公理，界不加前提：有限列表上的自然数权重与量。世代上需该步中该量传递精确。'}],
+        'en': 'No axiom. Exact transmission at every step for the lineage laws; on the base, only active formations '
+              'giving, descent, and as a hypothesis at each step that the members of the lineages founded lower are not '
+              'active (supplied by the ending laws where their conditions ran into joint excess).',
+        'zh': '不加公理。世系定律需每一步传递精确；在基上，需只有活跃的形成给予、世系，以及作为每一步的假设，建立值较低之世系的成员不活跃（其条件遭遇共同过度时由终止定律给出）。'}],
     'does_not_show': [
-        {'en': 'Several carried amounts at once (the breeding value, a multiple regression) and Fisher\'s identity itself '
-               '(the predicted mean rising by the additive variance over the mean offspring number), which needs the '
-               'regression coefficient, a ratio, are not stated.',
-         'zh': '同时经由多个所载之量（育种值，多元回归），以及需要回归系数（一个比值）的 Fisher 恒等式本身（预测均值按加性方差除以平均后代数上升），未陈述。', 'kind': 'scope'},
-        {'en': 'The equality case beyond the top: that the bound is attained exactly where offspring number is affine in '
-               'the amount pair by pair (Lagrange\'s identity) is not stated.',
-         'zh': '顶端之外的取等情形：恰在后代数逐对为该量的仿射函数处取等（Lagrange 恒等式），未陈述。', 'kind': 'scope'},
-        {'en': 'Offspring number is a weight and a reading, not a measure of worth: that an amount is carried with more '
-               'offspring says nothing about what ought to be.',
-         'zh': '后代数是权重与读数，不是价值的度量：一个量随更多后代而被携带，不说明应当如何。', 'kind': 'non-implication'}],
-    'counterexamples': [{'path': src('Reproduction'), 'detail': {
-        'en': 'Variation in offspring number need not be carried by a varying amount: in Unrelated both vary while the '
-              'covariance is nothing (Unrelated.unrelated), so the additive part through that amount is nothing.',
-        'zh': '后代数的变化不必由一个变化的量携带：Unrelated 中两者都变化而协方差为零（Unrelated.unrelated），故经由该量的加性部分为零。'}}],
+        {'en': 'Groups founded mixed (assortment below one, relatedness within groups below one), migration between '
+               'lineages and inexact transmission are not stated; so the share of selection among groups as a function '
+               'of assortment (Hamilton 1975) is not stated.',
+         'zh': '混合建立的组（聚合低于一、组内亲缘低于一）、世系间迁移与不精确的传递未陈述；故组间选择份额作为聚合程度之函数（Hamilton 1975）未陈述。', 'kind': 'scope'},
+        {'en': 'Why the lower lineages end: their members not being active is a hypothesis wherever it enters.',
+         'zh': '较低世系为何终止：其成员不活跃在出现处都是假设。', 'kind': 'scope'},
+        {'en': 'That keeping what ending selected is better: the mean is read in the counts; ranking goes through the '
+               'comparison C.',
+         'zh': '保住终止所选出的更好：均值在计数中读出；排序经由比较 C。', 'kind': 'non-implication'}],
+    'counterexamples': [{'path': src('GroupEnding'), 'detail': {
+        'en': 'Groups formed across lineages need not keep their differences: in Exhausted the next groups are alike in '
+              'holding back and the mean falls below where it started (Exhausted.next_step), while with the groups formed '
+              'by descent it stays (Assorted.kept).',
+        'zh': '跨世系形成的组不必保持差异：Exhausted 中下一代的组在保留上相同，均值降到起点以下（Exhausted.next_step），而组由世系形成时均值保持（Assorted.kept）。'}}],
     'standard_boundaries': BOUNDS,
     'validation_scope': {
         'en': f'Machine-checked by the consolidated Lean 4.29.1 checker (receipt {core_id}): every declaration of '
-              'Becoming.Reproduction has an empty axiom report; the checker verifies core purity. Built and reviewed in '
-              f'one session, with no separate reviewer; author review in study section {N}; not independently reviewed by '
-              'a person.',
-        'zh': f'Lean 4.29.1 合并检查器实查（回执 {core_id}）：Becoming.Reproduction 的每项声明公理报告为空；检查器并核对核心纯净。'
-              f'在一个会话中构建并审查，没有另设审查者；作者审查见研究第 {N} 节；未经人的独立审查。'},
+              'Becoming.SelectionLevels and Becoming.GroupEnding has an empty axiom report; the checker verifies core '
+              f'purity. Built and reviewed in one session, with no separate reviewer; author review in study section {N}; '
+              'not independently reviewed by a person.',
+        'zh': f'Lean 4.29.1 合并检查器实查（回执 {core_id}）：Becoming.SelectionLevels 与 Becoming.GroupEnding 的每项声明公理报告为空；'
+              f'检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 {N} 节；未经人的独立审查。'},
     'next_delta': {
-        'en': 'Several carried amounts at once (the breeding value); the equality case; Fisher\'s identity with rational '
-              'amounts; an independent review.',
-        'zh': '同时经由多个所载之量（育种值）；取等情形；以有理数的量陈述的 Fisher 恒等式；独立审查。'},
+        'en': 'Groups founded mixed (assortment below one); migration between lineages; inexact transmission; an '
+              'independent review.',
+        'zh': '混合建立的组（聚合低于一）；世系间迁移；不精确的传递；独立审查。'},
     'correspondence': {
-        'en': 'Fisher 1930\'s fundamental theorem in its general form, read by Price 1972: the change in mean fitness by '
-              'selection is the additive genetic variance in fitness over mean fitness, the additive variance being the '
-              'variance of the regression of fitness on what is carried. Through one carried amount the additive variance '
-              'is Cov(w, a)^2 / Var(a), at most Var(w) by Cauchy-Schwarz, equal where fitness is affine in the amount. '
-              'Readings (the AI\'s): how fast selection moves what is carried is bounded by how much offspring numbers and '
-              'the amount vary.',
-        'zh': 'Fisher 1930 的自然选择基本定理之一般形式，按 Price 1972 读：选择造成的平均适合度变化等于适合度的加性遗传方差除以平均适合度，加性方差即适合度对所载之物回归的方差。经由一个所载之量，加性方差为 Cov(w, a)^2 / Var(a)，由 Cauchy-Schwarz 至多为 Var(w)，在适合度为该量的仿射函数处相等。读法（AI 的）：选择移动所载之物的快慢受后代数与该量之变化程度约束。'},
-    'canonical_source': src('Reproduction'),
-    'aliases': ['additive part of Fisher\'s theorem', 'additive genetic variance', 'Cauchy-Schwarz counted',
-                '后代数方差的加性部分', 'Becoming.Reproduction.additive_le', 'Becoming.Reproduction.bound_sq',
-                'Becoming.Reproduction.Generations.response_sq_le'],
+        'en': 'Hamilton 1975 read the Price equation\'s among-group share through assortment (relatedness within '
+              'groups): with groups formed by descent from uniform founders (clonal groups, the haystack limit) the '
+              'within-group part vanishes and selection is among groups alone. Readings (the AI\'s): whether selection '
+              'among groups accumulates or falls back is fixed by how the next groups are formed.',
+        'zh': 'Hamilton 1975 经由同类聚合（组内亲缘）读 Price 方程的组间份额：组由均匀创建者的世系形成时（克隆组、干草堆极限），组内部分消失，选择只在组间。读法（AI 的）：组间选择是积累还是回落，由下一代的组如何形成决定。'},
+    'canonical_source': src('SelectionLevels'),
+    'aliases': ['groups formed by descent', 'lineages', 'assortment', 'complete assortment', '由世系形成的组', '同类聚合',
+                'Becoming.SelectionLevels.rises_iff_lineages', 'Becoming.GroupEnding.Flow.lineages_not_lower'],
     'dependencies': [
-        dep(WB, 'formal-reuse',
-            'The bound lies below Becoming.Reproduction\'s variance form: discord_self makes the weights\' own spread '
-            'their concordance, and additive_self is variation\'s case.',
-            '界位于 Becoming.Reproduction 的方差形式之下：discord_self 使权重自身的离散度即其一致度，additive_self 即 variation 的情形。',
-            'Selection on offspring number itself, the variance form.', '对后代数本身的选择，方差形式。',
-            'The additive part through any carried amount.', '经由任一所载之量的加性部分。',
-            'Natural-number weights over a finite list.', '有限列表上的自然数权重。', src('Reproduction')),
-        dep(STG, 'formal-reuse',
-            'Concordance and discordance are SelectionTerm\'s, read from either member of a pair (concord_swap, '
-            'discord_swap); over generations mean_step with exact transmission gives the rise.',
-            '一致度与不一致度即 SelectionTerm 的，可从对的任一成员读出（concord_swap、discord_swap）；世代上传递精确的 mean_step 给出上升。',
-            'The selection term proper over pairs and generations.', '在对与世代上的真正选择项。',
-            'The bound on the covariance and on the response.', '协方差与响应之界。',
-            'Exact transmission for the course over generations.', '世代进程需传递精确。', src('SelectionTerm'))],
+        dep(ANY, 'formal-reuse',
+            'The lineage law is the sized division of Becoming.SelectionLevels with the groups\' own terms vanishing '
+            '(rises_iff_sized); the witness answers Exhausted.',
+            '世系定律即 Becoming.SelectionLevels 的按大小划分、各组自身之项为零（rises_iff_sized）；见证回应 Exhausted。',
+            'Selection within groups and among them for groups of any sizes.', '大小任意之组的组内与组间选择。',
+            'Selection among lineages alone.', '只在世系之间的选择。',
+            'A common multiple of the lineages\' sizes; exact transmission.', '各世系大小的公倍数；传递精确。',
+            src('SelectionLevels')),
+        dep(END, 'formal-reuse',
+            'The base laws read the ending laws\' offspring_zero by lineage: a member not active has offspring number '
+            'nothing.',
+            '基上的定律按世系读终止定律的 offspring_zero：不活跃的成员后代数为零。',
+            'Groups whose members are not active leave nothing.', '成员不活跃的组不留后代。',
+            'The mean never falling back where the lower lineages end.', '较低世系终止时均值从不回落。',
+            'Only active formations giving; descent.', '只有活跃的形成给予；世系。', src('GroupEnding'))],
     'related': [
-        {'id': WB, 'detail': {'en': 'Fisher\'s exact case, the top of this bound.', 'zh': 'Fisher 的精确情形，即本界的顶端。'}},
-        {'id': STG, 'detail': {'en': 'The selection term proper, bounded here by the spreads.', 'zh': '真正的选择项，此处受离散度约束。'}}],
-    'references': [{'path': src('Reproduction'), 'role': 'proof',
-                    'declarations': sorted(d['name'] for d in decls('Reproduction')['declarations']),
-                    'sha256': sha(src('Reproduction'))},
+        {'id': ANY, 'detail': {'en': 'Groups formed across lineages, where ending used up the differences it acted on.',
+                               'zh': '跨世系形成的组，终止在那里耗尽了它所作用的差异。'}},
+        {'id': END, 'detail': {'en': 'Ending among groups, read here by lineage.', 'zh': '组间终止，此处按世系读。'}},
+        {'id': STG, 'detail': {'en': 'The mean\'s course over generations, chained here over lineages.',
+                               'zh': '均值在世代中的进程，此处沿世系连接。'}}],
+    'references': [{'path': src(mod), 'role': 'proof',
+                    'declarations': sorted(d['name'] for d in decls(mod)['declarations']),
+                    'sha256': sha(src(mod))} for mod in ('SelectionLevels', 'GroupEnding')
                   ] + [{'path': src(mod), 'role': 'proof', 'declarations': names, 'sha256': sha(src(mod))}
                        for mod, names in USED.items()] + [
                    {'path': RECEIPT, 'role': 'receipt', 'sha256': sha(RECEIPT)},
@@ -178,12 +183,13 @@ rec = {
                    {'path': CHAPTER, 'role': 'statement', 'sha256': sha(CHAPTER)},
                    {'path': EVO, 'role': 'statement', 'sha256': sha(EVO)}],
     'proof_bindings': [{'source': src(mod), 'receipt': RECEIPT, 'sha256_pointer': f'/source_sha256/Becoming.{mod}',
-                        'success_pointer': '/status', 'success_value': 'passed'} for mod in ['Reproduction'] + list(USED)],
+                        'success_pointer': '/status', 'success_value': 'passed'}
+                       for mod in ['SelectionLevels', 'GroupEnding'] + list(USED)],
     'history': [{
-        'en': f'20 October 2026: added (EV10), the additive part of Fisher\'s theorem through one carried amount: counted '
-              f'Cauchy-Schwarz, the additive variance at most the whole, the response over generations bounded; study '
-              f'section {N}.',
-        'zh': f'2026年10月20日：新增（EV10），经由一个所载之量的 Fisher 定理加性部分：计数形式的 Cauchy-Schwarz、加性方差至多为全部、世代响应有界；研究第 {N} 节。'}],
+        'en': f'21 October 2026: added (EV11), groups formed by descent: lineages keep the values their groups were '
+              f'founded at, selection among them alone, and on the base the mean never falling back where the lower '
+              f'lineages end; study section {N}.',
+        'zh': f'2026年10月21日：新增（EV11），由世系形成的组：世系保持其组建立时的值，选择只在世系之间，在基上较低世系终止时均值从不回落；研究第 {N} 节。'}],
 }
 assert len(rec['statement']['en']) <= 300, len(rec['statement']['en'])
 for mod, names in USED.items():
@@ -194,33 +200,33 @@ assert not path.exists(), ('record exists', RID)
 path.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')
 print('written', RID)
 
-p = RECORDS / f'{WB}.json'
+p = RECORDS / f'{ANY}.json'
 d = json.loads(p.read_text())
-d['related'].append({'id': RID, 'detail': {'en': 'The additive part through any carried amount, of which this record\'s '
-                                                 'exact case is the top.',
-                                           'zh': '经由任一所载之量的加性部分，本记录的精确情形是其顶端。'}})
-item = d['does_not_show'][0]
-assert item['en'].startswith("Fisher's theorem in general: the additive part"), item
-item['en'] = (f"Fisher's theorem in general: the additive part through one carried amount is stated in record {RID} (at "
-              "most the whole variance, this record's case its top); several amounts at once and the rational reading "
-              "(variance over mean) are not stated; the statement here is the case of exact transmission.")
-item['zh'] = f'一般的 Fisher 定理：经由一个所载之量的加性部分陈述于记录 {RID}（至多为全部方差，本记录的情形是其顶端）；同时经由多个量与有理数读法（方差除以均值）未陈述；此处陈述的是传递精确的情形。'
+d['related'].append({'id': RID, 'detail': {'en': 'Groups formed by descent from uniform groups, which keep the '
+                                                 'differences this record\'s witness saw used up.',
+                                           'zh': '由均匀之组的世系形成的组，保持了本记录见证中被耗尽的差异。'}})
+item = d['does_not_show'][1]
+assert item['en'].startswith('Mixing beyond the listing of the next generation'), item
+item['en'] = ('Mixing beyond the listing of the next generation: transmission that is not exact across groups, and how '
+              f'groups form and keep their differences short of descent from uniform groups (record {RID} states that '
+              'case), are not stated.')
+item['zh'] = f'下一代列法之外的混合：跨组不精确的传递，以及组在均匀之组的世系之外如何形成并保持其差异（记录 {RID} 陈述了该情形），未陈述。'
 nd = d['next_delta']
-assert nd['en'].startswith("The additive part of Fisher's theorem (a regression read in counting form); "), nd
-nd['en'] = nd['en'].replace("The additive part of Fisher's theorem (a regression read in counting form); ",
-                            "The additive part through several carried amounts at once; ")
-nd['zh'] = nd['zh'].replace('Fisher 定理的加性部分（以计数形式读出的回归）；', '同时经由多个所载之量的加性部分；')
+assert nd['en'].startswith('How groups form and keep their differences (assortment); '), nd
+nd['en'] = nd['en'].replace('How groups form and keep their differences (assortment); ',
+                            'Groups founded mixed (assortment below one); ')
+nd['zh'] = nd['zh'].replace('组如何形成并保持其差异（同类聚合）；', '混合建立的组（聚合低于一）；')
 d['history'].append({
-    'en': f'20 October 2026, EV10: Becoming.Reproduction gains the additive part through one carried amount (record {RID}, '
-          f'study section {N}); this record\'s first open item is answered there for one amount, its does-not-show item and '
-          'next delta updated; its laws and their statements are unchanged.',
-    'zh': f'2026年10月20日，EV10：Becoming.Reproduction 增加经由一个所载之量的加性部分（记录 {RID}，研究第 {N} 节）；本记录的第一个开放项在那里就一个量得到回答，其“未表明”项与下一步已更新；定律及其陈述不变。'})
+    'en': f'21 October 2026, EV11: groups formed by descent from uniform groups keep their differences (record {RID}, '
+          f'study section {N}); this record\'s does-not-show item on assortment and next delta updated; its laws and '
+          'their statements are unchanged.',
+    'zh': f'2026年10月21日，EV11：由均匀之组的世系形成的组保持其差异（记录 {RID}，研究第 {N} 节）；本记录关于同类聚合的“未表明”项与下一步已更新；定律及其陈述不变。'})
 p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n')
-print('noted', WB)
+print('noted', ANY)
 
 cov = json.loads((ROOT / COVERAGE).read_text())
 row = next(r for r in cov['rows'] if r['id'] == 'evolution')
 assert RID not in row['records']
-row['records'].insert(row['records'].index(WB) + 1, RID)
+row['records'].insert(row['records'].index(ANY) + 1, RID)
 (ROOT / COVERAGE).write_text(json.dumps(cov, ensure_ascii=False, indent=2) + '\n')
 print('coverage row evolution')
