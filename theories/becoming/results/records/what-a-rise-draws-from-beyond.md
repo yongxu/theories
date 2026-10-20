@@ -77,8 +77,9 @@ The accounting is a conservation law on a closed whole, as in material-flow and 
 - related, not a proved adapter: [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md). Whether what the rise draws from beyond is depended on, how much more is drawn, and the share that reaches beyond, which that record left open.
 - related, not a proved adapter: [the-gap-for-ones-own-act](the-gap-for-ones-own-act.md). The broken dependence lies on a condition no member couples into, so by the gap no selection through a member registers it.
 - related, not a proved adapter: [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md). What an optimum, not a rise, does beyond what couples in.
+- related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). How much each formation takes when several draw, derived for optimizers at a mutual best response.
 
-**Used by:** [room-read-off-the-exchange](room-read-off-the-exchange.md) · [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md)
+**Used by:** [room-read-off-the-exchange](room-read-off-the-exchange.md) · [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md) · [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -104,6 +105,7 @@ Aliases: `what a rise draws from beyond`, `上升从其外汲取什么`, `a rise
 - 20 October 2026: added (RB1), section 8.1 item 10: whether what a rise draws is depended on, how much is drawn, and the share that reaches beyond; study section 241.
 - 20 October 2026: R52 added the joint draw, which dependence breaks when several formations take at once (Becoming.JointDraw), section 8.1 item 10.
 - 21 October 2026, SG1: what an optimum does beyond what couples in (record what-an-optimum-does-beyond-what-couples-in, study section 283); this record's laws and their statements are unchanged.
+- 21 October 2026, SG3: how much each formation takes when several draw, which the joint-draw laws take as supplied, derived for optimizers at a mutual best response (record several-optimizers-drain-by-their-joint-capacity, study section 290); this record's laws and their statements are unchanged.
 
 </details>
 

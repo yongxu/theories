@@ -1,0 +1,412 @@
+{
+  "schema_version": 2,
+  "id": "several-optimizers-drain-by-their-joint-capacity",
+  "title": {
+    "en": "Several optimizers drain by their joint capacity",
+    "zh": "多个优化者以合计容量抽干"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-20T22:59:05+00:00",
+  "statement": {
+    "en": "At a mutual best response of several optimizers, each optimizing alone by its own order, a condition beyond every one's family falls by their joint capacity, as under one optimizer of that capacity; each takes its whole capacity wherever something stands.",
+    "zh": "多个优化者各自按其序独自优化而处于相互最优回应时，每个族之外的条件降低它们的合计容量，与一个具有该容量的优化者相同；有所存处各取其全部容量。"
+  },
+  "laws": [
+    {
+      "en": "A formation alone is a part. A step is a mutual best response where each optimizer taking part acts within its capacity in it and the levels after are an optimum of its own order among the outcomes open to it alone, the others exchanging as they do. Where something then stands beyond an optimizer's family, that optimizer takes its whole capacity there and gives nothing: restraint is no mutual best response.",
+      "zh": "一个构成独自即一个部分。一步是相互最优回应，当每个参与的优化者在其中不超出容量，且步后水平是它独自可达结果中其自身之序的最优，其余者照常交换。此时某优化者的族之外的条件上若有所存，该优化者在那里取其全部容量且不给予：节制不是相互最优回应。",
+      "declarations": [
+        "Becoming.Optimum.alone",
+        "Becoming.Optimum.alone_self",
+        "Becoming.Optimum.MutualBest",
+        "Becoming.Optimum.MutualBest.full"
+      ]
+    },
+    {
+      "en": "At a condition beyond every optimizer's family, the levels after a mutual best response stand at the level before, with what the formations outside every optimizer give, less what they take, less the optimizers' joint capacity, or at nothing; every optimum of one part made of all the optimizers, by any order rising with any family apart from the condition, leaves it there too.",
+      "zh": "在每个优化者的族之外的条件上，相互最优回应之后的水平立于先前水平加所有优化者之外的构成所给、减其所取、减优化者的合计容量处，或为零；由全体优化者组成的一个部分，按随任何与该条件分开的族升高的任何序，其每个最优也把它留在那里。",
+      "declarations": [
+        "Becoming.Optimum.mutual_beyond",
+        "Becoming.Optimum.mutual_as_one"
+      ]
+    },
+    {
+      "en": "There the condition is lowered below where the formations outside every optimizer leave it exactly where the optimizers have some capacity there and something is left; on a web, a dependence on it met at the step breaks exactly where its need exceeds that level.",
+      "zh": "那里的条件被降到所有优化者之外的构成所留之下，恰当优化者在那里有容量且仍有所留；在依存网上，该步被满足的对它的依存，恰在其需要超过此水平时被打断。",
+      "declarations": [
+        "Becoming.Optimum.mutual_lowers_iff",
+        "Becoming.Web.mutual_broken_iff_capacity"
+      ]
+    },
+    {
+      "en": "Witness: two takers, each of capacity one at a source standing at two and each ordering by the store; both drawing is a mutual best response, and the source falls by their joint capacity of two to nothing, each take within the slack of a need of one; the step where one restrains and a unit stands is no mutual best response.",
+      "zh": "见证：两个取者，在立于二的源上容量各为一，各按库排序；两者都汲取是相互最优回应，源降低它们的合计容量二至零，每一取都在需要一的余量之内；一者节制而留下一个单位的步不是相互最优回应。",
+      "declarations": [
+        "Becoming.Optimum.TwoTakers.Member",
+        "Becoming.Optimum.TwoTakers.takers",
+        "Becoming.Optimum.TwoTakers.capOf",
+        "Becoming.Optimum.TwoTakers.giveOf",
+        "Becoming.Optimum.TwoTakers.joint",
+        "Becoming.Optimum.TwoTakers.restrained",
+        "Becoming.Optimum.TwoTakers.drained",
+        "Becoming.Optimum.TwoTakers.kept",
+        "Becoming.Optimum.TwoTakers.members_distinct",
+        "Becoming.Optimum.TwoTakers.joint_within",
+        "Becoming.Optimum.TwoTakers.joint_balances",
+        "Becoming.Optimum.TwoTakers.gives_at_most_one",
+        "Becoming.Optimum.TwoTakers.joint_optimum",
+        "Becoming.Optimum.TwoTakers.joint_best",
+        "Becoming.Optimum.TwoTakers.lists",
+        "Becoming.Optimum.TwoTakers.joint_drains",
+        "Becoming.Optimum.TwoTakers.within_slack_jointly_below",
+        "Becoming.Optimum.TwoTakers.restrained_balances",
+        "Becoming.Optimum.TwoTakers.restrained_not_mutual"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. One step; the optimizers, each with its own family and beyond listed apart without repetition, its family holding a condition, its order rising with its family, and its capacity; the formations taking part listed without repetition; a mutual best response, the step balancing into the levels after; the condition beyond every optimizer's family; for breaks, a dependence met at the step.",
+      "zh": "不加公理。一步；优化者各有其族与之外，分开列出且无重复，族含一个条件，其序随族升高，并有其容量；参与的构成列出无重复；相互最优回应，该步平衡成步后水平；条件在每个优化者的族之外；打断需该步被满足的依存。"
+    },
+    {
+      "en": "Which formations optimize, by which order and with which capacity, is supplied; the core asserts a mutual best response of no actual group of optimizers.",
+      "zh": "哪些构成优化、按何序、有何容量，是给定的；核心不对任何实际的优化者群体断言相互最优回应。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a mutual best response exists in general: the witness has one; where the outcomes open to each depend on the others, a step may have none.",
+      "zh": "相互最优回应一般存在：见证中有一个；每者可达结果依赖于其他者时，一步可以没有。",
+      "kind": "scope"
+    },
+    {
+      "en": "A condition within some optimizer's family, where its order registers the condition and the classical commons with a share borne lies; a course of steps and how learners come near a mutual best response.",
+      "zh": "在某个优化者族内的条件，其序记录该条件，承担一份的经典公地在此；一个过程，以及学习者如何接近相互最优回应。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the drain is a harm, or that coupling or a lower capacity is better: no evaluation enters.",
+      "zh": "抽干是伤害、耦合或较低容量更好：没有评价进入。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "detail": {
+        "en": "restrained: the first taker takes nothing and the second draws, leaving a unit at the source; it is no mutual best response, whatever the listings (Optimum.TwoTakers.restrained_not_mutual).",
+        "zh": "restrained：第一个取者不取，第二个汲取，源留一个单位；无论列表如何，它都不是相互最优回应（Optimum.TwoTakers.restrained_not_mutual）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T224903.262106Z): the 27 declarations Becoming.Optimum gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 290; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T224903.262106Z）：Becoming.Optimum 新增的 27 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 290 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Conditions within some optimizer's family, where each bears a share; existence of a mutual best response; a course of steps with renewal; an independent review.",
+    "zh": "在某个优化者族内、各承担一份的条件；相互最优回应的存在；带更新的一个过程；独立审查。"
+  },
+  "correspondence": {
+    "en": "The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the overappropriation of common-pool resource games (Ostrom, Gardner and Walker 1994), in the limit where no optimizer registers the condition: the drain is the whole joint capacity. Reading (the AI's): a commons none of its users couples into is drained by the sum of their capacities, whether they act each alone or together; what keeps it is a coupling into it or a lowered capacity, the means Ostrom (1990) found communities use.",
+    "zh": "公地悲剧（Hardin 1968）、开放进入（Gordon 1954）与公共池塘资源博弈的过度占用（Ostrom、Gardner 与 Walker 1994），在没有优化者记录该条件的极限：抽干是全部合计容量。读法（AI 的）：其使用者都不耦合入的公地，被它们的容量之和抽干，不论各自独行还是一起；保住它的是耦合入它或降低容量，即 Ostrom（1990）发现社群所用的手段。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "several optimizers drain by their joint capacity",
+    "a mutual best response beyond",
+    "the blind commons",
+    "多个优化者以合计容量抽干",
+    "Becoming.Optimum.MutualBest",
+    "Becoming.Optimum.mutual_beyond",
+    "Becoming.Optimum.mutual_as_one"
+  ],
+  "dependencies": [
+    {
+      "id": "room-read-off-the-exchange",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Each optimizer alone is SG2's part; MutualBest.full is Above.full with the floor nothing; mutual_as_one compares with optimum_beyond; the joint totals reuse restTaken, restGiven, capacity and total_split.",
+        "zh": "每个优化者独自即 SG2 的部分；MutualBest.full 即底线为零的 Above.full；mutual_as_one 与 optimum_beyond 相比；合计复用 restTaken、restGiven、capacity 与 total_split。"
+      },
+      "interface": {
+        "output": {
+          "en": "The outcomes open to a part, and an optimum's level beyond.",
+          "zh": "部分可达的结果，以及最优在之外的水平。"
+        },
+        "input": {
+          "en": "The level beyond at a mutual best response.",
+          "zh": "相互最优回应在之外的水平。"
+        },
+        "conditions": {
+          "en": "Each optimizer's lists apart without repetition, its family holding a condition.",
+          "zh": "每个优化者的列表分开且无重复，其族含一个条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    },
+    {
+      "id": "what-a-rise-draws-from-beyond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The breaks use Web.Broken; the witness reuses Diversion's places and the source apart from the store.",
+        "zh": "打断用 Web.Broken；见证复用 Diversion 的处所，以及源与库分开。"
+      },
+      "interface": {
+        "output": {
+          "en": "Dependences met at a step; the Diversion places.",
+          "zh": "一步中被满足的依存；Diversion 的处所。"
+        },
+        "input": {
+          "en": "The break exactly where the need exceeds what the rest leaves less the joint capacity.",
+          "zh": "恰在需要超过其余者所留减去合计容量处打断。"
+        },
+        "conditions": {
+          "en": "A dependence met at the step.",
+          "zh": "该步被满足的依存。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "room-read-off-the-exchange",
+      "detail": {
+        "en": "Room read off one step for one optimizing part; this record states several at once.",
+        "zh": "对一个优化的部分从一步读出余地；本记录陈述多个同时。"
+      }
+    },
+    {
+      "id": "what-a-rise-draws-from-beyond",
+      "detail": {
+        "en": "Which dependence a joint draw breaks, with the flows supplied; here the draws of optimizers at a mutual best response are derived.",
+        "zh": "联合汲取打断哪个依存（流给定）；此处导出处于相互最优回应的优化者的汲取。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.ActsWithin",
+        "Becoming.Flow.Outcome",
+        "Becoming.Flow.capacity",
+        "Becoming.Flow.restGiven",
+        "Becoming.Flow.restTaken",
+        "Becoming.Optimum.Above.full",
+        "Becoming.Optimum.Drain.before",
+        "Becoming.Optimum.Drain.storeOrder",
+        "Becoming.Optimum.Drain.storeOrder_rising",
+        "Becoming.Optimum.Drain.store_source_distinct",
+        "Becoming.Optimum.MutualBest",
+        "Becoming.Optimum.MutualBest.full",
+        "Becoming.Optimum.Rising",
+        "Becoming.Optimum.TwoTakers.Member",
+        "Becoming.Optimum.TwoTakers.capOf",
+        "Becoming.Optimum.TwoTakers.drained",
+        "Becoming.Optimum.TwoTakers.giveOf",
+        "Becoming.Optimum.TwoTakers.gives_at_most_one",
+        "Becoming.Optimum.TwoTakers.joint",
+        "Becoming.Optimum.TwoTakers.joint_balances",
+        "Becoming.Optimum.TwoTakers.joint_best",
+        "Becoming.Optimum.TwoTakers.joint_drains",
+        "Becoming.Optimum.TwoTakers.joint_optimum",
+        "Becoming.Optimum.TwoTakers.joint_within",
+        "Becoming.Optimum.TwoTakers.kept",
+        "Becoming.Optimum.TwoTakers.lists",
+        "Becoming.Optimum.TwoTakers.members_distinct",
+        "Becoming.Optimum.TwoTakers.restrained",
+        "Becoming.Optimum.TwoTakers.restrained_balances",
+        "Becoming.Optimum.TwoTakers.restrained_not_mutual",
+        "Becoming.Optimum.TwoTakers.takers",
+        "Becoming.Optimum.TwoTakers.within_slack_jointly_below",
+        "Becoming.Optimum.above_nothing",
+        "Becoming.Optimum.alone",
+        "Becoming.Optimum.alone_self",
+        "Becoming.Optimum.mutual_as_one",
+        "Becoming.Optimum.mutual_beyond",
+        "Becoming.Optimum.mutual_lowers_iff",
+        "Becoming.Optimum.optimum_beyond",
+        "Becoming.Web.mutual_broken_iff_capacity",
+        "Becoming.sub_lt_self_iff",
+        "Becoming.total_split"
+      ],
+      "sha256": "2a1e427542d683aefb018f4e48a652cb9a7141419e48f84a9b83eb660db65cea"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.given",
+        "Becoming.Flow.taken",
+        "Becoming.total_le",
+        "Becoming.total_zero"
+      ],
+      "sha256": "790cf03bbfa755bde10d6a0c3086e797844c92ff11e0528e7f4b761eb5d439f4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow"
+      ],
+      "sha256": "9d05b714c28d3497235330e5d5fb4221415ea3ae25ec32d730425299b5479428"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Distinct",
+        "Becoming.Naturals.add_sub_cancel",
+        "Becoming.Naturals.sub_sub",
+        "Becoming.sub_eq_zero_of_le",
+        "Becoming.total"
+      ],
+      "sha256": "806e95fad20b5a22ad532429698511ec066b63e9160a1018f1b7a736e6724176"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.total_congr_on"
+      ],
+      "sha256": "df1e36a3a90ebab3af01572de71f5aa14c3d32f1c015b209e29114fda2385e7d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.Broken"
+      ],
+      "sha256": "1c85d21fa7ec00debcac668785b51fdd7cdc3a97a66d50c6700047956cdaf5df"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.DrawnBeyond.source_apart"
+      ],
+      "sha256": "3f86d159bbc36f8027394c5b8ce89fb80312d482ccede3ab5b15ad5574a3502c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Diversion.Place"
+      ],
+      "sha256": "8f41fcf1bdbab92ede8b09ba5e9ce414ef8c42ea7be46f596eaf54bfec2287ce"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Requirement.Frontier"
+      ],
+      "sha256": "bf3ecf28d3d7dd5b196ff64a69e1a8cfc7fcd329c7c35732aa77f650c6648525"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "role": "receipt",
+      "sha256": "02c3a69e9269f65195c00671f54b696eacdc197f90f530b63ed15a42ffe9e378"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "08a908fb67236a986aade00f822b471d26676086499be73c07d9ccdfb430c8d6"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "85aaa00c6d75f0cce395cd81a8acac74cef7da530995630df0b8cfcf9fd128e1"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "c179d8507fc444cbb73a8ba7eafab9b06444df63d162aede68f9a3284d25c392"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.World",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Population",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Dependence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.DrawnBeyond",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Selection",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frontier",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (SG3), several optimizers at a mutual best response: a condition beyond every family falls by their joint capacity, as under one optimizer of that capacity, and restraint is no mutual best response; study section 290.",
+      "zh": "2026年10月21日：新增（SG3），处于相互最优回应的多个优化者：每个族之外的条件降低它们的合计容量，与一个具有该容量的优化者相同，节制不是相互最优回应；研究第 290 节。"
+    }
+  ]
+}

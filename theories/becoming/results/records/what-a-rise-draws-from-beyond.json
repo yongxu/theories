@@ -292,6 +292,13 @@
         "en": "What an optimum, not a rise, does beyond what couples in.",
         "zh": "最优（而非上升）对耦合入者之外做什么。"
       }
+    },
+    {
+      "id": "several-optimizers-drain-by-their-joint-capacity",
+      "detail": {
+        "en": "How much each formation takes when several draw, derived for optimizers at a mutual best response.",
+        "zh": "多个构成汲取时各取多少，对处于相互最优回应的优化者导出。"
+      }
     }
   ],
   "references": [
@@ -384,7 +391,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "f59b6d42a8f5220286b6d902babe26c3ca5a8002cbdf114a422faab71fd4f37a"
+      "sha256": "c179d8507fc444cbb73a8ba7eafab9b06444df63d162aede68f9a3284d25c392"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
@@ -438,6 +445,10 @@
     {
       "en": "21 October 2026, SG1: what an optimum does beyond what couples in (record what-an-optimum-does-beyond-what-couples-in, study section 283); this record's laws and their statements are unchanged.",
       "zh": "2026年10月21日，SG1：最优对耦合入者之外做什么（记录 what-an-optimum-does-beyond-what-couples-in，研究第 283 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "21 October 2026, SG3: how much each formation takes when several draw, which the joint-draw laws take as supplied, derived for optimizers at a mutual best response (record several-optimizers-drain-by-their-joint-capacity, study section 290); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG3：联合汲取之律所给定的多个构成各取多少，对处于相互最优回应的优化者导出（记录 several-optimizers-drain-by-their-joint-capacity，研究第 290 节）；本记录的定律及其陈述不变。"
     }
   ]
 }

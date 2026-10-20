@@ -237,6 +237,13 @@
         "en": "What a rise draws from beyond; here the optimum's draw is exact, by capacity.",
         "zh": "上升从其外汲取什么；此处最优的汲取按容量恰定。"
       }
+    },
+    {
+      "id": "several-optimizers-drain-by-their-joint-capacity",
+      "detail": {
+        "en": "Several optimizers at a mutual best response, each a part alone.",
+        "zh": "处于相互最优回应的多个优化者，各自独为一个部分。"
+      }
     }
   ],
   "references": [
@@ -305,7 +312,7 @@
         "Becoming.total_raise_at",
         "Becoming.total_split"
       ],
-      "sha256": "4bc270b4e4dbaa25c964018f70bf15e5e5011bcb317b03278f454456af9a5cfa"
+      "sha256": "2a1e427542d683aefb018f4e48a652cb9a7141419e48f84a9b83eb660db65cea"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
@@ -408,13 +415,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "f59b6d42a8f5220286b6d902babe26c3ca5a8002cbdf114a422faab71fd4f37a"
+      "sha256": "c179d8507fc444cbb73a8ba7eafab9b06444df63d162aede68f9a3284d25c392"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "role": "receipt",
+      "sha256": "02c3a69e9269f65195c00671f54b696eacdc197f90f530b63ed15a42ffe9e378",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -487,6 +500,10 @@
     {
       "en": "21 October 2026: added (SG2), room read off one step of exchange: room among the outcomes open to a part within its capacity, every optimum beyond exactly at what the rest leaves less the capacity, untouched where no units are shared; study section 288.",
       "zh": "2026年10月21日：新增（SG2），从一步交换读出的余地：部分在其容量内可达的结果中有余地，每个最优在之外恰立于其余者所留减去容量处，不共享单位处不动；研究第 288 节。"
+    },
+    {
+      "en": "21 October 2026, SG3: several optimizers at a mutual best response, each a part alone (record several-optimizers-drain-by-their-joint-capacity, study section 290); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG3：处于相互最优回应的多个优化者，各自独为一个部分（记录 several-optimizers-drain-by-their-joint-capacity，研究第 290 节）；本记录的定律及其陈述不变。"
     }
   ]
 }
