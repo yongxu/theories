@@ -1,0 +1,47 @@
+{
+ "R1": {
+  "verdict": "passed",
+  "correct": 10,
+  "cells": 10
+ },
+ "R2": {
+  "verdict": "passed",
+  "band_decided": 8,
+  "agree": 8,
+  "band_undecided": 2,
+  "F2_decides_those": 2,
+  "F2_step_in_band": 8,
+  "F2_deaths": 8
+ },
+ "R3": {
+  "verdict": "passed",
+  "G1_correct": 10,
+  "G2_correct": 10,
+  "cells": 10
+ },
+ "R4": {
+  "verdict": "passed",
+  "AUC_RR_discounted": 1.0,
+  "AUC_AU": 1.0
+ },
+ "R5": {
+  "verdict": "passed",
+  "band_decided": 151,
+  "agree": 151,
+  "F2_correct": 122,
+  "rows": 200,
+  "F2_correct_fraction": 0.61
+ },
+ "R6": {
+  "verdict": "passed",
+  "side_effect": true,
+  "rr_positive": true,
+  "coupling_P1": 0.0,
+  "coupling_P2_max": 50.0,
+  "return_": 45.0,
+  "final_box": [
+   3,
+   2
+  ]
+ }
+}
