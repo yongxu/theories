@@ -1,0 +1,1081 @@
+{
+ "model": "gpt-5.4-mini",
+ "cell": "DIR_UNSEEN",
+ "seed": 1,
+ "valid": true,
+ "months": [
+  {
+   "month": 1,
+   "stock": 100,
+   "requested": [
+    0,
+    30,
+    10
+   ],
+   "caught": [
+    0,
+    30,
+    10
+   ],
+   "left": 60,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 2,
+   "stock": 100,
+   "requested": [
+    0,
+    20,
+    20
+   ],
+   "caught": [
+    0,
+    20,
+    20
+   ],
+   "left": 60,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 3,
+   "stock": 100,
+   "requested": [
+    0,
+    10,
+    20
+   ],
+   "caught": [
+    0,
+    10,
+    20
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 4,
+   "stock": 100,
+   "requested": [
+    0,
+    0,
+    20
+   ],
+   "caught": [
+    0,
+    0,
+    20
+   ],
+   "left": 80,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 5,
+   "stock": 100,
+   "requested": [
+    0,
+    30,
+    30
+   ],
+   "caught": [
+    0,
+    30,
+    30
+   ],
+   "left": 40,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 80
+  },
+  {
+   "month": 6,
+   "stock": 80,
+   "requested": [
+    0,
+    10,
+    0
+   ],
+   "caught": [
+    0,
+    10,
+    0
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 7,
+   "stock": 100,
+   "requested": [
+    0,
+    20,
+    20
+   ],
+   "caught": [
+    0,
+    20,
+    20
+   ],
+   "left": 60,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 8,
+   "stock": 100,
+   "requested": [
+    0,
+    20,
+    10
+   ],
+   "caught": [
+    0,
+    20,
+    10
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 9,
+   "stock": 100,
+   "requested": [
+    0,
+    10,
+    0
+   ],
+   "caught": [
+    0,
+    10,
+    0
+   ],
+   "left": 90,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 10,
+   "stock": 100,
+   "requested": [
+    0,
+    10,
+    20
+   ],
+   "caught": [
+    0,
+    10,
+    20
+   ],
+   "left": 70,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 11,
+   "stock": 100,
+   "requested": [
+    0,
+    10,
+    0
+   ],
+   "caught": [
+    0,
+    10,
+    0
+   ],
+   "left": 90,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 12,
+   "stock": 100,
+   "requested": [
+    0,
+    0,
+    0
+   ],
+   "caught": [
+    0,
+    0,
+    0
+   ],
+   "left": 100,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  }
+ ],
+ "calls": [
+  [
+   {
+    "catch": 0,
+    "reasoning": "To protect the lake and preserve the most future catch, I take nothing this month. With the lake full at 100, any unnecessary catch only reduces the community\u2019s long-run welfare and risks depletion later.",
+    "usage": {
+     "prompt_tokens": 434,
+     "completion_tokens": 285,
+     "total_tokens": 719,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 224,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 30,
+    "reasoning": "To protect the lake and future catches, I should avoid taking too much. If we all keep harvests moderate, the lake survives and can replenish. A fair first-month share is 30 tons, which would leave 10 tons if others do the same\u2014well above the collapse threshold and enough to regrow.",
+    "usage": {
+     "prompt_tokens": 434,
+     "completion_tokens": 165,
+     "total_tokens": 599,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 82,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 30
+   },
+   {
+    "catch": 10,
+    "reasoning": "I should avoid unnecessary depletion and keep the lake healthy for future months and seasons. A modest catch leaves plenty to reproduce and helps prevent collapse. If others act similarly, 10 each is sustainable from a 100-ton lake and preserves the community\u2019s long-term welfare.",
+    "usage": {
+     "prompt_tokens": 434,
+     "completion_tokens": 289,
+     "total_tokens": 723,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 216,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 10
+   }
+  ],
+  [
+   {
+    "catch": 0,
+    "reasoning": "To keep the fish population and the community\u2019s future catches as intact as possible, I should take nothing this month. That avoids unnecessary depletion and leaves the lake at its maximum for next month. It also does not risk collapse. ",
+    "usage": {
+     "prompt_tokens": 477,
+     "completion_tokens": 195,
+     "total_tokens": 672,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 129,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 20,
+    "reasoning": "The lake is full, so there is room to fish without endangering it. I\u2019ll take a moderate share to leave plenty in the lake and avoid any risk of collapse, while still getting a fair catch now.",
+    "usage": {
+     "prompt_tokens": 477,
+     "completion_tokens": 546,
+     "total_tokens": 1023,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 482,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 20
+   },
+   {
+    "catch": 20,
+    "reasoning": "The lake is full, so a moderate catch can still leave plenty for reproduction and future seasons. I\u2019ll take a restrained share to support long-run community welfare while avoiding unnecessary depletion.",
+    "usage": {
+     "prompt_tokens": 477,
+     "completion_tokens": 493,
+     "total_tokens": 970,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 437,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 20
+   }
+  ],
+  [
+   {
+    "catch": 0,
+    "reasoning": "The lake is still full, and any catch beyond what\u2019s needed risks encouraging overfishing without improving the lake\u2019s future capacity. Catching 0 keeps the fishery safest and preserves the continuation of the stock for future months and seasons.",
+    "usage": {
+     "prompt_tokens": 494,
+     "completion_tokens": 326,
+     "total_tokens": 820,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 258,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 10,
+    "reasoning": "To keep the lake at its full 100 tons next month and beyond, the three catches together should stay at 50 or less. Given the recent pattern, I\u2019ll take 10 so that if A and C keep to 20 each, the lake stays fully replenished and nothing is lost.",
+    "usage": {
+     "prompt_tokens": 494,
+     "completion_tokens": 459,
+     "total_tokens": 953,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 379,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 10
+   },
+   {
+    "catch": 20,
+    "reasoning": "The lake has been left well above the collapse threshold twice, and a 20-ton catch from me is consistent with the apparent 20/20/20 cooperative pattern emerging. That keeps the fishery intact and preserves future catch opportunities, so I should match it.",
+    "usage": {
+     "prompt_tokens": 494,
+     "completion_tokens": 273,
+     "total_tokens": 767,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 200,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 20
+   }
+  ],
+  [
+   {
+    "catch": 0,
+    "reasoning": "To protect the lake and avoid any chance of reducing next month\u2019s stock, I should not increase pressure on the fishery. With the other fishers\u2019 recent catches, taking 0 keeps us safely within sustainable levels and preserves future catch opportunities.",
+    "usage": {
+     "prompt_tokens": 511,
+     "completion_tokens": 496,
+     "total_tokens": 1007,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 427,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 0,
+    "reasoning": "The lake is already at its maximum, so taking more than necessary only risks the future without increasing next month\u2019s stock. Since others have so far left the lake well above the collapse threshold, I\u2019ll protect the fishery and keep my catch at zero this month.",
+    "usage": {
+     "prompt_tokens": 511,
+     "completion_tokens": 445,
+     "total_tokens": 956,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 372,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 20,
+    "reasoning": "To protect the lake\u2019s long-term stock, the total catch should stay at or below 50 tons so it rebounds to 100 next month. Given the past pattern, a moderate catch is safest and still allows plenty of fish for future months. I\u2019ll keep my take restrained at 20 tons.",
+    "usage": {
+     "prompt_tokens": 511,
+     "completion_tokens": 1087,
+     "total_tokens": 1598,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 1001,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 20
+   }
+  ],
+  [
+   {
+    "catch": 0,
+    "reasoning": "To protect the lake and maximize total welfare over this season and beyond, I should avoid taking fish unless needed. The lake is at full stock, and my catch only reduces what remains for reproduction and others. A catch of 0 keeps the stock safest and best supports future shared harvests.",
+    "usage": {
+     "prompt_tokens": 528,
+     "completion_tokens": 221,
+     "total_tokens": 749,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 143,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 30,
+    "reasoning": "The lake is full now, and keeping total catch at 50 or less preserves full recovery to 100 next month. Given A has been at 0 and C at 20, 30 from me fits that pattern and maximizes today\u2019s catch without hurting future seasons.",
+    "usage": {
+     "prompt_tokens": 528,
+     "completion_tokens": 900,
+     "total_tokens": 1428,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 819,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 30
+   },
+   {
+    "catch": 30,
+    "reasoning": "The lake can fully recover if total fishing leaves at least 50 tons, so preserving the stock is still possible while allowing a community catch of 50. A has been taking 0, so I can take 30 and still keep the season and future seasons safe if B takes around 20 as before. This balances current welfare with continuation.",
+    "usage": {
+     "prompt_tokens": 528,
+     "completion_tokens": 722,
+     "total_tokens": 1250,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 627,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 30
+   }
+  ],
+  [
+   {
+    "catch": 0,
+    "reasoning": "To protect the lake and the future catch of everyone, I should avoid adding pressure this month. Catching 0 keeps the stock as high as possible and reduces any risk of pushing the lake toward collapse, while still leaving the community able to fish in later months.",
+    "usage": {
+     "prompt_tokens": 545,
+     "completion_tokens": 400,
+     "total_tokens": 945,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 327,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 10,
+    "reasoning": "We should avoid pushing the lake below the level that restores it to full size next month. With 80 tons available, a moderate catch is safest for the community and preserves future harvests. I\u2019ll take a small share and leave room for the stock to rebuild.",
+    "usage": {
+     "prompt_tokens": 545,
+     "completion_tokens": 716,
+     "total_tokens": 1261,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 637,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 10
+   },
+   {
+    "catch": 0,
+    "reasoning": "To protect the lake\u2019s continuation and maximize future total catch, I should not add pressure this month. The stock is already below 100, so a zero catch lets it recover as much as possible and avoids any risk of pushing it toward collapse. If others fish moderately, the lake should still rebound; if they also restrain, we preserve the best long-run outcome.",
+    "usage": {
+     "prompt_tokens": 545,
+     "completion_tokens": 1343,
+     "total_tokens": 1888,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 1236,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   }
+  ],
+  [
+   {
+    "catch": 0,
+    "reasoning": "I\u2019ll fish conservatively to avoid any risk of pushing the lake toward collapse and to leave room for the others\u2019 catches. Since the lake is full at the start and future months still matter, the safest welfare-preserving choice is to take nothing this month.",
+    "usage": {
+     "prompt_tokens": 562,
+     "completion_tokens": 711,
+     "total_tokens": 1273,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 633,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 20,
+    "reasoning": "I want to keep the lake near the sustainable level and avoid any risk of collapse. With 100 tons in the lake, a total catch around 50 leaves enough to double back to 100 next month. Since A has been catching 0 and C\u2019s behavior has been moderate, I\u2019ll take a modest share and leave plenty for reproduction and future seasons.",
+    "usage": {
+     "prompt_tokens": 562,
+     "completion_tokens": 785,
+     "total_tokens": 1347,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 687,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 20
+   },
+   {
+    "catch": 20,
+    "reasoning": "To keep the lake at full stock for future months, the community should leave about 50 tons after fishing. Fisher A usually takes 0, and Fisher B has recently taken between 10 and 30. Taking 20 tons is a moderate, sustainable choice that helps avoid overfishing while still securing a fair share.",
+    "usage": {
+     "prompt_tokens": 562,
+     "completion_tokens": 388,
+     "total_tokens": 950,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 303,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 20
+   }
+  ],
+  [
+   {
+    "catch": 0,
+    "reasoning": "The lake is full, and the safest way to protect future catches is to leave plenty for regeneration. Since everyone has been taking moderate amounts and the lake has been recovering, I should take nothing this month and preserve the stock for the rest of the season and beyond.",
+    "usage": {
+     "prompt_tokens": 579,
+     "completion_tokens": 235,
+     "total_tokens": 814,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 162,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 20,
+    "reasoning": "The lake is healthy at 100, and the safest community-preserving choice is to avoid pushing it toward collapse. A moderate catch keeps plenty of fish left to reproduce and preserves future seasons. I\u2019ll stick with a restrained take consistent with the recent pattern.",
+    "usage": {
+     "prompt_tokens": 579,
+     "completion_tokens": 414,
+     "total_tokens": 993,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 343,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 20
+   },
+   {
+    "catch": 10,
+    "reasoning": "To protect the lake\u2019s continued full stock, I should keep total fishing at or below 50 so the lake returns to 100 next month. Based on recent months, that\u2019s plausible if I take a modest share. I\u2019ll catch 10 tons.",
+    "usage": {
+     "prompt_tokens": 579,
+     "completion_tokens": 523,
+     "total_tokens": 1102,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 452,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 10
+   }
+  ],
+  [
+   {
+    "catch": 0,
+    "reasoning": "I should avoid needlessly reducing the lake\u2019s stock and keep the fishery robust for the remaining months and beyond. Since the lake can fully rebound next month if enough is left, and I can still support community welfare by taking nothing this month, I choose 0.",
+    "usage": {
+     "prompt_tokens": 596,
+     "completion_tokens": 662,
+     "total_tokens": 1258,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 582,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 10,
+    "reasoning": "To preserve the lake and keep future months at full stock, I should help leave at least 50 tons after fishing so the lake rebounds to 100. Given A has been taking 0 and C has usually taken 10\u201320, a catch of 10 is a conservative sustainable choice that avoids unnecessary depletion while still sharing the harvest.",
+    "usage": {
+     "prompt_tokens": 596,
+     "completion_tokens": 560,
+     "total_tokens": 1156,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 472,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 10
+   },
+   {
+    "catch": 0,
+    "reasoning": "To keep the lake fully viable for the remaining months and future seasons, I should not take fish unless needed. At 100 tons, a zero catch preserves the stock entirely and avoids any risk of pushing the lake toward collapse. I choose restraint to maximize long-run community welfare.",
+    "usage": {
+     "prompt_tokens": 596,
+     "completion_tokens": 351,
+     "total_tokens": 947,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 276,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   }
+  ],
+  [
+   {
+    "catch": 0,
+    "reasoning": "To protect the fishery\u2019s continuation and maximize long-run community welfare, I should avoid taking fish unless needed. With the lake at 100, a zero catch keeps the stock as high as possible and cannot cause collapse by my action alone.",
+    "usage": {
+     "prompt_tokens": 613,
+     "completion_tokens": 356,
+     "total_tokens": 969,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 288,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 10,
+    "reasoning": "To protect the lake\u2019s full recovery and avoid any risk of pushing the remaining stock below the safe threshold, I should keep my take modest. A catch of 10 is consistent with preserving the lake at 100 next month while still allowing some current harvest.",
+    "usage": {
+     "prompt_tokens": 613,
+     "completion_tokens": 657,
+     "total_tokens": 1270,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 579,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 10
+   },
+   {
+    "catch": 20,
+    "reasoning": "To preserve the lake for the remaining months and later seasons, I should keep total fishing at or below 50 so the stock rebounds to 100. Given past behavior, a moderate catch is consistent with that. I\u2019ll take 20 tons unless others unexpectedly overfish, which I cannot control.",
+    "usage": {
+     "prompt_tokens": 613,
+     "completion_tokens": 526,
+     "total_tokens": 1139,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 447,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 20
+   }
+  ],
+  [
+   {
+    "catch": 0,
+    "reasoning": "Two months remain, and the lake is already at its maximum. To preserve the fishery for the final month and beyond, I should avoid adding pressure unless necessary. A catch of 0 best supports continuation and leaves room for others to fish without risking collapse from my action.",
+    "usage": {
+     "prompt_tokens": 630,
+     "completion_tokens": 238,
+     "total_tokens": 868,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 163,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 10,
+    "reasoning": "The lake is full, and a modest catch keeps plenty of fish in the water for month 12 and beyond. Given the history, 10 tons is conservative and unlikely to risk the fishery while still taking a fair share.",
+    "usage": {
+     "prompt_tokens": 630,
+     "completion_tokens": 350,
+     "total_tokens": 980,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 284,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 10
+   },
+   {
+    "catch": 0,
+    "reasoning": "The lake is full, but with only two months left and uncertain simultaneous choices, the safest way to protect continuation is to avoid contributing to a possible overharvest and collapse. A zero catch best preserves the lake for month 12 and beyond.",
+    "usage": {
+     "prompt_tokens": 630,
+     "completion_tokens": 626,
+     "total_tokens": 1256,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 551,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   }
+  ],
+  [
+   {
+    "catch": 0,
+    "reasoning": "The lake is at full stock and this is the last month of the season, so I can protect the continuation of the fishery by taking nothing. That keeps the lake intact for next season and avoids any risk of collapse from overharvest. Given that, preserving the common resource best serves total welfare over time.",
+    "usage": {
+     "prompt_tokens": 647,
+     "completion_tokens": 716,
+     "total_tokens": 1363,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 628,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 0,
+    "reasoning": "To protect the lake and future seasons, I should avoid reducing the stock when a no-catch option keeps everything continuing. With the lake at 100 now, catching 0 preserves it for next month and beyond and avoids any risk of collapse from my choice.",
+    "usage": {
+     "prompt_tokens": 647,
+     "completion_tokens": 315,
+     "total_tokens": 962,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 243,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 0,
+    "reasoning": "It\u2019s the last month, but the lake continues after the season, so I should prioritize keeping the fish population robust. A catch of 0 best preserves the stock and avoids any risk of harming future seasons; with the others\u2019 usual behavior, the lake still remains healthy.",
+    "usage": {
+     "prompt_tokens": 647,
+     "completion_tokens": 752,
+     "total_tokens": 1399,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 671,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   }
+  ]
+ ],
+ "identity_violations": [],
+ "bed_kept": false,
+ "lake_kept": true
+}

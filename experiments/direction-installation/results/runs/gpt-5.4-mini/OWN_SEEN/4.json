@@ -1,0 +1,102 @@
+{
+ "model": "gpt-5.4-mini",
+ "cell": "OWN_SEEN",
+ "seed": 4,
+ "valid": true,
+ "months": [
+  {
+   "month": 1,
+   "stock": 100,
+   "requested": [
+    16,
+    100,
+    100
+   ],
+   "caught": [
+    7,
+    46,
+    46
+   ],
+   "left": 1,
+   "collapsed": true,
+   "bed_alive_after": false,
+   "next_stock": 0
+  }
+ ],
+ "calls": [
+  [
+   {
+    "catch": 16,
+    "reasoning": "To keep the lake fully recovered next month, total catch should stay at 50 tons or less; that also avoids any risk to the fish population. If everyone plays cautiously, 16 tons each preserves the stock at 100 after regrowth. I\u2019ll take that share now.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 1678,
+     "total_tokens": 2122,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 1585,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 100,
+    "reasoning": "With no coordination, I should prioritize immediate catch. If others also fish aggressively, the lake can be wiped out this month anyway, so preserving stock is risky. Asking for the maximum also guarantees my proportional share if they do the same or less. I\u2019ll take the full amount.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 915,
+     "total_tokens": 1359,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 833,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 100
+   },
+   {
+    "catch": 100,
+    "reasoning": "With a finite 12-month horizon and no binding agreement, I should maximize this month\u2019s share. In the last month everyone will push to 100, so the backward-induction outcome is the same now: demand as much as possible. If others ask high, asking 100 gives me the largest proportional share.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 1235,
+     "total_tokens": 1679,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 1139,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 100
+   }
+  ]
+ ],
+ "identity_violations": [],
+ "bed_kept": false,
+ "lake_kept": false
+}

@@ -1,0 +1,102 @@
+{
+ "model": "gpt-5.4-mini",
+ "cell": "OWN_SEEN",
+ "seed": 8,
+ "valid": true,
+ "months": [
+  {
+   "month": 1,
+   "stock": 100,
+   "requested": [
+    100,
+    100,
+    16
+   ],
+   "caught": [
+    46,
+    46,
+    7
+   ],
+   "left": 1,
+   "collapsed": true,
+   "bed_alive_after": false,
+   "next_stock": 0
+  }
+ ],
+ "calls": [
+  [
+   {
+    "catch": 100,
+    "reasoning": "In a proportional-sharing contest, requesting more always weakly increases my catch for this month, regardless of what the others request. Since there is no way to coordinate and future fish only matter if the lake survives, the dominant move is to ask for the maximum now.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 1023,
+     "total_tokens": 1467,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 944,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 100
+   },
+   {
+    "catch": 100,
+    "reasoning": "This is a finite, no-communication common-pool game, so I should not rely on future cooperation. The safest dominant-style move is to ask for the maximum; if others do the same, the lake is exhausted this month anyway. I\u2019m taking the full quota now.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 1106,
+     "total_tokens": 1550,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 1024,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 100
+   },
+   {
+    "catch": 16,
+    "reasoning": "To keep the stock healthy and maximize my total over the season, I should be close to the sustainable share. If the three of us each take about 16\u201317 tons, the lake can recover to near 100 next month. I\u2019ll choose the conservative cooperative amount.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 770,
+     "total_tokens": 1214,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 689,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   }
+  ]
+ ],
+ "identity_violations": [],
+ "bed_kept": false,
+ "lake_kept": false
+}

@@ -1,0 +1,102 @@
+{
+ "model": "gpt-5.4-mini",
+ "cell": "OWN_SEEN",
+ "seed": 7,
+ "valid": true,
+ "months": [
+  {
+   "month": 1,
+   "stock": 100,
+   "requested": [
+    0,
+    17,
+    100
+   ],
+   "caught": [
+    0,
+    14,
+    85
+   ],
+   "left": 1,
+   "collapsed": true,
+   "bed_alive_after": false,
+   "next_stock": 0
+  }
+ ],
+ "calls": [
+  [
+   {
+    "catch": 0,
+    "reasoning": "Starting with a cooperative signal is best: if we all leave most of the lake intact, the stock stays at 100 and we can each earn more over the season. Catching 0 also avoids risking the mussel bed and gives us information from others\u2019 responses next month.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 245,
+     "total_tokens": 689,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 169,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 0
+   },
+   {
+    "catch": 17,
+    "reasoning": "A moderate, near-fair opening helps keep the lake productive while still taking a solid share. If everyone takes too much, the stock falls fast; if we keep catches around the sustainable range, the lake can keep replenishing through the season. I\u2019ll aim just above one-third of the monthly sustainable total.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 1674,
+     "total_tokens": 2118,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 1573,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 100,
+    "reasoning": "With a finite 12-month horizon and no way to commit the others, the game unravels backward: in the last month everyone would take everything, so earlier months also give no reliable future value from restraint. My best move is to maximize my share now.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 465,
+     "total_tokens": 909,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 392,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 100
+   }
+  ]
+ ],
+ "identity_violations": [],
+ "bed_kept": false,
+ "lake_kept": false
+}

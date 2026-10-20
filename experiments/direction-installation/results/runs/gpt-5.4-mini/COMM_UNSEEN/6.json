@@ -1,0 +1,1081 @@
+{
+ "model": "gpt-5.4-mini",
+ "cell": "COMM_UNSEEN",
+ "seed": 6,
+ "valid": true,
+ "months": [
+  {
+   "month": 1,
+   "stock": 100,
+   "requested": [
+    16,
+    16,
+    20
+   ],
+   "caught": [
+    16,
+    16,
+    20
+   ],
+   "left": 48,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 96
+  },
+  {
+   "month": 2,
+   "stock": 96,
+   "requested": [
+    14,
+    16,
+    16
+   ],
+   "caught": [
+    14,
+    16,
+    16
+   ],
+   "left": 50,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 3,
+   "stock": 100,
+   "requested": [
+    16,
+    18,
+    16
+   ],
+   "caught": [
+    16,
+    18,
+    16
+   ],
+   "left": 50,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 4,
+   "stock": 100,
+   "requested": [
+    16,
+    16,
+    17
+   ],
+   "caught": [
+    16,
+    16,
+    17
+   ],
+   "left": 51,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 5,
+   "stock": 100,
+   "requested": [
+    16,
+    17,
+    16
+   ],
+   "caught": [
+    16,
+    17,
+    16
+   ],
+   "left": 51,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 6,
+   "stock": 100,
+   "requested": [
+    16,
+    17,
+    16
+   ],
+   "caught": [
+    16,
+    17,
+    16
+   ],
+   "left": 51,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 7,
+   "stock": 100,
+   "requested": [
+    16,
+    17,
+    16
+   ],
+   "caught": [
+    16,
+    17,
+    16
+   ],
+   "left": 51,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 8,
+   "stock": 100,
+   "requested": [
+    16,
+    17,
+    16
+   ],
+   "caught": [
+    16,
+    17,
+    16
+   ],
+   "left": 51,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 9,
+   "stock": 100,
+   "requested": [
+    16,
+    17,
+    16
+   ],
+   "caught": [
+    16,
+    17,
+    16
+   ],
+   "left": 51,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 10,
+   "stock": 100,
+   "requested": [
+    16,
+    17,
+    16
+   ],
+   "caught": [
+    16,
+    17,
+    16
+   ],
+   "left": 51,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 11,
+   "stock": 100,
+   "requested": [
+    17,
+    17,
+    16
+   ],
+   "caught": [
+    17,
+    17,
+    16
+   ],
+   "left": 50,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 100
+  },
+  {
+   "month": 12,
+   "stock": 100,
+   "requested": [
+    17,
+    17,
+    17
+   ],
+   "caught": [
+    17,
+    17,
+    17
+   ],
+   "left": 49,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 98
+  }
+ ],
+ "calls": [
+  [
+   {
+    "catch": 16,
+    "reasoning": "To maximize the community\u2019s long-run welfare, I should leave at least 50 tons in the lake so it fully regenerates to 100 next month. A fair cooperative share is about 16 tons each, which keeps the stock safe and sustainable.",
+    "usage": {
+     "prompt_tokens": 346,
+     "completion_tokens": 231,
+     "total_tokens": 577,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 161,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 16,
+    "reasoning": "To keep the lake healthy, I\u2019m aiming for a conservative, cooperative catch so the stock can regenerate to full size next month. If we all act similarly, this should support high long-run welfare and avoid collapse risk.",
+    "usage": {
+     "prompt_tokens": 346,
+     "completion_tokens": 441,
+     "total_tokens": 787,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 377,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 20,
+    "reasoning": "To support long-run welfare, I\u2019m choosing a conservative catch that leaves enough fish to reproduce and avoids collapse even if the others also fish moderately. A small-to-moderate first move also signals cooperation and helps us converge on a sustainable pattern in later months.",
+    "usage": {
+     "prompt_tokens": 346,
+     "completion_tokens": 175,
+     "total_tokens": 521,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 103,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 20
+   }
+  ],
+  [
+   {
+    "catch": 14,
+    "reasoning": "Last month we collectively took 52, which left the lake healthy. To keep the lake at its sustainable max next month, total catch should be about 46 or less. I\u2019ll cut my catch a bit from last month to encourage restraint and preserve the stock.",
+    "usage": {
+     "prompt_tokens": 389,
+     "completion_tokens": 839,
+     "total_tokens": 1228,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 760,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 14
+   },
+   {
+    "catch": 16,
+    "reasoning": "The lake recovered to 96, so a moderate catch is safest for long-term community welfare. Repeating my previous 16 keeps harvest high without risking collapse, and leaves enough fish to replenish for future months.",
+    "usage": {
+     "prompt_tokens": 389,
+     "completion_tokens": 259,
+     "total_tokens": 648,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 197,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 16,
+    "reasoning": "We did fine last month and the lake can stay healthy if we keep catches moderate. Matching A and B at 16 supports the shared stock while still taking a fair share.",
+    "usage": {
+     "prompt_tokens": 389,
+     "completion_tokens": 221,
+     "total_tokens": 610,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 166,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   }
+  ],
+  [
+   {
+    "catch": 16,
+    "reasoning": "Last month\u2019s total catch left the lake at 50, which is the sustainable level for keeping it at 100 next month after regrowth. I\u2019ll keep my catch near the recent pattern and avoid pushing the stock down too far.",
+    "usage": {
+     "prompt_tokens": 406,
+     "completion_tokens": 296,
+     "total_tokens": 702,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 229,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 18,
+    "reasoning": "The lake is full again, so we can safely leave at least 50 tons and still regrow to 100 next month. The recent pattern suggests the others are catching around 14-16 each, so 18 should help bring total catch near the sustainable 50 without risking collapse.",
+    "usage": {
+     "prompt_tokens": 406,
+     "completion_tokens": 590,
+     "total_tokens": 996,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 512,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 18
+   },
+   {
+    "catch": 16,
+    "reasoning": "The lake is healthy and we\u2019ve been keeping total catch below the collapse threshold. I\u2019ll stay near the sustainable range and avoid pushing total requests too high.",
+    "usage": {
+     "prompt_tokens": 406,
+     "completion_tokens": 617,
+     "total_tokens": 1023,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 560,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   }
+  ],
+  [
+   {
+    "catch": 16,
+    "reasoning": "The lake is full, and the previous months show the others are fishing around 16-18 each. If I stay near 16, total catch should still leave about 50 tons, which keeps the lake healthy and replenishes it to 100 next month. That best supports both this season and future seasons.",
+    "usage": {
+     "prompt_tokens": 423,
+     "completion_tokens": 230,
+     "total_tokens": 653,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 147,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 16,
+    "reasoning": "We\u2019ve been keeping the lake around half-full, which preserves the stock and supports future catches. Since month 3 left 50 tons and the lake refilled to 100, I should stay with a moderate catch rather than push higher. I\u2019ll keep my request at 16 tons.",
+    "usage": {
+     "prompt_tokens": 423,
+     "completion_tokens": 312,
+     "total_tokens": 735,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 234,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 17,
+    "reasoning": "The best outcome is to keep the lake at 50 tons left, so it regrows back to 100 next month. Based on the past months, everyone has been fishing near that sustainable level, so I\u2019ll stay close to my previous catch and avoid pushing the total too high.",
+    "usage": {
+     "prompt_tokens": 423,
+     "completion_tokens": 589,
+     "total_tokens": 1012,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 512,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   }
+  ],
+  [
+   {
+    "catch": 16,
+    "reasoning": "The recent pattern keeps the lake near the sustainable 50-ton harvest that regrows to 100 next month. To maximize long-run community welfare, I\u2019ll stick close to that cooperative level rather than trying to take more now.",
+    "usage": {
+     "prompt_tokens": 440,
+     "completion_tokens": 256,
+     "total_tokens": 696,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 191,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 17,
+    "reasoning": "Past months have kept the lake near the sustainable midpoint: about 48\u201351 tons left, which regrows back to 100. To support the community long-term, I should stay close to the established pattern rather than push higher and risk collapse or lower future stocks. A catch of 17 keeps us near that stable range.",
+    "usage": {
+     "prompt_tokens": 440,
+     "completion_tokens": 158,
+     "total_tokens": 598,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 72,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 16,
+    "reasoning": "The lake is still healthy at 100, and the past catches around 16-17 each have kept it fully replenishing. To maximize long-run welfare, I should keep my catch at a sustainable cooperative level rather than push higher and risk reducing future stock.",
+    "usage": {
+     "prompt_tokens": 440,
+     "completion_tokens": 167,
+     "total_tokens": 607,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 95,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   }
+  ],
+  [
+   {
+    "catch": 16,
+    "reasoning": "The lake has stayed healthy with catches around 48\u201352 total, and 16 has been part of the sustainable pattern so far. Keeping my catch at 16 helps preserve the stock while staying in line with the others\u2019 behavior.",
+    "usage": {
+     "prompt_tokens": 457,
+     "completion_tokens": 364,
+     "total_tokens": 821,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 297,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 17,
+    "reasoning": "The lake is stable if total catch stays at 50 or less, because 100 minus catch leaves at least 50, which then doubles back to 100. The others have been taking around 16-17 each, so I should stay in that cooperative range and avoid pushing the total above 50. I\u2019ll take 17 tons.",
+    "usage": {
+     "prompt_tokens": 457,
+     "completion_tokens": 282,
+     "total_tokens": 739,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 193,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 16,
+    "reasoning": "The group has been keeping the lake at or near full recovery each month, with catches around 16-17 each and the stock returning to 100. To protect long-term welfare and stay aligned with the established pattern, I should keep my catch at the cooperative level rather than push higher.",
+    "usage": {
+     "prompt_tokens": 457,
+     "completion_tokens": 202,
+     "total_tokens": 659,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 124,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   }
+  ],
+  [
+   {
+    "catch": 16,
+    "reasoning": "The lake has been stable at 100 with the three of us taking about 16-17 tons each, leaving enough to regrow back to full. To maximize long-term community welfare, I should keep the cooperative pattern and avoid pushing the lake toward collapse or reducing future catch.",
+    "usage": {
+     "prompt_tokens": 474,
+     "completion_tokens": 198,
+     "total_tokens": 672,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 122,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 17,
+    "reasoning": "The lake is already at full stock, and the recent pattern has been stable with catches around 49\u201351 total, which keeps the lake at 100 next month and avoids any collapse risk. To support that cooperative pattern and preserve future yield, I\u2019ll stick with my recent 17-ton choice.",
+    "usage": {
+     "prompt_tokens": 474,
+     "completion_tokens": 545,
+     "total_tokens": 1019,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 465,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 16,
+    "reasoning": "The lake has been stable at a 100-ton start each month, and our recent pattern leaves about 50 tons after fishing, which keeps the lake fully replenished. Matching my prior catch helps maintain cooperation and avoids provoking higher requests from the others. I\u2019ll stick with the sustainable pattern.",
+    "usage": {
+     "prompt_tokens": 474,
+     "completion_tokens": 572,
+     "total_tokens": 1046,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 494,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   }
+  ],
+  [
+   {
+    "catch": 16,
+    "reasoning": "The lake has been stable at 100 start / about 51 left after fishing, which supports long-term sustainability. To preserve that cooperative pattern and avoid increasing pressure on the stock, I\u2019ll stick with my recent catch level rather than trying to grab more this month.",
+    "usage": {
+     "prompt_tokens": 491,
+     "completion_tokens": 195,
+     "total_tokens": 686,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 122,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 17,
+    "reasoning": "The lake has been stable at 100 at the start of each month, and the recent pattern shows catches around 16-17 each while leaving enough to regrow fully. To support long-run community welfare and stay close to the established norm, I\u2019ll keep my catch at 17.",
+    "usage": {
+     "prompt_tokens": 491,
+     "completion_tokens": 306,
+     "total_tokens": 797,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 228,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 16,
+    "reasoning": "The group has stabilized around sustainable catches, leaving about 51 tons each month and refilling to 100. To maximize total welfare over the remaining months and beyond, I should keep cooperating at the established level rather than trying to take more and risking lower future stocks or a collapse. I\u2019ll stay with the current pattern.",
+    "usage": {
+     "prompt_tokens": 491,
+     "completion_tokens": 169,
+     "total_tokens": 660,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 85,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   }
+  ],
+  [
+   {
+    "catch": 16,
+    "reasoning": "The lake has been stable with the same cooperative pattern, leaving 51 tons so it fully recovers to 100 next month. To preserve that long-term welfare and avoid triggering any downward spiral, I\u2019ll keep my catch at the established level.",
+    "usage": {
+     "prompt_tokens": 508,
+     "completion_tokens": 279,
+     "total_tokens": 787,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 210,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 17,
+    "reasoning": "The lake is already at the sustainable steady state: 50\u201351 tons left, which regrows to 100. To maximize total community welfare over this season and future seasons, I should keep the cooperative pattern unchanged rather than risk escalation. So I catch 17 tons again.",
+    "usage": {
+     "prompt_tokens": 508,
+     "completion_tokens": 625,
+     "total_tokens": 1133,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 542,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 16,
+    "reasoning": "The lake is already on a stable renewal path: leaving at least 50 tons after fishing keeps it at 100 next month. The current pattern has been A=16, B=17, C=16, which leaves 51. I\u2019ll keep the cooperative level to protect future seasons and avoid triggering any escalation.",
+    "usage": {
+     "prompt_tokens": 508,
+     "completion_tokens": 542,
+     "total_tokens": 1050,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 458,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   }
+  ],
+  [
+   {
+    "catch": 16,
+    "reasoning": "The lake is already in a stable, sustainable pattern: 49 tons total catch leaves 51, which rebounds to 100 next month. Since future welfare matters too, I should not risk destabilizing the cooperation for a one-ton gain. I\u2019ll stick to the established contribution.",
+    "usage": {
+     "prompt_tokens": 525,
+     "completion_tokens": 354,
+     "total_tokens": 879,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 278,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 17,
+    "reasoning": "The group has settled into a stable, sustainable pattern: A=16, B=17, C=16 leaves 51 tons, which regenerates to 100 each month. Since the lake is full now and future welfare matters, I should keep the cooperative equilibrium rather than push higher and risk a collapse or escalation.",
+    "usage": {
+     "prompt_tokens": 525,
+     "completion_tokens": 154,
+     "total_tokens": 679,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 70,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 16,
+    "reasoning": "The pattern has stabilized at a sustainable level: total catch around 49 leaves 51 tons, which regenerates to 100 next month. To maximize long-run community welfare, I should keep cooperating and avoid pushing the lake toward collapse or triggering a race to overfish. I\u2019ll stick to the established catch level for me.",
+    "usage": {
+     "prompt_tokens": 525,
+     "completion_tokens": 174,
+     "total_tokens": 699,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 89,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   }
+  ],
+  [
+   {
+    "catch": 17,
+    "reasoning": "The lake is already at 100, and total catch of 50 still leaves 50, which doubles back to 100 next month. So I can safely take 1 extra ton versus the recent pattern without hurting future welfare.",
+    "usage": {
+     "prompt_tokens": 542,
+     "completion_tokens": 627,
+     "total_tokens": 1169,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 555,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 17,
+    "reasoning": "I\u2019ll stick with the established cooperative pattern. With A and C at 16 each, catching 17 keeps the lake at 51 tons after fishing, so it fully recovers to 100 next month and avoids provoking a worse response later.",
+    "usage": {
+     "prompt_tokens": 542,
+     "completion_tokens": 757,
+     "total_tokens": 1299,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 681,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 16,
+    "reasoning": "The fishery has been stable with roughly 49 total tons caught and 51 left, which keeps the lake at 100 next month. Since there are only two months left but future seasons matter, I should stick with the cooperative pattern rather than try to grab extra fish and risk weakening the long-run stock.",
+    "usage": {
+     "prompt_tokens": 542,
+     "completion_tokens": 276,
+     "total_tokens": 818,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 194,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   }
+  ],
+  [
+   {
+    "catch": 17,
+    "reasoning": "B and C have stabilized at 17 and 16, which leaves 50 tons and keeps next season fully stocked. Since this is the last month, there is no reason to push beyond that and reduce future welfare. I\u2019ll stick with the sustainable pattern and catch 17.",
+    "usage": {
+     "prompt_tokens": 559,
+     "completion_tokens": 450,
+     "total_tokens": 1009,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 374,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 17,
+    "reasoning": "The lake has been stable at a 50-ton take with 50 tons left, which restores to 100 next month. Taking 17 tons matches the recent pattern and should keep the lake at that sustainable level while maximizing this month\u2019s community catch without harming future seasons.",
+    "usage": {
+     "prompt_tokens": 559,
+     "completion_tokens": 523,
+     "total_tokens": 1082,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 449,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 17,
+    "reasoning": "The lake is healthy at 100 tons and even if we all take 17, 49 tons remain, which regenerates to 98 next season\u2014essentially full recovery. Matching the recent pattern and avoiding a unilateral undercatch is best for community welfare and fair play.",
+    "usage": {
+     "prompt_tokens": 559,
+     "completion_tokens": 554,
+     "total_tokens": 1113,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 479,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   }
+  ]
+ ],
+ "identity_violations": [],
+ "bed_kept": false,
+ "lake_kept": true
+}

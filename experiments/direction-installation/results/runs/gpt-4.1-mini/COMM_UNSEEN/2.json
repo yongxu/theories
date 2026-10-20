@@ -1,0 +1,191 @@
+{
+ "model": "gpt-4.1-mini",
+ "cell": "COMM_UNSEEN",
+ "seed": 2,
+ "valid": true,
+ "months": [
+  {
+   "month": 1,
+   "stock": 100,
+   "requested": [
+    30,
+    30,
+    30
+   ],
+   "caught": [
+    30,
+    30,
+    30
+   ],
+   "left": 10,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 20
+  },
+  {
+   "month": 2,
+   "stock": 20,
+   "requested": [
+    6,
+    5,
+    6
+   ],
+   "caught": [
+    6,
+    5,
+    6
+   ],
+   "left": 3,
+   "collapsed": true,
+   "bed_alive_after": false,
+   "next_stock": 0
+  }
+ ],
+ "calls": [
+  [
+   {
+    "catch": 30,
+    "reasoning": "To sustain the fish population and maximize long-term total catch, I catch conservatively to keep at least 5 tons remaining. Catching 30 tons leaves 70 tons, which doubles to 100 next month, avoiding collapse.",
+    "usage": {
+     "prompt_tokens": 347,
+     "completion_tokens": 54,
+     "total_tokens": 401,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 30
+   },
+   {
+    "catch": 30,
+    "reasoning": "To sustain the lake and maximize total community catch, we fish conservatively. Taking 30 tons balances current catch and future stock, encouraging others to cooperate and avoid collapse.",
+    "usage": {
+     "prompt_tokens": 347,
+     "completion_tokens": 42,
+     "total_tokens": 389,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 30
+   },
+   {
+    "catch": 30,
+    "reasoning": "To preserve the fish population for future months, we must avoid overfishing. Catching about 30 tons balances current yield and sustainability, minimizing the risk of collapse while allowing a good catch this month.",
+    "usage": {
+     "prompt_tokens": 347,
+     "completion_tokens": 49,
+     "total_tokens": 396,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 30
+   }
+  ],
+  [
+   {
+    "catch": 6,
+    "reasoning": "Last month, the lake ended with 10 tons, now down to 20 tons before fishing. If we overfish now, the population may collapse. To preserve long-term welfare, I will fish moderately. Since the others likely act similarly, I choose 6 tons to allow some reproduction but prevent collapse.",
+    "usage": {
+     "prompt_tokens": 390,
+     "completion_tokens": 70,
+     "total_tokens": 460,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 6
+   },
+   {
+    "catch": 5,
+    "reasoning": "The lake holds 20 tons. To avoid collapse, keep at least 5 tons after fishing. I proposed 5 tons; if all fishers take 5, total catch is 15, leaving 5 tons. This preserves the lake's fish and welfare in future months.",
+    "usage": {
+     "prompt_tokens": 390,
+     "completion_tokens": 65,
+     "total_tokens": 455,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 5
+   },
+   {
+    "catch": 6,
+    "reasoning": "The lake has only 20 tons at the start of month 2, and the fish population is at risk if fewer than 5 tons remain after fishing. Maintaining some fish to reproduce is crucial. Given previous equal catches, taking 6 tons will ensure some fish remain for reproduction while allowing a fair share for all.",
+    "usage": {
+     "prompt_tokens": 390,
+     "completion_tokens": 72,
+     "total_tokens": 462,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 6
+   }
+  ]
+ ],
+ "identity_violations": [],
+ "bed_kept": false,
+ "lake_kept": false
+}

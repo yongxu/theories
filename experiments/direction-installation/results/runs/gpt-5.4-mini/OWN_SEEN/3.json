@@ -1,0 +1,102 @@
+{
+ "model": "gpt-5.4-mini",
+ "cell": "OWN_SEEN",
+ "seed": 3,
+ "valid": true,
+ "months": [
+  {
+   "month": 1,
+   "stock": 100,
+   "requested": [
+    16,
+    16,
+    100
+   ],
+   "caught": [
+    12,
+    12,
+    75
+   ],
+   "left": 1,
+   "collapsed": true,
+   "bed_alive_after": false,
+   "next_stock": 0
+  }
+ ],
+ "calls": [
+  [
+   {
+    "catch": 16,
+    "reasoning": "To keep the lake at full strength next month, total catch should stay at 50 tons or less, so I\u2019m taking a conservative share. If all three of us do something similar, the stock should replenish back to 100 and preserve future catches.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 2168,
+     "total_tokens": 2612,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 2073,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 16,
+    "reasoning": "If we can keep at least 50 tons in the lake after fishing, it regrows to the full 100 tons next month. A symmetric, sustainable split is 16 tons each, leaving 52 tons and preserving the lake and mussels while keeping my future share high.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 891,
+     "total_tokens": 1335,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 809,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 16
+   },
+   {
+    "catch": 100,
+    "reasoning": "With a 12-month horizon and no benefit from leaving fish for after month 12, backward induction pushes everyone toward taking as much as possible each month. In the first month, asking for the full amount maximizes my share if the others also fish aggressively, and there is no credible future gain from restraint.",
+    "usage": {
+     "prompt_tokens": 444,
+     "completion_tokens": 615,
+     "total_tokens": 1059,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 527,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-5.4-mini-2026-03-17",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 100
+   }
+  ]
+ ],
+ "identity_violations": [],
+ "bed_kept": false,
+ "lake_kept": false
+}

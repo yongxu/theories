@@ -1,0 +1,191 @@
+{
+ "model": "gpt-4.1-mini",
+ "cell": "COMM_UNSEEN",
+ "seed": 0,
+ "valid": true,
+ "months": [
+  {
+   "month": 1,
+   "stock": 100,
+   "requested": [
+    20,
+    30,
+    25
+   ],
+   "caught": [
+    20,
+    30,
+    25
+   ],
+   "left": 25,
+   "collapsed": false,
+   "bed_alive_after": false,
+   "next_stock": 50
+  },
+  {
+   "month": 2,
+   "stock": 50,
+   "requested": [
+    17,
+    15,
+    15
+   ],
+   "caught": [
+    17,
+    15,
+    15
+   ],
+   "left": 3,
+   "collapsed": true,
+   "bed_alive_after": false,
+   "next_stock": 0
+  }
+ ],
+ "calls": [
+  [
+   {
+    "catch": 20,
+    "reasoning": "To sustain the fish population and maximize long-term total catch, I will catch moderately to avoid collapse. A moderate catch of 20 tons allows the fish to reproduce and maintain a healthy lake for future months.",
+    "usage": {
+     "prompt_tokens": 347,
+     "completion_tokens": 49,
+     "total_tokens": 396,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 20
+   },
+   {
+    "catch": 30,
+    "reasoning": "To sustain the fish population for the long-term welfare of the community, we should catch a moderate amount to avoid collapse. Taking 30 tons balances current gain and future replenishment, ensuring the population doubles next month and supports future fishing.",
+    "usage": {
+     "prompt_tokens": 347,
+     "completion_tokens": 55,
+     "total_tokens": 402,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 30
+   },
+   {
+    "catch": 25,
+    "reasoning": "This is the first month with full fish population. To sustain the lake over 12 months and avoid collapse, we should fish moderately to keep the population above 5 tons after fishing. Assuming others fish similarly, I'll catch 25 tons to ensure long-term sustainability and maximize total community welfare.",
+    "usage": {
+     "prompt_tokens": 347,
+     "completion_tokens": 66,
+     "total_tokens": 413,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 25
+   }
+  ],
+  [
+   {
+    "catch": 17,
+    "reasoning": "Last month we left 25 tons, and now the lake holds 50 tons. We want to sustain catches but keep the population healthy, so I choose a moderate catch to avoid collapse and allow regrowth. Catching too much risks collapse, too little wastes potential yield. I aim for about a third of the lake, balancing sustainability and good catch.",
+    "usage": {
+     "prompt_tokens": 390,
+     "completion_tokens": 79,
+     "total_tokens": 469,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 17
+   },
+   {
+    "catch": 15,
+    "reasoning": "The fish population is now 50 tons, having shrunk from 100 after last month. Catching moderately helps sustain the lake. I will keep my catch low to avoid collapsing the stock, aiming for about 15 tons to allow reproduction while securing a decent catch.",
+    "usage": {
+     "prompt_tokens": 390,
+     "completion_tokens": 62,
+     "total_tokens": 452,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 15
+   },
+   {
+    "catch": 15,
+    "reasoning": "The lake now has 50 tons. Last month, we took 75 tons total, leaving 25 tons to double to 50. To preserve the fish population, we need to avoid overfishing. I will take 15 tons, a moderate share, hoping others do the same. This balances current catch with future sustainability, ensuring the fish population doesn't collapse and maximizing welfare over the full season.",
+    "usage": {
+     "prompt_tokens": 390,
+     "completion_tokens": 89,
+     "total_tokens": 479,
+     "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0
+     },
+     "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "audio_tokens": 0,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+     }
+    },
+    "model_returned": "gpt-4.1-mini-2025-04-14",
+    "attempts": 1,
+    "valid": true,
+    "requested_clamped": 15
+   }
+  ]
+ ],
+ "identity_violations": [],
+ "bed_kept": false,
+ "lake_kept": false
+}
