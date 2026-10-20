@@ -120,8 +120,8 @@
       "kind": "scope"
     },
     {
-      "en": "Mixing beyond the listing of the next generation: transmission that is not exact across groups, and how groups form and keep their differences (assortment), are not stated.",
-      "zh": "下一代列法之外的混合：跨组不精确的传递，以及组如何形成并保持其差异（同类聚合），未陈述。",
+      "en": "Mixing beyond the listing of the next generation: transmission that is not exact across groups, and how groups form and keep their differences short of descent from uniform groups (record groups-formed-by-descent states that case), are not stated.",
+      "zh": "下一代列法之外的混合：跨组不精确的传递，以及组在均匀之组的世系之外如何形成并保持其差异（记录 groups-formed-by-descent 陈述了该情形），未陈述。",
       "kind": "scope"
     },
     {
@@ -152,8 +152,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T155100.105164Z）：Becoming.SelectionLevels 与 Becoming.GroupEnding 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 273 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "How groups form and keep their differences (assortment); transmission that is not exact across groups; the additive part of Fisher's theorem; an independent review.",
-    "zh": "组如何形成并保持其差异（同类聚合）；跨组不精确的传递；Fisher 定理的加性部分；独立审查。"
+    "en": "Groups founded mixed (assortment below one); transmission that is not exact across groups; the additive part of Fisher's theorem; an independent review.",
+    "zh": "混合建立的组（聚合低于一）；跨组不精确的传递；Fisher 定理的加性部分；独立审查。"
   },
   "correspondence": {
     "en": "The multilevel Price equation with unequal group sizes (Price 1972; Hamilton 1975; Okasha 2006, MLS1): the whole's covariance is the size-weighted mean within-group covariance plus the covariance of group means; contextual analysis reads each member by its group's mean (Heisler and Damuth 1987). Selection among groups needs variance among groups, which group formation must regenerate (the haystack model, Maynard Smith 1964; trait groups, Wilson 1975). Readings (the AI's): what among-group selection acts on is used up by it unless descent keeps groups apart.",
@@ -239,6 +239,13 @@
         "en": "Groups on coupled conditions end together; here groups alike in mean are not selected among.",
         "zh": "依存于耦合条件的组一同终结；此处均值相同的组之间无选择。"
       }
+    },
+    {
+      "id": "groups-formed-by-descent",
+      "detail": {
+        "en": "Groups formed by descent from uniform groups, which keep the differences this record's witness saw used up.",
+        "zh": "由均匀之组的世系形成的组，保持了本记录见证中被耗尽的差异。"
+      }
     }
   ],
   "references": [
@@ -308,7 +315,7 @@
         "Becoming.SelectionLevels.within_for_of_rises",
         "Becoming.SelectionLevels.within_none_of_uniform"
       ],
-      "sha256": "8091ee28285e667c4b00955c9318b7062c26fd0e19dba5a8a3ce6e2a1e8ecd7d"
+      "sha256": "9241e078267cbec92455476c9e88a7b021c5139930134d9d168fa964b01fde2d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
@@ -360,7 +367,7 @@
         "Becoming.GroupEnding.rises_of_ended",
         "Becoming.GroupEnding.uniform"
       ],
-      "sha256": "7c05d56b6569b13d17851b995673142d06dc11879da86cdf6303000f0f996d5e"
+      "sha256": "91afbb5b74ec6c8b35c21c6728f4f9a8bd778e41ce5be6ddfca2744e76b345ec"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
@@ -375,25 +382,31 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "1fd25551b03d4582e9416f597a87943cf38b24f6f198082f998e295e995718a4"
+      "sha256": "5c2b5e9db9c8497de5cf6e9dbed697dde328e917131cfdb4ce66310267f0f1f8"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
-      "sha256": "0037da2b9f773777cfec3a571744df1bf2a1957e78e39be77d9da80404edd33d"
+      "sha256": "65757a112124544398d656391c164cebe7f3f2d3c48d3bdfdbcfa2c4260fb5fc"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
+      "role": "receipt",
+      "sha256": "ddd42ba8ce21f5b313e27b3b13c680ec5781cad4a8e9946af1822e60228f8a2f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GroupEnding",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -403,6 +416,10 @@
     {
       "en": "20 October 2026: added (EV7), selection within and among groups of any sizes, groups alike in mean, and ending for any sizes with a two-generation witness; study section 273.",
       "zh": "2026年10月20日：新增（EV7），大小任意之组的组内与组间选择、均值相同的组，以及任意大小的终止与跨两代的见证；研究第 273 节。"
+    },
+    {
+      "en": "21 October 2026, EV11: groups formed by descent from uniform groups keep their differences (record groups-formed-by-descent, study section 281); this record's does-not-show item on assortment and next delta updated; its laws and their statements are unchanged.",
+      "zh": "2026年10月21日，EV11：由均匀之组的世系形成的组保持其差异（记录 groups-formed-by-descent，研究第 281 节）；本记录关于同类聚合的“未表明”项与下一步已更新；定律及其陈述不变。"
     }
   ]
 }

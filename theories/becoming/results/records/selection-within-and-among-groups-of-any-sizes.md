@@ -27,7 +27,7 @@
 ## Does not show
 
 - Another weighting of the groups: the among-group part is the covariance of means with each member counted once (size weights); with each group counted once the decomposition differs and is not stated.
-- Mixing beyond the listing of the next generation: transmission that is not exact across groups, and how groups form and keep their differences (assortment), are not stated.
+- Mixing beyond the listing of the next generation: transmission that is not exact across groups, and how groups form and keep their differences short of descent from uniform groups (record groups-formed-by-descent states that case), are not stated.
 - That ending among groups in general leaves the surviving groups alike: shown in one witness only; surviving groups can differ in their within-group composition.
 - **Counterexample:** The equal-size reading by totals does not carry to unequal sizes: in ByMeans the groups' totals of holding back are alike, so concordAmong and discordAmong are zero, while the means' concordance carries all the whole's selection for it (ByMeans.by_means). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean)
 
@@ -43,7 +43,7 @@ Canonical source: [SelectionLevels.lean](../../../../experiments/integrated-corr
 <a id="next--下一步"></a>
 ## Next
 
-How groups form and keep their differences (assortment); transmission that is not exact across groups; the additive part of Fisher's theorem; an independent review.
+Groups founded mixed (assortment below one); transmission that is not exact across groups; the additive part of Fisher's theorem; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -66,6 +66,9 @@ The multilevel Price equation with unequal group sizes (Price 1972; Hamilton 197
 - related, not a proved adapter: [selection-within-and-among-groups](selection-within-and-among-groups.md). Its division, now the case of equal sizes.
 - related, not a proved adapter: [selection-among-groups-by-ending](selection-among-groups-by-ending.md). Ending among groups, here for any sizes and over two generations.
 - related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). Groups on coupled conditions end together; here groups alike in mean are not selected among.
+- related, not a proved adapter: [groups-formed-by-descent](groups-formed-by-descent.md). Groups formed by descent from uniform groups, which keep the differences this record's witness saw used up.
+
+**Used by:** [groups-formed-by-descent](groups-formed-by-descent.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -78,6 +81,7 @@ The multilevel Price equation with unequal group sizes (Price 1972; Hamilton 197
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | statement | [THE-THEORY-OF-EVOLUTION.md](../../chapters/THE-THEORY-OF-EVOLUTION.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json) | — |
 
 Aliases: `selection within and among groups of any sizes`, `大小任意之组的组内与组间选择`, `multilevel Price equation with unequal group sizes`, `contextual reading`, `Becoming.SelectionLevels.levels_sized`, `Becoming.SelectionLevels.rises_exact_iff_within_of_alike`, `Becoming.GroupEnding.Flow.rises_iff_inactive_sized`, `Becoming.GroupEnding.Exhausted.next_step`
 
@@ -85,6 +89,7 @@ Aliases: `selection within and among groups of any sizes`, `大小任意之组�
 ### History
 
 - 20 October 2026: added (EV7), selection within and among groups of any sizes, groups alike in mean, and ending for any sizes with a two-generation witness; study section 273.
+- 21 October 2026, EV11: groups formed by descent from uniform groups keep their differences (record groups-formed-by-descent, study section 281); this record's does-not-show item on assortment and next delta updated; its laws and their statements are unchanged.
 
 </details>
 

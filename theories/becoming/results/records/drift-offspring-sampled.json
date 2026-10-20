@@ -292,7 +292,7 @@
       "declarations": [
         "Becoming.GroupEnding.Flow.raises_of_inactive"
       ],
-      "sha256": "7c05d56b6569b13d17851b995673142d06dc11879da86cdf6303000f0f996d5e"
+      "sha256": "91afbb5b74ec6c8b35c21c6728f4f9a8bd778e41ce5be6ddfca2744e76b345ec"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T161918.649621Z/verification.json",
@@ -307,17 +307,23 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "1fd25551b03d4582e9416f597a87943cf38b24f6f198082f998e295e995718a4"
+      "sha256": "5c2b5e9db9c8497de5cf6e9dbed697dde328e917131cfdb4ce66310267f0f1f8"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
       "role": "statement",
-      "sha256": "0037da2b9f773777cfec3a571744df1bf2a1957e78e39be77d9da80404edd33d"
+      "sha256": "65757a112124544398d656391c164cebe7f3f2d3c48d3bdfdbcfa2c4260fb5fc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T164822.720919Z/verification.json",
       "role": "receipt",
       "sha256": "472f22eb151515ef908623bb53b9caa4eed75fd26e3c24268327cee3e3d92494",
+      "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
+      "role": "receipt",
+      "sha256": "ddd42ba8ce21f5b313e27b3b13c680ec5781cad4a8e9946af1822e60228f8a2f",
       "declarations": []
     }
   ],
@@ -345,7 +351,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T161918.649621Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GroupEnding",
       "success_pointer": "/status",
       "success_value": "passed"

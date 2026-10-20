@@ -392,6 +392,7 @@
         "selection-among-groups-by-ending",
         "groups-whose-conditions-are-coupled",
         "selection-within-and-among-groups-of-any-sizes",
+        "groups-formed-by-descent",
         "drift-offspring-sampled",
         "fixation-by-drift",
         "transmission-is-inheritance-and-need"

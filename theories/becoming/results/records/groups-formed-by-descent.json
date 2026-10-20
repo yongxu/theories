@@ -1,0 +1,415 @@
+{
+  "schema_version": 2,
+  "id": "groups-formed-by-descent",
+  "title": {
+    "en": "Groups formed by descent",
+    "zh": "由世系形成的组"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-20T18:18:37+00:00",
+  "statement": {
+    "en": "With exact transmission, groups formed by descent from groups uniform in an amount keep their values: nothing is selected within them and selection is among the lineages alone; where the lower lineages end, the mean never falls below where it started.",
+    "zh": "传递精确时，由在某量上均匀之组的世系形成的组保持其值：组内无选择，选择只在世系之间；较低世系终止时，均值从不低于起点。"
+  },
+  "laws": [
+    {
+      "en": "A group's lineage over listed generations: the group at the first generation and the offspring of its lineage at each later one; the lineages of a generation listed as groups list every later generation.",
+      "zh": "组在列出世代中的世系：第一代时即该组，此后每代为其上一代世系的后代；一代列为若干组时，其世系列出此后每一代。",
+      "declarations": [
+        "Becoming.SelectionLevels.lineage",
+        "Becoming.SelectionLevels.lineages",
+        "Becoming.SelectionLevels.whole_map",
+        "Becoming.SelectionLevels.flatMap_flatMap",
+        "Becoming.SelectionLevels.lineages_family",
+        "Becoming.SelectionLevels.lineages_whole",
+        "Becoming.SelectionLevels.lineage_within"
+      ]
+    },
+    {
+      "en": "With exact transmission every member of a lineage carries the value its group was founded at, so its mean stays there while it has members, and lineages of groups uniform in an amount stay uniform in it.",
+      "zh": "传递精确时，世系的每个成员都带有其组建立时的值，故世系有成员时其均值保持不变，在某量上均匀之组的世系保持均匀。",
+      "declarations": [
+        "Becoming.SelectionLevels.lineage_keeps",
+        "Becoming.SelectionLevels.lineage_value",
+        "Becoming.SelectionLevels.lineage_total",
+        "Becoming.SelectionLevels.lineages_uniform"
+      ]
+    },
+    {
+      "en": "Nothing is then selected within the lineages, for any weight, and the mean rises across any step exactly where the lineages' means select for the amount: selection among them is all there is.",
+      "zh": "此时世系内对任何权重都无选择，均值恰在各世系均值选择该量时上升：世系之间的选择即全部。",
+      "declarations": [
+        "Becoming.SelectionLevels.within_by_none_of_uniform",
+        "Becoming.SelectionLevels.rises_iff_means_of_uniform",
+        "Becoming.SelectionLevels.lineages_within_none",
+        "Becoming.SelectionLevels.rises_iff_lineages"
+      ]
+    },
+    {
+      "en": "On the base, where at each step the lineages founded lower are not active, nothing is discordant, the mean never falls below where it started over any number of steps, and it rises where a higher lineage leaves offspring beside a lower one.",
+      "zh": "在基上，若每一步建立值较低的世系皆不活跃，则无不一致，任意步数后均值不低于起点，较高世系在较低世系旁留下后代时均值上升。",
+      "declarations": [
+        "Becoming.GroupEnding.Flow.lineages_none_against",
+        "Becoming.GroupEnding.Flow.lineages_not_lower",
+        "Becoming.GroupEnding.Flow.lineages_raises"
+      ]
+    },
+    {
+      "en": "Witness: a group holding back and one not, whose members leave nothing; the mean rises from a half to one and stays there, where the mixed groups of Exhausted fell below their start.",
+      "zh": "见证：一个保留之组与一个不保留、成员不留后代之组；均值由一半升到一并保持，而 Exhausted 的混合组降到起点以下。",
+      "declarations": [
+        "Becoming.GroupEnding.Assorted.first_listed",
+        "Becoming.GroupEnding.Assorted.uniform",
+        "Becoming.GroupEnding.Assorted.kept"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Exact transmission at every step for the lineage laws; on the base, only active formations giving, descent, and as a hypothesis at each step that the members of the lineages founded lower are not active (supplied by the ending laws where their conditions ran into joint excess).",
+      "zh": "不加公理。世系定律需每一步传递精确；在基上，需只有活跃的形成给予、世系，以及作为每一步的假设，建立值较低之世系的成员不活跃（其条件遭遇共同过度时由终止定律给出）。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Groups founded mixed (assortment below one, relatedness within groups below one), migration between lineages and inexact transmission are not stated; so the share of selection among groups as a function of assortment (Hamilton 1975) is not stated.",
+      "zh": "混合建立的组（聚合低于一、组内亲缘低于一）、世系间迁移与不精确的传递未陈述；故组间选择份额作为聚合程度之函数（Hamilton 1975）未陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "Why the lower lineages end: their members not being active is a hypothesis wherever it enters.",
+      "zh": "较低世系为何终止：其成员不活跃在出现处都是假设。",
+      "kind": "scope"
+    },
+    {
+      "en": "That keeping what ending selected is better: the mean is read in the counts; ranking goes through the comparison C.",
+      "zh": "保住终止所选出的更好：均值在计数中读出；排序经由比较 C。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+      "detail": {
+        "en": "Groups formed across lineages need not keep their differences: in Exhausted the next groups are alike in holding back and the mean falls below where it started (Exhausted.next_step), while with the groups formed by descent it stays (Assorted.kept).",
+        "zh": "跨世系形成的组不必保持差异：Exhausted 中下一代的组在保留上相同，均值降到起点以下（Exhausted.next_step），而组由世系形成时均值保持（Assorted.kept）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T181337.294917Z): every declaration of Becoming.SelectionLevels and Becoming.GroupEnding has an empty axiom report; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 281; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T181337.294917Z）：Becoming.SelectionLevels 与 Becoming.GroupEnding 的每项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 281 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Groups founded mixed (assortment below one); migration between lineages; inexact transmission; an independent review.",
+    "zh": "混合建立的组（聚合低于一）；世系间迁移；不精确的传递；独立审查。"
+  },
+  "correspondence": {
+    "en": "Hamilton 1975 read the Price equation's among-group share through assortment (relatedness within groups): with groups formed by descent from uniform founders (clonal groups, the haystack limit) the within-group part vanishes and selection is among groups alone. Readings (the AI's): whether selection among groups accumulates or falls back is fixed by how the next groups are formed.",
+    "zh": "Hamilton 1975 经由同类聚合（组内亲缘）读 Price 方程的组间份额：组由均匀创建者的世系形成时（克隆组、干草堆极限），组内部分消失，选择只在组间。读法（AI 的）：组间选择是积累还是回落，由下一代的组如何形成决定。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+  "aliases": [
+    "groups formed by descent",
+    "lineages",
+    "assortment",
+    "complete assortment",
+    "由世系形成的组",
+    "同类聚合",
+    "Becoming.SelectionLevels.rises_iff_lineages",
+    "Becoming.GroupEnding.Flow.lineages_not_lower"
+  ],
+  "dependencies": [
+    {
+      "id": "selection-within-and-among-groups-of-any-sizes",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The lineage law is the sized division of Becoming.SelectionLevels with the groups' own terms vanishing (rises_iff_sized); the witness answers Exhausted.",
+        "zh": "世系定律即 Becoming.SelectionLevels 的按大小划分、各组自身之项为零（rises_iff_sized）；见证回应 Exhausted。"
+      },
+      "interface": {
+        "output": {
+          "en": "Selection within groups and among them for groups of any sizes.",
+          "zh": "大小任意之组的组内与组间选择。"
+        },
+        "input": {
+          "en": "Selection among lineages alone.",
+          "zh": "只在世系之间的选择。"
+        },
+        "conditions": {
+          "en": "A common multiple of the lineages' sizes; exact transmission.",
+          "zh": "各世系大小的公倍数；传递精确。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean"
+      }
+    },
+    {
+      "id": "selection-among-groups-by-ending",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The base laws read the ending laws' offspring_zero by lineage: a member not active has offspring number nothing.",
+        "zh": "基上的定律按世系读终止定律的 offspring_zero：不活跃的成员后代数为零。"
+      },
+      "interface": {
+        "output": {
+          "en": "Groups whose members are not active leave nothing.",
+          "zh": "成员不活跃的组不留后代。"
+        },
+        "input": {
+          "en": "The mean never falling back where the lower lineages end.",
+          "zh": "较低世系终止时均值从不回落。"
+        },
+        "conditions": {
+          "en": "Only active formations giving; descent.",
+          "zh": "只有活跃的形成给予；世系。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "selection-within-and-among-groups-of-any-sizes",
+      "detail": {
+        "en": "Groups formed across lineages, where ending used up the differences it acted on.",
+        "zh": "跨世系形成的组，终止在那里耗尽了它所作用的差异。"
+      }
+    },
+    {
+      "id": "selection-among-groups-by-ending",
+      "detail": {
+        "en": "Ending among groups, read here by lineage.",
+        "zh": "组间终止，此处按世系读。"
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "detail": {
+        "en": "The mean's course over generations, chained here over lineages.",
+        "zh": "均值在世代中的进程，此处沿世系连接。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SelectionLevels.AmongWins.among_wins",
+        "Becoming.SelectionLevels.AmongWins.offspring",
+        "Becoming.SelectionLevels.ByMeans.by_means",
+        "Becoming.SelectionLevels.ByMeans.common",
+        "Becoming.SelectionLevels.ByMeans.factor",
+        "Becoming.SelectionLevels.ByMeans.holding",
+        "Becoming.SelectionLevels.ByMeans.offspring",
+        "Becoming.SelectionLevels.ByMeans.unequal",
+        "Becoming.SelectionLevels.Member",
+        "Becoming.SelectionLevels.WithinWins.offspring",
+        "Becoming.SelectionLevels.WithinWins.within_wins",
+        "Becoming.SelectionLevels.among_by_one",
+        "Becoming.SelectionLevels.among_for_of_raises",
+        "Becoming.SelectionLevels.among_for_of_rises",
+        "Becoming.SelectionLevels.among_none_of_alike",
+        "Becoming.SelectionLevels.concordAmong",
+        "Becoming.SelectionLevels.concordMeans",
+        "Becoming.SelectionLevels.concordWithin",
+        "Becoming.SelectionLevels.concordWithinBy",
+        "Becoming.SelectionLevels.context",
+        "Becoming.SelectionLevels.context_length",
+        "Becoming.SelectionLevels.context_total",
+        "Becoming.SelectionLevels.discordAmong",
+        "Becoming.SelectionLevels.discordMeans",
+        "Becoming.SelectionLevels.discordWithin",
+        "Becoming.SelectionLevels.discordWithinBy",
+        "Becoming.SelectionLevels.equal",
+        "Becoming.SelectionLevels.flatMap_flatMap",
+        "Becoming.SelectionLevels.groups",
+        "Becoming.SelectionLevels.holds",
+        "Becoming.SelectionLevels.levels",
+        "Becoming.SelectionLevels.levels_of_alike",
+        "Becoming.SelectionLevels.levels_of_uniform",
+        "Becoming.SelectionLevels.levels_sized",
+        "Becoming.SelectionLevels.lineage",
+        "Becoming.SelectionLevels.lineage_keeps",
+        "Becoming.SelectionLevels.lineage_total",
+        "Becoming.SelectionLevels.lineage_value",
+        "Becoming.SelectionLevels.lineage_within",
+        "Becoming.SelectionLevels.lineages",
+        "Becoming.SelectionLevels.lineages_family",
+        "Becoming.SelectionLevels.lineages_uniform",
+        "Becoming.SelectionLevels.lineages_whole",
+        "Becoming.SelectionLevels.lineages_within_none",
+        "Becoming.SelectionLevels.means_none_of_alike",
+        "Becoming.SelectionLevels.meet",
+        "Becoming.SelectionLevels.mem_of_mem_context",
+        "Becoming.SelectionLevels.nil_of_length_zero",
+        "Becoming.SelectionLevels.none_iff",
+        "Becoming.SelectionLevels.none_iff_sized",
+        "Becoming.SelectionLevels.pairs_context",
+        "Becoming.SelectionLevels.rises_exact_iff_levels",
+        "Becoming.SelectionLevels.rises_exact_iff_sized",
+        "Becoming.SelectionLevels.rises_exact_iff_within_of_alike",
+        "Becoming.SelectionLevels.rises_iff",
+        "Becoming.SelectionLevels.rises_iff_lineages",
+        "Becoming.SelectionLevels.rises_iff_means_of_uniform",
+        "Becoming.SelectionLevels.rises_iff_sized",
+        "Becoming.SelectionLevels.rises_iff_within_of_alike",
+        "Becoming.SelectionLevels.shuffle_left",
+        "Becoming.SelectionLevels.shuffle_right",
+        "Becoming.SelectionLevels.square_eq_iff",
+        "Becoming.SelectionLevels.square_lt_iff",
+        "Becoming.SelectionLevels.square_split",
+        "Becoming.SelectionLevels.total_eq_of_mem",
+        "Becoming.SelectionLevels.whole",
+        "Becoming.SelectionLevels.whole_length",
+        "Becoming.SelectionLevels.whole_length_of_equal",
+        "Becoming.SelectionLevels.whole_map",
+        "Becoming.SelectionLevels.whole_nil",
+        "Becoming.SelectionLevels.whole_total",
+        "Becoming.SelectionLevels.whole_weighted",
+        "Becoming.SelectionLevels.within_by_none_of_uniform",
+        "Becoming.SelectionLevels.within_by_one",
+        "Becoming.SelectionLevels.within_for_of_rises",
+        "Becoming.SelectionLevels.within_none_of_uniform"
+      ],
+      "sha256": "9241e078267cbec92455476c9e88a7b021c5139930134d9d168fa964b01fde2d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.GroupEnding.Assorted.G",
+        "Becoming.GroupEnding.Assorted.first",
+        "Becoming.GroupEnding.Assorted.firstKids",
+        "Becoming.GroupEnding.Assorted.first_listed",
+        "Becoming.GroupEnding.Assorted.kept",
+        "Becoming.GroupEnding.Assorted.kids",
+        "Becoming.GroupEnding.Assorted.uniform",
+        "Becoming.GroupEnding.Ended",
+        "Becoming.GroupEnding.EndedBy",
+        "Becoming.GroupEnding.Exhausted.G",
+        "Becoming.GroupEnding.Exhausted.alike",
+        "Becoming.GroupEnding.Exhausted.first",
+        "Becoming.GroupEnding.Exhausted.firstKids",
+        "Becoming.GroupEnding.Exhausted.first_listed",
+        "Becoming.GroupEnding.Exhausted.first_step",
+        "Becoming.GroupEnding.Exhausted.holding",
+        "Becoming.GroupEnding.Exhausted.kids",
+        "Becoming.GroupEnding.Exhausted.laterKids",
+        "Becoming.GroupEnding.Exhausted.next",
+        "Becoming.GroupEnding.Exhausted.next_listed",
+        "Becoming.GroupEnding.Exhausted.next_step",
+        "Becoming.GroupEnding.Flow.all_end",
+        "Becoming.GroupEnding.Flow.coupled_end_together",
+        "Becoming.GroupEnding.Flow.endedBy_of_inactive",
+        "Becoming.GroupEnding.Flow.ended_of_family",
+        "Becoming.GroupEnding.Flow.ended_of_inactive",
+        "Becoming.GroupEnding.Flow.excess_childless",
+        "Becoming.GroupEnding.Flow.family_childless",
+        "Becoming.GroupEnding.Flow.group_childless",
+        "Becoming.GroupEnding.Flow.inactive_childless",
+        "Becoming.GroupEnding.Flow.lineages_none_against",
+        "Becoming.GroupEnding.Flow.lineages_not_lower",
+        "Becoming.GroupEnding.Flow.lineages_raises",
+        "Becoming.GroupEnding.Flow.offspring_zero",
+        "Becoming.GroupEnding.Flow.raises_of_inactive",
+        "Becoming.GroupEnding.Flow.rises_iff_inactive",
+        "Becoming.GroupEnding.Flow.rises_iff_inactive_sized",
+        "Becoming.GroupEnding.Outweighed.keeping_rises",
+        "Becoming.GroupEnding.Outweighed.offspring",
+        "Becoming.GroupEnding.Outweighed.outweighed",
+        "Becoming.GroupEnding.Outweighs.offspring",
+        "Becoming.GroupEnding.Outweighs.outweighs",
+        "Becoming.GroupEnding.among_not_against",
+        "Becoming.GroupEnding.equal",
+        "Becoming.GroupEnding.excess_pos_of_lt",
+        "Becoming.GroupEnding.keepingFirst",
+        "Becoming.GroupEnding.keeps",
+        "Becoming.GroupEnding.means_not_against",
+        "Becoming.GroupEnding.mem_whole",
+        "Becoming.GroupEnding.not_against_of_ended",
+        "Becoming.GroupEnding.pairs_pos",
+        "Becoming.GroupEnding.rises_iff_ended",
+        "Becoming.GroupEnding.rises_iff_ended_sized",
+        "Becoming.GroupEnding.rises_of_ended",
+        "Becoming.GroupEnding.uniform"
+      ],
+      "sha256": "91afbb5b74ec6c8b35c21c6728f4f9a8bd778e41ce5be6ddfca2744e76b345ec"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.SelectionTerm.Exact",
+        "Becoming.SelectionTerm.Generations.family",
+        "Becoming.SelectionTerm.Generations.raises_exact_iff",
+        "Becoming.SelectionTerm.Generations.not_lower_step",
+        "Becoming.SelectionTerm.Generations.not_lower",
+        "Becoming.SelectionTerm.lowered_exact",
+        "Becoming.SelectionTerm.discord_zero_of_below",
+        "Becoming.SelectionTerm.concord_alike",
+        "Becoming.SelectionTerm.discord_alike"
+      ],
+      "sha256": "d15e7af183adb0363e93f83759c0e2a9f4d1f94b40f331067e6d339d431dc8fe"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
+      "role": "receipt",
+      "sha256": "ddd42ba8ce21f5b313e27b3b13c680ec5781cad4a8e9946af1822e60228f8a2f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "0a838724437fd704ffb264dbab5a2c5d923147cd066fdea5c739bdaf86862ca4"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "5c2b5e9db9c8497de5cf6e9dbed697dde328e917131cfdb4ce66310267f0f1f8"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-EVOLUTION.md",
+      "role": "statement",
+      "sha256": "65757a112124544398d656391c164cebe7f3f2d3c48d3bdfdbcfa2c4260fb5fc"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.GroupEnding",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.SelectionTerm",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (EV11), groups formed by descent: lineages keep the values their groups were founded at, selection among them alone, and on the base the mean never falling back where the lower lineages end; study section 281.",
+      "zh": "2026年10月21日：新增（EV11），由世系形成的组：世系保持其组建立时的值，选择只在世系之间，在基上较低世系终止时均值从不回落；研究第 281 节。"
+    }
+  ]
+}

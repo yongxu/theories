@@ -12119,3 +12119,59 @@ Output -> input: on stocks no analysis had read, the state is the level, the rec
 ```
 
 **Self-review.** The freeze carried real stakes and two of its rules failed. The development on MQ3's and MQ4's stocks expected D1 to pass (97 of 141 stocks there), D2 near 0.65 with a warning that it could fall below half, and S3 to be open; on the new stocks S3 passed and D1 and D2 failed. The dry runs did their job before any value was read. They showed a catch blind to the stock passing MQ4's form of D1, so D1 was made to hold the catch's own level. They showed the plain F test firing on columns the law does not read, so the tests became robust with a free shift of the share. They showed S2's floor and S1's effect-size bound failing on the generator that is the hypothesis, so both became detection tests. The freeze records each change. The SSB reading is the weakest joint: the share of the catch on the spawning stock is not measured but fitted, and it is confounded with the lag's linear part. The rules carry that confound, at the cost of power, and the post-hoc split by share shows that it explains part of D2's shortfall and none of D1's. The post-hoc readings change no verdict. The most informative is that the lag's in-sample coefficients are the same on stocks no analysis had read as on the development stocks: giving closes about 0.3 of its gap to the draw each year in both. The lag's forecast gain, by contrast, cannot be told from damping.
+
+## 281. Groups formed by descent (EV11)
+
+```text
+Result(s): Becoming.SelectionLevels (55 theorems in 76 declarations) and Becoming.GroupEnding
+       (38 theorems in 55 declarations) state groups formed by descent. A group's lineage over
+       listed generations is the group at the first generation and, at each later one, the offspring of its lineage at
+       the one before (lineage, lineages); the lineages of a generation listed as groups list every later generation
+       (lineages_family, lineages_whole, through whole_map and flatMap_flatMap). With exact transmission every member
+       of a lineage carries the value its group was founded at (lineage_keeps, lineage_value; lineage_within keeps the
+       members in their generation), so a lineage's mean stays where it was founded while it has members
+       (lineage_total), and the lineages of groups uniform in an amount stay uniform in it (lineages_uniform). Nothing
+       is then selected within them, for any weight (lineages_within_none; for any groups each uniform and of any
+       sizes, within_by_none_of_uniform), and the mean rises across any step exactly where the lineages' means are
+       concordant with offspring number beyond their discordance (rises_iff_lineages, from
+       rises_iff_means_of_uniform): selection among the lineages is all there is, at every generation. On the base
+       (GroupEnding.Flow): where at a step every lineage founded lower than another has its members not active, a
+       member with less of the amount than another belongs to a lower lineage and leaves nothing, so nothing is
+       discordant (lineages_none_against, through discord_zero_of_below); where this holds at every step before T the
+       mean at T is not below where it started (lineages_not_lower, through not_lower_step and not_lower), and it
+       rises across a step wherever a lineage founded higher leaves offspring beside a lower one with members
+       (lineages_raises). Witness Assorted: a group holding back and a group not holding back whose members leave
+       nothing; the mean rises from a half to one and stays at one, above where it started, where EV7's Exhausted
+       (mixed groups regrouped by descent) fell below it. Record groups-formed-by-descent.
+Delta: chapter section 8.1 item 9's "how groups ... form and keep their differences" for groups formed by descent, and
+       the evolution chapter's next connection 1 (assortment). No new module: the lineage laws lie in
+       Becoming.SelectionLevels's generations section and the base laws beside GroupEnding's (board rule 9).
+Premises: exact transmission at every step for the lineage laws; for the base laws, only active formations giving
+       (Acting), descent (Descended) and, as a hypothesis at each step, that the lower lineages' members are not active
+       (which GroupEnding's ending laws supply where their conditions ran into joint excess).
+Evidence: core receipt 20261020T181337.294917Z (passed; Becoming.SelectionLevels and Becoming.GroupEnding every axiom report empty;
+       core 283 modules and 11,454 theorems, instances 7 and 567, applications 6 and 179; 19 Lean steps ran, 1,177 reused); the connectivity rerun (645 of 12,200 apart; the new apart roots registered; register check passes); render, check, links and tests.
+Boundary: complete assortment only: groups formed by descent from groups uniform in the amount. Groups founded mixed,
+       relatedness within groups below one, migration between lineages and inexact transmission are not stated; so
+       the general share of the among-group part as a function of assortment (Hamilton 1975's reading of the Price
+       equation by relatedness) is not stated. A lineage that has ended has no members and no factor: the sized law
+       reads the lineages that have members. Which lineages are not active is a hypothesis. Natural-number amounts,
+       finite lists, discrete generations.
+Output → input: EV7 showed that ending among groups can use up the differences it acts on where the next groups are
+       formed across lineages. Here the other limit: formed by descent from uniform groups, the groups keep their
+       differences, nothing is selected within them, and what ending selected among them is kept at every later step.
+       So whether selection among groups accumulates or falls back is fixed by how the next groups are formed, not by
+       the among-group step itself: the collective concern of chapter section 7 depends on assortment. Next: groups
+       founded mixed (assortment below one), migration, mutation, dependences formed by descent.
+```
+
+The kit is [`development/ev11-assortment/`](development/ev11-assortment/): this landing's text (`apply_text.py`, `study_ev11.txt`) and record (`make_record.py`), and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **Lineages list the generations.** `lineage G g (t+1) = (lineage G g t).flatMap (G.kids t)`. The union of the lineages at `t + 1` is the union over groups of the offspring of each lineage at `t`, which is the offspring of the union at `t` (`flatMap_flatMap`), which by induction is `G.family (t+1)`.
+- **Values kept.** A member of a lineage at `t + 1` is an offspring of a member at `t`, which belongs to `G.family t`; exact transmission gives it its parent's value, which by induction is the founding value.
+- **All among.** In `levels_sized` the groups' own terms vanish where every group is uniform (`concord_alike`, `discord_alike`), leaving `n² · concord + discordMeans = n² · discord + concordMeans` read through `rises_iff_sized`.
+- **Not lower.** With exact transmission nothing is lowered in transmission (`lowered_exact`); with no discordant pair, `mean_step` gives `size_{t+1} · sum_t ≤ size_t · sum_{t+1}`; chained over the steps (`not_lower`), `size_T · sum_0 ≤ size_0 · sum_T`.
+- **Rising.** A member of a higher lineage with offspring and a member of a lower lineage (which has none) form a concordant pair.
+- **Witness.** `Assorted`: members 0 and 2 hold back (amount one), 1 and 3 do not; at the first step 0 and 2 leave two each and 1 and 3 none. Later every member holding back leaves one offspring holding back (`Exhausted.laterKids`). Sizes 4, 4, 4; sums 2, 4, 4.
+
+**Self-review.** The lineage laws are elementary: with exact transmission, descent from uniform founders keeps uniformity, and Price's within-group part vanishes; this is the complete-assortment end of the reading of group selection by assortment (Hamilton 1975, who read the Price equation's among-group share through relatedness; the haystack and clonal-group models). What is stated beyond that is the base law over any number of steps: where lower lineages end, the mean never falls below where it started, against EV7's witness of mixed groups falling back. The law does not say why the lower lineages end (a hypothesis, supplied by GroupEnding's ending laws where conditions ran into joint excess), nor anything for assortment below one, where selection within groups re-enters at each step.

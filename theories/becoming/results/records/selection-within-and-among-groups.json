@@ -264,7 +264,7 @@
         "Becoming.SelectionLevels.within_for_of_rises",
         "Becoming.SelectionLevels.within_none_of_uniform"
       ],
-      "sha256": "8091ee28285e667c4b00955c9318b7062c26fd0e19dba5a8a3ce6e2a1e8ecd7d"
+      "sha256": "9241e078267cbec92455476c9e88a7b021c5139930134d9d168fa964b01fde2d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
@@ -284,19 +284,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "1fd25551b03d4582e9416f597a87943cf38b24f6f198082f998e295e995718a4"
+      "sha256": "5c2b5e9db9c8497de5cf6e9dbed697dde328e917131cfdb4ce66310267f0f1f8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
       "role": "receipt",
       "sha256": "687e540fc23d8795c2daa940d7ad073ef97b52c07a040e5a7d70999b591df612",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
+      "role": "receipt",
+      "sha256": "ddd42ba8ce21f5b313e27b3b13c680ec5781cad4a8e9946af1822e60228f8a2f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.SelectionLevels",
       "success_pointer": "/status",
       "success_value": "passed"

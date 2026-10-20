@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-305 registered results: 286 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 768 curated edges join 258 results to the results they draw on.
+306 registered results: 287 with a recorded Lean receipt (`recorded-checked`), 12 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 770 curated edges join 259 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -97,6 +97,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [giving-that-waits-on-giving][] ← <a id="giving-that-waits-on-giving--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [gluing-under-parity][] ← <a id="gluing-under-parity--claims-shown-in-context"></a>[claims-shown-in-context][] · <a id="gluing-under-parity--more-needs-renewers"></a>[more-needs-renewers][]
 - [graded-significance-and-priority][] ← <a id="graded-significance-and-priority--widening-as-what-every-weighting-ranks"></a>[widening-as-what-every-weighting-ranks][]
+- [groups-formed-by-descent][] ← <a id="groups-formed-by-descent--selection-within-and-among-groups-of-any-sizes"></a>[selection-within-and-among-groups-of-any-sizes][] · <a id="groups-formed-by-descent--selection-among-groups-by-ending"></a>[selection-among-groups-by-ending][]
 - [groups-whose-conditions-are-coupled][] ← <a id="groups-whose-conditions-are-coupled--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="groups-whose-conditions-are-coupled--selection-among-groups-by-ending"></a>[selection-among-groups-by-ending][]
 - [growth-constrained-fragmentation][] ← <a id="growth-constrained-fragmentation--risk-certificate-outcome-distinction"></a>[risk-certificate-outcome-distinction][] · <a id="growth-constrained-fragmentation--which-links-a-closure-needs"></a>[which-links-a-closure-needs][]
 - [guarded-program-question-recovery][] ← <a id="guarded-program-question-recovery--branching-tests-bisimulation"></a>[branching-tests-bisimulation][]
@@ -367,6 +368,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [giving-that-waits-on-giving]: theories/becoming/results/records/giving-that-waits-on-giving.md
 [gluing-under-parity]: theories/becoming/results/records/gluing-under-parity.md
 [graded-significance-and-priority]: theories/becoming/results/records/graded-significance-and-priority.md
+[groups-formed-by-descent]: theories/becoming/results/records/groups-formed-by-descent.md
 [groups-whose-conditions-are-coupled]: theories/becoming/results/records/groups-whose-conditions-are-coupled.md
 [growth-constrained-fragmentation]: theories/becoming/results/records/growth-constrained-fragmentation.md
 [guarded-program-question-recovery]: theories/becoming/results/records/guarded-program-question-recovery.md

@@ -69,7 +69,7 @@ Group selection by differential extinction (Wright 1945; Levins 1970 on metapopu
 - related, not a proved adapter: [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md). Ending for groups of any sizes, and a witness of ending using up the differences among groups it acts on.
 - related, not a proved adapter: [drift-offspring-sampled](drift-offspring-sampled.md). A rise by ending among groups, undone by a sampled generation with a bounded weight (Drift.Flow.ended_falls_back).
 
-**Used by:** [drift-offspring-sampled](drift-offspring-sampled.md) · [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md) · [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md)
+**Used by:** [drift-offspring-sampled](drift-offspring-sampled.md) · [groups-formed-by-descent](groups-formed-by-descent.md) · [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md) · [selection-within-and-among-groups-of-any-sizes](selection-within-and-among-groups-of-any-sizes.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -84,6 +84,7 @@ Group selection by differential extinction (Wright 1945; Levins 1970 on metapopu
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T130550.714830Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T155100.105164Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T181337.294917Z/verification.json) | — |
 
 Aliases: `selection among groups by ending`, `经由终止的组间选择`, `group selection by extinction`, `Becoming.GroupEnding.rises_iff_ended`, `Becoming.GroupEnding.Flow.excess_childless`, `Becoming.GroupEnding.Flow.raises_of_inactive`, `Becoming.GroupEnding.Flow.all_end`
 
