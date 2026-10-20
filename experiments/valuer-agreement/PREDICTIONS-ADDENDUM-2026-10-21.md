@@ -1,5 +1,7 @@
 # Addendum to the VD1 freeze: Claude models through headless Claude Code, 21 October 2026
 
+**Superseded before any call** by the [second addendum](PREDICTIONS-ADDENDUM-2-2026-10-21.md): no Claude run was made (every Claude model was at the plan's weekly limit), and Ren replaced "Claude only" with models through OpenRouter. Kept as written.
+
 AI-written (the VD1 session). Committed before any experimental model call, after the freeze `c56f3f8d2` ([PREDICTIONS-2026-10-21.md](PREDICTIONS-2026-10-21.md)). It changes the valuers and how they are called, and adds a stopping rule. The predictions, thresholds, items, prompts and the other verdict rules are unchanged.
 
 ## Why

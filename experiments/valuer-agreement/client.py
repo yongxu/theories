@@ -140,6 +140,100 @@ class ClaudeCLIClient:
                 "model_returned": None, "attempts": 6, "valid": False}
 
 
+class Pacer:
+    """At most `rpm` call starts in any sixty seconds, across threads (None: no pacing)."""
+
+    def __init__(self, rpm: int | None):
+        self.rpm, self.starts, self.lock = rpm, [], __import__("threading").Lock()
+
+    def wait(self) -> None:
+        if not self.rpm:
+            return
+        while True:
+            with self.lock:
+                now = time.monotonic()
+                self.starts = [t for t in self.starts if now - t < 60.0]
+                if len(self.starts) < self.rpm:
+                    self.starts.append(now)
+                    return
+                pause = 60.0 - (now - self.starts[0]) + 0.05
+            time.sleep(pause)
+
+
+class OpenRouterClient:
+    """OpenRouter chat completions. The key is read from OPENROUTER_API_KEY and sent only in the
+    Authorization header; it is never printed, logged or written."""
+
+    url = "https://openrouter.ai/api/v1/chat/completions"
+
+    def __init__(self, model: str, rpm: int | None = None, json_mode: str = "json_schema", seed: bool = True):
+        self.model = model
+        self.key = os.environ["OPENROUTER_API_KEY"].strip()
+        self.pacer = Pacer(rpm)
+        self.json_mode = json_mode
+        self.use_seed = seed
+
+    def body(self, item: dict, seed: int) -> dict:
+        b = {
+            "model": self.model,
+            "messages": [{"role": "system", "content": item["system"]}, {"role": "user", "content": item["user"]}],
+            "reasoning": {"effort": "low", "exclude": True},
+            "max_tokens": 4000,
+            "usage": {"include": True},
+        }
+        if self.json_mode == "json_schema":
+            b["response_format"] = {"type": "json_schema", "json_schema": schema(item["labels"])}
+        elif self.json_mode == "json_object":
+            b["response_format"] = {"type": "json_object"}
+        if self.use_seed:
+            b["seed"] = seed
+        return b
+
+    @staticmethod
+    def parse(text: str):
+        text = (text or "").strip()
+        if text.startswith("```"):
+            text = text.strip("`")
+            text = text[text.find("{"):]
+        start, end = text.find("{"), text.rfind("}")
+        return json.loads(text[start:end + 1])
+
+    def judge(self, item: dict, seed: int) -> dict:
+        data = json.dumps(self.body(item, seed)).encode()
+        delay = 5.0
+        for attempt in range(8):
+            self.pacer.wait()
+            req = urllib.request.Request(self.url, data=data, headers={
+                "Authorization": "Bearer " + self.key, "Content-Type": "application/json"})
+            try:
+                with urllib.request.urlopen(req, timeout=300) as r:
+                    d = json.load(r)
+                if "error" in d and "choices" not in d:
+                    raise ValueError("error body")
+                parsed = self.parse(d["choices"][0]["message"].get("content") or "")
+                if not valid(parsed, item["labels"]):
+                    raise ValueError("invalid")
+                return {**{k: parsed[k] for k in ("reason", "better", "continue_1", "continue_2")},
+                        "usage": d.get("usage", {}), "model_returned": d.get("model"),
+                        "provider": d.get("provider"), "attempts": attempt + 1, "valid": True}
+            except urllib.error.HTTPError as e:
+                text = e.read().decode(errors="replace")[:500]
+                if e.code == 429 and "per-day" in text.lower().replace(" ", "-"):
+                    raise LimitReached(f"{self.model}: daily cap")
+                if e.code in (408, 429, 500, 502, 503, 504):
+                    time.sleep(delay)
+                    delay = min(120.0, delay * 2)
+                    continue
+                raise RuntimeError(f"{self.model}: HTTP {e.code}")
+            except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, KeyError, IndexError,
+                    ValueError, TypeError):
+                time.sleep(delay)
+                delay = min(120.0, delay * 2)
+                continue
+        return {"better": None, "reason": "", "continue_1": [], "continue_2": [], "usage": {},
+                "model_returned": None, "attempts": 8, "valid": False}
+
+
 class ScriptedValuer:
     """Dry runs only, no model. Each standpoint draws weights on the six of each frame.
 
