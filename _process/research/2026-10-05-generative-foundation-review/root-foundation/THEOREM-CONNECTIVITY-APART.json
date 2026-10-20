@@ -2156,6 +2156,36 @@
    "module": "Becoming.Reproduction",
    "category": "model-witness",
    "reason": "three members with offspring numbers one to three, the middle one alone carrying an amount: no covariance while both vary; a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.SelectionLevels.lineage_total": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "a lineage founded at a value has its size times the value as its total at every generation: a law of any listed generations with exact transmission, read by the lineages of groups of the first generation"
+  },
+  "Becoming.SelectionLevels.lineages_within_none": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "lineages of groups uniform in an amount have nothing selected within them at any generation, for any weight: a law of any listed generations with exact transmission, read by the lineages of groups of the first generation"
+  },
+  "Becoming.SelectionLevels.rises_iff_lineages": {
+   "module": "Becoming.SelectionLevels",
+   "category": "general-structure",
+   "reason": "the mean rises exactly where the lineages' means select for the amount, selection among the lineages being all there is: a law of any listed generations with exact transmission, read by the lineages of groups of the first generation"
+  },
+  "Becoming.GroupEnding.Assorted.first_listed": {
+   "module": "Becoming.GroupEnding",
+   "category": "model-witness",
+   "reason": "the first generation of the assorted family is listed by its two groups: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.GroupEnding.Assorted.uniform": {
+   "module": "Becoming.GroupEnding",
+   "category": "model-witness",
+   "reason": "each group of the assorted family is uniform in holding back: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.GroupEnding.Assorted.kept": {
+   "module": "Becoming.GroupEnding",
+   "category": "model-witness",
+   "reason": "with the groups formed by descent, the group not holding back ends, holding back rises and stays above where it started, where the mixed groups of Exhausted fell back: a fact about one constructed family, not a law of the unfolding"
   }
  },
  "instances": {

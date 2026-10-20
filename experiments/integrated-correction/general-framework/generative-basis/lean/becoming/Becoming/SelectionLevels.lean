@@ -61,6 +61,21 @@ of equal sizes.
   (`rises_exact_iff_within_of_alike`), so an amount selected for among groups at one step is
   selected against at the next wherever the next groups are alike in it and selection within them
   goes against it.
+* **Groups formed by descent.** A group's lineage over listed generations is the group at the
+  first generation and, at each later one, the offspring of its lineage at the one before
+  (`lineage`, `lineages`); the lineages of a generation listed as groups list every later
+  generation (`lineages_family`, `lineages_whole`). With exact transmission, every member of a
+  lineage carries the value its group was founded at (`lineage_keeps`, `lineage_value`), so a
+  lineage's mean stays where it was founded for as long as it has members (`lineage_total`), and
+  lineages of groups uniform in an amount stay uniform in it (`lineages_uniform`). Nothing is then
+  selected within them at any generation (`lineages_within_none`; for groups of any sizes each
+  uniform, `within_by_none_of_uniform` and `rises_iff_means_of_uniform`), and the mean rises
+  across any step exactly where the lineages' means are concordant with offspring number beyond
+  their discordance (`rises_iff_lineages`): with groups formed by descent from groups uniform in
+  the amount, selection is among the lineages alone, at every generation, and the differences
+  among them stay as long as the lineages have members. Groups listed otherwise need not keep
+  them: regrouped across lineages, groups can come out alike in mean, as in
+  `GroupEnding.Exhausted`.
 * **Witnesses.** Two groups of two, the amount one at a member that holds back and none at the
   others. In both, the one holding back leaves fewer offspring than its groupmate, so selection
   within goes against holding back. Where the group without it leaves no offspring, selection
@@ -76,7 +91,8 @@ The weights are any natural numbers; with offspring numbers they are the selecti
 of `Becoming.SelectionTerm` divided by level. Nothing is supposed about what the groups are or
 why their members' offspring numbers differ: which level wins is read off the counts, not
 explained. Modelling choices: natural-number weights and amounts, finite families as lists,
-a common multiple of the groups' sizes in place of rational means. No ethical predicate, ranking or axiom
+a common multiple of the groups' sizes in place of rational means, and for lineages exact
+transmission at every step. No ethical predicate, ranking or axiom
 occurs; every declaration has an empty axiom report.
 -/
 
@@ -561,6 +577,147 @@ theorem among_for_of_raises (G : Generations α) {t m : Nat} (gs : List (List α
   Nat.lt_of_add_lt_add_left (Nat.lt_of_le_of_lt
     (Nat.add_le_add_right (Nat.mul_le_mul_left _ against) _)
     ((rises_exact_iff_levels G gs listed equal exact).mp raises))
+
+/-! ## Groups formed by descent -/
+
+/-- Where every group is uniform in amount, nothing is selected within the groups, each read by a
+factor of its own. -/
+theorem within_by_none_of_uniform {gs : List (List α)} {c : List α → Nat} {w a : α → Nat}
+    (uniform : ∀ g, g ∈ gs → ∃ v, ∀ p, p ∈ g → a p = v) :
+    concordWithinBy gs c w a = 0 ∧ discordWithinBy gs c w a = 0 :=
+  ⟨total_zero_of fun g mg => match uniform g mg with
+      | ⟨_, same⟩ => (congrArg (c g * ·) (concord_alike same w)).trans (Nat.mul_zero _),
+    total_zero_of fun g mg => match uniform g mg with
+      | ⟨_, same⟩ => (congrArg (c g * ·) (discord_alike same w)).trans (Nat.mul_zero _)⟩
+
+/-- So, for groups of any sizes each uniform in amount, the whole selects for the amount exactly
+where the groups' means are concordant with offspring number beyond their discordance: all of it
+is selection among groups. -/
+theorem rises_iff_means_of_uniform (gs : List (List α)) (w a : α → Nat) (c : List α → Nat)
+    {n : Nat} (common : ∀ g, g ∈ gs → g.length * c g = n) (pos : 0 < n)
+    (uniform : ∀ g, g ∈ gs → ∃ v, ∀ p, p ∈ g → a p = v) :
+    discord (whole gs) w a < concord (whole gs) w a ↔ discordMeans gs c w a < concordMeans gs c w a := by
+  have h := rises_iff_sized gs w a c common pos
+  rw [(within_by_none_of_uniform (c := c) (w := w) uniform).1,
+    (within_by_none_of_uniform (c := c) (w := w) uniform).2, Nat.mul_zero, Nat.zero_add,
+    Nat.zero_add] at h
+  exact h
+
+/-- A group's lineage over listed generations: the group at the first generation, and at each
+later one the offspring of its lineage at the one before. -/
+def lineage (G : Generations α) (g : List α) : Nat → List α
+  | 0 => g
+  | t + 1 => (lineage G g t).flatMap (G.kids t)
+
+/-- Groups formed by descent: each group of the first generation read by its lineage. -/
+def lineages (G : Generations α) (gs : List (List α)) (t : Nat) : List (List α) :=
+  gs.map fun g => lineage G g t
+
+/-- Families read by groups joined after a map. -/
+theorem whole_map {β : Type} (f : β → List α) : ∀ gs : List β, whole (gs.map f) = gs.flatMap f
+  | [] => rfl
+  | g :: gs => show f g ++ whole (gs.map f) = f g ++ gs.flatMap f from
+      congrArg (f g ++ ·) (whole_map f gs)
+
+/-- Offspring of a joined family are the offspring of each part, joined. -/
+theorem flatMap_flatMap {β : Type} (F : β → List α) (k : α → List α) :
+    ∀ gs : List β, (gs.flatMap F).flatMap k = gs.flatMap fun g => (F g).flatMap k
+  | [] => rfl
+  | g :: gs => show (F g ++ gs.flatMap F).flatMap k = (F g).flatMap k ++ _ from
+      (flatMap_join (F g) (gs.flatMap F) k).trans
+        (congrArg ((F g).flatMap k ++ ·) (flatMap_flatMap F k gs))
+where
+  flatMap_join : ∀ (l m : List α) (k : α → List α), (l ++ m).flatMap k = l.flatMap k ++ m.flatMap k
+    | [], _, _ => rfl
+    | x :: l, m, k => show k x ++ (l ++ m).flatMap k = (k x ++ l.flatMap k) ++ m.flatMap k from
+        (congrArg (k x ++ ·) (flatMap_join l m k)).trans (ListTests.append_assoc _ _ _).symm
+
+/-- A generation listed as groups is, at every later generation, the union of their lineages. -/
+theorem lineages_family (G : Generations α) {gs : List (List α)} (listed : whole gs = G.family 0) :
+    ∀ t, (gs.flatMap fun g => lineage G g t) = G.family t
+  | 0 => listed
+  | t + 1 => (flatMap_flatMap (fun g => lineage G g t) (G.kids t) gs).symm.trans
+      (congrArg (List.flatMap (G.kids t)) (lineages_family G listed t))
+
+/-- So the lineages list each later generation by groups. -/
+theorem lineages_whole (G : Generations α) {gs : List (List α)} (listed : whole gs = G.family 0)
+    (t : Nat) : whole (lineages G gs t) = G.family t :=
+  (whole_map _ gs).trans (lineages_family G listed t)
+
+/-- A lineage's members belong to their generation. -/
+theorem lineage_within (G : Generations α) {g : List α} (within : ∀ p, p ∈ g → p ∈ G.family 0) :
+    ∀ t p, p ∈ lineage G g t → p ∈ G.family t
+  | 0, p, mp => within p mp
+  | t + 1, _, mp => match ListTests.mem_flatMap_iff.mp mp with
+    | ⟨q, mq, mk⟩ => ListTests.mem_flatMap_iff.mpr ⟨q, lineage_within G within t q mq, mk⟩
+
+/-- With exact transmission, a lineage founded by a group uniform at a value keeps that value at
+every generation: whatever offspring it leaves carry it. -/
+theorem lineage_keeps (G : Generations α) {g : List α} {v : Nat}
+    (within : ∀ p, p ∈ g → p ∈ G.family 0)
+    (exact : ∀ t, Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    (founded : ∀ p, p ∈ g → G.amount 0 p = v) : ∀ t p, p ∈ lineage G g t → G.amount t p = v
+  | 0, p, mp => founded p mp
+  | t + 1, p, mp => match ListTests.mem_flatMap_iff.mp mp with
+    | ⟨q, mq, mk⟩ => (exact t q (lineage_within G within t q mq) p mk).trans
+        (lineage_keeps G within exact founded t q mq)
+
+/-- So its total is its size times the value: its mean stays where it was founded for as long as
+it has members. -/
+theorem lineage_total (G : Generations α) {g : List α} {v : Nat}
+    (within : ∀ p, p ∈ g → p ∈ G.family 0)
+    (exact : ∀ t, Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    (founded : ∀ p, p ∈ g → G.amount 0 p = v) (t : Nat) :
+    total (lineage G g t) (G.amount t) = (lineage G g t).length * v :=
+  (total_eq_of_mem (lineage_keeps G within exact founded t)).trans (total_const v _)
+
+/-- Read by groups of the first generation each founded at a value, with exact transmission:
+every member of a group's lineage, at every generation, carries the value its group was founded
+at. -/
+theorem lineage_value (G : Generations α) {gs : List (List α)} (listed : whole gs = G.family 0)
+    (exact : ∀ t, Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    {v : List α → Nat} (founded : ∀ g, g ∈ gs → ∀ p, p ∈ g → G.amount 0 p = v g) {g : List α}
+    (mg : g ∈ gs) (t : Nat) {p : α} (mp : p ∈ lineage G g t) : G.amount t p = v g :=
+  lineage_keeps G (fun _ mq => listed ▸ ListTests.mem_flatMap_iff.mpr ⟨g, mg, mq⟩) exact
+    (founded g mg) t p mp
+
+/-- Groups uniform in an amount at the first generation, with exact transmission: their lineages
+are uniform in it at every generation. -/
+theorem lineages_uniform (G : Generations α) {gs : List (List α)} (listed : whole gs = G.family 0)
+    (exact : ∀ t, Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    (uniform : ∀ g, g ∈ gs → ∃ v, ∀ p, p ∈ g → G.amount 0 p = v) (t : Nat) :
+    ∀ h, h ∈ lineages G gs t → ∃ v, ∀ p, p ∈ h → G.amount t p = v :=
+  fun _ mh => match preimage_of_mem_map mh with
+  | ⟨g, mg, same⟩ => match uniform g mg with
+    | ⟨v, founded⟩ => ⟨v, same ▸ lineage_keeps G
+        (fun _ mp => listed ▸ ListTests.mem_flatMap_iff.mpr ⟨g, mg, mp⟩) exact founded t⟩
+
+/-- So at every generation nothing is selected within the lineages, for any weight. -/
+theorem lineages_within_none (G : Generations α) {gs : List (List α)}
+    (listed : whole gs = G.family 0)
+    (exact : ∀ t, Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    (uniform : ∀ g, g ∈ gs → ∃ v, ∀ p, p ∈ g → G.amount 0 p = v) (t : Nat) (w : α → Nat) :
+    concordWithin (lineages G gs t) w (G.amount t) = 0 ∧
+      discordWithin (lineages G gs t) w (G.amount t) = 0 :=
+  within_none_of_uniform (lineages_uniform G listed exact uniform t)
+
+/-- And the mean rises across any step exactly where the lineages' means, read by a common
+multiple `n` of their sizes, are concordant with offspring number beyond their discordance: with
+groups formed by descent from groups uniform in the amount, selection is among the lineages alone
+at every generation. (A lineage that has ended has no members and no factor; read the lineages
+that have members.) -/
+theorem rises_iff_lineages (G : Generations α) {gs : List (List α)}
+    (listed : whole gs = G.family 0)
+    (exact : ∀ t, Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    (uniform : ∀ g, g ∈ gs → ∃ v, ∀ p, p ∈ g → G.amount 0 p = v) {t n : Nat}
+    (c : List α → Nat) (common : ∀ h, h ∈ lineages G gs t → h.length * c h = n) (pos : 0 < n) :
+    G.Raises t ↔
+      discordMeans (lineages G gs t) c (G.offspringNumber t) (G.amount t) <
+        concordMeans (lineages G gs t) c (G.offspringNumber t) (G.amount t) :=
+  (G.raises_exact_iff (exact t)).trans (by
+    unfold Generations.concordAt Generations.discordAt
+    rw [← lineages_whole G listed t]
+    exact rises_iff_means_of_uniform _ _ _ c common pos (lineages_uniform G listed exact uniform t))
 
 /-! ## Witnesses -/
 

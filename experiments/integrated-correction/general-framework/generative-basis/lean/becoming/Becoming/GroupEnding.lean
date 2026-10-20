@@ -53,6 +53,15 @@ leaves no descendant.
   each leaves no offspring and nothing is selected among them (`Flow.coupled_end_together`).
   So ending selects among groups only between families: where the groups with less of an
   amount depend on a family that ran into excess, they leave nothing (`Flow.ended_of_family`).
+* **Groups formed by descent.** Read a generation by groups each founded at a value of the
+  amount, and each later generation by their lineages (`SelectionLevels.lineages`), with exact
+  transmission. Where at a step every lineage founded lower than another has its members not
+  active, a member with less of the amount than another belongs to a lower lineage and leaves
+  nothing, so nothing is discordant across the step (`Flow.lineages_none_against`). Where this
+  holds at every step before `T`, the mean at `T` is not below where it started
+  (`Flow.lineages_not_lower`), and it rises across a step wherever a lineage founded higher leaves
+  offspring beside a lower lineage that has members (`Flow.lineages_raises`). Lineages keep what
+  ending selected among them; the groups of `Exhausted`, formed across lineages, did not.
 * **Witnesses.** Two groups of two: one keeping, holding back from its condition, and one whose
   condition ended, its members leaving no offspring. In the keeping group the member holding back
   leaves one offspring and its groupmate two, so within the group selection goes against holding
@@ -63,7 +72,11 @@ leaves no descendant.
   rises; the offspring of each keeping group, forming the next groups, are alike in holding back,
   so at the next step nothing is selected among them, selection within goes against it, and the
   mean falls below where it started. Selection among groups by ending uses up the differences
-  among groups it acts on.
+  among groups it acts on where the next groups are formed across them. With the groups formed by
+  descent instead (`Assorted`): a group holding back and one not, whose members leave nothing; the
+  mean rises from a half to one, the lineage holding back is all that is left, nothing is
+  selected within it, and the mean stays at one, above where it started, although holding back
+  leaves fewer offspring than not holding back would.
 
 The amount is any reading; which group's condition, or which family of conditions, runs into
 joint excess, and why, is a hypothesis wherever it enters, as is which conditions the groups'
@@ -367,6 +380,68 @@ theorem all_end (acting : L.Acting W) {G : Generations X}
   (G.born_eq t).symm.trans (total_zero_of fun p mp =>
     offspring_zero acting descended mp (inactive p mp))
 
+/-- Groups formed by descent: a generation listed as groups each founded at a value `v` of the
+amount, with exact transmission. Where at a step every lineage founded lower than another has its
+members not active, nothing is discordant across the step: a member with less of the amount than
+another belongs to a lower lineage and leaves nothing. -/
+theorem lineages_none_against (acting : L.Acting W) {G : Generations X}
+    (descended : SelectionTerm.Flow.Descended L W G) {gs : List (List X)}
+    (listed : whole gs = G.family 0)
+    (exact : ∀ t, Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    {v : List X → Nat} (founded : ∀ g, g ∈ gs → ∀ p, p ∈ g → G.amount 0 p = v g) {t : Nat}
+    (inactive : ∀ g h, g ∈ gs → h ∈ gs → v h < v g → ∀ p, p ∈ lineage G h t → ¬ W.active t p) :
+    G.discordAt t = 0 :=
+  show discord (G.family t) (G.offspringNumber t) (G.amount t) = 0 from
+  discord_zero_of_below fun p q mp mq less =>
+    match ListTests.mem_flatMap_iff.mp ((congrArg (p ∈ ·) (lineages_family G listed t)).mpr mp),
+      ListTests.mem_flatMap_iff.mp ((congrArg (q ∈ ·) (lineages_family G listed t)).mpr mq) with
+    | ⟨h, mh, ph⟩, ⟨g, mg, qg⟩ => by
+      rw [lineage_value G listed exact founded mh t ph,
+        lineage_value G listed exact founded mg t qg] at less
+      rw [offspring_zero acting descended mp (inactive g h mg mh less p ph)]
+      exact Nat.zero_le _
+
+/-- So, where at every step before `T` the lineages founded lower than another are not active,
+the mean amount at `T` is not below where it started: groups formed by descent keep what ending
+selected among them, at every step. -/
+theorem lineages_not_lower (acting : L.Acting W) {G : Generations X}
+    (descended : SelectionTerm.Flow.Descended L W G) {gs : List (List X)}
+    (listed : whole gs = G.family 0)
+    (exact : ∀ t, Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    {v : List X → Nat} (founded : ∀ g, g ∈ gs → ∀ p, p ∈ g → G.amount 0 p = v g) {T : Nat}
+    (inactive : ∀ t, t < T → ∀ g h, g ∈ gs → h ∈ gs → v h < v g →
+      ∀ p, p ∈ lineage G h t → ¬ W.active t p) :
+    G.size T * G.sum 0 ≤ G.size 0 * G.sum T :=
+  G.not_lower T fun t lt => G.not_lower_step
+    (lineages_none_against acting descended listed exact founded (inactive t lt))
+    (lowered_exact (exact t))
+
+/-- And the mean rises across a step wherever a lineage founded higher leaves offspring beside a
+lineage founded lower that has members. -/
+theorem lineages_raises (acting : L.Acting W) {G : Generations X}
+    (descended : SelectionTerm.Flow.Descended L W G) {gs : List (List X)}
+    (listed : whole gs = G.family 0)
+    (exact : ∀ t, Exact (G.family t) (G.kids t) (G.amount t) (G.amount (t + 1)))
+    {v : List X → Nat} (founded : ∀ g, g ∈ gs → ∀ p, p ∈ g → G.amount 0 p = v g) {t : Nat}
+    (inactive : ∀ g h, g ∈ gs → h ∈ gs → v h < v g → ∀ p, p ∈ lineage G h t → ¬ W.active t p)
+    {g h : List X} (mg : g ∈ gs) (mh : h ∈ gs) (less : v h < v g) {p q : X}
+    (mp : p ∈ lineage G g t) (mq : q ∈ lineage G h t) (leaves : 0 < G.offspringNumber t p) :
+    G.Raises t := by
+  have pin : p ∈ G.family t :=
+    (congrArg (p ∈ ·) (lineages_family G listed t)).mp (ListTests.mem_flatMap_iff.mpr ⟨g, mg, mp⟩)
+  have qin : q ∈ G.family t :=
+    (congrArg (q ∈ ·) (lineages_family G listed t)).mp (ListTests.mem_flatMap_iff.mpr ⟨h, mh, mq⟩)
+  have none : G.offspringNumber t q = 0 :=
+    offspring_zero acting descended qin (inactive g h mg mh less q mq)
+  have more : G.amount t q < G.amount t p := by
+    rw [lineage_value G listed exact founded mg t mp, lineage_value G listed exact founded mh t mq]
+    exact less
+  apply (G.raises_exact_iff (exact t)).mpr
+  rw [lineages_none_against acting descended listed exact founded inactive]
+  exact pairs_pos (F := fun p' q' => excess (G.offspringNumber t p') (G.offspringNumber t q') *
+      excess (G.amount t p') (G.amount t q')) pin qin
+    (Nat.mul_pos (excess_pos_of_lt (none ▸ leaves)) (excess_pos_of_lt more))
+
 end Flow
 
 /-! ## Witnesses -/
@@ -520,6 +595,48 @@ theorem next_step :
   ⟨alike, rfl, rfl, rfl, rfl, by decide, by decide⟩
 
 end Exhausted
+
+namespace Assorted
+
+/-- The first generation by descent-formed groups: a group holding back (the even members) and a
+group not holding back (the odd), whose members leave nothing. -/
+def firstKids (p : Nat) : List Nat := bif p == 0 then [10, 12] else bif p == 2 then [20, 22] else []
+
+def kids : Nat → Nat → List Nat
+  | 0, p => firstKids p
+  | _ + 1, p => Exhausted.laterKids p
+
+def G : Generations Nat := ⟨[0, 2, 1, 3], kids, Exhausted.holding⟩
+
+def first : List (List Nat) := [[0, 2], [1, 3]]
+
+theorem first_listed : whole first = G.family 0 := rfl
+
+theorem uniform : ∀ g, g ∈ first → ∃ c, ∀ p, p ∈ g → G.amount 0 p = c
+  | _, .head _ => ⟨1, fun p mp => match p, mp with
+      | _, .head _ => rfl
+      | _, .tail _ (.head _) => rfl
+      | _, .tail _ (.tail _ mem) => nomatch mem⟩
+  | _, .tail _ (.head _) => ⟨0, fun p mp => match p, mp with
+      | _, .head _ => rfl
+      | _, .tail _ (.head _) => rfl
+      | _, .tail _ (.tail _ mem) => nomatch mem⟩
+  | _, .tail _ (.tail _ mem) => nomatch mem
+
+/-- At the first step the group not holding back leaves nothing and the mean rises (from a half
+to one). Its lineage has ended; the lineage holding back is all there is, nothing is selected
+within it at the next step, and later steps keep the mean at one: above where it started, where
+the mixed groups of `Exhausted` fell below it. Holding back leaves fewer offspring than not
+holding back would, but no lineage of the next generations holds both. -/
+theorem kept :
+    lineages G first 1 = [[10, 12, 20, 22], []] ∧ G.Raises 0 ∧
+      concordWithin (lineages G first 1) (G.offspringNumber 1) (G.amount 1) = 0 ∧
+      discordWithin (lineages G first 1) (G.offspringNumber 1) (G.amount 1) = 0 ∧
+      ¬ G.Raises 1 ∧ G.size 2 * G.sum 1 = G.size 1 * G.sum 2 ∧
+      G.size 2 * G.sum 0 < G.size 0 * G.sum 2 :=
+  ⟨rfl, by decide, rfl, rfl, by decide, by decide, by decide⟩
+
+end Assorted
 
 end GroupEnding
 

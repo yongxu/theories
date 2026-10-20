@@ -726,8 +726,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   among the groups goes for it, and conversely; groups uniform in amount leave only selection
   among them, groups alike in total only k times selection within. Over listed generations with
   exact transmission, a generation listed as such groups raises its mean exactly where, read by
-  offspring number, the two levels together select for the amount. Witnesses: two groups of two
-  with one member holding back, the whole going either way.
+  offspring number, the two levels together select for the amount. Groups formed by descent (a
+  group's lineage over generations): with exact transmission, lineages of groups uniform in an
+  amount keep the value each was founded at, the family is the union of the lineages, nothing is
+  selected within them, and the mean rises exactly where the lineages' means select for the
+  amount. Witnesses: two groups of two with one member holding back, the whole going either way.
 * `Becoming.GroupEnding` (L1): selection among groups through conditions of their own. Where
   every group with less of an amount than another leaves no offspring, nothing is discordant
   among the groups, so the whole selects for the amount exactly where k times the within-group
@@ -740,8 +743,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   by every group), the next generation is empty. Groups whose members depend on conditions of
   one family, its renewal gated on the family read as one, end together after the family's
   excess, with nothing selected among them, so ending selects among groups only between such
-  families. Witnesses: selection within the keeping group
-  outweighed, and outweighing.
+  families. Groups formed by descent from groups uniform in an amount, with exact transmission:
+  where at each step the lineages founded lower than another are not active, nothing is
+  discordant, the mean never falls below where it started over any number of steps, and it rises
+  wherever a lineage founded higher leaves offspring beside a lower one with members. Witnesses:
+  selection within the keeping group outweighed, and outweighing; mixed groups regrouped by
+  descent falling back, and lineages keeping what ending selected.
 * `Becoming.Drift` (L1): offspring sampled rather than listed. A next generation of two kinds
   sampled n times from listed offspring, p of the first kind and q of the second, each sampling
   a course of `Becoming.Typicality` weighed by the ways of drawing it: on average the sampled
