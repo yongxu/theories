@@ -746,8 +746,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   back to h/N or below weigh, times n² · g², at most N² · n · p · q · (p + q)^n, and at least q^n,
   the samplings losing the first kind, at every n; over listed generations the same for a step
   raising the mean of an amount held or not, and on the base where that step is ending among
-  groups (the groups with less of the amount not active). Witness: one draw falling back with
-  weight two of five.
+  groups (the groups with less of the amount not active). Over many sampled generations of a
+  population of N, the final count summed over the histories is its start times the whole
+  weight, the ends absorb, the histories still varied after k generations weigh at most r^k with
+  r + 2 = N^N, and the histories fixing the first kind weigh, times N, within N · r^k of h times
+  the whole weight: drift ends variation and fixes each kind with its starting share h/N.
+  Witnesses: one draw falling back with weight two of five; two members over one generation.
 * `Becoming.Space` (L1): the whole and its parts, one structure for Ren's proposal (an AI
   reading). The space is every world, a world being relata read with one kind, their flow
   and their web. The laws stated with no premise hold of every world; in a finite world

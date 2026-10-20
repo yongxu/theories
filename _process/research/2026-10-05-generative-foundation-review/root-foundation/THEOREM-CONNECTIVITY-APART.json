@@ -267,11 +267,6 @@
    "category": "model-witness",
    "reason": "A fact about one constructed relation on three steps (first and last joined), not a world's footprint."
   },
-  "Becoming.Typicality.total_congr_mem": {
-   "module": "Becoming.Typicality",
-   "category": "support",
-   "reason": "a list lemma: sums over a list agree where the summands agree on its members"
-  },
   "Becoming.Unclaimed.held_is_needed": {
    "module": "Becoming.Standpoints",
    "category": "model-witness",
@@ -2126,6 +2121,21 @@
    "module": "Becoming.Drift",
    "category": "model-witness",
    "reason": "one draw from three and two after a step raising the share from a half: the draw of the second kind falls back, weighing two of five; a fact about one constructed sampling, not a law of the unfolding"
+  },
+  "Becoming.Drift.fixation": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "N times the histories fixing the first kind lies within N r^k below h (N^N)^k and at most it, so the fixing share tends to the starting share h/N: a law of any two-kind population of N sampled generation after generation from itself, counted by Typicality's courses, with no world"
+  },
+  "Becoming.Drift.sampled_one": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "the histories of k sampled generations weigh (N^N)^k together: a law of any two-kind population of N sampled generation after generation from itself, counted by Typicality's courses, with no world"
+  },
+  "Becoming.Drift.TwoMembers.one_generation": {
+   "module": "Becoming.Drift",
+   "category": "model-witness",
+   "reason": "two members, one of each kind, one generation: one history fixes, one loses, two stay varied; a fact about one constructed population, not a law of the unfolding"
   }
  },
  "instances": {

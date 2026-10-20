@@ -1,0 +1,50 @@
+## {N}. Fixation by drift (EV9)
+
+```text
+Result(s): Becoming.Drift now states drift over many generations ({THEOREMS} theorems in {DECLS} declarations in the
+       module). A population of N, h of the first kind, is sampled generation after generation, each next
+       generation N draws from the last weighted by its counts (sampled N f k h: the total over the histories of k
+       generations, each weighed by its ways of drawing, of a reading f of the final count). The histories weigh
+       (N^N)^k together (sampled_one). No direction without selection: summed over the histories the final count is
+       h (N^N)^k (sampled_count, from expected_ones through weighted_ones, by induction over generations). The ends
+       absorb: from none or from all, every history stays there (sampled_none, sampled_all, through from_none and
+       from_all, the samplings from one kind alone). Drift ends variation: from a varied population the samplings
+       fixing and losing the first kind weigh at least one each (whole_weight beside lost_weight), so the histories
+       still varied after k generations weigh at most r^k with r + 2 = N^N (varied_vanishes, through the
+       per-sampling bound varied_step). Hence fixation: N times the histories fixing the first kind is at most
+       h (N^N)^k, and with N r^k at least it (fixation, through count_le and fixed_le and the linearity of sampled,
+       sampled_le, sampled_add, sampled_mul): the fixing share tends to h/N, geometrically. Witness TwoMembers: two
+       members, one of each kind, one generation: of the four histories one fixes, one loses, two stay varied.
+       Record {RID}.
+Delta: the evolution chapter's next connection 3 in part (drift over many generations, the neutral case) and chapter
+       section 8.1 item 9's "fixation and loss over many sampled generations". No new module: the generations of
+       sampling extend Becoming.Drift's one generation (board rule 9), each generation its first moment.
+Premises: two kinds; a constant population size N; each generation N draws with replacement from the last, with no
+       selection or mutation in the draw (the neutral Wright-Fisher course); natural-number counts; discrete
+       generations; for the geometric bound N at least two (r + 2 = N^N).
+Evidence: core receipt {RECEIPT} (passed; Becoming.Drift every axiom report empty; {CORE_LINE}); the connectivity
+       rerun ({APART}); render, check, links and tests.
+Boundary: counting weighs histories and supposes no chance (Typicality's boundary). The geometric rate r/N^N is
+       crude (it uses only the two samplings of one kind alone per generation; the true rate is about 1 - 1/N per
+       generation for the heterozygosity), so the time to fixation is bounded, not stated. Selection in the draw
+       (sampling weighted by offspring number and count together), mutation (no end absorbs), more than two kinds and
+       changing population size are not stated. The fixation share h/N is the neutral case only: where selection
+       acts the share differs (Kimura's fixation probability), not stated here.
+Output → input: the drift line now reaches its classical end: without selection a kind is fixed with exactly its
+       starting share in the limit, and every variation ends. Read with the selection laws: selection gives a
+       direction, drift gives none but ends variation, and what ending among groups uses up (EV7) drift uses up too;
+       variation is kept only where something renews it (transmission not exact, mutation, or groups formed anew).
+       Next: drift with selection in one draw, mutation (transmission not exact), the additive part of Fisher's
+       theorem.
+```
+
+The kit is [`development/ev9-fixation/`](development/ev9-fixation/): this landing's text (`apply_text.py`, `study_ev9.txt`) and record (`make_record.py`), and the checker and connectivity logs. The Lean is in the landing commit.
+
+- **The histories.** `sampled N f (k + 1) h` sums, over the samplings `w` of `N` draws from `h` of the first kind and `N - h` of the second (weight `weight h (N - h) w`), the weight times `sampled N f k (ones w)`: the next generation starts from the sampled count. It is linear in the reading (`sampled_add`, `sampled_mul`) and monotone in it on the counts a population can have (`sampled_le`, since a sampling of `N` draws has at most `N` of the first kind, `ones_le`).
+- **The count kept.** One generation: `N` times `Σ weight · ones` is `N · h · N^N` (`expected_ones` with `h + (N - h) = N`), so `Σ weight · ones = h N^N` (`weighted_ones`, cancelling `N`; `N = 0` checked directly). Over `k + 1` generations, the inner total is `ones w · (N^N)^k` by induction, so the outer is `h N^N (N^N)^k`.
+- **Absorbing ends.** From none, `weight 0 N` vanishes on every sampling with a draw of the first kind, so the total is `N^N` times the reading at none (`from_none`); from all, `N - N = 0` (`sub_self_zero`) and likewise (`from_all`).
+- **Variation ends.** `varied N c` is one where `0 < c < N`. From varied `h`, each sampling's weight times the varied histories after it, with its weight times the bound `M` where it loses (`lost`) or fixes (`whole`) the first kind, is at most its weight times `M`, since after losing or fixing nothing is varied (`varied_step`). Summed: the varied histories with `((N - h)^N + h^N) M` are at most `N^N M = (r + 2) M`, and each power is at least one (`one_le_pow`), so the varied histories are at most `r M`.
+- **Fixation.** For counts `c ≤ N`, `N · fixed c ≤ c ≤ N · fixed c + N · varied c` (`fixed_le`, `count_le`); sum through `sampled` and use `sampled_count` and `varied_vanishes`.
+- **Witness.** `TwoMembers`: `N = 2`, `h = 1`: the four samplings weigh one each; one fixes, one loses, two stay varied; `2 · 1 ≤ 1 · 4 ≤ 2 · 1 + 2 · 2` (`r = 2`).
+
+**Self-review.** The fixation share `h/N` with no selection is Kimura's neutral fixation probability (Kimura 1962; it follows from the count being a martingale and the ends absorbing), here stated as counts of histories with an explicit geometric bound on what stays varied. The bound's rate `(N^N − 2)/N^N` is far from the true one (the heterozygosity falls by `1 − 1/N` per generation), but the statement needs only that the varied share vanishes, and it does with no premise beyond `N ≥ 2`. The linearity lemmas make `sampled` a positive linear functional over histories, so the two inequalities are pointwise inequalities on counts summed. What is open is drift with selection in one draw, where the count is not kept on average and the fixation share is no longer the starting share.
