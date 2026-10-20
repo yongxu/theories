@@ -1,0 +1,4460 @@
+{
+ "values_reached": [
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.gap"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.guardedHistory"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.operatingStep"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.guardedStep"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeTransition.cover"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Classical.propDecidable._proof_1"
+     ],
+     "sink": "carried by Classical.choice",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Classical.propDecidable"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "FiniteSupportObstruction.seedLimit"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeBoundary.step"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instMul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeBoundary.margin"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "FiniteSupportObstruction.run"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.mul._proof_1"
+     ],
+     "sink": "argument 2 of Int.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_2"
+     ],
+     "sink": "argument 2 of Int.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_4"
+     ],
+     "sink": "argument 2 of Nat.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_5"
+     ],
+     "sink": "argument 2 of Nat.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_6"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_3"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.mul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instNatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeTransition.Landing"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.exampleBounds"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "PartialRegimeTransition.path"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "FiniteSupportObstruction.parameters"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.installed"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.shareStep"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeAttraction.radius"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "PartialRegimeTransition.partialParameters"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.influenceStep"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.exampleState"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeAttraction.middle"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "FiniteSupportObstruction.PairPhysical"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.qualityStep"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.Certificate"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instAdd"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.sub._proof_1"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.add._proof_3"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.sub._proof_2"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.dvd_num"
+     ],
+     "sink": "argument 3 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.dvd_den"
+     ],
+     "sink": "argument 4 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.den_nz"
+     ],
+     "sink": "argument 5 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.reduced"
+     ],
+     "sink": "argument 6 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.sub"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeTransition.pulseParameters"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.reserveStep"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeTransition.pulseDisturbance"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instSub"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instOfNat"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "FiniteSupportObstruction.guarded"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeAttraction.physical"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeTransition.rescue"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeAttraction.family"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.add._proof_2"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.add._proof_3"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.add._proof_4"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.dvd_num"
+     ],
+     "sink": "argument 3 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.dvd_den"
+     ],
+     "sink": "argument 4 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.den_nz"
+     ],
+     "sink": "argument 5 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.reduced"
+     ],
+     "sink": "argument 6 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.add"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.Safe"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instDiv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.ofInt._proof_1"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.ofInt"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.exampleParameters"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeTransition.trajectory"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.maybeNormalize._proof_1"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.maybeNormalize._proof_2"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.maybeNormalize"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.clip01"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.div"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "RegimeAttraction.lift"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.history"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.inv._proof_1"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.inv._proof_2"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.inv._proof_3"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.inv._proof_4"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.inv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MarketGenerativity.supportStep"
+  }
+ ],
+ "declarations": [
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Becoming.MarketInstances.ShareHigh",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instDiv",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instOfNat",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.MarketInstances.InfluenceLow",
+   "kind": "def"
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "RegimeAttraction.physical",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instAdd",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instDiv",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instOfNat",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instSub",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.MarketInstances.Settled",
+   "kind": "def"
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Becoming.MarketInstances.Settled",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instDiv",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instOfNat",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.MarketInstances.ShareHigh",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.worstSupport"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.cover"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.cover_exact",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.supportStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.cover",
+     "module": "RegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Rat.le_trans",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "RegimeTransition.cover_floor",
+     "module": "RegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "RegimeTransition.cover_step",
+     "module": "RegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Rat.le_refl",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.cover_exact._proof_1_1",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.scheduled"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.floor"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.covered"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.cover_ladder",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.scheduled",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instNeZeroSucc",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.floor",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.covered",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.floor_of_stock",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Rat.le_trans",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.cover",
+     "module": "RegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "RegimeTransition.cover_floor",
+     "module": "RegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.PairPhysical",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.covered._proof_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "FiniteSupportObstruction.next_pair_physical",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.supportStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "RegimeTransition.cover_step",
+     "module": "RegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.support_antitone",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "FiniteSupportObstruction.PairPhysical",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "RegimeTransition.cover",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "via": [
+      "Becoming.MarketInstances.covered._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Becoming.MarketInstances.covered",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.exampleBounds"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.guardedHistory"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.exampleParameters"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.exampleState"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.history"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.example_never_fails",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleBounds",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.safe_never_fails",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleParameters",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleState",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "MarketGenerativity.example_certificate",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "MarketGenerativity.example_safe",
+     "module": "MarketGenerativity"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.middle"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.Landing"
+    },
+    {
+     "verdict": "carried",
+     "value": "PartialRegimeTransition.path"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.fixed_point_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.fixed_point_instance._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Rat.mul_pos",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.fixed_point_instance._proof_1_2",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Rat.div_lt_iff",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.fixed_point_instance._proof_1_3",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.middle",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.Landing",
+     "module": "RegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "PartialRegimeTransition.path",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "RegimeAttraction.middle_physical_iff",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.fixed_point_instance._proof_1_4",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.fixed_point_instance._proof_1_5",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.path_eq",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "RegimeAttraction.middle_fixed",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.fixed_point_instance._proof_1_6",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "MarketGenerativity.exampleParameters",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "MarketGenerativity.exampleBounds",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.MarketInstances.floor",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.floor"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.floor_of_stock",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instNeZeroSucc",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleParameters",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.floor_of_stock.match_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleBounds",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.floor_of_stock._proof_1_3",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "FiniteSupportObstruction.PairPhysical"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instMul"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.radius"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instAdd"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instNatCast"
+    },
+    {
+     "verdict": "carried",
+     "value": "FiniteSupportObstruction.guarded"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.forces_failure_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.PairPhysical",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instNeZeroSucc",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.radius",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instAdd",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instNatCast",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.floor",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.scheduled",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.growth",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Rat.le_trans",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.forces_failure_instance._proof_1_2",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "FiniteSupportObstruction.next_pair_physical",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "proof": true,
+     "name": "FiniteSupportObstruction.next_share_upper",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.stock_of_floor",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.forces_failure_instance._proof_1_3",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "RegimeAttraction.radius_growth_lower",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.forces_failure_instance._proof_1_4",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.forces_failure_instance._proof_1_5",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Rat.mul_le_mul_of_nonneg_left",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.forces_failure_instance._proof_1_6",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.orbit_growth",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.operatingStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.parameters",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "proof": true,
+     "name": "FiniteSupportObstruction.next_support_loss",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "proof": true,
+     "name": "Rat.natCast_add",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.forces_failure_instance._proof_1_7",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.forces_failure_instance._proof_1_8",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.guarded",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleParameters",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleBounds",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.guarded_eq",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.floor_of_stock",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "Rat.instMul",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instDiv",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instOfNat",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.MarketInstances.growth",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.guardedHistory"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.operatingStep"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.guardedHistory_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.guardedHistory",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.operatingStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.guardedStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.guardedStep_eq",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.guardedHistory"
+    },
+    {
+     "verdict": "carried",
+     "value": "FiniteSupportObstruction.parameters"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.exampleBounds"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.scheduled"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.floor"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.exampleParameters"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.guardedHistory_scheduled",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.guardedHistory",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.parameters",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleBounds",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.scheduled",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.floor",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleParameters",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.guardedStep",
+     "module": "MarketGenerativity"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.guardedStep"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.operatingStep"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.guardedStep_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.guardedStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.operatingStep",
+     "module": "MarketGenerativity"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "FiniteSupportObstruction.guarded"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.scheduled"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.floor"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.exampleParameters"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.exampleBounds"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.guarded_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.guarded",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.scheduled",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.floor",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleParameters",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleBounds",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.guardedStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.parameters",
+     "module": "FiniteSupportObstruction"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.history"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.operatingStep"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.history_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.history",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.operatingStep",
+     "module": "MarketGenerativity"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.history"
+    },
+    {
+     "verdict": "carried",
+     "value": "FiniteSupportObstruction.parameters"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.scheduled"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.history_scheduled",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.history",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.parameters",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.scheduled",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instAdd"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instMul"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instSub"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.influence_le",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instAdd",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.influenceStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_le._proof_1_1",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.InfluenceLow"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.Landing"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.influence_reaches_landing",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.rising_reaches",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.Landing",
+     "module": "RegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.InfluenceLow",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.ShareHigh",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.Settled",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_kept",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_kept",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instAdd",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_reaches_landing._proof_1_8",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_reaches_landing._proof_1_9",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_le",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_reaches_landing._proof_1_10",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_reaches_landing._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_reaches_landing._proof_1_2",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "PartialRegimeTransition.quality_progress",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_reaches_landing._proof_1_3",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_reaches_landing._proof_1_4",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_reaches_landing._proof_1_5",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instNatCast",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_reaches_landing._proof_1_6",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_reaches_landing._proof_1_7",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.Landing"
+    },
+    {
+     "verdict": "carried",
+     "value": "PartialRegimeTransition.path"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.landing_boundary_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.Landing",
+     "module": "RegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "PartialRegimeTransition.path",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.middle",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.fixed_point_instance",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.landing_boundary_instance._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.landing_side_instance",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.Landing"
+    },
+    {
+     "verdict": "carried",
+     "value": "PartialRegimeTransition.path"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.landing_side_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.Landing",
+     "module": "RegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "PartialRegimeTransition.path",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_landing",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.path_eq",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.Landing"
+    },
+    {
+     "verdict": "carried",
+     "value": "PartialRegimeTransition.path"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.lands_iff_funnel",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.Landing",
+     "module": "RegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "PartialRegimeTransition.path",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.path_eq",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.Landing"
+    },
+    {
+     "verdict": "carried",
+     "value": "PartialRegimeTransition.path"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeBoundary.margin"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.lands_iff_margin",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.Landing",
+     "module": "RegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "PartialRegimeTransition.path",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeBoundary.margin",
+     "module": "RegimeBoundary"
+    },
+    {
+     "proof": true,
+     "name": "PartialRegimeTransition.exact_universal_landing_boundary",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.margin_iff",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.Landing"
+    },
+    {
+     "verdict": "carried",
+     "value": "PartialRegimeTransition.path"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.lands_iff_no_closed",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.Landing",
+     "module": "RegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "PartialRegimeTransition.path",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.path_eq",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "PartialRegimeTransition.exact_universal_landing_boundary",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "PartialRegimeTransition.supercritical_positive_fixed_obstruction",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.lands_iff_no_closed._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.never_lands_iff",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeBoundary.margin"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.margin_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeBoundary.margin",
+     "module": "RegimeBoundary"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.margin_iff._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.margin_iff._proof_1_2",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.guardedHistory"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.history"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.operatingStep"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.never_fails_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.guardedHistory",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.history",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.operatingStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.guardedHistory_eq",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.history_eq",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.worst_admissible",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.Landing"
+    },
+    {
+     "verdict": "carried",
+     "value": "PartialRegimeTransition.path"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.never_lands_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.Landing",
+     "module": "RegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "PartialRegimeTransition.path",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.never_lands_iff.match_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.path_eq",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "FiniteSupportObstruction.seedLimit"
+    },
+    {
+     "verdict": "carried",
+     "value": "FiniteSupportObstruction.guarded"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.lift"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.obstructed_seeds_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instNatCast",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.seedLimit",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instNeZeroSucc",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.guarded",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.lift",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "RegimeAttraction.rational_natural_bound",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.obstructed_seeds_instance._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.obstructed_seeds_instance._proof_1_2",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.radius",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "FiniteSupportObstruction.seed_limit_bounds",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.PairPhysical",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.obstructed_seeds_instance._proof_1_3",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Rat.mul_le_mul_of_nonneg_right",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instAdd",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "RegimeAttraction.radius_growth_lower",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.obstructed_seeds_instance._proof_1_4",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.obstructed_seeds_instance._proof_1_5",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.obstructed_seeds_instance._proof_1_6",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.forces_failure_instance",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.obstructed_seeds_instance._proof_1_7",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.growth"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instMul"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.radius"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.orbit_growth",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.growth",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.radius",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.orbit_growth._proof_1_3",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.orbit_growth._proof_1_4",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.cover"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.guardedHistory"
+    },
+    {
+     "verdict": "carried",
+     "value": "PartialRegimeTransition.partialParameters"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.exampleBounds"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.lift"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.pulseDisturbance"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.history"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.partial_prefix_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.cover",
+     "module": "RegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.supported_prefix_instance",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "PartialRegimeTransition.path"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.path_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "PartialRegimeTransition.path",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.cover"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.guardedHistory"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.pulseParameters"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.exampleBounds"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.lift"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.pulseDisturbance"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.history"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.pulse_prefix_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.cover",
+     "module": "RegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.supported_prefix_instance",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.Landing"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.trajectory"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.rescue_landing_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.landing_side_instance",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.rescue_landing_instance._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.rescue_landing_instance._proof_1_2",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instAdd"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instSub"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instMul"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instNatCast"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.rising_funnel",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instAdd",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instNatCast",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.rising_funnel.match_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Classical.propDecidable",
+     "module": "Init.Classical"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Rat.zero_mul",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.rising_funnel._proof_1_3",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.rising_funnel.match_1_4",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Rat.natCast_add",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.rising_funnel._proof_1_6",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.rising_funnel._proof_1_7",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instAdd"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instSub"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instMul"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instNatCast"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.rising_reaches",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instAdd",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instNatCast",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.rising_funnel",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "FiniteSupportObstruction.run"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.scheduled"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.run_eq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.run",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.scheduled",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.Certificate"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.Safe"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.operatingStep"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.safe_closed",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.Certificate",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.Safe",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.operatingStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "MarketGenerativity.Safe.supports",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "MarketGenerativity.rectangle_one_step",
+     "module": "MarketGenerativity"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.Certificate"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.Safe"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.guardedHistory"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.history"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.safe_never_fails",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.Certificate",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.Safe",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.guardedHistory",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.history",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.operatingStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.never_fails_iff",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.safe_closed",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.Certificate"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.Safe"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.operatingStep"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.safe_within_kernel",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.Certificate",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.Safe",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.operatingStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.safe_closed",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "MarketGenerativity.operatingStep",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "FiniteSupportObstruction.parameters",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.MarketInstances.scheduled",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.Landing"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.seed_reaches_landing",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.Settled",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.Landing",
+     "module": "RegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_settled",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_landing._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_landing._proof_1_2",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Rat.mul_pos",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_landing._proof_1_3",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_landing._proof_1_4",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instNatCast",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "RegimeAttraction.rational_natural_bound",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Rat.div_lt_iff",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_reaches_landing",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_landing._proof_1_5",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.Settled"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.seed_reaches_settled",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_settled._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "PartialRegimeTransition.path",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "PartialRegimeTransition.uniform_seed_floor",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instAdd",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.Settled",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "PartialRegimeTransition.eventual_positive_gap",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "PartialRegimeTransition.eventual_influence",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_settled._proof_1_2",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_settled._proof_1_3",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.path_eq",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "PartialRegimeTransition.path_physical",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_settled._proof_1_4",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.seed_reaches_settled._proof_1_5",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.Settled"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.settled_kept",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.Settled",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instAdd",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "PartialRegimeTransition.partial_positive_margin",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_kept",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_kept._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_le",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "RegimeAttraction.family_physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_kept._proof_1_2",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "PartialRegimeTransition.quality_keeps",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_kept._proof_1_4",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_kept._proof_1_5",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_kept._proof_1_6",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_kept._proof_1_7",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_kept._proof_1_3",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instMul"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instNatCast"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.Settled"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.Landing"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.settled_reaches_landing",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instNatCast",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.Settled",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.Landing",
+     "module": "RegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.ShareHigh",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.InfluenceLow",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_reaches_landing",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_reaches_influence",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_reaches_share",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instMul"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instNatCast"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.Settled"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.ShareHigh"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.settled_reaches_share",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instNatCast",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.rising_reaches",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.ShareHigh",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.Settled",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_kept",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_reaches_share._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_reaches_share._proof_1_2",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "PartialRegimeTransition.share_progress",
+     "module": "PartialRegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instAdd",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_reaches_share._proof_1_3",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_reaches_share._proof_1_4",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.share_kept",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.shareStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "MarketGenerativity.share_step_bounds",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_kept._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_kept._proof_1_2",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_kept._proof_1_3",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.ShareHigh"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.family"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.InfluenceLow"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.share_reaches_influence",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.rising_reaches",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.family",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.InfluenceLow",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.ShareHigh",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.Settled",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.settled_kept",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_kept",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instAdd",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instSub",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_reaches_influence._proof_1_6",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_reaches_influence._proof_1_7",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_reaches_influence._proof_1_1",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_reaches_influence._proof_1_2",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instMul",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.influence_le",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Rat.le_refl",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_reaches_influence._proof_1_3",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instNatCast",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_reaches_influence._proof_1_4",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.share_reaches_influence._proof_1_5",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Becoming.MarketInstances.floor"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.stock_of_floor",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.floor",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instNeZeroSucc",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleParameters",
+     "module": "MarketGenerativity"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.supportStep"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instDiv"
+    },
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.support_antitone",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.supportStep",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.support_antitone._proof_1_1",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "Rat.instOfNat"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.physical"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.cover"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.guardedHistory"
+    },
+    {
+     "verdict": "carried",
+     "value": "FiniteSupportObstruction.parameters"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.exampleBounds"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeAttraction.lift"
+    },
+    {
+     "verdict": "carried",
+     "value": "RegimeTransition.pulseDisturbance"
+    },
+    {
+     "verdict": "carried",
+     "value": "MarketGenerativity.history"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.supported_prefix_instance",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.physical",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.cover",
+     "module": "RegimeTransition"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.scheduled",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instNeZeroSucc",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.floor",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeAttraction.lift",
+     "module": "RegimeAttraction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.MarketInstances.covered",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.cover_ladder",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.PairPhysical",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.covered._proof_1",
+     "module": "MarketInstances"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "RegimeTransition.pulseDisturbance",
+     "module": "RegimeTransition"
+    },
+    {
+     "proof": true,
+     "name": "Rat.le_refl",
+     "module": "Init.Data.Rat.Lemmas"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.guardedHistory",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "FiniteSupportObstruction.parameters",
+     "module": "FiniteSupportObstruction"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleBounds",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.history",
+     "module": "MarketGenerativity"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MarketGenerativity.exampleParameters",
+     "module": "MarketGenerativity"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.guardedHistory_scheduled",
+     "module": "MarketInstances"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.MarketInstances.history_scheduled",
+     "module": "MarketInstances"
+    }
+   ]
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "MarketGenerativity.supportStep",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instDiv",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "Rat.instOfNat",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.MarketInstances.worstSupport",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MarketInstances.worst_admissible",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Rat.le_refl",
+     "module": "Init.Data.Rat.Lemmas"
+    }
+   ]
+  }
+ ],
+ "receipt": "experiments/market-generativity/formal/market-instances-verification.json",
+ "receipt_utc": "20261020T161917.735916Z",
+ "target": "MarketInstances",
+ "toolchain": "leanprover/lean4:v4.29.1",
+ "audited": 53,
+ "recorded_on_propext": 53,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 43,
+ "compiled": []
+}

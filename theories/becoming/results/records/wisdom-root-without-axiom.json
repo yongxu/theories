@@ -543,7 +543,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean",
       "role": "proof",
-      "sha256": "15409ee45ce1be2f3496b6e65185ba182362151a792881a32b5827fa93dba3a9",
+      "sha256": "aa55e89797da0f4f01c1ad42401cb619d879cd0270d71c440c1b8d5721e94928",
       "declarations": [
         "Becoming.LearningCorrespondence.uniform_determines",
         "Becoming.LearningCorrespondence.hebbian_activity_law_iff",
@@ -560,7 +560,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json",
       "role": "receipt",
-      "sha256": "4931a7f0b0d523543227f9ec4d9ec850973344ddad798689e175a9acb08b4c2b",
+      "sha256": "42a685c1b335c9a234cc092d33828591d9d07016ec7be067fa942e0b72cda060",
       "declarations": []
     },
     {

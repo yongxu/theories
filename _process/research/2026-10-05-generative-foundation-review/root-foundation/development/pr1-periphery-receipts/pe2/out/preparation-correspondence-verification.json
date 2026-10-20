@@ -1,0 +1,1087 @@
+{
+ "values_reached": [
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MaterialMaturation.route._f"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "GrownFragmentation.flood"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "DevelopmentalAssociation.detach._proof_1"
+     ],
+     "sink": "argument 2 of List.instDecidableMemOfLawfulBEq",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "DevelopmentalAssociation.detach"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "GrownFragmentation.cutComponents"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "GrownFragmentation.cut"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MaterialMaturation.growReturn"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instMul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "ContactReconstruction.meanDraw"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instOfNat"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.mul._proof_1"
+     ],
+     "sink": "argument 2 of Int.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_2"
+     ],
+     "sink": "argument 2 of Int.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_4"
+     ],
+     "sink": "argument 2 of Nat.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_5"
+     ],
+     "sink": "argument 2 of Nat.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_6"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_3"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.mul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instNatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "ContactReconstruction.total._f"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MaterialMaturation.expected"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.add._proof_2"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.add._proof_3"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.add._proof_4"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.dvd_num"
+     ],
+     "sink": "argument 3 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.dvd_den"
+     ],
+     "sink": "argument 4 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.den_nz"
+     ],
+     "sink": "argument 5 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.reduced"
+     ],
+     "sink": "argument 6 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.add"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instDiv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.ofInt._proof_1"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.ofInt"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "ContactReconstruction.expected._f"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "List.instDecidableMemOfLawfulBEq._proof_1"
+     ],
+     "sink": "argument 3 of decidable_of_decidable_of_iff",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "List.instDecidableMemOfLawfulBEq"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instLawfulBEq"
+     ],
+     "sink": "argument 2 of List.instDecidableMemOfLawfulBEq",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "GrownFragmentation.flood._f"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "GrownFragmentation.cutReturn"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "GrownFragmentation.meanCutReturn"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "GrownFragmentation.seeds"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.maybeNormalize._proof_1"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.maybeNormalize._proof_2"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.maybeNormalize"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "ContactReconstruction.total"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.div"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MaterialMaturation.route"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "GrownFragmentation.cutCertificate"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MaterialMaturation.ready"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instAdd"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "MaterialMaturation.expected._f"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "ContactReconstruction.expected"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "GrownFragmentation.component"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "GrownFragmentation.joined"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.inv._proof_1"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.inv._proof_2"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.inv._proof_3"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.inv._proof_4"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.inv"
+  }
+ ],
+ "declarations": [
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.PreparationCorrespondence.AttachedBelow",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.PreparationCorrespondence.adjacent",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.adjacent_iff_links",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.adjacent_iff_links._f",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.filter_cons",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff._simp_1_1",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Prod.instLawfulBEq",
+     "module": "Init.Data.Prod"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "not_false_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.cut_attached",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff._simp_1_2",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.bond_cut_separates",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.cut_attached",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.connected_iff_links",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "GrownFragmentation.cutCertificate"
+    },
+    {
+     "verdict": "carried",
+     "value": "GrownFragmentation.component"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.certificate_exact_split_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "GrownFragmentation.cutCertificate",
+     "module": "GrownFragmentation"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "GrownFragmentation.component",
+     "module": "GrownFragmentation"
+    },
+    {
+     "proof": true,
+     "name": "GrownFragmentation.certificate_exact_split",
+     "module": "GrownFragmentation"
+    },
+    {
+     "proof": true,
+     "name": "Bool.and_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.certificate_exact_split_by_core._simp_1_1",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.component_is_closure",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "GrownFragmentation.component"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.component_is_closure",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "GrownFragmentation.component",
+     "module": "GrownFragmentation"
+    },
+    {
+     "proof": true,
+     "name": "GrownFragmentation.connected_same_side",
+     "module": "GrownFragmentation"
+    },
+    {
+     "proof": true,
+     "name": "GrownFragmentation.component_sound",
+     "module": "GrownFragmentation"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.connected_iff_links",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.adjacent_iff_links",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.PreparationCorrespondence.connected_iff_within",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.PreparationCorrespondence.connected_of_adjacent",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.countOf_eq_count",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.countOf_eq_count._f",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.cut_attached",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.filter_eq_self",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.cut_attached._simp_1_1",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Prod.instLawfulBEq",
+     "module": "Init.Data.Prod"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.filter_append",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.filter_cons",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "bne_self_eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.false_eq_true",
+     "module": "Init.Data.Bool"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "GrownFragmentation.cutCertificate"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.cut_separates",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "GrownFragmentation.cutCertificate",
+     "module": "GrownFragmentation"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "GrownFragmentation.component",
+     "module": "GrownFragmentation"
+    },
+    {
+     "proof": true,
+     "name": "GrownFragmentation.certificate_exact_split",
+     "module": "GrownFragmentation"
+    },
+    {
+     "proof": true,
+     "name": "Bool.and_eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.cut_separates._simp_1_1",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instLawfulBEq",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "List.mem_range",
+     "module": "Init.Data.List.Nat.Range"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "GrownFragmentation.flood",
+     "module": "GrownFragmentation"
+    },
+    {
+     "proof": true,
+     "name": "List.mem_filter",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "GrownFragmentation.connected_same_side",
+     "module": "GrownFragmentation"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.develop_attached",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.develop_attached._f",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.divide_attached",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.adjacent_iff_links",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Nat.lt_irrefl._simp_1",
+     "module": "Init.Data.Nat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "and_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "false_and",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.divide_attached._proof_1_1",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "List.mem_cons",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.divide_attached._proof_1_2",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.divide_attached._proof_1_3",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.divide_attached._proof_1_4",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.erase_eq_remove",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.erase_eq_remove._f",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.every_grown_bond_separates",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.bond_cut_separates",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.develop_attached",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.PreparationCorrespondence.initial_attached",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.mem_iff_countOf_pos",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.countOf_eq_count",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "List.count_pos_iff",
+     "module": "Init.Data.List.Count"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "GrownFragmentation.meanCutReturn"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.no_parent_summary_predictor_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "GrownFragmentation.meanCutReturn",
+     "module": "GrownFragmentation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.no_parent_summary_predictor_by_core.match_1_1",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.returns_differ",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MaterialMaturation.route"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.preparation_empties_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MaterialMaturation.route",
+     "module": "MaterialMaturation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.route_some_iff",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "List.perm_iff_count",
+     "module": "Init.Data.List.Perm"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.countOf_eq_count",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MaterialMaturation.route"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.preparation_leaves",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.countOf_eq_count",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "List.perm_iff_count",
+     "module": "Init.Data.List.Perm"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MaterialMaturation.route",
+     "module": "MaterialMaturation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.route_some_iff",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.reinforced_cut_unchanged",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.develop_attached",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.reinforced_cut_unchanged._proof_1_1",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "GrownFragmentation.reinforcement_is_actual",
+     "module": "GrownFragmentation"
+    },
+    {
+     "proof": true,
+     "name": "GrownFragmentation.component_sound",
+     "module": "GrownFragmentation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.reinforced_cut_unchanged._proof_1_2",
+     "module": "PreparationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.reinforced_cut_unchanged._proof_1_3",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "GrownFragmentation.meanCutReturn"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.returns_differ",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "GrownFragmentation.meanCutReturn",
+     "module": "GrownFragmentation"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instDiv",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Rat.instOfNat",
+     "module": "Init.Data.Rat.Basic"
+    },
+    {
+     "proof": true,
+     "name": "GrownFragmentation.uniform_cut_returns",
+     "module": "GrownFragmentation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.returns_differ._proof_1_1",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "MaterialMaturation.route"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PreparationCorrespondence.route_some_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "MaterialMaturation.route",
+     "module": "MaterialMaturation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PreparationCorrespondence.route_some_iff._f",
+     "module": "PreparationCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.PreparationCorrespondence.unit",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.PreparationCorrespondence.use_unit",
+   "kind": "theorem"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-verification.json",
+ "receipt_utc": "20261020T161943.503298Z",
+ "target": "PreparationCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 27,
+ "recorded_on_propext": 20,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 51,
+ "compiled": []
+}

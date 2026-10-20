@@ -1,7 +1,7 @@
 import Becoming.Copying
 import Becoming.Stock
 import Becoming.Evolution
-import Becoming.Order
+import Becoming.Reordering
 import LearnedProcedureTransmission
 
 /-!

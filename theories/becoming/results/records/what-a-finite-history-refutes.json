@@ -336,6 +336,12 @@
       "role": "receipt",
       "sha256": "6c3f0168725a9cb3fac9292e801688ff58ed3b93b08dcb2b7a5c5e8372753070",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261020T162009.405485Z/verification.json",
+      "role": "receipt",
+      "sha256": "bce5334db249a166ecb5f7a6a7db11236cc918e55343474c4a12e0eed5c3316d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -348,14 +354,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/PrefixSafetyCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261015T184605.889457Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261020T162009.405485Z/verification.json",
       "sha256_pointer": "/source_sha256/PrefixSafetyCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/PrefixSafety.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261015T184605.889457Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261020T162009.405485Z/verification.json",
       "sha256_pointer": "/source_sha256/PrefixSafety",
       "success_pointer": "/status",
       "success_value": "passed"

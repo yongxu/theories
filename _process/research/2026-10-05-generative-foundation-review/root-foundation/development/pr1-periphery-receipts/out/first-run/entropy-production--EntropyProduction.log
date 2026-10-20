@@ -1,0 +1,16 @@
+EntropyProduction.lean:137:15: error(lean.unknownIdentifier): Unknown identifier `Passing.lossless`
+EntropyProduction.lean:136:41: error: unsolved goals
+u : ℝ
+cs : List (Option Bool)
+t : ℕ
+distinct : Distinct cs
+closed : Passing.flow.ClosedAt cs t
+f : Option Bool
+present : f ∈ Passing.flow.present t
+⊢ u * ↑(total cs (Passing.flow.give t f)) + (fun x x_1 => 0) t f = u * ↑(total cs (Passing.flow.take t f))
+EntropyProduction.lean:408:35: error: unsolved goals
+case pos
+gains : ¬(flow true).GainlessOn [()] 0
+t : ℕ
+h : t = 0
+⊢ 1 + 1 / 2 * (↑(Witnesses.profile [0] 1 1) + ↑(Witnesses.profile [0] 1 3)) ≤ 2

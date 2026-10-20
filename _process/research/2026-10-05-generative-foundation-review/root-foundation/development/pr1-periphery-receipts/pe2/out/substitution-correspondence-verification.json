@@ -1,0 +1,75 @@
+{
+ "values_reached": [],
+ "declarations": [
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.SubstitutionCorrespondence.Consumer",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.SubstitutionCorrespondence.Place",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SubstitutionCorrespondence.all_terms_agree_iff_positions_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SubstitutionCorrespondence.direct",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.SubstitutionCorrespondence.part",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.SubstitutionCorrespondence.read",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.SubstitutionCorrespondence.supplied",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SubstitutionCorrespondence.supplies",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.SubstitutionCorrespondence.through",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.SubstitutionCorrespondence.use",
+   "kind": "def"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-verification.json",
+ "receipt_utc": "20261020T161957.579185Z",
+ "target": "SubstitutionCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 10,
+ "recorded_on_propext": 0,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 44,
+ "compiled": []
+}

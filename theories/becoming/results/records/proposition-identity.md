@@ -42,7 +42,7 @@ Canonical source: [PropositionIdentity.lean](../../../../experiments/integrated-
 <a id="next--下一步"></a>
 ## Next
 
-The same account for function extensionality and quotient soundness, which the periphery's reports show beside propext; the periphery's uses rechecked once its receipts are renewed against the current core; the inherited periphery modules' own declarations; an independent review.
+The same account for function extensionality and quotient soundness, which the periphery's reports show beside propext; the inherited periphery modules' own declarations; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -81,6 +81,7 @@ Lean's propext and proof irrelevance; the extensionality of propositions in Mart
 | review | [ideals-correspondence.log](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/ideals-correspondence.log) | — |
 | review | [continuation-correspondence.log](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/continuation-correspondence.log) | — |
 | review | [sparse.log](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe2-propext-uses/reduction/sparse.log) | — |
+| review | [summary.json](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pr1-periphery-receipts/pe2/summary.json) | — |
 
 Aliases: `propext`, `propositional extensionality`, `命题外延性`, `proposition identity`, `命题的等同`, `why the core excludes propext`, `interderivability`, `可互推`, `Becoming.PropositionIdentity.extensional_iff_lumped`, `Becoming.PropositionIdentity.byName_lumped_iff`, `Becoming.PropositionIdentity.Formula.eval_congr`, `Becoming.PropositionIdentity.transport_const`
 
@@ -89,7 +90,8 @@ Aliases: `propext`, `propositional extensionality`, `命题外延性`, `proposit
 
 - 20 October 2026: added (PE1), on the question whether propext can be approved as a practical approach or explained within the theory; first checked in scratch (_process/research/2026-10-05-generative-foundation-review/root-foundation/development/pe1-propext/Propext.lean, Stuck.lean); study section 258.
 - 20 October 2026: the periphery's uses of propext checked use by use (PE2, study section 268): in the 23 periphery receipts, 489 of 762 audited declarations and the core's 196 generated injEq lemmas, read from their kernel terms at the receipts' bytes. Every proof gets propext only inside a proof, as an identification of interderivable propositions; none of the 45 definitions on propext computes a value through one (propext enters them through Lean's compilation of wildcard matches, a Fin recursion and list indexing, and Mathlib's measure structures; closed values compute). next_delta narrowed; review references added.
+- 20 October 2026: the periphery's receipts renewed against the current core (PR1, study section 275); PE2's analysis rerun at the new receipts classes all 489 periphery declarations on propext as before (every recorded axiom report matched, 24 of 24; the core's generated injEq lemmas now 197). next_delta narrowed; review reference added.
 
 </details>
 
-Documentary review UTC: `2026-10-20T13:40:41+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-20T16:24:41+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

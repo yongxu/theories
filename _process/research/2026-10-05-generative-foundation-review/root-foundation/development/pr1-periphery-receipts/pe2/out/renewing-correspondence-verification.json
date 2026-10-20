@@ -1,0 +1,233 @@
+{
+ "values_reached": [],
+ "declarations": [
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.RenewingCorrespondence.beyond",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RenewingCorrespondence.beyond_current_bounded_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.RenewingCorrespondence.remaining_falls",
+     "module": "RenewingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.RenewingCorrespondence.path_trace",
+     "module": "RenewingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.RenewingCorrespondence.total_moves",
+     "module": "RenewingCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RenewingCorrespondence.beyond_current_ceases_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.RenewingCorrespondence.remaining_falls",
+     "module": "RenewingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.RenewingCorrespondence.forms_while_held",
+     "module": "RenewingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.RenewingCorrespondence.path_trace",
+     "module": "RenewingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.RenewingCorrespondence.moves_length",
+     "module": "RenewingCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.RenewingCorrespondence.formedOf",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RenewingCorrespondence.forms_while_held",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "RenewingFormation.beyond_step",
+     "module": "RenewingFormation"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.RenewingCorrespondence.moves",
+   "kind": "def"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RenewingCorrespondence.moves_length",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.length_map",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "List.length_range",
+     "module": "Init.Data.List.Range"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RenewingCorrespondence.moves_succ",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.range_succ",
+     "module": "Init.Data.List.Range"
+    },
+    {
+     "proof": true,
+     "name": "List.map_append",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RenewingCorrespondence.path_trace",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.RenewingCorrespondence.path_trace._f",
+     "module": "RenewingCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RenewingCorrespondence.remaining_falls",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "RenewingFormation.beyond_step",
+     "module": "RenewingFormation"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RenewingCorrespondence.shared_formation_ends_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.RenewingCorrespondence.beyond_current_ceases_by_core",
+     "module": "RenewingCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RenewingCorrespondence.total_append",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_left_cancel_iff._simp_1",
+     "module": "Init.Data.Nat.Lemmas"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RenewingCorrespondence.total_moves",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.RenewingCorrespondence.total_moves._f",
+     "module": "RenewingCorrespondence"
+    }
+   ]
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-verification.json",
+ "receipt_utc": "20261020T161953.940017Z",
+ "target": "RenewingCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 13,
+ "recorded_on_propext": 10,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 16,
+ "compiled": []
+}

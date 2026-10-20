@@ -1,0 +1,6992 @@
+{
+ "values_reached": [
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.Completion.instIntCastCauchy"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.mul_assoc"
+     ],
+     "sink": "carried by Semigroup.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Nat.instCommMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Classical.propDecidable._proof_1"
+     ],
+     "sink": "carried by Classical.choice",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Classical.propDecidable"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.addGroup"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.instIsOrderedRing"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instSemiring._aux_11"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instMul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.State.tested"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instNeZeroSucc"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Nat.instNeZeroSucc",
+      "Fin.mk_zero"
+     ],
+     "sink": "eliminated by Eq.mpr",
+     "route": "Eq.mpr",
+     "kind": "eliminated"
+    }
+   ],
+   "name": "Fin.induction.go._f"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "NNReal.instLinearOrder._proof_3"
+     ],
+     "sink": "carried by LinearOrder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instLinearOrder._proof_10"
+     ],
+     "sink": "carried by LinearOrder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instLinearOrder._proof_11"
+     ],
+     "sink": "carried by LinearOrder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instLinearOrder._proof_12"
+     ],
+     "sink": "carried by LinearOrder.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instLinearOrder"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.wrapped._@.Mathlib.Data.Real.Basic.1279875089._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [],
+   "name": "Nat.land"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Channel.bias"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Complex.normSq._proof_1"
+     ],
+     "sink": "carried by ZeroHom.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.normSq._proof_2"
+     ],
+     "sink": "carried by MonoidWithZeroHom.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.normSq._proof_3"
+     ],
+     "sink": "carried by MonoidWithZeroHom.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Complex.normSq"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Finset.sum"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "_private.Mathlib.Data.Real.Basic.0.Real.wrapped._proof_1._@.Mathlib.Data.Real.Basic.2451848184._hygCtx._hyg.8"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.wrapped._@.Mathlib.Data.Real.Basic.2451848184._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.State.active"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionRing.zpow"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "abs"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.lattice"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "IsCauSeq"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "UpdaterConsequences.profile",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    },
+    {
+     "value": "CalibratedUpdater.report",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CalibratedUpdater.nativeUpdate"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instCommSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Equiv.setCongr"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "_private.Mathlib.Data.Real.Basic.0.Real.one"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionSemiring.toSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "starRingEnd._proof_1"
+     ],
+     "sink": "argument 6 of RingHomClass.toRingHom",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "starRingEnd"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.Completion.instRatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "IsAbsoluteValue.abs_isAbsoluteValue",
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.definition.match_1._@.Mathlib.Data.Real.Basic.1138242547._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "_private.Mathlib.Data.Real.Basic.0.Real.wrapped._proof_1._@.Mathlib.Data.Real.Basic.1138242547._hygCtx._hyg.8"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.wrapped._@.Mathlib.Data.Real.Basic.1138242547._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.zpow"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Semifield"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Function.invFun"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "IsAbsoluteValue.abs_isAbsoluteValue",
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.ofCauchy"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "_private.Mathlib.Data.Real.Basic.0.Real.zero"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Function.Injective.mulZeroClass._proof_3"
+     ],
+     "sink": "carried by MulZeroClass.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Function.Injective.mulZeroClass._proof_4"
+     ],
+     "sink": "carried by MulZeroClass.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Function.Injective.mulZeroClass"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instNatCastCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instNatCastCauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.instNatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Nonneg.nsmul._proof_1"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Nonneg.nsmul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNReal.instLinearOrder._aux_4"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "ConnectionistRecovery.Network"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instMonoidWithZero"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instIntCast"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "LearnedProcedureTransmission.firstSeed",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    },
+    {
+     "value": "UpdaterConsequences.weighted",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    },
+    {
+     "via": [
+      "LearnedProcedureTransmission.parentAfter._proof_1"
+     ],
+     "sink": "argument 3 of instOfNatAtLeastTwo",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "LearnedProcedureTransmission.parentAfter._proof_2"
+     ],
+     "sink": "argument 3 of instOfNatAtLeastTwo",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.parentAfter"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instSemiring._proof_1"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Nat.instSemiring._proof_2"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Nat.instSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.mul_equiv_mul"
+     ],
+     "sink": "argument 7 of Quotient.map₂",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.Completion.instMulCauchy"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.buildStep"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instField._proof_1"
+     ],
+     "sink": "carried by Field.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instField._proof_2"
+     ],
+     "sink": "carried by Field.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instField._proof_3"
+     ],
+     "sink": "carried by Field.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instField._proof_4"
+     ],
+     "sink": "carried by Field.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.instField"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Finset.univ"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Complex.sin._proof_1"
+     ],
+     "sink": "argument 3 of instOfNatAtLeastTwo",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Complex.sinh"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instRing"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionRing.toRing"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CalibratedUpdater.localReport._sparseCasesOn_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instAdd"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.instAdd._proof_1"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.instAdd"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "NNReal.instSemilatticeInf._proof_3"
+     ],
+     "sink": "carried by SemilatticeInf.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemilatticeInf._proof_4"
+     ],
+     "sink": "carried by SemilatticeInf.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemilatticeInf._proof_5"
+     ],
+     "sink": "carried by SemilatticeInf.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instSemilatticeInf"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instNegCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instNegCauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.definition._@.Mathlib.Data.Real.Basic.2451848184._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.maybeNormalize._proof_1"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.maybeNormalize._proof_2"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.maybeNormalize"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instZero"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.Kit.apparatus"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.pow._proof_1"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.pow._proof_2"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.pow"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DevelopmentalMemory.accumulate._f"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.instDivInvMonoid._proof_1"
+     ],
+     "sink": "carried by DivInvMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instDivInvMonoid._proof_2"
+     ],
+     "sink": "carried by DivInvMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instDivInvMonoid._proof_3"
+     ],
+     "sink": "carried by DivInvMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instDivInvMonoid._proof_4"
+     ],
+     "sink": "carried by DivInvMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.instDivInvMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.material"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Field.toNNRatCast"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CalibratedUpdater.join._sparseCasesOn_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNRat.den"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instMonoidWithZero"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Field.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Norm.mk"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instNeZeroSucc"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Fin.succRec._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "value": "Fin.induction.go",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "Fin.induction"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instAddCommMonoid"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "CalibratedUpdater.nativeRun._f",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "CalibratedUpdater.nativeRun"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "NNReal.instZero._proof_1"
+     ],
+     "sink": "argument 1 of NNReal.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instZero"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instAdd"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "_private.Mathlib.Data.Real.Basic.0.Real.sup"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of IsCauSeq",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.isCauSeq_exp"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Complex.exp'"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Semifield.div_eq_mul_inv"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Semifield.zpow_zero'"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Semifield.zpow_succ'"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Semifield.zpow_neg'"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Semifield.toNontrivial"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Semifield.inv_zero"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Semifield.mul_inv_cancel"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Semifield.nnratCast_def"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Semifield.nnqsmul_def"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Semifield.toDivisionSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DevelopmentalMemory.choose"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instNeZeroSucc"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Fin.cons._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "value": "Fin.cases",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "Fin.cons"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Function.Surjective.range_eq"
+     ],
+     "sink": "argument 4 of OrderIso.setCongr",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "StrictMono.orderIsoOfSurjective"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.blank"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.Completion.instOneCauchy"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "IsAbsoluteValue.abs_isAbsoluteValue",
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.instMinAbs._proof_1"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.instMinAbs"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instMin"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.cast_nonneg'",
+      "Real.instIsOrderedAddMonoid",
+      "Real.instZeroLEOneClass"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instSemiring._aux_20"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.instMaxAbs._proof_1"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.instMaxAbs"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 4 of CauSeq.equiv",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.definition._proof_1._@.Mathlib.Data.Real.Basic.3793047190._hygCtx._hyg.8"
+     ],
+     "sink": "argument 7 of CauSeq.equiv",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.equiv",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.instMaxAbs",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing",
+      "Real.definition._proof_1._@.Mathlib.Data.Real.Basic.3793047190._hygCtx._hyg.8",
+      "CauSeq.sup_equiv_sup"
+     ],
+     "sink": "argument 7 of Quotient.map₂",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.definition._@.Mathlib.Data.Real.Basic.3793047190._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.inheritedProcedure._sparseCasesOn_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.Pos"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instSemigroup"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "_private.Mathlib.Data.Real.Basic.0.Real.wrapped._proof_1._@.Mathlib.Data.Real.Basic.1934218611._hygCtx._hyg.8"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.wrapped._@.Mathlib.Data.Real.Basic.1934218611._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instOne"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.sub._proof_1"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.add._proof_3"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.sub._proof_2"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.dvd_num"
+     ],
+     "sink": "argument 3 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.dvd_den"
+     ],
+     "sink": "argument 4 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.den_nz"
+     ],
+     "sink": "argument 5 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.reduced"
+     ],
+     "sink": "argument 6 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.sub"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "le_max_left"
+     ],
+     "sink": "carried by SemilatticeSup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "le_max_right"
+     ],
+     "sink": "carried by SemilatticeSup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "max_le"
+     ],
+     "sink": "carried by SemilatticeSup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "min_le_left"
+     ],
+     "sink": "carried by Lattice.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "min_le_right"
+     ],
+     "sink": "carried by Lattice.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "LinearOrder.toLattice"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instDivisionRing"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "Fin.cons",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "Matrix.vecCons"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNReal.toReal"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.Completion.instNNRatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "NNReal.instPartialOrder._proof_5"
+     ],
+     "sink": "carried by Preorder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instPartialOrder._proof_6"
+     ],
+     "sink": "carried by Preorder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instPartialOrder._proof_7"
+     ],
+     "sink": "carried by Preorder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instPartialOrder._proof_8"
+     ],
+     "sink": "carried by PartialOrder.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instPartialOrder"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instAddCancelCommMonoid._proof_1"
+     ],
+     "sink": "carried by AddCancelCommMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Nat.instAddCancelCommMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "instDistribLatticeOfLinearOrder._proof_4"
+     ],
+     "sink": "carried by DistribLattice.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "instDistribLatticeOfLinearOrder"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instNeZeroSucc"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Fin.succRec._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "value": "Fin.induction",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "Fin.cases"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Channel.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNRat"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Complex.commRing._proof_1"
+     ],
+     "sink": "carried by AddCommMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_2"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_3"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_4"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_5"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_6"
+     ],
+     "sink": "carried by NonUnitalSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_7"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_8"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_12"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_13"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_9"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_10"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.commRing._proof_11"
+     ],
+     "sink": "carried by CommRing.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Complex.commRing"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.State.source"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "OrderIso.symm"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instNatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instPowInt"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionRing"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Multiset.Mem._proof_1"
+     ],
+     "sink": "argument 5 of Quot.liftOn",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Multiset.Mem"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Apparatus.fuel"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Field.toCommRing"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instMulZeroOneClass"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Lattice.toLinearOrder._proof_1"
+     ],
+     "sink": "carried by LinearOrder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Lattice.toLinearOrder._proof_2"
+     ],
+     "sink": "carried by LinearOrder.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Lattice.toLinearOrder"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "_private.Mathlib.Data.Real.Basic.0.Real.add"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CalibratedUpdater.localReport._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "CalibratedUpdater.join._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CalibratedUpdater.join.match_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Fintype.mk"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "DevelopmentalMemory.first",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    },
+    {
+     "value": "DevelopmentalMemory.second",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "UpdaterConsequences.profile"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.capacity"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Field.toSemifield._proof_1"
+     ],
+     "sink": "carried by CommSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.div_eq_mul_inv"
+     ],
+     "sink": "carried by Semifield.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.zpow_zero'"
+     ],
+     "sink": "carried by Semifield.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.zpow_succ'"
+     ],
+     "sink": "carried by Semifield.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.zpow_neg'"
+     ],
+     "sink": "carried by Semifield.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.toNontrivial"
+     ],
+     "sink": "carried by Semifield.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.inv_zero"
+     ],
+     "sink": "carried by Semifield.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.mul_inv_cancel"
+     ],
+     "sink": "carried by Semifield.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.nnratCast_def"
+     ],
+     "sink": "carried by Semifield.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.nnqsmul_def"
+     ],
+     "sink": "carried by Semifield.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Field.toSemifield"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNReal.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.instIsOrderedAddMonoid"
+     ],
+     "sink": "argument 3 of Nonneg.nsmul",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instSemiring._aux_6"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "_private.Mathlib.Data.Real.Basic.0.Real.lt"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instNeZeroSucc"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Fin.succRec._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "value": "Fin.induction.go._f",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "Fin.induction.go"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instMul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.LimZero"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.inv._proof_1"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.inv._proof_2"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.inv._proof_3"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.inv._proof_4"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.inv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "SubtractionMonoid.toSubNegZeroMonoid._proof_1"
+     ],
+     "sink": "carried by SubNegZeroMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "SubtractionMonoid.toSubNegZeroMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instPreorder"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "LearnedProcedureTransmission.coordinates._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.coordinates"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.State.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "_private.Mathlib.Data.Real.Basic.0.Real.wrapped._proof_1._@.Mathlib.Data.Real.Basic.1175651576._hygCtx._hyg.8"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.wrapped._@.Mathlib.Data.Real.Basic.1175651576._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.neg_equiv_neg"
+     ],
+     "sink": "argument 5 of Quotient.map",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.Completion.instNegCauchy"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "_private.Mathlib.Data.Real.Basic.0.Real.inv'"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.lim",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.isAbsoluteValueNorm"
+     ],
+     "sink": "argument 7 of CauSeq.lim",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.instIsComplete"
+     ],
+     "sink": "argument 8 of CauSeq.lim",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Complex.definition._@.Mathlib.Analysis.Complex.Exponential.867311647._hygCtx._hyg.2"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Multiset.sum"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "IsAbsoluteValue.abs_isAbsoluteValue",
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.rec"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNReal"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Semifield.toDiv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "DivisionSemiring.div_eq_mul_inv"
+     ],
+     "sink": "carried by GroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionSemiring.zpow_zero'"
+     ],
+     "sink": "carried by GroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionSemiring.zpow_succ'"
+     ],
+     "sink": "carried by GroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionSemiring.zpow_neg'"
+     ],
+     "sink": "carried by GroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionSemiring.toNontrivial"
+     ],
+     "sink": "carried by GroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionSemiring.inv_zero"
+     ],
+     "sink": "carried by GroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionSemiring.mul_inv_cancel"
+     ],
+     "sink": "carried by GroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "DivisionSemiring.toGroupWithZero"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.build"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "NNReal.instSemilatticeSup._proof_3"
+     ],
+     "sink": "carried by SemilatticeSup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemilatticeSup._proof_4"
+     ],
+     "sink": "carried by SemilatticeSup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemilatticeSup._proof_5"
+     ],
+     "sink": "carried by SemilatticeSup.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instSemilatticeSup"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionRing.toRatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 4 of CauSeq.equiv",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.equiv",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.instLTAbs",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.definition._proof_1._@.Mathlib.Data.Real.Basic.1175651576._hygCtx._hyg.8"
+     ],
+     "sink": "argument 8 of Quotient.liftOn₂",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.definition._@.Mathlib.Data.Real.Basic.1175651576._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNReal.instLinearOrder._aux_8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Finset.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.instIntCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instSub"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.Kit"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Fintype.elems"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instAddMonoidWithOne"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CalibratedUpdater.localReport",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CalibratedUpdater.localRead"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Semifield.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Apparatus.parts"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.mulAux"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.im"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instAddMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Multiset.nodup_range"
+     ],
+     "sink": "carried by Finset.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Finset.range"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "_private.Mathlib.Data.Real.Basic.0.Real.wrapped._proof_1._@.Mathlib.Data.Real.Basic.4214226450._hygCtx._hyg.8"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.wrapped._@.Mathlib.Data.Real.Basic.4214226450._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instInv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Multiset.Nodup._proof_1"
+     ],
+     "sink": "argument 5 of Quot.liftOn",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Multiset.Nodup"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.Completion.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "_private.Mathlib.Analysis.Complex.Exponential.0.Complex.wrapped._proof_1._@.Mathlib.Analysis.Complex.Exponential.867311647._hygCtx._hyg.2"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Complex.wrapped._@.Mathlib.Analysis.Complex.Exponential.867311647._hygCtx._hyg.2"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instIntCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Function.leftInverse_invFun"
+     ],
+     "sink": "argument 4 of Equiv.ofLeftInverse",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Equiv.ofInjective"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instAddCommMonoidWithOne"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instLattice"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.instZero"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNRatCast.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "OrderIso.setCongr._proof_1"
+     ],
+     "sink": "carried by RelIso.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "OrderIso.setCongr"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Apparatus.one"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "LearnedProcedureTransmission.inheritedRecord.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.inheritedRecord"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instNeg"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Field.qsmul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DevelopmentalMemory.learn"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.ofReal"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "List.Perm.foldr_eq"
+     ],
+     "sink": "argument 5 of Quot.liftOn",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Multiset.foldr"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instNatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "IsCauSeq.const"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.const"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.connect"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instAddCommMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.le_refl"
+     ],
+     "sink": "carried by Preorder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.le_trans"
+     ],
+     "sink": "carried by Preorder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.lt_iff_le_not_ge"
+     ],
+     "sink": "carried by Preorder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.le_antisymm"
+     ],
+     "sink": "carried by PartialOrder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.le_total"
+     ],
+     "sink": "carried by LinearOrder.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.linearOrder"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.toNNReal._proof_1"
+     ],
+     "sink": "argument 1 of NNReal.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.toNNReal"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.State.available"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionRing.nnqsmul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instOne"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.add_assoc"
+     ],
+     "sink": "carried by AddSemigroup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.zero_add"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.add_zero"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.zero_mul"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.addCommGroup._proof_1"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.sub_eq_add_neg"
+     ],
+     "sink": "carried by SubNegMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.zero_mul"
+     ],
+     "sink": "carried by SubNegMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.addCommGroup._proof_2"
+     ],
+     "sink": "carried by SubNegMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.addCommGroup._proof_3"
+     ],
+     "sink": "carried by SubNegMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.neg_add_cancel"
+     ],
+     "sink": "carried by AddGroup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.add_comm"
+     ],
+     "sink": "carried by AddCommGroup.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.addCommGroup"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.copyMatrix"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instLE"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.decidableEq"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DevelopmentalMemory.accumulate"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Equiv.subtypeEquiv._proof_6"
+     ],
+     "sink": "carried by Equiv.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Equiv.subtypeEquiv._proof_8"
+     ],
+     "sink": "carried by Equiv.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Equiv.subtypeEquiv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instZeroCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instZeroCauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.definition._@.Mathlib.Data.Real.Basic.1850581184._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.leTotal_R"
+     ],
+     "sink": "argument 5 of Lattice.toLinearOrder",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.linearOrder"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.readings"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "_private.Mathlib.Data.Real.Basic.0.Real.wrapped._proof_1._@.Mathlib.Data.Real.Basic.702802587._hygCtx._hyg.8"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.wrapped._@.Mathlib.Data.Real.Basic.702802587._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Multiset.instMembership"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "UpdaterConsequences.weighted",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.firstSeed"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instSemilatticeSup"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "ConnectionistRecovery.step"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.Completion.ofRat"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "StrictMono.injective"
+     ],
+     "sink": "argument 3 of Equiv.ofInjective",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "StrictMono.orderIso"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionRing.toInv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionSemiring.toDiv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "_private.Mathlib.Data.Real.Basic.0.Real.inf"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instOfNat"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instLT"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "ConnectionistRecovery.perturb"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.construct"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instMax"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionRing.toDiv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Field.zpow"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Channel"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNReal.instPartialOrder._aux_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Semifield.nnqsmul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.div"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Multiset.product"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNRatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Apparatus.spent"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.identityChannels"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instSub"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "ConnectionistRecovery.score"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Nat.hasNotBit"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instAddGroup"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CalibratedUpdater.join.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CalibratedUpdater.join"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Field.toDiv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.commRing._proof_1"
+     ],
+     "sink": "carried by AddSemigroup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_2"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_3"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_4"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_5"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_6"
+     ],
+     "sink": "carried by AddCommMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_7"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_8"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_9"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_10"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_11"
+     ],
+     "sink": "carried by NonUnitalSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_12"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_13"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instNatCastCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instNatCastCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_14"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_15"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_16"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_17"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_18"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_19"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_20"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_21"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_22"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instIntCastCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instIntCastCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_23"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_24"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.commRing._proof_25"
+     ],
+     "sink": "carried by CommRing.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.commRing"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "_private.Mathlib.Data.Real.Basic.0.Real.neg"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.instIsOrderedAddMonoid"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instSemiring._aux_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Apparatus.inhibit"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNRat.num"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "RelIso.symm._proof_1"
+     ],
+     "sink": "carried by RelIso.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "RelIso.symm"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instOneCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instOneCauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.definition._@.Mathlib.Data.Real.Basic.1279875089._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNRatCast.nnratCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.tanh"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instInv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.raw"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.acquire"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instAddCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instAddCauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.definition._@.Mathlib.Data.Real.Basic.1138242547._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.mul_assoc"
+     ],
+     "sink": "carried by Semigroup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.one_mul"
+     ],
+     "sink": "carried by Monoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul_one"
+     ],
+     "sink": "carried by Monoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.pow_zero"
+     ],
+     "sink": "carried by Monoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.pow_succ"
+     ],
+     "sink": "carried by Monoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul_comm"
+     ],
+     "sink": "carried by CommMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.commMonoid"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "LearnedProcedureTransmission.inheritedProcedure.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.inheritedProcedure"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instAdd"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instNNRatCast",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instNNRatCast",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.instNNRatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.instSub._proof_1"
+     ],
+     "sink": "argument 9 of CauSeq.ofEq",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.instSub"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Field"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "_private.Mathlib.Data.Real.Basic.0.Real.wrapped._proof_1._@.Mathlib.Data.Real.Basic.4277896327._hygCtx._hyg.8"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.wrapped._@.Mathlib.Data.Real.Basic.4277896327._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "List.nodup_finRange"
+     ],
+     "sink": "carried by Finset.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "List.mem_finRange"
+     ],
+     "sink": "carried by Fintype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Fin.fintype"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Field.nnqsmul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instSemigroupWithZero"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "UpdaterConsequences.profile",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "UpdaterConsequences.succeeds"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.IsComplete"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "LearnedProcedureTransmission.parentAfter",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    },
+    {
+     "value": "LearnedProcedureTransmission.inheritedRecord",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "LearnedProcedureTransmission.inheritedProcedure",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.daughterState"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Multiset.map._proof_1"
+     ],
+     "sink": "argument 5 of Quot.liftOn",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Multiset.map"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.instNeg._proof_1"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.instNeg"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "LearnedProcedureTransmission.inheritedProcedure._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.inheritedProcedure.match_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "_private.Mathlib.Data.Real.Basic.0.Real.mul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.Kit.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Finset.val"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionSemiring.zpow"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Field.div_eq_mul_inv"
+     ],
+     "sink": "carried by DivisionRing.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.zpow_zero'"
+     ],
+     "sink": "carried by DivisionRing.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.zpow_succ'"
+     ],
+     "sink": "carried by DivisionRing.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.zpow_neg'"
+     ],
+     "sink": "carried by DivisionRing.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.toNontrivial"
+     ],
+     "sink": "carried by DivisionRing.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.mul_inv_cancel"
+     ],
+     "sink": "carried by DivisionRing.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.inv_zero"
+     ],
+     "sink": "carried by DivisionRing.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.nnratCast_def"
+     ],
+     "sink": "carried by DivisionRing.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.nnqsmul_def"
+     ],
+     "sink": "carried by DivisionRing.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.ratCast_def"
+     ],
+     "sink": "carried by DivisionRing.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Field.qsmul_def"
+     ],
+     "sink": "carried by DivisionRing.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Field.toDivisionRing"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instSemilatticeInf"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "ConnectionistRecovery.input"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CalibratedUpdater.join",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "CalibratedUpdater.localRead",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "via": [
+      "CalibratedUpdater.report._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CalibratedUpdater.report"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNReal.instSemilatticeSup._aux_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.definition._@.Mathlib.Data.Real.Basic.702802587._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Multiset.bind"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Multiset.instSProd"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Apparatus.wired"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "NNReal.powOrderIso._proof_1"
+     ],
+     "sink": "argument 5 of StrictMono.orderIsoOfSurjective",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.powOrderIso._proof_3"
+     ],
+     "sink": "argument 6 of StrictMono.orderIsoOfSurjective",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.powOrderIso"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.sqrt"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.instZeroLEOneClass"
+     ],
+     "sink": "argument 1 of NNReal.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instOne"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNRat.cast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instInv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instMulZeroClass"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.instDistribLattice._proof_1"
+     ],
+     "sink": "carried by SemilatticeSup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instDistribLattice._proof_2"
+     ],
+     "sink": "carried by SemilatticeSup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instDistribLattice._proof_4"
+     ],
+     "sink": "carried by SemilatticeSup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instDistribLattice._proof_5"
+     ],
+     "sink": "carried by Lattice.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instDistribLattice._proof_6"
+     ],
+     "sink": "carried by Lattice.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instDistribLattice._proof_8"
+     ],
+     "sink": "carried by Lattice.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instDistribLattice._proof_9"
+     ],
+     "sink": "carried by DistribLattice.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.instDistribLattice"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "NNReal.sqrt._proof_1"
+     ],
+     "sink": "argument 1 of NNReal.powOrderIso",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.sqrt"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Complex.sin._proof_1"
+     ],
+     "sink": "argument 3 of instOfNatAtLeastTwo",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Complex.cosh"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.mul_add"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.add_mul"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.zero_mul"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul_zero"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_1"
+     ],
+     "sink": "carried by NonUnitalSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_5"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_6"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_7"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_2"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_8"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_9"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_10"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_11"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_12"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_13"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_14"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_3"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commRing._proof_4"
+     ],
+     "sink": "carried by Ring.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.commRing"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DevelopmentalMemory.recalls"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Channel.gain"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instNonUnitalSemiring._proof_1"
+     ],
+     "sink": "carried by NonUnitalSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Nat.instNonUnitalSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.SMul.instSMulRealComplex"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.equiv._proof_1"
+     ],
+     "sink": "carried by Setoid.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.equiv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.inv_aux"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.inv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "instFintypeProd._proof_1"
+     ],
+     "sink": "carried by Fintype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "instFintypeProd"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.ofEq._proof_1"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.ofEq"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Semifield.zpow"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "DivisionMonoid.toDivInvOneMonoid._proof_1"
+     ],
+     "sink": "carried by DivInvOneMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "DivisionMonoid.toDivInvOneMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.State.spent"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "GroupWithZero.toDivisionMonoid._proof_1"
+     ],
+     "sink": "carried by DivisionMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "GroupWithZero.toDivisionMonoid._proof_2"
+     ],
+     "sink": "carried by DivisionMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "GroupWithZero.toDivisionMonoid._proof_3"
+     ],
+     "sink": "carried by DivisionMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "GroupWithZero.toDivisionMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Finset.instSetLike._proof_1"
+     ],
+     "sink": "carried by SetLike.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Finset.instSetLike"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Norm"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instNeg"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.complete"
+     ],
+     "sink": "argument 2 of Classical.choose",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.lim"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.partialOrder._proof_1"
+     ],
+     "sink": "carried by Preorder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.partialOrder._proof_3"
+     ],
+     "sink": "carried by Preorder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.partialOrder._proof_4"
+     ],
+     "sink": "carried by Preorder.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.partialOrder._proof_6"
+     ],
+     "sink": "carried by PartialOrder.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.partialOrder"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instMul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.State.precursor"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.Completion.instNatCastCauchy"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Complex.instDivInvMonoid._proof_1"
+     ],
+     "sink": "carried by DivInvMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.instDivInvMonoid._proof_2"
+     ],
+     "sink": "carried by DivInvMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.instDivInvMonoid._proof_3"
+     ],
+     "sink": "carried by DivInvMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.instDivInvMonoid._proof_4"
+     ],
+     "sink": "carried by DivInvMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Complex.instDivInvMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 4 of CauSeq.equiv",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.definition._proof_1._@.Mathlib.Data.Real.Basic.3793047190._hygCtx._hyg.8"
+     ],
+     "sink": "argument 7 of CauSeq.equiv",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.equiv",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.instMinAbs",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing",
+      "Real.definition._proof_1._@.Mathlib.Data.Real.Basic.3793047190._hygCtx._hyg.8",
+      "CauSeq.inf_equiv_inf"
+     ],
+     "sink": "argument 7 of Quotient.map₂",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.definition._@.Mathlib.Data.Real.Basic.1934218611._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Complex.instStarRing._proof_1"
+     ],
+     "sink": "carried by InvolutiveStar.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.instStarRing._proof_2"
+     ],
+     "sink": "carried by StarMul.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.instStarRing._proof_3"
+     ],
+     "sink": "carried by StarRing.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Complex.instStarRing"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.re"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.semiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Finset.product._proof_1"
+     ],
+     "sink": "carried by Finset.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Finset.product"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "LearnedProcedureTransmission.inheritedRecord._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.inheritedRecord.match_1"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "DevelopmentalMemory.first",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    },
+    {
+     "value": "DevelopmentalMemory.second",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "UpdaterConsequences.weighted"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Apparatus"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Finset"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CalibratedUpdater.report._proof_1"
+     ],
+     "sink": "argument 1 of Fin.instOfNat",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CalibratedUpdater.buildPlan"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionRing.toNNRatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.Completion.Cauchy"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.tanh"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Field.toRatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Apparatus.zero"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Multiset.join"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNReal.instPartialOrder._aux_3"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.mul._proof_1"
+     ],
+     "sink": "argument 2 of Int.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_2"
+     ],
+     "sink": "argument 2 of Int.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_4"
+     ],
+     "sink": "argument 2 of Nat.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_5"
+     ],
+     "sink": "argument 2 of Nat.divExact",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_6"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul._proof_3"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.mul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.State.retired"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.add_equiv_add"
+     ],
+     "sink": "argument 7 of Quotient.map₂",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.Completion.instAddCauchy"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNReal.instSemilatticeInf._aux_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Norm.norm"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.Kit.network"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "Matrix.vecCons",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "DevelopmentalMemory.second"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.writeCell"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.exp"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionSemiring.toInv"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "CalibratedUpdater.nativeUpdate",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    },
+    {
+     "value": "UpdaterConsequences.succeeds",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "CalibratedUpdater.nativeRun._f"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Field.toInv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Function.Injective.monoidWithZero"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instIntCastCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instIntCastCauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.instIntCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Semifield.toCommSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instNNRatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.instNatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "_private.Mathlib.Data.Real.Basic.0.Real.le"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.land",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.inheritedRecord._sparseCasesOn_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.instNontrivial"
+     ],
+     "sink": "carried by Field.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instField._proof_5"
+     ],
+     "sink": "carried by Field.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instField._proof_6"
+     ],
+     "sink": "carried by Field.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instField._proof_7"
+     ],
+     "sink": "carried by Field.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instField._proof_1"
+     ],
+     "sink": "carried by Field.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instField._proof_8"
+     ],
+     "sink": "carried by Field.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instField._proof_2"
+     ],
+     "sink": "carried by Field.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.instField"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.instNonAssocSemiring._proof_1"
+     ],
+     "sink": "carried by NonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Nat.instNonAssocSemiring._proof_2"
+     ],
+     "sink": "carried by NonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Nat.instNonAssocSemiring._proof_3"
+     ],
+     "sink": "carried by NonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Nat.instNonAssocSemiring._proof_4"
+     ],
+     "sink": "carried by NonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Nat.instNonAssocSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instRatCast",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instRatCast",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.instRatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "DivisionRing.div_eq_mul_inv"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionRing.zpow_zero'"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionRing.zpow_succ'"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionRing.zpow_neg'"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionRing.toNontrivial"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionRing.inv_zero"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionRing.mul_inv_cancel"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionRing.nnratCast_def"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "DivisionRing.nnqsmul_def"
+     ],
+     "sink": "carried by DivisionSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "DivisionRing.toDivisionSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "IsAbsoluteValue.abs_isAbsoluteValue",
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.casesOn"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CauSeq.Completion.instZeroCauchy"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Equiv.subtypeEquivProp"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instDiv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Complex.addCommGroup._proof_1"
+     ],
+     "sink": "carried by AddSemigroup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addCommGroup._proof_2"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addCommGroup._proof_3"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addCommGroup._proof_4"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addCommGroup._proof_5"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addCommGroup._proof_6"
+     ],
+     "sink": "carried by SubNegMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addCommGroup._proof_7"
+     ],
+     "sink": "carried by SubNegMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addCommGroup._proof_8"
+     ],
+     "sink": "carried by SubNegMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addCommGroup._proof_9"
+     ],
+     "sink": "carried by SubNegMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addCommGroup._proof_10"
+     ],
+     "sink": "carried by AddGroup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addCommGroup._proof_11"
+     ],
+     "sink": "carried by AddCommGroup.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Complex.addCommGroup"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instNorm"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.instMul._proof_1"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.instMul"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.right_distrib"
+     ],
+     "sink": "carried by Distrib.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Nat.instDistrib"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CalibratedUpdater.localReport.match_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CalibratedUpdater.localReport"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instAddMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Multiset.add_assoc"
+     ],
+     "sink": "carried by AddSemigroup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Multiset.add_zero"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Multiset.add_comm"
+     ],
+     "sink": "carried by AddCommMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Multiset.instAddCancelCommMonoid._proof_3"
+     ],
+     "sink": "carried by AddCancelCommMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Multiset.instAddCancelCommMonoid"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.State.kit"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "LearnedProcedureTransmission.inheritedRecord",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "LearnedProcedureTransmission.inheritedProcedure",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.reconstruct"
+  },
+  {
+   "verdict": "kernel-native",
+   "occurrences": [
+    {
+     "value": "CalibratedUpdater.localReport._sparseCasesOn_1",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    },
+    {
+     "value": "Nat.hasNotBit",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "CalibratedUpdater.localReport.match_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instPowNat"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Real.instIsOrderedRing"
+     ],
+     "sink": "argument 3 of Nonneg.mul",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instZeroLEOneClass"
+     ],
+     "sink": "argument 4 of Nonneg.one",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instZeroLEOneClass"
+     ],
+     "sink": "argument 3 of Nonneg.pow",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instIsOrderedRing"
+     ],
+     "sink": "argument 4 of Nonneg.pow",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instZeroLEOneClass"
+     ],
+     "sink": "argument 10 of Function.Injective.monoidWithZero",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instIsOrderedRing"
+     ],
+     "sink": "argument 11 of Function.Injective.monoidWithZero",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.instZeroLEOneClass",
+      "Real.instIsOrderedRing"
+     ],
+     "sink": "argument 12 of Function.Injective.monoidWithZero",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instSemiring._aux_24"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.decidableLT"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Finset.instSProd"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.commGroupWithZero._proof_4"
+     ],
+     "sink": "carried by CommMonoidWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commGroupWithZero._proof_5"
+     ],
+     "sink": "carried by CommMonoidWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commGroupWithZero._proof_1"
+     ],
+     "sink": "carried by CommGroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.zpow_zero"
+     ],
+     "sink": "carried by CommGroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commGroupWithZero._proof_2"
+     ],
+     "sink": "carried by CommGroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commGroupWithZero._proof_3"
+     ],
+     "sink": "carried by CommGroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.commGroupWithZero._proof_6"
+     ],
+     "sink": "carried by CommGroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.inv_zero"
+     ],
+     "sink": "carried by CommGroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.mul_inv_cancel"
+     ],
+     "sink": "carried by CommGroupWithZero.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.commGroupWithZero"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.State"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Nat.instNonUnitalNonAssocSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNReal.instLinearOrder._aux_6"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instMulCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instMulCauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.definition._@.Mathlib.Data.Real.Basic.4214226450._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Complex.addGroupWithOne._proof_1"
+     ],
+     "sink": "carried by AddMonoidWithOne.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addGroupWithOne._proof_2"
+     ],
+     "sink": "carried by AddMonoidWithOne.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addGroupWithOne._proof_5"
+     ],
+     "sink": "carried by AddGroupWithOne.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addGroupWithOne._proof_6"
+     ],
+     "sink": "carried by AddGroupWithOne.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addGroupWithOne._proof_7"
+     ],
+     "sink": "carried by AddGroupWithOne.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addGroupWithOne._proof_8"
+     ],
+     "sink": "carried by AddGroupWithOne.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addGroupWithOne._proof_9"
+     ],
+     "sink": "carried by AddGroupWithOne.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addGroupWithOne._proof_3"
+     ],
+     "sink": "carried by AddGroupWithOne.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Complex.addGroupWithOne._proof_4"
+     ],
+     "sink": "carried by AddGroupWithOne.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Complex.addGroupWithOne"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instSub"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionRing.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Fintype"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Finset.toList"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instZero"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "CalibratedUpdater.nativeRun",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "LearnedProcedureTransmission.expose"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.instInvCauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Real.equivCauchy._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.instInvCauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.definition._@.Mathlib.Data.Real.Basic.4277896327._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "ConnectionistRecovery.Profile"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Rat.instDistribLattice"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.instRing"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.State.waste"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "Matrix.vecCons",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "DevelopmentalMemory.first"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.add._proof_2"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.add._proof_3"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.add._proof_4"
+     ],
+     "sink": "carried by let",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.dvd_num"
+     ],
+     "sink": "argument 3 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.dvd_den"
+     ],
+     "sink": "argument 4 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.den_nz"
+     ],
+     "sink": "argument 5 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "Rat.normalize.reduced"
+     ],
+     "sink": "argument 6 of Rat.maybeNormalize",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.add"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.ofInt._proof_1"
+     ],
+     "sink": "carried by Rat.mk'",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Rat.ofInt"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "_private.Mathlib.Data.Real.Basic.0.Real.wrapped._proof_1._@.Mathlib.Data.Real.Basic.3793047190._hygCtx._hyg.8"
+     ],
+     "sink": "carried by Subtype.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.wrapped._@.Mathlib.Data.Real.Basic.3793047190._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Real.wrapped._@.Mathlib.Data.Real.Basic.1850581184._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "NNReal.instLinearOrder._aux_1"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Complex.instCommSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Semifield.toInv"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.Completion.instInvCauchy._proof_1"
+     ],
+     "sink": "argument 5 of Quotient.liftOn",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.Completion.instInvCauchy"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionSemiring"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 3 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "IsAbsoluteValue.abs_isAbsoluteValue",
+      "Rat.instIsStrictOrderedRing"
+     ],
+     "sink": "argument 7 of CauSeq.Completion.Cauchy",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Real.definition.match_1._@.Mathlib.Data.Real.Basic.2451848184._hygCtx._hyg.8"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.connectInhibitor"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "CalibratedUpdater.Apparatus.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "CauSeq.instLTAbs._proof_1"
+     ],
+     "sink": "argument 7 of CauSeq.instSub",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "CauSeq.instLTAbs"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "DivisionSemiring.mk"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "Semifield.toNNRatCast"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [],
+   "name": "LearnedProcedureTransmission.support"
+  },
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "NNReal.instSemiring._proof_3"
+     ],
+     "sink": "carried by AddSemigroup.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_4"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_5"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_8"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_9"
+     ],
+     "sink": "carried by AddMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_10"
+     ],
+     "sink": "carried by AddCommMonoid.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_13"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_14"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_15"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_16"
+     ],
+     "sink": "carried by NonUnitalNonAssocSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_17"
+     ],
+     "sink": "carried by NonUnitalSemiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_18"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_19"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_22"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_23"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_26"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    },
+    {
+     "via": [
+      "NNReal.instSemiring._proof_27"
+     ],
+     "sink": "carried by Semiring.mk",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "NNReal.instSemiring"
+  }
+ ],
+ "declarations": [
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.TransmissionCorrespondence.Move",
+   "kind": "inductive"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.TransmissionCorrespondence.attach",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.TransmissionCorrespondence.countOf_replicate",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CalibratedUpdater.Channel"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State"
+    },
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.TransmissionCorrespondence.process"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.material"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.support"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TransmissionCorrespondence.course_conserves",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CalibratedUpdater.Channel",
+     "module": "CalibratedUpdater"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.process",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.material",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.TransmissionCorrespondence.material_balanced",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.support",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.TransmissionCorrespondence.support_balanced",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Nat.add_right_cancel",
+     "module": "Init.Data.Nat.Basic"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CalibratedUpdater.Channel"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "LearnedProcedureTransmission.reconstruct"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.TransmissionCorrespondence.procedure"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TransmissionCorrespondence.faithful_procedure",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CalibratedUpdater.Channel",
+     "module": "CalibratedUpdater"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.reconstruct",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.procedure",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CalibratedUpdater.Apparatus.inhibit",
+     "module": "CalibratedUpdater"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.Kit.apparatus",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State.kit",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.inheritedProcedure",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State.tested",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "ConnectionistRecovery.Network",
+     "module": "ConnectionistRecovery"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.Kit.network",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.inheritedRecord",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "LearnedProcedureTransmission.reconstruct_inherits",
+     "module": "LearnedProcedureTransmission"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CalibratedUpdater.Channel"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "LearnedProcedureTransmission.reconstruct"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.TransmissionCorrespondence.successors"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.TransmissionCorrespondence.procedure"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.capacity"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TransmissionCorrespondence.faithful_selects",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CalibratedUpdater.Channel",
+     "module": "CalibratedUpdater"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.reconstruct",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.TransmissionCorrespondence.faithful_selects.match_1_1",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.successors",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.procedure",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.capacity",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.TransmissionCorrespondence.family_unchanged",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State.active",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.TransmissionCorrespondence.successors.eq_1",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "List.length_replicate",
+     "module": "Init.Data.List.Basic"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.support",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.material",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "LearnedProcedureTransmission.reconstructed_accounts",
+     "module": "LearnedProcedureTransmission"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CalibratedUpdater.Channel"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "LearnedProcedureTransmission.reconstruct"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.TransmissionCorrespondence.successors"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.TransmissionCorrespondence.procedure"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TransmissionCorrespondence.family_unchanged",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CalibratedUpdater.Channel",
+     "module": "CalibratedUpdater"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.reconstruct",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.successors",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.procedure",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.TransmissionCorrespondence.family_unchanged._f",
+     "module": "TransmissionCorrespondence"
+    }
+   ]
+  },
+  {
+   "verdict": "eliminated",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "LearnedProcedureTransmission.State",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "LearnedProcedureTransmission.daughterState",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    },
+    {
+     "value": "CalibratedUpdater.Apparatus.inhibit",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "LearnedProcedureTransmission.Kit.apparatus",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "LearnedProcedureTransmission.State.kit",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.TransmissionCorrespondence.historyOut",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State"
+    },
+    {
+     "verdict": "eliminated",
+     "value": "LearnedProcedureTransmission.parentAfter"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.TransmissionCorrespondence.successors"
+    },
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.TransmissionCorrespondence.historyOut"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.TransmissionCorrespondence.procedure"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TransmissionCorrespondence.history_selects",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.parentAfter",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.reconstruct",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CalibratedUpdater.identityChannels",
+     "module": "CalibratedUpdater"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.historyOut",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "List.mem_pair",
+     "module": "Mathlib.Data.List.Basic"
+    },
+    {
+     "proof": true,
+     "name": "LearnedProcedureTransmission.actual_reconstruction",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.successors",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.procedure",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.capacity",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.TransmissionCorrespondence.faithful_selects",
+     "module": "TransmissionCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.TransmissionCorrespondence.kitWord",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.TransmissionCorrespondence.pool"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State.available"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.capacity"
+    }
+   ],
+   "propext_in_term": true,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TransmissionCorrespondence.lineage_released_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.pool",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State.available",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.capacity",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State.precursor",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "Nat.le_min",
+     "module": "Init.Data.Nat.MinMax"
+    },
+    {
+     "proof": true,
+     "name": "Nat.le_div_iff_mul_le",
+     "module": "Init.Data.Nat.Div.Basic"
+    },
+    {
+     "proof": true,
+     "name": "Mathlib.Meta.NormNum.isNat_lt_true",
+     "module": "Mathlib.Tactic.NormNum.Ineq"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Nat.instSemiring",
+     "module": "Mathlib.Algebra.Ring.Nat"
+    },
+    {
+     "proof": true,
+     "name": "IsStrictOrderedRing.toIsOrderedRing",
+     "module": "Mathlib.Algebra.Order.Ring.Defs"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instIsStrictOrderedRing",
+     "module": "Mathlib.Algebra.Order.Ring.Nat"
+    },
+    {
+     "proof": true,
+     "name": "Nat.instCharZero",
+     "module": "Mathlib.Algebra.Ring.Nat"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Nat.instAddMonoidWithOne",
+     "module": "Mathlib.Algebra.Ring.Nat"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.TransmissionCorrespondence.pool.eq_1",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.TransmissionCorrespondence.lineage_released_iff.match_1_3",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "LearnedProcedureTransmission.capacity_bounds",
+     "module": "LearnedProcedureTransmission"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CalibratedUpdater.Channel"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State"
+    },
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.TransmissionCorrespondence.process"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.material"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TransmissionCorrespondence.material_balanced",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CalibratedUpdater.Channel",
+     "module": "CalibratedUpdater"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.process",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.material",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.support",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "LearnedProcedureTransmission.exposed_accounts",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State.active",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.capacity",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "LearnedProcedureTransmission.reconstructed_accounts",
+     "module": "LearnedProcedureTransmission"
+    }
+   ]
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "LearnedProcedureTransmission.State",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "LearnedProcedureTransmission.State.precursor",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.TransmissionCorrespondence.pool",
+   "kind": "def"
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "LearnedProcedureTransmission.State",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "CalibratedUpdater.Apparatus.inhibit",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "LearnedProcedureTransmission.Kit.apparatus",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "LearnedProcedureTransmission.State.kit",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.TransmissionCorrespondence.procedure",
+   "kind": "def"
+  },
+  {
+   "verdict": "eliminated",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "CalibratedUpdater.Channel",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "LearnedProcedureTransmission.State",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "LearnedProcedureTransmission.expose",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    },
+    {
+     "value": "LearnedProcedureTransmission.reconstruct",
+     "kind": "value",
+     "its_verdict": "kernel-native"
+    }
+   ],
+   "name": "Becoming.TransmissionCorrespondence.process",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CalibratedUpdater.Channel"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State"
+    },
+    {
+     "verdict": "kernel-native",
+     "value": "LearnedProcedureTransmission.reconstruct"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State.active"
+    },
+    {
+     "verdict": "carried",
+     "value": "Becoming.TransmissionCorrespondence.pool"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State.available"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TransmissionCorrespondence.reconstruction_builds_longest_lineage",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CalibratedUpdater.Channel",
+     "module": "CalibratedUpdater"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "kernel-native",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.reconstruct",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State.active",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.capacity",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.support",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.material",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "LearnedProcedureTransmission.reconstructed_accounts",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.pool",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State.available",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.TransmissionCorrespondence.lineage_released_iff",
+     "module": "TransmissionCorrespondence"
+    }
+   ]
+  },
+  {
+   "verdict": "carried",
+   "proof": false,
+   "onPropext": true,
+   "occurrences": [
+    {
+     "value": "LearnedProcedureTransmission.State",
+     "kind": "value",
+     "its_verdict": "carried"
+    },
+    {
+     "value": "LearnedProcedureTransmission.State.active",
+     "kind": "value",
+     "its_verdict": "carried"
+    }
+   ],
+   "name": "Becoming.TransmissionCorrespondence.successors",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "carried",
+     "value": "CalibratedUpdater.Channel"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.State"
+    },
+    {
+     "verdict": "eliminated",
+     "value": "Becoming.TransmissionCorrespondence.process"
+    },
+    {
+     "verdict": "carried",
+     "value": "LearnedProcedureTransmission.support"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TransmissionCorrespondence.support_balanced",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "CalibratedUpdater.Channel",
+     "module": "CalibratedUpdater"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "Becoming.TransmissionCorrespondence.process",
+     "module": "TransmissionCorrespondence"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.support",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.material",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "LearnedProcedureTransmission.exposed_accounts",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.State.active",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "LearnedProcedureTransmission.capacity",
+     "module": "LearnedProcedureTransmission"
+    },
+    {
+     "proof": true,
+     "name": "LearnedProcedureTransmission.reconstructed_accounts",
+     "module": "LearnedProcedureTransmission"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.TransmissionCorrespondence.total_replicate",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.TransmissionCorrespondence.use_kitWord",
+   "kind": "theorem"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-verification.json",
+ "receipt_utc": "20261020T161938.520043Z",
+ "target": "TransmissionCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 20,
+ "recorded_on_propext": 14,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 34,
+ "compiled": []
+}

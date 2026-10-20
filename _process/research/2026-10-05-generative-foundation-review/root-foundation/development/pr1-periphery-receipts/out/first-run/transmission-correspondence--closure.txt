@@ -1,0 +1,4 @@
+check_transmission_correspondence.py (first run, 20 October; no receipt written): the closure stopped before any Lean step:
+  File check_transmission_correspondence.py, line 71, in visit: assert len(paths) == 1, (name, [str(p) for p in paths])
+AssertionError: ('Becoming.Order', [])
+TransmissionCorrespondence imported Becoming.Order, which R31 split into Stuttering, Reordering and IdleRemoval.

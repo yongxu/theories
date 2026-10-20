@@ -156,6 +156,12 @@
       "role": "receipt",
       "sha256": "a6724f4ad2e4d40cb4cd9af052811f25f5b92ebaaa507c801ef17cb75b072567",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261020T161935.181496Z/verification.json",
+      "role": "receipt",
+      "sha256": "d19ce2254ea3f94c2de0b7c41a67290c7ef3e53c5a907c0ed5b58a8838309d09",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -175,7 +181,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261015T151901.978501Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261020T161935.181496Z/verification.json",
       "sha256_pointer": "/source_sha256/ContinuationCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"

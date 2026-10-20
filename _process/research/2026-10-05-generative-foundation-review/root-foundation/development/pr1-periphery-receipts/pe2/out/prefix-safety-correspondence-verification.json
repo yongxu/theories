@@ -1,0 +1,156 @@
+{
+ "values_reached": [
+  {
+   "verdict": "carried",
+   "occurrences": [
+    {
+     "via": [
+      "Classical.propDecidable._proof_1"
+     ],
+     "sink": "carried by Classical.choice",
+     "route": null,
+     "kind": "carried"
+    }
+   ],
+   "name": "Classical.propDecidable"
+  }
+ ],
+ "declarations": [
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PrefixSafetyCorrespondence.boundary_closed_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "carried",
+     "proof": false,
+     "name": "Classical.propDecidable",
+     "module": "Init.Classical"
+    },
+    {
+     "proof": true,
+     "name": "decide_not",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_true",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_self",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "eq_false",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Bool.not_eq_eq_eq_not._simp_1",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "decide_eq_true_eq",
+     "module": "Init.SimpLemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.PrefixSafetyCorrespondence.markov_classical",
+     "module": "PrefixSafetyCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.PrefixSafetyCorrespondence.finiteRefutable_iff_refutable",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PrefixSafetyCorrespondence.holds_of_prefixClosure_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Classical.byContradiction",
+     "module": "Init.Classical"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PrefixSafetyCorrespondence.markov_classical",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Classical.byContradiction",
+     "module": "Init.Classical"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.PrefixSafetyCorrespondence.prefixClosure_iff_adheres",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PrefixSafetyCorrespondence.prefixClosure_least_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Classical.byContradiction",
+     "module": "Init.Classical"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.PrefixSafetyCorrespondence.recurrence_not_finiteRefutable_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.PrefixSafetyCorrespondence.samePrefix_iff_agree",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.PrefixSafetyCorrespondence.terminationEvent_not_finiteRefutable_by_core",
+   "kind": "theorem"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-verification.json",
+ "receipt_utc": "20261020T162009.405485Z",
+ "target": "PrefixSafetyCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 9,
+ "recorded_on_propext": 4,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 17,
+ "compiled": []
+}

@@ -1,0 +1,43 @@
+IdealsCorrespondence.lean:168:40: error(lean.unknownIdentifier): Unknown identifier `Ideals.Closed`
+IdealsCorrespondence.lean:181:51: error(lean.unknownIdentifier): Unknown identifier `Ideals.Closed`
+IdealsCorrespondence.lean:186:8: warning: declaration uses `sorry`
+IdealsCorrespondence.lean:186:8: error: (kernel) unknown constant 'Becoming.IdealsCorrespondence.closed_of_finiteRefutable'
+IdealsCorrespondence.lean:196:2: error: No goals to be solved
+IdealsCorrespondence.lean:213:23: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+IdealsCorrespondence.lean:214:9: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+IdealsCorrespondence.lean:239:8: warning: declaration uses `sorry`
+IdealsCorrespondence.lean:255:8: warning: declaration uses `sorry`
+IdealsCorrespondence.lean:268:59: error(lean.unknownIdentifier): Unknown identifier `Ideals.hull_contains`
+IdealsCorrespondence.lean:272:8: warning: declaration uses `sorry`
+IdealsCorrespondence.lean:290:8: warning: declaration uses `sorry`
+IdealsCorrespondence.lean:296:8: warning: declaration uses `sorry`
+IdealsCorrespondence.lean:305:8: warning: declaration uses `sorry`
+IdealsCorrespondence.lean:323:8: warning: declaration uses `sorry`
+IdealsCorrespondence.lean:728:41: error(lean.unknownIdentifier): Unknown identifier `HistoryIdeals.Settles`
+IdealsCorrespondence.lean:729:16: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Exists.casesOn` can only eliminate into `Prop`
+
+A : Type u
+I : Ideals.Ideal (HistoryIdeals.prefixOrder A)
+motive : (∃ p, I.mem p) → Sort ?u.7290.93
+h_1 : (w : List A) → (hw : I.mem w) → motive ⋯
+x✝ : ∃ p, I.mem p
+⊢ motive x✝ after processing
+  _
+the dependent pattern matcher can solve the following kinds of equations
+- <var> = <term> and <term> = <var>
+- <term> = <term> where the terms are definitionally equal
+- <constructor> = <constructor>, examples: List.cons x xs = List.cons y ys, and List.cons x xs = List.nil
+IdealsCorrespondence.lean:734:13: error(nested.lean.propRecLargeElim): Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Exists.casesOn` can only eliminate into `Prop`
+
+case pos
+A : Type u
+I : Ideals.Ideal (HistoryIdeals.prefixOrder A)
+n : Nat
+bound : ∀ (w : List A), I.mem w → w.length ≤ n + 1
+top : ∃ w, I.mem w ∧ w.length = n + 1
+⊢ sorry
+IdealsCorrespondence.lean:741:4: error(lean.unknownIdentifier): Unknown identifier `HistoryIdeals.Settles`
+IdealsCorrespondence.lean:740:8: error: (kernel) unknown constant 'Becoming.IdealsCorrespondence.settles_of_bounded'
+IdealsCorrespondence.lean:762:8: warning: declaration uses `sorry`

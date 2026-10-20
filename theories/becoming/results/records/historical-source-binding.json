@@ -284,6 +284,12 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261020T161914.501944Z/verification.json",
+      "role": "receipt",
+      "sha256": "4b89c730c7168ff864626508ab8e838def2fc78c2666d3b07a5eec3f01c25980",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -317,7 +323,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RetrodictionInstances.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261014T045409.164228Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261020T161914.501944Z/verification.json",
       "sha256_pointer": "/source_sha256/RetrodictionInstances",
       "success_pointer": "/status",
       "success_value": "passed"

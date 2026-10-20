@@ -175,7 +175,7 @@ theorem head_pending_before (span : Nat) (s : Installation) (h : CorrectionVersi
     simp [remaining, hp]
   have ran := drain_eq k s []
   obtain ⟨⟨q, hq, hslot, hreq, _, _, _, hout⟩, lowered⟩ :=
-    pending_before (head_advances s.banks s.active p.slot p.requested ps []).counts
+    pending_before (head_advances s.banks s.active p.slot p.requested ps []).countedWork
       (valid_pending span s h p ps hp) (work ▸ within) ran
   simp only [List.nil_append] at hout lowered
   refine ⟨q, hq, hslot, hreq, hout, ?_⟩

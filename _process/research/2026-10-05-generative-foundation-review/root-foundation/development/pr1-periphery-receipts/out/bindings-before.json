@@ -1,0 +1,684 @@
+{
+ "ideals-correspondence-verification": {
+  "a-history-read-off-its-finite-stretches": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/IdealsCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261019T020352.033083Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/IdealWarrant.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261019T020352.033083Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/CompletionRole.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261019T020352.033083Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/HistoryIdeals.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261019T020352.033083Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261019T020352.033083Z/verification.json"
+   }
+  ]
+ },
+ "machine-instances-verification": {
+  "acquired-binding-compositional-use": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   }
+  ],
+  "enacted-scene-binding": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   }
+  ],
+  "encounter-selection-and-revision": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   }
+  ],
+  "formed-goal-revision-continuation": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   }
+  ],
+  "joint-correlation-reduced-dynamics": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   }
+  ],
+  "joint-practice-forms-continuation": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   }
+  ],
+  "retrospective-source-binding": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   }
+  ],
+  "transition-grouping-word-partition": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/MachineInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261014T092451.420909Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-checks/20261019T001148.333281Z/verification.json"
+   }
+  ]
+ },
+ "versioned-task-instances-verification": {
+  "acquired-revision-of-pending-task": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json"
+   }
+  ],
+  "pending-task-context-applicability": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json"
+   }
+  ],
+  "versioned-request-completion": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json"
+   }
+  ]
+ },
+ "correction-inquiry-verification": {
+  "becoming-spine-instances": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T095049.338744Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionBoundary.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T095049.338744Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationChange.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T095049.338744Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T095049.338744Z/verification.json"
+   }
+  ],
+  "comparison-content-under-regrouping": [
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T105346.131772Z/verification.json"
+   }
+  ],
+  "consequence-revised-reference-plan": [
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T121014.405728Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T122528.526650Z/verification.json"
+   }
+  ],
+  "recurring-reference-revision": [
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T130233.156038Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T131750.258973Z/verification.json"
+   }
+  ],
+  "selection-under-registration-revision": [
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-checks/20261013T113252.623598Z/verification.json"
+   }
+  ]
+ },
+ "substitution-correspondence-verification": {
+  "binding-preserving-substitution": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/SubstitutionCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261015T161423.129149Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261015T161423.129149Z/verification.json"
+   }
+  ]
+ },
+ "shared-stock-instances-verification": {
+  "draws-on-a-shared-stock": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/meta-attractor/SharedStockInstances.lean",
+    "receipt": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261015T151857.892080Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261015T151857.892080Z/verification.json"
+   }
+  ]
+ },
+ "living-organization-correspondence-verification": {
+  "every-origin-passes-the-gate": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/LivingOrganizationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-checks/20261015T182331.625376Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-checks/20261015T182331.625376Z/verification.json"
+   }
+  ]
+ },
+ "continuation-correspondence-verification": {
+  "finite-continuation-plans": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261015T151901.978501Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261015T151901.978501Z/verification.json"
+   }
+  ],
+  "joint-plan-composition": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/ContinuationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261015T151901.978501Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-checks/20261015T151901.978501Z/verification.json"
+   }
+  ]
+ },
+ "fallible-inquiry-verification": {
+  "finite-fallible-inquiry-necessity": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T110231.056199Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T113924.930862Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T125313.109762Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T205526.452771Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261016T120403.241963Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261018T063731.167536Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json"
+   }
+  ],
+  "timely-response-necessity": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T125313.109762Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T205526.452771Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261018T063731.167536Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json"
+   }
+  ],
+  "wisdom-root": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T125313.109762Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261013T205526.452771Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261018T063731.167536Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-checks/20261019T000109.055377Z/verification.json"
+   }
+  ]
+ },
+ "copying-instances-verification": {
+  "formed-copying-correction": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json"
+   }
+  ],
+  "formed-copying-registration": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json"
+   }
+  ],
+  "inherited-structural-copying": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json"
+   }
+  ],
+  "recurrent-chain-assembly": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CopyingInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-checks/20261014T092443.150338Z/verification.json"
+   }
+  ]
+ },
+ "preparation-correspondence-verification": {
+  "growth-constrained-fragmentation": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261019T052332.277017Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261019T052332.277017Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261015T161348.626052Z/verification.json"
+   }
+  ],
+  "material-preparation-output": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/PreparationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261019T052332.277017Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261019T052332.277017Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-checks/20261015T161348.626052Z/verification.json"
+   }
+  ]
+ },
+ "retrodiction-instances-verification": {
+  "historical-source-binding": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RetrodictionInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261014T045409.164228Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-checks/20261014T045409.164228Z/verification.json"
+   }
+  ]
+ },
+ "transmission-correspondence-verification": {
+  "learned-procedure-transmission": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/TransmissionCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261015T151904.501987Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261015T151904.501987Z/verification.json"
+   }
+  ]
+ },
+ "entropy-production-verification": {
+  "least-loss-from-entropy-production": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261019T082858.129214Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261019T082858.129214Z/verification.json"
+   }
+  ]
+ },
+ "finite-branching-correspondence-verification": {
+  "lifting-where-branching-is-finite": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/FiniteBranchingCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261015T190529.548268Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/FiniteBranching.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261015T190529.548268Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-checks/20261015T190529.548268Z/verification.json"
+   }
+  ]
+ },
+ "market-instances-verification": {
+  "market-finite-support-obstruction": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/formal/MarketInstances.lean",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json"
+   }
+  ],
+  "market-partial-correction-boundary": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/formal/MarketInstances.lean",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json"
+   }
+  ],
+  "market-protected-continuation": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/formal/MarketInstances.lean",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json"
+   }
+  ],
+  "market-supported-finite-transition": [
+   {
+    "kind": "binding",
+    "source": "experiments/market-generativity/formal/MarketInstances.lean",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/market-generativity/formal/market-instances-checks/20261014T141058.867757Z/verification.json"
+   }
+  ]
+ },
+ "protocol-instances-verification": {
+  "mediated-evidence-transport": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261014T141016.373278Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261014T141016.373278Z/verification.json"
+   }
+  ],
+  "recoverable-mediated-change": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261014T141016.373278Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261014T141016.373278Z/verification.json"
+   }
+  ],
+  "reserved-shutdown-during-recovery": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ProtocolInstances.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261014T141016.373278Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-checks/20261014T141016.373278Z/verification.json"
+   }
+  ]
+ },
+ "organization-correspondence-verification": {
+  "organizational-formation-from-generative-comparison": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OrganizationCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261015T163336.437151Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-checks/20261015T163336.437151Z/verification.json"
+   }
+  ]
+ },
+ "renewing-correspondence-verification": {
+  "renewing-consuming-formation": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261015T161417.899487Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-checks/20261015T161417.899487Z/verification.json"
+   }
+  ]
+ },
+ "judging-correspondence-verification": {
+  "risk-certificate-outcome-distinction": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/JudgingCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261015T161403.083389Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261015T161403.083389Z/verification.json"
+   }
+  ]
+ },
+ "selection-relabel-correspondence-verification": {
+  "selection-through-a-model-of-the-options": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/SelectionRelabelCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261015T203012.189070Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/PluralRecords.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261015T203012.189070Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/TieBreaking.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261015T203012.189070Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-checks/20261015T203012.189070Z/verification.json"
+   }
+  ]
+ },
+ "prefix-safety-correspondence-verification": {
+  "what-a-finite-history-refutes": [
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/PrefixSafetyCorrespondence.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261015T184605.889457Z/verification.json"
+   },
+   {
+    "kind": "binding",
+    "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/PrefixSafety.lean",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261015T184605.889457Z/verification.json"
+   },
+   {
+    "kind": "reference:receipt",
+    "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261015T184605.889457Z/verification.json"
+   }
+  ]
+ }
+}

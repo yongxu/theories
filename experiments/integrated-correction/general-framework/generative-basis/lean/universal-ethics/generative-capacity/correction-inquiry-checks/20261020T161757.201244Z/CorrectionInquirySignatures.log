@@ -1,0 +1,35 @@
+@Becoming.cell_refines : ∀ {H : Type u_1} {O : Type u_2} {Q : Type u_3} {admitted : H → Prop} {coarse : H → O}
+  {fine : H → Q} {forget : Q → O},
+  (∀ (h : H), coarse h = forget (fine h)) →
+    ∀ (q : Q) (h : H), Becoming.cell admitted fine q h → Becoming.cell admitted coarse (forget q) h
+@Becoming.sees_antitone : ∀ {H : Type u_1} {B B' : H → Prop},
+  (∀ (h : H), B' h → B h) → ∀ (s : Option H), Becoming.sees B' s → Becoming.sees B s
+@Becoming.implements_iff_commonResponse : ∀ {H O A : Type} (admitted : H → Prop) (observe : H → O)
+  (succeeds : H → A → Prop) (policy : O → A),
+  CorrectionBoundary.Implements admitted observe succeeds policy ↔
+    ∀ (o : O),
+      Generative.InquirySufficiency.CommonResponse (Becoming.judgeProcess succeeds) (fun x x_1 x_2 => True)
+        (fun x => True) (fun a => [a]) (Becoming.sees (Becoming.cell admitted observe o)) (policy o)
+@Becoming.commonAction_iff_commonResponse : ∀ {H O A : Type} (admitted : H → Prop) (observe : H → O)
+  (succeeds : H → A → Prop),
+  CorrectionBoundary.CommonAction admitted observe succeeds ↔
+    ∀ (o : O),
+      ∃ a,
+        Generative.InquirySufficiency.CommonResponse (Becoming.judgeProcess succeeds) (fun x x_1 x_2 => True)
+          (fun x => True) (fun a => [a]) (Becoming.sees (Becoming.cell admitted observe o)) a
+@Becoming.implements_refine : ∀ {H O A : Type} (admitted : H → Prop) (observe : H → O) (succeeds : H → A → Prop)
+  {Q : Type} {fine : H → Q} {forget : Q → O},
+  (∀ (h : H), observe h = forget (fine h)) →
+    ∀ {policy : O → A},
+      CorrectionBoundary.Implements admitted observe succeeds policy →
+        CorrectionBoundary.Implements admitted fine succeeds fun q => policy (forget q)
+@Becoming.safeOn_iff_commonResponse : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} (obs : W → O) (good : W → A → Prop)
+  (o : O) (a : A),
+  ObservationChange.SafeOn obs good o a ↔
+    Generative.InquirySufficiency.CommonResponse (Becoming.judgeProcess good) (fun x x_1 x_2 => True) (fun x => True)
+      (fun a => [a]) (Becoming.sees fun w => obs w = o) a
+@Becoming.safeOn_refine : ∀ {W : Type u_1} {O : Type u_2} {A : Type u_3} {N : Type u_4} {coarse : W → O} {fine : W → N}
+  {forget : N → O},
+  (∀ (w : W), forget (fine w) = coarse w) →
+    ∀ {good : W → A → Prop} {n : N} {a : A},
+      ObservationChange.SafeOn coarse good (forget n) a → ObservationChange.SafeOn fine good n a

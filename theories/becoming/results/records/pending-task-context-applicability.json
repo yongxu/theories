@@ -135,7 +135,7 @@
     {
       "path": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
       "role": "proof",
-      "sha256": "402c33bebeac53799f2aeeaf34ee6346422d6831b900ac37f64cc5f0d7fe3d73",
+      "sha256": "19b2584015863898588e6c883ba5df716921c39a13de58311fa8189d1c31dc36",
       "declarations": [
         "Becoming.VersionedTaskInstances.review_course_covered_iff",
         "Becoming.VersionedTaskInstances.enact_isSome_iff",
@@ -186,6 +186,12 @@
       "role": "receipt",
       "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
       "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json",
+      "role": "receipt",
+      "sha256": "04603eb9a2886e68a09da9ad1e3015350cd41e5b40d2ea35f2fecfcc1b2f5b3e",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -198,7 +204,7 @@
     },
     {
       "source": "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean",
-      "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261014T092502.891314Z/verification.json",
+      "receipt": "experiments/market-generativity/meta-attractor/versioned-task-instances-checks/20261020T161926.448088Z/verification.json",
       "sha256_pointer": "/source_sha256/VersionedTaskInstances",
       "success_pointer": "/status",
       "success_value": "passed"

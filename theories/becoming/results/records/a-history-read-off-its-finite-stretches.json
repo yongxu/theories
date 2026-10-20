@@ -618,7 +618,7 @@
         "Becoming.IdealsCorrespondence.unique_basis_representation_by_core",
         "Becoming.IdealsCorrespondence.unique_continuous_extension_by_core"
       ],
-      "sha256": "b61ff6d862a879d5dff476d7a5753870d8d33c092896b7e8eaa079d31363e596"
+      "sha256": "5964034664c857df0f2dcbd467c25da856fabefcb68c2c6eabd1611e1e000fe0"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/IdealWarrant.lean",
@@ -731,6 +731,12 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261020T162022.465111Z/verification.json",
+      "role": "receipt",
+      "sha256": "f550ac97ec46aedfed49ae7c20216053dd1e22615dd6fdacccc015b896f94105",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -771,28 +777,28 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/IdealsCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261019T020352.033083Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261020T162022.465111Z/verification.json",
       "sha256_pointer": "/source_sha256/IdealsCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/IdealWarrant.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261019T020352.033083Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261020T162022.465111Z/verification.json",
       "sha256_pointer": "/source_sha256/IdealWarrant",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/CompletionRole.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261019T020352.033083Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261020T162022.465111Z/verification.json",
       "sha256_pointer": "/source_sha256/CompletionRole",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/HistoryIdeals.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261019T020352.033083Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261020T162022.465111Z/verification.json",
       "sha256_pointer": "/source_sha256/HistoryIdeals",
       "success_pointer": "/status",
       "success_value": "passed"

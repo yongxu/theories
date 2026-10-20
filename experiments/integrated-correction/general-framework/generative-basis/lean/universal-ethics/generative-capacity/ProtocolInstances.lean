@@ -177,7 +177,7 @@ theorem stalls_unsupported (r : Pending)
 
 /-- **A pending recovery is counted work**: one tick does one remaining write, or the
 publication, for one unit of reserve and time; without either it stalls. -/
-theorem counts : Counts RecoverableControl.tick busy done work fuel := by
+theorem counts : CountedWork RecoverableControl.tick busy done work fuel := by
   refine ⟨?_, ?_, ?_⟩
   · rintro s ⟨r, rfl⟩ positive worked
     have reserve : 1 ≤ r.target.tracked.installation.state.reserve :=

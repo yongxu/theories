@@ -1,0 +1,6 @@
+EntropyProduction.lean:408:35: error: unsolved goals
+case pos
+gains : ¬(flow true).GainlessOn [()] 0
+t : ℕ
+h : t = 0
+⊢ 1 + 1 / 2 * (↑(Witnesses.profile [0] 1 1) + ↑(Witnesses.profile [0] 1 3)) ≤ 2

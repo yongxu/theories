@@ -243,7 +243,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
       "role": "proof",
-      "sha256": "ac9db17a6316f10e8d92b60fb8adb5596def1cfb51b94999770d1a3ce43e0629",
+      "sha256": "5350e798bbe102ff086beb97dc13040366bb43c5156175e9b93ea2392cc21e4a",
       "declarations": [
         "Becoming.EntropyProduction.ExergyBalance",
         "Becoming.EntropyProduction.SecondLaw",
@@ -320,12 +320,18 @@
         "Becoming.Flow.DissipativeBy",
         "Becoming.Flow.DissipatesBy.of_each"
       ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261020T162027.465211Z/verification.json",
+      "role": "receipt",
+      "sha256": "28beaf54de0970f4527bbee254b64bbb683899dd9727fabfe0036934d43a5863",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/EntropyProduction.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261019T082858.129214Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-checks/20261020T162027.465211Z/verification.json",
       "sha256_pointer": "/source_sha256/EntropyProduction",
       "success_pointer": "/status",
       "success_value": "passed"

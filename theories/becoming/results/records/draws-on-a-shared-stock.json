@@ -201,6 +201,12 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261020T161930.665727Z/verification.json",
+      "role": "receipt",
+      "sha256": "e457f4ae2a3f763a378e0070b25fc175a9daeb628370f6ac1ee9fd62c5018341",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -220,7 +226,7 @@
     },
     {
       "source": "experiments/market-generativity/meta-attractor/SharedStockInstances.lean",
-      "receipt": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261015T151857.892080Z/verification.json",
+      "receipt": "experiments/market-generativity/meta-attractor/shared-stock-instances-checks/20261020T161930.665727Z/verification.json",
       "sha256_pointer": "/source_sha256/SharedStockInstances",
       "success_pointer": "/status",
       "success_value": "passed"

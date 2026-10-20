@@ -74,6 +74,7 @@ Ren, 16 October 2026, chose “Closest gaps first” on the I4 classification ta
 | provenance | [2026-10-12-move-towards-100.md](../../../../sources/15-codex-theory-conversations/2026-10-12-move-towards-100.md) | — |
 | provenance | [2026-10-16-loops-readings-and-delegated-choices.md](../../../../sources/15-codex-theory-conversations/2026-10-16-loops-readings-and-delegated-choices.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261016T121942.514802Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-checks/20261020T162006.335470Z/verification.json) | — |
 
 Aliases: `Becoming.Gated.origin`, `Becoming.Gated.leaving_passes_gate`, `Becoming.Gated.origin_of_propositions_iff`, `every origin passes the gate`, `每个起源都经过门`, `leaving passes the gate`, `离开经过门`
 

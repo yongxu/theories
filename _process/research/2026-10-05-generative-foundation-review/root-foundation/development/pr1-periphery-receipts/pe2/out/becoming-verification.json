@@ -1,0 +1,2970 @@
+{
+ "values_reached": [],
+ "declarations": [
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Activation.TwoSteps.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Actuation.Move.deliver.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Actuation.Move.probe.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Actuation.State.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Alternatives.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Amounts.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Branching.Hidden.Pos.chain.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.BranchingTest.both.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.BranchingTest.can.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.BranchingTest.claim.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.BranchingTest.not.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CHSH.Outcome.left.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CHSH.Outcome.right.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Chains.Pos.endless.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Chains.Pos.on.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Clearing.Place.fuel.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CodeAcquisition.Code.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CodeAcquisition.Evidence.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CodeAcquisition.Expr.atom.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CodeAcquisition.Expr.join.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CodeAcquisition.Expr.twice.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.CodeAcquisition.Learner.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Conditions.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Confluence.Formation.new.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Contextual.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ContingentPlans.Interface.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ContingentPlans.Plan.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ContinuingRevision.Act.native.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ContinuingRevision.State.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Copying.Scan.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Crossing.Move.fall.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Crossing.State.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Dependence.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Dephasing.Joint.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Dephasing.Matrix.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Dephasing.Vec.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Dispatch.Delivery.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Dyadic.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Exchange.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ExchangeLaw.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ExchangeRelation.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Exposed.Relatum.ground.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Exposed.Relatum.side.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Flow.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Footprinted.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Fragment.Probe.after.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Fragment.Probe.before.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Fragment.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Frame.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Frontier.Condition.fuel.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Frontier.Formation.grower.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Generations.Formation.member.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Hexagram.Marked.staying.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Hexagram.Marked.turning.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Hexagram.MarkedLines.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Hexagram.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.HistoryIdeals.History.finite.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.HistoryIdeals.History.infinite.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Ideals.DirectedComplete.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Ideals.Ideal.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Ideals.OrderEquivalence.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Ideals.Preorder.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Interleavings.LocalLaw.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Joining.Context.left.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Joining.Context.right.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Joining.Move.withLeft.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Joining.Move.withRight.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Joining.Occurrence.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Joining.RoleMove.enter.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Joining.RoleMove.leave.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Joining.Tree.join.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Joining.Tree.leaf.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.JointFrame.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.JointPhase.Summary.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.JointPlan.leaf.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.JointPlan.pair.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Lasting.Fan.Pos.arm.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Layered.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.LearnedGrouping.State.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.MatchedCourses.State.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Net.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.OneStep.Chain.Relatum.numbered.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.OneStep.Chain.Site.beyond.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.OneStep.Chain.Site.node.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.OneStep.Witness.Part.unit.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.OneStep.Witness.Place.beyond.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.OneStep.Witness.Place.member.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.OpenQueue.Relatum.ground.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.OpenQueue.Relatum.member.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ParityConstraint.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ParitySystem.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PartialReadout.Channel.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Passage.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Pinned.State.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Pool.Draw.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Pool.State.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PooledEnvelopes.Situation.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Presentations.Presentation.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProfileReach.Standpoint.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ProjectedLaws.Device.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PropositionIdentity.Formula.all.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PropositionIdentity.Formula.and.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PropositionIdentity.Formula.atom.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PropositionIdentity.Formula.ex.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PropositionIdentity.Formula.imp.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.PropositionIdentity.Formula.or.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Recipe.choice.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Recipe.guard.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Recipe.move.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Recipe.seq.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Reconfiguration.Arrangement.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Reconfiguration.FaultFormula.all.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Reconfiguration.FaultFormula.any.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Reconfiguration.FaultFormula.cause.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Reconfiguration.Managed.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Reconfiguration.Rearrangement.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ReferencePlan.Act.perform.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ReferencePlan.Sample.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ReferencePlan.State.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Reidentify.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ResponseLearning.Teaching.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Retrodiction.Record.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Revising.Act.rebuild.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RouteFormation.Apparatus.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RouteFormation.FormationMove.encounter.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RouteFormation.FormationMove.inspect.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RouteFormation.FormationMove.place.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RouteFormation.Program.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RoutePoint.level.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RuleCapture.CarrierCounts.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RuleHandoff.Ballot.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RuleHandoff.Event.adopt.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RuleHandoff.Event.enroll.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RuleHandoff.Event.handoff.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RuleHandoff.Event.integrate.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RuleHandoff.Event.propose.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RuleHandoff.Event.review.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.RuleHandoff.State.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Run.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ScoreRepresentation.Claim.gain.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.SecuredContent.Arrangement.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.SecuredContent.Position.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.SelectionTerm.Generations.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.SharedCodes.Hearing.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Shock.Move.calm.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Shock.State.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.SprayShuttle.Relatum.aux.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.SprayShuttle.Relatum.side.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Square.Line.column.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Square.Line.row.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.StrictTransport.Route.repair.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Successive.Formation.source.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TestWith.both.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TestWith.can.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TestWith.claim.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TestWith.not.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TestWith.together.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Throughput.Relatum.fuel.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Throughput.Relatum.side.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Tower.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Transactions.Installation.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Transactions.Observation.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Transactions.Outcome.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Transactions.Request.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Transactions.Scope.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Transactions.Transaction.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TreeSearch.Scan.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TreeSearch.Search.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TreeSearch.Tree.endpoint.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TreeSearch.Tree.fork.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.TreeSearch.Verdict.found.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Unbounded.Pos.rest.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Undecided.Term.conj.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Undecided.Term.const.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Undecided.Term.disj.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Undecided.Term.neg.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Undecided.Term.var.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Valuation.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Viability.Matching.Stage.need.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Viability.Matching.Stage.start.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Viability.Plan.act.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Web.Condition.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Web.Growth.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.WebAt.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Weights.Hom.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.Weights.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.WitnessRefinement.Audited.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.World.Grazing.Relatum.side.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.World.Hatch.Relatum.ground.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.World.InAmounts.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.World.Scatter.Relatum.ground.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.World.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Generative.InquirySufficiency.Policy.inquire.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Generative.InquirySufficiency.Policy.respond.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Generative.Process.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "RelationalRenewal.Law.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "RelationalRenewal.Unfolding.mk.injEq",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Eq.propIntro",
+     "module": "Init.Core"
+    }
+   ]
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json",
+ "receipt_utc": "20261020T160406.697383Z",
+ "target": "Becoming",
+ "toolchain": "leanprover/lean4:v4.29.1",
+ "audited": 197,
+ "recorded_on_propext": 197,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 298,
+ "compiled": []
+}

@@ -315,7 +315,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/TransmissionCorrespondence.lean",
       "role": "proof",
-      "sha256": "94a2fe61db45140c22417738f961e625575c81f16b3e8e47752e5f0b06ff7b07",
+      "sha256": "4736a037a3cfa6ee0d0edc6e38bf0854dbfe6b46367b3a809e0b43d7706fe148",
       "declarations": [
         "Becoming.TransmissionCorrespondence.kitWord",
         "Becoming.TransmissionCorrespondence.pool",
@@ -380,6 +380,12 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261020T161938.520043Z/verification.json",
+      "role": "receipt",
+      "sha256": "09869bf6ce994fad0aa049f0593a5fdb46838622c03d42e87c9956771bc38880",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -413,7 +419,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/TransmissionCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261015T151904.501987Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-checks/20261020T161938.520043Z/verification.json",
       "sha256_pointer": "/source_sha256/TransmissionCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"

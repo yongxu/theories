@@ -226,6 +226,12 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261020T161957.579185Z/verification.json",
+      "role": "receipt",
+      "sha256": "fabfd5675a46888acdc7db88e8230bd9e807e8654feaf90de383861b55a73d15",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -252,7 +258,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/SubstitutionCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261015T161423.129149Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-checks/20261020T161957.579185Z/verification.json",
       "sha256_pointer": "/source_sha256/SubstitutionCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"

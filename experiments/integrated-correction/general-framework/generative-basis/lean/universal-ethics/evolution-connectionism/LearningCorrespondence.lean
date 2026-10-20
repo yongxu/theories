@@ -1,4 +1,5 @@
 import Becoming.Learning
+import Becoming.Mechanism
 import CompositionalAcquisition
 import UpdaterConsequences
 

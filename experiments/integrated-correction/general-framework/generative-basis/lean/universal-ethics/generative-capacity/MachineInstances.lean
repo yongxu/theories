@@ -798,7 +798,7 @@ def Separated (rep : List Expr) (excluded : List Nat) (records : List Encounter)
 /-- **Cross-situational binding of an acquired lexicon.** For every lexicon whose repertoire has
 no repeats, the word of `b` resolves to its atom exactly when its admitted records separate the
 atom. -/
-theorem resolve_iff (s : Lexicon) (distinct : CrossSituational.Distinct s.repertoire) (b : Bool) :
+theorem resolve_iff (s : Lexicon) (distinct : Becoming.Distinct s.repertoire) (b : Bool) :
     resolve s (word b) = some (Expr.atom b) ↔ Separated s.repertoire s.excluded s.records b := by
   rw [resolve_eq, candidates_eq, CrossSituational.resolves_iff distinct]
   constructor
@@ -820,7 +820,7 @@ theorem resolve_iff (s : Lexicon) (distinct : CrossSituational.Distinct s.repert
 encoding and whose repertoire has no repeats, every encoded sequence is interpreted as the
 assembly of its atoms exactly when, for each word, its admitted records separate its atom. -/
 theorem interprets_every_iff_separated (s : Lexicon) (groups : Groups s.percept.log)
-    (distinct : CrossSituational.Distinct s.repertoire) :
+    (distinct : Becoming.Distinct s.repertoire) :
     (∀ ws, interpret s (encode ws) = assembleMessage (ws.map Expr.atom)) ↔
       ∀ b, Separated s.repertoire s.excluded s.records b :=
   (interprets_every_iff s groups).trans
@@ -963,7 +963,7 @@ and namings, every encoded sequence is interpreted as the assembly of its atoms 
 for each word, the earlier records and the namings heard along the history, each offering the
 alternatives accessible where the learner stood, separate its atom. -/
 theorem scene_interprets_every_iff (s : Situation) (groups : Groups s.lexicon.percept.log)
-    (distinct : CrossSituational.Distinct s.lexicon.repertoire) (h : List SceneMove) :
+    (distinct : Becoming.Distinct s.lexicon.repertoire) (h : List SceneMove) :
     (∀ ws, interpret (enact s h).lexicon (encode ws) = assembleMessage (ws.map Expr.atom)) ↔
       ∀ b, Separated s.lexicon.repertoire s.lexicon.excluded
         (s.lexicon.records ++ heardAlong s h) b := by
@@ -980,10 +980,10 @@ theorem coordinated_enacts (n : Nat) : coordinated n = enact (start n) coordinat
 
 theorem start_groups : Groups (start 37).lexicon.percept.log := by unfold Groups; decide
 
-theorem start_distinct (n : Nat) : CrossSituational.Distinct (start n).lexicon.repertoire := by
-  show CrossSituational.Distinct [p0, p1, extra]
-  unfold CrossSituational.Distinct CrossSituational.Distinct CrossSituational.Distinct
-    CrossSituational.Distinct
+theorem start_distinct (n : Nat) : Becoming.Distinct (start n).lexicon.repertoire := by
+  show Becoming.Distinct [p0, p1, extra]
+  unfold Becoming.Distinct Becoming.Distinct Becoming.Distinct
+    Becoming.Distinct
   decide
 
 /-- The four namings of the coordinated history and the alternatives accessible at each. -/
@@ -1174,7 +1174,7 @@ theorem local_naming_narrows (a : Activity) (groups : Groups a.situation.lexicon
 theorem acquired_repertoire : (acquired 51).situation.lexicon.repertoire = [p0, p1, extra] := by
   decide
 
-theorem acquired_distinct : CrossSituational.Distinct (acquired 51).situation.lexicon.repertoire := by
+theorem acquired_distinct : Becoming.Distinct (acquired 51).situation.lexicon.repertoire := by
   rw [acquired_repertoire]
   exact start_distinct 0
 
@@ -1232,7 +1232,7 @@ produced by some world (a learned route under an admitted fault) with target `b`
 view resolves the form to that atom exactly when every other meaning of the repertoire is ruled
 out by some packet of the form that no world with that meaning as its atom produces. -/
 theorem retrospective_resolves_iff (s : Memory) (faults : List SourceReliance.Faults)
-    (distinct : CrossSituational.Distinct s.base.repertoire) (form : List Sound) (b : Bool)
+    (distinct : Becoming.Distinct s.base.repertoire) (form : List Sound) (b : Bool)
     (available : Expr.atom b ∈ s.base.repertoire)
     (produced : ∀ p, p ∈ s.packets → p.form = form → ∃ w : SourceReliance.World,
       (w.route ∈ routes s ∧ w.faults ∈ faults) ∧ w.target = b ∧ SourceReliance.view w = p.reports) :
@@ -1300,7 +1300,7 @@ theorem retrospective_repertoire :
   decide
 
 theorem retrospective_distinct :
-    CrossSituational.Distinct (bindingView (retrospective 36) SourceReliance.allFaults).repertoire := by
+    Becoming.Distinct (bindingView (retrospective 36) SourceReliance.allFaults).repertoire := by
   rw [retrospective_repertoire]
   exact start_distinct 0
 

@@ -1,0 +1,24 @@
+ProtocolInstances.lean:180:17: error: Function expected at
+  Counts
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  RecoverableControl.tick
+
+Hint: The identifier `Counts` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+ProtocolInstances.lean:182:2: error: No goals to be solved
+ProtocolInstances.lean:230:41: error(lean.invalidDottedIdent): Invalid dotted identifier notation: The expected type of `.busy` could not be determined
+
+Hint: Using one of these would be unambiguous:
+  [apply] `busy`
+  [apply] `RecoverableControl.Device.busy`
+ProtocolInstances.lean:230:50: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined
+ProtocolInstances.lean:229:58: error: unsolved goals
+r : RecoverableControl.Pending
+⊢ (∃ m,
+      RecoverableControl.resumeSteps (r.todo.length + 1) (RecoverableControl.Device.busy r) =
+        some (RecoverableControl.Device.ready m)) ↔
+    r.todo.length + 1 ≤ r.target.tracked.installation.state.reserve ∧
+      r.target.tracked.installation.state.time + r.todo.length + 1 ≤ r.target.tracked.installation.state.deadline
+ProtocolInstances.lean:245:24: error: Invalid `⟨...⟩` notation: The expected type of this term could not be determined

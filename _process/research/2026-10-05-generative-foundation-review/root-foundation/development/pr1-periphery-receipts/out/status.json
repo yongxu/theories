@@ -1,0 +1,163 @@
+{
+  "fallible-inquiry-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161546.707477Z",
+    "seconds": 130,
+    "tail": "{\"status\": \"passed\", \"theorems\": 31, \"declaration_audits\": 37, \"axioms\": [\"Quot.sound\", \"propext\"], \"inherited_modules\": 37, \"lean_steps_run\": 1, \"lean_steps_reused\": 40, \"lean\": \"elan which lean\", \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/fallible-inquiry-verification.json\"}\n"
+  },
+  "correction-inquiry-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161757.201244Z",
+    "seconds": 62,
+    "tail": "{\"status\": \"passed\", \"theorems\": 7, \"declaration_audits\": 8, \"axioms\": [], \"inherited_modules\": 301, \"lean_steps_run\": 8, \"lean_steps_reused\": 297, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/correction-inquiry-verification.json\"}\n"
+  },
+  "machine-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161859.257200Z",
+    "seconds": 7,
+    "tail": "{\"status\": \"passed\", \"theorems\": 103, \"declaration_audits\": 124, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 69, \"lean_steps_run\": 1, \"lean_steps_reused\": 72, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/machine-instances-verification.json\"}\n"
+  },
+  "learning-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161905.961078Z",
+    "seconds": 5,
+    "tail": "oming.LearningCorrespondence.hebbian\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.hebbian_determined\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.hebbian_activity_law_iff\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.weights_matter\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.hebbian_no_activity_law\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.updating\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.updating_determined\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.updating_network_law_iff\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.responsive_kept\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.responsive_learns\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.route_matters\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.LearningCorrespondence.updating_no_network_law\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 42, \"lean_steps_run\": 1, \"lean_steps_reused\": 45, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/learning-correspondence-verification.json\"}\n"
+  },
+  "copying-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161910.956874Z",
+    "seconds": 4,
+    "tail": "{\"status\": \"passed\", \"theorems\": 86, \"declaration_audits\": 98, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 20, \"lean_steps_run\": 1, \"lean_steps_reused\": 23, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/copying-instances-verification.json\"}\n"
+  },
+  "retrodiction-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161914.501944Z",
+    "seconds": 3,
+    "tail": "{\"status\": \"passed\", \"theorems\": 21, \"declaration_audits\": 27, \"axioms\": [\"Quot.sound\", \"propext\"], \"inherited_modules\": 15, \"lean_steps_run\": 1, \"lean_steps_reused\": 18, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/retrodiction-instances-verification.json\"}\n"
+  },
+  "market-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161917.735916Z",
+    "seconds": 5,
+    "tail": "{\"status\": \"passed\", \"theorems\": 45, \"declaration_audits\": 53, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 42, \"lean_steps_run\": 1, \"lean_steps_reused\": 45, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/market-generativity/formal/market-instances-verification.json\"}\n"
+  },
+  "protocol-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161923.157515Z",
+    "seconds": 3,
+    "tail": "{\"status\": \"passed\", \"theorems\": 19, \"declaration_audits\": 31, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 19, \"lean_steps_run\": 1, \"lean_steps_reused\": 22, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/protocol-instances-verification.json\"}\n"
+  },
+  "versioned-task-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161926.448088Z",
+    "seconds": 4,
+    "tail": " [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.enact_isSome_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.review_completes_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.continuation_of_completed\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.continuation_eq\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.continuation_isSome_iff\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.harmful_continuation_instance\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.relevant_risk_eq\": [\"propext\"], \"Becoming.VersionedTaskInstances.enact_losses\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.review_losses\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.review_adds_loss_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.covered_review_instance\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.reviews\": [\"propext\"], \"Becoming.VersionedTaskInstances.clears\": [\"propext\"], \"Becoming.VersionedTaskInstances.losses_kept\": [\"propext\", \"Quot.sound\"], \"Becoming.VersionedTaskInstances.losses_kept_along\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 27, \"lean_steps_run\": 1, \"lean_steps_reused\": 30, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/market-generativity/meta-attractor/versioned-task-instances-verification.json\"}\n"
+  },
+  "shared-stock-instances-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161930.665727Z",
+    "seconds": 5,
+    "tail": "{\"status\": \"passed\", \"theorems\": 4, \"declaration_audits\": 5, \"nonempty_audits\": {}, \"inherited_modules\": 27, \"lean_steps_run\": 1, \"lean_steps_reused\": 30, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/market-generativity/meta-attractor/shared-stock-instances-verification.json\"}\n"
+  },
+  "continuation-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161935.181496Z",
+    "seconds": 3,
+    "tail": "{\"status\": \"passed\", \"theorems\": 13, \"declaration_audits\": 17, \"nonempty_audits\": {\"Becoming.ContinuationCorrespondence.classicalChoice\": [\"Classical.choice\"], \"Becoming.ContinuationCorrespondence.viable_iff_plan_by_core\": [\"Classical.choice\"], \"Becoming.ContinuationCorrespondence.toPlan_zip\": [\"propext\", \"Quot.sound\"], \"Becoming.ContinuationCorrespondence.compatible_iff\": [\"propext\"], \"Becoming.ContinuationCorrespondence.joint_plan_composition_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.ContinuationCorrespondence.compatibility_necessary_by_core\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 10, \"lean_steps_run\": 1, \"lean_steps_reused\": 13, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-verification.json\"}\n"
+  },
+  "transmission-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161938.520043Z",
+    "seconds": 5,
+    "tail": "econstruction_builds_longest_lineage\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.process\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.material_balanced\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.support_balanced\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.course_conserves\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.procedure\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.successors\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.faithful_procedure\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.family_unchanged\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.faithful_selects\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.historyOut\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.TransmissionCorrespondence.history_selects\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 33, \"lean_steps_run\": 1, \"lean_steps_reused\": 36, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/transmission-correspondence-verification.json\"}\n"
+  },
+  "preparation-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161943.503298Z",
+    "seconds": 5,
+    "tail": "ificate_exact_split_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.cut_separates\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.returns_differ\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.no_parent_summary_predictor_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.adjacent_iff_links\": [\"propext\"], \"Becoming.PreparationCorrespondence.connected_iff_links\": [\"propext\"], \"Becoming.PreparationCorrespondence.divide_attached\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.develop_attached\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.cut_attached\": [\"propext\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.bond_cut_separates\": [\"propext\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.every_grown_bond_separates\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.aggregate_cut_unchanged_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.PreparationCorrespondence.reinforced_cut_unchanged\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 50, \"lean_steps_run\": 1, \"lean_steps_reused\": 53, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/preparation-correspondence-verification.json\"}\n"
+  },
+  "judging-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161948.968917Z",
+    "seconds": 5,
+    "tail": "{\"status\": \"passed\", \"theorems\": 4, \"declaration_audits\": 7, \"nonempty_audits\": {\"Becoming.JudgingCorrespondence.endpoint\": [\"propext\"], \"Becoming.JudgingCorrespondence.certificate\": [\"propext\"], \"Becoming.JudgingCorrespondence.mem_realizations\": [\"propext\", \"Quot.sound\"], \"Becoming.JudgingCorrespondence.judges_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.JudgingCorrespondence.endpoint_judge_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.JudgingCorrespondence.no_endpoint_only_prior_certificate_by_core\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 46, \"lean_steps_run\": 1, \"lean_steps_reused\": 49, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-verification.json\"}\n"
+  },
+  "renewing-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161953.940017Z",
+    "seconds": 4,
+    "tail": "{\"status\": \"passed\", \"theorems\": 10, \"declaration_audits\": 13, \"nonempty_audits\": {\"Becoming.RenewingCorrespondence.remaining_falls\": [\"propext\", \"Quot.sound\"], \"Becoming.RenewingCorrespondence.forms_while_held\": [\"propext\", \"Quot.sound\"], \"Becoming.RenewingCorrespondence.moves_length\": [\"propext\"], \"Becoming.RenewingCorrespondence.moves_succ\": [\"propext\"], \"Becoming.RenewingCorrespondence.total_append\": [\"propext\"], \"Becoming.RenewingCorrespondence.total_moves\": [\"propext\"], \"Becoming.RenewingCorrespondence.path_trace\": [\"propext\"], \"Becoming.RenewingCorrespondence.beyond_current_bounded_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.RenewingCorrespondence.beyond_current_ceases_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.RenewingCorrespondence.shared_formation_ends_by_core\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 15, \"lean_steps_run\": 1, \"lean_steps_reused\": 18, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/renewing-correspondence-verification.json\"}\n"
+  },
+  "substitution-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T161957.579185Z",
+    "seconds": 5,
+    "tail": "{\"status\": \"passed\", \"theorems\": 4, \"declaration_audits\": 10, \"nonempty_audits\": {\"Becoming.SubstitutionCorrespondence.through\": [\"Quot.sound\"], \"Becoming.SubstitutionCorrespondence.supplies\": [\"Quot.sound\"], \"Becoming.SubstitutionCorrespondence.all_terms_agree_iff_positions_by_core\": [\"Quot.sound\"]}, \"inherited_modules\": 43, \"lean_steps_run\": 1, \"lean_steps_reused\": 46, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/substitution-correspondence-verification.json\"}\n"
+  },
+  "organization-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T162002.464258Z",
+    "seconds": 4,
+    "tail": "{\"status\": \"passed\", \"theorems\": 3, \"declaration_audits\": 3, \"nonempty_audits\": {\"Becoming.OrganizationCorrespondence.formation_required_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.OrganizationCorrespondence.coordination_is_required_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 24, \"lean_steps_run\": 1, \"lean_steps_reused\": 27, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/organization-correspondence-verification.json\"}\n"
+  },
+  "living-organization-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T162006.335470Z",
+    "seconds": 3,
+    "tail": "{\"status\": \"passed\", \"theorems\": 4, \"declaration_audits\": 6, \"nonempty_audits\": {\"Becoming.LivingOrganizationCorrespondence.presence_reflected\": [\"propext\", \"Quot.sound\"], \"Becoming.LivingOrganizationCorrespondence.trace_pool_origin_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.LivingOrganizationCorrespondence.entry_then_present\": [\"propext\", \"Quot.sound\"], \"Becoming.LivingOrganizationCorrespondence.empty_pool_preserved_by_core\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 5, \"lean_steps_run\": 1, \"lean_steps_reused\": 8, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/living-organization-correspondence-verification.json\"}\n"
+  },
+  "prefix-safety-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T162009.405485Z",
+    "seconds": 4,
+    "tail": "{\"status\": \"passed\", \"theorems\": 9, \"declaration_audits\": 9, \"nonempty_audits\": {\"Becoming.PrefixSafetyCorrespondence.holds_of_prefixClosure_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PrefixSafetyCorrespondence.prefixClosure_least_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PrefixSafetyCorrespondence.markov_classical\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.PrefixSafetyCorrespondence.boundary_closed_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 16, \"lean_steps_run\": 1, \"lean_steps_reused\": 19, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-verification.json\"}\n"
+  },
+  "finite-branching-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T162012.952848Z",
+    "seconds": 5,
+    "tail": "{\"status\": \"passed\", \"theorems\": 9, \"declaration_audits\": 10, \"nonempty_audits\": {\"Becoming.FiniteBranchingCorrespondence.either_classical\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.FiniteBranchingCorrespondence.finite_unbounded_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.FiniteBranchingCorrespondence.unbounded_child_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.FiniteBranchingCorrespondence.infinite_from_unbounded_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.FiniteBranchingCorrespondence.finite_initial_lifting_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"], \"Becoming.FiniteBranchingCorrespondence.labelled_lifting_by_core\": [\"propext\", \"Classical.choice\", \"Quot.sound\"]}, \"inherited_modules\": 37, \"lean_steps_run\": 1, \"lean_steps_reused\": 40, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-verification.json\"}\n"
+  },
+  "selection-relabel-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T162018.010437Z",
+    "seconds": 4,
+    "tail": "{\"status\": \"passed\", \"theorems\": 13, \"declaration_audits\": 72, \"nonempty_audits\": {}, \"inherited_modules\": 33, \"lean_steps_run\": 1, \"lean_steps_reused\": 36, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/acquisition/feedback/remaining-dependency/formal/selection-relabel-correspondence-verification.json\"}\n"
+  },
+  "ideals-correspondence-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T162022.465111Z",
+    "seconds": 5,
+    "tail": "\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.history_order_iff_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.historyIdeal_injective_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.refutable_of_wordIdeal\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.finiteOnly_wordIdeal_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.trace_wordIdeal_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.propertyClass_wordIdeal_iff\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.propertyClass_not_refutable_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.finiteOnly_not_refutable_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.recurrence_ideal_not_refutable_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.represented_ideal_not_refutable_by_core\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.tracePrefix_prefix_initialWord\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.initialWord_prefix_tracePrefix\": [\"propext\", \"Quot.sound\"], \"Becoming.IdealsCorrespondence.history_admitted_iff_by_core\": [\"propext\", \"Quot.sound\"]}, \"inherited_modules\": 36, \"lean_steps_run\": 1, \"lean_steps_reused\": 39, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-verification.json\"}\n"
+  },
+  "entropy-production-verification": {
+    "exit": 0,
+    "status": "passed",
+    "utc": "20261020T162027.465211Z",
+    "seconds": 4,
+    "tail": "{\"status\": \"passed\", \"theorems\": 24, \"declaration_audits\": 33, \"axioms\": [\"Classical.choice\", \"Quot.sound\", \"propext\"], \"inherited_modules\": 25, \"lean_steps_run\": 1, \"lean_steps_reused\": 28, \"receipt\": \"/Users/ren/theories/.claude/worktrees/wizardly-raman-45764a/experiments/integrated-correction/general-framework/generative-basis/lean/physics/entropy-production-verification.json\"}\n"
+  }
+}

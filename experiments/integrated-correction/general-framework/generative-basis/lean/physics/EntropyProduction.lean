@@ -134,7 +134,7 @@ with nothing destroyed, at every unit. -/
 theorem passing_balance (u : ℝ) :
     ExergyBalance Passing.flow u (fun _ _ => 0) ∧ SecondLaw Passing.flow (fun _ _ => 0) :=
   ⟨fun cs t distinct closed f present => by
-     have h := Passing.lossless cs t distinct closed f present
+     have h := Passing.conserving cs t distinct closed f present
      simp only [add_zero]
      exact congrArg (u * ·) (by exact_mod_cast h),
    fun _ _ _ => le_refl 0⟩
@@ -415,7 +415,7 @@ theorem gains_in_one_run :
   rw [integral_coin, integral_coin, integral_coin]
   by_cases h : t = 0 <;>
     simp [flow, Flow.replenishment, Flow.uptake, Flow.takers, Flow.taken, Flow.given, count,
-      total, sign, h]
+      total, sign, Witnesses.profile, h]
   norm_num
 
 end Fluctuation

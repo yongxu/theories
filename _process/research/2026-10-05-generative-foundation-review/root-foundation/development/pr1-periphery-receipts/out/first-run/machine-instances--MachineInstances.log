@@ -1,0 +1,114 @@
+MachineInstances.lean:801:46: error(lean.unknownIdentifier): Unknown identifier `CrossSituational.Distinct`
+MachineInstances.lean:802:95: error: unsolved goals
+s : Lexicon
+distinct : sorry
+b : Bool
+⊢ CrossSituational.unique (CrossSituational.candidates (bearsOn s.excluded (word b)) offersOf s.repertoire s.records) =
+      some (Expr.atom b) ↔
+    Separated s.repertoire s.excluded s.records b
+MachineInstances.lean:823:16: error(lean.unknownIdentifier): Unknown identifier `CrossSituational.Distinct`
+MachineInstances.lean:966:16: error(lean.unknownIdentifier): Unknown identifier `CrossSituational.Distinct`
+MachineInstances.lean:969:51: error: unsolved goals
+s : Situation
+groups : Groups s.lexicon.percept.log
+distinct : sorry
+h : List SceneMove
+log : (enact s h).lexicon.percept.log = s.lexicon.percept.log
+rep : (enact s h).lexicon.repertoire = s.lexicon.repertoire
+ex : (enact s h).lexicon.excluded = s.lexicon.excluded
+⊢ (∀ (ws : List Bool), interpret (enact s h).lexicon (encode ws) = assembleMessage (List.map Expr.atom ws)) ↔
+    ∀ (b : Bool), Separated s.lexicon.repertoire s.lexicon.excluded (s.lexicon.records ++ heardAlong s h) b
+MachineInstances.lean:983:35: error(lean.unknownIdentifier): Unknown identifier `CrossSituational.Distinct`
+MachineInstances.lean:984:7: error(lean.unknownIdentifier): Unknown identifier `CrossSituational.Distinct`
+MachineInstances.lean:985:9: error(lean.unknownIdentifier): Unknown identifier `CrossSituational.Distinct`
+MachineInstances.lean:1001:0: error: declaration `Becoming.MachineInstances.coordinated_from_history` contains universe level metavariables at the expression
+  scene_interprets_every_iff.{?u.7187.20} (start 37) start_groups (start_distinct.{?u.7187.20} 37) coordinatedMoves
+in the declaration body
+  fun ws =>
+    Eq.mpr
+      (id
+        (congrArg (fun _a => interpret _a.lexicon (encode ws) = assembleMessage (List.map Expr.atom ws))
+          (coordinated_enacts 37)))
+      ((scene_interprets_every_iff.{?u.7187.20} (start 37) start_groups (start_distinct.{?u.7187.20} 37)
+            coordinatedMoves).mpr
+        coordinated_separated ws)
+MachineInstances.lean:1003:8: error: (kernel) unknown constant 'Becoming.MachineInstances.start_distinct'
+MachineInstances.lean:1014:0: error: declaration `Becoming.MachineInstances.stationary_fails` contains universe level metavariables at the expression
+  scene_interprets_every_iff.{?u.7287.17} (start 37) start_groups (start_distinct.{?u.7287.17} 37) stationaryMoves
+in the declaration body
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a => ¬∀ (ws : List Bool), interpret _a.lexicon (encode ws) = assembleMessage (List.map Expr.atom ws))
+        (stationary_enacts 37)))
+    (Eq.mpr
+      (id
+        (congrArg (fun _a => ¬_a)
+          (propext
+            (scene_interprets_every_iff.{?u.7287.17} (start 37) start_groups (start_distinct.{?u.7287.17} 37)
+              stationaryMoves))))
+      fun every =>
+      have unseparated := id (of_decide_eq_true (id (Eq.refl true)));
+      unseparated (every false))
+MachineInstances.lean:1016:8: error: (kernel) unknown constant 'Becoming.MachineInstances.start_distinct'
+MachineInstances.lean:1032:0: error: declaration `Becoming.MachineInstances.mistimed_fails` contains universe level metavariables at the expression
+  scene_interprets_every_iff.{?u.7422.17} (start 37) start_groups (start_distinct.{?u.7422.17} 37) mistimedMoves
+in the declaration body
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a => ¬∀ (ws : List Bool), interpret _a.lexicon (encode ws) = assembleMessage (List.map Expr.atom ws))
+        (mistimed_enacts 37)))
+    (Eq.mpr
+      (id
+        (congrArg (fun _a => ¬_a)
+          (propext
+            (scene_interprets_every_iff.{?u.7422.17} (start 37) start_groups (start_distinct.{?u.7422.17} 37)
+              mistimedMoves))))
+      fun every =>
+      have uncovered := id (of_decide_eq_true (id (Eq.refl true)));
+      uncovered (every true))
+MachineInstances.lean:1034:8: error: (kernel) unknown constant 'Becoming.MachineInstances.start_distinct'
+MachineInstances.lean:1177:28: error(lean.unknownIdentifier): Unknown identifier `CrossSituational.Distinct`
+MachineInstances.lean:1188:0: error: declaration `Becoming.MachineInstances.acquired_from_separation` contains universe level metavariables at the expression
+  interprets_every_iff_separated.{?u.8642.5} (acquired 51).situation.lexicon acquired_groups
+    acquired_distinct.{?u.8642.5}
+in the declaration body
+  fun ws =>
+    (interprets_every_iff_separated.{?u.8642.5} (acquired 51).situation.lexicon acquired_groups
+          acquired_distinct.{?u.8642.5}).mpr
+      acquired_separated ws
+MachineInstances.lean:1189:8: error: (kernel) unknown constant 'Becoming.MachineInstances.acquired_distinct'
+MachineInstances.lean:1235:16: error(lean.unknownIdentifier): Unknown identifier `CrossSituational.Distinct`
+MachineInstances.lean:1242:72: error: unsolved goals
+s : Memory
+faults : List SourceReliance.Faults
+distinct : sorry
+form : List Sound
+b : Bool
+available : Expr.atom b ∈ s.base.repertoire
+produced :
+  ∀ (p : Packet),
+    p ∈ s.packets →
+      p.form = form → ∃ w, (w.route ∈ routes s ∧ w.faults ∈ faults) ∧ w.target = b ∧ SourceReliance.view w = p.reports
+⊢ CrossSituational.candidates (fun p => decide (p.form = form))
+        (fun p e => decide (e ∈ alternatives (routes s) faults p.reports)) s.base.repertoire s.packets =
+      [Expr.atom b] ↔
+    ∀ (m : Expr),
+      m ∈ s.base.repertoire →
+        m ≠ Expr.atom b →
+          ∃ p,
+            p ∈ s.packets ∧
+              p.form = form ∧
+                ∀ (w : SourceReliance.World),
+                  w.route ∈ routes s ∧ w.faults ∈ faults → Expr.atom w.target = m → SourceReliance.view w ≠ p.reports
+MachineInstances.lean:1303:4: error(lean.unknownIdentifier): Unknown identifier `CrossSituational.Distinct`
+MachineInstances.lean:1315:0: error: declaration `Becoming.MachineInstances.retrospective_from_separation` contains universe level metavariables at the expression
+  interprets_every_iff_separated.{?u.9666.5} (bindingView (retrospective 36) SourceReliance.allFaults)
+    retrospective_groups retrospective_distinct.{?u.9666.5}
+in the declaration body
+  fun ws =>
+    (interprets_every_iff_separated.{?u.9666.5} (bindingView (retrospective 36) SourceReliance.allFaults)
+          retrospective_groups retrospective_distinct.{?u.9666.5}).mpr
+      retrospective_separated ws
+MachineInstances.lean:1316:8: error: (kernel) unknown constant 'Becoming.MachineInstances.retrospective_distinct'

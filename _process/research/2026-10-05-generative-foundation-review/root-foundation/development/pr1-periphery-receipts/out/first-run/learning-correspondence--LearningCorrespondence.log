@@ -1,0 +1,60 @@
+LearningCorrespondence.lean:138:2: error(lean.unknownIdentifier): Unknown identifier `adaptive`
+LearningCorrespondence.lean:141:4: error: Function expected at
+  Determined
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (hebbian (n := n) σ τ δ η)
+
+Hint: The identifier `Determined` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+LearningCorrespondence.lean:142:2: error(lean.unknownIdentifier): Unknown identifier `adaptive_determined`
+LearningCorrespondence.lean:147:4: error: Function expected at
+  GoAlike
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (hebbian (n := n) σ τ δ η)
+
+Hint: The identifier `GoAlike` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+LearningCorrespondence.lean:149:2: error(lean.unknownIdentifier): Unknown identifier `adaptive_state_law_iff.trans`
+LearningCorrespondence.lean:164:6: error: Function expected at
+  GoAlike
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  (hebbian (n := 3) Real.tanh 1 1 η)
+
+Hint: The identifier `GoAlike` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+LearningCorrespondence.lean:170:2: error(lean.unknownIdentifier): Unknown identifier `adaptive`
+LearningCorrespondence.lean:172:30: error: Function expected at
+  Determined
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  updating
+
+Hint: The identifier `Determined` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+LearningCorrespondence.lean:173:2: error(lean.unknownIdentifier): Unknown identifier `adaptive_determined`
+LearningCorrespondence.lean:177:4: error: Function expected at
+  GoAlike
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  updating
+
+Hint: The identifier `GoAlike` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+LearningCorrespondence.lean:178:2: error(lean.unknownIdentifier): Unknown identifier `adaptive_state_law_iff`
+LearningCorrespondence.lean:205:36: error: Function expected at
+  GoAlike
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  updating
+
+Hint: The identifier `GoAlike` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.

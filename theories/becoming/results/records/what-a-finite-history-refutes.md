@@ -84,6 +84,7 @@ Ren, 16 October 2026, chose “Closest gaps first” on the I4 classification ta
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T172902.786054Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T181519.226999Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T194851.524223Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/prefix-safety-correspondence-checks/20261020T162009.405485Z/verification.json) | — |
 
 Aliases: `Becoming.Refutable`, `Becoming.Adheres`, `Becoming.refutable_passes_iff_markov`, `Becoming.Refutable.not_not`, `what a finite history refutes`, `有限历史所否证者`, `finite refutability`, `有限可否证`, `adherence`, `附着`
 

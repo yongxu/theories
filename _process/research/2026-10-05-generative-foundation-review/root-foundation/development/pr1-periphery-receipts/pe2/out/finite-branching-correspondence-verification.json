@@ -1,0 +1,144 @@
+{
+ "values_reached": [],
+ "declarations": [
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FiniteBranchingCorrespondence.either_classical",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Classical.em",
+     "module": "Init.Classical"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FiniteBranchingCorrespondence.finite_initial_lifting_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.FiniteBranchingCorrespondence.either_classical",
+     "module": "FiniteBranchingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.FiniteBranchingCorrespondence.infinite_from_unbounded_by_core",
+     "module": "FiniteBranchingCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FiniteBranchingCorrespondence.finite_unbounded_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.FiniteBranchingCorrespondence.either_classical",
+     "module": "FiniteBranchingCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Classical.em",
+     "module": "Init.Classical"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FiniteBranchingCorrespondence.finitelyBranching",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FiniteBranchingCorrespondence.infinite_from_unbounded_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.FiniteBranchingCorrespondence.either_classical",
+     "module": "FiniteBranchingCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FiniteBranchingCorrespondence.labelled_lifting_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "List.mem_map",
+     "module": "Init.Data.List.Lemmas"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.FiniteBranchingCorrespondence.finite_initial_lifting_by_core",
+     "module": "FiniteBranchingCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.FiniteBranchingCorrespondence.process",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FiniteBranchingCorrespondence.reach_iff_continues",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.FiniteBranchingCorrespondence.unbounded_child_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "proof": true,
+     "name": "Becoming.FiniteBranchingCorrespondence.either_classical",
+     "module": "FiniteBranchingCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.FiniteBranchingCorrespondence.unbounded_iff",
+   "kind": "theorem"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/finite-branching-correspondence-verification.json",
+ "receipt_utc": "20261020T162012.952848Z",
+ "target": "FiniteBranchingCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 10,
+ "recorded_on_propext": 6,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 38,
+ "compiled": []
+}

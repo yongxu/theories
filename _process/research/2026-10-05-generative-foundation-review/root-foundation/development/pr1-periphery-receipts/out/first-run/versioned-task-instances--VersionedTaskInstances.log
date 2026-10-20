@@ -1,0 +1,5 @@
+VersionedTaskInstances.lean:178:77: error(lean.invalidField): Invalid field `counts`: The environment does not contain `Becoming.Countdown.Advances.counts`, so it is not possible to project the field `counts` from an expression
+  head_advances s.banks s.active p.slot p.requested ps []
+of type
+  Advances tickOut (Pending s.banks s.active p.slot p.requested ps []) (Delivered s.banks s.active p.requested ps [])
+    remaining

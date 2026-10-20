@@ -2426,32 +2426,32 @@ Definitions and types:
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean`
 
-Imports: `Becoming.Learning`, `CompositionalAcquisition`, `UpdaterConsequences`
+Imports: `Becoming.Learning`, `Becoming.Mechanism`, `CompositionalAcquisition`, `UpdaterConsequences`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.LearningCorrespondence.acquire_exact](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L76) | 76 |
-| [Becoming.LearningCorrespondence.agree_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L85) | 85 |
-| [Becoming.LearningCorrespondence.uniform_determines](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L90) | 90 |
-| [Becoming.LearningCorrespondence.nonuniform_not_determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L108) | 108 |
-| [Becoming.LearningCorrespondence.develop_orbit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L129) | 129 |
-| [Becoming.LearningCorrespondence.hebbian_determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L140) | 140 |
-| [Becoming.LearningCorrespondence.hebbian_activity_law_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L146) | 146 |
-| [Becoming.LearningCorrespondence.weights_matter](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L154) | 154 |
-| [Becoming.LearningCorrespondence.hebbian_no_activity_law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L163) | 163 |
-| [Becoming.LearningCorrespondence.updating_determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L172) | 172 |
-| [Becoming.LearningCorrespondence.updating_network_law_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L176) | 176 |
-| [Becoming.LearningCorrespondence.responsive_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L181) | 181 |
-| [Becoming.LearningCorrespondence.responsive_learns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L187) | 187 |
-| [Becoming.LearningCorrespondence.route_matters](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L194) | 194 |
-| [Becoming.LearningCorrespondence.updating_no_network_law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L205) | 205 |
+| [Becoming.LearningCorrespondence.acquire_exact](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L77) | 77 |
+| [Becoming.LearningCorrespondence.agree_at](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L86) | 86 |
+| [Becoming.LearningCorrespondence.uniform_determines](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L91) | 91 |
+| [Becoming.LearningCorrespondence.nonuniform_not_determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L109) | 109 |
+| [Becoming.LearningCorrespondence.develop_orbit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L130) | 130 |
+| [Becoming.LearningCorrespondence.hebbian_determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L141) | 141 |
+| [Becoming.LearningCorrespondence.hebbian_activity_law_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L147) | 147 |
+| [Becoming.LearningCorrespondence.weights_matter](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L155) | 155 |
+| [Becoming.LearningCorrespondence.hebbian_no_activity_law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L164) | 164 |
+| [Becoming.LearningCorrespondence.updating_determined](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L173) | 173 |
+| [Becoming.LearningCorrespondence.updating_network_law_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L177) | 177 |
+| [Becoming.LearningCorrespondence.responsive_kept](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L182) | 182 |
+| [Becoming.LearningCorrespondence.responsive_learns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L188) | 188 |
+| [Becoming.LearningCorrespondence.route_matters](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L195) | 195 |
+| [Becoming.LearningCorrespondence.updating_no_network_law](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L206) | 206 |
 
 Definitions and types:
 
-- `def` [Becoming.LearningCorrespondence.Uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L70) (L70)
-- `def` [Becoming.LearningCorrespondence.encounters](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L73) (L73)
-- `def` [Becoming.LearningCorrespondence.hebbian](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L136) (L136)
-- `def` [Becoming.LearningCorrespondence.updating](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L169) (L169)
+- `def` [Becoming.LearningCorrespondence.Uniform](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L71) (L71)
+- `def` [Becoming.LearningCorrespondence.encounters](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L74) (L74)
+- `def` [Becoming.LearningCorrespondence.hebbian](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L137) (L137)
+- `def` [Becoming.LearningCorrespondence.updating](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/LearningCorrespondence.lean#L170) (L170)
 
 </details>
 
@@ -2464,7 +2464,7 @@ Definitions and types:
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/evolution-connectionism/TransmissionCorrespondence.lean`
 
-Imports: `Becoming.Copying`, `Becoming.Stock`, `Becoming.Evolution`, `Becoming.Order`, `LearnedProcedureTransmission`
+Imports: `Becoming.Copying`, `Becoming.Stock`, `Becoming.Evolution`, `Becoming.Reordering`, `LearnedProcedureTransmission`
 
 | Theorem or lemma | Line |
 |---|---:|

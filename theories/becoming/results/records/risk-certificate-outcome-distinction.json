@@ -220,6 +220,12 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json",
+      "role": "receipt",
+      "sha256": "607378deb93c36bfe7f52eed034ce23126a4984f0b62400c20a6a54955a17d3d",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -239,7 +245,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/JudgingCorrespondence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261015T161403.083389Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/judging-correspondence-checks/20261020T161948.968917Z/verification.json",
       "sha256_pointer": "/source_sha256/JudgingCorrespondence",
       "success_pointer": "/status",
       "success_value": "passed"

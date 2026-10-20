@@ -15,7 +15,7 @@ an empty axiom report. Here the three are read as instances of the core.
 used), and its ideals are the core's ideals (`toCore`, `ofCore`, the round trips definitional). On
 these readings, with no axiom:
 * finite refutability is the core's `Refutable` (`finiteRefutable_iff_refutable`), Scott closure
-  its `Closed` (`scottClosed_iff_closed`), admission lying `Within` a set (`admits_iff`), the
+  its `ScottClosed` (`scottClosed_iff_closed`), admission lying `Within` a set (`admits_iff`), the
   content and the hull the core's (`content_iff`, `scottHull_iff_hull`), and respecting a set of
   prohibitions avoiding it (`respects_iff_avoids`);
 * W1's equivalence of Scott closure and lower bases is the core's `closed_iff_lower`
@@ -23,7 +23,7 @@ these readings, with no axiom:
   class by `hull_least` (`hull_least_by_core`), and W2a's characterization is `avoids_iff_within`
   (`respects_iff_admits_avoiding_by_core`).
 With classical reasoning supplying the stability that `Refutable.closed` needs and the element
-that `Closed.refutable_iff` asks for, W1's equivalence of finite refutability and Scott closure
+that `ScottClosed.refutable_iff` asks for, W1's equivalence of finite refutability and Scott closure
 follows (`finiteRefutable_iff_scottClosed_by_core`); the core shows that, asked of every order
 and class, each of the two steps is exactly double-negation elimination
 (`Ideals.refutable_closed_iff`, `Ideals.closed_refutable_iff`). Where the package states an
@@ -165,7 +165,7 @@ theorem familyUnion_same (D : CompletionWarrant.Ideal P → Prop)
 /-- **Scott closure is the core's closure.** The unions are carried by the closure's lower
 part, since the two unions hold the same elements. -/
 theorem scottClosed_iff_closed {C : CompletionWarrant.Ideal P → Prop} :
-    CompletionWarrant.ScottClosed P C ↔ Ideals.Closed (coreClass C) :=
+    CompletionWarrant.ScottClosed P C ↔ Ideals.ScottClosed (coreClass C) :=
   ⟨fun hc => ⟨fun hI hJI => hc.lower hI hJI,
      fun D hd hD => hc.lower
        (hc.directedClosed (fun I => D (toCore I)) (directedFamily_iff.mpr hd)
@@ -178,7 +178,7 @@ theorem scottClosed_iff_closed {C : CompletionWarrant.Ideal P → Prop} :
 
 /-- Classical reasoning supplies the stability that the core's `Refutable.closed` needs. -/
 theorem closed_of_finiteRefutable {C : CompletionWarrant.Ideal P → Prop}
-    (hc : CompletionWarrant.FiniteRefutable P C) : Ideals.Closed (coreClass C) :=
+    (hc : CompletionWarrant.FiniteRefutable P C) : Ideals.ScottClosed (coreClass C) :=
   (finiteRefutable_iff_refutable.mp hc).closed fun _ notNot => Classical.byContradiction notNot
 
 /-- **W1 (1 → 2) from the core**: a finitely refutable class is Scott-closed
@@ -188,7 +188,7 @@ theorem refutable_scottClosed_by_core (C : CompletionWarrant.Ideal P → Prop)
   scottClosed_iff_closed.mpr (closed_of_finiteRefutable hc)
 
 /-- **W1 (2 → 1) from the core**: a Scott-closed class is finitely refutable
-(`Closed.refutable_iff`, the element outside found classically). -/
+(`ScottClosed.refutable_iff`, the element outside found classically). -/
 theorem scottClosed_refutable_by_core (C : CompletionWarrant.Ideal P → Prop)
     (hc : CompletionWarrant.ScottClosed P C) : CompletionWarrant.FiniteRefutable P C := by
   have closed := scottClosed_iff_closed.mp hc
@@ -242,7 +242,7 @@ theorem permitted_eq_content_by_core (C : CompletionWarrant.Ideal P → Prop)
   funext fun p => propext ((Ideals.principal_iff_content (scottClosed_iff_closed.mp hc) p).trans
     content_iff.symm)
 
-/-- Admission is finitely refutable (`within_closed` and `Closed.refutable_iff`, the element
+/-- Admission is finitely refutable (`within_closed` and `ScottClosed.refutable_iff`, the element
 outside found classically). -/
 theorem admits_refutable_by_core (Q : α → Prop) :
     CompletionWarrant.FiniteRefutable P (CompletionWarrant.Admits P Q) :=
@@ -265,7 +265,7 @@ theorem hull_preserves_content_by_core (C : CompletionWarrant.Ideal P → Prop) 
     ⟨fun ⟨I, hI, hp⟩ => content_iff.mpr
        ((Ideals.hull_content (coreClass C) p).mp ⟨toCore I, scottHull_iff_hull.mp hI, hp⟩),
      fun h => match content_iff.mp h with
-       | ⟨J, hJ, hp⟩ => ⟨ofCore J, scottHull_iff_hull.mpr (Ideals.hull_contains hJ), hp⟩⟩
+       | ⟨J, hJ, hp⟩ => ⟨ofCore J, scottHull_iff_hull.mpr (Ideals.AdheresBy.of hJ), hp⟩⟩
 
 /-- W2's hull is the only Scott-closed class holding the class and below every such class
 (`hull_unique`); the equality is extensionality. -/
@@ -725,7 +725,7 @@ theorem history_listIdeal : ∀ h : CompletionWarrant.HistoryIdeals.History A,
 /-- A bounded ideal of words has a longest word, found by deciding at each length whether a word
 of that length is present (classical). -/
 theorem settles_of_bounded (I : Ideals.Ideal (HistoryIdeals.prefixOrder A)) :
-    ∀ n, (∀ w, I.mem w → w.length ≤ n) → HistoryIdeals.Settles I
+    ∀ n, (∀ w, I.mem w → w.length ≤ n) → HistoryIdeals.HasLongest I
   | 0, bound => match I.nonempty with
     | ⟨w, hw⟩ => ⟨w, hw, fun v hv => Nat.le_trans (bound v hv) (Nat.zero_le _)⟩
   | n + 1, bound => by
@@ -738,7 +738,7 @@ theorem settles_of_bounded (I : Ideals.Ideal (HistoryIdeals.prefixOrder A)) :
 
 /-- Classically, an ideal of words settles, or goes on with a word of each length picked. -/
 theorem decided_classical (I : Ideals.Ideal (HistoryIdeals.prefixOrder A)) :
-    HistoryIdeals.Settles I ∨
+    HistoryIdeals.HasLongest I ∨
       ∃ pick : Nat → List A, (∀ n, I.mem (pick n)) ∧ ∀ n, n < (pick n).length := by
   classical
   by_cases goes : HistoryIdeals.GoesOn I

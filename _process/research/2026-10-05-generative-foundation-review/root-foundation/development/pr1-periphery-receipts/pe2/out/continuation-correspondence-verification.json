@@ -1,0 +1,308 @@
+{
+ "values_reached": [
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "via": [
+      "Nat.add_right_cancel"
+     ],
+     "sink": "argument of a local function",
+     "route": "a local function (a well-founded recursive call)",
+     "kind": "eliminated"
+    }
+   ],
+   "name": "Nat.elimOffset"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "Nat.elimOffset",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "JointContinuation.compatible.match_1"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "JointContinuation.compatible.match_1",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "JointContinuation.compatible._f"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "JointContinuation.zipPlan._f",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "JointContinuation.zipPlan"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "Nat.elimOffset",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "JointContinuation.zipPlan.match_1"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "JointContinuation.zipPlan.match_1",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "JointContinuation.zipPlan._f"
+  },
+  {
+   "verdict": "eliminated",
+   "occurrences": [
+    {
+     "value": "JointContinuation.compatible._f",
+     "kind": "value",
+     "its_verdict": "eliminated"
+    }
+   ],
+   "name": "JointContinuation.compatible"
+  }
+ ],
+ "declarations": [
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.classicalChoice",
+   "kind": "theorem"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "JointContinuation.zipPlan"
+    },
+    {
+     "verdict": "eliminated",
+     "value": "JointContinuation.compatible"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ContinuationCorrespondence.compatibility_necessary_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "JointContinuation.zipPlan",
+     "module": "JointContinuation"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "JointContinuation.compatible",
+     "module": "JointContinuation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ContinuationCorrespondence.compatible_iff",
+     "module": "ContinuationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ContinuationCorrespondence.toPlan_zip",
+     "module": "ContinuationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "JointContinuation.compatible"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ContinuationCorrespondence.compatible_iff",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "JointContinuation.compatible",
+     "module": "JointContinuation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ContinuationCorrespondence.compatible_iff._f",
+     "module": "ContinuationCorrespondence"
+    }
+   ]
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "JointContinuation.compatible"
+    },
+    {
+     "verdict": "eliminated",
+     "value": "JointContinuation.zipPlan"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ContinuationCorrespondence.joint_plan_composition_by_core",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "JointContinuation.compatible",
+     "module": "JointContinuation"
+    },
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "JointContinuation.zipPlan",
+     "module": "JointContinuation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ContinuationCorrespondence.toPlan_zip",
+     "module": "ContinuationCorrespondence"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ContinuationCorrespondence.compatible_iff",
+     "module": "ContinuationCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.keeps_iff_works",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.ofPlan",
+   "kind": "def"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.post_eq_seen",
+   "kind": "theorem"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.processOf",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.successor",
+   "kind": "def"
+  },
+  {
+   "proof": false,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.toPlan",
+   "kind": "def"
+  },
+  {
+   "statement_values": [
+    {
+     "verdict": "eliminated",
+     "value": "JointContinuation.zipPlan"
+    }
+   ],
+   "propext_in_term": false,
+   "proof": true,
+   "onPropext": true,
+   "name": "Becoming.ContinuationCorrespondence.toPlan_zip",
+   "kind": "theorem",
+   "entries": [
+    {
+     "verdict": "eliminated",
+     "proof": false,
+     "name": "JointContinuation.zipPlan",
+     "module": "JointContinuation"
+    },
+    {
+     "proof": true,
+     "name": "Becoming.ContinuationCorrespondence.toPlan_zip._f",
+     "module": "ContinuationCorrespondence"
+    }
+   ]
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.usable_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.viable_iff_keptFor",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.viable_iff_plan_by_core",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.viable_iff_plan_listed",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.works_exists_iff",
+   "kind": "theorem"
+  },
+  {
+   "proof": true,
+   "onPropext": false,
+   "name": "Becoming.ContinuationCorrespondence.works_iff_keeps",
+   "kind": "theorem"
+  }
+ ],
+ "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/continuation-correspondence-verification.json",
+ "receipt_utc": "20261020T161935.181496Z",
+ "target": "ContinuationCorrespondence",
+ "toolchain": "leanprover/lean4:v4.30.0-rc2",
+ "audited": 17,
+ "recorded_on_propext": 4,
+ "agrees_with_receipt": true,
+ "mismatch": [],
+ "restored_from_cache": 11,
+ "compiled": []
+}

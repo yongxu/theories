@@ -1,0 +1,539 @@
+{
+ "fallible-inquiry-verification": {
+  "old_utc": "20261019T000109.055377Z",
+  "new_utc": "20261020T161546.707477Z",
+  "status": "passed",
+  "Becoming.FallibleInquiry": {
+   "theorems": [
+    31,
+    31
+   ],
+   "declarations": [
+    37,
+    37
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 31,
+  "signatures_changed": {}
+ },
+ "correction-inquiry-verification": {
+  "old_utc": "20261015T164111.081887Z",
+  "new_utc": "20261020T161757.201244Z",
+  "status": "passed",
+  "CorrectionInquiry": {
+   "theorems": [
+    7,
+    7
+   ],
+   "declarations": [
+    8,
+    8
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 7,
+  "signatures_changed": {}
+ },
+ "machine-instances-verification": {
+  "old_utc": "20261019T001148.333281Z",
+  "new_utc": "20261020T161859.257200Z",
+  "status": "passed",
+  "MachineInstances": {
+   "theorems": [
+    103,
+    103
+   ],
+   "declarations": [
+    124,
+    124
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 103,
+  "signatures_changed": {
+   "Becoming.MachineInstances.acquired_distinct": [
+    "Becoming.CrossSituational.Distinct (Generative.EncounterChoice.acquired 51).situation.lexicon.repertoire",
+    "Becoming.Distinct (Generative.EncounterChoice.acquired 51).situation.lexicon.repertoire"
+   ],
+   "Becoming.MachineInstances.interprets_every_iff_separated": [
+    "∀ (s : Generative.AcquiredBinding.Lexicon), Becoming.MachineInstances.Groups s.percept.log → Becoming.CrossSituational.Distinct s.repertoire → ((∀ (ws : List Bool), Generative.AcquiredBinding.interpret s (Generative.AcquiredSegmentation.encode ws) = Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)) ↔ ∀ (b : Bool), Becoming.MachineInstances.Separated s.repertoire s.excluded s.records b)",
+    "∀ (s : Generative.AcquiredBinding.Lexicon), Becoming.MachineInstances.Groups s.percept.log → Becoming.Distinct s.repertoire → ((∀ (ws : List Bool), Generative.AcquiredBinding.interpret s (Generative.AcquiredSegmentation.encode ws) = Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)) ↔ ∀ (b : Bool), Becoming.MachineInstances.Separated s.repertoire s.excluded s.records b)"
+   ],
+   "Becoming.MachineInstances.resolve_iff": [
+    "∀ (s : Generative.AcquiredBinding.Lexicon), Becoming.CrossSituational.Distinct s.repertoire → ∀ (b : Bool), Generative.AcquiredBinding.resolve s (Generative.AcquiredSegmentation.word b) = some (Generative.CompositionalAcquisition.Expr.atom b) ↔ Becoming.MachineInstances.Separated s.repertoire s.excluded s.records b",
+    "∀ (s : Generative.AcquiredBinding.Lexicon), Becoming.Distinct s.repertoire → ∀ (b : Bool), Generative.AcquiredBinding.resolve s (Generative.AcquiredSegmentation.word b) = some (Generative.CompositionalAcquisition.Expr.atom b) ↔ Becoming.MachineInstances.Separated s.repertoire s.excluded s.records b"
+   ],
+   "Becoming.MachineInstances.retrospective_distinct": [
+    "Becoming.CrossSituational.Distinct (Generative.RetrospectiveBinding.bindingView (Generative.RetrospectiveBinding.retrospective 36) Generative.SourceReliance.allFaults).repertoire",
+    "Becoming.Distinct (Generative.RetrospectiveBinding.bindingView (Generative.RetrospectiveBinding.retrospective 36) Generative.SourceReliance.allFaults).repertoire"
+   ],
+   "Becoming.MachineInstances.retrospective_resolves_iff": [
+    "∀ (s : Generative.RetrospectiveBinding.Memory) (faults : List Generative.SourceReliance.Faults), Becoming.CrossSituational.Distinct s.base.repertoire → ∀ (form : List Generative.AcquiredSegmentation.Sound) (b : Bool), Generative.CompositionalAcquisition.Expr.atom b ∈ s.base.repertoire → (∀ (p : Generative.RetrospectiveBinding.Packet), p ∈ s.packets → p.form = form → ∃ w, (w.route ∈ Generative.RetrospectiveBinding.routes s ∧ w.faults ∈ faults) ∧ w.target = b ∧ Generative.SourceReliance.view w = p.reports) → (Generative.AcquiredBinding.resolve (Generative.RetrospectiveBinding.bindingView s faults) form = some (Generative.CompositionalAcquisition.Expr.atom b) ↔ ∀ (m : Generative.CompositionalAcquisition.Expr), m ∈ s.base.repertoire → m ≠ Generative.CompositionalAcquisition.Expr.atom b → ∃ p, p ∈ s.packets ∧ p.form = form ∧ ∀ (w : Generative.SourceReliance.World), w.route ∈ Generative.RetrospectiveBinding.routes s ∧ w.faults ∈ faults → Generative.CompositionalAcquisition.Expr.atom w.target = m → Generative.SourceReliance.view w ≠ p.reports)",
+    "∀ (s : Generative.RetrospectiveBinding.Memory) (faults : List Generative.SourceReliance.Faults), Becoming.Distinct s.base.repertoire → ∀ (form : List Generative.AcquiredSegmentation.Sound) (b : Bool), Generative.CompositionalAcquisition.Expr.atom b ∈ s.base.repertoire → (∀ (p : Generative.RetrospectiveBinding.Packet), p ∈ s.packets → p.form = form → ∃ w, (w.route ∈ Generative.RetrospectiveBinding.routes s ∧ w.faults ∈ faults) ∧ w.target = b ∧ Generative.SourceReliance.view w = p.reports) → (Generative.AcquiredBinding.resolve (Generative.RetrospectiveBinding.bindingView s faults) form = some (Generative.CompositionalAcquisition.Expr.atom b) ↔ ∀ (m : Generative.CompositionalAcquisition.Expr), m ∈ s.base.repertoire → m ≠ Generative.CompositionalAcquisition.Expr.atom b → ∃ p, p ∈ s.packets ∧ p.form = form ∧ ∀ (w : Generative.SourceReliance.World), w.route ∈ Generative.RetrospectiveBinding.routes s ∧ w.faults ∈ faults → Generative.CompositionalAcquisition.Expr.atom w.target = m → Generative.SourceReliance.view w ≠ p.reports)"
+   ],
+   "Becoming.MachineInstances.scene_interprets_every_iff": [
+    "∀ (s : Generative.EnactedScene.Situation), Becoming.MachineInstances.Groups s.lexicon.percept.log → Becoming.CrossSituational.Distinct s.lexicon.repertoire → ∀ (h : List Becoming.MachineInstances.SceneMove), (∀ (ws : List Bool), Generative.AcquiredBinding.interpret (Becoming.MachineInstances.enact s h).lexicon (Generative.AcquiredSegmentation.encode ws) = Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)) ↔ ∀ (b : Bool), Becoming.MachineInstances.Separated s.lexicon.repertoire s.lexicon.excluded (s.lexicon.records ++ Becoming.MachineInstances.heardAlong s h) b",
+    "∀ (s : Generative.EnactedScene.Situation), Becoming.MachineInstances.Groups s.lexicon.percept.log → Becoming.Distinct s.lexicon.repertoire → ∀ (h : List Becoming.MachineInstances.SceneMove), (∀ (ws : List Bool), Generative.AcquiredBinding.interpret (Becoming.MachineInstances.enact s h).lexicon (Generative.AcquiredSegmentation.encode ws) = Generative.AcquiredSegmentation.assembleMessage (List.map Generative.CompositionalAcquisition.Expr.atom ws)) ↔ ∀ (b : Bool), Becoming.MachineInstances.Separated s.lexicon.repertoire s.lexicon.excluded (s.lexicon.records ++ Becoming.MachineInstances.heardAlong s h) b"
+   ],
+   "Becoming.MachineInstances.start_distinct": [
+    "∀ (n : Nat), Becoming.CrossSituational.Distinct (Generative.EnactedScene.start n).lexicon.repertoire",
+    "∀ (n : Nat), Becoming.Distinct (Generative.EnactedScene.start n).lexicon.repertoire"
+   ]
+  }
+ },
+ "learning-correspondence-verification": {
+  "old_utc": "20261013T095759.980593Z",
+  "new_utc": "20261020T161905.961078Z",
+  "status": "passed",
+  "LearningCorrespondence": {
+   "theorems": [
+    15,
+    15
+   ],
+   "declarations": [
+    19,
+    19
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 15,
+  "signatures_changed": {}
+ },
+ "copying-instances-verification": {
+  "old_utc": "20261014T092443.150338Z",
+  "new_utc": "20261020T161910.956874Z",
+  "status": "passed",
+  "CopyingInstances": {
+   "theorems": [
+    86,
+    86
+   ],
+   "declarations": [
+    98,
+    98
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 86,
+  "signatures_changed": {}
+ },
+ "retrodiction-instances-verification": {
+  "old_utc": "20261014T045409.164228Z",
+  "new_utc": "20261020T161914.501944Z",
+  "status": "passed",
+  "RetrodictionInstances": {
+   "theorems": [
+    21,
+    21
+   ],
+   "declarations": [
+    27,
+    27
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 21,
+  "signatures_changed": {}
+ },
+ "market-instances-verification": {
+  "old_utc": "20261014T141058.867757Z",
+  "new_utc": "20261020T161917.735916Z",
+  "status": "passed",
+  "MarketInstances": {
+   "theorems": [
+    45,
+    45
+   ],
+   "declarations": [
+    53,
+    53
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 45,
+  "signatures_changed": {}
+ },
+ "protocol-instances-verification": {
+  "old_utc": "20261014T141016.373278Z",
+  "new_utc": "20261020T161923.157515Z",
+  "status": "passed",
+  "ProtocolInstances": {
+   "theorems": [
+    19,
+    19
+   ],
+   "declarations": [
+    31,
+    31
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 19,
+  "signatures_changed": {
+   "Becoming.ProtocolInstances.counts": [
+    "Becoming.Countdown.Counts RecoverableControl.tick Becoming.ProtocolInstances.busy Becoming.ProtocolInstances.done Becoming.ProtocolInstances.work Becoming.ProtocolInstances.fuel",
+    "Becoming.Countdown.CountedWork RecoverableControl.tick Becoming.ProtocolInstances.busy Becoming.ProtocolInstances.done Becoming.ProtocolInstances.work Becoming.ProtocolInstances.fuel"
+   ]
+  }
+ },
+ "versioned-task-instances-verification": {
+  "old_utc": "20261014T092502.891314Z",
+  "new_utc": "20261020T161926.448088Z",
+  "status": "passed",
+  "VersionedTaskInstances": {
+   "theorems": [
+    22,
+    22
+   ],
+   "declarations": [
+    30,
+    30
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 22,
+  "signatures_changed": {}
+ },
+ "shared-stock-instances-verification": {
+  "old_utc": "20261015T151857.892080Z",
+  "new_utc": "20261020T161930.665727Z",
+  "status": "passed",
+  "SharedStockInstances": {
+   "theorems": [
+    4,
+    4
+   ],
+   "declarations": [
+    5,
+    5
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 4,
+  "signatures_changed": {}
+ },
+ "continuation-correspondence-verification": {
+  "old_utc": "20261015T151901.978501Z",
+  "new_utc": "20261020T161935.181496Z",
+  "status": "passed",
+  "ContinuationCorrespondence": {
+   "theorems": [
+    13,
+    13
+   ],
+   "declarations": [
+    17,
+    17
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 13,
+  "signatures_changed": {}
+ },
+ "transmission-correspondence-verification": {
+  "old_utc": "20261015T151904.501987Z",
+  "new_utc": "20261020T161938.520043Z",
+  "status": "passed",
+  "TransmissionCorrespondence": {
+   "theorems": [
+    12,
+    12
+   ],
+   "declarations": [
+    20,
+    20
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 12,
+  "signatures_changed": {}
+ },
+ "preparation-correspondence-verification": {
+  "old_utc": "20261019T060100.173928Z",
+  "new_utc": "20261020T161943.503298Z",
+  "status": "passed",
+  "PreparationCorrespondence": {
+   "theorems": [
+    24,
+    24
+   ],
+   "declarations": [
+    27,
+    27
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 24,
+  "signatures_changed": {}
+ },
+ "judging-correspondence-verification": {
+  "old_utc": "20261015T161403.083389Z",
+  "new_utc": "20261020T161948.968917Z",
+  "status": "passed",
+  "JudgingCorrespondence": {
+   "theorems": [
+    4,
+    4
+   ],
+   "declarations": [
+    7,
+    7
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 4,
+  "signatures_changed": {}
+ },
+ "renewing-correspondence-verification": {
+  "old_utc": "20261015T161417.899487Z",
+  "new_utc": "20261020T161953.940017Z",
+  "status": "passed",
+  "RenewingCorrespondence": {
+   "theorems": [
+    10,
+    10
+   ],
+   "declarations": [
+    13,
+    13
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 10,
+  "signatures_changed": {}
+ },
+ "substitution-correspondence-verification": {
+  "old_utc": "20261015T161423.129149Z",
+  "new_utc": "20261020T161957.579185Z",
+  "status": "passed",
+  "SubstitutionCorrespondence": {
+   "theorems": [
+    4,
+    4
+   ],
+   "declarations": [
+    10,
+    10
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 4,
+  "signatures_changed": {}
+ },
+ "organization-correspondence-verification": {
+  "old_utc": "20261015T163336.437151Z",
+  "new_utc": "20261020T162002.464258Z",
+  "status": "passed",
+  "OrganizationCorrespondence": {
+   "theorems": [
+    3,
+    3
+   ],
+   "declarations": [
+    3,
+    3
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 3,
+  "signatures_changed": {}
+ },
+ "living-organization-correspondence-verification": {
+  "old_utc": "20261015T182331.625376Z",
+  "new_utc": "20261020T162006.335470Z",
+  "status": "passed",
+  "LivingOrganizationCorrespondence": {
+   "theorems": [
+    4,
+    4
+   ],
+   "declarations": [
+    6,
+    6
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 4,
+  "signatures_changed": {}
+ },
+ "prefix-safety-correspondence-verification": {
+  "old_utc": "20261015T184605.889457Z",
+  "new_utc": "20261020T162009.405485Z",
+  "status": "passed",
+  "PrefixSafetyCorrespondence": {
+   "theorems": [
+    9,
+    9
+   ],
+   "declarations": [
+    9,
+    9
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 9,
+  "signatures_changed": {}
+ },
+ "finite-branching-correspondence-verification": {
+  "old_utc": "20261015T190529.548268Z",
+  "new_utc": "20261020T162012.952848Z",
+  "status": "passed",
+  "FiniteBranchingCorrespondence": {
+   "theorems": [
+    9,
+    9
+   ],
+   "declarations": [
+    10,
+    10
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 9,
+  "signatures_changed": {}
+ },
+ "selection-relabel-correspondence-verification": {
+  "old_utc": "20261015T203012.189070Z",
+  "new_utc": "20261020T162018.010437Z",
+  "status": "passed",
+  "PluralRecords": {
+   "theorems": [
+    35,
+    35
+   ],
+   "declarations": [
+    49,
+    49
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "SelectionRelabelCorrespondence": {
+   "theorems": [
+    13,
+    13
+   ],
+   "declarations": [
+    13,
+    13
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "TieBreaking": {
+   "theorems": [
+    5,
+    5
+   ],
+   "declarations": [
+    10,
+    10
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 13,
+  "signatures_changed": {}
+ },
+ "ideals-correspondence-verification": {
+  "old_utc": "20261019T020352.033083Z",
+  "new_utc": "20261020T162022.465111Z",
+  "status": "passed",
+  "IdealsCorrespondence": {
+   "theorems": [
+    92,
+    92
+   ],
+   "declarations": [
+    103,
+    103
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 92,
+  "signatures_changed": {
+   "Becoming.IdealsCorrespondence.closed_of_finiteRefutable": [
+    "∀ {α : Type u_1} {P : CompletionWarrant.Poset α} {C : CompletionWarrant.Ideal P → Prop}, CompletionWarrant.FiniteRefutable P C → Becoming.Ideals.Closed (Becoming.IdealsCorrespondence.coreClass C)",
+    "∀ {α : Type u_1} {P : CompletionWarrant.Poset α} {C : CompletionWarrant.Ideal P → Prop}, CompletionWarrant.FiniteRefutable P C → Becoming.Ideals.ScottClosed (Becoming.IdealsCorrespondence.coreClass C)"
+   ],
+   "Becoming.IdealsCorrespondence.decided_classical": [
+    "∀ {A : Type u_1} (I : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)), Becoming.HistoryIdeals.Settles I ∨ ∃ pick, (∀ (n : Nat), I.mem (pick n)) ∧ ∀ (n : Nat), n < (pick n).length",
+    "∀ {A : Type u_1} (I : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)), Becoming.HistoryIdeals.HasLongest I ∨ ∃ pick, (∀ (n : Nat), I.mem (pick n)) ∧ ∀ (n : Nat), n < (pick n).length"
+   ],
+   "Becoming.IdealsCorrespondence.scottClosed_iff_closed": [
+    "∀ {α : Type u_1} {P : CompletionWarrant.Poset α} {C : CompletionWarrant.Ideal P → Prop}, CompletionWarrant.ScottClosed P C ↔ Becoming.Ideals.Closed (Becoming.IdealsCorrespondence.coreClass C)",
+    "∀ {α : Type u_1} {P : CompletionWarrant.Poset α} {C : CompletionWarrant.Ideal P → Prop}, CompletionWarrant.ScottClosed P C ↔ Becoming.Ideals.ScottClosed (Becoming.IdealsCorrespondence.coreClass C)"
+   ],
+   "Becoming.IdealsCorrespondence.settles_of_bounded": [
+    "∀ {A : Type u_1} (I : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)) (n : Nat), (∀ (w : List A), I.mem w → w.length ≤ n) → Becoming.HistoryIdeals.Settles I",
+    "∀ {A : Type u_1} (I : Becoming.Ideals.Ideal (Becoming.HistoryIdeals.prefixOrder A)) (n : Nat), (∀ (w : List A), I.mem w → w.length ≤ n) → Becoming.HistoryIdeals.HasLongest I"
+   ]
+  }
+ },
+ "entropy-production-verification": {
+  "old_utc": "20261019T082858.129214Z",
+  "new_utc": "20261020T162027.465211Z",
+  "status": "passed",
+  "EntropyProduction": {
+   "theorems": [
+    24,
+    24
+   ],
+   "declarations": [
+    33,
+    33
+   ],
+   "removed": [],
+   "added": [],
+   "axioms_changed": {}
+  },
+  "signatures_compared": 24,
+  "signatures_changed": {}
+ }
+}

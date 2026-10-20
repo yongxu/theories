@@ -1,0 +1,23 @@
+fallible-inquiry-verification 20261020T161546.707477Z records 3 {'finite-fallible-inquiry-necessity': (1, 1), 'timely-response-necessity': (1, 1), 'wisdom-root': (1, 1)}
+correction-inquiry-verification 20261020T161757.201244Z records 1 {'becoming-spine-instances': (1, 3)}
+machine-instances-verification 20261020T161859.257200Z records 8 {'acquired-binding-compositional-use': (2, 1), 'enacted-scene-binding': (2, 1), 'encounter-selection-and-revision': (2, 1), 'formed-goal-revision-continuation': (2, 1), 'joint-correlation-reduced-dynamics': (2, 1), 'joint-practice-forms-continuation': (2, 1), 'retrospective-source-binding': (2, 1), 'transition-grouping-word-partition': (2, 1)}
+learning-correspondence-verification no record binds it
+copying-instances-verification 20261020T161910.956874Z records 4 {'formed-copying-correction': (1, 1), 'formed-copying-registration': (1, 1), 'inherited-structural-copying': (1, 1), 'recurrent-chain-assembly': (1, 1)}
+retrodiction-instances-verification 20261020T161914.501944Z records 1 {'historical-source-binding': (1, 1)}
+market-instances-verification 20261020T161917.735916Z records 4 {'market-finite-support-obstruction': (1, 1), 'market-partial-correction-boundary': (1, 1), 'market-protected-continuation': (1, 1), 'market-supported-finite-transition': (1, 1)}
+protocol-instances-verification 20261020T161923.157515Z records 3 {'mediated-evidence-transport': (2, 1), 'recoverable-mediated-change': (2, 1), 'reserved-shutdown-during-recovery': (2, 1)}
+versioned-task-instances-verification 20261020T161926.448088Z records 3 {'acquired-revision-of-pending-task': (2, 1), 'pending-task-context-applicability': (2, 1), 'versioned-request-completion': (2, 1)}
+shared-stock-instances-verification 20261020T161930.665727Z records 1 {'draws-on-a-shared-stock': (1, 1)}
+continuation-correspondence-verification 20261020T161935.181496Z records 2 {'finite-continuation-plans': (1, 1), 'joint-plan-composition': (1, 1)}
+transmission-correspondence-verification 20261020T161938.520043Z records 1 {'learned-procedure-transmission': (2, 1)}
+preparation-correspondence-verification 20261020T161943.503298Z records 2 {'growth-constrained-fragmentation': (1, 1), 'material-preparation-output': (1, 1)}
+judging-correspondence-verification 20261020T161948.968917Z records 1 {'risk-certificate-outcome-distinction': (1, 1)}
+renewing-correspondence-verification 20261020T161953.940017Z records 1 {'renewing-consuming-formation': (1, 1)}
+substitution-correspondence-verification 20261020T161957.579185Z records 1 {'binding-preserving-substitution': (1, 1)}
+organization-correspondence-verification 20261020T162002.464258Z records 1 {'organizational-formation-from-generative-comparison': (1, 1)}
+living-organization-correspondence-verification 20261020T162006.335470Z records 1 {'every-origin-passes-the-gate': (1, 1)}
+prefix-safety-correspondence-verification 20261020T162009.405485Z records 1 {'what-a-finite-history-refutes': (1, 2)}
+finite-branching-correspondence-verification 20261020T162012.952848Z records 1 {'lifting-where-branching-is-finite': (1, 2)}
+selection-relabel-correspondence-verification 20261020T162018.010437Z records 1 {'selection-through-a-model-of-the-options': (1, 3)}
+ideals-correspondence-verification 20261020T162022.465111Z records 1 {'a-history-read-off-its-finite-stretches': (2, 4)}
+entropy-production-verification 20261020T162027.465211Z records 1 {'least-loss-from-entropy-production': (2, 1)}
