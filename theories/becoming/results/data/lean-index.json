@@ -18,12 +18,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 1755,
+    "lean_paths": 1756,
     "distinct_byte_contents": 1386,
-    "byte_identical_duplicate_groups": 110,
+    "byte_identical_duplicate_groups": 111,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 845,
+      "development-attempt": 846,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 871
@@ -4146,6 +4146,15 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sg1-optimum/tree/Becoming/Optimum.lean",
       "sha256": "a6ed5555f8f84446632f35a238d651bc55975e031f4983d73ef249bf94059fe3",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/we1-whole-excess/tree/Becoming/Wholes.lean",
+      "sha256": "454216066bedcf870b0cbaab4a6fb0928f59cb8d60cbd6c4088d8c8d0ea89bb3",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -370030,6 +370039,10 @@
     "438afd1164e6e594b1e3614c120ec2a20d51df37ba6cffcdab802310b51df133": [
       "_process/history/worktree-salvage-2026-10-18/jolly-pike-140c94/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261011T170859.998618Z/RenewalComparison.lean",
       "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RenewalComparison.lean"
+    ],
+    "454216066bedcf870b0cbaab4a6fb0928f59cb8d60cbd6c4088d8c8d0ea89bb3": [
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/we1-whole-excess/tree/Becoming/Wholes.lean",
+      "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean"
     ],
     "472b9f2eaace099b154237021fc3311f9c73f2d36db4cbb3c20f3a8ef1395be3": [
       "sources/20-codex-theory-sessions-2026-10-05/full-picture-conjecture/work/cross-session-completeness/packaged-reproduction/source-snapshots/NatTrans.lean",
