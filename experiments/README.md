@@ -9,6 +9,7 @@ Executable research. Rewritten 17 October 2026 in the repository restructure; th
 | [integrated-correction](integrated-correction/README.md) | Parent of the Lean spine and its periphery; the selective-handoff pilot |
 | [agentdojo-evidence-boundary](agentdojo-evidence-boundary/README.md) | Agent maintenance and correction-action tests |
 | [commons-gated-renewal](commons-gated-renewal/README.md) | The theory's first falsifiable test on learning agents: a Harvest-style commons with gated renewal, predictions from the spine frozen before the runs (20 Oct 2026) |
+| [break-warnings](break-warnings/README.md) | Thesis T6's uncoupled side in the field: forage-fish early-warning statistics before seabird breeding failures (Cury et al. 2011), predictions frozen before the run (21 Oct 2026) |
 | [circular-construction](circular-construction/README.md) | Speculative engineering experiment applying Ren's theories (30 Sept 2026) |
 | `guardian-anarchy/` | Local only by Ren's instruction of 4 Oct 2026; kept on this machine and not tracked (ignored since 19 October 2026); do not push or deploy |
 | [learned-claim-agents](learned-claim-agents/README.md) | AI-authored study with a written protocol (6 Oct 2026) |
