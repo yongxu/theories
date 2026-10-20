@@ -1,11 +1,11 @@
 {
- "commit": "1d1e77a9efd4d07f732233311dbff2a991fc9dbb",
+ "commit": "efaf42140827e0cb69c4cd71f44b99dbdf3bb22f",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261020T161918.649621Z",
+ "core_receipt_at_commit": "20261020T164822.720919Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 299,
- "constants": 37559,
- "spine_theorems": 12140,
+ "constants": 37605,
+ "spine_theorems": 12165,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -33,11 +33,11 @@
   "proof through a base family": 154,
   "used by a theorem on the base": 4391,
   "instance on the base recorded": 151,
-  "apart: own vocabulary": 546,
-  "apart: prelude-only statement": 47
+  "apart: own vocabulary": 569,
+  "apart: prelude-only statement": 49
  },
- "apart": 593,
- "apart_general_structure_by_design": 127,
+ "apart": 618,
+ "apart_general_structure_by_design": 152,
  "apart_otherwise": 466,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 64,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 421,
- "apart_roots": 422,
+ "apart_used_by_nothing": 423,
+ "apart_roots": 424,
  "apart_roots_by_category": {
-  "model-witness": 235,
-  "support": 88,
-  "general-structure": 76,
+  "model-witness": 236,
+  "support": 87,
+  "general-structure": 78,
   "logical-strength": 12,
   "restates": 9,
   "calibration": 2
@@ -159,6 +159,10 @@
    45,
    69
   ],
+  "Becoming.Drift": [
+   34,
+   46
+  ],
   "Becoming.HexagramSites": [
    23,
    98
@@ -230,10 +234,6 @@
   "Becoming.OrderNormal": [
    9,
    101
-  ],
-  "Becoming.Drift": [
-   9,
-   21
   ],
   "Becoming.ListFootprints": [
    9,
@@ -575,8 +575,8 @@
  "rings": {
   "core": {
    "modules": 283,
-   "theorems": 11394,
-   "apart": 513,
+   "theorems": 11419,
+   "apart": 538,
    "classes": {
     "statement on both families": 962,
     "statement on Process/Frame/Run/Trace": 2670,
@@ -585,8 +585,8 @@
     "proof through a base family": 143,
     "used by a theorem on the base": 4032,
     "instance on the base recorded": 151,
-    "apart: own vocabulary": 467,
-    "apart: prelude-only statement": 46
+    "apart: own vocabulary": 490,
+    "apart: prelude-only statement": 48
    }
   },
   "instances": {
@@ -687,13 +687,19 @@
   "proof through a base family": 1,
   "used by a theorem on the base": 7,
   "instance on the base recorded": 2,
-  "apart: own vocabulary": 3
+  "apart: own vocabulary": 4
  },
  "records_resting_only_on_apart_theorems": [
   {
    "id": "finite-joining-tree-lifting",
    "modules": [
     "Becoming.Joining"
+   ]
+  },
+  {
+   "id": "fixation-by-drift",
+   "modules": [
+    "Becoming.Drift"
    ]
   },
   {
@@ -3796,7 +3802,32 @@
   "Becoming.Drift.Generations.expected_sampled": "apart: own vocabulary",
   "Becoming.Drift.Generations.raised_falls_back": "used by a theorem on the base",
   "Becoming.Drift.Flow.ended_falls_back": "statement on World/Flow/Web",
+  "Becoming.Drift.whole_true": "apart: own vocabulary",
+  "Becoming.Drift.whole_false": "apart: own vocabulary",
+  "Becoming.Drift.whole_weight": "apart: own vocabulary",
+  "Becoming.Drift.ones_le": "apart: own vocabulary",
+  "Becoming.Drift.from_none": "apart: own vocabulary",
+  "Becoming.Drift.from_all": "apart: own vocabulary",
+  "Becoming.Drift.sampled_succ": "apart: own vocabulary",
+  "Becoming.Drift.sampled_le": "apart: own vocabulary",
+  "Becoming.Drift.sampled_add": "apart: own vocabulary",
+  "Becoming.Drift.sampled_mul": "apart: own vocabulary",
+  "Becoming.Drift.sampled_one": "apart: own vocabulary",
+  "Becoming.Drift.sampled_none": "apart: own vocabulary",
+  "Becoming.Drift.sub_self_zero": "apart: prelude-only statement",
+  "Becoming.Drift.sampled_all": "apart: own vocabulary",
+  "Becoming.Drift.weighted_ones": "apart: own vocabulary",
+  "Becoming.Drift.sampled_count": "apart: own vocabulary",
+  "Becoming.Drift.varied_zero": "apart: own vocabulary",
+  "Becoming.Drift.varied_self": "apart: own vocabulary",
+  "Becoming.Drift.varied_step": "apart: own vocabulary",
+  "Becoming.Drift.one_le_pow": "apart: prelude-only statement",
+  "Becoming.Drift.varied_vanishes": "apart: own vocabulary",
+  "Becoming.Drift.count_le": "apart: own vocabulary",
+  "Becoming.Drift.fixed_le": "apart: own vocabulary",
+  "Becoming.Drift.fixation": "apart: own vocabulary",
   "Becoming.Drift.OneDraw.falls_back": "apart: own vocabulary",
+  "Becoming.Drift.TwoMembers.one_generation": "apart: own vocabulary",
   "Becoming.Flow.still_dissipative": "statement on World/Flow/Web",
   "Becoming.quiet_of_once": "used by a theorem on the base",
   "Becoming.still_le": "apart: prelude-only statement",
