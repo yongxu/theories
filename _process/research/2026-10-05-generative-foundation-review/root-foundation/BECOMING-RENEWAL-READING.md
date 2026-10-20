@@ -10812,7 +10812,7 @@ The kit is [`development/r46-one-renumbering/`](development/r46-one-renumbering/
 Result(s): none new about the unfolding; the margin operationalized by intervention and the laws
        written in it tested on two test beds, predictions frozen before the runs (run from 6b29f6ac0, on main e6b456cfc;
        round 2 for A1 and A3 from 037683ad8, on main 0031223b3; originals under refs/salvage/mq1-*;
-       the real-data analysis from 00d7408c4, before any value was read) and every verdict kept.
+       the real-data analysis from 00d7408c4, on main c242eb838, before any value was read) and every verdict kept.
 Delta: SA1 found the central laws near-definitional, and CG1 (section 240) measured one margin and
        one collapse-rate bound. A margin law holds the rest's exchanges fixed (Flow.WithheldLevels),
        and under that counterfactual (2) draws add / time to break = margin / net draw and (3) damage
