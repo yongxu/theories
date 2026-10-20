@@ -2196,6 +2196,11 @@
    "module": "Becoming.Weightings",
    "category": "general-structure",
    "reason": "a strictly increasing transform of levels is an order increasing in admission (from Weighting.prior_lt_of_widens), so priority to the worse off lies within the classes the shared order is taken over: a law of any finite listing of items, any class of orders on courses and any weights, with no world; Web.widens_iff_every_of_class carries it to webs"
+  },
+  "Becoming.Optimum.Drain.room_needed": {
+   "module": "Becoming.Optimum",
+   "category": "model-witness",
+   "reason": "Two outcomes, the source kept or spilled with the store empty in both: under the store's order keeping is an optimum and is not at the least level beyond; a fact about one constructed set of outcomes showing that Optimum.least_of_room needs room."
   }
  },
  "instances": {

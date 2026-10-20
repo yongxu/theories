@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-308 registered results: 288 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 774 curated edges join 261 results to the results they draw on.
+309 registered results: 289 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 776 curated edges join 262 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -254,6 +254,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [what-a-method-comes-to-say-in-the-limit][] ← <a id="what-a-method-comes-to-say-in-the-limit--what-a-finite-stretch-verifies"></a>[what-a-finite-stretch-verifies][] · <a id="what-a-method-comes-to-say-in-the-limit--what-a-finite-history-refutes"></a>[what-a-finite-history-refutes][] · <a id="what-a-method-comes-to-say-in-the-limit--when-the-runs-of-a-process-settle"></a>[when-the-runs-of-a-process-settle][]
 - [what-a-pools-acts-respond-to][] ← <a id="what-a-pools-acts-respond-to--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] · <a id="what-a-pools-acts-respond-to--counterfactual-is-the-course"></a>[counterfactual-is-the-course][] · <a id="what-a-pools-acts-respond-to--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="what-a-pools-acts-respond-to--timely-response-necessity"></a>[timely-response-necessity][]
 - [what-a-rise-draws-from-beyond][] ← <a id="what-a-rise-draws-from-beyond--raising-what-couples-in-draws-from-beyond"></a>[raising-what-couples-in-draws-from-beyond][] · <a id="what-a-rise-draws-from-beyond--entropy-history-and-record"></a>[entropy-history-and-record][] · <a id="what-a-rise-draws-from-beyond--selection-term-over-generations"></a>[selection-term-over-generations][] · <a id="what-a-rise-draws-from-beyond--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][]
+- [what-an-optimum-does-beyond-what-couples-in][] ← <a id="what-an-optimum-does-beyond-what-couples-in--what-a-rise-draws-from-beyond"></a>[what-a-rise-draws-from-beyond][] · <a id="what-an-optimum-does-beyond-what-couples-in--selection-through-couplings"></a>[selection-through-couplings][]
 - [what-bounds-offspring-numbers][] ← <a id="what-bounds-offspring-numbers--selection-term-over-generations"></a>[selection-term-over-generations][] · <a id="what-bounds-offspring-numbers--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][]
 - [what-pooled-coupling-reaches][] ← <a id="what-pooled-coupling-reaches--selection-through-couplings"></a>[selection-through-couplings][] · <a id="what-pooled-coupling-reaches--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [what-the-step-across-standpoints-reaches][] ← <a id="what-the-step-across-standpoints-reaches--continuation-condition-decomposition"></a>[continuation-condition-decomposition][] · <a id="what-the-step-across-standpoints-reaches--presupposition-scopes"></a>[presupposition-scopes][]
@@ -542,6 +543,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [what-a-method-comes-to-say-in-the-limit]: theories/becoming/results/records/what-a-method-comes-to-say-in-the-limit.md
 [what-a-pools-acts-respond-to]: theories/becoming/results/records/what-a-pools-acts-respond-to.md
 [what-a-rise-draws-from-beyond]: theories/becoming/results/records/what-a-rise-draws-from-beyond.md
+[what-an-optimum-does-beyond-what-couples-in]: theories/becoming/results/records/what-an-optimum-does-beyond-what-couples-in.md
 [what-bounds-offspring-numbers]: theories/becoming/results/records/what-bounds-offspring-numbers.md
 [what-pooled-coupling-reaches]: theories/becoming/results/records/what-pooled-coupling-reaches.md
 [what-taking-all-excludes]: theories/becoming/results/records/what-taking-all-excludes.md

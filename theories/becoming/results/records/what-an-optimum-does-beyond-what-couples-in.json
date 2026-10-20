@@ -1,0 +1,357 @@
+{
+  "schema_version": 2,
+  "id": "what-an-optimum-does-beyond-what-couples-in",
+  "title": {
+    "en": "What an optimum does beyond what couples in",
+    "zh": "最优对耦合入者之外做什么"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-20T20:02:53+00:00",
+  "statement": {
+    "en": "Every order rising with what couples in has its optima at the least level beyond exactly where lowering it leaves room; an optimum breaks exactly the dependences beyond some outcome breaks; raising the family is lowering the beyond with the loss; keeping each dependence takes the slack.",
+    "zh": "每个随耦合入者升高的序，其最优恰在降低之外留有余地时处于之外最低水平；最优恰好打断某个结果所打断的之外依存；升高族即降低之外加损失；保持每个依存恰取余量。"
+  },
+  "laws": [
+    {
+      "en": "Over any set of outcomes, every order rising with the levels of a family (ranking above every outcome that exceeds another on the family, whatever either holds beyond) has its optima at the least level beyond, condition by condition, exactly where every eligible outcome standing above another beyond is not unbeaten on the family.",
+      "zh": "在任何结果集上，每个随一族水平升高的序（凡在族上超过另一结果者都排得更高，不论二者在之外如何），其最优逐条件地在之外最低的水平，当且仅当每个在之外某条件上高于另一结果的可选结果都并非在族上不被胜过。",
+      "declarations": [
+        "Becoming.Optimum.Exceeds",
+        "Becoming.Optimum.Rising",
+        "Becoming.Optimum.Least",
+        "Becoming.Optimum.least_iff"
+      ]
+    },
+    {
+      "en": "With room (an eligible outcome standing above another beyond is exceeded on the family by an eligible one), every optimum is there; shared units, the outcomes closed under moving a unit beyond into the family, give room.",
+      "zh": "有余地时（在之外高于另一结果的可选结果，在族上被某个可选结果超过），每个最优都在那里；共享的单位，即结果集对把之外一个单位移入族封闭，给出余地。",
+      "declarations": [
+        "Becoming.Optimum.Room",
+        "Becoming.Optimum.least_of_room",
+        "Becoming.Optimum.transfer",
+        "Becoming.Optimum.Shared",
+        "Becoming.Optimum.transfer_exceeds",
+        "Becoming.Optimum.Shared.room",
+        "Becoming.Optimum.least_of_shared"
+      ]
+    },
+    {
+      "en": "The family's stock is a rising order, and an order ranking above wherever a rising order does is rising: a lexicographic order with the family first, whatever it counts after, drives the beyond all the same.",
+      "zh": "族的存量是升高的序；凡在一个升高的序排得更高处都排得更高的序也是升高的：族在先的词典序，不论其后计入什么，同样压低之外。",
+      "declarations": [
+        "Becoming.Optimum.Exceeds.total_lt",
+        "Becoming.Optimum.rising_total",
+        "Becoming.Optimum.Rising.mono"
+      ]
+    },
+    {
+      "en": "On a web whose levels after a step are such an optimum, with each condition beyond depended on at a need it meets, a dependence beyond is broken exactly where some eligible outcome leaves its condition below the need; where activity needs support and the dependence is as it was, its formation is not active after the step, is no member of a group coupled only into the family, and no member couples into its condition.",
+      "zh": "在步后水平为这样一个最优的依存网上，若之外每个条件都被以其满足的需要依存，则之外的依存被打断，恰当某个可选结果使其条件低于需要；活动需要支持且依存照旧时，其构成在步后不活跃，不是只耦合入族的群体的成员，且没有成员耦合入其条件。",
+      "declarations": [
+        "Becoming.Web.optimum_broken_iff",
+        "Becoming.Web.optimum_ends_beyond"
+      ]
+    },
+    {
+      "en": "Of two balanced steps from equal totals, each gaining nothing on the whole, one leaves the family at most where the other does exactly where it leaves the beyond with the loss at least where the other does; among such moves the highest family stock is the least beyond with the loss.",
+      "zh": "两个从相等总量出发、整体都无所增益的平衡步中，一个使族不高于另一个，恰当它使之外加损失不低于另一个；这样的动作中，族存量最高者恰是之外加损失最低者。",
+      "declarations": [
+        "Becoming.Flow.Balances.family_le_iff",
+        "Becoming.Flow.top_iff_least"
+      ]
+    },
+    {
+      "en": "Restricted to outcomes keeping every dependence beyond at its need, a rising order with room among them, each need attained by one of them, has its optimum break nothing, and in a balanced step gaining nothing on the whole the family rises, with the loss, by exactly the slack.",
+      "zh": "限于使之外每个依存保持在其需要的结果，若其中有余地且每个需要都被其中某个达到，则一个升高的序的最优不打断任何依存；在整体无所增益的平衡步中，族连同损失恰升高余量之多。",
+      "declarations": [
+        "Becoming.Flow.keeping_optimum_takes_slack"
+      ]
+    },
+    {
+      "en": "Witnesses on Diversion (three units between the source and the store, the dweller needing two): the store's optimum drains the source and the dweller ends; counting the source after the store drains it; without room keeping is an optimum not at the least level; a satisficing order is not rising and has both the keeping and the draining outcome among its optima; the keeping optimum takes the slack of one.",
+      "zh": "Diversion 上的见证（源与库之间三个单位，居住者需要源有二）：库的最优抽干源，居住者终止；先库后源的计数照样抽干；没有余地时保持是最优而不在最低水平；满足式的序不是升高的，保持与抽干两个结果都在其最优之中；保持的最优恰取一个单位的余量。",
+      "declarations": [
+        "Becoming.Optimum.Drain.Split",
+        "Becoming.Optimum.Drain.storeOrder",
+        "Becoming.Optimum.Drain.drainedLevel",
+        "Becoming.Optimum.Drain.storeOrder_rising",
+        "Becoming.Optimum.Drain.split_shared",
+        "Becoming.Optimum.Drain.drained_optimum",
+        "Becoming.Optimum.Drain.taker_couples_store",
+        "Becoming.Optimum.Drain.drained_ends",
+        "Becoming.Optimum.Drain.countedAfter",
+        "Becoming.Optimum.Drain.counted_after_drains",
+        "Becoming.Optimum.Drain.keptLevel",
+        "Becoming.Optimum.Drain.low",
+        "Becoming.Optimum.Drain.high",
+        "Becoming.Optimum.Drain.satisficing",
+        "Becoming.Optimum.Drain.satisficing_either",
+        "Becoming.Optimum.Drain.Spilling",
+        "Becoming.Optimum.Drain.room_needed",
+        "Becoming.Optimum.Drain.Keeping",
+        "Becoming.Optimum.Drain.keeping_room",
+        "Becoming.Optimum.Drain.kept_takes_slack"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The eligible outcomes, any set of level functions after a step; room among them, or shared units with the family apart from the beyond and holding a condition; for breaks, each condition beyond depended on at a need it meets at the step; for endings, that activity needs support (Dependent) and the dependence is as it was after the step; for the identity and the slack, balance and the whole gaining nothing across the step.",
+      "zh": "不加公理。可选结果为步后水平函数的任意集合；其中的余地，或族与之外分开且含一个条件时的共享单位；打断需之外每个条件在该步被以其满足的需要依存；终止需活动需要支持（Dependent）且依存在步后照旧；等式与余量需平衡且整体在该步无所增益。"
+    },
+    {
+      "en": "That a given optimizer's order rises with just the couplings listed, and what it holds eligible, are supplied, as in the selection laws; the core asserts them of no actual optimizer.",
+      "zh": "某个优化者的序恰随所列耦合升高、它以何者为可选，是给定的，与选择之律相同；核心不对任何实际的优化者断言它们。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Room derived from a law of exchange: which outcomes an actor's takes and gives make eligible, with the rest responding, is not stated; room is a hypothesis.",
+      "zh": "由交换之律导出余地：行动者的取与给、其余者的回应使哪些结果可选，未陈述；余地是假设。",
+      "kind": "scope"
+    },
+    {
+      "en": "Zhuang and Hadfield-Menell's continuous setting, their compactness characterization of guaranteed overoptimization, and their improvement by a proxy updated over time are not reached.",
+      "zh": "Zhuang 与 Hadfield-Menell 的连续情形、其对必然过度优化的紧性刻画，以及随时间更新代理的改进，均未达到。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the beyond's fall is a harm, or that keeping is better: no evaluation enters; that a widening move is chosen is the direction's (chapter 7.5), under C and the continuation condition.",
+      "zh": "之外的降低是伤害、保持更好：没有评价进入；选择扩大的动作属于方向（第 7.5 节），在 C 与延续条件之下。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Without room the drive fails: keeping can be an optimum (Optimum.Drain.room_needed); and an order rising only to a target need not drive or keep (Optimum.Drain.satisficing_either).",
+      "zh": "没有余地，压低不成立：保持可以是最优（Optimum.Drain.room_needed）；只升到目标的序既不必压低也不必保持（Optimum.Drain.satisficing_either）。",
+      "kind": "converse"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "detail": {
+        "en": "Spilling: two outcomes, the source kept or spilled with the store empty in both; under the store's order keeping is an optimum and is not at the least level beyond (Optimum.Drain.room_needed).",
+        "zh": "Spilling：两个结果，源被保留或泼掉，库在两者中都空；在库的序下，保持是最优且不在之外最低水平（Optimum.Drain.room_needed）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T195445.913199Z): the 39 declarations of Becoming.Optimum have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 283; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T195445.913199Z）：Becoming.Optimum 的 39 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 283 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Room derived from a law of exchange, the actor's takes and gives with the rest responding; optima over a run, where the beyond renews from its own level; an independent review.",
+    "zh": "由交换之律导出余地，即行动者的取与给及其余者的回应；一段运行上的最优，其中之外依其自身水平更新；独立审查。"
+  },
+  "correspondence": {
+    "en": "Zhuang and Hadfield-Menell (NeurIPS 2020), Theorem 1: optimizing a proxy that references only some attributes drives the others to their lower bounds; here in discrete, conserved form over every order rising with what couples in, exact on any set of outcomes, with the degradation read as dependences broken. Mild optimization (Taylor 2016) is the satisficing witness: it neither drives nor protects. Reading (the AI's): blindness alone leaves the beyond unselected; with competition for the same units an optimum takes it to the floor.",
+    "zh": "Zhuang 与 Hadfield-Menell（NeurIPS 2020）定理 1：优化只涉及部分属性的代理把其余属性压到下界；此处为离散、守恒的形式，对每个随耦合入者升高的序，在任何结果集上恰当成立，退化读作被打断的依存。温和优化（Taylor 2016）即满足式的见证：既不压低也不保护。读法（AI 的）：单是不见只让之外不被选择；与同一些单位相竞争时，最优把它压到底。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "what an optimum does beyond what couples in",
+    "the drive to the least level",
+    "optimizing a proxy",
+    "最优对耦合入者之外做什么",
+    "Becoming.Optimum.least_iff",
+    "Becoming.Web.optimum_broken_iff",
+    "Becoming.Flow.keeping_optimum_takes_slack"
+  ],
+  "dependencies": [
+    {
+      "id": "what-a-rise-draws-from-beyond",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The conservation identity and the slack law reuse Flow.Balances.beyond_falls_exactly and Web.MetOn.stock_eq; the breaks use Web.MetOn; the witnesses reuse Diversion's dweller and WithinSlack's world.",
+        "zh": "守恒等式与余量之律复用 Flow.Balances.beyond_falls_exactly 与 Web.MetOn.stock_eq；打断用 Web.MetOn；见证复用 Diversion 的居住者与 WithinSlack 的世界。"
+      },
+      "interface": {
+        "output": {
+          "en": "The beyond falls by the rise and the loss exactly; the stock of met dependences is the needs with the slack.",
+          "zh": "之外恰降低上升之量加损失；被满足的依存之存量是需要加余量。"
+        },
+        "input": {
+          "en": "The optimum's identity and its slack.",
+          "zh": "最优的等式及其余量。"
+        },
+        "conditions": {
+          "en": "Balance; the whole gaining nothing; dependences met beyond.",
+          "zh": "平衡；整体无所增益；之外的依存被满足。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean"
+      }
+    },
+    {
+      "id": "selection-through-couplings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The formations ended are coupled into by no member of a group coupled only into the family, through Web.CoupledInto, as in Flow.favours_breaking_beyond.",
+        "zh": "被终止的构成，没有只耦合入族的群体成员耦合入它，经 Web.CoupledInto，与 Flow.favours_breaking_beyond 同。"
+      },
+      "interface": {
+        "output": {
+          "en": "Coupling into a condition by dependence or by level.",
+          "zh": "经依存或水平耦合入条件。"
+        },
+        "input": {
+          "en": "That no member couples into what the optimum breaks.",
+          "zh": "没有成员耦合入最优所打断者。"
+        },
+        "conditions": {
+          "en": "Every condition a member couples into in the family; the beyond apart.",
+          "zh": "成员所耦合入的每个条件都在族中；之外与之分开。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "what-a-rise-draws-from-beyond",
+      "detail": {
+        "en": "What a rise draws from beyond; this record states what an optimum does there.",
+        "zh": "上升从其外汲取什么；本记录陈述最优在那里做什么。"
+      }
+    },
+    {
+      "id": "raising-what-couples-in-draws-from-beyond",
+      "detail": {
+        "en": "Raising what couples in is paid from beyond; an optimum takes the beyond to the least level where that leaves room.",
+        "zh": "升高耦合入者由之外支付；最优在留有余地时把之外压到最低水平。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.Balances.family_le_iff",
+        "Becoming.Flow.keeping_optimum_takes_slack",
+        "Becoming.Flow.top_iff_least",
+        "Becoming.Optimum.Drain.Keeping",
+        "Becoming.Optimum.Drain.Spilling",
+        "Becoming.Optimum.Drain.Split",
+        "Becoming.Optimum.Drain.countedAfter",
+        "Becoming.Optimum.Drain.counted_after_drains",
+        "Becoming.Optimum.Drain.drainedLevel",
+        "Becoming.Optimum.Drain.drained_ends",
+        "Becoming.Optimum.Drain.drained_optimum",
+        "Becoming.Optimum.Drain.high",
+        "Becoming.Optimum.Drain.keeping_room",
+        "Becoming.Optimum.Drain.keptLevel",
+        "Becoming.Optimum.Drain.kept_takes_slack",
+        "Becoming.Optimum.Drain.low",
+        "Becoming.Optimum.Drain.room_needed",
+        "Becoming.Optimum.Drain.satisficing",
+        "Becoming.Optimum.Drain.satisficing_either",
+        "Becoming.Optimum.Drain.split_shared",
+        "Becoming.Optimum.Drain.storeOrder",
+        "Becoming.Optimum.Drain.storeOrder_rising",
+        "Becoming.Optimum.Drain.taker_couples_store",
+        "Becoming.Optimum.Exceeds",
+        "Becoming.Optimum.Exceeds.total_lt",
+        "Becoming.Optimum.Least",
+        "Becoming.Optimum.Rising",
+        "Becoming.Optimum.Rising.mono",
+        "Becoming.Optimum.Room",
+        "Becoming.Optimum.Shared",
+        "Becoming.Optimum.Shared.room",
+        "Becoming.Optimum.least_iff",
+        "Becoming.Optimum.least_of_room",
+        "Becoming.Optimum.least_of_shared",
+        "Becoming.Optimum.rising_total",
+        "Becoming.Optimum.transfer",
+        "Becoming.Optimum.transfer_exceeds",
+        "Becoming.Web.optimum_broken_iff",
+        "Becoming.Web.optimum_ends_beyond"
+      ],
+      "sha256": "a6ed5555f8f84446632f35a238d651bc55975e031f4983d73ef249bf94059fe3"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.DrawnBeyond.WithinSlack.balances",
+        "Becoming.DrawnBeyond.WithinSlack.level",
+        "Becoming.DrawnBeyond.dwellerOn",
+        "Becoming.DrawnBeyond.fixed_source",
+        "Becoming.DrawnBeyond.met_source",
+        "Becoming.DrawnBeyond.source_apart",
+        "Becoming.DrawnBeyond.whole_gainless",
+        "Becoming.Flow.Balances.beyond_falls_exactly",
+        "Becoming.Web.MetOn",
+        "Becoming.Web.MetOn.stock_eq",
+        "Becoming.Web.slack"
+      ],
+      "sha256": "3f86d159bbc36f8027394c5b8ce89fb80312d482ccede3ab5b15ad5574a3502c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Requirement.Frontier"
+      ],
+      "sha256": "bf3ecf28d3d7dd5b196ff64a69e1a8cfc7fcd329c7c35732aa77f650c6648525"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T195445.913199Z/verification.json",
+      "role": "receipt",
+      "sha256": "6e6ff3702291a3126c40267b90634a9ea16d42db4a277cc56ac8a536f1507bd9"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "02d63053f091dd8fa1a9020285684f453b525b0b9df065bf1582b0549bc86716"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "77db53dac0aaac9352a0469d389cd491bed0b57f73552631a765d6bd6c4f0225"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "c14ca252f9ed8f35112b3c0c45fb44ea59a4f4746700562114ac4379cbad8d6c"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T195445.913199Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T195445.913199Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.DrawnBeyond",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T195445.913199Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frontier",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (SG1), what an optimum does beyond what couples in: the drive to the least level exactly where there is room, the breaks exactly those some outcome makes, the conservation identity and the slack under keeping; study section 283.",
+      "zh": "2026年10月21日：新增（SG1），最优对耦合入者之外做什么：恰在有余地时压到最低水平，打断恰为某个结果所打断者，守恒等式与保持下的余量；研究第 283 节。"
+    }
+  ]
+}

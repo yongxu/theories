@@ -553,3 +553,27 @@ Evidence: web searches on 21 October 2026; GovSim v4 read in the HTML (environme
 Boundary: AI check, one session; the 2026 LLM-commons papers found (power asymmetry, energy commons, CoopEval, social welfare functions) read by search snippet only, none models a dependent outside the players
 Integration: experiments/direction-installation; board IN1
 ```
+
+---
+
+<a id="optimum-check"></a>
+## A check before building: what an optimum does beyond what couples in (21 October 2026, SG1)
+
+An AI check (one session, 21 October), made before the Lean was written, of the one place where chapter §7.1 said prior art was stronger than the spine: "They do not add a bound on how far optimizing degrades what lies beyond (Zhuang and Hadfield-Menell's theorem is stronger there)". The question: what does an *optimum*, not a rise, do beyond what couples in, stated with the spine's accounting, and how far does it reach against the prior result? **Verdict: the drive itself is Zhuang and Hadfield-Menell's Theorem 1 in discrete, conserved form, a known result. What the spine's form adds is exact and checked: the drive over every order rising with what couples in, with room necessary as well as sufficient on any set of outcomes; the degradation read as dependences broken and formations ended, exactly those some outcome breaks, with no utility over the beyond; the conservation identity; and keeping each dependence uses the slack and no more. Their continuous setting, compactness characterization and interactive improvement are not reached. Built as SG1 in `Becoming.Optimum`.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Optimizing a continuous proxy strictly increasing in J < L referenced attributes, with a resource constraint strictly increasing in each attribute, drives every unmentioned attribute to its lower bound at any limit of the optimization path (Theorem 1); every complete optimization of every such proxy is u-costly, for low enough bounds, exactly where the feasible set with utility at least u is compact (Theorem 2); holding the unmentioned attributes at their start makes proxy gains true gains (Proposition 2); proxies updated interactively give local and convergent improvement under concavity and convexity (Theorem 3, Propositions 4 and 5) | Zhuang and Hadfield-Menell, "Consequences of Misaligned AI", NeurIPS 2020 ([arXiv 2102.03896](https://arxiv.org/abs/2102.03896), v1 HTML read) | The drive is Theorem 1; the spine's `least_iff` characterizes room on any set of outcomes, where Theorem 2 characterizes by compactness when utility must fall arbitrarily low; Proposition 2 holds the beyond's levels, the spine's keeping restriction holds only the needs |
+| Goodhart's law in reinforcement learning explained by the occupancy polytope: a linear proxy optimized over it moves to a vertex, with an early-stopping rule that avoids the fall | Karwowski et al., "Goodhart's Law in Reinforcement Learning", ICLR 2024 ([arXiv 2310.09144](https://arxiv.org/abs/2310.09144), listing read) | Linear and geometric; the spine's statement is order-theoretic, over any order rising with what couples in |
+| Two rewards are unhackable where raising the proxy's return never lowers the true one; over all stochastic policies a non-trivial pair never is | Skalse, Howe, Krasheninnikov and Krueger, "Defining and Characterizing Reward Hacking", NeurIPS 2022 (from memory, not reread) | Whether a proxy can be safe; the spine says which conditions an optimum lowers and which dependences it breaks |
+| Quantilizers: mild optimization, choosing at random from the top quantile of a base distribution, bounding the expected cost under the base distribution | Taylor, "Quantilizers", 2016 (from memory, not reread) | The satisficing witness: an order rising only to a target neither drives the beyond to its least level nor protects it |
+| Extremal Goodhart: optimizing to extreme values moves into regions where the proxy's relation to the goal fails | Manheim and Garrabrant, 2018 (cited in §7.1) | A classification; the spine states one mechanism of it exactly: competition for shared units with what the proxy does not register |
+
+```text
+Result(s): new record what-an-optimum-does-beyond-what-couples-in (SG1, Becoming.Optimum)
+Delta: the optimum's drive over any order rising with what couples in, exact on any set of outcomes; breaks and endings exactly those some outcome makes; the conservation identity; keeping takes exactly the slack
+Supplied premises / correspondence: room among the eligible outcomes; that a given optimizer's order rises with just the couplings listed. Correspondence: Zhuang and Hadfield-Menell 2020; Karwowski et al. 2024; Skalse et al. 2022; Taylor 2016; Manheim and Garrabrant 2018
+Evidence: Zhuang and Hadfield-Menell's theorems read in the arXiv HTML on 21 October 2026; Karwowski et al. by search listing; the others from memory; Lean in the record's receipt
+Boundary: AI check, one session; room supplied, not derived from a law of exchange; the continuous, compactness and interactive results not stated
+Integration: chapter §3.4, §7.1, §7.2 law 3, §8.1 item 10 and the relation-to-known-results row 6
+```

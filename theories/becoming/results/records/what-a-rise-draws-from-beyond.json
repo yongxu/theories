@@ -285,6 +285,13 @@
         "en": "The broken dependence lies on a condition no member couples into, so by the gap no selection through a member registers it.",
         "zh": "被打断的依存所在的条件无一成员耦合入，所以按其缺口，经任何成员的选择都不记下它。"
       }
+    },
+    {
+      "id": "what-an-optimum-does-beyond-what-couples-in",
+      "detail": {
+        "en": "What an optimum, not a rise, does beyond what couples in.",
+        "zh": "最优（而非上升）对耦合入者之外做什么。"
+      }
     }
   ],
   "references": [
@@ -377,7 +384,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "2e00f446090cf0bda3624f9f4844dfce850e6229feb18908eaa6c816a50f7269"
+      "sha256": "c14ca252f9ed8f35112b3c0c45fb44ea59a4f4746700562114ac4379cbad8d6c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
@@ -427,6 +434,10 @@
     {
       "en": "20 October 2026: R52 added the joint draw, which dependence breaks when several formations take at once (Becoming.JointDraw), section 8.1 item 10.",
       "zh": "2026年10月20日：R52 新增共同的汲取，即多个构成同时汲取时哪个依存被打断（Becoming.JointDraw），第 8.1 节第 10 项。"
+    },
+    {
+      "en": "21 October 2026, SG1: what an optimum does beyond what couples in (record what-an-optimum-does-beyond-what-couples-in, study section 283); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG1：最优对耦合入者之外做什么（记录 what-an-optimum-does-beyond-what-couples-in，研究第 283 节）；本记录的定律及其陈述不变。"
     }
   ]
 }
