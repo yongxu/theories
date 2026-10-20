@@ -1,0 +1,6157 @@
+[
+ {
+  "名": "大化",
+  "篇": "C01",
+  "所名": "展开（the one unfolding）",
+  "锚": "World.run_world",
+  "引": "阴阳大化",
+  "式": "复",
+  "注": "不带荀子天论中阴阳二气之本体义；只取一切变化合为一个展开；先秦唯一用例（荀子天论）为谓语；名词义「整体之展开」是本编的约定",
+  "anchors": [
+   "Becoming.World.run_world"
+  ],
+  "quotes": [
+   {
+    "phrase": "阴阳大化",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ17",
+      "text": "阴阳大化"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "變化",
+  "篇": "C01",
+  "所名": "生成／变化（becoming）：关系的形成、维持、转化、退化与消解",
+  "锚": "Web.change_readings",
+  "引": "刚柔相推而生变化@DS02",
+  "式": "复",
+  "注": "不带易传中与吉凶占断相连之义；单说「生」指生成（与退化相对），不指变化全体",
+  "anchors": [
+   "Becoming.Web.change_readings"
+  ],
+  "quotes": [
+   {
+    "phrase": "刚柔相推而生变化",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "刚柔相推而生变化"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "物",
+  "篇": "C01",
+  "所名": "关系项（relatum）",
+  "锚": "Web.roles",
+  "引": "物，謂之而然",
+  "式": "古",
+  "注": "物只是关系项，不是先于关系的实体",
+  "anchors": [
+   "Becoming.Web.roles"
+  ],
+  "quotes": [
+   {
+    "phrase": "物，謂之而然",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "物，謂之而然"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "待者",
+  "篇": "C01",
+  "所名": "形成（formation）：关系项依存并汲取他者的角色",
+  "锚": "Web.roles",
+  "引": "吾有待而然者邪",
+  "式": "新",
+  "注": "待＋者；与所待成对，是同一关系项的两种角色",
+  "anchors": [
+   "Becoming.Web.roles"
+  ],
+  "quotes": [
+   {
+    "phrase": "吾有待而然者邪",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "吾有待而然者邪"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "所待",
+  "篇": "C01",
+  "所名": "条件（condition）：他者所依存者这一角色中的关系项",
+  "锚": "Web.roles；Flow.roles",
+  "引": "吾所待又有待而然者邪",
+  "式": "复",
+  "注": "所X只指单步之所X；「所待又有待」即一关系项兼两角色",
+  "anchors": [
+   "Becoming.Web.roles",
+   "Becoming.Flow.roles"
+  ],
+  "quotes": [
+   {
+    "phrase": "吾所待又有待而然者邪",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "吾所待，又有待而然者邪"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "狀",
+  "篇": "C01",
+  "所名": "构形（configuration）：展开在一步之所是，它怎样相关",
+  "锚": "Alike",
+  "引": "状变而实无别而为异者",
+  "式": "古",
+  "注": "取荀子正名「狀／實」之分；狀为构形，實为跨步所认之同一",
+  "anchors": [
+   "Becoming.Alike"
+  ],
+  "quotes": [
+   {
+    "phrase": "状变而实无别而为异者",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ22",
+      "text": "状变而实无别而为异者"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "動",
+  "篇": "C01",
+  "所名": "动作（move）：律在一步所留开者",
+  "锚": "withMove",
+  "引": "動，或徙也",
+  "式": "古",
+  "注": "墨经义：或徙，一种可能的移易；不带「动静」形上义",
+  "anchors": [
+   "Becoming.withMove"
+  ],
+  "quotes": [
+   {
+    "phrase": "動，或徙也",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "動，或徙也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "步",
+  "篇": "C01",
+  "所名": "步（step）：自然数步的共同索引",
+  "锚": "World.run_world",
+  "引": "不積跬步",
+  "式": "古",
+  "注": "只作离散的共同索引；时之义见「時」",
+  "anchors": [
+   "Becoming.World.run_world"
+  ],
+  "quotes": [
+   {
+    "phrase": "不積跬步",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ01",
+      "text": "不積跬步"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "行",
+  "篇": "C01",
+  "所名": "运行（run）：一个过程无穷的实际执行，唯一的基底",
+  "锚": "Run；World.run_world",
+  "引": "道行之而成",
+  "式": "古",
+  "注": "取「道行之而成」：所显之法由运行而成；不带「五行」「德行」义",
+  "anchors": [
+   "Becoming.Run",
+   "Becoming.World.run_world"
+  ],
+  "quotes": [
+   {
+    "phrase": "道行之而成",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "道，行之而成"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "變",
+  "篇": "C01",
+  "所名": "过程（process）：可容许的变化，动作读入构形",
+  "锚": "Generative.Process",
+  "引": "化而裁之谓之变@DS02",
+  "式": "古",
+  "注": "取系辞：化而裁之为变（裁成步）；与变化（展开全体）同取「变」义而层次不同",
+  "anchors": [
+   "Generative.Process"
+  ],
+  "quotes": [
+   {
+    "phrase": "化而裁之谓之变",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "化而裁之谓之变"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "繫辭",
+  "篇": "C01",
+  "所名": "框架（frame）：过程加上每个构形所实现的主张",
+  "锚": "Frame",
+  "引": "系辞焉而明吉凶@DS02",
+  "式": "新",
+  "注": "系辞＝系辞于卦：辞系于每个构形；书名作《系辞》加书名号以别；不带占断",
+  "anchors": [
+   "Becoming.Frame"
+  ],
+  "quotes": [
+   {
+    "phrase": "系辞焉而明吉凶",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "系辞焉而明吉凶"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "辭",
+  "篇": "C01",
+  "所名": "主张（claim）",
+  "锚": "Frame",
+  "引": "系辞焉而明吉凶@DS02",
+  "式": "古",
+  "注": "一个构形所实现、可以成立或不成立者",
+  "anchors": [
+   "Becoming.Frame"
+  ],
+  "quotes": [
+   {
+    "phrase": "系辞焉而明吉凶",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "系辞焉而明吉凶"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "宇",
+  "篇": "C01",
+  "所名": "世界（world）：一类关系项，带流与依存网，是容许每一步之过程的运行",
+  "锚": "World；World.run_world",
+  "引": "宇，彌異所也",
+  "式": "古",
+  "注": "墨经义：遍及异所；每个宇是一观，回到展开；不带「宇宙」为实体之义",
+  "anchors": [
+   "Becoming.World",
+   "Becoming.World.run_world"
+  ],
+  "quotes": [
+   {
+    "phrase": "宇，彌異所也",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "宇，彌異所也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "久",
+  "篇": "C05",
+  "所名": "通过变化之持续（persisting through change）",
+  "锚": "Web.Whole.arises_within；Web.Whole.needs_arising；Web.ByPassing.passes_within",
+  "引": "久，彌異時也／四時變化而能久成",
+  "式": "古",
+  "注": "脊柱无单一之久；整体经由部分之生起而久，样式经由传递而久；孙子「久暴師」之久不入",
+  "anchors": [
+   "Becoming.Web.Whole.arises_within",
+   "Becoming.Web.Whole.needs_arising",
+   "Becoming.Web.ByPassing.passes_within"
+  ],
+  "quotes": [
+   {
+    "phrase": "久，彌異時也",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "久，彌異時也"
+     }
+    ]
+   },
+   {
+    "phrase": "四時變化而能久成",
+    "found": [
+     {
+      "source_id": "YD-HX01",
+      "text": "四時變化而能久成"
+     },
+     {
+      "source_id": "YD-JP32",
+      "text": "四時變化，而能久成"
+     },
+     {
+      "source_id": "YD-CY",
+      "text": "四時變化而能久成"
+     },
+     {
+      "source_id": "YD-CY3",
+      "text": "四時變化而能久成"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "觀",
+  "篇": "C01",
+  "所名": "观（view）：过程、框架、世界的总名",
+  "锚": "Generative.Process；Frame；World",
+  "引": "观其会通@DS02",
+  "式": "古",
+  "注": "观只指视图；读法另名「讀」",
+  "anchors": [
+   "Generative.Process",
+   "Becoming.Frame",
+   "Becoming.World"
+  ],
+  "quotes": [
+   {
+    "phrase": "观其会通",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "观其会通"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "讀",
+  "篇": "C08",
+  "所名": "读法（reading）：带地位的解释；量从其构成者读出",
+  "锚": "—",
+  "引": "桓公讀書於堂上",
+  "式": "古",
+  "注": "读法标「讀（AI）」；不指诵读",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "桓公讀書於堂上",
+    "found": [
+     {
+      "source_id": "ZH1-S13",
+      "text": "桓公讀書於堂上"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "兼",
+  "篇": "C03",
+  "所名": "整体（whole）：同一展开中的一切",
+  "锚": "Web.Whole；World.withRest",
+  "引": "體，分於兼也",
+  "式": "古",
+  "注": "取墨经兼体之兼（整体）；墨子「兼以易别」之兼另作对照条目（见「盡」）",
+  "anchors": [
+   "Becoming.Web.Whole",
+   "Becoming.World.withRest"
+  ],
+  "quotes": [
+   {
+    "phrase": "體，分於兼也",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "體，分於兼也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "體",
+  "篇": "C03",
+  "所名": "部分（part）",
+  "锚": "Web.Whole",
+  "引": "體，分於兼也",
+  "式": "古",
+  "注": "墨经义：体是兼之一分；不带体用之本原义（体用另作相分条目）；体只作部分；体用之「體」只在引文中出现",
+  "anchors": [
+   "Becoming.Web.Whole"
+  ],
+  "quotes": [
+   {
+    "phrase": "體，分於兼也",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "體，分於兼也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "其餘",
+  "篇": "C01",
+  "所名": "整体的其余（the rest of the whole read as one relatum）",
+  "锚": "World.withRest",
+  "引": "—",
+  "式": "新",
+  "注": "其余从不施动；取代「大块」",
+  "anchors": [
+   "Becoming.World.withRest"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "諸宇",
+  "篇": "C01",
+  "所名": "空间（space）：所表示世界之类",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "諸＋宇",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "待",
+  "篇": "C02",
+  "所名": "依存（dependence）：一个形成所需者及其多少，以阈给出",
+  "锚": "Web",
+  "引": "吾有待而然者邪",
+  "式": "古",
+  "注": "待是关系谓词，不是物",
+  "anchors": [
+   "Becoming.Web"
+  ],
+  "quotes": [
+   {
+    "phrase": "吾有待而然者邪",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "吾有待而然者邪"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "待網",
+  "篇": "C02",
+  "所名": "依存网（web）：持有水平、活动、所需、需要量与汲取",
+  "锚": "Web",
+  "引": "—",
+  "式": "新",
+  "注": "待＋网；与「流」（Flow）并列而不同",
+  "anchors": [
+   "Becoming.Web"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "足",
+  "篇": "C02",
+  "所名": "满足：一个依存之需被一个水平满足（need ≤ level）",
+  "锚": "—",
+  "引": "足食，足兵",
+  "式": "古",
+  "注": "足只指单个所需被满足；每个所需都被满足名「容」；够名「足而止」；不带「知足」之修养义",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "足食，足兵",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "足食，足兵"
+     },
+     {
+      "source_id": "CT1-S-HS",
+      "text": "足食足兵"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "容",
+  "篇": "C06",
+  "所名": "支持、容纳（support, admission）：水平满足一个形成在一步的每个所需",
+  "锚": "Web.Admits；Web.Supported",
+  "引": "窮，或有前不容尺也",
+  "式": "古",
+  "注": "空间之容，只取关系形式（水平与所需）；包容之品行义不携带；所容为约定：此刻诸水平所容许者之全体",
+  "anchors": [
+   "Becoming.Web.Admits",
+   "Becoming.Web.Supported"
+  ],
+  "quotes": [
+   {
+    "phrase": "窮，或有前不容尺也",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "窮，或有前不容尺也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "資",
+  "篇": "C02",
+  "所名": "汲取（draws）",
+  "锚": "Web",
+  "引": "萬物資生",
+  "式": "古",
+  "注": "资是关系名；王弼注「资，取也」；财货义（资斧）不取",
+  "anchors": [
+   "Becoming.Web"
+  ],
+  "quotes": [
+   {
+    "phrase": "萬物資生",
+    "found": [
+     {
+      "source_id": "YD-HX01",
+      "text": "萬物資生"
+     },
+     {
+      "source_id": "DS11",
+      "text": "万物资生"
+     },
+     {
+      "source_id": "YD-JP02",
+      "text": "萬物資生"
+     },
+     {
+      "source_id": "YD-CY",
+      "text": "萬物資生"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "食",
+  "篇": "C02",
+  "所名": "以之为生（lives on）",
+  "锚": "Web.LivesOn",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Web.LivesOn"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "交",
+  "篇": "C02",
+  "所名": "交互（interacts）",
+  "锚": "Web.Interacts",
+  "引": "相與交食乎地而交樂乎天",
+  "式": "古",
+  "注": "一义：Web.Interacts（两向对称，经一个条件）；与 Hexagram.meets 不同构，易章之交作「卦交」；泰彖之交读作输",
+  "anchors": [
+   "Becoming.Web.Interacts"
+  ],
+  "quotes": [
+   {
+    "phrase": "相與交食乎地而交樂乎天",
+    "found": [
+     {
+      "source_id": "ZH1-S23",
+      "text": "相與交食乎地而交樂乎天"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "相待",
+  "篇": "C02",
+  "所名": "相互依存（mutual dependence）",
+  "锚": "Flow.MutuallyDependent",
+  "引": "離居不相待則窮",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.MutuallyDependent"
+  ],
+  "quotes": [
+   {
+    "phrase": "離居不相待則窮",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ10",
+      "text": "離居不相待則窮"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "持",
+  "篇": "C02",
+  "所名": "维持（kept）",
+  "锚": "Web.Kept",
+  "引": "相持而长",
+  "式": "古",
+  "注": "与「絶」成对",
+  "anchors": [
+   "Becoming.Web.Kept"
+  ],
+  "quotes": [
+   {
+    "phrase": "相持而长",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ19",
+      "text": "相持而长"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "絶",
+  "篇": "C02",
+  "所名": "断裂（broken）",
+  "锚": "Web.Broken",
+  "引": "糧食輟絕而不繼",
+  "式": "古",
+  "注": "与「持」成对；绝生之「绝」同义（断）；渡义（绝江河）、竭义不入",
+  "anchors": [
+   "Becoming.Web.Broken"
+  ],
+  "quotes": [
+   {
+    "phrase": "糧食輟絕而不繼",
+    "found": [
+     {
+      "source_id": "MO1-S-C18",
+      "text": "糧食輟絕而不繼"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "結",
+  "篇": "C02",
+  "所名": "关系之形成（forms）",
+  "锚": "Web.Forms",
+  "引": "物有結之",
+  "式": "古",
+  "注": "与「解」成对",
+  "anchors": [
+   "Becoming.Web.Forms"
+  ],
+  "quotes": [
+   {
+    "phrase": "物有結之",
+    "found": [
+     {
+      "source_id": "ZH1-S06",
+      "text": "物有結之"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "解",
+  "篇": "C02",
+  "所名": "消解（dissolves）",
+  "锚": "Web.Dissolves",
+  "引": "物有結之",
+  "式": "古",
+  "注": "与「結」成对",
+  "anchors": [
+   "Becoming.Web.Dissolves"
+  ],
+  "quotes": [
+   {
+    "phrase": "物有結之",
+    "found": [
+     {
+      "source_id": "ZH1-S06",
+      "text": "物有結之"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "俱亡",
+  "篇": "C02",
+  "所名": "共灭（coextinct）",
+  "锚": "Web.coextinct",
+  "引": "虢朝亡而虞夕從之",
+  "式": "新",
+  "注": "新名，不承先秦「俱亡」（都失去）之义；十过一句为依存而随亡之结构出处",
+  "anchors": [
+   "Becoming.Web.coextinct"
+  ],
+  "quotes": [
+   {
+    "phrase": "虢朝亡而虞夕從之",
+    "found": [
+     {
+      "source_id": "FA1-S-H10",
+      "text": "虢朝亡而虞夕從之"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "蓄",
+  "篇": "C02",
+  "所名": "储备（carries）",
+  "锚": "Web.Carries",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Web.Carries"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "自持",
+  "篇": "C02",
+  "所名": "承担自身（self-bearing）",
+  "锚": "Web.SelfBearing",
+  "引": "—",
+  "式": "新",
+  "注": "取代「自待」；随条件之标法而定（Mutualism.apart_relabelled），不是独立性质；不立先秦之引",
+  "anchors": [
+   "Becoming.Web.SelfBearing"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "截",
+  "篇": "C02",
+  "所名": "切口（cut）",
+  "锚": "Flow.Cut",
+  "引": "—",
+  "式": "古",
+  "注": "取代「不交」，使「交」只有一义",
+  "anchors": [
+   "Becoming.Flow.Cut"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "小故",
+  "篇": "C02",
+  "所名": "必要条件",
+  "锚": "—",
+  "引": "小故，有之不必然，無之必不然",
+  "式": "古",
+  "注": "墨辩：无之必不然；结构见「有待」（Web.Dependent）与 Hibernation.readings 之见证；大故于脊柱暂无锚",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "小故，有之不必然，無之必不然",
+    "found": [
+     {
+      "source_id": "MI1-S-SS",
+      "text": "小故，有之不必然，無之必不然"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "大故",
+  "篇": "C02",
+  "所名": "充分且必要之条件",
+  "锚": "—",
+  "引": "大故，有之必然，無之必不然",
+  "式": "古",
+  "注": "墨辩",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "大故，有之必然，無之必不然",
+    "found": [
+     {
+      "source_id": "MI1-S-SS",
+      "text": "大故，有之必然，無之必不然"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "有力",
+  "篇": "C02",
+  "所名": "差别制造（makes a difference）：一个依存之断的但书",
+  "锚": "Dependence.MakesDifference",
+  "引": "—",
+  "式": "新",
+  "注": "复词；先秦「有力」是力量义，不承；以论语「微管仲，吾其被髮左衽矣」之「微」为但书结构的对照",
+  "anchors": [
+   "Becoming.Dependence.MakesDifference"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "同力",
+  "篇": "C13",
+  "所名": "合起来造成的差别（difference made together）",
+  "锚": "Dependence.MakesDifferenceTogether",
+  "引": "—",
+  "式": "新",
+  "注": "与「有力」成对",
+  "anchors": [
+   "Becoming.Dependence.MakesDifferenceTogether"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "作",
+  "篇": "C03",
+  "所名": "生起（arising）：活动跨一步开始",
+  "锚": "Web.Arises",
+  "引": "萬物並作",
+  "式": "古",
+  "注": "取老子十六章「并作」；不用「生」（生只指生成）",
+  "anchors": [
+   "Becoming.Web.Arises"
+  ],
+  "quotes": [
+   {
+    "phrase": "萬物並作",
+    "found": [
+     {
+      "source_id": "DS01",
+      "text": "万物并作"
+     },
+     {
+      "source_id": "IN2-S06",
+      "text": "萬物並作"
+     },
+     {
+      "source_id": "YD-LAO-BASE",
+      "text": "万物并作"
+     },
+     {
+      "source_id": "LC-HS-UP",
+      "text": "万物并作"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "已",
+  "篇": "C03",
+  "所名": "止息（ceasing）：活动跨一步停止",
+  "锚": "Web.Ceases",
+  "引": "學不可以已",
+  "式": "古",
+  "注": "已只指止息；墨经「已，成、亡」只作成、毁之旁证",
+  "anchors": [
+   "Becoming.Web.Ceases"
+  ],
+  "quotes": [
+   {
+    "phrase": "學不可以已",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ01",
+      "text": "學不可以已"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "成",
+  "篇": "C03",
+  "所名": "开始成立（comes to hold）",
+  "锚": "ComesToBe",
+  "引": "其分也，成也；其成也，毀也",
+  "式": "古",
+  "注": "与「毁」成对；成生、成闭之「成」同义（成就）",
+  "anchors": [
+   "Becoming.ComesToBe"
+  ],
+  "quotes": [
+   {
+    "phrase": "其分也，成也；其成也，毀也",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "其分也，成也；其成也，毀也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "毀",
+  "篇": "C03",
+  "所名": "不再成立（ceases to hold）",
+  "锚": "CeasesToBe",
+  "引": "其分也，成也；其成也，毀也",
+  "式": "古",
+  "注": "与「成」成对",
+  "anchors": [
+   "Becoming.CeasesToBe"
+  ],
+  "quotes": [
+   {
+    "phrase": "其分也，成也；其成也，毀也",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "其分也，成也；其成也，毀也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "聚",
+  "篇": "C03",
+  "所名": "开始作为条件而在（comes to stand as a condition）",
+  "锚": "Web.ComesToStand",
+  "引": "—",
+  "式": "古",
+  "注": "与「散」成对；不带「气之聚」之本体义",
+  "anchors": [
+   "Becoming.Web.ComesToStand"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "散",
+  "篇": "C03",
+  "所名": "不再作为条件而在",
+  "锚": "Web.ComesToStand",
+  "引": "—",
+  "式": "古",
+  "注": "与「聚」成对",
+  "anchors": [
+   "Becoming.Web.ComesToStand"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "相代",
+  "篇": "C03",
+  "所名": "同步（keep pace）：生起与止息相差不过成员之数",
+  "锚": "keep_pace",
+  "引": "日夜相代乎前",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.keep_pace"
+  ],
+  "quotes": [
+   {
+    "phrase": "日夜相代乎前",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "日夜相代乎前"
+     },
+     {
+      "source_id": "ZH1-S05",
+      "text": "日夜相代乎前"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "消息",
+  "篇": "C03",
+  "所名": "普查平衡（census balance over a stretch）",
+  "锚": "held_over_stretch",
+  "引": "君子尚消息盈虛",
+  "式": "复",
+  "注": "消息之「息」为长，与「不息」之「息」（止）异义；只作复词；与易学十二消息卦（Hexagram.waxWane）之消长不同；waxWane 写作「消长环」；消息之「息」为长，与「不息」之「息」异义",
+  "anchors": [
+   "Becoming.held_over_stretch"
+  ],
+  "quotes": [
+   {
+    "phrase": "君子尚消息盈虛",
+    "found": [
+     {
+      "source_id": "YD-HX01",
+      "text": "君子尚消息盈虛"
+     },
+     {
+      "source_id": "YD-JP23",
+      "text": "君子尚消息盈虛"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "列",
+  "篇": "C03",
+  "所名": "普查（census）：每步成立者的列表，各一次",
+  "锚": "Web.Census",
+  "引": "—",
+  "式": "古",
+  "注": "与「數」分名",
+  "anchors": [
+   "Becoming.Web.Census"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "數",
+  "篇": "C03",
+  "所名": "计数（count）：恰在所计者已定之处存在",
+  "锚": "counts_iff_decided",
+  "引": "—",
+  "式": "古",
+  "注": "只作计数，不带定数、命数义",
+  "anchors": [
+   "Becoming.counts_iff_decided"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "定數",
+  "篇": "C03",
+  "所名": "列一次即判定同一（lists once iff decided）",
+  "锚": "listsOnce_iff_decided",
+  "引": "此事之所以稽实定数也",
+  "式": "复",
+  "注": "荀子正名；荀子之定数是动宾（定其数）；只取先定实之同异而后能数，不取命数义",
+  "anchors": [
+   "Becoming.listsOnce_iff_decided"
+  ],
+  "quotes": [
+   {
+    "phrase": "此事之所以稽实定数也",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ22",
+      "text": "此事之所以稽实定数也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "不息",
+  "篇": "C03",
+  "所名": "不息（unceasing）：生起无止地复现",
+  "锚": "Web.Unceasing",
+  "引": "—",
+  "式": "古",
+  "注": "一名一锚，C03 与 C05 合为一条；与消息之息（长）、孟子「日夜之所息」（长）异义；比较 Recycle.closed_unceasing（有不息而无生生）与 Web.unceasing_iff_covering",
+  "anchors": [
+   "Becoming.Web.Unceasing"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "止",
+  "篇": "C03",
+  "所名": "停息（coming to rest）：从某步起无物生起",
+  "锚": "World.RestsFrom；World.comes_to_rest_unrefuted",
+  "引": "物不可以終止",
+  "式": "古",
+  "注": "止只指停；墨经「止，以久也」是一段停顿（有久之不止），不入；序卦此句之全称作定域条目",
+  "anchors": [
+   "Becoming.World.RestsFrom",
+   "Becoming.World.comes_to_rest_unrefuted"
+  ],
+  "quotes": [
+   {
+    "phrase": "物不可以終止",
+    "found": [
+     {
+      "source_id": "YD-OW-XG",
+      "text": "物不可以終止"
+     },
+     {
+      "source_id": "YD-CY4",
+      "text": "物不可以終止"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "靜",
+  "篇": "C03",
+  "所名": "静（holds at a time）：一时成立者（D45）",
+  "锚": "Law.rests_iff",
+  "引": "—",
+  "式": "古",
+  "注": "静不是停；不带「主静」修养义；律所不改变之构形（D49：极）；与「止」（停息）分开",
+  "anchors": [
+   "Becoming.Law.rests_iff"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "化",
+  "篇": "C03",
+  "所名": "构形改变而同一不别",
+  "锚": "Web.Continues",
+  "引": "状变而实无别而为异者，谓之化",
+  "式": "古",
+  "注": "构形改变（不 Alike）而续不断；荀子正名之定义",
+  "anchors": [
+   "Becoming.Web.Continues"
+  ],
+  "quotes": [
+   {
+    "phrase": "状变而实无别而为异者，谓之化",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ22",
+      "text": "状变而实无别而为异者，谓之化"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "重同",
+  "篇": "C09",
+  "所名": "一步之内二名一实（每次改认在一步给出的对应）",
+  "锚": "Reidentify",
+  "引": "二名一實，重同也",
+  "式": "复",
+  "注": "墨经；改名须每步同一，文本无此条；经下「殺狗非殺犬也」与经说下相反，换名保值只对由关系定义的读数成立",
+  "anchors": [
+   "Becoming.Reidentify"
+  ],
+  "quotes": [
+   {
+    "phrase": "二名一實，重同也",
+    "found": [
+     {
+      "source_id": "MI1-S-SS",
+      "text": "二名一實，重同也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "續",
+  "篇": "C05",
+  "所名": "延续（continuation）：一个形成延续一个前者，跨步之同一",
+  "锚": "Web.Continues",
+  "引": "有化而无别，谓之一实",
+  "式": "古",
+  "注": "荀子之「一实」即续：状变而实无别；续之补短义（断长续短）不入",
+  "anchors": [
+   "Becoming.Web.Continues"
+  ],
+  "quotes": [
+   {
+    "phrase": "有化而无别，谓之一实",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ22",
+      "text": "有化而无别，谓之一实"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "相續",
+  "篇": "C03",
+  "所名": "延续关系（continuation relation）",
+  "锚": "Web.Continues",
+  "引": "—",
+  "式": "复",
+  "注": "延续关系本身（Web.Continues 所据之关系 R）；古代用例为一对一之流",
+  "anchors": [
+   "Becoming.Web.Continues"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "無閒",
+  "篇": "C03",
+  "所名": "连续（continuity）",
+  "锚": "Reidentify.KeepsActive",
+  "引": "—",
+  "式": "复",
+  "注": "墨经「有闲／无闲」",
+  "anchors": [
+   "Becoming.Reidentify.KeepsActive"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "繼",
+  "篇": "C03",
+  "所名": "接续：由先后相继之源供给",
+  "锚": "Becoming.Succession",
+  "引": "—",
+  "式": "古",
+  "注": "不锚 KeepsTenure；承继另名「因」；中庸之继志留作缺口",
+  "anchors": [
+   "Becoming.Succession"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "蟄",
+  "篇": "C03",
+  "所名": "休眠（dormancy）",
+  "锚": "Hibernation.readings；Web.Holds；Web.waking_not_arising",
+  "引": "龙蛇之蛰，以存身也@DS03",
+  "式": "古",
+  "注": "—；有所持守之休眠；Dormancy（无持守）作反衬",
+  "anchors": [
+   "Becoming.Hibernation.readings",
+   "Becoming.Web.Holds",
+   "Becoming.Web.waking_not_arising"
+  ],
+  "quotes": [
+   {
+    "phrase": "龙蛇之蛰，以存身也",
+    "found": [
+     {
+      "source_id": "DS03",
+      "text": "龙蛇之蛰，以存身也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "存",
+  "篇": "C03",
+  "所名": "持存（holds, persists）",
+  "锚": "Web.Holds",
+  "引": "—",
+  "式": "古",
+  "注": "—；存是一步之持存；跨步之持续名「久」",
+  "anchors": [
+   "Becoming.Web.Holds"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "裂",
+  "篇": "C03",
+  "所名": "分裂（split）",
+  "锚": "Web.NoSplit",
+  "引": "—",
+  "式": "古",
+  "注": "取代「分」，使「分」只给足迹",
+  "anchors": [
+   "Becoming.Web.NoSplit"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "合",
+  "篇": "C03",
+  "所名": "并合（merge，形成之并合）",
+  "锚": "Web.NoMerge",
+  "引": "—",
+  "式": "古",
+  "注": "取代「并」（简体与「並」同形）；与构形之「同归」分开",
+  "anchors": [
+   "Becoming.Web.NoMerge"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "流",
+  "篇": "C04",
+  "所名": "流（flow）：每个形成跨一步从每个条件取与给",
+  "锚": "Flow",
+  "引": "盛衰之殺，變化之流也",
+  "式": "古",
+  "注": "流是 Flow，不是待网；流淫义不入",
+  "anchors": [
+   "Becoming.Flow"
+  ],
+  "quotes": [
+   {
+    "phrase": "盛衰之殺，變化之流也",
+    "found": [
+     {
+      "source_id": "ZH1-S13",
+      "text": "盛衰之殺，變化之流也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "取",
+  "篇": "C04",
+  "所名": "取用（uptake）",
+  "锚": "Flow",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "與",
+  "篇": "C04",
+  "所名": "补充（replenishment，给）",
+  "锚": "Flow",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "取與",
+  "篇": "C04",
+  "所名": "一次交换（one exchange）",
+  "锚": "Flow",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "取者",
+  "篇": "C04",
+  "所名": "取用者（takers）",
+  "锚": "Flow.takers",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.takers"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "衡",
+  "篇": "C04",
+  "所名": "平衡（balance）：水平的每次变化恰是所取与所给",
+  "锚": "Flow.Balances",
+  "引": "—",
+  "式": "古",
+  "注": "—；墨经之衡是杠杆之平、荀子之衡是标准，都不入",
+  "anchors": [
+   "Becoming.Flow.Balances"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "耗",
+  "篇": "C04",
+  "所名": "耗散（dissipation）",
+  "锚": "Flow.Dissipative",
+  "引": "—",
+  "式": "古",
+  "注": "—；先秦「秏」义为乱、虚竭（荀子修身「多而亂曰秏」），耗散是转义",
+  "anchors": [
+   "Becoming.Flow.Dissipative"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "端",
+  "篇": "C04",
+  "所名": "最小损失、最小之量（least loss）",
+  "锚": "Amounts.rests",
+  "引": "非半弗𣃈，則不動，說在端",
+  "式": "古",
+  "注": "墨经义；与「萌」（种子）分开；墨经之端是不可再分之点，脊柱之端是损失之下界，二者只在整数之量中重合",
+  "anchors": [
+   "Becoming.Amounts.rests"
+  ],
+  "quotes": [
+   {
+    "phrase": "非半弗𣃈，則不動，說在端",
+    "found": [
+     {
+      "source_id": "MI1-S-JX",
+      "text": "非半弗𣃈，則不動，說在端"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "積小以高大",
+  "篇": "C04",
+  "所名": "阿基米德的量（Archimedean amounts）",
+  "锚": "—",
+  "引": "積小以高大",
+  "式": "复",
+  "注": "AI 强读：书证言积累，读作阿基米德之量；反面见证 Layered.not_archimedean",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "積小以高大",
+    "found": [
+     {
+      "source_id": "YD-HX02",
+      "text": "積小以高大"
+     },
+     {
+      "source_id": "YD-JP46",
+      "text": "積小以高大"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "輸",
+  "篇": "C04",
+  "所名": "输送（conveying）",
+  "锚": "Flow",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "自外來",
+  "篇": "C04",
+  "所名": "从其外得到供给（fed from beyond）",
+  "锚": "Flow.FedFromBeyond；Flow.fed_from_beyond",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.FedFromBeyond",
+   "Becoming.Flow.fed_from_beyond"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "汲",
+  "篇": "C04",
+  "所名": "汲入（drawing in）",
+  "锚": "Flow.taking_draws_in",
+  "引": "夫山居而谷汲者",
+  "式": "古",
+  "注": "与「自外来」在可判定相等时等价（Flow.inward_iff_not_fed）",
+  "anchors": [
+   "Becoming.Flow.taking_draws_in"
+  ],
+  "quotes": [
+   {
+    "phrase": "夫山居而谷汲者",
+    "found": [
+     {
+      "source_id": "FA1-S-H49",
+      "text": "夫山居而谷汲者"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "多而無已",
+  "篇": "C04",
+  "所名": "不止地更多（more without end）",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "「已」同「止息」义",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "損",
+  "篇": "C04",
+  "所名": "下降（depletion）",
+  "锚": "—",
+  "引": "損、益，盛衰之始也",
+  "式": "古",
+  "注": "「損，偏去也」只给「偏去」；与「益」成对",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "損、益，盛衰之始也",
+    "found": [
+     {
+      "source_id": "YD-OW-ZG",
+      "text": "損 、益 ，盛衰之始也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "封",
+  "篇": "C04",
+  "所名": "封闭（closed：家族跨一步不与外交换）",
+  "锚": "—",
+  "引": "夫道未始有封",
+  "式": "古",
+  "注": "取代「闭关」，使「闭」只指吸收区域",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "夫道未始有封",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "夫道未始有封"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "圍",
+  "篇": "C04",
+  "所名": "围住（enclosed around）",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "開",
+  "篇": "C04",
+  "所名": "开放（openness）：超出每个有限家族的交换",
+  "锚": "World.arising_opens",
+  "引": "—",
+  "式": "古",
+  "注": "只对应 Ren 的「开」之「未」一相；未、可、应、转见对照表；只锚 arising_opens；Seeking.more_needs_open 之 open 是另一结构，不借此名",
+  "anchors": [
+   "Becoming.World.arising_opens"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "恆",
+  "篇": "C05",
+  "所名": "更新（renewing）：所参与的每个条件都继续支持每个依存者",
+  "锚": "Web.RenewingIn",
+  "引": "天地之道，恆久而不已也",
+  "式": "古",
+  "注": "运行之类；易传之「恆」读为久；名表之恒只名运行之类",
+  "anchors": [
+   "Becoming.Web.RenewingIn"
+  ],
+  "quotes": [
+   {
+    "phrase": "天地之道，恆久而不已也",
+    "found": [
+     {
+      "source_id": "YD-HX01",
+      "text": "天地之道恆久而不已也"
+     },
+     {
+      "source_id": "YD-JP32",
+      "text": "天地之道，恆久而不已也"
+     },
+     {
+      "source_id": "YD-CY",
+      "text": "天地之道，恒久而不已也"
+     },
+     {
+      "source_id": "YD-CY3",
+      "text": "天地之道恒久而不已也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "復",
+  "篇": "C05",
+  "所名": "返回（return of a configuration）",
+  "锚": "Branching.Returns",
+  "引": "反復其道，七日來復",
+  "式": "古",
+  "注": "只指构形再得",
+  "anchors": [
+   "Becoming.Branching.Returns"
+  ],
+  "quotes": [
+   {
+    "phrase": "反復其道，七日來復",
+    "found": [
+     {
+      "source_id": "V3D03",
+      "text": "反復其道，七日來復"
+     },
+     {
+      "source_id": "YD-HX01",
+      "text": "反復其道，七日來復"
+     },
+     {
+      "source_id": "YD-HX04",
+      "text": "反復其道，七日來復"
+     },
+     {
+      "source_id": "YD-JG24",
+      "text": "反復其道，七日來復"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "期",
+  "篇": "C05",
+  "所名": "回程之期（return bound）",
+  "锚": "Web.RestoredWithin；Web.RenewedWithin",
+  "引": "—",
+  "式": "古",
+  "注": "读 qī（期限），只指上界；确切步数不名期",
+  "anchors": [
+   "Becoming.Web.RestoredWithin",
+   "Becoming.Web.RenewedWithin"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "同歸",
+  "篇": "C05",
+  "所名": "合并（merge of courses）",
+  "锚": "Law.Merges",
+  "引": "天下同归而殊途@DS03",
+  "式": "复",
+  "注": "—；王弼四十七章注之单一中心义、九句之「歸」（无损之复）不入",
+  "anchors": [
+   "Becoming.Law.Merges"
+  ],
+  "quotes": [
+   {
+    "phrase": "天下同归而殊途",
+    "found": [
+     {
+      "source_id": "DS03",
+      "text": "天下同归而殊途"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "藏往",
+  "篇": "C05",
+  "所名": "带着历史（kept history）",
+  "锚": "Law.withHistory",
+  "引": "知以藏往@DS02",
+  "式": "复",
+  "注": "—；「積」（量之累积）不入",
+  "anchors": [
+   "Becoming.Law.withHistory"
+  ],
+  "quotes": [
+   {
+    "phrase": "知以藏往",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "知以藏往"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "剝",
+  "篇": "C05",
+  "所名": "侵蚀（undermining）",
+  "锚": "Web.UnderminingOn",
+  "引": "—",
+  "式": "古",
+  "注": "—；经文之判（凶、蔑贞）、剥削之社会义、「自下而剝」之次第不入",
+  "anchors": [
+   "Becoming.Web.UnderminingOn"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "生生",
+  "篇": "C06",
+  "所名": "生生：整体中的生及其继续生成（D1）；方向以扩大比较",
+  "锚": "Web.Widens",
+  "引": "生生之谓易@DS02",
+  "式": "复",
+  "注": "不带老子五十章「生生之厚」之执生义；不是谓词 living",
+  "anchors": [
+   "Becoming.Web.Widens"
+  ],
+  "quotes": [
+   {
+    "phrase": "生生之谓易",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "生生之谓易"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "生",
+  "篇": "C06",
+  "所名": "生成（generation），与退化相对",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "生只指生成；生起另名「作」",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "成生",
+  "篇": "C06",
+  "所名": "生成的（generative）：部分扩大之处",
+  "锚": "Web.Widens",
+  "引": "—",
+  "式": "新",
+  "注": "Ren 之词",
+  "anchors": [
+   "Becoming.Web.Widens"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "絶生",
+  "篇": "C06",
+  "所名": "退化的（degenerative）",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "Ren 之词；绝生不含永久；不可再得者名成闭",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "所容",
+  "篇": "C06",
+  "所名": "生成的空间（the generative space）",
+  "锚": "—",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "賅",
+  "篇": "C06",
+  "所名": "包含（includes）",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "冻结语料只见「該」（天下「不該不徧」）",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "有所長",
+  "篇": "C06",
+  "所名": "超出（exceeds）",
+  "锚": "—",
+  "引": "—",
+  "式": "复",
+  "注": "长不含优劣，只指在某步容许对方所不容许者",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "廣",
+  "篇": "C06",
+  "所名": "扩大（widens）",
+  "锚": "Web.Widens",
+  "引": "—",
+  "式": "古",
+  "注": "广只名扩大序，不带「更好」；排序另名",
+  "anchors": [
+   "Becoming.Web.Widens"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "狹",
+  "篇": "C06",
+  "所名": "缩小（narrows）",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "相賅",
+  "篇": "C06",
+  "所名": "保持（keeps：互相包含）",
+  "锚": "Web.Keeps",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Web.Keeps"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "偏去",
+  "篇": "C06",
+  "所名": "扣留一个部分（a part withheld）",
+  "锚": "—",
+  "引": "損，偏去也",
+  "式": "复",
+  "注": "墨经",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "損，偏去也",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "損，偏去也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "餘地",
+  "篇": "C06",
+  "所名": "余量（margin）",
+  "锚": "Flow.Balances.supported_iff_within_margin",
+  "引": "恢恢乎其於遊刃必有餘地矣",
+  "式": "复",
+  "注": "余只在复词中：其余、余地、所失各不相借",
+  "anchors": [
+   "Becoming.Flow.Balances.supported_iff_within_margin"
+  ],
+  "quotes": [
+   {
+    "phrase": "恢恢乎其於遊刃必有餘地矣",
+    "found": [
+     {
+      "source_id": "ZH1-S03",
+      "text": "恢恢乎其於遊刃必有餘地矣"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "闔",
+  "篇": "C06",
+  "所名": "闭合（closing）",
+  "锚": "Flow.Balances.supported_of_net_give；Flow.Balances.closes_nothing",
+  "引": "一阖一辟谓之变@DS02",
+  "式": "古",
+  "注": "一部分之阖需净汲取；引文所说是时间上的交替，作对照",
+  "anchors": [
+   "Becoming.Flow.Balances.supported_of_net_give",
+   "Becoming.Flow.Balances.closes_nothing"
+  ],
+  "quotes": [
+   {
+    "phrase": "一阖一辟谓之变",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "一阖一辟谓之变"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "闢",
+  "篇": "C06",
+  "所名": "开启（opening）",
+  "锚": "Flow.Balances.admits_of_net_draw；Flow.Balances.opens_nothing",
+  "引": "一阖一辟谓之变@DS02",
+  "式": "古",
+  "注": "一部分之辟需净给与；正文保留「闢」字形，免与「辟」（譬）相撞",
+  "anchors": [
+   "Becoming.Flow.Balances.admits_of_net_draw",
+   "Becoming.Flow.Balances.opens_nothing"
+  ],
+  "quotes": [
+   {
+    "phrase": "一阖一辟谓之变",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "一阖一辟谓之变"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "日新",
+  "篇": "C06",
+  "所名": "新（novelty）：从某步起每一构形皆异于先前",
+  "锚": "unheld_of_new；Law.withHistory_new",
+  "引": "日新之谓盛德@DS02",
+  "式": "复",
+  "注": "只名新；不带朱熹「自新」之德性义",
+  "anchors": [
+   "Becoming.unheld_of_new",
+   "Becoming.Law.withHistory_new"
+  ],
+  "quotes": [
+   {
+    "phrase": "日新之谓盛德",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "日新之谓盛德"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "益",
+  "篇": "C06",
+  "所名": "增益（gain）：一族跨一步之存量上升",
+  "锚": "Gain",
+  "引": "—",
+  "式": "古",
+  "注": "与「损」成对；增之、有助之义不入",
+  "anchors": [
+   "Becoming.Gain"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "閉",
+  "篇": "C07",
+  "所名": "闭：律从不离开的区域（吸收区域；对过程是不变量）",
+  "锚": "Law.Absorbing；Law.drawn_iff_not_returns",
+  "引": "—",
+  "式": "古",
+  "注": "Ren 之词；确定之法下与「常」相同（Law.absorbing_iff_invariant）；不带负价值",
+  "anchors": [
+   "Becoming.Law.Absorbing",
+   "Becoming.Law.drawn_iff_not_returns"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "成閉",
+  "篇": "C07",
+  "所名": "成闭（锁定，lock-in）",
+  "锚": "Law.DrawnInto.never_back；Run.locked_in",
+  "引": "—",
+  "式": "新",
+  "注": "Ren 之词",
+  "anchors": [
+   "Becoming.Law.DrawnInto.never_back",
+   "Becoming.Run.locked_in"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "護閉",
+  "篇": "C07",
+  "所名": "护闭（关节处的保持，keeping）",
+  "锚": "Becoming.Junctures",
+  "引": "—",
+  "式": "新",
+  "注": "Ren 之词；D52",
+  "anchors": [
+   "Becoming.Junctures"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "機",
+  "篇": "C07",
+  "所名": "机（关节，juncture）",
+  "锚": "Becoming.Junctures",
+  "引": "節如發機",
+  "式": "古",
+  "注": "D52；「節如發機」只出发机不可收之义，关节之读出于 D52；至乐「萬物皆出於機」（本原）、大学「其機如此」（发动之枢）不入",
+  "anchors": [
+   "Becoming.Junctures"
+  ],
+  "quotes": [
+   {
+    "phrase": "節如發機",
+    "found": [
+     {
+      "source_id": "BI1-S-SZ",
+      "text": "節如發機"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "復歸",
+  "篇": "C06",
+  "所名": "扰而复归（perturbation reabsorbed）",
+  "锚": "Law.perturbation_reabsorbed",
+  "引": "夫物芸芸，各復歸其根",
+  "式": "复",
+  "注": "取代「稳」「元闭」二名的结构义；稳、元闭只留在对照表中；不带回到先在之本或未分之初（老子二十八章、王弼十六章注）；老子十六章言各返其根，未言扰动，作对照；只名「只扰状态者被吸回」，ClosedCapture 另名",
+  "anchors": [
+   "Becoming.Law.perturbation_reabsorbed"
+  ],
+  "quotes": [
+   {
+    "phrase": "夫物芸芸，各復歸其根",
+    "found": [
+     {
+      "source_id": "DS01",
+      "text": "夫物芸芸，各复归其根"
+     },
+     {
+      "source_id": "LC-SZ-ALL",
+      "text": "夫物芸芸各復歸其根"
+     },
+     {
+      "source_id": "YD-LAO-BASE",
+      "text": "夫物芸芸，各复归其根"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "常",
+  "篇": "C07",
+  "所名": "不变量（invariant）",
+  "锚": "Invariant",
+  "引": "復命曰常",
+  "式": "古",
+  "注": "与「久」分开",
+  "anchors": [
+   "Becoming.Invariant"
+  ],
+  "quotes": [
+   {
+    "phrase": "復命曰常",
+    "found": [
+     {
+      "source_id": "DS01",
+      "text": "复命曰常"
+     },
+     {
+      "source_id": "LC-SZ-ALL",
+      "text": "復命曰常"
+     },
+     {
+      "source_id": "YD-LAO-BASE",
+      "text": "复命曰常"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "同",
+  "篇": "C07",
+  "所名": "相同／互模拟（alike, bisimulation）",
+  "锚": "Alike",
+  "引": "同，異而俱於之一也",
+  "式": "古",
+  "注": "墨经",
+  "anchors": [
+   "Becoming.Alike"
+  ],
+  "quotes": [
+   {
+    "phrase": "同，異而俱於之一也",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "同，異而俱於之一也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "類",
+  "篇": "C07",
+  "所名": "归并（lumping）：读法及其所分之类",
+  "锚": "Learning.Lumped",
+  "引": "以類取，以類予",
+  "式": "古",
+  "注": "墨辩；Learning.Lumped π g 读作「随类而同」",
+  "anchors": [
+   "Becoming.Learning.Lumped"
+  ],
+  "quotes": [
+   {
+    "phrase": "以類取，以類予",
+    "found": [
+     {
+      "source_id": "MI1-S-XQ",
+      "text": "以類取，以類予"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "推類",
+  "篇": "C07",
+  "所名": "经由归并而推广（generalization through lumping）",
+  "锚": "Learning.determines_lumped_iff",
+  "引": "謀而不得，則以往知來",
+  "式": "复",
+  "注": "合「推」于此；墨子非攻中所引古语之结构是经归并之迁移",
+  "anchors": [
+   "Becoming.Learning.determines_lumped_iff"
+  ],
+  "quotes": [
+   {
+    "phrase": "謀而不得，則以往知來",
+    "found": [
+     {
+      "source_id": "MO1-S-C18",
+      "text": "謀而不得，則以往知來"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "理",
+  "篇": "C07",
+  "所名": "理：对结构与变化之律的建模",
+  "锚": "Learning.goAlike_iff_lumped；carries_law_iff",
+  "引": "理者，成物之文也",
+  "式": "古",
+  "注": "已采；凡理皆类，类不皆理；不带「理先气后」；先秦给「分」（解老），魏晋注给「变化」（韩康伯「盡聚散之理」）；携带律是理论另加的条件",
+  "anchors": [
+   "Becoming.Learning.goAlike_iff_lumped",
+   "Becoming.carries_law_iff"
+  ],
+  "quotes": [
+   {
+    "phrase": "理者，成物之文也",
+    "found": [
+     {
+      "source_id": "CV1-S-JL",
+      "text": "理者，成物之文也"
+     },
+     {
+      "source_id": "FA1-S-H20",
+      "text": "理者，成物之文也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "法",
+  "篇": "C01",
+  "所名": "律（law）：确定的过程，从它所支配的历史读出",
+  "锚": "Law",
+  "引": "法，所若而然也／有物有則",
+  "式": "古",
+  "注": "墨经之法是所若而然之标准；理论以法名律（确定的过程，从其所支配之历史读出）是 AI 之延伸；孟子引诗「有物有則」为物与则不二之对照；不带法家之法令、佛法义",
+  "anchors": [
+   "Becoming.Law"
+  ],
+  "quotes": [
+   {
+    "phrase": "法，所若而然也",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "法，所若而然也"
+     }
+    ]
+   },
+   {
+    "phrase": "有物有則",
+    "found": [
+     {
+      "source_id": "RU2-S-MZ",
+      "text": "有物有则"
+     },
+     {
+      "source_id": "RU2-S-V3Q01",
+      "text": "有物有則"
+     },
+     {
+      "source_id": "IN2-S01",
+      "text": "有物有則"
+     },
+     {
+      "source_id": "IN2-S02",
+      "text": "有物有則"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "自然之法",
+  "篇": "C01",
+  "所名": "所显之律（law shown）：一段历史是其运行的最小之律",
+  "锚": "Shown；shown_le_iff",
+  "引": "道法自然",
+  "式": "复",
+  "注": "取王弼「在方而法方，在圆而法圆」：法随所然；不带自然作本原",
+  "anchors": [
+   "Becoming.Shown",
+   "Becoming.shown_le_iff"
+  ],
+  "quotes": [
+   {
+    "phrase": "道法自然",
+    "found": [
+     {
+      "source_id": "DS01",
+      "text": "道法自然"
+     },
+     {
+      "source_id": "YD-LAO-BASE",
+      "text": "道法自然"
+     },
+     {
+      "source_id": "LC-HS-UP",
+      "text": "道法自然"
+     },
+     {
+      "source_id": "LC-SZ-ALL",
+      "text": "道法自然"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "勢",
+  "篇": "C07",
+  "所名": "吸引域（basin）",
+  "锚": "Hexagram.qian_basin；Hexagram.cycle_basin",
+  "引": "如轉圓石於千仞之山者，勢也",
+  "式": "古",
+  "注": "只取盆地义；兵家位势作条目；只在互卦之法上有证；一般之势分划是缺口；位势、蓄势、阵势、外加之境不入",
+  "anchors": [
+   "Becoming.Hexagram.qian_basin",
+   "Becoming.Hexagram.cycle_basin"
+  ],
+  "quotes": [
+   {
+    "phrase": "如轉圓石於千仞之山者，勢也",
+    "found": [
+     {
+      "source_id": "BI1-S-SZ",
+      "text": "如轉圓石於千仞之山者，勢也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "入",
+  "篇": "C07",
+  "所名": "被吸入（drawn into）",
+  "锚": "Law.DrawnInto",
+  "引": "—",
+  "式": "古",
+  "注": "或入、必入以「或」「必」组合",
+  "anchors": [
+   "Becoming.Law.DrawnInto"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "所歸",
+  "篇": "C07",
+  "所名": "吸引子（attractor）",
+  "锚": "Law.drawnInto_returning",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Law.drawnInto_returning"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "並行不悖",
+  "篇": "C07",
+  "所名": "诸语境之拼合：恰在相交处一致时拼合",
+  "锚": "Contextual.glues_iff_agree",
+  "引": "道並行而不相悖",
+  "式": "复",
+  "注": "中庸；Law.Commutes（律与对称交换）不借此名，平语写之",
+  "anchors": [
+   "Becoming.Contextual.glues_iff_agree"
+  ],
+  "quotes": [
+   {
+    "phrase": "道並行而不相悖",
+    "found": [
+     {
+      "source_id": "RU1-S-ZY",
+      "text": "道並行而不相悖"
+     },
+     {
+      "source_id": "IN2-S03",
+      "text": "道並行而不相悖"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "未定",
+  "篇": "C07",
+  "所名": "未定（undecided）",
+  "锚": "—",
+  "引": "—",
+  "式": "复",
+  "注": "未只作虚词",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "奇偶",
+  "篇": "C07",
+  "所名": "奇偶（parity）",
+  "锚": "—",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "矛盾",
+  "篇": "C07",
+  "所名": "奇偶系统中的矛盾",
+  "锚": "—",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "識",
+  "篇": "C08",
+  "所名": "识：一个形成自身的进一步历程，经由其耦合所作的归并而分解（D45）",
+  "锚": "Web.SelectsThrough",
+  "引": "然今天下之情僞，未可得而識也",
+  "式": "古",
+  "注": "已采；去「登记」义；记取义（多见而识之）归「往」；识是形成自身之历程经其耦合所作之归并而分解（D45）；与缘感而择同据 SelectsThrough 之归并而所名不同",
+  "anchors": [
+   "Becoming.Web.SelectsThrough"
+  ],
+  "quotes": [
+   {
+    "phrase": "然今天下之情僞，未可得而識也",
+    "found": [
+     {
+      "source_id": "MO1-S-C36",
+      "text": "然今天下之情僞，未可得而識也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "往",
+  "篇": "C08",
+  "所名": "记录、历程之前段（record, course prefix）",
+  "锚": "Learning.prefixOf；Run.Fixes",
+  "引": "彰往而察来@DS03",
+  "式": "古",
+  "注": "往只指过去之历程；「过此以往」（此后）与「不保其往」二读不入；带着历史名「藏往」",
+  "anchors": [
+   "Becoming.Learning.prefixOf",
+   "Becoming.Run.Fixes"
+  ],
+  "quotes": [
+   {
+    "phrase": "彰往而察来",
+    "found": [
+     {
+      "source_id": "DS03",
+      "text": "彰往而察来"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "數往",
+  "篇": "C08",
+  "所名": "回读（retrodiction）",
+  "锚": "—",
+  "引": "数往者顺，知来者逆@DS04",
+  "式": "复",
+  "注": "—",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "数往者顺，知来者逆",
+    "found": [
+     {
+      "source_id": "DS04",
+      "text": "数往者顺，知来者逆"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "驗",
+  "篇": "C08",
+  "所名": "检验（testing）",
+  "锚": "Web.Excludes",
+  "引": "結智者事發而驗",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Web.Excludes"
+  ],
+  "quotes": [
+   {
+    "phrase": "結智者事發而驗",
+    "found": [
+     {
+      "source_id": "FA1-S-H48",
+      "text": "結智者事發而驗"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "徵",
+  "篇": "C08",
+  "所名": "验证（verification）",
+  "锚": "Verification",
+  "引": "足，則吾能徵之矣",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Verification"
+  ],
+  "quotes": [
+   {
+    "phrase": "足，則吾能徵之矣",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "足，則吾能徵之矣"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "試",
+  "篇": "C08",
+  "所名": "实验（experiment）",
+  "锚": "Experiment",
+  "引": "其有所試矣",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Experiment"
+  ],
+  "quotes": [
+   {
+    "phrase": "其有所試矣",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "其有所試矣"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "相若",
+  "篇": "C08",
+  "所名": "对照（control）",
+  "锚": "FactorsThrough；Run.generalizes",
+  "引": "權重相若也",
+  "式": "复",
+  "注": "相若是所给之控制，不是被证之无别（同）；Confound.confounded 为其边界",
+  "anchors": [
+   "Becoming.FactorsThrough",
+   "Becoming.Run.generalizes"
+  ],
+  "quotes": [
+   {
+    "phrase": "權重相若也",
+    "found": [
+     {
+      "source_id": "MI1-S-SX",
+      "text": "權重相若也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "察",
+  "篇": "C08",
+  "所名": "敏感性：读有限多条件之律之最小耦合（sensitivity）",
+  "锚": "Sensitivity",
+  "引": "—",
+  "式": "古",
+  "注": "察看、苛察、心之察（分辨）、监察不入",
+  "anchors": [
+   "Becoming.Sensitivity"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "可知",
+  "篇": "C08",
+  "所名": "可学（learnable）",
+  "锚": "Learnable",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Learnable"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "涯",
+  "篇": "C17",
+  "所名": "视界（horizon）",
+  "锚": "Diagonal.Unfolds.unheld；Learning.no_prefix_fixes_next",
+  "引": "吾生也有涯，而知也无涯",
+  "式": "古",
+  "注": "prefix_does_not_decide 是例",
+  "anchors": [
+   "Becoming.Diagonal.Unfolds.unheld",
+   "Becoming.Learning.no_prefix_fixes_next"
+  ],
+  "quotes": [
+   {
+    "phrase": "吾生也有涯，而知也无涯",
+    "found": [
+     {
+      "source_id": "ZH1-S03",
+      "text": "吾生也有涯，而知也无涯"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "習",
+  "篇": "C08",
+  "所名": "训练（training）",
+  "锚": "Learning.Training.fit_right_iff",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Learning.Training.fit_right_iff"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "過則改",
+  "篇": "C08",
+  "所名": "排除法外推（extrapolation by elimination）",
+  "锚": "Learning.byElimination",
+  "引": "古之君子，过则改之",
+  "式": "复",
+  "注": "过失之道德义不入",
+  "anchors": [
+   "Becoming.Learning.byElimination"
+  ],
+  "quotes": [
+   {
+    "phrase": "古之君子，过则改之",
+    "found": [
+     {
+      "source_id": "RU2-S-MZ",
+      "text": "古之君子，过则改之"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "符",
+  "篇": "C08",
+  "所名": "相符／不符（accords／misses）",
+  "锚": "Learning.Accords；Learning.Misses",
+  "引": "—",
+  "式": "古",
+  "注": "相符：在每一出值处无失误（不出值亦相符）；韩非「四徵者符」不作此名之引",
+  "anchors": [
+   "Becoming.Learning.Accords",
+   "Becoming.Learning.Misses"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "終而復始",
+  "篇": "C08",
+  "所名": "套索程（lasso）",
+  "锚": "Learning.Lasso",
+  "引": "終而復始，日月是也",
+  "式": "复",
+  "注": "套索是历程之性质；环是耦合之回路；复是构形之返回",
+  "anchors": [
+   "Becoming.Learning.Lasso"
+  ],
+  "quotes": [
+   {
+    "phrase": "終而復始，日月是也",
+    "found": [
+     {
+      "source_id": "BI1-S-SZ",
+      "text": "終而復始，日月是也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "參驗",
+  "篇": "C08",
+  "所名": "以可错之见证交叉核验",
+  "锚": "WitnessRefinement.complete_diagnosability_iff_cross_separation",
+  "引": "無參驗而必之者，愚也",
+  "式": "复",
+  "注": "荀子之「參」训三，不入",
+  "anchors": [
+   "Becoming.WitnessRefinement.complete_diagnosability_iff_cross_separation"
+  ],
+  "quotes": [
+   {
+    "phrase": "無參驗而必之者，愚也",
+    "found": [
+     {
+      "source_id": "FA1-S-H50",
+      "text": "無參驗而必之者，愚也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "斷",
+  "篇": "C08",
+  "所名": "判断过程（judgment process）",
+  "锚": "judgeProcess",
+  "引": "—",
+  "式": "古",
+  "注": "系辞「断其吉凶」之评价义不入",
+  "anchors": [
+   "Becoming.judgeProcess"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "衢",
+  "篇": "C08",
+  "所名": "运行分开（runs part）",
+  "锚": "Parting.PartAt",
+  "引": "此亦荣辱、安危、存亡之衢已",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Parting.PartAt"
+  ],
+  "quotes": [
+   {
+    "phrase": "此亦荣辱、安危、存亡之衢已",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ11",
+      "text": "此亦荣辱、安危、存亡之衢已"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "大率",
+  "篇": "C08",
+  "所名": "典型（typicality by counting）",
+  "锚": "Typicality",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Typicality"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "名",
+  "篇": "C09",
+  "所名": "名（name）",
+  "锚": "—",
+  "引": "名：達、類、私",
+  "式": "古",
+  "注": "墨经",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "名：達、類、私",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "名，達、類、私"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "私名",
+  "篇": "C09",
+  "所名": "一步之内一一对应的名",
+  "锚": "—",
+  "引": "名：達、類、私",
+  "式": "复",
+  "注": "—；「私」之偏私义先秦已有，不入",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "名：達、類、私",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "名，達、類、私"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "達名",
+  "篇": "C09",
+  "所名": "什么都不分开的读法（常值归并）",
+  "锚": "—",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "名無固宜",
+  "篇": "C09",
+  "所名": "标签不携带关系",
+  "锚": "—",
+  "引": "名无固宜",
+  "式": "复",
+  "注": "荀子正名",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "名无固宜",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ22",
+      "text": "名无固宜"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "約定俗成",
+  "篇": "C09",
+  "所名": "共享码（shared codes）",
+  "锚": "SharedCodes",
+  "引": "约定俗成谓之宜",
+  "式": "复",
+  "注": "已采；把约定俗成读作听的次序是 AI 之结构读法；荀子中约定从属于王者制名",
+  "anchors": [
+   "Becoming.SharedCodes"
+  ],
+  "quotes": [
+   {
+    "phrase": "约定俗成谓之宜",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ22",
+      "text": "约定俗成谓之宜"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "制名",
+  "篇": "C09",
+  "所名": "外加码（imposed code）",
+  "锚": "SharedCodes.run_from_imposition；SharedCodes.outside_returns",
+  "引": "—",
+  "式": "复",
+  "注": "一个码被加于诸形成者；不带王者之中心，不含造新名",
+  "anchors": [
+   "Becoming.SharedCodes.run_from_imposition",
+   "Becoming.SharedCodes.outside_returns"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "正名",
+  "篇": "C09",
+  "所名": "有意义的描述",
+  "锚": "—",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "貫",
+  "篇": "C09",
+  "所名": "跨情境成立（cross-situational standing）",
+  "锚": "CrossSituational.stands_iff",
+  "引": "吾道一以貫之",
+  "式": "古",
+  "注": "只取「通贯诸情境」之结构；「吾道一以贯之」之单一原则中心不入",
+  "anchors": [
+   "Becoming.CrossSituational.stands_iff"
+  ],
+  "quotes": [
+   {
+    "phrase": "吾道一以貫之",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "吾道一以貫之"
+     },
+     {
+      "source_id": "RU2-S-V3Q01",
+      "text": "吾道一以貫之"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "知名",
+  "篇": "C09",
+  "所名": "码的获得",
+  "锚": "—",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "感",
+  "篇": "C10",
+  "所名": "耦合（coupling；couples into）",
+  "锚": "Web.CoupledInto",
+  "引": "天地感而萬物化生",
+  "式": "古",
+  "注": "感是关系谓词；方向（条件耦合入形成）是使用者之间的约定；荀子性恶「感而自然」为受动义之佐证",
+  "anchors": [
+   "Becoming.Web.CoupledInto"
+  ],
+  "quotes": [
+   {
+    "phrase": "天地感而萬物化生",
+    "found": [
+     {
+      "source_id": "V3D02",
+      "text": "天地感而萬物化生"
+     },
+     {
+      "source_id": "YD-HX01",
+      "text": "天地感而萬物化生"
+     },
+     {
+      "source_id": "YD-JP31",
+      "text": "天地感而萬物化生"
+     },
+     {
+      "source_id": "YD-CY",
+      "text": "天地感而萬物化生"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "應",
+  "篇": "C10",
+  "所名": "回应（responds to）",
+  "锚": "ExchangeLaw.RespondsTo",
+  "引": "—",
+  "式": "古",
+  "注": "单用只作回应；爻之关系作「相應」",
+  "anchors": [
+   "Becoming.ExchangeLaw.RespondsTo"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "資域",
+  "篇": "C10",
+  "所名": "供给闭包（feeding closure）",
+  "锚": "Flow.WithinFeeding",
+  "引": "财非其类以养其类",
+  "式": "新",
+  "注": "闭包统一以「域」：资域、扰域、及域、感域、群域",
+  "anchors": [
+   "Becoming.Flow.WithinFeeding"
+  ],
+  "quotes": [
+   {
+    "phrase": "财非其类以养其类",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ17",
+      "text": "财非其类以养其类"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "擾域",
+  "篇": "C10",
+  "所名": "影响闭包（influence closure）",
+  "锚": "Flow.WithinInfluence",
+  "引": "知風之自",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.WithinInfluence"
+  ],
+  "quotes": [
+   {
+    "phrase": "知風之自",
+    "found": [
+     {
+      "source_id": "RU1-S-ZY",
+      "text": "知風之自"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "及域",
+  "篇": "C10",
+  "所名": "所及闭包（reach closure）",
+  "锚": "Flow.WithinReach",
+  "引": "知遠之近",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.WithinReach"
+  ],
+  "quotes": [
+   {
+    "phrase": "知遠之近",
+    "found": [
+     {
+      "source_id": "RU1-S-ZY",
+      "text": "知遠之近"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "感域",
+  "篇": "C10",
+  "所名": "耦合闭包（coupling closure）",
+  "锚": "Flow.WithinCoupling",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.WithinCoupling"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "群域",
+  "篇": "C10",
+  "所名": "系统闭包（system closure）",
+  "锚": "Flow.WithinSystem",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.WithinSystem"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "所及",
+  "篇": "C10",
+  "所名": "部分所及（what a part reaches）",
+  "锚": "—",
+  "引": "—",
+  "式": "复",
+  "注": "单步之所及",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "擇",
+  "篇": "C10",
+  "所名": "选择（selection）：关于水平历史的任何主张",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "緣感而擇",
+  "篇": "C10",
+  "所名": "经耦合的选择（selection through couplings）",
+  "锚": "Web.SelectsThrough",
+  "引": "—",
+  "式": "新",
+  "注": "Web.selects_alike_iff 是其定义等价（定义律）",
+  "anchors": [
+   "Becoming.Web.SelectsThrough"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "及而不感",
+  "篇": "C10",
+  "所名": "选择的缺口：所及闭包中不在耦合闭包内者",
+  "锚": "SelectionGap；Flow.act_unselected；Flow.consequence_unselected",
+  "引": "—",
+  "式": "新",
+  "注": "取代「蔽」作界限之名",
+  "anchors": [
+   "Becoming.SelectionGap",
+   "Becoming.Flow.act_unselected",
+   "Becoming.Flow.consequence_unselected"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "無明",
+  "篇": "C10",
+  "所名": "无明：锁定在不能停息之目标上的寻求",
+  "锚": "Law.aboveAll_never_rests；more_needs_open；Law.rests_iff",
+  "引": "—",
+  "式": "复",
+  "注": "已采；不同于十二因缘之首支；rests_iff 是其边界",
+  "anchors": [
+   "Becoming.Law.aboveAll_never_rests",
+   "Becoming.more_needs_open",
+   "Becoming.Law.rests_iff"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "明",
+  "篇": "C10",
+  "所名": "明：耦合接上一个及于支持所不标记者的选择",
+  "锚": "Web.observed_raise_couples",
+  "引": "浸潤之譖，膚受之愬，不行焉，可謂明也已矣",
+  "式": "古",
+  "注": "已采；「知常曰明」对应「常」，不作明之引",
+  "anchors": [
+   "Becoming.Web.observed_raise_couples"
+  ],
+  "quotes": [
+   {
+    "phrase": "浸潤之譖，膚受之愬，不行焉，可謂明也已矣",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "浸潤之譖，膚受之愬，不行焉，可謂明也已矣"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "兼感",
+  "篇": "C10",
+  "所名": "合用耦合（pooled coupling）",
+  "锚": "SelectionPool",
+  "引": "—",
+  "式": "新",
+  "注": "兼取「合为整体」义",
+  "anchors": [
+   "Becoming.SelectionPool"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "劫",
+  "篇": "C10",
+  "所名": "经规则的劫持（capture through the rule）：规则从它所选者的份额读出",
+  "锚": "RuleCapture",
+  "引": "凡劫有三",
+  "式": "古",
+  "注": "君臣框架不入",
+  "anchors": [
+   "Becoming.RuleCapture"
+  ],
+  "quotes": [
+   {
+    "phrase": "凡劫有三",
+    "found": [
+     {
+      "source_id": "FA1-S-H16",
+      "text": "凡劫有三"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "與時轉",
+  "篇": "C10",
+  "所名": "规则改变之速（pace）",
+  "锚": "Pace；Pace.pace_law",
+  "引": "法與時轉則治",
+  "式": "复",
+  "注": "韩非子心度",
+  "anchors": [
+   "Becoming.Pace",
+   "Becoming.Pace.pace_law"
+  ],
+  "quotes": [
+   {
+    "phrase": "法與時轉則治",
+    "found": [
+     {
+      "source_id": "FA1-S-H54",
+      "text": "法與時轉則治"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "不行不至",
+  "篇": "C15",
+  "所名": "请求的改变须是可执行的序列",
+  "锚": "Assurance.completes_iff_runs；Assurance.runs_of_completes",
+  "引": "道雖邇，不行不至",
+  "式": "复",
+  "注": "合「法不自行」于此",
+  "anchors": [
+   "Becoming.Assurance.completes_iff_runs",
+   "Becoming.Assurance.runs_of_completes"
+  ],
+  "quotes": [
+   {
+    "phrase": "道雖邇，不行不至",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ02",
+      "text": "道雖邇，不行不至"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "環",
+  "篇": "C11",
+  "所名": "回路（loop）",
+  "锚": "OnLoop",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.OnLoop"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "成環",
+  "篇": "C11",
+  "所名": "成环（closing）",
+  "锚": "Closing",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Closing"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "還",
+  "篇": "C11",
+  "所名": "反馈（feedback）",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "回馈义始见于注层（河上公、苏辙）；先秦对应句曾子「出乎尔者，反乎尔者也」",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "報",
+  "篇": "C11",
+  "所名": "环返映射：各环节回应复合后交回起点之量",
+  "锚": "LoopReturn.returnMap",
+  "引": "—",
+  "式": "古",
+  "注": "单环节之回应用「应」；报答、交易义不入",
+  "anchors": [
+   "Becoming.LoopReturn.returnMap"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "滋",
+  "篇": "C11",
+  "所名": "失控（runaway through a loop）",
+  "锚": "LoopReturn.runs_away；LoopReturn.runs_away_unbounded",
+  "引": "—",
+  "式": "古",
+  "注": "循环失控义是约定，滋本义为滋长；polynomial_iff_no_loop 之前提照记",
+  "anchors": [
+   "Becoming.LoopReturn.runs_away",
+   "Becoming.LoopReturn.runs_away_unbounded"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "未兆",
+  "篇": "C11",
+  "所名": "断裂之前未被读到（the break not read before it）",
+  "锚": "Web.break_not_bounded",
+  "引": "其未兆易謀",
+  "式": "复",
+  "注": "—；老子六十四章只给「未兆」之词义（尚无征兆），其句之结构是机之前护闭，作对照",
+  "anchors": [
+   "Becoming.Web.break_not_bounded"
+  ],
+  "quotes": [
+   {
+    "phrase": "其未兆易謀",
+    "found": [
+     {
+      "source_id": "FA1-S-H21",
+      "text": "其未兆易謀"
+     },
+     {
+      "source_id": "LC-SZ-ALL",
+      "text": "其未兆易謀"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "窮",
+  "篇": "C11",
+  "所名": "断点（the break）：存量降到阈下，律由不读转为读",
+  "锚": "ExchangeLaw.ReadsBelow",
+  "引": "—",
+  "式": "古",
+  "注": "只名降到阈下之断裂；系辞之穷（不能再续）、序卦之窮（终尽）、墨经空间之穷不入",
+  "anchors": [
+   "Becoming.ExchangeLaw.ReadsBelow"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "頻數",
+  "篇": "C11",
+  "所名": "耦合的频度（frequency）",
+  "锚": "Frequency",
+  "引": "—",
+  "式": "复",
+  "注": "约定，低置信；古之頻數多作副词",
+  "anchors": [
+   "Becoming.Frequency"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "不已",
+  "篇": "C11",
+  "所名": "复现（a coupling recurs）",
+  "锚": "CouplingRecurs",
+  "引": "惟天之命，於穆不已",
+  "式": "复",
+  "注": "已为止息，不已即不止而复现",
+  "anchors": [
+   "Becoming.CouplingRecurs"
+  ],
+  "quotes": [
+   {
+    "phrase": "惟天之命，於穆不已",
+    "found": [
+     {
+      "source_id": "RU1-S-ZY",
+      "text": "惟天之命，於穆不已"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "所失",
+  "篇": "C11",
+  "所名": "截断于某阶所未计入之量",
+  "锚": "Remainder",
+  "引": "—",
+  "式": "复",
+  "注": "取代「余」",
+  "anchors": [
+   "Becoming.Remainder"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "應倍",
+  "篇": "C11",
+  "所名": "耦合强度（coupling strength）",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "中和",
+  "篇": "C11",
+  "所名": "中和（two-sided regulation）",
+  "锚": "Regulation",
+  "引": "致中和@RU1-S-ZY",
+  "式": "复",
+  "注": "已采",
+  "anchors": [
+   "Becoming.Regulation"
+  ],
+  "quotes": [
+   {
+    "phrase": "致中和",
+    "found": [
+     {
+      "source_id": "RU1-S-ZY",
+      "text": "致中和"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "中節",
+  "篇": "C11",
+  "所名": "界恰为无过冲",
+  "锚": "Regulation",
+  "引": "發而皆中節謂之和@RU1-S-ZY",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Regulation"
+  ],
+  "quotes": [
+   {
+    "phrase": "發而皆中節謂之和",
+    "found": [
+     {
+      "source_id": "RU1-S-ZY",
+      "text": "發而皆中節，謂之和"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "過正",
+  "篇": "C11",
+  "所名": "过冲（overshoot）",
+  "锚": "Regulation",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Regulation"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "一偏",
+  "篇": "C11",
+  "所名": "只对一侧回应（单侧前提，不是调节）",
+  "锚": "Regulation",
+  "引": "—",
+  "式": "复",
+  "注": "Regulation.OneSided 是空流见证；有交换的单侧之律是缺口",
+  "anchors": [
+   "Becoming.Regulation"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "識不早",
+  "篇": "C11",
+  "所名": "迟读（reading late）",
+  "锚": "Regulation.no_narrower_band",
+  "引": "—",
+  "式": "新",
+  "注": "只名迟读（Regulation.ReadsLate）；未读入用「未兆」或平语",
+  "anchors": [
+   "Becoming.Regulation.no_narrower_band"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "不求備",
+  "篇": "C11",
+  "所名": "容差（tolerance）",
+  "锚": "Tolerance.tolerating；Tolerance.web_tolerating",
+  "引": "無求備於一人",
+  "式": "复",
+  "注": "只名 tol≥1；tol=0 即不念旧恶之律",
+  "anchors": [
+   "Becoming.Tolerance.tolerating",
+   "Becoming.Tolerance.web_tolerating"
+  ],
+  "quotes": [
+   {
+    "phrase": "無求備於一人",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "無求備於一人"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "有以待之",
+  "篇": "C11",
+  "所名": "从每个起点恢复（restoring from every start）",
+  "锚": "Tolerance.worst_start；Tolerance.restored_stays",
+  "引": "恃吾有以待之",
+  "式": "复",
+  "注": "此处「待」为应对义，与依存之「待」异义，只在此成语中",
+  "anchors": [
+   "Becoming.Tolerance.worst_start",
+   "Becoming.Tolerance.restored_stays"
+  ],
+  "quotes": [
+   {
+    "phrase": "恃吾有以待之",
+    "found": [
+     {
+      "source_id": "BI1-S-SZ",
+      "text": "恃吾有以待之"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "先施",
+  "篇": "C11",
+  "所名": "持续先给（每步都给，不看所等待者）",
+  "锚": "Withholding.Ring.givesFirst_restores；Tolerance.restores_iff；Tolerance.givesFirst_restores_of_answers",
+  "引": "所求乎朋友，先施之",
+  "式": "复",
+  "注": "中庸",
+  "anchors": [
+   "Becoming.Withholding.Ring.givesFirst_restores",
+   "Becoming.Tolerance.restores_iff",
+   "Becoming.Tolerance.givesFirst_restores_of_answers"
+  ],
+  "quotes": [
+   {
+    "phrase": "所求乎朋友，先施之",
+    "found": [
+     {
+      "source_id": "RU1-S-ZY",
+      "text": "所求乎朋友，先施之"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "所出",
+  "篇": "C12",
+  "所名": "世系（descent）",
+  "锚": "Flow.DescendsAt",
+  "引": "—",
+  "式": "复",
+  "注": "方向：「x 出于 g」，「x 之所出」＝给予者 g；后代写作「出于 g 者」；出随聚，不随作",
+  "anchors": [
+   "Becoming.Flow.DescendsAt"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "因",
+  "篇": "C12",
+  "所名": "承继（inheritance）",
+  "锚": "Web.InheritsAt",
+  "引": "殷因於夏禮，所損益可知也",
+  "式": "古",
+  "注": "与「损益」同出论语",
+  "anchors": [
+   "Becoming.Web.InheritsAt"
+  ],
+  "quotes": [
+   {
+    "phrase": "殷因於夏禮，所損益可知也",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "殷因於夏禮，所損益可知也"
+     },
+     {
+      "source_id": "RU2-S-XZ05",
+      "text": "殷因於夏禮，所損益可知也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "傳",
+  "篇": "C12",
+  "所名": "传递（transmission）",
+  "锚": "Flow.TransmitsWithin",
+  "引": "—",
+  "式": "古",
+  "注": "只取「因而所需有界」一构；古书「傳」多指递接，那一构名「火传」；层次标签之「传」是文献层",
+  "anchors": [
+   "Becoming.Flow.TransmitsWithin"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "損益",
+  "篇": "C12",
+  "所名": "变异（variation：升与降）",
+  "锚": "—",
+  "引": "殷因於夏禮，所損益可知也",
+  "式": "复",
+  "注": "后代之量对其亲代之量之升与降；与「损」「益」之单字（一族跨步之水平改动）构造不同；Price 等式名「损益之计」",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "殷因於夏禮，所損益可知也",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "殷因於夏禮，所損益可知也"
+     },
+     {
+      "source_id": "RU2-S-XZ05",
+      "text": "殷因於夏禮，所損益可知也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "傳擇",
+  "篇": "C12",
+  "所名": "经世系之演化：只有被支持者有后代；界内所传之所需在界内被选出",
+  "锚": "Evolution",
+  "引": "—",
+  "式": "新",
+  "注": "此「择」是经支持之有无而选出，不是缘感而择",
+  "anchors": [
+   "Becoming.Evolution"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "益之者",
+  "篇": "C12",
+  "所名": "净给予者（net giver）",
+  "锚": "Flow.NetGiver",
+  "引": "或益之",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.NetGiver"
+  ],
+  "quotes": [
+   {
+    "phrase": "或益之",
+    "found": [
+     {
+      "source_id": "DS13",
+      "text": "或益之"
+     },
+     {
+      "source_id": "DS14",
+      "text": "或益之"
+     },
+     {
+      "source_id": "YD-HX03",
+      "text": "或益之"
+     },
+     {
+      "source_id": "YD-JG41",
+      "text": "或益之"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "象",
+  "篇": "C12",
+  "所名": "模型：映射本身（r : K → V）",
+  "锚": "Relabel.selected_alike_iff",
+  "引": "象也者，像也",
+  "式": "古",
+  "注": "择之象是一个择所经之象",
+  "anchors": [
+   "Becoming.Relabel.selected_alike_iff"
+  ],
+  "quotes": [
+   {
+    "phrase": "象也者，像也",
+    "found": [
+     {
+      "source_id": "DS03",
+      "text": "象也者，像也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "取法",
+  "篇": "C12",
+  "所名": "经他者实际回应之学",
+  "锚": "ResponseLearning.learn_through_interface",
+  "引": "有王者起，必来取法",
+  "式": "复",
+  "注": "「大匠取法焉」（核对参照）与佛典执取义不入",
+  "anchors": [
+   "Becoming.ResponseLearning.learn_through_interface"
+  ],
+  "quotes": [
+   {
+    "phrase": "有王者起，必来取法",
+    "found": [
+     {
+      "source_id": "RU2-S-MZ",
+      "text": "有王者起，必来取法"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "群",
+  "篇": "C13",
+  "所名": "群（collective）",
+  "锚": "Flow.WithinSystem；Flow.system_whole_of_common",
+  "引": "群居而無分則爭",
+  "式": "古",
+  "注": "群域之群居加「分」之足迹之界",
+  "anchors": [
+   "Becoming.Flow.WithinSystem",
+   "Becoming.Flow.system_whole_of_common"
+  ],
+  "quotes": [
+   {
+    "phrase": "群居而無分則爭",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ10",
+      "text": "群居而無分則爭"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "分",
+  "篇": "C13",
+  "所名": "分（exclusive footprints）",
+  "锚": "JointPlan.supports_of_realizes",
+  "引": "群而無分則爭",
+  "式": "古",
+  "注": "分只给足迹",
+  "anchors": [
+   "Becoming.JointPlan.supports_of_realizes"
+  ],
+  "quotes": [
+   {
+    "phrase": "群而無分則爭",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ09",
+      "text": "群而无分则争"
+     },
+     {
+      "source_id": "RU2-S-XZ10",
+      "text": "群而無分則爭"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "分數",
+  "篇": "C13",
+  "所名": "联合计划（joint plan）",
+  "锚": "JointPlans",
+  "引": "凡治衆如治寡，分數是也",
+  "式": "复",
+  "注": "孙子",
+  "anchors": [
+   "Becoming.JointPlans"
+  ],
+  "quotes": [
+   {
+    "phrase": "凡治衆如治寡，分數是也",
+    "found": [
+     {
+      "source_id": "BI1-S-SZ",
+      "text": "凡治衆如治寡，分數是也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "出入相揜",
+  "篇": "C13",
+  "所名": "在一个条件上，一步之所取不多于所给",
+  "锚": "Flow.WithinJoint；Flow.joint_keeps",
+  "引": "—",
+  "式": "复",
+  "注": "荀子原文在等级比例框架中，不入",
+  "anchors": [
+   "Becoming.Flow.WithinJoint",
+   "Becoming.Flow.joint_keeps"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "爭",
+  "篇": "C13",
+  "所名": "在共享条件处的竞逐（race at a shared condition）",
+  "锚": "Flow.joint_excess_ends；Flow.race_ends_greatest",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.joint_excess_ends",
+   "Becoming.Flow.race_ends_greatest"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "稱",
+  "篇": "C13",
+  "所名": "相对位置（relative position）",
+  "锚": "RelativePosition.positions_balance；RelativePosition.change_opposed",
+  "引": "—",
+  "式": "古",
+  "注": "只名对全族之和之相对位置；相称、比例之义不入；相轧作对照条目",
+  "anchors": [
+   "Becoming.RelativePosition.positions_balance",
+   "Becoming.RelativePosition.change_opposed"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "同患",
+  "篇": "C13",
+  "所名": "共同条件（a condition every formation shares）",
+  "锚": "Flow.mutuallyDependent_of_common",
+  "引": "當其同舟而濟",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.mutuallyDependent_of_common"
+  ],
+  "quotes": [
+   {
+    "phrase": "當其同舟而濟",
+    "found": [
+     {
+      "source_id": "BI1-S-SZ",
+      "text": "當其同舟而濟"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "交相資",
+  "篇": "C13",
+  "所名": "互相供给（mutual feeding）",
+  "锚": "Flow.MutuallyFed",
+  "引": "兼相愛，交相利",
+  "式": "新",
+  "注": "取代「交相利」；利之价值义不携带",
+  "anchors": [
+   "Becoming.Flow.MutuallyFed"
+  ],
+  "quotes": [
+   {
+    "phrase": "兼相愛，交相利",
+    "found": [
+     {
+      "source_id": "MO1-S-C15",
+      "text": "兼相愛、交相利"
+     },
+     {
+      "source_id": "MO1-S-C16",
+      "text": "兼相愛、交相利"
+     },
+     {
+      "source_id": "MO1-S-C26",
+      "text": "兼相愛、交相利"
+     },
+     {
+      "source_id": "MO1-S-C35",
+      "text": "兼相愛、交相利"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "和而不同",
+  "篇": "C13",
+  "所名": "合用之所增（what pooling adds）",
+  "锚": "Web.pool_adds；Web.separates_all_iff",
+  "引": "君子和而不同@RU1-S-LY",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Web.pool_adds",
+   "Becoming.Web.separates_all_iff"
+  ],
+  "quotes": [
+   {
+    "phrase": "君子和而不同",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "君子和而不同"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "同而不和",
+  "篇": "C13",
+  "所名": "等于一个成员的合用",
+  "锚": "Web.pooled_iff_member",
+  "引": "小人同而不和",
+  "式": "复",
+  "注": "不带君子／小人之品第",
+  "anchors": [
+   "Becoming.Web.pooled_iff_member"
+  ],
+  "quotes": [
+   {
+    "phrase": "小人同而不和",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "小人同而不和"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "念舊惡",
+  "篇": "C13",
+  "所名": "有记忆的等待之给",
+  "锚": "Withholding.waitsAll",
+  "引": "伯夷、叔齊不念舊惡",
+  "式": "复",
+  "注": "肯定式由「不念旧恶」反推",
+  "anchors": [
+   "Becoming.Withholding.waitsAll"
+  ],
+  "quotes": [
+   {
+    "phrase": "伯夷、叔齊不念舊惡",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "伯夷、叔齊，不念舊惡"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "不念舊惡",
+  "篇": "C13",
+  "所名": "无记忆的等待之给",
+  "锚": "Withholding.answers；Withholding.withholding_returns；Withholding.Ring.answers_circulates",
+  "引": "伯夷、叔齊不念舊惡",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Withholding.answers",
+   "Becoming.Withholding.withholding_returns",
+   "Becoming.Withholding.Ring.answers_circulates"
+  ],
+  "quotes": [
+   {
+    "phrase": "伯夷、叔齊不念舊惡",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "伯夷、叔齊，不念舊惡"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "得兼",
+  "篇": "C13",
+  "所名": "诸条件同时保持",
+  "锚": "Viability.kernel_and_iff",
+  "引": "二者不可得兼",
+  "式": "复",
+  "注": "兼取「合」义，与整体之兼同字",
+  "anchors": [
+   "Becoming.Viability.kernel_and_iff"
+  ],
+  "quotes": [
+   {
+    "phrase": "二者不可得兼",
+    "found": [
+     {
+      "source_id": "RU2-S-MZ",
+      "text": "二者不可得兼"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "顧",
+  "篇": "C14",
+  "所名": "意义（significance）：唯一给出的评价参数",
+  "锚": "—",
+  "引": "長慮顧後而保萬世",
+  "式": "古",
+  "注": "注视、知觉、看中其用（匠伯不顾）、照料不入",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "長慮顧後而保萬世",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ04",
+      "text": "長慮顧後而保萬世"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "顧式",
+  "篇": "C14",
+  "所名": "评价（valuation）",
+  "锚": "Valuation",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Valuation"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "活",
+  "篇": "C14",
+  "所名": "活的（living）",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "—；存活、使活不入；活不是生生",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "活皆有顧",
+  "篇": "C14",
+  "所名": "生命意义（living significance）",
+  "锚": "LivingSignificance；Valuation.significant_iff",
+  "引": "—",
+  "式": "新",
+  "注": "取代「仁」；仁作相分条目",
+  "anchors": [
+   "Becoming.LivingSignificance",
+   "Becoming.Valuation.significant_iff"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "凡續皆有顧",
+  "篇": "C14",
+  "所名": "延续条件（the continuation condition）：陈述而不断言；定范围，不排序",
+  "锚": "Unrestricted",
+  "引": "—",
+  "式": "新",
+  "注": "设，不断言；取代「无弃」",
+  "anchors": [
+   "Becoming.Unrestricted"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "方",
+  "篇": "C14",
+  "所名": "立场（standpoint）",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "取方所、所在之义为立场；「方生方死」之「方」（方且）、方术、方法、方向不入",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "我",
+  "篇": "C14",
+  "所名": "中心（center，评价之中心）",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "修订者核对 center_not_derived 之结构",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "己",
+  "篇": "C14",
+  "所名": "自身区域（own region）",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "萌",
+  "篇": "C14",
+  "所名": "种子（seed）",
+  "锚": "—",
+  "引": "而莫知其所萌",
+  "式": "古",
+  "注": "取代「端」之种子义；自长义不入",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "而莫知其所萌",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "而莫知其所萌"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "自顧",
+  "篇": "C14",
+  "所名": "自身意义（self-significance）",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "取代「自爱」",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "無親",
+  "篇": "C14",
+  "所名": "关系中立（relational neutrality）",
+  "锚": "—",
+  "引": "至仁无親",
+  "式": "复",
+  "注": "不带「常与善人」",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "至仁无親",
+    "found": [
+     {
+      "source_id": "ZH1-S14",
+      "text": "至仁无親"
+     },
+     {
+      "source_id": "ZH1-S23",
+      "text": "至仁无親"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "無方",
+  "篇": "C14",
+  "所名": "立场中立与立场不变（standpoint neutrality）",
+  "锚": "—",
+  "引": "是謂无方",
+  "式": "复",
+  "注": "秋水；立贤无方、无方之民不入",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "是謂无方",
+    "found": [
+     {
+      "source_id": "ZH1-S17",
+      "text": "是謂无方"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "盡",
+  "篇": "C14",
+  "所名": "中立（Neutral：∀）",
+  "锚": "Neutral",
+  "引": "盡，莫不然也",
+  "式": "古",
+  "注": "墨经；兼爱「兼以易别」作对照条目",
+  "anchors": [
+   "Becoming.Neutral"
+  ],
+  "quotes": [
+   {
+    "phrase": "盡，莫不然也",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "盡，莫不然也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "別",
+  "篇": "C14",
+  "所名": "有界之顾（bounded significance）：在区域内有意义，在外无",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "墨子之「别」",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "畛",
+  "篇": "C14",
+  "所名": "自身的边界（the boundary of a self）",
+  "锚": "—",
+  "引": "爲是而有畛也",
+  "式": "古",
+  "注": "齐物论",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "爲是而有畛也",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "爲是而有畛也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "畛內之顧",
+  "篇": "C14",
+  "所名": "预设（the presupposition）",
+  "锚": "SignificantWithin",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.SignificantWithin"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "不易乎畛",
+  "篇": "C14",
+  "所名": "不变的一步（the step of invariance）：预设不随边界怎样划而改变",
+  "锚": "BoundaryInvariant",
+  "引": "不易乎世",
+  "式": "新",
+  "注": "只定范围，不排序；无己作相分条目",
+  "anchors": [
+   "Becoming.BoundaryInvariant"
+  ],
+  "quotes": [
+   {
+    "phrase": "不易乎世",
+    "found": [
+     {
+      "source_id": "DS10",
+      "text": "不易乎世"
+     },
+     {
+      "source_id": "YD-OW-WY",
+      "text": "不易乎世"
+     },
+     {
+      "source_id": "YWH-Q",
+      "text": "不易乎世"
+     },
+     {
+      "source_id": "YD-JP01",
+      "text": "不易乎世"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "皆顧之活",
+  "篇": "C14",
+  "所名": "从意义读出的正面相关",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "内容须是已实现者",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "權",
+  "篇": "C15",
+  "所名": "实践判断（practical judgment）",
+  "锚": "—",
+  "引": "於所體之中而權輕重之謂權",
+  "式": "古",
+  "注": "只名在给定整体之内按所给比较定轻重；秤之全序（古今之正权）、越过常规之例外许可不入",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "於所體之中而權輕重之謂權",
+    "found": [
+     {
+      "source_id": "MI1-S-DQ",
+      "text": "於所體之中而權輕重，之謂權"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "以廣爲愈",
+  "篇": "C15",
+  "所名": "C，扩大的比较：扩大更好；唯一排序历程的前提",
+  "锚": "Comparison；Web.paths_comparison_widens",
+  "引": "—",
+  "式": "新",
+  "注": "设，明载「更好」；所有说排序之处只引它",
+  "anchors": [
+   "Becoming.Comparison",
+   "Becoming.Web.paths_comparison_widens"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "無喪",
+  "篇": "C15",
+  "所名": "保留（retains）",
+  "锚": "Web.Retains",
+  "引": "—",
+  "式": "复",
+  "注": "与 Web.Retains 相合只在同类可换之交换；井卦辞「无喪无得」是水平不低于起点（Flow.level_kept），同字异构，作对照",
+  "anchors": [
+   "Becoming.Web.Retains"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "有得",
+  "篇": "C15",
+  "所名": "增加（adds）",
+  "锚": "Web.Adds",
+  "引": "—",
+  "式": "复",
+  "注": "与「无丧」成对",
+  "anchors": [
+   "Becoming.Web.Adds"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "兼權",
+  "篇": "C15",
+  "所名": "J1 完全比较",
+  "锚": "Lexical.BasicPriority",
+  "引": "—",
+  "式": "复",
+  "注": "保留损失一半以老子七十九章「和大怨，必有餘怨」为主证",
+  "anchors": [
+   "Becoming.Lexical.BasicPriority"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "無以小害大",
+  "篇": "C15",
+  "所名": "J2 基本条件优先",
+  "锚": "FrontierFrames.Priority",
+  "引": "无以小害大",
+  "式": "复",
+  "注": "孟子之小大是层（体之贵贱），不是量；与同类积小之「小」不同；不带「无以贱害贵」之等级义",
+  "anchors": [
+   "Becoming.FrontierFrames.Priority"
+  ],
+  "quotes": [
+   {
+    "phrase": "无以小害大",
+    "found": [
+     {
+      "source_id": "RU2-S-MZ",
+      "text": "无以小害大"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "量力而任",
+  "篇": "C15",
+  "所名": "J3 有界责任",
+  "锚": "—",
+  "引": "力不足者，中道而廢",
+  "式": "新",
+  "注": "论语；墨经「任」（士损己而益所为）不入",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "力不足者，中道而廢",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "力不足者，中道而廢"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "同類積小",
+  "篇": "C15",
+  "所名": "FR 有限回应（finite responsiveness）",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "FR 是可修订之承诺，不是律；同类之内不设永久之轻重词典序",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "足而止",
+  "篇": "C15",
+  "所名": "够而停（rests exactly where the target is met）",
+  "锚": "Law.rests_iff",
+  "引": "知足不辱，知止不殆",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.Law.rests_iff"
+  ],
+  "quotes": [
+   {
+    "phrase": "知足不辱，知止不殆",
+    "found": [
+     {
+      "source_id": "FA1-S-H46",
+      "text": "知足不辱，知止不殆"
+     },
+     {
+      "source_id": "DS01",
+      "text": "知足不辱，知止不殆"
+     },
+     {
+      "source_id": "V130-LAO-MA",
+      "text": "知足不辱知止不殆"
+     },
+     {
+      "source_id": "YD-LAO-BASE",
+      "text": "知足不辱，知止不殆"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "先取",
+  "篇": "C15",
+  "所名": "先占（preemption）",
+  "锚": "Preemption.not_undermining_yet_loses；Flow.Balances.includes_of_renewed",
+  "引": "—",
+  "式": "新",
+  "注": "取代「先占」：先取只说在依存形成之前汲取；前一锚是见证",
+  "anchors": [
+   "Becoming.Preemption.not_undermining_yet_loses",
+   "Becoming.Flow.Balances.includes_of_renewed"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "設",
+  "篇": "C16",
+  "所名": "陈述而不断言者",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "延续条件、以广为愈、作为具名条件之 LPO 等；一条律的局部假设以「若」写出，不叫设",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "無設而然",
+  "篇": "C16",
+  "所名": "不加前提的定理",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "四种地位之一",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "有設而然",
+  "篇": "C16",
+  "所名": "在所述前提下的定理",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "四种地位之一",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "證",
+  "篇": "C16",
+  "所名": "已检查的陈述（定理）与其检查",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "经说证三分之「证」",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "未決",
+  "篇": "C16",
+  "所名": "未决（open）",
+  "锚": "—",
+  "引": "疑者未決之辭",
+  "式": "复",
+  "注": "—",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "疑者未決之辭",
+    "found": [
+     {
+      "source_id": "YD-CY",
+      "text": "疑者未決之辭"
+     },
+     {
+      "source_id": "YD-CYSK",
+      "text": "疑者未決之辭"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "說",
+  "篇": "C16",
+  "所名": "推导（derivation）",
+  "锚": "Derivation.Derives",
+  "引": "說，所以明也",
+  "式": "古",
+  "注": "墨经；经说证之「说」同义（所以明）",
+  "anchors": [
+   "Becoming.Derivation.Derives"
+  ],
+  "quotes": [
+   {
+    "phrase": "說，所以明也",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "說，所以明也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "不然者",
+  "篇": "C16",
+  "所名": "反例与反模型",
+  "锚": "—",
+  "引": "一然者一不然者，必不必也",
+  "式": "复",
+  "注": "—",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "一然者一不然者，必不必也",
+    "found": [
+     {
+      "source_id": "MI1-S-SS",
+      "text": "一然者一不然者，必不必也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "定然否",
+  "篇": "C16",
+  "所名": "已定（decided：p 或非 p）",
+  "锚": "Decided",
+  "引": "未可定然否也",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Decided"
+  ],
+  "quotes": [
+   {
+    "phrase": "未可定然否也",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ21",
+      "text": "未可定然否也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "不可非",
+  "篇": "C16",
+  "所名": "双重否定（¬¬p）",
+  "锚": "—",
+  "引": "其理不可非",
+  "式": "新",
+  "注": "—",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "其理不可非",
+    "found": [
+     {
+      "source_id": "MI1-S-SX",
+      "text": "其理不可非"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "辭皆定然否",
+  "篇": "C16",
+  "所名": "排中律",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "或不當",
+  "篇": "C16",
+  "所名": "弱已定（weakly decided）",
+  "锚": "WeaklyDecided",
+  "引": "不俱當，必或不當",
+  "式": "新",
+  "注": "只对相矛盾之一对辞成立；作为对一切辞之全称是弱排中律，属设",
+  "anchors": [
+   "Becoming.WeaklyDecided"
+  ],
+  "quotes": [
+   {
+    "phrase": "不俱當，必或不當",
+    "found": [
+     {
+      "source_id": "MI1-S-SS",
+      "text": "不俱當，必或不當"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "無窮可盡",
+  "篇": "C16",
+  "所名": "LPO：每一布尔序列或有一处为真，或处处为假",
+  "锚": "—",
+  "引": "無窮不害兼",
+  "式": "新",
+  "注": "出处作对照",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "無窮不害兼",
+    "found": [
+     {
+      "source_id": "MI1-S-JX",
+      "text": "無窮不害兼"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "相合",
+  "篇": "C16",
+  "所名": "相合（agreement）",
+  "锚": "—",
+  "引": "名實耦，合也",
+  "式": "复",
+  "注": "RO 三种关系",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "名實耦，合也",
+    "found": [
+     {
+      "source_id": "MI1-S-SS",
+      "text": "名實耦，合也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "定域",
+  "篇": "C16",
+  "所名": "定域（scope）",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "RO 三种关系",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "相分",
+  "篇": "C16",
+  "所名": "相分（divergence）",
+  "锚": "—",
+  "引": "—",
+  "式": "复",
+  "注": "RO 三种关系；引唯识时「相分」放在引号中并注其所缘之相义",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "以明",
+  "篇": "C16",
+  "所名": "非二方法（the nondual method）",
+  "锚": "—",
+  "引": "莫若以明@ZH1-S02",
+  "式": "复",
+  "注": "方法要求，不设 Lean 锚；「照之于天」之圣人中心不携带",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "莫若以明",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "莫若以明"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "時",
+  "篇": "C17",
+  "所名": "情境（situation）",
+  "锚": "Situations",
+  "引": "夫遇不遇者，時也",
+  "式": "古",
+  "注": "荀子宥坐；王弼「卦者，时也」之时是构形，作对照",
+  "anchors": [
+   "Becoming.Situations"
+  ],
+  "quotes": [
+   {
+    "phrase": "夫遇不遇者，時也",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ28",
+      "text": "夫遇不遇者，時也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "先後",
+  "篇": "C17",
+  "所名": "步序",
+  "锚": "Interleavings",
+  "引": "行脩以久，說在先後",
+  "式": "复",
+  "注": "D43",
+  "anchors": [
+   "Becoming.Interleavings"
+  ],
+  "quotes": [
+   {
+    "phrase": "行脩以久，說在先後",
+    "found": [
+     {
+      "source_id": "MI1-S-JX",
+      "text": "行脩以久，說在先後"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "位",
+  "篇": "C17",
+  "所名": "位（place）",
+  "锚": "HexagramPlaces",
+  "引": "—",
+  "式": "古",
+  "注": "已有易章",
+  "anchors": [
+   "Becoming.HexagramPlaces"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "當位",
+  "篇": "C17",
+  "所名": "当位",
+  "锚": "HexagramPlaces",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.HexagramPlaces"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "正",
+  "篇": "C17",
+  "所名": "正",
+  "锚": "HexagramPlaces",
+  "引": "—",
+  "式": "古",
+  "注": "只名 inPhase；贞正之例不入",
+  "anchors": [
+   "Becoming.HexagramPlaces"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "中位",
+  "篇": "C17",
+  "所名": "中位",
+  "锚": "HexagramPlaces",
+  "引": "—",
+  "式": "复",
+  "注": "—",
+  "anchors": [
+   "Becoming.HexagramPlaces"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "相應",
+  "篇": "C17",
+  "所名": "爻之相应（opposed lines）",
+  "锚": "Hexagram.opposed",
+  "引": "—",
+  "式": "复",
+  "注": "单用「应」只作回应",
+  "anchors": [
+   "Becoming.Hexagram.opposed"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "比",
+  "篇": "C17",
+  "所名": "比（adjacent lines）",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "约定：只名相邻相异，不带亲附",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "承",
+  "篇": "C17",
+  "所名": "承",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "只名下柔上刚之缝；在下承上之通义与「相承」相助之义不入",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "乘",
+  "篇": "C17",
+  "所名": "乘",
+  "锚": "—",
+  "引": "—",
+  "式": "古",
+  "注": "趁、驾之义不入",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "獨異",
+  "篇": "C17",
+  "所名": "独异之线（sole line）",
+  "锚": "HexagramSites",
+  "引": "—",
+  "式": "新",
+  "注": "取代「上下应」",
+  "anchors": [
+   "Becoming.HexagramSites"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "變通",
+  "篇": "C17",
+  "所名": "规则读取所处之构形而变",
+  "锚": "Becoming.Pace；Pace.rule_alike_until_reading",
+  "引": "变通者，趣时者也@DS03",
+  "式": "复",
+  "注": "Switching 是例",
+  "anchors": [
+   "Becoming.Pace",
+   "Becoming.Pace.rule_alike_until_reading"
+  ],
+  "quotes": [
+   {
+    "phrase": "变通者，趣时者也",
+    "found": [
+     {
+      "source_id": "DS03",
+      "text": "变通者，趣时者也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "通",
+  "篇": "C17",
+  "所名": "可（the run continues）",
+  "锚": "Onward.run_iff_continues",
+  "引": "推而行之谓之通@DS02",
+  "式": "古",
+  "注": "只取一构",
+  "anchors": [
+   "Becoming.Onward.run_iff_continues"
+  ],
+  "quotes": [
+   {
+    "phrase": "推而行之谓之通",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "推而行之谓之通"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "剛柔",
+  "篇": "C17",
+  "所名": "爻值",
+  "锚": "Hexagram",
+  "引": "刚柔相推而生变化@DS02",
+  "式": "复",
+  "注": "取代阴阳作爻值之名",
+  "anchors": [
+   "Becoming.Hexagram"
+  ],
+  "quotes": [
+   {
+    "phrase": "刚柔相推而生变化",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "刚柔相推而生变化"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "大一",
+  "篇": "C01",
+  "所名": "（对照条目）至大无外",
+  "锚": "World.withRest",
+  "引": "至大无外，謂之大一",
+  "式": "复",
+  "注": "不立为名，作「兼」的相合条目",
+  "anchors": [
+   "Becoming.World.withRest"
+  ],
+  "quotes": [
+   {
+    "phrase": "至大无外，謂之大一",
+    "found": [
+     {
+      "source_id": "MI1-S-HS",
+      "text": "至大无外，謂之大一"
+     },
+     {
+      "source_id": "ZH1-S33",
+      "text": "至大无外，謂之大一"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "兩行",
+  "篇": "C01",
+  "所名": "语境中的读法共成一个世界（contextual readings compose one world）",
+  "锚": "Contextual.world；Contextual.fitsFree_iff",
+  "引": "是之謂兩行",
+  "式": "复",
+  "注": "齐物论；诸读法各在其语境中成立而共成一个世界，不须先合为一",
+  "anchors": [
+   "Becoming.Contextual.world",
+   "Becoming.Contextual.fitsFree_iff"
+  ],
+  "quotes": [
+   {
+    "phrase": "是之謂兩行",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "是之謂兩行"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "有待",
+  "篇": "C02",
+  "所名": "活动则受支撑（Web.Dependent 之为前提）",
+  "锚": "Web.Dependent",
+  "引": "吾有待而然者邪",
+  "式": "复",
+  "注": "齐物论；有待只名此前提；小故以之为锚而另有见证",
+  "anchors": [
+   "Becoming.Web.Dependent"
+  ],
+  "quotes": [
+   {
+    "phrase": "吾有待而然者邪",
+    "found": [
+     {
+      "source_id": "ZH1-S02",
+      "text": "吾有待而然者邪"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "有形",
+  "篇": "C02",
+  "所名": "有形（embodied）：活动恰在水平为正之处",
+  "锚": "Web.Embodied；World.Embodied",
+  "引": "—",
+  "式": "新",
+  "注": "取代以「体」名体现；World.ArisingEmbodied 同族",
+  "anchors": [
+   "Becoming.Web.Embodied",
+   "Becoming.World.Embodied"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "正需",
+  "篇": "C02",
+  "所名": "所需为正之依存（Web.Bearing）",
+  "锚": "Web.Bearing",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Web.Bearing"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "亡",
+  "篇": "C03",
+  "所名": "终止（ends）：自某步起永不活动",
+  "锚": "Web.Ends",
+  "引": "死而不亡者寿@YD-LAO-BASE",
+  "式": "古",
+  "注": "亡只指终而不复；俱亡同义",
+  "anchors": [
+   "Becoming.Web.Ends"
+  ],
+  "quotes": [
+   {
+    "phrase": "死而不亡者寿",
+    "found": [
+     {
+      "source_id": "YD-LAO-BASE",
+      "text": "死而不亡者寿"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "改認",
+  "篇": "C09",
+  "所名": "改认（reidentification）：两套命名之间每步给出的对应",
+  "锚": "Reidentify",
+  "引": "—",
+  "式": "新",
+  "注": "沿用中文版「改认」；重同只名一步之内二名一实",
+  "anchors": [
+   "Becoming.Reidentify"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "新作",
+  "篇": "C03",
+  "所名": "新起（arises from nothing it continues）",
+  "锚": "Web.ArisesFrom",
+  "引": "—",
+  "式": "新",
+  "注": "跨步后活跃，且不延续任何此前活跃之形成",
+  "anchors": [
+   "Becoming.Web.ArisesFrom"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "火傳",
+  "篇": "C03",
+  "所名": "样式经由传递而延续（a pattern lasts through passing）",
+  "锚": "Web.ByPassing",
+  "引": "指窮於爲薪，火傳也",
+  "式": "复",
+  "注": "养生主：薪是载者各自终止，火是样式经递接而不尽",
+  "anchors": [
+   "Becoming.Web.ByPassing"
+  ],
+  "quotes": [
+   {
+    "phrase": "指窮於爲薪，火傳也",
+    "found": [
+     {
+      "source_id": "ZH1-S03",
+      "text": "指窮於爲薪，火傳也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "升",
+  "篇": "C03",
+  "所名": "水平之升（rises）",
+  "锚": "Web.Rises",
+  "引": "—",
+  "式": "古",
+  "注": "与「降」成对",
+  "anchors": [
+   "Becoming.Web.Rises"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "降",
+  "篇": "C03",
+  "所名": "水平之降（falls）",
+  "锚": "Web.Falls",
+  "引": "—",
+  "式": "古",
+  "注": "与「升」成对",
+  "anchors": [
+   "Becoming.Web.Falls"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "衰",
+  "篇": "C04",
+  "所名": "衰（runs down）：家族衡且耗而总量下降之一步",
+  "锚": "Flow.RunsDownOn",
+  "引": "盛衰之殺，變化之流也",
+  "式": "古",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.RunsDownOn"
+  ],
+  "quotes": [
+   {
+    "phrase": "盛衰之殺，變化之流也",
+    "found": [
+     {
+      "source_id": "ZH1-S13",
+      "text": "盛衰之殺，變化之流也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "與如其取",
+  "篇": "C04",
+  "所名": "守恒（conserving）：所给恰等所取",
+  "锚": "Flow.ConservingOn",
+  "引": "—",
+  "式": "新",
+  "注": "固定短语",
+  "anchors": [
+   "Becoming.Flow.ConservingOn"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "與不過取",
+  "篇": "C04",
+  "所名": "无中不生（第一定律，gainless）：所给不多于所取",
+  "锚": "Flow.GainlessOn",
+  "引": "—",
+  "式": "新",
+  "注": "固定短语",
+  "anchors": [
+   "Becoming.Flow.GainlessOn"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "共取過與",
+  "篇": "C04",
+  "所名": "联合超出（joint excess）",
+  "锚": "Flow.excess_bounded；Flow.joint_excess_ends",
+  "引": "—",
+  "式": "新",
+  "注": "原拟「合取過與」；「合取」在逻辑中是 ∧，易误",
+  "anchors": [
+   "Becoming.Flow.excess_bounded",
+   "Becoming.Flow.joint_excess_ends"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "與之者",
+  "篇": "C04",
+  "所名": "补充者（renewers）",
+  "锚": "Flow.renewers",
+  "引": "—",
+  "式": "复",
+  "注": "原拟「與者」；读 yǔ；「与者」易读作参与者",
+  "anchors": [
+   "Becoming.Flow.renewers"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "全取",
+  "篇": "C04",
+  "所名": "取到所与之全部（takes all）",
+  "锚": "Flow.TakesAll",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Flow.TakesAll"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "趨而不至",
+  "篇": "C04",
+  "所名": "趋停而不至（approaches rest without reaching it）",
+  "锚": "Halving.approaches_without_reaching；Amounts.few_large_losses_of_archimedean",
+  "引": "—",
+  "式": "新",
+  "注": "与「止」分开",
+  "anchors": [
+   "Becoming.Halving.approaches_without_reaching",
+   "Becoming.Amounts.few_large_losses_of_archimedean"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "涸",
+  "篇": "C04",
+  "所名": "耗尽：一个存量降至零",
+  "锚": "—",
+  "引": "泉涸，魚相與處於陸",
+  "式": "古",
+  "注": "大宗师",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "泉涸，魚相與處於陸",
+    "found": [
+     {
+      "source_id": "ZH1-S06",
+      "text": "泉涸，魚相與處於陸"
+     },
+     {
+      "source_id": "ZH1-S14",
+      "text": "泉涸，魚相與處於陸"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "恆持",
+  "篇": "C05",
+  "所名": "每个依存每步皆持（Web.Renewed，恒之条件层）",
+  "锚": "Web.Renewed",
+  "引": "—",
+  "式": "新",
+  "注": "恒＋持",
+  "anchors": [
+   "Becoming.Web.Renewed"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "竭",
+  "篇": "C05",
+  "所名": "消耗（consuming）：所汲取之某条件对某依存者竭，永久失去支持",
+  "锚": "Web.ConsumingIn",
+  "引": "—",
+  "式": "古",
+  "注": "不是恒之否定（fluctuating_neither）",
+  "anchors": [
+   "Becoming.Web.ConsumingIn"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "終足",
+  "篇": "C05",
+  "所名": "回程（restored）：每个依存在其后某步被满足（不要求此前已满足）",
+  "锚": "Web.Restored",
+  "引": "—",
+  "式": "新",
+  "注": "復＋足；原拟「復足」；不用「复」，因 Restored 不要求此前已满足；D49 以「转」兼名复与终足，对照表注明",
+  "anchors": [
+   "Becoming.Web.Restored"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "終不足",
+  "篇": "C05",
+  "所名": "某依存此后永不再被满足（Web.Consumed）",
+  "锚": "Web.Consumed",
+  "引": "—",
+  "式": "新",
+  "注": "与「终足」成对",
+  "anchors": [
+   "Becoming.Web.Consumed"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "絶而終不足",
+  "篇": "C05",
+  "所名": "满足过而断、此后不再满足（Web.Lost）",
+  "锚": "Web.Lost",
+  "引": "—",
+  "式": "新",
+  "注": "絶＝Web.Broken",
+  "anchors": [
+   "Becoming.Web.Lost"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "初不定終",
+  "篇": "C05",
+  "所名": "任何有限之往都不定运行之类",
+  "锚": "Renewable.prefix_does_not_decide",
+  "引": "靡不有初，鮮克有終",
+  "式": "复",
+  "注": "王弼乾文言注引诗（大雅·荡，先秦）",
+  "anchors": [
+   "Becoming.Renewable.prefix_does_not_decide"
+  ],
+  "quotes": [
+   {
+    "phrase": "靡不有初，鮮克有終",
+    "found": [
+     {
+      "source_id": "YWH-Q",
+      "text": "靡不有初，鮮克有終"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "互有所長",
+  "篇": "C06",
+  "所名": "混合（mixed）",
+  "锚": "Web.Mixed",
+  "引": "—",
+  "式": "新",
+  "注": "原拟「各有所長」；「各有所长」首见唐宗密，带评价义",
+  "anchors": [
+   "Becoming.Web.Mixed"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "盈科",
+  "篇": "C06",
+  "所名": "上升之阈：升到阈值而后形成新的耦合",
+  "锚": "Closing.Threshold",
+  "引": "盈科而后进",
+  "式": "复",
+  "注": "孟子",
+  "anchors": [
+   "Becoming.Closing.Threshold"
+  ],
+  "quotes": [
+   {
+    "phrase": "盈科而后进",
+    "found": [
+     {
+      "source_id": "RU2-S-MZ",
+      "text": "盈科而后进"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "隨類而同",
+  "篇": "C07",
+  "所名": "随类而同（Lumped π g）：g 在 π 之每一类上取一值",
+  "锚": "Learning.Lumped",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Learning.Lumped"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "知幾",
+  "篇": "C07",
+  "所名": "及早被读到的水平耦合",
+  "锚": "Web.observed_level_couples",
+  "引": "几者，动之微，吉之先见者也@DS03",
+  "式": "古",
+  "注": "以 observed_raise_couples 为其一例；与「明」分锚",
+  "anchors": [
+   "Becoming.Web.observed_level_couples"
+  ],
+  "quotes": [
+   {
+    "phrase": "几者，动之微，吉之先见者也",
+    "found": [
+     {
+      "source_id": "DS03",
+      "text": "几者，动之微，吉之先见者也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "聞見",
+  "篇": "C08",
+  "所名": "观察（observation）：从所观察者出发的读法之路线（长为零者是亲见，余为传受）",
+  "锚": "apart_only_downstream",
+  "引": "知：聞、說、親",
+  "式": "古",
+  "注": "墨经「知：闻、说、亲」之闻只是其中经他者之一类",
+  "anchors": [
+   "Becoming.apart_only_downstream"
+  ],
+  "quotes": [
+   {
+    "phrase": "知：聞、說、親",
+    "found": [
+     {
+      "source_id": "MI1-S-JS",
+      "text": "知，聞、說、親"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "知來",
+  "篇": "C08",
+  "所名": "外推（extrapolation）",
+  "锚": "Learning.byElimination；Learning.diagonal_misses",
+  "引": "数往者顺，知来者逆@DS04",
+  "式": "复",
+  "注": "说卦；墨子「以往知来」之结构是推类，移作推类之引",
+  "anchors": [
+   "Becoming.Learning.byElimination",
+   "Becoming.Learning.diagonal_misses"
+  ],
+  "quotes": [
+   {
+    "phrase": "数往者顺，知来者逆",
+    "found": [
+     {
+      "source_id": "DS04",
+      "text": "数往者顺，知来者逆"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "闕",
+  "篇": "C08",
+  "所名": "沉默（silence）",
+  "锚": "PartialReadout.silent_sound",
+  "引": "蓋闕如也",
+  "式": "古",
+  "注": "原拟「默」；不能确定处不出值；荀子「默而當」是言谈之节，不入",
+  "anchors": [
+   "Becoming.PartialReadout.silent_sound"
+  ],
+  "quotes": [
+   {
+    "phrase": "蓋闕如也",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "蓋闕如也"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "所至",
+  "篇": "C08",
+  "所名": "所见范围（scope of an inquiry）",
+  "锚": "Scope",
+  "引": "知之所至",
+  "式": "复",
+  "注": "取代「涯」之一义；原拟「所見」；则阳",
+  "anchors": [
+   "Becoming.Scope"
+  ],
+  "quotes": [
+   {
+    "phrase": "知之所至",
+    "found": [
+     {
+      "source_id": "ZH1-S25",
+      "text": "知之所至"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "不測",
+  "篇": "C08",
+  "所名": "对角序列（diagonal course）：在每一外推之对角处失误",
+  "锚": "Learning.diagonal",
+  "引": "阴阳不测之谓神@DS02",
+  "式": "复",
+  "注": "沿用易章；阴阳、神之义不入",
+  "anchors": [
+   "Becoming.Learning.diagonal"
+  ],
+  "quotes": [
+   {
+    "phrase": "阴阳不测之谓神",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "阴阳不测之谓神"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "喻",
+  "篇": "C09",
+  "所名": "读出（reads）：读者之码分开诸义项，且两码在该处一致",
+  "锚": "SharedCodes.reads_iff",
+  "引": "名闻而实喻",
+  "式": "古",
+  "注": "只取晓、读出之义，不带譬喻义",
+  "anchors": [
+   "Becoming.SharedCodes.reads_iff"
+  ],
+  "quotes": [
+   {
+    "phrase": "名闻而实喻",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ22",
+      "text": "名闻而实喻"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "辨",
+  "篇": "C09",
+  "所名": "码分开诸义项（tells apart）",
+  "锚": "SharedCodes.TellsApart",
+  "引": "名定而实辨",
+  "式": "古",
+  "注": "与「别」分开",
+  "anchors": [
+   "Becoming.SharedCodes.TellsApart"
+  ],
+  "quotes": [
+   {
+    "phrase": "名定而实辨",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ22",
+      "text": "名定而实辨"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "通意",
+  "篇": "C09",
+  "所名": "义项之消解（resolves）：只剩一个候选义项",
+  "锚": "CrossSituational.resolves_iff",
+  "引": "通意後對",
+  "式": "复",
+  "注": "墨经",
+  "anchors": [
+   "Becoming.CrossSituational.resolves_iff"
+  ],
+  "quotes": [
+   {
+    "phrase": "通意後對",
+    "found": [
+     {
+      "source_id": "MI1-S-JX",
+      "text": "通意後對"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "應域",
+  "篇": "C10",
+  "所名": "回应闭包（response closure）",
+  "锚": "Flow.WithinResponse",
+  "引": "—",
+  "式": "新",
+  "注": "感域之对偶（Flow.withinResponse_iff_coupling）",
+  "anchors": [
+   "Becoming.Flow.WithinResponse"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "擇者",
+  "篇": "C10",
+  "所名": "选择者（selector）：选择所经耦合的那个形成",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "依待者、取者之式",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "執",
+  "篇": "C10",
+  "所名": "规则持住结果（capture）",
+  "锚": "Becoming.Capture",
+  "引": "為者敗之，執者失之",
+  "式": "古",
+  "注": "老子六十四章此句作条目",
+  "anchors": [
+   "Becoming.Capture"
+  ],
+  "quotes": [
+   {
+    "phrase": "為者敗之，執者失之",
+    "found": [
+     {
+      "source_id": "V130-LAO-MA",
+      "text": "為者敗之執者失之"
+     },
+     {
+      "source_id": "LC-SZ-ALL",
+      "text": "為者敗之執者失之"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "劫及其讀",
+  "篇": "C10",
+  "所名": "读法本身由份额形成时，读法之变也被吸收（closed capture）",
+  "锚": "ClosedCapture",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.ClosedCapture"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "時稽",
+  "篇": "C10",
+  "所名": "读取步（the reading step of a pace）",
+  "锚": "Pace",
+  "引": "兼听而时稽之",
+  "式": "复",
+  "注": "荀子王制",
+  "anchors": [
+   "Becoming.Pace"
+  ],
+  "quotes": [
+   {
+    "phrase": "兼听而时稽之",
+    "found": [
+     {
+      "source_id": "RU2-S-XZ09",
+      "text": "兼听而时稽之"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "令不必成",
+  "篇": "C15",
+  "所名": "请求不等于完成",
+  "锚": "Countdown.exits；Countdown.Slow.misses",
+  "引": "使，令謂，謂也，不必成",
+  "式": "复",
+  "注": "墨经",
+  "anchors": [
+   "Becoming.Countdown.exits",
+   "Becoming.Countdown.Slow.misses"
+  ],
+  "quotes": [
+   {
+    "phrase": "使，令謂，謂也，不必成",
+    "found": [
+     {
+      "source_id": "MI1-S-SS",
+      "text": "使，令謂，謂也，不必成"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "可致",
+  "篇": "C11",
+  "所名": "所携带的量（carried amount）",
+  "锚": "carried；most_difference_arrives",
+  "引": "—",
+  "式": "复",
+  "注": "原拟「所致」；先秦「所致」多作因果归属",
+  "anchors": [
+   "Becoming.carried",
+   "Becoming.most_difference_arrives"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "抑舉",
+  "篇": "C11",
+  "所名": "接力（the relay）",
+  "锚": "Regulation.relay；Regulation.relay_threshold",
+  "引": "高者抑之，下者举之",
+  "式": "复",
+  "注": "老子七十七章",
+  "anchors": [
+   "Becoming.Regulation.relay",
+   "Becoming.Regulation.relay_threshold"
+  ],
+  "quotes": [
+   {
+    "phrase": "高者抑之，下者举之",
+    "found": [
+     {
+      "source_id": "DS01",
+      "text": "高者抑之，下者举之"
+     },
+     {
+      "source_id": "YD-LAO-BASE",
+      "text": "高者抑之，下者举之"
+     },
+     {
+      "source_id": "LC-HS-LOW",
+      "text": "高者抑之，下者举之"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "合致而無獨致",
+  "篇": "C13",
+  "所名": "多重决定：合起来造成而无一部分单独造成",
+  "锚": "Dependence.DifferenceOnlyTogether",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Dependence.DifferenceOnlyTogether"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "為天下先",
+  "篇": "C13",
+  "所名": "在一切之上之目标（the target above all others）",
+  "锚": "aboveAll_unique；Law.aboveAll_never_rests",
+  "引": "不敢為天下先",
+  "式": "复",
+  "注": "老子六十七章；与「无明」相邻",
+  "anchors": [
+   "Becoming.aboveAll_unique",
+   "Becoming.Law.aboveAll_never_rests"
+  ],
+  "quotes": [
+   {
+    "phrase": "不敢為天下先",
+    "found": [
+     {
+      "source_id": "V130-LAO-MA",
+      "text": "不敢為天下先"
+     },
+     {
+      "source_id": "V130-LAO-MB",
+      "text": "不敢為天下先"
+     },
+     {
+      "source_id": "LC-SZ-ALL",
+      "text": "不敢為天下先"
+     },
+     {
+      "source_id": "CV1-S-JL",
+      "text": "不敢為天下先"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "不校",
+  "篇": "C13",
+  "所名": "闭合的一环：交回少于所受",
+  "锚": "LoopReturn",
+  "引": "犯而不校",
+  "式": "古",
+  "注": "论语",
+  "anchors": [
+   "Becoming.LoopReturn"
+  ],
+  "quotes": [
+   {
+    "phrase": "犯而不校",
+    "found": [
+     {
+      "source_id": "RU1-S-LY",
+      "text": "犯而不校"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "畛內皆然",
+  "篇": "C14",
+  "所名": "有界规则（Within）：只在一个已形成之界内被接受之规则",
+  "锚": "Within",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Within"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "皆在己",
+  "篇": "C14",
+  "所名": "被持有（held）",
+  "锚": "—",
+  "引": "—",
+  "式": "复",
+  "注": "原拟「在己」；荀子「在己者」之控制义不入",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "取於可得",
+  "篇": "C15",
+  "所名": "J4 正当可行的选择",
+  "锚": "FrontierWorlds",
+  "引": "—",
+  "式": "新",
+  "注": "「可得」（荀子正名「欲不待可得」）名一步可达之选项；正当一半暂缺其名",
+  "anchors": [
+   "Becoming.FrontierWorlds"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "皆愈",
+  "篇": "C15",
+  "所名": "提升规则 L：每一结果都好于每一结果",
+  "锚": "LiftBetter",
+  "引": "—",
+  "式": "新",
+  "注": "设",
+  "anchors": [
+   "Becoming.LiftBetter"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "或足",
+  "篇": "C15",
+  "所名": "可能之够",
+  "锚": "Enough.Free.stays_meet_not_assured",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Enough.Free.stays_meet_not_assured"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "必足",
+  "篇": "C15",
+  "所名": "保证之够",
+  "锚": "Enough.assured_iff",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.Enough.assured_iff"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "無窮可定其皆否",
+  "篇": "C16",
+  "所名": "WLPO",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "非皆否則有是",
+  "篇": "C16",
+  "所名": "Markov 原则",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "—",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "不可非則然",
+  "篇": "C16",
+  "所名": "稳定（¬¬q → q）",
+  "锚": "—",
+  "引": "—",
+  "式": "新",
+  "注": "不用「稳」",
+  "anchors": [],
+  "quotes": []
+ },
+ {
+  "名": "擬",
+  "篇": "C16",
+  "所名": "表示（a representation an account uses）",
+  "锚": "—",
+  "引": "擬之而後言",
+  "式": "古",
+  "注": "与象、读分开",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "擬之而後言",
+    "found": [
+     {
+      "source_id": "DS02",
+      "text": "拟之而后言"
+     },
+     {
+      "source_id": "YD-ZX7",
+      "text": "擬之而後言"
+     },
+     {
+      "source_id": "RU2-S-S01",
+      "text": "拟之而后言"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "有之必然",
+  "篇": "C16",
+  "所名": "充分条件",
+  "锚": "—",
+  "引": "大故，有之必然",
+  "式": "复",
+  "注": "墨经大故定义之前一半",
+  "anchors": [],
+  "quotes": [
+   {
+    "phrase": "大故，有之必然",
+    "found": [
+     {
+      "source_id": "MI1-S-SS",
+      "text": "大故，有之必然"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "交錯",
+  "篇": "C17",
+  "所名": "交错（interleavings）",
+  "锚": "Interleavings",
+  "引": "—",
+  "式": "新",
+  "注": "D43：步序是读法，只在每两次交换共享关系项处由关系推出",
+  "anchors": [
+   "Becoming.Interleavings"
+  ],
+  "quotes": []
+ },
+ {
+  "名": "至期所及",
+  "篇": "C17",
+  "所名": "到时限为止来源经耦合到达读者（reached by）",
+  "锚": "TimedResponse.ReachedBy",
+  "引": "能使敵人前後不相及",
+  "式": "新",
+  "注": "—",
+  "anchors": [
+   "Becoming.TimedResponse.ReachedBy"
+  ],
+  "quotes": [
+   {
+    "phrase": "能使敵人前後不相及",
+    "found": [
+     {
+      "source_id": "BI1-S-SZ",
+      "text": "能使敵人前後不相及"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "位分",
+  "篇": "C17",
+  "所名": "只在两端之间有定奇偶（fixed phase）",
+  "锚": "Hexagram.fixedPhase",
+  "引": "去初上而論位分",
+  "式": "复",
+  "注": "王弼；不带由尊卑推位之义",
+  "anchors": [
+   "Becoming.Hexagram.fixedPhase"
+  ],
+  "quotes": [
+   {
+    "phrase": "去初上而論位分",
+    "found": [
+     {
+      "source_id": "YWH-LB",
+      "text": "去初上而論位分"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "名": "二體",
+  "篇": "C17",
+  "所名": "卦之两半（halves）",
+  "锚": "Hexagram.halves",
+  "引": "舉二體",
+  "式": "古",
+  "注": "王弼",
+  "anchors": [
+   "Becoming.Hexagram.halves"
+  ],
+  "quotes": [
+   {
+    "phrase": "舉二體",
+    "found": [
+     {
+      "source_id": "YWH-LM",
+      "text": "舉二體"
+     },
+     {
+      "source_id": "YD-CYSK",
+      "text": "舉二體"
+     }
+    ]
+   }
+  ]
+ }
+]

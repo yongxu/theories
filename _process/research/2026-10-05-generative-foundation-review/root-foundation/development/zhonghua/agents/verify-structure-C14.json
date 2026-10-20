@@ -1,0 +1,588 @@
+{
+ "cluster": "C14 意义、评价与延续之条件",
+ "lens": "STRUCTURE",
+ "names": [
+  {
+   "concept": "意义 significance（sig p t f）",
+   "name": "顾",
+   "verdict": "revise",
+   "issues": "概念描述与词汇表一致：不分等级，不是正价。问题在用例。「匠者不顧」「匠伯不顧」里的顾，是为取材、以用为准的看。正因为匠人不顾，树才得以延续。所以这两条只支持一个以立场为索引的是否计入，而且属于路线 (b)：以对中心有用为界（Becoming.bounded_closure_iff，爱马式的顾）。它们不是「延续有意义」的结构证据。顾的施事义与知觉义（顾者、回视、注目、知其所在）没有列入 not_carried。经下「不知其所處」一条正好碰到这一义。sig p 中的 p 只是索引，不是施顾的主体，意义也不是注意。fit 里「先秦没有『顾之多少』的用法」是没有核实的否定全称。",
+   "fix": "保留顾作意义之名，并做四处改动。(1) 主证改用三条：戴震「戕人之生而不顧」（RU2-R0235）、孟子「不顾父母之养」、荀子「無見利而不顧其害」。三处都是把他者的延续（或害）计入与否。(2) 两条匠石用例移入「对照：以用为界的顾（路线 (b)）」，并注明不顾使树得存。(3) not_carried 加「施顾者的动作与知觉（回视、注目、知其所在）；p 只是索引」。(4) 删去「先秦没有顾之多少」，或者给出检索范围与结果。"
+  },
+  {
+   "concept": "评价 valuation（Valuation：living、related、own、sig）",
+   "name": "顾式",
+   "verdict": "revise",
+   "issues": "Valuation 有四个字段，词汇表写作 Living, relation, region, significance。顾式只说出 sig 一个字段的样式，组合也只在 sig 上可检验，living、related、own 三个读法没有出现在名里。「式」容易读作法式、规范，即应当如何顾，这就带进一个立法者。秋水「以物觀之…以俗觀之」给的是以立场为索引的贵贱、大小分等，是有等级的赋值，不是四字段的结构，与名只是词面相近。",
+   "fix": "注释写明：「式＝一组给定的读法（何者活、何者相关、何者在谁之己、谁顾谁），不是法式或规范」。秋水用例改标为「以立场为索引的分等，理论不取其等级」，不作结构证据。也可以改名为能说出四个读法的组合，例如「四读」，由整合者与 C08 已定的「观」（读法）协调。是否改名，取决于 C08 有没有「一组读法」的名。"
+  },
+  {
+   "concept": "活的 living（逐步读法）",
+   "name": "活",
+   "verdict": "revise",
+   "issues": "概念描述有误。Web.valuation 定义 living e := active ∧ ¬UnderminingAt。UnderminingOn 的意思是：在某步汲取一个条件，之后该条件低于某个形成 g 的依存当下所需（常常是他者的依存），也低于这一依存在持续期间曾被满足的所需。它不是「不削弱它所需的条件」。所举的义（存活、使活）与理论冲突：清除者每一步都活动、都受支持（Clearing.loses_beyond），在侵蚀之步却不是活的（Clearing.clearer_not_living）。中庸、苏辙两条用例里没有「活」字。「活与害对举」不对：孟子「天作孽，犹可违；自作孽，不可活」中与活对举的是违。另外，「活」容易与生生混同，而 D1 说生生不是谓词 living。",
+   "fix": "概念改为：「逐步读法：一个事件活动，且其汲取不使任何依存（常为他者的依存）落到当下所需与持续期间曾被满足的所需之下（active ∧ ¬UnderminingAt）」。not_carried 加两项：「存活、受支持（清除者存活且受支持，侵蚀之步却不活）」与「生生（D1）」。删去中庸、苏辙两条，或改标为「内容平行，无活字」。改正对举为违/活。与 C05 的「侵蚀」互引。"
+  },
+  {
+   "concept": "生生之意义 living significance（Valuation.Significant）——应作「生命意义」",
+   "name": "仁",
+   "verdict": "revise",
+   "issues": "概念标签过时：词汇表作生命意义（living significance），并说它是「延续条件限于活的主张」。「生生之意义」把生生读回谓词 living，这是 D1 已收回的读法。仁这个名带进五样东西：施德者，即单一中心；性，即固定之性（程颐「仁自是性」）；差等（孟子「仁民而爱物」，于物「爱之而弗仁」，只及于人）；礼的规范（论语「克己復禮為仁」）；情感正价（韩非解老「仁者，謂其中心欣然愛人也」）。墨经「仁，體愛也」与本簇自己的兼＝Neutral 合读，体＝分于兼，体爱就是部分之爱，即有界之爱，与所给的义相反。孟子「以其所爱及其所不爱」是由近及远的推（与之对的是不仁者推害），不是范围上的全称，本簇的推恩条已说推不是贯。庄子「至仁无親」「大仁不仁」「不多仁恩」都否定仁。备选里的「活皆有顾」与「皆顾之活」几乎同字。",
+   "fix": "概念标签改为「生命意义」。名改为组合名「活无不顾」，注：自每一立场，凡活的主张之延续皆有意义（∀ p c, living c → sig p c）。「无…不」用 C16 已定的标记，活、顾用本簇的名。仁降为对照词，在各条里按相合、定域、相分处理。若整合者要单字而保留仁：confidence 改 low，not_carried 加施德中心、体爱＝部分之爱、只及于人、礼的规范、庄子对仁的否定。各条读法中的「理论之仁」随名改，并与「皆顾之活」的新名区分（后者须含已实现）。"
+  },
+  {
+   "concept": "延续条件 the continuation condition（Unrestricted）",
+   "name": "无弃",
+   "verdict": "revise",
+   "issues": "弃是一个动作，不弃属于实施。老子第 27 章「常善救人，故无弃人」把无弃归于圣人一个中心，并连于救，缺少 Unrestricted 所需的 ∀ p。条件之下仍有所失：每一收窄都失去一些，Clearing.clearer_loses_dweller。「无弃」很容易读成「无所失」。「及于任何东西」靠的是第 27 章传世本的「无弃物」，帛书甲本作「無棄人物無棄財」（V130-LAO-MA）。not_carried 说「到哪一走法更好需要 C 与不变性的步骤」，与章节第 26–28 行相违：C 是唯一排序的前提，不变的一步只定范围、不排序；而且不变的一步本身就是条件的一部分（unrestricted_iff_presupposed_along）。fit 用 Transfer.unordered 说「不说谁更重」，那是一个构造世界里混合走法的见证，不是意义不分等级的根据。",
+   "fix": "名改为「无不顾」（或「物无不顾」），注：自每一立场，任何东西每一步之延续皆有意义（∀ p t f）。这与 C16 的「无…不」和本簇的顾组合一致。无弃降为对照词，注明老子的无弃是圣人一个立场之德，并连于救。not_carried 的排序句改为：「条件本身不排序；排序只在把扩大称为更好（C）；不变的一步定范围，不排序」。另加：「无弃不等于无失（Clearing.clearer_loses_dweller）」。「不分轻重」改引 Becoming.Valuation（sig 取命题值）。用例注明帛书异文。"
+  },
+  {
+   "concept": "立场 standpoint（Pos）",
+   "name": "方",
+   "verdict": "revise",
+   "issues": "天下篇的方是方术，即一曲之士的部分学说，与道术相对。它在结构上是一种部分的读法（C08 观）或受耦合所限的模型，不是意义所从出的索引。与无方组合会读成「没有立场」，而理论要的是每一立场。方还与「仁之方」（方法）、方向、方域相撞。",
+   "fix": "名改为「处」，主证用齐物论王倪「三者孰知正處」：各物各有其处，没有哪一处是正处的特权。注：「处＝意义所从出的位置索引，不是方术、方法、方向，也不分居处高下」。方降为对照词，天下篇的方改归 C08（一种部分的读法）。整合者核对「处」没有被别簇采用；改了之后，无方相应改名。"
+  },
+  {
+   "concept": "中心 center",
+   "name": "我",
+   "verdict": "revise",
+   "issues": "概念描述只给了形式锚点（Boundary 中的 f，center : Pos → F），漏了词汇表的义：谁的延续被计入；每一想要之处是一个中心（SelfSignificance、shares）。我带进第一人称的特权与实体之我（佛教无我所破的）。齐物论「不知其所爲使」说的是不知动因之源（真宰），center_not_derived 说的是评价中心不由依赖固定，两者结构不同。齐物论的「彼」也可以指上文喜怒哀乐等情态。",
+   "fix": "概念改为：「中心：谁的延续被计入；每一想要之处是一个中心；动力学沿依赖固定必须计入的范围，不固定中心（center_not_derived）」，保留形式锚点。not_carried 加「第一人称特权、实体之我」。删去「不知其所爲使」与 center_not_derived 的对应。可以考虑以「自」为名（自顾、自爱中的自，是反身索引，不立实体），由整合者核对冲突。"
+  },
+  {
+   "concept": "己 own region（Valuation.own p c）",
+   "name": "己",
+   "verdict": "revise",
+   "issues": "结构基本对，只需小改。词汇表说自身区域是「已形成之关系的区域，不是所有者」，己容易读成自我或所有者，区域也可以不止一身。与本簇的无己组合会读成「没有己区域」（见无己）。",
+   "fix": "注释加：「己＝立场 p 所形成之关系的区域，不是所有者，不是实体之我，可不止一身」。无己改名后，这里的冲突自然消除。"
+  },
+  {
+   "concept": "种子 seed（Valuation.Seed）",
+   "name": "端",
+   "verdict": "revise",
+   "issues": "墨经的「端」是几何之点，只是字面相同。fit 说「经关系中立或立场中立」到达全体，不对。Valuation.significant_iff 在连通、有活主张处给的是 生命意义 ↔ 种子 ∧ Neutral transmits ∧ Neutral shares，两种中立都要。另外两条路线各有自己的假设：significant_iff_held 是处处自身意义加立场中立；significant_of_transmits 要连通、每个立场都持有活主张，是处处自身意义加关系中立。孟子四端带着性善与只及于人的范围；端也容易读成会自己长大。",
+   "fix": "删去墨经「端」。「或」改为上面三条确切路线，各写明假设。not_carried 加：「端不自长：扩充是经中立规则到达，不是端自身发展；不预设性善」。补孟子「非所以内交于孺子之父母也」为证：恻隐之端不以用为条件，可与路线 (b) 对照。"
+  },
+  {
+   "concept": "自身意义 self-significance（Valuation.SelfSignificance）",
+   "name": "自爱",
+   "verdict": "revise",
+   "issues": "爱带情感正价，本簇自己因此拒绝用爱名意义，这里却用了，自相矛盾；用顾组合可得「自顾」。荀子子道的义被说错了：「仁者自愛」是三答里的最高一等（「可謂明君子矣」），排在子贡的「愛人」之上。这是等级，而且与理论相反：自身意义只是生命意义的一个组成。",
+   "fix": "名改为「自顾」，注：立场 p 计入其己区域内每个活者之延续（∀ c, own p c → living c → sig p c），读作想要自己的延续（AI 读法）。自爱降为对照词，以老子「自愛不自貴」为最佳用例（顾与位阶分开）。荀子子道用例改为相分：它把自爱排在爱人之上。"
+  },
+  {
+   "concept": "关系中立 relational neutrality（Neutral transmits）",
+   "name": "贯",
+   "verdict": "revise",
+   "issues": "先秦的「一以贯之」「一貫」说的是一个道理贯通全体，只是字面。结构上相合的只有程颢「手足不仁，氣已不貫」（宋）：相关而意义不传递，正是 Clearing.center_not_derived 中 related 成立而 ¬Within(own) transmits。可是本簇自己的 ru-chenghao-yi-ti 条把不贯映到耦合（Web.observed_level_couples、Flow.unselected_beyond_coupling，即 C10 感），前后不一致。贯还容易读成气或物的流动。",
+   "fix": "主证改为程颢一句（标层次「宋」与 AI 读法），先秦用例标为字面。注释加：「贯是意义的规则（意义沿每一已形成之关系及于活者），不是气或物的流动」。ru-chenghao-yi-ti 随之改成传递失败，两处一致。"
+  },
+  {
+   "concept": "立场中立与立场不变（Neutral shares／StandpointInvariant）",
+   "name": "无方",
+   "verdict": "revise",
+   "issues": "以方为立场，无方就组合成「没有立场」，而理论要的是每一立场、无一特权。单一中心的用例被映到 StandpointInvariant（∀ p q），例如天道无亲、苏辙第 49 章注「吾之所以善之者未甞渝」。它们只是一个立场上的全称（∀ t g, sig p t g，subTrue_total_iff 之形）。秋水「孰短孰長」被对到 Transfer.unordered，那是走法的无序，不是意义不分等级。",
+   "fix": "名改为「易地皆然」，据孟子「禹、稷、颜子易地则皆然」压缩，注明是新组合。义：从一立场成立者，换到任一立场亦成立（∀ p q）。若立场改名为处，可作「易处皆然」，并注明孟子原句说的是行为，这里只取其形式。无方降为对照词，秋水「是謂无方」作相合用例。单一中心的用例改归「一个立场上的延续条件」。「孰短孰长」改引 sig 取命题值。"
+  },
+  {
+   "concept": "中立 Neutral（边界中立）",
+   "name": "兼",
+   "verdict": "keep",
+   "issues": "结构相合：Neutral rule := ∀ i, rule i，与词汇表的边界中立一致。墨经「體，分於兼也」支持兼＝全体。整合者需要留意：C10 已定的「兼感」是合用耦合，结构是对成员取并，即 ∃ 成员；与这里的 ∀ 不同，同一个兼字可能误导。",
+   "fix": "不改。只在注释里加一句，与 C10 的兼感区分：兼感是成员之并，兼是对每一项成立。"
+  },
+  {
+   "concept": "有界规则 Within",
+   "name": "别",
+   "verdict": "revise",
+   "issues": "墨子的别是「視其國」而不视人之国：界内成立、界外不成立。这正是 bounded（Retaining.lean：sig 恰在区域内成立）与 bounded_rival，不是 Within。Within 对界外不置一词，且由 Neutral 推出（Neutral.within）。以别名 Within，Neutral.within 就读成「兼蕴含别」，与「兼以易別」相违。",
+   "fix": "别改名 bounded（有界意义：sig p t f ↔ region p f）及其对手定理：bounded_rival 读作「别：界内然、界外不然；有界外者则非延续条件」。Within 另给描述名，如「界内皆然」，不用别。Neutral.within 读作「兼则界内皆然」。"
+  },
+  {
+   "concept": "被持有 held（Valuation.Held）",
+   "name": "在己",
+   "verdict": "revise",
+   "issues": "荀子天论「君子敬其在己者，而不慕其在天者」里，在己是自己能力所及（控制），与在天相对，不是落在己区域之内，而供给闭包恰恰包含在天者。名说的是逐个主张的关系（某 p 的 own），Held 却是全局的 ∀ living c, ∃ p, own p c。",
+   "fix": "名改为「活皆在己」，注：凡活的主张皆落在某一立场之己区域。未被持有（Unheld）作「活有不在己者」。荀子天论不再作结构证据，「能力所及、与在天相对」列入 not_carried。"
+  },
+  {
+   "concept": "自我的边界 the boundary of a self（Boundary）",
+   "name": "畛域",
+   "verdict": "revise",
+   "issues": "小改。齐物论「爲是而有畛也」：畛由言谈中的「是」而生，是判断所划。理论的边界须对关系封闭且含中心（ClosedUnder rel region ∧ region f），从闭包到整体都可容许。两者都承认边界是划出来的、是索引，结构上部分相合，但封闭性在古文里没有。",
+   "fix": "not_carried 加：「畛由言之『是』而生；理论之边界须对关系封闭、含中心，可容许者从闭包（最小）到整体（最大）」。名不改。"
+  },
+  {
+   "concept": "前设 the presupposition（SignificantWithin）——应作「预设」",
+   "name": "畛内之顾",
+   "verdict": "revise",
+   "issues": "中文版术语是「预设」，不是「前设」（词汇表：presupposition；step of invariance → 预设；不变的一步）。概念说「超真时是延续条件」，而 presupposition_scopes 证明的是超真 ↔ ∀ t g, sig p t g，即该立场上的延续条件，不是 Unrestricted。名里没有立场：预设是自 p、对 p 的中心边界而言的。",
+   "fix": "概念改为：「预设：自立场 p，其中心边界内一切之延续皆有意义（SignificantWithin sig p region）；沿关系次真即闭包上的意义（路线 (b)）；超真即该立场上的延续条件（presupposition_scopes）」。名可保留，注释写明「自其中心之立场」。"
+  },
+  {
+   "concept": "边界不变 boundary invariance（不变的一步，BoundaryInvariant）",
+   "name": "无己",
+   "verdict": "revise",
+   "issues": "与已定的己（己区域）组合，无己就是「没有己区域」，意思错了：不变的一步保留预设，只让它不随划法而变。逍遥游的「至人无己」紧接「彼且惡乎待哉」，说的是不依待，与理论相反（一切有所待，C02 已定「待」）。在宥「大同而无己。无己，惡乎得有有」近于去己、去有，而去己正是本簇自己分开的另一回事。秋水「大人无己。』約分之至也」的上文是「知是非之不可爲分」，读成「分界的划法不再起作用」是 AI 的过度读法。概念部分：boundaryInvariant_iff_all 还要整体可容许、预设次真；与立场不变等价（boundaryInvariant_iff_standpointInvariant）要中心覆盖且每个立场的预设都次真。",
+   "fix": "名改为「不易乎畛」，仿乾文言「不易乎世」，义为不随畛的划法而易。概念写明两条定理的假设，标签用「不变的一步」，并注「定范围，不排序」。无己降为对照词，相分处列出不依待（逍遥游）与去己、去有（在宥），约分的读法标为 AI 读法。"
+  },
+  {
+   "concept": "由意义读出的相关（Frame.relevance）——应作「从意义读出的正面相关」",
+   "name": "皆顾之活",
+   "verdict": "revise",
+   "issues": "Frame.relevance 有三个合取：living c ∧ realized s c ∧ ∀ p, sig p (step c) (formation c)。名里没有「已实现」，fit 却说名包含了已实现。它与仁的备选「活皆有顾」几乎同字，两概念差的正是已实现这一项。概念标签用的是过时的「生生之意义」。",
+   "fix": "名改为「已然皆顾之活」，「已然」表已实现，注：已实现的活内容，其延续从每一立场皆有意义。概念标签改为「从意义读出的正面相关」，「生生之意义」改为「生命意义」。与生命意义的新名（如「活无不顾」）并列时，注明两者只差「已然」，在条件下互相刻画（livingSignificance_relevance_iff）。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "chengyi-wuwang-zhengli",
+   "verdict": "revise",
+   "issues": "exists_law_iff 说的是：某个确定的律容纳一段历史，恰在这段历史一致之处。这是从历史读出动力学律的陈述，拿来对比程颐先在的「正理」（一个规范标准）是越层。已定的理（D26）是结构与变化之律的模型，不是正理。act_unselected、consequence_unselected 两处（顾而失之）正确。records 用了旧 id，读法用了旧标签。",
+   "fix": "删去 exists_law_iff，相分改说：「理论没有先在的规范标准；意义是给定的参数，动力学不决定它（Web.significance_undetermined）；理论之理（D26）是规律的模型，不是正理」。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。读法中「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "daxiang-junzi-yi",
+   "verdict": "revise",
+   "issues": "「厚德載物」承载万物，结构上是支持（C02 足／Supported）与实施的保存，不是意义。读法拿它与无弃（Unrestricted）并读，混同了支持与意义。Becoming.Unrestricted 在读法里没有实际作用。",
+   "fix": "删去与无弃的并读和 Becoming.Unrestricted，names_used 去掉无弃。若要保留本簇的一点，可改为：「载物是支持与实施；理论把意义与支持、实施分开」。"
+  },
+  {
+   "id": "wenyan-side",
+   "verdict": "revise",
+   "issues": "Becoming.Hexagram.waxWane_complement 列入 declarations，读法里却没有用到。「条件本身不排序（Transfer.unordered）」引的是一个构造世界里的见证，一般陈述是 Web.mixed_iff_adds。「仁」与旧标签「生生之意义」同用。records 用了旧 id。",
+   "fix": "删去 Hexagram.waxWane_complement。「不排序」加引 Becoming.Web.mixed_iff_adds，Transfer.unordered 注为见证。「生生之意义（仁）」改为「生命意义」，若仁改名则随之改。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "xici-mao-bo-yong-zhong",
+   "verdict": "revise",
+   "issues": "「茅之为物薄而用可重」把价值放在用上，这是以对中心之用为界的意义，即路线 (b)（bounded_closure_iff，爱马式），不是理论里「意义以立场为索引」的相合。「意义不分等级」来自 sig 取命题值（Becoming.Valuation），不来自 Transfer.unordered；后者说的是两个走法混合而无序。records 用了旧 id。",
+   "fix": "改为定域：「以用定重，是路线 (b) 的顾；理论把它与延续条件分开（Becoming.bounded_closure_iff）」。「不分等级」改引 Becoming.Valuation，删去 Transfer.unordered。保留 widens_iff_retains_adds 作薄与重的唯一比较。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "xici-ji-zhi-zhe-shan",
+   "verdict": "revise",
+   "issues": "「繼之者善也」的继之者是继此一阴一阳之道者，「凡继者都被正面看待，无所弃」这个全称不在原文里。「排序在于 C 与不变性的步骤」与章节相违：C 是唯一排序的前提，不变的一步不排序。Transfer.unordered 是见证。records 用了旧 id，读法用了旧标签。",
+   "fix": "读法改为：「系辞以道之延续为善（给正价），理论只给意义」，删去「凡继者无所弃」。排序句改为：「排序只在 C；不变的一步定范围，不排序」。加引 Web.mixed_iff_adds。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义（仁）」改为「生命意义」。"
+  },
+  {
+   "id": "xici-jixiong-shide",
+   "verdict": "revise",
+   "issues": "得失对到保留与增加，结构正确，但 C15 已定「无丧／有得」名 retains／adds，本条没有用这对名。names_used 列了方，读法没有用。",
+   "fix": "得失改用 C15 的「无丧／有得」。names_used 去掉方。若 C15 已收此句，两条合为一条，以免重复。"
+  },
+  {
+   "id": "wangbi-fu-yi-you-wei-xin",
+   "verdict": "revise",
+   "issues": "「異類未獲具存」的具存说的是存在，理论的陈述却是一个部分保留有意义者与否、终结是否被一个中心的有界之顾许可。王弼的出路「以无为心」「以无为本」是一个先在的根据，属于相分。所以 agreement 太强。records 用了两个旧 id。",
+   "fix": "kind 改为 scope。读法把具存改为：「一个以有为界的中心之顾所许可的终结」。「以无为本」移入相分（先在根据）。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance；held-lives-g0-is-centering → living-significance-on-held-lives。"
+  },
+  {
+   "id": "kongshu-wei-er-bu-zai",
+   "verdict": "revise",
+   "issues": "Pool.difference_belongs_to_the_joint 与 Dependence.differenceOnlyTogether_iff 说的是：对一个损失（依存断开）的差别由谁造成。它们不是关于功（成就）的。而且结论依构形而定：只有一个其他汲取者时，第一个汲取者造成差别；有两个时，损失被多重决定，它不造成差别。「功属于共同」不是一般事实。「应当不宰需要 C 与不变性的步骤」也犯了排序句的错误。records 用了旧 id。",
+   "fix": "kind 改为 scope。读法改为：「在有其他汲取者的构形中，差别可以不属于单一部分，所以不居不是一般地错」，并注明这里说的是对损失的差别，不是功。规范句改为：「应当不宰需要 C（排序）；不变的一步只定范围」。records：axiom-decomposition → continuation-condition-decomposition。"
+  },
+  {
+   "id": "lao-62-he-qi-zhi-you",
+   "verdict": "revise",
+   "issues": "「何弃之有」在本章是道、圣人一方之事，王弼第 27 章注说的也是圣人不立标准。这是一个立场上的全称（∀ t g, sig p t g），不是 Unrestricted 的 ∀ p。「排序在于 C 与不变性的步骤」与章节相违。Transfer.unordered 只是见证。王弼第 27 章注这个片段没有自己的 record id。records 用了旧 id，读法用了旧标签。",
+   "fix": "kind 改为 scope。加一句：「老子之无弃是自圣人一立场的全称（Becoming.subTrue_total_iff 之形），到延续条件还需立场不变（无方）」，以 mozi-tian-yu-qi-sheng 的处理为准。排序句改为「排序只在 C；不变的一步不排序」。第 27 章注片段补 record id，或拆为单独一条。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "suzhe-33-ke-ji-fu-xing",
+   "verdict": "revise",
+   "issues": "相分的方向是对的，但「复不是一般的规律」说过头了：无损之律在有限构形内必然返回（Becoming.Branching.Lossless.returns），返回在其范围内是一般规律。真正的相分是没有一个先在的完满之性可复归。读法用了旧标签。",
+   "fix": "改为：「返回在无损而构形有限处是规律（Branching.Lossless.returns）；所分歧者是先在的完满之性，不是返回本身」。「生生之意义」改为「生命意义」。不变的一步之名若改（不易乎畛），随之改。"
+  },
+  {
+   "id": "lao-05-tian-di-bu-ren",
+   "verdict": "revise",
+   "issues": "本条自己说明老子否定的仁是偏爱与造立施化，而本簇以仁名理论的生命意义。这本身就是反对以仁为名的证据，应在名的层面处理，而不是在条目里化解。Transfer.unordered 只是见证。records 用了旧 id，读法用了旧标签。",
+   "fix": "仁改名后，「理论的仁」随之改为新名，本条作为仁之名的相分证据之一。加引 Web.mixed_iff_adds。records：axiom-decomposition → continuation-condition-decomposition。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "suzhe-44-gui-shen-wang-wo",
+   "verdict": "revise",
+   "issues": "forgetting_unrelates 说的是：把一个部分送到常值的律，得到一个矩形的整体。这是描述上的不相关，与「忘我」只是「忘」字相同。records 中的 separation-loses-the-relation 依附于这条声明。贵身对到以身为界的预设，用 boundaryInvariant_iff_all 与 without_presupposition，都正确。",
+   "fix": "删去 Becoming.forgetting_unrelates 与 separation-loses-the-relation。records：axiom-decomposition → continuation-condition-decomposition。"
+  },
+  {
+   "id": "suzhe-64-yu-er-bu-yu",
+   "verdict": "revise",
+   "issues": "「活」被释为「不削弱所需条件」，实际是活动且不使任何依存（常为他者的）落到所需之下。同一条里，欲既被映到活动与汲取，又被映到自身意义（S0），这是两个结构。「不害于理」没有对应，而已定的理是规律的模型。records 用了旧 id，读法用了旧标签。",
+   "fix": "活的释义按名「活」的新注改。欲只取活动与汲取一义；另起一句：「欲若读作想要自身延续（AI 读法），则是自身意义」。「不害于理」列入剩余，标为未对应。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "lao-20-shan-e-xiang-qu",
+   "verdict": "keep",
+   "issues": "结构正确：mixed_iff_adds 是一般陈述，Transfer.unordered 是见证（docstring 原有「排序需要一个度量」），UnderminingOn.not_retains_unrestricted 与 Ranking.possible_extends_iff 的使用也准确。善恶之分落在 C 与削弱之事实上，与章节一致。records 无旧 id。",
+   "fix": "不改。无弃若改名，names_used 随之替换。"
+  },
+  {
+   "id": "lao-49-yi-bai-xing-xin-wei-xin",
+   "verdict": "revise",
+   "issues": "「以百姓心为心」是圣人一方计入每一立场所计入者，即从各 p 到圣人的单向 shares，仍有一个中心。significant_iff_held 要的是一切立场对之间的立场中立。「把仁读成各自爱的汇合加无方，不读成圣人一人之爱」读过头了。与合用耦合（RO）的部分是选择层，没有问题。records 用了旧 id，读法用了旧标签。",
+   "fix": "kind 改为 scope。读法改为：「圣人计入每一立场之心（单向的 shares），到无方还需各立场之间的立场中立」。records：held-lives-g0-is-centering → living-significance-on-held-lives。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "lao-49-bu-shan-yi-shan-zhi",
+   "verdict": "revise",
+   "issues": "苏辙「善不善在彼吾之所以善之者未甞渝也」说的是一个立场（吾）对一切对象不变，即 ∀ g，不是 StandpointInvariant 的 ∀ p q。Transfer.unordered 只是见证。records 用了旧 id。",
+   "fix": "把 StandpointInvariant 换为 Becoming.subTrue_total_iff，表述为「吾一立场上的延续条件」，并注明到每一立场还需立场不变。加引 Web.mixed_iff_adds。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "lao-56-bu-ke-de-er-gui-jian",
+   "verdict": "revise",
+   "issues": "「不可得而害」断言玄同者不受害，与理论相分：条件之下损失仍然发生（Clearing.clearer_loses_dweller）。相合只限于「不分贵贱」。玄同者是一个主体的状态，不是各立场之间的不变，所以 StandpointInvariant 不合。Transfer.unordered 只是见证。",
+   "fix": "加相分：「不可得而害」，引 Becoming.Clearing.clearer_loses_dweller。删去 StandpointInvariant，改说：「从任何中心作出的亲疏贵贱彼此不一（centers_disagree）」。保留「为天下贵」的剩余。"
+  },
+  {
+   "id": "lao-72-zi-ai-bu-zi-gui",
+   "verdict": "revise",
+   "issues": "要点是贵（位阶，零和）与意义（不分等级）分开。不分等级来自 sig 取命题值，不来自 Transfer.unordered。records 用了旧 id，读法用了旧标签。",
+   "fix": "Transfer.unordered 换为 Becoming.Valuation（sig 取命题值）。records：held-lives-g0-is-centering → living-significance-on-held-lives。「生生之意义」改为「生命意义」。自爱若改名自顾，随之改。"
+  },
+  {
+   "id": "lao-79-tian-dao-wu-qin",
+   "verdict": "revise",
+   "issues": "「天道无亲」是一个立场（天道）不偏亲，即 ∀ g，不是 StandpointInvariant 的 ∀ p q；retains_agree 是条件下的定理，不对应这个无亲。后半「常与善人」的相分正确。records 用了旧 id，读法用了旧标签。",
+   "fix": "无亲改为「天道一立场上不偏（subTrue_total_iff 之形），到每一立场还需立场不变」，删去 StandpointInvariant 与 retains_agree 的对应。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "wangbi-07-wu-si",
+   "verdict": "revise",
+   "issues": "结构正确：喂养闭包、Overshoot.ends_through_feeder、Downstream.one_way 的定域都准确。只有 records 用了旧 id。",
+   "fix": "records：closure-verdict-meets-axiom → closure-verdict-meets-continuation-condition。"
+  },
+  {
+   "id": "ru-lunyu-shu",
+   "verdict": "keep",
+   "issues": "结构正确：恕是经由归并的选择，与立场中立（shares）分开，这一区分准确。records 无旧 id。",
+   "fix": "不改。无方、顾若改名，names_used 随之替换。"
+  },
+  {
+   "id": "ru-lunyu-ji-yu-li-er-li-ren",
+   "verdict": "revise",
+   "issues": "立人是实施（使他人立起来），不是顾（意义），读法把「立人」映到对他人之顾，混同了实施与意义。「能近取譬，可谓仁之方」中的方是方法，与立场之名方相撞，names_used 却列了方。records 用了旧 id，读法用了旧标签。",
+   "fix": "读法改为：「欲立是想要（自身意义的 AI 读法）；立人是实践，理论分开意义与实施」。names_used 去掉方，并注「仁之方＝方法」。records：held-lives-g0-is-centering → living-significance-on-held-lives。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "lunyu-ai-ren",
+   "verdict": "revise",
+   "issues": "结构上的定域正确：爱的正价与只及于人的范围不被理论之顾带上。records 用了旧 id，读法用了旧标签。",
+   "fix": "records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」。仁若改名，「理论之仁」随之改。"
+  },
+  {
+   "id": "zhongyong-shi-zhu-ji-er-bu-yuan",
+   "verdict": "revise",
+   "issues": "「所求乎子以事父」说的是要求（行为规则）在角色之间互换不变，不是意义在立场之间不变；对到 StandpointInvariant 只是形式上的类比。boundaryInvariant_iff_standpointInvariant 的假设（各立场预设次真、中心覆盖）没有写出。records 用了旧 id。",
+   "fix": "标为类比：「要求在角色间不变，形式近于 StandpointInvariant（从一方成立则从另一方成立），对象却是要求，不是意义」，并写明那条等价定理的假设。records：axiom-decomposition → continuation-condition-decomposition。"
+  },
+  {
+   "id": "zhongyong-da-de-bi-de",
+   "verdict": "revise",
+   "issues": "相分正确。只有 records 用了旧 id，读法用了旧标签。",
+   "fix": "records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "zhongyong-jin-xing",
+   "verdict": "revise",
+   "issues": "尽性是实现与成全（与「赞天地之化育」相连，属 C06 化育），不是意义的传递，读法把实现的次第映成意义的两条路线。两条路线本身的假设写得准确。records 用了两个旧 id，读法用了旧标签。",
+   "fix": "加一句：「尽性是实现与实践，与理论中意义自自身到一切的路线只是形式相似；理论分开意义与实现」。records：held-lives-g0-is-centering → living-significance-on-held-lives；axiom-decomposition → continuation-condition-decomposition。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "ru-mengzi-tui-en",
+   "verdict": "keep",
+   "issues": "结构正确：推是选择的扩大（Web.SelectsThrough.widen），不是关系中立，这一区分准确；喂养闭包的范围也准确。records 无旧 id。",
+   "fix": "不改。贯、仁若改名，names_used 随之替换。"
+  },
+  {
+   "id": "ru-mengzi-si-duan-kuo-chong",
+   "verdict": "revise",
+   "issues": "结构正确：significant_iff 要两种中立；扩充是条件，不是端自身的性质。只有读法用了旧标签。",
+   "fix": "读法中「生生之意义」改为「生命意义」，仁若改名随之改。"
+  },
+  {
+   "id": "mengzi-wo-gu-you-zhi",
+   "verdict": "revise",
+   "issues": "相分正确（固有之性与表示上的给定）。records 用了旧 id，读法用了旧标签。",
+   "fix": "records：held-lives-g0-is-centering → living-significance-on-held-lives。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "mengzi-xin-zhi-suo-tong-ran",
+   "verdict": "revise",
+   "issues": "相分正确：同然作为事实断言与作为条件。孟子的「理义」与已定的理（D26，规律之模型）同字异义，没有注明。records 用了旧 id，读法用了旧标签。",
+   "fix": "加注：「孟子之理义是规范，不是理论之理（D26）」。records：axiom-decomposition → continuation-condition-decomposition。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "ru-mengzi-qinqin-renmin-aiwu",
+   "verdict": "revise",
+   "issues": "gap 的方向与 Web.Retains 相反。Retains sig p l l' 的定义是 l 保留 l' 沿途所容纳的有意义者，gap 里的 GradedRetains sig p l l' 却写成「l' 保留 l 所保留者」。(1) 不需要 Unrestricted：把意义限制到任一层，由 Becoming.Web.Retains.of_fewer 直接得到。「相异层」没有定义。Transfer.unordered 只是见证。仁只是三层之一，这一张力应在名的层面处理。",
+   "fix": "GradedRetains sig p l l' 改为：在 level p 最低的相异层上，l 保留 l' 沿该层所容纳的有意义者，与 Retains 的参数次序一致。定义相异层：使 l、l' 在 level p = i 的形成上所容纳者不同的最小 i。(1) 删去 Unrestricted 假设，引 Becoming.Web.Retains.of_fewer。保留 (2) 作实质命题。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "xunzi-tian-jun",
+   "verdict": "keep",
+   "issues": "结构正确：汇合（pool_adds、pool_closes_gap）与统治中心分开，center_not_derived 用得准确。records 无旧 id。",
+   "fix": "不改。我、无方若改名，names_used 随之替换。"
+  },
+  {
+   "id": "xunzi-yu-bu-dai-ke-de",
+   "verdict": "revise",
+   "issues": "「意义层与选择层分开」是表示上的事实：sig 是给定的字段，独立于可得与否。它不是定理，kind 作 agreement 并引 SelfSignificance，会显得像有定理支持。records 用了旧 id，读法用了旧标签。",
+   "fix": "kind 改为 scope，或注明：「这是表示上的分层（sig 为给定字段），不是定理」。records：held-lives-g0-is-centering → living-significance-on-held-lives。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "zhoudunyi-wu-yu",
+   "verdict": "revise",
+   "issues": "「无欲失去种子」引 seed_is_needed（一个没有种子的模型），不够直接。更直接的是投影：Significant 推出每一立场的 SelfSignificance（由 significant_iff_held 的方向可得），所以无欲若读作取消自身意义，在有己区域活者之处与生命意义直接矛盾。周敦颐的欲是私欲，读成自身意义是 AI 读法，没有标出。records 用了旧 id，读法用了旧标签。",
+   "fix": "改引投影：Valuation.significant_iff_held（生命意义 ⇒ 处处自身意义）。注明：「欲读作自身意义是 AI 读法；周敦颐之欲为私欲，若取私欲义则相分减弱」。records：held-lives-g0-is-centering → living-significance-on-held-lives。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "ru-zhangzai-min-bao-wu-yu",
+   "verdict": "keep",
+   "issues": "结构正确：Flow.region_not_a_cut、boundary_crossed、descent_reaches 的对应准确；「沿全关系，预设恰是该立场上的延续条件」也写明了立场。records 无旧 id。",
+   "fix": "不改。无己改名后，读法中的「无己」随之替换。"
+  },
+  {
+   "id": "ru-chenghao-yi-ti",
+   "verdict": "revise",
+   "issues": "「手足不仁，氣已不貫」以不贯名不仁，本簇以贯名关系中立。结构上，不贯是相关而意义不传递，正是 Clearing.center_not_derived 中 related ∧ ¬Within(own) transmits。读法却映到耦合（Web.observed_level_couples、Flow.unselected_beyond_coupling），与名不一致。records 用了两个旧 id，读法用了旧标签。",
+   "fix": "把耦合的两条声明换为 Becoming.Clearing.center_not_derived 与 Becoming.Valuation.transmits：「相关而意义不出己区域：贯断于此」。records：axiom-decomposition → continuation-condition-decomposition；selection-through-registration 随耦合声明一起删去（若保留则改为 selection-through-couplings）。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "chengyi-ren-xing-ai-qing",
+   "verdict": "revise",
+   "issues": "相分正确。records 用了旧 id，读法用了旧标签。",
+   "fix": "records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」，仁若改名随之改。"
+  },
+  {
+   "id": "wangyangming-cheng-xiao-zhi-xin",
+   "verdict": "revise",
+   "issues": "传习录的「条件」指节目，即「温凊、定省之类，有许多节目」，是孝行的实践细目，不是父母延续所依赖的条件。读法把「动机发出实践」映到 Flow.valuing_reaches_source（意义到达传入者）与 Valuation.transmits，只是「条件」一词字面相同。定域针对的是阳明没有说过的主张（条件由心产生）。",
+   "fix": "改写为：「阳明说诚孝之心发出温凊定省等节目：动机发出实践。理论分开规范依据、动机与实施；『条件』只是字面相同」。删去 valuing_reaches_source 与 transmits，不再作结构证据，或改标为字面对应；kind 保留 scope。"
+  },
+  {
+   "id": "wangyangming-xin-zhu-zai",
+   "verdict": "revise",
+   "issues": "相分正确（单一主宰中心）。records 用了旧 id。",
+   "fix": "records：testing-within-registration → testing-within-couplings。"
+  },
+  {
+   "id": "wangyangming-zhi-shan-ben-ti",
+   "verdict": "revise",
+   "issues": "相分正确。只有读法用了旧标签。",
+   "fix": "读法中「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "daizhen-sui-ren-zhi-sheng",
+   "verdict": "revise",
+   "issues": "「遂」是使之成就，属实施与实现，不是意义。结构上相合的是「戕人之生而不顧」（不顾＝sig 不成立）与 center_not_derived，这部分准确。读法把「亦遂人之生」直接当作对他人之活的顾。records 用了旧 id，读法用了旧标签。",
+   "fix": "读法改为：「相合在顾与不顾：不顾他人之生即 sig 不成立；遂是实现，理论分开意义与实现」。records：held-lives-g0-is-centering → living-significance-on-held-lives。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "zhuangzi-ai-qin-ming",
+   "verdict": "revise",
+   "issues": "结构正确：superTrue_iff、with_fixed_boundary 用得准确。只有 records 用了旧 id。",
+   "fix": "records：axiom-decomposition → continuation-condition-decomposition。"
+  },
+  {
+   "id": "zhuangzi-tong-ze-wu-hao",
+   "verdict": "revise",
+   "issues": "「同則无好」出自大宗师坐忘，前文是「離形去知，同於大通」。按本簇自己的分法，这是去己（取消己与前设），会落到 Clearing.without_presupposition，不是相合。「无好」是无好恶，不是走法的无序（Transfer.unordered、mixed_iff_adds）。records 用了旧 id。",
+   "fix": "kind 改为 divergence（或 scope）：同于大通经离形去知而得，属去己，引 Becoming.Clearing.without_presupposition。删去 Transfer.unordered 与 mixed_iff_adds 作「无好」的根据，改为：「条件给意义，不给好恶」。records：axiom-decomposition → continuation-condition-decomposition。"
+  },
+  {
+   "id": "zhuangzi-jian-ai-wu-si",
+   "verdict": "revise",
+   "issues": "结构正确：subTrue_empty_iff、Neutral.within、without_presupposition 用得准确。records 用了两个旧 id，读法用了旧标签。",
+   "fix": "records：axiom-decomposition → continuation-condition-decomposition；one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "zhuangzi-qiushui-yi-dao-guan-zhi",
+   "verdict": "revise",
+   "issues": "「物无貴賤」是不分等级，对应 sig 取命题值加 Unrestricted，不对应 Transfer.unordered。boundaryInvariant_iff_standpointInvariant 与 unrestricted_of_standpointInvariant 的假设（中心覆盖、各立场预设次真）没有写出。records 用了旧 id，读法用了旧标签。",
+   "fix": "Transfer.unordered 换为 Becoming.Valuation（命题值）与 Becoming.Unrestricted。写明两条定理的假设。records：axiom-decomposition → continuation-condition-decomposition。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "zhuangzi-yi-ji-yang-yang-niao",
+   "verdict": "keep",
+   "issues": "结构正确：顾而失之落在模型的归并（selects_not_right_of_parted），顾与以何养分开，准确。records 无旧 id。",
+   "fix": "不改。仁若改名，names_used 随之替换。"
+  },
+  {
+   "id": "zhuangzi-tong-yu-ji-wei-shi",
+   "verdict": "keep",
+   "issues": "结构正确：以同于己为是，是以自身为界的评价，对到 centers_disagree 与 bounded_rival 准确。records 无旧 id。",
+   "fix": "不改。方、我、别若改名，names_used 随之替换（「换一个方」改为「换一个处」）。"
+  },
+  {
+   "id": "zhuangzi-shendao-qu-ji",
+   "verdict": "revise",
+   "issues": "结构正确：去己与无己分开，without_presupposition 与 seed_is_needed 用得准确。records 用了旧 id，读法用了旧标签。",
+   "fix": "records：axiom-decomposition → continuation-condition-decomposition。「生生之意义」改为「生命意义」。无己改名后随之替换。"
+  },
+  {
+   "id": "mozi-tianzhi",
+   "verdict": "revise",
+   "issues": "以兼易别是范围之扩，即采取不变的一步；它不是 C 的排序，而读法暗含了排序句的错误。records 用了旧 id，读法用了旧标签。",
+   "fix": "读法中凡把以兼易别归于 C 处，改为：「从别到兼是不变的一步（定范围，其根据开放），不是排序」。records：axiom-decomposition → continuation-condition-decomposition。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "mozi-tian-yu-qi-sheng",
+   "verdict": "revise",
+   "issues": "结构正确，而且是本簇对单一中心处理得最好的一条：天之欲是一个立场上的延续条件，到每一立场还需立场不变。lao-62、lao-79、lao-49 等条应照此办理。records 用了旧 id，读法用了旧标签。",
+   "fix": "records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "verdict": "revise",
+   "issues": "结构正确：视人若视其是跨边界不变，引用的两条定理与 mixed_iff_adds 都对。只有 records 用了旧 id。",
+   "fix": "records：axiom-decomposition → continuation-condition-decomposition。"
+  },
+  {
+   "id": "mozi-jian-yi-yi-bie",
+   "verdict": "revise",
+   "issues": "别（视其国而不视人之国）是界内成立、界外不成立，即 bounded，不是 Within。以 Neutral.within 说「中立规则蕴含其有界版本」，在别＝Within 时就读成兼蕴含别，与「兼以易別」相违。「兼以易別作为更好的选择需要 C」也不对：选择规则是不变的一步（根据开放），C 只排序走法。records 用了两个旧 id。",
+   "fix": "别只对到 Becoming.bounded 与 bounded_rival，删去 Neutral.within。「以兼易别」改为「不变的一步，其根据开放，不是 C 的排序」。records：axiom-decomposition → continuation-condition-decomposition；one-axiom-yields-g0 → continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "daqu-ai-bu-jia-hou",
+   "verdict": "revise",
+   "issues": "核心相合正确：爱不加厚，对应 sig 取命题值（Valuation）。「相混的部分无序（Transfer.unordered）」在这里无关。「养臧万倍」是对照料的标量度量，属实施，理论没有这样的标量。records 用了旧 id。",
+   "fix": "删去 Transfer.unordered。加一句：「万倍之养是实施的量，理论不作标量的最大化」。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "daqu-ai-shang-shi-hou-shi",
+   "verdict": "revise",
+   "issues": "后世指尚未出生者，即尚未形成的形成。最近的现有陈述是 Preemption.not_undermining_yet_loses：尚未形成者在条件下也算在内。gap 可用但范围小：(1) 由 Neutral.within 立得，实质在 (2)。records 用了旧 id。",
+   "fix": "加引 Becoming.Preemption.not_undermining_yet_loses，读作「尚未形成者亦被计入」。gap 注明 (1) 立得、实质在 (2)。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "daqu-ai-ren-bu-wai-ji",
+   "verdict": "revise",
+   "issues": "结构正确：自身意义在全称之内，significant_iff_held 与 seed_of_selfSignificance 用得准确。records 用了旧 id，读法用了旧标签。",
+   "fix": "records：held-lives-g0-is-centering → living-significance-on-held-lives。「生生之意义」改为「生命意义」。自爱、仁若改名随之改。"
+  },
+  {
+   "id": "huishi-li-wu",
+   "verdict": "revise",
+   "issues": "结构正确（feeding_unrestricted_of_common）。读法说「本簇以仁名之」，并用了旧标签；Transfer.unordered 只是见证。",
+   "fix": "「生生之意义」改为「生命意义」。「以仁名之」随仁的改名改写。加引 Web.mixed_iff_adds。"
+  },
+  {
+   "id": "jingxia-bu-zhi-qi-suo-chu",
+   "verdict": "revise",
+   "issues": "「意义不需要被顾者在耦合闭包之内」是表示上的事实（sig 独立于耦合），不是定律。用例「不知其所處」碰到顾的知觉义，名「顾」的 not_carried 应排除这一义。records 用了旧 id。",
+   "fix": "注明：「意义与耦合的独立是表示上的事实；三条 unselected 定理只限制选择」。records：selection-through-registration → selection-through-couplings。"
+  },
+  {
+   "id": "jingshuo-ai-min-fei-yong-min",
+   "verdict": "revise",
+   "issues": "路线 (b) 与延续条件之分对得很准（爱马式）。但 gap 后半近乎定义：在 Unrestricted sig 下，p 对 g 的顾按假设就恒成立；以 shares 为源的一半，加上 g 的自身意义，也是立得。实质只在前半：路线 (b) 的顾随供给而变。records 用了旧 id。",
+   "fix": "gap 改为：「给一个 Flow 与一个运行，在第 t 步之后 g 不再喂养 p 而 g 仍是活的，使 sig_b p 在 t 之后不顾 g（由 Becoming.bounded_closure_iff）」，删去 Unrestricted 一半。records：closure-verdict-meets-axiom → closure-verdict-meets-continuation-condition。"
+  },
+  {
+   "id": "simafa-ren-ben-yi-zhi",
+   "verdict": "revise",
+   "issues": "「以仁为本」立一个先在的根据，没有标出。「无弃不许可任何终结」是许可与排序的说法，而条件本身不排序：条件下终结有其损失（Web.Retains.not_added、Clearing.clearer_loses_dweller），许可与否要 C 与实践承诺。no_rule_decides_joint（共同可保持不由各自判定决定）与「权」的关联很弱。Transfer.unordered 只是见证。读法用了旧标签。",
+   "fix": "改为：「在延续条件下终结有其损失；条件本身不排序，许可与否需要 C 与实践承诺」。「以仁为本」标为先在根据（相分）。删去 no_rule_decides_joint，或说明它与权的关系。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "hanfei-ai-zeng-zhi-bian",
+   "verdict": "revise",
+   "issues": "弥子瑕一事是同一个中心（君主）前后爱憎有变；centers_disagree 说的是两个不同中心彼此不一，结构不同。理论的 sig 不以评价者的时间为索引；评价者的顾变了，就是换了一个评价。records 用了旧 id，读法用了旧标签。",
+   "fix": "kind 改为 scope。读法改为：「同一立场先后取两条有界规则（Becoming.bounded region₁ 与 region₂），二者都与动力学相容（Web.significance_undetermined）」，删去 centers_disagree。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "zaahan-ku-mie",
+   "verdict": "revise",
+   "issues": "相分正确。records 用了旧 id，读法用了旧标签。",
+   "fix": "records：held-lives-g0-is-centering → living-significance-on-held-lives。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "amituo-ji-le",
+   "verdict": "revise",
+   "issues": "「顾不论苦乐，条件不排序（Transfer.unordered）」：不论苦乐来自 sig 不是正价（Valuation、词汇表），Transfer.unordered 是走法的无序。records 用了旧 id，读法用了旧标签。",
+   "fix": "Transfer.unordered 换为 Becoming.Valuation（不是正价）。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "qixin-ai-yu-bu-ai",
+   "verdict": "revise",
+   "issues": "理论的二值 sig 本身就是一种分别（是或否），起信论对分别的批评同样落在它上面；只有在条件下（一切皆是），分别才不起作用。agreement 太强。records 用了旧 id，读法用了旧标签。",
+   "fix": "kind 改为 scope。加一句：「理论之顾是或否，本身是一种分别；只在延续条件下一切皆顾，分别才不起作用」。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "qixin-zhong-sheng-ke-min",
+   "verdict": "revise",
+   "issues": "结构正确（全称与 without_presupposition）。records 用了两个旧 id，读法用了旧标签。",
+   "fix": "records：one-axiom-yields-g0 → continuation-condition-yields-living-significance；axiom-decomposition → continuation-condition-decomposition。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "shengman-ru-lai-zang-fei-wo",
+   "verdict": "revise",
+   "issues": "「非我」是否认如来藏是我、众生、命、人（一个关于实体的主张）；center_not_derived 说的是评价中心不由依赖动力学固定。两者只是字面相近。真正的关系是：如来藏是一个先在的根据。",
+   "fix": "kind 改为 divergence（先在根据），删去 center_not_derived 作相合，或改为「理论同样不立实体之我，但不立先在之藏」。也可以移入讨论先在根据的簇。"
+  },
+  {
+   "id": "hanshan-wu-wo-jing-shi",
+   "verdict": "revise",
+   "issues": "「利生」是实践，不是意义。佛教的无我是否定我体，本簇在「我」的 not_carried 里自己也这么说；它与不变的一步只在「不以己界为断点」处可以类比。records 用了旧 id。",
+   "fix": "读法改为：「利生是实践；无我是否定我体，与不变的一步只是类比」。records：axiom-decomposition → continuation-condition-decomposition。"
+  },
+  {
+   "id": "huanxuan-da-de-yue-sheng",
+   "verdict": "revise",
+   "issues": "相分正确。records 用了旧 id，读法用了旧标签。",
+   "fix": "records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。「生生之意义」改为「生命意义」。"
+  },
+  {
+   "id": "zhuangzi-qiushui-wu-fang",
+   "verdict": "revise",
+   "issues": "「孰短孰長」是不分等级（sig 取命题值），不对应 Transfer.unordered。「大人无己。』約分之至也」的上文是「知是非之不可爲分」，读成「分界的划法不再起作用」是 AI 的过度读法。兼怀之怀带情感。同篇「不多仁恩」可作仁之名的相分，没有收。boundaryInvariant_iff_standpointInvariant 的假设没有写出。records 用了旧 id。",
+   "fix": "Transfer.unordered 换为 Becoming.Valuation。约分的读法标为 AI 读法，并引上文。补「不多仁恩」。写明等价定理的假设。records：axiom-decomposition → continuation-condition-decomposition。"
+  },
+  {
+   "id": "zhuangzi-li-she",
+   "verdict": "revise",
+   "issues": "匠伯不顾，是不把栎树当作材；树因此得存。这是以用为界的顾，即路线 (b)，不是「一个立场不计入其延续」。「皆物也，奈何哉其相物也」否认以物相物的特权，这部分相合准确。records 用了旧 id。",
+   "fix": "读法改为：「匠之顾是以用为界的顾（路线 (b)，Becoming.bounded_closure_iff）；不顾使树得存」，删去「这是本簇以顾名意义的先秦用例之一」。records：one-axiom-yields-g0 → continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "zhuangzi-tianxia-zi-wei-fang",
+   "verdict": "revise",
+   "issues": "「各爲其所欲焉以自爲方」的方是方术，即部分的学说，结构上是部分的读法（C08 观），不是意义的立场索引。Contextual.glues_iff_agree 与 Specker.no_whole 说的是读法拼合成整体，与方术之为部分读法相合，与立场无关。records 用了旧 id。",
+   "fix": "读法改为：「方术是部分的读法；各读法只在交界一致时拼合（Contextual.glues_iff_agree），各自一致仍可拼不成整体（Specker.no_whole）」，删去「以方名立场的用例」。records：contextual-registration → claims-shown-in-context。"
+  },
+  {
+   "id": "zhuangzi-qiwu-fei-bi-wu-wo",
+   "verdict": "revise",
+   "issues": "「不知其所爲使」是不知其动因之源（下文真宰），center_not_derived 是评价中心不由依赖固定，结构不同。「彼」可指上文喜怒哀乐等情态，作「他者」解是一种读法。「爲是而有畛」对到 Boundary 可以，但要注明封闭性。agreement 太强。",
+   "fix": "kind 改为 scope。删去「不知其所爲使」与 center_not_derived 的对应。注明「彼」的读法有争议。保留畛与 Boundary 的对应，并加「理论之边界须对关系封闭、含中心」。"
+  }
+ ],
+ "missing": [
+  "名：有界意义／路线 (b)（Becoming.bounded；bounded_closure_iff；爱马式的顾）。本簇多条用到，却没有名。建议别改名指 bounded，路线 (b) 作「依闭包之别」。",
+  "名：Within 的描述名（别改指 bounded 之后），例如「界内皆然」。",
+  "名：超真／次真（SuperTrue／SubTrue）、容许边界（admissible）、中心覆盖（∀ g, ∃ q, WithinClosure rel (center q) g）。本簇的等价定理都以这些为假设，却没有名。",
+  "名：连通（Connected）、根据（Grounds = Seed ∧ Neutral transmits ∧ Neutral shares）、未被持有（Unheld）。",
+  "名：侵蚀（UnderminingOn／UnderminingAt）。活的定义依赖它，应与 C05 互引。",
+  "段落：孟子「杨氏为我，是无君也。墨氏兼爱，是无父也」（RU2-S-MZ），以及戴震所引「楊子取為我…墨子兼愛…子莫執中」（RU2-S-V3Q01）。以己为界的规则（bounded）对中立规则（Neutral），执中是两规则之间取中，可作相分或定域。",
+  "段落：论语「克己復禮為仁」（RU1-S-LY）。仁以礼为规范，是仁之名的相分证据。",
+  "段落：庄子天運「至仁无親」（ZH1-S14，庚桑楚 ZH1-S23 同）、齊物論「大仁不仁」（ZH1-S02）、秋水「不多仁恩」（ZH1-S17）。三处否定仁，与天道无亲同构（一个立场不偏亲），是仁之名的相分证据。",
+  "段落：齊物論王倪「三者孰知正處」（ZH1-S02）。立场为索引、无一处有特权，可作「处」之名的主证。",
+  "段落：孟子孺子入井「非所以内交于孺子之父母也」（RU2-S-MZ）。恻隐不以用为条件，可与路线 (b) 对照，也是端的用例。",
+  "段落：韩非解老「仁者，謂其中心欣然愛人也」（CV1-S-JL）。仁带情感正价而「非求其報」，可作定域或相分。",
+  "段落：孟子「禹、稷、颜子易地则皆然」（RU2-S-MZ）。是「易地皆然」之名的出处，说的是行为，只取其形式。",
+  "段落：乾文言「不易乎世」（DS10）。是「不易乎畛」之名的仿式。",
+  "段落：庄子逍遙遊「彼且惡乎待哉？故曰：至人无己」（ZH1-S01）与在宥「大同而无己。无己，惡乎得有有」（ZH1-S11）。无己是不依待、去有，应立为相分条目。",
+  "段落：孟子「天作孽，犹可违；自作孽，不可活」（RU2-S-MZ）。是活的实际对举（违／活）。",
+  "段落：帛书甲本「無棄人物無棄財」（V130-LAO-MA）。无弃的版本异文，影响「及于任何东西」的范围。",
+  "段落：传习录「温凊、定省之类，有许多节目」（RU2-S-S10）。阳明条中「条件」一词的上下文（节目），应附在 wangyangming-cheng-xiao-zhi-xin 条。",
+  "（给整合者）AGENTS.md 与 brief 都写「what ranks lies in calling widening better (C) and in the step of invariance」，而章节第 26–28 行说 C 是唯一排序走法的前提，不变的一步定范围、不排序。逻辑上不变的一步是条件的一部分（unrestricted_iff_presupposed_along：条件 ⇔ 预设 ∧ 不变），所以「从条件到排序需要这一步」说不通。本簇无弃、xici-ji-zhi-zhe-shan、lao-62、kongshu、mozi-tianzhi、mozi-jian-yi-yi-bie 等条照前者写，应按章节统一。",
+  "（给整合者）presupposition_scopes 的超真一侧是该立场上的延续条件（∀ t g, sig p t g），不是 Unrestricted。各处说「超真即延续条件」时应写明立场。"
+ ]
+}

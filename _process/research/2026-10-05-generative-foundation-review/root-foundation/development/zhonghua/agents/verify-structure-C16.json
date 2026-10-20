@@ -1,0 +1,457 @@
+{
+ "cluster": "C16 推理、证明与方法",
+ "lens": "STRUCTURE。核对方法：用自建索引（解析全部 282 个 Becoming/*.lean 的 namespace，共 15,945 个声明）逐一查验名表与对应表所引的 83 个声明，全部存在，全名无误；读了 Derivation、Decidedness、Diagonal、Branching、Testing、Learning、Context、ContextArrivalTraces、MoveFormation、Description、SharedCodes、LastChange、Space、Openness、Population、Horizon、Laws 中相关的陈述。名表与对应表的 141 处引文都用冻结文本核对过，逐字相符；所引 ctpkg 记录编号都存在。对应表所引的结果记录中，有 5 个 id 已经改名，只剩跳转页：contextual-registration 今为 claims-shown-in-context，practical-judgment-g0-j 今为 practical-judgment-under-living-significance，registration-within-what-it-registers 今为 readings-within-what-they-read，sensitivity-is-the-least-registration 今为 sensitivity-is-the-least-coupling，testing-within-registration 今为 testing-within-couplings。牵涉 14 条对应，其中 9 条除此之外没有别的问题，这次修订纯属机械替换。来源是旧摘要：改名在 10 月 20 日 09:25 落地，RO 的 passages.json 已经用新 id。概念描述与规范章术语表对照过：五个词各只有一义，*条件*是关系项的角色，*律*是变化的规则，检查过的陈述是*定理*；地位只有四种。另对照了中文版 §10、§7.3，以及 HANZI §6、STYLE-ZH。",
+ "names": [
+  {
+   "concept": "前提（premise）与关系标记“故”",
+   "name": "故",
+   "verdict": "revise",
+   "issues": "(1) 一个名承载两个概念：前提（名词，辞之据）和关系标记“故”（由已立者推出的一步）。HANZI §6 要求每个标记只有一种结构。lean 列表还收了 relative_throughout，这正是本簇给“則”的结构，条目自相抵触。(2) 主证经上“故，所得而後成也”说的是使所论者“成”的条件，属存在层。规范章术语表里，这对应“条件”（他者所依存者这一角色，Web.Dependent），本簇也已用它释小故、大故。推导中的前提，规范章称“假设”（律的局部前提）。术语表规定这两个词各只有一义；把它们合于一个“故”字，抹掉了理论保留的区分。RO 又把“以說出故”之故读作一物之所以然（mobian-qi-ran-suo-yi-ran）。结果“故”在本簇与 RO 中同时承担前提、所以然、条件、连词所以四义。(3) closed_throughout 的前提是 rootHolds（基底处处成立），而理论不断言任何基底。所以经文中的“故”只能接在已检验的定理之后，或接在一个明示的設之内；fit 没有写出这一点。",
+   "fix": "拆成两条。(甲) 关系标记“故”：由已检验者，或由一个設之内已立者推出；lean 只列 Becoming.Derivation.closed_throughout、Becoming.Derivation.discharged_throughout，并写明理论无断言之基底，“故”前须是定理或在設中。(乙) 前提另立一条，以复词“辭之故”标出。主证用大取“夫辭以故生，以理長，以類行者也。”“立辭而不明於其所生，妄也。”与小取“以說出故”。经上“故，所得而後成也。”移出主证，在 not_carried 写明：此“故”是存在之条件，即规范章的条件与依存，见“無之必不然”一条，不取为前提。从 lean 列表删去 relative_throughout。"
+  },
+  {
+   "concept": "条件（condition）：明白陈述而不断言、一组定理在其下成立者",
+   "name": "設",
+   "verdict": "revise",
+   "issues": "(1) 概念标作“条件（condition）”，与规范章术语表的一义规定冲突。中文版 §10 原文：“条件是他者所依存者这一角色中的关系项，‘延续条件’是那个命题的固定名称，律的局部前提是它的假设”。前提卡 A 又说 LPO 等原则以“假设”出现。所以設所名的是假设，不是条件。(2) fit 建议中华本以“條件”作现代释语，这会与条件（关系项的角色）撞名，也会与“無之必不然”（Web.Dependent 中所依之条件）撞名。(3) 設与若的分工（为一组结果陈述，还是一次推导中引入）在 Lean 中没有结构差别：二者都是假设，一个是定理参数，一个是 Derives.premise。这只是用法约定，应如实写出。兼爱下“設以為二士”这条证的结构是对的：先陈述，在其下推论，不断言。",
+   "fix": "概念改为：“假设（hypothesis）：明白陈述而不断言、一组定理在其下成立者；延续条件（Unrestricted）这一地位亦属此；LPO 等原则在需要处作为假设”。删去“中华本行文中「條件」可作现代释语”，释语改用“假設”或“前提”。fit 加一句：“設與若之分是用法约定，Lean 中二者同为假设（定理的参数、Derivation.Derives.premise）”。"
+  },
+  {
+   "concept": "公理（axiom）：不经推导而断言为真者；本理论不断言任何公理",
+   "name": "不說而立",
+   "verdict": "revise",
+   "issues": "(1) 因明“此中宗等多言，名為能立。”中，“能立”指成立论题者，即宗、因、喻这套论证本身。那里的“立”是借论说而立，与本名中的“不說”正好相反，不能用来证“立”即不经推导而立辞。(2) fit 没有说出形式上的关键：Derivation 的基底（Derives.base）同样不经推导。基底与公理的分别在于，基底是给出的参数（設），而不是被断言的（立）。closure_throughout_iff 把一切所推出者条件化于基底，这才是“无公理”的形式部分。(3) Lean 的公理报告（propext、Quot.sound、Classical.choice）是逻辑公理一层，名与 fit 应一并说明。(4) 本名依赖“說”作推导之名。“說”与 STYLE 的节名冲突，若改名，本名须随之改。",
+   "fix": "因明“能立”一证移入 not_carried，写：“因明之立由宗因喻而立，与此名之立相反，不取”。fit 加：“Derivation 之基底是给出之参数，不是被立者：所推出者只在基底成立处成立（closure_throughout_iff），故以基底推理不是立公理；Lean 公理报告所查之 propext、Quot.sound、Classical.choice 是不說而立之逻辑原则，核心报告为空。”标注本名依赖“說”的定名。"
+  },
+  {
+   "concept": "律（law，作为地位标记）",
+   "name": "律",
+   "verdict": "revise",
+   "issues": "(1) 撞名，违反一名一概念。规范章 §10 规定 law 只有一义：变化的规则，即 Lean 的 `Law`，“从它所支配的历史读出”（shown_le_iff）；又说“检查过的陈述是定理”，地位只有四种：不加前提的定理、在所述前提下的定理、条件、读法。中文版以“律”名 `Law`，以“规律”写检查过的陈述。把“律”用作地位标记，正好撞上 `Law`；mapper 自己也注意到了。(2) 结构方向相反。“不以六律，不能正五音”：六律是用来校正五音的准，音不合律，错在音，音被校正。理论的律是从展开中读出的：域内一个不然者驳倒的是律（countermodel_excludes），不是事物。六律带进来的，正是 lens 要排除的东西：一个外加之准和制定它的人（展开之外的立法者）。“師出以律”是军令纪律，属单一中心。“上律天時”是取法于天，带先在之范。(3) 概念描述与规范章不合。“律无全局前提、定理有明示前提”不是规范章的分法：规范章里两者都叫定理，以有无前提分地位。",
+   "fix": "交整合者与规律一簇一并决定，建议：“律”留给 `Law`（变化的规则，从历史读出）；地位标记改用规范章的“不加前提的定理”与“在所述前提下的定理”（或其中华名），不另立“律”为地位。若整合者仍以“律”为地位，`Law` 须另取名；同时在 not_carried 写明“六律正五音之方向（以准校正物）与本名相反，不取”，并删去 fit 中“不依演奏者而对每一音同样适用的准”这一结构类比。confidence 保持 low。"
+  },
+  {
+   "concept": "定理（theorem，作为地位标记）",
+   "name": "定理",
+   "verdict": "revise",
+   "issues": "(1) 结构倒置。解老：“故定理有存亡，有死生，有盛衰。夫物之一存一亡，乍死乍生，初盛而後衰者，不可謂常。……而常者無攸易，無定理。”在解老里，定理正是随物存亡、不恒常的那一层，与无定理的常（道）相对，而常是更高的一层，属先在根据之层。理论的定理作为蕴含处处成立：relative_throughout 给出的是 Throughout D (Holds context → p)，前提不成立时它也不“亡”。时间上的存亡与条件下的成立是两种结构，fit 中“物在则成立，物亡则不再说它”不成立。(2) 与已采用的“理”冲突：D26 中，理是结构与变化之律的建模，即一个归并（goAlike_iff_lumped），中华本读者会把定理读成“定了的归并”。(3) pre_qin: true 有误导：这个复词先秦确有，但“经检验之陈述”一义是近代译词。(4) 概念描述比规范章窄。规范章说“检查过的陈述是定理”，不加前提的也是定理。",
+   "fix": "pre_qin 改为 false，或注明“复词先秦有而义不同”。not_carried 加两条：“解老之定理随物存亡、与常相对，与此名之结构相反，不取”；“名中之理不取已采用之理（归并）义”。概念改为：“定理：已检验的陈述；地位分不加前提者与在所述前提下者（规范章四种地位之前二）”。删去 fit 中以解老比附 relative_throughout 的一句。是否另择名，交整合者。"
+  },
+  {
+   "concept": "读法（reading，地位标记）",
+   "name": "讀",
+   "verdict": "revise",
+   "issues": "两条证都属本名 not_carried 所排除之义。杨倞注“〈疪，病也。或曰：讀爲訾。〉”是“讀爲”式的通假与音义训释，同篇下文“信，讀爲伸，不同，古字通用”可证；而 not_carried 明确排除“讀爲、讀若的音读、通假之义”。孟子“读其书”是 not_carried 所排除的诵读义。“带标记、与他说并存”这一读法地位的结构，在杨倞例中由“或曰”承担，不由“讀”承担。所以本名没有一条证支持它所取的义。",
+   "fix": "二择一。(甲) 把“讀爲”的训释本身作为结构来源：注家提出把一字读作另一词，用“或曰”与他说并存，由与上下文是否相合而立住或修订。如此，须从 not_carried 删去“讀爲、讀若”，只排除纯注音。(乙) 另找“讀”用作诠释的证，并用 ctq 核对。confidence 降为 low。"
+  },
+  {
+   "concept": "未决（open）",
+   "name": "未決",
+   "verdict": "revise",
+   "issues": "(1) fit 说“一个命题已定，这一点不能被驳倒（not_not_decided），所以「不可决」之说本身被排除，「未决」则保持开放”，混淆了两个层次。not_not_decided 是对象层的 ¬¬(p ∨ ¬p)，它排除的是“p 既不成立也不不成立”。理论的未决是证明层的地位：既未证明，也未否定。not_not_decided 并不排除一个问题永远证不出（独立）。何况“延续条件的根据与必然性”根本不是一个 Lean 命题。(2) lean 列表中的 Decided、not_not_decided、Diagonal.gap_unsaid（族中无一员说出缺口，属 Lawvere 对角）都不陈述未决这一地位。(3) 概念中“它不是「不可决」”是无据的断言：理论没有证明它的未决之项都可决。",
+   "fix": "lean 列表清空：未决与读法一样，没有 Lean 锚。删去 fit 中 not_not_decided 那一句和概念中的“它不是「不可决」”，改为：“未決只说至今未证、未否，不断言此后可决，也不断言不可决”。“未”与“不”之分改用文字论证（见“未”一条）。"
+  },
+  {
+   "concept": "推导（derivation，Derivation.Derives）",
+   "name": "說",
+   "verdict": "revise",
+   "issues": "(1) STYLE-ZH 规定每条分经、說、證三节：“說”节是现代汉语讲解，不含推导；推导（Lean 证明）放在“證”节。以“說”名推导，与节名的内容正相反。(2) fit 说非攻上“若以此說往”从一人推到十人、百人，“正是对每个数的实例化（allNatElim）”。原文是“殺十人十重不義，必有十死罪矣”，这是逐人累加。本簇 mozi-feigong-tong-lei 与 RO 都把“标量累加”判为定域。实例化只给出“同一规则对第 n 人成立”，给不出“十重”。(3) 墨经中的“說”兼指“說知”（推知，一种知）与“以說出故”（论证）；推导则是一个对象，即有限的推导树。这一层应在 fit 中分开说。",
+   "fix": "整合者二择一：(甲) 保留“說”为推导，则 STYLE 第二节改名；(乙) 保留节名，则推导另择名，并按 HANZI §5 验收。fit 改为：“若以此說往”只对应“同一规则对每一人成立”（Derives 的 allNatElim）；“十重”的累加不在推导之中，见 mozi-feigong-tong-lei 的定域。"
+  },
+  {
+   "concept": "反例与反模型",
+   "name": "不然者",
+   "verdict": "revise",
+   "issues": "结构上正确。问题只在 fit：它说“墨经要求所举不然者与然者同类”，但所引两条（经说上的“止”与“必”）里都没有这一要求。出处其实是经下“止，類以行之，說在同。”，已核，mapper 没有引。“反模型必须在所论域之内”在 Lean 中的锚，是 countermodel_excludes 的假设 ∃ s, D s ∧ ¬ p s 中的 D s，fit 也没有点明。",
+   "fix": "加一条证：MI1-S-JX“止，類以行之，說在同。”（经·墨经经下，先秦，战国后期墨家）。fit 写：“同类之求，对应 countermodel_excludes 假设中的 D s：不然者须落在所论之域；在更弱的模型中随意改动谓词所得者不在其域。”"
+  },
+  {
+   "concept": "已定（Decided p := p ∨ ¬p）",
+   "name": "定然否",
+   "verdict": "revise",
+   "issues": "(1) “所以荀子说「未可」而不说「不可」”一句，把 not_not_decided 归到了荀子的措辞上，违反 STYLE“不写古人早已知道X”。“未可”只是平常的“尚不能”。(2) “手里有一个裁定”引入了一个持有者（知者）。按 D30 读法，已定是所计状态的然否，不是知者的断定。荀子的“定”在“中心”，mapper 虽已排除“心定的心理之义”，fit 仍写“手里”。",
+   "fix": "删“所以荀子说「未可」而不说「不可」”，改为：“荀子说思虑不清时未可定然否，与核心不对每个命题假定已定相容。”“手里有一个裁定”改为“然与否已成其一，且给出是哪一”。"
+  },
+  {
+   "concept": "双重否定 ¬¬p（不能被驳倒）",
+   "name": "不可非",
+   "verdict": "revise",
+   "issues": "(1) 证中的“非”是“誹”义。经说下原文：“誹，論誹之可不可，以理之可誹，雖多誹，其誹是也；其理不可非，雖少誹，非也。”这里“不可非”就是不可非难。而 not_carried 排除“非议、责难……（诽）”，与自己的证矛盾。(2) fit 引用 World.comes_to_rest_unrefuted 与 LastChange.not_not_settles 时没有带条件。前者需要：普查、立者普查、生起有体、平衡、耗散、自某步起围住立者。后者需要：构形可判等，运行在一个有穷列表之内，回路内无变化。",
+   "fix": "not_carried 改为只排除“声讨、非攻非儒之非”，保留“以理非之（驳其不然）”为所取之义，并写明：此证中“其理不可非”即“其理不能被驳”，正合 ¬¬ 之读。fit 中两条 Lean 各补上条件，或写“在所列前提下”。"
+  },
+  {
+   "concept": "排中律（∀ p, p ∨ ¬p）",
+   "name": "辭皆定然否",
+   "verdict": "revise",
+   "issues": "本名所用的“皆”违背了本簇自己的定义：皆指句中所举或所列之群的每一员。排中律遍及一切命题，是不列举的域；mapper 的 not_carried 自己也承认“不是一个列出的家族”。按 HANZI §6，一个标记一种结构，这里应当用表示整个域的标记。还须注明一字之差：若写成“辭莫不定然否”，即 ¬∃p ¬Decided p，这可以由 not_not_decided 逐一给出，是无前提的定理，不是排中律。",
+   "fix": "名改为“辭必定然否”或“凡辭定然否”，交整合者。fit 加：“「辭莫不定然否」无前提可证（not_not_decided）；「辭必定然否」即排中律，只作設（World.law_iff_em、undominated_has_iff_em）。”"
+  },
+  {
+   "concept": "弱已定（WeaklyDecided p := ¬p ∨ ¬¬p）",
+   "name": "或不當",
+   "verdict": "revise",
+   "issues": "(1) 名中的“或”取“二者之中有一”，即析取；而本簇的关系标记“或”定为“有之而不尽，不是析取”。同一字在同一簇有两种结构，违反 HANZI §6。若取小取“或也者，不盡也”，在 {p, 非p} 上“有不當者而不俱不當”恰等价于 WeaklyDecided，因为“不俱不當”即 ¬(¬p ∧ ¬¬p)，无前提成立；但 mapper 没有这样论证。(2) exists_undominated_iff_weakly 漏了条件：原定理是“非空的列出选项单，关系在其上非自反且传递”时都有不被胜过者。概念与 fit 都写成了“每个列出的选项单都有不被胜过者”。(3) “當”出自“當者勝”的辩，带争胜的框架。",
+   "fix": "二择一。(甲) fit 写明此“或”取小取的“不盡”义：二者中有不當者而不俱不當，后者无前提成立，所以二者合起来就是 WeaklyDecided。(乙) 另名。补全 exists_undominated_iff_weakly 的条件：非空、非自反、传递。not_carried 加“辩中争胜之框架”。"
+  },
+  {
+   "concept": "全知原则（LPO、WLPO）作为具名假设",
+   "name": "無窮可盡",
+   "verdict": "revise",
+   "issues": "(1) lean 列表收了 Becoming.Markov。马尔可夫原则是 ¬(∀n, s n = false) → ∃n, s n = true，即“非皆不然，则得一然者”，不是“盡無窮”。(2) LPO 与 WLPO 强弱不同，WLPO.of_lpo 只有一个方向。“可盡”（莫不然与否可定）恰是 WLPO；LPO 还要“得其然者”。一个名不加区分地盖两个原则。(3) “由墨经的原词反转而成”不确。同段经说下的答辞有“盈無窮，則無窮盡也”，墨经自己用“無窮盡”说人满盈无穷之域，是空间上的尽；读者会用这一义去读本名。",
+   "fix": "本名定为 WLPO，或作族名而给 LPO、WLPO 各一个限定之名（LPO 须带“得”其然者之义）。从 lean 列表删去 Markov，并把马尔可夫原则列入缺名。fit 删“反转而成”，改为：“墨经以盡为莫不然，难辞以无穷为不可盡；此名取其反。答辞「盈無窮，則無窮盡也」之盡是满盈之义，不取。”这一义同时写入 not_carried。"
+  },
+  {
+   "concept": "必要条件",
+   "name": "無之必不然",
+   "verdict": "revise",
+   "issues": "名与墨经原文逐字相合，结构正确。问题在概念说“在脊柱上即依存”。必要条件是一般的逻辑关系（在 q → p 中，p 是 q 的必要条件），Web.Dependent 只是其中一例，而且它是世界前提之一（前提卡 C：活动需要支持），不是定理。脊柱里还有别的例子，如 Listed.coming_of_ceasing：止息反复出现，须生起反复出现。",
+   "fix": "概念改为：“……；在脊柱上，依存（Web.Dependent，世界前提之一）是其一例：活动以支持为必要条件”。lean 加 Becoming.Listed.coming_of_ceasing 作为另一例。"
+  },
+  {
+   "concept": "充分条件",
+   "name": "有之必然",
+   "verdict": "revise",
+   "issues": "fit 说“依存（必要）有确切对应，充分只在确定之律之下成立（Determined）”。但 Determined 的定义是“从一构形、一动作至多一个后继”，说的是唯一性，不是充分性：有之必然还要求后继存在，而 Assurance.ofPartial 那样的部分律也是 Determined，它的动作可以没有后继。“只在确定之律下”也没有任何 Lean 结果支持。充分性见于一切蕴含，例如 Derives.sound 中，基底与前提就是所推出者的充分条件。这一误读承自 RO 的 mojing-gu-xiao-da。",
+   "fix": "删“只在确定之律下成立（Determined）”，改为：“充分条件即蕴含之前件，如 Derives.sound：基底与前提成立处所推出者成立；依存（Web.Dependent）只给必要，不给充分”。lean 改列 Becoming.Derivation.Derives.sound 与 Becoming.Web.Dependent。若保留 Determined，须写明它只给“后继若有则唯一”。并告知整合者：RO 段 mojing-gu-xiao-da 中同一句也要改。"
+  },
+  {
+   "concept": "相合（三种关系之一）",
+   "name": "相合",
+   "verdict": "revise",
+   "issues": "所引杨倞注的全文与 fit 正相反：“符節，相合之物也。《周禮》「門關用符節」，葢以全竹爲之，剖之爲兩，各執其一，合之以爲驗也。”符节由一根竹子剖成两半，合起来是为了“驗”：两半同源，用于凭信，背后是发符者的权威。fit 却说“符节是各自独立的两半……一半不证明另一半”“相合不是印证”。用符节作喻，会暗示原文与律出自同源、彼此印证，而这正是 RO §4 与 STYLE（“不写古人早已知道X”）所禁止的。另外 pre_qin: true 没有根据：所给的证里，“相合”二字只见于唐代杨倞注，先秦两证都是“合符節”。",
+   "fix": "not_carried 加：“符節之同源（剖一为两）与驗（凭信、发符者之权威）之义不取”。fit 删去“各自独立的两半……一半不证明另一半”。改用或另加经说上“所以謂，名也。所謂，實也。名實耦，合也。”（MI1-S-SS，已核）作结构之证：两种不同之物逐项相配，不同源。pre_qin 改为 false，或补一条先秦“相合”的证。"
+  },
+  {
+   "concept": "定域（三种关系之一）",
+   "name": "定域",
+   "verdict": "revise",
+   "issues": "主证小取“辭之侔也，有所至而正。”结构确切，名可以沿用 RO 的。问题在第二证“法異，則觀其宜。”：fit 把它解作“法不同时，看各自所宜之处”，但经说上的解释是“法，取此擇彼，問故觀宜。”，即在两法之间择一、问其故而看何者合宜，说的是选择，不是定出范围。",
+   "fix": "删去第二证，或把它的 sense_in_context 改为“经说上释为取此擇彼，問故觀宜：于二法中择其宜者，非定域”。只保留小取一条为主证。"
+  },
+  {
+   "concept": "相分（三种关系之一）",
+   "name": "相分",
+   "verdict": "revise",
+   "issues": "与唯识“相分”（所缘之相）同字异义。本簇 weishi-zheng-zi-zheng 一条本身判为相分，而它的原文讲的正是四分（相分、见分、自证分、证自证分）。中华本会写出“成唯识论四分之说与理论相分”这样的句子，同一句里“相分”有两义。按命名规则，一个名在它所依据的传统里表示错误的意思，就足以构成改名的理由；这不只是换个更好的词。mapper 的置信度为 low，判断是对的。",
+   "fix": "交整合者决定。若保留，中华本凡在佛教材料旁出现，都写成“相分（三种关系之一）”，weishi 条写“唯识所谓相分（所缘之相）”以示区别。或者另择名，并按 HANZI §5 的四条验收；候选须先用冻结文本核对。"
+  },
+  {
+   "concept": "无二之方法（NONDUAL-METHOD.md）",
+   "name": "以明",
+   "verdict": "revise",
+   "issues": "(1) 与已采用的“明”冲突。规范章 §7.3 的“明”是“耦合接上一个及于支持所不标记者的选择……是关系，不是状态”；中文版 §7 引言已写“本节从理论所证明的规律陈述对齐问题，并以明组织其回答”，在那里“以明”就是“借这个明（耦合的扩大）”。无二之方法（每个区分说出它的关系基础、范围与所略，保留真实的差别）不是这个“明”。(2) 齐物论的上下文：“是以聖人不由，而照之于天，亦因是也。”下文又有“道通爲一”。以明连着两样东西：“照之于天”（以天为照者，属先在根据或单一视点之层），以及“齐”（泯平差别）。而 NONDUAL-METHOD 明言 “Nonduality does not erase differences”，又说 “Preserve actual differences and conflicts”，方向相反。RO §5.4 也指出：明、朙训“照也”，只给出光由开口而入的一面，不给出“看见自己所经之耦合”的一面。(3) fit 把 Contextual、Specker、part_act_eq_rest_act、separation_faithful_iff 称为方法的“形式部分”。但方法是一项要求，不是证明（NONDUAL-METHOD: “It is not an additional proof of the ontology”）；这些律只是与方法相容。",
+   "fix": "not_carried 加“照之于天、聖人不由”与“道通爲一”二义。fit 中“形式部分”改为“与之相容的已检验之律”。整合者二择一：另择方法之名；或保留“以明”专作方法之名，同时修改中文版 §7 的“以明组织其回答”一句，免得二义并存。confidence 降为 low。"
+  },
+  {
+   "concept": "关系标记“则”",
+   "name": "則",
+   "verdict": "keep",
+   "issues": "结构确切。则只说在前件成立之处成立，不断言前件，与 relative_throughout、claim_implies_itself 一致；与故分开，正合 HANZI §6 所要防的合并。两条证（经上“法同，則觀其同”，小取“中效，則是也”）都是条件句。",
+   "fix": ""
+  },
+  {
+   "concept": "关系标记“若”",
+   "name": "若",
+   "verdict": "keep",
+   "issues": "结构确切：若引入局部前提而不断言它，对应 Derives.premise 与 claim_under_itself。若与設的分工只是用法约定，見“設”一条的修正。",
+   "fix": ""
+  },
+  {
+   "concept": "关系标记“必”",
+   "name": "必",
+   "verdict": "revise",
+   "issues": "“必”为“所论域的每一情形”，与 Throughout、NecessarilyDrawnInto 一致。缺两条排除：(1) 规范章“两个目标”说，对每个如此表示的世界成立的定理并不因此是必然的，演绎必然性这一目标仍是未決（§8.1 第 1、12 项）。“必”的常义是必然，读者会把“必”读成演绎必然性。(2) 经说上“聖者用，而勿必，必也者，可勿疑。”中的必，是认识上“可勿疑”之必，与遍及之必不同。",
+   "fix": "not_carried 加两条：“演绎必然性（规范章两目标之一，未決）：必只说所论域无一例外”；“经说上「必也者，可勿疑」之认识上的必”。"
+  },
+  {
+   "concept": "关系标记“或”",
+   "name": "或",
+   "verdict": "revise",
+   "issues": "小取说“或也者，不盡也”，又说“馬或白者，二馬而或白也”：或是有之而不尽，即 ∃ ∧ ¬∀。而所引的 PossiblyDrawnInto 只是 ∃（有一历程进入），并且被 NecessarilyDrawnInto 所蕴含（NecessarilyDrawnInto.possibly）。按小取，或与必（盡）相斥；按所引的 Lean，必推出或。两者结构不同，fit 把它们当成了一个。脊柱中恰好对应“有而不盡”的是 Becoming.Branching.OneWay.possibly_not_necessarily，即 PossiblyDrawnInto ∧ ¬NecessarilyDrawnInto；而 claim_not_throughout 只给出 ¬∀。",
+   "fix": "二择一。(甲) 取小取义（∃ ∧ ¬∀）：lean 改列 Becoming.Branching.OneWay.possibly_not_necessarily 与 Becoming.Derivation.claim_not_throughout，删去“后者在有一运行时蕴含前者”之说。(乙) 取 ∃ 义：not_carried 写明“小取之「不盡」不取”。无论哪一种，都要与“或不當”中“或”的用法协调。"
+  },
+  {
+   "concept": "关系标记“皆”",
+   "name": "皆",
+   "verdict": "keep",
+   "issues": "结构确切。皆是给定之群的每一员，对应 conjunction_iff；与必（整个域）分开；皆推出莫不、反之须已定，这一说法在构造逻辑中正确。“辭皆定然否”违背了本名的结构，修正见那一条。",
+   "fix": ""
+  },
+  {
+   "concept": "关系标记“莫”",
+   "name": "莫",
+   "verdict": "keep",
+   "issues": "结构确切：¬∃。rows_not_together（¬∃ w, ∀ b, rows b w）与 no_countermodel（¬∃ s, D s ∧ ¬p s）都是这一形式。",
+   "fix": ""
+  },
+  {
+   "concept": "关系标记“莫不”（无…不）",
+   "name": "莫不",
+   "verdict": "revise",
+   "issues": "结构确切：¬∃¬ 与 no_countermodel 同式；它与皆的构造差别（反之须已定，见 not_not_all、Decided.of_not_not）也说对了。问题在一句过读：“墨经以莫不然定义盡，用的正是较弱而无需已定的一式”把一种构造上的选择归给了墨经，违反 STYLE 第三条。“莫不然”本是文言表全称的常式。",
+   "fix": "删去“用的正是较弱而无需已定的一式”，改为：“墨经以「莫不然」定义盡；在构造的读法中，莫不然弱于处处然，二者在已定之域等价。”"
+  },
+  {
+   "concept": "关系标记“不”",
+   "name": "不",
+   "verdict": "keep",
+   "issues": "结构确切。不就是 ¬p，对应 moves_not。由 not_not_decided 推出“尚未定”须用“未”而不能用“不”，因为 ¬Decided p 是可驳倒的。这一论证正确，是本簇最好的结构论证之一。",
+   "fix": ""
+  },
+  {
+   "concept": "关系标记“未”",
+   "name": "未",
+   "verdict": "keep",
+   "issues": "结构确切。未是到此为止不、此后未被排除，对应 no_prefix_fixes_next（没有前段定得了下一值）与 tail_unexcluded（有限前段之后两种可能都未被排除）；与开之“未”相（开放：更多仍可来）相容。",
+   "fix": ""
+  }
+ ],
+ "entries": [
+  {
+   "id": "mojing-bi-jin",
+   "verdict": "revise",
+   "issues": "(1) 过读：“墨经以较弱的「莫不然」定义盡，正用了无需已定的一式”把一种构造上的选择归给了墨经。(2) 两句都是定义，不是律。“相合”在这里只能指脊柱上有同一形式：无前提推出者没有反例（no_countermodel）。读法应写明，对应的是“莫不然”这一形式，不是墨经的某条律。",
+   "fix": "删去“墨经以较弱的“莫不然”定义盡，正用了无需已定的一式”，改为：“盡之定义取莫不然之式；在构造的读法中它弱于处处然，二者在已定之域等价（Decided.of_not_not；列出之族用 not_not_all）。”"
+  },
+  {
+   "id": "mojing-bi-bu-ke-liang-bu-ke",
+   "verdict": "revise",
+   "issues": "(1) declarations 里的 World.law_iff_em 不属于本条的两句。本条两半都是无前提成立的定理；排中律是 mobian-dang-zhe-sheng 那一条的事。(2) 墨经自己对这一经的说，即经说上“彼，凡牛，樞非牛，兩也，無以非也。”（已核），mapper 没有引，而它正关系到断句之争。(3) 读法所引经下“謂辯無勝，必不當。說在辯。”在 MI1-S-JX 中，已核，但不在 fragments 中。(4) 记录 registration-within-what-it-registers 已改名为 readings-within-what-they-read。",
+   "fix": "删去 Becoming.World.law_iff_em。fragments 加经说上“彼，凡牛，樞非牛，兩也，無以非也。”，并在读法中说明它支持“不可兩不可”（二者不能俱不可）。把经下“謂辯無勝，必不當。說在辯。”加为 fragment（来源 MI1-S-JX），或另立一条（见缺漏）。records 改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "mobian-bian-bu-ju-dang",
+   "verdict": "revise",
+   "issues": "逻辑是对的：“不俱當”即 ¬(p ∧ ¬p)，“必或不當”即 ¬p ∨ ¬¬p，也就是 WeaklyDecided p；类别判为定域，正确。须改三处：(1) exists_undominated_iff_weakly 漏了条件：是“非空列出选项单，关系在其上非自反且传递”时都有不被胜过者。(2) 记录 practical-judgment-g0-j 已改名（G0 是已退役的标签）。(3) “或”字的用法与“或”这一标记冲突，见“或不當”一条。",
+   "fix": "读法中“每个列出的选项单都有不被胜过者”改为“每个非空列出之选项单，在其上非自反且传递之关系下，都有不被胜过者”。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "mobian-dang-zhe-sheng",
+   "verdict": "revise",
+   "issues": "SharedCodes.reads_iff 用错了。狗与犬是“二名一實”，即同义。而 reads_iff 说的是：一个形成把另一形成的形式读作 m，恰当二者的编码在 m 处相同（cf m = cg m），并且要求读者的编码分得开诸义（TellsApart）。一方说狗、一方说犬，编码在 m 处恰好不同，按这条定理，对方的形式不会被读作 m，与读法所说正相反。同一名下的两个形式，不能在 SharedCodes 这种函数式编码中表示。其余部分（当者胜预设已定，作为全称即排中律，World.law_iff_em）是对的。",
+   "fix": "declarations 删去 Becoming.SharedCodes.reads_iff，records 删去 a-code-formed-between-formations。读法中狗与犬一句改为：“同一實之二名，非争同一彼，故不成辯”，不配 Lean。"
+  },
+  {
+   "id": "mobian-wu-qiong-ying-fou",
+   "verdict": "revise",
+   "issues": "逻辑正确：结论“無難”是否定式，而 ¬¬¬q 推出 ¬q，所以分情形论证不需要已定；与 Counts.over_stretch 用的是同一模式（not_not_all、not_not_decided，结论是数的等式）。须改两处：(1) 记录 sensitivity-is-the-least-registration 已改名。(2) 第二种情形的冻结文本作“盈無窮，則無窮盡也，盡有窮無難。”，其中“盡有窮”常被校改；读法应注明，并且不宜把“墨经因结论的形式而无需全知原则”写成墨经的自觉。",
+   "fix": "records 改为 sensitivity-is-the-least-coupling。读法加：“第二情形之「盡有窮無難」文有校改之争”。“墨经的论证因结论的形式而无需全知原则”改为：“此论证之结论为否定式，故在构造的读法中无需已定”。"
+  },
+  {
+   "id": "mobian-bu-zhi-qi-shu",
+   "verdict": "keep",
+   "issues": "结构确切。全称在域上成立不依赖计数（Throughout），计数恰在每一员已定之处存在（counts_iff_decided）；知其盡而不待知其数，正是这一分开。",
+   "fix": ""
+  },
+  {
+   "id": "mojing-bi-zhi",
+   "verdict": "revise",
+   "issues": "(1) “所举的不然者须与然者同类，相应于……Web.Excludes.not_of_alike”结构不对。not_of_alike 说的是：在耦合之内，一个主张只被经耦合进来的差异排除，这是观察者对历史之假说的排除。它说的不是全称主张的域。“须在域内”的锚是 countermodel_excludes 假设中的 D s。(2) “同类”之求不在所引两句中，出处是经下“止，類以行之，說在同。”。(3) 记录 testing-within-registration 已改名。",
+   "fix": "declarations 删去 Becoming.Web.Excludes.not_of_alike；读法中这一句改为：“不然者须在所论之域（countermodel_excludes 之假设 ∃ s, D s ∧ ¬ p s 中之 D s）”。fragments 加经下“止，類以行之，說在同。”（MI1-S-JX，已核），或删去同类之说。records 改为 testing-within-couplings。"
+  },
+  {
+   "id": "mojing-gu-xiao-da",
+   "verdict": "revise",
+   "issues": "小故对应依存，这一部分确切。大故部分的“充分只在确定之律下成立（Determined）”不对：Determined 只说后继至多一个，是唯一性；有之必然还要求后继存在，部分律（Assurance.ofPartial_determined）也满足 Determined。“只在”一说也没有 Lean 结果支持。此误承自 RO 同名段。",
+   "fix": "删去“它只在确定之律下成立（Determined）”。改为：“大故之「有之必然」是充分：依存（Web.Dependent）只给必要；充分是蕴含之前件（如 Derives.sound 中基底与前提）；Determined 只给「后继若有则唯一」。”declarations 中 Determined 换成 Becoming.Derivation.Derives.sound，或保留 Determined 但加上述限定。告知整合者 RO 段 mojing-gu-xiao-da 需同改。"
+  },
+  {
+   "id": "mobian-xiaoqu-zhou-huo",
+   "verdict": "keep",
+   "issues": "结构确切。周与不周的对偶、由一个不然者否定全称，都是构造上成立的方向，mapper 也明言不从“非全称”反推一个不然者。“不失周愛”有校改之争，已注明。",
+   "fix": ""
+  },
+  {
+   "id": "mobian-xiaoqu-xiao",
+   "verdict": "revise",
+   "issues": "“不中效則非：域中一个不合者排除之（countermodel_excludes）”方向反了。在效中，法是所立之准，辞（或事）对照法而判：不中效，错的是辞。countermodel_excludes 中，域内一个不然的构形排除的是主张。若以法为基底、辞为主张，“不中效則非”说的是“未由基底推出即为非”；脊柱不这样说，未被推出的主张并不因此为假，countermodel_excludes 是另一方向。所以只有“中效則是”（即 relative_throughout）相合，“不中效則非”过强，应判定域。",
+   "fix": "kind 改为 scope。读法中最后一句改为：“不中效則非过强：脊柱中未由基底推出者不因此为非；域内有一不然之构形，才把主张排除（countermodel_excludes，方向与效相反）。”"
+  },
+  {
+   "id": "mobian-xiaoqu-bi-mou-yuan-tui",
+   "verdict": "keep",
+   "issues": "承 RO 的 mobian-lei-qu-lei-yu，类别与声明一致。辟、侔、援、推的推及，只在世界跨归并一致之处为对（lumped_right_iff、determines_lumped_iff），结构确切。",
+   "fix": ""
+  },
+  {
+   "id": "mobian-daqu-ci-yi-gu-sheng",
+   "verdict": "revise",
+   "issues": "“以理長：推出的引理加入基底……（lemma_throughout）……（理取已采用之义：结构与变化之律的建模）”自相矛盾。已采用的理（D26）是一个归并（goAlike_iff_lumped），lemma_throughout 说的是把推出的引理加入基底后闭包仍成立，二者无关。若理取已采用之义，“以理長”就不是 lemma_throughout；若取 lemma_throughout，这里的理就不是已采用之理。",
+   "fix": "二择一。(甲) “以理長”配 lemma_throughout，删去括注，改为：“此理指辞之推演之条理，不取已采用之理（归并）义”。(乙) 取已采用之理：辞依世界跨之一致的归并而增长，declarations 改列 Becoming.Learning.goAlike_iff_lumped，删去 lemma_throughout。"
+  },
+  {
+   "id": "mojing-fa-yi-guan-yi",
+   "verdict": "revise",
+   "issues": "墨经自己对这一经的说是：“法，取此擇彼，問故觀宜。以人之有黑者有不黑者也，止愛黑人；有愛於人有不愛於人。與以心愛人，是孰宜？”（经说上，已核）。法异时，是在两法之间择一，问其故而看何者合宜（孰宜），不是让各语境的判定各依其法而并存。所以与 Contextual.indexed_fits、glues_iff_agree（诸语境相交处一致时有全局判定）结构不同，“相合”不成立。另外记录 contextual-registration 已改名。",
+   "fix": "读法改依经说，说明这是择法；kind 改为 scope，说明脊柱不以择一法取代带索引的诸判定。或者把本条降为 zhuang-qiwu-yi-ming 的平行，删去三条 Contextual 声明。records 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "mobian-yi-yan-wei-jin-bei",
+   "verdict": "revise",
+   "issues": "(1) “以言爲盡誖，誖”是简单的自指归谬：若此言当，此言即为一不誖之言，与之相反，故此言誖。即 (p → ¬p) → ¬p。Diagonal.claims_gap 与 gap_unsaid 是 Lawvere 或 Russell 型的对角论证：族中无一员说出“不自说者”。moves_not 是 ¬(P ↔ ¬P)，属说谎者型。三者都不是这里的结构。(2) countermodel_excludes 只在“若此言可”这一假设之下适用：那时此言本身就是反例。墨经的说，即经说下“以，誖，不可也。之人之言可，是不誖，則是有可也。之人之言不可，以當，必不審。”（已核），正是这样分情形的，mapper 没有引。(3) 记录 registration-within-what-it-registers 已改名。",
+   "fix": "declarations 删去 Becoming.Diagonal.claims_gap 与 Becoming.Diagonal.gap_unsaid；moves_not 若保留，标“与之相关，非同一结构”。fragments 加经说下那一段。读法改为：“分情形：若此言可，则它本身是一不誖之言，即反例（countermodel_excludes 之式），与所言相反；故此言誖。”records 改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "zhuang-qiwu-bian-wu-sheng",
+   "verdict": "revise",
+   "issues": "类别（定域）与主要读法成立：无中立的裁判，判定只在诸语境一致处有（glues_iff_agree、Specker.noGlobal）；“俱是”“俱非”在同一彼的条件下都有确切回答。须改两处：(1) 三个记录 id 已改名。(2) 以 Frame.self_incomplete（框架不能实现关于自身的每种主张模式）配“予謂汝夢，亦夢也”较松：庄子说的是说者在所说之域中，未及完备性。",
+   "fix": "records 改为 claims-shown-in-context、readings-within-what-they-read、testing-within-couplings。读法中 Frame.self_incomplete 一句加“与之相关：说者在域中，其框架不自全”，或删去。"
+  },
+  {
+   "id": "zhuang-qiwu-yi-ming",
+   "verdict": "revise",
+   "issues": "承 RO 的读法与类别，声明一致。不过本条的上下文含“是以聖人不由，而照之于天，亦因是也。”与“道通爲一”，剩余一节只提到“齐”，没有提“照之于天”（以天为照者，先在根据或单一视点之层）。本条又是“以明”之名的主证，所以“以明”一名的问题（与已采用的明撞名，以及方法要求保留差别）也在这里。另外记录 contextual-registration 已改名。",
+   "fix": "读法剩余一节加：“照之于天、聖人不由（以天为照者）与道通爲一之齐，超出脊柱，不取”。records 改为 claims-shown-in-context。“以明”之名按名表的修正处理。"
+  },
+  {
+   "id": "mobian-ren-yi-nei-wai",
+   "verdict": "keep",
+   "issues": "结构可接受。爱利与所爱所利是同一关系的两面（part_act_eq_rest_act：一动作两面）。“狂舉”把仁一关系的施者一面（愛）与义一关系的受者一面（所利）配对，正是 separation_faithful_iff 所说：把关系拆开描述，会多出整体中没有的组合。partForms_and_restForms_iff 较远，但不错。",
+   "fix": ""
+  },
+  {
+   "id": "mobian-xian-wen-suo-wei",
+   "verdict": "revise",
+   "issues": "第一段（先问“孰，何謂也”再应答）与 reads_other（编码交叉之处，形式被读作另一义）、reads_iff 结构相合。第二段“智，智狗不智犬，重則過，不重則不過。”说的是同一知者对二名一实（重同）的同指：知其一而自谓不知其二，是过。这不是两个形成之间的编码，SharedCodes 的函数式编码表示不了同一义有二名。经下与之相应的两条经：“知狗而自謂不知犬，過也，說在重。”“通意後對，說在不知其誰謂也。”都已核，mapper 没有引。",
+   "fix": "删去第二段 fragment，或注明它不配 SharedCodes，只是同指之过。fragments 加经下“通意後對，說在不知其誰謂也。”（MI1-S-JX）作为第一段之经。"
+  },
+  {
+   "id": "mobian-jia",
+   "verdict": "revise",
+   "issues": "(1) claim_not_closed 说的是“w = true 在无前提时推不出”，不是“条件不断言为真，也不断言为假”。用它来支持以“設”而不以“假”名条件，是错配。(2) counterfactual_fixed（律不预取且行动相同时，反事实由行动固定）与 Run.not_fixes_of_untaken，同小取“假者，今不然也”只有松散的关系：原文只是定义假（与今相反的设想）。(3) 读法所引经下“假必誖，說在不然。”已核，但不在 fragments 中。",
+   "fix": "declarations 删去 Becoming.Derivation.claim_not_closed；读法改为：“設不断言其真假（設只入假设之位，Derives.premise）；假者断其与今相反”。fragments 加经下“假必誖，說在不然。”（MI1-S-JX）。两条反事实声明标“与之相关”，或把 kind 改为 scope。"
+  },
+  {
+   "id": "mozi-she-er-shi",
+   "verdict": "keep",
+   "issues": "结构确切。设定把局部条件（言必信，行必果）写在里面，在设定下推论，不断言二士存在，对应 relative_throughout、claim_implies_itself、claim_not_closed。兼别何者更好不由此论证取得，已写明。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-ming-gui-fen-qing",
+   "verdict": "revise",
+   "issues": "把这段当作对未定命题的纯分情形，不对。冻结文本：“雖使鬼神請亡，此猶可以合驩聚衆，取親於鄉里。”同段的总结又说：“今吾為祭祀也，非直注之汙壑而棄之也，上以交鬼之福，下以合驩聚衆，取親乎鄉里。”（均已核）“雖……猶”是让步：合欢聚众之利不论鬼神有无都成立。所以结论“祭祀有利”无需分情形，也无需已定，构造上直接成立；分情形所定的，只是额外的“厚利”（得其父母姒兄而飲食之）。读法“此论证的结论在一般情形中只到「不可非」”是错的，与 mobian-wu-qiong-ying-fou 的对比也就不成立了。",
+   "fix": "fragments 加“上以交鬼之福，下以合驩聚衆，取親乎鄉里。”。读法改为：“合欢聚众之利，以「雖……猶」与「下以」陈述，不依鬼神有无；故「有利」不经分情形即成立，无需已定。分情形只定「厚利」（若有）。”kind 改为 agreement，或保留 scope 而把定域落在“厚利”只在“若有”之下。declarations 中 Counts.over_stretch、nat_eq_of_not_not 只作对比，或删去。"
+  },
+  {
+   "id": "mozi-feigong-tong-lei",
+   "verdict": "revise",
+   "issues": "承 RO 的定域与声明，这部分正确。本簇另加的一句“若以此說往是同一推导对每个数的实例化（allNatElim，Derives.sound）”过度：“殺十人十重不義，必有十死罪”是逐人相加，本条前文自己也判“标量累加”为定域；实例化只给出同一规则对第 n 人成立。",
+   "fix": "把这一句改为：“若以此說往只对应同一规则对每一人成立（Derives 之 allNatElim）；十重之累加不在推导之中，属上文之定域。”"
+  },
+  {
+   "id": "hanfei-mao-dun-bu-liang-li",
+   "verdict": "keep",
+   "issues": "只是逻辑形式上的对应，mapper 的自我反驳已写明。rows_* 是二行布尔之例：各自可满足而不能共同满足，并否定了“逐一可满足即共同可满足”（rows_not_pointwise），结构确切。莫与莫不之分（¬∃ 与 ¬∃¬）也正确。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-wei-ke-ding-ran-fou",
+   "verdict": "revise",
+   "issues": "(1) 过读：“用的是「未可」而不是「不可」：……而它不能被驳倒（not_not_decided）”把定理归给荀子的措辞。(2) 冥行者与瞽者两例，与 selects_not_right_of_parted、Excludes.not_of_alike 结构相合；瞽者不见星而人不以定有無，正合 not_of_alike：没有耦合，就没有排除。(3) 记录 testing-within-registration 已改名。",
+   "fix": "把“用的是「未可」而不是「不可」”一句改为：“荀子说未可定然否；与核心不对每个命题假定已定相容。”records 改为 testing-within-couplings。"
+  },
+  {
+   "id": "xunzi-yi-yi-jue-yi",
+   "verdict": "revise",
+   "issues": "类别与读法正确：“决必不当”过强，脊柱只给出“未被证成”（closure_throughout_iff、relative_throughout）。只有一处小问题：declarations 中的 Decided.of_not_not 与本条无关。",
+   "fix": "declarations 删去 Becoming.Decided.of_not_not。"
+  },
+  {
+   "id": "xunzi-chi-zhi-you-gu",
+   "verdict": "keep",
+   "issues": "结构确切。有故而故不立，说仍不立；闭包不为不成立的基底作保（closure_throughout_iff）。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-ke-yi-wei-yu",
+   "verdict": "revise",
+   "issues": "可以为对应 PossiblyDrawnInto，这一点正确。读法说“后者蕴含前者，反之不然”，但“反之不然”没有引出处。脊柱中恰好有这一分离的定理：Becoming.Branching.OneWay.possibly_not_necessarily（可能进入，而非必然进入），收在记录 necessarily-drawn-is-not-returning 中，mapper 没有引。“能为”配“实际一运行进入”，与 NecessarilyDrawnInto（每一运行都进入）的对应须说清：“未必然”是 ¬NecessarilyDrawnInto。",
+   "fix": "declarations 加 Becoming.Branching.OneWay.possibly_not_necessarily。读法写：“「未必然」即非必然进入；「虽不能为禹，无害可以为禹」即 possibly_not_necessarily 之形：可能进入而非每一运行进入。”"
+  },
+  {
+   "id": "lunyu-zhi-zhi-wei-zhi-zhi",
+   "verdict": "revise",
+   "issues": "所列四个声明（Decided.of_not_not、comes_to_rest_unrefuted、not_not_settles、lpo_of_finite_ends）没有一个陈述“把知与不知如实标出，本身是一种知”的结构。所谓对应，只是理论的写法（以 ¬¬ 陈述，标出未决）与此章态度相似，算方法上的平行，不是“脊柱有已检查之律与之结构相同”。另外 comes_to_rest_unrefuted 有一串前提，读法中没有写。",
+   "fix": "改为方法层面的平行（不列声明），附在“未決”与“讀”两个名下作旁证；或者保留条目，但 kind 改为 scope，读法写明“对应者为理论之地位标记，非一律”，declarations 只留 Becoming.World.lpo_of_finite_ends 作为“说出哪一步须全知原则”的例子，并补齐其前提。"
+  },
+  {
+   "id": "lunyu-bu-zhi-qi-ren",
+   "verdict": "revise",
+   "issues": "结构基本成立：有限的所见定不了其全（no_prefix_fixes_next、tail_unexcluded），用“未”而不用“不”。须改两处：Web.Excludes.not_of_alike（只经耦合进来的差异排除）在这里较松；记录 testing-within-registration 已改名。",
+   "fix": "records 改为 testing-within-couplings。Excludes.not_of_alike 标“与之相关”，或删去。"
+  },
+  {
+   "id": "lunyu-bi-you-bu-bi-you",
+   "verdict": "keep",
+   "issues": "只是形式上的对应，已写明。单向之律，其逆由一个模型否定：census_one_way 中的 attrition 即“有言者不必有德”之式，结构确切。",
+   "fix": ""
+  },
+  {
+   "id": "yinming-san-xiang",
+   "verdict": "keep",
+   "issues": "结构确切，推理细致：异品遍无性在构造上等价于 ¬∃s(因 s ∧ ¬所立 s)，即 no_countermodel 之式；第一相加第三相只得 ¬¬所立，同法喻给出处处成立后才得所立；同品定有性是对辩的要求，可靠性不需要它。",
+   "fix": ""
+  },
+  {
+   "id": "yinming-si-yin",
+   "verdict": "keep",
+   "issues": "结构基本确切。不定对应 selects_not_right_of_parted，相违对应 countermodel_excludes，倒合对应单向之律（census_one_way 作一例）。无合配 claim_not_throughout 较松，但所说“一处同现不等于处处成立”是对的。",
+   "fix": ""
+  },
+  {
+   "id": "yinming-si-zong",
+   "verdict": "revise",
+   "issues": "把自教相违判为“学派的接受条件、权威之层”，不对。冻结文本：“自教相違者，如勝論師立「聲為常」。”胜论自己的宗义以声为无常，所以这是论题与立者自己的基底相矛盾，即内部不一致：在立者自己的基底下，所立被排除（countermodel_excludes 之式），属相合，不是权威。世间相违“如說「懷兔非月，有故」”，违反的是约定的名（懷兔是月的俗称），对应约定俗成（SharedCodes），不是权威；只有“人頂骨淨”一例是共同体之信。另外记录 registration-within-what-it-registers 已改名。",
+   "fix": "读法改为：“自教相违是论题与立者自己所立之基底相违，即自身不一致，相合（countermodel_excludes，以其自宗为基底）；世间相违中「懷兔非月」违约定之名（SharedCodes.reads_iff），相合；只「人頂骨淨」以共同体之信为准，脊柱不以之为反例。相符极成是对辩之条件。”records 改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "yinming-neng-po",
+   "verdict": "revise",
+   "issues": "结构确切：能破须是所破之域中的真实过失，可靠推出之主张在域内无反例（no_countermodel）。须改两处：Web.Excludes.not_of_alike 在这里较松，应改用 countermodel_excludes 中的 D s 作为“须在域中”的锚；记录 testing-within-registration 已改名。",
+   "fix": "records 改为 testing-within-couplings。Excludes.not_of_alike 改标“与之相关”，或删去；读法写明“须在域中”即 countermodel_excludes 之 D s。"
+  },
+  {
+   "id": "zhonglun-xian-jian-he",
+   "verdict": "revise",
+   "issues": "结构确切：无已见之关联，不能由此推彼（determines_lumped_iff）。只需改一处：记录 testing-within-registration 已改名。",
+   "fix": "records 改为 testing-within-couplings。"
+  },
+  {
+   "id": "weishi-zheng-zi-zheng",
+   "verdict": "revise",
+   "issues": "类别判为相分，正确：以识为证成之据，属先在根据之层；系统内的互证不使基底成立（closure_throughout_iff），这一点最切。Frame.self_incomplete 讲的是不完备，与“互证无穷过”只是相关。另有两处：此条在中华本中会写成“相分”，而原文讲的正是唯识四分中的相分，撞名见名表“相分”一条；记录 registration-within-what-it-registers 已改名。",
+   "fix": "records 改为 readings-within-what-they-read。读法中提到四分时写“唯识所谓相分（所缘之相）”，以免与三种关系之一的相分混淆。"
+  },
+  {
+   "id": "mobian-xiaoqu-yi-shuo-chu-gu",
+   "verdict": "keep",
+   "issues": "承 RO 的相合与声明，另加推导之读，两种读法分开写，理由也写明了。“物之故经变动而得，辞之故经推导而出”是合理的区分。故一字多义的问题，见名表“故”一条。",
+   "fix": ""
+  }
+ ],
+ "missing": [
+  "名：假设（hypothesis）作为与“条件”（关系项的角色，Web.Dependent）分开的概念。规范章五词一义规定，律的局部前提是假设；本簇把它并进了“設／条件”。",
+  "名：地位（standing）及规范章的四种地位：不加前提的定理、在所述前提下的定理、条件、读法。本簇以“律／定理”另分，与规范章不合。",
+  "名：表示（representation，“对每个如此表示的世界”）。mapper 已注明候选“擬”（系辞“擬之而後言”）未立。律与定理的定义都要用到它。",
+  "关系标记：凡（STYLE-ZH 以“凡……，則……”写律）。须与“必”（整个域）、“皆”（所列之群）分工，否则一个 ∀ 有三个标记而无定分。",
+  "关系标记：恰當（充要，iff；STYLE-ZH 以“……，恰當……”写律）。本簇只在“有之必然”的 fit 中顺带提到，没有立条、取证、验收。",
+  "关系标记：而不（STYLE-ZH 以“……而不……”写律）。",
+  "名：马尔可夫原则（Becoming.Markov：¬∀false → ∃true）、LLPO、双重否定消去、依赖选择（中文版术语索引作“依赖选择”）。前提卡 A 都把它们列为具名假设，本簇只有“無窮可盡”一名，Markov 还被误收在它之下。",
+  "名：稳定（stable：¬¬q → q）。mobian-wu-qiong-ying-fou 与 nat_eq_of_not_not 都要用到。注意不可用“稳”，“稳”是 Ren 的早期用语。",
+  "名：校准。一个需要全知原则之处，须说明这一需要对展开意味着什么（AGENTS 纯核心一条）。",
+  "段落：经下“謂辯無勝，必不當。說在辯。”（MI1-S-JX，已核）。这是本簇最干净的 not_not_decided 实例，名表两处引用它，却没有立为对应。",
+  "段落：经说上“彼，凡牛，樞非牛，兩也，無以非也。”（MI1-S-SS，已核）。这是经上“彼，不可兩，不可也。”的说，关系到断句。",
+  "段落：经说下“以，誖，不可也。之人之言可，是不誖，則是有可也。之人之言不可，以當，必不審。”（MI1-S-SX，已核）。这是“以言爲盡誖”的说，给出了分情形的结构。",
+  "段落：经说上“法，取此擇彼，問故觀宜。”（MI1-S-SS，已核）。这是“法異，則觀其宜”的说，改变了 mojing-fa-yi-guan-yi 的读法。",
+  "段落：明鬼下“上以交鬼之福，下以合驩聚衆，取親乎鄉里。”（MO1-S-C31，已核）。它表明合欢聚众之利不依鬼神有无。",
+  "段落：经下“止，類以行之，說在同。”（MI1-S-JX，已核）。这是“不然者须同类”的出处。",
+  "段落：经下“知狗而自謂不知犬，過也，說在重。”与“通意後對，說在不知其誰謂也。”（MI1-S-JX，已核）。这两条是 mobian-xian-wen-suo-wei 所引经说之经。",
+  "段落：经下“假必誖，說在不然。”（MI1-S-JX，已核），可作 mobian-jia 的 fragment。",
+  "段落：经说上“所以謂，名也。所謂，實也。名實耦，合也。”（MI1-S-SS，已核），可作“相合”的替代结构之证，不带同源与验之义。",
+  "段落：杨倞注“葢以全竹爲之，剖之爲兩，各執其一，合之以爲驗也。”（RU2-S-XZ08，已核），应写入“相合”的 not_carried。",
+  "段落：经说上“聖者用，而勿必，必也者，可勿疑。”（MI1-S-SS，已核），应写入“必”的 not_carried（认识上的必）。",
+  "段落：齐物论“是以聖人不由，而照之于天，亦因是也。”（ZH1-S02，已核），应写入“以明”的 not_carried。",
+  "声明：Becoming.Branching.OneWay.possibly_not_necessarily。它是“或＝不盡”与“可以为而未必能为”的确切锚，本簇没有引。"
+ ]
+}

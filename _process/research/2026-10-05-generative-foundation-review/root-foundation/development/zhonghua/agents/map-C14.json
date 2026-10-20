@@ -1,0 +1,4073 @@
+{
+ "cluster": "C14 意义、评价与延续之条件",
+ "names": [
+  {
+   "concept": "意义 significance：sig p t f，从立场 p 看，f 在第 t 步向未来的延续有意义；是或否，不分等级，不必为正价",
+   "name": "顾",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S01",
+     "quote": "立之塗，匠者不顧。",
+     "layer": "经·先秦（《庄子》内篇）",
+     "sense_in_context": "匠人对大樗不加顾及：不把它的延续算入自己的考量。「不顾」是一个立场（匠者）对一物的是否之分，不说多少。",
+     "record_id": "ZH1-C01-R-10",
+     "locator": "逍遙遊·大樗"
+    },
+    {
+     "source_id": "ZH1-S04",
+     "quote": "觀者如市，匠伯不顧，遂行不輟。",
+     "layer": "经·先秦（《庄子》内篇）",
+     "sense_in_context": "匠石对栎社树不顾，因为它于匠人无用；同一棵树，众人围观，匠伯不顾：顾以立场为索引。",
+     "record_id": "ZH1-U04",
+     "locator": "人間世·櫟社"
+    },
+    {
+     "source_id": "RU2-S-MZ",
+     "quote": "不顾父母之养",
+     "layer": "经·先秦（《孟子》）",
+     "sense_in_context": "五不孝的共同项：不把父母的养（延续所需）计入。顾的对象是他者的延续。",
+     "record_id": "RU2-U-MZ08-30",
+     "locator": "离娄下"
+    },
+    {
+     "source_id": "RU2-S-XZ15",
+     "quote": "無見利而不顧其害",
+     "layer": "经·先秦（《荀子》）",
+     "sense_in_context": "见利而不顾其害：所顾者可以是害，顾不带正价，只是计入与否。",
+     "record_id": "RU2-N0548",
+     "locator": "議兵篇·五权"
+    },
+    {
+     "source_id": "RU2-S-V3Q01",
+     "quote": "欲遂其生，亦遂人之生，仁也；欲遂其生，至於戕人之生而不顧者，不仁也。",
+     "layer": "论·清（戴震《孟子字义疏证》）",
+     "sense_in_context": "「不顾」人之生即不把他人之生的延续计入，戴震以此界定不仁：顾与不顾正是生生之意义成立与否的分界。",
+     "record_id": "RU2-R0235",
+     "locator": "卷上·理"
+    }
+   ],
+   "fit": "理论的意义是一个立场对一物在某步之延续的是否之分（Valuation.sig 取命题值）。先秦“顾”正是这样用：「匠者不顧」「匠伯不顧」是一个立场对一物的计入与否，以立场为索引；「不顧其害」表明所顾可以是害，顾不带正价；「不顾父母之养」与戴震「戕人之生而不顧」表明顾的对象是他者的延续（养、生），且多见于否定式，恰对应理论中意义的缺失（Clearing.center_not_derived 中清除者对居住者之生无意义）。顾不分等级：先秦没有“顾之多少”的用法。",
+   "not_carried": "回首之身体动作；照顾、照料（实施的保护：理论区分意义与实施的保存，顾不等于护）；顾念、眷顾的情感正价；“顾”作虚词（但、反而、岂）的用法；也不带贵的位阶或重的轻重。",
+   "course": "先秦以「不顾」为常见（逍遥游、人间世、孟子离娄下、荀子议兵、盗跖「不顧父母兄弟」）；汉以后“顾”多引申为顾念、照顾（照料义，偏实施）；清戴震「戕人之生而不顧」（RU2-R0235）仍保持“计入他者之生”义；现代“顾及”最近此义。",
+   "alternatives": [
+    {
+     "name": "贵",
+     "why_not": "贵是位阶；秋水「以道觀之，物无貴賤」正否认它，以贵名意义会使延续条件读成“物皆贵”而与无位阶相冲；荀子礼论“贵贱有等”更是等级。"
+    },
+    {
+     "name": "重",
+     "why_not": "重有轻重之等（系辞「用可重」），理论的意义不分等级，混合部分无序（Transfer.unordered）。"
+    },
+    {
+     "name": "爱",
+     "why_not": "爱带正价与情感；阿含「當來有愛」把对未来之有的爱作为苦集之因，起信论「分別愛與不愛」把爱与不爱当作分别相；理论的顾不分爱与不爱。"
+    },
+    {
+     "name": "义",
+     "why_not": "义是宜与责成，墨子「天欲義」以意志为根据，荀子“义”联于分与等；与本簇的条件地位不合。"
+    },
+    {
+     "name": "意义",
+     "why_not": "现代词，无古典依据。"
+    },
+    {
+     "name": "宜",
+     "why_not": "宜是合宜、适合（义者宜也），带正价，且属于选择与配合（C12、C15 一带），不是意义本身。"
+    },
+    {
+     "name": "念、恤",
+     "why_not": "情感性的挂念与怜悯，带正价与苦乐。"
+    },
+    {
+     "name": "计",
+     "why_not": "计是计数与谋算，带数量与财务含义。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Valuation",
+    "Becoming.Unrestricted",
+    "Becoming.bounded_rival",
+    "Becoming.Web.significance_undetermined"
+   ]
+  },
+  {
+   "concept": "评价 valuation：Valuation 结构，含 living、related、own、sig 四个读法，是「何者活、何者相关、何者在谁之己、谁顾谁」的一整套给定",
+   "name": "顾式",
+   "form": "新组合",
+   "pre_qin": false,
+   "attestations": [
+    {
+     "source_id": "ZH1-S17",
+     "quote": "以道觀之，物无貴賤；以物觀之，自貴而相賤；以俗觀之，貴賤不在己。",
+     "layer": "经·先秦至秦汉（《庄子》外篇）",
+     "sense_in_context": "三种“观之”各给出一整套贵贱的分配：观法变，分配随之变。这正是一个评价的形状：同一世界，不同的顾法给出不同的分配。",
+     "record_id": "ZH1-C17-R-05",
+     "locator": "秋水·河伯与北海若"
+    }
+   ],
+   "fit": "式取法式、格式：一个评价不是一个判断，而是一整套顾法（谁活、谁相关、谁之己、谁顾谁）。秋水把“观”的位置与贵贱分配绑在一起，正是 Valuation 的结构：意义随所取的顾式而变，理论在一个顾式内证明它的定律（如 Web.valuation 给出一网的顾式）。名由已定的“顾”加“式”组成，可检验：顾式的 sig 字段就是顾。",
+   "not_carried": "“式”作礼仪规范、必须遵从之程式的义；顾式之名不意味任何一种顾法是正确的；也不带“观”的观察活动义。",
+   "course": "新组合，无传世用例；结构前身为秋水三观（ZH1-C17-R-05、R-06、R-07）。",
+   "alternatives": [
+    {
+     "name": "观",
+     "why_not": "观已用于观察与读法（C08 一带），且观只是从某处看，不含活、相关、己等字段。"
+    },
+    {
+     "name": "评",
+     "why_not": "评是品评，带高下。"
+    },
+    {
+     "name": "好恶",
+     "why_not": "带正负价；起信论以爱与不爱为分别相。"
+    },
+    {
+     "name": "贵贱",
+     "why_not": "是位阶的分配，只是一种顾式的结果。"
+    },
+    {
+     "name": "权衡",
+     "why_not": "称量，带数量与排序。"
+    }
+   ],
+   "coinage": true,
+   "confidence": "low",
+   "lean": [
+    "Becoming.Valuation",
+    "Becoming.Web.valuation"
+   ]
+  },
+  {
+   "concept": "活的 living：逐步读法下，一个事件活动且不削弱它所需的条件",
+   "name": "活",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-MZ",
+     "quote": "天作孽，犹可违；自作孽，不可活",
+     "layer": "经·先秦（《孟子》引《太甲》）",
+     "sense_in_context": "活是能继续下去；自作之孽削弱自身的条件，故不可活。活与害对举。",
+     "record_id": "RU2-U-MZ03-04",
+     "locator": "公孙丑上"
+    },
+    {
+     "source_id": "ZH1-S26",
+     "quote": "君豈有斗升之水而活我哉",
+     "layer": "经·先秦至秦汉（《庄子》杂篇）",
+     "sense_in_context": "活作动词：使之能延续，靠所需之条件（水）。",
+     "record_id": "ZH1-C26-N-urgent",
+     "locator": "外物·涸轍之鮒"
+    },
+    {
+     "source_id": "RU1-S-ZY",
+     "quote": "萬物並育而不相害，道並行而不相悖",
+     "layer": "经·先秦至秦汉（《礼记·中庸》）",
+     "sense_in_context": "并育而不相害：活动（育）且不削弱他者，给出“活”的两个合取。",
+     "record_id": "RU1-ZY-40-R01",
+     "locator": "中庸·仲尼祖述段"
+    },
+    {
+     "source_id": "LC-SZ-ALL",
+     "quote": "聖人非無欲也欲而不欲故雖欲而不傷于物非無學也學而不學故雖學而不害于理",
+     "layer": "注·宋（苏辙《老子解》第64章）",
+     "sense_in_context": "有欲而不伤于物：活动而不削弱，是活的逐步读法。",
+     "record_id": "LC2-SZ-C64-R03",
+     "locator": "第六十四章注"
+    }
+   ],
+   "fit": "先秦“活”是能延续的状态，并与“害”“孽”对举（自作孽不可活）；作动词时是使某物得以延续，靠所需条件（活我）。理论的 living 是“活动且不削弱”（Web.valuation 的逐步读法；Web.living_iff_relations），「並育而不相害」「雖欲而不傷于物」恰给出这两个合取；削弱者的那一步不是活的（Clearing.clearer_not_living）。",
+   "not_carried": "生物学上的“有生命”（理论的活是事件的逐步性质，不限生物；生物在其削弱的一步也不是活的）；灵活、生动义；活作为善的评价（活的不等于好的，活只是意义范围的限定）。",
+   "course": "先秦活多指存活与使存活（孟子、外物）；宋以后“活泼泼地”带生意义，近于生生；现代泛指有生命。",
+   "alternatives": [
+    {
+     "name": "生",
+     "why_not": "生过载：生生、生命、出生、天地之大德曰生都用生；生生在理论中保留为整体的持续生成，以生名逐步的活会把两层混同。"
+    },
+    {
+     "name": "育",
+     "why_not": "只有生长一面，没有“不害”。"
+    },
+    {
+     "name": "存",
+     "why_not": "只有持存，没有活动。"
+    },
+    {
+     "name": "不害",
+     "why_not": "只有否定一面，没有活动。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.valuation",
+    "Becoming.Web.living_iff_relations",
+    "Becoming.World.living_crosses",
+    "Becoming.Clearing.clearer_not_living"
+   ]
+  },
+  {
+   "concept": "生生之意义 living significance：Valuation.Significant，从每个立场，每个活者的延续都有意义（∀ p c, living c → sig p c）；在延续条件下是定理，不被断言",
+   "name": "仁",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "樊遲問「仁」。子曰：「愛人。」",
+     "layer": "经·先秦（《论语》）",
+     "sense_in_context": "仁指向他人，不指向自己的所得。",
+     "record_id": "RU1-LY-12-22-R01",
+     "locator": "顏淵·22"
+    },
+    {
+     "source_id": "MI1-S-JS",
+     "quote": "仁，體愛也。",
+     "layer": "经·先秦（《墨经·经上》）",
+     "sense_in_context": "仁是部分对所属整体之顾（体，分于兼也），是关系的。",
+     "record_id": "MI1-N-JS-007",
+     "locator": "經上"
+    },
+    {
+     "source_id": "RU2-S-MZ",
+     "quote": "仁者，以其所爱及其所不爱；不仁者，以其所不爱及其所爱。",
+     "layer": "经·先秦（《孟子》）",
+     "sense_in_context": "仁是把顾从所爱及于所不爱：一个范围上的全称。",
+     "record_id": "RU2-U-MZ14-01",
+     "locator": "尽心下·1"
+    },
+    {
+     "source_id": "RU2-S-V3Q01",
+     "quote": "欲遂其生，亦遂人之生，仁也；欲遂其生，至於戕人之生而不顧者，不仁也。",
+     "layer": "论·清（戴震）",
+     "sense_in_context": "仁＝遂己之生亦遂人之生；不仁＝对人之生不顾。仁与不仁以“顾”为界。",
+     "record_id": "RU2-R0235",
+     "locator": "卷上·理"
+    }
+   ],
+   "fit": "孟子「以其所爱及其所不爱」给出范围上的全称，戴震以「亦遂人之生」定义仁、以「戕人之生而不顧」定义不仁，正是：每个活者（遂其生者）的延续都被顾（Valuation.Significant），而一处不顾即不仁（Clearing.center_not_derived：自身意义处处成立，清除者对居住者之生不顾，生生之意义不成立）。墨经「仁，體愛也」把仁放在部分与整体的关系上。理论的仁不是爱：它给顾而不给正价；程颐「爱自是情，仁自是性」也把仁与爱分开，只是理由不同。",
+   "not_carried": "爱与恻隐的情感正价；德性或固有之性（孟子「我固有之」、程颐「仁自是性」）；差等（孟子「仁民」只是亲亲、仁民、爱物三层之一，中庸「親親為大」）；断言地位（理论中仁是延续条件下的定理，条件不被断言，其根据开放）；仁政的治理与名位含义；仁作为最高德目的位阶；老子「天地不仁」所否定的偏爱与造立施化。",
+   "course": "先秦：论语爱人、孟子恻隐与推恩、墨经体爱；汉：郑玄“相人偶”的关系读法；宋：程颢一体、程颐“仁性爱情”（RU2-R0188）、朱熹“心之德、爱之理”，仁的地位由关系转为性与理；清：戴震「遂人之生」（RU2-R0235）回到生与顾；谭嗣同引相人偶。理论只取「及其所不爱」「遂人之生」的范围与顾，不取性与差等。",
+   "alternatives": [
+    {
+     "name": "兼爱",
+     "why_not": "带爱的正价，且兼已名边界中立规则。"
+    },
+    {
+     "name": "泛爱",
+     "why_not": "惠施由一体推出泛爱，泛缺“活的”限定，也带爱的正价。"
+    },
+    {
+     "name": "好生",
+     "why_not": "好生之德带好恶正价与德的位阶，且只说生而不说顾。"
+    },
+    {
+     "name": "一体",
+     "why_not": "一体是边界之说（把整体画作己的边界），是到达条件的一条路，不是意义本身。"
+    },
+    {
+     "name": "活皆有顾",
+     "why_not": "新组合，精确但无古典依据；仁有充分的先秦用例且在「及其所不爱」「遂人之生」处结构相合。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Valuation.Significant",
+    "Becoming.LivingSignificance",
+    "Becoming.Valuation.significant_iff",
+    "Becoming.livingSignificance_of_unrestricted"
+   ]
+  },
+  {
+   "concept": "延续条件 the continuation condition：Unrestricted sig，对任何东西，从每个立场，其每一步向未来的延续都有意义（∀ p t f）；是条件，不被断言；给意义不给正价；本身不排序",
+   "name": "无弃",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "人之不善，何弃之有？",
+     "layer": "经·先秦（《老子》第62章）",
+     "sense_in_context": "即使不善者也无可弃：不以善与不善为门槛，没有谁被排除在顾之外。",
+     "record_id": "",
+     "locator": "第六十二章"
+    },
+    {
+     "source_id": "DS01",
+     "quote": "圣人不立形名以检于物，不造进向以殊弃不肖，辅万物之自然而不为始，故曰无弃人也。",
+     "layer": "注·魏晋（王弼第27章注）",
+     "sense_in_context": "无弃＝不立任何区分（形名、进向）作为弃的标准。",
+     "record_id": "",
+     "locator": "第二十七章注"
+    },
+    {
+     "source_id": "LC-HS-LOW",
+     "quote": "人虽不善，当以道化之。盖三皇之前，无有弃民，德化淳也。",
+     "layer": "注·秦汉至魏晋（河上公章句，传统题署）",
+     "sense_in_context": "「无有弃民」：全称的不弃，但与「以道化之」相连。",
+     "record_id": "LC2-HS-C62-R02",
+     "locator": "第六十二章注"
+    },
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "是以圣人常善救人，故无弃人；常善救物，故无弃物，是谓袭明。",
+     "layer": "经·先秦（《老子》第27章，传世本）",
+     "sense_in_context": "无弃人、无弃物，及于物。此二句古本有无有争议：晁说之记其「独得诸河上公，而古本无有也」（DS01 跋）。",
+     "record_id": "",
+     "locator": "第二十七章"
+    }
+   ],
+   "fit": "无弃是全称否定：没有任何东西被排除出顾之外。62 章「何弃之有」不以不善为门槛，王弼 27 注「不造进向以殊弃不肖」说不以任何区分为门槛，这正是 Unrestricted 的全称（对任何 f、每个 p、每个 t）。无弃不说“皆善”，只说不弃，对应条件给意义而不给正价；62 章也不说善人与不善人谁更重，对应条件本身不排序（Transfer.unordered）。在其下，生生之意义（仁）是定理（unrestricted_iff_livingSignificance：条件恰是对任何东西的生生之意义）。",
+   "not_carried": "“救”的实施义（理论区分规范依据与实施的保存）；圣人作为施行的中心；河上公「以道化之」、王弼 62 注「保道以免放」的教化与矫正方向；老子把无弃说成圣人之德的断言地位（理论中无弃是条件，不被断言，根据开放）；“皆善”的正价；也不带排序：从无弃到“哪一走法更好”需要把扩大称为更好（C）与不变性的步骤。",
+   "course": "先秦：老子 62「何弃之有」；27“无弃人、无弃物”传世本有而古本有无有争议（晁说之跋）。秦汉魏晋：河上公「无有弃民」（LC2-HS-C62-R02）；王弼 27 注「无弃人」、62 注「不善当保道以免放」（LC2-WB-C62-R01）。宋：苏辙 62 注「安可棄之哉」（LC2-SZ-C62-R01）、第 4 章注「恐其棄萬物」（LC2-SZ-C04-R02）。后世无弃保留全称不排除义，多与教化相连。",
+   "alternatives": [
+    {
+     "name": "兼怀",
+     "why_not": "秋水「兼懷萬物」：怀带情感正价，且兼已名边界中立规则。"
+    },
+    {
+     "name": "泛爱",
+     "why_not": "带爱的正价。"
+    },
+    {
+     "name": "无不顾",
+     "why_not": "精确但无古典用例。"
+    },
+    {
+     "name": "兼",
+     "why_not": "兼已名规则形式（Neutral），延续条件是该形式用于意义的一个实例。"
+    },
+    {
+     "name": "好生之德",
+     "why_not": "好的正价、德的位阶，且只说生；延续条件对任何东西，不限活者。"
+    },
+    {
+     "name": "天地之大德曰生",
+     "why_not": "断言天地有德，把价值放进宇宙，与条件地位相反；后世（桓玄）以之为王者受敬的根据。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Unrestricted",
+    "Becoming.unrestricted_iff_livingSignificance",
+    "Becoming.Valuation.premises_of_unrestricted",
+    "Becoming.Transfer.unordered"
+   ]
+  },
+  {
+   "concept": "立场 standpoint：Pos，意义所从出的位置，sig p 以 p 为索引",
+   "name": "方",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S33",
+     "quote": "天下之人，各爲其所欲焉，以自爲方。悲夫，百家往而不反，必不合矣！",
+     "layer": "经·先秦至秦汉（《庄子》杂篇）",
+     "sense_in_context": "各以自己所欲为方：方是一个由所欲构成的出发点，各方不合。",
+     "record_id": "ZH1-C33-R-04",
+     "locator": "天下"
+    },
+    {
+     "source_id": "ZH1-S17",
+     "quote": "汎汎乎其若四方之无窮，其无所畛域；兼懷萬物，其孰承翼？是謂无方。萬物一齊，孰短孰長？",
+     "layer": "经·先秦至秦汉（《庄子》外篇）",
+     "sense_in_context": "无方＝不偏于任何一方：以“方”为可被否定的立场。",
+     "record_id": "ZH1-U17",
+     "locator": "秋水"
+    }
+   ],
+   "fit": "方是方位、方面：一个出发点，从它看去才有向背。「以自爲方」说立场由所欲构成且彼此不合（对应 Clearing.centers_disagree）；「无方」否定任何一方的特权（对应立场中立）。立场在理论中只是索引，方也只是方位，不带主体实体。",
+   "not_carried": "方法、药方、方术；论语「仁之方」的方法义（与本名同字异义，须分开）；方正的德性；地方、地域（实在的区域在理论中由畛域名之）；副词“方”（正在）。",
+   "course": "先秦方有方位、方面、道术（天下篇方术与道术相对）；后世多指方法；“立场”是现代词。",
+   "alternatives": [
+    {
+     "name": "观",
+     "why_not": "观名观察与读法，是从某处看的活动；立场是索引。"
+    },
+    {
+     "name": "位",
+     "why_not": "位带名位与等级，易传“位”另属一簇。"
+    },
+    {
+     "name": "一曲",
+     "why_not": "荀子解蔽“一曲”指被蔽之偏，带负价。"
+    },
+    {
+     "name": "所自",
+     "why_not": "短语，非名。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.Valuation",
+    "Becoming.Clearing.centers_disagree"
+   ]
+  },
+  {
+   "concept": "中心 center：边界所围绕的那个形成（Boundary rel f region 中的 f；center : Pos → F）；沿依赖，动力学固定范围而不固定中心",
+   "name": "我",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S02",
+     "quote": "非彼无我，非我无所取，是亦近矣，而不知其所爲使。",
+     "layer": "经·先秦（《庄子》内篇）",
+     "sense_in_context": "我与彼相待：无彼则无我，无我则无所取；我是取舍的中心，却不知谁使之。",
+     "record_id": "ZH1-U02",
+     "locator": "齊物論"
+    }
+   ],
+   "fit": "齐物论的“我”是取舍所从出的中心，由与彼的相待而成（区域对关系封闭，含其中心：Boundary），并且「不知其所爲使」：理论证明沿依赖，动力学固定意义闭合的范围而不固定中心（Clearing.center_not_derived）。下文「若有眞宰，而特不得其朕」，理论同样不立一个真宰。",
+   "not_carried": "实体自我（ātman；佛教所破之我执，FO2-SM-R017「非我」）；第一人称说话者；私（苏辙「以我故殺人」）；固有之性的承载者（孟子「我固有之」）；宋明以心为主宰的统治中心。",
+   "course": "先秦齐物论「吾喪我」「非彼无我」；佛教入华后我＝ātman，成为所破（如来藏非我；憨山德清「由無我方能經世」）；宋明以心为身之主宰（RU2-R0214），把中心实体化。",
+   "alternatives": [
+    {
+     "name": "心",
+     "why_not": "宋明的心是主宰与本体，带单一统治中心与先在至善。"
+    },
+    {
+     "name": "中",
+     "why_not": "中和已采用；程颐“一厅之中”显示中是边界的函数，不是中心本身。"
+    },
+    {
+     "name": "主、主宰、君",
+     "why_not": "统治与等级义。"
+    },
+    {
+     "name": "己",
+     "why_not": "己已名自身区域（own）。"
+    },
+    {
+     "name": "枢",
+     "why_not": "道枢是立场中立的位置，不是中心。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.Boundary",
+    "Becoming.Clearing.center_not_derived"
+   ]
+  },
+  {
+   "concept": "己 own region：Valuation.own p c，c 落在立场 p 自身的区域内",
+   "name": "己",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ17",
+     "quote": "故君子敬其在己者，而不慕其在天者",
+     "layer": "经·先秦（《荀子·天论》）",
+     "sense_in_context": "「在己者」是落在自身区域内的东西，与「在天者」对举：己是区域。",
+     "record_id": "RU2-U-XZ17",
+     "locator": "天論篇"
+    },
+    {
+     "source_id": "MI1-S-DQ",
+     "quote": "愛人不外己，己在所愛之中。己在所愛，愛加於己。倫列之愛己，愛人也。",
+     "layer": "经·先秦（《墨经·大取》）",
+     "sense_in_context": "己是所爱范围中的一个区域，不外于全体。",
+     "record_id": "MI1-R-DQ-self",
+     "locator": "大取"
+    }
+   ],
+   "fit": "「在己」是区域谓词：某物落在自身的区域。墨经「己在所愛之中」说自身区域在全称之内，正是中立规则蕴含其在己区域上的有界版本（Neutral.within），也是生生之意义在被持有处含处处自身意义（Valuation.significant_iff_held）。",
+   "not_carried": "私（克己之己、胜私之私的负价）；人格自我；推己及人中作为模型的己（那是选择经由模型，属推）。",
+   "course": "先秦己与人对举（论语、孟子、墨经）；宋明“克己”「胜私复理」（RU2-R0219）把己读作私欲；理论只取区域义。",
+   "alternatives": [
+    {
+     "name": "私",
+     "why_not": "负价，排他占有。"
+    },
+    {
+     "name": "身",
+     "why_not": "身体，物质承载者，太窄。"
+    },
+    {
+     "name": "我所",
+     "why_not": "佛教术语，所执。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Valuation",
+    "Becoming.Neutral.within",
+    "Becoming.Valuation.significant_iff_held"
+   ]
+  },
+  {
+   "concept": "种子 seed：Valuation.Seed，至少有一个活者从至少一个立场有意义；没有它，中立规则无可传递",
+   "name": "端",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-MZ",
+     "quote": "恻隐之心，仁之端也",
+     "layer": "经·先秦（《孟子》）",
+     "sense_in_context": "端是开端，仁由此扩充。",
+     "record_id": "RU2-R0019",
+     "locator": "公孙丑上·6"
+    },
+    {
+     "source_id": "RU2-S-MZ",
+     "quote": "凡有四端于我者，知皆扩而充之矣，若火之始然，泉之始达。茍能充之，足以保四海；茍不充之，不足以事父母。",
+     "layer": "经·先秦（《孟子》）",
+     "sense_in_context": "端需扩而充之；不扩充则连近处也不足。",
+     "record_id": "RU2-U-MZ03-06",
+     "locator": "公孙丑上·6"
+    },
+    {
+     "source_id": "MI1-S-JS",
+     "quote": "端，體之無序而最前者也。",
+     "layer": "经·先秦（《墨经·经上》）",
+     "sense_in_context": "端是最前的一点，无先后可再分。",
+     "record_id": "MI1-N-JS-032",
+     "locator": "經上"
+    }
+   ],
+   "fit": "种子是存在式的开端：至少一处有意义。理论中在有活的主张的连通整体上，生生之意义恰是种子加关系中立与立场中立（Valuation.significant_iff，Valuation.Grounds），没有种子则不成立（Model.seed_is_needed）；孟子的端要扩而充之，正如种子要经关系中立或立场中立才达到全体；墨经「最前者」对应存在式的单点。在被持有处，自身意义给出种子（Valuation.seed_of_selfSignificance）。",
+   "not_carried": "天赋、人人皆有（孟子「我固有之」「人皆有之」是断言；理论的种子只是存在式的一处）；恻隐的情感内容；几何的点（墨经端有几何义，训读有争议）；端正、端庄。",
+   "course": "孟子四端（RU2-R0019 至 R0022）；墨经端；宋明以端为性之发（程颐「动之端」）；理论只取存在式开端与扩充所需的条件。",
+   "alternatives": [
+    {
+     "name": "种",
+     "why_not": "种已用于种类与种系（C12 一带），且“种子”带唯识的习气义。"
+    },
+    {
+     "name": "几",
+     "why_not": "几是动之微、吉之先见，是变化的预兆，不是意义的开端。"
+    },
+    {
+     "name": "质",
+     "why_not": "质是素质、本质，带固有之性。"
+    },
+    {
+     "name": "始",
+     "why_not": "只是时间的开头，无扩充之结构。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Valuation.Seed",
+    "Becoming.Valuation.Grounds",
+    "Becoming.Model.seed_is_needed",
+    "Becoming.Valuation.seed_of_selfSignificance",
+    "Becoming.Valuation.significant_iff"
+   ]
+  },
+  {
+   "concept": "自身意义 self-significance：Valuation.SelfSignificance p，立场 p 顾其自身区域内每个活者（∀ c, own p c → living c → sig p c）；读作想要自己的延续",
+   "name": "自爱",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "是以圣人自知不自见，自爱不自贵；",
+     "layer": "经·先秦（《老子》第72章）",
+     "sense_in_context": "自爱与自贵分开：顾自身的延续，而不把自身排在高位。",
+     "record_id": "LAO2-C72-R04",
+     "locator": "第七十二章"
+    },
+    {
+     "source_id": "RU2-S-XZ29",
+     "quote": "知者自知，仁者自愛。",
+     "layer": "经·先秦（《荀子·子道》）",
+     "sense_in_context": "仁者首先自爱：自身意义在仁之中。",
+     "record_id": "RU2-U-XZ29",
+     "locator": "子道篇"
+    },
+    {
+     "source_id": "MO1-S-C14",
+     "quote": "子自愛不愛父，故虧父而自利",
+     "layer": "经·先秦（《墨子·兼爱上》）",
+     "sense_in_context": "墨子所批评的是自爱停在自身边界内而不及于父，不是自爱本身。",
+     "record_id": "MO1-C14-R002",
+     "locator": "兼愛上"
+    }
+   ],
+   "fit": "自爱是对自身之延续的顾。老子 72 把它与自贵分开，正对应理论中自身意义与位阶的分离；荀子把自爱放在仁者之中，对应在被持有处，生生之意义恰是处处自身意义加立场中立（Valuation.significant_iff_held）。墨子「自愛不愛父」是自身意义停在己区域内的有界用法（Within），其问题在边界，不在自爱。",
+   "not_carried": "自私、自利（墨子「虧父而自利」所批评的）；爱的情感正价；自恋；也不带「自贵」的位阶。",
+   "course": "先秦老子 72、荀子子道、墨子兼爱上；后世自爱多作自重、保身；戴震「欲遂其生」（RU2-R0235）把它恢复为对自身之生的欲。",
+   "alternatives": [
+    {
+     "name": "自贵",
+     "why_not": "老子 72 明确把自贵与自爱分开：自贵是位阶。"
+    },
+    {
+     "name": "贵生",
+     "why_not": "杨朱一系，带保身优先。"
+    },
+    {
+     "name": "自顾",
+     "why_not": "精确但无古典用例。"
+    },
+    {
+     "name": "欲遂其生",
+     "why_not": "戴震语，短语，且为清代；保留为后世用例。"
+    },
+    {
+     "name": "自私",
+     "why_not": "负价，排他。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Valuation.SelfSignificance",
+    "Becoming.Valuation.seed_of_selfSignificance",
+    "Becoming.Valuation.significant_iff_held"
+   ]
+  },
+  {
+   "concept": "关系中立 relational neutrality：Neutral transmits，若 p 顾 c，c 与 d 相关，d 是活的，则 p 顾 d——意义沿关系传递",
+   "name": "贯",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "吾道一以貫之",
+     "layer": "经·先秦（《论语》）",
+     "sense_in_context": "一条线穿过所有：同一规则沿所及处一贯。",
+     "record_id": "RU1-LY-04-15-R01",
+     "locator": "里仁·15"
+    },
+    {
+     "source_id": "ZH1-S05",
+     "quote": "以可不可爲一貫者",
+     "layer": "经·先秦（《庄子》内篇）",
+     "sense_in_context": "把可与不可贯为一条：不以可否为断点。",
+     "record_id": "ZH1-U05",
+     "locator": "德充符"
+    },
+    {
+     "source_id": "RU2-S-S06",
+     "quote": "如手足不仁，气已不贯",
+     "layer": "论·宋（程颢，《近思录》卷一）",
+     "sense_in_context": "不仁＝不贯：顾在相连处断了。",
+     "record_id": "RU2-U-CM1",
+     "locator": "近思录卷一第20条"
+    }
+   ],
+   "fit": "贯是沿相连之处一直穿过去：意义从一处沿关系到相邻的活者，在任何一节都不断（Neutral transmits 对每一关系步成立）。程颢以「气已不贯」名不仁，正是传递在一处断掉；Clearing.center_not_derived 中沿所形成的关系传递失败，就是这种不贯。",
+   "not_carried": "钱串、贯作货币单位（财务义）；籍贯；“一以贯之”之“一”作为唯一原理（理论的传递只是规则形式，不是唯一原理）；气的物质论。",
+   "course": "论语一以贯之；庄子一贯；宋程颢「气已不贯」（见 RU2-R0183 所在条）；朱熹以一以贯之为理一。",
+   "alternatives": [
+    {
+     "name": "推",
+     "why_not": "推是以己为模型推及他人（推恩、能近取譬），属选择经由归并（Learning.lumped_right_iff），其正确依赖相似；关系中立不依赖相似。"
+    },
+    {
+     "name": "及",
+     "why_not": "只说到达，无每节皆过的规则。"
+    },
+    {
+     "name": "扩充",
+     "why_not": "是种子的增长，不是传递规则。"
+    },
+    {
+     "name": "达",
+     "why_not": "达是通达、成就，带成功义。"
+    },
+    {
+     "name": "通",
+     "why_not": "通太宽，已在别处用于能传递的状态。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.Valuation.transmits",
+    "Becoming.Model.relational_neutrality_is_needed",
+    "Becoming.Valuation.significant_of_transmits"
+   ]
+  },
+  {
+   "concept": "立场中立与立场不变 standpoint neutrality / standpoint invariance：Neutral shares（活者上不偏任何立场）与 StandpointInvariant（一切延续上不偏任何立场），同一条 N_std 规则的两层",
+   "name": "无方",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S17",
+     "quote": "汎汎乎其若四方之无窮，其无所畛域；兼懷萬物，其孰承翼？是謂无方。萬物一齊，孰短孰長？",
+     "layer": "经·先秦至秦汉（《庄子》外篇）",
+     "sense_in_context": "无方＝不偏于任何一方；紧接「孰承翼」（不偏助谁）与「孰短孰長」（不排序）。",
+     "record_id": "ZH1-U17",
+     "locator": "秋水"
+    },
+    {
+     "source_id": "RU2-S-MZ",
+     "quote": "禹、稷、颜子易地则皆然。",
+     "layer": "经·先秦（《孟子》）",
+     "sense_in_context": "换立场而判断不变：立场不变的操作检验。",
+     "record_id": "RU2-U-MZ08-29",
+     "locator": "离娄下"
+    },
+    {
+     "source_id": "RU2-S-MZ",
+     "quote": "禹思天下有溺者，由己溺之也；稷思天下有饥者，由己饥之也",
+     "layer": "经·先秦（《孟子》）",
+     "sense_in_context": "他人之溺如由己：立场之间不分。",
+     "record_id": "RU2-U-MZ08-29",
+     "locator": "离娄下"
+    }
+   ],
+   "fit": "无方不偏于任何方位：从任何一方看都一样（Valuation.shares：p 顾的活者 q 也顾；StandpointInvariant：一切延续上同样）。秋水在「无方」后紧接「萬物一齊，孰短孰長」，与理论“延续条件本身不排序”同构。易地则皆然是同一规则的检验。Boundaries 模块证明：在前设处处成立与中心覆盖之下，边界不变恰是立场不变，即 N_std 的规则（boundaryInvariant_iff_standpointInvariant），所以无方与无己由一个定理相连。",
+   "not_carried": "「无方」作没有方法、无常法、不可测度的义（易传「神无方」）；不偏作冷漠；秋水属外篇，带庄子后学的齐同语境；孟子的「易地」以圣贤同道为前提。",
+   "course": "秋水（外篇）；易传「神无方而易无体」（不可局限义）；孟子易地则皆然、由己溺之；后世「无方」多指无定法。",
+   "alternatives": [
+    {
+     "name": "恕",
+     "why_not": "恕以自身好恶为模型（己所不欲勿施于人），属选择经由归并（Learning.selects_right_through），在他人与己不同处失效，只给否定式；它是实现顾的一种方法，不是中立规则本身。"
+    },
+    {
+     "name": "易地",
+     "why_not": "操作检验，非规则之名。"
+    },
+    {
+     "name": "公",
+     "why_not": "公带公私对立与公共权力的社会义。"
+    },
+    {
+     "name": "齐",
+     "why_not": "齐是齐同、等量，带数量相等；理论不说等量。"
+    },
+    {
+     "name": "同然",
+     "why_not": "孟子「心之所同然」是对各心的事实断言。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.Valuation.shares",
+    "Becoming.StandpointInvariant",
+    "Becoming.Model.standpoint_neutrality_is_needed",
+    "Becoming.boundaryInvariant_iff_standpointInvariant"
+   ]
+  },
+  {
+   "concept": "中立 Neutral：Neutral rule := ∀ i, rule i，规则对每一项都成立，不设边界（边界中立；Unrestricted 即意义规则的 Neutral）",
+   "name": "兼",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "MO1-S-C16",
+     "quote": "是故子墨子曰：兼以易別。",
+     "layer": "经·先秦（《墨子·兼爱下》）",
+     "sense_in_context": "兼与别对举：兼是不分彼此地对一切，别是划出界限。",
+     "record_id": "MO1-C16-R002",
+     "locator": "兼愛下"
+    },
+    {
+     "source_id": "MI1-S-JS",
+     "quote": "體，分於兼也。",
+     "layer": "经·先秦（《墨经·经上》）",
+     "sense_in_context": "兼是全体，体是从全体分出的部分：兼是不加分割的全称。",
+     "record_id": "MI1-N-JS-002",
+     "locator": "經上"
+    },
+    {
+     "source_id": "MO1-S-C16",
+     "quote": "為彼猶為己也",
+     "layer": "经·先秦（《墨子·兼爱下》）",
+     "sense_in_context": "对彼如对己：规则不因边界而变。",
+     "record_id": "MO1-C16-R003",
+     "locator": "兼愛下"
+    }
+   ],
+   "fit": "兼是对全部。墨经以「體，分於兼也」给出部分与全体，墨子以「兼以易別」给出全称规则取代有界规则：正是 Neutral 与 Within 的关系（Neutral.within：全称蕴含其每个有界版本）。",
+   "not_carried": "兼并（吞并，权力与财产义）；兼爱之爱的情感正价；兼任（同时担任）；墨子以天志为兼的根据（天欲兼爱）。",
+   "course": "墨子兼与别；墨经体分于兼；天下篇「兼懷萬物」；荀子“兼覆无遗”；孟子斥兼爱「无父」；朱熹以“理一而不言分殊”为墨氏兼爱（ru-zhuxi-li-yi-fen-shu）。",
+   "alternatives": [
+    {
+     "name": "无所畛域",
+     "why_not": "短语，描述无己所达到的状态，且畛域已名边界。"
+    },
+    {
+     "name": "泛",
+     "why_not": "泛有浮泛、不切的负义。"
+    },
+    {
+     "name": "公",
+     "why_not": "公私对立与公共权力。"
+    },
+    {
+     "name": "周",
+     "why_not": "周遍，但论语「周而不比」带德性义，周亦有周朝等义。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Neutral",
+    "Becoming.Neutral.within",
+    "Becoming.Unrestricted"
+   ]
+  },
+  {
+   "concept": "有界规则 Within：Within bound rule := ∀ i, bound i → rule i，规则只在边界内成立",
+   "name": "别",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "MO1-S-C16",
+     "quote": "是故子墨子曰：兼以易別。",
+     "layer": "经·先秦（《墨子·兼爱下》）",
+     "sense_in_context": "别是以自身之国、家、身为界的规则。",
+     "record_id": "MO1-C16-R002",
+     "locator": "兼愛下"
+    },
+    {
+     "source_id": "MO1-S-C26",
+     "quote": "順天意者，兼相愛、交相利，必得賞；反天意者，別相惡、交相賊，必得罰。",
+     "layer": "经·先秦（《墨子·天志上》）",
+     "sense_in_context": "别相恶：以界分彼此的规则。",
+     "record_id": "MO1-C26-R005",
+     "locator": "天志上"
+    }
+   ],
+   "fit": "墨子的别正是在一个区域内成立的规则：「視人之國若視其國」否定的就是只在己国内成立的顾。理论中有界意义是在已划边界内接受的条件规则，有物落在区域之外时它就不是延续条件（bounded_rival），全称蕴含其有界版本（Neutral.within）；墨子以别为恶，理论则只说别是另一条规则（它与动力学相容只因意义不是表示的字段），以依赖为界的中心彼此不一（Clearing.centers_disagree）。",
+   "not_carried": "荀子礼论之“别”（贵贱有等的等级区分）；佛教“分别”（vikalpa，妄分别，起信论「分別愛與不愛」）；离别；墨子赋予别的负价与天罚。",
+   "course": "墨子兼别对举；荀子礼论“曷谓别？曰：贵贱有等”把别读作等级（ru-xunzi-gui-jian-you-deng）；佛教分别；理论只取有界义。",
+   "alternatives": [
+    {
+     "name": "畛",
+     "why_not": "已名边界本身，不是规则。"
+    },
+    {
+     "name": "私",
+     "why_not": "负价占有。"
+    },
+    {
+     "name": "分",
+     "why_not": "分是分取、分工，属别处。"
+    },
+    {
+     "name": "界",
+     "why_not": "界是边界本身。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Within",
+    "Becoming.Neutral.within",
+    "Becoming.bounded_rival"
+   ]
+  },
+  {
+   "concept": "被持有 held：Valuation.Held，每个活的主张落在某个立场的己区域内；未被持有的生命需要从被持有的生命经关系中立才得意义",
+   "name": "在己",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ17",
+     "quote": "故君子敬其在己者，而不慕其在天者",
+     "layer": "经·先秦（《荀子·天论》）",
+     "sense_in_context": "「在己」是谓词：某物落在自身区域；与「在天者」对举。",
+     "record_id": "RU2-U-XZ17",
+     "locator": "天論篇"
+    }
+   ],
+   "fit": "在己＝落在某个己区域内：被持有即存在某 p 使 own p c。荀子以在己与在天对举，对应理论中被持有与未被持有之分：在被持有处，生生之意义恰是处处自身意义加立场中立（Valuation.significant_iff_held）；未被持有的生命需要关系中立（Unclaimed.held_is_needed、Relayed.transmission_is_needed）。名由“己”组成，可检验。",
+   "not_carried": "荀子的“敬”（修身态度）；在己的责任义（归咎于己）；「在天者」作为与己对立的独立领域（理论中未被持有者仍在同一展开中）。",
+   "course": "荀子天论；后世「在己」多为责任义。",
+   "alternatives": [
+    {
+     "name": "有主",
+     "why_not": "主带所有与支配。"
+    },
+    {
+     "name": "有所属",
+     "why_not": "属带所有。"
+    },
+    {
+     "name": "有己",
+     "why_not": "含糊：有一个己，而非落在己内。"
+    },
+    {
+     "name": "所保",
+     "why_not": "人间世「彼其所保」是所依恃者。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.Valuation.Held",
+    "Becoming.Valuation.significant_iff_held",
+    "Becoming.Unclaimed.held_is_needed",
+    "Becoming.Web.held_by_formations"
+   ]
+  },
+  {
+   "concept": "自我的边界 the boundary of a self：Boundary rel f region，含 f 且对关系封闭的区域；闭包最小，整体最大",
+   "name": "畛域",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S02",
+     "quote": "夫道未始有封，言未始有常，爲是而有畛也",
+     "layer": "经·先秦（《庄子》内篇）",
+     "sense_in_context": "道本无封界，因有所“是”才划出畛：边界由划定而有。",
+     "record_id": "ZH1-U02",
+     "locator": "齊物論"
+    },
+    {
+     "source_id": "ZH1-S17",
+     "quote": "汎汎乎其若四方之无窮，其无所畛域；兼懷萬物，其孰承翼？是謂无方。萬物一齊，孰短孰長？",
+     "layer": "经·先秦至秦汉（《庄子》外篇）",
+     "sense_in_context": "「无所畛域」：不以任何边界为断点。",
+     "record_id": "ZH1-U17",
+     "locator": "秋水"
+    }
+   ],
+   "fit": "畛是田间界路，畛域是由界所围的区域。齐物论「爲是而有畛」说边界因取舍而划：理论中边界是对一个关系封闭、含中心的区域，可在闭包到整体之间多处划（Boundary.closure、Boundary.whole），划法是索引；断言在一切划法下成立为超真，在某一划法下成立为次真（SuperTrue、SubTrue）。",
+   "not_carried": "齐物论下文「八德」的左右伦义分辩竞争之义；封作为分封、封建；“畛域之见”的门户偏见义；田地所有。",
+   "course": "齐物论畛、秋水「无所畛域」；后世「畛域」多作界限与门户之见（负义）。",
+   "alternatives": [
+    {
+     "name": "封",
+     "why_not": "封建、封赏的政治义。"
+    },
+    {
+     "name": "界",
+     "why_not": "太泛。"
+    },
+    {
+     "name": "域",
+     "why_not": "只是区域，无界。"
+    },
+    {
+     "name": "方",
+     "why_not": "方已名立场。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Boundary",
+    "Becoming.Boundary.closure",
+    "Becoming.Boundary.whole",
+    "Becoming.SuperTrue",
+    "Becoming.SubTrue"
+   ]
+  },
+  {
+   "concept": "前设 the presupposition：SignificantWithin sig p region，边界之内一切的延续都有意义；次真时是闭包上的意义（路线 (b)），超真时是延续条件",
+   "name": "畛内之顾",
+   "form": "新组合",
+   "pre_qin": false,
+   "attestations": [
+    {
+     "source_id": "LC-SZ-ALL",
+     "quote": "使天下知名之不足親貨之不足多而後知貴身知貴身而後知忘我此老子之意也",
+     "layer": "注·宋（苏辙《老子解》第44章）",
+     "sense_in_context": "先贵身（以身为界的顾），后忘我：前设先在窄域成立，再越过身界。结构前身，非此名之用例。",
+     "record_id": "LC2-SZ-C44-R01",
+     "locator": "第四十四章注"
+    }
+   ],
+   "fit": "名由已定的两个名组成：畛（边界）与顾（意义）。“畛内之顾”＝边界内一切都被顾，正是 SignificantWithin。名称不偏任何划法：沿空关系它是中心自身之善（subTrue_empty_iff），沿全关系它是该立场上的延续条件（subTrue_total_iff），二者是一个前设的窄域与宽域（presupposition_scopes、Flow.presupposition_order）。",
+   "not_carried": "“之”字结构可被读作“边界内的人对他人的照顾”（照料义）；前设不是假定为真；也不带苏辙“贵身”的贵（位阶）。",
+   "course": "新组合；结构前身为苏辙“贵身”到「忘我」的次第（LC2-SZ-C44-R01）。",
+   "alternatives": [
+    {
+     "name": "自贵",
+     "why_not": "老子 72 所否定的位阶。"
+    },
+    {
+     "name": "私",
+     "why_not": "负价占有。"
+    },
+    {
+     "name": "亲",
+     "why_not": "亲带亲属与差等。"
+    },
+    {
+     "name": "自顾",
+     "why_not": "只有自身，不含边界内其余。"
+    }
+   ],
+   "coinage": true,
+   "confidence": "low",
+   "lean": [
+    "Becoming.SignificantWithin",
+    "Becoming.presupposition_scopes",
+    "Becoming.subTrue_empty_iff",
+    "Becoming.subTrue_total_iff",
+    "Becoming.Flow.presupposition_order"
+   ]
+  },
+  {
+   "concept": "边界不变 boundary invariance，即不变性的步骤：BoundaryInvariant，前设在一个容许边界成立则在每个容许边界成立；在前设之下即该立场上的延续条件；在前设与中心覆盖之下等价于立场不变",
+   "name": "无己",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S01",
+     "quote": "至人无己，神人无功，聖人无名。",
+     "layer": "经·先秦（《庄子》内篇）",
+     "sense_in_context": "无己：不以己为界。",
+     "record_id": "ZH1-C01-R-06",
+     "locator": "逍遙遊"
+    },
+    {
+     "source_id": "ZH1-S17",
+     "quote": "聞曰：『道人不聞，至德不得，大人无己。』約分之至也。",
+     "layer": "经·先秦至秦汉（《庄子》外篇）",
+     "sense_in_context": "无己是「約分之至」：分界的划法不再起作用。",
+     "record_id": "ZH1-U17",
+     "locator": "秋水"
+    },
+    {
+     "source_id": "ZH1-S11",
+     "quote": "大同而无己。无己，惡乎得有有？",
+     "layer": "经·先秦至秦汉（《庄子》外篇）",
+     "sense_in_context": "大同而无己：同于全体而不以己为界。",
+     "record_id": "ZH1-U11",
+     "locator": "在宥"
+    }
+   ],
+   "fit": "无己不是取消自身，而是不让“己”的边界成为意义的断点：前设在己的边界成立，就在每个边界成立，这正是 BoundaryInvariant；在前设之下它恰是该立场上的延续条件（boundaryInvariant_iff_all），它是从前设到条件的条件句（boundaryInvariant_iff_conditional），若有一物不被顾，不变的前设在任何地方都不成立（not_subTrue_of_invariant）。秋水称无己为「約分之至」，即分界的划法不再改变结论。在前设处处成立与中心覆盖之下，无己恰是无方（boundaryInvariant_iff_standpointInvariant）。",
+   "not_carried": "去己（慎到「棄知去己」，被讥为「至死人之理」：取消前设本身；在什么都不被顾之处，前设在每个立场都空洞地不变，延续条件却不成立，Clearing.without_presupposition）；佛教无我（否定自我实体；理论不断言也不否定）；自我牺牲；苏辙「忘我」的遗忘义（遗忘一部分使之与其余不再相关，forgetting_unrelates）。",
+   "course": "逍遥游、秋水（外篇）、在宥（外篇）；明以后与佛教无我合流（憨山德清「由無我方能經世」，IN2-R0070）。",
+   "alternatives": [
+    {
+     "name": "为彼犹为己",
+     "why_not": "墨子语，短语，是立场不变的操作形式。"
+    },
+    {
+     "name": "齐",
+     "why_not": "齐带等量。"
+    },
+    {
+     "name": "一体",
+     "why_not": "程颢、惠施的一体是把整体画作己的边界（莫非己也），是到达条件的另一条路（subTrue_total_iff），不是不变性的步骤本身。"
+    },
+    {
+     "name": "忘我",
+     "why_not": "带遗忘与出神义。"
+    },
+    {
+     "name": "约分",
+     "why_not": "秋水的描述语，不是名。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.BoundaryInvariant",
+    "Becoming.boundaryInvariant_iff_all",
+    "Becoming.boundaryInvariant_iff_conditional",
+    "Becoming.not_subTrue_of_invariant",
+    "Becoming.unrestricted_iff_presupposed_along",
+    "Becoming.boundaryInvariant_iff_standpointInvariant"
+   ]
+  },
+  {
+   "concept": "由意义读出的相关 relevance read from significance：Frame.relevance，活的、已实现的、且从每个立场其延续都有意义的内容；在延续条件下是满足生生之意义的最小相关",
+   "name": "皆顾之活",
+   "form": "新组合",
+   "pre_qin": false,
+   "attestations": [
+    {
+     "source_id": "RU2-S-MZ",
+     "quote": "仁者无不爱也，急亲贤之为务。",
+     "layer": "经·先秦（《孟子》）",
+     "sense_in_context": "无不爱是对象范围的全称，急亲贤是在其上另加的先后：相关的东西（被全称所顾者）与先务是两件事。结构前身，非此名之用例。",
+     "record_id": "RU2-U-MZ13-46",
+     "locator": "尽心上·46"
+    }
+   ],
+   "fit": "名由已定的“皆”（每个立场）、“顾”（意义）、“活”组成：“每个立场都顾的活者”正是 Frame.relevance 的合取（活、已实现、∀ p sig）。在延续条件下它是满足生生之意义的最小相关（relevance_least），生生之意义与它相互刻画（livingSignificance_relevance_iff）。孟子把「无不爱」与「急亲贤」分开，对应相关与排序是两层。",
+   "not_carried": "“之”可读作所属；“皆”不表数量之全，只是立场的全称；不带“急”“务”的先后。",
+   "course": "新组合，无传世用例。",
+   "alternatives": [
+    {
+     "name": "善",
+     "why_not": "正价。"
+    },
+    {
+     "name": "宜",
+     "why_not": "合宜，带正价，属选择与配合。"
+    },
+    {
+     "name": "所顾",
+     "why_not": "缺立场的全称与活的限定。"
+    },
+    {
+     "name": "仁之所及",
+     "why_not": "把相关读作仁的范围，混同名与概念。"
+    }
+   ],
+   "coinage": true,
+   "confidence": "low",
+   "lean": [
+    "Becoming.Frame.relevance",
+    "Becoming.relevance_least",
+    "Becoming.livingSignificance_relevance_iff",
+    "Becoming.livingSignificance_of_unrestricted"
+   ]
+  }
+ ],
+ "entries": [
+  {
+   "id": "chengyi-wuwang-zhengli",
+   "record_ids": [
+    "CY130-H25-R01"
+   ],
+   "source_id": "YD-CY2",
+   "fragments": [
+    "雖无邪心苟不合正理則妄也乃邪心也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Flow.act_unselected",
+    "Becoming.Flow.consequence_unselected",
+    "Becoming.exists_law_iff",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "the-gap-for-ones-own-act",
+    "process-and-frame-as-readings",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：程颐说，即使自认无邪心，若不合正理仍是妄，乃至是邪心。一半与脊柱相合：选择经由行动者自己的耦合闭包，行动在闭包外的条件上造成的差别，任何经由闭包的选择都看不到（Flow.act_unselected、Flow.consequence_unselected），所以「无邪心」不保证不削弱他者：顾而失之是可能的。分歧在评价的尺度：程颐以一个先在的「正理」为标准，把不合者直接判为邪心；理论中规律从展开中读出（exists_law_iff），被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义），评价（顾式）不是对先在之理的符合。朱熹「理所當然吉凶非所論也」（ZX-R006）同样以先在之理为判义的尺度。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "共享经典（易）",
+   "work": "程颐《伊川易传》无妄卦",
+   "layer": "传·宋",
+   "locator": "卷二·无妄卦首总论及卦辞注",
+   "names_used": [
+    "顾式",
+    "顾"
+   ],
+   "relational": "关系层：意图不决定行动对他者的作用；非关系层：先在之理作为固定尺度。"
+  },
+  {
+   "id": "daxiang-junzi-yi",
+   "record_ids": [
+    "HX-R006"
+   ],
+   "source_id": "YD-HX02",
+   "fragments": [
+    "地勢坤，君子以厚德載物。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Learning.goAlike_iff_lumped",
+    "Becoming.Learning.Lumped",
+    "Becoming.Hexagram.yang_not_goAlike",
+    "Becoming.Law.rests_iff",
+    "Becoming.Captured.rule_perturbation_changes",
+    "Becoming.Unrestricted"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "seeking-boundary",
+    "target-capture"
+   ],
+   "reading": "AI读法：大象的结构是取象而法之，是类比而不是导出：一种对应承载律，当且仅当律在其归并之间通行（Learning.goAlike_iff_lumped），象与「君子以」之间没有给出这样的归并（RO 已有此读）。对本簇：“厚德载物”的内容（承载万物而不择）与无弃（Unrestricted）相近，但大象把它立为君子的德性，以地势为根据，是被断言的类比与品性，不是条件；理论中无弃不被断言，也不经由某种德的厚薄来成立。所以内容可并读，推理形式与地位分歧。",
+   "gap": "",
+   "ro_passage": "daxiang-junzi-yi",
+   "tradition": "共享经典（易）",
+   "work": "易传·大象传",
+   "layer": "传·先秦至秦汉",
+   "locator": "坤大象",
+   "names_used": [
+    "无弃"
+   ],
+   "relational": "关系层：载物；非关系层：德作为品性、取象类比作为根据。"
+  },
+  {
+   "id": "wenyan-side",
+   "record_ids": [
+    "OW-R017",
+    "OW-R018",
+    "OW-R019",
+    "OW-R020"
+   ],
+   "source_id": "DS10",
+   "fragments": [
+    "元者，善之长也。亨者，嘉之会也。利者，义之和也。贞者，事之干也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Unrestricted",
+    "Becoming.livingSignificance_of_unrestricted",
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Transfer.unordered"
+   ],
+   "records": [
+    "one-axiom-yields-g0",
+    "wisdom-root"
+   ],
+   "reading": "AI读法：文言把元亨利贞读成四德，把善、嘉、义放进乾之始，并以「君子体仁足以长人」把仁立为君子之德。这是把价值读入展开，理论不这样做：被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）；意义与生生之意义（仁）只在延续条件（无弃）下作为定理成立（livingSignificance_of_unrestricted 以 Unrestricted 为前提），条件本身不排序（Transfer.unordered），而「善之长」「嘉之会」是排序与正价。经与传是不同层，把文言之读回填为卦辞原义是越层。分歧。",
+   "gap": "",
+   "ro_passage": "wenyan-side",
+   "tradition": "共享经典（易）",
+   "work": "易传·文言传（乾）",
+   "layer": "传·先秦至秦汉",
+   "locator": "乾文言首节",
+   "names_used": [
+    "仁",
+    "无弃",
+    "顾"
+   ],
+   "relational": "非关系层：固定价值（四德）置于宇宙之始。"
+  },
+  {
+   "id": "xici-mao-bo-yong-zhong",
+   "record_ids": [
+    "WP-XCS-C08-S06-R03"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "夫茅之为物薄而用可重也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Valuation",
+    "Becoming.Web.living_iff_relations",
+    "Becoming.Transfer.unordered",
+    "Becoming.Web.widens_iff_retains_adds"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：「茅之为物薄而用可重」把价值放在用（关系中的作用）上，不放在物自身，这与理论相合：意义 sig p t f 以立场与步为索引，不是物的固有量（Valuation），活与否也从关系读出（Web.living_iff_relations）。定域：「可重」是一个等级（轻重），而理论的意义不分等级，混合的部分无序（Transfer.unordered）；理论中唯一的比较是扩大，即保留对方所保留的一切并有所加（Web.widens_iff_retains_adds），此句的“薄”与“重”只在这种比较下有对应。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "共享经典（易）",
+   "work": "易传·系辞上传",
+   "layer": "传·先秦至秦汉",
+   "locator": "系辞上·第八章（本版）",
+   "names_used": [
+    "顾"
+   ],
+   "relational": "关系层：价值在用；非关系层：轻重之等。"
+  },
+  {
+   "id": "xici-ji-zhi-zhe-shan",
+   "record_ids": [
+    "XC-R006"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "继之者善也，成之者性也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Unrestricted",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Valuation.premises_of_unrestricted",
+    "Becoming.Transfer.unordered",
+    "Becoming.Clearing.clearer_not_living"
+   ],
+   "records": [
+    "one-axiom-yields-g0",
+    "significance-retained-within-margin"
+   ],
+   "reading": "AI读法：「继之者善也」把道的延续直接称为善，「成之者性也」又把它固定为性。内容上它是本簇诸文中离延续条件最近的一句：凡继者都被正面看待，无所弃。分歧在两处。其一，延续条件只给顾（意义），不给正价：被顾者可以在某一步削弱他者，那一步不是活的（Clearing.clearer_not_living），条件本身不排序（Transfer.unordered）。其二，系辞把它断言为道之所是，理论把它作为不被断言的条件（Unrestricted），被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义），条件的根据开放。生生之意义（仁）是此条件下的定理（Valuation.premises_of_unrestricted）；把扩大称为更好（C）与不变性的步骤才带来排序，“善”不由条件本身给出。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "共享经典（易）",
+   "work": "易传·系辞上传",
+   "layer": "传·先秦至秦汉",
+   "locator": "系辞上·一阴一阳之谓道",
+   "names_used": [
+    "无弃",
+    "顾",
+    "仁"
+   ],
+   "relational": "关系层：延续；非关系层：把延续断言为善、为性（固定价值与固定之性）。"
+  },
+  {
+   "id": "xici-jixiong-shide",
+   "record_ids": [
+    "XC-R043"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "吉凶者，失得之象也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.retains_iff_includes",
+    "Becoming.Web.adds_iff_exceeds",
+    "Becoming.Flow.Balances.loses_iff_beyond_margin",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.Web.retains_agree"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "whole-first-and-bounded-centers"
+   ],
+   "reading": "AI读法：「吉凶者，失得之象」把吉凶读成得失，在脊柱上有确切对应：在延续条件下，保留是包含、增加是超出（Web.retains_iff_includes、Web.adds_iff_exceeds），一个部分失去有意义的延续恰在其净汲取超出余量处（Flow.Balances.loses_iff_beyond_margin）。定域：得失相对于立场；以依赖为界的中心对同一走法的得失判断彼此不一（Clearing.centers_disagree），只有在延续条件下各立场的保留判断才一致（Web.retains_agree）。所以“吉凶即失得”在把得失读成对一切被顾者的包含与超出时成立；占问者一方之吉凶不是这种得失。系辞「吉凶悔吝者，生乎动者也」（XC-R017）同属此层。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "共享经典（易）",
+   "work": "易传·系辞上传",
+   "layer": "传·先秦至秦汉",
+   "locator": "系辞上·第二章（本版）",
+   "names_used": [
+    "顾",
+    "方"
+   ],
+   "relational": "关系层：得失相对于立场与条件；非关系层：无。"
+  },
+  {
+   "id": "wangbi-fu-yi-you-wei-xin",
+   "record_ids": [
+    "YCM130-F-Z-F06b-R01"
+   ],
+   "source_id": "YWH-F",
+   "fragments": [
+    "若其以有為心，則異類未獲具存矣。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.bounded_rival",
+    "Becoming.Clearing.clearer_loses_dweller",
+    "Becoming.Web.retains_agree",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "one-axiom-yields-g0",
+    "held-lives-g0-is-centering"
+   ],
+   "reading": "AI读法：王弼说天地若以“有”为心，异类就不能俱存。这与理论相合：以一个有界中心的顾为准，边界外者不被顾；以依赖为界的中心彼此不一（Clearing.centers_disagree），有界意义是在已划边界内接受的条件规则，有物落在某立场区域之外时它就不是延续条件（bounded_rival）；在清除的例子中，有界的顾容许清除者的部分，而在延续条件下清除者的部分失去居住者（Clearing.clearer_loses_dweller）；只有在延续条件下各立场的保留判断一致（Web.retains_agree），异类才俱在顾中。剩余：王弼的结论是以无为心、以无为本，把一个先在的本立为根据，理论没有这一层；理论也不说中心不应存在，只说中心不从依赖导出（Clearing.center_not_derived）。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "共享经典（易）",
+   "work": "王弼《周易注》复卦彖注（孔颖达正义本）",
+   "layer": "注·魏晋",
+   "locator": "复卦彖传注",
+   "names_used": [
+    "我",
+    "别",
+    "无弃"
+   ],
+   "relational": "关系层：单一中心之顾排除异类；非关系层：以无为本（先在根据）。"
+  },
+  {
+   "id": "kongshu-wei-er-bu-zai",
+   "record_ids": [
+    "YCM130-H4-K-09-R01"
+   ],
+   "source_id": "YWH-H4",
+   "fragments": [
+    "體履於至道，法道而施政，則《老子》云「為而不宰，功成不居」是也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.partForms_iff",
+    "Becoming.Run.rest_driven_by_part",
+    "Becoming.Pool.difference_belongs_to_the_joint",
+    "Becoming.Dependence.differenceOnlyTogether_iff",
+    "Becoming.Web.retains_agree"
+   ],
+   "records": [
+    "where-a-move-is-formed",
+    "joint-difference-making",
+    "axiom-decomposition"
+   ],
+   "reading": "AI读法：孔颖达以《老子》「為而不宰，功成不居」解释体道施政。脊柱给出两半的结构（与 RO 第五十一章条同）：「不宰」——当其余的规律以一方的策略为输入时，这一方所做即其余所受（Run.rest_driven_by_part），动作属于部分恰在它是部分自己的策略（partForms_iff），宰与不宰都是可能的走法；「功成不居」——一个部分造成的差别不属于它自己：同样的汲取，有一个其他汲取者时造成差别，有两个时不造成（Pool.difference_belongs_to_the_joint），差别可以只由共同者造成（Dependence.differenceOnlyTogether_iff）。所以“不居功”在脊柱上是事实的读法：功属于共同。规范方向（应当不宰）只在延续条件下才有：没有立场被特权（Web.retains_agree）；从不宰到应当不宰还需要比较承诺 C 与不变性的步骤。「施政」「法道」把它放在治者一方，是理论不需要的中心。苏辙「無為之之意」（LC2-SZ-C37-R01）同此。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "共享经典（易）",
+   "work": "孔颖达等《周易正义》",
+   "layer": "疏·隋唐",
+   "locator": "周易正義 07.04（本版页面）·09",
+   "names_used": [
+    "无方",
+    "我"
+   ],
+   "relational": "关系层：功属于共同；非关系层：治者作为施行中心。"
+  },
+  {
+   "id": "lao-62-he-qi-zhi-you",
+   "record_ids": [
+    "LC2-WB-C62-R01"
+   ],
+   "source_id": "DS01",
+   "fragments": [
+    "人之不善，何弃之有？",
+    "不善当保道以免放。",
+    "圣人不立形名以检于物，不造进向以殊弃不肖，辅万物之自然而不为始，故曰无弃人也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Unrestricted",
+    "Becoming.unrestricted_iff_livingSignificance",
+    "Becoming.Valuation.premises_of_unrestricted",
+    "Becoming.Clearing.clearer_not_living",
+    "Becoming.Clearing.clearer_loses_dweller",
+    "Becoming.Transfer.unordered"
+   ],
+   "records": [
+    "one-axiom-yields-g0",
+    "whole-first-and-bounded-centers",
+    "significance-retained-within-margin"
+   ],
+   "reading": "AI读法：「人之不善，何弃之有」是一个全称否定：不以善与不善为门槛，没有谁被排除在顾之外；王弼 27 注「不立形名以检于物，不造进向以殊弃不肖」把无弃解释为不设任何区分作为弃的标准。这与延续条件（无弃）的形式相合：对任何东西，从每个立场，每一步的延续都有意义（Unrestricted）；条件恰是对任何东西的生生之意义（unrestricted_iff_livingSignificance），在其下生生之意义的各前提都成立（Valuation.premises_of_unrestricted）。三点须分清。第一，不弃不等于以其所为为活：在逐步读法下，削弱者的那一步不是活的（Clearing.clearer_not_living），顾及不善者的延续，并不把其削弱之步读成活的；在延续条件下清除者的部分仍失去居住者（Clearing.clearer_loses_dweller），无弃不取消损失。第二，条件本身不排序（Transfer.unordered），「何弃之有」也不说善人与不善人谁更重；排序在于把扩大称为更好（C）与不变性的步骤。第三，王弼 62 注「不善当保道以免放」与河上公「以道化之」把不弃与保道、教化相连，那是实施与矫正，理论区分规范依据与实施的保存。地位：老子把无弃说成圣人之德，理论把它作为条件，不被断言，根据开放。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "《老子》王弼本及王弼注",
+   "layer": "经·先秦；注·魏晋",
+   "locator": "第六十二章及注；第二十七章注",
+   "names_used": [
+    "无弃",
+    "顾",
+    "仁",
+    "活"
+   ],
+   "relational": "关系层：全称不弃；非关系层：圣人作为施行者、保道与教化的方向。"
+  },
+  {
+   "id": "suzhe-33-ke-ji-fu-xing",
+   "record_ids": [
+    "LC2-SZ-C33-R02"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "fragments": [
+    "力能及人而不能及我能克巳復性則非力之所及故可謂之強也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.adaptive_state_law_iff",
+    "Becoming.Law.lost_stays",
+    "Becoming.Law.merged_stays",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Web.Whole.needs_new"
+   ],
+   "records": [
+    "process-and-frame-as-readings",
+    "recurrence-without-premise",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：苏辙以“克己复性”为强：复归一个先在的、外力不及的性。理论中没有一个先在的完满之性可供复归：状态只在规则不起作用时才有自己的规律（adaptive_state_law_iff），失去的可能保持失去、合并的保持合并（Law.lost_stays、Law.merged_stays），持续的整体只经由新部分持续（Web.Whole.needs_new），所以“复”不是一般的规律；被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）。与本簇相关的是：苏辙之“克己”把己读作要克服的私，与理论的“己”（区域）不同；理论的不变性的步骤（无己）是把前设从己的边界推到每个边界，不是取消己。同人「性自有威」（LC2-SZ-C72-R01）、「厭慕之心未忘」（LC2-SZ-C72-R03）、「罪不能汙」（LC2-SZ-C62-R02）及「反而求之一心足矣」（LC-R031）同属先在之性的读法。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "苏辙《老子解》",
+   "layer": "注·宋",
+   "locator": "第三十三章注",
+   "names_used": [
+    "己",
+    "无己"
+   ],
+   "relational": "非关系层：先在完满之性（固定之性）。"
+  },
+  {
+   "id": "lao-05-tian-di-bu-ren",
+   "record_ids": [
+    "LE-R012"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "天地不仁，以万物为刍狗；圣人不仁，以百姓为刍狗。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Unrestricted",
+    "Becoming.Web.retains_agree",
+    "Becoming.Web.Retains.not_added",
+    "Becoming.Transfer.unordered",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "axiom-decomposition",
+    "significance-retained-within-margin",
+    "comparison-within-reach",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：「天地不仁」与理论的出发点相合：展开整体不被假定为善，理论不断言伦理公理，每个世界只是交换律的一个运行（World.unity），生成与退化都在其中发生（RO 已有此读）。本簇的要点在名：老子所否定的“仁”是偏爱与造立施化（王弼注、苏辙「生非吾仁之也」），而理论的仁（生生之意义）不带偏爱与正价，并与无方相连：在延续条件下没有立场被特权（Web.retains_agree），以保留作比较不许可任何终结（Web.Retains.not_added），混合部分无序（Transfer.unordered）。所以「天地不仁」在“无偏亲、无伦理谓词”的意义上与理论一致；「圣人不仁，以百姓为刍狗」若读作实践立场，它与条件下的仁（每个活者都被顾）分歧。苏辙「天地無私而聽萬物之自然」（LC2-SZ-C05-R01）同属此读。",
+   "gap": "",
+   "ro_passage": "lao-05-tian-di-bu-ren",
+   "tradition": "道",
+   "work": "《老子》",
+   "layer": "经·先秦",
+   "locator": "第五章",
+   "names_used": [
+    "仁",
+    "无方",
+    "无弃"
+   ],
+   "relational": "关系层：展开无偏爱；非关系层：无（但实践读法与条件分歧）。"
+  },
+  {
+   "id": "suzhe-44-gui-shen-wang-wo",
+   "record_ids": [
+    "LC2-SZ-C44-R01"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "fragments": [
+    "使天下知名之不足親貨之不足多而後知貴身知貴身而後知忘我此老子之意也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.unrestricted_iff_presupposed_along",
+    "Becoming.boundaryInvariant_iff_all",
+    "Becoming.not_subTrue_of_invariant",
+    "Becoming.Clearing.without_presupposition",
+    "Becoming.forgetting_unrelates"
+   ],
+   "records": [
+    "presupposition-scopes",
+    "axiom-decomposition",
+    "separation-loses-the-relation"
+   ],
+   "reading": "AI读法：苏辙的次第：先知名货不足亲多，后知贵身，再后知忘我。在脊柱上这是前设与不变性的步骤：贵身是以身为界的前设（畛内之顾）在窄域成立；从它到对一切的顾需要不变性（unrestricted_iff_presupposed_along），在前设之下，不变性恰是该立场上的延续条件（boundaryInvariant_iff_all）。定域：「忘我」若读成取消自身之顾，就失去了前设本身：在什么都不被顾之处，前设在每个立场都空洞地不变，延续条件却不成立（Clearing.without_presupposition），不变性没有前设就什么也给不出，若有某物不被顾，不变的前设在任何地方都不成立（not_subTrue_of_invariant），遗忘一部分则使它与其余不再相关（forgetting_unrelates）。所以苏辙的次第在「忘我」读作无己（不让己的边界成为断点）时成立，读作去己则不成立。“贵身”之贵（位阶）也不在理论中。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "苏辙《老子解》",
+   "layer": "注·宋",
+   "locator": "第四十四章注",
+   "names_used": [
+    "畛内之顾",
+    "无己",
+    "己"
+   ],
+   "relational": "关系层：从身界到一切；非关系层：贵（位阶）。"
+  },
+  {
+   "id": "suzhe-64-yu-er-bu-yu",
+   "record_ids": [
+    "LC2-SZ-C64-R03"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "fragments": [
+    "聖人非無欲也欲而不欲故雖欲而不傷于物非無學也學而不學故雖學而不害于理"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.valuation",
+    "Becoming.Clearing.clearer_not_living",
+    "Becoming.Flow.Balances.retains_iff_within_margin",
+    "Becoming.Valuation.SelfSignificance"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：苏辙说圣人不是无欲，而是欲而不伤于物。这正是“活”的两个合取：活动（欲、学）且不削弱（不伤于物、不害于理）。脊柱：在逐步读法下，一个事件是活的恰在它活动且不削弱所需条件（Web.valuation 的 living），削弱者那一步不是活的（Clearing.clearer_not_living）；一个部分保留一切有意义的延续，恰在其净汲取不超出余量（Flow.Balances.retains_iff_within_margin），“欲而不伤”就是汲取在余量之内。与周敦颐「无欲」（RU2-R0158）相反，苏辙保留了欲：自身意义（自爱，Valuation.SelfSignificance）是生生之意义的一部分，不需取消。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "苏辙《老子解》",
+   "layer": "注·宋",
+   "locator": "第六十四章注",
+   "names_used": [
+    "活",
+    "自爱"
+   ],
+   "relational": "关系层：欲在不伤物的范围内；非关系层：无。"
+  },
+  {
+   "id": "lao-20-shan-e-xiang-qu",
+   "record_ids": [
+    "LAO2-C20-R03"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "善之与恶，相去若何？"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Unrestricted",
+    "Becoming.Web.mixed_iff_adds",
+    "Becoming.Transfer.unordered",
+    "Becoming.Web.UnderminingOn.not_retains_unrestricted",
+    "Becoming.Ranking.possible_extends_iff"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "ranking-under-readings"
+   ],
+   "reading": "AI读法：「善之与恶，相去若何」追问善恶之间的距离，并未取消善恶判断。脊柱给出它的确切范围：在延续条件下，意义本身不分善恶，凡物之延续都被顾（Unrestricted）；两个走法相混时各加对方所缺（Web.mixed_iff_adds），混合部分无序，排序需要一个度量（Transfer.unordered），在这个意义上善恶「相去」不远。但距离不是零：削弱一个形成的走法在延续条件下不保留（Web.UnderminingOn.not_retains_unrestricted），比较原则在可能读法下对一些走法给出确定的扩展（Ranking.possible_extends_iff）。所以善恶之分在理论中落在扩大的比较（C）与削弱的事实上，不落在意义上。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "《老子》",
+   "layer": "经·先秦",
+   "locator": "第二十章",
+   "names_used": [
+    "顾",
+    "无弃"
+   ],
+   "relational": "关系层：善恶落在走法的比较；非关系层：无。"
+  },
+  {
+   "id": "lao-49-yi-bai-xing-xin-wei-xin",
+   "record_ids": [
+    "LAO2-C49-R01"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "圣人无常心，以百姓心为心。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.separates_all_iff",
+    "Becoming.Web.pool_adds",
+    "Becoming.ExchangeLaw.acts_alike_all_iff",
+    "Becoming.Flow.unselected_beyond_pool",
+    "Becoming.Valuation.significant_iff_held",
+    "Becoming.Web.significant_iff_self"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches",
+    "what-a-pools-acts-respond-to",
+    "held-lives-g0-is-centering"
+   ],
+   "reading": "AI读法：「无常心，以百姓心为心」与理论的合用耦合结构相同（RO 已有此读：Web.separates_all_iff、Web.pool_adds、ExchangeLaw.acts_alike_all_iff，界限为 Flow.unselected_beyond_pool）。本簇补一层：无常心＝没有一个固定中心之顾，以百姓心为心＝以每个立场的自身意义为准；在被持有处，生生之意义恰是处处自身意义加立场中立（Valuation.significant_iff_held），在一网中，每个形成顾其自身事件时即如此（Web.significant_iff_self）。所以这一章把仁读成各自爱的汇合加无方，不读成圣人一人之爱。「为天下浑其心」（LAO2-C49-R04）与孟子「所欲，与之聚之；所恶，勿施尔也」（RU2-R0040）同属此读。",
+   "gap": "",
+   "ro_passage": "lao-49-yi-bai-xing-xin-wei-xin",
+   "tradition": "道",
+   "work": "《老子》",
+   "layer": "经·先秦",
+   "locator": "第四十九章",
+   "names_used": [
+    "自爱",
+    "无方",
+    "仁",
+    "我"
+   ],
+   "relational": "关系层：中心由众立场汇合；非关系层：无。"
+  },
+  {
+   "id": "lao-49-bu-shan-yi-shan-zhi",
+   "record_ids": [
+    "LAO2-C49-R02"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "善者，吾善之；不善者，吾亦善之，德善。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Unrestricted",
+    "Becoming.Clearing.clearer_not_living",
+    "Becoming.Clearing.clearer_loses_dweller",
+    "Becoming.Transfer.unordered",
+    "Becoming.StandpointInvariant"
+   ],
+   "records": [
+    "one-axiom-yields-g0",
+    "whole-first-and-bounded-centers"
+   ],
+   "reading": "AI读法：「不善者，吾亦善之」不以对方的善恶为门槛，与无弃同。定域：“善之”若是给予正价，就超出了延续条件，条件只给顾不给正价；理论中顾及不善者的延续，并不把其削弱的那一步读成活的（Clearing.clearer_not_living），也不取消它造成的损失（Clearing.clearer_loses_dweller），条件不排序（Transfer.unordered）。苏辙「善不善在彼吾之所以善之者未甞渝也」（LC2-SZ-C49-R01）把“善之”放在自己一方的不变，与立场不变（无方，StandpointInvariant）相合。「信者，吾信之；不信者，吾亦信之」（LAO2-C49-R03）同式。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "《老子》",
+   "layer": "经·先秦",
+   "locator": "第四十九章",
+   "names_used": [
+    "无弃",
+    "无方",
+    "顾"
+   ],
+   "relational": "关系层：不以对方善恶为门槛；非关系层：无。"
+  },
+  {
+   "id": "lao-56-bu-ke-de-er-gui-jian",
+   "record_ids": [
+    "LAO2-C56-R04",
+    "LAO2-C56-R05"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "故不可得而亲，不可得而疏；不可得而利，不可得而害；不可得而贵，不可得而贱。故为天下贵。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.retains_agree",
+    "Becoming.StandpointInvariant",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.Transfer.unordered"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "relative-position-is-zero-sum",
+    "significance-retained-within-margin"
+   ],
+   "reading": "AI读法：玄同者“不可得而亲疏、利害、贵贱”：没有一个立场能对它施加偏向，这与无方相合：在延续条件下没有立场被特权（Web.retains_agree；StandpointInvariant）；亲疏、贵贱若从一个以依赖为界的中心作出，各中心彼此不一（Clearing.centers_disagree）；贵贱作为相对位置按计数是零和的（RelativePosition.positions_balance）。定域：「故为天下贵」把不可贵贱者重新放进贵的位阶，这一步理论没有：条件本身不排序（Transfer.unordered）。苏辙「體道者均覆萬物而孰為親踈」，并以「此所以為天下貴也」收束（LC2-SZ-C56-R02），同属此读，也同样重新引入贵。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "《老子》",
+   "layer": "经·先秦",
+   "locator": "第五十六章",
+   "names_used": [
+    "无方",
+    "顾"
+   ],
+   "relational": "关系层：不受亲疏贵贱；非关系层：为天下贵（位阶）。"
+  },
+  {
+   "id": "lao-72-zi-ai-bu-zi-gui",
+   "record_ids": [
+    "LAO2-C72-R04",
+    "LAO2-C72-R03"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "是以圣人自知不自见，自爱不自贵；"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Valuation.SelfSignificance",
+    "Becoming.Valuation.seed_of_selfSignificance",
+    "Becoming.Valuation.significant_iff_held",
+    "Becoming.RelativePosition.rise_needs_fall",
+    "Becoming.Transfer.unordered"
+   ],
+   "records": [
+    "held-lives-g0-is-centering",
+    "relative-position-is-zero-sum"
+   ],
+   "reading": "AI读法：「自爱不自贵」把两件事分开：对自身延续的顾，与自身在位阶中的高位。脊柱相合：自身意义（Valuation.SelfSignificance）在被持有处是生生之意义在每个立场的组成部分（Valuation.significant_iff_held），并给出种子（Valuation.seed_of_selfSignificance）；而贵作为相对位置，一方之升需要另一方之降（RelativePosition.rise_needs_fall），延续条件不排序（Transfer.unordered）。所以自爱不需要自贵，自贵是另一种比较。「自知不自见」同式：知自身而不以自身为显示的中心。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "《老子》",
+   "layer": "经·先秦",
+   "locator": "第七十二章",
+   "names_used": [
+    "自爱",
+    "端"
+   ],
+   "relational": "关系层：顾自身之延续；非关系层：被否定的自贵（位阶）。"
+  },
+  {
+   "id": "lao-79-tian-dao-wu-qin",
+   "record_ids": [
+    "LAO2-C79-R05"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "天道无亲，常与善人。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.retains_agree",
+    "Becoming.StandpointInvariant",
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.LoopReturn.loop_kept",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference",
+    "giving-that-waits-on-giving",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：前半「天道无亲」与无方相合：没有立场被特权（Web.retains_agree；StandpointInvariant）。后半「常与善人」是回报的秩序：展开偏向善人。理论中耦合界定回应而不固定回应（ExchangeLaw.response_not_fixed_by_coupling）；回报只在回路的每一环把所收给回时保持（LoopReturn.loop_kept），给回少于所收则差别在有限圈内关闭（LoopReturn.closes_within）；被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）。所以「常与善人」是被断言的回报秩序，与无亲并陈，而不为理论所有。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "《老子》",
+   "layer": "经·先秦",
+   "locator": "第七十九章",
+   "names_used": [
+    "无方"
+   ],
+   "relational": "关系层：无亲；非关系层：天道作为回报者（意志或单一中心）。"
+  },
+  {
+   "id": "wangbi-07-wu-si",
+   "record_ids": [
+    "LC2-WB-C07-R02"
+   ],
+   "source_id": "DS01",
+   "fragments": [
+    "无私者，无为于身也。身先身存，故曰，能成其私也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.beyond_gives_nothing",
+    "Becoming.Overshoot.ends_through_feeder",
+    "Becoming.Flow.within_closure_iff_retains",
+    "Becoming.Downstream.one_way"
+   ],
+   "records": [
+    "feeding-closure",
+    "closure-verdict-meets-axiom"
+   ],
+   "reading": "AI读法：王弼：无私是不为身而为，结果身反而先、反而存。脊柱给出它成立的范围：一个形成的延续依赖其喂养闭包，闭包外的东西不给它所需（Flow.beyond_gives_nothing），闭包内的损失可以经由喂养者回到本已自我支持的形成（Overshoot.ends_through_feeder）；在喂养闭包是整体之处，以自身为界的意义与延续条件在每个比较上一致（Flow.within_closure_iff_retains）。所以“不为身而身存”在自身依赖于所不私者的范围内成立。定域：它不普遍——依赖可以单向，以自身所给为生者在自身停止给予时终结，而自身不受影响（Downstream.one_way），对下游者的顾不回到自身；「能成其私」若当作无私的理由，就把自身意义当成了动机，而理论分开规范依据与动机。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "王弼《老子道德经注》",
+   "layer": "注·魏晋",
+   "locator": "第七章注",
+   "names_used": [
+    "自爱",
+    "己"
+   ],
+   "relational": "关系层：身存于所依赖者；非关系层：无。"
+  },
+  {
+   "id": "ru-lunyu-shu",
+   "record_ids": [
+    "RU1-LY-15-23-R01",
+    "RU1-LY-12-02-R01"
+   ],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "其恕乎！己所不欲，勿施於人。",
+    "己所不欲，勿施於人。在邦無怨，在家無怨。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Relabel.valued_alike_iff",
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.Flow.act_unselected",
+    "Becoming.Valuation.shares"
+   ],
+   "records": [
+    "selection-through-a-model-of-the-options",
+    "generalization-through-lumping",
+    "the-gap-for-ones-own-act"
+   ],
+   "reading": "AI读法：恕是通过自己的好恶来选择施于他人的行为，即经由一个把他人与己归为一类的模型来选择（RO 已有此读）：经由映射的选择恰在所关心的性质在映射归并处取同值时才正确（Learning.selects_right_through、Learning.lumped_right_iff），映射把两项归并而性质在其中一项成立、另一项不成立时，没有任何经由它的选择能分开它们（Learning.selects_not_right_of_parted）。本簇补一层区分：恕不是立场中立（无方）本身。立场中立说 p 所顾的活者 q 也顾（Valuation.shares），不经由对他人好恶的模拟；恕是实现顾的一种方法，其可靠范围由归并决定。所以「己所不欲，勿施於人」在他人与己于相关处同样变化时可靠，在他人与己不同处会系统地看不见差别。戴震「以我絜之人，則理明」（RU2-R0225）是同一方法，同一范围。",
+   "gap": "",
+   "ro_passage": "ru-lunyu-shu",
+   "tradition": "儒",
+   "work": "《论语》",
+   "layer": "经·先秦",
+   "locator": "卫灵公·24；颜渊·2",
+   "names_used": [
+    "无方",
+    "顾"
+   ],
+   "relational": "关系层：施于他人者经由与己的类比；非关系层：无。"
+  },
+  {
+   "id": "ru-lunyu-ji-yu-li-er-li-ren",
+   "record_ids": [
+    "RU1-LY-06-28-R03"
+   ],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "夫仁者，己欲立而立人，己欲達而達人。能近取譬，可謂仁之方也已。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Excluding.three_courses",
+    "Becoming.Flow.level_kept",
+    "Becoming.Viability.ChoicePoint.each_not_joint",
+    "Becoming.Viability.ChoicePoint.no_rule_decides_joint",
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.Valuation.significant_iff_held"
+   ],
+   "records": [
+    "what-taking-all-excludes",
+    "conditions-kept-together",
+    "generalization-through-lumping",
+    "held-lives-g0-is-centering"
+   ],
+   "reading": "AI读法：「己欲立而立人」说自己的立与他人的立一起成立，脊柱给出它成立的范围（RO 已有此读）：合取在所给之内时三者都持续（Excluding.three_courses、Flow.level_kept），但各自可保持不等于共同可保持（Viability.ChoicePoint.each_not_joint），也没有依据各自情况的规则能判定共同情况（Viability.ChoicePoint.no_rule_decides_joint）；「能近取譬」是以己为模型推及他人，在世界于这个归并上同样变化处才正确（Learning.lumped_right_iff）。本簇补一层：「己欲立」是自身意义（自爱），「立人」是对他人的顾；在被持有处，生生之意义（仁）恰是处处自身意义加立场中立（Valuation.significant_iff_held），这一章把二者放在同一句里，与之相合。注意此处“方”是方法义，不是本簇所名的立场。",
+   "gap": "",
+   "ro_passage": "ru-lunyu-ji-yu-li-er-li-ren",
+   "tradition": "儒",
+   "work": "《论语》",
+   "layer": "经·先秦",
+   "locator": "雍也第六·原页六之二八",
+   "names_used": [
+    "自爱",
+    "仁",
+    "无方",
+    "方"
+   ],
+   "relational": "关系层：己立与人立同时；非关系层：无。"
+  },
+  {
+   "id": "lunyu-ai-ren",
+   "record_ids": [
+    "RU1-LY-12-22-R01"
+   ],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "樊遲問「仁」。子曰：「愛人。」"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Valuation.Significant",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Unrestricted",
+    "Becoming.unrestricted_iff_livingSignificance"
+   ],
+   "records": [
+    "one-axiom-yields-g0",
+    "metaethical-core-characterization"
+   ],
+   "reading": "AI读法：问仁，答以爱人：仁指向他人，不指向自身之所得。理论的仁（生生之意义）是每个活者从每个立场都被顾（Valuation.Significant），给顾而不给爱：意义不必为正价，被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）；在延续条件（无弃）下，仁恰是对任何东西的生生之意义（unrestricted_iff_livingSignificance）。所以「愛人」在把爱读作顾他人之活的范围内与仁相合；爱的情感与正价，以及只及于人的范围，是理论之仁不带的：理论之仁及于每个活者。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "《论语》",
+   "layer": "经·先秦",
+   "locator": "颜渊·22",
+   "names_used": [
+    "仁",
+    "顾",
+    "活",
+    "无弃"
+   ],
+   "relational": "关系层：仁指向他人；非关系层：无（爱的正价与范围为剩余）。"
+  },
+  {
+   "id": "zhongyong-shi-zhu-ji-er-bu-yuan",
+   "record_ids": [
+    "RU1-ZY-13-R03",
+    "RU1-ZY-13-R06",
+    "RU1-ZY-13-R07",
+    "RU1-ZY-13-R08",
+    "RU1-ZY-13-R09"
+   ],
+   "source_id": "RU1-S-ZY",
+   "fragments": [
+    "忠恕違道不遠，施諸己而不願，亦勿施於人。",
+    "所求乎子，以事父，未能也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.StandpointInvariant",
+    "Becoming.boundaryInvariant_iff_standpointInvariant",
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.Relabel.valued_alike_iff",
+    "Becoming.RelativePosition.positions_balance"
+   ],
+   "records": [
+    "axiom-decomposition",
+    "generalization-through-lumping",
+    "selection-through-a-model-of-the-options",
+    "relative-position-is-zero-sum"
+   ],
+   "reading": "AI读法：中庸把恕写成双向：施诸己而不愿者勿施于人；所求乎子者，以之事父。把对他人的要求返用于自己，比论语的单向更近立场不变：从子的立场与从父的立场所要求的相同，即从一个立场成立则从每个立场成立（StandpointInvariant）；在前设与中心覆盖之下它等价于边界不变（boundaryInvariant_iff_standpointInvariant）。定域：中庸的操作仍经由角色的类比（子与父、臣与君、弟与兄、朋友），其可靠恰在角色归并处所关心的性质同样变化（Learning.selects_right_through、Learning.lumped_right_iff、Relabel.valued_alike_iff）；而角色本身（君臣父子）带位阶，相对位置按计数零和（RelativePosition.positions_balance），理论不带这一层。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "《礼记·中庸》",
+   "layer": "经·先秦至秦汉",
+   "locator": "中庸·段13",
+   "names_used": [
+    "无方",
+    "无己"
+   ],
+   "relational": "关系层：要求在立场间互换；非关系层：君臣父子的位阶。"
+  },
+  {
+   "id": "zhongyong-da-de-bi-de",
+   "record_ids": [
+    "RU1-ZY-17-R01",
+    "RU1-ZY-17-R02"
+   ],
+   "source_id": "RU1-S-ZY",
+   "fragments": [
+    "故大德必得其位，必得其祿，必得其名，必得其壽。",
+    "故大德者必受命。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.Downstream.one_way",
+    "Becoming.RelativePosition.not_all_rise",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference",
+    "relative-position-is-zero-sum",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：大德必得位、禄、名、寿，必受命：德与回报之间的必然。理论：耦合界定回应而不固定回应（ExchangeLaw.response_not_fixed_by_coupling）；回路中给回少于所收则差别在有限圈内关闭（LoopReturn.closes_within）；依赖可以单向而不回（Downstream.one_way）；位作为相对位置，没有变化使每个部分都上升（RelativePosition.not_all_rise）；被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）。所以「必得」是被断言的回报秩序，与理论分歧；它还把位、禄、名（位阶与名分）当作德的回报，理论的顾不带这些。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "《礼记·中庸》",
+   "layer": "经·先秦至秦汉",
+   "locator": "中庸·段17",
+   "names_used": [
+    "顾"
+   ],
+   "relational": "非关系层：天命作为回报者；位禄名作为位阶。"
+  },
+  {
+   "id": "zhongyong-jin-xing",
+   "record_ids": [
+    "RU1-ZY-30-R02",
+    "RU1-ZY-30-R03"
+   ],
+   "source_id": "RU1-S-ZY",
+   "fragments": [
+    "能盡其性，則能盡人之性；能盡人之性，則能盡物之性"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Valuation.significant_of_transmits",
+    "Becoming.Model.relational_neutrality_is_needed",
+    "Becoming.Relayed.transmission_is_needed",
+    "Becoming.unrestricted_iff_presupposed_along",
+    "Becoming.Valuation.seed_of_selfSignificance"
+   ],
+   "records": [
+    "metaethical-core-characterization",
+    "held-lives-g0-is-centering",
+    "axiom-decomposition"
+   ],
+   "reading": "AI读法：尽其性则能尽人之性，再到物之性：从自身推到人、到物的一串「則能」。在脊柱上，从自身到一切有两条路，各需条件。一条从种子出发：在被持有处自身意义给出种子（Valuation.seed_of_selfSignificance），在每个立场都持有一个活的主张的连通整体上，处处自身意义加关系中立（贯）给出生生之意义，不需立场中立（Valuation.significant_of_transmits）；没有关系中立，种子到不了（Model.relational_neutrality_is_needed），未被持有的生命需要转递（Relayed.transmission_is_needed）。另一条从自身边界的前设出发，到一切需要不变性的步骤（unrestricted_iff_presupposed_along）。定域：中庸把这一串说成至诚者之能的必然推出，理论中每一步都是条件，不由尽己而自动得到；“性”作为固定之性也不在理论中。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "《礼记·中庸》",
+   "layer": "经·先秦至秦汉",
+   "locator": "中庸·段30",
+   "names_used": [
+    "端",
+    "贯",
+    "无己",
+    "自爱"
+   ],
+   "relational": "关系层：由己及人及物；非关系层：固定之性、至诚者的能力。"
+  },
+  {
+   "id": "ru-mengzi-tui-en",
+   "record_ids": [
+    "RU2-R0007"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "故推恩足以保四海，不推恩无以保妻子。",
+    "古之人所以大过人者，无他焉，善推其所为而已矣。",
+    "老吾老，以及人之老；幼吾幼，以及人之幼"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Overshoot.ends_through_feeder",
+    "Becoming.Flow.beyond_gives_nothing",
+    "Becoming.Flow.Balances.consumption_ends_with_feeders",
+    "Becoming.Renewable.kept_part_not_renewal",
+    "Becoming.Web.SelectsThrough.widen",
+    "Becoming.Learning.lumped_right_iff"
+   ],
+   "records": [
+    "feeding-closure",
+    "levels-of-closure",
+    "conditions-kept-together",
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：「不推恩无以保妻子」有确切的脊柱范围（RO 已有此读）：一个形成的延续依赖其喂养闭包，闭包外的东西不给它所需（Flow.beyond_gives_nothing），喂养者都无支持的消耗至多持续有限步（Flow.Balances.consumption_ends_with_feeders）；「推恩足以保四海」是充分性断言，而保持一个部分的活动不决定更新（Renewable.kept_part_not_renewal）。本簇补一层区分：推不是关系中立（贯）。「老吾老，以及人之老」是以己之所顾为模型及于他人，属选择的扩大（Web.SelectsThrough.widen），其正确依赖他人与己在相关处同样变化（Learning.lumped_right_iff）；关系中立则不依赖相似，意义沿相关的活者一节节传过去。所以推是实现仁的一种方法，其范围由相似决定。",
+   "gap": "",
+   "ro_passage": "ru-mengzi-tui-en",
+   "tradition": "儒",
+   "work": "《孟子》",
+   "layer": "经·先秦",
+   "locator": "梁惠王上·7",
+   "names_used": [
+    "贯",
+    "仁"
+   ],
+   "relational": "关系层：顾的扩大与喂养闭包；非关系层：无。"
+  },
+  {
+   "id": "ru-mengzi-si-duan-kuo-chong",
+   "record_ids": [
+    "RU2-R0019"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "恻隐之心，仁之端也",
+    "凡有四端于我者，知皆扩而充之矣，若火之始然，泉之始达。茍能充之，足以保四海；茍不充之，不足以事父母。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Valuation.Seed",
+    "Becoming.Valuation.significant_iff",
+    "Becoming.Model.seed_is_needed",
+    "Becoming.responds_to_own_level",
+    "Becoming.Closing.Threshold.forms",
+    "Becoming.carried_le_polynomial_before",
+    "Becoming.carried_runaway",
+    "Becoming.Closing.Threshold.unforeseen"
+   ],
+   "records": [
+    "metaethical-core-characterization",
+    "how-loops-form",
+    "how-a-carried-difference-grows"
+   ],
+   "reading": "AI读法：端是种子：至少一处有顾（Valuation.Seed）；在有活的主张的连通整体上，生生之意义恰是种子加关系中立与立场中立（Valuation.significant_iff），没有种子则不成立（Model.seed_is_needed）。「扩而充之」对应种子经中立规则到达全体，这是条件，不是端自身的性质。端的增长形态 RO 已有读：回应自身给出之水平时形成自环（responds_to_own_level），在阈值处回路形成并此后加倍（Closing.Threshold.forms、carried_runaway），回路形成之前所携带的量至多是多项式的（carried_le_polynomial_before），阈值之前的进程不显示它会不会形成（Closing.Threshold.unforeseen）；同样的结构也给出失控，所以增长本身不是仁。定域：「人皆有」「我固有之」是断言，理论的种子只是存在式的一处；「足以保四海」也是断言。羞恶、辞让、是非之端（RU2-R0020、R0021、R0022）同式而属他簇之名。",
+   "gap": "",
+   "ro_passage": "ru-mengzi-si-duan-kuo-chong",
+   "tradition": "儒",
+   "work": "《孟子》",
+   "layer": "经·先秦",
+   "locator": "公孙丑上·6",
+   "names_used": [
+    "端",
+    "仁",
+    "兼"
+   ],
+   "relational": "关系层：开端经扩充及于他者；非关系层：人皆有、固有（固定之性）。"
+  },
+  {
+   "id": "mengzi-wo-gu-you-zhi",
+   "record_ids": [
+    "RU2-R0053"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "仁义礼智，非由外铄我也，我固有之也，弗思耳矣。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Valuation.seed_of_selfSignificance",
+    "Becoming.Model.seed_is_needed",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.adaptive_state_law_iff"
+   ],
+   "records": [
+    "metaethical-core-characterization",
+    "held-lives-g0-is-centering",
+    "process-and-frame-as-readings"
+   ],
+   "reading": "AI读法：孟子说仁义礼智是我固有的，不是从外熔铸进来的。部分相合：理论中种子不必外来，在被持有处自身意义就给出种子（Valuation.seed_of_selfSignificance），而没有种子什么也传不出去（Model.seed_is_needed）。分歧在地位：「固有」把仁放在一个先于关系、人人具有的性里；理论的自身意义是一个顾式所读出的东西（想要自己的延续），被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义），状态只在规则不起作用时才有自己的规律（adaptive_state_law_iff）。所以“我”中的端是一个存在式的开端，不是固有之性的证明。「乃若其情则可以为善矣」（RU2-R0052）与程颐「性则无不善」（RU2-R0190）同属固有之善的读法。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "《孟子》",
+   "layer": "经·先秦",
+   "locator": "告子上·6",
+   "names_used": [
+    "端",
+    "我",
+    "自爱",
+    "顾式"
+   ],
+   "relational": "关系层：端在自身；非关系层：固有之性。"
+  },
+  {
+   "id": "mengzi-xin-zhi-suo-tong-ran",
+   "record_ids": [
+    "RU2-R0055"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "心之所同然者，何也？谓：理也，义也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.StandpointInvariant",
+    "Becoming.Model.standpoint_neutrality_is_needed",
+    "Becoming.Clearing.without_standpoint_invariance",
+    "Becoming.Clearing.centers_disagree"
+   ],
+   "records": [
+    "axiom-decomposition",
+    "whole-first-and-bounded-centers",
+    "metaethical-core-characterization"
+   ],
+   "reading": "AI读法：孟子以「心之所同然」为理义：每个人的心都同样地肯定理义。理论中立场不变（无方）是一个条件，不是关于各心的事实：立场中立是生生之意义必需的前提（Model.standpoint_neutrality_is_needed），有世界中立场不变不成立（Clearing.without_standpoint_invariance），以依赖为界的中心彼此不一（Clearing.centers_disagree）。所以「同然」作为对各心的事实断言，与理论分歧；作为条件读（若各立场之顾一致，StandpointInvariant），它就是无方。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "《孟子》",
+   "layer": "经·先秦",
+   "locator": "告子上·7",
+   "names_used": [
+    "无方",
+    "方"
+   ],
+   "relational": "非关系层：各心同然作为固定事实。"
+  },
+  {
+   "id": "ru-mengzi-qinqin-renmin-aiwu",
+   "record_ids": [
+    "RU2-R0075",
+    "RU2-R0076"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "君子之于物也，爱之而弗仁；于民也，仁之而弗亲。亲亲而仁民，仁民而爱物。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Flow.withinInfluence_of_withinFeeding",
+    "Becoming.Transfer.unordered",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.Lexical.Above",
+    "Becoming.BoundaryInvariant",
+    "Becoming.unrestricted_iff_presupposed_along",
+    "Becoming.Flow.presupposition_order"
+   ],
+   "records": [
+    "levels-of-closure",
+    "whole-first-and-bounded-centers",
+    "presupposition-scopes",
+    "protection-priority-excludes-uniform-aggregation"
+   ],
+   "reading": "AI读法：一致的部分：嵌套确实存在，喂养闭包在影响闭包之内（Flow.withinInfluence_of_withinFeeding），前设沿更大的关系说得更多（Flow.presupposition_order）；孟子的序列延伸到物，不弃任何东西。分歧的部分：把这种嵌套读成意义的等差。延续条件下混合的部分无序（Transfer.unordered：排序需要一个度量）；以依赖为界的中心彼此不一（Clearing.centers_disagree）；在不变性的步骤下，从一个立场在边界内成立只能通过对一切成立（unrestricted_iff_presupposed_along、BoundaryInvariant）。脊柱有两层的字典序（Lexical.Above）作为定义，但没有按闭包层级分层的序及其跨中心一致性的定理（见 gap）。本簇的名的张力也在这里：孟子的“仁”只是亲亲、仁民、爱物三层中的一层，而理论以仁名生生之意义的全体；这是名的取舍（取「及其所不爱」「无不爱」之仁），不是对此句的误读。厩焚，孔子问「傷人乎」而不问马（RU1-LY-10-12-R01）同属人先于物的次第。",
+   "gap": "缺：按闭包层级分级的序，及其跨中心的一致性。设关系链 R_0 ⊆ R_1 ⊆ … ⊆ R_n（喂养、影响、系统、全体），中心 center : Pos → F，level p g 为使 WithinClosure R_i (center p) g 成立的最小 i。定义 GradedRetains sig p l l'：按 level p 由近及远的字典序，在 level p 最低的相异层上 l' 保留 l 所保留者。要证：(1) Unrestricted sig → Web.Retains sig p l l' → GradedRetains sig p l l'（分级不推翻保留）；(2) 对两个中心 p、q，在容许分别只保留 g 或只保留 h 的走法族上，GradedRetains 在每一对走法上于 p、q 一致，当且仅当 level p 与 level q 在形成上诱导同一前序；否则存在一对走法被二者反向排序。由此差等是加在无弃之上的度量，不是由它导出。最近的声明：Becoming.Lexical.Above、Becoming.Flow.withinInfluence_of_withinFeeding、Becoming.Flow.presupposition_order、Becoming.Clearing.centers_disagree、Becoming.Transfer.unordered、Becoming.Web.retains_agree。",
+   "ro_passage": "ru-mengzi-qinqin-renmin-aiwu",
+   "tradition": "儒",
+   "work": "《孟子》",
+   "layer": "经·先秦",
+   "locator": "尽心上·45",
+   "names_used": [
+    "仁",
+    "无弃",
+    "无己",
+    "畛域"
+   ],
+   "relational": "关系层：嵌套的闭包；非关系层：意义的等差（位阶）。"
+  },
+  {
+   "id": "xunzi-tian-jun",
+   "record_ids": [
+    "RU2-R0115"
+   ],
+   "source_id": "RU2-S-XZ17",
+   "fragments": [
+    "心居中虚，以治五官，夫是之谓天君。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.pool_adds",
+    "Becoming.Clearing.pool_closes_gap",
+    "Becoming.Flow.unselected_beyond_coupling",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches",
+    "whole-first-and-bounded-centers"
+   ],
+   "reading": "AI读法：荀子以心居中虚而治五官，称之为天君。结构上，五官各有所耦合，心汇合它们：汇合所分开的超出任何单个成员（Web.pool_adds），池化补上单个中心的缺口（Clearing.pool_closes_gap），单个成员在其耦合闭包外选择是盲的（Flow.unselected_beyond_coupling）。所以「中虚」可读作不偏于任何一官的汇合位置。剩余：“治”与“君”把汇合者读成统治的中心；理论中沿依赖读不出中心（Clearing.center_not_derived），汇合不需要一个君。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "《荀子》",
+   "layer": "经·先秦",
+   "locator": "天論篇",
+   "names_used": [
+    "我",
+    "无方"
+   ],
+   "relational": "关系层：诸官汇合；非关系层：君（单一统治中心）。"
+  },
+  {
+   "id": "xunzi-yu-bu-dai-ke-de",
+   "record_ids": [
+    "RU2-R0136"
+   ],
+   "source_id": "RU2-S-XZ22",
+   "fragments": [
+    "欲不待可得，而求者从所可。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Valuation.SelfSignificance",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Flow.act_unselected"
+   ],
+   "records": [
+    "held-lives-g0-is-centering",
+    "selection-through-a-model-of-the-options",
+    "the-gap-for-ones-own-act"
+   ],
+   "reading": "AI读法：荀子把欲与求分开：欲的生起不以能否得到为前提，求则从心之所可。理论同样分两层。意义层：自身意义（自爱，Valuation.SelfSignificance）是顾式的一个字段，由顾式给定，不是动力学的字段；被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）。选择层：行动经由一个模型选择，其正确恰在模型所归并处所关心的性质同样变化（Learning.selects_right_through），而行动在行动者耦合闭包外造成的差别不被选择看见（Flow.act_unselected）。所以「欲不待可得」在意义层，「求者从所可」在选择层，与理论的分层一致。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "《荀子》",
+   "layer": "经·先秦",
+   "locator": "正名篇",
+   "names_used": [
+    "自爱",
+    "顾式"
+   ],
+   "relational": "关系层：欲与求分层；非关系层：无。"
+  },
+  {
+   "id": "zhoudunyi-wu-yu",
+   "record_ids": [
+    "RU2-R0158"
+   ],
+   "source_id": "RU2-S-S01",
+   "fragments": [
+    "一者，无欲也，无欲则静虚、动直，静虚则明，明则通；动直则公，公则溥。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Valuation.significant_iff_held",
+    "Becoming.Valuation.seed_of_selfSignificance",
+    "Becoming.Model.seed_is_needed",
+    "Becoming.Web.retains_agree"
+   ],
+   "records": [
+    "held-lives-g0-is-centering",
+    "metaethical-core-characterization"
+   ],
+   "reading": "AI读法：周敦颐以无欲为一，无欲而后公、公而后溥。目标（公而溥：不偏于一方而普遍）与无方、无弃相合：在延续条件下没有立场被特权（Web.retains_agree）。分歧在路径：理论中自身意义（想要自己的延续）在被持有处是生生之意义的组成部分（Valuation.significant_iff_held），并给出种子（Valuation.seed_of_selfSignificance）；无欲若取消自身意义，在没有其他种子之处就失去传递所需的种子（Model.seed_is_needed）。所以溥不经由无欲，而经由欲之不伤（苏辙第 64 章注）与不变性的步骤（无己）。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "周敦颐《通书》",
+   "layer": "论·宋",
+   "locator": "圣学第二十",
+   "names_used": [
+    "自爱",
+    "端",
+    "无方",
+    "无弃",
+    "无己"
+   ],
+   "relational": "关系层：公溥；非关系层：以无欲为本（取消自身之顾）。"
+  },
+  {
+   "id": "ru-zhangzai-min-bao-wu-yu",
+   "record_ids": [
+    "RU2-R0181"
+   ],
+   "source_id": "RU2-S-S05",
+   "fragments": [
+    "故天地之塞，吾其体；天地之帅，吾其性。民吾同胞，物吾与也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.region_not_a_cut",
+    "Becoming.Flow.boundary_crossed",
+    "Becoming.Brood.descent_connected",
+    "Becoming.Flow.descent_reaches",
+    "Becoming.Web.Whole.arises_part"
+   ],
+   "records": [
+    "conveyance-crosses-the-boundary",
+    "living-on-and-descent",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：「天地之塞，吾其体」对应：延续族群的区域不是切口，传递穿过边界（Flow.region_not_a_cut、Flow.boundary_crossed）；「民吾同胞」对应：世代由后裔相连（Brood.descent_connected），在关系中立下，看重一个形成的事件到达其后裔的每个活事件（Flow.descent_reaches）（RO 已有此读）。本簇补一层：这是从自身边界出发、把整体画进自身（「吾其体」）的一条路，与无己（不让边界成为断点）殊途：沿全关系，前设恰是该立场上的延续条件（见程颢条）。剩余：西铭随后以宗子、家相组织整体，是断言的等级；民胞物与是宋代后起之语。",
+   "gap": "",
+   "ro_passage": "ru-zhangzai-min-bao-wu-yu",
+   "tradition": "儒",
+   "work": "张载《正蒙·乾称》（西铭）",
+   "layer": "论·宋",
+   "locator": "乾称篇·西铭段",
+   "names_used": [
+    "无己",
+    "畛域",
+    "贯"
+   ],
+   "relational": "关系层：同源与边界不成切口；非关系层：宗子家相的等级。"
+  },
+  {
+   "id": "ru-chenghao-yi-ti",
+   "record_ids": [
+    "RU2-R0183"
+   ],
+   "source_id": "RU2-S-S06",
+   "fragments": [
+    "仁者以天地万物为一体，莫非己也。认得为己，何所不至？",
+    "如手足不仁，气已不贯"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.BoundaryInvariant",
+    "Becoming.unrestricted_iff_presupposed_along",
+    "Becoming.boundaryInvariant_iff_conditional",
+    "Becoming.subTrue_total_iff",
+    "Becoming.Web.observed_level_couples",
+    "Becoming.Flow.unselected_beyond_coupling"
+   ],
+   "records": [
+    "presupposition-scopes",
+    "axiom-decomposition",
+    "whole-first-and-bounded-centers",
+    "selection-through-registration"
+   ],
+   "reading": "AI读法：内容上一致，地位上分歧（RO 已有此读）。本簇补两点。其一，「莫非己也」与庄子的无己从相反两侧到达同一处：程颢把己的边界扩到整体，沿全关系整体是唯一边界，前设恰是该立场上的延续条件（subTrue_total_iff）；无己则保留己的边界，令前设在每个边界不变（BoundaryInvariant），不变性恰是从前设到条件的条件句（boundaryInvariant_iff_conditional、unrestricted_iff_presupposed_along）。其二，「手足不仁，气已不贯」以不贯名不仁，是关系中立（贯）在一处断开：凡以水平耦合进来的差别才使历史有别（Web.observed_level_couples），耦合闭包外选择是盲的（Flow.unselected_beyond_coupling），麻木就是耦合断了。分歧在地位：程颢把一体说成仁之所是，理论把它作为条件加步骤，条件不被断言，根据开放。张载「其视天下无一物非我」（RU2-R0180）同属扩己为整体的读法。",
+   "gap": "",
+   "ro_passage": "ru-chenghao-yi-ti",
+   "tradition": "儒",
+   "work": "程颢语（《近思录》卷一）",
+   "layer": "论·宋",
+   "locator": "近思录卷一第20条",
+   "names_used": [
+    "无己",
+    "贯",
+    "仁",
+    "己"
+   ],
+   "relational": "关系层：一体与贯通；非关系层：一体作为仁之本体（断言）。"
+  },
+  {
+   "id": "chengyi-ren-xing-ai-qing",
+   "record_ids": [
+    "RU2-R0188"
+   ],
+   "source_id": "RU2-S-S06",
+   "fragments": [
+    "爱自是情，仁自是性，岂可专以爱为仁？"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.livingSignificance_of_unrestricted",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.adaptive_state_law_iff",
+    "Becoming.Valuation.Significant"
+   ],
+   "records": [
+    "one-axiom-yields-g0",
+    "process-and-frame-as-readings"
+   ],
+   "reading": "AI读法：程颐分开仁与爱：爱是情，仁是性。部分相合：理论之仁（生生之意义，Valuation.Significant）也不是爱，它给顾不给正价与情感。分歧在仁的地位：程颐把仁放在性，即先于关系的固有所是；理论中仁是延续条件下的定理（livingSignificance_of_unrestricted），条件不被断言，被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义），状态只在规则不起作用时才有自己的规律（adaptive_state_law_iff）。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "程颐语（《近思录》卷一）",
+   "layer": "论·宋",
+   "locator": "近思录卷一第35—40条",
+   "names_used": [
+    "仁",
+    "顾"
+   ],
+   "relational": "非关系层：仁作为固定之性。"
+  },
+  {
+   "id": "wangyangming-cheng-xiao-zhi-xin",
+   "record_ids": [
+    "RU2-R0209"
+   ],
+   "source_id": "RU2-S-S10",
+   "fragments": [
+    "却是须有这诚孝的心，然后有这条件发出来。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.valuing_reaches_source",
+    "Becoming.Valuation.transmits",
+    "Becoming.Flow.beyond_gives_nothing"
+   ],
+   "records": [
+    "conveyance-crosses-the-boundary",
+    "metaethical-core-characterization",
+    "feeding-closure"
+   ],
+   "reading": "AI读法：阳明说先有诚孝之心，然后有温凊等条件发出来。脊柱：在关系中立（贯）下，看重一个关系项的事件会到达在那一步传入它者的活事件（Flow.valuing_reaches_source）：对父母延续的顾，沿依赖到达其所需的条件；而一个形成所需的东西不来自其喂养闭包之外（Flow.beyond_gives_nothing）。所以“条件从心发出”在顾沿依赖传递（Valuation.transmits）的意义上成立。定域：传递要以关系中立为条件；阳明把条件说成心之所发，以心为源，而理论中条件是被顾者的延续所依赖的，不是顾者所产生的。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "王阳明《传习录》",
+   "layer": "论·明",
+   "locator": "卷上第3条（徐爱录）",
+   "names_used": [
+    "贯",
+    "顾"
+   ],
+   "relational": "关系层：顾沿依赖到达条件；非关系层：心为条件之源。"
+  },
+  {
+   "id": "wangyangming-xin-zhu-zai",
+   "record_ids": [
+    "RU2-R0214"
+   ],
+   "source_id": "RU2-S-S10",
+   "fragments": [
+    "身之主宰便是心，心之所发便是意"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.Flow.unselected_beyond_coupling",
+    "Becoming.Clearing.pool_closes_gap",
+    "Becoming.Frame.self_incomplete"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "what-pooled-coupling-reaches",
+    "testing-within-registration"
+   ],
+   "reading": "AI读法：阳明以心为身之主宰，意为心之所发，下文更以物为意之所在：一个单一的统治中心，世界从它展开。理论中沿依赖动力学固定范围而不固定中心（Clearing.center_not_derived），单一中心的选择在其耦合闭包外是盲的（Flow.unselected_beyond_coupling），池化才补上缺口（Clearing.pool_closes_gap），以自身构形为断言的框架不能实现所有关于构形的断言（Frame.self_incomplete）。所以中心（我）在理论中只是边界所围的那个形成，不是世界之源。乾「以君之」（WP-SG-C04-S07-R01）、陆九渊「六经皆我注脚」（RU2-R0203）、中庸「唯天下至誠，為能經綸天下之大經，立天下之大本」（RU1-ZY-42-R01）同属单一中心的读法。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "王阳明《传习录》",
+   "layer": "论·明",
+   "locator": "卷上第6条（徐爱录）",
+   "names_used": [
+    "我"
+   ],
+   "relational": "非关系层：心为单一统治中心。"
+  },
+  {
+   "id": "wangyangming-zhi-shan-ben-ti",
+   "record_ids": [
+    "RU2-R0284"
+   ],
+   "source_id": "RU2-S-S10",
+   "fragments": [
+    "至善是心之本体"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Law.lost_stays",
+    "Becoming.Web.Whole.needs_new",
+    "Becoming.adaptive_state_law_iff"
+   ],
+   "records": [
+    "process-and-frame-as-readings",
+    "recurrence-without-premise",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：至善是心之本体：善先在，修养是去蔽以复全。理论没有先在的至善：被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）；失去的可能保持失去（Law.lost_stays）；持续的整体只经由新部分持续（Web.Whole.needs_new），不是复归一个起点；状态只在规则不起作用时才有自己的规律（adaptive_state_law_iff）。阳明「未尝离却事物」与理论接近：评价在关系与事物之中，不是外求。「去其心之不正，以全其本体之正」（RU2-R0217）、「胜私复理」（RU2-R0219）与起信论「歸順真如」（FO2-QX-R030）同属复归先在本体的读法。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "王阳明《传习录》",
+   "layer": "论·明",
+   "locator": "卷上第2条（徐爱录）",
+   "names_used": [
+    "顾式"
+   ],
+   "relational": "非关系层：先在至善的本体。"
+  },
+  {
+   "id": "daizhen-sui-ren-zhi-sheng",
+   "record_ids": [
+    "RU2-R0235"
+   ],
+   "source_id": "RU2-S-V3Q01",
+   "fragments": [
+    "欲遂其生，亦遂人之生，仁也；欲遂其生，至於戕人之生而不顧者，不仁也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.Valuation.significant_iff_held",
+    "Becoming.Valuation.seed_of_selfSignificance",
+    "Becoming.Clearing.clearer_not_living",
+    "Becoming.Model.standpoint_neutrality_is_needed"
+   ],
+   "records": [
+    "held-lives-g0-is-centering",
+    "derived-extent-limits",
+    "metaethical-core-characterization"
+   ],
+   "reading": "AI读法：这是本簇最贴合脊柱的一句。「欲遂其生」是自身意义（自爱），「亦遂人之生」是对他人之活的顾，二者并为仁：在被持有处，生生之意义恰是处处自身意义加立场中立（Valuation.significant_iff_held），自身意义并给出种子（Valuation.seed_of_selfSignificance）。「欲遂其生，至於戕人之生而不顧者，不仁也」有一个确切的见证：在清除者之网中，每个形成都顾其自身事件、自身意义处处成立、清除者还顾其所赖的源，意义沿喂养闭合，而居住者在第零步是活的却不被清除者所顾，于是立场中立与生生之意义都不成立（Clearing.center_not_derived）；立场中立是必需的（Model.standpoint_neutrality_is_needed）。“戕”那一步本身不是活的（Clearing.clearer_not_living）。所以戴震以“顾与不顾”分仁与不仁，与理论的刻画同构。地位：戴震把它说成仁的定义，理论中仁是延续条件下的定理，条件不被断言。同书「仁者，生生之德也」另见 RO 的 ru-daizhen-gong-sui-qi-sheng 条（不同段落）。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "戴震《孟子字义疏证》",
+   "layer": "论·清",
+   "locator": "卷上·理",
+   "names_used": [
+    "仁",
+    "自爱",
+    "顾",
+    "端",
+    "无方"
+   ],
+   "relational": "关系层：遂己与遂人同在；非关系层：无。"
+  },
+  {
+   "id": "zhuangzi-ai-qin-ming",
+   "record_ids": [
+    "ZH1-C04-R-05"
+   ],
+   "source_id": "ZH1-S04",
+   "fragments": [
+    "子之愛親，命也，不可解於心"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.SubTrue",
+    "Becoming.SuperTrue",
+    "Becoming.superTrue_iff",
+    "Becoming.Clearing.with_fixed_boundary",
+    "Becoming.RelativePosition.positions_balance"
+   ],
+   "records": [
+    "presupposition-scopes",
+    "axiom-decomposition",
+    "relative-position-is-zero-sum"
+   ],
+   "reading": "AI读法：人间世以子之爱亲为命，不可解于心；以臣之事君为义，无所逃于天地之间。与本簇相关的是两层。其一，爱亲可读作以亲属为界的前设（畛内之顾）在一个边界上成立；“命”把这个边界说成不可解的给定。理论中边界有多种容许的划法：在某一划法下成立是次真（SubTrue），在一切划法下成立是超真（SuperTrue），有容许边界时超真即不变的次真（superTrue_iff）；只固定一个边界所得的结论不同于不变性：若每个自身唯一容许的边界是其喂养闭包，每个前设都次真且不变，延续条件仍不成立（Clearing.with_fixed_boundary）。其二，“义”的君臣是位阶，相对位置按计数零和（RelativePosition.positions_balance），不承载延续。分歧在把一个边界与一个位阶说成不可逃的给定。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "庄",
+   "work": "《庄子》",
+   "layer": "经·先秦（内篇）",
+   "locator": "人間世·葉公子高章",
+   "names_used": [
+    "畛内之顾",
+    "畛域",
+    "无己"
+   ],
+   "relational": "关系层：爱亲是一种边界内之顾；非关系层：命（固定边界）、君臣之义（位阶）。"
+  },
+  {
+   "id": "zhuangzi-tong-ze-wu-hao",
+   "record_ids": [
+    "ZH1-C06-R-16"
+   ],
+   "source_id": "ZH1-S06",
+   "fragments": [
+    "同則无好也，化則无常也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.retains_agree",
+    "Becoming.Web.mixed_iff_adds",
+    "Becoming.Transfer.unordered",
+    "Becoming.unrestricted_iff_presupposed_along"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "axiom-decomposition"
+   ],
+   "reading": "AI读法：「同則无好」：与一切相同就没有偏好；「化則无常」：随变化就没有固定。前半与理论相合：在延续条件下，没有立场被特权（Web.retains_agree），相混的部分各加对方所缺而无序（Web.mixed_iff_adds、Transfer.unordered），无好即条件本身不排序；从自身边界到同于一切需要不变性的步骤（unrestricted_iff_presupposed_along）。后半与展开不假定固定状态一致。注意：无好不是无顾，顾仍在，只是不分好坏。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "庄",
+   "work": "《庄子》",
+   "layer": "经·先秦（内篇）",
+   "locator": "大宗師·坐忘章",
+   "names_used": [
+    "无方",
+    "顾",
+    "无己"
+   ],
+   "relational": "关系层：同于一切而无偏好；非关系层：无。"
+  },
+  {
+   "id": "zhuangzi-jian-ai-wu-si",
+   "record_ids": [
+    "ZH1-C13-R-05"
+   ],
+   "source_id": "ZH1-S13",
+   "fragments": [
+    "中心勿愷，兼愛无私，此仁義之情也。",
+    "夫兼愛，不亦迂乎？无私焉，乃私也。",
+    "仁義，眞人之性也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.subTrue_empty_iff",
+    "Becoming.Neutral.within",
+    "Becoming.Clearing.without_presupposition",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "presupposition-scopes",
+    "axiom-decomposition",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：孔子以兼爱无私为仁义之情，以仁义为真人之性；老聃反驳：兼爱迂远，以无私为目标本身就是私。老聃的反驳在脊柱上有确切的一点：以「无私」为目标者有一个中心（己）的前设，沿空关系，前设只是中心自身之善（subTrue_empty_iff）；中立规则（兼）蕴含其在己区域上的有界版本（Neutral.within），所以无私不是取消己，而是己之规则被全称规则所含；取消前设则不变性什么也给不出：在什么都不被顾之处，前设空洞地不变，延续条件却不成立（Clearing.without_presupposition）。所以「无私焉，乃私也」在把无私读作一个中心的目标时成立。孔子「仁義，眞人之性」把仁义放进固定之性，理论不取：被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "庄",
+   "work": "《庄子》",
+   "layer": "经·先秦至秦汉（外篇）",
+   "locator": "天道·孔子西藏书章",
+   "names_used": [
+    "兼",
+    "己",
+    "畛内之顾",
+    "仁"
+   ],
+   "relational": "关系层：兼与己的包含；非关系层：仁义为人之性。"
+  },
+  {
+   "id": "zhuangzi-qiushui-yi-dao-guan-zhi",
+   "record_ids": [
+    "ZH1-C17-R-05",
+    "ZH1-C17-R-06",
+    "ZH1-C17-R-07"
+   ],
+   "source_id": "ZH1-S17",
+   "fragments": [
+    "以道觀之，物无貴賤；以物觀之，自貴而相賤；以俗觀之，貴賤不在己。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.bounded_rival",
+    "Becoming.boundaryInvariant_iff_standpointInvariant",
+    "Becoming.unrestricted_of_standpointInvariant",
+    "Becoming.Transfer.unordered",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.RelativePosition.positions_balance"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "presupposition-scopes",
+    "axiom-decomposition",
+    "relative-position-is-zero-sum"
+   ],
+   "reading": "AI读法：「以物觀之，自貴而相賤」对应以依赖为界的中心：各中心意见不一（Clearing.centers_disagree），有界意义是在已划边界内接受的延续条件规则（bounded_rival）；「以道觀之，物无貴賤」对应跨立场不变：在前设与中心覆盖下，跨边界不变与跨立场不变等价，此即延续条件（boundaryInvariant_iff_standpointInvariant、unrestricted_of_standpointInvariant）；条件本身不排序（Transfer.unordered）；没有断言：被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）（RO 已有此读）。本簇补两点。其一，「物无貴賤」是无位阶，不是无顾：无弃给一切以顾，而不排序。其二，「以俗觀之，貴賤不在己」：贵贱由众人的相对位置决定，不由自身决定，相对位置按计数零和（RelativePosition.positions_balance）。三观合起来正是顾式随观法而变的形状。",
+   "gap": "",
+   "ro_passage": "zhuangzi-qiushui-yi-dao-guan-zhi",
+   "tradition": "庄",
+   "work": "《庄子》",
+   "layer": "经·先秦至秦汉（外篇）",
+   "locator": "秋水·河伯与北海若",
+   "names_used": [
+    "顾式",
+    "无方",
+    "无弃",
+    "无己",
+    "顾"
+   ],
+   "relational": "关系层：评价随立场；非关系层：以物、以俗之观中的贵贱位阶（被本文否定）。"
+  },
+  {
+   "id": "zhuangzi-yi-ji-yang-yang-niao",
+   "record_ids": [
+    "ZH1-C18-R-04",
+    "ZH1-C18-R-05"
+   ],
+   "source_id": "ZH1-S18",
+   "fragments": [
+    "此以己養養鳥也，非以鳥養養鳥也。",
+    "彼必相與異，其好惡故異也",
+    "名止於實，義設於適"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Flow.consequence_unselected",
+    "Becoming.Flow.unselected_beyond_coupling"
+   ],
+   "records": [
+    "selection-through-a-model-of-the-options",
+    "generalization-through-lumping",
+    "the-gap-for-ones-own-act"
+   ],
+   "reading": "AI读法：鲁侯以己养养鸟，鸟三日而死。脊柱：经由一个映射（以己之养为模型）的选择，恰在所关心的性质在映射归并处同样变化时才正确（Learning.selects_right_through、Learning.lumped_right_iff）；鸟与人所需不同，而模型把它们归并，那么经由这个模型的任何选择都分不开（Learning.selects_not_right_of_parted）；行动在行动者耦合闭包外的条件上造成的差别，经由闭包的选择都看不到（Flow.consequence_unselected、Flow.unselected_beyond_coupling）。所以鲁侯之顾是真的，失败在模型：顾而失之。本簇的要点：顾（意义）与以何养（选择）是两层；仁不决定如何养，以鸟养养鸟需要与鸟所需的耦合。「義設於適」把宜放在适合对方处，与此相合。人间世爱马者「意有所至，而愛有所亡」（ZH1-C04-R-11）与齐物论王倪「四者孰知正味」（ZH1-C02-R-15）同属此读。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "庄",
+   "work": "《庄子》",
+   "layer": "经·先秦至秦汉（外篇）",
+   "locator": "至樂·海鳥章",
+   "names_used": [
+    "顾",
+    "仁"
+   ],
+   "relational": "关系层：养依对方之所需；非关系层：无。"
+  },
+  {
+   "id": "zhuangzi-tong-yu-ji-wei-shi",
+   "record_ids": [
+    "ZH1-C27-R-01"
+   ],
+   "source_id": "ZH1-S27",
+   "fragments": [
+    "同於己，爲是之；異於己，爲非之。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.bounded_rival",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Web.Excludes.not_of_alike"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "selection-through-a-model-of-the-options"
+   ],
+   "reading": "AI读法：寓言篇说人们以同于己为是、异于己为非。这是以自身为中心的评价：以依赖为界的中心彼此不一（Clearing.centers_disagree），有界意义是在已划边界内接受的条件规则，有物落在某立场区域之外时它就不是延续条件（bounded_rival）；以自身为模型的判断分不开模型所归并者（Learning.selects_not_right_of_parted）；一个主张只能经由耦合进来的差别被排除（Web.Excludes.not_of_alike）。「藉外論之」借他人之口，是绕开立场偏向的一种方法：换一个方说出同样的内容。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "庄",
+   "work": "《庄子》",
+   "layer": "经·先秦至秦汉（杂篇）",
+   "locator": "寓言",
+   "names_used": [
+    "方",
+    "我",
+    "别"
+   ],
+   "relational": "关系层：是非随方；非关系层：无。"
+  },
+  {
+   "id": "zhuangzi-shendao-qu-ji",
+   "record_ids": [
+    "ZH1-C33-R-10"
+   ],
+   "source_id": "ZH1-S33",
+   "fragments": [
+    "是故愼到棄知去己，而緣不得已",
+    "豪桀相與笑之，曰：「愼到之道，非生人之行，而至死人之理，適得怪焉。」"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Clearing.without_presupposition",
+    "Becoming.not_subTrue_of_invariant",
+    "Becoming.Model.seed_is_needed",
+    "Becoming.Valuation.seed_of_selfSignificance"
+   ],
+   "records": [
+    "axiom-decomposition",
+    "presupposition-scopes",
+    "metaethical-core-characterization"
+   ],
+   "reading": "AI读法：慎到弃知去己，如无知之物，被讥为「非生人之行，而至死人之理」。这与理论相合，并正好分开去己与无己。去掉己（自身之顾）就去掉了前设本身：在什么都不被顾之处，前设在每个立场都空洞地不变，延续条件却不成立（Clearing.without_presupposition）；在被持有处自身意义给出种子（Valuation.seed_of_selfSignificance），没有种子生生之意义不成立（Model.seed_is_needed）。所以「死人之理」在脊柱上是没有任何顾的展开。无己（不变性的步骤）保留己的前设，只让它的边界不成为断点；若有某物不被顾，不变的前设在任何地方都不成立（not_subTrue_of_invariant）。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "庄",
+   "work": "《庄子》",
+   "layer": "经·先秦至秦汉（杂篇）",
+   "locator": "天下·彭蒙田駢慎到章",
+   "names_used": [
+    "无己",
+    "己",
+    "端",
+    "活"
+   ],
+   "relational": "关系层：去己则无顾；非关系层：无。"
+  },
+  {
+   "id": "mozi-tianzhi",
+   "record_ids": [
+    "MO1-C26-R005"
+   ],
+   "source_id": "MO1-S-C26",
+   "fragments": [
+    "順天意者，兼相愛、交相利，必得賞；反天意者，別相惡、交相賊，必得罰。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.significance_undetermined",
+    "Becoming.bounded_rival",
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.Valuation.premises_of_unrestricted"
+   ],
+   "records": [
+    "map-of-premises",
+    "axiom-decomposition",
+    "presupposition-scopes"
+   ],
+   "reading": "AI读法：天志把兼相爱、交相利的依据放在一个有意志的天及其赏罚上（RO 已有此读）。理论不立伦理公理：延续条件是公开陈述的条件，被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义），有界意义是在已划边界内接受的条件规则，有物落在某立场区域之外时它就不是延续条件（bounded_rival），中心不沿依赖导出（Clearing.center_not_derived）。天志引入另一种前提：一个意志加赏罚，并以赏罚作为遵从的理由，把规范依据、动机与遵从合在一处，理论要求三者分开。本簇补一点：兼与别在这里被赋予赏与罚，而理论中兼（中立）与别（有界）只是两条规则（别与动力学相容只因意义不是表示的字段），从别到兼的排序需要把扩大称为更好（C）与不变性的步骤。天志、明鬼、尚同、法仪诸篇以天鬼赏罚为依据的各条同属此读。",
+   "gap": "",
+   "ro_passage": "mozi-tianzhi",
+   "tradition": "墨",
+   "work": "《墨子》",
+   "layer": "经·先秦",
+   "locator": "天志上",
+   "names_used": [
+    "兼",
+    "别",
+    "无弃"
+   ],
+   "relational": "关系层：兼相爱交相利；非关系层：天的意志与赏罚（意志、单一中心）。"
+  },
+  {
+   "id": "mozi-tian-yu-qi-sheng",
+   "record_ids": [
+    "MO1-C26-R003"
+   ],
+   "source_id": "MO1-S-C26",
+   "fragments": [
+    "天欲其生而惡其死，欲其富而惡其貧，欲其治而惡其亂，此我所以知天欲義而惡不義也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.subTrue_total_iff",
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.StandpointInvariant"
+   ],
+   "records": [
+    "presupposition-scopes",
+    "derived-extent-limits",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：天欲其生而恶其死：天作为一个有意志的中心，其欲的内容是天下之生。内容上与延续条件最近：沿全关系，整体是唯一边界，此时前设恰是该立场上的延续条件（subTrue_total_iff）。分歧在根据：墨子从天之欲推出义，把规范依据放在一个意志上；理论中中心不沿依赖导出（Clearing.center_not_derived），被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义），条件不被断言，根据开放。而且天之欲是一个单一中心的顾，从它到每个立场还需要立场不变（无方，StandpointInvariant）。欲其富、恶其贫的财富度量也不在理论中。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "墨",
+   "work": "《墨子》",
+   "layer": "经·先秦",
+   "locator": "天志上",
+   "names_used": [
+    "无弃",
+    "无方",
+    "我"
+   ],
+   "relational": "关系层：欲天下之生；非关系层：天的意志作为根据、富贫的度量。"
+  },
+  {
+   "id": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "record_ids": [
+    "MO1-C15-R001"
+   ],
+   "source_id": "MO1-S-C15",
+   "fragments": [
+    "視人之國若視其國，視人之家若視其家，視人之身若視其身。",
+    "凡天下禍篡怨恨，其所以起者，以不相愛生也，是以仁者非之。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.boundaryInvariant_iff_standpointInvariant",
+    "Becoming.unrestricted_of_standpointInvariant",
+    "Becoming.Transfer.unordered",
+    "Becoming.Web.mixed_iff_adds",
+    "Becoming.Clearing.centers_disagree"
+   ],
+   "records": [
+    "axiom-decomposition",
+    "whole-first-and-bounded-centers",
+    "comparison-by-widening"
+   ],
+   "reading": "AI读法：“视人若视其”是跨边界不变：在前设与中心覆盖之下，跨各自我边界不变恰等于跨立场不变，即延续条件（boundaryInvariant_iff_standpointInvariant、unrestricted_of_standpointInvariant）；以边界为止的中心彼此不一（Clearing.centers_disagree），对应别（RO 已有此读）。条件本身不排序：相混即各加对方所缺（Web.mixed_iff_adds），排序需要度量（Transfer.unordered），所以兼作为排序还需要比较承诺 C。“祸篡怨恨皆起于不相爱”是单一原因的普遍断言，脊柱没有证明。兼爱上「子自愛不愛父，故虧父而自利」（MO1-C14-R002）是自爱停在边界内的同一结构；苏辙「以我故殺人」（LC2-SZ-C68-R01）亦然。",
+   "gap": "",
+   "ro_passage": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "tradition": "墨",
+   "work": "《墨子》",
+   "layer": "经·先秦",
+   "locator": "兼愛中",
+   "names_used": [
+    "无己",
+    "无方",
+    "别",
+    "兼",
+    "自爱"
+   ],
+   "relational": "关系层：视人若己；非关系层：单因断言。"
+  },
+  {
+   "id": "mozi-jian-yi-yi-bie",
+   "record_ids": [
+    "MO1-C16-R001",
+    "MO1-C16-R012"
+   ],
+   "source_id": "MO1-S-C16",
+   "fragments": [
+    "是故子墨子曰：兼以易別。",
+    "為彼猶為己也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Neutral.within",
+    "Becoming.bounded_rival",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.boundaryInvariant_iff_standpointInvariant",
+    "Becoming.unrestricted_of_standpointInvariant",
+    "Becoming.Transfer.unordered"
+   ],
+   "records": [
+    "axiom-decomposition",
+    "whole-first-and-bounded-centers",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：别是以自身之国、家、身为界的规则，兼是不设界的规则。脊柱：中立规则蕴含其每个有界版本（Neutral.within），有界规则是在其边界内接受的条件规则，有物落在区域之外时它就不是延续条件（bounded_rival），以依赖为界的中心彼此不一（Clearing.centers_disagree）。「為彼猶為己」是立场不变的形式，在前设与中心覆盖下即边界不变，给出延续条件（boundaryInvariant_iff_standpointInvariant、unrestricted_of_standpointInvariant）。定域：「兼以易別」作为更好的选择还需要比较承诺 C，条件本身不排序（Transfer.unordered）；兼爱下篇末把兼落实为惠、忠、慈、孝、友、悌的角色德行，角色的位阶是理论不带的。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "墨",
+   "work": "《墨子》",
+   "layer": "经·先秦",
+   "locator": "兼愛下",
+   "names_used": [
+    "兼",
+    "别",
+    "无方",
+    "无己"
+   ],
+   "relational": "关系层：兼与别两条规则；非关系层：君臣父子的角色位阶。"
+  },
+  {
+   "id": "daqu-ai-bu-jia-hou",
+   "record_ids": [
+    "MI1-R-DQ-benefitlove"
+   ],
+   "source_id": "MI1-S-DQ",
+   "fragments": [
+    "藉臧也死，而天下害，吾持養臧也萬倍，吾愛臧也不加厚。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Valuation",
+    "Becoming.Web.retains_iff_includes",
+    "Becoming.Flow.Balances.loses_iff_beyond_margin",
+    "Becoming.Transfer.unordered"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：大取把养与爱分开：臧之死会害天下，所以养臧万倍，但爱臧不加厚。理论的意义正是这样：顾是是否之分，不分等级（Valuation 中 sig 取命题值）；一个形成作为他者的条件，改变的是哪些走法保留一切被顾者（Web.retains_iff_includes；一部分失去有意义的延续恰在其汲取超出余量 Flow.Balances.loses_iff_beyond_margin），不改变它自身被顾与否。相混的部分无序（Transfer.unordered）。所以“养万倍而爱不加厚”在理论中是两层：保留的比较与意义。论语「無眾寡，無小大，無敢慢」（RU1-LY-20-02-R05）也是不以多寡大小定顾。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "名辩",
+   "work": "《墨子·大取》",
+   "layer": "经·先秦（墨辩）",
+   "locator": "大取",
+   "names_used": [
+    "顾"
+   ],
+   "relational": "关系层：养随条件关系；非关系层：无。"
+  },
+  {
+   "id": "daqu-ai-shang-shi-hou-shi",
+   "record_ids": [
+    "MI1-R-DQ-generations"
+   ],
+   "source_id": "MI1-S-DQ",
+   "fragments": [
+    "兼愛之有相若，愛尚世與愛後世，一若今之世。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Unrestricted",
+    "Becoming.Brood.descent_connected",
+    "Becoming.Flow.descent_reaches",
+    "Becoming.bounded_rival",
+    "Becoming.Clearing.loses_beyond"
+   ],
+   "records": [
+    "living-on-and-descent",
+    "one-axiom-yields-g0",
+    "loss-beyond-a-region"
+   ],
+   "reading": "AI读法：爱上世、后世一如今世：顾不以时间为界。延续条件是对一切步的全称（Unrestricted：∀ p t f）；世代由后裔相连（Brood.descent_connected），在关系中立下，看重一个形成的事件到达其后裔的每个活事件（Flow.descent_reaches）。剩余：「尚世」（过去之世）的延续在理论中是从那时起的未来；脊柱还没有以时间为界的对手规则（只顾到某一步）的定理，而有界意义只是在已划边界内接受的条件规则（bounded_rival），它与动力学相容只因意义不是表示的字段，在清除的例子中损失要到后面的步骤才出现（Clearing.loses_beyond），所以只顾今世的规则会许可终结后世（见 gap）。",
+   "gap": "缺：以时间为界的对手规则。令 sig_T p t f := t ≤ T。要证：(1) sig_T 是延续条件规则的有界版本：对 Unrestricted sig，Within (fun i => i.2.1 ≤ T) (fun i => sig i.1 i.2.1 i.2.2) 成立（由 Neutral.within）；(2) 在 Clearing 的流中取 T 小于居住者开始不被容纳的那一步（Clearing.loses_beyond 中为第三步起），清除者的部分在 sig_T 下保留一切有意义者（Web.Retains），而在 Unrestricted 下失去居住者（Clearing.clearer_loses_dweller）。即：只顾到某一代的规则在其边界内接受条件规则，却许可终结后世。最近的声明：Becoming.bounded_rival、Becoming.Clearing.loses_beyond、Becoming.Clearing.clearer_loses_dweller、Becoming.Neutral.within、Becoming.Flow.descent_reaches。",
+   "ro_passage": "",
+   "tradition": "名辩",
+   "work": "《墨子·大取》",
+   "layer": "经·先秦（墨辩）",
+   "locator": "大取",
+   "names_used": [
+    "无弃",
+    "兼",
+    "别"
+   ],
+   "relational": "关系层：世代相连；非关系层：无。"
+  },
+  {
+   "id": "daqu-ai-ren-bu-wai-ji",
+   "record_ids": [
+    "MI1-R-DQ-self"
+   ],
+   "source_id": "MI1-S-DQ",
+   "fragments": [
+    "愛人不外己，己在所愛之中。己在所愛，愛加於己。倫列之愛己，愛人也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Valuation.significant_iff_held",
+    "Becoming.Valuation.seed_of_selfSignificance",
+    "Becoming.Neutral.within",
+    "Becoming.Boundary"
+   ],
+   "records": [
+    "held-lives-g0-is-centering",
+    "metaethical-core-characterization"
+   ],
+   "reading": "AI读法：爱人不外己，己在所爱之中。生生之意义在被持有处恰是处处自身意义加立场中立（Valuation.significant_iff_held）：自身意义不在全称之外而在其中，并给出种子（Valuation.seed_of_selfSignificance）；中立规则蕴含其在己区域上的有界版本（Neutral.within），己区域是一个含中心的边界（Boundary）。「倫列之愛己，愛人也」：在伦列中爱己就是爱人中的一个，自爱是仁的一个实例。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "名辩",
+   "work": "《墨子·大取》",
+   "layer": "经·先秦（墨辩）",
+   "locator": "大取",
+   "names_used": [
+    "己",
+    "自爱",
+    "仁",
+    "兼"
+   ],
+   "relational": "关系层：己在全体之中；非关系层：无。"
+  },
+  {
+   "id": "huishi-li-wu",
+   "record_ids": [
+    "MI1-R-HS-carebody"
+   ],
+   "source_id": "MI1-S-HS",
+   "fragments": [
+    "氾愛萬物，天地一體也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.Flow.nothing_supported_stays",
+    "Becoming.Flow.feeding_unrestricted_of_common",
+    "Becoming.Transfer.unordered"
+   ],
+   "records": [
+    "feeding-closure",
+    "levels-of-closure"
+   ],
+   "reading": "AI读法：「氾愛萬物，天地一體」从一体推出普爱（RO 已有此读）：脊柱只在共同条件供给各方时给出这一步，以各中心供给闭包为界的意义在共同供给条件下即延续条件（Flow.feeding_unrestricted_of_common），而条件本身不排序（Transfer.unordered）。本簇补一点：泛爱之爱缺“活的”限定，也带正价，所以本簇不以泛爱名生生之意义，而以“仁”名之；一体是到达条件的一条路，不是意义本身。层次：这是《天下》篇对惠施的转述。",
+   "gap": "",
+   "ro_passage": "huishi-li-wu",
+   "tradition": "名辩",
+   "work": "惠施历物之意（《庄子·天下》所述）",
+   "layer": "经·先秦（后学记载）",
+   "locator": "天下·惠施章",
+   "names_used": [
+    "仁",
+    "无弃"
+   ],
+   "relational": "关系层：一体而普及；非关系层：无。"
+  },
+  {
+   "id": "jingxia-bu-zhi-qi-suo-chu",
+   "record_ids": [
+    "MI1-R-JX-loveunknown"
+   ],
+   "source_id": "MI1-S-JX",
+   "fragments": [
+    "不知其所處，不害愛之，說在喪子者。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.unselected_beyond_coupling",
+    "Becoming.Flow.act_unselected",
+    "Becoming.Flow.consequence_unselected",
+    "Becoming.Valuation"
+   ],
+   "records": [
+    "the-gap-for-ones-own-act",
+    "selection-through-registration"
+   ],
+   "reading": "AI读法：不知其所处，不妨碍爱之，如丧子者仍爱其子。理论把意义与登记分开：顾（Valuation 的 sig）不需要被顾者在顾者的耦合闭包之内；不在闭包内者，选择看不见（Flow.unselected_beyond_coupling），行动在闭包外条件上造成的差别也看不见（Flow.act_unselected、Flow.consequence_unselected），但这限制的是选择，不是意义。所以「不知其所處」限制如何爱，不限制顾本身。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "名辩",
+   "work": "《墨子·经下》",
+   "layer": "经·先秦（墨辩）",
+   "locator": "經下",
+   "names_used": [
+    "顾"
+   ],
+   "relational": "关系层：顾不依赖登记；非关系层：无。"
+  },
+  {
+   "id": "jingshuo-ai-min-fei-yong-min",
+   "record_ids": [
+    "MI1-R-SS-ren"
+   ],
+   "source_id": "MI1-S-SS",
+   "fragments": [
+    "仁，愛民者，非爲用民也，不若愛馬者，若明。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.bounded_closure_iff",
+    "Becoming.Flow.within_closure_iff_retains",
+    "Becoming.bounded_whole",
+    "Becoming.Clearing.clearer_loses_dweller",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "presupposition-scopes",
+    "closure-verdict-meets-axiom",
+    "whole-first-and-bounded-centers",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：经说上：仁之爱民不是为了用民，不同于爱马（为用而爱）。理论的两条路线正好对应。以各中心闭包为界的意义（路线 (b)）是无论边界如何划都在自身之内者的意义（bounded_closure_iff），沿喂养，它对一物的顾止于该物对中心有所供给之处，这是爱马式的顾；清除者的例子显示这样的顾会不顾居住者（Clearing.center_not_derived）。延续条件下的顾不以供给为条件。两者在喂养闭包是整体之处一致（Flow.within_closure_iff_retains），以整体为界的意义就是延续条件（bounded_whole），否则分开（Clearing.clearer_loses_dweller）。剩余：理论在主张的层面不区分把他者当作条件来顾与把他者当作有所欲者来顾（Standpoints 模块的说明承认这一点），墨辩的区分比脊柱已证明的更细（见 gap）。",
+   "gap": "缺：区分把他者当作条件来顾与把他者当作有所欲者来顾。在一般 Flow 上，令 sig_b p t g 为 g 在第 t 步落在中心 p 的喂养闭包之内（喂养关系按步索引），即路线 (b) 的意义。要证：存在一族走法，使 g 在第 t 步之前喂养 p、之后不再喂养 p，于是 sig_b p 在 t 之后不再顾 g；而在 Unrestricted sig 下，或在以 g 自身意义为来源的 Neutral Valuation.shares 下，p 对 g 的顾在 t 前后不变。即：路线 (b) 的顾随供给而变，延续条件与立场中立的顾不随之变。最近的声明：Becoming.bounded_closure_iff、Becoming.Flow.within_closure_iff_retains、Becoming.Clearing.center_not_derived、Becoming.Valuation.shares、Becoming.bounded_whole。",
+   "ro_passage": "",
+   "tradition": "名辩",
+   "work": "《墨子·经说上》",
+   "layer": "经·先秦（墨辩）",
+   "locator": "經說上",
+   "names_used": [
+    "仁",
+    "顾",
+    "无弃",
+    "无方"
+   ],
+   "relational": "关系层：爱民不以用为条件；非关系层：无。"
+  },
+  {
+   "id": "simafa-ren-ben-yi-zhi",
+   "record_ids": [
+    "BI1-SM-R-01"
+   ],
+   "source_id": "BI1-S-SM",
+   "fragments": [
+    "古者以仁為本，以義治之，治之為正。正不獲意則權。權出於戰，不出於仁也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Transfer.unordered",
+    "Becoming.Clearing.clearer_loses_dweller",
+    "Becoming.Flow.Balances.loses_iff_beyond_margin",
+    "Becoming.Viability.ChoicePoint.no_rule_decides_joint"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "whole-first-and-bounded-centers",
+    "conditions-kept-together"
+   ],
+   "reading": "AI读法：司马法以仁为本、以义治之；正不得其意则用权，权出于战，不出于仁。这与理论的分层相合：仁（生生之意义）不直接给出行动，条件本身不排序（Transfer.unordered）；战作为终结形成的走法，在延续条件下有其损失（Clearing.clearer_loses_dweller；一部分失去有意义的延续恰在其汲取超出余量 Flow.Balances.loses_iff_beyond_margin）。「權出於戰，不出於仁」承认战不由仁导出：无弃不许可任何终结。定域：司马法把「正不獲意」时的战当作可用之权，这是仁之外的另一种比较；没有依据各自情况的规则能判定共同情况（Viability.ChoicePoint.no_rule_decides_joint），权需要额外的判断，理论不为它背书。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "兵",
+   "work": "《司马法》",
+   "layer": "经·先秦",
+   "locator": "仁本",
+   "names_used": [
+    "仁",
+    "无弃"
+   ],
+   "relational": "关系层：仁不给出战；非关系层：权与战作为治之手段。"
+  },
+  {
+   "id": "hanfei-ai-zeng-zhi-bian",
+   "record_ids": [
+    "FA1-H12-R008"
+   ],
+   "source_id": "FA1-S-H12",
+   "fragments": [
+    "故彌子之行未變於初也，而以前之所以見賢而後獲罪者，愛憎之變也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.bounded_rival",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Web.retains_agree"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：弥子之行未变，前见贤而后获罪，是君主爱憎之变。这与理论相合：从一个中心作出的评价随这个中心的顾而变，不随被评价者的行为而变；以依赖为界的中心彼此不一（Clearing.centers_disagree），有界意义是在已划边界内接受的条件规则，有物落在某立场区域之外时它就不是延续条件（bounded_rival），被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）。韩非由此得出对爱憎的警惕（说之难），理论得出：单一中心的评价不能作为标准，只有在延续条件下各立场的保留判断才一致（Web.retains_agree）。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "法",
+   "work": "《韩非子》",
+   "layer": "经·先秦",
+   "locator": "說難",
+   "names_used": [
+    "我",
+    "顾式",
+    "无方"
+   ],
+   "relational": "关系层：评价随中心；非关系层：君主作为单一中心（被本文揭示）。"
+  },
+  {
+   "id": "zaahan-ku-mie",
+   "record_ids": [
+    "FO1-R-SA023",
+    "FO1-R-SA024"
+   ],
+   "source_id": "FO1-S-SA",
+   "fragments": [
+    "當來有愛，喜、貪俱，彼彼集著，是名苦集",
+    "若當來有愛，喜、貪俱，彼彼染著無餘斷，乃至息、沒，是名苦滅"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.coextinct",
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.Valuation.premises_of_unrestricted",
+    "Becoming.Valuation.SelfSignificance",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Flow.nothing_supported_stays"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "whole-persists-through-generation",
+    "map-of-premises",
+    "held-lives-g0-is-centering"
+   ],
+   "reading": "AI读法：链的结构与脊柱一致（共灭，Web.coextinct）；分歧在方向（RO 已有此读）：苦灭以对未来之有的爱的无余断为目的，以不再延续为解脱；延续条件以任何东西向未来的延续有意义为条件，在其下生生之意义成立（Valuation.premises_of_unrestricted），持续的整体只通过部分不断生起而持续（Web.Whole.needs_arising），而在平衡流中，一旦无物受支持而需求不放松，此后再无物受支持或活动（Flow.nothing_supported_stays），所以苦灭所求的不再延续一经达成便保持。本簇补一点：「當來有愛」正是理论读作自身意义（想要自己的延续，Valuation.SelfSignificance）的东西，阿含把它作为苦集之因，理论把它作为生生之意义的组成部分；这是本簇不以“爱”名意义的理由之一。范围：阿含所断的是贪驱动的生之环，不是整体的生生；脊柱也不证明延续条件为真：被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义），这也不表明条件是必需的。四谛之苦（FO1-R-SA022）、「自知不受後有」（FO1-R-SA037）、金狮章入涅槃（FO2-KS-P-R036）与慧远方外求宗以因缘永息为目标（IN1-R-H06）同属此方向。",
+   "gap": "",
+   "ro_passage": "zaahan-ku-mie",
+   "tradition": "佛",
+   "work": "《杂阿含经》",
+   "layer": "经·汉译（刘宋）",
+   "locator": "苦集、苦灭诸经",
+   "names_used": [
+    "自爱",
+    "无弃",
+    "仁"
+   ],
+   "relational": "关系层：依赖链；非关系层：以不再延续为终点。"
+  },
+  {
+   "id": "amituo-ji-le",
+   "record_ids": [
+    "FO2-AM-R001"
+   ],
+   "source_id": "FO2-AM",
+   "fragments": [
+    "其國眾生無有眾苦，但受諸樂，故名極樂。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Web.Whole.needs_new",
+    "Becoming.Transfer.unordered",
+    "Becoming.Valuation"
+   ],
+   "records": [
+    "one-axiom-yields-g0",
+    "whole-persists-through-generation",
+    "significance-retained-within-margin"
+   ],
+   "reading": "AI读法：极乐以「無有眾苦，但受諸樂」得名：价值落在苦乐的正负上，并以一个只有正价的终点为目标。理论的意义不是正价：顾（Valuation 的 sig）不论苦乐，被顾者的延续都有意义，条件不排序（Transfer.unordered）；持续的整体只经由新部分持续（Web.Whole.needs_new），没有静止的终点；被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）。憨山德清「人道以佛法為究竟」（IN2-R0064）同属以一个究竟之境为目标的读法。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "佛",
+   "work": "《阿弥陀经》",
+   "layer": "经·汉译（姚秦）",
+   "locator": "极乐国土段",
+   "names_used": [
+    "顾"
+   ],
+   "relational": "非关系层：固定的正价终点。"
+  },
+  {
+   "id": "qixin-ai-yu-bu-ai",
+   "record_ids": [
+    "FO2-QX-R016"
+   ],
+   "source_id": "FO2-QX",
+   "fragments": [
+    "一者、智相。依於境界，心起分別愛與不愛故。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.bounded_rival",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Valuation"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：起信论以「依於境界，心起分別愛與不愛」为智相。这与理论把意义和正负价分开相合：爱与不爱是依境界、依心的分别，属于一个中心的评价，不是境界本身的性质；以中心为界的评价彼此不一（Clearing.centers_disagree），有界意义是在已划边界内接受的条件规则，有物落在某立场区域之外时它就不是延续条件（bounded_rival），被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义）。理论之顾（Valuation 的 sig）不分爱与不爱：在延续条件下，凡物之延续都被顾，不论被爱与否。剩余：起信论把分别判为妄，理论不作此判，只说它是有界的顾。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "佛",
+   "work": "《大乘起信论》",
+   "layer": "论·南北朝（传译）",
+   "locator": "六粗相",
+   "names_used": [
+    "顾",
+    "别"
+   ],
+   "relational": "关系层：爱憎依境与心；非关系层：以分别为妄（先在真如为准）。"
+  },
+  {
+   "id": "qixin-zhong-sheng-ke-min",
+   "record_ids": [
+    "FO2-QX-R036"
+   ],
+   "source_id": "FO2-QX",
+   "fragments": [
+    "眾生如是，甚為可愍。",
+    "願令我心離分別故，遍於十方修行一切諸善"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Unrestricted",
+    "Becoming.Clearing.without_presupposition",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "one-axiom-yields-g0",
+    "axiom-decomposition"
+   ],
+   "reading": "AI读法：观一切众生自无始以来受苦而起大悲，立愿遍于十方。悲的范围是一切众生、过去现在未来，这与延续条件的全称相合（Unrestricted：对一切 p、t、f）。定域：悲由苦引发，是对苦的回应（负价的去除），而理论之顾不以苦乐为据；「離分別」若读成取消一切中心之顾，就失去前设本身，此时不变性只是空洞地成立，延续条件不成立（Clearing.without_presupposition）。被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义），所以悲愿的全称在理论中只能作为条件读。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "佛",
+   "work": "《大乘起信论》",
+   "layer": "论·南北朝（传译）",
+   "locator": "修行信心分·观门",
+   "names_used": [
+    "无弃",
+    "畛内之顾",
+    "无己"
+   ],
+   "relational": "关系层：一切众生；非关系层：以苦为据。"
+  },
+  {
+   "id": "shengman-ru-lai-zang-fei-wo",
+   "record_ids": [
+    "FO2-SM-R017"
+   ],
+   "source_id": "FO2-SM",
+   "fragments": [
+    "如來藏者，非我、非眾生、非命、非人。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.Flow.region_not_a_cut",
+    "Becoming.Boundary"
+   ],
+   "records": [
+    "derived-extent-limits",
+    "conveyance-crosses-the-boundary"
+   ],
+   "reading": "AI读法：如来藏非我、非众生、非命、非人：否定把它等同于任何一个中心或个体。与理论的一点相合：沿依赖读不出中心（Clearing.center_not_derived），延续族群的区域不是切口（Flow.region_not_a_cut）。定域：理论不断言也不否定自我实体，中心（我）只是边界（Boundary）所围的那个形成，是索引；如来藏作为先在的、清净的藏，是理论没有的先在根据。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "佛",
+   "work": "《胜鬘经》",
+   "layer": "经·汉译（刘宋）",
+   "locator": "自性清净章",
+   "names_used": [
+    "我"
+   ],
+   "relational": "关系层：非我；非关系层：如来藏作为先在根据。"
+  },
+  {
+   "id": "hanshan-wu-wo-jing-shi",
+   "record_ids": [
+    "IN2-R0070",
+    "IN2-R0071"
+   ],
+   "source_id": "IN2-S06",
+   "fragments": [
+    "由無我方能經世",
+    "由利生方見無我"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.boundaryInvariant_iff_all",
+    "Becoming.unrestricted_iff_presupposed_along",
+    "Becoming.not_subTrue_of_invariant",
+    "Becoming.Clearing.without_presupposition"
+   ],
+   "records": [
+    "axiom-decomposition",
+    "presupposition-scopes"
+   ],
+   "reading": "AI读法：「由無我方能經世」「由利生方見無我」：两向的条件句在脊柱上有对应。不变性是从前设到延续条件的条件句（boundaryInvariant_iff_all），从自身边界的前设到一切需要这一步（unrestricted_iff_presupposed_along）；反过来，若有某物不被顾，不变的前设在任何地方都不成立（not_subTrue_of_invariant），不顾他者就没有可见的无我。定域：无我若读成破除自我而无前设，则不变性只是空洞地成立，延续条件不成立（Clearing.without_presupposition）；理论读作无己（不让己的边界成为断点），不读作去己。「最初一步、皆以破我執為主」（IN2-R0068）同属此读，同受此限定。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "三教互动",
+   "work": "憨山德清《老子道德经解》序",
+   "layer": "论·明",
+   "locator": "序·发明体用",
+   "names_used": [
+    "无己",
+    "畛内之顾"
+   ],
+   "relational": "关系层：无我与利生互为条件；非关系层：无。"
+  },
+  {
+   "id": "huanxuan-da-de-yue-sheng",
+   "record_ids": [
+    "IN1-R-H01"
+   ],
+   "source_id": "IN1-S03",
+   "fragments": [
+    "將以天地之大德曰生。通生理物存乎王者。故尊其神器而禮寔惟隆。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.Flow.unselected_beyond_coupling"
+   ],
+   "records": [
+    "derived-extent-limits",
+    "relative-position-is-zero-sum",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：桓玄引「天地之大德曰生」，以「通生理物存乎王者」要求沙门礼敬王者。这把生生之意义收归一个中心（王者）的位阶：生生之德成为王者受敬的根据。理论中中心不沿依赖导出（Clearing.center_not_derived），被表示的动力学不蕴含生生之意义（Web.significance_undetermined，只评价全有与全无两个常值意义），位阶按计数零和（RelativePosition.positions_balance），单一中心在其耦合闭包外是盲的（Flow.unselected_beyond_coupling）。所以「天地之大德曰生」的内容可与生生之意义并读，以它为一个位阶的根据则分歧。这也是本簇不以“好生之德”「天地之大德」名延续条件的理由之一。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "三教互动",
+   "work": "慧远《沙门不敬王者论》序所引桓玄来书",
+   "layer": "论·东晋（404）",
+   "locator": "序（T52 p29c）",
+   "names_used": [
+    "无弃",
+    "我"
+   ],
+   "relational": "关系层：生；非关系层：王者作为单一中心与位阶。"
+  },
+  {
+   "id": "zhuangzi-qiushui-wu-fang",
+   "record_ids": [
+    "ZH1-U17"
+   ],
+   "source_id": "ZH1-S17",
+   "fragments": [
+    "汎汎乎其若四方之无窮，其无所畛域；兼懷萬物，其孰承翼？是謂无方。萬物一齊，孰短孰長？",
+    "聞曰：『道人不聞，至德不得，大人无己。』約分之至也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Neutral",
+    "Becoming.Web.retains_agree",
+    "Becoming.Transfer.unordered",
+    "Becoming.boundaryInvariant_iff_standpointInvariant",
+    "Becoming.BoundaryInvariant",
+    "Becoming.unrestricted_iff_presupposed_along"
+   ],
+   "records": [
+    "axiom-decomposition",
+    "significance-retained-within-margin",
+    "presupposition-scopes"
+   ],
+   "reading": "AI读法：秋水这一段把本簇的四个名连在一起：无所畛域（不以边界为断点）、兼怀万物（规则对每一物，Neutral）、其孰承翼（不偏助谁）、是谓无方（不偏任何一方）、孰短孰长（不排序）。脊柱：在延续条件下没有立场被特权（Web.retains_agree），相混的部分无序（Transfer.unordered）；在前设处处成立与中心覆盖下，边界不变恰是立场不变（boundaryInvariant_iff_standpointInvariant），而边界不变即从前设到条件的一步（BoundaryInvariant、unrestricted_iff_presupposed_along）。同篇以「約分之至也」称「大人无己」，把无己读作分界的划法不再起作用，与边界不变同构。剩余：秋水属外篇；“兼怀”之怀带情感，理论只取兼。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "庄",
+   "work": "《庄子》",
+   "layer": "经·先秦至秦汉（外篇）",
+   "locator": "秋水·北海若答河伯",
+   "names_used": [
+    "无方",
+    "无己",
+    "兼",
+    "畛域",
+    "无弃"
+   ],
+   "relational": "关系层：无界、无偏、无序；非关系层：无。"
+  },
+  {
+   "id": "zhuangzi-li-she",
+   "record_ids": [
+    "ZH1-C04-R-13",
+    "ZH1-U04"
+   ],
+   "source_id": "ZH1-S04",
+   "fragments": [
+    "觀者如市，匠伯不顧，遂行不輟。",
+    "且也若與予也，皆物也，奈何哉其相物也？"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Valuation",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.bounded_rival",
+    "Becoming.Web.retains_agree"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：匠伯对栎社树不顾，因为它于匠人无用；栎树在梦中说：你我都是物，为什么要以物相物？理论：意义以立场为索引（Valuation 的 sig p），匠人之顾（为材）与栎树之顾（为自身延续）不同，以依赖为界的中心彼此不一（Clearing.centers_disagree），有界意义是在已划边界内接受的条件规则，有物落在某立场区域之外时它就不是延续条件（bounded_rival）；「皆物也」否认任何一物有评价他物的特权，在延续条件下没有立场被特权（Web.retains_agree）。这是本簇以“顾”名意义的先秦用例之一：不顾是一个立场的不计入，不是物本身无意义。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "庄",
+   "work": "《庄子》",
+   "layer": "经·先秦（内篇）",
+   "locator": "人間世·櫟社",
+   "names_used": [
+    "顾",
+    "方",
+    "无方"
+   ],
+   "relational": "关系层：顾以立场为索引；非关系层：无。"
+  },
+  {
+   "id": "zhuangzi-tianxia-zi-wei-fang",
+   "record_ids": [
+    "ZH1-C33-R-04"
+   ],
+   "source_id": "ZH1-S33",
+   "fragments": [
+    "天下之人，各爲其所欲焉，以自爲方。悲夫，百家往而不反，必不合矣！"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Specker.no_whole",
+    "Becoming.Web.retains_agree"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "contextual-registration",
+    "gluing-under-parity"
+   ],
+   "reading": "AI读法：各以自己所欲为方，百家往而不反，必不合。以各自所欲为界的立场彼此不一（Clearing.centers_disagree）；各立场的判定只在交界处一致时才拼合（Contextual.glues_iff_agree），各自一致仍可以拼不成整体（Specker.no_whole）。定域：「必不合」在脊柱上是可能而非必然：在延续条件下各立场的保留判断一致（Web.retains_agree）。所以天下篇的悲叹是有界之方的结果，不是立场本身的结果。这是本簇以“方”名立场的用例。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "庄",
+   "work": "《庄子》",
+   "layer": "经·先秦至秦汉（杂篇）",
+   "locator": "天下",
+   "names_used": [
+    "方",
+    "别",
+    "无方"
+   ],
+   "relational": "关系层：方由所欲构成；非关系层：无。"
+  },
+  {
+   "id": "zhuangzi-qiwu-fei-bi-wu-wo",
+   "record_ids": [
+    "ZH1-U02"
+   ],
+   "source_id": "ZH1-S02",
+   "fragments": [
+    "非彼无我，非我无所取，是亦近矣，而不知其所爲使。",
+    "夫道未始有封，言未始有常，爲是而有畛也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.Boundary",
+    "Becoming.Boundary.closure",
+    "Becoming.Boundary.whole",
+    "Becoming.Flow.region_not_a_cut"
+   ],
+   "records": [
+    "derived-extent-limits",
+    "presupposition-scopes",
+    "conveyance-crosses-the-boundary"
+   ],
+   "reading": "AI读法：彼我相待：没有彼就没有我，没有我就无所取，而不知其所为使。脊柱：沿依赖，动力学固定意义闭合的范围而不固定中心（Clearing.center_not_derived），正是「不知其所爲使」；中心是边界所围的那个形成，边界是对关系封闭、含中心的区域，可从闭包划到整体（Boundary、Boundary.closure、Boundary.whole），延续族群的区域不是切口（Flow.region_not_a_cut）。同篇「夫道未始有封，言未始有常，爲是而有畛也」说边界由取舍而划，与理论中划法是索引相合。下文「若有眞宰，而特不得其朕」，理论同样不立真宰。这是本簇以“我”名中心、以「畛域」名边界的用例。",
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "庄",
+   "work": "《庄子》",
+   "layer": "经·先秦（内篇）",
+   "locator": "齊物論",
+   "names_used": [
+    "我",
+    "畛域"
+   ],
+   "relational": "关系层：彼我相待；非关系层：无。"
+  }
+ ],
+ "parallels": [
+  {
+   "record_id": "ZX-R006",
+   "same_as_entry": "chengyi-wuwang-zhengli",
+   "note": "朱熹复六四注「理所當然吉凶非所論也」：同样以先在之理为判义的尺度，不以对他者的作用为准。"
+  },
+  {
+   "record_id": "TP-H14-DX-R02",
+   "same_as_entry": "daxiang-junzi-yi",
+   "note": "大有大象「君子以遏惡揚善，順天休命」：同为取象而法之的类比，并加上顺天之命。"
+  },
+  {
+   "record_id": "OW-R007",
+   "same_as_entry": "wenyan-side",
+   "note": "说卦「立人之道，曰仁與義」：把仁义立为人道之所是，同为把价值放进天地人之结构。"
+  },
+  {
+   "record_id": "TP-H37-T-R02",
+   "same_as_entry": "wenyan-side",
+   "note": "家人彖「男女正，天地之大義也」：把一种角色秩序称为天地之大义，同为把价值与位分读入宇宙。"
+  },
+  {
+   "record_id": "XC-R017",
+   "same_as_entry": "xici-jixiong-shide",
+   "note": "「吉凶悔吝者，生乎动者也」：吉凶得失生于变动，同属得失相对于立场与条件之读。"
+  },
+  {
+   "record_id": "LC2-SZ-C37-R01",
+   "same_as_entry": "kongshu-wei-er-bu-zai",
+   "note": "苏辙「無所不為而無為之之意耳」：不以所为为己之功，同为功属共同的读法。"
+  },
+  {
+   "record_id": "LC2-HS-C62-R02",
+   "same_as_entry": "lao-62-he-qi-zhi-you",
+   "note": "河上公「无有弃民」并「以道化之」：同为全称不弃，并带教化方向，受同样的限定。"
+  },
+  {
+   "record_id": "LC2-SZ-C72-R01",
+   "same_as_entry": "suzhe-33-ke-ji-fu-xing",
+   "note": "苏辙「性自有威」：先在之性。"
+  },
+  {
+   "record_id": "LC2-SZ-C72-R03",
+   "same_as_entry": "suzhe-33-ke-ji-fu-xing",
+   "note": "苏辙「厭慕之心未忘則猶有畏也」：以去除厌慕而复见大威，同为复归先在之性。"
+  },
+  {
+   "record_id": "LC-R031",
+   "same_as_entry": "suzhe-33-ke-ji-fu-xing",
+   "note": "苏辙「反而求之一心足矣」：返求一心，同为复归。"
+  },
+  {
+   "record_id": "LC2-SZ-C62-R02",
+   "same_as_entry": "suzhe-33-ke-ji-fu-xing",
+   "note": "苏辙「道無功罪人患不知知則凡罪不能汙也」：性不受罪污，同为先在不变之性。"
+  },
+  {
+   "record_id": "LC2-SZ-C05-R01",
+   "same_as_entry": "lao-05-tian-di-bu-ren",
+   "note": "苏辙「天地無私而聽萬物之自然」：天地无偏爱，同读。"
+  },
+  {
+   "record_id": "LAO2-C49-R04",
+   "same_as_entry": "lao-49-yi-bai-xing-xin-wei-xin",
+   "note": "「为天下浑其心」：中心不以一己之心为准，同读。"
+  },
+  {
+   "record_id": "RU2-R0040",
+   "same_as_entry": "lao-49-yi-bai-xing-xin-wei-xin",
+   "note": "孟子「所欲，与之聚之；所恶，勿施尔也」：以民之所欲所恶为准，同为各立场之顾的汇合。"
+  },
+  {
+   "record_id": "LAO2-C49-R03",
+   "same_as_entry": "lao-49-bu-shan-yi-shan-zhi",
+   "note": "「信者，吾信之；不信者，吾亦信之」：同式，不以对方为门槛。"
+  },
+  {
+   "record_id": "LC2-SZ-C49-R01",
+   "same_as_entry": "lao-49-bu-shan-yi-shan-zhi",
+   "note": "苏辙「善不善在彼吾之所以善之者未甞渝也」：善之不随对方而变，同属立场不变。"
+  },
+  {
+   "record_id": "LC2-SZ-C56-R02",
+   "same_as_entry": "lao-56-bu-ke-de-er-gui-jian",
+   "note": "苏辙「體道者均覆萬物而孰為親踈」：同读，亦同以「為天下貴」收束。"
+  },
+  {
+   "record_id": "RU2-R0225",
+   "same_as_entry": "ru-lunyu-shu",
+   "note": "戴震「以我絜之人，則理明」：以己为模型度人，同为恕，同受归并的范围限定。"
+  },
+  {
+   "record_id": "RU2-R0020",
+   "same_as_entry": "ru-mengzi-si-duan-kuo-chong",
+   "note": "羞恶为义之端：同为端的结构，名属他簇。"
+  },
+  {
+   "record_id": "RU2-R0021",
+   "same_as_entry": "ru-mengzi-si-duan-kuo-chong",
+   "note": "辞让为礼之端：同上。"
+  },
+  {
+   "record_id": "RU2-R0022",
+   "same_as_entry": "ru-mengzi-si-duan-kuo-chong",
+   "note": "是非为智之端：同上。"
+  },
+  {
+   "record_id": "RU2-R0052",
+   "same_as_entry": "mengzi-wo-gu-you-zhi",
+   "note": "「乃若其情则可以为善矣」：善在情性，同属固有之善的读法。"
+  },
+  {
+   "record_id": "RU2-R0190",
+   "same_as_entry": "mengzi-wo-gu-you-zhi",
+   "note": "程颐「才则有善有不善，性则无不善」：性先在而无不善，同读。"
+  },
+  {
+   "record_id": "RU1-LY-10-12-R01",
+   "same_as_entry": "ru-mengzi-qinqin-renmin-aiwu",
+   "note": "厩焚，问「傷人乎」而不问马：人先于物的次第，同属等差之读（见该条 gap）。"
+  },
+  {
+   "record_id": "RU2-R0180",
+   "same_as_entry": "ru-chenghao-yi-ti",
+   "note": "张载「其视天下无一物非我」：扩己为整体，同属一体之读。"
+  },
+  {
+   "record_id": "WP-SG-C04-S07-R01",
+   "same_as_entry": "wangyangming-xin-zhu-zai",
+   "note": "说卦「乾以君之」：以乾为君，单一统治中心。"
+  },
+  {
+   "record_id": "RU2-R0203",
+   "same_as_entry": "wangyangming-xin-zhu-zai",
+   "note": "陆九渊「六经皆我注脚」：以我为一切文本之中心。"
+  },
+  {
+   "record_id": "RU1-ZY-42-R01",
+   "same_as_entry": "wangyangming-xin-zhu-zai",
+   "note": "中庸「唯天下至誠，為能經綸天下之大經，立天下之大本」：以至诚者一人为大本之所立。"
+  },
+  {
+   "record_id": "RU2-R0217",
+   "same_as_entry": "wangyangming-zhi-shan-ben-ti",
+   "note": "「去其心之不正，以全其本体之正」：复全先在本体。"
+  },
+  {
+   "record_id": "RU2-R0219",
+   "same_as_entry": "wangyangming-zhi-shan-ben-ti",
+   "note": "「胜私复理」而良知充塞流行：去私以复先在之理。"
+  },
+  {
+   "record_id": "FO2-QX-R030",
+   "same_as_entry": "wangyangming-zhi-shan-ben-ti",
+   "note": "起信论「若人修行一切善法，自然歸順真如法故」：归顺先在真如，同属复归。"
+  },
+  {
+   "record_id": "MO1-C04-R003",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：法仪：由天兼有兼食推出天欲人相爱相利；以天之欲为根据。"
+  },
+  {
+   "record_id": "MO1-C04-R004",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：法仪：法天、度于天；天作为取法的尺度。"
+  },
+  {
+   "record_id": "MO1-C04-R005",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：法仪：天欲人相爱相利，故法天者当如此；根据在天之欲。"
+  },
+  {
+   "record_id": "MO1-C04-R006",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：法仪：暴王兼恶贼人而天祸之；赏罚作为根据。"
+  },
+  {
+   "record_id": "MO1-C09-R012",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：尚贤中：兼爱利民且尊天事鬼者，天鬼赏之为天子；赏罚与位阶。"
+  },
+  {
+   "record_id": "MO1-C09-R013",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：尚贤中：暴王天鬼罚之；同上。"
+  },
+  {
+   "record_id": "MO1-C10-R003",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：尚贤下：举用以能利天鬼人为据；天鬼为最终尺度。"
+  },
+  {
+   "record_id": "MO1-C11-R004",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：尚同上：只同于天子而不同于天，灾犹未去；天为最终中心，以灾为罚。"
+  },
+  {
+   "record_id": "MO1-C12-R007",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：尚同中：未尚同乎天则天降罚；同上。"
+  },
+  {
+   "record_id": "MO1-C12-R008",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：尚同中：祭祀与公平行政得天鬼之福；赏作为理由。"
+  },
+  {
+   "record_id": "MO1-C13-R009",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：尚同下：天子总天下之义以尚同于天；单一中心之链以天为顶。"
+  },
+  {
+   "record_id": "MO1-C19-R005",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：非攻下：禹汤武之役谓之诛，以天命叙事区分；天命为根据。"
+  },
+  {
+   "record_id": "MO1-C19-R006",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：非攻下：受命之诛与攻无罪分开；同上。"
+  },
+  {
+   "record_id": "MO1-C25-R007",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：节葬下：厚葬久丧使祭祀失洁失时，求福反得鬼神之罚；赏罚作为理由。"
+  },
+  {
+   "record_id": "MO1-C26-R001",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志上：天不可逃，故当戒慎；遵从的理由是不可逃的赏罚。"
+  },
+  {
+   "record_id": "MO1-C26-R002",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志上：率民从义以顺天欲，天亦为我所欲之福禄；以福禄为动机。"
+  },
+  {
+   "record_id": "MO1-C26-R006",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志上：由天兼食祭祀与杀不辜之不祥推出天爱百姓；以天之爱为根据。"
+  },
+  {
+   "record_id": "MO1-C26-R008",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志上：天志如轮人之规、匠人之矩，用以度众言；单一尺度。"
+  },
+  {
+   "record_id": "MO1-C27-R002",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志中：义出于贵且知者，天为最贵最知；位阶作为义的来源。"
+  },
+  {
+   "record_id": "MO1-C27-R003",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志中：天贵且知于天子，以赏罚天子为证；位阶与赏罚。"
+  },
+  {
+   "record_id": "MO1-C27-R005",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志中：攻小国以求福反得天祸；赏罚。"
+  },
+  {
+   "record_id": "MO1-C27-R006",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志中：天以日月四时利民，民当报天；以恩报为理由。"
+  },
+  {
+   "record_id": "MO1-C27-R007",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志中：杀不辜者天予不祥，以证天厚爱民；赏罚。"
+  },
+  {
+   "record_id": "MO1-C27-R008",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志中：从事兼者顺天而受赏；兼以赏为理由。"
+  },
+  {
+   "record_id": "MO1-C27-R009",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志中：从事别者反天而受罚；别以罚为理由。"
+  },
+  {
+   "record_id": "MO1-C27-R010",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志中：置天意为法仪以度言行刑政；单一尺度。"
+  },
+  {
+   "record_id": "MO1-C28-R001",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志下：处天下无可逃，故当为天欲去天恶；同上。"
+  },
+  {
+   "record_id": "MO1-C28-R003",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志下：由天下皆祭天推出天兼爱天下之人；以天之意为根据。"
+  },
+  {
+   "record_id": "MO1-C28-R004",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志下：杀一不辜必有一不祥，以证天爱百姓；赏罚。"
+  },
+  {
+   "record_id": "MO1-C28-R010",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：天志下：以天志为义之经，审查小盗受罚而大攻称义；单一尺度。"
+  },
+  {
+   "record_id": "MO1-C31-R001",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：明鬼下：不明鬼神能赏贤罚暴，故天下乱；赏罚作为秩序之源。"
+  },
+  {
+   "record_id": "MO1-C31-R006",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：明鬼下：观辜祭祀失职受神诛；同上。"
+  },
+  {
+   "record_id": "MO1-C31-R007",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：明鬼下：幽间亦有鬼神视之，行不可不谨；以监视为理由。"
+  },
+  {
+   "record_id": "MO1-C31-R013",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：明鬼下：富贵勇力不能御鬼神之罚；同上。"
+  },
+  {
+   "record_id": "MO1-C32-R007",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "以天鬼的意志与赏罚为根据：非乐上：引官刑，以乐事不利天鬼万民、上帝降殃为据；同上。"
+  },
+  {
+   "record_id": "MO1-C14-R002",
+   "same_as_entry": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "note": "兼爱上「子自愛不愛父，故虧父而自利」：自爱停在己区域内（别），同一结构。"
+  },
+  {
+   "record_id": "LC2-SZ-C68-R01",
+   "same_as_entry": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "note": "苏辙「若出于怒是以我故殺人也」：以我为界而害人，同属别。"
+  },
+  {
+   "record_id": "RU1-LY-20-02-R05",
+   "same_as_entry": "daqu-ai-bu-jia-hou",
+   "note": "论语「無眾寡，無小大，無敢慢」：不以多寡大小定顾，同读。"
+  },
+  {
+   "record_id": "FO1-R-SA022",
+   "same_as_entry": "zaahan-ku-mie",
+   "note": "苦谛略说五受阴苦：同一方向的起点。"
+  },
+  {
+   "record_id": "FO1-R-SA037",
+   "same_as_entry": "zaahan-ku-mie",
+   "note": "「我生已盡，梵行已立，所作已作，自知不受後有」：以不再有为终点，同一方向。"
+  },
+  {
+   "record_id": "FO2-KS-P-R036",
+   "same_as_entry": "zaahan-ku-mie",
+   "note": "金狮章「永離苦源，名為入涅槃」：以离苦源为终点，同一方向。"
+  },
+  {
+   "record_id": "IN1-R-H06",
+   "same_as_entry": "zaahan-ku-mie",
+   "note": "慧远答问：以因缘永息、化尽为方外之所求，同一方向。"
+  },
+  {
+   "record_id": "IN2-R0064",
+   "same_as_entry": "amituo-ji-le",
+   "note": "憨山德清「人道以佛法為究竟」：以一究竟之境为终点，同读。"
+  },
+  {
+   "record_id": "IN2-R0068",
+   "same_as_entry": "hanshan-wu-wo-jing-shi",
+   "note": "「最初一步、皆以破我執為主」：同受“无己而非去己”的限定。"
+  },
+  {
+   "record_id": "ZH1-C04-R-11",
+   "same_as_entry": "zhuangzi-yi-ji-yang-yang-niao",
+   "note": "非主候选：人间世爱马者「意有所至，而愛有所亡」，顾而失之，同读。"
+  },
+  {
+   "record_id": "ZH1-C02-R-15",
+   "same_as_entry": "zhuangzi-yi-ji-yang-yang-niao",
+   "note": "非主候选：齐物论王倪问正处、正味、正色，所需随物而异，同读。"
+  }
+ ],
+ "rejected": [
+  {
+   "record_id": "RU1-ZY-10-R04",
+   "why": "中庸「中立而不倚，強哉矯」说的是君子立身之强（不偏倚、不随流），属于行为的坚定，不是评价上的立场中立；把「中立」读成立场中立是字面的同形，不是结构的对应。"
+  }
+ ],
+ "notes": "【范围与结果】161 个主候选全部归位，每个只出现在一处：85 个进入 71 条对应（相合 24、定域 26、相分 21；其中 16 条沿用 RO passages.json 的条目、类别与声明，并设 ro_passage），75 个作为平行条目并入，1 个拒绝（RU1-ZY-10-R04）。另加 4 条自己的对应（秋水无方段 ZH1-U17、人间世栎社 ZH1-C04-R-13 与 ZH1-U04、天下以自为方 ZH1-C33-R-04、齐物论非彼无我 ZH1-U02），秋水以道观之条并入 ZH1-C17-R-07，共引入 6 个非主候选的记录；另有 2 个非主候选作为平行条目（ZH1-C04-R-11、ZH1-C02-R-15）。全部片段与名的引文都用 ctq.py text 逐条核对（116 条，全部精确命中）；读法中的「」引文都在冻结文本中精确命中，术语的提及改用“”。声明都是脊柱中存在的完整 Lean 名，记录 slug 都在 results/records 中存在。\n\n【名】十九个概念各取一名，互不重复：意义＝顾；评价＝顾式（新组合）；活的＝活；生生之意义＝仁；延续条件＝无弃；立场＝方；中心＝我；己之区域＝己；种子＝端；自身意义＝自爱；关系中立＝贯；立场中立与立场不变（N_std 规则的两层）＝无方；中立（Neutral）＝兼；有界规则（Within）＝别；被持有＝在己；自我的边界＝畛域；前设＝畛内之顾（新组合）；边界不变即不变性的步骤＝无己；由意义读出的相关＝皆顾之活（新组合）。十六个有先秦用例，三个新组合由已定之名组成，可在组合处检验（顾式的 sig 字段即顾；畛内之顾即 SignificantWithin；皆顾之活即 Frame.relevance 的三个合取）。无方与无己由一个定理相连：在前设处处成立与中心覆盖之下，边界不变恰是立场不变（boundaryInvariant_iff_standpointInvariant）。\n\n【总体发现】本簇的对应几乎全部落在一条分界上：条件的内容与条件的地位。内容层诸家都有：老子第 62 章「人之不善，何弃之有？」、王弼「不造进向以殊弃不肖」、秋水「其无所畛域；兼懷萬物，其孰承翼？是謂无方。萬物一齊，孰短孰長？」、墨子「兼以易別」「為彼猶為己也」、孟子「以其所爱及其所不爱」、戴震「欲遂其生，亦遂人之生，仁也」。相分几乎全在地位层：把条件断言为宇宙之德或善（系辞“继之者善”、文言四德、“天地之大德曰生”），放进固定之性或先在本体（孟子“我固有之”、程颐“仁自是性”、阳明“至善是心之本体”、苏辙“复性”），系于意志与赏罚（墨子天志诸篇、中庸“大德必得”、老子“常与善人”），或组织成等差与位阶（孟子亲亲仁民爱物、中庸亲亲为大、西铭宗子、桓玄以生生之德尊王者）。理论在这条分界的另一侧：延续条件（无弃）不被断言，根据开放；它给顾不给正价；它本身不排序（Transfer.unordered），把扩大称为更好（C）与不变性的步骤才带来排序。生生之意义（仁）是条件下的定理，这类定理以一个全称陈述为假设，是它的实例化，所以不能说伦理从条件“导出”而不说明这一点。\n\n最贴合脊柱的四处：(1) 戴震「欲遂其生，至於戕人之生而不顧者，不仁也」与 Clearing.center_not_derived 同构：自身意义处处成立、意义沿喂养闭合，而清除者不顾居住者之生，于是立场中立与生生之意义都不成立。(2) 秋水无方段与 Neutral、Web.retains_agree、boundaryInvariant_iff_standpointInvariant 同构，并在“孰短孰长”处说出条件不排序。(3) 大取「吾持養臧也萬倍，吾愛臧也不加厚」与“意义不分等级、条件关系只改变保留的比较”同构。(4) 天下篇讥慎到「非生人之行，而至死人之理」与 Clearing.without_presupposition 同构：去己（取消前设）使不变性只是空洞地成立而条件不成立，所以无己不是去己。\n\n两条结构性的区分贯穿本簇。其一，到达条件有两条路：把己的边界扩到整体（程颢“莫非己也”、张载“吾其体”、惠施“天地一體”、墨子“天欲其生”），沿全关系前设即该立场上的条件（subTrue_total_iff）；或保留己的边界而令它不成断点（庄子无己），即 BoundaryInvariant；两者由 unrestricted_iff_presupposed_along 统一。其二，方法与规则之分：恕、推、能近取譬是经由与己的归并来选择（Learning.lumped_right_iff），可靠范围由相似决定；贯（关系中立）与无方（立场中立）是规则，不依赖相似。还有意义与选择之分：鲁侯养鸟、爱马者、经下“不知其所處”中，顾是真的，失败在选择的模型或耦合（Flow.consequence_unselected、Flow.unselected_beyond_coupling）。\n\n【相分，按分量排】(1) 等差与位阶：孟子亲亲仁民爱物（RU2-R0075、R0076）、厩焚、中庸角色之恕、荀子礼论之别、桓玄王者。这是儒家主流，也直接牵涉“仁”之名。(2) 固定之性与先在本体：孟子固有、程颐仁性、阳明至善、苏辙复性、起信真如、如来藏。(3) 意志与赏罚：墨子天志、明鬼、尚同、法仪 35 条并入一条；中庸大德必得；老子常与善人。(4) 以不再延续为终点：阿含苦灭（“當來有愛”正是理论读作自身意义的东西）、极乐（正价终点）、慧远、金狮章。(5) 把延续断言为善：系辞、文言、大象。\n\n【缺口，按重要性排；均已检索摘要与 Lean】(1) 按闭包层级分级的序及其跨中心一致性（RO 第 8 节第 4 项仍开）：要证 Unrestricted 下 Retains 蕴含 GradedRetains，且两中心的分级序一致当且仅当二者的层级在形成上诱导同一前序，否则有一对走法被反向排序；这决定儒家差等能否被准确表述为加在无弃之上的度量。陈述见 ru-mengzi-qinqin-renmin-aiwu。最近：Lexical.Above、Flow.withinInfluence_of_withinFeeding、Flow.presupposition_order、Clearing.centers_disagree。(2) 把他者当作条件来顾与当作有所欲者来顾：路线 (b) 的顾随供给而变，延续条件与立场中立之顾不随之变；Standpoints 的说明承认主张层面不区分二者。陈述见 jingshuo-ai-min-fei-yong-min。(3) 以时间为界的对手规则：只顾到某一代的规则是条件规则的有界版本，却许可终结后世。陈述见 daqu-ai-shang-shi-hou-shi；它较小，因 bounded_rival 已覆盖一般的有界规则，只缺时间的实例。已检查而不是缺口的：顾而失之（Flow.consequence_unselected）、易地则皆然与由己溺之（StandpointInvariant）、尽性的推出（Valuation.significant_of_transmits、unrestricted_iff_presupposed_along）。\n\n【自我反驳】(a) 仁的负担最重：在孟子中仁只是亲亲、仁民、爱物之一层，老子“天地不仁”否定它，宋明以之为性。以仁名生生之意义，取的是“及其所不爱”“无不爱”“遂人之生”的用法，读者仍可能带入差等、德性与正价；精确而无古典依据的备选是“活皆有顾”。置信 medium 而非 high。(b) 顾的先秦用例以否定式“不顾”为主，肯定式多为回首或照顾，以顾名意义依赖由否定式反推。(c) 无弃的主证在第 62 章；第 27 章“无弃人、无弃物”传世本有，晁说之跋记其「独得诸河上公，而古本无有也」；河上公与王弼都把不弃与教化相连。(d) 无方、无己、畛域、顾式所依的秋水与在宥属外篇，是庄子后学而非庄周本人。(e) 我作为中心只依齐物论一处，佛教语境中我是所破之执，置信 low。(f) 方与“仁之方”（方法）同字异义，用处须标明。(g) 跨簇冲突需整合者裁定：兼（C10、C13 或以兼名合取或合用）、方与观（C08）、贯与推（C16 的归并推广）、种（C12）、宜（C12、C15）、中（中和已采用，故不以中名中心）。(h) 三个新组合置信 low。(i) Web.significance_undetermined 只评价全有与全无两个常值意义；读法中只说被表示的动力学不蕴含生生之意义，没有说它证明没有动力学规律约束意义，后者是表示上的事实（意义不是 World、Web、Flow 的字段）；同理，bounded_rival 只证明有界意义是在已划边界内接受的条件规则、有物落在区域外时它不是延续条件，它与动力学的每条规律相容也只是表示上的事实，读法中没有把它写成定理。(j) 多条读法依赖清除者与居住者这一个见证网，结论是存在式的（有世界中如此），不是普遍定理。(k) 墨经“端”有几何义，训读有争议；“尚世”的读法未定。"
+}

@@ -1,0 +1,4611 @@
+{
+ "cluster": "C13 群、分与共同",
+ "names": [
+  {
+   "concept": "群（collective）：在共同条件中取与而相连的形成所成之关系区域；两个形成同在一群，恰当二者经由共同参与的条件相连（Flow.Shares 之闭包 Flow.WithinSystem）。群没有自身的利益，保持一个部分不等于它所依者得到更新（Renewable.kept_part_not_renewal）。",
+   "name": "群",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ09",
+     "quote": "力不若牛，走不若马，而牛马为用，何也？曰：人能群，彼不能群也。",
+     "layer": "原典（子书）·先秦（战国末）",
+     "sense_in_context": "人以相互关系成群，因而能用力强于己者；群是关系之所成，不是个体之和",
+     "record_id": "RU2-R0082",
+     "locator": "荀子·王制"
+    },
+    {
+     "source_id": "RU2-S-XZ10",
+     "quote": "離居不相待則窮，群居而無分則爭",
+     "layer": "原典（子书）·先秦（战国末）",
+     "sense_in_context": "群居与离居对举：群居是在共同条件中相待而居，离居则各自孤立而穷",
+     "record_id": "RU2-R0259",
+     "locator": "荀子·富國"
+    },
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "君子矜而不爭，群而不黨。",
+     "layer": "经（论语）·先秦（春秋末至战国初编成）",
+     "sense_in_context": "群与党对举：群是开放的相与，党是收窄为一派",
+     "locator": "论语·衛靈公 15.22"
+    },
+    {
+     "source_id": "DS02",
+     "quote": "方以类聚，物以群分，吉凶生矣。",
+     "layer": "传（易传·系辞上）·战国至秦汉（年代有争议）",
+     "sense_in_context": "此处群是按类之聚合（分类义），与关系区域义不同，列为对照",
+     "record_id": "WP-XCS-C01-S01-R03",
+     "locator": "系辞上 第一章"
+    },
+    {
+     "source_id": "YD-ZX2",
+     "quote": "能散其小羣以成大羣",
+     "layer": "注（朱熹《周易本义》涣六四）·宋明（南宋）",
+     "sense_in_context": "小羣读为朋党，散小羣以成大羣：群之范围由窄而宽",
+     "locator": "周易本义·涣六四"
+    }
+   ],
+   "fit": "荀子以\"人能群\"解释人能用力强于己者，并以\"离居不相待则穷\"对举\"群居\"：群由共同条件与相互依待构成，不是先有个体再相加。脊柱中系统正是共同参与条件的闭包：一个共同条件使全体同在一个系统（Flow.system_whole_of_common），只参与一个条件的形成去掉该条件即孤（Flow.alone_beside_of_only），系统是否需要某一条件恰由其余条件是否已连通决定（Flow.system_unchanged_without_iff）。这保留了\"群\"的关系、条件与方向：群由所共之条件而成，随条件之增减而变，不由任何中心或意志构成。",
+   "not_carried": "群作为同类个体之聚集或计数（羊群、群众、\"物以群分\"之分类义）；群作为党、朋党（\"小人成羣\"）；\"君者，善群也\"\"能群也\"中以君为群之中心；群之力用于\"胜物\"、支配他者；群作为有自身利益或意志之单位。",
+   "course": "先秦：荀子以群、分、义连说（RU2-R0082 至 RU2-R0094），富國以群居与离居对举（RU2-R0259）；论语\"群而不党\"；易经\"涣其群，元吉\"（JL-R526）为断辞。系辞\"物以群分\"（WP-XCS-C01-S01-R03）取分类义。荀子君道\"君者，何也？曰：能群也\"把群之成归于君，转入单一中心。宋：朱熹本义读涣六四为\"散其朋党\"\"散其小羣以成大羣\"，群兼有朋党义；程颐渐卦注\"離叛其羣類\"取类义。",
+   "alternatives": [
+    {
+     "name": "众",
+     "why_not": "众多为计数义，且常与\"治众\"\"寡治众\"连用，带单一中心（YCM130-LM-W-02-R01）"
+    },
+    {
+     "name": "聚",
+     "why_not": "聚（萃卦\"故聚也\"）是成群之过程，不是所成之关系区域"
+    },
+    {
+     "name": "党",
+     "why_not": "党是收窄的一派，与\"群而不党\"对立"
+    },
+    {
+     "name": "共同体",
+     "why_not": "现代词，无先秦用例"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.Flow.Shares",
+    "Becoming.Flow.WithinSystem",
+    "Becoming.Flow.system_whole_of_common",
+    "Becoming.Flow.alone_beside_of_only",
+    "Becoming.Flow.system_unchanged_without_iff",
+    "Becoming.Renewable.kept_part_not_renewal"
+   ]
+  },
+  {
+   "concept": "分（exclusive footprints）：一个整体所持之各部分，其所取各在整体所给之内（PartsWithin），两部分之所取互不相交（PartsApart）；实现之计划诸叶所取因而不重复，由根之所给支撑（JointPlan.supports_of_realizes）。",
+   "name": "分",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ09",
+     "quote": "人何以能群？曰：分。分何以能行？曰：义。",
+     "layer": "原典（子书）·先秦（战国末）",
+     "sense_in_context": "分是群之所以可能：各有其所取之界",
+     "record_id": "RU2-R0083",
+     "locator": "荀子·王制"
+    },
+    {
+     "source_id": "RU2-S-XZ19",
+     "quote": "求而无度量分界，则不能不争；争则乱，乱则穷。",
+     "layer": "原典（子书）·先秦（战国末）",
+     "sense_in_context": "\"度量分界\"：所求有度量、有界，互不越界",
+     "record_id": "RU2-R0102",
+     "locator": "荀子·礼論"
+    },
+    {
+     "source_id": "RU2-S-XZ11",
+     "quote": "农分田而耕，贾分货而贩，百工分事而劝，士大夫分职而听，建国诸侯之君分土而守",
+     "layer": "原典（子书）·先秦（战国末）",
+     "sense_in_context": "各分其田、货、事、职、土：所取之域互不重叠",
+     "locator": "荀子·王霸"
+    },
+    {
+     "source_id": "LC-SZ-ALL",
+     "quote": "天下各安其分則不爭而自治",
+     "layer": "注（苏辙《老子解》第46章）·宋明（北宋）",
+     "sense_in_context": "分读为各人固定之位分，已带名分义",
+     "record_id": "LC2-SZ-C46-R01",
+     "locator": "苏辙·老子解"
+    }
+   ],
+   "fit": "\"度量分界\"是所求之量与所取之界：各部分各取其界内，界与界不相交。JointPlans 中部分之所取在整体之内、两部分不相交，则诸叶所取不重复且在根之所给之内（JointPlan.within_of_realizes、nodup_of_realizes、supports_of_realizes）。荀子以\"无分则争\"连到合取超出所给（见\"合取过与\"\"争\"），这一连接在脊柱上只有单一条件、一个更新者两个取者之例（Excluding.three_courses），从排他之界到流之合取在所给之内的一般定理尚缺（见条目之 gap）。",
+   "not_carried": "名分、职分作为固定位次（苏辙\"各安其分\"，荀子\"使有贫富贵贱之等\"）；\"贵贱之分\"即等级之别（荀子礼论之\"别\"）；天分、命分作为固定之所得；分离、分裂（切断关系）；分数之\"分\"（部分之比）。",
+   "course": "先秦：荀子王制、富國、礼论、王霸以分为群之条件（RU2-R0083、RU2-R0102）。王制\"分均则不偏…使有贫富贵贱之等\"把分连到等级，是分歧之所在（见条目 xunzi-wangzhi-fen-jun-bu-pian）。宋：苏辙\"各安其分\"（LC2-SZ-C46-R01）以分为固定之位分。",
+   "alternatives": [
+    {
+     "name": "别",
+     "why_not": "荀子以\"别\"指\"贵贱有等，长幼有差\"，是等级之分，理论没有（RO ru-xunzi-gui-jian-you-deng）"
+    },
+    {
+     "name": "度量分界",
+     "why_not": "最确切，但为四字短语，作为\"分\"之释义保留"
+    },
+    {
+     "name": "职",
+     "why_not": "职带位次与授官之中心"
+    },
+    {
+     "name": "均",
+     "why_not": "均是各份相等，是另一个概念，脊柱没有\"均则皆存\"之律（见 lunyu-bu-huan-gua-er-huan-bu-jun）"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.PartsWithin",
+    "Becoming.PartsApart",
+    "Becoming.Supports",
+    "Becoming.JointPlan.within_of_realizes",
+    "Becoming.JointPlan.nodup_of_realizes",
+    "Becoming.JointPlan.supports_of_realizes"
+   ]
+  },
+  {
+   "concept": "分數（joint plan）：有限的嵌套分解；一个配置实现计划，当它把实现两侧的部分持在一起，直到在部分处读出之叶（JointPlan、JointPlan.Realizes）。",
+   "name": "分數",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "BI1-S-SZ",
+     "quote": "凡治衆如治寡，分數是也；鬥衆如鬥寡，形名是也；",
+     "layer": "原典（兵书）·先秦（春秋末至战国）",
+     "sense_in_context": "分数：分部编组与层级之数，使大众可如小众般处理",
+     "record_id": "BI1-SZ-R-21",
+     "locator": "孙子·兵勢"
+    }
+   ],
+   "fit": "\"治众如治寡\"恰是嵌套之效：每一节点只持两侧之部分，任何大小之计划都是这样的有限嵌套（JointPlan），实现由各节点各自之见证给出（JointPlan.Realizes），部分排他时叶之所取由根支撑（JointPlan.supports_of_realizes）。分数讲的是组成之结构，不讲谁为中心。",
+   "not_carried": "\"数\"作为命数、气数；现代\"分数\"（部分与整体之比）；兵家之以分数为\"治众\"之术（统驭者为中心）；什伍连坐之编组（商君书之强制监察）。",
+   "course": "先秦：孙子兵勢（BI1-SZ-R-21；脉络节点 BI1-SZ-N-fenshu \"军队分部编组和层级数量安排\"）。同句\"斗众如斗寡，形名是也\"以金鼓旌旗为共同信号（BI1-SZ-R-35）。后世\"分数\"多转为分部、定分与算术之义。",
+   "alternatives": [
+    {
+     "name": "部曲",
+     "why_not": "汉以后之军制名，非结构义"
+    },
+    {
+     "name": "什伍",
+     "why_not": "商君书以什伍连坐，带强制与互相告发"
+    },
+    {
+     "name": "编制",
+     "why_not": "现代词"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.JointPlan",
+    "Becoming.JointPlan.Realizes",
+    "Becoming.JointPlan.draws",
+    "Becoming.JointPlan.supports_of_realizes"
+   ]
+  },
+  {
+   "concept": "出入相揜（joint taking within what is given）：跨一步，一族在一条件上合起来所取不多于所给（Flow.WithinJoint）；在平衡之下水平不降，每个依它的形成都被支持（Flow.joint_keeps、Flow.level_kept）。",
+   "name": "出入相揜",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ10",
+     "quote": "皆使衣食百用出入相揜，必時臧餘，謂之稱數。",
+     "layer": "原典（子书）·先秦（战国末）",
+     "sense_in_context": "所用之出与所得之入相覆盖，并按时储余",
+     "locator": "荀子·富國"
+    }
+   ],
+   "fit": "\"出入相揜\"说的是出与入相覆，不是各自所取多少：它是合计之律而非个人之律。脊柱区分各自在所给之内（Flow.WithinOwn）与合取在所给之内（Flow.WithinJoint），前者不保证后者（Exceeding.own_not_joint）；合取在所给之内水平不降（Flow.level_kept）、全体被支持（Flow.joint_keeps）。\"必时臧余\"对应储备推迟终结而不免终结（record reserve-defers-ending），属另一律，不并入此名。",
+   "not_carried": "出入作为往来、进出之动作；国家财政出纳之账目（以人君为计算中心）；揜作为遮蔽、隐藏。",
+   "course": "先秦：荀子富國以\"称数\"总名量地立国、计利畜民之安排，\"出入相揜\"是其中之律。后世\"量入为出\"（礼记王制，不在脉络冻结文本中）转为财政原则，带单一计算中心。",
+   "alternatives": [
+    {
+     "name": "稱數",
+     "why_not": "荀子以之名整个安排（含量地、授事、储余），宽于此律"
+    },
+    {
+     "name": "知足",
+     "why_not": "知足是目标可在静止处满足（Law.rests_iff），是寻求者之律，不是合取之律"
+    },
+    {
+     "name": "節用",
+     "why_not": "墨子节用减少所取，不陈述合取与所给之关系"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Flow.WithinJoint",
+    "Becoming.Flow.joint_keeps",
+    "Becoming.Flow.level_kept",
+    "Becoming.Exceeding.own_not_joint"
+   ]
+  },
+  {
+   "concept": "爭（race at a shared condition）：在一个共同条件上连续若干步合取过与（C04 之名：各自在所给之内而合起来超出）之进程，以诸部分之相对位置来读：其间位置之变按计数零和，而水平每步至少降一；在平衡下，竞逐之终点终结一个以高于起点水平减步数之需要依赖此条件、且只在被支持时活动之部分，与其位置无关（Flow.ends_at_race_end）；更新受门控时，自某步起一切依此条件之部分，最大者在内，都不活动（Flow.race_ends_greatest、Race.greatest_ends）。",
+   "name": "爭",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ10",
+     "quote": "欲惡同物，欲多而物寡，寡則必爭矣。",
+     "layer": "原典（子书）·先秦（战国末）",
+     "sense_in_context": "所欲同在一物，欲多物寡则争：争出于共同条件上之合取超出",
+     "locator": "荀子·富國"
+    },
+    {
+     "source_id": "RU2-S-XZ09",
+     "quote": "故人生不能无群，群而无分则争，争则乱，乱则离，离则弱，弱则不能胜物；",
+     "layer": "原典（子书）·先秦（战国末）",
+     "sense_in_context": "无分之群则争",
+     "record_id": "RU2-R0090",
+     "locator": "荀子·王制"
+    },
+    {
+     "source_id": "FA1-S-H49",
+     "quote": "是以人民衆而貨財寡，事力勞而供養薄，故民爭，雖倍賞累罰而不免於亂。",
+     "layer": "原典（子书）·先秦（战国末）",
+     "sense_in_context": "以数量关系（众与寡）说争",
+     "record_id": "FA1-H49-R002",
+     "locator": "韩非子·五蠹"
+    },
+    {
+     "source_id": "DS01",
+     "quote": "贪欲无厌，不修其内，各求于外，故戎马生于郊也。",
+     "layer": "注（王弼《老子注》第46章）·魏晋",
+     "sense_in_context": "各求于外之无界汲取致争战",
+     "record_id": "LC2-WB-C46-R01",
+     "locator": "王弼·老子注"
+    }
+   ],
+   "fit": "荀子与韩非都不以人性而以\"欲多物寡\"\"人众财寡\"说争：争是共同条件上合取超出所给之进程。其条件是 C04 所名之\"合取过与\"：各自在所给之内可以合起来超出（Pair.own_not_joint），合取超出终结依此条件者（Flow.joint_excess_ends）；\"争\"只名这一关系连续若干步而以位置来读之竞逐：在竞逐中相对位置零和，竞逐终结一个部分只经由它对条件的依赖，不经由它的位置（Flow.ends_at_race_end）；更新受门控时最大者也与条件一同终结（Race.greatest_ends）。所以\"争\"保留了条件、关系与方向：它是关系之进程，不是某一方之本性。",
+   "not_carried": "争作为谏诤（荀子臣道\"谓之争\"）；争作为求居于他人之上（老子\"不争\"所针对者，另名\"為天下先\"）；争作为性恶之必然或道德之恶；争讼（诉求之往返，属\"報\"\"讓\"）；以排名诱发之竞（另名\"相軋\"）。",
+   "course": "先秦：荀子富國、王制、礼论（RU2-R0090、RU2-R0102），韩非五蠹（FA1-H49-R002）。魏晋：王弼第46章注（LC2-WB-C46-R01）。易传序卦\"饮食必有讼\"以争为必然（WP-XG-C01-S05-R01），是相分（见条目 xugua-yinshi-bi-you-song）。",
+   "alternatives": [
+    {
+     "name": "競",
+     "why_not": "竞多指以名次相较，属\"相軋\""
+    },
+    {
+     "name": "訟",
+     "why_not": "讼是以诉求往返相争，结构是环，属\"報\"\"讓\""
+    },
+    {
+     "name": "奪",
+     "why_not": "夺是一方取另一方所有，只是竞逐之一种走法（Flow.continuing_excludes）"
+    },
+    {
+     "name": "合取过与",
+     "why_not": "C04 已以此名一步之内各自在所给之内而合起来超出之关系；争名此关系连续若干步、以位置来读之竞逐进程，二者是条件与进程之别，不可一名二用"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.Flow.ends_at_race_end",
+    "Becoming.Flow.race_ends_greatest",
+    "Becoming.Race.greatest_ends"
+   ]
+  },
+  {
+   "concept": "相軋（the game of relative position）：一个部分之位置是它之量对其余之量的读法；按计数零和：任何变化中，一部分位置之变是其余位置之变之和的相反，没有变化使每个部分之位置上升，一部分之升需要另一部分之降（RelativePosition.change_opposed、not_all_rise、rise_needs_fall）。",
+   "name": "相軋",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S04",
+     "quote": "名也者，相軋也；知也者，爭之器也。",
+     "layer": "原典（庄子内篇·人間世）·先秦（战国）",
+     "sense_in_context": "名（声誉位置）就是相互倾轧：一方之显即他方之隐",
+     "locator": "庄子·人間世"
+    },
+    {
+     "source_id": "ZH1-S23",
+     "quote": "舉賢則民相軋，任知則民相盜。",
+     "layer": "原典（庄子杂篇·庚桑楚）·战国至秦汉（年代有争议）",
+     "sense_in_context": "以贤选拔排序，民即入于相轧之局",
+     "locator": "庄子·庚桑楚"
+    },
+    {
+     "source_id": "DS01",
+     "quote": "尚贤显名，荣过其任，为而常校，能相射",
+     "layer": "注（王弼《老子注》第3章）·魏晋",
+     "sense_in_context": "尚贤显名使人常相较量、以能相射",
+     "record_id": "LC2-WB-C03-R01",
+     "locator": "王弼·老子注"
+    }
+   ],
+   "fit": "\"名也者，相轧也\"把名读为关系中之位置：名之高即他人名之低。脊柱的相对位置正是按计数零和（RelativePosition.positions_balance、change_opposed），没有变化能使每一部分之位置上升（not_all_rise），一部分之升需要另一部分之降（rise_needs_fall），而每一部分所取都增加时位置仍可下降。\"举贤则民相轧\"说的是：以排序为选择之读法，就把全体放进这一零和之局。",
+   "not_carried": "轧作为车轮碾压、以力相伤（身体之暴力）；名作为名称、语言（名辩之名，另属他簇）；对相轧之道德谴责本身。",
+   "course": "先秦：庄子人間世、庚桑楚；老子第2章\"高下相倾\"以相待说高下（LE-R006），第3章\"不尚贤，使民不争\"。魏晋：王弼第3章注\"能相射\"（LC2-WB-C03-R01）、第58章注\"殊类分析，民怀争竞\"（LC2-WB-C58-R01）。宋：苏辙第68章\"相上之心\"（LC2-SZ-C68-R02）转到\"高于一切\"之目标（另名\"為天下先\"）。",
+   "alternatives": [
+    {
+     "name": "高下",
+     "why_not": "老子\"高下相倾\"有相对义，但高下、上下常指固定尊卑"
+    },
+    {
+     "name": "貴賤",
+     "why_not": "贵贱是价值等级，理论没有（系辞\"卑高以陈，贵贱位矣\"）"
+    },
+    {
+     "name": "位",
+     "why_not": "位已用于卦之爻位（HexagramPlaces），且带\"列贵贱之地\"（王弼略例）"
+    },
+    {
+     "name": "等",
+     "why_not": "等是固定等级（\"贵贱有等\"）"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.RelativePosition.change_opposed",
+    "Becoming.RelativePosition.not_all_rise",
+    "Becoming.RelativePosition.rise_needs_fall"
+   ]
+  },
+  {
+   "concept": "為天下先（the target above all others）：以\"高于其余一切\"为目标；在一个状态上至多一个寻求者满足它（aboveAll_unique），在任何律下两个都持此目标的寻求者不能一起静止（Law.aboveAll_never_rests）。",
+   "name": "為天下先",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "我有三宝，持而保之。一曰慈，二曰俭，三曰不敢为天下先。",
+     "layer": "经（老子第67章）·先秦（战国，传世本）",
+     "sense_in_context": "\"为天下先\"：居于天下一切之前",
+     "record_id": "LL-R052",
+     "locator": "老子·第67章"
+    },
+    {
+     "source_id": "RU2-S-XZ06",
+     "quote": "齊給速通不争先人",
+     "layer": "原典（子书·荀子非十二子）·先秦（战国末）",
+     "sense_in_context": "不与人争居其先",
+     "locator": "荀子·非十二子"
+    },
+    {
+     "source_id": "LC-SZ-ALL",
+     "quote": "人皆有相上之心故莫能相為用",
+     "layer": "注（苏辙《老子解》第68章）·宋明（北宋）",
+     "sense_in_context": "人人求居他人之上，故不能相互为用",
+     "record_id": "LC2-SZ-C68-R02",
+     "locator": "苏辙·老子解"
+    }
+   ],
+   "fit": "\"天下\"是其余之全体，\"先\"是相对位置之首：为天下先就是以高于其余一切为目标。脊柱：此目标至多一人在一状态满足，两人同持则在任何律下不能同时静止；苏辙\"人皆有相上之心，故莫能相为用\"正是此律之读法：人人持此目标则协作无静止之处。老子\"不敢为天下先\"即不持此目标，\"夫唯不争，故天下莫能与之争\"（RO lao-22）在\"争需双方都持此目标\"的意义上成立。",
+   "not_carried": "先作为时间之先后；先作为倡导、领头（\"先民\"）；天下作为政治疆域（\"王天下\"之单一中心）；老子\"故能成器长\"所接的取得首位之结果（等级之果，见 LC2-SZ-C67-R03）。",
+   "course": "先秦：老子第67章（LL-R052、LL-R034），第22、66章\"不争\"（LE-R032、LAO2-C66-R05）；荀子非十二子\"不争先人\"。宋：苏辙\"相上之心\"（LC2-SZ-C68-R02）。韩非子解老以\"盡隨於萬物之規矩\"解\"不敢為天下先\"（CV1-JL-R057），另作随顺解。",
+   "alternatives": [
+    {
+     "name": "相上",
+     "why_not": "苏辙之词，结构确切，但为北宋用例，作为本名之后世读法保留"
+    },
+    {
+     "name": "爭先",
+     "why_not": "荀子修身\"勞苦之事則争先\"亦指争着先做劳苦之事，义不专一"
+    },
+    {
+     "name": "上人",
+     "why_not": "老子第66章\"欲上民，必以言下之\"以居上为目的，带等级"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.aboveAll_unique",
+    "Becoming.Law.aboveAll_never_rests"
+   ]
+  },
+  {
+   "concept": "同患（a common condition every formation depends on and exchanges with）：诸形成依赖并交换于同一条件；如此一个流是相互依赖的（Flow.mutuallyDependent_of_common）；在一个人人给予并依赖之共同条件下，每个形成都在每个形成之供给闭包之内（Flow.feeding_whole_of_common）。",
+   "name": "同患",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "BI1-S-SM",
+     "quote": "同患同利以合諸侯，比小事大以和諸侯。",
+     "layer": "原典（兵书·司马法仁本）·先秦（战国）",
+     "sense_in_context": "以共同之患合诸侯",
+     "record_id": "BI1-SM-R-07",
+     "locator": "司马法·仁本"
+    },
+    {
+     "source_id": "DS02",
+     "quote": "圣人以此洗心，退藏于密，吉凶与民同患，",
+     "layer": "传（易传·系辞上）·战国至秦汉（年代有争议）",
+     "sense_in_context": "吉凶与民共处一患",
+     "record_id": "WP-XCS-C11-S02-R06",
+     "locator": "系辞上 第十一章"
+    },
+    {
+     "source_id": "YWH-LZ",
+     "quote": "同舟而濟，則吳越何患乎異心？",
+     "layer": "注（王弼《周易略例》）·魏晋",
+     "sense_in_context": "同处一舟则异心不足为患",
+     "record_id": "YCM130-LZ-W-03-R01",
+     "locator": "周易略例"
+    }
+   ],
+   "fit": "患是所依之条件可能受损。同患即诸形成依同一条件：脊柱上一个人人依赖并与之交换的共同条件使流相互依赖（Flow.mutuallyDependent_of_common），依赖链所及之一个终结则依赖它者也终结（Web.coextinct，C02 名之\"隨滅\"），在一个人人给予并依赖的共同条件下，每个形成都在每个形成之供给闭包之内（Flow.feeding_whole_of_common）。孙子\"吴越相恶…同舟而济，遇风，其相救也，如左右手\"是同一结构（RO sunzi-wu-yue-tong-zhou）。",
+   "not_carried": "患作为忧虑之心理；司马法以同患为合诸侯之术（工具义）；系辞\"圣人与民同患\"中圣人之为中心；\"同利\"之利益共享（财利义）。",
+   "course": "先秦：司马法仁本（BI1-SM-R-07），系辞上（WP-XCS-C11-S02-R06），孙子九地\"同舟而济\"（BI1-SZ-R-53，词不同而结构同）。魏晋：王弼略例\"同舟而济\"（YCM130-LZ-W-03-R01）。明：憨山德清序\"與民同患\"（IN2-S06）为佛之慈悲读法，带中心。",
+   "alternatives": [
+    {
+     "name": "同舟",
+     "why_not": "孙子之喻最生动，但是比喻而非概念之名"
+    },
+    {
+     "name": "相待",
+     "why_not": "相待已为 C02 所采，名相互依赖之结果，不是所共之条件"
+    },
+    {
+     "name": "命运共同体",
+     "why_not": "现代词，无古代用例"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Flow.mutuallyDependent_of_common",
+    "Becoming.Flow.feeding_whole_of_common",
+    "Becoming.Flow.feeding_unrestricted_of_common"
+   ]
+  },
+  {
+   "concept": "交相利（mutual feeding）：每个形成都在每个形成之供给闭包之内，即每一方之延续在某种间接上为每一方所养（Flow.MutuallyFed）；它推出相互依赖，反之不然（Flow.MutuallyFed.mutuallyDependent；Drawing.mutual_not_fed）。",
+   "name": "交相利",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "MO1-S-C15",
+     "quote": "以兼相愛、交相利之法易之",
+     "layer": "原典（子书·墨子兼愛中）·先秦（战国）",
+     "sense_in_context": "交相利：彼此相互给予所需",
+     "record_id": "MO1-C15-R003",
+     "locator": "墨子·兼愛中"
+    },
+    {
+     "source_id": "MO1-S-C26",
+     "quote": "順天意者，兼相愛、交相利，必得賞；反天意者，別相惡、交相賊，必得罰。",
+     "layer": "原典（子书·墨子天志上）·先秦（战国）",
+     "sense_in_context": "交相利与交相贼对举",
+     "record_id": "MO1-C26-R005",
+     "locator": "墨子·天志上"
+    },
+    {
+     "source_id": "MO1-S-C25",
+     "quote": "人為其所能，以交相利也",
+     "layer": "原典（子书·墨子節葬下）·先秦（战国）",
+     "sense_in_context": "各为其所能而相互给予",
+     "record_id": "MO1-C25-R008",
+     "locator": "墨子·節葬下"
+    },
+    {
+     "source_id": "LC-SZ-ALL",
+     "quote": "吾以智御人人亦以智應之而上下交相賊矣",
+     "layer": "注（苏辙《老子解》第65章）·宋明（北宋）",
+     "sense_in_context": "以智相御，上下互相取用而不相养",
+     "record_id": "LC2-SZ-C65-R01",
+     "locator": "苏辙·老子解"
+    }
+   ],
+   "fit": "\"交\"是相互，\"利\"是给予而养其延续：交相利即每一方之延续都为各方所养，正是 MutuallyFed。墨子把它与\"交相贼\"对举：脊柱中 Drawing 两方各取对方所需而无所给，二者相互依赖而互不供给（Drawing.mutual_not_fed）。所以交相利与交相贼同样是相互依赖，区别在有无给予：相互依赖不是相互得益。",
+   "not_carried": "利作为财利、交易中之所得（墨子\"然后人报我\"之计算）；兼爱以天志赏罚为据（意志层）；利作为功利之总量计算。",
+   "course": "先秦：墨子兼爱中、天志上、节葬下（MO1-C15-R003、MO1-C26-R005、MO1-C25-R008）；易传家人九五小象\"交相爱\"（TP-H37-X5-R01）。宋：苏辙第65章\"上下交相贼\"（LC2-SZ-C65-R01）以反馈说相贼。",
+   "alternatives": [
+    {
+     "name": "互惠",
+     "why_not": "现代词，带交换之回报义"
+    },
+    {
+     "name": "相養",
+     "why_not": "养偏指一方养另一方，不必相互"
+    },
+    {
+     "name": "兼相愛",
+     "why_not": "兼相爱是一种关切之态度，脊柱以给予与供给闭包立论，不以爱立论"
+    },
+    {
+     "name": "相待",
+     "why_not": "C02 以\"相待\"名相互依赖（Flow.MutuallyDependent），比交相利弱：相互依赖不必相互供给（Drawing.mutual_not_fed）"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.Flow.MutuallyFed",
+    "Becoming.Flow.MutuallyFed.mutuallyDependent",
+    "Becoming.Drawing.mutual_not_fed",
+    "Becoming.Flow.MutuallyFed.unrestricted"
+   ]
+  },
+  {
+   "concept": "和而不同（what pooling adds）：经合用之耦合的选择恰分开成员不全同样耦合者（Web.separates_all_iff）；某成员耦合为同而成员不全如此时，合用之选择分开它们：差别就是合用所加（Web.pool_adds）。",
+   "name": "和而不同",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "子曰：「君子和而不同，小人同而不和。」",
+     "layer": "经（论语·子路 13.23）·先秦",
+     "sense_in_context": "和是不同者相持，同是使之相同",
+     "record_id": "RU1-LY-13-23-R01",
+     "locator": "论语·子路"
+    },
+    {
+     "source_id": "YD-JP38",
+     "quote": "上火下澤，睽；君子以同而異。",
+     "layer": "传（易传·大象）·战国至秦汉（年代有争议）",
+     "sense_in_context": "同中保有异",
+     "record_id": "TP-H38-DX-R02",
+     "locator": "睽·大象"
+    },
+    {
+     "source_id": "FO2-FQ",
+     "quote": "秖由異故，所以同耳。",
+     "layer": "论（法藏《华严一乘教义分齐章》）·隋唐（唐）",
+     "sense_in_context": "正因有异，方能共成",
+     "record_id": "FO2-FQ-R034",
+     "locator": "华严一乘教义分齐章"
+    }
+   ],
+   "fit": "和而不同说保留差别之共同关系比求同多出可达之处。SelectionPool：合用闭包恰是成员闭包之并（withinClosureOf_iff），合用之选择分开恰是成员不全同样耦合者（Web.separates_all_iff），差别正是合用所加（Web.pool_adds）。这与 RO ru-lunyu-he-er-bu-tong、zuo-zhao20-xian-qi-fou 同构。论语把它作为君子小人之评价，脊柱只给结构。",
+   "not_carried": "和作为中和、调节（另名\"中和\"，C11）；和作为音声之相应（和声）；\"君子\"\"小人\"之品第评价；和作为和睦、无冲突（理论保留真实之冲突与差异）。",
+   "course": "先秦：论语子路 13.23（RU1-LY-13-23-R01、R02）；左传昭公二十年晏子\"和如羹焉\"（不在脉络冻结文本中，见 RO zuo-zhao20-xian-qi-fou）；易传睽大象\"同而异\"；中庸\"和而不流\"（RU1-ZY-10-R03）。隋唐：法藏\"秖由异故所以同\"（FO2-FQ-R034）。",
+   "alternatives": [
+    {
+     "name": "和",
+     "why_not": "单字\"和\"与已采之\"中和\"（调节）易混，且和声、和睦诸义不专"
+    },
+    {
+     "name": "兼聽",
+     "why_not": "兼听是合用耦合本身（荀子\"兼听之明\"），宜由 C10 定名；此名只名合用所加之差别"
+    },
+    {
+     "name": "同而異",
+     "why_not": "易传睽大象之语，义同而用例单一"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.Web.pool_adds",
+    "Becoming.Web.separates_all_iff",
+    "Becoming.withinClosureOf_iff",
+    "Becoming.Web.member_separates_all"
+   ]
+  },
+  {
+   "concept": "同而不和（a pool equal to one member）：合用之选择恰是某一成员之选择，当且仅当凡该成员耦合为同者每个成员都耦合为同（Web.pooled_iff_member）：同者相加，什么也不加。",
+   "name": "同而不和",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "子曰：「君子和而不同，小人同而不和。」",
+     "layer": "经（论语·子路 13.23）·先秦",
+     "sense_in_context": "同而不和：求同而无相持之异",
+     "record_id": "RU1-LY-13-23-R02",
+     "locator": "论语·子路"
+    },
+    {
+     "source_id": "MO1-S-C12",
+     "quote": "上之所是必亦是之，上之所非必亦非之。",
+     "layer": "原典（子书·墨子尚同中）·先秦（战国）",
+     "sense_in_context": "每个下级之是非跟随上级之是非",
+     "record_id": "MO1-C12-R003",
+     "locator": "墨子·尚同中"
+    }
+   ],
+   "fit": "\"同而不和\"在脊柱上是合用退化为一员：当每个成员都与某一成员同样耦合，合用之选择恰是该成员之选择（Web.pooled_iff_member）。墨子尚同要求\"上之所是必亦是之\"，凡上之读法归并者经它的选择都分不开（Learning.selects_not_right_of_parted，此律属 C12 所名之\"所以擇\"），汇集于是只等于上一人。",
+   "not_carried": "同作为相同之属性（同一性、同类）；同作为共同、一起（\"同人\"\"同患\"\"同舟\"之同）；大同（礼运之理想，不在脉络冻结文本中）；\"小人\"之评价。",
+   "course": "先秦：论语 13.23；墨子尚同上中下以\"一同天下之义\"为治（MO1-S-C11 至 MO1-S-C13）；商君书\"壹赏壹刑壹教\"（RO shangjunshu-yi-shang-yi-xing-yi-jiao）。秦：以法为教、以吏为师（FA1-H49-R018）。",
+   "alternatives": [
+    {
+     "name": "同",
+     "why_not": "单字\"同\"义太多（共同、同类、同人），不能专指"
+    },
+    {
+     "name": "尚同",
+     "why_not": "尚同是墨子之政治主张，带单一中心与赏罚"
+    },
+    {
+     "name": "壹",
+     "why_not": "商君书之壹是把选择收窄为一个读法，是同而不和之一种施行，带强制"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.Web.pooled_iff_member",
+    "Becoming.Web.separates_all_iff_member"
+   ]
+  },
+  {
+   "concept": "同力（difference made only together）：一族部分合起来造成一个变化（扣留全部则依赖保持），而其中任何一部分单独都不造成（扣留任一部分，同一步仍然造成）（Dependence.DifferenceOnlyTogether）；这样的族至少有两个成员（DifferenceOnlyTogether.two_le_length）。",
+   "name": "同力",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ13",
+     "quote": "有能比知同力",
+     "layer": "原典（子书·荀子臣道）·先秦（战国末）",
+     "sense_in_context": "合其智、同其力（杨倞注\"比，合也\"），众臣共同矫正君",
+     "locator": "荀子·臣道"
+    },
+    {
+     "source_id": "RU2-S-XZ10",
+     "quote": "上下一心，三軍同力",
+     "layer": "原典（子书·荀子富國）·先秦（战国末）",
+     "sense_in_context": "众军同出一力",
+     "locator": "荀子·富國"
+    },
+    {
+     "source_id": "DS02",
+     "quote": "二人同心，其利断金。",
+     "layer": "传（易传·系辞上）·战国至秦汉（年代有争议）",
+     "sense_in_context": "二人合起来能断金，单方不能",
+     "record_id": "WP-XCS-C08-S05-R01",
+     "locator": "系辞上 第八章"
+    },
+    {
+     "source_id": "YD-ZX2",
+     "quote": "盡誠以呼號其衆相與合力",
+     "layer": "注（朱熹《周易本义》夬）·宋明（南宋）",
+     "sense_in_context": "与众合力以决",
+     "record_id": "ZX130-H43-R01",
+     "locator": "周易本义·夬"
+    }
+   ],
+   "fit": "\"同力\"是诸部分之力合成一个变化，而任一部分单独不能。脊柱之 DifferenceOnlyTogether 正是此：合起来造成、单独都不造成，且至少两个成员。系辞\"其利断金\"恰是一个\"断\"：脊柱的这一定义针对的正是打破一个依赖，在共同消耗中则读为\"没有单一消耗者\"（record joint-difference-making）。",
+   "not_carried": "同心、一心（单一意志）；力作为强制之势（\"力政\"\"以力服人\"）；三军同力之为战胜之目的；商君书\"天下胜，是故合力\"之强制合力（FA1-S-SV4）。",
+   "course": "先秦：荀子臣道、富國、議兵、彊國（\"三軍同力\"），墨子非攻中\"三主之君一心戮力\"（MO1-C18-P04），系辞\"二人同心\"。商君书第18章\"合力\"带强制。宋：朱熹夬\"相與合力\"（ZX130-H43-R01）。",
+   "alternatives": [
+    {
+     "name": "合力",
+     "why_not": "先秦用例在商君书，为强制下之合力；宋以后常用"
+    },
+    {
+     "name": "戮力",
+     "why_not": "墨子、韩非用例多与\"一心\"连用，带单一意志"
+    },
+    {
+     "name": "同心",
+     "why_not": "同心指意志之同，不是力之合成"
+    },
+    {
+     "name": "有力",
+     "why_not": "C02 已以\"有力\"名单独造成差别（Dependence.MakesDifference）；同力名合起来造成而单独都不造成者，二者不同"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Dependence.DifferenceOnlyTogether",
+    "Becoming.Dependence.MakesDifferenceTogether",
+    "Becoming.Dependence.DifferenceOnlyTogether.two_le_length",
+    "Becoming.Dependence.Overdetermined.only_together"
+   ]
+  },
+  {
+   "concept": "讓（the closing link）：在一个回送差异之环中，交回少于所受之一个环节；环闭合一个差异必有这样的环节（LoopReturn.closing_needs_less），若每个环节交回不少于所受，差异永不低于起点（LoopReturn.never_closes_of_no_less）。",
+   "name": "讓",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "子曰：「君子無所爭，必也射乎！揖讓而升，下而飮，其爭也君子。」",
+     "layer": "经（论语·八佾 3.7）·先秦",
+     "sense_in_context": "在相竞之中以让相接，争不至于相激",
+     "locator": "论语·八佾"
+    },
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "子曰：「能以禮讓為國乎，何有？",
+     "layer": "经（论语·里仁 4.13）·先秦",
+     "sense_in_context": "以礼让为国：相与之间各退一步",
+     "locator": "论语·里仁"
+    },
+    {
+     "source_id": "RU1-S-DX",
+     "quote": "一家讓，一國興讓",
+     "layer": "经（礼记·大学）·先秦至秦汉（年代有争议）",
+     "sense_in_context": "一处之让沿关系兴起于一国",
+     "record_id": "RU1-DX-11-R02",
+     "locator": "大学·传第九章"
+    },
+    {
+     "source_id": "RU2-S-XZ02",
+     "quote": "勞苦之事則争先，饒樂之事則能讓",
+     "layer": "原典（子书·荀子修身）·先秦（战国末）",
+     "sense_in_context": "于有利之事能让给他人",
+     "locator": "荀子·修身"
+    }
+   ],
+   "fit": "相争可读为一个环：各以所受回应（C11 名之\"報\"）。让是这个环中一个环节交回少于所受。脊柱：闭合差异之环必有此环节（closing_needs_less），交回恒少于所受者在差异之圈数内闭合（LoopReturn.closes_within），每环节交回不少于所受则永不闭合（never_closes_of_no_less），而闭合不是无损的（LoopReturn.closing_not_lossless）。\"其争也君子\"：有让之环，争不失控。",
+   "not_carried": "禅让、\"以天下让\"（统治之转交，论语泰伯\"三以天下讓\"）；让作为下对上之礼让（尊卑之礼）；让作为责让、谴责；让作为无损之美德（闭合有所失）。",
+   "course": "先秦：论语 3.7、4.13、8.1，大学\"一家让，一国兴让\"（RU1-DX-11-R02），荀子修身、非十二子\"雖能必讓\"。中庸\"不报无道\"（RU1-ZY-10，第十章）是截断，交回为零（LoopReturn.cut_closes），可视为让之极限。宋：苏辙第63章\"爱恶之情忘则虽报怨犹报德\"（LC2-SZ-C63-R01）。",
+   "alternatives": [
+    {
+     "name": "不報",
+     "why_not": "不报是截断（cut_closes），只是让之一个极端；且由 C11 之\"報\"加否定即可表达"
+    },
+    {
+     "name": "謙",
+     "why_not": "谦是自居之态度，不是环中之交回"
+    },
+    {
+     "name": "恕",
+     "why_not": "恕是推己及人之理解，属另一结构（Learning.lumped_right_iff）"
+    },
+    {
+     "name": "和怨",
+     "why_not": "老子\"和大怨\"是闭合本身，且\"必有余怨\"说闭合之所失"
+    },
+    {
+     "name": "報",
+     "why_not": "C11 之\"報\"名整个环之返回映射；讓只名环中交回少于所受之一个环节"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.never_closes_of_no_less",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.LoopReturn.closing_not_lossless"
+   ]
+  },
+  {
+   "concept": "念舊惡（giving that waits, with memory）：一个形成只在它上步给过、且它所等待者都给过时才给（Withholding.waitsAll）；于是扣留保持（waitsAll_withholding_stays）、向下游扩散（withholding_spreads），一处扣留结束其可达家族中一切给予（withholding_absorbs），此律无一走法恢复给予（waitsAll_gives_earlier）。",
+   "name": "念舊惡",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "子曰：「伯夷、叔齊，不念舊惡，怨是用希。」",
+     "layer": "经（论语·公冶长 5.23）·先秦",
+     "sense_in_context": "以否定出现：念旧恶即记住往日之恶而不复相与",
+     "locator": "论语·公冶长"
+    },
+    {
+     "source_id": "RU2-S-MZ",
+     "quote": "仁人之于弟也，不藏怒焉，不宿怨焉，亲爱之而已矣。",
+     "layer": "原典（孟子·万章上）·先秦（战国）",
+     "sense_in_context": "藏怒、宿怨：把怨留住",
+     "locator": "孟子·万章上"
+    }
+   ],
+   "fit": "念旧恶是带记忆之等待：一旦所等待者有一次不给，此后永不再给。脊柱之带记忆等待律正是\"给过且所等待者都给过才给\"：扣留一旦发生就保持并向下游扩散，一处扣留结束其可达家族中一切给予，且没有走法恢复。大学\"一人贪戾，一国作乱\"之扩散即此律下之走法。",
+   "not_carried": "念作为思念、心理之回忆；恶作为道德之恶（善恶）；\"旧恶\"作为对某人之品评。名只取\"所记住的不给\"这一结构。",
+   "course": "先秦：论语 5.23 以否定出现；孟子万章上\"不藏怒、不宿怨\"。唐：杨倞注荀子仲尼\"除怨，不念舊惡\"（RU2-S-XZ07 夹注）。",
+   "alternatives": [
+    {
+     "name": "宿怨",
+     "why_not": "孟子之语，义同，但只出现于亲属之情境"
+    },
+    {
+     "name": "藏怒",
+     "why_not": "藏怒带情绪，且韩非八经\"藏怒持罪而不发\"转为权术"
+    },
+    {
+     "name": "吝",
+     "why_not": "吝在易为占断之辞（悔吝），且论语之吝指给出之吝啬，不含等待与记忆"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Withholding.waitsAll",
+    "Becoming.Withholding.waitsAll_withholding_stays",
+    "Becoming.Withholding.withholding_spreads",
+    "Becoming.Withholding.withholding_absorbs",
+    "Becoming.Withholding.waitsAll_gives_earlier"
+   ]
+  },
+  {
+   "concept": "不念舊惡（giving that waits, without memory）：一个形成恰在它所等待者上一步都给过时给（Withholding.answers）；于是在等待之链不够长处扣留消失（Withholding.gives_without_chain），而在每个环上扣留按环长之倍数返回（Withholding.withholding_returns）。",
+   "name": "不念舊惡",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "子曰：「伯夷、叔齊，不念舊惡，怨是用希。」",
+     "layer": "经（论语·公冶长 5.23）·先秦",
+     "sense_in_context": "不记往日之恶，只应眼前，于是怨少",
+     "locator": "论语·公冶长"
+    },
+    {
+     "source_id": "RU2-S-XZ07",
+     "quote": "除怨，不念舊惡。",
+     "layer": "注（杨倞《荀子注》仲尼篇夹注）·隋唐",
+     "sense_in_context": "以不念旧恶释\"除怨\"",
+     "locator": "荀子·仲尼 杨倞注"
+    }
+   ],
+   "fit": "不念旧恶即无记忆之等待：只看所等待者上一步是否给。脊柱：此律下扣留在没有足够长之等待链处消失（gives_without_chain），却在每个环上周期返回（withholding_returns）。\"怨是用希\"说的是\"少\"而不是\"无\"，恰与此律相合：链上之怨会过去，环上之怨会回来。",
+   "not_carried": "不念旧恶作为宽恕之德性评价；对伯夷叔齐人格之品评。",
+   "course": "先秦：论语 5.23。唐：杨倞注荀子仲尼。宋明以下多作宽恕之德目解，失去\"无记忆之律\"之结构。",
+   "alternatives": [
+    {
+     "name": "不宿怨",
+     "why_not": "孟子之语，义近，只出现于亲属情境"
+    },
+    {
+     "name": "先施",
+     "why_not": "先施（C11）是不等待而先给之律，与无记忆之等待不同"
+    },
+    {
+     "name": "不求備",
+     "why_not": "不求备（C11）是容忍之阈值，是另一族律"
+    },
+    {
+     "name": "還",
+     "why_not": "C11 之\"還\"名作用经他者回到作用者；扣留在环上之返回是不念旧恶之律在环上之一个后果，不是此律本身"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Withholding.answers",
+    "Becoming.Withholding.gives_without_chain",
+    "Becoming.Withholding.withholding_returns",
+    "Becoming.Withholding.answers_closed"
+   ]
+  },
+  {
+   "concept": "得兼（conditions kept together）：两个守护之共同保持。在每一走法都计入之处，共同之守护恰是各自之守护（Viability.kernel_and_iff）；在延续经由选择之处，各自可保持而共同不可保持（Viability.ChoicePoint.each_not_joint），且没有任何依据各自情况之规则能判定共同情况（ChoicePoint.no_rule_decides_joint）。",
+   "name": "得兼",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-MZ",
+     "quote": "鱼，我所欲也；熊掌，亦我所欲也。二者不可得兼，舍鱼而取熊掌者也。",
+     "layer": "原典（孟子·告子上）·先秦（战国）",
+     "sense_in_context": "二者各可得而不可同得",
+     "record_id": "RU2-R0058",
+     "locator": "孟子·告子上"
+    }
+   ],
+   "fit": "\"不可得兼\"正是\"各自可得而共同不可得\"：ChoicePoint.each_not_joint。脊柱同时给出它何时不出现：每一走法都计入时，守护之共同恰是各自（kernel_and_iff）；所以不可得兼只经由选择之点出现，不是条件本身之性质。",
+   "not_carried": "兼作为兼爱（包容一切之关切，墨子）、兼并（吞并）、兼听（合用之听）；孟子\"舍生取义\"之价值次序：条件本身不排序（Transfer.unordered），排序需要另外的比较。",
+   "course": "先秦：孟子告子上（RU2-R0058）。荀子富國\"能不能兼技，人不能兼官\"说一人不能兼多职，是另一结构（能力之分布，见\"分\"\"同力\"）。",
+   "alternatives": [
+    {
+     "name": "兼",
+     "why_not": "单字兼义太多（兼爱、兼并、兼听）"
+    },
+    {
+     "name": "兩全",
+     "why_not": "两全不在脉络冻结文本中"
+    },
+    {
+     "name": "兩得",
+     "why_not": "荀子礼论有\"兩得之\"，指礼义与情性两得，非共同保持之结构"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Viability.kernel_and_iff",
+    "Becoming.Viability.kernel_allOf_iff",
+    "Becoming.Viability.ChoicePoint.each_not_joint",
+    "Becoming.Viability.ChoicePoint.no_rule_decides_joint"
+   ]
+  }
+ ],
+ "entries": [
+  {
+   "id": "xunzi-wangzhi-qun-fen-yi",
+   "record_ids": [
+    "RU2-R0082",
+    "RU2-R0083",
+    "RU2-R0084",
+    "RU2-R0085",
+    "RU2-R0086",
+    "RU2-R0087",
+    "RU2-R0088",
+    "RU2-R0089"
+   ],
+   "source_id": "RU2-S-XZ09",
+   "fragments": [
+    "力不若牛，走不若马，而牛马为用，何也？曰：人能群，彼不能群也。",
+    "人何以能群？曰：分。分何以能行？曰：义。",
+    "故义以分则和，和则一，一则多力，多力则彊，彊则胜物；"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.WithinJoint",
+    "Becoming.Flow.level_kept",
+    "Becoming.Exceeding.own_not_joint",
+    "Becoming.Flow.joint_excess_ends",
+    "Becoming.Excluding.three_courses",
+    "Becoming.PartsApart",
+    "Becoming.JointPlan.supports_of_realizes",
+    "Becoming.Dependence.DifferenceOnlyTogether",
+    "Becoming.Flow.system_whole_of_common"
+   ],
+   "records": [
+    "own-count-misses-joint-excess",
+    "what-taking-all-excludes",
+    "relative-position-is-zero-sum",
+    "exclusive-footprint-support",
+    "joint-difference-making"
+   ],
+   "reading": "AI读法：荀子说人之所以能用力强于己者，是因为人能\"群\"，群以\"分\"为条件，分以\"义\"而行。脊柱的确切范围（沿用 RO ru-xunzi-qun-fen-yi，种类同为定域）：各自取在所给之内不保证合取在所给之内（Exceeding.own_not_joint），合取在所给之内水平不降（Flow.level_kept），合取超出则依赖者终结（Flow.joint_excess_ends），三种走法中只有分取者使全体持续（Excluding.three_courses）。本簇所加之声明与理由：分之为\"界\"由 JointPlans 给出，部分之所取互不相交（PartsApart）则诸叶之所取由根之所给支撑而不重复（JointPlan.supports_of_realizes）；\"一则多力\"之\"多力\"读为只能合起来造成之差别（Dependence.DifferenceOnlyTogether）；群是共同条件之系统（Flow.system_whole_of_common）。剩余：（一）\"和则一\"若读为合一于一个中心，则是另一层；脊柱之群没有中心。（二）\"多力则彊，彊则胜物\"把群之力导向支配其余（RU2-R0089），这是争胜之层，理论没有。（三）\"义\"作为使分可行者，在荀子是先王所制之礼义；脊柱只说分是延续之条件，不说谁定分。",
+   "gap": "从排他之界到流之合取在所给之内的一般定理：设一族在条件 c 上之所取由一个实现了的共同计划给出，各叶之所取为根（c 之所给）之足迹中互不相交之部分（PartsWithin、PartsApart），则此流在 c 上合取在所给之内（Flow.WithinJoint），因而在平衡下水平不降（Flow.level_kept）。脊柱只有 JointPlan.supports_of_realizes（列表之支撑）与单一条件三方之例（Excluding.three_courses），二者没有连成一条定理；多条件之\"分\"同缺。",
+   "ro_passage": "ru-xunzi-qun-fen-yi",
+   "layer": "原典（子书）·先秦（战国末）",
+   "locator": "荀子·王制",
+   "names_used": [
+    "群",
+    "分",
+    "同力",
+    "出入相揜",
+    "合取过与"
+   ],
+   "relational": "是：群由分与相互之取与构成；\"胜物\"之一句为争胜层",
+   "tradition": "儒",
+   "work": "荀子"
+  },
+  {
+   "id": "xunzi-wangzhi-qun-er-wu-fen",
+   "record_ids": [
+    "RU2-R0090",
+    "RU2-R0091",
+    "RU2-R0094"
+   ],
+   "source_id": "RU2-S-XZ09",
+   "fragments": [
+    "故人生不能无群，群而无分则争，争则乱，乱则离，离则弱，弱则不能胜物；"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Pair.own_not_joint",
+    "Becoming.Flow.joint_excess_ends",
+    "Becoming.Flow.ends_at_race_end",
+    "Becoming.Race.greatest_ends",
+    "Becoming.Flow.alone_beside_of_only",
+    "Becoming.Dependence.DifferenceOnlyTogether.two_le_length"
+   ],
+   "records": [
+    "own-count-misses-joint-excess",
+    "relative-position-is-zero-sum",
+    "which-links-a-closure-needs",
+    "joint-difference-making"
+   ],
+   "reading": "AI读法：\"群而无分则争\"：没有分界之共同取用即合取可以超出所给，各自都在所给之内也不防止（Pair.own_not_joint）；合取超出之进程即\"争\"，其终结依赖者（Flow.joint_excess_ends），而竞逐终结一个部分只经由它对条件之依赖，与其位置无关（Flow.ends_at_race_end），更新受门控时最大者亦与条件一同终结（Race.greatest_ends）：争之害及于争胜者自身。\"乱则离\"：共同条件一失，只参与该条件之形成即孤（Flow.alone_beside_of_only），\"离则弱\"：只能合起来造成之差别至少需要两个部分（DifferenceOnlyTogether.two_le_length），离散则失去。种类为相合：经文之链条与脊柱定律同向。RU2-R0094 之\"不能胜物\"以支配为尺度，此一尺度理论没有，属剩余。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（子书）·先秦（战国末）",
+   "locator": "荀子·王制",
+   "names_used": [
+    "群",
+    "分",
+    "爭",
+    "同力"
+   ],
+   "relational": "是：争、乱、离、弱都是关系之变化",
+   "tradition": "儒",
+   "work": "荀子"
+  },
+  {
+   "id": "xunzi-fuguo-yu-duo-wu-gua",
+   "record_ids": [
+    "RU2-R0259"
+   ],
+   "source_id": "RU2-S-XZ10",
+   "fragments": [
+    "欲惡同物，欲多而物寡，寡則必爭矣。",
+    "離居不相待則窮，群居而無分則爭；窮者患也，爭者禍也，救患除禍，則莫若明分使群矣。",
+    "皆使衣食百用出入相揜，必時臧餘，謂之稱數。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Pair.own_not_joint",
+    "Becoming.Flow.joint_excess_ends",
+    "Becoming.Flow.WithinJoint",
+    "Becoming.Flow.level_kept",
+    "Becoming.Flow.joint_keeps",
+    "Becoming.Flow.alone_beside_of_only",
+    "Becoming.Flow.mutuallyDependent_of_common",
+    "Becoming.Web.Carries.arising_not_recurring"
+   ],
+   "records": [
+    "own-count-misses-joint-excess",
+    "what-taking-all-excludes",
+    "which-links-a-closure-needs",
+    "mutual-dependence-and-its-pace",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：富國把争的来源放在数量关系上：\"欲恶同物，欲多而物寡\"，即诸形成取于同一条件而合起来多于所给（Pair.own_not_joint），合取超出终结依此条件者（Flow.joint_excess_ends）。同段两种失败对举：离居者不相待，只参与一个条件之形成去掉该条件即孤（Flow.alone_beside_of_only），所以\"穷\"；群居而无分，则合取超出，所以\"争\"。出路是\"明分使群\"：在共同条件中各有其界，使\"出入相揜\"，即合取在所给之内（Flow.WithinJoint），水平不降、全体被支持（Flow.level_kept、Flow.joint_keeps）；\"必时臧余\"是储备，只推迟终结而不免终结（Web.Carries.arising_not_recurring）。\"百技所成，所以养一人\"是人人依赖并交换于共同之所成，一个这样的共同条件使流相互依赖（Flow.mutuallyDependent_of_common）。同篇\"人君者，所以管分之枢要也\"把定分归于君，是单一中心之剩余，不在本条所取之句中。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（子书）·先秦（战国末）",
+   "locator": "荀子·富國",
+   "names_used": [
+    "群",
+    "分",
+    "爭",
+    "出入相揜",
+    "相待"
+   ],
+   "relational": "是：以数量与相互依待说群与争",
+   "tradition": "儒",
+   "work": "荀子"
+  },
+  {
+   "id": "xunzi-lilun-li-qi-yu-fen",
+   "record_ids": [
+    "RU2-R0102",
+    "RU2-R0103"
+   ],
+   "source_id": "RU2-S-XZ19",
+   "fragments": [
+    "求而无度量分界，则不能不争；争则乱，乱则穷。",
+    "故制礼义以分之，以养人之欲，给人之求。",
+    "使欲必不穷于物，物必不屈于欲。两者相持而长，是礼之所起也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.joint_excess_ends",
+    "Becoming.Flow.joint_excess_ends_at",
+    "Becoming.Flow.level_kept",
+    "Becoming.Exceeding.own_not_joint",
+    "Becoming.Web.embodiedArising_needs_replenishment",
+    "Becoming.PartsApart",
+    "Becoming.JointPlan.supports_of_realizes"
+   ],
+   "records": [
+    "own-count-misses-joint-excess",
+    "what-taking-all-excludes",
+    "generation-is-replenishment",
+    "exclusive-footprint-support"
+   ],
+   "reading": "AI读法：沿用 RO ru-xunzi-li-qi-yu-fen（相合）。\"求而无度量分界……乱则穷\"与合取超出之律同构（Flow.joint_excess_ends、joint_excess_ends_at、Exceeding.own_not_joint），\"两者相持而长\"对应合取在所给之内水平不降（Flow.level_kept）以及具身之生起需要补充（Web.embodiedArising_needs_replenishment）。本簇另加 PartsApart、JointPlan.supports_of_realizes，理由：度量分界正是排他之界。剩余：经文把定界归于\"先王\"制礼；脊柱只给出界是延续之条件，不给出谁来定界。",
+   "gap": "",
+   "ro_passage": "ru-xunzi-li-qi-yu-fen",
+   "layer": "原典（子书）·先秦（战国末）",
+   "locator": "荀子·礼論篇首",
+   "names_used": [
+    "分",
+    "爭",
+    "出入相揜"
+   ],
+   "relational": "是：礼起于所求与所给之相持",
+   "tradition": "儒",
+   "work": "荀子"
+  },
+  {
+   "id": "xunzi-wangzhi-fen-jun-bu-pian",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ09",
+   "fragments": [
+    "分均则不偏，埶齐则不壹，众齐则不使。",
+    "夫两贵之不能相事，两贱之不能相使，是天数也。埶位齐，而欲恶同，物不能澹则必争；",
+    "故制礼义以分之，使有贫富贵贱之等，足以相兼临者，是养天下之本也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.never_agrees_of_both",
+    "Becoming.SharedCodes.pair_never_agrees",
+    "Becoming.Law.Commutes.keeps_fixed",
+    "Becoming.SharedCodes.agrees_every_start_iff",
+    "Becoming.SharedCodes.broadcast_reaches",
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.RelativePosition.not_all_rise",
+    "Becoming.Flow.joint_excess_ends",
+    "Becoming.Flow.ends_at_race_end"
+   ],
+   "records": [
+    "a-code-formed-between-formations",
+    "relative-position-is-zero-sum",
+    "own-count-misses-joint-excess"
+   ],
+   "reading": "AI读法：此段是荀子以等级为分之理由，最需分开读。（一）\"两贵之不能相事，两贱之不能相使\"：对称之两方，没有任何不偏任何一方之律能使之从对称之分歧走到一致（SharedCodes.never_agrees_of_both、pair_never_agrees；一般形式为与对称交换之律保持对称，Law.Commutes.keeps_fixed）。这一半在脊柱上成立：一致需要打破对称。（二）脊柱同时给出打破对称之确切方式：一个中心、一个优先之形式，或一个听取之次序；一个使每个形成都只有一个来源之次序就使一切起点一致（SharedCodes.agrees_every_start_iff、broadcast_reaches）。所以需要的是不对称，不是\"贫富贵贱之等\"：次序不必是价值之等级。（三）\"埶位齐，而欲恶同，物不能澹则必争\"：争之因是物不能澹，即合取超出（Flow.joint_excess_ends）；等级不改变这一点，竞逐终结一个部分只经由其依赖而与位置无关（Flow.ends_at_race_end），相对位置按计数零和，没有变化使所有位置都升（RelativePosition.positions_balance、not_all_rise）。（四）\"是天数也\"把对称之困读为天定之数，是\"固定本性\"层。所以本段定域：对称需要打破，这一半成立；以贵贱之等打破，并以之为养天下之本，是理论没有的断言。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（子书）·先秦（战国末）",
+   "locator": "荀子·王制",
+   "names_used": [
+    "分",
+    "爭",
+    "相軋"
+   ],
+   "relational": "部分：对称与争之结构是关系的；\"贵贱之等\"\"天数\"是等级与固定本性两层",
+   "tradition": "儒",
+   "work": "荀子"
+  },
+  {
+   "id": "xunzi-wangba-fen-tian-er-geng",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ11",
+   "fragments": [
+    "农分田而耕，贾分货而贩，百工分事而劝，士大夫分职而听，建国诸侯之君分土而守，三公摠方而议，则天子共己而已矣。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.PartsWithin",
+    "Becoming.PartsApart",
+    "Becoming.JointPlan.within_of_realizes",
+    "Becoming.JointPlan.nodup_of_realizes",
+    "Becoming.JointPlan.supports_of_realizes"
+   ],
+   "records": [
+    "exclusive-footprint-support",
+    "joint-plan-composition"
+   ],
+   "reading": "AI读法：各分其田、货、事、职、土，所取之域互不相交，这正是排他之足迹：部分之所取在整体之内（PartsWithin），两部分互不相交（PartsApart），实现之计划诸叶所取在根之内且不重复（JointPlan.within_of_realizes、nodup_of_realizes），由根支撑（JointPlan.supports_of_realizes）。种类为相合，只就分之结构而言。剩余：分职之次第仍以天子为顶，\"天子共己而已\"是一个不取之中心，脊柱之计划没有顶点；分之界是否使流之合取在所给之内，见 xunzi-wangzhi-qun-fen-yi 之 gap。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（子书）·先秦（战国末）",
+   "locator": "荀子·王霸",
+   "names_used": [
+    "分",
+    "分數"
+   ],
+   "relational": "是：以分界说协同；顶点为剩余",
+   "tradition": "儒",
+   "work": "荀子"
+  },
+  {
+   "id": "xunzi-yibing-da-ning",
+   "record_ids": [
+    "RU2-R0276",
+    "RU2-R0296",
+    "RU2-R0297"
+   ],
+   "source_id": "RU2-S-XZ15",
+   "fragments": [
+    "兼并易能也，唯堅凝之難焉。",
+    "故能并之，而不能凝，則必奪；",
+    "故凝士以禮，凝民以政；禮脩而士服，政平而民安；士服民安，夫是之謂大凝。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.withinSystem_two_takers_iff",
+    "Becoming.Cuts.closure_unchanged_iff_bypassed",
+    "Becoming.Flow.joint_keeps",
+    "Becoming.Flow.level_kept",
+    "Becoming.Renewable.kept_part_not_renewal"
+   ],
+   "records": [
+    "which-links-a-closure-needs",
+    "conditions-kept-together",
+    "what-taking-all-excludes"
+   ],
+   "reading": "AI读法：\"兼并易能，唯坚凝之难\"区分了连上与持住。脊柱：一个两方共同参与之条件把两个系统连成一个，如同加一条连接（Flow.withinSystem_two_takers_iff），而一条连接被去掉后闭包是否不变，恰由其余连接是否绕过它决定（Cuts.closure_unchanged_iff_bypassed）：只靠一处连上的，一断即分，\"能并之而不能凝则必夺\"。凝即所连之关系在其后各步仍被支持：合取在所给之内全体被支持（Flow.joint_keeps、Flow.level_kept）；而保持一个部分不等于其所依者更新（Renewable.kept_part_not_renewal）。定域：凝之条件是关系之持续支持，经文以\"礼\"\"政\"给出；\"士服\"带上下之服从，以兼并为前提之扩张也是剩余。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（子书）·先秦（战国末）",
+   "locator": "荀子·議兵",
+   "names_used": [
+    "群",
+    "分"
+   ],
+   "relational": "是：连上与持住都是关系之事；兼并之目的为剩余",
+   "tradition": "儒",
+   "work": "荀子"
+  },
+  {
+   "id": "mengzi-er-zhe-bu-ke-de-jian",
+   "record_ids": [
+    "RU2-R0058"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "鱼，我所欲也；熊掌，亦我所欲也。二者不可得兼，舍鱼而取熊掌者也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Viability.ChoicePoint.each_not_joint",
+    "Becoming.Viability.ChoicePoint.no_rule_decides_joint",
+    "Becoming.Viability.kernel_and_iff",
+    "Becoming.Transfer.unordered"
+   ],
+   "records": [
+    "conditions-kept-together",
+    "comparison-by-widening"
+   ],
+   "reading": "AI读法：\"二者不可得兼\"：各自可得，而不能共同得。脊柱：在延续经由选择之处，各自可保持而共同不可保持（Viability.ChoicePoint.each_not_joint），没有依据各自情况之规则能判定共同情况（no_rule_decides_joint）；而在每一走法都计入之处，共同守护恰是各自守护（Viability.kernel_and_iff），所以不可得兼出于选择之点，不出于条件本身。剩余：孟子接着\"舍鱼而取熊掌\"\"舍生而取义\"，是在二者之间排序；混合之部分不被条件本身排序（Transfer.unordered），排序需要另外的比较承诺。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（孟子·告子上）·先秦（战国）",
+   "locator": "孟子·告子上 10",
+   "names_used": [
+    "得兼"
+   ],
+   "relational": "是：两个条件之共同保持",
+   "tradition": "儒",
+   "work": "孟子"
+  },
+  {
+   "id": "lunyu-he-er-bu-tong",
+   "record_ids": [
+    "RU1-LY-13-23-R01",
+    "RU1-LY-13-23-R02"
+   ],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "子曰：「君子和而不同，小人同而不和。」"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.pool_adds",
+    "Becoming.withinClosureOf_iff",
+    "Becoming.Law.Merges.loses",
+    "Becoming.Law.Merges.not_both_return",
+    "Becoming.ScopedReach.alternating_beyond_scopes",
+    "Becoming.Web.pooled_iff_member"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches",
+    "recurrence-without-premise",
+    "attraction-is-not-returning"
+   ],
+   "reading": "AI读法：沿用 RO ru-lunyu-he-er-bu-tong（相合）。和是不同者在一个关系中相持：合用闭包恰是成员闭包之并（withinClosureOf_iff），差别是合用所加（Web.pool_adds）；被合并的两个构形不能都回返（Law.Merges.not_both_return），有限构形中合并永久失去一个可能（Law.Merges.loses）。本簇另加 Web.pooled_iff_member，理由：经文后半\"同而不和\"正是合用退化为一员（见名\"同而不和\"）。经文是对君子与小人之评价，脊柱只给结构。",
+   "gap": "",
+   "ro_passage": "ru-lunyu-he-er-bu-tong",
+   "layer": "经（论语·子路 13.23）·先秦",
+   "locator": "论语·子路 23",
+   "names_used": [
+    "和而不同",
+    "同而不和"
+   ],
+   "relational": "是：和与同都是关系之方式",
+   "tradition": "儒",
+   "work": "论语"
+  },
+  {
+   "id": "lunyu-bu-nian-jiu-e",
+   "record_ids": [],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "子曰：「伯夷、叔齊，不念舊惡，怨是用希。」"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Withholding.answers",
+    "Becoming.Withholding.gives_without_chain",
+    "Becoming.Withholding.withholding_returns",
+    "Becoming.Withholding.waitsAll",
+    "Becoming.Withholding.waitsAll_withholding_stays",
+    "Becoming.Withholding.withholding_absorbs",
+    "Becoming.Withholding.waitsAll_gives_earlier"
+   ],
+   "records": [
+    "giving-that-waits-on-giving"
+   ],
+   "reading": "AI读法：把\"怨\"读为不再给予，把\"念旧恶\"读为带记忆之等待：一个形成只在它给过且所等待者都给过时才给（Withholding.waitsAll），于是一次扣留就保持（waitsAll_withholding_stays），并结束其可达家族中一切给予（withholding_absorbs），没有走法恢复（waitsAll_gives_earlier）。\"不念旧恶\"是无记忆之等待：只看所等待者上一步是否给（Withholding.answers）。此律下扣留在等待之链不够长处消失（gives_without_chain），这是\"怨是用希\"之所以成立；但在每个环上扣留按环长周期返回（withholding_returns），所以是\"希\"而不是\"无\"。定域：经文之断语在没有闭合等待环之处成立，在环上只成立为\"少\"。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（论语·公冶长 5.23）·先秦",
+   "locator": "论语·公冶长 23",
+   "names_used": [
+    "念舊惡",
+    "不念舊惡"
+   ],
+   "relational": "是：怨是关系中给予之停止",
+   "tradition": "儒",
+   "work": "论语"
+  },
+  {
+   "id": "lunyu-yi-rang",
+   "record_ids": [],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "子曰：「君子無所爭，必也射乎！揖讓而升，下而飮，其爭也君子。」",
+    "子曰：「能以禮讓為國乎，何有？不能以禮讓為國，如禮何？」"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.never_closes_of_no_less",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.LoopReturn.closing_not_lossless",
+    "Becoming.LoopReturn.runs_away"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference"
+   ],
+   "reading": "AI读法：把相竞读为一个环：一方之所为是另一方回应之所据（C11 名之\"報\"）。\"揖让而升\"是环中一个环节交回少于所受。脊柱：每个环节交回不少于所受，差异永不低于起点（LoopReturn.never_closes_of_no_less）；闭合差异之环必有交回少于所受之环节（closing_needs_less），交回恒少于所受者在差异之圈数内闭合（closes_within）；环节加倍则失控（runs_away）。所以\"其争也君子\"在有让之环节处成立：竞而不失控。闭合不是无损的（closing_not_lossless），让者有所失。定域：经文以礼为让之来源，脊柱只说让是闭合之条件；以让为国是否可行，取决于是否每个相争之环都有这样的环节。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（论语·八佾 3.7、里仁 4.13）·先秦",
+   "locator": "论语·八佾 7；里仁 13",
+   "names_used": [
+    "讓",
+    "爭"
+   ],
+   "relational": "是：争与让都在相互回应之环中",
+   "tradition": "儒",
+   "work": "论语"
+  },
+  {
+   "id": "lunyu-bu-huan-gua-er-huan-bu-jun",
+   "record_ids": [
+    "RU1-LY-16-01-R01"
+   ],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "不患寡而患不均，不患貧而患不安。蓋均無貧，和無寡，安無傾。",
+    "夫如是，故遠人不服，則修文德以來之。既來之，則安之。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Stock.feasible_iff_covered",
+    "Becoming.Flow.WithinJoint",
+    "Becoming.Flow.level_kept",
+    "Becoming.Pair.own_not_joint",
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.Flow.Balances.rise_paid_from_beyond"
+   ],
+   "records": [
+    "draws-on-a-shared-stock",
+    "own-count-misses-joint-excess",
+    "relative-position-is-zero-sum",
+    "raising-what-couples-in-draws-from-beyond"
+   ],
+   "reading": "AI读法：\"不患寡而患不均\"把问题从总量移到关系：一个存量之路程可执行，恰当所给覆盖所需（Stock.feasible_iff_covered），合取在所给之内水平不降（Flow.WithinJoint、Flow.level_kept）。所以\"均\"在所给能覆盖时使无人缺；但\"均无贫\"作为普遍断言不成立：所给小于所需之和时，均分使人人不足，这正是荀子\"欲多而物寡\"之情形（Pair.own_not_joint）。\"不均\"之害在于份额之升总由他处之降支付（RelativePosition.positions_balance；在平衡之流中，所耦合入者之上升完全由其外给付，Flow.Balances.rise_paid_from_beyond）。\"远人不服，则修文德以来之\"以吸引而非强制扩大群，是关系之扩展（RU1-LY-16-01-R01）。定域：均与安是条件，不是充分条件。",
+   "gap": "均分之律：对一个 n 个成员之有限族与一个共同条件，一步之所给 G 按等份分给各成员（每份 G/n 取整）时，每个依此条件之成员被支持，恰当等份不少于诸成员需要之最大者；与之对照，各取其需时，G 不少于需要之和即支持全体，所以在需要不等之处，存在 G 不少于需要之和而均分仍使需要高于均份者不被支持之情形。脊柱没有\"均分\"之谓词，只有存量之覆盖（Stock.feasible_iff_covered）与合取在所给之内（Flow.WithinJoint、Flow.level_kept），\"均无贫\"在何处成立、何处不成立没有定理。",
+   "ro_passage": "",
+   "layer": "经（论语·季氏 16.1）·先秦",
+   "locator": "论语·季氏 1",
+   "names_used": [
+    "出入相揜",
+    "分"
+   ],
+   "relational": "是：寡、均、安都是关系中之量与位置",
+   "tradition": "儒",
+   "work": "论语"
+  },
+  {
+   "id": "lunyu-ji-yu-li-er-li-ren",
+   "record_ids": [
+    "RU1-LY-06-28-R01",
+    "RU1-LY-06-28-R02"
+   ],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "夫仁者，己欲立而立人，己欲達而達人。能近取譬，可謂仁之方也已。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Excluding.three_courses",
+    "Becoming.Flow.level_kept",
+    "Becoming.Viability.ChoicePoint.each_not_joint",
+    "Becoming.Viability.ChoicePoint.no_rule_decides_joint",
+    "Becoming.Learning.lumped_right_iff"
+   ],
+   "records": [
+    "what-taking-all-excludes",
+    "conditions-kept-together",
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：沿用 RO ru-lunyu-ji-yu-li-er-li-ren（定域），声明不变。\"己欲立而立人\"：自己之立与他人之立一起成立，不以排除对方为条件；三种走法中只有分取者使全体持续（Excluding.three_courses），合取在所给之内水平不降（Flow.level_kept）；但各自可保持不等于共同可保持（ChoicePoint.each_not_joint、no_rule_decides_joint）。\"能近取譬\"以自身为模型推及他人，恰在世界在这一归并上同样变化之处才正确（Learning.lumped_right_iff）。",
+   "gap": "",
+   "ro_passage": "ru-lunyu-ji-yu-li-er-li-ren",
+   "layer": "经（论语·雍也 6.30）·先秦",
+   "locator": "论语·雍也 30",
+   "names_used": [
+    "得兼"
+   ],
+   "relational": "是：己与人之立在同一关系中",
+   "tradition": "儒",
+   "work": "论语"
+  },
+  {
+   "id": "lunyu-wu-qiu-bei-yu-yi-ren",
+   "record_ids": [
+    "RU1-LY-18-10-R02"
+   ],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "故舊無大故，則不棄也，無求備於一人。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Tolerance.tolerating",
+    "Becoming.Tolerance.tolerating_zero",
+    "Becoming.Tolerance.thin_absorbed",
+    "Becoming.Tolerance.kept_set",
+    "Becoming.Dependence.DifferenceOnlyTogether.two_le_length"
+   ],
+   "records": [
+    "thresholds-of-waiting",
+    "joint-difference-making"
+   ],
+   "reading": "AI读法：与 C11 之条目 lunyu-wu-qiu-bei 同一段，种类与声明一致（C11 名\"不求備\"）。本簇所加之读法：不求备于一人，即能力分布于群，不由一人全备：只能合起来造成之差别至少需要两个部分（Dependence.DifferenceOnlyTogether.two_le_length）。\"故旧无大故则不弃\"：在容忍之律下，一个形成在所等待者中至多缺其容忍之数仍然给予（Tolerance.tolerating），容忍为零即等待全部（tolerating_zero）；每个成员在集外所等待者不超其容忍之集，无论其余如何都保持给予（Tolerance.kept_set），稀薄之扣留一步即被吸收（Tolerance.thin_absorbed）。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（论语·微子 18.10）·先秦",
+   "locator": "论语·微子 10",
+   "names_used": [
+    "同力",
+    "群"
+   ],
+   "relational": "是：容与弃都是关系之持续与中断",
+   "tradition": "儒",
+   "work": "论语"
+  },
+  {
+   "id": "daxue-yi-jia-rang",
+   "record_ids": [
+    "RU1-DX-11-R01",
+    "RU1-DX-11-R02",
+    "RU1-DX-11-R03"
+   ],
+   "source_id": "RU1-S-DX",
+   "fragments": [
+    "一家仁，一國興仁；一家讓，一國興讓；一人貪戾，一國作亂。其機如此。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Withholding.withholding_spreads",
+    "Becoming.Withholding.withholding_absorbs",
+    "Becoming.Withholding.waitsAll_gives_earlier",
+    "Becoming.Withholding.Ring.givesFirst_restores",
+    "Becoming.Tolerance.restores_iff",
+    "Becoming.Tolerance.clear_loop_withholds"
+   ],
+   "records": [
+    "giving-that-waits-on-giving",
+    "restoring-giving-from-the-worst-start"
+   ],
+   "reading": "AI读法：本段有一个不对称：一家之仁让\"兴\"于一国，一人之贪戾使一国\"作乱\"，并说\"其机如此\"（机：已采之名，关节）。脊柱给出这一不对称在何处成立：在带记忆之等待下（念旧恶），一处扣留向下游扩散（Withholding.withholding_spreads），并结束其可达家族中一切给予（withholding_absorbs），且无一走法恢复（waitsAll_gives_earlier），这是\"一人贪戾，一国作乱\"；而一处之给予要\"兴\"于一国，需要另一条律，即不等待而先给者（C11 名\"先施\"）：在互相等待之环上，先给则全环恢复（Withholding.Ring.givesFirst_restores），在先给之律下自一切起点之恢复恰当没有避开来源之等待链（Tolerance.restores_iff），避开来源之环永不恢复（Tolerance.clear_loop_withholds）。定域：\"兴仁\"\"兴让\"在有先给者且等待之链都经过它时成立；\"作乱\"之扩散在带记忆之等待下成立。经文以\"一人定国\"归于在上者，这是单一中心之剩余。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（礼记·大学 传第九章）·先秦至秦汉（年代有争议）",
+   "locator": "大学·传九",
+   "names_used": [
+    "讓",
+    "念舊惡",
+    "机",
+    "先施"
+   ],
+   "relational": "是：仁、让、贪戾都沿关系传开",
+   "tradition": "儒",
+   "work": "大学"
+  },
+  {
+   "id": "daxue-ben-mo",
+   "record_ids": [
+    "RU1-DX-01-R12",
+    "RU1-DX-01-R13",
+    "RU1-DX-01-R14",
+    "RU1-DX-01-R15"
+   ],
+   "source_id": "RU1-S-DX",
+   "fragments": [
+    "心正而後身脩，身脩而後家齊，家齊而後國治，國治而後天下平",
+    "其本亂而末治者否矣"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.AdmitsWithin.narrow",
+    "Becoming.Web.includes_iff_within_every",
+    "Becoming.Viability.kernel_and_iff",
+    "Becoming.Clearing.loses_beyond",
+    "Becoming.Viability.ChoicePoint.each_not_joint",
+    "Becoming.whole_not_in_pairs"
+   ],
+   "records": [
+    "loss-beyond-a-region",
+    "conditions-kept-together",
+    "separation-loses-the-relation"
+   ],
+   "reading": "AI读法：沿用 RO ru-daxue-ben-mo（定域），声明不变。必要性方向（其本乱而末治者否矣）成立：一个部分之水平在一个区域内容纳的，在其内每个区域都容纳（Web.AdmitsWithin.narrow），包含恰是在每个区域内成立（includes_iff_within_every）。充分性方向（身修而后家齐……）不普遍成立：可以在自身与来源之内保持一切而在其外失去（Clearing.loses_beyond），各自可保持而共同不可保持（ChoicePoint.each_not_joint），外层之关系可以由整体持有而不由任何部分持有（whole_not_in_pairs）。对本簇：群不是由个体之修养逐层相加而成。",
+   "gap": "",
+   "ro_passage": "ru-daxue-ben-mo",
+   "layer": "经（礼记·大学 经一章）·先秦至秦汉（年代有争议）",
+   "locator": "大学·经一章",
+   "names_used": [
+    "群"
+   ],
+   "relational": "部分：由内及外之条件链；外层之关系不由部分持有",
+   "tradition": "儒",
+   "work": "大学"
+  },
+  {
+   "id": "zhongyong-bing-yu-bu-xiang-hai",
+   "record_ids": [
+    "RU1-ZY-40-R01"
+   ],
+   "source_id": "RU1-S-ZY",
+   "fragments": [
+    "萬物並育而不相害，道並行而不相悖。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Excluding.three_courses",
+    "Becoming.Flow.level_kept",
+    "Becoming.Viability.Plan.zip_keeps",
+    "Becoming.Viability.ChoicePoint.no_rule_decides_joint",
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Specker.no_whole"
+   ],
+   "records": [
+    "what-taking-all-excludes",
+    "joint-plan-composition",
+    "conditions-kept-together",
+    "gluing-under-parity",
+    "contextual-registration"
+   ],
+   "reading": "AI读法：沿用 RO ru-zhongyong-bing-yu-bing-xing（定域），声明不变。\"并育而不相害\"：同样的成员可以分取而全体持续，也可以一方取尽而排除另一方（Excluding.three_courses），合取在所给之内水平不降（Flow.level_kept）；两部分之计划在联合步投影到各部分且相容时同时保持（Viability.Plan.zip_keeps），但没有依据各自可保持性之规则判定共同可保持性（no_rule_decides_joint）。\"并行而不相悖\"：各语境所示恰在交界处一致时才拼合（Contextual.glues_iff_agree），各自一致仍可不是任何整体之部分（Specker.no_whole）。",
+   "gap": "",
+   "ro_passage": "ru-zhongyong-bing-yu-bing-xing",
+   "layer": "经（礼记·中庸）·先秦至秦汉（年代有争议）",
+   "locator": "中庸·仲尼祖述章",
+   "names_used": [
+    "分",
+    "得兼"
+   ],
+   "relational": "是：多者在同一关系中并存",
+   "tradition": "儒",
+   "work": "中庸"
+  },
+  {
+   "id": "zhongyong-qinqin-zhi-sha",
+   "record_ids": [
+    "RU1-ZY-20-R06"
+   ],
+   "source_id": "RU1-S-ZY",
+   "fragments": [
+    "仁者人也，親親為大；義者宜也，尊賢為大。親親之殺，尊賢之等，禮所生也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Transfer.unordered",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.Valuation.significant_iff_held",
+    "Becoming.unrestricted_iff_presupposed_along",
+    "Becoming.Flow.withinInfluence_of_withinFeeding"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "held-lives-g0-is-centering",
+    "presupposition-scopes"
+   ],
+   "reading": "AI读法：沿用 RO ru-zhongyong-qinqin-zhi-sha（相分），声明不变。经文先把仁放在人与人之关系中，随即说亲亲有\"杀\"、尊贤有\"等\"，礼由此而生。嵌套之闭包确有次第（Flow.withinInfluence_of_withinFeeding），但那是\"触及到哪里\"之事实，不是意义多少之度量；混合之部分不被排序（Transfer.unordered），以各自依赖为界之中心彼此不一（Clearing.centers_disagree）。分歧不在有无亲疏，而在把亲疏读成意义之等差。对本簇：群中之远近是关系之距离，不是等级。",
+   "gap": "",
+   "ro_passage": "ru-zhongyong-qinqin-zhi-sha",
+   "layer": "经（礼记·中庸）·先秦至秦汉（年代有争议）",
+   "locator": "中庸·哀公问政章",
+   "names_used": [
+    "群",
+    "相軋"
+   ],
+   "relational": "部分：仁在关系中；亲疏之杀、尊贤之等为固定价值层",
+   "tradition": "儒",
+   "work": "中庸"
+  },
+  {
+   "id": "xunzi-gui-jian-you-deng",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ19",
+   "fragments": [
+    "君子既得其养，又好其别。曷谓别？曰：贵贱有等，长幼有差，贫富轻重皆有称者也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.RelativePosition.rise_needs_fall",
+    "Becoming.RelativePosition.not_all_rise",
+    "Becoming.Flow.ends_at_race_end",
+    "Becoming.Flow.level_kept"
+   ],
+   "records": [
+    "relative-position-is-zero-sum",
+    "own-count-misses-joint-excess"
+   ],
+   "reading": "AI读法：沿用 RO ru-xunzi-gui-jian-you-deng（相分），声明不变。荀子在\"养\"之外加上\"别\"，把贵贱之等当作礼所维持者。相对位置按计数零和（RelativePosition.positions_balance），没有变化使每个部分之位置上升（not_all_rise），一部分之升需要另一部分之降（rise_needs_fall）；在合取超出中终结一个部分的是它对条件之依赖，不是它的位置（Flow.ends_at_race_end）。延续所需的是合取在所给之内（Flow.level_kept），不需要等级。\"分\"（分界）与\"别\"（贵贱之等）是两件事，此条只针对后者；本簇以之为儒家位阶诸说之代表条目。",
+   "gap": "",
+   "ro_passage": "ru-xunzi-gui-jian-you-deng",
+   "layer": "原典（子书）·先秦（战国末）",
+   "locator": "荀子·礼論",
+   "names_used": [
+    "分",
+    "相軋"
+   ],
+   "relational": "否：等级之别（四层之\"竞争与等级\"）",
+   "tradition": "儒",
+   "work": "荀子"
+  },
+  {
+   "id": "mozi-jianai-zhong-bi-cong",
+   "record_ids": [
+    "MO1-C15-R004"
+   ],
+   "source_id": "MO1-S-C15",
+   "fragments": [
+    "夫愛人者，人必從而愛之；利人者，人必從而利之；惡人者，人必從而惡之；害人者，人必從而害之。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.LoopReturn.kept_of_identity",
+    "Becoming.LoopReturn.loop_kept",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.Withholding.withholding_returns"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference",
+    "giving-that-waits-on-giving"
+   ],
+   "reading": "AI读法：沿用 RO mozi-jianai-zhong-bi-cong（定域），声明不变。\"必从而\"是普遍之回报律：耦合界定回应而不固定回应（response_not_fixed_by_coupling），所以\"必\"不由关系本身给出；它在环之每一环节都把所受交回时成立（kept_of_identity、loop_kept），环节交回少于所受时差异在有限圈内闭合（closes_within），环节至少加倍时失控（runs_away），\"恶人者人必从而恶之\"在环上对应扣留每圈返回（withholding_returns）。对本簇：墨子以此为\"交相利\"不难之理由，是交换式论证；交相利之结构（相互供给）见 mozi-shangxian-xia-xiang-zhu。",
+   "gap": "",
+   "ro_passage": "mozi-jianai-zhong-bi-cong",
+   "layer": "原典（子书·墨子）·先秦（战国）",
+   "locator": "墨子·兼愛中",
+   "names_used": [
+    "報",
+    "交相利",
+    "讓"
+   ],
+   "relational": "是：回报是关系之环",
+   "tradition": "墨",
+   "work": "墨子"
+  },
+  {
+   "id": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "record_ids": [
+    "MO1-C15-R003"
+   ],
+   "source_id": "MO1-S-C15",
+   "fragments": [
+    "視人之國若視其國，視人之家若視其家，視人之身若視其身。",
+    "天下之人皆相愛，強不執弱，衆不劫寡，富不侮貧，貴不敖賤，詐不欺愚。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.boundaryInvariant_iff_standpointInvariant",
+    "Becoming.unrestricted_of_standpointInvariant",
+    "Becoming.Transfer.unordered",
+    "Becoming.Web.mixed_iff_adds",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.Flow.MutuallyFed",
+    "Becoming.Drawing.mutual_not_fed"
+   ],
+   "records": [
+    "axiom-decomposition",
+    "whole-first-and-bounded-centers",
+    "comparison-by-widening",
+    "mutual-dependence-and-its-pace"
+   ],
+   "reading": "AI读法：沿用 RO mozi-jianai-zhong-shi-ren-ruo-ji（定域）。\"视人若视其\"是跨边界不变：在前设与中心覆盖之下，跨各自我边界不变恰等于跨立场不变，即延续条件（boundaryInvariant_iff_standpointInvariant、unrestricted_of_standpointInvariant）；以边界为止之中心彼此不一（Clearing.centers_disagree），对应\"别\"。但延续条件本身不排序（Transfer.unordered、Web.mixed_iff_adds），以\"兼\"易\"别\"作为排序还需扩大更好（C）这一比较承诺。本簇另加 Flow.MutuallyFed、Drawing.mutual_not_fed，理由：同句之\"交相利\"是相互供给，\"强不执弱，众不劫寡\"列举的是一方取用另一方所需而无给予之关系，即相互依赖而不相互供给（Drawing.mutual_not_fed）；\"兼相爱\"之依据与\"祸篡怨恨皆起于不相爱\"之单一原因断言，脊柱没有。",
+   "gap": "",
+   "ro_passage": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "layer": "原典（子书·墨子）·先秦（战国）",
+   "locator": "墨子·兼愛中",
+   "names_used": [
+    "交相利",
+    "相待"
+   ],
+   "relational": "是：以人我之关系说兼",
+   "tradition": "墨",
+   "work": "墨子"
+  },
+  {
+   "id": "mozi-shangxian-xia-xiang-zhu",
+   "record_ids": [
+    "MO1-C10-R004",
+    "MO1-C10-R005"
+   ],
+   "source_id": "MO1-S-C10",
+   "fragments": [
+    "有力者疾以助人，有財者勉以分人，有道者勸以教人。若此，則飢者得食，寒者得衣，亂者得治。",
+    "若飢則得食，寒則得衣，亂則得治，此安生生。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.MutuallyFed",
+    "Becoming.Flow.feeding_whole_of_common",
+    "Becoming.Flow.MutuallyFed.mutuallyDependent",
+    "Becoming.Flow.MutuallyFed.unrestricted",
+    "Becoming.Drawing.mutual_not_fed"
+   ],
+   "records": [
+    "mutual-dependence-and-its-pace",
+    "feeding-closure"
+   ],
+   "reading": "AI读法：各以其所有（力、财、道）给予所缺者，饥寒乱者各得其所需：每一方之延续在某种间接上为各方所养，这是相互供给（Flow.MutuallyFed）；它推出相互依赖（MutuallyFed.mutuallyDependent），反之不然：两方各取对方所需而无给予，也相互依赖（Drawing.mutual_not_fed）。在一个人人给予并依赖之共同条件下，每个形成都在每个形成之供给闭包内（Flow.feeding_whole_of_common）；在相互供给之下，以各中心之供给闭包为界之意义就是延续条件（MutuallyFed.unrestricted），这是一个条件句，不是对延续条件之断言。墨子此处说\"此安生生\"，生生指使生者得以生，与理论之\"生生\"（生成之继续生成）相近而较窄。剩余：同段以此为\"得富贵而辟贫贱\"之途，是以位次为诱因之框架。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（子书·墨子）·先秦（战国）",
+   "locator": "墨子·尚賢下",
+   "names_used": [
+    "交相利",
+    "生生"
+   ],
+   "relational": "是：相助是相互之给予",
+   "tradition": "墨",
+   "work": "墨子"
+  },
+  {
+   "id": "mozi-jianai-xia-xian-cong-shi",
+   "record_ids": [
+    "MO1-C16-R010"
+   ],
+   "source_id": "MO1-S-C16",
+   "fragments": [
+    "卽必吾先從事乎愛利人之親，然後人報我以愛利吾親也。",
+    "投我以桃，報之以李。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Tolerance.worst_start",
+    "Becoming.Withholding.withholding_absorbs",
+    "Becoming.Withholding.Ring.givesFirst_restores",
+    "Becoming.Tolerance.restores_iff"
+   ],
+   "records": [
+    "giving-that-waits-on-giving",
+    "restoring-giving-from-the-worst-start",
+    "thresholds-of-waiting"
+   ],
+   "reading": "AI读法：沿用 RO mozi-jianai-xia-xian-cong-shi（相合），声明不变；与 C11 之条目 mozi-jianai-xia-xian-shi 同一段（C11 名\"先施\"）。在保持包含之律下，最坏起点是全部停止给予（Tolerance.worst_start），一处扣留在其可达家族中结束一切给予（withholding_absorbs）；在互相等待之环上无人先给就不恢复，先给则恢复（Ring.givesFirst_restores），自一切起点之恢复恰当没有避开来源之等待链（restores_iff）。对本簇：群中之合作在信任全失之后，只能由一个不等待而给者恢复。剩余：墨子以\"然后人报我\"为理由，是交换式计算；定理证明先给恢复环，不依赖对方回报之计算。",
+   "gap": "",
+   "ro_passage": "mozi-jianai-xia-xian-cong-shi",
+   "layer": "原典（子书·墨子）·先秦（战国）",
+   "locator": "墨子·兼愛下",
+   "names_used": [
+    "先施",
+    "報",
+    "念舊惡"
+   ],
+   "relational": "是：先给与回报都在关系之环中",
+   "tradition": "墨",
+   "work": "墨子"
+  },
+  {
+   "id": "mozi-shangtong",
+   "record_ids": [
+    "MO1-C11-R003",
+    "MO1-C11-R005"
+   ],
+   "source_id": "MO1-S-C11",
+   "fragments": [
+    "聞善而不善，皆以告其上。上之所是必皆是之，上之所非必皆非之。",
+    "上有過則規諫之，下有善則傍薦之。",
+    "天子唯能壹同天下之義，是以天下治也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.member_separates_all",
+    "Becoming.Web.separates_all_iff_member",
+    "Becoming.Web.pooled_iff_member",
+    "Becoming.Web.pool_adds",
+    "Becoming.Learning.selects_not_right_of_parted"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches",
+    "selection-through-registration"
+   ],
+   "reading": "AI读法：沿用 RO mozi-shangtong（定域），声明不变。\"闻善而不善皆以告其上\"是汇集：成员把两个历史耦合开时其类即经汇集之选择分开（Web.member_separates_all、separates_all_iff_member）；但\"上之所是必皆是之\"要求每个成员之判定跟随上，凡上之读法归并者经它之选择都分不开（Learning.selects_not_right_of_parted），汇集于是只等于上一人（Web.pooled_iff_member，名\"同而不和\"），合用所加之差别（Web.pool_adds，名\"和而不同\"）在判定上被取消。尚同在\"告上完整、规谏开放\"之范围内成立；\"壹同天下之义\"作为治之条件，脊柱不支持；以刑罚维持上同（MO1-C11-R005）是强制之剩余。",
+   "gap": "",
+   "ro_passage": "mozi-shangtong",
+   "layer": "原典（子书·墨子）·先秦（战国）",
+   "locator": "墨子·尚同上",
+   "names_used": [
+    "同而不和",
+    "和而不同"
+   ],
+   "relational": "部分：汇集是关系的；壹同于上是单一中心",
+   "tradition": "墨",
+   "work": "墨子"
+  },
+  {
+   "id": "mozi-shangtong-xia-shi-qi-guo",
+   "record_ids": [
+    "MO1-C13-R007",
+    "MO1-C13-R008"
+   ],
+   "source_id": "MO1-S-C13",
+   "fragments": [
+    "國既已治矣，天下之道盡此已邪？則未也。天下之為國數也甚多，此皆是其國而非人之國，是以厚者有戰，而薄者有爭。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Specker.no_whole",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.whole_not_in_pairs"
+   ],
+   "records": [
+    "contextual-registration",
+    "gluing-under-parity",
+    "whole-first-and-bounded-centers",
+    "separation-loses-the-relation"
+   ],
+   "reading": "AI读法：墨子在此发现：各家、各国各自已治，合起来未必治，因为\"此皆是其国而非人之国\"。脊柱：各语境之读法恰在交界处一致时才拼成整体之读法（Contextual.glues_iff_agree），各语境各自一致仍可不是任何整体之部分（Specker.no_whole）；以各自依赖为界之中心彼此不一（Clearing.centers_disagree），外层之关系可以由整体持有而不由任何部分持有（whole_not_in_pairs）。这一半是确切之相合。定域：墨子之出路是\"选其国之义以尚同于天子\"，即以一个中心之读法取代交界处之一致，这是单一中心，脊柱给出的拼合条件是交界处之一致，不是向上之统一。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（子书·墨子）·先秦（战国）",
+   "locator": "墨子·尚同下",
+   "names_used": [
+    "同而不和",
+    "群"
+   ],
+   "relational": "是：局部之治与整体之治的关系；出路为单一中心",
+   "tradition": "墨",
+   "work": "墨子"
+  },
+  {
+   "id": "mozi-tianzhi",
+   "record_ids": [
+    "MO1-C26-R004",
+    "MO1-C26-R005",
+    "MO1-C26-R007"
+   ],
+   "source_id": "MO1-S-C26",
+   "fragments": [
+    "順天意者，義政也。反天意者，力政也。",
+    "順天意者，兼相愛、交相利，必得賞；反天意者，別相惡、交相賊，必得罰。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.significance_undetermined",
+    "Becoming.bounded_rival",
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.Valuation.premises_of_unrestricted"
+   ],
+   "records": [
+    "map-of-premises",
+    "axiom-decomposition",
+    "presupposition-scopes"
+   ],
+   "reading": "AI读法：沿用 RO mozi-tianzhi（相分），声明不变。天志把兼相爱、交相利之依据放在一个有意志之天及其赏罚上，并以层层\"政之\"（MO1-C26-R004）把义之来源放在上位。理论不立伦理公理：表示之动力学不蕴含意义（Web.significance_undetermined），有界之对手规则与动力学一致（bounded_rival），中心不沿依赖导出（Clearing.center_not_derived）。分歧：人格意志作为依据，并把规范依据、动机与遵从合在赏罚一处。交相利与交相贼之结构对举本身是关系的（见名\"交相利\"）。",
+   "gap": "",
+   "ro_passage": "mozi-tianzhi",
+   "layer": "原典（子书·墨子）·先秦（战国）",
+   "locator": "墨子·天志上",
+   "names_used": [
+    "交相利"
+   ],
+   "relational": "否：意志或单一中心（四层之一）",
+   "tradition": "墨",
+   "work": "墨子"
+  },
+  {
+   "id": "mozi-shangxian-shang",
+   "record_ids": [
+    "MO1-C08-R001",
+    "MO1-C08-R002",
+    "MO1-C08-R004",
+    "MO1-C08-R006",
+    "MO1-C08-R008"
+   ],
+   "source_id": "MO1-S-C08",
+   "fragments": [
+    "國有賢良之士衆，則國家之治厚；賢良之士寡，則國家之治薄。",
+    "不義不富，不義不貴，不義不親，不義不近。",
+    "故官無常貴，而民無終賤。有能則舉之，無能則下之。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.RelativePosition.not_all_rise",
+    "Becoming.RelativePosition.rise_needs_fall",
+    "Becoming.Flow.ends_at_race_end",
+    "Becoming.share_rises_through"
+   ],
+   "records": [
+    "relative-position-is-zero-sum",
+    "target-capture"
+   ],
+   "reading": "AI读法：尚贤以排序选择治者，并以\"不义不富，不义不贵\"使人人竞为义。墨子之\"官无常贵，民无终贱\"否认了固定之贵贱，这一点是关系的；但它以位次为诱因，把全体放进相对位置之局（名\"相軋\"）：位置按计数零和（RelativePosition.positions_balance），没有选拔能使每人之位置都升（not_all_rise），一人之升需要他人之降（rise_needs_fall）；被选中之读法所持者份额上升（share_rises_through）。所以\"使人人为义\"若以位次之升为动力，不能使人人得其所欲。分歧：以等级择优为治之本（尚贤为政之本），位次之竞逐是理论没有之动力。庄子\"举贤则民相轧\"、老子\"不尚贤，使民不争\"是同一结构之另一读法（见 laozi-03-bu-shang-xian）。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（子书·墨子）·先秦（战国）",
+   "locator": "墨子·尚賢上",
+   "names_used": [
+    "相軋"
+   ],
+   "relational": "否：竞争与等级（四层之一），虽否认固定贵贱",
+   "tradition": "墨",
+   "work": "墨子"
+  },
+  {
+   "id": "hanfei-er-bing",
+   "record_ids": [
+    "FA1-H07-R001",
+    "FA1-H07-R002",
+    "FA1-H07-R009"
+   ],
+   "source_id": "FA1-S-H07",
+   "fragments": [
+    "二柄者，刑德也。何謂刑德？曰：殺戮之謂刑，慶賞之謂德。",
+    "今君人者釋其刑德而使臣用之，則君反制於臣矣。",
+    "人臣之情非必能愛其君也，爲重利之故也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.share_rises_through",
+    "Becoming.Law.perturbation_reabsorbed",
+    "Becoming.Captured.rule_perturbation_changes",
+    "Becoming.Pace.rule_at_reading",
+    "Becoming.Pace.byRule_reabsorbed",
+    "Becoming.RuleCapture.locked_stays",
+    "Becoming.RuleCapture.favouring_locks",
+    "Becoming.RuleCapture.perturbation_absorbed",
+    "Becoming.RuleCapture.uniform_locks"
+   ],
+   "records": [
+    "target-capture",
+    "how-fast-a-rule-may-change",
+    "selection-through-registration",
+    "capture-through-the-rule"
+   ],
+   "reading": "AI读法：沿用 RO hanfei-er-bing（相分），声明不变。二柄是一个选择：以赏选所奖者，被选者份额上升（share_rises_through）；下一构形只依赖规则时扰动状态被吸收（Law.perturbation_reabsorbed），\"释其刑德而使臣用之，则君反制于臣\"指出被选者握住规则之回路（Pace.rule_at_reading），规则从所选者之份额单调读出时锁定（RuleCapture.favouring_locks、locked_stays、uniform_locks）。分歧：韩非以\"人臣之情……为重利\"立论，把群读成利益相反者之间的控制，\"德\"缩为庆赏；\"越官则死\"（FA1-H07-R009）以位次先于结果。理论从实际关系出发，不从相反之利益出发。本簇以之为法家单一中心诸说之代表条目。",
+   "gap": "",
+   "ro_passage": "hanfei-er-bing",
+   "layer": "原典（子书·韩非子）·先秦（战国末）",
+   "locator": "韩非子·二柄",
+   "names_used": [
+    "同而不和"
+   ],
+   "relational": "否：单一中心与相反利益（四层之一）",
+   "tradition": "法",
+   "work": "韩非子"
+  },
+  {
+   "id": "hanfei-wudu-gong-si-xiang-bei",
+   "record_ids": [
+    "FA1-H49-R010"
+   ],
+   "source_id": "FA1-S-H49",
+   "fragments": [
+    "古者蒼頡之作書也，自環者謂之私，背私謂之公，公私之相背也，乃蒼頡固以知之矣。今以爲同利者，不察之患也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Flow.mutuallyDependent_of_common",
+    "Becoming.Web.coextinct",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.Flow.act_unselected",
+    "Becoming.Flow.Balances.rise_paid_from_beyond"
+   ],
+   "records": [
+    "mutual-dependence-and-its-pace",
+    "whole-first-and-bounded-centers",
+    "the-gap-for-ones-own-act",
+    "raising-what-couples-in-draws-from-beyond"
+   ],
+   "reading": "AI读法：韩非以字形立论：\"自环者谓之私\"，即以自身为界之圈；\"背私谓之公\"；于是公私相背，以为同利者是不察。\"自环\"之结构脊柱有：以各自依赖为界之中心彼此不一（Clearing.centers_disagree），一个作为之差别若停在作为者之耦合闭包之外，经该闭包内任何成员之选择都选不出它（Flow.act_unselected）。分歧在下一步：韩非由此推出公与私是相反之利益，必须由上之法压私。脊柱：在一个人人依赖并交换之共同条件下，流是相互依赖的（Flow.mutuallyDependent_of_common），依赖链所及之一个终结则依赖它者也终结（Web.coextinct）；所耦合入者之上升完全由其外给付（Flow.Balances.rise_paid_from_beyond），所以\"私\"之得是有来处的，不是与\"公\"相反之两个利益主体。理论不以相反之利益为起点（四层之\"竞争\"），也不以中心之法为解决。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（子书·韩非子）·先秦（战国末）",
+   "locator": "韩非子·五蠹",
+   "names_used": [
+    "同患",
+    "群"
+   ],
+   "relational": "否：相反利益之框架；\"自环\"之描述本身是关系的",
+   "tradition": "法",
+   "work": "韩非子"
+  },
+  {
+   "id": "hanfei-wudu-ren-zhong-cai-gua",
+   "record_ids": [
+    "FA1-H49-R002"
+   ],
+   "source_id": "FA1-S-H49",
+   "fragments": [
+    "是以人民衆而貨財寡，事力勞而供養薄，故民爭，雖倍賞累罰而不免於亂。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Pair.own_not_joint",
+    "Becoming.Flow.excess_bounded",
+    "Becoming.Flow.joint_excess_ends",
+    "Becoming.Stock.feasible_iff_covered"
+   ],
+   "records": [
+    "own-count-misses-joint-excess",
+    "draws-on-a-shared-stock"
+   ],
+   "reading": "AI读法：沿用 RO hanfei-wu-du（相合），声明不变。各自在所给之内取，合起来取得更多（Pair.own_not_joint），联合过量 n 步水平至少下降 n（Flow.excess_bounded），联合过量结束受门控之更新以及依赖它之一切形成（Flow.joint_excess_ends）。\"倍赏累罚而不免于乱\"：改变赏罚不改变存量之律，一个存量路程可执行恰当被覆盖（Stock.feasible_iff_covered）。此处韩非不以人性而以数量关系立论，是关系的；\"故民争\"是行为，脊柱推出的是终结，不是争之心理。",
+   "gap": "",
+   "ro_passage": "hanfei-wu-du",
+   "layer": "原典（子书·韩非子）·先秦（战国末）",
+   "locator": "韩非子·五蠹",
+   "names_used": [
+    "爭",
+    "合取过与"
+   ],
+   "relational": "是：以众寡之数量关系说争",
+   "tradition": "法",
+   "work": "韩非子"
+  },
+  {
+   "id": "hanfei-wudu-shang-xia-zhi-li-yi",
+   "record_ids": [
+    "FA1-H49-R005",
+    "FA1-H49-R009"
+   ],
+   "source_id": "FA1-S-H49",
+   "fragments": [
+    "人之情性莫先於父母，皆見愛而未必治也，雖厚愛矣，奚遽不亂？",
+    "上下之利，若是其異也，而人主兼舉匹夫之行，而求致社稷之福，必不幾矣。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Viability.ChoicePoint.each_not_joint",
+    "Becoming.Viability.ChoicePoint.no_rule_decides_joint",
+    "Becoming.whole_not_in_pairs",
+    "Becoming.Renewable.kept_part_not_renewal",
+    "Becoming.Clearing.centers_disagree"
+   ],
+   "records": [
+    "conditions-kept-together",
+    "separation-loses-the-relation",
+    "whole-first-and-bounded-centers"
+   ],
+   "reading": "AI读法：韩非两处否认充分性：\"厚爱未必治\"，\"兼举匹夫之行\"不必致社稷之福。脊柱同意这一半：各部分各自可保持不等于共同可保持（ChoicePoint.each_not_joint），没有依据各自情况之规则能判定共同情况（no_rule_decides_joint），外层之关系可以由整体持有而不由部分持有（whole_not_in_pairs），保持一个部分不等于所依者更新（Renewable.kept_part_not_renewal）。定域：韩非把这一不充分读为\"上下之利异\"，即中心与部分之利益相反，这是理论没有的前提；脊柱给出的是共同条件须以共同之走法问之，不是以一个中心之法压过部分。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（子书·韩非子）·先秦（战国末）",
+   "locator": "韩非子·五蠹",
+   "names_used": [
+    "得兼"
+   ],
+   "relational": "部分：充分性之否认是结构的；利益相反之框架不是",
+   "tradition": "法",
+   "work": "韩非子"
+  },
+  {
+   "id": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "record_ids": [
+    "FA1-S17-R001",
+    "FA1-S17-R004",
+    "FA1-S17-R005",
+    "FA1-S17-R008",
+    "FA1-S17-R009",
+    "FA1-S17-R010"
+   ],
+   "source_id": "FA1-S-SV4",
+   "fragments": [
+    "聖人之為國也：壹賞，壹刑，壹教。",
+    "然富貴之門，要在戰而已矣。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.pooled_iff_member",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Flow.unselected_beyond_coupling",
+    "Becoming.share_rises_through",
+    "Becoming.RuleCapture.uniform_locks",
+    "Becoming.RuleCapture.Second.second_exact"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches",
+    "selection-through-registration",
+    "target-capture",
+    "capture-through-the-rule"
+   ],
+   "reading": "AI读法：沿用 RO shangjunshu-yi-shang-yi-xing-yi-jiao（相分），声明不变。\"壹\"使一切选择经过一个耦合：合用退化为一员（Web.pooled_iff_member，名\"同而不和\"），凡这一读法归并者经它之选择都分不开（Learning.selects_not_right_of_parted），其耦合闭包之外的选择是盲的（Flow.unselected_beyond_coupling），被这一选择持有之承载者份额上升（share_rises_through）；壹读作在每个份额都偏向同一方向之读法时，每条进程自第二个读取步起锁定（RuleCapture.uniform_locks、Second.second_exact）。\"富贵之门，要在战而已\"把群之一切活动收为一个竞逐之门。分歧在方向：以收窄选择为治，并以强制（连坐、告发）维持。",
+   "gap": "",
+   "ro_passage": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "layer": "原典（子书·商君书）·先秦至秦汉（篇章层次不一）",
+   "locator": "商君书·賞刑",
+   "names_used": [
+    "同而不和",
+    "相軋"
+   ],
+   "relational": "否：单一中心、竞争与强制",
+   "tradition": "法",
+   "work": "商君书"
+  },
+  {
+   "id": "sunzi-bingshi-fen-shu",
+   "record_ids": [
+    "BI1-SZ-R-21"
+   ],
+   "source_id": "BI1-S-SZ",
+   "fragments": [
+    "凡治衆如治寡，分數是也；鬥衆如鬥寡，形名是也；"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.JointPlan",
+    "Becoming.JointPlan.Realizes",
+    "Becoming.JointPlan.supports_of_realizes",
+    "Becoming.PartsApart"
+   ],
+   "records": [
+    "exclusive-footprint-support",
+    "joint-plan-composition"
+   ],
+   "reading": "AI读法：\"治众如治寡，分数是也\"：大众被嵌套地分为部分，直到每一节点只持两侧之部分，任何大小之众都是这样的有限嵌套（JointPlan），配置实现计划当它把实现两侧之部分持在一起直到叶（JointPlan.Realizes）；部分之所取互不相交时叶之所取由根支撑而不重复（PartsApart、JointPlan.supports_of_realizes）。所以\"如治寡\"是嵌套之效，不是一人之能。\"斗众如斗寡，形名是也\"之共同信号见 sunzi-junzheng-jin-gu-jing-qi。剩余：兵家以之为将统众之术，用于胜敌，计划之顶点是将。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（兵书·孙子）·先秦（春秋末至战国）",
+   "locator": "孙子·兵勢",
+   "names_used": [
+    "分數",
+    "分"
+   ],
+   "relational": "是：众之组成是嵌套之关系",
+   "tradition": "兵",
+   "work": "孙子"
+  },
+  {
+   "id": "sunzi-junzheng-jin-gu-jing-qi",
+   "record_ids": [
+    "BI1-SZ-R-35"
+   ],
+   "source_id": "BI1-S-SZ",
+   "fragments": [
+    "夫金鼓旌旗者，所以一民之耳目也。民既專一，則勇者不得獨進，怯者不得獨退，此用衆之法也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.broadcast_reaches",
+    "Becoming.SharedCodes.agrees_every_start_iff",
+    "Becoming.SharedCodes.run_from_imposition",
+    "Becoming.SharedCodes.outside_returns",
+    "Becoming.SharedCodes.never_agrees_of_both"
+   ],
+   "records": [
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：金鼓旌旗是一个共同之码，由一个来源发出：一个使每个形成都只有一个来源之听取次序使一切起点一致（SharedCodes.agrees_every_start_iff、broadcast_reaches），而没有任何不偏任何一方之律能使对称之分歧一致（never_agrees_of_both），所以协同需要这样的来源或次序。代价也确切：自一个强加之码起，全体此后一致，每个形成恰失去其码所区分而强加之码所合并者，来源无所失（SharedCodes.run_from_imposition）；被合并之区分只从一个保留在强加之外之形式回来（SharedCodes.outside_returns）。\"勇者不得独进，怯者不得独退\"正是区分之合并。定域：经文所说在战阵之协同中成立；以之为\"一民\"之一般之法，则失去的区分只能从码外回来（已采之名\"约定俗成\"所指之律）。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（兵书·孙子）·先秦（春秋末至战国）",
+   "locator": "孙子·軍爭",
+   "names_used": [
+    "约定俗成",
+    "同而不和"
+   ],
+   "relational": "部分：协同是关系的；一个来源之强加为单一中心",
+   "tradition": "兵",
+   "work": "孙子"
+  },
+  {
+   "id": "sunzi-jiudi-tong-zhou",
+   "record_ids": [
+    "BI1-SZ-R-53"
+   ],
+   "source_id": "BI1-S-SZ",
+   "fragments": [
+    "夫吳人與越人相惡也，當其同舟而濟。遇風，其相救也，如左右手。",
+    "故善用兵者，攜手若使一人，不得已也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.coextinct",
+    "Becoming.Web.Dependent",
+    "Becoming.Flow.feeding_unrestricted_of_common",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.Flow.mutuallyDependent_of_common"
+   ],
+   "records": [
+    "feeding-closure",
+    "levels-of-closure",
+    "becoming-dependence-dynamics",
+    "mutual-dependence-and-its-pace"
+   ],
+   "reading": "AI读法：沿用 RO sunzi-wu-yue-tong-zhou（相合）。吴越相恶，是各自为界之中心彼此不一（Clearing.centers_disagree）；同舟遇风，二者依赖同一条件，依赖链到达一个不活跃者就终结链上一切（Web.coextinct、Web.Dependent）；在共同供给条件下，以各中心供给闭包为界之意义就是延续条件（Flow.feeding_unrestricted_of_common，条件句）。本簇另加 Flow.mutuallyDependent_of_common，理由：一个人人依赖并交换之共同条件使流相互依赖，这正是\"同患\"之名所指。\"不得已\"即此依赖，不是意志之结果。剩余：孙子以此为用兵之术，脊柱只给依赖之结构，不推出\"相救\"之行为。",
+   "gap": "",
+   "ro_passage": "sunzi-wu-yue-tong-zhou",
+   "layer": "原典（兵书·孙子）·先秦（春秋末至战国）",
+   "locator": "孙子·九地",
+   "names_used": [
+    "同患",
+    "相待"
+   ],
+   "relational": "是：相救出于共同条件上之相互依赖",
+   "tradition": "兵",
+   "work": "孙子"
+  },
+  {
+   "id": "sunzi-xushi-wo-zhuan-di-fen",
+   "record_ids": [
+    "BI1-SZ-R-28"
+   ],
+   "source_id": "BI1-S-SZ",
+   "fragments": [
+    "故形人而我無形，則我專而敵分。我專為一，敵分為十，是以十攻其一也，則我衆而敵寡。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.RelativePosition.rise_needs_fall",
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.Flow.system_unchanged_without_iff",
+    "Becoming.Dependence.DifferenceOnlyTogether",
+    "Becoming.Flow.race_ends_greatest"
+   ],
+   "records": [
+    "relative-position-is-zero-sum",
+    "which-links-a-closure-needs",
+    "joint-difference-making"
+   ],
+   "reading": "AI读法：本条以胜敌为目的，是本簇争胜诸说之代表条目。其中有一个结构是脊柱有的：使对方分散，就是去掉把对方之部分连成一个系统之条件，系统是否不变恰由其余条件是否已连通决定（Flow.system_unchanged_without_iff）；只能合起来造成之差别随之失去（Dependence.DifferenceOnlyTogether）。\"我众而敌寡\"是相对之量，一方之升需要另一方之降（RelativePosition.rise_needs_fall、positions_balance）。分歧：以胜负为尺度，以使他者之群离散为术；竞逐终结的是依赖者，胜者也不在律外（Flow.race_ends_greatest）。理论不以胜为价值。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（兵书·孙子）·先秦（春秋末至战国）",
+   "locator": "孙子·虛實",
+   "names_used": [
+    "分",
+    "同力",
+    "相軋"
+   ],
+   "relational": "否：竞争与胜负（四层之一）；分合之结构是关系的",
+   "tradition": "兵",
+   "work": "孙子"
+  },
+  {
+   "id": "laozi-03-bu-shang-xian",
+   "record_ids": [
+    "LC2-WB-C03-R01"
+   ],
+   "source_id": "DS01",
+   "fragments": [
+    "不尚贤，使民不争",
+    "尚贤显名，荣过其任，为而常校，能相射"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.RelativePosition.change_opposed",
+    "Becoming.RelativePosition.not_all_rise",
+    "Becoming.RelativePosition.rise_needs_fall",
+    "Becoming.share_rises_through"
+   ],
+   "records": [
+    "relative-position-is-zero-sum",
+    "target-capture"
+   ],
+   "reading": "AI读法：\"不尚贤，使民不争\"：以贤之名排序，就把全体放进相对位置之局。王弼注\"尚贤显名，荣过其任，为而常校，能相射\"：显名使人常相较量。脊柱：位置按计数零和，一部分之位置变化是其余之和之相反（RelativePosition.positions_balance、change_opposed），没有排序之变化使每人之位置都升（not_all_rise），一人之升需要他人之降（rise_needs_fall）；被选择之读法所持者份额上升（share_rises_through）。所以以名位为诱因之选择，必然使一些人之所求落空，这是\"争\"（此处义同\"相軋\"）之结构来源。经文与注都不以人性立论，以关系之读法立论。剩余：同章\"虚其心，实其腹……常使民无知无欲\"是一个中心收窄众人之认识，属相分，见 laozi-65-fei-yi-ming-min，不在本条之句中。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（老子第3章）·先秦；注（王弼）·魏晋",
+   "locator": "老子·第3章并王弼注",
+   "names_used": [
+    "相軋",
+    "爭"
+   ],
+   "relational": "是：争出于以名位排序之关系",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "laozi-22-fu-wei-bu-zheng",
+   "record_ids": [
+    "LE-R032",
+    "LAO2-C66-R05"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "夫唯不争，故天下莫能与之争。",
+    "以其不争，故天下莫能与之争。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.aboveAll_unique",
+    "Becoming.Law.aboveAll_never_rests",
+    "Becoming.Law.more_never_rests",
+    "Becoming.Law.rests_iff"
+   ],
+   "records": [
+    "seeking-boundary"
+   ],
+   "reading": "AI读法：沿用 RO lao-22-fu-wei-bu-zheng（相合），声明不变；第66章同句（LAO2-C66-R05）并入。把\"争\"读作寻求\"高于其余一切\"之目标（名\"為天下先\"）：在一个状态上至多一人满足（aboveAll_unique），两个都持此目标者在任何律下不能一起静止（Law.aboveAll_never_rests）；可在静止处满足之目标才能安定（Law.rests_iff）。不持此目标者不在这一不能静止之结构之中，\"莫能与之争\"在\"争之关系需要双方都持此目标\"之意义上成立。若读作\"因此无人能胜过他\"，则是胜负之主张，脊柱不支持。注意：此\"争\"与荀子共同条件上之\"争\"（合取超出之竞逐）结构不同，本簇分名之。",
+   "gap": "",
+   "ro_passage": "lao-22-fu-wei-bu-zheng",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第22章、第66章",
+   "names_used": [
+    "為天下先",
+    "爭"
+   ],
+   "relational": "是：争是双方之关系",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "laozi-66-yu-shang-min",
+   "record_ids": [
+    "LAO2-C66-R02",
+    "LAO2-C66-R03",
+    "LAO2-C66-R04"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "是以欲上民，必以言下之。欲先民，必以身后之。是以圣人处上而民不重，处前而民不害。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.aboveAll_unique",
+    "Becoming.RelativePosition.rise_needs_fall",
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "seeking-boundary",
+    "relative-position-is-zero-sum",
+    "whole-first-and-bounded-centers"
+   ],
+   "reading": "AI读法：第66章以\"下之\"\"后之\"为\"上民\"\"先民\"之途：处下是手段，居上是结果。脊柱：位置之升需要他处之降（RelativePosition.rise_needs_fall、positions_balance），\"高于其余一切\"至多一人满足（aboveAll_unique），中心不沿依赖导出（Clearing.center_not_derived）。所以\"处上而民不重\"若只是居上者之自处方式，不改变位次本身之零和；本章仍以居上居前为所欲，这是等级之层（\"竞争与等级\"）。同章\"以其不争，故天下莫能与之争\"之结构另见 laozi-22-fu-wei-bu-zheng。苏辙\"圣人非欲上人……其道不得不上且先耳\"（LC2-SZ-C66-R01）试图去掉\"欲\"，仍保留上先之果。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第66章",
+   "names_used": [
+    "為天下先",
+    "相軋"
+   ],
+   "relational": "部分：下与上之关系；以居上为所欲为等级层",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "laozi-68-bu-zheng-zhi-de",
+   "record_ids": [
+    "LL-R031",
+    "LAO2-C68-R01",
+    "LAO2-C68-R02",
+    "LAO2-C68-R03",
+    "LAO2-C68-R04",
+    "LAO2-C68-R05"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "善为士者不武，善战者不怒，善胜敌者不与，善用人者为之下，是谓不争之德，是谓用人之力，是谓配天古之极。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Law.aboveAll_never_rests",
+    "Becoming.Law.rests_iff",
+    "Becoming.Dependence.DifferenceOnlyTogether",
+    "Becoming.RelativePosition.rise_needs_fall"
+   ],
+   "records": [
+    "seeking-boundary",
+    "joint-difference-making",
+    "relative-position-is-zero-sum"
+   ],
+   "reading": "AI读法：\"不争之德，是谓用人之力\"：不持\"高于其余一切\"之目标者，才能与他人之力合成（名\"同力\"）；两个都持此目标者不能一起静止（Law.aboveAll_never_rests），只能合起来造成之差别需要部分不相排斥（Dependence.DifferenceOnlyTogether）。苏辙注\"人皆有相上之心故莫能相为用\"把这一点说得最明（见 suzhe-68-xiang-shang-zhi-xin）。定域：本章之框架仍是\"士\"\"战\"\"胜敌\"，不争是取胜之善法，胜负之尺度留在经文中（RelativePosition.rise_needs_fall：一方之胜即他方之负）。所以\"用人之力\"之结构相合，\"善胜敌\"之目的是剩余。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第68章",
+   "names_used": [
+    "為天下先",
+    "同力"
+   ],
+   "relational": "部分：不争与用人之力是关系的；胜敌之框架是争胜层",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "suzhe-68-xiang-shang-zhi-xin",
+   "record_ids": [
+    "LC2-SZ-C68-R02"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "fragments": [
+    "人皆有相上之心故莫能相為用"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.aboveAll_unique",
+    "Becoming.Law.aboveAll_never_rests",
+    "Becoming.Law.rests_iff",
+    "Becoming.Dependence.DifferenceOnlyTogether.two_le_length"
+   ],
+   "records": [
+    "seeking-boundary",
+    "joint-difference-making"
+   ],
+   "reading": "AI读法：苏辙一句给出了\"为天下先\"之律之社会读法：人人都持\"居于他人之上\"之目标，则无人能为他人所用。脊柱：此目标在一个状态至多一人满足（aboveAll_unique），两个都持此目标者在任何律下不能一起静止（Law.aboveAll_never_rests）；只能合起来造成之差别至少需要两个部分一起（DifferenceOnlyTogether.two_le_length），人人求上则没有这样的\"一起\"可以静止。种类为相合。\"相上\"一词结构确切，但是北宋用例，本簇以先秦之\"为天下先\"为名，\"相上\"作为其后世读法。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "注（苏辙《老子解》）·宋明（北宋）",
+   "locator": "苏辙·老子解 第68章",
+   "names_used": [
+    "為天下先",
+    "同力"
+   ],
+   "relational": "是：相上之心是关系中之目标",
+   "tradition": "道",
+   "work": "老子解"
+  },
+  {
+   "id": "laozi-77-ren-zhi-dao",
+   "record_ids": [
+    "LL-R039"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "人之道则不然，损不足以奉有馀。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.share_rises",
+    "Becoming.Flow.Balances.rise_paid_from_beyond",
+    "Becoming.Flow.rise_with_fall",
+    "Becoming.Flow.continuing_excludes",
+    "Becoming.Flow.rise_netGiver"
+   ],
+   "records": [
+    "target-capture",
+    "raising-what-couples-in-draws-from-beyond",
+    "rising-and-falling-in-one-exchange",
+    "what-taking-all-excludes",
+    "where-novelty-gain-comes-from"
+   ],
+   "reading": "AI读法：沿用 RO lao-77-ren-zhi-dao（相合），声明不变。\"损不足以奉有馀\"是群内份额向一方集中之吸引子：每次上升都是被给予的（Flow.rise_netGiver），在平衡之流中一族之上升完全由族外给付（Flow.Balances.rise_paid_from_beyond），同一交换中一员上升则另一员下降（Flow.rise_with_fall），一种目标之承载者留下更多后代时其份额严格上升（share_rises），持续之全拿者使旁边之取者无法继续（Flow.continuing_excludes）。这些是关于方向与来源之律，不含评价；判其\"不然\"需要延续条件与比较承诺。",
+   "gap": "",
+   "ro_passage": "lao-77-ren-zhi-dao",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第77章",
+   "names_used": [
+    "相軋",
+    "爭"
+   ],
+   "relational": "是：损益在关系中之流向",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "laozi-79-he-da-yuan",
+   "record_ids": [
+    "LAO2-C79-R03",
+    "LAO2-C79-R01",
+    "LAO2-C79-R02"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "和大怨，必有馀怨，安可以为善？是以圣人执左契，而不责于人。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Law.lost_stays",
+    "Becoming.Law.merged_stays",
+    "Becoming.MatchedCourses.recovery_retains_loss",
+    "Becoming.Law.drawn_iff_not_returns",
+    "Becoming.LoopReturn.closing_not_lossless",
+    "Becoming.LoopReturn.closing_merges"
+   ],
+   "records": [
+    "recurrence-without-premise",
+    "finite-aggregation-within-restorable-basic-losses",
+    "attraction-is-not-returning",
+    "whether-a-loop-closes-a-difference"
+   ],
+   "reading": "AI读法：沿用 RO lao-79-he-da-yuan（相合）。调和大怨，必有余怨：丧失者可能保持丧失（Law.lost_stays），被合并之配置保持合并（Law.merged_stays），恢复之后已失去之主张仍然失去（MatchedCourses.recovery_retains_loss）。本簇另加 LoopReturn.closing_not_lossless、closing_merges，理由：把相怨读为回送之环，闭合一个差异不是无损的，一个在零处不留差异而闭合之环合并两个差异（closing_merges），所以\"和\"之后有余在环之律上也成立。\"执左契而不责于人\"转向事前：持契而不讨还，即在环中不把所受全部交回（名\"讓\"）。",
+   "gap": "",
+   "ro_passage": "lao-79-he-da-yuan",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第79章",
+   "names_used": [
+    "讓",
+    "報"
+   ],
+   "relational": "是：怨与和都是关系之差异与闭合",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "laozi-63-bao-yuan-yi-de",
+   "record_ids": [],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "大小多少，报怨以德。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.LoopReturn.cut_closes",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.LoopReturn.cut_reopened",
+    "Becoming.Withholding.Ring.givesFirst_restores"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference",
+    "giving-that-waits-on-giving"
+   ],
+   "reading": "AI读法：把怨读为环中回送之损害，\"报怨以德\"是一个环节不把所受之损害交回，反而给予。脊柱：一个截断，在其后每个环节都\"无所受则无所给\"时立即闭合差异（LoopReturn.cut_closes），否则后面之环节会重开它（cut_reopened）；闭合之环必有交回少于所受之环节（closing_needs_less）。在互相等待之环上，一个不等待而给者使全环恢复给予（Withholding.Ring.givesFirst_restores，C11 名\"先施\"）。定域：\"报怨以德\"使怨之环闭合，恰当其后之环节不把它重新放大；经文不说这一条件。王弼不把此句解为以恩报怨（LC2-WB-C63-R01），苏辙以\"爱恶之情忘\"解之（LC2-SZ-C63-R01），各为不同之结构。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第63章",
+   "names_used": [
+    "讓",
+    "報",
+    "先施"
+   ],
+   "relational": "是：怨与德都在回送之环中",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "laozi-49-yi-bai-xing-xin-wei-xin",
+   "record_ids": [
+    "LAO2-C49-R01"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "圣人无常心，以百姓心为心。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.separates_all_iff",
+    "Becoming.Web.pool_adds",
+    "Becoming.ExchangeLaw.acts_alike_all_iff",
+    "Becoming.Flow.unselected_beyond_pool"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches",
+    "what-a-pools-acts-respond-to"
+   ],
+   "reading": "AI读法：沿用 RO lao-49-yi-bai-xing-xin-wei-xin（相合），声明不变（RO 据王弼本 DS01，此处据传世经文，字同）。\"无常心，以百姓心为心\"与合用之耦合同构：池恰分开其成员不全同样耦合者（Web.separates_all_iff），差别是合用在任何单个成员之上所加（Web.pool_adds，名\"和而不同\"），池经由耦合之响应是精确的（ExchangeLaw.acts_alike_all_iff）；闭包之外者池也看不见（Flow.unselected_beyond_pool）。对本簇：群之判断不以一个中心之常心为准。同章\"圣人皆孩之\"（LAO2-C49-R05）是一个中心视众如孩，属相分，见 laozi-65-fei-yi-ming-min 之并行。",
+   "gap": "",
+   "ro_passage": "lao-49-yi-bai-xing-xin-wei-xin",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第49章",
+   "names_used": [
+    "和而不同",
+    "群"
+   ],
+   "relational": "是：以众心为心是合用之关系",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "laozi-80-xiao-guo-gua-min",
+   "record_ids": [
+    "LAO2-C80-R03",
+    "LAO2-C80-R04"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "虽有甲兵，无所陈之。",
+    "邻国相望，鸡犬之声相闻，民至老死，不相往来。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.World.forgets_of_bounded",
+    "Becoming.Flow.whole_recurs_of_rest_idle",
+    "Becoming.Flow.new_beyond_every",
+    "Becoming.Cuts.within_of_unlinked",
+    "Becoming.Flow.unselected_beyond_pool"
+   ],
+   "records": [
+    "returning-novelty-forgetting-on-levels",
+    "where-novelty-gain-comes-from",
+    "which-links-a-closure-needs",
+    "what-pooled-coupling-reaches"
+   ],
+   "reading": "AI读法：沿用 RO lao-80-xiao-guo-gua-min（相分），声明不变。\"有甲兵而无所陈\"（LAO2-C80-R03）是不起竞逐，与\"不争\"诸条相合；\"民至老死，不相往来\"（LAO2-C80-R04）以不连接为理想，与理论分歧：未连接之形成只达及自身（Cuts.within_of_unlinked），合用闭包之外什么都不被选择（Flow.unselected_beyond_pool），有界之整体会遗忘（World.forgets_of_bounded、Flow.whole_recurs_of_rest_idle），无尽之新要求在每个有限族之外都有交换（Flow.new_beyond_every）。所以这一理想保障的是返回与静止，不是生生之继续生成。对本簇：群不以切断群与群之关系而安。",
+   "gap": "",
+   "ro_passage": "lao-80-xiao-guo-gua-min",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第80章",
+   "names_used": [
+    "群",
+    "生生"
+   ],
+   "relational": "部分：不竞是关系的；不相往来为切断关系之理想",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "laozi-09-gong-sui-shen-tui",
+   "record_ids": [
+    "LE-R017"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "功遂身退，天之道。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Law.more_never_rests",
+    "Becoming.Flow.beyond_given_bounded",
+    "Becoming.Flow.takesAll_of_more",
+    "Becoming.Flow.level_kept",
+    "Becoming.Web.Carries.arising_not_recurring",
+    "Becoming.Web.ByPassing.ends_within"
+   ],
+   "records": [
+    "seeking-boundary",
+    "where-a-rising-take-ends",
+    "what-taking-all-excludes",
+    "reserve-defers-ending",
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：沿用 RO lao-09-chi-er-ying-zhi（定域），声明不变。\"比现在更多\"在任何静止处都不被满足（Law.more_never_rests），拿取超过所给者不能持续（Flow.beyond_given_bounded），在所给之内共同拿取水平不降（Flow.level_kept）。\"身退\"对应传递：样式靠传递而持续，承载者停止传递则样式在一个跨度内结束（Web.ByPassing.ends_within）。对本簇：成事之后让出位置，使群之所成能经由传递而不经由一人之占持继续。",
+   "gap": "",
+   "ro_passage": "lao-09-chi-er-ying-zhi",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第9章",
+   "names_used": [
+    "讓",
+    "為天下先"
+   ],
+   "relational": "是：进退是关系中之位置",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "laozi-30-bu-yi-bing-qiang",
+   "record_ids": [
+    "LE-R040"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "以道佐人主者，不以兵强天下。其事好还。",
+    "善有果而已，不敢以取强。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.responds_to_own_level",
+    "Becoming.onLoop_succ_iff",
+    "Becoming.Withholding.withholding_returns",
+    "Becoming.not_onLoop_unread",
+    "Becoming.upstream_unread",
+    "Becoming.LoopReturn.runs_away"
+   ],
+   "records": [
+    "how-loops-form",
+    "giving-that-waits-on-giving",
+    "loops-within-what-a-law-reads",
+    "whether-a-loop-closes-a-difference"
+   ],
+   "reading": "AI读法：沿用 RO lao-30-qi-shi-hao-huan（定域；同章另一 RO 条目 lao-30-55-wu-zhuang-ze-lao 讲\"物壮则老\"）。\"以兵强天下，其事好还\"：所施者返回施者，在所施者处于耦合之环上时成立：响应自身所给水平之交换形成环（responds_to_own_level），环经闭合而形成（onLoop_succ_iff），环上扣留返回（Withholding.withholding_returns）；无人读取之水平不在任何环上，从它出发之耦合链只停在它自身（not_onLoop_unread、upstream_unread），所施不被读取则不还。本簇另加 LoopReturn.runs_away，理由：\"取强\"之相加若每环节至少加倍则失控，\"果而已\"即在环中只交回所需而不加倍。",
+   "gap": "",
+   "ro_passage": "lao-30-qi-shi-hao-huan",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第30章",
+   "names_used": [
+    "報",
+    "讓"
+   ],
+   "relational": "是：强与还都在环中",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "laozi-54-xiu-zhi-yu-shen",
+   "record_ids": [
+    "LL-R049"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "修之于身，其德乃真；修之于家，其德乃馀；修之于乡，其德乃长；修之于国，其德乃丰；修之于天下，其德乃普。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.most_difference_arrives",
+    "Becoming.gap_le_carried",
+    "Becoming.carried_pos_iff",
+    "Becoming.Web.AdmitsWithin.narrow",
+    "Becoming.Clearing.loses_beyond",
+    "Becoming.Web.ByPassing.passes_within"
+   ],
+   "records": [
+    "how-much-difference-arrives",
+    "loss-beyond-a-region",
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：同一修养在身、家、乡、国、天下各层显为不同之德。王弼注\"以身及人……修之不废，所施转大\"（LC2-WB-C54-R01）读为沿耦合外传。脊柱给出外传之确切界：在强度有界之律下，到达一个条件之差别至多是携带量（gap_le_carried），而携带量恰被达到（most_difference_arrives），携带量为正恰在有差距被传送到之处（carried_pos_iff）；样式经传递而持续（Web.ByPassing.passes_within）。所以由身及天下之\"普\"在有正强度之路线贯通各层时成立；在一个区域内容纳一切仍可在其外失去（Clearing.loses_beyond），由大区域到其中之小区域之方向则总成立（Web.AdmitsWithin.narrow）。韩非解老\"治乡者行此节，则家之有余者益众\"（CV1-JL-R064）以在上者为起点，是单一中心之读法。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第54章",
+   "names_used": [
+    "群"
+   ],
+   "relational": "是：德之外传沿关系",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "laozi-46-zhi-zu-zhi-zu",
+   "record_ids": [
+    "LAO2-C46-R01",
+    "LAO2-C46-R02",
+    "LAO2-C46-R03"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "天下有道，却走马以粪。天下无道，戎马生于郊。祸莫大于不知足；咎莫大于欲得。故知足之足，常足矣。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Law.rests_iff",
+    "Becoming.Law.more_never_rests",
+    "Becoming.Flow.joint_excess_ends",
+    "Becoming.Flow.joint_keeps",
+    "Becoming.Pair.own_not_joint"
+   ],
+   "records": [
+    "seeking-boundary",
+    "own-count-misses-joint-excess",
+    "what-taking-all-excludes"
+   ],
+   "reading": "AI读法：\"知足之足，常足矣\"：可在静止处满足之目标才能安定（Law.rests_iff），\"欲得\"即\"比现在更多\"之目标，在任何静止处都不被满足（Law.more_never_rests）。\"戎马生于郊\"：各求于外（王弼注 LC2-WB-C46-R01），各自之所取合起来超出共同之所给，合取超出终结依赖者（Pair.own_not_joint、Flow.joint_excess_ends）；合取在所给之内则全体被支持（Flow.joint_keeps），马归于粪田。定域：经文以\"有道/无道\"总括；脊柱只给出知足与否、合取是否超出这两个条件，\"知足\"是寻求者之律，\"出入相揜\"是合取之律，二者都需要。苏辙读为\"各安其分则不争\"（LC2-SZ-C46-R01），以分为固定位分。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第46章",
+   "names_used": [
+    "爭",
+    "出入相揜",
+    "分"
+   ],
+   "relational": "是：争战出于所求与所给之关系",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "zhuangzi-renjianshi-ming-xiang-ya",
+   "record_ids": [],
+   "source_id": "ZH1-S04",
+   "fragments": [
+    "德蕩乎名，知出乎爭。名也者，相軋也；知也者，爭之器也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.RelativePosition.change_opposed",
+    "Becoming.RelativePosition.not_all_rise",
+    "Becoming.RelativePosition.rise_needs_fall"
+   ],
+   "records": [
+    "relative-position-is-zero-sum"
+   ],
+   "reading": "AI读法：\"名也者，相轧也\"：名是一个人在他人读法中之位置，名之高即他人名之低。脊柱：位置按计数零和（RelativePosition.positions_balance），一部分位置之变是其余之和之相反（change_opposed），没有变化使每人之名都升（not_all_rise），一人之升需要他人之降（rise_needs_fall）。\"德荡乎名\"：德一旦以名之位置来读，就进入这一零和之局。种类为相合：庄子把名读为关系中之位置，而不是一个人自有之属性。此为名\"相軋\"之先秦用例（庚桑楚\"举贤则民相轧\"同义）。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（庄子内篇）·先秦（战国）",
+   "locator": "庄子·人間世",
+   "names_used": [
+    "相軋",
+    "爭"
+   ],
+   "relational": "是：名是关系中之位置",
+   "tradition": "庄",
+   "work": "庄子"
+  },
+  {
+   "id": "zhuangzi-qiushui-zi-gui-xiang-jian",
+   "record_ids": [
+    "ZH1-C17-R-06"
+   ],
+   "source_id": "ZH1-S17",
+   "fragments": [
+    "以道觀之，物无貴賤；以物觀之，自貴而相賤；以俗觀之，貴賤不在己。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.bounded_rival",
+    "Becoming.boundaryInvariant_iff_standpointInvariant",
+    "Becoming.unrestricted_of_standpointInvariant",
+    "Becoming.Transfer.unordered",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.RelativePosition.positions_balance"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "presupposition-scopes",
+    "axiom-decomposition",
+    "relative-position-is-zero-sum"
+   ],
+   "reading": "AI读法：沿用 RO zhuangzi-qiushui-yi-dao-guan-zhi（相合），六条声明不变：\"以物观之，自贵而相贱\"对应以依赖为界之中心，各中心意见不一（Clearing.centers_disagree），有界之意义是在已形成之边界内接受之规则（bounded_rival）；\"以道观之，物无贵贱\"对应跨立场不变，在前设与中心覆盖之下即延续条件（boundaryInvariant_iff_standpointInvariant、unrestricted_of_standpointInvariant），而延续条件本身不排序（Transfer.unordered），动力学也不决定意义（Web.significance_undetermined）。本簇只加一条，理由：中间一句\"以俗观之，贵贱不在己\"说位置在他人之读法中，这正是相对位置之局，按计数零和（RelativePosition.positions_balance）。对本簇：贵贱是立场与关系之读法，不是物之固定属性，与系辞\"卑高以陈，贵贱位矣\"（xici-tian-zun-di-bei）相反。",
+   "gap": "",
+   "ro_passage": "zhuangzi-qiushui-yi-dao-guan-zhi",
+   "layer": "原典（庄子外杂篇）·战国至秦汉（年代有争议）",
+   "locator": "庄子·秋水",
+   "names_used": [
+    "相軋"
+   ],
+   "relational": "是：贵贱随立场与关系",
+   "tradition": "庄",
+   "work": "庄子"
+  },
+  {
+   "id": "zhuangzi-shanmu-yi-li-he-yi-tian-shu",
+   "record_ids": [
+    "ZH1-C20-R-05",
+    "ZH1-C20-R-06"
+   ],
+   "source_id": "ZH1-S20",
+   "fragments": [
+    "夫以利合者，迫窮禍患害，相棄也；以天屬者，迫窮禍患害，相收也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.MutuallyDependent",
+    "Becoming.Clearing.shares_not_mutual",
+    "Becoming.Web.coextinct",
+    "Becoming.Drawing.mutual_not_fed",
+    "Becoming.Flow.mutuallyDependent_iff_reach"
+   ],
+   "records": [
+    "mutual-dependence-and-its-pace",
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：以利合者遇困相弃，以天属者遇困相收。把\"以利合\"读为只在交换上相连而延续不互相依赖：共享条件不等于相互依赖（Clearing.shares_not_mutual），交换一停，各自之延续不受影响，所以相弃；\"天属\"读为相互依赖：每一方之延续在某种间接上受每一方影响（Flow.MutuallyDependent），所影响者也能反过来影响自己（Flow.mutuallyDependent_iff_reach），依赖链所及之一个终结则依赖它者也终结（Web.coextinct），所以相收。相互依赖不是相互得益（Drawing.mutual_not_fed）：相收出于依赖之结构，不出于情感之厚。种类为相合；剩余：\"天属\"在庄子指父子之亲，比理论之相互依赖窄。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（庄子外杂篇）·战国至秦汉（年代有争议）",
+   "locator": "庄子·山木",
+   "names_used": [
+    "相待",
+    "交相利",
+    "同患"
+   ],
+   "relational": "是：合与弃、属与收都是关系之结构",
+   "tradition": "庄",
+   "work": "庄子"
+  },
+  {
+   "id": "zhuangzi-tianxia-ge-wei-qi-suo-yu",
+   "record_ids": [
+    "ZH1-C33-R-04"
+   ],
+   "source_id": "ZH1-S33",
+   "fragments": [
+    "天下之人，各爲其所欲焉，以自爲方。悲夫，百家往而不反，必不合矣！"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Specker.no_whole",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.whole_not_in_pairs"
+   ],
+   "records": [
+    "contextual-registration",
+    "gluing-under-parity",
+    "whole-first-and-bounded-centers",
+    "separation-loses-the-relation"
+   ],
+   "reading": "AI读法：天下篇说各家\"以自为方\"，往而不反，必不合。脊柱：各语境之读法恰在交界处一致时才拼成整体之读法（Contextual.glues_iff_agree），各自一致仍可不是任何整体之部分（Specker.no_whole），外层之关系可以由整体持有而不由任何部分持有（whole_not_in_pairs）。定域：\"必不合\"在各方于交界处不一致时成立；\"不反\"即不回到交界处相读，正是不合之条件。作者以古之\"道术\"为未裂之全，这一先在之全是另一层（先在之根），本条不取。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "原典（庄子外杂篇）·战国至秦汉（年代有争议）",
+   "locator": "庄子·天下",
+   "names_used": [
+    "群",
+    "和而不同"
+   ],
+   "relational": "部分：裂与合是关系的；未裂之全为先在之根",
+   "tradition": "庄",
+   "work": "庄子"
+  },
+  {
+   "id": "qian-yong-jiu-qun-long-wu-shou",
+   "record_ids": [
+    "JF-R004"
+   ],
+   "source_id": "YD-JG01",
+   "fragments": [
+    "用九：見羣龍无首，吉。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.WithinSystem.symm",
+    "Becoming.Flow.system_whole_of_common",
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.SharedCodes.never_agrees_of_both",
+    "Becoming.SharedCodes.TwoFormations.preferred_breaks_renaming"
+   ],
+   "records": [
+    "whole-first-and-bounded-centers",
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：乾用九，六爻皆阳而皆变，\"见群龙无首\"。把群读为同在一个系统之诸形成：系统之关系是对称的（Flow.WithinSystem.symm），一个共同条件使全体同在一个系统（Flow.system_whole_of_common），而中心不沿依赖导出（Clearing.center_not_derived）：群之所以为群不需要一个首。小象\"天德不可为首也\"（TP-H01-U9-R01）同义。种类为相合（结构），\"吉\"是占断，脊柱不给出评价。剩余：对称之群要形成一致需要打破对称（SharedCodes.never_agrees_of_both），而打破对称不必是一个首：一个优先之形式保持形成之交换而使之一致（SharedCodes.TwoFormations.preferred_breaks_renaming，两个形成之例；一般族见 wangbi-lueli-zhi-zhong-zhe-zhi-gua 之 gap）；经文没有说一致如何形成，\"无首\"也不等于无次序。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（周易经文）·先秦（西周至春秋）",
+   "locator": "乾·用九",
+   "names_used": [
+    "群"
+   ],
+   "relational": "是：无首之群",
+   "tradition": "共享经典",
+   "work": "周易"
+  },
+  {
+   "id": "tongren-yu-ye-yu-zong",
+   "record_ids": [
+    "JG2-H13-G-R01",
+    "JF-R038"
+   ],
+   "source_id": "YD-JG13",
+   "fragments": [
+    "同人于野，亨。",
+    "六二：同人于宗，吝。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.withinClosureOf_iff",
+    "Becoming.Web.pool_adds",
+    "Becoming.Flow.unselected_beyond_pool",
+    "Becoming.Flow.apart_beyond_pool"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches"
+   ],
+   "reading": "AI读法：同人卦辞\"同人于野，亨\"与六二\"同人于宗，吝\"对举：与人相同之范围广至于野，或窄至于宗族。把\"同人\"读为合用之范围：合用闭包恰是成员闭包之并（withinClosureOf_iff），合用加成员不全同样耦合之差别（Web.pool_adds），闭包之外之作为什么选择都看不见（Flow.unselected_beyond_pool、Flow.apart_beyond_pool）。所以范围限于宗族者，宗族之外之差别都不进入其选择。定域：\"亨\"\"吝\"是占断，脊柱只给出范围宽窄之结构后果；\"于野\"也只扩到野之所及，不是无界。朱熹读涣六四\"散其小羣以成大羣\"是同一方向。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（周易经文）·先秦（西周至春秋）",
+   "locator": "同人·卦辞、六二",
+   "names_used": [
+    "和而不同",
+    "群"
+   ],
+   "relational": "是：同人之范围是关系之宽窄",
+   "tradition": "共享经典",
+   "work": "周易"
+  },
+  {
+   "id": "cui-shun-yue-er-ying",
+   "record_ids": [
+    "TP-H45-T-R02"
+   ],
+   "source_id": "YD-JP45",
+   "fragments": [
+    "順以說，剛中而應，故聚也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.withinSystem_two_takers_iff",
+    "Becoming.Flow.system_whole_of_common",
+    "Becoming.Flow.Shares",
+    "Becoming.Flow.WithinSystem"
+   ],
+   "records": [
+    "which-links-a-closure-needs",
+    "levels-of-closure"
+   ],
+   "reading": "AI读法：萃彖以\"顺以说，刚中而应\"解释\"聚\"：聚由相应之关系形成，不由强制。脊柱：两个形成同在一个系统，恰当二者经由共同参与之条件相连（Flow.Shares、Flow.WithinSystem），一个两方共同参与之条件把两个系统连成一个，如同加一条连接（Flow.withinSystem_two_takers_iff），一个共同条件使全体同在一个系统（Flow.system_whole_of_common）。种类为相合：群之成是关系之成。程颐\"天下之聚必得大人以治之\"（CY130-H45-R01）把聚之维持归于大人，是单一中心之读法，见 wangbi-lueli-zhi-zhong-zhe-zhi-gua 之并行。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "传（易传）·战国至秦汉（年代有争议）",
+   "locator": "萃·彖",
+   "names_used": [
+    "群"
+   ],
+   "relational": "是：聚由相应",
+   "tradition": "共享经典",
+   "work": "易传"
+  },
+  {
+   "id": "song-zhong-ji-zhong-xiong",
+   "record_ids": [
+    "JG2-H06-G-R01"
+   ],
+   "source_id": "YD-JG06",
+   "fragments": [
+    "有孚，窒，惕，中吉，終凶。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.LoopReturn.never_closes_of_no_less",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.LoopReturn.cut_closes",
+    "Becoming.LoopReturn.whole_factors"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference"
+   ],
+   "reading": "AI读法：讼卦辞\"中吉，终凶\"，彖\"讼不可成也\"，初六象\"讼不可长也\"。把讼读为诉求往返之环：每个环节交回不少于所受时差异永不闭合（LoopReturn.never_closes_of_no_less），环节加倍则失控（runs_away）；闭合需要一个交回少于所受之环节（closing_needs_less，名\"讓\"），或一个截断（cut_closes）。由整数倍之环节构成之环没有中间：倍数之积为零则第一圈闭合，为一则保持差异，至少为二则失控（whole_factors）；逐渐之闭合需要一个不是倍乘之环节。所以\"中吉\"是在中途有让或截断而闭合，\"终凶\"是把讼推到底而不闭合。种类为相合（结构）；吉凶是占断。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "经（周易经文）·先秦（西周至春秋）",
+   "locator": "訟·卦辞",
+   "names_used": [
+    "讓",
+    "報",
+    "爭"
+   ],
+   "relational": "是：讼是往返之环",
+   "tradition": "共享经典",
+   "work": "周易"
+  },
+  {
+   "id": "song-tian-yu-shui-wei-xing",
+   "record_ids": [
+    "TP-H06-DX-R01",
+    "TP-H06-T-R01"
+   ],
+   "source_id": "YD-JP06",
+   "fragments": [
+    "天與水違行，訟；君子以作事謀始。",
+    "訟，上剛下險，險而健，訟。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.forms_by_closing",
+    "Becoming.onLoop_succ_iff",
+    "Becoming.responds_to_own_level",
+    "Becoming.Pair.own_not_joint"
+   ],
+   "records": [
+    "how-loops-form",
+    "loops-within-what-a-law-reads"
+   ],
+   "reading": "AI读法：大象与彖都把讼之起放在关系之配置上：天与水违行，上刚下险而相遇。讼不是某一方之本性，而是一方以刚制、一方以险伺，各以对方为所应：响应自身所给水平之交换形成环（responds_to_own_level），环在某步经由那一步作用之耦合闭合而形成（forms_by_closing、onLoop_succ_iff）。\"作事谋始\"即在环闭合之前，正是关节（已采之名\"机\"）。朱熹\"上刚以制其下，下险以伺其上……皆讼之道也\"（ZX130-H06-R01）同此。种类为相合。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "传（易传）·战国至秦汉（年代有争议）",
+   "locator": "訟·大象、彖",
+   "names_used": [
+    "机",
+    "報",
+    "爭"
+   ],
+   "relational": "是：讼出于关系之向",
+   "tradition": "共享经典",
+   "work": "易传"
+  },
+  {
+   "id": "xici-er-ren-tong-xin",
+   "record_ids": [
+    "WP-XCS-C08-S05-R01"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "二人同心，其利断金。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Dependence.DifferenceOnlyTogether",
+    "Becoming.Dependence.MakesDifferenceTogether",
+    "Becoming.Dependence.DifferenceOnlyTogether.two_le_length",
+    "Becoming.Dependence.differenceOnlyTogether_iff"
+   ],
+   "records": [
+    "joint-difference-making"
+   ],
+   "reading": "AI读法：\"二人同心，其利断金\"：二人合起来能断金，单独不能。脊柱：一族部分合起来造成一个变化，而任何一部分单独都不造成（Dependence.DifferenceOnlyTogether），这样的族至少有两个成员（two_le_length），并在决定之过程中恰当扣留全部则依赖保持、扣留任一则同一步仍造成（differenceOnlyTogether_iff）。\"断金\"恰是一个打破，正是这一定义所针对者。种类为相合（名\"同力\"）。剩余：\"同心\"指意志之同，脊柱之合成不需要一个共同之心。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "传（易传）·战国至秦汉（年代有争议）",
+   "locator": "系辞上 第八章",
+   "names_used": [
+    "同力"
+   ],
+   "relational": "是：合力是关系之所成",
+   "tradition": "共享经典",
+   "work": "易传"
+  },
+  {
+   "id": "xici-tian-zun-di-bei",
+   "record_ids": [
+    "XC-R001",
+    "WP-XCS-C01-S01-R01"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "天尊地卑，乾坤定矣。卑高以陈，贵贱位矣。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Law.Commutes.rest_paired",
+    "Becoming.Hexagram.changes_symmetric",
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "what-a-commuting-law-keeps-apart",
+    "relative-position-is-zero-sum"
+   ],
+   "reading": "AI读法：系辞开篇由天地之方位赋予尊卑，再由卑高之陈列定贵贱之位。脊柱上，消息之律与互补交换（Hexagram.waxWane_complement），一爻之变在互补下对称（changes_symmetric），静止成对出现（Law.Commutes.rest_paired）：没有律使阳或阴处于尊位；相对位置按计数零和（RelativePosition.positions_balance），动力学本身不决定意义（Web.significance_undetermined）。所以\"贵贱位矣\"是加在方位之上的等级，不是关系所给。本簇以之为易传固定尊卑诸说之代表条目（与 RO xici-yijun-ermin、xugua-fuzi-junchen 同一判断）；庄子秋水\"以物观之，自贵而相贱\"是反向之证据。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "传（易传）·战国至秦汉（年代有争议）",
+   "locator": "系辞上 第一章",
+   "names_used": [
+    "相軋"
+   ],
+   "relational": "否：固定之尊卑（四层之\"竞争与等级\"与\"固定本性\"）",
+   "tradition": "共享经典",
+   "work": "易传"
+  },
+  {
+   "id": "xici-yijun-ermin",
+   "record_ids": [
+    "WP-XCX-C03-S02-R02",
+    "WP-XCX-C03-S02-R03"
+   ],
+   "source_id": "DS03",
+   "fragments": [
+    "阳一君而二民，君子之道也；阴二君而一民，小人之道也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Law.Commutes.rest_paired",
+    "Becoming.Hexagram.changes_symmetric",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "what-a-commuting-law-keeps-apart",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：沿用 RO xici-yijun-ermin（相分），声明不变。奇偶是结构，\"一君二民为君子之道\"则把计数读成统治关系并赋予道德等级；消息之律与互补交换（Hexagram.waxWane_complement），一爻之变在互补下对称（changes_symmetric），静止成对（Law.Commutes.rest_paired），没有律使少数或多数处于支配位置，动力学也不决定意义（Web.significance_undetermined）。本簇以之为易传单一中心诸说之代表条目。",
+   "gap": "",
+   "ro_passage": "xici-yijun-ermin",
+   "layer": "传（易传）·战国至秦汉（年代有争议）",
+   "locator": "系辞下 第三章",
+   "names_used": [
+    "群"
+   ],
+   "relational": "否：单一中心（四层之一）",
+   "tradition": "共享经典",
+   "work": "易传"
+  },
+  {
+   "id": "xugua-yinshi-bi-you-song",
+   "record_ids": [
+    "WP-XG-C01-S05-R01",
+    "WP-XG-C01-S05-R02",
+    "WP-XG-C01-S06-R03",
+    "WP-XG-C01-S07-R03",
+    "WP-XG-C01-S09-R02"
+   ],
+   "source_id": "YD-OW-XG",
+   "fragments": [
+    "飲食必有訟，故受之以訟",
+    "訟必有眾起，故受之以師",
+    "眾必有所比，故受之以比",
+    "物畜然後有禮，故受之以履"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.exists_law_iff",
+    "Becoming.Run.keepHistory_shown",
+    "Becoming.Hexagram.runsOrder_agrees",
+    "Becoming.Hexagram.ringRule_not_runsOrder",
+    "Becoming.Hexagram.rearrange_not_runsOrder",
+    "Becoming.Flow.WithinJoint",
+    "Becoming.Flow.joint_keeps",
+    "Becoming.Pair.own_not_joint"
+   ],
+   "records": [
+    "histories-fix-law-up-to-dead-ends",
+    "hexagram-arrangements-and-laws",
+    "own-count-misses-joint-excess",
+    "what-taking-all-excludes"
+   ],
+   "reading": "AI读法：沿用 RO xugua-between-pairs（相分）。RO 已证：卦序是一张表之律之运行（Hexagram.runsOrder_agrees），没有只读局部构形或保持对称之律运行它（ringRule_not_runsOrder、rearrange_not_runsOrder），对与对之间的理由是加在列表上之断言（exists_law_iff、Run.keepHistory_shown）。本簇只保留其中五条声明，其余十五条（卦序之可逆、读法与归并）及两条记录（hexagrams-on-the-spine、process-and-frame-as-readings）关乎卦序本身，不涉讼与群，留在 RO；另加三条，理由：本条针对\"饮食必有讼\"之\"必\"：饮食是共同条件上之取用，各自在所给之内可以合起来超出（Pair.own_not_joint），但合取在所给之内时全体被支持（Flow.WithinJoint、Flow.joint_keeps），所以讼不是饮食之必然，只在合取超出而无分界时出现。\"众必有所比\"把众之聚放在相亲之关系上，\"物畜然后有礼\"把礼放在积蓄之条件上，这两句之方向是关系的，但都以序卦之\"必\"\"然后\"为承继之断言。",
+   "gap": "",
+   "ro_passage": "xugua-between-pairs",
+   "layer": "传（易传）·战国至秦汉（年代有争议）",
+   "locator": "序卦·上篇",
+   "names_used": [
+    "爭",
+    "分",
+    "群"
+   ],
+   "relational": "部分：讼、师、比之条件是关系的；\"必\"之承继是断言",
+   "tradition": "共享经典",
+   "work": "易传"
+  },
+  {
+   "id": "xugua-fuzi-junchen",
+   "record_ids": [
+    "OW-R040",
+    "WP-XG-C02-S01-R05",
+    "WP-XG-C02-S01-R06",
+    "WP-XG-C02-S01-R07"
+   ],
+   "source_id": "YD-OW-XG",
+   "fragments": [
+    "有天地然後有萬物，有萬物然後有男女，有男女然後有夫婦，有夫婦然後有父子，有父子然後有君臣，有君臣然後有上下，有上下然後禮儀有所錯。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Law.Commutes.rest_paired",
+    "Becoming.Hexagram.Symmetry.comp_comm",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "what-a-commuting-law-keeps-apart",
+    "hexagram-world-laws",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：沿用 RO xugua-fuzi-junchen（相分），声明不变。序卦下篇由天地、万物、男女、夫妇、父子推到君臣、上下，以为礼义之所据。前几步是生成之次第，可读为关系之形成；\"有父子然后有君臣，有君臣然后有上下\"把统治之等级读成由生成次第而来。脊柱：互补交换与律对易（Hexagram.Symmetry.comp_comm、waxWane_complement、Law.Commutes.rest_paired），没有律使一方居上，动力学不决定意义（Web.significance_undetermined）。分歧：等级之次第为断言，不是关系所给。",
+   "gap": "",
+   "ro_passage": "xugua-fuzi-junchen",
+   "layer": "传（易传）·战国至秦汉（年代有争议）",
+   "locator": "序卦·下篇首",
+   "names_used": [
+    "群"
+   ],
+   "relational": "否：等级之次第（四层之一）",
+   "tradition": "共享经典",
+   "work": "易传"
+  },
+  {
+   "id": "zagua-guai-end",
+   "record_ids": [
+    "WP-ZG-C01-S31-R02",
+    "WP-ZG-C01-S31-R03",
+    "WP-ZG-C01-S31-R04",
+    "WP-ZG-C02-S31-R01"
+   ],
+   "source_id": "YD-OW-ZG",
+   "fragments": [
+    "夬 決也，剛決柔也。君子道長，小人道消也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Hexagram.waxing",
+    "Becoming.Hexagram.waning",
+    "Becoming.Hexagram.waxWane_returns",
+    "Becoming.Hexagram.twelve_steps",
+    "Becoming.Law.Commutes.not_drawn_to_one",
+    "Becoming.Hexagram.waxWane_complement"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "what-a-commuting-law-keeps-apart"
+   ],
+   "reading": "AI读法：沿用 RO zagua-guai-end（相分），声明不变。杂卦以\"刚决柔……君子道长，小人道消\"收尾，把消长读成一方必胜之结局。脊柱上消息之律之每一步都可逆，长者必消，十二步回到起点（Hexagram.waxing、waning、waxWane_returns、twelve_steps），没有律被吸引到一方（Law.Commutes.not_drawn_to_one）。分歧：以消长为胜负。本簇以之为易传争胜之代表条目。",
+   "gap": "",
+   "ro_passage": "zagua-guai-end",
+   "layer": "传（易传）·战国至秦汉（年代有争议）",
+   "locator": "雜卦·末句",
+   "names_used": [
+    "爭"
+   ],
+   "relational": "否：竞争与胜负（四层之一）",
+   "tradition": "共享经典",
+   "work": "易传"
+  },
+  {
+   "id": "jiaren-nan-nv-zheng-wei",
+   "record_ids": [
+    "TP-H37-T-R01",
+    "TP-H37-T-R03",
+    "TP-H37-T-R04",
+    "TP-H37-T-R05"
+   ],
+   "source_id": "YD-JP37",
+   "fragments": [
+    "家人，女正位乎內，男正位乎外，男女正，天地之大義也。",
+    "父父，子子，兄兄，弟弟，夫夫，婦婦，而家道正；",
+    "正家而天下定矣。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Hexagram.Symmetry.comp_comm",
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.Clearing.loses_beyond",
+    "Becoming.Web.AdmitsWithin.narrow"
+   ],
+   "records": [
+    "what-a-commuting-law-keeps-apart",
+    "whole-first-and-bounded-centers",
+    "loss-beyond-a-region"
+   ],
+   "reading": "AI读法：家人彖以\"女正位乎内，男正位乎外\"为天地之大义，以\"家有严君\"为家之中心，以名分之各正为家道，并由正家推至天下定。脊柱：阴阳之互补与律对易（Hexagram.Symmetry.comp_comm、waxWane_complement），没有律给出以性别定内外之位；中心不沿依赖导出（Clearing.center_not_derived）；在一个区域内容纳一切仍可在其外失去（Clearing.loses_beyond），只有由大区域到其中之小区域之方向总成立（Web.AdmitsWithin.narrow），所以\"正家而天下定\"之充分性不由关系给出。分歧：固定之性别角色与名分（四层之\"固定本性\"与\"等级\"）。本簇以之为易传性别位序诸说之代表条目。",
+   "gap": "",
+   "ro_passage": "",
+   "layer": "传（易传）·战国至秦汉（年代有争议）",
+   "locator": "家人·彖",
+   "names_used": [
+    "分",
+    "群"
+   ],
+   "relational": "否：固定之性别位序与家之中心",
+   "tradition": "共享经典",
+   "work": "易传"
+  },
+  {
+   "id": "wangbi-lueli-zhi-zhong-zhe-zhi-gua",
+   "record_ids": [
+    "YCM130-LM-W-02-R01",
+    "YCM130-LM-W-01-R01"
+   ],
+   "source_id": "YWH-LM",
+   "fragments": [
+    "夫眾不能治眾，治眾者，至寡者也。夫動不能制動，制天下之動者，貞夫一者也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.never_agrees_of_both",
+    "Becoming.SharedCodes.TwoFormations.three_agree",
+    "Becoming.SharedCodes.TwoFormations.centre_breaks_exchange",
+    "Becoming.SharedCodes.TwoFormations.preferred_breaks_renaming",
+    "Becoming.SharedCodes.agrees_every_start_iff",
+    "Becoming.SharedCodes.run_from_imposition",
+    "Becoming.Web.pooled_iff_member",
+    "Becoming.Web.pool_adds",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "a-code-formed-between-formations",
+    "what-pooled-coupling-reaches",
+    "whole-first-and-bounded-centers"
+   ],
+   "reading": "AI读法：王弼略例由\"统论一卦之体，明其所由之主\"（YCM130-LM-W-01-R01）推出\"众不能治众，治众者至寡者也……制天下之动者贞夫一者也\"。脊柱给出这句话成立之确切范围。成立之部分：一个保持形成之交换与形式之改名之律，从对称之起点永不一致（SharedCodes.never_agrees_of_both），即\"众不能治众\"在众之间完全对称时成立；在按次序听取并采用所闻者之过程中，从每个起点都达到一致，恰当所有形成在那时有同一来源（agrees_every_start_iff），这是\"至寡\"之确切形式。不成立之部分：打破对称之方式不止一个中心：一个中心、一个优先之形式、一个听取之次序各在一步内使两方一致（TwoFormations.three_agree），中心打破形成之交换（centre_breaks_exchange），优先之形式只打破改名而保持形成之交换（preferred_breaks_renaming），即无一形成居上也能一致（脊柱在两个形成之例中证明，一般族见 gap）；来源也不必是常设之主。代价：被强加之码使每个形成恰失去其码所分而强加之码所合者，来源一无所失（SharedCodes.run_from_imposition）；以一主之耦合代替合用，合用退化为一员（Web.pooled_iff_member），合用所加之差别失去（Web.pool_adds）；中心也不沿依赖导出（Clearing.center_not_derived）。所以\"至寡\"是一致之一种充分方式而非必然，\"贞夫一\"作为一切动之制者是单一中心之层（四层之一），本簇以之为魏晋以下单一中心诸说之代表条目。",
+   "gap": "一般之对称打破律：对任意有限族与两个以上之形式，存在一个保持形成之交换（无一形成居上）而偏向一个形式之码律，使每个起点在有限步内一致；且凡从对称起点达到一致之律，或不保持形成之交换，或不保持形式之改名。后一半是 SharedCodes.never_agrees_of_both 之逆否，已有；前一半脊柱只在两个形成、一个意义之例中证明（SharedCodes.TwoFormations.three_agree、preferred_keeps_exchange、preferred_breaks_renaming），一般族没有定理，所以\"无中心亦可一致\"在一般群中之确切范围未证。",
+   "ro_passage": "",
+   "layer": "注（王弼《周易略例》）·魏晋（曹魏）",
+   "locator": "周易略例·明彖",
+   "names_used": [
+    "同而不和",
+    "和而不同",
+    "群",
+    "约定俗成"
+   ],
+   "relational": "部分：众之对称需要打破是关系的；以一主为必然是单一中心层",
+   "tradition": "共享经典",
+   "work": "周易略例"
+  },
+  {
+   "id": "tuan-tai-pi-shang-xia-jiao",
+   "record_ids": [
+    "HX-R009",
+    "HX-R010"
+   ],
+   "source_id": "YD-HX01",
+   "fragments": [
+    "則是天地交而萬物通也，上下交而其志同也",
+    "則是天地不交而萬物不通也，上下不交而天下無邦也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Hexagram.opposed",
+    "Becoming.Hexagram.oppositions_glue_iff",
+    "Becoming.Flow.uncoupled_beyond_coupling",
+    "Becoming.Flow.system_whole_of_common",
+    "Becoming.Flow.unreached_within_system",
+    "Becoming.Withholding.withholding_absorbs",
+    "Becoming.Hexagram.meets",
+    "Becoming.Hexagram.meets_tai_pi",
+    "Becoming.Hexagram.pi_of_tai",
+    "Becoming.Hexagram.kept_alike",
+    "Becoming.Hexagram.tai_pi_runs"
+   ],
+   "records": [
+    "place-relations-in-context",
+    "testing-within-registration",
+    "levels-of-closure",
+    "giving-that-waits-on-giving",
+    "hexagram-arrangements-and-laws"
+   ],
+   "reading": "AI读法：沿用 RO tuan-tai-pi-jiao（定域），声明不变。泰彖\"上下交而其志同\"、否彖\"上下不交而天下无邦\"把群（邦）之有无放在交之关系上，这是本簇最直接之易传陈述。后果一半有确切范围：一个共同条件使全体同在一个系统（Flow.system_whole_of_common）；系统之外之部分到达不了系统之内（Flow.unreached_within_system）；耦合闭包之外之部分，对闭包内每个形成都读不出差别（Flow.uncoupled_beyond_coupling）；一处扣留在其所达之族中终止一切给予（Withholding.withholding_absorbs）。所以\"不交\"则不在同一闭包，\"无邦\"即没有系统。定域：交与不交不能从全变所保持之位之关系读出，泰与否在每个高度都\"对\"（Hexagram.oppositions_glue_iff），全变所保持之读法沿二者之消息历程每步相同（kept_alike、tai_pi_runs）；区别它们要把一个方向读入两值（Hexagram.meets、meets_tai_pi），这是一个读法。对本簇：群出于交，交是关系之实际耦合，不是位之高下。",
+   "gap": "",
+   "ro_passage": "tuan-tai-pi-jiao",
+   "layer": "传（易传）·战国至秦汉（年代有争议）",
+   "locator": "彖·泰、否",
+   "names_used": [
+    "群",
+    "相待"
+   ],
+   "relational": "是：邦之有无出于上下之交",
+   "tradition": "共享经典",
+   "work": "易传"
+  },
+  {
+   "id": "tuan-tai-nei-junzi-wai-xiaoren",
+   "record_ids": [],
+   "source_id": "YD-HX01",
+   "fragments": [
+    "內陽而外陰，內健而外順，內君子而外小人，君子道長，小人道消也",
+    "內陰而外陽，內柔而外剛，內小人而外君子，小人道長，君子道消也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Hexagram.changes_symmetric",
+    "Becoming.Law.Commutes.rest_paired",
+    "Becoming.Hexagram.complement_moves",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "what-a-commuting-law-keeps-apart",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：沿用 RO tuan-tai-junzi-xiaoren（相分），声明不变；本簇另加否彖之对句为第二个片段，理由：二句对举，判断随位置而反，这一点是关系的。\"内君子而外小人\"把群之内外与君子小人之名连在一起，把道德本性固定在一个值上：律与互补交换（Hexagram.waxWane_complement），一爻之变在互补下对称（changes_symmetric），静止成对（Law.Commutes.rest_paired），阳与阴之间没有律所给之优劣，动力学也不决定意义（Web.significance_undetermined）。对本簇：以本性之名定谁在群内、谁在群外，是\"固定本性\"之层；群之内外在脊柱上只由所共之条件定（见 tuan-tai-pi-shang-xia-jiao）。",
+   "gap": "",
+   "ro_passage": "tuan-tai-junzi-xiaoren",
+   "layer": "传（易传）·战国至秦汉（年代有争议）",
+   "locator": "彖·泰、否",
+   "names_used": [
+    "群"
+   ],
+   "relational": "否：以固定本性定群之内外",
+   "tradition": "共享经典",
+   "work": "易传"
+  },
+  {
+   "id": "mengzi-tui-en",
+   "record_ids": [
+    "RU2-R0007"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "故推恩足以保四海，不推恩无以保妻子。",
+    "古之人所以大过人者，无他焉，善推其所为而已矣。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Overshoot.ends_through_feeder",
+    "Becoming.Flow.beyond_gives_nothing",
+    "Becoming.Flow.Balances.consumption_ends_with_feeders",
+    "Becoming.Renewable.kept_part_not_renewal",
+    "Becoming.Web.SelectsThrough.widen"
+   ],
+   "records": [
+    "feeding-closure",
+    "levels-of-closure",
+    "conditions-kept-together"
+   ],
+   "reading": "AI读法：沿用 RO ru-mengzi-tui-en（定域），声明不变。\"不推恩无以保妻子\"有确切范围：一个形成之延续依赖其供给闭包，闭包内之损失可以经由供给者回到一个本已保持自身支持之形成（Overshoot.ends_through_feeder），供给者都无支持之消耗至多持续其所消耗者之水平那么多步（Flow.Balances.consumption_ends_with_feeders）；所以妻子之延续依赖于恩所未及之处时，不推则不保，这一半成立。\"推恩足以保四海\"是充分性之断言，脊柱给出反例结构：在每一走法下保持一个部分之活动，既不决定更新，也不决定这次运行对其他形成做什么（Renewable.kept_part_not_renewal）；\"推\"作为选择之扩大有对应（Web.SelectsThrough.widen），但扩大选择不等于保住所及之物。对本簇：群之保持需要所依之闭包被及，由近及远之推及是必要方向，不是充分条件，与大学本末同一结构。",
+   "gap": "",
+   "ro_passage": "ru-mengzi-tui-en",
+   "layer": "原典（孟子）·先秦（战国中期）",
+   "locator": "孟子·梁惠王上 第7章",
+   "names_used": [
+    "群"
+   ],
+   "relational": "是：恩之推及沿关系",
+   "tradition": "儒",
+   "work": "孟子"
+  },
+  {
+   "id": "laozi-65-fei-yi-ming-min",
+   "record_ids": [
+    "LAO2-C65-R01"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "古之善为道者，非以明民，将以愚之。民之难治，以其智多。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.pool_adds",
+    "Becoming.Web.separates_all_iff",
+    "Becoming.Flow.unselected_beyond_pool",
+    "Becoming.Flow.response_alike_pool",
+    "Becoming.Web.break_not_bounded"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches",
+    "what-a-pools-acts-respond-to",
+    "runaway-distance-unregistered"
+   ],
+   "reading": "AI读法：沿用 RO lao-65-fei-yi-ming-min（相分），声明不变。\"非以明民，将以愚之\"（并见第三章\"常使民无知无欲\"）是一个中心收窄众人认识之结构。池恰分开其成员不全同样耦合者（Web.separates_all_iff），差别是合用所加（Web.pool_adds，名\"和而不同\"），池对其闭包之外之作为不作响应（Flow.response_alike_pool），闭包之外者不被选择（Flow.unselected_beyond_pool）；收窄众人之耦合就是缩小全体能看见之范围，使到断裂之距离更无从耦合进来（Web.break_not_bounded）。王弼注以\"明\"为\"多见巧诈\"、以\"愚\"为\"无知守真\"，即\"明\"不指理论之明；分歧在结构（一方收窄多方），不在\"明\"这个字。对本簇：群之判断经合用而得其所加，收窄成员之认识即取消合用所加。",
+   "gap": "",
+   "ro_passage": "lao-65-fei-yi-ming-min",
+   "layer": "经（老子，传世王弼本系统经文）·先秦（战国）",
+   "locator": "老子·第65章",
+   "names_used": [
+    "和而不同",
+    "同而不和"
+   ],
+   "relational": "否：一方收窄多方之认识（单一中心）",
+   "tradition": "道",
+   "work": "老子"
+  }
+ ],
+ "parallels": [
+  {
+   "record_id": "ZX-R008",
+   "same_as_entry": "mozi-jianai-xia-xian-cong-shi",
+   "note": "AI读法：朱熹\"上有信以惠于下，则下亦有信以惠于上\"：一方先给，另一方回给，是先施恢复互相等待之环之结构（Withholding.Ring.givesFirst_restores）；此处先给者是在上者，上下之名是剩余。"
+  },
+  {
+   "record_id": "JL-R526",
+   "same_as_entry": "tongren-yu-ye-yu-zong",
+   "note": "AI读法：涣六四\"涣其群，元吉\"，朱熹读为散其小群以成大群（名\"群\"之后世用例），与同人\"于野/于宗\"同为合用范围之宽窄（withinClosureOf_iff、Flow.unselected_beyond_pool）。"
+  },
+  {
+   "record_id": "TP-H01-U9-R01",
+   "same_as_entry": "qian-yong-jiu-qun-long-wu-shou",
+   "note": "AI读法：小象\"天德不可为首\"与用九\"群龙无首\"同一结构：群之关系对称，中心不沿依赖导出（Clearing.center_not_derived）。"
+  },
+  {
+   "record_id": "TP-H03-X1-R02",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：\"以贵下贱，大得民\"：处下是得民之手段，居上仍为所欲，与第66章\"欲上民，必以言下之\"同一相分。"
+  },
+  {
+   "record_id": "TP-H03-X5-R01",
+   "same_as_entry": "daxue-yi-jia-rang",
+   "note": "AI读法：\"屯其膏，施未光\"：所有者扣留不给，给予便不能远及；与大学\"一人贪戾，一国作乱\"同为一处扣留沿等待之链扩散（Withholding.withholding_spreads），定域相同。"
+  },
+  {
+   "record_id": "TP-H06-T-R03",
+   "same_as_entry": "song-zhong-ji-zhong-xiong",
+   "note": "AI读法：\"终凶，讼不可成\"：讼之环推到底不闭合（LoopReturn.never_closes_of_no_less），与卦辞\"中吉终凶\"同一读法。"
+  },
+  {
+   "record_id": "TP-H06-X1-R01",
+   "same_as_entry": "song-zhong-ji-zhong-xiong",
+   "note": "AI读法：\"不永所事，讼不可长\"：在环未失控前截断或让（LoopReturn.cut_closes、closing_needs_less）。"
+  },
+  {
+   "record_id": "TP-H06-X2-R02",
+   "same_as_entry": "xici-tian-zun-di-bei",
+   "note": "AI读法：\"自下讼上，患至掇\"以上下之位判讼之吉凶，是固定尊卑之层，与\"天尊地卑……贵贱位矣\"同一相分。"
+  },
+  {
+   "record_id": "TP-H06-X6-R01",
+   "same_as_entry": "song-zhong-ji-zhong-xiong",
+   "note": "AI读法：\"以讼受服，亦不足敬\"：讼胜之所得不使环闭合，与\"终凶\"同构。"
+  },
+  {
+   "record_id": "TP-H07-T-R03",
+   "same_as_entry": "xici-yijun-ermin",
+   "note": "AI读法：\"能以众正，可以王\"：以一人正众为王，是单一中心之层，与\"阳一君而二民\"同一相分。"
+  },
+  {
+   "record_id": "TP-H08-T-R02",
+   "same_as_entry": "xici-yijun-ermin",
+   "note": "AI读法：\"比，辅也，下顺从也\"：比卦五阴从一阳，以下之顺从为辅，是\"一君而众民\"之同一结构。"
+  },
+  {
+   "record_id": "TP-H09-X5-R01",
+   "same_as_entry": "mozi-shangxian-xia-xiang-zhu",
+   "note": "AI读法：\"有孚挛如，不独富\"：以所有与邻共之，是相互供给（Flow.MutuallyFed）之一例，与\"有财者勉以分人\"同。"
+  },
+  {
+   "record_id": "TP-H10-DX-R02",
+   "same_as_entry": "xici-tian-zun-di-bei",
+   "note": "AI读法：\"君子以辨上下，定民志\"：以上下之辨定民，是固定尊卑之层。"
+  },
+  {
+   "record_id": "TP-H13-X1-R01",
+   "same_as_entry": "tongren-yu-ye-yu-zong",
+   "note": "AI读法：\"出门同人，又谁咎\"：同人之范围出于门外，是合用范围之扩大（Web.pool_adds）。"
+  },
+  {
+   "record_id": "TP-H20-T-R04",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "AI读法：\"圣人以神道设教，而天下服\"：以神圣之权威为服从之依据，规范依据与遵从合于一处，与天志之相分同。"
+  },
+  {
+   "record_id": "TP-H20-T-R05",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "AI读法：由观天之神道而设教，同上：依据放在一个超出关系之权威上（Web.significance_undetermined 表明动力学不给出意义）。"
+  },
+  {
+   "record_id": "TP-H27-X5-R01",
+   "same_as_entry": "xici-tian-zun-di-bei",
+   "note": "AI读法：\"居贞之吉，顺以从上\"：以从上为吉，是位阶之层。"
+  },
+  {
+   "record_id": "TP-H32-X5-R01",
+   "same_as_entry": "jiaren-nan-nv-zheng-wei",
+   "note": "AI读法：\"妇人贞吉，从一而终\"：固定之性别角色，与家人彖\"女正位乎内\"同一相分。"
+  },
+  {
+   "record_id": "TP-H32-X5-R02",
+   "same_as_entry": "jiaren-nan-nv-zheng-wei",
+   "note": "AI读法：\"夫子制义\"：以性别定制义之位，同上。"
+  },
+  {
+   "record_id": "TP-H32-X5-R03",
+   "same_as_entry": "jiaren-nan-nv-zheng-wei",
+   "note": "AI读法：\"从妇凶\"：以性别位序判吉凶，同上。"
+  },
+  {
+   "record_id": "TP-H37-X5-R01",
+   "same_as_entry": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "note": "AI读法：\"王假有家，交相爱也\"：家中之互相关系与\"兼相爱、交相利\"同为双向之结构（Flow.MutuallyFed 推出相互依赖）；此处限于一家，又以王为起点。"
+  },
+  {
+   "record_id": "TP-H38-DX-R02",
+   "same_as_entry": "lunyu-he-er-bu-tong",
+   "note": "AI读法：\"君子以同而异\"：同中有异，与\"和而不同\"同为合用所加之差别（Web.pool_adds）。"
+  },
+  {
+   "record_id": "TP-H43-DX-R03",
+   "same_as_entry": "mozi-shangxian-xia-xiang-zhu",
+   "note": "AI读法：夬大象\"施禄及下，居德则忌\"：所有者不积藏而给予，是相互供给之一方，与\"有财者勉以分人\"同。"
+  },
+  {
+   "record_id": "TP-H44-DX-R02",
+   "same_as_entry": "sunzi-junzheng-jin-gu-jing-qi",
+   "note": "AI读法：\"后以施命诰四方\"：由一个来源向四方发出共同之码，与金鼓旌旗同一结构（SharedCodes.agrees_every_start_iff、run_from_imposition），定域相同。"
+  },
+  {
+   "record_id": "TP-H49-X6-R02",
+   "same_as_entry": "xici-yijun-ermin",
+   "note": "AI读法：\"小人革面，顺以从君\"：以从君为变之完成，是单一中心之层。"
+  },
+  {
+   "record_id": "TP-H53-X3-R03",
+   "same_as_entry": "sunzi-jiudi-tong-zhou",
+   "note": "AI读法：\"利用御寇，顺相保\"：共同之患使各方相保，与同舟共济同为共同条件下之相互依赖（Flow.mutuallyDependent_of_common）。"
+  },
+  {
+   "record_id": "TP-H58-T-R03",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：\"说以先民，民忘其劳\"：以悦为居民之先之手段，与\"欲先民，必以身后之\"同一相分。"
+  },
+  {
+   "record_id": "TP-H58-T-R04",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：\"说以犯难，民忘其死\"：同上，以悦导民赴难，居先者之所欲仍在。"
+  },
+  {
+   "record_id": "TP-H62-X2-R01",
+   "same_as_entry": "xici-tian-zun-di-bei",
+   "note": "AI读法：\"不及其君，臣不可过\"：以君臣之位定所不可越，是固定尊卑之层。"
+  },
+  {
+   "record_id": "WP-XG-C02-S21-R03",
+   "same_as_entry": "xugua-fuzi-junchen",
+   "note": "AI读法：\"主器者莫若长子\"：以生成之次第定统治之位，与\"有父子然后有君臣\"同一相分。"
+  },
+  {
+   "record_id": "WP-ZG-C01-S29-R01",
+   "same_as_entry": "jiaren-nan-nv-zheng-wei",
+   "note": "AI读法：\"渐，女归待男行也\"：固定之性别位序。"
+  },
+  {
+   "record_id": "WP-XCS-C08-S10-R05",
+   "same_as_entry": "xici-tian-zun-di-bei",
+   "note": "AI读法：\"负也者，小人之事也\"：以位定事，是固定尊卑之层。"
+  },
+  {
+   "record_id": "WP-XCS-C08-S10-R06",
+   "same_as_entry": "xici-tian-zun-di-bei",
+   "note": "AI读法：\"乘也者，君子之器也\"：同上。"
+  },
+  {
+   "record_id": "WP-XCS-C11-S02-R06",
+   "same_as_entry": "sunzi-jiudi-tong-zhou",
+   "note": "AI读法：\"吉凶与民同患\"：名\"同患\"之先秦用例，共同条件下之相互依赖。"
+  },
+  {
+   "record_id": "WP-XCS-C11-S06-R04",
+   "same_as_entry": "xici-yijun-ermin",
+   "note": "AI读法：\"备物致用……莫大乎圣人\"：以一人为众利之源，是单一中心之层。"
+  },
+  {
+   "record_id": "WP-XCS-C11-S06-R06",
+   "same_as_entry": "xici-tian-zun-di-bei",
+   "note": "AI读法：\"崇高莫大乎富贵\"：以富贵为崇高，是位阶之层。"
+  },
+  {
+   "record_id": "WP-XCS-C12-S01-R03",
+   "same_as_entry": "mozi-jianai-xia-xian-cong-shi",
+   "note": "AI读法：\"人之所助者，信也\"：在给予等待给予之关系中，可信即不扣留，他人之给予因之继续（Tolerance.restores_iff）。"
+  },
+  {
+   "record_id": "YCM130-H11-H-03-R01",
+   "same_as_entry": "wangbi-lueli-zhi-zhong-zhe-zhi-gua",
+   "note": "AI读法：韩康伯\"位所以一天下之动，而济万物\"：以位一动，与王弼\"制天下之动者贞夫一者也\"同一定域。"
+  },
+  {
+   "record_id": "YCM130-H5-H-11-R01",
+   "same_as_entry": "xici-tian-zun-di-bei",
+   "note": "AI读法：韩康伯以天高地广解知崇礼卑，把方位读成尊卑，同一相分。"
+  },
+  {
+   "record_id": "YCM130-H5-K-10-R01",
+   "same_as_entry": "xici-tian-zun-di-bei",
+   "note": "AI读法：孔颖达疏以天覆地载解崇卑之用，同上。"
+  },
+  {
+   "record_id": "YCM130-LB-W-01-R01",
+   "same_as_entry": "xici-tian-zun-di-bei",
+   "note": "AI读法：王弼辩位\"夫位者，列贵贱之地\"：以爻位为贵贱之序，同一相分。"
+  },
+  {
+   "record_id": "YCM130-LZ-W-03-R01",
+   "same_as_entry": "sunzi-jiudi-tong-zhou",
+   "note": "AI读法：王弼\"同舟而济，则吴越何患乎异心\"：异心者在共同条件下相互依赖，与孙子同舟同。"
+  },
+  {
+   "record_id": "YCM130-Q-Z-Q10-R01",
+   "same_as_entry": "wangbi-lueli-zhi-zhong-zhe-zhi-gua",
+   "note": "AI读法：王弼注乾\"万国所以宁，各以有君也\"：以各有一主为安之条件，与\"治众者至寡者也\"同一定域。"
+  },
+  {
+   "record_id": "CY130-H10-R01",
+   "same_as_entry": "xici-tian-zun-di-bei",
+   "note": "AI读法：程颐\"天在上而泽处下……上下各得其义\"：以上下之位为理之至当，同一相分。"
+  },
+  {
+   "record_id": "CY130-H11-R01",
+   "same_as_entry": "tuan-tai-pi-shang-xia-jiao",
+   "note": "AI读法：程颐解泰\"君推诚以任下，臣尽诚以事君，上下之志通\"：即泰彖\"上下交而其志同\"，群出于交；君臣之名为剩余。"
+  },
+  {
+   "record_id": "CY130-H27-R01",
+   "same_as_entry": "lunyu-ji-yu-li-er-li-ren",
+   "note": "AI读法：程颐\"推己及物以养人\"：以自身为模型推及他人，与\"能近取譬\"同（Learning.lumped_right_iff 给出其成立之条件）。"
+  },
+  {
+   "record_id": "CY130-H37-R01",
+   "same_as_entry": "daxue-ben-mo",
+   "note": "AI读法：程颐由身而家而国之推行，与大学本末同一定域：必要性方向成立，充分性不普遍成立。"
+  },
+  {
+   "record_id": "CY130-H45-R01",
+   "same_as_entry": "wangbi-lueli-zhi-zhong-zhe-zhi-gua",
+   "note": "AI读法：程颐\"天下之聚必得大人以治之\"：以大人为聚之维持者，与王弼同一定域。"
+  },
+  {
+   "record_id": "CY130-H59-R01",
+   "same_as_entry": "cui-shun-yue-er-ying",
+   "note": "AI读法：程颐\"能收合人心则散可聚\"：聚由关系之相应，不由强制。"
+  },
+  {
+   "record_id": "ZX130-H06-R01",
+   "same_as_entry": "song-tian-yu-shui-wei-xing",
+   "note": "AI读法：朱熹\"上刚以制其下，下险以伺其上……皆讼之道也\"：讼出于双方之关系配置。"
+  },
+  {
+   "record_id": "ZX130-H43-R01",
+   "same_as_entry": "xici-er-ren-tong-xin",
+   "note": "AI读法：朱熹\"尽诚以呼号其众相与合力\"：名\"同力\"之宋代用例，只能合起来造成之差别。"
+  },
+  {
+   "record_id": "LC2-HS-C02-R03",
+   "same_as_entry": "mozi-jianai-xia-xian-cong-shi",
+   "note": "AI读法：河上公\"道所施为，不恃望其报也\"：给予而不以回报为条件，正是先给恢复环之定理不依赖回报计算之处。"
+  },
+  {
+   "record_id": "LC2-HS-C07-R02",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：河上公\"圣人无私而己自厚，故能成其私\"：无私是成私之途，与第66章以下为上之手段同一相分。"
+  },
+  {
+   "record_id": "LC2-HS-C13-R01",
+   "same_as_entry": "suzhe-68-xiang-shang-zhi-xin",
+   "note": "AI读法：河上公\"贵其身而贱人，欲为天下主者，则可寄立，不可以久\"：持\"高于其余一切\"之目标者不能静止（Law.aboveAll_never_rests）。"
+  },
+  {
+   "record_id": "LC2-HS-C15-R01",
+   "same_as_entry": "laozi-49-yi-bai-xing-xin-wei-xin",
+   "note": "AI读法：河上公\"与众合同，不自专\"：判断不以一己为准而以众为准，与\"以百姓心为心\"同。"
+  },
+  {
+   "record_id": "LC2-HS-C27-R02",
+   "same_as_entry": "lunyu-wu-qiu-bei-yu-yi-ren",
+   "note": "AI读法：河上公\"人行不善者，圣人犹教导使为善，得以给用\"：不弃，与\"故旧无大故则不弃\"同为容忍之律（Tolerance.tolerating）。"
+  },
+  {
+   "record_id": "LC2-HS-C56-R01",
+   "same_as_entry": "laozi-22-fu-wei-bu-zheng",
+   "note": "AI读法：河上公\"不与贪争利，不与勇争气\"：不持与他人相较之目标，不入争之关系。"
+  },
+  {
+   "record_id": "LC2-HS-C60-R03",
+   "same_as_entry": "zhongyong-bing-yu-bu-xiang-hai",
+   "note": "AI读法：河上公\"两不相伤……德交归\"：并存而不相害，与\"万物并育而不相害\"同一定域。"
+  },
+  {
+   "record_id": "LC2-HS-C66-R01",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：河上公\"圣人在民上为主，不以尊贵虐下\"：居上而不虐，仍以居上为前提。"
+  },
+  {
+   "record_id": "LC2-HS-C66-R02",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：河上公\"圣人在民前，不以光明蔽后\"：同上。"
+  },
+  {
+   "record_id": "LC2-HS-C67-R02",
+   "same_as_entry": "sunzi-xushi-wo-zhuan-di-fen",
+   "note": "AI读法：河上公\"百姓亲附，并心一意，故以战则胜敌\"：合众为一以胜敌，与\"我专为一，敌分为十\"同为争胜之框架。"
+  },
+  {
+   "record_id": "LC2-HS-C68-R01",
+   "same_as_entry": "laozi-68-bu-zheng-zhi-de",
+   "note": "AI读法：河上公\"附近以仁，来远以德，不与敌争，而敌自服\"：不争与胜敌并举，与第68章同一定域。"
+  },
+  {
+   "record_id": "LC2-HS-C77-R01",
+   "same_as_entry": "laozi-77-ren-zhi-dao",
+   "note": "AI读法：河上公\"损贫以奉富，夺弱以益强\"：份额向一方集中之吸引子，与第77章同。"
+  },
+  {
+   "record_id": "LL-R034",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：\"不敢为天下先，故能成器长\"：不先是成为器长之途，后先之次仍在，与第66章同一相分（\"为天下先\"之名见名表）。"
+  },
+  {
+   "record_id": "LL-R037",
+   "same_as_entry": "laozi-22-fu-wei-bu-zheng",
+   "note": "AI读法：\"天之道，不争而善胜\"：不持争之目标而不入争之关系，与\"夫唯不争\"同；\"善胜\"之胜负尺度是剩余。"
+  },
+  {
+   "record_id": "LC2-SZ-C10-R04",
+   "same_as_entry": "daxue-ben-mo",
+   "note": "AI读法：苏辙\"既以治身，又推其余以及人，虽至于治国爱民\"：由身推及国，与大学本末同一定域。"
+  },
+  {
+   "record_id": "LC2-SZ-C46-R01",
+   "same_as_entry": "laozi-46-zhi-zu-zhi-zu",
+   "note": "AI读法：苏辙\"天下各安其分则不争而自治\"：以各安其分解知足，分在此是固定之位分；见第46章条目。"
+  },
+  {
+   "record_id": "LC2-SZ-C49-R02",
+   "same_as_entry": "laozi-49-yi-bai-xing-xin-wei-xin",
+   "note": "AI读法：苏辙\"于善无所喜，于恶无所嫉\"：不以一己之好恶为准，与\"无常心\"同。"
+  },
+  {
+   "record_id": "LC2-SZ-C54-R01",
+   "same_as_entry": "laozi-54-xiu-zhi-yu-shen",
+   "note": "AI读法：苏辙\"身既修，推其余以及外\"：德之外传，与第54章同一定域。"
+  },
+  {
+   "record_id": "LC2-SZ-C61-R01",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：苏辙\"大国能下则小国附之\"：以下为附人之途，与第66章同一相分。"
+  },
+  {
+   "record_id": "LC2-SZ-C61-R02",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：苏辙\"大国下以取人，小国下而取于人\"：下仍是取之手段，同上。"
+  },
+  {
+   "record_id": "LC2-SZ-C63-R01",
+   "same_as_entry": "laozi-63-bao-yuan-yi-de",
+   "note": "AI读法：苏辙\"爱恶之情忘则虽报怨犹报德也\"：怨不再被交回，环中断。"
+  },
+  {
+   "record_id": "LC2-SZ-C66-R01",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：苏辙\"圣人非欲上人……其道不得不上且先耳\"：试图去掉\"欲\"，仍保留上先之果。"
+  },
+  {
+   "record_id": "LC2-SZ-C67-R03",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：苏辙\"不敢先之，乐推于世，其终卒为器长\"：同上。"
+  },
+  {
+   "record_id": "LC2-SZ-C68-R03",
+   "same_as_entry": "laozi-68-bu-zheng-zhi-de",
+   "note": "AI读法：苏辙\"诚能下之，则天下皆吾用也\"：不居上者才能与他人之力合成，与\"用人之力\"同。"
+  },
+  {
+   "record_id": "LC2-SZ-C72-R02",
+   "same_as_entry": "zhongyong-bing-yu-bu-xiang-hai",
+   "note": "AI读法：苏辙\"不狭不厌，与人同生\"：与他人并存而不相压，与\"并育而不相害\"同一定域。"
+  },
+  {
+   "record_id": "LC2-SZ-C81-R04",
+   "same_as_entry": "laozi-22-fu-wei-bu-zheng",
+   "note": "AI读法：苏辙\"能为能争而未尝争\"：不入争之关系。"
+  },
+  {
+   "record_id": "LAO2-C49-R05",
+   "same_as_entry": "laozi-65-fei-yi-ming-min",
+   "note": "AI读法：\"百姓皆注其耳目，圣人皆孩之\"：众人之耳目都注于一个中心，中心使之如孩，与第65章\"将以愚之\"同为一方收窄多方之认识。"
+  },
+  {
+   "record_id": "LAO2-C53-R03",
+   "same_as_entry": "laozi-77-ren-zhi-dao",
+   "note": "AI读法：\"朝甚除，田甚芜，仓甚虚……是为盗夸\"：一方之有余由他方之不足供给，与\"损不足以奉有馀\"同（Flow.Balances.rise_paid_from_beyond）。"
+  },
+  {
+   "record_id": "LAO2-C60-R03",
+   "same_as_entry": "zhongyong-bing-yu-bu-xiang-hai",
+   "note": "AI读法：\"其神不伤人……圣人亦不伤人\"：两不相伤之并存。"
+  },
+  {
+   "record_id": "LAO2-C60-R04",
+   "same_as_entry": "zhongyong-bing-yu-bu-xiang-hai",
+   "note": "AI读法：\"夫两不相伤，故德交归焉\"：同上。"
+  },
+  {
+   "record_id": "LAO2-C69-R04",
+   "same_as_entry": "laozi-68-bu-zheng-zhi-de",
+   "note": "AI读法：\"抗兵相加，哀者胜矣\"：不争之德仍在胜负之框架中，与第68章同一定域。"
+  },
+  {
+   "record_id": "LC2-WB-C07-R01",
+   "same_as_entry": "laozi-22-fu-wei-bu-zheng",
+   "note": "AI读法：王弼\"自生则与物争，不自生则物归也\"：以自身为目标即入争之关系，不持此目标则不入。"
+  },
+  {
+   "record_id": "LC2-WB-C30-R01",
+   "same_as_entry": "laozi-30-bu-yi-bing-qiang",
+   "note": "AI读法：王弼\"趣以济难而已矣，不以兵力取强于天下\"：果而不取强，与第30章同一定域。"
+  },
+  {
+   "record_id": "LC2-WB-C46-R01",
+   "same_as_entry": "laozi-46-zhi-zu-zhi-zu",
+   "note": "AI读法：王弼\"贪欲无厌……各求于外，故戎马生于郊\"：各自之所求合起来超出所给（Pair.own_not_joint）。"
+  },
+  {
+   "record_id": "LC2-WB-C54-R01",
+   "same_as_entry": "laozi-54-xiu-zhi-yu-shen",
+   "note": "AI读法：王弼\"以身及人……所施转大\"：德沿关系外传，与第54章同一定域。"
+  },
+  {
+   "record_id": "LC2-WB-C56-R01",
+   "same_as_entry": "laozi-03-bu-shang-xian",
+   "note": "AI读法：王弼\"无所特显，则物无所偏争\"：不以名位显某人，则不入相对位置之争，与\"不尚贤\"同。"
+  },
+  {
+   "record_id": "LC2-WB-C58-R01",
+   "same_as_entry": "laozi-03-bu-shang-xian",
+   "note": "AI读法：王弼\"立刑名，明赏罚……民怀争竞\"：以名位与赏罚之选择使民入相对位置之局（RelativePosition.rise_needs_fall）。"
+  },
+  {
+   "record_id": "LC2-WB-C61-R01",
+   "same_as_entry": "laozi-66-yu-shang-min",
+   "note": "AI读法：王弼\"大国修下则天下归之……大者宜为下\"：下是天下归之之途，与第66章同一相分。"
+  },
+  {
+   "record_id": "LC2-WB-C63-R01",
+   "same_as_entry": "laozi-49-yi-bai-xing-xin-wei-xin",
+   "note": "AI读法：王弼\"大怨则天下之所欲诛，顺天下之所同者，德也\"：以天下之所同为准，是合用之判断，与\"以百姓心为心\"同；它不是\"报怨以德\"之环之读法。"
+  },
+  {
+   "record_id": "LC2-WB-C68-R01",
+   "same_as_entry": "laozi-68-bu-zheng-zhi-de",
+   "note": "AI读法：王弼\"用人而不为之下，则力不为用也\"：居上者不能与他人之力合成，与\"用人之力\"同。"
+  },
+  {
+   "record_id": "LC2-WB-C69-R01",
+   "same_as_entry": "laozi-30-bu-yi-bing-qiang",
+   "note": "AI读法：王弼\"吾哀慈谦退，非欲以取强……卒至于无敌，斯乃吾之所以为大祸也\"：不取强，与第30章\"不敢以取强\"同。"
+  },
+  {
+   "record_id": "LC2-WB-C76-R01",
+   "same_as_entry": "laozi-30-bu-yi-bing-qiang",
+   "note": "AI读法：王弼\"强兵以暴于天下者，物之所恶也，故必不得胜\"：以兵强天下其事好还，与第30章同一定域。"
+  },
+  {
+   "record_id": "RU1-DX-06-R01",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：\"为人君止于仁\"：按位分定所止，与\"贵贱有等\"同为位阶之层。"
+  },
+  {
+   "record_id": "RU1-DX-06-R02",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：\"为人臣止于敬\"：同上。"
+  },
+  {
+   "record_id": "RU1-DX-06-R03",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：\"为人子止于孝\"：同上。"
+  },
+  {
+   "record_id": "RU1-DX-06-R04",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：\"为人父止于慈\"：同上。"
+  },
+  {
+   "record_id": "RU1-DX-06-R05",
+   "same_as_entry": "mozi-jianai-xia-xian-cong-shi",
+   "note": "AI读法：\"与国人交止于信\"：同侪之间以不扣留为常，他人之给予因之继续（Tolerance.restores_iff）；这一句不带位阶。"
+  },
+  {
+   "record_id": "RU1-DX-10-R02",
+   "same_as_entry": "daxue-ben-mo",
+   "note": "AI读法：\"孝者所以事君也\"：由家推国，与大学本末同一定域。"
+  },
+  {
+   "record_id": "RU1-DX-10-R03",
+   "same_as_entry": "daxue-ben-mo",
+   "note": "AI读法：\"弟者所以事长也\"：同上。"
+  },
+  {
+   "record_id": "RU1-DX-10-R04",
+   "same_as_entry": "daxue-ben-mo",
+   "note": "AI读法：\"慈者所以使众也\"：同上。"
+  },
+  {
+   "record_id": "RU1-DX-12-R02",
+   "same_as_entry": "lunyu-ji-yu-li-er-li-ren",
+   "note": "AI读法：\"有诸己而后求诸人\"：以自身为模型推及他人。"
+  },
+  {
+   "record_id": "RU1-DX-12-R03",
+   "same_as_entry": "lunyu-ji-yu-li-er-li-ren",
+   "note": "AI读法：\"无诸己而后非诸人\"：同上。"
+  },
+  {
+   "record_id": "RU1-DX-12-R04",
+   "same_as_entry": "lunyu-ji-yu-li-er-li-ren",
+   "note": "AI读法：\"所藏乎身不恕，而能喻诸人者，未之有也\"：同上。"
+  },
+  {
+   "record_id": "RU1-DX-13-R01",
+   "same_as_entry": "daxue-ben-mo",
+   "note": "AI读法：\"宜其家人，而后可以教国人\"：由家推国，同一定域。"
+  },
+  {
+   "record_id": "RU1-DX-16-R01",
+   "same_as_entry": "laozi-49-yi-bai-xing-xin-wei-xin",
+   "note": "AI读法：\"民之所好好之，民之所恶恶之\"：以众之好恶为准，与\"以百姓心为心\"同。"
+  },
+  {
+   "record_id": "RU1-DX-19-R07",
+   "same_as_entry": "laozi-03-bu-shang-xian",
+   "note": "AI读法：\"外本内末，争民施夺\"：以财为选择之所在，使民入相对位置之争。"
+  },
+  {
+   "record_id": "RU1-DX-31-R01",
+   "same_as_entry": "daxue-yi-jia-rang",
+   "note": "AI读法：\"未有上好仁而下不好义者也\"：上之所为向下传开，与\"一家仁，一国兴仁\"同一定域。"
+  },
+  {
+   "record_id": "RU1-LY-01-02-R03",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：\"孝弟而好犯上者鲜\"：以犯上为乱之源，预设上下之位。"
+  },
+  {
+   "record_id": "RU1-LY-02-20-R01",
+   "same_as_entry": "daxue-yi-jia-rang",
+   "note": "AI读法：\"临之以庄则敬\"：在上者之所为引起在下者之回应，与\"一家让，一国兴让\"同一定域。"
+  },
+  {
+   "record_id": "RU1-LY-02-20-R02",
+   "same_as_entry": "daxue-yi-jia-rang",
+   "note": "AI读法：\"孝慈则忠\"：同上。"
+  },
+  {
+   "record_id": "RU1-LY-03-19-R01",
+   "same_as_entry": "mozi-jianai-xia-xian-cong-shi",
+   "note": "AI读法：\"君使臣以礼\"：一方先以礼给，另一方以忠回，是先施之结构；君臣之名为剩余。"
+  },
+  {
+   "record_id": "RU1-LY-03-19-R02",
+   "same_as_entry": "mozi-jianai-xia-xian-cong-shi",
+   "note": "AI读法：\"臣事君以忠\"：同上之另一半。"
+  },
+  {
+   "record_id": "RU1-LY-04-12-R01",
+   "same_as_entry": "xunzi-fuguo-yu-duo-wu-gua",
+   "note": "AI读法：\"放于利而行，多怨\"：各依己利而取，合起来超出所给，与\"欲多而物寡，寡则必争\"同（Pair.own_not_joint）。"
+  },
+  {
+   "record_id": "RU1-LY-13-18-R01",
+   "same_as_entry": "zhongyong-qinqin-zhi-sha",
+   "note": "AI读法：\"父为子隐，子为父隐，直在其中\"：以亲疏为判断之权重，与\"亲亲之杀\"同一相分。"
+  },
+  {
+   "record_id": "RU1-LY-14-45-R02",
+   "same_as_entry": "daxue-ben-mo",
+   "note": "AI读法：\"修己以安人\"：由己推人；孔子自言\"修己以安百姓，尧舜其犹病诸\"，经文本身已示充分性之难。"
+  },
+  {
+   "record_id": "RU1-LY-14-45-R03",
+   "same_as_entry": "daxue-ben-mo",
+   "note": "AI读法：\"修己以安百姓\"：同上。"
+  },
+  {
+   "record_id": "RU1-ZY-10-R03",
+   "same_as_entry": "lunyu-he-er-bu-tong",
+   "note": "AI读法：\"和而不流\"：相持而不同化，与\"和而不同\"同。"
+  },
+  {
+   "record_id": "RU1-ZY-19-R03",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：\"序爵所以辨贵贱也\"：以爵序定贵贱，位阶之层。"
+  },
+  {
+   "record_id": "RU1-ZY-37-R01",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：\"虽有其位，苟无其德，不敢作礼乐\"：以位为定码之条件，位阶之层。"
+  },
+  {
+   "record_id": "RU1-ZY-37-R02",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：\"虽有其德，苟无其位，亦不敢作礼乐\"：同上。"
+  },
+  {
+   "record_id": "RU1-ZY-39-R02",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：\"不尊不信\"：以位之尊为信之条件，同上。"
+  },
+  {
+   "record_id": "RU2-R0001",
+   "same_as_entry": "xunzi-fuguo-yu-duo-wu-gua",
+   "note": "AI读法：\"上下交征利而国危\"：各自取于共同之所给，合取超出，与\"欲多而物寡\"同。"
+  },
+  {
+   "record_id": "RU2-R0017",
+   "same_as_entry": "lunyu-bu-huan-gua-er-huan-bu-jun",
+   "note": "AI读法：\"以力服人者，非心服也，力不赡也\"：以强制扩大群不能持久；与\"远人不服，则修文德以来之\"同为以吸引而非强制扩大群。"
+  },
+  {
+   "record_id": "RU2-R0018",
+   "same_as_entry": "lunyu-bu-huan-gua-er-huan-bu-jun",
+   "note": "AI读法：\"以德服人者，中心悦而诚服\"：同上。"
+  },
+  {
+   "record_id": "RU2-R0024",
+   "same_as_entry": "mozi-jianai-xia-xian-cong-shi",
+   "note": "AI读法：\"得道者多助，失道者寡助\"：给予等待给予，所得之助随所给而来。"
+  },
+  {
+   "record_id": "RU2-R0050",
+   "same_as_entry": "laozi-49-yi-bai-xing-xin-wei-xin",
+   "note": "AI读法：\"天与之，人与之，故天子不能以天下与人\"：天下之归属取决于众，不由一人授予，是合用之判断。"
+  },
+  {
+   "record_id": "RU2-R0078",
+   "same_as_entry": "zhongyong-qinqin-zhi-sha",
+   "note": "AI读法：\"民为贵，社稷次之，君为轻\"：方向与位阶相反，但同为给群之部分排意义之次；条件本身不排序（Transfer.unordered），排序需要另外的比较承诺。"
+  },
+  {
+   "record_id": "RU2-R0157",
+   "same_as_entry": "lunyu-he-er-bu-tong",
+   "note": "AI读法：周敦颐\"万物各得其理，然后和\"：各异而后和，与\"和而不同\"同。"
+  },
+  {
+   "record_id": "RU2-R0161",
+   "same_as_entry": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "note": "AI读法：周敦颐\"动直则公\"：公即不以自身之界为准，与\"视人若视其\"同为跨边界不变（boundaryInvariant_iff_standpointInvariant）。"
+  },
+  {
+   "record_id": "RU2-R0162",
+   "same_as_entry": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "note": "AI读法：\"公则溥\"：不以自身为界，所及乃广，同上。"
+  },
+  {
+   "record_id": "RU2-R0258",
+   "same_as_entry": "mozi-shangxian-shang",
+   "note": "AI读法：荀子\"谪德而定次，量能而授官\"：以排序择治者，与尚贤同一相分。"
+  },
+  {
+   "record_id": "RU2-R0264",
+   "same_as_entry": "sunzi-xushi-wo-zhuan-di-fen",
+   "note": "AI读法：\"义立而王\"：以王、霸、亡为尺度，是国与国争胜之框架。"
+  },
+  {
+   "record_id": "RU2-R0265",
+   "same_as_entry": "sunzi-xushi-wo-zhuan-di-fen",
+   "note": "AI读法：\"信立而霸\"：同上。"
+  },
+  {
+   "record_id": "RU2-R0267",
+   "same_as_entry": "mozi-jianai-xia-xian-cong-shi",
+   "note": "AI读法：\"虽睹利败，不欺其民；约结已定，虽睹利败，不欺其与\"：在受损时仍不扣留，等待它之给予因之继续；\"兵劲城固，敌国畏之\"之争胜尺度是剩余。"
+  },
+  {
+   "record_id": "RU2-R0277",
+   "same_as_entry": "mozi-jianai-xia-xian-cong-shi",
+   "note": "AI读法：\"乐民之乐者，民亦乐其乐\"：一方先给，另一方回给。"
+  },
+  {
+   "record_id": "RU2-R0282",
+   "same_as_entry": "zhuangzi-qiushui-zi-gui-xiang-jian",
+   "note": "AI读法：\"不挟长，不挟贵……友其德也\"：交友不以位置为关系之一部分，与\"贵贱不在己\"同。"
+  },
+  {
+   "record_id": "ZH1-C04-R-06",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：庄子人间世\"臣之事君，义也，无适而非君也\"：以君臣之位为无所逃之义，位阶之层（庄子在此是描述世俗之大戒）。"
+  },
+  {
+   "record_id": "ZH1-C13-R-03",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：天道\"上必无为而用天下，下必有为为天下用，此不易之道也\"：以位定职且称不易，位阶与固定本性之层。"
+  },
+  {
+   "record_id": "ZH1-C33-R-15",
+   "same_as_entry": "suzhe-68-xiang-shang-zhi-xin",
+   "note": "AI读法：天下\"以反人为实，而欲以胜人为名，是以与众不适\"：求居人之上，与众不能相为用。"
+  },
+  {
+   "record_id": "MO1-C09-R002",
+   "same_as_entry": "mozi-shangxian-shang",
+   "note": "AI读法：尚贤中\"不党父兄，不偏贵富\"而按能任事：否认固定之贵贱，但仍以排序择治者，与尚贤上同一相分。"
+  },
+  {
+   "record_id": "MO1-C09-R016",
+   "same_as_entry": "lunyu-bu-huan-gua-er-huan-bu-jun",
+   "note": "AI读法：尚贤中\"挟震威强……未尝能有以此王天下\"：以强制扩大群不能持久，与\"修文德以来之\"同。"
+  },
+  {
+   "record_id": "MO1-C12-R003",
+   "same_as_entry": "mozi-shangtong",
+   "note": "AI读法：尚同中\"上之所是必亦是之\"并规谏、傍荐：与尚同上同一定域。"
+  },
+  {
+   "record_id": "MO1-C12-R004",
+   "same_as_entry": "mozi-shangtong",
+   "note": "AI读法：里长、乡长层层尚同：同上。"
+  },
+  {
+   "record_id": "MO1-C12-R005",
+   "same_as_entry": "mozi-shangtong",
+   "note": "AI读法：乡长尚同乎国君：同上。"
+  },
+  {
+   "record_id": "MO1-C12-R006",
+   "same_as_entry": "mozi-shangtong",
+   "note": "AI读法：国君尚同乎天子：同上。"
+  },
+  {
+   "record_id": "MO1-C13-R011",
+   "same_as_entry": "mozi-shangtong",
+   "note": "AI读法：尚同下\"富贵以道其前，明罚以率其后\"：以赏罚维持上同，是尚同之强制剩余。"
+  },
+  {
+   "record_id": "MO1-C13-R012",
+   "same_as_entry": "mozi-shangtong-xia-shi-qi-guo",
+   "note": "AI读法：与该条目同一段：各国已治而天下未治，出路为\"选其国之义以尚同于天子\"。"
+  },
+  {
+   "record_id": "MO1-C14-R003",
+   "same_as_entry": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "note": "AI读法：兼爱上\"爱人若爱其身\"：跨边界不变，同一定域。"
+  },
+  {
+   "record_id": "MO1-C16-R003",
+   "same_as_entry": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "note": "AI读法：兼爱下\"为彼者由为己也\"：同上。"
+  },
+  {
+   "record_id": "MO1-C16-R004",
+   "same_as_entry": "mozi-shangxian-xia-xiang-zhu",
+   "note": "AI读法：兼爱下\"聪耳明目相为视听，股肱毕强相为动宰\"：相互供给。"
+  },
+  {
+   "record_id": "MO1-C16-R005",
+   "same_as_entry": "mozi-shangxian-xia-xiang-zhu",
+   "note": "AI读法：兼政使老孤幼弱有养有依：相互供给。"
+  },
+  {
+   "record_id": "MO1-C19-R008",
+   "same_as_entry": "mozi-jianai-xia-xian-cong-shi",
+   "note": "AI读法：非攻下\"信効先利天下诸侯……大国之攻小国也，则同救之\"：国与国之间先给；\"天下无敌\"之争胜尺度是剩余。"
+  },
+  {
+   "record_id": "MO1-C25-R008",
+   "same_as_entry": "mozi-shangxian-xia-xiang-zhu",
+   "note": "AI读法：节葬下\"人为其所能，以交相利也\"：名\"交相利\"之先秦用例，相互供给。"
+  },
+  {
+   "record_id": "MO1-C27-R001",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "AI读法：天志中\"义不从愚且贱者出，必自贵且知者出\"：义之来源在上位，与天志同一相分。"
+  },
+  {
+   "record_id": "MO1-C28-R002",
+   "same_as_entry": "mozi-tianzhi",
+   "note": "AI读法：天志下\"正者无自下正上者，必自上正下\"：同上。"
+  },
+  {
+   "record_id": "MO1-C28-R005",
+   "same_as_entry": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "note": "AI读法：天志下\"义正者……大不攻小，强不侮弱，众不贼寡\"：与兼爱中\"强不执弱，众不劫寡\"同一结构；其依据仍归天意，见 mozi-tianzhi。"
+  },
+  {
+   "record_id": "MI1-R-G4-political",
+   "same_as_entry": "wangbi-lueli-zhi-zhong-zhe-zhi-gua",
+   "note": "AI读法：公孙龙\"君臣争而两明\"：对称之两方不能从分歧走到一致（SharedCodes.never_agrees_of_both），与\"众不能治众\"之成立部分同。"
+  },
+  {
+   "record_id": "BI1-SM-R-07",
+   "same_as_entry": "sunzi-jiudi-tong-zhou",
+   "note": "AI读法：司马法\"同患同利以合诸侯\"：名\"同患\"之用例，共同条件使相互依赖。"
+  },
+  {
+   "record_id": "BI1-SM-R-21",
+   "same_as_entry": "lunyu-yi-rang",
+   "note": "AI读法：司马法\"胜则与众分善……若使不胜，取过在己\"：在相责之环中自取其过，是交回少于所受之环节（LoopReturn.closing_needs_less）。"
+  },
+  {
+   "record_id": "BI1-WZ-R-07",
+   "same_as_entry": "mozi-shangxian-shang",
+   "note": "AI读法：吴子\"君能使贤者居上，不肖者处下\"：以排序定位，与尚贤同一相分。"
+  },
+  {
+   "record_id": "BI1-WZ-R-07b",
+   "same_as_entry": "xunzi-yibing-da-ning",
+   "note": "AI读法：吴子\"民安其田宅，亲其有司，则守已固\"：所连之关系在其后仍被支持，与\"政平而民安……大凝\"同。"
+  },
+  {
+   "record_id": "BI1-WZ-R-07c",
+   "same_as_entry": "sunzi-xushi-wo-zhuan-di-fen",
+   "note": "AI读法：吴子\"百姓皆是吾君而非邻国，则战已胜\"：合己而分人以胜，争胜之框架。"
+  },
+  {
+   "record_id": "BI1-WZ-R-13",
+   "same_as_entry": "sunzi-junzheng-jin-gu-jing-qi",
+   "note": "AI读法：吴子\"任其上令，则治之所由生\"：一个来源之号令为共同之码，与金鼓旌旗同一定域。"
+  },
+  {
+   "record_id": "BI1-WZ-R-23",
+   "same_as_entry": "lunyu-bu-huan-gua-er-huan-bu-jun",
+   "note": "AI读法：吴子\"严明之事……非所恃也\"，所恃者人之乐：不以强制而以吸引；目的是战，属争胜层之剩余。"
+  },
+  {
+   "record_id": "FA1-H05-R006",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：主道\"有功则君有其贤，有过则臣任其罪\"：中心握住选择之回路而不承其代价，与二柄同一相分。"
+  },
+  {
+   "record_id": "FA1-H05-R007",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：主道\"官有一人，勿令通言\"：中心阻断部分之间之连接，使汇集只经过自己（Web.pooled_iff_member），同上。"
+  },
+  {
+   "record_id": "FA1-H05-R009",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：主道\"臣制财利，则主失德\"：施与之权必在中心，同上。"
+  },
+  {
+   "record_id": "FA1-H06-R003",
+   "same_as_entry": "hanfei-wudu-gong-si-xiang-bei",
+   "note": "AI读法：有度\"去私曲就公法\"：以公私为相反之两方，同一相分。"
+  },
+  {
+   "record_id": "FA1-H06-R004",
+   "same_as_entry": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "note": "AI读法：有度\"顺上之为，从主之法，虚心以待令，而无是非\"：一切判断只经过一个耦合（Web.pooled_iff_member），与\"壹\"同一相分。"
+  },
+  {
+   "record_id": "FA1-H06-R008",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：有度\"法不阿贵……刑过不避大臣，赏善不遗匹夫\"：法对尊卑一律是其中关系之一面，但仍在中心握二柄之框架中。"
+  },
+  {
+   "record_id": "FA1-H06-R009",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：有度\"威、制共，则众邪彰\"：选择之权不可分享，同上。"
+  },
+  {
+   "record_id": "FA1-H08-R001",
+   "same_as_entry": "xunzi-wangba-fen-tian-er-geng",
+   "note": "AI读法：扬权\"使鸡司夜，令狸执鼠，皆用其能，上乃无事\"：各分其事之排他足迹，与\"农分田而耕……天子共己而已\"同；顶点之中心为剩余。"
+  },
+  {
+   "record_id": "FA1-H08-R004",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：扬权\"君操其名，臣效其形\"：中心握住读法，同二柄。"
+  },
+  {
+   "record_id": "FA1-H08-R008",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：扬权\"上操度量，以割其下\"：同上。"
+  },
+  {
+   "record_id": "FA1-H08-R009",
+   "same_as_entry": "sunzi-xushi-wo-zhuan-di-fen",
+   "note": "AI读法：扬权\"臣之所不弑其君者，党与不具也\"：使他者不能连成一个系统（Flow.system_unchanged_without_iff），与\"敌分\"同一结构，用于控制。"
+  },
+  {
+   "record_id": "FA1-H08-R010",
+   "same_as_entry": "wangbi-lueli-zhi-zhong-zhe-zhi-gua",
+   "note": "AI读法：扬权\"一家二贵，事乃无功\"：对称之两中心不能一致，与\"众不能治众\"之成立部分同。"
+  },
+  {
+   "record_id": "FA1-H08-R011",
+   "same_as_entry": "sunzi-xushi-wo-zhuan-di-fen",
+   "note": "AI读法：扬权\"木数披，党与乃离\"：去掉把部分连成系统之连接，同上。"
+  },
+  {
+   "record_id": "FA1-H11-R009",
+   "same_as_entry": "hanfei-wudu-gong-si-xiang-bei",
+   "note": "AI读法：孤愤\"主利在……臣利在……\"：以主臣之利为相反，同一相分。"
+  },
+  {
+   "record_id": "FA1-H40-R001",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：难势引慎子\"势位足以屈贤者\"：以位为控制之资，同二柄。"
+  },
+  {
+   "record_id": "FA1-H40-R002",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：\"贤智未足以服众\"：同上。"
+  },
+  {
+   "record_id": "FA1-H43-R007",
+   "same_as_entry": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "note": "AI读法：定法\"设告相坐……赏厚而信，刑重而必\"：以连坐与赏罚收窄选择，同\"壹赏壹刑\"。"
+  },
+  {
+   "record_id": "FA1-H48-R003",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：八经\"赏罚下共则威分\"：同二柄。"
+  },
+  {
+   "record_id": "FA1-H48-R007",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：八经\"事成则君收其功，规败则臣任其罪\"：同上。"
+  },
+  {
+   "record_id": "FA1-H48-R008",
+   "same_as_entry": "hanfei-wudu-gong-si-xiang-bei",
+   "note": "AI读法：八经\"知臣主之异利者王\"：以相反之利为前提，同一相分。"
+  },
+  {
+   "record_id": "FA1-H48-R011",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：八经\"明主其务在周密\"：中心隐其读法以保控制，同二柄。"
+  },
+  {
+   "record_id": "FA1-H49-R012",
+   "same_as_entry": "hanfei-wudu-ren-zhong-cai-gua",
+   "note": "AI读法：五蠹\"贞信之士不盈于十，而境内之官以百数\"：所需多于所有，是数量关系（Stock.feasible_iff_covered），与\"人民众而货财寡\"同。"
+  },
+  {
+   "record_id": "FA1-H49-R018",
+   "same_as_entry": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "note": "AI读法：五蠹\"以法为教，以吏为师……动作者归之于功，为勇者尽之于军\"：一切活动收为一门，同\"壹教\"。"
+  },
+  {
+   "record_id": "FA1-H50-R012",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：显学\"不恃人之为吾善也，而用其不得为非也\"：以赏罚之选择代替关系，同二柄。"
+  },
+  {
+   "record_id": "FA1-H50-R015",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：显学\"民不知悦\"而不从民意：以中心之读法取代众之判断，同二柄。"
+  },
+  {
+   "record_id": "FA1-S14-R001",
+   "same_as_entry": "hanfei-wudu-gong-si-xiang-bei",
+   "note": "AI读法：修权\"君臣释法任私，必乱\"：以公私相反为前提。"
+  },
+  {
+   "record_id": "FA1-S14-R002",
+   "same_as_entry": "hanfei-wudu-gong-si-xiang-bei",
+   "note": "AI读法：修权\"立法明分，而不以私害法，则治\"：明分之一面与荀子之分相近，但以法与私相反为框架。"
+  },
+  {
+   "record_id": "FA1-S14-R003",
+   "same_as_entry": "hanfei-er-bing",
+   "note": "AI读法：修权\"权制独断于君，则威\"：单一中心，同二柄。"
+  },
+  {
+   "record_id": "FA1-S14-R006",
+   "same_as_entry": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "note": "AI读法：修权\"赏厚而利，刑重而必\"：同\"壹赏壹刑\"。"
+  },
+  {
+   "record_id": "FA1-S14-R011",
+   "same_as_entry": "hanfei-wudu-gong-si-xiang-bei",
+   "note": "AI读法：修权\"任法去私\"：同一相分。"
+  },
+  {
+   "record_id": "FA1-S23-R010",
+   "same_as_entry": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "note": "AI读法：君臣\"言不中法者，不听也\"：一切选择只经过一个规则，同\"壹\"。"
+  },
+  {
+   "record_id": "FA1-S25-R003",
+   "same_as_entry": "hanfei-wudu-gong-si-xiang-bei",
+   "note": "AI读法：慎法\"民倍主位而向私交，则君弱而臣强\"：以私交与主位相反。"
+  },
+  {
+   "record_id": "FA1-S25-R005",
+   "same_as_entry": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "note": "AI读法：慎法\"使吏非法无以守\"：收窄选择，同\"壹\"。"
+  },
+  {
+   "record_id": "FA1-S25-R006",
+   "same_as_entry": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "note": "AI读法：慎法\"使民非战无以效其能\"：一切能力收为一门，同上。"
+  },
+  {
+   "record_id": "FA1-S25-R008",
+   "same_as_entry": "laozi-03-bu-shang-xian",
+   "note": "AI读法：慎法\"民见相誉无益……各以其正\"：名誉不再影响选择，则不入相对位置之争，与\"不尚贤，使民不争\"同一结构（方向由法强制，属剩余）。"
+  },
+  {
+   "record_id": "FA1-S25-R009",
+   "same_as_entry": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "note": "AI读法：慎法\"非劫以刑，而驱以赏莫可\"：同\"壹赏壹刑\"。"
+  },
+  {
+   "record_id": "FA1-S25-R010",
+   "same_as_entry": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "note": "AI读法：慎法\"欲利者非耕不得，避害者非战不免\"：同上。"
+  },
+  {
+   "record_id": "CV1-JL-R064",
+   "same_as_entry": "laozi-54-xiu-zhi-yu-shen",
+   "note": "AI读法：韩非解老\"治乡者行此节，则家之有余者益众\"：以在上者为外传之起点，与第54章同一定域，起点之单一中心为剩余。"
+  },
+  {
+   "record_id": "CV1-JL-R065",
+   "same_as_entry": "laozi-54-xiu-zhi-yu-shen",
+   "note": "AI读法：解老\"治邦者行此节\"：同上。"
+  },
+  {
+   "record_id": "CV1-JL-R066",
+   "same_as_entry": "laozi-54-xiu-zhi-yu-shen",
+   "note": "AI读法：解老\"莅天下者行此节\"：同上。"
+  },
+  {
+   "record_id": "FO2-FQ-R034",
+   "same_as_entry": "lunyu-he-er-bu-tong",
+   "note": "AI读法：法藏\"秖由异故，所以同耳\"：椽瓦各异而共成一舍，名\"和而不同\"之唐代用例；也是只能合起来造成之差别（Dependence.DifferenceOnlyTogether）。"
+  },
+  {
+   "record_id": "FO2-MH-R039",
+   "same_as_entry": "zhuangzi-qiushui-zi-gui-xiang-jian",
+   "note": "AI读法：信行、法行各有利钝：各种能力在不同维度上各有长短，没有一个总排序（Transfer.unordered），与\"以道观之，物无贵贱\"同。"
+  },
+  {
+   "record_id": "FO2-SM-R004",
+   "same_as_entry": "laozi-63-bao-yuan-yi-de",
+   "note": "AI读法：\"以无恚心、饶益心\"成熟骂詈者：不把所受之损害交回而给予，与\"报怨以德\"同一定域。"
+  },
+  {
+   "record_id": "IN2-R0065",
+   "same_as_entry": "xunzi-fuguo-yu-duo-wu-gua",
+   "note": "AI读法：\"起贪爱之心，构攻斗之祸\"：所求合起来超出所给而争，与\"欲多而物寡\"同；\"君不君臣不臣\"之位阶剩余不取。"
+  },
+  {
+   "record_id": "IN2-R0069",
+   "same_as_entry": "lunyu-he-er-bu-tong",
+   "note": "AI读法：\"究竟虽不同，其实最初一步，皆以破我执为主\"：同中有异。"
+  },
+  {
+   "record_id": "IN2-R0093",
+   "same_as_entry": "daxue-ben-mo",
+   "note": "AI读法：蕅益大学直指\"一身清净故，多身清净\"：由一身推及天下，与大学本末同一定域。"
+  },
+  {
+   "record_id": "IN1-R-D05",
+   "same_as_entry": "wangbi-lueli-zhi-zhong-zhe-zhi-gua",
+   "note": "AI读法：韩愈原道\"如古之无圣人，人之类灭久矣\"：以一个中心为群之生存条件，与王弼同一定域。"
+  },
+  {
+   "record_id": "IN1-R-D10",
+   "same_as_entry": "sunzi-junzheng-jin-gu-jing-qi",
+   "note": "AI读法：原道\"人其人，火其书\"：强加一码并去除码外之形式；被合并之区分只从码外之形式回来（SharedCodes.outside_returns），火其书即去掉这一来源。"
+  },
+  {
+   "record_id": "IN1-R-M06",
+   "same_as_entry": "zhongyong-bing-yu-bu-xiang-hai",
+   "note": "AI读法：牟子以夷夏之出身不能排斥一种道：不同来源之道并行，与\"道并行而不相悖\"同一定域。"
+  },
+  {
+   "record_id": "RT1-R001",
+   "same_as_entry": "xunzi-gui-jian-you-deng",
+   "note": "AI读法：\"三纲五常……以五刑辅弼之\"：位阶加刑罚，同一相分。"
+  }
+ ],
+ "rejected": [
+  {
+   "record_id": "RU2-R0043",
+   "why": "AI读法：孟子\"惠而不知为政\"对比子产以乘舆济人与按时修桥，论点是为政之效率：逐次之给予与设立一个共同条件之比较。脊柱有共同条件使全体同系（Flow.system_whole_of_common），但没有比较这两种给予之效率之律；此句不涉群之形成、分界或争，不立条目，也不强配为任一条目之并行。"
+  },
+  {
+   "record_id": "IN2-R0062",
+   "why": "AI读法：此条是判教，把孔子、老子、声闻缘觉、菩萨、佛排为教法之次第（人乘、天乘……）。它排的是教法与圣者之层级，不是群中成员之关系或共同条件；其排序结构属于\"意义之等差\"之一般问题（条件本身不排序，Transfer.unordered），不在本簇\"群、分与共同\"之内，故不强配。"
+  }
+ ],
+ "notes": "AI读法（本簇之总结，非 Ren 之言）。\n\n一、总体发现：这是一个簇，在根上是关系的、动态的，但同一批文本带着很重的单一中心与位阶之层。\n本簇 71 个条目（相合 26、定域 27、相分 18）与 215 个并行覆盖全部 336 个候选（2 个弃去）；按条目之种类计，候选落在相合 83、定域 115、相分 136。脊柱给出一条连贯之关系链，十六个名都在链上：诸形成在共同条件上取与而相连，所成之关系区域即\"群\"（Flow.Shares、Flow.WithinSystem；一个共同条件使全体同系，Flow.system_whole_of_common）；各部分之所取互不相交是\"分\"（PartsWithin、PartsApart），嵌套之计划是\"分數\"（JointPlan）；合取不多于所给是\"出入相揜\"（Flow.WithinJoint、Flow.level_kept），合取过与（C04）连续若干步而以位置读之是\"爭\"（Flow.ends_at_race_end、Race.greatest_ends）；位置按计数零和是\"相軋\"（RelativePosition.*），以高于其余一切为目标是\"為天下先\"（Law.aboveAll_never_rests）；共同之患使相互依赖是\"同患\"（Flow.mutuallyDependent_of_common），相互供给是\"交相利\"（Flow.MutuallyFed，强于 C02 之\"相待\"）；合用所加是\"和而不同\"（Web.pool_adds），合用退化为一员是\"同而不和\"（Web.pooled_iff_member）；只能合起来造成之差别是\"同力\"（Dependence.DifferenceOnlyTogether）；回送之环中交回少于所受之环节是\"讓\"（LoopReturn.closing_needs_less），带记忆与不带记忆之等待是\"念舊惡\"\"不念舊惡\"（Withholding.waitsAll、Withholding.answers）；两个守护之共同保持是\"得兼\"，各自可保持而共同不可保持即\"不可得兼\"（Viability.kernel_and_iff、Viability.ChoicePoint.each_not_joint）。\n先秦之核心在根上是关系的、动态的：荀子与韩非都不以人性而以数量关系说争（\"欲多而物寡\"\"人民众而货财寡\"），并以\"明分使群\"给出出路；老子把争放在以名位排序之选择上（\"不尚贤，使民不争\"）与\"为天下先\"之目标上；庄子以\"名也者，相轧也\"把名读为关系中之位置，以\"以物观之，自贵而相贱\"把贵贱放进立场；泰否彖以\"上下交\"与\"不交\"定邦之有无；孙子以同舟说共同条件下之相互依赖；墨子以\"交相利/交相贼\"分开相互供给与只是相互依赖。这些都与脊柱相合或有确切之定域。\n\n二、最强之分歧（按所载候选之多少与结构之深浅排）。\n1. 法家之单一中心与公私相背（hanfei-er-bing 15 个并行，hanfei-wudu-gong-si-xiang-bei 7 个，shangjunshu-yi-shang-yi-xing-yi-jiao 9 个）：把群读成利益相反者之间由一个中心以赏罚控制，\"壹\"把一切选择收为一个耦合。脊柱：不以相反之利益为起点，合用退化为一员时合用所加之差别全失（Web.pooled_iff_member、Web.pool_adds），被选者握住规则则锁定（RuleCapture.favouring_locks）。\n2. 位阶与固定本性（xunzi-gui-jian-you-deng 12 个，xici-tian-zun-di-bei 11 个，xugua-fuzi-junchen、jiaren-nan-nv-zheng-wei、tuan-tai-nei-junzi-wai-xiaoren）：贵贱之等、天尊地卑、父子君臣之次、男女之位、内君子外小人。脊柱：相对位置零和（RelativePosition.positions_balance），互补交换下无优劣（Hexagram.waxWane_complement），动力学不决定意义（Web.significance_undetermined）。须分开者：荀子\"两贵之不能相事，两贱之不能相使\"一半成立，对称之分歧需要打破对称（SharedCodes.never_agrees_of_both），但打破对称之方式不必是贵贱之等（xunzi-wangzhi-fen-jun-bu-pian）。\n3. 尚同与以一统众（mozi-shangtong、mozi-shangtong-xia-shi-qi-guo；魏晋以下 王弼\"治众者至寡者也\"、程颐\"天下之聚必得大人以治之\"、韩愈原道）。经核对 SharedCodes 后，王弼一条由原计划之相分改为定域：在按次序听取之码中，从每个起点一致恰当所有形成有同一来源（agrees_every_start_iff），这是\"至寡\"之确切形式；不成立的是以常设之主为一切一致之必然。\n4. 老子\"以下为上\"之策略（laozi-66-yu-shang-min 12 个并行）：道家内部之分裂。\"不争\"作为结构（第22章、第68章\"用人之力\"、苏辙\"相上之心\"）与脊柱相合；作为居上之手段（第66、61、67章及河上公、苏辙、王弼注）则仍以上先为所欲，是位阶之层。\n5. 争胜之框架（sunzi-xushi-wo-zhuan-di-fen、zagua-guai-end；王霸之论）：以胜负为尺度，以使他群离散为术。\n\n三、所缺之定理（按对本簇之重要排）。\n1. 分到合取之一般定理（见 xunzi-wangzhi-qun-fen-yi 之 gap）：由一个实现了之共同计划给出各部分之所取、且各部分之足迹在根之所给中互不相交时，流在该条件上合取在所给之内，因而水平不降；多条件之分同缺。最近之声明：JointPlan.supports_of_realizes、PartsApart、Flow.WithinJoint、Flow.level_kept、Excluding.three_courses。这是\"明分使群\"之核心，脊柱现有之两半没有连成一条定理。\n2. 均分之律（见 lunyu-bu-huan-gua-er-huan-bu-jun 之 gap）：等份分配支持全体恰当等份不少于最大之需要，与各取其需对照；最近之声明：Stock.feasible_iff_covered、Flow.WithinJoint、Flow.level_kept。\"均无贫\"在何处成立没有定理。\n3. 一般族之对称打破（见 wangbi-lueli-zhi-zhong-zhe-zhi-gua 之 gap）：无中心而偏向一个形式之律使任意有限族一致，脊柱只在两个形成之例中证明（SharedCodes.TwoFormations.three_agree、preferred_breaks_renaming）。\n不是所缺者：带记忆之等待下没有走法恢复给予，这是已证之否定（Withholding.waitsAll_gives_earlier），不是缺口；\"推恩足以保四海\"\"正家而天下定\"\"身修而后家齐\"之充分性在脊柱上有反例结构（Renewable.kept_part_not_renewal、Clearing.loses_beyond），也不是缺口。\n\n四、自我反审。\n1. \"讓\"读为环中交回少于所受之环节，是结构读法；古典之让多指礼让、让位，让位更近相对位置（\"相軋\"）而非环。保留之理由是\"揖让而升……其争也君子\"把相竞写成往返，但置信应为中等。\n2. \"念舊惡/不念舊惡\"把怨读为扣留、把记忆读为等待律之记忆，\"怨是用希\"读为\"环上之怨按环长返回，所以是希而非无\"，这是类比性较强之读法。\n3. 三种\"争\"之结构（合取过与之竞逐、为天下先之目标、相对位置之局）在古典中同用一个\"争\"字；本簇分为\"爭\"\"為天下先\"\"相軋\"三名，并与 C04 之\"合取过与\"分开。读者可能仍把它们混同；整合时须在名表中并列说明。\n4. 与他簇之交界：C02（相待、隨滅、有力），C04（合取过与、止），C11（報、先施、不求備、還；论语\"无求备于一人\"与墨子\"先从事乎爱利人之亲\"两段与 C11 之条目同段，种类一致），C12（所以擇）。C10（合用之耦合）在暂存中尚无定名，\"和而不同\"\"同而不和\"须在 C10 定名后核对，避免一概念二名。\n5. 并行中最弱者：孟子\"民为贵\"并入\"亲亲之杀\"（方向与位阶相反，只因同为给部分排意义之次）；\"得道多助\"并入先施；荀子\"义立而王，信立而霸\"并入争胜框架；吴起\"人乐战\"并入\"修文德以来之\"。这些若在整合中另立条目，种类可能不同。\n6. 魏晋以下之注（王弼、河上公、苏辙、程颐、朱熹）数量大，多数落在单一中心与位阶之层；相合主要由先秦经文承载。这一分布本身是一个发现，但也受候选选取之影响，不能读为各家之全貌。\n7. 卦爻辞之吉凶是占断，本簇只取其结构（讼之环、同人之范围、萃之相应），不对吉凶作对应。\n"
+}

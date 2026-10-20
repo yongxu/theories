@@ -1,0 +1,273 @@
+{
+ "cluster": "C12 演化、世系与传递",
+ "lens": "PHILOLOGY",
+ "names": [
+  {
+   "concept": "世系 descent（Flow.DescendsAt／Flow.Descends）",
+   "name": "所生",
+   "verdict": "revise",
+   "issues": "所有引文经 ctq.py text 核对，逐字无误；卷次（成唯识卷二、卷八）也对。问题出在义与方向上。(1) 方向两歧，名表未列。先秦「A之所生」最常见的意思是「A 所由生之源」，正好与本名要的「g 之所生＝后代」相反：系辞上「乱之所生也，则言语以为阶」(DS02)、中庸「親親之殺，尊賢之等，禮所生也」(RU1-S-ZY)、韩非八經「亂之所生六也」(FA1-S-H48)、墨子大取「立辭而不明於其所生，妄也」(MI1-S-DQ，脉络 MI1-R-DQ-ground 释为「根据」，即 C16 已采之「故」)。(2) fit 说「名中无亲属、无位」，与文献不合。杂阿含（刘宋译，FO1-S-SA）「汝莫問所生，但當問所行」「不以所生故，名為婆羅門」中，所生＝出身、种姓之位；孙绰喻道论（东晋，IN1-S02）「委離所生棄親即疎」中，所生＝父母。not_carried 只列了父母义。(3) 与 C03 的分名冲突。DescendsAt 的第三项是 W.ComesToStand，C03 名之为「聚」；C03 的「生」是 Web.Arises（开始活动）。fit 把「生」读作「生起／开始而在」，把 C03 的两个名并成了一个。(4) fit 说「所把它关系到一个给予者」，文法不确：「所」只把「生」的受事名词化，给予者要由「g之」或「為g所」给出。(5) 孟子「是集义所生者」的意思是由集义之积而形成（脉络 RU2-R0012「[形成]集义→浩然之气」），是多步之积，不是一步之给予；sense「所生有其给予之历程」是读进去的。(6) 老子四十二章只证及物的「生」，不证「所生」；RO 的 lao-42-dao-sheng-yi 已判此章为定域，读作一中之分化，不是世系，拿它作世系之例与 RO 相违。(7) 漏了可用的 record_id：RU2-R0012（孟子）、FO1-R-CY12（所生果）、FO1-R-CY37（緣所生）。",
+   "fix": "只用「x 為 g 所生」这一定式：「為…所」是被动，方向唯一；不用「g 之所生」。定义写作「g 與於此步而與 x，x 聚」，并写明此处「生」读 C03 的「聚」（ComesToStand），不读 C03 的「生」（Arises），交整合者与 C03 一并裁定。not_carried 增三条：「A之所生」作所由生之源或根据（DS02、RU1-S-ZY、MI1-S-DQ、FA1-S-H48）；出身、种姓之位（FO1-S-SA「汝莫問所生，但當問所行」）；父母（IN1-S02）。删去 fit 中「名中无亲属、无位」一句。孟子条的 sense 改为「由集义之积所形成（RU2-R0012）」。老子四十二章移出 attestations，或注明 RO 读为分化。补 record_id：RU2-R0012、FO1-R-CY12、FO1-R-CY37。"
+  },
+  {
+   "concept": "承继 inheritance（Web.InheritsAt／Flow.Inherits）",
+   "name": "因",
+   "verdict": "revise",
+   "issues": "引文逐字无误；论语2.23 是好的正例。(1) 荀子正名「远方异俗之乡，则因之而为通」中的「因」是凭借：远方之乡凭借诸夏既成之名来相通。这正是 not_carried 所排除的「凭借、依据之泛义」。sense 写作「远方异俗之名，承其已有者」，连主语也错了，所因者是诸夏之成俗曲期。(2) 论六家要指「以因循為用」，下文是「有法無法，因時為業；有度無度，因物與合」「因者君之綱」：因是随时随物而应，属应变，不是承持给予者已持之依存，sense「顺其已有而用之」不确。(3) 中庸17「故天之生物，必因其材而篤焉」的「因」作「依」，也是凭借义，not_carried 应列。(4) C03 已采「繼」名 Becoming.Reidentify.KeepsTenure，释为「后继者承接前者之依存」，结构与 InheritsAt 相邻；本名 alternatives 以「名后继之序，不名所依之被持」驳繼，与 C03 之释相违，二者的分界要由整合者定。(5) 本簇在 lunyu-yin-sun-yi 中又用「因」指 price 中「亲代之量以所生之数计」一项，那一项不是 InheritsAt（依存的持有），于是同名指二物。",
+   "fix": "attestations 只保留论语2.23（正例）与成唯识「謂隨因力生善、惡等」（反例，示 hetu 义）。荀子正名、论六家要指两条移入 not_carried，分别标「凭借」「应时应物」；正名条 sense 改为「远方之乡凭借诸夏之成名以相通」。not_carried 增中庸17「必因其材而篤焉」的依凭义。繼的 why_not 改为「C03 已以繼名同名跨任期之接续（Reidentify.KeepsTenure）；因只名世系一步上给予者已持之依存（InheritsAt）」。补先秦旁证荀子荣辱「不知其義，謹守其數，慎不敢損益也」「父子相傳，以持王公」（RU2-S-XZ04）：承而不改，即 δ 为 0。全簇的「因」只指 InheritsAt，price 的加权项另行称呼。"
+  },
+  {
+   "concept": "传递 transmission（Flow.TransmitsWithin c δ；Flow.transmitsWithin_iff）",
+   "name": "傳",
+   "verdict": "revise",
+   "issues": "引文逐字无误。(1) 与层名碰撞：「传」是脉络和 brief 的层名（经／传／注／疏），本簇自己的 layer 栏就写着「传·先秦至汉初（序卦…）」，层名与律名同字。(2) 本簇自己把「傳」用在 PatternPassing（Web.ByPassing.*）的条目上：suzhe-deng-xiang-chuan、mozi-minggui-zhu-bo-jin-shi、mozi-suo-xun-bi-huo-zuo、zhuangzi-lunbian-bu-ke-chuan、hanyu-yuandao-chuan、xunzi-chuan-jiu-lun-lue、zhuxi-dun-shen-tui-dao-heng 的 names_used 都写傳，声明却是 ByPassing。PatternPassing 模块明言 ByPassing 是与 TransmitsWithin 不同的前提，一名二义，违命名一致。(3) 跨簇冲突：C05 已把养生主「火傳也」映射为 ByPassing（zhuangzi-huo-chuan），本名却以同句为 TransmitsWithin 的首证；C08 已用墨经「知，傳受之，聞也」名「聞」（经他人传而得知，是知的来源），不是依存的承继，sense「传必有受者受之」读过了头。(4) fit 说荀子「傳者久則論略」表明所传之界随距离放宽，结构不合：论略是区分之失（归并），不是所需之界 δ 放宽；δ 是一步之界，多步累积尚开放。(5) 墨子明鬼、宗密「傳體相續」、苏辙「如燈相傳」所说的都是样式经承载者而续，属 ByPassing 一类，不是「依存加所需之界」。",
+   "fix": "律名改用复词，与层名和样式之传分开，例如「相傳」（荀子荣辱「父子相傳，以持王公」RU2-S-XZ04；苏辙「如燈相傳」）或「傳受」（墨经），并在名表注明层名的「传」不是此名。PatternPassing 请 C13 另定名，本簇凡用 ByPassing 的条目，names_used 改用那个名。删去 fit 中「传之界随距离放宽」，改为「所传愈久，区分愈失（归并），见 xunzi-chuan-jiu-lun-lue」。墨经条 sense 改为「经他人传而得知（传闻），与身观之亲相对；C08 以之名聞」，并写明它不证 TransmitsWithin。火传条注明 C05 读为样式之传。"
+  },
+  {
+   "concept": "变异 variation（raised／lowered；price 恒等式）",
+   "name": "所損益",
+   "verdict": "revise",
+   "issues": "引文逐字无误；杨倞注确在〈〉内，属注·唐层，标得对。(1) 同一句三读，名表未提：C10 的「与时转」以「殷因於夏禮，所損益可知也」对应 Becoming.Pace.pace_law（规则须持得够长），C08 以同章名「可知」（可学），本名则对应 Price 分解。(2) 「所損益」作为短语只见于论语2.23；荀子劝学「靑，取之於藍而靑於藍」只证结构（出于源而过之），不证此名；杨倞注「才過其本性」中的「本性」是先定之性，not_carried 应标出。(3) 商君书定分在本条标「原典」，在 shangjun-dingfen-fa-ling 条标「论」，同一来源两种标法。(4) 先秦另有两条更贴近的「損益」：荀子荣辱「謹守其數，慎不敢損益也」（RU2-S-XZ04），是相对所因之定式，而損益为零；荀子礼论「立隆以为极，而天下莫之能损益也」（RU2-S-XZ19），带「不可改之极」义，属所不带之义。",
+   "fix": "在 course 或 notes 中注明 C08（可知）、C10（与时转）对论语2.23 的读法与本名的分工：本名只取「后代相对亲代之超出与不及」一项，冲突交整合者裁定。劝学条标「结构旁证，不证名」。not_carried 增「杨倞“本性”之先定义」「礼论“莫之能损益”之不可改之极」。商君书统一标为「原典·先秦至秦汉（定分，成篇层次不一）」。加荀子荣辱「謹守其數，慎不敢損益也」作为相对所因之損益（此处为零）的先秦例。"
+  },
+  {
+   "concept": "经支持之选择 selection through support（Flow.unsupported_childless；DescendsAt.supported；selected_le；selection_within）",
+   "name": "以足擇",
+   "verdict": "revise",
+   "issues": "(1) 擇的结构与 C10 不同。C10 已采「擇」为选择，lean 是 Web.SelectsThrough／ScoresThrough，有选择者，经其耦合而选；经支持之选择（unsupported_childless）没有选择者，不是 SelectsThrough 之例。本簇的「所以擇」又以「擇」名有选择者的模型，同一字在簇内指两种结构。(2) attestations 与所名的结构不合。荀子正名「情然而心为之择谓之虑」恰是 not_carried 排除的有择者义，不能作此名之证。孟子「茍得其养，无物不长；茍失其养，无物不消」说的是支撑与长消（C02 足、C05），不是无所生。庄子至乐「種有幾，得水則爲㡭」是同种随条件成异形（发育或变异），不是筛选。只有成唯识「五、待眾緣…方成種子」（FO1-R-CY19）结构相近：所生以缘合为条件，对应 DescendsAt.supported。(3) 漏引直接相关的律：Becoming.CaptureWorlds.share_rises_of_unsupported 与 Becoming.CaptureWorlds.unsupported_leave_none（经支持之选择使目标的份额上升，不足者无后代）；Becoming.Flow.descent_needs_unrun 与 Becoming.Flow.descent_exhausted（选择需要其外；围住则选择止）。(4) 「以足擇」读如「（某）以足择」，暗含一个施者。",
+   "fix": "律本身用已采之名陈述，不必用擇：「不足者無所生」（Flow.unsupported_childless，条件是只有活动者与、活动须足），「有所生者於此步足」（DescendsAt.supported）。若需要一个概念名，请整合者决定是否把 C10 的「擇」扩为不需选择者的筛选；未定之前标「讀（AI）、未決」。attestations 以成唯识「五、待眾緣。謂此要待自眾緣合，功能殊勝，方成種子。」（FO1-R-CY19）为主；孟子条改标为 C02「足」的旁证，至乐条移到变异、发育之下，正名条移入 not_carried。lean 增 Becoming.CaptureWorlds.share_rises_of_unsupported、Becoming.CaptureWorlds.unsupported_leave_none、Becoming.Flow.descent_needs_unrun、Becoming.Flow.descent_exhausted。"
+  },
+  {
+   "concept": "演化 evolution（Becoming.Evolution；Flow.transmitted_within）",
+   "name": "傳擇",
+   "verdict": "revise",
+   "issues": "(1) 两个字都还没定下：傳与层名、与 PatternPassing 碰撞（见傳），擇与 C10 有选择者之擇结构不同（见以足擇）。(2) 两字在脉络中同时出现的地方，恰是韩愈原道「堯以是傳之舜」「荀與揚也，擇焉而不精」（IN1-S06），即本簇判为相分的道统单线之传与以精不精之择。造词与相分之文同字，读者容易带入正统与取舍之义，not_carried 未列。(3) 两条 attestations（寓言「以不同形相禪」、论语「其或繼周者」）都不含傳或擇，说明不了名的组成。名中也缺所生、所損益两项，而 Becoming.Evolution 的内容是世系上的传递、变异、经支持之选择与其间的活动。(4) 漏 Flow.descent_needs_unrun／descent_exhausted（围住则选择止），正与寓言「始卒若環」相关。",
+   "fix": "待傳、擇二名定下后再组合。not_carried 加「韩愈原道之傳與擇（道统单线与以精不精排他，IN1-S06）」。fit 写明名由哪几个已采之名组成，每部分对应何律。若整合者不取新组合，可只用描述式「所生而因、有所損益、不足者無所生」陈述 Evolution 的四项。confidence 保持 low。"
+  },
+  {
+   "concept": "增益 gain（Flow.rise_netGiver 等）——沿用 C06",
+   "name": "益",
+   "verdict": "keep",
+   "issues": "引文逐字无误，层（益六二小象、老子四十二章）标注正确。只有小处：(1) 定义与 C06 不同：C06 定为「一族被给予多于其所取」，本簇写「一族跨一步之存量上升」。把其余算作关系项时，二者经 rise_netGiver 相连，但既称「沿用」，应用同一句定义。(2) 小象「自外來也」在益卦用了两次：六二「或益之，自外來也」与上九「或擊之，自外來也」（YD-JP42），所以「自外來」不专指给予。",
+   "fix": "concept 改用 C06 的原定义，再附本簇所用的律。fit 注明上九小象「或擊之，自外來也」同用「自外來」。"
+  },
+  {
+   "concept": "净给予者 net giver（Flow.NetGiver）",
+   "name": "益之者",
+   "verdict": "revise",
+   "issues": "(1) coinage 标为 true，course 也说「未成名词，此为新组合」，都不实：程颐伊川易传益上九注已有「故无益之者而或攻擊之矣」，又有「莫益之者」（YD-CY3，北宋），该短语已见于注层。(2) 程颐的「益之者」带道德之读：「求益之極衆人所共惡」「專欲益己其害大矣」，not_carried 应列。(3) 「自外來」也用于「或擊之」（上九小象），所以不专证净给予。名本身的结构是对的：「或益之」之「或」为存在之「某者」，与 NetGiver 相合。",
+   "fix": "coinage 改为 false（宋代注层已见；pre_qin 仍为 false）。attestations 加 YD-CY3「故无益之者而或攻擊之矣」，layer 标「注·宋明（程颐伊川易传，北宋）」。not_carried 加「程颐以求益之极为众所共恶之价值读」。fit 注明「自外來」同用于擊。"
+  },
+  {
+   "concept": "新 novelty（Web.rises_late_of_new 等）——沿用 C06",
+   "name": "日新",
+   "verdict": "revise",
+   "issues": "(1) 大学所引汤盘铭的「日新」，注层读作洗涤后自新。朱熹大学章句：「盘，沐浴之盘也」「涤其旧染之污而自新」，又说日日新之「不可略有间断」（RU2-S-S09）。意思是每日涤去所染、回到洁净，这是更新、复返，不是「每一组态皆异于先前」。C05 已据此把同一句映为 Web.Renewed（条目 daxue-ri-xin），并请整合者裁定。本簇以大学句为首证，sense 写「每日皆新」，与 C05 冲突。(2) layer 不对：此句是礼记·大学引的铭文，朱熹列入「传之二章」（RU2-S-S09「右传之二章。释新民。」），标「经·先秦至汉」不确。(3) fit 漏了条件：Flow.new_from_rest_or_open 与 Flow.whole_not_new_of_rest_idle 都要求第一律（Flow.Gainless，无中不生），只有 Web.rises_late_of_new 不需前提。",
+   "fix": "以系辞上「日新之谓盛德」（DS02）与韩康伯注「體化合變」（YWH-H5，C06 已核）为主证。大学句改列为「另一结构（更新）」，not_carried 写「涤旧染之污而自新（朱熹，RU2-S-S09）：每日复回洁净，是复返，不是新」。layer 改为「传（礼记·大学引汤之盘铭）·先秦至汉」。fit 改为：「新需要上升（Web.rises_late_of_new，无前提）；在无中不生之下（Flow.Gainless），其上升出于其余或跨界（Flow.new_from_rest_or_open），其余闲置之有限整体不日新（Flow.whole_not_new_of_rest_idle）」。"
+  },
+  {
+   "concept": "选择者之模型 the selector's model（Relabel.selected_alike_iff；Learning.selects_through_lumping）",
+   "name": "所以擇",
+   "verdict": "revise",
+   "issues": "(1) 论语7.27 读错了。「知之次也」统摄「多聞，擇其善者而從之」与「多見而識之」两项，脉络本条 RU1-LY-07-27-R01 正作「本章把多闻择善、多见识之称为知之次」。所以 sense「多见而识（记录）另为一事且为次」与 fit「论语把择与识分为二事，正是记忆不是相关」都没有根据。(2) 驳「識」的理由与本章不合。本章 §10 词表定「识」为「一个形成自身之后续经其耦合所成之归并而行」（Web.SelectsThrough，D45），「registration」已退；选择者的模型（归并）正在识的结构之中，并非「模型所不是者」。(3) 与 C10 的「缘感而择」（Web.SelectsThrough、Web.selects_alike_iff：经选择者耦合无别者被选得相同）结构相同，Relabel.selected_alike_iff 只是把耦合换成备择的映射。识、缘感而择、所以擇三名指向同一族结构，尚未分工。(4) 「所以擇」在脉络中一次也未见（作为新组合可以接受），attestations 中也没有一条同时证「所以」与「擇」。",
+   "fix": "若保留，把名限定为「备择之映射本身」（Relabel 之 r 及其归并），并写明三点：经此映射的选择是识之一例（§10）；在耦合上即 C10 的缘感而择；选择恰在世界跨此归并而同之处为对（Learning.selects_right_through），也就是模型为理之处。删去「论语以择与识分二事」之说，7.27 的 sense 改为「多闻择善、多见而识皆为知之次（RU1-LY-07-27-R01）」；「记忆不是相关」若要文本证，须另找，否则标「讀（AI）」。alternatives 中「識」的 why_not 改为「识是经此归并之后续（§10），所以擇只名归并本身」。"
+  },
+  {
+   "concept": "经他者实际回应之学（Becoming.ResponseLearning）",
+   "name": "取法",
+   "verdict": "revise",
+   "issues": "引文逐字无误；天道属外篇，年代有争议，已注。(1) 佛典层的「取法」是另一义：金刚经（后秦罗什译，FO1-S-DIAMOND）「若取法相，即著我、人、眾生、壽者」「是故不應取法，不應取非法」，杂阿含亦有「取法」，都指执取诸法。本版要收佛典，not_carried 却未列。(2) 先秦「法」作动词最重要的一证未引：老子二十五章「人法地，地法天，天法道，道法自然」（YD-LAO-BASE）。RO 的 lao-25-dao-fa-zi-ran 判为相合，读作律由展开读出。王弼注「法，谓法则也。人不违地，乃得全安，法地也」，又「在方而法方，在圆而法圆」（DS01），把法读为不违、随所在而合，与「从他者实际所行学」不同，需要分工。(3) 韩非解老「效之則小盜生」证的是「效」，不是「取法」。",
+   "fix": "not_carried 增两条：「佛典之取法：执取诸法（金刚经「是故不應取法，不應取非法」；杂阿含）」与「王弼之法：不违、随方圆而合（DS01 注）」。attestations 加老子二十五章「人法地，地法天，天法道，道法自然」，并注明 RO 的读法与本名的分别：本名只名从他者实际所行学。韩非条标为「效，结构旁证」。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-gu-gan-fu-zhi-gu",
+   "verdict": "revise",
+   "issues": "fragments 逐字无误，层标对。(1) declarations 含 Flow.TransmitsWithin，reading 又说「传递本身允许变（TransmitsWithin 之 δ）：因不等于原样」。但 δ 只界所需之量，Transmission 模块明言传递「lets descent vary a need, never which conditions are depended on」。蛊所说的改，是所行之事或规则之改，属 RuleHandoff 一类，与 δ 无关。(2) RuleHandoff 是声明的有限协议，mapper 自己也承认相合偏强；爻辞的占断（无咎、厲終吉、吝）不映射，判 agreement 过强。(3) reading 把「蛊＝前者所遗之坏」当作经义，那其实是程颐的读法（「蠱壞之義」，YD-CY2，北宋）；序卦只说「蠱者事也」。程颐释六四「以隂柔而无應助徃安能濟」，即没有支持就不能改，正合 successor_can_revise_inherited_rule 的「有实际支持」条件，本可引用。",
+   "fix": "删去 Flow.TransmitsWithin 与「因不等于原样」一句。kind 改为 scope。reading 标明「依程颐“蠱壞”之读（YD-CY2）」，并引程颐六四注「以隂柔而无應助徃安能濟」作支持条件之证。"
+  },
+  {
+   "id": "yi-xugua-fufu-fuzi",
+   "verdict": "keep",
+   "issues": "fragments 无误。只取三环、不改 RO 对 xugua-fuzi-junchen 的相分判断，处理得当；序卦年代已标有争议。小处：「演化之界只需某个被支持之给予者持此依存」对应的律是 Flow.fromSome_supported／Flow.fromSome_within；TransmitsWithin.fromSome 只是由 TransmitsWithin 推出 FromSome。",
+   "fix": "declarations 增 Becoming.Flow.fromSome_supported（可另加 Becoming.Flow.fromSome_within）。"
+  },
+  {
+   "id": "yi-xici-yan-hui-bu-fu-xing",
+   "verdict": "keep",
+   "issues": "fragment 无误（DS03），层标对。读法与 Learning 逐除之律结构相合，范围也说清了（只在某候选相合之处不复出，见 diagonal_misses）；names_used 用的是 C08 的「過則改」，一致。",
+   "fix": ""
+  },
+  {
+   "id": "zhuxi-dun-shen-tui-dao-heng",
+   "verdict": "reject",
+   "issues": "两段引文都确在 YD-ZX2，但第二段被从让步句中截出，读反了。原注作「陽雖當遯然九五當位而下有六二之應若猶可以有為但二隂浸長於下則其𫝑不可以不遯故其占為君子能遯則身雖退而道亨」。「九五當位而下有六二之應」是让步：似乎还可以有为。随即被「但…不可以不遯」推翻；「道亨」之前的「故」承的是「不可以不遯」，不是六二之应。reading 说这是朱熹给「道亨」的关系性理由，与原文相反。另外，「身退」是君子退避而人仍在，不是承载者终止，ByPassing（样式比承载者更久）的结构不在此。这段的结构更接近在时机上退而所守不失，属 C17 的「機」与护闭，不属本簇。",
+   "fix": "从本簇删除。若整合者要保留，交给 C17：fragment 用完整的让步句，读作「当退之机退而所守不失」，不引 ByPassing，也不说六二之应是道亨之由。"
+  },
+  {
+   "id": "suzhe-deng-xiang-chuan",
+   "verdict": "revise",
+   "issues": "fragment 无误，层（注·北宋）标对。(1) 声明全是 ByPassing（样式之传），names_used 却写「傳」（本簇的 TransmitsWithin），一名二义。(2) 「受者须自有其油」是 AI 加上去的，苏辙原文无此意；所引 lesson_stock、short_receiver_not_repaired 已标「所述构造」与「见证」，但应明说文中未言。",
+   "fix": "names_used 改用 C13 为 PatternPassing 所定之名，删去「傳」。「受者须自有其油」前加「讀（AI）：文中未言」。"
+  },
+  {
+   "id": "daxue-zu-fa-min-fa-zhi",
+   "verdict": "revise",
+   "issues": "fragments 与 record_ids 无误。文中所引「堯舜率天下以仁，而民從之；桀紂率天下以暴，而民從之。」与「其所令反其所好，而民不從」（RU1-DX-12-R01）也都核实。读法相当可靠：以「其儀不忒」区分「足法」的两种读法，有上下文支持。问题只在 layer：标为「经」，但礼记·大学是「记」，朱熹章句把段13、段14 分别列为传九章、传十章（RU2-S-S09「右传之九章。释齐家治国。」「右传之十章」），脉络此处的 layer 是「原典正文」。brief 要求经、传分开标。",
+   "fix": "layer 改为「原典·礼记·大学（先秦至汉，成篇有争议；朱熹列入传九、传十章）」。其余不动。"
+  },
+  {
+   "id": "lunyu-xing-jin-xi-yuan",
+   "verdict": "revise",
+   "issues": "fragment 无误。Drawdown.drawdown 被当作「習相遠」的同构见证，但它所示的正好相反。在 Drawdown 中，两个后代开始而在时所需就已不同（一个承亲代之需 2，一个较少，即所損益），再加上亲代先前取用使池水下降；分化来自起点之异与亲代之活动，不来自后代自己的「習」。它是「性不近」之例，与「性相近」相悖。lessons_change_program（所述构造中，同一教者以不同的课成不同的程序）才是「同起点、异所习、成相远」的见证。",
+   "fix": "删去以 Drawdown.drawdown 证「習相遠」的一句，或改写为「Drawdown 是起点所需不同（所損益）而后分化之例，与本章之“性相近”不同」。只保留 ResponseLearning.lessons_change_program（标「所述构造中，见证」）作为習相遠之证。Flow.transmitted_within 可留作一般律，但须写出其条件：平衡、只有活动者与、活动须足。"
+  },
+  {
+   "id": "lunyu-shang-zhi-xia-yu-bu-yi",
+   "verdict": "revise",
+   "issues": "fragment 无误；reading 已注明 RU1-LY-17-03 是阅读单元，脉络于此章无关系判断。但只给了「固定之性加能力之等级」一种读法，漏了注层的关系性读法。程颐（伊川易传革卦，YD-CY；近思录 RU2-S-S06）说「唯自暴者，拒之以不信；自棄者，絕之以不為」，并说「人苟以善自治，則無不可移者」。戴震（孟子字义疏证，清，RU2-S-V3Q01）说「由自絕於學，是以不移」，又说「究之性能開通，非不可移」。两家都把「不移」读成受者拒绝或断绝其课，而不是先定之等，这正是脊柱「不移出于课所能给与受者所有」（short_receiver_not_repaired：受者缺存量则示范不成）的结构。",
+   "fix": "保留 divergence，但只用于经文的范畴式读法（上知、下愚为先定之等）。reading 增一段注层的定域：程颐（YD-CY「唯自暴者，拒之以不信；自棄者，絕之以不為」）与戴震（RU2-S-V3Q01「由自絕於學，是以不移」）读为受者自绝于课，与 ResponseLearning.short_receiver_not_repaired（所述构造中，见证）相合。layer 分清经与注（北宋、清）。"
+  },
+  {
+   "id": "zhongyong-shan-ji-ren-zhi-zhi",
+   "verdict": "revise",
+   "issues": "fragment 无误。(1) 本条原文的关键字「繼」已被 C03 采用，名 Becoming.Reidentify.KeepsTenure 与 Succession.readings（「后继者承接前者之依存」）。本条却只用 RuleHandoff，names_used 写「因、傳」，没有对照 C03 的繼。(2) 「章中明言目标之传递不由动力学决定」不确。出处是 Capture 模块的说明「What is not derived: … that offspring carry their parents' targets」，意思是「未推出」，不是「不由动力学决定」，也不是在本章正文中说的。(3) layer 标「经」，实为礼记·中庸（记）。",
+   "fix": "names_used 加 C03 的「繼」，declarations 加 Becoming.Reidentify.KeepsTenure，并说明它与 RuleHandoff 的分工。把「章中明言…不由动力学决定」改为「Capture 模块明言未推出后代带亲代之目标（offspring carry their parents' targets）」。layer 改为「原典·礼记·中庸（先秦至汉，成篇有争议）」。gap 保留。"
+  },
+  {
+   "id": "zhongyong-wen-gu-zhi-xin",
+   "verdict": "revise",
+   "issues": "fragment 无误，读法与 C08 的 lunyu-wen-gu-zhi-xin 用同一组声明，彼此一致。问题在 reading 引论语2.11 作「温故而知新，可以为师」：用了简体，又脱「矣」，与冻结本「溫故而知新，可以為師矣」（RU1-S-LY）不合，违反逐字引用的规则。layer 也应标为「记」，不是「经」。",
+   "fix": "引文改为「溫故而知新，可以為師矣」（RU1-S-LY；C08 条 lunyu-wen-gu-zhi-xin）。layer 改为「原典·礼记·中庸」。"
+  },
+  {
+   "id": "xunzi-xing-wei-zhi-fen",
+   "verdict": "keep",
+   "issues": "fragments 无误，文中所引「化性而起伪」（XZ23）与「師法者，所得乎積，非所受乎性」（XZ08）也都核实，与 RO 的两条判断一致。小处：(1) 荀子自言「凡性者，天之就也」，并未说性来自给予者，「性是从给予者所因」是 AI 套上去的结构，应标「讀（AI）」。(2) Web.Forms 在 C02、C03 名为「結」，正文用名时应改用此字。",
+   "fix": "「性是从给予者所因」前加「讀（AI）」。说及 Web.Forms 时用「結」（C02、C03）。"
+  },
+  {
+   "id": "zhangzai-qi-zhi-pian",
+   "verdict": "keep",
+   "issues": "fragments 无误，避开了脉络注明的「为／伪」转录疑点。层（宋明、北宋）标对。此处用 Drawdown（构成之差决定谁被支持）是对的。相分只落在「不偏之本」，处理得当。",
+   "fix": ""
+  },
+  {
+   "id": "zhuangzi-lunbian-bu-ke-chuan",
+   "verdict": "revise",
+   "issues": "fragments 无误，层标对。(1) 用 Law.merged_stays 说「言语是一个归并」是错位。merged_stays 讲的是一条律自身的下一步把两个构型并合、此后不再分开，属于动力学；言语对意的归并是一个读出映射，对应的是 Learning.selects_not_right_of_parted（映射所归并者，经它的选择无一能分开）与 Learning.determines_lumped_iff。(2) Web.ByPassing.empty_stays 属样式之传，names_used 却写「傳」。",
+   "fix": "把 Law.merged_stays 换成 Becoming.Learning.selects_not_right_of_parted（可加 Becoming.Learning.determines_lumped_iff），reading 相应改为「言是归并：经言之传，不能分开言所归并者」。names_used 中样式之传改用 C13 的名。distinction_lost_every_cohort、short_receiver_not_repaired 已标见证，保留。"
+  },
+  {
+   "id": "zhuangzi-lvliang-zhang-yu-shui",
+   "verdict": "revise",
+   "issues": "fragment 无误。「吾生於陵而安於陵，故也」所说的，是生于陵地而习于陵：依存来自出生之处的条件，文中没有给予者。Web.InheritsAt 要求后代的依存为给予者在给予之步已持，以此释「故」，结构不合。「性」读为经所处之历程而成，「命」不作天命，这两点都对。",
+   "fix": "「故」改释为「开始而在时于所处条件中形成之依存」，对应 Web.Forms 于开始而在之步（Web.InheritsAt.split 中「形成」一半），并注明不必为给予者所持。删去「开始而在之依存是所因（Web.InheritsAt）」一句。"
+  },
+  {
+   "id": "mozi-tianzhi-hou-zi-shun-xian-jun",
+   "verdict": "revise",
+   "issues": "fragments 与文中所引「吾攻國、覆軍、殺將若干人矣」都核实。(1) 「必不曰文武之為正」的意思是：后嗣不以文武为正，而以先君的攻伐记录为正。reading 却拿它作「所书不记其不仁不义」的证据，引错了。真正的证据是同段的「則夫好攻伐之君有重不知此為不仁不義也」。(2) mapper 自己承认判相合偏强：RuleHandoff 是声明的协议，Law.perturbation_reabsorbed 讲状态与规则之分，把竹帛记录读为规则是类比。",
+   "fix": "把「（“必不曰文武之為正”）」移到「后嗣以先君之行为正（不以文武为正）」之后；「不记其不仁不义」改引「則夫好攻伐之君有重不知此為不仁不義也」。kind 改为 scope。"
+  },
+  {
+   "id": "mozi-minggui-zhu-bo-jin-shi",
+   "verdict": "revise",
+   "issues": "fragment 与 record 无误，结构简单而正确（加承载者，即 Web.Whole）。只是 names_used 写「傳」，声明却是 Web.ByPassing.*（样式之传）。另外，C08 已以兼爱下的同类句（「以其所書於竹帛…傳遺後世子孫者知之」，MO1-C16-R009）作回读之证，可互相引见。",
+   "fix": "names_used 中的「傳」改为 C13 为 PatternPassing 所定之名。notes 中注明与 C08 的 mozi-zhu-bo 互见。"
+  },
+  {
+   "id": "mozi-suo-xun-bi-huo-zuo",
+   "verdict": "revise",
+   "issues": "fragments 无误，上下文（墨子反驳「君子循而不作」）也读得对。由 present_back 的逆否推出「今在而先无者必有不经传之始」，推理成立。但 reading 自己补了一句「若一个样式从运行之始就在，传递之律不要求有人作之」，这是给出原文「必或作之」的成立范围，属定域，不是相合。names_used 中的「傳」又指 ByPassing。",
+   "fix": "kind 改为 scope。names_used 中的「傳」改为 C13 的 PatternPassing 之名，「因」保留，用于 Flow.no_new_dependence 一句。"
+  },
+  {
+   "id": "wuzi-yi-ren-xue-zhan",
+   "verdict": "revise",
+   "issues": "fragment 与 record 无误。layer 写「传世兵书·先秦」，过断了。脉络的 era 是「传统题署吴起；今本含叙事与问答编纂层，不据人物年代断定全篇成书」，今本吴子的成书层争议很大，不能凭题署标为先秦。",
+   "fix": "layer 改为「传世兵书（题署战国吴起；今本成书层有争议，不据人物定为先秦）」。读法与 gap 不动。"
+  },
+  {
+   "id": "hanfei-zhi-xing-shou-ming",
+   "verdict": "keep",
+   "issues": "fragment 无误，文中所引「以人之所不能爲說人」也核实。相分判断以及「教不生存量」这一关系内核，都与显学上下文相合。layer 标作「论」，与脉络「原典」的用法不一，属小处。",
+   "fix": "layer 宜标为「原典·先秦（韩非子显学，战国末，作者层有争议）」。"
+  },
+  {
+   "id": "weishi-zhongzi-liu-yi",
+   "verdict": "revise",
+   "issues": "四段 fragment 都无误，在卷二。(1) record_ids 只列了 FO1-R-CY11（种子之定义）。六义另有脉络关系：FO1-R-CY17（六义联合构成种子资格）、FO1-R-CY19（待众缘），以及 FO1-R-CY18（果俱有，不取消自类前后相生），都漏了。(2) 「自類相生」一语在成唯识中出自果俱有条（FO1-R-CY18「非如種子自類相生」），指种子前后相生；「引自果」是种子各引自类之现行果；「性決定」是果之善恶性随因力而定。reading 把「性決定」「引自果」合称「自類相生」，混了三义。",
+   "fix": "record_ids 增 FO1-R-CY17、FO1-R-CY19、FO1-R-CY18。reading 改为：「性決定」指果之善恶性随因而定；「引自果」指各引自类之果；「自類相生」（FO1-R-CY18）指种子前后相生。三者合起来，才对应「在承继成立之处所生之依存随给予者（inherited_from_giver）」。"
+  },
+  {
+   "id": "weishi-shiqi-wu-yin",
+   "verdict": "keep",
+   "issues": "fragment 与 record 无误，位置在卷二。在承继下推出「先无之类不经世系生出」，在承继外以 World.novel 定域，结构严谨，层也标对。",
+   "fix": ""
+  },
+  {
+   "id": "weishi-benyou-shiqi",
+   "verdict": "keep",
+   "issues": "fragments 无误，与 FO1-R-CY53 的平行处理得当。小处：reading 说「熏习之环见 IN2-R0096 等」，但 IN2-R0096 出自智旭大学直指（明末清初，以唯识释儒经之后代注层），不是成唯识论本身。",
+   "fix": "在 IN2-R0096 后注「（智旭，明末清初注层）」，或改引成唯识本论中关于熏习的关系。"
+  },
+  {
+   "id": "hanyu-yuandao-chuan",
+   "verdict": "revise",
+   "issues": "fragments 无误，相分（单线、以精不精排他）判得对。(1) 「“千年不传”与“今得之”不能同为真」只在样式传递之前提（Web.ByPassing）下成立，而 PatternPassing 模块明言此前提是假设、不是推出的；reading 未写这一条件。(2) 「今得之」在原道中没有明文，文本根据是「斯吾所謂道也」与「其文，《詩》《書》《易》《春秋》」，后者正好说明书是承载者，应直接引。(3) names_used 写「傳」，声明却是 ByPassing。(4) RuleHandoff.fork_retains_source 与 boundary_is_not_exclusive_membership 是声明协议中的见证，用来说明多线，只能算类比。",
+   "fix": "「不能同为真」前加「在样式传递之前提（Web.ByPassing，假设）下」。「今得之」改为引「斯吾所謂道也」，「书与读者亦是承载者」改为引韩愈自列的「其文，《詩》《書》《易》《春秋》」。names_used 改用 C13 的 PatternPassing 之名。RuleHandoff 两条标「声明协议中之见证（类比）」。"
+  },
+  {
+   "id": "lunyu-yin-sun-yi",
+   "verdict": "revise",
+   "issues": "fragment 无误；已注明 RU1-LY-02-23 是阅读单元，脉络于此章无关系判断，经核实为实。(1) 「可知」是认识上的可预知（子张问「十世可知也？」）；Flow.transmitted_supported 是支撑之界，以它说「可知在一步上成立」，混淆了认识与支撑。(2) 同一章已有三读：C08 名「可知」（可学），C10 以「所損益可知」对应 Pace.pace_law，本条对应 Price 分解。三者未加分工。(3) 「因与损益分开计」中的「因」实指 price 的加权项（亲代之量以所生之数计），不是本簇「因」所名的 InheritsAt。",
+   "fix": "删去以 Flow.transmitted_supported 释「可知」的一句。「可知」改由 C08 的「可知」（Learning.determines_lumped_iff：恰在归并所及之处可知）与 Learning.no_prefix_fixes_next 定域。reading 写明「因」在此指每个后代所承的亲代之量（price 的 selected 项），与 InheritsAt 同构而非同物。notes 中列出 C08、C10 对同章的读法，交整合者裁定。"
+  },
+  {
+   "id": "zhuangzi-wanwu-jie-zhong",
+   "verdict": "keep",
+   "issues": "fragment 无误（寓言，杂篇，已标有争议）。「始卒若環」恰在有界且其余不给之处成立，这个定域与 Gain 的律相合；「莫得其倫」与「天均」已标为解释性读法。小处：把「相禪」读作给予（DescendsAt）是 AI 读法（禪＝代），宜标明；另有 Flow.descent_exhausted（围住则世系不复现、选择止）与「若環」直接相关，可以补入。",
+   "fix": "「以异形相传」前加「讀（AI）：禪读为代」。declarations 增 Becoming.Flow.descent_exhausted。"
+  },
+  {
+   "id": "zhuangzi-zhong-you-ji",
+   "verdict": "revise",
+   "issues": "fragments 无误；已注明「機」与 C17 的「機」不同，这一点好。但「種有幾，得水則爲㡭，得水土之際則爲鼃蠙之衣，生於陵屯則爲陵舄」说的是同一种在不同条件下成不同形，是随条件之形成（发育或变异），文中并没有「不足者无后」的筛选。reading 中「条件选择何者得以相续」（unsupported_childless、transmitted_supported）是读进去的。",
+   "fix": "删去 unsupported_childless、transmitted_supported 及「条件选择何者得以相续」一句。改读为：所成随开始而在时所处之条件而形成其依存（Web.Forms 于开始而在之步）；承继之下不生新依存（Flow.no_new_dependence），所以变形须有承继外之形成（World.novel）。names_used 删「以足擇」。"
+  },
+  {
+   "id": "xunzi-wu-lei-zhi-qi",
+   "verdict": "keep",
+   "issues": "fragments 无误。Flow.rise_given 不需前提（把其余算作关系项），所以「必有所始」可以判相合。荀子以此喻荣辱「必象其德」的评价，与自然发生之说都已列为不映射。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-chuan-jiu-lun-lue",
+   "verdict": "revise",
+   "issues": "fragments 无误，杨倞注的层位分清了。但 reading 只读出「失」，漏了这段正文的论旨。紧接其前，荀子正文说「古今一度也」「類不悖，雖久同理，故鄉乎邪曲而不迷，觀乎雜物而不惑，以此度之」：所传虽久而略，类与理不变，所以可以「以此度之」。这是归并（类）跨时而同的主张，不只是杨注的读法。另外，names_used 写「傳」，而 Web.ByPassing.ends_within 是样式之传。",
+   "fix": "reading 增一句：正文「類不悖，雖久同理」的确切范围是，粗归并（类）只在世界跨此归并而同之处可以带过去（Learning.lumped_right_iff；理，goAlike_iff_lumped），归并所失者不能由略复详（Law.merged_stays）。declarations 增 Becoming.Learning.lumped_right_iff。names_used 中样式之传改用 C13 之名。"
+  },
+  {
+   "id": "shangjun-dingfen-fa-ling",
+   "verdict": "keep",
+   "issues": "四段 fragment 都无误，在定分篇。Copying.inspect_le_iff 的对应限定在「参照忠实」之处，读法谨慎。只有 layer 小误：本条标「论」，而同一来源在所損益条标「原典」，前后不一。",
+   "fix": "layer 统一为「原典·先秦至秦汉（商君书定分，篇章层次不一，不归商鞅亲著）」。"
+  }
+ ],
+ "missing": [
+  "荀子荣辱（RU2-S-XZ04，阅读单元 RU2-U-XZ04，脉络无关系判断）：「不知其義，謹守其數，慎不敢損益也」「父子相傳，以持王公」「是故三代雖亡，治法猶存」。一段之内同时有因（承而不改，δ 为 0）、相傳（世系之传）、承载者亡而样式存（Web.ByPassing.passes_within）、不知其义而谨守其数（ResponseLearning.faithful_loses_distinction；记忆不是相关）。这是本簇最该有而缺的先秦条。",
+  "中庸17（RU1-S-ZY；脉络 RU1-ZY-17-R01／R02「大德必得其位…必受命」）：「故天之生物，必因其材而篤焉。故栽者培之，傾者覆之。」以天为择者、以材为适应度，并以大德定位与命，是相分（意志、等级）；其关系内核是「立者得培、倾者覆」，对应不足者無所生（Flow.unsupported_childless），而脊柱不定义适应度。",
+  "孟子离娄上（RU2-S-MZ）：「不孝有三，无後为大」。以世系之延续为最高义务，是相分：世系不带价值，生生不是后代之数。",
+  "荀子礼论（RU2-S-XZ19）：「先祖者，类之本也」「无先祖，恶出？」。「出」是先秦表示「由先祖而来」的世系用字，可作「所生」的备择名；「先祖为本」又含先在之根与尊卑，属相分。",
+  "杂阿含（FO1-S-SA，刘宋译）：「汝莫問所生，但當問所行」「不以所生故，名為婆羅門」。以所行代出身，否定以出身定位，与世系不带等级相合；同时是「所生」有出身、种姓义的直接证据。",
+  "墨子大取（MI1-S-DQ；脉络 MI1-R-DQ-ground）：「立辭而不明於其所生，妄也」。此处「所生」＝辞之所由生（故、根据），与 C16 的「故」及本簇「所生」的方向直接相撞，名表须列入。",
+  "程颐伊川易传（YD-CY 革卦；近思录 RU2-S-S06）「唯自暴者，拒之以不信；自棄者，絕之以不為」与戴震孟子字义疏证（RU2-S-V3Q01）「由自絕於學，是以不移」：论语17.3 的注层关系性读法，应并入 lunyu-shang-zhi-xia-yu-bu-yi。",
+  "程颐伊川易传益上九注（YD-CY3）：「故无益之者而或攻擊之矣」，是「益之者」已见于宋代注层的证据。",
+  "老子二十五章（YD-LAO-BASE）「人法地，地法天，天法道，道法自然」与王弼注（DS01）「法，谓法则也。人不违地，乃得全安，法地也」：「取法」之「法」最早最重要的一证，须与 RO 的 lao-25-dao-fa-zi-ran 分工。",
+  "朱熹大学章句（RU2-S-S09）「盘，沐浴之盘也」「涤其旧染之污而自新」：「日新」在大学一层是更新而非新，C05 已据此映为 Web.Renewed；本簇须列入 not_carried 并与 C05 对齐。",
+  "未引的律：Becoming.CaptureWorlds.share_rises_of_unsupported 与 Becoming.CaptureWorlds.unsupported_leave_none（经支持之选择使目标份额上升，不足者无后代）；Becoming.Flow.descent_needs_unrun 与 Becoming.Flow.descent_exhausted（选择需要其外；围住则选择止）。这几条应进入「以足擇」「傳擇」的 lean，以及 zhuangzi-wanwu-jie-zhong。",
+  "跨簇须对齐的同句异读：论语2.23（C08「可知」、C10「与时转」与 Pace.pace_law、本簇 Price 分解）；养生主「火傳也」（C05 作 ByPassing、本簇作 TransmitsWithin）；墨经「知，傳受之，聞也」（C08「聞」、本簇「傳」）；大学「苟日新，日日新，又日新」（C05 作更新、C06 与本簇作新）；中庸「善繼人之志」与 C03 的「繼」（Reidentify.KeepsTenure）。"
+ ]
+}

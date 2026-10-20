@@ -1,0 +1,559 @@
+{
+ "cluster": "C13 群、分与共同",
+ "lens": "STRUCTURE",
+ "names": [
+  {
+   "concept": "群（collective）：Flow.Shares 之闭包 Flow.WithinSystem",
+   "name": "群",
+   "verdict": "revise",
+   "issues": "AI 读法。(1) 闭包对牛马与人同饮一水也成立，所以不能区分荀子王制「人能群，彼不能群也」之群（RU2-S-XZ09，先秦·战国末，已核）；荀子以群由分而成（「人何以能群？曰：分」），富國「離居不相待則窮，群居而無分則爭」（RU2-S-XZ10，已核）把群居与分分开。闭包所对是「群居」，荀子之「能群」是群居加分，名把二者合一则过宽。(2) 说明写「群由共同条件与相互依待构成」：共享条件不推出相互依赖（Becoming.Clearing.shares_not_mutual），相待已是 C02 之名，此处混入。(3) lean 列 Becoming.Renewable.kept_part_not_renewal，它是章 §4.3 关于竞争运行之律，不陈述群。(4)「群没有自身之利益」出自章 §4 首段之陈述，不是定理，不能作为 lean 之证。",
+   "fix": "concept 改为：「群（system closure，读作群居）：两个形成同在一群，恰当二者经共同参与之条件相连（Flow.Shares 之闭包 Flow.WithinSystem）；荀子之能群＝群居＋分（见名『分』），闭包本身不给出分。」删「相互依待」；lean 删 Becoming.Renewable.kept_part_not_renewal，加 Becoming.Flow.SharesThroughout、Becoming.Flow.SharesThroughout.unrestricted（章 §4.2：处处共享 ⊃ 相互依赖 ⊃ 相互所养之序之起点）与 Becoming.Clearing.shares_not_mutual（作边界）；「没有自身之利益」注出处为章 §4，标为陈述非定理；attestation 加富國「群居而無分則爭」作为闭包之直接对应。"
+  },
+  {
+   "concept": "分（exclusive footprints）：JointPlans.PartsWithin + PartsApart",
+   "name": "分",
+   "verdict": "revise",
+   "issues": "(1) 说明以「整体所给」表述 PartsWithin，但 JointPlans 之 PartsWithin、PartsApart、Supports 是关于足迹（footprint）之包含与不交，不是 Flow 之所给（Flow.given）；记录 exclusive-footprint-support 只说足迹与共享存量相关，没有已证之接口，所以「所给」混同了两层。(2) gap（分 → Flow.WithinJoint 无已证之桥）正确，必须保留，并在名之说明里写明：分本身不推出不争。(3) 王制同段「分均则不偏」与「使有贫富贵贱之等」把分接到等级之差，not_carried 已列，可保留。",
+   "fix": "concept 改「所取」「所给」为「足迹」：「一个整体所持之各部分，其足迹各在整体之足迹之内（PartsWithin），两部分之足迹互不相交（PartsApart）；足迹与 Flow 之所给相关而无已证之桥（记录 exclusive-footprint-support），所以由分到合取不超出所给（Flow.WithinJoint）是 gap，不是定理。」gap 与 not_carried 保留。"
+  },
+  {
+   "concept": "分數（joint plan）：JointPlan、JointPlan.Realizes、supports_of_realizes",
+   "name": "分數",
+   "verdict": "keep",
+   "issues": "「有限嵌套分解，配置实现计划」与 JointPlan、JointPlan.Realizes、JointPlan.supports_of_realizes 之结构相合，名精确。孙子之 attestation 标先秦即可，但脉络源注其「形成与编定层次有争议」，名之说明应附。条目 sunzi-bingshi-fen-shu 之记录错配在条目处理。",
+   "fix": "attestation 之 layer 加注「孙子成书层次有争议」；其余不改。"
+  },
+  {
+   "concept": "出入相揜（joint taking within what is given）：Flow.WithinJoint",
+   "name": "出入相揜",
+   "verdict": "revise",
+   "issues": "富國原文（RU2-S-XZ10，已核）：「德必稱位，位必稱祿，祿必稱用」，「皆使衣食百用出入相揜，必時臧餘，謂之稱數。故自天子通於庶人」——是对每一单位（自天子至庶人）按等级比例之收支相抵并留余，不是「合计之律而非个人之律」；说明以 Becoming.Exceeding.own_not_joint 对照个人与合计，原文不支持。结构是：在一个存量上，一步之取出不多于所入（Flow.WithinJoint 在该条件上，对每一单位成立），「必時臧餘」更要求严格小于而存余。等级比例（稱位、稱祿）是名分之框架，属四层之「等级」。",
+   "fix": "concept 改为：「出入相揜（within what is given at a stock）：在一个条件上，一步之所取合起来不多于所给（Flow.WithinJoint）；原文对每一单位各自成立，并要求留余。」删「合计之律而非个人之律」，lean 删 Becoming.Exceeding.own_not_joint（若要对照，放说明，不作证）；not_carried 加「德必稱位，位必稱祿，祿必稱用」之等级比例框架（相分：等级），并注「稱數」与 C17「稱」之关系由整合者统一。"
+  },
+  {
+   "concept": "爭（race at a shared condition）：Flow.joint_excess_ends、Flow.race_ends_greatest",
+   "name": "爭",
+   "verdict": "revise",
+   "issues": "(1) Becoming.Flow.race_ends_greatest 之末一合取只对需要不小于 m 之最大部分成立，concept 写「一切依此条件之部分」过宽。(2) 缺边界：最大者若不依赖该条件则延续（Becoming.Clearing.greatest_continues），以及 Becoming.Restored.returns、Becoming.Flow.greatest_end_for_good。(3)「每步至少降一」：Lean 所证是 n 步之内过与至多 n（Becoming.Flow.excess_bounded），不是逐步之单调。(4) 同一「爭」字在本簇有两种结构：共同条件上合取过与之竞（本名），与相对位置之竞（老子之不争，见「為天下先」「相軋」）；说明没有区分。",
+   "fix": "concept 改「一切依此条件之部分」为「需要不小于 m 之最大部分」；lean 加 Becoming.Clearing.greatest_continues、Becoming.Restored.returns、Becoming.Flow.greatest_end_for_good 作为边界；「每步至少降一」改为「n 步之内合取过与之量至多 n（Flow.excess_bounded）」；说明末加：「老子之不争（第3、22、66、68章）多指对位置之争，其结构见名『為天下先』『相軋』，与本名相分，条目逐一标明所指。」"
+  },
+  {
+   "concept": "相軋（the game of relative position）：RelativePosition.positions_balance、change_opposed",
+   "name": "相軋",
+   "verdict": "revise",
+   "issues": "(1) 与 C17「稱」重叠：二者以同一组声明（Becoming.RelativePosition.positions_balance、change_opposed）为证，一个结构不能有两个名。「相軋」所说是以相对位置为目标之竞（游戏），而位置之读法本身（一部分之量对其余之量）是「稱」。(2) 漏列刻画这一游戏之律：Becoming.RelativePosition.change_balances、not_all_rise、rise_needs_fall、Becoming.DrawingMore.grow_and_fall、Becoming.Flow.drawn_positions。",
+   "fix": "concept 改为：「相軋（the game of relative position）：以相对位置（名『稱』，C17）为目标之进程；按计数零和，一部分位置之升必有其余之降（RelativePosition.change_balances、rise_needs_fall），不能全体同升（not_all_rise），多取者之增长与他者之降并行（DrawingMore.grow_and_fall、Flow.drawn_positions）。」lean 中 positions_balance、change_opposed 归 C17「稱」，本名引用之；与 C17 之整合者协调。可加宋明层 attestation：苏辙老子解「天下之剛強方相傾相軋」（LC-SZ-ALL，已核）。"
+  },
+  {
+   "concept": "為天下先（the target above all others）：aboveAll_unique、Law.aboveAll_never_rests",
+   "name": "為天下先",
+   "verdict": "keep",
+   "issues": "Becoming.aboveAll_unique、Becoming.Law.aboveAll_never_rests 与「不敢為天下先」所拒之目标结构相合；名指目标（高于其余一切）而非行为，精确。",
+   "fix": "说明可加一句：本名是老子之「不争」所指之主要结构，与名「爭」（共同条件上之竞）相分。"
+  },
+  {
+   "concept": "同患（a common condition every formation depends on and exchanges with）",
+   "name": "同患",
+   "verdict": "revise",
+   "issues": "(1) attestation YWH-LZ 之引文不含「同患」，只证「同舟」。(2) 司马法「同患同利以合諸侯」（BI1-S-SM，已核）与「以土地形諸侯……以兵革服諸侯」并列，是以利害之一致合诸侯之术，属诱因与利益之一致；理论所说是依赖之共有，OPENING [^aligned] 明言这些定理关乎依赖与意义，不关乎诱因或动机。把「同利」并入结构是混入。(3) 司马法之年代「今本编纂层次未定」未标。(4) lean 缺 Becoming.Web.coextinct（依赖链所及之一终结则依赖它者也终结），这是「同患」最直接之结构。",
+   "fix": "删 YWH-LZ 作为「同患」之证（可作「同舟」之注疏层）；司马法 attestation 只取「同患」二字之结构，标「传世司马法，今本编纂层次未定」，并注明「同利以合」部分为相分（以利害合之术），不入名；lean 加 Becoming.Web.coextinct；名之说明以孙子九地条目 sunzi-jiudi-tong-zhou 为主证；可扩展本名承载 OPENING 之 aligned（见 missing）。"
+  },
+  {
+   "concept": "交相利（mutual feeding）：Flow.MutuallyFed",
+   "name": "交相利",
+   "verdict": "revise",
+   "issues": "(1)「利」在墨子是可计算之利益，并以「交相利」对「交相賊」作得失之比较，导入获益之评价；Flow.MutuallyFed 只说每一方之延续在某种间接上为每一方所养，不带利益之计算，名之字义比定理多一层。(2)「交」是直接之相互，而 MutuallyFed 允许经由间接。(3) 与 C10「所资」（供给闭包）须协调。",
+   "fix": "二选一，由整合者定：(a) 改名「交相養」，以庄子繕性「知與恬交相養」（ZH1-S16，庄子外篇，年代有争议，已核）为 attestation，结构仍为 Flow.MutuallyFed；(b) 保留「交相利」，说明限定「利＝资（所养），不含得失之计算」，并注明墨子以利害比较立论之部分为相分。两者都写「交在理论中允许间接」，并注明与 C10 所资之关系（所资为闭包，交相X 为每方在每方之闭包内）。"
+  },
+  {
+   "concept": "和而不同（what pooling adds）：Web.separates_all_iff、Web.pool_adds",
+   "name": "和而不同",
+   "verdict": "keep",
+   "issues": "Becoming.Web.separates_all_iff、Becoming.Web.pool_adds 与「和」作为合用耦合而增加分辨之结构相合。须与 C10「兼感」（lean 也列 pool_adds、pooled_iff_member）及已采之名「中和」（Becoming.Regulation）区分：此「和」是合用之选择所加之分辨，不是调节之带。",
+   "fix": "说明加交叉注：C10 兼感为合用之耦合本身，本名为合用所加之分辨；「中和」之「和」属 Regulation。"
+  },
+  {
+   "concept": "同而不和（a pool equal to one member）：Web.pooled_iff_member",
+   "name": "同而不和",
+   "verdict": "revise",
+   "issues": "Becoming.Web.pooled_iff_member 之条件是：该成员之同类关系细于每一成员（凡该成员视为同者，每个成员都视为同），不是「各成员全同」。说明「同者相加什么也不加」只是成员全同之特例。",
+   "fix": "concept 保留定理之陈述；「同者相加什么也不加」改为「各成员全同是其特例；一般地，只要一成员之分辨已含其余一切成员之分辨，合用便不加任何分辨」。"
+  },
+  {
+   "concept": "同力（difference made only together）：Dependence.DifferenceOnlyTogether",
+   "name": "同力",
+   "verdict": "revise",
+   "issues": "概念错置。Becoming.Dependence.DifferenceOnlyTogether 是「合起来造成差异，而扣留任一部分同一步仍造成」，即没有任何一部分是 but-for 之因，即过度决定（Pool 三取者之例 first_two_only_together）。而 attestation「三軍同力」（荀子王制、富國、议兵，已核）、「比知同力……彊君撟君」（臣道，RU2-S-XZ13，已核）、「二人同心」（繫辭）说的是合起来成事且每一方都不可少，是合取：每部分都单独 MakesDifference（Pool 二者之例），正与 DifferenceOnlyTogether 相反。concept 之「单独都不造成」把「单独不足以成」与「不是 but-for」混同。",
+   "fix": "concept 改为：「同力（difference made together）：一族部分合起来造成一个变化（Becoming.Dependence.MakesDifferenceTogether）」，lean 配 Becoming.Dependence.makesDifference_iff_together、Becoming.Pool.difference_belongs_to_the_joint，说明写明合取之例中每一部分都 MakesDifference；DifferenceOnlyTogether（过度决定，没有单一之取者，章 §4.1）另立一名（见 missing），不用「同力」。通知 C02「有力」之 lean 删 DifferenceOnlyTogether，并改 notes 汇总行「同力（DifferenceOnlyTogether）」。"
+  },
+  {
+   "concept": "讓（the closing link）：LoopReturn.closing_needs_less",
+   "name": "讓",
+   "verdict": "revise",
+   "issues": "(1) attestation（论语3.7「揖讓而升」、4.13「能以禮讓為國乎」、大学「一家讓」、荀子「饒樂之事則能讓」，均已核）说的是让先、让物，不涉回送差异之环，也不涉「交回少于所受」；Becoming.LoopReturn.closing_needs_less 之结构在这些文中没有。(2) lean 与 C11「報」（含 closing_needs_less、closes_within、runs_away）重叠。",
+   "fix": "改 attestation 为论语8.5「犯而不校」（RU1-S-LY，先秦，已核：受犯而不回报，即环中交回少于所受之一节），可附司马法「取過在己」（BI1-S-SM，今本编纂层次未定，已核）；或改名为「不校」。若保留「讓」字，标 derived，写明以让之「不全取」类比环中之「不全交回」是 AI 之引申。与 C11 協調：報为回送之映射，本名只为闭合之环节；lean 可加 Becoming.LoopReturn.cut_closes、cut_reopened 作为另一闭合方式之对照。"
+  },
+  {
+   "concept": "念舊惡（giving that waits, with memory）：Withholding.waitsAll",
+   "name": "念舊惡",
+   "verdict": "revise",
+   "issues": "正面形式「念舊惡」在冻结文本中未见，只有否定式「不念舊惡」（论语5.23，RU1-S-LY，已核；荀子杨倞注引，RU2-S-XZ07）；所以不是 attested，而是由否定式反推之新造。结构（Becoming.Withholding.waitsAll，带记忆之等待给出）本身无误。",
+   "fix": "attestation 类别改为 coined/derived，写明由「不念舊惡」反推；结构保留。"
+  },
+  {
+   "concept": "不念舊惡（giving that waits, without memory）：Withholding.answers",
+   "name": "不念舊惡",
+   "verdict": "revise",
+   "issues": "说明以 Becoming.Withholding.withholding_returns 释「怨是用希」，但该定理说带记忆之扣留在环上于每一 k·p 步都扣留（永不复给），证的是「念」一侧；「不念」一侧之律是一方先给则全环恢复（Becoming.Withholding.Ring.givesFirst_restores、Ring.givesFirst_restores_exact）。「希」是程度之语，理论给出的是可复与永不复之分，不给频率。",
+   "fix": "fit 改为：「带记忆者在环上一旦扣留便在每一回合扣留（withholding_returns）；不带记忆者回应上一步，一方先给即恢复（Ring.givesFirst_restores）。『怨是用希』之『希』是程度，律只给出可复与不复之分。」"
+  },
+  {
+   "concept": "得兼（conditions kept together）：Viability.kernel_and_iff",
+   "name": "得兼",
+   "verdict": "keep",
+   "issues": "Becoming.Viability.kernel_and_iff 与孟子「二者不可得兼」之结构相合（两守护之共同保持；在一切走法计入之处，共同之守护恰是各自之守护），名精确。「兼」另见 C14「兼」（Neutral）与 C15「兼權」，同字异构。",
+   "fix": "说明加交叉注：C14 兼、C15 兼權为不同结构，词汇表中分开。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "xunzi-wangzhi-qun-fen-yi",
+   "verdict": "revise",
+   "issues": "(1)「一则多力，多力则彊」映到 Becoming.Dependence.DifferenceOnlyTogether；多力是合取之力（每部分都不可少），应为 MakesDifferenceTogether（见名「同力」）。(2) 读法以「所给」述分，混同足迹与 Flow.given。(3) 引 Excluding.three_courses 作为一般律，它是一个构造之例。",
+   "fix": "Becoming.Dependence.DifferenceOnlyTogether 换为 Becoming.Dependence.MakesDifferenceTogether、Becoming.Dependence.makesDifference_iff_together；「所给」改「足迹」；three_courses 标为例；kind 保留 scope，并写明「人能群，彼不能群也」之能群＝群居＋分，闭包不给出分（与名「群」之修订一致）。"
+  },
+  {
+   "id": "xunzi-wangzhi-qun-er-wu-fen",
+   "verdict": "revise",
+   "issues": "「群而无分则争，争则乱，乱则离，离则弱」是一条因果链（RU2-S-XZ09，已核）；脊柱只给出第一环之结构（合取超出时竞而有终：Flow.joint_excess_ends、race_ends_greatest），「乱→离→弱」没有律；two_le_length 被用作「离」之证，属误用；race_ends_greatest 未加边界。以相合标整条过强。",
+   "fix": "kind 改 scope：只在合取超出所给且无分界之处竞而有终；「乱则离，离则弱」标为文本之断言、脊柱无律；删 Becoming.Dependence.DifferenceOnlyTogether.two_le_length；加 Becoming.Clearing.greatest_continues 为边界，race_ends_greatest 注「只对需要不小于 m 之最大部分」。"
+  },
+  {
+   "id": "xunzi-fuguo-yu-duo-wu-gua",
+   "verdict": "revise",
+   "issues": "(1) 读法把「救患除禍，則莫若明分使群矣」直接接到 Flow.WithinJoint，即把「分 → 合取不超出」当已证——这正是名「分」之 gap。(2)「百技所成，所以養一人也」是供给之结构，读法用 Flow.mutuallyDependent_of_common（依赖），应为供给闭包。(3) 同篇之「出入相揜」在按等级比例（「德必稱位，位必稱祿，祿必稱用」）之框架中，未标。",
+   "fix": "kind 改 scope：「欲多而物寡，寡則必爭」在合取超出所给时成立（Flow.joint_excess_ends）；由明分到不争标为 gap（分 → WithinJoint 未证，记录 exclusive-footprint-support）；把 mutuallyDependent_of_common 换为 Becoming.Flow.WithinFeeding（要相互时用 Flow.MutuallyFed）；剩余写入「稱位稱祿」之等级框架（相分：等级）。"
+  },
+  {
+   "id": "xunzi-lilun-li-qi-yu-fen",
+   "verdict": "revise",
+   "issues": "「求而无度量分界，则不能不争」与 Flow.joint_excess_ends、Exceeding.own_not_joint，「两者相持而长」与 Flow.level_kept 之对应可保；但读法以 PartsApart、JointPlan.supports_of_realizes 说「度量分界正是排他之界」并据以得不争——足迹之排他到 Flow 之合取在所给之内没有已证之桥（名「分」之 gap）。「争则乱，乱则穷」无律。",
+   "fix": "kind 保留 agreement 但限于「无分界则争」与「欲物相持」两部分；读法加 gap：「以分界使不争需要 分 → Flow.WithinJoint 之桥，未证（记录 exclusive-footprint-support）」；「争则乱，乱则穷」标为文本之链。"
+  },
+  {
+   "id": "xunzi-wangzhi-fen-jun-bu-pian",
+   "verdict": "keep",
+   "issues": "四段分读准确：对称不能自行一致（SharedCodes.never_agrees_of_both、pair_never_agrees、Law.Commutes.keeps_fixed）、打破对称之方式不必是价值之等级、争之因是物不能澹、「是天数也」属固定本性层。kind scope 恰当。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-wangba-fen-tian-er-geng",
+   "verdict": "revise",
+   "issues": "所附记录 joint-plan-composition 陈述的是 Becoming.Viability.Plan.zip_keeps（局部方案之共同接续），不是「農分田而耕」一类分工之足迹结构，记录错配。",
+   "fix": "记录换为 exclusive-footprint-support（Becoming.JointPlan.supports_of_realizes：排他之足迹支持一切叶）；kind 可保 agreement，但限于「各分其足迹而全体被支持」，并注明足迹到所给无已证之桥。"
+  },
+  {
+   "id": "xunzi-yibing-da-ning",
+   "verdict": "keep",
+   "issues": "结构对应与 kind 无误，声明存在，引文已核。",
+   "fix": ""
+  },
+  {
+   "id": "mengzi-er-zhe-bu-ke-de-jian",
+   "verdict": "keep",
+   "issues": "Viability.kernel_and_iff 与「二者不可得兼」之对应确切；kind 恰当。",
+   "fix": ""
+  },
+  {
+   "id": "lunyu-he-er-bu-tong",
+   "verdict": "keep",
+   "issues": "条目本身无误（Web.separates_all_iff、pool_adds）。附带：pooled_iff_member 之读法应按名「同而不和」之修订表述（成员之分辨细于全体，不是全同）；parallels 中 FO2-FQ-R034 之注用 DifferenceOnlyTogether，与名「同力」之修订冲突。",
+   "fix": "parallel FO2-FQ-R034 之注删 DifferenceOnlyTogether 或改为 Becoming.Dependence.MakesDifferenceTogether；pooled_iff_member 之一句按名「同而不和」修订。"
+  },
+  {
+   "id": "lunyu-bu-nian-jiu-e",
+   "verdict": "revise",
+   "issues": "「怨是用希」之「希」被读为 withholding_returns 之结果；该定理证带记忆之扣留在环上每一回合都扣留（念之不复），不是「希」；不带记忆之一侧是一方先给即恢复（Withholding.Ring.givesFirst_restores）。",
+   "fix": "读法改：「念舊惡（waitsAll）在环上一旦扣留便永不复给（withholding_returns）；不念（answers）则一方先给即恢复（Ring.givesFirst_restores）」；kind 保留 scope，注明理论给出可复与不复之分，「希」之程度不由律给出。"
+  },
+  {
+   "id": "lunyu-yi-rang",
+   "verdict": "reject",
+   "issues": "论语3.7（「揖讓而升」）是射之礼，射本身是位置之竞，揖讓是竞中之礼仪；4.13（「能以禮讓為國乎」）是以让治国。两处都没有回送差异之环，也没有「交回少于所受」；映到 LoopReturn.closing_needs_less、cut_closes 无结构根据。parallel BI1-SM-R-21（「取過在己」）无处安放。",
+   "fix": "删本条。以论语8.5「以能問於不能，以多問於寡，有若無，實若虛，犯而不校」（RU1-S-LY，先秦，已核）重建一条：受犯而不回报＝环中交回少于所受之环节（Becoming.LoopReturn.closing_needs_less），并对照截断（LoopReturn.cut_closes、cut_reopened：截断可闭合而环可再开）；BI1-SM-R-21 移到新条目之 parallels（标司马法今本编纂层次未定）；3.7 若要保留，另立 scope 条目归名「相軋」（位置之竞以礼约之）。"
+  },
+  {
+   "id": "lunyu-bu-huan-gua-er-huan-bu-jun",
+   "verdict": "revise",
+   "issues": "(1) 读法「所给小于所需之和时，均分使人人不足」错：需要不等时，均份仍可覆盖需要不高于均份者（例：需要 1 与 10，所给 6，均份 3 覆盖前者）；成立的是「任何分法至少使一员不足」。(2) 以 RelativePosition.positions_balance 说「份额之升由他处之降支付」，把位置（读法）与存量之份混同。(3)「份额」「均分」之措辞是在独立持有者之间分配之框架，不合「从实际关系出发」之要求。",
+   "fix": "改为「所给小于所需之和时，任何分法都至少使一员不足（Stock.feasible_iff_covered 之反面）；均分时需要不高于均份者仍被支持」；删 Becoming.RelativePosition.positions_balance，「不均之害」若保留只用 Flow.Balances.rise_paid_from_beyond 并说明它关乎流之平衡；读法改以「共同条件之所给能否覆盖依此条件者之所需」立论；gap 之均分律陈述保留。"
+  },
+  {
+   "id": "lunyu-ji-yu-li-er-li-ren",
+   "verdict": "keep",
+   "issues": "结构对应与 kind 无误。",
+   "fix": ""
+  },
+  {
+   "id": "lunyu-wu-qiu-bei-yu-yi-ren",
+   "verdict": "revise",
+   "issues": "(1) Becoming.Dependence.DifferenceOnlyTogether.two_le_length 被用来说「不求备于一人」；DifferenceOnlyTogether 是过度决定，而能力分布于群是合取；two_le_length 只说该谓词之族至少两员。(2) 与 C11 条目 lunyu-wu-qiu-bei 同一段、同一组 Tolerance 声明，重复。",
+   "fix": "删 two_le_length；若要「不求备于一人」之结构，用 Becoming.Dependence.MakesDifferenceTogether；与 C11 之条目合并为一条（由整合者定主条目），本簇只在 names_used 引「群」，删「同力」。"
+  },
+  {
+   "id": "daxue-yi-jia-rang",
+   "verdict": "revise",
+   "issues": "(1)「其機如此」之「機」在大学是发动之枢（弩机）之喻，指一处发动而全体随之，不是已采之名「机」（走法分叉之关节，Becoming.Branching.Juncture）；读法把二者同一。(2) names_used 列「讓」，读法所用是 Withholding、Tolerance 与「先施」，与 LoopReturn 之「讓」无关。",
+   "fix": "names_used 删「机」「讓」；读法中「機」改为「发动之处」，注明不是已采之「机」；Withholding、Tolerance 之定域保留。"
+  },
+  {
+   "id": "daxue-ben-mo",
+   "verdict": "keep",
+   "issues": "结构对应与 kind 无误。",
+   "fix": ""
+  },
+  {
+   "id": "zhongyong-bing-yu-bu-xiang-hai",
+   "verdict": "keep",
+   "issues": "结构对应与 kind 无误。",
+   "fix": "若 layer 未注中庸成书年代之争，补注。"
+  },
+  {
+   "id": "zhongyong-qinqin-zhi-sha",
+   "verdict": "keep",
+   "issues": "相分恰当：嵌套闭包之次第是触及之事实，不是意义之等差（Flow.withinInfluence_of_withinFeeding、Transfer.unordered、Clearing.centers_disagree）。",
+   "fix": "若 layer 未注中庸成书年代之争，补注。"
+  },
+  {
+   "id": "xunzi-gui-jian-you-deng",
+   "verdict": "keep",
+   "issues": "相分恰当（等级层）。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-jianai-zhong-bi-cong",
+   "verdict": "keep",
+   "issues": "结构对应与 kind 无误。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-jianai-zhong-shi-ren-ruo-ji",
+   "verdict": "revise",
+   "issues": "读法说「强不执弱，众不劫寡」列举的是一方取用另一方所需之关系，并以 Drawing.mutual_not_fed（相互依赖而不相互供给）为证；但强执弱是单向之压取，不是相互依赖，Drawing.mutual_not_fed 之结构是对称的。",
+   "fix": "单向压取改用 Becoming.Clearing.undermines_within_renewal（一方之延续削弱他方所依之更新）或 Becoming.Flow.continuing_excludes；Drawing.mutual_not_fed 只留给「交相賊」之相互部分；其余（跨边界不变、C 之比较承诺）保留。"
+  },
+  {
+   "id": "mozi-shangxian-xia-xiang-zhu",
+   "verdict": "revise",
+   "issues": "(1)「有力者疾以助人，有財者勉以分人，有道者勸以教人」是单向之给予（由有到无），对应供给闭包，不是每方皆在每方之闭包内（Flow.MutuallyFed）；读法亦无共同条件，feeding_whole_of_common 无所据。(2) names_used 或读法并用「生生」：墨子「此安生生」义为使生者得以生，不是理论之生生（生成之生成，D1），不得同一。",
+   "fix": "Flow.MutuallyFed 及其推论换为 Becoming.Flow.WithinFeeding（单向供给）；删 feeding_whole_of_common；删「生生」之同一，注「安生生」为墨子之义；kind 改 scope；若要「交相」之结构，由整合者核 MO1-C16-R004、MO1-C25-R008 所据之段后另建。"
+  },
+  {
+   "id": "mozi-jianai-xia-xian-cong-shi",
+   "verdict": "keep",
+   "issues": "结构对应与 kind 无误。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-shangtong",
+   "verdict": "keep",
+   "issues": "定域恰当（单一中心层）。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-shangtong-xia-shi-qi-guo",
+   "verdict": "keep",
+   "issues": "定域恰当。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-tianzhi",
+   "verdict": "keep",
+   "issues": "相分恰当（意志或单一中心层）。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-shangxian-shang",
+   "verdict": "keep",
+   "issues": "相分恰当。",
+   "fix": ""
+  },
+  {
+   "id": "hanfei-er-bing",
+   "verdict": "keep",
+   "issues": "相分恰当（中心与竞逐层）。",
+   "fix": ""
+  },
+  {
+   "id": "hanfei-wudu-gong-si-xiang-bei",
+   "verdict": "keep",
+   "issues": "相分恰当。",
+   "fix": ""
+  },
+  {
+   "id": "hanfei-wudu-ren-zhong-cai-gua",
+   "verdict": "keep",
+   "issues": "相合可保（合取超出之结构）。",
+   "fix": "若读法引 race_ends_greatest，注「只对需要不小于 m 之最大部分」。"
+  },
+  {
+   "id": "hanfei-wudu-shang-xia-zhi-li-yi",
+   "verdict": "keep",
+   "issues": "定域恰当。",
+   "fix": ""
+  },
+  {
+   "id": "shangjunshu-yi-shang-yi-xing-yi-jiao",
+   "verdict": "keep",
+   "issues": "相分恰当。",
+   "fix": ""
+  },
+  {
+   "id": "sunzi-bingshi-fen-shu",
+   "verdict": "revise",
+   "issues": "(1) 所附记录 joint-plan-composition 是 Viability.Plan.zip_keeps（局部方案之共同接续），不是 JointPlan 之嵌套分解，错配。(2) 脊柱只在定义层（JointPlan.Realizes）对应「分數」，没有「治眾如治寡」之规模不变之律。(3) 读法引 PartsApart，经文无排他之足迹。(4) 孙子成书层次有争议，未注。",
+   "fix": "记录换为 joint-code-plan-lifting（Becoming.joint_plan_lifts_of_stable、JointPlan.realizes_image_iff：有限嵌套方案之提升），并须由整合者核其稳定条件是否对应「治眾如治寡」；若不对应，只保留定义层之对应并改 kind 为 scope；删 PartsApart；layer 注争议。"
+  },
+  {
+   "id": "sunzi-junzheng-jin-gu-jing-qi",
+   "verdict": "revise",
+   "issues": "金鼓旌旗由将设立、「所以一民之耳目也」（BI1-S-SZ，已核），读法所用 SharedCodes.run_from_imposition 是强加之码；但读法末句与 names_used 把它归于「约定俗成」。章 §4.5 在 SharedCodes 之内分开：约定俗成＝用之次序，书同文＝强加之码，王者制名＝中心。",
+   "fix": "names_used 删「约定俗成」（或注明只指模块 SharedCodes），读法末句改为「这是强加之码（章 §4.5 书同文一类），不是约定俗成之用之次序」；剩余加：经文以一民之耳目为法，属单一中心层。"
+  },
+  {
+   "id": "sunzi-jiudi-tong-zhou",
+   "verdict": "keep",
+   "issues": "同舟共济之共同依赖条件结构相合。",
+   "fix": "layer 注孙子成书层次有争议；若名「同患」按修订以本条为主证，补 Becoming.Web.coextinct。"
+  },
+  {
+   "id": "sunzi-xushi-wo-zhuan-di-fen",
+   "verdict": "revise",
+   "issues": "(1)「只能合起来造成之差别随之失去」用 DifferenceOnlyTogether；集中之力是合取，应为 MakesDifferenceTogether。(2)「竞逐终结的是依赖者，胜者也不在律外」引 Flow.race_ends_greatest：该律是共同条件上之竞之终局，且末一合取只对需要不小于 m 之最大部分成立；最大者不依赖该条件则延续（Clearing.greatest_continues），所以「胜者不在律外」过强。",
+   "fix": "DifferenceOnlyTogether 换为 Becoming.Dependence.MakesDifferenceTogether；删 race_ends_greatest 之一句，或改为「在共同条件上竞时，需要不小于 m 之最大者也终结（race_ends_greatest），不依赖之最大者延续（Clearing.greatest_continues）」；names_used 删「同力」或按修订保留；kind 相分保留。"
+  },
+  {
+   "id": "laozi-03-bu-shang-xian",
+   "verdict": "revise",
+   "issues": "「不尚贤，使民不争」只对位置之竞（相軋）成立；共同条件上合取超出之争（名「爭」）不因不尚贤而消失，所以相合之全称过强。读法「必然使一些人之所求落空」是动机层之语，rise_needs_fall 只给出一人位置之升需他人位置之降。",
+   "fix": "kind 改 scope：不争限于以名位排序所生之相对位置之竞；「必然使一些人之所求落空」改为「任何一人位置之升必有他人位置之降（RelativePosition.rise_needs_fall）」；names_used 之「爭」改「相軋」（若「相軋」按修订保留）。"
+  },
+  {
+   "id": "laozi-22-fu-wei-bu-zheng",
+   "verdict": "keep",
+   "issues": "相合可保（位置之竞）。",
+   "fix": "读法注明此「争」为位置之竞，与名「爭」相分。"
+  },
+  {
+   "id": "laozi-66-yu-shang-min",
+   "verdict": "keep",
+   "issues": "相分恰当（以下为上之术，中心与位置层）。",
+   "fix": ""
+  },
+  {
+   "id": "laozi-68-bu-zheng-zhi-de",
+   "verdict": "revise",
+   "issues": "「用人之力」映到 DifferenceOnlyTogether，并称其「需要部分不相排斥」：该定义不陈述不相排斥，且用人之力是合取之力，应为 MakesDifferenceTogether。",
+   "fix": "Becoming.Dependence.DifferenceOnlyTogether 换为 Becoming.Dependence.MakesDifferenceTogether；删「需要部分不相排斥」，相应论证只用 Law.aboveAll_never_rests（两个持此目标者不能一起静止）；kind scope 与剩余保留。"
+  },
+  {
+   "id": "suzhe-68-xiang-shang-zhi-xin",
+   "verdict": "revise",
+   "issues": "two_le_length 只说 DifferenceOnlyTogether 之族至少两员，不支持「人人求上则没有一起可以静止」；Law.aboveAll_never_rests 已足以证两个持此目标者不能一起静止。「莫能相為用」是合成之缺失，与「不能一起静止」不是同一结构，未注为剩余。",
+   "fix": "删 Becoming.Dependence.DifferenceOnlyTogether.two_le_length；保留 aboveAll_unique、Law.aboveAll_never_rests、Law.rests_iff；剩余注「相為用」（合起来造成，MakesDifferenceTogether）与 aboveAll 之间脊柱未连成一律；names_used 删「同力」；layer 宋明（苏辙）保留。"
+  },
+  {
+   "id": "laozi-77-ren-zhi-dao",
+   "verdict": "keep",
+   "issues": "相合可保。",
+   "fix": ""
+  },
+  {
+   "id": "laozi-79-he-da-yuan",
+   "verdict": "revise",
+   "issues": "所加 LoopReturn.closing_merges 陈述的是：在零处闭合之环把两个差异合并，即分辨失去，差异为零；它不给出「余怨」（余下之差异）。读法以之证「和之后有余」把失去之分辨与余下之差异混同。「执左契而不责于人」接名「讓」，依赖该名之修订。",
+   "fix": "读法改为：「『必有餘怨』之『余』在脊柱上是失去者保持失去（Law.lost_stays、merged_stays、MatchedCourses.recovery_retains_loss）；环之闭合不是无损的（closing_not_lossless），在零处闭合把两个差异合并，所失是分辨，不是余下之差异（closing_merges）。」「执左契」之一句按名「讓」之修订改引（或改为「不校」）。"
+  },
+  {
+   "id": "laozi-63-bao-yuan-yi-de",
+   "verdict": "keep",
+   "issues": "定域恰当。",
+   "fix": ""
+  },
+  {
+   "id": "laozi-49-yi-bai-xing-xin-wei-xin",
+   "verdict": "keep",
+   "issues": "相合可保。",
+   "fix": ""
+  },
+  {
+   "id": "laozi-80-xiao-guo-gua-min",
+   "verdict": "keep",
+   "issues": "相分恰当。",
+   "fix": ""
+  },
+  {
+   "id": "laozi-09-gong-sui-shen-tui",
+   "verdict": "keep",
+   "issues": "定域恰当。",
+   "fix": ""
+  },
+  {
+   "id": "laozi-30-bu-yi-bing-qiang",
+   "verdict": "keep",
+   "issues": "定域恰当。",
+   "fix": ""
+  },
+  {
+   "id": "laozi-54-xiu-zhi-yu-shen",
+   "verdict": "keep",
+   "issues": "定域恰当。",
+   "fix": ""
+  },
+  {
+   "id": "laozi-46-zhi-zu-zhi-zu",
+   "verdict": "keep",
+   "issues": "定域恰当。",
+   "fix": ""
+  },
+  {
+   "id": "zhuangzi-renjianshi-ming-xiang-ya",
+   "verdict": "keep",
+   "issues": "「名也者相軋也」与相对位置之竞相合。",
+   "fix": "按名「相軋」之修订改引其律（change_balances、rise_needs_fall 等），positions_balance 注归 C17「稱」。"
+  },
+  {
+   "id": "zhuangzi-qiushui-zi-gui-xiang-jian",
+   "verdict": "keep",
+   "issues": "相合可保。",
+   "fix": "layer 注庄子外篇年代有争议（若未注）。"
+  },
+  {
+   "id": "zhuangzi-shanmu-yi-li-he-yi-tian-shu",
+   "verdict": "revise",
+   "issues": "(1) 读法说「相收出于依赖之结构」：依赖之结构给出依赖链所及之一终结则依赖它者也终结（Web.coextinct），不给出相收、相弃之行为；OPENING [^aligned] 明言这些定理关乎依赖与意义，不关乎诱因或动机。(2)「以利合」读为「只在交换上相连」，而 Clearing.shares_not_mutual 说的是共享条件不推出相互依赖，交换与共享不同层。",
+   "fix": "kind 改 scope：结构之相合限于「以利合者共享而不必相互依赖，天属者相互依赖」（Clearing.shares_not_mutual、Flow.MutuallyDependent、Web.coextinct）；「相收」「相弃」之行为标为剩余；「交换」改「共享条件」；layer 外篇年代有争议已注，保留。"
+  },
+  {
+   "id": "zhuangzi-tianxia-ge-wei-qi-suo-yu",
+   "verdict": "keep",
+   "issues": "定域恰当。",
+   "fix": ""
+  },
+  {
+   "id": "qian-yong-jiu-qun-long-wu-shou",
+   "verdict": "revise",
+   "issues": "Becoming.Clearing.center_not_derived 陈述的是以依赖为界之意义中心不沿依赖导出（评价之中心），不陈述一个群之「首」；「群之所以为群不需要一个首」由系统关系之对称（Flow.WithinSystem.symm）与共同条件使全体同在一系统（Flow.system_whole_of_common）即足。",
+   "fix": "删 center_not_derived（或改为注，写明不同层）；一致不必由首之论证保留 SharedCodes.TwoFormations.preferred_breaks_renaming（两形成之例）并引 wangbi 条目之 gap；小象「天德不可為首也」之 layer 注易传年代有争议。"
+  },
+  {
+   "id": "tongren-yu-ye-yu-zong",
+   "verdict": "keep",
+   "issues": "定域恰当。",
+   "fix": ""
+  },
+  {
+   "id": "cui-shun-yue-er-ying",
+   "verdict": "revise",
+   "issues": "「剛中而應」之「應」是响应之关系；Flow.Shares、WithinSystem 只说同在一系统，不含响应，所以「聚由相应之关系形成」不由所引之律给出。",
+   "fix": "加 Becoming.ExchangeLaw.RespondsTo（与 C10 名「應」协调）以对应「應」；否则 kind 改 scope：闭包只给出聚之连接，应不由闭包给出；程颐之单一中心读法（CY130-H45-R01）作为 parallel 之相分保留；易传年代有争议注明。"
+  },
+  {
+   "id": "song-zhong-ji-zhong-xiong",
+   "verdict": "revise",
+   "issues": "fragment 只有卦辞「有孚，窒，惕，中吉，終凶。」，读法依赖彖「訟不可成也」与初六象，而二者不在 fragment；卦辞本身不陈述往返之环，环之结构（LoopReturn.never_closes_of_no_less、closing_needs_less、runs_away、whole_factors）是读法所加。以相合标出过强。",
+   "fix": "把所依之彖、象之句加入 fragments（须 ctq.py text 核引）；kind 改 scope：讼若读为往返之环，则律给出不闭合、失控与闭合之条件，「中吉，終凶」是占断；names_used 之「讓」按该名之修订处理。"
+  },
+  {
+   "id": "song-tian-yu-shui-wei-xing",
+   "verdict": "revise",
+   "issues": "(1)「天與水違行」是二者方向相反、相背而行，不是「响应自身所给水平之交换形成环」；responds_to_own_level、forms_by_closing 给出环之形成，经文无回送。环之读法来自朱熹注（ZX130-H06-R01，宋明层）。(2)「作事谋始」等同已采之「机」：机是走法分叉之关节（Branching.Juncture），经文只说在事始谋划，结构未证。(3) Pair.own_not_joint 列而未用。",
+   "fix": "kind 改 scope：讼之起在关系之配置而不在一方之本性，可保；环之形成写明是朱熹注层之读法，只在双方以对方为所应时成立；删「正是关节（机）」或注为 AI 之类比；删 Becoming.Pair.own_not_joint。"
+  },
+  {
+   "id": "xici-er-ren-tong-xin",
+   "verdict": "revise",
+   "issues": "倒置。读法自己引 differenceOnlyTogether_iff：「扣留任一则同一步仍造成」——即一人独可断金；而经文与读法都说「单独不能」。二人同心断金是合取：每一人都是 but-for 之因（Pool 二者之例），正是 DifferenceOnlyTogether 之反面。",
+   "fix": "declarations 换为 Becoming.Dependence.MakesDifferenceTogether、Becoming.Dependence.makesDifference_iff_together、Becoming.Pool.difference_belongs_to_the_joint，删 DifferenceOnlyTogether、two_le_length、differenceOnlyTogether_iff；读法改为「二人合起来造成断金，且扣留任一则不造成」；parallel ZX130-H43-R01 之注同改；layer 易传年代有争议已注，保留。"
+  },
+  {
+   "id": "xici-tian-zun-di-bei",
+   "verdict": "keep",
+   "issues": "相分恰当（固定位序层）。",
+   "fix": ""
+  },
+  {
+   "id": "xici-yijun-ermin",
+   "verdict": "keep",
+   "issues": "相分恰当。",
+   "fix": ""
+  },
+  {
+   "id": "xugua-yinshi-bi-you-song",
+   "verdict": "revise",
+   "issues": "新加之句「讼……只在合取超出而无分界时出现」过强：脊柱只证合取在所给之内时全体被支持（Flow.WithinJoint、joint_keeps）与各自在内而合起来可超出（Pair.own_not_joint），不证合取超出是讼之唯一来源；「无分界」到「讼」又依赖名「分」之 gap。",
+   "fix": "改为：「合取在所给之内时全体被支持，所以讼不是饮食之必然；合取超出是讼之一个结构来源，脊柱不断言其唯一」；删「只」；注分界之 gap。相分之判断保留。"
+  },
+  {
+   "id": "xugua-fuzi-junchen",
+   "verdict": "keep",
+   "issues": "相分恰当。",
+   "fix": ""
+  },
+  {
+   "id": "zagua-guai-end",
+   "verdict": "keep",
+   "issues": "相分恰当。",
+   "fix": ""
+  },
+  {
+   "id": "jiaren-nan-nv-zheng-wei",
+   "verdict": "revise",
+   "issues": "「家有嚴君」以 Clearing.center_not_derived 驳之，但该定理关乎以依赖为界之意义中心，不关乎家之主；性别定位之相分本身正确。",
+   "fix": "删 center_not_derived 或改为注；中心之处改引 SharedCodes.TwoFormations.centre_breaks_exchange（中心是打破交换对称之一种方式，不是唯一），或直接以四层之单一中心层标出；其余保留。"
+  },
+  {
+   "id": "wangbi-lueli-zhi-zhong-zhe-zhi-gua",
+   "verdict": "keep",
+   "issues": "gap 已核：优先形式之律只在 SharedCodes.TwoFormations（两形成之例），一般族无律。",
+   "fix": "若读法引 center_not_derived，注其为评价之中心而非治理之中心。"
+  },
+  {
+   "id": "tuan-tai-pi-shang-xia-jiao",
+   "verdict": "keep",
+   "issues": "定域恰当。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-tai-nei-junzi-wai-xiaoren",
+   "verdict": "keep",
+   "issues": "相分恰当。",
+   "fix": ""
+  },
+  {
+   "id": "mengzi-tui-en",
+   "verdict": "keep",
+   "issues": "定域恰当。",
+   "fix": ""
+  },
+  {
+   "id": "laozi-65-fei-yi-ming-min",
+   "verdict": "keep",
+   "issues": "相分恰当（中心收窄众人之识）。",
+   "fix": ""
+  }
+ ],
+ "missing": [
+  "名或条目缺 OPENING [^aligned] 之「aligned」：依赖共有于一场竞逐所耗之条件（Becoming.Flow.joint_excess_ends、Becoming.Clearing.greatest_continues、Becoming.Clearing.undermines_within_renewal、Becoming.Flow.feeding_unrestricted_of_common、Becoming.Clearing.own_presupposition），明言关乎依赖与意义，不关乎诱因；名「同患」按修订可承载。",
+  "名「同力」改到 MakesDifferenceTogether 之后，Becoming.Dependence.DifferenceOnlyTogether（过度决定，没有单一之取者，章 §4.1）需另一名；积羽沉舟、众口铄金不在冻结文本中，须另找 attestation 或标 coined。",
+  "PatternPassing（Becoming.Web.ByPassing.ends_within、Becoming.Web.ByPassing.passes_within、Becoming.Web.begins_within）在本簇无名；庄子养生主「指窮於爲薪，火傳也，不知其盡也。」（ZH1-S03，已核）可为其证，须与 C12「傳」（TransmitsWithin，不同之律）协调。",
+  "论语8.5「以能問於不能，以多問於寡，有若無，實若虛，犯而不校」（RU1-S-LY，先秦，已核）之条目：闭合之环节与截断（LoopReturn.closing_needs_less、cut_closes、cut_reopened），替代被 reject 之 lunyu-yi-rang，并安放 parallel BI1-SM-R-21「取過在己」。",
+  "论语14.36 之冻结文本作「以德報怨，何如？」子曰：「何以報德？以德報怨，以德報德。」（RU1-S-LY，已核），与通行本「以直報怨」不同，疑为底本讹误；凡引此章之条目须先由整合者核底本。",
+  "张载西铭「民吾同胞，物吾与也。」（RU2-S-S05，宋明，已核）：一族同在之闭包读法之候选，但同段「干称父，坤称母」「大君者，吾父母宗子」带先在之根据与单一中心，宜作定域或相分条目。",
+  "荀子富國「群居而無分則爭」（RU2-S-XZ10，已核）应作为名「群」之直接 attestation（闭包＝群居），与「離居不相待則窮」之对照一并入名。",
+  "AGENTS 所言「从实际关系出发之共同问题之解决，不是对立利益、讨价还价或谁多得」在本簇无名无条目；可考虑以 sunzi-jiudi-tong-zhou 或新条目承载。",
+  "本簇未引而相关之律：Becoming.DrawingMore.grow_and_fall、Becoming.RelativePosition.change_balances、Becoming.Flow.drawn_positions、Becoming.Restored.returns、Becoming.Flow.greatest_end_for_good、Becoming.Flow.favours_reaching_beyond（OPENING [^race]）、Becoming.Flow.SharesThroughout、Becoming.Flow.SharesThroughout.unrestricted、Becoming.Flow.excess_bounded。",
+  "宋明层 attestation：苏辙老子解「天下之剛強方相傾相軋」（LC-SZ-ALL，已核），给名「相軋」。",
+  "跨簇协调：C17「稱」与本簇「相軋」同引 positions_balance、change_opposed；C02「有力」之 lean 含 DifferenceOnlyTogether；C10「兼感」之 lean 含 pool_adds、pooled_iff_member；C11「報」之 lean 含 closing_needs_less、closes_within、runs_away；C11 lunyu-wu-qiu-bei 与本簇 lunyu-wu-qiu-bei-yu-yi-ren 重复；本簇 notes 汇总行「同力（DifferenceOnlyTogether）」须改；富國「謂之稱數」与 C17「稱」之关系待整合者定。"
+ ]
+}

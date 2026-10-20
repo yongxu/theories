@@ -1,0 +1,1055 @@
+{
+ "cluster": "C09",
+ "corrections": [
+  {
+   "id": "xunzi-zhi-ming-yong-li",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》；传世本有编纂与传抄层次）",
+   "fragments": [
+    "名闻而实喻，名之用也。累而成文，名之丽也。用丽俱得，谓之知名。",
+    "单足以喻则单，单不足以喻则兼；单与兼无所相避则共；虽共不为害矣。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.CodeAcquisition.acquired_exact",
+    "Becoming.CodeAcquisition.acquired_every_expression",
+    "Becoming.CodeAcquisition.primitives_not_lumped",
+    "Becoming.CodeAcquisition.primitives_no_exact",
+    "Becoming.CodeAcquisition.missing_composite_no_code",
+    "Becoming.PartialReadout.exact_exists_iff",
+    "Becoming.PartialReadout.ExactWithin.lumped",
+    "Becoming.PartialReadout.LumpedWithin.finer",
+    "Becoming.lumped_of_finer",
+    "Becoming.lumped_id",
+    "Becoming.SharedCodes.reads_iff"
+   ],
+   "records": [
+    "a-code-formed-between-formations",
+    "where-a-move-is-formed"
+   ],
+   "reading": "AI读法：荀子把知名分成两件：单名之「用」（「名闻而实喻」）与名相累成文之「丽」，「用丽俱得，谓之知名」。CodeAcquisition 在一个给定的有限组合族中给出同样的两件：只探测原子之值，定不了组合的次序（primitives_not_lumped、primitives_no_exact，族内之例）；缺少复合探测就得不到码（missing_composite_no_code，族内之例）；原子与复合都探到，且两个原子之值不同时，读出的码就是原码（acquired_exact），对任意深度的表达式与原码同值（acquired_every_expression）。「单足以喻则单，单不足以喻则兼」：在一个有截面的映射下，精确读法存在，恰当所需特征在映射所合并处同值（PartialReadout.exact_exists_iff；精确者必如此，ExactWithin.lumped），单名若合并了特征不同者，就没有经由它的精确读法。兼名是更细的映射：单名已足之处兼名仍足（LumpedWithin.finer；经由较粗读法形成的动作经由较细读法也形成，lumped_of_finer），最细的读法形成一切动作（lumped_id），所以单不足时可以兼而求足；律不保证某一个兼名就足，兼名只在把单名所合并而特征不同者分开之处才精确。「单与兼无所相避则共；虽共不为害矣」可读为一物同受单名与兼名（如白马既可称马也可称白马）：兼名所读包含单名所读（LumpedWithin.finer），二者不相冲突，故共而不害；「共」另有共名之训（一名遍举众实，见 xunzi-da-gong-ming），结构同是归并的粗细。听者把说者之名读为其义项：在听者之码分开诸义项的前提下，恰当两码在该处一致（SharedCodes.reads_iff）。CodeAcquisition 是给定的组合族，不是认知模型。",
+   "names_used": [
+    "知名",
+    "名"
+   ],
+   "layer_checked": "",
+   "locator": "荀子·正名篇",
+   "relational": "名—实经由听者的码而联系；知名是说者与听者之间的一种关系能力，不是名或实各自的性质。",
+   "tradition": "儒",
+   "work": "荀子·正名",
+   "gap": "若把「单与兼无所相避则共」读作一个码中一个义项有多个形式（同义之名），其读出律未推出：SharedCodes 模块头把一个义项持多个形式之码列为未推出项。最近：SharedCodes.reads_iff（一个义项一个形式）、CodeAcquisition.acquired_every_expression（族内单一码）。"
+  },
+  {
+   "id": "xunzi-hua-yi-shi",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》；传世本有编纂与传抄层次）",
+   "fragments": [
+    "状同而为异所者，虽可合，谓之二实。状变而实无别而为异者，谓之化。有化而无别，谓之一实。此事之所以稽实定数也。此制名之枢要也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.identifiesAlike_iff",
+    "Becoming.Twins.naming_not_identifiesAlike",
+    "Becoming.Reidentify.new_injective",
+    "Becoming.Turnover.reidentified",
+    "Becoming.World.fixed_iff",
+    "Becoming.World.balanced_reidentify_iff_alike",
+    "Becoming.numbers_iff_decided",
+    "Becoming.listsOnce_iff_decided"
+   ],
+   "records": [
+    "identity-across-steps",
+    "configurations-alike-by-relation",
+    "listing-once-is-decided-identity"
+   ],
+   "reading": "AI读法：三句各对一组律。「状同而为异所者……谓之二实」：二实由所（处所，一种关系）分开，不由形貌分开。此处「状」是关系项可见的形貌，不是名表以「状」所名的构形全体：构形全同则一切关系全同，便无异所可言。有意义的描述（正名）所认同者在关系上相同、凡相同者都被认同（identifiesAlike_iff）；一切关系都相同的两个后继若分开命名，描述就没有意义（Twins.naming_not_identifiesAlike，构造模型中的见证）；所以「虽可合」而仍为二，靠的是所之异。一步之内，不同的形成得到不同的名（Reidentify.new_injective）。「状变而实无别而为异者，谓之化。有化而无别，谓之一实」：跨步之同一（一实）不由各步的关系读出——各步关系不变的一次改认，就改变了谁更新、谁消耗、何处生起（Turnover.reidentified，构造模型中的见证）；在守恒的世界里，守恒把一个关系项跨一步的同一定下，恰当步后没有别的关系项与它站得一样（World.fixed_iff，以关系项的同一可判定为前提）；否则只定到相似为止（World.balanced_reidentify_iff_alike）。荀子没有说「实无别」由何判定；在律定出同一之处由律给出，在其余之处是命名所给的前提，这一条在此范围内相合。「稽实定数」：数存在，恰当成员之间的同一已定（numbers_iff_decided），列一次也恰当如此（listsOnce_iff_decided），所以先定一实二实才能定数（定数）。荀子随即说「此制名之枢要也」，把「稽实定数」归入制名；律只给出定数以定同一为前提，不给出由谁来定。",
+   "names_used": [
+    "正名",
+    "一实",
+    "化",
+    "数",
+    "定数",
+    "制名"
+   ],
+   "layer_checked": "",
+   "locator": "荀子·正名篇",
+   "relational": "一与二由状、所与跨步的关系判定，不由名或外观判定；跨步之同一在律定之处由律给出，其余由命名给出。",
+   "ro_passage": "xunzi-hua-yi-shi",
+   "tradition": "儒",
+   "work": "荀子·正名"
+  },
+  {
+   "id": "xunzi-wang-zhe-zhi-ming",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》；传世本有编纂与传抄层次）",
+   "fragments": [
+    "故王者之制名，名定而实辨，道行而志通，则慎率民而一焉。",
+    "若有王者起，必将有循于旧名，有作于新名。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.run_from_imposition",
+    "Becoming.SharedCodes.impose_agrees",
+    "Becoming.SharedCodes.impose_loses_iff",
+    "Becoming.SharedCodes.source_loses_nothing",
+    "Becoming.SharedCodes.run_imposed_stays",
+    "Becoming.SharedCodes.outside_needed",
+    "Becoming.SharedCodes.outside_returns",
+    "Becoming.SharedCodes.hearBy_held",
+    "Becoming.SharedCodes.TwoFormations.centre_keeps_renaming",
+    "Becoming.SharedCodes.TwoFormations.centre_breaks_exchange"
+   ],
+   "records": [
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：王者制名可读为外加一码（制名）：从每个形成者都持码 c 的一步起，此后在一切规则下全体在每个义项上一致；每个形成者读另一个，恰在 c 分开诸义项之处——「名定而实辨」只在外加之码本身分开所需义项之处成立；对照外加前所持之码，每个形成者恰失去其原码分开而 c 合并的区分（SharedCodes.run_from_imposition）。外加一步之内的一致与损失按定义成立（impose_agrees、impose_loses_iff，按定义）；码被采用的那个形成者不失（source_loses_nothing），「循于旧名」若以某一形成者已在用之码为外加之码，即是此种情形，其余形成者仍恰失其码分开而此码合并者；外加之码与其合并沿此后任何听的过程保持（run_imposed_stays）。在只经由听的模型里，被合并的区分只从外加之外留存的形式回来（outside_needed），一听到留存之形，区分即刻回来（outside_returns）。王者在律中只是打破对称的一个中心：在两形成者的模型里，中心保持每个改名（TwoFormations.centre_keeps_renaming）而打破形成者之间的交换（TwoFormations.centre_breaks_exchange），二者都是该模型中的见证；律不给出中心在先。范围：「有作于新名」是造新形，模型中听不造形（hearBy_held），模块中没有造形的一步，见缺口；以罪维持唯一之码、不与民共享理由的一层另见 xunzi-xi-ci-shan-zuo-ming（相分）。",
+   "names_used": [
+    "制名"
+   ],
+   "layer_checked": "",
+   "locator": "荀子·正名篇",
+   "relational": "码由一个中心加于众形成者；一致与损失都是形成者之间的关系变化。",
+   "tradition": "儒",
+   "work": "荀子·正名",
+   "gap": "「有作于新名」：造出一个新形式并沿听的过程传播，使被合并的区分回来。最近：SharedCodes.hearBy_held（听不造形）、outside_returns（区分从留存之形回来）；SharedCodes 中没有造形的一步。"
+  },
+  {
+   "id": "xunzi-da-gong-ming",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》；传世本有编纂与传抄层次）",
+   "fragments": [
+    "物也者，大共名也。推而共之，共则有共，至于无共然后止。",
+    "鸟兽也者，大别名也。推而别之，别则有别，至于无别然后至。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.lumped_const_iff",
+    "Becoming.goAlike_const",
+    "Becoming.lumped_id",
+    "Becoming.lumped_of_finer",
+    "Becoming.Refining.grow",
+    "Becoming.DistinctUnder.length_le",
+    "Becoming.Refining.steady_within"
+   ],
+   "records": [
+    "where-a-move-is-formed",
+    "projection-carrying-a-law",
+    "identification-where-bounded"
+   ],
+   "reading": "AI读法：共名与别名是归并（类）的粗细两个方向。推而共之到「物」，是什么都不分开的读法（达名）：经由它只有处处相同的动作被形成（lumped_const_iff），它对任何过程都携带律而不分开任何东西（goAlike_const）。推而别之的另一端是最细的读法，经由它一切动作都被形成（lumped_id）；中间各级按粗细排列：读得更细，经由所读形成的就更多（lumped_of_finer），每次严格细化多出一类（Refining.grow）。在关系把每个成员连到自身之处，两两相分的成员不多于容纳它们的列表（DistinctUnder.length_le）；在一张有限的列表上，各步关系可判定时，细化链在其类数之内停止（Refining.steady_within）。所以「推而别之，别则有别，至于无别然后至」在有限且关系可判定之处与律相合。",
+   "names_used": [
+    "类",
+    "达名"
+   ],
+   "layer_checked": "",
+   "locator": "荀子·正名篇",
+   "relational": "共与别是读法之间的粗细关系，不是事物的等级。",
+   "tradition": "儒",
+   "work": "荀子·正名"
+  },
+  {
+   "id": "xunzi-yuan-fang-yi-su",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》；传世本有编纂与传抄层次）",
+   "fragments": [
+    "散名之加于万物者，则从诸夏之成俗曲期，远方异俗之乡，则因之而为通。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.reads_iff",
+    "Becoming.SharedCodes.reads_other",
+    "Becoming.SharedCodes.shared_iff_in_use",
+    "Becoming.SharedCodes.impose_loses_iff"
+   ],
+   "records": [
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：「因之而为通」的「之」指上文「诸夏之成俗曲期」：远方异俗之乡借诸夏已成之名相通，是以一个码为通用之码，不是两码之间的翻译。结构上：在读者之码分开诸义项的前提下，读者把说者的形式读为该义项（且只读为它），恰当两码在该处一致（SharedCodes.reads_iff）；读者的码若把同一形式给了另一个义项，就读成那个义项（reads_other，同以读者之码分开诸义项为前提）；在有一张列出全体的表时，能被弄成共享的只是已在使用中的形式（shared_iff_in_use），诸夏之名正是已在用者。若远方之码被诸夏之码取代，远方恰失去其原码分开而诸夏之码合并的区分（impose_loses_iff，按定义），荀子不论此损失。范围：「诸夏」与「远方异俗」带中心与边缘的等级层，律不给出哪一码为准。",
+   "names_used": [],
+   "layer_checked": "",
+   "locator": "荀子·正名篇",
+   "relational": "诸夏与远方之间的可读是两个码之间的关系，不是一方的属性；以诸夏为准是另加的中心。",
+   "tradition": "儒",
+   "work": "荀子·正名"
+  },
+  {
+   "id": "xunzi-ming-you-gu-shan",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》；传世本有编纂与传抄层次）",
+   "fragments": [
+    "名有固善，径易而不拂，谓之善名。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.TwoFormations.preferred_keeps_exchange",
+    "Becoming.SharedCodes.TwoFormations.preferred_breaks_renaming",
+    "Becoming.SharedCodes.hear_keeps_renaming",
+    "Becoming.SharedCodes.never_agrees_of_both",
+    "Becoming.SharedCodes.TwoFormations.three_agree"
+   ],
+   "records": [
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：「名无固宜」与「名有固善」并不矛盾：前者是改名不变（名无固宜），后者说形式之间有便利与否。在律中，一条带偏好形式的规则保持形成者之间的交换（TwoFormations.preferred_keeps_exchange）而打破改名的对称（TwoFormations.preferred_breaks_renaming），二者都是两形成者模型中的见证；偏好由所给的规则提供，不是形式自身的属性，所以「固善」之「固」超出律——律给出偏好的作用，不给出「固」。只取所听之形的听保持一切改名（hear_keeps_renaming）；一条既不偏好形成者也不偏好形式的律，从对称的不一致出发不形成一致（never_agrees_of_both）。在两形成者的模型里，中心、偏好形式、交换次序各打破一种对称，各在一步内使二者一致（three_agree，见证）。可以从正名篇读出这三种打破（王者制名、名有固善、约定俗成），这是AI的结构读法：荀子没有把它们分为三种机制，约定俗成从属于王者制名。「径易而不拂」是形式与使用者之间的便利，不是名对实的正确。",
+   "names_used": [
+    "名无固宜",
+    "制名",
+    "约定俗成"
+   ],
+   "layer_checked": "",
+   "locator": "荀子·正名篇",
+   "relational": "善名是形式在使用者之间的便利关系，不是名与实的关系。",
+   "tradition": "儒",
+   "work": "荀子·正名"
+  },
+  {
+   "id": "lunyu-ma-mian-bai-xia",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-09-03-R01",
+    "RU1-LY-09-03-R02"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦·经（《论语·子罕》，春秋末至战国编定）",
+   "fragments": [
+    "麻冕，禮也；今也純，儉，吾從眾。拜下，禮也；今拜乎上，泰也。雖違眾，吾從下。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.renamed_tells_apart_iff",
+    "Becoming.SharedCodes.run_renamed_tells_apart_iff",
+    "Becoming.SharedCodes.keeps_apart_iff",
+    "Becoming.SharedCodes.TwoFormations.homonym"
+   ],
+   "records": [
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：两个「今」之变，孔子一从一违，所给的理由是「儉」与「泰」，是对形式的评价。结构上可以这样读：麻冕改为纯，「禮」所分开的未变，只换了形式——一个分开形式的改名不改码所分开的义项（SharedCodes.renamed_tells_apart_iff）；在不偏好任何形式的听的规则下，起点只差这样一个改名的两条过程，每步分开的完全相同（run_renamed_tells_apart_iff）。众人取纯是因其「儉」，这是对一个形式的偏好，偏好由规则提供，不在此律之内（参 xunzi-ming-you-gu-shan）。拜下改为拜上，可读为一个区分被合并（AI读法）：一次听保持听者的码分开诸义项，恰当所取之形不是听者给另一个义项的形式（keeps_apart_iff）；逐个义项形成的一致可以合并诸义项（TwoFormations.homonym，见证）。众人改拜是在听中形成，不是外加。范围：从下所守的是君臣尊卑之分，属等级层，律不支持所守区分的等级内容；从与违是评价，律不给出。",
+   "names_used": [],
+   "layer_checked": "",
+   "locator": "论语·子罕",
+   "relational": "「禮」的形式与它所分开的关系：改形不改分，与合并一个区分，是两种不同的变化。",
+   "tradition": "儒",
+   "work": "论语"
+  },
+  {
+   "id": "mengzi-yi-fu",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0278"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·论（战国，《孟子·梁惠王下》）",
+   "fragments": [
+    "贼仁者谓之‘贼’，贼义者谓之‘残’。残贼之人谓之‘一夫’。闻诛一夫纣矣，未闻弑君也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.identifiesAlike_iff",
+    "Becoming.carries_law_iff",
+    "Becoming.CrossSituational.stands_false_iff"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "projection-carrying-a-law",
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：孟子以所为定名：一个在君位上的人，其所为已是「残贼」，就不再是「君」这个名所认同的那一类。有意义的描述（正名）所认同者在关系上相同、凡相同者都被认同（identifiesAlike_iff）；称纣为君的失败，是把关系上不同者认作同类，这样的描述不携带律（carries_law_iff：投影携带律，恰当它看作相同者同行）。「君」这一义项对纣不跨情境成立（贯），恰当有一条相关记录不给出它（CrossSituational.stands_false_iff），其残贼之所为正是这样的记录；位置本身不使它成立。范围：律只到「名随关系而定」；「诛」是否正当、由谁判定，律不涉，不能由命名之律推出。",
+   "names_used": [
+    "正名",
+    "贯"
+   ],
+   "layer_checked": "",
+   "locator": "孟子·梁惠王下",
+   "relational": "名随所为之关系而定，不随位置而定。",
+   "tradition": "儒",
+   "work": "孟子"
+  },
+  {
+   "id": "mobian-ming-ju-shi",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-XQ-name",
+    "MI1-R-XQ-ci"
+   ],
+   "source_id": "MI1-S-XQ",
+   "layer": "先秦·论（《墨子·小取》，战国后期墨家；六篇作者与编纂层未作同一断定）",
+   "fragments": [
+    "以名舉實，以辭抒意，以說出故。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.identifiesAlike_iff",
+    "Becoming.Run.not_fixes_of_untaken",
+    "Becoming.Confound.misattributes",
+    "Becoming.apart_only_downstream",
+    "Becoming.CodeAcquisition.acquired_every_expression",
+    "Becoming.SharedCodes.reads_iff"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "experiment-needs-return",
+    "observation-is-a-route",
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：名、辞、说三级。「以名舉實」：命名（名）把关系项认出，有意义的描述所认同者在关系上相同（identifiesAlike_iff），这与律相合。「以說出故」：出其所以然，要经由回到同一处的变动才能定——未取的动作不被记录确定（Run.not_fixes_of_untaken），错的投影会错归（Confound.misattributes，构造模型中的见证）；起点只在一处不同的两条均衡历程，在不处其下游的条件上每步都相同（apart_only_downstream）。这与律相合，RO 已把它映到实验与观察。「以辭抒意」：辞（主张）由名组合而成，其意在听者处读出：在听者之码分开诸义项的前提下，恰在两码在该处一致之处（SharedCodes.reads_iff）；在一个给定的有限组合族中，原子之值不同时，由探测读出的码对任意深度的表达式与原码同值（CodeAcquisition.acquired_every_expression），那一族不是表意的一般模型。所以「以辭抒意」只在两码一致之处成立，律给出它的范围而修正其无条件的说法；三句合看记为定域。",
+   "names_used": [
+    "名",
+    "辞"
+   ],
+   "layer_checked": "",
+   "locator": "墨子·小取",
+   "relational": "名、辞、说是从认出关系项、到组合读出、到追问来由的三层关系。",
+   "ro_passage": "mobian-qi-ran-suo-yi-ran",
+   "tradition": "名辩",
+   "work": "墨经"
+  },
+  {
+   "id": "mojing-ju-wu-sheng",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-SX-win"
+   ],
+   "source_id": "MI1-S-SX",
+   "layer": "先秦·传（《墨子·經說下》，战国后期墨家；六篇作者与编纂层未作同一断定）",
+   "fragments": [
+    "同則或謂之狗，其或謂之犬也。異則或謂之牛，牛或謂之馬也。俱無勝，是不辯也。辯也者，或謂之是，或謂之非，當者勝也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.renamed_tells_apart_iff",
+    "Becoming.Decided",
+    "Becoming.not_not_decided"
+   ],
+   "records": [
+    "a-code-formed-between-formations",
+    "counts-exist-where-decided"
+   ],
+   "reading": "AI读法：《經說下》先说「謂，所謂非同也，則異也」，再分两种情形。「同則或謂之狗，其或謂之犬也」：对同一关系项一说狗一说犬，是重同之换名，不是争辩；用一个分开形式的改名换过的码，分开的义项不变（SharedCodes.renamed_tells_apart_iff）。「異則或謂之牛，牛或謂之馬也」：两谓不同，一谓之牛一谓之马，不是同一主张的是与非，二者可以都不当，所以「俱無勝，是不辯也」。辩是对同一主张一谓之是、一谓之非；「當者勝」要求该主张已定（定然否，Becoming.Decided，定义：p 或非 p），已定之处二者恰有一方与所显示者相当。律不假定凡主张皆已定：任一主张之已定不可被驳（不可非，not_not_decided），但这不等于断言它已定。所以「當者勝」在主张已定之处成立；《經下》「謂辯無勝，必不當」的全称形式在此定域。哪一方相当，没有律给出，见缺口。「胜」在此是与所显示者相当，不是一方压倒另一方。",
+   "names_used": [
+    "重同",
+    "定然否",
+    "不可非"
+   ],
+   "layer_checked": "",
+   "locator": "墨子·經說下",
+   "relational": "辩是对同一对象的相反之谓；与所显示者相当者成立。",
+   "tradition": "名辩",
+   "work": "墨经",
+   "gap": "「當者勝」：对同一对象的相反之谓，与所显示者相当者成立。最近：Becoming.Decided（定然否，定义）；Ideals.refutableBy_iff_compl（驳倒一个读法即证实其补，限于有限片段的证实与驳倒）结构不同，未引为相合。"
+  },
+  {
+   "id": "mojing-wei-hu-qi-wei",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "MI1-S-SX",
+   "layer": "先秦·传（《墨子·經說下》，战国后期墨家；六篇作者与编纂层未作同一断定）",
+   "fragments": [
+    "彼猶惟乎其謂，則吾謂行；彼若不惟其謂，則不行也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.SharedCodes.reads_iff",
+    "Becoming.SharedCodes.reads_other",
+    "Becoming.SharedCodes.self_reads_iff"
+   ],
+   "records": [
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：「彼」可读为所谓之对象（则是名实之耦，见 mojing-da-lei-si），也可读为应答的对方；此处取后一读：我的称谓「行」，要对方应合其所谓。在读者之码分开诸义项的前提下，一个形成者把另一个的形式读为该义项（且只读为它），恰当两码在该处一致（SharedCodes.reads_iff）；读者的码若把同一形式给了另一个义项，就读成那个义项（reads_other，同以读者之码分开诸义项为前提）；一个码自读其形，恰当它分开诸义项（self_reads_iff）。《名實論》「謂彼而彼，不唯乎彼，則彼謂不行」是同一结构。",
+   "names_used": [],
+   "layer_checked": "",
+   "locator": "墨子·經說下",
+   "relational": "称谓行与不行是说者与听者两码之间的关系。",
+   "tradition": "名辩",
+   "work": "墨经"
+  },
+  {
+   "id": "mojing-yi-fa-jin-lei",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-SX-form"
+   ],
+   "source_id": "MI1-S-SX",
+   "layer": "先秦·传（《墨子·經說下》，战国后期墨家；六篇作者与编纂层未作同一断定）",
+   "fragments": [
+    "一方盡類，俱有法而異，或木或石，不害其方之相台也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.Lumped",
+    "Becoming.Learning.selects_through_lumping",
+    "Becoming.lumped_of_finer"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "selection-through-a-model-of-the-options",
+    "where-a-move-is-formed"
+   ],
+   "reading": "AI读法：「一方盡類，俱有法而異，或木或石，不害其方之相台也」（「台」诸家多读作「合」）：法在此是归类所依的标准（《經上》「法，所若而然也」），对应一个读法 π；同一标准下者为一类（Learning.Lumped，定义），或木或石不害，因为 π 不读材料。经由一个映射的选择就是经由其归并的选择（selects_through_lumping）；经由较粗读法形成的动作，经由较细读法也形成（lumped_of_finer）：再读材料，读法更细，木方与石方在更细的读法下分开，而「方」这一特征仍经由它形成。这里的「法」是标准，不是变化之律；归并对某一律是否有用，经文不涉。",
+   "names_used": [
+    "类"
+   ],
+   "layer_checked": "",
+   "locator": "墨子·經說下",
+   "relational": "同类是同一标准下的关系，不是同一材料。",
+   "tradition": "名辩",
+   "work": "墨经"
+  },
+  {
+   "id": "mojing-jian-bai-zai-shi",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "MI1-S-SX",
+   "layer": "先秦·传（《墨子·經說下》，战国后期墨家；六篇作者与编纂层未作同一断定）",
+   "fragments": [
+    "於，石一也，堅白二也，而在石。故有智焉，有不智焉，可。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Contextual.fitsFree_iff",
+    "Becoming.Contextual.indexed_fits"
+   ],
+   "records": [
+    "claims-shown-in-context",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：墨经与公孙龙同说石一、坚白二（《經說下》「石一也，堅白二也」，《堅白論》「于石，一也；堅、白，二也」），结论相反：墨经说坚白同在石中（《經上》「堅白，不相外也」），所以可以知其一而不知其二。各语境所显示者能粘合，恰当诸语境在相交处一致（Contextual.glues_iff_agree）；视与拊在石上相交处一致，故可粘成一石，无语境的框架于是成立（fitsFree_iff）；带语境指标的框架总符合所显示者（indexed_fits，按定义）。与公孙龙《堅白論》同句（MI1-R-G5-know）对照。",
+   "names_used": [],
+   "layer_checked": "",
+   "locator": "墨子·經說下",
+   "relational": "坚与白是同一石在两种接触中的读出，在石上相交而一致。",
+   "tradition": "名辩",
+   "work": "墨经"
+  },
+  {
+   "id": "gongsunlong-zhi-wu",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-G3-condition",
+    "MI1-R-G3-distinction"
+   ],
+   "source_id": "MI1-S-G3",
+   "layer": "先秦·论（《公孙龙子》，传统题属公孙龙，篇章真伪与编纂层有争议）",
+   "fragments": [
+    "天下無指，物無可以謂物。",
+    "指也者，天下之所無也；物也者，天下之所有也。以天下之所有爲天下之所無，未可。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.rename_tenure",
+    "Becoming.Twins.alike_one",
+    "Becoming.identifiesAlike_id_iff",
+    "Becoming.Diagonal.complete_iff_alike"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "identity-across-steps",
+    "readings-within-what-they-read"
+   ],
+   "reading": "AI读法：「指」的意义历来有争议（指认、概念、共相、手指），此处只取条件结构：「天下無指，物無可以謂物」——没有指，物不能被称为物。理论中命名是一种读法，不是关系项（物）：改名不改存续、关系之形成与消解、生起这些读数（Web.rename_tenure，按定义）；构形之间以相等来说的决定性依赖如何命名（Twins.alike_one，构造模型中的见证）；给构形直接命名有意义，恰当相似者本是一个（identifiesAlike_id_iff）。原文区分「天下之所有」与「天下之所無」，其存在论地位不作断定；理论中读法也在展开之内：一个族内的说法说出每个读法，恰当诸值无可分（Diagonal.complete_iff_alike），否则总有未说者。",
+   "names_used": [
+    "物"
+   ],
+   "layer_checked": "",
+   "locator": "公孙龙子·指物論",
+   "relational": "物之可称依赖指；读法不是另一界的东西，而是展开中的一种关系。",
+   "tradition": "名辩",
+   "work": "公孙龙子"
+  },
+  {
+   "id": "zhuangzi-wu-wei-zhi-er-ran",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C02-R-08"
+   ],
+   "source_id": "ZH1-S02",
+   "layer": "先秦·论（《庄子》内篇，战国）",
+   "fragments": [
+    "道，行之而成；物，謂之而然。",
+    "物固有所然，物固有所可。无物不然，无物不可。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.reidentify_step",
+    "Becoming.Web.rename_tenure",
+    "Becoming.Turnover.reidentified",
+    "Becoming.Law.alike_iff_sameFuture"
+   ],
+   "records": [
+    "identity-across-steps",
+    "configurations-alike-by-relation"
+   ],
+   "reading": "AI读法：庄子说「物，謂之而然」，又说「物固有所然，物固有所可。无物不然，无物不可」：物各有其然，由此导向齐同。理论另给出一条界线，用来限定「謂之而然」的范围（这条界线是理论的，不是庄子的话）：称谓不改各步的关系——一般的改认不改每步的关系（Web.reidentify_step，按定义）；改名（每步同一对应）也不改跨步读数（Web.rename_tenure，按定义）；在确定的律下，构形相似恰当其未来相同（Law.alike_iff_sameFuture），这不由称谓而定。但跨步之同一（一实）由命名给出：同一组步换一种一般的改认（各步对应不同），谁更新、谁消耗、何处生起都会改变（Turnover.reidentified，构造模型中的见证）。所以「謂之而然」对由改认给出的跨步之同一及其读数成立，对各步关系不成立。",
+   "names_used": [
+    "物",
+    "一实"
+   ],
+   "layer_checked": "",
+   "locator": "庄子·齊物論",
+   "relational": "物之然由称谓而分在跨步的读法上，各步的关系不随称谓而变。",
+   "tradition": "庄",
+   "work": "庄子"
+  },
+  {
+   "id": "zhuangzi-tian-di-yi-zhi",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "ZH1-S02",
+   "layer": "先秦·论（《庄子》内篇，战国）",
+   "fragments": [
+    "天地，一指也；萬物，一馬也。",
+    "以指喻指之非指，不若以非指喻指之非指也；"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.lumped_const_iff",
+    "Becoming.goAlike_const",
+    "Becoming.lumped_of_finer",
+    "Becoming.Learning.selects_not_right_of_parted"
+   ],
+   "records": [
+    "where-a-move-is-formed",
+    "projection-carrying-a-law",
+    "selection-through-a-model-of-the-options"
+   ],
+   "reading": "AI读法：此段传统上常读作回应名家指、马之辩，二者的关系未定（现存《公孙龙子》篇章年代有争议）。「天地，一指也；萬物，一馬也」：任何一个名都可以作为达名，把一切归为一：经由什么都不分开的读法，只有处处相同的动作被形成（lumped_const_iff），它对任何过程携带律而不分开任何东西（goAlike_const）。范围：这说明名的选择不定关系，但不推出一切读法等价：经由较粗读法形成的动作经由较细读法也形成（lumped_of_finer），而映射所合并的，经由它的选择分不开（Learning.selects_not_right_of_parted），不分开就不能选择（见 xunzi-da-gong-ming）。",
+   "names_used": [
+    "达名"
+   ],
+   "layer_checked": "",
+   "locator": "庄子·齊物論",
+   "relational": "任何名都可以作归并一切的读法；归并一切的读法什么都不分开。",
+   "tradition": "庄",
+   "work": "庄子"
+  },
+  {
+   "id": "zhuangzi-qiushui",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C17-R-07"
+   ],
+   "source_id": "ZH1-S17",
+   "layer": "先秦至秦汉·论（《庄子》外杂篇，年代有争议）",
+   "fragments": [
+    "以俗觀之，貴賤不在己。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.SharedCodes.run_origin",
+    "Becoming.SharedCodes.shared_iff_in_use",
+    "Becoming.Clearing.centers_disagree",
+    "Becoming.Transfer.unordered"
+   ],
+   "records": [
+    "a-code-formed-between-formations",
+    "whole-first-and-bounded-centers"
+   ],
+   "reading": "AI读法：「以俗觀之，貴賤不在己」：俗是一个已形成的共享码（约定俗成），它所达到的形式由起点与听的次序定（SharedCodes.run_origin）；在有一张列出全体的表时，能被弄成共享的只是已在使用中的形式（shared_iff_in_use），不由被评者自己定。律也不在码上给出排序：在一个构造的模型里，各以依赖为界的中心不一致（Clearing.centers_disagree，见证）；在延续条件（凡续皆有顾，陈述而不断言）之下，一个模型里的诸部分仍不可比（Transfer.unordered，见证）——延续条件只定范围，不定次序；次序只来自另加的比较前提以广为愈（C：扩大更好）。",
+   "names_used": [
+    "约定俗成",
+    "凡续皆有顾",
+    "以广为愈"
+   ],
+   "layer_checked": "",
+   "locator": "庄子·秋水",
+   "relational": "贵贱是共享码中的读出，由使用者之间形成，不是关系项自带的。",
+   "ro_passage": "zhuangzi-qiushui-yi-dao-guan-zhi",
+   "tradition": "庄",
+   "work": "庄子"
+  },
+  {
+   "id": "xici-li-xiang-jin-yi",
+   "status": "revised",
+   "record_ids": [
+    "XC-R018"
+   ],
+   "source_id": "DS02",
+   "layer": "先秦至秦汉·传（《易传·系辞上》，年代有争议）",
+   "fragments": [
+    "圣人立象以尽意，"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.PartialReadout.LumpedWithin.finer",
+    "Becoming.PartialReadout.exact_exists_iff",
+    "Becoming.Diagonal.Unfolds.incomplete",
+    "Becoming.Diagonal.unfolding_open"
+   ],
+   "records": [
+    "readings-within-what-they-read"
+   ],
+   "reading": "AI读法：立象是在言之外再加一个读法：象与言合起来是更细的映射。言已足之处，加象仍足（PartialReadout.LumpedWithin.finer）；言所合并而意不同之处，只有象把它们分开，合起来的映射才可能使意同值；在有截面的映射下，精确读法存在，恰当意在映射所合并处同值（exact_exists_iff）。所以象能补言所合并者，只在意于言与象共同合并之处同值时才精确。范围：「尽」不成立——每个展开每步都缺其自身之缺（Diagonal.Unfolds.incomplete），永不闭合的展开存在（unfolding_open，构造）。象能补言之所合并，不能尽意。",
+   "names_used": [],
+   "layer_checked": "",
+   "locator": "系辞上·第十二章",
+   "relational": "象与言是两个配合的读法，合起来读出更多，但不尽。",
+   "tradition": "共享经典",
+   "work": "周易·系辞"
+  },
+  {
+   "id": "hanfei-yi-duo-xin",
+   "status": "revised",
+   "record_ids": [
+    "FA1-H48-R012"
+   ],
+   "source_id": "FA1-S-H48",
+   "layer": "先秦·论（战国末，《韩非子·八经》）",
+   "fragments": [
+    "言之爲物也以多信，不然之物，十人云疑，百人然乎，千人不可解也。",
+    "聽不參，則無以責下；"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.shared_iff_in_use",
+    "Becoming.SharedCodes.broadcast_reaches",
+    "Becoming.SharedCodes.all_agree_rest"
+   ],
+   "records": [
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：「言之爲物也以多信」：「信」随言者之数而增，这是一条多数规则；SharedCodes 只有读两个码的采纳规则，模块头也把读多于两码的规则列为未推出项，见缺口。相合的只是：在有一张列出全体的表时，能被弄成共享的只是已在使用中的形式（shared_iff_in_use），一个在用的形式在适当次序下传到每个形成者（broadcast_reaches），不论它是否与所显示者相当；全体一致后在一切规则下不再变（all_agree_rest），「千人不可解」与此相应。同段韩非先已说「聽不參，則無以責下」：以交叉参验来检验一致，这一步不在模块之内。",
+   "names_used": [],
+   "layer_checked": "",
+   "locator": "韩非子·八經",
+   "relational": "「信」是在众人之间形成的一致，与所言是否与所显示者相当是两层关系。",
+   "tradition": "法",
+   "work": "韩非子",
+   "gap": "多数规则：读多于两个码的采纳规则（如按人数）之下，哪些形式成为共享，一致是否仍需打破对称。最近：SharedCodes.never_agrees_of_both、TwoFormations.three_agree（两形成者的见证）、shared_iff_in_use。"
+  },
+  {
+   "id": "hanfei-pan-shi-xiang-ren",
+   "status": "revised",
+   "record_ids": [
+    "FA1-H50-R009",
+    "FA1-H50-R010"
+   ],
+   "source_id": "FA1-S-H50",
+   "layer": "先秦·论（战国末，《韩非子·显学》）",
+   "fragments": [
+    "磐石千里，不可謂富；象人百萬，不可謂强。石非不大，數非不衆也，而不可謂富强者，磐不生粟，象人不可使距敵也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.identifiesAlike_iff",
+    "Becoming.carries_law_iff",
+    "Becoming.Readout.law_through_iff"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "projection-carrying-a-law",
+    "joint-correlation-reduced-dynamics"
+   ],
+   "reading": "AI读法：磐石与良田同在大小上相当，象人与兵同在数目上相当（「石非不大，數非不衆也」），但在关系上不同：一生粟一不生，一可御敌一不可。按大小、数目把二者认作同类，失败在被归为一者关系上不同：有意义的描述（正名）只认同关系上相同者（identifiesAlike_iff），投影携带律，恰当它看作相同者同行（carries_law_iff）；约简值上有确定律承载每一步，恰当约简所合并的构形被每个动作送到它合并的构形（Readout.law_through_iff）。按大小合并磐石与良田，这一条不成立，「富强」之名就不能经由大小来读。",
+   "names_used": [
+    "正名"
+   ],
+   "layer_checked": "",
+   "locator": "韩非子·顯學",
+   "relational": "名的适用取决于所指在关系中做什么，不在外形大小。",
+   "tradition": "法",
+   "work": "韩非子"
+  },
+  {
+   "id": "shangjun-ming-bai-yi-zhi",
+   "status": "revised",
+   "record_ids": [
+    "FA1-S26-R004",
+    "FA1-S26-R005",
+    "FA1-S26-R006",
+    "FA1-S26-R010",
+    "FA1-S26-R011"
+   ],
+   "source_id": "FA1-S-SV5",
+   "layer": "先秦·论（《商君书·定分》，旧题商鞅，篇章层次不一）",
+   "fragments": [
+    "吏明知民知法令也，故吏不敢以非法遇民，民不敢犯法以干法官也。",
+    "民即以法官之言正告之吏。",
+    "故聖人為法，必使之明白易知。",
+    "萬民皆知所避就",
+    "此皆生於法明白易知而必行。",
+    "名正，愚智遍能知之。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.run_from_imposition",
+    "Becoming.SharedCodes.reads_iff",
+    "Becoming.SharedCodes.broadcast_reaches",
+    "Becoming.SharedCodes.self_reads_iff"
+   ],
+   "records": [
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：法明白易知、吏民皆知，且吏知民知：外加之码（制名）之后，每个形成者读另一个，恰在外加之码分开诸义项之处（SharedCodes.run_from_imposition）；在有一张列出全体的表时，一个在用的形式在适当次序下传到每个形成者（broadcast_reaches）；民以法官之言正告吏，说明可读是双向的（在读者之码分开诸义项的前提下，reads_iff 在两码一致处对任意两方成立）。「名正，愚智遍能知之」：一个码自读其形，恰当它分开诸义项（self_reads_iff），「明白易知」只在外加之码本身分开所需义项之处成立。范围：同篇把可读读成治理的便利，律不给出此判断。",
+   "names_used": [
+    "制名"
+   ],
+   "layer_checked": "",
+   "locator": "商君书·定分",
+   "relational": "法的可读是吏、民之间共享码的关系，且吏知民知是一层互知。",
+   "tradition": "法",
+   "work": "商君书"
+  },
+  {
+   "id": "jielao-de-sui-chi-du",
+   "status": "revised",
+   "record_ids": [
+    "CV1-JL-R060",
+    "CV1-JL-R061",
+    "CV1-JL-R062"
+   ],
+   "source_id": "CV1-S-JL",
+   "layer": "先秦·传（《韩非子·解老》，传统归韩非，战国末）",
+   "fragments": [
+    "身以積精為德，",
+    "家以資財為德，",
+    "鄉國天下皆以民為德。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.CrossSituational.stands_false_iff",
+    "Becoming.Contextual.indexed_fits",
+    "Becoming.Contextual.fitsFree_iff"
+   ],
+   "records": [
+    "claims-shown-in-context",
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：同一「德」字，在「身」「家」「鄉國天下」三个尺度上各装不同的义项：一个义项不跨尺度成立（贯），恰当某一尺度的相关记录不给出它（CrossSituational.stands_false_iff）；带尺度指标的读法符合一切（Contextual.indexed_fits，按定义），无指标的统一读法要求各尺度在相交处粘合（fitsFree_iff）。这与韩愈「虚位」一侧同构（见 hanyu-ding-ming-xu-wei），《解老》已见。",
+   "names_used": [
+    "贯"
+   ],
+   "layer_checked": "",
+   "locator": "韩非子·解老",
+   "relational": "「德」的义项随所在尺度的关系而定。",
+   "tradition": "法",
+   "work": "韩非子·解老"
+  },
+  {
+   "id": "zhonglun-jia-ming",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-M05",
+    "FO1-R-M30"
+   ],
+   "source_id": "FO1-S-MMK",
+   "layer": "魏晋南北朝·注（龙树《中论》颂之青目释，鸠摩罗什译，5世纪初；印度论释传统）",
+   "fragments": [
+    "諸法自性不在眾緣中，但眾緣和合故得名字。",
+    "空亦復空。但為引導眾生故，以假名說，離有無二邊，故名為中道。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.identifiesAlike_iff",
+    "Becoming.Web.reidentify_dependent",
+    "Becoming.Web.rename_unceasing",
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "identity-across-steps",
+    "whole-persists-through-generation",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：两段都是青目的释文。「眾緣和合故得名字」：名所认的是一组关系的和合，不是关系之外的「自性」；有意义的描述（正名）所认同者在关系上相同（identifiesAlike_iff）。重新认定保持依赖（Web.reidentify_dependent），改名保持不息（rename_unceasing），一个由会终止的部分组成的整体只靠部分不断生起而存续（Web.Whole.needs_arising），作与已、结与解、聚与散是同一变化（成与毁）的三种读法（change_readings，按定义）。「以假名說，離有無二邊」：名是读法，它所读的既非独立实有，也非无。范围：「假名」带真俗二谛一层，理论只有一层，不取真与假之分。",
+   "names_used": [
+    "正名",
+    "不息",
+    "作",
+    "已",
+    "结",
+    "解",
+    "聚",
+    "散",
+    "成",
+    "毁"
+   ],
+   "layer_checked": "",
+   "locator": "中論",
+   "relational": "名字随众缘和合而得；所名者是关系的和合。",
+   "ro_passage": "zhonglun-yin-yuan-jia-ming",
+   "tradition": "佛",
+   "work": "中論"
+  },
+  {
+   "id": "zhonglun-er-di",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-M23",
+    "FO1-R-M25",
+    "FO1-R-M38"
+   ],
+   "source_id": "FO1-S-MMK",
+   "layer": "魏晋南北朝·论与注（「若不依俗諦，不得第一義」是龙树颂，后一段是青目释；鸠摩罗什译，5世纪初；印度论释传统）",
+   "fragments": [
+    "若不依俗諦，不得第一義",
+    "第一義皆因言說，言說是世俗，是故若不依世俗，第一義則不可說。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.ReadsAs",
+    "Becoming.SharedCodes.reads_iff",
+    "Becoming.Diagonal.claims_incomplete",
+    "Becoming.Frame.self_incomplete"
+   ],
+   "records": [
+    "readings-within-what-they-read",
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：「若不依俗諦，不得第一義」是颂，「第一義皆因言說，言說是世俗……」是青目的释。「第一義」要经由言说，言说是世俗。在码的模型里，读出由码规定（ReadsAs，定义）：在读者之码分开诸义项的前提下，一方之形被另一方读为其义，恰在两码在该处一致之处（SharedCodes.reads_iff）；说示经由码而可读，是模型的设定，不是定理。由所读者索引的主张（辞）族在其所说者之内总有缺（Diagonal.claims_incomplete、Frame.self_incomplete），这与「第一義」不能被言说穷尽相应。范围：二谛把真与俗分为两层，理论只有一层——读法在展开之内，理论不立一个不经读法的真层。",
+   "names_used": [
+    "辞"
+   ],
+   "layer_checked": "",
+   "locator": "中論·觀四諦品",
+   "relational": "「第一義」与世俗言说是读法与所读的关系，不是两个世界。",
+   "tradition": "佛",
+   "work": "中論"
+  },
+  {
+   "id": "qixin-li-yan-shuo",
+   "status": "revised",
+   "record_ids": [
+    "FO2-QX-R005"
+   ],
+   "source_id": "FO2-QX",
+   "layer": "魏晋南北朝·论（南北朝晚期，6世纪；题署马鸣造、真谛译，作者与成书地有争议）",
+   "fragments": [
+    "是故一切法從本已來，離言說相、離名字相、離心緣相，畢竟平等、無有變異、不可破壞。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Diagonal.claims_incomplete",
+    "Becoming.Diagonal.Unfolds.never_returns",
+    "Becoming.Diagonal.unfolding_open",
+    "Becoming.Web.Whole.needs_arising"
+   ],
+   "records": [
+    "readings-within-what-they-read",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：「離言說相、離名字相」与主张族的不完全有相似处（Diagonal.claims_incomplete）。相分在于「畢竟平等、無有變異、不可破壞」：把名言之外者立为不变的真如，是本原与固定本性两层。理论里名族所缺随展开而新——每个展开后来的步总说出更早的步未说的（Diagonal.Unfolds.never_returns），永不闭合的展开存在（unfolding_open，构造）；由会终止的部分组成的整体只靠部分不断生起而存续（Web.Whole.needs_arising）；理论不立一个不变的、名言之外的底。",
+   "names_used": [],
+   "layer_checked": "本原；固定本性或价值",
+   "locator": "大乘起信論",
+   "relational": "名言之外被立为不变之真；理论中名言所缺者也在变化之中。",
+   "tradition": "佛",
+   "work": "大乘起信論"
+  },
+  {
+   "id": "qixin-yin-yan-qian-yan",
+   "status": "revised",
+   "record_ids": [
+    "FO2-QX-R006"
+   ],
+   "source_id": "FO2-QX",
+   "layer": "魏晋南北朝·论（南北朝晚期，6世纪；题署马鸣造、真谛译，作者与成书地有争议）",
+   "fragments": [
+    "謂言說之極因言遣言，"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.SharedCodes.outside_needed",
+    "Becoming.SharedCodes.outside_returns"
+   ],
+   "records": [
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：「因言遣言」：用一个言去除另一个言所造成的执着。在码的律里，被合并的区分只从外加之外留存的形式回来（SharedCodes.outside_needed），听到一个不同的形式就即刻重新分开（outside_returns）——新言的作用是分开旧言所合并者。范围：《起信》接着说「此真如體無有可遣」，把遣言所向者立为无可遣的真如（本原一层，见 qixin-li-yan-shuo）；律中遣言本身也是言，新言分开旧言所合并者，自身仍在码中，律不给出一个最后无可遣之处。",
+   "names_used": [],
+   "layer_checked": "",
+   "locator": "大乘起信論",
+   "relational": "以言遣言是两个言之间的关系：新言分开旧言所合并者。",
+   "tradition": "佛",
+   "work": "大乘起信論"
+  },
+  {
+   "id": "tanjing-dun-jian",
+   "status": "revised",
+   "record_ids": [
+    "FO2-TJ-R024"
+   ],
+   "source_id": "FO2-TJ",
+   "layer": "隋唐·论（传慧能语；引文据元宗宝编本，版本层次有争议）",
+   "fragments": [
+    "法無頓漸，人有利鈍，故名頓漸。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.lumped_const_iff",
+    "Becoming.lumped_of_finer",
+    "Becoming.Learning.Lumped",
+    "Becoming.Contextual.indexed_fits"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "where-a-move-is-formed",
+    "claims-shown-in-context"
+   ],
+   "reading": "AI读法：顿渐之名不在「法」上，而在「法」与学人的关系上。「法無頓漸」：只按「法」读，是一个不分开学人的读法，经由它只有对一切学人都相同的动作被形成（lumped_const_iff），而顿渐随人之利钝而异，所以经由「法」形成不了顿渐。按「法」与人（利钝）一起读，读法更细，顿渐只随利钝而变，在这一读法的归并（类）上同值（Learning.Lumped，定义），于是分出顿渐；经由较粗读法形成的动作经由较细读法也形成（lumped_of_finer）。带人的指标的读法符合一切（Contextual.indexed_fits，按定义）。名随关系而立。",
+   "names_used": [
+    "类",
+    "名"
+   ],
+   "layer_checked": "",
+   "locator": "坛经",
+   "relational": "顿渐是教法与学人之间的关系名。",
+   "tradition": "佛",
+   "work": "坛经"
+  },
+  {
+   "id": "xunzi-xi-ci-shan-zuo-ming",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》；传世本有编纂与传抄层次）",
+   "fragments": [
+    "故析辞擅作名，以乱正名，使民疑惑，人多辨讼，则谓之大奸。其罪犹为符节度量之罪也。",
+    "夫民易一以道，而不可与共故。故明君临之以埶，道之以道，申之以命，章之以论，禁之以刑。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.SharedCodes.TwoFormations.three_agree",
+    "Becoming.SharedCodes.TwoFormations.centre_keeps_renaming",
+    "Becoming.SharedCodes.TwoFormations.centre_breaks_exchange",
+    "Becoming.SharedCodes.outside_needed",
+    "Becoming.SharedCodes.hearBy_held"
+   ],
+   "records": [
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：荀子把「析辞擅作名，以乱正名」定为「大奸」，比之「符节度量之罪」，又说民「不可与共故」，明君「临之以埶……禁之以刑」：以单一中心加罚来维持唯一之码（制名），并且不与民共享其理由。律中中心只是使一致形成的方式之一：在两形成者的模型里，中心、偏好形式、交换次序各打破一种对称，各在一步内使二者一致（SharedCodes.TwoFormations.three_agree，见证，不是穷尽的列举）；中心保持每个改名（TwoFormations.centre_keeps_renaming）而打破形成者之间的交换（TwoFormations.centre_breaks_exchange），二者都是该模型中的见证。律不给出中心在先，也不给出以罚维持。在只经由听的模型里，被合并的区分只从外加之外留存的形式回来（outside_needed）；擅作名是造新形，而模型中听不造形（hearBy_held），律不涉造形，所以禁擅作名关闭的是模型之外的一条路，不是律所说的那一条。「不可与共故」把理由收于中心，这一层律不作，故为相分。",
+   "names_used": [
+    "制名"
+   ],
+   "layer_checked": "意志或单一中心",
+   "locator": "荀子·正名篇",
+   "relational": "码由一个中心以罚维持、理由不与众共享；理论中码只在形成者之间的听与外加中形成，不给出中心的优先。",
+   "tradition": "儒",
+   "work": "荀子·正名"
+  },
+  {
+   "id": "xunzi-san-huo",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》；传世本有编纂与传抄层次）",
+   "fragments": [
+    "“见侮不辱”，“圣人不爱己”，“杀盗非杀人也”，此惑于用名以乱名者也。验之所为有名，而观其孰行，则能禁之矣。",
+    "“非而谒楹”，“有牛马非马也，”此惑于用名以乱实者也。验之名约，以其所受，悖其所辞，则能禁之矣。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.identifiesAlike_iff",
+    "Becoming.lumped_of_finer",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.SharedCodes.reads_iff",
+    "Becoming.SharedCodes.self_reads_iff"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "where-a-move-is-formed",
+    "selection-through-a-model-of-the-options",
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：荀子把墨辩的「杀盗非杀人也」列为「用名以乱名」，把「有牛马非马也」列为「用名以乱实」，各给检验之法（第二惑「用实，以乱名」不在此条）。前者「验之所为有名，而观其孰行」：荀子说名之所为是「上以明贵贱，下以辨同异」，此处只取辨同异一半，明贵贱属等级一层，律不作。有意义的描述（正名）所认同者在关系上相同（identifiesAlike_iff）；「人」既把盗归入其类（类），经由较粗读法形成的动作经由较细读法也形成（lumped_of_finer），所以不能以「盗」之名否认「人」之名所认者。后者「验之名约，以其所受，悖其所辞」：以共享之码（约定俗成）检验一个主张（辞）——读出依两码一致而定（SharedCodes.reads_iff，以读者之码分开诸义项为前提），码分开诸义项才能自读其形（self_reads_iff）；主张与它所用之码自读所得相悖，这一比对可以检出它，律给出码何时能自读，不给出驳回的规则。范围：律给出两种检验各依的结构，不判定墨辩与荀子孰是（见 mobian-sha-dao）：若对「杀」的评价在「人」之内不同值，经由「人」作不出它（Learning.selects_not_right_of_parted）。荀子随后把「邪说辟言」归于三惑，并以中心之势禁之，那一层另见 xunzi-xi-ci-shan-zuo-ming。",
+   "names_used": [
+    "正名",
+    "类",
+    "约定俗成",
+    "辞"
+   ],
+   "layer_checked": "",
+   "locator": "荀子·正名篇",
+   "relational": "名的检验在名与它所认同的关系之间、主张与共享之码之间进行。",
+   "tradition": "儒",
+   "work": "荀子·正名"
+  },
+  {
+   "id": "mojing-jing-bu-xi",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "MI1-S-JX",
+   "layer": "先秦·经（《墨子·經下》，战国后期墨家；六篇作者与编纂层未作同一断定）",
+   "fragments": [
+    "景不徙，說在改爲。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.reidentify_step",
+    "Becoming.Turnover.reidentified",
+    "Becoming.Lineage.one_way",
+    "Becoming.World.fixed_iff"
+   ],
+   "records": [
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：影看似移动，《經下》说影不移，是逐步「改爲」；《經說下》作「景，光至景亡，若在，盡古息。」：光至之处旧影即亡；「若在，盡古息」一般读为影若在，便终古止于其处（一说「若」为似，读法有争议）——所见之移是逐步改为新影。结构上：同一组步可以读作一影移动，也可以读作每步改为新影。一般的改认不改各步的关系（Web.reidentify_step，按定义），却改变跨步读数：谁更新、谁消耗、何处生起（Turnover.reidentified，构造模型中的见证）；把一条谱系命名为一，保持分开命名时的持续活动，并造出分开命名所没有的活动连续（Lineage.one_way，见证）——所见的影之移动，正是这样一种由命名给出的连续。守恒只在步后没有别的关系项与之站得一样之处定下跨步之同一（一实）（World.fixed_iff，以关系项的同一可判定为前提）。范围：墨家取「改爲」一读，律不判定哪一读为真，只说跨步之同一在律不定之处由命名给出。",
+   "names_used": [
+    "一实"
+   ],
+   "layer_checked": "",
+   "locator": "墨子·經下",
+   "relational": "影的同一是跨步的命名所给出的关系，不是影自身携带的。",
+   "tradition": "名辩",
+   "work": "墨经"
+  }
+ ],
+ "drops": [],
+ "passed": [
+  "xunzi-ming-wu-gu-yi",
+  "xunzi-dang-bu-qi-lei",
+  "lunyu-li-yun-li-yun",
+  "mojing-da-lei-si",
+  "mojing-zhong-tong",
+  "mojing-yong-ming",
+  "mojing-shu-niu-ma",
+  "mojing-kuang-ju",
+  "mobian-lei-qu-lei-yu",
+  "gongsunlong-bai-ma",
+  "gongsunlong-ji-zu-san",
+  "gongsunlong-jian-bai",
+  "zhuangzi-yi-yu-yan-wei-er",
+  "zhuangzi-shu-zhi-zheng-chu",
+  "lao-01-ming-ke-ming",
+  "lao-wu-ming-you-ming",
+  "lao-32-shi-zhi-you-ming",
+  "lao-38-shi-dao-er-hou-de",
+  "wangbi-32-ming-fen",
+  "wangbi-42-you-yan-you-yi",
+  "yichuan-si-de-sui-shi",
+  "xici-lei-ju-qun-fen",
+  "xici-cheng-ming-xiao",
+  "xici-yan-bu-jin-yi",
+  "wangbi-he-bi-ma",
+  "simafa-jiao-cheng-su",
+  "sunzi-xing-ming",
+  "hanfei-bu-dang-ming",
+  "hanfei-gu-xin-xiang-fan",
+  "shangjun-quan-shu",
+  "sima-tan-kong-ming-ze-shi",
+  "zhaolun-ci-bi-mo-ding",
+  "qixin-ji-ming-zi-xiang",
+  "hanyu-ding-ming-xu-wei",
+  "hanyu-gong-yan-si-yan",
+  "xunzi-shi-bu-yu",
+  "mojing-sha-gou-fei-sha-quan",
+  "mobian-sha-dao",
+  "zhongyong-shu-tong-wen"
+ ],
+ "notes": "What I checked, for all 69 entries: all 110 fragments match their stated source exactly (ctq.py text). Every cited declaration exists under its full name in the worktree's Lean files and resolves with resolve.py; every theory record and every 脉络 relation id resolves. I also checked the extra quotations inside the readings. Script: /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/zh/c09rev/chk.py.\n\nCorrections (30 entries):\n(1) reads_iff takes 读者之码分开诸义项 as a premise, not as one side of the iff. The old wording「恰当读者的码分开诸义项且两码一致」is false: the left side can hold at one sense when the code does not tell all senses apart. Fixed in zhi-ming-yong-li, yuan-fang-yi-su, wei-hu-qi-wei, ming-bai-yi-zhi, ming-ju-shi, er-di and san-huo.\n(2) acquired_exact and acquired_every_expression require the two primitives to have different values. Added where they are cited.\n(3) LumpedWithin.finer and lumped_of_finer only give monotonicity: where the coarse reading suffices, the finer one does too. They do not show that a compound name (兼) or an image (象) supplies what the single name or the words merged. Fixed the reasoning in zhi-ming-yong-li (lumped_id added) and xici-li-xiang-jin-yi. In tanjing-dun-jian the key law is lumped_const_iff: through the one 法, only what is the same for every learner is formed.\n(4) The \"keeps\" half of centre and preferred-form has its own witness: centre_keeps_renaming and preferred_keeps_exchange. The readings cited only the \"breaks\" half. Fixed in wang-zhe-zhi-ming, ming-you-gu-shan and xi-ci-shan-zuo-ming.\n(5) Removed corner-bracket quotations that are not source text:「读得更细、形成更多」「石一、堅白二」「决定性作为相等」「地广」「数众」「遣尽」.\n(6) In hanfei-yi-duo-xin,「聽不參」comes before「言之爲物」in the text, not after.\n(7) Name-table names: zhonglun-jia-ming used「生灭、成散、立止」and「不断」; changed to 作已／结解／聚散／成毁／不息. zhuangzi-qiushui used「拓宽更好（C）」; changed to 以广为愈, and the continuation condition is named 凡续皆有顾, stated and not asserted. Removed 状 from xunzi-hua-yi-shi's names_used, and 正名 from xi-ci-shan-zuo-ming (it appears only inside a quotation there).\n(8) Overclaims:\n- qixin-li-yan-shuo said「没有不变的底」; zhonglun-er-di said「离开码无可说」and「没有另一真层」. Each now says only that the theory posits no such ground or layer.\n- gongsunlong-zhi-wu said renaming leaves「任何跨步读数」unchanged; it now names what rename_tenure actually covers.\n- mobian-ming-ju-shi now marks Confound.misattributes as a witness in one model, and gives the actual scope reason for its kind.\n- mengzi-yi-fu and jielao now quantify stands_false_iff per sense.\n(9) mojing-ju-wu-sheng changed from agreement to scope. 當者勝 holds only where the claim is decided; the core does not assume decidedness and proves only that it cannot be refuted (not_not_decided). The 異 sentence was misread: the two sayings are not the 是 and 非 of one claim, so both can miss.\n(10) zhonglun layer: 释 is not one of the five layer labels. jia-ming is 注; in er-di the first fragment is 龙树's verse (论) and the second is 青目's commentary (注).\n(11) mojing-jing-bu-xi: the usual reading of「若在」is \"if it remains\". The reviser's「在只是看似」is now given only as the alternative reading.\n(12) xunzi-san-huo now marks 荀子's「上以明贵贱」as the rank layer. Its「由码驳回」claim had no law behind it and is softened.\n(13) xunzi-wang-zhe-zhi-ming's gap claimed the module header lists making new forms as not derived. It does not; the header lists several forms per sense, rules reading more than two codes, and similar.\n(14) zhi-ming-yong-li: 共 is reread as single and compound names applying to one thing (the 共名 gloss is noted as an alternative). The reviser's \"one sense, several forms\" survives only as a conditional reading in the gap.\n\nFor the integrator:\n(a) The name table's 狀 (构形) conflicts with「状同而为异所」: if two things have the same configuration in full, they have no different place. In 正名, 状 means a relatum's visible form.\n(b) mojing-zhong-tong, ju-wu-sheng and sha-gou-fei-sha-quan all use 重同 for \"two names, one relatum, within one step\". The current table has 重同 = 改名 (renaming). This is already in name_flags; I did not change each entry.\n(c) yichuan-si-de-sui-shi (scope, following RO) and jielao-de-sui-chi-du (agreement) have the same structure but different kinds.\n(d) The 曹操注 cited in sunzi-xing-ming is not in the frozen texts. The main text's「言不相聞，故為金鼓；視不相見，故為旌旗」can stand in as evidence.\n(e) The 辨 name flag quotes「下以辨同異」; the frozen text reads「下以辨同异」. All other name_flags quotations check out."
+}

@@ -1,0 +1,4664 @@
+{
+ "cluster": "C02 关系、依存与条件",
+ "names": [
+  {
+   "concept": "依存 dependence（Web 的 requires／need／level；Web.Bearing：依于一条件且需求为正；Web.Dependent：活动需要支撑）",
+   "name": "待",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S02",
+     "quote": "吾有待而然者邪？吾所待，又有待而然者邪？",
+     "layer": "子·《庄子》内篇（战国）",
+     "sense_in_context": "影之行止依于形而然，形又依于他者而然：待＝依于某条件而后如此；依存成链。",
+     "locator": "齐物论 罔两问景",
+     "record_id": ""
+    },
+    {
+     "source_id": "ZH1-S21",
+     "quote": "萬物亦然，有待也而死，有待也而生。",
+     "layer": "子·《庄子》外篇（战国至秦汉，篇章年代有争议）",
+     "sense_in_context": "生与死都依所待者之出入：同一依存的两种读法。",
+     "locator": "田子方",
+     "record_id": ""
+    },
+    {
+     "source_id": "ZH1-S01",
+     "quote": "此雖免乎行，猶有所待者也。",
+     "layer": "子·《庄子》内篇（战国）",
+     "sense_in_context": "免于步行仍依于风：换了所待，依存仍在。",
+     "locator": "逍遥游",
+     "record_id": "ZH1-C01-R-05"
+    },
+    {
+     "source_id": "YD-JP54",
+     "quote": "愆期之志，有待而行也。",
+     "layer": "传·象传（战国至秦汉，成书年代有争议）",
+     "sense_in_context": "行依于所待之到来。",
+     "locator": "归妹九四小象",
+     "record_id": "TP-H54-X4-R01"
+    },
+    {
+     "source_id": "RU1-S-ZY",
+     "quote": "待其人然後行。",
+     "layer": "经·《礼记·中庸》（战国至秦汉，年代有争议）",
+     "sense_in_context": "礼仪之行依于行之之人。",
+     "locator": "中庸第二十七章",
+     "record_id": "RU1-ZY-35-R01"
+    },
+    {
+     "source_id": "CT1-S-ZL",
+     "quote": "若有不自有，待緣而後有者，故知有非真有。",
+     "layer": "论·后秦（僧肇）",
+     "sense_in_context": "佛教缘起以「待緣」译接：有依于缘而后有。",
+     "locator": "不真空论",
+     "record_id": "CT1-R-ZL18"
+    }
+   ],
+   "fit": "「X待Y而然」是二元有向关系：X之如此依于Y，而不说Y依于X（方向）；「而後」标出Y是X成立的条件（条件）；「所待又有待」说依存成链。这正是 requires t g c 且 need 为正（Web.Bearing），以及 Web.Dependent：活动时一切所需皆达其需。",
+   "not_carried": "等待（时间上候其将来）、接待／待遇／待人（社会交往与对待之义）、宋明「对待」（对立之偶）；以及《庄子》把「有待」评为低于「无待」的价值次第。",
+   "course": "先秦：庄子「有待／无待」、中庸「待其人」、荀子「相待」、小象「有待而行」，皆为依于条件而后然。魏晋：郭象注以「独化」「非待」消解所待（RO guoxiang-zhu-du-hua，相分；RO guoxiang-zi-sheng，相分）。东晋后秦：僧肇以「待緣而後有」接缘起（CT1-R-ZL18）。唐：唯识种子六义立「待眾緣」（FO1-R-CY19）；华严法藏以「待緣／不待緣」与「有力／無力」立因门六义（FO2-FQ-R001、FO2-FQ-R008）。宋明：「对待」多指阴阳对立之偶，与本义分途，本簇不取。",
+   "alternatives": [
+    {
+     "name": "依",
+     "why_not": "依带依靠、依附的社会义与「依于仁」的规范义，又是佛教「依他起性」的专门术语，易把名引向三性论；且「依」不显「而後然」的条件义。"
+    },
+    {
+     "name": "恃",
+     "why_not": "恃含倚仗而自负（恃强、恃才）的态度义，老子「为而不恃」又以之为当去之心态，带价值评价。"
+    },
+    {
+     "name": "賴",
+     "why_not": "赖偏于受益之依靠，后世「依赖」带无能之贬义；墨子「賴其力」另作自待之证。"
+    },
+    {
+     "name": "緣",
+     "why_not": "佛教专门术语，带四缘之分类与「缘分」的命定义；先秦「緣」为循、沿。用作所待者之后世名，见「所待」一条。"
+    },
+    {
+     "name": "麗",
+     "why_not": "限于易学（离彖），且与「離」双关，日常不可读。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.Web.Bearing",
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Embodied.active_of_bearing"
+   ]
+  },
+  {
+   "concept": "条件（关系项在依存中被依的一方之位；Web.roles 把形成与条件读作同一类关系项）",
+   "name": "所待",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S02",
+     "quote": "吾所待，又有待而然者邪？",
+     "layer": "子·《庄子》内篇（战国）",
+     "sense_in_context": "所待者自身又有所待：被依之位不是一种实体，而是一个关系项在此依存中所处之位。",
+     "locator": "齐物论 罔两问景",
+     "record_id": ""
+    },
+    {
+     "source_id": "ZH1-S27",
+     "quote": "彼，吾所以有待邪？而況乎以有待者乎？",
+     "layer": "子·《庄子》杂篇（战国至秦汉，篇章年代有争议）",
+     "sense_in_context": "影说火日阴夜是其所待，而所待者又是有待者。",
+     "locator": "寓言 罔两问景",
+     "record_id": "ZH1-C27-R-05"
+    },
+    {
+     "source_id": "FO1-S-CY",
+     "quote": "顯所待緣非恒有性",
+     "layer": "论·唐（玄奘译糅）",
+     "sense_in_context": "「所待緣」：种子所待之众缘不是恒常之有，故果非一时顿生。",
+     "locator": "成唯识论卷二 种子六义",
+     "record_id": "FO1-R-CY19"
+    }
+   ],
+   "fit": "「所待」是「待」的「所」字名词化，指依存中被依的一方。「所待又有待」说同一关系项在一处为条件、在另一处为依者：这正是 Web.roles 把形成与条件读作同一类关系项，且 Web.relabel_dependent 说重新标记条件不改活动是否需要支撑。",
+   "not_carried": "「所待」作「所等候者」的时间义；佛教「缘」的四缘分类（因缘、等无间缘、所缘缘、增上缘），尤其「所缘」作认识对象之义，脊柱不作此分类。",
+   "course": "先秦：庄子「所待」。汉译佛典以「緣」称所待者（杂阿含「緣眼及色」，FO1-R-SA009）；唐唯识合二者为「所待緣」（FO1-R-CY19）；华严「待緣」（FO2-FQ-R001）。后世「条件」为近代译名。",
+   "alternatives": [
+    {
+     "name": "緣",
+     "why_not": "佛教专门术语，带四缘分类与「所缘」认识对象义，又有「缘分」命定义；先秦「緣」为循、沿。"
+    },
+    {
+     "name": "本",
+     "why_not": "带单一根本与本末的价值次第（孟子「天下之本在國」、大学「德者本也」），与脊柱多条件、无导出中心不合（见 mengzi-tianxia-zhi-ben 相分）。"
+    },
+    {
+     "name": "資",
+     "why_not": "已用于「汲取」（draws），且偏于被取用之物，不涵盖不被取用而仍被依的条件。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.roles",
+    "Becoming.Web.relabel_dependent"
+   ]
+  },
+  {
+   "concept": "支撑（Web.Supported：每个所需条件之量不低于其需，need ≤ level）",
+   "name": "足",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-JP10",
+     "quote": "跛能履，不足以與行也。",
+     "layer": "传·象传（战国至秦汉，成书年代有争议）",
+     "sense_in_context": "所凭之力不达行之所需：「不足以」是所给与所需的比较。",
+     "locator": "履六三小象",
+     "record_id": "TP-H10-X3-R02"
+    },
+    {
+     "source_id": "ZH1-S19",
+     "quote": "而養形果不足以存生",
+     "layer": "子·《庄子》外篇（战国至秦汉，篇章年代有争议）",
+     "sense_in_context": "养形之所给不达存生之所需。",
+     "locator": "达生",
+     "record_id": "ZH1-C19-R-01"
+    },
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "足食，足兵，民信之矣。",
+     "layer": "经·《论语》（春秋末至战国编成）",
+     "sense_in_context": "政所需的几个条件各达其需。",
+     "locator": "颜渊第七章",
+     "record_id": "RU1-LY-12-07-R01"
+    }
+   ],
+   "fit": "「足X以Y」「不足以Y」比较所给之量与Y之所需，是关系的、相对的，不是一物独有之性质：正是 need ≤ level。Web.Supported 是对每一个所需条件的合取，「足食，足兵，民信之」亦是诸条件各足。",
+   "not_carried": "知足、满足（心态与价值上的满足）、富足（财货丰余）、足作「脚」之本义（跛履之双关不取）。",
+   "course": "先秦：「足／不足」为所给达或不达所需（论语足食、小象不足以与行、墨子财用不足 MO1-C35-R009）。老子「知足」已转为心态之足，后世沿之，本簇不取。",
+   "alternatives": [
+    {
+     "name": "任",
+     "why_not": "「力小而任重」之「任」近于所需一端，且带官职、职责之社会义；「勝任」只说能否承担，不说条件之量。"
+    },
+    {
+     "name": "載",
+     "why_not": "「博厚所以載物」是承载之象，只适于上下承载的情形。"
+    },
+    {
+     "name": "持",
+     "why_not": "已用于「维持」（kept），且带把持之义。"
+    },
+    {
+     "name": "支",
+     "why_not": "先秦「支」为枝、肢，「支撑」是后起复词。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.Supported",
+    "Becoming.Web.supported_iff_admits"
+   ]
+  },
+  {
+   "concept": "汲取（Web 的 draws：形成在某步从某条件取用）",
+   "name": "资",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-HX01",
+     "quote": "大哉乾元，萬物資始，乃統天。",
+     "layer": "传·彖传（战国至秦汉，成书年代有争议）",
+     "sense_in_context": "万物取之以始。",
+     "locator": "乾彖",
+     "record_id": "HX-R001"
+    },
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "不善人者，善人之资",
+     "layer": "经·《老子》（战国；传世王弼本系统）",
+     "sense_in_context": "被取用者：一方为另一方所取用之资。",
+     "locator": "第二十七章",
+     "record_id": "LE-R036"
+    },
+    {
+     "source_id": "FO2-FQ",
+     "quote": "二空有力待緣",
+     "layer": "论·唐（法藏）",
+     "sense_in_context": "同段释为因缘「相資發」：因与缘互相取用而起。",
+     "locator": "因门六义",
+     "record_id": "FO2-FQ-R001"
+    },
+    {
+     "source_id": "IN1-S06",
+     "quote": "賈之家一，而資焉之家六",
+     "layer": "论·唐（韩愈）",
+     "sense_in_context": "取给于一家者有六家：取用之方向与多寡。",
+     "locator": "原道",
+     "record_id": "IN1-R-D04"
+    }
+   ],
+   "fit": "「X资Y」有向：X从Y取用以始、以生，不断言X依Y之需为正，故对应 draws 而非 Bearing；与「食」（取用且依之）区分。",
+   "not_carried": "资财、资本、资金（财货与金融义）、资格、资历（身份地位义）、天资（禀赋）。",
+   "course": "先秦：资为所取用以始、以生者（彖传、老子）。秦汉以后渐偏于财货（资财），本簇不取。唐：法藏「相資發」复其取用之关系义（FO2-FQ-R001）；韩愈「資焉之家」兼二义（IN1-R-D04）。RO peiwei-chongyou-pian-wu-zi-zu「憑乎外資」（相合）为西晋之例。",
+   "alternatives": [
+    {
+     "name": "汲",
+     "why_not": "井卦汲水之象，限于取水。"
+    },
+    {
+     "name": "取",
+     "why_not": "过泛，且带取得、占有与选取之义。"
+    },
+    {
+     "name": "用",
+     "why_not": "与「体用」「无之以为用」之「用」冲突（老子十一章），指功用而非取用。"
+    },
+    {
+     "name": "食",
+     "why_not": "已用于「以之为生」（取用且依之于正需），比汲取多一层依存。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.LivesOn",
+    "Becoming.Web.Interacts",
+    "Becoming.Web.UnderminingOn"
+   ]
+  },
+  {
+   "concept": "以之为生（Web.LivesOn：在一步取用某关系项且依之于正需）",
+   "name": "食",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-JP06",
+     "quote": "食舊德，從上吉也。",
+     "layer": "传·象传（战国至秦汉，成书年代有争议）",
+     "sense_in_context": "以旧有所积为生：取用一个不再补给的储备。",
+     "locator": "讼六三小象",
+     "record_id": "TP-H06-X3-R01"
+    },
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "我独异于人，而贵食母。",
+     "layer": "经·《老子》（战国；传世王弼本系统）",
+     "sense_in_context": "以所从出之母为所食，即以本源为生。",
+     "locator": "第二十章",
+     "record_id": "LAO2-C20-R06"
+    },
+    {
+     "source_id": "YD-OW-XG",
+     "quote": "需者飲食之道也。",
+     "layer": "传·序卦（战国末至汉初，年代有争议）",
+     "sense_in_context": "所需之取用。",
+     "locator": "序卦上篇 需",
+     "record_id": "WP-XG-C01-S04-R02"
+    }
+   ],
+   "fit": "「食X」是取X入而依之以存：既取用（draws），又依之于正需（Bearing），正是 Web.LivesOn 的合取；Web.LivesOn.stands 说在 Dependent 下所食者在该步必在。",
+   "not_carried": "饮食之字面生理义（只限进食）、食禄、食邑（官俸与封邑的社会、财货义）、食言（背弃承诺）。",
+   "course": "先秦：讼「食舊德」、老子「食母」、序卦「飲食之道」皆为取之以存。王弼注「為腹者以物養己」（LC2-WB-C12-R01）以「养己」释之。后世「食」多限于饮食与禄位，本簇不取。",
+   "alternatives": [
+    {
+     "name": "恃",
+     "why_not": "只有倚仗而无取用，并带自负之态度。"
+    },
+    {
+     "name": "養",
+     "why_not": "养是给者一方（FedBy、give），「以之为生」是取者一方。"
+    },
+    {
+     "name": "依",
+     "why_not": "只有依存而无取用。"
+    },
+    {
+     "name": "資",
+     "why_not": "已用于汲取，不含依之于正需。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.LivesOn",
+    "Becoming.Web.LivesOn.stands",
+    "Becoming.Web.sustenance"
+   ]
+  },
+  {
+   "concept": "交互（Web.Interacts：两个事件经一条件交互，一方取用、一方依之于正需；对称）",
+   "name": "交",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-HX01",
+     "quote": "天地交而萬物通也，上下交而其志同也",
+     "layer": "传·彖传（战国至秦汉，成书年代有争议）",
+     "sense_in_context": "两域之间有往来，由此而通。",
+     "locator": "泰彖",
+     "record_id": "HX-R009"
+    },
+    {
+     "source_id": "YD-JG17",
+     "quote": "出門交有功。",
+     "layer": "经·周易卦爻辞（西周）",
+     "sense_in_context": "出而与他者相往来，乃有所成。",
+     "locator": "随初九",
+     "record_id": "JG2-H17-L1-R02"
+    },
+    {
+     "source_id": "YD-JP03",
+     "quote": "屯，剛柔始交而難生",
+     "layer": "传·彖传（战国至秦汉，成书年代有争议）",
+     "sense_in_context": "关系初结之时。",
+     "locator": "屯彖",
+     "record_id": "TP-H03-T-R01"
+    }
+   ],
+   "fit": "「交」是经由某种往来而相接，对称（天地交、上下交），且往来有所经由；Web.Interacts 经一条件而成、对称（Interacts.symm），且交互的事件共同参与该条件。「交而通」的「通」是交的结果，不是交本身。",
+   "not_carried": "交易、交换（市场交换义）、交情、交友（社会交往义）、性交；以及汉易以阴阳爻之「交」说卦变的象数义。",
+   "course": "先秦：泰否彖传、随初九、屯彖。宋：程颐「天地不交則不生萬物」（CY130-H12-R01）。后世「交易」转入市易之义，本簇不取。",
+   "alternatives": [
+    {
+     "name": "感",
+     "why_not": "C10 的应答之名，并带天人感应义。"
+    },
+    {
+     "name": "通",
+     "why_not": "通是交的结果（到达、输送），不是交本身。"
+    },
+    {
+     "name": "接",
+     "why_not": "只有相触，不含经由条件之取用与依存。"
+    },
+    {
+     "name": "相與",
+     "why_not": "偏于结成，弱于交互。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.Interacts",
+    "Becoming.Web.interaction",
+    "Becoming.Shared.connection_by_living_use"
+   ]
+  },
+  {
+   "concept": "相互依存（Becoming.MutualDependence：Flow.MutuallyDependent，每个形成都在每个形成的影响闭包之内；即「entangled」）",
+   "name": "相待",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ10",
+     "quote": "離居不相待則窮",
+     "layer": "子·《荀子》（战国末）",
+     "sense_in_context": "各人之养在他人所为之内，离而不相待则所需无所出。",
+     "locator": "富国篇",
+     "record_id": "RU2-R0259"
+    },
+    {
+     "source_id": "ZH1-S02",
+     "quote": "化聲之相待，若其不相待",
+     "layer": "子·《庄子》内篇（战国）",
+     "sense_in_context": "是非之辩相依而立。",
+     "locator": "齐物论",
+     "record_id": ""
+    },
+    {
+     "source_id": "FO1-S-MMK",
+     "quote": "因自性有他性",
+     "layer": "论·印度（龙树、青目），后秦鸠摩罗什译",
+     "sense_in_context": "自与他相待而立。",
+     "locator": "观有无品",
+     "record_id": "FO1-R-M04"
+    }
+   ],
+   "fit": "「相」标互相，「相待」是各依对方（经某一距离）而成立：Flow.MutuallyDependent 要求两两互在影响闭包之内，是两个有向依存的闭包，不是同一；Flow.MutuallyFed.mutuallyDependent 证互相给养即相互依存，Clearing.shares_not_mutual 证共用条件不即相待。",
+   "not_carried": "相待以礼（彼此对待之社会义）、对待（对立之偶）、互相等候。",
+   "course": "先秦：荀子富国「相待」为群居互资；庄子「相待」为言辩相依。中观「相待」说自他、长短（FO1-R-M04）。宋明「对待」转为对立之偶，本簇不取。",
+   "alternatives": [
+    {
+     "name": "相依",
+     "why_not": "带「相依为命」的情感、社会义，又承「依」之问题。"
+    },
+    {
+     "name": "相資",
+     "why_not": "华严「相資發」是互相取用，是更强的互相给养（MutuallyFed），不是相互依存的一般义。"
+    },
+    {
+     "name": "互依",
+     "why_not": "近代组合，无古典出处。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Flow.MutuallyDependent",
+    "Becoming.Flow.MutuallyFed.mutuallyDependent",
+    "Becoming.Clearing.shares_not_mutual"
+   ]
+  },
+  {
+   "concept": "维持／断裂（Web.Kept／Web.Broken：一步之后一个依存维持或断裂；Web.kept_or_broken）",
+   "name": "持／絕",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ19",
+     "quote": "两者相持而长",
+     "layer": "子·《荀子》（战国末）",
+     "sense_in_context": "欲与物相互维持而共长：持＝跨步维持一关系。",
+     "locator": "礼论篇（关系 RU2-R0104 主在C04）",
+     "record_id": ""
+    },
+    {
+     "source_id": "BI1-S-SM",
+     "quote": "不絕人馬之力",
+     "layer": "子·《司马法》（战国）",
+     "sense_in_context": "所依之力不断：絕＝依存跨步断裂。",
+     "locator": "司马法",
+     "record_id": "BI1-SM-R-11"
+    },
+    {
+     "source_id": "CT1-S-SJ",
+     "quote": "一斷於法，則親親尊尊之恩絕矣。",
+     "layer": "史·西汉（司马谈）",
+     "sense_in_context": "恩之关系断。",
+     "locator": "论六家要指",
+     "record_id": "CT1-R-SJ04"
+    }
+   ],
+   "fit": "二字成对：「持」是一个依存跨一步而维持，「絕」是它跨一步断裂；二者读同一依存在一步之后的两种情形，正如 Web.kept_or_broken 与 Web.kept_not_broken。",
+   "not_carried": "持作把持、挟持（控制、支配义）与持有（占有义）；絕作「极」（绝妙）、作「渡」（绝江河）；老子「绝圣弃智」的有意弃绝。另注意：「绝」与Ren所用「绝生」之「绝」同字，后者指生之终绝，是更强的断，二者须在全书统一时区分。",
+   "course": "先秦：荀子「相持而长」；司马法「不絕人馬之力」。汉：司马谈「恩絕」。后世「绝」兼极、渡之义，本簇不取。",
+   "alternatives": [
+    {
+     "name": "存／亡",
+     "why_not": "用于关系项之活动（其人存、其人亡），不用于依存本身。"
+    },
+    {
+     "name": "續／斷",
+     "why_not": "「斷」在佛教是修行断除烦恼之义，带价值方向。"
+    },
+    {
+     "name": "守／失",
+     "why_not": "带持守之德与得失之计。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.Kept",
+    "Becoming.Web.Broken",
+    "Becoming.Web.kept_or_broken",
+    "Becoming.Web.kept_not_broken"
+   ]
+  },
+  {
+   "concept": "形成／消解（Web.Forms／Web.Dissolves：一个依存跨一步形成或消解）",
+   "name": "結／解",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S06",
+     "quote": "此古之所謂縣解也。而不能自解者，物有結之。",
+     "layer": "子·《庄子》内篇（战国）",
+     "sense_in_context": "与物结成的依系及其消解；系缚在关系中，不在一方之内。",
+     "locator": "大宗师 子舆有病",
+     "record_id": ""
+    },
+    {
+     "source_id": "ZH1-S03",
+     "quote": "古者謂是帝之縣解",
+     "layer": "子·《庄子》内篇（战国）",
+     "sense_in_context": "倒悬之系的解除。",
+     "locator": "养生主 老聃死",
+     "record_id": ""
+    },
+    {
+     "source_id": "YD-OW-XG",
+     "quote": "解者緩也",
+     "layer": "传·序卦（战国末至汉初，年代有争议）",
+     "sense_in_context": "系紧者之松解。",
+     "locator": "序卦下篇 解",
+     "record_id": ""
+    }
+   ],
+   "fit": "「結」是一个依系跨步结成，「解」是它跨步解开：Web.Forms＝此步无依存而下步有，Web.Dissolves＝反之；Web.change_readings 把它们读作同一变化。「物有結之」说结是关系项之间的，不是一物之性。",
+   "not_carried": "结作绳结之物、结果之结；结社、结盟（社会联合义）；佛教「结」作烦恼系缚（九结）与「解脱」作当求之归宿的价值方向；解作解释。",
+   "course": "先秦：庄子以「結／縣解」说依系之成与解；序卦「解者緩也」。佛教以「结」为须断之烦恼、以「解脱」为目标，价值方向固定，本簇不取。",
+   "alternatives": [
+    {
+     "name": "成／散",
+     "why_not": "成散多说物之聚散，不专指依存。"
+    },
+    {
+     "name": "合／離",
+     "why_not": "合离是关系项的聚合与分离（RO zhuangzi-shanmu-cai-bu-cai），不是依存的形成与消解。"
+    },
+    {
+     "name": "生／滅",
+     "why_not": "用于活动之生起与止息，与依存之结解分开。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.Forms",
+    "Becoming.Web.Dissolves",
+    "Becoming.Web.forms_between",
+    "Becoming.Web.dissolves_between"
+   ]
+  },
+  {
+   "concept": "共灭（Web.coextinct：在 Dependent 下，依存链所达的具身关系项不活动，则链上依之者不活动）",
+   "name": "隨滅",
+   "form": "复词",
+   "pre_qin": false,
+   "attestations": [
+    {
+     "source_id": "FO2-QX",
+     "quote": "唯風滅故動相隨滅，非是水滅",
+     "layer": "论·南北朝（题署马鸣造、真谛译，作者与译者有争议）",
+     "sense_in_context": "动相依于风与水；风灭则动相随之而灭，而水不灭：随灭有向。",
+     "locator": "解释分 心生灭门 风水喻",
+     "record_id": ""
+    },
+    {
+     "source_id": "FO2-SM",
+     "quote": "皆亦隨斷",
+     "layer": "经·汉译（刘宋 求那跋陀罗译）",
+     "sense_in_context": "所依之无明住地断，依之者皆随之断。",
+     "locator": "一乘章",
+     "record_id": "FO2-SM-R011"
+    },
+    {
+     "source_id": "FO1-S-SA",
+     "quote": "此無故彼無，此滅故彼滅",
+     "layer": "经·汉译阿含（刘宋 求那跋陀罗译）",
+     "sense_in_context": "彼依此，此灭则彼灭。",
+     "locator": "杂阿含经第262经等",
+     "record_id": ""
+    },
+    {
+     "source_id": "ZH1-S21",
+     "quote": "是出則存，是入則亡",
+     "layer": "子·《庄子》外篇（战国至秦汉，篇章年代有争议）",
+     "sense_in_context": "先秦的结构先例：所待者入则依者亡。",
+     "locator": "田子方",
+     "record_id": ""
+    }
+   ],
+   "fit": "「隨」标跟随：依者随所依之灭而灭，而不是反过来，也不及于另一条件——起信论「非是水滅」明言这一方向。正是 Web.coextinct 的有向性：所依者不活动推出依者不活动，反之不成立；Web.active_along 证沿链传递。",
+   "not_carried": "灭作寂灭、涅槃（以灭为归宿的价值方向）；灭作灭国（施暴者之消灭）；随作随顺（顺从）。",
+   "course": "先秦无「随灭」一词，结构见于田子方「是出則存，是入則亡」、中庸「其人亡則其政息」（RU1-ZY-20-R02）。汉译阿含「此滅故彼滅」（FO1-R-SA035）；胜鬘「隨斷」（FO2-SM-R011）；起信论「隨滅」并标「非是水滅」。",
+   "alternatives": [
+    {
+     "name": "俱亡",
+     "why_not": "同时皆亡，失去依者随所依的方向。"
+    },
+    {
+     "name": "同滅",
+     "why_not": "同上，失去方向。"
+    },
+    {
+     "name": "隨斷",
+     "why_not": "「斷」带修行断除之价值义。"
+    },
+    {
+     "name": "息",
+     "why_not": "中庸「其政息」是先秦之例，但「息」只说止息，不标依随之方向。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.coextinct",
+    "Becoming.Web.active_along",
+    "Becoming.Web.Carries.chain_ends"
+   ]
+  },
+  {
+   "concept": "储备（Web.Carries：不受支撑时所持之量随活动而降；Web.Carries.lasts：储备延迟终止而不逃脱终止）",
+   "name": "蓄",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-OW-XG",
+     "quote": "物畜然後可養",
+     "layer": "传·序卦（战国末至汉初，年代有争议）",
+     "sense_in_context": "先有所蓄（古作畜），然后可以取之以养。",
+     "locator": "序卦上篇 大畜、颐",
+     "record_id": "WP-XG-C01-S26-R03"
+    },
+    {
+     "source_id": "YD-JP14",
+     "quote": "大轝以載，積中不敗也。",
+     "layer": "传·象传（战国至秦汉，成书年代有争议）",
+     "sense_in_context": "所积在中，承载而不败。",
+     "locator": "大有九二小象",
+     "record_id": "TP-H14-X2-R01"
+    },
+    {
+     "source_id": "YD-CY2",
+     "quote": "乃所畜之大也",
+     "layer": "注·北宋（程颐）",
+     "sense_in_context": "所蓄之大：先积于内而后施。",
+     "locator": "大畜卦辞注",
+     "record_id": "CY130-H26-R01"
+    },
+    {
+     "source_id": "LC-HS-LOW",
+     "quote": "言当深藏其气，固守其精，使无漏泄。",
+     "layer": "注·河上公章句（东汉至魏晋，成书年代有争议）",
+     "sense_in_context": "持守所蓄，使不受支撑之时可以延续。",
+     "locator": "第五十九章注",
+     "record_id": "LC2-HS-C59-R03"
+    }
+   ],
+   "fit": "「蓄」是持有一个日后取用时随之降低的存量：Web.Carries 说不受支撑而活动时储备下降；Web.Carries.lasts 证其活动次数不超过储备；Web.carries_zero 证零储备恰是 Dependent。「蓄」只延迟终止，与「深藏固守」的延续义相合，而河上公「不死」之读（RO hs-06-16-bu-si 相分）不取。",
+   "not_carried": "畜作家畜、畜养（养者一方）、作畜止约束（小畜「隂畜陽」，ZX130-H09-R01）；储蓄作货币积存；蓄意（预谋）。",
+   "course": "先秦：序卦「物畜然後可養」，大畜卦名。宋：程颐以「所畜」说学德之积（CY130-H26-R01）。后世「储蓄」转为钱财之积，本簇不取。RO guanzi-guoxu-gu-you-suo-cang（「穀有所藏」，相合）为同一结构之「藏」字例。",
+   "alternatives": [
+    {
+     "name": "積",
+     "why_not": "積是积累之过程（量的上升），不是所持之存量；「積中不敗」近之，可作旁证。"
+    },
+    {
+     "name": "藏",
+     "why_not": "带隐藏与收藏占有之义，且「坤以藏之」只是功用列举。"
+    },
+    {
+     "name": "餘",
+     "why_not": "荀子「善臧其餘」是剩余，储备不限于剩余。"
+    },
+    {
+     "name": "儲",
+     "why_not": "后起，且偏于物资与货币之储。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.Carries",
+    "Becoming.Web.Carries.lasts",
+    "Becoming.Web.carries_zero",
+    "Becoming.Flow.carries_of_held"
+   ]
+  },
+  {
+   "concept": "承担自身（Web.SelfBearing：活动时依于自身且需求为正）",
+   "name": "自待",
+   "form": "新组合",
+   "pre_qin": false,
+   "attestations": [
+    {
+     "source_id": "MO1-S-C32",
+     "quote": "賴其力者生，不賴其力者不生。",
+     "layer": "子·《墨子》（战国，篇章层次有争议）",
+     "sense_in_context": "结构先例：人之生以自身之力为条件之一，异于禽兽依已成之羽毛水草。",
+     "locator": "非乐上",
+     "record_id": "MO1-C32-R006"
+    },
+    {
+     "source_id": "ZH1-S02",
+     "quote": "吾有待而然者邪？",
+     "layer": "子·《庄子》内篇（战国）",
+     "sense_in_context": "「待」之出处（见「待」）。",
+     "locator": "齐物论",
+     "record_id": ""
+    },
+    {
+     "source_id": "RU1-S-ZY",
+     "quote": "誠者自成也；而道，自道也。",
+     "layer": "经·《礼记·中庸》（战国至秦汉，年代有争议）",
+     "sense_in_context": "「自X」之构式出处；RO 判为定域，其「自成」义未取。",
+     "locator": "中庸第二十五章",
+     "record_id": "RU1-ZY-33-R01"
+    }
+   ],
+   "fit": "「自」加「待」：依于自身。Web.SelfBearing 说关系项活动时以自身为所需条件且需求为正；Web.SelfBearing.stands 说其在活动时作为条件而在；Web.SelfBearing.met_iff 说在 Dependent 下其自依恰在活动时满足，此外不记录任何东西。「自待」是一种依存，不是依存之缺如。",
+   "not_carried": "后世「自待」作自我期许、自视之义（社会自我评价）；以及自足、无待（不依存）之义——自待恰是依存。",
+   "course": "「自待」在本簇所检先秦文献中未见；结构见墨子「賴其力者生」（MO1-C32-R006）与中庸「自成」（RO ru-zhongyong-cheng-zi-cheng，定域）。属新组合，由已有出处之「自」「待」构成。",
+   "alternatives": [
+    {
+     "name": "自成",
+     "why_not": "中庸「自成」带自我生成义，与 Web.Embodied.arises_given（具身关系项只经他者之给而生起）不合；RO 判为定域。"
+    },
+    {
+     "name": "自持",
+     "why_not": "带自制、矜持与自给自足之义。"
+    },
+    {
+     "name": "自養",
+     "why_not": "「养」是给者一方，自养说自给，不说自依。"
+    },
+    {
+     "name": "自賴",
+     "why_not": "无出处，且「赖」偏受益之依靠。"
+    }
+   ],
+   "coinage": true,
+   "confidence": "low",
+   "lean": [
+    "Becoming.Web.SelfBearing",
+    "Becoming.Web.SelfBearing.stands",
+    "Becoming.Web.SelfBearing.met_iff"
+   ]
+  },
+  {
+   "concept": "切口（Flow.Cut：没有已成关系离开该区域，其边界是关系中的切口）",
+   "name": "不交",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-HX01",
+     "quote": "天地不交而萬物不通也，上下不交而天下無邦也",
+     "layer": "传·彖传（战国至秦汉，成书年代有争议）",
+     "sense_in_context": "两域之间无关系往来，则无所通。",
+     "locator": "否彖",
+     "record_id": "HX-R010"
+    },
+    {
+     "source_id": "YD-JP12",
+     "quote": "天地不交，否；",
+     "layer": "传·象传（战国至秦汉，成书年代有争议）",
+     "sense_in_context": "不交即否塞。",
+     "locator": "否大象",
+     "record_id": "TP-H12-DX-R01"
+    }
+   ],
+   "fit": "「不交」说两域之间没有任何往来越过：Flow.Cut 定义为区域内事件与区域外事件之间没有已成关系；Flow.region_not_a_cut 证延续之族的区域不是切口，与「不交而萬物不通」「無邦」同向。",
+   "not_carried": "不交作「不交往」的社会义；否卦之「否」的吉凶评价；以天地上下为两个固定之位的宇宙论。",
+   "course": "先秦：否彖、否大象。宋：程颐「天地不交則不生萬物」（CY130-H12-R01）。作切断义的「隔」多见于后世注疏与佛典，未取作名。",
+   "alternatives": [
+    {
+     "name": "隔",
+     "why_not": "后起，且带隔阂（社会疏离）之义。"
+    },
+    {
+     "name": "塞",
+     "why_not": "塞是不通（结果），不是不交（关系之缺）。"
+    },
+    {
+     "name": "絕",
+     "why_not": "已用于依存之断裂。"
+    },
+    {
+     "name": "閉",
+     "why_not": "与已采用之名「护闭」冲突，且闭指封闭而非无关系越界。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Flow.Cut",
+    "Becoming.Flow.region_not_a_cut"
+   ]
+  },
+  {
+   "concept": "造成差别（Dependence.MakesDifference：but-for 检验——缺此一分，同一动作下依存得以保持；MakesDifferenceTogether、DifferenceOnlyTogether）",
+   "name": "有力",
+   "form": "复词",
+   "pre_qin": false,
+   "attestations": [
+    {
+     "source_id": "FO2-FQ",
+     "quote": "一切因皆有六義：一空有力不待緣、二空有力待緣、三空無力待緣、四有有力不待緣、五有有力待緣、六有無力待緣。",
+     "layer": "论·唐（法藏）",
+     "sense_in_context": "因之「有力／無力」：此因是否造成果之差别；与「待緣／不待緣」两维交叉。",
+     "locator": "因门六义",
+     "record_id": "FO2-FQ-R001"
+    },
+    {
+     "source_id": "FO2-FQ",
+     "quote": "以彼非是因義",
+     "layer": "论·唐（法藏）",
+     "sense_in_context": "「無力不待緣」不立为因：不造成差别、也不参与联合造成差别者不是因。",
+     "locator": "因门六义问答",
+     "record_id": "FO2-FQ-R002"
+    },
+    {
+     "source_id": "FO2-FQ",
+     "quote": "他有力、自無力，不據自體故非相即；力用交徹，故成相入。",
+     "layer": "论·唐（法藏）",
+     "sense_in_context": "有力与无力相对而说。",
+     "locator": "十玄门之相入",
+     "record_id": "FO2-FQ-R009"
+    }
+   ],
+   "fit": "「有力」＝此分之在造成结果之不同；「有力待緣」＝只与他分一同造成差别；「無力」＝不造成差别。分别对应 Dependence.MakesDifference、Dependence.MakesDifferenceTogether／DifferenceOnlyTogether 与 Dependence.Overdetermined.no_difference。「有力」对应名词时可配「無力」为其否定。",
+   "not_carried": "有力作强大、有势力（力量与支配义）；力作物理之力；华严「相即相入」的形上学。",
+   "course": "先秦无此专名；结构见墨经「無之必不然」（小故，MI1-R-SS-cause-small）与中论「先有何用緣」（FO1-R-M07，后秦译）。唐：华严宗以「有力／無力」判因（FO2-FQ-R001、R009）。",
+   "alternatives": [
+    {
+     "name": "有功",
+     "why_not": "功带功劳、功绩之社会评价。"
+    },
+    {
+     "name": "有用",
+     "why_not": "用指功用，与「体用」「无之以为用」冲突。"
+    },
+    {
+     "name": "必",
+     "why_not": "墨经「必」是必然、必要，是另一概念（小故／大故）。"
+    },
+    {
+     "name": "能",
+     "why_not": "能是能力，不是造成差别。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.Dependence.MakesDifference",
+    "Becoming.Dependence.makesDifference_iff",
+    "Becoming.Dependence.DifferenceOnlyTogether"
+   ]
+  },
+  {
+   "concept": "必要而不充分条件（墨辩「小故」：有之不必然，无之必不然；已在RO图 mojing-gu-xiao-da）",
+   "name": "小故",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "MI1-S-SS",
+     "quote": "小故，有之不必然，無之必不然，體也，若有端。",
+     "layer": "子·《墨经》经说上（战国后期墨家）",
+     "sense_in_context": "缺之则不成，具之未必成。",
+     "locator": "经说上",
+     "record_id": "MI1-R-SS-cause-small"
+    }
+   ],
+   "fit": "「無之必不然」＝必要（Web.Dependent：活动推出所需皆满；Web.coextinct：所依不活动则依者不活动）；「有之不必然」＝不充分：脊柱不由支撑导出活动，Sleeper.sleeper 见证始终受支撑而只在奇数步活动的关系项。",
+   "not_carried": "「故」作缘故、旧故（故旧）之义；论语「故舊無大故」之「大故」（重大事故）不涉。",
+   "course": "先秦：墨经经上「故，所得而後成也」、经说上小故大故（MI1-R-PAIR-cause）。关系主在C16；本簇只取其名，RO mojing-gu-xiao-da 判为定域。",
+   "alternatives": [
+    {
+     "name": "必要條件",
+     "why_not": "近代译名。"
+    },
+    {
+     "name": "所待",
+     "why_not": "已用于条件之位，不区分必要与充分。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.coextinct",
+    "Becoming.Sleeper.sleeper"
+   ]
+  },
+  {
+   "concept": "充分且必要条件（墨辩「大故」：有之必然，无之必不然；已在RO图 mojing-gu-xiao-da）",
+   "name": "大故",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "MI1-S-SS",
+     "quote": "大故，有之必然，無之必不然，若見之成見也。",
+     "layer": "子·《墨经》经说上（战国后期墨家）",
+     "sense_in_context": "具之则成，缺之则不成。",
+     "locator": "经说上",
+     "record_id": "MI1-R-SS-cause-great"
+    }
+   ],
+   "fit": "「有之必然」加「無之必不然」：两方向皆成。脊柱的依存只给必要方向；充分方向须另有前提（例如 Determined：一步之后的构形由前一构形决定），故大故在脊柱中是加前提的条件，不是依存本身。",
+   "not_carried": "论语「故舊無大故」的「大故」（重大过失、事故，RU1-LY-18-10-R01）；丧事之「大故」。",
+   "course": "先秦：墨经经说上（MI1-R-SS-cause-great，主在C16）。后世逻辑译名「充要条件」。",
+   "alternatives": [
+    {
+     "name": "充要條件",
+     "why_not": "近代译名。"
+    },
+    {
+     "name": "必然",
+     "why_not": "只说有之必然，失去无之必不然一向。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Determined",
+    "Becoming.Web.Dependent"
+   ]
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-tuan-qiankun-zi",
+   "record_ids": [
+    "HX-R001",
+    "HX-R002"
+   ],
+   "source_id": "YD-HX01",
+   "fragments": [
+    "大哉乾元，萬物資始，乃統天。",
+    "至哉坤元，萬物資生，乃順承天。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Embodied.arises_given",
+    "Becoming.SourceSeed.source_gives",
+    "Becoming.Web.generation_needs_replenishment",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "laws-of-one-step",
+    "life-as-condition-of-life",
+    "generation-is-replenishment",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：「資」是万物取之以始、以生者，始与生都经由他者之给，与 Web.Embodied.arises_given（具身关系项只经由另一个活动者之给而生起）相合；Web.generation_needs_replenishment 又说生起不止，补给就不止。定域在于彖传把所资者收为乾元、坤元两个总源，并以「統天」「順承天」赋予统属：脊柱不导出唯一总源，SourceSeed.source_gives 只表明表示中可以有一个不依待任何东西的源，Clearing.center_not_derived 表明中心不沿依存导出。取「资」之关系，不取「元」之独一与统属。",
+   "tradition": "易",
+   "work": "周易·乾坤彖传",
+   "locator": "乾彖、坤彖",
+   "layer": "传·彖传（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "资"
+   ],
+   "relational": "万物—乾元／坤元：取用以始、以生（资）",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "tuan-tai-pi-jiao",
+   "record_ids": [
+    "HX-R009",
+    "HX-R010",
+    "HX-R064",
+    "HX-R065"
+   ],
+   "source_id": "YD-HX01",
+   "fragments": [
+    "天地交而萬物通也，上下交而其志同也",
+    "天地不交而萬物不通也，上下不交而天下無邦也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Hexagram.opposed",
+    "Becoming.Hexagram.oppositions_glue_iff",
+    "Becoming.Flow.uncoupled_beyond_coupling",
+    "Becoming.Flow.system_whole_of_common",
+    "Becoming.Flow.unreached_within_system",
+    "Becoming.Withholding.withholding_absorbs",
+    "Becoming.Hexagram.meets",
+    "Becoming.Hexagram.meets_tai_pi",
+    "Becoming.Hexagram.pi_of_tai",
+    "Becoming.Hexagram.kept_alike",
+    "Becoming.Hexagram.tai_pi_runs",
+    "Becoming.Flow.Cut",
+    "Becoming.Flow.region_not_a_cut"
+   ],
+   "records": [
+    "place-relations-in-context",
+    "testing-within-registration",
+    "levels-of-closure",
+    "giving-that-waits-on-giving",
+    "hexagram-arrangements-and-laws"
+   ],
+   "reading": "AI读法：沿用RO定域之判。「交」是两域之间有关系往来，「通」是由此而达；「不交」是没有任何已成关系越过边界，即 Flow.Cut 所定义的切口，Flow.region_not_a_cut 证延续之族的区域不是切口（输送必越出它），与「不交而萬物不通」相合。此处增 Flow.Cut 与 Flow.region_not_a_cut，理由：「不交」正是切口的古名，RO 原列声明只到不耦合者在耦合之外。定域：泰否以天地上下为两个固定之位，并把「通」说成「交」的充分结果；脊柱只证无交则无经由此交之达，不证有交必通。",
+   "tradition": "易",
+   "work": "周易·泰否彖传",
+   "locator": "泰彖、否彖",
+   "layer": "传·彖传（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "交",
+    "不交"
+   ],
+   "relational": "天地／上下：交则通，不交则不通",
+   "gap": "",
+   "ro_passage": "tuan-tai-pi-jiao"
+  },
+  {
+   "id": "yi-xian-ganying-xiangyu",
+   "record_ids": [
+    "HX-R027"
+   ],
+   "source_id": "YD-HX01",
+   "fragments": [
+    "柔上而剛下，二氣感應以相與。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Interacts",
+    "Becoming.Web.interaction",
+    "Becoming.Mutualism.dependent",
+    "Becoming.Flow.MutuallyFed.mutuallyDependent"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "mutual-dependence-and-its-pace"
+   ],
+   "reading": "AI读法：「感應以相與」是两方互为应答而结成关系：Web.Interacts 定义两个事件经一条件交互（一方取用、一方依之于正需），且交互对称；Mutualism 见证给出两方各依对方而活动的网，Flow.MutuallyFed.mutuallyDependent 证互相给养即相互依存。相合在于关系由双方往来构成、不先有独立两物再相加。「柔上剛下」的具体卦位配置与「感」的天人感应义不取（感归C10）。",
+   "tradition": "易",
+   "work": "周易·咸彖传",
+   "locator": "咸彖",
+   "layer": "传·彖传（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "交",
+    "相待"
+   ],
+   "relational": "二气：感而应，应而相与",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "shuogua-tiandi-dingwei",
+   "record_ids": [
+    "OW-R014",
+    "WP-SG-C03-S01-R03",
+    "WP-SG-C03-S01-R04"
+   ],
+   "source_id": "YD-OW-SG",
+   "fragments": [
+    "天地定位，山澤通氣，雷風相薄，水火不相射。八卦相錯",
+    "故水火相逮，雷風不相悖，山澤通氣，然後能變化，既成萬物也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.complement",
+    "Becoming.Hexagram.opposed",
+    "Becoming.Hexagram.oppositions_glue_iff",
+    "Becoming.Hexagram.halves_no_free_frame",
+    "Becoming.Hexagram.xian_opposed",
+    "Becoming.Hexagram.heng_opposed",
+    "Becoming.Hexagram.weiJi_opposed",
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Hexagram.Trigram.complement3",
+    "Becoming.Hexagram.Trigram.opposite_stations",
+    "Becoming.Web.Embodied.arises_given"
+   ],
+   "records": [
+    "place-relations-in-context",
+    "what-a-commuting-law-keeps-apart",
+    "hexagram-arrangements-and-laws",
+    "laws-of-one-step",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：沿用RO相合之判：四对卦象两两相对而相互作用，相对之象在卦符号层上的补与对已在 Hexagram 声明中证明。此处增 Web.Embodied.arises_given，理由：「然後能變化，既成萬物」中可证的只到「生起需要另一活动者之给」，即变化与成物须有相对者之间的给予；不证「必此六者」相逮、通气才能变化，也不证「然後」之后必成万物。",
+   "tradition": "易",
+   "work": "说卦",
+   "locator": "说卦第三、第六章",
+   "layer": "传·说卦（战国至秦汉，年代有争议）",
+   "names_used": [
+    "交",
+    "待"
+   ],
+   "relational": "水火、雷风、山泽：相逮、不相悖、通气，然后能变化",
+   "gap": "",
+   "ro_passage": "shuogua-tiandi-dingwei"
+  },
+  {
+   "id": "xici-debo-weizun",
+   "record_ids": [
+    "WP-XCX-C04-S10-R01",
+    "WP-XCX-C04-S10-R02",
+    "WP-XCX-C04-S10-R03",
+    "WP-XCX-C04-S10-R04"
+   ],
+   "source_id": "DS03",
+   "fragments": [
+    "德薄而位尊，知小而谋大，力小而任重，鲜不及矣",
+    "言不胜其任也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.supported_iff_admits",
+    "Becoming.Web.Admits",
+    "Becoming.Flow.beyond_given_bounded",
+    "Becoming.Flow.takesAll_of_more",
+    "Becoming.Flow.Balances.consumption_ends_with_feeders"
+   ],
+   "records": [
+    "closing-needs-net-draw",
+    "where-a-rising-take-ends",
+    "consumption-ends-with-feeders"
+   ],
+   "reading": "AI读法：沿用RO相合之判。所担之需超过所能给之量，依存难以维持：Web.supported_iff_admits 说支撑恰是所需皆在可容之内，Flow.Balances.consumption_ends_with_feeders 说给者不再受支撑时取用终止。「德、知、力」与「位、谋、任」在此只读作所给与所需两端；「位尊」的等级义不取。",
+   "tradition": "易",
+   "work": "系辞下",
+   "locator": "系辞下第五章",
+   "layer": "传·系辞（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "足"
+   ],
+   "relational": "所能给（德、知、力）—所需（位、谋、任）：不足则不及",
+   "gap": "",
+   "ro_passage": "xici-debo-weizun"
+  },
+  {
+   "id": "zhuang-xiaoyao-ji-hou-fu-da",
+   "record_ids": [
+    "ZH1-C01-R-01",
+    "ZH1-C01-R-02"
+   ],
+   "source_id": "ZH1-S01",
+   "fragments": [
+    "且夫水之積也不厚，則負大舟也无力。",
+    "風之積也不厚，則其負大翼也无力"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Supported",
+    "Becoming.Web.Dependent",
+    "Becoming.Web.supported_iff_admits",
+    "Becoming.Web.Admits.mono"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "closing-needs-net-draw",
+    "ranking-under-readings"
+   ],
+   "reading": "AI读法：所积之水、风是大舟、大翼所依之条件，「積也不厚」即条件之量低于所需，「負…无力」即不得支撑。Web.Supported 正是「每个所需条件的量不低于其需」，Web.Dependent 说活动需要支撑；Web.Admits.mono 说可容者随量增而不减。相合：承载是被承者与所积之间的比较关系，不是承者独有之力。下文「而後乃今培風」的先后次第另见缺口二。",
+   "tradition": "道",
+   "work": "庄子·逍遥游",
+   "locator": "逍遥游首段",
+   "layer": "子·《庄子》内篇（战国）",
+   "names_used": [
+    "足",
+    "蓄",
+    "待"
+   ],
+   "relational": "大舟／大翼—所积之水／风：积不厚则负之无力",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhuang-xiaoyao-you-suo-dai",
+   "record_ids": [
+    "ZH1-C01-R-05"
+   ],
+   "source_id": "ZH1-S01",
+   "fragments": [
+    "此雖免乎行，猶有所待者也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Bearing",
+    "Becoming.Web.Embodied.active_of_bearing",
+    "Becoming.Web.consumed_continues_transformed"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "life-as-condition-of-life",
+    "living-on-and-descent",
+    "becoming-dependence-dynamics",
+    "substitution-preserves-consumption"
+   ],
+   "reading": "AI读法：列子免于步行而御风，只是把一种依存换成另一种：Web.Bearing 是依于一条件且需求为正，Web.Embodied.active_of_bearing 说依于具身关系项者只在其活动时活动——风止则行止。Web.consumed_continues_transformed 说失去条件而仍活动者，必是削弱或消解了对它的依存，即换了所待，而非无所待。相合；「善」「致福」的评价不取。",
+   "tradition": "道",
+   "work": "庄子·逍遥游",
+   "locator": "列子御风段",
+   "layer": "子·《庄子》内篇（战国）",
+   "names_used": [
+    "待",
+    "所待"
+   ],
+   "relational": "列子—风：免乎行而犹有所待",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhuang-xiaoyao-wu-suo-dai",
+   "record_ids": [
+    "ZH1-C01-R-06"
+   ],
+   "source_id": "ZH1-S01",
+   "fragments": [
+    "若夫乘天地之正，而御六氣之辯，以遊无窮者，彼且惡乎待哉？"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.fed_from_beyond",
+    "Becoming.EmbodiedSource.embodied_source",
+    "Becoming.Flow.region_not_a_cut"
+   ],
+   "records": [
+    "continuing-self-fed-from-beyond",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：「惡乎待」若读作没有任何所待，脊柱不支持：Flow.fed_from_beyond 证延续之族不能自某步起全无外给，Flow.region_not_a_cut 证其区域不是切口；EmbodiedSource.embodied_source 中「不依待任何东西」的源只是表示所容许的模型。若读作所乘所御是天地之正与六气之变本身，即所待者是整体的变化而非某一特定之物，则与脊柱相容：依于整体之变者不因某一部分之失而终止。故为定域：取后一读，「无待」作为一种不依存的理想境界不取（郭象「非待」之读见RO guoxiang-zhu-du-hua，相分）。",
+   "tradition": "道",
+   "work": "庄子·逍遥游",
+   "locator": "逍遥游「至人无己」段",
+   "layer": "子·《庄子》内篇（战国）",
+   "names_used": [
+    "待"
+   ],
+   "relational": "至人—天地之正、六气之辩：乘而御之，惡乎待",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhuang-qiwu-wangliang-dai",
+   "record_ids": [],
+   "source_id": "ZH1-S02",
+   "fragments": [
+    "吾有待而然者邪？吾所待，又有待而然者邪？"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.roles",
+    "Becoming.Web.active_along",
+    "Becoming.Web.coextinct",
+    "Becoming.Web.Bearing"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "reserve-defers-ending",
+    "living-on-and-descent"
+   ],
+   "reading": "AI读法：影之行止依于形，形又有所待：一个关系项在一处是依存者，在另一处是所待者。Web.roles 把形成与条件读作同一类关系项，正是「所待又有待」；Web.active_along 证在 Dependent 下活动沿依存链传递，Web.coextinct 证链上任一具身环节不活动，依于它的整条链在该步都不活动。相合；影的自问「惡識所以然」所含的不可知论另属C08。",
+   "tradition": "道",
+   "work": "庄子·齐物论",
+   "locator": "齐物论 罔两问景",
+   "layer": "子·《庄子》内篇（战国）",
+   "names_used": [
+    "待",
+    "所待"
+   ],
+   "relational": "景—形—形之所待：有待而然，所待又有待",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhuang-tianzifang-you-dai",
+   "record_ids": [],
+   "source_id": "ZH1-S21",
+   "fragments": [
+    "有目有趾者，待是而後成功，是出則存，是入則亡。萬物亦然，有待也而死，有待也而生。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Embodied.active_of_bearing",
+    "Becoming.Web.coextinct",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "life-as-condition-of-life",
+    "reserve-defers-ending",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：有目有趾者待日之出入而成其功：所待者在则存，所待者入则亡，生与死都是同一依存的两种读法。Web.Embodied.active_of_bearing 说依于具身关系项者只在其活动时活动；Web.coextinct 说所待者不活动则依者不活动；Web.change_readings 说生起与止息、形成与消解是一个变化的不同读法。相合；以日为唯一所待是本段之喻，脊柱不限所待之数。",
+   "tradition": "道",
+   "work": "庄子·田子方",
+   "locator": "田子方 孔子颜渊段",
+   "layer": "子·《庄子》外篇（战国至秦汉，篇章年代有争议）",
+   "names_used": [
+    "待",
+    "隨滅"
+   ],
+   "relational": "有目有趾者—日（是）：是出则存，是入则亡",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "xunzi-fuguo-bu-xiang-dai",
+   "record_ids": [
+    "RU2-R0259"
+   ],
+   "source_id": "RU2-S-XZ10",
+   "fragments": [
+    "故百技所成，所以養一人也。而能不能兼技，人不能兼官。",
+    "離居不相待則窮，群居而無分則爭；"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.MutuallyDependent",
+    "Becoming.Flow.MutuallyFed.mutuallyDependent",
+    "Becoming.Flow.WithinFeeding",
+    "Becoming.Flow.beyond_gives_nothing"
+   ],
+   "records": [
+    "mutual-dependence-and-its-pace",
+    "feeding-closure"
+   ],
+   "reading": "AI读法：一人之养由百技所成，而一人不能兼技：各人的延续落在他人所为的给养闭包之内，即相待。Flow.beyond_gives_nothing 证给养闭包之外的形成不给闭包成员所需之条件任何东西，故「離居不相待則窮」：离开相互给养的闭包，所需无所出。Flow.MutuallyFed.mutuallyDependent 证互相给养即相互依存。相合；「群居而無分則爭」涉分界与争，归C04。",
+   "tradition": "儒",
+   "work": "荀子·富国",
+   "locator": "富国篇",
+   "layer": "子·《荀子》（战国末）",
+   "names_used": [
+    "相待",
+    "资"
+   ],
+   "relational": "一人—百技：所以养一人；离居不相待则穷",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "ru-xunzi-qun-fen-yi",
+   "record_ids": [
+    "RU2-R0092",
+    "RU2-R0093"
+   ],
+   "source_id": "RU2-S-XZ09",
+   "fragments": [
+    "故人生不能无群，群而无分则争，争则乱，乱则离，离则弱，弱则不能胜物；"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.WithinJoint",
+    "Becoming.Flow.level_kept",
+    "Becoming.Exceeding.own_not_joint",
+    "Becoming.Flow.joint_excess_ends",
+    "Becoming.Excluding.three_courses"
+   ],
+   "records": [
+    "own-count-misses-joint-excess",
+    "what-taking-all-excludes",
+    "relative-position-is-zero-sum"
+   ],
+   "reading": "AI读法：沿用RO定域之判（同篇同段：「人何以能群？曰：分」）。「離則弱」：分散之后，共同取用的范围与联合的力量都失去；Flow.WithinJoint、Flow.joint_excess_ends 说联合取用须在所给之内，否则不能持续。定域：「胜物」把与物的关系读成胜负，脊柱不取；乱、离、弱的链条在文本中是经验断言，脊柱只证失去给养闭包后所需无所出。",
+   "tradition": "儒",
+   "work": "荀子·王制",
+   "locator": "王制篇",
+   "layer": "子·《荀子》（战国末）",
+   "names_used": [
+    "相待"
+   ],
+   "relational": "群—分—和；争→乱→离→弱",
+   "gap": "",
+   "ro_passage": "ru-xunzi-qun-fen-yi"
+  },
+  {
+   "id": "xici-fei-suo-ju",
+   "record_ids": [
+    "WP-XCX-C04-S05-R02"
+   ],
+   "source_id": "DS03",
+   "fragments": [
+    "非所据而据焉，身必危；"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Supported",
+    "Becoming.Web.consumed_ends_when_fixed_at"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：所据者不能承其所需，而仍依之，则不得支撑：Web.consumed_ends_when_fixed_at 证依存不变而条件低于先前之需时，只在受支撑时活动者不活动。「非所据」是所依之条件的量与所需不相称，不是所依者本身不好。相合；「必」在脊柱中有前提：依存不变、条件不复。",
+   "tradition": "易",
+   "work": "系辞下",
+   "locator": "系辞下第五章 困六三",
+   "layer": "传·系辞（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "待",
+    "足"
+   ],
+   "relational": "身—所据：非所据而据，身必危",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "xici-kanglong-wu-fu",
+   "record_ids": [
+    "WP-XCS-C08-S08-R01"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "贵而无位，高而无民，贤人在下位而无辅，是以动而有悔也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Supported",
+    "Becoming.Web.Bearing",
+    "Becoming.Web.UnderminingOn"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "life-as-condition-of-life",
+    "living-on-and-descent",
+    "becoming-stepwise-reading"
+   ],
+   "reading": "AI读法：高处者无所承，下者无所辅，此时之动是在无支撑处取用：Web.UnderminingOn 定义取用使条件跌至依存之需以下即为削弱，Web.Supported 要求所需皆满。相合在于「高」的维持依于下承；「贵、贤、位」的等级与名分义不取（归C13、C17）。",
+   "tradition": "易",
+   "work": "系辞上",
+   "locator": "系辞上第八章 乾上九",
+   "layer": "传·系辞（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "足",
+    "待"
+   ],
+   "relational": "高者—民、辅：无所承则动而有悔",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhongyong-qi-ren-cun-wang",
+   "record_ids": [
+    "RU1-ZY-20-R01",
+    "RU1-ZY-20-R02"
+   ],
+   "source_id": "RU1-S-ZY",
+   "fragments": [
+    "文武之政，布在方策。其人存，則其政舉；其人亡，則其政息。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.coextinct",
+    "Becoming.Web.Embodied.active_of_bearing",
+    "Becoming.Web.ByPassing.ends_within",
+    "Becoming.Web.Carries.coextinct_lasts"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "reserve-defers-ending",
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：政之举依于其人，其人亡则政息：Web.coextinct。「布在方策」的记载不能代替行它的人：Web.ByPassing.ends_within 证一个模式只经由传递而延续，传递停止则在一个跨度内终止。Web.Carries.coextinct_lasts 又说有储备者在所依者亡后可延迟、不可逃脱。相合；「人存政举」的充分方向（有人则举）不证，只证必要方向。",
+   "tradition": "儒",
+   "work": "中庸",
+   "locator": "中庸第二十章 哀公问政",
+   "layer": "经·《礼记·中庸》（战国至秦汉，年代有争议）",
+   "names_used": [
+    "隨滅",
+    "待"
+   ],
+   "relational": "其政—其人：人存则举，人亡则息",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "kongshu-genzhu",
+   "record_ids": [
+    "YCM130-H12-K-04-R01"
+   ],
+   "source_id": "YWH-H12",
+   "fragments": [
+    "猶若樹之枝幹生乎根株，根株毀，則枝條不茂。若枝幹已枯死，其根株雖未全死，僅有微生，將死不久。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.coextinct",
+    "Becoming.Web.Carries.coextinct_lasts",
+    "Becoming.Web.Carries.lasts",
+    "Becoming.Mutualism.dependent"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：孔疏把乾坤与易读成根与枝的两向依存：根毁则枝不茂（共灭），枝枯则根「僅有微生，將死不久」——这正是 Web.Carries.coextinct_lasts：所依者终止后，依之于正需而有储备者，在任一段中活动不多于其储备，不能延续到任意晚。两向互依的形状见 Mutualism 见证。相合；但「互依则同存同亡」的一般律脊柱尚无（见缺口一）。",
+   "tradition": "易",
+   "work": "周易正义（孔颖达疏）",
+   "locator": "系辞上「乾坤其易之缊」疏",
+   "layer": "疏·唐（孔颖达）",
+   "names_used": [
+    "隨滅",
+    "蓄",
+    "相待"
+   ],
+   "relational": "根株（乾坤）—枝干（易）：根毁枝衰，枝枯根亦将死",
+   "gap": "互依的两个具身关系项同活动：见notes缺口一",
+   "ro_passage": ""
+  },
+  {
+   "id": "xici-qiankun-hui",
+   "record_ids": [
+    "XC-R004"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "乾坤毁，则无以见易，易不可见，则乾坤或几乎息矣"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Law.alike_iff_sameFuture",
+    "Becoming.Twins.naming_not_identifiesAlike",
+    "Becoming.Alike.tests",
+    "Becoming.Hexagram.complement_moves",
+    "Becoming.Hexagram.waxWane_apart"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "what-a-commuting-law-keeps-apart",
+    "process-and-frame-as-readings"
+   ],
+   "reading": "AI读法：沿用RO相合之判。易（变化）在乾坤成列之中显现，乾坤毁则无以见变化，变化不见则乾坤几乎息：两者互相以对方为显现与延续的条件。孔疏的根枝之读（kongshu-genzhu）把这一互依说得更细。",
+   "tradition": "易",
+   "work": "系辞上",
+   "locator": "系辞上第十二章",
+   "layer": "传·系辞（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "相待",
+    "隨滅"
+   ],
+   "relational": "乾坤—易：成列而立，毁则无以见，不见则几乎息",
+   "gap": "",
+   "ro_passage": "xici-qiankun-hui"
+  },
+  {
+   "id": "bo-daxiang-hou-xia",
+   "record_ids": [
+    "TP-H23-DX-R01",
+    "TP-H23-DX-R02",
+    "TP-H23-DX-R03"
+   ],
+   "source_id": "YD-JP23",
+   "fragments": [
+    "山附地上，剝；上以厚下，安宅。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Supported",
+    "Becoming.Web.LivesOn",
+    "Becoming.Flow.restores",
+    "Becoming.Flow.Balances.consumption_ends_with_feeders"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "living-on-and-descent",
+    "supported-renewal-recovery",
+    "consumption-ends-with-feeders"
+   ],
+   "reading": "AI读法：山附于地，上依于下；「厚下」是补给所依之条件，「安宅」是依者因而得支撑。Flow.restores 证净给入超过取用时条件恢复到所需，Flow.Balances.consumption_ends_with_feeders 证给者不受支撑时依之取用者终止，正是剥之所以为剥。相合；「上」作君位的政治义不取，只取上下之依存方向。",
+   "tradition": "易",
+   "work": "剥卦大象传",
+   "locator": "剥 大象",
+   "layer": "传·象传（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "待",
+    "足"
+   ],
+   "relational": "山（上）—地（下）：附于下，厚下乃安",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "cy-yi-xiahou",
+   "record_ids": [
+    "CY-R014"
+   ],
+   "source_id": "YD-CY3",
+   "fragments": [
+    "下厚則上安故益下為益"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.WithinFeeding",
+    "Becoming.Flow.beyond_gives_nothing",
+    "Becoming.Flow.Balances.consumption_ends_with_feeders",
+    "Becoming.Clearing.within_closure_yet_loses",
+    "Becoming.Hexagram.waxWane_returns"
+   ],
+   "records": [
+    "feeding-closure",
+    "consumption-ends-with-feeders",
+    "closure-verdict-meets-axiom"
+   ],
+   "reading": "AI读法：沿用RO相合之判。程颐以「下厚則上安」说益：给予所依之条件，依者因而安；Flow.WithinFeeding、Flow.beyond_gives_nothing 说给养闭包内外之别。与剥大象「上以厚下」同构（bo-daxiang-hou-xia）。",
+   "tradition": "易",
+   "work": "伊川易传",
+   "locator": "益卦彖传注",
+   "layer": "注·北宋（程颐）",
+   "names_used": [
+    "足"
+   ],
+   "relational": "上—下：损上益下，下厚则上安",
+   "gap": "",
+   "ro_passage": "cy-yi-xiahou"
+  },
+  {
+   "id": "li-tuan-li-hu-tu",
+   "record_ids": [
+    "TP-H30-T-R01",
+    "TP-H30-T-R02",
+    "TP-H30-T-R03"
+   ],
+   "source_id": "YD-JP30",
+   "fragments": [
+    "離，麗也；日月麗乎天，百穀草木麗乎土，"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.LivesOn",
+    "Becoming.Web.Bearing",
+    "Becoming.Web.Embodied.active_of_bearing"
+   ],
+   "records": [
+    "living-on-and-descent",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：「麗」是附着而依之：百穀草木依土而生，取用于土且依之于正需，即 Web.LivesOn；Web.Embodied.active_of_bearing 说依于具身条件者只在其活动时活动。相合。「日月麗乎天」是天象之喻，脊柱不取其宇宙论；「麗」之名因与「離」双关、限于易学，未选为通名。",
+   "tradition": "易",
+   "work": "离卦彖传",
+   "locator": "离 彖",
+   "layer": "传·彖传（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "待",
+    "食"
+   ],
+   "relational": "日月—天、百穀草木—土：附丽而依",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "xugua-xian-bi-you-suo-li",
+   "record_ids": [
+    "WP-XG-C01-S29-R03"
+   ],
+   "source_id": "YD-OW-XG",
+   "fragments": [
+    "陷必有所麗，故受之以離 ；離者麗也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.fed_from_beyond",
+    "Becoming.Web.Embodied.arises_given",
+    "Becoming.SourceSeed.source_gives"
+   ],
+   "records": [
+    "continuing-self-fed-from-beyond",
+    "laws-of-one-step",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：「陷必有所麗」若读作凡物必有所依，脊柱只证到延续之族：Flow.fed_from_beyond 证延续之族不能全无外给；SourceSeed.source_gives 则表明表示中可以有不依任何东西的源。故定域：对延续者成立，对任一关系项不成立。序卦以卦序串联的「故受之以」推理不取。",
+   "tradition": "易",
+   "work": "序卦",
+   "locator": "序卦上篇 坎离",
+   "layer": "传·序卦（战国末至汉初，年代有争议）",
+   "names_used": [
+    "所待"
+   ],
+   "relational": "陷者—所丽：陷必有所丽",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "xugua-yang",
+   "record_ids": [
+    "WP-XG-C01-S04-R03",
+    "WP-XG-C01-S27-R02"
+   ],
+   "source_id": "YD-OW-XG",
+   "fragments": [
+    "物穉不可不養也",
+    "不養則不可動"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.LivesOn",
+    "Becoming.Web.consumed_ends_when_fixed",
+    "Becoming.Web.generation_needs_replenishment"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "living-on-and-descent",
+    "becoming-dependence-dynamics",
+    "reserve-defers-ending",
+    "generation-is-replenishment"
+   ],
+   "reading": "AI读法：初生者依于所养，不得养则不能动：Web.Dependent 说活动需要支撑，Web.consumed_ends_when_fixed 证依存不变而失去不复时不再活动，Web.generation_needs_replenishment 证生起不止则补给不止。相合；以此解释卦序（需、大过）的连接不取。",
+   "tradition": "易",
+   "work": "序卦",
+   "locator": "序卦上篇 需、大过",
+   "layer": "传·序卦（战国末至汉初，年代有争议）",
+   "names_used": [
+    "食",
+    "足"
+   ],
+   "relational": "物穉—养：不可不养；不养则不可动",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "xugua-wu-xu-ran-hou-ke-yang",
+   "record_ids": [
+    "WP-XG-C01-S26-R03"
+   ],
+   "source_id": "YD-OW-XG",
+   "fragments": [
+    "物畜然後可養"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Stock.feasible_iff_covered",
+    "Becoming.Stock.covered_iff_prefix",
+    "Becoming.Web.Carries",
+    "Becoming.Flow.carries_of_held"
+   ],
+   "records": [
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：先有所蓄，然后可以取之以养：Stock.feasible_iff_covered 证一段取用过程可执行恰在其被存量覆盖之处，Stock.covered_iff_prefix 说覆盖须在每一前缀成立；Flow.carries_of_held 证所持而未补之条件在不受支撑时承载持有者，即储备。相合；储备只延迟终止，不能逃脱（Web.Carries.lasts），文本未说及这一界限。",
+   "tradition": "易",
+   "work": "序卦",
+   "locator": "序卦上篇 大畜、颐",
+   "layer": "传·序卦（战国末至汉初，年代有争议）",
+   "names_used": [
+    "蓄",
+    "食"
+   ],
+   "relational": "物畜—可养：畜然后可养",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "song-shi-jiu-de",
+   "record_ids": [
+    "TP-H06-X3-R01"
+   ],
+   "source_id": "YD-JP06",
+   "fragments": [
+    "食舊德，從上吉也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.LivesOn",
+    "Becoming.Web.Carries.lasts",
+    "Becoming.Web.Carries"
+   ],
+   "records": [
+    "living-on-and-descent",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：「食舊德」是以过去所积为生：取用一个不再补给的储备。Web.Carries.lasts 证自某步起不受支撑者，其活动次数不超过该步之储备：食旧可以延续，但有尽。定域：象传以「從上吉」许之，脊柱不给吉凶，只给延续的界限；「德」作道德之义不取，读作所积之资。",
+   "tradition": "易",
+   "work": "讼卦小象传",
+   "locator": "讼 六三 小象",
+   "layer": "传·象传（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "食",
+    "蓄"
+   ],
+   "relational": "六三—旧德：食旧德",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "xici-you-qin-ke-jiu",
+   "record_ids": [
+    "WP-XCS-C01-S04-R05"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "有亲则可久，"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.MutuallyFed.mutuallyDependent",
+    "Becoming.Clearing.shares_not_mutual",
+    "Becoming.Flow.carries_of_held"
+   ],
+   "records": [
+    "mutual-dependence-and-its-pace",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：「有亲」读作有相互给养之联：Flow.MutuallyFed.mutuallyDependent 证互相给养即相互依存，而 Clearing.shares_not_mutual 证共用条件不等于相互依存。定域：「可久」脊柱不由联结本身导出，久还要求给养在所需之上持续；文本「可」字留有余地，与此相容。",
+   "tradition": "易",
+   "work": "系辞上",
+   "locator": "系辞上第一章",
+   "layer": "传·系辞（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "相待"
+   ],
+   "relational": "亲—久：有亲则可久",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "xici-tian-zhu-shun",
+   "record_ids": [
+    "WP-XCS-C12-S01-R02",
+    "WP-XCS-C12-S01-R04"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "天之所助者，顺也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Flow.Balances.supported_iff_within_margin",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "closing-needs-net-draw",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：若把「天」读作整体之给、「顺」读作在所给之内取用，则「天之所助者顺也」与 Flow.Balances.supported_iff_within_margin（受支撑恰在余量之内）相容。定域：系辞以天为施助者、以「吉无不利」为保证，脊柱没有外在的施助者，也不给任何保证；Clearing.center_not_derived 表明中心不沿依存导出。",
+   "tradition": "易",
+   "work": "系辞上",
+   "locator": "系辞上第十二章 大有上九",
+   "layer": "传·系辞（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "足"
+   ],
+   "relational": "天—顺者：所助",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "xici-jin-er-bu-xiang-de",
+   "record_ids": [
+    "WP-XCX-C09-S04-R05"
+   ],
+   "source_id": "DS03",
+   "fragments": [
+    "近而不相得，则凶或害之，悔且吝。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Interacts",
+    "Becoming.Shared.connection_by_living_use",
+    "Becoming.Web.UnderminingOn"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "becoming-stepwise-reading"
+   ],
+   "reading": "AI读法：邻近不等于相得：Shared.connection_by_living_use 证两个依者只在条件之用维持其支撑时经此相连，当唯一之用是削弱时则不相连；Web.UnderminingOn 定义削弱的取用。「近」是共处，「相得」是经用而相成，「害之」是削弱。相合；悔吝的占断义不取。",
+   "tradition": "易",
+   "work": "系辞下",
+   "locator": "系辞下第十二章",
+   "layer": "传·系辞（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "交"
+   ],
+   "relational": "近者之间：不相得则害",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "sui-chu-men-jiao",
+   "record_ids": [
+    "JG2-H17-L1-R02"
+   ],
+   "source_id": "YD-JG17",
+   "fragments": [
+    "出門交有功。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Interacts",
+    "Becoming.Web.Idle.not_interacts",
+    "Becoming.Web.inert_connects"
+   ],
+   "records": [
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：出而相交才有所成：Web.Idle.not_interacts 证无人取用或无人依之的条件上没有交互；Web.inert_connects 证添入一个惰性条件只经共处相连，经交互的联结不变。相合在于关系由往来构成；「有功」的评价义不取，只读作交而有所成。",
+   "tradition": "易",
+   "work": "周易·随",
+   "locator": "随 初九",
+   "layer": "经·周易卦爻辞（西周）",
+   "names_used": [
+    "交"
+   ],
+   "relational": "出门者—所交：交而有功",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "guimei-you-dai-er-xing",
+   "record_ids": [
+    "TP-H54-X4-R01"
+   ],
+   "source_id": "YD-JP54",
+   "fragments": [
+    "愆期之志，有待而行也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Embodied.active_of_bearing"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：行依于所待之到来：Web.Embodied.active_of_bearing 说依于具身条件者只在其活动时活动，故所待未至则不行。相合；「待而後行」的时间先后，脊柱目前只给同一步内的必要条件，不给「所待先于依者初次活动」的一般律（见缺口二）。",
+   "tradition": "易",
+   "work": "归妹小象传",
+   "locator": "归妹 九四 小象",
+   "layer": "传·象传（战国至秦汉，成书年代有争议）",
+   "names_used": [
+    "待"
+   ],
+   "relational": "行—所待：有待而行",
+   "gap": "依存决定生起先后：见notes缺口二",
+   "ro_passage": ""
+  },
+  {
+   "id": "xugua-qiong-bi-guai",
+   "record_ids": [
+    "WP-XG-C02-S08-R03",
+    "WP-XG-C02-S09-R03"
+   ],
+   "source_id": "YD-OW-XG",
+   "fragments": [
+    "家道窮必乖，故受之以睽 ；睽者乖也。",
+    "乖必有難，故受之以蹇 ；蹇者難也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Broken",
+    "Becoming.Crossing.loss_does_not_decide"
+   ],
+   "records": [
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：穷而乖、乖而有难，是一条依存断裂后的去向。Crossing.loss_does_not_decide 证同一断裂之后，终止、转化、恢复三种去向都可出现，断裂不决定下一构形。定域：序卦之「必」在脊柱中不成立，只是诸去向之一；以卦序连接的推理不取。",
+   "tradition": "易",
+   "work": "序卦",
+   "locator": "序卦下篇 家人、睽、蹇",
+   "layer": "传·序卦（战国末至汉初，年代有争议）",
+   "names_used": [
+    "絕"
+   ],
+   "relational": "家道穷→乖→难",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "lao-02-you-wu-xiang-sheng",
+   "record_ids": [
+    "LE-R006"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "故有无相生，难易相成"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Negation.each_through_other",
+    "Becoming.Listed.coming_iff_ceasing",
+    "Becoming.Web.unceasing_iff_bounded",
+    "Becoming.World.arising_iff_ceasing",
+    "Becoming.ceasing_needs_arising"
+   ],
+   "records": [
+    "the-split-that-makes-sense",
+    "bounded-census-keeps-pace",
+    "ceasing-needs-arising"
+   ],
+   "reading": "AI读法：沿用RO定域之判。相生、相成在脊柱中可证者是两读互经对方而成立（Negation.each_through_other）与生起、止息的同步（World.arising_iff_ceasing）；把「有无」读作两个实体互相产生，脊柱不取。",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第二章",
+   "layer": "经·《老子》（战国；传世王弼本系统）",
+   "names_used": [
+    "相待"
+   ],
+   "relational": "有—无、难—易：相生相成",
+   "gap": "",
+   "ro_passage": "lao-02-you-wu-xiang-sheng"
+  },
+  {
+   "id": "lao-27-shi-zi",
+   "record_ids": [
+    "LE-R036"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "故善人者，不善人之师；不善人者，善人之资。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.LivesOn",
+    "Becoming.Web.Interacts",
+    "Becoming.Omitted.loses_own"
+   ],
+   "records": [
+    "living-on-and-descent",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：师与资是同一关系中两个方向的取用：一方取另一方为所资。下文「不贵其师，不爱其资」之失，与 Omitted.loses_own 同构：区域略去自己所需的条件，自己的取用就削弱自己，下一步不得支撑。相合；「善、不善」的评价义不取，只取两者互为所资。",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第二十七章",
+   "layer": "经·《老子》（战国；传世王弼本系统）",
+   "names_used": [
+    "资"
+   ],
+   "relational": "善人—不善人：师与资",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "lao-11-dang-qi-wu",
+   "record_ids": [
+    "LE-R020",
+    "LE-R021"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "当其无，有车之用",
+    "故有之以为利，无之以为用"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Admits",
+    "Becoming.Web.supported_iff_admits",
+    "Becoming.Flow.Balances.supported_iff_within_margin",
+    "Becoming.Web.Admits.mono",
+    "Becoming.Restoring.Inflow.widens"
+   ],
+   "records": [
+    "closing-needs-net-draw",
+    "significance-retained-within-margin",
+    "four-cases-of-a-part"
+   ],
+   "reading": "AI读法：沿用RO定域之判：「无」读作所容之余量（Web.Admits、Flow.Balances.supported_iff_within_margin），器之用依于其余量。把「无」读作独立的本体，脊柱不取。",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第十一章",
+   "layer": "经·《老子》（战国；传世王弼本系统）",
+   "names_used": [
+    "足"
+   ],
+   "relational": "有—无：有以为利，无以为用",
+   "gap": "",
+   "ro_passage": "lao-11-dang-qi-wu"
+  },
+  {
+   "id": "lao-42-chong-qi-yi-wei-he",
+   "record_ids": [
+    "LL-R005",
+    "LL-R006"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "万物负阴而抱阳，冲气以为和"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.restores",
+    "Becoming.Flow.excess_lowers",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Flow.settles",
+    "Becoming.Flow.stays_between_at",
+    "Becoming.Regulation.Overshooting.never_at"
+   ],
+   "records": [
+    "supported-renewal-recovery",
+    "own-count-misses-joint-excess",
+    "whether-a-loop-closes-a-difference",
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：沿用RO定域之判：「冲气以为和」读作在两端之间的回复与调节（Flow.restores、LoopReturn.closes_within）。RO原列 Widening.closes_within、Widening.closing_needs_less 已于R22改名为 LoopReturn.closes_within、LoopReturn.closing_needs_less，此处用现名，内容不变。负阴抱阳作为万物的普遍构成，脊柱不取。",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第四十二章",
+   "layer": "经·《老子》（战国；传世王弼本系统）",
+   "names_used": [
+    "交"
+   ],
+   "relational": "万物—阴阳：负而抱，冲气以为和",
+   "gap": "",
+   "ro_passage": "lao-42-chong-qi-yi-wei-he"
+  },
+  {
+   "id": "lao-58-qi-wu-zheng",
+   "record_ids": [
+    "LL-R027",
+    "LL-R028"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "祸兮福之所倚，福兮祸之所伏",
+    "孰知其极？其无正"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Diagonal.negation_returns",
+    "Becoming.Negation.two_states",
+    "Becoming.Negation.each_through_other",
+    "Becoming.Diagonal.revision_never_rests",
+    "Becoming.Undecided.monotone_run_rests"
+   ],
+   "records": [
+    "registration-within-what-it-registers",
+    "the-split-that-makes-sense",
+    "revision-with-an-undecided-value"
+   ],
+   "reading": "AI读法：沿用RO定域之判。「所倚」「所伏」是同一进程的两读互为所待，Negation.each_through_other；「其无正」对应修订永不止息（Diagonal.revision_never_rests）。祸福的价值分配不取。",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第五十八章",
+   "layer": "经·《老子》（战国；传世王弼本系统）",
+   "names_used": [
+    "所待"
+   ],
+   "relational": "祸—福：所倚、所伏",
+   "gap": "",
+   "ro_passage": "lao-58-qi-wu-zheng"
+  },
+  {
+   "id": "lao-34-shi-zhi-er-sheng",
+   "record_ids": [
+    "LE-R043"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "万物恃之而生而不辞"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.LivesOn",
+    "Becoming.Flow.mutuallyDependent_of_common",
+    "Becoming.Flow.system_whole_of_common",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "living-on-and-descent",
+    "mutual-dependence-and-its-pace",
+    "axiom-decomposition",
+    "levels-of-closure",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：万物以道为生：若道读作每个形成都依之且与之交换的共同条件，则 Flow.mutuallyDependent_of_common 证整个流相互依存，Flow.system_whole_of_common 证系统即整体。定域：脊柱中没有一个不在流内而施予万物的道，共同条件也是关系项之一；Clearing.center_not_derived 表明中心不沿依存导出。「不辞」「不名有」的德性评价不取。",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第三十四章",
+   "layer": "经·《老子》（战国；传世王弼本系统）",
+   "names_used": [
+    "食",
+    "相待"
+   ],
+   "relational": "万物—大道：恃之而生",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "lao-51-sheng-xu",
+   "record_ids": [
+    "LL-R017",
+    "LL-R018"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "道生之，德畜之，物形之，势成之。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Embodied.arises_given",
+    "Becoming.Web.Carries",
+    "Becoming.SourceSeed.source_gives",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "laws-of-one-step",
+    "life-as-condition-of-life",
+    "reserve-defers-ending",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：生、畜、形、成是一物所待的几种不同角色：生起经他者之给（Web.Embodied.arises_given），维持经所蓄（Web.Carries）。定域：道、德被立为总源，脊柱只给出源的模型见证（SourceSeed.source_gives），不导出唯一总源；「尊道贵德」的尊贵次序不取。同章「生而不有，为而不恃」见RO lao-51-sheng-er-bu-you（相合），与本条同章异句。",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第五十一章",
+   "layer": "经·《老子》（战国；传世王弼本系统）",
+   "names_used": [
+    "所待",
+    "蓄"
+   ],
+   "relational": "万物—道、德、物、势：生之、畜之、形之、成之",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "lao-67-ci-gu-neng-yong",
+   "record_ids": [
+    "LL-R032",
+    "LL-R035",
+    "LL-R036"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "慈故能勇，",
+    "今舍慈且勇，舍俭且广，舍后且先，死矣！"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.consumed_ends_when_fixed_at",
+    "Becoming.Web.coextinct"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "becoming-dependence-dynamics",
+    "life-as-condition-of-life",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：勇依于慈，广依于俭，先依于后：去其所待而保其依者，依者不能维持。Web.consumed_ends_when_fixed_at 证依存不变而条件低于所需时，只在受支撑时活动者不活动。相合；三宝的德目内容不取，只取「舍所待而存依者」的结构。",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第六十七章",
+   "layer": "经·《老子》（战国；传世王弼本系统）",
+   "names_used": [
+    "待",
+    "隨滅"
+   ],
+   "relational": "勇—慈、广—俭、先—后：舍其所待则死",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "lao-36-yu-yuan",
+   "record_ids": [
+    "LAO2-C36-R07"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "鱼不可脱于渊，"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.LivesOn",
+    "Becoming.Web.Embodied.active_of_bearing",
+    "Becoming.Web.coextinct"
+   ],
+   "records": [
+    "living-on-and-descent",
+    "life-as-condition-of-life",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：鱼以渊为生，离之则不得支撑：Web.LivesOn、Web.Embodied.active_of_bearing。相合。同章「将欲歙之，必固张之」与「国之利器不可以示人」见RO lao-36-jiang-yu-xi-zhi（相分），本条只取鱼渊之依存。",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第三十六章",
+   "layer": "经·《老子》（战国；传世王弼本系统）",
+   "names_used": [
+    "食"
+   ],
+   "relational": "鱼—渊：不可脱",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "lao-20-gui-shi-mu",
+   "record_ids": [
+    "LAO2-C20-R06"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "我独异于人，而贵食母。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.LivesOn",
+    "Becoming.Web.sustenance",
+    "Becoming.Web.lived_on_reaches"
+   ],
+   "records": [
+    "living-on-and-descent"
+   ],
+   "reading": "AI读法：「食母」是以所从出者为生：Web.LivesOn。Web.lived_on_reaches 证在中性传递（N_rel，一个关于评价的前提）下，看重一个关系项的任何事件，会达到以它为生的每个活着的事件；「贵食母」所看重的正是这一取用关系。相合，前提明说。",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第二十章",
+   "layer": "经·《老子》（战国；传世王弼本系统）",
+   "names_used": [
+    "食"
+   ],
+   "relational": "我—母：贵食母",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "wangbi-chong-ben-xi-mo",
+   "record_ids": [
+    "LC2-WB-C52-R01",
+    "LC2-WB-C58-R02"
+   ],
+   "source_id": "DS01",
+   "fragments": [
+    "母，本也，子，末也。得本以知末，不舍本以逐末也。",
+    "此皆崇本以息末，不攻而使复之也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.active_along",
+    "Becoming.Web.coextinct",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "reserve-defers-ending",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：本是所待、末是依者：活动沿依存链传递（Web.active_along），所待者不活动则依者不活动（Web.coextinct），故「崇本以息末」是经由条件而非直接对依者施力。定域：王弼以本末为单一根本与枝末的等级，脊柱中依存多向且无导出的中心（Clearing.center_not_derived）；「息末」的价值取向不取。",
+   "tradition": "道",
+   "work": "老子王弼注",
+   "locator": "第五十二、五十八章注",
+   "layer": "注·魏晋（王弼）",
+   "names_used": [
+    "所待"
+   ],
+   "relational": "母（本）—子（末）：守母存子，崇本息末",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "ru-daxue-ben-mo",
+   "record_ids": [
+    "RU1-DX-01-R04",
+    "RU1-DX-01-R05",
+    "RU1-DX-01-R06",
+    "RU1-DX-01-R07",
+    "RU1-DX-01-R08",
+    "RU1-DX-01-R10",
+    "RU1-DX-01-R11",
+    "RU1-DX-01-R16",
+    "RU1-DX-01-R18"
+   ],
+   "source_id": "RU1-S-DX",
+   "fragments": [
+    "知止而後有定，定而後能靜，靜而後能安，安而後能慮，慮而後能得。物有本末，事有終始，知所先後，則近道矣。",
+    "心正而後身脩，身脩而後家齊，家齊而後國治，國治而後天下平。",
+    "其本亂而末治者否矣"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.AdmitsWithin.narrow",
+    "Becoming.Web.includes_iff_within_every",
+    "Becoming.Viability.kernel_and_iff",
+    "Becoming.Clearing.loses_beyond",
+    "Becoming.Viability.ChoicePoint.each_not_joint",
+    "Becoming.whole_not_in_pairs",
+    "Becoming.Web.active_along"
+   ],
+   "records": [
+    "loss-beyond-a-region",
+    "conditions-kept-together",
+    "separation-loses-the-relation",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：沿用RO定域之判。「而後」链是一串必要条件：后者依于前者。此处增 Web.active_along，理由：在 Dependent 且所依者具身时，活动沿依存链传递，这是「而後」链中可证的部分；「本亂而末治者否」即链上前者不成立则后者不成立。定域：大学以修身为唯一之本，且以「而後」兼含时间先后，脊柱不导出唯一之本，也尚无依存决定生起先后的一般律（缺口二）。",
+   "tradition": "儒",
+   "work": "大学",
+   "locator": "大学经一章",
+   "layer": "经·《礼记·大学》（战国至秦汉，年代有争议）",
+   "names_used": [
+    "待",
+    "所待"
+   ],
+   "relational": "知止→定→静→安→虑→得；格致诚正修齐治平；本乱则末不治",
+   "gap": "依存决定生起先后：见notes缺口二",
+   "ro_passage": "ru-daxue-ben-mo"
+  },
+  {
+   "id": "daxue-you-de-ci-you-ren",
+   "record_ids": [
+    "RU1-DX-19-R01",
+    "RU1-DX-19-R02",
+    "RU1-DX-19-R03",
+    "RU1-DX-19-R04",
+    "RU1-DX-19-R05",
+    "RU1-DX-19-R06"
+   ],
+   "source_id": "RU1-S-DX",
+   "fragments": [
+    "有德此有人，有人此有土，有土此有財，有財此有用。德者本也，財者末也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.active_along",
+    "Becoming.Web.Dependent",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "support-from-the-supported",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：「此有」链说一串依存：用依于财，财依于土，土依于人，人依于德；Web.active_along 证活动沿依存链传递。定域：文本把链读成单向的充分条件（有此则有彼），脊柱只证必要方向；又以德为本、财为末立价值次第，脊柱不取，财用之义也只读作所资。",
+   "tradition": "儒",
+   "work": "大学",
+   "locator": "大学传十章",
+   "layer": "经·《礼记·大学》（战国至秦汉，年代有争议）",
+   "names_used": [
+    "所待",
+    "资"
+   ],
+   "relational": "德→人→土→财→用：此有；德本财末",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "mengzi-tianxia-zhi-ben",
+   "record_ids": [
+    "RU2-R0036",
+    "RU2-R0037",
+    "RU2-R0038"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "天下之本在国，国之本在家，家之本在身。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.Flow.mutuallyDependent_of_common",
+    "Becoming.Flow.GrownBy.every_condition_needed"
+   ],
+   "records": [
+    "derived-extent-limits",
+    "mutual-dependence-and-its-pace",
+    "which-links-a-closure-needs"
+   ],
+   "reading": "AI读法：孟子把依存排成一条单向之链，链端只有一个本：身。脊柱中依存是多条件、可相互的：Flow.GrownBy.every_condition_needed 证增长所得的每个条件都是必要的，Flow.mutuallyDependent_of_common 证共同条件使依存双向，Clearing.center_not_derived 证中心不沿依存导出。相分处在「唯一之本」与单向，不在依存本身：身也依于家、国、天下所给。",
+   "tradition": "儒",
+   "work": "孟子·离娄上",
+   "locator": "离娄上",
+   "layer": "子·《孟子》（战国）",
+   "names_used": [
+    "所待"
+   ],
+   "relational": "天下—国—家—身：本在",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "ru-lunyu-zheng-ming",
+   "record_ids": [
+    "RU1-LY-13-03-R01",
+    "RU1-LY-13-03-R02",
+    "RU1-LY-13-03-R03",
+    "RU1-LY-13-03-R04",
+    "RU1-LY-13-03-R05"
+   ],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "名不正，則言不順；言不順，則事不成",
+    "刑罰不中，則民無所措手足"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.carries_law_iff",
+    "Becoming.Twins.naming_not_identifiesAlike",
+    "Becoming.IdentifiesAlike.carries",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Web.rename_tenure",
+    "Becoming.Web.coextinct",
+    "Becoming.Web.active_along"
+   ],
+   "records": [
+    "projection-carrying-a-law",
+    "process-and-frame-as-readings",
+    "selection-through-a-model-of-the-options",
+    "life-as-condition-of-life",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：沿用RO定域之判（名的维持律）。此处增 Web.coextinct 与 Web.active_along，理由：「則」链具有共灭的形状——链上一环不成，依于它的诸环都不成；但每一环的依存（言依于名、事依于言……）是文本自己的断言，脊柱只证若依存如此，则不成沿链传递。",
+   "tradition": "儒",
+   "work": "论语·子路",
+   "locator": "子路第三章",
+   "layer": "经·《论语》（春秋末至战国编成）",
+   "names_used": [
+    "隨滅",
+    "待"
+   ],
+   "relational": "名→言→事→礼乐→刑罚→民：不正则不顺……",
+   "gap": "",
+   "ro_passage": "ru-lunyu-zheng-ming"
+  },
+  {
+   "id": "lunyu-min-wu-xin-bu-li",
+   "record_ids": [
+    "RU1-LY-12-07-R01"
+   ],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "足食，足兵，民信之矣。",
+    "民無信不立"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Supported",
+    "Becoming.Web.consumed_ends_when_fixed_at"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：政之立依于几个条件，其中信之需为正，缺之则不立：Web.Supported 要求每一所需条件皆达其需，Web.consumed_ends_when_fixed_at 证条件低于所需而依存不变时不活动。「去兵、去食」的次序是诸条件之需的轻重，脊柱表示为不同的 need，不给次序之理由。相合；「足」在此正是支撑之义。",
+   "tradition": "儒",
+   "work": "论语·颜渊",
+   "locator": "颜渊第七章",
+   "layer": "经·《论语》（春秋末至战国编成）",
+   "names_used": [
+    "足",
+    "待"
+   ],
+   "relational": "政—食、兵、信：民无信不立",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "lunyu-zhi-ji-ren-shou",
+   "record_ids": [
+    "RU1-LY-15-32-R02",
+    "RU1-LY-15-32-R03"
+   ],
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "知及之，仁不能守之，雖得之，必失之。",
+    "知及之，仁能守之，莊以蒞之。動之不以禮，未善也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Supported",
+    "Becoming.Web.supported_iff_admits",
+    "Becoming.Web.Admits"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "closing-needs-net-draw"
+   ],
+   "reading": "AI读法：得而能守，需诸条件并具，缺其一则不立：Web.Supported 是对每一个所需条件的合取，Web.supported_iff_admits 说支撑恰是所需皆在可容之内。逐层增一条件而仍「未善」，正是合取的形状。相合；知、仁、庄、礼的德目内容不取。",
+   "tradition": "儒",
+   "work": "论语·卫灵公",
+   "locator": "卫灵公第三十三章",
+   "layer": "经·《论语》（春秋末至战国编成）",
+   "names_used": [
+    "足"
+   ],
+   "relational": "得—知、仁、庄、礼：并具乃守",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zaahan-san-shi-he-he",
+   "record_ids": [
+    "FO1-R-SA009"
+   ],
+   "source_id": "FO1-S-SA",
+   "fragments": [
+    "緣眼及色眼識生，三事和合生觸"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Supported",
+    "Becoming.Dependence.MakesDifference",
+    "Becoming.Web.Embodied.arises_given",
+    "Becoming.Sleeper.sleeper"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "joint-difference-making",
+    "laws-of-one-step",
+    "life-as-condition-of-life",
+    "generation-is-replenishment"
+   ],
+   "reading": "AI读法：触待眼、色、眼识三者，缺一则不生：必要方向与 Web.Supported 的合取、Dependence.MakesDifference 的but-for检验相合。定域：「和合生觸」还断言三者具则触生，脊柱不由支撑导出活动——Sleeper.sleeper 见证一个始终受支撑而只在奇数步活动的关系项。故必要方向相合，充分方向只在文本。",
+   "tradition": "佛",
+   "work": "杂阿含经",
+   "locator": "杂阿含经 第306经等",
+   "layer": "经·汉译阿含（刘宋 求那跋陀罗译）",
+   "names_used": [
+    "所待",
+    "小故",
+    "大故"
+   ],
+   "relational": "眼、色、眼识—触：三事和合生",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "ru-zhongyong-cheng-zi-cheng",
+   "record_ids": [
+    "RU1-ZY-33-R01"
+   ],
+   "source_id": "RU1-S-ZY",
+   "fragments": [
+    "誠者自成也；而道，自道也。",
+    "誠者，物之終始，不誠無物。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.SelfBearing.stands",
+    "Becoming.Web.SelfBearing.met_iff",
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.Web.Embodied.replenishes",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "whole-persists-through-generation",
+    "generation-is-replenishment",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：沿用RO定域之判。「自成」可证的部分是自待：Web.SelfBearing.stands 说依于自身的关系项在活动时作为条件而在，Web.SelfBearing.met_iff 说其自依恰在活动时满足，此外不记录任何东西。「自成」若读作自我生成，与 Web.Embodied.arises_given（具身关系项只经他者之给而生起）不合，故名取「自待」而不取「自成」。",
+   "tradition": "儒",
+   "work": "中庸",
+   "locator": "中庸第二十五章",
+   "layer": "经·《礼记·中庸》（战国至秦汉，年代有争议）",
+   "names_used": [
+    "自待"
+   ],
+   "relational": "诚—自成；道—自道",
+   "gap": "",
+   "ro_passage": "ru-zhongyong-cheng-zi-cheng"
+  },
+  {
+   "id": "mengzi-heng-chan",
+   "record_ids": [
+    "RU2-R0008"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "若民，则无恒产，因无恒心。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Carries",
+    "Becoming.Web.carries_zero",
+    "Becoming.Web.Carries.lasts"
+   ],
+   "records": [
+    "reserve-defers-ending",
+    "map-of-premises"
+   ],
+   "reading": "AI读法：恒常可依之所资是恒常之心的储备：无此储备，一遇不受支撑之步即不能维持——Web.carries_zero 证 Dependent 恰是零储备，Web.Carries.lasts 证储备限定不受支撑时的活动次数。相合；「产」只读作可依之所资，不取其财产、归属之义；「惟士为能」的分等不取。",
+   "tradition": "儒",
+   "work": "孟子·梁惠王上",
+   "locator": "梁惠王上",
+   "layer": "子·《孟子》（战国）",
+   "names_used": [
+    "蓄",
+    "待"
+   ],
+   "relational": "恒心—恒产：无恒产因无恒心",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "ru-mengzi-niu-shan",
+   "record_ids": [
+    "RU2-R0057"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "茍得其养，无物不长；茍失其养，无物不消。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.generation_needs_replenishment",
+    "Becoming.Confound.misattributes",
+    "Becoming.Learning.no_prefix_fixes_next",
+    "Becoming.Run.not_fixes_of_untaken",
+    "Becoming.Flow.joint_excess_ends"
+   ],
+   "records": [
+    "generation-is-replenishment",
+    "experiment-needs-return",
+    "learning-by-refutation"
+   ],
+   "reading": "AI读法：沿用RO相合之判：生长依于补给，Web.generation_needs_replenishment；失其养则消，即依存断而不复。",
+   "tradition": "儒",
+   "work": "孟子·告子上",
+   "locator": "告子上 牛山之木",
+   "layer": "子·《孟子》（战国）",
+   "names_used": [
+    "食",
+    "足"
+   ],
+   "relational": "物—养：得之则长，失之则消",
+   "gap": "",
+   "ro_passage": "ru-mengzi-niu-shan"
+  },
+  {
+   "id": "mengzi-zhi-qi",
+   "record_ids": [
+    "RU2-R0010",
+    "RU2-R0011"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "志壹则动气；气壹则动志也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.MutuallyDependent",
+    "Becoming.Flow.withinInfluence_iff_withinReach",
+    "Becoming.Drawing.mutuallyDependent"
+   ],
+   "records": [
+    "mutual-dependence-and-its-pace"
+   ],
+   "reading": "AI读法：志与气各在对方的影响闭包之内：一方专一则动另一方，这正是 Flow.MutuallyDependent（每个形成的延续都可在某一距离上受每个他者影响）；Drawing.mutuallyDependent 给出一对相互依存的见证。相合；以「志」为帅的主从次第另属C13，此处只取双向。",
+   "tradition": "儒",
+   "work": "孟子·公孙丑上",
+   "locator": "公孙丑上 知言养气章",
+   "layer": "子·《孟子》（战国）",
+   "names_used": [
+    "相待"
+   ],
+   "relational": "志—气：壹则相动",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "xunzi-xing-wei",
+   "record_ids": [
+    "RU2-R0105",
+    "RU2-R0106",
+    "RU2-R0107",
+    "RU2-R0108",
+    "RU2-R0109"
+   ],
+   "source_id": "RU2-S-XZ19",
+   "fragments": [
+    "性者、本始材朴也；伪者、文理隆盛也。",
+    "无性则伪之无所加，无伪则性不能自美。",
+    "性伪合，然后成圣人之名，一天下之功于是就也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Dependence.MakesDifference",
+    "Becoming.Web.Supported",
+    "Becoming.Web.roles"
+   ],
+   "records": [
+    "joint-difference-making",
+    "support-from-the-supported",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：性与伪是一个成就所待的两个条件，角色不同（材与文理），缺一则不成：每一方都通过but-for检验（Dependence.MakesDifference），成就之支撑是二者的合取（Web.Supported）。「然后」在此标必要，不标充分，故相合。「圣人之名」「一天下之功」的目标义不取。",
+   "tradition": "儒",
+   "work": "荀子·礼论",
+   "locator": "礼论篇",
+   "layer": "子·《荀子》（战国末）",
+   "names_used": [
+    "相待",
+    "所待"
+   ],
+   "relational": "性（材朴）—伪（文理）：无此则彼无所加、不能自美，合然后成",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "xunzi-shan-jia-yu-wu",
+   "record_ids": [
+    "RU2-R0242"
+   ],
+   "source_id": "RU2-S-XZ01",
+   "fragments": [
+    "假輿馬者，非利足也，而致千里；假舟楫者，非能水也，而絶江河。",
+    "君子生非異也，善假於物也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.supported_iff_admits",
+    "Becoming.Web.Admits.mono",
+    "Becoming.Restoring.Inflow.widens"
+   ],
+   "records": [
+    "closing-needs-net-draw",
+    "ranking-under-readings",
+    "four-cases-of-a-part"
+   ],
+   "reading": "AI读法：所能至者不是独有之力，而是与所假之物的关系：Restoring.Inflow.widens 证来自外的给予扩大可成之范围，Web.Admits.mono 证可容者随所给增而不减。相合：能力是关系性的。「君子」的身份义不取。",
+   "tradition": "儒",
+   "work": "荀子·劝学",
+   "locator": "劝学篇",
+   "layer": "子·《荀子》（战国末）",
+   "names_used": [
+    "资",
+    "待"
+   ],
+   "relational": "人—舆马、舟楫：假之而致千里、绝江河",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "xunzi-yu-min-tian-fei",
+   "record_ids": [
+    "RU2-R0262"
+   ],
+   "source_id": "RU2-S-XZ10",
+   "fragments": [
+    "裕民則民富，民富則田肥以易，田肥以易則出實百倍。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.MutuallyFed",
+    "Becoming.carried_pow_around"
+   ],
+   "records": [
+    "mutual-dependence-and-its-pace"
+   ],
+   "reading": "AI读法：人养田、田养人，构成一个给养回路：Flow.MutuallyFed。carried_pow_around 证在每步都成立的耦合回路上，绕行R周后可到达之差至少是原来的2^R倍——「出實百倍」是回路放大的形状。相合；「富」只读作所资充足，不取财货积累之义；放大律是关于可到达之差的上界下界，不证任何实际收获倍数。",
+   "tradition": "儒",
+   "work": "荀子·富国",
+   "locator": "富国篇",
+   "layer": "子·《荀子》（战国末）",
+   "names_used": [
+    "相待",
+    "资"
+   ],
+   "relational": "民—田：裕民则田肥，田肥则出实",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhuangzi-qiwu-bi-chu-yu-shi",
+   "record_ids": [
+    "ZH1-C02-R-04",
+    "ZH1-C02-R-05"
+   ],
+   "source_id": "ZH1-S02",
+   "fragments": [
+    "彼出於是，是亦因彼。",
+    "方生方死，方死方生，方可方不可，方不可方可。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Run.part_act_eq_rest_act",
+    "Becoming.partForms_and_restForms_iff",
+    "Becoming.Web.change_readings",
+    "Becoming.Web.arising_recurs_iff",
+    "Becoming.separation_faithful_iff",
+    "Becoming.Web.roles"
+   ],
+   "records": [
+    "where-a-move-is-formed",
+    "separation-loses-the-relation",
+    "coming-and-ceasing-keep-pace",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：沿用RO相合之判：彼与是互为所因而出，生死可否同时互转。此处增 Web.roles，理由：「彼」「是」不是两个先在之物，而是一个关系项在不同依存中所处的位，Web.roles 把形成与条件读作同一类关系项。",
+   "tradition": "道",
+   "work": "庄子·齐物论",
+   "locator": "齐物论 彼是方生",
+   "layer": "子·《庄子》内篇（战国）",
+   "names_used": [
+    "相待",
+    "所待"
+   ],
+   "relational": "彼—是：彼出于是，是亦因彼",
+   "gap": "",
+   "ro_passage": "zhuangzi-qiwu-bi-chu-yu-shi"
+  },
+  {
+   "id": "zhuang-renjianshi-yi-neng-ku-sheng",
+   "record_ids": [
+    "ZH1-C04-R-12"
+   ],
+   "source_id": "ZH1-S04",
+   "fragments": [
+    "實熟則剝則辱，大枝折，小枝泄，此以其能苦其生者也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.UnderminingOn",
+    "Becoming.Web.Interacts",
+    "Becoming.Web.Embodied.ending_breaks"
+   ],
+   "records": [
+    "becoming-stepwise-reading",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：果木之所能（结实）正是他者取用它的条件，取用削弱其自身：Web.UnderminingOn 定义取用使条件跌至依存之需以下；Web.Interacts 证这种削弱本身就是一种交互。相合：被取用的关系可以终结被取者。「无用之用」作为处世之术的劝告不取。",
+   "tradition": "道",
+   "work": "庄子·人间世",
+   "locator": "人间世 栎社",
+   "layer": "子·《庄子》内篇（战国）",
+   "names_used": [
+    "资"
+   ],
+   "relational": "果木—取实者：以其能苦其生",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhuang-dasheng-yang-xing-bu-zu",
+   "record_ids": [
+    "ZH1-C19-R-01"
+   ],
+   "source_id": "ZH1-S19",
+   "fragments": [
+    "物有餘而形不養者有之矣",
+    "形不離而生亡者有之矣",
+    "而養形果不足以存生"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Supported",
+    "Becoming.Sleeper.sleeper"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "generation-is-replenishment"
+   ],
+   "reading": "AI读法：物是养形之所待，形是存生之所待，但所待具备不保证依者成立：这是小故而非大故。Web.Dependent 只说活动需要支撑，不说支撑即活动；Sleeper.sleeper 见证一个始终受支撑却只在奇数步活动的关系项。相合；「悲夫」的感叹与养生之术不取。",
+   "tradition": "道",
+   "work": "庄子·达生",
+   "locator": "达生首段",
+   "layer": "子·《庄子》外篇（战国至秦汉，篇章年代有争议）",
+   "names_used": [
+    "小故",
+    "足"
+   ],
+   "relational": "物—形—生：有余不必养，不离不必存",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhuang-waiwu-wu-yong-zhi-yong",
+   "record_ids": [
+    "ZH1-C26-R-05"
+   ],
+   "source_id": "ZH1-S26",
+   "fragments": [
+    "夫地非不廣且大也，人之所用，容足耳，然則廁足而墊之致黃泉，人尚有用乎？"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Omitted.loses_own",
+    "Becoming.Web.supported_iff_admits",
+    "Becoming.Flow.Balances.supported_iff_within_margin"
+   ],
+   "records": [
+    "closing-needs-net-draw"
+   ],
+   "reading": "AI读法：所用之处依于未用之处：只看容足之地而去其余，所用也失其支撑。Omitted.loses_own 证区域略去一个所需条件时，形成自己的取用会削弱自己，下一步不受支撑。相合；与老子十一章「当其无，有车之用」（RO定域）同构。",
+   "tradition": "道",
+   "work": "庄子·外物",
+   "locator": "外物 惠子谓庄子",
+   "layer": "子·《庄子》杂篇（战国至秦汉，篇章年代有争议）",
+   "names_used": [
+    "所待",
+    "足"
+   ],
+   "relational": "容足之地—其旁之地：去旁则所用亦无用",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "mozi-fei-ming-shang-xia",
+   "record_ids": [
+    "MO1-C35-R009"
+   ],
+   "source_id": "MO1-S-C35",
+   "fragments": [
+    "上不聽治，則刑政亂；下不從事，則財用不足。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.Balances.consumption_ends_with_feeders",
+    "Becoming.Flow.beyond_gives_nothing",
+    "Becoming.Web.Dependent"
+   ],
+   "records": [
+    "consumption-ends-with-feeders",
+    "feeding-closure",
+    "support-from-the-supported"
+   ],
+   "reading": "AI读法：所需由各方之所为给出，给者停止，依之取用者不得支撑：Flow.Balances.consumption_ends_with_feeders。相合；「上、下」的位分与「命」的论争归他簇，「財用」只读作所资。",
+   "tradition": "墨",
+   "work": "墨子·非命上",
+   "locator": "非命上",
+   "layer": "子·《墨子》（战国，篇章层次有争议）",
+   "names_used": [
+    "足",
+    "资"
+   ],
+   "relational": "刑政—听治、财用—从事：不为则乱、不足",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "mozi-lai-qi-li-zhe-sheng",
+   "record_ids": [
+    "MO1-C32-R006"
+   ],
+   "source_id": "MO1-S-C32",
+   "fragments": [
+    "因其羽毛以為衣裘，因其蹄蚤以為絝屨，因其水草以為飲食。",
+    "賴其力者生，不賴其力者不生。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.SelfBearing",
+    "Becoming.Web.SelfBearing.stands",
+    "Becoming.Web.SelfBearing.met_iff",
+    "Becoming.Flow.carries_of_own"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：禽兽之所需由已成之羽毛、水草给出，人之生则以自身之力为条件之一：这正是 Web.SelfBearing——活动时依于自身且需求为正；Web.SelfBearing.met_iff 证在 Dependent 下此自依恰在活动时满足；Flow.carries_of_own 证持有者自己取用所持者时，所持者为其储备。相合，并为「自待」之名提供先秦结构。以此批评音乐的论旨不取。",
+   "tradition": "墨",
+   "work": "墨子·非乐上",
+   "locator": "非乐上",
+   "layer": "子·《墨子》（战国，篇章层次有争议）",
+   "names_used": [
+    "自待",
+    "待"
+   ],
+   "relational": "人—自身之力：赖其力者生",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "jielao-fa-ling-geng",
+   "record_ids": [
+    "CV1-JL-R042",
+    "CV1-JL-R043"
+   ],
+   "source_id": "CV1-S-JL",
+   "fragments": [
+    "凡法令更則利害易，利害易則民務變，務變之謂變業。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Forms",
+    "Becoming.Web.Dissolves",
+    "Becoming.Web.forms_between",
+    "Becoming.Web.dissolves_between"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "substitution-preserves-consumption"
+   ],
+   "reading": "AI读法：规则一变，各方所依所资随之改变，所为也随之改变：旧的依存消解、新的依存形成（Web.Forms、Web.Dissolves），且依存若在两时之间有无改变，必在其间某一步形成或消解（Web.forms_between）。相合；「利害」只读作所资与所损，不取得失计算之义；治国的劝告（不数变法）不取。",
+   "tradition": "法",
+   "work": "韩非子·解老",
+   "locator": "解老篇",
+   "layer": "子·《韩非子》（战国末）",
+   "names_used": [
+    "結／解"
+   ],
+   "relational": "法令—利害—民务：更则易，易则变",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "sima-tan-en-jue",
+   "record_ids": [
+    "CT1-R-SJ04"
+   ],
+   "source_id": "CT1-S-SJ",
+   "fragments": [
+    "一斷於法，則親親尊尊之恩絕矣。可以行一時之計，而不可長用也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Broken",
+    "Becoming.Web.Carries.lasts",
+    "Becoming.Flow.Balances.consumption_ends_with_feeders"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "reserve-defers-ending",
+    "consumption-ends-with-feeders"
+   ],
+   "reading": "AI读法：切断相互给养的关系（恩絕），依之者可以凭所余维持一时而不能长久：Web.Carries.lasts 证不受支撑后活动不超过储备，Flow.Balances.consumption_ends_with_feeders 证给者不受支撑时取用终止。相合；亲疏贵贱的等级义不取，只取关系之断与其后果。",
+   "tradition": "史",
+   "work": "史记·太史公自序·论六家要指",
+   "locator": "论法家",
+   "layer": "史·西汉（司马谈）",
+   "names_used": [
+    "絕",
+    "蓄"
+   ],
+   "relational": "一断于法—恩绝：可行一时，不可长用",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhaolun-guo-bu-ju-yin",
+   "record_ids": [
+    "CT1-R-ZL08"
+   ],
+   "source_id": "CT1-S-ZL",
+   "fragments": [
+    "果不俱因，因因而果。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Embodied.arises_given",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "laws-of-one-step",
+    "life-as-condition-of-life",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：果经因而生，但果不与因同时：Web.Embodied.arises_given 说具身关系项在跨一步时经另一活动者之给而生起——给在前一步，生起在后一步。相合；与唯识「因果同时」（weishi-xun-xi）相对，脊柱在生起上同僧肇，在同步互依上见缺口一。",
+   "tradition": "佛",
+   "work": "肇论·物不迁论",
+   "locator": "物不迁论",
+   "layer": "论·后秦（僧肇）",
+   "names_used": [
+    "待"
+   ],
+   "relational": "因—果：果不俱因，因因而果",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhaolun-dai-yuan",
+   "record_ids": [
+    "CT1-R-ZL18",
+    "CT1-R-ZL19"
+   ],
+   "source_id": "CT1-S-ZL",
+   "fragments": [
+    "若有不自有，待緣而後有者，故知有非真有。",
+    "萬物若無，則不應起；起則非無。以明緣起故不無也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Embodied.arises_given",
+    "Becoming.Web.Dependent",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "laws-of-one-step",
+    "life-as-condition-of-life",
+    "support-from-the-supported",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：有不自有，待缘而后有：生起经他者之给（Web.Embodied.arises_given），活动需要支撑（Web.Dependent）；起则非无：生起是实在的变化（Web.change_readings 把生起、止息读作同一变化）。「非真有」在脊柱中读作没有离开条件而自立的存在，不读作虚幻。相合。",
+   "tradition": "佛",
+   "work": "肇论·不真空论",
+   "locator": "不真空论",
+   "layer": "论·后秦（僧肇）",
+   "names_used": [
+    "待",
+    "所待"
+   ],
+   "relational": "有—缘：待缘而后有；缘起故不无",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhonglun-wu-sheng",
+   "record_ids": [
+    "FO1-R-M02"
+   ],
+   "source_id": "FO1-S-MMK",
+   "fragments": [
+    "諸法不自生，亦不從他生，不共不無因，是故知無生。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Embodied.arises_given",
+    "Becoming.SourceSeed.source_gives",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "laws-of-one-step",
+    "life-as-condition-of-life",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：中论否定以自性为前提的四种生：自生、他生、共生、无因生。Web.Embodied.arises_given 说生起经另一活动者之给，表面似「从他生」，但脊柱中的「他」不是有自性之物，给也不预含果，故不落中论所破之「他生」。定域：「無生」若读作没有任何生起，与 Web.change_readings 中实在的生起不合；读作没有自性之生，则相容。",
+   "tradition": "佛",
+   "work": "中论·观因缘品",
+   "locator": "观因缘品第一",
+   "layer": "论·印度（龙树），后秦鸠摩罗什译",
+   "names_used": [
+    "待"
+   ],
+   "relational": "诸法—自、他、共、无因：四句皆不生",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhonglun-yin-yuan-jia-ming",
+   "record_ids": [
+    "FO1-R-M29"
+   ],
+   "source_id": "FO1-S-MMK",
+   "fragments": [
+    "眾因緣生法，我說即是無，亦為是假名，亦是中道義。",
+    "眾緣具足和合而物生，是物屬眾因緣故無自性，無自性故空"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.identifiesAlike_iff",
+    "Becoming.Web.reidentify_dependent",
+    "Becoming.Web.rename_unceasing",
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "identity-across-steps",
+    "configurations-alike-by-relation",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：沿用RO相合之判：众缘所生者属于众因缘，故无离开条件的自性；这与脊柱中任何关系项都由其关系而被辨认（identifiesAlike_iff、Web.reidentify_dependent）相合。「空」只读作无自性，不读作无。",
+   "tradition": "佛",
+   "work": "中论·观四谛品（青目释）",
+   "locator": "观四谛品第二十四",
+   "layer": "论·印度（龙树偈、青目释），后秦鸠摩罗什译",
+   "names_used": [
+    "所待"
+   ],
+   "relational": "法—众因缘：属众因缘故无自性",
+   "gap": "",
+   "ro_passage": "zhonglun-yin-yuan-jia-ming"
+  },
+  {
+   "id": "zhonglun-xian-you-he-yong-yuan",
+   "record_ids": [
+    "FO1-R-M07"
+   ],
+   "source_id": "FO1-S-MMK",
+   "fragments": [
+    "果先於緣中，有無俱不可。先無為誰緣，先有何用緣。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Dependence.MakesDifference",
+    "Becoming.Dependence.makesDifference_iff",
+    "Becoming.Dependence.Overdetermined.no_difference"
+   ],
+   "records": [
+    "joint-difference-making"
+   ],
+   "reading": "AI读法：「先有何用緣」：若果已在，缘不造成差别，便不是缘。Dependence.MakesDifference 是but-for检验：缺此一分而同一动作下依存得以保持，此分才造成差别；Dependence.Overdetermined.no_difference 证在多重决定处没有单一部分造成差别。相合：条件之为条件在于有力。「先無為誰緣」一句涉及缘与果的同时性，另见缺口二。",
+   "tradition": "佛",
+   "work": "中论·观因缘品",
+   "locator": "观因缘品第一",
+   "layer": "论·印度（龙树），后秦鸠摩罗什译",
+   "names_used": [
+    "有力",
+    "所待"
+   ],
+   "relational": "缘—果：先有则何用缘",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "huayan-yin-men-liu-yi",
+   "record_ids": [
+    "FO2-FQ-R001",
+    "FO2-FQ-R002"
+   ],
+   "source_id": "FO2-FQ",
+   "fragments": [
+    "一切因皆有六義：一空有力不待緣、二空有力待緣、三空無力待緣、四有有力不待緣、五有有力待緣、六有無力待緣。",
+    "以彼非是因義"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Dependence.MakesDifference",
+    "Becoming.Dependence.MakesDifferenceTogether",
+    "Becoming.Dependence.DifferenceOnlyTogether",
+    "Becoming.Dependence.differenceOnlyTogether_iff",
+    "Becoming.Dependence.Overdetermined.no_difference"
+   ],
+   "records": [
+    "joint-difference-making"
+   ],
+   "reading": "AI读法：因门六义在「有力／無力」与「待緣／不待緣」两维上分析一个因：有力不待缘＝单独造成差别（Dependence.MakesDifference）；有力待缘＝与他分一同造成差别（Dependence.MakesDifferenceTogether，Dependence.DifferenceOnlyTogether 至少需两分）；无力待缘＝自身不造成差别。「無力不待緣」不立为因，正是脊柱中不造成差别、也不参与联合造成差别者不是条件。相合；「空／有」一维（体性）不取。",
+   "tradition": "佛",
+   "work": "华严一乘教义分齐章",
+   "locator": "义理分齐 缘起因门六义",
+   "layer": "论·唐（法藏）",
+   "names_used": [
+    "有力",
+    "待",
+    "所待"
+   ],
+   "relational": "因—缘：有力无力、待缘不待缘",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "huayan-shi-xuan",
+   "record_ids": [
+    "FO2-FQ-R018"
+   ],
+   "source_id": "FO2-FQ",
+   "fragments": [
+    "此上諸義體相自在，隱顯互現，重重無盡，",
+    "然此一多雖復互相含受，自在無礙，仍體不同也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Diagonal.claims_incomplete",
+    "Becoming.Frame.self_incomplete",
+    "Becoming.Diagonal.complete_iff_alike",
+    "Becoming.Diagonal.Unfolds.unheld",
+    "Becoming.boundaryInvariant_iff_standpointInvariant",
+    "Becoming.Flow.MutuallyDependent"
+   ],
+   "records": [
+    "registration-within-what-it-registers",
+    "process-and-frame-as-readings",
+    "mutual-dependence-and-its-pace"
+   ],
+   "reading": "AI读法：沿用RO定域之判（重重无尽对应的是自我指称的不完全）。此处增 Flow.MutuallyDependent，理由：「互相含受」在脊柱中可证者是相互依存——每一形成在每一形成的影响闭包内——而「仍體不同」与之相合：相互依存不是同一。",
+   "tradition": "佛",
+   "work": "华严一乘教义分齐章",
+   "locator": "义理分齐 十玄门",
+   "layer": "论·唐（法藏）",
+   "names_used": [
+    "相待"
+   ],
+   "relational": "一—多：互相含受，隐显互现",
+   "gap": "",
+   "ro_passage": "huayan-shi-xuan"
+  },
+  {
+   "id": "huayan-yin-guo-tong-ti",
+   "record_ids": [
+    "FO2-FQ-R027"
+   ],
+   "source_id": "FO2-FQ",
+   "fragments": [
+    "此一乘義，因果同體，成一緣起，得此即得彼，由彼此相即故。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Downstream.one_way",
+    "Becoming.Web.Embodied.arises_given",
+    "Becoming.Flow.MutuallyDependent"
+   ],
+   "records": [
+    "derived-extent-limits",
+    "laws-of-one-step",
+    "life-as-condition-of-life",
+    "mutual-dependence-and-its-pace"
+   ],
+   "reading": "AI读法：「因果同體」「得此即得彼」把依存的方向与步骤都消去。脊柱中依存有向：Downstream.one_way 见证自身只依其地、以自身所给为生者在自身停给后终止，反向不成立；生起跨一步（Web.Embodied.arises_given）。相互依存（Flow.MutuallyDependent）是两个有向依存的闭包，不是同体。故相分。",
+   "tradition": "佛",
+   "work": "华严一乘教义分齐章",
+   "locator": "义理分齐",
+   "layer": "论·唐（法藏）",
+   "names_used": [
+    "相待"
+   ],
+   "relational": "因—果：同体相即",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "chengqian-wu-gu-dan-fa",
+   "record_ids": [
+    "FO2-KS-C-R007"
+   ],
+   "source_id": "FO2-KS-C",
+   "fragments": [
+    "顯法界中無孤單法，隨舉一相，具此六相，緣起集成各無自性，"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.alone_beside_of_only",
+    "Becoming.Cuts.within_attached_iff",
+    "Becoming.Flow.fed_from_beyond",
+    "Becoming.Flow.region_not_a_cut"
+   ],
+   "records": [
+    "which-links-a-closure-needs",
+    "continuing-self-fed-from-beyond"
+   ],
+   "reading": "AI读法：「無孤單法」：没有不在关系中的法。脊柱证延续之族不能全无外给（Flow.fed_from_beyond）、其区域不是切口（Flow.region_not_a_cut）；Flow.alone_beside_of_only 证只参与一个条件的形成，去此条件即孤立。定域：表示中可以有未连接的形成（Cuts.within_attached_iff 证添入未连接者不改他者之闭包），故「無孤單法」是对实际展开的断言，不是对每一表示的定理。六相的系统见RO huayan-liu-xiang（相合），出自五教章，本条为宋承迁注，未合并。",
+   "tradition": "佛",
+   "work": "金师子章注（承迁）",
+   "locator": "括六相章注",
+   "layer": "注·宋（承迁）",
+   "names_used": [
+    "相待",
+    "不交"
+   ],
+   "relational": "法—法界：无孤单法",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "jinshizi-qi-dan-shi-yuan",
+   "record_ids": [
+    "FO2-KS-P-R001",
+    "FO2-KS-P-R002",
+    "FO2-KS-P-R005"
+   ],
+   "source_id": "FO2-KS-P",
+   "fragments": [
+    "謂以金無自性。隨巧匠之緣，遂有師子相起。起但是緣，故名緣起。",
+    "師子似有，名為依他。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Embodied.arises_given",
+    "Becoming.Web.roles",
+    "Becoming.Web.Forms"
+   ],
+   "records": [
+    "laws-of-one-step",
+    "life-as-condition-of-life",
+    "becoming-dependence-dynamics",
+    "substitution-preserves-consumption"
+   ],
+   "reading": "AI读法：师子之相随巧匠之给而起：Web.Embodied.arises_given；金为所资之质、匠为给者，二者是同一类关系项在此依存中的不同角色（Web.roles）；相之起即一种关系的形成（Web.Forms）。相合；「金無自性」「似有」只读作没有离开条件的自立，不读作虚幻。",
+   "tradition": "佛",
+   "work": "金师子章",
+   "locator": "明缘起第一、辨色空等",
+   "layer": "论·唐（法藏）",
+   "names_used": [
+    "所待",
+    "资"
+   ],
+   "relational": "金—巧匠—师子相：随缘而起",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "mohe-zhiguan-yin-yuan",
+   "record_ids": [
+    "FO2-MH-R015",
+    "FO2-MH-R016",
+    "FO2-MH-R018"
+   ],
+   "source_id": "FO2-MH",
+   "fragments": [
+    "招果為因",
+    "助業皆是緣義",
+    "酬因曰"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Dependence.MakesDifferenceTogether",
+    "Becoming.Web.Embodied.arises_given",
+    "Becoming.Web.roles"
+   ],
+   "records": [
+    "joint-difference-making",
+    "laws-of-one-step",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：智顗把因读作招果者、缘读作助者、报读作酬因者：三者是同一生起中的不同角色（Web.roles），果经他者之给而生（Web.Embodied.arises_given），因与缘一同造成差别（Dependence.MakesDifferenceTogether）。定域：「主因／助缘」之分在脊柱中没有对应——脊柱只分单独造成差别与只能联合造成差别，不分主次；业报的伦理义不取。",
+   "tradition": "佛",
+   "work": "摩诃止观",
+   "locator": "卷五 十如是",
+   "layer": "论·隋（智顗讲、灌顶记）",
+   "names_used": [
+    "所待",
+    "有力"
+   ],
+   "relational": "因—缘—果—报：招果、助业、酬因",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "qixin-shi-jue",
+   "record_ids": [
+    "FO2-QX-R012",
+    "FO2-QX-R022"
+   ],
+   "source_id": "FO2-QX",
+   "fragments": [
+    "依本覺故而有不覺，依不覺故說有始覺。",
+    "依覺故迷，若離覺性則無不覺，"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.roles",
+    "Becoming.Negation.each_through_other",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "life-as-condition-of-life",
+    "the-split-that-makes-sense",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：始觉依不觉而说，不觉依觉而有：一个关系项的几种状态互经对方而成立（Negation.each_through_other），并处于不同角色（Web.roles）。定域：起信以「本觉」为不依任何东西的根据，脊柱不导出这样的中心（Clearing.center_not_derived）；「迷／觉」的价值方向不取。",
+   "tradition": "佛",
+   "work": "大乘起信论",
+   "locator": "解释分 心生灭门",
+   "layer": "论·南北朝（题署马鸣造、真谛译，作者与译者有争议）",
+   "names_used": [
+    "待",
+    "所待"
+   ],
+   "relational": "本觉—不觉—始觉：依此而有、依此而说",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "shengman-sui-duan",
+   "record_ids": [
+    "FO2-SM-R008",
+    "FO2-SM-R009",
+    "FO2-SM-R011"
+   ],
+   "source_id": "FO2-SM",
+   "fragments": [
+    "此四種住地，生一切起煩惱。",
+    "亦令四種煩惱久住。",
+    "若無明住地斷者，過恒沙等如來菩提智所應斷法，皆亦隨斷。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.coextinct",
+    "Becoming.Web.active_along",
+    "Becoming.Web.Dependent"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "reserve-defers-ending",
+    "support-from-the-supported"
+   ],
+   "reading": "AI读法：所依者使依之者生起、久住；所依者断，依之者随断：Web.coextinct 证在 Dependent 下所依之具身关系项不活动，则依存链所达的一切形成都不活动，Web.active_along 证活动沿链传递。相合；「斷」作为修行之目标的价值方向不取，只取随断之结构。",
+   "tradition": "佛",
+   "work": "胜鬘经",
+   "locator": "一乘章",
+   "layer": "经·汉译（刘宋 求那跋陀罗译）",
+   "names_used": [
+    "隨滅",
+    "待"
+   ],
+   "relational": "无明住地—四住地—起烦恼：生、久住；断则随断",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "qixin-feng-shui-sui-mie",
+   "record_ids": [],
+   "source_id": "FO2-QX",
+   "fragments": [
+    "如風依水而有動相。若水滅者，則風相斷絕無所依止。以水不滅，風相相續，唯風滅故動相隨滅，非是水滅。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.coextinct",
+    "Becoming.Web.Embodied.active_of_bearing",
+    "Becoming.Web.Bearing"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "reserve-defers-ending",
+    "living-on-and-descent"
+   ],
+   "reading": "AI读法：动相依于风与水两个条件：水灭则风相无所依止而断；风灭则动相随灭，而水不灭。依者随所依而灭，所依者不随依者而灭，且一条件之灭不及另一条件——这正是 Web.coextinct 的方向：所依的具身关系项不活动，依存链所达者不活动；反之不成立。相合，并为「隨滅」之名提供出处。以此喻无明与心体的论旨不取。",
+   "tradition": "佛",
+   "work": "大乘起信论",
+   "locator": "解释分 心生灭门 风水喻",
+   "layer": "论·南北朝（题署马鸣造、真谛译，作者与译者有争议）",
+   "names_used": [
+    "隨滅",
+    "待"
+   ],
+   "relational": "动相—风、水：唯风灭故动相随灭，非是水灭",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "weishi-xun-xi",
+   "record_ids": [
+    "FO1-R-CY23"
+   ],
+   "source_id": "FO1-S-CY",
+   "fragments": [
+    "如是能熏與所熏識，俱生俱滅，熏習義成。",
+    "三法展轉因果同時，如炷生焰、焰生焦炷，亦如蘆束更互相依，因果俱時，理不傾動。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.responds_to_own_level",
+    "Becoming.onLoop_succ_iff",
+    "Becoming.forms_by_closing",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.closes_within"
+   ],
+   "records": [
+    "how-loops-form",
+    "whether-a-loop-closes-a-difference"
+   ],
+   "reading": "AI读法：沿用RO相合之判：能熏与所熏的往复成环（onLoop_succ_iff、forms_by_closing）。RO原列 Widening.runs_away、Widening.closing_needs_less、Widening.closes_within 已于R22改名为 LoopReturn.*，此处用现名。「俱生俱滅」「蘆束更互相依」所说的同一步内互依者同活动，脊柱尚无一般律（见缺口一）；与僧肇「果不俱因」（zhaolun-guo-bu-ju-yin）相对，脊柱的生起跨步而互依可同步。",
+   "tradition": "佛",
+   "work": "成唯识论",
+   "locator": "卷二",
+   "layer": "论·唐（玄奘译糅）",
+   "names_used": [
+    "相待",
+    "隨滅"
+   ],
+   "relational": "能熏—所熏：俱生俱灭；种子—现行：展转因果",
+   "gap": "互依者同活动：见notes缺口一",
+   "ro_passage": "weishi-xun-xi"
+  },
+  {
+   "id": "zaahan-ci-you-gu-bi-you",
+   "record_ids": [
+    "FO1-R-SA-D00",
+    "FO1-R-SA-D01",
+    "FO1-R-SA-D02",
+    "FO1-R-SA-D03",
+    "FO1-R-SA-D04",
+    "FO1-R-SA-D05",
+    "FO1-R-SA-D06",
+    "FO1-R-SA-D07",
+    "FO1-R-SA-D08",
+    "FO1-R-SA-D09",
+    "FO1-R-SA035"
+   ],
+   "source_id": "FO1-S-SA",
+   "fragments": [
+    "謂此有故彼有，此起故彼起",
+    "此無故彼無，此滅故彼滅",
+    "若比丘無明離欲而生明，彼無明滅則行滅，乃至純大苦聚滅"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.coextinct",
+    "Becoming.Web.kept_or_broken",
+    "Becoming.Web.change_readings",
+    "Becoming.Web.arising_recurs_iff"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：沿用RO相合之判。「此無故彼無，此滅故彼滅」是共灭（Web.coextinct）；十二支是一条依存链，还灭即链首灭则沿链皆灭。「此有故彼有」的充分方向，脊柱只在依存持续时读作维持（Web.kept_or_broken），不由所依之有导出依者之有。",
+   "tradition": "佛",
+   "work": "杂阿含经",
+   "locator": "第262、298经等",
+   "layer": "经·汉译阿含（刘宋 求那跋陀罗译）",
+   "names_used": [
+    "隨滅",
+    "待",
+    "所待"
+   ],
+   "relational": "此—彼：此有故彼有，此灭故彼灭；无明→行→识→……→生",
+   "gap": "",
+   "ro_passage": "zaahan-ci-you-gu-bi-you"
+  },
+  {
+   "id": "zaahan-yi-xiang",
+   "record_ids": [
+    "FO1-R-SA028"
+   ],
+   "source_id": "FO1-S-SA",
+   "fragments": [
+    "非緣眼愛生眼受，但緣眼受生眼愛"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Downstream.one_way",
+    "Becoming.Web.Dependent"
+   ],
+   "records": [
+    "derived-extent-limits",
+    "support-from-the-supported"
+   ],
+   "reading": "AI读法：缘起有方向：受为爱之缘，爱不反为受之缘。脊柱中依存是有向的二元关系，Downstream.one_way 见证一个只依其地的自身与以它为生的下游：下游随自身停给而终止，自身不依下游。相合。",
+   "tradition": "佛",
+   "work": "杂阿含经",
+   "locator": "杂阿含经 种种界诸经",
+   "layer": "经·汉译阿含（刘宋 求那跋陀罗译）",
+   "names_used": [
+    "待"
+   ],
+   "relational": "眼受—眼爱：缘受生爱，非缘爱生受",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "yuanren-fei-yin-yuan",
+   "record_ids": [
+    "IN1-R-Y05"
+   ],
+   "source_id": "IN1-S04",
+   "fragments": [
+    "又言萬物皆是自然生化非因緣者，則一切無因緣處悉應生化，謂石應生草，草或生人，人生畜等。又應生無前後，起無早晚，"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Embodied.arises_given",
+    "Becoming.Dependence.makesDifference_iff",
+    "Becoming.Web.Dependent"
+   ],
+   "records": [
+    "laws-of-one-step",
+    "life-as-condition-of-life",
+    "joint-difference-making",
+    "support-from-the-supported"
+   ],
+   "reading": "AI读法：若生化不依因缘，则无条件之处也应生化，且无先后早晚：宗密的归谬依赖「生起需条件、条件造成差别」。Web.Embodied.arises_given 证具身关系项只经他者之给而生起；Dependence.makesDifference_iff 刻画条件之造成差别。相合；「生無前後」一层关涉依存与先后，见缺口二；对儒道「自然」说的判教不取。",
+   "tradition": "佛",
+   "work": "原人论",
+   "locator": "斥迷执第一",
+   "layer": "论·唐（宗密）",
+   "names_used": [
+    "待",
+    "有力"
+   ],
+   "relational": "万物—因缘：非因缘则一切处应生，生无前后",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "yuandao-shi-zhe-zhong",
+   "record_ids": [
+    "IN1-R-D04"
+   ],
+   "source_id": "IN1-S06",
+   "fragments": [
+    "農之家一，而食粟之家六；工之家一，而用器之家六；賈之家一，而資焉之家六。奈之何民不窮且盜也！"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.excess_bounded",
+    "Becoming.Pair.own_not_joint",
+    "Becoming.Flow.WithinJoint",
+    "Becoming.Flow.joint_excess_ends"
+   ],
+   "records": [
+    "consumption-ends-with-feeders",
+    "own-count-misses-joint-excess"
+   ],
+   "reading": "AI读法：一个给者被多方取用：各方所取或在给者所给之内，合起来却超过所给。Pair.own_not_joint 证各自取用在所给之内而合起来超过；Flow.excess_bounded 证联合超取持续n步，水平至少降n；Flow.joint_excess_ends 证联合超取不能持续。相合；与RO hanfei-wu-du（相合）同构。韩愈借此排佛老的论旨、「民」的分类不取；「賈」「資」只读作给与取。",
+   "tradition": "儒",
+   "work": "原道",
+   "locator": "原道",
+   "layer": "论·唐（韩愈）",
+   "names_used": [
+    "资",
+    "食"
+   ],
+   "relational": "一家给者—六家取者：奈之何不穷",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhuang-dazongshi-jie-jie",
+   "record_ids": [],
+   "source_id": "ZH1-S06",
+   "fragments": [
+    "此古之所謂縣解也。而不能自解者，物有結之。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Forms",
+    "Becoming.Web.Dissolves",
+    "Becoming.Web.forms_between",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "substitution-preserves-consumption",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：「結」是与物结成的依系，「解」是这依系的消解：Web.Forms、Web.Dissolves 定义依存跨一步形成与消解，Web.change_readings 把它们读作同一变化。「物有結之」说系缚在关系中，不在一方之内。相合，并为「結／解」之名提供出处；以「解」为当求之境界的价值方向不取。",
+   "tradition": "道",
+   "work": "庄子·大宗师",
+   "locator": "大宗师 子舆有病",
+   "layer": "子·《庄子》内篇（战国）",
+   "names_used": [
+    "結／解"
+   ],
+   "relational": "人—物：物有结之，不能自解",
+   "gap": "",
+   "ro_passage": ""
+  }
+ ],
+ "parallels": [
+  {
+   "record_id": "TP-H11-DX-R01",
+   "same_as_entry": "tuan-tai-pi-jiao",
+   "note": "泰大象「天地交，泰」，与彖传同一交而通之结构。"
+  },
+  {
+   "record_id": "TP-H12-DX-R01",
+   "same_as_entry": "tuan-tai-pi-jiao",
+   "note": "否大象「天地不交，否」，即切口（不交）。"
+  },
+  {
+   "record_id": "CY130-H12-R01",
+   "same_as_entry": "tuan-tai-pi-jiao",
+   "note": "程颐「天地不交則不生萬物」：不交则无所生，切口之后果；「匪人」的人道评价不取。"
+  },
+  {
+   "record_id": "WP-SG-C05-S07-R02",
+   "same_as_entry": "yi-xian-ganying-xiangyu",
+   "note": "「陰陽相薄」是两方交互；说卦以方位配卦的时位循环见RO shuogua-di-chu-zhen（相分），此处只取相薄。"
+  },
+  {
+   "record_id": "WP-XCS-C01-S02-R01",
+   "same_as_entry": "yi-xian-ganying-xiangyu",
+   "note": "刚柔相摩、八卦相荡而有雷雨寒暑：交互而生变化。"
+  },
+  {
+   "record_id": "CY130-H08-R01",
+   "same_as_entry": "yi-xian-ganying-xiangyu",
+   "note": "程颐「兩志相求」而成比，不相求则睽：关系由双方往来构成。"
+  },
+  {
+   "record_id": "WP-XCX-C09-S04-R02",
+   "same_as_entry": "xici-jin-er-bu-xiang-de",
+   "note": "「爱恶相攻而吉凶生」：交互之用可以相成也可以相削。"
+  },
+  {
+   "record_id": "JL-R506",
+   "same_as_entry": "xici-debo-weizun",
+   "note": "鼎折足即系辞所释「不胜其任」之本爻。"
+  },
+  {
+   "record_id": "JG2-H28-G-R01",
+   "same_as_entry": "xici-debo-weizun",
+   "note": "栋桡：所承之需超过栋之所能；「利有攸往」的占断不取。"
+  },
+  {
+   "record_id": "TP-H28-T-R02",
+   "same_as_entry": "xici-debo-weizun",
+   "note": "「棟橈，本末弱也」：所依之两端弱而不能承。"
+  },
+  {
+   "record_id": "TP-H10-X3-R02",
+   "same_as_entry": "xici-debo-weizun",
+   "note": "「跛能履，不足以與行也」：所凭之力不达所需；亦为「足」之出处。"
+  },
+  {
+   "record_id": "MO1-C09-R010",
+   "same_as_entry": "xici-debo-weizun",
+   "note": "不能治千而授万人之官：所担超过所能。"
+  },
+  {
+   "record_id": "MO1-C09-R001",
+   "same_as_entry": "xici-debo-weizun",
+   "note": "察其所能而后授之：使所需在所能之内。"
+  },
+  {
+   "record_id": "TP-H14-X2-R01",
+   "same_as_entry": "zhuang-xiaoyao-ji-hou-fu-da",
+   "note": "「大轝以載，積中不敗」：所积足以承载则不败，与积厚负大同构。"
+  },
+  {
+   "record_id": "RU1-ZY-34-R06",
+   "same_as_entry": "zhuang-xiaoyao-ji-hou-fu-da",
+   "note": "「博厚，所以載物也」：承载依于所积之厚。"
+  },
+  {
+   "record_id": "RU2-R0004",
+   "same_as_entry": "ru-mengzi-niu-shan",
+   "note": "不违农时、数罟不入、斧斤以时：取用在补给之内则「不可勝食」，与「得其養」同构。"
+  },
+  {
+   "record_id": "ZH1-C27-R-05",
+   "same_as_entry": "zhuang-qiwu-wangliang-dai",
+   "note": "寓言篇罔两问景之重述：「彼，吾所以有待邪？而況乎以有待者乎？」"
+  },
+  {
+   "record_id": "RU2-R0029",
+   "same_as_entry": "xunzi-fuguo-bu-xiang-dai",
+   "note": "孟子「一人之身，而百工之所為備」：各人之养在他人所为之内，相待。"
+  },
+  {
+   "record_id": "MO1-C10-R007",
+   "same_as_entry": "xunzi-fuguo-bu-xiang-dai",
+   "note": "力、财、道不相助则饥寒乱不得救：不相待则穷。"
+  },
+  {
+   "record_id": "IN1-R-D06",
+   "same_as_entry": "xunzi-fuguo-bu-xiang-dai",
+   "note": "韩愈「相生養之道」：人之存续在相互给养之中；圣人设制的叙事不取。"
+  },
+  {
+   "record_id": "YCM130-LG-W-06-R01",
+   "same_as_entry": "xici-fei-suo-ju",
+   "note": "王弼略例「得所據」「得所附」「得所禦」：所据相称则不惧，是「非所据而据」的正面。"
+  },
+  {
+   "record_id": "IN2-R0022",
+   "same_as_entry": "xici-fei-suo-ju",
+   "note": "「身有依倚，心漸得安」：有所据则安。"
+  },
+  {
+   "record_id": "JL-R520",
+   "same_as_entry": "xici-fei-suo-ju",
+   "note": "旅焚其次、丧其仆：失去所依之处与所资之人，故厉。"
+  },
+  {
+   "record_id": "TP-H08-X3-R01",
+   "same_as_entry": "xici-fei-suo-ju",
+   "note": "比之匪人：所依非其所能依，故伤。"
+  },
+  {
+   "record_id": "TP-H61-X6-R01",
+   "same_as_entry": "xici-fei-suo-ju",
+   "note": "翰音登于天，何可长也：所升无所承。"
+  },
+  {
+   "record_id": "WP-XCX-C04-S14-R01",
+   "same_as_entry": "xici-kanglong-wu-fu",
+   "note": "君子安其身而后动：先有所承，后动。"
+  },
+  {
+   "record_id": "WP-XCX-C04-S14-R05",
+   "same_as_entry": "xici-kanglong-wu-fu",
+   "note": "危以动则民不与：无所承而动，所依者不给。"
+  },
+  {
+   "record_id": "TP-H44-X4-R01",
+   "same_as_entry": "xici-kanglong-wu-fu",
+   "note": "「无魚之凶，遠民也」：离其所依则凶。"
+  },
+  {
+   "record_id": "RU1-LY-12-24-R02",
+   "same_as_entry": "xici-kanglong-wu-fu",
+   "note": "「以友輔仁」：有辅是「无辅」的正面。"
+  },
+  {
+   "record_id": "RU2-R0268",
+   "same_as_entry": "zhongyong-qi-ren-cun-wang",
+   "note": "荀子「法不能獨立，類不能自行；得其人則存」：法依于行之者。"
+  },
+  {
+   "record_id": "RU2-R0294",
+   "same_as_entry": "zhongyong-qi-ren-cun-wang",
+   "note": "「失其人則亡」：所依者亡则依者亡。"
+  },
+  {
+   "record_id": "RU1-DX-18-R01",
+   "same_as_entry": "zhongyong-qi-ren-cun-wang",
+   "note": "得众则得国：所依者在则依者立（文本之充分方向不证）。"
+  },
+  {
+   "record_id": "RU1-DX-18-R02",
+   "same_as_entry": "zhongyong-qi-ren-cun-wang",
+   "note": "失众则失国：共灭方向。"
+  },
+  {
+   "record_id": "RU1-ZY-35-R01",
+   "same_as_entry": "zhongyong-qi-ren-cun-wang",
+   "note": "「待其人然後行」「苟不至德，至道不凝」：道之行待其人；亦为「待」之出处。"
+  },
+  {
+   "record_id": "TP-H23-X1-R01",
+   "same_as_entry": "bo-daxiang-hou-xia",
+   "note": "剥床以足，以灭下：先削所依之下。"
+  },
+  {
+   "record_id": "TP-H23-X2-R01",
+   "same_as_entry": "bo-daxiang-hou-xia",
+   "note": "剥床以辨，未有与也：无所承助，故剥及之。"
+  },
+  {
+   "record_id": "TP-H23-X6-R01",
+   "same_as_entry": "bo-daxiang-hou-xia",
+   "note": "君子得舆，民所载也：上为下所承载。"
+  },
+  {
+   "record_id": "TP-H23-X6-R02",
+   "same_as_entry": "bo-daxiang-hou-xia",
+   "note": "小人剥庐，终不可用：削其所依之庐，则自身亦无所用。"
+  },
+  {
+   "record_id": "RU2-R0099",
+   "same_as_entry": "bo-daxiang-hou-xia",
+   "note": "荀子「庶人安政，然后君子安位」：上之安依于下之安。"
+  },
+  {
+   "record_id": "RU2-R0271",
+   "same_as_entry": "bo-daxiang-hou-xia",
+   "note": "士民不亲附，汤武不能必胜：所依者不附则不能成。"
+  },
+  {
+   "record_id": "IN2-R0063",
+   "same_as_entry": "bo-daxiang-hou-xia",
+   "note": "「佛法以人道為鎡基」：所立依于其基；「究竟」的次第不取。"
+  },
+  {
+   "record_id": "WP-SG-C07-S06-R01",
+   "same_as_entry": "li-tuan-li-hu-tu",
+   "note": "说卦「離，麗也」：同一训释。"
+  },
+  {
+   "record_id": "WP-XG-C01-S04-R02",
+   "same_as_entry": "xugua-yang",
+   "note": "「需者飲食之道也」：所需之取用；亦为「食」之出处。"
+  },
+  {
+   "record_id": "WP-SG-C05-S05-R02",
+   "same_as_entry": "xugua-yang",
+   "note": "「萬物皆致養焉」：万物取养于坤，即以之为生。"
+  },
+  {
+   "record_id": "CY130-H26-R01",
+   "same_as_entry": "xugua-wu-xu-ran-hou-ke-yang",
+   "note": "程颐「充積於内乃所畜之大」：先蓄而后施；亦为「蓄」之出处。"
+  },
+  {
+   "record_id": "TP-H45-DX-R02",
+   "same_as_entry": "xugua-wu-xu-ran-hou-ke-yang",
+   "note": "「除戎器，戒不虞」：为不测之步预留储备。"
+  },
+  {
+   "record_id": "LC2-HS-C59-R03",
+   "same_as_entry": "song-shi-jiu-de",
+   "note": "河上公「深藏其气，固守其精，使无漏泄」：持守储备，使不受支撑之时可以延续。"
+  },
+  {
+   "record_id": "TP-H17-X1-R02",
+   "same_as_entry": "sui-chu-men-jiao",
+   "note": "「出門交有功，不失也」：同一爻之小象。"
+  },
+  {
+   "record_id": "FO1-R-CY19",
+   "same_as_entry": "guimei-you-dai-er-xing",
+   "note": "唯识种子六义「待眾緣」：「種於果非恒頓生」，生起待所待之缘，故非一时俱生；与缺口二相关。"
+  },
+  {
+   "record_id": "BI1-SZ-R-19",
+   "same_as_entry": "guimei-you-dai-er-xing",
+   "note": "「先勝而後求戰」：行动待条件先具；与缺口二相关。"
+  },
+  {
+   "record_id": "TP-H03-T-R01",
+   "same_as_entry": "zhuang-dazongshi-jie-jie",
+   "note": "屯「剛柔始交而難生」：关系初结之时。"
+  },
+  {
+   "record_id": "WP-XG-C02-S15-R03",
+   "same_as_entry": "zhuang-dazongshi-jie-jie",
+   "note": "「物相遇而后聚」：相遇而后结。"
+  },
+  {
+   "record_id": "LC-R002",
+   "same_as_entry": "lao-02-you-wu-xiang-sheng",
+   "note": "苏辙解老：六对「不可偏舉」，相待而立。"
+  },
+  {
+   "record_id": "LC-R028",
+   "same_as_entry": "lao-11-dang-qi-wu",
+   "note": "苏辙「非有則無無以致其用」：有无相资。"
+  },
+  {
+   "record_id": "ZH1-C22-R-08",
+   "same_as_entry": "lao-11-dang-qi-wu",
+   "note": "捶钩者「用之者，假不用者也」：所用依于所不用。"
+  },
+  {
+   "record_id": "LC2-SZ-C13-R01",
+   "same_as_entry": "lao-58-qi-wu-zheng",
+   "note": "苏辙「辱生于寵」：宠辱互为所伏。"
+  },
+  {
+   "record_id": "LC2-HS-C42-R03",
+   "same_as_entry": "lao-42-chong-qi-yi-wei-he",
+   "note": "河上公注「三生萬物」为「天地人共生萬物」：多条件共同生起；同章。"
+  },
+  {
+   "record_id": "LC2-SZ-C36-R03",
+   "same_as_entry": "lao-36-yu-yuan",
+   "note": "苏辙「魚惟脱于淵然後人得制之」：离所依则失支撑。"
+  },
+  {
+   "record_id": "LC2-WB-C12-R01",
+   "same_as_entry": "lao-20-gui-shi-mu",
+   "note": "王弼「為腹者以物養己」：以物为生。"
+  },
+  {
+   "record_id": "LC2-WB-C22-R01",
+   "same_as_entry": "wangbi-chong-ben-xi-mo",
+   "note": "王弼「轉少轉得其本」：近所待则得。"
+  },
+  {
+   "record_id": "RU1-DX-07-R01",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "「此謂知本」：知所待。"
+  },
+  {
+   "record_id": "RU1-LY-01-02-R01",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "「本立而道生」：所待立而后依者生。"
+  },
+  {
+   "record_id": "RU1-DX-09-R02",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "身不修不可以齐其家：同一而后链。"
+  },
+  {
+   "record_id": "RU1-DX-10-R01",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "其家不可教而能教人者无之：同一而后链。"
+  },
+  {
+   "record_id": "IN2-R0100",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "「必格物致知以誠其意，然後心正而身修」：同一而后链的后世重述。"
+  },
+  {
+   "record_id": "IN1-R-D07",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "韩愈引大学次第以判其目的：同一而后链。"
+  },
+  {
+   "record_id": "RU1-ZY-26-R01",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "中庸「不明乎善，不誠乎身」：同构的则链。"
+  },
+  {
+   "record_id": "RU1-ZY-26-R02",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "「反諸身不誠，不順乎親」：同构的则链。"
+  },
+  {
+   "record_id": "RU1-ZY-26-R03",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "「不順乎親，不信乎朋友」：同构的则链。"
+  },
+  {
+   "record_id": "RU1-ZY-26-R04",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "「不信乎朋友，不獲乎上」：同构的则链。"
+  },
+  {
+   "record_id": "RU1-ZY-26-R05",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "「在下位不獲乎上，民不可得而治」：同构的则链。"
+  },
+  {
+   "record_id": "BI1-WZ-R-02",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "吴子四不和之一：不和于国不可出军，必要条件链。"
+  },
+  {
+   "record_id": "BI1-WZ-R-03",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "不和于军不可出陈：同链。"
+  },
+  {
+   "record_id": "BI1-WZ-R-04",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "不和于陈不可进战：同链。"
+  },
+  {
+   "record_id": "BI1-WZ-R-05",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "不和于战不可决胜：同链。"
+  },
+  {
+   "record_id": "FO2-YJ-R003",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "蕅益「非信不足以啟願」：必要条件链。"
+  },
+  {
+   "record_id": "FO2-YJ-R004",
+   "same_as_entry": "ru-daxue-ben-mo",
+   "note": "「非願不足以導行」：同链。"
+  },
+  {
+   "record_id": "RU1-LY-19-10-R01",
+   "same_as_entry": "lunyu-min-wu-xin-bu-li",
+   "note": "「信而後勞其民」：信为所待。"
+  },
+  {
+   "record_id": "RU1-LY-19-10-R02",
+   "same_as_entry": "lunyu-min-wu-xin-bu-li",
+   "note": "未信而劳民则以为厉己：缺所待之信，关系变为削弱。"
+  },
+  {
+   "record_id": "RU1-LY-19-10-R03",
+   "same_as_entry": "lunyu-min-wu-xin-bu-li",
+   "note": "「信而後諫」：同上。"
+  },
+  {
+   "record_id": "RU1-LY-19-10-R04",
+   "same_as_entry": "lunyu-min-wu-xin-bu-li",
+   "note": "未信而谏则以为谤己：同上。"
+  },
+  {
+   "record_id": "RU1-ZY-39-R03",
+   "same_as_entry": "lunyu-min-wu-xin-bu-li",
+   "note": "「不信民弗從」：信为所待。"
+  },
+  {
+   "record_id": "FA1-H43-R005",
+   "same_as_entry": "lunyu-zhi-ji-ren-shou",
+   "note": "韩非「此不可一無」：术与法并具，合取。"
+  },
+  {
+   "record_id": "FO2-QX-R034",
+   "same_as_entry": "lunyu-zhi-ji-ren-shou",
+   "note": "止观「不相捨離」：二者并具。"
+  },
+  {
+   "record_id": "FO2-QX-R037",
+   "same_as_entry": "lunyu-zhi-ji-ren-shou",
+   "note": "「若止觀不具，則無能入菩提之道」：合取之必要。"
+  },
+  {
+   "record_id": "BI1-SM-R-08",
+   "same_as_entry": "lunyu-zhi-ji-ren-shou",
+   "note": "「雖有明君，士不先教，不可用也」：有一不具则不成。"
+  },
+  {
+   "record_id": "BI1-SM-R-11",
+   "same_as_entry": "lunyu-zhi-ji-ren-shou",
+   "note": "军旅之固需行列、人马之力、迟速三者并具；「不絕人馬之力」亦为「絕」之出处。"
+  },
+  {
+   "record_id": "BI1-SM-R-16",
+   "same_as_entry": "lunyu-zhi-ji-ren-shou",
+   "note": "「有仁無信，反敗厥身」：缺一则败。"
+  },
+  {
+   "record_id": "FO1-R-CY21",
+   "same_as_entry": "lunyu-zhi-ji-ren-shou",
+   "note": "所熏四义须并具：合取之资格。"
+  },
+  {
+   "record_id": "RU2-R0231",
+   "same_as_entry": "lunyu-zhi-ji-ren-shou",
+   "note": "「心能使耳目鼻口，不能代耳目鼻口之能」：各所待之能不可相代，故须并具。"
+  },
+  {
+   "record_id": "FO1-R-M26-04",
+   "same_as_entry": "zaahan-san-shi-he-he",
+   "note": "中论「情塵識和合，而生於六觸」：同一三事和合。"
+  },
+  {
+   "record_id": "FO1-R-M35",
+   "same_as_entry": "zaahan-san-shi-he-he",
+   "note": "同上，中论偈之单录。"
+  },
+  {
+   "record_id": "TP-H21-T-R04",
+   "same_as_entry": "zaahan-san-shi-he-he",
+   "note": "「雷電合而章」：二者合而有所成。"
+  },
+  {
+   "record_id": "FO2-QX-R028",
+   "same_as_entry": "zaahan-san-shi-he-he",
+   "note": "内熏之力与外缘并具，乃能进趣：因缘具足之结构。"
+  },
+  {
+   "record_id": "RU2-R0114",
+   "same_as_entry": "zaahan-san-shi-he-he",
+   "note": "「天有其時，地有其財，人有其治」：三者并具乃能参。"
+  },
+  {
+   "record_id": "FO2-YJ-R008",
+   "same_as_entry": "zaahan-san-shi-he-he",
+   "note": "得生由信愿之有无：所待之必要。"
+  },
+  {
+   "record_id": "HX-R008",
+   "same_as_entry": "zaahan-san-shi-he-he",
+   "note": "小畜彖「健而巽，剛中而志行，乃亨」：几个条件并具乃亨；占断义不取。"
+  },
+  {
+   "record_id": "YCM130-Q-Z-Q06-R01",
+   "same_as_entry": "mengzi-zhi-qi",
+   "note": "王注「位以德興，德以位敘」：位与德互为所待。"
+  },
+  {
+   "record_id": "JG2-H11-L1-R01",
+   "same_as_entry": "mengzi-zhi-qi",
+   "note": "拔茅茹以其彙：根相连，动一则及其类，影响沿连接所达；占断不取。"
+  },
+  {
+   "record_id": "FO1-R-CY09",
+   "same_as_entry": "weishi-xun-xi",
+   "note": "阿赖耶识「與雜染互為緣」：能藏所藏互为所待，与熏习之环同构。"
+  },
+  {
+   "record_id": "FO2-FQ-R020",
+   "same_as_entry": "huayan-shi-xuan",
+   "note": "十玄「秘密隱顯俱成」：此成故彼成，互依。"
+  },
+  {
+   "record_id": "FO2-KS-P-R018",
+   "same_as_entry": "huayan-shi-xuan",
+   "note": "金师子章一毛重重无尽：同十玄。"
+  },
+  {
+   "record_id": "ZH1-C17-R-08",
+   "same_as_entry": "zhuangzi-qiwu-bi-chu-yu-shi",
+   "note": "秋水「知東西之相反而不可以相无」：相反者互为所待。"
+  },
+  {
+   "record_id": "FO1-R-M04",
+   "same_as_entry": "zhuangzi-qiwu-bi-chu-yu-shi",
+   "note": "中论「因自性有他性」：自他相待而立；亦为「相待」之出处。"
+  },
+  {
+   "record_id": "FO2-YJ-R018",
+   "same_as_entry": "zhuangzi-qiwu-bi-chu-yu-shi",
+   "note": "蕅益「無願無行不名真信」：三者互为所待。"
+  },
+  {
+   "record_id": "MO1-C25-R005",
+   "same_as_entry": "mozi-fei-ming-shang-xia",
+   "note": "厚葬久丧则上不能听治、下不能从事：给者停止。"
+  },
+  {
+   "record_id": "MO1-C25-R006",
+   "same_as_entry": "mozi-fei-ming-shang-xia",
+   "note": "贫寡乱则积委、城郭、上下调和不得：所依之条件削弱。"
+  },
+  {
+   "record_id": "MO1-C27-R004",
+   "same_as_entry": "mozi-fei-ming-shang-xia",
+   "note": "上强听治、下强从事则国治财足：给者持续则所资充足（正面）。"
+  },
+  {
+   "record_id": "MO1-C37-R007",
+   "same_as_entry": "mozi-fei-ming-shang-xia",
+   "note": "听治、耕织皆怠则政乱财缺：同上。"
+  },
+  {
+   "record_id": "MO1-C09-R003",
+   "same_as_entry": "mozi-fei-ming-shang-xia",
+   "note": "贤者治政、聚财、耕稼而财食充足：给者之所为。"
+  },
+  {
+   "record_id": "CT1-R-ZL13",
+   "same_as_entry": "zhaolun-dai-yuan",
+   "note": "僧肇评即色义：「豈待色色而後為色哉」，色不自色，非待一造色者。"
+  },
+  {
+   "record_id": "FO1-R-CY-NS1",
+   "same_as_entry": "zhaolun-dai-yuan",
+   "note": "唯识「託眾緣生」，故说生无性：待缘而有。"
+  },
+  {
+   "record_id": "FO1-R-CY37",
+   "same_as_entry": "zhaolun-dai-yuan",
+   "note": "「依他眾緣而得起故」：待缘而起。"
+  },
+  {
+   "record_id": "FO1-R-M28",
+   "same_as_entry": "zhonglun-yin-yuan-jia-ming",
+   "note": "同品：若决定有性，则见诸法无因无缘。"
+  },
+  {
+   "record_id": "FO2-FQ-R003",
+   "same_as_entry": "zhonglun-yin-yuan-jia-ming",
+   "note": "法藏「果中唯有空、有二義，謂從他生、無體性」：从他生故无自性。"
+  },
+  {
+   "record_id": "FO1-R-HE03",
+   "same_as_entry": "zhonglun-yin-yuan-jia-ming",
+   "note": "心经「色即是空」：依中观读作缘生者无自性；不读作色之不存在。"
+  },
+  {
+   "record_id": "FO1-R-CY14",
+   "same_as_entry": "zhonglun-xian-you-he-yong-yuan",
+   "note": "「若唯本有，轉識不應與阿賴耶為因緣性」：已在者不待缘，缘即无力。"
+  },
+  {
+   "record_id": "FO1-R-CY22",
+   "same_as_entry": "zhonglun-xian-you-he-yong-yuan",
+   "note": "能熏四义「有勝用」：能造成差别者乃为能熏。"
+  },
+  {
+   "record_id": "FO2-FQ-R007",
+   "same_as_entry": "huayan-yin-men-liu-yi",
+   "note": "「由有力無力義故，有相入門」：同一有力维。"
+  },
+  {
+   "record_id": "FO2-FQ-R008",
+   "same_as_entry": "huayan-yin-men-liu-yi",
+   "note": "「由有待緣不待緣義故，有同體異體門」：同一待缘维。"
+  },
+  {
+   "record_id": "FO2-FQ-R009",
+   "same_as_entry": "huayan-yin-men-liu-yi",
+   "note": "「他有力、自無力」：有力无力相对而说。"
+  },
+  {
+   "record_id": "FO2-KS-C-R008",
+   "same_as_entry": "huayan-yin-guo-tong-ti",
+   "note": "承迁「因該果海，果徹因源」：因果互彻，同一消去方向之读。"
+  },
+  {
+   "record_id": "FO2-MH-R019",
+   "same_as_entry": "mohe-zhiguan-yin-yuan",
+   "note": "十如是「本末究竟等」：本末悉从缘生；同段。"
+  },
+  {
+   "record_id": "FO2-YJ-R010",
+   "same_as_entry": "mohe-zhiguan-yin-yuan",
+   "note": "蕅益以「正因緣」与佛愿「增上緣」共释：主因、助缘之分，同一定域。"
+  },
+  {
+   "record_id": "FO1-R-SA-C0",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "种种界缘生种种触：依存链之一环。"
+  },
+  {
+   "record_id": "FO1-R-SA-C1",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "缘触生受：同链。"
+  },
+  {
+   "record_id": "FO1-R-SA-C2",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "缘受生想：同链。"
+  },
+  {
+   "record_id": "FO1-R-SA-C3",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "缘想生欲：同链。"
+  },
+  {
+   "record_id": "FO1-R-SA-C4",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "缘欲生觉：同链。"
+  },
+  {
+   "record_id": "FO1-R-SA-C5",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "缘觉生热：同链。"
+  },
+  {
+   "record_id": "FO1-R-SA-C6",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "缘热生求：同链。"
+  },
+  {
+   "record_id": "FO1-R-SA010",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "缘触生受：同链。"
+  },
+  {
+   "record_id": "FO1-R-SA011",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "缘受生爱，乃至纯大苦聚生：同链。"
+  },
+  {
+   "record_id": "FO1-R-SA027",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "缘眼界生眼触等：同链之展开。"
+  },
+  {
+   "record_id": "FO1-R-SA032",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "增上慧学成就则戒、意二学满足：一条件成立而依之者随之成立；文本之充分方向不证。"
+  },
+  {
+   "record_id": "FO1-R-SA-T1",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "四谛「集」当知当断：断所依则依者灭，还灭之结构；修行之劝不取。"
+  },
+  {
+   "record_id": "FO1-R-M26-00",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "中论十二因缘：痴覆起行，同链。"
+  },
+  {
+   "record_id": "FO1-R-M26-01",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "行缘识：同链。"
+  },
+  {
+   "record_id": "FO1-R-M26-03",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "名色生六入：同链。"
+  },
+  {
+   "record_id": "FO1-R-M26-05",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "触生受：同链。"
+  },
+  {
+   "record_id": "FO1-R-M26-06",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "受生渴爱：同链。"
+  },
+  {
+   "record_id": "FO1-R-M26-07",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "爱生取：同链。"
+  },
+  {
+   "record_id": "FO1-R-M26-08",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "取生有：同链。"
+  },
+  {
+   "record_id": "FO1-R-M26-09",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "有生生：同链。"
+  },
+  {
+   "record_id": "FO1-R-M26-10",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "生生老死：同链。"
+  },
+  {
+   "record_id": "FO1-R-M11",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "「若無有我者，何得有我所」：此无故彼无。"
+  },
+  {
+   "record_id": "FO2-QX-R013",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "「依不覺故心動」「果不離因」：依存链之一环。"
+  },
+  {
+   "record_id": "IN1-R-Y08",
+   "same_as_entry": "zaahan-ci-you-gu-bi-you",
+   "note": "宗密述小乘教：我执起三毒，造业受报，依存链。"
+  },
+  {
+   "record_id": "IN1-R-Y04",
+   "same_as_entry": "yuanren-fei-yin-yuan",
+   "note": "宗密判儒道二教「未備染淨因緣」：同篇同论旨之判教，只取其依赖因缘之要求。"
+  }
+ ],
+ "rejected": [
+  {
+   "record_id": "WP-SG-C04-S01-R01",
+   "why": "说卦「雷以動之」只列卦象之功用，没有依存或条件的结构；归卦象功能之列举。"
+  },
+  {
+   "record_id": "WP-SG-C04-S06-R01",
+   "why": "「兌以說之」同为功用列举，无依存结构。"
+  },
+  {
+   "record_id": "WP-SG-C04-S08-R01",
+   "why": "「坤以藏之」只是功用列举；「藏」与储备同字而不同构。"
+  },
+  {
+   "record_id": "WP-XG-C01-S08-R02",
+   "why": "「比必有所畜」是序卦以卦名串联的连接（畜作畜止、畜聚），不是条件关系。"
+  },
+  {
+   "record_id": "WP-XCS-C08-S10-R01",
+   "why": "「小人而乘君子之器，盗思夺之」关涉名位与争夺，归C13／C04。"
+  },
+  {
+   "record_id": "TP-H30-T-R04",
+   "why": "「重明以麗乎正，乃化成天下」中的「正」是规范，条件结构已由离彖前句承担（li-tuan-li-hu-tu）。"
+  },
+  {
+   "record_id": "TP-H23-X3-R01",
+   "why": "「剝之无咎，失上下也」说六三与群阴相失而应上九，是爻位应与关系，归C17。"
+  },
+  {
+   "record_id": "TP-H08-DX-R01",
+   "why": "比大象「地上有水」只是取象，「建萬國，親諸侯」是政治规范，无依存结构可证。"
+  },
+  {
+   "record_id": "ZX130-H09-R01",
+   "why": "朱注「隂畜陽能繫而不能固」之「畜」是畜止（约束），不是储备；归C13或他簇。"
+  },
+  {
+   "record_id": "RU1-ZY-29-R03",
+   "why": "「誠則明矣」是两种状态的相互蕴含，关涉明（已采用之名），归C08。"
+  },
+  {
+   "record_id": "RU1-ZY-29-R04",
+   "why": "「明則誠矣」同上，归C08。"
+  },
+  {
+   "record_id": "RU1-ZY-13-R04",
+   "why": "「言顧行」是言行一致的规范，不是依存条件。"
+  },
+  {
+   "record_id": "RU1-ZY-13-R05",
+   "why": "「行顧言」同上。"
+  },
+  {
+   "record_id": "MI1-R-SX-shadow",
+   "why": "墨经「足蔽下光，故成景於上」是几何光学的成因关系，归C16。"
+  },
+  {
+   "record_id": "BI1-SZ-R-16",
+   "why": "孙子「三軍既惑且疑，則諸侯之難至」是军事争斗中的后果，归C04。"
+  },
+  {
+   "record_id": "CT1-R-SJ10",
+   "why": "司马谈论道家「以虛無為本，以因循為用」关涉本体与用，归C01。"
+  },
+  {
+   "record_id": "FO2-FH-R007",
+   "why": "法华「如是因」只是十如是名目之列举，未给关系结构；结构由摩诃止观之释承担（mohe-zhiguan-yin-yuan）。"
+  },
+  {
+   "record_id": "FO2-FH-R008",
+   "why": "「如是緣」同上。"
+  },
+  {
+   "record_id": "FO2-FH-R009",
+   "why": "「如是果」同上。"
+  },
+  {
+   "record_id": "FO2-AM-R004",
+   "why": "阿弥陀经闻法音而念佛法僧，是境界描述，无依存结构。"
+  },
+  {
+   "record_id": "FO1-R-HE01",
+   "why": "「行深般若…照見五蘊皆空」是修行与照见的关系，归C08。"
+  },
+  {
+   "record_id": "FO2-TJ-R019",
+   "why": "坛经「外若離相，心即不亂」是禅定的修行定义，归C08／C09。"
+  }
+ ],
+ "notes": "总的发现（AI读法）：本簇的中心论点——依存是关系的、有向的、可成链的，条件之为条件在于它造成差别——在先秦至唐的材料中大体成立，而且结构相合多于字面相合。庄子「有待而然／所待又有待」与 Web.Bearing、Web.roles、Web.active_along 一一对应；「積也不厚則負大舟也无力」正是 need ≤ level 的比较；荀子「離居不相待則窮」与给养闭包之外无所给（Flow.beyond_gives_nothing）相合；起信论「唯風滅故動相隨滅，非是水滅」给出共灭的方向（Web.coextinct 只沿依存方向传递）；法藏因门六义的「有力／無力」「待緣／不待緣」两维与 but-for 检验及联合造成差别（Dependence.MakesDifference、DifferenceOnlyTogether）结构一致；孔疏「根株雖未全死，僅有微生，將死不久」与有储备的滞后共灭（Web.Carries.coextinct_lasts）相合；墨子「賴其力者生」给出自待（Web.SelfBearing）的先秦结构。名：待、所待、足、资、食、交、相待、持／絕、結／解、隨滅、蓄、自待（新组合）、不交、有力、小故、大故，各一概念，无一名两用；已采用之名（识、明、无明、理、机、护闭、约定俗成、中和）未改动，「明」「护闭」相关的候选归他簇或避开。\n\n分配：322 个主候选全部落定——83 条 entry（其中 4 条为新增、record_ids 为空：齐物论罔两、田子方有待、大宗师结解、起信论风水；墨子非乐一条用 MO1-C32-R006）、149 条 parallel、22 条 rejected，经脚本核对无遗漏、无重复；所有 fragment 均以 ctq.py text 在冻结正文中逐字命中；所有声明均在当前脊柱的声明表中。沿用 RO 的 entry 共 19 条（kind 与声明照用）；其中 6 条增加声明并在 reading 中说明理由（tuan-tai-pi-jiao 增 Flow.Cut；shuogua-tiandi-dingwei 增 Web.Embodied.arises_given；ru-daxue-ben-mo 增 Web.active_along；ru-lunyu-zheng-ming 增 Web.coextinct、Web.active_along；huayan-shi-xuan 增 Flow.MutuallyDependent；zhuangzi-qiwu-bi-chu-yu-shi 增 Web.roles）。RO 图中 Widening.closes_within、Widening.closing_needs_less、Widening.runs_away 三名已于 R22 改为 LoopReturn.*，本簇用现名，RO passages.json 需由其所有者更新。\n\n相分（按分量排）：\n1. huayan-yin-guo-tong-ti：「因果同體，得此即得彼」消去依存的方向与步骤；脊柱中依存有向（Downstream.one_way），生起跨步（Web.Embodied.arises_given），相互依存是两向依存的闭包而非同体。承迁「因該果海，果徹因源」并入。\n2. mengzi-tianxia-zhi-ben：单向之链、唯一之本（身）；脊柱中依存多条件、可相互，中心不沿依存导出。相分在「唯一之本」，不在依存本身。\n3. 定域而近于相分者：大学以修身为唯一之本（ru-daxue-ben-mo、daxue-you-de-ci-you-ren）；王弼「崇本息末」的本末等级；系辞以天为施助者并许以「吉无不利」（xici-tian-zhu-shun）；庄子「惡乎待」若读作全无所待（zhuang-xiaoyao-wu-suo-dai；郭象「非待」见 RO guoxiang-zhu-du-hua，相分）；序卦「家道窮必乖」之「必」（Crossing.loss_does_not_decide 证断裂不决定去向）；起信论「本觉」作不依任何东西的根据。\n\n缺口（按重要性排，均已在脊柱源码中检索 active t x ↔ active t y、coactive 等未见）：\n一、依存环上的同活动（唯识「俱生俱滅」「蘆束更互相依」、孔疏根枝、系辞乾坤毁则易息）。所缺陈述：theorem Web.active_iff_of_reach_both (dependent : W.Dependent) {t : Nat} {x y : X} (xy : Reach (W.bearing t) x y) (yx : Reach (W.bearing t) y x) : W.active t x ↔ W.active t y；两元特例为：在 Dependent 下，两具身关系项在每一步互相依之于正需，则二者在每一步同活动。最近声明：Web.active_along、Web.Embodied.active_of_bearing、Web.coextinct、Mutualism.dependent（见证）、Flow.MutuallyDependent（闭包层，不是同一步）。两行推论，尚未陈述；有储备时同活动失效而为滞后共灭（Web.Carries.coextinct_lasts），正是孔疏所说。\n二、所待之给先于依者之生起（「而後」「有待而行」「先勝而後求戰」「待眾緣故非恒頓生」）。所缺陈述：在 Balances、Acting 下，具身的 g 在 t 生起（¬active t g ∧ active (t+1) g），且在 t 给 g 的活动者只有 y，则 W.active t y——y 先于 g 一步活动。最近声明：Web.Embodied.arises_given（给出存在某个他者给之）、Web.Embodied.active_of_bearing（同步之必要）。亦是推论，但「依存决定生起先后」目前只散在两条律中，没有一条陈述把「所待」与「先」连起来。\n三、（较轻）一条件之终止不波及另一条件（起信「非是水滅」）：两个具身条件 a、b 同为 g 所依，a 终止、g 随之终止、b 仍活动的见证。属反例式见证，脊柱没有任何律会推出 b 终止，故不构成理论缺陷，只是缺一个明示的模型。\n原拟之「受支撑而不活动」缺口已由 Sleeper.sleeper 覆盖（始终受支撑、只在奇数步活动），用于小故不等于大故（zhuang-dasheng-yang-xing-bu-zu、zaahan-san-shi-he-he）。\n\n名之冲突，请统合者裁定：「交」可能与 C04（交换、往来）及 C10（感应）之名相邻，本簇只取「经一条件取用与依存之对称交互」；「足」可能与他簇 Becoming.Enough 的命名相撞；「絕」与 Ren 所用「绝生」同字，后者是生之终绝，比依存断裂更强，全书统一时须区分；「小故／大故」的关系主在 C16，本簇只给名，若 C16 另命名，以统合者为准；「资」避开了财货义，但读者可能仍联想资本。\n\n自我反审：\n(1) 字面相合之险：积、藏、交、资、畜诸字在材料中常见，我已拒绝只有同字而无结构的候选（坤以藏之、比必有所畜、朱注畜止、重明丽乎正），但「積中不敗」「深藏固守」仍以储备读之，依据是它们说的是存量与延续，而非字面。\n(2) 必要方向与充分方向：许多「則」「而後」「此有故彼有」的条目，脊柱只证必要方向；我把只断言必要者判为相合，把同时断言充分者（三事和合生觸、泰彖交而通、大学此有链、序卦必）判为定域。若读者认为「而後」本身含充分义，则若干相合应降为定域。\n(3) Sleeper.sleeper 是空洞支撑的见证（它没有任何所需条件），用来说明支撑不导出活动是成立的，但较弱；一个有正需且满足而仍不活动的见证会更有力，可查 Drowsy、Dormancy 诸见证。\n(4) 大量平行条目被归入少数几个结构（ru-daxue-ben-mo 的必要条件链收了吴子四不和、蕅益信愿行、中庸则链；zaahan-ci-you-gu-bi-you 收了十二因缘诸环），可能抹平了各传统的差别，例如吴子是军事前提、蕅益是修行次第；平行之 note 已标明各自所取只限链式必要条件。\n(5)「有力」是唐代华严术语，置信低；「自待」是新组合，置信低，若统合者偏好有出处之名，可改以墨子「賴其力」的结构说明而不立专名。「待」的置信最高，但须在全书中明言不取「等待」与「对待」义。\n(6) 读法中凡涉及评价的前提已明说：Web.lived_on_reaches 依赖中性传递（N_rel）这一评价前提（lao-20-gui-shi-mu）；脊柱不给吉凶、不给保证，相关之语一律不取。"
+}

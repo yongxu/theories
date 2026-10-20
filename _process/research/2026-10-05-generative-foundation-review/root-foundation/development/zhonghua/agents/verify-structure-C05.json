@@ -1,0 +1,436 @@
+{
+ "cluster": "C05 持续、更新、回返与复",
+ "lens": "STRUCTURE（结构：所证之义是否恰有理论概念之结构；有无独立实体、二元、先在之本、单一中心、位次或评价；概念之述是否与章、词汇表一致；与已采之名一致、一概念一名；每条声明 grep 其全名并读其陈述；kind；读法是否恰为 Lean 所证。核对基于 becoming-verification 回执 20261020T045544.667431Z 之声明表与 R30／R33／R34 改名表、R35 E4 记录改名回执。以下全部是 AI 读法。）",
+ "names": [
+  {
+   "concept": "更新 renewal（条件层 Becoming.Web.Renewed：每步皆 Web.Kept；形成／运行层 Becoming.Web.RenewingIn）",
+   "name": "恆足",
+   "verdict": "revise",
+   "issues": "（1）组合不精确。C02 之「足」= Web.Supported（need t ≤ level t），按组合「恆足」= 每步所需皆足。Web.Renewed 却是每步皆 Kept（need t ≤ level t 且 need t ≤ level (t+1)），严格更强。反例（AI 构造，未入 Lean）：依存在 t 成立且被满足，于 t+1 解除，而 level (t+1) < need t。此时每步皆足，却在 t 处 Web.Broken（requires ∧ 当步足 ∧ 下步不足），所以不是 Renewed。fit 自己写「恆足＝每步皆持（C02 之持＝Web.Kept）」，与「恆＋足」的组合不一致；恰合的组合是「恆持」。\n（2）层次倒置。lean 列表把同一名挂到 Web.RenewingIn 上。RenewingIn f := 形成 f 所参与（依存或汲取）的每个条件皆 Renewed。词汇表 895 行说「更新、消耗」是运行之类，§2.1 说类「不属于构形，也不属于形成自身的历程」。「恆足」用在形成上读作该形成自身恆足，方向反了：是条件对每个依存者的支持在持续。\n（3）证据。大学「財恆足」成篇年代有争议，语境是财货（名已不取財）。帛书「恆足矣」是知足之足，mapper 自注只证其形，而此义正是 C15「足而止」所用之足。本编「足」已有两义，恆足会被读成知足。\n（4）fit 引的 Web.Returns 已由 R30 改名为 Web.Restored。",
+   "fix": "首选：条件层名用「恆持」（每步皆持 = Becoming.Web.Renewed），与 C02 持／絕、復足、不復足成一组。\n若保留「恆足」：明定义为「每步足，且足至下一步（足而不絕）」，只用于条件层 Web.Renewed；not_carried 加「知足之足（C15 足而止）」「形成自身之足」。\nlean 列表去掉 Web.RenewingIn，运行之类另立名（见 missing）。\nfit 中 Web.Returns 改为 Becoming.Web.Restored。"
+  },
+  {
+   "concept": "回程（R30 后为 restored：Becoming.Web.Restored）",
+   "name": "復足",
+   "verdict": "revise",
+   "issues": "（1）lean 四项中三项已不存在。R30 改名：Web.Returns → Web.Restored，Web.Returns.not_consumed → Web.Restored.not_consumed，Web.RenewedWithin.returns → Web.RenewedWithin.restored；模块 Return → Restoration。改名理由正是把「return」留给构形之再得：Web.Restored 的 docstring 明说它「不是构形之再来（Law.Returns、Branching.Returns）」。concept 标签「回程 return」须随之改。\n（2）「再」多说一层。Restored 只要求 t 时成立的依存在后来某步被满足，不要求它在 t 时已足（Consumed／Lost 的 docstring 也作同样区分）。「復足」字面预设先已足。零章词汇表 985 行「再被满足」有同一问题。\n（3）首条证据「七日來復」是初爻之阳再来（Hexagram.seventh_step），不是足。它与 alternatives 拒「來復」的理由（避免与构形之复重名）自相抵触。又，HX-R055 的证据 source 是 YD-HX04（另有 YD-HX01），不是所列的 YD-JG24：文字相同，记录对不上 source。孙子「怒可以復喜，慍可以復悅」作构词之例是对的。\n（4）C06 之「转」lean 列表仍引 Becoming.Web.Returns，须同改。",
+   "fix": "lean 改为 Becoming.Web.Restored、Becoming.Web.Restored.not_consumed、Becoming.Web.RenewedWithin.restored、Becoming.Web.consumed_iff。\nconcept 写为「復足 restored：在某步成立的每个依存，在后来某步被满足（不要求该步已足）」。\nfit 中三项引用同改。\n首条证据移出，或改注为「期」之用例；HX-R055 一条若留，source_id 改为 YD-HX04。\n通知 C06 更正「转」的 lean。"
+  },
+  {
+   "concept": "消耗 consumption（Becoming.Web.Consumed；Web.consumed_iff）",
+   "name": "不復足",
+   "verdict": "revise",
+   "issues": "（1）lean 中 Web.Returns.not_consumed 已改名为 Web.Restored.not_consumed；fit 引 Web.Returns 同此。\n（2）名义与概念不同。四条证据「亡國不可以復存，死者不可以復生」「魚失於淵而不可復得也」「死者不可復生」「其伤不复」的结构都是先有、后失、此后不再，即 Web.Lost（Broken：T 时被满足而断裂，此后不再满足）。Web.Consumed 不要求 T 时被满足；docstring 原文：It need not have been met at that step; Lost requires that。「不復」预设先足，所以名的字义是 Lost，而 concept 是更弱的 Consumed。\n（3）lean 列 Web.ConsumingIn（形成 f 汲取某个被消耗的条件）。在 Renewable.class_belongs_to_the_run 中，消耗之运行里焦点形成每步活跃，终结的是 sustaining 形成。「不復足」若谓汲取者即错。",
+   "fix": "lean 改为 Becoming.Web.Restored.not_consumed，去掉 Web.ConsumingIn（交给运行之类之名，见 missing）。\nconcept 写为「在某步成立的依存，此后每步都不被满足（不论该步已足否）」。\n为 Web.Lost 另立组合名，如「絕而不復足」（C02 絕 = Broken），把四条证据标为 Lost 之例。\nnot_carried 加「不谓汲取者」。"
+  },
+  {
+   "concept": "回程之期（Becoming.Web.RestoredWithin p；条件层 Web.RenewedWithin p）",
+   "name": "期",
+   "verdict": "revise",
+   "issues": "（1）lean 中 Web.ReturnsWithin 已改名为 Web.RestoredWithin（R30）。\n（2）结构是上界，不是周期。RestoredWithin p t g c := ∃k, 0<k≤p, need t ≤ level (t+k)。它对 p 单调（Web.RenewedWithin.mono）；p=0 时空（Web.renewedWithin_zero），所以 p ≥ 1。论语「期可已矣」之一周年、中庸「期月」是固定周期，fit 写「一轮之界」，须明说是「至多」。\n（3）not_carried 排除「期限」，可上界恰是期限之义（在期限之内）。应排除的是死期、约期、期望。\n其余（renewed_within_one、LateMet.within_one_not_renewing、seasonal_renewed_within_two、Slowing.slowing_recovery）都存在，陈述如 fit。",
+   "fix": "lean 改为 Becoming.Web.RestoredWithin，另加 Becoming.Web.RenewedWithin.mono。\nconcept 写为「期：p 步之内（上界，不是固定周期；p ≥ 1；期大者含期小者）」。\nnot_carried 删「期限」，保留期望、约期、死期、礼制。\n可检验的组合写作「期內復足」= RestoredWithin p。"
+  },
+  {
+   "concept": "构形之复返（Becoming.Law.Returns；Branching.Returns）",
+   "name": "復",
+   "verdict": "revise",
+   "issues": "（1）孙子「亡國不可以復存，死者不可以復生」中的復是副词「又」。mapper 在 not_carried 自己排除了「副词又」，又把它当「复之否定」的证据，自相抵触。\n（2）序卦「剝窮上反下，故受之以復」是翻转：Hexagram.bo_fu 给出环读一步得復、reverse bo = fu；消息之律则剝→坤→復两步。这不是一个构形在律下再得。mapper 在 alternatives 里拒「反」时说翻转与复返须分，这条证据又把二者合一。\n（3）fit「七日來復即消息之律自乾第七步一阳复生（seventh_step）」层次错了：再来的是初爻之阳（一个性质），乾这一构形第十二步才再得（twelve_steps；坤之 first_return 在第十二步）。\n（4）「「不可以復存」与「无往不復」是同一律的两面」没有对应定理。精确的那一对是 Law.returns_iff_keeps（复返恰当每一可能都保持）与 Law.lost_stays。\n泰九三、老子十六章两条证据结构正确。",
+   "fix": "删孙子一条，或只作「復＋状态」构词之说明。\n序卦一条注为「翻转之復（Hexagram.reverse、bo_fu），不是 Law.Returns」，或删去。\nfit 改为「七日來復：初爻之阳第七步复见（seventh_step）；构形之再得见 twelve_steps、waxWane_returns」。\n「同一律的两面」改为「Law.returns_iff_keeps 与 Law.lost_stays」。\n杂卦「復 反也」注为回转义。"
+  },
+  {
+   "concept": "合并 merge（Becoming.Law.Merges；其否定 Law.Lossless）",
+   "name": "同歸",
+   "verdict": "revise",
+   "issues": "（1）结构精确。Law.Merges（两个不同构形一步到同一构形）与 Law.Lossless 互为否定；Merges.not_both_return、Merges.loses、merged_stays 都存在，陈述如 fit。\n（2）与九句之「归」冲突。九句「动而归者谓之极, 极者收, 收而熄。」（sources/07-shengsheng-buxi/ssbx-repo/README.md，provenance）中，D49 读「归」为无损之复返（Law.Lossless.returns），读「不归」为被吸入或永不回来。本名却以「同歸」名合并（失），以「不同歸」名 Lossless。同一个「歸」字在本编中会同时名「无损而复」与「合并而失」，而不同歸恰是九句之归的条件：一字两向，违反一名一义。\n（3）系辞年代有争议已标。原文「天下同归而殊途」是褒义的汇通；fit 须明说本编之同歸是失去可能。",
+   "fix": "保留「同歸」名 Law.Merges。fit 加：「同歸是失：有限构形中永失一个可能（Merges.loses）」「本编之歸只在复词同歸中出现；九句之归（D49：Law.Lossless.returns）在本编写作无损之復，或在引文处注明九句用法」。交整合者裁定九句「归」在中华版中的写法。"
+  },
+  {
+   "concept": "带着历史 kept history（Becoming.Law.withHistory 一族）",
+   "name": "藏往",
+   "verdict": "keep",
+   "issues": "结构与 Law.withHistory 一族相合：withHistory_lossless、withHistory_new、withHistory_never_returns、withHistory_unlisted、Law.present_forgets 都存在，陈述如 fit。排除「知」作外在认知者是对的；往用 C08 之名，一致；系辞年代有争议已标。\n小问题：alternatives 以「積是数量之累积」拒「積」，而条目 yi-daxu-ri-xin-qi-de 的平行 RU2-R0146（荀子「积善而不息」）被注为「藏往式之积」，与这一拒绝相抵。",
+   "fix": "名不改。把 RU2-R0146 的平行注改为「积是量之累积，不是藏往」，或删去该平行。"
+  },
+  {
+   "concept": "侵蚀 undermining（Becoming.Web.UnderminingAt、UnderminingOn、MetAbove、UnderminingFor）",
+   "name": "剝",
+   "verdict": "revise",
+   "issues": "（1）评价。D6：侵蚀之判不是评价。剝的每个所证之义都带负判（「蔑貞凶」「切近災也」，阴剥阳、小人剥君子），现代「剝削」是 brief 所禁的社会经济评价词。名会把一个结构判（UnderminingOn）读成恶判。\n（2）fit「自下削其所依，渐至于身」中的「自下」「渐进」不在 UnderminingOn 中。UnderminingOn 是一次汲取事件：draws t f c，且之后 level(t+1) 既低于现需，也低于该依存曾被满足之需（MetAbove），没有方向与次第。剝牀以足、以辨、以膚之序是多次侵蚀的序列，没有对应定律。\n（3）拒「蝕」的理由（「没有汲取者」）不成立：蝕从食，恰带汲取者；中文版词汇表 984 行现用的就是「侵蚀」。",
+   "fix": "首选采用「侵蝕」，与中文版一致（或单字「蝕」）。\n若保留「剝」：not_carried 加「负判（凶、災）；剝削之社会经济义；自下、渐进之次第」；fit 删「自下……渐至于身」作为定义之部分，改为「剝牀之序是多次侵蚀之序列，脊柱只给单次之判」。\n改写拒「蝕」的理由。"
+  },
+  {
+   "concept": "通过变化之持续 persisting through change",
+   "name": "久",
+   "verdict": "revise",
+   "issues": "（1）concept 把三样东西合为一：\n- 持续之谓词：自某步起每步活跃（Web.Whole 之 w），或样式每步 Present。\n- 带前提的定律：Whole.arises_within 需部分 Brief，结论是 ¬¬ 形；Whole.needs_new、needs_arising 需部分各终且有清单，Immortal.immortal（永不终之部分：无生起而持续）与 Countless.countless（无有限清单）表明这些前提不可省；ByPassing.passes_within 需传递前提。\n- 一个不变量：Hexagram.changesAround_invariant／changesAround_run，沿运行保持之数。它是 C07「常」的结构，与本名自己在 not_carried 排除「久作不变、常（C07）」相抵触。\n（2）concept 把定律写进定义：「只经由部分之生起……而持续」是带前提的定理，不是久的定义。\n（3）条目 yi-xici-qiong-bian-tong-jiu 用久名之卦之律的安定（MarkedLines.run_rests：变后为少，不再变），与「久在变中，不在不变」相反。此读出自 Y1（YI-ZHUAN-AND-BECOMING 141、250 行）。",
+   "fix": "concept 改为「久：自某步起每步在场（整体每步活跃，或样式每步 Present）」。\nfit 写明：「部分各终且为清单所列时，整体之久需部分之不息（Whole.needs_arising，结论为 ¬¬ 形）；部分短暂时，每 d 步内有部分生起（Whole.arises_within）；前提不可省（Immortal.immortal、Countless.countless）；样式在传递前提下经由承载者（ByPassing.passes_within）」。\nlean 去掉 Hexagram.changesAround_invariant，交 C07 常。\n之卦一条不用久名（见该条目）。"
+  },
+  {
+   "concept": "不息 unceasing arising（Becoming.Web.Unceasing）",
+   "name": "不息",
+   "verdict": "revise",
+   "issues": "（1）lean 中 Web.generation_needs_replenishment 已改名为 Web.embodiedArising_needs_replenishment（R30：「generation」留给扩展、生生）。其陈述是：平衡、族中具身成员在任意晚之步生起时，¬∀t≥T 补充为零。\n（2）concept「无生生之不息即无损之复返」超出 D5／D49：\n- D49 说无损之复返（Law.Lossless.returns，构形层）是「归」，也是无生生之不息的一例。\n- D5 给的例子是 Recycle.closed_unceasing（闭合循环，总量恒一而生起不止），以及有界整体在自然数量下之复返（Flow.whole_recurs_of_rest_idle）。\n「即」把一例说成等同，又混了层：Lossless.returns 是构形层，Unceasing 是生起层。\n（3）not_carried「整体之不息恰经由部分之终与新部分之生（Web.Whole.needs_arising）」：needs_arising 的前提是整体自某步起每步活跃（久），不是整体之不息。\n（4）C03 也以不息名 Web.Unceasing。一概念一名，两簇须合为一条。",
+   "fix": "lean 改为 Becoming.Web.embodiedArising_needs_replenishment，加 Becoming.Recycle.closed_unceasing。\nconcept 改为「……；无生生之不息的例子：闭合循环（Recycle.closed_unceasing），有界整体在自然数量下之复返（Flow.whole_recurs_of_rest_idle）；D49 读无损之复返（Law.Lossless.returns）为归」。\nnot_carried 改为「整体之久经由部分之不息（Whole.needs_arising）」。\n与 C03 合并为一个名条。"
+  },
+  {
+   "concept": "生生不息（D5：生生在整体上继续，且仍有更多能形成）",
+   "name": "生生不息",
+   "verdict": "revise",
+   "issues": "结构与 D5 一致；lean 五项都存在，陈述如 fit。缺范围与前提：\n（1）whole_recurs_of_rest_idle、whole_not_new_of_rest_idle 中的复返由自然数量所迫。D5 Scope：这是表示之承诺，实数量下何者代之未定（§8.5）。它们还需有限清单（every）、Distinct、Gainless（第一律）、rest 无净给。\n（2）new_beyond_every 需 Gainless；World.arising_opens 需 Counted、Embodied、Balanced、Dissipative、ArisingRecurs。fit 都未写。\n（3）缺 D5 一点：被外部供给的部分（如地之于日）在供给持续时可有生生不息；整体只在不是第一律下的有限整体时可有，而实际整体是否如此是经验对应（§8.7）。",
+   "fix": "fit 加范围：\n- 复返由自然数量所迫（D5；§8.5）；\n- whole_*_of_rest_idle 需有限清单、Distinct、第一律、rest 无净给；\n- new_beyond_every 需第一律；\n- arising_opens 需普查、具身、平衡、耗散。\n再加 D5：被外部供给之部分在供给持续时可有之。"
+  },
+  {
+   "concept": "延续 continuation（延续条件 Becoming.Unrestricted 之对象）",
+   "name": "續",
+   "verdict": "revise",
+   "issues": "（1）两个声明之间没有形式联系。Unrestricted（Significance.lean）说 sig 对一切位置、步与形成成立。Web.Continues（Identity.lean）说：在延续读法 R 下，一步之后的形成延续此前活跃的某形成。后者是 C03「相續」的结构（零章词汇表作「延续关系」），concept 却称之为「接续关系」，而接续是 C03「繼」所用。\n（2）九句「动而不归者谓之中, 中者续, 续而生。」（sources/07-shengsheng-buxi/ssbx-repo/README.md，provenance）：D49 读其续为不归而继续（unheld_of_new，只在开放世界可能），比条件中「其向未来之延续」窄，不能作同义证据。\n（3）C14 已以「无弃」名延续条件、以「顾」名意义。續若名「条件所说之延续」，须与之协调，否则一概念多名。\n（4）条件只陈述、不断言，fit 已写，正确。",
+   "fix": "續只名「一个形成自某步起向后继续」（sig p t f 之对象），lean 只列 Becoming.Unrestricted，注「条件只陈述，不断言」。\n去掉 Web.Continues，交 C03 相續。\n九句之续注为 D49 之窄义（unheld_of_new）。\n与 C14 协调名，避免同一概念两名。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-fu-qiri-laifu",
+   "verdict": "revise",
+   "issues": "（1）Web.ReturnsWithin 已改名为 Web.RestoredWithin（R30）。\n（2）「七日是复所在之期……与依存之回程按期分级（Web.ReturnsWithin）同一形式」不成立：\n- seventh_step 是一个精确步数（state 7 = rising 1），不是 RestoredWithin 的上界；\n- 再来的是初爻之阳（乾之初爻第一步失，第七步回），乾这一构形第十二步才再得（twelve_steps）；\n- Web.Restored 的 docstring 明说依存之回返不是构形之再来。\n（3）relational「复返是一个构形……在一定步数之处再得」把一爻之复写成了构形之复。\n消息之律下每构形皆复（waxWane_returns）、坤十二步首次再得（first_return），这一 agreement 成立。",
+   "fix": "declarations 删 Web.ReturnsWithin，或注为类比、不作对应。\nreading 改为「第七步初爻之阳复见于下（seventh_step）；构形本身十二步再得（twelve_steps；坤之 first_return）；七日是精确步数，不是上界」。\nrelational 改为「复是一爻（一个性质）与律下历程之关系」。"
+  },
+  {
+   "id": "yi-fu-bu-yuan-fu",
+   "verdict": "revise",
+   "issues": "（1）Web.ReturnsWithin 已改名为 Web.RestoredWithin。\n（2）换了关系项：不遠復说的是偏离者自身之返，Restored 说的是条件之水平回到依存之需。\n（3）「期越短，依存未足之步越少」只是定义的重述（p 步之内则至多 p−1 步未足），不是定律。\n构形层（Law.Returns.undo、Branching.loss_passes_juncture）与 LoopReturn.closes_within／closes_within_exact 部分正确，前提（回返映射低于所受）已写。",
+   "fix": "删依存层一段，或改为「若读作条件之水平：按定义，RestoredWithin p 至多 p−1 步未足」。\n以 LoopReturn.closes_within、closes_within_exact、Law.Returns.undo、Branching.loss_passes_juncture 为对应。\ndeclarations 中 Web.ReturnsWithin 改名或删去。"
+  },
+  {
+   "id": "yi-fu-pin-fu",
+   "verdict": "revise",
+   "issues": "（1）Web.Returns.not_consumed → Web.Restored.not_consumed；Web.RenewedWithin.returns → Web.RenewedWithin.restored。\n（2）「经文的「厲」对应未恆足，「无咎」对应非不復足」把经文之判映到等级上。等级是结构之类，判不在律中（D6 同理：侵蚀之判不是评价）；这样写等于把判藏进了类。\n（3）关系项：頻復是复者自身屡失屡复（程頤「復善而屢失」），seasonal 例是条件之水平。这是结构类比，须说明。\n中间类（seasonal_renewed_within_two、SupportGatedWebs.fluctuating_neither、Slowing.slowing_recovery）存在，陈述正确。",
+   "fix": "两项改名。\n删「厲对应未恆足，无咎对应非不復足」，改为「屡失屡复对应既非更新也非消耗的中间类（seasonal_renewed_within_two、SupportGatedWebs.fluctuating_neither）；厲、无咎是经文之判，不映射」。\n注明此对应在条件之水平上读。"
+  },
+  {
+   "id": "yi-fu-mi-fu",
+   "verdict": "revise",
+   "issues": "（1）「这是「凶」「終有大敗」的结构」与末句「「凶」「大敗」「反君道」是评价与政治应用，不在律中」自相抵触。\n（2）关系项：迷復是复者迷其道，被映到条件之不復足（Consumed），须说明是在条件之水平上读。\n其余正确：never_not_verifiable 说十年不分迷与迟；Slowing.slowing_recovery 说迟复不是消耗；consumed_ends_when_fixed 带 Dependent 前提；Carries.consumed_lasts 也已写。",
+   "fix": "删「这是「凶」「終有大敗」的结构」，改为「若依存不变且活跃须受支持，不復足之后依存者不再活跃（consumed_ends_when_fixed）；凶、大敗是经文之判」。\nrelational 注明「条件之水平与依存之需的关系」。"
+  },
+  {
+   "id": "wangbi-fu-bu-su",
+   "verdict": "revise",
+   "issues": "reading、gap 与 declarations 中的 Web.ReturnsWithin 已改名为 Web.RestoredWithin；gap 的精确陈述「Web.ReturnsWithin p T g c」须同改。\ngap 本身可立且有价值：它正确指出 ends_within_from 要求自某步起永无支持，回程之例不满足。\n小点：Arises t p 指 t 不活跃、t+1 活跃，(ii) 的终结前提写法应与之对齐。",
+   "fix": "全文 Web.ReturnsWithin → Becoming.Web.RestoredWithin，declarations 同改；(ii) 写明以 Arises 之定义（t 不活跃、t+1 活跃）陈述「不再生起」。"
+  },
+  {
+   "id": "yi-tai-wuwang-bufu",
+   "verdict": "keep",
+   "issues": "声明都存在，陈述如读法。scope 恰当：有限构形中，律不同歸恰当每构形皆复（Law.lossless_iff_returns；Hexagram.every_returns_iff）；有同歸处被吸入者不复（wane_not_returns、drawn_iff_not_returns）；开放世界中不同歸也可永不复（Law.succ_open）。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-bo-chuang",
+   "verdict": "revise",
+   "issues": "（1）「足、辨被剥而身未及，已是凶」把经文之判接到侵蚀的结构上（D6：侵蚀之判不是评价）。\n（2）「所削先是所依之物，后及于身」的次第不在 UnderminingOn 中，它是单次汲取事件。\n其余声明存在：UnderminingAt／On、MetAbove、BreakingOn.undermining、lasts_on，陈述如读法；Hexagram.waning 是卦象。",
+   "fix": "删「已是凶」。加一句：「剝牀之次第是一串侵蚀事件，脊柱无对此次第之定律」。Hexagram.waning 注为卦象，不是侵蚀之律。"
+  },
+  {
+   "id": "yi-heng-tuan-jiu",
+   "verdict": "revise",
+   "issues": "「所以「恆久而不已」读作久，不读作常：是律之不变量」自相抵触：律之不变量（changesAround_invariant、changesAround_run、reach_keeps_orbit）正是 C07「常」的结构。\n「四時變化而能久成」的结构是整体经由部分轮替而久（Shifts.shifts、Web.Whole.arises_within）；「終則有始」是 twelve_steps、waxWane_returns。\nconsumed_continues_transformed 与本句关系弱。平行 TP-H32-DX-R02（「立不易方」读为沿运行保持之量）也把不变量当成久。",
+   "fix": "拆开：久 = 四时以变而久成（Shifts.shifts、Web.Whole.arises_within、ByPassing.passes_within）；終則有始 = twelve_steps、waxWane_returns。\nchangesAround_invariant、reach_keeps_orbit 移交 C07 常，或注为「常，不是久」。\nTP-H32-DX-R02 的平行注同改。"
+  },
+  {
+   "id": "yi-heng-jun-heng",
+   "verdict": "reject",
+   "issues": "强合。经文「初六：浚恆，貞凶，无攸利。」是对一种求恆方式的判（小象「始求深也」，mapper 已交 C11），并不陈述「动力学不决定意义」的结构。Web.significance_undetermined 说两种常值意义都可加于同一网，所以所表示的动力学不推出生命意义；它与经文没有同一关系、条件与方向。「恆不自带正值」是对名的注解，不是相合。\n另外两处须改：\n- 「生生之意义」应作词汇表的「生命意义」（LivingSignificance，911 行）；\n- records 引的是旧 id：one-axiom-yields-g0、axiom-decomposition（R35 E4 已改为 continuation-condition-yields-living-significance、continuation-condition-decomposition）。",
+   "fix": "删去本条目。「浚恆貞凶：久不自带正值」已在久的 not_carried 中，保留在那里即可。"
+  },
+  {
+   "id": "yi-kui-sang-ma-zi-fu",
+   "verdict": "keep",
+   "issues": "声明都存在。「自復」以不同歸为条件（lossless_iff_returns、Returns.undo）；有同歸处所失保持失去（Merges.loses、lost_stays）。条件与范围都已写，判不入律。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-jing-gai-yi-bu-gai-jing",
+   "verdict": "revise",
+   "issues": "（1）「无喪无得」只有一半有定律。Flow.level_kept 给「水平从不低于起点」（无喪），不给「不升」（无得）：在 WithinJoint 下水平可以升。reading 说「卦辞多一层「无喪无得」，可以补上」，超出所证。\n（2）supported_of_within 的两个前提（only：只依存此条件；low：需不高于起点水平）已写；由此每步 Kept（need ≤ level 0 ≤ level (t+1)）的推论，reading 自称未单列为定理，这是对的。\n（3）C07 的 tuan-jing-gai-yi 把同一句读为不变量：区域 {level ≥ level 0} 沿运行不变，两读一致，宜互注。",
+   "fix": "改为「无喪 = Flow.level_kept」；「无得」注为「无对应定律（需取恰等于给）」。加互注：「与 C07 tuan-jing-gai-yi 是同一结构的两读（水平下界不变）」。"
+  },
+  {
+   "id": "yi-jing-zhou-xiu-jing",
+   "verdict": "keep",
+   "issues": "声明都存在；Flow.restores_at／restores、SupportGated.repair_restores 的陈述如读法，修井读作给予使条件復足。\n平行 WP-XG-C02-S19-R02 有张力：程頤「井之為物，存之則穢敗，易之則清潔」之「易之」是改易，平行注却称「同修井之复足」，与本条「不是换一口新井」不合。",
+   "fix": "条目不改。平行注改为「程頤以易（改易）说井道之革，与修井之復足不同；是否换源，文本未定」，或移出平行。"
+  },
+  {
+   "id": "yi-jiji-chu-ji-zhong-luan",
+   "verdict": "keep",
+   "issues": "声明都存在，所证与所读一致：\n- 初吉不定终：prefix_does_not_decide、Run.AgreeUpTo；\n- 终乱：消息之律无不动之构形（Law.rests_iff、waxWane_moves、run_never_rests、never_comes_to_rest）；\n- 平衡下耗尽：Balances.runs_down、uptake_needs_replenishment。\n判不入律。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-shuogua-gen-zhong-shi",
+   "verdict": "keep",
+   "issues": "scope 恰当：终始相接只在部分有终、整体持续时成立（Whole.needs_new、begins_within、passes_within）；只消之律下坤吸收、终而无始（allBroken_absorbing、wane_never_back）。方位之配不入律。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-xugua-within-pairs",
+   "verdict": "revise",
+   "issues": "读法本身准确：bo_fu 区分了环读一步、翻转与消息律两步。问题有二：\n（1）22 条平行中，与「不可以終」同构的只有 S04「物不可終遯」、S10「物不可終難」、S22「物不可以終動」、S30「物不可以終離」，以及两条「极则反」S18、S26。其余 16 条平行自注「理由不映射」，只共享 order_paired（对内翻转或全变），不是本簇（持续、复）的结构。\n（2）「所以……在消息之律下没有一个构形是终点」：对内翻转与消息律无终点是两件事，读法用「所以」把二者连成推论。",
+   "fix": "平行只留 S04、S10、S22、S30（加注明的 S18、S26），其余移交卦序／成对之簇或删去。「所以……」改为并列陈述，不作推论。"
+  },
+  {
+   "id": "yi-xugua-heng-zhe-jiu",
+   "verdict": "revise",
+   "issues": "括注把久等同于「律之不变量 Hexagram.changesAround_invariant」，问题与 yi-heng-tuan-jiu 相同：不变量是 C07 常的结构。以久释恆、不以常释，这一读法本身是对的。",
+   "fix": "declarations 删 Hexagram.changesAround_invariant；括注只留 Web.Whole.arises_within、Web.ByPassing.passes_within。"
+  },
+  {
+   "id": "yi-zagua-bo-lan-fu-fan",
+   "verdict": "keep",
+   "issues": "声明都存在：Paired、order_paired、zagua_partners、partner_partner、bo_fu、both_fixed_iff 的陈述如读法。剝作卦名、爛不是侵蚀，区分得对。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-xugua-weiji-zhong",
+   "verdict": "keep",
+   "issues": "声明都存在：withHistory_unlisted、kept_history_unlisted、arising_opens（前提具身、平衡、耗散已写）、Onward.run_iff_continues、both_fixed_iff。读法与所证一致。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-xici-qiong-bian-tong-jiu",
+   "verdict": "revise",
+   "issues": "「之卦之律下……在此律之内，穷读作老，变之后即久」用久名之卦之律的安定（MarkedLines.run_settled、run_rests：自第一步起不再变）。这与久之名（久在变中，不在不变）相反：这里是静、安定，不是久。此读出自 Y1（YI-ZHUAN-AND-BECOMING 141、250 行），在名表内造成两义冲突。\n其余正确：穷则变不是普遍律（allBroken_absorbing）；consumed_ends_when_fixed（Dependent 下）；consumed_continues_transformed。",
+   "fix": "之卦一句改为「之卦之律下变后即止（run_rests），这是律下不动之构形（静），不是本编之久」。「通则久」只以 consumed_continues_transformed 与 Whole.needs_new 读。交整合者统一 Y1 之读。"
+  },
+  {
+   "id": "yi-xici-riyue-xiangtui",
+   "verdict": "keep",
+   "issues": "声明都存在：arising_recurs、ceasing_recurs、Frame.claims_recur_iff、Shifts.shifts、Whole.arises_within 的陈述如读法。「明与岁是相推之久」与久的谓词一致。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-xici-cheng-xing-cun-cun",
+   "verdict": "revise",
+   "issues": "（1）结构错。读法说「存存＝使已成者继续存在……其结构是 Web.Continues」，但 Web.Continues 是一步之间在延续读法 R 下的接续（C03 相續）；存存是已成者的持续在场，即 C03 之存（Web.Holds）或本簇之久的谓词。\n（2）「生生之意义」应作「生命意义」（词汇表 911 行）。\n（3）records 是旧 id（axiom-decomposition、one-axiom-yields-g0）。\n（4）「成性」可读为已成之定性（固定本性，四种非关系层之一），相分的根据可能也在这里，读法未提。\ndivergence 之判本身成立：「道义之门」断言延续是规范之入口，理论只作条件陈述。",
+   "fix": "Web.Continues 改为 Becoming.Web.Holds（C03 存），或本簇久的谓词。「生生之意义」改为「生命意义」。records 改为 continuation-condition-decomposition、continuation-condition-yields-living-significance。加一句：「成性若读为定性，另为固定本性之相分」。"
+  },
+  {
+   "id": "lao-16-guan-fu-gui-gen",
+   "verdict": "revise",
+   "issues": "（1）「脊柱只在……的世界中给出停息（World.comes_to_rest_unrefuted）」超出所证：定理结论是 ¬¬∃N, RestsFrom N，即停息不可被反驳；点出那一步要用全知原则（World.lpo_of_finite_ends）。\n（2）把「归根曰静」之静读作停息（RestsFrom），与词汇表冲突：897 行「静是一时成立者，停息是停」；D49 读静为律所不改变之构形（Law.rests_iff 之不动点），不是熄、停。\n（3）revisits_of_bounded、not_settles_of_recurs、change_recurs_iff、fed_from_beyond 正确。C04 的 lao-16-gui-gen-yue-jing 以止读同一句，须一致。",
+   "fix": "改为「在有普查、具身、平衡、耗散且自某步起封闭的世界中，停息不可被反驳（¬¬，comes_to_rest_unrefuted）」。「静」改读为律下不动之构形（Law.rests_iff），并说明停息（RestsFrom）是另一结构。与 C04 之条对齐。"
+  },
+  {
+   "id": "lao-25-shi-yuan-fan",
+   "verdict": "revise",
+   "issues": "「耗散而封闭者会静止（World.comes_to_rest_unrefuted）」超出所证：结论是 ¬¬（不可被反驳），并需普查、具身、平衡、耗散、自某步起围绕所立者封闭；「静止」又混了静与停息。\n其余 scope 正确：lossless_iff_returns 需有限构形；succ_open 是开放世界的反例；revisits_of_bounded。",
+   "fix": "改为「在有普查、具身、平衡、耗散且自某步起封闭的世界，停息不可被反驳（comes_to_rest_unrefuted）」，不写「会静止」。"
+  },
+  {
+   "id": "lao-40-fan-zhe-dao-zhi-dong",
+   "verdict": "revise",
+   "issues": "records 中的 registration-within-what-it-registers 已由 R35 E4 改为 readings-within-what-they-read。声明都存在（LoopReturn.closing_needs_less 用的是新名），scope 正确。",
+   "fix": "record id 改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "lao-58-zheng-fu-wei-qi",
+   "verdict": "revise",
+   "issues": "records 中的 registration-within-what-it-registers 已改为 readings-within-what-they-read（R35 E4）。读法正确：二值否定两步复返；移动每个值的修正永不静止；单调映射从未定值出发即静止。",
+   "fix": "record id 改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "lao-76-rou-ruo-sheng-zhi-tu",
+   "verdict": "keep",
+   "issues": "声明都存在：Tolerance.tolerating_zero、thin_absorbed、kept_set、Triad.spreads／absorbed／total_kept、Withholding.withholding_absorbs。陈述如读法，界限已写。",
+   "fix": "无。"
+  },
+  {
+   "id": "lao-28-fu-gui-yu-pu",
+   "verdict": "keep",
+   "issues": "divergence 恰当：复归于朴读作回到先在之本然（先在之本层）。withHistory_never_returns、Merges.loses、merged_stays、Whole.needs_new 存在，陈述如读法。「常德乃足」之足是自足，已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "wangbi-fu-fan-ben",
+   "verdict": "keep",
+   "issues": "divergence 恰当：反本、以静为动本，属先在之本层，又加了意向。Law.Returns、lossless_iff_returns、rests_iff、whole_not_new_of_rest_idle、significance_undetermined 存在。",
+   "fix": "若引 whole_not_new_of_rest_idle，加 D5 的自然数量之范围（一句）。"
+  },
+  {
+   "id": "yi-fu-tiandi-zhixin",
+   "verdict": "keep",
+   "issues": "divergence 恰当：以复返为天地之心，加了意向。waxWane_returns、significance_undetermined 存在。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-qian-zi-qiang-bu-xi",
+   "verdict": "revise",
+   "issues": "（1）Web.generation_fed_from_beyond 已改名为 Web.embodiedArising_fed_from_beyond（R30）。\n（2）「有界整体中不断之生成只是复返（whole_not_new_of_rest_idle）」缺 D5 的范围：自然数量、第一律、rest 无净给、有限 Distinct 清单。\n自强读作耦合之中自身之一分（相合）、读作自足（相分），这一区分对。",
+   "fix": "改名为 Becoming.Web.embodiedArising_fed_from_beyond；加上「在自然数量、第一律、rest 无净给之下」。"
+  },
+  {
+   "id": "daxue-ri-xin",
+   "verdict": "revise",
+   "issues": "（1）Web.RenewedWithin.returns 已改名为 Web.RenewedWithin.restored。\n（2）结构判错。每日染、每日涤，是在染之步依存不被满足、下一步复足，即 RenewedWithin 1／LateMet 之型（return-grades 第 7 律：在自己之步不足，后来每步皆足，属一步之期内而非更新），不是 Renewed。只有染与涤落在同一步之内、水平在任何步界都不低于需，才是恆持。\n（3）「「不可略有间断」恰是二者之别」不成立。LateMet 每步都在一步之内复足、毫无间断，仍然不是更新；二者之别在依存在其自身之步是否已足，不在有无间断。\n（4）names_used 含「日新」，而读法自己说此处之新不是 C06 之日新（新奇），违反一名一义。",
+   "fix": "读作「日日新 = 一步之期内复足（Web.RenewedWithin 1）；染涤同步时才是恆持（Web.Renewed）」。\n删「不可略有间断恰是二者之别」，改为「二者之别在当步是否已足（LateMet.within_one_not_renewing）」。\nnames_used 去掉日新，恆足改为期、復足（条件成立时加恆持）。\n改名。"
+  },
+  {
+   "id": "daxue-ming-bu-yu-chang",
+   "verdict": "revise",
+   "issues": "「延续还是终结属于运行……从同一构形出发，一个运行恆足、另一个不復足」不准确。在 class_belongs_to_the_run 中：\n- 焦点形成在两个运行里每步都活跃；\n- 属于运行的是焦点形成之类（RenewingIn 或 ConsumingIn）；\n- 终结的是 sustaining 形成（t ≥ 1 时不活跃）。\n恆足、不復足是条件层之名，不能谓运行。",
+   "fix": "改为「从同一构形出发，同一焦点形成每步活跃：在一个运行中它更新（RenewingIn），在另一个中它消耗（ConsumingIn），被消耗之条件所维持的形成终结」。"
+  },
+  {
+   "id": "lunyu-zhi-ji-ren-shou",
+   "verdict": "keep",
+   "issues": "scope 恰当：到达不蕴涵保持（Kept／Renewed，Branching.Returns.reachable）；「必失」需另加前提（Flow.joint_excess_ends），已写。",
+   "fix": "若恆足按名条改为恆持，读法中的「恆足」随之改。"
+  },
+  {
+   "id": "zhongyong-bu-xi-ze-jiu",
+   "verdict": "revise",
+   "issues": "（1）第一读把「不息」读作「在任意晚之步在场」（ByPassing.present_of_le）。这不是本簇不息的定义（Web.Unceasing：在任意晚之步有生起），同一名两义；该读下经文是定理，但用的是「在场」而不是「生起」。\n（2）第二读与 gap 正确且有价值：Gaps.gaps 是反例；Whole.arises_within 的逆缺一个持续前提。\n（3）gap 的精确陈述「每个部分自其生起之步起至少连续活跃 d 步」须与 Arises t p（t 不活跃、t+1 活跃）对齐。",
+   "fix": "第一读改为「若把息读作不在场，则……（这不是本编之不息）」。gap 改为「Arises t p 时，p 自 t+1 起至少连续活跃 d 步」。"
+  },
+  {
+   "id": "mengzi-niu-shan-ye-qi",
+   "verdict": "revise",
+   "issues": "（1）Web.generation_needs_replenishment 已改名为 Web.embodiedArising_needs_replenishment。\n（2）「得养则长、失养则消，即恆足与不復足之分」暗示二分，而 mapper 的 notes 自己说两者之间有既非更新也非消耗的中间类。\n其余声明存在，陈述如读法：joint_excess_ends、escalation_undermines_for_every_cycle、Confound.misattributes、Learning.no_prefix_fixes_next、Run.not_fixes_of_untaken。",
+   "fix": "改名；「之分」改为「两端（其间有既非更新也非消耗者）」。"
+  },
+  {
+   "id": "simafa-die-zhan-ze-jiu",
+   "verdict": "keep",
+   "issues": "声明都存在：Shifts.shifts 给部分轮班、整体每步活跃；Whole.arises_within、Covered.arises_within、lasts_on 如读法。与孙子久战之别已注。",
+   "fix": "无。"
+  },
+  {
+   "id": "simafa-tui-bi-you-fan-lv",
+   "verdict": "keep",
+   "issues": "声明都存在：Returns.undo、Branching.loss_passes_juncture（双重否定已注）、Merges.loses、lost_stays。「必」属应用，已写。",
+   "fix": "无。"
+  },
+  {
+   "id": "wangbi-lao33-liang-li-jiu-chang",
+   "verdict": "keep",
+   "issues": "声明都存在：Stock.repeat_covered_iff、cycles_need、Flow.level_kept、beyond_given_bounded 的陈述如读法。明只取其结构，已写。",
+   "fix": "无。"
+  },
+  {
+   "id": "wangbi-lao35-yong-zhi-bu-ke-qiong",
+   "verdict": "keep",
+   "issues": "scope 恰当：用之不竭需回补或外部给予；道不是被汲取的条件，已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "xunzi-fuguo-jie-yuan-kai-yuan",
+   "verdict": "revise",
+   "issues": "（1）Web.generation_needs_replenishment 已改名为 Web.embodiedArising_needs_replenishment。\n（2）从「存量耗尽」到「依其水平之依存此后不復足」隐含一个正需前提（need > 0；need = 0 时水平为零亦足）。Stock.exhausted_within 是 Process／Trace 层的定理（还需「凡汲取皆正」），它与 Web.Consumed 之间是对应，不是定理。",
+   "fix": "改名；补「依存之需为正」；写明「Stock 之耗尽与 Web.Consumed 之间是对应，不是一条定理」。"
+  },
+  {
+   "id": "hanfei-xuji-suo",
+   "verdict": "keep",
+   "issues": "声明都存在：Carries.lasts_within、arising_not_recurring、carries_zero、lasts_on 如读法。归责不入律，已写。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhuangzi-huo-chuan",
+   "verdict": "keep",
+   "issues": "声明都存在：passes_within、ends_within、begins_within、Whole.needs_new 在传递前提下陈述如读法。个体不死已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "suzhe-lao07-chang-jiu-you-liang",
+   "verdict": "keep",
+   "issues": "scope 恰当：储备之久有量（lasts_on、ends_within_from）；复返或外供之久不受储备所界（lossless_iff_returns、Law.returns_iff、fed_from_beyond）。",
+   "fix": "无。"
+  },
+  {
+   "id": "suzhe-lao39-wei-ju-lie",
+   "verdict": "revise",
+   "issues": "records 中的 runaway-distance-unregistered 已由 R35 E4 改为 runaway-distance-uncoupled。读法正确：Carries.arising_not_recurring、lasts_on、prefix_does_not_decide、break_not_bounded；「必至」需不復足之前提，已写。",
+   "fix": "record id 改为 runaway-distance-uncoupled。"
+  },
+  {
+   "id": "lao-15-bu-ying",
+   "verdict": "keep",
+   "issues": "scope 恰当：部分之修复不必新成（Flow.restores_at）；整体之久须新部分（Whole.needs_new）。断读之疑已保留。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhiyi-zhiguan-jian-jue",
+   "verdict": "revise",
+   "issues": "「间断之后再修是復足（Web.Returns）」中的 Web.Returns 已改名为 Web.Restored。另：修心之间绝是修者自身关系之间断，被映到条件之水平上，须注明是结构类比。",
+   "fix": "改为 Becoming.Web.Restored；加注「在所持关系之条件水平上读」。"
+  },
+  {
+   "id": "weishi-chi-zhong-bu-shi",
+   "verdict": "keep",
+   "issues": "声明都存在：Law.Lossless、lossless_iff_returns、returns_iff_keeps、lost_stays、Web.Carries、arising_not_recurring。scope 与「恒轉如流」之说准确。",
+   "fix": "无。"
+  },
+  {
+   "id": "qixin-wang-sheng-bu-tui",
+   "verdict": "keep",
+   "issues": "divergence 恰当：以外力与一处保证不退，属单一中心层；吸收（Law.Absorbing、DrawnInto.never_back）是失去复返，不是保证之善。\n跨簇：C07 的 amituo-bu-tui 对同一结构作 scope，须协调。平行 FO2-YJ-R012（「以淨土無退緣故」）结构平凡（无退缘则不退），与本条不同。",
+   "fix": "与 C07 amituo-bu-tui 互注；FO2-YJ-R012 的平行注明「条件句，结构平凡」，或删去。"
+  },
+  {
+   "id": "yi-daguo-ku-yang-sheng-hua",
+   "verdict": "keep",
+   "issues": "声明都存在：Carries.arising_not_recurring、depletion_not_recurring、uptake_needs_replenishment、lasts_on 如读法。「无咎无譽」不作评价。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-guimei-yong-zhong-zhi-bi",
+   "verdict": "keep",
+   "issues": "声明都存在：Whole.needs_new／needs_arising、Generations.generations（谱系每步活跃）、ByPassing.passes_within。\n小点：「久经由续」中的续义为相继，若續按名条收窄，此处应写相續或繼（C03）。",
+   "fix": "若續收窄，「久经由续」改为「久经由相續」。"
+  },
+  {
+   "id": "yangming-shengsheng-buxi",
+   "verdict": "revise",
+   "issues": "（1）Web.generation_needs_replenishment 已改名为 Web.embodiedArising_needs_replenishment。\n（2）whole_not_new_of_rest_idle 缺 D5 的自然数量范围；new_beyond_every 的第一律前提未写。\n先在之理与差等之相分处理得对。",
+   "fix": "改名；加「（自然数量、第一律、rest 无净给之下；new_beyond_every 需第一律）」。"
+  },
+  {
+   "id": "yi-daxu-ri-xin-qi-de",
+   "verdict": "revise",
+   "issues": "读法正确：withHistory、withHistory_new、withHistory_never_returns、withHistory_unlisted、unheld_of_new 都存在，日新为不复返，与 C06 一致。\n问题在平行 RU2-R0146（荀子「积善而不息」）被注为「藏往式之积」，与藏往名条拒「積」相抵：积是量之累积，不是把往存入构形。",
+   "fix": "删 RU2-R0146 的平行，或注为「量之累积，不同于藏往」。"
+  },
+  {
+   "id": "wangbi-lao79-shang-bu-fu",
+   "verdict": "keep",
+   "issues": "声明都存在：lost_stays、Merges.loses、lossless_iff_returns、loss_passes_juncture（双重否定已注），护闭依 D52。\n「同一律的两面」稍宽：确切说是关口律（loss_passes_juncture）给出「失在关口」与「可为在关口之前」两者。",
+   "fix": "可选：「同一律的两面」改为「关口律（Branching.loss_passes_juncture）之两读」。"
+  },
+  {
+   "id": "suzhe-xing-fu",
+   "verdict": "revise",
+   "issues": "divergence 之根据正确（固定本性层）。但「延续还是终结属于运行，不属于某一构形（class_belongs_to_the_run）」不准确：属于运行的是焦点形成之类（RenewingIn 或 ConsumingIn），焦点形成在两运行中都每步活跃，终结的是 sustaining 形成。",
+   "fix": "改为「同一构形出发，焦点形成之类（更新或消耗）属于运行（class_belongs_to_the_run），不由有限前段决定（prefix_does_not_decide）」。"
+  },
+  {
+   "id": "mengzi-yuan-quan-you-ben",
+   "verdict": "revise",
+   "issues": "Web.generation_needs_replenishment 已改名为 Web.embodiedArising_needs_replenishment。其余声明存在，读法正确：有本、无本在前段相同，由后段才分。",
+   "fix": "改名为 Becoming.Web.embodiedArising_needs_replenishment。"
+  },
+  {
+   "id": "lunyu-shi-zhe-ru-si",
+   "verdict": "revise",
+   "issues": "「部分逝去，整体不息（Web.Unceasing 之形；整体在任意晚之步生起，则部分亦然，Web.Whole.parts_unceasing）」误用 parts_unceasing：它的前提是整体本身在任意晚之步生起，而每步在场的川不生起，前提不成立。\n川的结构是整体久、部分不息（Whole.needs_arising，结论为 ¬¬ 形，需部分各终且有清单）。",
+   "fix": "删 Web.Whole.parts_unceasing，改为「整体（川）久，部分（水）不息：Whole.needs_arising（部分各终、清单所列；结论为 ¬¬ 形）」。"
+  }
+ ],
+ "missing": [
+  "运行之类（Becoming.Web.RenewingIn／ConsumingIn，零章词汇表 895 行「更新、消耗……运行的类」，§2.1）缺一个关系之名；恆足、不復足都是条件层之名，不能谓运行。可用的先秦证据（已用 ctq text 核对）：\n- 孟子·梁惠王上「斧斤以时入山林，材木不可胜用也」（RU2-S-MZ；条目 RU2-R0003 由 C04 持有）；\n- 荀子·王制「草木荣华滋硕之时，则斧斤不入山林，不夭其生，不绝其长也」与「斩伐养长不失其时，故山林不童」（RU2-S-XZ09；C15 持有 xunzi-wangzhi-bu-jue-qi-zhang）。\n二者的结构都是汲取者之运行在更新之内（以时）与超出更新（夭、绝）之分。建议立一个组合名（如「以時取」对「絕其長」），并与 C04、C15 协调。",
+  "Web.Lost（满足而断，此后不再满足）缺名；不復足的证据实际是 Lost。建议用「絕而不復足」（C02 絕 = Broken）。",
+  "不息的名条缺 Becoming.Recycle.closed_unceasing。它是 D5 所举「有不息而无生生」的例子：闭合循环，总量恒一，生起不止。",
+  "notes 须更正：\n（a）R30 已落地。须重指：Web.Returns→Web.Restored；Web.ReturnsWithin→Web.RestoredWithin；Web.Returns.not_consumed→Web.Restored.not_consumed；Web.RenewedWithin.returns→Web.RenewedWithin.restored；Web.generation_needs_replenishment→Web.embodiedArising_needs_replenishment；Web.generation_fed_from_beyond→Web.embodiedArising_fed_from_beyond；模块 Return→Restoration、Generation→Arising。\n（b）RO passages.json 已经引 LoopReturn.* 与 embodiedArising_*，notes 说「RO 仍引 Becoming.Widening」已过时。\n（c）R35 E4 改了四个记录 id：one-axiom-yields-g0→continuation-condition-yields-living-significance，axiom-decomposition→continuation-condition-decomposition，registration-within-what-it-registers→readings-within-what-they-read，runaway-distance-unregistered→runaway-distance-uncoupled。",
+  "跨簇一名一义问题（交整合者）：\n- 「足」两义：C02 足 = Web.Supported，C15「足而止」= 知足（Law.rests_iff）。\n- 「歸」两向：同歸 = 合并之失（本簇），九句之归 = 无损之复（D49）。\n- 不息：C03 与本簇同名同概念，须合为一条。\n- 「静」与「停息」须分：词汇表 897 行；C04 止、本簇 lao-16／lao-25。\n- 「常」与「久」须分：不变量归 C07，本簇之久不含不变量。",
+  "跨簇与中文版的过时项：\n- C06「转」的 lean 仍列 Becoming.Web.Returns。\n- 零章中文版词汇表 985 行「回程」仍列 `Returns`，且写「再被满足」。\n- 中文版以「消耗」兼名 consumption（895 行）与 depletion（949 行「消耗（有限家族）」）。\n- 中文版词汇表名 LivingSignificance 为「生命意义」（98、911 行），记录表标题（737–765 行）却作「生生之意义」。\n- Y1 之卦之读（YI-ZHUAN-AND-BECOMING 141、250 行）把久用作变后不再变，与久之名相反。"
+ ]
+}

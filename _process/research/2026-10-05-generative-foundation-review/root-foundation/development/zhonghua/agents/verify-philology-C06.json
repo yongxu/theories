@@ -1,0 +1,615 @@
+{
+ "cluster": "C06 生成、退化与生生之向",
+ "lens": "PHILOLOGY（逐字核对、层次与年代、语境中的义、后起义与异读、更早更好的名；兼查所引声明与记录是否存在、是否为见证）。核对结果：28 名的 75 条引文与 65 条目的 76 个片段全部逐字见于所标冻结文本（ctq.py text 同法，脚本与输出在 scratchpad/zh/c06v_phil/）；记录 id 全部存在。另有三个声明不存在（R30 于 20 Oct 改名），五个结果记录 id 已退役改名；多处把模型见证写成一般律。",
+ "names": [
+  {
+   "concept": "生生（D1：生成者生成新的生成）",
+   "name": "生生",
+   "verdict": "revise",
+   "issues": "(1) 九条引文逐字通过。(2) fit 说重叠式“生生”给出二阶关系（所生者又成为再生之条件与给予者），但本条自己写的 sense（“生而又生、相续不已”）和冻结文本中的孔疏“生生，不絕之辭。陰陽變轉，後生次於前生，是萬物恒生，謂之易也”（YWH-H5，疏·唐）都只给出相续、不绝，没有给出“所生者生出后者”。D1 的二阶结构，先秦最直接的对照是大过九二“枯楊生稊”与九五“枯楊生華”之对，加小象“枯楊生華，何可久也”；程颐注“枯楊下生根稊則能復生…上生華秀雖有所發无益於枯也”。(3) concept 的“生成生成生成”抄自现行中文版，有歧义；D1 修订（Ren 18 Oct 采纳）依《生生不息论》v1 的标题“生生：生成者生成新的生成”。(4) lean 中的 Becoming.Web.Unceasing.regeneration_recurs 已在 R30 改名，现名不存在。(5) fit 说方向“以所容之广比较”，没有注 D1 的 R25 修订（20 Oct）：广只比较给定形成类型之内能成者，生生可以超出广所计。",
+   "fix": "加孔疏“生生，不絕之辭。陰陽變轉，後生次於前生，是萬物恒生，謂之易也”（YWH-H5，疏·唐），sense 写“相续不绝”。fit 改为：“系辞重叠式只给出相续（孔疏‘不絕’‘後生次於前生’）。D1 的二阶结构（所成者保存、恢复、传递或创造下一轮生成的条件与生成者）是理论的约定，其先秦结构对照是大过九二‘枯楊生稊’与九五‘枯楊生華’（小象‘何可久也’；程颐‘根稊則能復生’与‘生華…无益於枯’）。”concept 改为“生生（D1：生成者生成新的生成）”。lean 改为 Becoming.Web.Unceasing.activeRenewer_recurs。fit 末加一句：“广只比较给定类型之内能成者，生生可以超出广所计（D1，R25）。”"
+  },
+  {
+   "concept": "成生（generative：有此部分之水平广于无此部分者；D2）",
+   "name": "成生",
+   "verdict": "revise",
+   "issues": "(1) 三条逐字通过；系辞“广生”证的是广，不是成。(2) course 说“Ren以成生／绝生取代先前的‘建设性／破坏性’（2026年4月28日更正）”，与来源不合。语料词表（_process/history/2026-09-consolidation/GLOSSARY.md）所记，是当日把英文 destructive 改为 degenerative。中文成生／绝生出自 Ren《生生不息论》v1 与白皮书的“成生之限／绝生之限”。(3) not_carried 漏了 Ren 写进原定义的评价：《生生不息论》v1 第552行“成生者，善也；绝生者，恶也”。十节对照表对成闭（‘名为恶’）排除的正是这类内容。(4) 备选“遂生”的否决理由读错了：戴震“遂人之生”是使其生得以完成，不是“只说不阻其生”。而且 Ren 同一行写有“使万物各遂其生而相成不相害者，天理也”，程颐比卦注也有“衆必相比而後能遂其生”。(5) 没有说明现行中文版的“生成的”，也没有说明 D2 的 R34 修订（名只留在部分层面）。",
+   "fix": "XC-R063 降为部件旁证，或移出。course 改为：“Ren 2026年4月28日把英文 destructive 改为 degenerative；中文成生／绝生见《生生不息论》v1 与白皮书成生之限／绝生之限；本理论以之名 D2 部分层面之广（R34 后只在部分层面）。”not_carried 加“Ren 原文‘成生者，善也’之评价（评价只经 §6.15 条件下的比较进入）”。遂生的 why_not 改为“遂是使一形成之生得以完成，名的是一形成的被支持，不是两条水平路径的包含比较；Ren 已以‘各遂其生’名天理之一面”。alternatives 加“生成的（现行中文版）：现代词，常被读作任何新组织的出现”。"
+  },
+  {
+   "concept": "绝生（degenerative：无此部分之水平广于有此部分者；D2）",
+   "name": "绝生",
+   "verdict": "revise",
+   "issues": "(1) 两条逐字通过。(2) 苏辙“非絶物也”的“絶物”是圣人断绝与物之接，与上句“世人開其所悦以身徇物往而不反”相对，不是一部分使所容变狭。sense 写的“不断绝所生”加入了原文没有的“所生”。(3) “绝＝断而使不续”在冻结文本中有更早、更准的例子：论语尧曰“興滅國，繼絕世，擧逸民”（RU1-S-LY，先秦）；孔疏以“不絕”释生生（YWH-H5），绝正是生生之相续的否定。(4) course“Ren以之取代破坏性”的问题同成生。(5) not_carried 漏了 Ren 原文“绝生者，恶也”。(6) lean 只给 Becoming.Clearing.narrows。Becoming.Clearing 是一个模型见证（源、清除者、居者），不是一般律。",
+   "fix": "苏辙条 sense 改为“AI读法：圣人闭塞而不绝物，与世人‘往而不反’相对；只作‘绝’字的部件旁证”。加论语“興滅國，繼絕世，擧逸民”（经·先秦）与孔疏“生生，不絕之辭”（疏·唐）作绝之义证。course 同成生。not_carried 加“Ren 原文‘绝生者，恶也’之评价”。lean 改为：Becoming.Web.Widens（以无此部分者广于有此部分者读，D2）、Becoming.Flow.Balances.loses_iff_beyond_margin、Becoming.Flow.Balances.narrows_of_consumed；Becoming.Clearing.narrows 注为“见证：确有其例”。"
+  },
+  {
+   "concept": "所容（the generative space：此刻诸水平所容许者）",
+   "name": "所容",
+   "verdict": "revise",
+   "issues": "(1) 五条逐字通过。(2) fit 断言“‘所＋动词’名其受事之全体”，与引文不合。老子50“兵无所容其刃”里，容的宾语是“其刃”，“所”指处所；易传“旅而無所容”“无所容也”是其人无处被容，主语是被容者。只有庄子“瓠落无所容”是受事（瓢所能盛者）。先秦用例因此多是处所义与被容义，而这正是 not_carried 所排除的。(3) 没有提 Ren 自己的中文：《生生不息论》v1“在当下，生显为尚可成为的可能性空间”（D22 所引），也没有提现行中文版的“生成的空间”。",
+   "fix": "fit 改为：“先秦‘所容’只以否定式出现，多指处所（老子50‘无所容其刃’）或其人不被容（易传）；只有庄子‘瓠落无所容’是受事。本理论取受事读法，名‘此刻诸水平所容许者之全体’，这是约定，可由‘容’组合检验。”alternatives 加两项并各写取舍理由：“尚可成为（Ren《生生不息论》v1，D22）”与“生成的空间（现行中文版）”。"
+  },
+  {
+   "concept": "容（admission，Web.Admits）",
+   "name": "容",
+   "verdict": "revise",
+   "issues": "(1) 四条逐字通过。(2) 大学引秦誓“寔能容之”与临大象“容保民”，都是包容他人的德性义，正是本名 not_carried 第一项所排除者，不能作结构义的证。只有墨经“前不容尺／莫不容尺”是非德性的“尚有余处可再置一单位”，而那是空间度量义。(3) confidence 定为 high 偏高。",
+   "fix": "秦誓、临两条 sense 改注“包容义（不携带），只证字之常用”。fit 改以墨经为唯一结构证，注“空间之容：可再置一尺”；可引平行中已有的王弼11章注“以其无能受物之故”作‘受’之旁证。confidence 改为 medium。"
+  },
+  {
+   "concept": "赅（includes，Web.Includes）",
+   "name": "赅",
+   "verdict": "revise",
+   "issues": "(1) 两条逐字通过。(2) 冻结文本中“賅／赅”一次也没有出现，只有“該”，所选字形在语料中无证。(3) course“近代以后‘应该’义压倒‘该’，兼备义改写作‘赅’”是没有核对的历史断言；‘该’的应当义远早于近代。(4) FO2-KS-C 的层次写作“疏·隋唐以后”不准：来源注明“唐代章文；宋代注释”，引文出自承迁的注文层。(5) 天下“不該不徧”是不包全体（一元的绝对用法），“因該果海”是华严圆融义，两例都不给出“A包B”的二元单向结构。",
+   "fix": "layer 改为“注·宋（承迁《金师子章注》注文层；章文为唐法藏）”。course 改为“先秦‘該’有兼备义（天下）；兼备义后另写作‘赅’，分工年代未核”。fit 加注：“二元的‘A赅B’是约定，古例只给‘包全’的一元用法。”若整合者不取改字，退回“該”，并注“非应该义”。"
+  },
+  {
+   "concept": "有所长（exceeds，Web.Exceeds）",
+   "name": "有所长",
+   "verdict": "revise",
+   "issues": "(1) 引文逐字通过。(2) “皆有所長”是各有所擅（一元），不是“A在某处有B所无者”的二元关系；sense 写的“各有其他家所无之长处”加入了原文没有的“其他家所无”。(3) 冻结文本中有二元用例而没有引：荀子大略“無用吾之所短，遇人之所長”（RU2-S-XZ27，来源注“战国传世文本”，大略为后学所辑），庄子列御寇“商之所短也……商之所長也”（ZH1-S32，杂篇）。",
+   "fix": "sense 改为“AI读法：百家各有所擅”。加荀子大略“無用吾之所短，遇人之所長”作二元用例，层次写“论·先秦（荀子·大略，篇章层次有争议）”。fit 注：“‘有所长于’的二元读法是约定，可由大略‘吾之所短／人之所長’的对举检验。”"
+  },
+  {
+   "concept": "广（widens，Web.Widens）",
+   "name": "广",
+   "verdict": "revise",
+   "issues": "(1) 三条逐字通过。(2) 漏了冻结文本中结构最贴的先秦用例：老子67“俭故能广”（LL-R033）与“舍俭且广，舍后且先，死矣”（LL-R036，脉络释为‘广不可舍俭单取’）。王弼注“节俭爱费，天下不匮，故能广也”，河上公注“天子身能节俭，故民日用广矣”，苏辙注“廣大之易窮而儉約之易足其終必至于廣也”。意思是：一部分少取，他者之所用才广；舍了少取而求广，则死。这正是 Flow.Balances.widens_iff_within_margin。(3) 荀子修身“狹隘褊小”是气质之狭（治气养心之术），戴震是心知之量，孔疏“地體廣博，故坤云『廣生』”是体量之广。not_carried 只列了面积与体量，没有列气质／心量义，也没有列墨经“廣與脩”的宽度义（MI1-S-JX）。(4) 备选没有提现行中文版的“扩大”与汉字章所记的“拓宽”。",
+   "fix": "以老子67“俭故能广”（经·先秦，LL-R033）为首证，附王弼、河上公注。not_carried 加“气质、心量之广（荀子、戴震）”与“墨经‘廣與脩’之宽度义”。alternatives 加“扩大／拓宽（现行中文版）：现代词，按数量读”。"
+  },
+  {
+   "concept": "狭（narrows：广之逆）",
+   "name": "狭",
+   "verdict": "revise",
+   "issues": "(1) 三条逐字通过。(2) 苏辙“不狹不厭”是宋注。老子72 河上公本的经文作“无狭其所居”，河上公注“谓心居神，当宽柔，不当急狭也”（LC-HS-LOW）；王弼本作“无狎其所居”。狭作及物动词（使其所居变狭）在经文异文层已有，早于苏辙。(3) 苏辙同一条注以“性之大可以包絡天地”读“所居”，带先定之性一层，not_carried 未列。(4) 荀子、戴震所言是气质、心知之狭。",
+   "fix": "加“无狭其所居”（经·老子72，河上公本；王弼本作‘狎’，异文）及河上公注为证。not_carried 加两项：“苏辙以所居为性、‘性之大可以包絡天地’之义”与“气质之狭”。"
+  },
+  {
+   "concept": "相赅（keeps，Web.Keeps）",
+   "name": "相赅",
+   "verdict": "keep",
+   "issues": "两条只作部件旁证，已如实标明；已标为新组合（coinage）；与 Web.Keeps（互相包含，D2 之中性一类）结构一致，并与“不广不狭”分开。小处：备选未提现行中文版的“保持”。",
+   "fix": "可在 alternatives 加“保持（现行中文版）：常读作状态不变，不标出双向包含”。"
+  },
+  {
+   "concept": "各有所长（mixed，Web.Mixed）",
+   "name": "各有所长",
+   "verdict": "revise",
+   "issues": "(1) 天下、墨经两条逐字通过。(2) pre_qin 标 true，但所引是“皆有所長”；“各有所長”这一成语在冻结文本中出现零次。(3) 墨经“異類不吡，說在量”（经说下“木與夜孰長？智與粟孰多”）说的是量纲不同的异类不可比，不是同一比较中的互有所长；Mixed 的两条路径同属一个容许集的比较。它证的是“比较需要共同之量”，不证本名。(4) Transfer.unordered 是一个见证（conveyor 部分），并且在延续条件之下成立，fit 没有注明。",
+   "fix": "pre_qin 改为 false（组合词；部件“有所长”先秦已有）。墨经条从本名移出，只留在条目里。fit 改为“合于 Transfer.unordered（一个见证，在延续条件下：混合之部分不被任一方保留，排序需一度量）”。可加荀子大略“無用吾之所短，遇人之所長”作互有长短的二元例。"
+  },
+  {
+   "concept": "偏去（a part withheld，Flow.withhold／WithheldLevels）",
+   "name": "偏去",
+   "verdict": "revise",
+   "issues": "(1) 四条逐字通过，训释分歧已注。(2) 备选“扣留”的否决理由误引汉字章。汉字章说扣留“没有确切的单字……二字之词仍是确切的选择”，并没有否定扣留。真正的理由有二：现行中文版的“扣留”同时名两个概念，即 Flow.withhold 与 Becoming.Withholding（给予等待给予），一名二用；偏去另有先秦墨经出处。(3) 漏了墨经经下“不可偏去而二，說在見與俱、一與二、廣與脩”及经说下“一二不相盈，廣脩、堅白”：不可分之二（广与修、坚与白）不能偏去其一，这正是偏去只对可分之部分有意义的界。",
+   "fix": "扣留的 why_not 改为：“现行中文版扣留同时名 Flow.withhold 与 Becoming.Withholding，一名二用；汉字章只说它无确切单字，并不否定二字之词。”加经下“不可偏去而二，說在見與俱、一與二、廣與脩”作界（经·先秦，墨经）。not_carried 加“不可分者不能偏去”。"
+  },
+  {
+   "concept": "余地（margin）",
+   "name": "余地",
+   "verdict": "keep",
+   "issues": "引文逐字通过（养生主，内篇，先秦）；现行中文版“余量”条的定义本身就用“余地”；所述结构（所给与所需之差，不属任一方）恰当。",
+   "fix": "不须改；可在 fit 中以老子67“俭故能广”作结构旁证。"
+  },
+  {
+   "concept": "阖（closing：一部分使原被容许者不被支持）",
+   "name": "阖",
+   "verdict": "revise",
+   "issues": "(1) 两条逐字通过。DS02 是简体转换页，繁体证见朱熹本义“闔戸謂之坤”（YD-ZX7）。(2) 系辞之阖是闭藏（孔疏释坤为“閉藏翕斂”），即收藏以保，不带失。sense 加入了原文没有的“所容者有一不得入”。(3) 老子10“天门开阖”的天门，各家注释不一，未注。",
+   "fix": "系辞条 sense 改为“AI读法：阖户＝关门；孔疏以闭藏翕敛读坤”。not_carried 加“闭藏（收藏以保）义”。老子10 条注“天门所指，注家不一”。layer 注明繁体本作“闔”。"
+  },
+  {
+   "concept": "辟（opening：一部分使原不被容许者被支持）",
+   "name": "辟",
+   "verdict": "revise",
+   "issues": "(1) 两条逐字通过，但 DS02 是简体转换页，其“辟”可能是“闢”转换而来。冻结文本中的繁体证有两处：周易正义孔疏“動則開生萬物，故「其動也辟」”（YWH-H5，作辟），朱熹本义“闢户謂之乾”（YD-ZX7，作闢）。(2) not_carried 漏了同一语料中墨辩小取的定义“辟也者，舉也物而以明之也”（MI1-N-XQ-pi，辟＝譬，举他物以明之）；若名辩一区以“辟”名类比，二者相撞。也漏了避、僻诸义。",
+   "fix": "加孔疏“動則開生萬物，故「其動也辟」”（疏·唐）为证，并注异体“闢”（朱熹本义）。not_carried 加“墨辩之辟（譬：举他物以明之，小取）；辟作避、僻”。请整合者核对名辩簇是否用‘辟’。"
+  },
+  {
+   "concept": "日新（novelty：从某步起每一组态皆异于先前）",
+   "name": "日新",
+   "verdict": "revise",
+   "issues": "(1) 四条逐字通过。(2) fit 说“‘日日新，又日新’给出逐步不重复的全称”，原文没有“不重复”。大学所引是汤之盘铭（浴盘上的铭），说的是自新；系辞孔疏释为“日日增新”（YWH-H5）；朱熹注大畜“能日新其徳而為畜之大”（ZX130-H26-R01），把日新与积畜相连。古义是日日更新、增新。盘铭之新还可读为复其洁（复归），结构上与“每一组态异于先前”相反。(3) 孔疏“日日增新”把新与增连在一起，恰好合于 Web.unbounded_of_new，fit 没有用上。",
+   "fix": "fit 改为：“古义为日日更新、增新（孔疏‘日日增新’，朱熹‘日新其徳而為畜之大’）；‘从某步起每一组态异于先前’是本理论的约定；孔疏新与增并举，合于 Flow.new_beyond_every（新需要增益）与 Web.unbounded_of_new。”not_carried 加“盘铭之复新（复归原洁，结构为回返）”与“德之积畜”。大学条 sense 改为“AI读法：逐日自新（盘铭）”。"
+  },
+  {
+   "concept": "益（gain：每一上升都有净给予者）",
+   "name": "益",
+   "verdict": "revise",
+   "issues": "(1) 三条逐字通过。(2) 老子55“益生曰祥”的 sense 写“（祥＝妖）”，这只是一层注的读法：苏辙“祥妖也”，王弼“生不可益，益之則夭也”；河上公注则作“祥，長也。言益生欲自生，日以長大”（LC-HS-LOW，经文作“日祥”）。层次与异读都没有注。(3) 漏了老子42“故物或损之而益，或益之而损”（LL-N011，经·先秦）：部分之损益与整体之损益可以反号。程颐“損上益下所以為益”（CY-R014）在脉络中的 cognitive 也正是“把局部增减放入依存结构中判断整体利害”。",
+   "fix": "老子55 条 sense 改为“AI读法：增益其生；‘祥’苏辙读为妖、王弼读为夭，河上公读为长，注层不一”。加老子42“故物或损之而益，或益之而损”为证（经·先秦）。"
+  },
+  {
+   "concept": "开（Ren：四相并具：未、可、应、转）",
+   "name": "开",
+   "verdict": "revise",
+   "issues": "(1) 三条逐字通过。(2) 系辞“开物成务”的 sense 写“开启事物”，与上下文不合。下句是“聖人以通天下之志”，朱熹注“開物成務謂使人卜筮以知吉凶而成事業”（YD-ZX7）：开是使人通晓（占筮之知），不是使一形成得以成立。(3) lean 中的 Becoming.Web.Returns 已在 R30 改名为 Becoming.Web.Restored，名的是依赖再被满足；构形之回返应锚 Becoming.Branching.Returns（十节对照表所用）。",
+   "fix": "系辞条 sense 改为“AI读法：使人通晓万物（朱熹：卜筮以知吉凶）”；not_carried 加“开作通晓、开悟之知”。lean 把 Becoming.Web.Returns 换为 Becoming.Branching.Returns。"
+  },
+  {
+   "concept": "未（开之一相：仍有未成之域）",
+   "name": "未",
+   "verdict": "revise",
+   "issues": "(1) 引文逐字通过（记录 OW-R039 证文的“未濟”后没有空格，只是空白差异）。(2) 唯一的证是卦名“未濟”，不证“未”作名词“未成之域”；“未”的名词化是 Ren 的用法。(3) 墨经“莫不容尺，無窮也”（本簇已核）给出“仍有更多可来”的结构，比卦名更贴。",
+   "fix": "fit 注：“‘未’作名（未成之域）是 Ren 之约定，古例只有副词用法与卦名。”加墨经经说上“莫不容尺，無窮也”作结构旁证，并注明是空间义。"
+  },
+  {
+   "concept": "可（开之一相：一条历程可以继续）",
+   "name": "可",
+   "verdict": "revise",
+   "issues": "(1) 引文逐字通过，但所引句子不含 fit 所说的“可与能之分”。这一区分在同篇“用此观之，然则可以为，未必能也；虽不能，无害可以为”（RU2-S-XZ23，已核）。(2) 荀子的可是“有其质与具而可为”，即被容许而未必实现，结构是 Web.Admits。Ren 之“可”的锚是 Onward.run_iff_continues（一条历程可以继续），荀子此文不证；fit 把二者并作一事。",
+   "fix": "加“然则可以为，未必能也；虽不能，无害可以为”为证。fit 改为：“荀子之可＝被容许而未必实现（Web.Admits、Web.supported_iff_admits）；Ren 之‘可’的锚（Onward.run_iff_continues、run_of_returning）此文不证，只是约定。”"
+  },
+  {
+   "concept": "应（开之一相：交换对一水平有回应）",
+   "name": "应",
+   "verdict": "revise",
+   "issues": "(1) 三条逐字通过。(2) 有一个名冲突没有报：脊柱上“应”已经名爻应。Becoming.Hexagram.opposed 定义同一高度上下两爻相异为应（YI-ZHUAN 章、D53“独应”）；王弼略例“夫應者，同誌之象也”（WH-N023）与彖“剛柔應也”（HX-N005）是易学中“应”的主要义。not_carried 没有列爻应。",
+   "fix": "not_carried 加“易学之爻应（位与位之相应、敌应；王弼‘應者，同志之象’），脊柱已以 Hexagram.opposed 名之”。交整合者：Ren 之“应”（ExchangeLaw.RespondsTo）与爻应须分名，或在易实例模块中限定范围。"
+  },
+  {
+   "concept": "转（开之一相：仍能修正、回返、变通）",
+   "name": "转",
+   "verdict": "revise",
+   "issues": "(1) 三条逐字通过。(2) 田子方“千轉萬變而不窮”的主语是哀公之问（召而问以国事，千转万变），“不穷”是那位儒者应答不穷。它证的是问之转与答之应，不是“回旋、变通”的能力。河上公“轮得转行”是车轮的物理转动。(3) 心度篇的来源注明“编次与个别篇作者有争议”，layer 没有注。(4) lean 中 Becoming.Web.Returns 已改名为 Web.Restored（R30），构形回返应作 Becoming.Branching.Returns。Becoming.Switching.fixed_loses 是 Pace.lean 中二值切换的见证，不是一般律。",
+   "fix": "田子方条 sense 改为“AI读法：问之千转万变而对答不穷（证问之转、答之应）”。河上公条 sense 改为“车轮之转动（物理义）”。心度 layer 加“篇章作者有争议”。lean 改为 Becoming.Branching.Returns，Switching.fixed_loses 注为见证，并补 Becoming.Flow.closes_through_coupling_apart（十节对照表之‘转’已列）。"
+  },
+  {
+   "concept": "闭（closure：吸收区域）",
+   "name": "闭",
+   "verdict": "revise",
+   "issues": "(1) 四条逐字通过。(2) 复大象 sense 写“至日暂闭关以养初生之阳”，其中“养初生之阳”来自程颐注（YD-CY2：“當至日陽之始生安静以養之故閉關”，北宋注层）。大象本文只说闭关、商旅不行、后不省方。(3) 老子27“善闭”之“善”是善于（与善行、善言、善数、善结同列），评的是技能。",
+   "fix": "复大象条 sense 改为“AI读法：至日闭关，商旅与巡方皆止（程颐注读为安静以养初生之阳，北宋注层）”。老子27 条 sense 加“善＝善于”。"
+  },
+  {
+   "concept": "成闭（闭而不复开，锁定）",
+   "name": "成闭",
+   "verdict": "revise",
+   "issues": "(1) 引文逐字通过。(2) 老子27 的“善”是技能，“不可开”是外人不能开；作“闭而不复开”的结构旁证可以，但不宜暗含评价。(3) lean 漏了 D52 的 Becoming.Branching.losing_not_returns：成闭＝关节处之失，与护闭是同一操作。",
+   "fix": "lean 加 Becoming.Branching.losing_not_returns。sense 注“善＝善于；‘不可开’指外人不能开”。"
+  },
+  {
+   "concept": "护闭（于关节点保持，D52）",
+   "name": "护闭",
+   "verdict": "revise",
+   "issues": "(1) 三条逐字通过。(2) 复大象的“护初生者”属程颐注层（同闭条）。(3) 苏辙条最贴，但应带上上一句“世人開其所悦以身徇物往而不反”（LC-SZ-ALL，已核）：被塞住的恰是“往而不反”之步（丧失之步），“非絶物也以神應物”则是其余之步照旧，这正是 Branching.keeping_greatest。(4) 朱熹注蛊卦，是在将坏的关节处自新，是关节处的一步，不是“闭”。",
+   "fix": "复大象条 sense 改注为程颐注层。苏辙条 quote 扩为“世人開其所悦以身徇物往而不反聖人塞而閉之非絶物也以神應物”，并在 fit 中说明这一对应。朱熹条 sense 改为“于关节处自新，不使至于大坏（关节处之一步）”。"
+  },
+  {
+   "concept": "元闭（规则持守结果）",
+   "name": "元闭",
+   "verdict": "revise",
+   "issues": "引文逐字通过；结构相合（时移而治法不变则乱，即规则冻结）。但心度篇的来源注明“编次与个别篇作者有争议”，layer 没有注。",
+   "fix": "layer 改为“论·先秦（韩非子·心度，战国末；篇章作者有争议）”。"
+  },
+  {
+   "concept": "伪开（外显为开，内成其闭）",
+   "name": "伪开",
+   "verdict": "revise",
+   "issues": "(1) 引文逐字通过。(2) 条目把“开其兑，济其事，终身不救”读成伪开 I（局部开、整体闭，Flow.joint_excess_ends），但原文与注都没有“局部／整体”或共同超取。苏辙注读为“世人開其所悦以身徇物往而不反”：往而不反，即被吸入而不回返，外显为开而内成其闭。",
+   "fix": "sense 改为“AI读法：开其所悦而逐物，往而不反（苏辙）”。对应改为 Becoming.Law.drawn_iff_not_returns 与 Becoming.Law.DrawnInto.never_back。若仍要归入三型之一，标为 AI 读法，置信 low。"
+  },
+  {
+   "concept": "稳（扰后不坍、回观不败、仍续）",
+   "name": "稳",
+   "verdict": "revise",
+   "issues": "(1) 两条逐字通过，但都不是“稳”字的证：一是攖寧，一是程颢之定。冻结文本中“穩”只见于蕅益《阿弥陀经要解》“穩當”（明，佛），没有先秦用例，也没有此义之证。(2) 程颢“动亦定，静亦定”是动静之中都不偏离，不是扰后复归；Law.perturbation_reabsorbed 是扰动之后从下一步起复归。(3) gloss 漏了 Ren 原文的“回观不败”（卷六 §六四“扰后不坍、回观不败、仍续”）。",
+   "fix": "fit 明说：“名是 Ren 之词，冻结文本中无此义之古证；攖寧给出‘攖而后成’的结构。”程颢条降为“相近而不同：定是不偏离，不是扰后复归”。concept 补“回观不败”。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yichuan-fu-tiandi-sheng-wu-zhi-xin",
+   "verdict": "revise",
+   "issues": "片段逐字通过，记录相合。所引 Becoming.Clearing.center_not_derived 是 Standpoints.lean 中关于价值立场的见证（意义不沿依赖传出，立场中立失败），与“生物有无一心”无关，只是借了“center”的字面。另：程颐所批的“先儒以静见天地之心”，指王弼复卦注以本（寂然至无）为心，属先在根据之层。",
+   "fix": "删 Clearing.center_not_derived，改用 Becoming.Flow.rise_netGiver 与 Becoming.Flow.rise_given_by_supported（每一上升由参与其中的被支持者给予），说明生起不需要一心；删 reading 中“中心不沿依赖导出”一句。可加注：程颐所批的“静见天地之心”属先在根据之层。"
+  },
+  {
+   "id": "feng-shang-liu-qu-wu-ren",
+   "verdict": "revise",
+   "issues": "片段逐字通过。被“限定”的全称“大屋必凶”无人主张，是稻草人。小象明说“窺其戶，闃其无人，自藏也”（YD-JP55，已核），孤隔是自藏所致。Flow.unsupported_stays 的前提（需求不松、只有成员互给、某步起无一被支持）文中都没有给出，对应偏弱。",
+   "fix": "加小象“窺其戶，闃其无人，自藏也”（传·先秦）。删“不是‘大屋必凶’”。reading 改为：“自藏而断族外之接；于脊柱上，族内若只有成员互给，且某步起无一被支持，则此后无一被支持（Flow.unsupported_stays）；文中未给出这些前提。”置信 low。"
+  },
+  {
+   "id": "daguo-ku-yang-sheng-ti",
+   "verdict": "revise",
+   "issues": "片段逐字通过。只取了九二，漏了同卦九五“枯楊生華，老婦得其士夫，无咎无譽”（YD-JG28）与小象“枯楊生華，何可久也”（YD-JP28，TP-H28-X5-R01）。程颐注“枯楊下生根稊則能復生…上生華秀雖有所發无益於枯也”“枯楊不生根而生華旋復枯矣安能久乎”（YD-CY2），朱熹注“稊根也榮於下者也榮於下則生於上矣”（YD-ZX1）。这一对正是“生出可以再生者（稊）”与“只是新出现、不再生（华）”之分，是 D1 与“凡新非生”最强的先秦结构对照。",
+   "fix": "九二本条保留；另立一条，源为 YD-JP28，片段为“枯楊生華，何可久也”（传），以九五经文为前项，程颐、朱熹为注层。kind 定为 agreement，结构为“所成者是否成为再生的给予者”。declarations 用 Becoming.Flow.gains_from_supported、Becoming.Web.Unceasing.activeRenewer_recurs、Becoming.Web.renewing_not_consuming。"
+  },
+  {
+   "id": "shuogua-shui-huo-xiang-dai-cheng-wu",
+   "verdict": "keep",
+   "issues": "片段逐字通过，记录 OW-R015 相合；沿用 RO，所补 Flow.rise_netGiver 恰当；宇宙配属已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "xugua-wei-ji-zhong-yan",
+   "verdict": "keep",
+   "issues": "片段逐字通过（记录证文无空格，属空白差异）；定域恰当：只在开放时“不可穷”，在有界封闭中是回返。",
+   "fix": "无。"
+  },
+  {
+   "id": "tai-daxiang-cai-cheng-fu-xiang",
+   "verdict": "revise",
+   "issues": "片段逐字通过。“財＝裁”与辅相的读法出自注层。程颐注“財成謂體天地交泰之道而財制成其施為之方也…輔助化育之功”（YD-CYSK，已核）：辅相是辅助化育，不是“补给”。以 Restoring.Inflow.widens（族外给予之见证）对应辅相，结构不合。",
+   "fix": "reading 注“財＝財制（程颐，北宋注）”，把“辅是补给”改为“辅是辅助（程颐）”。删 Restoring.Inflow.widens；保留 Flow.Balances.widens_iff_within_margin；Transfer.mixed 注为见证。"
+  },
+  {
+   "id": "tongren-yu-zong-lin-dao",
+   "verdict": "revise",
+   "issues": "片段逐字通过。只引了小象（传），漏了经文“六二：同人于宗，吝”（YD-JG13，JF-R038），以及朱熹注“宗黨也…不能大同而係於私吝之道也”（YD-ZX1，已核）。Clearing.loses_beyond 是见证。文本的结构是“同”的范围只及一区，即 Web.AdmitsWithin.narrow；“比较看不见区外之失”是另一件事。",
+   "fix": "加经文层（经·先秦）与朱熹注（注·南宋）。主对应改为 Becoming.Web.AdmitsWithin.narrow（区内容许狭于全体）；Clearing.loses_beyond 注为见证，或删去。"
+  },
+  {
+   "id": "lin-daxiang-rong-bao-wu-jiang",
+   "verdict": "revise",
+   "issues": "片段逐字通过。“无疆”是所容保之民没有边界（覆盖范围），不是存量无界；用 Flow.whole_bounded_of_rest_idle、Flow.excess_bounded（存量有界）作定域，对应到了另一个维度。此处“容”又是包容义（容名的 not_carried）。",
+   "fix": "reading 改为范围之读：“容保至于无疆，于脊柱上是所及之区扩至全体；区内之容许狭于全体（Web.AdmitsWithin.narrow），比较只在所及之内成立（Flow.Balances.comparison_within_reach）。”删存量三律。"
+  },
+  {
+   "id": "huan-qi-qun-guang-da",
+   "verdict": "reject",
+   "issues": "片段逐字通过。“光大”是评价语：程颐“稱元吉者謂其功徳光大也”（YD-CY4），脉络 TP-H59-X4-N02 也释为“光明广大评价”，不是“所容变广”。“涣其群”义有争：程颐读为“天下渙散而能使之羣聚”（聚散者），朱熹读为“能散其小羣以成大羣”（YD-ZX2），两读相反，条目取散群之读而未注出处。所用 Clearing.narrows、Restoring.Inflow.widens 都是见证。",
+   "fix": "删此条。若要保留其结构，另立新条：以朱熹注“能散其小羣以成大羣”（注·南宋）为片段，kind 定为 scope，注明程颐相反之读；不得以“光大”为“广”。"
+  },
+  {
+   "id": "xici-ri-xin-sheng-de",
+   "verdict": "revise",
+   "issues": "片段逐字通过。reading 写“日新是每步皆新：从某步起每一组态都异于先前的”，这是加在原文上的界说（见日新名条）；韩注“體化合變”与孔疏“日日增新”给出的是更新与增新。",
+   "fix": "reading 改为：“日新（孔疏：日日增新）把新与增并举；脊柱上，每步皆新需要增益（Flow.new_beyond_every），其存量无界（Web.unbounded_of_new），‘增新’之增恰是新之所需；‘不重复’是本理论的约定。”"
+  },
+  {
+   "id": "xici-shen-si-shu-wu-suo-shi",
+   "verdict": "revise",
+   "issues": "片段逐字通过。上文是“苟错诸地而可矣。藉之用茅，何咎之有！慎之至也”：放在地上已经够了，加茅是在足够之外再留余（缓冲）；“无所失”是无咎。条目里“越出则有失，不论用意”是原文没有的全称。",
+   "fix": "reading 改为：“已足之外再藉以茅，是在需求之外留余；脊柱上，被支持恰当净汲取不越出余地（Flow.Balances.supported_iff_within_margin），余地越大，可承受的汲取越多。”删“不论用意”。置信 low。"
+  },
+  {
+   "id": "xici-kai-wu-cheng-wu",
+   "verdict": "reject",
+   "issues": "片段逐字通过。上下文是“是故聖人以通天下之志，以定天下之業，以斷天下之疑”；朱熹注“開物成務謂使人卜筮以知吉凶而成事業”（YD-ZX7）。开物是使人通晓（占筮之知），不是一部分使原不被容许者得以形成。对应只在字面的“开”，mapper 自评也弱。",
+   "fix": "删此条；在“开”名下把这一义列入 not_carried。"
+  },
+  {
+   "id": "xici-yi-he-yi-pi",
+   "verdict": "revise",
+   "issues": "片段逐字通过，结构相合。所引 Becoming.Web.Returns 已改名为 Web.Restored（R30）；“往来不穷”是构形的往复，应锚 Becoming.Branching.Returns。阖的闭藏义也宜注明。",
+   "fix": "declarations 换为 Becoming.Branching.Returns。reading 加“阖之古义为闭藏（孔疏以‘閉藏翕斂’释坤）”。"
+  },
+  {
+   "id": "xici-tiandi-da-de-yue-sheng",
+   "verdict": "revise",
+   "issues": "片段逐字通过，读法谨慎。所引 Becoming.g0_of_unrestricted 已改名为 Becoming.livingSignificance_of_unrestricted（R30）。records 用了已退役的 id：one-axiom-yields-g0、axiom-decomposition；退役标签 G0、one axiom 不应出现在活文本中。",
+   "fix": "声明换为 Becoming.livingSignificance_of_unrestricted。records 换为 continuation-condition-yields-living-significance、continuation-condition-decomposition、comparison-by-widening。"
+  },
+  {
+   "id": "xici-qiong-ze-bian",
+   "verdict": "keep",
+   "issues": "片段逐字通过；定域恰当：穷不蕴涵变，可以锁定；只在仍有回返之路处，变才通而久。",
+   "fix": "无。"
+  },
+  {
+   "id": "xici-sheng-sheng-zhi-wei-yi",
+   "verdict": "revise",
+   "issues": "片段逐字通过。所引 Web.Unceasing.regeneration_recurs 已改名为 Web.Unceasing.activeRenewer_recurs（R30），G1 的“最近之声明”中也是旧名。漏了孔疏“生生，不絕之辭。陰陽變轉，後生次於前生”：疏层读为相续，正好支持定域。Clearing.narrows 是见证。",
+   "fix": "两处都换为 Becoming.Web.Unceasing.activeRenewer_recurs。reading 加孔疏作疏层之读。Clearing.narrows 注为见证，或换为 Web.Widens（以无此部分者广于有此部分者读）。"
+  },
+  {
+   "id": "xici-kun-xi-pi-guang-sheng",
+   "verdict": "revise",
+   "issues": "片段逐字通过。翕的古义是收敛闭藏（孔疏“坤是陰柔，閉藏翕斂”，已核），不是“所取”；条目设“翕时所取不越出余地”为条件，是加入原文所无的前提。孔疏“地體廣博，故坤云『廣生』”说的是体量之广。Restoring.Inflow.widens 是见证。",
+   "fix": "reading 改为：“静而闭藏、动而开生（孔疏），二者交替而所生广；脊柱上，所容之变由阖与辟构成（Web.LosesSupport.falls、Web.GainsSupport.rises），广恰当净汲取不越出余地（Flow.Balances.widens_iff_within_margin）；把‘翕’读作汲取是 AI 读法。”另注孔疏之‘广’为体量义。"
+  },
+  {
+   "id": "hanzhu-qu-cheng-cheng-bian-ying-wu",
+   "verdict": "revise",
+   "issues": "片段逐字通过，RespondsTo 一层相合。Switching.fixed_loses 是二值切换的见证（Pace.lean），条目“‘系一方’即固定规则，必有所失”把见证说成了全称。挂在本条下的平行 FO2-TJ-R025（坛经“無一法可得，方能建立萬法”），其“法”是佛法之法（dharma），不是规则，读作“不执一固定规则”属错置。",
+   "fix": "reading 改为：“在 Switching 的见证中，两条固定规则各自从第一步起失去一组态，交替的规则不失。”删“必有所失”。删平行 FO2-TJ-R025。"
+  },
+  {
+   "id": "kongshu-ji-dao-shun-li-yang-wu",
+   "verdict": "revise",
+   "issues": "片段逐字通过，读法得当。records 中的 axiom-decomposition 已改名。",
+   "fix": "records 换为 continuation-condition-decomposition。"
+  },
+  {
+   "id": "zhuxi-pi-bi-se",
+   "verdict": "keep",
+   "issues": "片段逐字通过；Hexagram.pi_of_tai、waxWane_returns 都存在；会回返的闭与成闭之分恰当。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhuxi-gu-zi-xin-wei-hou-shi-zhi-duan",
+   "verdict": "keep",
+   "issues": "片段逐字通过；“将坏”对应关节，“自新”对应关节处之一步，结构相合；修养义已排除。",
+   "fix": "无（可把“即护闭”写成“即关节处之保持”）。"
+  },
+  {
+   "id": "laozi-11-dang-qi-wu-you-che-zhi-yong",
+   "verdict": "keep",
+   "issues": "两个片段逐字通过，LE-R020、LE-R021 都相合；‘无’作本体已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "heshang-51-de-yi-zhu-bu-qi",
+   "verdict": "revise",
+   "issues": "片段逐字通过。center_not_derived 误用（它是价值立场的见证）。河上公自释“一者，道始所生，太和之精气也”（LC-HS-UP，第10章注，已核）：一是道始所生的精气，属先在根据（气化之源）一层，不是意志。LC-R021 的 limits 也明言“不自动等同经文四十二章一…同字不合并”。",
+   "fix": "删 Clearing.center_not_derived。相分层改为“先在根据（道始所生之精气为布气之主）”，引第10章注为证。加 Becoming.Flow.rise_given_by_supported。"
+  },
+  {
+   "id": "heshang-05-kong-xu-wan-wu-zi-sheng",
+   "verdict": "keep",
+   "issues": "片段逐字通过；年代争议已注；和气只取其流行之义。",
+   "fix": "无。"
+  },
+  {
+   "id": "heshang-34-ai-yang-bu-shou-qu",
+   "verdict": "keep",
+   "issues": "片段逐字通过；不收取即不阖，合于 Flow.Balances.closes_nothing。",
+   "fix": "无。"
+  },
+  {
+   "id": "laozi-02-fu-wei-fu-ju-shi-yi-bu-qu",
+   "verdict": "revise",
+   "issues": "片段逐字通过。“弗居”之居是居功、据其位：同条所挂平行 ZX130-H15-R01，脉络把“有而不居”释为“不据为自满的地位”，说的不是汲取共同条件。把弗居读作“不净汲取”、把“不去”读作 Web.renewing_keeps_support，是类比，定为 agreement 过强。",
+   "fix": "在 reading 中明说“以‘居’为汲取是 AI 类比”。kind 改为 scope，或保留 agreement 而置信 low。"
+  },
+  {
+   "id": "laozi-08-shan-li-wan-wu-er-bu-zheng",
+   "verdict": "keep",
+   "issues": "片段逐字通过；沿用 RO，补 Flow.Balances.closes_nothing 恰当；帛书异文已注。",
+   "fix": "无。"
+  },
+  {
+   "id": "laozi-18-da-dao-fei-you-ren-yi",
+   "verdict": "revise",
+   "issues": "片段逐字通过，读法得当。records 中的 testing-within-registration 已改名。",
+   "fix": "换为 testing-within-couplings。"
+  },
+  {
+   "id": "suzhe-18-da-dao-fei-er-hou-ren-yi-jian",
+   "verdict": "revise",
+   "issues": "片段逐字通过，读法得当。records 中的 testing-within-registration 已改名。",
+   "fix": "换为 testing-within-couplings。"
+  },
+  {
+   "id": "laozi-31-le-sha-ren-zhe",
+   "verdict": "revise",
+   "issues": "两个片段逐字通过；沿用 RO。records 中的 axiom-decomposition 已改名。",
+   "fix": "换为 continuation-condition-decomposition。"
+  },
+  {
+   "id": "laozi-38-shi-dao-er-hou-de",
+   "verdict": "keep",
+   "issues": "片段逐字通过；相分沿用 RO，并补了“后出不等于退化”。",
+   "fix": "无。"
+  },
+  {
+   "id": "laozi-64-fu-wan-wu-zhi-zi-ran",
+   "verdict": "keep",
+   "issues": "两个片段逐字通过；定域沿用 RO；以关节处之一步限定“无为故无败”，恰当。",
+   "fix": "无。"
+  },
+  {
+   "id": "laozi-51-sheng-er-bu-you",
+   "verdict": "revise",
+   "issues": "片段逐字通过；沿用 RO。records 中的 axiom-decomposition 已改名。",
+   "fix": "换为 continuation-condition-decomposition。"
+  },
+  {
+   "id": "suzhe-55-sheng-bu-ke-yi",
+   "verdict": "keep",
+   "issues": "片段逐字通过；“祥妖也”正是苏辙层的读法；Inflow.widens 作为见证足以说明“可以变广”。",
+   "fix": "无。"
+  },
+  {
+   "id": "laozi-15-dong-zhi-xu-sheng",
+   "verdict": "reject",
+   "issues": "片段逐字通过。原文是修养语（孰能安以久动之徐生），条目所“限定”的全称（安＝全体之寂）是自设的；“徐”在脊柱上无对应。同章下句“保此道者不欲盈，夫唯不盈，故能蔽不新成”（已核）才有结构：不盈即留余。",
+   "fix": "删此条。如需，另以“保此道者不欲盈，夫唯不盈”立条对应余地，并注“蔽不新成”有异文，置信 low。"
+  },
+  {
+   "id": "laozi-50-sheng-sheng-zhi-hou",
+   "verdict": "keep",
+   "issues": "片段逐字通过；词义（动宾）与结构（越出余地之汲取）分开记，做法正确。",
+   "fix": "无。"
+  },
+  {
+   "id": "wangbi-20-zi-ran-yi-zu-yi-zhi-ze-you",
+   "verdict": "keep",
+   "issues": "片段逐字通过；相分恰在固定之分。“续凫截鹤”源出庄子骈拇“故性長非所斷，性短非所續”（ZH1-S08，外篇），这是固定之性一层的先秦出处（见缺条）。",
+   "fix": "可在 reading 中注明骈拇出处。"
+  },
+  {
+   "id": "wangbi-39-shou-yi-qing-bu-shi",
+   "verdict": "keep",
+   "issues": "片段逐字通过；守生成者与只用所成之别读得恰当；“一”作先在之母已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "wangbi-49-se-qi-jing-lu",
+   "verdict": "revise",
+   "issues": "片段逐字通过，结构相合。但 reading 以 Clearing.narrows（见证）作“使所容变狭”的定义。",
+   "fix": "定义锚改为 Becoming.Web.Widens（无此部分者广于有此部分者），Clearing.narrows 注为见证。"
+  },
+  {
+   "id": "daxue-qin-shi-neng-rong",
+   "verdict": "revise",
+   "issues": "两个片段逐字通过。此处“容”是包容他人之技，属容名不携带的德性义。“能容”是不阻他人之形成，即不阖；Restoring.Inflow.widens（族外给予之见证）结构不合。“违之俾不通”才是阖。",
+   "fix": "declarations 改为：Becoming.Flow.Balances.closes_nothing 与 Becoming.Flow.Balances.supported_of_net_give 对应“能容”（不阖）；Becoming.Web.LosesSupport.falls 对应“违之俾不通”（阖）；Clearing.narrows 注为见证。删 reading 中“与理论‘容’之名相合”。"
+  },
+  {
+   "id": "zhongyong-zhi-zhong-he-wan-wu-yu",
+   "verdict": "keep",
+   "issues": "两个片段逐字通过；沿用 RO，补“万物育”只在所及之内成立，恰当。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhongyong-zan-tiandi-zhi-hua-yu",
+   "verdict": "keep",
+   "issues": "片段逐字通过；固定之性与修养链都已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhongyong-cheng-ji-cheng-wu",
+   "verdict": "keep",
+   "issues": "两个片段逐字通过；沿用 RO；“成物”之成为使之成，读得正确。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhongyong-wan-wu-bing-yu-er-bu-xiang-hai",
+   "verdict": "revise",
+   "issues": "片段逐字通过，定域恰当。但 names_used 列了“相赅”：“不相害”不是互相包含，reading 中也没有用到相赅。",
+   "fix": "从 names_used 中删去相赅。"
+  },
+  {
+   "id": "mengzi-si-duan-kuo-chong",
+   "verdict": "keep",
+   "issues": "两个片段逐字通过；沿用 RO；说明了扩充不是广，恰当。",
+   "fix": "无。"
+  },
+  {
+   "id": "xunzi-ke-yi-wei-yu",
+   "verdict": "revise",
+   "issues": "片段逐字通过，但不含可与能之分；Onward.run_iff_continues 此文不证。",
+   "fix": "加片段“然则可以为，未必能也；虽不能，无害可以为”（RU2-S-XZ23，已核）。删 Onward.run_iff_continues，或注“只是 Ren 之‘可’的锚，此文不证”。"
+  },
+  {
+   "id": "daizhen-xia-xiao-er-jin-guang-da",
+   "verdict": "revise",
+   "issues": "片段逐字通过。records 中有两个已退役的 id：selection-through-registration、testing-within-registration。",
+   "fix": "换为 selection-through-couplings、testing-within-couplings。"
+  },
+  {
+   "id": "xunzi-yu-min-chu-shi-bai-bei",
+   "verdict": "keep",
+   "issues": "片段逐字通过；一步之内的大增需要族外之给，这一读法成立；“富”只读作条件水平。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhuangzi-xiang-ru-yi-mo",
+   "verdict": "revise",
+   "issues": "片段逐字通过。reading 说“‘不如’在此恰是‘广’”，把评价（不如）与关系（广）等同；以广为较好是比较承诺 C，不在关系本身。Restoring.Inflow.widens 是见证。",
+   "fix": "改为：“江湖之水平赅涸泉之所容而有所长（Web.Widens）；‘不如’是评价，在本理论中只经 C 进入。”Inflow.widens 注为见证。"
+  },
+  {
+   "id": "zhuangzi-hun-dun-zao-qiao",
+   "verdict": "revise",
+   "issues": "片段逐字通过；沿用 RO。records 中的 runaway-distance-unregistered 已改名。",
+   "fix": "换为 runaway-distance-uncoupled；Clearing.narrows 注为见证。"
+  },
+  {
+   "id": "zhuangzi-you-ren-bi-you-yu-di",
+   "verdict": "keep",
+   "issues": "片段逐字通过（内篇）；余地之名的出处；结构相合。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhuangzi-tianxia-jie-you-suo-chang",
+   "verdict": "keep",
+   "issues": "片段逐字通过；已注明在延续条件下；G2 作为比较承诺而非定理，提法正确。",
+   "fix": "无（可注 Transfer.unordered 是见证）。"
+  },
+  {
+   "id": "zhuangzi-ying-ning",
+   "verdict": "keep",
+   "issues": "片段逐字通过；攖而后成与扰动被吸回相合；修养义已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhuangzi-sheng-sheng-zhe-bu-sheng",
+   "verdict": "keep",
+   "issues": "片段逐字通过；关系内的读法与‘外于生灭’的读法分开，判为定域，并注明了改判相分的条件。",
+   "fix": "无。"
+  },
+  {
+   "id": "hanfei-jielao-min-zhi-sheng-sheng",
+   "verdict": "revise",
+   "issues": "片段逐字通过，读法得当。所引 Web.Unceasing.regeneration_recurs 已改名（R30）。",
+   "fix": "换为 Becoming.Web.Unceasing.activeRenewer_recurs。"
+  },
+  {
+   "id": "laozi-27-shan-bi-bu-ke-kai",
+   "verdict": "revise",
+   "issues": "片段逐字通过。reading 说“老子把这种闭评为‘善’”，但善闭之“善”是善于（与善行、善言、善数、善结并列），评的是技能；“结构相同、评价相反”说过了头。",
+   "fix": "改为：“老子赞善于闭者无关楗而不可开，评的是技能；Ren 旧文判成闭为恶。二者的评价都在名外的判语里，结构只是吸收区域。”"
+  },
+  {
+   "id": "laozi-52-sai-dui-kai-dui",
+   "verdict": "revise",
+   "issues": "片段逐字通过。把“开其兑，济其事”读为伪开 I（Flow.joint_excess_ends），原文与注都没有依据。苏辙读为“世人開其所悦以身徇物往而不反”，即被吸入而不返。“塞其兑”读作护闭，有苏辙“非絶物也以神應物”可据。",
+   "fix": "把 Flow.joint_excess_ends 换为 Becoming.Law.drawn_iff_not_returns；reading 引苏辙“往而不反”。伪开之型标为 AI 读法，置信 low。"
+  },
+  {
+   "id": "hanfei-xindu-fa-yu-shi-zhuan",
+   "verdict": "revise",
+   "issues": "两个片段逐字通过，结构相合。Switching.fixed_loses 是见证。心度篇作者有争议，layer 没有注。",
+   "fix": "layer 加“篇章作者有争议”。reading 把“每一固定规则从第一步起即失去某组态”改为“在 Switching 的见证中……”。"
+  },
+  {
+   "id": "mojing-sun-pian-qu",
+   "verdict": "revise",
+   "issues": "片段逐字通过。记录 MI1-N-JS-027 的证文出自经上（MI1-S-JS），而本条 source 是经说上（MI1-S-SS），片段与记录不同源。",
+   "fix": "把经上片段“損，偏去也”另列于以 MI1-S-JS 为源的条目，或把该记录移过去；本条只留经说上的片段。"
+  },
+  {
+   "id": "mojing-pian-qu-mo-jia-shao",
+   "verdict": "keep",
+   "issues": "片段逐字通过；训释分歧已注，置信 low；作为比较前提而非普遍事实，读法得当。",
+   "fix": "无。"
+  },
+  {
+   "id": "mojing-yi-lei-bu-bi",
+   "verdict": "revise",
+   "issues": "片段逐字通过。墨经之异类是量纲不同（木与夜：长度与时长；智与粟），不是同一比较中的互有所长；结构只在“比较需共同之量”一层相合。Transfer.unordered 是延续条件下的见证。",
+   "fix": "reading 写明这一区别，声明注为见证并注明条件；names_used 删“各有所长”；kind 改为 scope，或保留 agreement 并写明残余。"
+  },
+  {
+   "id": "mojing-qiong-bu-rong-chi",
+   "verdict": "revise",
+   "issues": "片段逐字通过。墨经之穷是空间之界（前方能否再置一尺）；Web.unbounded_of_new、World.arising_opens 是关于时间与存量的律。两者只在“以能否再容一单位定界”这一形上相合，agreement 过强。",
+   "fix": "kind 改为 scope；reading 注“空间度量义；与脊柱之律同形不同域”。"
+  },
+  {
+   "id": "mozi-suo-tian-xia-yi-li",
+   "verdict": "revise",
+   "issues": "片段逐字通过，读法得当。但“把原未给予者给入，使所容变广（Restoring.Inflow.widens）”把见证写成了一般陈述。",
+   "fix": "改为“可以使所容变广（见证 Restoring.Inflow.widens），其界由 Flow.Balances.widens_iff_within_margin 给出”。"
+  },
+  {
+   "id": "mozi-gua-ren-zhi-dao",
+   "verdict": "revise",
+   "issues": "两个片段逐字通过。第二个片段“此所以寡人之道也”在原文中指兴师攻伐、男女久不相见一事，不是赋敛一事；reading 只讲了赋敛。",
+   "fix": "把第二个片段换为本段起句“今天下為政者，其所以寡人之道多”（MO1-S-C20，已核）；或在 reading 中补“男女久不相见（使新形成不得生起）”一层。"
+  },
+  {
+   "id": "huiyuan-hua-jin-yin-yuan-yong-xi",
+   "verdict": "revise",
+   "issues": "片段逐字通过，相分读得得当（脊柱不能驳之，只是评价起点不同）。records 中 one-axiom-yields-g0、axiom-decomposition 都已退役改名。RO 已有同层的相分条 zaahan-ku-mie（杂阿含苦灭），没有交叉引用。",
+   "fix": "records 换为 continuation-condition-yields-living-significance、continuation-condition-decomposition；reading 加“与 RO zaahan-ku-mie 同层”。"
+  }
+ ],
+ "missing": [
+  "大过九五与小象（D1 与“凡新非生”最强的先秦结构）：经“九五：枯楊生華，老婦得其士夫，无咎无譽”（YD-JG28）；传“枯楊生華，何可久也”（YD-JP28，TP-H28-X5-R01）；程颐“枯楊下生根稊則能復生如大過之陽興成事功也上生華秀雖有所發无益於枯也”“枯楊不生根而生華旋復枯矣安能久乎”（YD-CY2，北宋）；朱熹“稊根也榮於下者也榮於下則生於上矣”（YD-ZX1，南宋）。",
+  "老子67（‘广’名之首证；广恰当净汲取不越出余地，Flow.Balances.widens_iff_within_margin）：“俭故能广”（LL-R033）、“舍俭且广，舍后且先，死矣”（LL-R036）；王弼注“节俭爱费，天下不匮，故能广也”（DS01）；河上公注“天子身能节俭，故民日用广矣”（LC-HS-LOW）；苏辙“廣大之易窮而儉約之易足其終必至于廣也”（LC-SZ-ALL）。",
+  "孔疏“生生，不絕之辭。陰陽變轉，後生次於前生，是萬物恒生，謂之易也”（YWH-H5，疏·唐）：生生的相续义，也是‘绝’的反面。",
+  "荀子性恶“然则可以为，未必能也；虽不能，无害可以为”（RU2-S-XZ23）：可与能之分，即被容许而未必实现。",
+  "老子42“故物或损之而益，或益之而损”（LL-N011，经·先秦）：部分之损益与整体之损益可以反号（益、偏去之定域）。",
+  "墨经经下“不可偏去而二，說在見與俱、一與二、廣與脩”（MI1-S-JX）及经说下“一二不相盈，廣脩、堅白”（MI1-S-SX）：不可分者不能偏去（Flow.withhold 之界）；也给出‘广’的宽度义。",
+  "论语尧曰“興滅國，繼絕世，擧逸民”（RU1-S-LY，先秦）：绝＝相续之断，继绝＝重接。",
+  "老子72 河上公本“无狭其所居”及注“谓心居神，当宽柔，不当急狭也”（LC-HS-LOW；王弼本作‘狎’）：‘狭’作及物动词，见于经文异文层。",
+  "庄子骈拇“故性長非所斷，性短非所續”（ZH1-S08，外篇）：王弼20注“续凫之足，何异截鹤之胫”所本，是固定之性一层的先秦出处。",
+  "程颐比卦“衆必相比而後能遂其生天地之間未有不相親比而能遂者也”（YD-CYSK，北宋）：生之得遂在于相比（关系）；与‘遂生’之名及一元关系之论题相关。",
+  "涣六四两种相反之读：程颐“天下渙散而能使之羣聚可謂大善之吉也”“稱元吉者謂其功徳光大也”（YD-CY4）；朱熹“能散其小羣以成大羣”（YD-ZX2）。",
+  "同人六二经文“六二：同人于宗，吝”（YD-JG13，JF-R038）与朱熹“宗黨也六二雖中且正然有應于上不能大同而係於私吝之道也”（YD-ZX1）。",
+  "易学之‘应’：王弼略例“夫應者，同誌之象也”（YWH-LG，WH-N023）；脊柱已以 Becoming.Hexagram.opposed 名爻应，与本簇之‘应’（ExchangeLaw.RespondsTo）相撞，须分名。",
+  "墨辩小取“辟也者，舉也物而以明之也”（MI1-S-XQ，MI1-N-XQ-pi）：辟之名辩义（譬），与本簇之‘辟’相撞。",
+  "Ren 自己的中文（来源，不是根据）：《生生不息论》v1 第65行标题“生生：生成者生成新的生成”（D1 修订所据）；第69行“在当下，生显为尚可成为的可能性空间”（D22）；第552行“成生者，善也；绝生者，恶也；使万物各遂其生而相成不相害者，天理也”（名的出处，及须排除的评价）。",
+  "RO 已有、本簇应交叉引用的两条：国语郑语“夫和实生物，同则不继”（guoyu-shibo-he-sheng-wu，定域），关于生之需异与‘不继’；杂阿含 zaahan-ku-mie（相分），与慧远‘化尽’同层。",
+  "各名的备选都没有逐一说明现行中文版之名的取舍：扩大、缩小、保持、混合、容纳、余量、包含／超出、生成的／退化的、扣留（同时名 Flow.withhold 与 Becoming.Withholding）、生成的空间。",
+  "全簇须改（不是缺条）：R30 已改名的声明——Becoming.Web.Returns 改为 Becoming.Web.Restored（构形回返用 Becoming.Branching.Returns），Becoming.Web.Unceasing.regeneration_recurs 改为 Becoming.Web.Unceasing.activeRenewer_recurs，Becoming.g0_of_unrestricted 改为 Becoming.livingSignificance_of_unrestricted；已退役的记录 id——one-axiom-yields-g0 改为 continuation-condition-yields-living-significance，axiom-decomposition 改为 continuation-condition-decomposition，testing-within-registration 改为 testing-within-couplings，selection-through-registration 改为 selection-through-couplings，runaway-distance-unregistered 改为 runaway-distance-uncoupled。",
+  "全簇须改（不是缺条）：以下都是模型见证，不是一般律——Becoming.Clearing.narrows、Becoming.Clearing.loses_beyond、Becoming.Restoring.Inflow.widens、Becoming.Restoring.Adapting.restores、Becoming.Switching.fixed_loses、Becoming.Transfer.unordered／mixed（后两者在延续条件下成立）；凡写成“凡…必…”之处，须改为“确有其例”，或换一般律（Web.Widens、Flow.Balances.widens_iff_within_margin 等）。Becoming.Clearing.center_not_derived 是价值立场之见证，不得用于‘生物之心’‘一主布气’。"
+ ]
+}

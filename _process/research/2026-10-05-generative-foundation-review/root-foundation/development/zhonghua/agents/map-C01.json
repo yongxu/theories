@@ -1,0 +1,4253 @@
+{
+ "cluster": "C01",
+ "names": [
+  {
+   "concept": "生成／变化（becoming）：同一展开中关系的形成、维持、转化、退化与消解，不预设为好；生起与止息、形成与解散是同一变化的读法",
+   "name": "变化",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "DS02",
+     "quote": "刚柔相推而生变化",
+     "layer": "传·先秦（《系辞》；成篇年代有争议，战国中晚期至汉初）",
+     "sense_in_context": "一对值（刚柔）相推而生出变化：变化起于关系项之间",
+     "locator": "系辞上 第二章",
+     "record_id": "WP-XCS-C02-S02-R02"
+    },
+    {
+     "source_id": "DS02",
+     "quote": "变化者，进退之象也",
+     "layer": "传·先秦（《系辞》；成篇年代有争议，战国中晚期至汉初）",
+     "sense_in_context": "变化兼进与退两向，不只是增益",
+     "locator": "系辞上 第二章",
+     "record_id": ""
+    },
+    {
+     "source_id": "RU2-S-XZ19",
+     "quote": "天地合而万物生，阴阳接而变化起",
+     "layer": "先秦（《荀子·礼论》）",
+     "sense_in_context": "变化起于交接，即起于关系",
+     "locator": "《荀子·礼论》",
+     "record_id": "RU2-U-XZ19"
+    },
+    {
+     "source_id": "RU2-S-XZ22",
+     "quote": "状变而实无别而为异者，谓之化",
+     "layer": "先秦（《荀子·正名》）",
+     "sense_in_context": "化是配置改变而跨步认同不变的情形",
+     "locator": "《荀子·正名》",
+     "record_id": "RU2-U-XZ22"
+    },
+    {
+     "source_id": "ZH1-S06",
+     "quote": "同則无好也，化則无常也",
+     "layer": "先秦（《庄子》内篇）",
+     "sense_in_context": "随化而行则不守一常：变化中没有固定之常",
+     "locator": "庄子·大宗師 颜回坐忘章",
+     "record_id": "ZH1-C06-R-15"
+    }
+   ],
+   "fit": "《系辞》以变化兼进退、由刚柔相推而生，《荀子》说阴阳交接而变化起，又以状变而实无别定义化：变化包含形成与消解两向，以关系的交接为起点，也区分了配置之变与认同之变。脊柱上每个世界是所显之律的运行（World.run_world），生起与止息、形成与解散、立起与倒下是同一变化的读法（Web.change_readings、World.arising_iff_ceasing），有限世界里二者复现相伴（keep_pace），不预设方向。中文版正文已用生成／变化之论，此名延续它并给出先秦根据。",
+   "not_carried": "易传语境里变化与吉凶占断相连；周敦颐「乾道变化，各正性命」把变化收束到各正的性命（固定本性层）；张载「太虚无形，气之本体，其聚其散，变化之客形尔」以太虚为本体、变化为客形（先在之根层）；佛典与道教的变化可指意志或神通所作的化现（如《阿弥陀经》众鸟为变化所作，见并行条）。脊柱的变化不带这些：变化之后没有本体，也没有施事发出变化。",
+   "course": "先秦：《系辞》以变化系于进退与刚柔相推（WP-XCS-C02-S02-R02）；《荀子·礼论》把变化系于交接（RU2-U-XZ19），《正名》给化一个认同上的定义（RU2-U-XZ22，RO xunzi-hua-yi-shi）。魏晋：韩康伯「莫不獨化於大虛」把变化读成无所待的自化（YCM130-H5-H-07-R01，本簇判相分）。宋明：周敦颐《通书》把变化收于性命（RU2-U-ZD01），张载以变化为太虚的客形（RU2-U-ZZ02）。此名取先秦的交接与进退义，舍去后两层所加的本体与本性。",
+   "alternatives": [
+    {
+     "name": "生成",
+     "why_not": "现代复词；生字偏向生而不含退化，而理论说生成与退化不相重叠，以生成名整个展开会把退化排除在外，或把任何新组织都叫生成。生成只作变化中与退化相对的一向。"
+    },
+    {
+     "name": "易",
+     "why_not": "易兼变易、不易、简易三义，又是书名；易线已以 Hexagram 诸模块对应《周易》，以易名展开会把卦的表示当作展开本身。"
+    },
+    {
+     "name": "化",
+     "why_not": "单字化在《荀子》是状变而实无别的一种情形，又常指教化与物化（死），不能涵盖形成与消解两向。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.World.run_world",
+    "Becoming.Web.change_readings",
+    "Becoming.World.arising_iff_ceasing",
+    "Becoming.keep_pace"
+   ]
+  },
+  {
+   "concept": "同一展开（the one unfolding）：算入其余，每个世界是交换之律的一次运行，诸读法处处粘合；律由这一运行读出，不在它之外",
+   "name": "大化",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ17",
+     "quote": "阴阳大化，风雨博施，万物各得其和以生",
+     "layer": "先秦（《荀子·天论》）",
+     "sense_in_context": "整体的交换之中万物各得其所需而生成",
+     "locator": "《荀子·天论》",
+     "record_id": "RU2-U-XZ17"
+    },
+    {
+     "source_id": "RU2-S-XZ17",
+     "quote": "天行有常，不为尧存，不为桀亡",
+     "layer": "先秦（《荀子·天论》）",
+     "sense_in_context": "整体运行之律不因某一中心的德行而存亡",
+     "locator": "《荀子·天论》",
+     "record_id": "RU2-U-XZ17"
+    },
+    {
+     "source_id": "RU1-S-ZY",
+     "quote": "小德川流，大德敦化",
+     "layer": "先秦或秦汉（《礼记·中庸》，成篇年代有争议）",
+     "sense_in_context": "化作为整体的生化，被归于大德",
+     "locator": "《中庸》第三十章",
+     "record_id": ""
+    },
+    {
+     "source_id": "RU2-S-S01",
+     "quote": "大顺大化，不见其迹，莫知其然之谓神",
+     "layer": "宋明（周敦颐《通书》，北宋）",
+     "sense_in_context": "大化与圣德修而万民化相连，转为教化义",
+     "locator": "《通书》顺化第十一",
+     "record_id": ""
+    }
+   ],
+   "fit": "荀子把大化放在列星、日月、四时、风雨的交换之中，万物各得其和以生，人不见其事而见其功：一个整体的交换，算入其余，读出为一次运行，交换只由功效读出；「不为尧存，不为桀亡」说这一运行之律不以某一中心为转移。脊柱上 World.unity（算入其余，每个世界是交换之律的一次运行）与 World.run_world（世界是所显之律的运行）正是此结构，World.withRest 给出其余如何被算入。大字说的是整体，不是另一个更大的物。",
+   "not_carried": "荀子同篇以「神」称这种不见其事的成就，不作施事，但后世容易读成主宰；周敦颐「大顺大化」紧接「故天下之众，本在一人」，把大化转为圣人教化，属单一中心层；中文里化又有教化义，后世诗文以大化称死生流转，带宿命与情感意味。理论只取整体交换的一次运行一义。",
+   "course": "先秦：荀子以阴阳大化称整体交换（RU2-U-XZ17）；《中庸》以「大德敦化」把化与德相连。宋明：周敦颐《通书》以大顺大化接「圣德修而万民化」，转向单一中心的教化。后世诗文以大化称死生流转（不在脉络冻结文本内，不引）。此名取荀子义。",
+   "alternatives": [
+    {
+     "name": "道",
+     "why_not": "道最常用来称整体与律，但《庄子·大宗师》「自本自根」与《老子》「道生一」使道带有先在之根与生成次序（本簇 zhuang-dazongshi-zi-ben-zi-gen 判相分）；以道名展开会把律读成展开之外的第二个实在。道作为被对照的古典概念保留，不作脊柱之名。"
+    },
+    {
+     "name": "造化",
+     "why_not": "造字带一个造作者（造物者），属意志层。"
+    },
+    {
+     "name": "太和",
+     "why_not": "张载以太和称道，带和谐的正面价值；展开含退化与消解，不预设为好。"
+    },
+    {
+     "name": "展开",
+     "why_not": "现代词，无古典用例；作为说明语保留，不作名。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.World.unity",
+    "Becoming.World.run_world",
+    "Becoming.World.withRest"
+   ]
+  },
+  {
+   "concept": "整体的统一（unity）：算入其余，诸交换合为一次运行，诸读法处处粘合；语境中的读法总构成一个世界",
+   "name": "一",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "DS03",
+     "quote": "天下之动，贞夫一者也",
+     "layer": "传·先秦（《系辞》；成篇年代有争议，战国中晚期至汉初）",
+     "sense_in_context": "众动定于一：诸交换合为一次运行",
+     "locator": "系辞下 第一章",
+     "record_id": "WP-XCX-C01-S03-R02"
+    },
+    {
+     "source_id": "ZH1-S02",
+     "quote": "萬物與我爲一",
+     "layer": "先秦（《庄子》内篇）",
+     "sense_in_context": "我与万物同在一个整体中",
+     "locator": "庄子·齊物論",
+     "record_id": "ZH1-C02-R-13"
+    },
+    {
+     "source_id": "FO2-FQ",
+     "quote": "所言一者，非自性一，緣成故",
+     "layer": "隋唐（法藏《华严一乘教义分齐章》，唐）",
+     "sense_in_context": "此一是缘成之一，不是自性之一",
+     "locator": "华严一乘教义分齐章 卷四",
+     "record_id": ""
+    },
+    {
+     "source_id": "RU2-S-S02",
+     "quote": "两不立则一不可见",
+     "layer": "宋明（张载《正蒙·太和》，北宋）",
+     "sense_in_context": "一只在两（区分）立起时可见",
+     "locator": "正蒙·太和",
+     "record_id": "RU2-R0172"
+    }
+   ],
+   "fit": "《系辞》以一为众动之所定，法藏明言此一非自性一而是缘成，张载说两不立则一不可见：一是诸关系的合一，不是关系之外的一个物，也离不开区分。脊柱上 World.unity：算入其余，每个世界是交换之律的一次运行，读法粘合为一；Contextual.world：语境中的读法总构成一个世界；整体不能拆成成对关系（whole_not_in_pairs）。",
+   "not_carried": "一的先在生成义（《老子》「道生一」；孔疏「元氣混而為一」以一为天地未分之前的状态，本簇判相分）；一的单一中心义（「是以圣人抱一为天下式」，王弼「主必致一也」以一为统众之主，本簇判相分）；数目义；齐同而抹去差别之义。这些都不带入：一不在多之前，也不居多之上。",
+   "course": "先秦：一兼统一与中心两义（《系辞》WP-XCX-C01-S03-R02、《老子》、《庄子》ZH1-C02-R-13）。汉唐：太一、元气混一把一读成生成之始（孔疏 WH-R029 等，相分）；王弼《略例》以一为主（相分）。隋唐：法藏以缘成释一（FO2-FQ）。宋：张载以两一互立（RU2-R0172）。理论取缘成与两一之义，舍去先在与主宰之义。",
+   "alternatives": [
+    {
+     "name": "太一",
+     "why_not": "《庄子·天下》与汉代以太一称最高者，孔疏以太一为元气混一之始，带先在之根与神格。"
+    },
+    {
+     "name": "太极",
+     "why_not": "「易有太极，是生两仪」是生成次序，孔疏读为元气；作为整体统一之名会带入先于两仪的第一项（本簇 xici-tai-ji 判定域、kong-tai-ji-yuan-qi 判相分）。"
+    },
+    {
+     "name": "一体",
+     "why_not": "带身体的图像，宋明以仁者与万物一体为评价境界。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.World.unity",
+    "Becoming.Contextual.world",
+    "Becoming.whole_not_in_pairs"
+   ]
+  },
+  {
+   "concept": "关系项（relatum）：一个世界的关系项只有一类（World），形成与条件是一个关系项的两种读法（Web.roles）",
+   "name": "物",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ22",
+     "quote": "物也者，大共名也",
+     "layer": "先秦（《荀子·正名》）",
+     "sense_in_context": "物是推到无可再共的共名，涵盖一切",
+     "locator": "《荀子·正名》",
+     "record_id": "RU2-U-XZ22"
+    },
+    {
+     "source_id": "ZH1-S02",
+     "quote": "物，謂之而然",
+     "layer": "先秦（《庄子》内篇）",
+     "sense_in_context": "物由称谓而成其为物：一物是读法划出的",
+     "locator": "庄子·齊物論",
+     "record_id": "ZH1-C02-R-07"
+    },
+    {
+     "source_id": "YD-OW-XG",
+     "quote": "盈天地之間者，唯萬物",
+     "layer": "传·先秦或秦汉（《序卦》，年代有争议）",
+     "sense_in_context": "天地之间只有一类：万物",
+     "locator": "序卦 上篇",
+     "record_id": "WP-XG-C01-S02-R01"
+    }
+   ],
+   "fit": "荀子把物推为大共名，《序卦》说天地之间唯有万物：一类而无别类。庄子「物，謂之而然」说一物是被称谓划出来的，即读法所作的区分。脊柱的 World 只有一类关系项，形成与条件两类读法嵌入一类读法（Web.roles、Flow.roles），所以物恰可作关系项之名。",
+   "not_carried": "物与我、物与心的对待（物我、心物），王守仁「意之所在便是物」使物依意而定（单一中心，本簇作为起信条的并行）；物作为有形质料、财物、物欲的义；后世物多指物质对象。脊柱的关系项没有质料义，也不与一个认识者相对。",
+   "course": "先秦：荀子大共名（RU2-U-XZ22）、庄子谓之而然（ZH1-C02-R-07）、《序卦》唯万物（WP-XG-C01-S02-R01）；《庄子·知北遊》「物物者，與物无際」。宋明：王守仁以意定物（RU2-R0216）。现代汉语物多指物质对象。此名取大共名义。",
+   "alternatives": [
+    {
+     "name": "法",
+     "why_not": "佛典以法称一切，但带自性有无之辨与规范义，用作关系项之名会引入法相与法性的分层。"
+    },
+    {
+     "name": "事",
+     "why_not": "「通变之谓事」以事为通变，更近于一步或一段运行，不宜称关系项本身；事又带人事、事务义。"
+    },
+    {
+     "name": "有",
+     "why_not": "有与无相对，王弼「凡有皆始于无」以无为本（本簇判相分），带入有无二层。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.World",
+    "Becoming.Web.roles",
+    "Becoming.Flow.roles"
+   ]
+  },
+  {
+   "concept": "配置由它怎样关联而定（configurations alike by relation）：互模拟所联系的配置相同，相同恰是通过同样的检验；跨步认同只由关系固定",
+   "name": "状",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ22",
+     "quote": "物有同状而异所者",
+     "layer": "先秦（《荀子·正名》）",
+     "sense_in_context": "状同而所异者按关系分为二",
+     "locator": "《荀子·正名》",
+     "record_id": "RU2-U-XZ22"
+    },
+    {
+     "source_id": "RU2-S-XZ22",
+     "quote": "状同而为异所者，虽可合，谓之二实",
+     "layer": "先秦（《荀子·正名》）",
+     "sense_in_context": "认同不由状单独决定，状与所合起来决定",
+     "locator": "《荀子·正名》",
+     "record_id": "RU2-U-XZ22"
+    },
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "无状之状，无物之象",
+     "layer": "先秦（《老子》第十四章）",
+     "sense_in_context": "状不限于可见之形",
+     "locator": "《老子》第十四章",
+     "record_id": ""
+    }
+   ],
+   "fit": "荀子以状与所区分物：状同而所异是二实，状变而实无别是化；认同不是由外观单独决定，而是由状与所（关系中的位置）合起来决定。脊柱把这推到底：配置就是它怎样关联，相同恰是通过同样的检验（alike_iff_sameTests、Alike.tests），互模拟联系者相同（Bisimulation），跨步认同只由关系固定（World.fixed_iff）。名取状，所也读作关系的一部分；《老子》「无状之状」说明状本来就不限于可见之形。",
+   "not_carried": "状的常义是可见的形状、外貌，带静态与视觉义；荀子的实是计数单位，所是处所，脊柱的位置不是空间容器中的处所；后世状又是文书名（行状、诉状）。用作名时须在定义中写明按关系而非按外观。",
+   "course": "先秦：荀子状、所、实三分（RU2-U-XZ22，RO xunzi-hua-yi-shi 相合）；《老子》无状之状。后世状多指形状、情状与文书。此名取荀子的认同义。",
+   "alternatives": [
+    {
+     "name": "形",
+     "why_not": "形与神、形而上下相对，带形质义与上下分层。"
+    },
+    {
+     "name": "象",
+     "why_not": "象在易传是读法所见（在天成象），易线已用作卦象，与配置不同层。"
+    },
+    {
+     "name": "相",
+     "why_not": "佛典之相与性相对（性相之分），带现象与本性二层。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Bisimulation",
+    "Becoming.alike_iff_sameTests",
+    "Becoming.Alike.tests",
+    "Becoming.World.fixed_iff"
+   ]
+  },
+  {
+   "concept": "历史（history）：一次运行留下的记录；两条律有相同的历史恰当它们只差死路，历史与所显之律的差别是记忆",
+   "name": "迹",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S14",
+     "quote": "夫迹，履之所出，而迹豈履哉",
+     "layer": "先秦（《庄子》外篇；外杂篇成篇年代有争议，或至战国末、秦汉之际）",
+     "sense_in_context": "迹是行走所出，不是行走者",
+     "locator": "庄子·天運",
+     "record_id": "ZH1-U14"
+    },
+    {
+     "source_id": "IN1-S02",
+     "quote": "其跡則胡越",
+     "layer": "魏晋南北朝（孙绰《喻道论》，东晋）",
+     "sense_in_context": "诸迹各异，相去如胡越",
+     "locator": "孫綽喻道論",
+     "record_id": "IN1-U02-06"
+    },
+    {
+     "source_id": "RU2-S-S01",
+     "quote": "大顺大化，不见其迹，莫知其然之谓神",
+     "layer": "宋明（周敦颐《通书》，北宋）",
+     "sense_in_context": "大化不留可见之迹",
+     "locator": "《通书》顺化第十一",
+     "record_id": ""
+    }
+   ],
+   "fit": "迹是履所出：历史是运行所留，不是使它运行的律。脊柱上历史是它所显之律的运行，对应不是同一，差别是记忆（Run.keepHistory_shown）；迹在死路之外固定律（same_histories_iff、DeadEnd.no_history）。",
+   "not_carried": "陈迹的贬义（庄子以六经为先王之陈迹）；足迹的身体与空间图像；玄学以迹对所以迹，常把迹贬为末、所以迹尊为本（本末位次）。理论的历史不比律低一等，二者是同一展开的两种读法。",
+   "course": "先秦：庄子天运迹与所以迹（ZH1-U14）。东晋：孙绰以「其跡則胡越」与所以跡对举，说异迹同致（IN1-U02-06）；郭象《庄子注》以迹与所以迹立论（不在脉络冻结文本内，不引）。宋：周敦颐「不见其迹」。此名取天运义。",
+   "alternatives": [
+    {
+     "name": "史",
+     "why_not": "史是记录者与史官之书，带记录者的中心与文献义。"
+    },
+    {
+     "name": "事",
+     "why_not": "事是一次通变，近于一步或一段运行，不是保留下来的记录。"
+    },
+    {
+     "name": "故",
+     "why_not": "故兼旧事、缘故、故意诸义，指称不定。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.Run.keepHistory_shown",
+    "Becoming.same_histories_iff",
+    "Becoming.DeadEnd.no_history"
+   ]
+  },
+  {
+   "concept": "所显之律（law shown）：一段历史所显示的律；某个律恰在历史一致处容纳它；律与历史是同一展开的两种读法",
+   "name": "所以迹",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S14",
+     "quote": "豈其所以迹哉",
+     "layer": "先秦（《庄子》外篇；外杂篇成篇年代有争议，或至战国末、秦汉之际）",
+     "sense_in_context": "陈迹不是使迹成为迹者",
+     "locator": "庄子·天運",
+     "record_id": "ZH1-U14"
+    },
+    {
+     "source_id": "IN1-S02",
+     "quote": "然其所以跡者。何常有際哉",
+     "layer": "魏晋南北朝（孙绰《喻道论》，东晋）",
+     "sense_in_context": "诸迹各异而使迹成迹者无分界",
+     "locator": "孫綽喻道論",
+     "record_id": "IN1-U02-06"
+    }
+   ],
+   "fit": "所以迹是使迹成为迹者，不是另一条迹，又只能由迹去认。脊柱上，历史是它所显之律的运行（Shown.run），律恰在历史一致处存在（exists_law_iff），所显之律随历史的细化单调（shown_le_iff）；律多于迹之处恰在未取之动上（Learning.no_prefix_fixes_next）。所以二字标出的正是读法的方向：律是从迹读出的，不是迹之前的一个物。",
+   "not_carried": "「夫迹，履之所出」的图像把履放在迹之前，像一个先在的造迹者；玄学以所以迹为本、迹为末，带本末位次与不可言说的本体义；在庄子语境里它是对六经的批评，带评价。理论取律由迹读出，不取履先于迹。",
+   "course": "先秦：庄子天运（ZH1-U14）。东晋：孙绰以所以跡说三教异迹同致（IN1-U02-06），已加入会通义；郭象注以迹与所以迹分圣人之迹与其本（不在冻结文本内）。宋明：类似的分层由体用、理气承担（苏辙「故無名者道之體而有名者道之用也」，本簇判定域）。此名只取律由迹读出一义。",
+   "alternatives": [
+    {
+     "name": "道",
+     "why_not": "道带「自本自根」的先在之根（本簇判相分），又兼整体、途径、言说诸义；作为律之名会把律读成先于历史的实在。"
+    },
+    {
+     "name": "理",
+     "why_not": "理已采用为对结构与变化之律的建模（理），是读法的模型，不是所显之律本身；二者在脊柱上不同，不宜合用一名。"
+    },
+    {
+     "name": "常",
+     "why_not": "「天行有常」说律不因人存亡，但常带不变与常道（固定本性）义；律是否不变是表示的选择，不应写进名里。"
+    },
+    {
+     "name": "律",
+     "why_not": "中文版正文已用律作说明语；先秦律指音律与法令，带社会法令义，不作展开之律讲。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Shown",
+    "Becoming.Shown.run",
+    "Becoming.exists_law_iff",
+    "Becoming.shown_le_iff"
+   ]
+  },
+  {
+   "concept": "语境中的读法总构成一个世界（Contextual.world）；以语境为索引的框架总是合；不依语境的描述恰在诸读法相交处一致时存在",
+   "name": "两行",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S02",
+     "quote": "是以聖人和之以是非，而休乎天均，是之謂兩行",
+     "layer": "先秦（《庄子》内篇）",
+     "sense_in_context": "彼此两种是非并行，不必先合为一",
+     "locator": "庄子·齊物論",
+     "record_id": "ZH1-C02-R-12"
+    },
+    {
+     "source_id": "ZH1-S02",
+     "quote": "彼亦一是非，此亦一是非",
+     "layer": "先秦（《庄子》内篇）",
+     "sense_in_context": "每个立场各有一套是非，即各在其语境成立",
+     "locator": "庄子·齊物論",
+     "record_id": "ZH1-C02-R-06"
+    }
+   ],
+   "fit": "彼是各有一是非，两者并行；RO 已判相合（zhuangzi-qiwu-dao-shu-liang-xing）。脊柱上语境中的读法总构成一个世界（Contextual.world），以语境为索引的框架容纳一切所显示（indexed_fits），不依语境的读法只在诸语境相交处一致时才有（glues_iff_agree、fitsFree_iff），有的世界处处不粘合（Specker.noGlobal）。两行即索引读法，不须先求第三立场。",
+   "not_carried": "两行在庄子语境里是圣人的处世态度（和之以是非、休乎天均），带实践与止辩之义；也常被读为相对主义（无所谓是非）。理论不取这两层：它仍说出何处粘合、何处不粘合；两也不是恰好两个语境。",
+   "course": "先秦：只此一见（ZH1-C02-R-12）；脉络冻结文本中未见后世用例。宗密会通诸宗「俱存其法俱遣其病」以另一方式承担同一结构（IN1-R-C05，本簇并行）。",
+   "alternatives": [
+    {
+     "name": "齐物",
+     "why_not": "齐字有齐同、抹平差别之义，会把读法的保留读成取消区分。"
+    },
+    {
+     "name": "道枢",
+     "why_not": "「彼是莫得其偶，謂之道樞」说的是不落入对立面的位置，近于不依语境的立场；脊柱说这种立场只在粘合处存在，不能作语境读法总体之名。"
+    },
+    {
+     "name": "和",
+     "why_not": "和已用于中和（Regulation），又带调和的价值义。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.Contextual.world",
+    "Becoming.Contextual.indexed_fits",
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Contextual.fitsFree_iff"
+   ]
+  },
+  {
+   "concept": "生起与止息、形成与解散是同一变化的读法（Web.change_readings）；有限世界里二者复现相伴",
+   "name": "通为一",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S02",
+     "quote": "其分也，成也；其成也，毀也。凡物无成與毀，復通爲一",
+     "layer": "先秦（《庄子》内篇）",
+     "sense_in_context": "一处之分是另一处之成，成即毁",
+     "locator": "庄子·齊物論",
+     "record_id": "ZH1-C02-R-09"
+    },
+    {
+     "source_id": "RU2-S-S02",
+     "quote": "有无、隐显、神化、性命通一无二",
+     "layer": "宋明（张载《正蒙·太和》，北宋）",
+     "sense_in_context": "有无隐显是一气的两种读法",
+     "locator": "正蒙·太和",
+     "record_id": "RU2-R0171"
+    }
+   ],
+   "fit": "分与成、成与毁是同一变化在不同关系项上的读法；Web.change_readings 正是这一结构，keep_pace 说有限世界里生起与止息复现相伴。张载以虚空即气说有无、隐显通一无二，同一结构推到有无。",
+   "not_carried": "「復」若读作凡成毁都可复归，则只在无损之律上成立，失去者保持失去（Law.lost_stays），本簇判定域；通字也常被读成一个贯通万物的实体（道通、气通），带先在之根义；齐同之义会抹去区分。名中保留为字作读法义，复归一义按定域限定。",
+   "course": "先秦：庄子齐物论（ZH1-C02-R-09、R-10，RO zhuangzi-qiwu-fen-cheng-hui 定域）。宋：张载通一无二（RU2-R0171）把它放在气上。此名取同一变化的两读。",
+   "alternatives": [
+    {
+     "name": "不二",
+     "why_not": "佛典之不二带入不二法门的解脱义，并常读作抹去差别。"
+    },
+    {
+     "name": "一体",
+     "why_not": "见一之条，带身体图像与评价境界。"
+    },
+    {
+     "name": "相生",
+     "why_not": "《则阳》「相生相殺」说的是两项相互生灭的循环，不是同一变化的两种读法。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.change_readings",
+    "Becoming.keep_pace",
+    "Becoming.Law.lost_stays"
+   ]
+  },
+  {
+   "concept": "形成与条件是一个关系项的两种角色（Web.roles、Flow.roles）：一个关系项既是他者的条件，又依条件而成；哪个条件就是哪个关系项由表示的共同索引给出",
+   "name": "所待又有待",
+   "form": "短语",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S02",
+     "quote": "吾有待而然者邪？吾所待，又有待而然者邪",
+     "layer": "先秦（《庄子》内篇）",
+     "sense_in_context": "景所待之形自身又有所待：每一项既是所待又是有待",
+     "locator": "庄子·齊物論 罔兩問景章",
+     "record_id": "ZH1-U02"
+    },
+    {
+     "source_id": "FO1-S-MMK",
+     "quote": "緣成由於果",
+     "layer": "魏晋南北朝译（鸠摩罗什译《中论》，后秦；龙树颂、青目释，印度论释传统）",
+     "sense_in_context": "一项之为缘由它所成之果而得名",
+     "locator": "中论 观因缘品",
+     "record_id": "FO1-R-M06"
+    },
+    {
+     "source_id": "CT1-S-ZL",
+     "quote": "若有不自有，待緣而後有者，故知有非真有",
+     "layer": "魏晋南北朝（僧肇《不真空论》，后秦）",
+     "sense_in_context": "有待缘而有，没有自有",
+     "locator": "肇论·不真空論",
+     "record_id": "CT1-R-ZL18"
+    },
+    {
+     "source_id": "FO1-S-CY",
+     "quote": "所取、能取相待立故",
+     "layer": "隋唐译（玄奘译编《成唯识论》，唐；护法等释，印度论释传统）",
+     "sense_in_context": "所取与能取相依而立",
+     "locator": "成唯识论",
+     "record_id": "FO1-R-CY45"
+    }
+   ],
+   "fit": "罔两问景的链：景待形，形又有待；每一项既是所待（条件）又是有待（形成），链上没有第一个所待。脊柱的 Web.roles 正是两类读法嵌入一类读法：同一个关系项在一处是条件、在另一处是形成；Flow.roles 在流上同样成立；哪个条件就是哪个关系项不为依存所见，重新标号保持依存（Web.relabel_dependent）。中论以果名缘，结构相同。所待名条件之角色，有待名形成之角色，又字说同一关系项兼二者。",
+   "not_carried": "《逍遥游》以「猶有所待者也」为不足、以无待为理想（「彼且惡乎待哉」），带评价；郭象读此章为非待而独化，韩康伯「莫不獨化於大虛」（本簇判相分）；僧肇「有非真有」加入真与非真的二层；唯识能取所取对举时容易读成主客二分。理论不取无待的理想，不取独化，也不分真有与假有。",
+   "course": "先秦：庄子罔两问景（ZH1-U02）与《逍遥游》有待／无待。魏晋：郭象独化（不在冻结文本内）、韩康伯独化于大虚（YCM130-H5-H-07-R01）走向否认待；后秦鸠摩罗什译《中论》缘成由果（FO1-R-M06），僧肇待缘非真有（CT1-R-ZL18）。隋唐：玄奘译《成唯识论》能所相待（FO1-R-CY45）；法藏「由有待緣不待緣義故」分同体异体（FO2-FQ-R008）。此名取庄子的链式两角色义。",
+   "alternatives": [
+    {
+     "name": "相待",
+     "why_not": "佛典的相待多指两项相互依存（能所、长短），对应的是相互依存（Becoming.MutualDependence），不是一个关系项兼两种角色。"
+    },
+    {
+     "name": "因缘",
+     "why_not": "因与缘分主次，十二因缘又是修行的次第，带位次与实践义。"
+    },
+    {
+     "name": "体用",
+     "why_not": "后起；体先于用、体为本，带先在之根（本簇苏辙条判定域）。"
+    },
+    {
+     "name": "能所",
+     "why_not": "能所即主体与客体之分，正是方法要拆除的二分。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.Web.roles",
+    "Becoming.Flow.roles",
+    "Becoming.Web.relabel_dependent",
+    "Becoming.Mutualism.apart_relabelled"
+   ]
+  },
+  {
+   "concept": "没有两个实在：律由展开读出，不在展开之外；整体之外不失去什么；物与物的分界是读法所作",
+   "name": "无际",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S22",
+     "quote": "物物者，與物无際",
+     "layer": "先秦（《庄子》外篇；外杂篇成篇年代有争议，或至战国末、秦汉之际）",
+     "sense_in_context": "使物成物者与物之间没有分界",
+     "locator": "庄子·知北遊 东郭子问道章",
+     "record_id": "ZH1-C22-R-06"
+    },
+    {
+     "source_id": "ZH1-S22",
+     "quote": "不際之際，際之不際者也",
+     "layer": "先秦（《庄子》外篇；外杂篇成篇年代有争议，或至战国末、秦汉之际）",
+     "sense_in_context": "物际是读法所划；不际者也是被读出的",
+     "locator": "庄子·知北遊 东郭子问道章",
+     "record_id": "ZH1-C22-R-07"
+    },
+    {
+     "source_id": "ZH1-S11",
+     "quote": "明夫物物者之非物也",
+     "layer": "先秦（《庄子》外篇；外杂篇成篇年代有争议，或至战国末、秦汉之际）",
+     "sense_in_context": "使物成物者不是一个物",
+     "locator": "庄子·在宥",
+     "record_id": "ZH1-U11"
+    }
+   ],
+   "fit": "物物者与物无际：使物成物的不是物外的另一个物，二者没有分界；物与物之际则是读法所划（不际之际）。脊柱上每个世界恰是它所显之律的运行（World.run_world），律在历史一致处存在（exists_law_iff），整体之外没有失去（Web.not_losesBeyond_whole）：没有两个实在。",
+   "not_carried": "后世无际多指无边无际（无穷广大），理论不主张整体无限；物物者的施事语法像一个造物者，《在宥》「物而不物，故能物物」更以之为治天下者的德；修行文本中的无际常指心境。",
+   "course": "先秦：庄子知北遊（ZH1-C22-R-06、R-07）与在宥（ZH1-U11）。东晋：孙绰「然其所以跡者。何常有際哉」把它用于三教的所以迹（IN1-U02-06），转为会通义。后世无边无际之义占主导。此名取知北遊义。",
+   "alternatives": [
+    {
+     "name": "不二",
+     "why_not": "见通为一条，带解脱义并常读作抹去差别。"
+    },
+    {
+     "name": "无外",
+     "why_not": "惠施「至大无外，謂之大一」说的是整体没有外部，近于算入其余（大块之条），不是律与物没有分界。"
+    },
+    {
+     "name": "即",
+     "why_not": "太虚即气、色即空等即字结构多样，单字指称不定。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.World.run_world",
+    "Becoming.exists_law_iff",
+    "Becoming.Web.not_losesBeyond_whole"
+   ]
+  },
+  {
+   "concept": "整体的其余算作一个关系项（World.withRest）：它给与取超出诸关系项净交换的部分；交换由水平与形成交换之差读出，平衡恰是其余闲置",
+   "name": "大块",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S02",
+     "quote": "夫大塊噫氣，其名爲風",
+     "layer": "先秦（《庄子》内篇）",
+     "sense_in_context": "大块出气成风，万窍各以其形取而成声",
+     "locator": "庄子·齊物論 南郭子綦章",
+     "record_id": "ZH1-U02"
+    },
+    {
+     "source_id": "ZH1-S06",
+     "quote": "夫大塊，載我以形",
+     "layer": "先秦（《庄子》内篇）",
+     "sense_in_context": "大块给我形与生，也收回（老、死）",
+     "locator": "庄子·大宗師",
+     "record_id": "ZH1-C06-R-06"
+    },
+    {
+     "source_id": "IN1-S03",
+     "quote": "大塊勞我以生息我以死",
+     "layer": "魏晋南北朝（慧远《沙门不敬王者论》，东晋元兴三年404）",
+     "sense_in_context": "慧远引此以生为大患、以无生为反本",
+     "locator": "沙門不敬王者論 形尽神不灭",
+     "record_id": "IN1-U03-15"
+    }
+   ],
+   "fit": "大块不是诸物中的一个，而是诸物之外、给与取的整体：噫气成风而万窍「咸其自取」，载我以形而息我以死。脊柱把整体的其余算作一个关系项（World.withRest），它给与取超出诸关系项净交换的部分，从交换读出时只有活跃者给与取（Flow.readOff_acting），平衡恰是其余闲置（World.withRest_closed_iff，对应「是唯无作」）。",
+   "not_carried": "块的字义是土块、大地，带质料与空间图像；载我、劳我的语法把大块写成施事（意志之嫌）；慧远引此句接「以無生為反本者也」，把生贬为大患，带出离与先在之本的意义。",
+   "course": "先秦：庄子齐物论、大宗师（ZH1-U02、ZH1-C06-R-06）。东晋：慧远引大宗师此句论神不灭与反本（IN1-U03-15）。后世诗文以大块称天地自然（不在冻结文本内）。此名取齐物论的给与取义。",
+   "alternatives": [
+    {
+     "name": "天",
+     "why_not": "天带意志层（天佑、天命，本簇 dayou-zi-tian-you-zhi 判相分），又与地、人对举。"
+    },
+    {
+     "name": "自然",
+     "why_not": "自然在《老子》是自己如此（道法自然），说的是不由外施，不是一个关系项；现代汉语又指自然界。"
+    },
+    {
+     "name": "天地",
+     "why_not": "天地是一对，带上下尊卑与容器图像（天地设位）。"
+    },
+    {
+     "name": "其余",
+     "why_not": "现代说明语，无古典用例。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.World.withRest",
+    "Becoming.World.withRest_closed_iff",
+    "Becoming.Flow.readOff_acting",
+    "Becoming.Flow.withImbalance"
+   ]
+  },
+  {
+   "concept": "一个世界的表示（World：一类关系项、流与网）所及的范围；范围之外者算入其余，被保留而不被描述",
+   "name": "六合",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S02",
+     "quote": "六合之外，聖人存而不論。六合之內，聖人論而不議",
+     "layer": "先秦（《庄子》内篇）",
+     "sense_in_context": "描述限于一个范围，范围之外者被保留而不论",
+     "locator": "庄子·齊物論",
+     "record_id": "ZH1-U02"
+    },
+    {
+     "source_id": "ZH1-S22",
+     "quote": "六合爲巨，未離其內",
+     "layer": "先秦（《庄子》外篇；外杂篇成篇年代有争议，或至战国末、秦汉之际）",
+     "sense_in_context": "六合虽大，不离整体之内",
+     "locator": "庄子·知北遊",
+     "record_id": "ZH1-U22"
+    },
+    {
+     "source_id": "ZH1-S25",
+     "quote": "四方之內，六合之裏，萬物之所生，惡起",
+     "layer": "先秦（《庄子》杂篇；成篇年代有争议，或至秦汉之际）",
+     "sense_in_context": "问六合之内万物生起于何处",
+     "locator": "庄子·則陽",
+     "record_id": "ZH1-U25"
+    },
+    {
+     "source_id": "RU2-S-S04",
+     "quote": "尘芥六合，谓天地为有穷也",
+     "layer": "宋明（张载《正蒙·大心》，北宋）",
+     "sense_in_context": "张载批评以六合为尘芥、以天地为有穷",
+     "locator": "正蒙·大心",
+     "record_id": "RU2-U-ZZ04"
+    }
+   ],
+   "fit": "齐物论区分六合之内（论）与之外（存而不论），正是一个表示的范围与其外的其余：理论的律对每个这样表示的世界成立，范围之外者作为其余计入（World.withRest；有限世界算入其余都有普查，World.withRest_counted），不被描述。知北遊「六合爲巨，未離其內」说再大的范围也在整体之内，对应整体之外不失去（Web.not_losesBeyond_whole）。",
+   "not_carried": "六合的本义是上下四方，空间容器；脊柱的 World 不是空间，关系项也不放在容器里。存而不论还带圣人的言说节制（实践义）；张载反对以六合为有穷，带入天地无穷的宇宙论主张，理论不主张整体有穷或无穷。空间义在各层都是主义，这是本名信心低的原因。",
+   "course": "先秦：庄子多见（齐物论、知北遊、则阳、在宥、徐无鬼）。东晋：慧远「六合之外存而不論者。非不可論」把它转为方内方外之分（IN1-U03-12）；孙绰「夫六合遐邈庶類殷充。千變萬化渾然無端」以六合称宇宙全体（IN1-U02-01）。宋：张载以「尘芥六合」批评佛教（RU2-U-ZZ04）。",
+   "alternatives": [
+    {
+     "name": "天地",
+     "why_not": "天地是一对，带尊卑与容器图像，又在易线上是卦（乾坤）。"
+    },
+    {
+     "name": "宇宙",
+     "why_not": "宇宙是空间与时间的容器（上下四方、往古来今），比六合更强地带入容器义。"
+    },
+    {
+     "name": "天下",
+     "why_not": "天下是政治范围（治天下），带社会义。"
+    },
+    {
+     "name": "大一",
+     "why_not": "惠施「至大无外，謂之大一」说整体没有外部，名的是算入其余之后的整体，不是一个表示的范围。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.World",
+    "Becoming.World.withRest_counted",
+    "Becoming.Web.not_losesBeyond_whole"
+   ]
+  }
+ ],
+ "entries": [
+  {
+   "id": "zhuang-zhibeiyou-wu-wu-zhe-wu-ji",
+   "source_id": "ZH1-S22",
+   "record_ids": [
+    "ZH1-C22-R-06",
+    "ZH1-C22-R-07"
+   ],
+   "fragments": [
+    "汝唯莫必，无乎逃物",
+    "物物者，與物无際。而物有際者，所謂物際者也。不際之際，際之不際者也",
+    "彼爲盈虛非盈虛，彼爲衰殺非衰殺，彼爲本末非本末，彼爲積散非積散也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.World.run_world",
+    "Becoming.exists_law_iff",
+    "Becoming.Web.change_readings",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "worlds-are-runs",
+    "process-and-frame-as-readings",
+    "coming-and-ceasing-keep-pace",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：「物物者，與物无際」说：使物成其为物的，与物之间没有分界；「物有際」是物与物的分界，即读法所作的区分（「不際之際」）。脊柱上相应的结构是：每个世界恰是它所显示之律的运行（World.run_world），某个确定之律恰在历史一致处容纳它（exists_law_iff），律由展开读出，不是展开之外的第二个实在。「彼爲盈虛非盈虛……彼爲積散非積散」与 Web.change_readings 同构：生起与消失、形成与解散、立起与倒下是同一变化的读法，盈虚、积散是变化被读出的样子，不是另一层物；「无乎逃物」即没有不在物上的律。所不带：「物物者」的施事语法像是有一个造物者，此段本身否认它与物有际，脊柱也不设施事；脊柱只说律由历史读出，不说「道」寓于每一物。",
+   "ro_passage": "",
+   "layer": "先秦（《庄子》外篇·知北遊；外杂篇成篇年代有争议，或至战国末）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·知北遊》东郭子问道章",
+   "names_used": [
+    "无际",
+    "物"
+   ],
+   "relational": "使物成为物的律与诸物：前者由后者的运行读出，二者之间没有分界；物与物的分界是读法。",
+   "gap": "",
+   "locator": "庄子·知北遊；东郭子问道章末"
+  },
+  {
+   "id": "zhuang-zhibeiyou-wu-chu-bu-de-xian-wu",
+   "source_id": "ZH1-S22",
+   "record_ids": [
+    "ZH1-U22"
+   ],
+   "fragments": [
+    "有先天地生者，物邪？物物者非物，物出不得先物也，猶其有物也。猶其有物也无已",
+    "无古无今，无始无終"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Parting.before",
+    "Becoming.Law.withHistory_loses_beginning",
+    "Becoming.World.run_world",
+    "Becoming.Web.not_losesBeyond_whole"
+   ],
+   "records": [
+    "identification-where-runs-part",
+    "recurrence-without-premise",
+    "worlds-are-runs",
+    "loss-beyond-a-region"
+   ],
+   "reading": "AI读法：此段直接回应「先天地生」：使物成物者不是一个物，物之出不能先于物，总已有物，无已。脊柱在两处与之相合：律不是配置，每个世界是它自己所显之律的运行（World.run_world），整体之外什么都没有（Web.not_losesBeyond_whole），所以没有先于诸物的物。但「无始无終」在脊柱上只有局部成立：步从 0 计是表示的选择；一个运行可以向前补一步，恰当律容纳一步走入它的起点（Parting.before）；保留历史时开端在第一步就失去（Law.withHistory_loses_beginning）。是否每个运行都能向前无尽延伸，取决于律是否给每个已到达的配置一个前驱，脊柱尚未陈述这一点（见本条 gap）。故为定域。",
+   "ro_passage": "",
+   "layer": "先秦（《庄子》外篇·知北遊，成篇年代有争议）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·知北遊》冉求问未有天地章",
+   "names_used": [
+    "物",
+    "无际"
+   ],
+   "relational": "物与其所出：任何物之出都以已有之物为条件，没有一个先于诸物而不在诸物之中的起点。",
+   "gap": "脊柱缺一条向后无尽之律。设双向运行 BiRun P：state : Int → S，act : Int → A，step : ∀ z, P.step (state z) (act z) (state (z+1))。陈述：对过程 P，下列二者等价：(i) 每个运行的起点都有前驱，∀ r : Run P, ∃ s a, P.step s a (r.state 0)；(ii) 每个运行都可向前无尽延伸，∀ r : Run P, ∃ z : BiRun P, ∀ n : Nat, z.state n = r.state n ∧ z.act n = r.act n。(ii)⇒(i) 可构造（取 z 在 −1 处的步）；(i)⇒(ii) 一般需要依存选择（与 Becoming.Onward.DependentSelection 的向后情形对称），配置与动作有限列出且 P.step 可判定时可构造。最近的声明：Becoming.Parting.before（向前补一步）、Becoming.Onward.KeepsMoving.run、Becoming.Onward.DependentSelection、Becoming.Law.withHistory_loses_beginning。",
+   "locator": "庄子·知北遊；冉求问于仲尼曰未有天地可知邪章"
+  },
+  {
+   "id": "zhuang-qiwu-dao-xing-zhi-er-cheng",
+   "source_id": "ZH1-S02",
+   "record_ids": [
+    "ZH1-C02-R-07",
+    "ZH1-C02-R-08"
+   ],
+   "fragments": [
+    "道，行之而成；物，謂之而然",
+    "物固有所然，物固有所可。无物不然，无物不可"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Shown.run",
+    "Becoming.shown_le_iff",
+    "Becoming.exists_law_iff",
+    "Becoming.Contextual.world"
+   ],
+   "records": [
+    "process-and-frame-as-readings",
+    "histories-fix-law-up-to-dead-ends",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：「道，行之而成」与脊柱的律与历史之读相同方向：每段历史是它所显之律的运行（Shown.run），这条律是使该历史成为运行的最小之律（shown_le_iff），律由行读出而不先于行。「物，謂之而然」：物之为如此，在于被如此读出；脊柱上物是关系项，它如此是被读出的，语境中的读法总构成一个世界（Contextual.world）。「无物不然，无物不可」在脊柱上是：每个语境中的读法都在其语境里成立，不须先粘合。所余：庄子「行之而成」也有人走出路的实践义；脊柱只说律由历史读出，先于历史给出的律只多出未取之动。",
+   "ro_passage": "",
+   "layer": "先秦（《庄子》内篇·齊物論）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·齊物論》",
+   "names_used": [
+    "所以迹",
+    "物",
+    "两行"
+   ],
+   "relational": "律与行：律由行（历史）读出；物与谓：物之然由读法给出。",
+   "gap": "",
+   "locator": "庄子·齊物論；起语：道，行之而成；物，謂之而然。"
+  },
+  {
+   "id": "zhuang-qiwu-liang-xing",
+   "source_id": "ZH1-S02",
+   "record_ids": [
+    "ZH1-C02-R-12",
+    "ZH1-C02-R-06"
+   ],
+   "fragments": [
+    "是以聖人和之以是非，而休乎天均，是之謂兩行",
+    "彼是莫得其偶，謂之道樞。樞始得其環中，以應无窮"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Contextual.indexed_fits",
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Contextual.fitsFree_iff",
+    "Becoming.Specker.noGlobal",
+    "Becoming.Contextual.world"
+   ],
+   "records": [
+    "contextual-registration",
+    "gluing-under-parity",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：沿用 RO 的相合判断。彼此各一是非，两种读法各在其语境成立而并行（兩行）；以语境为索引的框架总是合（Contextual.indexed_fits），语境中的读法总构成一个世界（Contextual.world）。「莫得其偶」的道樞对应：不依语境的读法恰在诸语境相交处一致时存在（glues_iff_agree、fitsFree_iff），有的世界处处不粘合（Specker.noGlobal），所以不能要求一个对立面之外的第三立场裁定一切。所不带：「两」不是恰好两个语境；「休乎天均」的止辩之义是实践，脊柱仍说出何处粘合、何处不粘合。",
+   "ro_passage": "zhuangzi-qiwu-dao-shu-liang-xing",
+   "layer": "先秦（《庄子》内篇·齊物論）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·齊物論》",
+   "names_used": [
+    "两行",
+    "通为一"
+   ],
+   "relational": "彼与是两个立场：各自的读法都成立，不须先合为一个不依语境的读法。",
+   "gap": "",
+   "locator": "庄子·齊物論；起语：是以聖人和之以是非，而休乎天均"
+  },
+  {
+   "id": "zhuang-qiwu-tong-wei-yi",
+   "source_id": "ZH1-S02",
+   "record_ids": [
+    "ZH1-C02-R-09",
+    "ZH1-C02-R-10"
+   ],
+   "fragments": [
+    "其分也，成也；其成也，毀也。凡物无成與毀，復通爲一",
+    "恢恑憰怪，道通爲一"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.keep_pace",
+    "Becoming.Law.lost_stays",
+    "Becoming.Law.drawn_iff_not_returns",
+    "Becoming.Law.DrawnInto.never_back",
+    "Becoming.Contextual.fitsFree_iff"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "attraction-is-not-returning",
+    "recurrence-without-premise",
+    "contextual-registration"
+   ],
+   "reading": "AI读法：沿用 RO 的定域判断。「其分也，成也；其成也，毀也」与 Web.change_readings 同构：同一变化读作此之成、彼之毁；有限世界里生起与止息复现相伴（keep_pace）。但「復通爲一」若读作凡成毁皆可复归，则只在无损的律上成立：失去者保持失去（Law.lost_stays），被吸入者不回（Law.DrawnInto.never_back）。「道通爲一」作为粘合，在脊柱上恰在诸读法相交处一致时成立（Contextual.fitsFree_iff），不是对一切世界的全称。",
+   "ro_passage": "zhuangzi-qiwu-fen-cheng-hui",
+   "layer": "先秦（《庄子》内篇·齊物論）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·齊物論》",
+   "names_used": [
+    "通为一",
+    "变化"
+   ],
+   "relational": "分与成、成与毁：同一变化在不同关系项上的读法。",
+   "gap": "",
+   "locator": "庄子·齊物論；起语：其分也，成也；其成也，毀也"
+  },
+  {
+   "id": "zhuang-qiwu-yi-yu-yan-wei-er",
+   "source_id": "ZH1-S02",
+   "record_ids": [
+    "ZH1-C02-R-13"
+   ],
+   "fragments": [
+    "萬物與我爲一",
+    "旣已爲一矣，且得有言乎？旣已謂之一矣，且得无言乎？一與言爲二，二與一爲三。自此以往，巧歷不能得"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Frame.self_incomplete",
+    "Becoming.Diagonal.Unfolds",
+    "Becoming.World.unity",
+    "Becoming.Contextual.world"
+   ],
+   "records": [
+    "registration-within-what-it-registers",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：说出「一」，这个说法本身就成了又一个关系项（「一與言爲二」），再读又加一（「二與一爲三」），算不尽（「巧歷不能得」）。脊柱上：一个读法族以其所读者为索引时，没有一个配置实现关于配置的每一种主张（Frame.self_incomplete）；补全它是从不封闭的展开，每一步都说出前一步的缺口（Diagonal.Unfolds）。「萬物與我爲一」对应：算入其余，每个世界是一次运行（World.unity），说者也在其中，读法总构成一个世界（Contextual.world）。所不带：庄子由此劝止言（「无適焉，因是已」）；脊柱只说读法族在其所读之中不完备，不说应当不言。",
+   "ro_passage": "",
+   "layer": "先秦（《庄子》内篇·齊物論）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·齊物論》",
+   "names_used": [
+    "一",
+    "物"
+   ],
+   "relational": "一与说一者：说出整体的读法属于整体，所以关于整体的读法族在其中永不完备。",
+   "gap": "",
+   "locator": "庄子·齊物論；起语：旣已爲一矣，且得有言乎"
+  },
+  {
+   "id": "zhuang-qiwu-tian-lai",
+   "source_id": "ZH1-S02",
+   "record_ids": [
+    "ZH1-U02"
+   ],
+   "fragments": [
+    "夫大塊噫氣，其名爲風。是唯无作，作則萬竅怒呺",
+    "夫吹萬不同而使其自己也，咸其自取，怒者其誰邪"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.World.withRest",
+    "Becoming.World.withRest_closed_iff",
+    "Becoming.Flow.readOff_acting",
+    "Becoming.Flow.readOff_taking",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "imbalance-as-relatum",
+    "premises-read-off-the-exchange",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：大塊是一，噫氣成风，吹过万窍，各窍以自己的形状取而成声（「咸其自取」），没有一个发动者（「怒者其誰」）。脊柱上把整体的其余算作一个关系项（World.withRest）：它给与取诸关系项超出其净交换的部分，从不要求什么；从交换读出时只有活跃者给与取（Flow.readOff_acting、Flow.readOff_taking）；「是唯无作」对应平衡恰是其余闲置（World.withRest_closed_iff）。「怒者其誰」与沿依存中心不由动力学推出（Clearing.center_not_derived）同向。所不带：风与窍的比喻有空间与声学内容，脊柱只取给、取与无发动者的结构。",
+   "ro_passage": "",
+   "layer": "先秦（《庄子》内篇·齊物論）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·齊物論》天籁章",
+   "names_used": [
+    "大块",
+    "物"
+   ],
+   "relational": "整体的其余与诸部分：其余给出，诸部分各以其自身取用，无一中心发动。",
+   "gap": "",
+   "locator": "庄子·齊物論；南郭子綦隱几而坐章"
+  },
+  {
+   "id": "zhuang-dazongshi-da-kuai",
+   "source_id": "ZH1-S06",
+   "record_ids": [
+    "ZH1-C06-R-06"
+   ],
+   "fragments": [
+    "夫大塊，載我以形，勞我以生，佚我以老，息我以死，故善吾生者，乃所以善吾死也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.World.withRest",
+    "Becoming.Flow.withImbalance",
+    "Becoming.Flow.rise_from_rest_or_open",
+    "Becoming.Flow.whole_rise_from_rest"
+   ],
+   "records": [
+    "imbalance-as-relatum",
+    "where-novelty-gain-comes-from",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：大塊给我以形、以生，也收回（老、死）；同一个给与取的关系项承载生与死两端。脊柱上整体的其余算作一个关系项（World.withRest、Flow.withImbalance）：它给每个条件超出流的净交换而升的部分，取其超出而降的部分。在第一律（无中生有不发生，Gainless）之下，一族条件的升高来自其余或开放的来源（Flow.rise_from_rest_or_open）；有限整体只从其余得（Flow.whole_rise_from_rest）。故相合，条件写明：这些来源律需要 Gainless 与有限列出。「善吾生者，乃所以善吾死也」是评价，脊柱不由此推出。",
+   "ro_passage": "",
+   "layer": "先秦（《庄子》内篇·大宗師）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·大宗師》",
+   "names_used": [
+    "大块"
+   ],
+   "relational": "我与大塊：我的形、生、老、死都是与其余交换的读法。",
+   "gap": "",
+   "locator": "庄子·大宗師；起语：夫大塊，載我以形"
+  },
+  {
+   "id": "zhuang-qiwu-wang-liang-wen-jing",
+   "source_id": "ZH1-S02",
+   "record_ids": [
+    "ZH1-U02"
+   ],
+   "fragments": [
+    "吾有待而然者邪？吾所待，又有待而然者邪",
+    "惡識所以然？惡識所以不然"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.roles",
+    "Becoming.Web.Embodied",
+    "Becoming.Web.Embodied.active_of_bearing",
+    "Becoming.Web.relabel_dependent",
+    "Becoming.Mutualism.apart_relabelled"
+   ],
+   "records": [
+    "space-and-its-parts",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：景所待者自身又有所待：一个关系项既是他者的条件（所待），又是依条件而成的形成（有待）。脊柱上，两类读法嵌入一类读法（Web.roles）；在一类读法中，一个关系项可以是体现的（Web.Embodied：它作为条件立着恰当它活跃），依存于它的形成只在它活跃时活跃，活跃沿这样的依存链传递（Web.Embodied.active_of_bearing）。「惡識所以然」对应：哪个条件就是哪个关系项不为依存所见，重新标号保持 Dependent 而改变谁依靠自己（Web.relabel_dependent、Mutualism.apart_relabelled），这一认同由表示的共同索引给出。所不带：《逍遥游》把「有待」当作不自由而以「无待」为理想，是评价，脊柱不取。",
+   "ro_passage": "",
+   "layer": "先秦（《庄子》内篇·齊物論）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·齊物論》罔兩問景章",
+   "names_used": [
+    "所待又有待",
+    "物"
+   ],
+   "relational": "景、形与形之所待：每一个都既是所待又是有待，链上没有第一个所待。",
+   "gap": "",
+   "locator": "庄子·齊物論；罔兩問景章"
+  },
+  {
+   "id": "zhuang-qiwu-liu-he",
+   "source_id": "ZH1-S02",
+   "record_ids": [
+    "ZH1-U02"
+   ],
+   "fragments": [
+    "六合之外，聖人存而不論。六合之內，聖人論而不議"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.World.withRest",
+    "Becoming.World.withRest_counted",
+    "Becoming.World.withRest_closed_iff",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "imbalance-as-relatum",
+    "census-read-off-the-exchange",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：描述限于一个范围（六合之內，論）；范围之外者被保留而不描述（存而不論）。脊柱的 World 是诸关系项、流与网的描述；整体的其余算作一个关系项而计入（World.withRest，有限世界算入其余都有普查，World.withRest_counted），它的交换由水平与形成交换之差读出，不被观察描述，平衡恰是它闲置（World.withRest_closed_iff）。「論而不議」对应：网不决定意义，意义取决于所选的估值（Web.significance_undetermined）。所不带：六合的空间义（上下四方）与「方外」的宗教义；脊柱的 World 不是空间容器。",
+   "ro_passage": "",
+   "layer": "先秦（《庄子》内篇·齊物論）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·齊物論》",
+   "names_used": [
+    "六合",
+    "大块"
+   ],
+   "relational": "被描述的诸关系项与其余：前者被论，后者被计入而不被论。",
+   "gap": "",
+   "locator": "庄子·齊物論；起语：夫道未始有封"
+  },
+  {
+   "id": "zhuang-tianyun-ji",
+   "source_id": "ZH1-S14",
+   "record_ids": [
+    "ZH1-U14"
+   ],
+   "fragments": [
+    "夫六經，先王之陳迹也，豈其所以迹哉？今子之所言，猶迹也。夫迹，履之所出，而迹豈履哉"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.same_histories_iff",
+    "Becoming.family_iff",
+    "Becoming.DeadEnd.no_history",
+    "Becoming.Run.keepHistory_shown",
+    "Becoming.Learning.no_prefix_fixes_next"
+   ],
+   "records": [
+    "histories-fix-law-up-to-dead-ends",
+    "process-and-frame-as-readings",
+    "learning-by-refutation"
+   ],
+   "reading": "AI读法：迹是履所出，迹不是履：历史不是使它成为历史的律。脊柱上，历史是它所显之律的运行，对应不是同一，差别是记忆（Run.keepHistory_shown）。但脊柱也给出迹在多大范围上固定所以迹：两条律有相同的历史恰当它们只差走不出历史的死路（same_histories_iff、DeadEnd.no_history）。所以陈迹得不到所以迹，恰在两处成立：律在未取之动上多于迹，任何有限的迹都不固定下一步（Learning.no_prefix_fixes_next）；其余之处，迹确定律。所不带：此段把六经贬为陈迹，是评价；履先于迹的时间图像，脊柱不取（所显之律由历史读出）。",
+   "ro_passage": "",
+   "layer": "先秦（《庄子》外篇·天運；外篇年代有争议，或至秦汉之际）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·天運》孔子见老聃章",
+   "names_used": [
+    "迹",
+    "所以迹"
+   ],
+   "relational": "迹与所以迹：历史与它所显之律，互相固定，只差死路与记忆。",
+   "gap": "",
+   "locator": "庄子·天運；孔子謂老聃曰丘治詩書禮樂易春秋六經章"
+  },
+  {
+   "id": "zhuang-dazongshi-zi-ben-zi-gen",
+   "source_id": "ZH1-S06",
+   "record_ids": [
+    "ZH1-C06-R-08"
+   ],
+   "fragments": [
+    "夫道，有情有信，无爲无形，可傳而不可受，可得而不可見，自本自根，未有天地，自古以固存"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.World.run_world",
+    "Becoming.exists_law_iff",
+    "Becoming.Pace.rule_kept",
+    "Becoming.Pace.rule_unreached",
+    "Becoming.Web.not_losesBeyond_whole"
+   ],
+   "records": [
+    "worlds-are-runs",
+    "process-and-frame-as-readings",
+    "how-fast-a-rule-may-change",
+    "loss-beyond-a-region"
+   ],
+   "reading": "AI读法：此段立一个「自本自根，未有天地，自古以固存」的道，即先于天地、以自身为根据的存在，属于先在之根据一层。脊柱不这样立律：律由历史读出（exists_law_iff），每个世界是它所显之律的运行（World.run_world），整体之外什么都没有（Web.not_losesBeyond_whole）。一条从不读快层的规则保持不变（Pace.rule_kept），但这是两层进程中的一种情形，不是先于进程的存在。可与同书《知北遊》「物出不得先物」对照：庄子书内部在此有张力。「可得而不可見」可另读为律不是一个配置，那一部分与脊柱相合，但不改变本段先在根据的主张。",
+   "ro_passage": "",
+   "layer": "先秦（《庄子》内篇·大宗師）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·大宗師》",
+   "names_used": [
+    "所以迹"
+   ],
+   "relational": "道与天地：本段使道先于并独立于天地，不在关系之中。",
+   "gap": "",
+   "locator": "庄子·大宗師；起语：夫道，有情有信"
+  },
+  {
+   "id": "zhuang-dazongshi-qi-yi-ye-yi",
+   "source_id": "ZH1-S06",
+   "record_ids": [
+    "ZH1-C06-R-04"
+   ],
+   "fragments": [
+    "其好之也一，其弗好之也一。其一也一，其不一也一",
+    "其一，與天爲徒；其不一，與人爲徒。天與人不相勝也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Contextual.world",
+    "Becoming.Contextual.indexed_fits",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "unity-of-readings",
+    "contextual-registration"
+   ],
+   "reading": "AI读法：读作一也是一，读作不一也是一：把它读成一或读成多，两种读法都属于同一个整体；「天與人不相勝」，两种读法不互相取代。脊柱上，语境中的读法总构成一个世界，不须粘合（Contextual.world），以语境为索引的框架总是合（Contextual.indexed_fits），算入其余每个世界是一次运行（World.unity）。所不带：「眞人」的修养义；天、人在此是两种读法，不带天的意志。",
+   "ro_passage": "",
+   "layer": "先秦（《庄子》内篇·大宗師）",
+   "tradition": "道（庄子）",
+   "work": "《庄子·大宗師》",
+   "names_used": [
+    "一",
+    "两行"
+   ],
+   "relational": "读作一与读作不一：同一整体的两种读法，无胜负。",
+   "gap": "",
+   "locator": "庄子·大宗師；起语：故其好之也一"
+  },
+  {
+   "id": "lao-25-dao-fa-zi-ran",
+   "source_id": "YD-LAO-BASE",
+   "record_ids": [
+    "LE-R033",
+    "LL-R019"
+   ],
+   "fragments": [
+    "人法地，地法天，天法道，道法自然",
+    "道之尊，德之贵，夫莫之命而常自然"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.exists_law_iff",
+    "Becoming.shown_determined_iff",
+    "Becoming.Run.keepHistory_shown",
+    "Becoming.World.run_world",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "process-and-frame-as-readings",
+    "histories-fix-law-up-to-dead-ends",
+    "worlds-are-runs",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：沿用 RO 的相合判断。法的链条终于「自然」，「自然」不是又一个立法者，而是自己如此；「莫之命而常自然」否认在上之命。脊柱上，律由展开读出：确定之律恰在历史一致处容纳历史（exists_law_iff、shown_determined_iff），每个世界是它所显之律的运行（World.run_world），没有展开之外的颁律者。所不带：「尊」「贵」的等级义；「人法地……」的层级次序不被读成依存的等级。",
+   "ro_passage": "lao-25-dao-fa-zi-ran",
+   "layer": "先秦（《老子》，今本成书年代有争议，郭店本已有部分章句）",
+   "tradition": "道（老子）",
+   "work": "《老子》第二十五章、第五十一章",
+   "names_used": [
+    "所以迹",
+    "大化"
+   ],
+   "relational": "法与所法：律的链条终于自己如此的展开本身。",
+   "gap": "",
+   "locator": "《道德经》二十五章；五十一章"
+  },
+  {
+   "id": "lao-42-dao-sheng-yi",
+   "source_id": "YD-LAO-BASE",
+   "record_ids": [
+    "LL-R001",
+    "LL-R002",
+    "LL-R003",
+    "LL-R004"
+   ],
+   "fragments": [
+    "道生一，一生二，二生三，三生万物"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.World.unity",
+    "Becoming.Refining.grow",
+    "Becoming.Refining.steady_within",
+    "Becoming.whole_not_in_pairs",
+    "Becoming.separation_faithful_iff"
+   ],
+   "records": [
+    "unity-of-readings",
+    "identification-where-bounded",
+    "separation-loses-the-relation"
+   ],
+   "reading": "AI读法：沿用 RO 的定域判断。读作区分的逐层细化，它有确切范围：细化使区分增长（Refining.grow），在有界处稳定（Refining.steady_within）；整体不在成对的关系里（whole_not_in_pairs），分割恰在无关系跨越处忠实（separation_faithful_iff）。读作从一个先在之道依时序生出诸物，则是先在根据，脊柱不取。故为定域：作为读法的细化成立，作为宇宙生成次序不成立。",
+   "ro_passage": "lao-42-dao-sheng-yi",
+   "layer": "先秦（《老子》）",
+   "tradition": "道（老子）",
+   "work": "《老子》第四十二章",
+   "names_used": [
+    "一",
+    "物"
+   ],
+   "relational": "一、二、三与万物：读法的逐层区分，不是先后生出的独立之物。",
+   "gap": "",
+   "locator": "《道德经》四十二章"
+  },
+  {
+   "id": "lao-37-wu-wei-er-wu-bu-wei",
+   "source_id": "YD-LAO-BASE",
+   "record_ids": [
+    "LE-R049",
+    "LE-R050"
+   ],
+   "fragments": [
+    "道常无为而无不为。侯王若能守之，万物将自化"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.TwoClocks.one_course_two_laws",
+    "Becoming.partForms_iff",
+    "Becoming.partForms_and_restForms_iff",
+    "Becoming.Run.rest_driven_by_part",
+    "Becoming.exists_law_iff"
+   ],
+   "records": [
+    "where-a-move-is-formed",
+    "process-and-frame-as-readings"
+   ],
+   "reading": "AI读法：沿用 RO 的定域判断。一个动作在整体之内形成，耦合部分与其余；它是部分的恰当它是部分的策略，两者同属恰当处处相同（partForms_iff、partForms_and_restForms_iff）；同一历程可由两条律生成（TwoClocks.one_course_two_laws）。所以「无为而无不为」在动作归谁不被历程固定之处成立。「侯王若能守之，万物将自化」把一个守道者置于中心，脊柱不推出这个中心。",
+   "ro_passage": "lao-37-wu-wei-er-wu-bu-wei",
+   "layer": "先秦（《老子》）",
+   "tradition": "道（老子）",
+   "work": "《老子》第三十七章",
+   "names_used": [
+    "物"
+   ],
+   "relational": "部分与其余：动作在整体中形成，归属是读法。",
+   "gap": "",
+   "locator": "《道德经》三十七章"
+  },
+  {
+   "id": "lao-40-you-sheng-yu-wu",
+   "source_id": "YD-LAO-BASE",
+   "record_ids": [
+    "LE-R060",
+    "LE-R061"
+   ],
+   "fragments": [
+    "天下万物生于有，有生于无"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.BalancesOn.comesToStand_iff",
+    "Becoming.Flow.rise_netGiver",
+    "Becoming.Flow.whole_rise_from_rest",
+    "Becoming.Flow.new_from_rest_or_open",
+    "Becoming.Flow.BalancesOn.arises_given"
+   ],
+   "records": [
+    "laws-of-one-step",
+    "where-novelty-gain-comes-from",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：沿用 RO 的定域判断。新立起者在平衡处恰由他者给出（Flow.BalancesOn.comesToStand_iff），升高来自净给者（Flow.rise_netGiver），有限整体的升高来自其余（Flow.whole_rise_from_rest），新者来自其余或开放的来源（Flow.new_from_rest_or_open）。「有生于无」若读作新者出自尚未被描述者（其余），在这些律的条件下成立；若读作出自一个先在的无，则是先在根据，脊柱不取。",
+   "ro_passage": "lao-40-you-sheng-yu-wu",
+   "layer": "先秦（《老子》）",
+   "tradition": "道（老子）",
+   "work": "《老子》第四十章",
+   "names_used": [
+    "大块",
+    "物"
+   ],
+   "relational": "新者与其来源：来源是被计入的其余或开放的边界，不是先于关系的无。",
+   "gap": "",
+   "locator": "《道德经》四十章"
+  },
+  {
+   "id": "lao-6-xuan-pin",
+   "source_id": "YD-LAO-BASE",
+   "record_ids": [
+    "LE-R013"
+   ],
+   "fragments": [
+    "玄牝之门，是谓天地根。绵绵若存，用之不勤"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.World.withRest",
+    "Becoming.Flow.rise_from_rest_or_open",
+    "Becoming.Flow.whole_rise_from_rest"
+   ],
+   "records": [
+    "imbalance-as-relatum",
+    "where-novelty-gain-comes-from"
+   ],
+   "reading": "AI读法：「天地根」作为诸物所从出之门，在脊柱上对应被计入的其余：在第一律之下，一族条件的升高来自其余或开放的来源（Flow.rise_from_rest_or_open），有限整体只从其余得（Flow.whole_rise_from_rest），其余是算入世界的一个关系项（World.withRest），不在世界之先。「用之不勤」（用之不尽）脊柱不给：其余给多少由水平之差读出，没有一条律说它不竭。故为定域：作为来源成立，作为不竭的先在之根不成立。",
+   "ro_passage": "",
+   "layer": "先秦（《老子》）",
+   "tradition": "道（老子）",
+   "work": "《老子》第六章",
+   "names_used": [
+    "大块"
+   ],
+   "relational": "诸物与其所出：出于被计入的其余。",
+   "gap": "",
+   "locator": "《道德经》六章"
+  },
+  {
+   "id": "lao-39-de-yi",
+   "source_id": "YD-LAO-BASE",
+   "record_ids": [
+    "LE-R056",
+    "LE-R071",
+    "LE-R057"
+   ],
+   "fragments": [
+    "天得一以清",
+    "地得一以宁",
+    "万物得一以生"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.World.unity",
+    "Becoming.World.withRest_closed_iff",
+    "Becoming.Flow.changeReadings_glue_iff"
+   ],
+   "records": [
+    "unity-of-readings",
+    "imbalance-as-relatum"
+   ],
+   "reading": "AI读法：各者因「得一」而成其为自己。脊柱上，算入其余，每个世界是交换之律的一次运行，其两种读法处处粘合（World.unity）；不算其余时，一个世界自身的两种读法恰在流平衡处粘合（Flow.changeReadings_glue_iff），平衡恰是其余闲置（World.withRest_closed_iff）。所以「得一」在算入其余时对每个世界成立，在部分自身的读法上只在平衡处成立。「一」若读作先给予各物的实体，脊柱不取。",
+   "ro_passage": "",
+   "layer": "先秦（《老子》）",
+   "tradition": "道（老子）",
+   "work": "《老子》第三十九章",
+   "names_used": [
+    "一",
+    "物"
+   ],
+   "relational": "各部分与整体的统一：部分之所以如此，在于它在一次运行中的交换。",
+   "gap": "",
+   "locator": "《道德经》三十九章"
+  },
+  {
+   "id": "lao-22-bao-yi-wei-tian-xia-shi",
+   "source_id": "YD-LAO-BASE",
+   "record_ids": [
+    "LE-R018"
+   ],
+   "fragments": [
+    "是以圣人抱一为天下式"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Contextual.fitsFree_iff",
+    "Becoming.Contextual.no_free_frame",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "contextual-registration",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：一个人「抱一」而成为天下的范式，是单一中心一层：整体的统一由一个人持有并成为众人的式。脊柱上，一个不依语境的框架恰在诸语境处处粘合时存在（Contextual.fitsFree_iff），不粘合处没有这样的框架（Contextual.no_free_frame）；沿依存，中心不由动力学推出（Clearing.center_not_derived）。所以「为天下式」不是关系给出的。所不带的另一读：本章「不自見故明」的退让义，与此结构无关。",
+   "ro_passage": "",
+   "layer": "先秦（《老子》）",
+   "tradition": "道（老子）",
+   "work": "《老子》第二十二章",
+   "names_used": [
+    "一"
+   ],
+   "relational": "圣人与天下：一个关系项被置为全体之式。",
+   "gap": "",
+   "locator": "《道德经》二十二章"
+  },
+  {
+   "id": "lao-28-pu-san-wei-qi",
+   "source_id": "YD-LAO-BASE",
+   "record_ids": [
+    "LE-R038"
+   ],
+   "fragments": [
+    "朴散则为器，圣人用之，则为官长，故大制不割"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.separation_faithful_iff",
+    "Becoming.whole_not_in_pairs",
+    "Becoming.Web.not_losesBeyond_whole"
+   ],
+   "records": [
+    "separation-loses-the-relation",
+    "loss-beyond-a-region"
+   ],
+   "reading": "AI读法：「大制不割」：大的制作不割断。脊柱上，分割恰在无关系跨越处忠实（separation_faithful_iff），整体不在成对的关系里（whole_not_in_pairs），所以割裂会失去关系，不割之制在这个意义上成立。「朴散则为器」若读作一个先在未分之朴散为诸器，是先在根据；读作区分是读法，则与脊柱相合。「为官长」是治理的位次，脊柱不取。",
+   "ro_passage": "",
+   "layer": "先秦（《老子》）",
+   "tradition": "道（老子）",
+   "work": "《老子》第二十八章",
+   "names_used": [
+    "物"
+   ],
+   "relational": "朴与器：未分与已分是同一整体的两种读法；割断失去关系。",
+   "gap": "",
+   "locator": "《道德经》二十八章"
+  },
+  {
+   "id": "lao-74-si-sha-zhe-heshang",
+   "source_id": "LC-HS-LOW",
+   "record_ids": [
+    "LC2-HS-C74-R02"
+   ],
+   "fragments": [
+    "司杀者谓天，居高临下，司察人过"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.World.run_world"
+   ],
+   "records": [
+    "one-axiom-yields-g0",
+    "derived-extent-limits",
+    "worlds-are-runs"
+   ],
+   "reading": "AI读法：河上公把《老子》的「司杀者」释为天，居高临下，察人之过而杀之：一个有意志、有赏罚的中心。脊柱没有这样的中心：网不决定意义（Web.significance_undetermined），沿依存中心不由动力学推出（Clearing.center_not_derived），每个世界只是它所显之律的运行（World.run_world）。属于意志与单一中心一层，相分。",
+   "ro_passage": "",
+   "layer": "注（《老子河上公章句》，旧题汉河上公，成书或在东汉至魏晋，年代有争议）",
+   "tradition": "道（河上公注）",
+   "work": "《老子河上公章句》第七十四章",
+   "names_used": [],
+   "relational": "天与人：注文立一个监察并施罚的中心。",
+   "gap": "",
+   "locator": "河上公章句第74章·制惑注"
+  },
+  {
+   "id": "jielao-de-dao-zhi-gong",
+   "source_id": "CV1-S-JL",
+   "record_ids": [
+    "CV1-JL-R049",
+    "CV1-JL-R007"
+   ],
+   "fragments": [
+    "今道雖不可得聞見，聖人執其見功以處見其形",
+    "德者，道之功"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.exists_law_iff",
+    "Becoming.shown_le_iff",
+    "Becoming.shown_determined_iff",
+    "Becoming.Shown.agrees"
+   ],
+   "records": [
+    "process-and-frame-as-readings",
+    "histories-fix-law-up-to-dead-ends"
+   ],
+   "reading": "AI读法：道不可闻见，由其所见之功定其形；德是道之功。这是律由历史读出：一段历史显示的律是它为其运行的最小之律（shown_le_iff），它恰在历史一致处是确定的（shown_determined_iff、exists_law_iff），而每个容纳该历史的确定之律都重复它所显示的（Shown.agrees）。《解老》以此释「无状之状，无物之象」：律不是一个状，却由所见之功确定到死路为止。",
+   "ro_passage": "",
+   "layer": "先秦（《韩非子·解老》，战国末；作者归属有争议）",
+   "tradition": "法（解老）",
+   "work": "《韩非子·解老》",
+   "names_used": [
+    "所以迹",
+    "迹",
+    "状"
+   ],
+   "relational": "道与功：律由其效果（历史）读出。",
+   "gap": "",
+   "locator": "《解老》第6阅读段；释第十四章段"
+  },
+  {
+   "id": "jielao-bu-de-bu-hua",
+   "source_id": "CV1-S-JL",
+   "record_ids": [
+    "CV1-JL-R048",
+    "CV1-JL-R067"
+   ],
+   "fragments": [
+    "萬物各異理，而道盡稽萬物之理，故不得不化",
+    "不得不化，故無常操"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.no_prefix_fixes_next",
+    "Becoming.TwoClocks.one_course_two_laws",
+    "Becoming.Pace.rule_kept",
+    "Becoming.Pace.never_reads_loses"
+   ],
+   "records": [
+    "learning-by-refutation",
+    "where-a-move-is-formed",
+    "how-fast-a-rule-may-change"
+   ],
+   "reading": "AI读法：诸物之理各异，道要合于每一理，所以不能不化，没有固定的操持。脊柱上，任何由前段作出的固定外推都在某个进程上落空（Learning.no_prefix_fixes_next），同一历程可由不同的律生成（TwoClocks.one_course_two_laws），所以没有一条固定之操对一切进程都足够。但脊柱也有规则不变的情形：从不读快层的规则保持（Pace.rule_kept），代价是失去它所合并者（Pace.never_reads_loses）。故为定域：「無常操」对跨一切进程的操持成立，对每一个世界的律不成立。",
+   "ro_passage": "",
+   "layer": "先秦（《韩非子·解老》）",
+   "tradition": "法（解老）",
+   "work": "《韩非子·解老》",
+   "names_used": [
+    "变化",
+    "大化"
+   ],
+   "relational": "道与诸理：整体的进程要合于诸部分各异的律，因而不能固定于一律。",
+   "gap": "",
+   "locator": "《韩非子·解老》冻结网页第25自然段"
+  },
+  {
+   "id": "xunzi-zhengming-wu-zhuang-shi",
+   "source_id": "RU2-S-XZ22",
+   "record_ids": [
+    "RU2-U-XZ22"
+   ],
+   "fragments": [
+    "物也者，大共名也",
+    "状同而为异所者，虽可合，谓之二实。状变而实无别而为异者，谓之化。有化而无别，谓之一实"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.World.fixed_iff",
+    "Becoming.World.balanced_reidentify_iff",
+    "Becoming.Web.no_join",
+    "Becoming.Twins.naming_not_identifiesAlike",
+    "Becoming.identifiesAlike_iff",
+    "Becoming.Web.roles"
+   ],
+   "records": [
+    "identity-across-steps",
+    "configurations-alike-by-relation",
+    "space-and-its-parts"
+   ],
+   "reading": "AI读法：「物也者，大共名也」：物是推到无可再共的共名，一切关系项同属一类（Web.roles：两类读法嵌入一类读法）。「状同而为异所者……谓之二实」与 RO 所判相合：状相同而所不同者是二实，状变而实无别者谓之化。脊柱上，跨步认同是读法：在平衡世界里一个关系项被每个保持平衡的重认固定，恰当没有别的关系项在下一步与它水平相同（World.fixed_iff、World.balanced_reidentify_iff）；起名不等于按相似认同（Twins.naming_not_identifiesAlike）。所以状同而所异者因其关系不同而为二。",
+   "ro_passage": "xunzi-hua-yi-shi",
+   "layer": "先秦（《荀子·正名》）",
+   "tradition": "儒（荀子）",
+   "work": "《荀子·正名》",
+   "names_used": [
+    "物",
+    "状"
+   ],
+   "relational": "状、所与实：配置、位置与跨步认同；认同随关系而定。",
+   "gap": "",
+   "locator": "《荀子·正名》"
+  },
+  {
+   "id": "xunzi-tianlun-da-hua",
+   "source_id": "RU2-S-XZ17",
+   "record_ids": [
+    "RU2-U-XZ17"
+   ],
+   "fragments": [
+    "天行有常，不为尧存，不为桀亡",
+    "列星随旋，日月递炤，四时代御，阴阳大化，风雨博施，万物各得其和以生，各得其养以成，不见其事，而见其功，夫是之谓神"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.World.withRest",
+    "Becoming.Flow.readOff_acting",
+    "Becoming.World.unity",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "imbalance-as-relatum",
+    "premises-read-off-the-exchange",
+    "unity-of-readings",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：阴阳大化之中万物各得其和、其养而生成；人不见其事而见其功。脊柱上，算入其余，每个世界是交换之律的一次运行（World.unity）；其余的交换由水平与形成交换之差读出，不是观察（World.withRest），只有活跃者给与取（Flow.readOff_acting）——「不见其事，而见其功」正是从差别读出交换。「不为尧存，不为桀亡」：展开不因某个人的德行而改变其律，网不决定意义（Web.significance_undetermined）。所不带：「神」不作为一个施事；荀子同篇「制天命而用之」的控制义，RO 判为相分，与此不同。",
+   "ro_passage": "",
+   "layer": "先秦（《荀子·天論》）",
+   "tradition": "儒（荀子）",
+   "work": "《荀子·天論》",
+   "names_used": [
+    "大化",
+    "物",
+    "大块"
+   ],
+   "relational": "诸物与大化：各物从整体的交换中得其所需，交换由效果读出。",
+   "gap": "",
+   "locator": "《荀子·天論》"
+  },
+  {
+   "id": "lunyu-ren-neng-hong-dao",
+   "source_id": "RU1-S-LY",
+   "record_ids": [
+    "RU1-LY-15-28-R01",
+    "RU1-LY-15-28-R02"
+   ],
+   "fragments": [
+    "人能弘道，非道弘人"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Shown.run",
+    "Becoming.shown_le_iff",
+    "Becoming.shownBy_le_iff",
+    "Becoming.exists_law_iff"
+   ],
+   "records": [
+    "process-and-frame-as-readings",
+    "histories-fix-law-up-to-dead-ends"
+   ],
+   "reading": "AI读法：人能使道宽广，道不能使人宽广：方向是从行者到律，不是从律到行者。脊柱上，律由历史读出：历史是它所显之律的运行（Shown.run），所显之律是最小之律（shown_le_iff）；一族历史所显之律随这族历史而定（shownBy_le_iff），历史多了，所显之律只会包含更多的步。律自身不行动，没有关系项的运行就没有被显示的律。所不带：「人」在此不是与道对立的主体，而是展开中的关系项；论语的修身义脊柱不取。",
+   "ro_passage": "",
+   "layer": "先秦（《论语·卫灵公》）",
+   "tradition": "儒（论语）",
+   "work": "《论语·卫灵公》",
+   "names_used": [
+    "所以迹",
+    "迹"
+   ],
+   "relational": "人与道：律由行者的运行显出并扩展，律不自行。",
+   "gap": "",
+   "locator": "《论语》衞靈公第十五·十五之二八"
+  },
+  {
+   "id": "hanfei-zhudao-dao-zhe-wan-wu-zhi-shi",
+   "source_id": "FA1-S-H05",
+   "record_ids": [
+    "FA1-H05-R001"
+   ],
+   "fragments": [
+    "道者，萬物之始，是非之紀也。是以明君守始以知萬物之源，治紀以知善敗之端"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.World.run_world",
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.Contextual.fitsFree_iff"
+   ],
+   "records": [
+    "worlds-are-runs",
+    "one-axiom-yields-g0",
+    "derived-extent-limits",
+    "contextual-registration"
+   ],
+   "reading": "AI读法：道被立为万物之始与是非之纪，由明君守之以知万物之源与善败之端：先在之始、固定的是非标准与单一中心三层叠在一起。脊柱上，每个世界只是它所显之律的运行（World.run_world），没有先于运行的始；网不决定是非（Web.significance_undetermined）；中心不由动力学推出（Clearing.center_not_derived）；一个对一切语境成立的纪恰在诸语境粘合处才有（Contextual.fitsFree_iff）。相分。",
+   "ro_passage": "",
+   "layer": "先秦（《韩非子·主道》，战国末）",
+   "tradition": "法（韩非子）",
+   "work": "《韩非子·主道》",
+   "names_used": [
+    "大化"
+   ],
+   "relational": "道、明君与万物：一个守道者居中，以道为始、为纪治理万物。",
+   "gap": "",
+   "locator": "《韩非子·主道》转录第1段"
+  },
+  {
+   "id": "xici-bian-hua-jin-tui",
+   "source_id": "DS02",
+   "record_ids": [
+    "WP-XCS-C02-S02-R02",
+    "WP-XCS-C01-S01-R04"
+   ],
+   "fragments": [
+    "刚柔相推而生变化",
+    "变化者，进退之象也",
+    "在天成象，在地成形，变化见矣"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.flip",
+    "Becoming.Hexagram.changes",
+    "Becoming.Hexagram.reach_every",
+    "Becoming.Hexagram.changes_returns",
+    "Becoming.Hexagram.changes_keeps",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：沿用 Y1 的相合判断（刚柔相推而生变化）。变化由一对值相推而生，且兼进与退两向，不预设为好。脊柱上，单爻翻转是一步变化（Hexagram.flip），变之律可到达每一卦并复归、保持区分（Hexagram.changes、reach_every、changes_returns、changes_keeps）；在网上，生起与止息、立起与倒下是同一变化的读法（Web.change_readings）。「变化见矣」：变化由所成之象与形看出，即由配置之差读出。",
+   "ro_passage": "y1:gangrou",
+   "layer": "传·先秦（《系辞》，成篇年代有争议，战国中晚期至汉初）",
+   "tradition": "易（易传）",
+   "work": "《周易·系辞上》第一、二章",
+   "names_used": [
+    "变化"
+   ],
+   "relational": "刚与柔：一对值的相推生出变化，变化含进退两向。",
+   "gap": "",
+   "locator": "系辞上 第一章、第二章"
+  },
+  {
+   "id": "xici-yi-yin-yi-yang",
+   "source_id": "DS02",
+   "record_ids": [
+    "XC-R005"
+   ],
+   "fragments": [
+    "一阴一阳之谓道"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.World.arising_iff_ceasing",
+    "Becoming.World.law_iff_em",
+    "Becoming.Hexagram.world_arising_recurs",
+    "Becoming.Hexagram.world_ceasing_recurs"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "space-and-its-parts",
+    "hexagram-world-laws"
+   ],
+   "reading": "AI读法：沿用 Y1 的定域判断。一阴一阳的交替被称为道。脊柱上，生起与止息是同一变化的读法（Web.change_readings）；在活动可判定的有限世界中，生起复现恰当止息复现（World.arising_iff_ceasing），但把它当作对每个世界的律，恰等于排中律（World.law_iff_em）。所以交替作为律在可判定的有限处成立，不是无条件的全称。",
+   "ro_passage": "y1:yiyin-yiyang",
+   "layer": "传·先秦（《系辞》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·系辞上》第五章",
+   "names_used": [
+    "变化"
+   ],
+   "relational": "阴与阳：交替的两种读法，其交替在有限可判定处成律。",
+   "gap": "",
+   "locator": "系辞上 第五章"
+  },
+  {
+   "id": "xici-ji-zhi-zhe-shan",
+   "source_id": "DS02",
+   "record_ids": [
+    "XC-R065"
+   ],
+   "fragments": [
+    "继之者善也，成之者性也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Unrestricted",
+    "Becoming.g0_of_unrestricted"
+   ],
+   "records": [
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：沿用 Y1 的相分判断。系辞把继此交替者直接称为善、把成之者称为性：一个固定的价值与本性。脊柱上，网不决定意义（Web.significance_undetermined）；延续之条件（Unrestricted）只作为条件出现，理论不断言它，在它之下生生之意义是实例化（g0_of_unrestricted），而且它本身不排序。所以「继之者善」不是由关系给出的。",
+   "ro_passage": "y1:jizhi-shan",
+   "layer": "传·先秦（《系辞》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·系辞上》第五章",
+   "names_used": [],
+   "relational": "继者与善、成者与性：系辞把价值与本性直接加在变化的延续上。",
+   "gap": "",
+   "locator": "系辞上 第五章"
+  },
+  {
+   "id": "xici-tai-ji",
+   "source_id": "DS02",
+   "record_ids": [
+    "XC-R008"
+   ],
+   "fragments": [
+    "易有太极，是生两仪"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Hexagram.order_length",
+    "Becoming.World.unity",
+    "Becoming.Hexagram.addOne",
+    "Becoming.Hexagram.addOne_one_orbit",
+    "Becoming.Hexagram.line_turns"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：沿用 Y1 的定域判断。作为卦的二分生成（一画分二，二分四，至六十四），它是确切的组合：卦序含全部构形（Hexagram.order_length），加一之律只有一个轨道（Hexagram.addOne_one_orbit）。作为一个先在之太极生出天地，则是先在根据；脊柱上整体的统一是算入其余的一次运行（World.unity），不是先于两仪的一。",
+   "ro_passage": "y1:taiji",
+   "layer": "传·先秦（《系辞》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·系辞上》第十一章",
+   "names_used": [
+    "一"
+   ],
+   "relational": "太极与两仪：卦画的二分生成；作为宇宙生成次序则不取。",
+   "gap": "",
+   "locator": "系辞上 第十一章"
+  },
+  {
+   "id": "xici-dao-qi",
+   "source_id": "DS02",
+   "record_ids": [
+    "XC-R029",
+    "WP-XCS-C12-S04-R02",
+    "WP-XCS-C12-S04-R03"
+   ],
+   "fragments": [
+    "形而上者谓之道，形而下者谓之器"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.exists_law_iff",
+    "Becoming.shown_le_iff",
+    "Becoming.Run.keepHistory_shown"
+   ],
+   "records": [
+    "process-and-frame-as-readings",
+    "histories-fix-law-up-to-dead-ends"
+   ],
+   "reading": "AI读法：沿用 Y1 的定域判断。道与器作为律与运行（历史）的两种读法成立：律由历史读出（exists_law_iff、shown_le_iff），二者对应而不同一，差别是记忆（Run.keepHistory_shown）。「上」「下」若读作等级或先后（孔疏「先道而後形」），脊柱不取。",
+   "ro_passage": "y1:daoqi",
+   "layer": "传·先秦（《系辞》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·系辞上》第十二章",
+   "names_used": [
+    "所以迹",
+    "迹"
+   ],
+   "relational": "道与器：律与其运行，同一展开的两种读法。",
+   "gap": "",
+   "locator": "系辞上 第十二章"
+  },
+  {
+   "id": "xici-tong-bian-zhi-wei-shi",
+   "source_id": "DS02",
+   "record_ids": [
+    "XC-R030"
+   ],
+   "fragments": [
+    "通变之谓事"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.World.run_world",
+    "Becoming.Shown.run",
+    "Becoming.Run.world_webAt"
+   ],
+   "records": [
+    "worlds-are-runs",
+    "process-and-frame-as-readings"
+   ],
+   "reading": "AI读法：把变化贯通下去，就叫事。脊柱上，一个世界恰是其各步之网与交换所显之律的运行（World.run_world），运行的世界在每一步就是运行的配置（Run.world_webAt），每段历史是它所显之律的运行（Shown.run）：事不是变化之外的静物，而是变化被一步步贯通。所不带：事作为职事、政事的社会义；华严「理事」二分。",
+   "ro_passage": "",
+   "layer": "传·先秦（《系辞》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·系辞上》第五章",
+   "names_used": [
+    "变化",
+    "迹"
+   ],
+   "relational": "变与事：事是变化的贯通，即运行。",
+   "gap": "",
+   "locator": "系辞上 第五章"
+  },
+  {
+   "id": "xici-tian-di-she-wei",
+   "source_id": "DS02",
+   "record_ids": [
+    "WP-XCS-C07-S02-R01"
+   ],
+   "fragments": [
+    "天地设位，而易行乎其中矣"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.World.run_world",
+    "Becoming.Frame.world_fixes_run",
+    "Becoming.Contextual.fitsFree_iff",
+    "Becoming.Contextual.world"
+   ],
+   "records": [
+    "worlds-are-runs",
+    "process-and-frame-as-readings",
+    "contextual-registration",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：框架设定位置，变化在其中运行。脊柱上，一个世界恰是它所显之律的运行（World.run_world），框架的世界固定其运行（Frame.world_fixes_run），所以「易行乎其中」成立；但框架是从运行读出的，不先于运行设定。不依语境的框架恰在诸读法粘合处存在（Contextual.fitsFree_iff）；不粘合处，读法仍以语境为索引构成一个世界（Contextual.world）。故为定域：设位而行在粘合处成立，「天地」作为先设的容器不成立。",
+   "ro_passage": "",
+   "layer": "传·先秦（《系辞》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·系辞上》第七章",
+   "names_used": [
+    "六合",
+    "大化"
+   ],
+   "relational": "位与行：框架与运行互相固定，框架由运行读出。",
+   "gap": "",
+   "locator": "系辞上 第七章"
+  },
+  {
+   "id": "xici-qian-zhi-da-shi-kun-zuo-cheng-wu",
+   "source_id": "DS02",
+   "record_ids": [
+    "WP-XCS-C01-S03-R03",
+    "WP-XCS-C01-S03-R04"
+   ],
+   "fragments": [
+    "干知大始，坤作成物"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.roles",
+    "Becoming.Flow.roles",
+    "Becoming.Web.relabel",
+    "Becoming.Web.relabel_dependent"
+   ],
+   "records": [
+    "space-and-its-parts",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：乾主始，坤成物：把发动与成就分给两个本原。脊柱上，形成与条件是一个关系项的两种角色；两类读法嵌入一类读法，嵌入后恰是没有形成充当条件的那种一类读法（Web.roles、Flow.roles）；哪个条件就是哪个关系项由共同的索引给出，重新标号保持依存（Web.relabel、Web.relabel_dependent）。所以乾坤二分作为两种角色的读法成立，作为两种本原不成立。所不带：「乾道成男，坤道成女」的性别分配。冻结文本作「干」，是「乾」的简化误字，照录。",
+   "ro_passage": "",
+   "layer": "传·先秦（《系辞》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·系辞上》第一章",
+   "names_used": [
+    "所待又有待",
+    "物"
+   ],
+   "relational": "乾与坤：发动与成就两种角色，可归于同一类关系项。",
+   "gap": "",
+   "locator": "系辞上 第一章"
+  },
+  {
+   "id": "xici-fan-wei-bu-yi",
+   "source_id": "DS02",
+   "record_ids": [
+    "WP-XCS-C04-S06-R01"
+   ],
+   "fragments": [
+    "范围天地之化而不过，曲成万物而不遗",
+    "故神无方而易无体"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Hexagram.mem_order",
+    "Becoming.Hexagram.waxWane_returns",
+    "Becoming.Hexagram.kept_history_unlisted",
+    "Becoming.Law.withHistory_unlisted",
+    "Becoming.Learning.no_prefix_fixes_next",
+    "Becoming.Learning.diagonal_misses"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "recurrence-without-premise",
+    "learning-by-refutation"
+   ],
+   "reading": "AI读法：沿用 RO 的定域判断。范围而不过、曲成而不遗，对组态与律成立（六十四构形都在卦序中，消息之律下每个都回来），对保留历史的展开不成立：没有有限列表容纳它（Hexagram.kept_history_unlisted、Law.withHistory_unlisted），由前段作出的外推都会落空（Learning.no_prefix_fixes_next）。「易无体」：律不是任何一个组态。",
+   "ro_passage": "xici-fanwei-buyi",
+   "layer": "传·先秦（《系辞》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·系辞上》第四章",
+   "names_used": [
+    "大化"
+   ],
+   "relational": "易与天地之化：律包住组态，不包住带历史的展开。",
+   "gap": "",
+   "locator": "系辞上 第四章"
+  },
+  {
+   "id": "xici-xian-ren-cang-yong",
+   "source_id": "DS02",
+   "record_ids": [
+    "WP-XCS-C05-S03-R01"
+   ],
+   "fragments": [
+    "显诸仁，藏诸用，鼓万物而不与圣人同忧"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.ExchangeLaw.Through.crosses_of_unobserved",
+    "Becoming.crossing_passes_iff",
+    "Becoming.not_not_obs_iff_respondsByLevel",
+    "Becoming.Web.observed_level_couples",
+    "Becoming.Web.break_not_bounded"
+   ],
+   "records": [
+    "where-a-level-couples",
+    "runaway-distance-unregistered",
+    "testing-within-registration"
+   ],
+   "reading": "AI读法：沿用 RO 的定域判断（Y1 对「鼓萬物而不與聖人同憂」另判相合，依据 Web.significance_undetermined：展开不分担任何一方的忧）。「藏诸用」在脊柱上有确切范围：未被观察的水平也能跨越传递（ExchangeLaw.Through.crosses_of_unobserved），观察只在水平耦合处有回应（not_not_obs_iff_respondsByLevel），到断点的距离不被登记（Web.break_not_bounded）。",
+   "ro_passage": "xici-xian-ren-cang-yong",
+   "layer": "传·先秦（《系辞》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·系辞上》第五章",
+   "names_used": [
+    "大化"
+   ],
+   "relational": "显与藏：作用在被观察与未被观察的水平上传递。",
+   "gap": "",
+   "locator": "系辞上 第五章"
+  },
+  {
+   "id": "xici-zhen-fu-yi",
+   "source_id": "DS03",
+   "record_ids": [
+    "WP-XCX-C01-S03-R02"
+   ],
+   "fragments": [
+    "天下之动，贞夫一者也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：沿用 Y1 的相合判断。天下之动定于一：算入其余，每个世界是交换之律的一次运行，其读法处处粘合（World.unity）。所不带：王弼《略例》把此句读成「制天下之動者」，以一为统治众动之主（单一中心），脊柱不取；「一」也不是先在之实体。",
+   "ro_passage": "y1:zhen-fu-yi",
+   "layer": "传·先秦（《系辞》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·系辞下》第一章",
+   "names_used": [
+    "一"
+   ],
+   "relational": "众动与一：诸交换合为一次运行。",
+   "gap": "",
+   "locator": "系辞下 第一章"
+  },
+  {
+   "id": "xugua-you-tian-di",
+   "source_id": "YD-OW-XG",
+   "record_ids": [
+    "WP-XG-C01-S01-R01"
+   ],
+   "fragments": [
+    "有天地，然後萬物生焉"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.process_returns_iff_ends",
+    "Becoming.Hexagram.nuclear_rests_iff",
+    "Becoming.Hexagram.nuclear_two_fixed_one_cycle",
+    "Becoming.Hexagram.run_in_attractor"
+   ],
+   "records": [
+    "hexagram-world-laws",
+    "hexagrams-on-the-spine"
+   ],
+   "reading": "AI读法：沿用 Y1 的相合判断：序卦以乾坤起、未济终，所言是卦序的承接，Y1 在脊柱的卦律上核对了它的首尾结构（过程复归恰当终止，互卦之律两个不动点一个循环）。此处只把「有天地，然後萬物生焉」读作卦序的起点；若读作宇宙中天地先于万物的时间次序，脊柱不取（见孔疏「天地未分」条的相分）。",
+   "ro_passage": "y1:xugua-shouwei",
+   "layer": "传·先秦或秦汉（《序卦》，年代有争议，或晚于系辞）",
+   "tradition": "易（易传）",
+   "work": "《周易·序卦》",
+   "names_used": [
+    "物"
+   ],
+   "relational": "乾坤与屯：卦序中的承接。",
+   "gap": "",
+   "locator": "序卦·上篇·编者论证段01"
+  },
+  {
+   "id": "xugua-ying-tian-di-wei-wan-wu",
+   "source_id": "YD-OW-XG",
+   "record_ids": [
+    "WP-XG-C01-S02-R01"
+   ],
+   "fragments": [
+    "盈天地之間者，唯萬物"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.roles",
+    "Becoming.Flow.roles",
+    "Becoming.World"
+   ],
+   "records": [
+    "space-and-its-parts"
+   ],
+   "reading": "AI读法：充满天地之间的只有万物，没有第二类存在。脊柱上，一个世界的关系项是一类（World），两类读法（形成与条件）嵌入一类读法（Web.roles、Flow.roles）。所不带：「天地之間」的容器图像；脊柱的世界不是空间，天地本身在序卦中也是卦（物）。",
+   "ro_passage": "",
+   "layer": "传·先秦或秦汉（《序卦》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·序卦》",
+   "names_used": [
+    "物",
+    "六合"
+   ],
+   "relational": "天地之间与万物：其中只有一类关系项。",
+   "gap": "",
+   "locator": "序卦·上篇·编者论证段02"
+  },
+  {
+   "id": "shuogua-jian-san-cai",
+   "source_id": "YD-OW-SG",
+   "record_ids": [
+    "OW-R008"
+   ],
+   "fragments": [
+    "兼三才而兩之，故易六畫而成卦。分陰分陽，迭用柔剛，故易六位而成章"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.halves_indexed",
+    "Becoming.Hexagram.atSites_glues_iff",
+    "Becoming.Contextual.indexed_fits",
+    "Becoming.Contextual.fitsFree_iff"
+   ],
+   "records": [
+    "place-relations-in-context",
+    "fixed-places-and-sole-lines",
+    "contextual-registration"
+   ],
+   "reading": "AI读法：天、地、人三种读法各成一对，合于一个六位的卦。脊柱上，卦位的关系是在位上的语境读法：只在各处所示相同时粘合为对整卦的读法（Hexagram.atSites_glues_iff），上下两卦以位为索引（Hexagram.halves_indexed）；以语境为索引的框架总合（Contextual.indexed_fits）。所以三才合为一卦是带索引的读法之合，不是三个独立领域。所不带：三才的宇宙等级。",
+   "ro_passage": "",
+   "layer": "传·先秦或秦汉（《说卦》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·说卦》第二章",
+   "names_used": [
+    "两行"
+   ],
+   "relational": "天、地、人三种读法与一卦六位：带索引的读法合于一个配置。",
+   "gap": "",
+   "locator": "说卦·第二章"
+  },
+  {
+   "id": "shuogua-shen-miao-wan-wu",
+   "source_id": "YD-OW-SG",
+   "record_ids": [
+    "OW-R013"
+   ],
+   "fragments": [
+    "神也者。妙萬物而為言者也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.no_prefix_fixes_next",
+    "Becoming.Frame.self_incomplete",
+    "Becoming.World.run_world"
+   ],
+   "records": [
+    "learning-by-refutation",
+    "registration-within-what-it-registers",
+    "worlds-are-runs"
+   ],
+   "reading": "AI读法：神不是另一个物，而是就万物之妙而说的话。脊柱上没有展开之外的施事：每个世界是它所显之律的运行（World.run_world）；所谓「不测」是任何前段都不固定下一步（Learning.no_prefix_fixes_next），读法族在其所读之中永不完备（Frame.self_incomplete）。「神」于是是一个说法，指称这种不被预先固定的变化，不是第二个实在。",
+   "ro_passage": "",
+   "layer": "传·先秦或秦汉（《说卦》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·说卦》第六章",
+   "names_used": [
+    "无际",
+    "物"
+   ],
+   "relational": "神与万物：神是对万物之变的说法，不是万物之外者。",
+   "gap": "",
+   "locator": "说卦·第六章"
+  },
+  {
+   "id": "tuan-kui",
+   "source_id": "YD-JP38",
+   "record_ids": [
+    "TP-H38-T-R04"
+   ],
+   "fragments": [
+    "天地睽，而其事同也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.pairs_goAlike",
+    "Becoming.Hexagram.pairOf",
+    "Becoming.Learning.goAlike_iff_lumped",
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Hexagram.waxWane_apart"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "what-a-commuting-law-keeps-apart",
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：沿用 RO 的相合判断。天地相乖而其事相同：成对之卦在合并读法下同行（Hexagram.pairs_goAlike），合并恰在同行处成立（Learning.goAlike_iff_lumped），而消息之律仍把它们分开（Hexagram.waxWane_apart）。相异与相同是两种读法，各有其范围。",
+   "ro_passage": "tuan-kui",
+   "layer": "传·先秦（《彖传》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·睽·彖》",
+   "names_used": [
+    "两行"
+   ],
+   "relational": "天与地：相乖而事同，在不同读法下。",
+   "gap": "",
+   "locator": "第38卦睽·彖传"
+  },
+  {
+   "id": "xiaoxiang-guan-wo-sheng",
+   "source_id": "YD-JP20",
+   "record_ids": [
+    "TP-H20-X5-R01"
+   ],
+   "fragments": [
+    "觀我生，觀民也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Alike.tests",
+    "Becoming.alike_iff_sameTests",
+    "Becoming.Bisimulation"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "tests-fix-likeness-where-determined"
+   ],
+   "reading": "AI读法：观我之生，就是观民：一个关系项是什么，由它与他者的关系看出。脊柱上，配置的相同由互模拟刻画（Bisimulation），在确定之处恰由检验（与他者的关系）固定（Alike.tests、alike_iff_sameTests）：配置就是它如何相关。所不带：九五之位的君民等级。",
+   "ro_passage": "",
+   "layer": "传·先秦（《象传》，年代有争议）",
+   "tradition": "易（易传）",
+   "work": "《周易·觀·九五小象》",
+   "names_used": [
+    "状"
+   ],
+   "relational": "我与民：我之生由我与民的关系读出。",
+   "gap": "",
+   "locator": "第20卦觀·小象·第5位"
+  },
+  {
+   "id": "dayou-zi-tian-you-zhi",
+   "source_id": "YD-JG14",
+   "record_ids": [
+    "JG2-H14-L6-R01"
+   ],
+   "fragments": [
+    "上九：自天佑之，吉无不利"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.significance_undetermined",
+    "Becoming.Clearing.center_not_derived",
+    "Becoming.World.run_world"
+   ],
+   "records": [
+    "one-axiom-yields-g0",
+    "derived-extent-limits",
+    "worlds-are-runs"
+   ],
+   "reading": "AI读法：天佑之：一个有意志的天护佑某人，使之吉而无不利。这属于意志与单一中心一层。脊柱上，网不决定意义与吉凶（Web.significance_undetermined），中心不由动力学推出（Clearing.center_not_derived），每个世界只是它所显之律的运行（World.run_world），没有在展开之外施佑者。相分。此句后为传文与系辞反复引用（见 parallels），都带同一意志层。",
+   "ro_passage": "",
+   "layer": "经·先秦（《周易》卦爻辞，西周）",
+   "tradition": "易（经）",
+   "work": "《周易·大有·上九》",
+   "names_used": [],
+   "relational": "天与受佑者：一个居外的意志给出吉利。",
+   "gap": "",
+   "locator": "第14卦大有·上九"
+  },
+  {
+   "id": "wfz-qian-kun-bing-jian",
+   "source_id": "YD-WF1",
+   "record_ids": [
+    "WF-R002",
+    "WF-R001"
+   ],
+   "fragments": [
+    "《乾》《坤》并建于上，时无先后，权无主辅，犹呼吸也",
+    "如实言之则太极者《乾》《坤》之合撰，健则极健，顺则极顺，无不极而无专极者也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Law.Commutes.rest_paired",
+    "Becoming.Law.Commutes.not_drawn_to_one",
+    "Becoming.exists_law_iff",
+    "Becoming.shown_le_iff",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "what-a-commuting-law-keeps-apart",
+    "process-and-frame-as-readings",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：沿用 RO 的相合判断。乾坤并建，无先后、无主辅；太极不在乾坤之前，而是乾坤之合撰。脊柱上，可交换之律下成对者相伴而不被吸入一端（Law.Commutes.rest_paired、Law.Commutes.not_drawn_to_one），统一是算入其余的一次运行（World.unity），律由历史读出（exists_law_iff）。这正是对先在之太极（孔疏「天地未分」）的否定。",
+   "ro_passage": "wfz-bingjian",
+   "layer": "注·清初（王夫之《周易外传》，明清之际）",
+   "tradition": "儒（船山易学）",
+   "work": "王夫之《周易外传·系辞上传第一章》",
+   "names_used": [
+    "一",
+    "所待又有待"
+   ],
+   "relational": "乾与坤：并建而无主辅，太极是二者之合，不在其前。",
+   "gap": "",
+   "locator": "周易外传·系辞上传第一章·三"
+  },
+  {
+   "id": "wfz-wei-ji-tong-shi",
+   "source_id": "YD-WF64",
+   "record_ids": [
+    "WF-R006"
+   ],
+   "fragments": [
+    "故《易》成于《既济》而终《未济》，《未济》之世，亦《乾》《坤》之世，而非先后之始终也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.process_returns_iff_ends",
+    "Becoming.Hexagram.nuclear_two_fixed_one_cycle",
+    "Becoming.Hexagram.waxWane_returns",
+    "Becoming.Hexagram.twelve_steps",
+    "Becoming.Law.withHistory_never_returns"
+   ],
+   "records": [
+    "hexagram-world-laws",
+    "hexagrams-on-the-spine",
+    "recurrence-without-premise"
+   ],
+   "reading": "AI读法：沿用 RO 的相合判断。卦序以未济终，但未济之世也是乾坤之世，不是先后之始终：序是读法，不是时间上的开端与终点。脊柱上，过程复归恰当它终止（Hexagram.process_returns_iff_ends），消息之律十二步复归（Hexagram.twelve_steps），而保留历史的展开从不复归（Law.withHistory_never_returns）。",
+   "ro_passage": "wfz-weiji-tongshi",
+   "layer": "注·清初（王夫之《周易外传》）",
+   "tradition": "儒（船山易学）",
+   "work": "王夫之《周易外传·未济》",
+   "names_used": [
+    "大化"
+   ],
+   "relational": "卦序之首尾与世：首尾同世，次序是读法。",
+   "gap": "",
+   "locator": "周易外传·未济·一"
+  },
+  {
+   "id": "han-dao-wu-zhi-cheng",
+   "source_id": "YWH-H4",
+   "record_ids": [
+    "WH-R023",
+    "YCM130-H4-H-09-R01"
+   ],
+   "fragments": [
+    "道者何？無之稱也，無不通也，無不由也，況之曰道",
+    "方、體者，皆繫於形器者也。神則陰陽不測，易則唯變所適，不可以一方、一體明"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.World.unity",
+    "Becoming.exists_law_iff",
+    "Becoming.shown_le_iff",
+    "Becoming.Web.change_readings",
+    "Becoming.Frame.arises_iff"
+   ],
+   "records": [
+    "unity-of-readings",
+    "process-and-frame-as-readings",
+    "worlds-are-runs",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：沿用 RO 的定域判断。「易則唯變所適，不可以一方、一體明」与脊柱相合：律不是任何一个配置，律由历史读出（exists_law_iff、shown_le_iff）。「道者何？無之稱也」若读作道不是一物、只是对无所不通之律的称谓，在此范围内成立；若读作以无为本，则转入相分（见韩注「有必始於無」条）。",
+   "ro_passage": "han-dao-wu-zhi-cheng",
+   "layer": "注·魏晋南北朝（韩康伯《系辞注》，东晋）",
+   "tradition": "易（玄学注）",
+   "work": "韩康伯《周易系辞注》（《周易正义》所载）",
+   "names_used": [
+    "无际",
+    "所以迹"
+   ],
+   "relational": "道与形器：道是对通贯形器之律的称谓，不是一个形器。",
+   "gap": "",
+   "locator": "周易正義 繫辭上 卷七之四，韓注"
+  },
+  {
+   "id": "han-you-shi-yu-wu",
+   "source_id": "YWH-H11",
+   "record_ids": [
+    "WH-R024",
+    "WH-R025"
+   ],
+   "fragments": [
+    "太極者，無稱之稱，不可得而名，取有之所極，況之太極者也",
+    "夫有必始於無，故太極生兩儀也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Frame.arises_iff",
+    "Becoming.Frame.novel_iff_arises",
+    "Becoming.Web.change_readings",
+    "Becoming.World.unity",
+    "Becoming.Run.keepHistory_shown"
+   ],
+   "records": [
+    "process-and-frame-as-readings",
+    "unity-of-readings",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：沿用 RO 的相分判断。「有必始於無」立一个先于有的无作为开端：先在根据一层。脊柱上，新者恰是生起者（Frame.novel_iff_arises），生起是变化的读法（Web.change_readings），统一是算入其余的一次运行（World.unity），没有先于关系项的无。",
+   "ro_passage": "han-you-shi-yu-wu",
+   "layer": "注·魏晋南北朝（韩康伯，东晋）",
+   "tradition": "易（玄学注）",
+   "work": "韩康伯《周易系辞注》",
+   "names_used": [
+    "一"
+   ],
+   "relational": "有与无：注文把无置于有之先、之本。",
+   "gap": "",
+   "locator": "周易正義 繫辭上 卷七之十一，韓注"
+  },
+  {
+   "id": "kong-tai-ji-yuan-qi",
+   "source_id": "YWH-H11",
+   "record_ids": [
+    "WH-R029",
+    "WH-R030",
+    "WH-R031"
+   ],
+   "fragments": [
+    "太極謂天地未分之前，元氣混而為一，即是太初、太一也",
+    "即此太極是也",
+    "又謂混元既分，即有天地"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.World.unity",
+    "Becoming.Web.change_readings",
+    "Becoming.Frame.arises_iff",
+    "Becoming.Law.alike_iff_sameFuture"
+   ],
+   "records": [
+    "unity-of-readings",
+    "configurations-alike-by-relation",
+    "process-and-frame-as-readings"
+   ],
+   "reading": "AI读法：沿用 RO 的相分判断。孔疏把太极释为天地未分之前混而为一的元气，再以老子「道生一」对读，以两仪为天地两体：一个先在的未分实体依时序分化。脊柱的一不是先在实体，而是算入其余的一次运行（World.unity）；相同由关系与未来刻画（Law.alike_iff_sameFuture），没有关系之前的混一。",
+   "ro_passage": "kong-taiji-yuanqi",
+   "layer": "疏·隋唐（孔颖达等《周易正义》，唐）",
+   "tradition": "易（义疏）",
+   "work": "孔颖达等《周易正义·系辞上》",
+   "names_used": [
+    "一",
+    "大化"
+   ],
+   "relational": "元气与天地：疏文立一个先于天地的未分之一。",
+   "gap": "",
+   "locator": "周易正義 繫辭上 卷七之十一，疏"
+  },
+  {
+   "id": "han-du-hua-yu-da-xu",
+   "source_id": "YWH-H5",
+   "record_ids": [
+    "YCM130-H5-H-07-R01"
+   ],
+   "fragments": [
+    "原夫兩儀之運，萬物之動，豈有使之然哉！莫不獨化於大虛，欻爾而自造矣"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Flow.fed_from_beyond",
+    "Becoming.Flow.nothing_supported_stays",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "continuing-self-fed-from-beyond",
+    "becoming-dependence-dynamics",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：前半与脊柱相合：两仪之运、万物之动没有一个使之然者（中心不由动力学推出，Clearing.center_not_derived）。后半「獨化於大虛，欻爾而自造」否认依存，与郭象独化同构（RO 判 guoxiang-zhu-du-hua 为相分）：脊柱上形成依其条件（Web.Dependent），持续者从其外得养（Flow.fed_from_beyond），没有被支持者自行保持（Flow.nothing_supported_stays）。本条的主张在独化，故判相分。",
+   "ro_passage": "",
+   "layer": "注·魏晋南北朝（韩康伯，东晋）",
+   "tradition": "易（玄学注）",
+   "work": "韩康伯《周易系辞注》",
+   "names_used": [
+    "所待又有待"
+   ],
+   "relational": "万物之动与其条件：注文否认使之者，也否认所待。",
+   "gap": "",
+   "locator": "周易正義/07.05·韩康伯层·07"
+  },
+  {
+   "id": "wangbi-yi-wu-wei-ben",
+   "source_id": "DS01",
+   "record_ids": [
+    "LC-R001",
+    "LC-R008",
+    "LC-R007",
+    "LC2-WB-C14-R01"
+   ],
+   "fragments": [
+    "凡有皆始于无",
+    "天下之物皆以有为生，有之所始，以无为本，将欲全有，必反于无也",
+    "守母以存其子，崇本以举其末",
+    "无形无名者，万物之宗也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Frame.arises_iff",
+    "Becoming.Frame.novel_iff_arises",
+    "Becoming.Web.change_readings",
+    "Becoming.World.unity",
+    "Becoming.Web.not_losesBeyond_whole"
+   ],
+   "records": [
+    "process-and-frame-as-readings",
+    "unity-of-readings",
+    "coming-and-ceasing-keep-pace",
+    "loss-beyond-a-region"
+   ],
+   "reading": "AI读法：王弼以无为本、为宗、为母，有为末、为子，要全有须反于无：先在根据与本末等级两层。脊柱上，生起是变化的读法（Web.change_readings、Frame.novel_iff_arises），统一是算入其余的一次运行（World.unity），整体之外什么都没有（Web.not_losesBeyond_whole），没有先于诸关系项的本。与《庄子·知北遊》「彼爲本末非本末」对照：本末是读法。",
+   "ro_passage": "",
+   "layer": "注·魏晋南北朝（王弼《老子道德经注》，曹魏）",
+   "tradition": "道（玄学注）",
+   "work": "王弼《老子道德经注》第一、十四、三十八、四十章",
+   "names_used": [
+    "无际"
+   ],
+   "relational": "无与有、本与末：注文以无为有之本与宗。",
+   "gap": "",
+   "locator": "王弼《老子道德经注》第1、14、38、40章注"
+  },
+  {
+   "id": "heshang-dao-qi-sheng-hua",
+   "source_id": "LC-HS-UP",
+   "record_ids": [
+    "LC-R011",
+    "LC2-HS-C21-R01",
+    "LC2-HS-C21-R02"
+   ],
+   "fragments": [
+    "始者道本也，吐气布化，出于虚无，为天地本始也",
+    "道唯恍忽，其中有一，经营生化，因气立质",
+    "言道禀与，万物始生，从道受气"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.World.unity",
+    "Becoming.Web.change_readings",
+    "Becoming.Frame.arises_iff",
+    "Becoming.Law.alike_iff_sameFuture"
+   ],
+   "records": [
+    "unity-of-readings",
+    "coming-and-ceasing-keep-pace",
+    "process-and-frame-as-readings",
+    "configurations-alike-by-relation"
+   ],
+   "reading": "AI读法：河上公以道吐气布化、出于虚无而为天地本始，万物从道受气：一个先在之道依时序生成并禀与诸物。属于先在根据一层。脊柱上，统一是算入其余的一次运行（World.unity），生起是变化的读法（Web.change_readings），诸物的状态由其交换给出，不由一个先在者禀与。",
+   "ro_passage": "",
+   "layer": "注（《老子河上公章句》，年代有争议，东汉至魏晋）",
+   "tradition": "道（河上公注）",
+   "work": "《老子河上公章句》第一、二十一章",
+   "names_used": [
+    "大化"
+   ],
+   "relational": "道、气与万物：注文立道为天地本始，万物受气于道。",
+   "gap": "",
+   "locator": "河上公章句第1章·体道注；第21章·虚心注"
+  },
+  {
+   "id": "su-zhe-ti-yong",
+   "source_id": "LC-SZ-ALL",
+   "record_ids": [
+    "LC-R024",
+    "LC-R025"
+   ],
+   "fragments": [
+    "故無名者道之體而有名者道之用也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.exists_law_iff",
+    "Becoming.shown_le_iff",
+    "Becoming.World.unity",
+    "Becoming.Run.keepHistory_shown"
+   ],
+   "records": [
+    "process-and-frame-as-readings",
+    "unity-of-readings",
+    "histories-fix-law-up-to-dead-ends"
+   ],
+   "reading": "AI读法：苏辙以无名为道之体、有名为道之用。若体用读作同一展开的两种读法（律与其运行），在脊柱上成立：律由历史读出，二者对应而不同一，差别是记忆（exists_law_iff、shown_le_iff、Run.keepHistory_shown）。若体读作先在而不可名的本体，则是先在根据。体用是后起之说（魏晋以下，宋明尤盛），本条在其范围内定域。",
+   "ro_passage": "",
+   "layer": "注·宋明（苏辙《老子解》，北宋）",
+   "tradition": "道（宋代老学）",
+   "work": "苏辙《老子解》第一章",
+   "names_used": [
+    "所以迹",
+    "迹"
+   ],
+   "relational": "体与用：同一展开的两种读法，或本体与其作用。",
+   "gap": "",
+   "locator": "苏辙《老子解》第1章注"
+  },
+  {
+   "id": "zhongyong-tian-ming-zhi-wei-xing",
+   "source_id": "RU1-S-ZY",
+   "record_ids": [
+    "RU1-ZY-01-R01",
+    "RU1-ZY-01-R06"
+   ],
+   "fragments": [
+    "天命之謂性，率性之謂道，修道之謂教",
+    "中也者，天下之大本也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Alike.tests",
+    "Becoming.alike_iff_sameTests",
+    "Becoming.identifiesAlike_iff",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "tests-fix-likeness-where-determined",
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：性由天命给定，道是循性，中是天下之大本：先定之性与根本两层。脊柱上，配置是它如何相关，其相同由检验固定（Alike.tests、alike_iff_sameTests、identifiesAlike_iff），没有先于关系而给定的性；网也不决定何者为本（Web.significance_undetermined）。相分。中庸成篇年代有争议（战国至秦汉）。",
+   "ro_passage": "",
+   "layer": "先秦或秦汉（《礼记·中庸》，年代有争议）",
+   "tradition": "儒（中庸）",
+   "work": "《礼记·中庸》首章",
+   "names_used": [
+    "状"
+   ],
+   "relational": "天、性与道：先给定的性规定其后的道。",
+   "gap": "",
+   "locator": "《礼记·中庸》编者连续论证段1"
+  },
+  {
+   "id": "zhongyong-cheng-zhe-zi-cheng",
+   "source_id": "RU1-S-ZY",
+   "record_ids": [
+    "RU1-ZY-33-R02"
+   ],
+   "fragments": [
+    "誠者自成也；而道，自道也",
+    "誠者，物之終始，不誠無物"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.SelfBearing.stands",
+    "Becoming.Web.SelfBearing.met_iff",
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.Web.Embodied.replenishes",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "whole-persists-through-generation",
+    "generation-is-replenishment",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：沿用 RO 的定域判断。「誠者自成」在脊柱上有确切范围：依靠自身者在依存之下活跃时立着（Web.SelfBearing.stands），体现者的自依存恰在其活跃时满足（Web.SelfBearing.met_iff）；但整体的持续需要生起（Web.Whole.needs_arising）。「物之終始」作为变化的读法成立；作为一个使物存在的固定之德（不誠無物），则超出关系所给。",
+   "ro_passage": "ru-zhongyong-cheng-zi-cheng",
+   "layer": "先秦或秦汉（《礼记·中庸》，年代有争议）",
+   "tradition": "儒（中庸）",
+   "work": "《礼记·中庸》诚者自成段",
+   "names_used": [
+    "物"
+   ],
+   "relational": "诚与物：自成在依存条件下成立，不先于依存。",
+   "gap": "",
+   "locator": "《礼记·中庸》编者连续论证段33"
+  },
+  {
+   "id": "zhangzai-tong-yi-wu-er",
+   "source_id": "RU2-S-S02",
+   "record_ids": [
+    "RU2-R0171"
+   ],
+   "fragments": [
+    "知虚空即气，则有无、隐显、神化、性命通一无二"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.Web.arising_recurs_iff",
+    "Becoming.keep_pace",
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "whole-persists-through-generation",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：沿用 RO 对张载「太虚即气」段的相合判断（同一段落）。虚空即气，则有与无、隐与显都不是两个实在，而是一个整体的读法（通一无二）。脊柱上，生起与止息、立起与倒下是同一变化的读法（Web.change_readings），统一是算入其余的一次运行（World.unity）。所不带：气作为可聚散的实质；脊柱只取没有两个实在这一结构。",
+   "ro_passage": "ru-zhangzai-tai-xu-ji-qi",
+   "layer": "宋明（张载《正蒙·太和》，北宋）",
+   "tradition": "儒（张载）",
+   "work": "张载《正蒙·太和》",
+   "names_used": [
+    "通为一",
+    "无际"
+   ],
+   "relational": "虚与气、有与无：同一整体的读法，不是两个实在。",
+   "gap": "",
+   "locator": "正蒙/01"
+  },
+  {
+   "id": "zhangzai-liang-bu-li-yi-bu-ke-jian",
+   "source_id": "RU2-S-S02",
+   "record_ids": [
+    "RU2-R0172",
+    "RU2-R0173"
+   ],
+   "fragments": [
+    "两不立则一不可见，一不可见则两之用息"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.World.unity",
+    "Becoming.Contextual.world",
+    "Becoming.separation_faithful_iff",
+    "Becoming.whole_not_in_pairs"
+   ],
+   "records": [
+    "unity-of-readings",
+    "separation-loses-the-relation"
+   ],
+   "reading": "AI读法：没有分化的两种读法，一就看不见；没有一，两种读法的作用就停止。脊柱上，统一只在读法中显出：算入其余，每个世界是一次运行，其两种读法处处粘合（World.unity），语境中的读法总构成一个世界（Contextual.world）；反过来，把整体切成彼此分开的两部分，恰在没有关系跨越处才忠实（separation_faithful_iff），整体不在成对的关系里（whole_not_in_pairs）。",
+   "ro_passage": "",
+   "layer": "宋明（张载《正蒙·太和》）",
+   "tradition": "儒（张载）",
+   "work": "张载《正蒙·太和》",
+   "names_used": [
+    "一",
+    "两行"
+   ],
+   "relational": "一与两：统一只在分化的读法中显出，分化离开统一就失去关系。",
+   "gap": "",
+   "locator": "正蒙/01"
+  },
+  {
+   "id": "lu-jiuyuan-dao-wai-wu-shi",
+   "source_id": "RU2-S-S18",
+   "record_ids": [
+    "RU2-R0202"
+   ],
+   "fragments": [
+    "道外无事事外无道"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.exists_law_iff",
+    "Becoming.Shown.run",
+    "Becoming.World.run_world"
+   ],
+   "records": [
+    "process-and-frame-as-readings",
+    "worlds-are-runs"
+   ],
+   "reading": "AI读法：道外无事，事外无道：律与运行不分离。脊柱上，每段历史是它所显之律的运行（Shown.run），某个确定之律恰在历史一致处容纳它（exists_law_iff），每个世界是它所显之律的运行（World.run_world）。所不带：陆氏以心为本的心学背景，脊柱不取。",
+   "ro_passage": "",
+   "layer": "宋明（陆九渊语录，南宋）",
+   "tradition": "儒（心学）",
+   "work": "《象山全集》卷三十四",
+   "names_used": [
+    "所以迹",
+    "迹",
+    "无际"
+   ],
+   "relational": "道与事：律与运行互为对方之所在。",
+   "gap": "",
+   "locator": "象山全集卷三十四·道事与天理人欲语录"
+  },
+  {
+   "id": "cheng-hao-xing-ji-qi",
+   "source_id": "RU2-S-S06",
+   "record_ids": [
+    "RU2-R0285",
+    "RU2-R0286",
+    "RU2-R0287"
+   ],
+   "fragments": [
+    "生之谓性。性即气，气即性，生之谓也",
+    "清浊虽不同，然不可以浊者不为水也",
+    "不是将清来换却浊，亦不是取出浊来置在一隅也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.World.unity",
+    "Becoming.Web.roles",
+    "Becoming.Law.withHistory_never_returns",
+    "Becoming.Law.lost_stays"
+   ],
+   "records": [
+    "unity-of-readings",
+    "space-and-its-parts",
+    "recurrence-without-premise"
+   ],
+   "reading": "AI读法：性即气，气即性：没有气之外的第二种性；清浊不同而都是水：一类关系项（Web.roles），一个整体（World.unity）。这一部分相合。但「及其清也，则却只是元初水也」设一个可以复归的元初状态：脊柱上复归只在无损之律上成立，失去者保持失去（Law.lost_stays），保留历史者从不复归（Law.withHistory_never_returns）。故为定域。",
+   "ro_passage": "",
+   "layer": "宋明（程颢语，《近思录》所载，北宋）",
+   "tradition": "儒（二程）",
+   "work": "《近思录》卷一",
+   "names_used": [
+    "物",
+    "无际"
+   ],
+   "relational": "性与气、清与浊：同一类关系项的不同状态；复归元初则受律所限。",
+   "gap": "",
+   "locator": "近思录卷一21·明道性与气"
+  },
+  {
+   "id": "sengzhao-dong-jing",
+   "source_id": "CT1-S-ZL",
+   "record_ids": [
+    "CT1-R-ZL01"
+   ],
+   "fragments": [
+    "必求靜於諸動，故雖動而常靜；不釋動以求靜，故雖靜而不離動"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.ExchangeLaw.responsive_embodied",
+    "Becoming.ExchangeLaw.responsive_not_dissipative",
+    "Becoming.ExchangeLaw.still_levels"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "premises-that-are-states-of-the-law"
+   ],
+   "reading": "AI读法：静要在动中求，静不离动：立着是变化的一种读法（Web.change_readings）。脊柱有一个确切的例子：从回应之律读出的世界里，关系项取其一单位又还回，水平始终为一，它恰在立着时交换（ExchangeLaw.responsive_embodied），不耗散（ExchangeLaw.responsive_not_dissipative）；而静止之律下水平同样为一却没有交换（ExchangeLaw.still_levels）。两个世界的水平相同，交换不同：静不等于停。",
+   "ro_passage": "",
+   "layer": "魏晋南北朝（僧肇《物不遷論》，后秦）",
+   "tradition": "佛（三论）",
+   "work": "僧肇《肇论·物不遷論》",
+   "names_used": [
+    "变化"
+   ],
+   "relational": "静与动：静是动的读法，立着的关系项仍在交换。",
+   "gap": "",
+   "locator": "物不遷論第一 / pT45p0151a0901"
+  },
+  {
+   "id": "sengzhao-bu-er-yu-wu",
+   "source_id": "CT1-S-ZL",
+   "record_ids": [
+    "CT1-R-ZL17",
+    "CT1-R-ZL16",
+    "CT1-R-ZL15",
+    "CT1-R-ZL26",
+    "CT1-R-ZL22"
+   ],
+   "fragments": [
+    "豈以諦二而二於物哉",
+    "即萬物之自虛，豈待宰割以求通哉",
+    "立處即真也。然則道遠乎哉？觸事而真",
+    "欲言其有，有非真生"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Contextual.world",
+    "Becoming.World.run_world",
+    "Becoming.Web.Dependent",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "unity-of-readings",
+    "worlds-are-runs",
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：真俗二谛是两种读法，不把物分成两个；空是万物自身的（依缘），不须宰割万物去求；真就在所立之处，触事而真。脊柱上，语境中的读法总构成一个世界（Contextual.world），每个世界是它所显之律的运行（World.run_world），没有读法之外的第二层实在；「有非真生」对应形成依其条件而成（Web.Dependent），不是独立自生。所不带：般若的解脱论与「真谛」的价值层次。",
+   "ro_passage": "",
+   "layer": "魏晋南北朝（僧肇《不真空論》，后秦）",
+   "tradition": "佛（三论）",
+   "work": "僧肇《肇论·不真空論》",
+   "names_used": [
+    "无际",
+    "两行",
+    "物"
+   ],
+   "relational": "二谛与物：两种读法，一个物；真在事上。",
+   "gap": "",
+   "locator": "不真空論第二 / pT45p0152a2811"
+  },
+  {
+   "id": "zhonglun-yin-yuan-jia-ming",
+   "source_id": "FO1-S-MMK",
+   "record_ids": [
+    "FO1-R-M31"
+   ],
+   "fragments": [
+    "眾因緣生法，我說即是無，亦為是假名，亦是中道義"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.identifiesAlike_iff",
+    "Becoming.Web.reidentify_dependent",
+    "Becoming.Web.rename_unceasing",
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "identity-across-steps",
+    "configurations-alike-by-relation",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：沿用 RO 的相合判断。因缘所生者无自性，其名是假名，这是中道。脊柱上，跨步认同是读法（Web.reidentify_dependent、Web.rename_unceasing），相同由关系刻画（identifiesAlike_iff），整体持续需要生起（Web.Whole.needs_arising）。",
+   "ro_passage": "zhonglun-yin-yuan-jia-ming",
+   "layer": "魏晋南北朝译（鸠摩罗什译《中论》，后秦；颂龙树，释青目，印度原典）",
+   "tradition": "佛（中观）",
+   "work": "《中论》观四谛品",
+   "names_used": [
+    "物"
+   ],
+   "relational": "因缘与所生法：所生者依缘而立，其名是读法。",
+   "gap": "",
+   "locator": "T30n1564第24品"
+  },
+  {
+   "id": "zhonglun-yuan-cheng-you-guo",
+   "source_id": "FO1-S-MMK",
+   "record_ids": [
+    "FO1-R-M06"
+   ],
+   "fragments": [
+    "若果未生，是時不名為緣；但眼見從緣生果，故名之為緣。緣成由於果"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.roles",
+    "Becoming.Flow.roles",
+    "Becoming.Web.relabel",
+    "Becoming.Web.relabel_dependent"
+   ],
+   "records": [
+    "space-and-its-parts",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：果未生时不叫缘，缘之为缘由果而成：条件是一个角色，不是本性。脊柱上，形成与条件是一个关系项的两种角色（Web.roles、Flow.roles），哪个条件就是哪个关系项由索引给出，重新标号保持依存（Web.relabel、Web.relabel_dependent）。所不带：青目「以果後、緣先故」的时间先后在此只是命名的依据。",
+   "ro_passage": "",
+   "layer": "魏晋南北朝译（鸠摩罗什译，青目释）",
+   "tradition": "佛（中观）",
+   "work": "《中论》观因缘品青目释",
+   "names_used": [
+    "所待又有待"
+   ],
+   "relational": "缘与果：条件之名由它所支持的形成给出。",
+   "gap": "",
+   "locator": "T30n1564第1品"
+  },
+  {
+   "id": "zaahan-yuan-sheng-lao-si",
+   "source_id": "FO1-S-SA",
+   "record_ids": [
+    "FO1-R-SA015"
+   ],
+   "fragments": [
+    "彼誰老死？老死屬誰"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.roles",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "space-and-its-parts",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：经文拒绝「彼誰老死？老死屬誰」的问法：这个问法先设一个独立的主体再问它的老死。答法是缘生老死：老死依生而起。脊柱的次序与此相同：先有依存（Web.Dependent）与变化的读法（Web.change_readings），施者与受者在其中分化；关系项的角色是读法（Web.roles）。所不带：解脱论的「梵行」。",
+   "ro_passage": "",
+   "layer": "魏晋南北朝译（求那跋陀罗译《杂阿含经》，刘宋；印度原典）",
+   "tradition": "佛（阿含）",
+   "work": "《杂阿含经》第二九七经",
+   "names_used": [
+    "所待又有待"
+   ],
+   "relational": "生与老死：老死依生，不属于一个先设的主体。",
+   "gap": "",
+   "locator": "杂阿含经（二九七）"
+  },
+  {
+   "id": "weishi-suo-qu-neng-qu-xiang-dai",
+   "source_id": "FO1-S-CY",
+   "record_ids": [
+    "FO1-R-CY45"
+   ],
+   "fragments": [
+    "所取、能取相待立故"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.roles",
+    "Becoming.Web.relabel",
+    "Becoming.Mutualism.apart_relabelled"
+   ],
+   "records": [
+    "space-and-its-parts",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：所取与能取互相依待而立，没有离所取的实识，也没有离能取的实境。脊柱上，两种角色属于一个关系的读法（Web.roles），哪个是哪个由索引给出，标号互换时依存不变（Web.relabel、Mutualism.apart_relabelled）。所不带：唯识以识为所归（见识变条的相分）。",
+   "ro_passage": "",
+   "layer": "隋唐译（玄奘译编《成唯识论》，唐；护法等释）",
+   "tradition": "佛（唯识）",
+   "work": "《成唯识论》卷九",
+   "names_used": [
+    "所待又有待"
+   ],
+   "relational": "能取与所取：两种角色互相依待而立。",
+   "gap": "",
+   "locator": "卷九·加行位完整段"
+  },
+  {
+   "id": "weishi-san-xing-fei-yi-fei-bu-yi",
+   "source_id": "FO1-S-CY",
+   "record_ids": [
+    "FO1-R-CY39",
+    "FO1-R-CY38",
+    "FO1-R-CY-NS2",
+    "FO1-R-CY41"
+   ],
+   "fragments": [
+    "此圓成實與彼依他起，非異非不異",
+    "故假說無性，非性全無"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Contextual.world",
+    "Becoming.Contextual.fitsFree_iff",
+    "Becoming.Web.Dependent"
+   ],
+   "records": [
+    "unity-of-readings",
+    "contextual-registration",
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：圆成实与依他起非异非不异：同一依他之起的两种读法（Contextual.world），不粘合为一个不依语境的读法（Contextual.fitsFree_iff 给出何处可以）；「非性全無」与依存相合（Web.Dependent）。但圆成实以真如为常住之性，超出关系所给：故为定域。",
+   "ro_passage": "",
+   "layer": "隋唐译（玄奘译编《成唯识论》，唐）",
+   "tradition": "佛（唯识）",
+   "work": "《成唯识论》卷八、卷九",
+   "names_used": [
+    "两行"
+   ],
+   "relational": "依他起与圆成实：同一缘起的两种读法。",
+   "gap": "",
+   "locator": "卷八·三性及能遍计论辩；卷九·三无性完整论证"
+  },
+  {
+   "id": "weishi-shi-bian",
+   "source_id": "FO1-S-CY",
+   "record_ids": [
+    "FO1-R-CY07",
+    "FO1-R-CY51",
+    "FO1-R-CY12"
+   ],
+   "fragments": [
+    "依斯二分施設我、法，彼二離此無所依故",
+    "生死、涅槃之所依故"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.World.unity",
+    "Becoming.Contextual.world",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "unity-of-readings",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：我与法依识所变的二分施设，离识无所依；真如为生死涅槃之所依：以识与真如为唯一所依，属于单一中心与先在根据两层。脊柱上，统一是算入其余的一次运行（World.unity），读法属于世界而不是世界属于某一读法者（Contextual.world），中心不由动力学推出（Clearing.center_not_derived）。相分。",
+   "ro_passage": "",
+   "layer": "隋唐译（玄奘译编《成唯识论》，唐）",
+   "tradition": "佛（唯识）",
+   "work": "《成唯识论》卷一、卷二、卷九",
+   "names_used": [],
+   "relational": "识与我、法：注论以识为一切施设之所依。",
+   "gap": "",
+   "locator": "卷一·我法假说与三能变；卷九·修习与转依"
+  },
+  {
+   "id": "fazang-yin-men-liu-yi",
+   "source_id": "FO2-FQ",
+   "record_ids": [
+    "FO2-FQ-R004",
+    "FO2-FQ-R038"
+   ],
+   "fragments": [
+    "即此一法為他因時具斯六義，與他作果時即唯有二義"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.roles",
+    "Becoming.Flow.roles",
+    "Becoming.Web.relabel",
+    "Becoming.Web.Embodied.active_of_bearing"
+   ],
+   "records": [
+    "space-and-its-parts",
+    "life-as-condition-of-life"
+   ],
+   "reading": "AI读法：同一法为他作因时有六义，为他作果时有二义：一个关系项两种角色。脊柱上，形成与条件是一个关系项的两种角色（Web.roles、Flow.roles），一个体现的关系项作为条件时，依存于它的形成只在它活跃时活跃（Web.Embodied.active_of_bearing）。所不带：六义、二义的具体分类（空有、有力无力、待缘不待缘）。",
+   "ro_passage": "",
+   "layer": "隋唐（法藏《华严一乘教义分齐章》，唐）",
+   "tradition": "佛（华严）",
+   "work": "法藏《华严一乘教义分齐章》卷四",
+   "names_used": [
+    "所待又有待"
+   ],
+   "relational": "一法与他法：同一法时为因时为果。",
+   "gap": "",
+   "locator": "卷四／缘起因门六义"
+  },
+  {
+   "id": "fazang-yuan-cheng-yi",
+   "source_id": "FO2-FQ",
+   "record_ids": [
+    "FO2-FQ-R012",
+    "FO2-FQ-R011",
+    "FO2-FQ-R006"
+   ],
+   "fragments": [
+    "所言一者，非自性一，緣成故",
+    "秖由無性，得成一多緣起",
+    "由空有義故，有相即門也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.World.unity",
+    "Becoming.Web.Dependent",
+    "Becoming.Contextual.world"
+   ],
+   "records": [
+    "unity-of-readings",
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：所说的一不是自性之一，而是缘成之一；正因无自性，一与多的缘起才成立。脊柱上，统一不是先在实体，而是算入其余时诸交换成为一次运行（World.unity）；形成依其条件（Web.Dependent）；读法总构成一个世界（Contextual.world）。这是对「一」最贴切的古典说明之一。",
+   "ro_passage": "",
+   "layer": "隋唐（法藏，唐）",
+   "tradition": "佛（华严）",
+   "work": "法藏《华严一乘教义分齐章》卷四",
+   "names_used": [
+    "一"
+   ],
+   "relational": "一与多：一由缘而成，不先于多。",
+   "gap": "",
+   "locator": "卷四／十玄缘起无碍；缘起因门六义"
+  },
+  {
+   "id": "fazang-xiang-rong-bu-tong",
+   "source_id": "FO2-FQ",
+   "record_ids": [
+    "FO2-FQ-R010",
+    "FO2-FQ-R016",
+    "FO2-FQ-R017"
+   ],
+   "fragments": [
+    "一中十、十中一，相容無礙，仍不相是",
+    "然此一多雖復互相含受，自在無礙，仍體不同也",
+    "此上諸義一即一切、一切即一，圓融自在，無礙成耳"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Bisimulation",
+    "Becoming.Alike.tests",
+    "Becoming.whole_not_in_pairs",
+    "Becoming.separation_faithful_iff"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "separation-loses-the-relation"
+   ],
+   "reading": "AI读法：一中有十，十中有一，相容而仍不相是：每个关系项的配置由它与一切他者的关系刻画（Bisimulation、Alike.tests），却不因此等同于他者。整体不在成对的关系里（whole_not_in_pairs），分割恰在无关系跨越处忠实（separation_faithful_iff）。「一即一切」若读作同一，与「仍不相是」相悖；法藏自己保留了区分，故判相合。",
+   "ro_passage": "",
+   "layer": "隋唐（法藏，唐）",
+   "tradition": "佛（华严）",
+   "work": "法藏《华严一乘教义分齐章》卷四",
+   "names_used": [
+    "状",
+    "一"
+   ],
+   "relational": "一与多：互相含摄而保持区分。",
+   "gap": "",
+   "locator": "卷四／十玄缘起无碍"
+  },
+  {
+   "id": "jin-shizi-yin-xian",
+   "source_id": "FO2-KS-P",
+   "record_ids": [
+    "FO2-KS-P-R016",
+    "FO2-KS-P-R017",
+    "FO2-KS-P-R014"
+   ],
+   "fragments": [
+    "謂若看師子，唯見師子無金，則師子顯金隱",
+    "若看金，唯金無師子，則金顯師子隱",
+    "謂金與師子同時成立，圓滿具足"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Contextual.indexed_fits",
+    "Becoming.Contextual.world",
+    "Becoming.Contextual.glues_iff_agree"
+   ],
+   "records": [
+    "contextual-registration",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：看师子则师子显金隐，看金则金显师子隐，金与师子同时成立：同一配置在两个语境中的两种读法，各自成立，同时具足。脊柱上，以语境为索引的框架总合（Contextual.indexed_fits），语境中的读法总构成一个世界（Contextual.world），两种读法在相交处一致时才粘合为一个不依语境的读法（Contextual.glues_iff_agree）。",
+   "ro_passage": "",
+   "layer": "隋唐（法藏《金师子章》，唐；承迁注本所嵌）",
+   "tradition": "佛（华严）",
+   "work": "法藏《华严金师子章》",
+   "names_used": [
+    "两行"
+   ],
+   "relational": "金与师子：一物的两种读法，依所看而显隐。",
+   "gap": "",
+   "locator": "第七、勒十玄門"
+  },
+  {
+   "id": "jin-shizi-jin-xing-bu-bian",
+   "source_id": "FO2-KS-P",
+   "record_ids": [
+    "FO2-KS-P-R006",
+    "FO2-KS-P-R026",
+    "FO2-KS-P-R007",
+    "FO2-KS-P-R003"
+   ],
+   "fragments": [
+    "金性不變，故號圓成",
+    "論此金體，具彰真性",
+    "謂以金收師子盡。金外更無師子可得。故名無相"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Alike.tests",
+    "Becoming.identifiesAlike_iff",
+    "Becoming.Web.change_readings",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "coming-and-ceasing-keep-pace",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：金性不变，金体彰真性，金收尽师子：以一个不变的质料或本性为真，诸相为其所现。属于先在根据与固定本性两层。脊柱上，配置是它如何相关（Alike.tests、identifiesAlike_iff），没有不变于一切关系的性；生灭是变化的读法（Web.change_readings）。注意同章看金、看师子的显隐（上一条）与脊柱相合；本条相分在于把金立为不变之真。",
+   "ro_passage": "",
+   "layer": "隋唐（法藏《金师子章》，唐）",
+   "tradition": "佛（华严）",
+   "work": "法藏《华严金师子章》",
+   "names_used": [
+    "状"
+   ],
+   "relational": "金与师子：章文以金为不变之体，师子为相。",
+   "gap": "",
+   "locator": "第二、辨色空；第三、約三性；第四、顯無相；第七、勒十玄門"
+  },
+  {
+   "id": "tiantai-fei-zong-fei-heng",
+   "source_id": "FO2-MH",
+   "record_ids": [
+    "FO2-MH-R006",
+    "FO2-MH-R007",
+    "FO2-MH-R004",
+    "FO2-MH-R005",
+    "FO2-MH-R008"
+   ],
+   "fragments": [
+    "亦不言一心在前，一切法在後；亦不言一切法在前，一心在後",
+    "若從一心生一切法者，此則是縱；若心一時含一切法者，此即是橫。縱亦不可，橫亦不可；秖心是一切法，一切法是心",
+    "若無心而已；介爾有心，即具三千"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Bisimulation",
+    "Becoming.Alike.tests",
+    "Becoming.World.unity",
+    "Becoming.Contextual.world"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：一念具三千，但既不是心生一切法（縱），也不是心含一切法（橫）：智顗明确拒绝先在根据与容器两种读法。脊柱上，一个关系项的配置由它与一切他者的关系刻画（Bisimulation、Alike.tests），所以任何一处都关联全体；统一是一次运行（World.unity），读法总构成一个世界（Contextual.world）。故「具」在关系刻画的意义上成立；「秖心是一切法」若以心为唯一所依，则超出脊柱：判定域。",
+   "ro_passage": "",
+   "layer": "隋唐（智顗《摩诃止观》，隋；灌顶记）",
+   "tradition": "佛（天台）",
+   "work": "智顗《摩诃止观》卷五",
+   "names_used": [
+    "状",
+    "一"
+   ],
+   "relational": "一念与三千：互相关联，非先后、非容纳。",
+   "gap": "",
+   "locator": "卷五上／阴入界境及观心十法开端"
+  },
+  {
+   "id": "tiantai-san-di",
+   "source_id": "FO2-MH",
+   "record_ids": [
+    "FO2-MH-R020",
+    "FO2-MH-R022",
+    "FO2-MH-R023",
+    "FO2-MH-R024"
+   ],
+   "fragments": [
+    "一切界入是一法界，即是真諦；非一非一切，即是中道第一義諦",
+    "一空一切空，無假中而不空，總空觀也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Contextual.world",
+    "Becoming.Contextual.indexed_fits",
+    "Becoming.Contextual.glues_iff_agree"
+   ],
+   "records": [
+    "unity-of-readings",
+    "contextual-registration"
+   ],
+   "reading": "AI读法：一切法读作因缘所生（假）、读作一法界（空）、读作非一非一切（中），三谛是同一切法的三种读法，每一观都含另外两观。脊柱上，语境中的读法总构成一个世界（Contextual.world），以语境为索引的框架总合（Contextual.indexed_fits），粘合恰在相交处一致时成立（Contextual.glues_iff_agree）。所不带：三观的修行次第与解脱义。",
+   "ro_passage": "",
+   "layer": "隋唐（智顗《摩诃止观》，隋）",
+   "tradition": "佛（天台）",
+   "work": "智顗《摩诃止观》卷五",
+   "names_used": [
+    "两行",
+    "一"
+   ],
+   "relational": "假、空、中：同一切法的三种读法。",
+   "gap": "",
+   "locator": "卷五上／阴入界境及观心十法开端"
+  },
+  {
+   "id": "shengman-ru-lai-zang",
+   "source_id": "FO2-SM",
+   "record_ids": [
+    "FO2-SM-R018",
+    "FO2-SM-R019"
+   ],
+   "fragments": [
+    "如來藏者離有為相，如來藏常住不變。是故如來藏，是依、是持、是建立",
+    "若無如來藏者，不得厭苦樂求涅槃"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.World.unity",
+    "Becoming.Web.not_losesBeyond_whole"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "whole-persists-through-generation",
+    "unity-of-readings",
+    "loss-beyond-a-region"
+   ],
+   "reading": "AI读法：如来藏离有为相、常住不变，是生死所依、所持、所建立：一个不在变化中的根据。属于先在根据与固定本性两层。脊柱上，整体的持续需要生起（Web.Whole.needs_arising），生灭是变化的读法（Web.change_readings），整体之外没有承持者（Web.not_losesBeyond_whole）。相分。",
+   "ro_passage": "",
+   "layer": "魏晋南北朝译（求那跋陀罗译《胜鬘经》，刘宋；印度原典）",
+   "tradition": "佛（如来藏）",
+   "work": "《胜鬘师子吼一乘大方便方广经》",
+   "names_used": [],
+   "relational": "如来藏与生死：经文以常住不变者为生死之依持。",
+   "gap": "",
+   "locator": "自性清淨章第十三"
+  },
+  {
+   "id": "qixin-yi-xin-er-men",
+   "source_id": "FO2-QX",
+   "record_ids": [
+    "FO2-QX-R002",
+    "FO2-QX-R001",
+    "FO2-QX-R003",
+    "FO2-QX-R009"
+   ],
+   "fragments": [
+    "所言法者，謂眾生心，是心則攝一切世間法、出世間法",
+    "依一心法，有二種門",
+    "以是二門不相離故",
+    "依如來藏故有生滅心，所謂不生不滅與生滅和合，非一非異，名為阿梨耶識"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.World.unity",
+    "Becoming.Contextual.world",
+    "Becoming.Web.change_readings",
+    "Becoming.Clearing.center_not_derived"
+   ],
+   "records": [
+    "unity-of-readings",
+    "coming-and-ceasing-keep-pace",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：一心摄一切法，开真如、生灭二门，二门不相离；生灭心依如来藏。二门不相离（两种读法属于一体）这一结构与脊柱相合，但整体被归于一心、依于如来藏：单一中心与先在根据。脊柱上，统一是算入其余的一次运行（World.unity），读法属于世界（Contextual.world），中心不由动力学推出（Clearing.center_not_derived）。主张在一心，判相分。",
+   "ro_passage": "",
+   "layer": "魏晋南北朝（《大乘起信论》，题马鸣造、真谛译，约六世纪；作者与译者有争议，或为中土撰述）",
+   "tradition": "佛（如来藏）",
+   "work": "《大乘起信论》",
+   "names_used": [
+    "一"
+   ],
+   "relational": "一心与一切法：论以心总摄一切，二门依之而开。",
+   "gap": "",
+   "locator": "立义分；解释分"
+  },
+  {
+   "id": "tanjing-ding-hui-yi-ti",
+   "source_id": "FO2-TJ",
+   "record_ids": [
+    "FO2-TJ-R010"
+   ],
+   "fragments": [
+    "定慧一體，不是二。定是慧體，慧是定用",
+    "莫言先定發慧、先慧發定各別"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.roles",
+    "Becoming.Flow.roles",
+    "Becoming.Contextual.world"
+   ],
+   "records": [
+    "space-and-its-parts",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：定与慧是一体的两种角色，没有先后两段功夫。脊柱上，两种角色属于一个关系项（Web.roles、Flow.roles），两种读法属于一个世界（Contextual.world）。可与王夫之「时无先后，权无主辅」对照。所不带：同经「自性，能生萬法」以自性为本（RO 判 tanjing-zi-xing 为相分）。",
+   "ro_passage": "",
+   "layer": "隋唐（传慧能语；所据为元宗宝编本，文本层次有争议）",
+   "tradition": "佛（禅）",
+   "work": "《六祖坛经》定慧品",
+   "names_used": [
+    "所待又有待",
+    "两行"
+   ],
+   "relational": "定与慧：一体的两种角色，不分先后。",
+   "gap": "",
+   "locator": "FO2-TJ／0352c12—0353b07"
+  },
+  {
+   "id": "zongmi-yuan-ren-ben-mo",
+   "source_id": "IN1-S04",
+   "record_ids": [
+    "IN1-R-Y15",
+    "IN1-R-Y17",
+    "IN1-R-Y16"
+   ],
+   "fragments": [
+    "謂初唯一真靈性，不生不滅，不增不減，不變不易",
+    "心外的無別法。元氣亦從心之所變"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.World.unity",
+    "Becoming.Web.change_readings",
+    "Becoming.Frame.arises_iff",
+    "Becoming.Web.not_losesBeyond_whole"
+   ],
+   "records": [
+    "unity-of-readings",
+    "coming-and-ceasing-keep-pace",
+    "process-and-frame-as-readings",
+    "loss-beyond-a-region"
+   ],
+   "reading": "AI读法：宗密以一真灵性为初，不生不灭不变，由本统末，把儒道的元气也收为心之所变：先在根据、固定本性与本末等级三层。脊柱上，统一是算入其余的一次运行（World.unity），生灭是变化的读法（Web.change_readings），整体之外没有本源（Web.not_losesBeyond_whole）。相分。",
+   "ro_passage": "",
+   "layer": "隋唐（宗密《原人论》，唐）",
+   "tradition": "三教互动（华严禅）",
+   "work": "宗密《原人论》",
+   "names_used": [],
+   "relational": "真性与身、心、气：论以真性为本，其余为末。",
+   "gap": "",
+   "locator": "pT45p0710b0806；pT45p0710c0822"
+  }
+ ],
+ "parallels": [
+  {
+   "record_id": "TP-H14-X6-R01",
+   "same_as_entry": "dayou-zi-tian-you-zhi",
+   "note": "小象释大有上九「大有上吉，自天佑也」，同一意志层。"
+  },
+  {
+   "record_id": "WP-XCS-C02-S04-R03",
+   "same_as_entry": "dayou-zi-tian-you-zhi",
+   "note": "系辞引「自天祐之，吉无不利」作为居观象、动观变的结果，仍以天之护佑为吉的来源。"
+  },
+  {
+   "record_id": "TP-H07-X2-R01",
+   "same_as_entry": "dayou-zi-tian-you-zhi",
+   "note": "「承天寵」：吉来自天之宠，同一意志层。"
+  },
+  {
+   "record_id": "TP-H25-T-R03",
+   "same_as_entry": "dayou-zi-tian-you-zhi",
+   "note": "「大亨以正，天之命也」：以天命为吉的根据。"
+  },
+  {
+   "record_id": "TP-H25-T-R05",
+   "same_as_entry": "dayou-zi-tian-you-zhi",
+   "note": "「天命不佑，行矣哉」：天命不佑则不可行，同一意志层。"
+  },
+  {
+   "record_id": "TP-H45-T-R05",
+   "same_as_entry": "dayou-zi-tian-you-zhi",
+   "note": "「順天命」解释用大牲吉、利有攸往，同一意志层。"
+  },
+  {
+   "record_id": "TP-H16-DX-R03",
+   "same_as_entry": "dayou-zi-tian-you-zhi",
+   "note": "「殷薦之上帝，以配祖考」：礼乐献于上帝，预设一个受荐的意志。"
+  },
+  {
+   "record_id": "FO2-AM-R002",
+   "same_as_entry": "dayou-zi-tian-you-zhi",
+   "note": "《阿弥陀经》众鸟是阿弥陀佛「欲令法音宣流，變化所作」：一个意志变化出诸物，与天佑同属意志层。"
+  },
+  {
+   "record_id": "LC2-HS-C73-R02",
+   "same_as_entry": "lao-74-si-sha-zhe-heshang",
+   "note": "河上公释天网「司察人善恶，无有所失」，同一监察施罚的中心。"
+  },
+  {
+   "record_id": "LC2-SZ-C74-R02",
+   "same_as_entry": "lao-74-si-sha-zhe-heshang",
+   "note": "苏辙亦以「司殺者天也」，同一读法。"
+  },
+  {
+   "record_id": "LC2-SZ-C74-R03",
+   "same_as_entry": "lao-74-si-sha-zhe-heshang",
+   "note": "苏辙：非天所杀而自杀之是代司杀者杀，预设天为施杀的中心。"
+  },
+  {
+   "record_id": "LAO2-C74-R03",
+   "same_as_entry": "lao-74-si-sha-zhe-heshang",
+   "note": "《老子》原文只说「常有司杀者杀」，未指为天；注家把它读成天的意志。原文已设一个常在的施杀者，结构相同，意志之义由注家加重。"
+  },
+  {
+   "record_id": "LC-R006",
+   "same_as_entry": "lao-25-dao-fa-zi-ran",
+   "note": "王弼「道不违自然，乃得其性」：法自然即不违自然，同一结构；「得其性」带入本性之义，脊柱不取。"
+  },
+  {
+   "record_id": "LC-R016",
+   "same_as_entry": "lao-25-dao-fa-zi-ran",
+   "note": "河上公「道性自然，无所法也」：道之上无所法，同一结构；「道性」之性不带入。"
+  },
+  {
+   "record_id": "LL-R026",
+   "same_as_entry": "lao-37-wu-wei-er-wu-bu-wei",
+   "note": "第五十七章「我无为而民自化」：同一无为而他者自化的结构，同样把「我」置于中心。"
+  },
+  {
+   "record_id": "LC2-SZ-C42-R02",
+   "same_as_entry": "lao-42-dao-sheng-yi",
+   "note": "苏辙以「一與一為二二與一為三」释生成，读法之递增；末句「物生于三而三生于一」仍取生成次序。"
+  },
+  {
+   "record_id": "LC2-WB-C06-R01",
+   "same_as_entry": "lao-6-xuan-pin",
+   "note": "王弼释第六章「则不见其形，欲言亡邪，万物以之生」，同一来源结构；王弼以此为无形之本，见王弼条的相分。"
+  },
+  {
+   "record_id": "LE-R058",
+   "same_as_entry": "lao-22-bao-yi-wei-tian-xia-shi",
+   "note": "「侯王得一以为天下贞」：一个人得一而为天下之正，同一单一中心结构。"
+  },
+  {
+   "record_id": "LC2-WB-C28-R01",
+   "same_as_entry": "lao-28-pu-san-wei-qi",
+   "note": "王弼「真散则百行出，殊类生，若器也」：同一散而为器的结构，以朴为真（先在之真）。"
+  },
+  {
+   "record_id": "LC2-SZ-C28-R05",
+   "same_as_entry": "lao-28-pu-san-wei-qi",
+   "note": "苏辙「雖制而非有所割裂」：同一不割之制。"
+  },
+  {
+   "record_id": "LE-R030",
+   "same_as_entry": "jielao-de-dao-zhi-gong",
+   "note": "《老子》第二十一章「孔德之容，惟道是从」：德之容随道，即律在其所显中见。"
+  },
+  {
+   "record_id": "LC2-SZ-C21-R01",
+   "same_as_entry": "jielao-de-dao-zhi-gong",
+   "note": "苏辙「道無形也及其運而為徳則有容矣故徳者道之見」：德是道运行时所显，同一结构。"
+  },
+  {
+   "record_id": "LAO2-C14-R05",
+   "same_as_entry": "jielao-de-dao-zhi-gong",
+   "note": "《老子》第十四章「无状之状，无物之象」：《解老》正以「執其見功以處見其形」释此句；「惚恍」对应律在死路上未被历史固定的部分。"
+  },
+  {
+   "record_id": "WP-XCX-C04-S13-R01",
+   "same_as_entry": "xunzi-tianlun-da-hua",
+   "note": "系辞下「天地絪缊，万物化醇」：整体的交换中万物化成，与荀子「阴阳大化，风雨博施，万物各得其和以生」同一结构；「天地」不带意志。"
+  },
+  {
+   "record_id": "CT1-R-SJ07",
+   "same_as_entry": "jielao-bu-de-bu-hua",
+   "note": "《史记·太史公自序》论道家「無成埶，無常形，故能究萬物之情」：无固定之操才能随诸物之情，同一结构。"
+  },
+  {
+   "record_id": "CT1-R-ZL07",
+   "same_as_entry": "zhuang-qiwu-liang-xing",
+   "note": "僧肇「談真有不遷之稱，導俗有流動之說」：两种说法各在其语境成立而会归，同一结构。"
+  },
+  {
+   "record_id": "IN1-R-C05",
+   "same_as_entry": "zhuang-qiwu-liang-xing",
+   "note": "宗密会通诸宗「俱存其法俱遣其病」：保留各宗在其范围内的成立，去掉其全称化，即以语境为索引的读法；宗密以一心为归，见原人论条。"
+  },
+  {
+   "record_id": "ZH1-C22-R-04",
+   "same_as_entry": "zhuang-dazongshi-da-kuai",
+   "note": "《知北遊》「是天地之委形也……委和也……委順也」：身、生、性命都是整体所给，不属于我，同一给与取的结构。"
+  },
+  {
+   "record_id": "LC2-SZ-C41-R04",
+   "same_as_entry": "zhuang-qiwu-yi-yu-yan-wei-er",
+   "note": "苏辙：道之见于事者不尽道之大全。同一结构：任何所显的读法族都不完备；「隱于無名」若读作隐藏的第二实在，则不取。"
+  },
+  {
+   "record_id": "WP-XCX-C01-S01-R01",
+   "same_as_entry": "xici-bian-hua-jin-tui",
+   "note": "系辞下「刚柔相推，变在其中矣」，同一结构。"
+  },
+  {
+   "record_id": "WP-XCX-C01-S03-R01",
+   "same_as_entry": "xici-bian-hua-jin-tui",
+   "note": "「刚柔者，立本者也」：刚柔两值是爻的构成，「本」在此是组成而非先在根据。"
+  },
+  {
+   "record_id": "TP-H22-T-R03",
+   "same_as_entry": "xici-bian-hua-jin-tui",
+   "note": "贲彖「剛柔交錯，天文也」：天之文即刚柔的交错，同一结构。"
+  },
+  {
+   "record_id": "XC-R053",
+   "same_as_entry": "xici-bian-hua-jin-tui",
+   "note": "「阴阳合德，而刚柔有体」：一对值合而有爻体，以体天地之撰，同一结构。"
+  },
+  {
+   "record_id": "OW-R005",
+   "same_as_entry": "xici-yi-yin-yi-yang",
+   "note": "说卦「立天之道，曰陰與陽」：以一对交替立道，同一定域。"
+  },
+  {
+   "record_id": "OW-R006",
+   "same_as_entry": "xici-yi-yin-yi-yang",
+   "note": "说卦「立地之道，曰柔與剛」，同上。"
+  },
+  {
+   "record_id": "YCM130-H4-K-06-R01",
+   "same_as_entry": "xici-yi-yin-yi-yang",
+   "note": "孔疏「道雖無於陰陽，然亦不離於陰陽」：律不是阴阳之一而不离阴阳，同一定域；「陰陽雖由道成」把方向倒向道，脊柱不取。"
+  },
+  {
+   "record_id": "WP-XG-C02-S01-R01",
+   "same_as_entry": "xugua-you-tian-di",
+   "note": "序卦下篇「有天地然後有萬物」，同一卦序起点。"
+  },
+  {
+   "record_id": "WP-XG-C02-S01-R02",
+   "same_as_entry": "xugua-you-tian-di",
+   "note": "「有萬物然後有男女」，卦序承接，同上。"
+  },
+  {
+   "record_id": "WP-XCS-C06-S01-R01",
+   "same_as_entry": "xici-fan-wei-bu-yi",
+   "note": "「夫易，广矣！大矣！」「以言乎天地之间则备矣」：易备天地之间，同一包容之说，同一定域。"
+  },
+  {
+   "record_id": "YCM130-H4-K-01-R01",
+   "same_as_entry": "xici-fan-wei-bu-yi",
+   "note": "孔疏释「神無方」：不见其处所、不常在一处，与「易无体」同一读。"
+  },
+  {
+   "record_id": "YCM130-H4-K-02-R01",
+   "same_as_entry": "xici-fan-wei-bu-yi",
+   "note": "孔疏释「易無體」：随变而往，无定在一体，即律不是任何一个配置。"
+  },
+  {
+   "record_id": "LL-R047",
+   "same_as_entry": "xici-fan-wei-bu-yi",
+   "note": "《老子》第六十二章「道者万物之奥」：道包容万物；同章「善人之宝，不善人之所保」不分善恶，与网不决定意义同向。"
+  },
+  {
+   "record_id": "LC2-HS-C62-R01",
+   "same_as_entry": "xici-fan-wei-bu-yi",
+   "note": "河上公「道为万物之藏，无所不容」：同一包容之说，同一定域。"
+  },
+  {
+   "record_id": "WP-XCX-C07-S03-R02",
+   "same_as_entry": "lunyu-ren-neng-hong-dao",
+   "note": "系辞下「苟非其人，道不虚行」：律不自行，须有行者，同一结构。"
+  },
+  {
+   "record_id": "WH-R027",
+   "same_as_entry": "shuogua-shen-miao-wan-wu",
+   "note": "韩康伯「造之非我，理自玄應；化之無主，數自冥運，故不知所以然，而況之神」：神是对无主之化的称谓，同一结构。"
+  },
+  {
+   "record_id": "YCM130-H5-K-04-R01",
+   "same_as_entry": "shuogua-shen-miao-wan-wu",
+   "note": "孔疏「我，謂宰主之名也……非由我之宰主所為」：明言无宰主，同一结构。"
+  },
+  {
+   "record_id": "WH-R035",
+   "same_as_entry": "shuogua-shen-miao-wan-wu",
+   "note": "孔疏「天地非有主宰，何得有心？以人事之心，託天地以示法爾」：天地之心是借来的说法，不是一个中心，同一结构。"
+  },
+  {
+   "record_id": "WH-R034",
+   "same_as_entry": "han-you-shi-yu-wu",
+   "note": "孔疏「凡有從無而生，形由道而立，是先道而後形」：同一以无为先的结构。"
+  },
+  {
+   "record_id": "YCM130-H4-H-10-R01",
+   "same_as_entry": "han-you-shi-yu-wu",
+   "note": "韩注「必有之用極，而無之功顯」：无之功在有之用尽处显，以无为根据。"
+  },
+  {
+   "record_id": "YCM130-H4-K-03-R01",
+   "same_as_entry": "kong-tai-ji-yuan-qi",
+   "note": "孔疏「一謂無也……虛無是大虛，不可分別，唯一而已」：以一为不可分别的大虚，同一先在之一。"
+  },
+  {
+   "record_id": "YCM130-H4-K-04-R01",
+   "same_as_entry": "kong-tai-ji-yuan-qi",
+   "note": "孔疏按功能立道、神、易之名（此部分是读法），而「總而言之，皆虛無之謂也」归于虚无，同一先在根据。"
+  },
+  {
+   "record_id": "YCM130-H4-K-05-R01",
+   "same_as_entry": "kong-tai-ji-yuan-qi",
+   "note": "孔疏「道既虛無為體，則不為礙難」：以虚无为体，同一先在根据。"
+  },
+  {
+   "record_id": "WH-R021",
+   "same_as_entry": "wangbi-yi-wu-wei-ben",
+   "note": "王弼《周易注》复彖「寂然至無，是其本矣」：同一以无为本。"
+  },
+  {
+   "record_id": "LC2-WB-C23-R01",
+   "same_as_entry": "wangbi-yi-wu-wei-ben",
+   "note": "王弼「道以无形无为成济万物」：以无形者成济万物，同一结构。"
+  },
+  {
+   "record_id": "LC2-WB-C08-R01",
+   "same_as_entry": "wangbi-yi-wu-wei-ben",
+   "note": "王弼「道无水有，故曰，几也」：以道为无、物为有，同一以无为本。"
+  },
+  {
+   "record_id": "LC2-WB-C41-R01",
+   "same_as_entry": "wangbi-yi-wu-wei-ben",
+   "note": "王弼「有声则有分」「分则不能统众」：只有无分者能统众，单一中心与以无为本相合为一。"
+  },
+  {
+   "record_id": "LC2-SZ-C32-R03",
+   "same_as_entry": "wangbi-yi-wu-wei-ben",
+   "note": "苏辙「道萬物之宗也萬物道之末也皆水也」：宗末等级，同一本末结构（「皆水」一句另带一实质）。"
+  },
+  {
+   "record_id": "LC2-SZ-C52-R01",
+   "same_as_entry": "wangbi-yi-wu-wei-ben",
+   "note": "苏辙「未甞以物忘道故終守其母也」：守母即守本，同一本末结构。"
+  },
+  {
+   "record_id": "LC2-HS-C14-R02",
+   "same_as_entry": "heshang-dao-qi-sheng-hua",
+   "note": "河上公「一无形状，而能为万物作形状」：同一先在生成者。"
+  },
+  {
+   "record_id": "LC2-HS-C28-R03",
+   "same_as_entry": "heshang-dao-qi-sheng-hua",
+   "note": "河上公「道散则为神明，流为日月，分为五行」：同一由道散生的次序。"
+  },
+  {
+   "record_id": "LC2-HS-C32-R01",
+   "same_as_entry": "heshang-dao-qi-sheng-hua",
+   "note": "河上公「道无名能制于有名」：先在者制御诸物，兼带单一中心。"
+  },
+  {
+   "record_id": "LC2-HS-C42-R01",
+   "same_as_entry": "heshang-dao-qi-sheng-hua",
+   "note": "河上公「一生阴与阳」：同一气化生成次序。"
+  },
+  {
+   "record_id": "LC2-HS-C42-R02",
+   "same_as_entry": "heshang-dao-qi-sheng-hua",
+   "note": "河上公「阴阳生和、清、浊三气，分为天地人」：同上。"
+  },
+  {
+   "record_id": "RU2-R0149",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "周敦颐「诚者，圣人之本」：以诚为本，同一固定本性与根本结构。"
+  },
+  {
+   "record_id": "RU2-R0150",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "周敦颐「诚，五常之本，百行之原也」：同上。"
+  },
+  {
+   "record_id": "RU2-R0174",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "张载「善反之则天地之性存焉」：先在的天地之性，同一结构。"
+  },
+  {
+   "record_id": "RU2-R0176",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "张载「养其气，反之本而不偏，则尽性而天矣」：反本尽性，同一结构。"
+  },
+  {
+   "record_id": "LC2-SZ-C32-R01",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "苏辙「樸性也道常無名則性亦不可名矣」：以性为不可名之朴，同一固定本性。"
+  },
+  {
+   "record_id": "LC2-SZ-C22-R02",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "苏辙「物我兼全而復于性」：复性，同一结构。"
+  },
+  {
+   "record_id": "LC2-SZ-C22-R03",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "苏辙「抱一者復性者也」：同上。"
+  },
+  {
+   "record_id": "LC2-SZ-C28-R03",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "苏辙「知其白守其黑見性者也」：见性，同上。"
+  },
+  {
+   "record_id": "LC2-SZ-C50-R02",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "苏辙以「不生不死」为易之「寂然不動」：不动之本，同一结构。"
+  },
+  {
+   "record_id": "LC2-SZ-C70-R01",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "苏辙「性之妙見于起居飲食之間」：性在活动中显，这一点是读法；但所显者仍是先在之性。"
+  },
+  {
+   "record_id": "RT1-R002",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "明太祖序「去愚迷之虛，立本性之實」：以本性为实，同一结构。"
+  },
+  {
+   "record_id": "RT1-R005",
+   "same_as_entry": "zhongyong-tian-ming-zhi-wei-xing",
+   "note": "明太祖序「除空之外，所存者本性也」：同上。"
+  },
+  {
+   "record_id": "RU1-ZY-27-R01",
+   "same_as_entry": "zhongyong-cheng-zhe-zi-cheng",
+   "note": "「誠者，天之道也」：同一以诚说整体之道，同一定域。"
+  },
+  {
+   "record_id": "RU1-ZY-30-R05",
+   "same_as_entry": "zhongyong-cheng-zhe-zi-cheng",
+   "note": "「贊天地之化育，則可以與天地參」：人作为部分参与整体的化育，这一点相合；其前提「至誠」「盡性」超出关系所给，同一定域。"
+  },
+  {
+   "record_id": "RU2-R0204",
+   "same_as_entry": "lu-jiuyuan-dao-wai-wu-shi",
+   "note": "陆氏拒绝把人心道心分为二心：同一不分两个实在的结构，限于心。"
+  },
+  {
+   "record_id": "CT1-R-ZL12",
+   "same_as_entry": "sengzhao-bu-er-yu-wu",
+   "note": "僧肇评心无宗「失在於物虛」：不承认物自虚，等于另立物外之空，同一结构的反面批评。"
+  },
+  {
+   "record_id": "CT1-R-ZL14",
+   "same_as_entry": "sengzhao-bu-er-yu-wu",
+   "note": "僧肇评本无宗「好無之談」：拒绝以无为本，同一结构。"
+  },
+  {
+   "record_id": "FO2-MH-R002",
+   "same_as_entry": "sengzhao-bu-er-yu-wu",
+   "note": "智顗「一色一香無非中道」：真即在每一物上，与「觸事而真」同一结构。"
+  },
+  {
+   "record_id": "FO1-R-M27",
+   "same_as_entry": "sengzhao-bu-er-yu-wu",
+   "note": "《中论》「空亦復空」：空本身也不立为第二实在，同一结构。"
+  },
+  {
+   "record_id": "FO1-R-SA016",
+   "same_as_entry": "zaahan-yuan-sheng-lao-si",
+   "note": "「自作自覺」归为常见：拒绝以先设之自为作者，同一结构。"
+  },
+  {
+   "record_id": "FO1-R-SA017",
+   "same_as_entry": "zaahan-yuan-sheng-lao-si",
+   "note": "「他作他覺」归为断见：拒绝以先设之他为作者，同一结构。"
+  },
+  {
+   "record_id": "FO1-R-CY47",
+   "same_as_entry": "weishi-shi-bian",
+   "note": "「爾時住唯識，離二取相故」：以唯识为所住，同一以识为归的结构。"
+  },
+  {
+   "record_id": "FO2-FQ-R037",
+   "same_as_entry": "fazang-yin-men-liu-yi",
+   "note": "「別者即以總成別也」：别相的角色由总相而成，角色由关系给出，同一结构。"
+  },
+  {
+   "record_id": "FO2-KS-P-R010",
+   "same_as_entry": "fazang-yuan-cheng-yi",
+   "note": "金师子章「緣生之法各無自性，徹底唯空」：无自性故缘成，同一结构（章文以之判为始教）。"
+  },
+  {
+   "record_id": "FO2-KS-P-R013",
+   "same_as_entry": "fazang-xiang-rong-bu-tong",
+   "note": "金师子章「萬像紛紜，參而不雜……因果歷然」：相即而不杂，同一结构。"
+  },
+  {
+   "record_id": "FO2-KS-P-R015",
+   "same_as_entry": "fazang-xiang-rong-bu-tong",
+   "note": "金师子章「一多無礙。於中理事各各不同」：同上。"
+  },
+  {
+   "record_id": "FO2-KS-P-R021",
+   "same_as_entry": "fazang-xiang-rong-bu-tong",
+   "note": "金师子章「一一毛頭，皆各以金收師子盡」：每一处关联全体，同上。"
+  },
+  {
+   "record_id": "IN2-R0059",
+   "same_as_entry": "fazang-xiang-rong-bu-tong",
+   "note": "憨山「圓融不礙行布、十界森然」：统一不抹去分化，同一结构。"
+  },
+  {
+   "record_id": "IN2-R0060",
+   "same_as_entry": "fazang-xiang-rong-bu-tong",
+   "note": "憨山「行布不礙圓融」：分化不妨统一，同上。"
+  },
+  {
+   "record_id": "LC2-SZ-C20-R03",
+   "same_as_entry": "fazang-xiang-rong-bu-tong",
+   "note": "苏辙「均彼我一同異」而不「忽遺世法犯分亂理」：同一而不抹去分化，同一结构（在修身语境中）。"
+  },
+  {
+   "record_id": "FO2-KS-P-R011",
+   "same_as_entry": "jin-shizi-yin-xian",
+   "note": "金师子章「不礙幻法宛然」「二相雙存」：两种读法并存，同一结构。"
+  },
+  {
+   "record_id": "FO2-KS-C-R001",
+   "same_as_entry": "jin-shizi-jin-xing-bu-bian",
+   "note": "承迁注「金況法界體也」：以金为体，同一结构。"
+  },
+  {
+   "record_id": "FO2-KS-C-R002",
+   "same_as_entry": "jin-shizi-jin-xing-bu-bian",
+   "note": "承迁注「師子喻法界用也」：师子为用，体在金，同上。"
+  },
+  {
+   "record_id": "IN1-R-C07",
+   "same_as_entry": "jin-shizi-jin-xing-bu-bian",
+   "note": "宗密以「真金隨工匠等緣作……金性必不變」喻一心之法：同一不变之体。"
+  },
+  {
+   "record_id": "FO2-SM-R013",
+   "same_as_entry": "shengman-ru-lai-zang",
+   "note": "空如来藏与不空如来藏之分，仍以如来藏为所依，同一结构。"
+  },
+  {
+   "record_id": "FO2-SM-R015",
+   "same_as_entry": "shengman-ru-lai-zang",
+   "note": "「離有為相者是常……是依」：以离有为相之常为依，同上。"
+  },
+  {
+   "record_id": "FO2-SM-R016",
+   "same_as_entry": "shengman-ru-lai-zang",
+   "note": "以如来法身为常乐我净：固定之价值与本体，同上。"
+  },
+  {
+   "record_id": "FO2-SM-R020",
+   "same_as_entry": "shengman-ru-lai-zang",
+   "note": "「自性清淨心而有染污，難可了知」：预设一个本来清净之性，同上。"
+  },
+  {
+   "record_id": "FO2-QX-R004",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "体、相、用三大以众生心显示大乘义，同一一心结构。"
+  },
+  {
+   "record_id": "FO2-QX-R007",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "真如分如实空与如实不空，「以有自體，具足無漏性功德」，同上。"
+  },
+  {
+   "record_id": "FO2-QX-R008",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "如实不空「無有相可取」，仍以真如为体，同上。"
+  },
+  {
+   "record_id": "FO2-QX-R010",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "阿梨耶识开觉与不觉二义，依一心，同上。"
+  },
+  {
+   "record_id": "FO2-QX-R011",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "依法身说本觉，同上。"
+  },
+  {
+   "record_id": "FO2-QX-R027",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "真如熏习无明，令妄心厌苦：以真如为发动之本，同上。"
+  },
+  {
+   "record_id": "FO2-QX-R031",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "如来藏自体不具染法，同一固定清净本性。"
+  },
+  {
+   "record_id": "FO2-FQ-R023",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "法藏「唯是一如來藏，為自性清淨心轉也」：十玄诸义归于一如来藏心，同一结构（与法藏相即诸条的相合不同）。"
+  },
+  {
+   "record_id": "FO2-FQ-R026",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "「一心亦具足十種德」：同上。"
+  },
+  {
+   "record_id": "FO2-GW-R009",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "《观无量寿经》「是心作佛，是心是佛」：以心为作者与所是，同一单一中心。"
+  },
+  {
+   "record_id": "FO2-YJ-R001",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "智旭「何謂實相？即現前一念心之自性是也」：以心性为实相，同上。"
+  },
+  {
+   "record_id": "FO2-YJ-R002",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "智旭「寂照不二、性修不二、身土不二無非實相」：诸不二归于一念心性之实相，同上。"
+  },
+  {
+   "record_id": "FO2-KS-P-R024",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "金师子章「各無自性，由心迴轉」：显隐一多由心回转，以心为读法之主，同上。"
+  },
+  {
+   "record_id": "IN2-R0073",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "憨山「所同者心、所異者跡也」：以心为同一之根据，迹为其异，同上。"
+  },
+  {
+   "record_id": "IN2-R0078",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "智旭「本覺是性……稱性起修」：修依先在之性，同上。"
+  },
+  {
+   "record_id": "IN2-R0079",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "智旭「全修在性」，同上。"
+  },
+  {
+   "record_id": "IN2-R0080",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "智旭「性修不二」：不二归于本觉之性，同上。"
+  },
+  {
+   "record_id": "IN2-R0082",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "智旭「家國天下。皆是此心中所現物」：世界在心中所现，同上。"
+  },
+  {
+   "record_id": "IN2-R0092",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "智旭「第八識既成無漏。則一切五陰……皆無漏也」：以识之转为一切之转，同上。"
+  },
+  {
+   "record_id": "RU2-R0216",
+   "same_as_entry": "qixin-yi-xin-er-men",
+   "note": "王守仁「身之主宰便是心」「意之所在便是物」：以心为主宰、物依意而定，儒家的同一单一中心结构。"
+  },
+  {
+   "record_id": "IN1-R-Y01",
+   "same_as_entry": "zongmi-yuan-ren-ben-mo",
+   "note": "宗密「未有無根本而有枝末者也」：以本统末，同一结构。"
+  },
+  {
+   "record_id": "IN1-R-Y13",
+   "same_as_entry": "zongmi-yuan-ren-ben-mo",
+   "note": "「一切有情皆有本覺真心，無始以來常住清淨」：同一先在固定本性。"
+  },
+  {
+   "record_id": "IN1-R-Y03",
+   "same_as_entry": "zongmi-yuan-ren-ben-mo",
+   "note": "宗密以「窮理盡性，至於本源，則佛教方為決了」判三教高下：等级由穷本源而来，同一本末结构延伸为位次。"
+  },
+  {
+   "record_id": "IN1-R-C01",
+   "same_as_entry": "zongmi-yuan-ren-ben-mo",
+   "note": "宗密《都序》「源者是一切眾生本覺真性」：同一本源。"
+  },
+  {
+   "record_id": "IN1-R-C09",
+   "same_as_entry": "zongmi-yuan-ren-ben-mo",
+   "note": "宗密以真心为性、前三心为相：同一本末分判。"
+  },
+  {
+   "record_id": "IN1-R-H09",
+   "same_as_entry": "zongmi-yuan-ren-ben-mo",
+   "note": "慧远虽言如来与尧孔终期则同，仍以「獨絕之教不變之宗」居上：不变之宗加位次，同一结构。"
+  }
+ ],
+ "rejected": [
+  {
+   "record_id": "IN2-R0049",
+   "why": "张伯端「教雖分三，道乃歸一」是对三教关系的自述性综合，说的是教门的会归，不陈述展开的任何结构；只有「道」「一」字面相同。"
+  },
+  {
+   "record_id": "CT1-R-HS12",
+   "why": "《汉志》把九家统摄为六经支流，是目录学与思想史的分类主张，不涉展开的结构；属后起分类，按脉络规则不作义理判断。"
+  },
+  {
+   "record_id": "LC2-SZ-C10-R01",
+   "why": "苏辙论「神載魄」是修养中神与魄的主从，属于身心修养，不陈述一元展开的结构；若要对照，属于自我与修养一簇。"
+  },
+  {
+   "record_id": "LC2-SZ-C10-R02",
+   "why": "苏辙论「魄常載神」是上一条的反面，同属修养论，不涉本簇结构。"
+  },
+  {
+   "record_id": "LAO2-C56-R03",
+   "why": "第五十六章「玄同」是一组修养动作（塞兑闭门、挫锐解分、和光同尘）的合称，说的是人的实践，不陈述整体与读法的结构；其中「解其分」若读作抹去区分则与方法相悖，但本条无结构主张可判。"
+  },
+  {
+   "record_id": "LC2-WB-C77-R01",
+   "why": "王弼「无身无私」而「与天地合德」是伦理与修养的条件，属于评价与自我一簇，不陈述展开本身的结构。"
+  },
+  {
+   "record_id": "RU1-LY-20-03-R01",
+   "why": "「不知命，無以為君子」陈述成为君子的条件；「命」在此章的含义未定（命运或所受之命），本条不陈述展开的结构，属于知与责任一簇。"
+  },
+  {
+   "record_id": "ZH1-C06-R-15",
+   "why": "「坐忘」「同於大通」是修养的过程，不陈述展开的结构；其下文「化則无常」已作为「变化」一名的用例记入。"
+  },
+  {
+   "record_id": "FO1-R-DI01",
+   "why": "《金刚经》降伏其心、度众生而无实度者，是发心与修行的指示，属于实践与解脱论，不陈述一元展开的结构。"
+  },
+  {
+   "record_id": "FO1-R-DI06",
+   "why": "取法相与取非法相皆著四相，是对执取的修行批评，属于认知与实践一簇，不涉本簇结构。"
+  },
+  {
+   "record_id": "FO1-R-DI26",
+   "why": "「於法不說斷滅相」是对发心者的说法约束，属于说法与修行；与止息之读法有远距离关联，但本条没有可对照的结构主张。"
+  },
+  {
+   "record_id": "FO2-KS-C-R003",
+   "why": "承迁注「觀色即空，成大智，而不住生死」是修行的条件与成就，属于实践；本簇只取同章的显隐与金性条。"
+  },
+  {
+   "record_id": "FO2-KS-C-R004",
+   "why": "「觀空即色，成大悲，而不滯涅槃」，同上，属于实践。"
+  }
+ ],
+ "notes": "【总体发现（AI读法）】本簇 268 条主候选全部落位：80 条对应（相合 40、定域 23、相分 17），127 条并行，13 条剔除。所有片段与命名用例都以 ctq.py text 对冻结文本逐条核过；读法、并行说明、剔除理由与命名说明中每处「」引文也都核过。\"它自然就是一元的，关系的，动态的\"作为待检命题，在本簇的结论是：在若干条先秦线索的根上成立，但不是整个传统的性质。成立之处有：《庄子》齐物论、知北遊（物物者与物无际，所待又有待，两行，通为一，大块之给与取），《荀子》天论、正名（阴阳大化，物为大共名，状与实），《系辞》（变化兼进退，贞夫一），《序卦》（盈天地之间唯万物），以及汉译与中土佛学的缘成一支（中论以果名缘，唯识所取能取相待，法藏缘成之一，僧肇不二于物，天台三谛）。这些段落与脊柱的 World（一类关系项）、Web.roles（形成与条件是一个关系项的两种角色）、World.withRest 与 World.unity（其余算作一个关系项，整体是一次运行）、Contextual.world 与 fitsFree_iff（读法总成一个世界，粘合处才有不依语境的描述）、exists_law_iff 与 Run.keepHistory_shown（律由历史读出）结构相同。四个非关系层在同一传统中也都出现，而且不只出现在后起注疏里：先秦原典自身就有先在之根（大宗师「自本自根」）、单一中心（老子「抱一为天下式」、韩非「明君守始」）、固定价值与本性（系辞「继之者善也，成之者性也」、中庸「天命之謂性」）和意志（大有「自天佑之」）。注疏层则把先在之根系统化：河上公的道吐气布化，王弼以无为本，韩康伯的有必始于无，孔疏的元气混一，宗密的本末判教。所以不能讲成先秦关系、后世失落的故事，原典内部本身就有张力（大宗师「自本自根」与知北遊「物出不得先物」）。另有一种冲突结构不属于四层：韩康伯、郭象的独化否认依存，与 Web.Dependent 相分。\n\n【命名（AI读法，都是供使用者约定的受控名，CrossSituational.stands_iff，并非恢复古义）】13 个名，全部有先秦用例：变化（生成／变化，高）、大化（同一展开，高）、一（整体的统一，中）、物（关系项，高）、状（配置由关系而定，中）、迹（历史，高）、所以迹（所显之律，中）、两行（语境读法成一世界，高）、通为一（生起与止息是同一变化的读法，中）、所待又有待（形成与条件是一个关系项的两种角色，高）、无际（没有两个实在，中）、大块（其余算作一个关系项，中）、六合（表示所及的范围，低）。已采用的名都保留：理（对律的建模）不用来称律本身，律本身另取所以迹；中和、约定俗成、识、明、无明、机、护闭各在本簇之外，没有冲突；Ren 的开、闭等用语不属本簇。中文版现有的说明语（关系项、律、历史、展开、生成／变化之论）继续作说明层，古典名是中华版的候选受控名。一个关键结论是道不采为任何名：本簇的道在关键段落带先在之根（自本自根）、生成次序（道生一，河上公与孔疏的读法）和单一中心（明君守始），所以道只作为被对照的古典概念出现，律取所以迹、展开取大化、统一取一。三个短语名（所以迹、所待又有待、通为一）用作术语偏长，整合者可以考虑简式：所待／有待，通一。\n\n【相分，按层排列】先在之根：zhuang-dazongshi-zi-ben-zi-gen、wangbi-yi-wu-wei-ben、han-you-shi-yu-wu、heshang-dao-qi-sheng-hua、kong-tai-ji-yuan-qi、shengman-ru-lai-zang、zongmi-yuan-ren-ben-mo。固定本性或价值：zhongyong-tian-ming-zhi-wei-xing（12 条并行）、xici-ji-zhi-zhe-shan（只把延续之条件写作条件，不断言；它本身不排序）、jin-shizi-jin-xing-bu-bian。意志与单一中心：dayou-zi-tian-you-zhi（8 条并行，易传反复引天佑、天命）、lao-74-si-sha-zhe-heshang、lao-22-bao-yi-wei-tian-xia-shi、hanfei-zhudao-dao-zhe-wan-wu-zhi-shi、weishi-shi-bian、qixin-yi-xin-er-men（20 条并行）。争与位次：宗密判教（并行于 zongmi-yuan-ren-ben-mo）、王弼本末。冲突结构：han-du-hua-yu-da-xu（独化）。同一传统里关系一读与非关系一读并存，例如起信论二门不相离与一心为主，金师子章显隐与金性不变，唯识能所相待与识变。本簇逐段判断，不按学派整体判断。\n\n【缺口，按重要性排列】G1（唯一的确切缺口，见 zhuang-zhibeiyou-wu-chu-bu-de-xian-wu 的 gap 字段）：脊柱缺向后无尽之律。设双向运行 BiRun P（state : Int → S，act : Int → A，每步为 P.step）。陈述：每个运行的起点都有前驱（∀ r : Run P, ∃ s a, P.step s a (r.state 0)），当且仅当每个运行都可延伸为在自然数部分与之相同的双向运行。(ii)⇒(i) 可构造；(i)⇒(ii) 一般需要依存选择，有限列出且可判定时可构造。最近的声明是 Parting.before、Onward.KeepsMoving.run、Onward.DependentSelection、Law.withHistory_loses_beginning。它决定「无始无終」「物出不得先物」与王夫之「时无先后」在脊柱上的确切范围；目前只有向前补一步与向后失去开端两半。以下候选核查后已有覆盖，不列为缺口：人能弘道（shownBy_le_iff），静不离动（ExchangeLaw.responsive_embodied），哪个条件是哪个关系项（Mutualism.apart_relabelled），天地睽而其事同（Hexagram.pairs_goAlike）。\n\n【体例】ro_passage 填 RO 段落 id；易线（Y1）段落写作 y1:<id>，如 y1:gangrou、y1:zhen-fu-yi。脉络没有关系记录的段落，record_ids 用阅读单元 id：ZH1-U02（齐物论，天籁、罔两问景、六合三条共用同一单元，是三个不同段落）、ZH1-U14（天运）、ZH1-U22（知北遊「物出不得先物」）、RU2-U-XZ17（天论）、RU2-U-XZ22（正名）。命名用例中的 record_id 也用单元 id（如 IN1-U02-06、IN1-U03-15、RU2-U-ZZ04）。分期：经与先秦诸子写先秦；易传、中庸、庄子外杂篇标注年代有争议；汉译佛典标译者朝代并注印度原典；起信论标作者与译者有争议。\n\n【自我反驳】(1) 六合信心低：它的本义是上下四方的空间容器，各层都以空间义为主；采用它会让 World 被读成容器。如果整合者不取，表示范围可以只用说明语。(2) 所以迹带「夫迹，履之所出」的图像，即履先于迹，像一个先在的造迹者，玄学又以它为本。名中的所以二字只说读法方向，图像仍需在定义中排除。(3) 状从形状义推到按关系认同，跨度大；荀子的所是处所，脊柱的位置不是空间。(4) 大块的「載我」「勞我」语法像施事；本簇按「咸其自取」「怒者其誰」取无发动者一读。(5) 一与大化的负担重：「道生一」与孔疏「元氣混而為一」都在同一传统中，使用时必须带着缘成之一（法藏）与两一（张载）的定义。(6) 若干相合有条件，已写明：大块与玄牝条依赖第一律（Gainless）与有限列出；通为一的「復」只在无损之律上成立（定域）；荀子天论条只取大化一段，同篇「制天命而用之」RO 已判相分。(7) 佛学段落的相合按段落本身判断，不等于认可其系统（唯识、如来藏系统在本簇另有相分）。(8) 年代有争议的文本（易传、中庸、庄子外杂篇、河上公、起信论）若改订，相应名的先秦用例要改用内篇或荀子；变化、一、物、所待又有待、两行、通为一、大块、六合都有庄子内篇或荀子的用例，不受影响；迹与所以迹只有外篇天运用例，会受影响，无际的主要用例也在外篇知北遊。(9) 13 条剔除都是修养、实践或分类条目，没有本簇的结构主张；其中「坐忘」条所在章的「化則无常也」记作变化一名的用例，不作对应。(10) 本簇没有断言延续之条件（Unrestricted）：凡涉及生生或善的段落，只把它写作条件，并说明它本身不排序。"
+}

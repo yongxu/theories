@@ -1,0 +1,615 @@
+{
+ "cluster": "C06 生成、退化与生生之向",
+ "lens": "STRUCTURE",
+ "names": [
+  {
+   "concept": "生生（D1：生成生成生成；方向以广比较，Web.Widens）",
+   "name": "生生",
+   "verdict": "revise",
+   "issues": "AI读法。(1) lean 锚 Becoming.Web.Unceasing.regeneration_recurs 不存在。R30 已把它改名为 Web.Unceasing.activeRenewer_recurs，改名理由正是 regeneration 会被读作 generation。它的结论是双重否定：¬∀t≥T, ∀f, ¬ActiveRenewer，即更新活动不从任何一步起一直停止。这属于不息（D5），不属于 D1。其记录 unceasing-generation-needs-renewal 也说更新不蕴涵生成。(2) fit 说「所生者又成为再生之条件与给予者」，脊柱中没有这条律。Flow.gains_from_supported 只说：在平衡、只有活动者给予、活动需要支持、需求不松的条件下，获得支持之处必有一个被支持的参与者在给予。它不说所生者成为后来生成的给予者。mapper 在 xici-sheng-sheng 条把这一点列为缺口 G1，名条却当作已有结构，两处自相矛盾。(3) 系辞「生生之谓易」在疏层的义是相续不绝：孔疏「生生，不絕之辭。陰陽變轉，後生次於前生，是萬物恒生」（YWH-H5，疏·隋唐）；韩注「陰陽轉易，以成化生」。在易的有界组态上这就是回返（Hexagram.waxWane_returns）。按 §1 九句读法（D49），无损回返（Law.Lossless.returns）有不息而无生生。所以用「生生」名 D1 的二阶结构是本理论的约定，不是该句的史义。fit 写「这正是 D1 的结构」，把约定说成了对应。(4) not_carried 末项「正价只在延续条件之下」错了：延续条件只给意义，不给正价，本身也不排序。(5) 置信 high 过高：词汇表此行锚为 none，方向是 Web.Widens；D1 修订后，生生也不是谓词 living。(6) 缺两条注层证据：王弼五十章注「岂非生生之厚」（DS01，LC2-WB-C50-R02，曹魏，动宾义）；RO ru-daizhen-gong-sui-qi-sheng 已把戴震「仁者，生生之德也」读作与 livingSignificance_of_unrestricted 同内容、而地位是断言。",
+   "fix": "lean 改为 [\"Becoming.Web.Widens\"]，附注：脊柱无生生谓词；Web.Unceasing.activeRenewer_recurs 只作不息（D5）的对照。fit 删去「所生者又成为再生之条件与给予者」，改写为：「D1 的二阶结构是本理论的约定，其律尚缺（见 G1）。系辞句的疏义是相续不绝（孔疏），在易的有界组态上是回返；按 D49，回返是不息而非生生。约定受此史义约束：回返不即是生生。」not_carried 末项改为：「任何正价：延续条件只给意义，不给正价，本身也不排序；以广为较好，在于 C 与不变性一步。」confidence 改为 medium。attestations 增两条：YWH-H5「生生，不絕之辭。陰陽變轉，後生次於前生，是萬物恒生」（疏·隋唐，唐孔颖达等）；DS01「岂非生生之厚」（注·魏晋南北朝，曹魏王弼，LC2-WB-C50-R02）。"
+  },
+  {
+   "concept": "成生（generative：一部分之水平广于无此部分时之水平，D2）",
+   "name": "成生",
+   "verdict": "revise",
+   "issues": "AI读法。(1) lean 里的 Restoring.Inflow.widens 是 Restoring 例中的一个见证，不是一般律。一般的是定义 Web.Widens W.level l 本身，加上 Flow.Balances.widens_iff_within_margin。(2) 漏了 Web.Widens 的界限：它只比较固定类型的形成，新类的生长（Flow.GrownBy）不在比较之内。若把成生读作「使新类得成」，就越出了所证。(3) 缺与现代中文版的对照。现代版以「生成的／退化的」译 generative／degenerative，以「生成」专指与退化相对的 generation（D36，词汇表「展开；生成／变化」行）。alternatives 拒「生成」的理由是「常指任何新组织」，但在现代版里这已由约定排除。中华版另取「成生」，须写明两版对照，否则同一概念有两名。(4) fit 的「不阖任何一个」须说明是逐步、逐形成的包含，不是「不取」：一部分可以有所取而仍广。",
+   "fix": "lean 改为 [\"Becoming.Web.Widens\", \"Becoming.Flow.Balances.widens_iff_within_margin\"]，Restoring.Inflow.widens 移作「例」。not_carried 增：「新类之生长不在比较之内（Flow.GrownBy）：Web.Widens 只比较固定类型的形成。」course 增：「现代中文版对应：生成的（generative），扩大（widens），D36；中华版的成生是对同一概念的另一套名，不另立概念。」fit 中「不阖任何一个」后加：「即无它时被容许者，有它时在每一步仍被容许；这不要求它不取。」"
+  },
+  {
+   "concept": "绝生（degenerative：一部分之水平狭于无此部分时之水平，D2）",
+   "name": "绝生",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 锚 Clearing.narrows 是 Clearing 例的见证。定义应是 Web.Widens l W.level（无此部分的水平广于有此部分的水平）。一般条件有两条，都是 R31/R34 之后、对任何意义成立的律。其一 Flow.Balances.narrows_of_consumed：该部分每步对每一条件所给不多于所取，所耗的依赖此后不再被满足，而无它的水平在后某步仍容许该形成，则狭。其二 Flow.Balances.not_narrows_of_renewed：它所汲取的条件都被更新，则不狭。(2) Flow.Balances.loses_iff_beyond_margin 说的是某一形成的丧失，不是绝生的定义；绝生还要求「无所加」。(3)「绝」有永久断绝之义，而狭只是一次比较里某一步有所不容，不蕴涵永不复得。永不复得是成闭（Law.DrawnInto.never_back），名与成闭相混。(4) 苏辙五十二章注「聖人塞而閉之非絶物也以神應物」中的「絶物」是与物断绝，不是一部分使所容变狭。作为「闭不等于绝」的旁证可以，作为绝生的出处是字面对应。(5) 现代版用「退化的」（D36），alternatives 拒「退化」的理由与现代版的约定冲突。",
+   "fix": "lean 改为 [\"Becoming.Web.Widens\", \"Becoming.Flow.Balances.narrows_of_consumed\", \"Becoming.Flow.Balances.not_narrows_of_renewed\"]，Clearing.narrows 移作「例」。fit 写明：「绝生是 Widens l W.level：此比较中有所狭而无所加；不说永不复得，永不复得属成闭。」not_carried 增「绝作永久断绝」。苏辙句从出处改为「闭不等于绝」的旁证。course 增与现代版「退化的」的对照。"
+  },
+  {
+   "concept": "所容（the generative space：诸水平所容许者）",
+   "name": "所容",
+   "verdict": "revise",
+   "issues": "AI读法。(1) fit 说「所＋动词名其受事之全体」，但五条出处里的「所容」都是处所义。老子五十章「兵无所容其刃」与「兕无所投其角，虎无所措其爪」平行，「所」指可以容刃之处。序卦「旅而無所容」，离、恒小象「无所容也」，都指无处安身。庄子「瓠落无所容」也是无处可容。not_carried 排除的「处所与容器义」恰好是全部出处的义，fit 的语法论证与证据相反。(2) 理论的生成空间依路径、依步：Ranking.possible 读的是「下一步可成者」，Web.Widens 比较整条水平路径。concept 的「此刻」须标明对哪一条水平路径、在哪一步。(3) Flow.Balances.widens_iff_within_margin 不是所容的定义。",
+   "fix": "fit 改为：「所容是本理论的约定：取『所＋容』的『被容许者之全体』一读。先秦出处都是处所义（无可容身、容刃之处），约定排除此义；史义所约束的只是：所容是一个关系所在，不是容器实体。」concept 加「对一条水平路径、在一步」。lean 改为 [\"Becoming.Web.Admits\", \"Becoming.Ranking.possible\", \"Becoming.Web.Widens\"]。course 注明现代版作「生成的空间」。confidence 保持 medium。"
+  },
+  {
+   "concept": "容（admission：诸水平满足某形成此刻的每一需求，Web.Admits）",
+   "name": "容",
+   "verdict": "keep",
+   "issues": "AI读法。墨经「窮，或有前不容尺也」与经说「莫不容尺，無窮也」用容许关系定界，是关系性的容，合 Web.Admits 与 Web.supported_iff_admits。墨经的「容」是区域对尺的空间容许，不是需求的满足。理论取的是它的关系形式，条目 mojing-qiong 已部分说明。大学「能容」的德性义已列 not_carried。",
+   "fix": "可选：fit 增一句「墨经之容是区域对尺的空间容许；理论只取其关系形式（一方水平、一方需求）」。现代版对应作「容纳」。"
+  },
+  {
+   "concept": "赅（includes：一水平路径在每一步容许另一路径所容许的一切，Web.Includes）",
+   "name": "赅",
+   "verdict": "keep",
+   "issues": "AI读法。天下篇「不該不徧」的「該」是兼备、包括，取作单向包含 Web.Includes，合。写作「赅」以避开「应该」义，这个处理对。FO2-KS-C 的层标错了：源注是承迁《金师子章注》注文，章文唐、注文宋，不是「华严圆顿论」，也不是「隋唐以后」。",
+   "fix": "FO2-KS-C 出处的 layer 改为「注·宋明（宋承迁《金师子章注》注文）」；或删去这一出处（华严圆融义本来已在 not_carried）。course 注明现代版作「包含」。"
+  },
+  {
+   "concept": "有所长（exceeds：一水平路径在某步容许另一路径所不容许者，Web.Exceeds）",
+   "name": "有所长",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 唯一出处天下篇「皆有所長，時有所用」的「長」是长处、才能，属价值义。名本身就由这个字构成，于是组合「广＝赅而有所长」在字面上含着「更好」。应当明列在 C 中的比较承诺，就这样藏进了定义，违反「定义中不藏权重」。(2)「長」另有长度义，墨经经说下「木與夜孰長？智與粟孰多？」正是本簇用来说异类不比的例子，同一字在本簇内两义相撞。(3)「有所」作存在量化，结构是对的，问题只在「长」。备选「出」也不中立：孟子「出于其类，拔乎其萃」是出众之义。",
+   "fix": "改名为描述式「容彼所不容」：结构精确，无评价。组合相应改为：广＝赅而容彼所不容；Mixed＝互容彼所不容（见「各有所长」条）。若须两字之名，可用「有所出」，但须在 not_carried 写明孟子「出于其类，拔乎其萃」的出众义被排除。若坚持保留「有所长」，not_carried 首项须写「长不含优劣；以广为较好只在 C 与不变性一步」，置信降为 low。course 注明现代版作「超出」。"
+  },
+  {
+   "concept": "广（widens：赅而有所长，Web.Widens）",
+   "name": "广",
+   "verdict": "keep",
+   "issues": "AI读法。广狭对举（荀子、戴震），定义为包含且超出，合 Web.Widens。fit 引 Web.widens_iff_retains_adds 时已写「在延续条件之下」。缺三点：(1) 新类的生长（Flow.GrownBy）不比较，这个界限须写；(2) 墨经经下「廣與脩」是长宽的度量义，应列为被排除之义；(3) 苏辙七十二章注「無廣狹淨穢之辨」明确拒绝以广狭作评价，可作「广不含善」的注层旁证。戴震「狭小而今也广大」说的是心知的耦合之广（明），不是所容之广，见 daizhen 条。",
+   "fix": "not_carried 增两项：「新类之生长不在比较之内（Flow.GrownBy）」；「墨经『廣與脩』的度量义」。course 增：苏辙七十二章注「無廣狹淨穢之辨」（注·宋明）是拒以广狭为评价之例；现代版对应作「扩大」（D36）。戴震出处标为「耦合之广（明），另一结构」。"
+  },
+  {
+   "concept": "狭（narrows：广之逆，Clearing.narrows）",
+   "name": "狭",
+   "verdict": "revise",
+   "issues": "AI读法。(1) concept 与 lean 都以 Clearing.narrows（见证）为锚。定义应是 A 狭于 B 即 Web.Widens B A；一般条件是 Flow.Balances.narrows_of_consumed 与 not_narrows_of_renewed。(2) 苏辙七十二章注「不狹不厭與人同生而與道同居」的「狹」，上文是「知性之大而吾生之狹也則愀然厭之」，即以自己之生为狭的自视评价；下文「無廣狹淨穢之辨」正是拒绝广狭之辨。作为「狭」的出处是字面对应，方向也与所需义相反。",
+   "fix": "lean 改为 [\"Becoming.Web.Widens\", \"Becoming.Flow.Balances.narrows_of_consumed\", \"Becoming.Flow.Balances.not_narrows_of_renewed\"]，Clearing.narrows 作「例」。苏辙七十二章注移出 attestations，改入 course，作「注层拒以广狭为评价」的说明。现代版对应作「缩小」。"
+  },
+  {
+   "concept": "相赅（keeps：两路径互赅，Web.Keeps）",
+   "name": "相赅",
+   "verdict": "keep",
+   "issues": "AI读法。新组合，结构准确：互相包含即 Web.Keeps。它与「不广不狭」的区分（Web.Keeps.not_mixed、Web.Widens.not_keeps）正确。出处中庸「萬物並育而不相害」与互赅没有结构关系，只是「相」字之例，近乎字面附会。",
+   "fix": "attestations 删中庸句，只留天下篇「不該不徧」作「该」字之源，并标「新组合，约定使用」。现代版对应作「保持」。"
+  },
+  {
+   "concept": "各有所长（mixed：两路径各容对方所不容，Web.Mixed）",
+   "name": "各有所长",
+   "verdict": "revise",
+   "issues": "AI读法。(1) pre_qin: true 不确。先秦只有天下篇「皆有所長」；「各有所长」成词，在语料中首见于唐宗密《禪源諸詮集都序》「先哲後俊各有所長」（IN1-S05），而且是评价义（各有优长）。(2) 继承「有所长」的评价问题。(3) lean 里的 Transfer.unordered 和 Requirement.Routes.opposite_routes 都是见证。一般律是 Web.mixed_iff_adds：在延续条件下，各有所长恰是各自加上对方所缺的有意义者。(4) 墨经「異類不吡，說在量」说的是比较需要共同之量，是后果；它与 Mixed 本身是两件事，fit 把二者合并了，而且异类之异是量纲之异（见 mojing-yi-lei 条）。",
+   "fix": "名随「有所长」条改为「互容彼所不容」（或「互有所出」）。pre_qin 改 false：部件先秦，成词在唐。attestations 增 IN1-S05「先哲後俊各有所長」（论·隋唐，宗密），并注其评价义被排除。lean 改为 [\"Becoming.Web.Mixed\", \"Becoming.Web.mixed_iff_adds\"]，Transfer.unordered 与 Requirement.Routes.opposite_routes 在 fit 中标为见证。墨经句改作「排序需共同之量」的旁证，并注「异类是量纲之异，与同类形成在包含序上的不可比相近而不同」。现代版对应作「混合」。"
+  },
+  {
+   "concept": "偏去（a part withheld，Flow.withhold；无此部分之水平，Flow.WithheldLevels）",
+   "name": "偏去",
+   "verdict": "revise",
+   "issues": "AI读法。名好：墨经给出了兼与体、去其体、以存者对照的完整结构。但 fit 漏了一个结构差异。墨经的偏去是实际去除，而且断定「謂其存者損」，即存者比兼为减。理论的 Flow.withhold 是反事实的流：该部分不取不给，其余如故。无此部分的水平可以广于有此部分的水平（该部分阖时），所以存者未必是「损」。fit 把「謂其存者損」读作「以存者对照原兼」，略去了墨经对方向的断定。另与 C03 的兼／體（whole／part）须一致。",
+   "fix": "fit 增：「墨经断存者为损；理论中无此部分之水平可宽可窄（视该部分是阖是辟），『损』的方向不被携带，所取的只是去其体、以存者对照这一比较结构。」not_carried 的「损作价值上的损失」改为「损的方向（存者必减）与价值义」。course 注明与 C03 兼／體同源，现代版作「扣留」。"
+  },
+  {
+   "concept": "余地（margin，Balances.supported_iff_within_margin）",
+   "name": "余地",
+   "verdict": "keep",
+   "issues": "AI读法。养生主「必有餘地矣」的结构合 margin：是所需之外的余量，是两方之差，不属任何一方。它与脊柱的剩余差别是：庄子的余地是空间间隙，脊柱的余量是数量差，与 RO lao-11-dang-qi-wu 记的剩余同类。not_carried 已排除处所义。",
+   "fix": "可选：fit 增「剩余：庄子之余地是空间间隙，脊柱之余量是数量差（同 RO lao-11-dang-qi-wu）」。现代版对应作「余量」。"
+  },
+  {
+   "concept": "阖（closing：一部分使无它时被容许者有它时不被支持；阖需净汲取）",
+   "name": "阖",
+   "verdict": "revise",
+   "issues": "AI读法。一个名覆盖了两种结构。(a) 反事实的部分作用：有它时不被支持，而无它时被容许；见 Flow.Balances.supported_of_net_give，所给不少于所取则不阖，即阖需净汲取。(b) 时间上的失去支持：Web.LosesSupport.falls，跨一步失去支持只因某所需条件下降。lean 把二者并列。系辞「一阖一辟谓之变」是时间上的交替，更近 (b)，而 concept 定义的是 (a)。鬼谷子「捭阖」的相分已在 not_carried，但未链 RO guiguzi-bai-he。",
+   "fix": "concept 定为 (a)。lean 改为 [\"Becoming.Flow.Balances.supported_of_net_give\", \"Becoming.Flow.Balances.closes_nothing\"]；Web.LosesSupport.falls 移出，fit 另注：「跨步之失去支持（LosesSupport）是时间关系，不是阖；系辞『一阖一辟』兼二义，取其结构时须分开。」not_carried 的鬼谷子项加链 RO guiguzi-bai-he。course 注明现代版作「关闭」。"
+  },
+  {
+   "concept": "辟（opening：一部分使无它时不被容许者有它时被支持；辟需净给予）",
+   "name": "辟",
+   "verdict": "revise",
+   "issues": "AI读法。问题与「阖」条相同：lean 里的 Web.GainsSupport.rises 是跨步获得支持的时间关系，不是一部分的反事实作用。Flow.Balances.admits_of_net_draw 的读法正确：所取不少于所给，则无它时的水平已容许一切被支持者。",
+   "fix": "lean 改为 [\"Becoming.Flow.Balances.admits_of_net_draw\", \"Becoming.Flow.Balances.opens_nothing\"]；Web.GainsSupport.rises 移出，注明它是时间上的得，与辟分开。course 注明现代版作「打开」。"
+  },
+  {
+   "concept": "日新（novelty：从某步起每一组态皆异于先前；新需要增益）",
+   "name": "日新",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 出处的义是更新、增新：孔疏同处释为「聖人以能變通體化，合變其德，日日增新」（YWH-H5），韩注「體化合變」，汤盘铭是洗濯更新。这些都不是「从某步起每一组态都异于先前」（永不重访）。fit 说「日日新，又日新」给出了逐步不重复的全称，是读入。以「日新」名 novelty 是约定。(2) lean 缺 Web.rises_late_of_new（每步皆新之族，其存量在任意晚的步上上升）。Flow.new_beyond_every 要以第一定律（Flow.Gainless）为前提，fit 没写。(3) 新不即是生成：新的组织可以是退化的，因为生成与退化不重叠。",
+   "fix": "fit 改为：「约定：日新取逐步不重访的结构；史义是更新、增新（孔疏『日日增新』），不蕴涵不重复。」lean 增 \"Becoming.Web.rises_late_of_new\"，并在 Flow.new_beyond_every 后注「在第一定律（Flow.Gainless）之下」。not_carried 增「新不等于生成：退化亦可为新」。attestations 增 YWH-H5「日日增新」（疏·隋唐）。"
+  },
+  {
+   "concept": "益（gain：一族被给予多于其所取；每一上升都有净给予者）",
+   "name": "益",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Flow.rise_netGiver 说的是「计入其余」的流里有某一关系项净给予，这个给予者可以就是其余或族外（withImbalance）。fit 的「一方之增由他方转来」须写明其余也作为关系项。(2) 与 C04 的「损＝Web.Depletes」相撞。易的损益成对，但 C04 以损名存量耗减，本簇以益名「跨步上升有净给予者」，二者不是同一关系的两个方向；中华版若并用，须定二者的关系。(3) 老子五十五章「益生曰祥」的贬义已列 not_carried，处理正确。",
+   "fix": "fit 加：「给予者可以是其余或族外（Flow.rise_netGiver 计入其余）。」course 增：「与 C04『损』（Web.Depletes）不成对偶：益是上升有净给予者，C04 的损是存量耗减；由整合者定二者关系。」"
+  },
+  {
+   "concept": "开（Ren之词：未、可、应、转四相并具）",
+   "name": "开",
+   "verdict": "revise",
+   "issues": "AI读法。(1) lean 锚 Becoming.Web.Returns 不存在。R30 把它改名为 Web.Restored（一个依赖再被满足）；组态的回返是 Branching.Returns 或 Law.Returns。章 §10 转行的锚是 Branching.Returns、Web.Restored、Becoming.Dependence、Flow.closes_through_coupling_apart。(2) fit 用了「开非更多」，却没有它的律 Branching.Transit.keeps_not_returns（三个组态，每步皆可得每一组态，而其中之一永不回返）。(3) 四相不独立：fit 已写 Onward.run_of_returning，缺 Onward.run_iff_returning（有限组态中可即通达回返）和 unheld_of_new（未需开放的世界）。(4) 老子五十二章「开其兑」与系辞「开物成务」都不是过程状态义，mapper 已承认。",
+   "fix": "lean 改为 [\"Becoming.World.arising_opens\", \"Becoming.Onward.run_iff_continues\", \"Becoming.ExchangeLaw.RespondsTo\", \"Becoming.Branching.Returns\", \"Becoming.Web.Restored\", \"Becoming.Onward.run_of_returning\", \"Becoming.Onward.run_iff_returning\", \"Becoming.unheld_of_new\", \"Becoming.Branching.Transit.keeps_not_returns\"]。fit 中「开非更多」后加锚 Branching.Transit.keeps_not_returns。"
+  },
+  {
+   "concept": "未（开之一相：更多仍可来；即本理论的 openness）",
+   "name": "未",
+   "verdict": "revise",
+   "issues": "AI读法。(1) World.arising_opens 有前提：世界有清单（census），关系项具身，流平衡且耗散。Flow.new_beyond_every 要第一定律。fit 都没写。(2) 序卦「物不可窮也，故受之以未濟」是卦序的排列（Hexagram.order_paired）。在易的有界组态上，「不穷」只成立为回返（D49），不是未这一相的结构证据。(3) 缺 unheld_of_new 与 more_needs_open：不回到旧组态需要开放的世界。(4) 与 C04 的「未」同名同义，须一致。",
+   "fix": "fit 在 World.arising_opens 后加「（在有清单、关系项具身、流平衡且耗散之世界中）」，在 Flow.new_beyond_every 后加「（第一定律之下）」，并加一句：「序卦一句在有界的卦表上只是排列之终，不是开放的证据。」lean 增 \"Becoming.unheld_of_new\", \"Becoming.more_needs_open\"。course 注「与 C04 同名同义；现代版作『开放』」。"
+  },
+  {
+   "concept": "可（开之一相：一条历程可以继续）",
+   "name": "可",
+   "verdict": "revise",
+   "issues": "AI读法。名条以 Onward.run_iff_continues、run_of_returning 为锚，与章 §10 可行一致，但这只在有限组态中成立，fit 没写。条目 xunzi-ke-yi-wei-yu 又以 Web.Admits、supported_iff_admits 为「可」的锚，于是同名有二锚：一是「被容许」，一是「历程可继续」。荀子「可以为禹」是被容许而未成，更合「容」，不合「历程继续」。",
+   "fix": "fit 写明：「可：一条历程可以继续（Onward.run_iff_continues，有限组态中）；从回返的组态必有运行（Onward.run_of_returning，无前提）。」并把荀子出处改标为「容（被容许而未成）之例，与『可』相邻」，或在 xunzi 条改锚。二者择一，不可同名二锚。"
+  },
+  {
+   "concept": "应（开之一相：交换对一水平有回应，ExchangeLaw.RespondsTo）",
+   "name": "应",
+   "verdict": "keep",
+   "issues": "AI读法。锚与章 §10 应行一致；庄子「以應无窮」、韩注「乘變以應物，不繫一方」与「耦合限定回应而不固定之」结构合。苏辙五十二章注「以神應物」上下文有「光與物接物有去而明無損」，「神」与「明無損」带一个不受损的主体之明，属先在之层。",
+   "fix": "not_carried 增：「苏辙『以神應物』之『神』，作为不受损之主体能力（先在之层）。」"
+  },
+  {
+   "concept": "转（开之一相：仍能修正、回返、变通）",
+   "name": "转",
+   "verdict": "revise",
+   "issues": "AI读法。(1) lean 锚 Becoming.Web.Returns 不存在，已改名为 Web.Restored；组态回返应用 Branching.Returns。(2) Switching.fixed_loses 是二态 Bool 见证。一般律有两条：Pace.never_reads_lost（不读的规则下，失去的快组态不再得）；Pace.never_reads_loses（不读的规则在其律合并两个组态时有所失，前提是须有合并）。Switching.changing_regains 是「变化规则复得」的见证。韩非「法与时转」应锚于这几条，并写明「固定规则必失」只在规则之律合并组态时成立。(3) fit 有「失而不返之后依赖弱化或消解」，却没有锚 Becoming.Dependence。",
+   "fix": "lean 改为 [\"Becoming.Branching.Returns\", \"Becoming.Web.Restored\", \"Becoming.Dependence\", \"Becoming.Flow.closes_through_coupling_apart\", \"Becoming.Pace.never_reads_loses\", \"Becoming.Pace.never_reads_lost\"]。fit 把 Switching.fixed_loses 改为「例（Switching.fixed_loses、Switching.changing_regains），一般律 Pace.never_reads_loses 需规则之律合并组态」。"
+  },
+  {
+   "concept": "闭（closure：律永不离开之区域；闭不因形式即为失）",
+   "name": "闭",
+   "verdict": "revise",
+   "issues": "AI读法。锚与章 §10 一致，出处有三处问题。(1) 朱熹「否閉塞也…正與泰反」的闭塞是天地不交（不通），不是律永不离开的区域；在消息之律下否会回返（mapper 在 zhuxi-pi 条自己也说明了），作为闭的出处是字面对应。(2) 复大象「先王以至日閉關，商旅不行，后不省方」与 C04 的「闭关＝Flow.ClosedAt」用同一句而锚不同，须一致。(3) fit 说老子五十二章与复大象的「闭」「皆为护」，把评价读入了经文：章 §10 说，哪个组态值得保持不在律中；复卦闭关的护义（养初生之阳）出自注疏。老子二十七章「善闭无关楗而不可开」是不可开者，结构上属成闭。",
+   "fix": "attestations 删朱熹否注，移到 course 作「闭塞＝不交，与吸收区域之闭不同」。复大象注明「与 C04 闭关（Flow.ClosedAt）同句，须由整合者统一」。fit 删「皆为护，与此相合」，改为：「闭只是吸收区域；它是否护，由比较定，不在闭的定义中（章 §10）。」老子二十七章移到成闭条。"
+  },
+  {
+   "concept": "成闭（achieved closure：闭而不复开）",
+   "name": "成闭",
+   "verdict": "keep",
+   "issues": "AI读法。锚 Law.DrawnInto.never_back、Invariant.locks_out、Run.locked_in 与章 §10 一致。not_carried 的「老子27以『不可开』为善的评价」误读了「善」：二十七章「善行无辙迹，善言无瑕谪；善数不用筹策；善闭无关楗而不可开」的「善」是善于（技能），不是价值评价。",
+   "fix": "not_carried 中该项改为：「老子二十七章之『善』是善于（技能），经文不评价此闭；早期文本以成闭为恶的判语不被携带。」锚可增 Law.Drawn.not_returns、Law.lost_drawn（章 §10 同行）。"
+  },
+  {
+   "concept": "护闭（protective closure：于机去掉其后不能再得之步，D52）",
+   "name": "护闭",
+   "verdict": "revise",
+   "issues": "AI读法。(1) concept 用「关节点」，应当用已采用之名「机」（D52）。(2) Branching.loss_passes_juncture 有前提「s 回返」，且是双重否定形式；只有在组态可列举、步可判定时才有存在形式。fit 没写。(3) 章 §10 说：护闭与成闭是机上的同一操作，一去丧失之步，一去保持之步，二者都不带评价；哪一组态值得保持不在律中。not_carried 应写这一点。(4) 出处方面，苏辙五十二章注「悦之為害始小而浸大知小之將大而閉之可謂明矣」更合：见其小而在机上闭之，并与已采用之「明」相连。复大象闭关与 C04 冲突；苏辙「塞而閉之非絶物也」只说闭不等于绝。",
+   "fix": "concept 改为「于机（D52）去掉其后不能再得之步以保持之」。fit 增：「前提：s 回返；凡丧失经过机，是双重否定形式。」not_carried 增：「护闭与成闭是机上同一操作，评价不在律中；哪一组态值得保持由比较定。」attestations 增 LC-SZ-ALL「知小之將大而閉之可謂明矣」（注·宋明，北宋苏辙）。lean 增 \"Becoming.Branching.juncture_iff\"。"
+  },
+  {
+   "concept": "元闭（meta-closure：规则持守结果；只扰动状态被吸回）",
+   "name": "元闭",
+   "verdict": "keep",
+   "issues": "AI读法。锚 Law.rule_absorbing、Law.perturbation_reabsorbed 与章 §10 一致。韩非「時移而治不易者亂」作出处，结构是「规则不随之变则有所失」，与 Pace.never_reads_loses 同读；元闭是同一结构从「规则冻结」一侧读出，fit 宜说明。心度篇作者与编次有争议（FA1-S-H54 源注）。",
+   "fix": "fit 增：「韩非句从『规则不变而失』一侧读，与 Pace.never_reads_loses 相接。」layer 增「编次与作者有争议」。"
+  },
+  {
+   "concept": "伪开（pseudo-openness：由一部分、一段或状态读出而整体历程所无的开）",
+   "name": "伪开",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 唯一出处是老子五十二章「开其兑，济其事，终身不救」。经文没有「读法错置」之义；条目把它对到伪开 I 的 Flow.joint_excess_ends（共同超取），是强配，经文里没有多个取者。苏辙注「世人開其所悦以身徇物往而不反」更合：开所悦（状态上、短期的开）而往而不反（被吸入、不回返），即伪开 II（短期开，长时闭），加上 Law.drawn_iff_not_returns。「悦之為害始小而浸大」合「断裂之前，耦合进来的东西界定不了离断裂多远」（Web.break_not_bounded）。(2) lean 中伪开 II 缺 Web.break_not_bounded，伪开 III 缺 Law.rule_absorbing（都是章 §10 的锚）。(3) not_carried 应写章 §10 排除的「伪开为欺」判语。",
+   "fix": "attestations 增 LC-SZ-ALL「世人開其所悦以身徇物往而不反」（注·宋明，北宋苏辙），作伪开 II 的注层出处；老子五十二章标「经文无读法错置义，伪开之读据苏辙注」。lean 改为 [\"Becoming.Pair.own_not_joint\", \"Becoming.Flow.joint_excess_ends\", \"Becoming.Renewable.prefix_does_not_decide\", \"Becoming.Web.break_not_bounded\", \"Becoming.Law.rule_absorbing\", \"Becoming.Law.perturbation_reabsorbed\"]。not_carried 增「『伪』的欺诈判语（章 §10 排除）」。"
+  },
+  {
+   "concept": "稳（扰后不坍、仍续；与元闭同一结构）",
+   "name": "稳",
+   "verdict": "keep",
+   "issues": "AI读法。与章 §10「稳与元闭是同一结构」一致（Law.perturbation_reabsorbed）。pre_qin false 正确（字后起）。庄子「攖寧也者，攖而後成者也」的结构合，但「无不毀也，无不成也」兼毁成，不只说稳（见 zhuangzi-ying-ning 条）。程颢「定」的工夫论层已排除。",
+   "fix": "无须改；可选在 fit 注「攖宁的全称『攖而後成』只在下一组态取决于规则时成立」。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yichuan-fu-tiandi-sheng-wu-zhi-xin",
+   "verdict": "revise",
+   "issues": "AI读法。(1) RO 已有同句 ru-chengyi-fu-tiandi-zhi-xin，判为定域：以 Law.lossless_iff_returns、Flow.whole_not_new_of_rest_idle、Flow.new_from_rest_or_open、Law.rests_iff 读「动之端」，并注明「心」的语法脊柱不承接。本条没链 ro_passage，另立 divergence，换了一套锚，与 RO 不一致。(2) Clearing.center_not_derived 说的是 Clearing 例中估值中心沿依赖不能导出（立场中立与活的意义在该估值下不成立），不是「生成不需要中心」，用来驳「心」是误用。(3)「生起从一个微小的上升开始」不在任何 Lean 中。Flow.rise_netGiver 只说跨步上升必有净给予者（计入其余）。(4) 一阳来复在消息之律下是回返（Hexagram.waxWane_returns），按 D49 是不息，不是生生。",
+   "fix": "ro_passage 填 ru-chengyi-fu-tiandi-zhi-xin；kind 改 scope，与 RO 一致：动之端相合，「心」的语法不承接。declarations 改用 RO 之锚（Law.lossless_iff_returns、Flow.whole_not_new_of_rest_idle、Flow.new_from_rest_or_open、Law.rests_iff），删 Clearing.center_not_derived 与「微小的上升」句。reading 加：「一阳复是回返；在有界之律中，它是不息，而非生生（D49）。」"
+  },
+  {
+   "id": "feng-shang-liu-qu-wu-ren",
+   "verdict": "revise",
+   "issues": "AI读法。World.arising_opens 的前提（世界有清单、关系项具身、流平衡且耗散）没写。「闃其无人」读作「族内已无被支持者」是 AI 读入，须标明。Flow.unsupported_stays 的前提（需求不松、只有成员给成员）写了，Law.returning_absorbing 用得对。",
+   "fix": "World.arising_opens 后加「（在有清单、关系项具身、流平衡且耗散之世界中）」；「凶只在……时成立」前加「AI读法：若读『闃其无人』为族内已无被支持者，」。"
+  },
+  {
+   "id": "daguo-ku-yang-sheng-ti",
+   "verdict": "keep",
+   "issues": "AI读法。scope 判法合适：「枯杨生稊」恰在根仍被支持之处成立。Flow.gains_from_supported 的前提除「需求不松」外，还有流平衡、只有活动者给予、活动需要支持，条目缺后三者。",
+   "fix": "可选：Flow.gains_from_supported 后补「（流平衡、只有活动者给予、活动需支持、需求不松）」。"
+  },
+  {
+   "id": "shuogua-shui-huo-xiang-dai-cheng-wu",
+   "verdict": "revise",
+   "issues": "AI读法。RO shuogua-tiandi-dingwei 明言「『然后能变化』的因果句脊柱未证，一致的只是配对结构」。本条以 Flow.rise_netGiver 补出「成物在交换之后」，覆盖了 RO 的谨慎，而且把「成物」（形成之成）混同为「一族存量上升」。rise_netGiver 只说上升必有净给予者，不给「交换然后能变化、成万物」的因果顺序。kind 判 agreement 也就超过了配对结构的范围。",
+   "fix": "删 Flow.rise_netGiver 与「本簇补后半句」一段，加：「『然后能变化，既成万物』的因果句脊柱未证（同 RO）；相合只及配对结构。」names_used 删「益」。records 删 where-novelty-gain-comes-from。"
+  },
+  {
+   "id": "xugua-wei-ji-zhong-yan",
+   "verdict": "revise",
+   "issues": "AI读法。(1) World.arising_opens 的前提没写；Flow.new_beyond_every 要第一定律，也没写。(2) RO wfz-weiji-tongshi（王夫之：卦序首尾不是时间的始终；Hexagram.process_returns_iff_ends 等）未链。(3)「这是『未』一相的结构」过强：卦表有限，未济居末是排列之事。条目前文已说明这一点，末句与前文冲突。",
+   "fix": "加两处前提：「（有清单、具身、平衡且耗散）」「（第一定律之下）」。ro_passage 或 reading 链 wfz-weiji-tongshi，作注层对照。末句改为：「序卦以『物不可穷』给出『未』的字义；其结构证据在开放的世界，不在卦表。」"
+  },
+  {
+   "id": "tai-daxiang-cai-cheng-fu-xiang",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Restoring.Inflow.widens 和 Transfer.mixed 都是见证。一般律是 Flow.Balances.widens_iff_within_margin，以及 Web.Mixed／Web.mixed_iff_adds（后者在延续条件下）。(2)「财＝裁」、「裁是限定，辅是补给」是训释层与 AI 读法，未标。",
+   "fix": "declarations 改为 Flow.Balances.widens_iff_within_margin、Web.Mixed、Web.mixed_iff_adds，Restoring.Inflow.widens 与 Transfer.mixed 标为「例」。reading 首句加：「『财』读作『裁』依注疏训释；裁为限定、辅为补给是 AI 读法。」"
+  },
+  {
+   "id": "tongren-yu-zong-lin-dao",
+   "verdict": "revise",
+   "issues": "AI读法。两个锚说错了。(1) Web.AdmitsWithin.narrow 的内容是：在一区域内成立者，在其每一子区域内也成立。它不是「区域内的容许比全体为狭」。(2) Flow.Balances.comparison_within_reach 的内容是：意义覆盖部分所及之处时，保留比较由包含决定。它不是「比较只在所及之内成立」。适用的是 Web.LosesBeyond.narrow（区域外之失，在其内每一子区域外也失）和 Web.includes_iff_within_every（全体之赅即每一区域内之赅）：只在「宗」内比较，可以漏掉宗外之失。Clearing.loses_beyond 是这一点的见证。records 的 comparison-within-reach 也就不对。",
+   "fix": "declarations 改为 Web.LosesBeyond.narrow、Web.includes_iff_within_every、Clearing.loses_beyond（例）。reading 改写为：「全体之赅恰是每一区域内之赅（Web.includes_iff_within_every）；只在宗内比较，宗外之失不入比较（Clearing.loses_beyond 为例），而区域外之失在其内每一子区域外仍是失（Web.LosesBeyond.narrow）。」records 改为 loss-beyond-a-region。"
+  },
+  {
+   "id": "lin-daxiang-rong-bao-wu-jiang",
+   "verdict": "reject",
+   "issues": "AI读法。「教思无穷，容保民无疆」是君子德量的规范性夸辞，不是关于存量或所容之界的命题。条目把「无疆」读成存量无界，再用 Flow.whole_bounded_of_rest_idle、Flow.excess_bounded 去限定，是由「容」字而来的字面对应，并把修辞当作全称断言。",
+   "fix": "删去此条。「容」的出处用墨经与大学；此句至多作「容」的字义例，不立对应。"
+  },
+  {
+   "id": "huan-qi-qun-guang-da",
+   "verdict": "keep",
+   "issues": "AI读法。scope 判法合适：偏去一部分是否使所容变广，取决于这一部分做什么。Clearing.narrows 与 Restoring.Inflow.widens 作两例，以 Flow.Balances.widens_iff_within_margin 给出界线，结构对。「光大」读作所容变广是 AI 读法，已标。",
+   "fix": "可选：两条见证在 reading 中标明为「例」，一般条件补 Flow.Balances.narrows_of_consumed。"
+  },
+  {
+   "id": "xici-ri-xin-sheng-de",
+   "verdict": "revise",
+   "issues": "AI读法。条目依赖把「日新」读作「每步皆新、不重访」。孔疏同处释为「日日增新」，韩注「體化合變」，史义是更新、增益（见日新名条）。Flow.whole_not_new_of_rest_idle 要「有界整体，其余皆闲」，已写。漏 Web.rises_late_of_new。",
+   "fix": "reading 首句改为：「若以日新为每步皆新（本理论的约定；孔疏释为『日日增新』，史义为更新），脊柱证明这样的新需要增益……」declarations 增 Web.rises_late_of_new。kind 保持 scope。"
+  },
+  {
+   "id": "xici-shen-si-shu-wu-suo-shi",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「其无所失矣」的「失」是过失：慎行此术则无过（承「藉用白茅，无咎」）。它不是有意义之延续的丧失，以 Flow.Balances.loses_iff_beyond_margin 对之是字面对应。(2)「在延续条件之下（陈述而未断言）」没有必要：R31/R34 后，loses_iff_beyond_margin 对任何意义成立，不需要这个条件。(3) 经文没有给出「慎」是一部分对所需条件的净汲取不越出余地这一交换结构。",
+   "fix": "删「在延续条件之下（陈述而未断言）」。reading 须写出「慎」作为「一部分之净汲取守在余地之内」的文本依据，并注明「失」是过失义。若写不出依据（经文只言谨慎之术），改判 reject。"
+  },
+  {
+   "id": "xici-kai-wu-cheng-wu",
+   "verdict": "reject",
+   "issues": "AI读法。脉络记录 WP-XCS-C11-S01-R01 把「开物成务」读作认知开启与事务完成（cognitive 栏：「认知开启、事务完成与处理不确定性」）。条目读作「一部分使原不被容许者得以形成（辟）」，是由「开」字而来的字面对应。mapper 自己也注了「此对应较弱」。Ranking.possible 与经文无关。",
+   "fix": "删去此条；「开」与「辟」的出处不用此句。"
+  },
+  {
+   "id": "xici-yi-he-yi-pi",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Becoming.Web.Returns 不存在：R30 改名为 Web.Restored（一个依赖再被满足），组态回返是 Law.Returns 或 Branching.Returns。records 的 becoming-return-grades 须对应更新。(2)「一阖一辟谓之变」是时间上的交替，对应 Web.LosesSupport.falls／Web.GainsSupport.rises（跨步的失与得）；而 Flow.Balances.supported_of_net_give／admits_of_net_draw 是一部分的反事实作用。reading 把二者合成「同一结构」。(3)「往来不穷」若读为回返，在易的有界组态上是不息（D49）。",
+   "fix": "Web.Returns 改为 Law.Returns（或 Hexagram.waxWane_returns）。reading 分两层：「阖辟作为跨步之失与得（LosesSupport.falls、GainsSupport.rises），此层相合」；「一部分之阖需净汲取、辟需净给予（反事实），是另一层」。末加：「往来不穷作回返，是不息，不即是生生（D49）。」"
+  },
+  {
+   "id": "xici-tiandi-da-de-yue-sheng",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Becoming.g0_of_unrestricted 不存在，R30 改名为 livingSignificance_of_unrestricted。records 的 one-axiom-yields-g0 与 axiom-decomposition 是改名存根，新 id 是 continuation-condition-yields-living-significance 与 continuation-condition-decomposition。(2)「生」在此对应生成（生生之向），不是谓词 living（D1 修订：生生不是 living）。livingSignificance 说的是 living 的意义，与以生为德不是一事。(3)「『大德曰生』在本理论中是条件下的定理」不当。延续条件本身是全称陈述，活的意义是其实例；「大德」（较好）在 C 与不变性一步，不在条件之中。",
+   "fix": "declarations 改为 Becoming.livingSignificance_of_unrestricted；records 改为 continuation-condition-yields-living-significance、continuation-condition-decomposition。末段改写为：「『生』读作生成（生生之向），非 living。延续条件下活的意义成立，是条件的实例；以生为『大德』（较好）需要 C 与不变性一步。故此句是一项比较承诺的表述，不是定理，更不是天地之意志。」"
+  },
+  {
+   "id": "xici-qiong-ze-bian",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「穷」没有映射。穷是无路可续，脊柱中历程不能继续之处无运行（Onward.run_iff_continues，有限组态中）。(2)「通则久」的「久」与 C05 的「久」（经由变化而持续）须一致；本条读作「回返者自身为吸收区域，故可久」，未对照 C05。(3) Law.drawn_iff_not_returns 的读法正确：穷不蕴涵变，穷而锁定（成闭）同样可能。",
+   "fix": "declarations 增 Onward.run_iff_continues，作「穷＝不能继续则无运行」的锚。reading 加：「『久』与 C05 之久对照，由整合者统一。」"
+  },
+  {
+   "id": "xici-sheng-sheng-zhi-wei-yi",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Becoming.Web.Unceasing.regeneration_recurs 不存在：R30 改名为 activeRenewer_recurs，它属不息（D5），其记录明言更新不蕴涵生成；结论是双重否定，「更新反复出现」应写作「更新不从任何一步起停止」。(2)「所生者成为再生的给予者」不是 Flow.gains_from_supported 所说（见生生名条）。(3) 没纳入疏层：孔疏「生生，不絕之辭。陰陽變轉，後生次於前生，是萬物恒生」，韩注「陰陽轉易，以成化生」，都是相续义；也没纳入 D49：无损回返有不息而无生生。(4) G1 的陈述可作缺口，但须注明：即使证得，也只是一条支持之链，不是生生。获得支持的形成可以落在狭或混合的部分中，而生生需要方向（广）。",
+   "fix": "declarations 中 regeneration_recurs 改为 Web.Unceasing.activeRenewer_recurs，并注「属不息 D5」。删「所生者成为再生的给予者」作为既有结构的说法。reading 加：「系辞此句的疏义是相续不绝；在易的有界组态上它是回返，按 D49 是不息而非生生；本理论以生生名 D1 是约定。」gap G1 后加：「即使证得，支持之传递不即是生生：须另加方向（Web.Widens），并处理新类（Flow.GrownBy）。」"
+  },
+  {
+   "id": "xici-kun-xi-pi-guang-sheng",
+   "verdict": "keep",
+   "issues": "AI读法。Flow.Balances.closes_nothing 与 widens_iff_within_margin 用得正确，Restoring.Inflow.widens 已标为「其一例」。「翕」读作所取、「辟」读作所给是 AI 读法，已标。坤的配属不携带。",
+   "fix": "无。"
+  },
+  {
+   "id": "hanzhu-qu-cheng-cheng-bian-ying-wu",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Switching.fixed_loses 是二态见证。一般律是 Pace.never_reads_loses（不读的规则在其律合并组态时有所失）与 Pace.never_reads_lost；Switching.changing_regains 是例。(2) kind 宜为 scope。「不繫一方則物宜得」是成功的全称，脊柱不给：它只说固定规则（其律合并组态时）必有所失，变化的规则可以复得（例），不说随变即得。(3) RO xici-fanwei-buyi（「曲成万物而不遗」：对组态成立，对带历史的展开不成立）未链。",
+   "fix": "declarations 改为 ExchangeLaw.RespondsTo、ExchangeLaw.response_not_fixed_by_coupling、Pace.never_reads_loses，Switching.fixed_loses 与 Switching.changing_regains 标为「例」。kind 改 scope。reading 加：「『物宜得』的全称不成立：固定规则在其律合并组态时必失，不读之外并无『随变即得』之律。」ro_passage 或 reading 链 xici-fanwei-buyi。"
+  },
+  {
+   "id": "kongshu-ji-dao-shun-li-yang-wu",
+   "verdict": "revise",
+   "issues": "AI读法。records 的 axiom-decomposition 是改名存根，新 id 是 continuation-condition-decomposition。「继」对应 Flow.gains_from_supported，须写其前提（平衡、只有活动者给予、活动需支持、需求不松）。其余判法正确：善的评价放在 C 与不变性一步，理不作先在之理。",
+   "fix": "records 改为 continuation-condition-decomposition。Flow.gains_from_supported 后加前提。"
+  },
+  {
+   "id": "zhuxi-pi-bi-se",
+   "verdict": "revise",
+   "issues": "AI读法。「否閉塞也」的闭塞是天地不交（无交换），不是理论的「闭」（律永不离开的区域）。条目说「此处的闭塞是会回返的闭」：在消息之律下，回返的是整条轨道，它作为吸收区域包含泰与否；否本身不是闭。把「闭塞」对到「闭」是字面对应。",
+   "fix": "reading 改为：「否的『闭塞』是不交，不是理论之闭（吸收区域）；在消息之律下否会回返（Hexagram.waxWane_returns），故也不是成闭。」names_used 删「闭」，只保留「成闭」（作否定之例）。"
+  },
+  {
+   "id": "zhuxi-gu-zi-xin-wei-hou-shi-zhi-duan",
+   "verdict": "keep",
+   "issues": "AI读法。结构合：关节点即机（D52），已注双重否定形式。缺前提「该组态回返」。「自新为后事之端」读作护闭是 AI 读法；哪一组态值得保持不在律中。",
+   "fix": "可选：reading 中「关节点」改为「机（D52）」，并补「前提：该组态回返」。"
+  },
+  {
+   "id": "laozi-11-dang-qi-wu-you-che-zhi-yong",
+   "verdict": "revise",
+   "issues": "AI读法。RO lao-11-dang-qi-wu 已有同章，判 scope，并明记剩余：「经文的『无』是被结构围成的空处，脊柱的余裕是数量差，不是被边界围成的区域。」本条未链 RO，改判 agreement，也没写这一剩余。",
+   "fix": "ro_passage 填 lao-11-dang-qi-wu；kind 改 scope；补 RO 的剩余句；declarations 沿用 RO（增 Web.Admits.mono、Restoring.Inflow.widens 作例）。"
+  },
+  {
+   "id": "heshang-51-de-yi-zhu-bu-qi",
+   "verdict": "revise",
+   "issues": "AI读法。判 divergence 于「一主」（单一中心层）正确。但 Clearing.center_not_derived 误用（见 yichuan 条：它说的是估值中心不沿依赖导出）。另与 heshang-34 不一致：「道虽爱养万物」同样是单一养育之源，那里却判 agreement。",
+   "fix": "删 Clearing.center_not_derived。以 Flow.rise_netGiver（给予者是任一关系项，计入其余）与 Flow.rise_given_by_supported（在平衡等前提下，由某一被支持的参与者给予）说明「给予不归一源」的结构。与 heshang-34 统一判法。"
+  },
+  {
+   "id": "heshang-05-kong-xu-wan-wu-zi-sheng",
+   "verdict": "revise",
+   "issues": "AI读法。「物之生不需要容许与交换之外的另一个造者」是表示的特征（模型中没有造者变量），不是定理。「自生」对应的是支持即现存水平之容许这一无前提的等价，不是对「无造者」的证明。",
+   "fix": "删「不需要……另一个造者」的断言，改为：「在脊柱的表示中，支持只由容许与交换给出（Web.supported_iff_admits），『自生』在此表示中成立；是否另有造者，不是脊柱所证。」"
+  },
+  {
+   "id": "heshang-34-ai-yang-bu-shou-qu",
+   "verdict": "revise",
+   "issues": "AI读法。「道虽爱养万物」以道为唯一的养育者，属单一中心／先在根据之层，条目没标；与 heshang-51 判 divergence 不一致。「不收取」即无净汲取，所以不阖（Flow.Balances.closes_nothing），这一层结构是对的。",
+   "fix": "kind 改 scope；reading 加：「道作为唯一养育者之层不被携带（与 heshang-51 一致）；相合只及『不收取则不阖』。」"
+  },
+  {
+   "id": "laozi-02-fu-wei-fu-ju-shi-yi-bu-qu",
+   "verdict": "revise",
+   "issues": "AI读法。「功成而弗居」是不据有其功，不是「不净汲取」；「是以不去」是功不离去，不是「支持不断」。Web.renewing_keeps_support（更新者每步被支持）与弗居无关。RO lao-51-sheng-er-bu-you 已用 Pool.difference_belongs_to_the_joint 说「不恃」：一部分造成的差别不属于它自己，这恰是「功成而弗居」的结构。",
+   "fix": "declarations 改为 Pool.difference_belongs_to_the_joint、Dependence.differenceOnlyTogether_iff。reading 改为：「功（一部分造成的差别）不属于该部分，可以只由共同者造成，故无可居。」删 renewing_keeps_support、renewing_not_consuming 与「不去即支持不断」；names_used 删「阖」。"
+  },
+  {
+   "id": "laozi-08-shan-li-wan-wu-er-bu-zheng",
+   "verdict": "keep",
+   "issues": "AI读法。沿用 RO，异文（帛书甲「有靜」、乙「有爭」）已注。补句 Flow.Balances.closes_nothing 用得正确：所给不少于所取的部分不阖。",
+   "fix": "无。"
+  },
+  {
+   "id": "laozi-18-da-dao-fei-you-ren-yi",
+   "verdict": "revise",
+   "issues": "AI读法。records 的 testing-within-registration 是改名存根，新 id 是 testing-within-couplings。结构读法（只以阈值耦合的条件，满足时其差别不被识）合理；把衰退史一层归 laozi-38 处理也对。",
+   "fix": "records 改为 testing-within-couplings。"
+  },
+  {
+   "id": "suzhe-18-da-dao-fei-er-hou-ren-yi-jian",
+   "verdict": "revise",
+   "issues": "AI读法。records 的 testing-within-registration 是改名存根。结构合：「民不知」即满足时不被识，「见」即阈值失守时被识。「大道」作先在根据不携带，已注。",
+   "fix": "records 改为 testing-within-couplings。"
+  },
+  {
+   "id": "laozi-31-le-sha-ren-zhe",
+   "verdict": "revise",
+   "issues": "AI读法。(1) records 的 axiom-decomposition 是改名存根，新 id 是 continuation-condition-decomposition。(2)「杀是越出余地的汲取，是绝生之部分」：杀有所阖（某一形成不再被支持），但绝生（狭）还要求无所加。一部分可以同时阖某些、辟某些，即混合；RO 原读用 Transfer.unordered，正是指这种情形。",
+   "fix": "records 改为 continuation-condition-decomposition。「是绝生之部分」改为：「有所阖；是否绝生（狭），看它是否另有所加，若有所加则为各有所长，排序需度量（Transfer.unordered）。」"
+  },
+  {
+   "id": "laozi-38-shi-dao-er-hou-de",
+   "verdict": "keep",
+   "issues": "AI读法。沿用 RO，divergence 判在「起点完满、分化即丧失」，正确；「不能从后出推出退化」合生成与退化不重叠。",
+   "fix": "无。"
+  },
+  {
+   "id": "laozi-64-fu-wan-wu-zhi-zi-ran",
+   "verdict": "keep",
+   "issues": "AI读法。沿用 RO（scope）。「辅是给予而不净汲取」作 Flow.Balances.closes_nothing 是 AI 读法；「无为故无败」被限定为「不净汲取」义，并指出在机上仍须有一步，合章 §10 护闭行。",
+   "fix": "可选：「关节点」改为「机（D52）」。"
+  },
+  {
+   "id": "laozi-51-sheng-er-bu-you",
+   "verdict": "revise",
+   "issues": "AI读法。本簇补句「生而不有是给予而不取回所生，所给不少于所取者什么也不阖」，把占有混同为净汲取。「不有」是不据有；RO 正说「脊柱没有占有关系」，补句与 RO 冲突。",
+   "fix": "删本簇补句，或改为「不有：脊柱无占有关系（同 RO）」。names_used 删「阖」。"
+  },
+  {
+   "id": "suzhe-55-sheng-bu-ke-yi",
+   "verdict": "revise",
+   "issues": "AI读法。苏辙同章有「遇物而知反其本者也」「得本以應萬物者也」（先在之本），又有「益生使氣不能聽其自然日入于剛强而老從之則失其赤子之性矣」（固定之性）。这与 wangbi-20（「自然已足」＝固定性分）判 divergence 的层次相同，本条却只作 scope，没标这两层。「所容可由从外给予而变广，故生并非不可益」的定域是对的。",
+   "fix": "reading 增：「同章的『本』与『赤子之性』属先在根据与固定之性之层，不被携带（与 wangbi-20 一致）。」kind 保持 scope。"
+  },
+  {
+   "id": "laozi-15-dong-zhi-xu-sheng",
+   "verdict": "keep",
+   "issues": "AI读法。scope 判法合适：徐生要从仍被支持者处起。Flow.nothing_supported_stays 已写「需求不松」。Flow.gains_from_supported 的其余前提没写，影响小。",
+   "fix": "可选：补 gains_from_supported 的前提（平衡、只有活动者给予、活动需支持）。"
+  },
+  {
+   "id": "laozi-50-sheng-sheng-zhi-hou",
+   "verdict": "keep",
+   "issues": "AI读法。动宾义（厚养其生）辨析正确，与系辞「生生」词义相分、结构相合的判法合适。缺注层平行：王弼注「岂非生生之厚」（DS01，LC2-WB-C50-R02）以动物避害而终入「无生之地」说同一结构。",
+   "fix": "rest 的 parallels 增 LC2-WB-C50-R02：王弼五十章注「岂非生生之厚」（注·魏晋南北朝，曹魏王弼），同一结构。"
+  },
+  {
+   "id": "wangbi-20-zi-ran-yi-zu-yi-zhi-ze-you",
+   "verdict": "keep",
+   "issues": "AI读法。divergence 判在固定的性分，正确；「强改则伤」一面另有对应，处理得当。Web.Forms、Web.Dissolves、Restoring.Adapting.restores（见证）支持「需求随形成而变」。",
+   "fix": "可选：Restoring.Adapting.restores 标为「例」。"
+  },
+  {
+   "id": "wangbi-39-shou-yi-qing-bu-shi",
+   "verdict": "revise",
+   "issues": "AI读法。「守一」的「一」是「为功之母，不可舍也」，属先在根据之层（RO §7 第一层）。条目判 scope，又说「这正是 D1 的『保存生成者』」，同时说一不被携带：取其结构、弃其根据可以，但判法须与 heshang-51（「一主」判 divergence）一致。Web.renewing_keeps_support 只说更新者每步被支持。",
+   "fix": "「这正是 D1 的『保存生成者』」改为「与 D1 之『保存生成者』结构相近（AI 读法）」。明标「一／母属先在根据之层，不被携带」，与 heshang-51 统一处理。"
+  },
+  {
+   "id": "wangbi-49-se-qi-jing-lu",
+   "verdict": "revise",
+   "issues": "AI读法。Clearing.narrows 是见证。Flow.Balances.loses_iff_beyond_margin 在 R31/R34 后对任何意义成立，「在延续条件之下」不必要。「塞其径路就是阖」是对的。",
+   "fix": "declarations 改为 Flow.Balances.supported_of_net_give（阖需净汲取）、Flow.Balances.loses_iff_beyond_margin、Flow.Balances.narrows_of_consumed，Clearing.narrows 作「例」。删「在延续条件之下」。"
+  },
+  {
+   "id": "daxue-qin-shi-neng-rong",
+   "verdict": "revise",
+   "issues": "AI读法。Restoring.Inflow.widens 与 Clearing.narrows 都是见证。「能容他人之技」读为「使他者之所能得以形成」是 AI 读法；「违之俾不通」宜读为阖（阖需净汲取）。",
+   "fix": "declarations 改为 Web.supported_iff_admits、Flow.Balances.supported_of_net_give、Flow.Balances.widens_iff_within_margin，Restoring.Inflow.widens 与 Clearing.narrows 标为「例」。"
+  },
+  {
+   "id": "zhongyong-zhi-zhong-he-wan-wu-yu",
+   "verdict": "keep",
+   "issues": "AI读法。沿用 RO（中和＝Becoming.Regulation），把「万物育」限定在所及之内，合 Flow.Balances.comparison_within_reach（意义覆盖所及时，比较由包含决定）。中庸的成书层次有争议，已标。",
+   "fix": "可选：增 Web.includes_iff_within_every，说明全体之比较即每一区域内之比较。"
+  },
+  {
+   "id": "zhongyong-zan-tiandi-zhi-hua-yu",
+   "verdict": "keep",
+   "issues": "AI读法。scope 判法合适；「尽物之性」的固定之性与至诚的修养链已排除；Restoring.Inflow.widens 已标为例。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhongyong-cheng-ji-cheng-wu",
+   "verdict": "keep",
+   "issues": "AI读法。沿用 RO。补句「成己而成物是一形成之所给支持他者之形成」只说结构，不说必然；RO 注「成己必然成物不由这些定律给出」，补句与之不冲突。",
+   "fix": "可选：补句后加「不蕴涵成己必然成物（同 RO）」。"
+  },
+  {
+   "id": "zhongyong-wan-wu-bing-yu-er-bu-xiang-hai",
+   "verdict": "revise",
+   "issues": "AI读法。(1) RO ru-zhongyong-bing-yu-bing-xing 已有同句（scope；Excluding.three_courses、Flow.level_kept、Viability.Plan.zip_keeps、no_rule_decides_joint、Contextual.glues_iff_agree），本条未链。(2) Flow.joint_excess_ends 要 gated 前提（更新依赖于它所更新者），没写。(3) names_used 的「相赅」与此句没有结构关系。",
+   "fix": "ro_passage 填 ru-zhongyong-bing-yu-bing-xing，declarations 并入 RO 之锚。Flow.joint_excess_ends 后加「（更新依赖其所更新者之处）」。names_used 删「相赅」。"
+  },
+  {
+   "id": "mengzi-si-duan-kuo-chong",
+   "verdict": "keep",
+   "issues": "AI读法。沿用 RO；明确不取「扩充」为「广」之名（历程内的增长，不是两条路径的包含比较），正确。",
+   "fix": "无。"
+  },
+  {
+   "id": "xunzi-ke-yi-wei-yu",
+   "verdict": "revise",
+   "issues": "AI读法。「可」的锚（Web.Admits、supported_iff_admits）与名条（Onward.run_iff_continues）不一致，同名有二锚。「可以为禹」是被容许而未成，更合「容」；Onward.run_iff_continues 说的是历程能否继续，与「可以为」不是一事。",
+   "fix": "names_used 改为「容」（被容许而未成），删「可」；或在名条统一「可」之锚。二者择一，建议前者。Onward.run_iff_continues 移到 reading 作对照：「历程能否继续是另一问题」。"
+  },
+  {
+   "id": "daizhen-xia-xiao-er-jin-guang-da",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 戴震「狹小而今也廣大」说的是心知的耦合与辨识变广，即「明」，对应 Web.SelectsThrough.widen 与 Web.Excludes.widen（耦合增多则选择与排除增多）。这是耦合之广，不是 Web.Widens（水平路径所容许之形成的包含）。条目又说「即今之所容赅昔之所容而有所长（Web.Widens）」，一名二用。(2) records 的 selection-through-registration 与 testing-within-registration 是改名存根。",
+   "fix": "删 Web.Widens 与「即今之所容赅昔之所容而有所长」句，改为：「心知之广是耦合之增（明），与所容之广（Web.Widens）是两种结构。」records 改为 selection-through-couplings、testing-within-couplings。names_used 删「赅」「有所长」，「广」注为「耦合义，另一结构」。"
+  },
+  {
+   "id": "xunzi-yu-min-chu-shi-bai-bei",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「百倍」是有限倍数，不是无界增长；用 Flow.whole_bounded_of_rest_idle 限定「作为无界增长」，是在驳一个经文没有的主张。(2) Flow.Balances.supported_of_net_give 说「所给不少于所取则不阖」，不是「给予使形成增多」。(3) Flow.rise_given 要平衡前提。",
+   "fix": "删「作为无界增长被限定」。改为：「每一上升有净给予者（Flow.rise_netGiver，计入其余），故出实之增需田外之给（日、水、劳作之入）；裕民即所给不少于所取，故不阖（Flow.Balances.supported_of_net_give）。」declarations 以 Flow.rise_netGiver 替 Flow.rise_given。"
+  },
+  {
+   "id": "zhuangzi-xiang-ru-yi-mo",
+   "verdict": "revise",
+   "issues": "AI读法。「不如」是庄子的评价比较。条目说「『不如』在此恰是『广』」，把 C（以广为较好）读进了「广」。「江湖之水平赅涸泉之所容」也是 AI 设定，不是经文。Flow.unsupported_stays 读「相濡以沫只能延缓，不能复生」是对的。",
+   "fix": "改为：「若设江湖之水平广于涸泉（AI 设定），以『不如』判其较好是比较承诺（C），不在『广』之中。」Restoring.Inflow.widens 标为「例」。"
+  },
+  {
+   "id": "zhuangzi-hun-dun-zao-qiao",
+   "verdict": "revise",
+   "issues": "AI读法。(1) records 的 runaway-distance-unregistered 是改名存根，新 id 是 runaway-distance-uncoupled。(2) 补句用 Clearing.narrows（见证）说「浑沌之死」，但死是终结（一形成不再被支持），不只是所容变狭；RO 原读没有用 narrows。",
+   "fix": "records 改为 runaway-distance-uncoupled。补句改为：「浑沌之死是一形成之终结；善意之凿不改变其所为（Flow.act_unselected）。」删 Clearing.narrows，或改引 Flow.Balances.narrows_of_consumed，并写明其条件。"
+  },
+  {
+   "id": "zhuangzi-you-ren-bi-you-yu-di",
+   "verdict": "revise",
+   "issues": "AI读法。寓言中被保全的是刃（「刀刃若新」），被解的是牛。条目把「以无厚入有间」读作「不越出余地的作用、无所失」，却没说是哪一形成守在余地之内：无所失的是刀，牛之形成被全部解开。作为「余地」之名的出处可以保留。",
+   "fix": "reading 写明：「被保全者是刃；余地是节间与刃厚之差；牛之解不是无所失。」"
+  },
+  {
+   "id": "zhuangzi-tianxia-jie-you-suo-chang",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「不該不徧」是对全体（古之道术）而言：每家只得一察，不能赅全体。这是相对于全体的不赅（Web.includes_iff_within_every），不只是两家互不相赅（Mixed）。同段「耳目鼻口，皆有所明，不能相通」才是各有所长的例。(2) Transfer.unordered 与 Requirement.Routes.opposite_routes 是见证；一般律是 Web.mixed_iff_adds。G2（度量是比较承诺，不是待证之定理）处理正确。",
+   "fix": "reading 分两层：「百家之间：Web.Mixed（延续条件下 Web.mixed_iff_adds）」；「各家对全体：不赅（Web.includes_iff_within_every，全体之赅即每一区域内之赅）」。Transfer.unordered 标为例。可引同段「耳目鼻口，皆有所明，不能相通」作 Mixed 之例。"
+  },
+  {
+   "id": "zhuangzi-ying-ning",
+   "verdict": "revise",
+   "issues": "AI读法。kind 宜为 scope。「攖而後成」是全称：凡扰皆复成。脊柱只在「下一组态取决于规则而不取决于状态」时，扰动才被吸回（Law.perturbation_reabsorbed）。而且「无不毀也，无不成也」兼毁成，不只说稳。record_ids 为空（无脉络记录），应注明。",
+   "fix": "kind 改 scope；reading 加：「只在下一组态取决于规则而不取决于状态时成立；『无不毁』一面不被稳之结构覆盖。」注「无脉络记录，引文已核对冻结文本」。"
+  },
+  {
+   "id": "zhuangzi-sheng-sheng-zhe-bu-sheng",
+   "verdict": "revise",
+   "issues": "AI读法。Web.renewing_keeps_support 只给「每一步被支持」，不给「既不生起也不终止」。大宗师上下文（「殺生者不死，生生者不生」）中，使生者外于生死，原义属先在根据之层，更宜判 divergence；条目的「关系内读法」是 AI 的改造。",
+   "fix": "删「在这条历程中它既不生起也不终止」，改为「每一步被支持」。kind 改 divergence（先在之不生之源），附 AI 的关系内读法作为对照。"
+  },
+  {
+   "id": "hanfei-jielao-min-zhi-sheng-sheng",
+   "verdict": "revise",
+   "issues": "AI读法。Becoming.Web.Unceasing.regeneration_recurs 不存在，已改名为 activeRenewer_recurs，其结论是「更新活动不从任何一步起停止」（双重否定）。Flow.Balances.runs_down 要平衡且耗散，已写。「营生」（动宾）与系辞之义相分，判得对。",
+   "fix": "declarations 改为 Web.Unceasing.activeRenewer_recurs；reading 把「更新反复出现」改为「更新活动不从任何一步起停止」。"
+  },
+  {
+   "id": "laozi-27-shan-bi-bu-ke-kai",
+   "verdict": "revise",
+   "issues": "AI读法。「善闭」的「善」是善于，与「善行无辙迹，善言无瑕谪；善数不用筹策」并列，是技能，不是价值评价。条目据此称「老子把这种闭评为善……结构相同，评价相反」，是误读。「无关楗而不可开」对应吸收区域，这一层是对的。「Ren 旧文」之说应写作早期文本的判语（出处，不作评价之据）。",
+   "fix": "删「老子把这种闭评为善……正是评价不在定义中的例证」，改为：「『善』为善于，经文不评价此闭；早期文本以成闭为恶的判语不被携带。」kind 维持 agreement，只及吸收区域结构。"
+  },
+  {
+   "id": "laozi-52-sai-dui-kai-dui",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「开其兑，济其事」对到 Flow.joint_excess_ends（共同超取）是强配，经文没有多个取者。苏辙注「世人開其所悦以身徇物往而不反」读为开所悦而往而不反，即被吸入、不回返（Law.drawn_iff_not_returns）；「悦之為害始小而浸大」合断裂前距离不被识（Web.break_not_bounded），即伪开 II。(2)「塞其兑」读作护闭，须写明哪个组态值得保持不在律中（章 §10）。",
+   "fix": "declarations 改为 Law.drawn_iff_not_returns、Renewable.prefix_does_not_decide、Web.break_not_bounded、Branching.keeping_removes_at_juncture。reading 加苏辙注「世人開其所悦以身徇物往而不反」与「悦之為害始小而浸大知小之將大而閉之可謂明矣」（注·宋明）作注层依据；删 joint_excess_ends 句；加「塞兑作护闭是 AI 读法，保持何者由比较定」。"
+  },
+  {
+   "id": "hanfei-xindu-fa-yu-shi-zhuan",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Switching.fixed_loses 是见证。一般律是 Pace.never_reads_loses，要「规则之律合并组态」这一前提；Switching.changing_regains 是例。所以「時移而治不易者亂」只在这个前提下成立，kind 宜为 scope。(2) 心度篇的编次与作者有争议（FA1-S-H54 源注），layer 没标。",
+   "fix": "declarations 改为 Pace.never_reads_loses、Pace.never_reads_lost、Law.perturbation_reabsorbed、Law.rule_absorbing，Switching.fixed_loses 与 Switching.changing_regains 标为例。kind 改 scope：「固定规则必失只在其律合并组态时」。layer 加「编次与作者有争议」。"
+  },
+  {
+   "id": "mojing-sun-pian-qu",
+   "verdict": "revise",
+   "issues": "AI读法。墨经「謂其存者損」断定存者比兼为减。理论的偏去是反事实流，无此部分的水平可以广于有此部分的水平（部分阖时）。所以墨经的方向与理论不同，这是定域，不是相合。条目只说「以存者对照原兼」，略去了方向。",
+   "fix": "kind 改 scope。reading 加：「墨经断存者为损；理论中无此部分之水平可宽可窄，『损』的方向不被携带，相合只及去其体、以存者对照的比较结构（Flow.withhold、Flow.Balances.withheld）。」"
+  },
+  {
+   "id": "mojing-pian-qu-mo-jia-shao",
+   "verdict": "keep",
+   "issues": "AI读法。scope、置信低、训释分歧都已注明。「莫加少」是比较的前提（其余如故），不是普遍事实，以 Flow.respondsThroughCoupling_withhold 与 Flow.RespondsThroughCoupling 给范围，结构对。",
+   "fix": "无。"
+  },
+  {
+   "id": "mojing-yi-lei-bu-bi",
+   "verdict": "revise",
+   "issues": "AI读法。「异类」是不同的类，量纲不同（经说下「木與夜孰長？智與粟孰多？」：木之长与夜之长）。Mixed 却是同一类型形成在包含序上互不包含。二者相近而不同，判 agreement 过强。Transfer.unordered 与 opposite_routes 是见证。",
+   "fix": "kind 改 scope。reading 加：「异类不比是量纲之异；Mixed 是同类形成在包含序上的不可比，二者相近不同。」declarations 增 Web.Mixed、Web.mixed_iff_adds，见证标为例。"
+  },
+  {
+   "id": "mojing-qiong-bu-rong-chi",
+   "verdict": "revise",
+   "issues": "AI读法。「不容尺」是前方不能再容一尺，即有界（有穷），不是封闭（吸收区域）；条目「不容尺即封闭」混同了有界与闭。World.arising_opens 的前提没写。Web.unbounded_of_new 说的是存量无界，与「前方容尺」（空间延伸）结构不同。作为「容」之名的先秦出处可以保留。",
+   "fix": "kind 改 scope；「不容尺即封闭」改为「不容尺即有界」；World.arising_opens 加前提；Web.unbounded_of_new 改注为「相近：持续之新需存量无界，非空间延伸」。"
+  },
+  {
+   "id": "mozi-suo-tian-xia-yi-li",
+   "verdict": "keep",
+   "issues": "AI读法。scope 判法合适：Web.renewing_keeps_support 作为「终身无已」的条件，用得对，一次给予不保证终身；「天鄉其德」的意志之层不携带。Restoring.Inflow.widens 是见证。",
+   "fix": "可选：Restoring.Inflow.widens 标为「例」。"
+  },
+  {
+   "id": "mozi-gua-ren-zhi-dao",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Clearing.narrows 是见证。(2) Flow.joint_excess_ends 要 gated 前提（更新依赖其所更新者），没写。(3)「寡人即绝生：所容变狭至人口减少」：狭要求「无它时所容许者有它时有不被容许者，且无所加」。人口减少是终结之数，不是所容的包含比较。",
+   "fix": "declarations 改为 Flow.Balances.loses_iff_beyond_margin、Flow.Balances.narrows_of_consumed、Flow.joint_excess_ends（注前提），Clearing.narrows 作例。「寡人即绝生」改为：「越出余地之汲取有所阖；若另无所加则狭（绝生）；人口之减是形成之终结，不是包含比较本身。」"
+  },
+  {
+   "id": "huiyuan-hua-jin-yin-yuan-yong-xi",
+   "verdict": "revise",
+   "issues": "AI读法。divergence 判定正确。records 的 one-axiom-yields-g0 与 axiom-decomposition 是改名存根。「理论在延续条件之下以生生为方向」不对：条件本身不排序，方向（以广为较好）在 C 与不变性一步。",
+   "fix": "records 改为 continuation-condition-yields-living-significance、continuation-condition-decomposition。「在延续条件之下以生生为方向」改为「在延续条件之下、并以比较承诺 C（及不变性一步）以生生为方向」。"
+  }
+ ],
+ "missing": [
+  "生生系辞句的疏层史义：孔疏「生生，不絕之辭。陰陽變轉，後生次於前生，是萬物恒生」（YWH-H5，疏·隋唐），以及它与 §1 九句读法（D49）的对照：无损回返（Law.Lossless.returns）有不息而无生生；只有不回到旧组态（unheld_of_new、more_needs_open）可以是生。这是生生名条的关键约束。",
+  "王弼五十章注「岂非生生之厚」（DS01，LC2-WB-C50-R02，曹魏），老子五十章动宾义的注层平行。",
+  "一般狭律：Flow.Balances.narrows_of_consumed 与 Flow.Balances.not_narrows_of_renewed（R31/R34，对任何意义成立，无条件）。全簇以见证 Clearing.narrows 代替了它们。",
+  "Web.Widens 的界限：只比较固定类型的形成，新类之生长（Flow.GrownBy）不比较。成生、广、所容、生生的 not_carried 都缺这一项。",
+  "新而无尽需族外之给：Web.rises_late_of_new、Web.rises_late_of_newly_supported、Flow.newly_supported_from_rest_or_open（第一定律，无重复之族）。日新、未、益缺这些。",
+  "区域比较之律：Web.LosesBeyond.narrow、Web.includes_iff_within_every、Web.not_losesBeyond_whole。用于同人于宗、天下篇「不該不徧」、中和「万物育」，本簇误用了 Web.AdmitsWithin.narrow 和 comparison_within_reach。",
+  "Web.mixed_iff_adds：在延续条件下，各有所长恰是互加对方所缺的有意义者。它是各有所长的一般律，本簇只用了见证 Transfer.unordered。",
+  "规则之变的一般律：Pace.never_reads_lost、Pace.never_reads_loses（需规则之律合并组态），Switching.changing_regains（例）。转、法与时转、曲成三处只用了二态见证 Switching.fixed_loses。",
+  "开的锚：开非更多（Branching.Transit.keeps_not_returns），Onward.run_iff_returning，Branching.Returns 与 Web.Restored（代替已不存在的 Web.Returns）。",
+  "已有而未链的 RO 段：lao-11-dang-qi-wu（剩余：空处与量差）；ru-chengyi-fu-tiandi-zhi-xin（RO 判 scope，本簇判 divergence，冲突）；ru-zhongyong-bing-yu-bing-xing；xici-fanwei-buyi（曲成万物而不遗）；wfz-weiji-tongshi（未济与卦序首尾）；ru-daizhen-gong-sui-qi-sheng（「仁者，生生之德也」，与生生名条相关）；guiguzi-bai-he（阖之策术义相分）。",
+  "注层出处：苏辙五十二章注「知小之將大而閉之可謂明矣」（护闭，并连已采用之「明」）与「世人開其所悦以身徇物往而不反」（伪开 II、被吸入）；苏辙七十二章注「無廣狹淨穢之辨」（拒以广狭为评价）；宗密「先哲後俊各有所長」（各有所长成词首见于唐，评价义）。",
+  "被排除之义的出处：墨经经下「廣與脩」（广的度量义）；经说下「木與夜孰長？智與粟孰多？」（异类之异是量纲之异）；孟子「出于其类，拔乎其萃」（若改名为「有所出」，须排除其出众义）。",
+  "章 §10 crosswalk 中两行还没有中华名：护开（keep open），以及成生之限／绝生之限（限之二型，结构同护闭与成闭）。",
+  "与现代中文版（D36）的对照表：生成的／退化的；扩大、缩小、保持、混合；包含、超出；容纳；余量；净汲取、净给予；关闭、打开；扣留；生起、止息；开放。中华版的新名（成生、绝生、广、狭、相赅、各有所长、赅、有所长、容、余地、阖、辟、偏去、未）须逐一对照，免得同一概念有两名。",
+  "R30 改名表（development/r30-names/RENAME-TABLE.json）未用。Web.Returns 改为 Web.Restored；Web.Unceasing.regeneration_recurs 改为 activeRenewer_recurs；g0_of_unrestricted 改为 livingSignificance_of_unrestricted。五个记录 id 也已改名：axiom-decomposition、one-axiom-yields-g0、selection-through-registration、testing-within-registration、runaway-distance-unregistered，现为存根。digest spine-records.md 早于 R30，已过时，mapper 据它引了旧名。",
+  "跨簇冲突，须由整合者统一：C04 的闭关（Flow.ClosedAt）、损（Web.Depletes）、汲，对本簇的闭（复大象闭关）、益、阖；C05 的復（Law.Returns）、復足（旧 Web.Returns）、久，对本簇的转、开、穷则变通则久；C03 的不息（Web.Unceasing）、兼與體，对本簇的生生（activeRenewer_recurs）、偏去。",
+  "对 G1 的批评：支持之链（所生者给予后生者）即使证得，也不是生生，因为获得支持的形成可以落在狭或混合的部分中。D1 之律须另加方向（Web.Widens），并处理新类（Flow.GrownBy）；否则会把 D5（不息）当作 D1。",
+  "四个非关系层对本簇名的系统检查：单一中心（天地之心、一主、道爱养）；先在根据（一、母、本、生生者不生）；固定之性（赤子之性、自然已足、尽物之性）。本簇对同一层判法不一：heshang-51 与 heshang-34 不一，wangbi-20 与 suzhe-55 不一，wangbi-39 与 heshang-51 不一。",
+  "年代与层次标注：序卦、彖、象成书层有争议，部分条目未标；韩非子心度编次与作者有争议（FA1-S-H54）；FO2-KS-C 是承迁《金师子章注》宋代注文，不是「华严圆顿论」；无脉络记录的条目（ying-ning、sheng-sheng-zhe、jielao、laozi-27、laozi-52、xindu、墨经三条）应注明引文只核对过冻结文本。"
+ ]
+}

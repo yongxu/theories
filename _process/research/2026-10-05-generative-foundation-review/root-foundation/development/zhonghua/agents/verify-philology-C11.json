@@ -1,0 +1,554 @@
+{
+ "cluster": "C11 回路、反馈、阈值与调节",
+ "lens": "PHILOLOGY（逐条以 ctq.py text 核对全部 22 名的 64 条引证与 62 条目的全部片段：全部逐字在所标来源中，无一缺失。另核：src 层次、上下文义、出土本异文、脉络节点定义；顺带核对记录 id 与 Lean 声明是否存在。以下皆为 AI 判断。）",
+ "names": [
+  {
+   "concept": "环（loop of couplings）",
+   "name": "環",
+   "verdict": "revise",
+   "issues": "四条引文逐字合。(1) ZH1-S02「樞始得其環中」之環是门枢所入的环孔，义在〈环中〉之虚。sense_in_context 说「不取'中'」而取首尾相接，是字面借用，承载不了所称之义。(2) 主证孙子「如循環之無端」用的是复词「循環」（沿环而行），而 alternatives 以「循環」带后起必然义为由不取；须说明这里是动宾〈循—環〉，先秦义只是沿环而行、无端，没有必然交替。(3) 程颐「盛衰損益如循環」在卷三益卦卦首释序卦处（紧接「益序卦損而不已必益故受之以益」），不是「卦辞注」。(4) 漏了更切的先秦证：《庄子·寓言》「萬物皆種也，以不同形相禪，始卒若環，莫得其倫，是謂天均」（ZH1-S27，杂篇，年代有争议）。「始卒若環」正是首尾相接。",
+   "fix": "补入 ZH1-S27「始卒若環」作主证。ZH1-S02 改标为〈环之物形，'环中'取其虚〉的旁证，或删去。孙子一条注明「循環」在此为〈循—環〉。YD-CY3 的 locator 改为「伊川易传·卷三·益卦卦首（释序卦）」。"
+  },
+  {
+   "concept": "成环（closing）",
+   "name": "成環",
+   "verdict": "revise",
+   "issues": "新组合，「成環／成环」在冻结文本零见（已核）。两条引文逐字合。not_carried 引的 `LoopReturn.whole_strengths` 不存在；LoopReturn.lean 里对应的定理是 `Becoming.LoopReturn.whole_factors`（乘积 0／1／≥2 三分）与 `Becoming.LoopReturn.nothing_between`。唯识「復熏成種」的「成」是〈成为（种）〉，作结构同构例可以，作「成＝形成」的字义证不宜。",
+   "fix": "not_carried 中 whole_strengths 改为 whole_factors。FO1-S-CY 一条的 sense_in_context 注明「成」在此为〈成为〉，只作结构同构例。"
+  },
+  {
+   "concept": "还（feedback）",
+   "name": "還",
+   "verdict": "revise",
+   "issues": "六条引文逐字合。\n(1) 漏了王弼注。DS01 第三十章注：「为始者务欲立功生事，而有道者务欲还反无为，故云，其事好还也。」王弼把「好还」读作〈还反无为〉；河上公读作「自责」（LC2-HS-C30-R02）。两种最早的注都不作回馈读，回馈／报应之读在冻结文本中最早见于苏辙（宋）「雖或能勝其禍必還報之」。course 只说本名「取经由环返回作用者」，没交代这在注疏层只是宋以后的一读。\n(2) 先秦层。郭店甲作「是胃（谓）果而不强。其7事好。」，在章末，无「还」；帛书甲乙此处残。冻结文本中回馈义的「还」较早可确的是河上公第74章注「还自伤……不得其纪纲还受其殃也」（秦汉，年代有争议）与杂阿含偈。pre_qin:true 只对「还」字的回转义（解老「皆還而屬之於死」）成立，不对所名之义成立。\n(3) 杂阿含 locator 误。冻结本把经号置于经末：该偈所在经号为（一〇六六），前一经才是（一〇六五）。\n(4) alternatives 中「郭店语丛三「未有善事人而不返者」」误。冻结转录里此简（简45）在「语丛三」标题之前，属语丛二。\n(5) 同一回馈结构的先秦最确切表述是《孟子·梁惠王下》引曾子「出乎尔者，反乎尔者也」。取「还」不取「反／返」只能是约定，须写明。",
+   "fix": "pre_qin 改写为：「字先秦有（回转义）；回馈义自河上公注起；'其事好还'的先秦层未经出土本证实」。course 补王弼「还反无为」与河上公「自责」两读，并说明回馈读出自苏辙（宋），且带必然语气。FO1-S-SA 的 locator 改为「杂阿含经·第一〇六六经·偈」。alternatives「返」一条改为「郭店语丛二（简45）」。也可交整合者改以「反」（曾子／孟子）为正名，「还」为别名。"
+  },
+  {
+   "concept": "报（loop return, the return map）",
+   "name": "報",
+   "verdict": "revise",
+   "issues": "四条引文逐字合。\n(1) 层标不一。V130-LAO-MA 标「经·先秦」，但帛书甲是秦汉之际抄本，且郭店无此句，「報怨以德」的最早见证在秦汉之际；同簇〈滋〉却把帛书乙标为「秦汉之际」。\n(2) 声明名错。fit 与 lean 中的 `Becoming.LoopReturn.whole_strengths` 不存在，应为 `Becoming.LoopReturn.whole_factors`。\n(3) 漏了更好的先秦证：《论语·宪问》「何以報德」（RU1-S-LY）；《诗》「無言而不讎，無德而不報」，墨子兼爱下 MO1-S-C16 引，荀子致士 RU2-S-XZ14 也引（杨倞注「此言爲善則物必報之也」）。注意冻结本宪问作「以德報怨，以德報德」，与通行本「以直報怨」不同，只宜引「何以報德」。\n(4) 王弼第63章注不以「报怨以德」为以恩报怨：「小怨则不足以报，大怨则天下之所欲诛，顺天下之所同者，德也」（LC2-WB-C63-R01）。此读应入 course。\n(5) 先秦「報」是一个环节对所受的回应，环返映射则是各环节的复合。墨子「人報我」是两节之环，可承；名须写明「报」名的是〈交回起点之量〉，不是每一节的回应。",
+   "fix": "V130-LAO-MA 的层改为「经（帛书甲本，秦汉之际抄本；郭店无此句）」。lean 与 fit 中 whole_strengths 改为 whole_factors。attestations 补论语宪问「何以報德」与《诗》「無德而不報」（经墨子引）。course 补王弼63注之读。concept 补一句：报是各环节回应复合而交回起点之量。"
+  },
+  {
+   "concept": "滋（runaway through a loop）",
+   "name": "滋",
+   "verdict": "revise",
+   "issues": "五条引文逐字合。\n(1) 帛书乙的字说过了头。course 与 lao-57 条说「郭店、帛书乙与河上公都作'法物'」，但帛书乙冻结转录作「□□□□□□□□□□物茲章而盜賊」，「法」在缺文中，只见「物」；帛书甲作「人多知而何物茲□……」。只能说帛书乙作「□物」（不是「令」）。\n(2) 引文里的「滋」都只是〈愈益、滋生〉，任何增加都算，线性的也算；没有一条带〈经环〉之义。王弼「防随而避之……奸伪益滋」的环在上下文，不在「滋」字。fit 说「带自我增殖之义」无证，「滋专名经环之增」只能是本簇约定。\n(3) 孙绰「刑罔滋彰」是袭用老子语，不是独立义证。",
+   "fix": "course 改为：「郭店作'法勿（物）'，河上公作'法物'，帛书乙'物'前缺文」。fit 删「带自我增殖之义」，改为「滋＝愈益增多；以之专名经环之增，是本簇约定」。IN1-S02 一条标「袭老子语」。"
+  },
+  {
+   "concept": "未兆（the break not registered before it）",
+   "name": "未兆",
+   "verdict": "keep",
+   "issues": "四条引文逐字合。以下均已核实：郭店「其未○（兆）也，易○（谋）也」；帛书甲「亓安也易持也□□／□□易謀」（「未兆」二字残）；王弼「谓其安未兆也」是注「为之于未有」，义合；老子二十章「我独泊兮其未兆」在 YD-LAO-BASE。not_carried 如实。",
+   "fix": "可选：DS01 一条的 sense_in_context 补「（注'为之于未有'）」。"
+  },
+  {
+   "concept": "穷（the break）",
+   "name": "窮",
+   "verdict": "keep",
+   "issues": "三条引文逐字合。韩康伯层由记录 YCM130-H5-H-05-R01「韩康伯层」证实。脉络节点 XC-N047（「制度事物发展至不通的穷」）与 HX-N015（「行动或途径走至不可续的状态」）都与〈断裂〉相容。序卦「窮大」是动词〈推至极〉，已注。not_carried 如实。",
+   "fix": "可选：补节彖「“苦節不可貞”，其道窮也」（YD-HX01，脉络节点 HX-N015）作先秦传层的又一证。"
+  },
+  {
+   "concept": "频数（frequency of coupling）",
+   "name": "頻數",
+   "verdict": "revise",
+   "issues": "三条引文逐字合。\n(1) 程颐「復之頻數而不能固者也」的「頻數」是状语〈屡屡、频繁〉，下文即「頻復頻失」，不是计数。「频数＝作用之步的计数」是现代统计术语「频数」的义。fit 说「与 Frequency.count 同义」，是把现代义当古义，正是 brief 所禁。「頻數」在冻结文本只此一见。\n(2) 解老的结构是逐次线性之失。CV1-JL-R044 原文：「工人數變業則失其功……一人之作，日亡半日，十日則亡五人之功矣」，即次数乘每次所失，正对应 carried_le_count 的计次，不是自环失控。",
+   "fix": "YD-CY2 的 sense_in_context 改为「屡屡、频繁（状语，'頻復頻失'）」。fit 改为：「计数之义取自现代统计用语'频数'，作本簇约定；古义为'數（shuò）'＝屡次」。confidence 改 low。可补解老线性计次一段作结构证。"
+  },
+  {
+   "concept": "不已（a coupling recurs）",
+   "name": "不已",
+   "verdict": "keep",
+   "issues": "三条引文逐字合，程颐咸九四注上下文已核。近思录第12条作「所感复有应」，与易传「感復有應」有一字之异，不影响本名。序卦「X而不已」之义已在 not_carried 排除。",
+   "fix": "可选：补恒彖同处「終則有始也」（HX-R025）作相邻证。"
+  },
+  {
+   "concept": "已不已分（a settled schedule）",
+   "name": "已不已分",
+   "verdict": "revise",
+   "issues": "两条引文逐字合，但只证了「已」与「不已」，「分」没有任何引证；四字形在冻结文本零见。「已」居首，最易读作〈已经〉，「已不已分」可误读为「已经不已分」，名不自明；「分」兼名分，not_carried 虽已排除，字面仍难免。concept 写「settled_iff_recursOrStops：Σ⁰₂ 层的排中，严格强于 LPO」，但记录 how-often-couplings-act 明言 Σ⁰₂ 之认同是引用（Akama–Berardi–Hayashi–Kohlenbach 2004），不是 Lean 定理；Lean 只证 settled_iff_recursOrStops（＝RecursOrStops）与 lpo_of_settled。",
+   "fix": "为「分」补一条冻结文本中的义证，或改名为「或已或不已」（标新组合）。concept 改为：「每个日程都会已分，恰是 RecursOrStops（Lean），它蕴含 LPO（lpo_of_settled）；读作 Σ⁰₂ 排中、严格强于 LPO，是引用，未经 Lean」。"
+  },
+  {
+   "concept": "余（what a cut loses）",
+   "name": "餘",
+   "verdict": "keep",
+   "issues": "两条引文逐字合。苏辙「外雖和而内未忘也」、程颐「當解而未盡者不早去則將復盛」都已核实。小处：V130-LAO-MA 标「经·先秦」，宜注明帛书是秦汉之际抄本（郭店无第七十九章，不构成反证）。",
+   "fix": "V130-LAO-MA 的层改为「经（帛书甲本，秦汉之际抄本）」。"
+  },
+  {
+   "concept": "应倍（coupling strength）",
+   "name": "應倍",
+   "verdict": "revise",
+   "issues": "两条引文逐字合；新组合零见。\n(1) 「應」已有两种被采用之义：C06 中 Ren 的「应」（开之一相），C17 以「應」名爻位相应（同一高度上下两半之线相异）。本名再以「應」名回应倍数，三处「應」各不同义。\n(2) 中古以后「應」兼〈应当〉，「應倍」易读作「应当加倍」。\n(3) 「倍」取告子上「或相倍蓰而无算者」，义合。",
+   "fix": "not_carried 写明与 C06、C17 之「應」的区别，交整合者统一。或改名，例如以「倍」单名强度 k 并标约定，或另取不含「應」的组合。"
+  },
+  {
+   "concept": "所致（the carried amount）",
+   "name": "所致",
+   "verdict": "revise",
+   "issues": "两条引文逐字合，但都是「致遠」（送达），不是「所致」。「所致」在冻结文本 20 见，几乎都是因果归属义（「……之所致也」）：韩非子·难三「力之所致也」（先秦），河上公「由精气多之所致也」，杨倞注「由極其誠所致」，孙绰「積殺之所致耶」，摩诃止观「善是心力所致」。只有荀子礼论「所致隆也」是〈致其极〉。所以 not_carried 把因果义称为「现代」义不确：它自先秦起就是主导义，读者必作因果读。",
+   "fix": "not_carried 改为「'所致'自先秦（韩非子难三「力之所致也」）即为因果归属语，不取」。建议改名，如与 C17 已用的「及」（到达，ReachedBy）一致，作「所及之量」；或以「致」单字作约定并注。confidence 保持 low。"
+  },
+  {
+   "concept": "中和（two-sided regulation）",
+   "name": "中和",
+   "verdict": "keep",
+   "issues": "三条引文逐字合，为已采用之名（RO）。另：lunyu-zhi-he-bu-jie 条把「和」映为 Opposes，与本名（Opposes＋WithinGap）及中庸「發而皆中節，謂之和」（和＝中节）不一致，问题在该条。",
+   "fix": "无。"
+  },
+  {
+   "concept": "中节（the bound is exactly no overshoot）",
+   "name": "中節",
+   "verdict": "revise",
+   "issues": "三条引文逐字合。蹇小象「大蹇朋來，以中節也」，程颐释为「五有中正之德……是以其中正之節也……自古守節秉義」（YD-CY3）：「節」是节操、守节，「中節」是居中之节操，与中庸动宾结构的「中（zhòng）節」（合于节度）不同构。脉络节点 TP-H39-X5-N02 释作「居中而合节」，可见此义有争议。sense_in_context「以中而合节」不能作为「不过其界」之证。",
+   "fix": "YD-JP39 一条删去，或改标「同形异构：程颐读为'中正之节'（节操）」，不计入义证。"
+  },
+  {
+   "concept": "过正（overshoot）",
+   "name": "過正",
+   "verdict": "revise",
+   "issues": "三条引文逐字合。\n(1) 墨经「景之臭無數，而必過正。景過正，故招」在「臨，正鑒」（平面镜）一段，平面镜之像不倒；倒像（「必易」）在下段「中之外」（凹镜）。sense「光线越过正点，影因而倒转」是把下段之义移入，而且「過正」「招」的训诂本身未定。\n(2) 郭店语丛二「凡过正一，以失其它者也」义未定（mapper 已说）。\n结论：两条先秦证都证不了〈越过定点到另一侧〉。冻结文本中此义唯程颐「矯枉而過正」（宋）可确，pre_qin:true 不成立。",
+   "fix": "pre_qin 改 false。墨经一条改标「字形先秦有，义未定（平面镜段）」，不作义证。course 改为「义证始见程颐（宋）」。可在 alternatives 说明先秦有单字「過」（论语「過猶不及」，小过六二「過其祖」）。"
+  },
+  {
+   "concept": "一偏（one-sided response）",
+   "name": "一偏",
+   "verdict": "revise",
+   "issues": "两条引文逐字合。王夫之句上下文是「物具兩端，而我參之以為三，非倚於一偏而不至也，則並違其兩，但用其獨」，为「非A則B」句式，A＝「倚于一偏而不至」，是批评偏于一端。sense「不倚于一侧」误读了「非……則」。这不影响名义（一偏＝一侧），但引证释义错。",
+   "fix": "YD-WF1 的 sense_in_context 改为「倚于一端而不至另一端（王夫之以此批评执一之能）」。"
+  },
+  {
+   "concept": "识不早（reading late）",
+   "name": "識不早",
+   "verdict": "keep",
+   "issues": "两条引文逐字合（RU2-S-S01 作简体「识不早」）。文言「辯之不早辯」用的是「辯（辨）」，不是「識」，alternatives 已注明。「识」为已采用之名，义相容。",
+   "fix": "无。"
+  },
+  {
+   "concept": "宽猛相济（the relay）",
+   "name": "寬猛相濟",
+   "verdict": "revise",
+   "issues": "三条引文逐字合。\n(1) 四字形在冻结文本零见，「寬猛」只朱子语类一见。coinage:false 没有冻结证据支持；左传昭二十年在脉络外，只能说结构，不能引。\n(2) 朱子语类上下文是：「問老氏柔能勝剛，弱能勝強之說。曰：它便揀便宜底先占了。若這下，則剛柔寬猛各有用時」。「各有用時」是各有其时，用来批评老子偏取柔，并不说〈读数越界时施用〉；fit「各在读数越界时施用（朱子「各有用時」）」超出原文。\n(3) 程颐「寛猛之中」「剛柔相濟為中」是兼用而得中，不是交替。\n(4) 「寬」「猛」是治者对民的施政之态，名带统治与社会义，brief 要结构名。",
+   "fix": "coinage 改 true，并注「冻结文本未见；结构出左传昭二十年（脉络外）」，或另取结构名。fit 删去对朱子的「读数越界」归属，改为「朱子只说各有用时」。not_carried 保留统治术一项。"
+  },
+  {
+   "concept": "不求备（tolerance）",
+   "name": "不求備",
+   "verdict": "keep",
+   "issues": "三条引文逐字合。论语「求備」是要求一人具备诸能，本名把〈人之诸能〉转写为〈所等待者〉，是结构转写，not_carried 已注明用人语境。微子属论语后十篇，层宜同来源 era 标「先秦至汉」。",
+   "fix": "可选：层改为「经·先秦至汉（《论语·微子》；成书层次有争议）」。"
+  },
+  {
+   "concept": "有以待之（restoring from every start）",
+   "name": "有以待之",
+   "verdict": "revise",
+   "issues": "引文逐字合，结构（不恃起点之好，恃自最坏起点也成立者）忠实于孙子。问题在「待」字：理论中文版以「等待」名 waits on（「等待给予的给予」，正是 Withholding／Tolerance 这一模块），本簇「不求備」「先施」的概念句也用「等待」。孙子「有以待之」的「待」是〈应对、防备〉，同一模块的读者必读作〈有所等待〉，恰与「先施（不待而给）」相反。「之」指敌，又带兵争之层。",
+   "fix": "not_carried 明写「待＝应对、防备，不是本理论的'等待'」。并交整合者考虑改名，例如取同句「無恃其不來」（不恃有利的起点）之结构另立名。"
+  },
+  {
+   "concept": "先施（gives first）",
+   "name": "先施",
+   "verdict": "keep",
+   "issues": "两条引文逐字合。中庸13「所求乎朋友，先施之，未能也」与墨子「先從事乎愛利人之親」，义都是不待对方而先给，相合。not_carried 如实。",
+   "fix": "无。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-jiji-tongbian-weiqiong",
+   "verdict": "revise",
+   "issues": "三片段逐字合，层次与读法忠实。records 中的 `runaway-distance-unregistered` 已改名，现为 `runaway-distance-uncoupled`（records 目录里只剩改名跳转页；RO cy-jiji-wuchangzhi 已用新 id）。",
+   "fix": "records 中 runaway-distance-unregistered 改为 runaway-distance-uncoupled。"
+  },
+  {
+   "id": "xici-shan-buji",
+   "verdict": "keep",
+   "issues": "三片段逐字合；记录 WP-XCX-C04-S08-R01/R02/R03 覆盖片段；层次正确；读法如实，并标出了评价不由律给出。",
+   "fix": ""
+  },
+  {
+   "id": "xici-an-buwang-wei",
+   "verdict": "revise",
+   "issues": "三片段逐字合。「危者使平，易者使倾」在冻结第8章，另一片段在第4章，读法已注明分属两处。两个记录 id 已改名：runaway-distance-unregistered 现为 runaway-distance-uncoupled，testing-within-registration 现为 testing-within-couplings。",
+   "fix": "按上更正两个记录 id。"
+  },
+  {
+   "id": "daxiang-jiji-yufang",
+   "verdict": "revise",
+   "issues": "片段逐字合，相分沿 RO 而有理由。记录 runaway-distance-unregistered 已改名为 runaway-distance-uncoupled。",
+   "fix": "更正记录 id。"
+  },
+  {
+   "id": "jie-kujie-buke-zhen",
+   "verdict": "keep",
+   "issues": "三片段逐字合（经：卦辞、上六、六三），层次正确，与彖层 RO tuan-jie 分开。",
+   "fix": "可选：说明节彖「其道窮也」（脉络节点 HX-N015）是本簇「窮」的传层用例。"
+  },
+  {
+   "id": "xugua-within-pairs",
+   "verdict": "keep",
+   "issues": "三片段逐字合。损→益、困→井、丰→旅都是对内翻转，核对无误。「窮大」之义已注。",
+   "fix": ""
+  },
+  {
+   "id": "xugua-er-buyi-bi",
+   "verdict": "revise",
+   "issues": "片段逐字合。(1) names_used 列「窮」，但三片段都没有「窮」字，读法也未用它。(2) locator 写「序卦·下篇·编者论证段13」，而「有大者不可以盈，故受之以謙」出自上篇（记录 WP-XG-C01-S14-R02 标「上篇」）。益→夬、升→困、大有→谦都落在两对之间，已核。",
+   "fix": "names_used 去掉「窮」（或改为空，并注「不已」在此是增长不止之义，不是本簇名）。locator 改为「序卦·下篇段13、段17；上篇段14」。"
+  },
+  {
+   "id": "tuan-feng-yingxu-xiaoxi",
+   "verdict": "revise",
+   "issues": "片段逐字合。names_used 列「環」，但读法自己说这是〈构形之复返〉，与本簇「环」（耦合之链首尾相接）不同。构形之复返是 C05 的「復」（Law.Returns），名用错了。",
+   "fix": "names_used 改为 C05 之「復」，或留空，并在读法中保留「经 lossless_iff_returns 与环相连」一句。"
+  },
+  {
+   "id": "xici-qiong-ze-bian",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录 XC-R032 对应。「穷而变之后是失控」只就 Closing.Threshold 一个见证而言，读法下句已经定域。",
+   "fix": "可选：把「穷而变之后是失控，不是通而久」改为「在此见证中，穷而变之后是失控」。"
+  },
+  {
+   "id": "xici-shan-buguo",
+   "verdict": "keep",
+   "issues": "两片段逐字合（系辞上第三章），记录 XC-R044 对应，读法如实且标明评价不由律给出。",
+   "fix": ""
+  },
+  {
+   "id": "xici-chuyan-qianli",
+   "verdict": "keep",
+   "issues": "三片段逐字合（系辞上第八章），四条记录对应，读法如实。",
+   "fix": ""
+  },
+  {
+   "id": "wenyan-bian-zhi-buzao",
+   "verdict": "revise",
+   "issues": "两片段逐字合。记录 runaway-distance-unregistered 已改名为 runaway-distance-uncoupled。「文言没有专属关系记录」属实，但同一结构的传层记录有坤小象「履霜堅冰，陰始凝也」（TP-H02-X1-R01）与「馴致其道，至堅冰也」（TP-H02-X1-R02），后者正是〈渐至断裂〉，并行中漏了。",
+   "fix": "更正记录 id；把 TP-H02-X1-R01、TP-H02-X1-R02 列为并行。"
+  },
+  {
+   "id": "cy-xiaoguo-jiaowang-guozheng",
+   "verdict": "keep",
+   "issues": "两片段逐字合，记录 CY130-H62-R01 对应，层为宋明注层，读法如实。这是冻结文本中「過正」唯一可确的义证（见名〈過正〉）。",
+   "fix": ""
+  },
+  {
+   "id": "lao-55-zhi-he-yue-chang",
+   "verdict": "revise",
+   "issues": "两片段逐字合，但第二片段「知常曰明。不知常，妄作凶」出自第十六章，locator 只写五十五章。两章的「常」不同：十六章是「復命曰常」，五十五章是「和曰常」（赤子「和之至」）。读法把十六章的「不知常，妄作凶」接到五十五章之「和」上，是跨章拼接。五十五章本有自己的失败一侧：「益生曰祥，心使氣曰強，物壯則老，謂之不道」。异文（郭店「和曰○〈○（常）〉，智（知）和曰明」，帛书甲「和曰常知和曰明」）核实无误。两个记录 id 已改名：learnable-through-registration 现为 learnable-through-a-map，runaway-distance-unregistered 现为 runaway-distance-uncoupled。",
+   "fix": "locator 补「十六章：复命曰常，知常曰明。不知常，妄作，凶」。读法中失败一侧改用五十五章本章的「益生曰祥……物壮则老」，十六章另条或作并行。kind 宜降为 scope。更正两个记录 id。"
+  },
+  {
+   "id": "lao-42-chong-qi-wei-he",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录 LL-R007 对应。读法标为 AI，并定域为「一种耦合的性质，不是万物普遍之性」。",
+   "fix": ""
+  },
+  {
+   "id": "lao-37-zhen-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录 LE-R051 对应。两处异文已核实：郭店「○（化）而○（欲）○（作），○（将）贞（镇）之以亡名之○（朴）」无「吾」；帛书乙「而欲作吾將闐」有「吾」。读法忠实。",
+   "fix": ""
+  },
+  {
+   "id": "lao-57-fa-ling-zi-zhang",
+   "verdict": "revise",
+   "issues": "两片段逐字合。读法说帛书乙「作'法物'」，但冻结转录作「□□□□□□□□□□物茲章而盜賊」，「法」在缺文中，只见「物」；帛书甲作「人多知而何物茲□……」。郭店「法勿（物）慈（滋）章（彰）」与河上公「法物滋彰」核实无误。",
+   "fix": "改为「郭店作'法勿（物）'、河上公作'法物'；帛书乙'物'前缺文，非'令'」。"
+  },
+  {
+   "id": "lao-30-qi-shi-hao-huan",
+   "verdict": "revise",
+   "issues": "片段逐字合。(1) 漏了王弼注「为始者务欲立功生事，而有道者务欲还反无为，故云，其事好还也」（DS01）：最早两注（王弼读还反无为，河上公读自责）都不作回馈读，读法只列河上公与苏辙。(2) 读法写「苏辙「必還報之」……（本条并行 LC2-SZ-C30-R02）」，但 LC2-SZ-C30-R02 的证据是「勿矜勿伐勿驕不得已四者所以勿強也」，并不含「必還報之」；「必還報之」在冻结文本中没有专属关系记录。(3) 郭店本此章末作「其7事好」，「无'还'字」属实。",
+   "fix": "注层分歧中补王弼「还反无为」一读。改为「苏辙「雖或能勝其禍必還報之」（无专属关系记录），读作必然报应」。并说明以「好还」为回馈，是苏辙以后的一读。"
+  },
+  {
+   "id": "lao-77-zhang-gong",
+   "verdict": "keep",
+   "issues": "三片段逐字合，记录 LL-R040、LL-R038 对应；读法如实，「有馀」与本簇之「余」已区分。",
+   "fix": ""
+  },
+  {
+   "id": "lao-77-ren-zhi-dao",
+   "verdict": "revise",
+   "issues": "片段逐字合，记录 LL-R039 对应。经文只说流向（损不足以奉有馀），没有说回馈。读法中「高者所得又回来增加其所得，是一个经由份额的正回馈之环（'滋'）」是 AI 外加的环，names_used「滋」在文本中无据。",
+   "fix": "names_used 去掉「滋」，或把该句标为「AI 延伸：若所奉回到奉者之份额，则成环」，并与经文所说之流向分开。"
+  },
+  {
+   "id": "lao-64-wei-zhao",
+   "verdict": "revise",
+   "issues": "三片段逐字合，异文（郭店「其未○（兆）也，易○（谋）也」、帛书甲「未兆」残）核实。(1) 记录 LL-R015 的证据是「以辅万物之自然，而不敢为」，不覆盖任何片段；脉络中没有覆盖「其安易持」「为之于未有」「合抱之木」的关系记录。(2) 读法的关节点（Branching.juncture）已有采用之名「机」（D52），names_used 未列。",
+   "fix": "record_ids 改为 []，并注「LL-R015 为同章另句，RO 沿用」。names_used 补「機」。"
+  },
+  {
+   "id": "lao-63-bao-yuan-tu-nan",
+   "verdict": "revise",
+   "issues": "两片段逐字合，郭店「大少（小）之多惕（易）必多○（难）」与帛书甲「大小多少報怨以德」核实。但读法说「本章在脉络中没有专属关系记录」不确：注层有王弼 LC2-WB-C63-R01（「小怨则不足以报，大怨则天下之所欲诛，顺天下之所同者，德也」，不以「报怨以德」为以恩报怨）、河上公 LC2-HS-C63-R02（「修道行善，绝祸于未生也」）、苏辙 LC2-SZ-C63-R01。读法只取〈以德报怨＝环上一个返还少于所受的环节〉一读，没有说明王弼之读与此相异。",
+   "fix": "改为「经文层无专属关系记录」，并补列王弼、河上公两条注层记录；读法补王弼一读，并说明本条只承〈不以怨报怨〉之读。"
+  },
+  {
+   "id": "lao-79-he-da-yuan",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录 LAO2-C79-R01 对应；读法与缺口如实。",
+   "fix": ""
+  },
+  {
+   "id": "lao-09-chi-er-ying-zhi",
+   "verdict": "keep",
+   "issues": "三片段逐字合，郭店「湍而群之，不可长保也」核实，记录 LE-R017 对应。",
+   "fix": ""
+  },
+  {
+   "id": "hs-39-wu-yi-shi",
+   "verdict": "keep",
+   "issues": "两片段逐字合；注层标为秦汉、年代有争议，正确；读法区分了「无已」与「不已」。",
+   "fix": ""
+  },
+  {
+   "id": "lao-36-jiang-yu-xi-zhi",
+   "verdict": "keep",
+   "issues": "三片段逐字合，记录 LAO2-C36-R01/R02/R03 对应，相分理由如实。",
+   "fix": ""
+  },
+  {
+   "id": "lao-76-rou-ruo-sheng-zhi-tu",
+   "verdict": "keep",
+   "issues": "两片段逐字合，帛书甲「木強則恆」、乙「木強則兢」核实，记录 LL-R045 对应。",
+   "fix": ""
+  },
+  {
+   "id": "lao-36-78-rou-sheng-gang",
+   "verdict": "keep",
+   "issues": "两片段逐字合。LL-R010 的 claim 明言兼第43、78章，可用。苏辙「豈有意為此以勝物哉」核实。",
+   "fix": ""
+  },
+  {
+   "id": "lao-45-zao-sheng-han",
+   "verdict": "revise",
+   "issues": "片段逐字合，记录 LL-R053 对应。(1) 层写「郭店、帛书异文另注」，但未注：郭店作「○（燥）○（胜）苍（沧），青（清）○（胜）然（热），清清（静）为天下定（正）」，是「清胜热」「天下定」。(2) 苏辙注下文的解决是「唯泊然清淨不染于一」，即不住于任一侧，不是〈两侧皆相反〉；读法把「清静」读作两侧调节，在苏辙处无支持，只是 AI 一读。",
+   "fix": "补郭店异文。读法写明苏辙以「不染于一」解「清静」，两侧调节之读属 AI。"
+  },
+  {
+   "id": "lao-60-peng-xiao-xian",
+   "verdict": "revise",
+   "issues": "片段逐字合；解老「烹小鮮而數撓之……」核实。但解老本段的结构是线性计次之失（「一人之作，日亡半日，十日則亡五人之功矣」），没有自环失控。读法「在作用经由自环回到所作用者处成立：频繁的扰动使差异失控」是 AI 外加。名「頻數」的问题见名表。",
+   "fix": "读法改为：以 carried_le_count（作用步数入界）承解老之计次；自环之失控标作 AI 延伸，经文未言。"
+  },
+  {
+   "id": "lao-72-min-bu-wei-wei",
+   "verdict": "revise",
+   "issues": "片段逐字合，记录 LAO2-C72-R01 对应，缺口写得具体。两个记录 id 已改名：sensitivity-is-the-least-registration 现为 sensitivity-is-the-least-coupling，runaway-distance-unregistered 现为 runaway-distance-uncoupled。",
+   "fix": "更正两个记录 id。"
+  },
+  {
+   "id": "lao-29-qu-shen-qu-tai",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录 LAO2-C29-R05 对应，「去甚只对上侧」之定域合于经文。",
+   "fix": ""
+  },
+  {
+   "id": "lao-17-xin-bu-zu",
+   "verdict": "keep",
+   "issues": "片段逐字合（传世本中第十七、二十三章两见，LE-R026 覆盖两章）。",
+   "fix": "可选：补帛书甲「信不足案有不信」（案＝乃），其因果之「乃」更明。"
+  },
+  {
+   "id": "wb-26-bu-dong-zhi-dong",
+   "verdict": "revise",
+   "issues": "片段逐字合，相分理由如实。记录 sensitivity-is-the-least-registration 已改名为 sensitivity-is-the-least-coupling。",
+   "fix": "更正记录 id。"
+  },
+  {
+   "id": "wb-65-jian-wei-yi-zi",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录 LC2-WB-C65-R01 对应，层为王弼注；环在上下文（防随而避之），读法如实。",
+   "fix": ""
+  },
+  {
+   "id": "sz-79-bu-chu-qi-ben",
+   "verdict": "revise",
+   "issues": "片段逐字合。上下文是「夫怨生于妄而妄出于性知性者不見諸妄而又何怨乎今不知除其本而欲和其末」：苏辙之「本」是出于性之「妄」，「除其本」是复性、见性则无妄，属〈固定之性〉层。读法「除其本＝在环上放一个返还为零的环节（断环）」是 AI 转写，判相合过强。",
+   "fix": "kind 改为 scope；读法写明苏辙的「本」是「妄出于性」，复性一层不采纳，所承只是〈和末而本在，余仍在〉。"
+  },
+  {
+   "id": "jielao-shi-qiang-mu-buming",
+   "verdict": "revise",
+   "issues": "三片段逐字合，记录对应，缺口写得具体。记录 sensitivity-is-the-least-registration 已改名为 sensitivity-is-the-least-coupling。",
+   "fix": "更正记录 id。"
+  },
+  {
+   "id": "jielao-you-yu-ji-hui-luan",
+   "verdict": "revise",
+   "issues": "片段逐字合，记录 CV1-JL-R045/R046 对应。declarations 与读法中的 `Becoming.LoopReturn.whole_strengths` 不存在，应为 `Becoming.LoopReturn.whole_factors`。",
+   "fix": "whole_strengths 改为 whole_factors。"
+  },
+  {
+   "id": "jielao-huo-fu",
+   "verdict": "revise",
+   "issues": "四片段逐字合（第9、10阅读段）。记录 registration-within-what-it-registers 已改名为 readings-within-what-they-read。所解之经文《老子》第五十八章的经层记录 LL-R027、LL-R028（「祸兮福之所倚，福兮祸之所伏」）未列。",
+   "fix": "更正记录 id；把 LL-R027、LL-R028 列为并行（经层）。"
+  },
+  {
+   "id": "hanfei-gufen-zhu-bi-chen-zhong",
+   "verdict": "keep",
+   "issues": "片段逐字合（「弊」读「蔽」），记录 FA1-H11-R004 对应，争胜框架已排除。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-wangzhi-qiang-fan-ruo",
+   "verdict": "keep",
+   "issues": "三片段逐字合（简体转录），记录 RU2-R0100 对应。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-jianai-zhong-bi-cong",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录 MO1-C15-R004 的证据含此句。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-jianai-xia-xian-shi",
+   "verdict": "keep",
+   "issues": "两片段逐字合（「投我以桃，報之以李」为墨子引大雅抑），记录 MO1-C16-R010 对应；先施与报已分开。",
+   "fix": "可选：同段「無言而不讎，無德而不報」可补入（报、还之先秦证）。"
+  },
+  {
+   "id": "mengzi-chu-er-fan-er",
+   "verdict": "keep",
+   "issues": "两片段逐字合，记录 RU2-R0279 对应；读法如实说出「反」是先秦最确切之字。",
+   "fix": ""
+  },
+  {
+   "id": "lunyu-guo-you-bu-ji",
+   "verdict": "keep",
+   "issues": "两片段逐字合。「不及」在经文是人之状态，不是一侧之回应；映到 OneSided（水平永在 m 之上，实为过之一侧）要靠对称，读法未说。属小处。",
+   "fix": "可选：注明 OneSided 见证在上侧，〈不及〉为其镜像。"
+  },
+  {
+   "id": "lunyu-jin-zhi-tui-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录 RU1-LY-11-21-R01/R02 对应。",
+   "fix": ""
+  },
+  {
+   "id": "lunyu-zhi-he-bu-jie",
+   "verdict": "revise",
+   "issues": "两片段逐字合。读法把有子之「和」映为「两侧相反」（Flow.Opposes），「節」映为界（WithinGap）。但同簇以中庸「發而皆中節，謂之和」为据，「和」恰是中节（＝界），而本簇名「中和」＝Opposes＋WithinGap：同一「和」字在两条中映到不同结构。有子之「和」是和顺、调和，不是两侧相反。判相合过强。",
+   "fix": "读法改为「只求和顺而无礼以节之，则越而不定；以 Overshooting 见证承〈有相反而无界〉一半」。去掉「和＝两侧相反」的认同，kind 宜改 scope。"
+  },
+  {
+   "id": "lunyu-wu-qiu-bei",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录对应；用人语境已排除。",
+   "fix": "可选：层改为「先秦至汉」，与来源 era 一致。"
+  },
+  {
+   "id": "zhongyong-zhi-zhong-he",
+   "verdict": "keep",
+   "issues": "两片段逐字合，记录 R04、R05、R07 对应，性层已排除。",
+   "fix": ""
+  },
+  {
+   "id": "mengzi-wu-wang-wu-zhu-zhang",
+   "verdict": "keep",
+   "issues": "两片段逐字合，记录 RU2-R0014 对应；「揠苗之害不只是越过 m」的定域如实。",
+   "fix": ""
+  },
+  {
+   "id": "zhoudunyi-shi-shi-buzao",
+   "verdict": "revise",
+   "issues": "片段逐字合（简体），记录 RU2-R0163 对应。记录 runaway-distance-unregistered 已改名为 runaway-distance-uncoupled。",
+   "fix": "更正记录 id。"
+  },
+  {
+   "id": "chengyi-gan-ying-bu-yi",
+   "verdict": "revise",
+   "issues": "两片段逐字合（近思录卷一第12、34条）。(1) layer 说第12条「与《伊川易传》咸九四注同文」，实为近同：易传作「感復有應」，近思录作「所感复有应」。(2) 第二片段为明道（程颢）语，读法未标出处之人；tradition「二程」可，但应分别。",
+   "fix": "「同文」改为「近同（一字之异）」；读法中第二句标「程颢（明道）」。"
+  },
+  {
+   "id": "zhuangzi-lunbian-bu-xu-bu-ji",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录 ZH1-C13-R-08 对应，外篇年代已注。",
+   "fix": ""
+  },
+  {
+   "id": "zhuangzi-yi-yan",
+   "verdict": "revise",
+   "issues": "三片段逐字合（第三句为所引「法言」）。declarations 与读法中的 `Becoming.LoopReturn.whole_strengths` 不存在，应为 `Becoming.LoopReturn.whole_factors`。",
+   "fix": "whole_strengths 改为 whole_factors。"
+  },
+  {
+   "id": "zhuangzi-cai-quan",
+   "verdict": "keep",
+   "issues": "两片段逐字合，记录 ZH1-C05-R-06 对应，定域如实。",
+   "fix": ""
+  },
+  {
+   "id": "sunzi-qi-zheng-xun-huan",
+   "verdict": "keep",
+   "issues": "两片段逐字合，记录 BI1-SZ-R-23/24 对应；「穷」字之别已注。",
+   "fix": "可选：注明「循環」在此为〈循—環〉。"
+  },
+  {
+   "id": "sunzi-you-yi-dai-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录 BI1-SZ-R-40 对应；〈律须保持包含〉之条件已写明。名之「待」字问题见名表。",
+   "fix": ""
+  },
+  {
+   "id": "simafa-shang-bu-yu-shi",
+   "verdict": "keep",
+   "issues": "片段逐字合，记录 BI1-SM-R-12 对应，中心层已排除。",
+   "fix": ""
+  },
+  {
+   "id": "feng-chujiu-xun",
+   "verdict": "revise",
+   "issues": "两片段逐字合，但第一片段是经（爻辞），第二是传（小象），合为一条、一个层标，经与传未分开。冻结文本中注家之读只有「旬均也」（程颐、朱熹；王弼注本未入冻结文本）：程颐「均而先已是過旬也，一求勝則不能同矣」，「過旬」是越过对等而求胜，其结构是〈过正〉，不是单调过程中的阈值。读法所依的 Closing.Threshold 阈值之读，需要「旬＝时日之期」，而读法自己承认此读在冻结文本中无注家。",
+   "fix": "把经与传分标层次。主读改依冻结文本中可证的「旬均也」，映到〈过正〉（越出对等）；Closing.Threshold 之读改标「依冻结文本未见之时日读，AI 假设」。kind 保持 scope。"
+  },
+  {
+   "id": "weishi-xun-xi",
+   "verdict": "keep",
+   "issues": "两片段逐字合。「損本識中染種勢力」在同论核实。「如炷生焰」不在记录证据摘录内，但在同段正文。建模之限（同时 vs 逐步）已说。",
+   "fix": ""
+  },
+  {
+   "id": "qixin-xun-xi",
+   "verdict": "keep",
+   "issues": "两片段逐字合，记录 FO2-QX-R024/25/26 对应，先在之基层已排除。",
+   "fix": ""
+  },
+  {
+   "id": "yuanren-duan-wo-zhi",
+   "verdict": "revise",
+   "issues": "两片段逐字合，都在小乘教段；「是知專此教者，亦未原身」核实。但读法说「（两个'还'正是本簇之'还'）」，而名〈還〉的 course 自己说宗密此处「'还'是复、又」。「還執為我，還起貪等」的「還」是副词〈又、再〉，不是〈回到作用者〉，这是字面匹配。",
+   "fix": "删去「两个'还'正是本簇之'还'」，改为「'还'在此为副词'又'；环由受身→执我→起贪→造业→受报之次第闭合」。"
+  }
+ ],
+ "missing": [
+  "《庄子·寓言》「萬物皆種也，以不同形相禪，始卒若環，莫得其倫，是謂天均」（ZH1-S27，杂篇，年代有争议）：〈環〉首尾相接义最切的先秦证。",
+  "王弼《老子注》第三十章「为始者务欲立功生事，而有道者务欲还反无为，故云，其事好还也」（DS01）：〈還〉及 lao-30 必须列的注层异读。",
+  "王弼《老子注》第六十三章「小怨则不足以报，大怨则天下之所欲诛，顺天下之所同者，德也」（LC2-WB-C63-R01），河上公「修道行善，绝祸于未生也」（LC2-HS-C63-R02）：〈報〉与 lao-63 的注层异读。",
+  "《论语·宪问》「何以報德」（RU1-S-LY）：〈報〉的先秦证。注意冻结本此章作「以德報怨，以德報德」，与通行本「以直報怨」不同，交整合者核。",
+  "《诗》「無言而不讎，無德而不報」（《墨子·兼爱下》MO1-S-C16 所引；《荀子·致士》RU2-S-XZ14 所引，杨倞注「此言爲善則物必報之也」）：〈報〉〈還〉的先秦证。",
+  "《系辞下》「往者屈也，来者信也，屈信相感而利生焉」（WP-XCX-C04-S03-R03）、「日月相推而明生」「寒暑相推而岁成」（WP-XCX-C04-S02-R01/R02）：程颐感应不已之环所本的传层段落（与 C05 之復交界）。",
+  "《恒·彖》「“利有攸往”，終則有始也」（HX-R025）：与〈不已〉之「恆久而不已」同处。",
+  "坤小象「履霜堅冰，陰始凝也」（TP-H02-X1-R01）、「馴致其道，至堅冰也」（TP-H02-X1-R02）：〈未兆→窮〉的传层并行，wenyan 条应收。",
+  "节彖「“苦節不可貞”，其道窮也」（脉络节点 HX-N015）：〈窮〉的传层证。",
+  "《老子》第五十八章经层 LL-R027、LL-R028「祸兮福之所倚，福兮祸之所伏」：jielao-huo-fu 所解之经文。",
+  "《老子》第五十五章「益生曰祥，心使氣曰強，物壯則老，謂之不道，不道早已」：lao-55 本章自有的失败一侧，可代替跨章引十六章。",
+  "《孟子·公孙丑上》「志壹则动气；气壹则动志也」（RU2-R0010/R0011，reciprocal_influence）：先秦两节互动之环。",
+  "天台小止观 FO2-XZG-R007/R008（脉络 type＝feedback：对治不效则改用另一法）：调节中的读后改法，与已收的 R005/R006 同段。",
+  "朱熹《周易本义》益九五「上有信以恵於下則下亦有信以惠于上矣」（ZX-R008，reciprocity）：〈還〉的正面并行。",
+  "《韩非子·解老》「工人數變業則失其功……一人之作，日亡半日，十日則亡五人之功矣」（CV1-JL-R044 证据）：按作用次数线性计失，正对 carried_le_count，应作〈頻數〉与 lao-60 的结构证。",
+  "帛书甲《老子》第十七章「信不足案有不信」（V130-LAO-MA）：lao-17 的异文，「案」＝乃，因果更明。",
+  "郭店乙《老子》第四十五章「○（燥）○（胜）苍（沧），青（清）○（胜）然（热），清清（静）为天下定（正）」：lao-45 未注的异文。",
+  "全簇的记录 id 更正：runaway-distance-unregistered→runaway-distance-uncoupled，testing-within-registration→testing-within-couplings，learnable-through-registration→learnable-through-a-map，sensitivity-is-the-least-registration→sensitivity-is-the-least-coupling，registration-within-what-it-registers→readings-within-what-they-read。声明 LoopReturn.whole_strengths→LoopReturn.whole_factors（〈報〉〈成環〉、jielao-you-yu、zhuangzi-yi-yan 与 notes）。"
+ ]
+}

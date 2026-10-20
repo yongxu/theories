@@ -1,0 +1,4501 @@
+{
+ "cluster": "C11 回路、反馈、阈值与调节",
+ "names": [
+  {
+   "concept": "环（loop of couplings）：一串耦合从某条件出发、经若干条件回到它自身；世界所有的环恰是在某步已形成的环（Becoming.onLoop_iff_formed）。不预设沿环的量守恒、增减或必然复返。",
+   "name": "環",
+   "form": "单字",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "high",
+   "attestations": [
+    {
+     "source_id": "BI1-S-SZ",
+     "quote": "奇正相生，如循環之無端，孰能窮之哉？",
+     "layer": "论·先秦（《孙子·兵势》；成书层次有争议）",
+     "sense_in_context": "奇与正两种用法相互生成，如环之无端，找不到起止",
+     "locator": "兵勢第五",
+     "record_id": "BI1-SZ-R-23"
+    },
+    {
+     "source_id": "ZH1-S02",
+     "quote": "樞始得其環中，以應无窮。",
+     "layer": "论·先秦（《庄子·齐物论》，内篇）",
+     "sense_in_context": "环之中空处为枢；此处取环的首尾相接之形，不取\"中\"",
+     "locator": "齊物論",
+     "record_id": "ZH1-C02-R-06"
+    },
+    {
+     "source_id": "ZH1-S33",
+     "quote": "連環可解也。",
+     "layer": "论·先秦（《庄子·天下》引惠施辩题，杂篇，年代有争议）",
+     "sense_in_context": "相扣之环，惠施之辩题",
+     "locator": "《庄子·天下》惠施「歷物之意」段",
+     "record_id": ""
+    },
+    {
+     "source_id": "YD-CY3",
+     "quote": "盛衰損益如循環損極必益理之自然",
+     "layer": "注·宋明（北宋程颐《伊川易传》益卦辞注）",
+     "sense_in_context": "程颐以\"如循环\"说盛衰损益之必然交替（RO cy-yi-xiahou 已定域）",
+     "locator": "伊川易传·卷三·益卦辞注",
+     "record_id": ""
+    }
+   ],
+   "fit": "环是首尾相接、无端可寻之形：孙子「奇正相生，如循環之無端」正是两种作用相互生成、经对方回到自身。脊柱的环是一条耦合之链回到其起点（onLoop_iff_formed），它形成于某步（onLoop_succ_iff），携带量超过每个多项式恰经由环（polynomial_iff_no_loop）。名只取〈首尾相接〉的关系之形。",
+   "not_carried": "\"环中\"的中空之枢（庄子取其中而非其接）；玉环之物；后起\"循环\"的〈盛衰必然交替、周而复始〉之义（程颐「損極必益理之自然」；脊柱只在无损之律下有复返，Law.lossless_iff_returns）；环绕、包围之义。",
+   "course": "先秦孙子、庄子取\"无端\"\"连环\"之形；北宋程颐以\"如循环\"说盛衰损益之必然（YD-CY3，RO cy-yi-xiahou 定域为只在交换平衡、无损处成立）；后世\"循环\"多带周而复始之必然义。本名回到先秦之形义：耦合之链首尾相接。",
+   "alternatives": [
+    {
+     "name": "周",
+     "why_not": "\"周行而不殆\"（老子二十五章，RO lao-25-zhou-xing-er-bu-dai）是道之运行；周兼周遍、完备义，不专指耦合之链回到起点"
+    },
+    {
+     "name": "循環",
+     "why_not": "复词带后起的〈周而复始、盛衰必然交替〉之义，正是脊柱要定域的部分"
+    },
+    {
+     "name": "回路",
+     "why_not": "现代技术词，不是古语"
+    },
+    {
+     "name": "圜",
+     "why_not": "\"圜道\"一系是天圆的宇宙论，带天道义"
+    }
+   ],
+   "lean": [
+    "Becoming.onLoop_iff_formed",
+    "Becoming.onLoop_succ_iff",
+    "Becoming.onLoop_of_closing",
+    "Becoming.polynomial_iff_no_loop"
+   ]
+  },
+  {
+   "concept": "成环（closing）：在某步作用的一个耦合读一条件 d 之水平而给予条件 c，而已有链自 c 经该环之条件通到 d，于是闭合成环；环在某步形成，必经过该步作用的耦合（Becoming.forms_by_closing、onLoop_succ_iff），一个交换开始回应它所给予之条件的水平，即成单一条件之环，即自环（responds_to_own_level）。",
+   "name": "成環",
+   "form": "新组合",
+   "pre_qin": false,
+   "coinage": true,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "YD-HX01",
+     "quote": "天地節而四時成",
+     "layer": "传·先秦（《易传·彖·节》；成书年代有争议）",
+     "sense_in_context": "成＝形成、成就（四时由节而成）",
+     "locator": "彖传·節卦",
+     "record_id": ""
+    },
+    {
+     "source_id": "FO1-S-CY",
+     "quote": "能熏識等，從種生時，即能為因，復熏成種",
+     "layer": "论·隋唐（玄奘译糅《成唯识论》卷二，据印度护法等释）",
+     "sense_in_context": "现行从种子生起，又反熏成种：种现互生、闭合成环的佛教同构例",
+     "locator": "卷二·熏习",
+     "record_id": "FO1-R-CY24"
+    }
+   ],
+   "fit": "成＝使之形成（「天地節而四時成」），环＝耦合之链首尾相接；成环＝一个耦合闭合一条链而使环形成。脊柱：环形成于某步，恰经由该步作用、闭合一条链的耦合（forms_by_closing）；在环形成之前，携带量不显示它将形成（Closing.Onset.unforeseen）。唯识「復熏成種」是同一结构的一例。",
+   "not_carried": "成的〈成功、成就（价值上的完成）〉义；Ren 之〈闭／成闭〉（C06 已采用：律永不离开的吸收区域与锁定）——成环不是成闭：环形成之后，差异可以闭合、保持或失控（LoopReturn.whole_strengths）。",
+   "course": "新组合，无历史用例；以\"成\"之形成义与\"环\"组合。佛典「復熏成種」（玄奘译）是同构之例，限于种现。",
+   "alternatives": [
+    {
+     "name": "閉",
+     "why_not": "Ren 之词，指律永不离开的吸收区域（C06 已用〈闭／成闭〉），与环的形成不同"
+    },
+    {
+     "name": "合",
+     "why_not": "合兼会合、符合、和合多义，且为 C10 种子词"
+    },
+    {
+     "name": "復熏成種",
+     "why_not": "唯识专名，限于种子与现行"
+    },
+    {
+     "name": "周",
+     "why_not": "完成一周之义带周遍义，且不指〈由一个耦合闭合〉"
+    }
+   ],
+   "lean": [
+    "Becoming.forms_by_closing",
+    "Becoming.onLoop_succ_iff",
+    "Becoming.responds_to_own_level",
+    "Becoming.onLoop_of_closing"
+   ]
+  },
+  {
+   "concept": "还（feedback）：一个作用经由他者的耦合与回应回到作用者（Becoming.Loop.response_returns）；回应闭合差异或扩大差异由所循之律决定，不由耦合固定（ExchangeLaw.response_not_fixed_by_coupling）；不在环上的作用不返回（not_onLoop_unread）。",
+   "name": "還",
+   "form": "单字",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "以道佐人主者，不以兵强天下。其事好还。",
+     "layer": "经·先秦（《老子》三十章，传世王弼本系统；郭店本无\"还\"字，帛书此处残缺）",
+     "sense_in_context": "以兵强天下者，其所施返回于施者",
+     "locator": "《道德经》三十章",
+     "record_id": "LE-R040"
+    },
+    {
+     "source_id": "LC-HS-LOW",
+     "quote": "不得其纪纲还受其殃也",
+     "layer": "注·秦汉（传统题署河上公《老子章句》；成书年代有争议）",
+     "sense_in_context": "反受其殃：所施之害回到施者",
+     "locator": "河上公章句 第74章（「代大匠斲」注）",
+     "record_id": ""
+    },
+    {
+     "source_id": "LC-SZ-ALL",
+     "quote": "雖或能勝其禍必還報之",
+     "layer": "注·宋明（北宋苏辙《老子解》）",
+     "sense_in_context": "即使一时得胜，其祸必经对方回到施者",
+     "locator": "老子解 第30章（以道佐人主章）",
+     "record_id": ""
+    },
+    {
+     "source_id": "FO1-S-SA",
+     "quote": "內發還自傷",
+     "layer": "经·魏晋南北朝（刘宋求那跋陀罗译《杂阿含经》，印度阿含传统）",
+     "sense_in_context": "内发之害回伤自身",
+     "locator": "杂阿含经 第一〇六五经·偈",
+     "record_id": ""
+    },
+    {
+     "source_id": "CV1-S-JL",
+     "quote": "十有三具者皆還而屬之於死",
+     "layer": "论·先秦（《韩非子·解老》，战国末）",
+     "sense_in_context": "還＝转回、折返（字的先秦\"回转\"义，不是回馈）",
+     "locator": "《解老》释「出生入死」段",
+     "record_id": ""
+    },
+    {
+     "source_id": "LC-HS-UP",
+     "quote": "其举事好还自责，不怨于人也。",
+     "layer": "注·秦汉（河上公《老子章句》三十章；年代有争议）",
+     "sense_in_context": "河上公把\"好还\"读作反求诸己的自责：另一种读法",
+     "locator": "河上公章句 第30章·俭武注",
+     "record_id": "LC2-HS-C30-R02"
+    }
+   ],
+   "fit": "还＝回到原处；\"其事好还\"：所施者经由对方回到施者。脊柱：回应经由行动者的耦合闭包回到行动者（Loop.response_returns），这是回馈的结构；它在所施者处于耦合之环上时成立（RO lao-30），回来的是闭合之还是扩大之，由律决定（response_not_fixed_by_coupling）。",
+   "not_carried": "\"归还\"（物归原主）的所有之义；\"报应\"的道德必然；\"还\"作副词\"仍、还要\"；河上公、苏辙\"必还\"的必然语气（脊柱只在环上、且依所循之律）。",
+   "course": "\"还\"字先秦有回转、折返义（解老「皆還而屬之於死」）。\"其事好还\"只见于传世本经文层：郭店本此处只作〈其事好〉（转录在\"其\"后标简号 7），无\"还\"字，帛书甲乙此处皆残，所以 pre_qin 只就传世本经文层而言，出土本不能证实。河上公一处读\"好还\"为\"自责，不怨于人\"（LC2-HS-C30-R02，反求诸己），另一处说\"还受其殃\"；苏辙「必還報之」读作必然报应；佛典\"还自伤\"指自害；唐宗密叙轮回「於所受身還執為我，還起貪等造業受報」（IN1-R-Y09），\"还\"是复、又，环由此闭合。本名只取〈经由环返回作用者〉的结构，不取必然报应，也不取河上公的自责义。",
+   "alternatives": [
+    {
+     "name": "反",
+     "why_not": "孟子\"出乎尔者，反乎尔者也\"先秦且确切，但\"反\"兼相反、反叛、反身、〈物极必反〉之义，会把〈必然转向反面〉带入回馈"
+    },
+    {
+     "name": "返",
+     "why_not": "郭店语丛三\"未有善事人而不返者\"先秦证据最好；但郭店老子「返也者，道○（动）也」是道之返（构形之复返，C05 以\"復\"名之），以\"返\"名回馈易与之相混"
+    },
+    {
+     "name": "復",
+     "why_not": "C05 已用于构形之复返（Law.Returns）"
+    },
+    {
+     "name": "報",
+     "why_not": "本簇用于环返映射（回来多少），比回馈之事实窄"
+    }
+   ],
+   "lean": [
+    "Becoming.Loop.response_returns",
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.Withholding.withholding_returns",
+    "Becoming.not_onLoop_unread"
+   ]
+  },
+  {
+   "concept": "报（loop return, the return map）：差异绕环一圈，每环节把所受者传给下一环节，末环节交回起点；交回多少是环返映射（Becoming.LoopReturn.returnMap）：等于所受则差异保持（kept_of_identity、loop_kept），有环节少于所受才可能闭合（closing_needs_less）、少于所受则在 d 圈内闭合（closes_within），每环节至少加倍则失控（runs_away）。",
+   "name": "報",
+   "form": "单字",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "MO1-S-C16",
+     "quote": "卽必吾先從事乎愛利人之親，然後人報我以愛利吾親也",
+     "layer": "论·先秦（《墨子·兼爱下》，战国墨家，篇章层次有争议）",
+     "sense_in_context": "他人以所受之爱利回报我",
+     "locator": "《墨子·兼愛下》",
+     "record_id": "MO1-C16-R010"
+    },
+    {
+     "source_id": "V130-LAO-MA",
+     "quote": "大小多少報怨以德",
+     "layer": "经·先秦（帛书甲本《老子》六十三章；郭店本无此句）",
+     "sense_in_context": "以德回应所受之怨",
+     "locator": "帛書甲本 章六十三",
+     "record_id": ""
+    },
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "大小多少，报怨以德。",
+     "layer": "经·先秦（《老子》六十三章，传世本）",
+     "sense_in_context": "同上",
+     "locator": "《道德经》六十三章",
+     "record_id": ""
+    },
+    {
+     "source_id": "LC-SZ-ALL",
+     "quote": "然及其愛惡之情忘則雖報怨猶報徳也",
+     "layer": "注·宋明（北宋苏辙《老子解》）",
+     "sense_in_context": "爱恶之情忘，则报怨与报德同",
+     "locator": "老子解 第63章",
+     "record_id": "LC2-SZ-C63-R01"
+    }
+   ],
+   "fit": "报＝以所受者回应：回应之量是所受之量的函数（以怨报怨、以德报怨、以爱利报爱利），正是环返映射。脊柱：保持、闭合、失控只由每圈交回多少决定（kept_of_identity、closing_needs_less、closes_within、runs_away），整数强度下没有渐闭（LoopReturn.whole_strengths）。",
+   "not_carried": "\"报应\"（道德或宗教的必然回报）；报答、报恩的社会义务；报告、通报；复仇之\"报仇\"；偿付、交换价值之义（不取任何财务义）。",
+   "course": "先秦墨子以\"人报我\"为兼爱之理由（交换式论证，RO mozi-jianai-xia 已注）；《老子》\"报怨以德\"（郭店无，帛书甲有）；苏辙以情忘说报怨犹报德。后世\"报应\"带必然义，本名不取。",
+   "alternatives": [
+    {
+     "name": "還",
+     "why_not": "本簇用于回馈之事实（作用回到作用者），不说回来多少"
+    },
+    {
+     "name": "應",
+     "why_not": "Ren 之\"应\"为开之一相（仍能回应，C06 已用）；报是回应之量对所受之量的函数，比应窄"
+    },
+    {
+     "name": "酬",
+     "why_not": "饮酒回敬之礼，社会礼仪义"
+    },
+    {
+     "name": "償",
+     "why_not": "偿付，带财务义，排除"
+    }
+   ],
+   "lean": [
+    "Becoming.LoopReturn.returnMap",
+    "Becoming.LoopReturn.kept_of_identity",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.LoopReturn.whole_strengths"
+   ]
+  },
+  {
+   "concept": "滋（runaway through a loop）：携带量超过每个多项式恰经由环（Becoming.polynomial_iff_no_loop）；每环节至少加倍时差异超过每个界（LoopReturn.runs_away_unbounded）；回程足够频繁时超过每个多项式（runaway_of_roundTrip）。无环处至多多项式增长（carried_le_polynomial_before）。",
+   "name": "滋",
+   "form": "单字",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "法令滋彰，盗贼多有。",
+     "layer": "经·先秦（《老子》五十七章，传世王弼本系统；郭店作\"法勿（物）慈（滋）章（彰）\"，河上公作\"法物滋彰\"）",
+     "sense_in_context": "滋＝愈益增多",
+     "locator": "《道德经》五十七章",
+     "record_id": ""
+    },
+    {
+     "source_id": "V130-LAO-GD",
+     "quote": "法勿（物）慈（滋）章（彰），○（盗）恻（贼）多又（有）",
+     "layer": "经·先秦（郭店楚简《老子》甲组，战国中期；公开转录，未核图版）",
+     "sense_in_context": "慈读为滋：法物愈益彰显，盗贼多有",
+     "locator": "郭店楚墓竹簡 老子甲（对应传世本五十七章）",
+     "record_id": ""
+    },
+    {
+     "source_id": "V130-LAO-MB",
+     "quote": "物茲章而盜賊",
+     "layer": "经·秦汉之际（马王堆帛书乙本《老子》；公开转录）",
+     "sense_in_context": "茲读为滋",
+     "locator": "帛書乙本 章五十七",
+     "record_id": ""
+    },
+    {
+     "source_id": "DS01",
+     "quote": "民知其术，防随而避之，思惟密巧，奸伪益滋",
+     "layer": "注·魏晋南北朝（王弼《老子注》六十五章）",
+     "sense_in_context": "防与避互相回应，奸伪愈益滋长",
+     "locator": "王弼注第65章",
+     "record_id": "LC2-WB-C65-R01"
+    },
+    {
+     "source_id": "IN1-S02",
+     "quote": "爰逮三代刑罔滋彰",
+     "layer": "论·魏晋南北朝（东晋孙绰《喻道论》）",
+     "sense_in_context": "刑网愈益繁密",
+     "locator": "孫綽喻道論",
+     "record_id": "IN1-R-S03"
+    }
+   ],
+   "fit": "滋＝滋生、繁衍、愈益增多，带自我增殖之义；王弼「防随而避之，思惟密巧，奸伪益滋」正是防与避互相回应而愈多。脊柱：差异超过每个多项式恰经由环（polynomial_iff_no_loop），每环节至少加倍则无界（runs_away_unbounded）。滋专名经环之增，不名一切增长。",
+   "not_carried": "滋味、滋润（味与水之义）；单纯\"更加\"的副词义；好坏评价（滋生可指任何所增者）。",
+   "course": "先秦郭店本\"法勿（物）慈（滋）章（彰）\"、帛书乙\"物茲章\"已有滋（借慈、茲为之），所以名之先秦地位由出土本证实；但郭店、帛书乙与河上公都作\"法物\"（珍奇之物），传世王弼本作\"法令\"，经由制度之环的读法只属传世本；王弼\"益滋\"、孙绰\"滋彰\"均指制度与对抗互相增长；后世\"滋蔓\"（左传隐元年，脉络外）指蔓延难图。",
+   "alternatives": [
+    {
+     "name": "長",
+     "why_not": "泛指增长，不带经环自增之义"
+    },
+    {
+     "name": "益",
+     "why_not": "C06 已用于增益 gain（Flow.rise_netGiver）"
+    },
+    {
+     "name": "蔓",
+     "why_not": "\"滋蔓\"出左传（脉络外），指蔓延，不指经环之增"
+    },
+    {
+     "name": "甚",
+     "why_not": "程度副词，不名增长之律"
+    }
+   ],
+   "lean": [
+    "Becoming.polynomial_iff_no_loop",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.LoopReturn.runs_away_unbounded",
+    "Becoming.runaway_of_roundTrip",
+    "Becoming.carried_runaway"
+   ]
+  },
+  {
+   "concept": "未兆（the break not registered before it）：存量只按阈值耦合进一个形成时，断裂之前，任何耦合进来的东西都不界定离断裂多远（Becoming.Web.break_not_bounded）；那一存量只在支持失败之后才被动用（Flow.policy_uses_after_failure）；按水平耦合则任何抬升立即被读出（Web.observed_raise_couples）。",
+   "name": "未兆",
+   "form": "复词",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "其安易持，其未兆易谋。",
+     "layer": "经·先秦（《老子》六十四章，传世本；帛书甲作\"亓安也易持也□□□□易謀\"，未兆二字残）",
+     "sense_in_context": "尚无征兆之时",
+     "locator": "《道德经》六十四章",
+     "record_id": ""
+    },
+    {
+     "source_id": "V130-LAO-GD",
+     "quote": "其未○（兆）也，易○（谋）也",
+     "layer": "经·先秦（郭店楚简《老子》甲组；兆、谋为整理者释读，未核图版）",
+     "sense_in_context": "未兆：尚无可读之迹",
+     "locator": "郭店楚墓竹簡 老子甲（对应传世本六十四章）",
+     "record_id": ""
+    },
+    {
+     "source_id": "DS01",
+     "quote": "谓其安未兆也",
+     "layer": "注·魏晋南北朝（王弼《老子注》）",
+     "sense_in_context": "安而未有征兆",
+     "locator": "王弼注第64章",
+     "record_id": ""
+    },
+    {
+     "source_id": "LC-HS-LOW",
+     "quote": "情欲祸患未有形兆时，易谋止也。",
+     "layer": "注·秦汉（河上公《老子章句》；年代有争议）",
+     "sense_in_context": "祸患尚无形迹可见",
+     "locator": "河上公章句 第64章",
+     "record_id": "LC2-HS-C64-R01"
+    }
+   ],
+   "fit": "兆＝可读出的迹象；未兆＝尚无可读之迹。脊柱：断裂之前，凡耦合进来的都不显示离断裂多远（break_not_bounded）；环形成之前，携带量也不显示它将形成（Closing.Onset.unforeseen）。\"未兆\"是相对于耦合而言的未显，不是事物尚不存在。",
+   "not_carried": "《老子》二十章\"我独泊兮其未兆\"的〈欲念未动〉之义；占卜之兆（龟兆）；\"未兆易谋\"的乐观断定（脊柱：未兆时可干预，难在发现，RO lao-64）。",
+   "course": "先秦郭店本\"其未○（兆）也，易○（谋）也\"（释读）、传世本\"其未兆易谋\"，帛书甲此处残；河上公\"未有形兆\"；王弼\"安未兆\"；后世〈防患于未然〉。",
+   "alternatives": [
+    {
+     "name": "未然",
+     "why_not": "后起，指尚未发生，不指尚未被读出"
+    },
+    {
+     "name": "微",
+     "why_not": "微指小，不指未显；C07 种子词有\"几/微\""
+    },
+    {
+     "name": "幾",
+     "why_not": "C07 种子词，\"知几其神\"指动之微，是可读的初动，与未兆相反"
+    },
+    {
+     "name": "未形",
+     "why_not": "\"形\"为 C17 种子词，且未形指无形体"
+    }
+   ],
+   "lean": [
+    "Becoming.Web.break_not_bounded",
+    "Becoming.Flow.policy_uses_after_failure",
+    "Becoming.Web.observed_raise_couples",
+    "Becoming.Closing.Onset.unforeseen"
+   ]
+  },
+  {
+   "concept": "穷（the break）：一个只在阈值以下读入某存量的律（ExchangeLaw.ReadsBelow），存量到达阈值之步。之前律即其常立之律，与该存量耦合强度为零、无环经过它（ExchangeLaw.ReadsBelow.standing_unread、standing_no_loop），抬升存量在断裂前处处无差（break_carried_nowhere）；经过该存量的环恰在断裂处形成（Thresholds.Draw.forms_at_break）。",
+   "name": "窮",
+   "form": "单字",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "DS03",
+     "quote": "易穷则变，变则通，通则久",
+     "layer": "传·先秦（《易传·系辞下》；成书约战国至汉初，有争议）",
+     "sense_in_context": "到尽头处即变",
+     "locator": "系辞下 第二章",
+     "record_id": "XC-R032"
+    },
+    {
+     "source_id": "YWH-H5",
+     "quote": "物窮則變，變而通之，事之所由生也。",
+     "layer": "注·魏晋南北朝（韩康伯《系辞注》，孔颖达疏本）",
+     "sense_in_context": "物到尽头即变",
+     "locator": "周易正義/07.05",
+     "record_id": "YCM130-H5-H-05-R01"
+    },
+    {
+     "source_id": "YD-OW-XG",
+     "quote": "窮大者必失其居",
+     "layer": "传·先秦至秦汉（《序卦》；年代有争议）",
+     "sense_in_context": "把大推到尽头",
+     "locator": "序卦 下篇",
+     "record_id": "WP-XG-C02-S26-R02"
+    }
+   ],
+   "fit": "穷＝到尽头；\"穷则变\"：到尽头处律改变。脊柱：只读阈值以下的律，在断裂之前就是不读该存量的常立之律，回路恰在断裂处形成，两过程的差异此后才显（forms_at_break、diverges_at_break）。穷名〈到达阈值、律由常立转为有环〉之事，不名阈值之数。",
+   "not_carried": "贫穷、穷达（境遇）；穷理（穷究）；无穷（无限）；\"变则通，通则久\"的乐观续句（断裂处形成的环可以失控，Closing.Threshold.level_after）；后起〈物极必反〉的必然反转。",
+   "course": "《系辞》\"穷则变\"；韩康伯「物窮則變」；《序卦》「窮大者必失其居」；后世〈物极必反〉把穷与必然反转相连，本名不取必然。",
+   "alternatives": [
+    {
+     "name": "極",
+     "why_not": "C07 种子词；极指顶点、两极，后起〈物极必反〉带必然反转"
+    },
+    {
+     "name": "閾",
+     "why_not": "门槛，论语乡党\"行不履閾\"；只是阈值之位，不是到达阈值、律由此改变之事"
+    },
+    {
+     "name": "竭",
+     "why_not": "C04、C05 已用于耗尽"
+    },
+    {
+     "name": "盡",
+     "why_not": "尽有完结、竭尽义，不带律变之义"
+    }
+   ],
+   "lean": [
+    "Becoming.ExchangeLaw.ReadsBelow",
+    "Becoming.ExchangeLaw.ReadsBelow.standing_unread",
+    "Becoming.ExchangeLaw.ReadsBelow.standing_no_loop",
+    "Becoming.break_carried_nowhere",
+    "Becoming.Thresholds.Draw.forms_at_break",
+    "Becoming.Thresholds.Draw.diverges_at_break"
+   ]
+  },
+  {
+   "concept": "频数（frequency of coupling）：耦合在其上作用之步的计数（Becoming.Frequency.count）。携带量至多 D·(1+M)^a，a 为作用步数（carried_le_count），自环恰达此界（Frequency.SelfLoop.carried_eq）；自环为多项式增长恰当 2 的作用步数次方为多项式（Frequency.SelfLoop.polynomial_iff）：失控需要频繁的耦合，不需要强的耦合（runaway_of_roundTrip、carried_le_of_rare）。",
+   "name": "頻數",
+   "form": "复词",
+   "pre_qin": false,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "YD-CY2",
+     "quote": "復之頻數而不能固者也",
+     "layer": "注·宋明（北宋程颐《伊川易传》复卦六三注）",
+     "sense_in_context": "屡复屡失，复之次数频繁",
+     "locator": "伊川易传·卷二·复六三注",
+     "record_id": ""
+    },
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "事君數，斯辱矣。朋友數，斯疏矣。",
+     "layer": "经·先秦（《论语·里仁》）",
+     "sense_in_context": "數（shuò）＝屡次、烦数；与人交接过于频繁则辱、则疏",
+     "locator": "論語·里仁",
+     "record_id": ""
+    },
+    {
+     "source_id": "CV1-S-JL",
+     "quote": "烹小鮮而數撓之，則賊其澤；治大國而數變法，則民苦之。",
+     "layer": "论·先秦（《韩非子·解老》，战国末）",
+     "sense_in_context": "屡次搅动、屡次变法：作用之次数决定所受之害",
+     "locator": "《解老》第19阅读段",
+     "record_id": "CV1-JL-R044"
+    }
+   ],
+   "fit": "數（shuò）＝屡次、频繁：\"数挠\"\"数变法\"正是作用的次数决定损害；频数＝作用之步的计数，与 Frequency.count 同义。脊柱：自环多项式与否由其作用步数而不由强度决定（SelfLoop.polynomial_iff）。",
+   "not_carried": "數（shù）的数目、命数、天数、术数、理数之义；王弼注复六三「頻，頻蹙之貌也」的颦蹙义；\"频复厉\"的占断评价。",
+   "course": "先秦單字\"數\"（shuò）屡次义（论语、解老）；经复六三\"频复\"，王弼读颦蹙（「頻，頻蹙之貌也」），程颐读频数（「復之頻數而不能固者也」）；现代\"频数\"为统计术语（出现次数），与本义相合。",
+   "alternatives": [
+    {
+     "name": "數",
+     "why_not": "先秦证据最强，但单字兼数目、命数、理数，且\"数\"是 C07 种子词，易混"
+    },
+    {
+     "name": "屢",
+     "why_not": "先秦「屢空」「屢中」「屢憎於人」（论语），只是副词\"常常\"，不名计数"
+    },
+    {
+     "name": "頻",
+     "why_not": "经\"频复\"之义有争议：王弼读颦蹙，程颐读频数；单字不定"
+    }
+   ],
+   "lean": [
+    "Becoming.Frequency.count",
+    "Becoming.carried_le_count",
+    "Becoming.Frequency.SelfLoop.carried_eq",
+    "Becoming.Frequency.SelfLoop.polynomial_iff",
+    "Becoming.runaway_of_roundTrip",
+    "Becoming.carried_le_of_rare"
+   ]
+  },
+  {
+   "concept": "不已（a coupling recurs, CouplingRecurs）：一个耦合在任意晚的步仍读水平（Becoming.CouplingRecurs）。有差异到达由不已之耦合构成的环、且不已之耦合从它通到 c 时，每个有限阶在 c 都有所失（carriedWithin_lt_of_recurring_loop），时间顺序的链无界（unbounded_of_recurring_loop）；但不已不必失控（Frequency.Sparse.polynomial）。",
+   "name": "不已",
+   "form": "复词",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "RU1-S-ZY",
+     "quote": "詩曰：『惟天之命，於穆不已』",
+     "layer": "经·先秦至秦汉（《礼记·中庸》引《诗·周颂》；中庸成书年代有争议）",
+     "sense_in_context": "不止息",
+     "locator": "《中庸》段34（引《诗·周颂·维天之命》）",
+     "record_id": ""
+    },
+    {
+     "source_id": "YD-HX01",
+     "quote": "天地之道恆久而不已也",
+     "layer": "传·先秦（《易传·彖·恒》；年代有争议）",
+     "sense_in_context": "恒久而不止",
+     "locator": "彖传·恆卦",
+     "record_id": ""
+    },
+    {
+     "source_id": "YD-CY",
+     "quote": "感則必有應，所應復為感，感復有應，所以不已也",
+     "layer": "注·宋明（北宋程颐；亦见《近思录》卷一）",
+     "sense_in_context": "感应相生成环，所以不止",
+     "locator": "伊川易传·咸九四注",
+     "record_id": ""
+    }
+   ],
+   "fit": "已＝止；不已＝不止，不必每步都有，而是总还会再有。脊柱的 CouplingRecurs 正是〈在任意晚的步都还有作用〉；程颐「所應復為感，感復有應，所以不已也」是环上之耦合不已。",
+   "not_carried": "《序卦》「損而不已」\"升而不已\"之\"不已\"指增减不止（量的单调延续），不是耦合之复现；\"不得已\"之省；\"於穆不已\"所说天命的性命层。",
+   "course": "先秦《诗》《中庸》、恒彖；程颐以感应不已说环；《序卦》以\"X而不已\"说趋势不止。本名只取〈总还会再有作用〉。",
+   "alternatives": [
+    {
+     "name": "不息",
+     "why_not": "\"生生不息\"已由 C05 采用"
+    },
+    {
+     "name": "恆",
+     "why_not": "恒指持守不变，C05 以\"久\"读之"
+    },
+    {
+     "name": "復",
+     "why_not": "C05 已用于构形之复返"
+    },
+    {
+     "name": "無已",
+     "why_not": "\"无已时\"（河上公）带〈无穷尽地要更多〉之义，是 C04 \"多而无已\"一系"
+    }
+   ],
+   "lean": [
+    "Becoming.CouplingRecurs",
+    "Becoming.couplingRecurs_iff",
+    "Becoming.carriedWithin_lt_of_recurring_loop",
+    "Becoming.unbounded_of_recurring_loop",
+    "Becoming.Frequency.Sparse.recurs"
+   ]
+  },
+  {
+   "concept": "已不已分（a settled schedule）：从某步 N 起，每个耦合要么已止（StopsBy），要么不已（CouplingRecurs）；日程自 N 已分（SettledFrom）时，有限阶在 c 自每个起点精确，恰当 N 起之耦合所成的环不在 c 之上游（finite_order_iff_no_loop_from）。〈每个日程都会已分〉恰等价于一条判定原则（settled_iff_recursOrStops：Σ⁰₂ 层的排中，严格强于 LPO；即使每个耦合至多作用一次，日程皆已分也蕴含 LPO：lpo_of_settled），核心不断言它：已分是〈判定一个历程是否还会再变〉。",
+   "name": "已不已分",
+   "form": "新组合",
+   "pre_qin": false,
+   "coinage": true,
+   "confidence": "low",
+   "attestations": [
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "持而盈之，不如其已",
+     "layer": "经·先秦（《老子》九章）",
+     "sense_in_context": "已＝止",
+     "locator": "《道德经》九章",
+     "record_id": ""
+    },
+    {
+     "source_id": "RU1-S-ZY",
+     "quote": "詩曰：『惟天之命，於穆不已』",
+     "layer": "经·先秦至秦汉（《中庸》引《诗》）",
+     "sense_in_context": "不已＝不止",
+     "locator": "《中庸》段34（引《诗·周颂·维天之命》）",
+     "record_id": ""
+    }
+   ],
+   "fit": "已＝止，不已＝总还会再有，分＝已判然分开。〈已不已分〉：每个耦合都已判为止或不止。脊柱：日程已分时，由不已之耦合构成的环决定有限阶是否精确；而一切日程都会已分不是定理，恰是一条判定原则（判定每个耦合是否还会再作用）。",
+   "not_carried": "分的名分、分配之义（社会与财务义，排除）；已的\"已经\"时态义。",
+   "course": "新组合，无历史用例；由\"已\"（先秦）与本簇之\"不已\"组成。",
+   "alternatives": [
+    {
+     "name": "定",
+     "why_not": "C07 种子词；定带静止、确定不变之义，而已分的日程可以有永不停的耦合"
+    },
+    {
+     "name": "已定",
+     "why_not": "易与静止相混"
+    },
+    {
+     "name": "分定",
+     "why_not": "\"名分定\"带社会等级义，排除"
+    }
+   ],
+   "lean": [
+    "Becoming.SettledFrom",
+    "Becoming.StopsBy",
+    "Becoming.RecursOrStops",
+    "Becoming.settled_iff_recursOrStops",
+    "Becoming.finite_order_iff_no_loop_from",
+    "Becoming.lpo_of_settled"
+   ]
+  },
+  {
+   "concept": "余（what a cut loses）：携带量等于低于 j 阶者加上 j 次回应从携带量本身依次所携者（Becoming.carried_eq_orderBelow_add）；所以在 j 阶截断，所失恰是 j+1 次回应所携者（carried_eq_carriedWithin_add），随阶升而不增（responses_antitone）；有不已之环喂入处，每一阶都有余（carriedWithin_lt_of_recurring_loop）；自 N 起无耦合读水平时，N 阶无余（exact_of_reading_before）。",
+   "name": "餘",
+   "form": "单字",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "和大怨，必有馀怨",
+     "layer": "经·先秦（《老子》七十九章，传世本）",
+     "sense_in_context": "调和之后仍剩下的怨",
+     "locator": "《老子》第79章",
+     "record_id": "LAO2-C79-R01"
+    },
+    {
+     "source_id": "V130-LAO-MA",
+     "quote": "和大怨必有餘怨",
+     "layer": "经·先秦（帛书甲本《老子》）",
+     "sense_in_context": "同上",
+     "locator": "帛書甲本 章七十九",
+     "record_id": ""
+    }
+   ],
+   "fit": "余＝剩下的部分；「和大怨，必有馀怨」：只处理到某一层的调和，留下未被处理者。脊柱：截断之所失有确切公式，并且有不已之环处，任何有限阶的截断都留余。",
+   "not_carried": "\"有余\"（多于所需、水平高于 m，如「损有馀而补不足」）——那是水平之高，不是截断之余；余裕、闲暇；C04\"其余\"（整体之其余）与 C06\"余地\"（余量）之义。",
+   "course": "《老子》\"余怨\"；苏辙「外雖和而内未忘也」；程颐「當解而未盡者不早去則將復盛」（未尽之余复盛）。",
+   "alternatives": [
+    {
+     "name": "未盡",
+     "why_not": "程颐「當解而未盡」，指未完结，不专指截断之所失"
+    },
+    {
+     "name": "遺",
+     "why_not": "带遗弃、遗赠义"
+    },
+    {
+     "name": "殘",
+     "why_not": "带残害义"
+    },
+    {
+     "name": "其餘",
+     "why_not": "C04 已用于整体之其余"
+    }
+   ],
+   "lean": [
+    "Becoming.carried_eq_carriedWithin_add",
+    "Becoming.carried_eq_orderBelow_add",
+    "Becoming.responses_antitone",
+    "Becoming.carriedWithin_lt_of_recurring_loop",
+    "Becoming.exact_of_reading_before"
+   ]
+  },
+  {
+   "concept": "应倍（coupling strength）：一个形成跨一步的交换，对某条件在某步水平之差的回应至多为其 k 倍（Becoming.ExchangeLaw.RespondsWithin）；强度为零恰是不敏感（ExchangeLaw.insensitiveAt_iff_strength_zero）。强度是自然数。",
+   "name": "應倍",
+   "form": "新组合",
+   "pre_qin": false,
+   "coinage": true,
+   "confidence": "low",
+   "attestations": [
+    {
+     "source_id": "DS02",
+     "quote": "出其言善，则千里之外应之",
+     "layer": "传·先秦（《易传·系辞上》；年代有争议）",
+     "sense_in_context": "应＝回应",
+     "locator": "系辞上 第八章",
+     "record_id": "WP-XCS-C08-S04-R01"
+    },
+    {
+     "source_id": "RU2-S-MZ",
+     "quote": "或相倍蓰而无算者，不能尽其才者也。",
+     "layer": "经·先秦（《孟子·告子上》）",
+     "sense_in_context": "倍＝加一倍，倍蓰＝一倍五倍以至无算",
+     "locator": "《孟子·告子上》",
+     "record_id": ""
+    }
+   ],
+   "fit": "应＝回应（与 Ren 之\"应\"——开之一相、仍能回应——同义，C06 已用）；倍＝倍数。应倍＝回应是所读之差的几倍。脊柱以倍数 k 界定回应（RespondsWithin），强度为零即不回应。",
+   "not_carried": "倍的\"背（违背）\"义；\"倍蓰\"在《孟子·滕文公》中的物价语境（市场义，排除）；应的\"应当\"义。",
+   "course": "新组合，无历史用例；由\"应\"（先秦）与\"倍\"（先秦）组成。",
+   "alternatives": [
+    {
+     "name": "力",
+     "why_not": "力兼力量、强力；周敦颐\"反之，力也\"指施力，不指回应之倍数"
+    },
+    {
+     "name": "重",
+     "why_not": "周敦颐\"势，轻重也\"，重是存量之势，不是回应倍数"
+    },
+    {
+     "name": "強弱",
+     "why_not": "带争胜之层（contest），且不指倍数"
+    },
+    {
+     "name": "強度",
+     "why_not": "现代词"
+    }
+   ],
+   "lean": [
+    "Becoming.ExchangeLaw.RespondsWithin",
+    "Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero",
+    "Becoming.ExchangeLaw.sensitive_iff_strength",
+    "Becoming.carried_le_count"
+   ]
+  },
+  {
+   "concept": "所致（the carried amount）：在某条件某步，一切强度至多为 k 之律、差异至多为 δ 与 σ 之流所能到达的最大差异恰是携带量（Becoming.most_difference_arrives）；它被达到（carried_attained）；它为正恰沿起始差异、部分之差与正强度构成的时间路线（carried_pos_iff）。",
+   "name": "所致",
+   "form": "复词",
+   "pre_qin": false,
+   "coinage": false,
+   "confidence": "low",
+   "attestations": [
+    {
+     "source_id": "DS03",
+     "quote": "服牛乘马，引重致远以利天下",
+     "layer": "传·先秦（《易传·系辞下》）",
+     "sense_in_context": "致＝送达远处",
+     "locator": "系辞下 第二章",
+     "record_id": "WP-XCX-C02-S08-R01"
+    },
+    {
+     "source_id": "RU2-S-XZ15",
+     "quote": "六馬不和，則造父不能以致遠",
+     "layer": "论·先秦（《荀子·议兵》）",
+     "sense_in_context": "致远＝送达远处；诸马不相和则不能送达",
+     "locator": "《荀子·議兵篇》",
+     "record_id": ""
+    }
+   ],
+   "fit": "致＝使到达、送达；所致＝所送达者。脊柱：携带量是能到达某处的最大差异，恰沿耦合路线送达（carried_pos_iff），且被达到（carried_attained）。",
+   "not_carried": "现代\"所致\"＝\"由……造成\"的因果归属义；致仕、致敬之义。",
+   "course": "先秦\"致远\"；后世\"所致\"多作因果归因语，本名只取〈送达之量〉。",
+   "alternatives": [
+    {
+     "name": "所及",
+     "why_not": "所及指所到的范围，不是到达之量"
+    },
+    {
+     "name": "所至",
+     "why_not": "同上"
+    },
+    {
+     "name": "輸",
+     "why_not": "C04 已用于输送（Flow.Conveys）"
+    }
+   ],
+   "lean": [
+    "Becoming.most_difference_arrives",
+    "Becoming.carried_attained",
+    "Becoming.carried_pos_iff",
+    "Becoming.Conveyed"
+   ]
+  },
+  {
+   "concept": "中和（two-sided regulation）：平衡之下，一条件的联合交换在 m 两侧都与偏离相反（Becoming.Flow.Opposes），并以与 m 之距为界（Flow.WithinGap）时，距不升，距为正则每步至少降一（gap_falls、regulates），距用尽之步起水平定于 m（settles）。已采用之名（RO）。",
+   "name": "中和",
+   "form": "复词",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "high",
+   "attestations": [
+    {
+     "source_id": "RU1-S-ZY",
+     "quote": "喜怒哀樂之未發，謂之中；發而皆中節，謂之和。",
+     "layer": "经·先秦至秦汉（《礼记·中庸》；成书年代有争议）",
+     "sense_in_context": "发而皆合节度为和",
+     "locator": "《中庸》首章",
+     "record_id": "RU1-ZY-01-R05"
+    },
+    {
+     "source_id": "RU1-S-ZY",
+     "quote": "致中和，天地位焉，萬物育焉。",
+     "layer": "经·先秦至秦汉（《中庸》）",
+     "sense_in_context": "推致中和",
+     "locator": "《中庸》首章",
+     "record_id": "RU1-ZY-01-R08"
+    },
+    {
+     "source_id": "LC-HS-UP",
+     "quote": "去此三者，处中和，行无为，则天下自化",
+     "layer": "注·秦汉（河上公《老子章句》二十九章；年代有争议）",
+     "sense_in_context": "去其过甚，处于中和",
+     "locator": "河上公章句 第29章",
+     "record_id": "LC2-HS-C29-R02"
+    }
+   ],
+   "fit": "发而中节谓之和：回应发出而合于界。脊柱：两侧相反、且以与 m 之距为界的交换，使水平定于 m；两者缺一则不成（Overshooting、OneSided 两个见证）。",
+   "not_carried": "\"未发之中\"作为性之本体（四种非关系层中的〈固定之性〉层，朱熹以性情体用分中和）；「天地位焉，萬物育焉」的宇宙论断言（RO 定域）。",
+   "course": "《中庸》首章；河上公\"处中和\"；周敦颐\"中也者，和也，中节也\"；朱熹以性情体用说中和（性层）。",
+   "alternatives": [
+    {
+     "name": "和",
+     "why_not": "单字太宽：兼和睦、和同、调和"
+    },
+    {
+     "name": "中",
+     "why_not": "C15 种子词；中兼\"未发之中\"的性层"
+    },
+    {
+     "name": "均",
+     "why_not": "均指平均、相等，不指两侧相反之调节"
+    }
+   ],
+   "lean": [
+    "Becoming.Flow.Opposes",
+    "Becoming.Flow.WithinGap",
+    "Becoming.Flow.gap_falls",
+    "Becoming.Flow.regulates",
+    "Becoming.Flow.settles"
+   ]
+  },
+  {
+   "concept": "中节（the bound is exactly no overshoot）：平衡之下，联合交换在两侧偏离均衡至多为与 m 之距（Becoming.Flow.WithinGap），恰当下一水平落在 m 与当前水平之间（Flow.withinGap_iff_between、Regulation.within_iff_between）；界内水平永不越过 m（stays_between_at），距不升（gap_le_of_within）。",
+   "name": "中節",
+   "form": "复词",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "RU1-S-ZY",
+     "quote": "喜怒哀樂之未發，謂之中；發而皆中節，謂之和。",
+     "layer": "经·先秦至秦汉（《中庸》）",
+     "sense_in_context": "合于节度、不过其界",
+     "locator": "《中庸》首章",
+     "record_id": "RU1-ZY-01-R05"
+    },
+    {
+     "source_id": "YD-JP39",
+     "quote": "大蹇朋來，以中節也。",
+     "layer": "传·先秦（《易传·小象·蹇》；年代有争议）",
+     "sense_in_context": "以中而合节（爻位：九五得中）",
+     "locator": "第39卦蹇·小象·第5位",
+     "record_id": "TP-H39-X5-R01"
+    },
+    {
+     "source_id": "RU2-S-S01",
+     "quote": "惟中也者，和也，中节也，天下之达道也，圣人之事也。",
+     "layer": "论·宋明（北宋周敦颐《通书·师》）",
+     "sense_in_context": "中即和即中节",
+     "locator": "《通书·师第七》",
+     "record_id": "RU2-R0153"
+    }
+   ],
+   "fit": "中节＝合乎节度、不过其界。脊柱：界恰是\"不越过\"——下一水平在 m 与当前水平之间；界内不越过 m。",
+   "not_carried": "节的节日、节气、符节、气节义；竹节；蹇九五\"以中节\"的爻位义（得中之位）。",
+   "course": "《中庸》\"发而皆中节\"；小象\"以中节\"（爻位）；周敦颐\"中也者，和也，中节也\"。",
+   "alternatives": [
+    {
+     "name": "節",
+     "why_not": "单字：节卦之节是取与两侧之带（RO tuan-jie），比\"不越过 m\"宽；且为 C17 种子词"
+    },
+    {
+     "name": "不過",
+     "why_not": "论语、系辞\"故不过\"多作\"不犯错\""
+    },
+    {
+     "name": "適中",
+     "why_not": "程颐「節貴適中」，指位置不指界"
+    }
+   ],
+   "lean": [
+    "Becoming.Flow.WithinGap",
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Regulation.within_iff_between",
+    "Becoming.Flow.stays_between_at",
+    "Becoming.Flow.gap_le_of_within"
+   ]
+  },
+  {
+   "concept": "过正（overshoot）：平衡之下，与偏离相反的交换越出与 m 之距时，水平越过 m（Becoming.Flow.crosses_of_above、crosses_of_below）；每步都越界的见证在 m 两侧往复而永不在 m（Regulation.Overshooting.oscillates、never_at）。",
+   "name": "過正",
+   "form": "复词",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "MI1-S-SX",
+     "quote": "景過正，故招。",
+     "layer": "论·先秦（《墨子·经说下》，墨经，战国后期）",
+     "sense_in_context": "光线越过正点，影因而倒转（越过一点到另一侧）",
+     "locator": "墨經·經說下",
+     "record_id": ""
+    },
+    {
+     "source_id": "V130-LAO-GD",
+     "quote": "凡过正一，以失其它",
+     "layer": "论·先秦（郭店楚简转录，置于语丛二；义未定）",
+     "sense_in_context": "过于专一则失其他（义未定）",
+     "locator": "郭店楚墓竹簡·语丛二（转录简号40–41）",
+     "record_id": ""
+    },
+    {
+     "source_id": "YD-CY4",
+     "quote": "若矯枉而過正過所以就正也",
+     "layer": "注·宋明（北宋程颐《伊川易传》小过卦辞注）",
+     "sense_in_context": "矫枉越过正点，越过是为了回到正",
+     "locator": "伊川易传·卷4·第62卦",
+     "record_id": "CY130-H62-R01"
+    }
+   ],
+   "fit": "过正＝越过正点到另一侧（墨经之影倒、程颐之矫枉过正）。脊柱：越界即越过 m；一直越界则永不到 m。",
+   "not_carried": "\"过\"作过错、过失；\"正\"作正当、正义（评价义）；〈矫枉过正必坏〉的成语判断（脊柱：一次越过之后若回到界内仍可定于 m）。",
+   "course": "墨经（光学）、郭店（义未定）、程颐（矫枉过正，「過所以就正」）。",
+   "alternatives": [
+    {
+     "name": "過",
+     "why_not": "单字太宽，且为 C15 种子词"
+    },
+    {
+     "name": "過中",
+     "why_not": "爻位\"过中\"之义"
+    },
+    {
+     "name": "過當",
+     "why_not": "过分，评价义"
+    },
+    {
+     "name": "矯枉過正",
+     "why_not": "成语，带价值判断"
+    }
+   ],
+   "lean": [
+    "Becoming.Flow.crosses_of_above",
+    "Becoming.Flow.crosses_of_below",
+    "Becoming.Regulation.Overshooting.oscillates",
+    "Becoming.Regulation.Overshooting.never_at"
+   ]
+  },
+  {
+   "concept": "一偏（one-sided response）：只对 m 一侧的偏离相反的交换：满足恢复律之前提、在界内，却不对另一侧的偏离相反，水平永在 m 之上（Becoming.Regulation.OneSided.restores_premise、OneSided.above、OneSided.not_opposes）：一侧不是调节。",
+   "name": "一偏",
+   "form": "复词",
+   "pre_qin": false,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "LC-SZ-ALL",
+     "quote": "躁能勝寒而不能勝𤍠靜能勝𤍠而不能勝寒皆滯于一偏而非其正也",
+     "layer": "注·宋明（北宋苏辙《老子解》四十五章）",
+     "sense_in_context": "躁、静各只胜一侧，皆滞于一侧",
+     "locator": "老子解 第45章",
+     "record_id": "LC2-SZ-C45-R02"
+    },
+    {
+     "source_id": "YD-WF1",
+     "quote": "非倚于一偏而不至也",
+     "layer": "论·明清之际（王夫之《周易外传》）",
+     "sense_in_context": "不倚于一侧",
+     "locator": "周易外传·系辞上传第一章",
+     "record_id": ""
+    }
+   ],
+   "fit": "一偏＝只在一侧。苏辙以躁、静各只胜一侧说「滯于一偏」，正是脊柱的单侧之证（OneSided）。",
+   "not_carried": "偏私、偏爱（评价、社会义）；C10 种子词\"偏\"的偏蔽义——一偏只指只对一侧回应。",
+   "course": "宋苏辙、明清之际王夫之。先秦有\"偏\"（荀子\"蔽于一曲\"），无\"一偏\"。",
+   "alternatives": [
+    {
+     "name": "偏",
+     "why_not": "单字为 C10 种子词，兼偏蔽、偏私"
+    },
+    {
+     "name": "一曲",
+     "why_not": "荀子\"蔽于一曲\"指认识之蔽，属 C10"
+    },
+    {
+     "name": "獨",
+     "why_not": "带孤独、独有义"
+    }
+   ],
+   "lean": [
+    "Becoming.Regulation.OneSided.restores_premise",
+    "Becoming.Regulation.OneSided.above",
+    "Becoming.Regulation.OneSided.not_opposes",
+    "Becoming.Flow.restores"
+   ]
+  },
+  {
+   "concept": "识不早（reading late）：规则在某步所给所取由其余者在 ℓ+1 步之前所交换者固定（Becoming.Regulation.ReadsLate）。晚读不能区分在最后 ℓ+1 步不同的两种其余（late_spread），所以对每步移动至多 d 的每种其余，没有晚读 ℓ 步的规则保持窄于 2(ℓ+1)d 之带（late_band、no_narrower_band）；晚返达到此界（lateReturn_band）。",
+   "name": "識不早",
+   "form": "短语",
+   "pre_qin": false,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "RU2-S-S01",
+     "quote": "识其重而亟反之，可也。反之，力也。识不早，力不易也。",
+     "layer": "论·宋明（北宋周敦颐《通书·势》）",
+     "sense_in_context": "识得晚，反之所需之力更大",
+     "locator": "《通书·势第二十七》",
+     "record_id": "RU2-R0163"
+    },
+    {
+     "source_id": "YD-OW-WY",
+     "quote": "由辯之不早辯也",
+     "layer": "传·先秦至秦汉（《易传·文言·坤》；年代有争议）",
+     "sense_in_context": "没有及早分辨（先秦之同构说法）",
+     "locator": "坤文言",
+     "record_id": ""
+    }
+   ],
+   "fit": "识＝已采用之\"识\"（一个形成所登记、读出之差，C08）；不早＝晚。周敦颐\"识不早，力不易\"：识得晚，反之所需之力更大。脊柱：读得越晚，所能保持的最窄之带越宽：2(ℓ+1)d。",
+   "not_carried": "识的〈知识、见识〉总称之义；周敦颐\"极重不可反\"的吸收之义（另属 Law.DrawnInto，RO 已映）。",
+   "course": "《文言》「辯之不早辯」；周敦颐\"识不早，力不易\"。",
+   "alternatives": [
+    {
+     "name": "後識",
+     "why_not": "无用例"
+    },
+    {
+     "name": "遲",
+     "why_not": "迟缓指动作慢，不指读入晚"
+    },
+    {
+     "name": "不早辯",
+     "why_not": "文言用\"辩\"（分辨），C08 一系；且辩是区分，不是读入的时差"
+    }
+   ],
+   "lean": [
+    "Becoming.Regulation.ReadsLate",
+    "Becoming.Regulation.late_spread",
+    "Becoming.Regulation.late_band",
+    "Becoming.Regulation.no_narrower_band",
+    "Becoming.Regulation.lateReturn_band"
+   ]
+  },
+  {
+   "concept": "宽猛相济（the relay）：读数低于 a 时给 M，高于 b 时取 M，在 [a,b] 内不动（Becoming.Regulation.relay）；晚读 ℓ 步时，进入带后仍走 ℓM（Regulation.overshoot）。自起点在 a 下保持 ℓ+1 步者，恰在 a+(ℓ+1)M ≤ b+1 时定于带内（relay_threshold、held_below_settles），越过此阈则两端无休止地越过（held_oscillates、crossing_oscillates）。",
+   "name": "寬猛相濟",
+   "form": "短语",
+   "pre_qin": false,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "IN2-S01",
+     "quote": "若這下，則剛柔寬猛各有用時",
+     "layer": "语·宋明（南宋《朱子语类》卷一二五，答老子柔胜刚之问）",
+     "sense_in_context": "刚柔宽猛各在其时而用：按情形选用相反的作用",
+     "locator": "朱子語類/125",
+     "record_id": ""
+    },
+    {
+     "source_id": "YD-CY3",
+     "quote": "雖悔於嚴厲未得寛猛之中",
+     "layer": "注·宋明（北宋程颐《伊川易传》家人九三注）",
+     "sense_in_context": "宽与猛之间的中",
+     "locator": "伊川易传·卷三·家人九三注",
+     "record_id": ""
+    },
+    {
+     "source_id": "YD-CY",
+     "quote": "剛柔相濟為中",
+     "layer": "注·宋明（北宋程颐《伊川易传》乾用九注）",
+     "sense_in_context": "刚柔相济才为中",
+     "locator": "伊川易传·乾用九注",
+     "record_id": ""
+    }
+   ],
+   "fit": "宽与猛是两种相反的作用，各在读数越界时施用（朱子「各有用時」），相济而和。脊柱的继电调节正是按读数在两端施以相反之步、带内不动；晚读则越界，定与不定之阈值确切（relay_threshold）。",
+   "not_carried": "宽猛作为治者对被治者的统治术（左传中民是被调节的存量而不是读者，RO 已注）；刚柔的性情评价义。",
+   "course": "结构出自《左传·昭公二十年》仲尼论宽猛相济而政和（在脉络之外，不引原文；RO zuo-zhao20-kuan-meng 已判相合），四字形在脉络冻结文本中未见；程颐「寛猛之中」「剛柔相濟為中」，朱子「剛柔寬猛各有用時」。",
+   "alternatives": [
+    {
+     "name": "剛柔相濟",
+     "why_not": "程颐常用，但指同时兼用两者，不是按读数交替"
+    },
+    {
+     "name": "剛柔濟",
+     "why_not": "坎六四小象「樽酒簋貳，剛柔济也」（TP-H29-X4-R01，本簇已拒收）是爻位相接（柔承刚）之义，程颐本此字作\"際\"（「剛柔相際接之道」），不是按读数交替施用相反作用"
+    },
+    {
+     "name": "張弛",
+     "why_not": "〈一张一弛〉出礼记杂记（脉络外），指交替而无读数之阈"
+    },
+    {
+     "name": "濟其不及以泄其過",
+     "why_not": "晏子语（左传，脉络外），指两侧相反之作用，是中和而不专指继电"
+    }
+   ],
+   "lean": [
+    "Becoming.Regulation.relay",
+    "Becoming.Flow.RelaysLate",
+    "Becoming.Regulation.overshoot",
+    "Becoming.Regulation.held_oscillates",
+    "Becoming.Regulation.held_below_settles",
+    "Becoming.Regulation.relay_threshold"
+   ]
+  },
+  {
+   "concept": "不求备（tolerance）：在容忍之律下，一个形成在其所等待者中至多缺 tol 个仍于下一步给予（Becoming.Tolerance.tolerating）；容忍为零即等待全部（tolerating_zero）；稀薄的扣留一步消散（thin_absorbed），每个只在其容忍之外等待的集合一直给予（kept_set）；容忍吸收稀薄的扣留，但不恢复全面扣留（Triad.absorbed、Triad.total_kept）。",
+   "name": "不求備",
+   "form": "短语",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "故舊無大故，則不棄也，無求備於一人",
+     "layer": "经·先秦（《论语·微子》）",
+     "sense_in_context": "不要求一人样样具备",
+     "locator": "《论语》微子第十八",
+     "record_id": "RU1-LY-18-10-R02"
+    },
+    {
+     "source_id": "RU1-S-LY",
+     "quote": "及其使人也，求備焉",
+     "layer": "经·先秦（《论语·子路》）",
+     "sense_in_context": "求备＝要求所依者全备（容忍为零）",
+     "locator": "《论语》子路第十三",
+     "record_id": ""
+    },
+    {
+     "source_id": "YD-CY4",
+     "quote": "然明王用人豈求備也",
+     "layer": "注·宋明（北宋程颐《伊川易传》）",
+     "sense_in_context": "用人不求全备",
+     "locator": "伊川易传·卷四·井九三注",
+     "record_id": ""
+    }
+   ],
+   "fit": "求备＝要求所依者全备，即等待全部（容忍为零，tolerating_zero）；不求备＝容许所等待者有所缺而仍给予。脊柱之容忍律正是\"所等待者中至多缺 tol 个\"。",
+   "not_carried": "用人、任官的社会语境（君子小人之别）；\"备\"作防备之义；对他人的道德宽恕。",
+   "course": "《论语》「無求備於一人」\"求备焉\"；程颐「明王用人豈求備也」。RO lao-76 把《老子》\"柔弱\"读作容忍，本名取《论语》之语，因\"柔\"带软弱义与\"柔之胜刚\"的争胜层。",
+   "alternatives": [
+    {
+     "name": "柔",
+     "why_not": "RO lao-76 之读法；柔带软弱义，且\"柔之胜刚\"把它放入争胜之层"
+    },
+    {
+     "name": "容",
+     "why_not": "C06 已用于容许（Web.Admits）"
+    },
+    {
+     "name": "寬",
+     "why_not": "宽兼宽政、宽厚，且在本簇〈宽猛相济〉中是继电之一侧"
+    },
+    {
+     "name": "恕",
+     "why_not": "道德宽恕义"
+    }
+   ],
+   "lean": [
+    "Becoming.Tolerance.tolerating",
+    "Becoming.Tolerance.tolerating_zero",
+    "Becoming.Tolerance.thin_absorbed",
+    "Becoming.Tolerance.kept_set",
+    "Becoming.Tolerance.Triad.absorbed",
+    "Becoming.Tolerance.Triad.total_kept"
+   ]
+  },
+  {
+   "concept": "有以待之（restoring from every start）：对每个保持包含之律，一个形成自每个起点在第 n 步给予，恰当它自全面扣留这一最坏起点在第 n 步给予（Becoming.Tolerance.worst_start）；自最坏起点给予只增（rises_from_withheld），到 n 步已恢复即此后自每个起点都恢复（restored_stays）；在先给之律下，自每个起点于 n 步恢复恰当无 n 长的清晰等待链进入（restores_iff、restores_from）。",
+   "name": "有以待之",
+   "form": "短语",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "medium",
+   "attestations": [
+    {
+     "source_id": "BI1-S-SZ",
+     "quote": "無恃其不來，恃吾有以待之；無恃其不攻，恃吾有所不可攻也。",
+     "layer": "论·先秦（《孙子·九变》；成书层次有争议）",
+     "sense_in_context": "不依赖起点之好（敌不来、不攻），依赖自任何起点都成立的应对",
+     "locator": "九變第八",
+     "record_id": "BI1-SZ-R-40"
+    }
+   ],
+   "fit": "不恃起点之好，而恃自最坏起点也成立者。脊柱：自每个起点成立恰是自最坏起点成立（worst_start）。",
+   "not_carried": "敌我对立的兵争框架（争胜之层）；\"待\"作等待、待人之义——此处\"待\"是应对。",
+   "course": "《孙子》；后世〈有备无患〉（左传，脉络外）。",
+   "alternatives": [
+    {
+     "name": "有備",
+     "why_not": "〈有备无患〉出左传（脉络外）；\"备\"在本簇\"不求备\"中另用"
+    },
+    {
+     "name": "豫",
+     "why_not": "\"思患而豫防之\"（大象）指预先，不指自每个起点"
+    },
+    {
+     "name": "待",
+     "why_not": "单字多义"
+    }
+   ],
+   "lean": [
+    "Becoming.Tolerance.worst_start",
+    "Becoming.Tolerance.rises_from_withheld",
+    "Becoming.Tolerance.restored_stays",
+    "Becoming.Tolerance.restores_iff",
+    "Becoming.Tolerance.restores_from"
+   ]
+  },
+  {
+   "concept": "先施（gives first）：先给之律（Becoming.Withholding.givesFirst）中源头不等所等待者而给；在各自只在所等待者给予时才给的环上，无人先给就不恢复，先给则环恢复（Withholding.Ring.givesFirst_restores）；先给从不比等待全部更晚恢复（Tolerance.givesFirst_restores_of_answers）。",
+   "name": "先施",
+   "form": "复词",
+   "pre_qin": true,
+   "coinage": false,
+   "confidence": "high",
+   "attestations": [
+    {
+     "source_id": "RU1-S-ZY",
+     "quote": "所求乎朋友，先施之，未能也",
+     "layer": "经·先秦至秦汉（《礼记·中庸》；年代有争议）",
+     "sense_in_context": "对朋友所求者，自己先施予",
+     "locator": "《中庸》段13",
+     "record_id": "RU1-ZY-13-R09"
+    },
+    {
+     "source_id": "MO1-S-C16",
+     "quote": "卽必吾先從事乎愛利人之親，然後人報我以愛利吾親也",
+     "layer": "论·先秦（《墨子·兼爱下》）",
+     "sense_in_context": "先从事爱利人之亲",
+     "locator": "《墨子·兼愛下》",
+     "record_id": "MO1-C16-R010"
+    }
+   ],
+   "fit": "先施＝不待对方而先给。脊柱：在互相等待之环上，无人先给就不恢复；先给之律恢复（Ring.givesFirst_restores），且不比等待全部更晚（givesFirst_restores_of_answers）。",
+   "not_carried": "施的施舍、恩惠（上对下的给予，带等级义）；把先施当作期待回报之策略（墨子的交换式论证，RO 已注：定理不依赖回报之计算）。",
+   "course": "《中庸》\"先施之\"；《墨子》「先從事乎愛利人之親」。",
+   "alternatives": [
+    {
+     "name": "先與",
+     "why_not": "\"与\"C04 已用于给予 give"
+    },
+    {
+     "name": "先從事",
+     "why_not": "墨子语，过长且泛"
+    },
+    {
+     "name": "倡",
+     "why_not": "倡导，带领导义"
+    }
+   ],
+   "lean": [
+    "Becoming.Withholding.givesFirst",
+    "Becoming.Withholding.Ring.givesFirst_restores",
+    "Becoming.Tolerance.givesFirst_restores_of_answers",
+    "Becoming.Tolerance.restores_iff"
+   ]
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-jiji-tongbian-weiqiong",
+   "source_id": "YD-CY4",
+   "fragments": [
+    "天下之事不進則退无一定之理",
+    "濟之終不進而止矣无常止也衰亂至矣",
+    "唯聖人為能通其變於未窮不使至於極也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Law.rests_iff",
+    "Becoming.Web.break_not_bounded",
+    "Becoming.Flow.policy_uses_after_failure",
+    "Becoming.Pace.rule_at_reading",
+    "Becoming.Switching.changing_regains"
+   ],
+   "records": [
+    "seeking-boundary",
+    "runaway-distance-unregistered",
+    "how-fast-a-rule-may-change"
+   ],
+   "reading": "AI读法：程颐此注说的是\"穷\"之前的变。其一，\"无常止\"：确定之律下，一个历程带着所求静止下来，恰当它到达律不再改变、又满足所求的组态（Law.rests_iff）；程颐说人事没有这样的组态，所以\"止\"不是终点。其二，「通其變於未窮不使至於極」：存量不按水平耦合进来时，断裂之前任何耦合进来的东西都不界定离断裂多远（Web.break_not_bounded，即本簇的\"未兆\"），经由耦合的策略只在失败之后才动用更大的存量（Flow.policy_uses_after_failure）；要在穷之前变，规则须在读取之步就由所读者改变（Pace.rule_at_reading），而读取快层的变规则能重得每个固定规则所失（Switching.changing_regains）。所以\"于未穷\"在脊柱上是把将穷之存量按水平读进来、并让规则随所读而变，不是等穷而后变。种类、声明与记录沿用 RO cy-jiji-wuchangzhi。「衰亂至矣」是程颐对人事的断定，脊柱只给出静止的确切条件，不给出\"止必衰\"；\"圣人\"不采纳为结构名。",
+   "gap": "",
+   "layer": "注·宋明（北宋程颐《伊川易传》既济彖注）",
+   "locator": "伊川易传·卷四·既济彖注",
+   "names_used": [
+    "窮",
+    "未兆"
+   ],
+   "relational": "事不进则退，没有一成不变的静止；到济之终而止，则衰乱至；在未穷之时通其变。",
+   "ro_passage": "cy-jiji-wuchangzhi",
+   "tradition": "易传注（程颐）",
+   "work": "《伊川易传》卷四·既济",
+   "record_ids": [
+    "CY-R015"
+   ]
+  },
+  {
+   "id": "xici-shan-buji",
+   "source_id": "DS03",
+   "fragments": [
+    "善不积不足以成名，恶不积不足以灭身",
+    "以小恶为无伤而弗去也",
+    "故恶积而不可揜，罪大而不可解"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.break_carried_nowhere",
+    "Becoming.Thresholds.Draw.forms_at_break",
+    "Becoming.Thresholds.Draw.diverges_at_break",
+    "Becoming.Law.DrawnInto.never_back",
+    "Becoming.Web.unsupported_after_loss",
+    "Becoming.Hexagram.waxWane_returns"
+   ],
+   "records": [
+    "loops-within-what-a-law-reads",
+    "necessarily-drawn-is-not-returning",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：前半与本簇的\"穷\"同构：律只在阈值以下读入一存量时，断裂之前两个只在该存量上不同的历程在其余各处相同（break_carried_nowhere），所以\"以小恶为无伤\"正是阈值以下读不出差别；经过该存量的环恰在断裂处形成（Thresholds.Draw.forms_at_break），差异在断裂之后才显（diverges_at_break）。后半\"不可揜\"\"不可解\"需要范围：被吸入吸收区者不再回来（Law.DrawnInto.never_back），依赖不变而损失无回者此后不再被支持（Web.unsupported_after_loss）；但在无损之律下每个组态都回来（Hexagram.waxWane_returns）。所以\"罪大而不可解\"只在有吸收区或无回之损处成立。善恶评价不由这些律给出。种类与声明沿用 RO xici-shan-buji。",
+   "gap": "",
+   "layer": "传·先秦至汉初（《易传·系辞下》；成书年代有争议）",
+   "locator": "系辞下·冻结第4章·编者论证段8（原文起“善不积不足以成名，恶不积”）",
+   "names_used": [
+    "窮"
+   ],
+   "relational": "小者积累，到某一处成为不可掩、不可解的状态；积累之时每一小步都看似无伤。",
+   "ro_passage": "xici-shan-buji",
+   "tradition": "易传",
+   "work": "《周易·系辞下》",
+   "record_ids": [
+    "WP-XCX-C04-S08-R01",
+    "WP-XCX-C04-S08-R02",
+    "WP-XCX-C04-S08-R03"
+   ]
+  },
+  {
+   "id": "xici-an-buwang-wei",
+   "source_id": "DS03",
+   "fragments": [
+    "危者，安其位者也",
+    "君子安而不忘危，存而不忘亡，治而不忘乱",
+    "危者使平，易者使倾"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.break_not_bounded",
+    "Becoming.Web.observed_raise_couples",
+    "Becoming.Flow.policy_uses_after_failure",
+    "Becoming.Web.tail_unexcluded",
+    "Becoming.Law.rests_iff"
+   ],
+   "records": [
+    "runaway-distance-unregistered",
+    "testing-within-registration",
+    "seeking-boundary"
+   ],
+   "reading": "AI读法：本簇的\"未兆\"在此有确切形式。存量不按水平耦合进一个形成时，断裂之前没有耦合进来的东西界定离断裂多远（Web.break_not_bounded）；按水平耦合则任何抬升立即被读出（Web.observed_raise_couples）；经由耦合的策略只在支持失败之后才动用更大的存量（Flow.policy_uses_after_failure）。所以\"安而不忘危\"在脊柱上是把存量按水平读进来，而不是等到失败。范围：没有模型时，有限的前缀不排除任何后续（Web.tail_unexcluded），读进来也不保证\"不倾\"；\"危者使平，易者使倾\"是读入与稳定之间的关系，脊柱只给出读入的一半。种类与声明沿用 RO xici-an-buwang-wei；本条另收第八章\"其辞危\"节的两条记录与 XC-R059，结构相同。",
+   "gap": "",
+   "layer": "传·先秦至汉初（《易传·系辞下》；成书年代有争议）",
+   "locator": "系辞下·冻结第4章·编者论证段9（原文起“子曰：“危者，安其位者也”）",
+   "names_used": [
+    "未兆"
+   ],
+   "relational": "安与危是同一关系在两个时刻的读法：安于其位者即在危中；不忘危把当下之安与它不显示的断裂相连。",
+   "ro_passage": "xici-an-buwang-wei",
+   "tradition": "易传",
+   "work": "《周易·系辞下》",
+   "record_ids": [
+    "WP-XCX-C04-S09-R01",
+    "WP-XCX-C04-S09-R02",
+    "WP-XCX-C08-S03-R01",
+    "WP-XCX-C08-S03-R02",
+    "XC-R059"
+   ]
+  },
+  {
+   "id": "daxiang-jiji-yufang",
+   "source_id": "YD-HX02",
+   "fragments": [
+    "水在火上，既濟；君子以思患而豫防之"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Learning.goAlike_iff_lumped",
+    "Becoming.Learning.Lumped",
+    "Becoming.Law.rests_iff",
+    "Becoming.Web.break_not_bounded",
+    "Becoming.Web.observed_raise_couples"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "seeking-boundary",
+    "runaway-distance-unregistered"
+   ],
+   "reading": "AI读法：大象的推理形式是〈取象而法之〉，是类比而不是导出：一种对应承载律，恰当律在它所归并者之间走得一样（Learning.goAlike_iff_lumped），而\"水在火上\"与「思患而豫防之」之间没有给出这样的归并，这是 RO daxiang-junzi-yi 判为相分的理由，本条沿用其种类。所承之结构本身却在本簇可读：既济不是静止处（Law.rests_iff），\"思患而豫防\"即在断裂之前把存量读进来——不按水平耦合则断裂前无从界定其远近（Web.break_not_bounded），按水平耦合则抬升立即被读出（Web.observed_raise_couples）。与 RO 的差别及理由：本条只收既济一句（HX-R052），所以略去 RO 为坤、革所列的 Hexagram.yang_not_goAlike 与 Captured.rule_perturbation_changes（及其记录 target-capture）；因\"豫防\"的内容属本簇\"未兆\"，加上 Runaway 的两条（及记录 runaway-distance-unregistered）。",
+   "gap": "",
+   "layer": "传·先秦至汉初（《易传·大象》；成书年代有争议）",
+   "locator": "大象传·既濟卦",
+   "names_used": [
+    "未兆"
+   ],
+   "relational": "以水在火上之象（已济）比拟君子在已济之时思患预防；象与行之间是类比。",
+   "ro_passage": "daxiang-junzi-yi",
+   "tradition": "易传",
+   "work": "《周易·大象·既济》",
+   "record_ids": [
+    "HX-R052"
+   ]
+  },
+  {
+   "id": "jie-kujie-buke-zhen",
+   "source_id": "YD-JG60",
+   "fragments": [
+    "節：亨。苦節不可貞。",
+    "上六：苦節，貞凶，悔亡。",
+    "不節若，則嗟若，"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.beyond_given_bounded",
+    "Becoming.Flow.takesAll_of_more",
+    "Becoming.Flow.Balances.consumption_ends_with_feeders",
+    "Becoming.Withholding.waitsAll_more_waiting",
+    "Becoming.Withholding.withholding_spreads",
+    "Becoming.Withholding.withholding_absorbs"
+   ],
+   "records": [
+    "where-a-rising-take-ends",
+    "consumption-ends-with-feeders",
+    "giving-that-waits-on-giving"
+   ],
+   "reading": "AI读法：经文的节在两边都有界。一边「不節若，則嗟若」：取多于所给者不能持续（Flow.beyond_given_bounded），上升的取终将取尽所给（Flow.takesAll_of_more），喂养者失去支持后消耗至多持续其存量之步数（consumption_ends_with_feeders）。另一边「苦節不可貞」：节到等待全部，多一份等待就少一份给予（Withholding.waitsAll_more_waiting），扣留沿等待之链向下游扩散（withholding_spreads），一处扣留终结它所达之族的一切给予（withholding_absorbs）。所以节是两界之间的带，与本簇的\"不求备\"（容忍为零即等待全部）相邻；节之带比\"中节\"（下一水平落在 m 与当前之间）宽，所以不以\"节\"作中节之名。本条是经（卦辞、爻辞），RO tuan-jie 是彖对同一卦辞的解释（「“苦節不可貞”，其道窮也」），结构相同，沿用其种类与声明；层次不同。「貞凶，悔亡」的占断不采纳。",
+   "gap": "",
+   "layer": "经·先秦（《周易》节卦卦辞、爻辞，西周至春秋）",
+   "locator": "经文·第60卦節·節卦辞",
+   "names_used": [
+    "不求備"
+   ],
+   "relational": "节以两侧为界：不节则嗟，节之过苦则不可持守。",
+   "ro_passage": "tuan-jie",
+   "tradition": "易经",
+   "work": "《周易·节》",
+   "record_ids": [
+    "JL-R528",
+    "JL-R543",
+    "JG2-H60-L3-R01"
+   ]
+  },
+  {
+   "id": "xugua-within-pairs",
+   "source_id": "YD-OW-XG",
+   "fragments": [
+    "損而不已，必益，故受之以益",
+    "困乎上者，必反下，故受之以井",
+    "窮大者必失其居，故受之以旅"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.reverse",
+    "Becoming.Hexagram.Paired",
+    "Becoming.Hexagram.order_paired",
+    "Becoming.Hexagram.order_paired_by_law",
+    "Becoming.Hexagram.both_fixed_iff",
+    "Becoming.Hexagram.reverse_waxWane",
+    "Becoming.Hexagram.bo",
+    "Becoming.Hexagram.fu",
+    "Becoming.Hexagram.bo_fu",
+    "Becoming.Hexagram.ringRule",
+    "Becoming.Hexagram.waxWane_twisted"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "hexagram-world-laws",
+    "hexagram-arrangements-and-laws"
+   ],
+   "reading": "AI读法：三句都落在一对之内：损→益、困→井、丰→旅，后卦都是前卦的翻转（Hexagram.reverse、order_paired、order_paired_by_law），所以\"X 而不已必 Y\"\"困乎上者必反下\"「窮大者必失其居」在对内与律有确切对应：翻转把消息之律倒过来走（reverse_waxWane）。\"困乎上者，必反下\"字面即翻转（上者到下）。\"穷大\"之\"穷\"是把大推到尽头，用本簇\"穷\"的到尽头义，但这里的\"必\"只是对内翻转的必然，不是一切增长到尽头必反的普遍律（对间的同形理由见 xugua-er-buyi-bi 与 RO xugua-between-pairs）。本条的\"不已\"是减损不止，不是本簇\"不已\"（耦合复现）之义。种类与声明沿用 RO xugua-within-pairs。",
+   "gap": "",
+   "layer": "传·先秦至秦汉（《易传·序卦》；成书年代有争议）",
+   "locator": "序卦·下篇·编者论证段12",
+   "names_used": [
+    "窮"
+   ],
+   "relational": "一对之内，后卦是前卦的翻转，序卦以\"不已必\"\"必反\"\"穷必失\"为其理由。",
+   "ro_passage": "xugua-within-pairs",
+   "tradition": "易传",
+   "work": "《周易·序卦》",
+   "record_ids": [
+    "WP-XG-C02-S12-R02",
+    "WP-XG-C02-S18-R02",
+    "WP-XG-C02-S26-R02"
+   ]
+  },
+  {
+   "id": "xugua-er-buyi-bi",
+   "source_id": "YD-OW-XG",
+   "fragments": [
+    "益而不已，必決，故受之以夬",
+    "升而不已，必困，故受之以困",
+    "有大者不可以盈，故受之以謙"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Law.more_never_rests",
+    "Becoming.more_needs_open",
+    "Becoming.Flow.more_exhausted",
+    "Becoming.Hexagram.order_paired",
+    "Becoming.Hexagram.runsOrder_reads",
+    "Becoming.Hexagram.runsOrder_not_lumped"
+   ],
+   "records": [
+    "seeking-boundary",
+    "hexagram-arrangements-and-laws",
+    "hexagrams-on-the-spine"
+   ],
+   "reading": "AI读法：本条有两层。作为增长之律读，\"益而不已必决\"\"升而不已必困\"\"有大者不可以盈\"与脊柱相合而需要范围：要求〈比现在更多〉之所求在任何静止处都不被满足（Law.more_never_rests），每步都满足的\"更多\"需要开放世界（more_needs_open），封闭处的\"更多\"会耗尽（Flow.more_exhausted）。所以\"必决\"\"必困\"只在封闭、供给有限处成立，在开放处可以一直\"益\"。作为卦序读，益→夬、升→困、大有→谦三步都落在两对之间：脊柱证明卦序是一张表之律的运行，其律每一爻皆读每一爻（Hexagram.runsOrder_reads），不经任何局部归并（runsOrder_not_lumped），只有对内是律（order_paired）；对间的\"必\"是加在列表上的理由（RO xugua-between-pairs 判为相分）。本条以增长之律的范围为主，故标定域；卦序层的相分随 RO。此处\"不已\"指增长不止，与本簇以\"不已\"名耦合复现不同，见名之 not_carried。",
+   "gap": "",
+   "layer": "传·先秦至秦汉（《易传·序卦》；成书年代有争议）",
+   "locator": "序卦·下篇·编者论证段13",
+   "names_used": [
+    "窮"
+   ],
+   "relational": "增长不止则必转入决、困；有大者不可盈满。",
+   "ro_passage": "",
+   "tradition": "易传",
+   "work": "《周易·序卦》",
+   "record_ids": [
+    "WP-XG-C02-S13-R03",
+    "WP-XG-C02-S17-R02",
+    "WP-XG-C01-S14-R02"
+   ]
+  },
+  {
+   "id": "tuan-feng-yingxu-xiaoxi",
+   "source_id": "YD-HX01",
+   "fragments": [
+    "日中則昃，月盈則食，天地盈虛，與時消息，而況於人乎"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Hexagram.waxWane_returns",
+    "Becoming.Hexagram.six_steps",
+    "Becoming.Hexagram.twelve_steps",
+    "Becoming.Law.lossless_iff_returns",
+    "Becoming.Law.drawn_iff_not_returns"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "recurrence-without-premise",
+    "attraction-is-not-returning"
+   ],
+   "reading": "AI读法：盈虚消息是一个回到自身的历程。脊柱：消息之律不合并任何组态，所以每个组态都回来（Hexagram.waxWane_returns），六步变尽六爻（six_steps），十二步回到原组态（twelve_steps）；一般地，在有限组态中，律无损恰当每个组态都回来（Law.lossless_iff_returns），每个确定之律所吸入的恰是不回来者（Law.drawn_iff_not_returns）。所以「日中則昃，月盈則食」在无损之律下是确切的，\"而况于人乎\"把它推到人事则需要范围：有合并、有吸收之处，盈者可以不回。名：这是\"环\"的构形层（同一组态再来），与本簇\"环\"所名耦合之链首尾相接不同，二者经 lossless_iff_returns 相连。",
+   "gap": "",
+   "layer": "传·先秦至汉初（《易传·彖·丰》；成书年代有争议）",
+   "locator": "彖传·豐卦",
+   "names_used": [
+    "環"
+   ],
+   "relational": "盈与虚、消与息随时相继，日月天地皆然。",
+   "ro_passage": "",
+   "tradition": "易传",
+   "work": "《周易·彖·丰》",
+   "record_ids": [
+    "HX-R023"
+   ]
+  },
+  {
+   "id": "xici-qiong-ze-bian",
+   "source_id": "DS03",
+   "fragments": [
+    "易穷则变，变则通，通则久"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.ExchangeLaw.ReadsBelow.standing_unread",
+    "Becoming.ExchangeLaw.ReadsBelow.standing_no_loop",
+    "Becoming.break_carried_nowhere",
+    "Becoming.Thresholds.Draw.forms_at_break",
+    "Becoming.Thresholds.Draw.diverges_at_break",
+    "Becoming.Closing.Threshold.forms",
+    "Becoming.Closing.Threshold.level_after"
+   ],
+   "records": [
+    "loops-within-what-a-law-reads",
+    "how-loops-form"
+   ],
+   "reading": "AI读法：\"穷则变\"是本簇\"穷\"的出处：一个只在阈值以下读入某存量的律（ExchangeLaw.ReadsBelow），在存量站在阈值之上时就是它的常立之律，与该存量耦合强度为零、没有环经过它（ReadsBelow.standing_unread、standing_no_loop）；抬升存量在断裂之前处处不被携带（break_carried_nowhere）；经过该存量的环恰在断裂处形成（Thresholds.Draw.forms_at_break），两历程的差异此后才显（diverges_at_break）。所以\"穷则变\"在脊柱上是：到阈值之处，律由常立转为有环。\"变则通，通则久\"需要范围：在 Closing.Threshold 的见证中，环恰在水平到达阈值之步形成（Closing.Threshold.forms），此后水平加一每步加倍（level_after）——穷而变之后是失控，不是通而久。所以通久不是变的必然结果，要看断裂处形成的环每圈返还多少（见\"报\"）。",
+   "gap": "",
+   "layer": "传·先秦至汉初（《易传·系辞下》；成书年代有争议）",
+   "locator": "系辞下·冻结第二章；段落／句起“通其变，使民不倦；神而化之，使民”",
+   "names_used": [
+    "窮"
+   ],
+   "relational": "到尽头处即变，变而后通，通而后久。",
+   "ro_passage": "",
+   "tradition": "易传",
+   "work": "《周易·系辞下》",
+   "record_ids": [
+    "XC-R032"
+   ]
+  },
+  {
+   "id": "xici-shan-buguo",
+   "source_id": "DS02",
+   "fragments": [
+    "无咎者，善补过也",
+    "震无咎者存乎悔"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.closes_through_coupling_apart",
+    "Becoming.Loop.response_returns",
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.Law.lost_stays"
+   ],
+   "records": [
+    "where-two-courses-rejoin",
+    "what-a-pools-acts-respond-to",
+    "whether-a-loop-closes-a-difference",
+    "attraction-is-not-returning"
+   ],
+   "reading": "AI读法：\"补过\"是一个差异经由回应被闭合。脊柱：两历程之差若在某步闭合，它恰经由一个与另一历程耦合相异、取与有别的形成闭合（Flow.closes_through_coupling_apart）：补过必须有所作为，差异不会自己消失。回应经由行动者的耦合闭包回到行动者（Loop.response_returns，本簇之\"还\"），但回来的是闭合之还是扩大之，由律决定（ExchangeLaw.response_not_fixed_by_coupling）。闭合需要环上有返还少于所受的环节（LoopReturn.closing_needs_less），此时差额那么多圈内闭合（closes_within）。\"存乎悔\"即回应读到了差异。范围：已失者在任何律下可以保持失去（Law.lost_stays），所以\"无咎\"只对可闭合之差成立。\"咎\"\"过\"的评价不由这些律给出。",
+   "gap": "",
+   "layer": "传·先秦至汉初（《易传·系辞上》；成书年代有争议）",
+   "locator": "系辞上·冻结第三章；段落／句起“无咎者，善补过也。”",
+   "names_used": [
+    "還",
+    "報"
+   ],
+   "relational": "无咎在于善于补过；能动而无咎在于有悔。",
+   "ro_passage": "",
+   "tradition": "易传",
+   "work": "《周易·系辞上》",
+   "record_ids": [
+    "XC-R044"
+   ]
+  },
+  {
+   "id": "xici-chuyan-qianli",
+   "source_id": "DS02",
+   "fragments": [
+    "君子居其室，出其言善，则千里之外应之",
+    "居其室，出其言不善，则千里之外违之",
+    "言出乎身加乎民；行发乎迩见乎远"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Conveyed",
+    "Becoming.carried_pos_iff",
+    "Becoming.carried_attained",
+    "Becoming.most_difference_arrives",
+    "Becoming.Propagation.Chain.keeps_arriving",
+    "Becoming.apart_only_downstream"
+   ],
+   "records": [
+    "how-much-difference-arrives",
+    "observation-is-a-route",
+    "two-act-worlds-carry-the-difference"
+   ],
+   "reading": "AI读法：\"行发乎迩见乎远\"是本簇\"所致\"的结构：在某条件某步，强度至多 k、差异至多 δ 之流所能到达的最大差异恰是携带量（most_difference_arrives），它被达到（carried_attained），它为正恰沿起始差异、部分之差与正强度构成的时间路线（carried_pos_iff）；在 Propagation.Chain 的见证中，一处被持住的差异沿链不断到达远端、无界而线性，虽然没有环把它送回（Propagation.Chain.keeps_arriving）：远至而不必反。范围：差异只在下游分开两个历程（apart_only_downstream），没有耦合路线的\"千里之外\"不应也不违；\"应之\"\"违之\"是回应的两个方向，由律决定，而不由〈言善不善〉本身决定。\"君子\"\"民\"的社会内容不采纳为结构。",
+   "gap": "",
+   "layer": "传·先秦至汉初（《易传·系辞上》；成书年代有争议）",
+   "locator": "系辞上·冻结第8章·编者论证段4（原文起““鸣鹤在阴，其子和之。我”）",
+   "names_used": [
+    "所致",
+    "應倍"
+   ],
+   "relational": "言行出于近处，经由回应到达远处，远处或应或违。",
+   "ro_passage": "",
+   "tradition": "易传",
+   "work": "《周易·系辞上》",
+   "record_ids": [
+    "WP-XCS-C08-S04-R01",
+    "WP-XCS-C08-S04-R02",
+    "WP-XCS-C08-S04-R04",
+    "WP-XCS-C08-S04-R05"
+   ]
+  },
+  {
+   "id": "wenyan-bian-zhi-buzao",
+   "source_id": "YD-OW-WY",
+   "fragments": [
+    "臣弒其君，子弒其父，非一朝一夕之故，其所由來者漸矣，由辯之不早辯也",
+    "履霜堅冰至"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.break_not_bounded",
+    "Becoming.Web.observed_raise_couples",
+    "Becoming.unread_carried_nowhere",
+    "Becoming.Thresholds.Draw.forms_at_break",
+    "Becoming.Thresholds.Draw.diverges_at_break"
+   ],
+   "records": [
+    "runaway-distance-unregistered",
+    "loops-within-what-a-law-reads"
+   ],
+   "reading": "AI读法：「由辯之不早辯」是本簇\"识不早\"的先秦同构说法，\"履霜坚冰至\"是\"未兆\"之后的\"穷\"。脊柱：无人读入之处，差异哪里也不被携带（unread_carried_nowhere）；不按水平读入时，断裂之前没有东西界定离断裂多远（Web.break_not_bounded）；按水平读入则抬升立即被读出（Web.observed_raise_couples）；环在断裂处才形成，差异在断裂之后才显（Thresholds.Draw.forms_at_break、diverges_at_break）。所以\"渐\"而\"不早辨\"即没有在断裂之前把这一存量按水平读进来。种类与声明沿用 RO wenyan-jian。本条在脉络中没有专属关系记录（坤初六\"履霜\"的经文关系 JF-R005 作并行收入）；「臣弒其君，子弒其父」的社会内容不采纳为结构。",
+   "gap": "",
+   "layer": "传·先秦至秦汉（《易传·文言·坤》；成书年代有争议）",
+   "locator": "周易/文言·坤文言·初六",
+   "names_used": [
+    "識不早",
+    "未兆",
+    "窮"
+   ],
+   "relational": "断裂是渐进之终，它的到来在于没有及早分辨。",
+   "ro_passage": "wenyan-jian",
+   "tradition": "易传",
+   "work": "《周易·文言·坤》",
+   "record_ids": []
+  },
+  {
+   "id": "cy-xiaoguo-jiaowang-guozheng",
+   "source_id": "YD-CY4",
+   "fragments": [
+    "若矯枉而過正過所以就正也",
+    "事有時而當然有待過而後能亨者"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.crosses_of_above",
+    "Becoming.Flow.crosses_of_below",
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Flow.settles",
+    "Becoming.Regulation.Overshooting.never_at",
+    "Becoming.Regulation.Overshooting.oscillates"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：程颐以「矯枉而過正過所以就正」说小过，是本簇\"过正\"的出处之一。脊柱：平衡之下，与偏离相反的交换越出与 m 之距时，水平越过 m（Flow.crosses_of_above、crosses_of_below）；界恰是\"下一水平落在 m 与当前水平之间\"（Flow.withinGap_iff_between），界内则距用尽时定于 m（Flow.settles）；每步越界的见证在 m 两侧往复而永不到 m（Regulation.Overshooting.oscillates、never_at）。所以「過所以就正」需要范围：一次越过之后若回到界内，仍可定于 m；若每步都越过，\"过\"永不\"就正\"。程颐说「有時而當然」，与此一致：过是否就正，看此后的回应是否在界内。卦象爻位层（阴过阳）不采纳。",
+   "gap": "",
+   "layer": "注·宋明（北宋程颐《伊川易传》小过卦辞注）",
+   "locator": "伊川易传·卷4·第62卦·卦首总论及卦辞注",
+   "names_used": [
+    "過正",
+    "中節"
+   ],
+   "relational": "矫枉越过正点，越过是为了回到正；有些事须过而后能亨。",
+   "ro_passage": "",
+   "tradition": "易传注（程颐）",
+   "work": "《伊川易传》卷四·小过",
+   "record_ids": [
+    "CY130-H62-R01"
+   ]
+  },
+  {
+   "id": "lao-55-zhi-he-yue-chang",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "知和曰常，知常曰明",
+    "知常曰明。不知常，妄作凶"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.goAlike_iff_lumped",
+    "Becoming.Learnable.learnable_iff",
+    "Becoming.Identification.bounded_induction",
+    "Becoming.Web.break_not_bounded",
+    "Becoming.Flow.policy_uses_after_failure",
+    "Becoming.Web.observed_raise_couples",
+    "Becoming.Flow.settles",
+    "Becoming.Flow.stays_between_at"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "learnable-through-registration",
+    "identification-where-bounded",
+    "runaway-distance-unregistered",
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：第五十五章\"知和曰常，知常曰明\"把\"常\"系于\"和\"：和是赤子之\"和之至\"，即本簇\"中和\"所名的被调节之态。脊柱：两侧都与偏离相反、且以与 m 之距为界的交换，距用尽之后水平定于 m（Flow.settles），界内永不越过 m（Flow.stays_between_at）；这样的定是可以知的常：一种读法承载律，恰当世界在它所归并者之间走得一样（Learning.goAlike_iff_lumped，即\"理\"），有限处可学恰是同一未来者终归一致（Learnable.learnable_iff），有界处归纳即演绎（Identification.bounded_induction）。第十六章\"不知常，妄作凶\"对应 Runaway：不按水平耦合进来的存量，断裂之前没有东西界定其远近（Web.break_not_bounded），更大的存量只在失败后动用（Flow.policy_uses_after_failure），按水平耦合则立即看见（Web.observed_raise_couples）。种类沿用 RO lao-16-zhi-chang-yue-ming（该段以 LL-R023 为其 atlas id）；与 RO 的差别及理由：本条以第五十五章为主，\"和\"是\"常\"的内容，所以加上调节之定的两条（Flow.settles、stays_between_at）与记录 two-sided-regulation-and-late-reading。异文要紧：郭店与帛书甲作\"和曰常，知和曰明\"，明是知和，更直接是知被调节之态。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》五十五章：知和曰常，知常曰明。",
+   "names_used": [
+    "中和"
+   ],
+   "relational": "知被调节之和即知常，知常即明；不知常而妄作则凶。",
+   "ro_passage": "lao-16-zhi-chang-yue-ming",
+   "tradition": "道家（老子）",
+   "work": "《老子》第五十五章、第十六章",
+   "record_ids": [
+    "LL-R023"
+   ]
+  },
+  {
+   "id": "lao-42-chong-qi-wei-he",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "万物负阴而抱阳，冲气以为和"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.restores",
+    "Becoming.Flow.excess_lowers",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Flow.settles",
+    "Becoming.Flow.stays_between_at",
+    "Becoming.Regulation.Overshooting.never_at"
+   ],
+   "records": [
+    "supported-renewal-recovery",
+    "own-count-misses-joint-excess",
+    "whether-a-loop-closes-a-difference",
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：和是两种相反作用（负阴、抱阳）经由冲气而保持之态，不是任意阴阳相加（atlas LL-R007 已注）。脊柱：两侧相反且以距为界时，下一水平落在 m 与当前之间（Flow.withinGap_iff_between），界内不越过 m（stays_between_at），距用尽时定于 m（settles）；越界则可永不到 m（Regulation.Overshooting.never_at）。单向的部分亦有：自下之恢复（Flow.restores）、共同过度之降（Flow.excess_lowers）；差异经环闭合需要返还少于所受之环节（LoopReturn.closing_needs_less、closes_within）。所以\"冲气以为和\"在本簇读作\"中和\"：受两侧有界之相反作用所保持之水平，是一种耦合的性质，不是万物普遍之性。种类与声明沿用 RO lao-42-chong-qi-yi-wei-he。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》四十二章：万物负阴而抱阳，冲气以为和。",
+   "names_used": [
+    "中和",
+    "中節",
+    "報"
+   ],
+   "relational": "万物背负阴、怀抱阳，以冲和之气为和。",
+   "ro_passage": "lao-42-chong-qi-yi-wei-he",
+   "tradition": "道家（老子）",
+   "work": "《老子》第四十二章",
+   "record_ids": [
+    "LL-R007"
+   ]
+  },
+  {
+   "id": "lao-37-zhen-zhi",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "化而欲作，吾将镇之以无名之朴"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.TwoClocks.one_course_two_laws",
+    "Becoming.partForms_iff",
+    "Becoming.partForms_and_restForms_iff",
+    "Becoming.Run.rest_driven_by_part",
+    "Becoming.exists_law_iff",
+    "Becoming.Regulation.OneSided.above",
+    "Becoming.Regulation.OneSided.not_opposes"
+   ],
+   "records": [
+    "where-a-move-is-formed",
+    "process-and-frame-as-readings",
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：本条只收\"化而欲作，吾将镇之以无名之朴\"（LE-R051），属 RO lao-37-wu-wei-er-wu-bu-wei 的同章，种类沿用定域。RO 的声明处理\"无为而无不为\"（谁的动作是历程的读法），保留。与 RO 的差别及理由：这一句的结构是本簇的\"一偏\"：镇只对一侧（欲作，上升）相反。脊柱的单侧见证是其镜像：只对 m 下侧相反的交换满足恢复律之前提、在界内，却不对上侧相反，水平永在 m 之上（Regulation.OneSided.above、not_opposes）——一侧不是调节；只镇上而不举下的情形由对称得到，脊柱未单列。所以加上这两条与记录 two-sided-regulation-and-late-reading。\"吾将镇之\"是一个中心对他者欲作的镇抑，属四种非关系层的〈意志或单一中心〉层，RO 已注；\"无名之朴\"作为镇之手段，律不采纳。异文要紧：郭店作\"○（化）而○（欲）○（作），○（将）贞（镇）之以亡名之○（朴）\"，没有\"吾\"字，镇者未被定为一个中心；帛书乙\"而欲作吾將闐\"有\"吾\"。所以中心层在传世本与帛书乙中明显，在郭店中不显，一偏之结构则各本皆同。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》三十七章，起语“化而欲作，吾将镇之以无名”",
+   "names_used": [
+    "一偏"
+   ],
+   "relational": "物化而欲起，由一中心以无名之朴镇之。",
+   "ro_passage": "lao-37-wu-wei-er-wu-bu-wei",
+   "tradition": "道家（老子）",
+   "work": "《老子》第三十七章",
+   "record_ids": [
+    "LE-R051"
+   ]
+  },
+  {
+   "id": "lao-57-fa-ling-zi-zhang",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "法令滋彰，盗贼多有",
+    "我好静而民自正"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.responds_to_own_level",
+    "Becoming.forms_by_closing",
+    "Becoming.polynomial_iff_no_loop",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.Flow.settles"
+   ],
+   "records": [
+    "how-loops-form",
+    "how-a-carried-difference-grows",
+    "whether-a-loop-closes-a-difference",
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：传世本\"法令滋彰，盗贼多有\"是一个环：法令回应盗贼之水平，盗贼回应法令之水平；一个交换开始回应它所给予之条件的水平即成环（responds_to_own_level），环由闭合一条链的耦合形成（forms_by_closing）；携带量超过每个多项式恰经由环（polynomial_iff_no_loop），每环节至少加倍则失控（LoopReturn.runs_away）——这是本簇\"滋\"的出处。版本要紧：郭店\"法勿（物）慈（滋）章（彰）\"、帛书乙\"物茲章\"与河上公皆作\"法物\"（珍奇之物），那是所欲之物引出盗贼，是一条链，未必成环；经由制度之环的读法只属传世本。\"我好静而民自正\"（LL-R025 所记）：没有一个中心施力而整体自定。脊柱有两侧调节之定（Flow.settles），但其相反与界是联合交换的性质，脊柱没有从各形成的局部之律导出整体两侧相反的定理，见缺口；所以\"自正\"在此定域为：联合交换两侧相反且有界时成立。",
+   "gap": "脊柱缺：对一族形成、各自只读其邻近条件之水平而无一形成读整体水平的局部之律，给出其联合交换在 m 两侧都与偏离相反且以与 m 之距为界（Flow.Opposes 与 Flow.WithinGap 对联合交换成立）的充分条件，从而整体水平定于 m（\"自正\"\"自定\"）。最近：Becoming.Flow.Opposes、Becoming.Flow.WithinGap、Becoming.Flow.regulates、Becoming.Flow.settles。",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》五十七章：我好静而民自正",
+   "names_used": [
+    "滋",
+    "環",
+    "成環",
+    "中和"
+   ],
+   "relational": "法令愈彰而盗贼愈多；在上者好静而民自正。",
+   "ro_passage": "",
+   "tradition": "道家（老子）",
+   "work": "《老子》第五十七章",
+   "record_ids": [
+    "LL-R025"
+   ]
+  },
+  {
+   "id": "lao-30-qi-shi-hao-huan",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "以道佐人主者，不以兵强天下。其事好还。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.responds_to_own_level",
+    "Becoming.onLoop_succ_iff",
+    "Becoming.Withholding.withholding_returns",
+    "Becoming.not_onLoop_unread",
+    "Becoming.upstream_unread"
+   ],
+   "records": [
+    "how-loops-form",
+    "giving-that-waits-on-giving",
+    "loops-within-what-a-law-reads"
+   ],
+   "reading": "AI读法：\"其事好还\"是本簇\"还\"（回馈）的名之所出：所施者经由他者回到施者。脊柱给出它成立之处：响应自己所给水平的交换成环（responds_to_own_level），环在某步经闭合形成（onLoop_succ_iff）；在环上，扣留每圈都回来（Withholding.withholding_returns）。但没有环经过一个不被读取的水平（not_onLoop_unread），不被读取的水平之下游只有它自己（upstream_unread）：不在环上的作用不返回。所以\"好还\"在所施者处于耦合之环上时成立，不是普遍律。种类与声明沿用 RO lao-30-qi-shi-hao-huan。异文要紧：郭店无\"还\"字，帛书甲乙此处皆残，\"好还\"只见于传世本。注层分歧：河上公读作\"其举事好还自责，不怨于人\"（LC2-HS-C30-R02），是反求诸己，不是回馈；苏辙「必還報之」读作必然报应（本条并行 LC2-SZ-C30-R02）。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》三十章，起语“以道佐人主者，不以兵强天”",
+   "names_used": [
+    "還",
+    "環"
+   ],
+   "relational": "以兵强天下者，其所施会回到自身。",
+   "ro_passage": "lao-30-qi-shi-hao-huan",
+   "tradition": "道家（老子）",
+   "work": "《老子》第三十章",
+   "record_ids": [
+    "LE-R040"
+   ]
+  },
+  {
+   "id": "lao-77-zhang-gong",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "天之道，其犹张弓与",
+    "高者抑之，下者举之；有馀者损之，不足者补之",
+    "天之道，损有馀而补不足"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.LoopReturn.never_closes_of_no_less",
+    "Becoming.LoopReturn.closing_not_lossless",
+    "Becoming.Flow.restores",
+    "Becoming.Flow.excess_lowers",
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Flow.regulates",
+    "Becoming.Flow.settles",
+    "Becoming.Flow.restores_exactly",
+    "Becoming.Flow.crosses_of_above",
+    "Becoming.Regulation.Overshooting.oscillates",
+    "Becoming.Regulation.OneSided.above"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference",
+    "supported-renewal-recovery",
+    "own-count-misses-joint-excess",
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：张弓\"高者抑之，下者举之\"是本簇\"中和\"的两侧之形：平衡之下，联合交换在两侧都以与 m 之距为界，恰是下一水平落在 m 与当前之间（Flow.withinGap_iff_between）；有界且两侧都相反时，距为正则每步至少降一，用尽则定于 m（Flow.regulates、settles、restores_exactly）。两种失败亦确切：越界者越过 m（crosses_of_above，\"过正\"），其见证往复而永不到 m（Overshooting.oscillates）；只一侧者恢复律之前提成立而水平永在 m 之上（OneSided.above，\"一偏\"）。环之层：任何环节返还不少于所受则任何一圈都不闭合差异（LoopReturn.never_closes_of_no_less），闭合需要返还少于所受之环节（closing_needs_less、closes_within），闭合正差异之环不无损（closing_not_lossless）。所以「损有馀而补不足」是某种调节耦合的性质，不是天的普遍性质。\"有馀\"在此是水平高于 m，不是本簇之\"余\"（截断之所失）。种类与声明沿用 RO lao-77-tian-zhi-dao；归于\"天之道\"理论不采纳。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》七十七章：天之道，损有馀而补不足。",
+   "names_used": [
+    "中和",
+    "中節",
+    "過正",
+    "一偏",
+    "報"
+   ],
+   "relational": "如张弓，高者抑、下者举，有余者损、不足者补。",
+   "ro_passage": "lao-77-tian-zhi-dao",
+   "tradition": "道家（老子）",
+   "work": "《老子》第七十七章",
+   "record_ids": [
+    "LL-R040",
+    "LL-R038"
+   ]
+  },
+  {
+   "id": "lao-77-ren-zhi-dao",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "人之道则不然，损不足以奉有馀"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.share_rises",
+    "Becoming.Flow.Balances.rise_paid_from_beyond",
+    "Becoming.Flow.rise_with_fall",
+    "Becoming.Flow.continuing_excludes",
+    "Becoming.Flow.rise_netGiver"
+   ],
+   "records": [
+    "target-capture",
+    "raising-what-couples-in-draws-from-beyond",
+    "rising-and-falling-in-one-exchange",
+    "what-taking-all-excludes",
+    "where-novelty-gain-comes-from"
+   ],
+   "reading": "AI读法：\"损不足以奉有馀\"是与张弓相反的方向：低者喂高者。脊柱：每次上升都是被给予的（Flow.rise_netGiver），平衡的流中一族之升完全由族外给予（Flow.Balances.rise_paid_from_beyond），同一交换中一员升则另一员降（Flow.rise_with_fall），某种目标之承载者留下更多后代时其份额严格上升（share_rises），持续的全取者使旁者不能继续（Flow.continuing_excludes）。在本簇，这是两侧调节的反面：交换顺着偏离而不是相反，高者所得又回来增加其所得，是一个经由份额的正回馈之环（\"滋\"）。种类与声明沿用 RO lao-77-ren-zhi-dao；这些是方向与来源之律，不含评价，把它判为\"不然\"需要延续条件与比较承诺。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》七十七章：人之道则不然，损不足以奉有馀。",
+   "names_used": [
+    "滋"
+   ],
+   "relational": "人之道与天之道相反：减损不足者以供奉有余者。",
+   "ro_passage": "lao-77-ren-zhi-dao",
+   "tradition": "道家（老子）",
+   "work": "《老子》第七十七章",
+   "record_ids": [
+    "LL-R039"
+   ]
+  },
+  {
+   "id": "lao-64-wei-zhao",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "其安易持，其未兆易谋",
+    "为之于未有，治之于未乱",
+    "合抱之木，生于毫末"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Branching.loss_passes_juncture",
+    "Becoming.Branching.juncture_iff",
+    "Becoming.Branching.keeping_greatest",
+    "Becoming.Branching.lpo_of_junctures_found",
+    "Becoming.Closing.Onset.amount_before",
+    "Becoming.carried_le_polynomial_before",
+    "Becoming.Closing.Onset.amount_after"
+   ],
+   "records": [
+    "every-loss-passes-a-juncture",
+    "how-loops-form"
+   ],
+   "reading": "AI读法：这是本簇\"未兆\"的名之所出。脊柱：凡回来之组态的丧失都经过一个关节点（Branching.loss_passes_juncture），关节点是保持与丧失都只差一步之处（juncture_iff），保持是保持该组态的最大子过程（keeping_greatest）——\"为之于未有\"的位置；在每个过程中找到每次丧失的关节点等于有限全知原则（lpo_of_junctures_found），找到关节点就是判定该组态能否再得。环形成之前，环所携仍是起始之差（Closing.Onset.amount_before），上游无环时增长至多多项式（carried_le_polynomial_before）：所以\"未兆\"恰是量上看不出、只能从耦合读出之处；环形成之后每步加倍（Closing.Onset.amount_after），\"合抱之木，生于毫末\"与之相合。经文假定未兆时\"易谋\"；脊柱说易在可干预，难在可发现。种类与声明沿用 RO lao-64-wei-zhi-yu-wei-you；与 RO 的差别及理由：RO 的读法已说\"合抱之木\"与环形成后的倍增相合而未列其声明，本条加 Closing.Onset.amount_after。异文：郭店作「其未○（兆）也，易○（谋）也」，帛书甲\"未兆\"二字残。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》六十四章（「其安易持」「为之于未有」「合抱之木」三句）",
+   "names_used": [
+    "未兆",
+    "滋"
+   ],
+   "relational": "在安与未兆之时易持易谋；为之于未有、治之于未乱；大者生于微末。",
+   "ro_passage": "lao-64-wei-zhi-yu-wei-you",
+   "tradition": "道家（老子）",
+   "work": "《老子》第六十四章",
+   "record_ids": [
+    "LL-R015"
+   ]
+  },
+  {
+   "id": "lao-63-bao-yuan-tu-nan",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "大小多少，报怨以德。",
+    "图难于其易，为大于其细"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.LoopReturn.cut_closes",
+    "Becoming.LoopReturn.cut_reopened",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.never_closes_of_no_less",
+    "Becoming.carried_le_polynomial_before",
+    "Becoming.Closing.Onset.amount_before"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference",
+    "how-loops-form"
+   ],
+   "reading": "AI读法：\"报怨以德\"是本簇\"报\"（环返映射）的出处之一：在怨的环上，有一环节不以所受之怨回报。脊柱：一个返还为零的环节使差异从第一圈起为零，不论其前诸环节如何，只要其后各环节在无差处不生差（LoopReturn.cut_closes）；这个条件要紧：其后若有环节在无差处也给出差，差异即重开（cut_reopened）。没有返还少于所受之环节，任何一圈都不闭合（never_closes_of_no_less），闭合需要这样的环节（closing_needs_less）。所以\"报怨以德\"是在环上放一个返还少于所受（以至为零）的环节，它闭合怨之环，恰在其后各环不再自生怨之处。\"图难于其易，为大于其细\"：上游无环时携带量至多多项式（carried_le_polynomial_before），环形成之前它只携起始之差（Closing.Onset.amount_before）；易与细之时是可为之时。异文要紧：郭店此章作\"大少（小）之多惕（易）必多○（难）\"，无\"报怨以德\"；帛书甲有\"報怨以德\"。\"德\"的评价义不由律给出。本章在脉络中没有专属关系记录。",
+   "gap": "",
+   "layer": "经·先秦（《老子》第六十三章，传世本；郭店无\"报怨以德\"，帛书甲有）",
+   "locator": "《道德经》六十三章",
+   "names_used": [
+    "報",
+    "未兆"
+   ],
+   "relational": "以德回应所受之怨；在易处图难，在细处为大。",
+   "ro_passage": "",
+   "tradition": "道家（老子）",
+   "work": "《老子》第六十三章",
+   "record_ids": []
+  },
+  {
+   "id": "lao-79-he-da-yuan",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "和大怨，必有馀怨"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Law.lost_stays",
+    "Becoming.Law.merged_stays",
+    "Becoming.MatchedCourses.recovery_retains_loss",
+    "Becoming.Law.drawn_iff_not_returns",
+    "Becoming.carried_eq_carriedWithin_add",
+    "Becoming.carriedWithin_lt_of_recurring_loop",
+    "Becoming.exact_of_reading_before"
+   ],
+   "records": [
+    "recurrence-without-premise",
+    "finite-aggregation-within-restorable-basic-losses",
+    "attraction-is-not-returning",
+    "what-a-cut-loses"
+   ],
+   "reading": "AI读法：本簇\"余\"的名之所出。RO 的声明保留：丧失者在任何律下可保持丧失（Law.lost_stays），被合并者保持合并（Law.merged_stays），支持恢复后已失之主张仍失（MatchedCourses.recovery_retains_loss），每个确定之律所吸入的恰是不回者（Law.drawn_iff_not_returns）。与 RO 的差别及理由：调和只处理到某一层，其余就是截断之所失，脊柱对此有确切公式：携带量等于 j 阶之内者加上 j+1 次回应从携带量本身依次所携者，所以在 j 阶截断，所失恰是后一项（carried_eq_carriedWithin_add）；有不已之耦合构成的环喂入处，每个有限阶都有余（carriedWithin_lt_of_recurring_loop）。所以加上这两条、其反面 exact_of_reading_before 与记录 what-a-cut-loses。\"必有余\"因此定为：怨在不已之环上时必有余；无环喂入、自某步起无耦合再读其水平时，有限阶无余（exact_of_reading_before）。余怨能否经新形成的关系化解，经文未说，脊柱也未证，见缺口。",
+   "gap": "脊柱缺：截断之余在新耦合加入之后的去向——当一个新形成在某步起读入余所在之条件并与之相反时，余（carried 减 carriedWithin）是否在有限步内归零、以何为界。最近：Becoming.carried_eq_carriedWithin_add、Becoming.exact_of_reading_before、Becoming.Law.lost_stays、Becoming.Flow.closes_through_coupling_apart。",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《老子》第79章；冻结正文句起“和大怨，必有馀怨，”",
+   "names_used": [
+    "餘",
+    "不已"
+   ],
+   "relational": "调和大怨之后，必有剩下的怨。",
+   "ro_passage": "lao-79-he-da-yuan",
+   "tradition": "道家（老子）",
+   "work": "《老子》第七十九章",
+   "record_ids": [
+    "LAO2-C79-R01"
+   ]
+  },
+  {
+   "id": "lao-09-chi-er-ying-zhi",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "持而盈之，不如其已",
+    "揣而棁之，不可长保",
+    "功遂身退，天之道"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Law.more_never_rests",
+    "Becoming.Flow.beyond_given_bounded",
+    "Becoming.Flow.takesAll_of_more",
+    "Becoming.Flow.level_kept",
+    "Becoming.Web.Carries.arising_not_recurring",
+    "Becoming.Web.ByPassing.ends_within"
+   ],
+   "records": [
+    "seeking-boundary",
+    "where-a-rising-take-ends",
+    "what-taking-all-excludes",
+    "reserve-defers-ending",
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：持盈、揣锐不可长保。脊柱：要求〈比现在更多〉之所求在任何静止处都不被满足（Law.more_never_rests）；平衡之下取多于所给者不能持续（Flow.beyond_given_bounded），上升之取终将取尽所给（takesAll_of_more）；但在所给之内共同取时水平从不低于起点（Flow.level_kept），所以保持一个所给能维持的水平可以长保，不可长保的是需要不断加码的盈。在本簇，\"持而盈之\"是把水平推过界而不回，\"不如其已\"是停在界内；储备只推迟终结（Web.Carries.arising_not_recurring）；\"身退\"对应样式经由传递而持续（Web.ByPassing.ends_within）。种类与声明沿用 RO lao-09-chi-er-ying-zhi。郭店作\"湍而群之，不可长保也\"，结构不变。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》九章",
+   "names_used": [
+    "中節"
+   ],
+   "relational": "持盈不如停止；锐利不能长保；功成身退。",
+   "ro_passage": "lao-09-chi-er-ying-zhi",
+   "tradition": "道家（老子）",
+   "work": "《老子》第九章",
+   "record_ids": [
+    "LE-R017"
+   ]
+  },
+  {
+   "id": "hs-39-wu-yi-shi",
+   "source_id": "LC-HS-LOW",
+   "fragments": [
+    "不可但欲贵高于人无已时，将恐颠蹶失其位",
+    "言谷当有盈缩虚实，不可但欲盈满无已时，将恐枯竭不为谷"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Law.more_never_rests",
+    "Becoming.more_needs_open",
+    "Becoming.Flow.more_exhausted",
+    "Becoming.Flow.excess_bounded",
+    "Becoming.Web.Whole.needs_arising"
+   ],
+   "records": [
+    "seeking-boundary",
+    "where-a-rising-take-ends",
+    "own-count-misses-joint-excess",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：河上公说谷当有盈缩虚实，不可但欲盈满无已时。脊柱：〈比现在更多〉永不静止（Law.more_never_rests），每步都满足的\"更多\"需要开放世界（more_needs_open），封闭处的\"更多\"会耗尽（Flow.more_exhausted），共同过度不能持续（Flow.excess_bounded）；持续的整体需要部分在任意晚的步生起（Web.Whole.needs_arising）。在本簇，\"盈缩虚实\"是在一带之内往复，\"盈满无已\"是只朝一侧推进而无回应，是\"一偏\"之极。种类与声明沿用 RO hs-39-bu-ke-dan-yu；本条另收\"贵高于人无已时\"一句，结构相同。\"无已\"与本簇之\"不已\"（耦合复现）不同：前者是所求无止境。",
+   "gap": "",
+   "layer": "注·秦汉（传统题署河上公《老子章句》；成书年代有争议）",
+   "locator": "河上公（传统题署）《老子河上公章句》第39章·法本注；句起“言侯王当屈己以下人，汲汲求贤，不”",
+   "names_used": [
+    "一偏"
+   ],
+   "relational": "谷当有盈缩虚实；但欲盈满、贵高而无已时，将枯竭、颠蹶。",
+   "ro_passage": "hs-39-bu-ke-dan-yu",
+   "tradition": "道家注（河上公）",
+   "work": "《老子河上公章句》第三十九章",
+   "record_ids": [
+    "LC2-HS-C39-R03"
+   ]
+  },
+  {
+   "id": "lao-36-jiang-yu-xi-zhi",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "将欲歙之，必固张之",
+    "将欲弱之，必固强之",
+    "国之利器不可以示人"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Flow.seeking_ends",
+    "Becoming.Flow.more_exhausted",
+    "Becoming.Web.pool_adds",
+    "Becoming.Web.separates_all_iff",
+    "Becoming.Flow.unselected_beyond_pool"
+   ],
+   "records": [
+    "where-a-rising-take-ends",
+    "seeking-boundary",
+    "what-pooled-coupling-reaches"
+   ],
+   "reading": "AI读法：作为自然律读，\"将欲弱之，必固强之\"与脊柱相合：以递增之取为生者会终结（Flow.seeking_ends），封闭处的\"更多\"会耗尽（Flow.more_exhausted）。但经文的结构是一个意志对另一方的谋划：为使对方收缩而先使其扩张，并且\"利器不可以示人\"，把手段保持在对方的耦合之外。在本簇，这是一偏的操纵：一方读对方之水平而对方不读这一方，环只在一侧闭合。这与理论相分：明经由合用耦合扩展，合用池分开其成员不全耦合相同者（Web.separates_all_iff），差异正是合用所加（Web.pool_adds），耦合闭包之外者不被选择（Flow.unselected_beyond_pool）——隐藏耦合正是使他者在闭包之外。种类与声明沿用 RO lao-36-jiang-yu-xi-zhi；属四种非关系层的〈意志或单一中心〉与\"争胜\"层。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《老子》第36章；起句“将欲歙之，必固张之；”",
+   "names_used": [
+    "一偏"
+   ],
+   "relational": "一方为使对方收缩、削弱而先使其扩张、强盛，并把手段隐藏于对方之外。",
+   "ro_passage": "lao-36-jiang-yu-xi-zhi",
+   "tradition": "道家（老子）",
+   "work": "《老子》第三十六章",
+   "record_ids": [
+    "LAO2-C36-R01",
+    "LAO2-C36-R02",
+    "LAO2-C36-R03"
+   ]
+  },
+  {
+   "id": "lao-76-rou-ruo-sheng-zhi-tu",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "人之生也柔弱，其死也坚强",
+    "故坚强者死之徒，柔弱者生之徒"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Tolerance.tolerating_zero",
+    "Becoming.Tolerance.thin_absorbed",
+    "Becoming.Tolerance.kept_set",
+    "Becoming.Tolerance.Triad.spreads",
+    "Becoming.Tolerance.Triad.absorbed",
+    "Becoming.Tolerance.Triad.total_kept",
+    "Becoming.Withholding.withholding_absorbs"
+   ],
+   "records": [
+    "thresholds-of-waiting",
+    "restoring-giving-from-the-worst-start",
+    "giving-that-waits-on-giving"
+   ],
+   "reading": "AI读法：RO 把\"柔弱\"读作容忍、\"坚强\"读作容忍为零，本簇名之为\"不求备\"与\"求备\"。脊柱：容忍为零就是等待全部（Tolerance.tolerating_zero）；一处扣留终结它所达的全部给予（Withholding.withholding_absorbs）；三个互相等待的形成中，自一处扣留起，容忍 0 自第二步起处处扣留，容忍 1 一步吸收（Triad.spreads、Triad.absorbed）；稀薄的扣留一步消散（thin_absorbed），每个只在其容忍之外等待的集合一直给予（kept_set）。所以\"柔弱者生之徒\"在〈吸收局部失败〉的意义上成立；界限同样确切：容忍不恢复全面扣留（Triad.total_kept）。种类与声明沿用 RO lao-76-rou-ruo-sheng-zhi-tu。名之差别：本簇不以\"柔\"为名，因\"柔\"带软弱义，且第七十八章\"柔之胜刚\"把它放进争胜之层（见 lao-36-78-rou-sheng-gang）。帛书甲作\"木強則恆\"，乙作\"木強則兢\"。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》七十六章：人之生也柔弱，其死也坚强。万物草",
+   "names_used": [
+    "不求備"
+   ],
+   "relational": "生者柔弱，死者坚强；坚强者属死之类，柔弱者属生之类。",
+   "ro_passage": "lao-76-rou-ruo-sheng-zhi-tu",
+   "tradition": "道家（老子）",
+   "work": "《老子》第七十六章",
+   "record_ids": [
+    "LL-R045"
+   ]
+  },
+  {
+   "id": "lao-36-78-rou-sheng-gang",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "柔弱胜刚强",
+    "弱之胜强，柔之胜刚，天下莫不知莫能行"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Tolerance.Triad.spreads",
+    "Becoming.Tolerance.Triad.absorbed",
+    "Becoming.Tolerance.Triad.total_kept",
+    "Becoming.Tolerance.thin_absorbed",
+    "Becoming.Tolerance.kept_set"
+   ],
+   "records": [
+    "thresholds-of-waiting",
+    "restoring-giving-from-the-worst-start"
+   ],
+   "reading": "AI读法：\"柔弱胜刚强\"有两层。可承之结构：容忍大者吸收容忍小者所不能吸收的局部扣留——同一三元等待之环、同一处扣留，容忍 1 一步吸收而容忍 0 处处扣留（Tolerance.Triad.absorbed、Triad.spreads）；一般地，稀薄扣留在容忍之内一步消散（thin_absorbed），容忍之外等待者构成的集合一直给予（kept_set）。界限：容忍不恢复全面扣留（Triad.total_kept）。但\"胜\"是跨律比较，脊柱只在 Triad 一个见证中有，没有〈容忍逐点更大之律处处给予更多〉的一般定理，见缺口；所以本条定域为见证之内。另一层是争胜：苏辙读第三十六章为柔弱以待强者自弊（「吾以不校坐待其弊此所謂勝也」，并行 LC2-SZ-C36-R02），第七十八章以\"胜\"为结局，这属四种非关系层中的〈争胜与等级〉层，理论不采纳；苏辙随即说「聖人豈有意為此以勝物哉」，自己把争胜之意去掉了一半——容忍的意义在吸收失败而延续给予，不在胜过他者。",
+   "gap": "脊柱缺：容忍的跨律单调——对同一等待结构 ups 与同一起点 s，若 tol ≤ tol'（逐点），则在每一步 (Law.run (Tolerance.tolerating tol ups) s).state n 蕴含 (Law.run (Tolerance.tolerating tol' ups) s).state n。这是一个短推论（AI 手算，未经 Lean）：对步数归纳，用 tolerating_keeps 把前一步的包含推进一步，再用 AllBut.mono_count 从 tol 换到 tol'。缺的是这条陈述本身；有了它，〈容忍逐点更大者处处给予不少于容忍小者〉才对每个等待结构成立，而不只在 Triad 一例中。最近：Becoming.Tolerance.AllBut.mono_count、Becoming.Tolerance.tolerating_keeps、Becoming.Tolerance.KeepsInclusion.course、Becoming.Tolerance.Triad.absorbed。",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《老子》第36章「柔弱胜刚强」；第78章「弱之胜强，柔之胜刚」",
+   "names_used": [
+    "不求備"
+   ],
+   "relational": "柔弱者胜过刚强者，天下皆知而莫能行。",
+   "ro_passage": "",
+   "tradition": "道家（老子）",
+   "work": "《老子》第三十六章、第七十八章",
+   "record_ids": [
+    "LAO2-C36-R06",
+    "LL-R010"
+   ]
+  },
+  {
+   "id": "lao-45-zao-sheng-han",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "躁胜寒，静胜热。清静为天下正"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Regulation.OneSided.above",
+    "Becoming.Regulation.OneSided.restores_premise",
+    "Becoming.Regulation.OneSided.not_opposes",
+    "Becoming.Flow.Opposes",
+    "Becoming.Flow.settles",
+    "Becoming.Flow.restores"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading",
+    "supported-renewal-recovery"
+   ],
+   "reading": "AI读法：躁胜寒、静胜热，各只对一侧相反；苏辙注「皆滯于一偏而非其正也」（并行 LC2-SZ-C45-R02），是本簇\"一偏\"的名之所出。脊柱：只对一侧相反的交换满足恢复律之前提、在界内，却不对另一侧相反，水平永在 m 之一侧（Regulation.OneSided.restores_premise、above、not_opposes）；自下之恢复（Flow.restores）只给一半。\"清静为天下正\"若读作两侧皆与偏离相反、以距为界的交换，则水平定于 m（Flow.Opposes、Flow.settles）。经文的\"清静\"是否给出两侧之相反，经文未说，王弼、苏辙各有读法，所以定域：两侧相反处成立。并行诸条（庄子单豹张毅、止观不可偏修、孙子五危、文武并修）都是\"一偏\"之失或两侧兼用之法。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》四十五章：躁胜寒，静胜热。清静为天下正。",
+   "names_used": [
+    "一偏",
+    "中和"
+   ],
+   "relational": "躁能胜寒，静能胜热；清静为天下之正。",
+   "ro_passage": "",
+   "tradition": "道家（老子）",
+   "work": "《老子》第四十五章",
+   "record_ids": [
+    "LL-R053"
+   ]
+  },
+  {
+   "id": "lao-60-peng-xiao-xian",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "治大国，若烹小鲜"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Frequency.count",
+    "Becoming.carried_le_count",
+    "Becoming.carried_le_coupling",
+    "Becoming.Frequency.SelfLoop.carried_eq",
+    "Becoming.carried_le_of_rare",
+    "Becoming.Frequency.SelfLoop.polynomial_iff"
+   ],
+   "records": [
+    "how-often-couplings-act"
+   ],
+   "reading": "AI读法：解老读此章为「烹小鮮而數撓之，則賊其澤；治大國而數變法，則民苦之」：害在作用之次数（数），不在其强。这是本簇\"频数\"的结构。脊柱：携带量至多 D·(1+M)^a，a 为某日程所标作用之步数（carried_le_count），或任何耦合作用之步数（carried_le_coupling）；自环恰达此界（Frequency.SelfLoop.carried_eq）；自环为多项式增长，恰当 2 的作用步数次方为多项式（SelfLoop.polynomial_iff）；耦合稀少处，不论强度如何都不失控（carried_le_of_rare）。所以\"若烹小鲜\"在作用经由自环回到所作用者处成立：频繁的扰动使差异失控，稀少的扰动不会。定域：没有回到自身之环处，频数只给出至多 (1+M)^a 之界，不给出必害；王弼、苏辙、河上公的\"不扰\"\"烦则下乱\"是同一结构。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《老子》第60章；冻结正文句起“治大国，若烹小鲜。”",
+   "names_used": [
+    "頻數"
+   ],
+   "relational": "治大国如烹小鱼，不可频繁翻动。",
+   "ro_passage": "",
+   "tradition": "道家（老子）",
+   "work": "《老子》第六十章",
+   "record_ids": [
+    "LAO2-C60-R01"
+   ]
+  },
+  {
+   "id": "lao-72-min-bu-wei-wei",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "民不畏威，则大威至"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero",
+    "Becoming.not_onLoop_unread",
+    "Becoming.upstream_unread",
+    "Becoming.Web.break_not_bounded"
+   ],
+   "records": [
+    "sensitivity-is-the-least-registration",
+    "how-much-difference-arrives",
+    "loops-within-what-a-law-reads",
+    "runaway-distance-unregistered"
+   ],
+   "reading": "AI读法：威经由\"畏\"耦合于民。民不畏威，即这一耦合的强度为零：一个交换在某步对某条件不敏感，恰当其强度为零（ExchangeLaw.insensitiveAt_iff_strength_zero，本簇\"应倍\"为零）；没有环经过不被读取的水平（not_onLoop_unread），其下游只有它自己（upstream_unread）：经由畏而成的调节之环断开。此后断裂之前没有耦合进来的东西界定其远近（Web.break_not_bounded），\"大威至\"即本簇之\"穷\"。所以经文的结构可承：调节之环在耦合强度降为零时断开。但\"民不畏威\"是怎样来的——威用得多而畏渐失——是强度随所经之量而降，脊柱的强度是给定之数，没有这样的律，见缺口（王弼\"任威权\"、河上公\"刑罚酷深\"两条并行都在说这一过程）。\"威\"作为中心之手段，属意志层，不采纳。",
+   "gap": "脊柱缺：耦合强度随经由它所传之量而降（饱和、习惯化）。所缺之律：形成 h 在步 t 对条件 d 之水平的耦合强度 k_t = f(A_t)，A_t 是此前各步经该耦合所传之量的总和，f 非增；定理一：若 f 在某量 A₀ 以上为零，则 A_t 达到 A₀ 之后该耦合不再读入 d（强度为零即不敏感，insensitiveAt_iff_strength_zero），经它的环自那一步起不再返回；定理二（对照）：强度是自然数，f 只非增而不归零时终为一个正的常数，环仍在，所传之量照旧至少按环倍增（carried_doubles_around）。脊柱现有的 not_onLoop_unread 要求每一步都不读入，缺的是〈自某步起〉的形式，以及强度依所传之量而变的律本身（现有强度只随步数给定）。最近：Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero、Becoming.ExchangeLaw.sensitive_iff_strength、Becoming.ExchangeLaw.RespondsWithin、Becoming.not_onLoop_unread、Becoming.carried_doubles_around。",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《老子》第72章；冻结正文句起“民不畏威，则大威至。”",
+   "names_used": [
+    "應倍",
+    "窮",
+    "未兆"
+   ],
+   "relational": "民不畏惧威势之时，更大的威祸就到来。",
+   "ro_passage": "",
+   "tradition": "道家（老子）",
+   "work": "《老子》第七十二章",
+   "record_ids": [
+    "LAO2-C72-R01"
+   ]
+  },
+  {
+   "id": "lao-29-qu-shen-qu-tai",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "故物或行或随，或歔或吹。或强或羸，或挫或隳。是以圣人去甚，去奢，去泰"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Regulation.OneSided.above",
+    "Becoming.Flow.excess_lowers",
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Flow.stays_between_at",
+    "Becoming.Flow.crosses_of_above"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading",
+    "own-count-misses-joint-excess"
+   ],
+   "reading": "AI读法：物向两侧走（或行或随、或强或羸），\"去甚、去奢、去泰\"去其过。脊柱：共同过度每步至少降低一（Flow.excess_lowers）；界恰是下一水平落在 m 与当前之间（Flow.withinGap_iff_between），界内不越过 m（stays_between_at）；越界之相反交换越过 m（crosses_of_above，\"过正\"）。所以\"去甚\"在本簇是\"中节\"：相反而不越过。定域：去甚只对上侧，「或强或羸，或挫或隳」之下侧经文未施，一侧不是调节（Regulation.OneSided.above）；河上公把它补成\"处中和\"（并行 LC2-HS-C29-R02），苏辙读为「使不至于過而傷物」（LC2-SZ-C29-R03）。\"圣人\"不采纳为结构名。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《老子》第29章；起句“故物或行或随，或歔或吹。或强或羸”",
+   "names_used": [
+    "中節",
+    "過正",
+    "一偏",
+    "中和"
+   ],
+   "relational": "物各向两侧行；去其过甚、过奢、过泰。",
+   "ro_passage": "",
+   "tradition": "道家（老子）",
+   "work": "《老子》第二十九章",
+   "record_ids": [
+    "LAO2-C29-R05"
+   ]
+  },
+  {
+   "id": "lao-17-xin-bu-zu",
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "信不足焉，有不信焉"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Loop.response_returns",
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.Withholding.withholding_returns",
+    "Becoming.Withholding.withholding_spreads"
+   ],
+   "records": [
+    "what-a-pools-acts-respond-to",
+    "where-two-courses-rejoin",
+    "giving-that-waits-on-giving"
+   ],
+   "reading": "AI读法：信之不足回到施者为不信，是本簇\"还\"的一例。脊柱：回应经由行动者的耦合闭包回到行动者（Loop.response_returns）；在等待之环上，扣留每圈都回来（Withholding.withholding_returns），并沿等待之链向下游扩散（withholding_spreads）。定域：这在施者处于等待之环上时成立；回来的是闭合之还是扩大之，由律决定而不由耦合固定（ExchangeLaw.response_not_fixed_by_coupling），所以\"有不信\"不是必然，看环上各节所循之律。河上公读作\"君信不足于下，下则应君以不信\"、苏辙读作不自信而加仁义刑政，使民始不信（并行），都是同一回馈之环。",
+   "gap": "",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）",
+   "locator": "《道德经》十七章，起语“信不足焉，有不信焉。”",
+   "names_used": [
+    "還",
+    "環"
+   ],
+   "relational": "在上者信不足，在下者便以不信回应。",
+   "ro_passage": "",
+   "tradition": "道家（老子）",
+   "work": "《老子》第十七章",
+   "record_ids": [
+    "LE-R026"
+   ]
+  },
+  {
+   "id": "wb-26-bu-dong-zhi-dong",
+   "source_id": "DS01",
+   "fragments": [
+    "不行者使行，不动者制动，是以重必为轻根，静必为躁君也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.responds_to_own_level",
+    "Becoming.Flow.Opposes",
+    "Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero",
+    "Becoming.not_onLoop_unread"
+   ],
+   "records": [
+    "how-loops-form",
+    "two-sided-regulation-and-late-reading",
+    "sensitivity-is-the-least-registration",
+    "loops-within-what-a-law-reads"
+   ],
+   "reading": "AI读法：王弼说不动者制动者。脊柱：调节是读水平而与偏离相反的交换（Flow.Opposes），调节者必在环上，即回应它所给予之条件的水平（responds_to_own_level）；一个形成若不被所调节者所动——对其水平强度为零（ExchangeLaw.insensitiveAt_iff_strength_zero）——就没有环经过那一水平（not_onLoop_unread），它不能以调节制动，只能开环地推。所以\"不动者制动\"作为对一个不受动之控制者的断言，与本簇相分，属〈意志或单一中心〉层。另一读法须记下：若把\"静\"读作调节所趋之定点 m，它确实不动而定所趋；但在脊柱中 m 是律的参数，不作用，作用者是读水平而相反的交换，它随水平而动。苏辙以承载与制动解释\"重为轻根、静为躁君\"（并行），同一相分。",
+   "gap": "",
+   "layer": "注·魏晋南北朝（王弼《老子注》第二十六章）",
+   "locator": "王弼《老子道德经注》第26章第1注；句起“凡物轻不能载重，小不能镇大。不行”",
+   "names_used": [
+    "環",
+    "中和"
+   ],
+   "relational": "不行者使行，不动者制约动者；重为轻之根，静为躁之君。",
+   "ro_passage": "",
+   "tradition": "道家注（王弼）",
+   "work": "王弼《老子道德经注》第二十六章",
+   "record_ids": [
+    "LC2-WB-C26-R01"
+   ]
+  },
+  {
+   "id": "wb-65-jian-wei-yi-zi",
+   "source_id": "DS01",
+   "fragments": [
+    "复以巧术防民之伪，民知其术，防随而避之，思惟密巧，奸伪益滋"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.responds_to_own_level",
+    "Becoming.forms_by_closing",
+    "Becoming.onLoop_of_closing",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.LoopReturn.runs_away_unbounded",
+    "Becoming.polynomial_iff_no_loop"
+   ],
+   "records": [
+    "how-loops-form",
+    "whether-a-loop-closes-a-difference",
+    "how-a-carried-difference-grows"
+   ],
+   "reading": "AI读法：王弼此注是本簇\"滋\"与\"成环\"最清楚的一例：防回应伪之水平，避回应防之水平；一个交换开始回应它所给予之条件的水平即成环（responds_to_own_level），环由闭合一条链的耦合形成（forms_by_closing、onLoop_of_closing）；每环节至少加倍则第 n 圈后至少 2^n 倍，自正差起超过每个界（LoopReturn.runs_away、runs_away_unbounded）；携带量超过每个多项式恰经由环（polynomial_iff_no_loop）。\"奸伪益滋\"即此。结构与谁在环上无关：并行诸条（王弼第十八、四十九章，苏辙以智御人，人亦以智应，荀子君上诈下，墨子攻者自誉而邻君贺之）都是同一正回馈之环。经文以民为被防之对象、以术为中心之手段，这一框架不采纳，所承的是环的结构。",
+   "gap": "",
+   "layer": "注·魏晋南北朝（王弼《老子注》第六十五章）",
+   "locator": "王弼《老子道德经注》第65章第3注；句起“邪心既动，复以巧术防民之伪，民知”",
+   "names_used": [
+    "滋",
+    "成環",
+    "環"
+   ],
+   "relational": "以巧术防民之伪，民知其术而随防避之，奸伪愈益滋长。",
+   "ro_passage": "",
+   "tradition": "道家注（王弼）",
+   "work": "王弼《老子道德经注》第六十五章",
+   "record_ids": [
+    "LC2-WB-C65-R01"
+   ]
+  },
+  {
+   "id": "sz-79-bu-chu-qi-ben",
+   "source_id": "LC-SZ-ALL",
+   "fragments": [
+    "今不知除其本而欲和其末故外雖和而内未忘也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.LoopReturn.cut_closes",
+    "Becoming.LoopReturn.cut_reopened",
+    "Becoming.carriedWithin_lt_of_recurring_loop",
+    "Becoming.carried_eq_carriedWithin_add"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference",
+    "what-a-cut-loses"
+   ],
+   "reading": "AI读法：苏辙说不除其本而和其末，外虽和而内未忘，是本簇\"余\"的注层出处。脊柱：在 j 阶截断，所失恰是 j+1 次回应所携（carried_eq_carriedWithin_add）；有不已之耦合构成的环喂入处，每个有限阶都留余（carriedWithin_lt_of_recurring_loop）——\"内未忘\"。\"除其本\"在环上是放一个返还为零的环节：它使差异自第一圈起为零，只要其后各环在无差处不生差（LoopReturn.cut_closes）；否则差异重开（cut_reopened）。所以\"和其末\"是在有限阶截断而环仍在，\"除其本\"是断环，两者之别恰是脊柱所分。",
+   "gap": "",
+   "layer": "注·宋明（北宋苏辙《老子解》第七十九章）",
+   "locator": "苏辙《老子解》和大怨章第79注；句起“今不知除其本而欲和其末故外雖和而内未”",
+   "names_used": [
+    "餘",
+    "報",
+    "環"
+   ],
+   "relational": "不除怨之本而只调和其末，外虽和而内未忘。",
+   "ro_passage": "",
+   "tradition": "道家注（苏辙）",
+   "work": "苏辙《老子解》第七十九章",
+   "record_ids": [
+    "LC2-SZ-C79-R01"
+   ]
+  },
+  {
+   "id": "jielao-shi-qiang-mu-buming",
+   "source_id": "CV1-S-JL",
+   "fragments": [
+    "視強，則目不明；",
+    "聽甚，則耳不聰；",
+    "思慮過度，則智識亂。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero",
+    "Becoming.ExchangeLaw.sensitive_iff_strength",
+    "Becoming.ExchangeLaw.RespondsWithin"
+   ],
+   "records": [
+    "sensitivity-is-the-least-registration",
+    "how-much-difference-arrives"
+   ],
+   "reading": "AI读法：解老说视过强则目不明、听过甚则耳不聪、思虑过度则智识乱。脊柱给出\"不明\"的确切形式：一个交换在某步对某条件不敏感，恰当其强度（本簇\"应倍\"）为零（ExchangeLaw.insensitiveAt_iff_strength_zero）；敏感恰当强度为正（sensitive_iff_strength）；强度以回应之倍数界定（RespondsWithin）。所以\"目不明\"在脊柱上是读入之耦合强度降为零。但经文的因果——用得过强，强度因此而降——脊柱没有：强度是律给定的数，不随所经之量而变，见缺口（与第七十二章\"民不畏威\"同一缺口）。定域：脊柱给出\"不明\"是什么，不给出〈强则不明〉。第十二章\"五色令人目盲\"诸条作并行。",
+   "gap": "脊柱缺：耦合强度随经由它所传之量而降（饱和、习惯化）。所缺之律：形成 h 在步 t 对条件 d 之水平的耦合强度 k_t = f(A_t)，A_t 是此前各步经该耦合所传之量的总和，f 非增；定理一：若 f 在某量 A₀ 以上为零，则 A_t 达到 A₀ 之后该耦合不再读入 d（强度为零即不敏感，insensitiveAt_iff_strength_zero），经它的环自那一步起不再返回；定理二（对照）：强度是自然数，f 只非增而不归零时终为一个正的常数，环仍在，所传之量照旧至少按环倍增（carried_doubles_around）。脊柱现有的 not_onLoop_unread 要求每一步都不读入，缺的是〈自某步起〉的形式，以及强度依所传之量而变的律本身（现有强度只随步数给定）。最近：Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero、Becoming.ExchangeLaw.sensitive_iff_strength、Becoming.ExchangeLaw.RespondsWithin、Becoming.not_onLoop_unread、Becoming.carried_doubles_around。",
+   "layer": "论·先秦（《韩非子·解老》，战国末；篇章经后代编校）",
+   "locator": "《解老》第14阅读段",
+   "names_used": [
+    "應倍"
+   ],
+   "relational": "视、听、思虑用之过强过甚，则目不明、耳不聪、智识乱。",
+   "ro_passage": "",
+   "tradition": "法家（解老）",
+   "work": "《韩非子·解老》",
+   "record_ids": [
+    "CV1-JL-R035",
+    "CV1-JL-R037",
+    "CV1-JL-R039"
+   ]
+  },
+  {
+   "id": "jielao-you-yu-ji-hui-luan",
+   "source_id": "CV1-S-JL",
+   "fragments": [
+    "人有欲則計會亂，計會亂而有欲甚，"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.responds_to_own_level",
+    "Becoming.onLoop_of_closing",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.LoopReturn.whole_strengths",
+    "Becoming.carried_runaway"
+   ],
+   "records": [
+    "how-loops-form",
+    "whether-a-loop-closes-a-difference",
+    "how-a-carried-difference-grows"
+   ],
+   "reading": "AI读法：有欲则计会乱，计会乱而欲更甚：欲与计会互为输入，是本簇\"成环\"与\"滋\"的一例。脊柱：一个交换开始回应它所给予之条件的水平即成环（responds_to_own_level），环由闭合而形成（onLoop_of_closing）；每环节至少加倍则失控（LoopReturn.runs_away），一般地整数强度之环乘积为 0 则首圈闭合、为 1 则保持、不小于 2 则无界，没有渐闭（whole_strengths）；环上每圈的倍数决定携带量的增长（carried_runaway）。\"欲甚\"即环的乘积大于一。并行 IN2-R0017（「是以念愈生而愈不寧靜」）是同一自激之环：求静之作用回应念之水平而增之。",
+   "gap": "",
+   "layer": "论·先秦（《韩非子·解老》，战国末）",
+   "locator": "《解老》第22阅读段",
+   "names_used": [
+    "環",
+    "成環",
+    "滋"
+   ],
+   "relational": "有欲则计算乱，计算乱则欲更甚。",
+   "ro_passage": "",
+   "tradition": "法家（解老）",
+   "work": "《韩非子·解老》",
+   "record_ids": [
+    "CV1-JL-R045",
+    "CV1-JL-R046"
+   ]
+  },
+  {
+   "id": "jielao-huo-fu",
+   "source_id": "CV1-S-JL",
+   "fragments": [
+    "人有禍，則心畏恐；心畏恐，則行端直",
+    "而福本於有禍",
+    "人有福，則富貴至；富貴至，則衣食美；衣食美，則驕心生",
+    "而禍本生於有福"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.Opposes",
+    "Becoming.Regulation.Overshooting.oscillates",
+    "Becoming.Regulation.Overshooting.never_at",
+    "Becoming.Flow.crosses_of_above",
+    "Becoming.Flow.settles",
+    "Becoming.Diagonal.negation_returns"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading",
+    "registration-within-what-it-registers"
+   ],
+   "reading": "AI读法：解老把祸福相倚伏展开为两条链：祸引起畏恐、端直而致福，福引起富贵、骄心而致祸；每一态所引起的回应都与它相反。脊柱：与偏离相反的交换（Flow.Opposes）越出与 m 之距时越过 m（crosses_of_above，\"过正\"），每步越界的见证在 m 两侧往复而永不在 m（Regulation.Overshooting.oscillates、never_at）；RO lao-58 以二值否定每两步返回（Diagonal.negation_returns）读祸福相倚。所以祸福交替在回应越界处成立；回应若在界内，水平定于 m（Flow.settles），祸福不必永远交替。定域：交替不是普遍律，看回应是否\"中节\"。与 RO lao-58-qi-wu-zheng 一致，本条是法家解经层。",
+   "gap": "",
+   "layer": "论·先秦（《韩非子·解老》，战国末）",
+   "locator": "《解老》第9阅读段",
+   "names_used": [
+    "過正",
+    "中節"
+   ],
+   "relational": "祸生畏恐而致福，福生骄心而致祸，祸福互为其本。",
+   "ro_passage": "",
+   "tradition": "法家（解老）",
+   "work": "《韩非子·解老》",
+   "record_ids": [
+    "CV1-JL-R013",
+    "CV1-JL-R023"
+   ]
+  },
+  {
+   "id": "hanfei-gufen-zhu-bi-chen-zhong",
+   "source_id": "FA1-S-H11",
+   "fragments": [
+    "人主不能越四助而燭察其臣，故人主愈弊而大臣愈重。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.RuleCapture.favouring_locks",
+    "Becoming.RuleCapture.locked_stays",
+    "Becoming.RuleCapture.locked_rises",
+    "Becoming.RuleCapture.perturbation_absorbed",
+    "Becoming.RuleCapture.Reversed.not_absorbed"
+   ],
+   "records": [
+    "capture-through-the-rule"
+   ],
+   "reading": "AI读法：读者只经由被读者来读：人主之读要经过大臣（四助），大臣愈重则读愈偏向大臣，读愈偏则大臣愈重——一个经由规则的正回馈之环，本簇\"滋\"的规则层。脊柱：规则所读偏向份额、份额不降时，自第一个读取步之后进程锁定（RuleCapture.favouring_locks），锁定后保持（locked_stays），此后份额与规则都不降（locked_rises）；保持方向的扰动在下一读取步被吸收（perturbation_absorbed），只有反转方向的扰动不被吸收（Reversed.not_absorbed）。\"愈弊\"\"愈重\"即锁定后的不降。君臣与争权是经文的框架（争胜之层），律不采纳；所承的是读经由被读者之时的锁定结构。",
+   "gap": "",
+   "layer": "论·先秦（《韩非子·孤愤》，战国末；篇章作者有争议）",
+   "locator": "《韩非子·孤憤》转录第1段",
+   "names_used": [
+    "滋",
+    "環"
+   ],
+   "relational": "人主不能越过左右四助而察其臣，所以人主愈蔽而大臣愈重。",
+   "ro_passage": "",
+   "tradition": "法家",
+   "work": "《韩非子·孤愤》",
+   "record_ids": [
+    "FA1-H11-R004"
+   ]
+  },
+  {
+   "id": "xunzi-wangzhi-qiang-fan-ruo",
+   "source_id": "RU2-S-XZ09",
+   "fragments": [
+    "伤人之民甚，则人之民必恶我甚矣",
+    "伤吾民甚，则吾民之恶我必甚矣",
+    "是彊者之所以反弱也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.responds_to_own_level",
+    "Becoming.onLoop_of_closing",
+    "Becoming.Loop.response_returns",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.Withholding.withholding_spreads",
+    "Becoming.Withholding.withholding_absorbs"
+   ],
+   "records": [
+    "how-loops-form",
+    "what-a-pools-acts-respond-to",
+    "whether-a-loop-closes-a-difference",
+    "giving-that-waits-on-giving"
+   ],
+   "reading": "AI读法：荀子说强者伤人之民甚，则人之民恶我甚、欲为其君斗；伤吾民甚，则吾民恶我甚、不欲为我斗；所以强反弱。两个\"甚\"相应是本簇\"报\"：回来之量随所施之量。脊柱：回应经由行动者的耦合闭包回到行动者（Loop.response_returns，\"还\"），交换回应它所给之水平即成环（responds_to_own_level、onLoop_of_closing），每环节至少加倍则失控（LoopReturn.runs_away）；「则日不欲为我斗」是扣留沿等待之链扩散（Withholding.withholding_spreads），一处扣留终结它所达之族的一切给予（withholding_absorbs）。定域：强反弱在被伤者处于回到伤者之环上时成立，回来多少看环上各节的倍数。并行（河上公众弱合强、墨子论吴与智伯）同一结构。",
+   "gap": "",
+   "layer": "论·先秦（《荀子·王制》，战国；传世文本有编纂层次）",
+   "locator": "《荀子·王制篇》",
+   "names_used": [
+    "報",
+    "還",
+    "環"
+   ],
+   "relational": "伤人之民与伤己之民都经由其怨恶回到伤者，强者因此反弱。",
+   "ro_passage": "",
+   "tradition": "儒家（荀子）",
+   "work": "《荀子·王制》",
+   "record_ids": [
+    "RU2-R0100"
+   ]
+  },
+  {
+   "id": "mozi-jianai-zhong-bi-cong",
+   "source_id": "MO1-S-C15",
+   "fragments": [
+    "夫愛人者，人必從而愛之；利人者，人必從而利之；惡人者，人必從而惡之；害人者，人必從而害之。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.LoopReturn.kept_of_identity",
+    "Becoming.LoopReturn.loop_kept",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.Withholding.withholding_returns"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference",
+    "giving-that-waits-on-giving"
+   ],
+   "reading": "AI读法：「人必從而愛之」……「人必從而害之」是本簇\"报\"的普遍形式：回来的等于所施的。脊柱：耦合界定回应而不固定回应（ExchangeLaw.response_not_fixed_by_coupling），所以\"必\"不由关系本身给出；它在环的每一环节都把所受者如数交出时成立（LoopReturn.kept_of_identity、loop_kept）；环节交出少于所受时差异在有限圈内闭合（closes_within），环节至少加倍时失控（runs_away）。「惡人者，人必從而惡之」在等待之环上是扣留每圈都回来（Withholding.withholding_returns）。所以回报律在〈环节守恒〉的范围内成立，不是关系的必然。种类与声明沿用 RO mozi-jianai-zhong-bi-cong。",
+   "gap": "",
+   "layer": "论·先秦（《墨子·兼爱中》，战国墨家；篇章层次有争议）",
+   "locator": "《墨子·兼愛中》第15篇·冻结页正文段3",
+   "names_used": [
+    "報",
+    "還"
+   ],
+   "relational": "爱利人者人必爱利之，恶害人者人必恶害之。",
+   "ro_passage": "mozi-jianai-zhong-bi-cong",
+   "tradition": "墨家",
+   "work": "《墨子·兼爱中》",
+   "record_ids": [
+    "MO1-C15-R004"
+   ]
+  },
+  {
+   "id": "mozi-jianai-xia-xian-shi",
+   "source_id": "MO1-S-C16",
+   "fragments": [
+    "卽必吾先從事乎愛利人之親，然後人報我以愛利吾親也",
+    "投我以桃，報之以李"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Tolerance.worst_start",
+    "Becoming.Withholding.withholding_absorbs",
+    "Becoming.Withholding.Ring.givesFirst_restores",
+    "Becoming.Tolerance.restores_iff"
+   ],
+   "records": [
+    "giving-that-waits-on-giving",
+    "restoring-giving-from-the-worst-start",
+    "thresholds-of-waiting"
+   ],
+   "reading": "AI读法：这是本簇\"先施\"的出处之一。脊柱：在保持包含之律下，最坏起点是全部扣留（Tolerance.worst_start）；一处扣留终结其可达之族的一切给予（Withholding.withholding_absorbs）；在各自只在所等待者给予时才给的环上，无人先给就不恢复，先给之律恢复环（Withholding.Ring.givesFirst_restores）；先给之律下，自每个起点恢复恰当没有清晰的等待链进入（Tolerance.restores_iff）。「吾先從事乎愛利人之親」正是先给。剩余：墨子以「然後人報我」为理由，是交换式论证；定理证明先给恢复环，不依赖对方回报的计算，所以本簇以\"先施\"名先给之律，以\"报\"名环返之量，二者分开。种类与声明沿用 RO mozi-jianai-xia-xian-cong-shi。",
+   "gap": "",
+   "layer": "论·先秦（《墨子·兼爱下》，战国墨家；引《诗·大雅·抑》）",
+   "locator": "《墨子·兼愛下》第16篇·冻结页正文段7",
+   "names_used": [
+    "先施",
+    "報"
+   ],
+   "relational": "必先爱利他人之亲，然后人以爱利回报我之亲；投桃报李。",
+   "ro_passage": "mozi-jianai-xia-xian-cong-shi",
+   "tradition": "墨家",
+   "work": "《墨子·兼爱下》",
+   "record_ids": [
+    "MO1-C16-R010"
+   ]
+  },
+  {
+   "id": "mengzi-chu-er-fan-er",
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "出乎尔者，反乎尔者也",
+    "夫民今而后得反之也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Loop.response_returns",
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.LoopReturn.kept_of_identity",
+    "Becoming.LoopReturn.loop_kept",
+    "Becoming.Withholding.withholding_returns"
+   ],
+   "records": [
+    "what-a-pools-acts-respond-to",
+    "where-two-courses-rejoin",
+    "whether-a-loop-closes-a-difference",
+    "giving-that-waits-on-giving"
+   ],
+   "reading": "AI读法：曾子\"出乎尔者，反乎尔者也\"，孟子用以说民今而后得反之（上残下在先，民不救其上在后）。这是本簇\"还\"的先秦表述：作用经由他者回到作用者（Loop.response_returns）；\"反之\"如数，是环节交回所受者、差异保持（LoopReturn.kept_of_identity、loop_kept）；民之不救是扣留绕环而回（Withholding.withholding_returns）。定域：回来的是否与出去的相等，由环上各节所循之律决定，不由耦合固定（ExchangeLaw.response_not_fixed_by_coupling）。名：先秦\"反\"字在此最确切，本簇仍以\"还\"名回馈，因\"反\"兼相反、反叛与〈物极必反〉，见名之 alternatives。孟子把责任归于在上者先施之残，这一归属脊柱不处理。",
+   "gap": "",
+   "layer": "经·先秦（《孟子·梁惠王下》，引曾子语）",
+   "locator": "《孟子·梁惠王下》第12章",
+   "names_used": [
+    "還",
+    "報"
+   ],
+   "relational": "出于你者，返回于你；在上者先残其下，民今乃得以其所受还之。",
+   "ro_passage": "",
+   "tradition": "儒家（孟子）",
+   "work": "《孟子·梁惠王下》",
+   "record_ids": [
+    "RU2-R0279"
+   ]
+  },
+  {
+   "id": "lunyu-guo-you-bu-ji",
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "師也過，商也不及",
+    "過猶不及"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Flow.crosses_of_above",
+    "Becoming.Flow.crosses_of_below",
+    "Becoming.Regulation.Overshooting.never_at",
+    "Becoming.Regulation.OneSided.above",
+    "Becoming.Flow.settles"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：\"过犹不及\"说两种失败同样不到中。脊柱恰有两种不到 m 的失败：越界的相反交换越过 m（Flow.crosses_of_above、crosses_of_below，\"过正\"），每步越界的见证永不在 m（Regulation.Overshooting.never_at）；只对一侧相反的交换水平永在 m 之一侧、不到 m（Regulation.OneSided.above，\"一偏\"之不及）。两者都不定于 m；定于 m 恰需要两侧相反且以距为界，即下一水平落在 m 与当前之间（Flow.withinGap_iff_between、Flow.settles，\"中节\"）。所以\"过犹不及\"在脊柱上是两个见证的同一结论：都永不在 m。相合。师、商之人物评价不采纳为结构。并行诸条（中庸知者过愚者不及、文质彬彬、司马法好战忘战、威而不猛等）同一两侧之结构。",
+   "gap": "",
+   "layer": "经·先秦（《论语·先进》；成书先秦至汉，层次有争议）",
+   "locator": "《论语》先進第十一·原页十一之十五",
+   "names_used": [
+    "過正",
+    "一偏",
+    "中節",
+    "中和"
+   ],
+   "relational": "过度与不及同样不中。",
+   "ro_passage": "",
+   "tradition": "儒家（论语）",
+   "work": "《论语·先进》",
+   "record_ids": [
+    "RU1-LY-11-15-R01"
+   ]
+  },
+  {
+   "id": "lunyu-jin-zhi-tui-zhi",
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "求也退，故進之；由也兼人，故退之。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.Opposes",
+    "Becoming.Flow.gap_falls",
+    "Becoming.Flow.regulates",
+    "Becoming.Regulation.relay",
+    "Becoming.Regulation.push_ramp",
+    "Becoming.Regulation.pull_ramp"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：同一问，对冉求说「聞斯行之」，对子路说\"有父兄在\"：回应读被回应者之水平，在下者进之、在上者退之。脊柱：两侧都与偏离相反的交换（Flow.Opposes），有界时距每步至少降一（gap_falls、regulates）；继电之律在读数低于 a 时给、高于 b 时取、带内不动（Regulation.relay），读数在下驱动推、在上驱动拉（push_ramp、pull_ramp）。所以\"进之\"\"退之\"是同一调节之两侧，回应由所读之水平决定，不由问题本身决定。相合。这一回应是读者与被读者之间的关系，不是一条对一切人的固定规则。并行（止观、刚柔、苏辙浊静安动）同一结构。",
+   "gap": "",
+   "layer": "经·先秦（《论语·先进》）",
+   "locator": "《论语》先進第十一·原页十一之二一",
+   "names_used": [
+    "寬猛相濟",
+    "中和"
+   ],
+   "relational": "冉求退缩，所以使之进；子路胜人，所以使之退。",
+   "ro_passage": "",
+   "tradition": "儒家（论语）",
+   "work": "《论语·先进》",
+   "record_ids": [
+    "RU1-LY-11-21-R01",
+    "RU1-LY-11-21-R02"
+   ]
+  },
+  {
+   "id": "lunyu-zhi-he-bu-jie",
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "禮之用，和為貴",
+    "知和而和，不以禮節之，亦不可行也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.Opposes",
+    "Becoming.Flow.WithinGap",
+    "Becoming.Regulation.Overshooting.opposes",
+    "Becoming.Regulation.Overshooting.never_at",
+    "Becoming.Regulation.Overshooting.oscillates",
+    "Becoming.Flow.settles"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：「知和而和，不以禮節之，亦不可行」：只求和而无节，不能成和。脊柱恰证此：Overshooting 的交换在 m 两侧每步都与偏离相反（Regulation.Overshooting.opposes），却越出与 m 之距，于是在两侧往复而永不在 m（oscillates、never_at）；相反加上界（Flow.Opposes 与 Flow.WithinGap）才定于 m（Flow.settles）。所以\"和\"（两侧相反）是必要的，\"节\"（不越过 m 之界）也是必要的，缺一不成；这正是本簇以\"中和\"与\"中节\"分名之理由。相合。并行诸条（恭而无礼则劳、好仁不好学其蔽也愚、勇而无义为乱）都是一种相反之德缺其界而越过。",
+   "gap": "",
+   "layer": "经·先秦（《论语·学而》，有子语）",
+   "locator": "《论语》學而第一·原页一之十二",
+   "names_used": [
+    "中和",
+    "中節",
+    "過正"
+   ],
+   "relational": "礼之用以和为贵；只知和而和，不以礼节之，也不可行。",
+   "ro_passage": "",
+   "tradition": "儒家（论语）",
+   "work": "《论语·学而》",
+   "record_ids": [
+    "RU1-LY-01-12-R01",
+    "RU1-LY-01-12-R02"
+   ]
+  },
+  {
+   "id": "lunyu-wu-qiu-bei",
+   "source_id": "RU1-S-LY",
+   "fragments": [
+    "故舊無大故，則不棄也，無求備於一人"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Tolerance.tolerating",
+    "Becoming.Tolerance.tolerating_zero",
+    "Becoming.Tolerance.thin_absorbed",
+    "Becoming.Tolerance.kept_set",
+    "Becoming.Tolerance.Triad.spreads",
+    "Becoming.Tolerance.Triad.absorbed"
+   ],
+   "records": [
+    "thresholds-of-waiting",
+    "restoring-giving-from-the-worst-start"
+   ],
+   "reading": "AI读法：本簇\"不求备\"的名之所出。\"求备\"是要求所依者全备，即等待全部、容忍为零（Tolerance.tolerating_zero）；\"不求备\"是所等待者中至多缺 tol 个仍然给予（Tolerance.tolerating）。脊柱：稀薄的扣留在容忍之内一步消散（thin_absorbed），只在其容忍之外等待者构成的集合一直给予（kept_set）；同一三元等待之环，容忍 0 自一处扣留起处处扣留，容忍 1 一步吸收（Triad.spreads、Triad.absorbed）。「故舊無大故，則不棄也」是同一结构：小缺不终止关系。相合。用人与故旧的社会语境不采纳为结构；\"大故\"之界是容忍之数，经文未定。",
+   "gap": "",
+   "layer": "经·先秦（《论语·微子》，周公语）",
+   "locator": "《论语》微子第十八·原页十八之十",
+   "names_used": [
+    "不求備"
+   ],
+   "relational": "故旧无大过则不弃，不要求一人样样具备。",
+   "ro_passage": "",
+   "tradition": "儒家（论语）",
+   "work": "《论语·微子》",
+   "record_ids": [
+    "RU1-LY-18-10-R02"
+   ]
+  },
+  {
+   "id": "zhongyong-zhi-zhong-he",
+   "source_id": "RU1-S-ZY",
+   "fragments": [
+    "喜怒哀樂之未發，謂之中；發而皆中節，謂之和",
+    "致中和，天地位焉，萬物育焉"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.Balances.admits_unreached",
+    "Becoming.Flow.Balances.comparison_within_reach",
+    "Becoming.Flow.WithinReach",
+    "Becoming.Clearing.loses_beyond",
+    "Becoming.Web.AdmitsWithin.narrow",
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Flow.settles",
+    "Becoming.Flow.crosses_of_above"
+   ],
+   "records": [
+    "comparison-within-reach",
+    "feedback-and-reach",
+    "loss-beyond-a-region",
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：本簇\"中和\"（已采用之名）与\"中节\"的出处。\"发而皆中节\"：回应发出而不越过其界，脊柱为下一水平落在 m 与当前之间（Flow.withinGap_iff_between），此时距用尽即定于 m（Flow.settles），不中节者越过 m（Flow.crosses_of_above）。「致中和，天地位焉，萬物育焉」把部分的中和连到整体之位育，脊柱给出范围：部分未触及者，有它无它同样被容纳（Flow.Balances.admits_unreached），覆盖部分可达范围的意义在比较时与延续条件一致（comparison_within_reach），部分可以在其内保持一切而在其外失去（Clearing.loses_beyond）。所以这是〈在所及之内〉的命题。\"未发之中\"作为性之本体是四种非关系层的〈固定之性〉层（朱熹以性情体用分之），律不采纳。种类与声明沿用 RO ru-zhongyong-zhi-zhong-he。",
+   "gap": "",
+   "layer": "经·先秦至秦汉（《礼记·中庸》；成书年代有争议）",
+   "locator": "《礼记·中庸》编者连续论证段1，起语“天命之謂性，率性之謂道，修道之”",
+   "names_used": [
+    "中和",
+    "中節"
+   ],
+   "relational": "未发谓之中，发而皆中节谓之和；致中和则天地位、万物育。",
+   "ro_passage": "ru-zhongyong-zhi-zhong-he",
+   "tradition": "儒家（中庸）",
+   "work": "《礼记·中庸》首章",
+   "record_ids": [
+    "RU1-ZY-01-R04",
+    "RU1-ZY-01-R05",
+    "RU1-ZY-01-R07"
+   ]
+  },
+  {
+   "id": "mengzi-wu-wang-wu-zhu-zhang",
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "必有事焉而勿正，心勿忘，勿助长也",
+    "以为无益而舍之者，不耘苗者也。助之长者，揠苗者也，非徒无益，而又害之"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.Opposes",
+    "Becoming.Flow.WithinGap",
+    "Becoming.Flow.gap_falls",
+    "Becoming.Flow.restores_exactly",
+    "Becoming.Flow.crosses_of_below",
+    "Becoming.Regulation.Overshooting.never_at"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：孟子说两种失败：舍之不耘（没有回应，水平不升）与揠苗助长（回应越界）。脊柱：自 m 之下，与偏离相反且在界内的回应，每步使距至少降一（Flow.Opposes、WithinGap、gap_falls），恰在 m-x 步后到 m 并停住（Flow.restores_exactly，〈无过之恢复〉）；越出其距的回应越过 m（Flow.crosses_of_below，自下而越到上），一直越界则永不在 m（Regulation.Overshooting.never_at）。\"必有事焉\"是不可无回应，\"勿助长\"是回应不可越界，二者合为\"中节\"。定域：揠苗之\"害\"不只是越过 m，而是毁坏所养之形成本身，脊柱的越界只给出不定于 m，不给出毁坏；\"勿正\"（不预期其效）也不在此律中。",
+   "gap": "",
+   "layer": "经·先秦（《孟子·公孙丑上》）",
+   "locator": "《孟子·公孙丑上》第2章",
+   "names_used": [
+    "中節",
+    "過正"
+   ],
+   "relational": "养气须持续用功而勿预期，勿忘，勿助长；揠苗助长非徒无益而又害之。",
+   "ro_passage": "",
+   "tradition": "儒家（孟子）",
+   "work": "《孟子·公孙丑上》",
+   "record_ids": [
+    "RU2-R0014"
+   ]
+  },
+  {
+   "id": "zhoudunyi-shi-shi-buzao",
+   "source_id": "RU2-S-S01",
+   "fragments": [
+    "势，轻重也。极重不可反。识其重而亟反之，可也。反之，力也。识不早，力不易也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Law.drawn_iff_not_returns",
+    "Becoming.Law.DrawnInto.never_back",
+    "Becoming.LoopReturn.closes_within",
+    "Becoming.LoopReturn.closes_within_exact",
+    "Becoming.Web.break_not_bounded",
+    "Becoming.Regulation.late_spread",
+    "Becoming.Regulation.no_narrower_band",
+    "Becoming.Regulation.lateReturn_band"
+   ],
+   "records": [
+    "attraction-is-not-returning",
+    "whether-a-loop-closes-a-difference",
+    "runaway-distance-unregistered",
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：本簇\"识不早\"的名之所出。RO 的声明保留：\"极重不可反\"是吸收（Law.drawn_iff_not_returns、DrawnInto.never_back）；返还少于所受之映射在差额那么多圈内闭合，此界确切（LoopReturn.closes_within、closes_within_exact）；断裂之前无从界定远近（Web.break_not_bounded）。与 RO 的差别及理由：\"识不早，力不易\"恰是晚读之律：晚 ℓ 步读的规则分不出在其后 ℓ+1 步内不同的扰动（Regulation.late_spread），所以对每步至多移动 d 的扰动，任何这样的规则所保之带都不窄于 2(ℓ+1)d（no_narrower_band），晚返恰达此界（lateReturn_band）——识得越晚，所需之力（所能保持的带）越大；所以加上这三条与记录 two-sided-regulation-and-late-reading。种类沿用 RO ru-zhoudunyi-shi。\"天乎？人也\"的归责脊柱不处理。",
+   "gap": "",
+   "layer": "论·宋明（北宋周敦颐《通书·势》）",
+   "locator": "《通书·势第二十七》",
+   "names_used": [
+    "識不早",
+    "窮"
+   ],
+   "relational": "势是轻重；极重则不可反；早识其重而急反之则可，识得不早则反之之力不易。",
+   "ro_passage": "ru-zhoudunyi-shi",
+   "tradition": "儒家（周敦颐）",
+   "work": "周敦颐《通书·势第二十七》",
+   "record_ids": [
+    "RU2-R0163"
+   ]
+  },
+  {
+   "id": "chengyi-gan-ying-bu-yi",
+   "source_id": "RU2-S-S06",
+   "fragments": [
+    "有感必有应。凡有动皆为感，感则必有应。所应复为感，所感复有应，所以不已也。",
+    "天地之间，只有一个感与应而已"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.LoopReturn.loop_kept",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.nothing_between",
+    "Becoming.forms_by_closing",
+    "Becoming.Flow.Balances.comparison_within_response",
+    "Becoming.CouplingRecurs",
+    "Becoming.carriedWithin_lt_of_recurring_loop"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference",
+    "how-loops-form",
+    "comparison-where-the-rest-responds",
+    "what-a-cut-loses",
+    "how-often-couplings-act"
+   ],
+   "reading": "AI读法：\"所应复为感，所感复有应，所以不已\"是一个环，也是本簇\"不已\"的名之所出。RO 的声明保留：每环节至少交出所受，环就保持差（LoopReturn.loop_kept）；闭合需要某环节交出少于所受（closing_needs_less）；整数强度下没有渐闭（nothing_between）；环由闭合一条链的耦合形成（forms_by_closing）；\"有感必有应\"作为普遍断言是前提，比较在回应可达之内决定（Flow.Balances.comparison_within_response）。与 RO 的差别及理由：程颐的\"不已\"不是环保持差的量，而是环上的耦合在任意晚的步仍作用（CouplingRecurs）；脊柱证明，差异进入一个由不已之耦合构成的环、且不已之耦合由此通到 c 时，每个有限阶在 c 都有所失（carriedWithin_lt_of_recurring_loop）——感应不已，则任何有限的截断都不尽；所以加上这两条与记录 what-a-cut-loses、how-often-couplings-act。\"天地之间只有一个感与应\"是关系本体的强表述，脊柱承其结构，不承其普遍性。种类沿用 RO ru-chengyi-gan-ying；本条在脉络中没有专属关系记录。",
+   "gap": "",
+   "layer": "论·宋明（北宋二程语，南宋朱熹、吕祖谦辑《近思录》卷一：第12条与程颐《伊川易传》咸九四注同文，第34条标明道先生即程颢）",
+   "locator": "近思錄/卷01·第12条（与《伊川易传》咸九四注同文）、第34条（明道先生曰）",
+   "names_used": [
+    "不已",
+    "環",
+    "餘"
+   ],
+   "relational": "凡动皆感，感必有应，应复为感，所以不已；天地之间只有感与应。",
+   "ro_passage": "ru-chengyi-gan-ying",
+   "tradition": "儒家（二程）",
+   "work": "《近思录》卷一",
+   "record_ids": []
+  },
+  {
+   "id": "zhuangzi-lunbian-bu-xu-bu-ji",
+   "source_id": "ZH1-S13",
+   "fragments": [
+    "斲輪，徐則甘而不固，疾則苦而不入，不徐不疾，得之於手而應於心"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Flow.Opposes",
+    "Becoming.Flow.settles",
+    "Becoming.Regulation.ReadsLate",
+    "Becoming.Regulation.no_narrower_band"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：斫轮，慢则松而不固，快则紧而不入，不徐不疾才合：两侧都有失败，合者在两界之间（Flow.withinGap_iff_between），两侧相反之调节定于其间（Flow.Opposes、Flow.settles）。「得之於手而應於心」是读与回应几乎无延迟：规则晚 ℓ 步读（Regulation.ReadsLate）时，所能保之带不窄于 2(ℓ+1)d（no_narrower_band），所以手心相应、读入不晚，才能保持窄带。相合。轮扁说\"口不能言\"、子不能受，是调节在耦合之中而不在可传的规则文字之中，这一层属传授与识的另一簇，此处不展开。",
+   "gap": "",
+   "layer": "论·先秦至秦汉（《庄子·天道》，外篇；成书年代有争议）",
+   "locator": "庄子·天道；起语：臣也以臣之事觀之。斲輪，徐則甘而不固，疾則苦而不",
+   "names_used": [
+    "中節",
+    "識不早"
+   ],
+   "relational": "斫轮徐则不固，疾则不入，不徐不疾，得于手而应于心。",
+   "ro_passage": "",
+   "tradition": "庄子",
+   "work": "《庄子·天道》",
+   "record_ids": [
+    "ZH1-C13-R-08"
+   ]
+  },
+  {
+   "id": "zhuangzi-yi-yan",
+   "source_id": "ZH1-S04",
+   "fragments": [
+    "夫兩喜必多溢美之言，兩怨必多溢惡之言",
+    "凡溢之，類妄，妄則其信之也莫，莫則傳言者殃",
+    "傳其常情，无傳其溢言，則幾乎全"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.LoopReturn.runs_away_unbounded",
+    "Becoming.LoopReturn.whole_strengths",
+    "Becoming.LoopReturn.kept_of_identity",
+    "Becoming.LoopReturn.loop_kept"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference"
+   ],
+   "reading": "AI读法：两国相喜相怨之言经传言者往返，每一传都\"溢\"：交出多于所受。脊柱：每环节至少加倍，第 n 圈后至少 2^n 倍，自正差起超过每个界（LoopReturn.runs_away、runs_away_unbounded）；整数强度之环乘积为 1 则保持、不小于 2 则无界（whole_strengths）。「傳其常情，无傳其溢言」即让每一环节如数交出所受，差异保持而不失控（kept_of_identity、loop_kept）。这是本簇\"报\"（环返之量）的确切例：失控与保持只由每圈交回多少决定。「凡溢之，類妄，妄則其信之也莫，莫則傳言者殃」是失控之后回到传者，属\"还\"。相合。",
+   "gap": "",
+   "layer": "论·先秦（《庄子·人间世》，内篇；引\"法言\"）",
+   "locator": "庄子·人間世；起语：夫傳兩喜兩怨之言，天下之難者也。夫兩喜必多溢美之",
+   "names_used": [
+    "報",
+    "滋",
+    "還"
+   ],
+   "relational": "两喜两怨之言在传递中溢美溢恶，传者受殃；只传常情不传溢言则几乎全。",
+   "ro_passage": "",
+   "tradition": "庄子",
+   "work": "《庄子·人间世》",
+   "record_ids": [
+    "ZH1-C04-R-07",
+    "ZH1-C04-R-08"
+   ]
+  },
+  {
+   "id": "zhuangzi-cai-quan",
+   "source_id": "ZH1-S05",
+   "fragments": [
+    "是事之變，命之行也，日夜相代乎前，而知不能規乎其始者也，故不足以滑和，不可入於靈府",
+    "使日夜无郤，而與物爲春"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Regulation.late_spread",
+    "Becoming.Regulation.no_narrower_band",
+    "Becoming.Regulation.lateReturn_band",
+    "Becoming.Flow.settles",
+    "Becoming.Tolerance.worst_start"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading",
+    "restoring-giving-from-the-worst-start"
+   ],
+   "reading": "AI读法：死生存亡诸变日夜相代，知不能预见其始，而不足以乱\"和\"：这是在不可预读的扰动下保持中和。脊柱给出它成立的确切范围：读入有延迟时，规则分不出其后 ℓ+1 步内不同的扰动（Regulation.late_spread），对每步至多移动 d 的扰动，没有规则保得住窄于 2(ℓ+1)d 之带（no_narrower_band），晚返恰保此带（lateReturn_band）。所以\"不足以滑和\"只能是〈不出这一带〉，不能是〈毫无扰动〉；「知不能規乎其始」即不能早读，所以带不能更窄。自每个起点成立恰是自最坏起点成立（Tolerance.worst_start）是\"才全\"所需的另一半。定域：庄子的\"和\"若指不受扰动的心之定，脊柱说定于 m 只在扰动停止后成立（Flow.settles）；在持续扰动之下，可保的是带。\"灵府\"之心的层次不采纳为结构。",
+   "gap": "",
+   "layer": "论·先秦（《庄子·德充符》，内篇）",
+   "locator": "庄子·德充符；起语：死生、存亡、窮達、貧富、賢（與）不肖、毀譽、飢渴",
+   "names_used": [
+    "中和",
+    "識不早",
+    "有以待之"
+   ],
+   "relational": "诸变日夜相代而知不能预规其始，却不足以乱和，不入于灵府。",
+   "ro_passage": "",
+   "tradition": "庄子",
+   "work": "《庄子·德充符》",
+   "record_ids": [
+    "ZH1-C05-R-06"
+   ]
+  },
+  {
+   "id": "sunzi-qi-zheng-xun-huan",
+   "source_id": "BI1-S-SZ",
+   "fragments": [
+    "奇正相生，如循環之無端，孰能窮之哉？",
+    "戰勢不過奇正，奇正之變，不可勝窮也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Law.lossless_iff_returns",
+    "Becoming.keepHistory_new",
+    "Becoming.more_needs_open",
+    "Becoming.Learning.no_prefix_fixes_next",
+    "Becoming.Diagonal.Unfolds.never_returns"
+   ],
+   "records": [
+    "recurrence-without-premise",
+    "experiment-needs-return"
+   ],
+   "reading": "AI读法：本簇\"环\"的名之所出：「奇正相生，如循環之無端」是两种作用相互生成、首尾相接。RO 的读法保留：在有限多组态中，无损恰当每个组态都回来（Law.lossless_iff_returns），这是组态层的循环；保留下来的历史每一步都是新的（keepHistory_new），这是历史层的不复；\"不可胜穷\"若指组态本身，需要开放世界（more_needs_open），若指历史，有限组态上也成立；前缀固定不了下一值（Learning.no_prefix_fixes_next）。所以\"无端\"在组态层是无损之环，在历史层是永新。种类与声明沿用 RO sunzi-qi-zheng。名之注：此处\"穷\"是穷尽之义，与本簇以\"穷\"名断裂之步不同。",
+   "gap": "",
+   "layer": "论·先秦（《孙子·兵势》；传世兵书编定层次有争议）",
+   "locator": "兵勢第五；始句：奇正相生，如循環之無端，孰能窮之哉？",
+   "names_used": [
+    "環"
+   ],
+   "relational": "奇与正相互生成，如环之无端，不可穷尽。",
+   "ro_passage": "sunzi-qi-zheng",
+   "tradition": "兵家",
+   "work": "《孙子·兵势》",
+   "record_ids": [
+    "BI1-SZ-R-23",
+    "BI1-SZ-R-24"
+   ]
+  },
+  {
+   "id": "sunzi-you-yi-dai-zhi",
+   "source_id": "BI1-S-SZ",
+   "fragments": [
+    "無恃其不來，恃吾有以待之；無恃其不攻，恃吾有所不可攻也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Tolerance.KeepsInclusion",
+    "Becoming.Tolerance.worst_start",
+    "Becoming.Tolerance.rises_from_withheld",
+    "Becoming.Tolerance.restored_stays",
+    "Becoming.Tolerance.kept_set"
+   ],
+   "records": [
+    "restoring-giving-from-the-worst-start",
+    "thresholds-of-waiting"
+   ],
+   "reading": "AI读法：本簇\"有以待之\"的名之所出：不恃起点之好（敌不来、不攻），恃自任何起点都成立者。脊柱：对每个保持包含之律（Tolerance.KeepsInclusion），一个形成自每个起点在第 n 步给予，恰当它自全面扣留这一最坏起点在第 n 步给予（Tolerance.worst_start）；自最坏起点给予只增（rises_from_withheld），到 n 步已自最坏起点恢复者，此后自每个起点都恢复（restored_stays）；只在其容忍之外等待者构成的集合不论其余如何都一直给予（kept_set，\"有所不可攻\"）。所以\"恃吾有以待之\"在保持包含之律下恰等于〈自最坏起点成立〉。相合。条件：律须保持包含（起点越好结果不越差），这一条件经文未说而脊柱必需。兵争之框架（争胜之层）不采纳。",
+   "gap": "",
+   "layer": "论·先秦（《孙子·九变》；传世兵书编定层次有争议）",
+   "locator": "九變第八；始句：無恃其不來，恃吾有以待之；無恃其不攻，恃吾有所不可攻也。",
+   "names_used": [
+    "有以待之",
+    "不求備"
+   ],
+   "relational": "不依赖敌之不来、不攻，而依赖我有以待之、有所不可攻。",
+   "ro_passage": "",
+   "tradition": "兵家",
+   "work": "《孙子·九变》",
+   "record_ids": [
+    "BI1-SZ-R-40"
+   ]
+  },
+  {
+   "id": "simafa-shang-bu-yu-shi",
+   "source_id": "BI1-S-SM",
+   "fragments": [
+    "賞不踰時，欲民速得為善之利也。罰不遷列，欲民速覩為不善之害也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Regulation.ReadsLate",
+    "Becoming.Regulation.late_spread",
+    "Becoming.Regulation.late_band",
+    "Becoming.Regulation.no_narrower_band",
+    "Becoming.Regulation.lateReturn_band"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：赏罚不逾时、不迁列，使后果速至：这是本簇\"识不早\"的反面。脊柱：回应晚 ℓ 步读（Regulation.ReadsLate），就分不出其后 ℓ+1 步内不同的所为（late_spread），对每步至多移动 d 者，没有这样的回应保得住窄于 2(ℓ+1)d 之带（late_band、no_narrower_band），晚返恰达此界（lateReturn_band）。所以\"速\"的意义可确切说出：回应越晚，所能保持的偏离之带越宽。相合于结构。层次之分：经文以赏罚为治者之器、以民为被调节之量，属〈意志或单一中心〉层，律不采纳；所承的是迟读与带宽之律。",
+   "gap": "",
+   "layer": "论·先秦（《司马法·天子之义》；今本编纂层次未定）",
+   "locator": "天子之義；始句：賞不踰時，欲民速得為善之利也。罰不遷列，欲民速覩為不善之害也。",
+   "names_used": [
+    "識不早"
+   ],
+   "relational": "赏不逾时、罚不迁列，使民速见为善之利、为不善之害。",
+   "ro_passage": "",
+   "tradition": "兵家",
+   "work": "《司马法·天子之义》",
+   "record_ids": [
+    "BI1-SM-R-12"
+   ]
+  },
+  {
+   "id": "feng-chujiu-xun",
+   "source_id": "YD-JP55",
+   "fragments": [
+    "初九：遇其配主，雖旬无咎，往有尚。",
+    "雖旬无咎，過旬災也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Closing.Threshold.level_before",
+    "Becoming.Closing.Threshold.not_formed",
+    "Becoming.Closing.Threshold.forms",
+    "Becoming.Closing.Threshold.level_after",
+    "Becoming.Closing.Threshold.unforeseen",
+    "Becoming.break_carried_nowhere"
+   ],
+   "records": [
+    "how-loops-form",
+    "loops-within-what-a-law-reads"
+   ],
+   "reading": "AI读法：丰初九\"虽旬无咎，过旬灾也\"是一个阈值：旬之内无咎，过旬则灾。旬义有争议：程颐、朱熹读\"旬均也\"（与配主势均；程颐又说\"均而先已是過旬也\"，即越过相均而求胜），旧说亦有以旬为时日之期者（冻结文本未见注家此读，不引）；两读都有一个界，过之则律变，程颐之读更近本簇\"过正\"。脊柱：在 Closing.Threshold 的见证中，阈值之前水平每步只加一（level_before），环未形成（not_formed），环恰在水平到达阈值之步形成（forms），此后加倍（level_after）；而阈值之前历程不显示阈值在何处（unforeseen），抬升存量在断裂前处处不被携带（break_carried_nowhere）。定域：「雖旬无咎」在脊柱上只是断裂之前什么都不显示，不是无害；\"过旬灾\"是断裂处形成的环使之失控，本簇之\"穷\"。占断\"往有尚\"不采纳。",
+   "gap": "",
+   "layer": "经（爻辞）与传（小象）·先秦（《周易》丰卦初九及其小象；易传年代有争议）",
+   "locator": "第55卦豐·小象·第1位",
+   "names_used": [
+    "窮",
+    "未兆"
+   ],
+   "relational": "遇其配主，虽及旬（均）而无咎，过旬则有灾。",
+   "ro_passage": "",
+   "tradition": "易经与易传",
+   "work": "《周易·丰》初九",
+   "record_ids": [
+    "TP-H55-X1-R01",
+    "TP-H55-X1-R02"
+   ]
+  },
+  {
+   "id": "weishi-xun-xi",
+   "source_id": "FO1-S-CY",
+   "fragments": [
+    "能熏識等，從種生時，即能為因，復熏成種，三法展轉因果同時",
+    "如炷生焰、焰生焦炷"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.responds_to_own_level",
+    "Becoming.onLoop_succ_iff",
+    "Becoming.forms_by_closing",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.closes_within"
+   ],
+   "records": [
+    "how-loops-form",
+    "whether-a-loop-closes-a-difference"
+   ],
+   "reading": "AI读法：「從種生時，即能為因，復熏成種」：现行从种子生，又反熏成种，是本簇\"成环\"的佛教同构例。脊柱：环经闭合在某步形成（onLoop_succ_iff、forms_by_closing），一个交换开始回应它自己所给之水平即成单环（responds_to_own_level）；数数现行熏习对应环节加倍时失控（LoopReturn.runs_away）；「損本識中染種勢力」即闭合一个差异需某环节交回少于所受（closing_needs_less），此时有限圈内闭合（closes_within）。剩余：论中「三法展轉因果同時」\"如炷生焰、焰生焦炷\"是同一时刻的互依，脊柱以离散步为建模选择，此处读作逐步之环，不是同一步的互依。种类与声明沿用 RO weishi-xun-xi。",
+   "gap": "",
+   "layer": "论·隋唐（玄奘译糅《成唯识论》卷二，据印度护法等释）",
+   "locator": "卷二·初能变、种子与熏习完整论证；T31n1585；始句：能熏識等，從種生時，即能為因，復熏成種",
+   "names_used": [
+    "成環",
+    "環",
+    "滋"
+   ],
+   "relational": "现行从种子生，即能为因，复熏成种；种、现、熏三法辗转，因果同时。",
+   "ro_passage": "weishi-xun-xi",
+   "tradition": "佛教（唯识）",
+   "work": "《成唯识论》卷二",
+   "record_ids": [
+    "FO1-R-CY24",
+    "FO1-R-CY25"
+   ]
+  },
+  {
+   "id": "qixin-xun-xi",
+   "source_id": "FO2-QX",
+   "fragments": [
+    "以有無明染法因故即熏習真如；以熏習故則有妄心，以有妄心即熏習無明。",
+    "以有妄境界染法緣故，即熏習妄心，令其念著造種種業"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.responds_to_own_level",
+    "Becoming.onLoop_of_closing",
+    "Becoming.forms_by_closing",
+    "Becoming.LoopReturn.runs_away",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.closes_within"
+   ],
+   "records": [
+    "how-loops-form",
+    "whether-a-loop-closes-a-difference"
+   ],
+   "reading": "AI读法：起信论的染法熏习是一个环：无明熏真如而有妄心，妄心又熏无明；妄境界熏妄心，使之念著造业。脊柱：交换回应它所给之水平即成环（responds_to_own_level），环由闭合形成（forms_by_closing、onLoop_of_closing），环节加倍则失控（LoopReturn.runs_away，「念著造種種業」）；起信又说净法熏习能反转，即某环节交回少于所受时差异在有限圈内闭合（closing_needs_less、closes_within）。环的结构相合。相分之层：真如作为被熏之先在本体，是四种非关系层中的〈先在之基〉层，律不采纳；脊柱的环不需要一个不在环上的基。本论题署马鸣造、真谛译，作者与成书有争议。",
+   "gap": "",
+   "layer": "论·魏晋南北朝（《大乘起信论》，传统题署梁真谛译；作者、译者有争议）",
+   "locator": "FO2-QX／0578a22／解释分",
+   "names_used": [
+    "成環",
+    "環",
+    "滋"
+   ],
+   "relational": "无明熏真如而生妄心，妄心复熏无明；妄境界熏妄心而念著造业。",
+   "ro_passage": "",
+   "tradition": "佛教（起信论）",
+   "work": "《大乘起信论》解释分",
+   "record_ids": [
+    "FO2-QX-R024",
+    "FO2-QX-R025",
+    "FO2-QX-R026"
+   ]
+  },
+  {
+   "id": "yuanren-duan-wo-zhi",
+   "source_id": "IN1-S04",
+   "fragments": [
+    "但修無我觀智〔道諦〕；以斷貪等，止息諸業",
+    "於所受身還執為我，還起貪等造業受報"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.LoopReturn.cut_closes",
+    "Becoming.LoopReturn.cut_reopened",
+    "Becoming.Remainder.finite_order_iff_no_loop",
+    "Becoming.finite_order_iff_no_loop_from",
+    "Becoming.SettledFrom"
+   ],
+   "records": [
+    "whether-a-loop-closes-a-difference",
+    "what-a-cut-loses"
+   ],
+   "reading": "AI读法：宗密叙小乘教：受身之后「於所受身還執為我，還起貪等造業受報」，是一个环（两个\"还\"正是本簇之\"还\"）；修无我观智以断贪等，止息诸业，是在环上放一个交回为零的环节。脊柱：返还为零的环节使差异自第一圈起为零，只要其后各环节在无差处不生差（LoopReturn.cut_closes）；否则差异重开（cut_reopened）。日程自某步已分时，有限阶精确恰当自那时起的耦合所成之环不在其上游（finite_order_iff_no_loop_from、SettledFrom；无日程之版本为 Remainder.finite_order_iff_no_loop）：「止息諸業」即自断之步起没有环。定域：宗密判此教\"是知專此教者，亦未原身\"，其后法相教以阿赖耶识种子为身之根本；脊柱的提醒与此相应而不相同：断一环之效恰依赖其后各环，断处之后若仍有环节在无差处自生差异，环会重开（cut_reopened）。宗密的判教次第是其体系之断定，律不采纳。",
+   "gap": "",
+   "layer": "论·隋唐（唐宗密《原人论》，叙小乘教）",
+   "locator": "宗密《原人论》斥偏浅第二·小乘教（脉络位置 pT45p0709b1211）",
+   "names_used": [
+    "還",
+    "環",
+    "已不已分"
+   ],
+   "relational": "受身还执为我、还起贪而造业受报成环；修无我观智以断贪，止息诸业。",
+   "ro_passage": "",
+   "tradition": "佛教（宗密）",
+   "work": "宗密《原人论》",
+   "record_ids": [
+    "IN1-R-Y11",
+    "IN1-R-Y09"
+   ]
+  }
+ ],
+ "parallels": [
+  {
+   "record_id": "ZX-R009",
+   "same_as_entry": "yi-jiji-tongbian-weiqiong",
+   "note": "朱熹注既济\"亨小\"而全卦须警戒：济之终不可止，同一〈未穷而变〉之结构（注层，南宋）。"
+  },
+  {
+   "record_id": "CY130-H19-R01",
+   "same_as_entry": "yi-jiji-tongbian-weiqiong",
+   "note": "程颐于临卦主张方盛时预虑其衰：在穷之前变，同结构。"
+  },
+  {
+   "record_id": "WP-XCX-C04-S07-R02",
+   "same_as_entry": "xici-shan-buji",
+   "note": "小惩而大诫：在阈值以下的小处即回应，使不积到断裂；与\"善不积\"同节相邻，同结构的反面。"
+  },
+  {
+   "record_id": "CY-R005",
+   "same_as_entry": "xici-an-buwang-wei",
+   "note": "程颐乾九三\"日夕不懈而兢惕\"可处危无咎：把未显之危按水平读进来，同结构。"
+  },
+  {
+   "record_id": "CY130-H18-R01",
+   "same_as_entry": "xici-an-buwang-wei",
+   "note": "程颐蛊卦「先甲後甲」：追究已成之弊并预虑后果，读入未兆，同结构。"
+  },
+  {
+   "record_id": "BI1-SM-R-05",
+   "same_as_entry": "xici-an-buwang-wei",
+   "note": "司马法「天下雖安，忘戰必危」：安时不读入危，同\"安而不忘危\"之结构；兵争框架不采纳。"
+  },
+  {
+   "record_id": "CY130-H60-R01",
+   "same_as_entry": "jie-kujie-buke-zhen",
+   "note": "程颐以「節貴適中」解苦节不可贞：节是两界之间的带，同结构（注层）。"
+  },
+  {
+   "record_id": "ZX130-H60-R01",
+   "same_as_entry": "jie-kujie-buke-zhen",
+   "note": "朱熹解节：节制太甚而苦则不可守，同「苦節不可貞」（注层）。"
+  },
+  {
+   "record_id": "RU2-R0140",
+   "same_as_entry": "jie-kujie-buke-zhen",
+   "note": "宋儒不去欲而节求：节是在带内而非取尽或断绝，同节之两界。"
+  },
+  {
+   "record_id": "RU2-R0239",
+   "same_as_entry": "jie-kujie-buke-zhen",
+   "note": "天理是有欲而节、不穷欲：节在两侧之间，同结构。"
+  },
+  {
+   "record_id": "JF-R003",
+   "same_as_entry": "xugua-er-buyi-bi",
+   "note": "乾上九\"亢龙有悔\"：升到尽头而有悔，同\"X 而不已必 Y\"的增长之极；占断层不采纳。"
+  },
+  {
+   "record_id": "JL-R049",
+   "same_as_entry": "xugua-er-buyi-bi",
+   "note": "明夷上六「初登于天，後入于地」：升极而入，同结构；占断层不采纳。"
+  },
+  {
+   "record_id": "JF-R032",
+   "same_as_entry": "tuan-feng-yingxu-xiaoxi",
+   "note": "泰九三\"无平不陂\"：平陂相继，同盈虚消息之往复（构形层之环）。"
+  },
+  {
+   "record_id": "ZX130-H55-R01",
+   "same_as_entry": "tuan-feng-yingxu-xiaoxi",
+   "note": "朱熹解丰：守常不至过盛，同日中则昃之戒（注层）。"
+  },
+  {
+   "record_id": "YCM130-H5-H-05-R01",
+   "same_as_entry": "xici-qiong-ze-bian",
+   "note": "韩康伯「物窮則變，變而通之」：同\"穷则变\"，即到阈值处律变（注层，魏晋）。"
+  },
+  {
+   "record_id": "RU1-LY-01-08-R01",
+   "same_as_entry": "xici-shan-buguo",
+   "note": "「過則勿憚改」：差异须经由回应而闭合，同\"善补过\"。"
+  },
+  {
+   "record_id": "RU1-LY-06-02-R01",
+   "same_as_entry": "xici-shan-buguo",
+   "note": "颜回\"不贰过\"：同一差异不再经环回来，同补过之结构。"
+  },
+  {
+   "record_id": "RU1-LY-07-21-R02",
+   "same_as_entry": "xici-shan-buguo",
+   "note": "以他人之不善为自改之参照：回应读到差异而闭合之，同结构。"
+  },
+  {
+   "record_id": "RU1-LY-09-24-R01",
+   "same_as_entry": "xici-shan-buguo",
+   "note": "法语之言以改之为贵：回应须实际闭合差异，同结构。"
+  },
+  {
+   "record_id": "RU1-LY-15-29-R01",
+   "same_as_entry": "xici-shan-buguo",
+   "note": "「過而不改，是謂過矣」：差异不经回应闭合即保持，同结构（Law.lost_stays 之一侧）。"
+  },
+  {
+   "record_id": "RU1-LY-13-15-R01",
+   "same_as_entry": "xici-shan-buguo",
+   "note": "君言不善而无人违之近于丧邦：无回应读入差异，差异不被闭合，同结构的反面。"
+  },
+  {
+   "record_id": "TP-H19-X3-R02",
+   "same_as_entry": "xici-shan-buguo",
+   "note": "临六三\"既忧之，咎不长\"：读到失当即回应而咎不久，同\"存乎悔\"（小象）。"
+  },
+  {
+   "record_id": "LC2-HS-C02-R02",
+   "same_as_entry": "xici-chuyan-qianli",
+   "note": "河上公「上行下必随也」：在上之行沿耦合到达下方，同\"行发乎迩见乎远\"之所致（注层）。"
+  },
+  {
+   "record_id": "JF-R005",
+   "same_as_entry": "wenyan-bian-zhi-buzao",
+   "note": "坤初六\"履霜，坚冰至\"：渐积而至断裂，文言此句所解之经文，同结构。"
+  },
+  {
+   "record_id": "CY130-H28-R01",
+   "same_as_entry": "cy-xiaoguo-jiaowang-guozheng",
+   "note": "程颐大过注：矫失时稍过以求中，与违背正理有别；同「過所以就正」之定域。"
+  },
+  {
+   "record_id": "LC2-SZ-C55-R02",
+   "same_as_entry": "lao-55-zhi-he-yue-chang",
+   "note": "苏辙以「不以外傷内」定义和：和是受扰而不越其界之态，同结构（注层）。"
+  },
+  {
+   "record_id": "YCM130-H12-K-05-R01",
+   "same_as_entry": "lao-42-chong-qi-wei-he",
+   "note": "孔颖达疏\"化裁\"为自然相裁与圣人拟效裁节：相反作用相裁而成和，同结构；圣人拟效之层不采纳。"
+  },
+  {
+   "record_id": "LC2-SZ-C57-R03",
+   "same_as_entry": "lao-57-fa-ling-zi-zhang",
+   "note": "苏辙：患诈而多法令以胜之，反使民入盗贼：法令与盗贼互相回应之环，同结构（注层）。"
+  },
+  {
+   "record_id": "LC-R010",
+   "same_as_entry": "lao-57-fa-ling-zi-zhang",
+   "note": "王弼「立辟以攻末，本不立而末浅」：以法攻末而本未除，环仍在，同结构（注层）。"
+  },
+  {
+   "record_id": "LE-R070",
+   "same_as_entry": "lao-57-fa-ling-zi-zhang",
+   "note": "第三十七章\"不欲以静，天下将自定\"：无中心施力而自定，同\"民自正\"之层，同一缺口。"
+  },
+  {
+   "record_id": "LC2-SZ-C30-R02",
+   "same_as_entry": "lao-30-qi-shi-hao-huan",
+   "note": "苏辙以勿矜、勿伐、勿骄、不得已实现勿强：不使所施成为会还之差，同\"好还\"之结构（注层）；「必還報之」的必然语气不采纳。"
+  },
+  {
+   "record_id": "LC2-WB-C64-R01",
+   "same_as_entry": "lao-64-wei-zhao",
+   "note": "王弼\"微而不散\"、\"生大\"：在未兆与微时为之，同结构（注层）。"
+  },
+  {
+   "record_id": "CY130-H44-R01",
+   "same_as_entry": "lao-64-wei-zhao",
+   "note": "程颐姤卦：一阴有渐壮之势，故在其尚微时设戒，同\"未兆易谋\"。"
+  },
+  {
+   "record_id": "LC2-SZ-C52-R02",
+   "same_as_entry": "lao-64-wei-zhao",
+   "note": "苏辙：知悦害由小浸大而闭之，谓之明：在未兆时读入，同结构（注层）。"
+  },
+  {
+   "record_id": "JG2-H26-L4-R01",
+   "same_as_entry": "lao-64-wei-zhao",
+   "note": "大畜六四\"童牛之牿\"：在角未成时加牿，为之于未有，同结构；占断\"元吉\"不采纳。"
+  },
+  {
+   "record_id": "RU1-ZY-01-R09",
+   "same_as_entry": "lao-64-wei-zhao",
+   "note": "中庸「莫見乎隱，莫顯乎微」而慎独：未显之微终显，同\"未兆\"之读入；修养层不展开。"
+  },
+  {
+   "record_id": "LC2-HS-C79-R01",
+   "same_as_entry": "lao-79-he-da-yuan",
+   "note": "河上公：任刑而失人情，余怨及于良人：截断之余沿耦合扩散，同\"余\"（注层）。"
+  },
+  {
+   "record_id": "LC2-HS-C09-R02",
+   "same_as_entry": "lao-09-chi-er-ying-zhi",
+   "note": "河上公：功成名遂而不退身避位则遇害：同\"功遂身退\"（注层）。"
+  },
+  {
+   "record_id": "LC2-WB-C09-R01",
+   "same_as_entry": "lao-09-chi-er-ying-zhi",
+   "note": "王弼：持德而又盈之则倾危：同\"持而盈之不如其已\"（注层）。"
+  },
+  {
+   "record_id": "LC2-HS-C23-R01",
+   "same_as_entry": "lao-09-chi-er-ying-zhi",
+   "note": "河上公以飘风骤雨说疾不能长、暴不能久：越界之取不能持续，同结构（注层）。"
+  },
+  {
+   "record_id": "LC2-HS-C50-R02",
+   "same_as_entry": "hs-39-wu-yi-shi",
+   "note": "河上公：求生太厚、违道妄行而趋死地：只向一侧推而无回应，同\"无已时\"（注层）。"
+  },
+  {
+   "record_id": "RU1-LY-17-15-R01",
+   "same_as_entry": "hs-39-wu-yi-shi",
+   "note": "鄙夫既得之患失之，无所不至：所求无止境而一偏，同结构。"
+  },
+  {
+   "record_id": "LE-R048",
+   "same_as_entry": "lao-36-jiang-yu-xi-zhi",
+   "note": "微明四式与\"反\"的结构比较：同第三十六章一方操纵另一方的谋划之层，同相分。"
+  },
+  {
+   "record_id": "LC2-WB-C36-R01",
+   "same_as_entry": "lao-36-jiang-yu-xi-zhi",
+   "note": "王弼\"因物之性，令其自戮，不假刑\"、利器不可睹：减弱诈术色彩而仍是一方使另一方自毁，同相分（注层）。"
+  },
+  {
+   "record_id": "ZH1-C33-R-12",
+   "same_as_entry": "lao-76-rou-ruo-sheng-zhi-tu",
+   "note": "庄子天下引老聃「堅則毀矣，銳則挫矣」：容忍为零者一处扣留即全失，同结构。"
+  },
+  {
+   "record_id": "LC2-SZ-C43-R01",
+   "same_as_entry": "lao-76-rou-ruo-sheng-zhi-tu",
+   "note": "苏辙：以坚御坚则折碎，以柔御坚则柔不靡而坚不病：容忍吸收局部之失，同结构（注层）。"
+  },
+  {
+   "record_id": "LC-R020",
+   "same_as_entry": "lao-76-rou-ruo-sheng-zhi-tu",
+   "note": "河上公：道常用柔弱而常久：容忍使给予延续，同结构（注层）。"
+  },
+  {
+   "record_id": "LC2-HS-C43-R01",
+   "same_as_entry": "lao-36-78-rou-sheng-gang",
+   "note": "河上公以水释至柔、贯坚入刚：至柔驰骋至坚，同\"柔胜刚\"，争胜层同其相分（注层）。"
+  },
+  {
+   "record_id": "LC2-WB-C43-R01",
+   "same_as_entry": "lao-36-78-rou-sheng-gang",
+   "note": "王弼：虚无柔弱通达而至柔不可折：容忍吸收之一面，同结构（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C67-R01",
+   "same_as_entry": "lao-36-78-rou-sheng-gang",
+   "note": "苏辙：慈忍而非勇决，终成勇：同\"柔胜刚\"之跨律比较，同一缺口（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C36-R02",
+   "same_as_entry": "lao-36-78-rou-sheng-gang",
+   "note": "苏辙：柔弱待强者自弊，限于知势居自然而非意在胜物：苏辙自己已把争胜层去掉，同本条之定域（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C45-R02",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "苏辙「皆滯于一偏而非其正也」：本簇\"一偏\"之名所出，同结构（注层）。"
+  },
+  {
+   "record_id": "ZH1-C19-R-05",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "庄子达生：单豹养内而虎食其外，张毅养外而病攻其内，「皆不鞭其後」：各偏一侧，同\"一偏\"。"
+  },
+  {
+   "record_id": "FO2-XZG-R003",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "天台小止观「若偏修習，即墮邪倒」：只修一侧不成，同\"一偏\"。"
+  },
+  {
+   "record_id": "FO2-QX-R035",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "起信论：唯修止则沉没、失悲，故须修观：一侧之失，同\"一偏\"。"
+  },
+  {
+   "record_id": "BI1-WZ-R-01",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "吴子「必內修文德，外治武備」以应两种偏失：两侧兼用，同结构；兵争框架不采纳。"
+  },
+  {
+   "record_id": "BI1-WZ-R-16",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "吴子：勇不足以免轻合之患：只一侧之德不成，同\"一偏\"。"
+  },
+  {
+   "record_id": "BI1-SZ-R-401",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "孙子五危「必死，可殺」：一侧之极即为人所乘，同\"一偏\"。"
+  },
+  {
+   "record_id": "BI1-SZ-R-402",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "孙子五危「必生，可虜」：同\"一偏\"。"
+  },
+  {
+   "record_id": "BI1-SZ-R-403",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "孙子五危\"忿速，可侮\"：同\"一偏\"。"
+  },
+  {
+   "record_id": "BI1-SZ-R-404",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "孙子五危「廉潔，可辱」：同\"一偏\"。"
+  },
+  {
+   "record_id": "BI1-SZ-R-405",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "孙子五危「愛民，可煩」：同\"一偏\"。"
+  },
+  {
+   "record_id": "BI1-SZ-R-45",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "孙子「令之以文，齊之以武」：两侧兼用而成齐，同两侧调节；兵争框架不采纳。"
+  },
+  {
+   "record_id": "YCM130-Q-Z-Q07-R01",
+   "same_as_entry": "lao-45-zao-sheng-han",
+   "note": "王弼分别限制刚健为首与柔顺不正之误用：两侧各有其失，同\"一偏\"（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C60-R01",
+   "same_as_entry": "lao-60-peng-xiao-xian",
+   "note": "苏辙：烹鲜挠则鱼烂，治国烦则人劳：作用之次数致害，同\"频数\"（注层）。"
+  },
+  {
+   "record_id": "LC2-HS-C60-R01",
+   "same_as_entry": "lao-60-peng-xiao-xian",
+   "note": "河上公：治国烦扰则下乱：同\"频数\"（注层）。"
+  },
+  {
+   "record_id": "LC2-WB-C60-R01",
+   "same_as_entry": "lao-60-peng-xiao-xian",
+   "note": "王弼：国弥大而主弥静，不扰而广得众心：稀少之作用不失控，同结构（注层）。"
+  },
+  {
+   "record_id": "LC2-HS-C80-R02",
+   "same_as_entry": "lao-60-peng-xiao-xian",
+   "note": "河上公：政令不烦，民安业而不远徙：同\"频数\"之稀少一侧（注层）。"
+  },
+  {
+   "record_id": "LC2-WB-C72-R01",
+   "same_as_entry": "lao-72-min-bu-wei-wei",
+   "note": "王弼：任威权、扰民失控而上下溃：调节之环因强度降为零而断，同结构与同一缺口（注层）。"
+  },
+  {
+   "record_id": "LC2-HS-C74-R01",
+   "same_as_entry": "lao-72-min-bu-wei-wei",
+   "note": "河上公：刑罚酷深使民不聊生而不畏死：强度经由过用而失，同一缺口（注层）。"
+  },
+  {
+   "record_id": "LC2-HS-C29-R02",
+   "same_as_entry": "lao-29-qu-shen-qu-tai",
+   "note": "河上公\"去此三者，处中和，行无为，则天下自化\"：把去甚补成中和，同结构（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C29-R03",
+   "same_as_entry": "lao-29-qu-shen-qu-tai",
+   "note": "苏辙：去甚去奢去泰旨在不过而伤物：同\"中节\"（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C29-R04",
+   "same_as_entry": "lao-29-qu-shen-qu-tai",
+   "note": "苏辙引泰卦裁成辅相说去甚去奢去泰：裁其过、辅其不及，同两侧之结构（注层）。"
+  },
+  {
+   "record_id": "LC2-HS-C17-R02",
+   "same_as_entry": "lao-17-xin-bu-zu",
+   "note": "河上公：君信不足，在下者以不信回应：同\"还\"（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C17-R01",
+   "same_as_entry": "lao-17-xin-bu-zu",
+   "note": "苏辙：不自信而加仁义刑政，使民始不信：同\"还\"（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C26-R01",
+   "same_as_entry": "wb-26-bu-dong-zhi-dong",
+   "note": "苏辙以承载与制动解\"重为轻根，静为躁君\"：同一不动之制者，同相分（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C10-R03",
+   "same_as_entry": "wb-26-bu-dong-zhi-dong",
+   "note": "苏辙：神治使气不妄作、喜怒以类：以一不动之中心治气，同相分（注层）。"
+  },
+  {
+   "record_id": "LC2-WB-C18-R01",
+   "same_as_entry": "wb-65-jian-wei-yi-zi",
+   "note": "王弼：以术明察奸伪而物避察，大伪生：察与避互相回应而滋，同结构（注层）。"
+  },
+  {
+   "record_id": "LC2-WB-C49-R01",
+   "same_as_entry": "wb-65-jian-wei-yi-zi",
+   "note": "王弼：以不信察物，物以不信相应：同一正回馈之环（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C65-R01",
+   "same_as_entry": "wb-65-jian-wei-yi-zi",
+   "note": "苏辙：以智御人，人亦以智应，上下相贼：同结构（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C75-R01",
+   "same_as_entry": "wb-65-jian-wei-yi-zi",
+   "note": "苏辙：上以有为导民，民以有为回应，事多难治：同结构（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C75-R02",
+   "same_as_entry": "wb-65-jian-wei-yi-zi",
+   "note": "苏辙：上以利欲先民，民争厚生、冒死求利：同结构（注层）。"
+  },
+  {
+   "record_id": "LL-R044",
+   "same_as_entry": "wb-65-jian-wei-yi-zi",
+   "note": "第七十五章\"民之难治，以其上之有为\"：上之有为引起民之有为，同结构（经）。"
+  },
+  {
+   "record_id": "LC2-HS-C18-R02",
+   "same_as_entry": "wb-65-jian-wei-yi-zi",
+   "note": "河上公：君贵言文贱德质，下以大伪奸诈回应：同结构（注层）。"
+  },
+  {
+   "record_id": "RU2-R0266",
+   "same_as_entry": "wb-65-jian-wei-yi-zi",
+   "note": "荀子类：君上诈下诱发相诈而离析：同一正回馈之环。"
+  },
+  {
+   "record_id": "MO1-C28-R006",
+   "same_as_entry": "wb-65-jian-wei-yi-zi",
+   "note": "墨子：攻者自誉战绩，邻君贺之更强化其不知不义：自誉与贺互相回应而滋，同结构。"
+  },
+  {
+   "record_id": "IN1-R-B04",
+   "same_as_entry": "wb-65-jian-wei-yi-zi",
+   "note": "仿效若不禁遏可能升级而伤身弃业：仿效经由环而增，同\"滋\"。"
+  },
+  {
+   "record_id": "CY130-H40-R01",
+   "same_as_entry": "sz-79-bu-chu-qi-ben",
+   "note": "程颐解卦：当解而未尽者不早去则将复盛：截断之余经不已之环复盛，同\"余\"。"
+  },
+  {
+   "record_id": "LAO2-C12-R01",
+   "same_as_entry": "jielao-shi-qiang-mu-buming",
+   "note": "第十二章\"五色令人目盲\"：过用而失其读入，同结构与同一缺口（经）。"
+  },
+  {
+   "record_id": "LAO2-C12-R02",
+   "same_as_entry": "jielao-shi-qiang-mu-buming",
+   "note": "\"五音令人耳聋\"：同上。"
+  },
+  {
+   "record_id": "LAO2-C12-R03",
+   "same_as_entry": "jielao-shi-qiang-mu-buming",
+   "note": "\"五味令人口爽\"：同上。"
+  },
+  {
+   "record_id": "LAO2-C12-R04",
+   "same_as_entry": "jielao-shi-qiang-mu-buming",
+   "note": "\"驰骋畋猎令人心发狂\"：同上；此条更近失控之环，仍以读入失其强度为主。"
+  },
+  {
+   "record_id": "IN2-R0017",
+   "same_as_entry": "jielao-you-yu-ji-hui-luan",
+   "note": "强求宁静反令念起：求静之作用回应念之水平而增之，同自激之环。"
+  },
+  {
+   "record_id": "LC2-HS-C58-R01",
+   "same_as_entry": "jielao-huo-fu",
+   "note": "河上公：遭祸而悔过修善则祸去福来：同解老祸→福之链（注层）。"
+  },
+  {
+   "record_id": "LC2-HS-C58-R02",
+   "same_as_entry": "jielao-huo-fu",
+   "note": "河上公：得福而骄恣则福去祸来：同解老福→祸之链（注层）。"
+  },
+  {
+   "record_id": "LC2-HS-C76-R01",
+   "same_as_entry": "xunzi-wangzhi-qiang-fan-ruo",
+   "note": "河上公：强兵轻战乐杀结怨，众弱合强而不胜：伤人者经怨之环反受其弱，同结构（注层）。"
+  },
+  {
+   "record_id": "MO1-C18-R004",
+   "same_as_entry": "xunzi-wangzhi-qiang-fan-ruo",
+   "note": "墨子非攻中以吴之强而终亡驳自恃用众：同\"强反弱\"之环。"
+  },
+  {
+   "record_id": "MO1-C18-R005",
+   "same_as_entry": "xunzi-wangzhi-qiang-fan-ruo",
+   "note": "墨子以智伯扩张反使受威胁者合力：同结构。"
+  },
+  {
+   "record_id": "LAO2-C72-R02",
+   "same_as_entry": "mengzi-chu-er-fan-er",
+   "note": "第七十二章\"夫唯不厌，是以不厌\"：不厌回到不厌，同\"出乎尔者反乎尔\"之环返（经；谁不厌、不厌于谁，留待解释）。"
+  },
+  {
+   "record_id": "RU1-DX-27-R02",
+   "same_as_entry": "mengzi-chu-er-fan-er",
+   "note": "大学「拂人之性，菑必逮夫身」：所施回到施者，同\"还\"。"
+  },
+  {
+   "record_id": "RU2-R0063",
+   "same_as_entry": "mengzi-chu-er-fan-er",
+   "note": "好善则人愿来告善：所施之好经他人回到施者，同\"还\"之正面。"
+  },
+  {
+   "record_id": "LC2-SZ-C67-R04",
+   "same_as_entry": "mengzi-chu-er-fan-er",
+   "note": "苏辙：以慈卫物，物爱如父母而愿效死：同\"还\"之正面（注层）。"
+  },
+  {
+   "record_id": "RU1-ZY-04-R01",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "中庸「知者過之，愚者不及」：两侧皆不中，同\"过犹不及\"。"
+  },
+  {
+   "record_id": "RU1-ZY-04-R02",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "中庸「賢者過之，不肖者不及」：同上。"
+  },
+  {
+   "record_id": "CY-R012",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "程颐损卦：损过与不及而就中：同两侧之结构（注层）。"
+  },
+  {
+   "record_id": "RU2-R0226",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "理是己人之情不偏过、不偏不及：同\"过犹不及\"（宋明层）。"
+  },
+  {
+   "record_id": "IN2-R0024",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "动静得中而守常：两侧相反而定于中，同结构。"
+  },
+  {
+   "record_id": "IN2-R0032",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "道伴感情保持中节：同\"中节\"。"
+  },
+  {
+   "record_id": "BI1-SM-R-04",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "司马法「國雖大，好戰必亡」：过之一侧；与「忘戰必危」（BI1-SM-R-05）合为两侧之失。"
+  },
+  {
+   "record_id": "BI1-SM-R-10",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "司马法「多威則民詘」：威过之一侧，同\"过犹不及\"。"
+  },
+  {
+   "record_id": "BI1-SM-R-10b",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "司马法「少威則民不勝」：威不及之一侧，同上。"
+  },
+  {
+   "record_id": "BI1-SZ-R-44",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "孙子：亲附而罚不行则不可用：只一侧（亲）而无另一侧（罚），同\"一偏\"与\"不及\"。"
+  },
+  {
+   "record_id": "RU1-LY-06-16-R01",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "「質勝文則野」：一侧过，同结构。"
+  },
+  {
+   "record_id": "RU1-LY-06-16-R02",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "「文勝質則史」：另一侧过，同结构。"
+  },
+  {
+   "record_id": "RU1-LY-06-16-R03",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "「文質彬彬，然後君子」：两侧相当而中，同\"中节\"。"
+  },
+  {
+   "record_id": "RU1-LY-06-01-R02",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "居简而行简，无乃太简：简之过，同\"过\"之一侧。"
+  },
+  {
+   "record_id": "RU1-LY-08-10-R02",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "疾不仁者已甚则乱：相反之回应越界，同\"过正\"。"
+  },
+  {
+   "record_id": "CY130-H43-R01",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "程颐夬卦：决去一阴虽力有余，仍反对极刚太过：相反而不可越界，同结构（注层）。"
+  },
+  {
+   "record_id": "RU1-LY-20-02-R06",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "\"威而不猛\"：有威而不越其界，同\"中节\"。"
+  },
+  {
+   "record_id": "ZH1-C04-R-10",
+   "same_as_entry": "lunyu-guo-you-bu-ji",
+   "note": "庄子人间世：形就而不入，心和而不出：两侧各有其限，同两侧之界。"
+  },
+  {
+   "record_id": "FO2-XZG-R005",
+   "same_as_entry": "lunyu-jin-zhi-tui-zhi",
+   "note": "小止观：心沉时用观照：在下则举，同\"进之\"。"
+  },
+  {
+   "record_id": "FO2-XZG-R006",
+   "same_as_entry": "lunyu-jin-zhi-tui-zhi",
+   "note": "小止观：心浮时用止：在上则抑，同\"退之\"。"
+  },
+  {
+   "record_id": "RU2-R0248",
+   "same_as_entry": "lunyu-jin-zhi-tui-zhi",
+   "note": "刚强血气用调和柔之：在上则柔之，同两侧调节之一侧。"
+  },
+  {
+   "record_id": "LC2-SZ-C15-R01",
+   "same_as_entry": "lunyu-jin-zhi-tui-zhi",
+   "note": "苏辙：浊乱之性宜静而徐自清：在上之扰以静抑之，同结构（注层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C15-R02",
+   "same_as_entry": "lunyu-jin-zhi-tui-zhi",
+   "note": "苏辙：定而灭性宜动而徐自生：在下之定以动举之，同结构（注层）。"
+  },
+  {
+   "record_id": "BI1-SM-R-18",
+   "same_as_entry": "lunyu-jin-zhi-tui-zhi",
+   "note": "司马法：恐惧过甚则限制继续刑杀：读到越界即反向，同两侧调节；兵争框架不采纳。"
+  },
+  {
+   "record_id": "RU1-LY-08-02-R01",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「恭而無禮則勞」：一种相反之德缺其界（礼）而越过，同「知和而和，不以禮節之」。"
+  },
+  {
+   "record_id": "RU1-LY-08-02-R02",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「愼而無禮則葸」：同上。"
+  },
+  {
+   "record_id": "RU1-LY-08-02-R03",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「勇而無禮則亂」：同上。"
+  },
+  {
+   "record_id": "RU1-LY-08-02-R04",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「直而無禮則絞」：同上。"
+  },
+  {
+   "record_id": "RU1-LY-17-08-R01",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「好仁不好學，其蔽也愚」：德缺其界而越过，同结构（六言六蔽）；\"学\"作为界的读法为 AI 读法，较弱。"
+  },
+  {
+   "record_id": "RU1-LY-17-08-R02",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「好知不好學，其蔽也蕩」：同上。"
+  },
+  {
+   "record_id": "RU1-LY-17-08-R03",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「好信不好學，其蔽也賊」：同上。"
+  },
+  {
+   "record_id": "RU1-LY-17-08-R04",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「好直不好學，其蔽也絞」：同上。"
+  },
+  {
+   "record_id": "RU1-LY-17-08-R05",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「好勇不好學，其蔽也亂」：同上。"
+  },
+  {
+   "record_id": "RU1-LY-17-08-R06",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「好剛不好學，其蔽也狂」：同上。"
+  },
+  {
+   "record_id": "RU1-LY-17-23-R01",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「君子有勇而無義為亂」：勇缺其界，同结构。"
+  },
+  {
+   "record_id": "RU1-LY-17-23-R02",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "「小人有勇而無義為盜」：同上。"
+  },
+  {
+   "record_id": "YCM130-H4-H-04-R01",
+   "same_as_entry": "lunyu-zhi-he-bu-jie",
+   "note": "韩康伯注\"旁行而不流\"：兼有应变与不流淫两面，即相反之回应而不越界，同结构（注层）。"
+  },
+  {
+   "record_id": "RU2-R0153",
+   "same_as_entry": "zhongyong-zhi-zhong-he",
+   "note": "周敦颐\"中也者，和也，中节也\"：同\"中和\"\"中节\"（宋明层）。"
+  },
+  {
+   "record_id": "RU2-R0154",
+   "same_as_entry": "zhongyong-zhi-zhong-he",
+   "note": "周敦颐：立教使人自易其恶而至其中：两侧调节趋于中，同结构（宋明层）。"
+  },
+  {
+   "record_id": "RU1-ZY-02-R02",
+   "same_as_entry": "zhongyong-zhi-zhong-he",
+   "note": "中庸「小人之中庸也，小人而無忌憚」：无界之回应，同不中节之失。"
+  },
+  {
+   "record_id": "CY-R017",
+   "same_as_entry": "mengzi-wu-wang-wu-zhu-zhang",
+   "note": "程颐：小贞是渐正而非恬然不为：既不舍又不揠，同\"勿忘勿助长\"（注层）。"
+  },
+  {
+   "record_id": "TP-H32-X1-R01",
+   "same_as_entry": "mengzi-wu-wang-wu-zhu-zhang",
+   "note": "恒初六\"浚恒之凶，始求深也\"：开始即求深是越界，同\"助长\"之失（小象）。"
+  },
+  {
+   "record_id": "ZH1-C04-R-09",
+   "same_as_entry": "mengzi-wu-wang-wu-zhu-zhang",
+   "note": "庄子人间世「遷令、勸成，殆事」：强促其成而越界，同\"助长\"。"
+  },
+  {
+   "record_id": "IN1-R-S03",
+   "same_as_entry": "mengzi-wu-wang-wu-zhu-zhang",
+   "note": "孙绰：时世限制使圣人暂存刑杀：不可越时强求，同结构（魏晋层）。"
+  },
+  {
+   "record_id": "LC2-SZ-C29-R02",
+   "same_as_entry": "mengzi-wu-wang-wu-zhu-zhang",
+   "note": "苏辙：不待其自归、不听其自治则招致叛乱：强促越界，同\"助长\"（注层）。"
+  },
+  {
+   "record_id": "LE-R039",
+   "same_as_entry": "mengzi-wu-wang-wu-zhu-zhang",
+   "note": "第二十九章\"天下神器，不可为也\"与无为互读：不可强为，同\"勿助长\"（经）。"
+  },
+  {
+   "record_id": "IN2-R0036",
+   "same_as_entry": "zhuangzi-lunbian-bu-xu-bu-ji",
+   "note": "调琴中节以喻炼性：弦紧则断、缓则不响，两侧之界，同\"不徐不疾\"。"
+  },
+  {
+   "record_id": "ZH1-C05-R-08",
+   "same_as_entry": "zhuangzi-cai-quan",
+   "note": "庄子德充符「德者，成和之脩也」：同\"不足以滑和\"之中和。"
+  },
+  {
+   "record_id": "ZH1-C13-R-01",
+   "same_as_entry": "zhuangzi-cai-quan",
+   "note": "庄子天道：圣人之静由万物不足以挠心：在扰动之下保持其带，同结构。"
+  },
+  {
+   "record_id": "RU2-R0184",
+   "same_as_entry": "zhuangzi-cai-quan",
+   "note": "定不等于静止或隔绝外物：在扰动中保持之定，同结构（宋明层）。"
+  },
+  {
+   "record_id": "RU2-R0221",
+   "same_as_entry": "zhuangzi-cai-quan",
+   "note": "事上磨炼才能动静皆定：在持续扰动之下保持之带，同结构（明层）。"
+  },
+  {
+   "record_id": "BI1-SZ-R-37",
+   "same_as_entry": "zhuangzi-cai-quan",
+   "note": "孙子「以治待亂，以靜待嘩」：在扰动之下保持其治，同结构；兵争框架不采纳。"
+  },
+  {
+   "record_id": "CY130-H51-R01",
+   "same_as_entry": "zhuangzi-cai-quan",
+   "note": "程颐震卦：处大震惧而不失守（不丧匕鬯）：扰动之下保持，同结构（注层）。"
+  },
+  {
+   "record_id": "FA1-H50-R011",
+   "same_as_entry": "sunzi-you-yi-dai-zhi",
+   "note": "韩非子显学：自善者少而所治人众，故不恃偶善：不恃起点之好，同\"有以待之\"。"
+  },
+  {
+   "record_id": "MO1-C50-R007",
+   "same_as_entry": "sunzi-you-yi-dai-zhi",
+   "note": "墨子公输：攻械尽而守有余，杀墨子亦不能绝宋之守：自最坏起点仍成立，同结构。"
+  },
+  {
+   "record_id": "IN2-R0096",
+   "same_as_entry": "weishi-xun-xi",
+   "note": "现行熏种：同「復熏成種」。"
+  },
+  {
+   "record_id": "IN2-R0097",
+   "same_as_entry": "weishi-xun-xi",
+   "note": "染种妨碍正心：熏成之种反过来作用，同环之一节。"
+  },
+  {
+   "record_id": "IN2-R0098",
+   "same_as_entry": "weishi-xun-xi",
+   "note": "种子生现行：同环之另一节。"
+  },
+  {
+   "record_id": "RU2-R0182",
+   "same_as_entry": "weishi-xun-xi",
+   "note": "张载「因明致诚，因诚致明」：二者相互生成成环，同\"成环\"之结构（宋明层）。"
+  }
+ ],
+ "rejected": [
+  {
+   "record_id": "HX-R039",
+   "why": "\"中正以通\"是爻位（二五得中得正）之评价，没有回路、回馈、阈值或调节的动态；\"中\"在此是位置，不是调节所趋之 m。"
+  },
+  {
+   "record_id": "TP-H10-X2-R01",
+   "why": "履九二\"中不自乱\"以爻位之中说贞吉，是位置评价，无两侧相反之回应。"
+  },
+  {
+   "record_id": "TP-H13-X4-R02",
+   "why": "同人九四\"困而反则\"：反＝回到法则，是爻辞的吉凶解释，不是作用经环回到作用者；与本簇\"还\"只是字同。"
+  },
+  {
+   "record_id": "TP-H19-X5-R01",
+   "why": "临六五\"行中之谓\"：以爻位之中释大君之宜，位置评价，无调节动态。"
+  },
+  {
+   "record_id": "TP-H24-X5-R01",
+   "why": "复六五\"中以自考\"：以中位自省，是修养评价，没有可映射的环或界。"
+  },
+  {
+   "record_id": "TP-H26-T-R04",
+   "why": "大畜彖\"能止健，大正也\"：止健是一次节制，\"大正\"是评价词，未给出两侧之界或回应。"
+  },
+  {
+   "record_id": "TP-H28-T-R03",
+   "why": "大过彖「剛過而中，巽而說行」：以卦象爻位（二五得中、内巽外说）释利往，\"过\"是阳爻数多，不是越界之动态。"
+  },
+  {
+   "record_id": "TP-H29-X4-R01",
+   "why": "坎六四小象「樽酒簋貳，剛柔济也」：冻结本 YD-JP29 作\"济\"，程颐本作「象曰樽酒簋貳剛柔際也」，释为「剛柔相際接之道」，即六四之柔与九五之刚相接，是爻位相接之义；\"济\"或是转录之字异。无论作何字，都不是按读数交替施用相反作用，与本簇〈宽猛相济〉只是字同（已在名之 alternatives 中说明）。"
+  },
+  {
+   "record_id": "TP-H37-X6-R01",
+   "why": "家人上九\"反身之谓\"：反身＝反求诸己的修养，不是作用经环回来；与\"还\"只是字近。"
+  },
+  {
+   "record_id": "ZX130-H28-R01",
+   "why": "朱熹解大过以「四陽雖𬨨而二五得中」说利往：爻位层，\"过\"是阳多，不是越界的调节动态。"
+  },
+  {
+   "record_id": "ZX130-H34-R01",
+   "why": "朱熹解大壮\"利在正固\"：占断与守正之评价，无回路或界。"
+  },
+  {
+   "record_id": "JG2-H25-L5-R01",
+   "why": "无妄九五「无妄之疾，勿藥有喜」：占断；若读作〈不扰而自复〉可近\"频数\"，但经文只给结论，没有作用次数与回应的关系，不强行对应。"
+  },
+  {
+   "record_id": "JG2-H34-L3-R02",
+   "why": "大壮九三「羝羊觸藩，羸其角」：一个被困的意象，没有经由他者回来的环，也没有阈值之律；不强读为\"还\"。"
+  },
+  {
+   "record_id": "YCM130-Q-Z-Q19a-R01",
+   "why": "王弼以「全用剛直，放遠善柔」释天下治：是人事取舍（用谁、远谁），不是两侧调节；其一侧之取反而是\"一偏\"之形，但经文以之为治，不构成本簇之结构。"
+  },
+  {
+   "record_id": "YCM130-Q-Z-Q08c-R01",
+   "why": "王弼「靜專動直，不失大和」释正性命：属性命之层（固定之性），\"大和\"不是可映射的调节之态。"
+  },
+  {
+   "record_id": "WP-XCS-C04-S05-R02",
+   "why": "系辞\"知周乎万物，而道济天下，故不过\"：此\"不过\"是不犯错，不是不越界；字同而义不同。"
+  },
+  {
+   "record_id": "LAO2-C12-R05",
+   "why": "\"难得之货令人行妨\"：所贵之物妨碍行为，不是过用而失其读入（与同章五色、五音诸条不同），无本簇之结构。"
+  },
+  {
+   "record_id": "LAO2-C50-R06",
+   "why": "\"以其无死地\"：不受伤害的断言，脊柱没有〈不在任何耦合之内〉的律，也无回路或调节可映。"
+  },
+  {
+   "record_id": "LC2-SZ-C69-R02",
+   "why": "苏辙「輕敵則輕戰輕戰則輕殺人喪其所以為慈矣」：一条后果之链，没有回到起点之环，也没有阈值或界。"
+  },
+  {
+   "record_id": "MO1-C09-R007",
+   "why": "墨子尚贤中：由不肖在侧推至毁誉、赏罚不当，是一条后果之链，不是环；不强读为回馈。"
+  },
+  {
+   "record_id": "FO1-R-M26-02",
+   "why": "中论十二因缘之一支「以有識著故，增長於名色」：单一缘起支的增长，整个十二支之流转属缘起一簇；单支没有给出环或阈值。"
+  },
+  {
+   "record_id": "FO2-YJ-R005",
+   "why": "净土「非持名妙行不足以滿其所願而證所信」：信愿与行的宗教断言，无可映射的回路、界或阈值。"
+  }
+ ],
+ "notes": "AI读法（全部为 AI 之判断，供整合者复核）。\n\n一、总判断\n本簇在所查文本中大体是一元、关系、动态的，而且比多数簇更直接：环、回馈、阈值与调节在先秦文本里多以过程之律出现（作用经他者回到作用者；积而至于断裂；两侧相反而守一带），不以独立实体或固定属性出现。\n统计：62 条，相合 25、定域 34、相分 3；51 条的层次含先秦（其中易传、中庸、庄子外篇、司马法等标为先秦至秦汉或年代有争议，逐条注明）。265 个主候选各落一处：82 个作为条目之记录，161 个并行，22 个驳回；条目另带 11 个非主候选的同段记录。26 条沿用 RO 段落，种类全同；声明有增删的 7 条（daxiang-jiji-yufang、lao-55、lao-37、lao-64、lao-79、zhoudunyi、chengyi）各在读法中写明理由。\n相合最确切处：《墨子·兼爱下》先施与环之恢复（Withholding.Ring.givesFirst_restores、Tolerance.restores_iff）；《孙子·九变》〈有以待之〉与最坏起点（Tolerance.worst_start）；《司马法》赏罚不逾时与迟读之带（Regulation.late_band、no_narrower_band、lateReturn_band）；《论语》过犹不及、《中庸》中节与两侧调节（Flow.WithinGap、Flow.regulates、Flow.settles）；《韩非子·孤愤》经由被读者之读的锁定（RuleCapture.favouring_locks）；程颐「感則必有應，所應復為感，感復有應，所以不已也」与不已之耦合（CouplingRecurs）。\n定域多，是因为一个反复出现的形式：经传以全称说〈盈则亏〉〈穷则变〉〈损而不已必益〉，脊柱给出它们成立的确切范围。反转只在有回程之律、在环上、在断裂处形成环的律中成立；同样的结构下环也可以失控（LoopReturn.runs_away、Closing.Threshold.level_after），断裂之前律可以完全不读存量（ExchangeLaw.ReadsBelow.standing_unread、Web.break_not_bounded）。所以本簇不采后起〈物极必反〉的必然反转：反转是一类律的定理，不是一切变化之律。\n\n二、相分（由强到弱）\n1. 〈意志或单一中心〉层，最强也最多。\n- 王弼第二十六章「不动者制动」：不被所调节者所动者，不在经过那一水平的环上（ExchangeLaw.insensitiveAt_iff_strength_zero、not_onLoop_unread），不能以调节制动，只能开环地推；调节者必回应它所给予之条件的水平（responds_to_own_level）。\n- 第三十六章「将欲歙之，必固张之」与「国之利器不可以示人」：一方读对方而不被对方所读，隐藏耦合即把他者置于合用闭包之外（Flow.unselected_beyond_pool）。沿用 RO 之相分。\n- 第三十七章「化而欲作，吾将镇之以无名之朴」：只对上升一侧相反，是〈一偏〉（Regulation.OneSided.above、not_opposes），且有镇者为中心。郭店本此句无\"吾\"，帛书乙有，所以中心层随版本显隐，一偏之结构各本皆同。\n- 《司马法》赏罚与〈宽猛〉在原文是治者之器，民是被调节之量而不是读者。律只承迟读、带宽与继电之结构。\n2. 〈争胜与等级〉层。\n- 第七十八章以\"胜\"为结局。苏辙读第三十六章为「吾以不校坐待其弊此所謂勝也」，随即又说「聖人豈有意為此以勝物哉」，自己去掉了一半。所承的只是：容忍吸收局部扣留而给予延续（Tolerance.Triad.absorbed、thin_absorbed），容忍不恢复全面扣留（Triad.total_kept）。这不是胜过他者。\n- 韩非〈人主〉〈大臣〉之框架同属此层，所承只是锁定之结构。\n3. 〈先在之基〉层。\n- 《大乘起信论》「以有無明染法因故即熏習真如」所说之环与脊柱相合（responds_to_own_level、forms_by_closing），但被熏之真如作为环外先在之本体，不采纳；脊柱的环不需要一个不在环上的基。\n- 王弼〈静为躁君〉若把\"静\"读作调节所趋之 m，也触及此层：m 是律的参数，它不作用。\n4. 推理形式之分。大象「水在火上，既濟；君子以思患而豫防之」以〈取象而法之〉立论，是类比不是导出（Learning.goAlike_iff_lumped 所需之归并未给出），沿用 RO 之相分。所承的\"豫防\"结构则可读（Web.break_not_bounded、Web.observed_raise_couples）。\n〈固定之性或价值〉层在本簇只见于驳回的王弼〈性命〉一条（YCM130-Q-Z-Q08c-R01）。\n\n三、缺口（按需要它的记录数与对理论的分量排序；未经 Lean 的手算都已标明）\n1. 耦合强度随所传之量而降（饱和、习惯化）。10 个记录需要它：lao-72-min-bu-wei-wei（1 个记录）、jielao-shi-qiang-mu-buming（3 个），老子第十二章四条并行，王弼第七十二章、河上公第七十四章两条并行。\n- 所缺之律：形成 h 对条件 d 之水平的强度 k_t = f(A_t)，A_t 为此前经该耦合所传之量的总和，f 非增。\n- f 在 A₀ 以上为零时：自 A_t ≥ A₀ 之步起该耦合不再读入 d，经它之环自那一步起不再返回。\n- f 不归零时：强度终为正常数，环照旧倍增。\n- 最近：ExchangeLaw.insensitiveAt_iff_strength_zero、ExchangeLaw.RespondsWithin、not_onLoop_unread（它要求每一步都不读入，缺〈自某步起〉的形式）、carried_doubles_around。\n2. 无中心之自定（lao-57-fa-ling-zi-zhang 及并行 LE-R070，共 2 个记录）。\n- 所缺之律：对各自只读邻近条件之水平、无一读整体水平的局部之律，给出其联合交换满足 Flow.Opposes 与 Flow.WithinGap 的充分条件，从而整体定于 m（Flow.regulates、Flow.settles）。\n- 排第二，因为它正对着最强的相分：有了它，〈自正〉可以不经中心而说出，中心层的段落才有关系式的对照。\n3. 容忍的跨律单调。这是 RO 记为未决的〈柔弱者生之徒〉之一般形式（lao-36-78-rou-sheng-gang 的 2 个记录及苏辙第六十七章并行）。\n- 所缺之律：tol ≤ tol' 逐点时，同一等待结构、同一起点下，每一步前者给予处后者也给予。\n- AI 手算它是 tolerating_keeps 与 AllBut.mono_count 对步数归纳的短推论，未经 Lean。\n4. 过阈之继电的摆幅之界（名〈寬猛相濟〉所需；〈宽猛相济〉的出处在脉络之外）。\n- 所缺之律：设 RelaysLate W c ℓ a b M，每步平衡，0 < a ≤ b，(ℓ+1)M ≤ b+1，b+2 ≤ a+(ℓ+1)M，水平在前 ℓ+1 步保持于 a−1。则每一步 b+1−(ℓ+1)M ≤ 水平 ≤ a−1+(ℓ+1)M。\n- 脊柱有越界无休止（Regulation.crossing_oscillates、held_oscillates）与越入后再走 ℓM（overshoot、undershoot），没有把两者合成摆幅之界的定理。此界为 AI 手算，未经 Lean。\n- 若成立，〈宽猛相济〉之\"和\"可确切说成〈有界之交替〉，与阈内的定于带内（relay_threshold、held_below_settles）分开。\n5. 截断之余在新耦合加入后的去向（lao-79-he-da-yuan，「和大怨必有餘怨」；河上公第七十九章并行）。\n- 所缺之律：新形成自某步起读入余所在之条件并与之相反时，余是否在有限步内归零、以何为界。\n- 最近：carried_eq_carriedWithin_add、exact_of_reading_before、Law.lost_stays、Flow.closes_through_coupling_apart。\n6. 多条件携带量中的衰减强度。\n- 现状：Loops 与 Propagation 的强度是自然数，正强度至少为一，所以一环只有〈积为一则保持〉与〈至少倍增〉两档；Loops 模块自己写明强度小于一时倍增不成立。LoopReturn 中以整数强度相乘的环同样没有中间（LoopReturn.whole_strengths、nothing_between），渐闭需要一个不是乘法的环节（gradual_needs_another_link、closes_within、sub_const_closes）；LoopReturn 的单数差与 Loops 的多条件携带量之间没有实例定理。\n- 所缺之律：强度取非负有理数时，环之强度积 w < 1 且无其他来源，则所传之量有界；w > 1 则按 w 的幂增长（失控之速）。\n- 本簇段落多只需上述两档，故排最后。\n\n四、名\n22 名，一概念一名。\n- 14 名有先秦用例。三个新组合（成環、已不已分、應倍）在冻结文本中零出现，其组成部分各有用例。所致、已不已分、應倍置信低。\n- 保留已采用之名：中和（两侧调节，即 Regulation）。中節只名其界（WithinGap），不与中和重名。\n- 〈成環〉不是 Ren 的〈成闭〉：环形成之后，差异可以闭合、保持或失控。\n\n五、自我反审\n1. 可能只是字面匹配之处。\n- 中節→WithinGap：《中庸》之中节是情之发合其节度，是合宜，不是数量之界；所承只是〈不越过〉。\n- 所致→携带量：荀子「六馬不和，則造父不能以致遠」只有送达，没有〈量〉。\n- 應倍：应与倍各有用例，合起来是新词。\n- 不已→CouplingRecurs：《中庸》「於穆不已」是天命之层，只取程颐感应之用例。\n- 窮→断裂：〈穷则变〉之\"变\"在脊柱是环之形成，不是好转。\n- 頻數：〈频复〉之\"频\"王弼读颦蹙、程颐读频数，有争议。\n2. 并行之强弱不一。过犹不及 18 个、躁胜寒 13 个、知和而不以礼节 13 个，这些大组有因\"过\"\"不及\"\"节\"等字被吸进来的风险。较弱者如《论语》〈六言六蔽〉六条：只是〈缺界则过〉的一侧，把\"学\"读作界是 AI 读法，并行注中已标较弱。\n3. 定域与相合之界。xici-chuyan-qianli、mengzi-chu-er-fan-er 等条直接说出环或传播之结构，我因经文以全称立说（〈言善则应、不善则违〉；〈出乎尔者必反乎尔〉且如数而反），而脊柱说回应之方向与多少由律决定，判为定域；整合者可按 RO §4 再审。\n4. 版本与训诂之争。\n- 老子第五十七章：传世本作\"法令\"，郭店、帛书乙、河上公作\"法物\"；经由制度之环的读法只属传世本。\n- 丰初九之\"旬\"：程颐、朱熹读「旬均也」（与配主均势）；旧说以旬为时日之期，冻结文本未见注家此读，不引。两读都有一界、过之则律变，阈值之读不受影响；只有程颐之读另近〈过正〉。\n- 〈其事好还〉只见传世本，郭店此处无\"还\"字，帛书残，所以\"還\"之先秦地位只就传世本经文层而言。\n- 冻结文本本身有字异：坎六四小象冻结本 YD-JP29 作「剛柔济也」，程颐本作「剛柔際也」。引文一律照冻结本之字，判断时参照注本（TP-H29-X4-R01 之驳回即依\"際\"之相接义）。\n5. 返与還。返（郭店语丛三「未有善事人而不返者」）是回馈最强的先秦候选。我未取，是因为郭店老子「返也者，道○（动）也」之返已由 C05 名构形之复返；交整合者定。\n6. 核对范围。并行之引文按全部冻结文本核对，而不只按其所属记录之源核对；字同而源不同的风险小，但存在。三条自加条目（wenyan-bian-zhi-buzao、lao-63-bao-yuan-tu-nan、chengyi-gan-ying-bu-yi）未附记录 id，读法只依冻结文本。\n7. 建模之限。本簇诸律都在离散步、自然数之量、一次读一条件的建模选择之下（Regulation 模块自述）；〈中和〉〈宽猛〉之读都受此限。"
+}
