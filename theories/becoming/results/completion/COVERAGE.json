@@ -236,14 +236,16 @@
         "experiment-needs-return",
         "what-a-finite-stretch-verifies",
         "learnable-through-a-map",
-        "observation-is-a-route"
+        "observation-is-a-route",
+        "what-dependence-alone-carries-of-a-level"
       ],
       "declarations": [
         "Becoming.Flow.unexcluded_beyond_coupling",
         "Becoming.Run.not_fixes_of_untaken",
         "Becoming.Ideals.verifiableBy_iff_interior",
         "Becoming.Learnable.learnable_iff",
-        "Becoming.apart_only_downstream"
+        "Becoming.apart_only_downstream",
+        "Becoming.carried_iff_rising"
       ],
       "status": "proved",
       "open_items": [

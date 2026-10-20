@@ -1,0 +1,378 @@
+{
+  "schema_version": 2,
+  "id": "what-dependence-alone-carries-of-a-level",
+  "title": {
+    "en": "What dependence alone carries of a level",
+    "zh": "单凭依存承载一个水平的什么"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-20T21:07:37+00:00",
+  "statement": {
+    "en": "At the step of the exchange, dependence alone, with activity needing support, carries of a level exactly the responses rising with it, and a fall only where some level falls; with a complement at a fixed total it carries every response.",
+    "zh": "在交换之步，单凭依存（活动需要支持）承载一个水平，恰是随它升高的回应，下降只在某水平下降处；有总量固定的补时，承载每个回应。"
+  },
+  "laws": [
+    {
+      "en": "Read activity needing support off a law at a step: a formation the levels there do not admit exchanges nothing across it. Under a law reading through dependence alone, such a formation outside the part takes and gives no less where the levels at the step stand no lower, the history before alike.",
+      "zh": "把活动需要支持读于律的一步：该步水平不容许的形成跨该步不交换。单凭依存而读的律之下，部分之外这样的形成，在该步水平不更低、此前历史相同处，取与给都不更少。",
+      "declarations": [
+        "Becoming.ExchangeLaw.NeedsSupportAt",
+        "Becoming.NoLowerAt",
+        "Becoming.ExchangeLaw.Through.rises_at_step"
+      ]
+    },
+    {
+      "en": "A response of giving carried by a family of such formations rises with the levels at the step, and gives less under one history than under another alike before the step only where some level at the step stands lower.",
+      "zh": "这样的形成之族所承载的给予之回应，随该步水平升高；在此前相同的两段历史中，一段下给得更少，只在其某个该步水平更低处。",
+      "declarations": [
+        "Becoming.ExchangeLaw.CarriesGiving",
+        "Becoming.ExchangeLaw.Through.carried_rises",
+        "Becoming.ExchangeLaw.Through.carried_fall_needs_fall"
+      ]
+    },
+    {
+      "en": "A response rising with one level up to a bound is carried by units at thresholds: unit j + 1 depends on the level at need j + 1 and gives the rise there, unit 0 gives the response at nothing; the units read through dependence alone and exchange only where supported.",
+      "zh": "随一个水平升高到某界的回应，由各阈上的单元承载：单元 j + 1 以所需 j + 1 依存于该水平，给出那里的升幅，单元 0 给出水平为零时的回应；单元单凭依存而读，只在被支持处交换。",
+      "declarations": [
+        "Becoming.Layers.web",
+        "Becoming.Layers.law",
+        "Becoming.Layers.admits_iff",
+        "Becoming.Layers.law_through",
+        "Becoming.Layers.law_needsSupport",
+        "Becoming.Layers.dependsOn",
+        "Becoming.Layers.rises_add",
+        "Becoming.Layers.rises_stop",
+        "Becoming.Layers.carry"
+      ]
+    },
+    {
+      "en": "A response giving a condition an amount fixed by one level at the step, up to a bound, is carried by some family of formations each exchanging only where supported, under a law reading through dependence alone, exactly where it rises with that level up to the bound.",
+      "zh": "给一个条件的量由该步一个水平决定的回应（到某界），恰在随该水平升高到该界之处，由单凭依存而读的律之下、各自只在被支持处交换的某个形成之族承载。",
+      "declarations": [
+        "Becoming.onlyAt",
+        "Becoming.onlyAt_self",
+        "Becoming.onlyAt_noLower",
+        "Becoming.carried_iff_rising"
+      ]
+    },
+    {
+      "en": "Where the level of d and of a condition e stand at the step at a fixed total N, unit j depending on d at need j and on e at need N - j is admitted exactly where d stands at j, so the units, one for each level up to N, carry every response to the level of d; they read through dependence alone and exchange only where supported.",
+      "zh": "d 与条件 e 在该步的水平总量固定为 N 时，以所需 j 依存于 d、以所需 N - j 依存于 e 的单元 j，恰在 d 立于 j 时被容许，所以到 N 为止每个水平一个单元，承载对 d 水平的每个回应；单元单凭依存而读，只在被支持处交换。",
+      "declarations": [
+        "Becoming.eq_of_true_iff",
+        "Becoming.ble_and_iff",
+        "Becoming.total_steps_nothing",
+        "Becoming.total_steps_only",
+        "Becoming.Complement.web",
+        "Becoming.Complement.law",
+        "Becoming.Complement.admits_iff",
+        "Becoming.Complement.law_through",
+        "Becoming.Complement.law_needsSupport",
+        "Becoming.Complement.dependsOn",
+        "Becoming.Complement.admitted_iff",
+        "Becoming.Complement.carry"
+      ]
+    },
+    {
+      "en": "Supplying what a level lacks of a positive amount passes by level, under a law reading through a coupling by level; it is carried by no family through dependence alone over the levels up to a positive bound, and with a complement at a fixed total it is carried by the complement units.",
+      "zh": "补足一个水平对某正量所缺者，在经水平耦合而读的律之下经水平通过；在直到某正界的水平上，没有单凭依存的族承载它；有总量固定的补时，由补的单元承载。",
+      "declarations": [
+        "Becoming.supplyLaw",
+        "Becoming.supplyLaw_through",
+        "Becoming.supply_not_carried",
+        "Becoming.supply_carried_by_complement"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Activity needing support read off the law at the step (NeedsSupportAt), as reading requirement as response gives it; a law reading through dependence alone (thresholdOnly, no level coupled by level), for the formations outside the part; for the units, a bound on the level; for the complement, the two levels at a fixed total at the step, with the complement a different condition.",
+      "zh": "不加公理。活动需要支持读于律的该步（NeedsSupportAt），如把所需读为回应所给出；单凭依存而读的律（thresholdOnly，没有水平经水平耦合），对部分之外的形成；单元需水平有界；补需两个水平在该步总量固定，且补是另一个条件。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which responses to levels at earlier steps dependence alone carries: a law may read whether a need was met at an earlier step, and through that a fall can pass (a crossing passes); the statement is at the step of the exchange.",
+      "zh": "单凭依存承载对较早之步水平的哪些回应：律可以读较早之步所需是否被满足，下降可经此通过（跨越通过）；陈述在交换之步。",
+      "kind": "scope"
+    },
+    {
+      "en": "A complement where the total is not fixed, by loss or by exchange beyond the pair; responses to several levels at once.",
+      "zh": "总量不固定（因损失或与对之外交换）时的补；同时对几个水平的回应。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a given formation reads only its dependences, or that a condition has a complement in a given world: both are supplied where a law applies.",
+      "zh": "某个形成只读其依存，或某个世界中某条件有补：两者都在律适用处给出。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Without a complement the derivation fails: supplying a deficit is carried by no family through dependence alone (supply_not_carried), though it passes by level (supplyLaw_through).",
+      "zh": "没有补，推导不成立：没有单凭依存的族承载补足亏欠（supply_not_carried），虽然它经水平通过（supplyLaw_through）。",
+      "kind": "converse"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelCoupling.lean",
+      "detail": {
+        "en": "supplyLaw: giving what the level of d lacks of k > 0, carried by no family through dependence alone over the levels up to a positive bound (supply_not_carried), and carried with a complement at a fixed total (supply_carried_by_complement).",
+        "zh": "supplyLaw：给出 d 的水平对 k > 0 所缺者；在直到某正界的水平上没有单凭依存的族承载它（supply_not_carried），有总量固定的补时被承载（supply_carried_by_complement）。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T204155.924362Z): the 35 declarations added to Becoming.LevelCoupling have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 285; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T204155.924362Z）：Becoming.LevelCoupling 新增的 35 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 285 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Responses to levels at earlier steps by dependence alone; several levels with their complements; a complement whose total changes with loss; an independent review.",
+    "zh": "单凭依存对较早之步水平的回应；几个水平连同其补；总量随损失而变的补；独立审查。"
+  },
+  "correspondence": {
+    "en": "Settles, at the step of the exchange, the conjecture observation-is-a-route kept: that observation is no second relation beside dependence, obs derivable from dependence. Known mathematics read on the spine's relations: the layer cake; stack filters and threshold decomposition (Wendt, Coyle and Gallagher 1986); monotone Boolean functions and negation normal form; dual-rail logic (Qian and Winfree 2011). Reading (the AI's): observing a level is depending on it and on where its amount goes; conservation supplies the second rail in a closed pair at a fixed total.",
+    "zh": "在交换之步解决 observation-is-a-route 保留的猜想：观察不是依存之外的第二种关系，obs 可由依存推出。读于脊柱诸关系的已知数学：层饼表示；堆栈滤波与阈分解（Wendt、Coyle 与 Gallagher 1986）；单调布尔函数与否定范式；双轨逻辑（Qian 与 Winfree 2011）。读法（AI 的）：观察一个水平，就是依存于它及其量之所去；总量固定的闭合一对中，守恒供给第二条轨。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelCoupling.lean",
+  "aliases": [
+    "what dependence alone carries of a level",
+    "observation from dependence",
+    "the complement",
+    "单凭依存承载一个水平的什么",
+    "Becoming.carried_iff_rising",
+    "Becoming.Complement.carry",
+    "Becoming.ExchangeLaw.Through.rises_at_step"
+  ],
+  "dependencies": [
+    {
+      "id": "where-a-level-couples",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The laws read through the couplings (ExchangeLaw.Through) with coupling by threshold alone (thresholdOnly), and reuse Web.alikeThrough_of_levels and ble_eq_of_iff.",
+        "zh": "诸律经耦合而读（ExchangeLaw.Through），只经阈耦合（thresholdOnly），复用 Web.alikeThrough_of_levels 与 ble_eq_of_iff。"
+      },
+      "interface": {
+        "output": {
+          "en": "Where a level couples into a formation: by threshold only a crossing passes, by level the level passes.",
+          "zh": "水平在何处耦合入形成：经阈只有跨越通过，经水平则水平通过。"
+        },
+        "input": {
+          "en": "What dependence alone carries of a level at the step.",
+          "zh": "单凭依存在该步承载一个水平的什么。"
+        },
+        "conditions": {
+          "en": "A law reading through the couplings; the part's formations excepted.",
+          "zh": "经耦合而读的律；部分的形成除外。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelCoupling.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "observation-is-a-route",
+      "detail": {
+        "en": "Kept the conjecture that obs could be derived from dependence; this record settles it at the step of the exchange.",
+        "zh": "保留了 obs 可由依存推出的猜想；本记录在交换之步解决它。"
+      }
+    },
+    {
+      "id": "where-a-level-couples",
+      "detail": {
+        "en": "Coupling by level is exactly where a level can couple in within its need; this record says which such couplings dependence alone carries.",
+        "zh": "经水平耦合恰是水平能在所需之内耦合入之处；本记录说明单凭依存承载其中哪些。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelCoupling.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Complement.admits_iff",
+        "Becoming.Complement.admitted_iff",
+        "Becoming.Complement.carry",
+        "Becoming.Complement.dependsOn",
+        "Becoming.Complement.law",
+        "Becoming.Complement.law_needsSupport",
+        "Becoming.Complement.law_through",
+        "Becoming.Complement.web",
+        "Becoming.ExchangeLaw.CarriesGiving",
+        "Becoming.ExchangeLaw.NeedsSupportAt",
+        "Becoming.ExchangeLaw.Through.carried_fall_needs_fall",
+        "Becoming.ExchangeLaw.Through.carried_rises",
+        "Becoming.ExchangeLaw.Through.rises_at_step",
+        "Becoming.Layers.admits_iff",
+        "Becoming.Layers.carry",
+        "Becoming.Layers.dependsOn",
+        "Becoming.Layers.law",
+        "Becoming.Layers.law_needsSupport",
+        "Becoming.Layers.law_through",
+        "Becoming.Layers.rises_add",
+        "Becoming.Layers.rises_stop",
+        "Becoming.Layers.web",
+        "Becoming.NoLowerAt",
+        "Becoming.Web.alikeThrough_of_levels",
+        "Becoming.ble_and_iff",
+        "Becoming.ble_eq_of_iff",
+        "Becoming.carried_iff_rising",
+        "Becoming.eq_of_true_iff",
+        "Becoming.onlyAt",
+        "Becoming.onlyAt_noLower",
+        "Becoming.onlyAt_self",
+        "Becoming.supplyLaw",
+        "Becoming.supplyLaw_through",
+        "Becoming.supply_carried_by_complement",
+        "Becoming.supply_not_carried",
+        "Becoming.total_steps_nothing",
+        "Becoming.total_steps_only"
+      ],
+      "sha256": "b611cdb30a8fa786af7a1dfca1f515f0cbff08458bc61c558b7d9cfa71515a8b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.AlikeThrough",
+        "Becoming.Web.AlikeThroughUpTo",
+        "Becoming.thresholdOnly"
+      ],
+      "sha256": "aba84f9ec26501aedb0c4f266c90619fcca2305f268e843a82d5603468d51b44"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.Admits",
+        "Becoming.Web.Admits.mono"
+      ],
+      "sha256": "5824b1de37fb2fcce72f0f4df0804ddb0802de74a5fa289a6fad95746b72b411"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.ExchangeLaw",
+        "Becoming.ExchangeLaw.GivesAlike",
+        "Becoming.ExchangeLaw.Through"
+      ],
+      "sha256": "c4916cbf4ee72134c14a7573780ac76acbde0d256ca2799012253f5e23d89fd8"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.DependsOn"
+      ],
+      "sha256": "cb86cadd870f66707432b21b9b7f2d469a498fd413ab5cb4d4311d6c371d4f4a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Naturals.add_sub_cancel_left",
+        "Becoming.Naturals.add_sub_of_le",
+        "Becoming.steps",
+        "Becoming.total",
+        "Becoming.total_steps_add",
+        "Becoming.total_steps_succ"
+      ],
+      "sha256": "806e95fad20b5a22ad532429698511ec066b63e9160a1018f1b7a736e6724176"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.total_le"
+      ],
+      "sha256": "790cf03bbfa755bde10d6a0c3086e797844c92ff11e0528e7f4b761eb5d439f4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b127eac460fe033f3028c0f08ea6ed3cc093ca153a5c482182a497964f24ffb"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "dc998b4241184db9cbe83b5060b920bdf2d13623d3b2737a3e79140c112ada1c"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "4cba00de7246209fbb7eb735a63ddbbe234806c45bde5c9a479538fdd7fb966e"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "f2e0da0a3172411c7bb2fdab0efc86e5aea5e45a10314a6f4a6f44e164e0ce3d"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelCoupling.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LevelCoupling",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Testing",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Admission",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Counterfactual",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Feedback",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Flow",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (OB1), what dependence alone carries of a level: rising responses exactly, a fall only where some level falls, everything with a complement at a fixed total; the conjecture of observation-is-a-route settled at the step of the exchange; study section 285.",
+      "zh": "2026年10月21日：新增（OB1），单凭依存承载一个水平的什么：恰是升高的回应，下降只在某水平下降处，有总量固定的补时承载一切；observation-is-a-route 的猜想在交换之步解决；研究第 285 节。"
+    }
+  ]
+}

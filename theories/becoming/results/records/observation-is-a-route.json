@@ -114,12 +114,12 @@
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261015T221156.459698Z): the 32 declarations of Becoming.Observation, 27 of them theorems, have empty axiom reports; the checker verifies core purity. Author counterreview in study section 159; reviewed by the eighteenth review (AI, read-only, no Lean rebuild), whose corrections are applied."
   },
   "next_delta": {
-    "zh": "带误差的量度；他者的读作为路线；在下游者何时必不同（回应的下界）；obs 能由依赖推出这一猜想；独立审查。",
-    "en": "Measurement with error; another's reading as a route; when what lies downstream must differ (lower bounds on responses); the conjecture that obs could be derived from dependence; an independent review."
+    "zh": "带误差的量度；他者的读作为路线；在下游者何时必不同（回应的下界）；独立审查。",
+    "en": "Measurement with error; another's reading as a route; when what lies downstream must differ (lower bounds on responses); an independent review."
   },
   "correspondence": {
-    "zh": "P124 留下“一个形成怎样开始观察它所依赖的储量”；Ren 对 P124 的做法答“approve your approach, please continue”。本结果部分回答：一个形成只能在从所观察者出发的所读路线的末端观察；反方向（在下游者必造成差别）不成立。这一必要性是一种无干扰性质（Goguen 与 Meseguer 1982）：不在储量下游者不受它影响，如信息流的依存图读法。读法（AI 的，减弱为 apart_only_downstream 所表明的，Ren 2026-10-18 取，DELEGATED-CHOICES D43）：观察在下游之内：一个形成的交换只经它所读、位于储量下游的水平回应储量上的差别，直接观察是长度为零的路线，量度、模型或他者的读是更长的路线；一个形成开始观察，是一次读闭合一条路线；P124 第二项读法中断裂之前对储量水平的读就是这样一条路线。在 obs 能由依赖推出的意义上，观察不是依赖之外的第二种关系，超出定理：定理只表明观察不越出依赖，未表明观察就是依赖；它作为猜想保留，不是读法。在 obs 与依赖都是耦合（经水平与经阈）的意义上，它成立（where-a-level-couples，以其在一个说明中的位置采用，DELEGATED-CHOICES D45）。",
-    "en": "P124 left open how a formation comes to observe a stock it depends on; Ren answered P124's approach with “approve your approach, please continue”. This result answers in part: a formation can observe only at the end of a route of readings from what is observed; the converse, that what lies downstream makes a difference, fails. That necessity is a noninterference property (Goguen and Meseguer 1982): what is not downstream of the stock is unaffected by it, as in the dependency-graph reading of information flow. Readings (the AI's, weakened to what apart_only_downstream shows and taken by Ren on 18 October 2026, DELEGATED-CHOICES D43): observing lies within the downstream: a formation's exchange responds to a difference at a stock only through a level it reads that lies downstream of the stock, direct observation being the route of length zero and a measurement, a model or another's reading a longer route; a formation comes to observe by a reading that closes a route; the reading of the stock's level before the break in P124's second reading is such a route. That observation is not a second relation beside dependence, in the sense that obs could be derived from dependence, goes beyond the theorem, which shows only that observation does not go beyond dependence, not that it is dependence; it is kept as a conjecture, not a reading. In the sense that obs and dependence are both coupling, by level and by threshold, it holds (where-a-level-couples, adopted by its place in one account, DELEGATED-CHOICES D45)."
+    "zh": "P124 留下“一个形成怎样开始观察它所依赖的储量”；Ren 对 P124 的做法答“approve your approach, please continue”。本结果部分回答：一个形成只能在从所观察者出发的所读路线的末端观察；反方向（在下游者必造成差别）不成立。这一必要性是一种无干扰性质（Goguen 与 Meseguer 1982）：不在储量下游者不受它影响，如信息流的依存图读法。读法（AI 的，减弱为 apart_only_downstream 所表明的，Ren 2026-10-18 取，DELEGATED-CHOICES D43）：观察在下游之内：一个形成的交换只经它所读、位于储量下游的水平回应储量上的差别，直接观察是长度为零的路线，量度、模型或他者的读是更长的路线；一个形成开始观察，是一次读闭合一条路线；P124 第二项读法中断裂之前对储量水平的读就是这样一条路线。在 obs 能由依赖推出的意义上，观察不是依赖之外的第二种关系，超出定理：定理只表明观察不越出依赖，未表明观察就是依赖；它作为猜想保留，不是读法。自 OB1 起，它在交换之步已定（what-dependence-alone-carries-of-a-level）。在 obs 与依赖都是耦合（经水平与经阈）的意义上，它成立（where-a-level-couples，以其在一个说明中的位置采用，DELEGATED-CHOICES D45）。",
+    "en": "P124 left open how a formation comes to observe a stock it depends on; Ren answered P124's approach with “approve your approach, please continue”. This result answers in part: a formation can observe only at the end of a route of readings from what is observed; the converse, that what lies downstream makes a difference, fails. That necessity is a noninterference property (Goguen and Meseguer 1982): what is not downstream of the stock is unaffected by it, as in the dependency-graph reading of information flow. Readings (the AI's, weakened to what apart_only_downstream shows and taken by Ren on 18 October 2026, DELEGATED-CHOICES D43): observing lies within the downstream: a formation's exchange responds to a difference at a stock only through a level it reads that lies downstream of the stock, direct observation being the route of length zero and a measurement, a model or another's reading a longer route; a formation comes to observe by a reading that closes a route; the reading of the stock's level before the break in P124's second reading is such a route. That observation is not a second relation beside dependence, in the sense that obs could be derived from dependence, goes beyond the theorem, which shows only that observation does not go beyond dependence, not that it is dependence; it is kept as a conjecture, not a reading. Since OB1 it is settled at the step of the exchange (what-dependence-alone-carries-of-a-level). In the sense that obs and dependence are both coupling, by level and by threshold, it holds (where-a-level-couples, adopted by its place in one account, DELEGATED-CHOICES D45)."
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Observation.lean",
   "aliases": [
@@ -268,6 +268,13 @@
       "detail": {
         "zh": "复用 CouplesAt：在某步作用的耦合。",
         "en": "Reuses CouplesAt: couplings acting at a step."
+      }
+    },
+    {
+      "id": "what-dependence-alone-carries-of-a-level",
+      "detail": {
+        "en": "Settles the conjecture this record kept, at the step of the exchange.",
+        "zh": "在交换之步解决本记录保留的猜想。"
       }
     }
   ],
@@ -451,7 +458,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "486b89acc1e1f370b8fc69ed050decd434c200842fc23e34ea9847d18c931c73"
+      "sha256": "f2e0da0a3172411c7bb2fdab0efc86e5aea5e45a10314a6f4a6f44e164e0ce3d"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-16-thresholds-approach-approved.md",
@@ -706,6 +713,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from World.lean to Prelude.lean, total. Proof bindings (Flow.lean, Loops.lean, Population.lean, Prelude.lean, Propagation.lean, Testing.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Flow.lean, Loops.lean, Population.lean, Propagation.lean, Testing.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 World.lean 到 Prelude.lean：total。证明绑定（Flow.lean、Loops.lean、Population.lean、Prelude.lean、Propagation.lean、Testing.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Flow.lean、Loops.lean、Population.lean、Propagation.lean、Testing.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
+    },
+    {
+      "en": "21 October 2026, OB1: the conjecture that obs could be derived from dependence is settled at the step of the exchange (record what-dependence-alone-carries-of-a-level, study section 285); it leaves the next delta, and the reading notes where it is settled; this record's laws are unchanged.",
+      "zh": "2026年10月21日，OB1：obs 可由依赖推出这一猜想在交换之步已定（记录 what-dependence-alone-carries-of-a-level，研究第 285 节）；它离开下一步，读法注明其解决之处；本记录的定律不变。"
     }
   ],
   "text_versions": [

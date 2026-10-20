@@ -2,7 +2,7 @@
 
 # The completion criterion, run
 
-The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261020T195445.913199Z` and the connectivity measure of `f9f513bcf` (core receipt `20261020T195445.913199Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
+The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#218-r25-the-twentieth-reviews-step-1-docs-now)), run by [`completion.py`](../../../../tools/research/completion.py) on the coverage file [`COVERAGE.json`](COVERAGE.json), the core receipt `20261020T204155.924362Z` and the connectivity measure of `f9f513bcf` (core receipt `20261020T195445.913199Z`). A criterion is met when it has no finding. Statements are read from the Lean source text, so a premise reached only through a definition the statement unfolds is not found.
 
 | | Criterion | Met | Findings |
 |---|---|---|---:|
@@ -25,7 +25,7 @@ The criterion K1–K7 adopted on 20 October 2026 ([study §218](../../../../_pro
 | Dissolution | phase | `Amounts.rests`, `World.comes_to_rest_unrefuted`, `Web.Carries.active_not_recurring`, `Listed.coming_of_ceasing`, `CensusWebs.keep_pace` | [least-loss-rest](../records/least-loss-rest.md), [continued-change-needs-openness](../records/continued-change-needs-openness.md), [reserve-defers-ending](../records/reserve-defers-ending.md), [ceasing-needs-arising](../records/ceasing-needs-arising.md), [coming-and-ceasing-keep-pace](../records/coming-and-ceasing-keep-pace.md), [census-balance](../records/census-balance.md) | §1.3, §2.2 | proved | 6 |
 | Actor | differentiation | `Web.roles_supported`, `Dependence.differenceOnlyTogether_iff`, `counterfactual_is_course`, `partForms_iff` | [life-as-condition-of-life](../records/life-as-condition-of-life.md), [joint-difference-making](../records/joint-difference-making.md), [counterfactual-is-the-course](../records/counterfactual-is-the-course.md), [where-a-move-is-formed](../records/where-a-move-is-formed.md) | §2.2, §2.6, §4.1 | proved | 7 |
 | Patient | differentiation | `Web.roles_dependent`, `Flow.beyond_gives_nothing`, `Flow.withinSystem_of_withinInfluence`, `responses_le_missBound` | [life-as-condition-of-life](../records/life-as-condition-of-life.md), [feeding-closure](../records/feeding-closure.md), [levels-of-closure](../records/levels-of-closure.md), [what-a-cut-loses](../records/what-a-cut-loses.md) | §2.2, §2.5, §2.6 | proved | — |
-| Knowing | differentiation | `Flow.unexcluded_beyond_coupling`, `Run.not_fixes_of_untaken`, `Ideals.verifiableBy_iff_interior`, `Learnable.learnable_iff`, `apart_only_downstream` | [testing-within-couplings](../records/testing-within-couplings.md), [experiment-needs-return](../records/experiment-needs-return.md), [what-a-finite-stretch-verifies](../records/what-a-finite-stretch-verifies.md), [learnable-through-a-map](../records/learnable-through-a-map.md), [observation-is-a-route](../records/observation-is-a-route.md) | §2.6, §3.1, §3.2, §3.3 | proved | 3 |
+| Knowing | differentiation | `Flow.unexcluded_beyond_coupling`, `Run.not_fixes_of_untaken`, `Ideals.verifiableBy_iff_interior`, `Learnable.learnable_iff`, `apart_only_downstream`, `carried_iff_rising` | [testing-within-couplings](../records/testing-within-couplings.md), [experiment-needs-return](../records/experiment-needs-return.md), [what-a-finite-stretch-verifies](../records/what-a-finite-stretch-verifies.md), [learnable-through-a-map](../records/learnable-through-a-map.md), [observation-is-a-route](../records/observation-is-a-route.md), [what-dependence-alone-carries-of-a-level](../records/what-dependence-alone-carries-of-a-level.md) | §2.6, §3.1, §3.2, §3.3 | proved | 3 |
 | Evaluation | differentiation | `Valuation.significant_iff`, `Valuation.significant_iff_held`, `Web.selfValuation_significant_iff`, `Web.significance_undetermined`, `Web.renewingAt_iff_over_all`, `forced_iff_center` | [metaethical-core-characterization](../records/metaethical-core-characterization.md), [living-significance-on-held-lives](../records/living-significance-on-held-lives.md), [represented-boundary-against-dependence](../records/represented-boundary-against-dependence.md), [continuation-condition-yields-living-significance](../records/continuation-condition-yields-living-significance.md), [what-the-step-across-standpoints-reaches](../records/what-the-step-across-standpoints-reaches.md) | §5, §6.1, §6.2 | proved | 3 |
 | Capacity | differentiation | `WithinMoves.after_course`, `Renewable.no_exact_finite_reading`, `Web.paths_extension_iff_widens`, `Flow.Balances.retains_iff_within_margin`, `Flow.Balances.widens_iff_others_within` | [effective-capacity-and-eventual-reachability](../records/effective-capacity-and-eventual-reachability.md), [becoming-finite-horizon](../records/becoming-finite-horizon.md), [comparison-by-widening](../records/comparison-by-widening.md), [significance-retained-within-margin](../records/significance-retained-within-margin.md), [own-widening-within-the-margin](../records/own-widening-within-the-margin.md) | §2.1, §6.1 | proved | 5 |
 | Responsibility | differentiation | `Flow.act_unselected`, `act_courses_unselected`, `Flow.Balances.comparison_within_response`, `presupposition_scopes`, `Dependence.Overdetermined.only_together` | [the-gap-for-ones-own-act](../records/the-gap-for-ones-own-act.md), [comparison-where-the-rest-responds](../records/comparison-where-the-rest-responds.md), [presupposition-scopes](../records/presupposition-scopes.md), [joint-difference-making](../records/joint-difference-making.md) | §2.6, §3.4, §4.1, §6.5 | proved | 11 |
@@ -46,7 +46,7 @@ No finding.
 
 ## K3. Premises: met
 
-Premises found in central statements: C, the widening comparison (1); a census (2); a reserve (1); a supplied law of exchange (7); activity needing support (11); balance (24); bounded transmission (1); decided (4); dissipation (5); embodiment (1); enclosed (1); living significance (2); only active relata give (13); the continuation condition (3).
+Premises found in central statements: C, the widening comparison (1); a census (2); a reserve (1); a supplied law of exchange (8); activity needing support (11); balance (24); bounded transmission (1); decided (5); dissipation (5); embodiment (1); enclosed (1); living significance (2); only active relata give (13); the continuation condition (3).
 
 Logical premise decided: meets `Decided.exists_below`; unrefuted `not_not_decided`; calibration `HistoryIdeals.cut_decided_iff_lpo`.
 
@@ -54,7 +54,7 @@ No finding.
 
 ## K4. Representation: met
 
-Modelling choices found in central statements: discrete steps (95); natural-number amounts (63); supplied observation (10); a fixed type of formations (9); decidedness (4); naming (1).
+Modelling choices found in central statements: discrete steps (96); natural-number amounts (64); supplied observation (10); a fixed type of formations (9); decidedness (5); naming (1).
 
 Natural-number laws: `falls_not_recurring`: form `Amounts.rests`; `World.comes_to_rest_unrefuted`: form `Amounts.family_rests`; `rising_recurs`: counterexample `Halving.never_rests`; `Flow.excess_bounded`: form `Amounts.losses_within`; `Flow.More.replenishment_unbounded`: form `Amounts.replenishment_unbounded`.
 
@@ -64,7 +64,7 @@ No finding.
 
 Only the parameters the coverage file lists are looked for; a parameter of another name is not found.
 
-Supplied parameters found in central statements, each a named condition of section 0: a law of exchange (7); a valuation (2); observation (10); significance (10); standpoints and their own regions (15); the naming (1); the rest relatum (1).
+Supplied parameters found in central statements, each a named condition of section 0: a law of exchange (8); a valuation (2); observation (10); significance (10); standpoints and their own regions (15); the naming (1); the rest relatum (1).
 
 No finding.
 

@@ -142,8 +142,8 @@
     "zh": "命名研究（N1）采纳的改名，已作试运行，待 Ren；容许不可判定时的跨越；独立审查。"
   },
   "correspondence": {
-    "en": "The naming study of 17-18 October (N1, study section 6.2) adopted \"couples into\" for what Web.CoupledInto names, in two grains, and held the level grain back until the supplied relation obs was shown to be a coupling in the sense of Becoming.Loops and Becoming.Observation. Ren: \"Claim and prove the instance check of coupling by level against Observation/Loops (study §6.2), still no renames.\" This result does that. It also answers, for the level branch, the question observation-is-a-route leaves open, whether observation is a second kind of relation beside dependence, in the sense that both are coupling: obs marks where a level can couple into a formation by level, as dependence marks where it couples by threshold; whether obs could be derived from dependence stays a conjecture there. Reading (the AI's, adopted on 19 October 2026 by its place in one account, DELEGATED-CHOICES D45): obs and dependence are both coupling, by level and by threshold; what couples in bounds what a law can respond to without fixing it (ExchangeLaw.response_not_fixed_by_coupling), and a law's responses are its couplings.",
-    "zh": "10月17–18日的命名研究（N1，研究第 6.2 节）以“耦合入”称 Web.CoupledInto 所名者，分两种粒度，并在给出的关系 obs 被证明为 Becoming.Loops 与 Becoming.Observation 意义上的耦合之前，暂缓经水平一支。Ren：“Claim and prove the instance check of coupling by level against Observation/Loops (study §6.2), still no renames.” 本结果完成此事。它也就水平一支、在两者都是耦合的意义上，回答 observation-is-a-route 留下的问题，即观察是否为依赖之外的第二种关系：obs 标出水平能经水平耦合入形成之处，如依赖标出经阈耦合之处；obs 能否由依赖推出，在那里仍是猜想。读法（AI 的，2026年10月19日以其在一个说明中的位置采用，DELEGATED-CHOICES D45）：obs 与依赖都是耦合，经水平与经阈；耦合入者界定律能回应者而不确定它（ExchangeLaw.response_not_fixed_by_coupling），律的回应即其耦合。"
+    "en": "The naming study of 17-18 October (N1, study section 6.2) adopted \"couples into\" for what Web.CoupledInto names, in two grains, and held the level grain back until the supplied relation obs was shown to be a coupling in the sense of Becoming.Loops and Becoming.Observation. Ren: \"Claim and prove the instance check of coupling by level against Observation/Loops (study §6.2), still no renames.\" This result does that. It also answers, for the level branch, the question observation-is-a-route leaves open, whether observation is a second kind of relation beside dependence, in the sense that both are coupling: obs marks where a level can couple into a formation by level, as dependence marks where it couples by threshold; whether obs could be derived from dependence stayed a conjecture there, settled at the step of the exchange by what-dependence-alone-carries-of-a-level. Reading (the AI's, adopted on 19 October 2026 by its place in one account, DELEGATED-CHOICES D45): obs and dependence are both coupling, by level and by threshold; what couples in bounds what a law can respond to without fixing it (ExchangeLaw.response_not_fixed_by_coupling), and a law's responses are its couplings.",
+    "zh": "10月17–18日的命名研究（N1，研究第 6.2 节）以“耦合入”称 Web.CoupledInto 所名者，分两种粒度，并在给出的关系 obs 被证明为 Becoming.Loops 与 Becoming.Observation 意义上的耦合之前，暂缓经水平一支。Ren：“Claim and prove the instance check of coupling by level against Observation/Loops (study §6.2), still no renames.” 本结果完成此事。它也就水平一支、在两者都是耦合的意义上，回答 observation-is-a-route 留下的问题，即观察是否为依赖之外的第二种关系：obs 标出水平能经水平耦合入形成之处，如依赖标出经阈耦合之处；obs 能否由依赖推出，在那里曾是猜想，由 what-dependence-alone-carries-of-a-level 在交换之步解决。读法（AI 的，2026年10月19日以其在一个说明中的位置采用，DELEGATED-CHOICES D45）：obs 与依赖都是耦合，经水平与经阈；耦合入者界定律能回应者而不确定它（ExchangeLaw.response_not_fixed_by_coupling），律的回应即其耦合。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelCoupling.lean",
   "aliases": [
@@ -319,13 +319,20 @@
         "en": "There a raise below the threshold of a stock coupled in by threshold only shows nowhere along courses; here no law reading through the couplings responds to it.",
         "zh": "那里只经阈耦合入的储量在阈下的升高沿进程处处不显出；这里没有经耦合而读的律回应它。"
       }
+    },
+    {
+      "id": "what-dependence-alone-carries-of-a-level",
+      "detail": {
+        "en": "Which couplings by level dependence alone carries, at the step of the exchange.",
+        "zh": "在交换之步，单凭依存承载哪些经水平的耦合。"
+      }
     }
   ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelCoupling.lean",
       "role": "proof",
-      "sha256": "0286f75247c669f70056b6b223e96e163d81efab9aa27b32032e46ecae457cd4",
+      "sha256": "b611cdb30a8fa786af7a1dfca1f515f0cbff08458bc61c558b7d9cfa71515a8b",
       "declarations": [
         "Becoming.ExchangeLaw.RespondsTo",
         "Becoming.ExchangeLaw.respondsWithin_zero_iff",
@@ -438,7 +445,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "8acb26970ea0f701aa886ca245c7858c56f5554a5f1c907421edb0e8d3992966"
+      "sha256": "f2e0da0a3172411c7bb2fdab0efc86e5aea5e45a10314a6f4a6f44e164e0ce3d"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-10-17-registration-dualist-vocabulary.md",
@@ -514,12 +521,18 @@
       "role": "receipt",
       "sha256": "44b9585ada88cf63ea75fd9b0f070b9975e1ea83148a14b78bc4dca27384a8b7",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json",
+      "role": "receipt",
+      "sha256": "2b127eac460fe033f3028c0f08ea6ed3cc093ca153a5c482182a497964f24ffb",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LevelCoupling.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T204155.924362Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LevelCoupling",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -605,6 +618,10 @@
     {
       "en": "2026-10-20: 26 bookkeeping notes condensed from 18 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/2e0143431906bb5f/where-a-level-couples.json and in git.",
       "zh": "2026-10-20：26 条记账性说明合并（18 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/2e0143431906bb5f/where-a-level-couples.json 和 git 中。"
+    },
+    {
+      "en": "21 October 2026, OB1: new laws in Becoming.LevelCoupling (record what-dependence-alone-carries-of-a-level, study section 285) settle the conjecture this record left open; this record's laws and declarations are unchanged.",
+      "zh": "2026年10月21日，OB1：Becoming.LevelCoupling 中的新定律（记录 what-dependence-alone-carries-of-a-level，研究第 285 节）解决本记录留下的猜想；本记录的定律与声明不变。"
     }
   ],
   "text_versions": [
