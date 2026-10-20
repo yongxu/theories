@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ob1-complement/tree",
+  "modules": 40,
+  "ran": [
+    "Becoming.LevelCoupling",
+    "BecomingLevelCouplingAxiomAudit"
+  ],
+  "reused": 39,
+  "unclean": [],
+  "audits": {
+    "Becoming.LevelCoupling": {
+      "theorems": 56,
+      "declarations": 76,
+      "with_axioms": {}
+    }
+  }
+}

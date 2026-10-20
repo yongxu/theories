@@ -1,0 +1,45 @@
+## {N}. What dependence alone carries of a level (OB1)
+
+```text
+Result(s): new record what-dependence-alone-carries-of-a-level (new laws of Becoming.LevelCoupling, rule 9: the module
+       is a leaf and the laws answer its "what is not derived"); reuses where-a-level-couples (Through, thresholdOnly,
+       Web.Admits and its monotonicity, ble_eq_of_iff), observation-is-a-route (the conjecture it kept) and the
+       reading of requirement as response (ExchangeRelation.readWeb_dependent).
+Delta: the conjecture that observation is no second relation beside dependence, that the supplied obs could be
+       derived from dependence, settled at the step of the exchange. Under a law reading through dependence alone, a
+       formation exchanging only where supported exchanges no less where the levels at the step stand no lower; so a
+       response carried by such formations rises with those levels and falls only where some level falls. A response
+       to one level, up to a bound, is carried by dependence alone exactly where it rises with the level, by units at
+       thresholds; supplying a deficit is carried by none. Where the level and a complement stand at a fixed total,
+       units depending on both carry every response to the level.
+Premises / correspondence: activity needing support read off the law at the step (NeedsSupportAt), as reading
+       requirement as response gives it; the law reading through dependence alone (thresholdOnly); for the units, a
+       bound on the level; for the complement, the two levels at a fixed total at the step (a closed pair).
+       Correspondence: the layer cake (Lieb and Loss); threshold decomposition and stack filters (Wendt, Coyle and
+       Gallagher 1986); monotone Boolean functions and negation normal form; dual-rail logic (Qian and Winfree 2011).
+Evidence: core receipt {RECEIPT} (passed, empty axiom reports); prior forms from memory and search listings, named in
+       the significance review's observation check.
+Boundary: at the step of the exchange; one level at a time; which responses to levels at earlier steps dependence
+       alone carries is not characterized (a crossing passes there, and the units at the step do not cover them); a
+       complement where the total is not fixed, by loss or by exchange beyond the pair, is not stated; known
+       mathematics read on the spine's relations; no ethical premise.
+Output → input: chapter 2.6 (the coupling-by-level paragraph, what is not derived, the readings), 5 (the supplied
+       relation), 8.1 item 3, the record table; LevelCoupling's header; records observation-is-a-route and
+       where-a-level-couples; significance review, observation check.
+```
+
+**The question.** The base supplies two relations into a formation: dependence, where a condition couples in by threshold (whether its need is met), and `obs`, where it couples in by level. Chapter §2.6 and §8.1 item 3 kept a conjecture: that observation is no second relation beside dependence, in the sense that `obs` could be derived from dependence. The weaker sense was adopted (both are coupling, `not_not_obs_iff_respondsByLevel`), the stronger left open. The question was exactly which responses to a level dependence alone can carry, and so where `obs` is a second relation and where it is not.
+
+**What was built** (new laws of `Becoming.LevelCoupling`, pure core, every axiom report empty).
+
+- *Rising at the step.* Activity needing support, read off a law at one step: a formation the levels at the step do not admit exchanges nothing across it (`ExchangeLaw.NeedsSupportAt`). Under a law reading through dependence alone (`thresholdOnly`, no level coupled by level), such a formation takes and gives no less where the levels at the step stand no lower, the history before alike (`ExchangeLaw.Through.rises_at_step`): admitted under the lower levels, it is admitted under the higher, and the two histories are alike through its couplings; not admitted, it exchanges nothing. A response carried by a family of such formations therefore rises with the levels at the step (`ExchangeLaw.Through.carried_rises`), and falls only where some level at the step falls (`ExchangeLaw.Through.carried_fall_needs_fall`).
+- *Exactly the rising responses.* A response giving a condition an amount fixed by one level at the step, up to a bound, is carried by units at thresholds where it rises: unit `j + 1` depends on the level at need `j + 1` and gives the rise there, unit `0` gives the response at nothing (`Layers.carry`, `Layers.law_through`, `Layers.law_needsSupport`, `Layers.dependsOn`). With the converse, a response to one level is carried by some family through dependence alone exactly where it rises with that level up to the bound (`carried_iff_rising`). Supplying what a level lacks of a positive amount (`supplyLaw`) passes by level (`supplyLaw_through`) and is carried by no such family (`supply_not_carried`).
+- *With the complement, every response.* Where the level of `d` and of a condition `e` stand at a fixed total `N` at the step, unit `j` depends on `d` at need `j` and on `e` at need `N - j`; it is admitted exactly where `d` stands at `j` (`Complement.admitted_iff`), so the units, one for each level up to `N`, carry every response to `d`'s level (`Complement.carry`, `Complement.law_through`, `Complement.law_needsSupport`, `Complement.dependsOn`), supplying a deficit among them (`supply_carried_by_complement`).
+
+**Against the prior forms.** The mathematics is known. A nondecreasing function is the sum of the indicators of its upper level sets (the layer cake); a filter given by a positive Boolean function commutes with threshold decomposition (stack filters); circuits of AND and OR without negation compute exactly the monotone Boolean functions, and with each input and its negation every function (negation normal form); dual-rail logic carries each signal with its complement so that monotone gates compute any circuit (in DNA strand displacement, Qian and Winfree's seesaw circuits). On the spine, admission is the AND of the thresholds a formation requires, a family's total the sum over formations, activity needing support the absence of negation, and a complement at a fixed total the second rail. What the spine's form adds is where the second rail comes from: in a closed pair whose total is fixed, conservation carries it, since what one condition does not hold the other does.
+
+*Reading* [AI reading, D43, D45]. The conjecture is settled at the step of the exchange, both ways. Observation is no second relation beside dependence wherever a response rises with the level observed, or the level has a complement at a fixed total: there, to observe a level is to depend on it and on where its amount goes, and a response to its fall is dependence on that rise. Where nothing holds what the level does not, a response falling with the level, supplying its deficit, needs coupling by level: observation is a second relation exactly there. So the one relation at the root is not dependence alone but dependence within a conserved whole: what one part lacks, another part holds, and a formation can depend on that. A part read without the rest of the whole, its total not fixed, keeps `obs` as a supplied relation.
+
+**Self-review.** The new Lean is small and close to definitional: `rises_at_step` is the monotonicity of admission with the reading through thresholds, the units are the layer cake, and the complement units are an exact-level indicator built from two thresholds. Its content is the exact boundary on the spine's own relations, with a converse each way (`carried_iff_rising`, `carried_fall_needs_fall`) and a witness each way (`supply_not_carried`, `supply_carried_by_complement`). Three limits. Responses to earlier levels are not characterized: a law may read whether a need was met at an earlier step, and through that a fall can pass (by threshold a crossing passes), so the statement is at the step of the exchange. The complement is supplied as a condition at a fixed total; a total that changes with loss or with exchange beyond the pair is not covered, and the needs `N - j` are fixed in advance. Several levels at once (a unit requiring several conditions and their complements) are not stated, though the construction extends. The docstring of `Web.CoupledInto` in `Becoming.Testing` still calls the derivation a conjecture in general; its bytes are left for the next substantive edit of that module, since a docstring change there would recompile most of the core.
+
+**The run.** {CORE_LINE}. {DECLS} declarations added to Becoming.LevelCoupling ({OLD} before, {TOTAL} now), {THEOREMS} of them theorems, all with empty axiom reports. Connectivity: {APART}.
