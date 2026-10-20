@@ -11166,3 +11166,34 @@ Output → input: chapter 8.1 item 8's count side is settled over a run; what st
 - **Material continuity.** The chapter's open item names material continuity. In a world the exchange records what each relatum takes from and gives to each other, not which taken amount is given on, so the material reading available on the base is conservation (`World.Conserves`, `Becoming.Persistence`): `f` after the step continues `g` before it where `f`'s standing is what `g` stood at, less what was taken and plus what was given. That reading fixes identity exactly where no other relatum stands alike after the step (`World.fixed_iff`). So "identity where standings coincide" is the precise remainder: no law read off a world's records can fix it, since swapping two relata alike after a step keeps every record and the balance.
 
 **Self-review.** The new theorems are short and compose the one-step laws, so this is a completion of an existing line rather than a new mechanism. Its use is that the identity record's "an exact condition over a run is not stated" is now true only for a fixed continuation, and the run-level statement is no longer stronger than what is proved. The last bullet states a reading; it is not proved here.
+
+## 262. Formation classes along a continuation: splits and merges (R49)
+
+```text
+Result(s): Web.Continuing, Web.RenewingAlong, Web.ConsumingAlong, Web.renewingAlong_iff,
+       Web.consumingAlong_iff, Web.RenewingAlong.branch, Web.ConsumingAlong.merged, Reidentify.carry,
+       Web.continuing_reidentify, Web.renewingAlong_reidentify, Web.consumingAlong_reidentify,
+       Web.renewingAlong_itself_iff, Web.consumingAlong_itself_iff, MergeClass.readings (new core module
+       Becoming.ContinuedClasses, 20 theorems, 33 declarations); record classes-along-a-continuation;
+       record identity-across-steps narrowed; chapter 2.2 and 8.1 item 8.
+Delta: a formation's whole-run class was read by its name (RenewingIn, ConsumingIn), so re-identification
+       changed it (Turnover) and splits and merges had no class at all. Now the classes are read along what
+       continues an event through a continuation, step by step: renewing is universal along it and passes
+       into every branch of a split, consuming is existential and passes back into every formation merged;
+       the classes are the continuation's, unchanged by every renaming that carries it, and the name classes
+       are the case of each formation continuing itself.
+Premises: none added. The continuation is supplied; the name-class case needs the formation active at
+       every step.
+Evidence: core receipt 20261020T125112.981373Z (passed, empty axiom reports).
+Boundary: tenure and undermining are not read along a continuation; which continuation holds is not
+       derived (on a world, conservation supplies one, fixed except where standings coincide).
+Output → input: with Persistence's conservation continuation, a world's classes become laws of its
+       exchange rather than of its names wherever standings after each step stand apart; tenure and
+       undermining along a continuation are next.
+```
+
+- **Why the two classes move in opposite directions.** Renewing along an event quantifies over everything continuing it, so it is inherited forward: a split cannot add a renewing branch to a consuming parent, and every branch of a renewing parent renews. Consuming quantifies existentially, so it is inherited backward: a merged formation that consumes makes each formation merged into it consume along the merge. This is the whole content of the split and merge laws (`renewingAlong_iff`, `consumingAlong_iff`), each an unfolding of the inductive relation by its first step.
+- **Why re-identification fixes nothing new here.** Carrying a continuation through a re-identification relates the same events, so the classes along the carried continuation are those along the original. What re-identification changed in `Turnover` was the continuation implicit in the names; made explicit, the change is a change of continuation.
+- **The witness.** In `MergeClass` a formation drawing only on a condition kept at its need renews as named; merged with a formation drawing on a spent condition into one that draws on it, it consumes along the merge. Read along its name, the first formation ends unharmed; read along what continues it, it is part of a consuming formation.
+
+**Self-review.** The laws are short and near-definitional once the inductive relation is given; their use is that classes under splits and merges are stated at all, with the two directions of inheritance exact, and that "transformation becomes a law, not a choice of names" holds for the two classes once the continuation is read off the world. The witness is minimal. No decidability or choice is used: lineages are not chosen, and the relation is read through finitely many steps.

@@ -73,7 +73,7 @@ CORE = ["Becoming.Prelude", "Becoming.World", "Becoming.Witnesses", "Becoming.Fr
         "Becoming.Restoration", "Becoming.Horizon", "Becoming.Joint", "Becoming.Experiment", "Becoming.Mechanism", "Becoming.Unfolding", "Becoming.Irreversibility", "Becoming.LawAlongRun", "Becoming.Histories", "Becoming.Branching", "Becoming.Listing", "Becoming.Stuttering", "Becoming.Reordering", "Becoming.IdleRemoval", "Becoming.OrderNormal", "Becoming.OneStep", "Becoming.Weighted", "Becoming.Transmission", "Becoming.Succession", "Becoming.Attraction",
         "Becoming.Substitution",
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
-        "Becoming.Identity", "Becoming.Persistence", "Becoming.Wholes", "Becoming.Dissipation", "Becoming.Locality",
+        "Becoming.Identity", "Becoming.ContinuedClasses", "Becoming.Persistence", "Becoming.Wholes", "Becoming.Dissipation", "Becoming.Locality",
         "Becoming.Seeking", "Becoming.Roles", "Becoming.LabelledRoles",
         "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Space",
         "Becoming.Premises", "Becoming.Sampling", "Becoming.Tower",
@@ -613,6 +613,14 @@ SCOPE = (
     "conservation criteria. Distinct standings fix classes. Hibernation, Dormancy, Seed, Sleeper, "
     "Shuttle and Lineage separate the holding readings, show the mixed census failure and bound "
     "the identity claim. "
+    "ContinuedClasses: read along what continues an event through a continuation, renewing holds "
+    "exactly where the event's relations are renewed and renewing holds along every formation "
+    "continuing it, so renewing passes into every branch of a split, and consuming holds exactly where "
+    "the event draws on a consumed condition or consuming holds along a formation continuing it, so "
+    "consuming along a merged formation is consuming along every formation merged into it; the two "
+    "exclude each other; carrying the continuation through a re-identification leaves what continues "
+    "what and both classes unchanged; where each formation continues itself and is always active "
+    "they are the name classes; in MergeClass a formation renewing as named consumes along a merge. "
     "Identity: re-identifying formations one to one at each step leaves every step's levels, "
     "activity, dependences and drawing unchanged; a renaming preserves the readings that follow "
     "a formation, and every re-identification preserves support, keeping and breaking, the class "

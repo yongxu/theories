@@ -57,7 +57,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Re-identification covers only one-to-one correspondence; splits and merges are continuation relations, under which the arising forced by more is stated, but not formation classes, tenure or undermining.
+- Re-identification covers only one-to-one correspondence; splits and merges are continuation relations, under which the arising forced by more is stated, and the renewing and consuming classes are stated in classes-along-a-continuation, but not tenure or undermining.
 - Over a run no split is sufficient for more to force arising, not necessary: a fixed continuation splitting at some steps can still force it. The exact condition over a run is stated on the counts, quantifying over every continuation without a split (law 31); for one fixed continuation, that splits occur at only finitely many steps is sufficient and not shown necessary. Witness: `Becoming.Identity.Fork.split_unceasing`.
 - The arising in Merge is a persisting formation re-read, and a witness under a merge in which more does the work is not given. Witness: `Becoming.Merge.idle`.
 - Continuity is one reading of identity, not its definition; one-way and two-way continuity are two readings, and the original two-way continuity does not constrain succession across dormancy. Witness: `Becoming.Dormancy.keeps_both`.
@@ -89,7 +89,7 @@ Canonical source: [Identity.lean](../../../../experiments/integrated-correction/
 <a id="next--下一步"></a>
 ## Next
 
-Choosing h; mixed activity/holding census conditions; a whole's dependence and undermining from its parts'; classes, tenure and undermining under continuations; for one fixed continuation, an exact run condition (splits at only finitely many steps is sufficient); undermining under conservation; identity where standings coincide or from material, informational or organizational continuity.
+Choosing h; mixed activity/holding census conditions; a whole's dependence and undermining from its parts'; tenure and undermining under continuations; for one fixed continuation, an exact run condition (splits at only finitely many steps is sufficient); undermining under conservation; identity where standings coincide or from material, informational or organizational continuity.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -122,7 +122,7 @@ The open programme and the next step of becoming-dependence-dynamics list the in
 - related, not a proved adapter: [whole-persists-through-generation](whole-persists-through-generation.md). States the part–whole relation this result omits: a whole is active exactly while some part is, and where parts are brief, or end with finitely many active at once, a whole persists through the generation of its parts.
 - related, not a proved adapter: [census-balance-under-continuation](census-balance-under-continuation.md). The census balance under a continuation: without splits ceasing recurring needs arising recurring, without merges under a bounded count conversely; budding and joining each defeat one half (Tandem).
 
-**Used by:** [census-balance-under-continuation](census-balance-under-continuation.md) · [whole-persists-through-generation](whole-persists-through-generation.md)
+**Used by:** [census-balance-under-continuation](census-balance-under-continuation.md) · [classes-along-a-continuation](classes-along-a-continuation.md) · [whole-persists-through-generation](whole-persists-through-generation.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -190,6 +190,7 @@ Aliases: `Becoming.Web.reidentify_renewed`, `Becoming.Web.reidentify_consumed`, 
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (Prelude.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; Dependence.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Population.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Prelude.lean, twelve statements stated in two or more modules each, stated here once under the name kept. The claim is unchanged.
 - 20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Persistence.lean to Roles.lean, Shuttle.next_off; from Population.lean to Prelude.lean, Distinct; from World.lean to Prelude.lean, total. Proof bindings (Identity.lean, Labelled.lean, Persistence.lean, Prelude.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Arising.lean, Dependence.lean, Flow.lean, Identity.lean, Labelled.lean, Persistence.lean, Population.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.
 - 20 October 2026, R48 (study section 261): law 31 added, the exact condition over a run on the counts under a census at every step, and sufficiency of a continuation without a split from some step on (ListedWebs.forcedAlong_iff_more, ListedWebs.forcedAlong_of_eventually_noSplit); the second does_not_show item and next_delta narrowed accordingly. No status changed.
+- 20 October 2026, R49 (study section 262): the first does_not_show item and next_delta narrowed: the renewing and consuming classes under continuations are stated in classes-along-a-continuation. No law or status changed.
 - 2 rebinding entries (2026-10-13 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](identity-across-steps.json).
 
 <a id="earlier-text--早期文本"></a>

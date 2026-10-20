@@ -333,8 +333,8 @@
   ],
   "does_not_show": [
     {
-      "zh": "改认只处理每步一一对应；分裂与合并由延续关系表示，其下陈述了更多迫使的生起，形成的类、任期与侵蚀没有陈述。",
-      "en": "Re-identification covers only one-to-one correspondence; splits and merges are continuation relations, under which the arising forced by more is stated, but not formation classes, tenure or undermining.",
+      "zh": "改认只处理每步一一对应；分裂与合并由延续关系表示，其下陈述了更多迫使的生起，更新与消耗两类在 classes-along-a-continuation 中陈述，任期与侵蚀没有陈述。",
+      "en": "Re-identification covers only one-to-one correspondence; splits and merges are continuation relations, under which the arising forced by more is stated, and the renewing and consuming classes are stated in classes-along-a-continuation, but not tenure or undermining.",
       "kind": "scope"
     },
     {
@@ -464,8 +464,8 @@
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T204910.042715Z; periphery 20261013T095049.338744Z passed): the theorems of Becoming.Identity, with this record's local laws, and of Becoming.Persistence have empty axiom reports, and the checker verifies core purity. Author counterreview in §16 and, for the holding and conservation laws, §108; the fifth independent review and the sixth, listed under sources, accepted the mathematics and the fifth's corrections; the sixth's further corrections and the holding and conservation laws are not yet independently reviewed."
   },
   "next_delta": {
-    "zh": "选择 h 与混合活动／保持的普查条件；整体的依存与侵蚀怎样由部分构成；延续关系下形成的类、任期与侵蚀；对一个固定延续关系的整段精确条件（只在有限多步分裂是充分的）；守恒下的一般侵蚀；同量处及物质、信息或组织连续如何固定同一。",
-    "en": "Choosing h; mixed activity/holding census conditions; a whole's dependence and undermining from its parts'; classes, tenure and undermining under continuations; for one fixed continuation, an exact run condition (splits at only finitely many steps is sufficient); undermining under conservation; identity where standings coincide or from material, informational or organizational continuity."
+    "zh": "选择 h 与混合活动／保持的普查条件；整体的依存与侵蚀怎样由部分构成；延续关系下的任期与侵蚀；对一个固定延续关系的整段精确条件（只在有限多步分裂是充分的）；守恒下的一般侵蚀；同量处及物质、信息或组织连续如何固定同一。",
+    "en": "Choosing h; mixed activity/holding census conditions; a whole's dependence and undermining from its parts'; tenure and undermining under continuations; for one fixed continuation, an exact run condition (splits at only finitely many steps is sufficient); undermining under conservation; identity where standings coincide or from material, informational or organizational continuity."
   },
   "correspondence": {
     "zh": "开放纲领与 becoming-dependence-dynamics 的下一步把形成的个体化列为待做：终止与转化之分依赖外给的同一。本结果陈述这一外给的同一在哪些读法中起作用：每一步与每个条件的读法不依赖它，追随形成的读法依赖它；单向的连续排除制造生起与去掉侵蚀，接续仍由读法决定；双向的连续恰保持生起与侵蚀，却仍不约束形成在整段上的类。名字跨步的模式承载同一：这是表示给出的对应前提，Turnover 表明它是实质的；方法要求“不能以分别命名偷渡独立本体”在这里的检查是这一披露，不是改名不变，因为改名按构造保持这一模式。谱系与成员是同一展开的两个层次：作为整体的谱系持续，正由成员不息地生起而成（Layered）；单一命名层次只能表示其一，部分与整体的关系是这一表示所省略的关系；whole-persists-through-generation 陈述这一关系，在成员不长久的前提下，谱系的持续蕴含成员不息地生起。依 Ren 的交托，“生生不息”读在整体的层次，谱系与成员是其中读延续的层次：不息是经更新而复现的生起，生生不息是生生继续而仍有更多能形成，回返不足以是生生不息（DELEGATED-CHOICES D5，经修订由 Ren 2026-10-18 取）；只读作谱系的持续，与 Ren 原话中的“不断创造”有张力（作者的说明）；成员不长久时，这一张力由上述蕴含消除。依同一决定，后继者恰在接续保持任期之处继承前任者的损失：此后在其下的汲取在工作读法下侵蚀（Succession.readings），依存中断之处重新开始（Gap.lapse_starts_afresh）。 P87 的 h、活动或依存作为 Holds，以及把所立之量守恒读作延续，均是公开的读法；不声称它们穷尽现实的物质、信息或组织连续。",
@@ -1289,6 +1289,10 @@
     {
       "en": "20 October 2026, R48 (study section 261): law 31 added, the exact condition over a run on the counts under a census at every step, and sufficiency of a continuation without a split from some step on (ListedWebs.forcedAlong_iff_more, ListedWebs.forcedAlong_of_eventually_noSplit); the second does_not_show item and next_delta narrowed accordingly. No status changed.",
       "zh": "2026 年 10 月 20 日，R48（研究第 261 节）：加第 31 条，在每步都有普查之下整段上在数目上的精确条件，以及从某步起没有分裂的延续关系的充分性（ListedWebs.forcedAlong_iff_more、ListedWebs.forcedAlong_of_eventually_noSplit）；第二个未表明项与 next_delta 相应收窄。状态不变。"
+    },
+    {
+      "en": "20 October 2026, R49 (study section 262): the first does_not_show item and next_delta narrowed: the renewing and consuming classes under continuations are stated in classes-along-a-continuation. No law or status changed.",
+      "zh": "2026 年 10 月 20 日，R49（研究第 262 节）：第一个未表明项与 next_delta 收窄：延续关系下的更新与消耗两类在 classes-along-a-continuation 中陈述。规律与状态不变。"
     }
   ],
   "text_versions": [

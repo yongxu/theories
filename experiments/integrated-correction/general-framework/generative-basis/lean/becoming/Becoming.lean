@@ -41,6 +41,7 @@ import Becoming.Stock
 import Becoming.Change
 import Becoming.Population
 import Becoming.Identity
+import Becoming.ContinuedClasses
 import Becoming.Persistence
 import Becoming.Wholes
 import Becoming.Dissipation
@@ -559,6 +560,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   two. The census balance holds under a continuation in two halves: without splits,
   ceasing recurring needs arising recurring; without merges, under a bounded census,
   arising recurring needs ceasing recurring.
+* `Becoming.ContinuedClasses` (L1): formation classes read along a continuation rather than a
+  name (`Web.Continuing`, `Web.RenewingAlong`, `Web.ConsumingAlong`): renewing passes into every
+  branch of a split and consuming back into every formation merged (`Web.renewingAlong_iff`,
+  `Web.consumingAlong_iff`); both are unchanged by every re-identification carrying the
+  continuation (`Web.renewingAlong_reidentify`, `Web.consumingAlong_reidentify`), are the name
+  classes where each formation continues itself (`Web.renewingAlong_itself_iff`), and a merge
+  can make a formation that renews as named consume along it (`MergeClass.readings`).
 * `Becoming.Persistence` (L1): continuity across dormancy and identity read from relations
   (P87). Keeping the names of what holds fixes the class of a formation holding throughout,
   strictly beyond activity and tenure continuity; where nothing holds it leaves the join open.

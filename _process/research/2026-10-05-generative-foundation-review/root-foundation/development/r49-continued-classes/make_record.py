@@ -1,0 +1,74 @@
+"""R49: write the record classes-along-a-continuation. Usage: make_record.py RECEIPT STUDY_SECTION"""
+import json, sys, hashlib, datetime
+REC, SEC = sys.argv[1], sys.argv[2]
+L = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/'
+SRC = L + 'Becoming/ContinuedClasses.lean'
+RP = L + 'becoming-checks/' + REC + '/verification.json'
+STUDY = "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md"
+CH = "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+law1 = ["Becoming.Web.Continuing", "Becoming.Web.RenewingAlong", "Becoming.Web.ConsumingAlong",
+        "Becoming.Web.renewingAlong_not_consumingAlong"]
+law2 = ["Becoming.Web.renewingAlong_iff", "Becoming.Web.RenewingAlong.branch",
+        "Becoming.Web.consumingAlong_iff", "Becoming.Web.ConsumingAlong.merged"]
+law3 = ["Becoming.Reidentify.carry", "Becoming.Web.Continuing.of_reidentify", "Becoming.Web.Continuing.to_reidentify",
+        "Becoming.Web.continuing_reidentify", "Becoming.Web.renewingAlong_reidentify", "Becoming.Web.consumingAlong_reidentify"]
+law4 = ["Becoming.Web.itself", "Becoming.Web.Continuing.itself_same", "Becoming.Web.Continuing.itself_onward",
+        "Becoming.Web.Continuing.itself_from_zero", "Becoming.Web.renewingAlong_itself_iff", "Becoming.Web.consumingAlong_itself_iff"]
+law5 = ["Becoming.MergeClass.web", "Becoming.MergeClass.merge", "Becoming.MergeClass.first_renews",
+        "Becoming.MergeClass.first_consumes_along", "Becoming.MergeClass.readings"]
+decls = law1 + law2 + law3 + law4 + law5
+h = lambda p: hashlib.sha256(open(p, 'rb').read()).hexdigest()
+r = {
+ "schema_version": 2,
+ "id": "classes-along-a-continuation",
+ "title": {"en": "Formation classes along a continuation: splits and merges", "zh": "沿延续关系的形成类：分裂与合并"},
+ "kind": "theorem", "status": "recorded-checked", "family": "F01",
+ "reviewed_at_utc": datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat(),
+ "statement": {"en": "Read along what continues it, renewing passes into every branch of a split and consuming back into every formation merged; both are fixed by the continuation under every renaming, are the name classes where each formation continues itself, and a merge can make a renewer consume.",
+               "zh": "沿延续它者读，更新进入分裂的每一支，消耗回到合并进来的每个形成；二者在每次改名下由延续关系固定，在每个形成延续自身处即名的类，合并可使一个更新者消耗。"},
+ "laws": [
+  {"en": "Under a continuation R, f at u continues g at t where each step goes from a formation active before it to one active after it that R reads as its continuation. Renewing along R from g at t: every relation taken part in by a formation continuing it is renewed; consuming along R: a formation continuing it draws on a consumed condition. The two exclude each other.",
+   "zh": "在延续关系 R 下，当每一步都从步前活跃的形成到步后由 R 读作其延续的活跃形成时，u 处的 f 延续 t 处的 g。沿 R 自 t 处 g 的更新：延续它的形成所参与的每个关系都被更新；沿 R 的消耗：某个延续它的形成汲取被消耗的条件。二者互斥。",
+   "declarations": law1},
+  {"en": "The split law: renewing along an event holds exactly where its own relations are renewed and renewing holds along every formation continuing it across the next step, so renewing passes into every branch of a split. The merge law: consuming along an event holds exactly where it draws on a consumed condition or consuming holds along some formation continuing it, so consuming along a merged formation is consuming along every formation merged into it.",
+   "zh": "分裂之律：沿一个事件的更新恰在它自己的关系被更新、且沿下一步每个延续它的形成都更新之处成立，故更新进入分裂的每一支。合并之律：沿一个事件的消耗恰在它汲取被消耗的条件、或沿某个延续它的形成消耗之处成立，故沿合并后形成的消耗即沿合并进来的每个形成的消耗。",
+   "declarations": law2},
+  {"en": "Carrying a continuation through a re-identification, what continues what is unchanged, and so are both classes: no renaming changes a class read along a continuation.",
+   "zh": "把延续关系经改认搬运，什么延续什么不变，两个类也不变：没有改名改变沿延续关系读出的类。",
+   "declarations": law3},
+  {"en": "Where each formation continues only itself and f is active at every step, the classes along that continuation from step 0 are the name classes RenewingIn and ConsumingIn.",
+   "zh": "在每个形成只延续自身、且 f 每步都活跃之处，沿此延续关系自第 0 步的类即名的类 RenewingIn 与 ConsumingIn。",
+   "declarations": law4},
+  {"en": "A merge decides a class: a formation drawing only on a condition kept at its need renews as named, and, merged with one drawing on a spent condition into a formation that draws on it, consumes along the merge and does not renew along it.",
+   "zh": "合并决定类：只汲取保持在其所需之上的条件的形成，作为名而更新；与一个汲取被耗尽条件的形成合并为一个汲取它的形成后，沿合并消耗，不沿合并更新。",
+   "declarations": law5}],
+ "hypotheses": [{"en": "No axiom and no premise beyond the hypotheses each statement names: the continuation is supplied; the name classes need the formation active at every step.",
+                 "zh": "无公理，除各陈述所指名的假设外无前提：延续关系是给定的；名的类需要该形成每步都活跃。"}],
+ "does_not_show": [
+  {"en": "Which continuation holds: it is supplied. Where it is read off a world's conservation (World.Conserves), the classes are fixed except where standings coincide after a step (World.fixed_iff).", "zh": "哪个延续关系成立：它是给定的。由世界的守恒读出时（World.Conserves），类除了在一步之后所立重合之处外是固定的（World.fixed_iff）。", "kind": "scope"},
+  {"en": "Tenure and undermining under splits and merges: only the renewing and consuming classes are read along a continuation here.", "zh": "分裂与合并下的任期与侵蚀：此处只沿延续关系读更新与消耗两类。", "kind": "scope"},
+  {"en": "That a class along a merge is the better reading of the merged formations' class: the merge law says how consuming passes back, not which continuation to read.", "zh": "沿合并的类是合并形成之类的更好读法：合并之律说消耗如何回传，不说该读哪个延续关系。", "kind": "non-implication"}],
+ "counterexamples": [{"path": SRC, "detail": {"en": "MergeClass: a formation that renews as named consumes along a merge, so the name class and the class along a continuation part.", "zh": "MergeClass：作为名而更新的形成沿合并消耗，故名的类与沿延续关系的类分开。"}}],
+ "standard_boundaries": ["no-ethical-premise", "no-evaluation", "discrete-steps", "formal-not-empirical", "names-provisional", "omission-not-refutation"],
+ "validation_scope": {"en": f"Machine-checked by the consolidated Lean 4.29.1 checker (receipt {REC}): the 33 declarations of Becoming.ContinuedClasses, 20 of them theorems, have empty axiom reports; the checker verifies core purity. Author review in study section {SEC}; not independently reviewed.",
+                      "zh": f"Lean 4.29.1 合并检查器实查（回执 {REC}）：Becoming.ContinuedClasses 的 33 项声明（其中 20 项定理）公理报告为空；检查器并核对核心纯净。作者自审见研究第 {SEC} 节；未经独立审查。"},
+ "next_delta": {"en": "Tenure and undermining along a continuation; classes along the conservation continuation of a world; an independent review.",
+                "zh": "沿延续关系的任期与侵蚀；沿世界守恒延续关系的类；独立审查。"},
+ "correspondence": {"en": "Reading a class along lineages rather than names is the move from token identity to genealogical identity in the philosophy of biology (Hull 1980 on lineages; Godfrey-Smith 2009 on reproducers); the laws are close to definitional once the continuation is given, and what they add is that the renewing class is universal along branches and the consuming class existential, so splits and merges act on them in opposite directions.",
+                    "zh": "沿谱系而非名读类，是生物学哲学中从个例同一到谱系同一的转换（Hull 1980 论谱系；Godfrey-Smith 2009 论繁殖者）；给定延续关系后规律近乎定义，所增加的是：更新类沿各支是全称的，消耗类是存在的，故分裂与合并以相反方向作用于它们。"},
+ "canonical_source": SRC,
+ "aliases": ["classes under splits and merges", "分裂与合并下的类", "Becoming.Web.RenewingAlong", "Becoming.Web.ConsumingAlong"],
+ "dependencies": [
+  {"id": "identity-across-steps", "relation": "formal-reuse", "detail": {"en": "Reuses Reidentify, Web.reidentify and its preservation of renewed and consumed conditions; extends the continuation relations Web.Continues with what continues an event over many steps.", "zh": "复用 Reidentify、Web.reidentify 及其对被更新与被消耗条件的保持；以多步上延续一个事件者扩展延续关系 Web.Continues。"},
+   "interface": {"output": {"en": "Re-identification and continuation relations, with name classes.", "zh": "改认与延续关系，以及名的类。"}, "input": {"en": "Classes read along a continuation, through splits and merges.", "zh": "沿延续关系、经分裂与合并读出的类。"}, "conditions": {"en": "The continuation is supplied.", "zh": "延续关系是给定的。"}, "evidence": SRC}}],
+ "related": [{"id": "identity-across-steps", "detail": {"en": "That record's does_not_show named classes under splits and merges as not stated; this record states the renewing and consuming classes.", "zh": "该记录的未表明项指出分裂与合并下的类未陈述；本记录陈述更新与消耗两类。"}}],
+ "references": [
+  {"path": SRC, "role": "proof", "sha256": h(SRC), "declarations": decls},
+  {"path": RP, "role": "receipt", "sha256": h(RP), "declarations": []},
+  {"path": STUDY, "role": "integration", "sha256": h(STUDY), "declarations": []},
+  {"path": CH, "role": "statement", "sha256": h(CH), "declarations": []}],
+ "proof_bindings": [{"source": SRC, "receipt": RP, "sha256_pointer": "/source_sha256/Becoming.ContinuedClasses", "success_pointer": "/status", "success_value": "passed"}],
+ "history": [{"en": f"20 October 2026: added (R49), section 8.1 item 8's classes under splits and merges; study section {SEC}.", "zh": f"2026年10月20日：新增（R49），第 8.1 节第 8 项分裂与合并下的类；研究第 {SEC} 节。"}],
+}
+open('theories/becoming/results/records/classes-along-a-continuation.json', 'w').write(json.dumps(r, ensure_ascii=False, indent=2) + '\n')
+print('written')

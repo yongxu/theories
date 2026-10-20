@@ -1,0 +1,47 @@
+@Becoming.Web.renewingAlong_not_consumingAlong : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {t : Nat} {g : F}, W.RenewingAlong R t g → ¬W.ConsumingAlong R t g
+@Becoming.Web.renewingAlong_iff : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g : F},
+  W.RenewingAlong R t g ↔
+    (∀ (c : C), W.Participates t g c → W.Renewed c) ∧
+      ∀ (f : F), W.active t g → R t g f → W.active (t + 1) f → W.RenewingAlong R (t + 1) f
+@Becoming.Web.RenewingAlong.branch : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g f : F},
+  W.RenewingAlong R t g → W.active t g → R t g f → W.active (t + 1) f → W.RenewingAlong R (t + 1) f
+@Becoming.Web.consumingAlong_iff : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat} {g : F},
+  W.ConsumingAlong R t g ↔
+    (∃ c, W.draws t g c ∧ W.Consumed c) ∨
+      ∃ f, W.active t g ∧ R t g f ∧ W.active (t + 1) f ∧ W.ConsumingAlong R (t + 1) f
+@Becoming.Web.ConsumingAlong.merged : ∀ {F C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop} {t : Nat}
+  {g f : F}, W.ConsumingAlong R (t + 1) f → W.active t g → R t g f → W.active (t + 1) f → W.ConsumingAlong R t g
+@Becoming.Web.Continuing.of_reidentify : ∀ {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {σ : Becoming.Reidentify F F'} {t : Nat} {x : F'} {u : Nat} {y : F'},
+  (W.reidentify σ).Continuing (σ.carry R) t x u y → W.Continuing R t (σ.old t x) u (σ.old u y)
+@Becoming.Web.Continuing.to_reidentify : ∀ {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  {σ : Becoming.Reidentify F F'} {t : Nat} {g : F} {u : Nat} {h : F},
+  W.Continuing R t g u h → (W.reidentify σ).Continuing (σ.carry R) t (σ.new t g) u (σ.new u h)
+@Becoming.Web.continuing_reidentify : ∀ {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  (σ : Becoming.Reidentify F F') {t : Nat} {x : F'} {u : Nat} {y : F'},
+  (W.reidentify σ).Continuing (σ.carry R) t x u y ↔ W.Continuing R t (σ.old t x) u (σ.old u y)
+@Becoming.Web.renewingAlong_reidentify : ∀ {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  (σ : Becoming.Reidentify F F') {t : Nat} {x : F'},
+  (W.reidentify σ).RenewingAlong (σ.carry R) t x ↔ W.RenewingAlong R t (σ.old t x)
+@Becoming.Web.consumingAlong_reidentify : ∀ {F F' C : Type} {W : Becoming.Web F C} {R : Nat → F → F → Prop}
+  (σ : Becoming.Reidentify F F') {t : Nat} {x : F'},
+  (W.reidentify σ).ConsumingAlong (σ.carry R) t x ↔ W.ConsumingAlong R t (σ.old t x)
+@Becoming.Web.Continuing.itself_same : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {g : F} {u : Nat} {h : F},
+  W.Continuing Becoming.Web.itself t g u h → h = g
+@Becoming.Web.Continuing.itself_onward : ∀ {F C : Type} {W : Becoming.Web F C} {f : F},
+  (∀ (t : Nat), W.active t f) → ∀ (k s : Nat), W.Continuing Becoming.Web.itself s f (s + k) f
+@Becoming.Web.Continuing.itself_from_zero : ∀ {F C : Type} {W : Becoming.Web F C} {f : F},
+  (∀ (t : Nat), W.active t f) → ∀ (u : Nat), W.Continuing Becoming.Web.itself 0 f u f
+@Becoming.Web.renewingAlong_itself_iff : ∀ {F C : Type} {W : Becoming.Web F C} {f : F},
+  (∀ (t : Nat), W.active t f) → (W.RenewingAlong Becoming.Web.itself 0 f ↔ W.RenewingIn f)
+@Becoming.Web.consumingAlong_itself_iff : ∀ {F C : Type} {W : Becoming.Web F C} {f : F},
+  (∀ (t : Nat), W.active t f) → (W.ConsumingAlong Becoming.Web.itself 0 f ↔ W.ConsumingIn f)
+Becoming.MergeClass.kept_renewed : Becoming.MergeClass.web.Renewed Becoming.MergeClass.Place.kept
+Becoming.MergeClass.spent_consumed : Becoming.MergeClass.web.Consumed Becoming.MergeClass.Place.spent
+Becoming.MergeClass.first_renews : Becoming.MergeClass.web.RenewingIn Becoming.MergeClass.Formation.first
+Becoming.MergeClass.first_consumes_along : Becoming.MergeClass.web.ConsumingAlong Becoming.MergeClass.merge 0
+  Becoming.MergeClass.Formation.first
+Becoming.MergeClass.readings : Becoming.MergeClass.web.RenewingIn Becoming.MergeClass.Formation.first ∧
+  Becoming.MergeClass.web.ConsumingAlong Becoming.MergeClass.merge 0 Becoming.MergeClass.Formation.first ∧
+    ¬Becoming.MergeClass.web.RenewingAlong Becoming.MergeClass.merge 0 Becoming.MergeClass.Formation.first
