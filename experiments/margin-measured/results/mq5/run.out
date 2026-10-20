@@ -1,0 +1,46 @@
+{
+ "stocks": {
+  "primary": 69,
+  "other": 24,
+  "control": 5
+ },
+ "excluded": {
+  "control | short": 1,
+  "other | catch at or above biomass": 1,
+  "other | short": 17,
+  "primary | no admissible share": 1,
+  "primary | short": 57
+ },
+ "verdicts": {
+  "primary": {
+   "S1": "passed",
+   "S2": "passed",
+   "S3": "passed",
+   "S4": "passed",
+   "P1": "passed",
+   "P2": "passed",
+   "D1": "failed",
+   "D2": "failed"
+  },
+  "control": {
+   "S1": "not testable",
+   "S2": "not testable",
+   "S3": "not testable",
+   "S4": "not testable",
+   "P1": "not testable",
+   "P2": "not testable",
+   "D1": "not testable",
+   "D2": "not testable"
+  },
+  "other": {
+   "S1": "failed",
+   "S2": "failed",
+   "S3": "passed",
+   "S4": "passed",
+   "P1": "passed",
+   "P2": "passed",
+   "D1": "failed",
+   "D2": "passed"
+  }
+ }
+}

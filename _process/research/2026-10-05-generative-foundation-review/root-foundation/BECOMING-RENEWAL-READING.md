@@ -12034,3 +12034,88 @@ The kit is [`development/ev10-additive/`](development/ev10-additive/): this land
 - **Witness.** `Unrelated`: members 0, 1, 2 with offspring numbers 1, 2, 3; the amount is one at member 1 only. Pairs (0,1): both rise, concordance 1; (0,2): the amount does not change; (1,2): offspring number rises, the amount falls, discordance 1. Squared differences: offspring numbers 1 + 4 + 1 = 6, the amount 1 + 0 + 1 = 2.
 
 **Self-review.** Cauchy–Schwarz is classical; what is stated is its counting form over ordered pairs, which joins it to the spine's concordance and discordance with no subtraction and no rational number, and its reading as Fisher's additive part through one amount (Fisher 1930's additive genetic variance; Price 1972's reading of the fundamental theorem as the regression of offspring number on what is carried). The statement is an inequality, not Fisher's identity: the identity needs the ratio `β`. The equality case is shown only at the top (the amount offspring number itself); that equality holds exactly where offspring number is affine in the amount pair by pair (Lagrange's identity) is not stated. Several carried amounts at once, the actual breeding value, are not stated; the bound for each amount separately holds.
+
+## 280. A lag and the draw's response in the field (MQ5)
+
+```text
+Result(s): none new about the unfolding; a frozen field test, on assessed stocks no analysis had read,
+       of a state with a lag (level, recent giving, last year's escapement) and of the draw read as a law
+       of the stock, both extending the state of section 277 whose ends are Becoming.RegimeMargin's step
+       and the frozen rest; rules, code, presence-only layout, development and dry runs committed and
+       landed on main before any value of the test stocks was read (freeze e690d5062, kept as
+       refs/salvage/mq5-freeze); every verdict kept. Six verdicts passed, two failed.
+Delta: MQ4 (section 277) left last year's escapement adding to its state and persistence winning at
+       ten years while the catch followed the stock. MQ5's state: gamma_t = phi gamma_{t-1} + (1 - phi)
+       g(E_t) + lam (E_{t-1} - E_t), phi = 0.96 (MQ4's), lam = 0.55 (chosen on MQ3's and MQ4's stocks,
+       least median log error at five years over 249 stocks). By the balance x_{t+1} - x_t = gamma_t -
+       H_t, E_{t-1} - E_t = H_t - gamma_{t-1}: the lag is giving moving toward the draw, the same
+       dependence as the other order of draw and giving and as MQ3's compensation (not separated here);
+       at a fixed point the lag vanishes and RM1's regime point stays the long-run point (elementary, not
+       a Lean result). The draw's law, with no future catch: C_t = C_{t0-1} (x_t / x_{t0-1})^eps, eps = 0
+       the held draw of the frozen rest, eps = 1 a held exploitation rate, eps = 0.7 measured on the
+       development stocks and frozen. Test stocks: current stocks outside MQ3's and MQ4's with spawning
+       biomass and catch in tonnes, mostly from their most recent assessment: 69 primary, 5 controls, 24
+       of unknown method. SSB and catch are not on one scale: the level is SSB, the draw on it a share
+       kappa of the catch fitted per stock on its training years with the state with the lag.
+Premises / bridges: as MQ3 and MQ4 (assessed series read as level and draw; the draw taken first; the
+       quadratic class through the origin; the split), with SSB as the level and a fitted share kappa;
+       one lam and one eps for all stocks; robust (HC3) in-sample tests with a free shift of kappa in the
+       base model, since a wrong kappa adds the column the lag adds.
+Verdicts (primary, 69 stocks): S1 passed (MQ4's state on new stocks: recent giving detected beyond the
+       level in 47 of 69, the level beyond recent giving in 33); S2 passed (the lag, E_{t-1} and its
+       square beyond E_t, E_t^2 and gamma_{t-1}, detected in 14 of 69, binomial p = 7e-6; median excess
+       0.054); S3 passed (adding gamma_{t-2}, E_{t-2}, E_{t-2}^2 to the state with the lag removes a
+       median 0.059, bound 0.10; MQ4's G3 in this form, without the lag, 0.128); S4 passed (five years,
+       the state with the lag 0.194 against MQ4's state 0.211; 50 of 69 stocks, p = 2e-4); P1 passed
+       (persistence 0.324 against MQ4's state 0.477 at ten years); P2 passed (the lag closes 1.04 of that
+       gap, 0.318); D1 failed (the change in log catch on the change in log SSB with the catch's last
+       level: positive in 36 of 67, p = 0.63, median 0.11); D2 failed (the draw's law at eps = 0.7 closes
+       0.45 of the gap between the held draw, 0.571, and persistence, 0.324). Reported: with both the lag
+       and the draw's law the forecast does not beat persistence at ten years (0.327, better in 29 of 68
+       stocks); the state with the lag ties it (34 and 34); the lag fits better than the other order in
+       29 of 69; fitted kappa quartiles 0.05, 0.45, 0.75. Unknown method (24): S1, S2, D1 fail; S3, S4,
+       P1, P2, D2 pass. Controls (5): not testable.
+Post hoc (not verdicts; posthoc_mq5.py): without the catch's last level, the same year's change in
+       catch follows the change in SSB in 55 of 67 stocks, and next year's change follows it in 60 of 67
+       (MQ4's form), but the catch's last level has a negative coefficient in 58 of 67 (median -0.18):
+       catches revert to their own level, which a blind catch also shows in MQ4's form (dry runs); the
+       draw's elasticity on the test stocks is 0.37 (6,560 pairs) against 0.67 in development, and D2's
+       share would be 0.51 at eps = 1; in the 46 stocks with kappa > 0.1 D2's share is 0.54 and D1 23 of
+       45, so part of D2's shortfall is the SSB reading's limit and D1's is not; the lam best on the test
+       stocks is 0.35 (0.183 at five years, the frozen 0.55 0.194); a net change decaying by half a year,
+       with no level and no lag, forecasts as well as the lag (0.186 and 0.304 against 0.194 and 0.318);
+       in sample, giving on E_t, gamma_{t-1}, E_{t-1} has medians -0.31, 1.03, +0.28 (development -0.29,
+       1.00, +0.29): giving closes about 0.3 of its gap to the draw each year.
+Evidence: experiments/margin-measured (PREDICTIONS-2026-10-21-MQ5.md, mq5.py, dev_mq5.py,
+       posthoc_mq5.py, results/mq5: layout.json, development.json, development-models.json, dev.out,
+       dry-runs.json, dry.out, VERDICTS-mq5.json, run.out, posthoc-mq5.json, posthoc.out; README section
+       "MQ5"); data Zenodo 14043031, the archive already downloaded under Ren's approval of 20 October
+       (md5 matched), nothing new; standard library, CPU, a few minutes per command.
+Boundary: the series are assessment outputs, mostly from age-structured models (CASAL 25, SS3 11)
+       whose own structure carries a recruitment lag, so the lag found may partly be the assessment
+       model's; kappa is weakly identified (23 of 69 stocks fit kappa <= 0.1, where the catch hardly
+       enters the forecast), which bounds S2's power and D2 (both failed in the dry runs with 2% noise in
+       the SSB share, a limit fixed before the run); MQ3's loader had parsed in memory in earlier sessions,
+       without keeping, printing or analysing them, the most recent catch series of 100 of the 101 test
+       stocks by presence, the series MQ5 reads in 95 (disclosed in the freeze); lam and eps were chosen on development stocks and the test stocks
+       prefer 0.35 and 0.37; origins overlap within a stock; one lam and one eps for all stocks; the
+       three readings of the lag are not separated. Closest prior results (from memory, not checked
+       against the texts): delay-difference models carry the lag from recruitment (Deriso 1980; Schnute
+       1985); constant catch and constant exploitation rate are the classical harvest strategies at eps
+       = 0 and 1; short-term population forecasts are often won by models close to persistence (Ward,
+       Holmes, Thorson and Collen 2014, Oikos).
+Output -> input: on stocks no analysis had read, the state is the level, the recent giving and the
+       lag, and with the lag nothing more is needed in the median stock. Read through the balance, giving
+       moves toward the draw at about 0.3 a year in sample, the same as on the development stocks; with
+       it the forecast ties persistence at ten years, so the lag accounts for persistence's win, though
+       damping alone does as well. The draw's law in the frozen form does not: the catch's response to
+       the stock is not detected once its reversion to its own level is held, and its elasticity is half
+       the development's. Of the frozen rest's two held exchanges, giving moves (toward the draw) and the
+       draw, read in changes, does not detectably follow the stock here. The margin-of-a-regime record
+       and chapter section 8.7 now say so. Open: separating the three readings of the lag (age structure,
+       the other order, compensation), which survey series with an observation model or an age-structured
+       reading could do; the draw's response as a level law (catch on biomass) rather than in changes;
+       a lam per stock or per regime.
+```
+
+**Self-review.** The freeze carried real stakes and two of its rules failed. The development on MQ3's and MQ4's stocks expected D1 to pass (97 of 141 stocks there), D2 near 0.65 with a warning that it could fall below half, and S3 to be open; on the new stocks S3 passed and D1 and D2 failed. The dry runs did their job before any value was read. They showed a catch blind to the stock passing MQ4's form of D1, so D1 was made to hold the catch's own level. They showed the plain F test firing on columns the law does not read, so the tests became robust with a free shift of the share. They showed S2's floor and S1's effect-size bound failing on the generator that is the hypothesis, so both became detection tests. The freeze records each change. The SSB reading is the weakest joint: the share of the catch on the spawning stock is not measured but fitted, and it is confounded with the lag's linear part. The rules carry that confound, at the cost of power, and the post-hoc split by share shows that it explains part of D2's shortfall and none of D1's. The post-hoc readings change no verdict. The most informative is that the lag's in-sample coefficients are the same on stocks no analysis had read as on the development stocks: giving closes about 0.3 of its gap to the draw each year in both. The lag's forecast gain, by contrast, cannot be told from damping.

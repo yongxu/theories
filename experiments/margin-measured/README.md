@@ -16,8 +16,9 @@ Thermodynamics became more than formal when temperature and heat became measured
 | [PREDICTIONS-2026-10-20-MQ2.md](PREDICTIONS-2026-10-20-MQ2.md), [mq2.py](mq2.py), [posthoc_mq2.py](posthoc_mq2.py) | MQ2: the equation of state fitted on four dilution factors and tested on held-out regimes (four DFs, the salt shock, the indicator experiment). Frozen at `6deda4fb7` with the numerical predictions in `results/mq2/fit.json`, before any held-out value was read (`refs/salvage/mq2-freeze`; on main `5cf9e9e9d`); post-hoc analyses (not verdicts) |
 | [PREDICTIONS-2026-10-20-MQ3.md](PREDICTIONS-2026-10-20-MQ3.md), [mq3.py](mq3.py), [ram_read.py](ram_read.py), [posthoc_mq3.py](posthoc_mq3.py) | MQ3: the regime's step in the field, on 113 assessed fish stocks of the RAM Legacy database, against the frozen-rest reading. Frozen at `13af39133` with the presence-only layout and synthetic dry runs, before any time-series value was read (`refs/salvage/mq3-freeze`; on main `9e2e8ec2a`); post-hoc analyses (not verdicts) |
 | [PREDICTIONS-2026-10-20-MQ4.md](PREDICTIONS-2026-10-20-MQ4.md), [mq4.py](mq4.py), [dev_mq4.py](dev_mq4.py), [posthoc_mq4.py](posthoc_mq4.py) | MQ4: a state of level and recent giving, on the 76 assessed stocks of the same database no analysis had read, with the frozen-rest margin's time to break. Frozen and landed on main at `bdb985ee3` with the presence-only layout, the development on MQ3's stocks and synthetic dry runs, before any value of the test stocks was read (`refs/salvage/mq4-freeze`); post-hoc analyses (not verdicts) |
+| [PREDICTIONS-2026-10-21-MQ5.md](PREDICTIONS-2026-10-21-MQ5.md), [mq5.py](mq5.py), [dev_mq5.py](dev_mq5.py), [posthoc_mq5.py](posthoc_mq5.py) | MQ5: a lag and the draw's response, on the 69 assessed stocks with spawning biomass and catch that no analysis had read, the draw's share on the spawning stock fitted per stock. Frozen and landed on main at `e690d5062` with the presence-only layout, the development on MQ3's and MQ4's stocks and synthetic dry runs, before any value of the test stocks was read (`refs/salvage/mq5-freeze`); post-hoc analyses (not verdicts) |
 | [calibrate_yeast.py](calibrate_yeast.py), [calibrate_learners.py](calibrate_learners.py) | Test bed A's calibration (before the freeze); the post-hoc learner calibration on the reference variant (after round 1) |
-| [results/](results/) | Round 1 (`*.json`, `VERDICTS.json`), round 2 (`round2/`), real data (`data/`: `VERDICTS-data.json`, the null, the post-hoc floor), MQ2 (`mq2/`), MQ3 (`mq3/`), MQ4 (`mq4/`), `FROZEN-AT` |
+| [results/](results/) | Round 1 (`*.json`, `VERDICTS.json`), round 2 (`round2/`), real data (`data/`: `VERDICTS-data.json`, the null, the post-hoc floor), MQ2 (`mq2/`), MQ3 (`mq3/`), MQ4 (`mq4/`), MQ5 (`mq5/`), `FROZEN-AT` |
 
 To reproduce (Python 3.11, standard library only, CPU; about 13 minutes over 12 cores, almost all of it test bed B's learners):
 
@@ -51,6 +52,12 @@ MQ4 reads the same workbook (the development step reads MQ3's stocks only):
 
 ```bash
 python3 -I mq4.py dev '/path/to/RAMLDB v4.66/Excel/RAMLDB v4.66 (assessment data only).xlsx' && python3 -I mq4.py test '/path/to/RAMLDB v4.66/Excel/RAMLDB v4.66 (assessment data only).xlsx'
+```
+
+MQ5 reads the same workbook (the development steps read MQ3's and MQ4's stocks only):
+
+```bash
+python3 -I mq5.py dev '/path/to/RAMLDB v4.66/Excel/RAMLDB v4.66 (assessment data only).xlsx' && python3 -I mq5.py test '/path/to/RAMLDB v4.66/Excel/RAMLDB v4.66 (assessment data only).xlsx'
 ```
 
 ## The reading that sets what can be tested
@@ -228,6 +235,81 @@ Three things limit the reading:
 - **Origins overlap** within a stock, so the pooled shares count dependent years.
 - **φ is pooled.** A φ per stock, or one that changes with the regime, is not tested.
 
+## MQ5: a lag and the draw's response in the field
+
+Board item MQ5, 21 October 2026; study section 280. MQ4 left two things open:
+- last year's escapement still added to its state of level and recent giving;
+- at ten years "the level stays where it is" (persistence) beat every forecast from the state, while the catch followed the stock.
+
+MQ5 tests both on the stocks no analysis had read, which carry spawning biomass (SSB) and catch:
+
+γ_t = φ γ_{t−1} + (1 − φ) g(E_t) + λ (E_{t−1} − E_t),  C_t = C_{t0−1} (x_t / x_{t0−1})^ε.
+
+- **The lag is giving moving toward the draw.** The level changes by giving less the draw, so E_{t−1} − E_t = H_t − γ_{t−1}.
+  - A giving that reads last year's escapement is therefore a giving that reads this year's draw. Three readings give that one dependence: an age structure, the other order of draw and giving, and MQ3's compensation. The test does not separate them.
+  - At a fixed point the lag vanishes, so RM1's regime point stays the long-run point.
+  - φ = 0.96 is MQ4's. λ = 0.55 was chosen on MQ3's and MQ4's stocks and frozen.
+- **The draw as a law of the stock.** No future catch is used.
+  - ε = 0 holds the draw (the frozen rest). ε = 1 holds the exploitation rate.
+  - ε = 0.7 was measured on the development stocks and frozen.
+- **The reading.** SSB and catch are not on one scale.
+  - The level is SSB, and the draw on it is a share κ of the catch, fitted per stock on its training years.
+  - κ is weakly identified: a wrong κ adds the same column as the lag. So the in-sample tests are robust (HC3), with a free shift of κ in the base model.
+
+The test stocks are 69 primary stocks, 5 production-model controls and 24 of unknown method. Each is a current stock outside MQ3's and MQ4's, mostly from its most recent assessment (CASAL 25, SS3 11, SCA 7, VPA 6, ASAP 5, others).
+
+Rules, code, the presence-only layout, the development and the dry runs were committed and landed on main before any value was read (freeze `e690d5062`).
+- In the dry runs (ten generators), every rule passed where the hypothesis holds, in both readings, and each null failed a rule.
+- With 2% year-to-year noise in the SSB share, S2 and D2 failed in the SSB reading. That limit was fixed before the run.
+
+| Prediction (primary group, 69 stocks) | Result |
+|---|---|
+| S1: MQ4's state on new stocks (recent giving beyond the level, and the level beyond recent giving, each detected by its robust test in ≥ 20% of stocks, beyond chance) | **passed** (recent giving in 47 of 69, the level in 33; recent giving's median excess 0.40) |
+| S2: the lag is part of the state (E_{t−1}, E_{t−1}² added to E_t, E_t², γ_{t−1}, detected beyond chance) | **passed** (14 of 69, binomial p = 7 × 10⁻⁶; median excess 0.054) |
+| S3: nothing more is needed (adding γ_{t−2}, E_{t−2}, E_{t−2}² to the state with the lag removes a median < 0.10) | **passed** (0.059; MQ4's G3 in this form, without the lag, 0.128) |
+| S4: the lag in the forecast (at five years the state with the lag beats MQ4's state) | **passed** (median \|log error\| 0.194 against 0.211; smaller in 50 of 69 stocks, p = 2 × 10⁻⁴) |
+| P1: persistence wins at ten years (MQ4's F10b, retested) | **passed** (0.324 against MQ4's state's 0.477) |
+| P2: the lag closes at least half of the gap between MQ4's state and persistence at ten years | **passed** (1.04: 0.318 against persistence's 0.324) |
+| D1: the draw follows the stock (the change in log catch on the change in log SSB, with the catch's last level; positive in more stocks than not) | **failed** (36 of 67, p = 0.63; median slope 0.11) |
+| D2: the draw's law closes at least half of the gap between the held draw and persistence at ten years | **failed** (0.45: 0.460 against the held draw's 0.571 and persistence's 0.324) |
+
+**Reported (not verdicts).**
+- With both the lag and the draw's law, the forecast does not beat persistence at ten years (0.327 against 0.324; better in 29 of 68 stocks). The state with the lag ties it (34 and 34).
+- The lag fits better than the other order in 29 of 69 stocks.
+- The fitted κ has quartiles 0.05, 0.45 and 0.75.
+- **The group of unknown method** (24) fails S1 (the level detected in 3), S2 (4, p = 0.03) and D1 (17 of 24, p = 0.06), and passes S3, S4, P1, P2 and D2.
+- **The controls** (5) are not testable.
+
+**Post hoc** ([`posthoc_mq5.py`](posthoc_mq5.py), [`results/mq5/posthoc-mq5.json`](results/mq5/posthoc-mq5.json), not verdicts):
+- **Why D1 fails where MQ4's form holds.** Three forms of the same regression give different answers:
+  - Without the catch's own last level, the same year's change in catch follows the change in SSB in 55 of 67 stocks (median 0.49).
+  - Next year's change on this year's (MQ4's form) follows it in 60 of 67.
+  - With the catch's last level, only 36 of 67 follow it. That level's coefficient is negative in 58 of 67 (median −0.18): the catches revert to their own level.
+
+  The dry runs showed that a catch blind to the stock and reverting to its own mean gives MQ4's form a positive slope. So in these stocks the evidence that the catch follows the stock rests on forms that a reverting catch also produces.
+- **The draw's elasticity on the test stocks** is 0.37 (6,560 pairs), against 0.67 on the development stocks.
+  - D2's share would be 0.29 at ε = 0.35, 0.51 at 1.0 and 0.67 at 1.5.
+  - In the 46 stocks with κ > 0.1, where the catch enters the forecast, D2's share is 0.54. D1 there is 23 of 45. Part of D2's shortfall is the SSB reading's limit; D1's is not.
+- **λ on the test stocks.** The best is 0.35 (0.183 at five years), against the frozen 0.55 (0.194) and persistence's 0.197.
+- **Damping alone does as well.** A net change decaying by half a year, with no level and no lag, has 0.186 at five years and 0.304 at ten, against the lag's 0.194 and 0.318. The lag is better in 30 of 69 and 27 of 68 stocks (not significant). The lag's forecast gain cannot be told from damping; its specific evidence is in sample (S2, S3).
+- **The lag in sample.** Per stock, giving on E_t, γ_{t−1} and E_{t−1} without squares has medians −0.31, 1.03 and +0.28 (E_{t−1} positive in 53 of 69). On the development stocks it was −0.29, 1.00 and +0.29. By the balance, giving closes about 0.3 of its gap to the draw each year, the same on stocks no analysis had read.
+
+**What it says.**
+- **The state is the level, the recent giving and the lag.** On stocks no analysis had read, the lag is detected beyond chance, and with it nothing more is needed in the median stock: MQ4's remainder of 0.128 falls to 0.059. Read through the balance, giving moves toward the draw at about 0.3 a year in sample.
+- **The lag accounts for persistence's ten-year win. The draw's law, in the frozen form, does not.**
+  - With giving moving toward the draw, the forecast ties persistence at ten years.
+  - The draw's law at the frozen elasticity closes less than half of the held draw's gap.
+  - In the frozen form, the catch's response to the stock is not detected: its movements here are mostly reversion to its own level, and its elasticity is half the development's.
+- **Persistence is still not beaten.** Damping alone forecasts as well as the lag.
+
+For the theory: in these stocks the frozen rest's two held exchanges behave differently. Giving is not held: it moves toward the draw, so the level's net change shrinks year by year and a stock under a steady draw changes little. That fits MQ4's finding that the margin over the net draw ranks the risk of a break but overstates it (T2). The draw, read in changes, does not detectably follow the stock here. The state needs the level, the recent giving and the lag, and the draw's response is not established as part of it.
+
+Four things limit the reading:
+- **The series are assessment outputs.** Most come from age-structured models (CASAL, SS3) whose own structure carries a recruitment lag, so the lag may partly be the assessment model's.
+- **κ is weakly identified.** A third of the stocks fit κ ≤ 0.1.
+- **λ and ε differ on the test stocks.** Both were chosen on the development stocks, and the test stocks prefer 0.35 and 0.37.
+- **Origins overlap** within a stock.
+
 ## Limits
 
-Test bed A is a simulation: the parameters are set from the paper's reported facts, not its table S1. Near the fold the model's fluctuations (CV 0.06 at DF 1400) are below the paper's (about 0.2). The culture volume is assumed. The hidden lag state of A1m is invented to give the test something to detect, not measured biology. Test bed B is deterministic and small (14 cells, horizon 45, two lawn cells). Its best responses are exact, and its learners are tabular with modest training. B6's environment did not create the end-of-coupling situation for the best response. On the real data, the population layout (same plate position = same population across days) is an assumption read from the files, since the README PDFs were not downloaded. D2's measurement floor was misjudged before the run, and the floor of 0.01 is post hoc in MQ1 (pre-registered in MQ2). MQ2's held-out bifurcation DFs had been read in MQ1, and the masked layouts of the salt-shock and indicator files showed exponent signs (disclosed in the MQ2 freeze). The salt-shock column order (DF 250, 500, 750, 825) is read from the paper's figure legend, and its day-5 reading is assumed to be the first after the shock day. Day 9 is only four days after the shock, too short to settle fates near the need. The two-phase class is Dai et al.'s. Their own full-diagram fit (table S1) was not available for comparison. MQ3's field series are assessment outputs, not measurements; most of the database (stocks with spawning biomass only) is not used; one giving class and one split were frozen. MQ4's test stocks are read from earlier assessments of current stocks, so their series end earlier than MQ3's; the 92 assessments of unknown method are reported, not tested; survey series (measured, with catchability unknown and noise that makes one-year giving anticorrelated) are not used.
+Test bed A is a simulation: the parameters are set from the paper's reported facts, not its table S1. Near the fold the model's fluctuations (CV 0.06 at DF 1400) are below the paper's (about 0.2). The culture volume is assumed. The hidden lag state of A1m is invented to give the test something to detect, not measured biology. Test bed B is deterministic and small (14 cells, horizon 45, two lawn cells). Its best responses are exact, and its learners are tabular with modest training. B6's environment did not create the end-of-coupling situation for the best response. On the real data, the population layout (same plate position = same population across days) is an assumption read from the files, since the README PDFs were not downloaded. D2's measurement floor was misjudged before the run, and the floor of 0.01 is post hoc in MQ1 (pre-registered in MQ2). MQ2's held-out bifurcation DFs had been read in MQ1, and the masked layouts of the salt-shock and indicator files showed exponent signs (disclosed in the MQ2 freeze). The salt-shock column order (DF 250, 500, 750, 825) is read from the paper's figure legend, and its day-5 reading is assumed to be the first after the shock day. Day 9 is only four days after the shock, too short to settle fates near the need. The two-phase class is Dai et al.'s. Their own full-diagram fit (table S1) was not available for comparison. MQ3's field series are assessment outputs, not measurements; most of the database (stocks with spawning biomass only) is not used; one giving class and one split were frozen. MQ4's test stocks are read from earlier assessments of current stocks, so their series end earlier than MQ3's; the 92 assessments of unknown method are reported, not tested; survey series (measured, with catchability unknown and noise that makes one-year giving anticorrelated) are not used. MQ5's test stocks carry spawning biomass, not total biomass, so the draw's share on the spawning stock is fitted per stock and weakly identified, which bounds the lag test's power and, where the share is near zero, keeps the catch out of the forecast; the lag found there may partly be the structure of the assessment models (mostly age-structured) that produced the series.

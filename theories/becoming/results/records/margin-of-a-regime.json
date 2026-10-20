@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T16:29:39+00:00",
+  "reviewed_at_utc": "2026-10-20T17:59:14+00:00",
   "statement": {
     "en": "With giving read off the level under a standing draw, the condition holds exactly from a least level up, which lies more than the draw above the need where giving there falls short of it, rises with the draw, and harms of joint draws are super-additive up to one unit.",
     "zh": "在常设汲取下所给读自水平时，不可回返点是确切的；在需求处所给不足汲取时高出需求不止一份汲取；随汲取升高；联合汲取的损害在一单位之内超可加。"
@@ -114,13 +114,18 @@
       "kind": "scope"
     },
     {
-      "en": "That level and recent giving are the whole state in the field: giving relaxing toward the level's law narrows errors, but last year's escapement still adds and the direction is no better.",
-      "zh": "水平与近期所给在野外就是全部状态：所给向水平的规律回归缩小了误差，但上一年的逃逸量仍有增益，方向判断也不更好。",
+      "en": "That level and recent giving are the whole state in the field: last year's escapement adds to them. With it, nothing more is needed in the median assessed stock, but whether that lag is an age structure, the other order of draw and giving, or compensation is not separated, and its forecast gain cannot be told from damping.",
+      "zh": "水平与近期所给在野外就是全部状态：上一年的逃逸量对两者仍有增益。加上它，中位的已评估种群不再需要更多，但这一滞后是年龄结构、汲取与所给的另一种次序，还是补偿，未作区分，其预测增益也与单纯的阻尼无法区分。",
       "kind": "scope"
     },
     {
-      "en": "That the frozen-rest margin over the net draw is a time to break in the field: it ranks the risk, but a third of those it put within five years fell, and the catch followed the stock.",
-      "zh": "冻结其余的余量除以净汲取在野外就是破断时间：它对风险排序正确，但被判为五年内者只有三分之一如此，且捕捞随种群而变。",
+      "en": "That the frozen-rest margin over the net draw is a time to break in the field: it ranks the risk, but a third of those it put within five years fell, and giving, which the frozen rest holds, moves toward the draw.",
+      "zh": "冻结其余的余量除以净汲取在野外就是破断时间：它对风险排序正确，但被判为五年内者只有三分之一如此，而冻结其余所持的所给向汲取移动。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the draw responds to the stock in the field: on assessed stocks no analysis had read, catches revert to their own level, and once that is held their change does not follow the change in the stock in most stocks.",
+      "zh": "汲取在野外回应种群：在无人读过的已评估种群上，捕捞回归其自身水平；控制这一点后，多数种群中捕捞的变化并不随种群的变化而变。",
       "kind": "scope"
     },
     {
@@ -160,12 +165,12 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T135509.239302Z）：Becoming.RegimeMargin 的 49 项声明（36 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 270 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A state with a lag (an age structure), frozen on data not yet read: level and recent giving are both part of the state in assessed stocks, but not all of it; the draw's response to the stock read as part of the regime; field series measured rather than assessed, with an observation model; the join to Flow.Balances; the fold over Archimedean amounts; coupled conditions; an independent review.",
-    "zh": "带滞后（年龄结构）的状态，在尚未读过的数据上冻结检验：在已评估种群中，水平与近期所给都属于状态，但不是全部；把汲取对种群的回应读作体制的一部分；测量而非评估得到的野外序列，配以观测模型；与 Flow.Balances 相接；阿基米德量上的折叠；相互耦合的条件；独立审查。"
+    "en": "Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; the draw's response as a level law of the stock rather than in changes; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; coupled conditions; an independent review.",
+    "zh": "区分滞后的三种读法（年龄结构、汲取与所给的另一种次序、补偿），借助调查序列与观测模型或按年龄结构的读法；把汲取的回应读作种群水平的规律而非变化中的规律；按种群或按体制的滞后权重；与 Flow.Balances 相接；阿基米德量上的折叠；相互耦合的条件；独立审查。"
   },
   "correspondence": {
-    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS).",
-    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合损害的超可加即凹的增函数更新之逆的凸性。每条规律都在模拟的 Allee 酵母与网格世界中测量过，这一步又以冻结的预测在 Dai 等的真实酵母与 RAM Legacy 种群评估数据库 v4.66 上检验过，再在无人读过的已评估种群上检验了以这一步与冻结其余为两端的、由水平与近期所给构成的状态；已评估种群中生产力的体制转换是已知的（Vert-pre 等 2013，PNAS）。"
+    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read, then a state with a lag and the draw read as a law of the stock on spawning-stock series no analysis had read; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS), and delay-difference models carry the lag from recruitment (Deriso 1980).",
+    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合损害的超可加即凹的增函数更新之逆的凸性。每条规律都在模拟的 Allee 酵母与网格世界中测量过，这一步又以冻结的预测在 Dai 等的真实酵母与 RAM Legacy 种群评估数据库 v4.66 上检验过，再在无人读过的已评估种群上检验了以这一步与冻结其余为两端的、由水平与近期所给构成的状态，又在无人读过的产卵种群序列上检验了带滞后的状态与读作种群规律的汲取；已评估种群中生产力的体制转换是已知的（Vert-pre 等 2013，PNAS），延迟差分模型显式带有来自补充的滞后（Deriso 1980）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
   "aliases": [
@@ -270,7 +275,7 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "1e8c09b08590ffc8f70e1f2c1795e7d25387ec71436d55d644b8115396e5f8a4"
+      "sha256": "6d828d5c228e2f7048c9bc3d69cce74e43208bdfc840fdf0c46c10a5515afd00"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
@@ -299,6 +304,10 @@
     {
       "en": "20 October 2026: MQ4 (study section 277), a frozen field test on 76 assessed stocks no analysis had read, of a state of level and recent giving with this step and the frozen rest as its ends: both variables are part of the state and the level's pull narrows forecast errors, but the pair is not the whole state, the direction is no better than the frozen rest's, and the frozen-rest time to break ranks risk without timing it; the scope and the next step are revised.",
       "zh": "2026年10月20日：MQ4（研究第 277 节），在 76 个无人读过的已评估种群上的冻结野外检验，检验以这一步与冻结其余为两端的、由水平与近期所给构成的状态：两个变量都属于状态，水平的回拉缩小了预测误差，但两者不是全部状态，方向不比冻结其余好，冻结其余的破断时间能排序风险而不能定时；范围与下一步据此修订。"
+    },
+    {
+      "en": "21 October 2026: MQ5 (study section 280), a frozen field test on 69 assessed stocks with spawning biomass no analysis had read, of a state with a lag (giving also reading last year's escapement, equivalently moving toward the draw) and of the draw read as a law of the stock: the lag is part of the state, with it nothing more is needed in the median stock, and it accounts for persistence's ten-year win, though damping alone does as well; the draw's response to the stock is not detected once the catch's reversion to its own level is held, and the draw's law does not account for that win; the scope and the next step are revised.",
+      "zh": "2026年10月21日：MQ5（研究第 280 节），在 69 个无人读过的、带产卵生物量的已评估种群上的冻结野外检验，检验带滞后的状态（所给也读上一年的逃逸量，亦即向汲取移动）与读作种群规律的汲取：滞后属于状态，加上它中位种群不再需要更多，它也解释了十年尺度上持续性的胜出，虽然单纯的阻尼同样做到；控制捕捞回归其自身水平后，汲取对种群的回应未被检出，汲取的规律也不能解释那一胜出；范围与下一步据此修订。"
     }
   ]
 }
