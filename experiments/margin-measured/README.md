@@ -13,6 +13,7 @@ Thermodynamics became more than formal when temperature and heat became measured
 | [garden.py](garden.py) | Test bed B: the lawn gridworld, exact best responses, tabular Q-learners, coupling by intervention, the margin law's band |
 | [run.py](run.py), [analyze.py](analyze.py) | Frozen configurations and verdict rules |
 | [yeast_data.py](yeast_data.py), [synth_null.py](synth_null.py), [posthoc_data.py](posthoc_data.py) | D1-D2 (and D1′, D2′) on the real data; the synthetic null; the post-hoc floor analysis (not a verdict) |
+| [PREDICTIONS-2026-10-20-MQ2.md](PREDICTIONS-2026-10-20-MQ2.md), [mq2.py](mq2.py), [posthoc_mq2.py](posthoc_mq2.py) | MQ2: the equation of state fitted on four dilution factors and tested on held-out regimes (four DFs, the salt shock, the indicator experiment). Frozen at `6deda4fb7` with the numerical predictions in `results/mq2/fit.json`, before any held-out value was read (`refs/salvage/mq2-freeze`); post-hoc analyses (not verdicts) |
 | [calibrate_yeast.py](calibrate_yeast.py), [calibrate_learners.py](calibrate_learners.py) | Test bed A's calibration (before the freeze); the post-hoc learner calibration on the reference variant (after round 1) |
 | [results/](results/) | Round 1 (`*.json`, `VERDICTS.json`), round 2 (`round2/`), real data (`data/`: `VERDICTS-data.json`, the null, the post-hoc floor), `FROZEN-AT` |
 
@@ -30,6 +31,12 @@ The real-data test needs Dai et al.'s `data_bifurcation.zip` (Zenodo record 5003
 
 ```bash
 python3 -I yeast_data.py /path/to/extracted/bifurcation
+```
+
+MQ2 needs the three archives extracted, each in its own directory:
+
+```bash
+python3 -I mq2.py fit /path/to/bifurcation && python3 -I mq2.py test /path/to/bifurcation /path/to/saltshock /path/to/indicator
 ```
 
 ## The reading that sets what can be tested
@@ -84,6 +91,35 @@ Classes: *identity* (follows from what the system is built to meet), *identity i
 4. No learner round 2: a calibration on the reference variant only (6 seeds per setting) found no setting reaching the best response, so a rerun would test H2 again.
 5. Round 1's verdicts stand as frozen; each round's run commit is in `results/FROZEN-AT`. Those are the commits before the rebase onto main, kept reachable as `refs/salvage/mq1-*`; the rebased commits on main are listed in the file table above.
 
+## MQ2: the equation of state against held-out regimes
+
+Board item MQ2, 20 October 2026; study section 266. MQ1 found that a point prediction needs the renewal curve. MQ2 fits one daily growth map G on DF 250, 500, 1000 and 1266 of Dai et al.'s bifurcation data, with n_{t+1} = G(n_t / DF) and the dilution as the standing draw. From G alone it predicts each regime's need û(DF), level s(DF) and margin s − û, then tests them on regimes G was not fitted on:
+- DF 750, 1133, 1400 and 1600 of the same experiment, which I had already read in MQ1, so held out from the fit, not from the analyst;
+- the salt-shock experiment (DF 250, 500, 750 and 825), unread before the run;
+- the indicator experiment (all eight DFs at equilibrium), unread before the run.
+
+The class is Dai et al.'s two-phase growth, against a logistic no-need null. The floor of 0.01 is now pre-registered.
+
+| Prediction | Result |
+|---|---|
+| M: G beats the no-need null on held-out one-day transitions | **passed** (RMSE 0.294 against 0.355; better at all four held-out DFs) |
+| A1: the predicted need separates fates (≥ 90% each side, outside a factor 1.5) | **passed** at the three testable DFs (1133: 93% and 94%; 1400 and 1600: 100% and 100%). DF 750 has no low group above the floor. The null classifies 68-81% |
+| A2: the predicted need within a factor 1.5 of the need measured from fates | **passed** (û/u* = 0.81, 1.26, 0.79 at DF 1133, 1400, 1600) |
+| B2: the measured need rises with the draw | **passed** (u* = 0.041, 0.043, 0.094 at DF 1133, 1400, 1600) |
+| B1: the fold | reported only: G puts it at DF 2797 [2719, 2899], far past the paper's collapse beyond 1600 |
+| S: the level in the indicator experiment within a factor 1.5 at all eight DFs, and no worse than the null | **failed**: within 1.1 up to DF 1266, 1.26 at 1400, 1.52 at 1600, and the null's summed error is smaller (0.59 against 0.79) |
+| S2: the day-7 level of held-out bifurcation populations within 1.5 | **failed** (1.03, 1.02, 1.30, then 1.55 at DF 1600) |
+| C1: after the salt shock, alive on day 9 iff the day-5 density > û(DF) | **failed**: accuracy 0.78, no better than the null. At DF 825, 7 of 8 died from post-shock densities 0.021-0.030, above the predicted need 0.016 |
+| C2: the same with day 6 | **failed** (0.81 against the null's 0.78) |
+| D: time to break after the DF passes the fold | not testable: no run in these data passes the fold |
+
+**What it says.** The equation of state measured on some regimes predicts the **need** of held-out regimes of the same experiment, including those next to the fold. This is the margin's lower edge, and it is what separates survival from extinction there. It beats a model with no need by 18-30 points of accuracy. It fails on the **level** near the fold, and it fails on the **need after a shock in a separate experiment**. Post hoc ([`posthoc_mq2.py`](posthoc_mq2.py), [`results/mq2/posthoc-mq2.json`](results/mq2/posthoc-mq2.json), not verdicts), both failures have one source: G is not one function of density.
+- **P1.** At equal start density, per-capita daily growth falls with the dilution factor as DF^(−0.31 ± 0.01) (1,465 low-density pairs). Between DF 250 and 1600 that is a factor of 2-2.7. So the draw lowers renewal beyond removing cells. Carryover of hexose or invertase with the transferred culture would do this; that is not tested here. A fit on low-DF regimes therefore overstates renewal near the fold, which is why the fold lands near 2800 and the level comes out too high.
+- **P2.** Letting G's low-density rate fall with DF (one more parameter, fitted on the fit set only) lowers the held-out RMSE (0.269) and brings the fold to DF 2086. It puts the levels at 1400 and 1600 within 1.1 and 1.2, but overshoots the need at 1400 (û/u* = 1.9).
+- **P3.** The salt-shock experiment's pre-shock levels are 8-20% below the bifurcation experiment's at every DF, so its regime differs too. Locating each column on the frozen G by its own pre-shock level gives needs of 0.035 at DF 750 and 0.046 at DF 825. That is right for 7 of 8 populations at 825, wrong for 5 of 8 at 750: there the populations hover at 0.02-0.16 for the four days left and are alive on day 9 without recovering. A slow return near the need is what a fold predicts, so four days do not settle the fates near the threshold.
+
+For the theory: the margin is a measured equation of state for the need, across held-out regimes of one experiment. But the renewal curve is a function of the regime, the draw included, not of the level alone. The draw does more than remove: it lowers what is given back at the same level. Read in Lean terms, giving depends on the level and the standing draw, so a regime's need rises faster with the draw than removal alone accounts for. The margin-of-a-regime core module being built in the parent session should allow this.
+
 ## Limits
 
-Test bed A is a simulation: the parameters are set from the paper's reported facts, not its table S1. Near the fold the model's fluctuations (CV 0.06 at DF 1400) are below the paper's (about 0.2). The culture volume is assumed. The hidden lag state of A1m is invented to give the test something to detect, not measured biology. Test bed B is deterministic and small (14 cells, horizon 45, two lawn cells). Its best responses are exact, and its learners are tabular with modest training. B6's environment did not create the end-of-coupling situation for the best response. On the real data, the population layout (same plate position = same population across days) is an assumption read from the files, since the README PDFs were not downloaded. D2's measurement floor was misjudged before the run, and the floor of 0.01 is post hoc.
+Test bed A is a simulation: the parameters are set from the paper's reported facts, not its table S1. Near the fold the model's fluctuations (CV 0.06 at DF 1400) are below the paper's (about 0.2). The culture volume is assumed. The hidden lag state of A1m is invented to give the test something to detect, not measured biology. Test bed B is deterministic and small (14 cells, horizon 45, two lawn cells). Its best responses are exact, and its learners are tabular with modest training. B6's environment did not create the end-of-coupling situation for the best response. On the real data, the population layout (same plate position = same population across days) is an assumption read from the files, since the README PDFs were not downloaded. D2's measurement floor was misjudged before the run, and the floor of 0.01 is post hoc in MQ1 (pre-registered in MQ2). MQ2's held-out bifurcation DFs had been read in MQ1, and the masked layouts of the salt-shock and indicator files showed exponent signs (disclosed in the MQ2 freeze). The salt-shock column order (DF 250, 500, 750, 825) is read from the paper's figure legend, and its day-5 reading is assumed to be the first after the shock day. Day 9 is only four days after the shock, too short to settle fates near the need. The two-phase class is Dai et al.'s. Their own full-diagram fit (table S1) was not available for comparison.
