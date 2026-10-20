@@ -514,7 +514,7 @@ Supplied premises / correspondence: Leike et al. 2017; Krakovna et al. 2018/2019
        Perolat et al. 2017 (renewable gridworlds, as social dilemmas)
 Evidence: web searches of 20 October 2026; Krakovna et al. 2018/2019 and 2020, Turner et al. 2020 (AIES) and
        SafeLife 1.0 read in the text (ar5iv); the others by abstract or secondary description; experiment SE1
-       (frozen at 0b158e1b9, on main 43d91f692; R1-R6 passed)
+       (frozen at 0b158e1b9, on main f842c2885; R1-R6 passed)
 Boundary: AI check, one session; SafeLife not run (package install and deep RL); Sushi, Vase, Survival, Damage,
        Correction, Offset, Interference and Soko-coin classified from their descriptions, not rebuilt; the
        Box layout rebuilt from the published description; the negative-side-effects line (Saisubramanian et al.)
