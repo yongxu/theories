@@ -1,0 +1,1057 @@
+{
+ "scope": "post hoc, after the frozen MQ5 test and its first post hoc analyses; not verdicts",
+ "test_primary": {
+  "all": {
+   "stocks": 69,
+   "timing": {
+    "stocks": 69,
+    "year_t_catch_lowers": 25,
+    "year_t_minus_1_catch_lowers": 55,
+    "median_coefficients": [
+     0.24150714741228974,
+     -0.3256067467038564
+    ]
+   },
+   "forms": {
+    "same_year": {
+     "stocks": 67,
+     "positive": 38,
+     "median": 0.10347402596748419,
+     "p_two_sided": 0.32843206269718994
+    },
+    "a_year_late": {
+     "stocks": 67,
+     "positive": 48,
+     "median": 0.34076110450412467,
+     "p_two_sided": 0.0005216127568115161
+    }
+   },
+   "D1": {
+    "stocks": 67,
+    "positive_slopes": 36,
+    "median_slope": 0.11332601327874096,
+    "p_two_sided": 0.6254068289416486
+   },
+   "eps_measured": 0.3706408072646275,
+   "D2_parts": {
+    "origins": 669,
+    "median_abs_log_error": {
+     "CLLG0": 0.5708061034841301,
+     "LG": 0.4772319941441616,
+     "CLLG": 0.4604500348017586,
+     "RW": 0.3235317253454781,
+     "CL0": 0.3278182255970627,
+     "LGD": 0.3177318526346391,
+     "CL": 0.32733760209857854
+    },
+    "gap_closed_by_actual_catches": 0.37842218043108156,
+    "gap_closed_by_draw_law_D2": 0.4462899452546292,
+    "forecasts_at_floor": {
+     "CLLG0": 101,
+     "LG": 81,
+     "CLLG": 42
+    }
+   },
+   "state": {
+    "stocks": 69,
+    "S1_recent_giving_detected": 47,
+    "S1_level_detected": 33,
+    "S2_lag_detected": 14,
+    "S2_binomial_p": 6.9321771239243954e-06,
+    "S2_lag_median_excess": 0.05400554410919073,
+    "S3_median_excess": 0.05924403547645812,
+    "S4_k5_LGD_LG": [
+     0.194460477762389,
+     0.21092353319108398
+    ],
+    "S4_k5_signs": {
+     "better": 50,
+     "worse": 19,
+     "p_two_sided": 0.0002443970165775749
+    },
+    "k10_LGD_RW_LG": [
+     0.3177318526346391,
+     0.3235317253454781,
+     0.4772319941441616
+    ],
+    "lag_coefficients": {
+     "stocks": 69,
+     "columns": [
+      "E_t",
+      "SP_{t-1}",
+      "E_{t-1}"
+     ],
+     "median": [
+      -0.3050380879898462,
+      1.0307225531544593,
+      0.2844037281897342
+     ],
+     "positive": [
+      16,
+      57,
+      53
+     ]
+    }
+   }
+  },
+  "New Zealand": {
+   "stocks": 34,
+   "timing": {
+    "stocks": 34,
+    "year_t_catch_lowers": 19,
+    "year_t_minus_1_catch_lowers": 25,
+    "median_coefficients": [
+     -0.20297215715074202,
+     -0.29698410143098447
+    ]
+   },
+   "forms": {
+    "same_year": {
+     "stocks": 33,
+     "positive": 11,
+     "median": -0.9101952634791864,
+     "p_two_sided": 0.08014331245794892
+    },
+    "a_year_late": {
+     "stocks": 33,
+     "positive": 21,
+     "median": 0.2660383207986549,
+     "p_two_sided": 0.16275565745308995
+    }
+   },
+   "D1": {
+    "stocks": 33,
+    "positive_slopes": 8,
+    "median_slope": -0.9347758467346753,
+    "p_two_sided": 0.004551384132355452
+   },
+   "eps_measured": 0.13097031235134407,
+   "D2_parts": {
+    "origins": 360,
+    "median_abs_log_error": {
+     "CLLG0": 0.4633490578541538,
+     "LG": 0.35180578930776474,
+     "CLLG": 0.3694179524679003,
+     "RW": 0.2912773205911383,
+     "CL0": 0.282825995442015,
+     "LGD": 0.2725614347786156,
+     "CL": 0.27558489129303565
+    },
+    "gap_closed_by_actual_catches": 0.6482370104504303,
+    "gap_closed_by_draw_law_D2": 0.545883402354901,
+    "forecasts_at_floor": {
+     "CLLG0": 38,
+     "LG": 24,
+     "CLLG": 14
+    }
+   },
+   "state": {
+    "stocks": 34,
+    "S1_recent_giving_detected": 29,
+    "S1_level_detected": 19,
+    "S2_lag_detected": 10,
+    "S2_binomial_p": 4.215924523361326e-06,
+    "S2_lag_median_excess": 0.08334409593466799,
+    "S3_median_excess": 0.1593599590184605,
+    "S4_k5_LGD_LG": [
+     0.16748201962311438,
+     0.1421209363555222
+    ],
+    "S4_k5_signs": {
+     "better": 20,
+     "worse": 14,
+     "p_two_sided": 0.39152830513194203
+    },
+    "k10_LGD_RW_LG": [
+     0.2725614347786156,
+     0.2912773205911383,
+     0.35180578930776474
+    ],
+    "lag_coefficients": {
+     "stocks": 34,
+     "columns": [
+      "E_t",
+      "SP_{t-1}",
+      "E_{t-1}"
+     ],
+     "median": [
+      -0.31403978850622216,
+      1.0265355234337656,
+      0.31787879639000394
+     ],
+     "positive": [
+      8,
+      30,
+      26
+     ]
+    }
+   }
+  },
+  "not New Zealand": {
+   "stocks": 35,
+   "timing": {
+    "stocks": 35,
+    "year_t_catch_lowers": 6,
+    "year_t_minus_1_catch_lowers": 30,
+    "median_coefficients": [
+     0.3492776659758385,
+     -0.44812141475480016
+    ]
+   },
+   "forms": {
+    "same_year": {
+     "stocks": 34,
+     "positive": 27,
+     "median": 0.4734186115581911,
+     "p_two_sided": 0.0008213953115046024
+    },
+    "a_year_late": {
+     "stocks": 34,
+     "positive": 27,
+     "median": 0.3655800873354804,
+     "p_two_sided": 0.0008213953115046024
+    }
+   },
+   "D1": {
+    "stocks": 34,
+    "positive_slopes": 28,
+    "median_slope": 0.5142448777811756,
+    "p_two_sided": 0.00019512558355927467
+   },
+   "eps_measured": 0.6509350384601724,
+   "D2_parts": {
+    "origins": 309,
+    "median_abs_log_error": {
+     "CLLG0": 0.7567731782595378,
+     "LG": 0.7093268045107951,
+     "CLLG": 0.5681658728967683,
+     "RW": 0.34760000035152966,
+     "CL0": 0.3912291293077044,
+     "LGD": 0.3686855020837846,
+     "CL": 0.36442445904240656
+    },
+    "gap_closed_by_actual_catches": 0.11595670564557335,
+    "gap_closed_by_draw_law_D2": 0.4609473825412204,
+    "forecasts_at_floor": {
+     "CLLG0": 63,
+     "LG": 57,
+     "CLLG": 28
+    }
+   },
+   "state": {
+    "stocks": 35,
+    "S1_recent_giving_detected": 18,
+    "S1_level_detected": 14,
+    "S2_lag_detected": 4,
+    "S2_binomial_p": 0.0957547905477165,
+    "S2_lag_median_excess": 0.009345914469838623,
+    "S3_median_excess": 0.017368487748866596,
+    "S4_k5_LGD_LG": [
+     0.2364375434941312,
+     0.3281793256498915
+    ],
+    "S4_k5_signs": {
+     "better": 30,
+     "worse": 5,
+     "p_two_sided": 2.2361520677804947e-05
+    },
+    "k10_LGD_RW_LG": [
+     0.3686855020837846,
+     0.34760000035152966,
+     0.7093268045107951
+    ],
+    "lag_coefficients": {
+     "stocks": 35,
+     "columns": [
+      "E_t",
+      "SP_{t-1}",
+      "E_{t-1}"
+     ],
+     "median": [
+      -0.3050380879898462,
+      1.0338173247908846,
+      0.28038895399424874
+     ],
+     "positive": [
+      8,
+      27,
+      27
+     ]
+    }
+   }
+  },
+  "New Zealand CASAL": 25
+ },
+ "dev_SSB_primary": {
+  "all": {
+   "stocks": 142,
+   "timing": {
+    "stocks": 142,
+    "year_t_catch_lowers": 40,
+    "year_t_minus_1_catch_lowers": 118,
+    "median_coefficients": [
+     0.19500115068243065,
+     -0.2991844990017556
+    ]
+   },
+   "forms": {
+    "same_year": {
+     "stocks": 141,
+     "positive": 97,
+     "median": 0.35011651433213287,
+     "p_two_sided": 9.479339374881515e-06
+    },
+    "a_year_late": {
+     "stocks": 141,
+     "positive": 102,
+     "median": 0.2722309476334389,
+     "p_two_sided": 1.1042203333800997e-07
+    }
+   },
+   "D1": {
+    "stocks": 141,
+    "positive_slopes": 97,
+    "median_slope": 0.3098346015772439,
+    "p_two_sided": 9.479339374881515e-06
+   },
+   "eps_measured": 0.6870061072406376,
+   "D2_parts": {
+    "origins": 1604,
+    "median_abs_log_error": {
+     "CLLG0": 0.56724403153886,
+     "LG": 0.5372422405225995,
+     "CLLG": 0.39676749092412206,
+     "RW": 0.30317590786992854,
+     "CL0": 0.3083584570930198,
+     "LGD": 0.2991371931107477,
+     "CL": 0.30807806615500966
+    },
+    "gap_closed_by_actual_catches": 0.11361383039883491,
+    "gap_closed_by_draw_law_D2": 0.6455778843964843,
+    "forecasts_at_floor": {
+     "CLLG0": 375,
+     "LG": 318,
+     "CLLG": 152
+    }
+   },
+   "state": {
+    "stocks": 142,
+    "S1_recent_giving_detected": 103,
+    "S1_level_detected": 62,
+    "S2_lag_detected": 30,
+    "S2_binomial_p": 1.8893749975011095e-11,
+    "S2_lag_median_excess": 0.043383170897443084,
+    "S3_median_excess": 0.10784634751221558,
+    "S4_k5_LGD_LG": [
+     0.20983190722057732,
+     0.2533830567708973
+    ],
+    "S4_k5_signs": {
+     "better": 109,
+     "worse": 33,
+     "p_two_sided": 1.0942877832555666e-10
+    },
+    "k10_LGD_RW_LG": [
+     0.2991371931107477,
+     0.30317590786992854,
+     0.5372422405225995
+    ],
+    "lag_coefficients": {
+     "stocks": 142,
+     "columns": [
+      "E_t",
+      "SP_{t-1}",
+      "E_{t-1}"
+     ],
+     "median": [
+      -0.2934967230927077,
+      1.0009670436871847,
+      0.29048535199582587
+     ],
+     "positive": [
+      31,
+      123,
+      113
+     ]
+    }
+   }
+  },
+  "New Zealand": {
+   "stocks": 10,
+   "timing": {
+    "stocks": 10,
+    "year_t_catch_lowers": 7,
+    "year_t_minus_1_catch_lowers": 5,
+    "median_coefficients": [
+     -0.1973990697390235,
+     -0.049104770536446005
+    ]
+   },
+   "forms": {
+    "same_year": {
+     "stocks": 10,
+     "positive": 2,
+     "median": -0.8813986086372131,
+     "p_two_sided": 0.109375
+    },
+    "a_year_late": {
+     "stocks": 10,
+     "positive": 8,
+     "median": 0.6180119880828043,
+     "p_two_sided": 0.109375
+    }
+   },
+   "D1": {
+    "stocks": 10,
+    "positive_slopes": 3,
+    "median_slope": -0.9244382074791365,
+    "p_two_sided": 0.34375
+   },
+   "eps_measured": 0.9742452006864932,
+   "D2_parts": {
+    "origins": 78,
+    "median_abs_log_error": {
+     "CLLG0": 0.46114493111240273,
+     "LG": 0.40042700806360176,
+     "CLLG": 0.32356215346995265,
+     "RW": 0.20759769637537023,
+     "CL0": 0.18123182459422488,
+     "LGD": 0.18161382506331916,
+     "CL": 0.17951798915432607
+    },
+    "gap_closed_by_actual_catches": 0.23947381288450967,
+    "gap_closed_by_draw_law_D2": 0.5426317419124866,
+    "forecasts_at_floor": {
+     "CLLG0": 15,
+     "LG": 9,
+     "CLLG": 3
+    }
+   },
+   "state": {
+    "stocks": 10,
+    "S1_recent_giving_detected": 8,
+    "S1_level_detected": 4,
+    "S2_lag_detected": 3,
+    "S2_binomial_p": 0.011503557379296871,
+    "S2_lag_median_excess": 0.06085692316939412,
+    "S3_median_excess": 0.2533415959819266,
+    "S4_k5_LGD_LG": [
+     0.14897694020523317,
+     0.18264034035128796
+    ],
+    "S4_k5_signs": {
+     "better": 7,
+     "worse": 3,
+     "p_two_sided": 0.34375
+    },
+    "k10_LGD_RW_LG": [
+     0.18161382506331916,
+     0.20759769637537023,
+     0.40042700806360176
+    ],
+    "lag_coefficients": {
+     "stocks": 10,
+     "columns": [
+      "E_t",
+      "SP_{t-1}",
+      "E_{t-1}"
+     ],
+     "median": [
+      -0.32500683521700874,
+      0.9779994335634221,
+      0.3118254929100048
+     ],
+     "positive": [
+      1,
+      9,
+      9
+     ]
+    }
+   }
+  },
+  "not New Zealand": {
+   "stocks": 132,
+   "timing": {
+    "stocks": 132,
+    "year_t_catch_lowers": 33,
+    "year_t_minus_1_catch_lowers": 113,
+    "median_coefficients": [
+     0.21231945431738664,
+     -0.3249420948913354
+    ]
+   },
+   "forms": {
+    "same_year": {
+     "stocks": 131,
+     "positive": 95,
+     "median": 0.4280633248347558,
+     "p_two_sided": 2.5592163074465855e-07
+    },
+    "a_year_late": {
+     "stocks": 131,
+     "positive": 94,
+     "median": 0.2722309476334389,
+     "p_two_sided": 6.717865920862285e-07
+    }
+   },
+   "D1": {
+    "stocks": 131,
+    "positive_slopes": 94,
+    "median_slope": 0.4089523649927257,
+    "p_two_sided": 6.717865920862285e-07
+   },
+   "eps_measured": 0.682620401432109,
+   "D2_parts": {
+    "origins": 1526,
+    "median_abs_log_error": {
+     "CLLG0": 0.5781572569587501,
+     "LG": 0.5479310436048948,
+     "CLLG": 0.40289700480885193,
+     "RW": 0.3138442305017871,
+     "CL0": 0.3168756272633958,
+     "LGD": 0.31085115819857917,
+     "CL": 0.3175902825329847
+    },
+    "gap_closed_by_actual_catches": 0.11435763783203833,
+    "gap_closed_by_draw_law_D2": 0.6630783752855823,
+    "forecasts_at_floor": {
+     "CLLG0": 360,
+     "LG": 309,
+     "CLLG": 149
+    }
+   },
+   "state": {
+    "stocks": 132,
+    "S1_recent_giving_detected": 95,
+    "S1_level_detected": 58,
+    "S2_lag_detected": 27,
+    "S2_binomial_p": 4.028306781566852e-10,
+    "S2_lag_median_excess": 0.04208928377992051,
+    "S3_median_excess": 0.08377500327513365,
+    "S4_k5_LGD_LG": [
+     0.2151971823654517,
+     0.26226136787510557
+    ],
+    "S4_k5_signs": {
+     "better": 102,
+     "worse": 30,
+     "p_two_sided": 2.2572672560500638e-10
+    },
+    "k10_LGD_RW_LG": [
+     0.31085115819857917,
+     0.3138442305017871,
+     0.5479310436048948
+    ],
+    "lag_coefficients": {
+     "stocks": 132,
+     "columns": [
+      "E_t",
+      "SP_{t-1}",
+      "E_{t-1}"
+     ],
+     "median": [
+      -0.2934967230927077,
+      1.009342930434688,
+      0.29048535199582587
+     ],
+     "positive": [
+      30,
+      114,
+      104
+     ]
+    }
+   }
+  },
+  "New Zealand CASAL": 8
+ },
+ "dev_TB_primary": {
+  "all": {
+   "stocks": 189,
+   "timing": {
+    "stocks": 189,
+    "year_t_catch_lowers": 52,
+    "year_t_minus_1_catch_lowers": 170,
+    "median_coefficients": [
+     0.3192335090318083,
+     -0.7543007145743138
+    ]
+   },
+   "forms": {
+    "same_year": {
+     "stocks": 188,
+     "positive": 133,
+     "median": 0.4767026941058947,
+     "p_two_sided": 1.220324127805774e-08
+    },
+    "a_year_late": {
+     "stocks": 188,
+     "positive": 144,
+     "median": 0.44360076658299497,
+     "p_two_sided": 1.330067209701655e-13
+    }
+   },
+   "D1": {
+    "stocks": 188,
+    "positive_slopes": 133,
+    "median_slope": 0.44216163304004397,
+    "p_two_sided": 1.220324127805774e-08
+   },
+   "eps_measured": 0.7688000832735232,
+   "D2_parts": {
+    "origins": 2560,
+    "median_abs_log_error": {
+     "CLLG0": 0.4431798196543236,
+     "LG": 0.34886480597368064,
+     "CLLG": 0.31827505156348423,
+     "RW": 0.25715918940269433,
+     "CL0": 0.255814213158829,
+     "LGD": 0.2490987244368013,
+     "CL": 0.24886974759845343
+    },
+    "gap_closed_by_actual_catches": 0.5070137304290577,
+    "gap_closed_by_draw_law_D2": 0.6714565364168548,
+    "forecasts_at_floor": {
+     "CLLG0": 562,
+     "LG": 371,
+     "CLLG": 211
+    }
+   },
+   "state": {
+    "stocks": 189,
+    "S1_recent_giving_detected": 138,
+    "S1_level_detected": 87,
+    "S2_lag_detected": 48,
+    "S2_binomial_p": 6.537976269801868e-21,
+    "S2_lag_median_excess": 0.0467721211022476,
+    "S3_median_excess": 0.08587141052649443,
+    "S4_k5_LGD_LG": [
+     0.1644689583690993,
+     0.17050357892696108
+    ],
+    "S4_k5_signs": {
+     "better": 120,
+     "worse": 69,
+     "p_two_sided": 0.00025510010702115905
+    },
+    "k10_LGD_RW_LG": [
+     0.2490987244368013,
+     0.25715918940269433,
+     0.34886480597368064
+    ],
+    "lag_coefficients": {
+     "stocks": 189,
+     "columns": [
+      "E_t",
+      "SP_{t-1}",
+      "E_{t-1}"
+     ],
+     "median": [
+      -0.1700432753709781,
+      0.9588778408939049,
+      0.19902459132273176
+     ],
+     "positive": [
+      37,
+      182,
+      158
+     ]
+    }
+   }
+  },
+  "New Zealand": {
+   "stocks": 14,
+   "timing": {
+    "stocks": 14,
+    "year_t_catch_lowers": 8,
+    "year_t_minus_1_catch_lowers": 10,
+    "median_coefficients": [
+     -0.11096775496056524,
+     -0.3785647570272349
+    ]
+   },
+   "forms": {
+    "same_year": {
+     "stocks": 14,
+     "positive": 5,
+     "median": -0.7563805635327366,
+     "p_two_sided": 0.4239501953125
+    },
+    "a_year_late": {
+     "stocks": 14,
+     "positive": 10,
+     "median": 0.5532698339800322,
+     "p_two_sided": 0.1795654296875
+    }
+   },
+   "D1": {
+    "stocks": 14,
+    "positive_slopes": 5,
+    "median_slope": -0.7563805635327366,
+    "p_two_sided": 0.4239501953125
+   },
+   "eps_measured": 0.42597836300299047,
+   "D2_parts": {
+    "origins": 147,
+    "median_abs_log_error": {
+     "CLLG0": 0.6854692153786985,
+     "LG": 0.3773248614146836,
+     "CLLG": 0.43201305186249694,
+     "RW": 0.3316989578685553,
+     "CL0": 0.3443992555344895,
+     "LGD": 0.3652965407788412,
+     "CL": 0.365168230619002
+    },
+    "gap_closed_by_actual_catches": 0.8710295662861932,
+    "gap_closed_by_draw_law_D2": 0.7164428273310527,
+    "forecasts_at_floor": {
+     "CLLG0": 37,
+     "LG": 16,
+     "CLLG": 0
+    }
+   },
+   "state": {
+    "stocks": 14,
+    "S1_recent_giving_detected": 12,
+    "S1_level_detected": 4,
+    "S2_lag_detected": 3,
+    "S2_binomial_p": 0.030053642645566644,
+    "S2_lag_median_excess": 0.10846264414266363,
+    "S3_median_excess": 0.08634341399406488,
+    "S4_k5_LGD_LG": [
+     0.1616364114618454,
+     0.14655201480326566
+    ],
+    "S4_k5_signs": {
+     "better": 7,
+     "worse": 7,
+     "p_two_sided": 1.0
+    },
+    "k10_LGD_RW_LG": [
+     0.3652965407788412,
+     0.3316989578685553,
+     0.3773248614146836
+    ],
+    "lag_coefficients": {
+     "stocks": 14,
+     "columns": [
+      "E_t",
+      "SP_{t-1}",
+      "E_{t-1}"
+     ],
+     "median": [
+      -0.3322957030402429,
+      0.977240218685495,
+      0.32934143679410577
+     ],
+     "positive": [
+      0,
+      14,
+      14
+     ]
+    }
+   }
+  },
+  "not New Zealand": {
+   "stocks": 175,
+   "timing": {
+    "stocks": 175,
+    "year_t_catch_lowers": 44,
+    "year_t_minus_1_catch_lowers": 160,
+    "median_coefficients": [
+     0.32114724833387165,
+     -0.7798077609013263
+    ]
+   },
+   "forms": {
+    "same_year": {
+     "stocks": 174,
+     "positive": 128,
+     "median": 0.4877905010571335,
+     "p_two_sided": 3.8977413934630375e-10
+    },
+    "a_year_late": {
+     "stocks": 174,
+     "positive": 134,
+     "median": 0.44360076658299497,
+     "p_two_sided": 4.664600328532964e-13
+    }
+   },
+   "D1": {
+    "stocks": 174,
+    "positive_slopes": 128,
+    "median_slope": 0.45381158212339734,
+    "p_two_sided": 3.8977413934630375e-10
+   },
+   "eps_measured": 0.7874641431425378,
+   "D2_parts": {
+    "origins": 2413,
+    "median_abs_log_error": {
+     "CLLG0": 0.4355924381284165,
+     "LG": 0.3477851201446217,
+     "CLLG": 0.30919504211126964,
+     "RW": 0.25487914910629733,
+     "CL0": 0.253631482925139,
+     "LGD": 0.24629178077480876,
+     "CL": 0.24596999581848722
+    },
+    "gap_closed_by_actual_catches": 0.48589297698547923,
+    "gap_closed_by_draw_law_D2": 0.6994360885196215,
+    "forecasts_at_floor": {
+     "CLLG0": 525,
+     "LG": 355,
+     "CLLG": 211
+    }
+   },
+   "state": {
+    "stocks": 175,
+    "S1_recent_giving_detected": 126,
+    "S1_level_detected": 83,
+    "S2_lag_detected": 45,
+    "S2_binomial_p": 6.161940633080385e-20,
+    "S2_lag_median_excess": 0.04060428153818573,
+    "S3_median_excess": 0.08587141052649443,
+    "S4_k5_LGD_LG": [
+     0.16458603694776902,
+     0.17233713011937035
+    ],
+    "S4_k5_signs": {
+     "better": 113,
+     "worse": 62,
+     "p_two_sided": 0.0001422112564554334
+    },
+    "k10_LGD_RW_LG": [
+     0.24629178077480876,
+     0.25487914910629733,
+     0.3477851201446217
+    ],
+    "lag_coefficients": {
+     "stocks": 175,
+     "columns": [
+      "E_t",
+      "SP_{t-1}",
+      "E_{t-1}"
+     ],
+     "median": [
+      -0.13864141616485864,
+      0.9525636451460396,
+      0.18386651588522537
+     ],
+     "positive": [
+      37,
+      168,
+      144
+     ]
+    }
+   }
+  },
+  "New Zealand CASAL": 8
+ },
+ "synthetic": {
+  "blind": {
+   "same_year": {
+    "stocks": 132,
+    "positive": 57,
+    "median": -0.18358419515094612,
+    "p_two_sided": 0.13866800643810306
+   },
+   "a_year_late": {
+    "stocks": 132,
+    "positive": 58,
+    "median": -0.1593456671629796,
+    "p_two_sided": 0.19149877187347092
+   }
+  },
+  "hypothesis": {
+   "same_year": {
+    "stocks": 145,
+    "positive": 124,
+    "median": 0.8194202429408084,
+    "p_two_sided": 2.0422112272969558e-15
+   },
+   "a_year_late": {
+    "stocks": 145,
+    "positive": 100,
+    "median": 0.24899635084686295,
+    "p_two_sided": 5.723174164619092e-06
+   }
+  },
+  "lag-reset": {
+   "same_year": {
+    "stocks": 138,
+    "positive": 34,
+    "median": -1.0875613773984827,
+    "p_two_sided": 1.915226831906776e-09
+   },
+   "a_year_late": {
+    "stocks": 138,
+    "positive": 69,
+    "median": -0.003604521535343694,
+    "p_two_sided": 1.0
+   }
+  }
+ },
+ "mistimed": {
+  "draw-only | f = 0.0": {
+   "stocks": 149,
+   "S2_lag_detected": 10,
+   "S3_median_excess": 0.03745085214457676,
+   "D1_positive": 142,
+   "D1_stocks": 149,
+   "D1_median_slope": 0.8858763800105154,
+   "S4_k5_signs": {
+    "better": 77,
+    "worse": 72,
+    "p_two_sided": 0.7432690217670557
+   },
+   "kappa_quartiles": [
+    0.45,
+    0.6,
+    0.8
+   ]
+  },
+  "draw-only | f = 0.5": {
+   "stocks": 149,
+   "S2_lag_detected": 18,
+   "S3_median_excess": 0.0271345055002669,
+   "D1_positive": 107,
+   "D1_stocks": 149,
+   "D1_median_slope": 0.2936077285516949,
+   "S4_k5_signs": {
+    "better": 79,
+    "worse": 68,
+    "p_two_sided": 0.40958049902640126
+   },
+   "kappa_quartiles": [
+    0.2,
+    0.35,
+    0.5
+   ]
+  },
+  "draw-only | f = 1.0": {
+   "stocks": 147,
+   "S2_lag_detected": 5,
+   "S3_median_excess": 0.02172862928788341,
+   "D1_positive": 33,
+   "D1_stocks": 147,
+   "D1_median_slope": -0.2521552774612172,
+   "S4_k5_signs": {
+    "better": 74,
+    "worse": 72,
+    "p_two_sided": 0.9340795771546326
+   },
+   "kappa_quartiles": [
+    0.05,
+    0.05,
+    0.25
+   ]
+  },
+  "relaxing | f = 0.0": {
+   "stocks": 41,
+   "S2_lag_detected": 2,
+   "S3_median_excess": 0.028839510284674727,
+   "D1_positive": 27,
+   "D1_stocks": 41,
+   "D1_median_slope": 0.5810856027197949,
+   "S4_k5_signs": {
+    "better": 8,
+    "worse": 33,
+    "p_two_sided": 0.00011222142620681552
+   },
+   "kappa_quartiles": [
+    0.55,
+    0.6,
+    0.75
+   ]
+  },
+  "relaxing | f = 0.5": {
+   "stocks": 37,
+   "S2_lag_detected": 1,
+   "S3_median_excess": 0.006041515754420204,
+   "D1_positive": 0,
+   "D1_stocks": 37,
+   "D1_median_slope": -1.7837920464016903,
+   "S4_k5_signs": {
+    "better": 19,
+    "worse": 18,
+    "p_two_sided": 1.0
+   },
+   "kappa_quartiles": [
+    0.15,
+    0.3,
+    0.4
+   ]
+  },
+  "relaxing | f = 1.0": {
+   "stocks": 37,
+   "S2_lag_detected": 0,
+   "S3_median_excess": -0.0040028097180351,
+   "D1_positive": 0,
+   "D1_stocks": 37,
+   "D1_median_slope": -1.8231357674002249,
+   "S4_k5_signs": {
+    "better": 32,
+    "worse": 5,
+    "p_two_sided": 7.427530363202095e-06
+   },
+   "kappa_quartiles": [
+    0.05,
+    0.05,
+    0.05
+   ]
+  },
+  "hypothesis | f = 0.0": {
+   "stocks": 147,
+   "S2_lag_detected": 20,
+   "S3_median_excess": 0.015667402855188084,
+   "D1_positive": 122,
+   "D1_stocks": 147,
+   "D1_median_slope": 0.682455886348957,
+   "S4_k5_signs": {
+    "better": 133,
+    "worse": 14,
+    "p_two_sided": 7.513515312204094e-16
+   },
+   "kappa_quartiles": [
+    0.3,
+    0.65,
+    1.3
+   ]
+  },
+  "hypothesis | f = 0.5": {
+   "stocks": 143,
+   "S2_lag_detected": 8,
+   "S3_median_excess": -0.0025114966334361874,
+   "D1_positive": 34,
+   "D1_stocks": 143,
+   "D1_median_slope": -0.4891882053808994,
+   "S4_k5_signs": {
+    "better": 131,
+    "worse": 12,
+    "p_two_sided": 1.2005501021319255e-15
+   },
+   "kappa_quartiles": [
+    0.05,
+    0.5,
+    0.9
+   ]
+  },
+  "hypothesis | f = 1.0": {
+   "stocks": 144,
+   "S2_lag_detected": 2,
+   "S3_median_excess": 0.003796365219752587,
+   "D1_positive": 1,
+   "D1_stocks": 144,
+   "D1_median_slope": -1.149313463033438,
+   "S4_k5_signs": {
+    "better": 136,
+    "worse": 8,
+    "p_two_sided": 7.248285966038646e-16
+   },
+   "kappa_quartiles": [
+    0.05,
+    0.15,
+    0.55
+   ]
+  }
+ }
+}

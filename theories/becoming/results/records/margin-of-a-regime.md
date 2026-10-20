@@ -30,7 +30,7 @@
 - That the regime's point predicts a field system: in assessed fish stocks giving persists beyond what the level gives, and the frozen rest forecasts better than the regime margin.
 - That level and recent giving are the whole state in the field: last year's escapement adds to them. With it, nothing more is needed in the median assessed stock, but whether that lag is an age structure, the other order of draw and giving, or compensation is not separated, and its forecast gain cannot be told from damping.
 - That the frozen-rest margin over the net draw is a time to break in the field: it ranks the risk, but a third of those it put within five years fell, and giving, which the frozen rest holds, moves toward the draw.
-- That the draw responds to the stock in the field: on assessed stocks no analysis had read, catches revert to their own level, and once that is held their change does not follow the change in the stock in most stocks.
+- That the draw's response explains why the level staying put wins at ten years in the field: the catch follows the stock where the series report the level before the year's catch, but knowing the catches closes little of the held draw's gap, and once giving moves toward the draw, how the draw is read makes no difference.
 - Super-additivity for every concave giving law: the hypothesis is subadditivity above the need, and the whole numbers lose one unit.
 - The fold over the reals, or the other order of a step (giving before the draw): neither is stated.
 - That drawing beyond the margin is worse: these laws locate where a condition ends, and order nothing.
@@ -48,7 +48,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; the draw's response as a level law of the stock rather than in changes; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; coupled conditions; an independent review.
+Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; each series' timing read from its assessment before a balance is read off it; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; coupled conditions; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -85,7 +85,8 @@ Aliases: `margin of a regime`, `一个体制的余量`, `point of no return unde
 - 20 October 2026: MQ3 (study section 272), a frozen field test on 113 assessed fish stocks, failed every verdict; the premise that giving is read off the level is recorded as false there over one to five years, and the next step names a state of level and recent giving. MQ1 (section 253) and MQ2 (section 266) are the earlier measurements.
 - 20 October 2026: MQ4 (study section 277), a frozen field test on 76 assessed stocks no analysis had read, of a state of level and recent giving with this step and the frozen rest as its ends: both variables are part of the state and the level's pull narrows forecast errors, but the pair is not the whole state, the direction is no better than the frozen rest's, and the frozen-rest time to break ranks risk without timing it; the scope and the next step are revised.
 - 21 October 2026: MQ5 (study section 280), a frozen field test on 69 assessed stocks with spawning biomass no analysis had read, of a state with a lag (giving also reading last year's escapement, equivalently moving toward the draw) and of the draw read as a law of the stock: the lag is part of the state, with it nothing more is needed in the median stock, and it accounts for persistence's ten-year win, though damping alone does as well; the draw's response to the stock is not detected once the catch's reversion to its own level is held, and the draw's law does not account for that win; the scope and the next step are revised.
+- 21 October 2026: why MQ5's D1 and D2 failed, asked after the run (post hoc, study section 280): half the test stocks are New Zealand's, whose series report the level after part of the year's catch, which turns D1's same-year form negative; outside them the catch follows the stock as in development. D2's gap belonged to the giving, which the draw's law corrected only by damping. The scope item on the draw and the next step are revised.
 
 </details>
 
-Documentary review UTC: `2026-10-20T17:59:14+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-20T18:26:51+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -12104,21 +12104,45 @@ Boundary: the series are assessment outputs, mostly from age-structured models (
        1985); constant catch and constant exploitation rate are the classical harvest strategies at eps
        = 0 and 1; short-term population forecasts are often won by models close to persistence (Ward,
        Holmes, Thorson and Collen 2014, Oikos).
+Why D1 and D2 failed (post hoc, asked after the run; posthoc_mq5.py why, results/mq5/why-d1-d2.json):
+       half the test stocks are New Zealand's (34 of 69, 25 CASAL; development 10 of 142). D1: the
+       reading takes year t's draw from the level reported for year t, but in New Zealand year t's catch
+       lowers that level in 19 of 34 stocks (elsewhere 6 of 35; year t-1's catch in 30 of 35): those
+       series report spawning biomass after part of the year's catch (mid-season, from memory), so a
+       bigger catch lowers the same year's level and D1's slope is negative there (8 of 33 positive,
+       p = 0.005; development's New Zealand stocks 3 of 10); outside New Zealand D1 passes (28 of 34,
+       p = 0.0002, elasticity 0.65, development 0.68). On synthetic stocks whose catch follows the level
+       exactly, reporting the level after half the year's catch turns D1 negative (34 of 143 positive)
+       and moves kappa toward 0. D2: outside New Zealand the actual catches close only 12% of the held
+       draw's ten-year gap (development 11%); the draw's law closes 46% (development 66%) by damping the
+       forecast's own error (forecasts at the floor 63 -> 28; development 360 -> 149), about the same
+       absolute reduction as in development (0.19 against 0.18) on a larger gap (0.41 against 0.26); with
+       the lag, held draw, law and actual catches give the same ten-year error (0.39, 0.36, 0.37;
+       development 0.32, 0.32, 0.31); in New Zealand D2's share is 0.55. S2 and S4 rest on different
+       halves: the lag is detected in 10 of 34 New Zealand stocks and 4 of 35 elsewhere (p = 0.10), with
+       the same median coefficients; its five-year gain comes from outside New Zealand (30 against 5;
+       New Zealand 20 against 14). Mis-timing on synthetic stocks hides a true lag (20 -> 8 detected),
+       produced at most 18 of 149 detections without one, and produced S4's gain without one (32
+       against 5).
 Output -> input: on stocks no analysis had read, the state is the level, the recent giving and the
-       lag, and with the lag nothing more is needed in the median stock. Read through the balance, giving
-       moves toward the draw at about 0.3 a year in sample, the same as on the development stocks; with
-       it the forecast ties persistence at ten years, so the lag accounts for persistence's win, though
-       damping alone does as well. The draw's law in the frozen form does not: the catch's response to
-       the stock is not detected once its reversion to its own level is held, and its elasticity is half
-       the development's. Of the frozen rest's two held exchanges, giving moves (toward the draw) and the
-       draw, read in changes, does not detectably follow the stock here. The margin-of-a-regime record
-       and chapter section 8.7 now say so. Open: separating the three readings of the lag (age structure,
-       the other order, compensation), which survey series with an observation model or an age-structured
-       reading could do; the draw's response as a level law (catch on biomass) rather than in changes;
-       a lam per stock or per regime.
+       lag, and with the lag nothing more is needed in the median stock; read through the balance,
+       giving moves toward the draw at about 0.3 a year in sample, with the same coefficients on both
+       halves of the test stocks and on the development stocks. The detection rests mostly on the New
+       Zealand stocks, whose series timing is off by part of a year, and the forecast gain mostly on the
+       others. The catch follows the stock where the series let it be read (outside New Zealand, as in
+       development); D1 failed on the series' timing, which the frozen reading assumed away. The lag
+       accounts for persistence's ten-year win and the draw's response does not: knowing the actual
+       catches closes little of the held draw's gap, the draw's law closes more only by damping the
+       forecast's own error, and once giving moves toward the draw, how the draw is read makes no
+       difference at ten years. Of the frozen rest's two held exchanges, both move in these stocks, and
+       the giving carries the forecast. The margin-of-a-regime record and chapter section 8.7 now say so.
+       Open: separating the three readings of the lag (age structure, the other order, compensation),
+       which survey series with an observation model or an age-structured reading could do; each
+       series' timing read from its assessment before a balance is read off it; a lam per stock or per
+       regime.
 ```
 
-**Self-review.** The freeze carried real stakes and two of its rules failed. The development on MQ3's and MQ4's stocks expected D1 to pass (97 of 141 stocks there), D2 near 0.65 with a warning that it could fall below half, and S3 to be open; on the new stocks S3 passed and D1 and D2 failed. The dry runs did their job before any value was read. They showed a catch blind to the stock passing MQ4's form of D1, so D1 was made to hold the catch's own level. They showed the plain F test firing on columns the law does not read, so the tests became robust with a free shift of the share. They showed S2's floor and S1's effect-size bound failing on the generator that is the hypothesis, so both became detection tests. The freeze records each change. The SSB reading is the weakest joint: the share of the catch on the spawning stock is not measured but fitted, and it is confounded with the lag's linear part. The rules carry that confound, at the cost of power, and the post-hoc split by share shows that it explains part of D2's shortfall and none of D1's. The post-hoc readings change no verdict. The most informative is that the lag's in-sample coefficients are the same on stocks no analysis had read as on the development stocks: giving closes about 0.3 of its gap to the draw each year in both. The lag's forecast gain, by contrast, cannot be told from damping.
+**Self-review.** The freeze carried real stakes and two of its rules failed. The development on MQ3's and MQ4's stocks expected D1 to pass (97 of 141 stocks there), D2 near 0.65 with a warning that it could fall below half, and S3 to be open; on the new stocks S3 passed and D1 and D2 failed. The dry runs did their job before any value was read. They showed a catch blind to the stock passing MQ4's form of D1, so D1 was made to hold the catch's own level. They showed the plain F test firing on columns the law does not read, so the tests became robust with a free shift of the share. They showed S2's floor and S1's effect-size bound failing on the generator that is the hypothesis, so both became detection tests. The freeze records each change. The SSB reading is the weakest joint: the share of the catch on the spawning stock is not measured but fitted, and it is confounded with the lag's linear part. The rules carry that confound, at the cost of power, and the post-hoc split by share shows that it explains part of D2's shortfall and none of D1's. The post-hoc readings change no verdict. The most informative is that the lag's in-sample coefficients are the same on stocks no analysis had read as on the development stocks: giving closes about 0.3 of its gap to the draw each year in both. The lag's forecast gain, by contrast, cannot be told from damping. The question why D1 and D2 failed, asked after the run, found a premise the freeze had not stated: that every series reports the level before the year's catch. Half the test stocks do not. The dry runs had no generator with that timing, so they could not show it. D2's failure is not the timing: its gap belonged to MQ4's giving, which the draw's law corrected only by damping. D2 passed in development for the same reason, so its pass there was no evidence that the draw explains persistence's win.
 
 ## 281. Groups formed by descent (EV11)
 

@@ -286,7 +286,7 @@ Rules, code, the presence-only layout, the development and the dry runs were com
   - Next year's change on this year's (MQ4's form) follows it in 60 of 67.
   - With the catch's last level, only 36 of 67 follow it. That level's coefficient is negative in 58 of 67 (median −0.18): the catches revert to their own level.
 
-  The dry runs showed that a catch blind to the stock and reverting to its own mean gives MQ4's form a positive slope. So in these stocks the evidence that the catch follows the stock rests on forms that a reverting catch also produces.
+  The dry runs showed that a catch blind to the stock and reverting to its own mean gives MQ4's form a positive slope. The split by region below shows where D1's form fails and why.
 - **The draw's elasticity on the test stocks** is 0.37 (6,560 pairs), against 0.67 on the development stocks.
   - D2's share would be 0.29 at ε = 0.35, 0.51 at 1.0 and 0.67 at 1.5.
   - In the 46 stocks with κ > 0.1, where the catch enters the forecast, D2's share is 0.54. D1 there is 23 of 45. Part of D2's shortfall is the SSB reading's limit; D1's is not.
@@ -294,20 +294,46 @@ Rules, code, the presence-only layout, the development and the dry runs were com
 - **Damping alone does as well.** A net change decaying by half a year, with no level and no lag, has 0.186 at five years and 0.304 at ten, against the lag's 0.194 and 0.318. The lag is better in 30 of 69 and 27 of 68 stocks (not significant). The lag's forecast gain cannot be told from damping; its specific evidence is in sample (S2, S3).
 - **The lag in sample.** Per stock, giving on E_t, γ_{t−1} and E_{t−1} without squares has medians −0.31, 1.03 and +0.28 (E_{t−1} positive in 53 of 69). On the development stocks it was −0.29, 1.00 and +0.29. By the balance, giving closes about 0.3 of its gap to the draw each year, the same on stocks no analysis had read.
 
+**Why D1 and D2 failed** (post hoc, asked after the run: [`posthoc_mq5.py why`](posthoc_mq5.py), [`results/mq5/why-d1-d2.json`](results/mq5/why-d1-d2.json), not verdicts). Half the test stocks are New Zealand's: 34 of 69, 25 of them CASAL assessments, mostly long-lived species. The development set had 10 of 142.
+
+- **D1 fails on the New Zealand stocks, through the series' timing.**
+  - The reading takes year t's draw from the level reported for year t, so year t's catch should not lower that level. Per stock, the level's change from t − 1 to t is regressed on year t's catch and on year t − 1's catch.
+    - Outside New Zealand, year t's catch lowers it in only 6 of 35 stocks, and year t − 1's in 30.
+    - In New Zealand, year t's catch lowers it in 19 of 34. These series report spawning biomass after part of the year's catch (mid-season, as New Zealand assessments commonly report it; from memory, not checked against the assessments).
+  - There, a bigger catch lowers the same year's level, so D1's same-year slope is negative: positive in 8 of 33, p = 0.005. The development set's New Zealand stocks show the same (3 of 10).
+  - Outside New Zealand, D1 passes: 28 of 34, p = 0.0002, elasticity 0.65, as in development (0.68).
+  - On synthetic stocks whose catch follows the level exactly (the hypothesis), reporting the level after half of the year's catch turns D1 negative: 34 of 143 positive, median −0.49. After all of it, 1 of 144. The same shift pushes the fitted κ toward 0.
+  - So the catch does follow the stock. D1 failed because the frozen reading assumed every series reports the level before the year's catch, and half the test stocks do not.
+- **D2 fails because the gap it measures is the giving's, not the draw's.** At ten years, held draw against persistence, outside New Zealand:
+  - The actual catches close only 12% of the gap (11% in development): the held-draw forecast fails mostly through MQ4's giving, not through the catch.
+  - The draw's law closes 46% (66% in development). It closes more than the actual catches do because it damps the forecast's own error. When the forecast level falls, the law cuts the catch, and forecasts collapsing to the floor drop from 63 to 28 (development: 360 to 149).
+  - In absolute terms the damping is about the same as in development (0.19 against 0.18 of median log error). The test stocks' gap is larger (0.41 against 0.26), so its share falls below half.
+  - With the lag in the giving, the held draw, the draw's law and the actual catches give the same ten-year error (0.39, 0.36 and 0.37 outside New Zealand; 0.32, 0.32 and 0.31 in development).
+  - In New Zealand, D2's share is 0.55.
+- **S2 and S4 rest on different halves.**
+  - The lag is detected in sample in 10 of 34 New Zealand stocks, against 4 of 35 elsewhere (p = 0.10). Its median coefficients are the same in both halves.
+  - The lag's five-year gain comes from outside New Zealand (30 against 5 stocks); New Zealand splits 20 against 14.
+  - On synthetic stocks, reporting the level after part of the catch hides a true lag (20 detected falls to 8 at half the catch). Without a lag, it produced detections in at most 18 of 149 stocks (12%). It also produced S4's gain without a lag (32 against 5, all of the catch).
+  - So New Zealand's detections are above what the timing alone produced in these generators, though it may contribute. The gain outside New Zealand is not a timing effect.
+
 **What it says.**
-- **The state is the level, the recent giving and the lag.** On stocks no analysis had read, the lag is detected beyond chance, and with it nothing more is needed in the median stock: MQ4's remainder of 0.128 falls to 0.059. Read through the balance, giving moves toward the draw at about 0.3 a year in sample.
-- **The lag accounts for persistence's ten-year win. The draw's law, in the frozen form, does not.**
-  - With giving moving toward the draw, the forecast ties persistence at ten years.
-  - The draw's law at the frozen elasticity closes less than half of the held draw's gap.
-  - In the frozen form, the catch's response to the stock is not detected: its movements here are mostly reversion to its own level, and its elasticity is half the development's.
+- **The state is the level, the recent giving and the lag.** The lag is detected beyond chance, and with it nothing more is needed in the median stock: MQ4's remainder of 0.128 falls to 0.059. Read through the balance, giving moves toward the draw at about 0.3 a year in sample, with the same coefficients in both halves and in development.
+  - The detection rests mostly on New Zealand's stocks, whose series timing is off by part of a year.
+  - The forecast gain rests mostly on the others.
+- **The catch follows the stock where the series let it be read.** Outside New Zealand, D1's form holds as in development. In New Zealand the level is reported after part of the year's catch, and D1's form reads the catch lowering the level.
+- **The lag accounts for persistence's ten-year win; the draw's response does not.** Knowing the actual catches closes little of the held draw's ten-year gap. The draw's law closes more only by damping the forecast's own error. Once giving moves toward the draw, how the draw is read makes no difference at ten years.
 - **Persistence is still not beaten.** Damping alone forecasts as well as the lag.
 
-For the theory: in these stocks the frozen rest's two held exchanges behave differently. Giving is not held: it moves toward the draw, so the level's net change shrinks year by year and a stock under a steady draw changes little. That fits MQ4's finding that the margin over the net draw ranks the risk of a break but overstates it (T2). The draw, read in changes, does not detectably follow the stock here. The state needs the level, the recent giving and the lag, and the draw's response is not established as part of it.
+For the theory: of the frozen rest's two held exchanges, both move in these stocks.
+- **Giving moves toward the draw**, so the level's net change shrinks year by year, and a stock under a steady draw changes little. That fits MQ4's finding that the margin over the net draw ranks the risk of a break but overstates it (T2).
+- **The draw follows the stock** where the series let it be read.
+- **The giving carries the ten-year forecast.** Once giving moves toward the draw, it does not matter whether the draw is held, follows the stock, or is known.
 
-Four things limit the reading:
+Five things limit the reading:
 - **The series are assessment outputs.** Most come from age-structured models (CASAL, SS3) whose own structure carries a recruitment lag, so the lag may partly be the assessment model's.
+- **The series' timing differs by assessment.** The frozen reading took every level as reported before the year's catch. Half the test stocks report it after part of the catch, which turns D1's form, moves κ, and may add to the lag's detection.
 - **κ is weakly identified.** A third of the stocks fit κ ≤ 0.1.
-- **λ and ε differ on the test stocks.** Both were chosen on the development stocks, and the test stocks prefer 0.35 and 0.37.
+- **λ and ε differ on the test stocks.** Both were chosen on the development stocks, and the test stocks prefer 0.35 and 0.37 (0.65 outside New Zealand).
 - **Origins overlap** within a stock.
 
 ## Limits

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T17:59:14+00:00",
+  "reviewed_at_utc": "2026-10-20T18:26:51+00:00",
   "statement": {
     "en": "With giving read off the level under a standing draw, the condition holds exactly from a least level up, which lies more than the draw above the need where giving there falls short of it, rises with the draw, and harms of joint draws are super-additive up to one unit.",
     "zh": "在常设汲取下所给读自水平时，不可回返点是确切的；在需求处所给不足汲取时高出需求不止一份汲取；随汲取升高；联合汲取的损害在一单位之内超可加。"
@@ -124,8 +124,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the draw responds to the stock in the field: on assessed stocks no analysis had read, catches revert to their own level, and once that is held their change does not follow the change in the stock in most stocks.",
-      "zh": "汲取在野外回应种群：在无人读过的已评估种群上，捕捞回归其自身水平；控制这一点后，多数种群中捕捞的变化并不随种群的变化而变。",
+      "en": "That the draw's response explains why the level staying put wins at ten years in the field: the catch follows the stock where the series report the level before the year's catch, but knowing the catches closes little of the held draw's gap, and once giving moves toward the draw, how the draw is read makes no difference.",
+      "zh": "汲取的回应解释了野外十年尺度上“水平保持不变”的胜出：在序列于当年捕捞之前报告水平之处，捕捞随种群而变，但知道实际捕捞只弥合持有汲取差距的一小部分；一旦所给向汲取移动，汲取怎样读已无差别。",
       "kind": "scope"
     },
     {
@@ -165,8 +165,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T135509.239302Z）：Becoming.RegimeMargin 的 49 项声明（36 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 270 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; the draw's response as a level law of the stock rather than in changes; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; coupled conditions; an independent review.",
-    "zh": "区分滞后的三种读法（年龄结构、汲取与所给的另一种次序、补偿），借助调查序列与观测模型或按年龄结构的读法；把汲取的回应读作种群水平的规律而非变化中的规律；按种群或按体制的滞后权重；与 Flow.Balances 相接；阿基米德量上的折叠；相互耦合的条件；独立审查。"
+    "en": "Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; each series' timing read from its assessment before a balance is read off it; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; coupled conditions; an independent review.",
+    "zh": "区分滞后的三种读法（年龄结构、汲取与所给的另一种次序、补偿），借助调查序列与观测模型或按年龄结构的读法；在从序列读出平衡之前，先从其评估读出每条序列的时间约定；按种群或按体制的滞后权重；与 Flow.Balances 相接；阿基米德量上的折叠；相互耦合的条件；独立审查。"
   },
   "correspondence": {
     "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read, then a state with a lag and the draw read as a law of the stock on spawning-stock series no analysis had read; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS), and delay-difference models carry the lag from recruitment (Deriso 1980).",
@@ -275,7 +275,7 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "6d828d5c228e2f7048c9bc3d69cce74e43208bdfc840fdf0c46c10a5515afd00"
+      "sha256": "a353a4278cdf0d2f36da2be4a04bb505a2876987ef1bb3d6ea1ba89f6aed22ab"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
@@ -308,6 +308,10 @@
     {
       "en": "21 October 2026: MQ5 (study section 280), a frozen field test on 69 assessed stocks with spawning biomass no analysis had read, of a state with a lag (giving also reading last year's escapement, equivalently moving toward the draw) and of the draw read as a law of the stock: the lag is part of the state, with it nothing more is needed in the median stock, and it accounts for persistence's ten-year win, though damping alone does as well; the draw's response to the stock is not detected once the catch's reversion to its own level is held, and the draw's law does not account for that win; the scope and the next step are revised.",
       "zh": "2026年10月21日：MQ5（研究第 280 节），在 69 个无人读过的、带产卵生物量的已评估种群上的冻结野外检验，检验带滞后的状态（所给也读上一年的逃逸量，亦即向汲取移动）与读作种群规律的汲取：滞后属于状态，加上它中位种群不再需要更多，它也解释了十年尺度上持续性的胜出，虽然单纯的阻尼同样做到；控制捕捞回归其自身水平后，汲取对种群的回应未被检出，汲取的规律也不能解释那一胜出；范围与下一步据此修订。"
+    },
+    {
+      "en": "21 October 2026: why MQ5's D1 and D2 failed, asked after the run (post hoc, study section 280): half the test stocks are New Zealand's, whose series report the level after part of the year's catch, which turns D1's same-year form negative; outside them the catch follows the stock as in development. D2's gap belonged to the giving, which the draw's law corrected only by damping. The scope item on the draw and the next step are revised.",
+      "zh": "2026年10月21日：运行之后追问 MQ5 的 D1 与 D2 为何未通过（事后，研究第 280 节）：检验种群中一半属新西兰，其序列在当年部分捕捞之后报告水平，这使 D1 的同年形式变为负；在其余种群中捕捞如开发时一样随种群而变。D2 的差距属于所给，汲取的规律只是以阻尼纠正了它。关于汲取的范围条目与下一步据此修订。"
     }
   ]
 }
