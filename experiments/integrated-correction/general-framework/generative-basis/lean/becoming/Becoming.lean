@@ -1691,7 +1691,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   standpoints reaches. Over a finite listing, one course widens another exactly when every weighting
   positive on every item ranks it higher; a mixed comparison is decided both ways by positive
   weightings; a weight of zero ties a widening that adds only that item; one weight for every item
-  ranks by number; on a web with decided admission and listed admissions this is `Web.Widens`. From
+  ranks by number; on a web with decided admission and listed admissions this is `Web.Widens`. The
+  additive representation is not needed: for any class of orders from the positive weightings up to
+  every order increasing in admission (ranking each widening higher; priority to the worse off is
+  one), what every order of the class ranks higher is exactly widening, and within the class a mixed
+  comparison is decided both ways. From
   each standpoint's presupposition about its own continuation and standpoint-invariance, exactly the
   centers' continuation is forced to have significance, the condition only where every formation is a
   center; a standpoint's own presupposition forces exactly its closure; drawn along being related at

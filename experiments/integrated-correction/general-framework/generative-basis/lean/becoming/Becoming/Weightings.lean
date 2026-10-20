@@ -21,6 +21,16 @@ order every standpoint shares when each weighs what can form in its own way.
   course widens another exactly when every positive weighting ranks it higher
   (`Weighting.widens_iff_every_positive`). On a web, where what either level path admits is listed
   and admission is decided, this is `Web.Widens` itself (`Web.widens_iff_every_weighting`).
+* **Any order increasing in admission.** An order need not be additive: call it increasing in
+  admission when it ranks every widening higher (`Weighting.Increasing`; a positive weighting's
+  order is one, `Weighting.increasing_ranks`, and so is priority to the worse off,
+  `Weighting.increasing_prior`). For any class of orders from the positive weightings up to all
+  orders increasing in admission, one course widens another exactly when every order of the class
+  ranks it higher (`Weighting.widens_iff_every_of_class`; all of them,
+  `Weighting.widens_iff_every_increasing`; every complete one, as a score,
+  `Weighting.widens_iff_every_score`; on a web, `Web.widens_iff_every_of_class`), and within each
+  such class a mixed comparison is decided both ways (`Weighting.mixed_either_way_of_class`). The
+  shared order does not depend on the representation.
 * **A weight of zero ties.** Where every item a course admits beyond another weighs nothing, the
   two weigh the same (`Weighting.weighed_eq_of_unweighted`): a weighting that leaves an item out
   does not rank a widening that adds only that item.
@@ -82,7 +92,7 @@ order every standpoint shares when each weighs what can form in its own way.
 
 **Reading (the AI's; the argument is in the chapter
 `theories/becoming/chapters/THE-STEP-OF-INVARIANCE.md`).** Read a
-positive weighting as one standpoint's order, partial in how much it weighs each formation's
+positive weighting, or any order increasing in admission, as one standpoint's order, partial in how much it weighs each formation's
 possibility but counting all of them, and the order every such standpoint shares as the impartial
 order. Then the impartial order is exactly C, the comparisons partiality may decide are exactly the
 mixed ones, a weight of zero is a denial of scope, and a weighting the same for every formation
@@ -102,8 +112,8 @@ to each standpoint; status invariant is a further premise. Read a formation's le
 its continuation is admitted: priority to the worse off agrees with C wherever C ranks and
 decides transfers C leaves mixed; a threshold of sufficiency is a denial of scope above it.
 
-What is not derived: whether the self's presupposition is held de se; that a standpoint's order is a positive weighting (additivity and the sign of
-the weights are supplied); which weighting a standpoint has; that the impartial order is what every
+What is not derived: whether the self's presupposition is held de se; that a standpoint's order is increasing in admission (monotonicity, and that it
+counts every item, are supplied; additivity is not needed for the shared order); which weighting a standpoint has; that the impartial order is what every
 standpoint shares rather than one privileged weighting; which formations are centers; the step of
 invariance itself. The representation commits to finite listings of steps and formations,
 two-valued admission and natural-number weights. No ethical predicate or axiom occurs.
@@ -312,6 +322,61 @@ theorem neutral_ranks_by_number {k : Nat} (positive : 0 < k) (items : List X) (a
       (Eq.subst (motive := fun y => k * weighed items (fun _ => 1) b < y)
         (weighed_const k items a).symm (mul_lt_mul_pos positive lt))⟩
 
+/-! ### Any order increasing in admission -/
+
+/-- An order on courses is increasing in admission on the listed items when it ranks every
+widening above what it widens; `R b a` reads "`a` is ranked above `b`". It need not be additive,
+complete or transitive. -/
+def Increasing (items : List X) (R : (X → Bool) → (X → Bool) → Prop) : Prop :=
+  ∀ a b, WidensOn items a b → R b a
+
+/-- The order a weighting gives: `a` is ranked above `b` when it weighs more. -/
+def ranks (items : List X) (w : X → Nat) : (X → Bool) → (X → Bool) → Prop :=
+  fun b a => weighed items w b < weighed items w a
+
+/-- A positive weighting's order is increasing in admission. -/
+theorem increasing_ranks {items : List X} {w : X → Nat} (positive : Positive items w) :
+    Increasing items (ranks items w) :=
+  fun _ _ widens => weighed_lt_of_widens positive widens
+
+/-- **Widening is what every order of a class shares, for any class from the positive weightings
+to the orders increasing in admission.** Where a class of orders contains every positive
+weighting's order and holds only orders increasing in admission, `a` widens `b` on the listed
+items exactly when every order of the class ranks `a` above `b`. The additive representation is
+not needed: the shared order is the same for every such class. -/
+theorem widens_iff_every_of_class {items : List X} {a b : X → Bool}
+    {K : ((X → Bool) → (X → Bool) → Prop) → Prop}
+    (weightings : ∀ w, Positive items w → K (ranks items w))
+    (increasing : ∀ R, K R → Increasing items R) :
+    WidensOn items a b ↔ ∀ R, K R → R b a :=
+  ⟨fun widens R member => increasing R member a b widens,
+   fun every => widens_iff_every_positive.mpr fun w positive => every _ (weightings w positive)⟩
+
+/-- **Widening is what every order increasing in admission shares.** -/
+theorem widens_iff_every_increasing {items : List X} {a b : X → Bool} :
+    WidensOn items a b ↔ ∀ R, Increasing items R → R b a :=
+  widens_iff_every_of_class (fun _ positive => increasing_ranks positive) fun _ increasing =>
+    increasing
+
+/-- **Widening is what every complete order increasing in admission shares.** A score ranks every
+two courses; `a` widens `b` exactly when every score ranking each widening higher ranks `a` above
+`b`. -/
+theorem widens_iff_every_score {items : List X} {a b : X → Bool} :
+    WidensOn items a b ↔
+      ∀ s : (X → Bool) → Nat, Increasing items (fun c d => s c < s d) → s b < s a :=
+  ⟨fun widens _ increasing => increasing a b widens,
+   fun every => widens_iff_every_positive.mpr fun w positive =>
+     every (weighed items w) (increasing_ranks positive)⟩
+
+/-- **Within every such class a mixed comparison is decided both ways.** -/
+theorem mixed_either_way_of_class {items : List X} {a b : X → Bool}
+    {K : ((X → Bool) → (X → Bool) → Prop) → Prop}
+    (weightings : ∀ w, Positive items w → K (ranks items w)) (mixed : MixedOn items a b) :
+    (∃ R, K R ∧ R b a) ∧ ∃ R, K R ∧ R a b :=
+  match mixed_either_way mixed with
+  | ⟨⟨w, positive, lt⟩, ⟨w', positive', lt'⟩⟩ =>
+    ⟨⟨ranks items w, weightings w positive, lt⟩, ⟨ranks items w', weightings w' positive', lt'⟩⟩
+
 end Weighting
 
 /-! ## Weightings of what a web's levels admit -/
@@ -352,6 +417,21 @@ theorem widens_iff_every_weighting {admitted : (Nat → C → Nat) → Nat × F 
        | ⟨x, _, admits, not⟩ => ⟨x.1, x.2, (decides l x).mp admits,
            fun admits' => Bool.noConfusion (not.symm.trans ((decides l' x).mpr admits'))⟩⟩⟩
     Weighting.widens_iff_every_positive
+
+/-- **Widening is what every order increasing in admission shares, on a web.** Where what either
+level path admits is listed and admission is decided, `l` widens `l'` exactly when every order of
+a class ranks what `l` admits above what `l'` admits, for any class from the positive weightings
+to the orders increasing in admission. -/
+theorem widens_iff_every_of_class {admitted : (Nat → C → Nat) → Nat × F → Bool}
+    (decides : DecidesAdmission W admitted) {items : List (Nat × F)} {l l' : Nat → C → Nat}
+    (listed : ListsAdmitted W items l) (listed' : ListsAdmitted W items l')
+    {K : ((Nat × F → Bool) → (Nat × F → Bool) → Prop) → Prop}
+    (weightings : ∀ w, Weighting.Positive items w → K (Weighting.ranks items w))
+    (increasing : ∀ R, K R → Weighting.Increasing items R) :
+    W.Widens l l' ↔ ∀ R, K R → R (admitted l') (admitted l) :=
+  (widens_iff_every_weighting decides listed listed').trans
+    (Weighting.widens_iff_every_positive.symm.trans
+      (Weighting.widens_iff_every_of_class weightings increasing))
 
 /-- **Closing is never required.** Where the levels `l'` admit a formation at a step and the
 levels `l` do not, `l` neither widens `l'` nor keeps it the same: a comparison by widening never
@@ -753,6 +833,14 @@ theorem prior_lt_of_widens {gs : List F} {owner : F → X → Bool} {items : Lis
     | ⟨g, member, own⟩ =>
       total_lt (fun h _ => le_of_strict increasing (level_le_of_includes (owner h) widens.1))
         ⟨g, member, increasing _ _ (level_lt_of_includes_at widens.1 listed admits not own)⟩
+
+/-- **Priority to the worse off is increasing in admission**, so a class holding the positive
+weightings and the prioritarian orders shares exactly widening (`widens_iff_every_of_class`). -/
+theorem increasing_prior {gs : List F} {owner : F → X → Bool} {items : List X} {f : Nat → Nat}
+    (increasing : ∀ m n, m < n → f m < f n)
+    (covers : ∀ x, x ∈ items → ∃ g, g ∈ gs ∧ owner g x = true) :
+    Increasing items (fun b a => prior gs owner items f b < prior gs owner items f a) :=
+  fun _ _ widens => prior_lt_of_widens increasing covers widens
 
 /-- A transform is strictly concave up to `n`: up to `n`, each increment is smaller than the one
 before. (No transform of whole numbers into whole numbers is strictly concave everywhere: its
