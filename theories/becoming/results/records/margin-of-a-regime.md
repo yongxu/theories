@@ -27,7 +27,9 @@
 ## Does not show
 
 - How giving depends on the draw, or that giving is read off the level within a regime: both are premises, measured in yeast, not theorems.
-- That the regime's point predicts a field system: in 113 assessed fish stocks giving persisted beyond what the level gives, and the frozen rest forecast better over one to five years.
+- That the regime's point predicts a field system: in assessed fish stocks giving persists beyond what the level gives, and the frozen rest forecasts better than the regime margin.
+- That level and recent giving are the whole state in the field: giving relaxing toward the level's law narrows errors, but last year's escapement still adds and the direction is no better.
+- That the frozen-rest margin over the net draw is a time to break in the field: it ranks the risk, but a third of those it put within five years fell, and the catch followed the stock.
 - Super-additivity for every concave giving law: the hypothesis is subadditivity above the need, and the whole numbers lose one unit.
 - The fold over the reals, or the other order of a step (giving before the draw): neither is stated.
 - That drawing beyond the margin is worse: these laws locate where a condition ends, and order nothing.
@@ -45,14 +47,14 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-A state of level and recent giving, frozen and tested on data not yet read (MQ3's level-plus-anomaly reading came between and did not beat the frozen rest); field series measured rather than assessed; the join to Flow.Balances; the fold over Archimedean amounts; several conditions coupled; an independent review.
+A state with a lag (an age structure), frozen on data not yet read: level and recent giving are both part of the state in assessed stocks, but not all of it; the draw's response to the stock read as part of the regime; field series measured rather than assessed, with an observation model; the join to Flow.Balances; the fold over Archimedean amounts; coupled conditions; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS).
+Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -80,7 +82,8 @@ Aliases: `margin of a regime`, `一个体制的余量`, `point of no return unde
 
 - 20 October 2026: added (RM1), the margin with the condition's own giving read off its level, after MQ1 found the frozen-rest margin an identity on measured data; comparisons across draws take one giving law per draw after MQ2; study section 270.
 - 20 October 2026: MQ3 (study section 272), a frozen field test on 113 assessed fish stocks, failed every verdict; the premise that giving is read off the level is recorded as false there over one to five years, and the next step names a state of level and recent giving. MQ1 (section 253) and MQ2 (section 266) are the earlier measurements.
+- 20 October 2026: MQ4 (study section 277), a frozen field test on 76 assessed stocks no analysis had read, of a state of level and recent giving with this step and the frozen rest as its ends: both variables are part of the state and the level's pull narrows forecast errors, but the pair is not the whole state, the direction is no better than the frozen rest's, and the frozen-rest time to break ranks risk without timing it; the scope and the next step are revised.
 
 </details>
 
-Documentary review UTC: `2026-10-20T13:58:16+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-20T16:29:39+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

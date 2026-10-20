@@ -11856,3 +11856,81 @@ The kit is [`development/ev8-drift/`](development/ev8-drift/): this landing's te
 - **Witness.** `OneDraw`: `p = 3`, `q = 2`, `n = 1`, `h = 1`, `N = 2`: the gap is `2 · 3 − 5 · 1 = 1`; the draw of the first kind (`1 · 2 ≤ 1 · 1` fails) does not fall back, the draw of the second does, weighing 2 of 5 (= `q^n`, the lower bound attained); the upper bound reads `2 · 1 ≤ 4 · 30`.
 
 **Self-review.** The weights are exact counts of draws, so "on average" and "spread" are statements about counts, with no probability assumed. The variance `p q/((p + q)² n)` of the share and the bound `p q/((p + q)² δ² n)` with `δ = p/(p + q) − h/N` are the textbook Wright–Fisher sampling variance and Chebyshev's inequality applied to undoing a selected change (Fisher 1930, Wright 1931); the classical reading that selection is effective where the population size times the selection coefficient is large (Kimura) appears here as `n δ²` against `p q/(p + q)²`. What is new is only that these are stated on the spine's counting, on the same `Raises` as the selection laws, and joined on the base to ending among groups: a rise that ending supplies is subject to the same drift as any other. The lower bound `q^n` is crude (only the samplings losing the first kind) but enough to say undoing is never ruled out at any size. Fixation over many sampled generations needs a course of samplings each drawn from the last, which the module does not build; it is the next connection for drift.
+
+## 277. A state of level and recent giving in the field (MQ4)
+
+```text
+Result(s): none new about the unfolding; a frozen field test, on assessed stocks no analysis had read,
+       of a two-variable state whose ends are Becoming.RegimeMargin's step and the frozen rest
+       (Flow.WithheldLevels read as a forecast), and of the frozen-rest margin's time to break; rules,
+       code, presence-only layout, development and dry runs committed and landed on main before any
+       value of the test stocks was read (freeze bdb985ee3, kept as refs/salvage/mq4-freeze); every
+       verdict kept. Seven verdicts passed, five failed.
+Delta: MQ3 (section 272) found in 113 assessed fish stocks that giving persists beyond what the level
+       gives, so the frozen rest forecasts better than the regime margin. MQ4 tests the state (level,
+       recent giving) with giving relaxing toward the level's law: SP_t = phi SP_{t-1} + (1 - phi) g(E_t),
+       phi = 1 the frozen rest, phi = 0 the regime's step; one phi for all stocks, chosen on MQ3's stocks
+       (least median log error at five years over 187 stocks) and frozen at 0.96. At a fixed point giving
+       equals the draw and g(E) = H, RM1's regime point (elementary, not a Lean result). The frozen-rest
+       margin's time to break holds every exchange as at the origin: n = (TB/2) / (C - SP_last) years to
+       fall below half. Test stocks: current stocks whose most recent assessment lacks TB or catch in
+       tonnes, read from the latest earlier assessment with both (MQ3 read most recent assessments only):
+       76 primary, 11 production-model controls, 92 of unknown method; deprecated stockids skipped.
+Premises / bridges: as MQ3 (assessed biomass and catch read as level and draw; the draw taken first;
+       the quadratic class through the origin; the split); a common phi; a break read as a fall below
+       half within ten years (IUCN criterion A's threshold, as correspondence).
+Verdicts (primary, 76 stocks): G1 passed (adding last year's giving to the level law removes a median
+       0.45 of the residual variance beyond chance; MQ3's F0 turned around); G2 passed (the level, added
+       to recent giving and a constant, is detected by its F test in 44 of 76 stocks, binomial p ~ 1e-37);
+       G3 failed (adding SP_{t-2}, E_{t-1}, E_{t-1}^2 removes a median 0.12, bound 0.10); F1b passed (one
+       year, median |log error| 0.021 against the frozen rest's 0.022, the regime margin's 0.058 and
+       persistence's 0.043; smaller than the frozen rest's in 63 of 76 stocks); F5a failed (five-year
+       direction 0.678 against the frozen rest's 0.695); F5b passed (0.148 against 0.154, 0.270, 0.153;
+       56 of 76 stocks, p = 4e-5); F10a failed (0.653 against 0.663); F10b failed (0.304 against 0.309,
+       but persistence 0.215; 47 of 76, p = 0.050); T1 passed (the share falling below half within ten
+       years falls across the frozen-rest classes n <= 5, 5-10, 10-20, > 20: 0.32, 0.15, 0.09, 0.03);
+       T2 failed (47 of 149 with n <= 5 broke, 0.32 against the half required); R1 passed (MQ3's finding:
+       the frozen rest beats the regime margin at one and five years, 0.78 against 0.62, 0.69 against
+       0.63); R2 passed (MQ3's F4: giving at equal escapement rises with recent exploitation in 60 of 76
+       stocks, p = 4e-7). MQ3's rules F0-F3 fail on these stocks as on MQ3's. Control: G1, G2, T1, R1,
+       R2 pass, G3 fails, the frozen rest forecasts best at every horizon. Unknown method: G1-G3, T1, R2
+       pass, every forecast verdict fails, persistence has the smallest error at five and ten years.
+Post hoc (not verdicts; posthoc_mq4.py): where LG and the frozen rest call the five-year direction
+       differently (77 of 1,474 origins) the frozen rest is right in 51, so LG's smaller errors come from
+       the origins where they agree; G3's excess comes mostly from last year's escapement (median 0.05
+       alone) rather than the giving two years before (0.01), a lag; the draw responds: next year's catch
+       follows the last change in biomass in 70 of 76 stocks (median elasticity 0.81), and after a
+       predicted break within five years the next five years' catches were cut to a median 0.69-0.73 of
+       the origin's, whether or not the break came; the phi best on the test stocks is 0.96, the frozen
+       value, in a shallow minimum (0.148 against 0.149 at 0.95 and 0.97, the frozen rest 0.154).
+Evidence: experiments/margin-measured (PREDICTIONS-2026-10-20-MQ4.md, mq4.py, dev_mq4.py, posthoc_mq4.py,
+       results/mq4: layout.json, development.json, development-models.json, dry-runs.json,
+       VERDICTS-mq4.json, posthoc-mq4.json, run.out; README section "MQ4"); data Zenodo 14043031, the
+       archive already downloaded under Ren's approval of 20 October (md5 matched), nothing new;
+       standard library, CPU, about a minute per command.
+Boundary: the series are assessment outputs, from earlier assessments of current stocks; MQ3's loader
+       had parsed in memory, without keeping, printing or analysing them, the most recent catch series of
+       177 of the 184 test stocks by presence (disclosed in the freeze); phi was chosen on MQ3's stocks,
+       which the freeze reports in full as development; origins overlap within a stock; two rules (G2,
+       one year's direction) were changed after the first dry run and before any test value, because the
+       dry run showed them failing on the generator that is the hypothesis; one phi for all stocks; the
+       unknown-method group is reported, not tested; survey series are not used. Closest prior results
+       (from memory, not checked against the texts): productivity regime shifts in assessed stocks
+       (Vert-pre, Amoroso, Jensen and Hilborn 2013, PNAS); changing recruitment capacity (Britten, Dowd
+       and Worm 2016, PNAS); harvest control rules that set catch from estimated biomass, which the
+       response of the draw reflects. A partial-adjustment state is a standard class; what is new is
+       only that the theory's two readings are its ends and are tested as such.
+Output -> input: in assessed fish stocks both the level and the recent giving are part of the state;
+       giving relaxes toward the level's law at about 4% a year, a pull seen in forecast errors in most
+       stocks and fitted by the same rate on stocks apart from those it was chosen on, but not in the
+       direction of change, and not enough at ten years to beat the level staying where it is. The pair
+       is not the whole state: last year's escapement still adds. The draw follows the stock. So the
+       regime's step and the frozen rest are the ends of one law and the field sits near the frozen-rest
+       end; the frozen-rest margin over the net draw ranks the risk of a break but is not a time to
+       break. The margin-of-a-regime record and chapter section 8.7 now say so. Open: a state with a lag
+       (age structure) frozen on unread data; the draw's response as part of the regime (catch read as a
+       law of the stock, not an input); survey series with an observation model; a phi per stock or
+       per regime.
+```
+
+**Self-review.** The freeze carried real stakes: the development on MQ3's stocks predicted G3 failing, F5 narrow and F10b failing, and the test agrees there, but F5a, a pass in development, failed on the new stocks, so the direction gain seen in development did not carry over. The dry runs did their job before any value was read: they showed that a 0.10 bound on the level's one-step contribution misses a pull of 0.1 a year, and that one year's direction cannot see the state even where it holds. Both rules were changed then, and the freeze says so. The post-hoc readings change no verdict. The most informative is the draw's response: the theory's frozen rest holds the draw as well as the giving, and in managed stocks the catch follows the stock in 70 of 76 cases, which is why the level staying put wins at ten years and why the time to break ranks risk without timing it.

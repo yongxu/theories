@@ -1,0 +1,3454 @@
+{
+ "source": "RAM Legacy Stock Assessment Database v4.66 (Zenodo 14043031), assessment data only",
+ "phi": 0.96,
+ "excluded": {
+  "control | short": 5,
+  "other | short": 22,
+  "primary | short": 9
+ },
+ "stocks": {
+  "other": 92,
+  "primary": 76,
+  "control": 11
+ },
+ "primary": {
+  "G": {
+   "G1": {
+    "stocks": 76,
+    "median_excess_reduction": 0.4466444905649175,
+    "quartiles": [
+     0.08076634286297044,
+     0.44794189805458656,
+     0.7685629828353011
+    ],
+    "share_above_bound": 0.7368421052631579,
+    "verdict": "passed"
+   },
+   "G2": {
+    "stocks": 76,
+    "median_excess_reduction": 0.10564109462463142,
+    "quartiles": [
+     0.031243170634160412,
+     0.10729793056665046,
+     0.25230436671044687
+    ],
+    "share_above_bound": 0.5131578947368421,
+    "detected": 44,
+    "share_detected": 0.5789473684210527,
+    "binomial_p": 3.0833435316081163e-37,
+    "verdict": "passed"
+   },
+   "G3": {
+    "stocks": 76,
+    "median_excess_reduction": 0.12040913704937667,
+    "quartiles": [
+     0.019953909142408785,
+     0.12244423734556859,
+     0.251912312534459
+    ],
+    "share_above_bound": 0.5526315789473685,
+    "verdict": "failed"
+   }
+  },
+  "F1": {
+   "origins": 1778,
+   "stocks": 76,
+   "accuracy": {
+    "LG": 0.7834645669291339,
+    "FR": 0.7806524184476941,
+    "RM": 0.6242969628796401,
+    "MO": 0.7401574803149606
+   },
+   "median_abs_log_error": {
+    "LG": 0.020789867021222517,
+    "FR": 0.02208177397845653,
+    "RM": 0.05791321940838359,
+    "RW": 0.043331238364565046
+   },
+   "sign_LG_vs_FR": {
+    "better": 63,
+    "worse": 13,
+    "p_two_sided": 5.044923721823652e-09
+   },
+   "sign_LG_vs_RM": {
+    "better": 62,
+    "worse": 14,
+    "p_two_sided": 2.3236524454068507e-08
+   },
+   "sign_FR_vs_RM": {
+    "better": 61,
+    "worse": 15,
+    "p_two_sided": 9.842847414734724e-08
+   },
+   "verdict_a": "reported",
+   "verdict_b": "passed"
+  },
+  "F5": {
+   "origins": 1474,
+   "stocks": 76,
+   "accuracy": {
+    "LG": 0.6777476255088195,
+    "FR": 0.694708276797829,
+    "RM": 0.6329715061058344,
+    "MO": 0.6065128900949797
+   },
+   "median_abs_log_error": {
+    "LG": 0.14799219020320972,
+    "FR": 0.15354731420862658,
+    "RM": 0.2695138951518764,
+    "RW": 0.15318137479740257
+   },
+   "sign_LG_vs_FR": {
+    "better": 56,
+    "worse": 20,
+    "p_two_sided": 4.36893220622444e-05
+   },
+   "sign_LG_vs_RM": {
+    "better": 43,
+    "worse": 33,
+    "p_two_sided": 0.30187249048700776
+   },
+   "sign_FR_vs_RM": {
+    "better": 42,
+    "worse": 34,
+    "p_two_sided": 0.42219110499231544
+   },
+   "verdict_a": "failed",
+   "verdict_b": "passed"
+  },
+  "F10": {
+   "origins": 1094,
+   "stocks": 76,
+   "accuracy": {
+    "LG": 0.6526508226691042,
+    "FR": 0.6627056672760512,
+    "RM": 0.6343692870201096,
+    "MO": 0.5758683729433273
+   },
+   "median_abs_log_error": {
+    "LG": 0.3036088268545002,
+    "FR": 0.30850193108462476,
+    "RM": 0.5563206020853609,
+    "RW": 0.21463590091397144
+   },
+   "sign_LG_vs_FR": {
+    "better": 47,
+    "worse": 29,
+    "p_two_sided": 0.05045241024721764
+   },
+   "sign_LG_vs_RM": {
+    "better": 43,
+    "worse": 33,
+    "p_two_sided": 0.30187249048700776
+   },
+   "sign_FR_vs_RM": {
+    "better": 41,
+    "worse": 35,
+    "p_two_sided": 0.5665734423986847
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "T": {
+   "classes": {
+    "D<=0": {
+     "origins": 418,
+     "breaks": 41,
+     "share": 0.09808612440191387,
+     "stocks": 69
+    },
+    "20-inf": {
+     "origins": 262,
+     "breaks": 8,
+     "share": 0.030534351145038167,
+     "stocks": 52
+    },
+    "5-10": {
+     "origins": 156,
+     "breaks": 23,
+     "share": 0.14743589743589744,
+     "stocks": 43
+    },
+    "0-5": {
+     "origins": 149,
+     "breaks": 47,
+     "share": 0.31543624161073824,
+     "stocks": 43
+    },
+    "10-20": {
+     "origins": 141,
+     "breaks": 13,
+     "share": 0.09219858156028368,
+     "stocks": 49
+    }
+   },
+   "order": [
+    "0-5",
+    "5-10",
+    "10-20",
+    "20-inf"
+   ],
+   "held_catch_call_accuracy": {
+    "FR": 0.7362344582593251,
+    "LG": 0.7149200710479574,
+    "RM": 0.5763765541740675
+   },
+   "held_catch_confusion": {
+    "FR": {
+     "call=False,broke=False": 759,
+     "call=True,broke=False": 235,
+     "call=True,broke=True": 70,
+     "call=False,broke=True": 62
+    },
+    "LG": {
+     "call=False,broke=False": 731,
+     "call=True,broke=False": 263,
+     "call=False,broke=True": 58,
+     "call=True,broke=True": 74
+    },
+    "RM": {
+     "call=False,broke=False": 590,
+     "call=True,broke=False": 404,
+     "call=False,broke=True": 73,
+     "call=True,broke=True": 59
+    }
+   },
+   "verdict_T1": "passed",
+   "verdict_T2": "failed"
+  },
+  "R1": {
+   "k1": {
+    "FR_accuracy": 0.7806524184476941,
+    "RM_accuracy": 0.6242969628796401,
+    "FR_error": 0.02208177397845653,
+    "RM_error": 0.05791321940838359
+   },
+   "k5": {
+    "FR_accuracy": 0.694708276797829,
+    "RM_accuracy": 0.6329715061058344,
+    "FR_error": 0.15354731420862658,
+    "RM_error": 0.2695138951518764
+   },
+   "verdict": "passed"
+  },
+  "R2": {
+   "stocks": 76,
+   "positive_slopes": 60,
+   "p_two_sided": 3.850977823529725e-07,
+   "verdict": "passed"
+  }
+ },
+ "primary_verdicts": {
+  "G1": "passed",
+  "G2": "passed",
+  "G3": "failed",
+  "F1a": "reported",
+  "F1b": "passed",
+  "F5a": "failed",
+  "F5b": "passed",
+  "F10a": "failed",
+  "F10b": "failed",
+  "T1": "passed",
+  "T2": "failed",
+  "R1": "passed",
+  "R2": "passed"
+ },
+ "primary_mq3_rules": {
+  "F0": "failed",
+  "F1": "failed",
+  "F2": "failed",
+  "F3": "failed",
+  "F4": "reported"
+ },
+ "control": {
+  "G": {
+   "G1": {
+    "stocks": 11,
+    "median_excess_reduction": 0.8105532626647293,
+    "quartiles": [
+     0.28368028620978114,
+     0.8105532626647293,
+     0.9192997187350558
+    ],
+    "share_above_bound": 0.8181818181818182,
+    "verdict": "passed"
+   },
+   "G2": {
+    "stocks": 11,
+    "median_excess_reduction": 0.5589636143899015,
+    "quartiles": [
+     0.10072865040018669,
+     0.5589636143899015,
+     0.7964511003976452
+    ],
+    "share_above_bound": 0.8181818181818182,
+    "detected": 9,
+    "share_detected": 0.8181818181818182,
+    "binomial_p": 9.797363281250005e-11,
+    "verdict": "passed"
+   },
+   "G3": {
+    "stocks": 11,
+    "median_excess_reduction": 0.2555893272219113,
+    "quartiles": [
+     0.1209254146646546,
+     0.2555893272219113,
+     0.5904223085855691
+    ],
+    "share_above_bound": 0.9090909090909091,
+    "verdict": "failed"
+   }
+  },
+  "F1": {
+   "origins": 271,
+   "stocks": 11,
+   "accuracy": {
+    "LG": 0.9114391143911439,
+    "FR": 0.922509225092251,
+    "RM": 0.7453874538745388,
+    "MO": 0.8154981549815498
+   },
+   "median_abs_log_error": {
+    "LG": 0.007923590414634273,
+    "FR": 0.008221833099716356,
+    "RM": 0.04002625855259225,
+    "RW": 0.038269976260630674
+   },
+   "sign_LG_vs_FR": {
+    "better": 7,
+    "worse": 4,
+    "p_two_sided": 0.548828125
+   },
+   "sign_LG_vs_RM": {
+    "better": 10,
+    "worse": 1,
+    "p_two_sided": 0.01171875
+   },
+   "sign_FR_vs_RM": {
+    "better": 10,
+    "worse": 1,
+    "p_two_sided": 0.01171875
+   },
+   "verdict_a": "reported",
+   "verdict_b": "failed"
+  },
+  "F5": {
+   "origins": 227,
+   "stocks": 11,
+   "accuracy": {
+    "LG": 0.8281938325991189,
+    "FR": 0.8722466960352423,
+    "RM": 0.7092511013215859,
+    "MO": 0.6916299559471366
+   },
+   "median_abs_log_error": {
+    "LG": 0.08503387558895112,
+    "FR": 0.07541728284931767,
+    "RM": 0.3009038046618206,
+    "RW": 0.1597217248767137
+   },
+   "sign_LG_vs_FR": {
+    "better": 5,
+    "worse": 6,
+    "p_two_sided": 1.0
+   },
+   "sign_LG_vs_RM": {
+    "better": 9,
+    "worse": 2,
+    "p_two_sided": 0.0654296875
+   },
+   "sign_FR_vs_RM": {
+    "better": 9,
+    "worse": 2,
+    "p_two_sided": 0.0654296875
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "F10": {
+   "origins": 172,
+   "stocks": 11,
+   "accuracy": {
+    "LG": 0.7906976744186046,
+    "FR": 0.8662790697674418,
+    "RM": 0.6686046511627907,
+    "MO": 0.622093023255814
+   },
+   "median_abs_log_error": {
+    "LG": 0.2549909679705661,
+    "FR": 0.23471530878091446,
+    "RM": 2.5073889835110323,
+    "RW": 0.3136975509139124
+   },
+   "sign_LG_vs_FR": {
+    "better": 4,
+    "worse": 7,
+    "p_two_sided": 0.548828125
+   },
+   "sign_LG_vs_RM": {
+    "better": 10,
+    "worse": 1,
+    "p_two_sided": 0.01171875
+   },
+   "sign_FR_vs_RM": {
+    "better": 10,
+    "worse": 1,
+    "p_two_sided": 0.01171875
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "T": {
+   "classes": {
+    "20-inf": {
+     "origins": 35,
+     "breaks": 1,
+     "share": 0.02857142857142857,
+     "stocks": 10
+    },
+    "10-20": {
+     "origins": 27,
+     "breaks": 6,
+     "share": 0.2222222222222222,
+     "stocks": 7
+    },
+    "5-10": {
+     "origins": 36,
+     "breaks": 10,
+     "share": 0.2777777777777778,
+     "stocks": 10
+    },
+    "0-5": {
+     "origins": 20,
+     "breaks": 8,
+     "share": 0.4,
+     "stocks": 8
+    },
+    "D<=0": {
+     "origins": 60,
+     "breaks": 3,
+     "share": 0.05,
+     "stocks": 9
+    }
+   },
+   "order": [
+    "0-5",
+    "5-10",
+    "10-20",
+    "20-inf"
+   ],
+   "held_catch_call_accuracy": {
+    "FR": 0.7247191011235955,
+    "LG": 0.6685393258426966,
+    "RM": 0.48314606741573035
+   },
+   "held_catch_confusion": {
+    "FR": {
+     "call=False,broke=False": 111,
+     "call=False,broke=True": 10,
+     "call=True,broke=True": 18,
+     "call=True,broke=False": 39
+    },
+    "LG": {
+     "call=False,broke=False": 98,
+     "call=False,broke=True": 7,
+     "call=True,broke=True": 21,
+     "call=True,broke=False": 52
+    },
+    "RM": {
+     "call=False,broke=False": 63,
+     "call=False,broke=True": 5,
+     "call=True,broke=True": 23,
+     "call=True,broke=False": 87
+    }
+   },
+   "verdict_T1": "passed",
+   "verdict_T2": "failed"
+  },
+  "R1": {
+   "k1": {
+    "FR_accuracy": 0.922509225092251,
+    "RM_accuracy": 0.7453874538745388,
+    "FR_error": 0.008221833099716356,
+    "RM_error": 0.04002625855259225
+   },
+   "k5": {
+    "FR_accuracy": 0.8722466960352423,
+    "RM_accuracy": 0.7092511013215859,
+    "FR_error": 0.07541728284931767,
+    "RM_error": 0.3009038046618206
+   },
+   "verdict": "passed"
+  },
+  "R2": {
+   "stocks": 11,
+   "positive_slopes": 10,
+   "p_two_sided": 0.01171875,
+   "verdict": "passed"
+  }
+ },
+ "control_verdicts": {
+  "G1": "passed",
+  "G2": "passed",
+  "G3": "failed",
+  "F1a": "reported",
+  "F1b": "failed",
+  "F5a": "failed",
+  "F5b": "failed",
+  "F10a": "failed",
+  "F10b": "failed",
+  "T1": "passed",
+  "T2": "failed",
+  "R1": "passed",
+  "R2": "passed"
+ },
+ "control_mq3_rules": {
+  "F0": "failed",
+  "F1": "failed",
+  "F2": "failed",
+  "F3": "failed",
+  "F4": "reported"
+ },
+ "other": {
+  "G": {
+   "G1": {
+    "stocks": 92,
+    "median_excess_reduction": 0.18087325377771546,
+    "quartiles": [
+     0.016171352006503097,
+     0.18176512702067385,
+     0.625684501957231
+    ],
+    "share_above_bound": 0.5978260869565217,
+    "verdict": "passed"
+   },
+   "G2": {
+    "stocks": 92,
+    "median_excess_reduction": 0.0850094600183495,
+    "quartiles": [
+     0.007497621225775575,
+     0.08718593475899164,
+     0.19469147734117953
+    ],
+    "share_above_bound": 0.44565217391304346,
+    "detected": 42,
+    "share_detected": 0.45652173913043476,
+    "binomial_p": 5.423525847107072e-30,
+    "verdict": "passed"
+   },
+   "G3": {
+    "stocks": 92,
+    "median_excess_reduction": 0.039020848428697644,
+    "quartiles": [
+     -0.018502730506700704,
+     0.04059117882074534,
+     0.23554613574940425
+    ],
+    "share_above_bound": 0.40217391304347827,
+    "verdict": "passed"
+   }
+  },
+  "F1": {
+   "origins": 1717,
+   "stocks": 92,
+   "accuracy": {
+    "LG": 0.7105416423995341,
+    "FR": 0.7070471753057659,
+    "RM": 0.6115317414094351,
+    "MO": 0.6942341292952825
+   },
+   "median_abs_log_error": {
+    "LG": 0.04997312091588968,
+    "FR": 0.04993669944868271,
+    "RM": 0.08056636020916018,
+    "RW": 0.06858710966357136
+   },
+   "sign_LG_vs_FR": {
+    "better": 77,
+    "worse": 15,
+    "p_two_sided": 3.262400923439496e-11
+   },
+   "sign_LG_vs_RM": {
+    "better": 61,
+    "worse": 31,
+    "p_two_sided": 0.0023146015214254912
+   },
+   "sign_FR_vs_RM": {
+    "better": 59,
+    "worse": 33,
+    "p_two_sided": 0.008780930806975219
+   },
+   "verdict_a": "reported",
+   "verdict_b": "failed"
+  },
+  "F5": {
+   "origins": 1345,
+   "stocks": 92,
+   "accuracy": {
+    "LG": 0.5851301115241636,
+    "FR": 0.5851301115241636,
+    "RM": 0.6029739776951673,
+    "MO": 0.537546468401487
+   },
+   "median_abs_log_error": {
+    "LG": 0.27671341512377207,
+    "FR": 0.29787378512347634,
+    "RM": 0.33407433949024073,
+    "RW": 0.2155196262035504
+   },
+   "sign_LG_vs_FR": {
+    "better": 72,
+    "worse": 20,
+    "p_two_sided": 4.6062510208326234e-08
+   },
+   "sign_LG_vs_RM": {
+    "better": 50,
+    "worse": 42,
+    "p_two_sided": 0.46570744577306245
+   },
+   "sign_FR_vs_RM": {
+    "better": 47,
+    "worse": 45,
+    "p_two_sided": 0.917040519652471
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "F10": {
+   "origins": 885,
+   "stocks": 92,
+   "accuracy": {
+    "LG": 0.5853107344632769,
+    "FR": 0.5694915254237288,
+    "RM": 0.5977401129943503,
+    "MO": 0.519774011299435
+   },
+   "median_abs_log_error": {
+    "LG": 0.5128604630734805,
+    "FR": 0.5516211851757694,
+    "RM": 0.5972268471055302,
+    "RW": 0.35560675797282343
+   },
+   "sign_LG_vs_FR": {
+    "better": 57,
+    "worse": 30,
+    "p_two_sided": 0.005013598900146385
+   },
+   "sign_LG_vs_RM": {
+    "better": 51,
+    "worse": 38,
+    "p_two_sided": 0.20311681873649562
+   },
+   "sign_FR_vs_RM": {
+    "better": 45,
+    "worse": 44,
+    "p_two_sided": 1.0
+   },
+   "verdict_a": "failed",
+   "verdict_b": "failed"
+  },
+  "T": {
+   "classes": {
+    "20-inf": {
+     "origins": 123,
+     "breaks": 16,
+     "share": 0.13008130081300814,
+     "stocks": 48
+    },
+    "D<=0": {
+     "origins": 472,
+     "breaks": 83,
+     "share": 0.17584745762711865,
+     "stocks": 83
+    },
+    "0-5": {
+     "origins": 201,
+     "breaks": 71,
+     "share": 0.35323383084577115,
+     "stocks": 58
+    },
+    "5-10": {
+     "origins": 108,
+     "breaks": 32,
+     "share": 0.2962962962962963,
+     "stocks": 44
+    },
+    "10-20": {
+     "origins": 65,
+     "breaks": 15,
+     "share": 0.23076923076923078,
+     "stocks": 36
+    }
+   },
+   "order": [
+    "0-5",
+    "5-10",
+    "10-20",
+    "20-inf"
+   ],
+   "held_catch_call_accuracy": {
+    "FR": 0.6697626418988648,
+    "LG": 0.6666666666666666,
+    "RM": 0.6398348813209495
+   },
+   "held_catch_confusion": {
+    "FR": {
+     "call=False,broke=False": 546,
+     "call=True,broke=False": 206,
+     "call=False,broke=True": 114,
+     "call=True,broke=True": 103
+    },
+    "LG": {
+     "call=False,broke=False": 540,
+     "call=True,broke=False": 212,
+     "call=False,broke=True": 111,
+     "call=True,broke=True": 106
+    },
+    "RM": {
+     "call=False,broke=False": 536,
+     "call=False,broke=True": 133,
+     "call=True,broke=True": 84,
+     "call=True,broke=False": 216
+    }
+   },
+   "verdict_T1": "passed",
+   "verdict_T2": "failed"
+  },
+  "R1": {
+   "k1": {
+    "FR_accuracy": 0.7070471753057659,
+    "RM_accuracy": 0.6115317414094351,
+    "FR_error": 0.04993669944868271,
+    "RM_error": 0.08056636020916018
+   },
+   "k5": {
+    "FR_accuracy": 0.5851301115241636,
+    "RM_accuracy": 0.6029739776951673,
+    "FR_error": 0.29787378512347634,
+    "RM_error": 0.33407433949024073
+   },
+   "verdict": "failed"
+  },
+  "R2": {
+   "stocks": 92,
+   "positive_slopes": 62,
+   "p_two_sided": 0.0011109273233749863,
+   "verdict": "passed"
+  }
+ },
+ "other_verdicts": {
+  "G1": "passed",
+  "G2": "passed",
+  "G3": "passed",
+  "F1a": "reported",
+  "F1b": "failed",
+  "F5a": "failed",
+  "F5b": "failed",
+  "F10a": "failed",
+  "F10b": "failed",
+  "T1": "passed",
+  "T2": "failed",
+  "R1": "failed",
+  "R2": "passed"
+ },
+ "other_mq3_rules": {
+  "F0": "passed",
+  "F1": "failed",
+  "F2": "failed",
+  "F3": "failed",
+  "F4": "reported"
+ },
+ "fits": {
+  "other": [
+   {
+    "stockid": "ALPLAICBSAI",
+    "assessid": "AFSC-ALPLAICBSAI-1975-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1975,
+     2014
+    ],
+    "train_to": 1997,
+    "a": 0.1356120623574016,
+    "b": -0.12308146643327686,
+    "scale_t": 766000.0
+   },
+   {
+    "stockid": "ARFLOUNDBSAI",
+    "assessid": "AFSC-ARFLOUNDBSAI-1976-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1976,
+     2014
+    ],
+    "train_to": 1997,
+    "a": 0.12481485773521916,
+    "b": -0.07358315238569159,
+    "scale_t": 628000.0
+   },
+   {
+    "stockid": "ARFLOUNDGA",
+    "assessid": "AFSC-ARFLOUNDGA-1961-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1961,
+     2014
+    ],
+    "train_to": 1991,
+    "a": 0.08457725343451428,
+    "b": -0.03827779391033251,
+    "scale_t": 1670000.0
+   },
+   {
+    "stockid": "ATKABSAI",
+    "assessid": "AFSC-ATKABSAI-1977-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1977,
+     2014
+    ],
+    "train_to": 1998,
+    "a": 0.35407130452615565,
+    "b": -0.4073359994608106,
+    "scale_t": 922000.0
+   },
+   {
+    "stockid": "BKINGCRABPI",
+    "assessid": "AFSC-BKINGCRABPI-1960-2008-JENSEN",
+    "method": "Survey indices",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1981,
+     2008
+    ],
+    "train_to": 1996,
+    "a": -0.09778511757122253,
+    "b": -0.7176826687481481,
+    "scale_t": 133000.0
+   },
+   {
+    "stockid": "DUSROCKGA",
+    "assessid": "AFSC-DUSROCKGA-1977-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1977,
+     2014
+    ],
+    "train_to": 1998,
+    "a": 0.061966844277132886,
+    "b": 0.03601800935937754,
+    "scale_t": 74400.0
+   },
+   {
+    "stockid": "FLSOLEBSAI",
+    "assessid": "AFSC-FLSOLEBSAI-1977-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1977,
+     2014
+    ],
+    "train_to": 1998,
+    "a": 0.3323174105357343,
+    "b": -0.3306557012298283,
+    "scale_t": 963000.0
+   },
+   {
+    "stockid": "FLSOLEGA",
+    "assessid": "AFSC-FLSOLEGA-1978-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1978,
+     2014
+    ],
+    "train_to": 1998,
+    "a": 0.20569054857725066,
+    "b": -0.1976155684904784,
+    "scale_t": 223000.0
+   },
+   {
+    "stockid": "NROCKBSAI",
+    "assessid": "AFSC-NROCKBSAI-1977-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1977,
+     2014
+    ],
+    "train_to": 1998,
+    "a": 0.08009672896020625,
+    "b": -0.05127660538974659,
+    "scale_t": 245000.0
+   },
+   {
+    "stockid": "NROCKGA",
+    "assessid": "AFSC-NROCKGA-1961-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1961,
+     2014
+    ],
+    "train_to": 1991,
+    "a": 0.09675876082679201,
+    "b": -0.05682741825018625,
+    "scale_t": 170000.0
+   },
+   {
+    "stockid": "NRSOLEEBSAI",
+    "assessid": "AFSC-NRSOLEEBSAI-1975-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1975,
+     2014
+    ],
+    "train_to": 1997,
+    "a": 0.3019135673460645,
+    "b": -0.25692615850624323,
+    "scale_t": 1640000.0
+   },
+   {
+    "stockid": "PCODAI",
+    "assessid": "AFSC-PCODAI-1991-2018-SISIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1991,
+     2018
+    ],
+    "train_to": 2006,
+    "a": 0.7304084960478877,
+    "b": -0.8383886123003326,
+    "scale_t": 169637.0
+   },
+   {
+    "stockid": "PERCHEBSAI",
+    "assessid": "AFSC-PERCHEBSAI-1960-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1960,
+     2014
+    ],
+    "train_to": 1991,
+    "a": 0.05132075004187079,
+    "b": -0.052477705730011856,
+    "scale_t": 1130000.0
+   },
+   {
+    "stockid": "POPERCHGA",
+    "assessid": "AFSC-POPERCHGA-1961-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1961,
+     2014
+    ],
+    "train_to": 1991,
+    "a": 0.07739429579706922,
+    "b": 0.05499114854972642,
+    "scale_t": 1190000.0
+   },
+   {
+    "stockid": "REXSOLEGA",
+    "assessid": "AFSC-REXSOLEGA-1982-2016-SISIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1982,
+     2015
+    ],
+    "train_to": 2000,
+    "a": 0.02382802729264275,
+    "b": 0.02778534228845299,
+    "scale_t": 47126.0
+   },
+   {
+    "stockid": "RKCRABBB",
+    "assessid": "AFSC-RKCRABBB-1953-2020-SISIMP2021-2",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1975,
+     2019
+    ],
+    "train_to": 2000,
+    "a": 0.13216713893552653,
+    "b": 0.42948515142108556,
+    "scale_t": 120000.0
+   },
+   {
+    "stockid": "SABLEFEBSAIGA",
+    "assessid": "AFSC-SABLEFEBSAIGA-1960-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1960,
+     2014
+    ],
+    "train_to": 1991,
+    "a": 0.07501243585797236,
+    "b": -0.053244252663475024,
+    "scale_t": 691000.0
+   },
+   {
+    "stockid": "WPOLLAI",
+    "assessid": "AFSC-WPOLLAI-1978-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1978,
+     2014
+    ],
+    "train_to": 1998,
+    "a": 0.10020488256546804,
+    "b": -0.0650316374138378,
+    "scale_t": 882000.0
+   },
+   {
+    "stockid": "WPOLLBOGO",
+    "assessid": "AFSC-WPOLLBOGO-1977-2017-SISIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1990,
+     2015
+    ],
+    "train_to": 2004,
+    "a": 0.02556281840758666,
+    "b": -0.16527923005826745,
+    "scale_t": 1255180.0
+   },
+   {
+    "stockid": "WPOLLGA",
+    "assessid": "AFSC-WPOLLGA-1970-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1970,
+     2014
+    ],
+    "train_to": 1995,
+    "a": 0.274750461879706,
+    "b": -0.317953360823914,
+    "scale_t": 2900000.0
+   },
+   {
+    "stockid": "YSOLEBSAI",
+    "assessid": "AFSC-YSOLEBSAI-1954-2015-SISIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1954,
+     2014
+    ],
+    "train_to": 1989,
+    "a": 0.21311481033952345,
+    "b": -0.19890295597185606,
+    "scale_t": 3360000.0
+   },
+   {
+    "stockid": "CAPENOR",
+    "assessid": "AFWG-CAPENOR-1972-2018-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1972,
+     2018
+    ],
+    "train_to": 1998,
+    "a": 1.1912223571223945,
+    "b": -1.6281006079447122,
+    "scale_t": 7806000.0
+   },
+   {
+    "stockid": "CODNEAR",
+    "assessid": "AFWG-CODNEAR-1943-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1946,
+     2018
+    ],
+    "train_to": 1988,
+    "a": 0.7954577746102367,
+    "b": -0.8159108134664339,
+    "scale_t": 4260137.0
+   },
+   {
+    "stockid": "GOLDREDNEAR",
+    "assessid": "AFWG-GOLDREDNEAR-1986-2017-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1990,
+     2017
+    ],
+    "train_to": 2005,
+    "a": 0.075911329845194,
+    "b": 0.10928124201332877,
+    "scale_t": 118000.0
+   },
+   {
+    "stockid": "POLLNEAR",
+    "assessid": "AFWG-POLLNEAR-1957-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1960,
+     2018
+    ],
+    "train_to": 1993,
+    "a": 0.7013167998551375,
+    "b": -0.6282451508838308,
+    "scale_t": 970841.0
+   },
+   {
+    "stockid": "MACKNWATLSA3-4",
+    "assessid": "DFO-MACKNWATLSA3-4-1968-2014-WATSON",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1968,
+     2013
+    ],
+    "train_to": 1994,
+    "a": 0.3462236956538698,
+    "b": -0.4507467521437695,
+    "scale_t": 610000.0
+   },
+   {
+    "stockid": "BOCACCBCW",
+    "assessid": "DFO-PAC-BOCACCBCW-1935-2012-CHING",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1935,
+     2012
+    ],
+    "train_to": 1980,
+    "a": 0.08676243204257585,
+    "b": -0.09732443369385685,
+    "scale_t": 43600.0
+   },
+   {
+    "stockid": "BRMSOJ",
+    "assessid": "FAFRFJ-BRMSOJ-1980-2010-ONO",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1980,
+     2010
+    ],
+    "train_to": 1997,
+    "a": 0.6780405355478001,
+    "b": -0.02063472663095316,
+    "scale_t": 9480.0
+   },
+   {
+    "stockid": "HERR2224IIIa",
+    "assessid": "HAWG-HERR2224IIIa-1991-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1991,
+     2018
+    ],
+    "train_to": 2006,
+    "a": 0.8197514143654038,
+    "b": -0.8297898145221139,
+    "scale_t": 593376.0
+   },
+   {
+    "stockid": "HERRSIRS",
+    "assessid": "HAWG-HERRSIRS-1957-2018-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1958,
+     2017
+    ],
+    "train_to": 1992,
+    "a": 0.3591849045626582,
+    "b": -0.46942903631232014,
+    "scale_t": 360000.0
+   },
+   {
+    "stockid": "HERRVIaVIIbc",
+    "assessid": "HAWG-HERRVIaVIIbc-1956-2018-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1957,
+     2017
+    ],
+    "train_to": 1992,
+    "a": 0.2060731353708941,
+    "b": -0.17088718974950828,
+    "scale_t": 1880000.0
+   },
+   {
+    "stockid": "SEELNSSA1",
+    "assessid": "HAWG-SEELNSSA1-1983-2015-ICESIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1983,
+     2014
+    ],
+    "train_to": 2000,
+    "a": 1.6400711086769137,
+    "b": -2.684529514285678,
+    "scale_t": 2320000.0
+   },
+   {
+    "stockid": "SEELNSSA2",
+    "assessid": "HAWG-SEELNSSA2-1983-2015-ICESIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1983,
+     2014
+    ],
+    "train_to": 2000,
+    "a": 1.386906555828226,
+    "b": -2.182108365795908,
+    "scale_t": 650000.0
+   },
+   {
+    "stockid": "SEELNSSA3",
+    "assessid": "HAWG-SEELNSSA3-1983-2015-ICESIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1983,
+     2014
+    ],
+    "train_to": 2000,
+    "a": 2.1738380384172533,
+    "b": -4.199813911153432,
+    "scale_t": 1700000.0
+   },
+   {
+    "stockid": "PANCHPERUNC",
+    "assessid": "IMARPE-PANCHPERUNC-1959-2016-HILBORN",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1963,
+     2015
+    ],
+    "train_to": 1992,
+    "a": 1.2348285285813891,
+    "b": -1.4208457183210197,
+    "scale_t": 18300000.0
+   },
+   {
+    "stockid": "ATHAL5YZ",
+    "assessid": "NEFSC-ATHAL5YZ-1800-2007-COL",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1893,
+     2007
+    ],
+    "train_to": 1960,
+    "a": 0.18547886955214754,
+    "b": -0.044232026362758456,
+    "scale_t": 11900.0
+   },
+   {
+    "stockid": "PANDALIIIaW-IVaE",
+    "assessid": "NIPAG-PANDALIIIaW-IVaE-1988-2015-ICESIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1988,
+     2014
+    ],
+    "train_to": 2002,
+    "a": 1.499342497059225,
+    "b": -1.5874660704529824,
+    "scale_t": 41200.0
+   },
+   {
+    "stockid": "ARFLOUNDPCOAST",
+    "assessid": "NWFSC-ARFLOUNDPCOAST-1916-2017-SISIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1916,
+     2016
+    ],
+    "train_to": 1975,
+    "a": 0.03823806346125772,
+    "b": -0.03549318961407994,
+    "scale_t": 88804.5
+   },
+   {
+    "stockid": "BGROCKPCOAST",
+    "assessid": "NWFSC-BGROCKPCOAST-1950-2017-SISIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1950,
+     2016
+    ],
+    "train_to": 1988,
+    "a": 0.08578334330831422,
+    "b": -0.08724757935654939,
+    "scale_t": 14187.4
+   },
+   {
+    "stockid": "CROCKPCOAST",
+    "assessid": "NWFSC-CROCKPCOAST-1892-2017-SISIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1892,
+     2016
+    ],
+    "train_to": 1965,
+    "a": 0.025330320107893822,
+    "b": -0.026006715048551867,
+    "scale_t": 70994.2
+   },
+   {
+    "stockid": "DKROCKPCOAST",
+    "assessid": "NWFSC-DKROCKPCOAST-1915-2017-SISIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1915,
+     2016
+    ],
+    "train_to": 1974,
+    "a": 0.04437986245915626,
+    "b": -0.04362934061767552,
+    "scale_t": 39761.4
+   },
+   {
+    "stockid": "LINGCODNPCOAST",
+    "assessid": "NWFSC-LINGCODNPCOAST-1889-2017-SISIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1889,
+     2016
+    ],
+    "train_to": 1964,
+    "a": 0.12793096284679878,
+    "b": -0.12841773500911705,
+    "scale_t": 56004.7
+   },
+   {
+    "stockid": "LINGCODSPCOAST",
+    "assessid": "NWFSC-LINGCODSPCOAST-1889-2017-SISIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1890,
+     2016
+    ],
+    "train_to": 1964,
+    "a": 0.15324009811894143,
+    "b": -0.1563548173090289,
+    "scale_t": 31547.3
+   },
+   {
+    "stockid": "COD1F-XIV",
+    "assessid": "NWWG-COD1F-XIV-1972-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1973,
+     2018
+    ],
+    "train_to": 1999,
+    "a": 0.18436404285286154,
+    "b": -0.0820710553916349,
+    "scale_t": 201650.0
+   },
+   {
+    "stockid": "COD1IN",
+    "assessid": "NWWG-COD1IN-1975-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1976,
+     2018
+    ],
+    "train_to": 2000,
+    "a": 1.0121027078941263,
+    "b": -1.0628151141025073,
+    "scale_t": 97125.0
+   },
+   {
+    "stockid": "CODICE",
+    "assessid": "NWWG-CODICE-1952-2014-ICESIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1955,
+     2013
+    ],
+    "train_to": 1988,
+    "a": 0.7785489661866318,
+    "b": -0.886318685647096,
+    "scale_t": 2350000.0
+   },
+   {
+    "stockid": "GOLDREDV-VI-XII-XIV",
+    "assessid": "NWWG-GOLDREDV-VI-XII-XIV-1966-2018-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1971,
+     2017
+    ],
+    "train_to": 1997,
+    "a": 0.1893634082555378,
+    "b": -0.09510066896975485,
+    "scale_t": 760000.0
+   },
+   {
+    "stockid": "HADFAPL",
+    "assessid": "NWWG-HADFAPL-1956-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1957,
+     2018
+    ],
+    "train_to": 1992,
+    "a": 0.47784210764326385,
+    "b": -0.43786265677269604,
+    "scale_t": 139984.0
+   },
+   {
+    "stockid": "POLLIEG",
+    "assessid": "NWWG-POLLIEG-1977-2017-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1980,
+     2016
+    ],
+    "train_to": 2000,
+    "a": 0.3787105685097026,
+    "b": -0.19899592826606774,
+    "scale_t": 415000.0
+   },
+   {
+    "stockid": "PHAKEPCOAST",
+    "assessid": "PFMC-PHAKEPCOAST-1966-2018-SISIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1966,
+     2017
+    ],
+    "train_to": 1995,
+    "a": 0.20133452742436597,
+    "b": -0.2352014737443192,
+    "scale_t": 6217665.0
+   },
+   {
+    "stockid": "LISQUIDATLC",
+    "assessid": "SEFSC-LISQUIDATLC-1963-2009-HIVELY",
+    "method": "Survey indices",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1976,
+     2009
+    ],
+    "train_to": 1994,
+    "a": 1.3529671903648066,
+    "b": -2.137934900612372,
+    "scale_t": 153000.0
+   },
+   {
+    "stockid": "SKJCWPAC",
+    "assessid": "SPC-SKJCWPAC-1950-2015-PONS",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1972,
+     2015
+    ],
+    "train_to": 1996,
+    "a": 0.49841440864539593,
+    "b": -0.44603937538310623,
+    "scale_t": 5100000.0
+   },
+   {
+    "stockid": "NEPHMEDGSA17-18",
+    "assessid": "STECF-NEPHMEDGSA17-18-1960-2015-OSIO",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1970,
+     2015
+    ],
+    "train_to": 1996,
+    "a": 0.8608714565274653,
+    "b": -1.0068505935364653,
+    "scale_t": 12500.0
+   },
+   {
+    "stockid": "COD5Zjm",
+    "assessid": "TRAC-COD5Zjm-1977-2018-SISIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1978,
+     2017
+    ],
+    "train_to": 2000,
+    "a": 0.747470976580738,
+    "b": -0.5177011168359225,
+    "scale_t": 59691.0
+   },
+   {
+    "stockid": "CODBA2224",
+    "assessid": "WGBFAS-CODBA2224-1984-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1985,
+     2018
+    ],
+    "train_to": 2003,
+    "a": 3.798332034372085,
+    "b": -5.761465387341069,
+    "scale_t": 59418.0
+   },
+   {
+    "stockid": "CODBA2532",
+    "assessid": "WGBFAS-CODBA2532-1964-2013-ICESIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1966,
+     2012
+    ],
+    "train_to": 1992,
+    "a": 0.9551468218959089,
+    "b": -0.7500176720157984,
+    "scale_t": 991000.0
+   },
+   {
+    "stockid": "HERR2529-32",
+    "assessid": "WGBFAS-HERR2529-32-1973-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1974,
+     2018
+    ],
+    "train_to": 1999,
+    "a": 0.18848762375612496,
+    "b": -0.10970841588113252,
+    "scale_t": 2659027.0
+   },
+   {
+    "stockid": "HERR30-31",
+    "assessid": "WGBFAS-HERR30-31-1979-2017-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1980,
+     2016
+    ],
+    "train_to": 2000,
+    "a": 0.31336227453653387,
+    "b": -0.26834874218072474,
+    "scale_t": 650000.0
+   },
+   {
+    "stockid": "HERRRIGA",
+    "assessid": "WGBFAS-HERRRIGA-1976-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1977,
+     2018
+    ],
+    "train_to": 2000,
+    "a": 0.6022145773786453,
+    "b": -0.5535049714732576,
+    "scale_t": 175565.0
+   },
+   {
+    "stockid": "SOLEIIIa-2224",
+    "assessid": "WGBFAS-SOLEIIIa-2224-1983-2018-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1984,
+     2017
+    ],
+    "train_to": 2002,
+    "a": 0.6286687184363214,
+    "b": -0.5876051692734785,
+    "scale_t": 6200.0
+   },
+   {
+    "stockid": "SPRAT22-32",
+    "assessid": "WGBFAS-SPRAT22-32-1973-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1974,
+     2018
+    ],
+    "train_to": 1999,
+    "a": 0.26336832460687093,
+    "b": -0.25090596109543706,
+    "scale_t": 3276000.0
+   },
+   {
+    "stockid": "FMEG8c9a",
+    "assessid": "WGBIE-FMEG8c9a-1986-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1986,
+     2018
+    ],
+    "train_to": 2004,
+    "a": 0.4080409071983594,
+    "b": 0.07477870244226471,
+    "scale_t": 7820.0
+   },
+   {
+    "stockid": "HAKESOTH",
+    "assessid": "WGBIE-HAKESOTH-1982-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1982,
+     2018
+    ],
+    "train_to": 2002,
+    "a": 1.3992925928709994,
+    "b": -1.5142398547481697,
+    "scale_t": 54745.66175
+   },
+   {
+    "stockid": "MEG8c9a",
+    "assessid": "WGBIE-MEG8c9a-1985-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1986,
+     2018
+    ],
+    "train_to": 2004,
+    "a": 0.24876711372501442,
+    "b": 0.1341006121375535,
+    "scale_t": 2801.0
+   },
+   {
+    "stockid": "MEGVII-VIIIabd",
+    "assessid": "WGBIE-MEGVII-VIIIabd-1983-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1984,
+     2018
+    ],
+    "train_to": 2003,
+    "a": 0.7121908094503218,
+    "b": -0.667272548254316,
+    "scale_t": 94230.01994
+   },
+   {
+    "stockid": "SOLEVIIIab",
+    "assessid": "WGBIE-SOLEVIIIab-1982-2018-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1984,
+     2017
+    ],
+    "train_to": 2002,
+    "a": 0.8432749145787544,
+    "b": -0.6309079121844104,
+    "scale_t": 20500.0
+   },
+   {
+    "stockid": "WANGLVII-VIIIabd",
+    "assessid": "WGBIE-WANGLVII-VIIIabd-1986-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1986,
+     2018
+    ],
+    "train_to": 2004,
+    "a": 1.0716511226606376,
+    "b": -1.0547389288364721,
+    "scale_t": 82427.0
+   },
+   {
+    "stockid": "WANGLVIIIc-IXa",
+    "assessid": "WGBIE-WANGLVIIIc-IXa-1980-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1980,
+     2018
+    ],
+    "train_to": 2001,
+    "a": 1.1687377231053357,
+    "b": -1.116772141519838,
+    "scale_t": 16492.0
+   },
+   {
+    "stockid": "CODIS",
+    "assessid": "WGCSE-CODIS-1968-2017-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1968,
+     2016
+    ],
+    "train_to": 1995,
+    "a": 0.8179860461611168,
+    "b": -0.7142059744895197,
+    "scale_t": 43600.0
+   },
+   {
+    "stockid": "CODVIIek",
+    "assessid": "WGCSE-CODVIIek-1970-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1971,
+     2018
+    ],
+    "train_to": 1998,
+    "a": 0.9350607909301663,
+    "b": -0.560931014977345,
+    "scale_t": 41445.0
+   },
+   {
+    "stockid": "CODVIa",
+    "assessid": "WGCSE-CODVIa-1980-2017-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1981,
+     2016
+    ],
+    "train_to": 2001,
+    "a": 0.7147168344456647,
+    "b": -0.34534940814434906,
+    "scale_t": 58700.0
+   },
+   {
+    "stockid": "EBASSIVbc-VII",
+    "assessid": "WGCSE-EBASSIVbc-VII-1985-2017-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1985,
+     2016
+    ],
+    "train_to": 2002,
+    "a": 0.027975462516912394,
+    "b": 0.1848941652786428,
+    "scale_t": 25500.0
+   },
+   {
+    "stockid": "HADIS",
+    "assessid": "WGCSE-HADIS-1993-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1993,
+     2018
+    ],
+    "train_to": 2007,
+    "a": 0.7394612671396594,
+    "b": -1.4701214233677873,
+    "scale_t": 33526.0
+   },
+   {
+    "stockid": "HADROCK",
+    "assessid": "WGCSE-HADROCK-1990-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1991,
+     2018
+    ],
+    "train_to": 2006,
+    "a": 0.2746980362558527,
+    "b": -0.2634189139733872,
+    "scale_t": 55199.0
+   },
+   {
+    "stockid": "HADVIIb-k",
+    "assessid": "WGCSE-HADVIIb-k-1993-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1993,
+     2018
+    ],
+    "train_to": 2007,
+    "a": 0.8533577311076009,
+    "b": -0.819021603715411,
+    "scale_t": 72030.63856
+   },
+   {
+    "stockid": "PLAICCELT",
+    "assessid": "WGCSE-PLAICCELT-1977-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1977,
+     2018
+    ],
+    "train_to": 2000,
+    "a": 2.4041370125135093,
+    "b": -3.1124245740973535,
+    "scale_t": 5497.0
+   },
+   {
+    "stockid": "PLAICECHW",
+    "assessid": "WGCSE-PLAICECHW-1979-2014-ICESIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1980,
+     2013
+    ],
+    "train_to": 1998,
+    "a": 0.7310176034342325,
+    "b": -0.6434315958797358,
+    "scale_t": 9850.0
+   },
+   {
+    "stockid": "PLAICIS",
+    "assessid": "WGCSE-PLAICIS-1980-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1981,
+     2018
+    ],
+    "train_to": 2002,
+    "a": 0.6493391403845891,
+    "b": -0.27149739591544614,
+    "scale_t": 16787.65811
+   },
+   {
+    "stockid": "SOLEVIIe",
+    "assessid": "WGCSE-SOLEVIIe-1967-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1969,
+     2018
+    ],
+    "train_to": 1997,
+    "a": 0.4117955932496786,
+    "b": -0.23159580140663943,
+    "scale_t": 6387.0
+   },
+   {
+    "stockid": "WHITVIIa",
+    "assessid": "WGCSE-WHITVIIa-1980-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1980,
+     2018
+    ],
+    "train_to": 2001,
+    "a": 0.9071628021761768,
+    "b": -0.9637097233314441,
+    "scale_t": 61420.91782
+   },
+   {
+    "stockid": "WHITVIa",
+    "assessid": "WGCSE-WHITVIa-1980-2018-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1981,
+     2017
+    ],
+    "train_to": 2001,
+    "a": 0.4722806503005602,
+    "b": -0.8334097492778325,
+    "scale_t": 168324.563
+   },
+   {
+    "stockid": "CUSKVa-XIV",
+    "assessid": "WGDEEP-CUSKVa-XIV-1973-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1982,
+     2018
+    ],
+    "train_to": 2002,
+    "a": 0.3988624427034073,
+    "b": -0.26735762380025346,
+    "scale_t": 41000.05142
+   },
+   {
+    "stockid": "LINGVa",
+    "assessid": "WGDEEP-LINGVa-1982-2016-ICESIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1982,
+     2015
+    ],
+    "train_to": 2000,
+    "a": 0.6753085077105088,
+    "b": -0.42671704238630837,
+    "scale_t": 18500.0
+   },
+   {
+    "stockid": "ANCHOBAYB",
+    "assessid": "WGHANSA-ANCHOBAYB-1986-2014-ICESIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1987,
+     2013
+    ],
+    "train_to": 2001,
+    "a": 2.627822187931962,
+    "b": -3.9843163416627467,
+    "scale_t": 96900.0
+   },
+   {
+    "stockid": "SARDPVIIIc-IXa",
+    "assessid": "WGHANSA-SARDPVIIIc-IXa-1978-2016-ICESIMP2016",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1978,
+     2015
+    ],
+    "train_to": 1999,
+    "a": 0.9028906240363541,
+    "b": -1.0752336375277385,
+    "scale_t": 1000000.0
+   },
+   {
+    "stockid": "POLLNS-VI-IIIa",
+    "assessid": "WGNSSK-POLLNS-VI-IIIa-1964-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1967,
+     2018
+    ],
+    "train_to": 1996,
+    "a": 0.8148157986856613,
+    "b": -0.6052843224283193,
+    "scale_t": 1056225.0
+   },
+   {
+    "stockid": "SOLENS",
+    "assessid": "WGNSSK-SOLENS-1956-2018-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1957,
+     2017
+    ],
+    "train_to": 1992,
+    "a": 0.6942460833213595,
+    "b": -0.6998987281519755,
+    "scale_t": 151000.0
+   },
+   {
+    "stockid": "SOLEVIId",
+    "assessid": "WGNSSK-SOLEVIId-1981-2018-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1982,
+     2017
+    ],
+    "train_to": 2002,
+    "a": 1.1122910694187185,
+    "b": -1.2436172805440808,
+    "scale_t": 25000.0
+   },
+   {
+    "stockid": "WHITNS-VIId",
+    "assessid": "WGNSSK-WHITNS-VIId-1978-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1978,
+     2018
+    ],
+    "train_to": 2001,
+    "a": 0.8693769003429526,
+    "b": -1.0913184226168502,
+    "scale_t": 708295.0
+   },
+   {
+    "stockid": "BWHITNEA",
+    "assessid": "WGWIDE-BWHITNEA-1980-2020-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1981,
+     2019
+    ],
+    "train_to": 2002,
+    "a": 0.2720535734714676,
+    "b": 0.13676226319559834,
+    "scale_t": 10363526.0
+   },
+   {
+    "stockid": "HMACKIIa-IVa-Vb-VIa-VII-VIII",
+    "assessid": "WGWIDE-HMACKIIa-IVa-Vb-VIa-VII-VIII-1982-2017-ICESIMP2018",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1982,
+     2016
+    ],
+    "train_to": 2001,
+    "a": 0.18851980039633748,
+    "b": -0.16751498652077687,
+    "scale_t": 5220000.0
+   },
+   {
+    "stockid": "MACKNEICES",
+    "assessid": "WGWIDE-MACKNEICES-1980-2019-ICESIMP2021",
+    "method": "Unknown",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1980,
+     2018
+    ],
+    "train_to": 2001,
+    "a": 0.4141702518726246,
+    "b": -0.40954733371381824,
+    "scale_t": 6019004.0
+   }
+  ],
+  "primary": [
+   {
+    "stockid": "ALSKABSAI",
+    "assessid": "AFSC-ALSKABSAI-1950-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1950,
+     2014
+    ],
+    "train_to": 1987,
+    "a": 0.08075932630547657,
+    "b": -0.0955101218444407,
+    "scale_t": 600000.0
+   },
+   {
+    "stockid": "DSOLEGA",
+    "assessid": "AFSC-DSOLEGA-1978-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1978,
+     2014
+    ],
+    "train_to": 1998,
+    "a": -0.020483556722010857,
+    "b": 0.031802705188357525,
+    "scale_t": 149000.0
+   },
+   {
+    "stockid": "GHALBSAI",
+    "assessid": "AFSC-GHALBSAI-1960-2015-HIVELY",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1977,
+     2014
+    ],
+    "train_to": 1998,
+    "a": -0.16027830573138865,
+    "b": 0.3197209527271918,
+    "scale_t": 354000.0
+   },
+   {
+    "stockid": "NRSOLEGA",
+    "assessid": "AFSC-NRSOLEGA-1977-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1977,
+     2014
+    ],
+    "train_to": 1998,
+    "a": 0.006595734711664934,
+    "b": 0.02148332501667776,
+    "scale_t": 91200.0
+   },
+   {
+    "stockid": "PCODBS",
+    "assessid": "AFSC-PCODBS-1977-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1977,
+     2014
+    ],
+    "train_to": 1998,
+    "a": 0.3391913885693624,
+    "b": -0.3187983859748559,
+    "scale_t": 2160000.0
+   },
+   {
+    "stockid": "PCODGA",
+    "assessid": "AFSC-PCODGA-1977-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1977,
+     2014
+    ],
+    "train_to": 1998,
+    "a": 0.12102909635031409,
+    "b": -0.14071933688963173,
+    "scale_t": 1410000.0
+   },
+   {
+    "stockid": "RSOLEGA",
+    "assessid": "AFSC-RSOLEGA-1977-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1977,
+     2014
+    ],
+    "train_to": 1998,
+    "a": 0.08172623332518844,
+    "b": -0.0831614305241765,
+    "scale_t": 236000.0
+   },
+   {
+    "stockid": "WPOLLEBS",
+    "assessid": "AFSC-WPOLLEBS-1963-2015-HIVELY",
+    "method": "IA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1979,
+     2014
+    ],
+    "train_to": 1999,
+    "a": 1.0069456869871198,
+    "b": -1.1861767990280274,
+    "scale_t": 13100000.0
+   },
+   {
+    "stockid": "SBT",
+    "assessid": "CCSBT-SC-SBT-1931-2016-PONS",
+    "method": "SCA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1952,
+     2016
+    ],
+    "train_to": 1989,
+    "a": -0.025806044458203312,
+    "b": 0.0007580040090545241,
+    "scale_t": 7750000.0
+   },
+   {
+    "stockid": "HAD4X5Y",
+    "assessid": "DFO-HAD4X5Y-1970-2014-WATSON",
+    "method": "VPA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1970,
+     2013
+    ],
+    "train_to": 1994,
+    "a": 0.847967138048265,
+    "b": -1.8179242057571257,
+    "scale_t": 232000.0
+   },
+   {
+    "stockid": "HERRCC",
+    "assessid": "DFO-HERRCC-1951-2015-WATSON",
+    "method": "SCA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1951,
+     2015
+    ],
+    "train_to": 1988,
+    "a": 0.6756365259057525,
+    "b": -0.9733461450966767,
+    "scale_t": 135000.0
+   },
+   {
+    "stockid": "HERRHG",
+    "assessid": "DFO-HERRHG-1951-2015-WATSON",
+    "method": "SCA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1951,
+     2015
+    ],
+    "train_to": 1988,
+    "a": 0.7940842521281157,
+    "b": -0.9316865974439774,
+    "scale_t": 103000.0
+   },
+   {
+    "stockid": "HERRPRD",
+    "assessid": "DFO-HERRPRD-1951-2015-WATSON",
+    "method": "SCA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1951,
+     2015
+    ],
+    "train_to": 1988,
+    "a": 0.1987009714914254,
+    "b": 0.04114631176327852,
+    "scale_t": 149000.0
+   },
+   {
+    "stockid": "HERRSOG",
+    "assessid": "DFO-HERRSOG-1951-2015-WATSON",
+    "method": "SCA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1951,
+     2015
+    ],
+    "train_to": 1988,
+    "a": 0.6112170359018105,
+    "b": -0.7860486855741171,
+    "scale_t": 279000.0
+   },
+   {
+    "stockid": "HERRWCVANI",
+    "assessid": "DFO-HERRWCVANI-1951-2015-WATSON",
+    "method": "SCA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1951,
+     2015
+    ],
+    "train_to": 1988,
+    "a": 0.6084184797548242,
+    "b": -0.7104845398599816,
+    "scale_t": 164000.0
+   },
+   {
+    "stockid": "RSOLEHSTR",
+    "assessid": "DFO-PAC-RSOLEHSTR-1945-2001-COLLIE",
+    "method": "TSA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1945,
+     2001
+    ],
+    "train_to": 1977,
+    "a": 1.11094002156206,
+    "b": -1.2284656347001206,
+    "scale_t": 5080.0
+   },
+   {
+    "stockid": "HERR4RSP",
+    "assessid": "DFO-QUE-HERR4RSP-1963-2004-PREFONTAINE",
+    "method": "SPA-ADAPT",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1965,
+     2002
+    ],
+    "train_to": 1986,
+    "a": 0.35684019498417324,
+    "b": -0.4234479878053692,
+    "scale_t": 235000.0
+   },
+   {
+    "stockid": "WHAKE4T",
+    "assessid": "DFO-SG-WHAKE4T-1960-2013-OSGOOD",
+    "method": "SPA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1978,
+     2010
+    ],
+    "train_to": 1996,
+    "a": 0.013669854435532012,
+    "b": 0.061636842415610536,
+    "scale_t": 101000.0
+   },
+   {
+    "stockid": "SKJCIO",
+    "assessid": "IOTC-SKJCIO-1950-2014-PONS",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1950,
+     2011
+    ],
+    "train_to": 1985,
+    "a": -0.17674227110532975,
+    "b": 0.20695327178684378,
+    "scale_t": 1430000.0
+   },
+   {
+    "stockid": "STMARLINWCNPAC",
+    "assessid": "ISC-STMARLINWCNPAC-1974-2013-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1975,
+     2013
+    ],
+    "train_to": 1996,
+    "a": 1.5732654133555632,
+    "b": -2.4379029795067653,
+    "scale_t": 28400.0
+   },
+   {
+    "stockid": "GHAL23KLMNO",
+    "assessid": "NAFO-SC-GHAL23KLMNO-1960-2006-PREFONTAINE",
+    "method": "XSA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1975,
+     2006
+    ],
+    "train_to": 1992,
+    "a": 0.41337908186932676,
+    "b": -0.24925254273529449,
+    "scale_t": 224000.0
+   },
+   {
+    "stockid": "BLUEFISHATLC",
+    "assessid": "NEFSC-BLUEFISHATLC-1985-2014-SISIMP2016",
+    "method": "ASAP",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1985,
+     2014
+    ],
+    "train_to": 2001,
+    "a": 0.4065405886209064,
+    "b": -0.39882146642405747,
+    "scale_t": 183000.0
+   },
+   {
+    "stockid": "BSBASSMATLC",
+    "assessid": "NEFSC-BSBASSMATLC-1939-2015-ASHBROOK",
+    "method": "SCA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1990,
+     2015
+    ],
+    "train_to": 2004,
+    "a": 1.1063396460231818,
+    "b": -1.239692501823602,
+    "scale_t": 8463.089
+   },
+   {
+    "stockid": "HAD5Y",
+    "assessid": "NEFSC-HAD5Y-1964-2011-CHING",
+    "method": "VPA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1977,
+     2010
+    ],
+    "train_to": 1995,
+    "a": -0.014006886311244639,
+    "b": 0.49755266541488974,
+    "scale_t": 20100.0
+   },
+   {
+    "stockid": "HERRNWATLC",
+    "assessid": "NEFSC-HERRNWATLC-1964-2011-HIVELY",
+    "method": "ASAP",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1965,
+     2011
+    ],
+    "train_to": 1991,
+    "a": 0.5959695582922553,
+    "b": -0.5562214008623955,
+    "scale_t": 1560000.0
+   },
+   {
+    "stockid": "MONKGOMNGB",
+    "assessid": "NEFSC-MONKGOMNGB-1979-2010-SISIMP2016",
+    "method": "SCALE",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1980,
+     2011
+    ],
+    "train_to": 1997,
+    "a": 0.35475351375229086,
+    "b": -0.41446385736454705,
+    "scale_t": 89100.0
+   },
+   {
+    "stockid": "MONKSGBMATL",
+    "assessid": "NEFSC-MONKSGBMATL-1979-2010-SISIMP2016",
+    "method": "SCALE",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1980,
+     2011
+    ],
+    "train_to": 1997,
+    "a": 0.40428504821571176,
+    "b": -0.39529057231782705,
+    "scale_t": 147000.0
+   },
+   {
+    "stockid": "POLL5YZ",
+    "assessid": "NEFSC-POLL5YZ-1960-2009-CHING",
+    "method": "ASAP",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1970,
+     2009
+    ],
+    "train_to": 1992,
+    "a": 0.0873154725483388,
+    "b": -0.08448883129891492,
+    "scale_t": 359000.0
+   },
+   {
+    "stockid": "SURFMATLC",
+    "assessid": "NEFSC-SURFMATLC-1982-2011-SISIMP2016",
+    "method": "SS2",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1982,
+     2011
+    ],
+    "train_to": 1998,
+    "a": 0.4038342404961874,
+    "b": -0.4337654672756125,
+    "scale_t": 2500000.0
+   },
+   {
+    "stockid": "WHAKEGBGOM",
+    "assessid": "NEFSC-WHAKEGBGOM-1962-2011-HIVELY",
+    "method": "ASAP",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1963,
+     2011
+    ],
+    "train_to": 1990,
+    "a": 0.3278004240185708,
+    "b": -0.23597834914387367,
+    "scale_t": 39000.0
+   },
+   {
+    "stockid": "YELLGB",
+    "assessid": "NEFSC-YELLGB-1935-2008-BAUM",
+    "method": "VPA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1973,
+     2007
+    ],
+    "train_to": 1992,
+    "a": 1.7873219297997271,
+    "b": -2.575207585810485,
+    "scale_t": 34900.0
+   },
+   {
+    "stockid": "YELLSNEMATL",
+    "assessid": "NEFSC-YELLSNEMATL-1935-2011-HIVELY",
+    "method": "ASAP",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1973,
+     2011
+    ],
+    "train_to": 1994,
+    "a": 1.0457825596980455,
+    "b": -1.575583648743555,
+    "scale_t": 62100.0
+   },
+   {
+    "stockid": "AUSSALMONNZ",
+    "assessid": "NIWA-AUSSALMONNZ-1975-2006-JENSEN",
+    "method": "CASAL",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1975,
+     2006
+    ],
+    "train_to": 1992,
+    "a": 0.23493470039091796,
+    "b": -0.2625571622901511,
+    "scale_t": 48200.0
+   },
+   {
+    "stockid": "BLACKROCKORECOAST",
+    "assessid": "NWFSC-BLACKROCKORECOAST-1892-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1892,
+     2014
+    ],
+    "train_to": 1964,
+    "a": 0.14785267844796088,
+    "b": -0.14788840531684871,
+    "scale_t": 11600.0
+   },
+   {
+    "stockid": "BLACKROCKWASH",
+    "assessid": "NWFSC-BLACKROCKWASH-1940-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1940,
+     2014
+    ],
+    "train_to": 1983,
+    "a": 0.11622310775108295,
+    "b": -0.11793836971890304,
+    "scale_t": 9040.0
+   },
+   {
+    "stockid": "CABEZORECOAST",
+    "assessid": "NWFSC-CABEZORECOAST-1973-2009-STACHURA",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1973,
+     2008
+    ],
+    "train_to": 1993,
+    "a": 0.057985152497288396,
+    "b": -0.05473402429609268,
+    "scale_t": 756.0
+   },
+   {
+    "stockid": "CHROCKCPCOAST",
+    "assessid": "NWFSC-CHROCKCPCOAST-1900-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1900,
+     2014
+    ],
+    "train_to": 1967,
+    "a": 0.056612488160261064,
+    "b": -0.05662488955021306,
+    "scale_t": 577.0
+   },
+   {
+    "stockid": "CHROCKSPCOAST",
+    "assessid": "NWFSC-CHROCKSPCOAST-1900-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1900,
+     2014
+    ],
+    "train_to": 1967,
+    "a": 0.08252655644631844,
+    "b": -0.08316905709385802,
+    "scale_t": 750.0
+   },
+   {
+    "stockid": "ESOLEPCOAST",
+    "assessid": "NWFSC-ESOLEPCOAST-1876-2007-BRANCH",
+    "method": "SS2",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1876,
+     2006
+    ],
+    "train_to": 1953,
+    "a": 0.1628797070971137,
+    "b": -0.1636508273221053,
+    "scale_t": 68200.0
+   },
+   {
+    "stockid": "LNOSESKAPCOAST",
+    "assessid": "NWFSC-LNOSESKAPCOAST-1915-2007-BRANCH",
+    "method": "SS2",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1915,
+     2007
+    ],
+    "train_to": 1969,
+    "a": 0.06262977027139734,
+    "b": -0.06248360275121453,
+    "scale_t": 91000.0
+   },
+   {
+    "stockid": "LSTHORNHPCOAST",
+    "assessid": "NWFSC-LSTHORNHPCOAST-1964-2012-HIVELY",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1964,
+     2012
+    ],
+    "train_to": 1991,
+    "a": 0.0785398061517346,
+    "b": -0.10015219652250355,
+    "scale_t": 103000.0
+   },
+   {
+    "stockid": "PSOLEPCOAST",
+    "assessid": "NWFSC-PSOLEPCOAST-1876-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1876,
+     2014
+    ],
+    "train_to": 1957,
+    "a": 0.14514399362867839,
+    "b": -0.14737284100215936,
+    "scale_t": 53300.0
+   },
+   {
+    "stockid": "SABLEFPCOAST",
+    "assessid": "NWFSC-SABLEFPCOAST-1900-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1900,
+     2014
+    ],
+    "train_to": 1967,
+    "a": 0.040356579095621986,
+    "b": -0.04548188928513297,
+    "scale_t": 402000.0
+   },
+   {
+    "stockid": "SSTHORNHPCOAST",
+    "assessid": "NWFSC-SSTHORNHPCOAST-1901-2013-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1901,
+     2012
+    ],
+    "train_to": 1966,
+    "a": -0.10269230893532859,
+    "b": 0.10715723013806203,
+    "scale_t": 344000.0
+   },
+   {
+    "stockid": "WROCKPCOAST",
+    "assessid": "NWFSC-WROCKPCOAST-1916-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1916,
+     2014
+    ],
+    "train_to": 1973,
+    "a": 0.11090807320684706,
+    "b": -0.11307239008174481,
+    "scale_t": 157000.0
+   },
+   {
+    "stockid": "TREVALLYTRE7",
+    "assessid": "NZMFishINSHOREWG-TREVALLYTRE7-1944-2005-JENSEN",
+    "method": "CASAL",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1944,
+     2005
+    ],
+    "train_to": 1979,
+    "a": 0.05700128743348702,
+    "b": -0.056733853321609615,
+    "scale_t": 63700.0
+   },
+   {
+    "stockid": "GEMFISHNZ",
+    "assessid": "NZMFishMIDDEPTHSWG-GEMFISHNZ-1952-2007-JENSEN",
+    "method": "CASAL",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1952,
+     2006
+    ],
+    "train_to": 1983,
+    "a": 0.17116122797760558,
+    "b": -0.1735888199570542,
+    "scale_t": 20200.0
+   },
+   {
+    "stockid": "NZLINGLIN72",
+    "assessid": "NZMFishMIDDEPTHSWG-NZLINGLIN72-1972-2007-JENSEN",
+    "method": "CASAL",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1972,
+     2007
+    ],
+    "train_to": 1992,
+    "a": 0.08496011596613703,
+    "b": -0.08598939939088587,
+    "scale_t": 9650.0
+   },
+   {
+    "stockid": "NZLINGLIN7WC",
+    "assessid": "NZMFishMIDDEPTHSWG-NZLINGLIN7WC-1972-2008-JENSEN",
+    "method": "CASAL",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1972,
+     2008
+    ],
+    "train_to": 1992,
+    "a": 0.008675413140060885,
+    "b": -0.007216506525670303,
+    "scale_t": 104000.0
+   },
+   {
+    "stockid": "PAUAPAU5B",
+    "assessid": "NZMFishSHELLFISHWG-PAUAPAU5B-1963-2007-JENSEN",
+    "method": "LBBM",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1964,
+     2007
+    ],
+    "train_to": 1988,
+    "a": 0.2810634128420063,
+    "b": -0.29989418708772836,
+    "scale_t": 3160.0
+   },
+   {
+    "stockid": "PAUAPAU5D",
+    "assessid": "NZMFishSHELLFISHWG-PAUAPAU5D-1964-2006-JENSEN",
+    "method": "LBBM",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1965,
+     2006
+    ],
+    "train_to": 1988,
+    "a": 0.1556253748093344,
+    "b": -0.1687841852501207,
+    "scale_t": 1950.0
+   },
+   {
+    "stockid": "CABEZSCAL",
+    "assessid": "PFMC-CABEZSCAL-1930-2009-CHING",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1950,
+     2008
+    ],
+    "train_to": 1983,
+    "a": 0.15774378363097472,
+    "b": -0.11171047411135422,
+    "scale_t": 1380.0
+   },
+   {
+    "stockid": "BSBASSSATL",
+    "assessid": "SEFSC-BSBASSSATL-1950-2010-HIVELY",
+    "method": "BAM",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1978,
+     2010
+    ],
+    "train_to": 1996,
+    "a": 0.2697498115927901,
+    "b": -0.15242285863708005,
+    "scale_t": 7880.0
+   },
+   {
+    "stockid": "COBGM",
+    "assessid": "SEFSC-COBGM-1927-2011-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1927,
+     2011
+    ],
+    "train_to": 1976,
+    "a": 0.2890324190192842,
+    "b": -0.2929906089023725,
+    "scale_t": 8820.0
+   },
+   {
+    "stockid": "GAGSATLC",
+    "assessid": "SEFSC-GAGSATLC-1962-2012-SISIMP2016",
+    "method": "BAM",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1962,
+     2012
+    ],
+    "train_to": 1991,
+    "a": 0.2584432508401566,
+    "b": -0.26829434347455555,
+    "scale_t": 8350.0
+   },
+   {
+    "stockid": "GRAMBERGM",
+    "assessid": "SEFSC-GRAMBERGM-1950-2012-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1950,
+     2012
+    ],
+    "train_to": 1986,
+    "a": 0.2605306910260174,
+    "b": -0.2700668811164016,
+    "scale_t": 19300.0
+   },
+   {
+    "stockid": "GRAMBERSATLC",
+    "assessid": "SEFSC-GRAMBERSATLC-1946-2006-JENSEN",
+    "method": "SCA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1946,
+     2006
+    ],
+    "train_to": 1981,
+    "a": -0.10344855767208677,
+    "b": 0.10379467457593151,
+    "scale_t": 14600.0
+   },
+   {
+    "stockid": "RGROUPSATL",
+    "assessid": "SEFSC-RGROUPSATL-1976-2009-HIVELY",
+    "method": "BAM",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1976,
+     2008
+    ],
+    "train_to": 1994,
+    "a": 0.47152124844630783,
+    "b": -0.4168584835275064,
+    "scale_t": 3620.0
+   },
+   {
+    "stockid": "RPORGYSATLC",
+    "assessid": "SEFSC-RPORGYSATLC-1972-2012-HIVELY",
+    "method": "BAM",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1972,
+     2011
+    ],
+    "train_to": 1994,
+    "a": 0.1755133403620743,
+    "b": -0.14459495946413836,
+    "scale_t": 7260.0
+   },
+   {
+    "stockid": "RSNAPGM",
+    "assessid": "SEFSC-RSNAPGM-1872-2013-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1872,
+     2013
+    ],
+    "train_to": 1955,
+    "a": 0.03675992013654144,
+    "b": -0.03868555891028212,
+    "scale_t": 201000.0
+   },
+   {
+    "stockid": "RSNAPSATLC",
+    "assessid": "SEFSC-RSNAPSATLC-1954-2010-HIVELY",
+    "method": "BAM",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1955,
+     2009
+    ],
+    "train_to": 1986,
+    "a": -0.011977358324730132,
+    "b": 0.007973920469566718,
+    "scale_t": 34400.0
+   },
+   {
+    "stockid": "SNOWGROUPSATLC",
+    "assessid": "SEFSC-SNOWGROUPSATLC-1974-2013-HIVELY",
+    "method": "BAM",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1974,
+     2012
+    ],
+    "train_to": 1995,
+    "a": 0.23277033047993576,
+    "b": -0.21757373077107767,
+    "scale_t": 2940.0
+   },
+   {
+    "stockid": "SPANMACKGM",
+    "assessid": "SEFSC-SPANMACKGM-1886-2011-HIVELY",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1948,
+     2010
+    ],
+    "train_to": 1984,
+    "a": 0.13035845996692688,
+    "b": -0.14732007096718192,
+    "scale_t": 53700.0
+   },
+   {
+    "stockid": "TILESATLC",
+    "assessid": "SEFSC-TILESATLC-1961-2011-HIVELY",
+    "method": "SCA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1962,
+     2010
+    ],
+    "train_to": 1989,
+    "a": 0.07015283244807483,
+    "b": -0.07215997634308403,
+    "scale_t": 8310.0
+   },
+   {
+    "stockid": "VSNAPGM",
+    "assessid": "SEFSC-VSNAPGM-1950-2014-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1950,
+     2014
+    ],
+    "train_to": 1987,
+    "a": 0.0900586349799614,
+    "b": -0.09866733787466944,
+    "scale_t": 31900.0
+   },
+   {
+    "stockid": "VSNAPSATLC",
+    "assessid": "SEFSC-VSNAPSATLC-1945-2012-HIVELY",
+    "method": "BAM",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1947,
+     2011
+    ],
+    "train_to": 1984,
+    "a": 0.19097495969430625,
+    "b": -0.20185303096757554,
+    "scale_t": 8090.0
+   },
+   {
+    "stockid": "STMARLINSWPO",
+    "assessid": "SPC-STMARLINSWPO-1952-2011-CHING",
+    "method": "MULTIFAN-CL",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1952,
+     2011
+    ],
+    "train_to": 1986,
+    "a": 0.2721542172747395,
+    "b": -0.26299053691256846,
+    "scale_t": 29100.0
+   },
+   {
+    "stockid": "CHTRACCH",
+    "assessid": "SPRFMO-CHTRACCH-1950-2010-RICARD",
+    "method": "JJM",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1970,
+     2010
+    ],
+    "train_to": 1993,
+    "a": 0.049712408054088345,
+    "b": 0.09081941224912918,
+    "scale_t": 27300000.0
+   },
+   {
+    "stockid": "ANCHMEDGSA17-18",
+    "assessid": "STECF-ANCHMEDGSA17-18-1975-2015-OSIO",
+    "method": "SAM",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1975,
+     2015
+    ],
+    "train_to": 1998,
+    "a": -0.049571148050254726,
+    "b": 0.016922944387841813,
+    "scale_t": 2680000.0
+   },
+   {
+    "stockid": "SARDMEDGSA17-18",
+    "assessid": "STECF-SARDMEDGSA17-18-1975-2015-OSIO",
+    "method": "SAM",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1975,
+     2015
+    ],
+    "train_to": 1998,
+    "a": -0.0550719660217408,
+    "b": 0.10937304463297641,
+    "scale_t": 1710000.0
+   },
+   {
+    "stockid": "BLACKROCKCAL",
+    "assessid": "SWFSC-BLACKROCKCAL-1916-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1916,
+     2014
+    ],
+    "train_to": 1973,
+    "a": 0.08271575861476564,
+    "b": -0.081187602611078,
+    "scale_t": 9410.0
+   },
+   {
+    "stockid": "CHROCKNPCOAST",
+    "assessid": "SWFSC-CHROCKNPCOAST-1900-2015-SISIMP2016",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1900,
+     2014
+    ],
+    "train_to": 1967,
+    "a": 0.23796776501208458,
+    "b": -0.23796776501207784,
+    "scale_t": 235.0
+   },
+   {
+    "stockid": "DSOLEPCOAST",
+    "assessid": "SWFSC-DSOLEPCOAST-1910-2011-STACHURA",
+    "method": "SS3",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1910,
+     2010
+    ],
+    "train_to": 1969,
+    "a": 0.08485521471160268,
+    "b": -0.08584328317325472,
+    "scale_t": 854000.0
+   },
+   {
+    "stockid": "WPOLLNSO",
+    "assessid": "VNIRO-WPOLLNSO-1963-2012-CHING",
+    "method": "XSA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1965,
+     2008
+    ],
+    "train_to": 1989,
+    "a": 0.24361360921024625,
+    "b": -0.10884928530762429,
+    "scale_t": 11600000.0
+   },
+   {
+    "stockid": "WPOLLWBS",
+    "assessid": "VNIRO-WPOLLWBS-1970-2008-CHING",
+    "method": "VPA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1970,
+     2008
+    ],
+    "train_to": 1991,
+    "a": 0.17124830683033263,
+    "b": -0.0761831882991968,
+    "scale_t": 2730000.0
+   },
+   {
+    "stockid": "PLAIC7d",
+    "assessid": "WGNSSK-PLAIC7d-1979-2010-NEUBAUER",
+    "method": "XSA",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1980,
+     2010
+    ],
+    "train_to": 1997,
+    "a": 1.2262916425078212,
+    "b": -1.5538730621372163,
+    "scale_t": 22400.0
+   }
+  ],
+  "control": [
+   {
+    "stockid": "BIGEYEATL",
+    "assessid": "ICCAT-BIGEYEATL-1950-2016-PONS",
+    "method": "ASPIC",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1951,
+     2014
+    ],
+    "train_to": 1987,
+    "a": 0.1774893818572901,
+    "b": -0.17900786379703754,
+    "scale_t": 1250000.0
+   },
+   {
+    "stockid": "SAILEATL",
+    "assessid": "ICCAT-SAILEATL-1956-2010-CHING",
+    "method": "BSPM",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1957,
+     2008
+    ],
+    "train_to": 1986,
+    "a": 0.287253165791138,
+    "b": -0.2847279015242639,
+    "scale_t": 27400.0
+   },
+   {
+    "stockid": "SAILWATL",
+    "assessid": "ICCAT-SAILWATL-1956-2010-CHING",
+    "method": "BSPM",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1957,
+     2007
+    ],
+    "train_to": 1986,
+    "a": 0.04581065342394686,
+    "b": -0.040792517639455364,
+    "scale_t": 40900.0
+   },
+   {
+    "stockid": "SKJEATL",
+    "assessid": "ICCAT-SKJEATL-1950-2010-CHING",
+    "method": "BSPM",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1950,
+     2006
+    ],
+    "train_to": 1982,
+    "a": 0.6977494046656615,
+    "b": -0.7019533785788785,
+    "scale_t": 768000.0
+   },
+   {
+    "stockid": "SKJWATL",
+    "assessid": "ICCAT-SKJWATL-1950-2014-PONS",
+    "method": "ASPIC",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1950,
+     2013
+    ],
+    "train_to": 1984,
+    "a": 1.589414685410391,
+    "b": -1.6464905711385227,
+    "scale_t": 58300.0
+   },
+   {
+    "stockid": "SWORDSATL",
+    "assessid": "ICCAT-SWORDSATL-1950-2015-PONS",
+    "method": "ASPIC",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1956,
+     2012
+    ],
+    "train_to": 1988,
+    "a": 0.3608739745201144,
+    "b": -0.3567151338170016,
+    "scale_t": 115000.0
+   },
+   {
+    "stockid": "YFINATL",
+    "assessid": "ICCAT-YFINATL-1950-2016-PONS",
+    "method": "ASPIC",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1951,
+     2014
+    ],
+    "train_to": 1987,
+    "a": 0.21131137041421447,
+    "b": -0.21084339144605066,
+    "scale_t": 1940000.0
+   },
+   {
+    "stockid": "REDFISHSPP3LN",
+    "assessid": "NAFO-SC-REDFISHSPP3LN-1959-2008-BAUM",
+    "method": "ASPIC",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1959,
+     2007
+    ],
+    "train_to": 1986,
+    "a": 0.3591633958004341,
+    "b": -0.27888945454803576,
+    "scale_t": 204000.0
+   },
+   {
+    "stockid": "YELL3LNO",
+    "assessid": "NAFO-SC-YELL3LNO-1960-2009-BAUM",
+    "method": "ASPIC",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1965,
+     2007
+    ],
+    "train_to": 1989,
+    "a": 0.6621554466949133,
+    "b": -0.6587516366733216,
+    "scale_t": 132000.0
+   },
+   {
+    "stockid": "COWCODSCAL",
+    "assessid": "PFMC-COWCODSCAL-1900-2015-HIVELY",
+    "method": "XDB-SRA",
+    "tb": "TB-MT",
+    "catch": "TC-MT",
+    "years": [
+     1900,
+     2015
+    ],
+    "train_to": 1968,
+    "a": 0.0876362388294455,
+    "b": -0.09061388898620464,
+    "scale_t": 3100.0
+   },
+   {
+    "stockid": "SPANMACKSATLC",
+    "assessid": "SEFSC-SPANMACKSATLC-1950-2012-HIVELY",
+    "method": "ASPIC",
+    "tb": "TB-MT",
+    "catch": "TL-MT",
+    "years": [
+     1950,
+     2011
+    ],
+    "train_to": 1985,
+    "a": 0.39239303954890675,
+    "b": -0.3508592506980488,
+    "scale_t": 21800.0
+   }
+  ]
+ }
+}

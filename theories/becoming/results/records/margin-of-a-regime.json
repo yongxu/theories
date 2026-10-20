@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T13:58:16+00:00",
+  "reviewed_at_utc": "2026-10-20T16:29:39+00:00",
   "statement": {
     "en": "With giving read off the level under a standing draw, the condition holds exactly from a least level up, which lies more than the draw above the need where giving there falls short of it, rises with the draw, and harms of joint draws are super-additive up to one unit.",
     "zh": "在常设汲取下所给读自水平时，不可回返点是确切的；在需求处所给不足汲取时高出需求不止一份汲取；随汲取升高；联合汲取的损害在一单位之内超可加。"
@@ -109,8 +109,18 @@
       "kind": "scope"
     },
     {
-      "en": "That the regime's point predicts a field system: in 113 assessed fish stocks giving persisted beyond what the level gives, and the frozen rest forecast better over one to five years.",
-      "zh": "体制的点能预测野外系统：在 113 个经评估的鱼类种群中，所给的持续超出水平所给，一至五年内冻结其余预测得更好。",
+      "en": "That the regime's point predicts a field system: in assessed fish stocks giving persists beyond what the level gives, and the frozen rest forecasts better than the regime margin.",
+      "zh": "体制的点能预测野外系统：在经评估的鱼类种群中，所给的持续超出水平所给，冻结其余比体制的余量预测得更好。",
+      "kind": "scope"
+    },
+    {
+      "en": "That level and recent giving are the whole state in the field: giving relaxing toward the level's law narrows errors, but last year's escapement still adds and the direction is no better.",
+      "zh": "水平与近期所给在野外就是全部状态：所给向水平的规律回归缩小了误差，但上一年的逃逸量仍有增益，方向判断也不更好。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the frozen-rest margin over the net draw is a time to break in the field: it ranks the risk, but a third of those it put within five years fell, and the catch followed the stock.",
+      "zh": "冻结其余的余量除以净汲取在野外就是破断时间：它对风险排序正确，但被判为五年内者只有三分之一如此，且捕捞随种群而变。",
       "kind": "scope"
     },
     {
@@ -150,12 +160,12 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T135509.239302Z）：Becoming.RegimeMargin 的 49 项声明（36 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 270 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A state of level and recent giving, frozen and tested on data not yet read (MQ3's level-plus-anomaly reading came between and did not beat the frozen rest); field series measured rather than assessed; the join to Flow.Balances; the fold over Archimedean amounts; several conditions coupled; an independent review.",
-    "zh": "由水平与近期所给构成的状态，在尚未读过的数据上冻结并检验（MQ3 的水平加异常的读法居于其间，未胜过冻结其余）；测量而非评估得到的野外序列；与 Flow.Balances 相接；阿基米德量上的折叠；多个相互耦合的条件；独立审查。"
+    "en": "A state with a lag (an age structure), frozen on data not yet read: level and recent giving are both part of the state in assessed stocks, but not all of it; the draw's response to the stock read as part of the regime; field series measured rather than assessed, with an observation model; the join to Flow.Balances; the fold over Archimedean amounts; coupled conditions; an independent review.",
+    "zh": "带滞后（年龄结构）的状态，在尚未读过的数据上冻结检验：在已评估种群中，水平与近期所给都属于状态，但不是全部；把汲取对种群的回应读作体制的一部分；测量而非评估得到的野外序列，配以观测模型；与 Flow.Balances 相接；阿基米德量上的折叠；相互耦合的条件；独立审查。"
   },
   "correspondence": {
-    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS).",
-    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合损害的超可加即凹的增函数更新之逆的凸性。每条规律都在模拟的 Allee 酵母与网格世界中测量过，这一步又以冻结的预测在 Dai 等的真实酵母与 RAM Legacy 种群评估数据库 v4.66 上检验过；已评估种群中生产力的体制转换是已知的（Vert-pre 等 2013，PNAS）。"
+    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS).",
+    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合损害的超可加即凹的增函数更新之逆的凸性。每条规律都在模拟的 Allee 酵母与网格世界中测量过，这一步又以冻结的预测在 Dai 等的真实酵母与 RAM Legacy 种群评估数据库 v4.66 上检验过，再在无人读过的已评估种群上检验了以这一步与冻结其余为两端的、由水平与近期所给构成的状态；已评估种群中生产力的体制转换是已知的（Vert-pre 等 2013，PNAS）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
   "aliases": [
@@ -260,7 +270,7 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "42717597f21a5a7dab0441d6f063f74b9f85b21bbb0bd357341f016956f150a6"
+      "sha256": "1e8c09b08590ffc8f70e1f2c1795e7d25387ec71436d55d644b8115396e5f8a4"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
@@ -285,6 +295,10 @@
     {
       "en": "20 October 2026: MQ3 (study section 272), a frozen field test on 113 assessed fish stocks, failed every verdict; the premise that giving is read off the level is recorded as false there over one to five years, and the next step names a state of level and recent giving. MQ1 (section 253) and MQ2 (section 266) are the earlier measurements.",
       "zh": "2026年10月20日：MQ3（研究第 272 节），在 113 个经评估鱼类种群上的冻结野外检验，每项判定都未通过；所给读自水平这一前提记为在那里一至五年内不成立，下一步指向由水平与近期所给构成的状态。"
+    },
+    {
+      "en": "20 October 2026: MQ4 (study section 277), a frozen field test on 76 assessed stocks no analysis had read, of a state of level and recent giving with this step and the frozen rest as its ends: both variables are part of the state and the level's pull narrows forecast errors, but the pair is not the whole state, the direction is no better than the frozen rest's, and the frozen-rest time to break ranks risk without timing it; the scope and the next step are revised.",
+      "zh": "2026年10月20日：MQ4（研究第 277 节），在 76 个无人读过的已评估种群上的冻结野外检验，检验以这一步与冻结其余为两端的、由水平与近期所给构成的状态：两个变量都属于状态，水平的回拉缩小了预测误差，但两者不是全部状态，方向不比冻结其余好，冻结其余的破断时间能排序风险而不能定时；范围与下一步据此修订。"
     }
   ]
 }

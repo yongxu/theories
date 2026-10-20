@@ -1,0 +1,77 @@
+{
+ "stocks": {
+  "other": 92,
+  "primary": 76,
+  "control": 11
+ },
+ "verdicts": {
+  "primary": {
+   "G1": "passed",
+   "G2": "passed",
+   "G3": "failed",
+   "F1a": "reported",
+   "F1b": "passed",
+   "F5a": "failed",
+   "F5b": "passed",
+   "F10a": "failed",
+   "F10b": "failed",
+   "T1": "passed",
+   "T2": "failed",
+   "R1": "passed",
+   "R2": "passed"
+  },
+  "control": {
+   "G1": "passed",
+   "G2": "passed",
+   "G3": "failed",
+   "F1a": "reported",
+   "F1b": "failed",
+   "F5a": "failed",
+   "F5b": "failed",
+   "F10a": "failed",
+   "F10b": "failed",
+   "T1": "passed",
+   "T2": "failed",
+   "R1": "passed",
+   "R2": "passed"
+  },
+  "other": {
+   "G1": "passed",
+   "G2": "passed",
+   "G3": "passed",
+   "F1a": "reported",
+   "F1b": "failed",
+   "F5a": "failed",
+   "F5b": "failed",
+   "F10a": "failed",
+   "F10b": "failed",
+   "T1": "passed",
+   "T2": "failed",
+   "R1": "failed",
+   "R2": "passed"
+  }
+ },
+ "mq3_rules": {
+  "primary": {
+   "F0": "failed",
+   "F1": "failed",
+   "F2": "failed",
+   "F3": "failed",
+   "F4": "reported"
+  },
+  "control": {
+   "F0": "failed",
+   "F1": "failed",
+   "F2": "failed",
+   "F3": "failed",
+   "F4": "reported"
+  },
+  "other": {
+   "F0": "passed",
+   "F1": "failed",
+   "F2": "failed",
+   "F3": "failed",
+   "F4": "reported"
+  }
+ }
+}
