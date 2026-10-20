@@ -11515,3 +11515,57 @@ Output → input: chapter 8.1 item 8 is settled in its formal part for continuat
 - **Coinciding standings.** `World.continues_as_alike` exhibits the naming, the exchange after the step, which `World.fixed_iff` used inside its proof. Stated alone, it says what the choice is: both continuations keep the balance, and every per-step record is kept by any re-identification, so nothing the world records separates them.
 
 **Self-review.** As with R49, the laws are near-definitional once the chain relations are given. Their use is closure: arising (R48), the classes (R49), tenure and undermining (here) are all laws of a continuation, and the material continuation is fixed exactly up to coinciding standings, where the world does not decide. Item 8's remaining question is whether informational or organizational continuity yields a continuation read off the world, which would be a modelling choice to state, not a proof gap in this line.
+
+## 270. The margin of a regime: giving read off the level under a standing draw (RM1)
+
+```text
+Result(s): margin-of-a-regime (new record); core module Becoming.RegimeMargin on Law.run.
+Delta: MQ1 (section 253) found that the margin law's comparison, with the rest's exchanges held as
+       they were (Flow.WithheldLevels), holds as an identity on measured data, and that the
+       measurable margin is the regime's: the point of no return under a standing draw lies more
+       than the draw above the need, and harms of joint draws are super-additive. The spine had no
+       law with giving read off the level. This module states one: step g H x = (x - H) + g (x - H),
+       g the condition's equation of state. Below H + y, where giving falls short of the draw below
+       y, the condition is gone within as many steps as it stood (ends_below); from H + y up to a top
+       the step keeps, it holds (holds); the point is exact (ends_iff_below). With giving stopped
+       below a need m, the least level meeting a positive draw is at least m (root_above_need), above
+       m exactly where giving at m falls short of the draw (beyond_draw_iff), and rises with the draw
+       where giving does not rise (rises_by_draw). MQ2 (section 266) found on real yeast that giving
+       at equal density falls with the draw, so laws comparing regimes take one giving law per
+       draw (Lowered g' g): lowered giving raises the need, strictly exactly where it falls short
+       of the draw at the old need (lowered_raises, lowered_raises_strictly). With joint giving
+       subadditive above m and no greater than either draw's, a + b <= c + 1 for the rises of the
+       least levels meeting H1, H2 and H1 + H2 (harms_superadditive); Concave is strict (14 against 12),
+       Peaked has two draws held alone that together end the condition from every level. The time
+       to break lies between not_before (b + H n <= x) and falls_within (x < b + (H - Y) n), MQ1's
+       A2 band.
+Premises: the representation's whole-number amounts and discrete steps; the draw taken first, as
+       much as there is; within a regime, giving a function of what is left (no hidden state: MQ1's
+       A1 and D1 measure where this holds); across regimes, each draw's own giving law, compared by
+       Lowered; each law's own hypotheses (Short, Meets, Keeps, Gated, SubadditiveAbove, AtMost).
+       No ethical premise. How giving depends on the draw is not derived: MQ2 measured it.
+Evidence: core receipt 20261020T135509.239302Z; every declaration's axiom report empty.
+Closest prior (literature check before any Lean, from knowledge, not searched): harvesting under
+       depensation and critical depensation, the fold of the harvested equilibrium (Clark,
+       Mathematical Bioeconomics, 1976; May, "Thresholds and breakpoints in ecosystems with a
+       multiplicity of stable states", Nature 1977); Allee effects under harvest (Courchamp, Berec and
+       Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additivity of joint harm is
+       the convexity of the inverse of a concave, increasing renewal: a convex function vanishing at
+       zero is superadditive. The time-to-break band is the elementary bound of a level falling by
+       between H - Y and H a step. Nothing here is new mathematics; the record says correspondence.
+Boundary: one condition, one standing draw, giving read off the level alone; the whole numbers cost
+       one unit in harms_superadditive; Meets and Keeps are supplied, not derived from a shape of g;
+       no reals, so the smooth fold is not stated; no join yet to Flow.Balances (the regime's step is
+       a balance of one condition read by itself, the rest being the condition's own giving).
+Output -> input: MQ2 (the held-out test of the equation of state on Dai et al.'s yeast data) cites
+       these laws for the regime need and the band; section 8.1 item 6 (amounts) and the margin
+       law's record (four-cases-of-a-part) name the frozen-rest reading's limit.
+```
+
+**Why the margin law needed this.** The margin law is exact about what a part's net draw does to the levels against the levels without it, the rest's giving held as it was. That is accounting: draws add and a part's damage is its draw beyond the margin, by definition. Where the condition's own giving responds to its level, the comparison holds but predicts nothing about when the condition can no longer recover. The regime's point of no return is that prediction. It is a quantity of the level under the standing draws, as a boiling point is a quantity of a liquid at a pressure.
+
+**Revised before landing.** The first build read one giving law for every draw. MQ2's held-out test on Dai et al.'s yeast then found that giving at equal density falls with the dilution (a factor 2-2.7 between DF 250 and 1600, 22 standard errors), so a giving law of the level alone is false across regimes in that system. The comparisons across draws were restated with one giving law per draw and `Lowered` between them, and `lowered_raises` and `lowered_raises_strictly` added; with one law for all draws the earlier statements are the case `Lowered g g`.
+
+**Self-review.** The statements are exactly the Lean ones. Three choices carry weight. The draw is taken before giving (MQ1's dilution protocol), so `step` is one of two orders; the other order (give, then draw) moves the point of no return and is not stated. The super-additivity theorem assumes subadditivity of giving above the need, which concave giving with nonnegative giving at the need implies over the reals; the whole-number witness `Concave` shows strictness, not the hypothesis. `holds` needs `Keeps`, a band the step does not leave; a giving law that overshoots above its peak can leave every band, and the module says nothing there.
+
+**The run.** Core 281 modules and 11,304 theorems, instances 7 and 567, applications 6 and 179; 9 Lean steps ran, 1,179 reused. 49 declarations of Becoming.RegimeMargin, 36 of them theorems, all with empty axiom reports. Connectivity: 573 of 12,050 apart, 9 of the module's 36; register check passes.

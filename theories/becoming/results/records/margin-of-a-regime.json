@@ -1,0 +1,281 @@
+{
+  "schema_version": 2,
+  "id": "margin-of-a-regime",
+  "title": {
+    "en": "The margin of a regime",
+    "zh": "一个体制的余量"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-20T13:58:16+00:00",
+  "statement": {
+    "en": "With giving read off the level under a standing draw, the condition holds exactly from a least level up, which lies more than the draw above the need where giving there falls short of it, rises with the draw, and harms of joint draws are super-additive up to one unit.",
+    "zh": "在常设汲取下所给读自水平时，不可回返点是确切的；在需求处所给不足汲取时高出需求不止一份汲取；随汲取升高；联合汲取的损害在一单位之内超可加。"
+  },
+  "laws": [
+    {
+      "en": "A condition gives by a law of its level, g, from what a standing draw H leaves: the next level is (x - H) + g(x - H). Where giving falls short of the draw at every level below y and nothing gives from nothing, a positive level below H + y falls at every step, is nothing after as many steps as it stood, and stays nothing.",
+      "zh": "条件按其水平的规律 g、从常设汲取 H 所留下者给出：下一水平为 (x - H) + g(x - H)。所给在 y 之下的每个水平都不足汲取、且无中不生有时，低于 H + y 的正水平每步下降，在其所立的步数之后为无，并保持为无。",
+      "declarations": [
+        "Becoming.RegimeMargin.step",
+        "Becoming.RegimeMargin.Short",
+        "Becoming.RegimeMargin.FromNothing",
+        "Becoming.RegimeMargin.step_falls",
+        "Becoming.RegimeMargin.step_below",
+        "Becoming.RegimeMargin.orbit_bound",
+        "Becoming.RegimeMargin.ends_below",
+        "Becoming.RegimeMargin.stays_ended"
+      ]
+    },
+    {
+      "en": "Where giving meets the draw from y up to a top the step keeps, a level from H + y up to the top never falls below its start; so the point of no return is exact: from a level up to the top, the condition ends exactly where it starts below H + y. A draw beyond all giving ends the condition from every level.",
+      "zh": "所给从 y 起直到步所保持的上限都满足汲取时，从 H + y 到上限的水平永不低于其起点；故不可回返点是确切的：从上限之内的水平，条件恰在起点低于 H + y 时终结。超出一切所给的汲取从每个水平终结条件。",
+      "declarations": [
+        "Becoming.RegimeMargin.Meets",
+        "Becoming.RegimeMargin.Keeps",
+        "Becoming.RegimeMargin.step_holds",
+        "Becoming.RegimeMargin.holds",
+        "Becoming.RegimeMargin.ends_iff_below",
+        "Becoming.RegimeMargin.ends_beyond_giving"
+      ]
+    },
+    {
+      "en": "The need is the regime's. Where giving stops below a need m, every level at which giving meets a positive draw is at least m, so the point of no return is at least the draw above the need; it is more than that exactly where giving at the need falls short of the draw; and a larger draw, giving no more, raises it by at least the difference.",
+      "zh": "需求属于体制。所给在需求 m 之下停止时，所给满足正汲取的每个水平不低于 m，故不可回返点至少高出需求一份汲取；恰在需求处所给不足汲取时更高；更大的汲取、所给不增时，使之至少升高两者之差。",
+      "declarations": [
+        "Becoming.RegimeMargin.Gated",
+        "Becoming.RegimeMargin.Root",
+        "Becoming.RegimeMargin.Lowered",
+        "Becoming.RegimeMargin.root_above_need",
+        "Becoming.RegimeMargin.beyond_draw_iff",
+        "Becoming.RegimeMargin.root_mono",
+        "Becoming.RegimeMargin.rises_by_draw"
+      ]
+    },
+    {
+      "en": "Giving lowered by the regime raises the need beyond what removal alone gives: under the same draw, the least level meeting it under lowered giving is no lower, and higher exactly where the lowered giving falls short of the draw at the old least level. MQ2 measured giving falling with the draw on real yeast.",
+      "zh": "体制降低所给，即把需求抬高到仅由移除所致者之上：同一汲取下，降低的所给满足它的最低水平不更低，恰在降低的所给于旧的最低水平处不足汲取时更高。MQ2 在真实酵母上测得所给随汲取下降。",
+      "declarations": [
+        "Becoming.RegimeMargin.lowered_raises",
+        "Becoming.RegimeMargin.lowered_raises_strictly"
+      ]
+    },
+    {
+      "en": "Draws add, harms do not. Where giving under the joint draw is subadditive above the need and no greater than under either draw, and the least levels meeting H1, H2 and H1 + H2 lie a, b and c above the need, a + b <= c + 1: the rise of the point of no return under the joint draw is at least the sum of the rises under each, less one whole unit.",
+      "zh": "汲取相加，损害不然。联合汲取下的所给在需求之上次可加且不大于各自汲取下的所给，且满足 H1、H2 与 H1 + H2 的最低水平高出需求 a、b、c 时，a + b <= c + 1：联合汲取下不可回返点的升高至少是各自升高之和减一个整单位。",
+      "declarations": [
+        "Becoming.RegimeMargin.SubadditiveAbove",
+        "Becoming.RegimeMargin.harms_superadditive"
+      ]
+    },
+    {
+      "en": "The time to break lies in a band: the level stays at or above b at every step n with b + H n <= x; where giving is at most Y and Y <= H <= b, it falls below b within any n with x < b + (H - Y) n.",
+      "zh": "破断的时间在一个区间内：在 b + H n <= x 的每一步 n，水平不低于 b；所给至多为 Y 且 Y <= H <= b 时，在 x < b + (H - Y) n 的任何 n 步之内降到 b 之下。",
+      "declarations": [
+        "Becoming.RegimeMargin.AtMost",
+        "Becoming.RegimeMargin.step_ge",
+        "Becoming.RegimeMargin.orbit_ge",
+        "Becoming.RegimeMargin.not_before",
+        "Becoming.RegimeMargin.step_falls_by",
+        "Becoming.RegimeMargin.falls_or_bound",
+        "Becoming.RegimeMargin.falls_within"
+      ]
+    },
+    {
+      "en": "Witnesses: Concave gives min(2z, z + 2); the least levels meeting 4 and 8 are 2 and 6, so the joint rise 14 exceeds the sum 12. Peaked gives min(z, 8 - z): each draw of 3 holds alone from every level from 6 to 8, and the two together, beyond all giving, end the condition from every level.",
+      "zh": "见证：Concave 给出 min(2z, z + 2)；满足 4 与 8 的最低水平为 2 与 6，故联合升高 14 超过和 12。Peaked 给出 min(z, 8 - z)：3 的每份汲取单独从 6 到 8 的每个水平都得以维持，两者合起来超出一切所给，从每个水平终结条件。",
+      "declarations": [
+        "Becoming.RegimeMargin.Concave.giving",
+        "Becoming.RegimeMargin.Concave.roots",
+        "Becoming.RegimeMargin.Peaked.giving",
+        "Becoming.RegimeMargin.Peaked.fromNothing",
+        "Becoming.RegimeMargin.Peaked.atMost",
+        "Becoming.RegimeMargin.Peaked.each_holds",
+        "Becoming.RegimeMargin.Peaked.together_ends"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; giving a function of what is left, with no hidden state; each law's own premises (Short, Meets, Keeps, Gated, SubadditiveAbove, AtMost) as hypotheses.",
+      "zh": "不加公理。整数量与离散步；一个条件；汲取先取，有多少取多少；所给是所留者的函数，无隐藏状态；各规律自身的前提（Short、Meets、Keeps、Gated、SubadditiveAbove、AtMost）为假设。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "How giving depends on the draw, or that a system's giving is read off its level within a regime: MQ1 and MQ2 measured both on Dai et al.'s yeast; neither is a theorem.",
+      "zh": "所给怎样依赖于汲取，或某系统在一个体制内的所给读自其水平：MQ1 与 MQ2 在 Dai 等的酵母上测得两者；两者都不是定理。",
+      "kind": "scope"
+    },
+    {
+      "en": "Super-additivity for every concave giving law: the hypothesis is subadditivity above the need, and the whole numbers lose one unit.",
+      "zh": "对每个凹的所给规律都超可加：假设是需求之上的次可加，整数还要付出一个单位。",
+      "kind": "scope"
+    },
+    {
+      "en": "The fold over the reals, or the other order of a step (giving before the draw): neither is stated.",
+      "zh": "实数上的折叠，或步的另一种次序（先给后取）：两者都未陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "That drawing beyond the margin is worse: these laws locate where a condition ends, and order nothing.",
+      "zh": "超出余量的汲取更坏：这些规律定位条件在何处终结，不定任何次序。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "detail": {
+        "en": "Peaked: two draws of 3, each held alone from every level from 6 to 8, together end the condition from every level (Peaked.each_holds, Peaked.together_ends); the frozen-rest comparison that adds draws does not show it.",
+        "zh": "Peaked：两份 3 的汲取，各自单独从 6 到 8 的每个水平得以维持，合起来从每个水平终结条件（Peaked.each_holds、Peaked.together_ends）；把汲取相加的冻结其余的核算看不出这一点。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T135509.239302Z): the 49 declarations of Becoming.RegimeMargin, 36 of them theorems, have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 270; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T135509.239302Z）：Becoming.RegimeMargin 的 49 项声明（36 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 270 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "A frozen test of a draw-dependent giving law on data not yet read; the join to Flow.Balances; the fold over Archimedean amounts; several conditions coupled; an independent review.",
+    "zh": "在尚未读过的数据上对依赖汲取的所给规律做冻结检验；与 Flow.Balances 相接；阿基米德量上的折叠；多个相互耦合的条件；独立审查。"
+  },
+  "correspondence": {
+    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. MQ1 (study section 253) measured each law in a simulated Allee yeast and in a gridworld; MQ2 (section 266) found on real yeast that the need predicted from a fitted growth map separates fates in held-out regimes, and that giving falls with the draw.",
+    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合损害的超可加即凹的增函数更新之逆的凸性。MQ1（研究第 253 节）在模拟的 Allee 酵母与网格世界中测量了每条规律；MQ2（第 266 节）在真实酵母上发现，由拟合的生长映射预测的需求在留出体制中区分命运，且所给随汲取下降。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+  "aliases": [
+    "margin of a regime",
+    "一个体制的余量",
+    "point of no return under a standing draw",
+    "the need is the regime's",
+    "harms super-additive",
+    "Becoming.RegimeMargin.ends_iff_below",
+    "Becoming.RegimeMargin.beyond_draw_iff",
+    "Becoming.RegimeMargin.harms_superadditive"
+  ],
+  "dependencies": [],
+  "related": [
+    {
+      "id": "four-cases-of-a-part",
+      "detail": {
+        "en": "The margin law compares levels with the rest's exchanges held as they were; this record reads the margin with the condition's own giving responding to its level, where measurement can test it.",
+        "zh": "余量之律在其余交换保持原样时比较水平；本记录读条件自身的所给随水平回应时的余量，测量可以检验之处。"
+      }
+    },
+    {
+      "id": "own-count-misses-joint-excess",
+      "detail": {
+        "en": "Own draws within what is given can jointly exceed it; Peaked shows two draws each held alone that together end the condition, with giving read off the level.",
+        "zh": "各自在所给之内的汲取合起来可超出之；Peaked 显示在所给读自水平时，各自单独得以维持的两份汲取合起来终结条件。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RegimeMargin.AtMost",
+        "Becoming.RegimeMargin.Concave.giving",
+        "Becoming.RegimeMargin.Concave.roots",
+        "Becoming.RegimeMargin.FromNothing",
+        "Becoming.RegimeMargin.Gated",
+        "Becoming.RegimeMargin.Keeps",
+        "Becoming.RegimeMargin.Lowered",
+        "Becoming.RegimeMargin.Meets",
+        "Becoming.RegimeMargin.Peaked.atMost",
+        "Becoming.RegimeMargin.Peaked.each_holds",
+        "Becoming.RegimeMargin.Peaked.fromNothing",
+        "Becoming.RegimeMargin.Peaked.giving",
+        "Becoming.RegimeMargin.Peaked.min_le_left'",
+        "Becoming.RegimeMargin.Peaked.min_le_right'",
+        "Becoming.RegimeMargin.Peaked.together_ends",
+        "Becoming.RegimeMargin.Root",
+        "Becoming.RegimeMargin.Short",
+        "Becoming.RegimeMargin.SubadditiveAbove",
+        "Becoming.RegimeMargin.below",
+        "Becoming.RegimeMargin.below_spec",
+        "Becoming.RegimeMargin.beyond_draw_iff",
+        "Becoming.RegimeMargin.ends_below",
+        "Becoming.RegimeMargin.ends_beyond_giving",
+        "Becoming.RegimeMargin.ends_iff_below",
+        "Becoming.RegimeMargin.falls_or_bound",
+        "Becoming.RegimeMargin.falls_within",
+        "Becoming.RegimeMargin.harms_superadditive",
+        "Becoming.RegimeMargin.holds",
+        "Becoming.RegimeMargin.keeps_of_below",
+        "Becoming.RegimeMargin.lowered_raises",
+        "Becoming.RegimeMargin.lowered_raises_strictly",
+        "Becoming.RegimeMargin.meets_of_below",
+        "Becoming.RegimeMargin.not_before",
+        "Becoming.RegimeMargin.orbit_bound",
+        "Becoming.RegimeMargin.orbit_from_zero",
+        "Becoming.RegimeMargin.orbit_ge",
+        "Becoming.RegimeMargin.rises_by_draw",
+        "Becoming.RegimeMargin.root_above_need",
+        "Becoming.RegimeMargin.root_mono",
+        "Becoming.RegimeMargin.short_of_below",
+        "Becoming.RegimeMargin.stays_ended",
+        "Becoming.RegimeMargin.step",
+        "Becoming.RegimeMargin.step_below",
+        "Becoming.RegimeMargin.step_falls",
+        "Becoming.RegimeMargin.step_falls_by",
+        "Becoming.RegimeMargin.step_ge",
+        "Becoming.RegimeMargin.step_holds",
+        "Becoming.RegimeMargin.step_of_lt",
+        "Becoming.RegimeMargin.step_zero"
+      ],
+      "sha256": "040683c4b1a2c981f93271c83609e4dbf1de8c32677096af2e68669f34f031f2"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "role": "proof",
+      "sha256": "78c79cc4e644639a898d1615bcf77134e2d84bdfd7b720bced7acd8a41db2d9b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T135509.239302Z/verification.json",
+      "role": "receipt",
+      "sha256": "82628137461ee4437ccff9cc8e88a9fd6730158c66b6f6b98ed1ee1fa03bbe34"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "ccd42621b78c64a1fceafb651cb21a472255fe489ab28c70475b479d07c909f4"
+    },
+    {
+      "path": "experiments/margin-measured/README.md",
+      "role": "integration",
+      "sha256": "380bac0d96df55f79fae4596bba253c3de070cf65701be7fb202a152b0382026"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "3ce50a939b1ac7209f6c25686bae435bc50d96bcf95be94cd055390b1c98796b"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T135509.239302Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "20 October 2026: added (RM1), the margin with the condition's own giving read off its level, after MQ1 found the frozen-rest margin an identity on measured data; comparisons across draws take one giving law per draw after MQ2; study section 270.",
+      "zh": "2026年10月20日：新增（RM1），条件自身的所给读自其水平时的余量，此前 MQ1 发现冻结其余的余量在测量数据上是恒等式；研究第 270 节。"
+    }
+  ]
+}

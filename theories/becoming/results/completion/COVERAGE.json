@@ -107,7 +107,8 @@
         "what-taking-all-excludes",
         "the-rest-outruns-the-renewal",
         "every-loss-passes-a-juncture",
-        "capture-through-the-rule"
+        "capture-through-the-rule",
+        "margin-of-a-regime"
       ],
       "declarations": [
         "Becoming.Flow.Balances.consumption_ends_with_feeders",
@@ -115,7 +116,8 @@
         "Becoming.Flow.continuing_excludes",
         "Becoming.Flow.outrun_below",
         "Becoming.Branching.loss_passes_juncture",
-        "Becoming.RuleCapture.favouring_locks"
+        "Becoming.RuleCapture.favouring_locks",
+        "Becoming.RegimeMargin.ends_iff_below"
       ],
       "status": "proved",
       "open_items": [

@@ -185,7 +185,7 @@
 
 **要点。** 一个家族无尽地取用者，从其外得到供给；各自在一步所给之内的汲取合起来可以超出它，使水平低于更新者之所需的联合超出，终结它们以及在那一需要上依存于该条件的一切。取尽所给者排除其他每个取用者；每步上升的取用耗尽它所取自者并终结。
 
-**定理。** 本节陈述 `Flow.fed_from_beyond`、`Flow.excess_bounded`、`Flow.joint_excess_ends`、`Flow.continuing_excludes`、`Flow.outrun_below`、`Flow.seeking_ends`；完整陈述见[英文版 §2.3](THE-THEORY-OF-BECOMING.md#23-joint-excess-taking-all-and-what-is-fed-from-beyond)。
+**定理。** 本节陈述 `Flow.fed_from_beyond`、`Flow.excess_bounded`、`Flow.joint_excess_ends`、`Flow.continuing_excludes`、`Flow.outrun_below`、`Flow.seeking_ends`，以及一个体制的余量：在常设汲取下所给读自水平时，不可回返点是确切的（`RegimeMargin.ends_iff_below`），它高出需求至少一份汲取、恰在需求处所给不足汲取时更多（`RegimeMargin.beyond_draw_iff`），体制降低所给即抬高需求（`RegimeMargin.lowered_raises_strictly`），联合汲取下的所给次可加且不大于各自汲取下的所给时损害在一单位之内超可加（`RegimeMargin.harms_superadditive`）；完整陈述见[英文版 §2.3](THE-THEORY-OF-BECOMING.md#23-joint-excess-taking-all-and-what-is-fed-from-beyond)。
 
 记录：[continuing-self-fed-from-beyond](../results/records/continuing-self-fed-from-beyond.md)、[own-count-misses-joint-excess](../results/records/own-count-misses-joint-excess.md)、[derived-extent-limits](../results/records/derived-extent-limits.md)、[what-taking-all-excludes](../results/records/what-taking-all-excludes.md)、[the-rest-outruns-the-renewal](../results/records/the-rest-outruns-the-renewal.md)、[where-a-rising-take-ends](../results/records/where-a-rising-take-ends.md)。
 
@@ -767,6 +767,7 @@
 | [读作扩大的比较 C](../results/records/comparison-by-widening.md) | 不加前提的定理 | — | §6.1 |
 | [比较内容的关系保真：最低所需、分组与真实损失](../results/records/comparison-content-under-regrouping.md) | 不加前提的定理 | — | §6.1 |
 | [一个部分的四种情形](../results/records/four-cases-of-a-part.md) | 不加前提的定理 | — | §6.1 |
+| [一个体制的余量](../results/records/margin-of-a-regime.md) | 有所述前提的定理 | 整数量；所给读自水平；各律自身的前提 | §2.3 |
 | [余量之内的自身扩大](../results/records/own-widening-within-the-margin.md) | 有所述前提的定理 | 平衡；部分及其自身区域可判定 | §7.2 |
 | [区域之外的损失](../results/records/loss-beyond-a-region.md) | 不加前提的定理 | — | §6.1 |
 | [开放形态下的规则修订与实际生成](../results/records/open-form-realization-under-revision.md) | 定理，条件在其假设中 | 生命意义、条件（一个实例） | §6.1 |
@@ -831,7 +832,7 @@
 | 9. 意义不在动力学中；范围与次序（§5、§6.4–§6.5） | 是与应当之间的鸿沟（Hume 1739）；开放问题论证（Moore 1903）；从自身能动性出发的普遍化，Gewirth 的类属一致原则（1978），以及 Hare（1963、1981）、Nagel（1970）、Sidgwick（1874）；支配序的不完全（Sen 1970） | 覆盖假设被指名为前提；范围与次序分开，并证明条件单独不排序任何东西 | 近乎定义；已知论证的重述；这一区分是澄清 |
 | 10. 回路（§2.6） | 有向图无环恰当其邻接矩阵幂零，此时 (I + N)ᵗ 是 t 的多项式；正整数权的环使谱半径大于一（Perron–Frobenius）；偏差放大的回路（Maruyama 1963） | 对整数的量与时间表的构造性陈述；稀疏时间表的情形 | 已知结果的重述 |
 
-十项之外的结果：从其外的供给与位置／迁移网的实例是排序函数论证，严格正的 P-次不变量界定每个点火序列（Lautenbach 1975；Memmi and Roucairol 1980；Murata 1989），所以网显示的是与已知理论一致，不是对一般性的独立支持；热力学对应重述持续的结构需要通量（Schrödinger 1944；Prigogine 1977）与 Landauer 的下界，其计数（在不合并的律中部分的合并由其余部分承接）就是 Landauer 自己的论证（1961；Bennett 2003；Ladyman、Presnell、Short 与 Groisman 2007），而物理给出的每种最小损失（合并、有限时间、精度、有限热库）都是随机热力学中带有自身前提的定理（[最小损失的检查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#least-loss-check)）；调节重述无差拍控制、有延迟的扰动抑制（Dahleh and Pearson 1987）与必要多样性（Ashby 1956）；选择项是 Price（1970）的；余量之内的自身扩大（§7.2）是在区域上分开的余量之律，对守恒的量回答了寻求权力定理（Turner 等 2021）意义上的保留选项何时关闭他者的选项，常和博弈中的权力稀缺（Turner and Stavrianos 2021）是没有余量的情形，福利经济学中有余量才有帕累托改进是其类比；`Web.break_not_bounded` 成立是因为按假设存量不被观察，存量被观察之处断裂可以预先看到（§3.4）。
+十项之外的结果：从其外的供给与位置／迁移网的实例是排序函数论证，严格正的 P-次不变量界定每个点火序列（Lautenbach 1975；Memmi and Roucairol 1980；Murata 1989），所以网显示的是与已知理论一致，不是对一般性的独立支持；热力学对应重述持续的结构需要通量（Schrödinger 1944；Prigogine 1977）与 Landauer 的下界，其计数（在不合并的律中部分的合并由其余部分承接）就是 Landauer 自己的论证（1961；Bennett 2003；Ladyman、Presnell、Short 与 Groisman 2007），而物理给出的每种最小损失（合并、有限时间、精度、有限热库）都是随机热力学中带有自身前提的定理（[最小损失的检查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#least-loss-check)）；调节重述无差拍控制、有延迟的扰动抑制（Dahleh and Pearson 1987）与必要多样性（Ashby 1956）；选择项是 Price（1970）的；余量之内的自身扩大（§7.2）是在区域上分开的余量之律，对守恒的量回答了寻求权力定理（Turner 等 2021）意义上的保留选项何时关闭他者的选项，常和博弈中的权力稀缺（Turner and Stavrianos 2021）是没有余量的情形，福利经济学中有余量才有帕累托改进是其类比；一个体制的余量（§2.3）是以整数陈述的、减损性下的收获与被收获平衡的折叠（Clark 1976；May 1977），更新为凹时联合汲取的损害超可加，即凹更新之逆的凸性；`Web.break_not_bounded` 成立是因为按假设存量不被观察，存量被观察之处断裂可以预先看到（§3.4）。
 
 **留下什么。** 三样，都不是发现：前提账及其见证与校准（方法上的；§0、§8.6）；范围与次序分开的伦理，其中普遍化的一步是 Gewirth 的，C 是机会集文献的单调性（§6.4–§6.5）；以及一套词汇，守恒的记账、受观察限制的选择与机会集的比较在其中一起陈述。会改变这些裁定的是：专家不能从定义预见的定理，对实际系统的、可能失败而未失败的预测，或从比文献已有者更弱的东西推出一个前提。
 
@@ -888,7 +889,7 @@
 
 ### 8.7 经验对应
 
-共同条件与每个机制的实际实现；实际展开是否满足前提；所述的耗散强于统计的第二定律，只在取用不可逆于整单位或毁灭有 Landauer 下限之处由它推出；位置／变迁网按其自身定义满足前提；智慧在实际的人与 AI 中怎样形成；更强的方向假说（实在一般地发展出更多共享而更有回应的更新）开放，不是前提。
+共同条件与每个机制的实际实现；实际展开是否满足前提；所述的耗散强于统计的第二定律，只在取用不可逆于整单位或毁灭有 Landauer 下限之处由它推出；位置／变迁网按其自身定义满足前提；余量已被测量（MQ1，预测在运行前冻结）：余量之律的冻结其余的核算在测量数据上是恒等式，其检验在于一个体制的余量（§2.3）；在 Dai 等（2012）的酵母数据上，当前密度携带历史在 10% 之内（通过），尖锐需求的冻结检验因仪器下限而失败；在留出的体制上（MQ2），以四个稀释因子拟合的生长映射预测了需求及其所分的命运（通过），在折叠附近的水平与盐冲击后的存活上失败；同等密度下所给随稀释下降（事后），故状态方程属于体制，不只属于水平；智慧在实际的人与 AI 中怎样形成；更强的方向假说（实在一般地发展出更多共享而更有回应的更新）开放，不是前提。
 
 ### 8.8 审查状态
 
@@ -906,16 +907,16 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261020T134210.922870Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T134210.922870Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 269 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#269-tenure-and-undermining-along-a-continuation-and-identity-where-standings-coincide-r50)）。
+**当前回执**是运行 [`20261020T135509.239302Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T135509.239302Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 270 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#270-the-margin-of-a-regime-giving-read-off-the-level-under-a-standing-draw-rm1)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Becoming`） | 280 个模块，11,253 条定理 |
+| 核心模块（含根 `Becoming`） | 281 个模块，11,304 条定理 |
 | 实例模块 | 7 个模块，567 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 296 个模块，12,073 条定理 |
-| 审计的脊柱声明 | 16,534 |
+| 闭包（核心、环与根基） | 297 个模块，12,124 条定理 |
+| 审计的脊柱声明 | 16,602 |
 | 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 197 条 |
 | 被取代的外围模块（不在运行中，字节保留） | 75 |
 

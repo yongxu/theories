@@ -12,6 +12,31 @@
   "calibration": "the exact logical principle (excluded middle, LPO, WLPO, choice) a stated criterion needs, for a notion the base does not assert; a lemma of the item that needs it"
  },
  "roots": {
+  "Becoming.RegimeMargin.beyond_draw_iff": {
+   "module": "Becoming.RegimeMargin",
+   "category": "support",
+   "reason": "Arithmetic of a gated giving law: the least level meeting a positive draw lies above the need exactly where giving at the need falls short. The least level meeting a draw is the point of no return of the run under that draw read through RegimeMargin.ends_iff_below; the statement itself names no run."
+  },
+  "Becoming.RegimeMargin.rises_by_draw": {
+   "module": "Becoming.RegimeMargin",
+   "category": "support",
+   "reason": "Arithmetic of giving laws under two draws: the least level meeting the larger draw, giving no more, is higher by at least the difference. The least level meeting a draw is the point of no return of the run under that draw read through RegimeMargin.ends_iff_below; the statement itself names no run."
+  },
+  "Becoming.RegimeMargin.lowered_raises_strictly": {
+   "module": "Becoming.RegimeMargin",
+   "category": "support",
+   "reason": "Arithmetic of two giving laws under one draw: lowered giving raises the least level meeting it, strictly exactly where it falls short at the old one. The least level meeting a draw is the point of no return of the run under that draw read through RegimeMargin.ends_iff_below; the statement itself names no run."
+  },
+  "Becoming.RegimeMargin.harms_superadditive": {
+   "module": "Becoming.RegimeMargin",
+   "category": "support",
+   "reason": "Arithmetic of subadditive giving: the rises of the least levels meeting two draws and their sum satisfy a + b <= c + 1. The least level meeting a draw is the point of no return of the run under that draw read through RegimeMargin.ends_iff_below; the statement itself names no run."
+  },
+  "Becoming.RegimeMargin.Concave.roots": {
+   "module": "Becoming.RegimeMargin",
+   "category": "model-witness",
+   "reason": "The least levels meeting the draws 4 and 8 under one constructed giving law, min(2z, z + 2): a fact about one constructed model showing harms_superadditive strict."
+  },
   "Becoming.Apart.not_enough": {
    "module": "Becoming.Standpoints",
    "category": "model-witness",

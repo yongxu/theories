@@ -213,6 +213,7 @@ import Becoming.Typicality
 import Becoming.Situations
 import Becoming.Propagation
 import Becoming.Regulation
+import Becoming.RegimeMargin
 import Becoming.ListingRefutations
 import Becoming.Loops
 import Becoming.Remainder
@@ -2302,6 +2303,18 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   relay overshoots its band by lateness times step; past `b + 2 ≤ a + (ℓ + 1) M` a start held
   below the band crosses both ends without end, within it every such start settles, and the
   relay runs for every start where `(ℓ + 1) M ≤ b + 1`, so the threshold is exact.
+* `Becoming.RegimeMargin` (L1): the margin of a regime, with giving read off the level under a
+  standing draw (`step g H x = (x - H) + g (x - H)`), stated on `Law.run`. Where giving falls short of
+  the draw below `y` and nothing gives from nothing, a level below `H + y` falls at every step and is
+  nothing after as many steps as it stood; where giving meets the draw from `y` up to a top the step
+  keeps, a level from `H + y` holds, so the point of no return is exact. Where giving stops below a
+  need, the point of no return lies at least the draw above it, and more exactly where giving at the
+  need falls short of the draw; a larger draw, giving no more, raises it by at least the difference, and
+  giving lowered by the regime raises it beyond what removal alone gives. Where giving under the joint
+  draw is subadditive above the need and no greater than under either draw, harms of two draws are
+  super-additive up to one unit, strictly so in
+  `Concave`; in `Peaked` each of two draws holds alone and together they end the condition. The time
+  to break lies between `b + H n ≤ x` and `x < b + (H - Y) n`.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of

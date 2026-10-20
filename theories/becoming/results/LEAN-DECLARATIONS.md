@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 283 | 11,342 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 284 | 11,378 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 746 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -705,6 +705,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RegenerativeDiversity.lean](lean-declarations/ethics.md#module-fb7ea9229d0d) | Normative grounding and generative direction |
 | [RegimeAttraction.lean](lean-declarations/other.md#module-c03ef19c4e99) | Other formal studies |
 | [RegimeBoundary.lean](lean-declarations/other.md#module-e0e2fb3f4028) | Other formal studies |
+| [RegimeMargin.lean](lean-declarations/becoming-core.md#module-77e7b36ae401) | Becoming pure core |
 | [RegimeTransition.lean](lean-declarations/other.md#module-f1a05f3cb9c1) | Other formal studies |
 | [Regions.lean](lean-declarations/becoming-core.md#module-e8b556b938af) | Becoming pure core |
 | [Regrouping.lean](lean-declarations/becoming-core.md#module-f74de29583d3) | Becoming pure core |
