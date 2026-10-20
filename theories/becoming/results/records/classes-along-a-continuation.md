@@ -5,7 +5,7 @@
 
 `classes-along-a-continuation` · **recorded-checked** · theorem · F01 · [record](classes-along-a-continuation.json) · [register](../../../../RESULTS.md)
 
-> Read along what continues it, renewing passes into every branch of a split and consuming back into every formation merged; both are fixed by the continuation under every renaming, are the name classes where each formation continues itself, and a merge can make a renewer consume.
+> Read along what continues it, renewing passes into every branch of a split and consuming back into every formation merged; these classes, tenure and undermining are fixed by the continuation under every renaming, are the named ones where each formation continues itself, and grow with links.
 
 <a id="laws--规律"></a>
 ## Laws
@@ -15,6 +15,8 @@
 3. Carrying a continuation through a re-identification, what continues what is unchanged, and so are both classes: no renaming changes a class read along a continuation. (`Becoming.Reidentify.carry`, `Becoming.Web.Continuing.of_reidentify`, `Becoming.Web.Continuing.to_reidentify`, `Becoming.Web.continuing_reidentify`, `Becoming.Web.renewingAlong_reidentify`, `Becoming.Web.consumingAlong_reidentify`)
 4. Where each formation continues only itself and f is active at every step, the classes along that continuation from step 0 are the name classes RenewingIn and ConsumingIn. (`Becoming.Web.itself`, `Becoming.Web.Continuing.itself_same`, `Becoming.Web.Continuing.itself_onward`, `Becoming.Web.Continuing.itself_from_zero`, `Becoming.Web.renewingAlong_itself_iff`, `Becoming.Web.consumingAlong_itself_iff`)
 5. A merge decides a class: a formation drawing only on a condition kept at its need renews as named, and, merged with one drawing on a spent condition into a formation that draws on it, consumes along the merge and does not renew along it. (`Becoming.MergeClass.web`, `Becoming.MergeClass.merge`, `Becoming.MergeClass.first_renews`, `Becoming.MergeClass.first_consumes_along`, `Becoming.MergeClass.readings`)
+6. Tenure and undermining along a continuation: a dependence's tenure is read along links across which it holds, with nothing asked of activity, and undermining along a continuation is drawing after which a condition is below a dependence's present need and below a need met along the continuation while it held. Along each formation continuing itself they are tenure and undermining as named. (`Becoming.Web.Linked`, `Becoming.Web.holdingOn`, `Becoming.Web.MetAboveAlong`, `Becoming.Web.UnderminingAlong`, `Becoming.Web.Linked.itself_held`, `Becoming.Web.Linked.itself_onward`, `Becoming.Web.exists_steps_between`, `Becoming.Web.metAboveAlong_itself_iff`, `Becoming.Web.underminingAlong_itself_iff`)
+7. Tenure and undermining along a continuation are unchanged by every re-identification carrying it; more links never remove undermining or consuming, and fewer never remove renewing. (`Becoming.Web.Linked.of_carry`, `Becoming.Web.Linked.to_carry`, `Becoming.Web.metAboveAlong_reidentify`, `Becoming.Web.underminingAlong_reidentify`, `Becoming.Web.Linked.mono`, `Becoming.Web.Continuing.mono`, `Becoming.Web.underminingAlong_mono`, `Becoming.Web.consumingAlong_mono`, `Becoming.Web.renewingAlong_mono`)
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -24,8 +26,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Which continuation holds: it is supplied. Where it is read off a world's conservation (World.Conserves), the classes are fixed except where standings coincide after a step (World.fixed_iff).
-- Tenure and undermining under splits and merges: only the renewing and consuming classes are read along a continuation here.
+- Which continuation holds: it is supplied. Where it is read off a world's conservation (World.Conserves), it is fixed except where standings coincide after a step (World.fixed_iff), and there no record of the world decides (World.continues_as_alike); continuations read from informational or organizational relations are not derived.
 - That a class along a merge is the better reading of the merged formations' class: the merge law says how consuming passes back, not which continuation to read.
 - **Counterexample:** MergeClass: a formation that renews as named consumes along a merge, so the name class and the class along a continuation part. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean)
 
@@ -34,14 +35,14 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T125112.981373Z): the 33 declarations of Becoming.ContinuedClasses, 20 of them theorems, have empty axiom reports; the checker verifies core purity. Author review in study section 262; not independently reviewed.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T134210.922870Z): the 52 declarations of Becoming.ContinuedClasses, 35 of them theorems, have empty axiom reports; the checker verifies core purity. Author review in study sections 262 and 269; not independently reviewed.
 
 Canonical source: [ContinuedClasses.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-Tenure and undermining along a continuation; classes along the conservation continuation of a world; an independent review.
+Continuations derived from informational or organizational relations; classes along a world's conservation continuation stated over the world's own conditions; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -64,8 +65,8 @@ Reading a class along lineages rather than names is the move from token identity
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [ContinuedClasses.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean) | `Becoming.Web.Continuing`, `Becoming.Web.RenewingAlong`, `Becoming.Web.ConsumingAlong`, `Becoming.Web.renewingAlong_not_consumingAlong`, `Becoming.Web.renewingAlong_iff`, `Becoming.Web.RenewingAlong.branch`, `Becoming.Web.consumingAlong_iff`, `Becoming.Web.ConsumingAlong.merged`, `Becoming.Reidentify.carry`, `Becoming.Web.Continuing.of_reidentify`, `Becoming.Web.Continuing.to_reidentify`, `Becoming.Web.continuing_reidentify`, `Becoming.Web.renewingAlong_reidentify`, `Becoming.Web.consumingAlong_reidentify`, `Becoming.Web.itself`, `Becoming.Web.Continuing.itself_same`, `Becoming.Web.Continuing.itself_onward`, `Becoming.Web.Continuing.itself_from_zero`, `Becoming.Web.renewingAlong_itself_iff`, `Becoming.Web.consumingAlong_itself_iff`, `Becoming.MergeClass.web`, `Becoming.MergeClass.merge`, `Becoming.MergeClass.first_renews`, `Becoming.MergeClass.first_consumes_along`, `Becoming.MergeClass.readings` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T125112.981373Z/verification.json) | — |
+| proof | [ContinuedClasses.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean) | `Becoming.Web.Continuing`, `Becoming.Web.RenewingAlong`, `Becoming.Web.ConsumingAlong`, `Becoming.Web.renewingAlong_not_consumingAlong`, `Becoming.Web.renewingAlong_iff`, `Becoming.Web.RenewingAlong.branch`, `Becoming.Web.consumingAlong_iff`, `Becoming.Web.ConsumingAlong.merged`, `Becoming.Reidentify.carry`, `Becoming.Web.Continuing.of_reidentify`, `Becoming.Web.Continuing.to_reidentify`, `Becoming.Web.continuing_reidentify`, `Becoming.Web.renewingAlong_reidentify`, `Becoming.Web.consumingAlong_reidentify`, `Becoming.Web.itself`, `Becoming.Web.Continuing.itself_same`, `Becoming.Web.Continuing.itself_onward`, `Becoming.Web.Continuing.itself_from_zero`, `Becoming.Web.renewingAlong_itself_iff`, `Becoming.Web.consumingAlong_itself_iff`, `Becoming.MergeClass.web`, `Becoming.MergeClass.merge`, `Becoming.MergeClass.first_renews`, `Becoming.MergeClass.first_consumes_along`, `Becoming.MergeClass.readings`, `Becoming.Web.Linked`, `Becoming.Web.holdingOn`, `Becoming.Web.MetAboveAlong`, `Becoming.Web.UnderminingAlong`, `Becoming.Web.Linked.itself_held`, `Becoming.Web.Linked.itself_onward`, `Becoming.Web.exists_steps_between`, `Becoming.Web.metAboveAlong_itself_iff`, `Becoming.Web.underminingAlong_itself_iff`, `Becoming.Web.Linked.of_carry`, `Becoming.Web.Linked.to_carry`, `Becoming.Web.metAboveAlong_reidentify`, `Becoming.Web.underminingAlong_reidentify`, `Becoming.Web.Linked.mono`, `Becoming.Web.Continuing.mono`, `Becoming.Web.underminingAlong_mono`, `Becoming.Web.consumingAlong_mono`, `Becoming.Web.renewingAlong_mono` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T134210.922870Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 
@@ -75,6 +76,7 @@ Aliases: `classes under splits and merges`, `分裂与合并下的类`, `Becomin
 ### History
 
 - 20 October 2026: added (R49), section 8.1 item 8's classes under splits and merges; study section 262.
+- 20 October 2026, R50 (study section 269): laws 6 and 7 added, tenure and undermining along a continuation, their name case, invariance under re-identification, and monotonicity in the links; statement and does_not_show updated (tenure and undermining no longer open).
 
 </details>
 

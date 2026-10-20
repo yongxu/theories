@@ -10,8 +10,8 @@
   "family": "F01",
   "reviewed_at_utc": "2026-10-20T12:54:04+00:00",
   "statement": {
-    "en": "Read along what continues it, renewing passes into every branch of a split and consuming back into every formation merged; both are fixed by the continuation under every renaming, are the name classes where each formation continues itself, and a merge can make a renewer consume.",
-    "zh": "沿延续它者读，更新进入分裂的每一支，消耗回到合并进来的每个形成；二者在每次改名下由延续关系固定，在每个形成延续自身处即名的类，合并可使一个更新者消耗。"
+    "en": "Read along what continues it, renewing passes into every branch of a split and consuming back into every formation merged; these classes, tenure and undermining are fixed by the continuation under every renaming, are the named ones where each formation continues itself, and grow with links.",
+    "zh": "沿延续它者读，更新进入分裂的每一支，消耗回到合并进来的每个形成；这些类、任期与侵蚀在每次改名下由延续关系固定，在每个形成延续自身处即作为名者，并随链接增多。"
   },
   "laws": [
     {
@@ -68,6 +68,36 @@
         "Becoming.MergeClass.first_consumes_along",
         "Becoming.MergeClass.readings"
       ]
+    },
+    {
+      "en": "Tenure and undermining along a continuation: a dependence's tenure is read along links across which it holds, with nothing asked of activity, and undermining along a continuation is drawing after which a condition is below a dependence's present need and below a need met along the continuation while it held. Along each formation continuing itself they are tenure and undermining as named.",
+      "zh": "沿延续关系的任期与侵蚀：依存的任期沿它持续成立的链接读出，不问活动；沿延续关系的侵蚀是这样一次汲取：其后条件低于某依存当前之需，也低于该依存在持续时沿延续关系曾满足之需。沿每个形成延续自身，它们即作为名的任期与侵蚀。",
+      "declarations": [
+        "Becoming.Web.Linked",
+        "Becoming.Web.holdingOn",
+        "Becoming.Web.MetAboveAlong",
+        "Becoming.Web.UnderminingAlong",
+        "Becoming.Web.Linked.itself_held",
+        "Becoming.Web.Linked.itself_onward",
+        "Becoming.Web.exists_steps_between",
+        "Becoming.Web.metAboveAlong_itself_iff",
+        "Becoming.Web.underminingAlong_itself_iff"
+      ]
+    },
+    {
+      "en": "Tenure and undermining along a continuation are unchanged by every re-identification carrying it; more links never remove undermining or consuming, and fewer never remove renewing.",
+      "zh": "沿延续关系的任期与侵蚀在每个搬运它的改认下不变；更多链接从不去除侵蚀或消耗，更少链接从不去除更新。",
+      "declarations": [
+        "Becoming.Web.Linked.of_carry",
+        "Becoming.Web.Linked.to_carry",
+        "Becoming.Web.metAboveAlong_reidentify",
+        "Becoming.Web.underminingAlong_reidentify",
+        "Becoming.Web.Linked.mono",
+        "Becoming.Web.Continuing.mono",
+        "Becoming.Web.underminingAlong_mono",
+        "Becoming.Web.consumingAlong_mono",
+        "Becoming.Web.renewingAlong_mono"
+      ]
     }
   ],
   "hypotheses": [
@@ -78,13 +108,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Which continuation holds: it is supplied. Where it is read off a world's conservation (World.Conserves), the classes are fixed except where standings coincide after a step (World.fixed_iff).",
-      "zh": "哪个延续关系成立：它是给定的。由世界的守恒读出时（World.Conserves），类除了在一步之后所立重合之处外是固定的（World.fixed_iff）。",
-      "kind": "scope"
-    },
-    {
-      "en": "Tenure and undermining under splits and merges: only the renewing and consuming classes are read along a continuation here.",
-      "zh": "分裂与合并下的任期与侵蚀：此处只沿延续关系读更新与消耗两类。",
+      "en": "Which continuation holds: it is supplied. Where it is read off a world's conservation (World.Conserves), it is fixed except where standings coincide after a step (World.fixed_iff), and there no record of the world decides (World.continues_as_alike); continuations read from informational or organizational relations are not derived.",
+      "zh": "哪个延续关系成立：它是给定的。由世界的守恒读出时（World.Conserves），除在一步之后所立重合之处外是固定的（World.fixed_iff），而在那里世界的任何记录都不决定（World.continues_as_alike）；由信息或组织关系读出的延续关系没有导出。",
       "kind": "scope"
     },
     {
@@ -111,12 +136,12 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T125112.981373Z): the 33 declarations of Becoming.ContinuedClasses, 20 of them theorems, have empty axiom reports; the checker verifies core purity. Author review in study section 262; not independently reviewed.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T125112.981373Z）：Becoming.ContinuedClasses 的 33 项声明（其中 20 项定理）公理报告为空；检查器并核对核心纯净。作者自审见研究第 262 节；未经独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261020T134210.922870Z): the 52 declarations of Becoming.ContinuedClasses, 35 of them theorems, have empty axiom reports; the checker verifies core purity. Author review in study sections 262 and 269; not independently reviewed.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T134210.922870Z）：Becoming.ContinuedClasses 的 52 项声明（其中 35 项定理）公理报告为空；检查器并核对核心纯净。作者自审见研究第 262 与 269 节；未经独立审查。"
   },
   "next_delta": {
-    "en": "Tenure and undermining along a continuation; classes along the conservation continuation of a world; an independent review.",
-    "zh": "沿延续关系的任期与侵蚀；沿世界守恒延续关系的类；独立审查。"
+    "en": "Continuations derived from informational or organizational relations; classes along a world's conservation continuation stated over the world's own conditions; an independent review.",
+    "zh": "由信息或组织关系导出的延续关系；沿世界守恒延续关系、以世界自身条件陈述的类；独立审查。"
   },
   "correspondence": {
     "en": "Reading a class along lineages rather than names is the move from token identity to genealogical identity in the philosophy of biology (Hull 1980 on lineages; Godfrey-Smith 2009 on reproducers); the laws are close to definitional once the continuation is given, and what they add is that the renewing class is universal along branches and the consuming class existential, so splits and merges act on them in opposite directions.",
@@ -167,7 +192,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
       "role": "proof",
-      "sha256": "ddd912e9496577013b32b0b176a25171263217d10f208694cec160474207873c",
+      "sha256": "47579748f173b61a177687dc8424620901d7492f244214d83ef6b5d97b2275a3",
       "declarations": [
         "Becoming.Web.Continuing",
         "Becoming.Web.RenewingAlong",
@@ -193,13 +218,31 @@
         "Becoming.MergeClass.merge",
         "Becoming.MergeClass.first_renews",
         "Becoming.MergeClass.first_consumes_along",
-        "Becoming.MergeClass.readings"
+        "Becoming.MergeClass.readings",
+        "Becoming.Web.Linked",
+        "Becoming.Web.holdingOn",
+        "Becoming.Web.MetAboveAlong",
+        "Becoming.Web.UnderminingAlong",
+        "Becoming.Web.Linked.itself_held",
+        "Becoming.Web.Linked.itself_onward",
+        "Becoming.Web.exists_steps_between",
+        "Becoming.Web.metAboveAlong_itself_iff",
+        "Becoming.Web.underminingAlong_itself_iff",
+        "Becoming.Web.Linked.of_carry",
+        "Becoming.Web.Linked.to_carry",
+        "Becoming.Web.metAboveAlong_reidentify",
+        "Becoming.Web.underminingAlong_reidentify",
+        "Becoming.Web.Linked.mono",
+        "Becoming.Web.Continuing.mono",
+        "Becoming.Web.underminingAlong_mono",
+        "Becoming.Web.consumingAlong_mono",
+        "Becoming.Web.renewingAlong_mono"
       ]
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T125112.981373Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T134210.922870Z/verification.json",
       "role": "receipt",
-      "sha256": "2b95c739945e7bbfc60e5fc72ac116029f6fcd5313506d8ce831ac3532d0bc21",
+      "sha256": "3a60e0467bfaa8b460726a06f6479f6ed1572a7e366d2319dc698597a3f634c1",
       "declarations": []
     },
     {
@@ -211,14 +254,14 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "d09241fca0db3b885b9a62b8c7d1c160a8c9978cd73b870632847771d1fcb597",
+      "sha256": "fed03a6f4cfb860633b6617747bb9e9ef6dc8bdbff16f17dbec24a83a99e8073",
       "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T125112.981373Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T134210.922870Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ContinuedClasses",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -228,6 +271,10 @@
     {
       "en": "20 October 2026: added (R49), section 8.1 item 8's classes under splits and merges; study section 262.",
       "zh": "2026年10月20日：新增（R49），第 8.1 节第 8 项分裂与合并下的类；研究第 262 节。"
+    },
+    {
+      "en": "20 October 2026, R50 (study section 269): laws 6 and 7 added, tenure and undermining along a continuation, their name case, invariance under re-identification, and monotonicity in the links; statement and does_not_show updated (tenure and undermining no longer open).",
+      "zh": "2026 年 10 月 20 日，R50（研究第 269 节）：加第 6、7 条，沿延续关系的任期与侵蚀、名的情形、改认下不变、对链接的单调；陈述与未表明项更新（任期与侵蚀不再开放）。"
     }
   ]
 }

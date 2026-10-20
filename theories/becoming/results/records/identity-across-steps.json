@@ -295,6 +295,14 @@
         "Becoming.ListedWebs.forcedAlong_iff_more",
         "Becoming.ListedWebs.forcedAlong_of_eventually_noSplit"
       ]
+    },
+    {
+      "en": "Identity where standings coincide: in a balanced world with equality of relata decided, where d stands after a step as c does, exchanging them after the step keeps the balance and continues c as d; every record at each step is kept by any re-identification, so no record of the world decides between the two, and with fixed_iff identity across a step is fixed exactly where no other relatum stands alike after it.",
+      "zh": "所立重合处的同一：在平衡且关系项相等可判定的世界中，若 d 在一步之后所立与 c 相同，在此步之后交换二者保持平衡并把 c 延续为 d；任何改认都保持每步的记录，故世界的任何记录都不在二者之间作出决定；连同 fixed_iff，跨一步的同一恰在没有其他关系项步后所立相同之处固定。",
+      "declarations": [
+        "Becoming.World.continues_as_alike",
+        "Becoming.World.fixed_iff"
+      ]
     }
   ],
   "hypotheses": [
@@ -356,8 +364,8 @@
       "witness": "Becoming.Dormancy.keeps_both"
     },
     {
-      "zh": "保持连续固定每步保持者的类别，但无保持的一步仍容许接续；保平衡命名下守恒所固定的同一在同量处仍有选择。",
-      "en": "Holding continuity fixes the class of a formation holding throughout, but a step with no holding still permits a join; identity fixed by conservation under balanced namings leaves choice where standings coincide.",
+      "zh": "保持连续固定每步保持者的类别，但无保持的一步仍容许接续；保平衡命名下守恒所固定的同一恰在同量处留有选择，世界的任何记录都不决定它（第 32 条）。",
+      "en": "Holding continuity fixes the class of a formation holding throughout, but a step with no holding still permits a join; identity fixed by conservation under balanced namings leaves exactly the choice where standings coincide, which no record of the world decides (law 32).",
       "kind": "scope"
     },
     {
@@ -464,8 +472,8 @@
     "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261013T204910.042715Z; periphery 20261013T095049.338744Z passed): the theorems of Becoming.Identity, with this record's local laws, and of Becoming.Persistence have empty axiom reports, and the checker verifies core purity. Author counterreview in §16 and, for the holding and conservation laws, §108; the fifth independent review and the sixth, listed under sources, accepted the mathematics and the fifth's corrections; the sixth's further corrections and the holding and conservation laws are not yet independently reviewed."
   },
   "next_delta": {
-    "zh": "选择 h 与混合活动／保持的普查条件；整体的依存与侵蚀怎样由部分构成；延续关系下的任期与侵蚀；对一个固定延续关系的整段精确条件（只在有限多步分裂是充分的）；守恒下的一般侵蚀；同量处及物质、信息或组织连续如何固定同一。",
-    "en": "Choosing h; mixed activity/holding census conditions; a whole's dependence and undermining from its parts'; tenure and undermining under continuations; for one fixed continuation, an exact run condition (splits at only finitely many steps is sufficient); undermining under conservation; identity where standings coincide or from material, informational or organizational continuity."
+    "zh": "选择 h 与混合活动／保持的普查条件；整体的依存与侵蚀怎样由部分构成；对一个固定延续关系的整段精确条件（只在有限多步分裂是充分的）；守恒下的一般侵蚀；信息或组织连续如何固定同一。",
+    "en": "Choosing h; mixed activity/holding census conditions; a whole's dependence and undermining from its parts'; for one fixed continuation, an exact run condition (splits at only finitely many steps is sufficient); undermining under conservation; identity from informational or organizational continuity."
   },
   "correspondence": {
     "zh": "开放纲领与 becoming-dependence-dynamics 的下一步把形成的个体化列为待做：终止与转化之分依赖外给的同一。本结果陈述这一外给的同一在哪些读法中起作用：每一步与每个条件的读法不依赖它，追随形成的读法依赖它；单向的连续排除制造生起与去掉侵蚀，接续仍由读法决定；双向的连续恰保持生起与侵蚀，却仍不约束形成在整段上的类。名字跨步的模式承载同一：这是表示给出的对应前提，Turnover 表明它是实质的；方法要求“不能以分别命名偷渡独立本体”在这里的检查是这一披露，不是改名不变，因为改名按构造保持这一模式。谱系与成员是同一展开的两个层次：作为整体的谱系持续，正由成员不息地生起而成（Layered）；单一命名层次只能表示其一，部分与整体的关系是这一表示所省略的关系；whole-persists-through-generation 陈述这一关系，在成员不长久的前提下，谱系的持续蕴含成员不息地生起。依 Ren 的交托，“生生不息”读在整体的层次，谱系与成员是其中读延续的层次：不息是经更新而复现的生起，生生不息是生生继续而仍有更多能形成，回返不足以是生生不息（DELEGATED-CHOICES D5，经修订由 Ren 2026-10-18 取）；只读作谱系的持续，与 Ren 原话中的“不断创造”有张力（作者的说明）；成员不长久时，这一张力由上述蕴含消除。依同一决定，后继者恰在接续保持任期之处继承前任者的损失：此后在其下的汲取在工作读法下侵蚀（Succession.readings），依存中断之处重新开始（Gap.lapse_starts_afresh）。 P87 的 h、活动或依存作为 Holds，以及把所立之量守恒读作延续，均是公开的读法；不声称它们穷尽现实的物质、信息或组织连续。",
@@ -1146,6 +1154,20 @@
       "role": "receipt",
       "sha256": "ee5fc8daeaa6f1a6d4f0d71f88cb813bf8284349d8d4f65e1cd631773e4f0d2c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+      "role": "proof",
+      "sha256": "47579748f173b61a177687dc8424620901d7492f244214d83ef6b5d97b2275a3",
+      "declarations": [
+        "Becoming.World.continues_as_alike"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T134210.922870Z/verification.json",
+      "role": "receipt",
+      "sha256": "3a60e0467bfaa8b460726a06f6479f6ed1572a7e366d2319dc698597a3f634c1",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -1195,6 +1217,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ListedWebs.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T122018.082402Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ListedWebs",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuedClasses.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T134210.922870Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ContinuedClasses",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -1293,6 +1322,10 @@
     {
       "en": "20 October 2026, R49 (study section 262): the first does_not_show item and next_delta narrowed: the renewing and consuming classes under continuations are stated in classes-along-a-continuation. No law or status changed.",
       "zh": "2026 年 10 月 20 日，R49（研究第 262 节）：第一个未表明项与 next_delta 收窄：延续关系下的更新与消耗两类在 classes-along-a-continuation 中陈述。规律与状态不变。"
+    },
+    {
+      "en": "20 October 2026, R50 (study section 269): law 32 added, identity where standings coincide (World.continues_as_alike); does_not_show item 5 and next_delta narrowed.",
+      "zh": "2026 年 10 月 20 日，R50（研究第 269 节）：加第 32 条，所立重合处的同一（World.continues_as_alike）；第五个未表明项与 next_delta 收窄。"
     }
   ],
   "text_versions": [

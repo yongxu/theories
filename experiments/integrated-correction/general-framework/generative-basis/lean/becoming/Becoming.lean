@@ -41,8 +41,8 @@ import Becoming.Stock
 import Becoming.Change
 import Becoming.Population
 import Becoming.Identity
-import Becoming.ContinuedClasses
 import Becoming.Persistence
+import Becoming.ContinuedClasses
 import Becoming.Wholes
 import Becoming.Dissipation
 import Becoming.Locality
@@ -567,7 +567,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   `Web.consumingAlong_iff`); both are unchanged by every re-identification carrying the
   continuation (`Web.renewingAlong_reidentify`, `Web.consumingAlong_reidentify`), are the name
   classes where each formation continues itself (`Web.renewingAlong_itself_iff`), and a merge
-  can make a formation that renews as named consume along it (`MergeClass.readings`).
+  can make a formation that renews as named consume along it (`MergeClass.readings`). Tenure and
+  undermining read along a continuation are the named ones where each formation continues itself,
+  are unchanged by every re-identification carrying it, and grow with its links
+  (`Web.underminingAlong_itself_iff`, `Web.underminingAlong_reidentify`,
+  `Web.underminingAlong_mono`); where two relata stand alike after a step, a balanced naming
+  continues the one as the other (`World.continues_as_alike`).
 * `Becoming.Persistence` (L1): continuity across dormancy and identity read from relations
   (P87). Keeping the names of what holds fixes the class of a formation holding throughout,
   strictly beyond activity and tenure continuity; where nothing holds it leaves the join open.

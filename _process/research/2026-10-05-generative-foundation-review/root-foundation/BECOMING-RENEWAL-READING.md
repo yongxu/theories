@@ -11481,3 +11481,37 @@ Output → input: chapter section 9's paragraph on why the periphery may use pro
 - **The receipts predate the core.** Every periphery receipt was checked against an earlier core (13 to 19 October). Against the current files, MachineInstances' closure has 34 of its 70 sources changed and 2 gone, CorrectionInquiry's 95 of 113 changed and 4 gone, and only the core receipt matches main. The current `MachineInstances.lean` no longer compiles against the current core (`CrossSituational.Distinct` is unknown). The audit therefore reads each module at its receipt's bytes. It says how the periphery used `propext` when it was checked, not that the periphery checks still pass; renewing them is separate work.
 
 **Self-review.** The classification is only as fine as `Uses.lean`'s lists of eliminators and carriers. Where it was unsure it counted a proof as taken apart, and each such case was then settled by a reduction check or by reading the source, so it errs toward finding a value computed through `propext`, and found none that is the periphery's own. The 14 `Nat.land` definitions and the seven settled by hand or by reduction are statements about Lean 4.29.1 and 4.30.0-rc2 and the pinned Mathlib, not about the theory.
+
+## 269. Tenure and undermining along a continuation, and identity where standings coincide (R50)
+
+```text
+Result(s): Web.Linked, Web.holdingOn, Web.MetAboveAlong, Web.UnderminingAlong,
+       Web.metAboveAlong_itself_iff, Web.underminingAlong_itself_iff, Web.metAboveAlong_reidentify,
+       Web.underminingAlong_reidentify, Web.underminingAlong_mono, Web.consumingAlong_mono,
+       Web.renewingAlong_mono, World.continues_as_alike (Becoming.ContinuedClasses extended to 35 theorems,
+       52 declarations; it now imports Becoming.Persistence); records classes-along-a-continuation laws 6-7
+       and identity-across-steps law 32; chapter 2.2 and 8.1 item 8.
+Delta: R49 read the renewing and consuming classes along a continuation; tenure and undermining were still
+       read by name (MetAbove asks one name to hold a dependence), and identity where standings coincide
+       was left as "choice". Now tenure is read along links across which the dependence holds, undermining
+       along that tenure, both the named ones where each formation continues itself and both fixed by the
+       continuation; more links never remove undermining or consuming. Where standings coincide, a
+       balanced naming continues either relatum as the other, so the choice is exactly what the world's
+       records leave open.
+Premises: none added. The continuation is supplied; the world law needs balance and decided equality of
+       relata, as World.fixed_iff does.
+Evidence: core receipt 20261020T134210.922870Z (passed, empty axiom reports).
+Boundary: continuations derived from informational or organizational relations are not stated; classes
+       along a world's conservation continuation over the world's own conditions are not stated beyond
+       World.classes_fixed (where standings after every step stand apart, every balanced naming is fixed
+       and so are the classes).
+Output → input: chapter 8.1 item 8 is settled in its formal part for continuations read by conservation:
+       every reading that follows a formation is a law of the continuation, and the material continuation
+       is the world's except where standings coincide.
+```
+
+- **Tenure without activity.** `MetAbove` asks a dependence to hold at every step of a stretch, with nothing asked of activity, so the chain for tenure (`Linked`) asks nothing of activity either, unlike `Continuing`, which carries the classes. Along each formation continuing itself the two readings of tenure coincide (`metAboveAlong_itself_iff`), with one constructive lemma for the stretch (`exists_steps_between`; the library's `Nat.exists_eq_add_of_le` reports `propext`).
+- **Why monotonicity is the law of joining.** The identity record's law 10 said a new naming may join formations the old keeps apart, making a continuity, and never removes one. Read along continuations, that is `underminingAlong_mono` and `consumingAlong_mono`: a continuation with more links gives more tenure and so more undermining, and more lineages through a consuming event. Renewing goes the other way.
+- **Coinciding standings.** `World.continues_as_alike` exhibits the naming, the exchange after the step, which `World.fixed_iff` used inside its proof. Stated alone, it says what the choice is: both continuations keep the balance, and every per-step record is kept by any re-identification, so nothing the world records separates them.
+
+**Self-review.** As with R49, the laws are near-definitional once the chain relations are given. Their use is closure: arising (R48), the classes (R49), tenure and undermining (here) are all laws of a continuation, and the material continuation is fixed exactly up to coinciding standings, where the world does not decide. Item 8's remaining question is whether informational or organizational continuity yields a continuation read off the world, which would be a modelling choice to state, not a proof gap in this line.

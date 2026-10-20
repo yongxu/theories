@@ -1,4 +1,4 @@
-import Becoming.Identity
+import Becoming.Persistence
 
 /-!
 # Classes along a continuation: splits and merges
@@ -30,6 +30,17 @@ them.
 * **The name classes as one continuation.** Where each formation continues only itself
   (`Web.itself`) and `f` is active at every step, the classes along it from step `0` are the name
   classes (`renewingAlong_itself_iff`, `consumingAlong_itself_iff`).
+* **Tenure and undermining along a continuation.** A dependence's tenure is read along links
+  across which it holds (`Web.Linked`, `Web.holdingOn`), with nothing asked of activity:
+  `MetAboveAlong` and `UnderminingAlong`. Along each formation continuing itself they are tenure and
+  undermining as named (`metAboveAlong_itself_iff`, `underminingAlong_itself_iff`); both are
+  unchanged by every re-identification carrying the continuation (`metAboveAlong_reidentify`,
+  `underminingAlong_reidentify`); and more links never remove undermining or consuming, nor fewer
+  renewing (`underminingAlong_mono`, `consumingAlong_mono`, `renewingAlong_mono`).
+* **Identity where standings coincide.** In a balanced world, where `d` stands after a step as `c`
+  does, a balanced naming continues `c` as `d` (`World.continues_as_alike`); every record at each
+  step is kept by any re-identification, so no record of the world decides between the two, and
+  with `World.fixed_iff` identity is fixed exactly where no other relatum stands alike.
 * **A merge decides a class.** In `MergeClass` a renewer and a consumer merge into one formation:
   as named, the first renews (`MergeClass.first_renews`); along the merge it consumes, being merged
   into a formation that does (`MergeClass.first_consumes_along`).
@@ -296,5 +307,178 @@ theorem readings : web.RenewingIn .first ∧ web.ConsumingAlong merge 0 .first �
    fun renewing => Web.renewingAlong_not_consumingAlong renewing first_consumes_along⟩
 
 end MergeClass
+
+/-! ## Tenure and undermining along a continuation -/
+
+namespace Web
+
+/-- `g` at `u` is linked to `h` at `t` through `R`: a chain of steps each of which `R` relates,
+with nothing asked of activity. -/
+inductive Linked (R : Nat → F → F → Prop) : Nat → F → Nat → F → Prop
+  | here (t : Nat) (g : F) : Linked R t g t g
+  | next {t : Nat} {g f : F} {u : Nat} {h : F} : R t g f → Linked R (t + 1) f u h → Linked R t g u h
+
+variable (W : Web F C) (R : Nat → F → F → Prop)
+
+/-- The continuation restricted to a dependence on `c` holding across the step. -/
+def holdingOn (c : C) : Nat → F → F → Prop :=
+  fun t g f => R t g f ∧ W.requires t g c ∧ W.requires (t + 1) f c
+
+/-- `g`'s dependence on `c` at `t` was met above `m` along the continuation: some formation it
+continues, through steps across which the dependence holds, met at its step a need above `m`. -/
+def MetAboveAlong (t : Nat) (g : F) (c : C) (m : Nat) : Prop :=
+  ∃ s h, Linked (W.holdingOn R c) s h t g ∧ W.requires s h c ∧ W.need s h c ≤ W.level s c ∧
+    m < W.need s h c
+
+/-- Undermining along a continuation: `f` draws on `c` at a step after which `c` is below a
+dependence's present need and below a need met along the continuation while it held. -/
+def UnderminingAlong (t : Nat) (f : F) : Prop :=
+  ∃ c, W.draws t f c ∧ ∃ g, W.requires t g c ∧ W.MetAboveAlong R t g c (W.level (t + 1) c) ∧
+    W.level (t + 1) c < W.need t g c
+
+variable {W R}
+
+theorem Linked.mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f) :
+    ∀ {t : Nat} {g : F} {u : Nat} {h : F}, Linked R t g u h → Linked S t g u h
+  | _, _, _, _, .here t g => .here t g
+  | _, _, _, _, .next step rest => .next (within _ _ _ step) (Linked.mono within rest)
+
+theorem Continuing.mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f) :
+    ∀ {t : Nat} {g : F} {u : Nat} {h : F}, W.Continuing R t g u h → W.Continuing S t g u h
+  | _, _, _, _, .here t g => .here t g
+  | _, _, _, _, .next before step after rest =>
+    .next before (within _ _ _ step) after (Continuing.mono within rest)
+
+/-- **More links never remove undermining.** Where every step `R` relates `S` relates, what
+undermines along `R` undermines along `S`. -/
+theorem underminingAlong_mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
+    {t : Nat} {f : F} : W.UnderminingAlong R t f → W.UnderminingAlong S t f
+  | ⟨c, drawn, g, depends, ⟨s, h, linked, held, met, above⟩, below⟩ =>
+    ⟨c, drawn, g, depends,
+     ⟨s, h, Linked.mono (fun _ _ _ ⟨step, before, after⟩ => ⟨within _ _ _ step, before, after⟩) linked,
+      held, met, above⟩, below⟩
+
+/-- More links never remove consuming. -/
+theorem consumingAlong_mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
+    {t : Nat} {g : F} : W.ConsumingAlong R t g → W.ConsumingAlong S t g
+  | ⟨u, h, c, continuing, drawn, consumed⟩ => ⟨u, h, c, Continuing.mono within continuing, drawn, consumed⟩
+
+/-- Fewer links never remove renewing. -/
+theorem renewingAlong_mono {S : Nat → F → F → Prop} (within : ∀ t g f, R t g f → S t g f)
+    {t : Nat} {g : F} (renewing : W.RenewingAlong S t g) : W.RenewingAlong R t g :=
+  fun u h continuing => renewing u h (Continuing.mono within continuing)
+
+/-! ### The name case -/
+
+theorem Linked.itself_held {c : C} :
+    ∀ {s : Nat} {h : F} {t : Nat} {g : F}, Linked (W.holdingOn itself c) s h t g →
+      W.requires s h c → h = g ∧ s ≤ t ∧ ∀ u, s ≤ u → u ≤ t → W.requires u g c
+  | _, _, _, _, .here s h, held =>
+    ⟨rfl, Nat.le_refl s, fun _ after before => Nat.le_antisymm before after ▸ held⟩
+  | s, _, _, _, .next ⟨same, held, held'⟩ rest, _ =>
+    match Linked.itself_held rest held' with
+    | ⟨same', later, holds⟩ =>
+      ⟨same.trans same', Nat.le_trans (Nat.le_succ s) later, fun u after before =>
+        match Nat.eq_or_lt_of_le after with
+        | .inl atStart => Eq.subst (motive := fun x => W.requires x _ c) atStart
+            (Eq.subst (motive := fun y => W.requires s y c) (same.trans same') held)
+        | .inr beyond => holds u beyond before⟩
+
+theorem Linked.itself_onward {c : C} {g : F} :
+    ∀ (k s : Nat), (∀ u, s ≤ u → u ≤ s + k → W.requires u g c) →
+      Linked (W.holdingOn itself c) s g (s + k) g
+  | 0, s, _ => .here s g
+  | k + 1, s, holds =>
+    .next ⟨rfl, holds s (Nat.le_refl s) (Nat.le_add_right s (k + 1)),
+        holds (s + 1) (Nat.le_succ s) (Nat.succ_le_succ (Nat.le_add_right s k))⟩
+      ((Nat.succ_add s k ▸ Linked.itself_onward k (s + 1) fun u after before =>
+          holds u (Nat.le_trans (Nat.le_succ s) after)
+            (Nat.le_trans before (Nat.le_of_eq (Nat.succ_add s k))) :
+        Linked (W.holdingOn itself c) (s + 1) g (Nat.succ (s + k)) g))
+
+/-- A later step is an earlier one with some number of steps added. -/
+theorem exists_steps_between : ∀ {s t : Nat}, s ≤ t → ∃ k, t = s + k
+  | _, _, .refl => ⟨0, rfl⟩
+  | _, _, .step earlier => match exists_steps_between earlier with
+    | ⟨k, apart⟩ => ⟨k + 1, congrArg Nat.succ apart⟩
+
+/-- **Tenure along each formation continuing itself is tenure as named.** -/
+theorem metAboveAlong_itself_iff {t : Nat} {g : F} {c : C} {m : Nat} :
+    W.MetAboveAlong itself t g c m ↔ W.MetAbove t g c m :=
+  ⟨fun ⟨s, _, linked, held, met, above⟩ => match Linked.itself_held linked held with
+     | ⟨same, earlier, holds⟩ => ⟨s, earlier, holds, same ▸ met, same ▸ above⟩,
+   fun ⟨s, earlier, holds, met, above⟩ => match exists_steps_between earlier with
+     | ⟨k, apart⟩ =>
+       ⟨s, g, apart ▸ Linked.itself_onward k s (apart ▸ holds),
+        holds s (Nat.le_refl s) earlier, met, above⟩⟩
+
+/-- **Undermining along each formation continuing itself is undermining as named.** -/
+theorem underminingAlong_itself_iff {t : Nat} {f : F} :
+    W.UnderminingAlong itself t f ↔ W.UnderminingAt t f :=
+  ⟨fun ⟨c, drawn, g, depends, met, below⟩ =>
+     ⟨c, drawn, g, depends, metAboveAlong_itself_iff.mp met, below⟩,
+   fun ⟨c, drawn, g, depends, met, below⟩ =>
+     ⟨c, drawn, g, depends, metAboveAlong_itself_iff.mpr met, below⟩⟩
+
+/-! ### Undermining is the continuation's -/
+
+theorem Linked.of_carry {σ : Reidentify F F'} {S : Nat → F → F → Prop} :
+    ∀ {t : Nat} {x : F'} {u : Nat} {y : F'},
+      Linked (σ.carry S) t x u y → Linked S t (σ.old t x) u (σ.old u y)
+  | _, _, _, _, .here t x => .here t (σ.old t x)
+  | _, _, _, _, .next step rest => .next step (Linked.of_carry rest)
+
+theorem Linked.to_carry {σ : Reidentify F F'} {S : Nat → F → F → Prop} :
+    ∀ {t : Nat} {g : F} {u : Nat} {h : F},
+      Linked S t g u h → Linked (σ.carry S) t (σ.new t g) u (σ.new u h)
+  | _, _, _, _, .here t g => .here t (σ.new t g)
+  | t, g, _, _, .next (f := f) step rest =>
+    .next (f := σ.new (t + 1) f)
+      ((σ.old_new t g).symm ▸ (σ.old_new (t + 1) f).symm ▸ step :
+        S t (σ.old t (σ.new t g)) (σ.old (t + 1) (σ.new (t + 1) f)))
+      (Linked.to_carry rest)
+
+/-- **Tenure along a continuation is unchanged by a re-identification** carrying it. -/
+theorem metAboveAlong_reidentify (σ : Reidentify F F') {t : Nat} {x : F'} {c : C} {m : Nat} :
+    (W.reidentify σ).MetAboveAlong (σ.carry R) t x c m ↔ W.MetAboveAlong R t (σ.old t x) c m :=
+  ⟨fun ⟨s, y, linked, held, met, above⟩ =>
+     ⟨s, σ.old s y, Linked.of_carry (S := W.holdingOn R c) linked, held, met, above⟩,
+   fun ⟨s, h, linked, held, met, above⟩ =>
+     ⟨s, σ.new s h, σ.new_old t x ▸ Linked.to_carry (σ := σ) (S := W.holdingOn R c) linked,
+      ((σ.old_new s h).symm ▸ held : W.requires s (σ.old s (σ.new s h)) c),
+      ((σ.old_new s h).symm ▸ met : W.need s (σ.old s (σ.new s h)) c ≤ W.level s c),
+      ((σ.old_new s h).symm ▸ above : m < W.need s (σ.old s (σ.new s h)) c)⟩⟩
+
+/-- **Undermining along a continuation is unchanged by a re-identification** carrying it. -/
+theorem underminingAlong_reidentify (σ : Reidentify F F') {t : Nat} {x : F'} :
+    (W.reidentify σ).UnderminingAlong (σ.carry R) t x ↔ W.UnderminingAlong R t (σ.old t x) :=
+  ⟨fun ⟨c, drawn, y, depends, met, below⟩ =>
+     ⟨c, drawn, σ.old t y, depends, (metAboveAlong_reidentify σ).mp met, below⟩,
+   fun ⟨c, drawn, g, depends, met, below⟩ =>
+     ⟨c, drawn, σ.new t g, ((σ.old_new t g).symm ▸ depends : W.requires t (σ.old t (σ.new t g)) c),
+      (metAboveAlong_reidentify σ).mpr ((σ.old_new t g).symm ▸ met),
+      ((σ.old_new t g).symm ▸ below : W.level (t + 1) c < W.need t (σ.old t (σ.new t g)) c)⟩⟩
+
+end Web
+
+/-! ## Identity where standings coincide -/
+
+namespace World
+
+variable {w : World}
+
+/-- **Where two relata stand alike after a step, a balanced naming continues the one as the
+other.** In a balanced world with equality of relata decided, if `d` stands after the step from
+`t` as `c` does, exchanging them after the step keeps the balance and continues `c` as `d`; every
+record at each step is kept by any re-identification, so no record of the world decides between
+continuing `c` as `c` and as `d`. With `World.fixed_iff`, identity across a step is fixed exactly
+where no other relatum stands alike after it. -/
+theorem continues_as_alike [DecidableEq w.Relatum] (balanced : w.Balanced) {t : Nat}
+    {c d : w.Relatum} (alike : w.web.level (t + 1) d = w.web.level (t + 1) c) :
+    ∃ σ : Reidentify w.Relatum w.Relatum, (w.reidentify σ).Balanced ∧ σ.old (t + 1) (σ.new t c) = d :=
+  ⟨Reidentify.exchangeAfter t c d, exchangeAfter_balanced balanced alike,
+   (Reidentify.exchangeAfter_across t c d c).trans (transpose_left c d)⟩
+
+end World
 
 end Becoming
