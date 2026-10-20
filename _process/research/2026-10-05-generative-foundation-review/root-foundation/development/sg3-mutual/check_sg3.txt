@@ -1,0 +1,20 @@
+<a id="commons-check"></a>
+## A check: several optimizers at a mutual best response (21 October 2026, SG3)
+
+An AI check (one session, 21 October), made while the Lean was written, of chapter §8.1 item 10's open question, how much each formation takes when several draw, as a law of the formations rather than a supplied flow, for formations that optimize ([room check](#room-check)). **Verdict: the mathematics is known. That users of a common resource, each gaining from what it takes and bearing at most a share of the loss, overdraw it is the tragedy of the commons and the open-access result, and in common-pool resource games the equilibrium appropriates more than the group optimum. The spine's case is the limit where no optimizer registers the condition at all: checked, at a mutual best response a condition beyond every optimizer's family falls by the optimizers' whole joint capacity, wherever something stands each takes its whole capacity, and one part made of all of them, by any rising order, would leave it at the same level. That coordination among optimizers none of whom couples into a condition keeps nothing there is the form's own statement, immediate from the law and not a new kind of mathematics.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Each herder gains the whole of an added animal and bears a share of the overgrazing, so each adds animals until the commons is ruined | Hardin, "The Tragedy of the Commons", Science 162 (1968) (from memory) | The share borne is nothing where the condition lies beyond every optimizer's family; the drain is the joint capacity (`Optimum.mutual_beyond`) |
+| Under open access, effort enters a fishery until the resource's rent is dissipated | Gordon, "The Economic Theory of a Common-Property Resource: The Fishery", Journal of Political Economy 62 (1954) (from memory) | The open-access limit, read as each optimizer taking its whole capacity where something stands (`Optimum.MutualBest.full`) |
+| In common-pool resource games the Nash equilibrium appropriates more than the group optimum | Ostrom, Gardner and Walker, *Rules, Games, and Common-Pool Resources* (1994) (from memory) | A mutual best response on the spine, with no payoff over the condition for any optimizer |
+| Communities keep commons through rules, monitoring and graduated sanctions | Ostrom, *Governing the Commons* (1990) (from memory) | On the spine what keeps the condition is a coupling into it or a lowered capacity, the law's only terms; coordination without coupling keeps nothing (`Optimum.mutual_as_one`) |
+
+```text
+Result(s): new record several-optimizers-drain-by-their-joint-capacity (SG3, new laws of Becoming.Optimum)
+Delta: at a mutual best response a condition beyond every optimizer's family falls by the joint capacity, as under one optimizer of that capacity; restraint is no mutual best response; the break exactly where the need exceeds that level
+Supplied premises / correspondence: the optimizers, their families, orders and capacities; a mutual best response; one step. Correspondence: Hardin 1968; Gordon 1954; Ostrom, Gardner and Walker 1994; Ostrom 1990
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; existence of a mutual best response not shown in general; conditions within an optimizer's family and courses of steps not stated
+Integration: chapter §3.4, §7.1, T3's standing, §8.1 item 10 and the relation-to-known-results row 6
+```
