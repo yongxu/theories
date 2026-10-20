@@ -160,6 +160,10 @@ class Pacer:
             time.sleep(pause)
 
 
+class NoReply(Exception):
+    """Every attempt failed before any reply was received (rate limits, the network): no judgment, no row."""
+
+
 class OpenRouterClient:
     """OpenRouter chat completions. The key is read from OPENROUTER_API_KEY and sent only in the
     Authorization header; it is never printed, logged or written."""
@@ -201,6 +205,7 @@ class OpenRouterClient:
     def judge(self, item: dict, seed: int) -> dict:
         data = json.dumps(self.body(item, seed)).encode()
         delay = 5.0
+        replied = False
         for attempt in range(8):
             self.pacer.wait()
             req = urllib.request.Request(self.url, data=data, headers={
@@ -210,6 +215,7 @@ class OpenRouterClient:
                     d = json.load(r)
                 if "error" in d and "choices" not in d:
                     raise ValueError("error body")
+                replied = True
                 parsed = self.parse(d["choices"][0]["message"].get("content") or "")
                 if not valid(parsed, item["labels"]):
                     raise ValueError("invalid")
@@ -230,6 +236,8 @@ class OpenRouterClient:
                 time.sleep(delay)
                 delay = min(120.0, delay * 2)
                 continue
+        if not replied:
+            raise NoReply(f"{self.model}: no reply in 8 attempts")
         return {"better": None, "reason": "", "continue_1": [], "continue_2": [], "usage": {},
                 "model_returned": None, "attempts": 8, "valid": False}
 

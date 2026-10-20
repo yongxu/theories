@@ -1,5 +1,7 @@
 # Second addendum to the VD1 freeze: six model families through OpenRouter, 21 October 2026
 
+**Amended after standpoint 0 by the [third addendum](PREDICTIONS-ADDENDUM-3-2026-10-21.md).** Standpoint 0 ran under this text, and its projected cost was $14.11. Ren then chose to drop Meta and StepFun for two cheap models, Qwen and Mistral; only costs had been seen, no judgment.
+
 **Changed before any call (21 October, after this file was first committed at `9f1adb620`).** Ren, in this session: "skip free models, you can also use, for example Meta: Muse Spark 1.3 Contributor, or StepFun: Step 5 Preview". MiniMax m3.1 flash, listed only as a free variant, leaves the design. Meta's and StepFun's models join, both paid (`e71ae7a0c`).
 
 Then Ren, relayed on 21 October by the session that started this one, chose GLM 5.3 Flash instead of MiniMax, so that a free tier's caps would not stretch the run. `z-ai/glm-5.3-flash` joins, pinned by its exact ID rather than the alias `~z-ai/glm-flash-latest`, which can move. No MiniMax call, and no experimental call of any kind, had been made.

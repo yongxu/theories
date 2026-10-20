@@ -1,12 +1,13 @@
 """The non-experimental checks of the second addendum: one call per model with a test prompt that is
 not the experiment's, sent with the experiment's client settings (strict JSON schema, low reasoning).
 
-zsh -ic 'python3 -B check.py'    (the key comes from Ren's interactive zsh; it is never printed)
+zsh -ic 'python3 -B check.py [model ...]'    (the key comes from Ren's interactive zsh; it is never printed)
 """
 
 from __future__ import annotations
 
 import json
+import sys
 
 from client import OpenRouterClient
 from run import CONFIG
@@ -19,6 +20,8 @@ TEST = {
 
 if __name__ == "__main__":
     for model, c in CONFIG["models"].items():
+        if sys.argv[1:] and model not in sys.argv[1:]:
+            continue
         client = OpenRouterClient(model, c["rpm"], c["json_mode"], c["seed"])
         try:
             out = client.judge(TEST, 1)

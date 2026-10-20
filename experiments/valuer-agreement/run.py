@@ -19,7 +19,7 @@ import threading
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from client import LimitReached, OpenRouterClient, ScriptedValuer
+from client import LimitReached, NoReply, OpenRouterClient, ScriptedValuer
 from frames import CLASSES, all_items
 
 # The original freeze's configuration, never run (the OpenAI account had no credit):
@@ -34,8 +34,8 @@ CONFIG = {
         "z-ai/glm-5.3-flash": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": True},
         "openai/gpt-6-luna": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": True},
         "anthropic/claude-haiku-5.5": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": False},
-        "meta/muse-spark-1.3": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": False},
-        "stepfun/step-5-preview": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": True},
+        "qwen/qwen3.8-flash": {"parallel": 8, "rpm": None, "json_mode": "json_schema", "seed": True},
+        "mistralai/mistral-small-2603": {"parallel": 4, "rpm": None, "json_mode": "json_schema", "seed": True},
     },
 }
 
@@ -100,6 +100,8 @@ def run_model(model: str, client, out: Path, parallel: int, spend: Spend, throug
             return
         try:
             res = client.judge(it, seed(it))
+        except NoReply:
+            return  # no row: a later run makes the call again
         except (LimitReached, RuntimeError) as e:
             stopped.set()
             print(f"{model} stopped: {e}", flush=True)
@@ -143,6 +145,11 @@ def project(out: Path, through: int) -> float:
         p = c * len(all_items()) / n
         total += p
         print(f"{m}: {len(done_keys(path) & {r['key'] for r in stage})} of {n} done, ${c:.4f}, projected ${p:.2f}")
+    kept = {fname(m) for m in CONFIG["models"]}
+    outside = sum(cost(json.loads(line)) for f in out.glob("*.jsonl") if f.name not in kept
+                  for line in f.read_text().splitlines())
+    total += outside
+    print(f"spent on models outside the configuration: ${outside:.4f}")
     print(f"projected total: ${total:.2f}")
     return total
 
