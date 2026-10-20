@@ -11203,7 +11203,7 @@ Output → input: with Persistence's conservation continuation, a world's classe
 ```text
 Result(s): none new; MQ1's B4 forecast (§253) shown to be relative reachability on a replayed course,
        coarsened to a band. Experiment experiments/side-effect-benchmarks, predictions frozen at 0b158e1b9
-       before the run, R1-R6 passed; literature check in the significance review (side-effect-benchmarks-check).
+       (on main 43d91f692) before the run, R1-R6 passed; literature check in the significance review (side-effect-benchmarks-check).
 Delta: §253 left blind draw against margin as the theory's best candidate for a result outsiders use (side
        effects of an optimizer predicted out of sample, 8/8, reference outcome 0/8). Given the same
        information (the reference course's entries and the target cell's own dynamics), unreachability of the
@@ -11221,8 +11221,8 @@ Boundary: SafeLife (the one established benchmark with renewal) not run: package
        exact best response; the other published environments classified from their descriptions.
 Output → input: the alignment side of the margin (Flow.Balances.loses_iff_beyond_margin with
        Flow.act_unselected as the transfer) is a known measure plus a known invariance; line E stops. What stays
-       of MQ1 is its measurement content (the need is the regime's, harms super-additive though draws add),
-       which is not a side-effect predictor.
+       of MQ1 is its measurement content (the need is the regime's, harms super-additive though draws add,
+       density carrying the history on real yeast), which is not a side-effect predictor.
 ```
 
 - **Why the band is a coarsening, not an alternative.** `garden.death_band` already replays the reference entries on the target cell, then bounds the regrowth before step t by floor(t/r). Running the regrowth instead gives the exact death step. That is undiscounted reachability of the alive set against the inaction course, the deviation relative reachability uses, restricted to one condition. The margin is the largest one-shot removal the condition's undrawn course survives, so it is a reachability quantity of the same kind.
