@@ -1,7 +1,7 @@
 {
- "commit": "f2be4822b00b4f405663c6757689d9ccbb250cf7",
- "sources_match_commit": false,
- "core_receipt_at_commit": "20261020T130550.714830Z",
+ "commit": "b83baedf9696d1bfa3f5c4aa3286f5152abd0b38",
+ "sources_match_commit": true,
+ "core_receipt_at_commit": "20261020T133130.717227Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 296,
  "constants": 37210,
@@ -669,7 +669,7 @@
   "theorems_outside_the_main_component": []
  },
  "records_by_best_alias_class": {
-  "statement on both families": 67,
+  "statement on both families": 68,
   "statement on Process/Frame/Run/Trace": 115,
   "statement on World/Flow/Web": 74,
   "statement on the base only through a law of its own module": 1,
