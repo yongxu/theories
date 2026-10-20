@@ -56,6 +56,7 @@ import Becoming.SelectionTerm
 import Becoming.Reproduction
 import Becoming.SelectionLevels
 import Becoming.GroupEnding
+import Becoming.Drift
 import Becoming.Space
 import Becoming.Premises
 import Becoming.Sampling
@@ -736,6 +737,17 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   excess, with nothing selected among them, so ending selects among groups only between such
   families. Witnesses: selection within the keeping group
   outweighed, and outweighing.
+* `Becoming.Drift` (L1): offspring sampled rather than listed. A next generation of two kinds
+  sampled n times from listed offspring, p of the first kind and q of the second, each sampling
+  a course of `Becoming.Typicality` weighed by the ways of drawing it: on average the sampled
+  share is the listed share (p + q times the weighted count of the first kind is n · p times the
+  whole weight), and the squared deviations add to n · p · q · (p + q)^n. Where a listed step
+  raises the share from h/N to p/(p + q) by the gap g = N · p − (p + q) · h, the samplings falling
+  back to h/N or below weigh, times n² · g², at most N² · n · p · q · (p + q)^n, and at least q^n,
+  the samplings losing the first kind, at every n; over listed generations the same for a step
+  raising the mean of an amount held or not, and on the base where that step is ending among
+  groups (the groups with less of the amount not active). Witness: one draw falling back with
+  weight two of five.
 * `Becoming.Space` (L1): the whole and its parts, one structure for Ren's proposal (an AI
   reading). The space is every world, a world being relata read with one kind, their flow
   and their web. The laws stated with no premise hold of every world; in a finite world

@@ -2111,6 +2111,21 @@
    "module": "Becoming.GroupEnding",
    "category": "model-witness",
    "reason": "at the next step the groups formed by descent are alike in holding back, selection within goes against it and the mean falls below its start: a fact about one constructed family, not a law of the unfolding"
+  },
+  "Becoming.Drift.expected_zeros": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "p + q times the weighted count of draws of the second kind is n q times the whole weight, unbiasedness for the second kind: a law of any two-kind sampling counted by Typicality's courses, with no world; on the base the bound on falling back is reached through Flow.ended_falls_back"
+  },
+  "Becoming.Drift.Generations.expected_sampled": {
+   "module": "Becoming.Drift",
+   "category": "general-structure",
+   "reason": "sampled from a listed generation of holders and others, the holders' count averages the listed share, unbiasedness over listed generations: a law of any two-kind sampling counted by Typicality's courses, with no world; on the base the bound on falling back is reached through Flow.ended_falls_back"
+  },
+  "Becoming.Drift.OneDraw.falls_back": {
+   "module": "Becoming.Drift",
+   "category": "model-witness",
+   "reason": "one draw from three and two after a step raising the share from a half: the draw of the second kind falls back, weighing two of five; a fact about one constructed sampling, not a law of the unfolding"
   }
  },
  "instances": {

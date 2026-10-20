@@ -75,7 +75,7 @@ CORE = ["Becoming.Prelude", "Becoming.World", "Becoming.Witnesses", "Becoming.Fr
         "Becoming.Arising", "Becoming.Flow", "Becoming.Stock", "Becoming.Change", "Becoming.Population",
         "Becoming.Identity", "Becoming.Persistence", "Becoming.ContinuedClasses", "Becoming.Wholes", "Becoming.Dissipation", "Becoming.Locality",
         "Becoming.Seeking", "Becoming.Roles", "Becoming.LabelledRoles",
-        "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Space",
+        "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.Drift", "Becoming.Space",
         "Becoming.Premises", "Becoming.Sampling", "Becoming.Tower",
         "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.Units", "Becoming.Imbalance",
         "Becoming.Continuation", "Becoming.RenewalFlow", "Becoming.Admission", "Becoming.Exclusion", "Becoming.Exhaustion",
@@ -956,6 +956,14 @@ SCOPE = (
     "family read as one leaves no descendant after the family's excess, groups whose members depend "
     "on one such family end together with nothing selected among them, and where the groups with less "
     "of an amount depend on such a family they leave nothing. "
+    "Drift: a next generation of two kinds sampled n times from listed offspring, p of the first "
+    "kind and q of the second, each sampling weighed by the ways of drawing it; p + q times the "
+    "weighted count of the first kind is n p times the whole weight (p + q)^n, and likewise for the "
+    "second; where (p + q) h + g = N p the samplings with at most h/N of the first kind weigh, times "
+    "n^2 g^2, at most N^2 n p q (p + q)^n, and at least q^n, the weight of the samplings with no draw of "
+    "the first kind; over listed generations a step that raises the mean of an amount held or not "
+    "has a positive gap with that bound, and on the base so does a step at which the groups with less "
+    "of the amount are not active; witness one draw from three and two. "
     "Space, one structure for Ren's proposal (an AI reading): a world is relata read with one "
     "kind, the flow among them and their web, and the space is every world; the laws stated with "
     "no premise hold of each; in a finite world whose activity is decided, arising recurs exactly "
