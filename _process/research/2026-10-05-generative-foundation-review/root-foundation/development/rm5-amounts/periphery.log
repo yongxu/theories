@@ -1,0 +1,1 @@
+{"status": "passed", "theorems": 14, "declaration_audits": 17, "axioms": ["Classical.choice", "Quot.sound", "propext"], "inherited_modules": 61, "lean_steps_run": 4, "lean_steps_reused": 61, "receipt": "/Users/ren/theories/.claude/worktrees/rm5/experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-verification.json"}

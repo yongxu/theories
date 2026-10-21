@@ -1,0 +1,59 @@
+## {N}. The regime in any amounts, and its runs over the reals (RM5)
+
+```text
+Result(s): new record regime-in-any-amounts (new laws of Becoming.RegimeMargin, the periphery module RegimeReals);
+       reuses where-a-run-of-a-regime-comes-to-rest (the adjusted step, Rises, Band, comes_to_rest),
+       regime-point-under-adjusting-giving (the rest law at or above the draw), threshold-in-the-state-plane (down-closed
+       fates, the falling curve), Amounts (amounts with their laws), Lasting.orbit_mono, LastChange.StillFrom,
+       Law.orbit_add, Law.orbit_mul.
+Delta: RM1-RM4 hold in whole numbers, where every change moves an amount by at least one; that a run comes to rest
+       within 3 hi + 3 steps and that its fate is decided at a fixed step rest on that. Drawn reads the adjusted step in
+       any linearly ordered amounts with a draw taken first, as much as there is, whole numbers an instance
+       (Drawn.whole_run). There the step of a rising adjustment keeps the order of states (Drawn.step_mono); from the
+       first step on, a step that neither raises nor lowers both the level and the recent giving climbs (the level up
+       strictly, the recent giving down strictly toward the draw from above) or sinks (the mirror, from below), whatever
+       the adjustment (Drawn.climbs_or_sinks); the next such step is of the same kind (Drawn.climbs_next,
+       Drawn.sinks_next); a step that raises or lowers both is followed by such steps for ever (Drawn.rising_on,
+       Drawn.falling_on); Drawn.run_shape gathers these on the run. A run within a band stays there (Drawn.run_within),
+       and a run rests exactly at the regime's point or below the draw with level and recent giving equal
+       (Drawn.rest_iff, Drawn.still_iff). Over the non-negative reals (periphery, Mathlib): every run of a rising
+       adjustment within a band converges (Drawn.converges); where the adjustment is continuous the limit is a rest
+       (Drawn.limit_rest, Drawn.limit_fates); limits keep the order of the states run from (Drawn.limits_below), so the
+       states whose runs converge below the draw are down-closed (Drawn.falls_of_below) and fewer as the recent giving
+       rises (Drawn.falls_given); and giving moving halfway from the recent giving to a draw of one keeps a band up to
+       one while the run from nothing converges and never rests (Drawn.Relaxation.never_rests).
+Premises / correspondence: discrete steps; the draw taken first, as much as there is; the state the level and one
+       recent giving; amounts linearly ordered, with addition that keeps and cancels the order and a truncated
+       difference; the adjustment rising in both arguments (for the order, not for the shape of an unordered step); a
+       band; for the limit a rest, continuity. Correspondence: orbits of planar cooperative maps are eventually
+       componentwise monotone (Smith 1998; Hirsch and Smith 2005), so bounded orbits converge; the adjusted step is a
+       partial-adjustment model of renewal (Deriso 1980; Schnute 1985 for the delay-difference form).
+Evidence: core receipt {RECEIPT} and periphery receipt {PERIPHERY} (passed); the prior forms from memory, not reread.
+Boundary: the reals' laws are periphery, with Lean's standard axioms through Mathlib, and no core law says a run
+       converges, since convergence of a bounded monotone sequence needs an omniscience principle; the core states the
+       shape constructively; discrete steps remain; whether a measured adjustment rises in both over its band is not
+       checked; the threshold over the reals is stated as down-closed fates, not as a computed level; the regime case
+       H + y over the reals is not stated; one recent giving, no further lag; coupled conditions not stated.
+Output → input: chapter 2.3 (the regime over any amounts), thesis T2's standing, the record table; RegimeMargin's
+       header; records where-a-run-of-a-regime-comes-to-rest and threshold-in-the-state-plane (what they leave open,
+       history notes); coverage row degeneration; significance review, amounts check.
+```
+
+**The question.** Every law of the regime so far (RM1–RM4) reads amounts in whole numbers. Two of its strongest laws rest on that: a run within a band comes to rest within `3 hi + 3` steps (RM3, [study §300](#300-where-a-run-of-a-regime-comes-to-rest-rm3)), and a state's fate is decided at that step (RM4, [study §301](#301-the-threshold-in-the-plane-of-level-and-recent-giving-rm4)). Renewal is usually modelled in real amounts. So the question is which of these laws are artefacts of whole numbers, and what holds in any amounts.
+
+**What was built** (new laws of `Becoming.RegimeMargin`, pure core, every axiom report empty; the periphery module `RegimeReals`, with Mathlib).
+
+- *Amounts with a draw* (`Drawn`). The core's `Amounts`, with a linear order, antisymmetric, and a truncated difference: `sub a b` is all of `a` but `b` where `b` is within `a`, and nothing where it is not. `Drawn.step` is the adjusted step there. In whole numbers it is RM2's step, and its rising adjustments and order are RM3's (`Drawn.whole_run`).
+- *The order.* Where the adjustment rises with what is left and with the recent giving, the step keeps the order of states (`Drawn.step_mono`, through `Drawn.sub_mono`). So a run that raises (lowers) both at one step does so at every later step (`Drawn.rising_on`, `Drawn.falling_on`).
+- *The shape of an unordered step.* After a step the recent giving is within the level (`Drawn.given_le_level`). From such a state, a step that neither raises nor lowers both either climbs or sinks, whatever the adjustment (`Drawn.climbs_or_sinks`). A climb raises the level strictly while the recent giving falls strictly and stays strictly above the draw. A sink lowers the level strictly while the recent giving rises strictly and stays strictly below the draw. At or above the draw the level rises exactly where the new giving meets the draw (`Drawn.level_up_iff`, `Drawn.level_down_iff`). Below it the draw takes everything and the level is the new giving (`Drawn.level_of_low`). The step after a climb (sink) that neither raises nor lowers both climbs (sinks) too, since the recent giving cannot cross the draw while unordered (`Drawn.climbs_next`, `Drawn.sinks_next`). `Drawn.run_shape` states the five laws on the run.
+- *Within a band, at rest.* A run from a state within a band the step keeps stays within it (`Drawn.run_within`). The step leaves a state as it is exactly at the regime's point (the recent giving at the draw and the adjustment giving the draw from what is left) or within the draw with level and recent giving equal, the adjustment from nothing left giving it again (`Drawn.rest_iff`). A run is still from a step exactly where its state there is such a rest (`Drawn.still_iff`).
+- *Over the non-negative reals* (`RegimeReals`). The non-negative reals are amounts with a draw (`Drawn.reals`). Every run of a rising adjustment from a state within a band converges (`Drawn.converges`). Either some step raises or lowers both, after which both coordinates are monotone; or none does, and from the first step every step climbs, or every step sinks, so the level and the recent giving are each monotone. In both cases they are bounded by the band. Where the adjustment is continuous the limit is a rest of the step (`Drawn.limit_rest`), so the regime's point or a state within the draw with level and recent giving equal (`Drawn.limit_fates`). Limits keep the order of the states run from (`Drawn.limits_below`). So a state at or below one whose run converges below the draw converges below it too (`Drawn.falls_of_below`). At one level, a larger recent giving whose run converges below the draw has every smaller one converging below too (`Drawn.falls_given`). The fates are down-closed, the boundary a falling curve, as in RM4.
+- *Witness* (`Drawn.Relaxation.never_rests`). Giving that moves halfway from the recent giving to a draw of one rises in both and keeps a band up to one. From nothing the level and the recent giving stay equal and fall short of one by `(1/2)^n` (`Drawn.Relaxation.course`). So the run converges and is still from no step.
+
+**Against the prior form** ([significance review, amounts check](BECOMING-SIGNIFICANCE-REVIEW.md#amounts-check)). The mathematics is known: orbits of cooperative (order-preserving) planar maps are eventually componentwise monotone, so bounded orbits converge (Smith 1998; Hirsch and Smith 2005, from memory). The general theorem asks for regularity conditions (a one-to-one map, positive determinants). The adjusted step needs none of them, because of its own structure: the level moves by the new giving less the draw. That makes every unordered step move the recent giving toward the draw from the side it stands on, with no property of the adjustment. The spine states this shape constructively in any amounts with a draw. The periphery adds the convergence, which needs completeness, over the reals.
+
+*Reading* [AI reading, D45]. What whole numbers add to the regime's laws is that a run reaches its rest in finitely many steps and that its fate is decided at a fixed step. The structure (order kept, unordered steps toward the draw, rests at the regime's point or below the draw, fates down-closed and falling with the recent giving) holds in any amounts. Over the reals runs converge rather than rest, as the relaxation witness shows. T2's account of the state does not depend on amounts being counted.
+
+**Self-review.** The first plan stated convergence in the core over any amounts. It was dropped: a bounded monotone sequence converging is an omniscience principle constructively, and "converges" needs a topology the core does not have. So the core states the shape, which is all a constructive proof gives, and the periphery adds what completeness gives. `Drawn` asks for antisymmetry only for the rest law: with the order a preorder, as the core's `Amounts` allows, a rest would only be equivalent to the draw, not equal to it. The shape of an unordered step asks nothing of the adjustment, and that the recent giving is within the level holds from the first step on, which is why `run_shape` starts there. The periphery's `Falls` takes the limit by existence, so no choice of limit is defined; limits are unique in the reals. The connectivity check was planned before the first checker run: every new core law is stated on a run or read by one that is. Limits: discrete steps remain; the regime case `H + y` and a computed threshold over the reals are not stated; coupled conditions and a further lag are not stated.
+
+**The run.** {CORE_LINE}. {DECLS_RM} declarations added to Becoming.RegimeMargin, {THEOREMS_RM} of them theorems ({OLD_RM} before, {TOTAL_RM} now), none removed, all with empty axiom reports. Periphery: {PERIPHERY_LINE}. Connectivity: {APART}.

@@ -1,0 +1,19 @@
+<a id="amounts-check"></a>
+## A check: the regime in any amounts, and its runs over the reals (21 October 2026, RM5)
+
+An AI check (one session, 21 October), made while the Lean was written. It asks which of the regime's laws are artefacts of whole-number amounts. **Verdict: the mathematics is known. Orbits of order-preserving planar maps are eventually componentwise monotone, so bounded orbits converge. The spine's form needs none of the general theorem's regularity conditions, because the adjusted step moves the level by the new giving less the draw. So every step that is neither up nor down moves the recent giving toward the draw, with no property of the adjustment. The core states this shape constructively in any linearly ordered amounts with a draw. The periphery adds convergence over the reals, to a rest where the adjustment is continuous, with the fates down-closed and falling with the recent giving. What whole numbers add is only that the rest is reached in finitely many steps and the fate decided at a fixed step.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Planar cooperative (order-preserving) maps: every orbit is eventually componentwise monotone, under regularity conditions (one-to-one, orientation), so bounded orbits converge | Smith, "Planar competitive and cooperative difference equations", Journal of Difference Equations and Applications 3 (1998); Hirsch and Smith 2005 (from memory) | `RegimeMargin.Drawn.run_shape` states the shape for the adjusted step in any amounts with no regularity condition; `RegimeReals`'s `Drawn.converges` gives convergence over the non-negative reals |
+| Convergence of a bounded monotone sequence is not constructive (it is equivalent to an omniscience principle) | Bridges and Richman 1987 (from memory) | Why the core states the shape and the periphery states the convergence |
+| Partial adjustment and delay-difference models of renewal | Deriso 1980; Schnute 1985 (as cited by T2) | The adjusted step over the reals is their state of a level and one recent giving, with the draw taken first |
+
+```text
+Result(s): new record regime-in-any-amounts (RM5, new laws of Becoming.RegimeMargin and the periphery module RegimeReals)
+Delta: the regime's order, the shape of its runs and its rests hold in any linearly ordered amounts with a draw; over the reals every run of a rising adjustment within a band converges, to a rest where the adjustment is continuous, with fates down-closed and falling with the recent giving; a run need not come to rest
+Supplied premises / correspondence: discrete steps; the draw taken first; the state the level and one recent giving; linearly ordered amounts with a truncated difference; for the reals, Mathlib's reals with Lean's standard axioms. Correspondence: Smith 1998; Hirsch and Smith 2005; Bridges and Richman 1987
+Evidence: the prior forms from memory, not reread; Lean in the record's receipts
+Boundary: AI check, one session; discrete steps remain; the regime case H + y and a computed threshold over the reals are not stated; coupled conditions and a further lag are not stated
+Integration: chapter §2.3, thesis T2's standing, the record table
+```

@@ -1,0 +1,11 @@
+{
+  "files_checked": 1265,
+  "links_checked": 72883,
+  "broken": 0,
+  "broken_by_kind": {},
+  "broken_by_role": {},
+  "by_directory": {},
+  "list": [],
+  "not_in_repository": [],
+  "scope": "Relative links and #anchors in live and generated Markdown (paths.py roles); history, evidence, sources and scratch are frozen and not checked. Paths must match tracked or untracked files exactly. Targets inside a submodule or excluded by .gitignore are listed under not_in_repository, not counted."
+}
