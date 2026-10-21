@@ -84,6 +84,7 @@ Compensatory renewal settles and overcompensating renewal cycles (Beverton and H
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json) | — |
 
 Aliases: `where a run of a regime comes to rest`, `every run of a rising adjustment comes to rest`, `a law's run with a bounded mark`, `一个体制的运行静于何处`, `Becoming.RegimeMargin.Adjusted.comes_to_rest`, `Becoming.RegimeMargin.rests_within`, `Becoming.LastChange.still_within`
 
@@ -92,7 +93,7 @@ Aliases: `where a run of a regime comes to rest`, `every run of a rising adjustm
 
 - 21 October 2026: added (RM3), where a run of a regime comes to rest: a law's run with a bounded mark rests within the bound, decided; every run of an adjustment rising in both arguments within a band rests within 3 hi + 3 steps, at the regime's point or below the draw; study section 300.
 - 21 October 2026, RM5: convergence over the reals, left open here, is stated for rising adjustments within a band, with a witness that a run need not rest (record regime-in-any-amounts, study section 302); what this record does not show and its next delta now say so. Its laws are unchanged.
-- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 304); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
+- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
 
 </details>
 

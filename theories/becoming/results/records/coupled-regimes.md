@@ -40,7 +40,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T105805.152152Z): the 55 declarations Becoming.RegimeMargin gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 304; not independently reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T105805.152152Z): the 55 declarations Becoming.RegimeMargin gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 306; not independently reviewed by a person.
 
 Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 
@@ -96,13 +96,14 @@ Cooperative (monotone) dynamical systems keep the order of states and their exti
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json) | — |
 
 Aliases: `coupled regimes`, `a margin that is not its own`, `the point of no return of a coupled condition`, `coextinction under a draw`, `耦合的体制`, `Becoming.RegimeMargin.Coupled.ends_iff_below`, `Becoming.RegimeMargin.Coupled.threshold_falls`, `Becoming.RegimeMargin.Coupled.ends_after`
 
 <a id="history--沿革"></a>
 ### History
 
-- 21 October 2026: added (RM6), coupled regimes: two conditions under draws, each giving from what is left of both; under mutual support the order of states is kept and ending is down-closed; within a band in whole numbers runs rest within 2 hi + 1 steps and the first condition ends exactly below a least level that does not rise as its partner rises; a dependent drains by its draw once its partner has nothing left; study section 304.
+- 21 October 2026: added (RM6), coupled regimes: two conditions under draws, each giving from what is left of both; under mutual support the order of states is kept and ending is down-closed; within a band in whole numbers runs rest within 2 hi + 1 steps and the first condition ends exactly below a least level that does not rise as its partner rises; a dependent drains by its draw once its partner has nothing left; study section 306.
 
 </details>
 

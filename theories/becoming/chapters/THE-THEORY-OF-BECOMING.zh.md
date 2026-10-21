@@ -1026,20 +1026,18 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261021T111912.398950Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 305 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#305-reading-anothers-law-and-lexical-priority-within-the-class-ap2)）。
+**当前回执**是运行 [`20261021T121942.438529Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 306 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#306-coupled-regimes-a-margin-that-is-not-its-own-rm6)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Becoming`） | 284 个模块，11,988 条定理 |
+| 核心模块（含根 `Bec| 核心模块（含根 `Becoming`） | 284 个模块，12,032 条定理 |
 | 实例模块 | 7 个模块，567 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 300 个模块，12,808 条定理 |
-| 审计的脊柱声明 | 17,476 |
+| 闭包（核心、环与根基） | 300 个模块，12,852 条定理 |
+| 审计的脊柱声明 | 17,531 |
 | 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 199 条 |
-| 被取代的外围模块（不在运行中，字节保留） | 75 |
-
-<a id="complete-episode-comparison-anchors"></a>
+| 被取代的外围模块（不在运行中，字节保留） | 75 |ete-episode-comparison-anchors"></a>
 **完整情节比较。** 冻结的回执 `20261013T204910.042715Z` 检查 `Becoming.RepairComparison` 的 36 条定理，公理报告为空；完整情节匹配的规范充分性仍是明确的假设，实际内容的对应尚待建立；F3 清扫之后 `Becoming.MatchedCourses` 以核心的名称陈述其历程（见[英文版 §9](THE-THEORY-OF-BECOMING.md#complete-episode-comparison-anchors)）。
 
 **命名。** F12 的“中立”：`Joining.Neutral` 已由 R30 改名为 `Joining.TwoSidedUnit`，所以 `Neutral` 现在只指边界中立，即在每个实例上成立的规则。外围、各实例模块的检查与完整情节比较见[英文版 §9](THE-THEORY-OF-BECOMING.md#9-the-formal-spine)。

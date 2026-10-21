@@ -79,6 +79,7 @@ Partial adjustment, a quantity moving at a rate toward its target, rests where t
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json) | — |
 
 Aliases: `the regime's point under giving that adjusts`, `giving that adjusts`, `rests of an adjusting giving`, `所给调整下的体制之点`, `Becoming.RegimeMargin.Adjusted.rests_iff`, `Becoming.RegimeMargin.Adjusted.ends_iff_below`, `Becoming.RegimeMargin.Crossing.crosses`
 
@@ -88,7 +89,7 @@ Aliases: `the regime's point under giving that adjusts`, `giving that adjusts`, 
 - 21 October 2026: added (RM2), the regime's point over every adjustment of giving: RM1's laws on ending and holding hold over any law of what is left and of the recent giving, the regime's step the case; every rest at or above the draw is the regime's where the adjustment rests at the draw where the regime gives it; study section 299.
 - 21 October 2026, RM3: whether a run comes to rest, left open here, is answered for adjustments rising in both arguments within a band (record where-a-run-of-a-regime-comes-to-rest, study section 300); what this record does not show and its next delta now say so. Its laws are unchanged.
 - 21 October 2026, RM4: the threshold in the plane of level and recent giving, left open here, is stated for adjustments rising in both arguments within a band (record threshold-in-the-state-plane, study section 301); what this record does not show and its next delta now say so. Its laws are unchanged.
-- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 304); what this record does not show now says what stays open. Its laws are unchanged.
+- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show now says what stays open. Its laws are unchanged.
 
 </details>
 
