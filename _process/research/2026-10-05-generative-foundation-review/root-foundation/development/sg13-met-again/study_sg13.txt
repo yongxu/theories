@@ -1,0 +1,47 @@
+## {N}. Steps met again after a fall (SG13)
+
+```text
+Result(s): new record steps-met-again-after-a-fall (new laws of Becoming.Optimum); reuses
+       a-step-coupling-keeps-at-every-horizon (the shortfall law, now the case of one over any counted steps;
+       stepwiseDraw, frontier_keeps_stepwise) and keeping-forgoes-the-renewal-at-the-need (Keeps, keeps_or_falls,
+       continued, continued_keeping_frontier, holdingTo_most, onSource).
+Delta: SG7's coupling counts the steps a need is met from the start; §8.1 item 10 listed steps met again after a fall
+       as open. Counted at every step met, wherever those steps fall, each met step still forgoes at least r - q
+       (Optimum.shortfall_count_ge over any decidable count, Optimum.met_count_drawn_le); the count from the start is
+       its case (Optimum.shortfall_ge, statement unchanged). A course below the need at some step is worth at most the
+       keeping course ending at e where r ≤ q + c, r + e ≤ q + c + m and e ≤ c (Optimum.falls_met_le); every optimum
+       keeps the need through the horizon where r + e < q + c + m and e < c (Optimum.frontier_keeps_met,
+       Web.frontier_met_kept); the keeping course ending at m is an optimum where r ≤ q + c and m ≤ c
+       (Optimum.continued_met_frontier). A fall met again loses the coupling only at the steps below, so the
+       threshold rises from SG7's r ≤ q + c by the end's excess over the need and becomes strict.
+Premises / correspondence: R gives at most r at every level, at most q at or above m and q at some y within the
+       start's reach; a start meeting m; a capacity covering the first step's draw down to y and y with q down to e;
+       a horizon of at least two steps; a worth adding at least c a step to a keeping course and at most c for each
+       step met; natural amounts, discrete steps.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: the coupling is a count of met steps; a weighting of the steps met, and couplings depending on how long a
+       need stays met, are not covered; several optimizers ranking courses stay open.
+Output → input: chapter §3.4, §7.1 and §8.1 item 10 (EN, ZH), the record table; Optimum's header and its section on
+       a coupling added for each step; records a-step-coupling-keeps-at-every-horizon and
+       keeping-forgoes-the-renewal-at-the-need; significance review, met-again check.
+```
+
+**The question.** SG7 showed that a coupling `c` for each step a need is met from the start keeps the need at every horizon where `c` covers the renewal forgone a step and exceeds the end the keeping course reaches ([§294](#294-a-coupling-added-for-each-step-a-dependence-is-kept-sg7)). Counting from the start, a fall forfeits every later step. Counting every step met, a course could fall, take the greater renewal below the need, regrow, and collect the coupling again. §8.1 item 10 listed this as open.
+
+**What was built** (new laws of `Becoming.Optimum`, pure core, every axiom report empty).
+
+- *Counting steps* (`Optimum.countUpTo`, `Optimum.counted_le_one`, `Optimum.countUpTo_le`, `Optimum.countUpTo_all`, `Optimum.countUpTo_lt`, `Optimum.countUpTo_below`). The steps among the first `n` at which a Boolean reading holds, counted. At most every step is counted, all where the reading holds throughout, fewer where it fails at some step. The steps before `j` number `j`.
+- *What counted steps forgo* (`Optimum.counted_step`, `Optimum.shortfall_count_ge`). Where what is given at each counted step is at most `q`, `r` for each counted step is at most everything given falls short of `r`, with `q` for each counted step, wherever those steps lie. SG7's law for the first `j` steps is now its case (`Optimum.shortfall_ge`, statement unchanged; rule 9).
+- *What a course met anywhere draws* (`Optimum.metCount`, `Optimum.metCount_of_met`, `Optimum.met_count_drawn_le`). With the met steps counted wherever, what a course draws with what it leaves and `r` for each met step is at most the start with what is given there, `r` a step after and `q` for each met step.
+- *The comparison* (`Optimum.le_of_met_count`, `Optimum.mul_le_of_rate`, `Optimum.met_key_end`, `Optimum.met_key_drop`, `Optimum.falls_met_le`). A course below the need at some step, met `J` times to the `n`-th and possibly at the end, is worth at most the keeping course. There are two cases. Met again at the end, it leaves at least the need, and the `u ≥ 1` steps below gain at most `r - q` each against `c` lost each, with `e - m` at the end: `r + e ≤ q + c + m` with `r ≤ q + c`. Below at the end, it gains at most `e` there against `c`: `e ≤ c`. The slack `d` turns the bound strict.
+- *Every optimum keeps* (`Optimum.frontier_keeps_met`, `Web.frontier_met_kept`). Where `r + e < q + c + m` and `e < c`, every optimum of every order rising with such a worth keeps the need through the horizon, and on a web meets the dependence at every step.
+- *An optimum keeping it* (`Optimum.continued_met_frontier`). Where `r ≤ q + c` and `m ≤ c`, the keeping course ending at `m` is an optimum.
+- *The witness* (`Optimum.Holding.burst`, `Optimum.Holding.burst_le`, `Optimum.Holding.burst_above`, `Optimum.Holding.fallOnce`, `Optimum.Holding.fallOnce_open`, `Optimum.Holding.fallOnce_drawn`, `Optimum.Holding.fallOnce_met`, `Optimum.Holding.metDraw`, `Optimum.Holding.metDraw_of_keeps`, `Optimum.Holding.burst_met`). A burst renews four at one and nothing elsewhere. From the dweller's need two, with capacity three and a coupling of four a step, SG7's order (counting from the start) has every optimum keeping the dweller. Counting every step met, the course falling to one at the first step and regrown to two at the next is an optimum beside the course staying at two: it draws four more and loses four once. With five a step every optimum keeps the dweller.
+
+**Against the prior form** ([significance review, met-again check](BECOMING-SIGNIFICANCE-REVIEW.md#met-again-check)). A reward for each step a constraint holds, with no memory of a breach, is a per-step constraint reward. The result is the exact price of that memorylessness: the coupling must exceed the gain a step below the need outright, not merely cover it, and by the end's excess over the need.
+
+*Reading* [AI reading, D45]. A coupling of a dependence counted step by step keeps it at every horizon, and an alignment coupling need not be a lump sum (SG7). This item adds what counting without memory costs: an optimizer can break the dependence and restore it, paying only for the steps it is broken. Where the renewal it gains there reaches the coupling, breaking and restoring is as good as keeping. Counting from the start, so that a breach forfeits what follows, keeps the threshold at `r ≤ q + c`.
+
+**Self-review.** Premises were checked for necessity. `ends : m ≤ e` gives `r < q + c` from `r + e < q + c + m`, so no separate rate premise is needed for every optimum to keep. In `continued_met_frontier`, `r ≤ q + c` and `m ≤ c` are what the non-strict comparison needs; the witness shows that at `r = q + c` a fall met again ties. The first builds used `omega`, `ac_rfl` and tactic-mode `cases` for the count arithmetic. `omega` and `ac_rfl` bring in `propext` and `Quot.sound`, and the tactic form of the counted shortfall brought in `propext`. The final proofs are explicit rewrites, a per-step lemma (`counted_step`) and `mul_le_of_rate` in place of `Nat.add_mul`. Every new law is read by the web law or the witness on the flow. Limits: counts of met steps only; weightings of met steps are open.
+
+**The run.** {CORE_LINE}. {DECLS} declarations added to Becoming.Optimum, {THEOREMS} of them theorems, none removed, all with empty axiom reports; `shortfall_ge` now reads `shortfall_count_ge`, its statement unchanged. Connectivity: {APART}.

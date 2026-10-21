@@ -1,0 +1,18 @@
+<a id="met-again-check"></a>
+## A check: steps met again after a fall (22 October 2026, SG13)
+
+An AI check (one session, 22 October), made while the Lean was written. It asks what SG7 ([stepwise check](#stepwise-check)) left open: whether a coupling counting every step a need is met, wherever, keeps the need as the count from the start does. **Verdict: the form is the spine's own: a per-step reward for a constraint holding, with no memory of a breach, is common in constrained optimization and reinforcement learning, but the exact threshold here, over every order rising with the worth, is not a known statement. A fall met again loses the coupling only at the steps below, so every optimum keeps the need exactly where `r + e < q + c + m` and `e < c`. That is strictly more than the count from the start needs, and a witness shows the tie at `r = q + c`.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| A reward or cost for each step a constraint holds or is violated, no memory of a breach | Constrained Markov decision processes, Altman (1999) (from memory) | The coupling counted at every step met (`Optimum.metCount`); every optimum keeps the need where `r + e < q + c + m` and `e < c` (`Optimum.frontier_keeps_met`) |
+| A constraint whose breach forfeits what follows | Absorbing or terminal violation states (from memory) | SG7's count from the start, threshold `r ≤ q + c` (`Optimum.frontier_keeps_stepwise`); against it a fall met again ties at `r = q + c` (`Optimum.Holding.burst_met`) |
+
+```text
+Result(s): new record steps-met-again-after-a-fall (SG13, new laws of Becoming.Optimum)
+Delta: counted at every step met, wherever, a coupling a step keeps a need under every optimum exactly where r + e < q + c + m and e < c, strictly above the count from the start's r ≤ q + c; the keeping course is an optimum where r ≤ q + c and m ≤ c; at r = q + c a fall met again is an optimum too
+Supplied premises / correspondence: a renewal law of the level with greatest renewal r and at most q at or above the need; a start meeting the need; a capacity covering the keeping course; natural amounts; discrete steps. Correspondence: constrained MDPs
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; weightings of met steps not stated; the witness's law, start and capacity chosen
+Integration: chapter §3.4, §7.1 and §8.1 item 10
+```
