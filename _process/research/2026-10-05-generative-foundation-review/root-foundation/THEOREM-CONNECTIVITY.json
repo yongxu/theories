@@ -1,11 +1,11 @@
 {
- "commit": "7dadf43eb1ff8f106e257f71c7d1a552af9e5361",
+ "commit": "29ad55f4ec41c8a3df0a53ea3dedf57444c14cb5",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261021T132557.057625Z",
+ "core_receipt_at_commit": "20261021T133545.845568Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 301,
- "constants": 39266,
- "spine_theorems": 12897,
+ "constants": 39269,
+ "spine_theorems": 12900,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -27,7 +27,7 @@
  },
  "classes": {
   "statement on both families": 994,
-  "statement on Process/Frame/Run/Trace": 2912,
+  "statement on Process/Frame/Run/Trace": 2915,
   "statement on World/Flow/Web": 3003,
   "statement on the base only through a law of its own module": 243,
   "proof through a base family": 155,
@@ -409,7 +409,7 @@
   ],
   "Becoming.Prelude": [
    2,
-   119
+   123
   ],
   "Becoming.Context": [
    2,
@@ -493,7 +493,7 @@
   ],
   "Becoming.Population": [
    1,
-   124
+   121
   ],
   "Becoming.Evolution": [
    1,
@@ -583,11 +583,11 @@
  "rings": {
   "core": {
    "modules": 285,
-   "theorems": 12151,
+   "theorems": 12154,
    "apart": 567,
    "classes": {
     "statement on both families": 980,
-    "statement on Process/Frame/Run/Trace": 2701,
+    "statement on Process/Frame/Run/Trace": 2704,
     "statement on World/Flow/Web": 2978,
     "statement on the base only through a law of its own module": 197,
     "proof through a base family": 144,
@@ -689,8 +689,8 @@
  },
  "records_by_best_alias_class": {
   "statement on both families": 69,
-  "statement on Process/Frame/Run/Trace": 119,
-  "statement on World/Flow/Web": 92,
+  "statement on Process/Frame/Run/Trace": 120,
+  "statement on World/Flow/Web": 91,
   "statement on the base only through a law of its own module": 4,
   "proof through a base family": 1,
   "used by a theorem on the base": 7,
@@ -845,6 +845,10 @@
   "Becoming.total_steps_succ": "used by a theorem on the base",
   "Becoming.total_steps_add": "used by a theorem on the base",
   "Becoming.between_of_mem_steps": "used by a theorem on the base",
+  "Becoming.balance_over_stretch_on": "used by a theorem on the base",
+  "Becoming.balance_over_stretch": "used by a theorem on the base",
+  "Becoming.le_over_stretch": "used by a theorem on the base",
+  "Becoming.ge_over_stretch": "used by a theorem on the base",
   "Becoming.RouteTraces.nonzero_of_le": "used by a theorem on the base",
   "Becoming.mem_downFrom": "used by a theorem on the base",
   "Becoming.le_of_mem_downFrom": "used by a theorem on the base",
@@ -2733,7 +2737,6 @@
   "Becoming.steps_mem": "used by a theorem on the base",
   "Becoming.steps_last": "used by a theorem on the base",
   "Becoming.steps_mono": "used by a theorem on the base",
-  "Becoming.balance_over_stretch_on": "used by a theorem on the base",
   "Becoming.Recurs.mono": "used by a theorem on the base",
   "Becoming.recurring_accumulates": "used by a theorem on the base",
   "Becoming.Recurs.accumulates": "used by a theorem on the base",
@@ -2795,9 +2798,6 @@
   "Becoming.marks_le_of_sub": "used by a theorem on the base",
   "Becoming.mark_le_total": "used by a theorem on the base",
   "Becoming.total_le_mark": "used by a theorem on the base",
-  "Becoming.balance_over_stretch": "used by a theorem on the base",
-  "Becoming.le_over_stretch": "used by a theorem on the base",
-  "Becoming.ge_over_stretch": "used by a theorem on the base",
   "Becoming.gaining_of_losing": "used by a theorem on the base",
   "Becoming.losing_of_gaining": "used by a theorem on the base",
   "Becoming.recurs_shift": "used by a theorem on the base",
@@ -5808,8 +5808,11 @@
   "Becoming.Preemption.not_undermining_yet_loses": "statement on World/Flow/Web",
   "Becoming.Valuation.transmits_invariant": "statement on Process/Frame/Run/Trace",
   "Becoming.Valuation.reaches": "statement on Process/Frame/Run/Trace",
+  "Becoming.Valuation.transmits_iff_closed": "statement on Process/Frame/Run/Trace",
+  "Becoming.Valuation.forced_iff_reach": "statement on Process/Frame/Run/Trace",
   "Becoming.Valuation.significant_of_grounds": "statement on Process/Frame/Run/Trace",
   "Becoming.Valuation.significant_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.Valuation.forced_whole_iff_connected": "statement on Process/Frame/Run/Trace",
   "Becoming.Valuation.livingSignificance": "statement on Process/Frame/Run/Trace",
   "Becoming.universal_reason": "statement on Process/Frame/Run/Trace",
   "Becoming.Conditions.connected_of_common": "statement on Process/Frame/Run/Trace",
