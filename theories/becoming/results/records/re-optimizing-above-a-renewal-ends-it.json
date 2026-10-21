@@ -333,6 +333,13 @@
         "en": "The joint excess T1's laws take as given, and the constructed gap between each drawer's own count and the joint draw, derived here for optimizers.",
         "zh": "T1 之律所给定的联合超出，以及每个汲取者自身计数与联合汲取之间构造的差距，此处对优化者导出。"
       }
+    },
+    {
+      "id": "horizon-optima-hold-the-greatest-renewal",
+      "detail": {
+        "en": "An order ranking whole courses over a horizon, against a renewal varying with the level.",
+        "zh": "在视野上对整个过程排序之序，对随水平变化的更新。"
+      }
     }
   ],
   "references": [
@@ -458,7 +465,7 @@
         "Becoming.Web.lost_over",
         "Becoming.Web.mutual_course_lost"
       ],
-      "sha256": "c7b32877720e6a9ce85836da05c171c98210418afefdbb9ffd5c50d7a6e9b31a"
+      "sha256": "aa3524160e707eaba393e6bb7dc9eb6c2e0e4368f11366fe38cfe6c650bbf8c2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -568,13 +575,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "63289d6b39a1b79d04eac92ed57aa0638b6da0582c8189c812adff2533883d4a"
+      "sha256": "c8c75df998901e6402e19020caa140580a1ff9b1560cb24fbeb76fa774f1339d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T043313.566491Z/verification.json",
+      "role": "receipt",
+      "sha256": "28ba2491e82523372c0231f6481718776a418847f7f23975eee94c39c9a1cbac",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T000629.905649Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T043313.566491Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -647,6 +660,10 @@
     {
       "en": "21 October 2026: added (SG4), a course of re-optimizing steps against a renewal: a dependence beyond is lost exactly where the draw exceeds the renewal, for good, and kept within it, with no gate; the renewal below the need decides only the drawers' take, bounded where it stops and at least the renewal a step where it does not; several optimizers jointly above it lose it; study section 291.",
       "zh": "2026年10月21日：新增（SG4），对更新的重新优化过程：之外的依存恰在汲取超出更新时永久丧失，在其内保持，不需闸门；需要之下的更新只决定汲取者所取，停止时有界，不停止时每步至少为更新；合计超出更新的多个优化者使其丧失；研究第 291 节。"
+    },
+    {
+      "en": "21 October 2026, SG5: an optimizer ranking courses over a horizon, against a renewal given by a law of the level, holds a level of greatest renewal and leaves nothing at the horizon; level_add_drawn is now the case of level_add_drawn_of_within (record horizon-optima-hold-the-greatest-renewal, study section 292); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG5：在视野上对过程排序的优化者，面对由水平之律给出的更新，保持在最大更新的水平并在视野之末不留；level_add_drawn 现为 level_add_drawn_of_within 的情形（记录 horizon-optima-hold-the-greatest-renewal，研究第 292 节）；本记录的定律及其陈述不变。"
     }
   ]
 }

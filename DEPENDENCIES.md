@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-314 registered results: 294 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 786 curated edges join 267 results to the results they draw on.
+315 registered results: 295 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 788 curated edges join 268 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -107,6 +107,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [hexagrams-on-the-spine][] ← <a id="hexagrams-on-the-spine--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="hexagrams-on-the-spine--attraction-is-not-returning"></a>[attraction-is-not-returning][] · <a id="hexagrams-on-the-spine--returning-where-the-course-branches"></a>[returning-where-the-course-branches][] · <a id="hexagrams-on-the-spine--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="hexagrams-on-the-spine--process-and-frame-as-readings"></a>[process-and-frame-as-readings][]
 - [historical-source-binding][] ← <a id="historical-source-binding--retrospective-source-binding"></a>[retrospective-source-binding][] · <a id="historical-source-binding--acquired-binding-compositional-use"></a>[acquired-binding-compositional-use][]
 - [histories-fix-law-up-to-dead-ends][] ← <a id="histories-fix-law-up-to-dead-ends--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="histories-fix-law-up-to-dead-ends--joint-difference-making"></a>[joint-difference-making][]
+- [horizon-optima-hold-the-greatest-renewal][] ← <a id="horizon-optima-hold-the-greatest-renewal--re-optimizing-above-a-renewal-ends-it"></a>[re-optimizing-above-a-renewal-ends-it][] · <a id="horizon-optima-hold-the-greatest-renewal--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [how-a-carried-difference-grows][] ← <a id="how-a-carried-difference-grows--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="how-a-carried-difference-grows--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [how-fast-a-rule-may-change][] ← <a id="how-fast-a-rule-may-change--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="how-fast-a-rule-may-change--identification-where-bounded"></a>[identification-where-bounded][]
 - [how-loops-form][] ← <a id="how-loops-form--what-a-cut-loses"></a>[what-a-cut-loses][] · <a id="how-loops-form--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="how-loops-form--counterfactual-is-the-course"></a>[counterfactual-is-the-course][]
@@ -386,6 +387,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [hexagrams-on-the-spine]: theories/becoming/results/records/hexagrams-on-the-spine.md
 [historical-source-binding]: theories/becoming/results/records/historical-source-binding.md
 [histories-fix-law-up-to-dead-ends]: theories/becoming/results/records/histories-fix-law-up-to-dead-ends.md
+[horizon-optima-hold-the-greatest-renewal]: theories/becoming/results/records/horizon-optima-hold-the-greatest-renewal.md
 [how-a-carried-difference-grows]: theories/becoming/results/records/how-a-carried-difference-grows.md
 [how-fast-a-rule-may-change]: theories/becoming/results/records/how-fast-a-rule-may-change.md
 [how-loops-form]: theories/becoming/results/records/how-loops-form.md

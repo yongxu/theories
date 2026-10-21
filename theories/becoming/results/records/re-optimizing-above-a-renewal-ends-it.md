@@ -75,6 +75,9 @@ Open-access depletion (Gordon 1954) and its dynamics with critical depensation (
 - related, not a proved adapter: [room-read-off-the-exchange](room-read-off-the-exchange.md). Room read off one step; this record reads a course of such steps.
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Several optimizers at one mutual best response; here at every step of a course.
 - related, not a proved adapter: [own-count-misses-joint-excess](own-count-misses-joint-excess.md). The joint excess T1's laws take as given, and the constructed gap between each drawer's own count and the joint draw, derived here for optimizers.
+- related, not a proved adapter: [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md). An order ranking whole courses over a horizon, against a renewal varying with the level.
+
+**Used by:** [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -95,6 +98,7 @@ Open-access depletion (Gordon 1954) and its dynamics with critical depensation (
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T043313.566491Z/verification.json) | — |
 
 Aliases: `re-optimizing above a renewal ends it`, `a course of re-optimizing steps`, `open access over a renewing condition`, `the gate decides the draw`, `在更新之上重新优化将其终结`, `Becoming.Optimum.Reoptimizes`, `Becoming.Optimum.course_beyond`, `Becoming.Web.course_lost_iff`
 
@@ -102,6 +106,7 @@ Aliases: `re-optimizing above a renewal ends it`, `a course of re-optimizing ste
 ### History
 
 - 21 October 2026: added (SG4), a course of re-optimizing steps against a renewal: a dependence beyond is lost exactly where the draw exceeds the renewal, for good, and kept within it, with no gate; the renewal below the need decides only the drawers' take, bounded where it stops and at least the renewal a step where it does not; several optimizers jointly above it lose it; study section 291.
+- 21 October 2026, SG5: an optimizer ranking courses over a horizon, against a renewal given by a law of the level, holds a level of greatest renewal and leaves nothing at the horizon; level_add_drawn is now the case of level_add_drawn_of_within (record horizon-optima-hold-the-greatest-renewal, study section 292); this record's laws and their statements are unchanged.
 
 </details>
 

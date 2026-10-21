@@ -69,7 +69,7 @@ Zhuang and Hadfield-Menell (NeurIPS 2020), Theorem 1: optimizing a proxy that re
 - related, not a proved adapter: [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md). Raising what couples in is paid from beyond; an optimum takes the beyond to the least level where that leaves room.
 - related, not a proved adapter: [room-read-off-the-exchange](room-read-off-the-exchange.md). Derives the room this record supplies, for one step of exchange.
 
-**Used by:** [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md) · [room-read-off-the-exchange](room-read-off-the-exchange.md)
+**Used by:** [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md) · [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md) · [room-read-off-the-exchange](room-read-off-the-exchange.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -86,6 +86,7 @@ Zhuang and Hadfield-Menell (NeurIPS 2020), Theorem 1: optimizing a proxy that re
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T222228.243650Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T000629.905649Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T043313.566491Z/verification.json) | — |
 
 Aliases: `what an optimum does beyond what couples in`, `the drive to the least level`, `optimizing a proxy`, `最优对耦合入者之外做什么`, `Becoming.Optimum.least_iff`, `Becoming.Web.optimum_broken_iff`, `Becoming.Flow.keeping_optimum_takes_slack`
 
