@@ -9,7 +9,7 @@ python3 -B tools/research/research.py secrets
 }
 python3 -B tools/research/research.py check
 {
-  "records": 329,
+  "records": 330,
   "selected_records": [
     "a-code-formed-between-formations",
     "a-history-read-off-its-finite-stretches",
@@ -230,6 +230,7 @@ python3 -B tools/research/research.py check
     "regime-in-any-amounts",
     "regime-point-under-adjusting-giving",
     "relata-counted-up-to-indiscernibility",
+    "relation-level-law-of-easing",
     "relational-generative-comparison",
     "relational-reading-comparison",
     "relational-renewal-classification",
@@ -366,7 +367,7 @@ python3 -B tools/research/research.py check
     },
     "list": "python3 -B tools/research/research.py lint [--ids ...]"
   },
-  "changed_outside_cited": 516,
+  "changed_outside_cited": 514,
   "reading_drift": 89,
   "stale_indexes": [],
   "scope": "Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation."

@@ -433,9 +433,19 @@
   ],
   "references": [
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "role": "proof",
+      "sha256": "ef8e753b8b55600286df7c327f36368f4a263732c3274270626056b4cf43157b",
+      "declarations": [
+        "Becoming.World.rests_unrefuted",
+        "Becoming.World.Embodied.arising",
+        "Becoming.World.Counted"
+      ]
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
       "role": "proof",
-      "sha256": "0d3fddd65f43d3ea25d5086497771f0234e484eff60b68690a52264f9c1da74e",
+      "sha256": "52d6f776af632644641e01b34bc1e35a64f4c6e37cdf3415fe1d086751ae1728",
       "declarations": [
         "Becoming.beyond",
         "Becoming.beyond_not_mem",
@@ -443,7 +453,6 @@
         "Becoming.mem_keep",
         "Becoming.keep_distinct",
         "Becoming.gives_nothing",
-        "Becoming.World.Counted",
         "Becoming.World.Transmitting",
         "Becoming.World.Dependent.carried",
         "Becoming.World.Finite.counted",
@@ -528,12 +537,10 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "d7cf70544495c135366166d401bf10bdfd0be55bf362bdd59b2b186258cff6cd",
+      "sha256": "8552cbaa9d1a2305a1e0e321a29898c29af337644010f3c04369fa9e7fd90a2d",
       "declarations": [
-        "Becoming.World.rests_unrefuted",
         "Becoming.World.unbalanced_world",
-        "Becoming.World.mutualism_world",
-        "Becoming.World.Embodied.arising"
+        "Becoming.World.mutualism_world"
       ]
     },
     {
@@ -709,19 +716,25 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "role": "receipt",
+      "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Premises",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -772,6 +785,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.InAmounts",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -851,6 +871,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Population.lean to Prelude.lean, Distinct. Proof bindings (Population.lean, Premises.lean, Reserve.lean, Roles.lean, Space.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Population.lean, Premises.lean, Reserve.lean, Roles.lean, Space.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Population.lean 到 Prelude.lean：Distinct。证明绑定（Population.lean、Premises.lean、Reserve.lean、Roles.lean、Space.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Population.lean、Premises.lean、Reserve.lean、Roles.lean、Space.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变。论断不变。"
+    },
+    {
+      "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.rests_unrefuted, World.Embodied.arising to Becoming.InAmounts; World.Counted to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.rests_unrefuted, World.Embodied.arising to Becoming.InAmounts；World.Counted to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ],
   "text_versions": [

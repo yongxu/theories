@@ -74,6 +74,7 @@ Landauer (1961): a logically irreversible step compresses the phase space of the
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 
 Aliases: `a part's merge kept by the rest`, `部分的合并由其余部分承接`, `Landauer's count`, `Landauer 的计数`, `possibilities conserved by a lossless law`, `Becoming.Law.Lossless.narrowing_spreads`, `Becoming.Law.Lossless.reset_unlisted`, `Becoming.Reset.kept_by_rest`
 

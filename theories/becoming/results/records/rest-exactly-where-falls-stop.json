@@ -58,8 +58,8 @@
       "en": "Whole-number worlds are the instance with their own premises and nothing more: a finite world whose flow balances and dissipates and whose arising is embodied, and a counted world, embodied, balanced, dissipative and enclosed from some step on, rest, unrefuted, by the law over any amounts.",
       "zh": "自然数的世界是实例，只用它们自己的前提：流平衡且耗散、生起者具身的有限世界，以及被计数、具身、平衡、耗散且从某步起被围合的世界，由任何量上的规律停息，不可否证。",
       "declarations": [
-        "Becoming.World.rests_unrefuted_whole",
-        "Becoming.World.rests_unrefuted_enclosed_whole"
+        "Becoming.World.rests_unrefuted",
+        "Becoming.World.rests_unrefuted_enclosed"
       ]
     },
     {
@@ -252,8 +252,8 @@
         "Becoming.World.InAmounts.rests_unrefuted_enclosed_of_stops",
         "Becoming.World.InAmounts.stops_of_reading",
         "Becoming.World.InAmounts.rests_unrefuted_enclosed_of_noEndlessFall",
-        "Becoming.World.rests_unrefuted_whole",
-        "Becoming.World.rests_unrefuted_enclosed_whole",
+        "Becoming.World.rests_unrefuted",
+        "Becoming.World.rests_unrefuted_enclosed",
         "Becoming.Pass.amounts",
         "Becoming.Pass.dissipative",
         "Becoming.Pass.census",
@@ -268,15 +268,6 @@
         "Becoming.Amounts.worldsRest_of_noEndlessFall",
         "Becoming.Amounts.not_endlessFall_of_worldsRest",
         "Becoming.Amounts.whole_worldsRest",
-        "Becoming.Halving.worlds_need_not_rest",
-        "Becoming.Layered.worlds_need_not_rest"
-      ],
-      "sha256": "228e58690a33f0ed43e167bf0dd8621951834e3cefcb233b7b7bef55b71a4151"
-    },
-    {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
-      "role": "proof",
-      "declarations": [
         "Becoming.Amounts.FallsStop",
         "Becoming.Amounts.fallsStop_congr",
         "Becoming.Amounts.NoEndlessFall",
@@ -284,14 +275,23 @@
         "Becoming.Amounts.FallsAtLeast",
         "Becoming.Amounts.noEndlessFall_of_fallsAtLeast",
         "Becoming.Amounts.whole_fallsAtLeast",
-        "Becoming.Amounts.whole_noEndlessFall",
+        "Becoming.Amounts.whole_noEndlessFall"
+      ],
+      "sha256": "ef8e753b8b55600286df7c327f36368f4a263732c3274270626056b4cf43157b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
+      "role": "proof",
+      "declarations": [
         "Becoming.Halving.falls_back",
         "Becoming.Halving.endless",
         "Becoming.Halving.no_least_fall",
         "Becoming.Layered.endless",
-        "Becoming.Layered.fallsAtLeast"
+        "Becoming.Layered.fallsAtLeast",
+        "Becoming.Halving.worlds_need_not_rest",
+        "Becoming.Layered.worlds_need_not_rest"
       ],
-      "sha256": "15207336ebcbd438d39c4301862599bfc9dbc49b79880cc76cc8fd8cb595f035"
+      "sha256": "d6ad7f2598fcaa3a77da932a52952ba5c2753d18ddef0b8ade69dd8c2c40ae4c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
@@ -301,7 +301,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "d7cf70544495c135366166d401bf10bdfd0be55bf362bdd59b2b186258cff6cd"
+      "sha256": "8552cbaa9d1a2305a1e0e321a29898c29af337644010f3c04369fa9e7fd90a2d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
@@ -316,20 +316,26 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "a61c21e4dfeb49d21dab0250b99966a6ea7f63cf07ab2b31fd28e12f6de9f875"
+      "sha256": "d70de3224cb798646e15aa833de81ab426073249e46ee818034929c2482e0777"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "role": "receipt",
+      "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.InAmounts",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -339,6 +345,10 @@
     {
       "en": "21 October 2026: added (LC3), section 8.1 item 6: one rest theorem over any amounts, exactly where the total stops falling; study section 308.",
       "zh": "2026年10月21日：新增（LC3），第 8.1 节第 6 项：任何量上唯一的停息定理，恰在总量停止下降之处；研究第 308 节。"
+    },
+    {
+      "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: Amounts.FallsStop, Amounts.fallsStop_congr, Amounts.NoEndlessFall, Amounts.EndlessFall, Amounts.FallsAtLeast, Amounts.noEndlessFall_of_fallsAtLeast, Amounts.whole_fallsAtLeast, Amounts.whole_noEndlessFall to Becoming.InAmounts; Halving.worlds_need_not_rest, Layered.worlds_need_not_rest to Becoming.LeastLoss. The duplicate names World.rests_unrefuted_enclosed_whole, World.rests_unrefuted_whole, which stated World.rests_unrefuted and World.rests_unrefuted_enclosed a second time, are gone; the record cites those theorems, now proved in Becoming.InAmounts as the whole-number cases of the rest theorem over any amounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：Amounts.FallsStop, Amounts.fallsStop_congr, Amounts.NoEndlessFall, Amounts.EndlessFall, Amounts.FallsAtLeast, Amounts.noEndlessFall_of_fallsAtLeast, Amounts.whole_fallsAtLeast, Amounts.whole_noEndlessFall to Becoming.InAmounts；Halving.worlds_need_not_rest, Layered.worlds_need_not_rest to Becoming.LeastLoss。重复的名称 World.rests_unrefuted_enclosed_whole、World.rests_unrefuted_whole（再次陈述 World.rests_unrefuted 与 World.rests_unrefuted_enclosed）已删去；本记录引用这两条定理，它们现于 Becoming.InAmounts 中作为任意量上停息定理的整数情形证明。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ]
 }

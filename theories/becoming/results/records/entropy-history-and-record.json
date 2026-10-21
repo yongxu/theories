@@ -442,6 +442,17 @@
   ],
   "references": [
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "role": "proof",
+      "sha256": "ef8e753b8b55600286df7c327f36368f4a263732c3274270626056b4cf43157b",
+      "declarations": [
+        "Becoming.World.Finite",
+        "Becoming.World.Embodied",
+        "Becoming.World.Balanced",
+        "Becoming.World.Dissipative"
+      ]
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean",
       "role": "proof",
       "sha256": "d6c950deed4a243e979261f6fd6ec0273b50e415eaf6baa9758ca6f16e1e4b57",
@@ -731,7 +742,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Openness.lean",
       "role": "proof",
-      "sha256": "0ac04cc1aac333c62a4fd410ede5ddd1e15da0e42e7fe2eb41f5f7696c52735e",
+      "sha256": "efd4fd7b52df1fff29f8c723d29a7b559722c42483c470e03a11b819c11311b8",
       "declarations": [
         "Becoming.Flow.fall_lowers_on",
         "Becoming.World.rises_of_arises",
@@ -767,12 +778,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "d7cf70544495c135366166d401bf10bdfd0be55bf362bdd59b2b186258cff6cd",
+      "sha256": "8552cbaa9d1a2305a1e0e321a29898c29af337644010f3c04369fa9e7fd90a2d",
       "declarations": [
-        "Becoming.World.Finite",
-        "Becoming.World.Embodied",
-        "Becoming.World.Balanced",
-        "Becoming.World.Dissipative",
         "Becoming.World.ArisingRecurs",
         "Becoming.World.CeasingRecurs"
       ]
@@ -898,6 +905,12 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "role": "receipt",
+      "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -924,7 +937,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Openness.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Openness",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -945,7 +958,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -968,6 +981,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Change.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Change",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.InAmounts",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -1061,6 +1081,10 @@
     {
       "en": "20 October 2026, R37 (lens B of the twentieth review: the witness models as instances of one library, one bisimulation theory for a family of relations, the definition twins and copies stated once): Moved with their full names: from Entropy.lean to Change.lean, Flow.excess_zero_of_le; from Entropy.lean to Prelude.lean, downFrom, le_of_mem_downFrom, mem_downFrom. Proof bindings (Entropy.lean, Flow.lean, Openness.lean, Prelude.lean, Space.lean, World.lean) rebound to core receipt 20261020T051144.879480Z. Re-pointed after reading the change: Entropy.lean, Flow.lean, Openness.lean, Space.lean, World.lean: twin definitions, witness models or copies replaced by the definition stated once, the instance of Witnesses or the kept name; kept statements unchanged; Prelude.lean: the definitions and statements stated once (Distinct, total, steps, nonzero, Copying.nth, Law.memberAt, Settling.consAct, DistinctUnder, downFrom and their laws) moved here; other statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37（第二十次评审的 B 视角：见证模型为一个库的实例，为一族关系的一个互模拟理论，孪生定义与副本只陈述一次）：连同完整名称移动：从 Entropy.lean 到 Change.lean：Flow.excess_zero_of_le；从 Entropy.lean 到 Prelude.lean：downFrom、le_of_mem_downFrom、mem_downFrom。证明绑定（Entropy.lean、Flow.lean、Openness.lean、Prelude.lean、Space.lean、World.lean）改到核心回执 20261020T051144.879480Z。读过改动后重新指向：Entropy.lean、Flow.lean、Openness.lean、Space.lean、World.lean：孪生定义、见证模型或副本由只陈述一次的定义、Witnesses 的实例或保留的名称取代；保留的陈述不变；Prelude.lean：只陈述一次的定义与陈述（Distinct、total、steps、nonzero、Copying.nth、Law.memberAt、Settling.consAct、DistinctUnder、downFrom 及其规律）移入；其他陈述不变。论断不变。"
+    },
+    {
+      "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite, World.Embodied, World.Balanced, World.Dissipative to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Finite, World.Embodied, World.Balanced, World.Dissipative to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ],
   "text_versions": [

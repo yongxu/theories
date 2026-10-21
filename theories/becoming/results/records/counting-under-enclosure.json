@@ -656,6 +656,17 @@
   ],
   "references": [
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "role": "proof",
+      "sha256": "ef8e753b8b55600286df7c327f36368f4a263732c3274270626056b4cf43157b",
+      "declarations": [
+        "Becoming.World.Finite",
+        "Becoming.World.Balanced",
+        "Becoming.World.Embodied",
+        "Becoming.World.Dissipative"
+      ]
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Population.lean",
       "role": "proof",
       "sha256": "38e5b6daf2671587ec239603a72f4ff19e6f380c9dab455a252e01fe5d1f2a49",
@@ -712,7 +723,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Openness.lean",
       "role": "proof",
-      "sha256": "0ac04cc1aac333c62a4fd410ede5ddd1e15da0e42e7fe2eb41f5f7696c52735e",
+      "sha256": "efd4fd7b52df1fff29f8c723d29a7b559722c42483c470e03a11b819c11311b8",
       "declarations": [
         "Becoming.World.standingCensus",
         "Becoming.World.rises_of_arises",
@@ -734,7 +745,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
       "role": "proof",
-      "sha256": "0d3fddd65f43d3ea25d5086497771f0234e484eff60b68690a52264f9c1da74e",
+      "sha256": "52d6f776af632644641e01b34bc1e35a64f4c6e37cdf3415fe1d086751ae1728",
       "declarations": [
         "Becoming.World.Premised",
         "Becoming.World.Premised.of",
@@ -933,13 +944,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "d7cf70544495c135366166d401bf10bdfd0be55bf362bdd59b2b186258cff6cd",
-      "declarations": [
-        "Becoming.World.Finite",
-        "Becoming.World.Balanced",
-        "Becoming.World.Embodied",
-        "Becoming.World.Dissipative"
-      ]
+      "sha256": "8552cbaa9d1a2305a1e0e321a29898c29af337644010f3c04369fa9e7fd90a2d",
+      "declarations": []
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
@@ -1139,6 +1145,12 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "role": "receipt",
+      "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -1151,14 +1163,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Openness.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Openness",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Premises.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Premises",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1172,7 +1184,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1230,6 +1242,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CensusTable.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T060542.295041Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.CensusTable",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.InAmounts",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -1331,6 +1350,10 @@
     {
       "en": "20 October 2026, R37b (B11 of the twentieth review: one census table for any listing, the laws of counting what is active, what stands and what depends its instances, the counted and decided forms from one soundness and one witness): Moved with their full names: from Counting.lean to CensusTable.lean, World.CountsObey, ceasesToBe_congr, comesToBe_congr. Proof bindings (Counting.lean) rebound to core receipt 20261020T060542.295041Z. Re-pointed after reading the change: Counting.lean: each law of counting a census table, from a counted soundness and a witness lemma; the counted binding steps moved here from CensusCounts and CensusBinding; statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，R37b（第二十次评审的 B11：任一列举的一个普查表，计数所活动、所立与所依的规律为其实例，计数式与判定式由一个可靠性与一个见证给出）：连同完整名称移动：从 Counting.lean 到 CensusTable.lean：World.CountsObey、ceasesToBe_congr、comesToBe_congr。证明绑定（Counting.lean）改到核心回执 20261020T060542.295041Z。读过改动后重新指向：Counting.lean：每条计数规律为一个普查表，由计数式的可靠性与见证引理给出；计数式的约束步骤从 CensusCounts 与 CensusBinding 移入；陈述不变。论断不变。"
+    },
+    {
+      "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite, World.Balanced, World.Embodied, World.Dissipative to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Finite, World.Balanced, World.Embodied, World.Dissipative to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ],
   "text_versions": [

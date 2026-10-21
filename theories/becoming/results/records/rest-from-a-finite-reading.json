@@ -188,19 +188,26 @@
   ],
   "references": [
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
       "role": "proof",
+      "sha256": "ef8e753b8b55600286df7c327f36368f4a263732c3274270626056b4cf43157b",
       "declarations": [
         "Becoming.Amounts.rising_apart",
         "Becoming.Amounts.falls_within_reading",
         "Becoming.Amounts.rests_of_finite_reading",
-        "Becoming.Branching.rests_along_run",
-        "Becoming.Halving.stock_unlisted",
         "Becoming.Amounts.rests_unrefuted_of_finite_reading",
         "Becoming.Amounts.extend_falls",
         "Becoming.Amounts.from_start"
+      ]
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Branching.rests_along_run",
+        "Becoming.Halving.stock_unlisted"
       ],
-      "sha256": "15207336ebcbd438d39c4301862599bfc9dbc49b79880cc76cc8fd8cb595f035"
+      "sha256": "d6ad7f2598fcaa3a77da932a52952ba5c2753d18ddef0b8ade69dd8c2c40ae4c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -230,7 +237,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "a61c21e4dfeb49d21dab0250b99966a6ea7f63cf07ab2b31fd28e12f6de9f875"
+      "sha256": "d70de3224cb798646e15aa833de81ab426073249e46ee818034929c2482e0777"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
@@ -241,13 +248,26 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
       "role": "receipt",
       "sha256": "fb5bb84d275aea291dd7c8c795027c4bb224eef26ab4ecdf66c14183439c0857"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "role": "receipt",
+      "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.InAmounts",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -264,6 +284,10 @@
     {
       "en": "21 October 2026, LC3: Amounts.rests_unrefuted_of_finite_reading states its conclusion as Amounts.FallsStop, the one premise of rest over any amounts (record rest-exactly-where-falls-stop), the same proposition by definition; statements and declarations otherwise unchanged; the proof binding re-pointed to receipt 20261021T124304.830826Z after reading the change; study section 308.",
       "zh": "2026年10月21日，LC3：Amounts.rests_unrefuted_of_finite_reading 以 Amounts.FallsStop 陈述其结论，即任何量上停息的唯一前提（记录 rest-exactly-where-falls-stop），按定义是同一命题；陈述与声明其余不变；阅读改动后证明绑定改指回执 20261021T124304.830826Z；研究第 308 节。"
+    },
+    {
+      "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: Amounts.rising_apart, Amounts.falls_within_reading, Amounts.rests_of_finite_reading, Amounts.rests_unrefuted_of_finite_reading, Amounts.extend_falls, Amounts.from_start to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：Amounts.rising_apart, Amounts.falls_within_reading, Amounts.rests_of_finite_reading, Amounts.rests_unrefuted_of_finite_reading, Amounts.extend_falls, Amounts.from_start to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ]
 }
