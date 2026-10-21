@@ -276,7 +276,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
       "role": "proof",
-      "sha256": "75acb287d81d786e1ebbe70f35e93c687b4ca1104667c10d09346e3087896852",
+      "sha256": "0411503725c9765fdd30a3eeb2c7c51bd20d5633989807c1ec101ca06db37ae2",
       "declarations": [
         "Becoming.Ranking.wholeRun"
       ]
@@ -290,7 +290,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336",
+      "sha256": "bfd4240f02715a77f07c448e10dbe6673a9b83c1ddf1e505a766fd432971ce83",
       "declarations": []
     },
     {
@@ -423,6 +423,12 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json",
+      "role": "receipt",
+      "sha256": "e7d351156aa286d0b3880ea63e8ad0f843457d75d8b0ef5459454de858b2ed50",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -463,7 +469,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Ranking",
       "success_pointer": "/status",
       "success_value": "passed"

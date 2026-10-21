@@ -96,6 +96,7 @@ The accounting is a conservation law on a closed whole, as in material-flow and 
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | proof | [JointDraw.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean) | `Becoming.Flow.Balances.breaks_beyond_drawn`, `Becoming.Flow.Balances.broken_drawn`, `Becoming.Flow.Balances.broken_iff`, `Becoming.Flow.Balances.broken_shared`, `Becoming.Flow.Balances.kept_iff`, `Becoming.Flow.Balances.kept_of_restrained`, `Becoming.TwoDrawers.broken`, `Becoming.TwoDrawers.restrained_kept`, `Becoming.TwoDrawers.shared`, `Becoming.Web.Broken.of_need_le`, `Becoming.Web.kept_of_need_le` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json) | — |
 
 Aliases: `what a rise draws from beyond`, `上升从其外汲取什么`, `a rise above the slack breaks a dependence beyond`, `the share that reaches beyond`, `Becoming.Flow.Balances.breaks_beyond`, `Becoming.Flow.favours_breaking_beyond`, `Becoming.Flow.share_not_against`
 

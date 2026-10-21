@@ -13950,3 +13950,56 @@ Board item EC, its fourth step, landed with EC2 in one checker run (study §312)
 **Boundary.** No ethical premise is added or removed. The laws state what the two neutralities force, and the neutralities stay premises (§6.4). Connectivity is a property of the represented relations, not a warrant.
 
 **Output → input.** EC5 states the theory as its master laws: closure, balance, finite runs, lumping, and the order of widening with its two premises. The ethics' scope enters as closure, the ethics' order as order.
+
+## 314. The stepwise law of easing, and restraint over any number of drawers under the stepwise reading (ST1)
+
+```text
+Result(s): new record stepwise-law-of-easing (new laws of Becoming.Ranking and Becoming.JointDraw); reuses
+       ranking-under-readings (the readings, Eases, ActiveWhereSupported, the whole-run law of easing, ThirdParty,
+       restraint over any number of drawers under the whole-run reading), the Web's UnderminingAt and MetAbove, Flow
+       balance (Flow.Balances.eases_of_restrained).
+Delta: the whole-run reading has a law of easing; the stepwise reading was recorded as having none, since ThirdParty
+       eases and still loses the restraint ranking. Here the stepwise law is stated exactly. Easing keeps activity
+       (Ranking.active_of_eases, which the whole-run monotonicity now reads). Under easing an event the stepwise
+       reading includes in the first course stays included in the second exactly where the second does not undermine
+       there (Ranking.stepwise_kept_iff), so the second extends the first exactly when it undermines no event the first
+       includes and includes one the first withholds (Ranking.stepwise_extends_iff_of_eases). A course in which no
+       condition's level falls undermines nothing (Ranking.not_undermining_of_rising, level_never_falls), so there the
+       stepwise law is the whole-run one (Ranking.stepwise_extends_iff_of_rising). In flows: where moreover the
+       restrained flow takes from no condition more than it gives, restraint over any number of drawers extends
+       overdraw under the stepwise reading exactly when it includes an event the other withholds, and every comparison
+       satisfying C ranks it higher (Ranking.restraint_extends_iff_stepwise, restraint_ranks_stepwise). ThirdParty is
+       where the premise fails: the restrained course undermines the focal event the overdrawing course includes
+       (Ranking.ThirdParty.undermines_included).
+Premises / correspondence: the readings of living as in ranking-under-readings (stepwise: active and not undermining);
+       easing (asks no more, holds every condition as high, draws on nothing more), activity needing support in one
+       course and following it in the other; for the restraint theorem a balanced flow in each course and the
+       restrained flow taking no more and giving no less, and within what it gives. No correspondence beyond the
+       record it extends: the readings are the theory's own.
+Evidence: core receipt 20261021T135044.825185Z (passed).
+Boundary: the restraint theorem's premise that the restrained flow takes within what it gives is sufficient, not
+       necessary: the exact condition is that it undermine no event the other includes; the relation-level reading and
+       the form of L under the condition stay open; whether J1 yields "better without malignant growth" step by step is
+       not stated.
+Output → input: chapter §6 (the ranking bullet) and §8.1 item 11 (EN, ZH), the record table; Ranking's and
+       JointDraw's headers; record ranking-under-readings (its next step and its stepwise boundary); significance
+       review, easing check.
+```
+
+**The question.** Restraint ranks above overdraw for any number of drawers under the whole-run reading, by its law of easing (R52, [study §274](#274-which-dependence-breaks-when-several-take-at-once-and-restraint-over-any-number-of-drawers-r52)). Under the stepwise reading, which counts an event living when it is active and does not undermine, the same easing loses the ranking (`Ranking.ThirdParty`), and §8.1 item 11 left open a restraint theorem there with a premise beyond taking no more. So the question is exactly what the stepwise reading needs beyond easing, and which natural premise on a restrained course gives it.
+
+**What was built** (new laws of `Becoming.Ranking` and `Becoming.JointDraw`, pure core, every axiom report empty).
+
+- *Easing keeps activity* (`Ranking.active_of_eases`). From a course where activity needs support to one where activity follows support and that eases it, a formation active in the first is active in the second: the first's need is met there, the second asks no more and holds every condition as high. The whole-run monotonicity now reads this lemma (`Ranking.wholeRun_mono`).
+- *The stepwise law of easing.* Under easing, an event the stepwise reading includes in the first course stays included in the second exactly where the second does not undermine there (`Ranking.stepwise_kept_iff`): its activity is kept, so only undermining can withdraw it. Hence the second extends the first under the stepwise reading exactly when it undermines no event the first includes and includes one the first withholds (`Ranking.stepwise_extends_iff_of_eases`). The law is exact; the earlier statement that the stepwise reading has no law of easing is refined to: easing alone gives none.
+- *A course whose levels never fall undermines nothing* (`Ranking.not_undermining_of_rising`, through `Ranking.level_never_falls`). Undermining needs a condition to fall, after a draw, below a need of a dependence it met while the dependence held; a level that never falls stays at or above every need it once met. So where no level falls in the easing course, the stepwise law of easing is the whole-run one (`Ranking.stepwise_extends_iff_of_rising`).
+- *Restraint over any number of drawers, stepwise* (`Ranking.restraint_extends_iff_stepwise`, `Ranking.restraint_ranks_stepwise`, in `Becoming.JointDraw`). Under the premises of the whole-run comparison (balanced flows, levels as high at the start, the restrained flow taking no more and giving no less, asking no more and drawing on nothing more, activity needing support in the overdrawing course and following it in the restrained one), where moreover the restrained flow takes from no condition more than it gives, no level falls in the restrained course, so it extends the overdrawing one under the stepwise reading exactly when it includes an event the other withholds, and every comparison satisfying C ranks it higher.
+- *Where the premise fails* (`Ranking.ThirdParty.undermines_included`). In `ThirdParty` the restrained course, holding the condition higher, meets the third formation's need of seven at step 3, and the focal draw then takes it below: the restrained course undermines the focal event the overdrawing course includes, which is why the stepwise reading does not rank it higher there.
+
+**Against the prior form** ([significance review, easing check](BECOMING-SIGNIFICANCE-REVIEW.md#easing-check)). The comparison laws are the theory's own; the prior form is the record ranking-under-readings and its two-part restraint. The stepwise law turns its negative result (ThirdParty) into an exact boundary: what a stepwise valuation counts against a gentler course is exactly the undermining that gentler course itself commits, and it commits none where it lets nothing fall.
+
+*Reading* [AI reading, D45]. Restraint is ranked higher step by step exactly where it does not itself break, later, what its restraint let form. Holding a condition higher lets more depend on it; restraint that keeps every condition from falling keeps those dependences too, and then every reading of living ranks it above overdraw, for any number of drawers. Restraint that raises a level only to draw it down again is not ranked higher by the stepwise reading, and that is not a defect of the reading: it counts the loss the restraint itself caused.
+
+**Self-review.** The first plan sought a flow-level premise equivalent to "undermines no included event"; none is simpler than that statement, so the exact law states it, and the flow corollary takes the natural sufficient premise, takes within what it gives, which is what "sustainable" means for a course. It is not necessary: a course whose levels fall below needs nobody met undermines nothing either. `active_of_eases` was factored out so that the whole-run and stepwise laws read one lemma (board rule 9). The constructors of the readings are unchanged; `ThirdParty`'s other theorems keep their statements, with `stepwise_not_monotone`'s docstring now naming the premise. The connectivity check was planned before the checker ran: every new law is stated on webs or flows, the base. Limits: the relation-level reading, the form of L, and J1's step-by-step yield stay open.
+
+**The run.** Core 285 modules and 12,163 theorems, instances 7 and 567, applications 6 and 179; 39 Lean steps ran, 1,165 reused. 9 declarations added to Becoming.Ranking and Becoming.JointDraw, 9 of them theorems, none removed, all with empty axiom reports. Connectivity: 647 of 12,909 apart, unchanged; no new apart root, every new law stated on a run or read by one that is, the witnesses on the run; register check passes.

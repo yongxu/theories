@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-328 registered results: 308 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 824 curated edges join 281 results to the results they draw on.
+329 registered results: 309 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 825 curated edges join 282 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -235,6 +235,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [several-optimizers-drain-by-their-joint-capacity][] ← <a id="several-optimizers-drain-by-their-joint-capacity--room-read-off-the-exchange"></a>[room-read-off-the-exchange][] · <a id="several-optimizers-drain-by-their-joint-capacity--what-a-rise-draws-from-beyond"></a>[what-a-rise-draws-from-beyond][]
 - [significance-retained-within-margin][] ← <a id="significance-retained-within-margin--closing-needs-net-draw"></a>[closing-needs-net-draw][] · <a id="significance-retained-within-margin--four-cases-of-a-part"></a>[four-cases-of-a-part][] · <a id="significance-retained-within-margin--continuation-condition-yields-living-significance"></a>[continuation-condition-yields-living-significance][]
 - [space-and-its-parts][] ← <a id="space-and-its-parts--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="space-and-its-parts--generation-is-replenishment"></a>[generation-is-replenishment][] · <a id="space-and-its-parts--life-as-condition-of-life"></a>[life-as-condition-of-life][] · <a id="space-and-its-parts--reserve-defers-ending"></a>[reserve-defers-ending][] · <a id="space-and-its-parts--evolution-on-descent"></a>[evolution-on-descent][] · <a id="space-and-its-parts--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="space-and-its-parts--laws-of-one-step"></a>[laws-of-one-step][]
+- [stepwise-law-of-easing][] ← <a id="stepwise-law-of-easing--ranking-under-readings"></a>[ranking-under-readings][]
 - [substitution-preserves-consumption][] ← <a id="substitution-preserves-consumption--relational-renewal-classification"></a>[relational-renewal-classification][] · <a id="substitution-preserves-consumption--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][]
 - [sum-over-histories-exact][] ← <a id="sum-over-histories-exact--projection-carrying-a-law"></a>[projection-carrying-a-law][] *(interpretive)*
 - [sums-over-histories-by-support-horizon-and-order][] ← <a id="sums-over-histories-by-support-horizon-and-order--sum-over-histories-exact"></a>[sum-over-histories-exact][] · <a id="sums-over-histories-by-support-horizon-and-order--orders-as-a-sum-over-histories"></a>[orders-as-a-sum-over-histories][] · <a id="sums-over-histories-by-support-horizon-and-order--losses-of-the-sum-over-histories"></a>[losses-of-the-sum-over-histories][] *(interpretive)*
@@ -541,6 +542,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [significance-retained-within-margin]: theories/becoming/results/records/significance-retained-within-margin.md
 [situated-recovery-empirical-correspondence]: theories/becoming/results/records/situated-recovery-empirical-correspondence.md
 [space-and-its-parts]: theories/becoming/results/records/space-and-its-parts.md
+[stepwise-law-of-easing]: theories/becoming/results/records/stepwise-law-of-easing.md
 [substitution-preserves-consumption]: theories/becoming/results/records/substitution-preserves-consumption.md
 [sum-over-histories-exact]: theories/becoming/results/records/sum-over-histories-exact.md
 [sums-over-histories-by-support-horizon-and-order]: theories/becoming/results/records/sums-over-histories-by-support-horizon-and-order.md

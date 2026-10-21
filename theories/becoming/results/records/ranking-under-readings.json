@@ -49,8 +49,8 @@
       ]
     },
     {
-      "zh": "逐步读法下，比较之律不能去掉更新，也没有缓和之律。",
-      "en": "Under the stepwise reading the renewal in the law of comparison cannot be dropped, and there is no law of easing.",
+      "zh": "逐步读法下，比较之律不能去掉更新，单凭缓和也没有缓和之律：此律需要缓和之进程不侵蚀另一进程所记入的任何事件（记录 stepwise-law-of-easing）。",
+      "en": "Under the stepwise reading the renewal in the law of comparison cannot be dropped, and easing alone gives no law of easing: the law needs that the easing course undermine no event the other includes (record stepwise-law-of-easing).",
       "declarations": [
         "Becoming.Ranking.ThirdParty.renewal_needed",
         "Becoming.Ranking.ThirdParty.stepwise_not_monotone",
@@ -261,8 +261,8 @@
   ],
   "does_not_show": [
     {
-      "zh": "在场与不在场、共享与以消耗取胜的比较，在支持门控定律族（二元：焦点形成与维持者）中作为比较之律与缓和之律的实例证明。节制在整段读法下对任意多个汲取者证明（Becoming.JointDraw）；在逐步读法下只在二元族中证明，ThirdParty 表明在那里所取不多并不足够。",
-      "en": "The comparisons of absence with presence and sharing with winning are proved in the support-gated family (two parts: the focal and the sustaining formation), as instances of the laws of comparison and easing. Restraint is proved for any number of drawers under the whole-run reading (Becoming.JointDraw); under the stepwise reading only in the two-part family, and ThirdParty shows that taking no more does not suffice there.",
+      "zh": "在场与不在场、共享与以消耗取胜的比较，在支持门控定律族（二元：焦点形成与维持者）中作为比较之律与缓和之律的实例证明。节制在整段读法下对任意多个汲取者证明（Becoming.JointDraw）；在逐步读法下于所取不超过所给之处证明（记录 stepwise-law-of-easing）。",
+      "en": "The comparisons of absence with presence and sharing with winning are proved in the support-gated family (two parts: the focal and the sustaining formation), as instances of the laws of comparison and easing. Restraint is proved for any number of drawers under the whole-run reading (Becoming.JointDraw); under the stepwise reading where it takes within what it gives (record stepwise-law-of-easing).",
       "kind": "scope"
     },
     {
@@ -343,8 +343,8 @@
     "en": "Lean 4.29.1 checks, empty axiom reports: current Becoming.Ranking and Becoming.Bridge, receipt 20261013T221720.428753Z, core purity verified; this result's 19 theorems of Becoming.Relevance, receipt 20261013T094743.528770Z. Bridge adapters are not independent results. Author counterreview (integration note); the second independent review read it only for its question 4, anticipating the restraint result; the third reviewed it whole, accepted the mathematics, scoped restraint to the two-part family and supplied the included-event hypothesis. The possibility reading awaits independent review."
   },
   "next_delta": {
-    "en": "A restraint theorem under the stepwise reading beyond the two-part family, with a premise beyond taking no more, since ThirdParty shows that alone does not suffice (amounts so that taking nothing does not undermine, for example); the same comparison under the relation-level reading; whether the priority of basic conditions yields “better without malignant growth” stepwise.",
-    "zh": "逐步读法下二元族之外的节制定理，需要所取不多之外的前提，因为 ThirdParty 表明单此不足（例如带数量使不取者不侵蚀）；形式化关系层读法下的同一比较；检验基本条件优先能否在逐步读法下给出“没有恶性增殖更好”。"
+    "en": "The same comparison under the relation-level reading; whether the priority of basic conditions yields “better without malignant growth” stepwise.",
+    "zh": "形式化关系层读法下的同一比较；检验基本条件优先能否在逐步读法下给出“没有恶性增殖更好”。"
   },
   "correspondence": {
     "zh": "两个排序在逐步读法下分道。若 G0 与 C 共用逐步读法，C 仍把共享排在以消耗取胜之上，却不再把没有恶性增殖的继续排得更高；整段读法两者都保持，但不满足独立审查的判据 (b) 与 (c)。若 G0 的记入取逐步读法而 C 取整段读法，两者都保持，但 G0 与 C 不再共用一种 living 读法：形式上两者各以读法为参数，前提卡上 C 所说的“活的内容”却是 G0 的 living，分开取须公开。生生读作生成者生成新的生成，其方向以能形成者的扩大比较（DELEGATED-CHOICES D1，经修订由 Ren 2026-10-18 取）。可能性读法的解读（AI 论证，依 Ren 的交托采用）：它读“有意义的，就是能形成的”与 Ren 的“more possibilities of becoming”；它计能形成的，不计形成了的。在公理之下 C 以可能性读，排序来自部分失去的，而不是不计形成本身；Ren 2026-10-11 把比较的方式交 AI 决定（“Comparing courses - you decide”）：继续之间以可能性比较，理由见章节 §6.5。",
@@ -554,13 +554,20 @@
         "zh": "在 C 之外，J1 的基本条件优先是可能给出“没有恶性增殖更好”的更强比较之一；这里未形式化这一连接。",
         "en": "Beyond C, J1's priority of basic conditions is one stronger comparison that might yield “better without malignant growth”; this connection is not formalized here."
       }
+    },
+    {
+      "id": "stepwise-law-of-easing",
+      "detail": {
+        "en": "The stepwise law of easing, exact: easing withdraws exactly the events the easing course undermines; restraint that takes within what it gives ranks above overdraw for any number of drawers under the stepwise reading.",
+        "zh": "确切的逐步缓和之律：缓和所撤回的恰是缓和之进程所侵蚀的事件；所取不超过所给的节制在逐步读法下对任意多个汲取者排在过度汲取之上。"
+      }
     }
   ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
       "role": "proof",
-      "sha256": "75acb287d81d786e1ebbe70f35e93c687b4ca1104667c10d09346e3087896852",
+      "sha256": "0411503725c9765fdd30a3eeb2c7c51bd20d5633989807c1ec101ca06db37ae2",
       "declarations": [
         "Becoming.Ranking.frame",
         "Becoming.Ranking.ExtendsUnder",
@@ -726,7 +733,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "168a1cfdf5d790c678b4792cf3daa11585109ecf9f5324a99f43ce2faa287405",
+      "sha256": "bfd4240f02715a77f07c448e10dbe6673a9b83c1ddf1e505a766fd432971ce83",
       "declarations": []
     },
     {
@@ -860,7 +867,7 @@
         "Becoming.Ranking.restraint_ranks_over_drawers",
         "Becoming.TwoDrawers.restraint_ranks"
       ],
-      "sha256": "9997647548851415a86f57d3101f5868dbf7aeab5e58bebf80c5dc7e7e02c576"
+      "sha256": "c393d9c9ab81a730c8a92d8b244742be51d8ee83518114c03f384c5231a517ac"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json",
@@ -872,12 +879,18 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json",
+      "role": "receipt",
+      "sha256": "e7d351156aa286d0b3880ea63e8ad0f843457d75d8b0ef5459454de858b2ed50",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Ranking",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -926,7 +939,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.JointDraw",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1026,6 +1039,10 @@
     {
       "en": "20 October 2026: R52 proved restraint for any number of drawers under the whole-run reading (Becoming.JointDraw), section 8.1 item 11.",
       "zh": "2026-10-20：R52 在整段读法下对任意多个汲取者证明节制（Becoming.JointDraw），第 8.1 节第 11 项。"
+    },
+    {
+      "en": "21 October 2026, ST1: the stepwise law of easing is stated exactly and restraint over any number of drawers under the stepwise reading where the restrained flow takes within what it gives (record stepwise-law-of-easing, study section 314); the law that said the stepwise reading has no law of easing now says easing alone gives none; what this record does not show and its next step say so.",
+      "zh": "2026年10月21日，ST1：确切陈述了逐步的缓和之律，以及节制之流所取不超过所给之处逐步读法下对任意多个汲取者的节制（记录 stepwise-law-of-easing，研究第 314 节）；原说逐步读法没有缓和之律的规律现说单凭缓和没有；本记录所不表明者与其下一步如此说明。"
     }
   ],
   "text_versions": [

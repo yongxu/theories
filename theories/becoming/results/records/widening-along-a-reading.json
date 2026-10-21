@@ -204,13 +204,13 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336",
+      "sha256": "bfd4240f02715a77f07c448e10dbe6673a9b83c1ddf1e505a766fd432971ce83",
       "declarations": []
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "f5f45ecaf7c46ed62fe92f4da4a83fb736c17d9f5926d85785129b48569232ea",
+      "sha256": "b13bf3d1dc361963084e98267a929b522c5c7f4c1e58ff462ee6b36018f9bf03",
       "declarations": []
     },
     {

@@ -386,12 +386,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
+      "sha256": "bfd4240f02715a77f07c448e10dbe6673a9b83c1ddf1e505a766fd432971ce83"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
+      "sha256": "b13bf3d1dc361963084e98267a929b522c5c7f4c1e58ff462ee6b36018f9bf03"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
@@ -409,12 +409,18 @@
         "Becoming.Web.Broken.of_need_le",
         "Becoming.Web.kept_of_need_le"
       ],
-      "sha256": "9997647548851415a86f57d3101f5868dbf7aeab5e58bebf80c5dc7e7e02c576"
+      "sha256": "c393d9c9ab81a730c8a92d8b244742be51d8ee83518114c03f384c5231a517ac"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json",
       "role": "receipt",
       "sha256": "3466a683536b574025d775149343ebfa56316cbbc2997556b221941e387f1d35"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json",
+      "role": "receipt",
+      "sha256": "e7d351156aa286d0b3880ea63e8ad0f843457d75d8b0ef5459454de858b2ed50",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -427,7 +433,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.JointDraw",
       "success_pointer": "/status",
       "success_value": "passed"
