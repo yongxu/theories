@@ -81,6 +81,8 @@ def run_model(model: str, client, out: Path, parallel: int, spend: Spend, throug
             print(f"{model} stopped: {e}", flush=True)
             return
         row = {"model": model, "seed": seed(it), **{k: it[k] for k in ROW_KEYS if k in it}, **res}
+        if getattr(client, "use_seed", True) is False and CONFIG["models"].get(model, {}).get("seed"):
+            row["seed_sent"] = False  # the run note of 22 October: a retry without the frozen seed
         with lock:
             with path.open("a") as f:
                 f.write(json.dumps(row, sort_keys=True) + "\n")
@@ -137,6 +139,8 @@ def main():
     ap.add_argument("--through", type=int, help="only the standpoints up to this one")
     ap.add_argument("--budget", type=float, default=CONFIG["budget_usd"])
     ap.add_argument("--project", type=int, help="print the projection from the standpoints up to this one")
+    ap.add_argument("--no-seed", action="store_true",
+                    help="send no seed (run note of 22 October 2026: one presentation's retries)")
     args = ap.parse_args()
     if args.project is not None:
         project(Path(args.dry) if args.dry else OUT / "runs", args.project)
@@ -147,7 +151,8 @@ def main():
         return
     chosen = args.models or list(CONFIG["models"])
     c = CONFIG["models"]
-    run_all({m: (OpenRouterTask(m, c[m]["rpm"], c[m]["json_mode"], c[m]["seed"]), c[m]["parallel"]) for m in chosen},
+    run_all({m: (OpenRouterTask(m, c[m]["rpm"], c[m]["json_mode"], c[m]["seed"] and not args.no_seed),
+                 c[m]["parallel"]) for m in chosen},
             OUT / "runs", args.budget, args.through)
 
 

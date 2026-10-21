@@ -157,3 +157,9 @@ Standpoint 0 had already started under the $6 guard after the freeze landed (`f8
 
 
 **21 October 2026, after standpoint 0: the projection.** Standpoint 0 ended with 1,723 of its 1,728 presentations valid; Nemotron's 5 invalid rows are retried by later passes. Its reported cost was $0.37. The projection (`vd2_run.py --project 0`, costs and keys only) is $5.87 for the valuers: Nemotron $2.00, Qwen $1.89, DeepSeek $0.74, Haiku $0.58, luna $0.41, GLM $0.25. With the calibration's $0.19 and the judges' estimate of about $0.5, the total is about $6.6, within $9. The rest of the run was started with the $9 guard. No judgment was read.
+
+**22 October 2026, after the main pass and the resume passes: one presentation without the seed.**
+- *Where the run stood.* Every presentation of five models is valid. Nemotron has 4,607 of 4,608: its ranking `F08-p2-10` (frame F08, pair 2, standpoint 10) returned no valid reply in 48 attempts over six passes, all sent with the frozen seed. Its other invalid rows recovered on retry.
+- *Why a change at all.* The end rule allows retries until seven days after the first call. Fixed-seed attempts that keep failing look like the same output repeated. If this one presentation stays missing, the design rule drops Nemotron from the analysis entirely (five models × 16 standpoints beat six × 12).
+- *The change.* This presentation alone is retried with no seed parameter, through `vd2_run.py --no-seed` for Nemotron. Its row records `seed_sent: false`. All other settings are unchanged, and nothing else is retried that way.
+- *What decided it.* Validity alone: no judgment of this presentation, or of any other, has been read. If it still fails after six passes, the run is closed as it stands and the frozen design rule decides what is analysed.
