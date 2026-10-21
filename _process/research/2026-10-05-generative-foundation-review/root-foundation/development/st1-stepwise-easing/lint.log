@@ -1,0 +1,52 @@
+{
+  "records": 2,
+  "summary": {
+    "findings": 5,
+    "records": 1,
+    "by_severity": {
+      "warning": 5
+    },
+    "by_rule": {
+      "length": 5
+    }
+  },
+  "findings": [
+    {
+      "id": "ranking-under-readings",
+      "field": "correspondence",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 1291 chars > 1200"
+    },
+    {
+      "id": "ranking-under-readings",
+      "field": "does_not_show[0]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 400 chars > 240"
+    },
+    {
+      "id": "ranking-under-readings",
+      "field": "does_not_show[0]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "zh 143 chars > 110"
+    },
+    {
+      "id": "ranking-under-readings",
+      "field": "laws[21]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "en 711 chars > 420"
+    },
+    {
+      "id": "ranking-under-readings",
+      "field": "laws[21]",
+      "rule": "length",
+      "severity": "warning",
+      "detail": "zh 211 chars > 190"
+    }
+  ],
+  "errors": [],
+  "scope": "Form only: length, process narration, shared boundaries written out. Whether a boundary is substantive is the author's reading."
+}
