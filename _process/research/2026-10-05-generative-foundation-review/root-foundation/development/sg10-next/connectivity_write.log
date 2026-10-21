@@ -1,0 +1,728 @@
+{
+ "commit": "12be96f4bd0b58d321a2369d17f148d320c66dbe",
+ "sources_match_commit": true,
+ "core_receipt_at_commit": "20261021T075336.250274Z",
+ "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
+ "tracked_modules": 300,
+ "constants": 38626,
+ "spine_theorems": 12638,
+ "base": {
+  "Process family": [
+   "Generative.Process",
+   "Generative.Trace",
+   "Becoming.Frame",
+   "Becoming.Run"
+  ],
+  "World family": [
+   "Becoming.World",
+   "Becoming.Flow",
+   "Becoming.Web"
+  ]
+ },
+ "families_reach_each_other": {
+  "Flow reaches Process family": false,
+  "Web reaches Process family": false,
+  "World reaches Process family": true,
+  "Process reaches World family": false
+ },
+ "classes": {
+  "statement on both families": 976,
+  "statement on Process/Frame/Run/Trace": 2881,
+  "statement on World/Flow/Web": 2986,
+  "statement on the base only through a law of its own module": 193,
+  "proof through a base family": 155,
+  "used by a theorem on the base": 4641,
+  "instance on the base recorded": 155,
+  "apart: own vocabulary": 595,
+  "apart: prelude-only statement": 56
+ },
+ "apart": 651,
+ "apart_general_structure_by_design": 180,
+ "apart_otherwise": 471,
+ "pure_forwarders": {
+  "spine theorems that are pure forwarders": 73,
+  "of them on the base": 58,
+  "their targets, by class": {
+   "statement on Process/Frame/Run/Trace": 11,
+   "instance on the base recorded": 11,
+   "statement on both families": 1,
+   "used by a theorem on the base": 23,
+   "statement on World/Flow/Web": 9,
+   "statement on the base only through a law of its own module": 1
+  }
+ },
+ "recorded_instances": {
+  "register entries": 92,
+  "examples": 0,
+  "examples on the base": 0,
+  "register entries naming what the run lacks": []
+ },
+ "statement_through_own_law_by_module": {
+  "Becoming.HexagramLaws": 26,
+  "Becoming.Undecided": 23,
+  "Becoming.LoopReturn": 22,
+  "Becoming.Pace": 22,
+  "Becoming.Withholding": 21,
+  "Becoming.SharedCodes": 15,
+  "Becoming.Hexagrams": 15,
+  "Becoming.Tolerance": 13,
+  "Becoming.Dephasing": 11,
+  "Becoming.RegimeMargin": 11,
+  "Becoming.HexagramSequences": 5,
+  "Becoming.Attraction": 4,
+  "Becoming.Recurrence": 3,
+  "Becoming.LeastLoss": 2
+ },
+ "apart_used_by_nothing": 436,
+ "apart_roots": 437,
+ "apart_roots_by_category": {
+  "model-witness": 241,
+  "support": 87,
+  "general-structure": 86,
+  "logical-strength": 12,
+  "restates": 9,
+  "calibration": 2
+ },
+ "apart_roots_unclassified": [],
+ "register_entries_not_apart_roots": [],
+ "statements_on_both_by_module": {
+  "Becoming.Counting": 172,
+  "Becoming.OneStep": 73,
+  "Becoming.Premises": 46,
+  "Becoming.Space": 43,
+  "Becoming.Standing": 42,
+  "Becoming.Resolution": 34,
+  "Becoming.Openness": 33,
+  "Becoming.Persistence": 31,
+  "Becoming.InAmounts": 31,
+  "Becoming.ExchangePremises": 28,
+  "Becoming.Interleavings": 23,
+  "Becoming.CensusBinding": 22,
+  "Becoming.CourseWorlds": 20,
+  "Becoming.Transmission": 19,
+  "Becoming.CensusCounts": 19,
+  "Becoming.Correspondence": 18,
+  "Becoming.CensusTable": 17,
+  "Becoming.Ranking": 17,
+  "Becoming.Relevance": 17,
+  "Becoming.Runs": 16,
+  "Becoming.Labelled": 15,
+  "Becoming.Sampling": 15,
+  "Becoming.Descent": 15,
+  "Becoming.Entropy": 14,
+  "Becoming.Direction": 10,
+  "Becoming.CourseRoles": 10,
+  "Becoming.PlaceTransitionNets": 10,
+  "Becoming.Listing": 9,
+  "Becoming.Joint": 8,
+  "Becoming.LabelledRoles": 8,
+  "Becoming.Regrouping": 8,
+  "Becoming.FrontierWorlds": 8,
+  "Becoming.IdleRemoval": 7,
+  "Becoming.Reading": 7,
+  "Becoming.FormedLoops": 7,
+  "Becoming.LawAlongRun": 6,
+  "Becoming.Reordering": 6,
+  "Becoming.OrderNormal": 6,
+  "Becoming.Decidedness": 6,
+  "Becoming.ActiveReading": 6,
+  "Becoming.ContextualRuns": 6,
+  "Becoming.Horizon": 5,
+  "Becoming.Stuttering": 5,
+  "Becoming.ParityReadings": 5,
+  "Becoming.Unfolding": 4,
+  "Becoming.ValuationFrames": 4,
+  "Becoming.Tolerance": 4,
+  "Becoming.RouteTraces": 4,
+  "Becoming.JointDraw": 3,
+  "Becoming.LoopReturn": 3,
+  "Becoming.Readings": 3,
+  "Becoming.Propagation": 3,
+  "Becoming.StrengthFlows": 3,
+  "Becoming.World": 2,
+  "Becoming.Stock": 2,
+  "Becoming.Extension": 2,
+  "Becoming.Novelty": 2,
+  "Becoming.CounterfactualRuns": 2,
+  "Becoming.CouplingTraces": 2,
+  "Becoming.Hexagrams": 2,
+  "Becoming.HexagramSequences": 2,
+  "Becoming.ContinuedClasses": 1,
+  "Becoming.RegroupingSelection": 1,
+  "Becoming.Boundaries": 1,
+  "Becoming.Remainder": 1,
+  "Becoming.ListedWebs": 1,
+  "Becoming.SensitivityWebs": 1
+ },
+ "apart_by_module": {
+  "Becoming.Weightings": [
+   50,
+   76
+  ],
+  "Becoming.Drift": [
+   34,
+   46
+  ],
+  "Becoming.Reproduction": [
+   32,
+   66
+  ],
+  "Becoming.SelectionLevels": [
+   24,
+   55
+  ],
+  "Becoming.HexagramSites": [
+   23,
+   98
+  ],
+  "Becoming.HexagramPlaces": [
+   20,
+   109
+  ],
+  "Becoming.Frontier": [
+   18,
+   70
+  ],
+  "Becoming.LeastLoss": [
+   17,
+   54
+  ],
+  "Becoming.GroupEnding": [
+   16,
+   38
+  ],
+  "Becoming.Ideals": [
+   15,
+   94
+  ],
+  "Becoming.IntegerOrder": [
+   15,
+   38
+  ],
+  "Becoming.SelectionTerm": [
+   13,
+   67
+  ],
+  "Becoming.CodeAcquisition": [
+   13,
+   37
+  ],
+  "Becoming.HexagramLaws": [
+   13,
+   129
+  ],
+  "Becoming.PropositionIdentity": [
+   12,
+   12
+  ],
+  "Becoming.Acceptance": [
+   12,
+   17
+  ],
+  "Becoming.StrictTransport": [
+   11,
+   18
+  ],
+  "Becoming.PartialReadout": [
+   11,
+   25
+  ],
+  "Becoming.Quantum": [
+   9,
+   35
+  ],
+  "Becoming.OrderNormal": [
+   9,
+   101
+  ],
+  "Becoming.ListFootprints": [
+   9,
+   9
+  ],
+  "Becoming.Sensitivity": [
+   9,
+   45
+  ],
+  "Becoming.RegimeMargin": [
+   9,
+   36
+  ],
+  "Becoming.ProfileReach": [
+   9,
+   16
+  ],
+  "Becoming.HexagramSequences": [
+   9,
+   94
+  ],
+  "Becoming.Openness": [
+   8,
+   79
+  ],
+  "Becoming.Amounts": [
+   8,
+   29
+  ],
+  "Becoming.SecuredContent": [
+   8,
+   30
+  ],
+  "Becoming.GuardHorizon": [
+   8,
+   32
+  ],
+  "Becoming.Derivation": [
+   7,
+   26
+  ],
+  "Becoming.Reconfiguration": [
+   7,
+   51
+  ],
+  "Becoming.WitnessRefinement": [
+   7,
+   44
+  ],
+  "Becoming.Lexical": [
+   7,
+   39
+  ],
+  "Becoming.Weighted": [
+   6,
+   38
+  ],
+  "Becoming.PooledEnvelopes": [
+   6,
+   44
+  ],
+  "Becoming.Verification": [
+   6,
+   87
+  ],
+  "Becoming.ChanceFloors": [
+   5,
+   5
+  ],
+  "Becoming.Likeness": [
+   5,
+   176
+  ],
+  "Becoming.Presentations": [
+   5,
+   35
+  ],
+  "Becoming.LocalUnits": [
+   5,
+   45
+  ],
+  "Becoming.Tail": [
+   5,
+   49
+  ],
+  "Becoming.Coverage": [
+   5,
+   22
+  ],
+  "Becoming.MatchedCourses": [
+   4,
+   33
+  ],
+  "Becoming.Learning": [
+   4,
+   78
+  ],
+  "Becoming.Description": [
+   4,
+   35
+  ],
+  "Becoming.ProjectedLaws": [
+   4,
+   28
+  ],
+  "Becoming.ContingentPlans": [
+   4,
+   15
+  ],
+  "Becoming.Relevance": [
+   4,
+   33
+  ],
+  "Becoming.Narrowing": [
+   4,
+   60
+  ],
+  "Becoming.HistorySums": [
+   4,
+   39
+  ],
+  "Becoming.Decidedness": [
+   3,
+   65
+  ],
+  "Becoming.Entropy": [
+   3,
+   182
+  ],
+  "Becoming.Metaethics": [
+   3,
+   11
+  ],
+  "Becoming.Standpoints": [
+   3,
+   21
+  ],
+  "Becoming.ReferencePlan": [
+   3,
+   55
+  ],
+  "Becoming.FaultEnvelopes": [
+   3,
+   19
+  ],
+  "Becoming.CrossSituational": [
+   3,
+   34
+  ],
+  "Becoming.Routes": [
+   3,
+   28
+  ],
+  "Becoming.Interleavings": [
+   3,
+   162
+  ],
+  "Becoming.Frequency": [
+   3,
+   78
+  ],
+  "Becoming.MutualDependence": [
+   3,
+   30
+  ],
+  "Becoming.Gluing": [
+   3,
+   76
+  ],
+  "Becoming.LearnedGrouping": [
+   3,
+   41
+  ],
+  "Becoming.Prelude": [
+   2,
+   119
+  ],
+  "Becoming.Context": [
+   2,
+   25
+  ],
+  "Becoming.Space": [
+   2,
+   64
+  ],
+  "Becoming.Exclusion": [
+   2,
+   36
+  ],
+  "Becoming.Selection": [
+   2,
+   74
+  ],
+  "Becoming.Undecided": [
+   2,
+   63
+  ],
+  "Becoming.Revision": [
+   2,
+   33
+  ],
+  "Becoming.Dephasing": [
+   2,
+   63
+  ],
+  "Becoming.Composition": [
+   2,
+   40
+  ],
+  "Becoming.Joining": [
+   2,
+   65
+  ],
+  "Becoming.Granularity": [
+   2,
+   89
+  ],
+  "Becoming.HistoryLanguages": [
+   2,
+   34
+  ],
+  "Becoming.Carriers": [
+   2,
+   46
+  ],
+  "Becoming.Propagation": [
+   2,
+   75
+  ],
+  "Becoming.Remainder": [
+   2,
+   56
+  ],
+  "Becoming.ScoreRepresentation": [
+   2,
+   16
+  ],
+  "Becoming.Alternatives": [
+   2,
+   17
+  ],
+  "Becoming.RouteFormation": [
+   2,
+   67
+  ],
+  "Becoming.OneStep": [
+   1,
+   305
+  ],
+  "Becoming.Flow": [
+   1,
+   97
+  ],
+  "Becoming.Population": [
+   1,
+   124
+  ],
+  "Becoming.Evolution": [
+   1,
+   31
+  ],
+  "Becoming.RenewalFlow": [
+   1,
+   28
+  ],
+  "Becoming.Significance": [
+   1,
+   16
+  ],
+  "Becoming.Testing": [
+   1,
+   85
+  ],
+  "Becoming.Optimum": [
+   1,
+   366
+  ],
+  "Becoming.LoopReturn": [
+   1,
+   77
+  ],
+  "Becoming.RuleCapture": [
+   1,
+   51
+  ],
+  "Becoming.Contacts": [
+   1,
+   23
+  ],
+  "Becoming.Viability": [
+   1,
+   24
+  ],
+  "Becoming.Actuation": [
+   1,
+   45
+  ],
+  "Becoming.TreeSearch": [
+   1,
+   34
+  ],
+  "Becoming.Transactions": [
+   1,
+   59
+  ],
+  "Becoming.Lasting": [
+   1,
+   89
+  ],
+  "Becoming.JoiningRoles": [
+   1,
+   23
+  ],
+  "Becoming.Boundaries": [
+   1,
+   69
+  ],
+  "Becoming.Typicality": [
+   1,
+   40
+  ],
+  "Becoming.Observation": [
+   1,
+   27
+  ],
+  "Becoming.CensusCounts": [
+   1,
+   20
+  ],
+  "Becoming.Handoff": [
+   1,
+   22
+  ],
+  "Becoming.Dispatch": [
+   1,
+   33
+  ],
+  "Becoming.ScopedReach": [
+   1,
+   15
+  ]
+ },
+ "rings": {
+  "core": {
+   "modules": 284,
+   "theorems": 11892,
+   "apart": 571,
+   "classes": {
+    "statement on both families": 962,
+    "statement on Process/Frame/Run/Trace": 2670,
+    "statement on World/Flow/Web": 2961,
+    "statement on the base only through a law of its own module": 147,
+    "proof through a base family": 144,
+    "used by a theorem on the base": 4282,
+    "instance on the base recorded": 155,
+    "apart: own vocabulary": 516,
+    "apart: prelude-only statement": 55
+   }
+  },
+  "instances": {
+   "modules": 7,
+   "theorems": 567,
+   "apart": 65,
+   "classes": {
+    "statement on both families": 14,
+    "statement on Process/Frame/Run/Trace": 120,
+    "statement on World/Flow/Web": 25,
+    "statement on the base only through a law of its own module": 46,
+    "proof through a base family": 11,
+    "used by a theorem on the base": 286,
+    "instance on the base recorded": 0,
+    "apart: own vocabulary": 65,
+    "apart: prelude-only statement": 0
+   }
+  },
+  "applications": {
+   "modules": 6,
+   "theorems": 179,
+   "apart": 15,
+   "classes": {
+    "statement on both families": 0,
+    "statement on Process/Frame/Run/Trace": 91,
+    "statement on World/Flow/Web": 0,
+    "statement on the base only through a law of its own module": 0,
+    "proof through a base family": 0,
+    "used by a theorem on the base": 73,
+    "instance on the base recorded": 0,
+    "apart: own vocabulary": 14,
+    "apart: prelude-only statement": 1
+   }
+  }
+ },
+ "components": {
+  "count": 73,
+  "theorems_outside_the_main_component": [
+   "Becoming.Dispatch.add_three_assoc",
+   "Becoming.GuardHorizon.coverage_transports",
+   "Becoming.GuardHorizon.empty_requirement_hides_loss",
+   "Becoming.GuardHorizon.endpoint_access_hides_gap",
+   "Becoming.GuardHorizon.overlapping_handoff_keeps_access",
+   "Becoming.GuardHorizon.route_retirement_allowed",
+   "Becoming.IntegerOrder.le_iff",
+   "Becoming.IntegerOrder.lt_iff",
+   "Becoming.IntegerOrder.nonneg_or_neg",
+   "Becoming.ListTests.filter_of_all",
+   "Becoming.PartialReadout.safe_of_holds",
+   "Becoming.PropositionIdentity.Formula.eval_congr",
+   "Becoming.PropositionIdentity.Formula.read_congr",
+   "Becoming.PropositionIdentity.derivation_unique",
+   "Becoming.PropositionIdentity.iff_witness_unique",
+   "Becoming.PropositionIdentity.transport_const",
+   "Becoming.PropositionIdentity.transport_refl",
+   "Becoming.PropositionIdentity.two_equivalences",
+   "Becoming.Readout.agree_iff_parts",
+   "Becoming.Readout.supplied_agree_iff_parts",
+   "Becoming.Registration.retained_keeps",
+   "Becoming.Requirement.Collective.no_common_plan",
+   "Becoming.Requirement.separate_not_joint",
+   "Becoming.Routes.cond_zero_mul",
+   "Becoming.ceases_at_a_step"
+  ]
+ },
+ "periphery": {
+  "modules": 3,
+  "theorems": 74,
+  "classes": {
+   "statement on both families": 0,
+   "statement on Process/Frame/Run/Trace": 37,
+   "statement on World/Flow/Web": 0,
+   "statement on the base only through a law of its own module": 0,
+   "proof through a base family": 0,
+   "used by a theorem on the base": 36,
+   "instance on the base recorded": 0,
+   "apart: own vocabulary": 1,
+   "apart: prelude-only statement": 0
+  },
+  "apart": 1,
+  "apart_roots": 1,
+  "apart_roots_by_category": {
+   "restates": 1
+  },
+  "apart_by_module": {
+   "RelationalRenewal": [
+    1,
+    35
+   ]
+  },
+  "theorems_outside_the_main_component": []
+ },
+ "records_by_best_alias_class": {
+  "statement on both families": 68,
+  "statement on Process/Frame/Run/Trace": 115,
+  "statement on World/Flow/Web": 91,
+  "statement on the base only through a law of its own module": 2,
+  "proof through a base family": 1,
+  "used by a theorem on the base": 7,
+  "instance on the base recorded": 2,
+  "apart: own vocabulary": 5
+ },
+ "records_resting_only_on_apart_theorems": [
+  {
+   "id": "additive-part-of-offspring-variance",
+   "modules": [
+    "Becoming.Reproduction"
+   ]
+  },
+  {
+   "id": "finite-joining-tree-lifting",
+   "modules": [
+    "Becoming.Joining"
+   ]
+  },
+  {
+   "id": "fixation-by-drift",
+   "modules": [
+    "Becoming.Drift"
+   ]
+  },
+  {
+   "id": "graded-significance-and-priority",
+   "modules": [
+    "Becoming.Weightings"
+   ]
+  },
+  {
+   "id": "proposition-identity",
+   "modules": [
+    "Becoming.PropositionIdentity"
+   ]
+  }
+ ]
+}
