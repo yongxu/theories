@@ -3033,24 +3033,34 @@ theorem sum_eq_zero_iff {f : Nat → Nat} :
          ((Nat.zero_add _).trans
            ((congrArg f (Nat.zero_add n)).trans (all n (Nat.lt_succ_self n))))⟩
 
-/-- **What is given and what it falls short of.** Where at most `r` is given at each of `n` steps,
-everything given across them, with everything it falls short of `r`, is `r` for each step. -/
-theorem sum_add_shortfall_up_to :
-    ∀ {n : Nat}, (∀ t, t < n → g t ≤ r) →
-      Amounts.whole.sum g 0 n + Amounts.whole.sum (fun t => r - g t) 0 n = r * n
-  | 0, _ => rfl
-  | n + 1, renews => by
+/-- **What is given and what it falls short of.** Where at most `r` is given at each step,
+everything given across `n` steps, with everything it falls short of `r`, is `r` for each step. -/
+theorem sum_add_shortfall (renews : ∀ t, g t ≤ r) :
+    ∀ n, Amounts.whole.sum g 0 n + Amounts.whole.sum (fun t => r - g t) 0 n = r * n
+  | 0 => rfl
+  | n + 1 => by
     show Amounts.whole.sum g 0 n + g (0 + n) +
         (Amounts.whole.sum (fun t => r - g t) 0 n + (r - g (0 + n))) = r * (n + 1)
-    rw [Nat.zero_add, add_four,
-      sum_add_shortfall_up_to (n := n) (fun t lt => renews t (Nat.lt_succ_of_lt lt)),
-      Naturals.add_sub_of_le (renews n (Nat.lt_succ_self n)), Nat.mul_succ]
+    rw [Nat.zero_add, add_four, sum_add_shortfall renews n, Naturals.add_sub_of_le (renews n),
+      Nat.mul_succ]
 
-/-- **What is given and what it falls short of**, where at most `r` is given at every step: the case
-of `sum_add_shortfall_up_to`. -/
-theorem sum_add_shortfall (renews : ∀ t, g t ≤ r) (n : Nat) :
-    Amounts.whole.sum g 0 n + Amounts.whole.sum (fun t => r - g t) 0 n = r * n :=
-  sum_add_shortfall_up_to fun t _ => renews t
+/-- **What is given and what it falls short of, at the steps counted.** Where at most `r` is given at
+each of `n` steps, everything given across them, with everything it falls short of `r`, is `r` for
+each step: `sum_add_shortfall` for what is given at those steps and nothing after. -/
+theorem sum_add_shortfall_up_to {n : Nat} (renews : ∀ t, t < n → g t ≤ r) :
+    Amounts.whole.sum g 0 n + Amounts.whole.sum (fun t => r - g t) 0 n = r * n := by
+  have given : Amounts.whole.sum g 0 n =
+      Amounts.whole.sum (fun t => if t < n then g t else 0) 0 n :=
+    sum_eq_of_eq fun _ lt => (if_pos lt).symm
+  have short : Amounts.whole.sum (fun t => r - g t) 0 n =
+      Amounts.whole.sum (fun t => r - if t < n then g t else 0) 0 n :=
+    sum_eq_of_eq fun _ lt => congrArg (r - ·) (if_pos lt).symm
+  rw [given, short]
+  exact sum_add_shortfall (g := fun t => if t < n then g t else 0) (fun t => by
+    show (if t < n then g t else 0) ≤ r
+    match Nat.lt_or_ge t n with
+    | .inl lt => rw [if_pos lt]; exact renews t lt
+    | .inr ge => rw [if_neg (Nat.not_lt_of_ge ge)]; exact Nat.zero_le r) n
 
 /-- **What a course draws, leaves and forgoes.** Where each step leaves at most the level with what
 is given and at most `r` is given at each of `n` steps, what is drawn across them, with what stands
