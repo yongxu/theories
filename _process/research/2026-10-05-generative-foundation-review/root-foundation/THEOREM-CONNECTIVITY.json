@@ -1,11 +1,11 @@
 {
- "commit": "3f86edeab6dcb44c5fc01860e389fedda571d0e3",
+ "commit": "686a6af0f597593bae75aa97dd7fb949a14683f7",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261021T102032.314972Z",
+ "core_receipt_at_commit": "20261021T111912.398950Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 300,
- "constants": 38814,
- "spine_theorems": 12725,
+ "constants": 38831,
+ "spine_theorems": 12734,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,16 +28,16 @@
  "classes": {
   "statement on both families": 976,
   "statement on Process/Frame/Run/Trace": 2900,
-  "statement on World/Flow/Web": 2986,
+  "statement on World/Flow/Web": 2990,
   "statement on the base only through a law of its own module": 212,
   "proof through a base family": 155,
   "used by a theorem on the base": 4690,
   "instance on the base recorded": 155,
-  "apart: own vocabulary": 595,
-  "apart: prelude-only statement": 56
+  "apart: own vocabulary": 597,
+  "apart: prelude-only statement": 59
  },
- "apart": 651,
- "apart_general_structure_by_design": 180,
+ "apart": 656,
+ "apart_general_structure_by_design": 185,
  "apart_otherwise": 471,
  "pure_forwarders": {
   "spine theorems that are pure forwarders": 73,
@@ -73,12 +73,12 @@
   "Becoming.Recurrence": 3,
   "Becoming.LeastLoss": 2
  },
- "apart_used_by_nothing": 436,
- "apart_roots": 437,
+ "apart_used_by_nothing": 437,
+ "apart_roots": 438,
  "apart_roots_by_category": {
   "model-witness": 241,
   "support": 87,
-  "general-structure": 86,
+  "general-structure": 87,
   "logical-strength": 12,
   "restates": 9,
   "calibration": 2
@@ -156,8 +156,8 @@
  },
  "apart_by_module": {
   "Becoming.Weightings": [
-   50,
-   76
+   55,
+   81
   ],
   "Becoming.Drift": [
    34,
@@ -579,18 +579,18 @@
  "rings": {
   "core": {
    "modules": 284,
-   "theorems": 11979,
-   "apart": 571,
+   "theorems": 11988,
+   "apart": 576,
    "classes": {
     "statement on both families": 962,
     "statement on Process/Frame/Run/Trace": 2689,
-    "statement on World/Flow/Web": 2961,
+    "statement on World/Flow/Web": 2965,
     "statement on the base only through a law of its own module": 166,
     "proof through a base family": 144,
     "used by a theorem on the base": 4331,
     "instance on the base recorded": 155,
-    "apart: own vocabulary": 516,
-    "apart: prelude-only statement": 55
+    "apart: own vocabulary": 518,
+    "apart: prelude-only statement": 58
    }
   },
   "instances": {
@@ -6789,7 +6789,11 @@
   "Becoming.act_courses_unselected_pool": "statement on World/Flow/Web",
   "Becoming.Web.AlikeThrough.of_reads": "statement on World/Flow/Web",
   "Becoming.Web.SelectsThroughAll.reads": "statement on World/Flow/Web",
+  "Becoming.Web.anticipates_iff": "statement on World/Flow/Web",
+  "Becoming.Web.anticipation_misses": "statement on World/Flow/Web",
+  "Becoming.Web.SelectsThrough.read": "statement on World/Flow/Web",
   "Becoming.ExchangeLaw.Through.widen": "statement on World/Flow/Web",
+  "Becoming.ExchangeLaw.Through.anticipated": "statement on World/Flow/Web",
   "Becoming.WithinClosure.of_reads": "used by a theorem on the base",
   "Becoming.WithinClosureOf.to_reads": "used by a theorem on the base",
   "Becoming.Flow.CoupledFrom.of_reads": "statement on World/Flow/Web",
@@ -9761,6 +9765,11 @@
   "Becoming.Weighting.widens_iff_every_increasing": "apart: own vocabulary",
   "Becoming.Weighting.widens_iff_every_score": "apart: own vocabulary",
   "Becoming.Weighting.mixed_either_way_of_class": "apart: own vocabulary",
+  "Becoming.Weighting.and_parts": "apart: prelude-only statement",
+  "Becoming.Weighting.and_of_parts": "apart: prelude-only statement",
+  "Becoming.Weighting.includes_restrict": "apart: own vocabulary",
+  "Becoming.Weighting.gain_at": "apart: prelude-only statement",
+  "Becoming.Weighting.increasing_lexical": "apart: own vocabulary",
   "Becoming.Web.widens_iff_every_weighting": "statement on World/Flow/Web",
   "Becoming.Web.widens_iff_every_of_class": "statement on World/Flow/Web",
   "Becoming.Web.not_widens_of_closes": "statement on World/Flow/Web",
