@@ -1488,6 +1488,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   from every level, both leave nothing at every step, so the base stands from the first step
   at what stands at nothing, and drawing everything is such a profile. Witness: under a gate,
   alone an optimum may keep the dweller; in turn every perfect profile breaks it at once.
+  Revising toward best responses, from any profile, both come to leave nothing at every step
+  within twice the horizon. Witness: from restraint under the gate, revision breaks the dweller.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
