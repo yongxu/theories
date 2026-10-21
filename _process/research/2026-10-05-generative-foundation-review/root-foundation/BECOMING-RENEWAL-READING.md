@@ -14771,3 +14771,71 @@ Output → input: chapter §3.4, §7.1, §8.1 item 10 (EN, ZH), the record table
 **Self-review.** Every premise is used: the floors bound each best response, and the steps where the other's later draw is fixed are where the drawer's continuation does not depend on what it leaves. The general law is weaker than SG14's: away from those steps the limit can keep the base, and the witness shows that it does. The witness's uniqueness is shown from three, where leaving everything is strictly best; from two the first is indifferent between leaving everything and nothing. Which profiles are perfect within capacities away from the last step is not characterized. Limits: SG14's model; two drawers; capacities fixed at a step.
 
 **The run.** Core 285 modules and 12,304 theorems, instances 7 and 567, applications 6 and 179; 15 Lean steps ran, 1,189 reused. 13 declarations added to Becoming.Optimum, 10 of them theorems, none removed, all with empty axiom reports; `zero_of_le_sub` now reads `eq_of_sub_le_sub`. Connectivity: 647 of 13,050 apart, unchanged; no new apart root, every new law stated on the web or read by a law that is, the witness on the flow; register check passes.
+
+## 330. The sign measured apart from the ranking (VD2)
+
+```text
+Result(s): none new about the unfolding; no record changed; no Lean. A frozen test of thesis T5's bound and its
+       exception (experiments/valuer-agreement, PREDICTIONS-2026-10-21-VD2.md); reuses
+       Weighting.widens_iff_every_positive only as the account tested.
+Delta: the first test of T5's exception with each valuer's sign measured apart from the ranking. VD1's six models x 16
+       standpoints = 96 valuers; each judged the ending of each of 96 formations, with no plan shown, as a serious or
+       slight loss, neither, or a slight or serious gain, twice (scale order reversed); then ranked six one-formation
+       widenings per frame (each formation added once), with VD1's wording, counterbalancing and reading lists; 27,648
+       judgments, every presentation valid; misreads from the reason by two judges fixed by calibration on VD1's coded
+       violations before the freeze. Passed: X1s (strongly positive cell, loss twice and serious once: 0-0.69% per
+       model against 1%), X2 (Mantel-Haenszel risk ratio of a violation within valuers, strongly positive against not
+       positive, 0.086 against 0.2), S1 (standpoints 10 and 15, named before the run, the highest gain shares, 0.53 and
+       0.26). Failed: X1 (T5's cell as stated, loss twice: Nemotron 1.08% against 1%, the rest 0-0.89%), X3 (where both
+       askings say gain, the narrower plan chosen in 0.49 against 0.50; Claude Haiku 0.25), S2 (standpoints 4 and 6 give
+       gains 0.063 and 0.101 against 0.05), and the secondary X1s' on VD1's rankings (Claude Haiku 6 of 386, all
+       cross-framed). Without Claude Haiku, X3 and X1s' pass. Measured: violation 0.52% in P, 0.26% in PS, 18.9% in N,
+       47.5% where both say gain; elicitations agree in class in 87%; the judges called 73 of 428 exact-read violations
+       misread, without them X1s fails for GLM and Nemotron.
+Post hoc (vd2_posthoc.py; not verdicts): X1's 33 violations sit mostly on slight losses (1.0% of those against 0.26%
+       where once serious); luna's seven under the urban planner end a tradition its sign called a slight loss; several
+       of Nemotron's and GLM's describe a trade the plans do not contain; a random 16 of the judged misreads all misread;
+       S2's gains are Claude Haiku's under the Buddhist prompt and Nemotron's and GLM's under the libertarian, on
+       institutions and inherited things.
+Supplied premises / correspondence: AI models under persona prompts stand in for valuers; the sign task's answer is the
+       valuer's sign on the formation; a judgment's listed sets and, through the judges, its reason are its reading;
+       Hsee 1996 (joint and separate evaluation), Blanco, Engelmann and Normann 2011 (parameters elicited apart).
+Evidence: freeze f8e7992e1 before any experimental call; run notes b9df2a043 (Ren's $9 cap), 9d2327da4 (projection),
+       516a47ab7 (one presentation without the seed), each landed before the calls it governs; vd2_analyze.py unchanged
+       since the freeze; results/vd2 (every row, the judges' rows, verdicts.json, posthoc.json); spend $7.24.
+Boundary: few, small, fast models at low reasoning effort; English; continuation only; one-formation widenings only; the
+       sign is a separate evaluation and the ranking a joint one; the judges are models whose misread calls shrink the
+       forbidden cell (reported without them); the standpoints were written for VD1, and two were named negative after
+       VD1's run and before VD2's; this session knew VD1's violations when it designed VD2 (X1s' is secondary for that
+       reason).
+Output -> input: chapter T5's standing, evidence and comparison row (EN, ZH); significance review, sign check and its
+       outcome, and the line after SA2's table; experiment README results; board VD2 to the history file. No record:
+       the passes bear on a conjectured thesis carried in the chapter's theses layer, and the theorem record
+       widening-as-what-every-weighting-ranks does not cover which order a standpoint has. Open: human valuers; the
+       sign measured in the comparison's own terms; why measured gains are not acted on (X3), and whether it is
+       Claude Haiku's alone.
+```
+
+**What was asked.** T5's bound says a valuer who counts everything at stake positively and reads the case right does not rank a narrowing above its widening. A violation comes from a negative valuation or a misread. The exception has content only where the negative valuation is measured apart from the ranking. VD1 found its case only in the prompts and the reasons, after the verdicts ([§297](#297-where-valuers-agree-and-disagree-vd1)). VD2 asked each valuer for its sign on each formation in a task with no plan in it, twice. It froze, before any call, that right-read violations fall only where that sign is not positive, and it named the standpoints expected to be negative.
+
+**What it found.**
+- *The exception has measured content for these valuers.*
+  - Where a valuer had twice called the added formation's ending a loss, once a serious one, it chose the narrower plan in at most 0.69% of right-read cases, for every model.
+  - Within each valuer, violations were about twelve times as frequent where its own sign was not positive.
+  - The two standpoints whose text makes an ending a gain, named before the run, gave the most gains.
+  - Violations by standpoint repeated VD1's (43.7% and 16.9% under those two). Their sign answers now show why: under them the ending is called a gain in 53% and 26% of answers.
+- *The cell exactly as T5 words it failed for one model.* Nemotron's 10 violations among 922 cases called a loss twice are all outside the named standpoints, and mostly on slight losses. Read after the verdicts, several are misreads the judges did not call. Under the urban planner, luna let traditions end that it had twice called a slight loss. That is the persona's pull on the ranking at small valuations.
+- *A measured gain is not reliably acted on.* Where both askings called the ending a gain, the narrower plan was chosen in 49%. Claude Haiku, which under the urban planner called 91% of endings gains, kept the wider plan in three of four such rankings. These valuers' rankings are more favourable to widening than their separate signs.
+- *The negative standpoints are not only those whose text says so.* "Clinging to things" (Claude Haiku) and distrust of what authorities impose (Nemotron, GLM) also turn endings into gains.
+
+**What it means for T5.**
+- *The bound survives a test that could refute it.* In its strongly positive form it held for every model and within every valuer, with the sign measured apart. That is the refutation T5 names, applied and not met. The bound stays conjectured for valuers in general; its standing now records support for these 96 AI valuers.
+- *T5's own cell failed for one model.* In the account's terms the failure is borderline valuations and missed misreads, the case the freeze foresaw ("X1 failing with X1s and X2 passing"). It is not support either: a slight loss twice is a measured positive valuation, and T5 forbids its violation.
+- *X3's failure leaves the exception sufficient but not predictive.* The violations come from non-positive signs, but a non-positive sign often does not produce one. In the weighting reading a measured gain should be ranked as a negative weight. These valuers' joint rankings keep more than their separate signs value, as joint and separate evaluation differ in people (Hsee). The account needs nothing more than the bound, but the exception explains less than the weighting reading would.
+- *S2's failure widens the exception's case.* Weights below zero arise under standpoints whose text does not name an ending as a gain. That does not touch the bound: those gains are measured, and violations follow them (X2).
+
+**Self-review.**
+- *The judges matter.* Without them X1s fails for GLM and Nemotron. They were fixed before the run, blind to the signs and the standpoints, and calibrated on VD1's coding by a rule set beforehand. A random sample of their calls, read after the verdicts, is right. Still, they are models, and every judged misread is a case removed from the forbidden cell.
+- *The design was made knowing VD1's violations.* The standpoints named negative are those VD1 showed. S1's pass tests that the sign task finds what the rankings showed, not a blind guess. X1s′, on VD1's own rankings, is secondary for that reason.
+- *One presentation was retried without the seed.* That was decided on validity alone, before the call, and the row is marked.
+- *The noise analysis was made before any data.* It is why X1s and X2 were frozen beside X1. The failure pattern seen (X1 failing, X1s and X2 passing) is the one it named as consistent with borderline valuations. That pattern also had to be named before the data to count, and it was.

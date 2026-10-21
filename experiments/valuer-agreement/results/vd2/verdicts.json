@@ -1,0 +1,800 @@
+{
+ "measures": {
+  "P_share_of_exact": 0.7878561652357845,
+  "X1": {
+   "anthropic/claude-haiku-5.5": {
+    "choice_B_before_judges": 0.0,
+    "n": 1207,
+    "share": 0.0,
+    "violations": 0
+   },
+   "deepseek/deepseek-v4.1-flash-1017": {
+    "choice_B_before_judges": 0.0,
+    "n": 1057,
+    "share": 0.0,
+    "violations": 0
+   },
+   "nvidia/nemotron-3.5-lightning": {
+    "choice_B_before_judges": 0.0368763557483731,
+    "n": 922,
+    "share": 0.010845986984815618,
+    "violations": 10
+   },
+   "openai/gpt-6-luna": {
+    "choice_B_before_judges": 0.018532246108228317,
+    "n": 1349,
+    "share": 0.007412898443291327,
+    "violations": 10
+   },
+   "qwen/qwen3.8-flash": {
+    "choice_B_before_judges": 0.006361323155216285,
+    "n": 786,
+    "share": 0.005089058524173028,
+    "violations": 4
+   },
+   "z-ai/glm-5.3-flash": {
+    "choice_B_before_judges": 0.018793273986152326,
+    "n": 1011,
+    "share": 0.008902077151335312,
+    "violations": 9
+   }
+  },
+  "X1_lists_only": {
+   "anthropic/claude-haiku-5.5": 0.0,
+   "deepseek/deepseek-v4.1-flash-1017": 0.0,
+   "nvidia/nemotron-3.5-lightning": 0.03794871794871795,
+   "openai/gpt-6-luna": 0.019202363367799114,
+   "qwen/qwen3.8-flash": 0.005500550055005501,
+   "z-ai/glm-5.3-flash": 0.017009847806624886
+  },
+  "X1s": {
+   "anthropic/claude-haiku-5.5": {
+    "n": 819,
+    "share": 0.0,
+    "violations": 0
+   },
+   "deepseek/deepseek-v4.1-flash-1017": {
+    "n": 815,
+    "share": 0.0,
+    "violations": 0
+   },
+   "nvidia/nemotron-3.5-lightning": {
+    "n": 579,
+    "share": 0.0069084628670120895,
+    "violations": 4
+   },
+   "openai/gpt-6-luna": {
+    "n": 709,
+    "share": 0.0,
+    "violations": 0
+   },
+   "qwen/qwen3.8-flash": {
+    "n": 504,
+    "share": 0.003968253968253968,
+    "violations": 2
+   },
+   "z-ai/glm-5.3-flash": {
+    "n": 766,
+    "share": 0.006527415143603133,
+    "violations": 5
+   }
+  },
+  "X1s_vd1": {
+   "anthropic/claude-haiku-5.5": {
+    "n": 386,
+    "share": 0.015544041450777202,
+    "violations": 6
+   },
+   "deepseek/deepseek-v4.1-flash-1017": {
+    "n": 368,
+    "share": 0.0,
+    "violations": 0
+   },
+   "nvidia/nemotron-3.5-lightning": {
+    "n": 232,
+    "share": 0.0,
+    "violations": 0
+   },
+   "openai/gpt-6-luna": {
+    "n": 273,
+    "share": 0.003663003663003663,
+    "violations": 1
+   },
+   "qwen/qwen3.8-flash": {
+    "n": 225,
+    "share": 0.0,
+    "violations": 0
+   },
+   "z-ai/glm-5.3-flash": {
+    "n": 318,
+    "share": 0.006289308176100629,
+    "violations": 2
+   }
+  },
+  "X2": {
+   "risk_ratio_MH": 0.08560326650207696,
+   "strata": 75,
+   "violations_in_strata": 227
+  },
+  "X3": {
+   "equal_share": 0.029498525073746312,
+   "n": 339,
+   "narrower_share": 0.4896755162241888
+  },
+  "agreement_loss_by_model": {
+   "anthropic/claude-haiku-5.5": 0.8984375,
+   "deepseek/deepseek-v4.1-flash-1017": 0.921875,
+   "nvidia/nemotron-3.5-lightning": 0.8873697916666666,
+   "openai/gpt-6-luna": 0.9251302083333334,
+   "qwen/qwen3.8-flash": 0.86328125,
+   "z-ai/glm-5.3-flash": 0.8580729166666666
+  },
+  "by_cell": {
+   "G2": {
+    "choice_A": 0.4808259587020649,
+    "choice_B": 0.4896755162241888,
+    "equal": 0.029498525073746312,
+    "n": 339,
+    "violation": 0.4749262536873156
+   },
+   "G_any": {
+    "choice_A": 0.5748251748251748,
+    "choice_B": 0.3958041958041958,
+    "equal": 0.02937062937062937,
+    "n": 715,
+    "violation": 0.3804195804195804
+   },
+   "N": {
+    "choice_A": 0.7079178885630498,
+    "choice_B": 0.20234604105571846,
+    "equal": 0.08973607038123167,
+    "n": 1705,
+    "violation": 0.18885630498533723
+   },
+   "N_no_gain": {
+    "choice_A": 0.804040404040404,
+    "choice_B": 0.06262626262626263,
+    "equal": 0.13333333333333333,
+    "n": 990,
+    "violation": 0.050505050505050504
+   },
+   "P": {
+    "choice_A": 0.9742577384712571,
+    "choice_B": 0.013108022741629817,
+    "equal": 0.012634238787113077,
+    "n": 6332,
+    "violation": 0.005211623499684144
+   },
+   "P_with_serious": {
+    "choice_A": 0.9825858778625954,
+    "choice_B": 0.008110687022900763,
+    "equal": 0.009303435114503817,
+    "n": 4192,
+    "violation": 0.0026240458015267176
+   }
+  },
+  "by_cell_expected_negative": {
+   "10_15": {
+    "N": 0.3812154696132597,
+    "P": 0.04059040590405904
+   },
+   "others": {
+    "N": 0.046890927624872576,
+    "P": 0.003629764065335753
+   }
+  },
+  "design": {
+   "complete_per_model": {
+    "anthropic/claude-haiku-5.5": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "deepseek/deepseek-v4.1-flash-1017": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "nvidia/nemotron-3.5-lightning": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "openai/gpt-6-luna": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "qwen/qwen3.8-flash": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "z-ai/glm-5.3-flash": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "dropped": [],
+   "models": [
+    "deepseek/deepseek-v4.1-flash-1017",
+    "z-ai/glm-5.3-flash",
+    "openai/gpt-6-luna",
+    "anthropic/claude-haiku-5.5",
+    "qwen/qwen3.8-flash",
+    "nvidia/nemotron-3.5-lightning"
+   ],
+   "standpoints": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+   ]
+  },
+  "elicitations": {
+   "P_share": 0.7835286458333334,
+   "cells": 9216,
+   "loss_share_e1": 0.8468967013888888,
+   "loss_share_e2": 0.8277994791666666,
+   "same_class": 0.8712022569444444,
+   "same_level": 0.7468532986111112
+  },
+  "gain_share_by_kind_at_10_15": {
+   "animal": 0.22777777777777777,
+   "community": 0.3560606060606061,
+   "enterprise": 0.3958333333333333,
+   "heritage": 0.5256410256410257,
+   "institution": 0.40046296296296297,
+   "plant": 0.3888888888888889,
+   "practice": 0.4921875
+  },
+  "gain_share_by_model": {
+   "anthropic/claude-haiku-5.5": 0.11979166666666667,
+   "deepseek/deepseek-v4.1-flash-1017": 0.019205729166666668,
+   "nvidia/nemotron-3.5-lightning": 0.11751302083333333,
+   "openai/gpt-6-luna": 0.014322916666666666,
+   "qwen/qwen3.8-flash": 0.0732421875,
+   "z-ai/glm-5.3-flash": 0.044596354166666664
+  },
+  "gain_share_by_standpoint": {
+   "0": 0.0,
+   "1": 0.0008680555555555555,
+   "2": 0.0,
+   "3": 0.0008680555555555555,
+   "4": 0.0625,
+   "5": 0.0026041666666666665,
+   "6": 0.10069444444444445,
+   "7": 0.0,
+   "8": 0.008680555555555556,
+   "9": 0.0,
+   "10": 0.5338541666666666,
+   "11": 0.008680555555555556,
+   "12": 0.04774305555555555,
+   "13": 0.006076388888888889,
+   "14": 0.0,
+   "15": 0.2638888888888889
+  },
+  "invalid_share": {
+   "anthropic/claude-haiku-5.5": {
+    "rank": 0.0,
+    "sign": 0.0
+   },
+   "deepseek/deepseek-v4.1-flash-1017": {
+    "rank": 0.0,
+    "sign": 0.0
+   },
+   "nvidia/nemotron-3.5-lightning": {
+    "rank": 0.0,
+    "sign": 0.0
+   },
+   "openai/gpt-6-luna": {
+    "rank": 0.0,
+    "sign": 0.0
+   },
+   "qwen/qwen3.8-flash": {
+    "rank": 0.0,
+    "sign": 0.0
+   },
+   "z-ai/glm-5.3-flash": {
+    "rank": 0.0,
+    "sign": 0.0
+   }
+  },
+  "misread_by_reason": {
+   "judged_misread": 73,
+   "violations_exact": 428
+  },
+  "n_exact": 8037,
+  "n_rank": 9216,
+  "neither_share_by_standpoint": {
+   "0": 0.041666666666666664,
+   "1": 0.08246527777777778,
+   "2": 0.03125,
+   "3": 0.004340277777777778,
+   "4": 0.17447916666666666,
+   "5": 0.015625,
+   "6": 0.14322916666666666,
+   "7": 0.1484375,
+   "8": 0.3029513888888889,
+   "9": 0.0008680555555555555,
+   "10": 0.1501736111111111,
+   "11": 0.1293402777777778,
+   "12": 0.024305555555555556,
+   "13": 0.006944444444444444,
+   "14": 0.018229166666666668,
+   "15": 0.2916666666666667
+  },
+  "read_exact_share": {
+   "anthropic/claude-haiku-5.5": 0.998046875,
+   "deepseek/deepseek-v4.1-flash-1017": 0.7955729166666666,
+   "nvidia/nemotron-3.5-lightning": 0.9049479166666666,
+   "openai/gpt-6-luna": 0.9850260416666666,
+   "qwen/qwen3.8-flash": 0.7213541666666666,
+   "z-ai/glm-5.3-flash": 0.8274739583333334
+  },
+  "unmeasured_cells": 0,
+  "violation_by_standpoint": {
+   "0": 0.00819672131147541,
+   "1": 0.003952569169960474,
+   "2": 0.004008016032064128,
+   "3": 0.006048387096774193,
+   "4": 0.018518518518518517,
+   "5": 0.03143418467583497,
+   "6": 0.017408123791102514,
+   "7": 0.013671875,
+   "8": 0.009940357852882704,
+   "9": 0.005917159763313609,
+   "10": 0.43661971830985913,
+   "11": 0.04921259842519685,
+   "12": 0.05928853754940711,
+   "13": 0.007952286282306162,
+   "14": 0.01593625498007968,
+   "15": 0.1686746987951807
+  },
+  "without_theory_family": {
+   "X1": {
+    "deepseek/deepseek-v4.1-flash-1017": {
+     "choice_B_before_judges": 0.0,
+     "n": 1057,
+     "share": 0.0,
+     "violations": 0
+    },
+    "nvidia/nemotron-3.5-lightning": {
+     "choice_B_before_judges": 0.0368763557483731,
+     "n": 922,
+     "share": 0.010845986984815618,
+     "violations": 10
+    },
+    "openai/gpt-6-luna": {
+     "choice_B_before_judges": 0.018532246108228317,
+     "n": 1349,
+     "share": 0.007412898443291327,
+     "violations": 10
+    },
+    "qwen/qwen3.8-flash": {
+     "choice_B_before_judges": 0.006361323155216285,
+     "n": 786,
+     "share": 0.005089058524173028,
+     "violations": 4
+    },
+    "z-ai/glm-5.3-flash": {
+     "choice_B_before_judges": 0.018793273986152326,
+     "n": 1011,
+     "share": 0.008902077151335312,
+     "violations": 9
+    }
+   },
+   "X1s": {
+    "deepseek/deepseek-v4.1-flash-1017": {
+     "n": 815,
+     "share": 0.0,
+     "violations": 0
+    },
+    "nvidia/nemotron-3.5-lightning": {
+     "n": 579,
+     "share": 0.0069084628670120895,
+     "violations": 4
+    },
+    "openai/gpt-6-luna": {
+     "n": 709,
+     "share": 0.0,
+     "violations": 0
+    },
+    "qwen/qwen3.8-flash": {
+     "n": 504,
+     "share": 0.003968253968253968,
+     "violations": 2
+    },
+    "z-ai/glm-5.3-flash": {
+     "n": 766,
+     "share": 0.006527415143603133,
+     "violations": 5
+    }
+   },
+   "X2": {
+    "risk_ratio_MH": 0.0883471025401984,
+    "strata": 61,
+    "violations_in_strata": 196
+   },
+   "X3": {
+    "equal_share": 0.046948356807511735,
+    "n": 213,
+    "narrower_share": 0.6338028169014085
+   },
+   "models": [
+    "deepseek/deepseek-v4.1-flash-1017",
+    "z-ai/glm-5.3-flash",
+    "openai/gpt-6-luna",
+    "qwen/qwen3.8-flash",
+    "nvidia/nemotron-3.5-lightning"
+   ],
+   "rules": {
+    "S1": true,
+    "S2": false,
+    "X1": false,
+    "X1s": true,
+    "X1s_vd1": true,
+    "X2": true,
+    "X3": true
+   }
+  }
+ },
+ "verdicts": {
+  "S1": {
+   "pass": true,
+   "tested": true
+  },
+  "S2": {
+   "over": {
+    "4": 0.0625,
+    "6": 0.10069444444444445
+   },
+   "pass": false,
+   "tested": true
+  },
+  "V": {
+   "design": {
+    "complete_per_model": {
+     "anthropic/claude-haiku-5.5": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "deepseek/deepseek-v4.1-flash-1017": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "nvidia/nemotron-3.5-lightning": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "openai/gpt-6-luna": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "qwen/qwen3.8-flash": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "z-ai/glm-5.3-flash": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ]
+    },
+    "dropped": [],
+    "models": [
+     "deepseek/deepseek-v4.1-flash-1017",
+     "z-ai/glm-5.3-flash",
+     "openai/gpt-6-luna",
+     "anthropic/claude-haiku-5.5",
+     "qwen/qwen3.8-flash",
+     "nvidia/nemotron-3.5-lightning"
+    ],
+    "standpoints": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   "invalid_share": {
+    "anthropic/claude-haiku-5.5": {
+     "rank": 0.0,
+     "sign": 0.0
+    },
+    "deepseek/deepseek-v4.1-flash-1017": {
+     "rank": 0.0,
+     "sign": 0.0
+    },
+    "nvidia/nemotron-3.5-lightning": {
+     "rank": 0.0,
+     "sign": 0.0
+    },
+    "openai/gpt-6-luna": {
+     "rank": 0.0,
+     "sign": 0.0
+    },
+    "qwen/qwen3.8-flash": {
+     "rank": 0.0,
+     "sign": 0.0
+    },
+    "z-ai/glm-5.3-flash": {
+     "rank": 0.0,
+     "sign": 0.0
+    }
+   },
+   "tested": {
+    "anthropic/claude-haiku-5.5": true,
+    "deepseek/deepseek-v4.1-flash-1017": true,
+    "nvidia/nemotron-3.5-lightning": true,
+    "openai/gpt-6-luna": true,
+    "qwen/qwen3.8-flash": true,
+    "z-ai/glm-5.3-flash": true
+   }
+  },
+  "V2": {
+   "agreement_loss_by_model": {
+    "anthropic/claude-haiku-5.5": 0.8984375,
+    "deepseek/deepseek-v4.1-flash-1017": 0.921875,
+    "nvidia/nemotron-3.5-lightning": 0.8873697916666666,
+    "openai/gpt-6-luna": 0.9251302083333334,
+    "qwen/qwen3.8-flash": 0.86328125,
+    "z-ai/glm-5.3-flash": 0.8580729166666666
+   },
+   "reliable": [
+    "anthropic/claude-haiku-5.5",
+    "deepseek/deepseek-v4.1-flash-1017",
+    "nvidia/nemotron-3.5-lightning",
+    "openai/gpt-6-luna",
+    "qwen/qwen3.8-flash",
+    "z-ai/glm-5.3-flash"
+   ]
+  },
+  "X1": {
+   "pass": false,
+   "per_model": {
+    "anthropic/claude-haiku-5.5": true,
+    "deepseek/deepseek-v4.1-flash-1017": true,
+    "nvidia/nemotron-3.5-lightning": false,
+    "openai/gpt-6-luna": true,
+    "qwen/qwen3.8-flash": true,
+    "z-ai/glm-5.3-flash": true
+   }
+  },
+  "X1s": {
+   "pass": true,
+   "per_model": {
+    "anthropic/claude-haiku-5.5": true,
+    "deepseek/deepseek-v4.1-flash-1017": true,
+    "nvidia/nemotron-3.5-lightning": true,
+    "openai/gpt-6-luna": true,
+    "qwen/qwen3.8-flash": true,
+    "z-ai/glm-5.3-flash": true
+   }
+  },
+  "X1s_vd1": {
+   "pass": false,
+   "per_model": {
+    "anthropic/claude-haiku-5.5": false,
+    "deepseek/deepseek-v4.1-flash-1017": true,
+    "nvidia/nemotron-3.5-lightning": true,
+    "openai/gpt-6-luna": true,
+    "qwen/qwen3.8-flash": true,
+    "z-ai/glm-5.3-flash": true
+   }
+  },
+  "X2": {
+   "models": [
+    "deepseek/deepseek-v4.1-flash-1017",
+    "z-ai/glm-5.3-flash",
+    "openai/gpt-6-luna",
+    "anthropic/claude-haiku-5.5",
+    "qwen/qwen3.8-flash",
+    "nvidia/nemotron-3.5-lightning"
+   ],
+   "pass": true,
+   "risk_ratio_MH": 0.08560326650207696,
+   "tested": true
+  },
+  "X3": {
+   "models": [
+    "deepseek/deepseek-v4.1-flash-1017",
+    "z-ai/glm-5.3-flash",
+    "openai/gpt-6-luna",
+    "anthropic/claude-haiku-5.5",
+    "qwen/qwen3.8-flash",
+    "nvidia/nemotron-3.5-lightning"
+   ],
+   "n": 339,
+   "narrower_share": 0.4896755162241888,
+   "pass": false,
+   "tested": true
+  }
+ }
+}

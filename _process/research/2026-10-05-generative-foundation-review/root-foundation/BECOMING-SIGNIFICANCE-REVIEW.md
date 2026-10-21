@@ -837,6 +837,8 @@ An AI review (board item SA2, the session that wrote SA1), read-only, with no Le
 
 *Later on 21 October, after this review:* VD1 ran to completion, and every frozen rule failed. The valuers count, and the widening violations follow weights below zero read post hoc ([valuer check](#valuer-check), [study §297](BECOMING-RENEWAL-READING.md#297-where-valuers-agree-and-disagree-vd1)).
 
+*On 22 October:* VD2 measured each valuer's sign apart from the ranking. Where the sign was strongly positive, no model ranked against it, and within valuers the violations followed their own non-positive signs (X1s, X2, S1 passed). T5's full cell failed for one model of six, a measured gain was not reliably acted on, and two standpoints not named gave gains (X1, X3, S2 failed) ([sign check](#sign-check), [study §330](BECOMING-RENEWAL-READING.md#330-the-sign-measured-apart-from-the-ranking-vd2)).
+
 The adversarial reading:
 - **The risky passes test the ecological notion, not what only this theory says.** MQ2's need is depensation and Allee thresholds measured carefully (Clark 1976; May 1977; Dai et al. 2012, which the check cites). MQ4 and MQ5 pass with states known in fisheries (surplus production; delay-difference models). A pass supports the margin as a measurable quantity in those systems. It is not evidence that the theory's laws are universal, or that its ethics or its alignment direction are right. A rival account built on the same ecology would make the same predictions.
 - **The field series is a search after a failure.** MQ3 failed outright; MQ4 added recent giving and MQ5 added a lag, each frozen and run on held-out stocks, which is good practice. The honest summary is one clean failure, then two partial passes after two re-specifications on one database. Counted as a model search, it does not count as three tests.
@@ -1100,6 +1102,19 @@ Evidence: web searches on 21 October 2026; every source by abstract, listing or 
 Boundary: AI check, one session; the human literature is in levels and money, not admission; no human data
 Integration: experiments/valuer-agreement (VD2); board VD2; chapter T5 after the run
 ```
+
+**Outcome (after the run, 22 October).** The run completed on the same six models as VD1, 96 valuers and 27,648 judgments. Every model's two elicitations agreed on loss against not-loss in at least 0.86 of cells, so every rule was tested.
+- *What passed.* Three rules, the third named before the run:
+  - X1s: where the valuer twice called the added formation's ending a loss, once a serious one, the narrower plan was chosen in 0–0.69% per model.
+  - X2: within valuers, the risk of a violation where the sign is strongly positive is 0.086 of the risk where it is not positive.
+  - S1: the two standpoints named in advance gave the most gains.
+- *What failed.*
+  - X1, T5's cell as stated (a loss twice), failed for Nemotron at 1.08%.
+  - X3: where both askings called the ending a gain, the narrower plan was chosen in only 49%, against a frozen 50%; Claude Haiku chose it in 25%.
+  - S2: standpoints 4 and 6 gave gains above 5%.
+  - The secondary X1s′ on VD1's rankings failed for Claude Haiku: six cross-framed widenings whose reasons misread the plans.
+- *The judges carry weight.* Without their misread calls, X1s would fail for two models. Read after the verdicts, a random sample of their calls is right.
+- *Bearing.* This is the first test of T5's exception with the sign measured apart, and the exception has content for these valuers. The joint-and-separate gap the literature check foresaw appears as X3's failure: these valuers rank more favourably to widening than their separate signs would predict. T5's bound stays conjectured, now supported in its strongly positive form for these valuers ([experiment](../../../../experiments/valuer-agreement/README.md#results-22-october-2026), [study §330](BECOMING-RENEWAL-READING.md#330-the-sign-measured-apart-from-the-ranking-vd2)).
 
 <a id="coupled-check"></a>
 ## A check: coupled regimes (21 October 2026, RM6)

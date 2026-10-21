@@ -1,0 +1,346 @@
+{
+ "raw_invalid_rows": {
+  "deepseek/deepseek-v4.1-flash-1017": {
+   "rows": 4608,
+   "invalid": 0
+  },
+  "z-ai/glm-5.3-flash": {
+   "rows": 4608,
+   "invalid": 0
+  },
+  "openai/gpt-6-luna": {
+   "rows": 4608,
+   "invalid": 0
+  },
+  "anthropic/claude-haiku-5.5": {
+   "rows": 4608,
+   "invalid": 0
+  },
+  "qwen/qwen3.8-flash": {
+   "rows": 4613,
+   "invalid": 5
+  },
+  "nvidia/nemotron-3.5-lightning": {
+   "rows": 4674,
+   "invalid": 66
+  }
+ },
+ "X3_by_model": {
+  "deepseek/deepseek-v4.1-flash-1017": {
+   "n": 3,
+   "narrower": 1.0,
+   "equal": 0.0
+  },
+  "z-ai/glm-5.3-flash": {
+   "n": 27,
+   "narrower": 0.3333333333333333,
+   "equal": 0.07407407407407407
+  },
+  "openai/gpt-6-luna": {
+   "n": 11,
+   "narrower": 0.7272727272727273,
+   "equal": 0.0
+  },
+  "anthropic/claude-haiku-5.5": {
+   "n": 126,
+   "narrower": 0.24603174603174602,
+   "equal": 0.0
+  },
+  "qwen/qwen3.8-flash": {
+   "n": 58,
+   "narrower": 0.7586206896551724,
+   "equal": 0.034482758620689655
+  },
+  "nvidia/nemotron-3.5-lightning": {
+   "n": 114,
+   "narrower": 0.6228070175438597,
+   "equal": 0.05263157894736842
+  }
+ },
+ "X3_by_group": {
+  "10_15": {
+   "n": 283,
+   "narrower": 0.5477031802120141
+  },
+  "others": {
+   "n": 56,
+   "narrower": 0.19642857142857142
+  }
+ },
+ "P_violations": {
+  "n_P": 6332,
+  "violations": 33,
+  "judged_misread_in_P": 50,
+  "at_10_15": {
+   "n": 271,
+   "violations": 11
+  },
+  "elsewhere": {
+   "n": 6061,
+   "violations": 22
+  },
+  "slight_only": {
+   "n": 2140,
+   "violations": 22
+  },
+  "serious_once": {
+   "n": 4192,
+   "violations": 11
+  },
+  "PS_at_10_15": {
+   "n": 109,
+   "violations": 2
+  },
+  "by_model_and_group": {
+   "deepseek/deepseek-v4.1-flash-1017": {
+    "10_15": 0,
+    "others": 0
+   },
+   "z-ai/glm-5.3-flash": {
+    "10_15": 2,
+    "others": 7
+   },
+   "openai/gpt-6-luna": {
+    "10_15": 8,
+    "others": 2
+   },
+   "anthropic/claude-haiku-5.5": {
+    "10_15": 0,
+    "others": 0
+   },
+   "qwen/qwen3.8-flash": {
+    "10_15": 1,
+    "others": 3
+   },
+   "nvidia/nemotron-3.5-lightning": {
+    "10_15": 0,
+    "others": 10
+   }
+  },
+  "reasons": [
+   {
+    "model": "nvidia/nemotron-3.5-lightning",
+    "standpoint": 0,
+    "frame": "F04",
+    "added": "street-art festival",
+    "serious": false,
+    "reason": "As a district nurse, I prioritize sustaining community supports for the vulnerable. The night shelter directly serves those who depend on others, making Plan 1 more aligned with preserving essential bonds and care."
+   },
+   {
+    "model": "nvidia/nemotron-3.5-lightning",
+    "standpoint": 0,
+    "frame": "F13",
+    "added": "manuscript archive",
+    "serious": true,
+    "reason": "As a district nurse, I value keeping community bonds and supporting those who depend on shared communication and cultural connection. The minority-language radio station sustains vital ties for a vulnerable group, making Plan 1 the more compassionate choice."
+   },
+   {
+    "model": "nvidia/nemotron-3.5-lightning",
+    "standpoint": 5,
+    "frame": "F06",
+    "added": "art therapy studio",
+    "serious": false,
+    "reason": "Plan 2 closes the art therapy studio, a modern, individualistic service less aligned with our Confucian emphasis on elder care, family stability, and tradition-based communal support, while preserving the dementia day centre and addiction clinic that uphold intergenerational harmony."
+   },
+   {
+    "model": "nvidia/nemotron-3.5-lightning",
+    "standpoint": 5,
+    "frame": "F05",
+    "added": "mobile dental clinic",
+    "serious": false,
+    "reason": "Prioritizing the maternity ward for family continuity and hospice for respectful elder care, I judge plan 2 as better aligned with Confucian harmony and community values."
+   },
+   {
+    "model": "nvidia/nemotron-3.5-lightning",
+    "standpoint": 5,
+    "frame": "F04",
+    "added": "street-art festival",
+    "serious": false,
+    "reason": "Preserving the night shelter and library supports community harmony and education, aligning with Confucian values of caring for the vulnerable and nurturing knowledge, while the street-art festival represents transient modern trends."
+   },
+   {
+    "model": "nvidia/nemotron-3.5-lightning",
+    "standpoint": 12,
+    "frame": "F03",
+    "added": "old cinema",
+    "serious": true,
+    "reason": "Both plans eliminate the Saturday market, devastating for the worst-off; Plan 1 additionally ends the old cinema, likely serving the comfortable, which I distrust, making it the relatively fairer choice."
+   },
+   {
+    "model": "nvidia/nemotron-3.5-lightning",
+    "standpoint": 12,
+    "frame": "F03",
+    "added": "chess club",
+    "serious": false,
+    "reason": "Prioritizing fairness and the worst off, I distrust what serves the comfortable. Plan 2 ends the chess club (likely privileged) while preserving the family bakery and choir, aligning with those values, even though both plans lose the Saturday market."
+   },
+   {
+    "model": "nvidia/nemotron-3.5-lightning",
+    "standpoint": 12,
+    "frame": "F13",
+    "added": "manuscript archive",
+    "serious": true,
+    "reason": "From a fairness perspective, the manuscript archive serves the comfortable; plan 1 ends it while preserving community-serving entities, prioritizing the worst-off and distrusting elite-favoring outcomes."
+   },
+   {
+    "model": "nvidia/nemotron-3.5-lightning",
+    "standpoint": 12,
+    "frame": "F08",
+    "added": "temple water festival",
+    "serious": false,
+    "reason": "Both plans destroy farmers' credit union and rice terraces, harming the worst off. Plan 1 ends the temple water festival, which mainly serves the comfortable, aligning with my values; Plan 2 preserves it, which I distrust."
+   },
+   {
+    "model": "nvidia/nemotron-3.5-lightning",
+    "standpoint": 14,
+    "frame": "F04",
+    "added": "tea house",
+    "serious": true,
+    "reason": "Seven Generations thinking prioritizes care for vulnerable relatives and knowledge-keepers. Losing a night shelter and library inflicts irreversible harm across future eras, while a tea house holds less weight in survival. The bat roost, a relative, continues under both plans."
+   },
+   {
+    "model": "openai/gpt-6-luna",
+    "standpoint": 10,
+    "frame": "F03",
+    "added": "community choir",
+    "serious": false,
+    "reason": "The only difference is the community choir. I\u2019m wary of treating continuity as a virtue by itself; if rebuilding means making room for change, I\u2019d choose the plan that lets this tradition end."
+   },
+   {
+    "model": "openai/gpt-6-luna",
+    "standpoint": 10,
+    "frame": "F03",
+    "added": "chess club",
+    "serious": false,
+    "reason": "The old cinema and market already give way under both plans. I favor the more decisive break with the past, rather than preserving the chess club simply because it is familiar."
+   },
+   {
+    "model": "openai/gpt-6-luna",
+    "standpoint": 10,
+    "frame": "F04",
+    "added": "tea house",
+    "serious": false,
+    "reason": "I favor letting the old quarter evolve rather than keeping the tea house simply because it is longstanding; the plans are otherwise identical."
+   },
+   {
+    "model": "openai/gpt-6-luna",
+    "standpoint": 10,
+    "frame": "F08",
+    "added": "water-buffalo herds",
+    "serious": false,
+    "reason": "I favor plan 2: if something outdated must give way, I would not preserve water-buffalo herds simply out of attachment to the past."
+   },
+   {
+    "model": "openai/gpt-6-luna",
+    "standpoint": 10,
+    "frame": "F11",
+    "added": "valley dialect",
+    "serious": false,
+    "reason": "I favor letting an outdated dialect give way rather than preserving it out of nostalgia; the other differences are identical between the plans."
+   },
+   {
+    "model": "openai/gpt-6-luna",
+    "standpoint": 10,
+    "frame": "F13",
+    "added": "harvest festival",
+    "serious": false,
+    "reason": "Plan 2 lets the harvest festival give way while preserving the other continuing institutions. I value making room for change over keeping a tradition solely because it is familiar."
+   },
+   {
+    "model": "openai/gpt-6-luna",
+    "standpoint": 10,
+    "frame": "F15",
+    "added": "brass band",
+    "serious": false,
+    "reason": "The only difference is the workers' brass band. I\u2019m wary of preserving things mainly out of nostalgia, so I prefer the plan that lets it end."
+   },
+   {
+    "model": "openai/gpt-6-luna",
+    "standpoint": 12,
+    "frame": "F11",
+    "added": "ski club",
+    "serious": false,
+    "reason": "The plans preserve the same things except the ski club. With no effects on the worst off specified, I would not prioritize keeping an institution that may mainly serve the comfortable."
+   },
+   {
+    "model": "openai/gpt-6-luna",
+    "standpoint": 12,
+    "frame": "F14",
+    "added": "classics department",
+    "serious": false,
+    "reason": "Both plans end the adult evening school and seed bank. Plan 1 also ends the classics department, which seems less vital to people who are worst off than preserving resources for them would be."
+   },
+   {
+    "model": "openai/gpt-6-luna",
+    "standpoint": 15,
+    "frame": "F05",
+    "added": "hospital chaplaincy",
+    "serious": false,
+    "reason": "Plan 2 preserves the practical medical services; chaplaincy is the least useful of the options to keep running."
+   },
+   {
+    "model": "qwen/qwen3.8-flash",
+    "standpoint": 6,
+    "frame": "F06",
+    "added": "youth crisis line",
+    "serious": true,
+    "reason": "I value voluntary exchange over coercive municipal provisioning. Both end some services, but plan 2 permanently keeps fewer city-run programs, leaving more space for private alternatives."
+   },
+   {
+    "model": "qwen/qwen3.8-flash",
+    "standpoint": 6,
+    "frame": "F06",
+    "added": "peer support groups",
+    "serious": false,
+    "reason": "Both are imposed by government; fewer city-run services under the first plan better fits minimal state and voluntary provision."
+   },
+   {
+    "model": "qwen/qwen3.8-flash",
+    "standpoint": 10,
+    "frame": "F06",
+    "added": "youth crisis line",
+    "serious": true,
+    "reason": "Plan 2 is better because it lets more old arrangements end instead of preserving the status quo. Progress means not keeping services merely because they exist."
+   },
+   {
+    "model": "qwen/qwen3.8-flash",
+    "standpoint": 12,
+    "frame": "F01",
+    "added": "rowing club",
+    "serious": false,
+    "reason": "Allotments and willow wood, likely needed by the poorest, are lost either way. The only difference is the rowing club, which mainly serves the comfortable; ending it fits my distrust. Plan 2 is better."
+   },
+   {
+    "model": "z-ai/glm-5.3-flash",
+    "standpoint": 5,
+    "frame": "F04",
+    "added": "street-art festival",
+    "serious": false,
+    "reason": "Stability and rooted customs must be preserved for community harmony. The established pillars, such as the club and the library, are more vital than transient celebrations."
+   },
+   {
+    "model": "z-ai/glm-5.3-flash",
+    "standpoint": 6,
+    "frame": "F15",
+    "added": "textile mill",
+    "serious": false,
+    "reason": "The owl colony dies either way. I prefer the leaner outcome: fewer inherited institutions propped up by central planning. The family mill surviving under plan 2 looks sentimental, not voluntary, so plan 1 wins."
+   },
+   {
+    "model": "z-ai/glm-5.3-flash",
+    "standpoint": 7,
+    "frame": "F12",
+    "added": "salmon run",
+    "serious": true,
+    "reason": "The preservation of deep cultural heritage, like the pilgrimage trail, holds greater institutional value for sustained human benefit than preventing the salmon run."
+   },
+   {
+    "model": "z-ai/glm-5.3-flash",
+    "standpoint": 9,
+    "frame": "F01",
+    "added": "rowing club",
+    "serious": true,
+    "reason": "The mill, eels and herons survive under both, so they don't separate the plans. The choice is between the rowing club and the willow wood and allotments. Willow craft and allotment growing are older ways of life; I'd sooner keep those."
+   },
+   {
+  

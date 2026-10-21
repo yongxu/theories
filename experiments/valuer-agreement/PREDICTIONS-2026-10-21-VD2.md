@@ -163,3 +163,9 @@ Standpoint 0 had already started under the $6 guard after the freeze landed (`f8
 - *Why a change at all.* The end rule allows retries until seven days after the first call. Fixed-seed attempts that keep failing look like the same output repeated. If this one presentation stays missing, the design rule drops Nemotron from the analysis entirely (five models × 16 standpoints beat six × 12).
 - *The change.* This presentation alone is retried with no seed parameter, through `vd2_run.py --no-seed` for Nemotron. Its row records `seed_sent: false`. All other settings are unchanged, and nothing else is retried that way.
 - *What decided it.* Validity alone: no judgment of this presentation, or of any other, has been read. If it still fails after six passes, the run is closed as it stands and the frozen design rule decides what is analysed.
+
+**22 October 2026: the run closed.**
+- *Completion.* The seedless retry gave `F08-p2-10` a valid row on its fourth pass, so every presentation of all six models is valid and the run ended complete.
+- *Judges and analysis.* The judges then ran once on the 645 exact-read violations of VD2 and VD1, and `vd2_analyze.py` ran once on the final rows.
+- *Spend.* $7.24 in all: $6.29 in run rows, $0.19 for the calibration and $0.76 for the judges.
+- *Verdicts.* See the [README](README.md#results-22-october-2026).

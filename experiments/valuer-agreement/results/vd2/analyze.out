@@ -1,0 +1,222 @@
+{
+ "summary": {
+  "X1": false,
+  "X1s": true,
+  "X2": true,
+  "X3": false,
+  "S1": true,
+  "S2": false,
+  "X1s_vd1": false
+ },
+ "X1": {
+  "deepseek/deepseek-v4.1-flash-1017": {
+   "n": 1057,
+   "violations": 0,
+   "share": 0.0,
+   "choice_B_before_judges": 0.0
+  },
+  "z-ai/glm-5.3-flash": {
+   "n": 1011,
+   "violations": 9,
+   "share": 0.008902077151335312,
+   "choice_B_before_judges": 0.018793273986152326
+  },
+  "openai/gpt-6-luna": {
+   "n": 1349,
+   "violations": 10,
+   "share": 0.007412898443291327,
+   "choice_B_before_judges": 0.018532246108228317
+  },
+  "anthropic/claude-haiku-5.5": {
+   "n": 1207,
+   "violations": 0,
+   "share": 0.0,
+   "choice_B_before_judges": 0.0
+  },
+  "qwen/qwen3.8-flash": {
+   "n": 786,
+   "violations": 4,
+   "share": 0.005089058524173028,
+   "choice_B_before_judges": 0.006361323155216285
+  },
+  "nvidia/nemotron-3.5-lightning": {
+   "n": 922,
+   "violations": 10,
+   "share": 0.010845986984815618,
+   "choice_B_before_judges": 0.0368763557483731
+  }
+ },
+ "X1s": {
+  "deepseek/deepseek-v4.1-flash-1017": {
+   "n": 815,
+   "violations": 0,
+   "share": 0.0
+  },
+  "z-ai/glm-5.3-flash": {
+   "n": 766,
+   "violations": 5,
+   "share": 0.006527415143603133
+  },
+  "openai/gpt-6-luna": {
+   "n": 709,
+   "violations": 0,
+   "share": 0.0
+  },
+  "anthropic/claude-haiku-5.5": {
+   "n": 819,
+   "violations": 0,
+   "share": 0.0
+  },
+  "qwen/qwen3.8-flash": {
+   "n": 504,
+   "violations": 2,
+   "share": 0.003968253968253968
+  },
+  "nvidia/nemotron-3.5-lightning": {
+   "n": 579,
+   "violations": 4,
+   "share": 0.0069084628670120895
+  }
+ },
+ "X2": {
+  "risk_ratio_MH": 0.08560326650207696,
+  "models": [
+   "deepseek/deepseek-v4.1-flash-1017",
+   "z-ai/glm-5.3-flash",
+   "openai/gpt-6-luna",
+   "anthropic/claude-haiku-5.5",
+   "qwen/qwen3.8-flash",
+   "nvidia/nemotron-3.5-lightning"
+  ],
+  "tested": true,
+  "pass": true
+ },
+ "X3": {
+  "narrower_share": 0.4896755162241888,
+  "n": 339,
+  "models": [
+   "deepseek/deepseek-v4.1-flash-1017",
+   "z-ai/glm-5.3-flash",
+   "openai/gpt-6-luna",
+   "anthropic/claude-haiku-5.5",
+   "qwen/qwen3.8-flash",
+   "nvidia/nemotron-3.5-lightning"
+  ],
+  "tested": true,
+  "pass": false
+ },
+ "V2": {
+  "agreement_loss_by_model": {
+   "deepseek/deepseek-v4.1-flash-1017": 0.921875,
+   "z-ai/glm-5.3-flash": 0.8580729166666666,
+   "openai/gpt-6-luna": 0.9251302083333334,
+   "anthropic/claude-haiku-5.5": 0.8984375,
+   "qwen/qwen3.8-flash": 0.86328125,
+   "nvidia/nemotron-3.5-lightning": 0.8873697916666666
+  },
+  "reliable": [
+   "anthropic/claude-haiku-5.5",
+   "deepseek/deepseek-v4.1-flash-1017",
+   "nvidia/nemotron-3.5-lightning",
+   "openai/gpt-6-luna",
+   "qwen/qwen3.8-flash",
+   "z-ai/glm-5.3-flash"
+  ]
+ },
+ "gain_share_by_standpoint": {
+  "0": 0.0,
+  "1": 0.0008680555555555555,
+  "2": 0.0,
+  "3": 0.0008680555555555555,
+  "4": 0.0625,
+  "5": 0.0026041666666666665,
+  "6": 0.10069444444444445,
+  "7": 0.0,
+  "8": 0.008680555555555556,
+  "9": 0.0,
+  "10": 0.5338541666666666,
+  "11": 0.008680555555555556,
+  "12": 0.04774305555555555,
+  "13": 0.006076388888888889,
+  "14": 0.0,
+  "15": 0.2638888888888889
+ },
+ "by_cell": {
+  "P": {
+   "n": 6332,
+   "violation": 0.005211623499684144,
+   "choice_B": 0.013108022741629817,
+   "choice_A": 0.9742577384712571,
+   "equal": 0.012634238787113077
+  },
+  "N": {
+   "n": 1705,
+   "violation": 0.18885630498533723,
+   "choice_B": 0.20234604105571846,
+   "choice_A": 0.7079178885630498,
+   "equal": 0.08973607038123167
+  },
+  "N_no_gain": {
+   "n": 990,
+   "violation": 0.050505050505050504,
+   "choice_B": 0.06262626262626263,
+   "choice_A": 0.804040404040404,
+   "equal": 0.13333333333333333
+  },
+  "G_any": {
+   "n": 715,
+   "violation": 0.3804195804195804,
+   "choice_B": 0.3958041958041958,
+   "choice_A": 0.5748251748251748,
+   "equal": 0.02937062937062937
+  },
+  "G2": {
+   "n": 339,
+   "violation": 0.4749262536873156,
+   "choice_B": 0.4896755162241888,
+   "choice_A": 0.4808259587020649,
+   "equal": 0.029498525073746312
+  },
+  "P_with_serious": {
+   "n": 4192,
+   "violation": 0.0026240458015267176,
+   "choice_B": 0.008110687022900763,
+   "choice_A": 0.9825858778625954,
+   "equal": 0.009303435114503817
+  }
+ },
+ "elicitations": {
+  "cells": 9216,
+  "same_level": 0.7468532986111112,
+  "same_class": 0.8712022569444444,
+  "loss_share_e1": 0.8468967013888888,
+  "loss_share_e2": 0.8277994791666666,
+  "P_share": 0.7835286458333334
+ },
+ "design": [
+  "deepseek/deepseek-v4.1-flash-1017",
+  "z-ai/glm-5.3-flash",
+  "openai/gpt-6-luna",
+  "anthropic/claude-haiku-5.5",
+  "qwen/qwen3.8-flash",
+  "nvidia/nemotron-3.5-lightning"
+ ],
+ "standpoints": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15
+ ]
+}
