@@ -1399,6 +1399,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   one they all meet is kept to the horizon and broken there. Witnesses: the logistic law,
   whose optimum draws a source from the level a dweller needs to where it renews most, and a
   gate, under which holding at the dweller's need and below it are both optima.
+  Kept at a need through the horizon, where what is given at or above the need is at most q,
+  a course draws with what it leaves at most the start with q a step, and the optima among
+  the keeping courses hold where q is given and leave exactly the need; so keeping forgoes,
+  against the course holding the greatest renewal r and leaving nothing, (r - q) n and the
+  need. A coupling of the dependence below that amount leaves only optima breaking it within
+  the horizon, one beyond it only optima keeping it, and both have optima; where the need
+  lies above every level of greatest renewal the amount grows with the horizon and outweighs
+  every coupling short of it. Witness: under the logistic law, keeping the dweller through
+  n + 2 steps forgoes n + 3.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
