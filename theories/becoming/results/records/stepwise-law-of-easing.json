@@ -95,8 +95,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T135044.825185Z): the 9 declarations Becoming.Ranking and Becoming.JointDraw gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 314; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T135044.825185Z）：Becoming.Ranking 与 Becoming.JointDraw 新增的 9 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 314 节；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T135044.825185Z): the 9 declarations Becoming.Ranking and Becoming.JointDraw gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 315; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T135044.825185Z）：Becoming.Ranking 与 Becoming.JointDraw 新增的 9 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 315 节；未经人的独立审查。"
   },
   "next_delta": {
     "en": "A flow-level premise exactly equivalent to undermining no included event; the relation-level reading; the form of L under the condition; J1 step by step; an independent review.",
@@ -216,8 +216,8 @@
   ],
   "history": [
     {
-      "en": "21 October 2026: added (ST1), the stepwise law of easing: under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing; restraint over any number of drawers under the stepwise reading where the restrained flow takes within what it gives; study section 314.",
-      "zh": "2026年10月21日：新增（ST1），逐步的缓和之律：在缓和下逐步读法所撤回的恰是缓和之进程所侵蚀的事件；水平从不下降的进程不侵蚀任何事件；节制之流所取不超过所给之处，逐步读法下对任意多个汲取者的节制；研究第 314 节。"
+      "en": "21 October 2026: added (ST1), the stepwise law of easing: under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing; restraint over any number of drawers under the stepwise reading where the restrained flow takes within what it gives; study section 315.",
+      "zh": "2026年10月21日：新增（ST1），逐步的缓和之律：在缓和下逐步读法所撤回的恰是缓和之进程所侵蚀的事件；水平从不下降的进程不侵蚀任何事件；节制之流所取不超过所给之处，逐步读法下对任意多个汲取者的节制；研究第 315 节。"
     }
   ]
 }

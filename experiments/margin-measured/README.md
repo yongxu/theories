@@ -1,10 +1,10 @@
 # The margin as a measured quantity
 
-AI-written, 20–21 October 2026. Board items MQ1–MQ5; this account is MC1's. Study sections [253](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#253-the-margin-as-a-measured-quantity-mq1), [266](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#266-the-margins-equation-of-state-against-held-out-regimes-mq2), [272](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#272-the-margin-of-a-regime-in-the-field-mq3), [277](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#277-a-state-of-level-and-recent-giving-in-the-field-mq4) and [280](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#280-a-lag-and-the-draws-response-in-the-field-mq5). The claims these tests bear on are the chapter's theses [T1](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#t1-persistence-certifies-the-joint-draw) and [T2](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#t2-the-state-of-a-renewable-condition-under-a-draw). The five reports as first written are kept in [history](history/README-2026-10-21-five-reports.md).
+AI-written, 20–21 October 2026. Board items MQ1–MQ6; this account is MC1's, with MQ6 added. Study sections [253](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#253-the-margin-as-a-measured-quantity-mq1), [266](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#266-the-margins-equation-of-state-against-held-out-regimes-mq2), [272](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#272-the-margin-of-a-regime-in-the-field-mq3), [277](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#277-a-state-of-level-and-recent-giving-in-the-field-mq4) [280](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#280-a-lag-and-the-draws-response-in-the-field-mq5) and [314](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#314-the-margins-time-to-break-past-the-fold-in-the-lab-mq6). The claims these tests bear on are the chapter's theses [T1](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#t1-persistence-certifies-the-joint-draw) and [T2](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#t2-the-state-of-a-renewable-condition-under-a-draw). The five reports as first written are kept in [history](history/README-2026-10-21-five-reports.md).
 
-Thermodynamics became more than formal when temperature and heat became measured state quantities whose laws could fail. These tests ask the same of the theory's **margin**: a renewable condition's level above its **need** (the level below which renewal stops), less the draws on it. Five tests ran on three systems:
+Thermodynamics became more than formal when temperature and heat became measured state quantities whose laws could fail. These tests ask the same of the theory's **margin**: a renewable condition's level above its **need** (the level below which renewal stops), less the draws on it. Six tests ran on three systems:
 - MQ1: a simulated Allee yeast and a side-effect gridworld;
-- MQ1 and MQ2: real yeast under serial dilution (Dai et al. 2012);
+- MQ1, MQ2 and MQ6: real yeast under serial dilution, at constant regimes (Dai et al. 2012) and driven past its fold (Dai, Korolev and Gore 2015);
 - MQ3–MQ5: assessed fish stocks (RAM Legacy database).
 
 Every test's predictions and rules were committed before the run, or before any held-out value was read. Every verdict is kept, failures included.
@@ -12,7 +12,8 @@ Every test's predictions and rules were committed before the run, or before any 
 ## The answer
 
 In the laboratory the margin is a measurable state quantity of a **regime** (the condition together with the standing draws on it), not of the condition alone. In managed fish stocks the regime itself moves within the span of a forecast, so there the margin is not the state.
-- **In the laboratory, it predicts thresholds.** Measured by intervention, the margin bounds the time to break. A renewal curve fitted on some regimes predicts the need, and the fates the need separates, in regimes it never saw.
+- **In the laboratory, it predicts thresholds, and the level is the state.** Measured by intervention, the margin bounds the time to break. A renewal curve fitted on some regimes predicts the need, and the fates the need separates, in regimes it never saw. At a constant draw the level is the whole state, and the regime's level carries from one experiment to another within 8%.
+- **Driven past the fold, the break comes early.** In yeast whose dilution rose or whose sucrose fell day by day, the populations broke three and at least six days before the renewal curve measured in constant regimes said. The fold that sets the break lies before where constant regimes put it. So the margin is least well measured where the break is decided, and the error points toward a late warning.
 - **In managed fish stocks, it ranks the risk of a break but does not time it.** The giving does not follow the level alone, and the draw does not stay fixed.
 - **The state is wider than the level.** It is the level, the recent giving and one lag. The theory's two readings, giving read off the level and giving held as it was, are the two ends of one law, and the stocks lie near the second.
 - **Harms on a shared condition do not add, though the draws do.**
@@ -48,11 +49,15 @@ History added nothing to the break-day distribution, and the same test detected 
   - That need separated survivors from extinctions, 93–100% on each side, where a model with no need classifies 68–81% (A1).
   - The measured need rose with the draw (B2).
 - **Where it failed, and why.** It overstated the level next to the fold (1.5× at DF 1600), and it missed the fates after a salt shock in a separate experiment, whose levels sat 8–20% lower (S, S2, C1, C2). Post hoc, both failures share one cause. At equal density, per-capita giving falls with the dilution factor as DF^(−0.31 ± 0.01). So the draw lowers giving beyond removing cells, and the renewal curve belongs to the regime, not to the density alone.
+- **Under a nutrient driver** (MQ6). A map fitted on five sucrose levels of Dai, Korolev and Gore's experiment predicted the need of the held-out levels within a factor 1.5 at 0.6% and 0.4%, but 1.7 times too low at 0.2%, next to the fold (A2 failed).
+  - The frozen fate reading (a population survives if it is higher on day 6 than on day 1) counted noise at the instrument's floor as survival, and A1 failed on it: 21–26% of low starters "survived".
+  - Read by the floor, as MQ2 read fates, the predicted need separates 97–100% on each side (post hoc).
+  - The regime's level at a constant dilution carried from the 2012 experiment to the 2015 one within 8% (C1).
 - **In the field** (MQ3), the regime's point did not separate the fates of stocks under held catches: 63% of episodes below it fell, against the 80% required (F3). There the giving itself moves (finding 3).
 
 ### 3. The state: the level in the laboratory; level, recent giving and one lag in the field
 
-- **Laboratory.** On real yeast, adding yesterday's density explains less than 10% more of tomorrow's at every dilution factor (D1). Post hoc, the excess, up to 9.1%, is still above a Markov null's 0.6%.
+- **Laboratory.** On real yeast, adding yesterday's density explains less than 10% more of tomorrow's at every dilution factor (D1). Post hoc, the excess, up to 9.1%, is still above a Markov null's 0.6%. In the 2015 experiment's constant group, the renewal curve's one-day residuals carry nothing from one day to the next (lag-1 autocorrelation −0.14; MQ6 L).
 - **Field: the level is not the state.** In assessed stocks, last year's escapement removed a further 0.22 of the residual variance (MQ3 F0). A giving law of the level, fitted on a stock's earlier years, forecast worse than the frozen rest, which holds giving as it was: 0.64 against 0.77 for the one-year direction (F1, F2).
 - **Level and recent giving** (MQ4, on 76 stocks no analysis had read). In SP_t = φ SP_{t−1} + (1 − φ) g(E_t), φ = 0 is the regime's step and φ = 1 the frozen rest.
   - Recent giving adds beyond the level (median 0.45 of the residual variance; G1).
@@ -73,7 +78,17 @@ History added nothing to the break-day distribution, and the same test detected 
 
   So the order laws reach the field's state on the low side of its level law, below the peak, where the point of no return lies. Rests at or above the draw are the regime's on either side, since that law needs no rising.
 
-### 4. Time to break: bounded in the model, ranked but not timed in the field
+### 4. Time to break: bounded in the model, early past the fold in the lab, ranked but not timed in the field
+
+- **In the lab, past the fold** (MQ6). Yeast populations were driven past their fold, by dilution up 10% a day or sucrose down 20% a day. The renewal curves came from constant regimes: the 2012 experiment's eight dilution factors, and the 2015 experiment's nine sucrose levels.
+  - **Away from the break**, the regime margin forecasts the level better than the frozen rest, persistence and the last ratio continued. Under falling sucrose it wins at three and five days (median |log error| 0.11 and 0.20, against at best 0.19 and 0.60; T1a passed). Under rising dilution it wins at three days but not at five (T1a failed).
+  - **It does not time the break** (T2 failed on both runs). Under rising dilution, every population began its free fall on day 15–17 (DF 1,427–1,726), while the map's fold is not passed until day 19 (DF 2,089). Under falling sucrose, all 20 populations began on day 20, and the map said day 23.
+  - **Near the break**, continuing the last ratio beats the map (T1b failed on both runs).
+  - **Post hoc** (not verdicts):
+    - Giving falls below the map from about three days before the break in both runs.
+    - The onsets imply folds near DF 1,240 and 0.18% sucrose, against the maps' 1,930 and 0.12%.
+    - With the map's level matched to the constant group, the dilution run's one-day errors fall below the frozen rest's. The late losses remain.
+  - **Two causes are left, and these data cannot separate them.** The smooth class may understate the need next to the fold; under sucrose it does so in constant regimes too (A2). Or a worsening regime may lower giving below what the same condition gives in a constant one.
 
 - **Ranks risk.** The frozen-rest margin over the net draw ranks the risk that a stock falls below half its level within ten years. The share falling is 0.32, 0.15, 0.09 and 0.03 across its four classes (MQ4 T1).
 - **Does not time it.** Of the origins it puts within five years, only 32% break within ten (T2).
@@ -189,6 +204,21 @@ Classes in MQ1:
 | D1 the draw follows the stock (frozen same-year form) | **failed** (36 of 67) |
 | D2 the draw's law closes half of the held draw's ten-year gap | **failed** (0.45) |
 
+**MQ6, past the fold in the lab** (Dai, Korolev and Gore 2015; frozen and landed at `6a579be22`, the odd-level fit at `f9480aa82` and the all-level fit at `d1d9b1ac9`, each before the next data were read): 3 of 10 passed.
+
+| Prediction | Verdict |
+|---|---|
+| A1 the need of held-out sucrose levels separates fates | **failed** (21–26% of low starters "survive" on the frozen reading, which counts noise at the floor; post hoc, by the floor, 97–100%) |
+| A2 held-out need within 1.5× of the need read from fates | **failed** (0.86 at 0.6%, 0.72 at 0.4%, 0.58 at 0.2%) |
+| T1a-DF the regime margin beats the frozen rest, persistence and trend at 3 and 5 days, rising dilution | **failed** (wins at 3 days, 0.25 against 0.32; loses to trend at 5, 0.75 against 0.68) |
+| T1b-DF the same near the break, 1 and 3 days | **failed** (trend 0.26 against 0.77) |
+| T2-DF free-fall onsets within 2 days of the map's | **failed** (observed day 15–17, the map none by day 20) |
+| T1a-SUC the same, falling sucrose | **passed** (0.11 and 0.20 against at best 0.19 and 0.60) |
+| T1b-SUC the same near the break | **failed** (trend 0.17 against 0.24 at one day) |
+| T2-SUC free-fall onsets within 2 days | **failed** (observed day 20, the map day 23, in all 20) |
+| C1 the regime's level carries across experiments within 15% | **passed** (8%) |
+| L the level is the state at a constant dilution (residuals carry < 0.3) | **passed** (−0.14) |
+
 The other groups in the field tests (production-model controls, assessments of unknown method), the per-group numbers and every post-hoc analysis are in the [five reports](history/README-2026-10-21-five-reports.md) and in `results/`. None of them changes a verdict.
 
 ## Corrections and disclosures
@@ -206,6 +236,16 @@ The other groups in the field tests (production-model controls, assessments of u
 - **MQ5.**
   - A limit found in the dry runs (noise in the spawning share) was fixed before the run.
   - The frozen reading assumed every series reports the level before the year's catch; half the test stocks do not (found post hoc).
+- **MQ6.**
+  - Changed after the first dry runs, before any value was read:
+    - T1 was split into every origin and late origins (it had passed under every generator);
+    - T2 was moved from the floor to the free-fall onset (the floor was not reached within the run, so T2 had passed vacuously);
+    - L and A2 were added;
+    - A1's fates were read by direction.
+  - The direction reading was meant to remove a bias the dry runs showed in the floor reading. On real readings it counts noise at the instrument's floor as survival, which synthetic data without an instrument floor could not show (found post hoc). The lesson is MQ1's again: read the instrument's floor before freezing a fate rule.
+  - The paper was read before the freeze, its figures and tipping days included, so the timing verdicts were partly anticipated, and the freeze says so.
+  - The paper's PDF differs in md5 from the copy DSpace lists. The data matched Dryad's md5.
+  - `all_SUC.txt` (48 × 21) does not match the 24-day sucrose protocol, so it is not used.
 - **Hashes.** Every freeze's original commit is kept under `refs/salvage/mq*`; the rebased commits on main are in `results/FROZEN-AT` and the reports.
 
 ## Limits
@@ -220,6 +260,8 @@ The other groups in the field tests (production-model controls, assessments of u
   - The floor of 0.01 was found post hoc in MQ1 and pre-registered in MQ2.
   - The salt-shock column order comes from the paper's legend.
   - Four days after the shock is too short to settle fates near the need.
+  - MQ6's dilution map comes from another experiment (2012), and its sucrose map extrapolates below 0.16%, where the fold lies.
+  - Day indexing is read from the paper's SI. Under a reading shifted by one day (reported), the sucrose run's onsets agree with the map (day 22 against 20).
 - **Fish stocks.**
   - The series are assessment outputs, not measurements; age-structured assessments carry a recruitment lag of their own.
   - Origins overlap within a stock.
@@ -231,7 +273,8 @@ The other groups in the field tests (production-model controls, assessments of u
 ## Open
 
 - What lowers giving under a stronger draw at equal density in yeast. Carryover of hexose or invertase with the transfer is one candidate.
-- T2 on measured series outside fisheries: survey indices, grazed grassland, harvested forest, and yeast under a dilution that changes over time (Dai, Korolev and Gore 2015). The last would also test the time to break past the fold.
+- T2 on measured series outside fisheries: survey indices, grazed grassland, harvested forest. MQ6 measured yeast under a changing dilution, but not T2's three forbidden items.
+- Why the break came early past the fold (MQ6). A renewal curve measured next to the fold, and a constant regime held at the deteriorating run's last condition before the break, would separate a misfit of the smooth class from an effect of the regime's history.
 - Fates read long enough after a shock to settle near the need.
 - A learner that reaches the best response, to test B3–B7's bridge rather than its failure.
 - A partner's level as a fourth variable in the state of coupled stocks (RM6); none of the stocks here was read with a partner.
@@ -245,10 +288,12 @@ The other groups in the field tests (production-model controls, assessments of u
 | MQ3 | [PREDICTIONS-2026-10-20-MQ3.md](PREDICTIONS-2026-10-20-MQ3.md) | [mq3.py](mq3.py), [ram_read.py](ram_read.py), [posthoc_mq3.py](posthoc_mq3.py) | `results/mq3/` |
 | MQ4 | [PREDICTIONS-2026-10-20-MQ4.md](PREDICTIONS-2026-10-20-MQ4.md) | [mq4.py](mq4.py), [dev_mq4.py](dev_mq4.py), [posthoc_mq4.py](posthoc_mq4.py) | `results/mq4/` |
 | MQ5 | [PREDICTIONS-2026-10-21-MQ5.md](PREDICTIONS-2026-10-21-MQ5.md) | [mq5.py](mq5.py), [dev_mq5.py](dev_mq5.py), [posthoc_mq5.py](posthoc_mq5.py) | `results/mq5/` |
+| MQ6 | [PREDICTIONS-2026-10-21-MQ6.md](PREDICTIONS-2026-10-21-MQ6.md) | [mq6.py](mq6.py), [posthoc_mq6.py](posthoc_mq6.py) | `results/mq6/` |
 
 Everything uses Python 3.11 and the standard library, on CPU; MQ1's gridworld learners take about 13 minutes over 12 cores. The data are not committed:
 - **Yeast:** Dai et al. 2012, Zenodo record 5003142, CC0; the bifurcation archive's md5 is `3891af7573f1afa105d9bc1ce9f03f1b`.
 - **Fish stocks:** RAM Legacy v4.66, Zenodo record 14043031, CC-BY-4.0; md5 `ed6d7cd3f7da1fdcbc60015c3d65014b`.
+- **Yeast past the fold:** Dai, Korolev and Gore 2015, Dryad doi:10.5061/dryad.k30v3, CC0. `data_deterioration.zip` md5 `f739beab74af2f981d410c10277ec364`, `data_SUCbifurcation.zip` `d9f631a7dfcef91267ecf7d8500d7131`. Dryad's file links need a browser.
 
 Extract each archive outside the repository, in its own directory, and read it with `python3 -I`.
 
@@ -268,4 +313,8 @@ python3 -I mq2.py fit /path/to/bifurcation && python3 -I mq2.py test /path/to/bi
 python3 -I mq3.py test "$RAM" && python3 -I mq4.py dev "$RAM" && python3 -I mq4.py test "$RAM" && python3 -I mq5.py dev "$RAM" && python3 -I mq5.py test "$RAM"
 ```
 
-Here `RAM` is the path to `RAMLDB v4.66/Excel/RAMLDB v4.66 (assessment data only).xlsx`.
+```bash
+python3 -I mq6.py dev /path/to/bifurcation && python3 -I mq6.py fit-odd "$DAI15" && python3 -I mq6.py test-a "$DAI15" && python3 -I mq6.py test "$DAI15"
+```
+
+Here `DAI15` holds the three 2015 archives extracted into `deterioration/`, `SUCbifurcation/` and `SUCindicator/`, and `RAM` is the path to `RAMLDB v4.66/Excel/RAMLDB v4.66 (assessment data only).xlsx`.

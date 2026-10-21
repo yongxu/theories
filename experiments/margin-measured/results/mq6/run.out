@@ -1,0 +1,34 @@
+{
+ "verdicts": {
+  "T1a-DF": "failed",
+  "T1b-DF": "failed",
+  "T2-DF": "failed",
+  "T1a-SUC": "passed",
+  "T1b-SUC": "failed",
+  "T2-SUC": "failed",
+  "C1": "passed",
+  "L": "passed"
+ },
+ "shapes": {
+  "subset_DF": [
+   20,
+   21
+  ],
+  "all_DF": [
+   48,
+   21
+  ],
+  "subset_DF_control": [
+   20,
+   21
+  ],
+  "all_DF_control": [
+   48,
+   21
+  ],
+  "subset_SUC": [
+   20,
+   25
+  ]
+ }
+}
