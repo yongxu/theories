@@ -864,6 +864,8 @@ Integration: none applied; TH1's three corrections listed for its owner and for 
 
 *Applied (21 October 2026, OP9).* On Ren's word "continue pease, implement proposals", TH1's thirteen proposals, with SA2's corrections, are OPENING's version 9 ([source](../../../../sources/15-codex-theory-conversations/2026-10-21-opening-v9.md); frozen copy `drafts/2026-10-10-opening/history/OPENING-V9.md`). One more scope correction was made in applying them: B8's "all who value anything" became "all who count everything at stake", for the same reason as B7's. B8's colon clause was dropped because the paragraph says it two sentences later. The list above keeps its wording as the record of what was proposed.
 
+*Version 10 (21 October 2026, OP10).* On Ren's "aim elegant completion" ([source](../../../../sources/15-codex-theory-conversations/2026-10-21-opening-v10.md)), the opening was read as one text. Two of this review's own points changed it. The ethics sentence now gives each premise its role: the step says whose losses count, and C orders them. B9's "how hard" now also meets the far-sighted objection, which TH1's revision left open: by SG5, SG8 and SG10, looking further ahead keeps only the optimizer's base, at the level of greatest renewal, and that only under a discount no faster than renewal and where no one draws first. B8's note now records VD1's failed verdicts on T5.
+
 <a id="horizon-check"></a>
 ## A check: courses ranked over a horizon (21 October 2026, SG5)
 
