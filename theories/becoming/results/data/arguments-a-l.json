@@ -373,7 +373,7 @@
       "sources/chinese-classical-texts/PROVENANCE.json",
       "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md"
     ],
-    "source_sha256": "66c4b62b6714976306c3dd3a24c0d17dd1672df487c0020a36a2eb2a9ac5f483"
+    "source_sha256": "db0e4d2eca1afaecec80fa3a7f1e2cb0edd8531568c1af00db16f5d2e0da7118"
   },
   {
     "id": "choice-and-generative-context",
@@ -407,6 +407,31 @@
       "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/risk-conditioning-verification.json"
     ],
     "status_code": "conditional-verified-universal-open"
+  },
+  {
+    "id": "civilization-thought-and-becoming",
+    "source": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+    "title_zh": "《中华思想脉络》与变化论：逐条对应、古典之名与论题的检验",
+    "title_en": "《中华思想脉络》 and the theory of becoming: every judgment mapped, the classical names, the thesis tested",
+    "category": "classical-comparison",
+    "status": "全部判断已对应并检查；无新 Lean / Every judgment mapped and checked; no new Lean",
+    "argument_zh": "《中华思想脉络》v1.0 的 5,673 条完整判断逐条读过：3,499 条关乎理论之结构，各落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）。“一元、关系、动态”之论题按域与按时代检验：在根上成立，全称形式大多需要定域，作为每一体系之性质不成立。由这些文字定出古典之名。",
+    "argument_en": "Every one of the 5,673 complete judgments of 《中华思想脉络》 v1.0 is read: 3,499 bear on a structure of the theory and each lies in one place, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). The thesis that the system is one, relational and dynamic is tested by domain and by era: it holds at the root, its universal forms mostly need a scope, and it fails as every system's property. The classical names are fixed from these texts.",
+    "significance_zh": "RO 之选读扩展为一部图谱之全读；相分与四层保留，使原典能检验理论；古典之名有其出处与所不带之义。",
+    "significance_en": "RO's selection becomes the full reading of one atlas; divergences and the four layers are kept so the texts can test the theory; the classical names carry their witnesses and what they do not carry.",
+    "scope_zh": "读法与名为 AI 之读与约定（D62）；不新增 Lean；不说作者意谓这些律；未与刻本对校；无出处之名的先秦用例未全经检查。",
+    "scope_en": "Readings and names are the AI's readings and conventions (D62); no new Lean; not a claim that the authors meant these laws; not collated with printed editions; the pre-Qin use of names without a witness not all checked.",
+    "next_zh": "建议：古典文字提出之缺口各自认领并写成 Lean；五处已判之类别写入 RO 与易传之对应；独立审读。",
+    "next_en": "Proposed: the gaps the texts raise, each claimed and written in Lean; the five decided kinds written into RO's and the 易传 map; an independent review.",
+    "lean": [],
+    "evidence": [
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/coverage.json",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py",
+      "sources/civilization-thought-v1.0/PROVENANCE.json",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md"
+    ],
+    "source_sha256": "3422f2eb6a69a87b2bf6e89e31d5f75c3ca48d6f020cf3dfe4e0efd62450611f"
   },
   {
     "id": "claims",

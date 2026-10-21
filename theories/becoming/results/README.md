@@ -36,7 +36,7 @@ Readings of 8 October 2026 and later · [Repository home](../../../README.md) ·
 <a id="覆盖与证据含义--coverage-and-evidence"></a>
 ## Coverage and evidence
 
-This reading edition covers **143 chapters** (current and moved to history) and **17 branch READMEs** at their recorded source versions. 89 entries name a source that changed after the reading; they are marked on their pages and await a reread. The session outcomes of 8 October 2026 are in the frozen [checkpoint map](../history/SESSION-RESULTS-2026-10-08.md). Navigation updates do not certify old summaries or refresh their review hashes. Chapters are reading units, not independent theories or theorems; full arguments, criticism and proofs remain at their original locations.
+This reading edition covers **145 chapters** (current and moved to history) and **17 branch READMEs** at their recorded source versions. 88 entries name a source that changed after the reading; they are marked on their pages and await a reread. The session outcomes of 8 October 2026 are in the frozen [checkpoint map](../history/SESSION-RESULTS-2026-10-08.md). Navigation updates do not certify old summaries or refresh their review hashes. Chapters are reading units, not independent theories or theorems; full arguments, criticism and proofs remain at their original locations.
 
 | Category | Meaning |
 |---|---|
@@ -70,6 +70,7 @@ Identifiers follow source filenames. A Lean link identifies a particular corresp
 | [`becoming-foundation`](../history/ARGUMENTS-A-L-2026-10-08.md#becoming-foundation) | Theory of Becoming: foundational scope | foundation |
 | [`chinese-sources-and-becoming`](../history/ARGUMENTS-A-L-2026-10-08.md#chinese-sources-and-becoming) | The relational ontology of Chinese thought and the theory of becoming: the traditions on the spine | classical comparison |
 | [`choice-and-generative-context`](../history/ARGUMENTS-A-L-2026-10-08.md#choice-and-generative-context) | Joint choice, limited aggregation and context | ethical argument |
+| [`civilization-thought-and-becoming`](../chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md) | 《中华思想脉络》 and the theory of becoming: every judgment mapped, the classical names, the thesis tested | classical comparison |
 | [`claims`](../history/ARGUMENTS-A-L-2026-10-08.md#claims) | Registered claims and historical ledger | navigation |
 | [`claims-and-paid-action`](../history/ARGUMENTS-A-L-2026-10-08.md#claims-and-paid-action) | Claims, actual action and continuing protection | ethics interface |
 | [`cognition-learning-and-evolution`](../history/ARGUMENTS-A-L-2026-10-08.md#cognition-learning-and-evolution) | Cognition, learning and evolution within becoming | learning |
@@ -185,6 +186,7 @@ Identifiers follow source filenames. A Lean link identifies a particular corresp
 | [`the-step-of-invariance`](../chapters/THE-STEP-OF-INVARIANCE.md) | The step of invariance: the argument and its objections | ethical argument |
 | [`the-theory-of-becoming`](../history/ARGUMENTS-M-Z-2026-10-08.md#the-theory-of-becoming) | The Theory of Becoming | synthesis |
 | [`the-theory-of-becoming-reference`](../history/ARGUMENTS-M-Z-2026-10-08.md#the-theory-of-becoming-reference) | The Theory of Becoming: reference catalogue | formal index |
+| [`the-theory-of-becoming-zhonghua`](../chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md) | The Theory of Becoming in classical Chinese names (中华本) | synthesis |
 | [`the-theory-of-evolution`](../history/ARGUMENTS-M-Z-2026-10-08.md#the-theory-of-evolution) | The Theory of Evolution | research programme |
 | [`theory`](../history/ARGUMENTS-M-Z-2026-10-08.md#theory) | Relational generativity and the conditions of wisdom | synthesis |
 | [`theory-of-becoming`](../history/ARGUMENTS-M-Z-2026-10-08.md#theory-of-becoming) | How relations of becoming change | mechanism |

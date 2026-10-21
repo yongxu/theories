@@ -14684,3 +14684,46 @@ Output → input: chapter (the coupled-web paragraph, thesis T1's sentence, the 
 **Self-review.** Every premise is used. Pointwise reading makes a return of levels a return of the run; finitely many listed conditions make the states finite; the bound makes them few. Mutual support is needed only for the threshold, through the order of runs (`within_below`, `ends_of_below`): the decision holds for inhibition webs as well, where they stay bounded. The bound is required only of the run from the top level, since under mutual support every lower run stays below it. The window `L` to `2 L` is generous; a tighter test would need the period itself, which the pigeonhole gives only within `L`. Where a band and a bound both hold, `thresholdWithin` and RM8's `threshold` are both exact, so they agree; that agreement is argued here, not stated as a law. The band's form is kept for its linear step bound and its rest. Limits: bounded runs; finitely many conditions; whole numbers.
 
 **The run.** Core 285 modules and 12,294 theorems, instances 7 and 567, applications 6 and 179; 9 Lean steps ran, 1,195 reused. 28 declarations added to Becoming.RegimeMargin, 20 of them theorems, none removed, all with empty axiom reports; `step_alike`, `run_alike` and `ends_alike` now take pointwise reading. Connectivity: 647 of 13,040 apart, unchanged; no new apart root, every new law stated on a run of the web or read by a law that is, the witness on the run; register check passes.
+
+## 328. 《中华思想脉络》 on the spine, and the 中华本 (ZH)
+
+```text
+Result(s): civilization-thought-on-the-spine (new)
+Delta: every complete judgment of 《中华思想脉络》 v1.0 (5,673) read against the spine: 3,499 bear on a structure of
+       the theory and each lies in exactly one place (1,300 checked entries: 453 agreements, 647
+       exact scopes, 200 divergences; 1,742 parallels; 251 set aside with reasons); the thesis that the
+       Chinese system "is naturally one, relational, dynamic" tested by domain and by era; 447 classical names,
+       one per concept, anchored on current main (240 of the 246 quoted ones witnessed in pre-Qin texts),
+       37 symbols not adopted with reasons; the theory stated in those names in the 中华本《变化论》 (凡例, sixteen 篇
+       and 论纲, 393 條, each with 經, 說 and 證)
+Supplied premises / correspondence: none, and no Lean; kinds, readings and names are the AI's (D62); the 脉络's
+       mechanisms and modern comparisons are editorial and no entry rests on them
+Evidence: verify_zh.py passes: 438 files bound by SHA-256; one triage verdict per judgment; every flagged judgment
+          placed once; every fragment verbatim; the name table (anchors current, quotations exact, distinct once
+          simplified); the two chapters' 1239 quotations, 5133 declarations (receipt `20261021T215226.263303Z`, 4 periphery
+          ones listed apart), 682 record links, 135 对照 lines (each naming map entries with their kind) and
+          generated tables
+Boundary: what a text says beyond the laws; its authors' meaning; collation with printed editions; the pre-Qin use
+          of names without a recorded witness; an independent human review
+```
+
+Ren, 19 October 2026, after extending his database to Chinese culture: “请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代，所以，它应该是一套比英文更加适合的，生生不息的，道法自然的，我们需要的表达”; “现在不用改英文版本，我们只是做中华版本，用中华的体系和符号系统 - 它自然就是一元的，关系的，动态的”; “同时，请把我做的这个脉络，也整合进我们的theories”; “其中大多重要的符号，应该在先秦就存在了” ([words](../../../../sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md)). The words are provenance; the reading of the request, the tests and the edition are the AI's.
+
+**The question.** Which of the 脉络's judgments correspond to the theory, and how (agreement, exact scope, divergence)? Is the Chinese system one, relational and dynamic by nature, as the thesis says? Can the theory be stated in classical names, mostly before 秦, as one controlled vocabulary rather than a translation?
+
+**The move.** Every judgment was triaged against seventeen clusters of the spine; each cluster's flagged judgments were mapped by one mapper (entries with verbatim fragments, current declarations and records, an AI reading and a kind; parallels; rejections with reasons), revised on current main by a reviser, and read independently by a checker. The 88 entries the reviser kept unchanged, which the first checker had not read, were read by a second checker: 84 needed correction (21 in kind, mostly agreement to exact scope), so no entry stands on two readings. The names were fixed in two steps: 326 from the texts the map read, then, while drafting, the concepts the drafts needed (263 used in a 經 or in two 篇) by a three-lens panel and a judge for the 28 cross-cutting ones and by groups with adversarial verifiers for the rest: 120 names added, 104 concepts mapped onto existing names, 115 fixed plain wordings. The edition was drafted part by part (836 review edits), reviewed as one book through its 經 (consistency, standing, order), restructured by a checked plan (48 moves so every 條 rests on earlier ones, 30 duplicates deleted with references redirected, 17 central laws added, 4 篇 retitled), rewritten part by part in the names and reviewed again (418 exact edits). The book is kept as parts and 條 with symbolic references (book.py), so the renumbering cannot break a reference.
+
+**What was found.**
+- *The thesis.* Of the 3,249 judgments mapped, agreement and exact scope are 81%, divergence 19%: 13% of the entries from pre-Qin texts, 21–26% in the larger later layers (a selection effect of the corpus, whose later texts were chosen for their debates on ground and nature, not a historical trend). By tradition: 名辩 1%, 庄子 5%, 兵 10%, 儒 12%, 易 and 佛 20%, 老子 23%, 三教互动 27%, 墨 28%, 法 33%. The relational start holds at the root and across the lines; universal forms mostly need a scope; as a property of every system the thesis fails.
+- *The divergences* fall on the four non-relational layers RO named (a prior ground, a fixed nature or value, a will or single centre, contest and rank), and on two more: claims a checked law refutes (河上公's 不死) and knowing without coupling (「神以知来」).
+- *The names.* 240 of the 246 quoted names are witnessed in pre-Qin texts; six only in later ones (未決, 初不定終, 位分, 二體, 義項, 憑). Many core characters are two-place relational words (待 needs a 所待, 资 a 所资), and the 經上's 「X，Y也」 gives the definitional form. The names are a code among the theory's users (`Becoming.SharedCodes`), not a sense recovered from history.
+- *RO and the 易传 map.* Of 259 passages read in both maps, 232 have the same kind; of the 27 that differ, 19 read different sentences or structures, and 8 pairs on 5 passages are the same structure judged differently: each was decided for the newer reading (exact scope) with its reason, to be written into those maps.
+- *Gaps.* 61 entries name a structure the spine lacks: a conjunctive or graded whole (华严六相, 墨经 损), saturation of a coupling (老子 72), one-sided and local regulation (老子 37, 57), equal division (论语 不患寡而患不均), copying growth (吴子), witnesses that are functions of one another (韩非 八经, 八奸), measures of a juncture (孙子, 扁鹊), a pool weighted by share.
+
+**What this changes.** The 脉络 is a checked part of the library, joined to RO's map, with the divergences kept so the texts can test the theory; the theory has a 中华 edition in one classical vocabulary, the same laws and checks as the English chapter, which is unchanged (Ren's request), as is its modern Chinese edition. The RO chapter points to both; the goal record `chinese-sources-and-becoming` is extended.
+
+*Reading* [AI reading, D62]. One relational unfolding is the dominant thread of these traditions and strongest at their earliest layer, not every system's doctrine nor a property the language guarantees; the classical names carry the relational structure where their attested sense does, and each says what it does not carry.
+
+**Not done.** The gaps, each to be claimed before it is written; the five decided kinds written into RO's and the 易传 map; collation with printed editions; the pre-Qin use of the names without a recorded witness; an independent human reading of the edition.
+
+**Self-review.** Every entry had three readings; every quotation, declaration, record link and 对照 kind in both chapters is checked by verify_zh.py; the edition's 經 were reviewed twice as one book; every review edit was applied only where its text occurs once, and the integrator's own edits are recorded with their reasons (kit `development/zhonghua/`).

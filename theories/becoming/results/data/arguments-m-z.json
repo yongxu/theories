@@ -1692,6 +1692,30 @@
     "source_sha256": "3a067dec2fa6286b4c66d50f338d5875ad592ba74ee65e46b670b938243f8dca"
   },
   {
+    "id": "the-theory-of-becoming-zhonghua",
+    "source": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+    "title_zh": "变化论（中华本）",
+    "title_en": "The Theory of Becoming in classical Chinese names (中华本)",
+    "category": "synthesis",
+    "status": "以古典之名陈述理论；同一律、同一检查；无新 Lean / The theory stated in classical names; same laws and checks; no new Lean",
+    "argument_zh": "理论以 447 个古典之名陈述：凡例、十六篇与论纲，393 條，每条有经（浅近文言）、说（现代汉语）与证（Lean 声明与记录），篇末列相对照之古典文字。从一个关系之展开说起，至感、识、知、名、择、环、传、群、顾与权；伦理之两个设分立，凡续皆有顾定范围，以广为愈定次序。",
+    "argument_en": "The theory stated in 447 classical names: 凡例, sixteen 篇 and 论纲, 393 條, each with 經 (plain classical Chinese), 說 (modern Chinese) and 證 (Lean declarations and records), classical passages set beside each 篇. It runs from one relational unfolding to coupling, knowing, names, selection, loops, passing, groups, significance and judgment; the ethics' two premises kept apart, the continuation condition for scope and calling widening better for order.",
+    "significance_zh": "理论有一个中文之本，用一套受检之古典词表，不是英文本之译；英文本与现代汉语版不变。",
+    "significance_en": "The theory has a Chinese edition in one checked classical vocabulary, not a translation; the English chapter and its modern Chinese edition are unchanged.",
+    "scope_zh": "同英文本之律与条件；名为约定（D62）；论纲之地位见其篇首；未经人之通读。",
+    "scope_en": "The laws and conditions of the English chapter; the names are conventions (D62); the 论纲's standings as its preface states; not read through by a person.",
+    "next_zh": "建议：独立通读；随理论之新律增补各篇。",
+    "next_en": "Proposed: an independent reading; each 篇 extended as the theory gains laws.",
+    "lean": [],
+    "evidence": [
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/book.py",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/finish.py",
+      "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py"
+    ],
+    "source_sha256": "273bd9e499e23bef9c8c551b527bcfcaa017cbb089d4dfbfd729bc27b04aa5dc"
+  },
+  {
     "id": "the-theory-of-evolution",
     "title_zh": "演化之论",
     "title_en": "The Theory of Evolution",

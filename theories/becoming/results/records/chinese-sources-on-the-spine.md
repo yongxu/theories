@@ -59,6 +59,8 @@ Ren, 19 October 2026, after sharing the 易道体系图 v1.3.0: “整个中国�
 - related, not a proved adapter: [capture-through-the-rule](capture-through-the-rule.md). Closes the third gap (capture through the rule); the passages 二柄, 据有余而制不足 and 壹 are re-pointed to its laws.
 - related, not a proved adapter: [two-sided-regulation-and-late-reading](two-sided-regulation-and-late-reading.md). Closes the first gap (two-sided regulation of a level and its late-reading form); the passages 天之道 (老子 77), 冲气以为和, 宽猛相济 and 中和 are re-pointed to its laws.
 
+**Used by:** [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md) (interpretive)
+
 <a id="sources--来源"></a>
 ### Sources
 
