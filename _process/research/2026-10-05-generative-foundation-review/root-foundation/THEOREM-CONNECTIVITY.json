@@ -1,11 +1,11 @@
 {
- "commit": "89d8e0a024eb7484b527abf06ef7c1eea8dd1c34",
+ "commit": "03e03f174c3ea1b7b6780b88a51106b0374c52a9",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261021T221434.504947Z",
+ "core_receipt_at_commit": "20261021T223241.379489Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 301,
- "constants": 39592,
- "spine_theorems": 13050,
+ "constants": 39638,
+ "spine_theorems": 13068,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -27,11 +27,11 @@
  },
  "classes": {
   "statement on both families": 1003,
-  "statement on Process/Frame/Run/Trace": 2916,
+  "statement on Process/Frame/Run/Trace": 2929,
   "statement on World/Flow/Web": 3026,
-  "statement on the base only through a law of its own module": 263,
+  "statement on the base only through a law of its own module": 259,
   "proof through a base family": 155,
-  "used by a theorem on the base": 4885,
+  "used by a theorem on the base": 4894,
   "instance on the base recorded": 155,
   "apart: own vocabulary": 588,
   "apart: prelude-only statement": 59
@@ -58,7 +58,7 @@
   "register entries naming what the run lacks": []
  },
  "statement_through_own_law_by_module": {
-  "Becoming.RegimeMargin": 81,
+  "Becoming.RegimeMargin": 77,
   "Becoming.HexagramLaws": 26,
   "Becoming.Undecided": 23,
   "Becoming.LoopReturn": 22,
@@ -242,7 +242,7 @@
   ],
   "Becoming.RegimeMargin": [
    9,
-   222
+   240
   ],
   "Becoming.ProfileReach": [
    9,
@@ -584,15 +584,15 @@
  "rings": {
   "core": {
    "modules": 285,
-   "theorems": 12304,
+   "theorems": 12322,
    "apart": 567,
    "classes": {
     "statement on both families": 989,
-    "statement on Process/Frame/Run/Trace": 2705,
+    "statement on Process/Frame/Run/Trace": 2718,
     "statement on World/Flow/Web": 3001,
-    "statement on the base only through a law of its own module": 217,
+    "statement on the base only through a law of its own module": 213,
     "proof through a base family": 144,
-    "used by a theorem on the base": 4526,
+    "used by a theorem on the base": 4535,
     "instance on the base recorded": 155,
     "apart: own vocabulary": 509,
     "apart: prelude-only statement": 58
@@ -632,7 +632,7 @@
   }
  },
  "components": {
-  "count": 77,
+  "count": 78,
   "theorems_outside_the_main_component": [
    "Becoming.Dispatch.add_three_assoc",
    "Becoming.GuardHorizon.coverage_transports",
@@ -690,9 +690,9 @@
  },
  "records_by_best_alias_class": {
   "statement on both families": 71,
-  "statement on Process/Frame/Run/Trace": 121,
+  "statement on Process/Frame/Run/Trace": 123,
   "statement on World/Flow/Web": 98,
-  "statement on the base only through a law of its own module": 5,
+  "statement on the base only through a law of its own module": 4,
   "proof through a base family": 1,
   "used by a theorem on the base": 7,
   "instance on the base recorded": 2,
@@ -11607,6 +11607,8 @@
   "Becoming.RegimeMargin.Coupled.Indexed.respects": "used by a theorem on the base",
   "Becoming.RegimeMargin.Coupled.Indexed.pointwise_of_rises": "used by a theorem on the base",
   "Becoming.RegimeMargin.Coupled.Indexed.step_alike": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Coupled.Indexed.run_alike_of": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Coupled.Indexed.pointwise_step": "used by a theorem on the base",
   "Becoming.RegimeMargin.Coupled.Indexed.run_alike": "statement on the base only through a law of its own module",
   "Becoming.RegimeMargin.Coupled.Indexed.ends_alike": "statement on the base only through a law of its own module",
   "Becoming.RegimeMargin.Coupled.Indexed.run_shift": "statement on Process/Frame/Run/Trace",
@@ -11634,16 +11636,32 @@
   "Becoming.RegimeMargin.Coupled.Indexed.mem_withFirst": "used by a theorem on the base",
   "Becoming.RegimeMargin.Coupled.Indexed.mem_withFirstUpTo": "used by a theorem on the base",
   "Becoming.RegimeMargin.Coupled.Indexed.levels_mem": "used by a theorem on the base",
-  "Becoming.RegimeMargin.Coupled.Indexed.within_below": "statement on the base only through a law of its own module",
-  "Becoming.RegimeMargin.Coupled.Indexed.returns_within": "statement on the base only through a law of its own module",
-  "Becoming.RegimeMargin.Coupled.Indexed.repeats": "statement on the base only through a law of its own module",
+  "Becoming.RegimeMargin.Coupled.Indexed.step_keepsBelow": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Coupled.Indexed.reads_of_keepsBelow": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Coupled.Indexed.run_below_of": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Coupled.Indexed.endsUnder_of_below": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Coupled.Indexed.stays_at": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Coupled.Indexed.within_below": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Coupled.Indexed.returns_within": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Coupled.Indexed.repeats": "statement on Process/Frame/Run/Trace",
   "Becoming.RegimeMargin.Coupled.Indexed.repeats_mul": "used by a theorem on the base",
   "Becoming.RegimeMargin.Coupled.Indexed.zero_from_window": "used by a theorem on the base",
-  "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within": "statement on the base only through a law of its own module",
+  "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within": "statement on Process/Frame/Run/Trace",
   "Becoming.RegimeMargin.Coupled.Indexed.below_of": "used by a theorem on the base",
-  "Becoming.RegimeMargin.Coupled.Indexed.ending_iff": "statement on the base only through a law of its own module",
-  "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within": "statement on the base only through a law of its own module",
-  "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within": "statement on the base only through a law of its own module",
+  "Becoming.RegimeMargin.Coupled.Indexed.ending_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Coupled.Indexed.Recent.keepsBelow": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Coupled.Indexed.Recent.mem_both": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Coupled.Indexed.Recent.covers_both": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Coupled.Indexed.Recent.plain": "statement on the base only through a law of its own module",
+  "Becoming.RegimeMargin.Coupled.Indexed.Recent.adjusted": "statement on the base only through a law of its own module",
+  "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.gives_rises": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.rises": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.set_at": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.ends_from": "statement on the base only through a law of its own module",
+  "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.holds_from": "statement on the base only through a law of its own module",
+  "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.threshold_falls_with_recent": "statement on Process/Frame/Run/Trace",
   "Becoming.RegimeMargin.Coupled.covers_pair": "used by a theorem on the base",
   "Becoming.RegimeMargin.Coupled.pair_count": "used by a theorem on the base",
   "Becoming.RegimeMargin.Coupled.band_web": "used by a theorem on the base",
@@ -11685,7 +11703,7 @@
   "Becoming.RegimeMargin.Coupled.Relay.between": "statement on the base only through a law of its own module",
   "Becoming.RegimeMargin.Coupled.Relay.cycles": "statement on Process/Frame/Run/Trace",
   "Becoming.RegimeMargin.Coupled.Relay.ends_set": "statement on the base only through a law of its own module",
-  "Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band": "statement on the base only through a law of its own module",
+  "Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band": "statement on Process/Frame/Run/Trace",
   "Becoming.Loops.zero_or_pos": "used by a theorem on the base",
   "Becoming.Loops.ble_succ_self": "used by a theorem on the base",
   "Becoming.Loops.extend_below": "used by a theorem on the base",
