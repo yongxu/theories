@@ -13440,3 +13440,39 @@ Output → input: the CG3 line closes on three statements. (1) One's own later a
 ```
 
 **Self-review.** The band rule was read post hoc from rounds 1-3 and frozen before round 4; it failed V1 and V3 and is reported failed. The decision to stop is argued, not forced: each round's form came from the round before and failed on the next round's sharpest case, and the exact quantities of the condition did not yield a mechanistic index (round 3), so a further round would fit the learner rather than test a law of the condition.
+
+## 304. CG1's boundary read through the laws landed since (CG1c)
+
+```text
+Result(s): none new; docs and records only. Chapter 7.5's CG1 paragraph (with one sentence each
+       in 7.4 and 7.7; ZH 7.5's summary) and record alignment-direction-under-widening restated as
+       one account: widening the coupling is necessary, not sufficient, and the spine now says what
+       decides D2b's outcome.
+Delta: section 247 left "which of several self-consistent outcomes is reached" open, with the laws
+       silent on it. Since then: Flow.outrun_reading_alike (CG2, section 250): where the rest
+       outruns the renewal, every reading after the rest's end is alike under a member's acts, so no
+       weight of such a reading selects restraint; Optimum.MutualBest.full and Optimum.mutual_beyond
+       (SG3, section 290): at a mutual best response restraint is no best response and a condition
+       beyond every family falls by the joint capacity, as under one optimizer;
+       Web.mutual_course_lost (SG4, section 291): along a course, several optimizers jointly above
+       the renewal lose it. CG2's frozen test found learners following the rest's boundary (X1),
+       the end reading's weight irrelevant where the rest outruns (X2: 32 against 2), and a reading
+       after every step keeping the patch above its exact threshold (X3). The live text said the
+       laws were silent where they now speak; it is replaced, not supplemented.
+Premises: none changed. Each law keeps its own (balance, the gate, need one for the reading law;
+       one step or a balanced course of mutual best responses, supplied optimizers, orders and
+       capacities). The learning verdicts are read through CG1's and CG2's named bridges.
+Evidence: experiments/commons-gated-renewal/README.md (C1, D2b, E3), experiments/commons-outrun/
+       README.md (X1-X3 passed; X4's open side and X5 failed, X5's post hoc reading corrected by
+       CG3, sections 254 and 303).
+Boundary: the laws say which outcome optimizers at a mutual best response reach and that an end
+       reading cannot open the lock; they do not say how learners come to one outcome where
+       several are self-consistent (CG2's open conditions, chapter 8.1 item 10's open part), and one
+       learner's own later acts are not a rest in the reading law's sense, its failures being of
+       sampling its own courses (CG3, sections 254 and 303).
+Output → input: section 7's alignment account now cites the laws for the outcome as well as for the
+       blindness; the open part is the dynamics of reaching an outcome (how optimizers come to a
+       mutual best response, chapter 8.1 item 10), not the outcome's characterization.
+```
+
+**Self-review.** The earlier paragraph was accurate when written (20 October, before CG2 and SG3 landed); keeping it beside the new laws would have left live text saying the spine is silent where it speaks. The X5 post hoc reading ("one's own later acts are the outrunning rest") is not cited; CG3's correction is. X4's failed open side is not cited as support. "Sixteen times" is the ratio of CG2's end-reading weights, 32 to 2.
