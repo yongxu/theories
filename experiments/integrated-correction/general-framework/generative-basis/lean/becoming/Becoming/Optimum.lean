@@ -162,10 +162,11 @@ need, and that the gate decides the optimizer's own draw, the measure its order 
 the renewal stops below the need that draw is bounded, and after long enough below what a capacity
 at the renewal draws; where it does not, the draw goes on without bound after the dependence is
 lost. Ranking whole courses changes when, not whether: what a course draws, leaves and forgoes is
-conservation over the horizon, so a far-sighted order registers a level only through what is
-renewed there, holds the levels of greatest renewal, the maximum sustainable yield's level (half of
-room in the logistic law; Schaefer 1954), as a sole owner does (Scott 1955), and draws everything at
-its horizon, the end of a finite-horizon harvest (Clark 1976); a dependence beyond needing more than
+conservation over the horizon, so what a course draws registers its levels only through what is
+renewed there, and every optimum of a far-sighted order rising with it holds a level of greatest
+renewal, the maximum sustainable yield's level (half of room in the logistic law; Schaefer 1954), as
+a sole owner does (Scott 1955), and draws everything at its horizon, the end of a finite-horizon
+harvest (Clark 1976); a dependence beyond needing more than
 those levels is lost at the first step however far the horizon, as single-species management leaves
 predators of a forage stock uncounted (Pikitch and others 2012).
 
