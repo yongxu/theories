@@ -327,6 +327,11 @@ theorem stepwise_iff {Pos : Type} (U : W → Web F C) (w : W) (own sig : Pos →
     (e : F × Nat) : stepwise U w e ↔ ((U w).valuation own sig).living e :=
   Iff.rfl
 
+/-- The relation-level reading is the `living` of `Web.relations`. -/
+theorem relational_iff {Pos : Type} (U : W → Web F C) (w : W) (own sig : Pos → F × C × Nat → Prop)
+    (e : F × C × Nat) : relational U w e ↔ ((U w).relations own sig).living e :=
+  Iff.rfl
+
 /-- The possibility reading: a course includes a formation at a step when the course's levels
 admit it there, active or not. -/
 def possible (U : W → Web F C) (w : W) (e : F × Nat) : Prop :=

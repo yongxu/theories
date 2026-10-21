@@ -48,7 +48,9 @@ restraint comparison over any number of drawers under the whole-run reading.
   formations enters. Under the stepwise reading the same holds where moreover the restrained flow
   takes from no condition more than it gives, so that no level falls in the restrained course
   (`Ranking.restraint_extends_iff_stepwise`, `Ranking.restraint_ranks_stepwise`); taking no more alone
-  does not suffice (`Ranking.ThirdParty.stepwise_not_monotone`).
+  does not suffice (`Ranking.ThirdParty.stepwise_not_monotone`). Under the relation-level reading the
+  same holds where the restrained course also takes part in every condition wherever the other does,
+  drawing less rather than nothing (`Ranking.restraint_extends_iff_relational`).
 * **Witness.** `TwoDrawers`: two formations each take one unit from a condition standing at two,
   on which a third depends at one; each take is within the slack, the joint draw breaks the third
   formation's dependence and it ends (`TwoDrawers.broken`, `TwoDrawers.shared`), and with one
@@ -258,6 +260,26 @@ theorem restraint_ranks_stepwise (balances : L.Balances (U w)) (balances' : L'.B
     {Better : X → X → Prop} (ranks : ComparisonUnder (stepwise U) Better) : Better w w' :=
   ranks _ _ ((restraint_extends_iff_stepwise balances balances' start restrained renewing asks needs
     drawsLess dependent gated within).mpr ⟨e, included, withheld⟩)
+
+/-- **Restraint over any number of drawers, under the relation-level reading.** Under the premises of
+the stepwise comparison, where moreover the restrained course takes part in every condition wherever
+the other does (it asks and draws less, not nothing), the restrained course extends the other under the
+relation-level reading exactly when it includes some relation the other withholds. -/
+theorem restraint_extends_iff_relational (balances : L.Balances (U w)) (balances' : L'.Balances (U w'))
+    (start : ∀ c, (U w).level 0 c ≤ (U w').level 0 c)
+    (restrained : ∀ t c, L'.taken t c ≤ L.taken t c)
+    (renewing : ∀ t c, L.given t c ≤ L'.given t c)
+    (asks : ∀ t f c, (U w').requires t f c → (U w).requires t f c)
+    (needs : ∀ t f c, (U w').need t f c ≤ (U w).need t f c)
+    (drawsLess : ∀ t f c, (U w').draws t f c → (U w).draws t f c)
+    (dependent : (U w).Dependent) (gated : ActiveWhereSupported (U w'))
+    (within : ∀ t c, L'.taken t c ≤ L'.given t c)
+    (joins : ∀ t f c, (U w).Participates t f c → (U w').Participates t f c) :
+    ExtendsUnder (relational U) w w' ↔ ∃ e, relational U w' e ∧ ¬ relational U w e :=
+  relational_extends_iff_of_rising dependent gated
+    (balances.eases_of_restrained balances' start restrained renewing asks needs drawsLess)
+    (fun t c => Naturals.le_of_add_le_add_right (Nat.le_trans (Nat.add_le_add_left (within t c) _)
+      (Nat.le_of_eq (balances' t c).symm))) joins
 
 end Ranking
 

@@ -1132,7 +1132,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   leaves every need met, only the whole-run reading ranks its absence above its
   occurrence. Under easing the stepwise reading withdraws exactly the events the easing
   course undermines, so its law of easing adds that premise; a course whose levels never
-  fall undermines nothing.
+  fall undermines nothing. The relation-level reading withdraws under easing exactly the
+  relations the easing course no longer takes part in or undermines.
 * `Becoming.ActiveReading` (L1): the reading of every active event beside the whole-run reading
   (no premise): the whole-run reading withholds a consumer's events, and living significance on it
   credits exactly the active events of non-consuming formations (`livingSignificance_wholeRun_iff`); under the

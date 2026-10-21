@@ -34,6 +34,13 @@ Results:
   (`stepwise_extends_iff_of_eases`); a course in which no condition's level falls undermines nothing
   (`not_undermining_of_rising`), so there the stepwise law is the whole-run one
   (`stepwise_extends_iff_of_rising`). Easing alone does not suffice (`ThirdParty.stepwise_not_monotone`).
+* The relation-level reading (`relational`, the `living` of `Web.relations`): a claim is a formation's
+  relation to a condition at a step. Under easing it withdraws exactly the relations the easing course
+  no longer takes part in or undermines (`relational_kept_iff`, `relational_extends_iff_of_eases`), so
+  where no level falls and the easing course takes part wherever the other does its law is the
+  whole-run one (`relational_extends_iff_of_rising`); in the two-part family it includes the focal
+  formation's relation where the stepwise reading includes its event, and leaves absence and
+  occurrence unranked as that reading does (`relational_unranked`).
 * The course without a formation extends the course with it only if the reading
   withholds every event of that formation. This holds for every reading that includes
   only active events.
@@ -265,6 +272,54 @@ theorem stepwise_extends_iff_of_rising {U : W → Web F C} {w w' : W} (dependent
    fun witness => (stepwise_extends_iff_of_eases dependent gated eases).2
      ⟨fun e _ => not_undermining_of_rising rises e.2 e.1, witness⟩⟩
 
+/-! ## The relation-level reading -/
+
+/-- **The relation-level reading** of a family of courses, each a web: a claim is a formation's
+relation to a condition at a step, included when the formation is active and takes part in the
+condition there and the relation does not undermine. It is the `living` of `Web.relations`
+(`Ranking.relational_iff`, in `Becoming.Relevance`). -/
+def relational (U : W → Web F C) (w : W) (e : F × C × Nat) : Prop :=
+  (U w).active e.2.2 e.1 ∧ (U w).Participates e.2.2 e.1 e.2.1 ∧ ¬ (U w).UnderminingOn e.2.2 e.1 e.2.1
+
+/-- **Under easing the relation-level reading withdraws exactly the relations the easing course no
+longer takes part in or undermines.** From a course where activity needs support to one where activity
+follows support and that eases it, a relation the reading includes in the first stays included in the
+second exactly where the second still takes part in the condition and does not undermine there. -/
+theorem relational_kept_iff {U : W → Web F C} {w w' : W} (dependent : (U w).Dependent)
+    (gated : ActiveWhereSupported (U w')) (eases : Eases (U w) (U w')) {e : F × C × Nat}
+    (included : relational U w e) :
+    relational U w' e ↔ (U w').Participates e.2.2 e.1 e.2.1 ∧ ¬ (U w').UnderminingOn e.2.2 e.1 e.2.1 :=
+  ⟨fun kept => kept.2,
+   fun ⟨joins, keeps⟩ => ⟨active_of_eases dependent gated eases included.1, joins, keeps⟩⟩
+
+/-- **The relation-level law of easing.** Under the conditions of the whole-run law, the easing
+course extends the other under the relation-level reading exactly when it still takes part in, and
+does not undermine, every relation the other includes, and includes one the other withholds. -/
+theorem relational_extends_iff_of_eases {U : W → Web F C} {w w' : W} (dependent : (U w).Dependent)
+    (gated : ActiveWhereSupported (U w')) (eases : Eases (U w) (U w')) :
+    ExtendsUnder (relational U) w w' ↔
+      (∀ e, relational U w e →
+        (U w').Participates e.2.2 e.1 e.2.1 ∧ ¬ (U w').UnderminingOn e.2.2 e.1 e.2.1) ∧
+      ∃ e, relational U w' e ∧ ¬ relational U w e :=
+  ⟨fun ⟨covers, e, _, included, withheld⟩ => ⟨fun e c => (covers e c).2, e, included, withheld⟩,
+   fun ⟨keeps, e, included, withheld⟩ =>
+    ⟨fun e c => (relational_kept_iff dependent gated eases c).2 (keeps e c), e, trivial, included,
+      withheld⟩⟩
+
+/-- **Easing that lets nothing fall and keeps every relation, under the relation-level reading.** Under
+the conditions of the whole-run law, where no condition's level falls at any step of the easing course
+and the easing course takes part wherever the other does, it extends the other under the relation-level
+reading exactly when it includes some relation the other withholds. -/
+theorem relational_extends_iff_of_rising {U : W → Web F C} {w w' : W} (dependent : (U w).Dependent)
+    (gated : ActiveWhereSupported (U w')) (eases : Eases (U w) (U w'))
+    (rises : ∀ t c, (U w').level t c ≤ (U w').level (t + 1) c)
+    (joins : ∀ t f c, (U w).Participates t f c → (U w').Participates t f c) :
+    ExtendsUnder (relational U) w w' ↔ ∃ e, relational U w' e ∧ ¬ relational U w e :=
+  ⟨fun ext => ((relational_extends_iff_of_eases dependent gated eases).1 ext).2,
+   fun witness => (relational_extends_iff_of_eases dependent gated eases).2
+     ⟨fun e c => ⟨joins _ _ _ c.2.1, fun undermining =>
+       not_undermining_of_rising rises e.2.2 e.1 ⟨e.2.1, undermining⟩⟩, witness⟩⟩
+
 /-! ## The course without the focal formation -/
 
 /-- One law read as two courses: the focal formation occurs, or it does not. Here a course is
@@ -377,6 +432,25 @@ theorem stepwise_unranked (L : Law) (positive : 0 < L.needG) (fWithin : L.needF 
     ⟨fun extends_ => withheld_of_extends (fun _ _ alive => alive.1) extends_ t included,
      fun extends_ => lost T (Nat.le_refl T)
       (extends_.1 (.sustaining, T) ⟨absent_sustains L gStart T, fun ⟨_, drawn, _⟩ => drawn⟩).1⟩
+
+/-- **The relation-level reading too leaves absence and occurrence unranked.** Under the stepwise
+reading's premises, once the focal formation has an event that reading includes, the relation-level
+reading includes its relation to the condition at that step, which the course without it lacks, and
+the course with it lacks the sustaining formation's relations after the loss. -/
+theorem relational_unranked (L : Law) (positive : 0 < L.needG) (fWithin : L.needF ≤ L.needG)
+    (gStart : L.needG ≤ L.start) {T0 : Nat}
+    (over : ∀ t, T0 ≤ t → L.renew + L.contrib t < L.draw t) {t : Nat}
+    (included : stepwise (course L) .occurs (.focal, t)) :
+    ¬ ExtendsUnder (relational (course L)) .occurs .absent ∧
+      ¬ ExtendsUnder (relational (course L)) .absent .occurs :=
+  match overdraw_consuming L positive fWithin over with
+  | ⟨_, T, lost⟩ =>
+    ⟨fun extends_ => (extends_.1 (.focal, (), t)
+       ⟨included.1, Or.inr ⟨T0, Nat.lt_of_le_of_lt (Nat.zero_le _) (over T0 (Nat.le_refl T0))⟩,
+        fun undermining => included.2 ⟨(), undermining⟩⟩).1,
+     fun extends_ => lost T (Nat.le_refl T)
+      (extends_.1 (.sustaining, (), T) ⟨absent_sustains L gStart T, Or.inl trivial,
+        fun ⟨drawn, _⟩ => drawn⟩).1⟩
 
 /-- A comparison preferring the course in which the focal formation occurs, alongside
 every extension under a reading. `preferOccurs reading w w'` says `w'` is better. -/
