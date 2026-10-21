@@ -2451,6 +2451,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   super-additive up to one unit, strictly so in
   `Concave`; in `Peaked` each of two draws holds alone and together they end the condition. The time
   to break lies between `b + H n ≤ x` and `x < b + (H - Y) n`.
+  Where giving adjusts, a law of what is left and of the recent giving on the state of level and
+  recent giving, the regime's step is the case reading what is left alone. Where the adjustment
+  rests at the draw exactly where the regime gives the draw, every rest point at or above the draw
+  is the regime's. With the recent giving on the level's side of the draw and the adjustment
+  keeping giving on the side where the recent and the regime's giving lie, the regime's laws hold
+  with their premises: the condition ends below the point of no return and holds at or above it,
+  and the point is exact on the state; giving between the recent and the regime's keeps both
+  sides. With the recent giving on the other side, giving moving one unit a step toward the
+  regime's crosses the point both ways.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of

@@ -9,19 +9,42 @@ holds as an identity; what a measurement can test is the margin with the rest re
 module states that margin. Under a standing draw `H`, a condition gives by a law of its level, `g`:
 what it gives back from what is left, its equation of state in that regime. The draw takes first at
 every step, as much as there is: `step g H x = (x - H) + g (x - H)`. Every law below is stated on
-the run `Law.run (step g H) x` of the spine. Where laws compare regimes, each draw has its own giving
-law: on real yeast, giving at the same level falls as the standing draw rises (study section 266,
-MQ2), so the giving law is the regime's and not the level's alone.
+a run of the spine: `Law.run (step g H) x`, or the run of the adjusted step on the level and the
+recent giving. Where laws compare regimes, each draw has its own giving law: on real yeast, giving
+at the same level falls as the standing draw rises (study section 266, MQ2), so the giving law is
+the regime's and not the level's alone.
 
 * **Below the point of no return the condition is gone.** Where giving falls short of the draw at
   every level below `y` (`Short g H y`) and nothing gives from nothing (`FromNothing g`), a positive
-  level below `H + y` falls at every step (`step_falls`), is nothing after as many steps as it stood
-  (`ends_below`) and stays nothing (`stays_ended`).
+  level below `H + y` falls at every step (`Adjusted.step_below`), is nothing after as many steps
+  as it stood (`ends_below`) and stays nothing (`stays_ended`).
 * **At or above it, the condition holds.** Where giving meets the draw from `y` up to a top `hi`
   (`Meets g H y hi`) and the step keeps every level up to `hi` within it (`Keeps g H hi`), a level
   from `H + y` up to `hi` never falls below where it started (`holds`). The point is exact: from a
   level up to `hi`, the condition ends exactly where the level starts below `H + y`
   (`ends_iff_below`).
+* **Giving that adjusts.** A condition can carry what it gave before: its state is its level and its
+  recent giving, and the giving at a step is any law `A` of what is left and of the recent giving
+  (`Adjusted.step`). The regime's step is the case where `A` reads what is left alone, and the laws
+  above on ending and holding are stated from their general forms (`Adjusted.orbit_regime`); the
+  frozen rest, which holds the giving as it was, is the case where `A` reads the recent giving
+  alone. Where the adjusted giving rests at the draw exactly where the regime gives the draw
+  (`Adjusted.RestsAtDraw`, which every giving between the recent and the regime's has where it moves
+  wherever it differs from the regime's, `Adjusted.Between.restsAtDraw`), a level at or above the
+  draw with a recent giving is left as it is exactly where the recent giving is the draw and the
+  regime's step leaves the level as it is (`Adjusted.rest_iff`): wherever a run comes to rest at or
+  above the draw, at any rate of adjustment, it rests at a point the regime's step leaves as it is,
+  while the frozen rest leaves every level at or above the draw as it is (`Adjusted.frozen_rests`).
+  Where the adjusted giving stays on the draw's side where the recent and the regime's giving both
+  are (`Adjusted.StaysShort`, `Adjusted.StaysMet`), below the point of no return with the recent
+  giving short of the draw the condition is gone (`Adjusted.ends_below`; where `y` is positive,
+  whatever is given from nothing, the draw takes all there is, `Adjusted.taken_whole`), at or above
+  it with the recent giving meeting the draw it holds (`Adjusted.holds`, `Adjusted.holds_from`), and
+  the point is exact on the state (`Adjusted.ends_iff_below`). The recent giving's side cannot be
+  dropped: under giving gated at two and a draw of three the point is five; the regime's step ends
+  the condition from four and holds it from five, while giving moving one unit a step toward the
+  regime's holds it from four with a recent giving of six and ends it from five with a recent giving
+  of nothing (`Crossing.crosses`).
 * **The need is the regime's.** Where giving stops below a need `m` (`Gated g m`), every level at
   which giving meets a positive draw lies at or above the need (`root_above_need`), so the point of
   no return lies at least the draw above the need, and more than the draw above it exactly where
@@ -87,16 +110,6 @@ def SubadditiveAbove (g : Nat → Nat) (m : Nat) : Prop :=
 /-- Giving is at most `Y` at every level. -/
 def AtMost (g : Nat → Nat) (Y : Nat) : Prop := ∀ z, g z ≤ Y
 
-/-- From nothing the step gives nothing. -/
-theorem step_zero {g : Nat → Nat} (H : Nat) (nothing : FromNothing g) : step g H 0 = 0 :=
-  (congrArg (fun r => r + g r) (Nat.zero_sub H)).trans ((Nat.zero_add (g 0)).trans nothing)
-
-/-- A level below the draw is taken whole, and nothing gives from nothing. -/
-theorem step_of_lt {g : Nat → Nat} {H x : Nat} (nothing : FromNothing g) (lt : x < H) :
-    step g H x = 0 :=
-  (congrArg (fun r => r + g r) (sub_eq_zero_of_le (Nat.le_of_lt lt))).trans
-    ((Nat.zero_add (g 0)).trans nothing)
-
 /-- The draw added back to the step is at least the level. -/
 theorem step_ge (g : Nat → Nat) (H x : Nat) : x ≤ step g H x + H :=
   (Nat.lt_or_ge x H).elim
@@ -104,68 +117,380 @@ theorem step_ge (g : Nat → Nat) (H x : Nat) : x ≤ step g H x + H :=
     (fun ge => calc x = x - H + H := (Naturals.sub_add_cancel ge).symm
       _ ≤ x - H + g (x - H) + H := Nat.add_le_add_right (Nat.le_add_right _ _) H)
 
-/-! ## Below the point of no return -/
+/-! ## Giving that adjusts
 
-/-- Below the point of no return `H + y`, a positive level falls at the step. -/
-theorem step_falls {g : Nat → Nat} {H y x : Nat} (short : Short g H y)
-    (nothing : FromNothing g) (pos : 0 < x) (below : x < H + y) : step g H x < x :=
+The step above reads giving off what the draw leaves, alone. A condition can carry what it gave
+before: its state is its level and its recent giving, and the giving at a step is a law `A` of what
+is left and of the recent giving, which is the next step's recent giving. The regime's step is the
+case where `A` reads what is left alone (`orbit_regime`); the frozen rest, which holds the giving
+as it was, the case where it reads the recent giving alone. Every law of this section holds over
+every such `A` with the properties it names, and the laws of the regime's step below are their
+case. -/
+
+namespace Adjusted
+
+/-- One step of a condition whose giving adjusts. At level `p.1` with recent giving `p.2`, the draw
+`H` takes first, as much as there is; the giving is `A` of what is left and of the recent giving;
+the next level is what is left with that giving, which is the next step's recent giving. -/
+def step (A : Nat → Nat → Nat) (H : Nat) (p : Nat × Nat) : Nat × Nat :=
+  (p.1 - H + A (p.1 - H) p.2, A (p.1 - H) p.2)
+
+/-- Where the recent giving and the regime's giving both fall short of the draw, so does the
+adjusted giving. -/
+def StaysShort (A : Nat → Nat → Nat) (g : Nat → Nat) (H : Nat) : Prop :=
+  ∀ e r, r < H → g e < H → A e r < H
+
+/-- Where the recent giving and the regime's giving both meet the draw, so does the adjusted
+giving. -/
+def StaysMet (A : Nat → Nat → Nat) (g : Nat → Nat) (H : Nat) : Prop :=
+  ∀ e r, H ≤ r → H ≤ g e → H ≤ A e r
+
+/-- The adjusted giving rests at the draw exactly where the regime gives the draw. -/
+def RestsAtDraw (A : Nat → Nat → Nat) (g : Nat → Nat) (H : Nat) : Prop :=
+  ∀ e, A e H = H ↔ g e = H
+
+/-- From nothing left the adjusted giving is nothing, whatever was given before. -/
+def FromNothing (A : Nat → Nat → Nat) : Prop := ∀ r, A 0 r = 0
+
+/-- The adjusted step keeps every level up to `hi` within `hi` where the recent giving meets the
+draw. -/
+def Keeps (A : Nat → Nat → Nat) (H hi : Nat) : Prop :=
+  ∀ x r, x ≤ hi → H ≤ r → (step A H (x, r)).1 ≤ hi
+
+/-- The adjusted giving lies between the recent giving and the regime's giving. -/
+def Between (A : Nat → Nat → Nat) (g : Nat → Nat) : Prop :=
+  ∀ e r, (r ≤ A e r ∧ A e r ≤ g e) ∨ (g e ≤ A e r ∧ A e r ≤ r)
+
+/-- The adjusted giving moves wherever it differs from the regime's: it rests only there. -/
+def Settles (A : Nat → Nat → Nat) (g : Nat → Nat) : Prop :=
+  ∀ e r, A e r = r → r = g e
+
+/-! ### The regime's step and the frozen rest as cases -/
+
+/-- **The regime's step is the case reading what is left alone**: along every run, the level of
+the adjusted state whose giving is the regime's is the run of the regime's step. -/
+theorem orbit_regime (g : Nat → Nat) (H : Nat) (p : Nat × Nat) :
+    ∀ n, (Law.orbit (step (fun e _ => g e) H) p n).1 = Law.orbit (RegimeMargin.step g H) p.1 n
+  | 0 => rfl
+  | n + 1 => congrArg (RegimeMargin.step g H) (orbit_regime g H p n)
+
+theorem regime_staysShort (g : Nat → Nat) (H : Nat) : StaysShort (fun e _ => g e) g H :=
+  fun _ _ _ short => short
+
+theorem regime_staysMet (g : Nat → Nat) (H : Nat) : StaysMet (fun e _ => g e) g H :=
+  fun _ _ _ met => met
+
+theorem regime_restsAtDraw (g : Nat → Nat) (H : Nat) : RestsAtDraw (fun e _ => g e) g H :=
+  fun _ => Iff.rfl
+
+theorem regime_fromNothing {g : Nat → Nat} (nothing : RegimeMargin.FromNothing g) :
+    FromNothing (fun e _ => g e) :=
+  fun _ => nothing
+
+theorem regime_keeps {g : Nat → Nat} {H hi : Nat} (keeps : RegimeMargin.Keeps g H hi) :
+    Keeps (fun e _ => g e) H hi :=
+  fun x _ high _ => keeps x high
+
+/-- Giving between the recent giving and the regime's stays short of the draw where both are. -/
+theorem Between.staysShort {A : Nat → Nat → Nat} {g : Nat → Nat} (between : Between A g)
+    (H : Nat) : StaysShort A g H :=
+  fun e r rshort gshort => (between e r).elim
+    (fun ⟨_, le⟩ => Nat.lt_of_le_of_lt le gshort)
+    (fun ⟨_, le⟩ => Nat.lt_of_le_of_lt le rshort)
+
+/-- Giving between the recent giving and the regime's meets the draw where both do. -/
+theorem Between.staysMet {A : Nat → Nat → Nat} {g : Nat → Nat} (between : Between A g)
+    (H : Nat) : StaysMet A g H :=
+  fun e r rmet gmet => (between e r).elim
+    (fun ⟨ge, _⟩ => Nat.le_trans rmet ge)
+    (fun ⟨ge, _⟩ => Nat.le_trans gmet ge)
+
+/-- Giving between the recent giving and the regime's, moving wherever it differs from the
+regime's, rests at the draw exactly where the regime gives the draw. -/
+theorem Between.restsAtDraw {A : Nat → Nat → Nat} {g : Nat → Nat} (between : Between A g)
+    (settles : Settles A g) (H : Nat) : RestsAtDraw A g H :=
+  fun e => ⟨fun rest => (settles e H rest).symm,
+    fun gives => (between e H).elim
+      (fun ⟨ge, le⟩ => Nat.le_antisymm (Nat.le_trans le (Nat.le_of_eq gives)) ge)
+      (fun ⟨ge, le⟩ => Nat.le_antisymm le (Nat.le_trans (Nat.le_of_eq gives.symm) ge))⟩
+
+/-- The frozen rest, which holds the giving as it was, lies between the recent giving and the
+regime's. -/
+theorem frozen_between (g : Nat → Nat) : Between (fun _ r => r) g :=
+  fun e r => (Nat.le_total r (g e)).elim
+    (fun le => Or.inl ⟨Nat.le_refl r, le⟩)
+    (fun ge => Or.inr ⟨ge, Nat.le_refl r⟩)
+
+/-- **The frozen rest rests everywhere at the draw.** Holding the giving at the draw, every level at
+or above the draw is left as it is, whatever the regime gives there. -/
+theorem frozen_rests {H x : Nat} (atLeast : H ≤ x) : step (fun _ r => r) H (x, H) = (x, H) :=
+  congrArg (fun a => (a, H)) (Naturals.sub_add_cancel atLeast)
+
+/-! ### Where the state rests -/
+
+/-- **At or above the draw, every rest point is the regime's.** Where the adjusted giving rests at
+the draw exactly where the regime gives the draw, a level at or above the draw with a recent giving
+is left as it is by the step exactly where the recent giving is the draw and the regime's step
+leaves the level as it is: wherever a run of such an adjustment comes to rest at or above the draw,
+whatever its rate, its memory or its pull toward the draw, it rests at a point the regime's step
+leaves as it is. -/
+theorem rest_iff {A : Nat → Nat → Nat} {g : Nat → Nat} {H x r : Nat} (rests : RestsAtDraw A g H)
+    (atLeast : H ≤ x) : step A H (x, r) = (x, r) ↔ r = H ∧ RegimeMargin.step g H x = x := by
+  have back : x - H + H = x := Naturals.sub_add_cancel atLeast
+  constructor
+  · intro fixed
+    have level : x - H + A (x - H) r = x := congrArg Prod.fst fixed
+    have giving : A (x - H) r = r := congrArg Prod.snd fixed
+    have draw : A (x - H) r = H := Naturals.add_left_cancel (level.trans back.symm)
+    have rH : r = H := giving.symm.trans draw
+    have atDraw : A (x - H) H = H := Eq.subst (motive := fun v => A (x - H) v = v) rH giving
+    refine ⟨rH, ?_⟩
+    show x - H + g (x - H) = x
+    rw [(rests (x - H)).1 atDraw]
+    exact back
+  · intro ⟨rH, fixed⟩
+    have gives : g (x - H) = H :=
+      Naturals.add_left_cancel ((show x - H + g (x - H) = x from fixed).trans back.symm)
+    have atDraw : A (x - H) H = H := (rests (x - H)).2 gives
+    have ar : A (x - H) r = r := (congrArg (A (x - H)) rH).trans (atDraw.trans rH.symm)
+    show (x - H + A (x - H) r, A (x - H) r) = (x, r)
+    rw [ar, rH, back]
+
+/-! ### Below the point of no return -/
+
+/-- The draw is positive where giving falls short of it below `y` and a level lies below `H + y`. -/
+theorem draw_pos {g : Nat → Nat} {H y x : Nat} (short : Short g H y) (below : x < H + y) :
+    0 < H :=
+  (Nat.eq_zero_or_pos H).elim
+    (fun zero => by
+      subst zero
+      have ypos : 0 < y := Nat.lt_of_le_of_lt (Nat.zero_le x)
+        (Nat.lt_of_lt_of_le below (Nat.le_of_eq (Nat.zero_add y)))
+      exact absurd (short 0 ypos) (Nat.not_lt_zero (g 0)))
+    id
+
+/-- What the draw leaves falls by at least one at a step whose giving falls short of the draw,
+unless nothing is left. -/
+theorem left_falls {d a H : Nat} (gives : a < H) : d + a - H ≤ d - 1 :=
+  (Nat.lt_or_ge (d + a) H).elim
+    (fun small => by rw [sub_eq_zero_of_le (Nat.le_of_lt small)]; exact Nat.zero_le _)
+    (fun big => by
+      have sum : d + a - H + H = d + a := Naturals.sub_add_cancel big
+      have lt : d + a - H + 1 + H ≤ d + H := by
+        rw [Nat.add_right_comm, sum]; exact Nat.add_lt_add_left gives d
+      have one : 1 + (d + a - H) ≤ d := by
+        rw [Nat.add_comm]; exact Naturals.le_of_add_le_add_right lt
+      exact Naturals.le_sub_of_add_le one)
+
+/-- Below the point of no return, what the draw leaves is below the point's distance above the
+draw. -/
+theorem left_below {H y x : Nat} (ypos : 0 < y) (below : x < H + y) : x - H < y :=
   (Nat.lt_or_ge x H).elim
-    (fun lt => (step_of_lt nothing lt).symm ▸ pos)
+    (fun lt => by rw [sub_eq_zero_of_le (Nat.le_of_lt lt)]; exact ypos)
     (fun ge => by
       have back : x - H + H = x := Naturals.sub_add_cancel ge
       have within : H + (x - H) + 1 ≤ H + y := by
         rw [Nat.add_comm H (x - H), back]; exact below
-      have r_lt : x - H < y := Naturals.le_of_add_le_add_left within
-      have falls : x - H + g (x - H) < x - H + H := Nat.add_lt_add_left (short _ r_lt) _
-      exact Nat.lt_of_lt_of_le falls (Nat.le_of_eq back))
+      exact Naturals.le_of_add_le_add_left within)
 
-/-- Below the point of no return the step stays below it. -/
-theorem step_below {g : Nat → Nat} {H y x : Nat} (short : Short g H y)
-    (nothing : FromNothing g) (below : x < H + y) : step g H x < H + y :=
-  (Nat.eq_zero_or_pos x).elim
-    (fun zero => by subst zero; rw [step_zero H nothing]; exact below)
-    (fun pos => Nat.lt_trans (step_falls short nothing pos below) below)
+/-- Below the point of no return, with the recent giving short of the draw, the step keeps the
+level below the point and the recent giving short of the draw, and lowers every positive level. -/
+theorem step_below {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat} (short : Short g H y)
+    (stays : StaysShort A g H) (nothing : FromNothing A) (below : x < H + y) (rshort : r < H) :
+    (step A H (x, r)).1 < H + y ∧ (step A H (x, r)).2 < H ∧ (0 < x → (step A H (x, r)).1 < x) :=
+  (Nat.lt_or_ge x H).elim
+    (fun lt => by
+      have gone : x - H = 0 := sub_eq_zero_of_le (Nat.le_of_lt lt)
+      show x - H + A (x - H) r < H + y ∧ A (x - H) r < H ∧ (0 < x → x - H + A (x - H) r < x)
+      rw [gone, nothing r]
+      exact ⟨Nat.lt_of_le_of_lt (Nat.zero_le x) below, Nat.lt_of_le_of_lt (Nat.zero_le x) lt, id⟩)
+    (fun ge => by
+      have back : x - H + H = x := Naturals.sub_add_cancel ge
+      have within : H + (x - H) + 1 ≤ H + y := by
+        rw [Nat.add_comm H (x - H), back]; exact below
+      have left : x - H < y := Naturals.le_of_add_le_add_left within
+      have gives : A (x - H) r < H := stays _ _ rshort (short _ left)
+      have falls : x - H + A (x - H) r < x :=
+        Nat.lt_of_lt_of_le (Nat.add_lt_add_left gives _) (Nat.le_of_eq back)
+      show x - H + A (x - H) r < H + y ∧ A (x - H) r < H ∧ (0 < x → x - H + A (x - H) r < x)
+      exact ⟨Nat.lt_trans falls below, gives, fun _ => falls⟩)
 
-/-- Below the point of no return, after `n` steps the level is still below it and has fallen by
-at least `n`. -/
-theorem orbit_bound {g : Nat → Nat} {H y x : Nat} (short : Short g H y)
-    (nothing : FromNothing g) (below : x < H + y) :
-    ∀ n, Law.orbit (step g H) x n < H + y ∧ Law.orbit (step g H) x n ≤ x - n
-  | 0 => ⟨below, Nat.le_refl x⟩
+/-- From nothing, the level stays at nothing, whatever the recent giving, where nothing is given from
+nothing. -/
+theorem from_zero {A : Nat → Nat → Nat} (H : Nat) (nothing : FromNothing A) {p : Nat × Nat}
+    (zero : p.1 = 0) : ∀ k, (Law.orbit (step A H) p k).1 = 0
+  | 0 => zero
+  | k + 1 => by
+    show (Law.orbit (step A H) p k).1 - H +
+      A ((Law.orbit (step A H) p k).1 - H) (Law.orbit (step A H) p k).2 = 0
+    rw [from_zero H nothing zero k, Nat.zero_sub, nothing, Nat.zero_add]
+
+/-- Below the point of no return, with the recent giving short of the draw, after `n` steps the
+level is still below the point, the recent giving still short of the draw, and the level has
+fallen by at least `n`. -/
+theorem orbit_bound {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat} (short : Short g H y)
+    (stays : StaysShort A g H) (nothing : FromNothing A) (below : x < H + y) (rshort : r < H) :
+    ∀ n, (Law.orbit (step A H) (x, r) n).1 < H + y ∧ (Law.orbit (step A H) (x, r) n).2 < H ∧
+      (Law.orbit (step A H) (x, r) n).1 ≤ x - n
+  | 0 => ⟨below, rshort, Nat.le_refl x⟩
   | n + 1 => by
-    have ⟨inside, le⟩ := orbit_bound short nothing below n
-    show step g H (Law.orbit (step g H) x n) < H + y ∧
-      step g H (Law.orbit (step g H) x n) ≤ x - (n + 1)
-    refine ⟨step_below short nothing inside, ?_⟩
-    refine (Nat.eq_zero_or_pos (Law.orbit (step g H) x n)).elim (fun zero => ?_) (fun pos => ?_)
-    · rw [zero, step_zero H nothing]; exact Nat.zero_le _
-    · have h0 : step g H (Law.orbit (step g H) x n) + 1 ≤ x - n :=
-        Nat.le_trans (step_falls short nothing pos inside) le
-      have h1 : 1 + step g H (Law.orbit (step g H) x n) ≤ x - n := by
+    have ⟨inside, still, le⟩ := orbit_bound short stays nothing below rshort n
+    have next := step_below (x := (Law.orbit (step A H) (x, r) n).1)
+      (r := (Law.orbit (step A H) (x, r) n).2) short stays nothing inside still
+    show (step A H (Law.orbit (step A H) (x, r) n)).1 < H + y ∧
+      (step A H (Law.orbit (step A H) (x, r) n)).2 < H ∧
+      (step A H (Law.orbit (step A H) (x, r) n)).1 ≤ x - (n + 1)
+    refine ⟨next.1, next.2.1, ?_⟩
+    refine (Nat.eq_zero_or_pos (Law.orbit (step A H) (x, r) n).1).elim
+      (fun zero => ?_) (fun pos => ?_)
+    · have z : (step A H (Law.orbit (step A H) (x, r) n)).1 = 0 := from_zero H nothing zero 1
+      rw [z]; exact Nat.zero_le _
+    · have h0 : (step A H (Law.orbit (step A H) (x, r) n)).1 + 1 ≤ x - n :=
+        Nat.le_trans (next.2.2 pos) le
+      have h1 : 1 + (step A H (Law.orbit (step A H) (x, r) n)).1 ≤ x - n := by
         rw [Nat.add_comm]; exact h0
       rw [← Naturals.sub_sub x n 1]
       exact Naturals.le_sub_of_add_le h1
 
-/-- **Below the point of no return the condition is gone**, after as many steps as it stood. -/
-theorem ends_below {g : Nat → Nat} {H y x : Nat} (short : Short g H y)
-    (nothing : FromNothing g) (below : x < H + y) : (Law.run (step g H) x).state x = 0 := by
-  have bound := (orbit_bound short nothing below x).2
+/-- **Below the point of no return, with the recent giving short of the draw, the condition is
+gone**, after as many steps as it stood, at every adjustment keeping giving short where the recent
+and the regime's giving are and giving nothing from nothing. -/
+theorem ends_below {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat} (short : Short g H y)
+    (stays : StaysShort A g H) (nothing : FromNothing A) (below : x < H + y) (rshort : r < H) :
+    ((Law.run (step A H) (x, r)).state x).1 = 0 := by
+  have bound := (orbit_bound short stays nothing below rshort x).2.2
   rw [Nat.sub_self] at bound
   exact Nat.eq_zero_of_le_zero bound
 
-/-- From nothing, the run stays at nothing. -/
-theorem orbit_from_zero {g : Nat → Nat} (H : Nat) (nothing : FromNothing g) :
-    ∀ k, Law.orbit (step g H) 0 k = 0
-  | 0 => rfl
-  | k + 1 => (congrArg (step g H) (orbit_from_zero H nothing k)).trans (step_zero H nothing)
+/-- Once gone below the point of no return, the condition stays gone. -/
+theorem stays_ended {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat} (short : Short g H y)
+    (stays : StaysShort A g H) (nothing : FromNothing A) (below : x < H + y) (rshort : r < H)
+    (k : Nat) : ((Law.run (step A H) (x, r)).state (x + k)).1 = 0 :=
+  (congrArg Prod.fst (Law.orbit_add (step A H) (x, r) x k)).trans
+    (from_zero H nothing (ends_below short stays nothing below rshort) k)
+
+/-- Below the point of no return, with the recent giving short of the draw, at every adjustment
+keeping giving short where the recent and the regime's giving are, whatever it gives from nothing:
+after `n` steps the level is below the point, the recent giving short of the draw, and what the
+draw leaves has fallen by at least `n`. -/
+theorem left_bound {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat} (short : Short g H y)
+    (stays : StaysShort A g H) (ypos : 0 < y) (below : x < H + y) (rshort : r < H) :
+    ∀ n, (Law.orbit (step A H) (x, r) n).1 < H + y ∧ (Law.orbit (step A H) (x, r) n).2 < H ∧
+      (Law.orbit (step A H) (x, r) n).1 - H ≤ x - H - n
+  | 0 => ⟨below, rshort, Nat.le_refl _⟩
+  | n + 1 => by
+    have ⟨inside, still, le⟩ := left_bound short stays ypos below rshort n
+    have left := left_below ypos inside
+    have gives := stays _ _ still (short _ left)
+    show (Law.orbit (step A H) (x, r) n).1 - H +
+        A ((Law.orbit (step A H) (x, r) n).1 - H) (Law.orbit (step A H) (x, r) n).2 < H + y ∧
+      A ((Law.orbit (step A H) (x, r) n).1 - H) (Law.orbit (step A H) (x, r) n).2 < H ∧
+      (Law.orbit (step A H) (x, r) n).1 - H +
+        A ((Law.orbit (step A H) (x, r) n).1 - H) (Law.orbit (step A H) (x, r) n).2 - H ≤
+          x - H - (n + 1)
+    refine ⟨?_, gives, ?_⟩
+    · rw [Nat.add_comm H y]; exact Nat.add_lt_add left gives
+    · rw [← Naturals.sub_sub (x - H) n 1]
+      exact Nat.le_trans (left_falls gives) (Nat.pred_le_pred le)
+
+/-- **Below the point of no return, with the recent giving short of the draw, the draw takes all
+there is** from as many steps on as the level stood above the draw, at every adjustment keeping
+giving short where the recent and the regime's giving are, whatever it gives from nothing: from
+then on the level is at most the draw. -/
+theorem taken_whole {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat} (short : Short g H y)
+    (stays : StaysShort A g H) (ypos : 0 < y) (below : x < H + y) (rshort : r < H) (n : Nat)
+    (late : x - H ≤ n) : ((Law.run (step A H) (x, r)).state n).1 ≤ H := by
+  have left : (Law.orbit (step A H) (x, r) n).1 - H = 0 :=
+    Nat.eq_zero_of_le_zero (Nat.le_trans (left_bound short stays ypos below rshort n).2.2
+      (Nat.le_of_eq (sub_eq_zero_of_le late)))
+  show (Law.orbit (step A H) (x, r) n).1 ≤ H
+  exact (Nat.lt_or_ge (Law.orbit (step A H) (x, r) n).1 H).elim Nat.le_of_lt
+    (fun ge => Nat.le_of_eq ((Naturals.sub_add_cancel ge).symm.trans
+      ((congrArg (· + H) left).trans (Nat.zero_add H))))
+
+/-! ### At or above the point of no return -/
+
+/-- At or above the point of no return, with giving meeting the draw up to `hi` and the recent
+giving meeting the draw, the step does not lower the level and keeps the recent giving at or above
+the draw. -/
+theorem step_holds {A : Nat → Nat → Nat} {g : Nat → Nat} {H y hi x r : Nat}
+    (meets : Meets g H y hi) (stays : StaysMet A g H) (low : H + y ≤ x) (high : x ≤ hi)
+    (met : H ≤ r) : x ≤ (step A H (x, r)).1 ∧ H ≤ (step A H (x, r)).2 := by
+  have ge : H ≤ x := Nat.le_trans (Nat.le_add_right H y) low
+  have back : x - H + H = x := Naturals.sub_add_cancel ge
+  have ylow : y ≤ x - H := Naturals.le_sub_of_add_le low
+  have top : x - H + H ≤ hi := by rw [back]; exact high
+  have gives : H ≤ A (x - H) r := stays _ _ met (meets _ ylow top)
+  show x ≤ x - H + A (x - H) r ∧ H ≤ A (x - H) r
+  exact ⟨Nat.le_trans (Nat.le_of_eq back.symm) (Nat.add_le_add_left gives _), gives⟩
+
+/-- **At or above the point of no return, with the recent giving meeting the draw, the condition
+holds**: from a level between `H + y` and `hi`, the run never falls below the level it started
+from and never exceeds `hi`, at every adjustment keeping giving at the draw where the recent and
+the regime's giving are and keeping the band. -/
+theorem holds {A : Nat → Nat → Nat} {g : Nat → Nat} {H y hi x r : Nat} (meets : Meets g H y hi)
+    (stays : StaysMet A g H) (keeps : Keeps A H hi) (low : H + y ≤ x) (high : x ≤ hi)
+    (met : H ≤ r) :
+    ∀ n, x ≤ ((Law.run (step A H) (x, r)).state n).1 ∧ ((Law.run (step A H) (x, r)).state n).1 ≤ hi ∧
+      H ≤ ((Law.run (step A H) (x, r)).state n).2
+  | 0 => ⟨Nat.le_refl x, high, met⟩
+  | n + 1 => by
+    have ⟨up, top, still⟩ := holds meets stays keeps low high met n
+    have next := step_holds (r := (Law.orbit (step A H) (x, r) n).2) meets stays
+      (Nat.le_trans low up) top still
+    show x ≤ (step A H (Law.orbit (step A H) (x, r) n)).1 ∧
+      (step A H (Law.orbit (step A H) (x, r) n)).1 ≤ hi ∧ H ≤ (step A H (Law.orbit (step A H) (x, r) n)).2
+    exact ⟨Nat.le_trans up next.1, keeps _ _ top still, next.2⟩
+
+/-- Where giving meets the draw at every level from `y`, the condition holds from every level at
+or above `H + y` with the recent giving meeting the draw, with no top. -/
+theorem holds_from {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat}
+    (meets : ∀ z, y ≤ z → H ≤ g z) (stays : StaysMet A g H) (low : H + y ≤ x) (met : H ≤ r) :
+    ∀ n, x ≤ ((Law.run (step A H) (x, r)).state n).1 ∧ H ≤ ((Law.run (step A H) (x, r)).state n).2
+  | 0 => ⟨Nat.le_refl x, met⟩
+  | n + 1 => by
+    have ⟨up, still⟩ := holds_from meets stays low met n
+    have next := step_holds (hi := (Law.orbit (step A H) (x, r) n).1)
+      (r := (Law.orbit (step A H) (x, r) n).2) (fun z ylow _ => meets z ylow) stays
+      (Nat.le_trans low up) (Nat.le_refl _) still
+    exact ⟨Nat.le_trans up next.1, next.2⟩
+
+/-- **The point of no return is exact on the state.** From a level up to `hi` whose recent giving
+falls short of the draw exactly where the level is below `H + y`, the condition ends exactly where
+the level starts below `H + y`, at every adjustment keeping giving on the side of the draw where the
+recent and the regime's giving are, giving nothing from nothing and keeping the band. -/
+theorem ends_iff_below {A : Nat → Nat → Nat} {g : Nat → Nat} {H y hi x r : Nat} (pos : 0 < H + y)
+    (short : Short g H y) (staysShort : StaysShort A g H) (nothing : FromNothing A)
+    (meets : Meets g H y hi) (staysMet : StaysMet A g H) (keeps : Keeps A H hi) (high : x ≤ hi)
+    (side : r < H ↔ x < H + y) :
+    (∃ n, ((Law.run (step A H) (x, r)).state n).1 = 0) ↔ x < H + y :=
+  ⟨fun ⟨n, zero⟩ => (Nat.lt_or_ge x (H + y)).elim id (fun ge => by
+      have met : H ≤ r := (Nat.lt_or_ge r H).elim
+        (fun lt => absurd (Nat.lt_of_lt_of_le (side.1 lt) ge) (Nat.lt_irrefl x)) id
+      have at_least : H + y ≤ ((Law.run (step A H) (x, r)).state n).1 :=
+        Nat.le_trans ge (holds meets staysMet keeps ge high met n).1
+      rw [zero] at at_least
+      exact absurd (Nat.lt_of_lt_of_le pos at_least) (Nat.lt_irrefl 0)),
+   fun below => ⟨x, ends_below short staysShort nothing below (side.2 below)⟩⟩
+
+end Adjusted
+
+/-! ## Below the point of no return -/
+
+/-- **Below the point of no return the condition is gone**, after as many steps as it stood. -/
+theorem ends_below {g : Nat → Nat} {H y x : Nat} (short : Short g H y)
+    (nothing : FromNothing g) (below : x < H + y) : (Law.run (step g H) x).state x = 0 :=
+  (Adjusted.orbit_regime g H (x, 0) x).symm.trans
+    (Adjusted.ends_below short (Adjusted.regime_staysShort g H) (Adjusted.regime_fromNothing nothing)
+      below (Adjusted.draw_pos short below))
 
 /-- Once gone below the point of no return, the condition stays gone. -/
 theorem stays_ended {g : Nat → Nat} {H y x : Nat} (short : Short g H y)
     (nothing : FromNothing g) (below : x < H + y) (k : Nat) :
     (Law.run (step g H) x).state (x + k) = 0 :=
-  (Law.orbit_add (step g H) x x k).trans
-    ((congrArg (fun s => Law.orbit (step g H) s k) (ends_below short nothing below)).trans
-      (orbit_from_zero H nothing k))
+  (Adjusted.orbit_regime g H (x, 0) (x + k)).symm.trans
+    (Adjusted.stays_ended short (Adjusted.regime_staysShort g H) (Adjusted.regime_fromNothing nothing)
+      below (Adjusted.draw_pos short below) k)
 
 /-- A draw beyond all giving ends the condition from every level, within as many steps as it
 stood. -/
@@ -176,41 +501,37 @@ theorem ends_beyond_giving {g : Nat → Nat} {H : Nat} (beyond : ∀ z, g z < H)
 
 /-! ## At or above the point of no return -/
 
-/-- At or above the point of no return, with giving meeting the draw up to `hi`, the step does not
-lower the level. -/
-theorem step_holds {g : Nat → Nat} {H y hi x : Nat} (meets : Meets g H y hi) (low : H + y ≤ x)
-    (high : x ≤ hi) : x ≤ step g H x := by
-  have ge : H ≤ x := Nat.le_trans (Nat.le_add_right H y) low
-  have back : x - H + H = x := Naturals.sub_add_cancel ge
-  have ylow : y ≤ x - H := Naturals.le_sub_of_add_le low
-  have top : x - H + H ≤ hi := by rw [back]; exact high
-  have gives : H ≤ g (x - H) := meets _ ylow top
-  show x ≤ x - H + g (x - H)
-  calc x = x - H + H := back.symm
-    _ ≤ x - H + g (x - H) := Nat.add_le_add_left gives _
-
 /-- **At or above the point of no return the condition holds**: from a level between `H + y` and
 `hi`, the run never falls below the level it started from and never exceeds `hi`. -/
 theorem holds {g : Nat → Nat} {H y hi x : Nat} (meets : Meets g H y hi) (keeps : Keeps g H hi)
     (low : H + y ≤ x) (high : x ≤ hi) :
-    ∀ n, x ≤ (Law.run (step g H) x).state n ∧ (Law.run (step g H) x).state n ≤ hi
-  | 0 => ⟨Nat.le_refl x, high⟩
-  | n + 1 => by
-    have ⟨up, top⟩ := holds meets keeps low high n
-    show x ≤ step g H (Law.orbit (step g H) x n) ∧ step g H (Law.orbit (step g H) x n) ≤ hi
-    exact ⟨Nat.le_trans up (step_holds meets (Nat.le_trans low up) top), keeps _ top⟩
+    ∀ n, x ≤ (Law.run (step g H) x).state n ∧ (Law.run (step g H) x).state n ≤ hi :=
+  fun n =>
+    have h := Adjusted.holds (r := H) meets (Adjusted.regime_staysMet g H) (Adjusted.regime_keeps keeps)
+      low high (Nat.le_refl H) n
+    ⟨Nat.le_trans h.1 (Nat.le_of_eq (Adjusted.orbit_regime g H (x, H) n)),
+     Nat.le_trans (Nat.le_of_eq (Adjusted.orbit_regime g H (x, H) n).symm) h.2.1⟩
 
 /-- **The point of no return is exact.** From a level up to `hi`, the condition ends exactly where
 the level starts below `H + y`. -/
 theorem ends_iff_below {g : Nat → Nat} {H y hi x : Nat} (pos : 0 < H + y) (short : Short g H y)
     (nothing : FromNothing g) (meets : Meets g H y hi) (keeps : Keeps g H hi) (high : x ≤ hi) :
     (∃ n, (Law.run (step g H) x).state n = 0) ↔ x < H + y :=
-  ⟨fun ⟨n, zero⟩ => (Nat.lt_or_ge x (H + y)).elim id (fun ge => by
-      have at_least : H + y ≤ (Law.run (step g H) x).state n :=
-        Nat.le_trans ge (holds meets keeps ge high n).1
-      rw [zero] at at_least
-      exact absurd (Nat.lt_of_lt_of_le pos at_least) (Nat.lt_irrefl 0)),
-   fun below => ⟨x, ends_below short nothing below⟩⟩
+  have transfer : ∀ r, (∃ n, ((Law.run (Adjusted.step (fun e _ => g e) H) (x, r)).state n).1 = 0) ↔
+      ∃ n, (Law.run (step g H) x).state n = 0 := fun r =>
+    ⟨fun ⟨n, zero⟩ => ⟨n, (Adjusted.orbit_regime g H (x, r) n).symm.trans zero⟩,
+     fun ⟨n, zero⟩ => ⟨n, (Adjusted.orbit_regime g H (x, r) n).trans zero⟩⟩
+  (Nat.lt_or_ge x (H + y)).elim
+    (fun below => (transfer 0).symm.trans
+      (Adjusted.ends_iff_below pos short (Adjusted.regime_staysShort g H)
+        (Adjusted.regime_fromNothing nothing) meets (Adjusted.regime_staysMet g H)
+        (Adjusted.regime_keeps keeps) high ⟨fun _ => below, fun _ => Adjusted.draw_pos short below⟩))
+    (fun ge => (transfer H).symm.trans
+      (Adjusted.ends_iff_below pos short (Adjusted.regime_staysShort g H)
+        (Adjusted.regime_fromNothing nothing) meets (Adjusted.regime_staysMet g H)
+        (Adjusted.regime_keeps keeps) high
+        ⟨fun lt => absurd lt (Nat.lt_irrefl H),
+         fun lt => absurd (Nat.lt_of_lt_of_le lt ge) (Nat.lt_irrefl x)⟩))
 
 /-! ## The need is the regime's -/
 
@@ -452,6 +773,96 @@ theorem together_ends (x : Nat) : (Law.run (step giving (3 + 3)) x).state x = 0 
   ends_beyond_giving (fun z => Nat.lt_of_le_of_lt (atMost z) (by decide)) fromNothing x
 
 end Peaked
+
+namespace Crossing
+
+/-- Giving gated at two: nothing below two, four from two on. Under a draw of three the least level
+meeting the draw is two, so the point of no return is five. -/
+def giving (z : Nat) : Nat := if z < 2 then 0 else 4
+
+/-- Giving that moves one unit a step toward the regime's, and rests there. -/
+def toward (e r : Nat) : Nat :=
+  if r < giving e then r + 1 else if giving e < r then r - 1 else r
+
+/-- A run left as it is by its law stays where it is. -/
+theorem orbit_rest {S : Type} {next : S → S} {s : S} (fixed : next s = s) :
+    ∀ n, Law.orbit next s n = s
+  | 0 => rfl
+  | n + 1 => (congrArg next (orbit_rest fixed n)).trans fixed
+
+theorem fromNothing : FromNothing giving := rfl
+
+theorem root : Root giving 3 2 :=
+  ⟨Nat.le_succ 3, fun _ lt => Nat.lt_of_le_of_lt (Nat.le_of_eq (if_pos lt)) (Nat.zero_lt_succ 2)⟩
+
+theorem meets_from : ∀ z, 2 ≤ z → 3 ≤ giving z :=
+  fun z le => Nat.le_trans (Nat.le_succ 3)
+    (Nat.le_of_eq (if_neg (fun lt : z < 2 => Nat.lt_irrefl 2 (Nat.lt_of_le_of_lt le lt))).symm)
+
+/-- Moving one unit toward the regime's giving lies between the recent giving and the regime's. -/
+theorem toward_between : Adjusted.Between toward giving :=
+  fun e r => (Nat.lt_or_ge r (giving e)).elim
+    (fun lt => have up : toward e r = r + 1 := if_pos lt
+      Or.inl ⟨Nat.le_trans (Nat.le_succ r) (Nat.le_of_eq up.symm),
+        Nat.le_trans (Nat.le_of_eq up) lt⟩)
+    (fun ge => (Nat.lt_or_ge (giving e) r).elim
+      (fun lt =>
+        have down : toward e r = r - 1 :=
+          (if_neg (fun l : r < giving e => Nat.lt_irrefl r (Nat.lt_of_lt_of_le l ge))).trans
+            (if_pos lt)
+        have one : 1 + giving e ≤ r := Nat.le_trans (Nat.le_of_eq (Nat.add_comm 1 (giving e))) lt
+        Or.inr ⟨Nat.le_trans (Naturals.le_sub_of_add_le one) (Nat.le_of_eq down.symm),
+          Nat.le_trans (Nat.le_of_eq down) (Nat.sub_le r 1)⟩)
+      (fun le =>
+        have same : toward e r = r :=
+          (if_neg (fun l : r < giving e => Nat.lt_irrefl r (Nat.lt_of_lt_of_le l ge))).trans
+            (if_neg (fun l : giving e < r => Nat.lt_irrefl r (Nat.lt_of_le_of_lt le l)))
+        Or.inl ⟨Nat.le_of_eq same.symm, Nat.le_trans (Nat.le_of_eq same) le⟩))
+
+/-- Moving one unit toward the regime's giving rests only there: a positive rate. -/
+theorem toward_settles : Adjusted.Settles toward giving :=
+  fun e r rest => (Nat.lt_or_ge r (giving e)).elim
+    (fun lt => absurd ((if_pos lt : toward e r = r + 1).symm.trans rest) (Naturals.succ_ne_self r))
+    (fun ge => (Nat.lt_or_ge (giving e) r).elim
+      (fun lt => by
+        have down : toward e r = r - 1 :=
+          (if_neg (fun l : r < giving e => Nat.lt_irrefl r (Nat.lt_of_lt_of_le l ge))).trans
+            (if_pos lt)
+        have pos : 1 ≤ r := Nat.lt_of_le_of_lt (Nat.zero_le _) lt
+        have back : r - 1 + 1 = r := Naturals.sub_add_cancel pos
+        have same : r - 1 = r := down.symm.trans rest
+        exact absurd (back.symm.trans (congrArg (· + 1) same)) (Naturals.succ_ne_self r).symm)
+      (fun le => Nat.le_antisymm le ge))
+
+/-- **Recent giving on the other side of the draw crosses the point of no return, both ways.**
+Under the gated giving and a draw of three the point of no return is five. The regime's step ends
+the condition from four and holds it from five. Giving moving one unit a step toward the regime's
+(between the recent giving and the regime's, and resting only there) holds it at or above seven
+from the second step on where it starts at four with a recent giving of six, above the draw, and
+has it at nothing from the second step on where it starts at five with a recent giving of nothing.
+The frozen rest holds four as it is with a recent giving at the draw. -/
+theorem crosses :
+    Root giving 3 2 ∧ Adjusted.Between toward giving ∧ Adjusted.Settles toward giving ∧
+    (Law.run (step giving 3) 4).state 4 = 0 ∧ (∀ n, 5 ≤ (Law.run (step giving 3) 5).state n) ∧
+    (∀ n, 7 ≤ ((Law.run (Adjusted.step toward 3) (4, 6)).state (n + 2)).1) ∧
+    (∀ n, ((Law.run (Adjusted.step toward 3) (5, 0)).state (n + 2)).1 = 0) ∧
+    Adjusted.step (fun _ r => r) 3 (4, 3) = (4, 3) := by
+  refine ⟨root, toward_between, toward_settles,
+    ends_below root.2 fromNothing (Nat.lt_succ_self 4), fun n => ?_, fun n => ?_, fun n => ?_,
+    Adjusted.frozen_rests (Nat.le_succ 3)⟩
+  · exact Nat.le_trans (Adjusted.holds_from (A := fun e _ => giving e) (r := 3) meets_from
+      (Adjusted.regime_staysMet giving 3) (Nat.le_refl 5) (Nat.le_refl 3) n).1
+      (Nat.le_of_eq (Adjusted.orbit_regime giving 3 (5, 3) n))
+  · have two : Law.orbit (Adjusted.step toward 3) (4, 6) 2 = (7, 4) := rfl
+    show 7 ≤ (Law.orbit (Adjusted.step toward 3) (4, 6) (n + 2)).1
+    rw [Nat.add_comm n 2, Law.orbit_add, two]
+    exact (Adjusted.holds_from (x := 7) (r := 4) meets_from (toward_between.staysMet 3)
+      (Nat.le_succ_of_le (Nat.le_succ 5)) (Nat.le_succ 3) n).1
+  · have two : Law.orbit (Adjusted.step toward 3) (5, 0) 2 = (0, 0) := rfl
+    show (Law.orbit (Adjusted.step toward 3) (5, 0) (n + 2)).1 = 0
+    rw [Nat.add_comm n 2, Law.orbit_add, two, orbit_rest (rfl : Adjusted.step toward 3 (0, 0) = (0, 0))]
+
+end Crossing
 
 end RegimeMargin
 
