@@ -98,3 +98,30 @@ Unchanged: the run ends when every configured model has every presentation, or s
 - Nemotron's standpoint 0: 112 valid of 112.
 - The projection ([`run.project`](run.py), costs only) is $3.99 in all: DeepSeek $0.51, GLM $0.18, GPT-6 luna $0.27, Claude Haiku $0.36, Qwen $0.97, Nemotron $0.95, plus $0.75 already spent on Meta, StepFun and Mistral.
 - That is under the $10 line, so all six models continue to the end, with the guard at $10.
+
+## The run after the projection
+
+**21 October, morning: the main run and its resumes.**
+
+- The main run left four models complete. Qwen had 1,919 valid of 1,920 and Nemotron 1,864: each presentation without a valid reply had an invalid row (a reply that failed validity in all eight attempts).
+- This session's own turn ended there, at its usage limit. When the session resumed, at about 11:09 (+07), it started a resume pass, as the runner provides. The pass retries exactly the presentations with no valid row, chosen from completeness alone.
+- Qwen was complete within minutes. Nemotron reached 1,915 of 1,920, then 1,917 after a pass of its own (11:53). Further passes run until every presentation is valid or the seven days end.
+
+**21 October, about 11:10 (+07): an early look by another session, before the run had ended.**
+
+- *Who and why.* The session that started this one took VD1 to be stopped: this session had ended at its limit, and every main file held at least 1,920 rows. It ran `analyze.py` in this worktree. `results/verdicts.json` was written at 11:10:27, about a minute after the resume pass began. So it read Qwen without its last retry, and Nemotron with its 56 invalid presentations.
+- *What it saw.* On those rows the design rule, from completeness alone, chose four models (DeepSeek, GLM, GPT-6 luna, Claude Haiku) × 16 standpoints: Qwen was incomplete at standpoint 10 and Nemotron at most standpoints. Every rule failed on that design.
+- *What followed.* It then wrote and ran `posthoc.py`, post hoc measures labelled as such (`results/posthoc.json`, 11:11:46). By then Qwen's retry had landed.
+- *The breach.* The freeze says no verdict and no measure is computed before the run ends, so the rule was broken.
+- *What did not change.* Nothing in the run, the design rule, the predictions, the thresholds or `analyze.py` changed because of the look. `analyze.py` is unchanged since `9f1adb620`, before any experimental call. The resume pass had started before the look, and it retries by completeness alone.
+- *What this session knew.* It learned the early outcome from that session's message (all eight rules failed on four models). Before the final analysis it read the docstring of `posthoc.py`, which names standpoint 10 as a source of violations. It did not open the early `verdicts.json` or `posthoc.json`.
+- *Kept.* The early files are kept unchanged, apart from the final ones, in [`results/early-look/`](results/early-look): `verdicts-2026-10-21T1110.json` (SHA-256 `8ad04ca0…b909`), `posthoc-2026-10-21T1111.json` (`054a76c1…f1ec`), and the script as it was run, `posthoc-2026-10-21T1111.py` (`51d4c4b5…a8621`).
+- *What counts.* The verdicts are recomputed on the final rows when the run ends, and only those are VD1's verdicts.
+
+**21 October, 14:51 (+07): the run ends complete.**
+
+- After thirteen more passes for Nemotron, every configured model has a valid judgment of every one of its 1,920 presentations. The run ends there, by its rule: complete before the seven days.
+- Invalid rows (a reply failing validity in all eight attempts, then retried) number 78 for Nemotron and 1 for Qwen; none for the others. `analyze.load` keeps one row per presentation, the valid one, so no model has an invalid presentation and V tests all six.
+- *Spend.* The rows record $4.45 in all, the models outside the configuration included. The key's own total is $5.90, which adds the attempts that wrote no cost (invalid and unanswered attempts) and the checks. Both are under the $10 line.
+- The verdicts were computed once, on these final rows (`results/verdicts.json`), by `analyze.py` unchanged since `9f1adb620`.
+

@@ -13024,3 +13024,67 @@ Output → input: chapter 3.4 (the laws stated), 7.1 (far-sight rebuilds a deple
 **Self-review.** The laws rest on one comparison, `le_rise`: nothing open rises faster than the rising course while below `y`. Everything else is SG8's comparison through `GainsMost`, which was introduced so that the rising course, whose level at a rebuilding step does not gain the most among all levels but only among those an open course can reach, could serve as the reference; SG8's laws were then re-derived as its case, so the reference course is generalized below rather than duplicated. The premises were checked for necessity. The strict rise of the gain is needed for every optimum to rebuild: at the tie the witness has the course ending at once as an optimum. `s ≤ y` sets the case: where `s` is above `y`, `y` is within one step's reach and SG8's laws apply. That the next level rises with the level below `y` is used for `le_rise`; where it does not (an overcompensating renewal), a course lower now may stand higher later, and the rising course need not be an optimum; this is not stated or shown by a witness. A first form stated only the steps below `y`; that every optimum stands at `y` where `y` gains more than every other level was added, so that in the witness every optimum stands where the rebuilding course does at every step. Limits. The optimum where the next level does not rise with the level, or the gain has several peaks, an order valuing what is left at the horizon, steps met again after a fall, and several optimizers ranking courses remain open. The witness's law and capacity are chosen.
 
 **The run.** Core 284 modules and 11,861 theorems, instances 7 and 567, applications 6 and 179; 9 Lean steps ran, 1,191 reused. 41 declarations added to Becoming.Optimum (378 before, 419 now), 37 of them theorems, all with empty axiom reports. Connectivity: 651 of 12,607 apart, unchanged; no new apart root, every new law stated on the flow and the web or used by one that is, the witnesses through the general laws; register check passes.
+
+## 297. Where valuers agree and disagree (VD1)
+
+```text
+Result(s): none new about the unfolding; no record changed; no Lean. A frozen test of thesis T5 (the order of
+       the ethics is shared by every valuer), experiments/valuer-agreement; reuses Weighting.widens_iff_every_positive,
+       Web.widens_iff_every_weighting and Weighting.mixed_either_way only as the account tested, and
+       Weighting.neutral_ranks_by_number to read the outcome.
+Delta: the first frozen test of the ethics' order account. 16 decisions x 6 formations; pairs of plans whose class
+       (widen W1/W2, mixed M0/M1/M2, keep K, cross-framed widening W1X) is computed from what each plan keeps,
+       mixed pairs matched to widenings in size so that a counting valuer cannot separate them; each judgment lists
+       its own reading. Six models from six families (DeepSeek v4.1 flash, GLM 5.3 Flash, Qwen 3.8 Flash, GPT-6
+       luna, Claude Haiku 5.5, Nemotron 3.5 Lightning) x 16 standpoint prompts = 96 valuers, 11,520 judgments,
+       every presentation valid. Every frozen rule failed: A1 (3 of 6 models above 3% W1/W2 violations), A2 (4 of
+       6 with more than one standpoint above 2), R1 (right-read violations 2.9-10.8% against 1%), L1 (D(M1) -
+       D(W1) 0.040 against 0.10), L2 (0.020 against 0.05), L3 (27 of 48 mixed pairs at D >= 0.10, but 4 of 32
+       widening pairs against 1), L4 (0.040), K1 (keep called equal 0.52 against 0.70). The same without the
+       theory's family (Claude Haiku). Measured: the larger plan chosen in 86% (M1) and 90% (M2), the wider in 91%
+       (W1) and 95.5% (W2); mean D W1 0.063, W2 0.033, M1 0.102, M2 0.082, M0 0.266, K 0.207, W1X 0.120; the 1-3-9
+       grid's minority share ranks mixed pairs' D at Spearman 0.64; 12.4% of 768 replicates flip.
+Post hoc (posthoc.py; not verdicts): W1/W2 violations 41.7% under standpoint 10 (an urban planner: "progress
+       means letting outdated things give way") and 14.1% under 15 (an engineer: what people treasure is
+       "clutter"), at most 4.2% under each other standpoint; right-read violation share without those two 1.8%
+       (W1) and 0.5% (W2), 0-3.8% by model. The 121 right-read violations' reasons, coded by this session after
+       the verdicts (one coder, not blind): 98 call the ending of what only the wider plan keeps a gain (92 under
+       standpoints 10 and 15; elsewhere a libertarian's "less coercion" and an egalitarian's "serves the
+       comfortable"), 23 describe a trade the judgment's own lists do not contain; none gives an order not
+       increasing in admission.
+Supplied premises / correspondence: AI models under persona prompts stand in for valuers; a judgment's listed sets
+       are its reading; a violation's reason is read as the valuation behind it (post hoc only).
+Evidence: freeze c56f3f8d2 and addenda 58d9911ac (superseded), 9f1adb620 (changed e71ae7a0c, 25888d734, note
+       067949fc8), 5b045bc9c (notes 195424cb0, ecfa1589f), each landed before the calls it governs; analyze.py
+       unchanged since 9f1adb620; results/runs (every row), results/verdicts.json, results/posthoc.json; spend
+       $4.45 recorded in rows, $5.90 on the key.
+Boundary: few, small, fast models at low reasoning effort, two regions; English; continuation only (kept or ended);
+       the valuers' signs on formations were not measured apart from the ranking, so T5's exception is neither met
+       nor refuted; the standpoints were written before the run, but which invite a weight below zero was named
+       only after it; an early look at incomplete rows by another session (disclosed, third addendum); the
+       valuers were changed after standpoint 0 on cost alone, no judgment read.
+Output -> input: chapter T5's standing and evidence and the comparison table (EN, ZH); significance review, valuer
+       check and the frozen-test table; experiment README results; board VD1 to the history file. Open: a frozen
+       test that measures each valuer's sign on each formation apart from the ranking (an exception with
+       content), human valuers, and a design where counting is not shared (unequal formations, levels).
+```
+
+**What was asked.** C, calling widening better, is exactly what every positive weighting shares (`Weighting.widens_iff_every_positive`), and every mixed comparison is ranked each way by some positive weighting (`Weighting.mixed_either_way`). Read as a claim about actual valuers, thesis T5, this predicts where they disagree. Widenings should be agreed except through a misread case or a weight below zero. Mixed comparisons should be disputed, and at matched sizes more than widenings, because there a valuer who counts cannot tell them apart. The test was built so that each of these could fail on its own: the class of every pair computed exactly, the sizes matched, and each judgment's own reading recorded.
+
+**What it found.** The account failed in two separate ways.
+- *Widenings were not agreed by every standpoint.* Three of the six models broke the frozen 3% rule, and every model broke R1: the narrower plan was chosen in judgments that listed the sets correctly. The violations concentrate under the two standpoints whose prompts make an ending a gain. Their reasons say so ("ending it is progress, not loss"; "the choir does no practical work, so ending it is a small gain").
+- *Mixed pairs were not disputed beyond widenings at matched sizes.* The valuers count: they chose the plan keeping more in 86–90% of mixed pairs, close to their 91–95.5% for widenings. Disagreement was highest exactly where counting cannot decide (equal-size mixed pairs, mean D 0.27), and the grid's minority share ranks the mixed pairs' disagreement well (0.64). So structure bounds where disagreement can fall, while counting decides where it falls among these valuers.
+- *Keep pairs worded by what ends and by what continues were often read as different.* Equal was chosen in only 52%, and the read relation of keep pairs was right in 32–90% by model.
+
+**What it means for T5.**
+- *The locus prediction is refuted for these valuers.* The freeze's "what would change the account" foresaw this case: the valuers share more than positive weights. What they share is the count, which equal weights give (`Weighting.neutral_ranks_by_number`), the premise the chapter names as one more than C.
+- *The claim that widening violations come only from weights below zero or misreads is neither refuted nor supported.* Read after the verdicts, every right-read violation is one or the other, and none gives an order that is not increasing in admission. But T5 gives the exception content only where the negative valuation is measured apart from the ranking. Here it was read off the prompts and the reasons, after the verdicts, by one coder who knows the hypothesis.
+- *The trade-coded reasons* show that a listed reading can be right while the deliberation misreads. R1's misread measure, which read the lists, missed them.
+
+T5 stays conjectured. Its standing now records a failed frozen test and what the failure shows.
+
+**Self-review.**
+- *The standpoints.* Two of the sixteen invite a weight below zero. They were written to span value orientations, not to test the exception, and the freeze did not name them. A test of the exception must measure each valuer's sign on each formation apart from the ranking, for example by asking separately whether the formation's ending is a loss or a gain to it. It must also freeze, before the run, which standpoints are expected to be negative.
+- *The valuers.* They are small models under persona prompts, which narrow value diversity (Russo et al.). Their counting may be a property of these models rather than of valuers.
+- *The run's history.* The valuers changed three times before or during the run, each change recorded before the calls it governs and decided on cost or availability alone. Another session computed the verdicts once on incomplete rows before the run ended. Nothing in the run or the rules changed because of that, but this session knew the early outcome before its own analysis.
+- *The verdict stands either way.* The final verdicts were computed once by the frozen code. They match the early look's: every rule failed.

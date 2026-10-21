@@ -614,6 +614,12 @@ Boundary: AI check, one session; summaries not reread in full are marked as such
 Integration: experiments/valuer-agreement; board VD1
 ```
 
+**Outcome (after the run, 21 October).** Run complete on six model families: DeepSeek, GLM, Qwen, GPT-6 luna, Claude Haiku and Nemotron, 96 valuers. Meta and StepFun were dropped after standpoint 0 on cost, and Mistral was not served; three addenda record each change before the calls it governs. Every frozen rule failed, with or without the theory's family.
+- *Widening violations.* They concentrate under two standpoints whose prompts call what is kept outdated or clutter. Read after the verdicts, 98 of the 121 right-read violations give a weight below zero and 23 a trade the judgment's own lists do not contain. That is T5's exception, but found post hoc and not measured apart from the ranking.
+- *The locus.* It failed because these valuers count: the larger plan is chosen in 86–90% of mixed pairs matched to widenings in size, and disagreement is highest where the counts tie.
+- *The early look.* Another session computed the verdicts once on incomplete rows before the run had ended. That is disclosed in the third addendum; it changed nothing in the run or the rules.
+- *Bearing.* This is the first frozen test of the ethics' order account, and it failed. T5 stays conjectured. Its prediction about the locus did not hold for these valuers, and its exception is untested ([experiment](../../../../experiments/valuer-agreement/README.md#results-21-october-2026), [study §297](BECOMING-RENEWAL-READING.md#297-where-valuers-agree-and-disagree-vd1)).
+
 ---
 
 <a id="proposals-for-opening-revised"></a>
@@ -828,6 +834,8 @@ An AI review (board item SA2, the session that wrote SA1), read-only, with no Le
 | EW2 (§289) | seabirds and forage fish (Cury et al. 2011) | passed at low power, every estimate in the refuting direction | almost nothing (the study says so) |
 | IN1 (direction-installation) | two LLMs fishing a lake | round 1: H1, H2, H3, H5 and D1 failed; round 2 with talk: all four passed for gpt-5.4-mini, one for gpt-4.1-mini | instruction installs the direction only where the dependent, the count and the joint act are all coupled, for one model, in 10 seasons |
 | VD1 (valuer-agreement) | six LLM families as valuers | not completed (budget stop; the design was amended before any call) | — |
+
+*Later on 21 October, after this review:* VD1 ran to completion, and every frozen rule failed. The valuers count, and the widening violations follow weights below zero read post hoc ([valuer check](#valuer-check), [study §297](BECOMING-RENEWAL-READING.md#297-where-valuers-agree-and-disagree-vd1)).
 
 The adversarial reading:
 - **The risky passes test the ecological notion, not what only this theory says.** MQ2's need is depensation and Allee thresholds measured carefully (Clark 1976; May 1977; Dai et al. 2012, which the check cites). MQ4 and MQ5 pass with states known in fisheries (surplus production; delay-difference models). A pass supports the margin as a measurable quantity in those systems. It is not evidence that the theory's laws are universal, or that its ethics or its alignment direction are right. A rival account built on the same ecology would make the same predictions.

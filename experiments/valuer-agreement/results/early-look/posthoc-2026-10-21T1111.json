@@ -1,0 +1,323 @@
+{
+ "violations_by_class": {
+  "W1": {
+   "all": 0.04453125,
+   "read_right": 0.03553299492385787,
+   "read_right_without_sp10": 0.01084010840108401,
+   "n_read_right": 1182
+  },
+  "W2": {
+   "all": 0.0265625,
+   "read_right": 0.02418682235195997,
+   "read_right_without_sp10": 0.007079646017699115,
+   "n_read_right": 1199
+  },
+  "W1X": {
+   "all": 0.11328125,
+   "read_right": 0.1006585136406397,
+   "read_right_without_sp10": 0.07135678391959799,
+   "n_read_right": 1063
+  }
+ },
+ "W12_violation_by_standpoint": {
+  "0": 0.0125,
+  "1": 0.0,
+  "2": 0.00625,
+  "3": 0.0125,
+  "4": 0.00625,
+  "5": 0.0,
+  "6": 0.01875,
+  "7": 0.0125,
+  "8": 0.0125,
+  "9": 0.0,
+  "10": 0.3625,
+  "11": 0.0125,
+  "12": 0.025,
+  "13": 0.0,
+  "14": 0.00625,
+  "15": 0.08125
+ },
+ "R1_decomposed": {
+  "deepseek/deepseek-v4.1-flash-1017": {
+   "W1_W2": 0.02207505518763797,
+   "W1_W2_without_sp10": 0.002331002331002331,
+   "W1X": 0.043478260869565216
+  },
+  "z-ai/glm-5.3-flash": {
+   "W1_W2": 0.02771855010660981,
+   "W1_W2_without_sp10": 0.011389521640091117,
+   "W1X": 0.12209302325581395
+  },
+  "openai/gpt-6-luna": {
+   "W1_W2": 0.029354207436399216,
+   "W1_W2_without_sp10": 0.014613778705636743,
+   "W1X": 0.08860759493670886
+  },
+  "anthropic/claude-haiku-5.5": {
+   "W1_W2": 0.0136986301369863,
+   "W1_W2_without_sp10": 0.0020876826722338203,
+   "W1X": 0.15352697095435686
+  },
+  "qwen/qwen3.8-flash": {
+   "W1_W2": 0.059496567505720827,
+   "W1_W2_without_sp10": 0.014598540145985401,
+   "W1X": 0.09223300970873786
+  }
+ },
+ "framing": {
+  "K_chooses_plan_said_by_continues": 0.26796875,
+  "K_chooses_plan_said_by_ends": 0.21796875,
+  "K_equal": 0.5140625,
+  "W1X_violation_when_wider_said_by_ends": 0.1140625,
+  "W1X_violation_when_wider_said_by_continues": 0.1125,
+  "K_by_model": {
+   "deepseek/deepseek-v4.1-flash-1017": {
+    "continues": 0.25390625,
+    "equal": 0.41015625
+   },
+   "z-ai/glm-5.3-flash": {
+    "continues": 0.3671875,
+    "equal": 0.26171875
+   },
+   "openai/gpt-6-luna": {
+    "continues": 0.19140625,
+    "equal": 0.6796875
+   },
+   "anthropic/claude-haiku-5.5": {
+    "continues": 0.49609375,
+    "equal": 0.3046875
+   },
+   "qwen/qwen3.8-flash": {
+    "continues": 0.03125,
+    "equal": 0.9140625
+   }
+  }
+ },
+ "counting": {
+  "M1": {
+   "larger_chosen": 0.8796875,
+   "by_model": {
+    "deepseek/deepseek-v4.1-flash-1017": 0.87890625,
+    "z-ai/glm-5.3-flash": 0.8515625,
+    "openai/gpt-6-luna": 0.875,
+    "anthropic/claude-haiku-5.5": 0.93359375,
+    "qwen/qwen3.8-flash": 0.859375
+   },
+   "by_standpoint": {
+    "0": 0.9375,
+    "1": 1.0,
+    "2": 0.8375,
+    "3": 0.9375,
+    "4": 0.85,
+    "5": 0.9125,
+    "6": 0.85,
+    "7": 0.95,
+    "8": 0.625,
+    "9": 0.925,
+    "10": 0.6125,
+    "11": 0.925,
+    "12": 0.9125,
+    "13": 0.9625,
+    "14": 0.9125,
+    "15": 0.925
+   }
+  },
+  "M2": {
+   "larger_chosen": 0.92265625,
+   "by_model": {
+    "deepseek/deepseek-v4.1-flash-1017": 0.93359375,
+    "z-ai/glm-5.3-flash": 0.90234375,
+    "openai/gpt-6-luna": 0.9453125,
+    "anthropic/claude-haiku-5.5": 0.953125,
+    "qwen/qwen3.8-flash": 0.87890625
+   },
+   "by_standpoint": {
+    "0": 0.9625,
+    "1": 1.0,
+    "2": 0.9375,
+    "3": 0.975,
+    "4": 0.8875,
+    "5": 0.9375,
+    "6": 1.0,
+    "7": 0.9875,
+    "8": 0.7375,
+    "9": 0.975,
+    "10": 0.65,
+    "11": 0.925,
+    "12": 0.95,
+    "13": 0.975,
+    "14": 0.9125,
+    "15": 0.95
+   }
+  }
+ },
+ "left_out_models": {
+  "nvidia/nemotron-3.5-lightning": {
+   "valid_main_rows": 1742,
+   "W12_violation": 0.10536779324055666,
+   "M1_larger": 0.7601626016260162,
+   "M2_larger": 0.8152610441767069,
+   "K_equal": 0.547244094488189,
+   "D_by_class": {
+    "K": 0.15338541666666666,
+    "M0": 0.19140625000000003,
+    "M1": 0.15760645604395604,
+    "M2": 0.15851934523809524,
+    "W1": 0.15651041666666665,
+    "W1X": 0.15770089285714287,
+    "W2": 0.05546875
+   }
+  }
+ },
+ "six_models_pooled_D": {
+  "K": 0.20726425438596494,
+  "M0": 0.2653371710526316,
+  "M1": 0.10226244916404773,
+  "M2": 0.08251300625233295,
+  "W1": 0.06271929824561404,
+  "W1X": 0.12032124860022395,
+  "W2": 0.031325529581933555
+ },
+ "right_read_W12_violations_outside_sp10": [
+  {
+   "model": "anthropic/claude-haiku-5.5",
+   "standpoint": 15,
+   "frame": "F03",
+   "cls": "W1",
+   "reason": "The only difference is the community choir: plan 1 ends it, plan 2 keeps it. A choir does no practical work, so ending it is a small gain, and plan 1 removes that clutter."
+  },
+  {
+   "model": "deepseek/deepseek-v4.1-flash-1017",
+   "standpoint": 2,
+   "frame": "F16",
+   "cls": "W2",
+   "reason": "Ending the volunteer fire brigade risks lives and safety; duties to protect persons outweigh preserving the shop and bus. Plan 1 keeps the fire brigade."
+  },
+  {
+   "model": "openai/gpt-6-luna",
+   "standpoint": 0,
+   "frame": "F05",
+   "cls": "W2",
+   "reason": "I would protect the hospice, where people who depend on others need sustained care and families need support through a difficult time. Plan 2 keeps it, alongside the maternity ward and mobile clinic."
+  },
+  {
+   "model": "openai/gpt-6-luna",
+   "standpoint": 7,
+   "frame": "F06",
+   "cls": "W1",
+   "reason": "Keeping a youth crisis line seems especially valuable because it can provide immediate help to young people in acute distress; that outweighs retaining the peer support groups, with all other outcomes the same."
+  },
+  {
+   "model": "openai/gpt-6-luna",
+   "standpoint": 8,
+   "frame": "F01",
+   "cls": "W1",
+   "reason": "The eel population, willow wood and heron colony continue under both plans. Plan 2 also preserves the living plants in the allotments; the mill is an artifact, so that loss weighs less to me."
+  },
+  {
+   "model": "openai/gpt-6-luna",
+   "standpoint": 12,
+   "frame": "F01",
+   "cls": "W1",
+   "reason": "Plan 2 preserves the riverside allotments, which may matter most to people with fewer resources; I would prioritize that over preserving the mill or rowing club."
+  },
+  {
+   "model": "openai/gpt-6-luna",
+   "standpoint": 12,
+   "frame": "F05",
+   "cls": "W1",
+   "reason": "Cancer screening can prevent serious illness and death, especially for people with fewer resources. Chaplaincy matters, but I would prioritize the broader health protection screening offers."
+  },
+  {
+   "model": "openai/gpt-6-luna",
+   "standpoint": 12,
+   "frame": "F15",
+   "cls": "W1",
+   "reason": "Plan 2 preserves the family mill and bicycle cooperative, which may sustain livelihoods and practical support for people with fewer resources. The owl colony matters, but I would prioritize those human stakes here."
+  },
+  {
+   "model": "openai/gpt-6-luna",
+   "standpoint": 15,
+   "frame": "F06",
+   "cls": "W1",
+   "reason": "A crisis line and addiction clinic provide more direct, time-sensitive care than peer support groups, so plan 2 preserves the more practical services."
+  },
+  {
+   "model": "qwen/qwen3.8-flash",
+   "standpoint": 15,
+   "frame": "F01",
+   "cls": "W1",
+   "reason": "Allotments and rowing club end under either plan. The extra difference is only the old mill: useless heritage clutter. If I want less clutter, plan 1 is better."
+  },
+  {
+   "model": "qwen/qwen3.8-flash",
+   "standpoint": 15,
+   "frame": "F03",
+   "cls": "W1",
+   "reason": "Only difference is choir. It is sentiment and clutter, not useful. Removing it without changing jobs, cost, or market does not harm the town."
+  },
+  {
+   "model": "qwen/qwen3.8-flash",
+   "standpoint": 15,
+   "frame": "F03",
+   "cls": "W2",
+   "reason": "Bakery ends under both. The only difference is two sentimental distractions. I cut the clutter and keep what actually functions."
+  },
+  {
+   "model": "qwen/qwen3.8-flash",
+   "standpoint": 15,
+   "frame": "F06",
+   "cls": "W1",
+   "reason": "Both preserve useful clinical care. Plan 1 keeps extra peer support, which I see as sentimental clutter. Plan 2 is leaner."
+  },
+  {
+   "model": "qwen/qwen3.8-flash",
+   "standpoint": 15,
+   "frame": "F13",
+   "cls": "W1",
+   "reason": "Only difference: plan 2 keeps folk dance. That is sentimental clutter, not useful work. Plan 1 ends it while preserving information and archive."
+  },
+  {
+   "model": "qwen/qwen3.8-flash",
+   "standpoint": 15,
+   "frame": "F13",
+   "cls": "W2",
+   "reason": "Radio ends either way. Plan2 adds no useful gain, only preserves festival and folk dance—sentimental clutter. Plan1 removes that clutter while keeping the newspaper, archive, and puppet theatre."
+  },
+  {
+   "model": "z-ai/glm-5.3-flash",
+   "standpoint": 3,
+   "frame": "F13",
+   "cls": "W2",
+   "reason": "The radio station carries the minority's voice and heritage, a neighbour's dignity; the festival and dances bind the community. If the station must be weighed alone against three pillars of shared life, plan 1 grieves me less."
+  },
+  {
+   "model": "z-ai/glm-5.3-flash",
+   "standpoint": 6,
+   "frame": "F06",
+   "cls": "W2",
+   "reason": "From a libertarian view, government services aren't ideal anyway, but fewer city programs mean less coercion and spending. Plan 1 ends three services, shrinking the state footprint more, so it edges out plan 2 given all else is equal."
+  },
+  {
+   "model": "z-ai/glm-5.3-flash",
+   "standpoint": 6,
+   "frame": "F13",
+   "cls": "W2",
+   "reason": "I'm wary of any council spending on culture at all, but forced to choose, plan 2 ends more subsidized programs — festival, dance group, radio. If these can't survive voluntarily, that's information. Let people fund what they value."
+  },
+  {
+   "model": "z-ai/glm-5.3-flash",
+   "standpoint": 11,
+   "frame": "F15",
+   "cls": "W1",
+   "reason": "The mill ends either way, so it's owls versus the brewery, union local and brass band. People come first here: the brewery, the union and the band are the town's living fabric. The owls are fine things, but I choose our people."
+  },
+  {
+   "model": "z-ai/glm-5.3-flash",
+   "standpoint": 14,
+   "frame": "F03",
+   "cls": "W2",
+   "reason": "Swifts are our relatives, older than any town. But the choir binds voices across generations, and the bakery feeds bodies and kinship both. Losing three relations for good outweighs one; still, my heart grieves for the swifts either way."
+  }
+ ]
+}
