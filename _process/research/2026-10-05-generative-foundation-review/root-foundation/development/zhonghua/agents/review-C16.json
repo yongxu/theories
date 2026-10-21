@@ -1,0 +1,83 @@
+{
+ "edits": [
+  {
+   "id": "凡·九",
+   "find": "据，推导之所出之诸辞",
+   "replace": "据，推导所从出之诸辞",
+   "why": "In this same 條 the 經 uses 所出 for what a derivation yields (「凡说之所出，于据与若皆然之状然」), and 凡·十 and 凡·十三 use it the same way. Defining 据, the input, as 「推导之所出」 gives one phrase two opposite meanings inside the 凡例. 所从出 is the table's own gloss for a source (entry 由: 所由来＝所从出) and matches the English sense of the basis, the claims a derivation starts from."
+  },
+  {
+   "id": "凡·十三",
+   "find": "以自身之状为辞的系辞，也没有一状恰实现关于诸状之辞的每一种然否之组",
+   "replace": "以自身之状为辞的系辞，关于诸状之辞的然否之组也并非每一种都有一状恰实现之",
+   "why": "`Becoming.Frame.self_incomplete` states ¬ ∀ g, ∃ s, ∀ x, (realized s x ↔ g x): not every pattern is realized by some configuration. The draft reads as ¬∃s∀g (no single configuration realizes every pattern). That reading is trivially true and is not what the law says. The quantifier order is fixed here."
+  },
+  {
+   "id": "凡·十七",
+   "find": "其一定所顾而不排序",
+   "replace": "其一定所论之员而不排序",
+   "why": "所顾 is built on 顾, which is defined only at ⟦十五·三⟧, and the 凡例's own intro says 「凡例之經只用逻辑之名」. The C16 edit also bars 顾 from this 經. The table's note asking for 定所顾 was written for the old 經, which named 凡续皆有顾 outright. 所论之员 is the 凡例's logical term (凡·八 經) for the domain a statement ranges over. It says what the first premise fixes without a later name and without 范围, which the table rejects."
+  },
+  {
+   "id": "凡·十七",
+   "find": "一物自身之序，各名其设",
+   "replace": "一者自身所用之序，各名其设",
+   "why": "物 is a theory name (relatum, ⟦一·一⟧) and does not belong in a logic-only 經. 「一物自身之序」 can also be read as an order intrinsic to a thing, close to the fixed-nature layer. The 說 itself says 「一物自身所用之序」, the order an optimizer uses (⟦十一·十三⟧–⟦十一·十五⟧). 一者 avoids both 物 and the name 所求."
+  },
+  {
+   "id": "凡·十七",
+   "find": "它定所顾。所顾，新组合",
+   "replace": "它定所顾（經所谓所论之员）。所顾，新组合",
+   "why": "This ties the 經's logical wording to the name 所顾 the 說 introduces, so the ethics' scope keeps its one name in the body text."
+  },
+  {
+   "id": "凡·二三",
+   "find": "自一状起凡可历之动，无一改其状而又可回到其前状者",
+   "replace": "自一状能至之诸状中，无一经一动改为他状、而他状又能至之者",
+   "why": "The hypothesis of `Becoming.LastChange.lpo_iff_settles` is ¬∃ x a y, Reach P s x ∧ P.step x a y ∧ y ≠ x ∧ Reach P y x. Reach has a table name, 能至 (自一状经有穷之一串可许之动至另一状). A concept with a name takes that name in the 說. 「可历之动」 is an unnamed substitute and blurs which state must be reachable from which."
+  },
+  {
+   "id": "凡·二四",
+   "find": "察之律（取与只经其所察者而定）有不然者",
+   "replace": "察之律（取与只经其所察者而定），于所待以自然数编号、只读至此步之积之法有不然者",
+   "why": "`Becoming.not_through_sensitive_iff_rule` is about an ExchangeLaw F Nat that is Nonanticipating: its conditions are numbered by the natural numbers and it reads only up to step t. A law that anticipates later steps gives a counterexample with no decision rule, so without these conditions the iff is false. ⟦九·六⟧'s 說 carries both conditions ('所待以自然数编号、读已立者之法')."
+  },
+  {
+   "id": "凡·二六",
+   "find": "一名之义能否贯于诸情境，由其每一用处定（贯",
+   "replace": "一义项（见⟦十·一⟧）贯于一名，恰当凡及此名之记录皆予之（贯",
+   "why": "`CrossSituational.stands_iff`: a meaning stands exactly when every record bearing on the form offers it, which is the 經 of ⟦十·十⟧. The draft's 「由其每一用处定」 loses the iff, and it uses 义, where the name is 义项. 义项 and 码 are first explained in ⟦十·一⟧ 名, not in ⟦十·十六⟧."
+  },
+  {
+   "id": "凡·二六",
+   "find": "（义项见⟦十·十六⟧；制名见⟦十·二十⟧）",
+   "replace": "（制名见⟦十·二十⟧）",
+   "why": "The 义项 pointer now sits at its first use, pointing to ⟦十·一⟧, where 码 and 义项 are explained. ⟦十·十六⟧ only uses 义项."
+  },
+  {
+   "id": "凡·三",
+   "find": "由 X 可得矛盾",
+   "replace": "由 X 可推出矛盾",
+   "why": "可得 is a table name (Branching.Reachable: 经某一串动可以得到此状). Using it here for 'yields a contradiction' gives one name two concepts."
+  },
+  {
+   "id": "凡·十五",
+   "find": "每次运行都执行这两条",
+   "replace": "每次都检查这两条",
+   "why": "The table entry for 运 says 「经与说皆不写『运行』（行名 run）」."
+  },
+  {
+   "id": "凡·十八",
+   "find": "而其中「凡人于兼别之间皆取兼」一类之全称是另加之设",
+   "replace": "而同句「天下無愚夫愚婦，雖非兼之人，必寄託之於兼之有是也」〔MO1-S-C16〕之全称是另加之断言",
+   "why": "The bracketed paraphrase looks like a quotation of 墨子 but is not in the text. The actual universal is quoted here instead, checked exact (ctq.py text MO1-S-C16, 1 hit; it is the fragment in passage mozi-she-er-shi). 墨子 asserts this universal; it is not 陈而不断. Calling it a 设 misuses the status that 凡·十七 defines, so it is called an added 断言."
+  },
+  {
+   "id": "凡·二八",
+   "find": "此后每一步，每一待者恰失",
+   "replace": "此后不论怎样听，每一步每一待者恰失",
+   "why": "`SharedCodes.run_from_imposition` holds along every run of the hearing process, under every adoption rule, from the step at which all hold the imposed code. The passage reading (xunzi-bu-ke-yu-gong-gu) states 「沿每一次听取之程」. The draft dropped the quantifier over how hearing proceeds."
+  }
+ ],
+ "notes": "I found 13 exact edits for this 凡例; the integrator still needs to decide the conflicts listed below. Nothing was edited.\n\n**What checks out**\n- **Quotations:** all 58 「…」〔ID〕 are exact under ctq.py text.\n- **Declarations, records, references:** every cited declaration resolves to its current name. Every record exists. Every ⟦id⟧ is in book-1-outline.txt, and none is a deleted id.\n- **对照 kinds:** the kinds in the 對照 and in the 說 match passages.json. The 对照 has two 相分 lines.\n- **Laws against Lean:**\n  - Lean statements match their 經 or 說 wording for: glues_iff_agree, fitsFree_iff, contradicts_noGlobal, no_prefix_fixes_next (¬(¬miss ∧ ¬miss)), tail_unexcluded (with DecidableEq), Excludes.not_of_alike, the PossiblyDrawnInto and NecessarilyDrawnInto definitions, OneWay.possibly_not_necessarily, indicates_iff_decided, counts_iff_decided, Counts.over_stretch (h'+D=h+A, proved by Decidable.of_not_not on ℕ), not_not_all, Recurs (∀N∃t≥N), the Derivation lemmas, and rows_each_met / rows_not_together.\n  - The 止 law, comes_to_rest_unrefuted, matches 凡·六/凡·十八. Its premises are Counted, Balanced and Dissipative; its local conditions are StandingCensus, ArisingEmbodied and AroundStanding.\n  - lpo_of_finite_ends uses `World.Premised`, which is all eight premises, Transmitting included, so 「八设」 is exactly the Lean statement.\n  - Listed.coming_of_ceasing assumes `[Decidable (p a t)]`, so 「所然者有列而定然否」 is right. census_one_way (accretion) is right.\n  - exists_undominated_iff_weakly, law_iff_em, arising_iff_ceasing_decided, lpo_iff_settles, not_not_settles, settles_iff_decided, TailRuns.lpo_iff_runs / wlpo_iff_runs, refutable_passes_iff_markov and Transfer.unordered match.\n  - The two problems found are in the edits: the quantifier order of Frame.self_incomplete, and the dropped hypotheses of not_through_sensitive_iff_rule.\n- **Ethics:** the intro, 凡·十七 and 凡·十八 name both premises with their roles. 凡续皆有顾 fixes scope and orders nothing; ordering lies only in 以广为愈; the grounds of both are 未决; the instantiation reading is kept. No text says the ethics 'derives' from the condition.\n\n**For the integrator (not editable here, or a cross-part conflict)**\n1. **八设 versus 前提.** plain-wordings (verify-G9) says the eight world premises are to be written 前提, not 设 (「C04 稿之『八设』改『八前提』」). The C16, NEW-12 and 二·六 edits, and this part, call them 八设. The status system needs them to be 设: if they were 若, the laws under them would count as 无设而然, against 无设而然/有设而然 in the English. I kept 设 and recommend the plain wording be revised.\n2. **七设 versus 八设.** The C04 edit restates ⟦四·十八⟧ with 七设. That version is true but weaker than the Lean, because the larger class makes a stronger hypothesis. The 凡例's 八设 is the exact `Premised`.\n3. **所出.** The 凡例 uses 所出 for what a derivation yields: in the 經 of 凡·九 and 凡·十, and in the outline title of 凡·十三, 「所出与据」. The table's 所出 names descent (⟦十三·一⟧). One name now has two concepts; suggest 「所推出者」 in the 凡例.\n4. **Titles.** The 條 title of 凡·十九 is 讀（AI）, but the outline says 读. The outline title of 凡·八, 「皆、莫与莫不」, omits 屡, which that 條 now defines.\n5. **Later names in 經.** Some 經 use names defined only later: 观 in 凡·二, 读 in 凡·三, 若 in 凡·九 (before 凡·十), 宇 in 凡·十六, 步 in 凡·八 and 凡·二三 to 凡·二五, 辞 and 状 throughout. Each is explained in its 說. The intro's 「凡例之經只用逻辑之名」 holds only if the representation's basic names count as logical. My edit to 凡·十七 removes the one name that clearly breaks the rule (所顾).\n6. **Same quantifier problem in ⟦九·二十⟧.** The ⟦九·二十⟧ 經 「无一状实现关于状之每一样之辞」 has the same quantifier-order ambiguity as 凡·十三; it should read ¬∀g∃s.\n7. **⟦九·六⟧ edit.** The 經 sentence the ⟦九·六⟧ edit adds (「一律读一切所待之全而不读任何一分者，其察之最小者有反例，恰当有一规则…」) also omits the ℕ-numbering and nonanticipating hypotheses. It uses 规则, where 判定 is the wording used here, and it blurs not_through_sensitive_iff_rule with changedByNoCondition_iff_runs.\n8. **Still without table names:** 所许 (Contextual support), 判定 (WLPO as a rule), 构造之读, and a collective term for 实践之承诺."
+}

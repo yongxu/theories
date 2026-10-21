@@ -1,0 +1,1014 @@
+{
+ "cluster": "C08",
+ "lens": "PHILOLOGY",
+ "names": [
+  {
+   "concept": "识（已采用）：一个形成所登记、所读出之差 / registration",
+   "name": "识",
+   "verdict": "keep",
+   "issues": "三书证逐字无误：论语‘多見而識之’与‘賢者識其大者，不賢者識其小者’（记取），墨子非命中‘然今天下之情僞，未可得而識也’（辨认），fit 明言先秦之识兼记取与辨认二义，与已采之识相合，层次标注正确。但 concept 标签与 fit 仍用‘所登记’‘登记’‘registration’，此词已因二元之嫌退役（N1 命名研究 §7 以识代之），名表自身不应再用。",
+   "fix": "concept 改为‘识（已采用）：一个形成所读出、所保持之差’；fit 中‘经其耦合登记并区分之差’改为‘经其耦合记取并区分之差’；其余不改。"
+  },
+  {
+   "concept": "读法（reading：经一映射读一展开）",
+   "name": "觀",
+   "verdict": "keep",
+   "issues": "书证无误，观看之义与读法相合。但所引老子‘以身观身’只依王弼注‘彼皆然也’成立；河上公注作‘以修道之身，观不修道之身，孰亡孰存也’，是比较存亡，结构不同。彖传‘大觀在上’以观示为主，not_carried 已排除，但条目 tuan-da-guan 仍以觀名之（见条目）。C16 以‘讀’名 AI 读法，二名须分工。",
+   "fix": "fit 注明‘以身观身一句从王弼读’；在 not_carried 加‘河上公之修道比较读’；与 C16 统一：觀名经映射之读，讀只名 AI 之解读。"
+  },
+  {
+   "concept": "记录与前缀（record／course prefix：运行至某步所保留之已行之程）",
+   "name": "往",
+   "verdict": "revise",
+   "issues": "四书证无误（說卦‘數往者順，知來者逆’、論語‘吿諸往而知來者’‘往者不可諫，來者猶可追’、系辞‘神以知来，知以藏往’），‘往’在其中是已过者，单字可成立。但‘往’在先秦首先是去、向前，not_carried 已排除动词‘去’，却未排除‘以往’之‘此后’义（系辞‘过此以往，未之或知也’，DS03，本族条目 xici-guo-ci-yi-wang 所引）；论语‘不保其往’之往一说为‘去后’（待查）。又 C05 已以‘初’名有限前段（同引‘其初難知’）、以‘藏往’名带着历史（Law.withHistory，同引‘知以藏往’），本名与之重叠。",
+   "fix": "与 C05 统一：有限前段用 C05 之‘初’，‘往’只名已行之程并作‘數往／藏往’之成分，在说中写明与‘初’之分工；not_carried 加‘以往＝此后（过此以往）’‘不保其往之往一读为去后’。"
+  },
+  {
+   "concept": "外推（extrapolation：由前缀提出下一值）",
+   "name": "以往知來",
+   "verdict": "revise",
+   "issues": "书证逐字无误（墨子非攻中‘謀而不得，則以往知來，以見知隱’；論語‘吿諸往而知來者’）。墨子此句是所引‘古者有語’，下句‘謀若此，可得而知矣’断言此法能知，‘知’为成功动词；名若读作‘外推（不保证对）’，与原文之断言相反，fit 须明写。条目 lunyu-ju-yi-yu 之标注也不当（举一反三是归并之迁移）。",
+   "fix": "fit 加‘名只取操作（由已往提出将来）；墨子断言其可得而知，律则说无前缀固定下一值，二者相分’；not_carried 加‘墨子可得而知之断言’。"
+  },
+  {
+   "concept": "回读（retrodiction：由记录推回先前之包及其来源关系）",
+   "name": "數往",
+   "verdict": "keep",
+   "issues": "唯一书证说卦‘數往者順，知來者逆’属传，读法有争议；孔颖达疏类读法（数已往之事顺而易）支持回读之义，可用。",
+   "fix": "not_carried 注明‘說卦此句诸家读法不一，取顺数已往之读’。"
+  },
+  {
+   "concept": "框架（frame：一个声明的过程及其在各构型所实现之命题）",
+   "name": "設卦繫辭",
+   "verdict": "revise",
+   "issues": "四字复合不见于冻结文本，是从系辞‘圣人设卦观象，系辞焉而明吉凶；刚柔相推而生变化’与‘设卦以尽情伪，系辞以尽其言’拼合，pre_qin 标真、coinage 标否皆不当；‘繫辭’又是篇名，‘卦’限于易之六十四之表；not_carried 已排除吉凶之占用，但原文所系之辞正以吉凶为内容（‘系辞焉以断其吉凶’），去掉吉凶后，‘辞＝构型上成立之命题’是 AI 改读；名中亦无过程（刚柔相推）。",
+   "fix": "coinage 改 true，标‘新组合（易传成分，年代有争议）’，pre_qin 改 false；not_carried 加‘繫辭为篇名’‘卦为易之有限之表’；fit 明写‘辞为命题是改读，原文之辞为吉凶之断’；或另择以‘象’名构型所显并说明。"
+  },
+  {
+   "concept": "检验（testing：命题只经耦合进来之差被排除）",
+   "name": "驗",
+   "verdict": "keep",
+   "issues": "书证逐字无误，先秦‘驗’为证验，层次与语境相合。",
+   "fix": "无须修改。"
+  },
+  {
+   "concept": "验证（verification：有限片段使一读法被验证）",
+   "name": "徵",
+   "verdict": "keep",
+   "issues": "书证无误。荀子正名‘心有征知’之征传统训‘召’，一说训‘驗’，条目 xunzi-zheng-zhi 以徵名之须存疑。",
+   "fix": "not_carried 加‘荀子征知之征（训召或验，未定）’。"
+  },
+  {
+   "concept": "实验（experiment：采取一动作，由记录固定其结果）",
+   "name": "試",
+   "verdict": "revise",
+   "issues": "书证无误，但‘試用’（墨子尚同下）只是试用人，弱；‘試之官職，課其功伐’（韩非显学）是考课官吏，带赏罚之层，not_carried 未排除。更直接之用法是采取动作而由结果定之。",
+   "fix": "书证换为或加：论语15.25‘如有所譽者，其有所試矣’；墨子兼愛中‘焚舟失火，試其士曰’（注明为试其士之勇）；韓非子難三‘論之於任，試之於事，課之於功’（注明考课）。not_carried 加‘考课功伐与赏罚’。"
+  },
+  {
+   "concept": "对照（control：其余相若，只变一项以排除错误投影）",
+   "name": "相若",
+   "verdict": "revise",
+   "issues": "所引韩非显学‘與人相若也’之段是为反对‘徵斂於富人以布施於貧家’而作，是观察性比较且易单因归因，不是‘其余相若，只变一项’之对照。墨经有更直接之结构。",
+   "fix": "书证换为或加墨經說下‘權重相若也，相衡則本短標長，兩加焉，重相若，則標必下’（等重而变臂）与大取‘二子事親，或遇孰，或遇凶，其親也相若，非彼其行益也’（与 C17 之遇相接）；not_carried 加‘韩非反济贫之论证’。"
+  },
+  {
+   "concept": "观察是读出之路线（observation as a route）",
+   "name": "聞",
+   "verdict": "revise",
+   "issues": "墨經‘知，聞、說、親’与‘聞，傳、親’是两层：在知之层，聞＝傳受，与親并列，不是‘读出之路线’本身；条目 lunyu-shi-wen-fei-da 以聞名名声，正为本名 not_carried 所排除（‘名声’），自相矛盾。墨经另有更合‘路线’之字。",
+   "fix": "改名为‘路’：墨經說下‘智，以目見，而目以火見，而火不見，惟以五路智’，經下‘知而不以五路，說在久’；聞降为路之一种（傳受）；删 lunyu-shi-wen-fei-da 之聞标。"
+  },
+  {
+   "concept": "辨识（identification：有界时前缀固定历史）",
+   "name": "極數",
+   "verdict": "reject",
+   "issues": "二书证（系辞‘极其数，遂定天下之象’‘极数知来之谓占’）之數皆蓍策之数，后者明言为占，属前知之层，与‘有界时前缀固定历史’之结构不同；Y1 已定 jishu-zhilai 为定域，‘以数占筮不被支持’。",
+   "fix": "撤销此名。替代候选：孟子離婁下‘天之高也，星辰之远也，茍求其故，千岁之日至，可坐而致也’（‘求故’‘坐致’，待定）；荀子非相‘欲觀千歲則數今日，欲知億萬則審一二’与‘類不悖，雖久同理’。"
+  },
+  {
+   "concept": "运行分开（runs part：两运行在某步前相同、该步分开）",
+   "name": "衢",
+   "verdict": "revise",
+   "issues": "书证‘此夫过举蹞步，而觉跌千里者夫’本身无‘衢’字（衢在上句‘杨朱哭衢涂’）；‘行衢道者不至’（勸學）喻专一（不可两道），不是分开处。先秦有直接之分开处用法。",
+   "fix": "书证换为荀子王霸‘杨朱哭衢涂’‘此亦荣辱、安危、存亡之衢已’与大略‘二者治亂之衢也’（大略或为弟子所纂，注明）；not_carried 加‘行衢道之专一喻’。"
+  },
+  {
+   "concept": "典型非由律导出（typicality by counting）",
+   "name": "大率",
+   "verdict": "revise",
+   "issues": "非先秦；张载、程颢之‘大率’是篇章副词（大体而言），不是计数之典型；只有杨倞注‘亦大率也’带此义，层为注·唐。",
+   "fix": "pre_qin 改 false，层标为注；或改用荀子‘常體’与‘罕至’之对（常与罕），以计数言典型与稀见。"
+  },
+  {
+   "concept": "对角程（diagonal course：沿每一外推所不预之值而行之程）",
+   "name": "出其不意",
+   "verdict": "revise",
+   "issues": "书证无误。not_carried 已排除诡道、对抗之胜，但名之本义‘其’即敌之意，语境为‘兵者，詭道也’‘能而示之不能’，属争胜之层；名与所排除者不能分开。下文‘此兵家之勝，不可先傳也’倒支持无前缀固定下一值。",
+   "fix": "fit 明写‘其＝外推本身（所不预者），对敌之用不取’，并加‘此兵家之勝，不可先傳也’为书证；或另择非争胜之复合并说明。"
+  },
+  {
+   "concept": "敏感性与最小识（sensitivity：有限读之律经其所敏感者读）",
+   "name": "察",
+   "verdict": "revise",
+   "issues": "孟子书证‘明足以察秋毫之末，而不见舆薪’下文归于‘不用明’，是不为之道德论，fit 以之说耦合是过读；条目又把察之泛义（察看、察理、苛察）一并标为本名：xici-yang-guan-fu-cha、lunyu-shi-qi-suo-yi、suzhe-xiao-cha（苛察）、zhoudunyi-tong-wei、wuzi-guan-di-zhi-wai、hanfei-zhan-shou、zhuang-zi-xi-shi-da。",
+   "fix": "fit 删孟子‘不用明’之耦合读；not_carried 加‘泛义之察看、苛察’；只在明说经其所敏感者读之条目用察。"
+  },
+  {
+   "concept": "可学（learnable）",
+   "name": "可知",
+   "verdict": "keep",
+   "issues": "书证无误，‘可知’之可学义成立。",
+   "fix": "无须修改。"
+  },
+  {
+   "concept": "所见范围（scope of an inquiry）",
+   "name": "涯",
+   "verdict": "revise",
+   "issues": "C17 以‘涯’名视界（Run.AgreeUpTo），同引庄子养生主二书证，冲突；养生主‘吾生也有涯’之涯是生之界，不是探究所达之范围；所见范围＝实际执行所达之构型（Becoming.Scope），‘涯’名的是界线而非所达。",
+   "fix": "让 C17 保留涯；本名改为‘知之所至’（庄子則陽‘言之所盡，知之所至，極物而已’，杂篇，注明）或‘域’，并说明所至＝实际执行所达。"
+  },
+  {
+   "concept": "一步之情境（situation of a step：步骤由其一更细之情境实现，权重计数情境）",
+   "name": "所由",
+   "verdict": "reject",
+   "issues": "书证中‘所由’是行为所从之路（杨倞‘由，從也’）或来源（庄子），不是一步之更细情境；且 C17 已以‘遇’名同一概念（Situations.finerLaw，书证大取‘或遇孰，或遇凶’）。",
+   "fix": "撤销此名，用 C17 之‘遇’；wangbi-yao-ren-wei-shi 可注‘王弼以時名所处之情境’。"
+  },
+  {
+   "concept": "训练（training：经数据选择类之成员）",
+   "name": "習",
+   "verdict": "keep",
+   "issues": "书证逐字无误（‘學而時習之’‘每變皆習，乃授其兵’‘虑积焉，能习焉，而后成谓之伪’）。剔除表 RU1-LY-01-04-R01 之说明称‘傳不習乎’已作‘習’之书证，但本名书证并无此句，说明与名表不符。習只有反复与积成之义，缺‘经数据选择类之成员’之选择一面，fit 未说。",
+   "fix": "说中注明‘習不带经数据选择之义’；改正 RU1-LY-01-04-R01 之剔除说明，或把‘傳不習乎’（習＝温习所传）加为书证。"
+  },
+  {
+   "concept": "排除法外推（extrapolation by elimination）",
+   "name": "過則改",
+   "verdict": "revise",
+   "issues": "名‘過則改’不是逐字形式（论语书证作‘過則勿憚改’‘過而不改，是謂過矣’），逐字之‘过则改之’见孟子；‘過’带道德之过，与‘越过已排除之候选’相撞。",
+   "fix": "书证加孟子公孫丑下‘古之君子，过则改之；今之君子，过则顺之’并逐字引；被越过之候选另用‘越’；not_carried 加‘過之道德义’。"
+  },
+  {
+   "concept": "相符／不符（accords／misses）",
+   "name": "符",
+   "verdict": "revise",
+   "issues": "Lean 之 Accords pred o := ∀ t, ¬ MissesAt pred o t：不出值者永不误，沉默亦算相符；‘符’是两半相合之正面匹配，会把沉默排除在外。",
+   "fix": "改为‘無不符’或‘不失’，或在说中把‘符’定义为‘出值处无不合（沉默亦符）’。"
+  },
+  {
+   "concept": "套索程（lasso：从某步起以某周期重复之程）",
+   "name": "終而復始",
+   "verdict": "revise",
+   "issues": "名只说周期而不说前段（Lasso 有前缀与周期）；孙子势篇‘終而復始，日月是也’是喻奇正之无穷，非套索；无条目使用；与 C05‘復’相关。",
+   "fix": "与 C05 之‘復’协调，或改为声明之复合并在说中写明前段加周期；书证可加荀子王制‘始则终，终则始，若环之无端也’、莊子則陽‘窮則反，終則始’。"
+  },
+  {
+   "concept": "沉默（silence：读出在合并处不出值，可靠而不确切）",
+   "name": "默",
+   "verdict": "revise",
+   "issues": "荀子‘默而當，亦知也’讲言默之当，不是读出在未定处不出值；第三书证是杨倞注所引论语，层为注。先秦有直接之字。",
+   "fix": "改名为‘闕’：论语2.18‘多聞闕疑，愼言其餘，則寡尤’、13.3‘君子於其所不知，蓋闕如也’、15.26‘吾猶及史之闕文也’，并以2.17‘知之為知之，不知為不知，是知也’为相合主证。"
+  },
+  {
+   "concept": "以可错之见证交叉核验（cross-checking with fallible witnesses）",
+   "name": "參驗",
+   "verdict": "keep",
+   "issues": "书证无误（韩非‘參驗’），交叉核验之义成立。条目 xunzi-can-xing 之參训三，不应标此名。",
+   "fix": "无须修改名；见条目。"
+  },
+  {
+   "concept": "判断过程（judgment process：在受判构型以可接受应答结束判断）",
+   "name": "斷",
+   "verdict": "keep",
+   "issues": "书证无误；但易传之‘斷’多为‘斷其吉凶’之占断。",
+   "fix": "not_carried 加‘占断吉凶’。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-guan-wo-sheng",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。‘我生’读为己之所行，与小象‘觀我生，進退；未失道也’一致。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "shuogua-shu-wang-zhi-lai",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。沿用 RO shuogua-shuwang-zhilai，未改其界。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xiaoxiang-lv-shuang",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。小象层标为传，与 Y1 lishuang 一致。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "tuan-da-guan",
+   "verdict": "revise",
+   "issues": "彖传‘大觀在上…中正以觀天下’下句即‘下觀而化也’：居上者为下所观，觀在此读观示（展示）为主；脉络本条 limits 明言‘观有观示与观看两向’。名表觀之 not_carried 已排除‘观作为展示与位阶（大觀在上）’，本条却以觀（观看）用之，自相矛盾。‘在上’‘中正’又是单一中心之层，读法以‘‘在上’不增所观’改说之，未标此层不取。",
+   "fix": "读法首句改为‘彖传以居上中正者为天下所观（观示），兼及观看’；删 names_used 觀；保留定域，明写‘观示与在上之位不在律中，只取闭包外选择盲’。"
+  },
+  {
+   "id": "daxiang-duo-shi-qian-yan",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。‘識’读 zhì（记），与名表识之先秦义一致。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xici-yang-guan-fu-cha",
+   "verdict": "revise",
+   "issues": "片段与读法无误；但 names_used 之‘察’是泛义之察看（俯以察于地理），不是名表察之受控义（敏感性与最小识），会冲淡受控义。",
+   "fix": "删 names_used 察，只留觀。"
+  },
+  {
+   "id": "xici-jian-zhi-wei-zhi",
+   "verdict": "revise",
+   "issues": "片段无误。同段下句‘百姓日用而不知，故君子之道鲜矣’，系辞以仁者、知者所见为偏，另立全见之‘君子之道’，且上句‘一阴一阳之谓道’立有一名；读法末句‘不立读法外之一名’与原文相反。",
+   "fix": "删‘名随读法而异，不立读法外之一名’，改为‘系辞以仁知之见为偏而另立君子之道；脊柱只取名随读法与归并而异，不取全见之道’；kind 可仍相合（与 Y1 jianzhi 同），但只限前半句。"
+  },
+  {
+   "id": "xici-jian-ze-ni-xing",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xici-she-gua-xi-ci",
+   "verdict": "revise",
+   "issues": "两片段无误（系辞上第8章、第2章）。所系之辞在两处都以吉凶为对象（‘系辞焉而明吉凶’‘系辞焉以断其吉凶’），是占断，不是在构型上成立之命题；读法说‘吉凶之占用不在其中’，则剩下的只是‘辞系于构型’之结构，相合过强。另依赖之名設卦繫辭须修改（见名表）。",
+   "fix": "kind 改 scope：框架（过程＋各构型所实现之命题）只对‘辞作为系于构型之陈述’成立，吉凶悔吝之占断不取；names_used 随名之修改调整。"
+  },
+  {
+   "id": "xici-sui-zhi-lai-wu",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；names_used 以往知來 只是对照（此处是不经耦合之前知），宜注明。",
+   "fix": "names_used 以往知來 后注‘（对照）’或删。"
+  },
+  {
+   "id": "xici-ji-qi-shu",
+   "verdict": "revise",
+   "issues": "片段无误。原文‘参伍以变，错综其数，通其变，遂成天下之文，极其数，遂定天下之象’讲蓍策之数与筮法：‘极其数’是把筮法做到底而定卦象，读法却以‘‘极其数，遂定天下之象’恰在有界处成立’把它读作有界状态之前缀；读法未提占筮，与 Y1 jishu-zhilai 之‘以数占筮不被支持’不一致。",
+   "fix": "读法加‘此数为蓍策之数，原文说筮法定卦；脊柱只取有限之数穷尽而定之结构，以数占筮不被支持’；names_used 極數 随名之剔除而删。"
+  },
+  {
+   "id": "xici-cang-wang",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。注意 C05 已以‘藏往’名带着历史（Law.withHistory），同引此句，须与名表往统一。",
+   "fix": "条目不改；名之统一见名表往（与 C05 之藏往）。"
+  },
+  {
+   "id": "xici-shu-bu-jin-yan",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。PartialReadout.SoundWithin.silent 是附加之对应，原文只说不尽。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xici-jin-qing-wei",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xici-guo-ci-yi-wang",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。此处‘以往’是‘此后’之义（向未来），正与名表往之‘已行之程’相反，宜在往之 not_carried 标出；names_used 涯 随涯之改名调整。",
+   "fix": "names_used 涯 随涯之改名调整（‘知之所至’或‘域’）；往之 not_carried 加‘以往＝此后’。"
+  },
+  {
+   "id": "xici-zhang-wang-cha-lai",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xici-chu-nan-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。C05 以同句为‘初’（有限前段）之书证，本条以往名之，须统一。",
+   "fix": "names_used 往 改为 C05 之‘初’。"
+  },
+  {
+   "id": "xici-yin-yang-bu-ce",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。与 Y1 buce 一致；读法明言不立神格。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xici-ji-shu-zhi-lai",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；沿用 Y1 jishu-zhilai 之定域；但与 xici-sui-zhi-lai-wu（同为以占知来，标相分）kind 不同，宜在读法中明写占之部分为相分。",
+   "fix": "读法末句改为‘以占知来（以数占筮）属相分，不在律中；定域只对有界之记录’；names_used 極數 删。"
+  },
+  {
+   "id": "wangbi-qing-wei-fei-shu",
+   "verdict": "revise",
+   "issues": "片段无误。层次误标：YWH-LZ 是《周易略例·明爻通變》，王弼自著之论，不是注（冻结页另含邢璹夹注，所引为王弼正文）。脉络本条 limits 明言‘不是反对一切计量；情伪在本篇的训释不缩为现代“真假数据”’，读法以‘无列表可持’相合，须守此界。",
+   "fix": "layer 改‘论·魏晋（王弼《周易略例·明爻通變》，曹魏）’；读法加‘王弼所驳为以象数之数求爻变之情伪，不是反对一切计量’；names_used 極數 删。"
+  },
+  {
+   "id": "wangbi-yao-ren-wei-shi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。原文以‘時’名所处之情境，正说明情境之古名在 C17（時／遇）；names_used 所由 随所由之剔除而改。",
+   "fix": "names_used 所由 改为 C17 所定之情境名。"
+  },
+  {
+   "id": "lao-yi-shen-guan-shen",
+   "verdict": "revise",
+   "issues": "片段无误（王弼本）。读法‘以各层自身之尺度观各层’随王弼注‘彼皆然也’；河上公注作‘以修道之身，观不修道之身，孰亡孰存也’（LC-HS-LOW），是修道／不修道之比较存亡，结构不同。读法未注所从。",
+   "fix": "读法注明‘从王弼注；河上公读为修道与不修道之比较，不取’。"
+  },
+  {
+   "id": "heshang-qiu-zhi-yi-shen",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "lao-wu-yu-guan-miao",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；读法依王弼本断句‘常无欲，以观其妙’，宜注明。",
+   "fix": "读法注明‘依王弼本断句’。"
+  },
+  {
+   "id": "lao-wei-xue-ri-yi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。沿用 RO。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "lao-zhi-bu-zhi",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；沿用 RO 之读（把未定标为未定为上）；河上公读为‘知道言不知’（谦退，见剔除表 LC2-HS-C71-R01），宜在读法中注明二读。",
+   "fix": "读法注明河上公之谦退读，不取。"
+  },
+  {
+   "id": "suzhe-zi-yi-er-er",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "suzhe-xing-quan",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "suzhe-xiao-cha",
+   "verdict": "revise",
+   "issues": "片段无误。苏辙此注在老子58（其政悶悶章）下，上文‘區區以察為明至于察甚傷物’，‘小察’即为政之苛察，正是名表察之 not_carried 所排除之义；names_used 察 与此冲突。",
+   "fix": "删 names_used 察；读法注明‘小察指为政之苛察’。"
+  },
+  {
+   "id": "lao-shi-zhi-bu-jian",
+   "verdict": "revise",
+   "issues": "片段无误。原文以‘名曰’给不见、不闻、不得者立名（夷、希、微），同章续以‘混而为一’‘复归于无物’‘是谓无状之状，无物之象’，即对一个读不到之一的描述；读法‘夷希微是读出之界，不是对象之性’与‘名曰’相反，且略去同章所立之读外之一（河上公条已标相分）。names_used 聞 在此只是耳闻本义。",
+   "fix": "kind 改 scope：相合只在各以读之失败命名一点；同章所立读外之一（无状之状）不取；删‘不是对象之性’；删 names_used 聞。"
+  },
+  {
+   "id": "lao-bu-ke-shi",
+   "verdict": "revise",
+   "issues": "片段无误。‘强为之容’是勉强给出不确切之描述（豫兮若冬涉川…），不是沉默；读法以 PartialReadout.silent_not_exact 与名默对应，方向错：老子在此恰恰不默。",
+   "fix": "删 Becoming.PartialReadout.silent_not_exact 与 names_used 默；保留 Readout.no_judge_of_merged、ExactWithin.lumped，读法改为‘所给之容是合并了差的读出，不确切’。"
+  },
+  {
+   "id": "lao-bu-chu-hu",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；沿用 RO。所附 LAO2-C47-R02（不窥牖，见天道）、R04（不行而知…）之句不在片段中。",
+   "fix": "片段加‘不窥牖，见天道’‘是以圣人不行而知，不见而名，不为而成’，或删此二记录。"
+  },
+  {
+   "id": "zhuxi-ge-wu-bu-zhuan",
+   "verdict": "revise",
+   "issues": "片段无误（沿用 RO）。names_used 理：此处之理是朱熹之理（同段‘天下之物莫不有理’‘吾心之全体大用，无不明矣’），名表已采之‘理’明确不带宋明理义，用已采名标此理会混两义。",
+   "fix": "删 names_used 理；读法注明‘此理为朱熹之理（宋明义）’。"
+  },
+  {
+   "id": "wangyangming-bu-jia-wai-qiu",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "wangyangming-ming-jing",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。语境为答陆原静书引佛氏‘無所住而生其心’，读法未混入佛教义，可。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mojing-zhi-yu-wu",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；平行 RU1-DX-01-R09／R19（大学‘致知在格物’）只给工夫次序，不说知材遇物而能貌之，作平行会读入宋儒或汉儒之格物训释。",
+   "fix": "把 RU1-DX-01-R09／R19 移出平行，或注‘仅次序，不同构’。"
+  },
+  {
+   "id": "lunyu-shi-qi-suo-yi",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；names_used 所由、察 随名表之改动（所由剔除，察限于敏感性）调整。",
+   "fix": "names_used 删 所由；察 若保留须注明为泛义之察。"
+  },
+  {
+   "id": "daxue-xin-bu-zai",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "lunyu-wen-gu-zhi-xin",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "lunyu-xue-er-bu-si",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。‘思’对应归并之选取是 AI 读法，已标。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "lunyu-si-er-bu-xue",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "lunyu-wen-xian-bu-zu",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "lunyu-yi-si-wen",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "lunyu-ting-yan-guan-xing",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "lunyu-ju-yi-yu",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；举一反三是经归并之迁移，不是由前缀提出下一值；names_used 以往知來 不当。",
+   "fix": "删 names_used 以往知來。"
+  },
+  {
+   "id": "lunyu-fei-sheng-er-zhi",
+   "verdict": "revise",
+   "issues": "片段无误。孔子只否认自己生而知之；论语16.9 明言‘生而知之者，上也；學而知之者，次也’（RU1-S-LY），承认此类存在。读法末句（不需要‘生而知之’）与相合 every_determines_nothing 说多了：原文未否认无数据之知。",
+   "fix": "kind 改 scope；读法加‘论语16.9 承认生而知之为上，此为先定之知（先在之地），不取；本章只说孔子之知由求古而得’。"
+  },
+  {
+   "id": "lunyu-duo-wen-duo-jian",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "lunyu-bu-bao-qi-wang",
+   "verdict": "revise",
+   "issues": "片段无误。‘不保其往’之‘往’传统有‘前日之行’与‘去后之行’二读（后者为一说，冻结文本未收，待查）；读法只取前者，且以 judgeProcess 对应，联系较弱。",
+   "fix": "读法注明二读：取‘前日之行’时为‘记录不作对今之保证’，取‘去后之行’时为‘判断不及未来’（no_prefix_fixes_next）；names_used 往 只在前一读成立。"
+  },
+  {
+   "id": "lunyu-bu-gan-chang",
+   "verdict": "revise",
+   "issues": "片段无误。语境是受馈之礼（‘康子饋藥，拜而受之’），‘未達，不敢嘗’是对未知药性之慎；读法‘承认其结果未定且可能不回返’之推论是 AI 加的，相合过强。",
+   "fix": "kind 改 scope；读法注明语境为受馈之礼，与 experiment-needs-return 之联系标为 AI 读法。"
+  },
+  {
+   "id": "lunyu-shi-wen-fei-da",
+   "verdict": "revise",
+   "issues": "片段与读法无误；但此处‘聞’是名声，名表聞之 not_carried 明列排除‘名声’（论语‘是『聞』也，非『達』也’），本条却以聞名之，自相矛盾。",
+   "fix": "二选一：删 names_used 聞；或改名表聞之 not_carried，承认名声为经传递链到达之读出。"
+  },
+  {
+   "id": "lunyu-song-shi-san-bai",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "lunyu-xiang-ren-jie-hao",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "zhongyong-sheng-xue-kun",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。中庸标为传·战国至秦汉（礼记篇，年代有争议），可。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "zhongyong-sui-yu-bi-ming",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；原文无‘過’，names_used 過則改 是借用。",
+   "fix": "names_used 過則改 删或改为‘越’。"
+  },
+  {
+   "id": "zhongyong-ben-zhu-shen",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mengzi-yi-yi-ni-zhi",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；‘以意逆志’之‘意’传统有读者之意与古人之意二读（冻结文本未收赵岐注，待查），读法所取宜注明；此‘逆’训迎、揣度，与說卦‘數往者順，知來者逆’之逆不同，names_used 數往 只在‘由文辞推回作者之志’之义上成立。",
+   "fix": "读法注明‘意’之所取与‘逆’训迎。"
+  },
+  {
+   "id": "mengzi-liang-zhi",
+   "verdict": "revise",
+   "issues": "片段无误。孟子同章‘人之所不学而能者，其良能也…孩提之童，无不知爱其亲者’，主旨是不学不虑之先有，即 RO 所列‘固定之性’之层；读法以‘不经当下思虑之应答可读为经继承之耦合而来’为主、‘若‘良’指固定于性之值，则不在理论内’为附，主次倒置：原文主义正是后者，标定域软化了相分。",
+   "fix": "kind 改 divergence：不学不虑之先定之知不取；‘经继承之耦合’只作 AI 另说附注。"
+  },
+  {
+   "id": "mengzi-jin-xin-shu",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xunzi-han-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xunzi-xu",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xunzi-yi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xunzi-ding-shi-fei",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。荀子之理用已采之‘理’可（先秦理，非宋明理）。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xunzi-zheng-zhi",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；‘征知’之征传统训‘召’，一说训‘验’（冻结文本无注，待查）；names_used 徵 只在后一读成立。",
+   "fix": "names_used 徵 标‘存疑（征知之征训召或验）’。"
+  },
+  {
+   "id": "zhoudunyi-tong-wei",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；names_used 察 不见于片段。",
+   "fix": "删 names_used 察。"
+  },
+  {
+   "id": "zhangzai-de-xing-suo-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "wangyangming-zhi-xing",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。沿用 RO。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xunzi-can-xing",
+   "verdict": "revise",
+   "issues": "片段无误，但同一冻结文本之杨倞注即在句下：‘參，三也。曾子曰︰「日三省吾身。」’——參训三（次数），不是参校；读法‘博学而日以己参校’与 names_used 參驗 与此注相反（一说参训验，待查）；名表參驗之 not_carried 本已排除‘参之三分之义’，本条之标注与之自相矛盾。",
+   "fix": "读法改为‘日三省（杨倞训參为三）’；删 names_used 參驗，或标‘参训验为另说’；names_used 過則改 亦弱（‘行無過’是无过失，不是越过已排除之候选），宜删。"
+  },
+  {
+   "id": "xunzi-fei-wo-er-dang",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xunzi-mo-er-dang",
+   "verdict": "revise",
+   "issues": "片段无误。荀子此处之默是言默之当，下文‘多言而類，聖人也；少言而法，君子也’；‘在不能确定处不出值’之义来自杨倞注所引论语‘知之爲知之，不知爲不知’（注·唐）。读法把注义当正文义，相合过强。",
+   "fix": "kind 改 scope；读法注明‘荀子讲言默之当，与未定不出值之联系出自杨倞注引论语’；直接相合之书证改用论语2.17、2.18（见 missing）。"
+  },
+  {
+   "id": "xunzi-ke-yi-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字无误（无记录 id，直接取自冻结文本），层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "xunzi-qu-tu",
+   "verdict": "revise",
+   "issues": "片段逐字无误（无记录 id，直接取自冻结文本），层次与读法无误；同段‘此亦荣辱、安危、存亡之衢已’是衢作为结局分开处之直接用法，宜加入片段。",
+   "fix": "片段加‘此亦荣辱、安危、存亡之衢已’（RU2-S-XZ11，已核）。"
+  },
+  {
+   "id": "xunzi-chang-ti",
+   "verdict": "keep",
+   "issues": "片段逐字无误（无记录 id，直接取自冻结文本），层次与读法无误。读法所引‘亦大率也’为杨倞注（注·唐），已标。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "zhuang-chao-jun",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "zhuang-you-ya",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。names_used 涯 随涯之改名调整。",
+   "fix": "names_used 涯 随涯之改名调整。"
+  },
+  {
+   "id": "zhuang-you-suo-dai",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "zhuang-jing-wa",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。外篇层次标注正确。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "zhuang-zi-xi-shi-da",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；片段用‘視’，names_used 察 不在原文。",
+   "fix": "删 names_used 察。"
+  },
+  {
+   "id": "zhuang-hao-shang",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "zhuang-shen-gui",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "zhuang-liu-shi-hua",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "zhuang-ying-er-neng-yan",
+   "verdict": "keep",
+   "issues": "片段逐字无误（无记录 id，直接取自冻结文本），层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-de-xia-zhi-qing",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-luan-suo-zi-qi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-zhu-bo",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-wan-ren-shi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-jing-yu-ren",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。‘以往知來’在墨子是所引‘古者有語’，下句‘謀若此，可得而知矣’断言成功，定域正当。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-gu-chang",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-er-mu-zhi-shi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-du-bo",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-san-biao",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-shi-wei-yi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-tian-gui-zhi-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mozi-chuan-liu",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mojing-wen-shuo-qin",
+   "verdict": "keep",
+   "issues": "片段逐字无误（无记录 id，直接取自冻结文本），层次与读法无误。读法已分两层（知之三源、聞之傳親），可；名表聞之 fit 应照此改。",
+   "fix": "条目不改；名表聞之 fit 照此两层改。"
+  },
+  {
+   "id": "gongsunlong-jian-bai",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。沿用 RO。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mojing-xin-zhi-cha",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mojing-suo-yi-ran",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mojing-lv",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mojing-xin",
+   "verdict": "revise",
+   "issues": "片段无误。經上定义‘信，言合於意也’（MI1-S-JS）：信是言与意合（诚），不是验；经说‘使人視城得金’之例，脉络本条（MI1-R-SS-trust）明言‘后例训释未定’，并要求与经文对读、分开诚实意向与判断正确。读法只取‘由独立路线之验’一读而与 verifiable_iff_verified 相合，证据不足。",
+   "fix": "kind 改 scope 或撤出；读法写明經上定义与后例二读，相合只在‘信不由言之当而定’一点；names_used 徵、驗 标存疑。"
+  },
+  {
+   "id": "mojing-yi-suo-ming",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "mojing-liang-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "sunzi-ce-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "sunzi-di-sheng-du",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；names_used 觀 不见于片段。",
+   "fix": "删 names_used 觀。"
+  },
+  {
+   "id": "sunzi-zhi-bi-zhi-ji",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。沿用 RO。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "sunzi-bi-qu-yu-ren",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。沿用 RO。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "sunzi-chu-qi-bu-yi",
+   "verdict": "revise",
+   "issues": "片段逐字无误（无记录 id，直接取自冻结文本），层次与读法无误；片段上文为‘兵者，詭道也…能而示之不能’，下文‘此兵家之勝，不可先傳也’正对应‘无前缀固定下一值’。",
+   "fix": "片段加‘此兵家之勝，不可先傳也’（BI1-S-SZ，已核）；读法注明上文为詭道。"
+  },
+  {
+   "id": "wuzi-guan-di-zhi-wai",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；names_used 察 为泛义之察看。",
+   "fix": "删 names_used 察。"
+  },
+  {
+   "id": "wuzi-mei-bian-jie-xi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "hanfei-xing-ming-can-tong",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "hanfei-ce-ji-er-yan",
+   "verdict": "revise",
+   "issues": "片段无误。本条要害是先立筴籍、事发后验（先登记后检验），读法自承脊柱无此律（G2），却标相合；相合只对‘记录在言时固定所言’‘排除只经事后进来之差’两部分成立。",
+   "fix": "kind 改 scope，或写‘相合（部分）’并明言先登记后检验之律未立（G2）。"
+  },
+  {
+   "id": "hanfei-bu-shi-xiang-yu",
+   "verdict": "revise",
+   "issues": "片段无误。‘不使羣臣相爲語’之要害是相通之见证不独立，读法自承脊柱只有完全重复之名单（G1），却标相合。八经‘言之爲物也以多信，不然之物，十人云疑，百人然乎，千人不可解也’（FA1-H48-R013）是更直接之书证，现只作平行。",
+   "fix": "kind 改 scope 或‘待证’（G1）；以 FA1-H48-R013 为主条，本条为平行。"
+  },
+  {
+   "id": "hanfei-wu-can-yan",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "hanfei-si-zheng-fu",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "hanfei-yi-bian-zhi-hou",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "hanfei-shou-zhu",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "hanfei-yu-ren-xiang-ruo",
+   "verdict": "revise",
+   "issues": "片段无误，定域方向对。但原文论证之目的是反对‘徵斂於富人以布施於貧家’，把贫富之差归于力儉侈墯——正是 Confound.misattributes 所警之单因归因；读法未标此法家规范层。",
+   "fix": "读法加‘原文用以反对济贫，归因于力俭侈惰属规范之层，不取；只取其排除混淆项之结构’。"
+  },
+  {
+   "id": "hanfei-shi-zhi-guan-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "hanfei-zhan-shou",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；names_used 察 不见于片段。",
+   "fix": "删 names_used 察。"
+  },
+  {
+   "id": "shangjun-gu-xi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "jielao-qian-shi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "jielao-mu-bu-ming",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "jielao-jian-gong",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "weishi-shi-liao-bie",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "weishi-wu-jing",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；layer 未注印度唯识之源（前一条有注）。",
+   "fix": "layer 加‘印度唯识，玄奘译糅’。"
+  },
+  {
+   "id": "weishi-zi-zheng",
+   "verdict": "revise",
+   "issues": "片段无误。原文下句‘故心、心所四分合成，具所、能緣，無無窮過’：第三、第四互缘而闭合，正为免无穷后退；读法‘以第四分证第三分只把缺口移到下一层’误述其论证（唯识不是后退一层，而是互缘闭合）。",
+   "fix": "读法改为‘唯识以第三、第四分互缘闭合而称无无穷过；脊柱：族内无成员说其缺口对每一族成立，互缘之闭合族亦然，故完备之自证不成立’。"
+  },
+  {
+   "id": "yinming-xian-bi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "jingang-yi-se-jian-wo",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "ahan-shi-ru-shi-zhi",
+   "verdict": "revise",
+   "issues": "片段逐字无误，层次与读法无误；names_used 理 不见于片段。",
+   "fix": "删 names_used 理。"
+  },
+  {
+   "id": "ahan-yi-qie",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "fahua-wei-fo-yu-fo",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "fazang-yin-fen-guo-fen",
+   "verdict": "revise",
+   "issues": "片段无误，但它是法藏所引‘《地論》云「因分可說、果分不可說」’，即世亲《十地经论》（北魏译，印度论）之语，不是法藏自语；层次只标‘论·隋唐（法藏）’不准。",
+   "fix": "layer 改‘论·北魏译（《十地经论》，世亲；法藏《华严一乘教义分齐章》引，唐）’。"
+  },
+  {
+   "id": "guanjing-yu-xiu-duo-luo-he",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "tiantai-shi-xiu-zhi",
+   "verdict": "keep",
+   "issues": "片段逐字无误，记录同源，层次与读法无误。",
+   "fix": "无须修改。"
+  },
+  {
+   "id": "zongmi-san-liang",
+   "verdict": "revise",
+   "issues": "片段逐字无误，但起首‘五’是《都序》‘十所以’之第五条序号，引作‘五量有三種勘契須同者’易误读为‘五量’。",
+   "fix": "片段改从‘量有三種勘契須同者’起，或在读法注明‘五＝第五条’。"
+  }
+ ],
+ "missing": [
+  "论语2.17‘知之為知之，不知為不知，是知也’（RU1-LY-02-17-R01）：不知处不出值之直接先秦书证，应为默／闕之相合主条（候选表 c08/primary.txt 未收）。",
+  "论语2.18‘多聞闕疑，愼言其餘，則寡尤’（RU1-LY-02-18-R01／R02）、13.3‘君子於其所不知，蓋闕如也’、15.26‘吾猶及史之闕文也’：‘闕’名沉默（可靠而不确切）。",
+  "孟子離婁下‘天之高也，星辰之远也，茍求其故，千岁之日至，可坐而致也’：有界之律由记录固定将来（辨识），可替代被剔除之‘極數’。",
+  "荀子非相‘欲觀千歲則數今日，欲知億萬則審一二’与‘古今一度也’‘類不悖，雖久同理’（对妄人‘古今異情’）：以今日之记录知千岁，条件是律不变；另‘傳者久則論略，近則論詳，略則舉大，詳則舉小’：传递愈久记录愈合并。",
+  "墨經說下‘智，以目見，而目以火見，而火不見，惟以五路智’与經下‘知而不以五路，說在久’：观察是读出之路线（‘路’），比‘聞’更直接。",
+  "公孫龍子‘且猶白：以目、以火見。而火不見，則火與目不見，而神見。神不見，而見離’：路线之各段本身不被读出。",
+  "莊子齊物論‘庸詎知吾所謂『知之』非不知邪？庸詎知吾所謂『不知』之非知邪？’与‘子知子之所不知邪？’曰：‘吾惡乎知之？’：族内无成员说出其缺口（自知之界）。",
+  "莊子則陽‘言之所盡，知之所至，極物而已’（杂篇）：所见范围＝所达，可替代与 C17 冲突之‘涯’。",
+  "墨經說下‘權重相若也，相衡則本短標長，兩加焉，重相若，則標必下’与大取‘二子事親，或遇孰，或遇凶，其親也相若，非彼其行益也’：对照（其余相若，只变一项）之直接书证，后者与 C17 之‘遇’相接。",
+  "论语15.25‘如有所譽者，其有所試矣’、墨子兼愛中‘焚舟失火，試其士曰’、韓非子‘論之於任，試之於事，課之於功’：‘試’之采取动作而由结果定之用法。",
+  "孟子公孫丑下‘古之君子，过则改之；今之君子，过则顺之’：‘過則改’之逐字形式。",
+  "荀子王霸‘此亦荣辱、安危、存亡之衢已’与大略‘二者治亂之衢也’：‘衢’作结局分开处之直接书证。",
+  "荀子王制‘始则终，终则始，若环之无端也’、莊子則陽‘窮則反，終則始’：周期之书证（套索之周期部分）。",
+  "套索（Lasso：前段加周期）无一条目；‘終而復始’名下无条目使用，须补条目或与 C05‘復’合并。",
+  "韩非八经‘言之爲物也以多信，不然之物，十人云疑，百人然乎，千人不可解也’（FA1-H48-R013）现只作平行，应为相通之见证不独立（G1）之主条。",
+  "跨族名称冲突待统一：‘涯’（C17 已名视界）；‘所由’与 C17 之‘遇’（情境）；‘往’与 C05 之‘初’‘藏往’；‘觀’与 C16 之‘讀’；‘相若’与 C07 之‘同’。",
+  "平行 RU1-DX-01-R09／R19（大学‘致知在格物’）只给工夫次序，作 mojing-zhi-yu-wu 之平行会读入后世之格物训释，宜移出或注明。",
+  "剔除表 RU1-LY-01-04-R01 之说明称‘傳不習乎’已作‘習’之书证，但名表習之书证无此句，须改正说明或补入书证。"
+ ]
+}

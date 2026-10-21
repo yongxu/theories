@@ -1,0 +1,203 @@
+{
+ "edits": [
+  {
+   "id": "一·十三",
+   "find": "系辞，一变而每状定其诸辞之然否者也；辞，于一状或然或不然者也。",
+   "replace": "系辞，一变而每状各系于此状然之辞者也；辞，于一状可言其然否者也，不必定然否。",
+   "why": "凡·四 defines 或 as a disjunction that shows its branch, and 凡·五 defines 定然否 as 然或不然. So 「或然或不然」 and 「每状定其诸辞之然否」 build decidedness into every 辞. Lean's Frame.realized : S → C → Prop is not decidable, and the 三·一 經 takes 定然否 as a hypothesis, which this definition would make empty. The new wording avoids 「状之所然」, as the 然 note requires."
+  },
+  {
+   "id": "七·十七",
+   "find": "矛盾，取诸境（可重），每辞被计偶数次，而所须之奇偶相加为奇也。",
+   "replace": "矛盾，诸境之一族（可重），每辞被计偶数次，而所须之奇偶相加为奇也。",
+   "why": "取 is the name for uptake, defined in the 四·一 經 of this same part. Replacing 择 with 取 swaps one name collision for another. ks : List K is a 族 of contexts, and 族 may repeat members unless 各异 is stated."
+  },
+  {
+   "id": "七·十七",
+   "find": "于一矛盾所取之诸境",
+   "replace": "于一矛盾之诸境",
+   "why": "取 (uptake) should not mean 'select' in a 經. A 矛盾 is now itself a 族 of contexts."
+  },
+  {
+   "id": "七·十七",
+   "find": "或其中有一取为矛盾",
+   "replace": "或其中有一族为矛盾",
+   "why": "global_or_contradicts gives ∃ ks ⊆ all, Contradicts ks, that is, a 族 of the listed contexts. Using 取 as a noun collides with the name 取."
+  },
+  {
+   "id": "七·十七",
+   "find": "随境取值者，每一境能独合，则合其全",
+   "replace": "各境自有其值者，每一境能独合，则合其全",
+   "why": "indexed_met: each context has its own value (choose k). This avoids using the name 取 in the 經."
+  },
+  {
+   "id": "一·十七",
+   "find": "不依境之读恰在没有诸境之取相矛盾处存在",
+   "replace": "不依境之读恰在诸境无一族为矛盾处存在",
+   "why": "Keeps the wording of ⟦七·十七⟧ without the name 取 (uptake)."
+  },
+  {
+   "id": "NEW-1",
+   "find": "体闭于其余而自载一法（`Becoming.PartForms.goAlike`）",
+   "replace": "体自载一法，不待其余（`Becoming.PartForms.goAlike`）",
+   "why": "闭 is reserved for the absorbing region (Law.Absorbing). The 封 row says it was introduced 「使「闭」只指吸收区域」. GoAlike (coupled …) Prod.fst is the part carrying its own law, which the 經 already calls 体自有其法."
+  },
+  {
+   "id": "NEW-1",
+   "find": "体自有其法（闭于其余）不等于其动为体之动：两钟之构造之例中，动不改体之法，体闭于其余，而其动随其余之计而定",
+   "replace": "体自有其法不等于其动为体之动：两钟之构造之例中，动不改体之法，体自有其法，而其动随其余之计而定",
+   "why": "Same name collision with 闭. TwoClocks.closed_not_own is GoAlike … Prod.fst ∧ ¬PartForms byRest."
+  },
+  {
+   "id": "NEW-1",
+   "find": "动为二者所共成，恰当它处处同",
+   "replace": "动既为体之动、又为其余之动，恰当它处处同",
+   "why": "partForms_and_restForms_iff is PartForms ∧ RestForms ↔ constant. 「二者所共成」 reads as the jointly formed move of Parity.neither_alone, which neither forms alone. That is the opposite case."
+  },
+  {
+   "id": "NEW-1",
+   "find": "其余之次状为其状与动之一象所定",
+   "replace": "其余之次状为其状与动之一象（⟦一·十四⟧）所定",
+   "why": "象 is used in this 經 before any definition. Its only 經 definition is 十三·二十 (number 十三·十九, 「择所经之映射」, narrower). See the 一·十四 edit, which places the general definition there."
+  },
+  {
+   "id": "NEW-1",
+   "find": "一行亦定不下动属谁（反事实见⟦NEW-7⟧）",
+   "replace": "一行亦定不下动属谁（`Becoming.TwoClocks.one_course_two_laws`；反事实见⟦NEW-7⟧）",
+   "why": "The claim has a checked law: one course is admitted by the part's law of the move and by the rest's (one_course_two_laws, in the receipt)."
+  },
+  {
+   "id": "一·十四",
+   "find": "观，变、系辞、宇之总名也。读，以一象予状以值也",
+   "replace": "观，变、系辞、宇之总名也。象，予所施之每一者一值者也；读，以一象予状以值也",
+   "why": "象 (plain wording: map in general) appears in the 經 of NEW-1, 一·十四 and 七·十 but is defined only in the later 十三·二十, and only as the map a selection passes through. Defining it here, where 读 is built from it, closes the forward use. 十三·二十 should then be reworded as 「择所经之象」."
+  },
+  {
+   "id": "一·十四",
+   "find": "凡法自一状之轨，皆其变之一行",
+   "replace": "凡以一象予每状其次状之法，自一状之轨，皆其变之一行",
+   "why": "Law.run and Branching.law_run_state are about Law.process next with next : S → S (total, one move). A general 法 (Determined: at most one successor) can have no orbit."
+  },
+  {
+   "id": "一·一",
+   "find": "（积、运、待、需、资见⟦二·一⟧，取、与见⟦四·一⟧）",
+   "replace": "（积、运、待、需、资见⟦二·一⟧，所待见⟦一·十⟧，取、与见⟦四·一⟧）",
+   "why": "所待 is used in this 經 but defined only in the 一·十 經 (number 一·十三), later. The forward-pointer convention already applied here should cover it."
+  },
+  {
+   "id": "二·一",
+   "find": "所记步步可变。",
+   "replace": "所记步步可变（待者、所待见⟦一·十⟧）。",
+   "why": "This 經 uses 待者 and 所待 throughout (运、待、资、待网), but they are defined only in the 一·十 經 (number 一·十三). This adds the same forward pointer that 一·一 uses."
+  },
+  {
+   "id": "一·四",
+   "find": "退化与生相对，⟦六·五⟧）",
+   "replace": "退化与生相对，见⟦六·五⟧；读见⟦一·十四⟧）",
+   "why": "This 經 is the first in the outline to use 读 (读于运… 一变化而三读). 读 is defined only in the 一·十四 經, since 凡·十九 is renamed 讀（AI）. The 經s of 一·九, 一·十, 四·一 and 一·十一 also use it before 一·十四. The edit also adds the missing 见."
+  },
+  {
+   "id": "四·三",
+   "find": "唯运者与：凡与之者于其步皆运也；唯运者取：凡取者于其步皆运而资其所取也：皆宇之设。",
+   "replace": "唯运者与之：凡与之者于其步皆运也；唯运者取，且唯取于其所资：凡取者于其步皆运而资其所取也：皆宇之设（⟦一·十二⟧）。",
+   "why": "The fixed plain wording is 「唯运者与之；唯运者取，且唯取于其所资」, the same in 經 and 說. 「宇之设」 is defined only in the later 一·十二 經 (number 一·十八), so it gets a pointer."
+  },
+  {
+   "id": "四·三",
+   "find": "唯运者与（`Becoming.Flow.Acting`；于宇，`Becoming.World.Acting`）与唯运者取而所取唯其所资（",
+   "replace": "唯运者与之（`Becoming.Flow.Acting`；于宇，`Becoming.World.Acting`）与唯运者取，且唯取于其所资（",
+   "why": "Brings this 說 in line with the fixed plain wording."
+  },
+  {
+   "id": "一·十一",
+   "find": "计其余，凡宇皆衡，唯运者与，唯运者取而所取唯其所资。",
+   "replace": "计其余，凡宇皆衡，唯运者与之，唯运者取，且唯取于其所资。",
+   "why": "The fixed plain wording for Flow.Acting and Flow.Taking."
+  },
+  {
+   "id": "INTRO",
+   "find": "次说衡、取者与与之者及唯运者与、唯运者取二设",
+   "replace": "次说衡、取者与与之者及唯运者与之、唯运者取且唯取于其所资二设",
+   "why": "Uses the fixed plain wording."
+  },
+  {
+   "id": "一·十二",
+   "find": "唯运者与、唯运者取且所取唯其所资（⟦四·三⟧）",
+   "replace": "唯运者与之、唯运者取且唯取于其所资（⟦四·三⟧）",
+   "why": "Uses the fixed plain wording."
+  },
+  {
+   "id": "一·十一",
+   "find": "`Becoming.World.unity` 合陈后两项，并说计其余则每宇是衡之变之一行、其积即宇之积",
+   "replace": "`Becoming.World.unity` 合陈后两项，并说计其余则每宇每步二读皆同，且有衡之变之一行，其于宇中诸物之积即宇之积",
+   "why": "The 經's last clause, 「计其余，则每宇每步二读皆同」, is unity's second conjunct (withRest glues at every t), but the 說 did not anchor it. The run conjunct is ∃ r : Run (exchange (Option R)) whose states at some x are the world's levels. The world is not itself that run."
+  },
+  {
+   "id": "一·八",
+   "find": "它所显之法可许一段它未走过的行",
+   "replace": "其自然之法可许一段它未走过的行",
+   "why": "The name for Shown is 自然之法. In Splice.spliced the history revisits the start with different successors, so what it shows is not a 法. 「所显之法」 is not the table's name and states a wrong meaning."
+  },
+  {
+   "id": "一·八",
+   "find": "历从不重回旧状时，所显之法只许它自己",
+   "replace": "历从不重回旧状时，其自然之法只许它自己",
+   "why": "Uses the table's name for Shown (Shown.runs_of_new)."
+  },
+  {
+   "id": "一·八",
+   "find": "所显之法只许这一个行",
+   "replace": "其自然之法只许这一个行",
+   "why": "Uses the table's name for Shown (Run.keepHistory_shown)."
+  },
+  {
+   "id": "一·五",
+   "find": "（`Becoming.Run.withClock_restForms`）：无须自兼外供动",
+   "replace": "（`Becoming.Run.withClock_part`、`Becoming.Run.withClock_restForms`）：无须自兼外供动",
+   "why": "withClock_restForms proves only that the clock forms the move. That every run is the part's course in the coupled whole is Run.withClock with withClock_part, which is in the receipt."
+  },
+  {
+   "id": "二·一",
+   "find": "所以待者与所待只是一物之二角（⟦一·十⟧）",
+   "replace": "所以待者与所待不是两类之物，而是一类之物之二角（⟦一·十⟧）",
+   "why": "The roles embedding unifies types only. The ⟦一·十⟧ 說 itself says 「嵌入之中没有一物居二角」, so the embedding does not show one relatum in two roles."
+  },
+  {
+   "id": "一·十七",
+   "find": "也有处处不能并行不悖的",
+   "replace": "也有守其所可之状皆不能并行不悖的",
+   "why": "no_free_frame and the theorem before it say no configuration that respects the possibilities glues. They do not say every configuration."
+  },
+  {
+   "id": "一·十七",
+   "find": "九辞之方阵亦如此：无一组值合乎六线之所许（`Becoming.Square.noGlobal`、`Becoming.Square.no_context_free_values`）",
+   "replace": "九辞之方阵亦如此：无一组值合乎六线之所许（`Becoming.Square.noGlobal`），量子之态于此方阵所示亦无不依境之值（`Becoming.Square.no_context_free_values`）",
+   "why": "no_context_free_values (Becoming.Quantum) is a statement about what quantum states show jointly on every line, not the bare noGlobal. Citing both under noGlobal's paraphrase misstates the second."
+  },
+  {
+   "id": "DUIZHAO",
+   "find": "每段历都是其自然之法之行",
+   "replace": "凡历皆其自然之法之行",
+   "why": "A 历 is an infinite sequence (g : Nat → S), not a segment. Shown.run applies to every history."
+  },
+  {
+   "id": "四·二",
+   "find": "合于一族即总积之账（`Becoming.Flow.Balances.over`），合于一段步亦如此（`Becoming.Flow.Balances.accumulates`）。一族诸所待之积之和名总积（新组合，总＋积，`Becoming.Web.stock`）。",
+   "replace": "合于一族即总积（一族诸所待之积之和；新组合，总＋积，`Becoming.Web.stock`）之账（`Becoming.Flow.Balances.over`），合于一段步亦如此（`Becoming.Flow.Balances.accumulates`）。",
+   "why": "A new compound is explained once, where it first appears. The 說 used 总积 before explaining it."
+  },
+  {
+   "id": "一·十",
+   "find": "（文中「法」「因」「果」都是佛典之义，不是本编之名）",
+   "replace": "（文中「法」「因」「果」都取佛典之义，不作本编之名读）",
+   "why": "法, 果 and 因 are all names of this edition, so 「不是本编之名」 is false. The point is that the quotation's senses are not those names."
+  },
+  {
+   "id": "INTRO",
+   "find": "后诸篇在此之上论依存与条件",
+   "replace": "后诸篇在此之上论待与所待",
+   "why": "依存 and 条件 are the current-Chinese words for 待 and 所待. STYLE §二 forbids modern words in place of the table's names."
+  }
+ ],
+ "notes": "I reviewed the rewritten 篇一 from the drafter's output (/private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c01_out.json), which I checked against the given text. Every find string occurs exactly once in its named 條, intro or 对照.\n\n**What checks out.**\n- **Declarations:** every one cited exists in the newest core receipt (20261021T102032), and each 經 matches its declaration's hypotheses and direction. This was checked in the Lean source under /Users/ren/theories/.claude/worktrees/zhonghua/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming.\n- **Spot checks that hold:** NEW-1 matches partForms_and_restForms_iff, parts_agree (needs Determined P) and rest_driven_by_part (needs only a functional law for the rest). The Parity construction really is period 4 with move = whether the two differ. World.contingent's seven premises are 有待, 衡, Acting, Taking, 耗, 有形 and 蓄, which matches 「前六设与蓄」.\n- **Quotations:** all 67 checked with ctq.py are exact. 「在方而法方，在圆而法圆」〔DS01〕 matches only with whitespace ignored, which is allowed.\n- **References and 对照:** every ⟦id⟧ is in book-1-outline and points to the right content. 无自增 is defined in 四·十九, and 二·七 is about re-forming dependences. All inline and 对照 kinds match passages.json.\n- **Records and ethics:** all cited records exist. Each ethics mention names both the condition, which fixes scope, and 以广为愈, which alone orders.\n- **Instructions:** all carried out. The drafter's departures (增/减, 历之一域, 「诸设之由读而然者」) are justified.\n\n**Main problems fixed by the edits.**\n- **辞 defined as decided (一·十三):** 「辞，于一状或然或不然者也」 together with 凡·四 或 and 凡·五 定然否 makes every 辞 decided. The same goes for 「每状定其诸辞之然否」. This contradicts Lean's Prop-valued realized and empties the 定然否 hypothesis in 三·一.\n- **取 used to mean 'select' (七·十七, and the 一·十七 說):** 取 is the uptake name defined in this part's own 四·一 經.\n- **闭 used for GoAlike (NEW-1 說):** 闭 is reserved for the absorbing region.\n- **Forward names in 經:** 待者 and 所待 (一·一, 二·一) are defined only in 一·十. 象 (NEW-1, 一·十四, 七·十) is defined only in 十三·二十, and narrowly. 读 is used from 一·四 on but defined in 一·十四.\n- **Fixed plain wording:** 「唯运者与之；唯运者取，且唯取于其所资」 was not followed.\n- **Precision of 說 against Lean:** 所显之法 versus 自然之法, World.unity, withClock, the Square theorem, 「处处」, and 「共成」.\n\n**For the integrator (not edited).**\n- **Missing names:** 轨 (orbit) and 关联 (Bisimulation) are used in 經 (一·十四, 七·十), but neither the name table nor plain-wordings has them.\n- **Two definitions of 象:** once 一·十四 defines 象 generally, 十三·二十 should read 「象，……择所经之象」.\n- **读 versus 讀（AI）:** the outline still titles 凡·十九 「读」 while the C16 instruction renames it 讀（AI）. 一·十四 defines 读 (map reading). The table row 读 needs the split the drafter proposed.\n- **体之动 collides:** the plain wording 「a part's act → 体之动」 (SelectionGap) clashes with NEW-1's PartForms 体之动. The outline title is fixed, so the other concept needs a new wording.\n- **兼 and 体 are defined twice:** in 一·一 經 and in 三·二十三 (兼与体). 证 anchors 兼 at Web.Whole (the whole of chosen parts), not 「大化之一切」.\n- **辞 used before 一·十三 defines it:** 三·一 and 一·四 use it first. This is fine only if 凡例 treats 辞 as a logical primitive.\n- **讀 label without a decision number:** 三·一 說 has 「讀（AI）」 with no D-number, though STYLE requires one. It may belong under 未决.\n- **一致 in 七·十六 說:** it is used for Contextual.Agree, but C12 uses 一致 for concordance. Writing 「所示皆同」 would be safer.\n- **新名 explanations repeated:** if 凡例 already explains 积, 运, 需, 然, 族, 域 or 境, drop the 篇一 explanation, as the drafter noted."
+}

@@ -1,0 +1,215 @@
+{
+ "part": {
+  "key": "C05",
+  "heading": "篇五　复、闭与恒",
+  "intro": "本篇论关系在一展开中怎样持续与回返。先说法下之状：复（状之再得）、同归（二异状至一状）、无同归即复、藏往（带着历史）与不重访则无表可尽；次说兼与样式怎样在其体与载者的更替中久；次说所待之水平与待之所需之间的诸等：恒持、以期终足、终足、终不足、绝而终不足；然后说物与其所待的两种关系，恒与竭：它们属行而不属状，有穷之往不定之；再说一步之剥、剥与赅、竭后之亡、改待与蓄；最后以续（跨步之同一）读恒与竭，并分开不息与生生不息。三种“回”各有其名而不相借：复是状之再得，终足是水平再及所需，环（回路之篇）是感之回路；久不是常（不变量，规律之篇），也不是静（法所不改之状）。本篇诸律皆无设而然：每条只在写入其中的局部条件（有一表尽其状、有待、有蓄、每步有表举活动之体、火传、相续……）下，对每个如此表示之宇成立；“不得……皆无……”是否定之全称，不给出那一步；凡是一个构造之例而非一般律者，条中写明。延续之条件（凡续皆有顾：对任何东西，其向未来之续有意义）在意义之篇中陈述而不断言：它给顾不给正值，只定所顾之范围，本身不排序；排序只在以广为愈（以扩大为更好）。本篇不用二者；本篇之“续”只名跨步之同一，不带顾，而所表示的动力学本身不定顾（`Becoming.Web.significance_undetermined`）。前接流与停息之篇（衡、耗、止、开），后接生成与退化之向（广、成生、绝生）。",
+  "tiao": [
+   {
+    "id": "五·一",
+    "title": "复",
+    "body": "**經**　复，状于一步之后，可自所至之状再得也。于法，状复，恰当其行于某正数之步后回到此状。\n\n**說**　复（返回，return，`Becoming.Branching.Returns`）只名状之再得：此状一步至某状，自彼又可到此状；在法（确定之变）下，即此状之行在某个正数之步后回到自身（`Becoming.Law.returns_iff`）。复之状在每一步都可得，对每个变皆然（`Becoming.Branching.Returns.reachable`）。复与另两种“回”分开：终足（⟦五·八⟧）是所待之水平再及一待之所需，环是感之回路，都不是状之再得。复不带正值：复者可以是任何状。对照（相合，yi-fu-qiri-laifu；卦辞属先秦·经，彖属易传，年代有争议）：「反復其道，七日來復」〔YD-JP24〕。依程朱之数法，消长环之下自乾卦起第七步初爻复为刚爻，即至复卦（卦名，`Becoming.Hexagram.seventh_step`）；再来的是初爻这一性质，不是乾卦这一状：状在消长环下十二步再得（`Becoming.Hexagram.twelve_steps`），自坤卦起第十二步才首次再得（`Becoming.Hexagram.first_return`）。七日是确切之步数，不是期（期只名上界，⟦五·八⟧）；「利有攸往」〔YD-JP24〕之判不在律中。\n\n**證**　`Becoming.Branching.Returns`、`Becoming.Law.Returns`、`Becoming.Law.returns_iff`、`Becoming.Branching.Returns.reachable`、`Becoming.Hexagram.seventh_step`、`Becoming.Hexagram.twelve_steps`、`Becoming.Hexagram.first_return`；记录 [recurrence-without-premise](../results/records/recurrence-without-premise.md)、[hexagrams-on-the-spine](../results/records/hexagrams-on-the-spine.md)。"
+   },
+   {
+    "id": "五·二",
+    "title": "同归",
+    "body": "**經**　同归，法使二异状于一步而至一状也。凡二状同归，此后每步皆同，且不皆复；状有一表尽之而法有同归，则不得凡状于表长之步皆可得。\n\n**說**　同归（合并，merge，`Becoming.Law.Merges`）是法把两个不同的状带到同一状。同归之二状此后每步皆同（`Becoming.Law.merged_stays`），所以二者不能都复（`Becoming.Law.Merges.not_both_return`，不须有穷）；一状某步已不可得，此后每步都不可得（`Becoming.Law.lost_stays`）；状有一表尽之处，有同归则不得凡状于表长之步皆可得（`Becoming.Law.Merges.loses`）：同归是失。不复之状被吸入一个它永不离开的区域（入、闭，规律之篇；`Becoming.Law.drawn_iff_not_returns`，不加前提）。名取「天下同归而殊途」〔DS03〕（定域，xici-tong-gui-shu-tu；系辞，易传年代有争议）：文句说殊途入一所归，所归是一个状时即此名之同归，所归是一个回环时入之者可以不同归，所以文句宽于此名；王弼四十七章注以「歸」为单一中心之义不带。对照（相分，lao-28-fu-gui-yu-pu；老子第二十八章，先秦·经）：「复归于朴」〔YD-LAO-BASE〕若读作回到先于诸分的未分之初，所说便是同归而不是复（此「复归」也不是名表之复归，扰而复归）：同归者不复分，有穷中有同归则不得凡状皆仍可得，那是失，不是回到本然；理论中没有一个优先的初状可归。\n\n**證**　`Becoming.Law.Merges`、`Becoming.Law.merged_stays`、`Becoming.Law.Merges.not_both_return`、`Becoming.Law.lost_stays`、`Becoming.Law.Merges.loses`、`Becoming.Law.drawn_iff_not_returns`；记录 [recurrence-without-premise](../results/records/recurrence-without-premise.md)、[attraction-is-not-returning](../results/records/attraction-is-not-returning.md)。"
+   },
+   {
+    "id": "五·三",
+    "title": "无同归即复",
+    "body": "**經**　凡状有一表尽之，法无同归，恰当凡状皆复，恰当凡状每步皆可得；一量沿行从不降而某步升，则法不得无同归。法无同归而有一状不复，则无表尽其状。\n\n**說**　这是复之根本律，除状有一表尽之外不加前提（`Becoming.Law.lossless_iff_returns`、`Becoming.Law.returns_iff_keeps`、`Becoming.Law.rise_not_lossless`）：在有穷多状中，不失、复与保留每个可得是一件事，而一个只升不降之量（箭头）使法不得无同归。状复之处，撤销一步不须另一条法，只须沿同法续行（`Becoming.Law.Returns.undo`）。状无表可尽时三者分开：后继之法（数下去）无同归而无一状复，一步之后其始即不可得（`Becoming.Law.succ_open`）；一般地，无同归而有不复之状，即无表尽其状（`Becoming.Law.Lossless.unlisted`）。卦上：六十四卦之任一法，凡卦皆复恰当其无同归（`Becoming.Hexagram.every_returns_iff`）；只消之法同归于坤卦，坤卦之外诸卦皆不复（`Becoming.Hexagram.wane_not_returns`）。对照（定域，yi-tai-wuwang-bufu；泰九三，先秦·经）：「无往不復」〔YD-JP11〕作为普遍断言不是普遍律：状有穷时，恰在法无同归之处成立；状无穷时，法无同归亦可无一状复（`Becoming.Law.succ_open`）。（相合，yi-kui-sang-ma-zi-fu；睽初九，先秦·经）「喪馬勿逐，自復」〔YD-JG38〕：失者在同法之内自己回来，以状有穷且法无同归为条件；落在同归之处者不自复，「逐」是另一动，不在同一律内。\n\n**證**　`Becoming.Law.lossless_iff_returns`、`Becoming.Law.returns_iff_keeps`、`Becoming.Law.rise_not_lossless`、`Becoming.Law.Returns.undo`、`Becoming.Law.succ_open`、`Becoming.Law.Lossless.unlisted`、`Becoming.Hexagram.every_returns_iff`、`Becoming.Hexagram.wane_not_returns`；记录 [recurrence-without-premise](../results/records/recurrence-without-premise.md)、[hexagrams-on-the-spine](../results/records/hexagrams-on-the-spine.md)。"
+   },
+   {
+    "id": "NEW-2",
+    "title": "体之同归由其余承之",
+    "body": "",
+    "added": true
+   },
+   {
+    "id": "五·五",
+    "title": "不重访则无表可尽",
+    "body": "**經**　凡一族所待之水平合计自某步起不过一界，则自每步起其状有二步相同。凡序从不重访，或一量沿之每步皆升，则无表尽其所经。\n\n**說**　⟦五·三⟧说法下之复；本条只看一个序，不问法：有界之族必重访（`Becoming.Web.revisits_of_bounded`：只用水平，不用流、衡、耗，也不用宇之有穷；但此律依于水平为自然数：有界之合计只有有穷多种分法），从不重访之序，任一表都尽不了它的前“表长加一”项，故无表尽之（`Becoming.unheld_of_new`、`Becoming.unlisted_of_new`），每步皆多于今之序亦无表尽之（`Becoming.more_needs_open`）。讀（AI，D49）：早期《生生不息论》之九句分运动为归与不归；脊柱有三途：无同归之复（`Becoming.Law.Lossless.returns`，状有穷）是归而无所收，有不息而无生生；入（`Becoming.Law.Drawn.not_returns`、`Becoming.Law.drawn_iff_lost`）是第三句之收，是不归；永不重访（本条）只在无表尽其状之宇中可能，唯此一种不归可以为生。法所不改之状每步皆复，那是静，不是止（D45）。对照（定域，lao-25-shi-yuan-fan；老子第二十五章，先秦·经）：「大曰逝，逝曰远，远曰反」〔YD-LAO-BASE〕：远而必反，在状有穷且法无同归时成立（⟦五·三⟧）；一族之水平有界则必重访（本条），重访不必是返其始；状无穷时，数下去无同归而永不返（`Becoming.Law.succ_open`）。\n\n**證**　`Becoming.Web.revisits_of_bounded`、`Becoming.unheld_of_new`、`Becoming.unlisted_of_new`、`Becoming.more_needs_open`、`Becoming.Law.Lossless.returns`、`Becoming.Law.Drawn.not_returns`、`Becoming.Law.drawn_iff_lost`；记录 [returning-novelty-forgetting-on-levels](../results/records/returning-novelty-forgetting-on-levels.md)、[recurrence-without-premise](../results/records/recurrence-without-premise.md)、[attraction-is-not-returning](../results/records/attraction-is-not-returning.md)、[seeking-boundary](../results/records/seeking-boundary.md)。"
+   },
+   {
+    "id": "五·四",
+    "title": "藏往",
+    "body": "**經**　藏往，状依法续行而前状入于往也。凡法，藏往则无同归、不重访、不复，其始一步之后不可得，无表尽之；今复则往异；行所经之状有一表尽之，则自每步起有二步，其今同而其往异。\n\n**說**　藏往（带着历史，kept history，`Becoming.Law.withHistory`）把每一步之状连同其往（历程之前段，知与验之篇）读作一状：今依原法而行，前一今入于往。这样读，任何法都无同归（`Becoming.Law.withHistory_lossless`），却从不重访、永不复（`Becoming.Law.withHistory_new`、`Becoming.Law.withHistory_never_returns`），其始一步之后即不可再有（`Becoming.Law.withHistory_loses_beginning`），无表能尽之（`Becoming.Law.withHistory_unlisted`）：藏往不能在有穷多状中。今可以复，往不复（`Becoming.Law.return_keeps_history`）；反之，今只在有穷多状中行，则自每步起有两段不同之往共一今（`Becoming.Law.present_forgets`）：有穷之今忘。所以法无同归时，或凡状皆复（状有穷则必然，⟦五·三⟧），或有不复之状而无表尽其状（`Becoming.Law.Lossless.unlisted`）；藏往属后者。名取「知以藏往」〔DS02〕（系辞，易传年代有争议；其条 xici-cang-wang 在知与验之篇，全条判相分，藏往一半相合：已采之动为记录所定，`Becoming.Run.fixes_of_takes`；同句「神以知来」〔DS02〕以蓍之神前知，不经感，相分）。\n\n**證**　`Becoming.Law.withHistory`、`Becoming.Law.withHistory_lossless`、`Becoming.Law.withHistory_new`、`Becoming.Law.withHistory_never_returns`、`Becoming.Law.withHistory_loses_beginning`、`Becoming.Law.withHistory_unlisted`、`Becoming.Law.return_keeps_history`、`Becoming.Law.present_forgets`；记录 [recurrence-without-premise](../results/records/recurrence-without-premise.md)。"
+   },
+   {
+    "id": "七·一",
+    "title": "常",
+    "body": "**經**　常，变所许之每一步皆守之区也：状在区中，以所许之一步所至者亦在区中。一区为常，恰当每一动皆守之。凡常，自区中所能至者皆在区中。凡行，自某步在一区中，其后所取之动皆守此区，则其后每步皆在区中；行自区中出，其所取之动不守此区。\n\n**說**　常（不变量，invariant，`Becoming.Invariant`）总是对一个变而言：一区（诸状之一部分）在每一可许之步下都不失。它不是一个不变之物，是诸状之区与诸步之关系；凡状皆在之区总是常，所以要问的是哪些非平凡之区为常。常要求每一动都守之（`Becoming.invariant_iff_every_move`），比一行之“住”强：只取守区之动的行留在区中（`Becoming.Run.stays`），出区必经一不守之动（`Becoming.Run.leaving_needs`）。界：以真伪二值为状、以“守”与“翻”为二动之例中，{真} 在“守”下不出、在“翻”下出，故不是常（`Becoming.Exit.not_invariant`），而只取“守”之行始终在其中。对照（相合，zhuangzi-tianzifang-da-chang）：「行小變而不失其大常也」〔ZH1-S21〕（先秦至秦汉，《庄子》外篇，成篇有争议）：换一草泽、一处水是区内之小变，所守之区是常；同段「貴在於我」〔ZH1-S21〕之中心不带。又（相合，tanjing-zi-fu）：「心不住法，道即通流」〔FO2-TJ〕（隋唐，慧能语录，宗宝本为元编）：住是所取之动皆守一区，不是此区为常，取一不守之动即出。下条在法上说同一结构。\n\n**證**　`Becoming.Invariant`、`Becoming.Invariant.reach`、`Becoming.invariant_iff_every_move`、`Becoming.Run.stays`、`Becoming.Run.leaving_needs`、`Becoming.Exit.not_invariant`；记录 [attraction-is-not-returning](../results/records/attraction-is-not-returning.md)。"
+   },
+   {
+    "id": "NEW-3",
+    "title": "门",
+    "body": "",
+    "added": true
+   },
+   {
+    "id": "七·二",
+    "title": "闭",
+    "body": "**經**　闭，法所不出之区也：状在区中，其次状亦在区中。法之闭，恰其变之常。凡状，其前方（自次步以往其行之所至）为一闭；复者为一闭；n 步之后所能有者为一闭。行入一闭，则其后每步皆在其中。\n\n**說**　闭（吸收区域，absorbing region，`Becoming.Law.Absorbing`）是常在法上之形：法每状只有一个次状，闭与常恰相同（`Becoming.Law.absorbing_iff_invariant`）。三种闭无设而然地存在：一状之前方（`Becoming.Law.absorbing_ahead`），复者之全（`Becoming.Law.returning_absorbing`），n 步之后所能有者（`Becoming.Law.reachable_absorbing`）；所以未来随步而狭，每失一种可能，就是有所入（⟦七·三⟧）。界：在分歧之变中，复者不必为常：三状之例中“前”复，却以一动移至不复之“间”（`Becoming.Branching.Transit.returning_not_invariant`）。规则自守之处，具某一规则之诸状为一闭（`Becoming.Law.rule_absorbing`）。对照（相合，jing-guaci-gai-yi）：「井：改邑不改井，无喪无得，往來井井。」〔YD-JG48〕（先秦，《周易》井卦卦辞）：邑之状改，而井这一分量每步皆守，具此井之诸状为闭；以井为分量是 AI 读法，占断不带。又（定域，laozi-16-55-zhi-chang）：「归根曰静，是谓复命。复命曰常」〔YD-LAO-BASE〕（先秦，传世王弼本；郭店本此章止于「各复其堇（根）」〔V130-LAO-GD〕，无「归根曰静」以下诸句）：复者为闭，法之闭即常，这一层相合；「各复归其根」〔YD-LAO-BASE〕之普遍形式只在有穷处成立（⟦七·四⟧）。闭不带善恶。\n\n**證**　`Becoming.Law.Absorbing`、`Becoming.Law.absorbing_iff_invariant`、`Becoming.Law.absorbing_ahead`、`Becoming.Law.returning_absorbing`、`Becoming.Law.reachable_absorbing`、`Becoming.Law.Absorbing.orbit`、`Becoming.Branching.Transit.returning_not_invariant`、`Becoming.Law.rule_absorbing`；记录 [attraction-is-not-returning](../results/records/attraction-is-not-returning.md)、[necessarily-drawn-is-not-returning](../results/records/necessarily-drawn-is-not-returning.md)。"
+   },
+   {
+    "id": "七·三",
+    "title": "入与势",
+    "body": "**經**　入，状在一区之外，而其行至于区中也。势，自外入一闭之诸状也。凡法，一状入某闭，恰当其不复；不复者，入其前方之闭。n 步之后不能有之状，入 n 步之后所能有之闭。互卦之法下，二步之后，三、四爻皆刚者至乾，皆柔者至坤，相异者入既济、未济之轮转；于六十四卦，各十六、十六、三十二。\n\n**說**　入（被吸入，drawn into，`Becoming.Law.DrawnInto`）与势（吸引域，basin）都是法与区之关系：状不先属于某势，是它的行定其所入。无设而然：法所入者恰是不复者（`Becoming.Law.drawn_iff_not_returns`），不复者所入之闭就是它自己的前方（`Becoming.Law.drawnInto_ahead`）；每一失去之可能都已入 n 步之后所能有者（`Becoming.Law.lost_drawn`）。讀（AI，D25）：入是展开自狭其未来，所行之处定其所能再是者。诸状怎样分属诸所归之势，脊柱只在互卦之法上有证（`Becoming.Hexagram.qian_basin`、`Becoming.Hexagram.kun_basin`、`Becoming.Hexagram.cycle_basin`、`Becoming.Hexagram.basin_counts`），一般之势分划未立；势之深浅、入之难易，也没有度量。对照（相合，sunzi-bing-shi）：「如轉圓石於千仞之山者，勢也」〔BI1-S-SZ〕（先秦，《孙子》，成书于春秋末至战国，有争议）：石之所至由其所在与形状定，一动即被引向山下，是一组状之行都入同一区；「其勢險」〔BI1-S-SZ〕之深浅脊柱未给，兵家位势之义不带。下条说入于何处。\n\n**證**　`Becoming.Law.DrawnInto`、`Becoming.Law.Drawn`、`Becoming.Law.drawn_iff_not_returns`、`Becoming.Law.drawnInto_ahead`、`Becoming.Law.lost_drawn`、`Becoming.Hexagram.qian_basin`、`Becoming.Hexagram.kun_basin`、`Becoming.Hexagram.cycle_basin`、`Becoming.Hexagram.basin_counts`；记录 [attraction-is-not-returning](../results/records/attraction-is-not-returning.md)、[hexagram-world-laws](../results/records/hexagram-world-laws.md)。"
+   },
+   {
+    "id": "七·四",
+    "title": "所归",
+    "body": "**經**　所归，有状自外入之之闭也。有一表尽诸状，则凡行皆至于复者，凡不复之状皆入复者之闭：复者之全为一所归，其余皆在其势。有一表尽诸状、诸状之相等定然否，则法不同归任何二状，恰当无状入。凡法同归二异状，二者不皆复。诸状无穷之处，有法入而不同归：以后继为法，零入，而无二状同归。\n\n**說**　所归（吸引子，attractor）不是先于行而立的终点：有穷之处，复者之全是一闭，凡不复者皆入之（`Becoming.Law.drawnInto_returning`）；凡行都至于复者（`Becoming.Law.enters_returning`），只断言有此一步，不给其界。有穷之中，有所入恰当有所同归（合并，篇五）：法不同归二状，恰当无入（`Becoming.Law.lossless_iff_none_drawn`，定然否即“或然或否已定”）；不论有穷与否，同归之二不皆复（`Becoming.Law.Merges.not_both_return`），同归必有所失。界：无穷之处二者分开，后继之法零入而无同归（`Becoming.Law.succ_drawn_lossless`），前驱之法一入而每数每步皆可有（`Becoming.Law.pred_drawn_keeps`）；所以前二条都要那一表。对照（定域，xugua-jin-bi-you-suo-gui）：「進必有所歸，故受之以歸妹」〔YD-OW-XG〕（先秦至秦汉，《序卦》，成书或晚至汉）：此句之字面结构只是有穷之法；原文之“歸”字为接引归妹而设。又（定域，xici-tong-gui-shu-tu）：「天下同归而殊途，一致而百虑」〔DS03〕（先秦至秦汉，《系辞下》，有争议）：殊途入同一所归；所归为一状时入之即同归，所归为轮转时入同一轮转者可以不同归（互卦之法有三所归，⟦七·三⟧），文句之同归宽于名；句中之“一”不读为本原。\n\n**證**　`Becoming.Law.drawnInto_returning`、`Becoming.Law.enters_returning`、`Becoming.Law.lossless_iff_none_drawn`、`Becoming.Law.Merges.not_both_return`、`Becoming.Law.succ_drawn_lossless`、`Becoming.Law.pred_drawn_keeps`；记录 [attraction-is-not-returning](../results/records/attraction-is-not-returning.md)。"
+   },
+   {
+    "id": "七·五",
+    "title": "成闭",
+    "body": "**經**　成闭，入而不复也。凡状在一闭之外，其行于某步入之，则自此以往无一步复为此状。凡在一常中之状，自之不能至常外之状；沿一行，自某步在一常中，则其后无一步之状同于某步在常外之状。\n\n**說**　成闭（锁定，lock-in，`Becoming.Law.DrawnInto.never_back`；新组合：闭之既成）是入的另一面：入一闭，就不再是入前之状（`Becoming.Law.Drawn.not_returns`）。在变上是同一结构：入常之后，常外不可复至（`Becoming.Invariant.locks_out`），沿行亦然（`Becoming.Run.locked_in`）；出一区唯经一不守之动（⟦七·一⟧），而常是每一动皆守之区，故没有这样的动。卦之例：只入柔爻之法下，坤以外每卦至第六步皆在坤，自此不复为原卦（`Becoming.Hexagram.wane_never_back`）。讀（AI，D25）：路径依赖与锁定是一法，所行之处定其所能再是者。复者也有成闭：在分歧处，复者可以在某一途上被失去，于那一途上入而不复（⟦七·六⟧、⟦七·七⟧）。对照（相合，qiwulun-mo-shi-fu-yang）：「其溺之所爲之，不可使復之也」〔ZH1-S02〕（先秦，《庄子》内篇）：沉溺所致之处不能使之复；原文对其消损之评价不带。又（相合，tongshu-shi）：「势，轻重也。极重不可反。」〔RU2-S-S01〕（宋明，周敦颐《通书》）：势之极处入而不复；同章后句见⟦七·九⟧。\n\n**證**　`Becoming.Law.DrawnInto.never_back`、`Becoming.Law.Drawn.not_returns`、`Becoming.Invariant.locks_out`、`Becoming.Run.locked_in`、`Becoming.Hexagram.wane_never_back`；记录 [attraction-is-not-returning](../results/records/attraction-is-not-returning.md)、[hexagrams-on-the-spine](../results/records/hexagrams-on-the-spine.md)。"
+   },
+   {
+    "id": "七·六",
+    "title": "或入与必入",
+    "body": "**經**　或入，状在一区之外，而有一串动自之至于区中也；必入，状在区外，而自之之每一行皆至于区中也。凡变，一状必入某常，恰当其不复；一状或入某常，恰当有一串动自之至于不能复至此状之处。法下，或入与必入皆即入。有一变，其一状或入一常而不必入，且复。\n\n**說**　变有分歧时，入分为二（`Becoming.Branching.PossiblyDrawnInto`、`Becoming.Branching.NecessarilyDrawnInto`；“或”“必”与“入”组合）。必入者恰是不复者，无设而然（`Becoming.Branching.necessarilyDrawn_iff_not_returns`），是⟦七·三⟧在一切变上之形；或入，是在某一途中失去自身（`Becoming.Branching.possiblyDrawn_iff`）。法只有一途，二者重合（`Becoming.Branching.law_possibly_iff`、`Becoming.Branching.law_necessarily_iff`）。二状之例中，“假”或入 {真} 而不必入，且复（`Becoming.Branching.OneWay.possibly_not_necessarily`）；三状之例中，每状每步皆可有，而“间”不复、必入（`Becoming.Branching.Transit.keeps_not_returns`）：在变上，守住每一可能不就是复。讀（AI，D32）：或入与必入恰在行程分歧处分开。界：无行可起之死路，空泛地必入每一不含它之区，因为核心之行无尽。或入而复者在何处失去，见下条。对照（相合，wangbi-50-ru-wu-sheng）：「然而卒以甘饵，乃入于无生之地」〔DS01〕（魏晋，王弼《老子注》第五十章）：处处避开者，以甘饵一步入于不返之区，是或入者在一途上成闭；「岂非生生之厚乎」〔DS01〕之生生指求生过厚，与本编之生生所指不同。\n\n**證**　`Becoming.Branching.PossiblyDrawnInto`、`Becoming.Branching.NecessarilyDrawnInto`、`Becoming.Branching.necessarilyDrawn_iff_not_returns`、`Becoming.Branching.possiblyDrawn_iff`、`Becoming.Branching.law_possibly_iff`、`Becoming.Branching.law_necessarily_iff`、`Becoming.Branching.OneWay.possibly_not_necessarily`、`Becoming.Branching.Transit.keeps_not_returns`；记录 [necessarily-drawn-is-not-returning](../results/records/necessarily-drawn-is-not-returning.md)、[returning-where-the-course-branches](../results/records/returning-where-the-course-branches.md)。"
+   },
+   {
+    "id": "七·七",
+    "title": "机",
+    "body": "**經**　机，于一状 s，有一步之后犹能至 s、有一步之后不能复至 s 之状也。机之二步所至不同；机或入。凡 s 复，自 s 以一串动至于不能复至 s 之处，则不可非有一机：自 s 能至之，其一步之所至不能复至 s 而能至彼处。自 s 所能至之每状，能否复至 s 皆定然否，则此机可得而指；有一表尽诸状、一状至一状有步与否定然否，亦然。若于凡变皆能指每一失去之机，则无穷可尽。\n\n**說**　机（关节，juncture，`Becoming.Branching.Juncture`）只就一状 s 而言：在此一步保住 s 之可得，另一步失去它（`Becoming.Branching.Juncture.outcomes_differ`、`Becoming.Branching.Juncture.possiblyDrawn`）。复者之每一失去都经过机（`Becoming.Branching.loss_passes_juncture`），但只以不可非（双重否定，¬¬）陈述：指出机，就是判定 s 是否仍能至；能判定处可指（`Becoming.Branching.loss_passes_juncture_decided`、`Becoming.Branching.loss_passes_juncture_listed`），对一切变则须无穷可尽（LPO：每一真伪之串，或有一处为真，或处处为伪；`Becoming.Branching.lpo_of_junctures_found`，只证此一方向）。多可不成机：每状有每一自然数之一步，而无一机（`Becoming.Branching.Many.no_juncture`）；机须二步，二步不足。讀（AI，D52）：机即关节，“开”读作一状仍可得；数种可能同时之轮廓未形式化，一机失去多少步也无度量。对照（相合，sunzi-bing-shi）：「勢如彍弩，節如發機」〔BI1-S-SZ〕：弩张未发之时，一步可留，一步一发不可收，近于机；“機”为弩之发机，与《系辞》之“幾”字不同，关节之读出于 D52。又（定域，hanfei-yulao-bian-que）：「疾在腠理，湯熨之所及也；在肌膚，鍼石之所及也；在腸胃，火齊之所及也；在骨髓，司命之所屬，無柰何也。」〔FA1-S-H21〕（先秦，《韩非子·喻老》）：病之行程上，在肠胃犹可复，再一步入骨髓不可复，肠胃之处是机；机之前持之较易，这一比较脊柱未导出。\n\n**證**　`Becoming.Branching.Juncture`、`Becoming.Branching.Juncture.outcomes_differ`、`Becoming.Branching.Juncture.possiblyDrawn`、`Becoming.Branching.loss_passes_juncture`、`Becoming.Branching.loss_passes_juncture_decided`、`Becoming.Branching.loss_passes_juncture_listed`、`Becoming.Branching.lpo_of_junctures_found`、`Becoming.Branching.Many.no_juncture`；记录 [every-loss-passes-a-juncture](../results/records/every-loss-passes-a-juncture.md)。"
+   },
+   {
+    "id": "七·八",
+    "title": "护闭",
+    "body": "**經**　护闭，变之步其后犹能至 s 者也；其余之步，其后不能复至 s，为成闭。机，恰护闭与成闭于此皆有步之状。护闭守 s：自 s 经护闭所至之处，皆能经护闭复至 s。凡子变守 s，自 s 之途上所取皆护闭之步：护闭为守 s 之最大者。s 复，则护闭于其自 s 之途上所去者，恰机处成闭之步。成闭永不复至 s。\n\n**說**　护闭（关节处之保持，keeping，`Becoming.Branching.keeping`；新组合：在机处护其不闭）与机处之成闭（losing，`Becoming.Branching.losing`）是同一操作之两面：一去失 s 之步，一去守 s 之步（`Becoming.Branching.juncture_iff`）。此成闭与⟦七·五⟧之成闭同构：取机处成闭之步者，s 在此途上不可再至，于那一途上入而不复（`Becoming.Branching.possiblyDrawn_iff`）。护闭守 s（`Becoming.Branching.keeping_keeps`），是守 s 之最大子变（`Becoming.Branching.keeping_greatest`），它所去者只在机处（`Becoming.Branching.keeping_removes_at_juncture`）；变本身守 s，则其途上无机（`Becoming.Branching.no_juncture_of_keeps`）。讀（AI，D52）：护闭与成闭都不带评价：保住哪一状，保住它是支持还是损害生生，这些法不说；比较只经以广为愈。对照（相合，wangbi-bu-shi-qi-ji）：「因時而惕，不失其幾」〔YWH-Q〕（魏晋，王弼《周易注》乾九三）：在机处不取失去之步；其吉凶之断不带。又（定域，hanfei-yulao-bian-que）：「白圭之行堤也塞其穴」〔FA1-S-H21〕：在小处塞之，是在机之前取护闭之步；何以在前者所费更少，未导出。\n\n**證**　`Becoming.Branching.keeping`、`Becoming.Branching.losing`、`Becoming.Branching.juncture_iff`、`Becoming.Branching.keeping_keeps`、`Becoming.Branching.keeping_greatest`、`Becoming.Branching.keeping_removes_at_juncture`、`Becoming.Branching.losing_not_returns`；记录 [every-loss-passes-a-juncture](../results/records/every-loss-passes-a-juncture.md)。"
+   },
+   {
+    "id": "五·六",
+    "title": "久",
+    "body": "**經**　久，兼之体各短或各亡，而兼自某步起每步皆活动也。凡体皆不于相距 d 步之二步活动，则兼久之后，任 d 相续之步不得皆无体作；凡体皆亡而每步有表恰举其活动之体，则兼久者于任一体之表，不得自某步起无表外之体作，而自某步起无体作者，兼亡。\n\n**說**　久（通过变化之持续）在脊柱中没有单一之锚：兼（整体）经由其体之作而久，样式经由火传而久（⟦五·七⟧）。兼恰在其某体活动时活动（`Becoming.Web.Whole`）。体各短而兼久，则不得有相续 d 步无体作（`Becoming.Web.Whole.arises_within`）；兼久、体各亡而有表举之，则作不得自某步起止（`Becoming.Web.Whole.needs_arising`），也不得只在任何有穷之表内作（`Becoming.Web.Whole.needs_new`）：兼只经由新体而久。反过来，诸体各亡而自某步起无体作，兼亡（`Becoming.Web.Whole.ends_without_arising`）。界：体两步一轮、兼每步活动之构造之例达到 d 之界（`Becoming.Shifts.shifts`）；逆向不成立：体在任意晚之步作、各亡、有表举之，而兼于每个偶数步不活动（`Becoming.Gaps.gaps`，构造之例），所以只有作不够久，还须每个所作之体持续到下一体作之时，此逆律未决。对照（相合，yi-heng-tuan-jiu；恒彖，易传年代有争议）：「天地之道恆久而不已也」〔YD-HX01〕，同彖「四時變化而能久成」〔YD-HX01〕：久在体之更替中，方向是由兼之久推出其体之作；彖之「恆」读为久，名表之恒另名物与所待之关系（⟦五·十一⟧）。（定域，zhongyong-bu-xi-ze-jiu；中庸，年代有争议）「故至誠無息。不息則久，久則徵」〔RU1-S-ZY〕：读作体之作不息，则「不息則久」不成立（`Becoming.Gaps.gaps`），成立的是反方向。名取「久，彌異時也」〔MI1-S-JS〕（墨子经上，先秦）。\n\n**證**　`Becoming.Web.Whole`、`Becoming.Web.Whole.arises_within`、`Becoming.Web.Whole.needs_arising`、`Becoming.Web.Whole.needs_new`、`Becoming.Web.Whole.ends_without_arising`、`Becoming.Shifts.shifts`、`Becoming.Gaps.gaps`；记录 [whole-persists-through-generation](../results/records/whole-persists-through-generation.md)、[whole-drawing-beyond-renewal-ends](../results/records/whole-drawing-beyond-renewal-ends.md)。"
+   },
+   {
+    "id": "三·二十二",
+    "title": "火传",
+    "body": "**經**　火传，样式之载者各暂，而样式经递而久也。若凡于次步载样式者，或本步即载之，或本步载之者递之：则凡始载者皆受递于载者；载者无载于相隔 d 步之二步者，而样式自某步起每步皆在，则自此每 d 步之内必有一递；载者无载于相隔 d 步之二步者，而自某步 T 起无递，则自 T 加 d 起无载者；一步无载，则此后皆无。\n\n**說**　火传（样式经由递接而延续）之前提（`Becoming.Web.ByPassing`）是对“载怎样形成”的读法，是所给的，不是推出的。在此前提下，凡始载皆是受递（`Becoming.Web.ByPassing.begins_passed`）；载者各暂而样式久，则递不断（`Becoming.Web.ByPassing.passes_within`，所给之步与二载者皆明出）；载者各暂而递断，则样式于一跨度内尽（`Becoming.Web.ByPassing.ends_within`）；一步之空即永空（`Becoming.Web.ByPassing.empty_stays`）。见证：每载者只载两步而皆终，样式每步皆在（`Becoming.PatternRelay.relay`）；自 T 起不递，样式恰自 T＋2 起不在，界可达（`Becoming.PatternRelay.stopped_relay`）。所递为何、值不值得递，此处不说。单用“传”在名表中名因而所需有界之传递（篇十三），此处之递接只用火传之名。对照（定域，zhuangzi-xin-huo）：「指窮於爲薪，火傳也，不知其盡也。」〔ZH1-S03〕：薪各尽而火传；“不知其尽”只在递不止时成立，不是不灭之证。慧远「火之傳異薪。猶神之傳異形。前薪非後薪。」〔IN1-S03〕（定域，huiyuan-xin-huo）：递接之结构相合；慧远同文以神为「感物而非物故物化而不滅」〔IN1-S03〕者，此一面属本原一层，相分。\n\n**證**　`Becoming.Web.ByPassing`、`Becoming.Web.ByPassing.begins_passed`、`Becoming.Web.ByPassing.passes_within`、`Becoming.Web.ByPassing.ends_within`、`Becoming.Web.ByPassing.empty_stays`、`Becoming.PatternRelay.relay`、`Becoming.PatternRelay.stopped_relay`；记录 [a-pattern-lasts-through-passing](../results/records/a-pattern-lasts-through-passing.md)。"
+   },
+   {
+    "id": "五·七",
+    "title": "火传之久",
+    "body": "**經**　凡样式自某步起每步有载之者，而载者皆不于相距 d 步之二步载之，则其后任 d 相续之步不得皆无载者始。若火传，则其后任 d 相续之步必有一步有载者递之；一步无载者，此后皆无；自某步起无递，则其后 d 步起无载者。\n\n**說**　火传（样式经由传递而延续，`Becoming.Web.ByPassing`；一步之递，`Becoming.Web.PassesAt`）是一个读法前提，不是导出的结论：步后载之者，或步前已载，或从步前载者受之。无此前提，只能说不得 d 步无载者始（`Becoming.Web.begins_within`，否定之全称，是⟦五·六⟧之律以诸载者为体之例）；有此前提，样式之久恰经由递：每 d 步内有一次递，给出那一步与两个载者（`Becoming.Web.ByPassing.passes_within`）。一步空则此后皆空（`Becoming.Web.ByPassing.empty_stays`）；递一停，样式于 d 步之后不在（`Becoming.Web.ByPassing.ends_within`）；载者两步一换、只在奇数步递之见证达到此界（每两步有一递，不是每步）（`Becoming.PatternRelay.shifts`）。讀（AI，D48）：递所载者不拣样式，律不说哪一个样式值得递。对照（相合，zhuangzi-huo-chuan；养生主，先秦·内篇）：「指窮於爲薪，火傳也，不知其盡也」〔ZH1-S03〕：薪各尽，火经递而久，火之久不是薪之久；「不知其盡」是有条件的：递一停即尽。\n\n**證**　`Becoming.Web.ByPassing`、`Becoming.Web.begins_within`、`Becoming.Web.ByPassing.passes_within`、`Becoming.Web.ByPassing.empty_stays`、`Becoming.Web.ByPassing.ends_within`、`Becoming.PatternRelay.shifts`；记录 [a-pattern-lasts-through-passing](../results/records/a-pattern-lasts-through-passing.md)。"
+   },
+   {
+    "id": "五·八",
+    "title": "恒持、终足与期",
+    "body": "**經**　恒持，凡于一步待此所待者，其待于此步皆持也。终足，凡于一步待之者，其时之所需皆于其后某步足也；期，其步数之上界也：凡待皆于其后 p 步之内足，谓之以 p 为期而终足。\n\n**說**　三者都是所待之水平与一待之所需之间的关系，不是状之复（⟦五·一⟧）。持（`Becoming.Web.Kept`）是一待于其步足、步后仍足；恒持（`Becoming.Web.Renewed`，恒＋持，新组合）是最强之等：凡待于其步皆持。终足（回程，restored，`Becoming.Web.Restored`）只问水平再及那一步之所需，不问此前是否已足，所以不名“复足”。期（读 qī，期限）只名上界（`Becoming.Web.RestoredWithin`、`Becoming.Web.RenewedWithin`），确切之步数不名期；期须为正，以零为期而终足恰是无物待之（`Becoming.Web.renewedWithin_zero`）。讀（AI，D49）：早期“开”之第四相“转”兼名复与终足，中华本分为二名。对照（定域，mengzi-yi-ri-pu-zhi；孟子告子上，先秦）：「虽有天下易生之物也，一日暴之，十日寒之，未有能生者也」〔RU2-S-MZ〕：所需每十一步一足，是以十一为期而终足之型，不是恒持；「未有能生」要在无容之段长于待之者之蓄时才可能成立（⟦五·十六⟧），由此到「未有能生」尚缺一条只问一段之律（未决）；病在待之者，不在所待：恢复无界变慢而每次终足者，也不终不足（⟦五·十⟧）。\n\n**證**　`Becoming.Web.Kept`、`Becoming.Web.Renewed`、`Becoming.Web.Restored`、`Becoming.Web.RestoredWithin`、`Becoming.Web.RenewedWithin`、`Becoming.Web.renewedWithin_zero`；记录 [becoming-return-grades](../results/records/becoming-return-grades.md)、[becoming-dependence-dynamics](../results/records/becoming-dependence-dynamics.md)。"
+   },
+   {
+    "id": "五·九",
+    "title": "终不足与绝而终不足",
+    "body": "**經**　终不足，有一于一步待一所待者，其后每步之水平皆不及其时之所需也。绝而终不足，有一待于一步绝，其后每步皆不及其时之所需也。凡绝而终不足者，终不足；终不足而无一绝者，有之。\n\n**說**　终不足（消耗之条件，consumed，`Becoming.Web.Consumed`）不要求那个待曾经足过：一个从未被满足的所需也使其所待终不足，而无一待绝（`Becoming.Unmet.consumed_without_loss`，构造之例；此时资之者竭（⟦五·十一⟧）而无一步剥（⟦五·十四⟧））。绝而终不足（`Becoming.Web.Lost`；绝，`Becoming.Web.Broken`：其步足而步后不足）多出一个已成之关系的失去（`Becoming.Web.lost_consumed`）。二者说的都是所待；物之亡（`Becoming.Web.Ends`）是另一件事，终不足之后，有待而待不改者才亡（⟦五·十六⟧）。\n\n**證**　`Becoming.Web.Consumed`、`Becoming.Web.Lost`、`Becoming.Web.Broken`、`Becoming.Web.lost_consumed`、`Becoming.Unmet.consumed_without_loss`；记录 [becoming-dependence-dynamics](../results/records/becoming-dependence-dynamics.md)。"
+   },
+   {
+    "id": "五·十",
+    "title": "足之等",
+    "body": "**經**　凡所待恒持，则以一为期而终足；以 p 为期而终足者，以大于 p 者为期亦然，且终足；终足者不终不足；终不足，恰当有一待其后无一步足其时之所需。以二为期而终足、不以一为期、亦不恒持者，有之；终足而无一期者，有之。\n\n**說**　等由强至弱：恒持、以期终足、终足、不终不足（`Becoming.Web.renewed_within_one`、`Becoming.Web.RenewedWithin.mono`、`Becoming.Web.RenewedWithin.restored`、`Becoming.Web.Restored.not_consumed`）；终不足恰是某待永不再足（`Becoming.Web.consumed_iff`，只是改写定义，内容在等之次序与两个见证）。两个见证（构造之例）说明诸等不合一：季节性之所待以二为期终足，不以一为期，也不恒持（`Becoming.seasonal_renewed_within_two`）；恢复可以无界变慢，每次仍终足、不终不足，而没有任何期界定它（`Becoming.Slowing.slowing_recovery`）：不终不足不给出恢复之时有界。诸等不涉所资之量。对照（相合，yi-fu-pin-fu，结构类比；复六三，先秦·经）：「頻復，厲无咎」〔YD-JP24〕：王弼（魏晋·注）、孔疏（隋唐·疏）读頻为頻蹙，是期较长之迟复；程頤、朱熹（宋明·注）读为屡，屡失屡复，是季节之型；两读都落在恒持与终不足之间，「厲」「无咎」之判不入律。（相合，yi-fu-mi-fu，结构类比；复上六，先秦·经）「迷復，凶，有災眚」〔YD-JP24〕对应终不足；但「至于十年，不克征」〔YD-JP24〕是一段有穷之往，不分迷与迟：永不发生不能由任何有穷之段证实（`Becoming.Sequences.never_not_verifiable`）。\n\n**證**　`Becoming.Web.renewed_within_one`、`Becoming.Web.RenewedWithin.mono`、`Becoming.Web.RenewedWithin.restored`、`Becoming.Web.Restored.not_consumed`、`Becoming.Web.consumed_iff`、`Becoming.seasonal_renewed_within_two`、`Becoming.Slowing.slowing_recovery`；记录 [becoming-return-grades](../results/records/becoming-return-grades.md)。"
+   },
+   {
+    "id": "五·十一",
+    "title": "恒与竭",
+    "body": "**經**　恒，物于每步所待所资之所待皆恒持也；竭，物于某步资一终不足之所待也。凡恒者不竭，且每步皆容；不恒亦不竭者，有之。\n\n**說**　恒（更新，renewing，`Becoming.Web.RenewingIn`）与竭（消耗，consuming，`Becoming.Web.ConsumingIn`）是物与它所待、所资的诸所待之间的关系（`Becoming.Web.Participates`：待之或资之），不是物自身之性质：恒问其中每个所待是否恒持，竭问它所资者中有无终不足者。二者互斥（`Becoming.Web.renewing_not_consuming`），恒者每步皆为其所待所容（`Becoming.Web.renewing_keeps_support`）；但二者不穷尽：季节性之所待每两步一足，待之者不恒亦不竭（`Becoming.SupportGatedWebs.fluctuating_neither`，构造之例），所以竭不是恒之否定，名表不立“不恒”。以期读物，以一为期而恒不即是恒：一待于其第 0 步不足、此后每步皆足者，以一为期而恒，而不恒（`Becoming.LateMet.within_one_not_renewing`）。恒说的是物所待所资者持续支持每一个待之者，不说物自身活动多久、多成功、多增长（⟦五·十二⟧）。对照（相合，xunzi-fuguo-jie-yuan-kai-yuan；荀子富国，先秦）：「伐其本，竭其源，而並之其末」〔RU2-S-XZ10〕：断其与而资不止，所待终不足；「竭其源」之竭是存量之涸（流之篇），与本名之竭（物与所待之关系）字同而层异，二者之间经存量耗尽之律相对应，不是一条定理；原文之财政义不取。\n\n**證**　`Becoming.Web.RenewingIn`、`Becoming.Web.ConsumingIn`、`Becoming.Web.Participates`、`Becoming.Web.renewing_not_consuming`、`Becoming.Web.renewing_keeps_support`、`Becoming.SupportGatedWebs.fluctuating_neither`、`Becoming.LateMet.within_one_not_renewing`；记录 [relational-renewal-classification](../results/records/relational-renewal-classification.md)、[becoming-return-grades](../results/records/becoming-return-grades.md)。"
+   },
+   {
+    "id": "五·十二",
+    "title": "恒竭属行",
+    "body": "**經**　在一构造之变中，自一状起有二行，焦点之物于二行每步皆活动，于此行恒，于彼行竭，而维持之物自第一步起不活动。在支持门控之族中，所需为正而始足，二资之者每步所取各不过其与，则各自资之皆恒；二者共取每步过与，则共资之者竭，自某步起共资之者及维持之物皆不活动。\n\n**說**　类属于行，不属状，也不属物自身之历程（`Becoming.Renewable.class_belongs_to_the_run`，构造之例）：同一变、同一始状，焦点之物两行皆每步活动，一行恒、一行竭；所以持续、成功与增长都不证明恒。类也属于共同之关系：各自之取都在所与之内，合起来则过之，共资之者竭，与维持之物一同不复活动（`Becoming.SupportGatedWebs.jointly_consuming`，此族中对每组参数成立）。此族把共资读作一物，不能表示各资之者之份；对每个衡之流，见共取过与之律（流之篇，`Becoming.Flow.joint_excess_ends`：在其所列条件下，共取连数步过与，则与终止，凡以所需不低于门限待此所待者此后皆不活动，取者在内），此律只问共取，不分各取之份。何者绝：衡之流中，各资者之取都在“水平加所与”超出所需之数以内而一待仍绝，则在此步者每一个之取都少于共取（`Becoming.Flow.Balances.broken_shared`）：此绝不属任一资者之取。对照（定域，daxue-ming-bu-yu-chang；康诰，西周，为大学所引，大学成篇年代有争议）：「惟命不於常」〔RU1-S-DX〕：所得者不是常，得失属于所行之行；经文以「善」为得失之条件，律中没有。\n\n**證**　`Becoming.Renewable.class_belongs_to_the_run`、`Becoming.SupportGatedWebs.jointly_consuming`；记录 [becoming-renewal-reading](../results/records/becoming-renewal-reading.md)、[relational-renewal-classification](../results/records/relational-renewal-classification.md)。"
+   },
+   {
+    "id": "五·十三",
+    "title": "初不定终",
+    "body": "**經**　在一构造之变中，凡涯 h，有二行于 h 前状、动皆同，其间每步之资皆过与，焦点之物每事皆一步在恒之内，而一行恒，一行竭。故凡读定于前 h 步之往而赅凡恒之行者，必赅一竭之行；以“每步所资不过所与”为读者，定于每步之往，而扣下二行于涯前之每次资。\n\n**說**　这是涯（视界，horizon）之律（`Becoming.Renewable.prefix_does_not_decide`）：每个涯之前两行完全一样，每步都超出所与而资，每步都在恒之内（逐步之读看不见任何失），此后一行回到所与之内而恒，一行继续超出而竭。所以由有穷之往定出、又承认每个恒之行的读法，都承认某个竭之行（`Becoming.Renewable.finite_reading_includes_consumption`）；整段之读承认超出所与之资（`Becoming.Renewable.whole_run_includes_overdraw`）；以量读者定于有穷之往而扣下每次超出，代价是不承认那个恒之行在涯前之事（`Becoming.Renewable.amount_reading`）；以期读物，也不定于任何有穷之往（`Becoming.Renewable.cycle_reading_not_finite`）；有反馈时亦然（`Becoming.Feedback.prefix_does_not_decide`）。界：这是在一个变中构造的，不是对每个变所证；对每个变有穷之段能定什么，在知与验之篇（复现既不能由有穷之段证实，也不能由之否证，`Becoming.Sequences.recurs_not_verifiable`、`Becoming.Sequences.recurs_not_refutable`）。讀（AI，D49）：早期之“伪开”第二型（由一段读出整个历程所无之开）以本条为律。对照（相合，wangbi-qian-mi-bu-you-chu；王弼乾文言注，魏晋，所引诗出大雅·荡，先秦）：「靡不有初，鮮克有終」〔YWH-Q〕：同有其初，能否有成在后段；「鮮」（少）是计数之断言，律中没有。\n\n**證**　`Becoming.Run.AgreeUpTo`、`Becoming.Renewable.prefix_does_not_decide`、`Becoming.Renewable.finite_reading_includes_consumption`、`Becoming.Renewable.whole_run_includes_overdraw`、`Becoming.Renewable.amount_reading`、`Becoming.Renewable.cycle_reading_not_finite`、`Becoming.Feedback.prefix_does_not_decide`；记录 [becoming-finite-horizon](../results/records/becoming-finite-horizon.md)。"
+   },
+   {
+    "id": "五·十四",
+    "title": "剥",
+    "body": "**經**　剥，物于一步资一所待，步后其水平既不及一待之今所需，又不及此待自某步起不断而在、其时曾足之所需也。凡资而其步绝一待者，剥也；物一步在恒之内者不剥；恒者每活动之步皆在恒之内。\n\n**說**　剥（侵蚀，undermining，`Becoming.Web.UnderminingOn`、`Becoming.Web.UnderminingAt`）是逐步之读（讀（AI，D10））：读一物在一步之事，不等整段之行。两个“不及”都要：所需新起而从未足过，不算剥；此待不断以来曾足而今不足，才是失（`Becoming.Web.MetAbove`）。他者可以同在此步资之，定义不说是这一次资单独所致。绝是剥之一种（`Becoming.Web.BreakingOn.undermining`）。一步在恒之内（`Becoming.Web.RenewingAt`：活动，且其步持其所待所资之所待上的每个待）者不剥（`Becoming.Web.RenewingAt.not_undermining`），恒者每活动之步都在恒之内（`Becoming.Web.renewing_at_active`）；逐步之读与整段之读两向皆可相异（一次逐步升级之资，一次短暂之降），见记录。剥是逐步读法之判，不是对资者之评价（讀（AI，D6））；比较只经以广为愈。对照（相合，yi-bo-chuang；剥初六小象，易传年代有争议）：「剝牀以足，以滅下也」〔YD-JP23〕：所削先是所待者，待之者之不活动可以在后（蓄，⟦五·十六⟧）；「剝牀」自下而上之次第是一串剥之事，脊柱于此次第无律；「蔑貞凶」〔YD-JP23〕之判不入律。\n\n**證**　`Becoming.Web.UnderminingOn`、`Becoming.Web.UnderminingAt`、`Becoming.Web.MetAbove`、`Becoming.Web.BreakingOn.undermining`、`Becoming.Web.RenewingAt`、`Becoming.Web.RenewingAt.not_undermining`、`Becoming.Web.renewing_at_active`；记录 [becoming-stepwise-reading](../results/records/becoming-stepwise-reading.md)、[becoming-dependence-dynamics](../results/records/becoming-dependence-dynamics.md)。"
+   },
+   {
+    "id": "五·十七",
+    "title": "续与沿续之恒竭",
+    "body": "**經**　续，依相续，物于步后续一步前活动之物也。沿续而恒，凡续之者所待所资之所待皆恒持；沿续而竭，有续之者资一终不足之所待。沿续而恒，恰当今所待所资者皆恒持，而次步凡续之者皆沿续而恒；沿续而竭，恰当今资一终不足者，或次步有续之者沿续而竭；改认而带其相续，二者如故；物每步活动而唯自续者，二者即恒与竭。\n\n**說**　续（延续，continuation，`Becoming.Web.Continues`）是跨步之同一：谁续谁由相续（延续关系）给出，不由名字给出；一可续为多（裂），多可合为一（合）。沿续读恒竭（`Becoming.Web.RenewingAlong`、`Becoming.Web.ConsumingAlong`），类就属于“谁续谁”：裂时恒进入每一支（`Becoming.Web.renewingAlong_iff`），合时竭回到每一个被合者（`Becoming.Web.consumingAlong_iff`）；改认只要带着相续，就不改这两类（`Becoming.Web.renewingAlong_reidentify`、`Becoming.Web.consumingAlong_reidentify`）；每物只续自身而每步活动时，即回到⟦五·十一⟧之恒竭（`Becoming.Web.renewingAlong_itself_iff`、`Becoming.Web.consumingAlong_itself_iff`）。合可以定类：一恒者与一竭者合为一物，按名它恒，沿合它竭（`Becoming.MergeClass.readings`，构造之例）。剥亦可沿续读：每物只续自身时即按名之剥，改认不改它；链接越多，剥与竭只增不减，恒只减不增（`Becoming.Web.underminingAlong_itself_iff`、`Becoming.Web.underminingAlong_reidentify`、`Becoming.Web.underminingAlong_mono`、`Becoming.Web.consumingAlong_mono`、`Becoming.Web.renewingAlong_mono`）。衡之宇中，物之同异定然否，一步之后 d 与 c 同水平而立，则有一保衡之命名以 d 为 c 之续，所以宇之记录不能在二者之间定谁是续者（`Becoming.World.continues_as_alike`）。名取「有化而无别，谓之一实」〔RU2-S-XZ22〕（定域，xunzi-zhengming-yi-shi，生灭之篇；荀子正名，先秦）：荀子以一实为可稽之事实，理论只在衡之宇中、一步之后无他物与之同水平而立处定之（`Becoming.World.fixed_iff`），其余处它是读法。\n\n**證**　`Becoming.Web.Continues`、`Becoming.Web.RenewingAlong`、`Becoming.Web.ConsumingAlong`、`Becoming.Web.renewingAlong_iff`、`Becoming.Web.consumingAlong_iff`、`Becoming.Web.renewingAlong_reidentify`、`Becoming.Web.consumingAlong_reidentify`、`Becoming.Web.renewingAlong_itself_iff`、`Becoming.Web.consumingAlong_itself_iff`、`Becoming.MergeClass.readings`；记录 [classes-along-a-continuation](../results/records/classes-along-a-continuation.md)、[identity-across-steps](../results/records/identity-across-steps.md)。"
+   }
+  ],
+  "duizhao": "#### 对照\n\n- 「反復其道，七日來復」〔YD-JP24〕——相合：消长环下自乾卦第七步初爻复刚，状本身十二步再得；七是确切之步数，不是期（yi-fu-qiri-laifu）。\n- 「无往不復」〔YD-JP11〕——定域：状有穷时，恰在法无同归之处成立；状无穷时，无同归亦可永不复（yi-tai-wuwang-bufu）。\n- 「天地之道恆久而不已也」〔YD-HX01〕——相合：兼久而其体各短，则不得 d 步无体作，久在体之更替中；方向是久则作，不是作则久（yi-heng-tuan-jiu）。\n- 「指窮於爲薪，火傳也，不知其盡也」〔ZH1-S03〕——相合：火传之下，载者各短而样式久，则每 d 步有一递，递停则 d 步之后不在（zhuangzi-huo-chuan）。\n- 「靡不有初，鮮克有終」〔YWH-Q〕——相合：初不定终；「鮮」之计数不在律中（wangbi-qian-mi-bu-you-chu）。\n- 「譬如油、炷然燈，若不增油治炷，非彼燈明未來不生、盡、磨滅耶？」〔FO1-S-SA〕——相合（刘宋译，印度阿含传统）：不与则作不复现，余焰以蓄为界；经以此劝灭，评价之向与以续为好相反，显示结构本身不带正值（zaahan-deng-huo-zeng-you）。\n- 「復者，反本之謂也，天地以本為心者也」〔YWH-F〕——相分：复被读作回到先于运动的寂然之本，属本原层；理论之复是法下状之再得，没有先于运动之本（wangbi-fu-fan-ben）。\n- 「成性存存，道义之门」〔DS02〕——相分：把持存断言为规范之门；理论中凡续皆有顾只作条件陈述，所表示的动力学本身不定顾（yi-xici-cheng-xing-cun-cun）。"
+ },
+ "edits": [
+  {
+   "target": "C05",
+   "instruction": "篇五篇首改为：「本篇论关系在一展开中怎样回返、怎样被引入而不返、怎样持续。先说法下之状：复（状之再得）、同归（二异状至一状）、无同归即复、体之同归由其余承之、日新则无表可尽、藏往（带着历史）；次说法之所守与所引：常、门（每一起源皆过门）、闭、入与势、所归、成闭、或入与必入、机与护闭；然后说族之兼与样式怎样在其体与载者的更替中久（久、火传）；次说所待之水平与待之所需之间的诸等：恒持、以期终足、终足、终不足、绝而终不足；再说物与其所待的两种关系，恒与竭：它们属行而不属状，有穷之往不定之；终以一步之剥、剥与交，及沿续之恒与竭。三种“回”各有其名而不相借：复是状之再得，终足是水平再及所需，环（篇十二）是感之回路；久不是常（不变量），也不是静（法所不改之状）。闭、成闭、护闭、机都只名结构，不带善恶：保住哪一状、保住它是支持还是损害生生，不在这些法中。本篇诸律或无设而然，或以宇之设（有待、蓄）为若而有设而然（如五·八至五·十一、五·十四）：每条只在写入其中的局部条件（有一表尽其状、每步有表举活动之体、火传、相续……）与所名之设下，对每个如此表示之宇成立；“不得……皆无……”是否定之全称，不给出那一步；凡是一个构造之例而非一般律者，条中写明。延续之条件（凡续皆有顾，十五·十六）陈述而不断言：它给顾不给正值，只定所顾之范围，本身不排序；诸程孰愈只在以广为愈（十六·六）。本篇不用二者；本篇之“续”只名跨步之同一，不带顾，而所表示的动力学本身不定顾（`Becoming.Web.significance_undetermined`）。前接流与衡之篇，后接生成与退化之向。」（S1、O9）"
+  },
+  {
+   "target": "NEW-2",
+   "instruction": "新條「体之同归由其余承之」。經：「凡法无同归，以体与其余二读分尽诸状（二状之体同、其余亦同，则二状同）：k 个两两相异之状，n 步之后其体之读皆在一表、其余之读皆在另一表，则二表之长相乘不少于 k；故其体之读皆为一状，则凡含其余之读之表，其长不少于 k。法无同归，每步之后体皆读同一状，而有一状之体异于此，则无一表尽诸状。一行之状皆在一表，一量每步之后之值加此步所减不过步前之值：有一步所减不在零之内，则其变非无同归。」（不用「狭」：狭只名六·三之路之较；不用「所失」：所失只名十二·五；Lean 之结论是 ¬ Lossless，写「非无同归」，不写「有同归」。）說（现代汉语）：这是 Landauer 之计，不用能量、温度或概率：无同归之法守其可能之数，体之所减尽入其余；体每步重置，须一无表可尽之全（Reset 之例：体每步归一，其余为其所持之史，`Becoming.Reset.kept_by_rest`）。故止之律（四·十四至四·十九）属于有同归、并诸状而耗之读；有穷诸状而无同归之法复而不止（五·三）。纲·九其三依此；四·十五之說「（篇五）」改指本條。證：`Becoming.Law.Lossless.narrowing_spreads`、`Becoming.Law.Lossless.reset_unlisted`、`Becoming.Reset.kept_by_rest`、`Becoming.Branching.loss_needs_merge`、`Becoming.Law.loss_needs_merge`；记录 [merge-of-a-part-kept-by-the-rest](../results/records/merge-of-a-part-kept-by-the-rest.md)、[rest-from-a-finite-reading](../results/records/rest-from-a-finite-reading.md)。"
+  },
+  {
+   "target": "五·五",
+   "instruction": "（已移至五·四之前）题改「日新则无表可尽」。經改为「日新，自某步起每状异于其先之每状也。凡一族所待之水平合计自某步起不过一界，则自每步起其状有二步相同。凡日新之序，或一量沿之每步皆升之序，无表尽其所经。」（不重访与日新一义二名，统一为日新，名表锚 `unheld_of_new`，C53。）證并入六·十之 `Becoming.unheld_of_new`、`Becoming.unlisted_of_new`（已有则不重列）。"
+  },
+  {
+   "target": "五·四",
+   "instruction": "經「藏往则无同归、不重访、不复」改为「藏往则无同归、自始即日新、不复」（藏往之序自首步起即两两相异，强于日新；C53 之名统一而不失其强）。"
+  },
+  {
+   "target": "NEW-3",
+   "instruction": "新條「门」。經：「门，于变之动定然否之标也。凡非门之动皆反守一性（次状有此性，则前状亦有之），则一程终于此性然之处者，或始于其然之处，或可分为前段、一门之步与后段，而此门之步之后此性然；不须定此性然否。以命题为门，于凡变求『一程终于此性然之处者，或始于其然之处，或含一门之动』，恰当不可非则然。」（以命题为门之律是较弱之形，只说含一门之动，`Gated.origin_of_propositions_iff` 如此；原拟「于凡变求此律」不确。）說（现代汉语）：每一起源皆过门：一所然之成（一·四），或本然，或经一标出之步，此是成之关系起源，不须判定此性；常守其后所至，非门之动反守其前；以命题为门是一校准（凡·七），说定其门者须能定其标；门是标，不说门之动必有所改，只定改变可从何处入。證：`Becoming.Gated.origin`、`Becoming.Gated.origin_of_propositions_iff`、`Becoming.Gated.origin_of_decides`；记录 [every-origin-passes-the-gate](../results/records/every-origin-passes-the-gate.md)。名表 C05 增「门」（新组合）；五·十二之「门控」改名（见五·十二）。"
+  },
+  {
+   "target": "七·三",
+   "instruction": "經删末句「互卦之法下……于六十四卦，各十六、十六、三十二。」（卦爻定于八·十七，此句移八·十七，O7）。證之 `Becoming.Hexagram.qian_basin`、`Becoming.Hexagram.kun_basin`、`Becoming.Hexagram.cycle_basin`、`Becoming.Hexagram.basin_counts` 与记录 hexagram-world-laws 随之移八·十七。"
+  },
+  {
+   "target": "七·四",
+   "instruction": "經删「凡法同归二异状，二者不皆复。」（留五·二，C52）說注：见五·二。證之 `Becoming.Law.Merges.not_both_return` 删。"
+  },
+  {
+   "target": "七·七",
+   "instruction": "經末加自八·十六移来之句：「一状多步，不必成机。」（證已有 `Becoming.Branching.Many.no_juncture`，C62）"
+  },
+  {
+   "target": "七·八",
+   "instruction": "經「其余之步，其后不能复至 s，为成闭」改为「其余之步，其后不能复至 s，为成闭之步（取之即入而不复，七·五）」；「成闭永不复至 s」改为「成闭之步永不复至 s」（C9）。經中「护闭为守 s 之最大者」后加自八·十六移来之独有句：「子变守 s，则自 s 所至皆非机。」證加 `Becoming.Branching.no_juncture_of_keeps`（八·十六独有之声明，不可随删失之）。本條为机前之护闭唯一之处（八·十六删）。"
+  },
+  {
+   "target": "五·六",
+   "instruction": "經中「兼」改「族之兼」：「久，族之兼之体各短或各亡，而族之兼自某步起每步皆活动也……」以下同改（O11）。證并入三·二十四之声明（`Becoming.Web.Whole.arises_within`、`Becoming.Web.Whole.ends_without_arising`、`Becoming.Web.Whole.needs_new`、`Becoming.Gaps.gaps`、`Becoming.Shifts.shifts` 未列者）。"
+  },
+  {
+   "target": "三·二十二",
+   "instruction": "（已移至五·六之后）經改为「火传，样式之载者各暂，而样式经递而久也。若凡于次步载样式者，或本步即载之，或本步载之者递之：则凡始载者皆受递于载者。」其 d 步之律留五·七（C48、O27）。證只留其定义与首律之声明，余归五·七。"
+  },
+  {
+   "target": "五·十二",
+   "instruction": "經「在支持门控之族中」改为「在维持者唯见容则与之族中」（`SupportGated`：维持者见容之时与其更新；门已名 NEW-3 之标，支持→见容，C35）。說同改。"
+  },
+  {
+   "target": "五·十三",
+   "instruction": "經「凡涯 h」改为「凡有穷之界 h」（涯定于八·八，O7）；「凡读定于前 h 步之往而赅凡恒之行者，必赅一竭之行」改为「凡读定于前 h 步之往而含凡恒之行者，必含一竭之行」（赅只名水平之路之包含）。"
+  },
+  {
+   "target": "五·十四",
+   "instruction": "經末加自二·十三移来之句：「凡于一步剥一所待者，与一以正需待之者于此步之事交（二·十三）。」證随之移来。"
+  },
+  {
+   "target": "五·十七",
+   "instruction": "题改「沿续之恒与竭」。經改为「沿续而恒，凡续之者（三·十三）所待所资之所待皆恒持也；沿续而竭，有续之者资一终不足之所待也。沿续而恒，恰当今所待所资者皆恒持，而次步凡续之者皆沿续而恒：恒入裂之每支。沿续而竭，恰当今资一终不足者，或次步有续之者沿续而竭：合者竭，则合入之每者皆竭。改认而带其相续，沿续之恒、竭、剥皆不改；以存读活动（三·二十）而每步皆存者，其恒不随存名之改认而变；物每步活动而唯自续者，二者即恒与竭。」（删续之重定义，留三·十三；并入三·十九、十·四、三·二十之独有句；名统一为沿续而恒、沿续而竭，C47、O27。）證并入三·十九、十·四之声明。"
+  }
+ ],
+ "added": [
+  {
+   "id": "NEW-2",
+   "title": "体之同归由其余承之"
+  },
+  {
+   "id": "NEW-3",
+   "title": "门"
+  }
+ ],
+ "duizhao_issues": []
+}

@@ -1,0 +1,119 @@
+{
+ "edits": [
+  {
+   "id": "INTRO",
+   "find": "读者之码辨而二码相合则喻为此且唯此",
+   "replace": "读者之码辨而二码于一义项同名则喻为此且唯此",
+   "why": "相合 is the name of a kind of correspondence (凡·二六), and this same 篇 uses it that way. ReadsAs/reads_iff says the two codes give the sense the same name, so the name table's own wording 同名 belongs here."
+  },
+  {
+   "id": "十·一",
+   "find": "（前段之名为其一种，⟦十·十五⟧）",
+   "replace": "（状经类之未来之前段亦其一种，⟦十·十五⟧）",
+   "why": "前段之名 is defined only in the later 條 ⟦十·十五⟧, and no 經 may use a later name. This keeps the pointer that instruction C8 asked for while describing the notion (Law.name: the prefix of the state's future through the map) in terms that are already defined."
+  },
+  {
+   "id": "十·一",
+   "find": "读者之码辨时，喻为此义项且唯此，由二码之相合定（`Becoming.SharedCodes.ReadsAs`，⟦十·十二⟧）",
+   "replace": "读者之码辨时，喻为此义项且唯此，恰当二码于此义项同名（`Becoming.SharedCodes.ReadsAs`、`Becoming.SharedCodes.reads_iff`，⟦十·十二⟧）",
+   "why": "This fixes the 相合 name collision. The claim is the law reads_iff (an iff that needs TellsApart for the reader), not the definition ReadsAs, so the law is cited."
+  },
+  {
+   "id": "十·三",
+   "find": "读之载法、码之所辨（辨见⟦十·十二⟧），皆不改",
+   "replace": "读之载法、码之以一名配二义项与否（⟦十·十二⟧），皆不改",
+   "why": "辨 is defined only in the later 條 ⟦十·十二⟧, so the instructed pointer still leaves a later name in the 經. renamed_tells_apart_iff says exactly that TellsApart (no two senses share a name) is kept, so this states it in names already defined and keeps the pointer."
+  },
+  {
+   "id": "十·三",
+   "find": "有一待网，其一改认每步之关系皆同，而恒、竭、剥、结与解、作与不息皆改。",
+   "replace": "有一待网，其一改认每步之关系皆同，而恒、剥、结与不息皆改，且改认后无恒而有二竭。",
+   "why": "Turnover.identified proves the keeper renews, the drawer consumes, there is undermining at every step, no Forms anywhere, and ¬Unceasing. Turnover.reidentified proves no renewing, drawer and idle both consume, no undermining from step 1, Dissolves and Forms at 0, and Unceasing. So changes to 恒, 剥, 结 and 不息 are proved, and so is 'no renewing, two consuming' afterwards. The theorems do not state that the identified web has no Dissolves, no Arises, or no consuming idle, so a change in 解, 作 or 竭 is not proved."
+  },
+  {
+   "id": "十·三",
+   "find": "恒持、终不足、绝而终不足是所待之类，",
+   "replace": "恒持、终不足、绝而终不足皆是对所待之读，",
+   "why": "类 is the name for the lumping/map (⟦七·十一⟧) and is central to this 篇. Renewed, Consumed and Lost are predicates read on a condition, not classes of a lumping."
+  },
+  {
+   "id": "十·十",
+   "find": "带境之指标之辞总合诸境所示（`Becoming.Contextual.indexed_fits`，按定义）；每辞皆在某境之内时，有不依境之系辞，恰当诸境所示于每状并行不悖（`Becoming.Contextual.fitsFree_iff`，⟦七·十六⟧），即两行（⟦一·十七⟧）。",
+   "replace": "带境之系辞总合诸境所示（`Becoming.Contextual.indexed_fits`，按定义；两行，⟦一·十七⟧）；每辞皆在某境之内时，有不依境之系辞，恰当诸境所示于每状并行不悖（`Becoming.Contextual.fitsFree_iff`，⟦一·十七⟧；并行不悖见⟦七·十六⟧）。",
+   "why": "The name table's 不依境 row fixes the wording 带境之系辞 for Contextual.indexed. fitsFree_iff is the gluing condition (并行不悖), not 两行 itself, which is readings in their contexts composing one world without needing to glue. Calling the gluing condition 两行 conflates the two."
+  },
+  {
+   "id": "十·十",
+   "find": "是把一卦之配当作贯之码，别卦之录不予乾之义项",
+   "replace": "是把一卦之配当作贯于诸卦者，他卦之录不予乾之义项",
+   "why": "别 names bounded significance only (十·十二 說 says so itself). 码 is a formation's sense-to-name map, not a pairing taken to stand across situations."
+  },
+  {
+   "id": "十·十二",
+   "find": "二码于一义项异名时，不是无所读，而是读成他义项",
+   "replace": "二码于一义项异名，而读者以说者之名配他义项时，不是无所读，而是读成他义项",
+   "why": "This is an overclaim. reads_other needs the hypothesis crossed: cg n = cf m for some other sense n. If the reader's code gives no sense the speaker's name, the reader reads it as no sense at all. The 經 already states the condition."
+  },
+  {
+   "id": "十·十二",
+   "find": "盲者之码与人相合，读人之名为其义项且唯此",
+   "replace": "盲者之码与人之码于白黑同名，其码又辨，则读人之名为其义项且唯此",
+   "why": "相合 is used here for code agreement in the same sentence that labels the passage （相合，…）. reads_iff also needs the reader's code to 辨."
+  },
+  {
+   "id": "十·十三",
+   "find": "于一域随一名之类而同者，旁读他名，于此域仍随其类而同。",
+   "replace": "于一域随一名之类而同者，旁读他名，于此域亦随二名并读之类而同。",
+   "why": "其类 can be read as the first name's classes, which would make the 經 trivial. LumpedWithin.finer concludes LumpedWithin D (fun s => (π s, π' s)) f, the classes of the pair read together."
+  },
+  {
+   "id": "十·十三",
+   "find": "荀子之兼名可读为旁读他名（讀，AI）",
+   "replace": "荀子之兼名可读为旁读他名（讀，AI，待编号）",
+   "why": "STYLE requires each reading to carry its decision number or 待编号, as the other readings in this 篇 do."
+  },
+  {
+   "id": "十·十五",
+   "find": "而在一切历上，没有前段定下一值",
+   "replace": "而在一切历程上，没有前段定下一值",
+   "why": "no_prefix_fixes_next quantifies over courses (o : Nat → O), which the name table and ⟦九·二十二⟧ write as 历程. 历 names histories of states and moves, and the 历 row says the two are not to be merged."
+  },
+  {
+   "id": "十·十八",
+   "find": "同步永不相合（`Becoming.Law.Commutes.apart`，⟦七·十五⟧）",
+   "replace": "同步永不同在一状（`Becoming.Law.Commutes.apart`，⟦七·十五⟧）",
+   "why": "This fixes the 相合 name collision. Commutes.apart says the two runs are never at one configuration at the same step, and ⟦七·十五⟧ uses the wording 同在一状."
+  },
+  {
+   "id": "十·十八",
+   "find": "凡从违不偏于名者，起点只差一改名之二行",
+   "replace": "凡从违不偏于名者，经同一听之序而起点只差一改名之二行",
+   "why": "run_renamed takes the hypothesis same : ∀ n, r'.act n = r.act n, so both runs go through the same order of hearings, and the 說 dropped this condition."
+  },
+  {
+   "id": "十·二十",
+   "find": "即复分此二义项",
+   "replace": "即复辨此二义项",
+   "why": "分 is a name in the table (exclusive footprints). The 經 already writes what a code tells apart as 辨 (原码所辨). outside_returns concludes that h gives m and m' different names, which is 辨 on that pair."
+  },
+  {
+   "id": "十·二十一",
+   "find": "通于同一义项之二族录，次代即合，此后凡读皆不能分之。",
+   "replace": "通于同一义项之二族录，次代即为一，此后凡读于二者皆给同值。",
+   "why": "合 names the merging of formations (Web.NoMerge), and the table separates it from 同归, the merging of states. no_reading_recovers states that every reading gives the two later states equal values, and 分 is a table name."
+  },
+  {
+   "id": "十·二十一",
+   "find": "写回是一个并（`Becoming.Law.merged_stays`，⟦五·二⟧）",
+   "replace": "写回使二族录同归（`Becoming.Law.merged_stays`，⟦五·二⟧）",
+   "why": "并 is a reading's lumping (π s = π s'). merged_stays is about a law sending two states to one, which is 同归 (Law.Merges), the name ⟦五·二⟧ defines and the one cited here."
+  },
+  {
+   "id": "DUIZHAO",
+   "find": "——相合：二码相合则喻无所缺",
+   "replace": "——相合：二码同名则喻无所缺",
+   "why": "相合 appears twice in one line, first as the kind and then as code agreement, which is a name collision. The law (reads_iff) is that the two codes give the sense the same name."
+  }
+ ],
+ "notes": "I checked all 16 條, the intro and the 对照. All 54 quotations pass ctq.py text exactly. All 125 backticked names exist; the four that do not resolve are module or namespace names (SharedCodes, CrossSituational, CodeAcquisition, Turnover). Every ⟦id⟧ is in book-1-outline.txt and points to the right content. Every passage-entry id is in passages.json with the kind used here. Every record file exists, and none exists for PartialReadout or CodeAcquisition, so \"尚无结果记录\" is correct. The text is Chinese only. The C09.json instructions were carried out, and the rewriter's stated departures from them are sound.\n\nAgainst the Lean, every 經 holds as stated except the Turnover clause in 十·三. The 說 had three small overclaims or imprecisions: reads_other in 十·十二, run_renamed in 十·十八, and fitsFree_iff called 两行 in 十·十. Instructions C8 and C90 asked for two pointers in a 經 to later 條, but the pointer wording still used names defined only in those later 條: 前段之名 in 十·一 and 辨 in 十·三. My edits keep the pointers and remove the later names. The other edits are name collisions: 相合 (a kind name) used for code agreement, 合/并 where the concept is 同归, 分/别 where they are table names, and 历 where 历程 is meant.\n\nFor the integrator (no edit from me):\n(1) 状值 and 特征 are still two rows of the name table for one concept. The latest C08 draft (scratchpad/c08/out.json) defines 特征 in the 經 of ⟦九·三⟧ and uses it in ⟦九·十九⟧ and ⟦九·二十七⟧. C09 uses 状值: in the 經 of 十·十五 and in the 說 of 十·十三. As things stand, the 經 of 十·十五 uses a name that no earlier 經 defines, and 十·十三 說 and ⟦九·十九⟧ write one concept two ways. Pick one name and replace it mechanically in the other part.\n(2) 录 is defined in a 經 only at 十·一, but the 經 of ⟦九·十五⟧ (earlier) already uses 有日之录; C08 explains 录 only in its 說. Either move the 經 definition of 录 to ⟦九·十五⟧, or accept the 說 explanation there.\n(3) The outline titles for 十·十三 (阙), 十·十五 (名与标签), 十·十八 (同须破对称) and 十·十九 (同而失辨) predate this rewrite. The part now has 旁读他名, 前段之名与所带之值, 同名须破对称 and 同名而失辨 (per the instructions and plain-wordings), so book-1-outline.txt should be regenerated.\n(4) The first sentence of 十·三's 經 was moved from ⟦十·二⟧. The C03 rewrite must delete it there. The Turnover existence clause in 十·三 also repeats the 經 of ⟦三·十四⟧ (化); consider keeping it in one place only.\n(5) If the 經 of 十·三 should also list changes to 竭, 解 and 作, Turnover.identified needs added conjuncts: ¬ConsumingIn idle, no Dissolves, and no Arises. These hold by the construction, but the theorem does not state them.\n(6) 相合 is also used in plain senses elsewhere in the book. I changed only the places in this 篇 where it names code agreement, or sits next to the kind label.\n(7) Readings still marked 待编号 are at 十·六, 十·七, 十·十三 (with my edit), 十·十四 and the 对照 of 十·十九.\n(8) The passages.json reading for xunzi-zhi-ming-yong-li still uses the retired words 精确, 截面 and 映射. This is data, not book text."
+}

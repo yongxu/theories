@@ -1,0 +1,172 @@
+{
+ "part": {
+  "key": "C13",
+  "heading": "篇十四　群与分",
+  "intro": "本篇论群与分。前篇说待者怎样经世系而传递，本篇说诸待者怎样因共同的所待而成群，群中的取与怎样持住或耗尽它们共同的所待，再说在群中分化出来的诸结构：诸体之称、差别由谁所致、足迹之分、诸所守能否得兼、兼感之所增，以及一个不能停息的目标。群在这里只是已形成之关系所在的一个区域，不是有其自身所欲的单位：本篇不预设对立的所欲、议价、谁多得或一个固定的共同效用，而从实际的关系说起，实际的冲突与差别都保留。次第是：先说群怎样由共同的所待而成，同在、相待、交相资三层怎样相异（⟦十四·一⟧至四）；再说群中之取与怎样持续或改变：出入相掩、念旧恶与不念旧恶、不校、争（⟦十四·五⟧至九）；然后说其中分化出来的：称与争之所终、同力与合致而无独致、共取之绝、诸优化者、分数与分、己之广、得兼、和而不同、为天下先（⟦十四·十⟧至二十一）。本篇诸律只在写入其中的局部条件（衡、有待、与之者依其所与之所待而所需不下于 m、不重出、互为最优……）下，对每个如此表示之宇成立，一个实际之群是否满足这些条件要由经验来定；人类之为一个共同体，在本篇只是一个群，它在同在、相待、交相资哪一层，也是经验之事。延续之条件（凡续皆有顾）在意义之篇陈述而不断言，本篇只在⟦十四·四⟧与⟦十四·十一⟧以条件句用到它：它只定范围（谁之所失计入），本身不排序；排序只在以广为愈（⟦十四·十三⟧之說）。规则改变之速（与时转）、样式经传递而久（火传）、经规则的劫持（劫）各在其篇，此处不重述。",
+  "tiao": [
+   {
+    "id": "十四·一",
+    "title": "群",
+    "body": "**經**　群，待者同在群域者也。有一所待，凡待者或待之、或与之取与，则凡待者皆在凡待者之群域。\n\n**說**　群（集体，collective）由群域（系统闭包，`Flow.WithinSystem`：经共同参与一个所待而相连的闭包；参与即待之或与之有取与）连成：它是已形成之关系所在的一个区域，不是有其自身所欲的单位。一个人人参与的所待，就使每一待者的群域都是全体（`Flow.system_whole_of_common`）。群只说同在，不说分，也不说相待：牛马同饮一水，也在一个群域之内。荀子「人能群，彼不能群也」〔RU2-S-XZ09〕随即以「人何以能群？曰：分」〔RU2-S-XZ09〕把能群放在分上，所以群只取其群居一层，能群所加者是⟦十四·十七⟧之分；同段以胜物为尺度之争胜不携带（定域，xunzi-wangzhi-qun-fen-yi）。同在一个群域推不出相待，见⟦十四·三⟧。\n\n**證**　`Becoming.Flow.WithinSystem`、`Becoming.Flow.system_whole_of_common`；记录 [levels-of-closure](../results/records/levels-of-closure.md)。"
+   },
+   {
+    "id": "二·十五",
+    "title": "相待",
+    "body": "**經**　相待，凡待者皆在凡待者之扰域中也：每一待者，皆可隔若干层为每一他者所扰。相待，恰当凡待者之及域皆兼。交相资则相待，相待则群域皆兼；二者之逆皆不成。凡待者皆于某步待同一所待、且于某步与之取与，此所待谓之同患，则相待。\n\n**說**　相待（相互依存，mutual dependence，`Becoming.Flow.MutuallyDependent`）以扰域（影响闭包，`Becoming.Flow.WithinInfluence`，新组合，扰＋域：一物与另一物所待者取与，即扰之，扰之闭包）读兼。三读一强于一：群域皆兼（共享条件遍及）、相待、交相资（相互供给，`Becoming.Flow.MutuallyFed`，新组合，交＋相＋资）。`Becoming.Flow.mutuallyDependent_iff_reach` 说：相待恰当每一物之及域皆兼，即每一物皆可隔层及于每一物。逆不成：清除者之见证中群域皆兼，而栖者在清除者之扰域之外（`Becoming.Clearing.shares_not_mutual`）；另一见证中二者衡而各取对方所待，相待而互不相资（`Becoming.Drawing.mutual_not_fed`），所以相待不是交相资。讀（AI，D39）：所谓纠缠之系统读作相待；在相待之下，以每一我（中心）之扰域为界之顾（别）恰合凡续皆有顾（新组合，凡＋续＋皆有顾）之形（`Becoming.Flow.MutuallyDependent.unrestricted`），这只说那一有界之顾在此是该条件之形，凡续皆有顾本身是设，不断言（意义之篇）。对照（相合，xunzi-fuguo-bu-xiang-dai）：「離居不相待則窮」〔RU2-S-XZ10〕：离居者他人不在其扰域之内，相待不成，所需只得自给，而人不能兼技。「此一乘義，因果同體，成一緣起，得此即得彼，由彼此相即故。」〔FO2-FQ〕则相分（huayan-yin-guo-tong-ti）：同体相即消去依存之方向与步，而相待是\"受扰\"之闭包，不是同一。\n\n**證**　`Becoming.Flow.MutuallyDependent`、`Becoming.Flow.mutuallyDependent_iff_reach`、`Becoming.Flow.MutuallyFed.mutuallyDependent`、`Becoming.Flow.MutuallyDependent.sharesThroughout`、`Becoming.Clearing.shares_not_mutual`、`Becoming.Drawing.mutual_not_fed`、`Becoming.Flow.mutuallyDependent_of_common`；记录 [mutual-dependence-and-its-pace](../results/records/mutual-dependence-and-its-pace.md)。"
+   },
+   {
+    "id": "十四·二",
+    "title": "同患",
+    "body": "**經**　同患，凡待者皆待之、皆与之取与之所待也。凡流有同患，则凡待者皆在凡待者之及域，凡待者相待。\n\n**說**　同患（共同条件，a condition every formation shares）比⟦十四·一⟧之共同参与更强：每一待者都依它，又都与它有取与。于是每一待者的及域（所及闭包）都是全体（`Flow.reach_whole_of_common`），而相待（相互依存，`Flow.MutuallyDependent`：每一待者都在每一待者的扰域之内）恰与“每一及域皆全体”相当（`Flow.mutuallyDependent_iff_reach`）：任何一者所影响的，隔若干层都能回来影响它自己。相待不是交相资（⟦十四·三⟧），也不推出谁给谁。与俱亡相连：在有待（活动则受支撑）之下，一物于一步不活动，凡经有形者之依存链及于它的待者，于此步都不活动（`Web.coextinct`）。孙子「夫吳人與越人相惡也，當其同舟而濟」〔BI1-S-SZ〕：相恶之两方依同一所待，依存之结构与此条相合；但九地之「不得已」〔BI1-S-SZ〕是将帅有意造成的共同处境，属单一中心之层，所以是定域（sunzi-jiudi-tong-zhou）；律也不推出「相救」〔BI1-S-SZ〕之行为。\n\n**證**　`Becoming.Flow.reach_whole_of_common`、`Becoming.Flow.mutuallyDependent_of_common`、`Becoming.Flow.MutuallyDependent`、`Becoming.Flow.mutuallyDependent_iff_reach`、`Becoming.Web.coextinct`；记录 [levels-of-closure](../results/records/levels-of-closure.md)、[mutual-dependence-and-its-pace](../results/records/mutual-dependence-and-its-pace.md)、[life-as-condition-of-life](../results/records/life-as-condition-of-life.md)。"
+   },
+   {
+    "id": "十四·三",
+    "title": "交相资",
+    "body": "**經**　交相资，凡待者皆在凡待者之资域也。凡交相资者相待；凡相待者，凡待者皆在凡待者之群域。有凡待者皆在凡待者之群域而不相待之流；有衡而相待、而二者皆不在对方之资域之流。\n\n**說**　交相资（互相供给，mutual feeding，`Flow.MutuallyFed`）是新组合：交相（彼此）＋资（汲取；交相资即彼此资于对方之所与，不是各取于对方所依之所待），取代交相利，使利之价值义不带进来；它说每一待者之延续，隔若干层，都由每一他者供给。三层由强而弱：交相资、相待、处处共享（凡待者皆在凡待者之群域，`Flow.SharesThroughout`），每一推出后一（`Flow.MutuallyFed.mutuallyDependent`、`Flow.MutuallyDependent.sharesThroughout`）。反之皆有反例：清者之例中处处共享，而居者在清者之扰域之外（`Clearing.shares_not_mutual`）；Drawing 之例中二者各取于对方所依之所待，衡而相待，却无一方供给对方（`Drawing.mutual_not_fed`）。所以同在一群不是相待，相待也不是交相资。墨子「兼相愛、交相利」〔MO1-S-C15〕之「交相利」〔MO1-S-C15〕，其关系之构取为交相资；同章以「視人之國若視其國」〔MO1-S-C15〕立墨子之兼（兼爱之兼，不是名表中整体之兼），其结构是不易乎畛（不变的一步），只定范围而不排序；以之排序，还要以广为愈（定域，mozi-jianai-zhong-shi-ren-ruo-ji）。\n\n**證**　`Becoming.Flow.MutuallyFed`、`Becoming.Flow.SharesThroughout`、`Becoming.Flow.MutuallyFed.mutuallyDependent`、`Becoming.Flow.MutuallyDependent.sharesThroughout`、`Becoming.Clearing.shares_not_mutual`、`Becoming.Drawing.mutual_not_fed`；记录 [mutual-dependence-and-its-pace](../results/records/mutual-dependence-and-its-pace.md)、[feeding-closure](../results/records/feeding-closure.md)。"
+   },
+   {
+    "id": "NEW-13",
+    "title": "相待之速",
+    "body": "",
+    "added": true
+   },
+   {
+    "id": "十四·五",
+    "title": "出入相掩",
+    "body": "**經**　出入相掩，于一所待，一步诸待者共取不过所与也。凡衡：一步出入相掩，则其水平不降；步步出入相掩，则其水平常不下于其始；又诸待者唯待此所待、所需皆不过其始之水平，则凡待者步步见容。\n\n**說**　出入相掩（在一个所待上一步之联合取用不超出所给，`Flow.WithinJoint`）说的是共取，不是各取：每一取者各自不过所与（`Flow.WithinOwn`），合起来仍可超过（`Exceeding.own_not_joint`：所与为二，二取者各取二，共取为四）。律只给水平不降，不给增长；全体见容另要两条：只依此一所待，所需不过起始之水平（`Flow.supported_of_within`）。单一所待三方之例中，同样的成员分取则三者都持续，一者全取则排除他者（`Excluding.three_courses`）。名之语出荀子「皆使衣食百用出入相揜」〔RU2-S-XZ10〕，那里逐一单位而言，每一单位之存量一步之所出不多于所入，正是此构；原文所在之稱數段的等级比例框架不携带（定域，xunzi-fuguo-yu-duo-wu-gua）。中庸（礼记所收，成篇年代有争议）「萬物並育而不相害」〔RU1-S-ZY〕在分取保住三方之处成立，诸所守之合须另行成立，见⟦十四·十九⟧（定域，zhongyong-bing-yu-bu-xiang-hai）。\n\n**證**　`Becoming.Flow.WithinJoint`、`Becoming.Flow.joint_keeps`、`Becoming.Flow.level_kept`、`Becoming.Flow.supported_of_within`、`Becoming.Exceeding.own_not_joint`、`Becoming.Excluding.three_courses`；记录 [own-count-misses-joint-excess](../results/records/own-count-misses-joint-excess.md)、[what-taking-all-excludes](../results/records/what-taking-all-excludes.md)。"
+   },
+   {
+    "id": "十四·六",
+    "title": "念旧恶",
+    "body": "**經**　念旧恶，一待者于下一步与，恰当其此步与、且其所等待之待者此步皆与也。凡念旧恶之行：一待者某步不与，则此后每步不与；一待者始不与，由之经 k 层等待之链至于他者，则他者自第 k 步起每步不与；凡待者皆在一待者 d 层等待之内，而此者始不与，则自第 d 步起凡待者皆不与。\n\n**說**　等待（一者之与等待他者之与）是诸与之间的一种关系；念旧恶是有记忆的等待（`Withholding.waitsAll`），名由论语之不念旧恶反推（复词）。律说有记忆之扣留（不与）留而且扩散：一处扣留，不再自行恢复（`Withholding.waitsAll_withholding_stays`），沿等待之链往下传（`Withholding.withholding_spreads`），及于它所达之整族而终其一切与（`Withholding.withholding_absorbs`）。这是一个法下的行，不是一个状：恢复要换一条法，见⟦十四·七⟧之先施。韩非「怒積於上而怨積於下。以積怒而御積怨，則兩危矣」〔FA1-S-H27〕：上下互相等待而都有记忆，正是此构（相合，hanfei-yongren-ji-nu-ji-yuan）；韩非以之为君御下之术，属单一中心之层，不携带。讀（AI，D48）：以为他人将欺己、故先欺人之螺旋，即有记忆之扣留，它吸收一切与。\n\n**證**　`Becoming.Withholding.waitsAll`、`Becoming.Withholding.Chain`、`Becoming.Withholding.waitsAll_withholding_stays`、`Becoming.Withholding.withholding_spreads`、`Becoming.Withholding.withholding_absorbs`；记录 [giving-that-waits-on-giving](../results/records/giving-that-waits-on-giving.md)。"
+   },
+   {
+    "id": "十四·七",
+    "title": "不念旧恶",
+    "body": "**經**　不念旧恶，一待者于下一步与，恰当其所等待之待者此步皆与也。凡不念旧恶之行：无长 L 之等待链，则不论其始，自第 L 步起凡待者每步皆与；一待者经长 p 之等待链复至于己而始不与，则于 p 之每一倍数步皆不与。凡念旧恶之行、凡不念旧恶之行，所等待者加多，则每步之与者不加多。\n\n**說**　不念旧恶是无记忆的等待（`Withholding.answers`）：只看所等待者上一步与否，不看自己。于是扣留在无环之处传出而消失（`Withholding.gives_without_chain`；二者一线之例中其界恰为二，`Withholding.Line.passes_out_exact`），在环上则每绕一周返回一次（`Withholding.withholding_returns`；三者之环中，扣留每步在一处、每处每三步一回，`Withholding.Ring.answers_circulates`）。二法之下，加一层等待只是多一条扣留到来之路（`Withholding.waitsAll_more_waiting`、`Withholding.answers_more_waiting`）。环中之恢复要另一条法：一者不论所等待者如何每步皆与（先施，名表 C11），则三者之环自第三步起不论其始全环皆与（`Withholding.Ring.givesFirst_restores`）。论语「伯夷、叔齊，不念舊惡，怨是用希」〔RU1-S-LY〕：把怨读作不再与，不念旧恶即无记忆之等待；「希」〔RU1-S-LY〕是程度之语，律不给频率（定域，lunyu-bu-nian-jiu-e，只在把怨读为扣留处成立）。讀（AI，D48）：互不相识者之间的合作是跨越比任何相识更长之链的等待之与；守约与不论上次所受如何而行的制度，是先施之法：变的是法，不只是状。\n\n**證**　`Becoming.Withholding.answers`、`Becoming.Withholding.gives_without_chain`、`Becoming.Withholding.withholding_returns`、`Becoming.Withholding.Ring.answers_circulates`、`Becoming.Withholding.waitsAll_more_waiting`、`Becoming.Withholding.answers_more_waiting`、`Becoming.Withholding.Ring.givesFirst_restores`；记录 [giving-that-waits-on-giving](../results/records/giving-that-waits-on-giving.md)、[restoring-giving-from-the-worst-start](../results/records/restoring-giving-from-the-worst-start.md)。"
+   },
+   {
+    "id": "十二·二十一",
+    "title": "不求备",
+    "body": "**經**　不求备，一物于其所等待者缺不过 tol 犹给，tol 至少为一也。凡依缺不过 tol 犹给之法：一集之员起时皆给，每员在集外所等待者不过其 tol，则不论他物，此集每步皆给；起时一集之外皆给，每物在此集内所等待者不过其 tol，则自第一步起处处皆给；无一物之 tol 及其所等待之数，则一步无一物给，此后每步皆然。tol 为零之法，其历程即不念旧恶之法之历程。\n\n**說**　不求备（容差，tolerance，`Becoming.Tolerance.tolerating`；名只名 tol 至少为一者）：一物缺其所等待者至多 tol 个仍给。上三律对任何 tol 皆然（`Becoming.Tolerance.kept_set`、`Becoming.Tolerance.thin_absorbed`、`Becoming.Tolerance.total_stays`），tol 为零即⟦十二·二十⟧之不念旧恶（`Becoming.Tolerance.tolerating_zero`）。容差吸收而不复原：三物各等待其余二者，自一处不给，tol 为零者自第二步起处处不给，tol 为一者自第一步起处处皆给；而 tol 为一者自全不给起永无一物给（`Becoming.Tolerance.Triad.spreads`、`Becoming.Tolerance.Triad.absorbed`、`Becoming.Tolerance.Triad.total_kept`，构造之例）；一般之形见⟦十二·二十二⟧。tol 大者处处所给不少于 tol 小者，这一跨法之单调只在上例中有，一般之形未经 Lean，未决。对照（定域，lunyu-wu-qiu-bei；《论语·微子》，周公语，成书层次有争议）：「故舊無大故，則不棄也，無求備於一人」〔RU1-S-LY〕：小缺不致相弃，“大故”之界即 tol，经文未定；用人与故旧之语境不采纳。又（相分，lao-36-78-rou-sheng-gang；《老子》第三十六章，七十八章同义）：「柔弱胜刚强」〔YD-LAO-BASE〕：以“胜”立言，是一者压过另一者之比，属争胜与等级之层；容差所为是吸收局部之不给、使给延续，不排胜负。\n\n**證**　`Becoming.Tolerance.tolerating`、`Becoming.Tolerance.kept_set`、`Becoming.Tolerance.thin_absorbed`、`Becoming.Tolerance.total_stays`、`Becoming.Tolerance.tolerating_zero`；记录 [thresholds-of-waiting](../results/records/thresholds-of-waiting.md)。"
+   },
+   {
+    "id": "十二·二十二",
+    "title": "有以待之",
+    "body": "**經**　有以待之，一物于某步自每一起处皆给也。凡法守包含（此步给者更多，则次步给者不少）：一物于 n 步自每一起处皆给，恰当其自全不给起于 n 步给；自全不给起，给者只增不减；n 步已自每一起处给者，此后每步自每一起处皆给。全不给之次步无一物给，则自全不给起永无一物给。\n\n**說**　有以待之（自每一起处复原）读起处之最坏者：守包含之法下，最坏之起处是全不给（`Becoming.Tolerance.worst_start`）；念旧恶、不念旧恶、先施、缺不过 tol 犹给四法皆守包含（`Becoming.Tolerance.waitsAll_keeps`、`Becoming.Tolerance.answers_keeps`、`Becoming.Tolerance.givesFirst_keeps`、`Becoming.Tolerance.tolerating_keeps`）。所以不恃起处之好，恃自最坏之起处犹给：在守包含之法下，后者恰等于“自每一起处皆给”。条件要紧：法须守包含。名中之“待”是应对义，与依存之待异义，只在此成语中。对照（定域，sunzi-you-yi-dai-zhi；《孙子·九变》，传世兵书编定层次有争议）：「無恃其不來，恃吾有以待之」〔BI1-S-SZ〕：不恃起处之好，恃自任何起处皆成立者；兵争之框架属争胜与等级之层，不采纳。\n\n**證**　`Becoming.Tolerance.KeepsInclusion`、`Becoming.Tolerance.worst_start`、`Becoming.Tolerance.rises_from_withheld`、`Becoming.Tolerance.restored_stays`、`Becoming.Tolerance.withheld_kept`；记录 [restoring-giving-from-the-worst-start](../results/records/restoring-giving-from-the-worst-start.md)。"
+   },
+   {
+    "id": "十二·二十三",
+    "title": "先施",
+    "body": "**經**　先施，一物每步皆给，不视其所等待者也。凡依先施之法（先施者常给，其他之物所等待者上一步皆给则给），诸物为先施者与否皆定：一物于 n 步自每一起处皆给，恰当无一长 n 之等待链入之而链上起点之外无先施者。有一等待之环自 b 复至 b，环上无先施者，则自全不给起，b 永不给。不念旧恶之法于 n 步自每一起处复之者，先施之法亦于 n 步复之。\n\n**說**　先施（持续先给，`Becoming.Withholding.givesFirst`）之复原是确切的（`Becoming.Tolerance.restores_iff`、`Becoming.Tolerance.clear_loop_withholds`、`Becoming.Tolerance.givesFirst_restores_of_answers`）；念旧恶之下，没有一步能自每一起处复给（`Becoming.Tolerance.waitsAll_never_restores`）。例：三物各等待其前者，一物先施，则自任何起处，自第三步起处处皆给，不早于此（`Becoming.Withholding.Ring.givesFirst_restores`、`Becoming.Withholding.Ring.givesFirst_restores_exact`，构造之例）。所变者是法，不只是状。先施不以对方之应为条件：复原不依赖对方是否回应之计算。一次之先给不复原：环上只一处先给一次，给也只沿环循环，这是⟦十二·二十⟧不给循环之对偶，AI 手算，未经 Lean，未决。复原给是否更好，诸律不说，只经以广为愈比较。名取「所求乎朋友，先施之」〔RU1-S-ZY〕。对照（定域，mozi-jianai-xia-xian-shi；《墨子·兼爱下》，战国墨家，篇章层次有争议）：「卽必吾先從事乎愛利人之親，然後人報我以愛利吾親也」〔MO1-S-C16〕：读为持续之先施，不是一次之施；墨子以“然后人报我”为理由，是以对方回应为据之论证，而定理所证之复原不依赖回报。\n\n**證**　`Becoming.Withholding.givesFirst`、`Becoming.Tolerance.restores_iff`、`Becoming.Tolerance.clear_loop_withholds`、`Becoming.Tolerance.givesFirst_restores_of_answers`、`Becoming.Withholding.Ring.givesFirst_restores`、`Becoming.Withholding.Ring.givesFirst_restores_exact`；记录 [restoring-giving-from-the-worst-start](../results/records/restoring-giving-from-the-worst-start.md)、[giving-that-waits-on-giving](../results/records/giving-that-waits-on-giving.md)。"
+   },
+   {
+    "id": "十四·八",
+    "title": "不校",
+    "body": "**經**　不校，环之一环节交回少于所受也。凡环：其报之行有一回合低于所送之差，则必有一环节于某差不校；每环节交回皆不少于所受，则报之行无一回合低于所送之差。凡报，零交零，于每正差皆交回少于所受，则所送之差为 d 者，至迟第 d 回合为零，此后常零。\n\n**說**　环（回路）中，报（环返映射，名表 C11）是各环节之回应复合后交回起点之量。此条说：环要闭合一个差，只能经一个不校的环节（`LoopReturn.closing_needs_less`）；每一环节都交回不少于所受，差永不缩（`LoopReturn.never_closes_of_no_less`）。一个什么都不交回的环节，若其后每一环节无受则无与，自第一回合起差即为零（`LoopReturn.cut_closes`）；其后之环节若无受而有与，可以重开此差（`LoopReturn.cut_reopened`）。诸环节皆以整数之倍相乘时，或一回合即闭、或恒持、或无界而增，中间没有渐闭（`LoopReturn.whole_factors`、`LoopReturn.nothing_between`）。闭合一个正差的环不是无损的：闭前之差与零合而为一，所失是一个分辨（`LoopReturn.closing_not_lossless`）。论语「犯而不校」〔RU1-S-LY〕：把相犯读作报之环，不校者是交回少于所受的一环，在其后之环节无受则无与处成立（定域，lunyu-fan-er-bu-jiao）。老子「和大怨，必有馀怨」〔YD-LAO-BASE〕与闭合不是无损相合（相合，laozi-79-he-da-yuan），但「馀怨」〔YD-LAO-BASE〕作为余下之差，此律不给。讀（AI，D48）：以同样之量回报恰保持其差，多报则失控，冲突只在某一环交回较少处闭合。\n\n**證**　`Becoming.LoopReturn.returnMap`、`Becoming.LoopReturn.closing_needs_less`、`Becoming.LoopReturn.never_closes_of_no_less`、`Becoming.LoopReturn.closes_within`、`Becoming.LoopReturn.cut_closes`、`Becoming.LoopReturn.cut_reopened`、`Becoming.LoopReturn.whole_factors`、`Becoming.LoopReturn.closing_not_lossless`；记录 [whether-a-loop-closes-a-difference](../results/records/whether-a-loop-closes-a-difference.md)。"
+   },
+   {
+    "id": "十四·九",
+    "title": "争",
+    "body": "**經**　争，诸待者于一所待连步共取过与也。凡衡，自第 T 步起连 n 步共取过与，则第 T＋n 步之水平至少低于第 T 步 n。凡衡，唯活动者与，有待，凡与此所待者皆待之而所需不下于 m：自第 T 步起连 n 步共取过与，而第 T 步之水平少于 n 加 m，则自第 T＋n 步起，凡待此所待而所需不下于 m 者皆不活动，取者之如是待之者在内。\n\n**說**　争（在共同所待处的竞逐，race at a shared condition）只是共取过与（联合超出，名表 C04）落在一个众所共取的所待上：各自之取可以都在所与之内，合起来仍过（⟦十四·五⟧）。在衡之下，共取过与不能久（`Flow.excess_bounded`）；与之者若自身依此所待而所需不下于 m，它们随之停止，所与不再来，凡依此所待而所需不下于 m 者都终止，取者若如此依之，也在其中（`Flow.joint_excess_ends`）。与之者依此所待这一条件不可省：与之者不待此所待，则终止不持久（⟦十四·十一⟧）。荀子「欲多而物寡，寡則必爭矣」〔RU2-S-XZ10〕把争之来源放在数量关系上，在此范围内与此条同构，同段「無君以制臣」〔RU2-S-XZ10〕之单一中心不携带（定域，xunzi-fuguo-yu-duo-wu-gua）；韩非「今之爭奪，非鄙也，財寡也」〔FA1-S-H49〕亦以多少立论（相合，hanfei-wudu-ren-zhong-cai-gua）。荀子性恶「今人之性，生而有好利焉，顺是，故争夺生而辞让亡焉」〔RU2-S-XZ23〕则把争放在生来固定之性上，此条不需要一个固定之所好（相分，xunzi-xing-e-zheng-duo）。律推出的是终止，不是争之心理。\n\n**證**　`Becoming.Flow.excess_bounded`、`Becoming.Flow.joint_excess_ends`、`Becoming.Flow.Acting`、`Becoming.Web.Dependent`、`Becoming.Exceeding.own_not_joint`；记录 [own-count-misses-joint-excess](../results/records/own-count-misses-joint-excess.md)。"
+   },
+   {
+    "id": "十四·十",
+    "title": "称",
+    "body": "**經**　称，一体之量计其族之体数，对其族之总量之相对位置也。凡有尽之族、凡量之读：诸体之称合计为零；自一读至他读，诸体称之升合计恰等其降；一体称之变，恰为其余诸体称之变之和之反；无一变使每体之称皆升；一体之称升，必有他体之称降。\n\n**說**　称（相对位置，relative position，模块 RelativePosition）只名一体之量对全族之和的位置：以自然数写作前计（体数乘其量）与后计（族之总量），全族前计之和恰等后计之和（`RelativePosition.positions_balance`）。所以位置之局是零和，这是计数之事，不是所竞之物的律（`RelativePosition.change_balances`、`RelativePosition.change_opposed`、`RelativePosition.not_all_rise`、`RelativePosition.rise_needs_fall`）。量本身可以每体皆增而一体之称仍降（`DrawingMore.grow_and_fall`）；在流上，以每体从一所待所取之量读之，这些律不需关于流的任何前提（`Flow.drawn_positions`）。相称、比例之义不入。庄子「名也者，相軋也」〔ZH1-S04〕：此名指名声，不是命名之名；它是一者在他者读法中的位置，一者名高即他者名低（相合，zhuangzi-renjianshi-ming-xiang-ya；此「爭」〔ZH1-S04〕是名位之竞，不是⟦十四·九⟧之争）。荀子「贵贱有等，长幼有差，贫富轻重皆有称者也」〔RU2-S-XZ19〕之「称」〔RU2-S-XZ19〕是合于固定之等，以等级为所当持守者，与此相分（xunzi-gui-jian-you-deng）。\n\n**證**　`Becoming.RelativePosition.positions_balance`、`Becoming.RelativePosition.change_balances`、`Becoming.RelativePosition.change_opposed`、`Becoming.RelativePosition.not_all_rise`、`Becoming.RelativePosition.rise_needs_fall`、`Becoming.DrawingMore.grow_and_fall`、`Becoming.Flow.drawn_positions`；记录 [relative-position-is-zero-sum](../results/records/relative-position-is-zero-sum.md)。"
+   },
+   {
+    "id": "十四·十一",
+    "title": "争之所终",
+    "body": "**經**　凡于一所待自第 T 步起连 n 步衡而共取过与，一体于第 T＋n 步待之，第 T 步之水平少于 n 加其于第 T＋n 步之所需，而此体活动则受支撑：则此体于第 T＋n 步不活动，不论其称。又⟦十四·九⟧之诸条件具，则凡族、凡称之读：争中诸称之变合计为零，水平至少降 n，自第 T＋n 步起常在 m 之下，凡待此所待、所需不下于 m 之体，称之最者在内，此后皆不活动。\n\n**說**　称不能护：在共取过与之中，使一体终止的恰是它对此所待的依存，与它的位置无关，也不需与之者依此所待（`Flow.ends_at_race_end`）；与之者依此所待而所需不下于 m 时，争中诸称照计数零和而变，而称之最者若依此所待也终止（`Flow.race_ends_greatest`；称之最者，即无一体之量过之者，`RelativePosition.Greatest`）；全族皆如此依之，则此后每步都有称之最者，而每一称之最者都不活动（`Flow.greatest_end_for_good`）。Race 之例中，取得多者称升，仍与其余同终（`Race.greatest_ends`）。与之者依此所待、称之最者依此所待，二条件各需要：与之者不待此所待，此体于第一步不活动，所与复来，自第二步起复活动（`Restored.returns`）；称之最者不依它所耗尽之所待，则持续（`Clearing.greatest_continues`）。后一例中清者所失是居者之续，这一失只在一个顾之下才计：在凡续皆有顾之下自每方皆计之，无所顾则不计（`Clearing.loss_needs_significance`）；条件在此只定所失之范围，不定次序。孙子「我專為一，敵分為十，是以十攻其一也，則我衆而敵寡」〔BI1-S-SZ〕以胜敌为尺度、以散人之群为术，而胜者是否在终止之内取决于其依存（相分，sunzi-xushi-wo-zhuan-di-fen）。\n\n**證**　`Becoming.Flow.ends_at_race_end`、`Becoming.Flow.race_ends_greatest`、`Becoming.Flow.greatest_end_for_good`、`Becoming.RelativePosition.Greatest`、`Becoming.Race.greatest_ends`、`Becoming.Restored.returns`、`Becoming.Clearing.greatest_continues`、`Becoming.Clearing.loss_needs_significance`；记录 [relative-position-is-zero-sum](../results/records/relative-position-is-zero-sum.md)。"
+   },
+   {
+    "id": "二·十七",
+    "title": "有力",
+    "body": "**經**　有力，一动绝一待，偏去一物之分，同一动犹可行，而所至之每一状皆持此待也。凡一动绝一待，偏去任一物之分同一动犹绝之，则无一物有力。若一动绝一待，偏去一物之分后同一动可行，且此待犹在而足，则此物有力，恰当偏去之后同一动不复绝之。\n\n**說**　有力（差别制造，making a difference，`Becoming.Dependence.MakesDifference`；新组合，不承先秦\"有力\"之力量义）是一待之绝的但书检验：偏去（扣留一个部分，名取「損，偏去也」〔MI1-S-JS〕）其分，看同一动是否仍绝之。检验相对于动：动属其余之活动，外来之冲击也是一动；偏去之后的状是同一变之另一状，比较不取自展开之外。同一状下，平静之动使独资者有力，冲击之动则使其绝多重决定、无一物有力（`Becoming.Shock.move_decides`）。差别属于共同之活动，不属于一物自己之分：同一水平、同一所取，有一他资者时此物有力，有二他资者时则否（`Becoming.Pool.difference_belongs_to_the_joint`）；只合起来才有力者（合致而无独致）需至少二物（`Becoming.Dependence.DifferenceOnlyTogether.two_le_length`），其律见群之篇（`Becoming.Dependence.differenceOnlyTogether_iff`）。有力与或待或资分离：多重决定下一资者无力，关系之读仍计其为竭；责任不由任何一读推出。但书之结构可对照「微管仲，吾其被髮左衽矣」〔RU1-S-LY〕（定域：但书之形相同；其反事实之断言脊柱不证）。对照（定域，zhonglun-xian-you-he-yong-yuan）：「先無為誰緣，先有何用緣。」〔FO1-S-MMK〕：「先有何用緣」，即已在者不需此缘，与有力之但书形式相应；偈判生果，脊柱判依存之绝，所判之事不同，两难之结论不取。\n\n**證**　`Becoming.Dependence.MakesDifference`、`Becoming.Dependence.Overdetermined.no_difference`、`Becoming.Dependence.makesDifference_iff`、`Becoming.Shock.move_decides`、`Becoming.Pool.difference_belongs_to_the_joint`、`Becoming.Dependence.differenceOnlyTogether_iff`；记录 [joint-difference-making](../results/records/joint-difference-making.md)。"
+   },
+   {
+    "id": "十四·十二",
+    "title": "同力与合致而无独致",
+    "body": "**經**　同力，于一状一动，由之之步绝一待，而一族之体并去其分，同一之动犹可行，凡由之之步皆持此待也。合致而无独致，同力而族中无一体有力也。凡合致而无独致，族之体不少于二。凡动定其步，族中每一体单去其分，同一之动皆可行、此待皆立而足：则合致而无独致，恰当同力而单去任一体同一之动仍绝此待。\n\n**說**　同力（合起来造成的差别，difference made together，`Dependence.MakesDifferenceTogether`）是新组合：同（合起来）＋力（取有力之力，名表 C02：一体单独之差别制造）；一体之有力恰是只含此体之族之同力（`Dependence.makesDifference_iff_together`）。合致而无独致（多重决定，`Dependence.DifferenceOnlyTogether`）亦新组合：合起来致之，而无一体单独致之。验法把动固定：去其分是同一变中另一状，即无此一分之状，比较不出于展开之外；外来之冲击属于动。单去任一体其绝依旧之处，凡并去而持者皆合致而无独致（`Dependence.Overdetermined.only_together`）。差别属于合起来的活动，不属于一体自己的一分：Pool 之例中，同一取者取同样之量，与另一取者同在时其分有力，与另二者同在时其分无力，而并去二分则持（`Pool.difference_belongs_to_the_joint`、`Pool.first_two_only_together`）；关系之读在两种情形下都计它为耗用者；单去之验与关系之读，都推不出责任。系辞（易传，战国至汉初，年代有争议）「二人同心，其利断金」〔DS02〕取二人合而断金为同力；二人缺一则不能断金，是每人都有力，不是合致而无独致；「同心」〔DS02〕也不是同力所需（定域，xici-er-ren-tong-xin）。\n\n**證**　`Becoming.Dependence.MakesDifferenceTogether`、`Becoming.Dependence.DifferenceOnlyTogether`、`Becoming.Dependence.makesDifference_iff_together`、`Becoming.Dependence.DifferenceOnlyTogether.two_le_length`、`Becoming.Dependence.differenceOnlyTogether_iff`、`Becoming.Dependence.Overdetermined.only_together`、`Becoming.Pool.first_two_only_together`、`Becoming.Pool.difference_belongs_to_the_joint`；记录 [joint-difference-making](../results/records/joint-difference-making.md)。"
+   },
+   {
+    "id": "十四·十六",
+    "title": "分数",
+    "body": "**經**　分数，叶之有尽二分嵌套也。一状实现一分数，恰持实现其两侧之二体，以至于叶，叶于其体读之。凡类，所同之状所持之体亦配于所同之状，叶经类读之与于状读之同：则类于一状之所类处实现一分数，恰当此状实现之。\n\n**說**　分数（联合计划，joint plan，`JointPlan`）是众之嵌套：一众分为二体，体又分，以至于叶（多分之编组按二分嵌套读）。一状实现之，是它把实现两侧之体持在一起（`JointPlan.Realizes`）；每一节点有自己的见证，哪些体被用、各支是否共用一体，都不被固定，所以要分（⟦十四·十七⟧）。孙子「凡治衆如治寡，分數是也」〔BI1-S-SZ〕：脊柱上与「如治寡」〔BI1-S-SZ〕最近者，是在一个类（归并之读）之层治之，与在状之层治之一致（`JointPlan.realizes_image_iff`）；众寡之规模不变不是此律之内容，兵家以将为计划之顶、用以胜敌，皆不携带（定域，sunzi-bingshi-fen-shu）。\n\n**證**　`Becoming.JointPlan`、`Becoming.JointPlan.Realizes`、`Becoming.JointPlan.realizes_image_iff`；记录 [joint-code-plan-lifting](../results/records/joint-code-plan-lifting.md)。"
+   },
+   {
+    "id": "十四·十七",
+    "title": "分",
+    "body": "**經**　分，体之足迹各在其兼之足迹之内，而同兼之二体足迹不交也。凡分，一状实现一分数，每叶为其体之足迹所支：则诸叶之所资合之，不重出，皆在根之足迹之内。\n\n**說**　分只给足迹之界（`PartsWithin`、`PartsApart`）：凡体所资皆在其兼之内，同兼之二体不共资一物；于是实现之分数，诸叶所资合而不重，皆为根所支（`JointPlan.supports_of_realizes`）。反之不然：无兼持任何体时，根之足迹可以支每一叶而分数不被实现（`Unjoined.supports_not_realizes`），共成要兼持其体，不止足迹之支。由足迹不交到出入相掩（⟦十四·五⟧），因而不争，这一步没有定理，是未決：一个实现之分数给出某一所待上的诸取，诸叶足迹不交、根之足迹不过此所待一步之所与，是否推出出入相掩，脊柱尚无此桥。荀子「求而无度量分界，则不能不争」〔RU2-S-XZ19〕在此只于两处成立：无界之共取可过所与（⟦十四·九⟧），出入相掩则所求与所给「相持」〔RU2-S-XZ19〕（⟦十四·五⟧）；以度量分界使不争，要上述之桥，定界归于先王亦不携带（定域，xunzi-lilun-li-qi-yu-fen：「不能不争」之必然，律只给可过）。韩非「使人不同功，故莫爭」〔FA1-S-H27〕是由分到不争之辞，前后两半各有律，桥未证；定界者是「明君」〔FA1-S-H27〕，属单一中心之层（定域，hanfei-yongren-shi-bu-xiang-gan）。\n\n**證**　`Becoming.PartsWithin`、`Becoming.PartsApart`、`Becoming.Supports`、`Becoming.JointPlan.supports_of_realizes`、`Becoming.Unjoined.supports_not_realizes`；记录 [exclusive-footprint-support](../results/records/exclusive-footprint-support.md)。"
+   },
+   {
+    "id": "十四·十九",
+    "title": "得兼",
+    "body": "**經**　得兼，诸所守同时得保也。凡变、凡状：自此状无一行离二所守之合，恰当无一行离其一、亦无一行离其二。有一变一状，自之有行保其一、有行保其二，而无一行保其合；于此变，凡以各之可保与否定合之可保与否之规则，皆不能于每状定之。\n\n**說**　所守（守护，guard；名表未有其名，此处暂写，交整合者）是一状上的条件，如一者之活动、一所待之水平在所需之上。在每一行都计入之处，诸所守恰可分解（`Viability.kernel_and_iff`），“任一因子为零则积为零”的全部真理就在这里；沿某一行则不然，选择之点上二者各可保而合不可保（`Viability.ChoicePoint.each_not_joint`），各自之答也定不出合之答（`Viability.ChoicePoint.no_rule_decides_joint`）；普遍成立的只有一个方向：合可保则各可保（`Viability.Keepable.each`）。所以群之延续要问合起来之行，不是各项之积。保住一体之活动于每一行，既不定更新，也不定此行对他者如何（`Renewable.kept_part_not_renewal`）。孟子「二者不可得兼」〔RU2-S-MZ〕：各自可得而不能共得，失在选择之点（相合，mengzi-er-zhe-bu-ke-de-jian）；其后「舍生而取义」〔RU2-S-MZ〕是另一尺度之排序：混合之部分不被条件排序，排序只在以广为愈。\n\n**證**　`Becoming.Viability.Kernel`、`Becoming.Viability.Keepable`、`Becoming.Viability.kernel_and_iff`、`Becoming.Viability.ChoicePoint.each_not_joint`、`Becoming.Viability.ChoicePoint.no_rule_decides_joint`、`Becoming.Viability.Keepable.each`、`Becoming.Renewable.kept_part_not_renewal`；记录 [conditions-kept-together](../results/records/conditions-kept-together.md)。"
+   }
+  ],
+  "duizhao": "#### 对照\n\n- 「群而无分则争」〔RU2-S-XZ09〕——定域：群居（群域）而无足迹之界，共取可过所与；只在共取过与处争有终止之律，「争则乱，乱则离」〔RU2-S-XZ09〕之链无律（xunzi-wangzhi-qun-er-wu-fen）。\n- 「當其同舟而濟」〔BI1-S-SZ〕——定域：同患使凡待者相待；九地之「不得已」〔BI1-S-SZ〕为将帅所造，属单一中心之层（sunzi-jiudi-tong-zhou）。\n- 「今之爭奪，非鄙也，財寡也」〔FA1-S-H49〕——相合：以多少立论，与共取过与同构；律不需一个固定之所好（hanfei-wudu-ren-zhong-cai-gua）。\n- 「名也者，相軋也」〔ZH1-S04〕——相合：名是他者读法中之位置，称按计数零和（zhuangzi-renjianshi-ming-xiang-ya）。\n- 「二者不可得兼」〔RU2-S-MZ〕——相合：各可保而合不可保，失在选择之点；其后之舍取是另一尺度之排序（mengzi-er-zhe-bu-ke-de-jian）。\n- 「君子和而不同，小人同而不和」〔RU1-S-LY〕——相合：兼感之所增，与兼感等于一员；品第不携带（lunyu-he-er-bu-tong）。\n- 「贵贱有等，长幼有差，贫富轻重皆有称者也」〔RU2-S-XZ19〕——相分：以固定之等为所当持守，加等级于关系之上；称按计数零和，终止一体者是依存而不是位置（xunzi-gui-jian-you-deng）。\n- 「民至老死，不相往来」〔YD-LAO-BASE〕——相分：以不相连为理想；未连之待者只及于自身，兼感选不出其外者；此理想所保者是复与止，不是生生之继续生成（laozi-80-xiao-guo-gua-min）。"
+ },
+ "edits": [
+  {
+   "target": "C13",
+   "instruction": "篇十四篇首：次第一段改为「次第是：先说群怎样由共同的所待而成，同在、相待、交相资三层怎样相异，及相待之速；再说群中之取与怎样持续或改变：出入相掩、念旧恶与不念旧恶、不求备、有以待之、先施、不校、争；然后说其中分化出来的：称与争之所终、有力、同力与合致而无独致、分数与分、得兼。共取之绝见二·五，诸最优者见十一·十四、十一·十五，己之广见十六·五，和而不同见十一·二十五，为天下先见十四·二十一（篇十一）。」「局部条件（衡、有待、与之者依其所与之所待而所需不下于 m、不重出、互为最优……）」改为「宇之设（衡、有待）与局部条件（与之者依其所与之所待而所需不下于 m、不重出……）」，并加「以宇之设为若者有设而然」；「延续之条件……本篇只在十四·四与十四·十一以条件句用到它……排序只在以广为愈（十四·十三之說）」改为「本篇不用延续之条件；以区域为界之别何时合于它，见十五·二十二；它只定范围，本身不排序；诸程孰愈只在以广为愈（十六·六）。」（S5、C2）"
+  },
+  {
+   "target": "二·十五",
+   "instruction": "（已移至十四·一之后）經改为「相待，凡待者皆在凡待者之扰域中也：每一待者，皆可隔若干层为每一他者所扰。相待，恰当凡待者之及域皆兼。」删与十四·二、十四·三重出之二句（C39、O32）。證只留 `Becoming.Flow.MutuallyDependent`、`Becoming.Flow.mutuallyDependent_iff_reach`，余归十四·二、十四·三。說中凡续皆有顾之重述删，只留指向十五·二十二（C79）。"
+  },
+  {
+   "target": "NEW-13",
+   "instruction": "新條「相待之速」。經：「体起后不复与差，起时之差不过 D，每步入每一所待之应倍之和不过 M：一环之感每步皆在，则自 T 起绕 R 周，环上之所待之可致，至少为至 T 所至者之 2^R 倍，至多为 D·(1＋M)^t（t 为其步）。凡衡，自 T 起 n 步无与于 c，而每步取于 c 多于自 T 以来所取于 c 之全，则此 n 步中每步 c 所立皆过 T 时所立之半，而 T 时所立不少于 2^n−1。」說：相待之群，其速由环与所立定：一环之差每周至少倍之；一倍增之取须一倍增之存。承十二·六、十二·七。證：`Becoming.exponential_around`、`Becoming.Flow.Balances.half_stands`、`Becoming.Flow.Balances.doubling_needs`；记录 [mutual-dependence-and-its-pace](../results/records/mutual-dependence-and-its-pace.md)。"
+  },
+  {
+   "target": "十四·五",
+   "instruction": "經改为「出入相掩（四·二十）之下：凡衡，步步出入相掩，又诸待者唯待此所待、所需皆不过其始之水平，则凡待者步步见容。」（删与四·二十重出之定义与律，C49、O28）。證只留 `Becoming.Flow.supported_of_within`、`Becoming.Excluding.three_courses`（說之例）与 `Becoming.Flow.WithinJoint` 之指向；`Becoming.Flow.joint_keeps`、`Becoming.Flow.level_kept`、`Becoming.Exceeding.own_not_joint` 删（在四·二十）。"
+  },
+  {
+   "target": "十四·六",
+   "instruction": "說「见十四·七之先施」改为「见十二·二十三之先施」（C25）。"
+  },
+  {
+   "target": "十二·二十一",
+   "instruction": "（已移至十四·七之后）經中「给」皆改「与」（与十四·六、十四·七同名，C78）；十二·二十二、十二·二十三同改；十二·二十三「先施者常给」改「先施者每步皆与」（C89）。"
+  },
+  {
+   "target": "十四·八",
+   "instruction": "經改为「不校，环之一节交回少于所受也。报之行何时降、何时为零，见十二·八。」（C77；「环节」「回合」统一为「节」「周」）證与說只留指向，`Becoming.LoopReturn.*` 归十二·八、十二·九。"
+  },
+  {
+   "target": "十四·九",
+   "instruction": "經改为「争，诸待者于一所待连步共取过与也；其水平之降与所待者之终，见四·二十、四·二十一。」（C49、O28）證删 `Becoming.Flow.excess_bounded`、`Becoming.Flow.joint_excess_ends`、`Becoming.Exceeding.own_not_joint`（在四·二十、四·二十一）。"
+  },
+  {
+   "target": "十四·十",
+   "instruction": "本條为八·二十七之留者：證并入其声明（未列者）；名统一用升、降（不用进、退，C70）；「有尽之族」改「有穷之族」。"
+  },
+  {
+   "target": "十四·十一",
+   "instruction": "經「而此体活动则受支撑」改「而有待」（C35）；「又十四·九之诸条件具」改「又四·二十一之诸条件具」（C49）；「常在 m 之下」改「每步皆在 m 之下」（C89）。"
+  },
+  {
+   "target": "二·十七",
+   "instruction": "（已移至十四·十一之后）經中「偏去一物之分」改「偏去一物之份」（C13）；说注偏去见六·四。"
+  },
+  {
+   "target": "十四·十二",
+   "instruction": "經「并去其分」「单去其分」改「并去其份」「单去其份」（C13）。"
+  },
+  {
+   "target": "十四·十七",
+   "instruction": "經「分，体之足迹各在其兼之足迹之内，而同兼之二体足迹不交也」改为「分，体之足迹各在其所分者之足迹之内，而同出一所分者之二体足迹不交也」（兼只名大化之一切，O11）；足迹见八·五。"
+  }
+ ],
+ "added": [
+  {
+   "id": "NEW-13",
+   "title": "相待之速"
+  }
+ ],
+ "duizhao_issues": []
+}

@@ -1,0 +1,420 @@
+{
+ "pian": "篇三　作、已与续",
+ "markdown": "## 篇三　作、已与续\n\n本篇论作、已与续。篇一说跨一步只有一种变化：一所然开始成立或不再成立，读于活动、待与水平之正而为三对（一·四）；篇二说待者与所待怎样相待、相持、相绝。本篇先说这一种变化本身（成与毁），及其读于活动与水平之正者（作与已，聚与散），以及水平之升与降；次说它们怎样相计：一段之中终始以消息相等，有穷之族中作已相代，有列之族中已之复现须作之复现，数存于所计者已定之处；再说作之不息、待者之亡、宇之止与状之静。然后说跨步之同一：一步之后哪一待者续一步之前哪一待者，每步之关系不定之，由相续读出；化、无间、裂与合、新作、沿续之恒与竭都随相续而定；终以存与蛰、继、火传，以及兼与体：兼只经体之作而久。本篇之律都在写入其中的局部条件（有穷、有列、定然否、有界、衡、耗、围……）下，对每个如此表示之宇成立；构造之例只作见证，不作律。延续之条件（凡续皆有顾，篇十五陈述而不断言）与以广为愈本篇都不用；不息不是生生，生生之向只以广比较（篇六）。篇四论流与衡，篇五论恒与复，都接本篇之作、已与续。\n\n### 三·一　成与毁\n\n**經**　成，一所然于一步不然而次步然也；毁，一所然于一步然而次步不然也。凡所然定然否，于某步然而自此无毁，则自此皆然；凡所然于某步不然而自此无成，则自此皆不然，不待定然否。\n\n**說**　成（开始成立，comes to be，`Becoming.ComesToBe`）与毁（不再成立，`Becoming.CeasesToBe`）是本篇一切变化之读的共同之形：所然可以是任何随步而定的规定（某待者活动、某待成立、某所待水平为正），不预设实体。两条持续之律不对称：由“无毁”推“皆然”，须每步之然否可判定（`Becoming.persists`）；由“无成”推“皆不然”则不须（`Becoming.stays_failing`），因为后者只须反驳次步之然。名取「已，成、亡。」〔MI1-S-JS〕（相合，mojing-yi-cheng-wang）：《經說上》以「已，爲衣，成也。治病，亡也。」〔MI1-S-SS〕分两向，正是一所然在步间的两种变；墨经以“已”兼成亡，又以施为者言之，本编去其施为者，并以“已”专名活动之止（三·二）。讀（AI）：病之亡即愈之成，即“毁一所然即成其否”：正向两行可证，逆向须定然否，脊柱未单列此引理（未決）。\n\n**證**　`Becoming.ComesToBe`、`Becoming.CeasesToBe`、`Becoming.persists`、`Becoming.stays_failing`；记录 [coming-and-ceasing-keep-pace](../results/records/coming-and-ceasing-keep-pace.md)、[space-and-its-parts](../results/records/space-and-its-parts.md)。\n\n### 三·二　作与已\n\n**經**　作，待者于一步不活动而次步活动也；已，待者于一步活动而次步不活动也：作、已者，活动之成、毁也。\n\n**說**　作（生起，arising，`Becoming.Web.Arises`）与已（止息，ceasing，`Becoming.Web.Ceases`）只说活动跨一步开始与停止，即活动之成与毁（`Becoming.Web.change_readings`，由定义，六条皆 `Iff.rfl`）。同一待者可再作再已；作之复现与已之复现何时相随，见三·六、三·七。作不是生：生（生成）与绝生（退化）以广比较（篇六），作已则是任一待者之活动之起止，不先设为好。名“作”取「万物并作」〔DS01〕，不用“生”，使生只指生成；名“已”取「學不可以已」〔RU2-S-XZ01〕，已即停止。待之成毁另名结、解（篇二），水平之正之成毁名聚、散（三·三）。讀（AI，D2、D6）：作与已只名活动之起止，与成生、绝生分开；成生与绝生互不重叠。\n\n**證**　`Becoming.Web.Arises`、`Becoming.Web.Ceases`、`Becoming.Web.change_readings`；记录 [coming-and-ceasing-keep-pace](../results/records/coming-and-ceasing-keep-pace.md)、[unceasing-generation-needs-renewal](../results/records/unceasing-generation-needs-renewal.md)。\n\n### 三·三　聚与散\n\n**經**　聚，所待之水平于一步为零而次步为正也；散，于一步为正而次步为零也：聚、散者，水平之正之成、毁也。凡物有形，作则聚。凡有穷之所待，聚无尽复现，恰当散无尽复现，不待他设。\n\n**說**　聚（开始作为条件而在，comes to stand，`Becoming.Web.ComesToStand`）与散（`Becoming.Web.CeasesToStand`）是同一种变读于“水平为正”（`Becoming.Web.change_readings`）。它们与作、已一般不相合：一物可活动而水平为零，也可水平为正而不活动；只在有形（活动恰当水平为正，`Becoming.Web.Embodied`）之物上，作即聚（`Becoming.Web.Embodied.comesToStand`）。有穷族之所待聚散相随（`Becoming.Web.standing_recurs_iff`）：水平是否为正总可判定，故不待定然否，这是三·六相代读于水平的一例。对照（定域，zhuangzi-zhibeiyou-ju-san）：「人之生，氣之聚也，聚則爲生，散則爲死。」〔ZH1-S22〕：以作为聚，只在有形之物上成立；下文以气为一切之底质，不带入。名不带“气之聚”的本体义。\n\n**證**　`Becoming.Web.ComesToStand`、`Becoming.Web.CeasesToStand`、`Becoming.Web.Embodied`、`Becoming.Web.Embodied.comesToStand`、`Becoming.Web.standing_recurs_iff`；记录 [coming-and-ceasing-keep-pace](../results/records/coming-and-ceasing-keep-pace.md)、[generation-is-replenishment](../results/records/generation-is-replenishment.md)。\n\n### 三·四　升与降\n\n**經**　升，所待之水平次步高于本步也；降，次步低于本步也。凡量，一段之终加其间之降，等于其始加其间之升。凡有穷之族，其降无尽复现，则其升无尽复现；量有界，则其升无尽复现，其降亦无尽复现。\n\n**說**　升（`Becoming.Web.Rises`）、降（`Becoming.Web.Falls`）是水平之变，不过零也可有，所以与聚散不同。第一律是计账（`Becoming.over_stretch`；有穷族之总量亦然，`Becoming.family_over_stretch`）：量以自然数计，一段之中去向与来处相等，不加任何前提。由此，量不低于零，降不能无尽而无升（`Becoming.rising_recurs`；读于水平，`Becoming.Web.falls_need_rises`）；反向须界：无界时可以步步升而永不降（`Becoming.Accretion.never_falls`，构造），有界时升之复现须降之复现（`Becoming.falling_recurs`），界是这条律自己的条件。对照（定域，hankangbo-ju-ji-ze-san）：「聚極則散」〔YWH-H4〕：此处之聚散是升降，不是名表之聚散；“极则散”只在量有界时成立。张载「方其散也，安得遽谓之无？」〔RU2-S-S02〕（定域，zhangzai-san-fei-wu）：在衡之流中凡降皆有所取（`Becoming.Flow.Balances.fall_taken`），降是他处之取，不是消失；衡是条件，见篇四。\n\n**證**　`Becoming.Web.Rises`、`Becoming.Web.Falls`、`Becoming.over_stretch`、`Becoming.family_over_stretch`、`Becoming.rising_recurs`、`Becoming.falling_recurs`、`Becoming.Web.falls_need_rises`、`Becoming.Accretion.never_falls`；记录 [coming-and-ceasing-keep-pace](../results/records/coming-and-ceasing-keep-pace.md)、[rising-and-falling-in-one-exchange](../results/records/rising-and-falling-in-one-exchange.md)。\n\n### 三·五　消息\n\n**經**　消息，一段之中，终时所然者之数加其间毁之数，等于始时所然者之数加其间成之数也。凡有穷之族，所然定然否，皆有消息。所然者每步各列一次而定然否，亦有消息，族不必有穷。\n\n**說**　消息（普查之衡，census balance；复词，消为已，息为长）是三·四之计账用于只计零或一的所然（`Becoming.mark`、`Becoming.held_over_stretch`）。有列之形不要求族有穷，只要每步所然者各列一次（`Becoming.Listed`、`Becoming.Listed.over_stretch`）；读于活动，终时活动者与其间之已，等于始时活动者与其间之作（`Becoming.Web.Census.over_stretch`）。消息是数之律：不说哪一待者作已，也不说为何。名取「君子尚消息盈虛」〔YD-HX01〕之复词；剥彖此句所说是卦中刚柔之消长（十二消息卦，读作消长环，`Becoming.Hexagram.waxWane`），与此计账不同构，以消息名普查之衡是本编的约定；消息之“息”为长，与不息之“息”（止）异义。\n\n**證**　`Becoming.mark`、`Becoming.held_over_stretch`、`Becoming.Listed`、`Becoming.Listed.over_stretch`、`Becoming.Web.Census.over_stretch`；记录 [coming-and-ceasing-keep-pace](../results/records/coming-and-ceasing-keep-pace.md)、[census-balance](../results/records/census-balance.md)。\n\n### 三·六　相代\n\n**經**　相代，一族于一段之中，成之数与毁之数相差不过其物之数也。凡有穷之族，所然定然否，则相代，且成无尽复现恰当毁无尽复现。凡待者有穷而活动定然否，作无尽复现恰当已无尽复现；自某步起一表尽其活动者，亦然，待者不必有穷。\n\n**說**　相代（同步，keep pace）由消息直接得出：始终之所然者都不过族之数，所以成与毁之差不过此数（`Becoming.keep_pace`），复现亦相随（`Becoming.coming_recurs_iff`）；读于活动即作已相随（`Becoming.Web.arising_recurs_iff`、`Becoming.Web.unceasing_iff`），只要自某步起有一表覆盖活动者（`Becoming.Web.unceasing_iff_covering`）。有穷做了功：物无穷时，可以作而永无已（`Becoming.Accretion.never_ceases`），可以已而永无作（`Becoming.Attrition.nothing_arises`），二者皆构造。定然否是这条律自己的条件：不加定然否而对每个有穷之宇要求它，恰等价于辞皆定然否（`Becoming.World.law_iff_em`，一·十二）。复现不随空步而变：插入无所为之步，作之复现与已之复现皆如故（`Becoming.World.stutter_arisingRecurs_iff`、`Becoming.World.stutter_ceasingRecurs_iff`）。“复现”是任意晚之步复见，不给频率。对照（相合，zhuangzi-ri-ye-xiang-dai）：「日夜相代乎前」〔ZH1-S05〕：死生存亡诸对相更替于前；以“命之行”为定数不带入。王弼「四时更运，功成则移。」〔DS01〕（定域，wangbi-gong-cheng-ze-yi）：作一般之言，只在有穷或有界时成立（三·七）。\n\n**證**　`Becoming.keep_pace`、`Becoming.coming_recurs_iff`、`Becoming.Web.arising_recurs_iff`、`Becoming.Web.unceasing_iff_covering`、`Becoming.Accretion.never_ceases`、`Becoming.Attrition.nothing_arises`、`Becoming.World.law_iff_em`、`Becoming.World.stutter_arisingRecurs_iff`、`Becoming.World.stutter_ceasingRecurs_iff`；记录 [coming-and-ceasing-keep-pace](../results/records/coming-and-ceasing-keep-pace.md)、[recurrence-without-decidedness](../results/records/recurrence-without-decidedness.md)、[only-the-order-of-change-shows](../results/records/only-the-order-of-change-shows.md)。\n\n### 三·七　列\n\n**經**　列，每步活动之待者各列一次也。凡有列而活动定然否：已无尽复现，则作无尽复现；自某步起所列不过一数，则作无尽复现恰当已无尽复现。凡数随步不减而无界，皆有宇以之为每步活动者之界，作无尽复现而无一已。\n\n**說**　列（普查，census，`Becoming.Web.Census`）只要求每步活动者有穷，待者总共可以无穷。第一律是消息的推论：已若无尽复现，其间之已累积而超过任何始列，只有作能补其差（`Becoming.Listed.coming_of_ceasing`）；只要任意晚之步有一表覆盖所然者即可（`Becoming.coming_of_ceasing_covered`）。反向须界（`Becoming.Web.unceasing_iff_bounded`；读于宇，`Becoming.World.CountedWithin.arising_iff_ceasing`）。界不须有穷：每步一物活动、物无穷之宇，作已皆无尽复现（`Becoming.World.procession_world`）；界亦不可少：列之数无界而增，不论多慢，可作而永无已（`Becoming.World.slow_world`，构造）。列与数分名：列是逐步之表，数是计数之关系（三·八）。\n\n**證**　`Becoming.Web.Census`、`Becoming.Listed.coming_of_ceasing`、`Becoming.coming_of_ceasing_covered`、`Becoming.Web.unceasing_iff_bounded`、`Becoming.World.CountedWithin.arising_iff_ceasing`、`Becoming.World.procession_world`、`Becoming.World.slow_world`；记录 [ceasing-needs-arising](../results/records/ceasing-needs-arising.md)、[bounded-census-keeps-pace](../results/records/bounded-census-keeps-pace.md)、[census-balance](../results/records/census-balance.md)。\n\n### 三·八　数与定数\n\n**經**　数，一表之中所然者之计也：其数存，恰当表中每物之然否已定。定数，一表之物各列一次也：能定数，恰当表中诸物之同异已定；能定数，不可非。凡于有列之族计其数，皆为计账；计数之逐点之律，恰为计账之律。\n\n**說**　数（计数，count，`Becoming.Counts`）是关系：表中每物以零或一计而相加，不须判定之程序；它存在恰在所计者已定之处（`Becoming.counts_iff_decided`）。定数（列一次即已定之同一）：一表能使每物只出现一次，恰当诸物两两之同异已定（`Becoming.listsOnce_iff_decided`），而这一点不可非（`Becoming.not_not_listsOnce`），所以凡在列一次之处否证某事之律，不待列一次即否证之（`Becoming.not_of_listsOnce`）。计一有列之族，每步所留者加其已者为前表，加其成者为后表，是为计账（`Becoming.FamilyCounts.tally`）；计账就是计数之全律（`Becoming.counting_laws`）。若数读于关系而不读于名，每宇每表之数皆定，恰等价于辞皆定然否（`Becoming.World.numbers_indiscernible_iff_em`）。对照（定域，xunzi-zhengming-yi-shi）：「此事之所以稽实定数也」〔RU2-S-XZ22〕：先定实之同异而后能数，这一向相合；反向（能列一次则同异已定）是理论所加；荀子之定数是动宾，不取命数、定数之义。\n\n**證**　`Becoming.Counts`、`Becoming.counts_iff_decided`、`Becoming.listsOnce_iff_decided`、`Becoming.not_not_listsOnce`、`Becoming.not_of_listsOnce`、`Becoming.FamilyCounts.tally`、`Becoming.counting_laws`、`Becoming.World.numbers_indiscernible_iff_em`；记录 [counts-exist-where-decided](../results/records/counts-exist-where-decided.md)、[listing-once-is-decided-identity](../results/records/listing-once-is-decided-identity.md)、[counting-where-the-counts-exist](../results/records/counting-where-the-counts-exist.md)、[whole-law-of-counting](../results/records/whole-law-of-counting.md)、[relata-counted-up-to-indiscernibility](../results/records/relata-counted-up-to-indiscernibility.md)。\n\n### 三·九　不息\n\n**經**　不息，于任意晚之步有待者作也。凡作必损一有穷之族（族无升之步，作则族有降）：不息，则不可谓族自某步起无升；凡升皆活动之与之者所为，则亦不可谓自某步起无活动之与之者。凡量不升而每作必降之，则不息不然。有其例：二所待之族，总量恒一，而作不息。\n\n**說**　不息（unceasing，`Becoming.Web.Unceasing`）只取弱义：某待者在任意晚之步作，同一待者可再作；不要求任何物永远活动，不读“更多”，也不是生生。在有穷而活动定然否之处，不息恰当已无尽复现（三·六），所以不息与已之复现并存。作必损其族时，不息须族中之升复现（`Becoming.Web.Unceasing.rises`），凡升皆由活动之与之者（补充者；与之＋者）所为时，须其活动复现（`Becoming.Web.Unceasing.activeRenewer_recurs`）；二者都是不可非之形。一量从不升而每作必降之（耗），则不息不成（`Becoming.Web.dissipation_arising_not_recurring`）；无耗则不然：二池之间一单位循环，总量恒一，作不息（`Becoming.Recycle.closed_unceasing`，构造），所以不息不须量增。反之，与之者之活动可复现而无一作（`Becoming.Tide.renewal_without_arising`，构造）：在这些前提下，不息严格强于补充之复现（篇五）。不息依于谁续谁：同一展开分名则不息，合名则作不复现（三·十六）；只改名则不息如故（三·十四）。讀（AI，D5、D45）：生生不息读于兼之层：其“不息”读为补充之复现，生生不息是生生在兼之中继续而仍有更多可形成，所以无损之复不足为生生不息；止之一族是不息之另一面（三·十一）。本条之不息在作损其族时须补充之复现，是此读的形式一面。对照（定域，kongyingda-sheng-bi-you-si）：「生生，不絕之辭。」〔YWH-H5〕：孔疏读生生为不绝、「後生次於前生」〔YWH-H5〕，近于此之不息，与生生（D1）所指不同。\n\n**證**　`Becoming.Web.Unceasing`、`Becoming.Web.Unceasing.rises`、`Becoming.Web.Unceasing.activeRenewer_recurs`、`Becoming.Web.dissipation_arising_not_recurring`、`Becoming.Recycle.closed_unceasing`、`Becoming.Tide.renewal_without_arising`；记录 [unceasing-generation-needs-renewal](../results/records/unceasing-generation-needs-renewal.md)。\n\n### 三·十　亡\n\n**經**　亡，待者自某步起永不活动也。有穷诸待者各亡，则自一步起皆不活动。凡待者以蓄承其活动，自某步起不容：其作不无尽复现；蓄不过 k，则此后任一段中其活动不过 k 次（活动定然否）；蓄随步而衰，则自不容之步加其蓄之数起，永不活动。\n\n**說**　亡（终止，ends，`Becoming.Web.Ends`）是终而不复，与已（一步之止，可再作）不同。有穷诸亡者同时尽（`Becoming.Web.Ends.all`）。蓄（储备，篇二）只延亡而不免：自某步起不容（不被支持）之后，作不复现（`Becoming.Web.Carries.arising_not_recurring`），活动之次数不过蓄量（`Becoming.Web.Carries.lasts_within`），蓄衰则过其蓄量之步数后不再活动（`Becoming.Web.Carries.ends_within`）。亡不是律：可以作无尽而无一已（三·六），也可有一体永不亡，以之为体之兼每步活动而无一作（`Becoming.Immortal.immortal`，构造）；后者之体不待任何所待，是模型之设。名取「死而不亡者寿」〔YD-LAO-BASE〕之亡，只指终而不复。对照（定域，jingang-you-wei-fa）：「一切有為法，如夢、幻、泡、影，如露亦如電」〔FO1-S-DIAMOND〕：有为无常在有穷族之复现上成立，对每一待者不成立。相分（hs-06-16-bu-si）：「人能养神则不死也」〔LC-HS-UP〕把不亡当作个体可得的无条件持存；凡有所需者，其持存以容为条件，蓄只延亡。\n\n**證**　`Becoming.Web.Ends`、`Becoming.Web.Ends.all`、`Becoming.Web.Carries.arising_not_recurring`、`Becoming.Web.Carries.lasts_within`、`Becoming.Web.Carries.ends_within`、`Becoming.Immortal.immortal`；记录 [reserve-defers-ending](../results/records/reserve-defers-ending.md)、[whole-persists-through-generation](../results/records/whole-persists-through-generation.md)。\n\n### 三·十一　止\n\n**經**　止，宇自某步起无物作、无物已也。凡宇有活动者之列与水平为正者之列，作者皆有形，衡而耗，自某步起每步围其水平为正者：其自某步起止，不可非。凡有穷而合诸设之宇皆能名其自此无作之步，则无穷可尽。以任何之量读宇，物皆有形，衡而耗，有活动者之列，自某步起每步围之，且其列之总量读于一表所含之状：亦止，不可非。\n\n**說**　止（停息，coming to rest，`Becoming.World.RestsFrom`）说作、已不再有，不说状不变（静，三·十二）。停息之律（`Becoming.World.comes_to_rest_unrefuted`）的每一设都不可少，得止者是每步有穷之活动者与水平为正者加上围，不是宇之有穷。其结论只是不可非：要名出那一步，对每个有穷而合诸设之宇都名出，即得无穷可尽（LPO，`Becoming.World.lpo_of_finite_ends`）。以任何之量读之（`Becoming.World.InAmounts`），不须最小之损，只须列之总量读于一表（`Becoming.World.InAmounts.rests_unrefuted_enclosed`）；量稠密而无此读时，一水平在二物之间对半相传，合其余诸设而作已永不止（`Becoming.HalvingPass.never_rests`，构造）。作无尽复现则不围（`Becoming.World.arising_opens`，篇四）。对照（定域）：「物不可以終止」〔YD-OW-XG〕作为普遍之言，理论只给出止之条件，在条件之外止与不止都不必然；王夫之「非杀不成乎永终，天地无永终之日矣。」〔YD-WF64〕（wangfuzhi-zhe-mao-sha-fei-sha）同此。\n\n**證**　`Becoming.World.RestsFrom`、`Becoming.World.comes_to_rest_unrefuted`、`Becoming.World.lpo_of_finite_ends`、`Becoming.World.InAmounts.rests_unrefuted_enclosed`、`Becoming.HalvingPass.never_rests`、`Becoming.World.arising_opens`；记录 [continued-change-needs-openness](../results/records/continued-change-needs-openness.md)、[counting-under-enclosure](../results/records/counting-under-enclosure.md)、[rest-theorem-in-any-amounts](../results/records/rest-theorem-in-any-amounts.md)。\n\n### 三·十二　静\n\n**經**　静，法所不改之状也。凡法，自一状之轨，自某步起不改而合一辞，恰当其轨至一静而合此辞之状。凡法之行，状之同异定然否，有一量于行中不降、状改则升、不过始之量加 d：则自不过 d 之某步起，其行不改，不待无穷可尽。一行至多一静。\n\n**說**　静（D45：一时成立者；D49 读“极”为法所不改之状，即此）与止不同：止说作、已不再有，静说状本身不再改变。第一律（`Becoming.Law.rests_iff`）：一轨自某步起停于所求，恰是到达一个合所求的静状；没有这样的静状，轨就不停于所求（无明之界，篇十一）。第二律说何时可知其已静：一般而言，知一行自何步不再改，须对每步判定此后是否再改（`Becoming.LastChange.settles_iff_decided`，一表所含而环中无改之行），对每个变要求此事恰等于无穷可尽（`Becoming.LastChange.lpo_iff_settles`）；若有一量记其改变，则在其量所余之步数内必静，可判定（`Becoming.LastChange.still_within`）；一行自二步皆不改，则二步之状同（`Becoming.LastChange.still_same`）。体制之余地一例中，带内每行于 3hi+3 步内静于汲取或其下（`Becoming.RegimeMargin.Adjusted.comes_to_rest`）。对照（定域，zhaolun-dong-jing）：「我之所謂靜者，亦以昔物不至今，故曰靜而非動。」〔CT1-S-ZL〕：僧肇之静是每步之关系自足、不待跨步之同一（三·十四），与此同字而所指不同，只取“一时成立”之义。\n\n**證**　`Becoming.Law.rests_iff`、`Becoming.LastChange.settles_iff_decided`、`Becoming.LastChange.lpo_iff_settles`、`Becoming.LastChange.still_within`、`Becoming.LastChange.still_same`、`Becoming.RegimeMargin.Adjusted.comes_to_rest`；记录 [seeking-boundary](../results/records/seeking-boundary.md)、[the-last-change-of-a-run](../results/records/the-last-change-of-a-run.md)、[where-a-run-of-a-regime-comes-to-rest](../results/records/where-a-run-of-a-regime-comes-to-rest.md)。\n\n### 三·十三　相续、续与新作\n\n**經**　相续，读一步之后某待者续一步之前某待者之关系也。续，待者于一步之后活动，而续一步之前某活动者也。新作，待者于一步之后活动，而不续一步之前任何活动者也；无续而已，待者于一步之前活动，而一步之后无活动者续之也。以每待者唯续其自身为相续，则新作即作，无续而已即已。\n\n**說**　相续（延续关系，continuation relation：`Becoming.Web.Continues` 诸定义共用之参数）是一种读法：谁续谁由读法给出，每步之关系不定之（三·十四）；它可以一续于多（裂）或多续于一（合），改认则每步一一对应。续（`Becoming.Web.Continues`，篇五之名）、新作（`Becoming.Web.ArisesFrom`；新组合，新＋作）与无续而已（`Becoming.Web.CeasesFrom`）都是定义；以自身续自身时回到三·二之作与已（`Becoming.Web.arisesFrom_self`、`Becoming.Web.ceasesFrom_self`），且无裂无合（`Becoming.Web.self_one_to_one`，三·十七）。对照（相合，zhonglun-bu-ji-bu-yi）：「若法從緣生，不即不異因，是故名實相，不斷亦不常。」〔FO1-S-MMK〕：续者不必是被续者（不常），被续者不算无续而已（不断）；相合只在定义上。又「因因而果，因不昔滅」〔CT1-S-ZL〕（相合，zhaolun-yin-bu-xi-mie）：为果所续之因虽不再活动，不算无续而已。起信「二者相續相。」〔FO2-QX〕一类古代之相续都是一对一之流。\n\n**證**　`Becoming.Web.Continues`、`Becoming.Web.ArisesFrom`、`Becoming.Web.CeasesFrom`、`Becoming.Web.arisesFrom_self`、`Becoming.Web.ceasesFrom_self`、`Becoming.Web.self_one_to_one`；记录 [census-balance-under-continuation](../results/records/census-balance-under-continuation.md)、[identity-across-steps](../results/records/identity-across-steps.md)。\n\n### 三·十四　化\n\n**經**　化，状变而续也。凡改认，每步之容、持、绝皆如故；改名，不息如故。然有改认，每步之关系如故，而原有一恒一竭者，改认后无一恒者而有二竭者；原不息不然，改认后不息。\n\n**說**　化（构形改变而同一不别）是一个组合：状跨步不同（篇一之状与同），而一续于前（三·十三）。待网以名定一步之某待者即次步之某待者；改认（reidentification，`Becoming.Reidentify`；新组合，改＋认）在每步一一对应两套命名，每步之水平、活动、待与资都不变，所以每步之容、持、绝不变（`Becoming.Web.reidentify_step`，由构造）；每步皆同之改认是改名，不改不息（`Becoming.Web.rename_unceasing`）。但只改谁续谁，追随一物之读法都可变：每奇数步交换名字，一恒一竭之网（`Becoming.Turnover.identified`）变为无恒而二竭、作不息之网（`Becoming.Turnover.reidentified`，构造）。所以跨步之同一由名之跨步之样式承载，是表示所给的对应前提，不是每步之关系的推论；它何时由关系固定，见三·十五。对照（定域，xunzi-zhengming-yi-shi）：「状变而实无别而为异者，谓之化」〔RU2-S-XZ22〕：荀子以“实无别”为可稽之事实，理论只在三·十五之条件下给出它，余处是读法。又（相合，zaahan-bian-yi-fei-wo）：「若無常、苦，是變易法，多聞聖弟子於中寧見有我、異我、相在不？」〔FO1-S-SA〕：无不依命名之自立者，其类随命名而定；“苦”之评价不带入。\n\n**證**　`Becoming.Reidentify`、`Becoming.Web.Continues`、`Becoming.Web.reidentify_step`、`Becoming.Web.rename_unceasing`、`Becoming.Turnover.identified`、`Becoming.Turnover.reidentified`；记录 [identity-across-steps](../results/records/identity-across-steps.md)。\n\n### 三·十五　衡定其续\n\n**經**　改认之下宇衡，恰当其所读之续皆在守恒之内，每步一一对应，不待他设。宇衡而物之同异定然否：凡使之仍衡之改认皆以 c 续 c，恰当一步之后无他物之水平与 c 同；有他物 d 之水平于一步之后与 c 同，则有使之仍衡之改认以 c 续为 d。\n\n**說**　宇中连一步于次步者，只有水平之衡：一物步后之水平加其所取，等于步前之水平加其所受；以此读出一续（守恒之续，`Becoming.World.Conserves`）。使宇仍衡之命名恰是守恒之内的一一相续（`Becoming.World.balanced_reidentify_iff`，无设）。于是同一何时是事实，恰有界：一步之后无他物与 c 同立，则 c 之同一固定（`Becoming.World.fixed_iff`）；有他物同立，则交换之仍衡（`Becoming.World.continues_as_alike`），而每步之记录在任何改认下不变（三·十四），宇之任何记录都不能在二者之间作决。作亦然：一物在每个仍衡之命名下作，恰当它在守恒之续下新作（`Becoming.World.arises_fixed_iff`）。讀（AI）：这是化之“实无别”在宇中成立之处；物之同异读于关系（篇一之同），不读于名。对照（相分，tiantai-bu-gai-ming-xing）：「性即不改義也」〔FO2-MH〕：以内在不可改者为性；此处同一只在上述条件下由关系固定，没有内在不可改者，属固定本性一层。\n\n**證**　`Becoming.World.Conserves`、`Becoming.World.balanced_reidentify_iff`、`Becoming.World.fixed_iff`、`Becoming.World.continues_as_alike`、`Becoming.World.arises_fixed_iff`；记录 [identity-across-steps](../results/records/identity-across-steps.md)、[classes-along-a-continuation](../results/records/classes-along-a-continuation.md)。\n\n### 三·十六　无间\n\n**經**　无间，改认存一步前后皆活动之待者之名也。凡改认无间，则不造作：新名之下之作，旧名之下亦作，故亦不造不息。旧名亦存新名之无间：则一步前活动者与一步后活动者同名者，一也；兼之新名存旧名之无间，则作与不息恰如故。有改认无间，合交替活动之二物为一名：分名则作不息，合名则作不复现。\n\n**說**　无间（连续，continuity；墨经“有间／无间”之复词）以旧命名为参照，是单向的读法：新名可以把旧名分开之物接起来而造连续，不能去之（`Becoming.Reidentify.KeepsActive`、`Becoming.Web.arises_of_keepsActive`、`Becoming.Web.unceasing_of_keepsActive`）。旧名存新名之无间时，同一步之接被排除（`Becoming.Web.no_join`）；双向时作与不息恰被保存（`Becoming.Web.arises_iff_of_keepsActive_both`、`Becoming.Web.unceasing_iff_of_keepsActive_both`）。单向之无间仍留下接续：二成员交替活动，分名时首成员于每奇数步作，合名时谱系每步活动而无作（`Becoming.Lineage.readings`）；合名存分名之一切无间，又多出分名所无之连续（`Becoming.Lineage.one_way`）。所以“谱系是一物之续，还是众物之作，还是二层并存”是读法，不是关系的推论。对照（相合，li-ji-ming）：「明兩作離，大人以繼明照于四方。」〔YD-JP30〕：“明两作”可读为两明之起（分名），也可读为一明之重（合名），二读并立；大人照四方之治理义不带入。\n\n**證**　`Becoming.Reidentify.KeepsActive`、`Becoming.Web.arises_of_keepsActive`、`Becoming.Web.unceasing_of_keepsActive`、`Becoming.Web.no_join`、`Becoming.Web.arises_iff_of_keepsActive_both`、`Becoming.Web.unceasing_iff_of_keepsActive_both`、`Becoming.Lineage.readings`、`Becoming.Lineage.one_way`；记录 [identity-across-steps](../results/records/identity-across-steps.md)。\n\n### 三·十七　裂与合\n\n**經**　裂，一步之前一活动者，续于一步之后二活动者也；合，一步之后一活动者，续一步之前二活动者也。凡有列，相续定然否，每步：无裂，则后列之数加无续而已者之数，不过前列之数加新作者之数；无合，则不少于；无裂无合，则相等。故有列而无裂，无续而已无尽复现，则新作无尽复现；有列而无合，自某步起所列不过一数，新作无尽复现，则无续而已亦无尽复现。\n\n**說**　裂（分裂，split，`Becoming.Web.NoSplit` 排除之）与合（并合，merge，`Becoming.Web.NoMerge` 排除之）不是改认：它们改变谁续谁，不改变任何一步待者之数；凡改认皆一无裂之相续（`Becoming.Web.continuation_reidentify`）。消息在相续之下分为两半（`Becoming.Web.Census.balanceFrom`，无裂无合则相等，`Becoming.Web.Census.balanceFrom_eq`），三·七之二律亦随之各得其半（`Becoming.Web.Census.arisingFrom_of_ceasingFrom`、`Becoming.Web.Census.ceasingFrom_of_arisingFrom`）。二设各不可少：同一网中每步二物活动，读作萌出，则无合、已复现而无新作（`Becoming.Tandem.budding`）；读作合，则无裂、每步不过二物活动，新作复现而无已（`Becoming.Tandem.joining`）。对照（定域，zhuangzi-dasheng-he-san）：「合則成體，散則成始。」〔ZH1-S19〕：以相续读合与散是 AI 的延伸；“散则成始”不是律：同一循环读作萌出，第一步之后无新作（`Becoming.Budding.growth_without_arising`），算不算始取决于所取之相续。\n\n**證**　`Becoming.Web.NoSplit`、`Becoming.Web.NoMerge`、`Becoming.Web.continuation_reidentify`、`Becoming.Web.Census.balanceFrom`、`Becoming.Web.Census.balanceFrom_eq`、`Becoming.Web.Census.arisingFrom_of_ceasingFrom`、`Becoming.Web.Census.ceasingFrom_of_arisingFrom`、`Becoming.Tandem.budding`、`Becoming.Tandem.joining`；记录 [census-balance-under-continuation](../results/records/census-balance-under-continuation.md)、[identity-across-steps](../results/records/identity-across-steps.md)。\n\n### 三·十八　多则新作\n\n**經**　一步前后之列皆无重：每无裂之相续之下，后列之物非皆续前列之物，恰当后多于前。物之同异定然否：一相续于每二列，后者无重而多于前者，皆使后者非皆续前者，恰当其无裂。每步有列：每无裂之相续之下，于任意晚之步，后者非皆续前者，恰当于任意晚之步后多于前。有列，参与于流者各列一次，唯活动者取而所取唯其所资，多而无已，相续定然否而无裂：则新作不息。\n\n**說**　一步之上，无裂是相续上的充要条件（`Becoming.forces_iff_noSplit`），后多于前是数上的充要条件（`Becoming.forced_iff_more`）：后不多于前，则按次序配对，即得一无裂而续后列每物之相续。一段之上同此（`Becoming.ListedWebs.forcedAlong_iff_more`）。多而无已（不止地更多；多＋而＋无已，篇四）于是在每个无裂之相续之下迫使新作不息（`Becoming.Flow.More.unceasingFrom`），所以它所迫使的作不是命名之产物。无裂是充分而非必要：一次裂之后新作仍可不息（`Becoming.Identity.Fork.split_unceasing`）；但读作萌出，同样的增长在第一步之后不迫使任何新作（`Becoming.Budding.growth_without_arising`）。经得起每种读法的，只是数：活动者越来越多。\n\n**證**　`Becoming.forces_iff_noSplit`、`Becoming.forced_iff_more`、`Becoming.ListedWebs.forcedAlong_iff_more`、`Becoming.Flow.More.unceasingFrom`、`Becoming.Identity.Fork.split_unceasing`、`Becoming.Budding.growth_without_arising`；记录 [identity-across-steps](../results/records/identity-across-steps.md)。\n\n### 三·十九　沿续之恒与竭\n\n**經**　沿相续而恒，凡续之者所待、所资者皆恒持也；沿相续而竭，有续之者资一终不足之所待也。沿一事而恒，恰当其自身所待、所资皆恒持，且次步凡续之之活动者沿相续皆恒：恒入裂之每支。沿一事而竭，恰当其资一终不足之所待，或次步有续之之活动者沿相续而竭：合者竭，则合入之每者皆竭。改认而移其相续，二类如故；每物唯续其自身而每步活动，则二类即以名读之恒与竭。\n\n**說**　恒（`Becoming.Web.RenewingIn`）与竭（`Becoming.Web.ConsumingIn`）是一行之类（篇五），以名读则随改认而变（三·十四）；沿相续读之，则由谁续谁而定，不由名定。分裂之律（`Becoming.Web.renewingAlong_iff`）使恒入每支，并合之律（`Becoming.Web.consumingAlong_iff`）使竭回到合入之每者；二类在任何移其相续之改认下不变（`Becoming.Web.renewingAlong_reidentify`、`Becoming.Web.consumingAlong_reidentify`），以自身续自身而每步活动时即名之类（`Becoming.Web.renewingAlong_itself_iff`、`Becoming.Web.consumingAlong_itself_iff`）。合可以定类：只资其水平在所需之上之条件者，以名读为恒；与一资竭尽之条件者合为一，沿合则竭（`Becoming.MergeClass.readings`，构造）。恒持、终不足是篇五之名（恒＋持；终＋不足）：所待之每一待每步皆持，与某一待此后永不再足。\n\n**證**　`Becoming.Web.RenewingAlong`、`Becoming.Web.ConsumingAlong`、`Becoming.Web.renewingAlong_iff`、`Becoming.Web.consumingAlong_iff`、`Becoming.Web.renewingAlong_reidentify`、`Becoming.Web.consumingAlong_reidentify`、`Becoming.Web.renewingAlong_itself_iff`、`Becoming.Web.consumingAlong_itself_iff`、`Becoming.MergeClass.readings`；记录 [classes-along-a-continuation](../results/records/classes-along-a-continuation.md)。\n\n### 三·二十　存与蛰\n\n**經**　存，待者于一步活动，或其某待于此步成立也。蛰，不活动而存也。以存读活动：存于一步之前者，跨此步不为作；活动者跨一步而已于存，恰当已于活动而次步不存：入蛰非已。改认存所存者之名，则一物于其存之每段，活动或蛰，唯一名；每步皆存者，其恒不随此等改认而变。\n\n**說**　存（持存，holds，`Becoming.Web.Holds`）是一步之持存；蛰（休眠，有所持守者）是其不活动之时。无间（三·十六）只读两端皆活动或皆有待之物，蛰者在其外，所以蛰后之醒是否为作，以名读则不定。以存读活动（`Becoming.Web.persisting`），醒不为作（`Becoming.Web.waking_not_arising`），入蛰不为已（`Becoming.Web.ceases_persisting_iff`）；存所存之名，一物于其所存之整段唯一名（`Becoming.Web.steady_held`），每步皆存者之恒不随改认而变（`Becoming.Web.renewingIn_held`）。这比双向之无间更强：冬眠者于休眠之步由其穴而存，与觅食者交换名字，双向保存活动与待之无间，而其类由恒变竭；存所存之名则排除此交换（`Becoming.Hibernation.readings`，构造）。界在无所存之步：那里存所存之名仍可接前后，并改其类（`Becoming.Dormancy.held_both`）。对照（定域，xici-chihuo-longshe）：「龙蛇之蛰，以存身也。」〔DS03〕：蛰是有所持守之休眠，蛰而存；“以存身”之目的义不带入。王夫之「貌杀非杀」〔YD-WF64〕（定域，wangfuzhi-zhe-mao-sha-fei-sha）：入蛰非已，相合于此。\n\n**證**　`Becoming.Web.Holds`、`Becoming.Web.persisting`、`Becoming.Web.waking_not_arising`、`Becoming.Web.ceases_persisting_iff`、`Becoming.Web.steady_held`、`Becoming.Web.renewingIn_held`、`Becoming.Hibernation.readings`、`Becoming.Dormancy.held_both`；记录 [identity-across-steps](../results/records/identity-across-steps.md)。\n\n### 三·二十一　继\n\n**經**　继，所资者每步皆由先后相继之源与之，而无一源再与也。有其例：流衡而耗，唯活动者与，每步取于池者一，池每步自外来，而无一源参与于二步，亦无一源活动于二步。\n\n**說**　继（接续：由先后相继之源供给，`Becoming.Successive.relay`）是一个构造之见证，不是律：每步一源，只在其本步活动，燃其本步之薪而与池一单位；一食者每步取于池。合 `Becoming.Lone.fed_not_recurring`（流衡而耗，池每步自外来，而无薪于其步之后被输），延续所须是被供给，不是某一供给者，也不是某一所待之复现。讀（AI，D12）：一延续之族所待于外者，是输送本身，输送可由一物传于他物。未证：诸源本身由流而作。继与三·十六之接（合终者与始者为一名）不同：继不改任何命名。中庸之“继志”不在此名之内，留作缺口。\n\n**證**　`Becoming.Successive.relay`、`Becoming.Lone.fed_not_recurring`；记录 [continuing-self-fed-from-beyond](../results/records/continuing-self-fed-from-beyond.md)。\n\n### 三·二十二　火传\n\n**經**　火传，样式之载者各暂，而样式经传而久也。设凡于次步载样式者，或本步已载之，或本步载之者传之：则凡始载者皆受传于载者；样式自某步起每步皆在，而载者无载于相隔 d 步之二步者，则自此每 d 步之内必有一传；自某步 T 起无传，则自 T 加 d 起无载者；一步无载，则此后皆无。\n\n**說**　火传（样式经由传递而延续）之设（`Becoming.Web.ByPassing`）是对“载怎样形成”的读法，是所给的，不是推出的。在此设下，凡始载皆是受传（`Becoming.Web.ByPassing.begins_passed`），样式久则传不断（`Becoming.Web.ByPassing.passes_within`，所给之步与二载者皆明出），传止则样式于一跨度内尽（`Becoming.Web.ByPassing.ends_within`），一步之空即永空（`Becoming.Web.ByPassing.empty_stays`）。见证：每载者只载两步而皆终，样式每步皆在（`Becoming.PatternRelay.relay`）；自 T 止传，样式恰自 T＋2 起不在，界可达（`Becoming.PatternRelay.stopped_relay`）。所传为何、值不值得传，此处不说。对照（定域，zhuangzi-xin-huo）：「指窮於爲薪，火傳也，不知其盡也。」〔ZH1-S03〕：薪各尽而火传；“不知其尽”只在传不止时成立，不是不灭之证。慧远「火之傳異薪。猶神之傳異形。前薪非後薪。」〔IN1-S03〕（定域，huiyuan-xin-huo）：传之结构相合；若读“神”为不随化而不灭者，则相分。\n\n**證**　`Becoming.Web.ByPassing`、`Becoming.Web.ByPassing.begins_passed`、`Becoming.Web.ByPassing.passes_within`、`Becoming.Web.ByPassing.ends_within`、`Becoming.Web.ByPassing.empty_stays`、`Becoming.PatternRelay.relay`、`Becoming.PatternRelay.stopped_relay`；记录 [a-pattern-lasts-through-passing](../results/records/a-pattern-lasts-through-passing.md)。\n\n### 三·二十三　兼与体\n\n**經**　兼，每步活动恰当其体有一活动之待者也；体，兼所合之待者也。凡待者皆其自身之兼；二待者每步皆活动，则互为兼。兼作，则必有一体同步而作；故兼于任意晚之步作，则体于任意晚之步作。\n\n**說**　兼（整体，whole，`Becoming.Web.Whole`）是活动之相合，析取而非构成：每一待者都是其自身之兼（`Becoming.Web.whole_self`），二恒活动者互为兼（`Becoming.Immortal.each_other`）。兼之作只是体之作（`Becoming.Web.Whole.arises_part`、`Becoming.Web.Whole.parts_unceasing`）；反向不然，体之作已不使兼作已（三·二十四）。哪些待者是哪一兼之体，是表示之选择。名取「體，分於兼也」〔MI1-S-JS〕：体是兼之一分，不带体用之本原义。对照（定域，mojing-sun-jian-ti）：「其體或去或存，謂其存者損。」〔MI1-S-SS〕：体或去，只要尚有一体活动，析取之兼仍全然活动；“谓其存者损”所说的减损之兼（合取或分级之兼）脊柱未有，列为缺口（未決）。中论「若我是五陰，我即為生滅」〔FO1-S-MMK〕（定域，zhonglun-wo-wu-yin）：若我是诸蕴之兼，我之作即某蕴之作；“我自身必生必灭”则不成立（三·二十四）。\n\n**證**　`Becoming.Web.Whole`、`Becoming.Web.whole_self`、`Becoming.Immortal.each_other`、`Becoming.Web.Whole.arises_part`、`Becoming.Web.Whole.parts_unceasing`；记录 [whole-persists-through-generation](../results/records/whole-persists-through-generation.md)。\n\n### 三·二十四　兼之久\n\n**經**　兼自某步起每步活动：其体无活动于相隔 d 步之二步者，则自此无连 d 步而无体作者；其体各亡而每步有列，则不可谓自某步起无体作，于任一有穷之体之表外，亦不可谓自某步起无体作。体各亡而有列，自某步起无体作，则兼亡。\n\n**說**　兼只经体之作而久（`Becoming.Web.Whole.arises_within`、`Becoming.Web.Whole.needs_arising`），体各亡时须不断有新体（`Becoming.Web.Whole.needs_new`）；同一事从反面读，体各亡而不再作，兼亡（`Becoming.Web.Whole.ends_without_arising`）。每设皆不可少：有一体永不亡，兼久而无作（`Becoming.Immortal.immortal`）；同时活动之体无穷，兼久而无作，且无有穷之表（`Becoming.Countless.countless`）。诸设相容：一代接一代，每代活动两步，谱系每步活动而从不作，每步有一成员作（`Becoming.Generations.generations`）；界 d 可达（`Becoming.Shifts.shifts`）；反向不成立，体无尽复作而兼可有不活动之步（`Becoming.Gaps.gaps`）。体暂而不亡时，久兼之作可只是同样之体再作，无一新者（`Becoming.Layered.arise_again`）；要新体须体各亡，而新体不须更多，每步两个即足。讀（AI，D5）：生生不息读于兼之层，世系与成员是其中之层。对照（相分，hanfeizi-jielao-bu-ke-wei-chang）：「唯夫與天地之剖判也具生，至天地之消散也不死不衰者謂「常」。」〔CV1-S-JL〕：立一与始终同在而不变者为常，属本原一层；理论中无无条件之持存之律，久者只经体之作。\n\n**證**　`Becoming.Web.Whole.arises_within`、`Becoming.Web.Whole.needs_arising`、`Becoming.Web.Whole.needs_new`、`Becoming.Web.Whole.ends_without_arising`、`Becoming.Countless.countless`、`Becoming.Generations.generations`、`Becoming.Shifts.shifts`、`Becoming.Gaps.gaps`；记录 [whole-persists-through-generation](../results/records/whole-persists-through-generation.md)、[whole-drawing-beyond-renewal-ends](../results/records/whole-drawing-beyond-renewal-ends.md)。\n\n#### 对照\n\n- 「已，成、亡。」〔MI1-S-JS〕——相合：一所然在步间的两种变，成与毁；墨经以已兼成亡，本编以已专名活动之止（mojing-yi-cheng-wang）。\n- 「日夜相代乎前」〔ZH1-S05〕——相合：互补之对相更替；有穷之族中成毁之数相差不过物数，复现相随（zhuangzi-ri-ye-xiang-dai）。\n- 「人之生，氣之聚也，聚則爲生，散則爲死。」〔ZH1-S22〕——定域：作即聚只在有形之物；气为底质不带入（zhuangzi-zhibeiyou-ju-san）。\n- 「状变而实无别而为异者，谓之化」〔RU2-S-XZ22〕——定域：跨步之同一由命名承载，只在衡而步后无他物同立之处由关系固定（xunzi-zhengming-yi-shi）。\n- 「若法從緣生，不即不異因，是故名實相，不斷亦不常。」〔FO1-S-MMK〕——相合：续、新作与无续而已之定义，续者不必是被续者（zhonglun-bu-ji-bu-yi）。\n- 「指窮於爲薪，火傳也，不知其盡也。」〔ZH1-S03〕——定域：样式经传而久；传止则于一跨度内尽（zhuangzi-xin-huo）。\n- 「无古今而後能入於不死不生。」〔ZH1-S06〕——相分：设一外于作已之境，属本原一层；作与已是任一待者活动之变，展开之外无不生不死之境（zhuangzi-bu-si-bu-sheng）。\n- 「唯夫與天地之剖判也具生，至天地之消散也不死不衰者謂「常」。」〔CV1-S-JL〕——相分：与始终同在而不变之常属本原；兼只经体之作而久（hanfeizi-jielao-bu-ke-wei-chang）。\n",
+ "declarations": [
+  "Becoming.Accretion.never_ceases",
+  "Becoming.Accretion.never_falls",
+  "Becoming.Attrition.nothing_arises",
+  "Becoming.Budding.growth_without_arising",
+  "Becoming.CeasesToBe",
+  "Becoming.ComesToBe",
+  "Becoming.Countless.countless",
+  "Becoming.Counts",
+  "Becoming.Dormancy.held_both",
+  "Becoming.FamilyCounts.tally",
+  "Becoming.Flow.Balances.fall_taken",
+  "Becoming.Flow.More.unceasingFrom",
+  "Becoming.Gaps.gaps",
+  "Becoming.Generations.generations",
+  "Becoming.HalvingPass.never_rests",
+  "Becoming.Hexagram.waxWane",
+  "Becoming.Hibernation.readings",
+  "Becoming.Identity.Fork.split_unceasing",
+  "Becoming.Immortal.each_other",
+  "Becoming.Immortal.immortal",
+  "Becoming.LastChange.lpo_iff_settles",
+  "Becoming.LastChange.settles_iff_decided",
+  "Becoming.LastChange.still_same",
+  "Becoming.LastChange.still_within",
+  "Becoming.Law.rests_iff",
+  "Becoming.Layered.arise_again",
+  "Becoming.Lineage.one_way",
+  "Becoming.Lineage.readings",
+  "Becoming.Listed",
+  "Becoming.Listed.coming_of_ceasing",
+  "Becoming.Listed.over_stretch",
+  "Becoming.ListedWebs.forcedAlong_iff_more",
+  "Becoming.Lone.fed_not_recurring",
+  "Becoming.MergeClass.readings",
+  "Becoming.PatternRelay.relay",
+  "Becoming.PatternRelay.stopped_relay",
+  "Becoming.Recycle.closed_unceasing",
+  "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+  "Becoming.Reidentify",
+  "Becoming.Reidentify.KeepsActive",
+  "Becoming.Shifts.shifts",
+  "Becoming.Successive.relay",
+  "Becoming.Tandem.budding",
+  "Becoming.Tandem.joining",
+  "Becoming.Tide.renewal_without_arising",
+  "Becoming.Turnover.identified",
+  "Becoming.Turnover.reidentified",
+  "Becoming.Web.Arises",
+  "Becoming.Web.ArisesFrom",
+  "Becoming.Web.ByPassing",
+  "Becoming.Web.ByPassing.begins_passed",
+  "Becoming.Web.ByPassing.empty_stays",
+  "Becoming.Web.ByPassing.ends_within",
+  "Becoming.Web.ByPassing.passes_within",
+  "Becoming.Web.Carries.arising_not_recurring",
+  "Becoming.Web.Carries.ends_within",
+  "Becoming.Web.Carries.lasts_within",
+  "Becoming.Web.Ceases",
+  "Becoming.Web.CeasesFrom",
+  "Becoming.Web.CeasesToStand",
+  "Becoming.Web.Census",
+  "Becoming.Web.Census.arisingFrom_of_ceasingFrom",
+  "Becoming.Web.Census.balanceFrom",
+  "Becoming.Web.Census.balanceFrom_eq",
+  "Becoming.Web.Census.ceasingFrom_of_arisingFrom",
+  "Becoming.Web.Census.over_stretch",
+  "Becoming.Web.ComesToStand",
+  "Becoming.Web.ConsumingAlong",
+  "Becoming.Web.ConsumingIn",
+  "Becoming.Web.Continues",
+  "Becoming.Web.Embodied",
+  "Becoming.Web.Embodied.comesToStand",
+  "Becoming.Web.Ends",
+  "Becoming.Web.Ends.all",
+  "Becoming.Web.Falls",
+  "Becoming.Web.Holds",
+  "Becoming.Web.NoMerge",
+  "Becoming.Web.NoSplit",
+  "Becoming.Web.RenewingAlong",
+  "Becoming.Web.RenewingIn",
+  "Becoming.Web.Rises",
+  "Becoming.Web.Unceasing",
+  "Becoming.Web.Unceasing.activeRenewer_recurs",
+  "Becoming.Web.Unceasing.rises",
+  "Becoming.Web.Whole",
+  "Becoming.Web.Whole.arises_part",
+  "Becoming.Web.Whole.arises_within",
+  "Becoming.Web.Whole.ends_without_arising",
+  "Becoming.Web.Whole.needs_arising",
+  "Becoming.Web.Whole.needs_new",
+  "Becoming.Web.Whole.parts_unceasing",
+  "Becoming.Web.arisesFrom_self",
+  "Becoming.Web.arises_iff_of_keepsActive_both",
+  "Becoming.Web.arises_of_keepsActive",
+  "Becoming.Web.arising_recurs_iff",
+  "Becoming.Web.ceasesFrom_self",
+  "Becoming.Web.ceases_persisting_iff",
+  "Becoming.Web.change_readings",
+  "Becoming.Web.consumingAlong_iff",
+  "Becoming.Web.consumingAlong_itself_iff",
+  "Becoming.Web.consumingAlong_reidentify",
+  "Becoming.Web.continuation_reidentify",
+  "Becoming.Web.dissipation_arising_not_recurring",
+  "Becoming.Web.falls_need_rises",
+  "Becoming.Web.no_join",
+  "Becoming.Web.persisting",
+  "Becoming.Web.reidentify_step",
+  "Becoming.Web.rename_unceasing",
+  "Becoming.Web.renewingAlong_iff",
+  "Becoming.Web.renewingAlong_itself_iff",
+  "Becoming.Web.renewingAlong_reidentify",
+  "Becoming.Web.renewingIn_held",
+  "Becoming.Web.self_one_to_one",
+  "Becoming.Web.standing_recurs_iff",
+  "Becoming.Web.steady_held",
+  "Becoming.Web.unceasing_iff",
+  "Becoming.Web.unceasing_iff_bounded",
+  "Becoming.Web.unceasing_iff_covering",
+  "Becoming.Web.unceasing_iff_of_keepsActive_both",
+  "Becoming.Web.unceasing_of_keepsActive",
+  "Becoming.Web.waking_not_arising",
+  "Becoming.Web.whole_self",
+  "Becoming.World.Conserves",
+  "Becoming.World.CountedWithin.arising_iff_ceasing",
+  "Becoming.World.InAmounts",
+  "Becoming.World.InAmounts.rests_unrefuted_enclosed",
+  "Becoming.World.RestsFrom",
+  "Becoming.World.arises_fixed_iff",
+  "Becoming.World.arising_opens",
+  "Becoming.World.balanced_reidentify_iff",
+  "Becoming.World.comes_to_rest_unrefuted",
+  "Becoming.World.continues_as_alike",
+  "Becoming.World.fixed_iff",
+  "Becoming.World.law_iff_em",
+  "Becoming.World.lpo_of_finite_ends",
+  "Becoming.World.numbers_indiscernible_iff_em",
+  "Becoming.World.procession_world",
+  "Becoming.World.slow_world",
+  "Becoming.World.stutter_arisingRecurs_iff",
+  "Becoming.World.stutter_ceasingRecurs_iff",
+  "Becoming.coming_of_ceasing_covered",
+  "Becoming.coming_recurs_iff",
+  "Becoming.counting_laws",
+  "Becoming.counts_iff_decided",
+  "Becoming.falling_recurs",
+  "Becoming.family_over_stretch",
+  "Becoming.forced_iff_more",
+  "Becoming.forces_iff_noSplit",
+  "Becoming.held_over_stretch",
+  "Becoming.keep_pace",
+  "Becoming.listsOnce_iff_decided",
+  "Becoming.mark",
+  "Becoming.not_not_listsOnce",
+  "Becoming.not_of_listsOnce",
+  "Becoming.over_stretch",
+  "Becoming.persists",
+  "Becoming.rising_recurs",
+  "Becoming.stays_failing"
+ ],
+ "records": [
+  "a-pattern-lasts-through-passing",
+  "bounded-census-keeps-pace",
+  "ceasing-needs-arising",
+  "census-balance",
+  "census-balance-under-continuation",
+  "classes-along-a-continuation",
+  "coming-and-ceasing-keep-pace",
+  "continued-change-needs-openness",
+  "continuing-self-fed-from-beyond",
+  "counting-under-enclosure",
+  "counting-where-the-counts-exist",
+  "counts-exist-where-decided",
+  "generation-is-replenishment",
+  "identity-across-steps",
+  "listing-once-is-decided-identity",
+  "only-the-order-of-change-shows",
+  "recurrence-without-decidedness",
+  "relata-counted-up-to-indiscernibility",
+  "reserve-defers-ending",
+  "rest-theorem-in-any-amounts",
+  "rising-and-falling-in-one-exchange",
+  "seeking-boundary",
+  "space-and-its-parts",
+  "the-last-change-of-a-run",
+  "unceasing-generation-needs-renewal",
+  "where-a-run-of-a-regime-comes-to-rest",
+  "whole-drawing-beyond-renewal-ends",
+  "whole-law-of-counting",
+  "whole-persists-through-generation"
+ ],
+ "quotes": [
+  {
+   "text": "已，成、亡。",
+   "source_id": "MI1-S-JS"
+  },
+  {
+   "text": "已，爲衣，成也。治病，亡也。",
+   "source_id": "MI1-S-SS"
+  },
+  {
+   "text": "万物并作",
+   "source_id": "DS01"
+  },
+  {
+   "text": "學不可以已",
+   "source_id": "RU2-S-XZ01"
+  },
+  {
+   "text": "人之生，氣之聚也，聚則爲生，散則爲死。",
+   "source_id": "ZH1-S22"
+  },
+  {
+   "text": "聚極則散",
+   "source_id": "YWH-H4"
+  },
+  {
+   "text": "方其散也，安得遽谓之无？",
+   "source_id": "RU2-S-S02"
+  },
+  {
+   "text": "君子尚消息盈虛",
+   "source_id": "YD-HX01"
+  },
+  {
+   "text": "日夜相代乎前",
+   "source_id": "ZH1-S05"
+  },
+  {
+   "text": "四时更运，功成则移。",
+   "source_id": "DS01"
+  },
+  {
+   "text": "此事之所以稽实定数也",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "生生，不絕之辭。",
+   "source_id": "YWH-H5"
+  },
+  {
+   "text": "後生次於前生",
+   "source_id": "YWH-H5"
+  },
+  {
+   "text": "死而不亡者寿",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "一切有為法，如夢、幻、泡、影，如露亦如電",
+   "source_id": "FO1-S-DIAMOND"
+  },
+  {
+   "text": "人能养神则不死也",
+   "source_id": "LC-HS-UP"
+  },
+  {
+   "text": "物不可以終止",
+   "source_id": "YD-OW-XG"
+  },
+  {
+   "text": "非杀不成乎永终，天地无永终之日矣。",
+   "source_id": "YD-WF64"
+  },
+  {
+   "text": "我之所謂靜者，亦以昔物不至今，故曰靜而非動。",
+   "source_id": "CT1-S-ZL"
+  },
+  {
+   "text": "若法從緣生，不即不異因，是故名實相，不斷亦不常。",
+   "source_id": "FO1-S-MMK"
+  },
+  {
+   "text": "因因而果，因不昔滅",
+   "source_id": "CT1-S-ZL"
+  },
+  {
+   "text": "二者相續相。",
+   "source_id": "FO2-QX"
+  },
+  {
+   "text": "状变而实无别而为异者，谓之化",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "若無常、苦，是變易法，多聞聖弟子於中寧見有我、異我、相在不？",
+   "source_id": "FO1-S-SA"
+  },
+  {
+   "text": "性即不改義也",
+   "source_id": "FO2-MH"
+  },
+  {
+   "text": "明兩作離，大人以繼明照于四方。",
+   "source_id": "YD-JP30"
+  },
+  {
+   "text": "合則成體，散則成始。",
+   "source_id": "ZH1-S19"
+  },
+  {
+   "text": "龙蛇之蛰，以存身也。",
+   "source_id": "DS03"
+  },
+  {
+   "text": "貌杀非杀",
+   "source_id": "YD-WF64"
+  },
+  {
+   "text": "指窮於爲薪，火傳也，不知其盡也。",
+   "source_id": "ZH1-S03"
+  },
+  {
+   "text": "火之傳異薪。猶神之傳異形。前薪非後薪。",
+   "source_id": "IN1-S03"
+  },
+  {
+   "text": "體，分於兼也",
+   "source_id": "MI1-S-JS"
+  },
+  {
+   "text": "其體或去或存，謂其存者損。",
+   "source_id": "MI1-S-SS"
+  },
+  {
+   "text": "若我是五陰，我即為生滅",
+   "source_id": "FO1-S-MMK"
+  },
+  {
+   "text": "唯夫與天地之剖判也具生，至天地之消散也不死不衰者謂「常」。",
+   "source_id": "CV1-S-JL"
+  },
+  {
+   "text": "无古今而後能入於不死不生。",
+   "source_id": "ZH1-S06"
+  }
+ ],
+ "missing_names": [
+  {
+   "concept": "determination: a step-indexed proposition p : Nat → Prop, the subject of ComesToBe/CeasesToBe",
+   "used": "所然（随篇一·四之用法）"
+  },
+  {
+   "concept": "ceasing under a continuation (Web.CeasesFrom)",
+   "used": "无续而已"
+  },
+  {
+   "concept": "tally (Becoming.Tally: n t = k + c t, n (t+1) = k + a t)",
+   "used": "计账"
+  },
+  {
+   "concept": "counting a determination as zero or one (Becoming.mark)",
+   "used": "只计零或一"
+  },
+  {
+   "concept": "brief for d (Web.Brief: never active at two steps d apart), for parts and for carriers",
+   "used": "无活动于相隔 d 步之二步者；载者无载于相隔 d 步之二步者"
+  },
+  {
+   "concept": "cover (Web.Covered: some part active at each step from T on)",
+   "used": "平语：每步有体活动"
+  },
+  {
+   "concept": "the continuation a world's relations induce (World.Conserves)",
+   "used": "守恒之续"
+  },
+  {
+   "concept": "an event depletes a family (Web.Depletes: at each event step where no member rises, one falls)",
+   "used": "作损其族（族无升之步作则族有降）；借 C04 之「损」"
+  },
+  {
+   "concept": "active renewer and every rise made by one (Web.ActiveRenewer, Web.RenewedBy)",
+   "used": "活动之与之者；借 C04「与之者」（其锚是 Flow.renewers，不全同）"
+  },
+  {
+   "concept": "census of what stands (Web.StandingCensus)",
+   "used": "水平为正者之列"
+  },
+  {
+   "concept": "renewing / consuming along a continuation (Web.RenewingAlong, Web.ConsumingAlong)",
+   "used": "沿相续而恒／沿相续而竭"
+  },
+  {
+   "concept": "reading activity through what holds (Web.persisting h)",
+   "used": "以存读活动"
+  },
+  {
+   "concept": "pattern and its carriers under the passing premise (Web.ByPassing, carrying)",
+   "used": "样式、载者；火传之设"
+  },
+  {
+   "concept": "idle step / stuttering (Stutter, World.sample)",
+   "used": "空步、无所为之步"
+  },
+  {
+   "concept": "a run settles / is still from a step (Enough.Settles, LastChange.StillFrom)",
+   "used": "其行不改；自某步起静"
+  },
+  {
+   "concept": "a quantity marking a run's changes (Marks: never falls, rises at each change)",
+   "used": "平语：一量于行中不降、状改则升"
+  },
+  {
+   "concept": "recurs at arbitrarily late steps (Recurs, Unceasing pattern)",
+   "used": "无尽复现（随篇一）"
+  },
+  {
+   "concept": "a configuration not alike across a step (¬ Alike), used to compose 化",
+   "used": "状变（篇一之状与 C07 之同的否定）"
+  },
+  {
+   "concept": "conjunctive or graded whole (华严总相、墨经损、苏辙车)",
+   "used": "减损之兼（合取或分级之兼），无锚，记为缺口"
+  }
+ ],
+ "open": "一、未落地之引理与缺口：成毁对偶（CeasesToBe p → ComesToBe ¬p，正向两行、逆向须定然否）不在核心，三·一以「未決」标出；合取或分级之兼（华严总相、墨经「謂其存者損」、苏辙车）脊柱只有析取之 Web.Whole，三·二十三记为缺口；唯识「不可說有能生用」（不变者无使他者作之效）未找到对应定理，本篇未收；中庸「继志」不在「继」名之内。二、名之张力，交整合者：名表以「不息」锚 Web.Unceasing（作之复现），D5／D45 则读「生生不息」之不息为补充（恒）之复现；本篇两义并陈（三·九），未改名表。「已」之出处墨经「已，成、亡」兼成与亡，本篇只作成毁之旁证。「亡」名 Web.Ends，核查者曾建议「永終」；本篇从名表。「继」名表锚 Succession 模块（Successive.relay，所资由相继之源与之），而离大象「繼明」之结构是 Lineage.one_way（合名），本篇把后者放在无间（三·十六）之对照中。「消息」之出处剥彖所说是 Hexagram.waxWane（消长环），以消息名普查之衡是约定。「化」无单一 Lean 声明，是「状变（非同）＋续」之组合，Lean 中未单列「续而状不同」之律。「静」只对法之轨（Law.rests_iff、LastChange）陈述；宇中「自某步起状不变」与「止」（无作无已）之间的蕴含未有定理，本篇只说二者不同，不说一者蕴含另一者。三、新模块之取舍：自 20 日以来的模块中，本篇收 ContinuedClasses（沿续之恒与竭、World.continues_as_alike）、InAmounts（任何之量中之止）、Stuttering（空步不改作已之复现），并收 LastChange 与 RegimeMargin.Adjusted.comes_to_rest 于静；CensusTable 只取其 FamilyCounts.tally，World.table_holds 等普查表之律未写；IdleRemoval（去空步不改计数）、ListingRefutations（否证之律不待列一次，只引 not_of_listsOnce）未单列；Optimum、JointDraw、DrawnBeyond、Growth、OwnWidening、Weightings、Direction、Retaining、BoundedSignificance、Clearing、ClosedCapture、Drift、Reproduction、SelectionLevels、SelectionTerm、GroupEnding、PropositionIdentity、HexagramCommuting 等之结构属他簇，不入本篇。四、未证或只作读法者：停息之律各设之必要性只引记录（leaking、attrition、throughput 诸例未逐一列出全名）；混合普查之充分条件未证；继之诸源本身由流而作未证；火传之设是所给之读法，不是推出。五、条数：本篇 24 条，少数條之證超过八个声明（三·六、三·十七、三·十九各九个），因經中每一断言都须有證。"
+}

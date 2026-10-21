@@ -1,0 +1,217 @@
+[
+ {
+  "type": "other",
+  "clusters": [
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C08",
+   "C10",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "C17"
+  ],
+  "detail": "基线漂移（AI 核查）。zhonghua 分支（309af1124）落后于 main（共享检出 d3e25d331）。(1) 17 处锚点在 main 上已失效。其中 12 处用的是 R30 已退役的名字：Web.Returns、ReturnsWithin、Returns.not_consumed、RenewedWithin.returns、Unceasing.regeneration_recurs、generation_draws_in、generation_fed_from_beyond、generation_needs_replenishment、dissipation_generation_not_recurring、Fork.split_unceasing、Learnable.label_of_rests、table_rests。它们牵连 復足、不復足、期、开、转、生生、损、汲、自外来、不息、分／合、当簿。另 5 处在分支上存在、main 上已无：LoopReturn.whole_strengths（现为 whole_factors）、SharedCodes.impose_reads、Web.forms_between、Web.dissolves_between、whole_falls_not_recurring。它们牵连 報、制名、結／解、端。核验人说 impose_reads『不存在』不准确，这些锚点是过时，不是捏造。(2) main 的章节已重排：条件由 §6.15 改为 §6.4；词汇表在 27ebe6735 改写，新增核心术语表，五个词各守一义；§10 元闭一行新增 Becoming.ClosedCapture（读法本身从份额形成时，读法之变也被吸收，离开的是律之变）。(3) AGENTS 与章节今作：排序只在 C（称扩展为更好），不变性一步不排序。brief 中『C 与不变性一步』的说法已过时。",
+  "action": "以 main 的一个固定提交为唯一基线。用 r30-names/RENAME-TABLE.json、r32-folds、r35-corpus 重绑全部锚点，重新核对每个声明全名确实存在。改正所有节号（§6.15→§6.4 等）。按 ClosedCapture 重写 元闭 与 柄移 的结构说明。凡说『排序在 C 与不变性一步』之处一律改为『排序只在 C』，至少包括 brief、C14 的 无弃 条，以及条目 xici-ji-zhi-zhe-shan、lao-62。"
+ },
+ {
+  "type": "other",
+  "clusters": [
+   "C01",
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C07",
+   "C08",
+   "C09",
+   "C10",
+   "C11",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "C17"
+  ],
+  "detail": "缺一张跨版本对照表。main 的 .zh.md 词汇表已有现代中文定名，如 生命意义（living significance，词汇表 22 次）、静／停（D45）、生起／止息（D36）、观（view）、读法（reading），各簇的古典名没有与之一一对接。",
+  "action": "建两栏表：古典名 ↔ main zh 词汇表术语，要求一对一；凡一对多或多对一，都归入下面的 collision 条处理。"
+ },
+ {
+  "type": "unmapped-concept",
+  "clusters": [
+   "C04",
+   "C11",
+   "C13",
+   "C14",
+   "C16"
+  ],
+  "detail": "索引级空缺：ExchangeLaw；阈值（threshold）与层级耦合（level coupling）的区分；通用闭包标记；排除（Exclusion）；选择者（selector）；对一切的对齐（alignment for all）；守恒／第一定律。",
+  "action": "第一批定名：ExchangeLaw、阈值／层级耦合、闭包标记、排除、守恒。其余可写成固定短语，不立单名，但须锚在 Lean 声明上。"
+ },
+ {
+  "type": "unplaced-symbol",
+  "clusters": [
+   "C01",
+   "C04"
+  ],
+  "detail": "气：无放置。RO 已有 ru-zhangzai-tai-xu-ji-qi（相合）、zx-qi-li（定域）、kong-taiji-yuanqi 与 ru-zhuxi-li-qi-er-wu（相分）。「通天下一氣耳」（ZH1-S22）。",
+  "action": "不采为名（作基底，有引入独立实体之嫌）。知北遊 此句与张载 太虚即气 作相合条目，对应 Flow.Balances.fall_taken（守恒中的流转）；朱熹 理气二分作相分条目。"
+ },
+ {
+  "type": "unplaced-symbol",
+  "clusters": [
+   "C03",
+   "C04",
+   "C01"
+  ],
+  "detail": "有、无、虚、一、多、静、动：无放置或只零星。静 按 D45 是『即时成立者』，与 停（来到静）分开，但无簇放置 静。RO 有 lao-02-you-wu-xiang-sheng（定域）、wb-40-38-yi-wu-wei-ben（相分）。",
+  "action": "静 定为律的不动态（D45），动 为 move 或步的候选，与 步 一并决定。有／无：决定它们是指『成立／不成立』还是指 ComesToStand；王弼 以无为本 作相分条目。虚 不采（张载 太虚 有相分面，但 太虚即气 相合）。一／多：一 不作本体名（见 collision 一實）；多 随计数定名。"
+ },
+ {
+  "type": "unplaced-symbol",
+  "clusters": [
+   "C04",
+   "C11",
+   "C17",
+   "C13"
+  ],
+  "detail": "几、势、象、数、通、反、中、和、公、私：各只有零星否决，没有一字一决定。几 与已采的 机 关系未定，易 p-zhiji 条。势 有两义：盆地／吸引域，与 兵家 的位势。「如轉圓石於千仞之山者，勢也」（BI1-S-SZ）。数 有计数义与定数（命运）义。通 有多义：「推而行之谓之通」「往来不穷谓之通」（DS02）。",
+  "action": "一字一决定。几：层级耦合被提前读到（Web.observed_raise_couples），是 未兆 的反面，与 机 并存而各有锚。势：只取盆地义，位势义作条目。象：作『表示』候选，与 擬 比较后择一。数：只作计数，去定数义。通：只取一构，即『可』（Onward.run_iff_continues，配「推而行之谓之通」）。反：窮則反（「窮則反，終則始」，ZH1-S25）入 返复 与 環。中、和：只在 中和、中節 等已定复合中出现。公、私：不采（社会词）；墨经「止於是實也」（MI1-S-SS）的『限于此实』义可作定域条目。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C03",
+   "C04"
+  ],
+  "detail": "體／体 两义：部分（墨经「體，分於兼也」）与 C04 的『体现』（embodiment）。",
+  "action": "C04 的体现另择一名；体用 作相分条目（体用 带本原层）。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C04",
+   "C14"
+  ],
+  "detail": "端 两义：C04 作最小损失，两处墨经引文（「端，體之無序而最前者也」与「非半弗𣃈，則不動，說在端」）恰对应 Amounts.rests 与 Halving。C14 作『种子』，依 孟子「恻隐之心，仁之端也」，带固定本性层。",
+  "action": "端 定给最小损失（C04，有墨经两引与 Lean 锚）。C14 的种子另择一名；四端 作相分条目（固定本性层）。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C02",
+   "C04",
+   "C17"
+  ],
+  "detail": "交 三义：C02 的 Interacts；Y1 已落地的 Hexagram.meets（泰）；C04 拟用的交换。泰彖「天地交而萬物通也」（YD-HX01）在系统里只能有一个读法。",
+  "action": "交 择一义；建议保留 Y1 已落地的 meets，并核对它与 Interacts 是否同构：同构则合并，不同构则 C02 另选字。C04 的交换另名。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C04",
+   "C02",
+   "C05",
+   "C15"
+  ],
+  "detail": "止／静／停／足 交错：C04 的 止 混合了 World.RestsFrom 与 Law.rests_iff。足 在 C02、C05 作 support，在 C15 作 enough；supported_iff_admits 是 Iff.rfl，即 support 与 admits 定义相同。",
+  "action": "作一张表一并决定：静 = 不动态（D45）；終止 = World.RestsFrom（序卦「物不可以終止」，YD-OW-XG）；止 不单用；止息（停止）另立字；足 = 需要被满足；support = 被常设层满足（注明与 admits 同义）；enough = 目标在 静 时被满足（C15 另名）。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C04",
+   "C06",
+   "C16"
+  ],
+  "detail": "未 两义：Ren 的 开 四标之一（C04／C06）与 虚词 未（C16，未然、尚未）。HANZI §6 要求一个虚词只载一个结构；早期 Lean 把 未／不 合并，正是这条规则要防的。",
+  "action": "虚词 未 依 C16 定；开 的四标写作〈开之未〉或〈开维·未〉一类复合，与虚词分开。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C07",
+   "C16",
+   "C04"
+  ],
+  "detail": "律／常／理／类 交错：main 以 律 为变化之则；C07 用 常 指律；C16 用 律 指一种地位。常 本应留给不变量（invariant）；理 与 类 都锚在 Learning.Lumped。「复命曰常」（YD-LAO-BASE）。",
+  "action": "律 = 变化之则（所显之律）；常 = 不变量，与 久 分开；类 → Lumped；理 → goAlike_iff_lumped 与 carries_law_iff，并写明〈凡理皆类，类不皆理〉。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C01",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C08",
+   "C10",
+   "C11",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "C17"
+  ],
+  "detail": "一个概念有两个名字，以及跨簇重复。成对的：状／同；所以迹／所显之…（所以迹 方向颠倒，依天運「夫迹，履之所出，而迹豈履哉」，ZH1-S14，迹是履之所出，律应为『所显之律』）；推／推类；大块／其余（大块是噫气的施动者，而 rest relatum 从不施动）；通为一／一變三讀；相軋／稱；所由／遇；与时转／遲速（以及 變通）；法不自行／不行不至；有力／同力（同力 应锚 MakesDifferenceTogether，DifferenceOnlyTogether 需另名）。跨簇重复：不息、結／解、理、类、益、日新、闭、成闭、护闭、元闭、机／機、应、未。",
+  "action": "每对择一：所显之律 取代 所以迹；其余 取代 大块；其余各对按锚定的 Lean 声明择一，另一个降为条目。跨簇重复各并为一条，由一个簇持有，其余簇引用。"
+ },
+ {
+  "type": "inconsistency",
+  "clusters": [
+   "C06",
+   "C04"
+  ],
+  "detail": "稳 与 元闭 是同一结构（Law.perturbation_reabsorbed）的两个名字。main 的闭／开对照表说价值只经比较进入；稳 带正价值，元闭 带负价值，同构而异价，等于把价值藏进了名字。",
+  "action": "立一个结构名（中性，如〈扰而复归〉）；稳 与 元闭 只留在对照表中作 Ren 的旧名，标明其价值经比较（C）进入。"
+ },
+ {
+  "type": "coverage",
+  "clusters": [
+   "C02",
+   "C04",
+   "C08",
+   "C10",
+   "C12",
+   "C14",
+   "C16"
+  ],
+  "detail": "有名无条目：持／絕（C02）；流、体（C04）；終而復始（C08）；所资（C10）；傳擇、益之者（C12）；在己、皆顾之活（C14）；律、定理（C16）。",
+  "action": "每名至少一条条目；或注明它由哪些已有条目覆盖。"
+ },
+ {
+  "type": "coverage",
+  "clusters": [
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C13",
+   "C16",
+   "C17"
+  ],
+  "detail": "传统分布不均。总条目：易 269，儒 233，道 168，庄 102，佛 102，名辩 70，法 59，墨 55，兵 39。兵：C03、C06、C16 没有，C17 只有 8/95。佛：C06、C13 没有，C04、C05、C11、C12、C15 各不多于 3。庄：C04、C05 各 1，C16 只有 2。C02：墨 2，名辩 0。C17：易 占 55%（52/95）。",
+  "action": "定向补充：C02 补墨经『故』（「故，所得而後成也」）；C16 补齐物论与老子；C04、C05 补庄子（秋水、养生主火传、寓言「始卒若環」（ZH1-S27）、則陽）；C06、C13 补佛典；C17 补兵：「其勢險，其節短。勢如彍弩，節如發機」（BI1-S-SZ），联系已采的 机，以及「奇正相生，如循環之無端」；C03、C06 各补一条兵或法的例子。"
+ },
+ {
+  "type": "coverage",
+  "clusters": [
+   "C02",
+   "C04",
+   "C11",
+   "C16"
+  ],
+  "detail": "相分条目分布不均：全体 1,122 条中，相合 573，定域 411，相分 138。C16 1/37、C02 2/83、C04 3/58、C11 3/62 极少；C14 21/71、C13 18/71、C01 17/80 较多。相分少的簇，等于没有检验『它自然就是一元的，关系的，动态的』（Ren，2026-10-19，sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md；这是待检的论题，不是前提）。",
+  "action": "在每个相分偏少的簇中，至少逐一检查四个非关系层各一次（本原、固定本性或价值、意志或单一中心、争胜与等级），把真反例记为相分条目，不硬作相合。"
+ }
+]

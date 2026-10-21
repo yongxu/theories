@@ -1,0 +1,584 @@
+{
+ "cluster": "C03 生灭与变化之读",
+ "lens": "STRUCTURE",
+ "names": [
+  {
+   "concept": "Becoming.ComesToBe／Becoming.CeasesToBe：一个规定跨一步开始成立／不再成立",
+   "name": "成／亡",
+   "verdict": "revise",
+   "issues": "AI读法。结构与墨经「已，成、亡。」及经说「已，爲衣，成也。治病，亡也。」相合：一个规定跨一步的两个方向，对象是任一规定，不预设实体。问题如下。(1) FO2-FQ-R032「成相者，由此諸緣起成故；」是共时之相。mapper 自己在 sense_in_context 里说它「不是跨步的开始成立」，却仍把它列为义证。(2)「身處、志往，存亡也。」释「同異交得」，是同一时一项存、一项亡的共时对举，不是跨步之变。(3) ZH1-C02-R-10「其分也，成也；其成也，毀也。」只能证「成」，它的对字是「毁」，不是「亡」。(4) 亡的强义没有处理。老子三十三章「死而不亡者寿」把亡放在死之外，指彻底的消失（RO lao-33-si-er-bu-wang）；亡又常训为「無」。这两义与 Ends（終）和有无的本体层相撞，而 CeasesToBe 之后还可以再成立。(5) alternatives 以「是佛典术语」排除「起／灭」，下一名「生／滅」却正取佛典复词，前后不一致。(6) gap G1（亡与其否定之成的对偶）是两行的定义性引理：正向 CeasesToBe p t → ComesToBe (¬p) t 构成性成立，反向需要 ¬¬p→p 或 p 可判定。它不是结果。",
+   "fix": "保留「成／亡」。attestations 只留 MI1-S-JS「已，成、亡。」与 MI1-S-SS「已，爲衣，成也。治病，亡也。」。FO2-FQ-R032 与「身處、志往，存亡也。」移入 not_carried，注明是共时之成相、共时之存亡。ZH1-C02-R-10 标明只证「成」。not_carried 补两条：亡＝终亡（老子三十三章「死而不亡者寿」），亡＝無。中华版写明「亡」只指一步之不再成立，此后可以再成立。G1 记为引理，附在 mojing-yi-cheng-wang 条，并注明正向不需可判定、反向需要。删去 alternatives 中排除「起／灭」的「佛典术语」理由，与「生／滅」的修订统一。"
+  },
+  {
+   "concept": "Becoming.Web.Arises／Becoming.Web.Ceases：一个形成的活动在一步开始／不再",
+   "name": "生／滅",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 单字「生」在理论中已经定为 generation：D1 生生；D2 与 D45 中裸「生成」＝generation，与退化相对；D36 把 arising 与 generative 分开。以「生」名 Arises，会把任一活动之起读作生成，这正是 BRIEF 所禁的「generative 不是任何新组织」。(2) 先秦之「滅」是终亡。老子三十九章「万物无以生将恐灭」、王弼「裂发歇竭灭蹶」都说失去所依而永灭，结构是 Ends 加 Web.coextinct。而 Web.Ceases 之后可以再起（休眠、Lineage）。「一步止而可再起」的「生滅」义出自汉译佛典（魏晋南北朝起），并带刹那义与寂灭的价值，所以对所取之义 pre_qin=true 不成立。(3)「停息属静止族」的出处是 D45（4），不是 D5。(4) lean 列表缺 Becoming.Web.Ceases 本身。(5) mapper 指出的息字冲突是真的：Web.unceasing_iff 给出，在有限且活动已判定时，不息当且仅当止息复现，所以「止息」名 Ceases 会把「不息」读成「无止息」，与定理相反。但 D45（4）规定「不息」否定的是停息（静止族），而改用「滅」又会带入终亡。先秦用例「其人亡，則其政息」（中庸二十章）、「日出而作，日入而息」（让王，杂篇）、「息我以死」（大宗师）都显示「息」兼休止与死亡，所以「息」也不能用作 Ceases 之名。墨经「止，以久也」又表明「止」本义是停留，属于静止族。",
+   "fix": "(1) Arises 不用裸「生」。可用「起」，或用「作」：老子十六章「万物并作，吾以观复」已核于 YD-LAO-BASE，作＝进入活动；用作单字时须注明不带造作的施者。也可以保留复词「生起」。(2) Ceases 有两种处理。若取「滅」：pre_qin 改为 false；course 写明先秦之滅为终亡，一步可再起之义出自汉译佛典；中华版定义「滅」只指活动之不再，此后可以再起，与「終」（Web.Ends）分开；not_carried 加「先秦之滅＝终亡」与「寂灭」。若保留现行「止息」：词表须写明「不息」否定的是停息（D45（4）），并写明 Web.unceasing_iff 之下不息与止息之复现等价，不是「无止息」。(3) 出处改为 D45（4）。(4) lean 加 Becoming.Web.Ceases。能定案的是：冻结文本中有没有先秦以「滅」指可再起之止的用例。本次所见的先秦之滅都是终亡。"
+  },
+  {
+   "concept": "Becoming.Web.Forms／Becoming.Web.Dissolves：一个要求关系跨一步开始／不再成立",
+   "name": "結／解",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 所引的两个先秦用例中，「结／解」是系缚与解脱。大宗师「而不能自解者，物有結之。」说的是人被物所结；养生主「古者謂是帝之縣解」说的是解除倒悬之苦。两处都带超脱的价值，结构是受缚者与缚者的二元。Forms 则是一个形成对一个条件的要求关系开始成立，其中没有受缚与解脱之分。(2)「結」与理论现行中文「形成」(formation) 字面相撞，又近于 C02 依存之名。(3) 坛经年代误标。FO2-TJ 是宗宝本，元代编定，托名唐慧能（脉络 src 注明），属晚出层，不能标「经·隋唐」。「前念著境即煩惱，後念離境即菩提。」又以烦恼与菩提定价。(4) confidence 为 low 而 pre_qin=true；实际上没有中性义的先秦用例。",
+   "fix": "暂不采用。在找到中性用例之前，把 Forms／Dissolves 的名留空，或与 C02 的「依」协调成一个复词。中性用例指：「结」为两项之间关系的成立，「解」为其松开，不带缚与脱的价值。坛经条的层次改为「宗宝本·元代编定（托名唐慧能），晚出层」。能定案的是：冻结文本中有没有这样的先秦用例。"
+  },
+  {
+   "concept": "Becoming.Web.ComesToStand／CeasesToStand：一个条件的水平由 0 升为正，或由正降为 0",
+   "name": "聚／散",
+   "verdict": "revise",
+   "issues": "AI读法。这一名承载了三种不同的义。(1) 知北游「聚則爲生，散則爲死」：生起只在 Web.Embodied（活动当且仅当水平为正）之下才等于 ComesToStand，一般的生起不必是水平由 0 转正。(2) 韩康伯「聚極則散」的结构是升降的复现（Rises／Falls，falling_recurs），不是穿过零。(3) 张载「方其散也，安得遽谓之无？」否认散至于零。Flow.Balances.fall_taken 说的是任何下降（Falls）都被取走，不是 CeasesToStand。同段「气聚则离明得施而有形，气不聚则离明不得施而无形」才是到场的门槛（有形／无形），张载还明言不取「知有无之故」。(4) 达生「合則成體，散則成始」中，散是合之反（分裂），mapper 又把它用在「分／合」。因此 confidence「high」没有根据。lean 中的 fall_taken 关乎 Falls，不属本概念。",
+   "fix": "二选一。(a) 以「聚／散」名 Rises／Falls（量的升降），ComesToStand／CeasesToStand 另取名，候选「有形／無形」（张载 RU2-R0169，已核）。(b) 保留「聚／散」名 ComesToStand／CeasesToStand：删去韩康伯与张载 RU2-R0170 作为义证（改作升降的旁证）；知北游注明只在 Embodied 下成立；达生之「散」移入「分／合」的 not_carried。两种都要做的：confidence 降为 medium，lean 去掉 Becoming.Flow.Balances.fall_taken。"
+  },
+  {
+   "concept": "Becoming.Web.change_readings：生起／止息、形成／消解、开始／不再作为条件而在，都是 ComesToBe／CeasesToBe 用于活动、要求、水平三种规定",
+   "name": "一變三讀",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 概念描述说三读「依定义都是同一个 ComesToBe／CeasesToBe」，这不确。change_readings 的六个 Iff.rfl，是把同一种变（ComesToBe／CeasesToBe 这一算子）用于三个不同的规定：W.active · f、W.requires · g c、0 < W.level · c，参数各不相同。中文版作「同一种变化」。它不是一个事件被读三次。mapper 在 zhibeiyou 等条据此推出「生起与开始作为条件而在依定义是同一个 ComesToBe 的两读」，这是错的，二者只在 Embodied 下相合。(2) 齐物论「其分也，成也」与肇论「昔物不至今」一事两读，结构是一事多读（Run.part_act_eq_rest_act，或一事之两种推论），不是同一种变用于三种规定。(3) 杨倞「知，讀爲智。」是训诂上的改读（以本字读借字），不是对同一对象的结构性读法，作为「讀」的义证不成立。(4)「一阖一辟谓之变」是往复交替之变，不是单步的成／亡。",
+   "fix": "名改为「成亡三讀」：成亡是本簇已取的 ComesToBe／CeasesToBe 之名，三讀指用于活动、要求、水平三种规定。或者保留「一變三讀」，但在词表中定义「變」为一种变（成／亡），不是一个事件。删去杨倞「讀爲」。齐物论与肇论两例移出本名，分别归入 zhuangzi-qiwu-fen-cheng-hui 与 zhaolun-dong-jing。fit 中「三读都是同一个 ComesToBe／CeasesToBe」改为「三读都是 ComesToBe／CeasesToBe 用于不同的规定」。"
+  },
+  {
+   "concept": "Becoming.keep_pace／Becoming.coming_recurs_iff：有限族中开始成立与不再成立之数相差不超过成员数，二者同其复现（同步）",
+   "name": "相代",
+   "verdict": "revise",
+   "issues": "AI读法。概念描述本身正确。问题在名：所有用例中「相代」的都是互补的一对，如「日夜相代乎前」、死生存亡，以及系辞「日往则月来，月往则日来」。其结构是交替：一态之不再成立，即另一态之开始成立（对偶引理 G1 加 coming_recurs_iff 的两元情形，见 Negation.each_through_other）。keep_pace 则是有限族中两种计数之差有界，不要求互补，也不要求交替。fit 说「彼此之数相抵」，又把 held_over_stretch 混了进来。「代」带替代、世代之义；「命之行也」带命定。",
+   "fix": "「相代」只名互补两态的交替（每一步一态之亡即另一态之成），lean 改列 Negation.each_through_other、Becoming.coming_recurs_iff 与 G1 引理。keep_pace 沿用词表已取的「同步」，不以「相代」名之。"
+  },
+  {
+   "concept": "Becoming.held_over_stretch 等：普查平衡，终存加已不再成立者＝始存加开始成立者",
+   "name": "往來",
+   "verdict": "reject",
+   "issues": "AI读法。(1) 普查平衡是一个等式，「往來」只名其中的两股流，不名等式，也不名所存。(2) 系辞「往者，屈也；」「来者，信也。」「往来不穷谓之通」是交替与屈信之象。mapper 自审（a）也承认计数义是自己的延伸，信度低。(3) 肇论中的往来指物跨时的迁移。(4) mapper 又在 wangbi-wu-you-wang-lai、xici-wang-qu-lai-xin 中以「往来」说同步的复现，一名两义。(5) 往＝亡、来＝成，与「成／亡」重复。(6) 词表把 held_over_stretch 与 keep_pace 同列在「同步」一行。",
+   "fix": "不以「往來」为普查平衡之名。按词表把 held_over_stretch 并入「同步」一行，或用已取之字直述：今存加亡等于昔存加成。「往来」只作为系辞屈信交替的引证，不入词表。"
+  },
+  {
+   "concept": "Becoming.listsOnce_iff_decided：每项只列一次的名单存在，当且仅当同一可判定",
+   "name": "定數",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「稽实定数」只对应定理的一个方向：先判同一，然后能计数（IdentityDecided → ListsOnce）。listsOnce_iff_decided 是双向的。(2)「定數」单用时，后世的强义是命数、气数（宋明以降），mapper 的 not_carried 也承认这一点。作为二字词单独出现，会被读作命定。",
+   "fix": "名用全语「稽实定数」（荀子·正名，RU2-S-XZ22，已核）；或者以「稽实」名判定同一，「定數」只在这四字语中出现。fit 注明荀子只说充分方向，反向（能只列一次，则同一可判）是理论所加。"
+  },
+  {
+   "concept": "Becoming.Web.Unceasing：某个形成在任意晚之步生起（弱义）",
+   "name": "不息",
+   "verdict": "keep",
+   "issues": "AI读法。这是理论已取之名，弱义正确。升上六、乾大象、中庸、程颐四个用例的层次标注都正确，中庸与易传的年代争议也已注明。fit 缺两点：一是 D5 的要点，不息由更新而复现（Web.Unceasing.rises：生起耗尽一个有限条件族时，不息需要其中某个条件在任意晚之步上升）；二是 Web.unceasing_iff 需要形成有限且活动已判定。",
+   "fix": "fit 补 Web.Unceasing.rises 与 D5「有不息而无生生」。注明 Web.unceasing_iff 的前提：所有形成列于一张有限表，且活动可判定。名不改。"
+  },
+  {
+   "concept": "Becoming.Web.Whole：整体活动当且仅当某部分活动；Whole.needs_arising 等",
+   "name": "兼／體",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Web.Whole 是「活动之相合，不是构成」：Wholes 头注如此说；Web.whole_self 证每个形成都是它自身的整体；Immortal.each_other 证两个形成互为整体。墨经「體，分於兼也。」却是构成义。mapper 只在 not_carried 承认这一点，仍把这句作为首要义证。(2) 华严「總相者，一舍多德故；」「本以別成總，由無別故總不成也，」是合取：「無一椽時豈非舍耶？」答「但是破舍，無好舍也」。这与 Web.Whole 的析取（某一部分活动，整体即活动）结构相反，不是同构。(3)「體」与「体现」(Embodied) 及宋明「体用」相撞。(4) lean 列表缺 whole_self 与 Immortal.each_other，而这两条正是限定此名的定理。",
+   "fix": "定义「兼」为活动之相合。首要义证改为墨经说「其體或去或存，謂其存者損」，对应 Whole.covered：部分或去，余者仍覆盖。「體，分於兼也。」与华严两条移入 not_carried，注明构成义与合取义。部分之名避开「體」，可以考虑墨经经上「損，偏去也」之「偏」（已核于 MI1-S-JS），但须再查「偏」作部分讲的其他用例。lean 加 Becoming.Web.whole_self 与 Becoming.Immortal.each_other。"
+  },
+  {
+   "concept": "Becoming.Web.Ends：一个形成的活动自某步后永不再有",
+   "name": "終",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 未济彖「不續終也」意为不能持续到终了（未济），即没有到达终点；mapper 读成「终＝不再续」，读反了。(2)「原始反终」「事有终始」「时有终始」中的终是一段历程的端点，带完成与目的义（善终、终极）。Ends 则只是此后永不再活动，没有完成义。(3) 须与 C05 的「终始」协调：RO tuan-heng-jiu「终则有始」以终接始，与 Ends 的「永不再」相反。",
+   "fix": "未济条的 sense_in_context 改为「不能持续至终了」，不再作 Ends 的义证。not_carried 加两条：终＝完成、终了（未济）；终则有始（C05，RO tuan-heng-jiu）。中华版定义「終」为「自此不复」，并与 C05 定为一名一义。若改用复词，须先查证用例。"
+  },
+  {
+   "concept": "Becoming.Reidentify／Web.reidentify_step／World.fixed_iff：跨步之同一由命名型式承载，在平衡世界中被守恒固定",
+   "name": "一實",
+   "verdict": "revise",
+   "issues": "AI读法。(1) fit 说「荀子『二实』之状同所异，正是 Twins.naming_not_identifiesAlike」，这是误读。Twins 证的是：把在每一关系上都相同的两个后继分开命名，没有意义。荀子「状同而为异所者，虽可合，谓之二实。」中，所是关系，二者并非每一关系都相同，故为二。对应的是 identifiesAlike_iff。RO xunzi-hua-yi-shi 正是以 Twins 作反衬、以 identifiesAlike_iff 定二实。(2)「一實」只名同一被固定的情形：World.fixed_iff 说，在平衡世界、守恒之下，一步之后无他项与之同水平而立处，同一被固定。它不名一般的 Reidentify；跨步之同一是命名的选择，并不唯一。概念描述把两者并成了一名。(3)「實」带实体、底质之义，作为「同一」之名，会把同一读成一个实体的同一。",
+   "fix": "fit 改为：二实对应 identifiesAlike_iff（所异即关系异），Twins 只作反衬。概念描述限定为「平衡世界中由守恒固定的跨步同一」（World.fixed_iff、World.balanced_reidentify_iff）。一般的跨步之同一（Reidentify、reidentify_step）另取名，或用描述语「同一之读」。lean 去 Lineage.readings：它说的是两读并存，不是一實。"
+  },
+  {
+   "concept": "Becoming.Web.Continues 与 ArisesFrom、CeasesFrom、NoSplit、NoMerge：一步之后哪一形成延续哪一形成，可分可合",
+   "name": "相續",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 词表的「与语料词表对照」已经以「lineage（相续）」对应 context-runtime 之义，再以「相續」名 Continues，会一词两义。(2) 佛典的「相續」是单一之流（一类相续、念念相续），结构是一对一的延续，即 NoSplit ∧ NoMerge（例 Web.self_one_to_one）。Web.Continues 则容许分裂与并合，是更一般的关系。(3) 佛典相续带业报因果的传递。(4) 单字「续」的先秦用例只有未济「不續終也」，义为持续到终了，不是两个形成之间的关系。",
+   "fix": "「相續」只名一对一的延续（Continues 加 NoSplit 与 NoMerge），并与词表 lineage（相续）协调为一义。一般的延续关系（可分可合）另取名，或用理论现行的描述语「延续关系」。lean 加 Becoming.Web.self_one_to_one。"
+  },
+  {
+   "concept": "Becoming.Reidentify.KeepsActive 等：连续",
+   "name": "無閒",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 词表的「连续」包括 KeepsActive、KeepsTenure 与 Reidentify.back，指一个命名保持连续的活动与持守，不只是相继两步之间没有空步。(2) 墨经「次，無閒而不攖攖也。」说两物相邻、无间隙又不重叠，是空间上的邻接，与命名保持什么无关。(3) 唯识「謂體纔生無間必滅」的无间是「一生即灭、中间无隔」，即刹那灭，与连续之义相反，不能作义证。",
+   "fix": "删去唯识条。概念描述改为词表的「连续」（KeepsActive、KeepsTenure、Reidentify.back）。若保留「無閒」，只用它名「相继两步皆活动」这一条件（步序上的邻接），不名命名之保持；否则沿用词表的「连续」。"
+  },
+  {
+   "concept": "接续（succession）：把一个终止的形成与在其时或其后开始的形成作为同一者连接（容许间隔，如休眠）",
+   "name": "繼",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 概念描述以 Reidentify.KeepsTenure 为锚，与词表不合。词表中 KeepsTenure 属于「连续」；接续是把一个终止的形成与其时或其后开始的形成连接，可以有间隔，见证是 Lineage、Succession、Dormancy。Succession.readings 证的是：在接续读法下，前者的持守延续到后者，并由此改变何者在何步造成破坏。这是接续之下 KeepsTenure 被保持，不是以 KeepsTenure 定义接续。(2)「继之者善也」把继与善连成正价与道的形上运行，mapper 列为义证，却只在 not_carried 写「善不带入」。(3) 离大象「大人以繼明照于四方」带大人治理之义（等级）。",
+   "fix": "概念描述改为词表的接续定义。lean 以 Lineage.readings、Succession.readings、Succession.one_way 为据，可加 Dormancy.classes；KeepsTenure 归入连续，不作本名的定义。「继之者善也」移入 not_carried（价值与形上层）。"
+  },
+  {
+   "concept": "休眠：形成在某些步不活动；有持守与无持守两种情形",
+   "name": "蟄",
+   "verdict": "revise",
+   "issues": "AI读法。概念把两种不同的情形并成了一种。(1) Dormancy（词表之休眠）：休眠步没有任何持守，这是 Dormancy.held_both 的前提「nothing holds at the dormant step」。跨休眠的连接只是一种读法，并会改变类别（Dormancy.classes）。(2) Hibernation：休眠步由其穴持守（Web.Holds）。醒来在活动上是生起，在持守读法下不是生起（Web.waking_not_arising）；在保持持守之名的任一重认下，类别固定（Hibernation.readings）。「龙蛇之蛰，以存身也。」说以穴存身，是 Hibernation 的结构。概念描述「而以其依托保持」也正是 Hibernation，却挂着 Dormancy 之名。",
+   "fix": "「蟄」只名有持守的休眠，lean 列 Hibernation.readings、Web.waking_not_arising、Web.steady_held（持守期间无论活动或休眠都保持一名），去掉 Dormancy.held_both 与 Dormancy.classes。词表中无持守的休眠（Dormancy）另取名或保留现名，中华版注明二者之别。"
+  },
+  {
+   "concept": "Becoming.Web.Holds／Web.persisting：形成在不活动之步因某依存成立而仍在展开中",
+   "name": "存",
+   "verdict": "revise",
+   "issues": "AI读法。概念本身与「以存身」相合，问题在用法与义证。(1) mapper 在本簇中用「存」名两义：普查中的「所存」（终时成立者，即一般的成立）与 Web.Holds。(2) 墨经「身處、志往，存亡也。」的「存亡」对举把「存」拉向一般的成立，并与「亡」（CeasesToBe 之名）成对，这时它就不是 Holds 了。(3) 墨经「其體或去或存」说部分在场与否，是在场，不是「不活动而仍被持守」。",
+   "fix": "「存」只名 Web.Holds，以「龙蛇之蛰，以存身也。」为主证。墨经两条移入 not_carried，作「在场」义。普查等式中不再用「所存」，改用描述语「终时成立者」，以保持一名一义。"
+  },
+  {
+   "concept": "延续关系下的分裂与并合（¬NoSplit／¬NoMerge）",
+   "name": "分／合",
+   "verdict": "revise",
+   "issues": "AI读法。(1) lean 名有误：Becoming.Fork.split_unceasing 不存在，正确全名是 Becoming.Identity.Fork.split_unceasing；Becoming.Fork 是另一命名空间。(2) fit「容许分裂时，生起可只由分裂而复现」是误读。该定理是 Cycle 中 ¬NoSplit ∧ UnceasingFrom，文档明言 NoSplit 对 Flow.More.unceasingFrom 的结论是充分而非必要，没有说生起只由分裂而来。(3) 齐物论「其分也，成也」的分是分此而成彼（分材成器），对应延续下的生起（ArisesFrom），不是一个形成延续为二。(4) 达生「合則成體，散則成始」以散对合；若取「分／合」，则达生只证「合」。(5)「分」与 C13 名分、与墨经「體，分於兼也」相撞。",
+   "fix": "lean 改为 Becoming.Identity.Fork.split_unceasing。fit 改为「有一分裂时，延续之下仍可不息：NoSplit 充分而非必要」。齐物论条改作 ArisesFrom 的义证，或移出。以达生「合」为并合之证；分裂另找用例，若用「散」，须注明与「聚／散」之名分开。与 C13 协调「分」字。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "mojing-yi-cheng-wang",
+   "verdict": "keep",
+   "issues": "AI读法。声明全部存在，结构相合：ComesToBe p t＝¬p t ∧ p (t+1)，CeasesToBe 反之，对象是任一规定，所引记录也含这些声明。「生起／止息、形成／消解、聚散都是这两者在三种规定上的读法」合 change_readings（同一种变用于三种规定）。所称缺口 G1 是两行的定义性引理：正向构成性成立，反向需要可判定。它不是新结果。",
+   "fix": "gap 改记为本条的引理，注明正向不需可判定、反向需要，不列入缺口结果。「聚散」二字随「聚／散」之名的修订而定。"
+  },
+  {
+   "id": "mojing-hua-zheng-yi",
+   "verdict": "keep",
+   "issues": "AI读法。三条声明存在，结构相合。鼃化为鹑：分开命名，则一者止息、一者生起；作一命名，则没有生起（Lineage.readings）。换名不改各步的关系（Web.reidentify_step）。同一只在平衡世界、一步之后无他项与之同水平而立处被固定（World.fixed_iff），转述准确。kind 定域恰当。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "xunzi-zhengming-yi-shi",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「状同者可以是二（Twins.naming_not_identifiesAlike）」是误读。Twins 证的是：在每一关系上都相同的两者，分开命名没有意义。二实「状同而为异所」，所是关系，二者并非每一关系都同，对应的是 identifiesAlike_iff。RO xunzi-hua-yi-shi 以 Twins 为反衬，读得正确。(2) 新增的 listsOnce_iff_decided 只对应一个方向：「稽实定数」是先判同一、后能计数（IdentityDecided → ListsOnce），反向是理论所加。",
+   "fix": "改为：所异即关系异，故为二实（identifiesAlike_iff）；在每一关系都相同处，分开命名没有意义（Twins.naming_not_identifiesAlike，作反衬）。listsOnce_iff_decided 注明荀子只说了判定同一而后能只列一次这一向。"
+  },
+  {
+   "id": "laozi-39-de-yi-yi-sheng",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Web.unsupported_after_loss 只说：经过一次无回返的损失、依存不变之后，以后任何一步都不被支撑。reading 中「储备只能推迟、不能免除终止」需要 Web.Carries.lasts_within 与 Web.Carries.ends_within（reserve-defers-ending），本条没有引。(2) 本条自称「主要是『生／滅』之名的证据」。但老子此处之滅是失去所依而永灭（Web.coextinct 加此后不再被支撑，近于 Ends），不是一步之止而可再起。以它为 Web.Ceases 之名的先秦证据，就把终亡义带了进来。(3) LE-R057 只对应「万物得一以生」一句。",
+   "fix": "储备一句改引 Web.Carries.lasts_within 与 Web.Carries.ends_within，或删去。reading 写明此处之「灭」是失依后的终亡（Web.coextinct、Web.unsupported_after_loss）。本条只作「滅」字终亡义的证据（not_carried），不作 Ceases 之名的义证。"
+  },
+  {
+   "id": "zhongyong-bu-xi-ze-jiu",
+   "verdict": "revise",
+   "issues": "AI读法。原文「故至誠無息。不息則久，久則徵，」的主语是至诚。把「久」读作一个整体的持续、把「不息」读作其部分的生起，是 AI 加上的整体与部分框架，reading 没有标明。「只在部分的活动相接无间时成立」依 Web.Whole 的定义即得，不是定理。可证而不需加框架的是：不息（生起复现）与久（持续活动）互不蕴含。Gaps.gaps 中生起复现，而整体在偶数步不活动；Immortal.immortal 中整体常活动，而没有任何生起。只有在由各自会终止的部分组成的整体中，久才蕴含不息（Web.Whole.needs_arising）。",
+   "fix": "按上述三点重写，标明整体与部分是 AI 读法，保留「至诚之德不带入」。与 C05 的 RU1-ZY-34-R01 合并时，以此为准。"
+  },
+  {
+   "id": "zhuangzi-xin-huo",
+   "verdict": "keep",
+   "issues": "AI读法。四条声明存在，结构相合。PatternRelay.relay：每个载体只承载两步（Brief 2）并都终止，型式每步都在，每步都有传递。ByPassing.begins_passed、ByPassing.ends_within 与 stopped_relay 给出：传递一停，型式在一个跨度内终止。kind 定域恰当。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "zhuangzi-dasheng-he-san",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Becoming.Fork.split_unceasing 不存在，正确全名是 Becoming.Identity.Fork.split_unceasing；identity-across-steps 记录所引的正是这一全名。(2)「容许分裂时，生起可以只由分裂而复现」是误读。定理只证 ¬NoSplit ∧ UnceasingFrom，文档说 NoSplit 是充分而非必要的条件，没有说生起只由分裂而来。(3)「延续之下的普查平衡给出始、合、散之数」过度。Web.Census.balanceFrom 只给两个不等式：无分裂时，步后活动者加从…止息者 ≤ 步前活动者加从…生起者；无并合时为 ≥。(4) 此处的「散」是合之反（分裂），与「聚／散」之名的散不是一义。",
+   "fix": "改用全名 Becoming.Identity.Fork.split_unceasing。reading 改为：有一分裂时，延续之下生起仍可不息，NoSplit 充分而非必要。balanceFrom 改述为两个方向的不等式。注明此「散」归入分／合，不归聚／散。"
+  },
+  {
+   "id": "zhuangzi-qiwu-fang-sheng-fang-si",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 本条与 RO zhuangzi-qiwu-bi-chu-yu-shi 重叠。RO 判为相合，所引为 Run.part_act_eq_rest_act、partForms_and_restForms_iff、change_readings、arising_recurs_iff。本条 ro_passage 却留空，并把 RO 的 agreement 默改为 scope，没有说理由。(2) Negation.each_through_other 是两态振荡：每一态在下一步进入另一态，是相继互入，不是「相因而同时成立」。「彼是方生」所需的一步两面是 Run.part_act_eq_rest_act：部分之所为即其余之所受。(3) Flow.rise_with_fall 的前提是流整体平衡（Flow.Balances 对一切步、一切条件）且该族在此步耗散，不能只说「在耗散的族中」。(4) Accretion.never_ceases 作「凡生即在死」的反例成立，但它不在所引记录里。",
+   "fix": "ro_passage 填 zhuangzi-qiwu-bi-chu-yu-shi，沿用其 kind 与声明；若要改判，写明理由。可分两段：「彼是方生」取一步两面，为相合；「方生方死」作普遍律，为定域。each_through_other 改述为相继互入。rise_with_fall 写全两个前提。记录补 where-a-move-is-formed 与 coming-and-ceasing-keep-pace。"
+  },
+  {
+   "id": "zhuangzi-qiwu-fen-cheng-hui",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「分、成、毁是同一变的读法（Web.change_readings）」不确。change_readings 是同一种变用于活动、要求、水平三种不同的规定，不是一个事件读作分、成、毁。「其分也，成也；其成也，毀也。」说的是分此即成彼，一事两面，结构在 Run.part_act_eq_rest_act，或延续下的 ArisesFrom／CeasesFrom。RO 原条同样读得松。(2)「所需前提只是平衡与耗散这两个所述之局部状态」不确：Flow.Balances 是全局的（每一步、每一条件），只有耗散是一族一步的局部条件。(3) keep_pace 与 Law.lost_stays 等给出的定域（「通为一」只在无损时成立）沿 RO，成立。",
+   "fix": "删去「同一变的读法」一句，改引 Run.part_act_eq_rest_act（记录 where-a-move-is-formed）。前提改为：流在一切步平衡（全局），且该族在此步耗散（局部）。建议 RO 原条一并修订。"
+  },
+  {
+   "id": "zhuangzi-zhibeiyou-ju-san",
+   "verdict": "revise",
+   "issues": "AI读法。「生起与开始作为条件而在，依定义是同一个 ComesToBe 的两读」为假。生起是 ComesToBe (W.active · f)，开始作为条件而在是 ComesToBe (0 < W.level · c)，两者的规定不同。只有对体现的关系项（Web.Embodied：活动当且仅当水平为正），二者才相合，这正是后半句所引 Web.Embodied.comesToStand 的前提。所以 kind 只能是定域（在 Embodied 下成立）。Embodied.comesToStand 不在所引记录中。「气作底质不带入」已注明，成立。",
+   "fix": "删去「依定义是同一个 ComesToBe 的两读」，改为：对体现的关系项，生起即开始作为条件而在（Web.Embodied.comesToStand）。kind 改为 scope。记录补 generation-is-replenishment。"
+  },
+  {
+   "id": "xici-jingqi-youhun",
+   "verdict": "revise",
+   "issues": "AI读法。(1) World.unity 被转述为「过程与框架是同一展开的两读」，这不是该定理的内容。World.unity 说：计入其余时，每个世界都是交换之律的一个运行，其变化的诸读法逐步粘合；世界自身的读法恰在平衡处粘合，而平衡恰是其余永不活动。「过程与框架作为读法」是另一记录 process-and-frame-as-readings。(2)「开始／不再作为条件而在与生起／止息是同一变的读法」与 zhibeiyou 同误，二者只在 Embodied 下相合。(3)「不另立鬼神为独立实体」是 AI 与注疏的读法；原文「是故知鬼神之情状」本身并不否认鬼神，kind 定为 agreement 过强。(4) Embodied.comesToStand 不在所引记录中。",
+   "fix": "World.unity 按其实际内容改述，或改引 process-and-frame-as-readings 的声明。聚散一句加「对体现的关系项」。「鬼神非独立实体」标为 AI 读法，kind 改为 scope。记录补 generation-is-replenishment。"
+  },
+  {
+   "id": "hankangbo-ju-ji-ze-san",
+   "verdict": "keep",
+   "issues": "AI读法。结构正确：有界时，升复现则降也复现（falling_recurs）；以 0 为底，降复现则升也复现（rising_recurs）；无界时 Accretion.never_falls 为反例。kind 定域恰当。小问题：Web.Embodied.comesToStand 不在所引记录中；本条的聚散是升降（Rises／Falls），与「聚／散」之名所取的 ComesToStand 不是一义（见名）。",
+   "fix": "记录补 rising-and-falling-in-one-exchange。注明本条「聚極則散」中的聚散是升降。"
+  },
+  {
+   "id": "lin-gang-jin-er-zhang",
+   "verdict": "keep",
+   "issues": "AI读法。消息律的声明都存在且已核：从全阴起，阳爻自下而上一步一爻，临是二阳之位；任一运行中，某爻成阳与不再为阳都在任意晚之步复现。朱熹一条并入合理。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "lin-xiao-bu-jiu",
+   "verdict": "keep",
+   "issues": "AI读法。six_steps（六步至补卦）、twelve_steps（十二步而复）与 waning 已核。盛极转衰在有界时成立、无界时不成立（Accretion.never_falls），定域恰当。「八月」之说不论，处理得当。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "li-ji-ming",
+   "verdict": "revise",
+   "issues": "AI读法。「明两作」对分开命名、「继明」对作一命名，合 Lineage.readings 与 Lineage.one_way，成立。但「继进一步承接前者之依存：后继者承接前者的持守（Succession.readings、Succession.one_way）」不在原文中。「明兩作離，大人以繼明照于四方。」没有依存与持守的承接。Succession.readings 证的是：接续读法下，前者的持守延续于后者，并由此改变何者在何步造成破坏。这是另一结构。",
+   "fix": "删去持守承接一句与 Succession 两条，或标为 AI 补充、不作本条证据。保留 Lineage.readings 与 Lineage.one_way。大人治理之义不带入（已注）。"
+  },
+  {
+   "id": "xici-wang-qu-lai-xin",
+   "verdict": "keep",
+   "issues": "AI读法。两层结构正确。计数一层：held_over_stretch（终存加不再成立者＝始存加开始成立者）与 keep_pace。量一层：rising_recurs 与 falling_recurs，定域在有界处。两个计数定理都用 mark，需要该族各规定可判定，reading 没有写出。",
+   "fix": "补「各规定可判定」这一前提。「往来相抵」改为「往来之计数满足此等式」，不把「往來」立为平衡之名（见名）。"
+  },
+  {
+   "id": "xici-qu-xin-xiang-gan",
+   "verdict": "keep",
+   "issues": "AI读法。回返（Law.Lossless.returns）给出不息，more_needs_open 给出生生的界限，合 D5「有不息而无生生」。须补两个条件：Law.Lossless.returns 需要一张含全部构型的列表（有限）；回返要给出生起复现，回返的循环中须有某个规定开始成立，因为不动点也算「回返」。more_needs_open 不在所引记录中。",
+   "fix": "补「构型有限、循环中有开始成立」两个条件。记录补 seeking-boundary（more_needs_open 所在）。"
+  },
+  {
+   "id": "xici-chihuo-longshe",
+   "verdict": "revise",
+   "issues": "AI读法。把 Dormancy.held_both 读成「醒来再活动不算生起」是误配。Dormancy.held_both 的情形是休眠步无任何持守，结论是：跨休眠作一命名，两向都保持持守之名，而改变早期形成的类别。RO 原条正是以它作反衬：「隔着一个什么都不持续的休眠步，把前后接为同一个只是一种读法」。「以存身」是由穴持守的休眠，结构是 Hibernation.readings：休眠步由穴持守，醒来在活动上是生起、在持守读法下不是，类别在保持持守之名的任一重认下固定；再加 Web.waking_not_arising。本条新增 Hibernation.readings 是对的。",
+   "fix": "恢复 RO 对 Dormancy.held_both 的反衬读法：无持守的休眠，作一只是读法，并改变类别。「醒来不是生起」只引 Web.waking_not_arising 与 Hibernation.readings，并加 Web.steady_held（持守期间无论活动或休眠都保持一名）。"
+  },
+  {
+   "id": "xici-gang-rou-xiang-tui",
+   "verdict": "keep",
+   "issues": "AI读法。消息律下，成刚与不再为刚都复现，已核。Negation.each_through_other（两态相继互入）作「相推」的结构可取。所称对偶缺口与第一条相同，是定义性引理。",
+   "fix": "对偶记为引理，与 mojing-yi-cheng-wang 共用。"
+  },
+  {
+   "id": "hankangbo-yinyang-zhuanyi",
+   "verdict": "keep",
+   "issues": "AI读法。转易给出不息（waxWane_returns、Lossless.returns），但不自成生生（Whole.needs_new、more_needs_open），合 D5。more_needs_open 与 Web.Whole.needs_new 不在所引记录中。",
+   "fix": "记录补 seeking-boundary 与 whole-persists-through-generation。"
+  },
+  {
+   "id": "hankangbo-rixin",
+   "verdict": "revise",
+   "issues": "AI读法。韩康伯「體化合變」释系辞「日新之谓盛德」，主语是盛德，不是由会终止的部分组成的持续整体。以 Web.Whole.needs_new 说「这就是日新」，是 AI 加上的整体与部分框架；「必有名单外的新部分」这一结论还依赖部分各自终止、活动部分有列表等前提，reading 都没有标明。「盛德」的正价也没有注明不带入。Layered.arise_again 的对照（部分可以再起时，更新是再起）正确。",
+   "fix": "改为：若把日新读为一个持续整体的更新，理论给出其条件（Whole.needs_new、Covered.needs_new：部分各自终止，活动部分有列表）与界限（Layered.composed、Layered.arise_again）。标明这是 AI 读法，并补「盛德之正价不带入」。"
+  },
+  {
+   "id": "kongyingda-sheng-bi-you-si",
+   "verdict": "keep",
+   "issues": "AI读法。定域正确：Ends 是条件，不是定律；Accretion.never_ceases 与 Immortal.immortal 为反例；族上生起与止息同其复现（Web.unceasing_iff）。但 Web.unceasing_iff 的前提是全部形成列于一张有限表且活动已判定，reading 只写了「有限族」。",
+   "fix": "补「且活动已判定」。或改引 Web.unceasing_iff_bounded，它只需同时活动者有界。"
+  },
+  {
+   "id": "shuogua-wanwu-chu-zhen",
+   "verdict": "keep",
+   "issues": "AI读法。沿 RO 相分，声明都存在。后天方位不由一步之律给出（stations_not_rules、stations_not_commutes），生起系于方位是框架的选择，判断正确。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "xugua-tun-meng",
+   "verdict": "keep",
+   "issues": "AI读法。卦序中的配对可证，对与对之间的次序只是一张表的运行，「必蒙」之必然不被证明，定域恰当。与 C07 的分界已注明。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "xici-xing-nai-wei-qi",
+   "verdict": "revise",
+   "issues": "AI读法。原文「见乃谓之象，形乃谓之器，制而用之谓之法」是一条命名阶梯：按显现的阶段称名。把它对到 Web.Embodied.comesToStand（水平由 0 转正）与 Web.Listed，只是「形」「器」二字的对应，没有相同的关系、条件与方向。Web.change_readings 与此无关。本条与 C01「形而下者谓之器」重叠。Embodied.comesToStand 不在所引记录中。",
+   "fix": "kind 改为 scope，去掉 change_readings，只保留一个弱读：器在成形之后才被计入（Listed 只列活动者），并标为 AI 读法。或者把本条移交 C01，与「形而下」一并处理。"
+  },
+  {
+   "id": "zagua-bo-ge-ding",
+   "verdict": "keep",
+   "issues": "AI读法。配对、伙伴、杂卦覆盖全部与后八卦、Hexagram.bo_fu 都已核。「去故取新」的价值不带入，处理得当。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "cheng-yi-jian-er-wu-xi",
+   "verdict": "keep",
+   "issues": "AI读法。不息取弱义正确；程颐的形体与性情分层已注明不取。三处须补：Law.Lossless.returns 不在所引记录中；「回返之律即可给出」需要回返循环中有开始成立；Web.unceasing_iff 需要活动已判定。",
+   "fix": "记录补 recurrence-without-premise，并补上述两个条件。"
+  },
+  {
+   "id": "tuan-qian-gezheng",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「休眠前后两种命名都保持持守（Dormancy.held_both）」漏掉了该定理的要点：跨无持守的休眠步作一命名，会改变早期形成的类别，更新者变为消耗者（Dormancy.classes），所以作一只是读法。RO 原条正以此说明「性命」是读法。(2) World.unity 被转述为「过程与框架是一展开的两读」，不是该定理的内容（见 xici-jingqi-youhun）。",
+   "fix": "补一句：作一命名会改变类别（Dormancy.held_both 的末项与 Dormancy.classes）。World.unity 按其实际内容改述，或改引 process-and-frame-as-readings。"
+  },
+  {
+   "id": "hs-06-16-bu-si",
+   "verdict": "keep",
+   "issues": "AI读法。沿 RO 相分，声明都存在。「不死」在理论中只能是整体经更新与传递而延续，判断正确。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "suzhe-bu-sheng-bu-mie",
+   "verdict": "revise",
+   "issues": "AI读法。kind 相分正确，问题有三。(1) World.unity 的转述有误（同上）。(2)「它是由其部分的活动而在（Immortal.immortal）」把 Web.Whole 读成了构成。Wholes 头注明言 Whole 是活动之相合，不是构成；Immortal.each_other 证二者互为整体。(3) Web.change_readings 不在所引记录中。",
+   "fix": "World.unity 改述为：计入其余时，每个世界都是交换之律的运行，其余也作为关系项计入，展开之外不另有所立。「由其部分的活动而在」改为「其活动与某部分的活动相合（Web.Whole、Immortal.each_other）」。记录补 coming-and-ceasing-keep-pace。"
+  },
+  {
+   "id": "suzhe-che-bu-ke-shu",
+   "verdict": "revise",
+   "issues": "AI读法。车由轮辐盖轸诸件会合而成，是诸件同时并存的构成。Web.Whole 则是析取的活动之相合：某一部分活动，整体即活动。Layered.both 与 Layered.composed 讲的是谱系与相继生起的成员。三者都不是此结构。与「物物可數而車不可數」同构的只有 whole_not_in_pairs：一个关系为整体所持，而不为任何两部分所持。",
+   "fix": "删去 Web.Whole、Layered.both、Layered.composed 及 whole-persists-through-generation。保留 whole_not_in_pairs（separation-loses-the-relation），可加 separation_faithful_iff：分开描述无所失，恰在部分无关时。「无之以为用」不带入（已注）。"
+  },
+  {
+   "id": "suzhe-sui-wu-bian-hua",
+   "verdict": "keep",
+   "issues": "AI读法。声明都存在，读法与 RO 一致。「体圣抱神」所设的内在不变者已注明不带入。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "wangbi-gong-cheng-ze-yi",
+   "verdict": "revise",
+   "issues": "AI读法。声明正确，reading 也写明了「同时活动者有界时」。但王弼「四时更运，功成则移。」是一般之言，在理论中只在计数有界时成立；无界时，Accretion 中的形成生起后永不止息。所以 kind 应为定域，不是相合。World.CountedWithin.arising_iff_ceasing 另需活动可判定。",
+   "fix": "kind 改为 scope，加反例 Accretion.never_ceases，并补可判定前提。"
+  },
+  {
+   "id": "wangbi-wu-you-wang-lai",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「往来中的『来』也随之停止」过度。在有限族中，由「不再成立不复现」经 coming_recurs_iff 只能得出「开始成立不复现」（¬Recurs）。在构成性逻辑中，这不等于「自某步起不再有来」，后者需要判定（recurrence-without-decidedness）。persists 本身也需要该规定可判定。(2) 同一注上文「物有常性，而造为之，故必败也。」设立物的常性，属 RO §7 的固定之性一层，与「物有往来」并列，reading 没有处理。(3) kind 相合只对「执定一态，则往来之复现被否定」成立。",
+   "fix": "改为：执定使不再成立不复现，则开始成立也不复现（coming_recurs_iff；不复现不等于停止）。注明 persists 的可判定前提。not_carried 加「物有常性」，作为相分成分。"
+  },
+  {
+   "id": "zhongyong-cheng-xing-zhu",
+   "verdict": "reject",
+   "issues": "AI读法。「诚则形……变则化」是以德性「诚」为起点的修养阶梯，mapper 自己也承认「则」的逐级必然与「诚」都不带入。余下的只是对字：「形」对 Web.Embodied.comesToStand，「变则化」对 recurring_accumulates。recurring_accumulates 说的是某量在任意晚之步为正，则其累计超过任何界，并没有「变积而化」（量至于质）的结构。四条关系都在这一阶梯中，没有可检验的同构。",
+   "fix": "删去本条，把 RU1-ZY-31-R02、R03、R06、R07 移入 rejected，理由是：德性阶梯，只有共享之字。"
+  },
+  {
+   "id": "mengzi-ji-yi-suo-sheng",
+   "verdict": "reject",
+   "issues": "AI读法。「是集义所生者，非义袭而取之也。」的要点是逐渐积累与一次袭取之别。over_stretch 是任一时段的恒等式（终量加降＝始量加升），一步的大升同样满足，不区分渐与骤。recurring_accumulates 说复现的正量累计无界，也不是这个结构。所余只有「积累」一词，是词汇对应。德性与浩然之气已注明不带入。",
+   "fix": "删去本条，把 RU2-R0012 移入 rejected，理由是：渐与骤之别在脊柱上没有对应的律。"
+  },
+  {
+   "id": "zhangzai-tai-xu",
+   "verdict": "revise",
+   "issues": "AI读法。(1) World.unity 的转述有误（同上）。(2)「聚散是同一变的读法（change_readings、Embodied.comesToStand）」与 zhibeiyou 同误，只在 Embodied 下成立。(3) 并入的 RU2-R0169「气聚则离明得施而有形，气不聚则离明不得施而无形」给出的是聚散对「有形／无形」的门槛。同段又说「方其散也，安得遽谓之无？」，并不取「知有无之故」。这说明张载的聚散不是穿过零，应作为「聚／散」之名的反证处理，而不是并入本条。",
+   "fix": "World.unity 按实际内容改述；聚散一句加 Embodied 条件。RU2-R0169 单列，或放在「聚／散」名下作为「有形／無形」门槛的证据，并注明张载之散不至于零。"
+  },
+  {
+   "id": "zhangzai-san-fei-wu",
+   "verdict": "revise",
+   "issues": "AI读法。(1) World.withRest_counted 给的是计入其余后的普查（Counted，需要 Distinct 与闭合之族），不是「平衡可从交换中读出」。平衡由构造成立的是 Flow.withImbalance_balances：计入不平衡项后，每个流都平衡。世界平衡当且仅当其余永不活动，是 World.withRest_closed_iff。(2)「平衡是所述的局部状态」不确：Flow.Balances 是全局的。(3) Flow.Balances.takenBy 另需 Taking 前提（只有活动的形成取）；计入其余时，取者可以是其余本身。「一处之散是他处之得」须加这一说明。(4) fall_taken 关乎任何下降（Falls），与张载「散非遽无」（不至于无）相合，这一点正确。",
+   "fix": "以 Flow.withImbalance_balances 与 World.withRest_closed_iff 替换 World.withRest_counted（记录 imbalance-as-relatum、premises-read-off-the-exchange）。「局部状态」改为「平衡（全局）；计入其余时由构造成立」。takenBy 写明 Taking 前提与「取者可为其余」。气之本体不带入。"
+  },
+  {
+   "id": "zhuangzi-wu-hua",
+   "verdict": "keep",
+   "issues": "AI读法。Lineage.readings（两读各自成立），加上 Layered.both（成员相继生起而谱系每步都在，两种命名同时成立），恰好合「必有分」与「物化」并存。reidentify_step 正确。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "zhuangzi-ri-ye-xiang-dai",
+   "verdict": "revise",
+   "issues": "AI读法。「相代就是同步」过度。原文「日夜相代乎前」中相代的是互补之对（日与夜，以及死生、存亡等），结构是交替：一态之不再成立即另一态之开始成立（第一条所说的对偶引理，加 coming_recurs_iff）。keep_pace 只是交替在族上的计数界，本身不要求互补或交替。「命之行也」已注明不带入。",
+   "fix": "改为：互补两态交替，一态之亡即另一态之成，二者同其复现（coming_recurs_iff）；有限族的计数界为 keep_pace。与「相代」之名的修订保持一致。"
+  },
+  {
+   "id": "zhuangzi-zhile-qi-xing-sheng-si",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「生起与成形是同一变的读法（change_readings）」与 zhibeiyou 同误，只在 Embodied 下相合。(2) 原文「雜乎芒芴之間，變而有氣，氣變而有形，形變而有生」是一个自芒芴起、以气为底的生成次序。reading 说「不设先在之源」，须标为 AI 读法，并注明气作底质不带入。(3) 并入的大宗师「息我以死」以「息」为死，正是「息」字的强义，应回馈到「生／滅」名下的息字之辨。",
+   "fix": "change_readings 一句加 Embodied 条件。标明 AI 读法，not_carried 加「气作底质」。在「生／滅」名下引「息我以死」，作为息字死义的证据。"
+  },
+  {
+   "id": "zhuangzi-bu-si-bu-sheng",
+   "verdict": "revise",
+   "issues": "AI读法。kind 相分正确。问题与 suzhe-bu-sheng-bu-mie 相同：World.unity 的转述有误；「由部分之活动而在」把 Whole 读成了构成；change_readings 不在所引记录中。",
+   "fix": "按 suzhe-bu-sheng-bu-mie 的修订处理：改述 World.unity，改为「活动相合（Web.Whole、Immortal.each_other）」，记录补 coming-and-ceasing-keep-pace。"
+  },
+  {
+   "id": "weishi-sha-na-mie",
+   "verdict": "revise",
+   "issues": "AI读法。(1) stays_failing 说的是：不成立、此后又从不开始成立的规定，永不成立。它关乎该规定自身。而「此遮常法，常無轉變，不可說有能生用故」说的是常法对他者没有能生之用，即因果效力。stays_failing 不是这个结构。(2) stays_failing 不在所引记录中（它在 space-and-its-parts）。(3) 其余部分正确：Lineage、Generations、needs_arising，以及「刹那必灭」不是定律。",
+   "fix": "删去 stays_failing；或只用它说「不变者自身不起」，并注明「能生用」（不变者不使他者变）在脊柱上尚未找到对应定理，列为待查。若保留，记录补 space-and-its-parts。"
+  },
+  {
+   "id": "weishi-guo-ju-you",
+   "verdict": "keep",
+   "issues": "AI读法。同一步的依存（Web.Dependent、Web.coextinct）与跨步的延续（Web.Continues）之分正确，业力与阿赖耶已注明不带入。Web.Dependent 与 Web.coextinct 不在所引记录中。",
+   "fix": "记录补 life-as-condition-of-life。"
+  },
+  {
+   "id": "jingang-san-xin",
+   "verdict": "keep",
+   "issues": "AI读法。声明都存在。「不可得」不等于同一不可能：跨步之同一是一种读法，不唯一、不自立。定域恰当。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "jingang-you-wei-fa",
+   "verdict": "revise",
+   "issues": "AI读法。本条的定域正确。但并入的胜鬘经 FO2-SM-R014 原文为「此四聖諦，三是無常，一是常。何以故？三諦入有為相，入有為相者是無常。」同一句以灭谛为「常」，即在有为之外立一个常住者。这是相分（无条件之常），并入定域条目就把一个相分隐藏了。",
+   "fix": "把 FO2-SM-R014 从本条拆出，另立相分条目：「一是常」为无条件的常住，对照 Web.Carries.lasts_within、Web.unsupported_after_loss 与 RO §7。本条只留金刚经。"
+  },
+  {
+   "id": "xinjing-bu-zeng-bu-jian",
+   "verdict": "revise",
+   "issues": "AI读法。(1) Becoming.Flow.adopt_balances 不存在：R32 已移除，其内容现为 Flow.withImbalance_balances。(2) World.withRest_counted（普查）与 Flow.readOff_census（从交换读出名单）都与增减无关。(3)「全体之量不增不减」不是任何已证的律。Flow.whole_bounded_of_rest_idle 只给出：在第一律（Gainless）下，若其余自某步起不再净给予，有限全体的存量不增（≤，不是＝），而耗散可以使它减少。Recycle.closed_unceasing 只是一个见证（族的总量恒为一，而生起不息），不是定律。Accretion.rises 是反例：无限族中水平每步都升。",
+   "fix": "声明改为 Flow.whole_bounded_of_rest_idle（where-novelty-gain-comes-from）、Recycle.closed_unceasing（unceasing-generation-needs-renewal）、Accretion.rises（coming-and-ceasing-keep-pace）与 Flow.withImbalance_balances（imbalance-as-relatum）。reading 改为：「不增」在第一律与其余无净给予时对有限全体成立；「不减」没有一般之律；计入不平衡项后每个流平衡，这是构造；量守恒而生起不息，有见证（Recycle）。kind 仍为定域。"
+  },
+  {
+   "id": "zhonglun-ba-bu",
+   "verdict": "revise",
+   "issues": "AI读法。kind 定域正确，「生灭在所取读法下成立」的判断也正确。问题：World.unity 的转述有误；change_readings 不在所引记录中。",
+   "fix": "World.unity 改述或删去；记录补 coming-and-ceasing-keep-pace。"
+  },
+  {
+   "id": "zhonglun-wo-wu-yin",
+   "verdict": "keep",
+   "issues": "AI读法。Whole（活动之相合）、arises_part、parts_unceasing、Layered.both 已核。「部分之外整体无独立活动」「我是一种读法」与 Whole 是相合而非构成一致。",
+   "fix": "可加 Web.whole_self，以显明相合不是构成；其余无须改动。"
+  },
+  {
+   "id": "zhonglun-bu-ji-bu-yi",
+   "verdict": "keep",
+   "issues": "AI读法。Continues、ArisesFrom、CeasesFrom 的定义与「不即不异、不断不常」同构；以 Lineage.readings 说「同一是另一种命名」正确。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "zhonglun-ding-xing",
+   "verdict": "keep",
+   "issues": "AI读法。沿 RO 相合。新增的 persists 与 stays_failing 作「定性＝没有步间之变」的两面，结构正确。persists 需要该规定可判定，stays_failing 不需要。change_readings、persists、stays_failing 不在所引记录中。",
+   "fix": "注明 persists 的可判定前提。记录补 coming-and-ceasing-keep-pace 与 space-and-its-parts。"
+  },
+  {
+   "id": "zaahan-yuan-sheng-lao-si",
+   "verdict": "revise",
+   "issues": "AI读法。「死须先有生」过度。CeasesToBe p t 含 p t，所以不再成立需要先成立（先持有），不需要先「开始成立」。ceasing_needs_arising 说的是：一段中若没有开始成立，止息者都在始时的名单上。所以止息需要的是在始时已成立，或在段中开始成立；只有对始时不成立者，止息才需要先有生起。反向不成立（Accretion.never_ceases），这一点正确。",
+   "fix": "改为：不再成立，须先成立；对始时不成立者，须先开始成立（ceasing_needs_arising）。"
+  },
+  {
+   "id": "zaahan-wu-chang-shi-ku",
+   "verdict": "revise",
+   "issues": "AI读法。(1) 记录 one-axiom-yields-g0 是已改名的旧 id（现为重定向页），现行 id 为 continuation-condition-yields-living-significance。(2)「所表示的动力学不决定意义……所以变化本身无正负」过度。Web.significance_undetermined 证的是：两种常值意义都与同一动力学相容，动力学不蕴含 living significance；文档还明言这并不表明延续条件是必需的。它没有证明变化无正负；理论只是不断言变化的价值。(3) 应与 RO zaahan-ku-mie（苦灭之相分）相连。kind 相分正确。",
+   "fix": "记录改为 continuation-condition-yields-living-significance。reading 改为：动力学不蕴含意义（两种常值意义都相容）；理论不给变化本身定价；「无常是苦」设了先定的负价，属 RO §7。交叉引用 RO zaahan-ku-mie。"
+  },
+  {
+   "id": "zaahan-bian-yi-fei-wo",
+   "verdict": "keep",
+   "issues": "AI读法。Turnover.reidentified（换名后各步关系不变，而类别改变）、rename_unceasing 与 reidentify_step 支持「没有不依命名的自体」。苦之评价已注明不带入。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "zaahan-ji-mie",
+   "verdict": "keep",
+   "issues": "AI读法。沿 RO 相合：依存同灭，以及生起与止息同其复现，正确。Web.Dependent 与 Web.coextinct 不在所引记录中；arising_recurs_iff 需要有限且可判定。",
+   "fix": "记录补 life-as-condition-of-life，并补有限、可判定的前提。"
+  },
+  {
+   "id": "huayan-liu-xiang",
+   "verdict": "revise",
+   "issues": "AI读法。新增的三条与华严的结构相反。华严之总是合取：「無一椽時豈非舍耶？」答「但是破舍，無好舍也」，又说「去却椽即無舍故」，缺一个部分整体即不成。Web.Whole 则是析取（某一部分活动，整体即活动），Web.Whole.arises_part 与 Layered.both 都建立在这一析取上。mapper 自己注意到成相与坏相是共时的两读，却仍以 Web.Whole 释「不作」。RO 原有的 whole_not_in_pairs、separation_faithful_iff、relation_persists、partForms_and_restForms_iff 不受影响；但 RO 以 change_readings 释成坏，也读得松。",
+   "fix": "删去 Web.Whole、Web.Whole.arises_part 与 Layered.both。明记华严的总相是合取，与 Web.Whole 相反，作为本条的剩余。华严「破舍」与墨经「損」都是缺部分而减损的整体，脊柱尚无此结构，列入缺口。成坏的共时义不以 change_readings 解释。"
+  },
+  {
+   "id": "jinshizi-sheng-wu-sheng",
+   "verdict": "keep",
+   "issues": "AI读法。Lineage.readings 与 Layered.both 支持「生与无生」是两种命名并存；「夺」与「无生」的究竟义已注明不带入。change_readings 不在所引记录中，对本条也不必要。",
+   "fix": "去掉 change_readings，或记录补 coming-and-ceasing-keep-pace。"
+  },
+  {
+   "id": "jinshizi-nian-nian-sheng-mie",
+   "verdict": "keep",
+   "issues": "AI读法。needs_arising、Generations、Lineage 合「念念生灭而整体每步都在」；「实无师子可得」过度这一判定正确。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "tiantai-bu-gai-ming-xing",
+   "verdict": "keep",
+   "issues": "AI读法。相分正确：类别随命名而变（Dormancy.classes、Turnover.reidentified），没有不改的内性。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "qixin-xiang-xu-xiang",
+   "verdict": "revise",
+   "issues": "AI读法。Reidentify.KeepsActive 是一个重认（命名）的性质：它保持凡在相继两步都活动者的连续。它不是「相應不斷」本身。「相续相」说的是念念相续而流不断，结构是成员各自短暂而谱系每步都在（Generations.generations、Web.Whole.covered），或延续之下的不息（Web.UnceasingFrom）。此外，起信的相续是一对一之流，不分也不合。",
+   "fix": "去掉 Reidentify.KeepsActive，改引 Generations.generations 或 Web.Whole.covered。保留 Web.UnceasingFrom 与 Web.Continues，并注明一对一（NoSplit ∧ NoMerge）。"
+  },
+  {
+   "id": "qixin-xin-ti",
+   "verdict": "revise",
+   "issues": "AI读法。kind 相分正确。问题：World.unity 的转述有误；change_readings 不在所引记录中。",
+   "fix": "World.unity 改述为：展开之外不另立者，其余也作为关系项计入。记录补 coming-and-ceasing-keep-pace。"
+  },
+  {
+   "id": "tanjing-qian-nian-hou-nian",
+   "verdict": "revise",
+   "issues": "AI读法。结构正确：著于境这一关系在前一步成立、后一步不再成立，即 Web.Dissolves。层次误标：FO2-TJ 是宗宝本，元代编定，托名唐慧能（脉络 src 注明），属晚出层，不能标「经·隋唐」。烦恼与菩提的评价已注明不带入。",
+   "fix": "layer 改为「宗宝本·元代编定（托名唐慧能），晚出层」，其余不改。"
+  },
+  {
+   "id": "jingtu-zhong-zi-bu-huai",
+   "verdict": "keep",
+   "issues": "AI读法。相分正确：储备只推迟终止，没有无条件的持存。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "huiyuan-wen-shen-xing-ju-hua",
+   "verdict": "revise",
+   "issues": "AI读法。问难中「生盡則消液而同無」「宅毀則氣散而照滅」断言消散至无（湮灭）。理论不断言「同无」：在平衡之流中，每一次下降都被取走（Flow.Balances.fall_taken），计入其余时，所降者归于其余。所以「问者的立场与理论相合」过强。依存同灭（Web.Dependent、Web.coextinct）与传递停止后型式终止（ByPassing.ends_within）这两部分成立。Web.Dependent、Web.coextinct 与 Embodied.comesToStand 不在所引记录中。",
+   "fix": "kind 改为 scope：依存同灭与型式终止相合，「同无」不带入（对照 fall_taken）。记录补 life-as-condition-of-life 与 generation-is-replenishment。"
+  },
+  {
+   "id": "huiyuan-xin-huo",
+   "verdict": "keep",
+   "issues": "AI读法。定域正确；「神」作为不随化之体，是相分的一面，已注明。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "zhaolun-dong-jing",
+   "verdict": "revise",
+   "issues": "AI读法。僧肇的动与静都从同一事实「昔物不至今」出发，二读都不作跨步之同一，都是分开命名，差别在由此推出什么。Lineage.readings 对照的是分开命名与作一命名，不是这个结构。可取的是 Web.reidentify_step：换名不改各步的关系，各步关系自足，就是「静」之读。World.unity 的转述有误。",
+   "fix": "去掉 Lineage.readings 与 World.unity（或改述 World.unity），以 reidentify_step 为主。核对 process-and-frame-as-readings 是否为「一事之读法」给出更合的结构。kind 改为 scope：「所造未尝异，所见未尝同」成立；「物不迁」作普遍断言，由 zhaolun-xi-wu-zi-zai-xi 定域。"
+  },
+  {
+   "id": "zhaolun-xi-wu-zi-zai-xi",
+   "verdict": "keep",
+   "issues": "AI读法。定域正确：保留 Continues 作为联系前后的读法，往来是计数与延续，不是物的迁移。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "zhaolun-yin-bu-xi-mie",
+   "verdict": "keep",
+   "issues": "AI读法。CeasesFrom 的定义恰合「因不昔灭」；Continues 只连一步前后，合「因不来今」；ceasesFrom_self 正确。天台一条并入合理。",
+   "fix": "无须改动。"
+  },
+  {
+   "id": "mozi-gu-fu-chang-xin",
+   "verdict": "revise",
+   "issues": "AI读法。held_over_stretch 与 stays_failing 只给出：今之所存，若始时不存，则其间曾开始成立。对自所论之始即已成立者，定理不说它「尝新」。「皆嘗新矣」作全称，只对曾有一时不成立者成立；时段可以任意前推，但须有一时不成立。所以 kind 应为定域。stays_failing 不在所引记录中（它在 space-and-its-parts）。",
+   "fix": "kind 改为 scope，写明：凡曾有一时不成立而今成立者，必曾开始成立。记录补 space-and-its-parts。"
+  },
+  {
+   "id": "mojing-sun-jian-ti",
+   "verdict": "revise",
+   "issues": "AI读法。(1)「『存』即仍被持有（Web.Holds 的读法）」误配。Web.Holds 指不活动的形成因某个依存成立而仍在展开中；「其體或去或存」中的存是部分仍在场。(2)「謂其存者損」以余存的整体为「损」，即减损的整体。脊柱没有减损的整体：在 Web.Whole 下，只要有一部分活动，整体就完全活动。(3)「兼之體」是构成义，mapper 已注明不取。Whole.covered 一部分成立。",
+   "fix": "删去 Web.Holds 与 identity-across-steps。kind 改为 scope：部分或去而整体仍在，合 Web.Whole 与 Whole.covered；「损」（整体减损的程度）在脊柱上没有对应，列入缺口。"
+  },
+  {
+   "id": "mojing-jing-zhi-ju",
+   "verdict": "keep",
+   "issues": "AI读法。「荆，沈，荆之具也，則沈淺非荆淺也」说部分之性不移于整体，与 Generations.generations 同构：部分各至多活动两步，整体却每步都在。whole_not_in_pairs 作旁证可以。",
+   "fix": "无须改动。"
+  }
+ ],
+ "missing": [
+  "RO lao-33-si-er-bu-wang（老子三十三章「死而不亡者寿」）：本簇未链接。它给出「亡」的强义，直接关系到「成／亡」之名与 Ends（終），应作为该名 not_carried 的证据。",
+  "RO hs-39-bu-ke-dan-yu：河上公注内的自我修正（不可单一），应与 hs-06-16-bu-si 并列。",
+  "RO zhuangzi-qiwu-bi-chu-yu-shi（彼出于是，Run.part_act_eq_rest_act：一步两面）：zhuangzi-qiwu-fang-sheng-fang-si 应链接它，并沿用其 kind。",
+  "RO huishi-li-wu（惠施「物方生方死」）：mapper 在 reading 中提及，但没有链接 RO 条目。",
+  "RO lao-02-you-wu-xiang-sheng（Listed.coming_iff_ceasing、Web.unceasing_iff_bounded：有无相生的计数之律）：这是同步之律在先秦的直接对应，本簇缺。",
+  "RO ru-zhangzai-tai-xu-ji-qi（「知太虚即气，则无无」）：zhangzai-tai-xu 应正式链接。",
+  "RO tanjing-zi-xing（自性本不生灭）：相分，本簇缺。",
+  "RO zaahan-ku-mie（苦灭之相分）：应与 zaahan-wu-chang-shi-ku 相连。",
+  "RO tuan-heng-jiu（终则有始）：「終」之名必须与它及 C05 协调。",
+  "RO lao-30-55-wu-zhuang-ze-lao（物壮则老：定域）：与「盛极转衰」同属有界之律。",
+  "RO ru-xunzi-ming-wu-gu-yi（名无固宜）：本簇缺「重认／命名之选择」本身的名，荀子此句是候选证据。",
+  "中庸二十章「其人存，則其政舉；其人亡，則其政息」（RU1-S-ZY，RU1-ZY-20-R02，已核）：存／亡与舉／息对举，先秦以「息」名活动之止。这是「不息」与 Ceases 之名协调的关键证据（中庸年代有争议）。",
+  "庄子·让王「日出而作，日入而息」（ZH1-S28，杂篇，年代有争议，已核）：作／息为活动之起止而可再起，是有持守的休眠结构，也是息字之辨的证据。",
+  "老子十六章「万物并作，吾以观复」（YD-LAO-BASE，已核）：作＝进入活动，是 Arises 的先秦候选；同章「归根曰静」属静止族。",
+  "墨经经上「止，以久也」「損，偏去也」「始，當時也」（MI1-S-JS，已核）：止属停留（静止族），偏是部分之名的候选，始是一时之端。",
+  "胜鬘经 FO2-SM-R014「此四聖諦，三是無常，一是常。」：应另立相分条目（无条件之常住），不应并入 jingang-you-wei-fa。",
+  "RU2-R0275（荀子议兵「能并之而不能凝則必奪」）：mapper 判为 rejected，应改记为相分（争与位一层，RO §7），并说明其中并合后须维持耦合这一结构的剩余。",
+  "缺口（新结构，须新 Lean 才能定）：减损的整体。墨经「謂其存者損」与华严「但是破舍，無好舍也」都说缺部分而减损的整体，而 Web.Whole 是析取，没有程度；华严的合取之总与 Web.Whole 相反，也应记为相分或剩余。",
+  "锚点声明，本簇应引而未引：Becoming.Web.Ceases、Becoming.Web.whole_self、Becoming.Immortal.each_other、Becoming.Web.self_one_to_one、Becoming.Web.unceasing_iff_bounded（bounded-census-keeps-pace，同步之律只需有界计数）、Becoming.Flow.withImbalance_balances、Becoming.World.withRest_closed_iff、Becoming.Recycle.closed_unceasing、Becoming.Flow.whole_bounded_of_rest_idle、Becoming.Run.part_act_eq_rest_act、Becoming.Web.steady_held、Becoming.Hibernation.readings（作「蟄」的主锚）、Becoming.Dormancy.classes。",
+  "名：体现（Becoming.Web.Embodied）须有一个与「體」分开的协调之名，否则「兼／體」与「体现」相撞。",
+  "名：Becoming.Web.Brief（短暂，至多活动 k 步）与 Becoming.Web.Covered（整体由部分覆盖）在本簇被反复使用而无名；若「聚／散」改名 Rises／Falls，则 ComesToStand／CeasesToStand 也须另取名（候选张载「有形／無形」）。",
+  "引理而非结果：成／亡对否定谓词的对偶（G1），应作为引理随 mojing-yi-cheng-wang 落地，注明正向构成性成立、反向需可判定。"
+ ]
+}

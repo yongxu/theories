@@ -1,0 +1,113 @@
+{
+ "edits": [
+  {
+   "id": "INTRO",
+   "find": "类予每一者一值而并值同者",
+   "replace": "类配每一者一值而并值同者",
+   "why": "名表「予」（a.offers）只名一录予一义项，不名给值。决定原文要求经说中给值改用配、给或「以……为」。"
+  },
+  {
+   "id": "七·十一",
+   "find": "类，予所论之每一者一值，而并值同者也",
+   "replace": "象，配所论之每一者一值也；一者所得之值，谓之其像。类，配所论之每一者一值，而并值同者也",
+   "why": "本条经首用象（随类而同、其像），象的定义却只在后面的⟦十三·二十⟧，违反「经不用后条才定之名」。依 diagonal.moves 之决定（象＝予每一员一值者，其值写其像），在首用处定义。同时依 a.offers 把予改为配。"
+  },
+  {
+   "id": "七·十一",
+   "find": "类并一切者（达名），随之而同之象",
+   "replace": "类并一切者，随之而同之象",
+   "why": "达名定于后面的⟦十·七⟧，经中不可先用。经只说「类并一切者」就足以承载 lumped_const_iff，达名留在说中，并以⟦十·七⟧相连。"
+  },
+  {
+   "id": "七·十一",
+   "find": "只是予值与并",
+   "replace": "只是配值与并",
+   "why": "予为名表之名（录予义项），给值写配（a.offers）。"
+  },
+  {
+   "id": "七·十一",
+   "find": "象在此指一般之映射，予每一者一值",
+   "replace": "象在此指一般之映射，配每一者一值",
+   "why": "同上，予不名给值。"
+  },
+  {
+   "id": "七·十二",
+   "find": "以同一动所至者亦类同之类也",
+   "replace": "以同一动之果亦类同之类也",
+   "why": "名表中所至名探究之所见范围（Scope，⟦九·十一⟧）。果之注明言「一状一动所至」须改果，所至不可兼名次状。"
+  },
+  {
+   "id": "七·十二",
+   "find": "凡法，一类于此法为理，恰当次状之类随此类而同",
+   "replace": "凡法，每状唯一动、恰有一次状者，一类于此法为理，恰当次状之类随此类而同",
+   "why": "Learning.goAlike_iff_lumped 只对 Law.process next 成立，即每状一动、次状全有之法。书中之法（⟦一·六⟧）是确定之变，可多动、可无次状。依「Lean 有局部条件，经里写出」补此条件。"
+  },
+  {
+   "id": "七·十二",
+   "find": "恰当其类之值上有一等价 E",
+   "replace": "恰当其类之上有一等价 E",
+   "why": "经定「一者所得之值，谓之其类」，所以「其类之值」成了值之值，与 carries_law_alike_iff 不合（E 在 K 上）。改为与上句「行于其类之上」同一写法。"
+  },
+  {
+   "id": "七·十三",
+   "find": "推类，以所见之值予与之同类而未见者也",
+   "replace": "推类，以所见之值定与之同类而未见者之值也",
+   "why": "a.offers 之决定逐字指定：C07 推类「以所见者之值予……」改为「以所见之值定……之值」。予只名录对义项之关系。"
+  },
+  {
+   "id": "七·十三",
+   "find": "一象予二可择者同项",
+   "replace": "一象配二可择者以同项",
+   "why": "依 a.offers，十三·二十已由「予每一备择一项」改为「配」，给项同改为配。"
+  },
+  {
+   "id": "七·十四",
+   "find": "二读予每原子互推之辞",
+   "replace": "二读于每原子所配之辞互推",
+   "why": "a.offers 之决定点名「二读予每原子互推之辞」，要改用配。新写法也把 Formula.eval_congr 之前提（∀ x, ρ x ↔ σ x）写得更确切。"
+  },
+  {
+   "id": "七·十四",
+   "find": "二读即予原子以辞者",
+   "replace": "二读即配原子以辞者",
+   "why": "同上，予不名给值。"
+  },
+  {
+   "id": "七·十四",
+   "find": "唯一须它之读是以名读，即辞读为其自身（",
+   "replace": "以名读（辞读为其自身）随互推而同，恰当 `propext` 成立（",
+   "why": "「唯一须它之读」过于 Lean 所证。byName_lumped_iff 只说以名读随互推而同恰当 Extensional，lumped_of_byName 只说它随之则凡读皆随之。其他读（如 p ↦ p ∧ p）之随互推而同同样不能无 propext 而证。"
+  },
+  {
+   "id": "七·十四",
+   "find": "此等同不失证之择",
+   "replace": "此等同不失证之差别",
+   "why": "择是名表之名（缘感而择、择经象），此处只是普通的选取之义，换字以免一名兼二义。iff_witness_unique 说的是任二证相等。"
+  },
+  {
+   "id": "七·十五",
+   "find": "所至同也",
+   "replace": "所得之状同也",
+   "why": "所至名所见范围（Scope），不名一步之所得。Commutes 是 T (σ x) = σ (T x)，后者不是一步之果，所以写「所得之状」。"
+  },
+  {
+   "id": "七·十五",
+   "find": "法于对称之对为理",
+   "replace": "以对称之对为一类，此类于法为理",
+   "why": "理是对一类、于一法而言（经：「此类于此法为理」；pairs_goAlike：GoAlike (process T) q）。原句把法当作为理之主语。"
+  },
+  {
+   "id": "七·十八",
+   "find": "所至为此 N 辞之最小之静",
+   "replace": "第 N 步之状为此 N 辞之最小之静",
+   "why": "所至名所见范围，不可兼名所达之状。least_fixed 说的正是 stage sys N（第 N 步之状）为前 N 辞之最小之静。"
+  },
+  {
+   "id": "七·十八",
+   "find": "所至为最小之静",
+   "replace": "第 N 步之状为最小之静",
+   "why": "与经同改，说中不以所至名所达之状。"
+  }
+ ],
+ "notes": "已核（逐条对照 /Users/ren/theories/.claude/worktrees/zhonghua/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ 下的 MoveFormation、Learning、LearningRuns、Laws、Mechanism、Likeness、PropositionIdentity、Commuting、HexagramCommuting、Hexagrams、HexagramSequences、Undecided）：\n- 各条经之前提与 iff 方向都与证相合，只有上面列出的几处例外。\n  - 七·十一：lumped_of_finer 中更细之类所并者此类皆并；lumped_const_iff。\n  - 七·十二：GoAlike 定义理；carries_law_iff 与 image_determined_iff 两向；carries_law_alike_iff 之 RespectsClaims。\n  - 七·十三：determines_lumped_iff 要 DecidableEq K 与 y≠z，所见为 List；every_determines_nothing 要 DecidableEq I；lumped_right_iff 为 g x = f x ↔ f d = f x。\n  - 七·十四：lumped_iff 之 V 任意；extensional_iff_lumped 只及辞至辞；lumped_of_byName 及于任意 V；eval_congr、read_congr 只给 ↔。\n  - 七·十五：pairs_goAlike 不要对合，只要 names 与 named；keeps_fixed；not_drawn_to_one。\n  - 七·十八：Closed、settles 与 settled_from、least_fixed 只及前 N 辞；chain_exact 为 ¬Steady (N+1) N；stays_undecided 不要 Closed；undecided_of_moves 对每一静；liar_both_sides。\n- 全名皆存在，皆在核心。\n- 15 处引文都用 ctq.py text 逐字核过，全部 exact。\n- 把本篇渲染为 /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/rv07/pian7.md 后跑 verify_zh.py --chapter：\n  - 本篇之引文、声明、记录链接与 7 行对照（条目与种类都对）无一失败。\n  - 唯一的 FAIL 是 CIVILIZATION-THOUGHT-AND-BECOMING.md 之生成表，与本篇无关，是工作树已改而未重生成。\n- ⟦id⟧ 都在大纲中且所指不错：⟦七·十⟧ 同（定同中确定），⟦一·十五⟧ 依 C01 之改定正名，⟦十·七⟧ 达名，⟦NEW-1⟧ 体之动，⟦九·二十六⟧ 依 C08 改题为习，⟦十三·二十⟧ 象与 selects_not_right_of_parted，⟦十·三⟧，⟦七·十六⟧，⟦十五·十六⟧，⟦十六·六⟧，⟦七·十五⟧，⟦七·十八⟧。\n- C07 三项改动都已施行：\n  - 篇首依命名之决定改写。\n  - 七·十二 正名句、identifiesAlike_of_law 与 the-split-that-makes-sense 已删。\n  - 七·十四 已改题、改名，首句移入，證并入 eval_congr、lumped_of_byName，propext 只在说中。\n\n交整合者（未改，非本篇可定）：\n1. 象的定义：本稿把「象，配……谓之其像」立于七·十一经。⟦十三·二十⟧ 经不宜再下定义（diagonal.moves 拟作「象，予每一员一值也」，依 a.offers 又须改配），应改为指回 ⟦七·十一⟧，写「择所经之象」。名表象行之所名须同改。若改写后篇一或凡例已先定象，则删本稿所加之句。\n2. 所至与果：名表果之注要求所至改果。篇一 七·十 经（C01 之改：「一状以一动所至之任二状皆同」）与篇五诸经也用所至名次状，须全书统一，否则与本篇之改不一。\n3. 法有二义：⟦一·六⟧ 定法为确定之变（可多动），而 静（Law.rests_iff）、闭（Law.Absorbing）、可换序（Law.Commutes）与 goAlike_iff_lumped 都只对次状函数之法成立。本篇只在七·十二补了条件。七·十五「进一步」与三·十二、篇五之经同样默认此义，宜全书定一个写法。\n4. 读作映射之义（量从构成者读出）定于 ⟦九·三⟧，在本篇之后。七·十四 经之「辞之读」「以名读」「以关系所构之读」与篇一之「正名……之读」「不依语境之读」都先用之，是全书次第问题。\n5. 七·十八 经以非、且、或，七·十四 经（依指令逐字移来）以且、或、则、凡、有名联结。凡·四 已定或为「示其为何支」之或，二者不同；formula 键只要求说中改写合取、析取等，经中如何写待定。\n6. 七·十四 之證列 9 个声明，多于体例之 3 至 8，是合并十·九之结果；iff_witness_unique、transport_const 只承说，可酌删其一。七·十四 之「讀（AI，待编号）」没有决定编号：propext 之读不在 DELEGATED-CHOICES 中（PE1），须立号或去讀字。\n7. 七·十 用同中确定，名表与七·十二说用同中为法，须一名。\n8. 大纲 book-1-outline.txt 之题仍作「命题之同一」「与映射可换序之法」，应改为「辞之同一」「与象可换序之法」。\n9. 七·十八 经中「修正」、「真伪」（boolean 键未定）、「可换序」尚无定写，同改写者原注。D52 已核，覆盖可换序与未定两处之讀；D51 覆盖错，D26 覆盖理与推类。"
+}

@@ -1,0 +1,6 @@
+{
+ "real": true,
+ "why": "The finding is real: the pointer is stale. In book-2.json, the 經 of stable 一·二 (rendered 一·三, 状、动、步) now holds the definition: 「象，予所施之每一者一值者也；读，以一象予状以值也；自其构成者读出一量，亦曰读。」 The 經 of stable 一·十四 (rendered 一·二十, 观) no longer defines 读. It only defines 观 and the law of runs, and its 名 sentence uses 读.\n\nThe second review moved this definition from 一·十四 to 一·二 (agents/global2-order.json, findings 一·二 and 一·十四). That round re-pointed 一·四 (「读见⟦一·二⟧」) and NEW-1 (「之一象（⟦一·二⟧）」), but it missed 凡·二. So 凡·二's gloss 「读（以一映射予状以值，⟦一·十四⟧）」 still sends the reader to 观, not to the definition.\n\nThe reviewer's find occurs exactly once in the 凡·二 body, and replacing it is enough. No Lean is involved, since this is a cross-reference within the book.\n\nThe same stale pointer is also in 凡·十九: 「之定义在⟦一·十四⟧」, inside 「映射之读（读：以一映射予状以值；自其构成者读出一量，亦曰读）之定义在⟦一·十四⟧」. It needs the same change to ⟦一·二⟧, but it is a separate edit in a different 條.",
+ "find": "读（以一映射予状以值，⟦一·十四⟧）",
+ "replace": "读（以一映射予状以值，⟦一·二⟧）"
+}

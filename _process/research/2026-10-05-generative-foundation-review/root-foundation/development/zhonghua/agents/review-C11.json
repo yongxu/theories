@@ -1,0 +1,113 @@
+{
+ "edits": [
+  {
+   "id": "十二·二",
+   "find": "自每一起始之差，有一阶于每步在 c 无所失，恰当",
+   "replace": "自每一起始之差，有一阶于每步在 c 皆等于可致，恰当",
+   "why": "Order: this 經 uses 所失, which is defined only in the 經 of ⟦十二·五⟧, a later 條. The new wording says exactly what Remainder.finite_order_iff_no_loop states: carriedWithin j t c = carried t c."
+  },
+  {
+   "id": "十二·二",
+   "find": "所以 j 阶至第 j 步皆无所失",
+   "replace": "所以 j 阶至第 j 步皆等于可致（无所失；所失之名见⟦十二·五⟧）",
+   "why": "The 說 also uses 无所失 before ⟦十二·五⟧ defines 所失, so its first use gets a pointer to the definition. The claim itself is carriedWithin_exact."
+  },
+  {
+   "id": "十二·一",
+   "find": "一单位只给一次于第一个所待",
+   "replace": "一单位只与一次于第一个所待",
+   "why": "Name: giving in an exchange is 与 (取与). plain-wordings asks for 给 to become 与, and the writer's own notes say 与 is used throughout."
+  },
+  {
+   "id": "十二·一",
+   "find": "每步以应倍二转给第二个所待",
+   "replace": "每步以应倍二转与第二个所待",
+   "why": "Same fix, 给 to 与, for the giving step in Propagation.Chain.relay."
+  },
+  {
+   "id": "十二·八",
+   "find": "应倍是一环节对所读之积每单位所给者",
+   "replace": "应倍是一取与对所读之积每单位所给者",
+   "why": "Wrong concept: 应倍 (RespondsWithin) is the strength of an exchange (取与) on a level it reads. A 环节 is a map in the return-map list, and the next clause contrasts the two. The name table says 应倍 is the 倍 an 应 gives per unit of the level it reads."
+  },
+  {
+   "id": "十二·八",
+   "find": "报处处小于所受，是充分条件",
+   "replace": "报于零为零、于每一正差皆小于之，是充分条件",
+   "why": "Exactness: closes_within needs f 0 = 0 and f x < x for positive x. A map on Nat cannot be below what it receives at 0, so '处处小于' misstates the condition."
+  },
+  {
+   "id": "十二·九",
+   "find": "诸倍相乘为零，则首匝之后差为零；",
+   "replace": "诸倍相乘为零，则自首匝起差每匝皆为零；",
+   "why": "whole_factors gives state (n+1) = 0 for every n, that is at every turn from the first on. '首匝之后差为零' can be read as a claim about the first turn only."
+  },
+  {
+   "id": "十二·十",
+   "find": "名“还”之回馈义始见于注层（河上公、苏辙）；",
+   "replace": "名“还”之回馈义始见于注层：北宋苏辙注「必還報之」〔LC-SZ-ALL〕；王弼注读作还反无为，河上公注读作举事自责，都不是经他者而回；",
+   "why": "Fact: the checked passage lao-30-qi-shi-hao-huan finds that, of the three commentaries, only 苏辙 reads 好还 as a return through others. 河上公 reads it as 举事好还自责 and 王弼 as 还反无为. All three verified with ctq text: LC-SZ-ALL '必還報之', LC-HS-UP '其举事好还自责', DS01 '有道者务欲还反无为'. The quotation added is exact."
+  },
+  {
+   "id": "十二·十一",
+   "find": "若法又唯读已立者：于 c 至此每步皆不下于阈之步",
+   "replace": "若法又唯读已立者，所标者唯 c：于 c 至此每步皆不下于阈之步",
+   "why": "Hypothesis: Nonanticipating.standing_alike already needs `only` (no stock but c is marked), so the condition on the mark has to come before the first clause. '以标独标 c' was also hard to parse."
+  },
+  {
+   "id": "十二·十一",
+   "find": "；以标独标 c，未穷之法于 c 之应倍为零",
+   "replace": "；未穷之法于 c 之应倍为零",
+   "why": "The mark condition now stands at the head of the sentence, so it covers standing_alike, standing_unread and standing_no_loop together."
+  },
+  {
+   "id": "十二·十一",
+   "find": "而阈不低于它们于 c 之需",
+   "replace": "而阈不少于它们于 c 之需",
+   "why": "Name rule: 高/低 used as a comparison becomes 多/少 (the writer applies this elsewhere). This is θ s ≥ need in Through.readsBelow."
+  },
+  {
+   "id": "十二·十二",
+   "find": "凡 g 之取与经其感，他者于 g 所感之所待之取与二流皆同",
+   "replace": "凡诸待者之同异定然否，g 之取与经其感，他者于 g 所感之所待之取与二流皆同",
+   "why": "Local condition: policy_uses_after_failure assumes [DecidableEq F]. The first law of this 經 states its [DecidableEq C] as 诸所待之同异定然否, so this law states its own condition the same way."
+  },
+  {
+   "id": "十二·十二",
+   "find": "若 g 所感之一所待其差有改，则其前有一步原网不容 g。",
+   "replace": "若 g 所感之一所待其差至某步有改，则非此前每步原网皆容 g。",
+   "why": "Exactness: the Lean conclusion is ¬ ∀ s < t, W.Supported s g. The core assumes no excluded middle, and 'there is an earlier step where g is unsupported' is the stronger existential, which Lean does not prove."
+  },
+  {
+   "id": "十二·十二",
+   "find": "用之者，此前原网非每步皆容 g（",
+   "replace": "用之者，此前原网非每步皆容 g（",
+   "why": "(no-op guard; see next)"
+  },
+  {
+   "id": "十二·十二",
+   "find": "用之者，其前已失其容（",
+   "replace": "用之者，此前原网非每步皆容 g（",
+   "why": "The 說 restated the same law existentially ('已失其容'). It now matches the ¬∀ form of policy_uses_after_failure."
+  },
+  {
+   "id": "十二·十七",
+   "find": "`Becoming.Regulation.OneSided.within`、`Becoming.Regulation.OneSided.not_opposes`",
+   "replace": "`Becoming.Regulation.OneSided.within`、`Becoming.Regulation.OneSided.restores_premise`、`Becoming.Regulation.OneSided.not_opposes`",
+   "why": "The 經 asserts that the witness 守升至 m 之律之前提, and that is proved only by OneSided.restores_premise, which was cited in the 說 but missing from 證. 證 now has eight declarations."
+  },
+  {
+   "id": "十二·十七",
+   "find": "每步越界者永不就正。又",
+   "replace": "每步越界者永不就正（构造之例 `Becoming.Regulation.Overshooting.never_at`；一般之形是 `Becoming.Flow.withinGap_iff_between` 之一步推论，脊柱未单列）。又",
+   "why": "Claim status: the passage cy-xiaoguo-jiaowang-guozheng records the general form ('beyond the gap at every step, never at m') as an AI hand inference not in Lean. Only the Overshooting witness is checked, so the 說 must not state the general form as a law."
+  },
+  {
+   "id": "十二·五",
+   "find": "长 j＋1 之诸路之和",
+   "replace": "长 j+1 之诸路之和",
+   "why": "Typography: everywhere else in the part, including the same 經 ('经 j+1 次应'), the half-width + is used."
+  }
+ ],
+ "notes": "I edited no file. Apply the edits in order. The 十二·十二 entry with find '用之者，此前原网非每步皆容 g（' is a mistaken no-op: its find text is not in the current body. Drop it, or apply it after the entry that follows it, where it then finds and replaces its own text.\n\nWhat was checked:\n- Every 條's 經 against its Lean statement in /Users/ren/theories/.claude/worktrees/zhonghua/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/*.lean: hypotheses, direction of iff, witness or law.\n- All 140 cited names resolve, including Becoming.gap_polynomial_iff_no_loop (Loops.lean:1561). Becoming.Closing.Threshold and Becoming.Regulation are namespaces.\n- All 40 quotations are exact under ctq.py text. The one added in 十二·十 (「必還報之」〔LC-SZ-ALL〕) is also exact.\n- Every ⟦id⟧ resolves in book-1-outline.txt to the intended content (⟦九·四⟧ 闻见 holds 下游; ⟦四·二十六⟧ / ⟦十二·十四⟧ hold 涸界 and 平面之阈).\n- Every 对照 entry's id and kind match passages.json C11/C06. Every record link exists.\n- All C11.json instructions are carried out. The writer's deviations are justified by NAMES-ZH:\n  - 每匝 instead of 每步 for the course of the return map.\n  - 未穷之法 instead of 立时之法.\n  - 域之宽 instead of 带.\n  - 涸界 / 常取 instead of 不返之点 / 每步同取.\n- Only Chinese outside code and ids.\n\nSubstantive findings, all fixed by the edits:\n1. Order: the 經 of 十二·二 used 所失 before ⟦十二·五⟧ defines it.\n2. 十二·八 說 called 应倍 a property of a 环节, which conflates the two concepts the sentence was distinguishing.\n3. 十二·十 說 attributed the feedback reading of 好还 to 河上公. The checked passage lao-30 says only 苏辙 has it; 河上公 reads 自责. The name table's 还 note repeats this error ('回馈义始见于注层（河上公、苏辙）') and should be corrected by the integrator.\n4. Exactness:\n   - 十二·十二: policy_uses_after_failure proves ¬∀, not ∃; and its DecidableEq F was not stated.\n   - 十二·十一: the mark condition was placed after the first clause that needs it.\n   - 十二·九: 'P=0' closes at every turn from the first, not only at the first.\n   - 十二·八: the closes_within condition was misstated.\n5. 十二·十七: the 證 lacked restores_premise, and the 說 stated an unproved general law.\n\nLeft for the integrator, not edited:\n- The outline title of ⟦十二·九⟧ is still '整数倍率与截'. The part and intro now use '整数之倍与截', which follows the NAMES-ZH 倍 row.\n- plain-wordings row 163 (loopreturn link → '环之一应') conflicts with NAMES-ZH 环节/匝. The part follows NAMES-ZH, so that row should be retired.\n- '唯读已立者' (this part) vs '只读已往' (C10) for Nonanticipating: one wording should be chosen.\n- Unnamed concepts kept as plain wording, which the writer also flagged: 自环, 依步之路/链, 携带之法, 相反 (Flow.Opposes), 升至 m 之律 (Flow.restores), 返 (RoundTrip), 所标之步, 在场者.\n- The intro's '⟦十四·六⟧' (念旧恶) is a reading of the instruction '十四·六、十四·七之后'. It fits, since 念旧恶 is the waiting-with-memory form, but the instruction's own target was only ⟦十四·七⟧ and ⟦十二·二十一⟧–⟦十二·二十三⟧.\n- 物 and 待者 are both used for formations outside the part (体外之物 / 体外每一待者). This is true but uneven, and the integrator may want to unify it."
+}

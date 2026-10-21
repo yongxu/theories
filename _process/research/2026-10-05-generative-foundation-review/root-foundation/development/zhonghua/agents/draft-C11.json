@@ -1,0 +1,492 @@
+{
+ "pian": "篇十二「环」（C11 回路、反馈、阈值与调节）",
+ "markdown": "## 篇十二　环\n\n本篇论环：在一个展开中，差怎样沿感而到达，感怎样闭一链而成环，环怎样把差带回其起处，或闭之、或使之如故、或使之滋，又在阈处、调节处与等待之给处分出哪些形。次第是：先说应倍与可致，一个取与随水平之差而变者几何、差最多能到几何（十二·一）；次说环与成环，感之链自一所待复至其所待，环在某步因一感闭链而成，只在法所读之内，其成不由此前之可致先见（十二·二至十二·四）；次说截于有尽之阶所失者、感之不已、差唯经环而滋、其速由频数定（十二·五至十二·七）；次说一周所回之报、整数倍率与截、二历程之差每步为前差之报的还（十二·八至十二·十）；然后说阈：穷与未兆，常取之下的不可回返之点与平面之阈（十二·十一至十二·十四）；再说两侧之调节：中节、中和、过正与一偏、识不早、抑举（十二·十五至十二·十九）；最后说等待之给绕环之形：不给绕环而还、不求备、有以待之、先施（十二·二十至十二·二十三）。本篇承篇一之法、篇四之流与衡、篇五之同归、篇七之入与机、篇十一之感与应，下接篇十三之世系与篇十四之群与分。本篇诸律皆无设而然：每条只在写入其中的局部条件下，对每个如此表示之流、待网或法之行成立。建模之选择是离散之步与自然数之量：应倍是自然数，正应倍至少为一，环每周至少倍之；应倍小于一时此倍不成立。常取之下的阈另有任意线性有序之量之形（十二·十四）。凡续皆有顾（延续之条件）在篇十五陈述而不断言，只定范围；排序只在以广为愈。本篇两者都不用：一环闭差、使差如故或使差滋，哪一种助生生，诸律不说，只能经以广为愈、在延续之条件之下比较。\n\n### 十二·一　应倍与可致\n\n**經**　应倍，一取与随一所待之水平而变，所取所与之差不过其水平之差若干倍也。可致，诸应倍自起时之差与体之差所生之历程也。凡法唯读已立者，诸所待各列一次，二流皆衡而同其物，体外之物从此法而其应倍不过 k，体之所为相差不过 σ，起时水平相差不过 δ：凡如此之法与二流，一所待于一步之差皆不过 a，恰当其可致不过 a。可致为正，恰当有一时间之路，由起时之差、体之差与正应倍而至之。\n\n**說**　应倍（耦合强度，coupling strength，`Becoming.ExchangeLaw.RespondsWithin`；新组合，应＋倍：应对所读水平每一单位所给之倍）量的是感有多强：两个历史只在一个水平上不同时，取与（交换）之所取所与合计相差至多是此水平之差的 k 倍。察（敏感性，篇九）只说能否：对唯读已立者之法，一取与对某所待不敏感，恰当它对该所待至此各步之水平的应倍皆为零（`Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero`）。有尽之应倍是法上的一个条件，不随每一法而给：给出水平之平方的法没有有尽之应倍（`Becoming.Propagation.Square.not_respondsWithin`）。可致（所携带的量，carried amount，`Becoming.carried`）本身是一个历程，由携带之法生成，并且恰被达到（`Becoming.carried_attained`），所以它是能到达的最多之差，单凭应倍得不出更小之界（`Becoming.most_difference_arrives`）。差（`Becoming.gap`）是二水平各自超出对方者之和，没有方向。留在水平中的差不经环也一直到达：一单位只给一次，其余以二倍之应倍转给第二个所待，至 t+1 步为 2t，无界而无环送回（`Becoming.Propagation.Chain.keeps_arriving`，构造之例）。对照（定域，xici-chuyan-qianli；《系辞上》，成篇年代有争议）：「言出乎身加乎民；行发乎迩见乎远」〔DS02〕：差只沿时间之路到达，路不及之处二流水平相同；可致只是上界，远处应否、应多少由远处之法定；同章「况其迩者乎」〔DS02〕以近者更甚，上例即其反例。\n\n**證**　`Becoming.ExchangeLaw.RespondsWithin`、`Becoming.carried`、`Becoming.most_difference_arrives`、`Becoming.gap_le_carried`、`Becoming.carried_attained`、`Becoming.carried_pos_iff`；记录 [how-much-difference-arrives](../results/records/how-much-difference-arrives.md)、[sensitivity-is-the-least-coupling](../results/records/sensitivity-is-the-least-coupling.md)。\n\n### 十二·二　环\n\n**經**　环，感之链自一所待而复至之也。凡诸感步步皆在：自每一起时之差，有一阶于每步尽致 c 之可致，恰当 c 之上游无所待在环上。\n\n**說**　此处之感（`Becoming.Couples`）是：某一步，体外一在场之物以正应倍读 d 之水平而与 c 取与，d 之水平即感入 c。感相接成链（`Becoming.Coupled`）；有链自 e 至 c，e 即在 c 之上游（`Becoming.Upstream`）；链自一所待复至其所待，即环（回路，loop，`Becoming.OnLoop`）。可致按阶展开：j 阶（`Becoming.carriedWithin`）是至多经 j 次应之路所致者；每一步至多加一次应，故 j 阶至第 j 步皆尽。诸所待皆列而上游无环时，阶数少于所待之数一者于每步皆尽（`Becoming.carriedWithin_exact_of_no_loop`）；上游有一环，环上与通往 c 之链上之感步步皆在，而环上已有所至，则每一阶都于某步有所失（`Becoming.carriedWithin_lt_of_loop`）。本条之等价不须诸所待皆列（`Becoming.Remainder.finite_order_iff_no_loop`；列之之形为 `Becoming.finite_order_iff_no_loop`）。条件“步步皆在”不可去：一环只在第一步有感，其上虽有环，有尽之阶仍尽之（`Becoming.Loops.Once.not_always`）；诸感有来有去之一般情形见十二·五。这是有向图之邻接恰在无环处幂零、截断之诺伊曼级数一事；脊柱之所增，是经 `Becoming.most_difference_arrives` 对每一唯读已立者之法皆然。讀（AI，D43、D45）：一宇有何环，是其时（情境）之一部分；环在展开中成而解，诸律取其每步之所是。\n\n**證**　`Becoming.Couples`、`Becoming.Coupled`、`Becoming.Upstream`、`Becoming.OnLoop`、`Becoming.carriedWithin`、`Becoming.Remainder.finite_order_iff_no_loop`、`Becoming.carriedWithin_lt_of_loop`、`Becoming.Loops.Once.not_always`；记录 [how-a-carried-difference-grows](../results/records/how-a-carried-difference-grows.md)。\n\n### 十二·三　成环\n\n**經**　成环，一步之感闭一链而环始有也。凡环，皆至某步而成。凡至 T+1 步所成之环：或至 T 步已成，或经一于 T 步作用之感，其感读 d 之水平而与于 c，自 c 有链至环上之所待，自其所待有链至 d。一取与始应其所与之所待之水平，则成一所待之环。\n\n**說**　至 T 步所成之环，是只留 T 步之前作用之感（`Becoming.strengthsBefore`）所成之环；每一链都至某步而成，所以所有之环恰是至某步所成之环（`Becoming.onLoop_iff_formed`）。由 T 至 T+1，新成之环必经一个在 T 步作用而闭一链之感（`Becoming.onLoop_succ_iff`、`Becoming.forms_by_closing`）；一般地，一感读 d 而与 c，又有链自 c 至 e、自 e 至 d，则 e 在环上（`Becoming.onLoop_of_closing`）；一取与始应其所与之水平，是一所待之环（`Becoming.responds_to_own_level`）。应倍若读自至此之历程（`Becoming.ReadsBefore`），其所生之历程就是它所读之应倍的可致（`Becoming.formedCourse_eq_carried`）：何环于何步成，由展开读出。一例：一体之常差使一水平每步加一，水平至 θ 后与之取与者始应其水平，环成于 θ 而不先成，此后水平加一每步倍之（`Becoming.Closing.Threshold.forms`、`Becoming.Closing.Threshold.level_after`，构造之例；此即盈科之形，篇六）。环之解在其感不复作用处，见十二·五。对照（相合，jielao-you-yu-ji-hui-luan；《韩非子·解老》，战国末，篇章经后代编校）：「人有欲則計會亂，計會亂而有欲甚」〔CV1-S-JL〕：欲与计会互为所应，是二所待之环。又（相合，weishi-xun-xi；唐玄奘译糅《成唯识论》，据印度护法等释）：「能熏識等，從種生時，即能為因，復熏成種，三法展轉因果同時」〔FO1-S-CY〕：现行与种子互熏成环；论言“同时”，脊柱以离散步为建模之选，读作逐步之环。\n\n**證**　`Becoming.onLoop_iff_formed`、`Becoming.onLoop_succ_iff`、`Becoming.forms_by_closing`、`Becoming.onLoop_of_closing`、`Becoming.responds_to_own_level`、`Becoming.formedCourse_eq_carried`；记录 [how-loops-form](../results/records/how-loops-form.md)。\n\n### 十二·四　环在所读之内，其成不可先见\n\n**經**　凡体外无物于任一步读 c 之水平，则限于所读之感无环经 c，c 之下游唯 c。凡诸所待皆列，体起后不复与差，起时之差不过 D，每步入每一所待之应倍之和不过 M，至 T 步所成之环皆不在 c 之上游：则至 T 每步 c 之可致不过 D 乘步数之一多项式，其次数少于所待之数一，不论其后诸感如何。有一环成于 T 者，至 T 其可致常如起时之差，成后每步倍之；成于 T 后任一步者，至 T 之可致与之皆同。\n\n**說**　未被读之水平，其应倍为零（`Becoming.ExchangeLaw.ReadsAt.respondsWithin_unread`），所以把应倍限于法所读者，仍是此法之应倍；环只在所读之内（`Becoming.not_onLoop_unread`、`Becoming.upstream_unread`）：所施若不被任何应读入，就不回来。成环之前，可致至多多项式（`Becoming.carried_le_polynomial_before`）；而成环之步不由此前之可致显出（`Becoming.Closing.Onset.amount_before`、`Becoming.Closing.Onset.amount_after`、`Becoming.Closing.Onset.unforeseen`，一个构造之自环）。能显其将成者，是读感本身者（如十二·三之例中水平距 θ 之远近）；这与十二·十二之未兆是同一事之两面。对照（相分，qixin-zhenru-shi-wu-ran；《大乘起信论》，传统题署马鸣造、梁真谛译，作者、译者有争议）：「真如淨法實無於染，但以無明而熏習故則有染相」〔FO2-QX〕：脊柱中“不受某所待影响”只有一种确切形式，即应倍为零、体外无物读之、不在环上，这是一个关系事实，不是本性；论中真如既被熏又能熏，在环上，而“实无于染”立一个先于熏习、不随熏习而改之本性，属固定本性之层，理论不携带。\n\n**證**　`Becoming.not_onLoop_unread`、`Becoming.upstream_unread`、`Becoming.carried_le_polynomial_before`、`Becoming.Closing.Onset.amount_before`、`Becoming.Closing.Onset.amount_after`、`Becoming.Closing.Onset.unforeseen`；记录 [loops-within-what-a-law-reads](../results/records/loops-within-what-a-law-reads.md)、[how-loops-form](../results/records/how-loops-form.md)。\n\n### 十二·五　不已与所失\n\n**經**　不已，d 之水平感入 c，至任意晚之步犹有之也。所失，可致截于一阶所未计者也。凡截于 j 阶，可致等于 j 阶之所致，加自可致本身依次经 j+1 次应所携者：所失即后一项，于诸感之每一日程皆然。凡差已至一环，环上之感皆不已，又有不已之感之链自环至 c：则每一阶皆于某步在 c 有所失。凡自 N 步起无感读水平，则 N 阶于每步、每所待、自每一起时之差皆尽。\n\n**說**　不已（耦合复现，`Becoming.CouplingRecurs`）：对每个 N，都有读 d 之水平于 N 步或其后的感。名取「惟天之命，於穆不已」〔RU1-S-ZY〕之“不已”（已为止息，不已即不止而复现）。所失（`Becoming.carried_eq_carriedWithin_add`）是对同一历程按应之阶的计算，不是世界中另外留下之量；对每一日程，它不过十二·二之界，自环恰失此界（`Becoming.responses_le_missBound`、`Becoming.Loops.SelfLoop.attained`）。环上之感不已，任何有尽之阶都在某步不尽（`Becoming.carriedWithin_lt_of_recurring_loop`；是对每一阶有某一步，不是每一步）；感自某步起不复作用，有尽之阶尽之（`Becoming.exact_of_reading_before`）：环之解在其感不复作用处。日程自 N 步起已定（`Becoming.SettledFrom`：自 N 起之感皆不已）时，有尽之阶尽之，恰当自 N 起之感无环在 c 之上游（`Becoming.finite_order_iff_no_loop_from`）；是否每一日程皆定，见十二·七。对照（定域，chengyi-gan-ying-bu-yi；北宋，《近思录》卷一所录二程语）：「所应复为感，所感复有应，所以不已也」〔RU2-S-S06〕：感应相续成环，其“不已”是环上之感至任意晚犹作用，于是任何有尽之阶的截断都在某处不尽；“有感必有应”作为普遍之断言，脊柱只作前提。又（定域，lao-79-he-da-yuan；《老子》第七十九章）：「和大怨，必有馀怨」〔YD-LAO-BASE〕：读“和”为只处理到有尽之阶的应（讀，AI），则怨在不已之环上时必有所失；感自某步起不复作用者，有尽之阶可无所失；余怨能否经新成之关系化解，未决。\n\n**證**　`Becoming.CouplingRecurs`、`Becoming.carried_eq_carriedWithin_add`、`Becoming.carriedWithin_lt_of_recurring_loop`、`Becoming.exact_of_reading_before`、`Becoming.finite_order_iff_no_loop_from`；记录 [what-a-cut-loses](../results/records/what-a-cut-loses.md)。\n\n### 十二·六　滋\n\n**經**　滋，可致随步而长，过每一多项式也。凡应倍不随步而变，每步同一组物，诸所待皆列，体起后不复与差：c 之可致自每一起时之差皆为一多项式所界，恰当 c 之上游无环；环上应倍皆正者，每绕一周，其所至至少倍之。凡体起后不复与差，起时之差不过 D，每步入每一所待之应倍之和不过 M，自某步 N 起作用之感无环在 c 之上游：则不论日程，c 之可致为一多项式所界。\n\n**說**　滋（失控，runaway）在此是可致之长过每一多项式；可致是能到达的最多之差，所以滋说的是能到达者，不是每一法之所为。名取“滋”之滋长义，以之名经环之失控是本编的约定。无环之时，留在水平中的差一直到达，至多多项式而长（十二·一之例是一次的）；有步步皆在之环，至少几何而长（`Becoming.carried_doubles_around`）。所以滋唯经环，且经每一步步皆在之环（`Becoming.polynomial_iff_no_loop`）；不论日程，滋唯经自某步起仍作用之感所成之环（`Becoming.carried_le_polynomial_from`）。逆不成立：不已之环不必滋，见十二·七。经由 `Becoming.most_difference_arrives`，这些都是对每一具此应倍之法与其每二衡流之差的陈述（`Becoming.gap_polynomial_iff_no_loop`）。对照（相合，wb-65-jian-wei-yi-zi；魏晋，王弼《老子注》第六十五章）：「复以巧术防民之伪，民知其术，防随而避之，思惟密巧，奸伪益滋」〔DS01〕：防应伪之水平，避应防之水平，是二所待之环，各节倍之则滋；注以民为被防者、以术为施治者之手段，这一框架不采纳，所承唯环之结构。\n\n**證**　`Becoming.polynomial_iff_no_loop`、`Becoming.carried_doubles_around`、`Becoming.carried_le_polynomial_from`、`Becoming.gap_polynomial_iff_no_loop`；记录 [how-a-carried-difference-grows](../results/records/how-a-carried-difference-grows.md)、[what-a-cut-loses](../results/records/what-a-cut-loses.md)。\n\n### 十二·七　频数\n\n**經**　频数，感作用之步数也。凡体起后不复与差，起时之差不过 D，每步入每一所待之应倍之和不过 M，而于日程所未标之步为零：则第 t 步之可致不过 D 乘 1+M 之 a 次方，a 为 t 前日程所标之步数。凡差已至 e，又自 e 经时间之链复至 e，每返一次，其所至至少倍之；第 i 返之步若使二之 i 次方过其步之每一多项式，则 e 之可致滋。有不已之环而不滋者。\n\n**說**　频数（耦合的频度，frequency，`Becoming.Frequency.count`；约定）计的是日程所标、感作用之步。此界恰被自环达到（`Becoming.Frequency.SelfLoop.carried_eq`）：单凭 D、M 与作用之步，得不出更小之界。所以滋之速由多常作用定，不由多强定：一自环为多项式所界，恰当二之作用步数次方为多项式所界，不论其正应倍为何（`Becoming.Frequency.SelfLoop.polynomial_iff`）；感稀少之处，不论应倍，可致为多项式（`Becoming.carried_le_of_rare`）。例：自环只在 0、1、3、7……步作用，至任意晚犹作用（不已），自正差起每一有尽之阶都有所失，而可致不过 D 乘 2 之 M 次方乘 (t+1) 之 M 次方（`Becoming.Frequency.Sparse.recurs`、`Becoming.Frequency.Sparse.inexact`、`Becoming.Frequency.Sparse.polynomial`）。每一日程是否皆自某步而定，理论不能对展开断言或否认：一所待自感之每一日程皆定，恰等价于一条推理之原则（每一可判定之二元布尔族，或每行皆有一处为真，或有一行处处为假），它给出无穷可尽（LPO，凡例）（`Becoming.settled_iff_recursOrStops`、`Becoming.RecursOrStops.lpo`）；核心不取排中律，所以须之之律以已定之日程为前提。对照（定域，lao-60-peng-xiao-xian；《老子》第六十章，解经层为《韩非子·解老》，战国末）：「治大国，若烹小鲜」〔YD-LAO-BASE〕：《解老》读为「烹小鮮而數撓之」〔CV1-S-JL〕之害，害在次数不在强弱，与频数同向；但“数挠”是体反复与差，正是此律所设为零者，脊柱未有其律，未决。\n\n**證**　`Becoming.Frequency.count`、`Becoming.carried_le_count`、`Becoming.carried_doubles_roundTrip`、`Becoming.runaway_of_roundTrip`、`Becoming.Frequency.Sparse.recurs`、`Becoming.Frequency.Sparse.polynomial`；记录 [how-often-couplings-act](../results/records/how-often-couplings-act.md)。\n\n### 十二·八　报\n\n**經**　报，环上诸节依次所为之合也：送一差入首节，每节以所受交于次节，末节交回者即是。凡诸节所交皆不少于所受，则差每周皆不小于其初；差有一周小于其初，则必有一节于某差所交少于所受。凡报于零为零，于每一正差小于之，则差 d 至第 d 周为零，此后常零；此界恰当。凡诸节各如数交出，则差常如其初。凡环有节而诸节所交皆至少倍其所受，则 n 周之后，差至少为其初之二之 n 次方倍，自正差起过每一界。\n\n**說**　报（环返映射，return map，`Becoming.LoopReturn.returnMap`）只计一个差：一周所回者是所送者之函数，差之历程就是报之行（`Becoming.Law.run`）。倍率与应倍不同：应倍是一节对所读水平每单位所给者，倍率是一周使差乘以几何（`Becoming.LoopReturn.scaling`）；一所待以应倍 M 自感，其可致恰是倍率 1+M 之报每步一周之历程（`Becoming.LoopReturn.selfLoop_carried`），而在两个以上所待之环上，各以正应倍 w、同一正起差，1 加应倍之积只是一周之严格下界，不是其倍率（`Becoming.LoopReturn.Ring.bound_strict`）。闭差须有交回少于所受之节，这只是必要条件；报处处小于所受，是充分条件；减一之报恰在第 d 周前犹正。闭一正差之环使一正差与零同归（篇五），所以不无损，此后失去一种可能（`Becoming.LoopReturn.closing_not_lossless`）。各节至少倍之则滋，这与十二·七每返倍之相平行而计周不计步，二者之间尚无实例定理。对照（相合，zhuangzi-yi-yan；《庄子·人间世》，内篇，引“法言”）：「夫兩喜必多溢美之言，兩怨必多溢惡之言」〔ZH1-S04〕：传言往返，每传皆“溢”，读作每节所交多于所受，故不闭；「傳其常情，无傳其溢言，則幾乎全」〔ZH1-S04〕读作每节如数交出，差如故而不滋。“溢”至于倍增，是 AI 读法。\n\n**證**　`Becoming.LoopReturn.returnMap`、`Becoming.LoopReturn.never_closes_of_no_less`、`Becoming.LoopReturn.closing_needs_less`、`Becoming.LoopReturn.closes_within`、`Becoming.LoopReturn.closes_within_exact`、`Becoming.LoopReturn.loop_kept`、`Becoming.LoopReturn.runs_away`、`Becoming.LoopReturn.runs_away_unbounded`；记录 [whether-a-loop-closes-a-difference](../results/records/whether-a-loop-closes-a-difference.md)。\n\n### 十二·九　整数倍率与截\n\n**經**　凡环之诸节皆以整数倍乘之：倍率之积为零，则首周之后差为零；为一，则差常如其初；不小于二，则自正差起过每一界。故每周之差，或为零，或不小于前周；渐闭者，必有一节不是乘。凡一节交回为零，其后诸节无所受则无所交，则自首周之后差常为零，不论其前诸节；其后有节无所受而有所交，则差可复开。\n\n**說**　整数倍率之环没有中间之途（`Becoming.LoopReturn.whole_factors`、`Becoming.LoopReturn.nothing_between`）；自二减一，一周后为一，这是渐闭，但减一不是乘（`Becoming.LoopReturn.gradual_needs_another_link`）。截之律是充分条件，其后诸节之条件不可去：截之后接以加一之节，则首周之后差常为一，不论其初（`Becoming.LoopReturn.cut_reopened`）。所以照数相报，差如故；加倍相报，滋；闭只能经交回更少之节，或截而其后诸节无所受则无所交。讀（AI，D48）：以伤还伤之取与是环，闭只在某节交回更少；整数倍率下没有渐闭，所以使之闭者是另一种节。对照（定域，lao-63-bao-yuan-tu-nan；《老子》第六十三章，传世本；郭店无“报怨以德”，帛书甲有）：「大小多少，报怨以德。」〔YD-LAO-BASE〕：读“报怨以德”为在怨之环上放一交回为零之节（讀，AI），它闭环，条件是其后诸节不于无怨处自生怨。\n\n**證**　`Becoming.LoopReturn.scaling`、`Becoming.LoopReturn.whole_factors`、`Becoming.LoopReturn.nothing_between`、`Becoming.LoopReturn.gradual_needs_another_link`、`Becoming.LoopReturn.cut_closes`、`Becoming.LoopReturn.cut_reopened`；记录 [whether-a-loop-closes-a-difference](../results/records/whether-a-loop-closes-a-difference.md)。\n\n### 十二·十　还\n\n**經**　还，二历程于一所待之差，每步之后皆为其前之差之报也。凡二流于 c 每步皆衡：其取与自 s 步起以 f 应其差，恰当 s 后每步之差为其前之差之 f；如此，则 s+n 步之差，为 f 自 s 步之差行 n 周之所至，一周一步。\n\n**說**　还（反馈，feedback，`Becoming.LoopReturn.RespondsByReturn`）把十二·八之报接到流上：在 c 上，一历程之水平加其所与、加另一历程之所取，与另一历程之同者相较，其差为前差之 f（`Becoming.LoopReturn.responds_iff`、`Becoming.LoopReturn.gap_course`）；应为线性时，差为倍率之积的 n 次方乘 s 步之差（`Becoming.LoopReturn.gap_scaling`），十二·九即适用。此前提不可去：一动从无差开出一差，零、一、零、零之差不是任何报之历程（`Becoming.LoopReturn.replenishing_no_return`）。感界定应而不固定应：同一感下，有法于两个历史所取不同，也有法于一切历史取与皆同（`Becoming.ExchangeLaw.response_not_fixed_by_coupling`），所以回与不回、回多少，由所循之法定；应经行动者之感域回到行动者，只有一个构造之例（`Becoming.Loop.response_returns`）。以此为“还”之锚，是本篇之约定（讀，AI）。名“还”之回馈义始见于注层；先秦对应之句见下。对照（定域，mengzi-chu-er-fan-er；《孟子·梁惠王下》引曾子）：「出乎尔者，反乎尔者也」〔RU2-S-MZ〕：作用经他者回到作用者；回来的是否与出去的相等，由环上诸节之法定，如数而回只是报之一种（十二·八）。又（定域，lao-30-qi-shi-hao-huan；《老子》第三十章，传世本；郭店此章无“还”字，帛书残）：「其事好还」〔YD-LAO-BASE〕：所施者在感之环上时成立；不被任何应读入者不回（十二·四）。\n\n**證**　`Becoming.LoopReturn.RespondsByReturn`、`Becoming.LoopReturn.responds_iff`、`Becoming.LoopReturn.gap_course`、`Becoming.LoopReturn.gap_scaling`、`Becoming.LoopReturn.replenishing_no_return`、`Becoming.ExchangeLaw.response_not_fixed_by_coupling`；记录 [whether-a-loop-closes-a-difference](../results/records/whether-a-loop-closes-a-difference.md)、[what-a-pools-acts-respond-to](../results/records/what-a-pools-acts-respond-to.md)。\n\n### 十二·十一　穷\n\n**經**　穷，c 之水平降于阈下、法自不读之转为读之之处也。凡法唯于阈下读 c：二流皆衡而同其物，体之所为同，体外从此法，起时唯 c 异而后者高 d，前者之 c 于 T 前每步皆不下于其阈：则至 T，c 外诸所待之水平二流皆同，后者之 c 常高 d。若法又唯读已立者，c 至此每步皆在阈上之时，其所给同其常立之法；以一标记独标 c，常立之法于 c 之应倍为零，无环经 c，c 之下游唯 c。\n\n**說**　法唯于阈下读 c（`Becoming.ExchangeLaw.ReadsBelow`）：两个历史在 c 外相同、c 每步皆不下于阈时，此法所给相同；c 立于阈上之时，此法只读“它立着”。经其感而读、c 只以阈（不以水平）感入任何物、阈不低于其所需之法，都是如此（`Becoming.ExchangeLaw.Through.readsBelow`）。所以穷之前，c 抬高多少都不被携至任何处（`Becoming.break_carried_nowhere`），对每一如此之法皆然，不只是对其余固定时的一种策；无物读之者亦然（`Becoming.unread_carried_nowhere`）。穷前此法即其常立之法（`Becoming.ExchangeLaw.Nonanticipating.standing_alike`），常立之法不读 c（`Becoming.ExchangeLaw.ReadsBelow.standing_unread`、`Becoming.ExchangeLaw.ReadsBelow.standing_no_loop`）：经 c 之环在穷处成。例：一物于 c 立于 N+1 时每步自 c 取一而与于他所待；穷前它如常立之法，自 c 之应倍为零，而其每一应倍皆使 c 在一自环上；一历程之 c 降于阈下而另一历程之 c 在阈上，则后一步后者所与多一（`Becoming.Thresholds.Draw.forms_at_break`、`Becoming.Thresholds.Draw.diverges_at_break`，构造之例；此例中穷后不复取，不滋）。名“穷”只名降于阈下之断，不带系辞之“穷”（不能再续）与墨经空间之“穷”。讀（AI，D43、D45）：失控之穷即环之成；十二·四之不可先见与此处之盲，是一事之两面。对照（定域，xici-qiong-ze-bian；《系辞下》，成篇年代有争议）：「易穷则变，变则通，通则久」〔DS03〕：“穷则变”读作法自不读转为读；“变则通，通则久”须有范围：穷处所成之环此后或闭、或如故、或滋，由每周所回定（十二·八、十二·九），通而久不是变之必然。\n\n**證**　`Becoming.ExchangeLaw.ReadsBelow`、`Becoming.break_carried_nowhere`、`Becoming.ExchangeLaw.Nonanticipating.standing_alike`、`Becoming.ExchangeLaw.ReadsBelow.standing_unread`、`Becoming.ExchangeLaw.ReadsBelow.standing_no_loop`；记录 [loops-within-what-a-law-reads](../results/records/loops-within-what-a-law-reads.md)。\n\n### 十二·十二　未兆\n\n**經**　未兆，穷之前所感者不界其远近也。凡待者 g 不以水平感 c，诸物之同异可定：于任一期 u，若至 u 每步 g 于 c 外之所待皆足其所需，则有一高 c 之待网，至 u 每步皆容 g，且于原网容 g 之每步，二网经 g 之感皆同。凡 g 之策经其感，其余于 g 所感者所为不变，g 所感之诸所待二流皆衡，起时 g 所感者后者不低、g 以水平感者相同：若 g 所感之一所待其差有变，则其前必有一步原网不容 g。\n\n**說**　c 只以阈感入 g（g 待 c 而不观其水平），则穷前经 g 之感所及者，与一个 c 任意高之待网相同（`Becoming.Web.break_not_bounded`）：所感入者无一能界定离穷多远。经其感之策（`Becoming.Flow.PolicyThrough`），于 g 每步皆被容之时，从不用更大之 c（`Becoming.Flow.policy_keeps_difference`）；用之者，其前已失其容（`Becoming.Flow.policy_uses_after_failure`）。界在前提：c 以水平感入 g，则任何抬高立即使二网经 g 之感不同（`Becoming.Web.observed_raise_couples`，知几，篇七）；律成立是因为 c 未被观，观之处穷常可预见，那是前提所排除之情形。避免滋而不舍所有者，须使 c 以水平感入，或有其模型（理），或经另一 c 感入之物（验，篇九）。讀（AI，D26）：失控是一环，其至穷之远近不感入此环；其策无论多巧，不能用未感入者。对照（相合，wenyan-bian-zhi-buzao；《文言·坤》，成篇年代有争议）：「其所由來者漸矣，由辯之不早辯也」〔YD-OW-WY〕：渐积之终是穷，所以至此是穷前未把此水平读入；“不早辩”是未读入，与识不早（读入而迟，十二·十八）不是一构。又（定域，lao-64-wei-zhao；《老子》第六十四章，郭店、帛书甲有异文）：「其安易持，其未兆易谋」〔YD-LAO-BASE〕：未兆之名出于此；脊柱说穷前读不出远近，机处护闭与成闭只隔一步，可以干预，难在找到（机，篇七）。\n\n**證**　`Becoming.Web.break_not_bounded`、`Becoming.Flow.policy_keeps_difference`、`Becoming.Flow.policy_uses_after_failure`、`Becoming.Web.observed_raise_couples`；记录 [runaway-distance-uncoupled](../results/records/runaway-distance-uncoupled.md)。\n\n### 十二·十三　常取之下的不可回返之点\n\n**經**　凡 c 每步先被取 H，取至于尽而已，所剩者自与 g（所剩）：若 g 于 y 下每处皆不及 H，于零则与零，于 y 以上、加 H 不过 hi 之所剩皆及 H，一步不使不过 hi 者过 hi，H+y 为正：则自不过 hi 之水平起，c 终至于涸，恰当其起于 H+y 之下。起于其下者，经其起时水平之步数而涸；起于 H+y 至 hi 者，常不下于其起而不过 hi。凡 g 于所需 m 之下为零，H 为正，y 为 g 及 H 之最小所剩：y 过 m，恰当 m 处之所与不及 H。\n\n**說**　此步（`Becoming.RegimeMargin.step`）是：常取 H 先取，取至于尽而已，c 以其所与之法 g 自所剩而与；g 是 c 在此常取之下所与之法。不可回返之点 H+y 是确切的（`Becoming.RegimeMargin.ends_iff_below`、`Becoming.RegimeMargin.ends_below`、`Becoming.RegimeMargin.holds`）。所以水平高出此点之距（此常取之下的余地，篇六）是水平在常取之下之量，不只是水平之量：g 于所需之下为零时，所与及 H 之处皆不下于所需，所以此点至少高出所需一个 H（`Becoming.RegimeMargin.root_above_need`），恰在所需处所与不及 H 时更高（`Becoming.RegimeMargin.beyond_draw_iff`）；常取更大而所与不增，此点至少升高二取之差（`Becoming.RegimeMargin.rises_by_draw`）。取可加，害不可加：二取并时，所与于所需之上次可加、又不多于任一单取之下者，则此点之升至少为各升之和减一单位（`Becoming.RegimeMargin.harms_superadditive`）；有二取，c 于每一取下各自有不涸之水平，并之则自任一水平皆涸（`Becoming.RegimeMargin.Peaked.together_ends`，构造之例）。降至某一水平之下所须之步数落在一带之中（`Becoming.RegimeMargin.not_before`、`Becoming.RegimeMargin.falls_within`）。收获理论在实数上所述的是同一结构（减偿与收获平衡之折叠）；此处以整数陈述于脊柱，使理论所名之余地正是一次量度可检之量。此点不是穷：穷是法自不读转为读之处（十二·十一），此点是 c 涸与不涸之分界。\n\n**證**　`Becoming.RegimeMargin.step`、`Becoming.RegimeMargin.ends_iff_below`、`Becoming.RegimeMargin.ends_below`、`Becoming.RegimeMargin.holds`、`Becoming.RegimeMargin.beyond_draw_iff`、`Becoming.RegimeMargin.rises_by_draw`、`Becoming.RegimeMargin.harms_superadditive`；记录 [margin-of-a-regime](../results/records/margin-of-a-regime.md)。\n\n### 十二·十四　平面之阈\n\n**經**　凡所与读所剩与近来所与而定（其法 A），A 随二者而升，一步使所剩与近来所与皆不过 hi 者之水平不过 hi：则于每一不过 hi 之近来所与 r，自不过 hi 之水平 x 起之行，终在常取之下自某步起不再变，恰当 x 在一阈之下；此阈不随 r 之升而升。所与只读所剩、随之而升、合十二·十三之条件、而带及此点者，其阈于每一 r 皆为 H+y。有所与不随所剩而升而守其带者，无一阈分其行。\n\n**說**　所与之调整（`Becoming.RegimeMargin.Adjusted.step`）：状是水平与近来所与，常取先取，所与是 A（所剩，近来所与）。只读所剩者是十二·十三之步；只读近来所与者是所与冻结如前。A 随二者而升、守一带，又以 H 为近来所与时，所与恰在 g 给出 H 处为 H（`Becoming.RegimeMargin.Adjusted.RestsAtDraw`），则凡起于带内之行，至多 3hi+3 步之后即不再变：或在常取处，水平为常取之步所不改者；或在常取之下，水平与近来所与相等（`Becoming.RegimeMargin.Adjusted.comes_to_rest`）；是否再变，每步可判定，不须全知（`Becoming.LastChange.still_within`）。于是不可回返之点在水平与近来所与之平面上是一条不随近来所与之升而升之线（`Becoming.RegimeMargin.Adjusted.falls_iff_below`、`Becoming.RegimeMargin.Adjusted.threshold_falls`、`Becoming.RegimeMargin.threshold_regime`）。升之条件不可去：所与自一为二、自他处为零，于常取二之下守至四之带，而自四之行终于零，自三之行自某步起常为三，无一最小水平分开二者（`Becoming.RegimeMargin.Notch.no_threshold`）；所与自零为二、自更多为零，于常取一之下，自一之行每步往返于一与二之间（`Becoming.RegimeMargin.Alternation.alternates`）。这些不须以自然数计量：在任何有常取之线性有序之量中，升之调整之步保序，其行之形与其不再变之处皆同（`Becoming.RegimeMargin.Drawn.run_shape`、`Becoming.RegimeMargin.Drawn.still_iff`）；自然数所加者，是有尽步之内即不再变、于一定之步而定。\n\n**證**　`Becoming.RegimeMargin.Adjusted.step`、`Becoming.RegimeMargin.Adjusted.falls_iff_below`、`Becoming.RegimeMargin.Adjusted.threshold_falls`、`Becoming.RegimeMargin.threshold_regime`、`Becoming.RegimeMargin.Notch.no_threshold`、`Becoming.RegimeMargin.Adjusted.comes_to_rest`；记录 [threshold-in-the-state-plane](../results/records/threshold-in-the-state-plane.md)、[where-a-run-of-a-regime-comes-to-rest](../results/records/where-a-run-of-a-regime-comes-to-rest.md)、[regime-in-any-amounts](../results/records/regime-in-any-amounts.md)。\n\n### 十二·十五　中节\n\n**經**　中节，于一步，c 上诸取与之合，所取多于所与者不过水平过 m 之数，所与多于所取者不过水平不及 m 之数也。凡流于 c 衡于一步：中节，恰当次水平在 m 与今水平之间（与今同侧，不更远）。凡流于 c 衡而 n 步皆中节，则 n 步后之水平在 m 与起时水平之间。\n\n**說**　中节（界恰为无过冲，`Becoming.Flow.WithinGap`）是对一步之取与的界；它恰是不越过 m（`Becoming.Flow.withinGap_iff_between`），所以中节之内，水平不过 m 而至另一侧（`Becoming.Flow.stays_between_at`）。中节只是界，不是相反：空流在 m 上而常在 m 上，也每步中节（`Becoming.Regulation.OneSided.within`，十二·十七）。名取「發而皆中節，謂之和」〔RU1-S-ZY〕。对照（定域，zhongyong-zhi-zhong-he；《礼记·中庸》首章，成篇年代有争议）：同句读作应发出而不越其界；「喜怒哀樂之未發，謂之中」〔RU1-S-ZY〕若读作先在之本体，属固定本性之层，不携带。\n\n**證**　`Becoming.Flow.WithinGap`、`Becoming.Flow.withinGap_iff_between`、`Becoming.Flow.stays_between_at`；记录 [two-sided-regulation-and-late-reading](../results/records/two-sided-regulation-and-late-reading.md)。\n\n### 十二·十六　中和\n\n**經**　中和，c 上诸取与之合于 m 之两侧皆反其离而中节也：在 m 上则所取多于所与，在 m 下则所与多于所取。凡流衡，自 T 起每步于 m 中和：则水平不在 m 之步，其离 m 之距至少减一；n 步后之距不过初距减 n；至 T 加初距之步，水平即 m，此后常 m。自 m 下起者，至 T 加其不及 m 之数之步即 m 而不移。\n\n**說**　中和（两侧之调节，two-sided regulation）由相反（`Becoming.Flow.Opposes`）与中节合成：相反给方向，中节给界，二者合而水平定于 m（`Becoming.Flow.gap_falls`、`Becoming.Flow.regulates`、`Becoming.Flow.settles`）。复原之律只有一侧：m 下所与多于所取，则水平至少达 m（`Becoming.Flow.restores`）；有中节之界，它恰达 m 而不移（`Becoming.Flow.restores_exactly`）。不导出者：某一系统是否调节、读之迟早与其步之大小，都是用到它们之律的具名前提；多个被调节之水平如何归并为一，亦未导出。m 是法之参数：它不作用，作用的是读水平而相反之取与。名取「致中和」〔RU1-S-ZY〕。对照（定域，lao-77-zhang-gong；《老子》第七十七章）：「高者抑之，下者举之；有馀者损之，不足者补之」〔YD-LAO-BASE〕：两侧相反之形，须中节方定于 m；经文把它归于「天之道，损有馀而补不足」〔YD-LAO-BASE〕，这一归属不采纳，它只是某种调节之感的特点。（相分，zhongyong-zhong-da-ben；《礼记·中庸》首章）：「中也者，天下之大本也」〔RU1-S-ZY〕：把所趋之定点立为本、和为其发用，属本原之层；脊柱中定于 m 是取与之果，不是取与之据。\n\n**證**　`Becoming.Flow.Opposes`、`Becoming.Flow.gap_falls`、`Becoming.Flow.regulates`、`Becoming.Flow.settles`、`Becoming.Flow.restores_exactly`；记录 [two-sided-regulation-and-late-reading](../results/records/two-sided-regulation-and-late-reading.md)。\n\n### 十二·十七　过正与一偏\n\n**經**　过正，相反之取与出其距也。凡流于 c 衡于一步，取与反其离而不中节：水平在 m 上，则次水平在 m 下；在 m 下，则次水平在 m 上。有每步皆衡、两侧皆反其离而每步过正者，偶步在 m 上，奇步在 m 下，永不至 m。一偏，唯于一侧应之也。有守复原之前提、每步中节、在 m 上而不相反者，常在 m 上：一偏不是中和。\n\n**說**　无中节之界，相反之调节越过 m（`Becoming.Flow.crosses_of_above`、`Becoming.Flow.crosses_of_below`）；构造之例往复而永不至 m（`Becoming.Regulation.Overshooting.oscillates`、`Becoming.Regulation.Overshooting.never_at`）。一偏之例是空流：无取与，水平常为二，m 为一；m 下之相反与复原之前提只空然成立（`Becoming.Regulation.OneSided.restores_premise`），每步中节，上侧不相反（`Becoming.Regulation.OneSided.not_opposes`），常在 m 上（`Becoming.Regulation.OneSided.above`）。它只说明满足一侧之前提不是调节；有取与的一侧之律，脊柱未有，未决。名“一偏”取苏辙（北宋）《老子解》第四十五章注「皆滯于一偏而非其正也」〔LC-SZ-ALL〕之只守一侧义；荀子天论「万物为道一偏」〔RU2-S-XZ17〕之“一偏”是一部分之义，不取。对照（定域，cy-xiaoguo-jiaowang-guozheng；北宋，程颐《伊川易传》小过卦辞注）：「若矯枉而過正過所以就正也」〔YD-CY4〕：就正不须过；过后能就正，恰在过后每步复归中节而相反之时；每步越界者永不就正。又（定域，lunyu-guo-you-bu-ji；《论语·先进》）：「過猶不及」〔RU1-S-LY〕：过之一侧有律，不及之一侧只有空例与缺口；“犹”（二失同等）律不给出，二失之间不排序。\n\n**證**　`Becoming.Flow.crosses_of_above`、`Becoming.Flow.crosses_of_below`、`Becoming.Regulation.Overshooting.oscillates`、`Becoming.Regulation.Overshooting.never_at`、`Becoming.Regulation.OneSided.within`、`Becoming.Regulation.OneSided.not_opposes`、`Becoming.Regulation.OneSided.above`；记录 [two-sided-regulation-and-late-reading](../results/records/two-sided-regulation-and-late-reading.md)。\n\n### 十二·十八　识不早\n\n**經**　识不早，规则迟 ℓ 步而读也：其于一步之所与所取，唯定于其余 ℓ+1 步以前之所为。凡规则迟 ℓ 步而读，自一起处，于每步移水平不过 d 之一切其余，其历程常在 a 与 b 之间，0<a：则 a 加 2(ℓ+1)d 不过 b。迟返之规则迟 ℓ 步而读，自不下于 (ℓ+1)d 之起处，于如此之一切其余，其历程常在起处上下 (ℓ+1)d 之内：此带恰得。\n\n**說**　识不早（迟读，`Becoming.Regulation.ReadsLate`）：两个在某步之前相同、此后 ℓ+1 步内不同之其余，迟读之规则分不出，它们所至之水平恰差其所取与之差（`Becoming.Regulation.late_spread`）；所以无一迟 ℓ 步之规则能使历程常在窄于 2(ℓ+1)d 之带中（`Becoming.Regulation.late_band`、`Becoming.Regulation.no_narrower_band`）。迟返（`Becoming.Regulation.lateReturn`）每步还其余 ℓ+1 步前之所为，只须迟 ℓ 步所读之水平与自身之取与，恰得此带（`Becoming.Regulation.lateReturn_band`）。识得越迟，可守之带越宽；所差者不能以后来之力补回。本条与未兆不同：未兆是未读入，识不早是读入而迟。对照（相合，zhoudunyi-shi-shi-buzao；北宋，周敦颐《通书·势》）：「识其重而亟反之，可也。反之，力也。识不早，力不易也。」〔RU2-S-S01〕：识不早之名出于此；同章「极重不可反」〔RU2-S-S01〕读作入（篇七）。又（相合，simafa-shang-bu-yu-shi；《司马法·天子之义》，今本编纂层次未定）：「賞不踰時，欲民速得為善之利也」〔BI1-S-SM〕：应越迟，可守之偏离之带越宽；经文以赏罚为治者之器，属意志或单一中心之层，不采纳，所承唯迟读与带之律。\n\n**證**　`Becoming.Regulation.ReadsLate`、`Becoming.Regulation.late_spread`、`Becoming.Regulation.late_band`、`Becoming.Regulation.no_narrower_band`、`Becoming.Regulation.lateReturn_band`；记录 [two-sided-regulation-and-late-reading](../results/records/two-sided-regulation-and-late-reading.md)。\n\n### 十二·十九　抑举\n\n**經**　抑举，读数在 a 下则与 M，在 b 上则取 M，在 a 与 b 之间则无所为之规则也。凡 a 不过 b，0<a，0<M，(ℓ+1)M 不过 b+1：迟 ℓ 步而抑举、每步皆衡之流，自前 ℓ+1 步水平皆为 a 下同一数之任一起处，皆自某步起常在 a 与 b 之间，恰当 a+(ℓ+1)M 不过 b+1。\n\n**說**　抑举（接力，relay，`Becoming.Regulation.relay`）是以阈调节之最简者。迟 ℓ 步时，读数在下驱动推、在上驱动拉（`Becoming.Regulation.push_ramp`、`Becoming.Regulation.pull_ramp`），入带之水平再行 ℓM，调节者自身之升降迟读而自喂。过此阈，前 ℓ+1 步水平皆为 a−1 之起处两端皆越而无尽（`Becoming.Regulation.held_oscillates`，另须 b+2 不过 a+(ℓ+1)M）：抑举可守之最窄带随迟与步之积而宽。此阈只为抑举所立；迟读所须之带（十二·十八）对每一规则皆然。名取「高者抑之，下者举之」〔YD-LAO-BASE〕。对照（定域，lunyu-jin-zhi-tui-zhi；《论语·先进》）：「求也退，故進之；由也兼人，故退之。」〔RU1-S-LY〕：应读被应者此时之水平，在下者进之，在上者退之；相反本身不足以就中，所进所退不越其距方归中，进之过多，退者亦越过。\n\n**證**　`Becoming.Regulation.relay`、`Becoming.Regulation.relay_threshold`、`Becoming.Regulation.push_ramp`、`Becoming.Regulation.pull_ramp`、`Becoming.Regulation.held_oscillates`；记录 [two-sided-regulation-and-late-reading](../results/records/two-sided-regulation-and-late-reading.md)。\n\n### 十二·二十　不给绕环而还\n\n**經**　凡依不念旧恶之法（所等待者上一步皆给则给），有长 p 之等待链自 b 复至 b，b 起时不给：则 b 于每 k·p 步皆不给。凡依念旧恶之法（自己上一步给、所等待者亦皆给则给），诸物皆在 b 之 d 次等待之内，b 起时不给：则自 d 步起无一物给。二法之下，等待加多，则每步给者只少不多。\n\n**說**　念旧恶（有记忆的等待之给，`Becoming.Withholding.waitsAll`）与不念旧恶（无记忆的等待之给，`Becoming.Withholding.answers`）是篇十四之名，此处只论其绕环之形。不念旧恶之下，不给沿每一环而还（`Becoming.Withholding.withholding_returns`，不须 p 为正）；三物各等待其前者，一处起时不给，不给便循环，每物每三步复不给（`Becoming.Withholding.Ring.answers_circulates`，构造之例）。念旧恶之下，一处不给，使其所及之族自某步起无一物给（`Becoming.Withholding.withholding_absorbs`）。等待之加，在二法之下都只减不增所给（`Becoming.Withholding.waitsAll_more_waiting`、`Becoming.Withholding.answers_more_waiting`）。所以等待之给在环上有两种失败：有记忆则吸收，无记忆则还；复给须换法（十二·二十三）。对照（定域，lao-17-xin-bu-zu；《老子》第十七章，帛书甲有异文）：「信不足焉，有不信焉」〔YD-LAO-BASE〕：施者之不足经他者回到施者，在不念旧恶之法下是不给绕环而还，在念旧恶之法下则是沿链蔓延而不再给；感不固定应，“有不信”不是必然。\n\n**證**　`Becoming.Withholding.answers`、`Becoming.Withholding.waitsAll`、`Becoming.Withholding.withholding_returns`、`Becoming.Withholding.withholding_absorbs`、`Becoming.Withholding.waitsAll_more_waiting`、`Becoming.Withholding.answers_more_waiting`；记录 [giving-that-waits-on-giving](../results/records/giving-that-waits-on-giving.md)。\n\n### 十二·二十一　不求备\n\n**經**　不求备，一物于其所等待者缺不过 tol 犹给，tol 至少为一也。凡依缺不过 tol 犹给之法：一集之员起时皆给，每员在集外所等待者不过其 tol，则不论他物，此集每步皆给；起时一集之外皆给，每物在此集内所等待者不过其 tol，则自第一步起处处皆给；无一物之 tol 及其所等待之数，则一步无一物给，此后每步皆然。tol 为零之法，其历程即不念旧恶之法之历程。\n\n**說**　不求备（容差，tolerance，`Becoming.Tolerance.tolerating`；名只名 tol 至少为一者）：一物缺其所等待者至多 tol 个仍给。上三律对任何 tol 皆然（`Becoming.Tolerance.kept_set`、`Becoming.Tolerance.thin_absorbed`、`Becoming.Tolerance.total_stays`），tol 为零即十二·二十之不念旧恶（`Becoming.Tolerance.tolerating_zero`）。容差吸收而不复原：三物各等待其余二者，自一处不给，tol 为零者自第二步起处处不给，tol 为一者自第一步起处处皆给；而 tol 为一者自全不给起永无一物给（`Becoming.Tolerance.Triad.spreads`、`Becoming.Tolerance.Triad.absorbed`、`Becoming.Tolerance.Triad.total_kept`，构造之例）；一般之形见十二·二十二。tol 大者处处所给不少于 tol 小者，这一跨法之单调只在上例中有，一般之形未经 Lean，未决。对照（定域，lunyu-wu-qiu-bei；《论语·微子》，周公语，成书层次有争议）：「故舊無大故，則不棄也，無求備於一人」〔RU1-S-LY〕：小缺不致相弃，“大故”之界即 tol，经文未定；用人与故旧之语境不采纳。又（相分，lao-36-78-rou-sheng-gang；《老子》第三十六、七十八章）：「柔弱胜刚强」〔YD-LAO-BASE〕：以“胜”立言，是一者压过另一者之比，属争胜与等级之层；容差所为是吸收局部之不给、使给延续，不排胜负。\n\n**證**　`Becoming.Tolerance.tolerating`、`Becoming.Tolerance.kept_set`、`Becoming.Tolerance.thin_absorbed`、`Becoming.Tolerance.total_stays`、`Becoming.Tolerance.tolerating_zero`；记录 [thresholds-of-waiting](../results/records/thresholds-of-waiting.md)。\n\n### 十二·二十二　有以待之\n\n**經**　有以待之，一物于某步自每一起处皆给也。凡法守包含（此步给者更多，则次步给者不少）：一物于 n 步自每一起处皆给，恰当其自全不给起于 n 步给；自全不给起，给者只增不减；n 步已自每一起处给者，此后每步自每一起处皆给。全不给之次步无一物给，则自全不给起永无一物给。\n\n**說**　有以待之（自每一起处复原）读起处之最坏者：守包含之法下，最坏之起处是全不给（`Becoming.Tolerance.worst_start`）；念旧恶、不念旧恶、先施、缺不过 tol 犹给四法皆守包含（`Becoming.Tolerance.waitsAll_keeps`、`Becoming.Tolerance.answers_keeps`、`Becoming.Tolerance.givesFirst_keeps`、`Becoming.Tolerance.tolerating_keeps`）。所以不恃起处之好，恃自最坏之起处犹给：在守包含之法下，后者恰等于“自每一起处皆给”。条件要紧：法须守包含。名中之“待”是应对义，与依存之待异义，只在此成语中。对照（定域，sunzi-you-yi-dai-zhi；《孙子·九变》，传世兵书编定层次有争议）：「無恃其不來，恃吾有以待之」〔BI1-S-SZ〕：不恃起处之好，恃自任何起处皆成立者；兵争之框架属争胜与等级之层，不采纳。\n\n**證**　`Becoming.Tolerance.KeepsInclusion`、`Becoming.Tolerance.worst_start`、`Becoming.Tolerance.rises_from_withheld`、`Becoming.Tolerance.restored_stays`、`Becoming.Tolerance.withheld_kept`；记录 [restoring-giving-from-the-worst-start](../results/records/restoring-giving-from-the-worst-start.md)。\n\n### 十二·二十三　先施\n\n**經**　先施，一物每步皆给，不视其所等待者也。凡依先施之法（先施者常给，其他之物所等待者上一步皆给则给），诸物为先施者与否皆定：一物于 n 步自每一起处皆给，恰当无一长 n 之等待链入之而链上起点之外无先施者。有一等待之环自 b 复至 b，环上无先施者，则自全不给起，b 永不给。不念旧恶之法于 n 步自每一起处复之者，先施之法亦于 n 步复之。\n\n**說**　先施（持续先给，`Becoming.Withholding.givesFirst`）之复原是确切的（`Becoming.Tolerance.restores_iff`、`Becoming.Tolerance.clear_loop_withholds`、`Becoming.Tolerance.givesFirst_restores_of_answers`）；念旧恶之下，没有一步能自每一起处复给（`Becoming.Tolerance.waitsAll_never_restores`）。例：三物各等待其前者，一物先施，则自任何起处，自第三步起处处皆给，不早于此（`Becoming.Withholding.Ring.givesFirst_restores`、`Becoming.Withholding.Ring.givesFirst_restores_exact`，构造之例）。所变者是法，不只是状。先施与报分开：复原不依赖对方回报之计算。一次之先给不复原：环上只一处先给一次，给也只沿环循环，这是十二·二十不给循环之对偶，AI 手算，未经 Lean，未决。复原给是否更好，诸律不说，只经以广为愈比较。名取「所求乎朋友，先施之」〔RU1-S-ZY〕。对照（定域，mozi-jianai-xia-xian-shi；《墨子·兼爱下》，战国墨家，篇章层次有争议）：「卽必吾先從事乎愛利人之親，然後人報我以愛利吾親也」〔MO1-S-C16〕：读为持续之先施，不是一次之施；墨子以“然后人报我”为理由，是报之论证，而定理所证之复原不依赖回报。\n\n**證**　`Becoming.Withholding.givesFirst`、`Becoming.Tolerance.restores_iff`、`Becoming.Tolerance.clear_loop_withholds`、`Becoming.Tolerance.givesFirst_restores_of_answers`、`Becoming.Withholding.Ring.givesFirst_restores`、`Becoming.Withholding.Ring.givesFirst_restores_exact`；记录 [restoring-giving-from-the-worst-start](../results/records/restoring-giving-from-the-worst-start.md)、[giving-that-waits-on-giving](../results/records/giving-that-waits-on-giving.md)。\n\n#### 对照\n\n- 「复以巧术防民之伪，民知其术，防随而避之，思惟密巧，奸伪益滋」〔DS01〕——相合：防与避互应，成二所待之环，各节倍之则滋（wb-65-jian-wei-yi-zi；魏晋王弼注）。\n- 「所应复为感，所感复有应，所以不已也」〔RU2-S-S06〕——定域：感应成环，环上之感不已，则任何有尽之阶都在某处有所失；“有感必有应”只作前提（chengyi-gan-ying-bu-yi；北宋）。\n- 「其所由來者漸矣，由辯之不早辯也」〔YD-OW-WY〕——相合：穷前未以水平读入，其远近无从界定（wenyan-bian-zhi-buzao）。\n- 「易穷则变，变则通，通则久」〔DS03〕——定域：穷是法自不读转为读；通而久须穷处所成之环闭或如故，不是变之必然（xici-qiong-ze-bian）。\n- 「高者抑之，下者举之；有馀者损之，不足者补之」〔YD-LAO-BASE〕——定域：两侧相反，须中节方定于 m；“天之道”之归属不采纳（lao-77-zhang-gong）。\n- 「识其重而亟反之，可也。反之，力也。识不早，力不易也。」〔RU2-S-S01〕——相合：迟 ℓ 步读，则可守之带至少宽 2(ℓ+1)d（zhoudunyi-shi-shi-buzao；北宋）。\n- 「中也者，天下之大本也」〔RU1-S-ZY〕——相分：所趋之定点 m 是法之参数，不作用，不能为本；属本原之层（zhongyong-zhong-da-ben）。\n- 「真如淨法實無於染，但以無明而熏習故則有染相」〔FO2-QX〕——相分：不受影响在脊柱中只是应倍为零之关系事实；“实无”立先于熏习之本性，属固定本性之层（qixin-zhenru-shi-wu-ran）。\n",
+ "declarations": [
+  "Becoming.ExchangeLaw.RespondsWithin",
+  "Becoming.ExchangeLaw.insensitiveAt_iff_strength_zero",
+  "Becoming.Propagation.Square.not_respondsWithin",
+  "Becoming.carried",
+  "Becoming.carried_attained",
+  "Becoming.most_difference_arrives",
+  "Becoming.gap",
+  "Becoming.Propagation.Chain.keeps_arriving",
+  "Becoming.gap_le_carried",
+  "Becoming.carried_pos_iff",
+  "Becoming.Couples",
+  "Becoming.Coupled",
+  "Becoming.Upstream",
+  "Becoming.OnLoop",
+  "Becoming.carriedWithin",
+  "Becoming.carriedWithin_exact_of_no_loop",
+  "Becoming.carriedWithin_lt_of_loop",
+  "Becoming.Remainder.finite_order_iff_no_loop",
+  "Becoming.finite_order_iff_no_loop",
+  "Becoming.Loops.Once.not_always",
+  "Becoming.strengthsBefore",
+  "Becoming.onLoop_iff_formed",
+  "Becoming.onLoop_succ_iff",
+  "Becoming.forms_by_closing",
+  "Becoming.onLoop_of_closing",
+  "Becoming.responds_to_own_level",
+  "Becoming.ReadsBefore",
+  "Becoming.formedCourse_eq_carried",
+  "Becoming.Closing.Threshold.forms",
+  "Becoming.Closing.Threshold.level_after",
+  "Becoming.ExchangeLaw.ReadsAt.respondsWithin_unread",
+  "Becoming.not_onLoop_unread",
+  "Becoming.upstream_unread",
+  "Becoming.carried_le_polynomial_before",
+  "Becoming.Closing.Onset.amount_before",
+  "Becoming.Closing.Onset.amount_after",
+  "Becoming.Closing.Onset.unforeseen",
+  "Becoming.CouplingRecurs",
+  "Becoming.carried_eq_carriedWithin_add",
+  "Becoming.responses_le_missBound",
+  "Becoming.Loops.SelfLoop.attained",
+  "Becoming.carriedWithin_lt_of_recurring_loop",
+  "Becoming.exact_of_reading_before",
+  "Becoming.SettledFrom",
+  "Becoming.finite_order_iff_no_loop_from",
+  "Becoming.carried_doubles_around",
+  "Becoming.polynomial_iff_no_loop",
+  "Becoming.carried_le_polynomial_from",
+  "Becoming.gap_polynomial_iff_no_loop",
+  "Becoming.Frequency.count",
+  "Becoming.Frequency.SelfLoop.carried_eq",
+  "Becoming.Frequency.SelfLoop.polynomial_iff",
+  "Becoming.carried_le_of_rare",
+  "Becoming.Frequency.Sparse.recurs",
+  "Becoming.Frequency.Sparse.inexact",
+  "Becoming.Frequency.Sparse.polynomial",
+  "Becoming.settled_iff_recursOrStops",
+  "Becoming.RecursOrStops.lpo",
+  "Becoming.carried_le_count",
+  "Becoming.carried_doubles_roundTrip",
+  "Becoming.runaway_of_roundTrip",
+  "Becoming.LoopReturn.returnMap",
+  "Becoming.Law.run",
+  "Becoming.LoopReturn.scaling",
+  "Becoming.LoopReturn.selfLoop_carried",
+  "Becoming.LoopReturn.Ring.bound_strict",
+  "Becoming.LoopReturn.closing_not_lossless",
+  "Becoming.LoopReturn.never_closes_of_no_less",
+  "Becoming.LoopReturn.closing_needs_less",
+  "Becoming.LoopReturn.closes_within",
+  "Becoming.LoopReturn.closes_within_exact",
+  "Becoming.LoopReturn.loop_kept",
+  "Becoming.LoopReturn.runs_away",
+  "Becoming.LoopReturn.runs_away_unbounded",
+  "Becoming.LoopReturn.whole_factors",
+  "Becoming.LoopReturn.nothing_between",
+  "Becoming.LoopReturn.gradual_needs_another_link",
+  "Becoming.LoopReturn.cut_reopened",
+  "Becoming.LoopReturn.cut_closes",
+  "Becoming.LoopReturn.RespondsByReturn",
+  "Becoming.LoopReturn.responds_iff",
+  "Becoming.LoopReturn.gap_course",
+  "Becoming.LoopReturn.gap_scaling",
+  "Becoming.LoopReturn.replenishing_no_return",
+  "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+  "Becoming.Loop.response_returns",
+  "Becoming.ExchangeLaw.ReadsBelow",
+  "Becoming.ExchangeLaw.Through.readsBelow",
+  "Becoming.break_carried_nowhere",
+  "Becoming.unread_carried_nowhere",
+  "Becoming.ExchangeLaw.Nonanticipating.standing_alike",
+  "Becoming.ExchangeLaw.ReadsBelow.standing_unread",
+  "Becoming.ExchangeLaw.ReadsBelow.standing_no_loop",
+  "Becoming.Thresholds.Draw.forms_at_break",
+  "Becoming.Thresholds.Draw.diverges_at_break",
+  "Becoming.Web.break_not_bounded",
+  "Becoming.Flow.PolicyThrough",
+  "Becoming.Flow.policy_keeps_difference",
+  "Becoming.Flow.policy_uses_after_failure",
+  "Becoming.Web.observed_raise_couples",
+  "Becoming.RegimeMargin.step",
+  "Becoming.RegimeMargin.ends_iff_below",
+  "Becoming.RegimeMargin.ends_below",
+  "Becoming.RegimeMargin.holds",
+  "Becoming.RegimeMargin.root_above_need",
+  "Becoming.RegimeMargin.beyond_draw_iff",
+  "Becoming.RegimeMargin.rises_by_draw",
+  "Becoming.RegimeMargin.harms_superadditive",
+  "Becoming.RegimeMargin.Peaked.together_ends",
+  "Becoming.RegimeMargin.not_before",
+  "Becoming.RegimeMargin.falls_within",
+  "Becoming.RegimeMargin.Adjusted.step",
+  "Becoming.RegimeMargin.Adjusted.RestsAtDraw",
+  "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+  "Becoming.LastChange.still_within",
+  "Becoming.RegimeMargin.Adjusted.falls_iff_below",
+  "Becoming.RegimeMargin.Adjusted.threshold_falls",
+  "Becoming.RegimeMargin.threshold_regime",
+  "Becoming.RegimeMargin.Notch.no_threshold",
+  "Becoming.RegimeMargin.Alternation.alternates",
+  "Becoming.RegimeMargin.Drawn.run_shape",
+  "Becoming.RegimeMargin.Drawn.still_iff",
+  "Becoming.Flow.WithinGap",
+  "Becoming.Flow.withinGap_iff_between",
+  "Becoming.Flow.stays_between_at",
+  "Becoming.Regulation.OneSided.within",
+  "Becoming.Flow.Opposes",
+  "Becoming.Flow.gap_falls",
+  "Becoming.Flow.regulates",
+  "Becoming.Flow.settles",
+  "Becoming.Flow.restores",
+  "Becoming.Flow.restores_exactly",
+  "Becoming.Flow.crosses_of_above",
+  "Becoming.Flow.crosses_of_below",
+  "Becoming.Regulation.Overshooting.oscillates",
+  "Becoming.Regulation.Overshooting.never_at",
+  "Becoming.Regulation.OneSided.restores_premise",
+  "Becoming.Regulation.OneSided.not_opposes",
+  "Becoming.Regulation.OneSided.above",
+  "Becoming.Regulation.ReadsLate",
+  "Becoming.Regulation.late_spread",
+  "Becoming.Regulation.late_band",
+  "Becoming.Regulation.no_narrower_band",
+  "Becoming.Regulation.lateReturn",
+  "Becoming.Regulation.lateReturn_band",
+  "Becoming.Regulation.relay",
+  "Becoming.Regulation.push_ramp",
+  "Becoming.Regulation.pull_ramp",
+  "Becoming.Regulation.held_oscillates",
+  "Becoming.Regulation.relay_threshold",
+  "Becoming.Withholding.waitsAll",
+  "Becoming.Withholding.answers",
+  "Becoming.Withholding.withholding_returns",
+  "Becoming.Withholding.Ring.answers_circulates",
+  "Becoming.Withholding.withholding_absorbs",
+  "Becoming.Withholding.waitsAll_more_waiting",
+  "Becoming.Withholding.answers_more_waiting",
+  "Becoming.Tolerance.tolerating",
+  "Becoming.Tolerance.kept_set",
+  "Becoming.Tolerance.thin_absorbed",
+  "Becoming.Tolerance.total_stays",
+  "Becoming.Tolerance.tolerating_zero",
+  "Becoming.Tolerance.Triad.spreads",
+  "Becoming.Tolerance.Triad.absorbed",
+  "Becoming.Tolerance.Triad.total_kept",
+  "Becoming.Tolerance.worst_start",
+  "Becoming.Tolerance.waitsAll_keeps",
+  "Becoming.Tolerance.answers_keeps",
+  "Becoming.Tolerance.givesFirst_keeps",
+  "Becoming.Tolerance.tolerating_keeps",
+  "Becoming.Tolerance.KeepsInclusion",
+  "Becoming.Tolerance.rises_from_withheld",
+  "Becoming.Tolerance.restored_stays",
+  "Becoming.Tolerance.withheld_kept",
+  "Becoming.Withholding.givesFirst",
+  "Becoming.Tolerance.restores_iff",
+  "Becoming.Tolerance.clear_loop_withholds",
+  "Becoming.Tolerance.givesFirst_restores_of_answers",
+  "Becoming.Tolerance.waitsAll_never_restores",
+  "Becoming.Withholding.Ring.givesFirst_restores",
+  "Becoming.Withholding.Ring.givesFirst_restores_exact"
+ ],
+ "records": [
+  "how-much-difference-arrives",
+  "sensitivity-is-the-least-coupling",
+  "how-a-carried-difference-grows",
+  "how-loops-form",
+  "loops-within-what-a-law-reads",
+  "what-a-cut-loses",
+  "how-often-couplings-act",
+  "whether-a-loop-closes-a-difference",
+  "what-a-pools-acts-respond-to",
+  "runaway-distance-uncoupled",
+  "margin-of-a-regime",
+  "threshold-in-the-state-plane",
+  "where-a-run-of-a-regime-comes-to-rest",
+  "regime-in-any-amounts",
+  "two-sided-regulation-and-late-reading",
+  "giving-that-waits-on-giving",
+  "thresholds-of-waiting",
+  "restoring-giving-from-the-worst-start"
+ ],
+ "quotes": [
+  {
+   "text": "言出乎身加乎民；行发乎迩见乎远",
+   "source_id": "DS02"
+  },
+  {
+   "text": "况其迩者乎",
+   "source_id": "DS02"
+  },
+  {
+   "text": "人有欲則計會亂，計會亂而有欲甚",
+   "source_id": "CV1-S-JL"
+  },
+  {
+   "text": "能熏識等，從種生時，即能為因，復熏成種，三法展轉因果同時",
+   "source_id": "FO1-S-CY"
+  },
+  {
+   "text": "真如淨法實無於染，但以無明而熏習故則有染相",
+   "source_id": "FO2-QX"
+  },
+  {
+   "text": "惟天之命，於穆不已",
+   "source_id": "RU1-S-ZY"
+  },
+  {
+   "text": "所应复为感，所感复有应，所以不已也",
+   "source_id": "RU2-S-S06"
+  },
+  {
+   "text": "和大怨，必有馀怨",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "复以巧术防民之伪，民知其术，防随而避之，思惟密巧，奸伪益滋",
+   "source_id": "DS01"
+  },
+  {
+   "text": "治大国，若烹小鲜",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "烹小鮮而數撓之",
+   "source_id": "CV1-S-JL"
+  },
+  {
+   "text": "夫兩喜必多溢美之言，兩怨必多溢惡之言",
+   "source_id": "ZH1-S04"
+  },
+  {
+   "text": "傳其常情，无傳其溢言，則幾乎全",
+   "source_id": "ZH1-S04"
+  },
+  {
+   "text": "大小多少，报怨以德。",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "出乎尔者，反乎尔者也",
+   "source_id": "RU2-S-MZ"
+  },
+  {
+   "text": "其事好还",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "易穷则变，变则通，通则久",
+   "source_id": "DS03"
+  },
+  {
+   "text": "其所由來者漸矣，由辯之不早辯也",
+   "source_id": "YD-OW-WY"
+  },
+  {
+   "text": "其安易持，其未兆易谋",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "發而皆中節，謂之和",
+   "source_id": "RU1-S-ZY"
+  },
+  {
+   "text": "喜怒哀樂之未發，謂之中",
+   "source_id": "RU1-S-ZY"
+  },
+  {
+   "text": "致中和",
+   "source_id": "RU1-S-ZY"
+  },
+  {
+   "text": "高者抑之，下者举之；有馀者损之，不足者补之",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "天之道，损有馀而补不足",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "中也者，天下之大本也",
+   "source_id": "RU1-S-ZY"
+  },
+  {
+   "text": "皆滯于一偏而非其正也",
+   "source_id": "LC-SZ-ALL"
+  },
+  {
+   "text": "万物为道一偏",
+   "source_id": "RU2-S-XZ17"
+  },
+  {
+   "text": "若矯枉而過正過所以就正也",
+   "source_id": "YD-CY4"
+  },
+  {
+   "text": "過猶不及",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "识其重而亟反之，可也。反之，力也。识不早，力不易也。",
+   "source_id": "RU2-S-S01"
+  },
+  {
+   "text": "极重不可反",
+   "source_id": "RU2-S-S01"
+  },
+  {
+   "text": "賞不踰時，欲民速得為善之利也",
+   "source_id": "BI1-S-SM"
+  },
+  {
+   "text": "高者抑之，下者举之",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "求也退，故進之；由也兼人，故退之。",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "信不足焉，有不信焉",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "故舊無大故，則不棄也，無求備於一人",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "柔弱胜刚强",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "無恃其不來，恃吾有以待之",
+   "source_id": "BI1-S-SZ"
+  },
+  {
+   "text": "所求乎朋友，先施之",
+   "source_id": "RU1-S-ZY"
+  },
+  {
+   "text": "卽必吾先從事乎愛利人之親，然後人報我以愛利吾親也",
+   "source_id": "MO1-S-C16"
+  }
+ ],
+ "missing_names": [
+  {
+   "concept": "gap between two levels (Becoming.gap)",
+   "used": "差"
+  },
+  {
+   "concept": "link of a loop (an element of the list passed to LoopReturn.returnMap)",
+   "used": "节"
+  },
+  {
+   "concept": "one turn around a loop (one application of the return map)",
+   "used": "周"
+  },
+  {
+   "concept": "factor of a link or of a turn (LoopReturn.scaling), as against coupling strength (应倍)",
+   "used": "倍率"
+  },
+  {
+   "concept": "order of responses in the expansion of the carried amount (carriedWithin j)",
+   "used": "阶（j 阶）"
+  },
+  {
+   "concept": "chain of couplings (Becoming.Coupled)",
+   "used": "感之链／链"
+  },
+  {
+   "concept": "upstream / downstream along chains of couplings (Becoming.Upstream)",
+   "used": "上游／下游"
+  },
+  {
+   "concept": "polynomial bound in the steps",
+   "used": "多项式"
+  },
+  {
+   "concept": "schedule of steps at which couplings act (on : Nat → Bool; strengthsFrom N)",
+   "used": "日程"
+  },
+  {
+   "concept": "threshold θ (ExchangeLaw.ReadsBelow; Adjusted.threshold)",
+   "used": "阈"
+  },
+  {
+   "concept": "standing law (ExchangeLaw.standing: the law while the stock stands at its threshold)",
+   "used": "常立之法"
+  },
+  {
+   "concept": "standing draw H of RegimeMargin",
+   "used": "常取"
+  },
+  {
+   "concept": "point of no return H+y of a regime",
+   "used": "不可回返之点"
+  },
+  {
+   "concept": "recent giving (second component of the RegimeMargin.Adjusted state)",
+   "used": "近来所与"
+  },
+  {
+   "concept": "what is left after the draw (x − H); the table keeps 余 for 其余、余地 only",
+   "used": "所剩"
+  },
+  {
+   "concept": "band [a, b] / band up to hi (Adjusted.Band)",
+   "used": "带"
+  },
+  {
+   "concept": "rule read from the rest's record (Regulation.Rule)",
+   "used": "规则"
+  },
+  {
+   "concept": "late return (Regulation.lateReturn)",
+   "used": "迟返（迟返之规则）"
+  },
+  {
+   "concept": "waits on (up b a in Withholding and Tolerance), chain of waits",
+   "used": "所等待者／等待之链"
+  },
+  {
+   "concept": "withholding; total withholding (Tolerance.allWithheld)",
+   "used": "不给；全不给"
+  },
+  {
+   "concept": "the tolerating law for any tol, including 0 (不求备 names only tol ≥ 1)",
+   "used": "缺不过 tol 犹给之法"
+  },
+  {
+   "concept": "a law keeping inclusion (Tolerance.KeepsInclusion)",
+   "used": "守包含之法"
+  },
+  {
+   "concept": "policy through the couplings (Flow.PolicyThrough)",
+   "used": "经其感之策"
+  },
+  {
+   "concept": "lossless law (Law.Lossless)",
+   "used": "无损"
+  },
+  {
+   "concept": "start configuration of a run",
+   "used": "起处"
+  },
+  {
+   "concept": "law of what has stood (ExchangeLaw.Nonanticipating)",
+   "used": "唯读已立者之法"
+  },
+  {
+   "concept": "a run still from some step (LastChange.StillFrom), distinct from 止 (World.RestsFrom)",
+   "used": "自某步起不再变（从凡例之约定）"
+  },
+  {
+   "concept": "finite (of an order, a number of steps); the table reserves 穷 for the break",
+   "used": "有尽（从凡例之约定）"
+  },
+  {
+   "concept": "two-sided opposition of the joint exchange (Flow.Opposes) as a part of 中和",
+   "used": "相反／两侧皆反其离"
+  },
+  {
+   "concept": "joint exchange at a condition (all takes and gives at c in one step)",
+   "used": "c 上诸取与之合"
+  }
+ ],
+ "open": "一、锚之约定：名表中「还」无锚，本篇以 Becoming.LoopReturn.RespondsByReturn（二历程于一所待之差每步为前差之报）为其锚，并以 responds_iff、gap_course 为其律，此是 AI 约定，待整合者确认；「应倍」名表无锚，本篇锚于 ExchangeLaw.RespondsWithin；「体」用于 Propagation 等模块中给定其所为之 part（F → Bool），名表之体锚于 Web.Whole，所名相合而锚不同。二、21 日以前所列新模块之取舍：RegimeMargin 之不可回返之点、平面之阈与运行之止入本篇（十二·十三、十二·十四），其 Drawn 之任意有序之量之形入说；周边模块 RegimeReals（实数上之收敛，用 Mathlib）未引。Optimum 之再优化历程（r<k 则失、保持所舍 (r−q)n+m 等）、DrawnBeyond（越过余量而绝，WithinSlack）、JointDraw（联合之取按所需而绝）虽有阈之形，其结构属择与取（篇十一、篇四）与群（篇十四），留给各该篇；Growth、OwnWidening、Weightings、Direction、ContinuedClasses、Retaining、BoundedSignificance、Clearing、ClosedCapture、Drift、Reproduction、SelectionLevels、SelectionTerm、GroupEnding、PropositionIdentity、ListingRefutations、CensusTable、Witnesses、HexagramCommuting、Stuttering、IdleRemoval、Extension、Laws 不是本簇之结构（ListTests、Order、Naturals 在此工作树中未见为模块文件）。三、仍开放（皆 AI 所陈，未经 Lean）：有取与的一侧之律（一偏只有空流之例）；局部之律何时使联合取与两侧相反而整体自定（lao-57「自正」）；饱和之律（lao-72）；介入与截断所失之关系（lao-79 余怨能否化解）；体反复与差（σ≠0）时可致与作用次数之律（lao-60「数挠」）；容差之跨法单调（tol 大者处处所给不少，lao-36-78）；一次先给只沿环循环（answers_circulates 之对偶）；继电之摆幅之界。四、名之注：critic 说荀子天论「万物为道一偏」不在冻结文本，实则在 RU2-S-XZ17（简体），其义为一部分，与本篇所取苏辙「一偏」之只守一侧义不同；「不已」名表引中庸，二程语（近思录）是更近之宋儒用例；「余地」在十二·十三用于常取之下水平高出不可回返之点之距，名表之余地锚于 Flow.Balances.supported_iff_within_margin，二者相关而非同一，待整合者定；十二·二十与篇十四（念旧恶、不念旧恶）有重叠，整合者可移。五、讀之编号：环之读法标 D43、D45（依规范章 §2.6 读法之标），以伤还伤之环标 D48，失控标 D26；古典对应之读法是本 ZH 工作之 AI 读法，未另立编号。六、篇号依 work/xu.md 之篇目推定（篇一法、篇四流衡、篇五同归、篇六盈科与余地、篇七入与机、篇九察与验、篇十一感与应、篇十四念旧恶、篇十五延续之条件、凡例无穷可尽），若篇目有变须随之改。七、本篇诸律都在离散步与自然数之量的建模选择之下（RegimeMargin.Drawn 除外），读法所承以此为限；「說」多超出八句，整合者可删繁。"
+}

@@ -1,0 +1,549 @@
+{
+ "cluster": "C11 回路、反馈、阈值与调节",
+ "lens": "STRUCTURE",
+ "names": [
+  {
+   "concept": "环（loop of couplings）",
+   "name": "環",
+   "verdict": "revise",
+   "issues": "概念本身无误，onLoop_iff_formed 所证正是如此。问题在 fit：它把〈携带量超过每个多项式恰经由环〉写成无条件。polynomial_iff_no_loop 有四个前提：强度不随步变（stationary K），每步是同一组形成，每个条件都已列入，部分在起始之后不给差。一般日程下，复现之环可以保持多项式（Frequency.Sparse.polynomial）；无环时的多项式界只到 T 为止（carried_le_polynomial_before）。证言方面，庄子「環中」指枢轴之位，「連環可解也」指相扣之环，都不承〈耦合链首尾相接〉，mapper 自己也注了。主证孙子「如循環之無端」所在的条目 sunzi-qi-zheng-xun-huan 只列组态层的声明，这与 tuan-feng 条〈组态再来不是本簇之环〉自相矛盾。",
+   "fix": "fit 改为：「……恰经由环（polynomial_iff_no_loop，前提：强度不随步变、每步同一组形成、条件皆列、部分起始后不给差）；一般日程下，复现之环可保持多项式（Frequency.Sparse.polynomial）；到 T 为止上游无已成之环，则至多多项式（carried_le_polynomial_before）」。庄子两例降为弱证或删去。以孙子「奇正相生」为主证，并在该条目补上环层声明（onLoop_of_closing、Flow.mutuallyDependent_iff_reach）。"
+  },
+  {
+   "concept": "成环（closing）",
+   "name": "成環",
+   "verdict": "revise",
+   "issues": "一、not_carried 引用的 LoopReturn.whole_strengths 不存在。LoopReturn 里环节的量是整数倍率（factor，scaling 之环节），不是耦合强度。二、概念中的 responds_to_own_level 只是单条件之环（自环）的特例，但多个条目把两条件之环都归到它名下：法令↔盗贼、防↔伪、欲↔计会、种↔现。与 Ren 之〈成闭〉不同的提示是对的，应保留。",
+   "fix": "not_carried 中的 whole_strengths 改为 LoopReturn.whole_factors、LoopReturn.nothing_between，「强度」改为「倍率」。概念句末加：「（此为单条件特例；多条件之环见 onLoop_of_closing、onLoop_succ_iff）」。"
+  },
+  {
+   "concept": "还（feedback）",
+   "name": "還",
+   "verdict": "revise",
+   "issues": "一、Loop.response_returns 是 PoolResponse 中的一个见证（escalation 之流），概念把它写成了一般律。二、「不在环上的作用不返回（not_onLoop_unread）」不是这条定理的内容。not_onLoop_unread 说的是：无人在任何步读入的水平不在任何环上；upstream_unread 说的是：这样的水平下游只有它自己。三、还的一般形式在 MutualDependence 中：一个流相互依存，恰当每个形成都在每个形成的可达闭包之内（Flow.mutuallyDependent_iff_reach）。mapper 未引这一条。四、宗密「還執為我，還起貪等」里的「還」是副词（又、仍），not_carried 理应排除此义，yuanren 条却说它「正是本簇之还」。",
+   "fix": "概念改为：「还：作用者所作用者，可经他者之耦合回过来作用于作用者。在相互依存之流中处处如此（Flow.mutuallyDependent_iff_reach）；在 Loop 见证中，回应经作用者之耦合闭包回到作用者（Loop.response_returns）；回来的是闭合之还是扩大之，由律决定（ExchangeLaw.response_not_fixed_by_coupling）；无人读入之水平不在任何环上，其下游只有它自己（not_onLoop_unread、upstream_unread）。」not_carried 加：「副词『还』（又、仍）」。"
+  },
+  {
+   "concept": "报（loop return, the return map）",
+   "name": "報",
+   "verdict": "revise",
+   "issues": "一、引用了不存在的 whole_strengths。二、「少于所受则在 d 圈内闭合」缺条件：closes_within 要求环返映射满足 f 0 = 0，且对每个正差 f x < x。某一环节少于所受，只是闭合的必要条件（closing_needs_less）。三、结构上，先秦的「报」（以德報怨、人報我）是一个环节对所受之物的回应，不是全环的复合；环返映射却是诸环节的复合（returnMap）。用「報」名复合映射，会让「報怨以德」（一个环节）与「報」（全环）同名而异义。四、「报答、回报」这一交换层容易带入讨价还价、利益对立的框架，not_carried 没有写明。",
+   "fix": "建议：「報」名一个环节对所受者之所交（环节映射 g）；全环的环返映射另取一名（如「所還」，与 C13 的「讓」协调）。若仍以「報」名环返映射，fit 改为：「等于所受则保持（kept_of_identity、loop_kept）；有环节少于所受才可能闭合（closing_needs_less，必要条件）；f 0 = 0 且对每个正差都少于所受，则至迟 d 圈闭合（closes_within，此界确切：closes_within_exact）；每环节至少加倍，则至少 2^n·d（runs_away）；整数倍率之环没有渐闭（whole_factors、nothing_between）」。not_carried 加：「报答、回报之交换义（以回报之计算为理由的论证）」。"
+  },
+  {
+   "concept": "滋（runaway through a loop）",
+   "name": "滋",
+   "verdict": "revise",
+   "issues": "一、fit 与環犯同一个错：polynomial_iff_no_loop 的前提没写。复现之环可保持多项式（Frequency.Sparse.polynomial），是〈有环即失控〉的反例，应当写入。二、一般形式 exponential_around、carried_pow_around（MutualDependence：在每步都在的环上，携带量每圈至少翻倍，且有 D(1+M)^… 之上界）没有引。三、「滋」在「法令滋彰」「奸伪益滋」中是副词或动词（更加、滋长），环的结构来自上下文，不在字义；这个名只能作为约定。",
+   "fix": "fit 改为：「在每步都在的环上，携带量每绕一圈至少加倍（carried_doubles_around、exponential_around）；强度不随步变、每步同一组形成时，多项式增长恰当上游无环（polynomial_iff_no_loop）；回程足够频繁则超过每个多项式（runaway_of_roundTrip）；但复现之环可保持多项式（Frequency.Sparse.polynomial）」。course 注明：「滋」的字义是滋长、益，环之义属约定（HANZI §1 的约定一类）。"
+  },
+  {
+   "concept": "未兆（the break not registered before it）",
+   "name": "未兆",
+   "verdict": "keep",
+   "issues": "概念与 Web.break_not_bounded、Flow.policy_uses_after_failure、Web.observed_raise_couples 相符，量词正确。可补 MutualDependence 中〈站立者给不出预警〉一组（见 missing）。",
+   "fix": "无须改。建议在 lean 中加 Flow.Balances.half_stands、Flow.Balances.doubling_needs、DoublingDraw.half_then_none。"
+  },
+  {
+   "concept": "穷（the break）",
+   "name": "窮",
+   "verdict": "revise",
+   "issues": "一、「存量到达阈值之步」不确切。在 ReadsBelow 下，存量站在阈值之上时，律只读它站着；断裂是存量不再站在阈值、降到阈值以下的那一步。在 Draw 中，存量站在 N 时才取，降到 N 以下就不取。二、not_carried 与多个条目把 Closing.Threshold.level_after 当作窮之后的走向。那是另一种形状：上升的水平到达 θ 时被读入，环在 θ 形成，此后加倍。而 ReadsBelow 断裂之后，Draw 停止取，并不失控。三、「穷」的通义是穷尽、困穷，与〈断裂之步〉之间是约定，不是字义。",
+   "fix": "概念改为：「……存量降到阈值以下（不再站在阈值之上）之步」。删去 Closing.Threshold.level_after 一类引用；或注：「另一种阈形（上升之阈，Closing.Threshold）：断裂后可失控也可停止，由所成之环每圈交回多少决定」。为上升之阈另立一名（见 missing）。"
+  },
+  {
+   "concept": "频数（frequency of coupling）",
+   "name": "頻數",
+   "verdict": "revise",
+   "issues": "一、carried_le_count 的前提没写：部分起始后不给差（σ = 0），起始差至多 D，每步流入至多 M，日程未标之步流入为零。二、证言中「事君數」「數撓」「數變法」说的是行动者自身作用的频次。「数挠」是部分（烹者）不断输入差异（σ），恰与 carried_le_count 的前提相反；「数变法」是改规则（Pace），不是耦合作用的步数。所以证言只部分承载此义。三、SelfLoop.polynomial_iff 要求 M ≥ 1、D ≥ 1；SelfLoop.carried_eq 是见证。",
+   "fix": "概念加前提：「部分起始后不给差、起始差至多 D、每步流入至多 M、日程未标之步流入为零时，携带量至多 D(1+M)^a（carried_le_count）；在自环见证中，强度 M 于所标之步恰达此界（SelfLoop.carried_eq）；M、D ≥ 1 时，自环为多项式恰当 2^a 为多项式（SelfLoop.polynomial_iff）」。fit 注：解老之「数挠」是部分屡给差，此律不含；「数变法」属 Pace（规则的读与变）。"
+  },
+  {
+   "concept": "不已（a coupling recurs）",
+   "name": "不已",
+   "verdict": "revise",
+   "issues": "「每个有限阶在 c 都有所失」缺量词。carriedWithin_lt_of_recurring_loop 给出的是：对每个阶 J，存在某一步 t，在 c 有所失。前提还需写明：差异经时间路线到达环（Conveyed），环长为正。另外，本条与 RO ru-chengyi-gan-ying 把「不已」读作环保持差的量不同，RO 记录须同步。",
+   "fix": "改为：「……每个有限阶 J 在 c 的某一步都有所失（∃ t，carriedWithin_lt_of_recurring_loop；前提：差异经时间路线到达环，环长为正，复现之耦合由环通到 c）」。"
+  },
+  {
+   "concept": "已分（a settled schedule）",
+   "name": "已不已分",
+   "verdict": "revise",
+   "issues": "一、settled_iff_recursOrStops 只就〈一个条件耦合进自身〉的日程陈述；对每个列全条件之世界的版本是 settled_every_iff。二、「Σ⁰₂ 排中，严格强于 LPO」出自文献（Akama–Berardi–Hayashi–Kohlenbach 2004，docstring 所引），Lean 只证 RecursOrStops ⇒ LPO（RecursOrStops.lpo）。三、SettledFrom 的定义是〈自 N 起出现的每个耦合都不已〉，概念中的说法与之大体等价，但应照定义写。四、名：新组合，「分」易被读作名分、份额，「已」易被读作「已经」；四字一串作术语也嫌重。置信低。",
+   "fix": "概念改为：「〈单条件自耦的每个日程都已分〉恰等价于 RecursOrStops（settled_iff_recursOrStops），对每个列全条件之世界亦然（settled_every_iff）；RecursOrStops 蕴含 LPO（RecursOrStops.lpo）；它是 Σ⁰₂ 排中、严格强于 LPO，这一点出自文献，非 Lean 所证」。名交整合者决定。not_carried 明写排除「已经」义与「分＝份额」义。"
+  },
+  {
+   "concept": "余（what a cut loses）",
+   "name": "餘",
+   "verdict": "revise",
+   "issues": "Remainder 中的「截断」，是对携带量按回应阶数的计算：carriedWithin 只算到 j 阶的回应。所失是这笔帐与携带量之差，不是世界里一次干预之后剩下的差异。「余怨」却是「和」之后世界中仍在的差。概念把二者合为一事，lao-79、sz-79 两条也都用它来读「和」。",
+   "fix": "概念加一句：「截断是对携带量按回应阶数所作的计算（只计到 j 阶之回应）；余是此计算之所漏，不是一次干预后世界所剩之差」。世界中闭合一个差，另属 LoopReturn（cut_closes、closes_within）与 Rejoining。条目若以「和」为截断，须明写「把『和』读作只及有限阶之回应（AI 读法）」。"
+  },
+  {
+   "concept": "应倍（coupling strength）",
+   "name": "應倍",
+   "verdict": "revise",
+   "issues": "insensitiveAt_iff_strength_zero 的条件没写全：律须读已立者（Nonanticipating），且「强度为零」须在到该步为止的每一步、对每个条件都成立。与 C08「察」（敏感，最少耦合）的关系也没写：应倍为零即不察。「应」与 C10 的「应」（回应）一致，可以接受。",
+   "fix": "概念改为：「……对读已立者之律，交换在步 t 对 d 不敏感，恰当到 t 为止每一步、对每个条件强度皆为零（ExchangeLaw.insensitiveAt_iff_strength_zero）」。course 加：「应倍为零，即 C08 之不察」。"
+  },
+  {
+   "concept": "所致（the carried amount）",
+   "name": "所致",
+   "verdict": "reject",
+   "issues": "冻结文本中「所致」的用例，全是因果归属（由…所致、業所致）或「致＋宾语」，没有一例指「送达之量」。现代读者必然读作「由……造成」：一个量被说成了原因的归属，带进因果主体一层。证言「致遠」只有送达之义，没有量。mapper 自己也置信低。",
+   "fix": "弃用「所致」。改以「致」为核心、又不能读作因果的形式，例如「可致」「能致」（能到达之最大差），须先用 ctq.py 核用例；或沿 C04 的「輸」系为这个量命名。由整合者定。"
+  },
+  {
+   "concept": "中和（two-sided regulation）",
+   "name": "中和",
+   "verdict": "keep",
+   "issues": "已采用之名（RO）。概念与 Flow.Opposes、Flow.WithinGap、gap_falls、regulates、settles 相符。",
+   "fix": "无。"
+  },
+  {
+   "concept": "中节（the bound is exactly no overshoot）",
+   "name": "中節",
+   "verdict": "keep",
+   "issues": "与 Flow.withinGap_iff_between、Regulation.within_iff_between、stays_between_at、gap_le_of_within 相符。《中庸》之「节」是合宜之度，不是数量之界，mapper 自审已注。",
+   "fix": "无。"
+  },
+  {
+   "concept": "过正（overshoot）",
+   "name": "過正",
+   "verdict": "keep",
+   "issues": "与 crosses_of_above、crosses_of_below 相符；Overshooting 已标为见证。",
+   "fix": "无。"
+  },
+  {
+   "concept": "一偏（one-sided response）",
+   "name": "一偏",
+   "verdict": "revise",
+   "issues": "概念以 Regulation.OneSided 来定义，而 OneSided 是一个见证，其中根本没有交换（emptyFlow）：水平恒为 2，m = 1。「对下侧偏离相反」是空真的，因为水平从不在 m 之下；恢复律之前提也是空真的。所以脊柱证的只是〈一侧之前提（含空真者）不构成调节〉，不是〈主动只对一侧相反的交换，使水平永在一侧〉。另外，hs-39（只朝一侧推进）、lao-36-jiang（单向之读）把一偏用来名别的结构。",
+   "fix": "概念改为：「一侧之前提不成调节：在 OneSided 见证中（无交换，水平恒在 m 之上），下侧相反与界内都空真地成立，恢复律之前提自每步成立，而交换不对上侧偏离相反，水平永在 m 之上（OneSided.restores_premise、above、not_opposes）」。主动的一侧之律列入 missing。条目中只在〈只一侧相反〉处用此名。"
+  },
+  {
+   "concept": "识不早（reading late）",
+   "name": "識不早",
+   "verdict": "revise",
+   "issues": "一、fit 用「登记」，这是已退役的 registration 词汇；识应按 C08 的定义：形成所读之差。二、量词不确。no_narrower_band 说的是：一条晚读 ℓ 步的规则，若在每种每步移动至多 d 的其余之下都让历程留在 [a,b] 内（0 < a），则 a + (ℓ+1)(d+d) ≤ b。也就是说，没有一条晚读规则能在每种这样的其余下都保持窄于 2(ℓ+1)d 之带。三、一名二概念：wenyan、zhoudunyi 两条又用識不早名〈断裂前不按水平读入存量〉（这是未兆的结构），simafa 条则名 ReadsLate。",
+   "fix": "fit 改为：「识＝C08 所定之识（形成所读之差）」。概念改为：「……没有一条晚读 ℓ 步的规则，能在每种每步移动至多 d 的其余之下都保持窄于 2(ℓ+1)d 之带（late_band、no_narrower_band，0 < a）；晚返达到此界（lateReturn_band）」。此名只用于 ReadsLate；wenyan 条改用未兆。"
+  },
+  {
+   "concept": "继电（the relay）",
+   "name": "寬猛相濟",
+   "verdict": "revise",
+   "issues": "一、relay_threshold 的条件没写：a ≤ b，0 < a，M > 0，(ℓ+1)M ≤ b+1。它的「恰当」是对每个起点 x₀ < a、每个保持 ℓ+1 步的继电流一并陈述的。二、「越过此阈则两端无休止地越过」只对保持在 a−1 的起点有证（held_oscillates，条件 b+2 ≤ a+(ℓ+1)M）；一般的说法是：一旦向上越带一次，此后两端无休止（crossing_oscillates）。三、名：这四字在冻结文本中无用例（mapper 已注）；程颐「寛猛之中」说的是二者之中，不是交替；「猛」带强力、严刑之价；「宽猛」本是治者施于民之术，名字本身就带进单一中心层。四、RO zuo-zhao20-kuan-meng 所引的 AssurancePlans.Regulation.opposite_moves 没有连上。",
+   "fix": "概念补上条件，并改为：「越过此阈时，自 a−1 起保持者两端无休止（held_oscillates）；任何一次向上越带之后，两端无休止（crossing_oscillates）」。名降为低置信，交整合者考虑结构名，如《老子》七十七章之「抑舉」（高者抑之，下者举之），或取继电义的「張弛」。lean 中加 AssurancePlans.Regulation.opposite_moves、Regulation.rise_run、Regulation.fall_run。"
+  },
+  {
+   "concept": "容忍（tolerance）",
+   "name": "不求備",
+   "verdict": "revise",
+   "issues": "一、此名所名的概念包含 tol = 0（tolerating_zero），而「不求备」只能名 tol ≥ 1；tol = 0 恰是「求备」。二、tolerating_zero 说：容忍为零之律就是 Withholding.answers（无记忆之等待），C13 已名之为「不念舊惡」，于是同一律有两名（求备／不念舊惡）。三、《论语》「無求備於一人」说的是一人之才德不必全备，脊柱计的是所等待之诸形成中可缺几个；把一人之诸才对应为诸被等待者，是 AI 类比。四、驳回「容」的理由不成立：web_tolerating 证明，容忍就是在需求低于所等待之数时的容（Supported，即 C06 之「容」）。所以「容缺」一类名反而与 C06 一致。",
+   "fix": "二选一：概念改名为容忍之数（如「容缺」），或保留「不求備」而另以「求備」名 tol = 0。与 C13 协调：answers 只取一名（不念舊惡或求備，择其一）。fit 加 web_tolerating；not_carried 加「一人之才德全备」；alternatives 删去以「容」驳回的理由。"
+  },
+  {
+   "concept": "自最坏起点（restoring from every start）",
+   "name": "有以待之",
+   "verdict": "revise",
+   "issues": "一、「待」与本理论的「等待」同字而异义。Withholding、Tolerance 通篇的 waits on 是等待，本簇不求備概念中也有「所等待者」；此外还与 C10 的「所待」（影响闭包）、C02 的种子「待」（依存）相冲：一簇之内同字三义。二、fit 没写 KeepsInclusion，而 worst_start 必需此条件；restores_iff、restores_from 另需源头可判定（decided）。三、兵争框架属争胜层，not_carried 已注。",
+   "fix": "fit 加：「对保持包含之律（KeepsInclusion）」，以及「源头可判定时（restores_iff、restores_from）」。名交整合者：或另取不含「待」的结构名，或在 not_carried 明写：「此『待』＝应对，不是 Withholding 之等待」。"
+  },
+  {
+   "concept": "先给（gives first）",
+   "name": "先施",
+   "verdict": "revise",
+   "issues": "givesFirst 的意思是：源头在每一步都不待所等待者而给（src a ∨ answers）。《中庸》「先施之」、《墨子》「先從事乎愛利人之親，然後人報我」里的「先」，是时间上先给一次，然后待对方之报。若只先给一次、其余各方都只应答（answers），所给只会在环上轮转，不会使全环恢复。这是 AI 手算：脊柱证的是扣留之轮转（Withholding.answers_circulates），给予之轮转是它的对偶，未单列。另外，Ring.givesFirst_restores 是三元环的见证；一般律是 Tolerance.restores_iff（须源头可判定）。givesFirst_restores_of_answers 比较的对象是 answers（不念舊惡），不是 waitsAll。",
+   "fix": "概念改为：「先施：源头每步不待而给（Withholding.givesFirst）；在 Ring 见证中，自第三步起全环每步给予（Ring.givesFirst_restores）；一般地，自每个起点于 n 步恢复，恰当无 n 长之清晰等待链进入（restores_iff，源头可判定）；源头可判定时，凡无记忆之等待（answers）已恢复者，先施亦恢复（givesFirst_restores_of_answers）」。not_carried 加：「一次之先给（随后待报）：在脊柱中只轮转，不恢复」。与 C13 的念舊惡、不念舊惡协调。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-jiji-tongbian-weiqiong",
+   "verdict": "revise",
+   "issues": "一、records 用的 runaway-distance-unregistered 是改名存根。二、「规则须在读取之步就由所读者改变（Pace.rule_at_reading）」：rule_at_reading 只说读取之步的下一规则由该处快层所给，是定义性的计算，没有证「须」。「须」由 Pace.never_reads_lost 给出：从不读取的规则，不重得所失。三、Switching.changing_regains 是见证（两条固定规则、四步一回），读法写成了一般。",
+   "fix": "records 改为 runaway-distance-uncoupled。「须」句改引 Pace.never_reads_lost。「读取快层的变规则能重得每个固定规则所失」前加「在 Switching 见证中」。"
+  },
+  {
+   "id": "xici-shan-buji",
+   "verdict": "revise",
+   "issues": "一、「以小恶为无伤正是阈值以下读不出差别」方向颠倒。ReadsBelow 是：存量站在阈值之上时，律只读它站着，读不出差别的是阈值之上的小消耗；断裂发生在降到阈值以下之时。二、Hexagram.waxWane_returns 只是一例，读法却用它支持〈无损之律下每个组态都回来〉这一一般句。",
+   "fix": "改为：「存量站在阈值之上时，律只读它站着，小的消耗读不出差别（break_carried_nowhere）」。一般句改引 Law.lossless_iff_returns（有限组态），waxWane_returns 只作例。"
+  },
+  {
+   "id": "xici-an-buwang-wei",
+   "verdict": "revise",
+   "issues": "records 用了改名存根 runaway-distance-unregistered、testing-within-registration。读法本身确切。",
+   "fix": "records 改为 runaway-distance-uncoupled、testing-within-couplings。"
+  },
+  {
+   "id": "daxiang-jiji-yufang",
+   "verdict": "revise",
+   "issues": "一、records 与读法中都用了改名存根 runaway-distance-unregistered。二、「既济不是静止处（Law.rests_iff）」超出 rests_iff 所证：它只给出静止的条件，没有判定既济这一组态。",
+   "fix": "records 与读法中的 id 改为 runaway-distance-uncoupled。删去「既济不是静止处」，或改为：「静止恰在律不再改变、又满足所求之组态（Law.rests_iff）；大象没有给出既济是否如此」。"
+  },
+  {
+   "id": "jie-kujie-buke-zhen",
+   "verdict": "revise",
+   "issues": "一、「苦節→等待全部」是弱的 AI 类比：苦节是节制过严，waitsAll 是有记忆地等所等待者全部给过，二者的关系、条件与方向都不同。二、「多一份等待就少一份给予」超出 waitsAll_more_waiting 所证：该定理只说多等待者给予不多于（≤）。三、names_used 有不求備，却没有 Tolerance 的声明；而且 waitsAll（有记忆）不是 tolerating_zero（＝answers，无记忆）。",
+   "fix": "「苦節」一半，标为弱，或改用结构更近的读法。AI 候选：节之带过窄者不可保（Regulation.no_narrower_band），由整合者定。「少一份」改为「给予不多于」。names_used 删不求備，或加 Tolerance.tolerating_zero 并改读为 answers。"
+  },
+  {
+   "id": "xugua-within-pairs",
+   "verdict": "revise",
+   "issues": "names_used 有窮，但读法自己说「穷大」之「必」只是对内翻转，与本簇之窮（ReadsBelow 断裂）没有结构关系，只是字面之用。",
+   "fix": "names_used 删窮。"
+  },
+  {
+   "id": "xugua-er-buyi-bi",
+   "verdict": "revise",
+   "issues": "names_used 有窮，但所引片段（益而不已必决、升而不已必困、有大者不可以盈）里没有「穷」字；其结构是〈更多〉之律与卦序，不是 ReadsBelow 断裂。",
+   "fix": "names_used 删窮。"
+  },
+  {
+   "id": "tuan-feng-yingxu-xiaoxi",
+   "verdict": "revise",
+   "issues": "names_used 有環，读法却说这是组态层的「再来」，与本簇之環不同（属 C05 之復）。名与读法自相矛盾。",
+   "fix": "names_used 删環，改注 C05 之名（復）；经 Law.lossless_iff_returns 的连接说明保留。"
+  },
+  {
+   "id": "xici-qiong-ze-bian",
+   "verdict": "revise",
+   "issues": "一、把两种阈形混为一事：ReadsBelow 的断裂是存量降到阈下，Draw 此后不再取；Closing.Threshold 是上升的水平到达 θ 时被读入，环成而加倍。「穷而变之后是失控」对 Draw 不成立；Closing.Threshold 诸条又只是一个见证。二、「到阈值之处」应为「降到阈值以下之处」。",
+   "fix": "前半保留 ReadsBelow。「变则通」句改为：「断裂处环成；其后失控还是停止，由所成之环每圈交回多少决定。在 Draw 中断裂后不再取；在 Closing.Threshold 见证中（另一种上升之阈），环成后加倍」。窮只用于 ReadsBelow 那一半。"
+  },
+  {
+   "id": "xici-shan-buguo",
+   "verdict": "revise",
+   "issues": "一、「此时差额那么多圈内闭合（closes_within）」错：一个环节少于所受，不足以闭合；closes_within 要求环返映射 f 0 = 0 且对每个正差 f x < x，结论是至迟 d 圈闭合。二、Loop.response_returns 是见证，被读作一般律。三、Law.lost_stays 说的是组态之失（不可达者保持不可达），不是两历程之差；拿它来界定〈可闭合之差〉，类别不合。",
+   "fix": "改为：「闭合需要有交回少于所受之环节（closing_needs_less，必要条件）；环返映射对每个正差都少于所受、且 f 0 = 0 时，至迟 d 圈闭合（closes_within）」。「还」句加「在 Loop 见证中」，一般律引 Flow.mutuallyDependent_iff_reach。lost_stays 句删去，或注明它在组态层，不是差之闭合。"
+  },
+  {
+   "id": "xici-chuyan-qianli",
+   "verdict": "keep",
+   "issues": "声明与读法相符：most_difference_arrives、carried_attained、carried_pos_iff、Chain.keeps_arriving（已标见证）、apart_only_downstream。",
+   "fix": "只需在「所致」改名后，随之更新 names_used。"
+  },
+  {
+   "id": "wenyan-bian-zhi-buzao",
+   "verdict": "revise",
+   "issues": "一、records 用了改名存根 runaway-distance-unregistered。二、names_used 有識不早，但没有引任何 ReadsLate 声明；读法所述的结构是〈断裂之前不按水平读入〉，即未兆。在这里，識不早只是字面之用，并造成一名二概念。",
+   "fix": "records 改为 runaway-distance-uncoupled。names_used 删識不早，保留未兆、窮。"
+  },
+  {
+   "id": "cy-xiaoguo-jiaowang-guozheng",
+   "verdict": "keep",
+   "issues": "crosses_of_above、crosses_of_below、withinGap_iff_between、settles 及 Overshooting 见证，用得都确切。",
+   "fix": "无。"
+  },
+  {
+   "id": "lao-55-zhi-he-yue-chang",
+   "verdict": "revise",
+   "issues": "records 用了改名存根 learnable-through-registration、runaway-distance-unregistered。读法本身可承。",
+   "fix": "改为 learnable-through-a-map、runaway-distance-uncoupled。"
+  },
+  {
+   "id": "lao-42-chong-qi-wei-he",
+   "verdict": "keep",
+   "issues": "读法与声明相符。可选的小改：closes_within 与 closing_needs_less 一同放在「需要」句里，但前者是充分条件（f 0 = 0，且对每个正差都少于所受）。",
+   "fix": "无须改；可把 closes_within 移出「需要」句。"
+  },
+  {
+   "id": "lao-37-zhen-zhi",
+   "verdict": "revise",
+   "issues": "一、沿用 RO 的 TwoClocks.one_course_two_laws、partForms_iff、partForms_and_restForms_iff、Run.rest_driven_by_part、exists_law_iff，是为「无为而无不为」所列，而本条片段（LE-R051）不含此句。二、种类 scope，notes 却把本条列入〈意志或单一中心〉之相分，两处不一致。三、OneSided 是无交换的空真见证（见名「一偏」）。",
+   "fix": "或加入「無為而無不為」的片段（须用 ctq.py 核对冻结文本），或删去这五条声明。种类与 notes 统一；AI 建议定为定域，注明中心层在传世本与帛书乙中明显、在郭店本中不显。一偏句加「在 OneSided 见证中（无交换）」。"
+  },
+  {
+   "id": "lao-57-fa-ling-zi-zhang",
+   "verdict": "revise",
+   "issues": "一、responds_to_own_level 是单条件之自环，法令↔盗贼却是两条件之环。二、polynomial_iff_no_loop 的前提没写。缺口 2（无中心之自定）是合理的。",
+   "fix": "以 onLoop_of_closing、onLoop_succ_iff 取代 responds_to_own_level。「恰经由环」加上前提：「强度不随步变、每步同一组形成、条件皆列、部分起始后不给差」。"
+  },
+  {
+   "id": "lao-30-qi-shi-hao-huan",
+   "verdict": "revise",
+   "issues": "一、responds_to_own_level 只是自环特例（施者回应自己所给之水平），「其事好还」的一般结构是经由他者的环。二、「不在环上的作用不返回」不是 not_onLoop_unread 所证（见名「還」）。三、Withholding.withholding_returns 是无记忆（answers）之律，未注。",
+   "fix": "一般形式加 onLoop_of_closing 或 Flow.mutuallyDependent_iff_reach，responds_to_own_level 标为单条件特例。not_onLoop_unread 句改为：「无人读入之水平不在任何环上（not_onLoop_unread），其下游只有它自己（upstream_unread）」。withholding_returns 注「无记忆之等待（answers）」。"
+  },
+  {
+   "id": "lao-77-zhang-gong",
+   "verdict": "revise",
+   "issues": "「只一侧者恢复律之前提成立而水平永在 m 之上（OneSided.above）」写成了一般律，而 OneSided 是无交换的见证。其余与声明相符。",
+   "fix": "改为：「在 OneSided 见证中（无交换，下侧之相反空真成立），恢复律之前提成立而水平永在 m 之上」。"
+  },
+  {
+   "id": "lao-77-ren-zhi-dao",
+   "verdict": "revise",
+   "issues": "names_used 有滋，但所引声明（share_rises、Balances.rise_paid_from_beyond、rise_with_fall、continuing_excludes、rise_netGiver）没有一条陈述环或失控；「高者所得又回来增加其所得」这个正回馈之环没有被证。",
+   "fix": "若采正回馈之读，改引 RuleCapture.favouring_locks、RuleCapture.locked_rises（规则读份额而锁定，C10 名之为柄移），并标为 AI 读法；否则 names_used 删滋。"
+  },
+  {
+   "id": "lao-64-wei-zhao",
+   "verdict": "revise",
+   "issues": "一、Closing.Onset 是见证（强度为一的自环，自 T 起作用），读法却把 amount_before、amount_after 读作一般的〈环形成前只携起始之差、形成后每步加倍〉。二、carried_le_polynomial_before 的前提没写：到 T 为止，条件皆列，部分起始后不给差，起始差至多 D，每步流入至多 M。三、「关节点」应使用已采用之名「机」（D52）。",
+   "fix": "Onset 句加「在 Onset 见证中」；一般的倍增引 carried_doubles_around（每步都在之环）。补上 carried_le_polynomial_before 的前提。「关节点」改为「机」，names_used 加机。"
+  },
+  {
+   "id": "lao-63-bao-yuan-tu-nan",
+   "verdict": "revise",
+   "issues": "一、「放一个返还少于所受（以至为零）的环节，它闭合怨之环」错。只有交回为零的环节（cut_closes，且其后各环节都把 0 映到 0）保证闭合；少于所受而仍为正，只是必要条件（closing_needs_less），不充分。二、Closing.Onset.amount_before 是见证。",
+   "fix": "改为：「放一个交回为零之环节（cut_closes，其后诸环节在无差处不生差）；仅仅少于所受并不够——closing_needs_less 只是必要条件，须全环返映射对每个正差都少于所受，才至迟 d 圈闭合（closes_within）」。Onset 句加「见证」。"
+  },
+  {
+   "id": "lao-79-he-da-yuan",
+   "verdict": "revise",
+   "issues": "一、把「和」（对世界的一次干预）读作 Remainder 的截断（对携带量按回应阶数的计算），类别不合；「必有余」于是成了计算之余，不是世界中的余怨。二、种类 agreement 过强。三、缺口 5 问「余（carried − carriedWithin）在新耦合加入后是否归零」，问法不成立：新耦合改变的是 carried 本身，余是计算之差。",
+   "fix": "读法明写：「把『和』读作只及有限阶回应之处理（AI 读法）」，种类改为 scope。缺口 5 改问世界中的差：一个新形成读入并与之相反时，差如何闭合。最近的声明：LoopReturn.closes_within、LoopReturn.cut_closes、Flow.closes_through_coupling_apart，以及 Rejoining。"
+  },
+  {
+   "id": "lao-09-chi-er-ying-zhi",
+   "verdict": "revise",
+   "issues": "names_used 有中節，但没有引 WithinGap 一类声明；「持而盈之是把水平推过界而不回」没有声明支持。",
+   "fix": "names_used 删中節；或加 Flow.withinGap_iff_between 并相应改写读法。"
+  },
+  {
+   "id": "hs-39-wu-yi-shi",
+   "verdict": "revise",
+   "issues": "一偏用错了。「只朝一侧推进而无回应」是〈更多〉之律（more_never_rests、more_exhausted），不是 OneSided（只对一侧偏离相反）。",
+   "fix": "names_used 删一偏；「一偏之极」改为「〈更多〉之所求（Law.more_never_rests）」。"
+  },
+  {
+   "id": "lao-36-jiang-yu-xi-zhi",
+   "verdict": "revise",
+   "issues": "一偏用错了。读法所说「一方读对方之水平而对方不读这一方」是读的单向（耦合不对称，他者在合用闭包之外），不是 OneSided。",
+   "fix": "names_used 删一偏，改用 C10 的闭包词汇（所待／影响闭包）与合用池（M2）之名；「一偏的操纵」改为「单向之读」。"
+  },
+  {
+   "id": "lao-76-rou-ruo-sheng-zhi-tu",
+   "verdict": "keep",
+   "issues": "Tolerance 诸声明用得确切，Triad 已标见证，界限（total_kept）也写明了。名的冲突（tol = 0 即 C13 之不念舊惡）随名条处理。",
+   "fix": "无，只需随名条更新。"
+  },
+  {
+   "id": "lao-36-78-rou-sheng-gang",
+   "verdict": "keep",
+   "issues": "读法确切。缺口（容忍的跨律单调）属实：Lean 中只有 AllBut.mono_count、AllBut.mono_set，没有跨律的定理；手算已标明。争胜层也已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "lao-45-zao-sheng-han",
+   "verdict": "revise",
+   "issues": "「只对一侧相反的交换……水平永在 m 之一侧」写成了一般律。OneSided 是无交换的见证，下侧之相反是空真；躁胜寒那种主动只对一侧相反的作用，没有对应定理。",
+   "fix": "改为：「在 OneSided 见证中（无交换），一侧之前提不构成调节」。主动的一侧之律记为缺口。"
+  },
+  {
+   "id": "lao-60-peng-xiao-xian",
+   "verdict": "revise",
+   "issues": "一、「数撓」是部分（烹者）屡次输入差异（σ），而 carried_le_count 恰以部分起始后不给差为前提。二、「数变法」是改规则（Pace），不是耦合作用的步数。三、SelfLoop.carried_eq 是见证。",
+   "fix": "读法改为：频数之律只计耦合作用之步数，部分之屡给不在此律之内（列为缺口）。「数变法」另引 Pace（rule_at_reading、never_reads_lost）来读。carried_eq 标为见证。种类保持 scope。"
+  },
+  {
+   "id": "lao-72-min-bu-wei-wei",
+   "verdict": "revise",
+   "issues": "一、records 用了改名存根 sensitivity-is-the-least-registration、runaway-distance-unregistered。二、缺口中两句不实。「现有强度只随步数给定」不实：Closing 中有从历程读出的强度（Closing.ReadsBefore、ExchangeLaw.carryingRead、formedCourse_eq_carried）。「缺〈自某步起〉的形式」也不实：已有 Frequency.StopsBy、Remainder.strengthsFrom、exact_of_reading_before。",
+   "fix": "records 改为 sensitivity-is-the-least-coupling、runaway-distance-uncoupled。缺口重述为一条特定形状的定理：强度随所传累计量非增并归零，作为 ReadsBefore 读出的强度；自累计量达到 A₀ 之步起，该耦合满足 StopsBy，于是 exact_of_reading_before 适用。删去那两句不实之言。"
+  },
+  {
+   "id": "lao-29-qu-shen-qu-tai",
+   "verdict": "keep",
+   "issues": "excess_lowers、withinGap_iff_between、stays_between_at、crosses_of_above 用得确切；「一侧不是调节」的措辞与 OneSided 见证相合。",
+   "fix": "无。"
+  },
+  {
+   "id": "lao-17-xin-bu-zu",
+   "verdict": "revise",
+   "issues": "一、Loop.response_returns 是见证，被读作一般律。二、withholding_returns（answers，无记忆）与 withholding_spreads（waitsAll，有记忆）混用，没有说明这是两条不同的律。",
+   "fix": "加「在 Loop 见证中」，一般律引 Flow.mutuallyDependent_iff_reach。两律分开注：无记忆则扣留绕环而回（withholding_returns），有记忆则扣留向下游扩散（withholding_spreads）；施者处于哪一律，须择一。"
+  },
+  {
+   "id": "wb-26-bu-dong-zhi-dong",
+   "verdict": "revise",
+   "issues": "一、records 用了改名存根 sensitivity-is-the-least-registration。二、「调节者必在环上」是 AI 手算（Opposes ⇒ 对水平敏感 ⇒ 正强度 ⇒ 自环），不是 Lean 所证；responds_to_own_level 只是它的单条件形式。",
+   "fix": "records 改为 sensitivity-is-the-least-coupling。「必在环上」标「AI 手算，未经 Lean」，或列入缺口。相分之判保持不变。"
+  },
+  {
+   "id": "wb-65-jian-wei-yi-zi",
+   "verdict": "revise",
+   "issues": "一、防↔伪是两条件之环，误用了 responds_to_own_level（自环）；onLoop_of_closing 已在列，应以它为主。二、polynomial_iff_no_loop 的前提没写。",
+   "fix": "删去 responds_to_own_level，或标为特例；补上 polynomial_iff_no_loop 的前提。"
+  },
+  {
+   "id": "sz-79-bu-chu-qi-ben",
+   "verdict": "revise",
+   "issues": "「和其末是在有限阶截断而环仍在」把干预读作计算之截断（与 lao-79 同病）。「除其本是断环」（cut_closes）却是 LoopReturn 中的一个环节。这是两种不同的「断」，读法用「截断／断」把它们混在一起。",
+   "fix": "明写：「和其末＝只及有限阶之回应（AI 读法），所漏者是 carriedWithin 之余」；与 cut_closes（交回为零之环节）分开表述。"
+  },
+  {
+   "id": "jielao-shi-qiang-mu-buming",
+   "verdict": "revise",
+   "issues": "一、records 用了改名存根 sensitivity-is-the-least-registration。二、缺口中有与 lao-72 相同的两句不实之言：强度可以从历程读出（ReadsBefore、formedCourse_eq_carried），〈自某步起〉的形式也已有（StopsBy、strengthsFrom、exact_of_reading_before）。",
+   "fix": "records 改为 sensitivity-is-the-least-coupling；缺口按 lao-72 的修订重述。"
+  },
+  {
+   "id": "jielao-you-yu-ji-hui-luan",
+   "verdict": "revise",
+   "issues": "一、引用了不存在的 LoopReturn.whole_strengths；「整数强度之环乘积」应为整数倍率（factor）。二、欲↔计会是两条件之环，responds_to_own_level 只是自环特例。",
+   "fix": "whole_strengths 改为 LoopReturn.whole_factors（并加 nothing_between），「强度」改为「倍率」；「欲甚即环的乘积大于一」改为「倍率不小于 2（whole_factors）」。以 onLoop_of_closing 为主，responds_to_own_level 标为特例。"
+  },
+  {
+   "id": "jielao-huo-fu",
+   "verdict": "revise",
+   "issues": "records 用了 registration-within-what-it-registers，现已改名为 readings-within-what-they-read。读法本身确切。",
+   "fix": "改 id。"
+  },
+  {
+   "id": "hanfei-gufen-zhu-bi-chen-zhong",
+   "verdict": "revise",
+   "issues": "names_used 是滋、環，但所引全是 RuleCapture（经由规则之俘获），C10 已名之为「柄移」；没有引任何环或失控的声明。",
+   "fix": "names_used 改为柄移（C10）。若保留環或滋，须另引环之声明并说明理由。"
+  },
+  {
+   "id": "xunzi-wangzhi-qiang-fan-ruo",
+   "verdict": "revise",
+   "issues": "一、两方之环误用了 responds_to_own_level（自环特例）。二、Loop.response_returns 是见证，被读作一般律。三、withholding_spreads、withholding_absorbs 是有记忆之律（waitsAll），未注。",
+   "fix": "以 onLoop_of_closing 为主。「还」句加「见证」，并给出一般式（Flow.mutuallyDependent_iff_reach）。注明「有记忆之等待（waitsAll）」。"
+  },
+  {
+   "id": "mozi-jianai-zhong-bi-cong",
+   "verdict": "revise",
+   "issues": "「环节交出少于所受时差异在有限圈内闭合（closes_within）」条件不足：closes_within 要求环返映射 f 0 = 0，且对每个正差都少于所受。此句沿用 RO 同名段落，RO 也须同改。",
+   "fix": "改为：「环返映射对每个正差都交回少于所受、且 f 0 = 0 时，至迟 d 圈闭合（closes_within）」。"
+  },
+  {
+   "id": "mozi-jianai-xia-xian-shi",
+   "verdict": "revise",
+   "issues": "一、先施之「先」是一次之先、随后待报，givesFirst 则是每步不待而给；一次先给而他者都只应答，所给只轮转（见名「先施」）。二、Ring.givesFirst_restores 是三元环的见证。三、种类 agreement（RO 也是如此）过强。",
+   "fix": "种类改为 scope：墨子之先施，在〈持续不待而给〉之时恢复环；或在读法中写明这一条件。Ring 句加「见证」。RO mozi-jianai-xia-xian-cong-shi 同步修改。"
+  },
+  {
+   "id": "mengzi-chu-er-fan-er",
+   "verdict": "revise",
+   "issues": "Loop.response_returns 是见证，被读作〈作用经由他者回到作用者〉的一般律。",
+   "fix": "加「在 Loop 见证中」；一般律引 Flow.mutuallyDependent_iff_reach。"
+  },
+  {
+   "id": "lunyu-guo-you-bu-ji",
+   "verdict": "keep",
+   "issues": "读法明说是「两个见证的同一结论」，与 Overshooting、OneSided 的见证地位相符；定于 m 之条件也写得确切。",
+   "fix": "无。"
+  },
+  {
+   "id": "lunyu-jin-zhi-tui-zhi",
+   "verdict": "keep",
+   "issues": "Flow.Opposes、gap_falls、regulates、relay、push_ramp、pull_ramp 用得确切。",
+   "fix": "无。"
+  },
+  {
+   "id": "lunyu-zhi-he-bu-jie",
+   "verdict": "keep",
+   "issues": "Overshooting.opposes 与 never_at 的对照确切，是本簇区分中和与中节的好理由。",
+   "fix": "无。"
+  },
+  {
+   "id": "lunyu-wu-qiu-bei",
+   "verdict": "revise",
+   "issues": "一、《论语》的「求备」是对一人之才德求全，脊柱计的是所等待之诸形成中可缺几个，这一对应是 AI 类比，种类 agreement 过强。二、tol = 0 即 answers，而 C13 已名之为不念舊惡，名有冲突。",
+   "fix": "种类改为 scope，读法明写：「把一人之诸才读作所等待之诸形成（AI 类比）」。可以「故舊無大故，則不棄也」作更直接的例：稀薄之扣留被吸收（thin_absorbed）。名的冲突随名条处理。"
+  },
+  {
+   "id": "zhongyong-zhi-zhong-he",
+   "verdict": "keep",
+   "issues": "读法与声明相符。本条把「未发之中」判为〈固定之性〉层，而 notes 说〈固定之性〉层只见于驳回的一条，两处不一致。该改的是 notes，不是本条。",
+   "fix": "本条不改；notes 改为也列出本条。"
+  },
+  {
+   "id": "mengzi-wu-wang-wu-zhu-zhang",
+   "verdict": "revise",
+   "issues": "「恰在 m−x 步后到 m 并停住」不确切：restores_exactly 说的是自 T+(m−x) 起每步水平为 m，即至迟在第 m−x 步到 m，也可能更早。",
+   "fix": "改为：「至迟在 m−x 步时到 m，此后停在 m（restores_exactly）」。"
+  },
+  {
+   "id": "zhoudunyi-shi-shi-buzao",
+   "verdict": "revise",
+   "issues": "一、records 用了改名存根 runaway-distance-unregistered。二、「所需之力（所能保持的带）越大」把力读成了带宽。no_narrower_band 说的是：晚读 ℓ 步时，任何规则（不论多强）都保不住窄于 2(ℓ+1)d 之带。这比「力不易」更强：晚，不能用力来补；而带本身不是力。三、no_narrower_band 的量词与 0 < a、closes_within 的条件都没写。",
+   "fix": "records 改为 runaway-distance-uncoupled。改为：「识不早，则不论用何规则（何等之力）都保不住更窄之带：力不能补晚」；补上量词、0 < a 与 closes_within 的条件。"
+  },
+  {
+   "id": "chengyi-gan-ying-bu-yi",
+   "verdict": "revise",
+   "issues": "一、「每环节至少交出所受，环就保持差（loop_kept）」错：loop_kept 要求每环节如数交出；「至少」对应的是 never_closes_of_no_less（差永不低于起点）。二、「整数强度下没有渐闭（nothing_between）」应为整数倍率。这两处都沿用 RO ru-chengyi-gan-ying。三、「每个有限阶在 c 都有所失」缺 ∃ t。",
+   "fix": "改为：「每环节如数交出，则差保持（loop_kept）；每环节交出不少于所受，则差永不低于起点（never_closes_of_no_less）；整数倍率之环没有渐闭（nothing_between）」；「……在 c 的某一步都有所失」。RO 同步修改。"
+  },
+  {
+   "id": "zhuangzi-lunbian-bu-xu-bu-ji",
+   "verdict": "keep",
+   "issues": "「才能」是必要方向，与 no_narrower_band 相符；ReadsLate 的引用也确切。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhuangzi-yi-yan",
+   "verdict": "revise",
+   "issues": "一、引用了不存在的 whole_strengths。二、「溢」是交出多于所受，不是加倍：runs_away 要求每环节交出至少两倍于所受。仅多于所受时，Lean 只给出差永不低于起点（never_closes_of_no_less），或在映射单调时逐圈不降（never_falls）。「严格多于所受则无界」是 AI 手算，未经 Lean。",
+   "fix": "whole_strengths 改为 whole_factors。改为：「溢者，每环节交出多于所受：差永不低于起点（never_closes_of_no_less）；每环节至少加倍，则至少 2^n·d（runs_away）」。无界之说标为 AI 手算，或删去。"
+  },
+  {
+   "id": "zhuangzi-cai-quan",
+   "verdict": "revise",
+   "issues": "一、Tolerance.worst_start 讲的是保持包含之给予律的最坏起点，与晚读之带没有结构关系，是跨域借用；names_used 中的有以待之随之不成立。二、no_narrower_band 的量词（每种其余、0 < a）没写。",
+   "fix": "删去 worst_start 与 names_used 中的有以待之，或标为 AI 类比；补上量词。"
+  },
+  {
+   "id": "sunzi-qi-zheng-xun-huan",
+   "verdict": "revise",
+   "issues": "names_used 有環，读法自称是「本簇环的名之所出」，但所引声明全在组态层（lossless_iff_returns 等），与 tuan-feng 条〈组态再来不是本簇之环〉相矛盾。「奇正相生」是相互生成，即两条件的耦合之环或相互依存，这一层没有引。",
+   "fix": "加 onLoop_of_closing（或 Flow.mutuallyDependent_iff_reach），说明奇↔正互为输入；否则 names_used 删環。"
+  },
+  {
+   "id": "sunzi-you-yi-dai-zhi",
+   "verdict": "revise",
+   "issues": "读法自己说 KeepsInclusion「经文未说而脊柱必需」。按 RO §4，这正是定域（脊柱给出成立之范围），种类 agreement 不合。",
+   "fix": "种类改为 scope。"
+  },
+  {
+   "id": "simafa-shang-bu-yu-shi",
+   "verdict": "keep",
+   "issues": "ReadsLate、late_spread、late_band、no_narrower_band、lateReturn_band 用得确切，中心层已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "feng-chujiu-xun",
+   "verdict": "revise",
+   "issues": "Closing.Threshold 是上升之阈，而且是见证，不是本簇之窮（ReadsBelow 断裂）。「过旬灾是断裂处形成的环使之失控，本簇之穷」把两种形状混在一起。",
+   "fix": "names_used 中的窮改为上升之阈的新名（见 missing）。读法加「在 Closing.Threshold 见证中」。break_carried_nowhere 只作 ReadsBelow 的对照。"
+  },
+  {
+   "id": "weishi-xun-xi",
+   "verdict": "revise",
+   "issues": "一、种↔现是两条件之环，responds_to_own_level 只是自环特例。二、「某环节交回少于所受时差异在有限圈内闭合（closes_within）」条件不足。这两处都沿用 RO weishi-xun-xi，RO 也须同改。",
+   "fix": "以 onLoop_succ_iff、forms_by_closing 为主，responds_to_own_level 标为特例。closes_within 补条件：环返映射 f 0 = 0，且对每个正差都少于所受。"
+  },
+  {
+   "id": "qixin-xun-xi",
+   "verdict": "revise",
+   "issues": "一、冻结文本有「以有無明染法因故即熏習真如」，也有「以有真如法故能熏習無明」：真如既被熏又能熏，在环上。读法与 notes 说它是「环外先在之本体」「不在环上的基」，与文本不合。先在之基层应落在真如被设定为不生不灭、被熏而不变这一点上。二、closes_within 条件不足。三、种类 agreement，却含相分之层。",
+   "fix": "相分层的描述改为：「真如在熏习之环上（被熏、能熏），而被设为不生不灭、不因熏而变——这个不变之基，是先在之基层」。种类考虑改为 scope，或保留 agreement 而明列相分层，由整合者按 RO §4 定。closes_within 补条件。notes 同改。"
+  },
+  {
+   "id": "yuanren-duan-wo-zhi",
+   "verdict": "revise",
+   "issues": "「於所受身還執為我，還起貪等造業受報」里的两个「還」是副词（又、仍），表复现，不是作用回到作用者。「两个还正是本簇之还」与名「還」应排除之义相冲突。环本身由受身→执我→起贪→造业→受报→受身这一圈给出。",
+   "fix": "改为：「两个『还』是副词（又），表此环之复现（近『不已』）；环由一圈因果给出」。names_used 中的還改为不已，或删去。"
+  }
+ ],
+ "missing": [
+  "未兆之补：Flow.Balances.half_stands、Flow.Balances.doubling_needs、DoublingDraw.half_then_none（MutualDependence）。每步之取都超过此前已取之和时，站立者每步都多于起初之半，n 步需要至少 2^n − 1 之存量：断裂之前，站立给不出预警。",
+  "還的一般形式：Flow.mutuallyDependent_iff_reach（一个流相互依存，恰当每个可达闭包都是全体）。Loop.response_returns 只是见证。",
+  "滋的一般形式与反例：carried_doubles_around（Loops）、exponential_around、carried_pow_around（MutualDependence：在每步都在之环上携带量至少 2^R 倍，并有指数上界）；Frequency.Sparse.polynomial（复现而保持多项式之环）。",
+  "報、成環所需的 LoopReturn 声明：whole_factors、nothing_between、gradual_needs_another_link、never_falls、closes_within_exact；以及连接 Loops 的实例定理 selfLoop_carried、selfLoop_gap、carried_around_course。",
+  "名：上升之阈（Closing.Threshold：水平到达 θ 时被读入，环在 θ 形成，此后加倍），须与窮（ReadsBelow 断裂：存量降到阈下）分名。",
+  "名：环返映射（全环之复合）与环节之交（報）分名，并与 C13 的「讓」（闭合之环节）协调。另须为一个差的三种去向（闭合 closes、保持 kept、失控 runs away）取名，避开 Ren 的「闭／成闭」与 C06 的「广」。",
+  "段落：《韩非子·喻老》（FA1-S-H21，战国末，篇章作者有争议；脉络中无关系记录）。「有形之類，大必起於小；行久之物，族必起於少」；「千丈之堤，以螻蟻之穴潰」；「此皆慎易以避難，敬細以遠大者也」；「其安易持也，其未兆易謀也」；扁鹊见蔡桓公，疾在腠理、肌膚、腸胃、骨髓，至「在骨髓，司命之所屬，無柰何也」。以上引文都已用 ctq.py 核过。AI 读法：对应 Web.break_not_bounded、Thresholds.Draw.forms_at_break、Law.DrawnInto.never_back（入吸收区者不回），种类定域。这是种子「慎微」「为之于未有」「图难于其易」最直接的先秦（战国末）解经。",
+  "段落：《易传·系辞下》「几者，动之微，吉之先见者也」（DS03，XC-R045，已核）。这是未兆的对面：按水平读入，则抬升立即被读出（Web.observed_raise_couples）。须与已采用之「机」（D52）协调；本簇种子「几」「微」目前没有条目。",
+  "寬猛相濟应连的声明：AssurancePlans.Regulation.opposite_moves（RO zuo-zhao20-kuan-meng，相合）；Regulation.rise_run、Regulation.fall_run（继电晚读时，自身之动喂入自身）。",
+  "通其变于未穷之「须读取」：Pace.never_reads_lost（从不读取的规则，不重得所失）。",
+  "缺口（新）：主动的一侧回应。需要一个见证或一条律：有实际交换、只对一侧偏离相反的流，不定于 m。现有的 OneSided 是无交换的空真见证。",
+  "缺口（新）：部分屡给差（σ ≠ 0）之下的频数之律，解老「数挠」需要它。",
+  "notes 的修正：一、缺口 6 前半不实：LoopReturn 与 Loops 之间的实例定理已有（selfLoop_carried、selfLoop_gap、carried_around_course），所缺只是非整数强度。二、缺口 1 中「现有强度只随步数给定」「缺〈自某步起〉的形式」不实（见 Closing.ReadsBefore、carryingRead、formedCourse_eq_carried；Frequency.StopsBy、Remainder.strengthsFrom、exact_of_reading_before），所缺只是饱和形状之定理。三、缺口 5 的问法不成立：余是计算之差。四、「〈固定之性〉层只见于驳回一条」与 zhongyong 条不合。五、「22 名一概念一名」不实：識不早、窮、滋各名两种结构。六、「真如作为环外先在之本体」与冻结文本不合。七、引 Closing.Threshold.level_after 来说「环也可以失控」，须标为见证。缺口 4（继电摆幅之界）合理，以 ℓ = 0 手核无误。"
+ ]
+}

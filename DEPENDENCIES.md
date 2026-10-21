@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-338 registered results: 318 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 842 curated edges join 291 results to the results they draw on.
+339 registered results: 318 with a recorded Lean receipt (`recorded-checked`), 14 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 844 curated edges join 292 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -41,6 +41,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [census-balance-under-continuation][] ← <a id="census-balance-under-continuation--identity-across-steps"></a>[identity-across-steps][] · <a id="census-balance-under-continuation--census-balance"></a>[census-balance][] · <a id="census-balance-under-continuation--ceasing-needs-arising"></a>[ceasing-needs-arising][] · <a id="census-balance-under-continuation--bounded-census-keeps-pace"></a>[bounded-census-keeps-pace][] · <a id="census-balance-under-continuation--more-needs-renewers"></a>[more-needs-renewers][]
 - [census-read-off-the-exchange][] ← <a id="census-read-off-the-exchange--premises-read-off-the-exchange"></a>[premises-read-off-the-exchange][] · <a id="census-read-off-the-exchange--map-of-premises"></a>[map-of-premises][]
 - [chinese-sources-on-the-spine][] ← <a id="chinese-sources-on-the-spine--hexagrams-on-the-spine"></a>[hexagrams-on-the-spine][] *(interpretive)* · <a id="chinese-sources-on-the-spine--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] *(interpretive)*
+- [civilization-thought-on-the-spine][] ← <a id="civilization-thought-on-the-spine--chinese-sources-on-the-spine"></a>[chinese-sources-on-the-spine][] *(interpretive)* · <a id="civilization-thought-on-the-spine--a-code-formed-between-formations"></a>[a-code-formed-between-formations][] *(interpretive)*
 - [classes-along-a-continuation][] ← <a id="classes-along-a-continuation--identity-across-steps"></a>[identity-across-steps][]
 - [classification-robust-generative-comparison][] ← <a id="classification-robust-generative-comparison--practical-judgment-under-living-significance"></a>[practical-judgment-under-living-significance][] · <a id="classification-robust-generative-comparison--organizational-formation-from-generative-comparison"></a>[organizational-formation-from-generative-comparison][] · <a id="classification-robust-generative-comparison--relational-generative-comparison"></a>[relational-generative-comparison][]
 - [closed-capture][] ← <a id="closed-capture--capture-through-the-rule"></a>[capture-through-the-rule][] · <a id="closed-capture--how-fast-a-rule-may-change"></a>[how-fast-a-rule-may-change][] · <a id="closed-capture--the-split-that-makes-sense"></a>[the-split-that-makes-sense][]
@@ -336,6 +337,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [census-balance-under-continuation]: theories/becoming/results/records/census-balance-under-continuation.md
 [census-read-off-the-exchange]: theories/becoming/results/records/census-read-off-the-exchange.md
 [chinese-sources-on-the-spine]: theories/becoming/results/records/chinese-sources-on-the-spine.md
+[civilization-thought-on-the-spine]: theories/becoming/results/records/civilization-thought-on-the-spine.md
 [claims-shown-in-context]: theories/becoming/results/records/claims-shown-in-context.md
 [classes-along-a-continuation]: theories/becoming/results/records/classes-along-a-continuation.md
 [classification-robust-generative-comparison]: theories/becoming/results/records/classification-robust-generative-comparison.md

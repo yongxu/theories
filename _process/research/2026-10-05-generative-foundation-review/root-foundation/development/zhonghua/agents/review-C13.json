@@ -1,0 +1,137 @@
+{
+ "edits": [
+  {
+   "id": "十四·七",
+   "find": "一物经长 p 之俟链复至于己而始不与，则于 p 之每一倍数步皆不与",
+   "replace": "有一长 p 之俟链自 b 至于 b，b 始不与，则 b 于 p 之每一倍数步皆不与",
+   "why": "In this 經, 复 and 己 are used loosely, though both are names in the table: 复 names the return of a configuration, and 己 names the self's own region (篇十五). The new wording follows 十二·二十三's 自 b 至于 b. The law is withholding_returns: if Chain up p b b holds and b withholds at the start, then b withholds at every step k·p."
+  },
+  {
+   "id": "十四·七",
+   "find": "在复至于己之俟链上则每经其长返回一次",
+   "replace": "在首尾同为一物之俟链上则每经其长返回一次",
+   "why": "Same reason: 复 and 己 are names and are not used loosely."
+  },
+  {
+   "id": "十四·七",
+   "find": "无记忆则传出，或沿复至于己之俟链循环而还",
+   "replace": "无记忆则传出，或沿首尾同为一物之俟链循环而还",
+   "why": "Same reason."
+  },
+  {
+   "id": "十四·七",
+   "find": "在不念旧恶之法下是不与沿复至于己之俟链而还",
+   "replace": "在不念旧恶之法下是不与沿首尾同为一物之俟链而还",
+   "why": "Same reason."
+  },
+  {
+   "id": "十二·二十三",
+   "find": "先施，一物每步皆与，不视其所俟者也。凡依先施之法（每一步之后，先施者皆与；他物所俟者此步皆与，则次步与），诸物之为先施者皆定然否：一物于 n 步自每一起状皆与，恰当无长 n 之俟链入之、而链上起点之外无先施者。有一俟链自 b 复至 b（长为正），起点之外无先施者，则自莫与之状起，b 每步皆不与。一物于不念旧恶之法下于 n 步自每一起状皆与，则于先施之法下亦然。",
+   "replace": "先施，一物每一步之后皆与，不视其所俟者也。凡依先施之法（每一步之后，先施者皆与；他物所俟者此步皆与，则次步与），诸物之为先施者皆定然否：一物于 n 步自每一起状皆与，恰当无一长 n、起点之外无先施者之俟链入之；有一俟链自 b 至于 b（长为正），起点之外无先施者，则自莫与之状起，b 每步皆不与；一物于不念旧恶之法下于 n 步自每一起状皆与，则于先施之法下亦然。",
+   "why": "Three fixes. (1) The right side of restores_iff is 'no clear chain (Clear) of length n leads into it'. The draft splits this with 、 into two parallel conditions, which reads as 'no chain leads into it, and no chain has a source after its start'. That scope is wrong, so the condition becomes one attribute of the chain. (2) The 复 in 复至 is a name (return of a configuration), so it is dropped. (3) Under givesFirst a source is only certain to give after each step, because step 0 is the starting configuration. The definition now matches the law's parenthesis (每一步之后). The last two sentences end in ；, not 。, so 诸物之为先施者皆定然否 (the decided hypothesis of givesFirst_restores_of_answers) still governs the last one."
+  },
+  {
+   "id": "十二·二十三",
+   "find": "一次之先与不恢复：复至于己之俟链上只一处先与一次",
+   "replace": "一次之先与不恢复：首尾同为一物之俟链上只一处先与一次",
+   "why": "复 and 己 are names and are not used loosely."
+  },
+  {
+   "id": "十二·二十二",
+   "find": "此后每步自每一起状皆与。莫与之状之次步无一物与",
+   "replace": "此后每步自每一起状皆与；莫与之状之次步无一物与",
+   "why": "withheld_kept takes KeepsInclusion as a hypothesis. In the draft the last sentence starts after 。, so it leaves the scope of 凡法守包含 and reads as unconditional. Changed to ；."
+  },
+  {
+   "id": "十二·二十一",
+   "find": "无一物之 tol 及其所俟之数",
+   "replace": "无一物之 tol 不少于其所俟之数",
+   "why": "及 is a name (所及, 及域). The hypothesis of total_stays is ∀ a, ¬ (ups a).length ≤ tol a: no formation's tol is at least the number it waits on."
+  },
+  {
+   "id": "十四·十",
+   "find": "；诸体之称不皆升；",
+   "replace": "；族非空，则诸体之称不皆升；",
+   "why": "not_all_rise needs p ∈ ps. In an empty family 'every position rises' is vacuously true, so the 經's 不皆升 is false there. The 經 must state that the family is non-empty."
+  },
+  {
+   "id": "十四·十六",
+   "find": "一状实现一分数，恰有二体，",
+   "replace": "一状实现一分数，恰当有二体，",
+   "why": "恰有二体 reads as 'has exactly two parts'. JointPlan.Realizes is a definitional equivalence (at a pair, ∃ x y, J s x y ∧ …): it says two parts exist, not that there are exactly two."
+  },
+  {
+   "id": "NEW-13",
+   "find": "第三步之积为四，过半，其后为零",
+   "replace": "第二步之积为四，过半，第三步起为零",
+   "why": "The book counts 第 n 步 as the step index from 第零步 (see 十四·五, 十四·十一). In DoublingDraw.web the levels are 7, 6, 4, 0 at steps 0 to 3, and half_then_none states level 2 = 4 (more than half) and level 3 = 0. The draft's 第三步之积为四 contradicts the law."
+  },
+  {
+   "id": "NEW-13",
+   "find": "可致两向皆按指数",
+   "replace": "可致之上下两界皆按指数",
+   "why": "In exponential_around, 'both ways' means the lower bound (2^R times) and the upper bound (D(1+M)^t). 两向 is easily read as the two directions around the loop, or upstream and downstream."
+  },
+  {
+   "id": "十四·十一",
+   "find": "清除者之体使栖居者每步皆不运",
+   "replace": "清除者之体使栖居者自第二步起每步皆不运",
+   "why": "The last conjunct of Clearing.greatest_continues is ∀ k, ¬ active (0+2+k) dweller. The dweller is inactive from step 2 on, not at every step."
+  },
+  {
+   "id": "十四·九",
+   "find": "与之者若皆待此所待而需不下于 m，它们随之不运，所与不再来",
+   "replace": "唯运者与之、有待，与之者皆待此所待而需不下于 m，而始积少于连步之数 n 加 m，则 n 步之后积在 m 之下，与之者随之不运，所与不再来",
+   "why": "joint_excess_ends needs balance, only active formations giving (唯运者与之), 有待, the gate at m, and a starting level below n + m. The draft omits the last of these. As written it says the givers stop simply because they depend on the condition this way, which is not exact."
+  },
+  {
+   "id": "十四·八",
+   "find": "不校者是交回少于所受之一环节，在其后诸环节无受则无与处成立（定域，lunyu-fan-er-bu-jiao）",
+   "replace": "不校者是交回少于所受之一环节；不校使相犯之差降至零，只在此环节交回为零、其后诸环节无受则无与处成立（定域，lunyu-fan-er-bu-jiao）",
+   "why": "cut_closes needs this link to return nothing (∀ x, c x = 0) and every later link to satisfy g 0 = 0. A link that only returns less does not guarantee closure: closing_needs_less gives only a necessary condition. The draft's 在其后诸环节无受则无与处成立 leaves out the return of zero."
+  },
+  {
+   "id": "十四·十七",
+   "find": "；「不能不争」之必然，",
+   "replace": "；「不能不争」〔RU2-S-XZ19〕之必然，",
+   "why": "A quotation must carry its source id. Checked with ctq.py: RU2-S-XZ19, 1 hit."
+  },
+  {
+   "id": "二·十七",
+   "find": "「先有何用緣」，即先有者",
+   "replace": "「先有何用緣」〔FO1-S-MMK〕，即先有者",
+   "why": "A quotation must carry its source id. Checked with ctq.py: FO1-S-MMK, 1 hit."
+  },
+  {
+   "id": "二·十五",
+   "find": "以每一我之扰域为界之别在何处与凡续皆有顾相会，见⟦十五·二十二⟧；凡续皆有顾是设，不断言，只定所顾而不排序，诸程孰愈只在以广为愈。",
+   "replace": "以每一我之扰域为界之别在何处与凡续皆有顾（设，不断言）相会，见⟦十五·二十二⟧。",
+   "why": "Plan item C79 says to delete the restatement of 凡续皆有顾 in this 說 and keep only the pointer to ⟦十五·二十二⟧. The edit keeps the condition's standing (设，不断言)."
+  },
+  {
+   "id": "十四·三",
+   "find": "其结构是不易乎畛：",
+   "replace": "其结构是不易乎畛（⟦十五·二十四⟧）：",
+   "why": "不易乎畛 is defined in 篇十五, which comes later. This 說 is its first use, so it gets a pointer."
+  },
+  {
+   "id": "十四·二",
+   "find": "依存之结构与此条相合；但九地",
+   "replace": "依存之结构与此条同；但九地",
+   "why": "相合 is one of the three correspondence kinds fixed in 凡例, and this passage's kind is 定域. The sentence first says 相合 and then 所以是定域, which confuses the reader."
+  },
+  {
+   "id": "十四·十二",
+   "find": "同一取者取同样之量，与另一取者同在",
+   "replace": "同一资者取同样之量，与另一资者同在",
+   "why": "In Pool the role is draws, which the table names 资. 二·十七's 說 writes 他资者 for the same construction. Writing 取者 (Flow.takers) here gives one construction two names."
+  },
+  {
+   "id": "十四·十",
+   "find": "与此相分（xunzi-gui-jian-you-deng）。",
+   "replace": "与此相分（xunzi-gui-jian-you-deng）。韩非「故資必不勝而勢不兩存」〔FA1-S-H11〕：一升一降是称之计数，对量之任何读皆成立；“不两存”之锁定，只在规读其所择者之率而偏向所择者之处成立（劫，⟦十一·二十⟧），规逆其所读之构造之例中不锁定（定域，hanfei-gufen-shi）；此勢是位势，君臣之势不带。",
+   "why": "This 條 is where 八·二十七 is kept. 八·二十七's 說 had this checked 定域 correspondence (passages.json C17 hanfei-gufen-shi, kind scope; quotation checked with ctq.py; RuleCapture.favouring_locks and Alternating.never_locked both resolve). The rewrite brought over only the 孙子 line and lost this one, and it appears nowhere else in the book."
+  }
+ ],
+ "notes": "I compared all 20 條, the intro and the 对照 against the Lean files (Feedback, MutualDependence, Exclusion, Continuation, Withholding, Tolerance, RelativePosition, Joint, JointPlans, Composition, JointKeeping, LabelledRoles, LoopReturn). Hypotheses, iff directions and witnesses match apart from the edits above.\n\n**Mechanical checks**\n- Every cited declaration resolves with work/resolve.py with no renames.\n- Every record file exists.\n- Every ⟦id⟧ is in book-1-outline.txt and points to the right content.\n- All 61 quotations are exact by ctq.py. Two had no source id; edits add them.\n- Every passage id is in passages.json, and every kind label agrees with the map.\n- No 經 uses a name or law defined only in a later 條.\n- The C13.json instructions were carried out, except the 二·十五 restatement (edited). The draft's own resolutions of the plan conflicts are sound: 环节/匝 over 节/周, 偏去一物 / 并偏去族之员, and 所履 kept apart from 八·五's 所触.\n\n**Main defects fixed**\n- NEW-13 counts the DoublingDraw example from the wrong step: the stock is 4 at step 2 and 0 at step 3.\n- In 十二·二十三, the scope of the restores_iff clause is wrong.\n- 十四·七 and 十二·二十三 use the names 复 and 己 loosely in 經 and 說.\n- 十二·二十一 uses the name 及 loosely in its 經.\n- The 十四·十 經 is false for an empty family (not_all_rise needs p ∈ ps).\n- 十四·十六 says 恰有二体, which reads as 'exactly two parts'.\n- In 十二·二十二 the withheld_kept sentence escapes its KeepsInclusion hypothesis.\n- 十四·九 omits the starting-level condition of joint_excess_ends.\n- 十四·八's 犯而不校 line omits that the link must return zero (cut_closes).\n- 十四·十一 says the dweller is inactive at every step; it is inactive from step 2.\n\n**Left unedited (for the integrator)**\n- (a) 十四·十二 經 族之员不少于二: two_le_length bounds the list length, so repeated members count separately. Withholding the same member twice is not proved idempotent.\n- (b) 二·十七's 「微管仲」 对照 carries the label 定域 but has no passage id in passages.json. It comes from the name table's note on 有力, so its kind is the drafter's own.\n- (c) 十四·二 說 writes 链及于它 for the chain in Web.coextinct. 及 is a name, but this follows 二·十一's wording, so I left it for consistency.\n- (d) 十四·五 說 says 无一者全取 for the sharing case. Excluding.three_courses proves only that the first taker does not take all; Sharing.neither_all covers both takers but is not cited.\n- (e) Several 說 run beyond STYLE's 3–8 sentences (十四·七, 十四·十, 十四·十一, 十四·十二).\n- (f) 十四·五 經 opens with 出入相掩（⟦四·二十⟧）之下 and then repeats 步步出入相掩. The plan dictated this; it is redundant but not false.\n- (g) The added 韩非 line in 十四·十 is optional. Drop it if the integrator places hanfei-gufen-shi under 劫 (⟦十一·二十⟧) instead.\n\nWorking files: /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/rv13/edits.json (these edits, each confirmed to occur once and apply) and /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/rv13/quotes.tsv (the quotations extracted for checking)."
+}

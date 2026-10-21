@@ -1,0 +1,947 @@
+[
+ {
+  "id": "凡·二",
+  "find": "读（以一映射予状以值，⟦一·十四⟧）",
+  "replace": "读（以一映射予状以值，⟦一·二⟧）",
+  "why": "final consistency (error): 凡·二說「读（以一映射予状以值，⟦一·十四⟧）」：⟦一·十四⟧今为一·二十「观」，其經不定读；读之定义在一·三之經（「读，以一象予状以值也；自其构成者读出一量，亦曰读」，稳定号一·二）。指向错。",
+  "sev": "error"
+ },
+ {
+  "id": "凡·十九",
+  "find": "之定义在⟦一·十四⟧，与此分开",
+  "replace": "之定义在⟦一·二⟧，与此分开",
+  "why": "final consistency (error): 凡·十九說「映射之读（……）之定义在⟦一·十四⟧」：⟦一·十四⟧今为一·二十「观」，其經只定观与名；读之定义在一·三之經（稳定号一·二）。指向错。",
+  "sev": "error"
+ },
+ {
+  "id": "凡·十七",
+  "find": "实践之承诺为皆愈、兼权、无以小害大、取于可得、量力而任、同类积小（⟦十六·十一⟧、⟦十六·十四⟧至⟦十六·十六⟧、⟦十六·十八⟧、⟦十六·十九⟧）",
+  "replace": "实践之承诺为皆愈、无以小害大、兼权、取于可得、量力而任、同类积小（⟦十六·十一⟧、⟦十六·十五⟧、⟦十六·十四⟧、⟦十六·十六⟧、⟦十六·十八⟧、⟦十六·十九⟧）",
+  "why": "final consistency (error): 凡·十六「设」（稳定号凡·十七）說列实践之承诺「皆愈、兼权、无以小害大、取于可得、量力而任、同类积小（⟦十六·十一⟧、⟦十六·十四⟧至⟦十六·十六⟧、⟦十六·十八⟧、⟦十六·十九⟧）」，今渲染为十六·七、十六·十一至十六·十二、十六·十四、十六·十五：无以小害大已移至十六·十（稳定号十六·十五），不在所引之内，所列之次亦与书中之次（无以小害大在兼权之前）不合。",
+  "sev": "error"
+ },
+ {
+  "id": "纲·一",
+  "find": "久所示者是共取，余地属常与",
+  "replace": "久所示者是共取，涸界属常与",
+  "why": "final consistency (error): 纲·一說「久所示者是共取，余地属常与」：第二轮已把本條之經「余地属常与，不属积」改为「涸界属常与，不属积」，因六·七定余地为「偏去体之积过一需之量」，是积之量，其說亦言「余地属于一个关系：偏去之积与一待者在其上之需」。說仍作余地，与六·七及本條之經相冲。",
+  "sev": "error"
+ },
+ {
+  "id": "一·二",
+  "find": "步，诸物共计之自然数序也。象，",
+  "replace": "步，诸物共计之自然数序也。辞，于一状可言其然否者也，不必定然否。象，",
+  "why": "final order (error): 辞只在一·十九（系辞与辞，稳定 id 一·十三）之經立义，而一·五（成与毁：「成，一辞于一步不然而次步然也」）与一·六（变化：「凡一辞跨一步之成与毁」）之經先用之。这两条是第一轮从篇三移入篇一的，第二轮未查出。凡例篇首只许凡例先用后定，篇一内部没有这个例外。修法：把辞之定义移到一·三（它只依状与然、定然否，都已在前），一·十九 只留系辞（见下一条）。一·三 之条题宜一并改作「状、动、步、辞、象与读",
+  "sev": "error"
+ },
+ {
+  "id": "一·十三",
+  "find": "系辞，一变而每状各系于此状然之辞者也；辞，于一状可言其然否者也，不必定然否。",
+  "replace": "系辞，一变而每状各系于此状然之辞者也（辞见⟦一·二⟧）。",
+  "why": "final order (error): 与上条同改：辞之定义移到一·三 后，一·十九 不再重定，改为指向一·三。",
+  "sev": "error"
+ },
+ {
+  "id": "二·六",
+  "find": "待读作必然之应（于凡只此步此所待之积与所读之历不同、而此积低于其需之积之历下，所许之取与无一使待者有取与），则此关系之每一行，于任一需，皆有待；读作可能之应（于此诸历下",
+  "replace": "待读作必无取与（于凡只此步此所待之积与所读之历不同、而此积低于其需之积之历下，所许之取与无一使待者有取与），则此关系之每一行，于任一需，皆有待；读作或无取与（于此诸历下",
+  "why": "final order (error): 二·五（有待）之經写「待读作必然之应」「读作可能之应」，用了应。应在十一·一 才立义，晚九篇；本条之說自己也注「应见⟦十一·二⟧」。经中括注已把两种读法写全，在 ExchangePremises.lean 第 594–605 行核过：RespondsBelow 是「于凡只此步此所待之积不同而低于需之历，无一所许之取与使待者有取与」，MayRespondBelow 是「有一所许之取与使之无取与」。所",
+  "sev": "error"
+ },
+ {
+  "id": "十六·十五",
+  "find": "无以小害大（J2，基本条件优先）也是 AI 提出之承诺：核心不断言，用它之定理都以它为前提（`Becoming.FrontierFrames.Priority` 是它在系辞上的写法）。",
+  "replace": "无以小害大（J2，基本条件优先）是 AI 提出之承诺：核心不断言，用它之定理都以它为前提（`Becoming.FrontierFrames.Priority` 是它在系辞上的写法）。基是两层之比中先计之层，基辞是此层之辞；名取老子「高以下为基」〔YD-LAO-BASE〕，基为其上所立者（讀，AI）；先计基是所给之序，不由依存推得，贵贱与侯王之义不带。先基后次之序（`Becoming.Lexical.Above`）：一状于基辞赅彼状而多一，或二状之基辞全同而此状于次层之辞赅彼状而多一，则此状上于彼状；于系辞上次层即活辞（`Becoming.Lexical.Frame.Above`）。它只定义一序，不断言任何比较；所给之序恰如此序，是设（`Becoming.Lexical.BasicPriority`）。",
+  "why": "final order (error): 第二轮把无以小害大前移到十六·十，在兼权之前，但基、基辞的名与出处，以及先基后次之序的说明，仍然只在其后十六·十一（兼权）之說。十六·十 之經却以「基辞」「如先基后次之序也」立义，等于用下一条才说明的东西给自己定义；兼权之說又说此序是兼权与无以小害大「合」成的。查 Lexical.lean 第 121–126 行：先基后次之序是 Lexical.Above，只定义一个序（基辞严含，或基辞全同而次层",
+  "sev": "error"
+ },
+ {
+  "id": "十六·十四",
+  "find": "它与无以小害大合为先基后次之序（`Becoming.Lexical.BasicPriority`、`Becoming.Lexical.Above`）。基是两层之比中先计之层，基辞是此层之辞；名取老子「高以下为基」〔YD-LAO-BASE〕，基为其上所立者（讀，AI）；先计基是所给之序，不由依存推得，贵贱与侯王之义不带。",
+  "replace": "它与无以小害大合为先基后次之序（`Becoming.Lexical.BasicPriority`、`Becoming.Lexical.Above`；基、基辞与此序见⟦十六·十五⟧）。",
+  "why": "final order (error): 与上条同改：十六·十一（兼权）之說不再重述基与基辞，改为指向十六·十。",
+  "sev": "error"
+ },
+ {
+  "id": "TAIL",
+  "find": "| 开·未（尚有未成之域） | 开 | 在有普查、关系项皆有形、流衡且耗的宇中，无尽的生起与自某步起每步被围不相容 |",
+  "replace": "| 开·未（尚有未成之域） | 开 | 在运者有列、诸物皆有形、衡且耗的宇中，不息与自某步起每步有封不相容 |",
+  "why": "final order (error): 附录三「开·未」一行与正文不合。`World.arising_opens`（Openness.lean 第 676 行）的结论是「不能自某步起每步 Enclosed」；Enclosed 的定义（Dissipation.lean 第 251 行）是「有员各异之族封于其步」，即四·二 之「步有封」。本书之围（四·二）是另一种关系：有员各异之族含某族而封。表中又用普查、关系项、生起，而四·十二 之經已用",
+  "sev": "error"
+ },
+ {
+  "id": "九·三",
+  "find": "读（带地位之解，见⟦一·十四⟧、⟦凡·十九⟧）在此是其另一层",
+  "replace": "读（以一象予状以值，⟦一·二⟧；与讀（AI）分开，⟦凡·十九⟧）在此用其另一义",
+  "why": "final consistency (inconsistency): 九·六（稳定号九·三）說「读（带地位之解，见⟦一·十四⟧、⟦凡·十九⟧）」：「带地位之解」是讀（AI）之释（凡·十九說「讀（AI）是带地位的解释」），一·二十說与凡·十九說皆言读只名以象予值、与讀（AI）分开；此处以读名讀（AI），一字两名，且读之定义不在⟦一·十四⟧（一·二十）而在一·三（稳定号一·二）。下句「从构成者读出一个量」正是一·三經读之后一义。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "凡·十七",
+  "find": "它定所顾（經所谓所论之员）。",
+  "replace": "它定所顾。",
+  "why": "final consistency (inconsistency): 凡·十六「设」（稳定号凡·十七）說「它定所顾（經所谓所论之员）」：本條之經已改为「其一定所顾而不排序」，不再言所论之员；所论之员是凡·八所定量词之论域（皆、莫、莫不），以之注所顾，一义二名且与凡·八相撞。括注已无所指。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "纲·一",
+  "find": "那里之余地读自同一验示其误之所与之式",
+  "replace": "那里之涸界读自同一验示其误之所与之式",
+  "why": "final consistency (inconsistency): 纲·一說「那里之余地读自同一验示其误之所与之式」：所读者是常取之下由常与定之界（英文 the margin of a regime），本书名之为涸界（四·二十四）；余地在六·七是偏去之积过需之量。同名二义（同上条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "四·二十六",
+  "find": "这是常取之下的余地（其步为",
+  "replace": "这是常取之下之涸界（其步为",
+  "why": "final consistency (inconsistency): 四·二十四「常取之下的涸界」（稳定号四·二十六）說以余地名常取之下之量：「这是常取之下的余地」「能检验的是……之余地：积多于涸界之距。所以这余地是积在常取之下之量」「使所名之余地正是一次量度可检之量」。六·七定余地为偏去体之积过一需之量，本條之題与經已名此结构为涸界；余地于是一名二义（过需之量、过涸界之距），纲·一經为此已改作涸界。三处宜一并改；此为第一处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "四·二十六",
+  "find": "能检验的是所待自己之与随所留而应之余地：积多于涸界之距。所以这余地是积在常取之下之量，不只是积之量",
+  "replace": "能检验的是所待自己之与随所留而应之涸界：积在其上则守，在其下则涸。所以涸界由常取之下之与定，不只由积与需定",
+  "why": "final consistency (inconsistency): 同上条：四·二十四說第二处以余地名「积多于涸界之距」，与六·七之余地（偏去之积过需之量）同名异义。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "四·二十六",
+  "find": "使所名之余地正是一次量度可检之量",
+  "replace": "使所名之涸界正是一次量度可检之量",
+  "why": "final consistency (inconsistency): 同上条：四·二十四說第三处「所名之余地」。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "凡·五",
+  "find": "；凡一族，有数计其员之然者，恰当每员定然否。",
+  "replace": "（一族之数见⟦三·八⟧）。",
+  "why": "final consistency (inconsistency): 凡·五經「凡一族，有数计其员之然者，恰当每员定然否」与三·七經「数……：其数存，恰当族之每员之辞定然否」是同一律，二條之證皆引 `Becoming.counts_iff_decided`；数之名立于三·七，凡例篇首亦言诸原则于展开之所示在用之之條。凡·五 只须留一辞之数，指向三·七。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十一·十七",
+  "find": "**經**　以多于今为所求而每步皆合之，则所历之状两两相异，无一族能尽之。",
+  "replace": "**經**　以多于今为所求而每步皆合之，则所历之状两两相异，是自始日新，无一族能尽之（⟦五·五⟧）。",
+  "why": "final consistency (inconsistency): 十一·十九「足而止之界」（稳定号十一·十七）經「以多于今为所求而每步皆合之，则所历之状两两相异，无一族能尽之」即五·五經末句「或有一以自然数计之量沿之每步皆升，则无族尽其所经」，二條之證皆引 `Becoming.more_needs_open`（Lean 文档：An instance of `unlisted_of_new`）；所历之状两两相异即自始日新（`more_new`）。重述而不指向。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十五·三十",
+  "find": "凡辞皆活之活皆有顾。\n\n**說**",
+  "replace": "凡辞皆活之活皆有顾（⟦十五·十九⟧）。\n\n**說**",
+  "why": "final consistency (inconsistency): 十五·三十五「所顾与序」（稳定号十五·三十）之經「于待网之积之历：凡续皆有顾，恰当以每一见容之物于其步为辞、凡辞皆活之活皆有顾」即十五·二十四經「凡待网之积之历皆然，不须另设」所陈之律，二條之證皆引 `Becoming.Web.unrestricted_iff_paths_livingSignificance`。重述而不指向。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "七·一",
+  "find": "以所许之一步所至者亦在域中",
+  "replace": "所许之一步之果亦在域中",
+  "why": "final consistency (inconsistency): 五·七「常」（稳定号七·一）經「以所许之一步所至者亦在域中」以所至名一步之后之状。名表以果名「一步之所至：一状一动之後之状」，并明言「名表之所至名探究之所见范围（Scope），不可兼名次状」；第二轮已把九·十八、九·二十、九·二十一之此用改为果。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "七·七",
+  "find": "机之二步所至不同",
+  "replace": "机之二步之果不同",
+  "why": "final consistency (inconsistency): 五·十四「机」（稳定号七·七）經「机之二步所至不同」以所至名一步之果，与名表（所至名所见范围，果名一步之后之状）不合（同五·七之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "九·十一",
+  "find": "不单写“所至”，因“所至”在全书指一动所到之状",
+  "replace": "不单写“所至”，以标明所至者是一策之知，不是一动之果",
+  "why": "final consistency (inconsistency): 九·十七「知之所至」（稳定号九·十一）說「不单写“所至”，因“所至”在全书指一动所到之状」：此说与名表相反——名表以所至名所见范围（`Scope`），并言所至「不可兼名次状」，一动所到之状名果；第二轮已据此把诸經之所至改为果。此句立了一条名表所禁之约定。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "NEW-7",
+  "find": "不定未采之动之所至",
+  "replace": "不定未采之动之果",
+  "why": "final consistency (inconsistency): 九·十九「反事实即其程」（稳定号 NEW-7）說「只有一行之往，不定未采之动之所至」：所至名所见范围，一动之后之状名果（同五·七之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "C10:INTRO",
+  "find": "未施之动之所至",
+  "replace": "未施之动之果",
+  "why": "final consistency (inconsistency): 篇十一篇首「未施之动之所至（⟦九·十二⟧、⟦NEW-7⟧）」以所至名一动之果（同五·七之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "NEW-3",
+  "find": "常守其后所至",
+  "replace": "常守其后之果",
+  "why": "final consistency (inconsistency): 五·八「门」（稳定号 NEW-3）說「常守其后所至」以所至名一步之后之状（同五·七之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "八·二十",
+  "find": "“与一象先后可易之法，不并此象所分者”",
+  "replace": "“与一象可换序之法，不并此象所分者”",
+  "why": "final consistency (inconsistency): 八·十九（稳定号八·二十）說仍以「先后可易」名 `Law.Commutes`；七·五經、本條之經与八·二十五經皆作「可换序」（第二轮已改經，未改說）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "八·二十",
+  "find": "消长环与之先后可易",
+  "replace": "消长环与之可换序",
+  "why": "final consistency (inconsistency): 同上条：八·十九說第二处「消长环与之先后可易」，本條之經作「消长环与错可换序」。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "NEW-6",
+  "find": "（与象先后可易之法，不并此象所分者）：法与一自逆之象先后可易",
+  "replace": "（与象可换序之法，不并此象所分者）：法与一自逆之象可换序",
+  "why": "final consistency (inconsistency): 八·二十五（稳定号 NEW-6）說仍以「先后可易」名 `Law.Commutes`（本條之經作「可换序」；第二轮之条）；此为前二处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "NEW-6",
+  "find": "所以行此次之法无一与三象之任一先后可易",
+  "replace": "所以行此次之法无一与三象之任一可换序",
+  "why": "final consistency (inconsistency): 同上条：八·二十五說第三处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "NEW-6",
+  "find": "行《杂卦》之次之法亦无一与三象之任一先后可易",
+  "replace": "行《杂卦》之次之法亦无一与三象之任一可换序",
+  "why": "final consistency (inconsistency): 同上条：八·二十五說第四处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十二·一",
+  "find": "对唯读已立者之法",
+  "replace": "对唯读既立者之法",
+  "why": "final consistency (inconsistency): 十二·一說「唯读已立者之法」：`ExchangeLaw.Nonanticipating` 全书經中统一作「唯读既立者」（第二轮），已是名表之止息，不借作既。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十二·二",
+  "find": "对每一唯读已立者之法皆然",
+  "replace": "对每一唯读既立者之法皆然",
+  "why": "final consistency (inconsistency): 十二·二說「唯读已立者之法」与經之「唯读既立者」二写（同十二·一之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "NEW-12",
+  "find": "于唯读已立者之法即其程之可行",
+  "replace": "于唯读既立者之法即其程之可行",
+  "why": "final consistency (inconsistency): 十三·五說「于唯读已立者之法」与本條之經「读自一唯读既立者之法」二写（同十二·一之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十·十三",
+  "find": "所以状值于一域随前者之类而同",
+  "replace": "所以特征于一域随前者之类而同",
+  "why": "final consistency (inconsistency): 十·八「旁读他名」（稳定号十·十三）說以「状值」名九·六所定之特征（第二轮已在經与篇首改为特征，說未改）；此为第一处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十·十三",
+  "find": "以名读状值之阙——于域符之读，在名并域中状值相异之二状处必阙；于域每状皆得之读，须状值于域中随名之类而同",
+  "replace": "以名读特征之阙——于域符之读，在名并域中特征相异之二状处必阙；于域每状皆得之读，须特征于域中随名之类而同",
+  "why": "final consistency (inconsistency): 同上条：十·八說第二至四处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十·十三",
+  "find": "兼名只在把单名所并而状值不同者分开之处",
+  "replace": "兼名只在把单名所并而特征不同者分开之处",
+  "why": "final consistency (inconsistency): 同上条：十·八說第五处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十·十五",
+  "find": "以族外推（`Becoming.Learnable.byTable`）：于终而复始之候选上以过则改外推",
+  "replace": "以族知来（`Becoming.Learnable.byTable`）：于终而复始之候选上以过则改知来",
+  "why": "final consistency (inconsistency): 十·十「前段之名与所带之值」（稳定号十·十五）說以「外推」代知来（本條之經作「以此族知来者」；第二轮已改經）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十·十五",
+  "find": "也不给族外之状值",
+  "replace": "也不给族外诸状之特征",
+  "why": "final consistency (inconsistency): 十·十說以「状值」名特征（本條之經作「一特征经此类可知」「特征所取之每值」）；此为第一处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十·十五",
+  "find": "以其状值为所带之值",
+  "replace": "以其特征之值为所带之值",
+  "why": "final consistency (inconsistency): 同上条：十·十說第二处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十·十五",
+  "find": "类与状值并读时",
+  "replace": "类与特征并读时",
+  "why": "final consistency (inconsistency): 同上条：十·十說第三处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十·十五",
+  "find": "所带之值即族中一员所带之状值，不是另一结构。讀（AI，D40）：可知之状值加于前段者",
+  "replace": "所带之值即族中一员所带之特征之值，不是另一结构。讀（AI，D40）：可知之特征加于前段者",
+  "why": "final consistency (inconsistency): 同上条：十·十說第四、五处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "一·四",
+  "find": "它只定范围、不排序",
+  "replace": "它只定所顾、不排序",
+  "why": "final consistency (inconsistency): 一·六（稳定号一·四）說以「范围」名延续之条件所定者；名表与全书經、篇首名之为所顾（第二轮已改诸篇首，說未改）；范围另指定域之所施、十六·十五之丧配之承诺所施。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "四·三",
+  "find": "后者只定范围、不排序",
+  "replace": "后者只定所顾、不排序",
+  "why": "final consistency (inconsistency): 一·十六（稳定号四·三）說以「范围」名延续之条件所定者；名表与全书經、篇首名之为所顾（第二轮已改诸篇首，說未改）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "四·二十三",
+  "find": "这只定范围，本身不排序",
+  "replace": "这只定所顾，本身不排序",
+  "why": "final consistency (inconsistency): 四·二十一（稳定号四·二十三）說以「范围」名延续之条件所定者；名表与全书經、篇首名之为所顾（第二轮已改诸篇首，說未改）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "七·十二",
+  "find": "只定范围，以广为愈（其根据未决）定次序",
+  "replace": "只定所顾，以广为愈（其根据未决）定次序",
+  "why": "final consistency (inconsistency): 七·二「理」（稳定号七·十二）說「凡续皆有顾……只定范围」：所定者名所顾（同上）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十·十九",
+  "find": "凡续皆有顾只定范围",
+  "replace": "凡续皆有顾只定所顾",
+  "why": "final consistency (inconsistency): 十·十四（稳定号十·十九）說「凡续皆有顾只定范围」：所定者名所顾（同上）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "六·九",
+  "find": "只定所顾之范围",
+  "replace": "只定所顾",
+  "why": "final consistency (inconsistency): 二·六（稳定号六·九）說「只定所顾之范围」：第二轮已指出篇首以范围或「所顾之范围」名延续之条件所定者，名表名之为所顾；說中同病，所顾已是「一顾之所及，其续有顾之一切」，不须再加范围。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十·十六",
+  "find": "只定所顾之范围",
+  "replace": "只定所顾",
+  "why": "final consistency (inconsistency): 十·十一（稳定号十·十六）說「只定所顾之范围」（同二·六之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十三·五",
+  "find": "只定所顾之范围",
+  "replace": "只定所顾",
+  "why": "final consistency (inconsistency): 十三·三（稳定号十三·五）說「只定所顾之范围」（同二·六之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十三·七",
+  "find": "只定所顾之范围",
+  "replace": "只定所顾",
+  "why": "final consistency (inconsistency): 十三·六（稳定号十三·七）說「只定所顾之范围」（同二·六之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十三·九",
+  "find": "只定所顾之范围",
+  "replace": "只定所顾",
+  "why": "final consistency (inconsistency): 十三·八（稳定号十三·九）說「只定所顾之范围」（同二·六之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十三·十一",
+  "find": "只定所顾之范围",
+  "replace": "只定所顾",
+  "why": "final consistency (inconsistency): 十三·十（稳定号十三·十一）說「只定所顾之范围」（同二·六之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十三·十二",
+  "find": "只定所顾之范围",
+  "replace": "只定所顾",
+  "why": "final consistency (inconsistency): 十三·十一（稳定号十三·十二）說「只定所顾之范围」（同二·六之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十三·十六",
+  "find": "只定所顾之范围",
+  "replace": "只定所顾",
+  "why": "final consistency (inconsistency): 十三·十五（稳定号十三·十六）說「只定所顾之范围」（同二·六之条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十三·十一",
+  "find": "被容者不被逆选",
+  "replace": "见容者不被逆选",
+  "why": "final consistency (inconsistency): 十三·十之題「被容者不被逆选」（title 字段，非 body；此 find 指題）仍用被容，第二轮已把本條之經改为「见容之员」并言題宜一并改；全书同一概念（`Web.Supported`/`Admits`）作见容。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "凡·十三",
+  "find": "所出与据",
+  "replace": "所推出与据",
+  "why": "final consistency (inconsistency): 凡·十三之題「所出与据」（title 字段，非 body；此 find 指題）：所出今只名世系（十三·一，g 为 x 之所出），本條之經已改作「所推出之辞」；題仍以所出名所推出，第二轮已提此題宜改。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "TH:INTRO",
+  "find": "（无设而然、有设而然、设、读）",
+  "replace": "（无设而然、有设而然、设、讀（AI））",
+  "why": "final consistency (inconsistency): 论纲篇首「论纲不在序所列四种地位（无设而然、有设而然、设、读）之中」以「读」名 AI 读法；序列此四种地位作讀（AI），一·二十說与凡·十九說皆言读只名以象予值（第二轮已改序中之同病）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "纲·一",
+  "find": "被不已取用之族自外来",
+  "replace": "屡有取之族自外来",
+  "why": "final consistency (inconsistency): 纲·一說「被不已取用之族自外来」：不已是名表之名（感之屡，十二·六；凡·八說「不已即感之屡」），此处指取者屡现（四·九題「屡有取之族自外来」）；第二轮已改本條之經，說未改。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "纲·一",
+  "find": "最大可不已之取",
+  "replace": "不涸之最大常取",
+  "why": "final consistency (inconsistency): 纲·一說「最大可不已之取」（英文 the largest sustained draw）以不已名可久取（同上条）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "C01:INTRO",
+  "find": "二类之待网读为一类之物而成一宇；次说衡、取者与与之者及唯运者与之、唯运者取且唯取于其所资二设，计入其余则凡宇皆衡；再说一状之二分怎样分化出施与受：动唯依体之状而定者为体之动，体之所为，其余受之；诸设各划诸宇之一体；",
+  "replace": "二类之待网读为一类之物而成一宇，诸设各划诸宇之一体；次说衡、取者与与之者及唯运者与之、唯运者取且唯取于其所资二设，计入其余则凡宇皆衡；再说一状之二分怎样分化出施与受：动唯依体之状而定者为体之动，体之所为，其余受之；",
+  "why": "final order (inconsistency): 篇一篇首的次第是移动前的旧样：诸宇（一·十四，「诸设各划诸宇之一体」）已移到衡（一·十五）之前，篇首仍把它放在体之动（一·十八）之后。第二轮在诸宇一条中提出过，诸宇已移，篇首未随之改。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "C06:INTRO",
+  "find": "然后立生生之名（讀，AI，D1、D5）：生而所生又生，其向以广较之，而广之所记不尽生生。次说恒、竭与作怎样连于广狭，广于新类、沿读、沿续之所记与所不记；终以兼与域、诸正轻重所共之序。",
+  "replace": "次说恒、竭与作怎样连于广狭，广于新类、沿读、沿续之所记与所不记；然后立生生之名（讀，AI，D1、D5）：生而所生又生，其向以广较之，而广之所记不尽生生；终以兼与域、诸正轻重所共之序。",
+  "why": "final order (inconsistency): 篇六篇首仍说先立生生、后说恒竭作与广、沿读、沿续。第二轮之后生生已移到这三条之后（六·十六），因为它的經以六·十四、六·十五 为据。篇首未随之改。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "C15:INTRO",
+  "find": "兼权、无以小害大（J1/J2）",
+  "replace": "无以小害大、兼权（J2/J1）",
+  "why": "final order (inconsistency): 篇十六篇首仍作「兼权、无以小害大（J1/J2）」，而无以小害大已移到兼权之前（十六·十、十六·十一）。第二轮提出过此次第，條已对调，篇首未改。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "C16:INTRO",
+  "find": "；所举理论之例与二伦理之设之名，都在說中，并注其條。",
+  "replace": "；又用于說中先立之域（⟦凡·四⟧）与所顾（⟦凡·十七⟧）；所举理论之例与二伦理之设之名，都在說中，并注其條。",
+  "why": "final order (inconsistency): 凡例篇首说「凡例之經只用逻辑之名」，篇一之名只有状、步、宇、辞、观例外。但凡·十六（设）之經用所顾，所顾是篇十五名组之名，在凡·十六 之說中以新组合立；凡·十、凡·十二、凡·十三 之經用域，域在凡·四 之說中立。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "凡·十七",
+  "find": "它定所顾（經所谓所论之员）。",
+  "replace": "它定所顾。",
+  "why": "final order (inconsistency): 凡·十六（设）之說写「它定所顾（經所谓所论之员）」，但此條之經现在作「其一定所顾而不排序」，已没有「所论之员」，括注指向的是旧文。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "一·二",
+  "find": "只在处所即关系之处成立。",
+  "replace": "只在处所即关系之处成立。象（映射本身）取「象也者，像也」〔DS03〕之名，象于一者之值写其像（⟦七·十一⟧）；读只名以象予值，如所归并之类、所示之值，自诸员之积读出总积亦是读，与讀（AI）分开（⟦凡·十九⟧）。",
+  "why": "final order (inconsistency): 第二轮把象与读之定义移入一·三 之經，但一·三 之說只讲状、动、步，没有一句讲象与读。象之名与出处（「象也者，像也」）要到七·一 之說与十三·十九 之說才给出，读之说明仍在一·二十 之說。新立之名应在立义之條说明。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "凡·二",
+  "find": "读（以一映射予状以值，⟦一·十四⟧）",
+  "replace": "读（以一映射予状以值，⟦一·二⟧）",
+  "why": "final order (inconsistency): 读之定义已移到一·三（稳定 id 一·二），而凡·二 之說仍指一·二十（观）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "凡·十九",
+  "find": "之定义在⟦一·十四⟧",
+  "replace": "之定义在⟦一·二⟧",
+  "why": "final order (inconsistency): 凡·十九 之說写「映射之读…之定义在⟦一·十四⟧」，即一·二十（观）。但一·二十 之經已不定义读，定义在一·三，这句话不再成立。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "九·三",
+  "find": "读（带地位之解，见⟦一·十四⟧、⟦凡·十九⟧）在此是其另一层：从构成者读出一个量。",
+  "replace": "读（⟦一·二⟧；与讀（AI）分开，⟦凡·十九⟧）在此取其后一义：从构成者读出一个量。",
+  "why": "final order (inconsistency): 九·六（读出特征）之說写「读（带地位之解，见⟦一·十四⟧、⟦凡·十九⟧）在此是其另一层」。这里把讀（AI）之「带地位之解」当作读的解释，所指的一·二十 也已不定义读；「自其构成者读出一量」现在是一·三 之經给读的第二义。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "五·四",
+  "find": "其往（历程之前段，⟦九·十二⟧）",
+  "replace": "其往（历程之前段）",
+  "why": "final order (inconsistency): 往之定义已移到五·六（藏往）本條之經首（「往，历程至某步之前段也」），本條之說却仍写「其往（历程之前段，⟦九·十二⟧）」，把往之定义指到九·十八，往前指成了往后指。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "七·一",
+  "find": "状在域中，以所许之一步所至者亦在域中。一域为常，恰当每一动皆守之。凡常，自域中能至者皆在域中。凡行，自某步在一域中，其后所采之动皆守此域",
+  "replace": "状在域中，其所许之一步之果亦在域中。一域为常，恰当每一动皆守之。凡常，自域中能至者皆在域中。凡行，自某步在一域中，其后之动皆守此域",
+  "why": "final order (inconsistency): 五·七（常）之經以所至指一步所到之状：「以所许之一步所至者」。名表以所至名探究之所见范围，次状名果；第二轮已把九·十八、九·二十、九·二十一 改为果，此处漏改。同句之「所采之动」先用采，采到九·十八 之說才立；Run.stays（Attraction.lean 第 363 行）所说只是行此后每一步之动，写「其后之动」即可。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "七·七",
+  "find": "机之二步所至不同",
+  "replace": "机之二步之果不同",
+  "why": "final order (inconsistency): 五·十四（机）之經「机之二步所至不同」以所至指次状，即 `Branching.Juncture.outcomes_differ` 之 outcome，名表作果。此为第二轮所至改果时漏改之处。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "九·十一",
+  "find": "不单写“所至”，因“所至”在全书指一动所到之状",
+  "replace": "不单写“所至”，免与一动所到之状（果）相混",
+  "why": "final order (inconsistency): 九·十七 之說写「不单写“所至”，因“所至”在全书指一动所到之状」。所至改果之后（九·十八 至九·二十一，加上本轮五·七、五·十四 两处），这句话已不成立，且与名表（所至名所见范围）相冲。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "TAIL",
+  "find": "| 开·应（仍能回应） | 应 | 交换回应一个积；耦合界定回应而不固定它 |",
+  "replace": "| 开·应（仍能回应） | 应 | 取与随一所待之积而异；感界应而不定应 |",
+  "why": "final order (inconsistency): 附录三「开·应」一行用交换、耦合、回应，不用本书之名。十一·一、十一·二 用本书之名说同一结构（应；感界应而不定应）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "TAIL",
+  "find": "修正一个动作之所为，是两条历程只经一个把它们耦合分开的形成而重合（无专名）",
+  "replace": "修正一个动作之所为，是二程只经一个缘其感分开二者之待者而复合（二程之复合，篇十一）",
+  "why": "final order (inconsistency): 附录三「开·转」一行写「把它们耦合分开的形成」，并注「（无专名）」。本书现有十一·十一 二程之复合，其經以「复合」名此结构；耦合与形成也不是本书之名（应作感、待者）。",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "C02:INTRO",
+  "find": "容为运之小故（容而不运者有构造之例，故非大故）",
+  "replace": "不容则不运（容于运无之必不然；有之不必然尚无具名之证，未决，⟦二·八⟧）",
+  "why": "final standing (inconsistency): The 篇二 opening still says 「容为运之小故（容而不运者有构造之例，故非大故）」. After round 2, 二·八 經 asserts only the half 无之必不然 (不容则不运). It marks the other half of 小故, 有之不必然 (support without activity), as 未决, because no named ",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "三·十",
+  "find": "运以容为小故（⟦二·八⟧）",
+  "replace": "不容则不运（⟦二·八⟧）",
+  "why": "final standing (inconsistency): Rendered 二·九 亡, 說: 「在有待之处，运以容为小故（⟦二·八⟧）」 asserts full 小故 status, the same overclaim as the 篇二 opening. 二·八 經 proves only 不容则不运; its 有之不必然 half is 未决.",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十五·十",
+  "find": "两历互有所长，条件本身不排之（⟦十五·二十一⟧），排序只在以广为愈或另加一度。",
+  "replace": "两历互有所长，条件本身不排之（⟦十五·二十一⟧），以广为愈也不排之（⟦十六·八⟧）；要排之须另加一度，那是另名之设，不是伦理之次序。",
+  "why": "final standing (inconsistency): Rendered 十五·十一 活皆有顾, 說, on 杀身成仁: 「两历互有所长，条件本身不排之（⟦十五·二十一⟧），排序只在以广为愈或另加一度」. This credits 以广为愈 with ordering a mixed pair. Yet 十六·四 經 says 「互有所长者不相广，以广为愈不定其序」, and 十六·二 說 says 「互有所长，凡续皆有顾不排，以广为愈也不排」. On",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十一·二十七",
+  "find": "所顾由凡续皆有顾定（只陈述而不断言），序由以广为愈（C）定，对齐之向在此二设之下，见⟦十六·十七⟧。",
+  "replace": "所顾由凡续皆有顾定（只陈述而不断言），序由以广为愈（C）定；对齐之向（⟦十六·十七⟧）之取舍又以无以小害大（实践之承诺）为设，称其所向为愈仍只在以广为愈。",
+  "why": "final standing (inconsistency): Rendered 十一·三十 兼感之动, 說: 「对齐之向在此二设之下，见⟦十六·十七⟧」. Round 2 corrected this same misstatement in the 篇十一 opening but left it here. 十六·十三 动之向 (`Direction.chosen_keeps_basic`, `narrowed_not_chosen`) is condit",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "纲·六",
+  "find": "（不可见之一半有设而然；为跨域之一律是猜想）",
+  "replace": "（不可见之一半已证：「不界其去绝之远近」无设而然，「无一兆先于绝」以衡为设而有设而然；为跨域之一律是猜想）",
+  "why": "final standing (inconsistency): The 經 grade 「不可见之一半有设而然」 treats the whole invisible half as premised. Its first claim, 「凡感入此待者者，皆不界其去绝之远近」, is `Web.break_not_bounded`, whose only hypotheses are local conditions: threshold-only coupl",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "纲·六",
+  "find": "地位：不可见之一半在其若下已证（有设而然）：",
+  "replace": "地位：不可见之一半已证。不界其远近之律无设而然，其条件以若写入：",
+  "why": "final standing (inconsistency): The 地位 paragraph says 「不可见之一半在其若下已证（有设而然）」 and then lists only local conditions for `Web.break_not_bounded`. By 凡·十七 those are 若, not 设, so that law is 无设而然. This conflates 若 with 设, as round 2 correc",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "纲·一",
+  "find": "（有设而然之律；实际所待满足其设为猜想）",
+  "replace": "（律于拟中已证：共取过与与自外来诸句有设而然，涸界一句无设而然；实际所待满足其设为猜想）",
+  "why": "final standing (inconsistency): The 經 grade calls the whole entry 「有设而然之律」. Its last law (「涸界属常与…需处之所与不及常取，则涸界高于需加常取」, `RegimeMargin.beyond_draw_iff`, with `ends_iff_below` in the 說) has only local hypotheses: Gated, 0<H, Root, Shor",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "纲·一",
+  "find": "地位：于拟（自然数之量，离散之步）中有设而然，其设各律所名。",
+  "replace": "地位：于拟（自然数之量，离散之步）中已证：共取过与与自外来之律有设而然，其设各律所名；涸界之律无设而然，其条件以若写入。",
+  "why": "final standing (inconsistency): The 地位 paragraph calls everything proved here 有设而然. The 涸界 laws it cites (`RegimeMargin.ends_iff_below`, `beyond_draw_iff`) use no 设. This is the same pattern round 2 fixed in 纲·二 (「于拟中无设而然：自然数之量是拟之所定",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "凡·十九",
+  "find": "讀（AI），于所证之内容所取之解，与其论并取，标其决定之号者也。",
+  "replace": "讀（AI），于所证之内容或古文之结构所取之解，与其论并取者也；已入决定记录者，标其决定之号。",
+  "why": "final standing (inconsistency): 讀（AI） is defined as 「…标其决定之号者也」, and only as a reading of 所证之内容. The book uses about 30 bare marks: 16 「讀（AI）：」 and about 15 「（讀，AI）」. One more is 「讀（AI，尚无决定编号…）」 at 二·五. Many of these are readings of",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "凡·十九",
+  "find": "标为「讀（AI，Dn）」，Dn 是它在决定记录中的号；全书 AI 读法之标记一律如此。",
+  "replace": "已入决定记录者标为「讀（AI，Dn）」，Dn 是它在决定记录中的号；未入者（多为名之出处与古文对照之读）标为「讀（AI）」或「（讀，AI）」，地位相同。",
+  "why": "final standing (inconsistency): The 說 says 「全书 AI 读法之标记一律如此」 (all marked 讀（AI，Dn）), which the book contradicts in about 30 places.",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "HEAD",
+  "find": "- **讀（AI）**：AI 读法，标决定编号。",
+  "replace": "- **讀（AI）**：AI 读法，已入决定记录者标其编号。",
+  "why": "final standing (inconsistency): The preface's list of the four standings defines 讀（AI） as 「AI 读法，标决定编号」. As with 凡·十九, about 30 readings in the book carry no decision number.",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "十五·十六",
+  "find": "凡以域为界之别，于其域内皆然；",
+  "replace": "凡以域为界之别，于其域内皆然（⟦十五·十四⟧）；",
+  "why": "final consistency (style): 十五·二十一（稳定号十五·十六）經「凡以域为界之别，于其域内皆然」重述十五·十七經「别于其域内皆然」（二條之證皆引 `Becoming.bounded_rival`/`Becoming.Within`），未指向。",
+  "sev": "style"
+ },
+ {
+  "id": "十三·十一",
+  "find": "不被容者无出者（⟦十三·七⟧）",
+  "replace": "不见容者无出者（⟦十三·七⟧）",
+  "why": "final consistency (style): 十三·十說「不被容者无出者」与經之「见容」二写。",
+  "sev": "style"
+ },
+ {
+  "id": "十三·十一",
+  "find": "所读的是在被容者处不低于诸员之量",
+  "replace": "所读的是在见容者处不低于诸员之量",
+  "why": "final consistency (style): 同上条：十三·十說「在被容者处」。",
+  "sev": "style"
+ },
+ {
+  "id": "十三·七",
+  "find": "所以只有被容者能与而有出者",
+  "replace": "所以只有见容者能与而有出者",
+  "why": "final consistency (style): 十三·六「传择」（稳定号十三·七）說以被容名其經之「见容」（同一概念二写）；此为第一处。",
+  "sev": "style"
+ },
+ {
+  "id": "十三·七",
+  "find": "容只必要不够，被容者不担保有出者",
+  "replace": "容只必要不够，见容者不担保有出者",
+  "why": "final consistency (style): 同上条：十三·六說第二处。",
+  "sev": "style"
+ },
+ {
+  "id": "十三·七",
+  "find": "承其需者自初聚之步起不被容",
+  "replace": "承其需者自初聚之步起不见容",
+  "why": "final consistency (style): 同上条：十三·六說第三处。",
+  "sev": "style"
+ },
+ {
+  "id": "十三·七",
+  "find": "需较少者被容、运而取",
+  "replace": "需较少者见容、运而取",
+  "why": "final consistency (style): 同上条：十三·六說第四处。",
+  "sev": "style"
+ },
+ {
+  "id": "NEW-9",
+  "find": "恰于 d 之积为 j 时被容",
+  "replace": "恰于 d 之积为 j 时见容",
+  "why": "final consistency (style): 十一·三（稳定号 NEW-9）說「被容」与全书之「见容」二写。",
+  "sev": "style"
+ },
+ {
+  "id": "十一·二十四",
+  "find": "清除者与栖者皆于第三步被容",
+  "replace": "清除者与栖居者皆于第三步见容",
+  "why": "final consistency (style): 十一·二十七（稳定号十一·二十四）說「被容」与全书之「见容」二写；「栖者」与十五·十六、十五·二十等之「栖居者」亦二写。",
+  "sev": "style"
+ },
+ {
+  "id": "十二·十二",
+  "find": "于 g 每步皆被容之历程中",
+  "replace": "于 g 每步皆见容之历程中",
+  "why": "final consistency (style): 十二·十三（稳定号十二·十二）說「被容」与全书之「见容」二写。",
+  "sev": "style"
+ },
+ {
+  "id": "纲·六",
+  "find": "于待者每一被容之步",
+  "replace": "于待者每一见容之步",
+  "why": "final consistency (style): 纲·六說「被容」与全书之「见容」二写。",
+  "sev": "style"
+ },
+ {
+  "id": "纲·八",
+  "find": "一体每步皆运而被容，而自某步起，其待之外有一物，无此体之取与则被容、有之则不被容",
+  "replace": "一体每步皆运而见容，而自某步起，其待之外有一物，无此体之取与则见容、有之则不见容",
+  "why": "final consistency (style): 纲·八說「被容」三处与全书之「见容」二写。",
+  "sev": "style"
+ },
+ {
+  "id": "C01:INTRO",
+  "find": "二类之待网读为一类之物而成一宇；次说衡、取者与与之者及唯运者与之、唯运者取且唯取于其所资二设，计入其余则凡宇皆衡；再说一状之二分怎样分化出施与受：动唯依体之状而定者为体之动，体之所为，其余受之；诸设各划诸宇之一体；",
+  "replace": "二类之待网读为一类之物而成一宇，诸设各划诸宇之一体；次说衡、取者与与之者及唯运者与之、唯运者取且唯取于其所资二设，计入其余则凡宇皆衡；再说一状之二分怎样分化出施与受：动唯依体之状而定者为体之动，体之所为，其余受之；",
+  "why": "final consistency (style): 篇一篇首述本篇之次，把「诸设各划诸宇之一体」放在体之动（一·十八）之后、系辞之前；第二轮已把诸宇移到衡之前，今在一·十四（宇、待者与所待之后，衡之前）。篇首之次与书中之次不合。",
+  "sev": "style"
+ },
+ {
+  "id": "C06:INTRO",
+  "find": "益自其余或越族界而来；然后立生生之名（讀，AI，D1、D5）：生而所生又生，其向以广较之，而广之所记不尽生生。次说恒、竭与作怎样连于广狭，广于新类、沿读、沿续之所记与所不记；终以兼与域",
+  "replace": "益自其余或越族界而来；次说恒、竭与作怎样连于广狭，广于新类、沿读、沿续之所记与所不记；然后立生生之名（讀，AI，D1、D5）：生而所生又生，其向以广较之，而广之所记不尽生生；终以兼与域",
+  "why": "final consistency (style): 篇六篇首述本篇之次为：日新须益等，然后立生生，次说恒、竭、作与广及沿读、沿续之广；第二轮已把生生移到其所据之后，今生生在六·十六，在恒竭作与广（六·十三）、沿读（六·十四）、沿续（六·十五）之后。篇首之次与书中之次不合。",
+  "sev": "style"
+ },
+ {
+  "id": "纲·一",
+  "find": "设衡、唯运者与、有待）",
+  "replace": "设衡、唯运者与之、有待）",
+  "why": "final consistency (style): 纲·一說「设衡、唯运者与、有待」：宇之设全书作「唯运者与之」（第二轮之条，凡·十六說已改）。",
+  "sev": "style"
+ },
+ {
+  "id": "五·十二",
+  "find": "以衡、唯运者与、有待为设",
+  "replace": "以衡、唯运者与之、有待为设",
+  "why": "final consistency (style): 五·二十三（稳定号五·十二）說「以衡、唯运者与、有待为设」：宇之设全书作「唯运者与之」。",
+  "sev": "style"
+ },
+ {
+  "id": "NEW-17",
+  "find": "所导出之范围，一者之续之所须沿资而导出者，其资域也（⟦十一·四⟧）。",
+  "replace": "一者之续之所须，沿资而导出者，即其资域（⟦十一·四⟧）。",
+  "why": "final consistency (style): 十五·二十（稳定号 NEW-17）經「所导出之范围，……其资域也」以新名「所导出之范围」名资域（十一·四），名表无此名，一概念二名；又范围在书中另指定域所施（凡·二十七）、丧配之承诺所施（十六·十五）。題、篇十五篇首与本條說中之「所导出之范围」宜随之改作资域。",
+  "sev": "style"
+ },
+ {
+  "id": "十二·九",
+  "find": "渐闭者，有一环节不是乘",
+  "replace": "某匝之差为正而少于前匝者（渐闭），其环有一环节不是乘",
+  "why": "final consistency (style): 十二·十（稳定号十二·九）經「渐闭者，有一环节不是乘」：渐闭既非名表之名，經中亦未定义；Lean（`LoopReturn.gradual_needs_another_link`）所言是：某匝之差为正而少于前匝者，其环有一环节不是乘。",
+  "sev": "style"
+ },
+ {
+  "id": "十二·五",
+  "find": "凡差已至一环",
+  "replace": "凡差既至一环",
+  "why": "final consistency (style): 十二·六（稳定号十二·五）經「凡差已至一环」：已是名表之名（止息），此处借作既（九·七、九·八、十二·三作「既成」）。",
+  "sev": "style"
+ },
+ {
+  "id": "十二·七",
+  "find": "凡差已至 e",
+  "replace": "凡差既至 e",
+  "why": "final consistency (style): 十二·八（稳定号十二·七）經「凡差已至 e」：已借作既（同上）。",
+  "sev": "style"
+ },
+ {
+  "id": "十三·二十一",
+  "find": "所取法者已有所装",
+  "replace": "所取法者既有所装",
+  "why": "final consistency (style): 十三·二十（稳定号十三·二十一）經「所取法者已有所装」：已借作既（同上）。",
+  "sev": "style"
+ },
+ {
+  "id": "五·六",
+  "find": "逆不成立：体于任意晚之步作、各亡、有列",
+  "replace": "逆不成立：体屡作、各亡、有列",
+  "why": "final consistency (style): 五·十六（稳定号五·六）說「体于任意晚之步作」：凡·八說言全书此类说法一律写屡（第二轮已改經）。",
+  "sev": "style"
+ },
+ {
+  "id": "六·十",
+  "find": "日新之族于任意晚之步益（`Becoming.Web.rises_late_of_new`），总积于任意晚之步过每一界",
+  "replace": "日新之族屡有益（`Becoming.Web.rises_late_of_new`），总积屡过每一界",
+  "why": "final consistency (style): 六·十說「于任意晚之步益」「于任意晚之步过每一界」：凡·八之约定一律写屡（本條之經作「屡有益」「其总积屡过之」）。",
+  "sev": "style"
+ },
+ {
+  "id": "六·十一",
+  "find": "此族于任意晚之步或得其余之益、或不封",
+  "replace": "此族屡有一步，或得其余之益、或不封",
+  "why": "final consistency (style): 六·十二（稳定号六·十一）說「此族于任意晚之步或得其余之益、或不封」：本條之經作「此族屡有一步，或其余为其益之者，或不封」，凡·八之约定一律写屡。",
+  "sev": "style"
+ },
+ {
+  "id": "十五·四",
+  "find": "则另一历于它无所得（⟦十六·一⟧）",
+  "replace": "则另一历于它无得（⟦十六·一⟧）",
+  "why": "final consistency (style): 十五·五（稳定号十五·四）說「无所得」：有得之否，經作「无得」（第二轮之条）。",
+  "sev": "style"
+ },
+ {
+  "id": "十五·三",
+  "find": "互无丧、互无所得",
+  "replace": "互无丧、互无得",
+  "why": "final consistency (style): 十五·十二（稳定号十五·三）說「互无所得」与經之「无得」二写。",
+  "sev": "style"
+ },
+ {
+  "id": "凡·十七",
+  "find": "其下互有所长之二路",
+  "replace": "其下互有所长之二积之历",
+  "why": "final consistency (style): 凡·十六「设」（稳定号凡·十七）說「互有所长之二路」：积之历名表名历（取代水平之路），十五·二十六經作「互有所长之二积之历」。",
+  "sev": "style"
+ },
+ {
+  "id": "一·四",
+  "find": "绝生是有无一体之路之较",
+  "replace": "绝生是有无一体之积之历之较",
+  "why": "final consistency (style): 一·六（稳定号一·四）說「有无一体之路之较」：所较者是积之历与偏去此体之积之历（六·六經），历取代路。",
+  "sev": "style"
+ },
+ {
+  "id": "十三·四",
+  "find": "不由其余七设推出",
+  "replace": "不由传以外之七设推出",
+  "why": "final consistency (style): 十三·二（稳定号十三·四）說「不由其余七设推出」以其余作「其他」；其余是名表之名（整体之其余，一·十七），十三·五經「计其余」即其名义，同在八设之论中。十三·四經自写「传以外之七设」。",
+  "sev": "style"
+ },
+ {
+  "id": "十三·六",
+  "find": "其余七设与有穷都保持",
+  "replace": "传以外之七设与有穷都保持",
+  "why": "final consistency (style): 十三·四（稳定号十三·六）說「其余七设与有穷都保持」以其余作「其他」（同上条）。",
+  "sev": "style"
+ },
+ {
+  "id": "十三·六",
+  "find": "其余七设只限待",
+  "replace": "此七设只限待",
+  "why": "final consistency (style): 同上条：十三·四說第二处「其余七设只限待」。",
+  "sev": "style"
+ },
+ {
+  "id": "二·十七",
+  "find": "动属其余诸物之所为",
+  "replace": "动属他物之所为",
+  "why": "final consistency (style): 十四·十六（稳定号二·十七）說「动属其余诸物之所为」以其余作「其他」，而其余之动是一·十八所立之名（唯依其余之状而定之动）。",
+  "sev": "style"
+ },
+ {
+  "id": "六·九",
+  "find": "与者不运、运而与者不见容、积次步多于本步而无与者",
+  "replace": "与之者不运、运而与之者不见容、积次步多于本步而无与之者",
+  "why": "final consistency (style): 二·六（稳定号六·九）說「与者」三处：名表弃「与者」（易读作参与者），定名「与之者」（第一轮之条，一·十六經已改）。",
+  "sev": "style"
+ },
+ {
+  "id": "四·七",
+  "find": "凡与者必有所取",
+  "replace": "凡与之者必有所取",
+  "why": "final consistency (style): 四·四（稳定号四·七）說「凡与者必有所取」：名表定名与之者。",
+  "sev": "style"
+ },
+ {
+  "id": "六·五",
+  "find": "自外与者成生",
+  "replace": "自外与之者成生",
+  "why": "final consistency (style): 六·六（稳定号六·五）說「自外与者成生」：名表定名与之者。",
+  "sev": "style"
+ },
+ {
+  "id": "NEW-3",
+  "find": "常守其后所至",
+  "replace": "常守其后之状",
+  "why": "final order (style): 五·八（门）之說「常守其后所至」，所至仍指次状，与五·七、五·十四 同病。",
+  "sev": "style"
+ },
+ {
+  "id": "NEW-7",
+  "find": "不定未采之动之所至（⟦九·十二⟧）",
+  "replace": "不定未采之动之果（⟦九·十二⟧）",
+  "why": "final order (style): 九·十九 之說「不定未采之动之所至」，所至仍指一动之果；九·十八 之經已作「往不定其果」。",
+  "sev": "style"
+ },
+ {
+  "id": "C10:INTRO",
+  "find": "未施之动之所至（⟦九·十二⟧、⟦NEW-7⟧）",
+  "replace": "未施之动之果（⟦九·十二⟧、⟦NEW-7⟧）",
+  "why": "final order (style): 篇十一篇首「未施之动之所至」，所至仍指一动之果，与所改之九·十八 不合。",
+  "sev": "style"
+ },
+ {
+  "id": "九·十一",
+  "find": "可靠之策在整个知之所至上都如所求（`Becoming.Scope.secures`）",
+  "replace": "可靠之策在整个知之所至上都如所求（`Becoming.Scope.secures`；所求是一辞，于状合或不合，求谓运向一所求，见⟦十一·十六⟧）",
+  "why": "final order (style): 所求在九·十七、十一·十七 之經中先用，求者在十一·十六 之經中先用。求与所求之说明（「所求是一辞，于状合或不合」）却到十一·十八（无明）之說才给出。宜在首用之九·十七 之說注一句。",
+  "sev": "style"
+ },
+ {
+  "id": "九·十八",
+  "find": "无一见证无阙之录为二者所共许",
+  "replace": "见证皆报之录无一为二者所共许",
+  "why": "final order (style): 九·二十六（参验）之經「见证无阙之录」先用阙，阙定于次条九·二十七。WitnessRefinementRuns.Complete（第 71 行）只是每一见证皆有所报，可以不用此名直接写出。",
+  "sev": "style"
+ },
+ {
+  "id": "凡·一",
+  "find": "并言其所依之关系、所及与所遗也",
+  "replace": "并言其所依之关系、所施与所遗也",
+  "why": "final order (style): 凡·一（以明）之經「所依之关系、所及与所遗」中的所及，指一分别之适用范围（說作「适用之范围」）。但所及是名表之名，十一·四 立为部分所及，是另一义；全书第一句經就先以别义用了一个后来才定的名。",
+  "sev": "style"
+ },
+ {
+  "id": "C01:INTRO",
+  "find": "状、动、步与象、读，变与行",
+  "replace": "状、动、步、辞与象、读，变与行",
+  "why": "final order (style): 随第一条，辞之定义移到一·三 后，篇一篇首的「先立」一句应列入辞。仅在第一条施行时施行。",
+  "sev": "style"
+ },
+ {
+  "id": "C16:INTRO",
+  "find": "状、步、宇、辞、观（⟦一·二⟧、⟦一·九⟧、⟦一·十三⟧、⟦一·十四⟧）",
+  "replace": "状、步、辞、宇、观（⟦一·二⟧、⟦一·九⟧、⟦一·十四⟧）",
+  "why": "final order (style): 随第一条，辞之定义移到一·三 后，凡例篇首中辞所指之條随之改，次序依篇一之序。仅在第一条施行时施行。",
+  "sev": "style"
+ },
+ {
+  "id": "C02:INTRO",
+  "find": "及待读作必然之应时它怎样由取与读出",
+  "replace": "及待读作积低于需则必无取与时它怎样由取与读出",
+  "why": "final order (style): 随二·五 之改，篇二篇首也不再先用应。仅在二·五 之改施行时施行。",
+  "sev": "style"
+ },
+ {
+  "id": "TAIL",
+  "find": "断裂之前，耦合入的东西都不界定断裂有多近",
+  "replace": "绝之前，感入者都不界定去绝之远近",
+  "why": "final order (style): 附录三「伪开·二」一行用耦合；本书以感入者不界去绝之远近名此结构（十二·十三 未兆、纲·六）。",
+  "sev": "style"
+ },
+ {
+  "id": "凡·十四",
+  "find": "诸足合起来不是运之大故（⟦二·八⟧）",
+  "replace": "不给诸足合起来为运之大故（容而不运之例尚无具名之证，⟦二·八⟧）",
+  "why": "final standing (style): 說: 「诸足合起来不是运之大故（⟦二·八⟧）」 states as fact that support is not sufficient for activity. That needs the 容而不运 witness, which 二·八 marks 未决 (no named proof that the hibernator is supported). What holds is onl",
+  "sev": "style"
+ },
+ {
+  "id": "纲·六",
+  "find": "（`Becoming.Flow.policy_uses_after_failure`，设感入此待者之诸所待皆衡）",
+  "replace": "（`Becoming.Flow.policy_uses_after_failure`，以感入此待者之诸所待皆衡为设，有设而然）",
+  "why": "final standing (style): Once the 地位 opening is corrected, the policy law needs its own standing. It is the part that takes 衡, on the conditions coupled into the dependent, as a premise.",
+  "sev": "style"
+ },
+ {
+  "id": "纲·一",
+  "find": "（`Becoming.Flow.fed_from_beyond`，设衡与耗，族之员各异，所待之同异定然否；",
+  "replace": "（`Becoming.Flow.fed_from_beyond`，以衡与耗为设，族之员各异、所待之同异定然否以若写入；",
+  "why": "final standing (style): 「设衡与耗，族之员各异，所待之同异定然否」 lists the local hypotheses of `Flow.fed_from_beyond` (Distinct ds, DecidableEq C) under 设. Under 凡·十七 they are 若. Only 衡 and 耗 are 宇之设.",
+  "sev": "style"
+ },
+ {
+  "id": "C16:INTRO",
+  "find": "讀（AI），带论证之解，标其决定之号；",
+  "replace": "讀（AI），带论证之解，已入决定记录者标其决定之号；",
+  "why": "final standing (style): The 凡例 opening defines 讀（AI） as 「带论证之解，标其决定之号」, the same mismatch with the unnumbered marks used throughout the book.",
+  "sev": "style"
+ },
+ {
+  "id": "C03:INTRO",
+  "find": "与所名之宇之设（衡、耗、运者有列……）",
+  "replace": "与所名之宇之设（衡、运者有列……）",
+  "why": "final standing (style): The 篇三 opening lists 耗 among the 宇之设 that 篇三's laws take. No 經 in 篇三 (三·一 to 三·十九) takes 耗 as a premise. 衡 (三·十四) and 运者有列 (三·四, 三·六, 三·十六, 三·十七) are the ones used.",
+  "sev": "style"
+ }
+]

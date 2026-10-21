@@ -1,0 +1,6 @@
+{
+ "real": true,
+ "why": "The finding is real. The sentence is in theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md at line 239, not in the 中华本 itself, and the find occurs only once there. In work/names-checked.json, which is the file build_tables.py counts from, 步 (古) has a quotation, 「不積跬步」 found at RU2-S-XZ01, and 亡 (古) has 「死而不亡者寿」 found at YD-LAO-BASE. The appendix 名表 of THE-THEORY-OF-BECOMING-ZHONGHUA.md shows the same two quotations at lines 3590 and 3667. So two of the four examples given for 'names with no recorded quotation' do have one. 聚, 散, 衡 and 耗 are all 古 with no quotations (\"引\": \"—\"). 相續 is a 复 with no quotation either. I changed the reviewer's set to 聚、散、衡、相续 so the examples include a 复 as well as 古 names, matching '古名或复名'. In prose the name is written in simplified script (繁体立名，简体行文), and 相续 appears in the 中华本. Separate stale counts I noticed but did not fold in, so this edit won't collide with any other edit: the prose says 未录引文的 200 个 (line 236) and 104 个是新组合 (line 238), but the generated ZH-TABLE right above, at line 224, and names-checked.json give 201 and 105. The extra name is 域之兼 (新, no quotation), added in the 447-name pass. Line 18 still says 446 个名 where it should say 447.",
+ "find": "（例如步、亡、聚、散）",
+ "replace": "（例如聚、散、衡、相续）"
+}

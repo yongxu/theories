@@ -1,0 +1,3546 @@
+{
+ "cluster": "C03 生灭与变化之读",
+ "names": [
+  {
+   "concept": "开始成立／不再成立（Becoming.ComesToBe／Becoming.CeasesToBe：某一规定在一步之前不成立而之后成立，或反之）— comes to be / ceases to be (a determination across one step)",
+   "name": "成／亡",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "MI1-S-JS",
+     "quote": "已，成、亡。",
+     "layer": "经·先秦（墨经，战国后期）",
+     "sense_in_context": "「已」（一事之完成）分为两种：所为者开始成立（成），所去者不再成立（亡）",
+     "locator": "《墨子·經上》「已」条"
+    },
+    {
+     "source_id": "MI1-S-SS",
+     "quote": "已，爲衣，成也。治病，亡也。",
+     "layer": "说·先秦（墨经说，战国后期）",
+     "sense_in_context": "做衣服是衣开始成立，治病是病不再成立：同一「已」的两向，对象是任一规定",
+     "locator": "《墨子·經說上》"
+    },
+    {
+     "source_id": "MI1-S-SS",
+     "quote": "身處、志往，存亡也。",
+     "layer": "说·先秦（墨经说）",
+     "sense_in_context": "同一人身处而志往：同一步中一规定存、另一规定亡",
+     "locator": "《墨子·經說上》（释「同異交得」）"
+    },
+    {
+     "source_id": "ZH1-S02",
+     "quote": "其分也，成也；其成也，毀也。凡物无成與毀，復通爲一。",
+     "layer": "经·先秦（庄子内篇·齐物论）",
+     "sense_in_context": "成与毁是同一变的两种读法",
+     "record_id": "ZH1-C02-R-10"
+    },
+    {
+     "source_id": "FO2-FQ",
+     "quote": "成相者，由此諸緣起成故；",
+     "layer": "论·隋唐（法藏《华严五教章》）",
+     "sense_in_context": "诸缘共同成就整体；这是共时的一相，不是跨步的开始成立",
+     "record_id": "FO2-FQ-R032"
+    }
+   ],
+   "fit": "墨经「已，成、亡」正好把一步完成之变分为两向：一规定由不成立到成立是成，由成立到不成立是亡；经说以「为衣」「治病」两例，分别说衣与病两个规定。这就是 ComesToBe p t := ¬p t ∧ p (t+1) 与 CeasesToBe 的对偶，对象是规定而不是实体。生起、形成、开始作为条件而在，是这一对在活动、要求、水平上的三种读法。",
+   "not_carried": "成作成就、完满的正价（成德、成功）；成作造作，带有施为之主体；亡作死亡、逃亡、灭国；亡作有无之「无」，即本体之无；华严「成相」的共时义（诸缘办果）不是跨步的开始成立。",
+   "course": "先秦墨经立「已：成、亡」；庄子齐物论以成、毁为一变之两读（ZH1-C02-R-10）。魏晋王弼注老子三十九章「物皆各得此一以成」，把成读为有所得而立。隋唐华严六相以成／坏为共时两相（FO2-FQ-R032/R033），与本名的跨步义不同。宋明「成之者性也」之成转向性的完成（XC-R065，属C01）。本名取墨经义。",
+   "alternatives": [
+    {
+     "name": "生／死",
+     "why_not": "专指生命，且死带终结义；休眠后再起不是死。"
+    },
+    {
+     "name": "始／终",
+     "why_not": "始终是一段历程的两端，不是一步之变；且C05用之。"
+    },
+    {
+     "name": "有／无",
+     "why_not": "在老子、玄学中是本体层，易引入先在的无。"
+    },
+    {
+     "name": "成／毁",
+     "why_not": "毁带破坏之负价，并暗含施毁者。"
+    },
+    {
+     "name": "起／灭",
+     "why_not": "是佛典术语，与活动层的生起／止息易混。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.ComesToBe",
+    "Becoming.CeasesToBe",
+    "Becoming.Web.change_readings"
+   ]
+  },
+  {
+   "concept": "生起／止息（Becoming.Web.Arises 与止息：一形成在一步开始活动或不再活动，即活动的 ComesToBe／CeasesToBe）— arises / ceases (activity)",
+   "name": "生／滅",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "万物得一以生，",
+     "layer": "经·先秦（老子，战国）",
+     "sense_in_context": "万物有所得而生起",
+     "record_id": "LE-R057",
+     "locator": "《道德经》第三十九章"
+    },
+    {
+     "source_id": "YD-LAO-BASE",
+     "quote": "万物无以生将恐灭，",
+     "layer": "经·先秦（老子）",
+     "sense_in_context": "失去所以生，便止息：生与灭对举，且系于所依",
+     "locator": "《道德经》第三十九章"
+    },
+    {
+     "source_id": "DS01",
+     "quote": "物皆各得此一以成，既成而舍以居成，居成则失其母，故皆裂发歇竭灭蹶也。",
+     "layer": "注·魏晋（王弼《老子注》）",
+     "sense_in_context": "成而失其所依，便灭"
+    },
+    {
+     "source_id": "FO1-S-MMK",
+     "quote": "若我是五陰，我即為生滅",
+     "layer": "论·魏晋南北朝（鸠摩罗什译《中论》，梵本 Mūlamadhyamakakārikā）",
+     "sense_in_context": "生滅成为复词，指诸阴的起与止",
+     "record_id": "FO1-R-M09"
+    },
+    {
+     "source_id": "FO1-S-SA",
+     "quote": "如實正觀世間滅，則不生世間有見",
+     "layer": "经·魏晋南北朝（求那跋陀罗译《杂阿含经》，梵本 Saṃyuktāgama）",
+     "sense_in_context": "集与滅对举，是同一世间的两读",
+     "record_id": "FO1-R-SA013"
+    },
+    {
+     "source_id": "FO2-KS-P",
+     "quote": "謂此師子雖是緣生之法，念念生滅。實無師子可得，故名聲聞教。",
+     "layer": "论·隋唐（法藏《金师子章》）",
+     "sense_in_context": "念念生滅；法藏判之为声闻教之见",
+     "record_id": "FO2-KS-P-R009"
+    }
+   ],
+   "fit": "老子三十九章以「生」与「灭」对举，并且都系于所得之一：万物的生起与止息是同一依存关系的两向，正合生起即活动开始成立、止息即活动不再成立（Web.change_readings）。佛典复词「生滅」把二者作为一对，适合用来称这一读法。",
+   "not_carried": "生作生命、一次出生、生养的正价；生作生生（进一步的生成），生生另有其义，不由「生」字带入；滅作断灭（断见）、灭度涅槃、灭国；佛典「念念生滅」的刹那义（理论不要求每步皆灭）；生灭作为须超脱的苦。",
+   "course": "先秦老子以生、灭对举（LE-R057）。魏晋王弼以「居成则失其母」说灭。鸠摩罗什译中论（FO1-R-M09）、求那跋陀罗译杂阿含（FO1-R-SA012/SA013）定下「生滅」复词。隋唐唯识有「剎那滅」（FO1-R-CY17），华严有「念念生滅」（FO2-KS-P-R009）。宋明张载以聚散说生灭（RU2-R0168）。理论现行中文用「止息」名 Ceases，但这与 D5「不息」的息字相反（D5 以停息为静止族），建议改用「滅」。",
+   "alternatives": [
+    {
+     "name": "起／止",
+     "why_not": "止近于停息，而停息在理论中属静止族（World.RestsFrom），不同于活动之止息。"
+    },
+    {
+     "name": "作／息",
+     "why_not": "息与「不息」之息相反：D5 取不息为更新或生起之复现，息不能再作止息之名。"
+    },
+    {
+     "name": "生／死",
+     "why_not": "死是终结，而休眠中的不活动不是死。"
+    },
+    {
+     "name": "出／入",
+     "why_not": "出入是方位与进出；说卦「出乎震」把出系于方位季节。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.Arises",
+    "Becoming.Web.change_readings",
+    "Becoming.Web.arising_recurs_iff"
+   ]
+  },
+  {
+   "concept": "形成／消解（Becoming.Web.Forms／Dissolves：一形成对一条件的要求关系在一步开始成立或不再成立）— forms / dissolves (a requirement relation)",
+   "name": "結／解",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S06",
+     "quote": "而不能自解者，物有結之。",
+     "layer": "经·先秦（庄子内篇·大宗师）",
+     "sense_in_context": "结是物与物之间的系缚关系，解是这一关系的松开"
+    },
+    {
+     "source_id": "ZH1-S03",
+     "quote": "古者謂是帝之縣解",
+     "layer": "经·先秦（庄子内篇·养生主）",
+     "sense_in_context": "縣解：所悬之系的解除"
+    },
+    {
+     "source_id": "FO2-TJ",
+     "quote": "前念著境即煩惱，後念離境即菩提。",
+     "layer": "经·隋唐（《坛经》，传本有异）",
+     "sense_in_context": "后起的同构用语：著与离是一种关系在相继两念之间的成立与不再成立",
+     "record_id": "FO2-TJ-R005"
+    }
+   ],
+   "fit": "结与解说的是关系（物与物之系），不是某物自身的有无。大宗师「物有结之」把系缚放在物与物之间，正合 Forms／Dissolves：requires 关系的开始成立与不再成立。它与生灭（活动）、聚散（水平）是同一变的另一读。",
+   "not_carried": "解作解脱，以及縣解的超脱价值；结作佛典的结使、烦恼；解作解释；结作人为缔结（盟约、契约）；「不能自解」的无力之情。",
+   "course": "先秦庄子内篇有结与解（物有结之、帝之縣解）。佛典以「结」称烦恼（结使）；坛经以著境、离境说一步之间的系与解（FO2-TJ-R005）。宋明以后，「解」多转为解脱、解悟义。本名取庄子「物有结之」的关系义。",
+   "alternatives": [
+    {
+     "name": "聚／散",
+     "why_not": "已用于开始／不再作为条件而在（水平）。"
+    },
+    {
+     "name": "合／離",
+     "why_not": "合留给延续关系中的并合；离在易为卦名，并兼附丽义。"
+    },
+    {
+     "name": "系／脱",
+     "why_not": "系是C02依存之名的候选；脱带逃离义。"
+    },
+    {
+     "name": "依之成／依之亡",
+     "why_not": "复合过长，且依是C02之名。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.Web.Forms",
+    "Becoming.Web.Dissolves",
+    "Becoming.Web.change_readings"
+   ]
+  },
+  {
+   "concept": "开始作为条件而在／不再作为条件而在（Becoming.Web.ComesToStand／CeasesToStand：一条件的水平由0升为正，或由正降为0）— comes to stand / ceases to stand (level)",
+   "name": "聚／散",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S22",
+     "quote": "人之生，氣之聚也，聚則爲生，散則爲死。",
+     "layer": "经·先秦（庄子外篇·知北游，成书年代有争议）",
+     "sense_in_context": "把生起读为聚，死读为散",
+     "record_id": "ZH1-C22-R-02"
+    },
+    {
+     "source_id": "YWH-H4",
+     "quote": "精氣煙熅，聚而成物。聚極則散，而遊魂為變也。",
+     "layer": "注·魏晋南北朝（韩康伯注系辞）",
+     "sense_in_context": "聚到一定而成物，聚到极处则散",
+     "record_id": "YCM130-H4-H-01-R01"
+    },
+    {
+     "source_id": "IN1-S03",
+     "quote": "既化而為生。又化而為死。既聚而為始。又散而為終。",
+     "layer": "论·魏晋南北朝（慧远《沙门不敬王者论》所引问难，东晋）",
+     "sense_in_context": "聚散即始终，是一变",
+     "record_id": "IN1-R-H10"
+    },
+    {
+     "source_id": "RU2-S-S02",
+     "quote": "方其散也，安得遽谓之无？",
+     "layer": "论·宋明（张载《正蒙》）",
+     "sense_in_context": "散不是归于无",
+     "record_id": "RU2-R0170"
+    }
+   ],
+   "fit": "聚散说的是量的到场：聚而成形，散而不再成形，正合 ComesToStand（水平由0升为正）。知北游以「聚则为生」把生起读为聚，恰是 Web.Embodied.comesToStand：体现的关系项在生起时即开始作为条件而在。张载「散非遽无」合 Flow.Balances.fall_taken：平衡之下每一次降都被某处取走。",
+   "not_carried": "气作为一切之底质（气本体）；太虚作为先在之体；散必守恒（守恒是平衡前提，不是定律）；「聚」作多部分会合成整体（那是整体或并合）；聚极必散作为无界之律（只在有界时成立）。",
+   "course": "先秦庄子外篇知北游以聚散说生死（ZH1-C22-R-02）；系辞「精气为物，游魂为变」（WP-XCS-C04-S04-R01/R02，先秦至秦汉，易传年代有争议）。魏晋韩康伯说「聚而成物，聚极则散」（YCM130-H4-H-01-R01）；东晋慧远论辩以聚散说形神（IN1-R-H10）。宋明张载说「其聚其散，变化之客形」（RU2-R0168），又说散非绝无（RU2-R0170）。",
+   "alternatives": [
+    {
+     "name": "存／亡",
+     "why_not": "亡已用于不再成立，存留给持存。"
+    },
+    {
+     "name": "立／廢",
+     "why_not": "多指事之兴废与制度，带人为施设。"
+    },
+    {
+     "name": "盈／虚",
+     "why_not": "是C04流与平衡之名的候选，且说满溢，不说到场。"
+    },
+    {
+     "name": "有／无",
+     "why_not": "有本体层的风险。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.Web.ComesToStand",
+    "Becoming.Web.CeasesToStand",
+    "Becoming.Web.Embodied.comesToStand",
+    "Becoming.Flow.Balances.fall_taken"
+   ]
+  },
+  {
+   "concept": "一变化之三读（Becoming.Web.change_readings：生起／止息、形成／消解、开始／不再作为条件而在，依定义都是同一个 ComesToBe／CeasesToBe，分别在活动、要求、水平三种规定上读）— one change read three ways",
+   "name": "一變三讀",
+   "form": "新组合",
+   "pre_qin": false,
+   "attestations": [
+    {
+     "source_id": "DS02",
+     "quote": "一阖一辟谓之变",
+     "layer": "传·先秦至秦汉（系辞上，易传年代有争议）",
+     "sense_in_context": "变是一阖一辟之交替，即一个单一的变化"
+    },
+    {
+     "source_id": "RU2-S-XZ01",
+     "quote": "知，讀爲智。",
+     "layer": "注·隋唐（杨倞注《荀子》）",
+     "sense_in_context": "讀爲：把同一字读作某义，即同一对象依读法得不同之义"
+    },
+    {
+     "source_id": "ZH1-S02",
+     "quote": "其分也，成也；其成也，毀也。凡物无成與毀，復通爲一。",
+     "layer": "经·先秦（庄子内篇·齐物论）",
+     "sense_in_context": "同一变读作分、成、毁",
+     "record_id": "ZH1-C02-R-10"
+    },
+    {
+     "source_id": "CT1-S-ZL",
+     "quote": "夫人之所謂動者，以昔物不至今，故曰動而非靜。我之所謂靜者，亦以昔物不至今，故曰靜而非動。",
+     "layer": "论·魏晋南北朝（僧肇《物不迁论》）",
+     "sense_in_context": "同一事实读为动，也读为静",
+     "record_id": "CT1-R-ZL02"
+    }
+   ],
+   "fit": "「變」取系辞「一阖一辟谓之变」的单一变化义；「讀」取训诂「讀爲」之义，即同一对象依读法而得不同之义。合称「一變三讀」：一个跨步之变，在活动、要求关系、水平三种规定上分别读作生灭、结解、聚散。齐物论「其分也成也，其成也毁也」与肇论「昔物不至今」一事两读，表明传统已有一变多读的结构；理论把它精确到：三读都是同一个 ComesToBe／CeasesToBe（Iff.rfl）。",
+   "not_carried": "讀作诵读、阅读之动作；「三」作宇宙数理（三才）；讀作读者主观任意——三读各有其规定，不是随意命名；變作易占的变爻。",
+   "course": "先秦齐物论已有一变多读。魏晋僧肇物不迁论以一事读作动静（CT1-R-ZL02）。唐杨倞注荀子，「讀爲」成为训诂体例。宋明程朱以体用分读（非本名所取）。复词「一變三讀」是本理论的新组合。",
+   "alternatives": [
+    {
+     "name": "同出而異名",
+     "why_not": "老子首章的「同出」指出于一个先在之源，带先在之基。"
+    },
+    {
+     "name": "二名一實",
+     "why_not": "墨经的重同只说二名一实；三读不是同一实的异名，而是同一变在不同规定上的读。"
+    },
+    {
+     "name": "一事三相",
+     "why_not": "相在佛典有体相二分的风险，起信「唯心相滅非心體滅」即以相对体。"
+    },
+    {
+     "name": "變化",
+     "why_not": "太泛，显不出三读。"
+    }
+   ],
+   "coinage": true,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.change_readings"
+   ]
+  },
+  {
+   "concept": "同步（Becoming.keep_pace；Becoming.coming_recurs_iff：有限族中，开始成立与不再成立之数相差不超过成员数，二者同其复现）— coming and ceasing keep pace in a finite family",
+   "name": "相代",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S05",
+     "quote": "是事之變，命之行也，日夜相代乎前，而知不能規乎其始者也，",
+     "layer": "经·先秦（庄子内篇·德充符）",
+     "sense_in_context": "死生存亡等事之变，如日夜交替于前",
+     "record_id": "ZH1-C05-R-07"
+    },
+    {
+     "source_id": "ZH1-S02",
+     "quote": "日夜相代乎前",
+     "layer": "经·先秦（庄子内篇·齐物论）",
+     "sense_in_context": "情态之变日夜相代"
+    },
+    {
+     "source_id": "DS01",
+     "quote": "四时更运，功成则移。",
+     "layer": "注·魏晋（王弼《老子注》第九章）",
+     "sense_in_context": "成者不居，继以更替",
+     "record_id": "LC2-WB-C09-R02"
+    },
+    {
+     "source_id": "DS03",
+     "quote": "日往则月来，月往则日来",
+     "layer": "传·先秦至秦汉（系辞下）",
+     "sense_in_context": "去与来互相接替"
+    }
+   ],
+   "fit": "相代是二者互相接替：一去一来，彼此之数相抵。这正合有限族中开始成立与不再成立同其复现、相差有界（keep_pace、coming_recurs_iff）。「日夜相代」不说日胜夜或夜胜日，只说交替的同步。",
+   "not_carried": "命作定数或天命；代作世代、朝代、代理；「知不能规其始」作为不可知论；相代作必然周期（理论只说有限族中同步，不说周期）。",
+   "course": "先秦庄子「日夜相代」（ZH1-C05-R-07），系辞「日往则月来」（WP-XCX-C04-S02-R01，属C05）。魏晋王弼「四时更运，功成则移」（LC2-WB-C09-R02）。后世「代谢」转为新陈代谢义。",
+   "alternatives": [
+    {
+     "name": "消息",
+     "why_not": "消息之息是增长，与不息之息相反，易混。"
+    },
+    {
+     "name": "偕行",
+     "why_not": "「与时偕行」说合时，不是同步计数。"
+    },
+    {
+     "name": "往來",
+     "why_not": "已留给普查平衡。"
+    },
+    {
+     "name": "相推",
+     "why_not": "「刚柔相推」重在推动而生变化，不是数的同步。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.keep_pace",
+    "Becoming.coming_recurs_iff",
+    "Becoming.Web.arising_recurs_iff",
+    "Becoming.World.CountedWithin.arising_iff_ceasing"
+   ]
+  },
+  {
+   "concept": "普查平衡（Becoming.held_over_stretch；Becoming.Listed.across；Becoming.Web.Census：终时所存加已不再成立者，等于始时所存加开始成立者）— census balance: end + ceased = start + came",
+   "name": "往來",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "DS03",
+     "quote": "往者，屈也；",
+     "layer": "传·先秦至秦汉（系辞下）",
+     "sense_in_context": "往是去者",
+     "record_id": "WP-XCX-C04-S03-R01"
+    },
+    {
+     "source_id": "DS03",
+     "quote": "来者，信也。",
+     "layer": "传·先秦至秦汉（系辞下）",
+     "sense_in_context": "来是至者",
+     "record_id": "WP-XCX-C04-S03-R02"
+    },
+    {
+     "source_id": "DS02",
+     "quote": "往来不穷谓之通",
+     "layer": "传·先秦至秦汉（系辞上）",
+     "sense_in_context": "去来不止，叫做通"
+    },
+    {
+     "source_id": "DS01",
+     "quote": "物有往来而执之，故必失矣。",
+     "layer": "注·魏晋（王弼《老子注》第二十九章）",
+     "sense_in_context": "物有去有来，执定一态便失去它",
+     "record_id": "LC2-WB-C29-R01"
+    },
+    {
+     "source_id": "CT1-S-ZL",
+     "quote": "是謂昔物自在昔，不從今以至昔；今物自在今，不從昔以至今。",
+     "layer": "论·魏晋南北朝（僧肇《物不迁论》）",
+     "sense_in_context": "否认物跨时迁移意义上的往来",
+     "record_id": "CT1-R-ZL03"
+    }
+   ],
+   "fit": "往计去者（不再成立者），来计至者（开始成立者）。普查平衡说：今存加往，等于昔存加来；任一段上往来之数相抵。系辞「往来不穷谓之通」说去来不止即是通，合于有限族中往来同其复现。",
+   "not_carried": "往来作交往、人事往还；往来作同一物从一时迁到另一时（肇论「物不相往来」所破之义）——理论的往来只是计数，不说有物跨步迁移；以屈求信的目的价值。",
+   "course": "先秦系辞有「往来不穷」「往者屈来者信」。魏晋王弼说「物有往来」（LC2-WB-C29-R01）；僧肇否认物之往来（CT1-R-ZL03），正好显出理论之往来是计数的往来，不是物的迁移。宋明张载以「往来屈伸」为气之常。计数义是本名的延伸。",
+   "alternatives": [
+    {
+     "name": "出入",
+     "why_not": "带内外边界之方位，普查不设内外。"
+    },
+    {
+     "name": "存亡",
+     "why_not": "亡已作不再成立，存另作持存。"
+    },
+    {
+     "name": "損益",
+     "why_not": "属量的流与交换（C04）。"
+    },
+    {
+     "name": "生死之數",
+     "why_not": "专指生命。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.held_over_stretch",
+    "Becoming.Listed.across",
+    "Becoming.Web.Census",
+    "Becoming.over_stretch"
+   ]
+  },
+  {
+   "concept": "列一次即判定同一（Becoming.listsOnce_iff_decided；Becoming.IdentityDecided：每项只列一次的名单存在，当且仅当同一之判定可行；这是普查的前提）— listing once is decided identity",
+   "name": "定數",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ22",
+     "quote": "状变而实无别而为异者，谓之化。有化而无别，谓之一实。此事之所以稽实定数也。",
+     "layer": "论·先秦（荀子·正名，战国末）",
+     "sense_in_context": "先辨实之同异，然后能定其数"
+    }
+   ],
+   "fit": "荀子先辨「二实」与「一实」，然后才「稽实定数」：数以判定实之同异为前提。理论中，普查须每项只列一次，而只列一次正等价于同一之判定可行（listsOnce_iff_decided）。",
+   "not_carried": "定数作命定之数、气数（后世命运义，很强）；数作术数；定作人为规定。",
+   "course": "先秦荀子「稽实定数」。后世「定数」多转为命数、劫数（宋明以下小说与术数尤甚）。中华版须注明取荀子义。",
+   "alternatives": [
+    {
+     "name": "稽數",
+     "why_not": "无独立用例，是新造。"
+    },
+    {
+     "name": "計",
+     "why_not": "计在理论中留给计数（计入），并带计谋义。"
+    },
+    {
+     "name": "料民",
+     "why_not": "指国家清点户口，属治理层。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.listsOnce_iff_decided",
+    "Becoming.ListsOnce",
+    "Becoming.IdentityDecided"
+   ]
+  },
+  {
+   "concept": "不息（Becoming.Web.Unceasing：某形成在任意晚之步仍有生起，同一形成可再生起；弱义）— unceasing arising (weak)",
+   "name": "不息",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-JG46",
+     "quote": "上六：冥升，利于不息之貞。",
+     "layer": "经·先秦（周易经文·升上六）",
+     "sense_in_context": "运行不停",
+     "record_id": "JL-R039"
+    },
+    {
+     "source_id": "YD-HX02",
+     "quote": "天行健，君子以自強不息。",
+     "layer": "传·先秦至秦汉（乾大象）",
+     "sense_in_context": "天之运行不停",
+     "record_id": "HX-R005"
+    },
+    {
+     "source_id": "RU1-S-ZY",
+     "quote": "故至誠無息。不息則久，久則徵，",
+     "layer": "传·先秦至秦汉（中庸，成书年代有争议）",
+     "sense_in_context": "不停而后能久",
+     "record_id": "RU1-ZY-34-R01"
+    },
+    {
+     "source_id": "YD-CY",
+     "quote": "乾，健也，健而無息之謂乾。",
+     "layer": "注·宋明（程颐《伊川易传》）",
+     "sense_in_context": "以健而无息界定乾",
+     "record_id": "CY-R001"
+    }
+   ],
+   "fit": "不息说的是不停于止，不是每一物都不止：升上六「不息之贞」、乾大象「自强不息」都说运行不停。理论的不息是生起在任意晚之步复现（Web.Unceasing），不要求任一形成永远活动，且同一形成可再起，故取其弱义。在有限族中，它等价于止息也复现（Web.unceasing_iff）。",
+   "not_carried": "君子自强的德行与努力之正价；「无息」作至诚之德；天行作天的意志；不息作某一形成永不止（强义）；生生不息之「生生」——生生不息另需整体之生生与更多可成（D5）。",
+   "course": "先秦升卦经文有「不息之贞」（JL-R039）；易大象有「自强不息」（HX-R005，属C05）；中庸有「至诚无息，不息则久」（RU1-ZY-34-R01）。宋明程颐说「健而无息」（CY-R001）；「生生不息」成为宋明以降的成语。D5 取不息为更新或生起的复现，息为生生不息所否定者。",
+   "alternatives": [
+    {
+     "name": "無息",
+     "why_not": "中庸「至诚无息」带德性之正价。"
+    },
+    {
+     "name": "不已",
+     "why_not": "多说德行与天命之不止（维天之命於穆不已），带天的意志。"
+    },
+    {
+     "name": "不窮",
+     "why_not": "「往来不穷」说通，近于同步，而非生起之复现。"
+    },
+    {
+     "name": "恒",
+     "why_not": "恒作恒常、恒性，带固定之性。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "high",
+   "lean": [
+    "Becoming.Web.Unceasing",
+    "Becoming.Web.unceasing_iff",
+    "Becoming.Web.Unceasing.rises"
+   ]
+  },
+  {
+   "concept": "整体与部分（Becoming.Web.Whole：整体活动当且仅当某部分活动；Becoming.Web.Whole.needs_arising：由会终止之部分组成而持续之整体，只靠部分不断生起而持续）— whole and parts",
+   "name": "兼／體",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "MI1-S-JS",
+     "quote": "體，分於兼也。",
+     "layer": "经·先秦（墨经）",
+     "sense_in_context": "体是兼（整体）之分"
+    },
+    {
+     "source_id": "MI1-S-SS",
+     "quote": "損，偏也者，兼之體也。其體或去或存，謂其存者損。",
+     "layer": "说·先秦（墨经说）",
+     "sense_in_context": "整体之部分或去或存，所存者仍在",
+     "record_id": "MI1-R-SS-damage"
+    },
+    {
+     "source_id": "FO2-FQ",
+     "quote": "總相者，一舍多德故；",
+     "layer": "论·隋唐（法藏《华严五教章》）",
+     "sense_in_context": "后起的同构：总为一舍，含多部分",
+     "record_id": "FO2-FQ-R028"
+    },
+    {
+     "source_id": "FO2-FQ",
+     "quote": "本以別成總，由無別故總不成也，",
+     "layer": "论·隋唐（法藏）",
+     "sense_in_context": "整体只依部分而成",
+     "record_id": "FO2-FQ-R036"
+    }
+   ],
+   "fit": "墨经以兼为整体，以体为其部分，并说「其体或去或存」：部分或去，整体不立刻不在。这正合 Web.Whole（整体的活动由某部分的活动定）与 Whole.covered。部分或去或存而整体仍在，也就是整体只靠部分的持续与更新而持续。",
+   "not_carried": "「分於兼」的构成义（理论只有活动之相合，不说整体由部分构成）；兼作兼爱之伦理、兼并之争夺；體作身体、本体、体用之体；与理论「体现（Embodied）」的体字相撞，中华版须分用。",
+   "course": "先秦墨经「体分于兼」（MI1-R-SS-damage）；荀子之「兼」多为兼并、兼覆。隋唐华严「总相／别相」是同一结构的佛学表述（FO2-FQ-R028/R029/R036）。宋明「体用」「理一分殊」转向本体论（非本名所取）。",
+   "alternatives": [
+    {
+     "name": "總／別",
+     "why_not": "华严总别与同异成坏六相并举，带圆融之全体观，且晚出。"
+    },
+    {
+     "name": "全／分",
+     "why_not": "分留给延续中的分裂。"
+    },
+    {
+     "name": "一／多",
+     "why_not": "一在老子、王弼为先在之一。"
+    },
+    {
+     "name": "大全",
+     "why_not": "带全体之独一中心。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.Whole",
+    "Becoming.Web.Whole.covered",
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.Web.Whole.needs_new",
+    "Becoming.Generations.generations"
+   ]
+  },
+  {
+   "concept": "终止（Becoming.Web.Ends：一形成的活动自某步后永不再有；在 Wholes 中是部分的条件，不是定律）— ends (activity ends for good)",
+   "name": "終",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-HX01",
+     "quote": "不續終也",
+     "layer": "传·先秦至秦汉（未济彖）",
+     "sense_in_context": "终与续相对：终是不再续"
+    },
+    {
+     "source_id": "DS02",
+     "quote": "原始反终，故知死生之说。",
+     "layer": "传·先秦至秦汉（系辞上）",
+     "sense_in_context": "终是一事历程之尽处",
+     "record_id": "WP-XCS-C04-S03-R01"
+    },
+    {
+     "source_id": "ZH1-S25",
+     "quote": "時有終始，世有變化",
+     "layer": "经·先秦（庄子杂篇·则阳，年代有争议）",
+     "sense_in_context": "时之终始"
+    },
+    {
+     "source_id": "RU1-S-DX",
+     "quote": "物有本末，事有終始",
+     "layer": "传·先秦至秦汉（大学，年代有争议）",
+     "sense_in_context": "事有终始"
+    }
+   ],
+   "fit": "终是一事历程的尽处，此后不再续。未济彖「不续终也」把终与续相对，正合 Ends：自某步后不再活动。在 Wholes 中，终是部分所满足的条件（部分会终），不是普遍定律。",
+   "not_carried": "善终、完满（终其天年之正价）；死亡；终则有始之循环（C05之名）；终作目的（终极）。",
+   "course": "先秦易传有「原始反终」，未济有「不续终也」（RO tuan-jiji-weiji）；庄子则阳有「时有终始」；荀子有「慎终如始」（议兵）。宋明「终始」转向诚之终始（张载「诚有是物则有终有始」）。须与C05的「终始」协调：本名只取终之「不再续」一义。",
+   "alternatives": [
+    {
+     "name": "盡",
+     "why_not": "兼耗尽之量义（C04）与穷尽之知义。"
+    },
+    {
+     "name": "亡",
+     "why_not": "已用于一步之不再成立；终是自某步后永不再成立。"
+    },
+    {
+     "name": "死",
+     "why_not": "是生命专用词。"
+    },
+    {
+     "name": "止",
+     "why_not": "近于停息。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.Ends",
+    "Becoming.Web.Brief",
+    "Becoming.Web.Carries.ends_within"
+   ]
+  },
+  {
+   "concept": "跨步之同一（Becoming.Reidentify；Becoming.Web.reidentify_step；Becoming.World.fixed_iff：同一由命名的型式承载，只在一步之后无他项与之同立处被固定）— identity across steps carried by the pattern of names",
+   "name": "一實",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "RU2-S-XZ22",
+     "quote": "状变而实无别而为异者，谓之化。有化而无别，谓之一实。此事之所以稽实定数也。",
+     "layer": "论·先秦（荀子·正名，战国末）",
+     "sense_in_context": "状变而无别，仍是一实"
+    },
+    {
+     "source_id": "RU2-S-XZ22",
+     "quote": "状同而为异所者，虽可合，谓之二实。",
+     "layer": "论·先秦（荀子·正名）",
+     "sense_in_context": "状同而所异，是二实"
+    },
+    {
+     "source_id": "MI1-S-JS",
+     "quote": "化，徵易也。",
+     "layer": "经·先秦（墨经）",
+     "sense_in_context": "化即可见之征象改变"
+    },
+    {
+     "source_id": "MI1-S-SS",
+     "quote": "化，若鼃爲鶉。",
+     "layer": "说·先秦（墨经说）",
+     "sense_in_context": "征象全换，仍说是那一个在化"
+    }
+   ],
+   "fit": "荀子以状（可见之形）与所（处所）辨实：状变而实无别，是化而为一实；状同而所异，是二实。同一不由状决定，而由关系（所、无别）决定。理论中，同一跨步由命名型式承载，状（标记）可变（reidentify_step），只在平衡之世界、一步之后无他项同立处被固定（World.fixed_iff）。荀子「二实」之状同所异，正是 Twins.naming_not_identifiesAlike。",
+   "not_carried": "实作实体、底质；名实论中「实先于名」——理论中同一是读法（命名），不由底下之实决定；佛典「一实相」（法华一实）的究竟义。",
+   "course": "先秦荀子正名有「一实／二实」（RO xunzi-hua-yi-shi），墨经有「化，徵易也」。魏晋名实之辨转入玄学。隋唐天台以「一实」为一实相、一乘义（非本名所取）。",
+   "alternatives": [
+    {
+     "name": "同一",
+     "why_not": "现代词，无先秦作「跨步同一」解的用例。"
+    },
+    {
+     "name": "不遷",
+     "why_not": "肇论物不迁否认跨步的联系，不是同一。"
+    },
+    {
+     "name": "恒",
+     "why_not": "恒作恒常之性。"
+    },
+    {
+     "name": "化",
+     "why_not": "化是状变的过程；荀子、墨经以化为保持一实之变，可另作变化之名，留给C01。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Reidentify",
+    "Becoming.Web.reidentify_step",
+    "Becoming.World.fixed_iff",
+    "Becoming.Twins.naming_not_identifiesAlike",
+    "Becoming.Lineage.readings"
+   ]
+  },
+  {
+   "concept": "延续关系（Becoming.Web.Continues；ArisesFrom；CeasesFrom；NoSplit；NoMerge：一步之后哪一形成延续哪一形成，可有分裂与并合）— continuation relation with split and merge",
+   "name": "相續",
+   "form": "复词",
+   "pre_qin": false,
+   "attestations": [
+    {
+     "source_id": "YD-HX01",
+     "quote": "不續終也",
+     "layer": "传·先秦至秦汉（未济彖）",
+     "sense_in_context": "续是前后之接连（单字）"
+    },
+    {
+     "source_id": "FO1-S-MMK",
+     "quote": "若法從緣生，不即不異因，是故名實相，不斷亦不常。",
+     "layer": "论·魏晋南北朝（鸠摩罗什译《中论》）",
+     "sense_in_context": "后者延续前者，既不是同一，也不断开",
+     "record_id": "FO1-R-M20"
+    },
+    {
+     "source_id": "FO2-QX",
+     "quote": "二者相續相。依於智故生其苦樂，覺心起念相應不斷故。",
+     "layer": "论·魏晋南北朝（《大乘起信论》，传真谛译，成书有争议）",
+     "sense_in_context": "念念相应不断",
+     "record_id": "FO2-QX-R017"
+    },
+    {
+     "source_id": "FO1-S-CY",
+     "quote": "三、恒隨轉。謂要長時一類相續，至究竟位，方成種子。",
+     "layer": "论·隋唐（玄奘译《成唯识论》）",
+     "sense_in_context": "个体刹那生灭而一类相续",
+     "record_id": "FO1-R-CY17"
+    },
+    {
+     "source_id": "FO2-MH",
+     "quote": "習因習續於前，習果剋獲於後，",
+     "layer": "论·隋唐（智顗《摩诃止观》）",
+     "sense_in_context": "前因相续，后果克获",
+     "record_id": "FO2-MH-R017"
+    }
+   ],
+   "fit": "相续说的是前后不即不异的接连：后者延续前者，而不与之为一，也不断开。理论的延续关系R正是一步前后形成之间的关系：它不把二者合为同一（同一是另一读法），而以「无前者被延续」界定 ArisesFrom，以「无后者延续」界定 CeasesFrom。一类相续容许个体刹那生灭而类相续（Lineage.readings）。",
+   "not_carried": "佛典相续中业力因果（善恶业报）的传递；起信「相续相」作为妄心之相的评价；「一类」作固定的种性；相续必不断（理论容许延续停止：CeasesFrom）。",
+   "course": "先秦有单字「续」（未济「不续终也」）。鸠摩罗什译中论说「不断亦不常」（FO1-R-M20）；起信论有「相续相」（FO2-QX-R017）；玄奘译唯识有「一类相续」（FO1-R-CY17）；天台有「习因习续于前」（FO2-MH-R017）。宋明以后，「相续」转为一般连续义。复词以佛典为主，故 pre_qin 记为 false。",
+   "alternatives": [
+    {
+     "name": "繼",
+     "why_not": "已用于接续（承接前者之依存），较窄。"
+    },
+    {
+     "name": "傳",
+     "why_not": "留给型式之传递（PatternPassing），且带授受之主体。"
+    },
+    {
+     "name": "延",
+     "why_not": "作延长、延迟，带时长而非关系。"
+    },
+    {
+     "name": "連",
+     "why_not": "多为空间相连。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.Continues",
+    "Becoming.Web.ArisesFrom",
+    "Becoming.Web.CeasesFrom",
+    "Becoming.Web.NoSplit",
+    "Becoming.Web.NoMerge",
+    "Becoming.Web.Census.balanceFrom"
+   ]
+  },
+  {
+   "concept": "连续（Becoming.Reidentify.KeepsActive：一种命名保持凡在相继两步皆活动者之连续）— continuity of activity across successive steps",
+   "name": "無閒",
+   "form": "复词",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "MI1-S-JS",
+     "quote": "次，無閒而不攖攖也。",
+     "layer": "经·先秦（墨经）",
+     "sense_in_context": "次：相邻之间无间隙，又不相交叠（空间义）"
+    },
+    {
+     "source_id": "FO1-S-CY",
+     "quote": "謂體纔生無間必滅",
+     "layer": "论·隋唐（玄奘译《成唯识论》）",
+     "sense_in_context": "无间：中间无隔、紧接（时间义）",
+     "record_id": "FO1-R-CY17"
+    }
+   ],
+   "fit": "连续就是相继两步之间无空步。墨经「次，无间而不撄」说相邻无间隙、又不重叠，移到步序上正是 t 与 t+1 之相继。KeepsActive 要求：凡在相继两步皆活动者，换一命名后仍在相继两步皆活动。",
+   "not_carried": "墨经「次」的空间几何义（相邻之形体）；佛典「无间」的业道义（无间地狱、无间业）；「亲密无间」的情感义。",
+   "course": "先秦墨经以「无间」界定「次」。佛典以「无间」说刹那紧接（成唯识论种子六义），并有「无间道」。后世「无间」多为不间断。由空间转用到步序，是本名的转义。",
+   "alternatives": [
+    {
+     "name": "相續",
+     "why_not": "已用于延续关系R。"
+    },
+    {
+     "name": "不斷",
+     "why_not": "中论「不断亦不常」之不断指因果不断灭，属延续关系。"
+    },
+    {
+     "name": "連",
+     "why_not": "多为空间与人事之连。"
+    },
+    {
+     "name": "次",
+     "why_not": "有次第、等次之等级义。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "low",
+   "lean": [
+    "Becoming.Reidentify.KeepsActive",
+    "Becoming.Web.arises_of_keepsActive",
+    "Becoming.Web.unceasing_iff_of_keepsActive_both"
+   ]
+  },
+  {
+   "concept": "接续（Becoming.Reidentify.KeepsTenure；Becoming.Succession.readings：后继者承接前者之依存，使前者的持守延续到后者）— succession",
+   "name": "繼",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "YD-JP30",
+     "quote": "明兩作離，大人以繼明照于四方。",
+     "layer": "传·先秦至秦汉（离大象）",
+     "sense_in_context": "两作：两次兴起，分开命名；继明：作一相继之明",
+     "record_id": "TP-H30-DX-R02"
+    },
+    {
+     "source_id": "DS02",
+     "quote": "继之者善也",
+     "layer": "传·先秦至秦汉（系辞上）",
+     "sense_in_context": "继：承接道之运行",
+     "record_id": "XC-R006"
+    }
+   ],
+   "fit": "离大象把同一明读为「两作」（分开命名，两次生起）与「继明」（作一相继之明），这正是 Lineage.readings：分开命名则成员复起、生成不息，作一命名则谱系每步皆活动、无生起。继进一步强调后者承接前者之所依：后继者承接前者的持守（Succession.readings）。",
+   "not_carried": "继承的身份、财产与名位（继统、嗣位）；大人作统治者；「继之者善」之善作正价（理论不由继本身给出价值）。",
+   "course": "先秦离大象有「继明」，系辞有「继之者善也」（XC-R006）。后世继统、继嗣转为宗法与政统的承继（非本名所取）。",
+   "alternatives": [
+    {
+     "name": "嗣",
+     "why_not": "专指宗法后嗣。"
+    },
+    {
+     "name": "承",
+     "why_not": "带上下承受的尊卑。"
+    },
+    {
+     "name": "續",
+     "why_not": "已入相续之名。"
+    },
+    {
+     "name": "傳",
+     "why_not": "留给型式之传。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Reidentify.KeepsTenure",
+    "Becoming.Succession.readings",
+    "Becoming.Succession.one_way",
+    "Becoming.Lineage.readings"
+   ]
+  },
+  {
+   "concept": "休眠（Becoming.Dormancy；Becoming.Hibernation.readings：一形成某些步不活动，而以其依托保持；再活动时不算生起）— dormancy",
+   "name": "蟄",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "DS03",
+     "quote": "龙蛇之蛰，以存身也。",
+     "layer": "传·先秦至秦汉（系辞下）",
+     "sense_in_context": "蛰：暂不活动而存身",
+     "record_id": "WP-XCX-C04-S03-R05"
+    }
+   ],
+   "fit": "蛰是暂不活动而存身，正合休眠：不活动，而由其所依托（穴）保持；醒来是再活动。Persistence 证明，在持存的读法下，醒来不是生起（waking_not_arising）。",
+   "not_carried": "「以存身」的目的论（为了存身）；龙蛇的神物义；惊蛰的节气定位。",
+   "course": "先秦系辞有「龙蛇之蛰」（RO xici-chihuo-longshe）。后世「蛰伏」转为隐退待时的人事义。",
+   "alternatives": [
+    {
+     "name": "藏",
+     "why_not": "是C02／C04储备、蓄藏之名的候选，偏于储备，而非不活动。"
+    },
+    {
+     "name": "眠",
+     "why_not": "专指睡眠。"
+    },
+    {
+     "name": "伏",
+     "why_not": "带隐伏、伏击的意图。"
+    },
+    {
+     "name": "潛",
+     "why_not": "乾初九「潜龙勿用」中是位之义。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Dormancy.held_both",
+    "Becoming.Dormancy.classes",
+    "Becoming.Hibernation.readings",
+    "Becoming.Web.waking_not_arising"
+   ]
+  },
+  {
+   "concept": "持存（Becoming.Web.Holds；Becoming.Web.persisting：一形成在不活动之步仍由其持有之关系保持，因而不算止息）— holds (persists while held)",
+   "name": "存",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "DS03",
+     "quote": "龙蛇之蛰，以存身也。",
+     "layer": "传·先秦至秦汉（系辞下）",
+     "sense_in_context": "不活动而身被保持"
+    },
+    {
+     "source_id": "MI1-S-SS",
+     "quote": "損，偏也者，兼之體也。其體或去或存，謂其存者損。",
+     "layer": "说·先秦（墨经说）",
+     "sense_in_context": "部分之持存与离去"
+    },
+    {
+     "source_id": "MI1-S-SS",
+     "quote": "身處、志往，存亡也。",
+     "layer": "说·先秦（墨经说）",
+     "sense_in_context": "存与亡在同一步中分属不同规定"
+    }
+   ],
+   "fit": "存说的是保持在场，不论是否活动：蛰而存身，正是不活动而被持守；墨经「其体或去或存」说部分的持存与离去。",
+   "not_carried": "存作存在之本体（存有）；「存心养性」的修养义；存亡作国家兴亡义。",
+   "course": "先秦墨经、系辞。孟子「存其心」、宋明「存理去欲」都是修养义（非本名所取）。",
+   "alternatives": [
+    {
+     "name": "守",
+     "why_not": "带主动守持与「守中」的修养义。"
+    },
+    {
+     "name": "持",
+     "why_not": "留给维持（C05）。"
+    },
+    {
+     "name": "在",
+     "why_not": "太泛。"
+    },
+    {
+     "name": "保",
+     "why_not": "带保护的施者。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Web.Holds",
+    "Becoming.Web.persisting",
+    "Becoming.Web.named_throughout",
+    "Becoming.Web.arises_persisting_iff"
+   ]
+  },
+  {
+   "concept": "分裂与并合（延续关系下 Becoming.Web.NoSplit／NoMerge 的否定；Becoming.Fork；Becoming.Merge：一形成延续为二，或二形成延续为一）— split and merge under continuation",
+   "name": "分／合",
+   "form": "单字",
+   "pre_qin": true,
+   "attestations": [
+    {
+     "source_id": "ZH1-S02",
+     "quote": "其分也，成也；其成也，毀也。凡物无成與毀，復通爲一。",
+     "layer": "经·先秦（庄子内篇·齐物论）",
+     "sense_in_context": "一分为二，即另外二者的开始成立",
+     "record_id": "ZH1-C02-R-09"
+    },
+    {
+     "source_id": "ZH1-S19",
+     "quote": "天地者，萬物之父母也，合則成體，散則成始。",
+     "layer": "经·先秦（庄子外篇·达生，年代有争议）",
+     "sense_in_context": "多合为一体"
+    }
+   ],
+   "fit": "齐物论「其分也成也」：一分为二，即另外二者的开始成立，正是分裂之下延续与生起的关系（Fork.split_unceasing：容许分裂时，生起可只由分裂而复现）。达生「合则成体」：多合为一，即并合（Merge.merging）。",
+   "not_carried": "分作名分、职分（社会分工，C13）；合作合同、合作的社会义；天地作万物之父母（生殖源头之先在）。",
+   "course": "先秦庄子齐物论、达生。荀子之「分」转为名分与群分（C13）。宋明「理一分殊」之分是本体之分殊（非本名所取）。",
+   "alternatives": [
+    {
+     "name": "裂／并",
+     "why_not": "裂带破坏，并带兼并之争。"
+    },
+    {
+     "name": "離／合",
+     "why_not": "离在易为卦名，并兼附丽义。"
+    },
+    {
+     "name": "化分／化合",
+     "why_not": "是现代化学词。"
+    }
+   ],
+   "coinage": false,
+   "confidence": "medium",
+   "lean": [
+    "Becoming.Fork.split_unceasing",
+    "Becoming.Merge.merging",
+    "Becoming.Budding.growth_without_arising",
+    "Becoming.Confluence.confluence",
+    "Becoming.forces_iff_noSplit"
+   ]
+  }
+ ],
+ "entries": [
+  {
+   "id": "mojing-yi-cheng-wang",
+   "record_ids": [],
+   "source_id": "MI1-S-JS",
+   "fragments": [
+    "已，成、亡。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.ComesToBe",
+    "Becoming.CeasesToBe",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：墨经把「已」（一事之完成）分为两向：成与亡。经说举例「已，爲衣，成也。治病，亡也。」：做衣服是衣这一规定由不成立到成立，治病是病这一规定由成立到不成立。这正是脊柱上一步之变的两种：ComesToBe p t（¬p t ∧ p (t+1)）与 CeasesToBe p t（p t ∧ ¬p (t+1)）。对象是任一规定，不预设实体；生起／止息、形成／消解、聚散，都是这两者在活动、要求、水平上的读法（Web.change_readings）。「治病」一例还显出：病之亡就是愈之成，即同一步可读作一规定之亡与其否定之成。脊柱尚无这一对偶的定理（见 gap）。",
+   "ro_passage": "",
+   "gap": "所缺：成与亡的对偶。拟证（核心，空公理报告）：theorem ceasesToBe_imp_comesToBe_not {p : Nat → Prop} {t : Nat} : CeasesToBe p t → ComesToBe (fun s => ¬ p s) t；以及在 [Decidable (p t)] 下的 iff：CeasesToBe p t ↔ ComesToBe (fun s => ¬ p s) t（反向需要 ¬¬p t → p t）。对称地有 ComesToBe p t → CeasesToBe (fun s => ¬ p s) t。最近的声明：Becoming.ComesToBe、Becoming.CeasesToBe、Becoming.Hexagram.ceasing_recurs、Becoming.Negation.each_through_other。已 grep 全部 Becoming/*.lean：ComesToBe／CeasesToBe 只施于活动、水平、爻之实现等谓词，没有施于否定谓词的定理。",
+   "layer": "经·先秦（墨经，战国后期）",
+   "locator": "《墨子·經上》「已」条；经说见《經說上》",
+   "tradition": "墨／名辩",
+   "work": "《墨子·經上》",
+   "names_used": [
+    "成／亡"
+   ],
+   "relational": "关系的、动态的：成亡是规定在步间之变，不是物的有无"
+  },
+  {
+   "id": "mojing-hua-zheng-yi",
+   "record_ids": [],
+   "source_id": "MI1-S-JS",
+   "fragments": [
+    "化，徵易也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.reidentify_step",
+    "Becoming.Lineage.readings",
+    "Becoming.World.fixed_iff"
+   ],
+   "records": [
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：墨经界定「化」为「徵易」，即可见征象的改变；经说举例「化，若鼃爲鶉。」：征象全换，仍说是那一个在化。与理论相合之处：同一跨步不由征象承载，换名之后各步关系不变（Web.reidentify_step）。定域之处：「鼃化为鹑」是一种命名——分开命名，则一者止息、一者生起；作一命名，则无生起。Lineage.readings 证明两读都成立。只在世界平衡、一步之后无他项与之同立处，同一才被固定（World.fixed_iff）。所以「化而保持同一」是读法之一，不是事实的唯一读法。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（墨经，战国后期）",
+   "locator": "《墨子·經上》「化」条；经说见《經說上》",
+   "tradition": "墨／名辩",
+   "work": "《墨子·經上》",
+   "names_used": [
+    "一實"
+   ],
+   "relational": "关系的：同一由命名与关系定，不由征象定"
+  },
+  {
+   "id": "xunzi-zhengming-yi-shi",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "fragments": [
+    "状同而为异所者，虽可合，谓之二实。",
+    "状变而实无别而为异者，谓之化。有化而无别，谓之一实。此事之所以稽实定数也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.World.fixed_iff",
+    "Becoming.World.balanced_reidentify_iff",
+    "Becoming.Web.no_join",
+    "Becoming.Twins.naming_not_identifiesAlike",
+    "Becoming.Twins.left_alike_right",
+    "Becoming.identifiesAlike_iff",
+    "Becoming.listsOnce_iff_decided"
+   ],
+   "records": [
+    "identity-across-steps",
+    "configurations-alike-by-relation",
+    "listing-once-is-decided-identity"
+   ],
+   "reading": "AI读法：荀子以「状」与「所」辨实：状同而所异，是二实；状变而实无别，是化而为一实；并说这是「稽实定数」之所以然。沿 RO 的读法：同一不由状（标记）决定，状同者可以是二（Twins.naming_not_identifiesAlike）；在平衡的世界中，一步之后无他项与之同立处，同一被固定（World.fixed_iff、World.balanced_reidentify_iff）。本条比 RO 多一条声明（理由如下）：「稽实定数」是先定实之同异，然后能数，这正是「每项只列一次的名单存在，当且仅当同一可判定」（Becoming.listsOnce_iff_decided）；普查平衡（往来之数）以此为前提。",
+   "ro_passage": "xunzi-hua-yi-shi",
+   "gap": "",
+   "layer": "论·先秦（荀子，战国末）",
+   "locator": "《荀子·正名》",
+   "tradition": "儒",
+   "work": "《荀子·正名》",
+   "names_used": [
+    "一實",
+    "定數"
+   ],
+   "relational": "关系的：实之同异由所与关系定"
+  },
+  {
+   "id": "laozi-39-de-yi-yi-sheng",
+   "record_ids": [
+    "LE-R057"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "fragments": [
+    "万物得一以生，",
+    "万物无以生将恐灭，"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.coextinct",
+    "Becoming.Web.unsupported_after_loss"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：老子三十九章以「得一以生」与「无以生将恐灭」对举：生起系于所得，所得一失便灭。结构上合于依存：一形成只在其所要求的条件在时活动，条件失则同灭（Web.Dependent、Web.coextinct）；储备只能推迟、不能免除失依之后的终止（Web.unsupported_after_loss）。定域之处：理论只给每一形成各自的条件，不带入「一」作为万物共同的唯一根据。王弼注「物皆各得此一以成…居成则失其母」把一读为「数之始」，本条也不取其为先在之基。本条主要是「生／滅」之名的证据；依存的结构属C02。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（老子，战国）",
+   "locator": "《道德经》第三十九章",
+   "tradition": "道",
+   "work": "《道德经》",
+   "names_used": [
+    "生／滅"
+   ],
+   "relational": "关系的（依存）；「一」若读为唯一根据则否"
+  },
+  {
+   "id": "zhongyong-bu-xi-ze-jiu",
+   "record_ids": [
+    "RU1-ZY-34-R01"
+   ],
+   "source_id": "RU1-S-ZY",
+   "fragments": [
+    "故至誠無息。不息則久，久則徵，"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.Gaps.gaps",
+    "Becoming.Immortal.immortal",
+    "Becoming.Web.Unceasing"
+   ],
+   "records": [
+    "whole-persists-through-generation",
+    "unceasing-generation-needs-renewal"
+   ],
+   "reading": "AI读法：中庸说「不息则久」。若把「久」读为一整体的持续，把「不息」读为其部分生起不止，理论给出的是反向与界限。反向：由各自会终止的部分组成而持续的整体，必有部分在任意晚之步生起（Web.Whole.needs_arising），即「久则不息」。界限：部分生起不止并不保证整体持续——Gaps.gaps 中部分的生起复现，整体却在其间不活动；若部分本不终止，整体可以久而无生起（Immortal.immortal）。所以「不息则久」只在部分的活动相接无间时成立。至诚之德与「徵、悠远、博厚、高明」的价值序不带入。该关系也在C05的候选中（RU1-ZY-34-R01），本条只给整体与部分的读法。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "传·先秦至秦汉（中庸，成书年代有争议）",
+   "locator": "《礼记·中庸》编者连续论证段（至诚无息章）",
+   "tradition": "儒",
+   "work": "《礼记·中庸》",
+   "names_used": [
+    "不息",
+    "兼／體"
+   ],
+   "relational": "动态的；至诚作为德性起点不在理论内"
+  },
+  {
+   "id": "zhuangzi-xin-huo",
+   "record_ids": [],
+   "source_id": "ZH1-S03",
+   "fragments": [
+    "指窮於爲薪，火傳也，不知其盡也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.ByPassing.begins_passed",
+    "Becoming.Web.ByPassing.ends_within",
+    "Becoming.PatternRelay.relay",
+    "Becoming.PatternRelay.stopped_relay"
+   ],
+   "records": [
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：薪尽而火传：每一载体（薪）只燃一段，火这一型式经传递而延续。脊柱上：每个载体只承载两步便终止，型式却每步皆在，因为每一步都有载体把它传给下一个（PatternRelay.relay）；凡载体的承载都由传递开始（Web.ByPassing.begins_passed）。「不知其尽」只在传递不止时成立：传递一停，型式在一个跨度内终止（Web.ByPassing.ends_within、PatternRelay.stopped_relay）。所以是定域，不是不灭之证。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（庄子内篇）",
+   "locator": "《庄子·養生主》篇末",
+   "tradition": "道",
+   "work": "《庄子·養生主》",
+   "names_used": [
+    "相續",
+    "終"
+   ],
+   "relational": "关系的、动态的：型式经载体之间的传递而在"
+  },
+  {
+   "id": "zhuangzi-dasheng-he-san",
+   "record_ids": [],
+   "source_id": "ZH1-S19",
+   "fragments": [
+    "天地者，萬物之父母也，合則成體，散則成始。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Merge.merging",
+    "Becoming.Fork.split_unceasing",
+    "Becoming.Budding.growth_without_arising",
+    "Becoming.Web.Census.balanceFrom"
+   ],
+   "records": [
+    "identity-across-steps",
+    "census-balance-under-continuation"
+   ],
+   "reading": "AI读法：达生说「合则成体，散则成始」：多者合为一体，一体散而为新者之始。在延续关系下：并合是二形成延续为一（Merge.merging），分裂是一形成延续为二；容许分裂时，生起可以只由分裂而复现（Fork.split_unceasing）。定域之处：「散则成始」不是定律——同一分裂也可读作增长而无生起（Budding.growth_without_arising），是否算「始」取决于所取的延续关系；延续之下的普查平衡给出始、合、散之数（Web.Census.balanceFrom）。「天地为万物之父母」的生殖源头义不带入。外篇，年代有争议。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（庄子外篇·达生，年代有争议）",
+   "locator": "《庄子·達生》",
+   "tradition": "道",
+   "work": "《庄子·達生》",
+   "names_used": [
+    "分／合",
+    "聚／散"
+   ],
+   "relational": "动态的；天地父母之源头义不取"
+  },
+  {
+   "id": "zhuangzi-qiwu-fang-sheng-fang-si",
+   "record_ids": [],
+   "source_id": "ZH1-S02",
+   "fragments": [
+    "彼是，方生之說也。雖然，方生方死，方死方生，方可方不可，方不可方可。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Negation.each_through_other",
+    "Becoming.Flow.rise_with_fall",
+    "Becoming.Lineage.readings",
+    "Becoming.Accretion.never_ceases"
+   ],
+   "records": [
+    "the-split-that-makes-sense",
+    "rising-and-falling-in-one-exchange",
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：齐物论「彼是方生」：彼与是相因而同时成立，每一方都经由另一方而界定（Negation.each_through_other）。「方生方死，方死方生」有两处可证的范围。其一，在耗散的族中，一成员的升必伴另一成员同一步的降（Flow.rise_with_fall）。其二，在命名上，同一展开可读作一成员止息而另一成员生起，也可读作一者持续（Lineage.readings）。作为「凡生即在死」的普遍律，它不成立：Accretion 中的形成生起而永不止息（Accretion.never_ceases）。惠施「日方中方睨，物方生方死」（《庄子·天下》）同此，定域相同。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（庄子内篇）",
+   "locator": "《庄子·齊物論》「彼是方生」段",
+   "tradition": "道",
+   "work": "《庄子·齊物論》",
+   "names_used": [
+    "生／滅",
+    "相代"
+   ],
+   "relational": "关系的、动态的：彼是相因"
+  },
+  {
+   "id": "zhuangzi-qiwu-fen-cheng-hui",
+   "record_ids": [
+    "ZH1-C02-R-09",
+    "ZH1-C02-R-10"
+   ],
+   "source_id": "ZH1-S02",
+   "fragments": [
+    "其分也，成也；其成也，毀也。凡物无成與毀，復通爲一。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.keep_pace",
+    "Becoming.Law.lost_stays",
+    "Becoming.Law.drawn_iff_not_returns",
+    "Becoming.Law.DrawnInto.never_back",
+    "Becoming.Flow.rise_with_fall",
+    "Becoming.Flow.standing_with_fall"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "attraction-is-not-returning",
+    "recurrence-without-premise",
+    "rising-and-falling-in-one-exchange"
+   ],
+   "reading": "AI读法：沿 RO 的定域：分、成、毁是同一变的读法（Web.change_readings），有限族中成与毁同步（keep_pace）；「复通为一」只在无损（每一构型都能回返）时成立，有损之律所失者不回（Law.lost_stays、Law.drawn_iff_not_returns）。本条比 RO 多两条声明（理由如下）：「其成也毁也」在耗散的族中有精确形式——一成员升起或开始作为条件而在，必伴另一成员同一步的降（Flow.rise_with_fall、Flow.standing_with_fall）。这是一步之内的成即毁，所需前提只是平衡与耗散这两个所述之局部状态。",
+   "ro_passage": "zhuangzi-qiwu-fen-cheng-hui",
+   "gap": "",
+   "layer": "经·先秦（庄子内篇）",
+   "locator": "《庄子·齊物論》",
+   "tradition": "道",
+   "work": "《庄子·齊物論》",
+   "names_used": [
+    "分／合",
+    "成／亡",
+    "一變三讀"
+   ],
+   "relational": "关系的、动态的"
+  },
+  {
+   "id": "zhuangzi-zhibeiyou-ju-san",
+   "record_ids": [
+    "ZH1-C22-R-02",
+    "ZH1-C22-R-03"
+   ],
+   "source_id": "ZH1-S22",
+   "fragments": [
+    "人之生，氣之聚也，聚則爲生，散則爲死。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.Web.Embodied",
+    "Becoming.Web.Embodied.comesToStand"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "generation-is-replenishment"
+   ],
+   "reading": "AI读法：知北游「人之生，气之聚也」把生起读为聚，把死读为散：生死与聚散是同一变的两种读法。脊柱上：生起与开始作为条件而在，依定义是同一个 ComesToBe 的两读（Web.change_readings）；对于体现的关系项（活动当且仅当水平为正，Web.Embodied），生起即开始作为条件而在（Web.Embodied.comesToStand）。不带入气作万物之底质：理论只需要「某关系项的水平」，不需要一种普遍的质料。外篇，年代有争议。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（庄子外篇·知北游，年代有争议）",
+   "locator": "《庄子·知北遊》",
+   "tradition": "道",
+   "work": "《庄子·知北遊》",
+   "names_used": [
+    "聚／散",
+    "生／滅",
+    "一變三讀"
+   ],
+   "relational": "一元、动态的；气本体不取"
+  },
+  {
+   "id": "xici-jingqi-youhun",
+   "record_ids": [
+    "WP-XCS-C04-S04-R03"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "精气为物，游魂为变，是故知鬼神之情状。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.Web.Embodied.comesToStand",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：系辞以「精气为物」（聚而成物）与「游魂为变」（散而为变）说明鬼神的情状，不另立鬼神为独立实体：所谓鬼神，是同一展开中聚与散的读法。脊柱上：开始／不再作为条件而在与生起／止息是同一变的读法（Web.change_readings、Web.Embodied.comesToStand），过程与框架是同一展开的两读（World.unity）。不带入精气作为特殊之质。易传年代有争议。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "传·先秦至秦汉（系辞上，年代有争议）",
+   "locator": "系辞上·冻结第4章·编者论证段4",
+   "tradition": "易",
+   "work": "《周易·繫辭上》",
+   "names_used": [
+    "聚／散",
+    "一變三讀"
+   ],
+   "relational": "一元的：不另立鬼神之实体"
+  },
+  {
+   "id": "hankangbo-ju-ji-ze-san",
+   "record_ids": [
+    "YCM130-H4-H-01-R01"
+   ],
+   "source_id": "YWH-H4",
+   "fragments": [
+    "精氣煙熅，聚而成物。聚極則散，而遊魂為變也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Embodied.comesToStand",
+    "Becoming.falling_recurs",
+    "Becoming.rising_recurs",
+    "Becoming.Accretion.never_falls"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：韩康伯说「聚而成物，聚极则散」：聚即成物（合 Web.Embodied.comesToStand），聚到极处则散。定域：在有界的族中，若升在任意晚之步复现，降也复现（Becoming.falling_recurs）；反之，降复现必伴升复现，这一方向不需要界（Becoming.rising_recurs，以0为底）。无界时「极则散」不成立：Accretion 中水平每步都升而永不降（Accretion.never_falls）。所以「聚极则散」是有界之律，不是普遍之律。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "注·魏晋南北朝（韩康伯注系辞）",
+   "locator": "周易正義/07.04·韩康伯层·01",
+   "tradition": "易／玄",
+   "work": "《周易正义》所收韩康伯注",
+   "names_used": [
+    "聚／散"
+   ],
+   "relational": "动态的"
+  },
+  {
+   "id": "lin-gang-jin-er-zhang",
+   "record_ids": [
+    "TP-H19-T-R01"
+   ],
+   "source_id": "YD-JP19",
+   "fragments": [
+    "臨，剛浸而長。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.waxWane",
+    "Becoming.Hexagram.waxing",
+    "Becoming.Hexagram.rising",
+    "Becoming.Hexagram.arising_recurs",
+    "Becoming.Hexagram.ceasing_recurs"
+   ],
+   "records": [
+    "hexagrams-on-the-spine"
+   ],
+   "reading": "AI读法：临彖「刚浸而长」：刚爻由下渐长。脊柱的消息律（Hexagram.waxWane：各爻上移一位，上爻出而以其反入于下）从全阴起，阳爻一步一爻自下而上，依次为坤、复、临、泰、大壮、夬、乾（Hexagram.waxing、Hexagram.rising；临是二阳之位）。沿此律的任一运行，某爻在任意晚之步变为阳，也在任意晚之步不再为阳（Hexagram.arising_recurs、Hexagram.ceasing_recurs）。「浸」就是一步一爻的逐步。朱熹「二阳浸长以逼於隂故为临」结构相同，并入本条。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "传·先秦至秦汉（彖传）",
+   "locator": "第19卦臨·彖传",
+   "tradition": "易",
+   "work": "《周易·彖傳》",
+   "names_used": [
+    "成／亡"
+   ],
+   "relational": "动态的"
+  },
+  {
+   "id": "lin-xiao-bu-jiu",
+   "record_ids": [
+    "TP-H19-T-R04"
+   ],
+   "source_id": "YD-JP19",
+   "fragments": [
+    "至于八月有凶，消不久也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Hexagram.six_steps",
+    "Becoming.Hexagram.twelve_steps",
+    "Becoming.Hexagram.waning",
+    "Becoming.falling_recurs",
+    "Becoming.Accretion.never_falls"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：临之长不久，消便至。消息律下，任一卦六步而至其补卦，十二步而复（Hexagram.six_steps、Hexagram.twelve_steps）；自乾起，阴爻自下逐步而长（Hexagram.waning）。临六步之后即其补卦遯（注家或以「八月」当之，此不论）。一般地，有界之量若升复现，则降也复现（falling_recurs）：「盛极转衰」在有界时成立；无界时不成立（Accretion.never_falls）。所以是定域。泰上六「城复于隍」、离九三「日昃之离何可久」同此结构，并入本条。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "传·先秦至秦汉（彖传）",
+   "locator": "第19卦臨·彖传",
+   "tradition": "易",
+   "work": "《周易·彖傳》",
+   "names_used": [
+    "相代"
+   ],
+   "relational": "动态的"
+  },
+  {
+   "id": "li-ji-ming",
+   "record_ids": [
+    "TP-H30-DX-R02"
+   ],
+   "source_id": "YD-JP30",
+   "fragments": [
+    "明兩作離，大人以繼明照于四方。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Lineage.readings",
+    "Becoming.Lineage.one_way",
+    "Becoming.Succession.readings",
+    "Becoming.Succession.one_way"
+   ],
+   "records": [
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：离大象一句含两读。「明两作」：明两次兴起，是分开命名；「继明」：作一相继之明。Lineage.readings 正是此结构：分开命名，成员在每个奇数步生起，生成不息；作一命名，谱系每步都活动，没有生起。作一命名保持分开命名的一切连续活动，还多出分开命名所没有的连续（Lineage.one_way）。「继」进一步承接前者之依存：后继者承接前者的持守（Succession.readings、Succession.one_way）。大人照四方的治理义不带入。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "传·先秦至秦汉（大象）",
+   "locator": "第30卦離·大象",
+   "tradition": "易",
+   "work": "《周易·象傳》",
+   "names_used": [
+    "繼",
+    "無閒"
+   ],
+   "relational": "关系的：同一展开的两种命名"
+  },
+  {
+   "id": "xici-wang-qu-lai-xin",
+   "record_ids": [
+    "WP-XCX-C04-S03-R01",
+    "WP-XCX-C04-S03-R02"
+   ],
+   "source_id": "DS03",
+   "fragments": [
+    "往者，屈也；",
+    "来者，信也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.held_over_stretch",
+    "Becoming.keep_pace",
+    "Becoming.rising_recurs",
+    "Becoming.falling_recurs"
+   ],
+   "records": [
+    "census-balance",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：往为屈，来为信：同一往来之变，读为收缩与伸展。脊柱有两层。计数上：任一段中，终时所存加往者（不再成立者），等于始时所存加来者（开始成立者）（held_over_stretch）；有限族中，往与来之数相差不超过成员数（keep_pace）。量上：屈（降）复现，则信（升）复现（rising_recurs，以0为底）；信复现则屈复现，这只在有界时成立（falling_recurs）。所以往来相抵是定律，屈信互转在有界时成立。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "传·先秦至秦汉（系辞下）",
+   "locator": "系辞下·冻结第4章·编者论证段3",
+   "tradition": "易",
+   "work": "《周易·繫辭下》",
+   "names_used": [
+    "往來",
+    "相代"
+   ],
+   "relational": "动态的"
+  },
+  {
+   "id": "xici-qu-xin-xiang-gan",
+   "record_ids": [
+    "WP-XCX-C04-S03-R03"
+   ],
+   "source_id": "DS03",
+   "fragments": [
+    "屈信相感而利生焉。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Law.Lossless.returns",
+    "Becoming.more_needs_open",
+    "Becoming.Web.Unceasing"
+   ],
+   "records": [
+    "recurrence-without-premise",
+    "unceasing-generation-needs-renewal"
+   ],
+   "reading": "AI读法：屈信相感而利生。若把「利生」读为有所生成：屈信的交替本身是回返——无损之律下，每一构型都回返（Law.Lossless.returns）。这给出不息（生起的复现，Web.Unceasing 的弱义），但不给出更多：要有更多可成，需要对其外开放（more_needs_open）。所以交替而生「利」，在开放与交换处成立；单靠两相交替只得回返，不得生生。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "传·先秦至秦汉（系辞下）",
+   "locator": "系辞下·冻结第4章·编者论证段3",
+   "tradition": "易",
+   "work": "《周易·繫辭下》",
+   "names_used": [
+    "不息"
+   ],
+   "relational": "动态的；利之价值不带入"
+  },
+  {
+   "id": "xici-chihuo-longshe",
+   "record_ids": [
+    "WP-XCX-C04-S03-R04",
+    "WP-XCX-C04-S03-R05"
+   ],
+   "source_id": "DS03",
+   "fragments": [
+    "尺蠖之屈，以求信也。",
+    "龙蛇之蛰，以存身也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.waking_not_arising",
+    "Becoming.Dormancy.held_both",
+    "Becoming.Web.Carries.lasts_within",
+    "Becoming.Web.Carries.ends_within",
+    "Becoming.Web.unsupported_after_loss",
+    "Becoming.Hibernation.readings"
+   ],
+   "records": [
+    "identity-across-steps",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：沿 RO 的定域：蛰是休眠——不活动，而由其依托保持；醒来再活动不算生起（Web.waking_not_arising、Dormancy.held_both）。储备只推迟终止，失去支撑之后终止仍会到来（Web.Carries.lasts_within、Web.Carries.ends_within、Web.unsupported_after_loss）。本条比 RO 多一条 Hibernation.readings，理由是「以存身」正是以其穴持守而不活动的读法。「屈以求信」：屈可以是信的条件，但「以求」的目的不带入，屈不必然得信。朱熹「有终谓先屈而后伸」同此，并入本条。",
+   "ro_passage": "xici-chihuo-longshe",
+   "gap": "",
+   "layer": "传·先秦至秦汉（系辞下）",
+   "locator": "系辞下·冻结第4章·编者论证段3",
+   "tradition": "易",
+   "work": "《周易·繫辭下》",
+   "names_used": [
+    "蟄",
+    "存"
+   ],
+   "relational": "动态的；目的论不取"
+  },
+  {
+   "id": "xici-gang-rou-xiang-tui",
+   "record_ids": [
+    "XC-R015"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "刚柔相推而生变化。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.waxWane",
+    "Becoming.Hexagram.arising_recurs",
+    "Becoming.Hexagram.ceasing_recurs",
+    "Becoming.Negation.each_through_other"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "the-split-that-makes-sense"
+   ],
+   "reading": "AI读法：刚柔相推而生变化：一爻之刚退，即柔进；变化由二者相推而有。脊柱上：消息律下，某爻在任意晚之步成为刚，也在任意晚之步不再为刚（Hexagram.arising_recurs、Hexagram.ceasing_recurs）；两者互相界定（Negation.each_through_other）。「刚之不再成立即柔之开始成立」这一对偶，在脊柱上只对布尔之爻依定义成立，没有一般的定理（见 gap，与墨经「已」条相同）。",
+   "ro_passage": "",
+   "gap": "同 mojing-yi-cheng-wang 的 gap：CeasesToBe p t → ComesToBe (fun s => ¬ p s) t，及可判定时的 iff。最近的声明：Becoming.Hexagram.ceasing_recurs、Becoming.Negation.each_through_other。",
+   "layer": "传·先秦至秦汉（系辞上）",
+   "locator": "系辞上·冻结第二章",
+   "tradition": "易",
+   "work": "《周易·繫辭上》",
+   "names_used": [
+    "成／亡"
+   ],
+   "relational": "动态的、关系的"
+  },
+  {
+   "id": "hankangbo-yinyang-zhuanyi",
+   "record_ids": [
+    "WH-R026"
+   ],
+   "source_id": "YWH-H5",
+   "fragments": [
+    "陰陽轉易，以成化生。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Hexagram.waxWane_returns",
+    "Becoming.Law.Lossless.returns",
+    "Becoming.more_needs_open",
+    "Becoming.Web.Whole.needs_new"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "recurrence-without-premise",
+    "unceasing-generation-needs-renewal"
+   ],
+   "reading": "AI读法：韩康伯注「生生之谓易」：阴阳转易以成化生。转易本身是回返：消息律无损，每一构型都回返（Hexagram.waxWane_returns、Law.Lossless.returns），这给出不息。若把化生读为生生（进一步的生成），则需要更多：持续的整体若由会终止的部分组成，就需要在任一有限名单之外不断有新部分生起（Web.Whole.needs_new），而更多可成需要开放（more_needs_open）。所以转易成就不息，不自成生生；二者之分正是 D5 所说的「有不息而无生生」。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "注·魏晋南北朝（韩康伯注系辞）",
+   "locator": "系辞上·生生之谓易注",
+   "tradition": "易／玄",
+   "work": "《周易正义》所收韩康伯注",
+   "names_used": [
+    "不息",
+    "相代"
+   ],
+   "relational": "动态的"
+  },
+  {
+   "id": "hankangbo-rixin",
+   "record_ids": [
+    "YCM130-H5-H-04-R01"
+   ],
+   "source_id": "YWH-H5",
+   "fragments": [
+    "體化合變，故曰「日新」。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Whole.needs_new",
+    "Becoming.Web.Covered.needs_new",
+    "Becoming.Layered.composed",
+    "Becoming.Layered.arise_again"
+   ],
+   "records": [
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：「体化合变，故曰日新」：随变而化，每日皆新。脊柱给出「日新」的精确条件：持续的整体若由各自会终止的部分组成，必有任一有限名单之外的新部分在任意晚之步生起（Web.Whole.needs_new、Web.Covered.needs_new），这就是日新。若部分可以再起，整体可由同一些部分的再起而持续（Layered.composed、Layered.arise_again）；此时的更新是再起，而不是日新。所以日新在部分会终止时成立。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "注·魏晋南北朝（韩康伯注系辞）",
+   "locator": "周易正義/07.05·韩康伯层·04",
+   "tradition": "易／玄",
+   "work": "《周易正义》所收韩康伯注",
+   "names_used": [
+    "兼／體",
+    "不息"
+   ],
+   "relational": "动态的"
+  },
+  {
+   "id": "kongyingda-sheng-bi-you-si",
+   "record_ids": [
+    "YCM130-H5-K-03-R01"
+   ],
+   "source_id": "YWH-H5",
+   "fragments": [
+    "生必有死，易主勸戒，獎人為善，故云生不云死也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Ends",
+    "Becoming.Accretion.never_ceases",
+    "Becoming.Web.unceasing_iff",
+    "Becoming.Immortal.immortal"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：孔疏「生必有死」。脊柱中，「活动会终止」（Web.Ends）是条件，不是定律：Accretion 的形成生起后永不止息（Accretion.never_ceases），整体也可以无生起而常活动（Immortal.immortal）。可证的范围在族：有限族中，生起在任意晚之步复现，当且仅当止息也复现（Web.unceasing_iff）。所以「生必有死」对有限族的复现成立，对每一个体不成立。「易主劝戒、奖人为善」的价值取舍不带入。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "疏·隋唐（孔颖达等《周易正义》）",
+   "locator": "周易正義/07.05·孔颖达等层·03",
+   "tradition": "易／儒",
+   "work": "《周易正义》",
+   "names_used": [
+    "生／滅",
+    "終"
+   ],
+   "relational": "动态的；劝戒之价值层不取"
+  },
+  {
+   "id": "shuogua-wanwu-chu-zhen",
+   "record_ids": [
+    "WP-SG-C05-S02-R01"
+   ],
+   "source_id": "YD-OW-SG",
+   "fragments": [
+    "萬物出乎震，震，東方也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Hexagram.complement",
+    "Becoming.Hexagram.order_paired",
+    "Becoming.exists_law_iff",
+    "Becoming.Run.keepHistory_shown",
+    "Becoming.shown_le_iff",
+    "Becoming.Hexagram.Trigram.stations",
+    "Becoming.Hexagram.Trigram.stations_not_commutes",
+    "Becoming.Hexagram.Trigram.ringRule3_rotate",
+    "Becoming.Hexagram.Trigram.stations_not_rules",
+    "Becoming.Hexagram.Trigram.rearrange3_complement",
+    "Becoming.Hexagram.Trigram.rearrange3_not_stations",
+    "Becoming.Hexagram.Trigram.opposite_stations"
+   ],
+   "records": [
+    "place-relations-in-context",
+    "histories-fix-law-up-to-dead-ends",
+    "process-and-frame-as-readings",
+    "hexagram-arrangements-and-laws"
+   ],
+   "reading": "AI读法：沿 RO 的相分：说卦把万物之出（生起）固定于震的方位与时令。卦位的排列是一种读法：卦的补卦、配对与运行在脊柱上可证（Hexagram.complement、Hexagram.order_paired），而后天方位的次序不由任何一步之律给出（Hexagram.Trigram.stations_not_rules、stations_not_commutes）；历史只把律定到死路为止（exists_law_iff、shown_le_iff）。所以生起系于一方位，是框架的选择，不是生起之律。",
+   "ro_passage": "shuogua-di-chu-zhen",
+   "gap": "",
+   "layer": "传·先秦至秦汉（说卦）",
+   "locator": "说卦·第五章·编者论证段02",
+   "tradition": "易",
+   "work": "《周易·說卦》",
+   "names_used": [
+    "生／滅"
+   ],
+   "relational": "否：生起被固定于方位，是框架之选"
+  },
+  {
+   "id": "xugua-tun-meng",
+   "record_ids": [
+    "WP-XG-C01-S02-R03",
+    "WP-XG-C01-S03-R02"
+   ],
+   "source_id": "YD-OW-XG",
+   "fragments": [
+    "屯者盈也，屯者物之始生也。",
+    "物生必蒙，故受之以蒙 ；蒙者蒙也，物之穉也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Hexagram.order_paired",
+    "Becoming.exists_law_iff",
+    "Becoming.shown_le_iff",
+    "Becoming.Web.Arises"
+   ],
+   "records": [
+    "hexagram-arrangements-and-laws",
+    "process-and-frame-as-readings"
+   ],
+   "reading": "AI读法：序卦把屯读为「物之始生」，把蒙读为「物之穉」：卦序被读作一物生起后的阶段。脊柱上：卦序中卦对的配对可证（Hexagram.order_paired），而对与对之间的次序只是一张表的运行，不由一步之律给出；一段历史只把律定到其死路为止（exists_law_iff、shown_le_iff）。所以「始生→穉」是对卦序的阶段读法：生起（Web.Arises）之后有一段，但「必蒙」之必然不被证明。「屯受之以蒙」之律（WP-XG-C01-S03-R01）属C07。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "传·先秦至秦汉（序卦，年代有争议）",
+   "locator": "序卦·上篇·编者论证段02—03",
+   "tradition": "易",
+   "work": "《周易·序卦》",
+   "names_used": [
+    "生／滅"
+   ],
+   "relational": "动态的；「必」之必然不取"
+  },
+  {
+   "id": "xici-xing-nai-wei-qi",
+   "record_ids": [
+    "WP-XCS-C11-S04-R07"
+   ],
+   "source_id": "DS02",
+   "fragments": [
+    "形乃谓之器，"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Embodied.comesToStand",
+    "Becoming.Web.Listed",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：系辞「形乃谓之器」：器不是先在之物，而是成形之后才被称为器。脊柱上：一关系项开始作为条件而在与其生起，是同一变的读法（Web.change_readings、Web.Embodied.comesToStand）；名单（Web.Listed）只列活动者。器由成形而计，不先于成形而有。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "传·先秦至秦汉（系辞上）",
+   "locator": "系辞上·冻结第11章·编者论证段4",
+   "tradition": "易",
+   "work": "《周易·繫辭上》",
+   "names_used": [
+    "聚／散"
+   ],
+   "relational": "一元、动态的"
+  },
+  {
+   "id": "zagua-bo-ge-ding",
+   "record_ids": [
+    "WP-ZG-C01-S12-R01",
+    "WP-ZG-C01-S22-R01",
+    "WP-ZG-C01-S22-R02"
+   ],
+   "source_id": "YD-OW-ZG",
+   "fragments": [
+    "剝 爛也，復 反也。",
+    "革 去故也，鼎 取新也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.Paired",
+    "Becoming.Hexagram.order_paired",
+    "Becoming.Hexagram.both_fixed_iff",
+    "Becoming.Hexagram.reverse",
+    "Becoming.Hexagram.complement",
+    "Becoming.Hexagram.mem_order",
+    "Becoming.Hexagram.zagua",
+    "Becoming.Hexagram.zagua_every",
+    "Becoming.Hexagram.partner",
+    "Becoming.Hexagram.paired_iff_partner",
+    "Becoming.Hexagram.partner_partner",
+    "Becoming.Hexagram.partner_run",
+    "Becoming.Hexagram.order_partners",
+    "Becoming.Hexagram.zagua_partners",
+    "Becoming.Hexagram.zagua_last_eight",
+    "Becoming.Hexagram.zagua_not_commutes",
+    "Becoming.Hexagram.bo_fu"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "hexagram-world-laws",
+    "hexagram-arrangements-and-laws"
+   ],
+   "reading": "AI读法：沿 RO 的相合：杂卦以对为单位，剥对复，革对鼎，每对互为伙伴（Hexagram.partner、paired_iff_partner）；杂卦之列覆盖全部，后八卦另成一段（zagua_every、zagua_last_eight）。本条比 RO 多一条 Hexagram.bo_fu，理由是「剥烂也，复反也」：剥一步而至复（环移一步；在消息律下经坤而至复）。「烂」「去故」「取新」是对一对卦的读法，即一对读作消解与新成。脊柱证的是配对与一步之转；「去故取新」的价值（新胜于故）不带入。",
+   "ro_passage": "zagua-pairs",
+   "gap": "",
+   "layer": "传·先秦至秦汉（杂卦，年代有争议）",
+   "locator": "杂卦·主文·编者论证段12、22",
+   "tradition": "易",
+   "work": "《周易·雜卦》",
+   "names_used": [
+    "成／亡"
+   ],
+   "relational": "关系的：以对为单位"
+  },
+  {
+   "id": "cheng-yi-jian-er-wu-xi",
+   "record_ids": [
+    "CY-R001"
+   ],
+   "source_id": "YD-CY",
+   "fragments": [
+    "天者天之形體，乾者天之性情。乾，健也，健而無息之謂乾。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Unceasing",
+    "Becoming.Web.unceasing_iff",
+    "Becoming.Law.Lossless.returns"
+   ],
+   "records": [
+    "unceasing-generation-needs-renewal",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：程颐说「健而无息之谓乾」。理论中「无息」只取弱义：某形成在任意晚之步生起（Web.Unceasing），不要求任一形成永远活动。有限族中，生起不息当且仅当止息也复现（Web.unceasing_iff），所以「无息」与止息的复现并存，回返之律即可给出（Law.Lossless.returns）。程颐以天为「形体」、乾为「性情」的分层（近于固定之性）未取：理论不在运行之下另设性情。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "注·宋明（程颐《伊川易传》）",
+   "locator": "伊川易传·卷一·乾卦辞注",
+   "tradition": "儒（理学）／易",
+   "work": "《伊川易传》",
+   "names_used": [
+    "不息"
+   ],
+   "relational": "动态的；形体／性情之分层不取"
+  },
+  {
+   "id": "tuan-qian-gezheng",
+   "record_ids": [
+    "HX-R003"
+   ],
+   "source_id": "YD-HX01",
+   "fragments": [
+    "乾道變化，各正性命。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.reidentify_step",
+    "Becoming.Web.rename_tenure",
+    "Becoming.Web.named_throughout",
+    "Becoming.Dormancy.held_both",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "identity-across-steps",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：沿 RO 的定域：「乾道变化，各正性命」，即在变化中各得其定。脊柱上：同一跨步由命名型式承载，换名之后各步的关系与持守不变（Web.reidentify_step、Web.rename_tenure、Web.named_throughout）；休眠前后两种命名都保持持守（Dormancy.held_both）；过程与框架是一展开的两读（World.unity）。若把「正性命」读为各物有固定之性，则不带入；理论中，「正」只是在变化中被重新认定。",
+   "ro_passage": "tuan-qian-gezheng",
+   "gap": "",
+   "layer": "传·先秦至秦汉（彖传）",
+   "locator": "彖传·乾",
+   "tradition": "易",
+   "work": "《周易·彖傳》",
+   "names_used": [
+    "一實"
+   ],
+   "relational": "动态的；固定之性不取"
+  },
+  {
+   "id": "hs-06-16-bu-si",
+   "record_ids": [
+    "LC-R013",
+    "LC-R015"
+   ],
+   "source_id": "LC-HS-UP",
+   "fragments": [
+    "人能养神则不死也",
+    "言安静者是为复还性命，使不死也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.Carries.arising_not_recurring",
+    "Becoming.Web.Carries.lasts_within",
+    "Becoming.Web.Whole.needs_new",
+    "Becoming.Web.ByPassing.ends_within",
+    "Becoming.Generations.generations"
+   ],
+   "records": [
+    "reserve-defers-ending",
+    "whole-persists-through-generation",
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：沿 RO 的相分：河上公以养神、复命为「不死」，否认生灭的终止。脊柱上：储备形成的生起不复现，储备只推迟终止（Web.Carries.arising_not_recurring、Web.Carries.lasts_within）；持续的整体只靠任一名单之外的新部分（Web.Whole.needs_new，例见 Generations.generations）；型式只在传递不止时延续，传递一停便在一个跨度内终止（Web.ByPassing.ends_within）。所以理论中的「不死」只能是整体经更新与传递而延续，不是一个体的不灭。",
+   "ro_passage": "hs-06-16-bu-si",
+   "gap": "",
+   "layer": "注·秦汉至魏晋南北朝（河上公章句，题署为传统，成书有争议）",
+   "locator": "《老子河上公章句》第6章、第16章注",
+   "tradition": "道",
+   "work": "《老子河上公章句》",
+   "names_used": [
+    "不息",
+    "終"
+   ],
+   "relational": "否：个体之不死是无条件的持存"
+  },
+  {
+   "id": "suzhe-bu-sheng-bu-mie",
+   "record_ids": [
+    "LC2-SZ-C06-R01"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "fragments": [
+    "谷神則虚而無形也虚而無形尚無有生安有死邪"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.World.unity",
+    "Becoming.Immortal.immortal"
+   ],
+   "records": [
+    "unity-of-readings",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：苏辙以谷神「虚而无形」，「尚无有生，安有死」：设一不生不死者，在生灭之外而为其本。相分：理论中，生起与止息是任一关系项的活动在步间的读法（Web.change_readings），没有展开之外的不生不灭者。可以无生起而常活动者在理论中存在，但它是由其部分的活动而在（Immortal.immortal），仍在展开之内（World.unity）。苏辙「生死之道九而不生不死之道一」（LC2-SZ-C50-R01）同此，并入本条。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "注·宋明（苏辙《老子解》）",
+   "locator": "苏辙《老子解》谷神不死章第6注",
+   "tradition": "道（宋代三教会通）",
+   "work": "《老子解》",
+   "names_used": [
+    "生／滅"
+   ],
+   "relational": "否：设生灭之外的先在之本"
+  },
+  {
+   "id": "suzhe-che-bu-ke-shu",
+   "record_ids": [
+    "LC2-SZ-C39-R02"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "fragments": [
+    "輪輻蓋軫衡軛轂轊㑹而為車物物可數而車不可數"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Whole",
+    "Becoming.Layered.both",
+    "Becoming.Layered.composed",
+    "Becoming.whole_not_in_pairs"
+   ],
+   "records": [
+    "whole-persists-through-generation",
+    "separation-loses-the-relation"
+   ],
+   "reading": "AI读法：轮、辐、盖、轸诸件会而为车，件件可数，车却不在其中可数。脊柱上：整体的活动由某部分的活动而定（Web.Whole），整体不是部分名单中多出的一件；整体与部分两种命名同时成立（Layered.both、Layered.composed）；整体的关系不在任何部分对之中（whole_not_in_pairs）。若把「无之以为用」读为以无为本体，则不带入。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "注·宋明（苏辙《老子解》）",
+   "locator": "苏辙《老子解》昔之得一者章第39注",
+   "tradition": "道（宋代三教会通）",
+   "work": "《老子解》",
+   "names_used": [
+    "兼／體"
+   ],
+   "relational": "关系的：整体不是多出的一物"
+  },
+  {
+   "id": "suzhe-sui-wu-bian-hua",
+   "record_ids": [
+    "LC2-SZ-C41-R03"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "fragments": [
+    "體聖抱神隨物變化而不失其貞者外若渝也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.reidentify_step",
+    "Becoming.Web.named_throughout",
+    "Becoming.World.fixed_iff"
+   ],
+   "records": [
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：随物变化而不失其贞：在变化中保持同一。脊柱上：同一跨步由命名型式承载（Web.reidentify_step、Web.named_throughout），只在平衡的世界中、一步之后无他项与之同立处被固定（World.fixed_iff）。「体圣抱神」所设的内在不变之神（贞之所在）不带入：理论中，「不失其贞」是关系的型式不变，不是一个被持有的体不变。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "注·宋明（苏辙《老子解》）",
+   "locator": "苏辙《老子解》上士聞道章第41注",
+   "tradition": "道（宋代三教会通）",
+   "work": "《老子解》",
+   "names_used": [
+    "一實"
+   ],
+   "relational": "关系的部分相合；抱神之体不取"
+  },
+  {
+   "id": "wangbi-gong-cheng-ze-yi",
+   "record_ids": [
+    "LC2-WB-C09-R02"
+   ],
+   "source_id": "DS01",
+   "fragments": [
+    "四时更运，功成则移。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.keep_pace",
+    "Becoming.World.CountedWithin.arising_iff_ceasing",
+    "Becoming.Web.unceasing_iff_bounded"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "bounded-census-keeps-pace"
+   ],
+   "reading": "AI读法：王弼说「四时更运，功成则移」：成者不居，继以更替。脊柱上：有限族中，成与不再成立之数相差有界（keep_pace）；同时活动者有界时，生起在任意晚之步复现，当且仅当止息复现（World.CountedWithin.arising_iff_ceasing、Web.unceasing_iff_bounded）。成而不移、来而不去，在有界的族中不能长久并存。「功」的价值义不带入。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "注·魏晋（王弼《老子注》）",
+   "locator": "王弼《老子道德经注》第9章第5注",
+   "tradition": "道／玄",
+   "work": "《老子道德经注》",
+   "names_used": [
+    "相代"
+   ],
+   "relational": "动态的"
+  },
+  {
+   "id": "wangbi-wu-you-wang-lai",
+   "record_ids": [
+    "LC2-WB-C29-R01"
+   ],
+   "source_id": "DS01",
+   "fragments": [
+    "物有往来而执之，故必失矣。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.coming_recurs_iff",
+    "Becoming.persists",
+    "Becoming.keep_pace"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：物有往来，执之必失。脊柱上：有限族中，开始成立在任意晚之步复现，当且仅当不再成立也复现（coming_recurs_iff）。若从某步起执定其所存，使无一不再成立，所存者虽能持续（persists），往来中的「来」也随之停止：执定一态，就失去了往来。庄子「大冶铸金」的「不祥之金」与「化则无常」结构相同，并入本条。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "注·魏晋（王弼《老子注》）",
+   "locator": "王弼《老子道德经注》第29章第2注",
+   "tradition": "道／玄",
+   "work": "《老子道德经注》",
+   "names_used": [
+    "往來",
+    "相代"
+   ],
+   "relational": "动态的"
+  },
+  {
+   "id": "zhongyong-cheng-xing-zhu",
+   "record_ids": [
+    "RU1-ZY-31-R02",
+    "RU1-ZY-31-R03",
+    "RU1-ZY-31-R06",
+    "RU1-ZY-31-R07"
+   ],
+   "source_id": "RU1-S-ZY",
+   "fragments": [
+    "誠則形，形則著，著則明，明則動，動則變，變則化。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Embodied.comesToStand",
+    "Becoming.recurring_accumulates",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：中庸「诚则形，形则著…动则变，变则化」是一串阶段：成形、显著、发动、变、化。脊柱只有其中两环。其一，成形即开始作为条件而在（Web.Embodied.comesToStand；同一变的读法，Web.change_readings）。其二，变若在任意晚之步复现，其累计便超过任何界（recurring_accumulates），这是「变积而化」的量的一面。「则」的逐级必然，以及起点「诚」（德性之正价），都不被证明，也不带入。中庸年代有争议。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "传·先秦至秦汉（中庸，成书年代有争议）",
+   "locator": "《礼记·中庸》编者连续论证段31",
+   "tradition": "儒",
+   "work": "《礼记·中庸》",
+   "names_used": [
+    "聚／散"
+   ],
+   "relational": "部分动态；德性起点不在理论内"
+  },
+  {
+   "id": "mengzi-ji-yi-suo-sheng",
+   "record_ids": [
+    "RU2-R0012"
+   ],
+   "source_id": "RU2-S-MZ",
+   "fragments": [
+    "是集义所生者，非义袭而取之也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.over_stretch",
+    "Becoming.recurring_accumulates"
+   ],
+   "records": [
+    "census-balance"
+   ],
+   "reading": "AI读法：孟子说浩然之气是「集义所生」，不是一次袭取而得。脊柱只有其量的一面：任一段末之量，等于始量加上各步之升、减去各步之降（over_stretch），所得是逐步的累计，不是一步的取得；升若在任意晚之步复现，累计便超过任何界（recurring_accumulates）。「义」的德性与「气」的浩然都不带入，所以只是定域。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（孟子，战国）",
+   "locator": "《孟子·公孫丑上》第2章",
+   "tradition": "儒",
+   "work": "《孟子》",
+   "names_used": [
+    "往來"
+   ],
+   "relational": "量的累计；德性不取"
+  },
+  {
+   "id": "zhangzai-tai-xu",
+   "record_ids": [
+    "RU2-R0168"
+   ],
+   "source_id": "RU2-S-S02",
+   "fragments": [
+    "太虚无形，气之本体，其聚其散，变化之客形尔；"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.Web.Embodied.comesToStand",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：张载说「其聚其散，变化之客形」：聚散是变化的暂时形态，合于聚散是同一变的读法（Web.change_readings、Web.Embodied.comesToStand）。若把「太虚无形，气之本体」读为聚散之下的先在之体，理论不取：过程与框架是同一展开的两读（World.unity），展开之下没有本体。RO 的 ru-zhangzai-tai-xu-ji-qi 把张载另一句「知太虚即气，则无无」读为相合，正是取消这一本体的方向，所以本条定域。「气聚则离明得施而有形」（RU2-R0169）同此，并入本条。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·宋明（张载《正蒙·太和》）",
+   "locator": "正蒙/01",
+   "tradition": "儒（理学）",
+   "work": "《正蒙》",
+   "names_used": [
+    "聚／散"
+   ],
+   "relational": "动态的；太虚本体之读不取"
+  },
+  {
+   "id": "zhangzai-san-fei-wu",
+   "record_ids": [
+    "RU2-R0170"
+   ],
+   "source_id": "RU2-S-S02",
+   "fragments": [
+    "方其散也，安得遽谓之无？"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.Balances.fall_taken",
+    "Becoming.Flow.Balances.takenBy",
+    "Becoming.World.withRest_counted"
+   ],
+   "records": [
+    "rising-and-falling-in-one-exchange",
+    "census-read-off-the-exchange"
+   ],
+   "reading": "AI读法：张载说「方其散也，安得遽谓之无」：散不是归于无。脊柱上：在平衡的流中，每一次降都被某个取者取走（Flow.Balances.fall_taken、Flow.Balances.takenBy）；连同其余部分一并计入时，平衡可从交换中读出（World.withRest_counted）。一处之散是他处之得，不是消失。平衡是所述的局部状态，在计入其余部分时成立。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·宋明（张载《正蒙·太和》）",
+   "locator": "正蒙/01",
+   "tradition": "儒（理学）",
+   "work": "《正蒙》",
+   "names_used": [
+    "聚／散"
+   ],
+   "relational": "关系的：散即为他处所取"
+  },
+  {
+   "id": "zhuangzi-wu-hua",
+   "record_ids": [
+    "ZH1-C02-R-19"
+   ],
+   "source_id": "ZH1-S02",
+   "fragments": [
+    "周與胡蝶，則必有分矣，此之謂物化。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Lineage.readings",
+    "Becoming.Layered.both",
+    "Becoming.Web.reidentify_step"
+   ],
+   "records": [
+    "identity-across-steps",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：周与胡蝶必有分，却称为物化：既分为二，又是一化。脊柱上：同一展开可以分开命名（两者各自生起、止息），也可以作一命名（一者持续，无生起）；两读都成立，且各保持其连续（Lineage.readings）。整体与部分两种命名同时成立（Layered.both），换名不改各步的关系（Web.reidentify_step）。可与荀子「有化而无别谓之一实」对照：荀子取作一，庄子保留「分」；理论证明二者都是读法。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（庄子内篇）",
+   "locator": "《庄子·齊物論》篇末",
+   "tradition": "道",
+   "work": "《庄子·齊物論》",
+   "names_used": [
+    "一實",
+    "分／合"
+   ],
+   "relational": "一元的：一化中之分"
+  },
+  {
+   "id": "zhuangzi-ri-ye-xiang-dai",
+   "record_ids": [
+    "ZH1-C05-R-07"
+   ],
+   "source_id": "ZH1-S05",
+   "fragments": [
+    "是事之變，命之行也，日夜相代乎前，而知不能規乎其始者也，"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.keep_pace",
+    "Becoming.coming_recurs_iff",
+    "Becoming.Web.arising_recurs_iff"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：死生存亡等「事之变」，如日夜相代于前。脊柱上：有限族中，开始成立与不再成立之数相差不超过成员数（keep_pace）；一者在任意晚之步复现，当且仅当另一者也复现（coming_recurs_iff、Web.arising_recurs_iff）。相代就是同步。若把「命之行」读为定数，则不带入。「知不能规乎其始」可读为起点不可追溯，理论不需要这一认识论断言。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（庄子内篇）",
+   "locator": "《庄子·德充符》",
+   "tradition": "道",
+   "work": "《庄子·德充符》",
+   "names_used": [
+    "相代"
+   ],
+   "relational": "动态的；命之定数不取"
+  },
+  {
+   "id": "zhuangzi-zhile-qi-xing-sheng-si",
+   "record_ids": [
+    "ZH1-C18-R-02"
+   ],
+   "source_id": "ZH1-S18",
+   "fragments": [
+    "雜乎芒芴之間，變而有氣，氣變而有形，形變而有生，今又變而之死，是相與爲春秋冬夏四時行也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.Web.Embodied.comesToStand",
+    "Becoming.keep_pace"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：至乐以气、形、生、死为一连续之变，「相与为春秋冬夏四时行」。脊柱上：生起与成形（开始作为条件而在）是同一变的读法（Web.change_readings、Web.Embodied.comesToStand）；有限族中，生与死同步（keep_pace）。「察其始而本无生」不设先在之源，只说生是变而有。庄子止哀的态度不在理论之内。以下同结构者并入本条：察生死为一化而止哀（ZH1-C18-R-03），大块「劳我以生，息我以死」（ZH1-C06-R-06），系辞「原始反终，故知死生之说」（WP-XCS-C04-S03-R01）。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（庄子外篇·至乐，年代有争议）",
+   "locator": "《庄子·至樂》庄子妻死章",
+   "tradition": "道",
+   "work": "《庄子·至樂》",
+   "names_used": [
+    "一變三讀",
+    "生／滅",
+    "相代"
+   ],
+   "relational": "一元、动态的"
+  },
+  {
+   "id": "zhuangzi-bu-si-bu-sheng",
+   "record_ids": [
+    "ZH1-C06-R-14"
+   ],
+   "source_id": "ZH1-S06",
+   "fragments": [
+    "无古今而後能入於不死不生。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.World.unity",
+    "Becoming.Immortal.immortal"
+   ],
+   "records": [
+    "unity-of-readings",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：大宗师经「外生」「朝彻」「见独」「无古今」而「入于不死不生」，设一外于生灭之境作为修持的终点。相分：理论中，生灭是任一活动在步间的读法（Web.change_readings），没有展开之外的不生不死之境；无生起而常活动者存在，但仍是展开中由部分之活动而在者（Immortal.immortal、World.unity）。此属「外于展开之境」一层（RO §7 中先在之基与单一中心一类）。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（庄子内篇）",
+   "locator": "《庄子·大宗師》南伯子葵问女偊章",
+   "tradition": "道",
+   "work": "《庄子·大宗師》",
+   "names_used": [
+    "生／滅"
+   ],
+   "relational": "否：外于展开之境"
+  },
+  {
+   "id": "weishi-sha-na-mie",
+   "record_ids": [
+    "FO1-R-CY17"
+   ],
+   "source_id": "FO1-S-CY",
+   "fragments": [
+    "一、剎那滅。謂體纔生無間必滅，有勝功力，方成種子。此遮常法，常無轉變，不可說有能生用故。",
+    "三、恒隨轉。謂要長時一類相續，至究竟位，方成種子。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.stays_failing",
+    "Becoming.Lineage.readings",
+    "Becoming.Generations.generations",
+    "Becoming.Web.Whole.needs_arising"
+   ],
+   "records": [
+    "identity-across-steps",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：唯识种子六义中，「剎那灭」说种子才生即灭，以此遮破「常法」——恒常无转变者没有能生之用；「恒随转」说一类相续，长时不断。相合之处有三。不变者不生：某规定不成立且从不开始成立，则永不成立（stays_failing）。成员短暂而类相续：分开命名，则每一成员一生即止，生成不息；作一命名，则一类每步都在（Lineage.readings、Generations.generations）。整体的持续只靠部分不断生起（Web.Whole.needs_arising）。定域之处：「剎那必灭」不是定律，理论不要求每一成员每步止息（Accretion 的形成永不止息）。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·隋唐（玄奘译《成唯识论》，护法等唯识论师）",
+   "locator": "卷二·种子六义；T31n1585",
+   "tradition": "佛（唯识）",
+   "work": "《成唯识论》",
+   "names_used": [
+    "相續",
+    "無閒",
+    "生／滅"
+   ],
+   "relational": "动态的；剎那必灭之普遍化不取"
+  },
+  {
+   "id": "weishi-guo-ju-you",
+   "record_ids": [
+    "FO1-R-CY18"
+   ],
+   "source_id": "FO1-S-CY",
+   "fragments": [
+    "二、果俱有。謂與所生現行果法俱現和合，方成種子。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.coextinct",
+    "Becoming.Web.Continues"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "census-balance-under-continuation"
+   ],
+   "reading": "AI读法：「果俱有」区分两种次序：种子与其现行之果同时俱在（同一步的依存）；种子自类相生，则前后相续（跨步的延续）。脊柱同样把二者分开：同一步的要求与依存（Web.Dependent：只在所要求的条件在时活动；Web.coextinct：同灭），以及跨步的延续关系（Web.Continues）。定域之处：唯识中现行与种子的业力义，以及阿赖耶识之所藏，都不带入。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·隋唐（玄奘译《成唯识论》）",
+   "locator": "卷二·种子六义·果俱有；T31n1585",
+   "tradition": "佛（唯识）",
+   "work": "《成唯识论》",
+   "names_used": [
+    "相續"
+   ],
+   "relational": "关系的：同时依存与跨步延续之分"
+  },
+  {
+   "id": "jingang-san-xin",
+   "record_ids": [
+    "FO1-R-DI21"
+   ],
+   "source_id": "FO1-S-DIAMOND",
+   "fragments": [
+    "過去心不可得，現在心不可得，未來心不可得。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.reidentify_step",
+    "Becoming.Lineage.readings",
+    "Becoming.World.fixed_iff"
+   ],
+   "records": [
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：三世心不可得：没有一个跨三时而自立的心。脊柱上：跨步之同一由命名承载，不由一个自立者承载（Web.reidentify_step）；同一展开可以分开命名，也可以作一命名（Lineage.readings），只在平衡世界中、一步之后无他项同立处被固定（World.fixed_iff）。定域之处：若把「不可得」读为同一根本不可能，就过了；理论中，跨步之同一是可取的读法，只是不唯一、不自立。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·魏晋南北朝（鸠摩罗什译《金刚经》，梵本 Vajracchedikā）",
+   "locator": "T08n0235",
+   "tradition": "佛（般若）",
+   "work": "《金刚般若波罗蜜经》",
+   "names_used": [
+    "一實"
+   ],
+   "relational": "关系的：无自立之心"
+  },
+  {
+   "id": "jingang-you-wei-fa",
+   "record_ids": [
+    "FO1-R-DI31"
+   ],
+   "source_id": "FO1-S-DIAMOND",
+   "fragments": [
+    "一切有為法，如夢、幻、泡、影，如露亦如電，應作如是觀。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Ends",
+    "Becoming.Accretion.never_ceases",
+    "Becoming.Web.unceasing_iff",
+    "Becoming.Immortal.immortal"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：一切有为法如梦幻泡影露电：凡成者皆生灭、短暂。脊柱上，「会终止」（Web.Ends）是条件，不是定律：Accretion 的形成生起后永不止息（Accretion.never_ceases），整体也可以常活动（Immortal.immortal）。有限族中，生起复现当且仅当止息复现（Web.unceasing_iff）。所以「一切有为皆无常」在有限族的复现上成立，对每一形成不成立。「应作如是观」的修持不带入。胜鬘经「入有为相者是无常」（FO2-SM-R014）同此，并入本条。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·魏晋南北朝（鸠摩罗什译《金刚经》）",
+   "locator": "T08n0235 偈",
+   "tradition": "佛（般若）",
+   "work": "《金刚般若波罗蜜经》",
+   "names_used": [
+    "生／滅",
+    "終"
+   ],
+   "relational": "动态的；对个体的普遍化不取"
+  },
+  {
+   "id": "xinjing-bu-zeng-bu-jian",
+   "record_ids": [
+    "FO1-R-HE04"
+   ],
+   "source_id": "FO1-S-HEART",
+   "fragments": [
+    "是諸法空相，不生不滅，不垢不淨，不增不減。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.World.withRest_counted",
+    "Becoming.Flow.adopt_balances",
+    "Becoming.Flow.readOff_census"
+   ],
+   "records": [
+    "census-read-off-the-exchange",
+    "premises-read-off-the-exchange"
+   ],
+   "reading": "AI读法：诸法空相「不增不减」。若读为全体的计数，脊柱给出其范围：连同其余部分计入时，平衡从交换中读出（World.withRest_counted、Flow.adopt_balances），普查也从交换中读出（Flow.readOff_census）。全体之量不增不减，而其内部的生灭、升降照常发生。所以「不生不灭」在全体的平衡读法上成立，并不否认其内的生灭。「空」的究竟义不带入。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·隋唐（玄奘译《心经》）",
+   "locator": "T08n0251",
+   "tradition": "佛（般若）",
+   "work": "《般若波罗蜜多心经》",
+   "names_used": [
+    "往來"
+   ],
+   "relational": "全体之平衡读法"
+  },
+  {
+   "id": "zhonglun-ba-bu",
+   "record_ids": [
+    "FO1-R-M01"
+   ],
+   "source_id": "FO1-S-MMK",
+   "fragments": [
+    "不生亦不滅，不常亦不斷，不一亦不異，不來亦不出。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.Lineage.readings",
+    "Becoming.Layered.both",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "identity-across-steps",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：八不否认把生灭、常断、一异、来出当作固定的读法。脊柱上：生灭是一变在某规定上的读法（Web.change_readings）；同一展开分开命名则有生起，作一命名则无生起（Lineage.readings）；整体与部分两种命名同时成立（Layered.both）；过程与框架是一展开的两读（World.unity）。定域之处：理论不否认生灭，而是说生灭在所取的读法下成立，在另一读法下不成立；把八不当作对一切读法的否定，理论不取。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·魏晋南北朝（鸠摩罗什译《中论》，青目释）",
+   "locator": "T30n1564 第1品",
+   "tradition": "佛（中观）",
+   "work": "《中论》",
+   "names_used": [
+    "生／滅",
+    "一變三讀"
+   ],
+   "relational": "关系的：生灭依读法"
+  },
+  {
+   "id": "zhonglun-wo-wu-yin",
+   "record_ids": [
+    "FO1-R-M09",
+    "FO1-R-M10"
+   ],
+   "source_id": "FO1-S-MMK",
+   "fragments": [
+    "若我是五陰，我即為生滅",
+    "若我異五陰，則非五陰相"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Whole",
+    "Becoming.Web.Whole.arises_part",
+    "Becoming.Web.Whole.parts_unceasing",
+    "Becoming.Layered.both"
+   ],
+   "records": [
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：若我就是五阴，我便随五阴生灭；若我异于五阴，便没有五阴之相。脊柱上：整体的活动由某部分的活动而定（Web.Whole）。整体生起时，必有部分生起（Web.Whole.arises_part）；整体生起不息，则部分生起不息（Web.Whole.parts_unceasing）。部分之外，整体没有独立的活动。两种命名同时成立（Layered.both）：我是一种读法，不是另一实体。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·魏晋南北朝（鸠摩罗什译《中论》）",
+   "locator": "T30n1564 第18品",
+   "tradition": "佛（中观）",
+   "work": "《中论》",
+   "names_used": [
+    "兼／體",
+    "生／滅"
+   ],
+   "relational": "关系的：无部分外之自体"
+  },
+  {
+   "id": "zhonglun-bu-ji-bu-yi",
+   "record_ids": [
+    "FO1-R-M20"
+   ],
+   "source_id": "FO1-S-MMK",
+   "fragments": [
+    "若法從緣生，不即不異因，是故名實相，不斷亦不常。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Continues",
+    "Becoming.Web.ArisesFrom",
+    "Becoming.Web.CeasesFrom",
+    "Becoming.Lineage.readings"
+   ],
+   "records": [
+    "identity-across-steps",
+    "census-balance-under-continuation"
+   ],
+   "reading": "AI读法：从缘而生者，不即于因，也不异于因，所以不断不常。脊柱的延续关系正是此结构：一步之后某形成延续某形成（Web.Continues）。延续不把二者合为同一（同一是另一种命名，Lineage.readings），也不断开：「从…生起」只算没有前者被延续的生起（Web.ArisesFrom），「从…止息」只算没有后者延续的止息（Web.CeasesFrom）。不常，因为延续者不是同一者；不断，因为被延续者不算止息。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·魏晋南北朝（鸠摩罗什译《中论》）",
+   "locator": "T30n1564 第18品",
+   "tradition": "佛（中观）",
+   "work": "《中论》",
+   "names_used": [
+    "相續"
+   ],
+   "relational": "关系的、动态的"
+  },
+  {
+   "id": "zhonglun-ding-xing",
+   "record_ids": [
+    "FO1-R-M32",
+    "FO1-R-M33"
+   ],
+   "source_id": "FO1-S-MMK",
+   "fragments": [
+    "苦若有定性，則不應有滅。",
+    "苦若有定性，則無有修道；若道可修習，即無有定性。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.identifiesAlike_iff",
+    "Becoming.Web.reidentify_dependent",
+    "Becoming.Web.rename_unceasing",
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.Web.change_readings",
+    "Becoming.persists",
+    "Becoming.stays_failing"
+   ],
+   "records": [
+    "identity-across-steps",
+    "configurations-alike-by-relation",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：沿 RO 的相合：可灭者、可修者必无定性。同一由关系与命名承载，不由定性承载（identifiesAlike_iff、Web.reidentify_dependent、Web.rename_unceasing）；整体只靠部分的生起而持续（Web.Whole.needs_arising）。本条比 RO 多 persists 与 stays_failing 两条，理由是「有定性则不应有灭」在脊柱上的对偶：成立而从不止息者持续成立，不成立而从不开始成立者持续不成立——所谓定性，就是没有步间之变。",
+   "ro_passage": "zhonglun-yin-yuan-jia-ming",
+   "gap": "",
+   "layer": "论·魏晋南北朝（鸠摩罗什译《中论》）",
+   "locator": "T30n1564 第24品",
+   "tradition": "佛（中观）",
+   "work": "《中论》",
+   "names_used": [
+    "生／滅"
+   ],
+   "relational": "关系的：无定性"
+  },
+  {
+   "id": "zaahan-yuan-sheng-lao-si",
+   "record_ids": [
+    "FO1-R-SA-D10"
+   ],
+   "source_id": "FO1-S-SA",
+   "fragments": [
+    "緣生老死者，云何為老？"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.CeasesToBe",
+    "Becoming.ceasing_needs_arising",
+    "Becoming.Accretion.never_ceases"
+   ],
+   "records": [
+    "laws-of-one-step",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：缘生老死：生是老死的条件。脊柱上：不再成立须先成立（CeasesToBe p t 含 p t）；一段中若无开始成立者，止息者都在始时的名单上，且终时所存加止息者等于始时之数（ceasing_needs_arising）——死须先有生。定域之处：反向不成立，生不蕴含死：Accretion 的形成生起后永不止息（Accretion.never_ceases）。十二支作为苦之链，属C02的依存；本条只取生与老死的次序。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·魏晋南北朝（求那跋陀罗译《杂阿含经》）",
+   "locator": "印本经号（二九八）；T02n0099",
+   "tradition": "佛（阿含）",
+   "work": "《杂阿含经》",
+   "names_used": [
+    "生／滅",
+    "成／亡"
+   ],
+   "relational": "动态的"
+  },
+  {
+   "id": "zaahan-wu-chang-shi-ku",
+   "record_ids": [
+    "FO1-R-SA004"
+   ],
+   "source_id": "FO1-S-SA",
+   "fragments": [
+    "若無常者，是苦不？"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "one-axiom-yields-g0"
+   ],
+   "reading": "AI读法：以无常为苦，是给变化本身定负值。相分：理论中，所表示的动力学不决定意义——「无一有意义」与「一切有意义」这两种常值意义，都与同一动力学相容（Web.significance_undetermined），所以变化本身无正负。延续条件（§6.15）给的是延续的意义，不给变化以负值。此属「先定之价值」一层（RO §7）。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·魏晋南北朝（求那跋陀罗译《杂阿含经》）",
+   "locator": "印本经号（三三）；T02n0099",
+   "tradition": "佛（阿含）",
+   "work": "《杂阿含经》",
+   "names_used": [
+    "生／滅"
+   ],
+   "relational": "否：给变化定负值"
+  },
+  {
+   "id": "zaahan-bian-yi-fei-wo",
+   "record_ids": [
+    "FO1-R-SA005"
+   ],
+   "source_id": "FO1-S-SA",
+   "fragments": [
+    "若無常、苦，是變易法，多聞聖弟子於中寧見有我、異我、相在不？"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Turnover.reidentified",
+    "Becoming.Web.rename_unceasing",
+    "Becoming.Web.reidentify_step"
+   ],
+   "records": [
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：变易之法中，不见我、异我、相在：变化者不能执为恒常的自体。脊柱上：跨步之同一由命名的型式承载。Turnover 中，两种命名（逐步交换名字与否）都与同一展开相合（Turnover.reidentified）；换名不改生成之不息（Web.rename_unceasing），也不改各步的关系（Web.reidentify_step）。没有一个不依命名的自体。「苦」的评价不带入（见 FO1-R-SA004）。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·魏晋南北朝（求那跋陀罗译《杂阿含经》）",
+   "locator": "印本经号（三三）；T02n0099",
+   "tradition": "佛（阿含）",
+   "work": "《杂阿含经》",
+   "names_used": [
+    "一實"
+   ],
+   "relational": "关系的：无自立之我"
+  },
+  {
+   "id": "zaahan-ji-mie",
+   "record_ids": [
+    "FO1-R-SA012",
+    "FO1-R-SA013"
+   ],
+   "source_id": "FO1-S-SA",
+   "fragments": [
+    "如實正觀世間集者，則不生世間無見",
+    "如實正觀世間滅，則不生世間有見"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.coextinct",
+    "Becoming.Web.kept_or_broken",
+    "Becoming.Web.change_readings",
+    "Becoming.Web.arising_recurs_iff"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：沿 RO 的相合：见世间之集（生起），便不执断无；见世间之灭，便不执常有——生灭两读并存。脊柱上：依存的形成随条件而在，随条件之失而同灭（Web.Dependent、Web.coextinct、Web.kept_or_broken）；生起与止息是同一变的读法（Web.change_readings），有限族中二者同其复现（Web.arising_recurs_iff）。「此苦生时生、灭时灭」（FO1-R-SA034）同此，并入本条。",
+   "ro_passage": "zaahan-ci-you-gu-bi-you",
+   "gap": "",
+   "layer": "经·魏晋南北朝（求那跋陀罗译《杂阿含经》，梵本 Saṃyuktāgama）",
+   "locator": "印本经号（二六二）；T02n0099",
+   "tradition": "佛（阿含）",
+   "work": "《杂阿含经》",
+   "names_used": [
+    "生／滅"
+   ],
+   "relational": "关系的、动态的"
+  },
+  {
+   "id": "huayan-liu-xiang",
+   "record_ids": [
+    "FO2-FQ-R028",
+    "FO2-FQ-R029",
+    "FO2-FQ-R030",
+    "FO2-FQ-R031",
+    "FO2-FQ-R032",
+    "FO2-FQ-R033",
+    "FO2-FQ-R035",
+    "FO2-FQ-R036"
+   ],
+   "source_id": "FO2-FQ",
+   "fragments": [
+    "總相者，一舍多德故；",
+    "別相者，多德非一故，別依比總，滿彼總故；",
+    "同相者，多義不相違，同成一總故；",
+    "異相者，多義相望，各各異故；",
+    "成相者，由此諸緣起成故；",
+    "壞相者，諸義各住自法，不移動故。",
+    "今由不作故，椽等諸緣現前故，由此現前故舍義得成矣。",
+    "本以別成總，由無別故總不成也，"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.whole_not_in_pairs",
+    "Becoming.separation_faithful_iff",
+    "Becoming.relation_persists",
+    "Becoming.partForms_and_restForms_iff",
+    "Becoming.Web.change_readings",
+    "Becoming.Web.Whole",
+    "Becoming.Web.Whole.arises_part",
+    "Becoming.Layered.both"
+   ],
+   "records": [
+    "separation-loses-the-relation",
+    "where-a-move-is-formed",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：沿 RO 的相合：总为一舍，别为诸缘；同为不相违，异为各别；成为诸缘办果，坏为各住自法；「本以别成总，由无别故总不成」——整体只依部分而成。脊柱上：整体的关系不在任何部分对之中（whole_not_in_pairs）；分离保持关系，当且仅当没有跨越的耦合（separation_faithful_iff）；关系随部分的活动而持（relation_persists、partForms_and_restForms_iff）。本条比 RO 多三条声明，理由是「不作」与总别的共时：整体的活动由某部分的活动而定，并非部分构成一物（Web.Whole：椽不作舍，舍却成）；整体生起，必有部分生起（Web.Whole.arises_part）；整体与部分两种命名同时成立（Layered.both）。注意：华严的「成相／坏相」是同一时的两读，不是跨步的开始成立与不再成立；中华版用「成」名 ComesToBe 时须注明。",
+   "ro_passage": "huayan-liu-xiang",
+   "gap": "",
+   "layer": "论·隋唐（法藏《华严五教章》）",
+   "locator": "卷四·六相圆融",
+   "tradition": "佛（华严）",
+   "work": "《华严一乘教义分齐章》",
+   "names_used": [
+    "兼／體",
+    "成／亡"
+   ],
+   "relational": "关系的：整体只依部分而成"
+  },
+  {
+   "id": "jinshizi-sheng-wu-sheng",
+   "record_ids": [
+    "FO2-KS-C-R005"
+   ],
+   "source_id": "FO2-KS-C",
+   "fragments": [
+    "然生與無生互成互奪，奪則無生，成乃緣生。由即成即奪，是故生時無生。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Lineage.readings",
+    "Becoming.Web.change_readings",
+    "Becoming.Layered.both"
+   ],
+   "records": [
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：生与无生互成互夺：同一事分开命名则有生起，作一命名则无生起（Lineage.readings）；「生时无生」可读为两种命名同时成立（Layered.both）。定域之处：理论不把两读互相取消（「夺」），而是各在其命名下成立；「无生」作为究竟真实，不带入。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "注·宋明（宋代承迁注法藏《金师子章》）",
+   "locator": "FO2-KS-C／0669a08",
+   "tradition": "佛（华严）",
+   "work": "《金师子章注》",
+   "names_used": [
+    "生／滅"
+   ],
+   "relational": "关系的：两读并存"
+  },
+  {
+   "id": "jinshizi-nian-nian-sheng-mie",
+   "record_ids": [
+    "FO2-KS-P-R009"
+   ],
+   "source_id": "FO2-KS-P",
+   "fragments": [
+    "謂此師子雖是緣生之法，念念生滅。實無師子可得，故名聲聞教。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Whole.needs_arising",
+    "Becoming.Generations.generations",
+    "Becoming.Lineage.readings"
+   ],
+   "records": [
+    "whole-persists-through-generation",
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：师子是缘生之法，念念生灭，实无师子可得（法藏判之为声闻教之见）。脊柱上：由会终止的部分组成而持续的整体，只靠部分不断生起（Web.Whole.needs_arising）；部分各自短暂，整体却每步都在（Generations.generations）；分开命名则念念生灭，作一命名则师子持续（Lineage.readings）。定域之处：「实无师子可得」过了——整体是一种读法，不是无。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·隋唐（法藏《金师子章》）",
+   "locator": "第六、論五教",
+   "tradition": "佛（华严）",
+   "work": "《金师子章》",
+   "names_used": [
+    "生／滅",
+    "兼／體"
+   ],
+   "relational": "动态的；整体之无不取"
+  },
+  {
+   "id": "tiantai-bu-gai-ming-xing",
+   "record_ids": [
+    "FO2-MH-R011"
+   ],
+   "source_id": "FO2-MH",
+   "fragments": [
+    "一、不改名性，《無行經》稱「不動性」，性即不改義也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Dormancy.classes",
+    "Becoming.Turnover.reidentified",
+    "Becoming.World.fixed_iff"
+   ],
+   "records": [
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：天台以「不改」名性：性是内在不可改者（如竹中火性）。相分：理论中，一形成的类别（更新或消耗）随命名而变——跨过休眠作一命名，原先的更新者变为消耗者（Dormancy.classes）。同一与类别都依命名与关系（Turnover.reidentified），只在平衡世界中由关系固定（World.fixed_iff），没有不改的内性。此属「固定之性」一层（RO §7）。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·隋唐（智顗讲、灌顶记《摩诃止观》）",
+   "locator": "卷5／0053a21",
+   "tradition": "佛（天台）",
+   "work": "《摩诃止观》",
+   "names_used": [
+    "一實"
+   ],
+   "relational": "否：固定之性"
+  },
+  {
+   "id": "qixin-xiang-xu-xiang",
+   "record_ids": [
+    "FO2-QX-R017"
+   ],
+   "source_id": "FO2-QX",
+   "fragments": [
+    "二者相續相。依於智故生其苦樂，覺心起念相應不斷故。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Continues",
+    "Becoming.Web.UnceasingFrom",
+    "Becoming.Reidentify.KeepsActive"
+   ],
+   "records": [
+    "identity-across-steps",
+    "census-balance-under-continuation"
+   ],
+   "reading": "AI读法：起信论的「相续相」：觉心起念，相应不断。脊柱上：在延续关系下，「从…生起」在任意晚之步复现，就是延续中的不息（Web.UnceasingFrom、Web.Continues）；「相应不断」是相继两步都活动的连续，命名保持这种连续（Reidentify.KeepsActive）。依智而生苦乐，以及把相续相当作妄心之相的评价，都不带入。起信论作者与成书有争议。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·魏晋南北朝（《大乘起信论》，传真谛译，成书有争议）",
+   "locator": "FO2-QX／0577a14／解释分",
+   "tradition": "佛（如来藏）",
+   "work": "《大乘起信论》",
+   "names_used": [
+    "相續",
+    "無閒"
+   ],
+   "relational": "动态的"
+  },
+  {
+   "id": "qixin-xin-ti",
+   "record_ids": [
+    "FO2-QX-R023"
+   ],
+   "source_id": "FO2-QX",
+   "fragments": [
+    "所言滅者，唯心相滅，非心體滅。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.World.unity",
+    "Becoming.Lineage.readings"
+   ],
+   "records": [
+    "unity-of-readings",
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：所灭者只是心之相，不是心之体：在变化之下设一不灭之体。相分：理论中，生灭是某规定在步间的读法（Web.change_readings），同一与否是命名的选择（Lineage.readings），过程与框架是一展开的两读（World.unity），没有相之下不变的体。此属「先在之基」一层。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·魏晋南北朝（《大乘起信论》，成书有争议）",
+   "locator": "FO2-QX／0578a07／解释分",
+   "tradition": "佛（如来藏）",
+   "work": "《大乘起信论》",
+   "names_used": [
+    "生／滅"
+   ],
+   "relational": "否：相下之体"
+  },
+  {
+   "id": "tanjing-qian-nian-hou-nian",
+   "record_ids": [
+    "FO2-TJ-R005"
+   ],
+   "source_id": "FO2-TJ",
+   "fragments": [
+    "前念著境即煩惱，後念離境即菩提。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dissolves",
+    "Becoming.CeasesToBe",
+    "Becoming.Web.change_readings"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace"
+   ],
+   "reading": "AI读法：前念著境，后念离境：变化落在相继两念之间——一关系（著于境）在前一步成立，在后一步不再成立，这正是一步之内的消解（Web.Dissolves，即该关系的 CeasesToBe，Web.change_readings）。烦恼／菩提的价值不带入：脊柱只给出结构，对著与离的评价需另有所述的意义。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·隋唐（《坛经》，惠能，传本有异）",
+   "locator": "坛经·般若第二",
+   "tradition": "佛（禅）",
+   "work": "《六祖坛经》",
+   "names_used": [
+    "結／解"
+   ],
+   "relational": "关系的、动态的"
+  },
+  {
+   "id": "jingtu-zhong-zi-bu-huai",
+   "record_ids": [
+    "FO2-YJ-R020"
+   ],
+   "source_id": "FO2-YJ",
+   "fragments": [
+    "一稱佛名便為成佛種子，猶如金剛終不可壞。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.Carries.lasts_within",
+    "Becoming.Web.Carries.ends_within",
+    "Becoming.Web.unsupported_after_loss"
+   ],
+   "records": [
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：一称佛名，即成永不坏的种子：这是无条件的持存。相分：脊柱中，储备只把终止推迟一个有界之段（Web.Carries.lasts_within），失去支撑后终止必至（Web.Carries.ends_within、Web.unsupported_after_loss）。没有不依支撑而永不坏的持存。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "注·宋明至清（蕅益智旭《阿弥陀经要解》，明末清初）",
+   "locator": "要解正文／0372a18",
+   "tradition": "佛（净土）",
+   "work": "《佛说阿弥陀经要解》",
+   "names_used": [
+    "存",
+    "終"
+   ],
+   "relational": "否：无条件之持存"
+  },
+  {
+   "id": "huiyuan-wen-shen-xing-ju-hua",
+   "record_ids": [
+    "IN1-R-H10"
+   ],
+   "source_id": "IN1-S03",
+   "fragments": [
+    "既化而為生。又化而為死。既聚而為始。又散而為終。",
+    "宅全則氣聚而有靈。宅毀則氣散而照滅。",
+    "形離則神散而罔寄。木朽則火寂而靡託。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.coextinct",
+    "Becoming.Web.Embodied.comesToStand",
+    "Becoming.Web.ByPassing.ends_within"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：慧远所引的问难：神与形俱化，聚为始，散为终；宅全则气聚而有灵，宅毁则气散而照灭；如火之在木，木朽则火寂。脊柱上：依存的形成只在所要求的条件在时活动，条件失则同灭（Web.Dependent、Web.coextinct）；生起即开始作为条件而在（Web.Embodied.comesToStand）；型式在传递停止后一个跨度内终止（Web.ByPassing.ends_within）。问者的立场与理论相合；「生尽不化」作为全无延续的断言，须加上「无传递」这一条件。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·魏晋南北朝（慧远《沙门不敬王者论》形尽神不灭章所引问难，东晋）",
+   "locator": "pT52p0031b1101",
+   "tradition": "三教互动",
+   "work": "《沙門不敬王者論》",
+   "names_used": [
+    "聚／散",
+    "終"
+   ],
+   "relational": "一元、关系的"
+  },
+  {
+   "id": "huiyuan-xin-huo",
+   "record_ids": [
+    "IN1-R-H11"
+   ],
+   "source_id": "IN1-S03",
+   "fragments": [
+    "火之傳異薪。猶神之傳異形。前薪非後薪。",
+    "感物而非物故物化而不滅。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.PatternRelay.relay",
+    "Becoming.Web.ByPassing.begins_passed",
+    "Becoming.Web.ByPassing.ends_within",
+    "Becoming.PatternRelay.stopped_relay"
+   ],
+   "records": [
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：慧远答：火传于异薪，犹神传于异形；前薪非后薪。相合之处：型式经不同载体的传递而延续，每个载体都短暂，型式却每步都在（PatternRelay.relay）；载体的承载都由传递开始（Web.ByPassing.begins_passed）。定域之处：若把「物化而不灭」读为神独立于传递而不灭，便不成立——传递一停，型式在一个跨度内终止（Web.ByPassing.ends_within、PatternRelay.stopped_relay）。慧远还批评论者「不寻方生方死之说」；此处的「神」是不随化之体，属相分的一面。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·魏晋南北朝（慧远《沙门不敬王者论》，东晋）",
+   "locator": "pT52p0031c0201",
+   "tradition": "三教互动",
+   "work": "《沙門不敬王者論》",
+   "names_used": [
+    "相續",
+    "終"
+   ],
+   "relational": "传递是关系的；独立之神不取"
+  },
+  {
+   "id": "zhaolun-dong-jing",
+   "record_ids": [
+    "CT1-R-ZL02"
+   ],
+   "source_id": "CT1-S-ZL",
+   "fragments": [
+    "夫人之所謂動者，以昔物不至今，故曰動而非靜。我之所謂靜者，亦以昔物不至今，故曰靜而非動。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Lineage.readings",
+    "Becoming.Web.reidentify_step",
+    "Becoming.World.unity"
+   ],
+   "records": [
+    "identity-across-steps",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：僧肇说：同一事实「昔物不至今」，人读为动，我读为静。脊柱上：同一展开可以分开命名（昔物止、今物起，是动），也可以各在其步（没有跨步的迁移，是静）；两读都成立（Lineage.readings），换名不改各步的关系（Web.reidentify_step），过程与框架是一展开的两读（World.unity）。「所造未尝异，所见未尝同」正是一事多读。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·魏晋南北朝（僧肇《物不迁论》，后秦）",
+   "locator": "物不遷論第一 / pT45p0151a2009",
+   "tradition": "佛（三论）",
+   "work": "《肇论·物不遷論》",
+   "names_used": [
+    "一變三讀",
+    "往來"
+   ],
+   "relational": "一元的：一事多读"
+  },
+  {
+   "id": "zhaolun-xi-wu-zi-zai-xi",
+   "record_ids": [
+    "CT1-R-ZL03"
+   ],
+   "source_id": "CT1-S-ZL",
+   "fragments": [
+    "是謂昔物自在昔，不從今以至昔；今物自在今，不從昔以至今。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Continues",
+    "Becoming.Web.ArisesFrom",
+    "Becoming.Web.CeasesFrom",
+    "Becoming.Web.Census.balanceFrom"
+   ],
+   "records": [
+    "census-balance-under-continuation",
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：昔物自在昔，今物自在今：没有一物从昔迁至今。相合之处：脊柱的记录是逐步的，同一不是一物跨步移动。定域之处：僧肇由此推出「物不相往来」，否认跨步的联系；理论保留延续关系（Web.Continues）作为联系前后的读法，并以它界定「从…生起／止息」（Web.ArisesFrom、Web.CeasesFrom）与延续之下的普查平衡（Web.Census.balanceFrom）。所以理论中的「往来」是计数与延续，不是物的迁移。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·魏晋南北朝（僧肇《物不迁论》）",
+   "locator": "物不遷論第一 / pT45p0151a2009",
+   "tradition": "佛（三论）",
+   "work": "《肇论·物不遷論》",
+   "names_used": [
+    "往來",
+    "相續"
+   ],
+   "relational": "动态的；否认延续之联系一面不取"
+  },
+  {
+   "id": "zhaolun-yin-bu-xi-mie",
+   "record_ids": [
+    "CT1-R-ZL09",
+    "CT1-R-ZL10"
+   ],
+   "source_id": "CT1-S-ZL",
+   "fragments": [
+    "因因而果，因不昔滅",
+    "果不俱因，因不來今"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.CeasesFrom",
+    "Becoming.Web.Continues",
+    "Becoming.Web.ArisesFrom",
+    "Becoming.Web.ceasesFrom_self"
+   ],
+   "records": [
+    "census-balance-under-continuation",
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：因由果而承，所以因不在昔时灭；果与因不同时，所以因不来到今时。脊柱上：「从…止息」（Web.CeasesFrom）只指一步之前活动、一步之后没有任何形成延续它者。被果延续的因虽不再活动，却不算「从…止息」，这正是「因不昔灭」。延续关系只连一步之前与之后（Web.Continues），因留在其步，果在后步，这是「果不俱因，因不来今」。在同一性的延续下，「从…止息」就是止息（Web.ceasesFrom_self）。天台「习因习续於前，习果剋获於後」（FO2-MH-R017）同此，并入本条。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "论·魏晋南北朝（僧肇《物不迁论》）",
+   "locator": "物不遷論第一 / pT45p0151a2009",
+   "tradition": "佛（三论）",
+   "work": "《肇论·物不遷論》",
+   "names_used": [
+    "相續",
+    "成／亡"
+   ],
+   "relational": "关系的、动态的"
+  },
+  {
+   "id": "mozi-gu-fu-chang-xin",
+   "record_ids": [
+    "MO1-C39-R004"
+   ],
+   "source_id": "MO1-S-C39",
+   "fragments": [
+    "所謂古之服言者，皆嘗新矣，"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.held_over_stretch",
+    "Becoming.stays_failing"
+   ],
+   "records": [
+    "census-balance"
+   ],
+   "reading": "AI读法：墨子驳儒：所谓古之服言，都曾经是新的。脊柱上：任一段中，终时所存加其间不再成立者，等于始时所存加其间开始成立者（held_over_stretch）。今之所存，若不是始时已存，便是其间开始成立；从不开始成立者永不成立（stays_failing）。所以「古」只是较早开始成立者，不是先在者；以古为法的论证随之失去独立根据。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "经·先秦（墨子，战国）",
+   "locator": "《墨子·非儒下》第39篇",
+   "tradition": "墨",
+   "work": "《墨子·非儒下》",
+   "names_used": [
+    "往來",
+    "成／亡"
+   ],
+   "relational": "动态的：古即较早之成"
+  },
+  {
+   "id": "mojing-sun-jian-ti",
+   "record_ids": [
+    "MI1-R-SS-damage"
+   ],
+   "source_id": "MI1-S-SS",
+   "fragments": [
+    "損，偏也者，兼之體也。其體或去或存，謂其存者損。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Whole",
+    "Becoming.Web.Whole.covered",
+    "Becoming.Web.Holds"
+   ],
+   "records": [
+    "whole-persists-through-generation",
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：损，是兼（整体）之体（部分）或去或存，所存者称为损。脊柱上：整体的活动由某部分的活动而定（Web.Whole），部分或去，只要仍有部分在，整体便在；持续的整体由其部分覆盖（Web.Whole.covered）。「存」即仍被持有（Web.Holds 的读法）。墨经「体分于兼」的构成义，理论不取（理论只有活动之相合）。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "说·先秦（墨经说，战国后期）",
+   "locator": "經說上",
+   "tradition": "墨／名辩",
+   "work": "《墨子·經說上》",
+   "names_used": [
+    "兼／體",
+    "存"
+   ],
+   "relational": "关系的"
+  },
+  {
+   "id": "mojing-jing-zhi-ju",
+   "record_ids": [
+    "MI1-R-SX-partwhole"
+   ],
+   "source_id": "MI1-S-SX",
+   "fragments": [
+    "荆，沈，荆之具也，則沈淺非荆淺也，若易五之一。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Generations.generations",
+    "Becoming.Web.Whole",
+    "Becoming.whole_not_in_pairs"
+   ],
+   "records": [
+    "whole-persists-through-generation",
+    "separation-loses-the-relation"
+   ],
+   "reading": "AI读法：沈是荆之具（部分），沈之浅不是荆之浅：部分之性不移于整体。脊柱上：部分各自短暂（每一部分的活动终止，至多两步），整体却每步都活动（Generations.generations）——部分之「短」不是整体之「短」。整体的关系不在部分对之中（whole_not_in_pairs），由活动之相合而定（Web.Whole）。",
+   "ro_passage": "",
+   "gap": "",
+   "layer": "说·先秦（墨经说，战国后期）",
+   "locator": "經說下",
+   "tradition": "墨／名辩",
+   "work": "《墨子·經說下》",
+   "names_used": [
+    "兼／體"
+   ],
+   "relational": "关系的"
+  }
+ ],
+ "parallels": [
+  {
+   "record_id": "WP-XCS-C02-S02-R02",
+   "same_as_entry": "mojing-yi-cheng-wang",
+   "note": "「变化者，进退之象也」：一变的两向，与墨经「已」的成／亡两向同构"
+  },
+  {
+   "record_id": "WP-XCS-C04-S03-R01",
+   "same_as_entry": "zhuangzi-zhile-qi-xing-sheng-si",
+   "note": "「原始反终，故知死生之说」：生死为一变的两端"
+  },
+  {
+   "record_id": "WP-XCS-C04-S04-R01",
+   "same_as_entry": "xici-jingqi-youhun",
+   "note": "精气为物：聚而成物"
+  },
+  {
+   "record_id": "WP-XCS-C04-S04-R02",
+   "same_as_entry": "xici-jingqi-youhun",
+   "note": "游魂为变：散而为变"
+  },
+  {
+   "record_id": "TP-H11-X6-R01",
+   "same_as_entry": "lin-xiao-bu-jiu",
+   "note": "城复于隍：成者复毁，在有界时成立"
+  },
+  {
+   "record_id": "TP-H30-X3-R01",
+   "same_as_entry": "lin-xiao-bu-jiu",
+   "note": "日昃之离何可久：盛极转衰，在有界时成立"
+  },
+  {
+   "record_id": "ZX130-H15-R02",
+   "same_as_entry": "xici-chihuo-longshe",
+   "note": "朱熹「先屈而后伸」：屈为伸之条件，非必然"
+  },
+  {
+   "record_id": "ZX130-H19-R01",
+   "same_as_entry": "lin-gang-jin-er-zhang",
+   "note": "朱熹「二阳浸长」：消息律之一段"
+  },
+  {
+   "record_id": "LC2-SZ-C50-R01",
+   "same_as_entry": "suzhe-bu-sheng-bu-mie",
+   "note": "立不生不死者于生灭之外，与第六章注同为相分"
+  },
+  {
+   "record_id": "RU2-R0169",
+   "same_as_entry": "zhangzai-tai-xu",
+   "note": "气聚则有形：聚即开始作为条件而在"
+  },
+  {
+   "record_id": "ZH1-C06-R-06",
+   "same_as_entry": "zhuangzi-zhile-qi-xing-sheng-si",
+   "note": "大块「劳我以生，息我以死」：生死同属一化"
+  },
+  {
+   "record_id": "ZH1-C06-R-07",
+   "same_as_entry": "wangbi-wu-you-wang-lai",
+   "note": "大冶铸金：执一形者违于化，与「执之必失」同构"
+  },
+  {
+   "record_id": "ZH1-C06-R-17",
+   "same_as_entry": "wangbi-wu-you-wang-lai",
+   "note": "化则无常：往来同其复现，无可执之常态"
+  },
+  {
+   "record_id": "ZH1-C18-R-03",
+   "same_as_entry": "zhuangzi-zhile-qi-xing-sheng-si",
+   "note": "同一段，察生死为一化"
+  },
+  {
+   "record_id": "FO1-R-SA034",
+   "same_as_entry": "zaahan-ji-mie",
+   "note": "此苦生时生、灭时灭：生灭两读并存而不设自体"
+  },
+  {
+   "record_id": "FO2-KS-P-R028",
+   "same_as_entry": "huayan-liu-xiang",
+   "note": "金师子章：总相"
+  },
+  {
+   "record_id": "FO2-KS-P-R029",
+   "same_as_entry": "huayan-liu-xiang",
+   "note": "金师子章：别相"
+  },
+  {
+   "record_id": "FO2-KS-P-R030",
+   "same_as_entry": "huayan-liu-xiang",
+   "note": "金师子章：同相"
+  },
+  {
+   "record_id": "FO2-KS-P-R031",
+   "same_as_entry": "huayan-liu-xiang",
+   "note": "金师子章：异相"
+  },
+  {
+   "record_id": "FO2-KS-P-R032",
+   "same_as_entry": "huayan-liu-xiang",
+   "note": "金师子章：成相（共时义）"
+  },
+  {
+   "record_id": "FO2-KS-P-R033",
+   "same_as_entry": "huayan-liu-xiang",
+   "note": "金师子章：坏相（各住自位，不是跨步之亡）"
+  },
+  {
+   "record_id": "FO2-MH-R017",
+   "same_as_entry": "zhaolun-yin-bu-xi-mie",
+   "note": "习因习续于前、习果克获于后：因被果延续，跨步相连"
+  },
+  {
+   "record_id": "FO2-SM-R014",
+   "same_as_entry": "jingang-you-wei-fa",
+   "note": "入有为相者是无常：同一定域（只对有限族之复现成立）"
+  }
+ ],
+ "rejected": [
+  {
+   "record_id": "WP-SG-C04-S02-R01",
+   "why": "说卦第四章「雷以动之，风以散之…」是八卦功能的列举，「散」只是共享之字：原文不说何者开始或不再作为条件而在，没有聚散的结构，也没有可证的律。"
+  },
+  {
+   "record_id": "FO1-R-SA-T2",
+   "why": "四圣谛「当知、当断、当证、当修」是修持的任务表；「苦灭」作为应证之目标，属评价与实践层，没有可对应的生灭结构（苦灭的结构已在 RO zaahan-ku-mie 的相分中处理）。"
+  },
+  {
+   "record_id": "RU2-R0275",
+   "why": "荀子议兵「能并之而不能凝则必夺」说兼并之后能否凝固其民，属争夺与统治之层（RO §7 中的争与位）。「形成须维持之耦合」的读法是借字，原文没有关系之形成与消解的结构。"
+  }
+ ],
+ "notes": "总判（AI读法）：本簇在中华材料中大体是一元的、关系的、动态的。先秦墨经（已：成／亡；体分于兼；化，徵易），荀子（一实／二实，稽实定数），庄子（其分也成也，其成也毁也；方生方死；日夜相代；聚散；物化），易传（往来、屈信、刚柔相推、消息），都把生灭读为同一变在不同规定或不同命名上的读法，不预设跨步的实体。理论在这里的主要贡献是定域：\n- 「盛极必衰／聚极则散」只在有界时成立（falling_recurs；反例 Accretion.never_falls）。\n- 「生必有死」「有为皆无常」只对有限族的复现成立（Web.unceasing_iff），对个体不成立（Accretion.never_ceases、Immortal.immortal）。\n- 「不息则久」反向成立（Web.Whole.needs_arising），正向不成立（Gaps.gaps）。\n- 「日新」在部分会终止时成立（Web.Whole.needs_new）；部分可再起时，更新是再起（Layered.arise_again）。\n- 转易给出不息，不给出生生（Law.Lossless.returns 对 more_needs_open），即 D5 的「有不息而无生生」。\n- 「不知其尽」只在传递不止时成立（Web.ByPassing.ends_within）。\n\n相分，按强度排列：\n1. 外于生灭的不生不死者：苏辙（LC2-SZ-C06-R01，并 C50），庄子「入于不死不生」（ZH1-C06-R-14）。属先在之基或外于展开之境。\n2. 相之下不灭的体：起信「唯心相灭非心体灭」（FO2-QX-R023），慧远「物化而不灭」之神（IN1-R-H11 的一面）。\n3. 固定之性：天台「不改名性」（FO2-MH-R011）。\n4. 无条件的持存：净土「金刚终不可坏」的种子（FO2-YJ-R020），河上公之「不死」（LC-R013/R015，沿 RO）。\n5. 给变化本身定价值：阿含「无常是苦」（FO1-R-SA004）。\n6. 生起系于固定方位：说卦（WP-SG-C05-S02-R01，沿 RO）。\n另有定域条目中的相分成分：张载以太虚为本体，程颐分形体与性情，唯识之「剎那必灭」。\n\n缺口：只提出一个，等级低至中。\n- G1：成与亡的对偶。CeasesToBe p t → ComesToBe (fun s => ¬ p s) t（核心，空公理报告），在 [Decidable (p t)] 下为 iff；对称地，ComesToBe p t → CeasesToBe (fun s => ¬ p s) t。它用于墨经「治病，亡也」（病之亡即愈之成）与「刚柔相推」（刚之亡即柔之成）。已 grep 全部 Lean：ComesToBe／CeasesToBe 从未施于否定谓词。\n- 检查过而未立为缺口的：「不息则久」的充分方向（由 Web.Whole 的定义直接得出，Gaps.gaps 已给反例）；「分即成」（forces_iff_noSplit 与 Budding.growth_without_arising 已给出范围）；「因不昔灭」（即 Web.CeasesFrom 的定义）；「不增不减」（World.withRest_counted）；同时俱有与前后相续之分（Web.Dependent 与 Web.Continues；同时的相互依存属 MD1／C02）。\n\n命名摘要：\n- 成／亡：ComesToBe／CeasesToBe。\n- 生／滅：生起／止息。理论中文现用「止息」，但其息字与 D5「不息」之息相反，建议改用「滅」。\n- 結／解：形成／消解。\n- 聚／散：开始／不再作为条件而在。\n- 一變三讀：change_readings，新组合。\n- 相代：同步。\n- 往來：普查平衡。\n- 定數：列一次即判定同一。\n- 不息：弱义。\n- 兼／體：整体与部分。\n- 終：Ends。\n- 一實：跨步之同一。\n- 相續：延续关系。\n- 無閒：连续。\n- 繼：接续。\n- 蟄：休眠。\n- 存：持存。\n- 分／合：分裂与并合。\n\n需与他簇协调：\n- 終、不息与C05的终始、不息。\n- 化留给C01。荀子、墨经中「化」是保持一实之变；庄子「物化」保留分。\n- 依存的结构（老子三十九章、果俱有、缘生老死）属C02。\n- 分与C13的名分须分用。\n- 體与理论「体现」之体字相撞。\n\n本簇自加条目的 record_ids：\n- 墨经「已」与「化」、荀子正名、庄子薪火、达生、方生方死：在脉络中没有 relation id，record_ids 留空。\n- 老子三十九章：用 LE-R057。\n- 中庸「不息则久」：用 RU1-ZY-34-R01。该关系也在C05的候选中，本条只给整体与部分的读法，请整合者合并。\n\nRO 复用：九条条目沿用 RO 的 kind 与声明：tuan-qian-gezheng、xici-chihuo-longshe、zhuangzi-qiwu-fen-cheng-hui、hs-06-16-bu-si、zaahan-ci-you-gu-bi-you、zhonglun-yin-yuan-jia-ming、huayan-liu-xiang、shuogua-di-chu-zhen、zagua-pairs，外加自加条目 xunzi-hua-yi-shi。其中六条增加了声明，理由各写在条目中：Flow.rise_with_fall／standing_with_fall、Hibernation.readings、persists／stays_failing、Web.Whole 等三条、Hexagram.bo_fu、listsOnce_iff_decided。\n\n自我反审（可能只是在对字）：\n- (a) 以「往來」名普查平衡：系辞「往者屈来者信」原是交替之象，计数义是我的延伸，信度为低。\n- (b) 杂卦「烂」「去故」「取新」：RO 与脊柱只证明配对与一步之转，消解与新成的读法未被证明。\n- (c) 中庸三十一章「诚则形…变则化」与孟子「集义所生」只对上了量的累计（recurring_accumulates、over_stretch），德性之链与浩然之气全不带入，近于借字。\n- (d) 序卦「始生」「穉」只是阶段读法。\n- (e) 墨经「次，无闲」本是空间相邻，移作步序的连续是转义。\n- (f) 「定數」的后世命数义很强，此名是否可用存疑。\n- (g) 「結／解」的证据薄，只有庄子内篇两处，且解的解脱义强。\n- (h) 华严成相／坏相是共时两相，与以「成」名 ComesToBe 的跨步义不同，已在条目中注明。\n- (i) 临「八月」的卦气对应未论。\n- (j) 慧远问难一条判为相合，依据的是问者立场，不是慧远本人立场。"
+}

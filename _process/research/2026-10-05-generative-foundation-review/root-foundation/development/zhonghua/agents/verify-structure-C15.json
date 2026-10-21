@@ -1,0 +1,453 @@
+{
+ "cluster": "C15 比较、取舍与践行",
+ "lens": "STRUCTURE",
+ "names": [
+  {
+   "concept": "实践判断 practical judgment（在给定比较与承诺之下，从一步可达的选项中取前沿）",
+   "name": "權",
+   "verdict": "revise",
+   "issues": "(1) 權的本义是秤锤（孟子“权，然后知轻重”）。荀子正名同段说“衡不正……权不正……道者，古今之正权也”：一根秤给每一对选项定出轻重，是单一标量上的全序，又配一个古今不变的“正权”（单一中心，固定标准）。理论的实践判断恰好是偏序上的前沿：混合者无序（Transfer.unordered），交叉的基本损失可以不可比（Lexical.Crossed.incomparable），没有普遍的效用分数。not_carried 没有排除“秤与全序”这一义。(2) 大取同段有“於事爲之中而權輕重，之謂求。求爲之非也”：在行动（事為）之中称量叫“求”，并涉是非。理论在一步可达的移动（FrontierFrames.Options）中选择，按大取的分法对应的是“求”，不是“權”。mapper 没有引这一句，所以“權非爲是也”不能直接读成“判断不由是非标准给出”。(3) 本簇各条里“權”承担三种不同的结构：名下是“在给定比较下取前沿”；xunzi-zhengming-cui 中是“C 与 L 不排序处另外给出的度量”；mencius-zhi-zhong-wu-quan 中是“随处境更细的归并”。一名三构，违反一名一义。(4) 孟子嫂溺（RU2-R0041）与牟子“時宜施”（IN1-R-M04）正是 not_carried 声明不取的经权之义（常规的例外），却列为证。(5) 现代汉语读“权”首先是权力、权利；按命名规则不用权利与社会词汇，not_carried 须写明。(6) 读法说“两种评价都尊重每个生成扩展”，这由 Profiles.both_respect 证明，lean 未列。这两个评价是两个数值权重（2a+b 与 a+2b），所以理论中与“權”最贴切的对应，是“另外给出的评价”，而不是前沿本身。",
+   "fix": "二选一。(a) 保留“權”，把概念限定为“在一个给定的整体之内，按所给的比较（C、L、J1/J2）定轻重”。not_carried 加两句：一是秤所含的单一标量全序与荀子“古今之正权”不取；二是比较不排序之处，權不给出轻重，那里各个评价可以各选不同（Profiles.both_respect、Profiles.opposite、Profiles.different_selections）。补引大取“於事爲之中而權輕重，之謂求。求爲之非也。”，并说明理论在移动上的选择对应權还是求。嫂溺与牟子两条从 attestations 移到 course，或者删去“经权之權不取”一句。各条目中的“權”统一为同一结构。lean 加 Becoming.Profiles.both_respect。(b) 或者改名为“取舍”：荀子不苟有“然後定其欲惡取舍”，是先秦用例，没有秤的全序意象，又与本簇题名一致；“權”留给“另外给出的评价”。"
+  },
+  {
+   "concept": "比较 C（扩大的比较：无损失而实现更多的扩展更好；唯一排序历程的前提，其根据开放）",
+   "name": "无丧而有得",
+   "verdict": "revise",
+   "issues": "(1) 这个名对的是一个关系，不是一个前提。无丧而有得＝保留每一主张且多实现一个，即 Extension（在水平路径上由 Web.paths_extension_iff_widens 等于 Widens，在延续条件下等于 Retains∧Adds）。C 是“把这一关系称为更好”的前提（Comparison：Extension → Better）。中文版说：“扩大是一个次序，这不需要前提；它更好，这是 C。”名中只有关系，没有“更好”，于是 C 与 Extension 共用一名。按 fit 的组合，它在延续条件下又与 C06 的“广”（赅而有所长＝Includes∧Exceeds＝Widens）同指。(2) 所据的荀子原文是按数目净算的交易（“易者，以一易一……明其数也”“计者取所多”）。每次交换都交出一物（有丧），也得到一物（有得），荀子按净数目把交换分为三类。若交出与所得的内容不同，以一易一在理论中正是混合（Web.mixed_iff_adds），荀子却称之为“无得亦无丧”。fit 说“荀子三类不含混合”，这不对：三类都是混合交换的净算。只有当交出与所得属同一可互换类（主张是“至少有 k”）时，以一易两才是扩展，以一易一才是相赅。(3) alternatives 拒“以广为善”的理由是“广缺‘无丧’一支”，这是错的：C06 的广定义为赅而有所长，本身含无丧。(4) 交易语境（得与丧是一个持有者的账）接近命名规则所排除的市场词汇。",
+   "fix": "把“无丧而有得”改作关系之名，名生成扩展 Extension（在帧上），或名 Retains∧Adds（相对有意义者；不设条件时与广不同）。lean 改为 Becoming.Extension、Becoming.Web.paths_extension_iff_widens、Becoming.Web.widens_iff_retains_adds、Becoming.Frame.strictLossMatch_of_extension。为 C 另立一个前提式的名，例如“以广为上”或“无丧而有得者为上”，并写明“为上”是 C 所加，其根据未决。删去 alternatives 中对“广”的错误理由。fit 改写荀子三类：在一个可互换类之内，三类恰是扩展、相赅与反向扩展；跨内容的交换是混合而无序；荀子按数目定序这一层不取。not_carried 加“交易与账目框架不取”。"
+  },
+  {
+   "concept": "保留／增加 retains / adds（Web.Retains／Web.Adds；余量律 retains_iff_within_margin／loses_iff_beyond_margin）",
+   "name": "无丧／有得",
+   "verdict": "revise",
+   "issues": "结构是对的：两个谓词，组合规则与 widens_iff_retains_adds 一致；墨经“損而不害。說在餘”与 Balances.retains_iff_within_margin、loses_iff_beyond_margin 精确对应。问题有三。(1) “丧、得”二字的先秦证只有荀子正名的交易句，那里的义是按数目净算的得失。墨经证用的是損、害、餘，墨子证用的是“不失”“加”，都不含丧、得。名的字义证据与结构证据分属不同文本。(2) 墨经的“損而不害”本身就是“汲取在余量之内即保留”这条律，比“无丧”更精确，又能与 C06 已采的“余地”（margin）组合检验，本名没有与“余地”接上。(3) “得”带占有与得者之喜（RO mojing-li-suo-de-er-xi 已判相分）。not_carried 说了这一点，但没有写明交易框架不取。",
+   "fix": "二选一。(a) 保留名。not_carried 加“荀子原句是按数目的交易，计数与交易框架不取”。fit 中把墨经一条改述为：“損而不害（在余地之内）”是 retains_iff_within_margin 之名，并与 C06 的“余地”组合。同时删去“无丧而有得＝C”的组合句（见上一个名）。(b) 或者以墨经之字为名：保留＝不害（相对余地），失去＝害，以“損而不害，說在餘”名余量律。"
+  },
+  {
+   "concept": "提升规则 L（LiftBetter：一个回应的每个结果都优于另一回应的每个结果）",
+   "name": "粹",
+   "verdict": "revise",
+   "issues": "(1) L 的结构是对一个回应的多个可能结果作全称量化。它不排序的情形是“某个结果更好、某个结果更坏”（LiftModel.some_outcome_does_not_lift），即结果不定。荀子“所欲未尝粹而来”说的是所取之物本身利害相杂：一个结果中所欲与所恶并来。这是构形层的混合（各有对方所缺，Web.mixed_iff_adds；Transfer.unordered），由 C 处理，不由 L 处理。mapper 自己在 xunzi-zhengming-cui 条也用 mixed_iff_adds 与 unordered 读这一句。所以“粹”诸证（荀子正名、非相，庄子刻意，孙子九变“必雜於利害”）显示的结构是“不混合”，不是“提升”。(2) 单字“粹”名一个性质，不名“把比较提升到回应”的规则。L 的传递还需要一个有结果的中间回应（lift_needs_live_middle），名中也没有。(3) 孙子“軍爭為利，軍爭為危”（BI1-SZ-R-33，现列为平行）说同一行动可以得利也可以致危，即一个回应有好坏两个结果，正是 L 不排序的结构；mapper 没有用它作证。",
+   "fix": "若保留“粹”，须把诸证改述为“结果的内容不混合”，并承认它们对应的是 C 的不混合（与 C06“各有所长”互为反面），不是 L。L 另以“结果不定”之证立名，主证用孙子军争 BI1-SZ-R-33，名须含“每一结果皆在其上”之义（例如用“皆”组合，交整合者定）。lean 中 LiftBetter、comparison_lifts、some_outcome_does_not_lift、lift_needs_live_middle 只随 L 之名，不再与荀子“粹”相连。"
+  },
+  {
+   "concept": "J1 完全比较与保留的损失",
+   "name": "兼權",
+   "verdict": "revise",
+   "issues": "(1) J1 有两半：完全比较，以及保留的损失（PRACTICAL-JUDGMENT.md §1：restoration does not erase history）。荀子不苟只给前一半；而且“兼權之，孰計之，然後定其欲惡取舍”是先称量、后计算、再决定，带净算，正是“保留的损失”所拒绝的抵消。后一半取自大取，不在名的出处。(2) lean 列了 Frame.StrictLossMatch，那是 FR 的形式内容（finite-aggregation-within-restorable-basic-losses），不属于 J1。“保留的损失”的形式承载是 Frame.ReadsAt.loss_retained（恢复的支持不使已失者复得；readsAt_iff_settled）与 Lexical.Repair.loss_retained。(3) 名中含“權”，继承上面“權”的秤与全序问题；荀子同篇以權为“平輕重”之器（杨倞注）。(4) 荀子所称量的欲恶是行动者一己的好恶，是单一立场。",
+   "fix": "lean 删 Becoming.Frame.StrictLossMatch，加 Becoming.Frame.ReadsAt.loss_retained、Becoming.Frame.readsAt_iff_settled、Becoming.MatchedCourses.recovery_retains_loss。not_carried 加两句：“孰計”是净算抵消，与保留损失相反，不取；欲恶是一己的好恶，不取。若要名同时承载两半，请整合者考虑在名中加入保留一支（例如与大取“不得已”组合）；否则明言“兼權”只名完全比较，保留的损失另立名。"
+  },
+  {
+   "concept": "J2 基本条件优先（词典序：任何数量的增益都不换一个基本主张）",
+   "name": "无以小害大",
+   "verdict": "revise",
+   "issues": "(1) J2 的要点是词典序：任何数量的增益都不换一个基本主张（Lexical.Above.no_trade）。这正是 J2 与满足 C 的自然数评分不同之处（comparison_does_not_yield_priority）。“小、大”是量词，“无以小害大”在标量读法下也成立（只要大的更大即可），并不排除积小成大；名中没有“无论多少”。(2) 它与本簇 FR 的名“同類積小”字面相反。FR 恰恰允许足够多的较轻保护胜过一个较重的损失，即以积起来的小者胜大者。两个名用“小、大”指不同的东西：J2 中是增益层与基本层，FR 中是同一层内的轻重。读者无从分辨。(3) 孟子原句“无以小害大，无以贱害贵”中，小大与贵贱并举，指位阶（以心志为大体）。not_carried 已说孟子的分类与 J2 相反，但名的字义正据此位阶之序。(4) concept 写“它排除每个满足 C 的自然数评分”。Lean 只在 ScoreRepresentation 的一个构造情形中证明这一点（记录：in one constructed protection-versus-gains situation），须加限定。(5) 有更贴切的先秦证，mapper 未用：孟子公孙丑上“行一不义、杀一不辜而得天下，皆不为也”（荀子王霸、儒效同）。得天下这样最大的增益，也不换一个加于人的基本损失；这正是 Above.no_trade，并且带有 J2 原文中的“imposed basic deprivation”。",
+   "fix": "concept 中“它排除每个满足 C 的自然数评分”改为“在一个构造的保护对增益情形中，排除每个满足 C 的自然数评分（ScoreRepresentation.no_nat_score_represents）”。名改用、或加入带“无论多少”之义的证：以孟子“行一不义、杀一不辜而得天下，皆不为也”（RU2-S-MZ，已核）为主证，“行一不义”的义层不取，名取其结构（例如“不以天下易一不辜”一类组合，交整合者定）。若保留“无以小害大”，fit 与 not_carried 须写明：小大是层而不是量，名下读 Above.no_trade；整合时与“同類積小”并列，说明二者作用于不同的层。"
+  },
+  {
+   "concept": "J3 有界责任（正当的承担与可问责的依存改变给出责任；能力与控制限其形式与累积负担）",
+   "name": "量力而任",
+   "verdict": "revise",
+   "issues": "(1) 在理论中，J3 的责任出自“有正当理由的承担”与“可问责的依存改变”，能力与控制只限定其形式与累积负担（PRACTICAL-JUDGMENT.md §1、§4；practical-judgment-under-living-significance：causation, benefit and capacity alone do not assign unlimited duty）。名只带“能力为界”与“承担”，不带“可问责的依存改变”（修复之责），也不带解除（Settled.no_residual）。(2) fit 用 Required.impossible 读“不能者无所要求”。这条引理说的是“没有任何可接纳选项时无所要求”，不是“某承担者不能，则不被要求”。后者是 Assigned.capable 在“可接纳计划的分派都可行”这一条件下的逆否，或者 Required.defeated（有一个缺此任务的可接纳选项，要求即被击败）。Assigned.capable 只是把可行性条件带出来：界是写进可接纳性的承诺，不是推出来的。(3) 墨经经上“任，士損己而益所爲也”是墨辩定义的术语，正是不计己损的无界之任。本簇大量取墨辩之名（權、損而不害），同一词汇中的“任”会有两义相冲，须立为相分条目，不能只写在 not_carried 里。(4) 先秦“量力”的用例全在兵事与国力之争（韩非子、商君书），属争位层。",
+   "fix": "concept 补一句：责任之据是正当的承担与可问责的依存改变，能力与控制限其形式与累积负担。fit 中 Required.impossible 改为：“在可接纳计划的分派都可行的条件下（Requirement.Assigned.capable 的前提），不能者不被分派；若有缺此任务的可接纳选项，要求即被击败（Requirement.Required.defeated）。”lean 加 Becoming.Requirement.Required.defeated。另立一个相分条目，引经上“任，士損己而益所爲也。”（MI1-S-JS，节点 MI1-N-JS-012，已核）。not_carried 写明：名只名能力之界与承担，修复之责与解除另说。"
+  },
+  {
+   "concept": "J4 正当可行的选择（被授权、共同可行、未被胜过的计划；在一步可达的选项中取前沿）",
+   "name": "從所可",
+   "verdict": "reject",
+   "issues": "名的出处是荀子正名“欲不待可得，而求者从所可”。这一句本身就把“可得”（可达、可行）与“所可”（心之所可，即认可）分开：欲望不等可得，追求则依从心之所可。脉络 RU2-R0137 读作“求依心所可而行动”，RU2-R0136 的认知注是“区分感受发生与行动许可”；同篇又说“凡人莫不从其所可，而去其所不可”“心之所可中理”。所以“所可”是认可、许可。理论 J4 的可行（一步可达，FrontierFrames.Options）恰恰是荀子的“可得”。名把“可行”之义安在“认可”之字上，义的忠实不成立。剩下的认可之义以一心为中心、以“中理”为标准，属单一中心层。J4 的“正当”一半（被授权的计划，由受影响者的参与给出）名中也没有。其余诸证中，吴子“見可而進”是兵家进退，中庸“吾從周”与可行无关，程颐“量可而進”属宋层。",
+   "fix": "不采此名。可行的选项改以荀子“可得”立名，例如以“可得”名 Options，J4 的选择名作“取於可得”一类组合（交整合者定；“擇”已为 C12 所用，勿混）。“所可”若用，只作 J4“正当、许可”一半的相分对照：心之所可中理是单一中心，不取。xunzi-zhengming-cong-suo-ke 条按此改写（见该条）。"
+  },
+  {
+   "concept": "FR 有限回应（同类、可恢复的基本损失之内，较重者不因其重而对任意多个较轻保护保持充分优先；附加的、可修订的比较承诺）",
+   "name": "同類積小",
+   "verdict": "revise",
+   "issues": "(1) 组合是可以检验的，并且与 C04 已用的“积小以高大”（阿基米德的量）一致：FR 就是在同一类之内不设永久的轻重词典序，允许有限多个较轻保护合起来取得充分根据，即同类之内的阿基米德性。fit 没有把这一点作为组合依据写出。(2) FR 的范围是“独立说明的、同一类的、可恢复的基本损失”，并排除终局伤害、不可重复的参与、共同崩溃与不同的强制（finite-aggregation-within-restorable-basic-losses 的 Conditions）。名与 fit 都不带“可恢复”“基本”两限。(3) 形式内容（严格损失匹配的计数律）在一类之内把每个损失计为一，不表示较重与较轻；“充分”是承诺（Frame.SufficientMatching），名中没有标出它是承诺。(4) 墨子“知類”是论辩中的类比一致（RO 以 selects_right_through 读之），不是内容类 κ；“杀少而杀众”属终局伤害，正在 FR 的范围之外。(5) 与“无以小害大”字面相冲（见该名）。",
+   "fix": "fit 写明组合：同類（内容类 κ，Frame.strictLossMatch_iff_length_of_alike）＋積小（C04“积小以高大”的阿基米德性）＝同类之内不设永久的轻重词典序。not_carried 加三点：只在可恢复的基本损失之内；终局伤害与不同的强制不在其内；“充分”是可修订的承诺，不是律。墨子“知類”一证改述为“同类计数”之证，并注明其例为终局伤害，在 FR 之外。整合时与 J2 之名并列，说明各自作用的层。"
+  },
+  {
+   "concept": "足 enough（目标在展开所不变的状态被满足，Law.rests_iff）",
+   "name": "足而止",
+   "verdict": "revise",
+   "issues": "结构基本对：足＝目标被满足，止＝律使状态不变，二者合取即 Law.rests_iff。问题有五。(1) “足”在 C02 名 Web.Supported（需求不高于水平），在 C05 的“恆足”“復足”中也指依存被满足；本名的“足”则是任意目标被满足（Seeking 模块：目标是构形上的任何条件，有害的目标也可以）。同字两义，读者会把“足而止”读成“被支持便静止”。(2) Seeking 模块的标题就是“无明的边界条件”，B1 即 Law.rests_iff；词汇表也以 Law.rests_iff 为“无明”之锚。本名没有与已采的“无明”连接，老子46、苏辙33 两条的 names_used 也没有列“无明”。(3) 在不确定之律下，够分为两种：可能之足（Enough.possibly_rests_iff），与保证之足（Enough.assured_iff，另需每次运行都定下来；Enough.Free.stays_meet_not_assured）。名与 lean 只有可能之足，以及确定律下二者合一。(4) “而”若读作先后（足则止），名就成了规范命令（墨子“聖王……則止”）；理论只给边界之律，不说应当止。(5) 中文版已有现名“够”（目标在一个展开所不变的状态被满足），名表须写明“足而止”与“够”的关系或替换。",
+   "fix": "not_carried 加：这里的足指任一目标被满足，不限于 C02 的需求被覆盖；名不是“止于足”的规范。fit 加：与已采的“无明”（锁定于不能在静止处满足之目标的寻求）以同一条律 Law.rests_iff 为界，二者是一界的两侧。lean 加 Becoming.Enough.assured_iff、Becoming.Enough.Free.stays_meet_not_assured；concept 写明“在不确定之律下，可能之足与保证之足分而为二”。注明中文版现名“够”。"
+  },
+  {
+   "concept": "先占 preemption（在任何依存形成之前取走一个条件：当步在更新之内、不剥损，却关闭以后能形成者）",
+   "name": "絕其長",
+   "verdict": "revise",
+   "issues": "(1) 先占的结构是在任何依存形成之前取走条件（Preemption.within_renewal_yet_loses、not_undermining_yet_loses；英文词汇表：Taking a condition away before any dependence on it forms）。荀子王制所禁的是“荣华滋硕之时”“孕别之时”的取：此时生长与孕育已在进行，依存已经形成，砍伐与网取同时“夭其生”又“绝其长”，是剥损。原文中没有“不夭其生而绝其长”的情形。(2) “其長”的“其”指一个已在生长之物；先占所失的东西还没有开始，无“其”可指。所以这个名的结构更接近“剥损一个进行中的生长”。(3) 中文版正文与词汇表已用“先占”（THE-THEORY-OF-BECOMING.zh.md 词汇表；英文词汇表 preemption (先占)）。mapper 以“占”带占有义而拒之，这合乎命名规则，但须作为对现行术语的替换提案明说。(4) 它与 Ren 的“绝生”（C06：一部分之水平狭于无此部分时）是上下位关系，fit 已说。",
+   "fix": "若保留，fit 改为：王制分出两种失，夭其生（剥损已成之依存）与绝其长；先占是只有后一种、没有前一种的情形；王制所禁之时二者并有，原文给出区分，不给出先占之例。另补一条 scope 条目，引孟子“斧斤以时入山林，材木不可胜用也”：按时取而不剥损，不足以表明保住了能形成者（Preemption.within_renewal_yet_loses）。名可考虑以带“未”的组合名之，使名指未成者（C06 开之一相“未”：仍有未成之域；例如“絕其未生”一类，交整合者定）。明写“替换中文版现名‘先占’”及其理由。"
+  },
+  {
+   "concept": "请求的改变必须是可执行序列（§7.6：接受请求的倾向不意味着改变能到达系统并完成）",
+   "name": "不行不至",
+   "verdict": "revise",
+   "issues": "(1) §7.6 的核心是：接受一个请求（停止、修订）的倾向，不意味着改变能到达系统并完成；请求者与执行者不是同一个，这是经中介的改变（记录 reserved-shutdown-during-recovery、recoverable-mediated-change、assured-route-criterion、risk-certificate-outcome-distinction）。“不行不至”说的是行动者自己不走就到不了，只带“每一步都须执行”（Countdown.pending_before），不带“请求不等于执行”，也不带中介。墨经“使，令謂，謂也，不必成濕。故也，必待所爲之成也”恰好把命令之使与成事之使分开，正是 §7.6 的第一句。mapper 以“只说否定一面”拒之，但 §7.6 首先陈述的就是这一否定。(2) concept 的主体是 Stock.feasible_iff_covered 与 Revising.covered_not_enacted，它们出自 §4.6 的在途任务记录（pending-task-context-applicability）与选择修订记录；§7.6 自己的保留停止余量、中断后的证据恢复、保证到达条件、风险界与结果之别，只有 Countdown.exits、Slow.misses 出现。(3) “覆盖”（每一步的存量与补充覆盖到此为止的汲取）也不在“不行不至”之中。",
+   "fix": "名改为以墨经“令謂……不必成”为主、“不行不至”为辅的组合；或者保留“不行不至”，在 not_carried 写明：请求经中介到达他者、接受不等于执行，这一层由墨经令与故之分承担。concept 以 §7.6 的四个记录为首：保留停止余量（Countdown.exits、Countdown.Slow.misses）、中断后的证据恢复（Countdown.completes_iff，recoverable-mediated-change）、保证到达（assured-route-criterion）、风险界与结果（Readout.no_judge_of_merged）。Stock 与 Revising 两条注为 §4.6 之律。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "mojing-daqu-quan",
+   "verdict": "revise",
+   "issues": "大取同段有“於事爲之中而權輕重，之謂求。求爲之非也”，把行动中的称量称为“求”，并涉是非。理论在一步可达的移动中选择，按大取的分法对应的是“求”。读法没有引这一句，所以“權非爲是也……与此相合”说得过强。“两种都尊重每个生成扩展的评价”由 Profiles.both_respect 证明，未列；这两个评价是两个数值权重，在理论中对应“權”的是另外给出的评价，不是前沿。records 用了旧 id practical-judgment-g0-j。",
+   "fix": "fragments 加“於事爲之中而權輕重，之謂求。求爲之非也。”（已核）。读法补：大取分權（于所體之中，即给定整体内诸部分的轻重）与求（于事為之中）；理论在移动上的选择对应求，“權非爲是非”只在给定整体内的轻重比较上相合。declarations 加 Becoming.Profiles.both_respect。records 改为 practical-judgment-under-living-significance。种类可保留 agreement，但只限“在给定整体之内按所给比较定轻重”。"
+  },
+  {
+   "id": "xunzi-zhengming-wu-sang-er-you-de",
+   "verdict": "revise",
+   "issues": "荀子的三类是按数目净算的交易（“明其数也”“计者取所多”）：每次交换都交出一物（有丧），也得到一物（有得）。读法说“荀子的三类不含混合”，这不对。理论的结论是：只有当交出与所得属同一可互换类（以量为主张）时，以一易两是扩展，以一易一是相赅；跨内容的以一易一是混合而无序（Web.mixed_iff_adds、Transfer.unordered），不是“无得亦无丧”。理论给出了荀子之判成立的确切范围，并修正其全称，这是定域，不是相合。",
+   "fix": "kind 改为 scope。读法改为：荀子按数目把交换分为三类；在交出与所得同属一个可互换类之处，三类恰是扩展、相赅与反向扩展（Extension；在延续条件下 Web.widens_iff_retains_adds），在同一内容类内按计数也恰合严格损失匹配（Frame.strictLossMatch_iff_length_of_alike）；跨内容的交换是混合，C 不排序，排序需要度量（Web.mixed_iff_adds、Transfer.unordered）；荀子以数目定序，以及“从道而出……奚丧”以道为保证无丧的固定标准，这两层不取。declarations 加 Becoming.Frame.strictLossMatch_iff_length_of_alike。names_used 按名条修改后的义使用。"
+  },
+  {
+   "id": "xunzi-zhengming-cong-suo-ke",
+   "verdict": "revise",
+   "issues": "读法把“所可”对到可行选项（FrontierFrames.Options）。但原句把“可得”（可行）与“所可”（心之认可）分开：欲不待可得，求从所可（脉络 RU2-R0137 读作“求依心所可而行动”，RU2-R0136 注为“区分感受发生与行动许可”）。理论中的可行选项对应的是“可得”；“所可”对应所给的比较或许可，在荀子那里由一心依“理”给出，属单一中心层。读法虽注明“心之所可”不取，结构对应却建立在这个被拒的义上。records 用了旧 id。",
+   "fix": "读法改为：荀子分欲、可得、所可三者。欲不以可得为前提：目标可以是任何条件，包括不能静止的（Law.rests_iff、Law.more_never_rests）。可得是一步所能达到者（FrontierFrames.Options），不能达到之处无所要求（FrontierFrames.nothing_required）。求从所可：选择按所给的认可或比较，在可得之中取前沿（Requirement.Frontier）；所可以一心中理为准，这一层相分。种类保留 scope。names_used 按“從所可”名条修改。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "xunzi-wangzhi-bu-jue-qi-zhang",
+   "verdict": "revise",
+   "issues": "王制所禁的是“荣华滋硕之时”“孕别之时”的取。那时生长与孕育已在进行，依存已经形成；砍伐与网取同时“夭其生”又“绝其长”，是剥损，不是先占（先占是在任何依存形成之前取，当步不剥损）。读法说“荀子把禁令放在将生之时……正是逐步分类看不到、包含比较看得到的那一处”，这不对：在生长之时取，逐步分类看得到（UnderminingAt）。原文与先占相合的，只是“把两种失分开”这一点。",
+   "fix": "读法改为：王制分出两种失，夭其生（剥损已成之依存，逐步分类看得到）与绝其长（关闭以后的生长）；先占是只有后一种、没有前一种的情形（Preemption.within_renewal_yet_loses、Preemption.not_undermining_yet_loses）；王制所禁之时二者并有，原文给出区分，不给出先占之例。另立一条 scope 条目，引孟子“斧斤以时入山林，材木不可胜用也”（RU2-S-MZ，已核）：按时取而不剥损，不足以表明保住了能形成者。本条 kind 可保留 agreement，只就“两种失之分”而言。"
+  },
+  {
+   "id": "xunzi-zhengming-cui",
+   "verdict": "revise",
+   "issues": "荀子“所欲未尝粹而来”说的是：在一个所取的结果中，利与害相杂（构形层的混合），而不是一个回应有多个可能结果。LiftBetter、comparison_lifts、some_outcome_does_not_lift、lift_needs_live_middle 所陈述的是结果不定的情形，与原句的结构不同。读法后半（mixed_iff_adds、unordered、both_survive）是对的。原文接着说“衡不正……权不正……道者，古今之正权也”：荀子在混合之处要的是一根校准好的秤，即单一标量与固定标准，读法只一句带过。",
+   "fix": "declarations 删去 Becoming.LiftBetter、Becoming.comparison_lifts、Becoming.LiftModel.some_outcome_does_not_lift、Becoming.LiftModel.lift_needs_live_middle，加 Becoming.Profiles.both_respect。读法改为：未尝粹，即所取各有对方所缺（混合），C 不排序，需要另外给出评价，各评价可以各选不同。把“道者，古今之正权也”作为相分写出（单一固定之衡）。L 的条目改用孙子“軍爭為利，軍爭為危”（BI1-SZ-R-33，已核）。names_used 去掉“粹”（若粹改名，见名条）。"
+  },
+  {
+   "id": "xunzi-bugou-jian-quan",
+   "verdict": "revise",
+   "issues": "原文只给出 J1 的“完全”一半。“孰計之”与“然後定其欲惡取舍”是先称量、后净算、再决定，与“保留的损失”（损失不被选择抵消）相反。读法以 Repair.loss_retained 承载“保留”，但这一半不在本句。Frame.StrictLossMatch 是 FR 的形式内容，不是 J1。records 用了旧 id。",
+   "fix": "读法改为：兼權给出“完全”一半（可欲与可惡、可利与可害一并列入；Lexical.Above 读两层的全部所持）；孰計之后定取舍带净算，与保留损失相反，不取；保留的一半见大取“害之中取小，不得已也”。declarations 删 Becoming.Frame.StrictLossMatch，加 Becoming.Frame.ReadsAt.loss_retained，或移去 Lexical.Repair.loss_retained。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "mencius-sao-ni-quan",
+   "verdict": "revise",
+   "issues": "“以手援天下不可行，不可行者无所要求（Requirement.Required.impossible）”是误用。Required.impossible 只在没有任何可接纳选项时成立；此处有可接纳的“援之以道”。以手援天下的要求，是被一个缺此方式的可接纳选项击败的（Required.defeated）。names_used 用了“權”，而嫂溺之權正是名条声明不取的经权之义（常规的例外）。records 用了旧 id。",
+   "fix": "declarations 以 Becoming.Requirement.Required.defeated 替换 Requirement.Required.impossible，读法相应修改。names_used 中的“權”按名条处理；或者在读法中写明：此处的權，是常规与基本主张冲突时按 J2 的分类定序，不是规则的例外。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "mencius-zhi-zhong-wu-quan",
+   "verdict": "keep",
+   "issues": "结构相合：执一，即以一个粗的归并读一切处境；要紧之处在被归并者之间不同时，须用更细的映射。这与 Learning 的三条律对应。Profiles.different_selections 关系较远，但不致误。本条中“權”的结构是“更细的归并”，与名条的“取前沿”不同构，这个问题记在名条。",
+   "fix": ""
+  },
+  {
+   "id": "mencius-bu-chuai-qi-ben",
+   "verdict": "revise",
+   "issues": "“不揣其本而齐其末”说的是：比较须先对齐基点，其余相若，只比所问的一项。这是 C08 已名“相若”（对照）的结构，不是严格损失匹配的计数。“金重于羽……一钩金与一舆羽”是按单位之重的标量比较，并承认数量足够时可以反转（一车羽重于一钩金）；跨种类按数量反转，正是 J2 所拒、FR 只在同类之内允许的。读法以 strictLossMatch_iff_counts 承载，引理与原句的结构不合。records 用了旧 id。",
+   "fix": "declarations 删 Becoming.Frame.strictLossMatch_iff_counts；若要引律，用 C08“相若”之锚（例如 Becoming.Confound.misattributes），并注明是类比。读法改为：比较只在其余相若之处把差别归于所比的一项；金羽之喻是按单位之重的标量比较，跨种类时数量可以反转，这一层与 J2（无论多少增益都不换基本主张）相分，只在同类之内与 FR 的计数相近。kind 改为 scope。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "mencius-she-sheng-qu-yi",
+   "verdict": "revise",
+   "issues": "相分的判断是对的。末句“孟子在别处以權救嫂之溺、以生命为先，可见书中两种排序并存”不成立：嫂溺比较的是他人之生与礼的常规，舍生取义比较的是己之生与义，所比之项与承受者都不同。这一差别正与 mojing-daqu-sha-ji 的承受者、动因者之分相连。",
+   "fix": "删去“两种排序并存”一句，改为：嫂溺一条是他人之生对常规，此条是己之生对义，承受者不同，见 mojing-daqu-sha-ji 的缺口。"
+  },
+  {
+   "id": "mencius-bu-wei-fei-bu-neng",
+   "verdict": "revise",
+   "issues": "Required.impossible 用错了（它的条件是菜单为空）。“不能者不在要求之内”应由 Assigned.capable 给出，前提是可接纳计划的分派都可行。“能而未为、又未被解除者，留下余责”：余责需要任务到期，而理论明言能力、因果与受益本身都不派给责任，责任之据是正当的承担与可问责的依存改变。读法把“王”的职分当作位阶不取，可那正是这一承担之据；去掉它，余责无所从出。records 用了旧 id。",
+   "fix": "删 Becoming.Requirement.Required.impossible 与 Becoming.FrontierFrames.nothing_required，按需加 Becoming.Requirement.Required.defeated。读法改为：能力是界，不是据；王对保民的承担（关系中的承担，不取位阶）使这一任务到期，能而未为、又未解除，才有余责（Requirement.residual_of_unfulfilled）。kind 改为 scope（理论修正“能则当为”的全称）。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "mencius-su-yi",
+   "verdict": "revise",
+   "issues": "Law.lost_stays 说的是：在确定之律下，不可达的构形以后也不可达。它不说“偷一只鸡是一个不返回的损失”，偷来的鸡可以归还；读法“多延一步就多一个不返回的损失”没有根据。严格损失匹配的计数可以用（一类之内失去较少者在严格匹配的一边）。但 SufficientMatching 的提出范围（FR）是可恢复的基本损失，攘鸡不是基本损失；读法说“孟子的‘速已’在此承诺之下与匹配一致”，须注明这一范围。",
+   "fix": "删 Becoming.Law.lost_stays。读法改为：在同一类之内，立即停止比延到来年失去的更少，严格匹配在它一边（Frame.strictLossMatch_iff_length_of_alike）；以严格匹配为充分是一个承诺（Frame.SufficientMatching），FR 把它提在可恢复的基本损失之内，攘鸡不在其内，此处只取计数。names_used 中“同類積小”删去，或注明只取计数。"
+  },
+  {
+   "id": "mencius-tu-shan-tu-fa",
+   "verdict": "keep",
+   "issues": "“徒法不能以自行”与 Revising.covered_not_enacted（覆盖了而连接受阻，修订仍不发生）结构相合：有规则或资源，不等于执行。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-xiushen-bu-xing-bu-zhi",
+   "verdict": "keep",
+   "issues": "计数之工在走完之前悬而未决，此前没有完成（Countdown.pending_before、not_done_before、Advances.completes），结构相合。读法中“被覆盖地走完”一语，原句不涉及资源，属轻微的外加。",
+   "fix": ""
+  },
+  {
+   "id": "mojing-shi-ling-wei",
+   "verdict": "revise",
+   "issues": "命令之使与成事之使的区分，与 §7.6 首句（接受请求不等于完成）精确相合，应作为 §7.6 名的主证。Readout.no_judge_of_merged 说的是：一个读法若合并了观察可分的两个成员，就没有判者；这与命令和成事之别无关，属风险界与结果之别，读法硬接上了。",
+   "fix": "删 Becoming.Readout.no_judge_of_merged，以及读法中“风险界与实际结果之别也在此”一段。保留 completes_iff、stalls_beyond、exits、Slow.misses，把后两者读作“故”：在保留余量之下，停止必在余量加一步之内完成，且这个界恰好达到。并以此条作为“不行不至”名条修改后的主证。"
+  },
+  {
+   "id": "mojing-sun-er-bu-hai",
+   "verdict": "revise",
+   "issues": "相合精确。names_used 只列了“无丧／有得”，没有列 C06 已采的“余地”（margin，Balances.supported_iff_within_margin 之名），而本句说的正是“說在餘”。",
+   "fix": "names_used 加“余地”（C06）；读法中第一次出现“余量”之处，改写为“余地”。"
+  },
+  {
+   "id": "mojing-daqu-hai-zhong-qu-xiao",
+   "verdict": "revise",
+   "issues": "断指存腕：断指之后的构形，保留了断腕之后构形的每一个主张，并多保一腕。这是包含关系下的损失（嵌套），C 可直接排序（Extension；Frame.strictLossMatch_of_extension），不需要“同一内容类”的计数前提。读法用 strictLossMatch_iff_length_of_alike，要求指与腕同类，前提过强且不合。“子非取害也，取利也”相对于另一选项（断腕）说，恰是扩展（取利）；“其遇盜人，害也”把害归于遇盗，参照的是遇盗之前。二者分属两个参照，读法没有分开。records 用了旧 id。",
+   "fix": "declarations 以 Becoming.Extension、Becoming.Comparison、Becoming.Frame.strictLossMatch_of_extension 替换 Frame.strictLossMatch_iff_length_of_alike。读法改为：相对于断腕，断指是扩展，C 排它在上（“取利”）；相对于遇盗之前，断指仍是失，保留为损失（“其遇盜人，害也”，Lexical.Repair.loss_retained 的结构）；“不得已”标出的是后一个参照。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "mojing-daqu-sha-ji",
+   "verdict": "revise",
+   "issues": "缺口陈述得过宽。理论的承诺在文字上已经分开施加与自承：J2 原文有“optional enrichment cannot license imposed basic deprivation”，J3 表中有“actual consent”与“not unlimited sacrifice”，FR 的条件排除“different coercion”（PRACTICAL-JUDGMENT.md §1、§4；finite-aggregation-within-restorable-basic-losses）。缺的是形式层：核心中的比较只看构形所实现的主张。另，大取同篇“愛人不外己，己在所愛之中”（MI1-R-DQ-self）表明，这一不对称不来自把己排出范围，而来自动作关系（加于他者，还是自承）；这与不变的一步（意义不止于自身边界）相容，应写入读法。Requirement.Settled.no_residual 与此无关。records 用了旧 id。",
+   "fix": "gap 改为：承诺层已有“施加的基本剥夺”与“实际同意”之分（J2、J3、FR 条件），核心比较中没有。缺的是：在选项上加入承受者与动因者两种关系，并陈述在 Lexical.BasicPriority 之下，施加之损与自承之损在其他方面相同时如何比较；或者证明只看构形所实现的主张，写不出这一不对称。读法加入“愛人不外己”一句及其与不变的一步的关系。declarations 删 Becoming.Requirement.Settled.no_residual。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "mozi-fei-ming",
+   "verdict": "revise",
+   "issues": "以“若无”检验作的定域读法是精确的。但“那里‘不疾’者有余责（residual_of_unfulfilled）”把造成差别直接接到了余责上。理论明言因果不自动成为过失（PRACTICAL-JUDGMENT.md §4：Causation is not automatically fault），余责需要任务因承担而到期；非儒下的“分職”正是这一承担，读法应以它为据。records 用了旧 id。",
+   "fix": "读法改为：造成差别只确定差别归于哪一部分（Dependence.makesDifference_iff）；余责另需任务因承担而到期，非儒下“怠於分職”的分職即是这一承担；到期、未做、未解除，才有余责（Requirement.residual_of_unfulfilled）。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "mozi-du-zhi-bu-yan",
+   "verdict": "revise",
+   "issues": "Assigned.unique_required 与 FrontierWorlds.sole_giver_required 都以“每个可接纳计划中都有人承担此任务”（coverage、given）为前提，读法没有说这一前提从何而来。理论在 J3 中以“及时、有效、有界的紧急能力”这一承诺给出它：严重伤害可防、不致相当伤害、又无及时替代时，须求援或报知（PRACTICAL-JUDGMENT.md §4），应引用。“機辟將發”的“機”是弩机、陷阱之机，与已采的“机”（关节点 Juncture）只是同字；读法没有给出结构，names_used 列“机”只是字面联系。records 用了旧 id。",
+   "fix": "读法加一句：必须有人说出，是 J3 紧急能力承诺所给的覆盖前提；律只说在此前提下，唯一能给出者被要求。若保留“机”，加 Becoming.Branching.juncture_iff，并说明在“將發”之前保持与失去都还有一步；否则从 names_used 删去“机”。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "mozi-fei-ren-bi-you-yi-yi",
+   "verdict": "revise",
+   "issues": "结构相合：被胜过者不在前沿上，没有可行的替代时被否定者仍在前沿上。唯一的问题是 records 用了旧 id practical-judgment-g0-j。",
+   "fix": "records 改为 practical-judgment-under-living-significance，其余不变。"
+  },
+  {
+   "id": "mozi-feigong-qi-suo-bu-zu",
+   "verdict": "revise",
+   "issues": "ScoreRepresentation.every_nat_score_outranks 与 no_nat_score_represents 只在 ScoreRepresentation 的一个构造情形中得证（记录：in one constructed protection-versus-gains situation）。读法却写成一般命题：“每个满足 C 的自然数评分都把某个数量的增益排在保护之上”。",
+   "fix": "在两处引理之前加“在一个构造的保护对增益情形中”，结论改为：所以只计得丧之数的评分，在这样的情形中会以足够多的增益换基本主张。"
+  },
+  {
+   "id": "mozi-jieyong-jia-yong",
+   "verdict": "revise",
+   "issues": "C 只把扩展排在上面。一个既不增加、也不失去任何东西的物（相赅，Web.Keeps），与它不在的情形相比，C 不排去留，“去之”不由 C 得出。只有当它的存在汲取超出更新、使某个能形成者失去时，没有它的历程才是扩展，被 C 排在上面（Ranking.possible_extends、Ranking.possible_ranks）。墨子的“加費”正是额外的汲取，所以“不加者，去之”在不增加而有所汲取之处成立，作为全称则不成立。",
+   "fix": "kind 改为 scope。declarations 加 Becoming.Ranking.possible_extends、Becoming.Ranking.possible_ranks、Becoming.Web.Keeps。读法改为：不增加者若也不失去，C 不排去留（相赅）；墨子所去者“用財”而不加用，在其存在使汲取超出更新之处，没有它的历程是扩展，C 排之在上；“不加者，去之”在这一范围内成立。"
+  },
+  {
+   "id": "mozi-jieyong-zu-er-zhi",
+   "verdict": "revise",
+   "issues": "读法说“‘加費不加民利’是不增加的汲取：在所给之内共同拿取，水平不降（Flow.level_kept），超出所给的拿取不能持续（Flow.beyond_given_bounded）”。但加费不一定超出所给，也不一定在所给之内；这两条律讲的是联合拿取与所给的关系，不是“加而不增益”，这一连接没有根据。八个声明过多，主结构（足而止＝Law.fixed_rests、rests_iff）被稀释了。records 用了旧 id。",
+   "fix": "删 Becoming.Flow.level_kept、Becoming.Flow.beyond_given_bounded 及相应的句子；或者改为“若加费使联合拿取超出所给，则不能持续”，并写明这一条件。保留 fixed_rests、rests_iff、possibly_rests_iff、Web.Adds、Lexical.Ceiling.above。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "mozi-jiezang-li-bu-zu-ran-hou-yi",
+   "verdict": "revise",
+   "issues": "“力尽处无所要求（Requirement.Required.impossible）”是误用，该引理的条件是菜单为空。其余部分（给予者须保持活动、存量会耗尽）是好的定域读法。records 用了旧 id。",
+   "fix": "改为“在可接纳计划的分派都可行的条件下，力所不及者不被分派（Requirement.Assigned.capable）”，删 Requirement.Required.impossible。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "mozi-feiyue",
+   "verdict": "revise",
+   "issues": "结构相合（no_trade、anchor、not_of_included、classification_matters 都用得对）。唯一的问题是 records 用了旧 id。",
+   "fix": "records 中 practical-judgment-g0-j 改为 practical-judgment-under-living-significance，其余不变。"
+  },
+  {
+   "id": "mozi-shangxian-shi-zhi-cheng",
+   "verdict": "keep",
+   "issues": "“未知所以行之術，則事猶若未成”与覆盖、完成之律结构相合。",
+   "fix": ""
+  },
+  {
+   "id": "lao-12-wei-fu-bu-wei-mu",
+   "verdict": "revise",
+   "issues": "定域读法精确，not_of_included 用得对。唯一的问题是 records 用了旧 id。",
+   "fix": "records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "lao-46-zhi-zu-zhi-zu",
+   "verdict": "revise",
+   "issues": "(1) “知足之足，常足”是全称：以足为足，就常足。理论只在目标被满足的状态为律所不变时，才给出“一直满足”（Law.fixed_rests）；状态若被变化带走，知足并不使人常足。这是定域，不是相合。(2) “祸莫大于不知足；咎莫大于欲得”是已采“无明”的结构：锁定于不能静止之目标的寻求（Seeking 模块 B1；词汇表“无明”以 Law.rests_iff 为锚）。names_used 没有列“无明”。(3) 读法说“‘欲得’不止，所依者耗尽”。但 Flow.more_exhausted 的前提是“所立被列出，且自某步起每步衰减”（RunsDown），结论是没有条件在任意晚的步上升；它不说欲得导致耗尽，只说在这一前提下，上升不再出现（Seeking 模块：以耗尽而终，不是以够而止）。",
+   "fix": "kind 改为 scope。names_used 加“无明”。读法改为：在所立被列出、且自某步起每步衰减之处（Flow.more_exhausted 的前提），“比现在更多”的寻求不是以够而止，而是以耗尽而终。并写明：“知足之足，常足”只在满足目标的状态为律所不变之处成立（Law.fixed_rests）。"
+  },
+  {
+   "id": "suzhe-lao33-chang-xie-bu-zu",
+   "verdict": "revise",
+   "issues": "读法后半已经修正了“所遇而足”的全称：在所遇不足以维持基本条件之处，它会掩盖真实的缺失。这是定域，kind 应为 scope。“常挾不足之心”是“无明”的结构，names_used 没有列。",
+   "fix": "kind 改为 scope；names_used 加“无明”。"
+  },
+  {
+   "id": "suzhe-lao44-qi-de-sang",
+   "verdict": "keep",
+   "issues": "相分准确：“齊有無均得喪”以无差别的根据取消比较，属先在根据层。",
+   "fix": ""
+  },
+  {
+   "id": "lao-19-jue-sheng-qi-zhi",
+   "verdict": "revise",
+   "issues": "种类与声明沿用 RO 的 scope 判断，是对的。但 names_used 列了“无以小害大”（J2），而所引的声明（admits_of_net_draw、supported_of_net_give、withheld）都是净取与净给之律，没有 Lexical 的声明，名与律不对应。这些律在 C06 中已有名：辟（需要净给予）、阖（需要净汲取）。",
+   "fix": "names_used 以 C06 的“辟”“阖”替换“无以小害大”；若要保留 J2 之读，须加 Lexical 的声明，并写明这是分类之读。"
+  },
+  {
+   "id": "lao-79-he-da-yuan",
+   "verdict": "keep",
+   "issues": "沿用 RO 的判断，补读“和解不是无丧的扩展”，与 J1 的保留损失相合，结构正确。",
+   "fix": ""
+  },
+  {
+   "id": "daxiang-sun-cheng-fen-zhi-yu",
+   "verdict": "keep",
+   "issues": "沿用 RO 的相分判断；补读“窒欲”不区分可满足的目标与“比现在更多”，读得正确。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-lilun-li-zhi-suo-qi",
+   "verdict": "revise",
+   "issues": "补读说“‘欲而不得，则不能无求’：目标未被满足处轨道不静止（Law.rests_iff 的反面）”。rests_iff 的反面是：不到达满足目标的不变状态，就不会“静止且满足”。它不是“未满足处不静止”，因为律可以在不满足目标的状态静止（求而止于不得）。而“寻求者追求它的目标”，是 Seeking 模块明言不推出的（What is not derived: that a seeker pursues it）。",
+   "fix": "改为：荀子“欲而不得则不能无求”是对寻求的描述（寻求者在目标未满足时继续动），模块不推出它；在这一描述之下，求能“静止且得”恰当到达满足目标的不变状态（Law.rests_iff）；“度量分界”是给出的界。"
+  },
+  {
+   "id": "zhoudunyi-shi-tian-hu-ren-ye",
+   "verdict": "revise",
+   "issues": "“不可行者无所要求（Required.impossible）”是误用。ro_passage 设为 ru-zhoudunyi-shi，但本条的片段与 RO 不同，种类与声明也不同；这个字段会让整合者误以为本条沿用了 RO 的判断。records 有两个旧 id：practical-judgment-g0-j，以及 runaway-distance-unregistered（今为 runaway-distance-uncoupled）。",
+   "fix": "Required.impossible 改为 Assigned.capable 的条件读法，或改用 Required.defeated。ro_passage 置空，在读法中写“RO 的 ru-zhoudunyi-shi 映射同章‘极重不可反’”。records 改为 practical-judgment-under-living-significance 与 runaway-distance-uncoupled。"
+  },
+  {
+   "id": "sui-xi-xiaozi-fu-jian-yu",
+   "verdict": "keep",
+   "issues": "各自可保持、共同不可保持（each_not_joint），与 kernel_and_iff 对照使用，正确；names_used 的“得兼”与 C13 一致。",
+   "fix": ""
+  },
+  {
+   "id": "wangbi-qian-li-yi",
+   "verdict": "revise",
+   "issues": "王弼的两序是一个两维的轮廓：利在“速”一维上胜，义在“终”一维上胜，二者各实现一维、各缺另一维。这正是 Profiles 的结构：两维，各实现其一，两个都尊重 C 的评价各选其一（Profiles.opposite、Profiles.both_respect）。StrictTransport.cutoffs_disagree 的见证是修复与完成两条路线及其截断参数，结构较远。names_used 列“粹”没有根据，原句不涉结果不定。",
+   "fix": "declarations 以 Becoming.Profiles.opposite、Becoming.Profiles.both_respect 替换 StrictTransport.cutoffs_disagree 与 continuation_first_no_cutoff，或把后两者降为旁证。names_used 删“粹”。"
+  },
+  {
+   "id": "chengyi-jing-wei-ji-yong",
+   "verdict": "keep",
+   "issues": "定域准确：只就完成与否而言，“幾至”与“未下”相同；就所剩之工而言二者不同。",
+   "fix": ""
+  },
+  {
+   "id": "chengyi-ge-li-yu-zheng-dao",
+   "verdict": "keep",
+   "issues": "定域准确：无甚益是保留而不增加，反害是不保留，混合者 C 不排序；“正道”作为固定标准不取。",
+   "fix": ""
+  },
+  {
+   "id": "chengyi-sun-fu-sun-yi-zhi",
+   "verdict": "revise",
+   "issues": "程颐后半句“失其剛貞而用柔説，適足以損之而已”，说的是以柔悦顺从上位者，反而损了上位者（损受者）。giver_active 等只承载前半句“给予者须保持能给予的条件”。读法把“損之”读作“失去以后的给予”，与原文所说的受者之损不合。records 用了旧 id。",
+   "fix": "读法限于前半句。后半句注明：以顺从代替给予而损受者，理论在此没有对应的律；或者另引一条“净汲取而非净给予”之律，并加以说明。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "daxue-zhi-yu-zhi-shan",
+   "verdict": "keep",
+   "issues": "定域准确：止只能止于可满足的目标；“至善”若是最高终点，在持续改进处没有留存者（Alternatives.no_survivor、lift_continual_improvement_has_no_survivor）。",
+   "fix": ""
+  },
+  {
+   "id": "daxue-xie-ju",
+   "verdict": "revise",
+   "issues": "絜矩是位置交换（上下、前后、左右互换）之下判断不变；BoundaryInvariant 是自身边界划在不同可接纳区域时断言不变。两者都是不变，但所作的变换不同（换位与扩界），读法没有说明这一差别。本条属 C14（意义与延续之条件）所辖的不变的一步，不在比较与取舍之列。names_used 列“權”，与原文、读法都无关。读法说“不变的一步只定范围……不排序”，与章节一致（§6.5、词汇表：fixes scope, orders nothing），但与 BRIEF-ZH 及 AGENTS.md 的“排序在于 C 与不变的一步”冲突，须由整合者统一（以章节为准）。records 用了旧 id axiom-decomposition。",
+   "fix": "names_used 删“權”。读法加：絜矩所换的是位置，不变的一步所换的是边界，二者相近而不同。本条移交 C14，或标注为跨簇。records 改为 continuation-condition-decomposition。"
+  },
+  {
+   "id": "lunyu-qu-bing-qu-shi",
+   "verdict": "revise",
+   "issues": "定域准确，正确地把“信在食上”标为给出的分类。唯一的问题是 records 用了旧 id。",
+   "fix": "records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "lunyu-you-he-jia-yan",
+   "verdict": "revise",
+   "issues": "读法说“保留基本的增加才使一个选项在其上（Lexical.Above.anchor）”。anchor 的条件是保留对方的全部基本主张、并多一个基本主张；读法把“教”列为增益，那么加教是 Above 定义的第二支（基本相同，增益严格多），不是 anchor。论语也没有说“先基本、后增益”的词典序，只是逐步问“又何加焉”。",
+   "fix": "以 Becoming.Lexical.Above 替换 Lexical.Above.anchor。读法改为：若富之后基本主张相同，加教是增益的严格增加（Above 定义的第二支）。删去“次序是先基本再增益”的断言，或把它标为 AI 的分类。"
+  },
+  {
+   "id": "lunyu-xiu-ji-an-bai-xing",
+   "verdict": "revise",
+   "issues": "Required.impossible 是误用。separate_not_joint（各一单位的能力，不给出两单位的共同能力）说的是：把个人能力相加，会高估共同能力；这与“一人不能安百姓”方向不合。“‘猶病諸’是确切的：它是集体的任务，不能落在一个修己者身上”说得过强：“病”是仍有未尽，孔子以此为君子之所向，不是说不可能。records 用了旧 id。",
+   "fix": "删 Becoming.Requirement.Required.impossible 与 Becoming.Requirement.separate_not_joint。读法改为：安百姓是集体的任务，可以被要求而没有一个个体任务被要求（Requirement.Collective.required）；每个世界可以有一个计划，而没有对所有世界共同的计划（Collective.no_common_plan）；“堯舜其猶病諸”说一人修己不足以尽之。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "zhuangzi-qiushui-ming-yu-quan",
+   "verdict": "revise",
+   "issues": "names_used 列了“明”。此处“明於權”是“通晓”的字面义，读法没有把它接到已采“明”的结构（耦合与选择达到支持所不标者，Web.observed_raise_couples）。“理”读作模型可以接受。本条中“權”又是第三种结构（以模型为前提的判断），问题记在名条。records 用了旧 id runaway-distance-unregistered。",
+   "fix": "names_used 删“明”；或者加 Becoming.Web.observed_raise_couples，并论证“察乎安危”是观测扩大了耦合。records 改为 runaway-distance-uncoupled。"
+  },
+  {
+   "id": "zhuangzi-zhibeiyou-wu-mian-suo-bu-mian",
+   "verdict": "revise",
+   "issues": "“以不能者为任务，任务本身不成立（Required.impossible、nothing_required）”是误用：这两条都要求没有可接纳选项，或没有可能的移动。“务免所不免”的要求之所以不成立，是因为每个可接纳选项都缺这个任务（Required.defeated）。records 用了旧 id。",
+   "fix": "以 Becoming.Requirement.Required.defeated 替换 Requirement.Required.impossible 与 FrontierFrames.nothing_required。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "zhuangzi-tianxia-tian-xia-bu-kan",
+   "verdict": "revise",
+   "issues": "Required 与 Required.defeated 量化的是可接纳选项（计划），读法却把“天下”之人当作选项（“若把‘天下’读作被要求者的全体……”）。人是经由分派（Assigned）进入要求的；不能承担者，在分派都可行的计划中不被分派（Assigned.capable）。records 用了旧 id。",
+   "fix": "读法改为：以墨道为全体之计划；在可接纳计划的分派都可行的条件下，不堪者不被分派（Assigned.capable），所以墨道作为对天下人的要求，不在可接纳计划之中；若另有不行墨道的可接纳计划，墨道的要求即被击败（Required.defeated）。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "sunzi-dixing-zhan-dao",
+   "verdict": "revise",
+   "issues": "孙子的“可”是“可以（允许）”，不是“可行”。战道不胜时，“战”仍然可行（可以战而败），只是被“不战”胜过。读法“命令一个不可行的选项不构成要求”误用了 Required.impossible 与 nothing_required。真正的结构是前沿：被胜过的选项不在前沿上（Requirement.Frontier.excluded），命令并不改变前沿（required_of_bettered）。另，J4 要求选择是被授权的（authorized plans）；孙子以胜败之道越过主之命，是把授权降到求胜之下，与 J4 的“正当”一半相张，读法没有提到。records 用了旧 id。",
+   "fix": "declarations 以 Becoming.Requirement.Frontier.excluded、Becoming.Requirement.required_of_bettered 替换 Required.impossible 与 nothing_required。读法加：J4 的正当一半要求授权，孙子以胜道越过主命，这一层与 J4 相分。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "simafa-yi-zhan-qu-zhan",
+   "verdict": "keep",
+   "issues": "相分准确：以目的抵消手段之损，与损失的保留冲突；not_strictLossMatch_of_base_lost 的陈述正确。",
+   "fix": ""
+  },
+  {
+   "id": "simafa-ru-zui-ren-zhi-di",
+   "verdict": "revise",
+   "issues": "所禁诸事（伐林木，取六畜、禾黍，毁土功）都是对已成生计条件的剥损，不是先占。names_used 列“絕其長”，把剥损与先占混在一起（与王制条是同一个问题）。",
+   "fix": "names_used 删“絕其長”，或改用剥损之名（交整合者定）。"
+  },
+  {
+   "id": "sunzi-mougong-quan-wei-shang",
+   "verdict": "keep",
+   "issues": "沿用 RO 的相分；补读伐谋、伐交、伐兵、攻城之序是争位框架内的毁坏之序，判断正确；names_used 与 C13 一致。",
+   "fix": ""
+  },
+  {
+   "id": "sunzi-huogong-bu-ke-fu-sheng",
+   "verdict": "revise",
+   "issues": "names_used 中的“不復足”不是已立的名。C05 的“復足”是依存的回程（Web.Returns），而本条所引的 lossless_iff_returns、lost_stays 讲的是构形之“復”（Law.Returns，C05 名“復”）。“死者不可以復生”对应的是构形不复，不是依存回程的否定。",
+   "fix": "names_used 删“不復足”，保留“復”（C05，构形之复返）。"
+  },
+  {
+   "id": "zhixu-zhi-li-fei-shi",
+   "verdict": "revise",
+   "issues": "智旭“執理廢事”“理亦非圓”中的理，是理事对举之理（性理、本体之理），属先在根据层。读法把它接到已采的“理”（结构与变化之律的模型，goAlike_iff_lumped），是同字相接，结构不同。真正相合的只有一点：“不取不捨”也是选项之一（Options、Frontier）。records 用了旧 id。",
+   "fix": "删 Becoming.Learning.goAlike_iff_lumped 与 names_used 中的“理”。读法改为：理事之理属先在根据层，智旭在同一传统内以“理亦非圓”限定它；与理论相合的是，不取不捨仍在可达选项之中，与其他选项同受比较。records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "jinshizi-li-zhu-qu-she",
+   "verdict": "revise",
+   "issues": "相分准确。唯一的问题是 records 用了旧 id。",
+   "fix": "records 改为 practical-judgment-under-living-significance。"
+  },
+  {
+   "id": "xunzi-lilun-song-si-you-yi",
+   "verdict": "revise",
+   "issues": "相合基本正确。但“恢复的支持不使已错过的主张重新实现（Frame.ReadsAt.loss_retained）”省去了这条律的前提：帧须在事件之时读这一主张。记录明言，实际的帧是否在事件之时读，本身是一个前提。",
+   "fix": "读法改为：在按事件之时读主张的帧上（ReadsAt，这是一个前提），恢复的支持不使已错过的主张重新实现。"
+  }
+ ],
+ "missing": [
+  "孟子·公孙丑上“行一不义、杀一不辜而得天下，皆不为也”（RU2-S-MZ，单元 RU2-U-MZ03-02，已核；荀子·王霸“行一不义，杀一无罪，而得天下，仁者不为也”、儒效同）：再大的增益也不换一个加于人的基本损失，即 Lexical.Above.no_trade，又带 J2 原文的“imposed basic deprivation”。应作为 J2 的主证并立一条 agreement 条目（“行一不义”的义层不取）。",
+  "荀子·正名“衡不正，则重县于仰……道者，古今之正权也”（已核）：荀子的權是一根有固定校准（道）的秤。“權”名缺这一条相分条目（单一固定标准）。",
+  "墨子·大取“於事爲之中而權輕重，之謂求。求爲之非也。”（已核）：權与求之分。“權”名与 mojing-daqu-quan 条都须处理。",
+  "墨子·大取“斷指與斷腕，利於天下相若，無擇也。死生利若，一無擇也。”（已核）：比较分不出高下之处无所择，两者都在前沿上，没有一个被要求（Requirement.Frontier、Requirement.Required.defeated）。缺条目。",
+  "墨子·大取“愛人不外己，己在所愛之中”（MI1-R-DQ-self，已核）：应与杀己的不对称并读，说明不对称来自动作关系，而不是来自范围。",
+  "墨子·经上“任，士損己而益所爲也。”（MI1-S-JS，节点 MI1-N-JS-012，已核）：不计己损的无界之任，与 J3 的有界责任相分。名“量力而任”用了“任”，须立此相分条目。",
+  "孟子·梁惠王上“斧斤以时入山林，材木不可胜用也”（已核）：应作先占的 scope 条目（按时取而不剥损，不足以保住能形成者，Preemption.within_renewal_yet_loses）。",
+  "孙子·军争“軍爭為利，軍爭為危”（BI1-SZ-R-33，现为平行，已核）：同一回应有好有坏两个结果，是 L（LiftModel.some_outcome_does_not_lift）的结构，应作为 L 的证与条目。",
+  "可行选项（FrontierFrames.Options）之名：荀子·正名“欲不待可得”中的“可得”；“從所可”不能承担这一义。",
+  "J4 的“正当”一半（被授权的计划，受影响者的参与）：既无名，也无条目；孙子·地形“主曰必战，无战可也”是与之相张的例子。",
+  "C 作为前提（把扩大称为更好）之名，须与生成扩展（Extension）之名分开；现在“无丧而有得”被二者共用。",
+  "已采之“无明”（Seeking 模块：锁定于不能在静止处满足之目标的寻求；词汇表以 Law.rests_iff 为锚）：本簇以同一条律立名“足而止”，却没有一条条目列出“无明”（老子46、苏辙33 应列）。",
+  "不确定之律下可能之足与保证之足的区分（Enough.assured_iff、Enough.Free.stays_meet_not_assured）：既无名，也无条目。",
+  "荀子·正名“欲虽不可尽，可以近尽也……所求不得，虑者欲节求也”（已核）：不能静止的目标可以接近而不能穷尽，求而不得则节制其求。可作为“足而止”“无明”与 Becoming.LeastLoss（逼近只需阿基米德性，静止需要最小损失）的候选条目。",
+  "§7.6 自身的保证到达条件（assured-route-criterion）与中断后的证据恢复（recoverable-mediated-change），在名与条目中都没有专门的承载。",
+  "中文版现名“先占”（preemption）与“够”（enough）：本簇提议替换，须写成对现行术语的替换提案，并说明理由。",
+  "记录旧 id：practical-judgment-g0-j 应改为 practical-judgment-under-living-significance（共 22 条条目引用）；runaway-distance-unregistered 应改为 runaway-distance-uncoupled；axiom-decomposition 应改为 continuation-condition-decomposition。"
+ ]
+}

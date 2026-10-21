@@ -1,0 +1,563 @@
+{
+ "cluster": "C09",
+ "lens": "STRUCTURE",
+ "names": [
+  {
+   "concept": "一一对应的命名（只作标识的名）",
+   "name": "私名",
+   "verdict": "revise",
+   "issues": "(1) fit 说“换一套一一对应的名，每步的关系、计数与存续都不变（Web.rename_tenure、Flow.reidentify_counts）”，把两类律混在一起。每步的关系与计数在一切改认下都不变（Web.reidentify_step、Flow.reidentify_counts）；存续（tenure）、更新、生起只在改名下不变，改名是每步用同一对应（Reidentify.rename）。一般改认会改变这些读数（Turnover.identified 对 Turnover.reidentified）。(2) 所以“名只作标识，本身不携带任何关系内容”只在一步之内成立。“止於是實”是一个名跨步守住一个形成，而 Identity 模块头与记录 identity-across-steps 说的正是：跨步的名之模式承载同一，表示把它作为对应前提给出（“readings tracking a formation depend on who continues whom”）。私名恰在这一点上不是空标识。(3) lumped_id 说的是对整体构形的最细读法（在整体中形成的动作都经由整体构形形成），与“一个名止于一个形成”不是同一结构；Reidentify 是两套命名的逐步对应，不是私名本身。",
+   "fix": "概念改为“一步之内一一对应的名”。fit 改写为：每一步的关系与计数在一切改认下不变（Web.reidentify_step、Flow.reidentify_counts、Reidentify.new_injective），改名保持跨步读数（Web.rename_tenure）；私名“止於是實”跨步守一，供给跨步同一，这是实质的对应前提（Turnover.reidentified）。lean 改为 Becoming.Reidentify.new_injective、Becoming.Web.reidentify_step、Becoming.Web.rename_tenure、Becoming.Turnover.reidentified。去掉 lumped_id；identifiesAlike_id_iff 只留作与正名的界线。"
+  },
+  {
+   "concept": "标签不携带关系：改名不变",
+   "name": "名无固宜",
+   "verdict": "revise",
+   "issues": "形式自由而分组与携带律不自由（renamed_tells_apart_iff、renamed_carries_iff）这一结构准确。但 fit “同一关系用任何一一对应的名来记，存续、更新、读出的律都不变”说得过宽：Web.rename_tenure 与 Web.rename_renewingIn 只对改名（每步同一对应）成立，一般的一一改认改变存续（Turnover）。SharedCodes.run_renamed 另有前提：采纳规则在改名后同样读码（reads 假设），偏好形式的规则不满足这一前提（TwoFormations.preferred_breaks_renaming）。此外须写明与“重同”的分工：名无固宜是律，重同是关系。",
+   "fix": "fit 中“任何一一对应的名”改为“每步同一的一一对应（改名）”，并补“在不偏好任何形式的采纳规则之下”。lean 加 Becoming.SharedCodes.hear_keeps_renaming。"
+  },
+  {
+   "concept": "改名：每一步同一个对应",
+   "name": "重同",
+   "verdict": "revise",
+   "issues": "(1) “二名一實”只说一步之内两名对一实。每个改认在每一步都给出这样的二名一实；改名与一般改认的分别恰在“每步同一对应”，而重同不带这个条件。fit 把“在每一步以同一对应相关”读进了“二名一實”。没有这个条件，推不出 rename_tenure；Turnover 正是二名一实逐步成立、存续读数却改变的例子。(2) 同一部《经下》紧接有「狗，犬也，而殺狗非殺犬也，可，說在重。」（MI1-S-JX，已核），墨家自己承认二名在“殺”这类谓词下不可互换，mapper 没有处理这条反例。rename_tenure 只保证由关系定义的读数不变，“知”“殺X”是不是这样的读数，是另加的前提。(3) 知狗/知犬的“知”不是 web 的读数，定理不涉及认知者的知。",
+   "fix": "概念收窄为“一步之内的两名一实（每个改认在每一步给出的对应）”；若要指改名，就在名上写出“每步同一”，例如用“恒重同”，或沿用中文版已有的“改名”。fit 加一句：保值只对由关系定义的读数成立（Web.rename_tenure 的范围），殺狗非殺犬是不经关系定义的谓词下的反例。为该句立一条 scope entry。lean 加 Becoming.Reidentify.new_injective。"
+  },
+  {
+   "concept": "重新认定：先按每步的关系定其所指，再定其数",
+   "name": "稽实",
+   "verdict": "reject",
+   "issues": "(1) 荀子“稽实定数”是先判定一实二实，再定数。它的结构是“关系项之数存在，恰当成员间的同一已判定”（Becoming.numbers_iff_decided、listsOnce_iff_decided；记录 listing-once-is-decided-identity），不是改认。(2) 改认是两套命名的逐步一一对应，每步关系全不变（Web.reidentify_step），所以改认不能由“考察实”判定。理论的要点正相反：各步的关系定不了跨步谁延续谁（Turnover）。用“稽实”名改认，暗示改认可由考察实来校正，带入了理论否认的方向。(3) “稽”有稽核、督责义，汉以后“控名责实”是以名督实。(4) 中文版术语表已有“改认／改名”（THE-THEORY-OF-BECOMING.zh.md 第 973 行）。",
+   "fix": "改认不用稽实这个名：可沿用“改认”（标“新組合”，認非先秦字），或另选，交整合者定。稽实改挂到 Listing：概念为“定数须先判同一”，lean 为 Becoming.numbers_iff_decided、Becoming.listsOnce_iff_decided、Becoming.Distinct.identityDecided，记录 listing-once-is-decided-identity。“名之跨步模式承载同一”（Turnover）另立一名，见 missing。"
+  },
+  {
+   "concept": "跨步同一（一个形成的延续）",
+   "name": "一实",
+   "verdict": "revise",
+   "issues": "(1) 用 Web.no_join 对应“状同异所为二实”不对。no_join 是在双向连续条件下，一步前与一步后的两个形成若被命名为一，则本为一，即排除一步内的接续；它讲跨步的先后，而“异所”是同时的两处。与“异所”对应的是：所不同即关系不同，分开命名有意义（identifiesAlike_iff，Twins 为其反面）；以及每个改认在每步都保持不同者不同（Reidentify.new_injective）。(2) fit 末句“所以‘一实’要由关系定，而不是由名定”与 Identity 模块相反。各步的关系定不了跨步同一（Turnover），跨步同一由命名作为对应前提给出。守恒只在步后没有别的关系项与它站得一样时才定出同一（World.fixed_iff），否则只定到相似为止（World.balanced_reidentify_iff_alike）。Lineage.one_way 说合名会造出原命名所没有的连续，支持“名供给同一”，不支持“由关系定”。(3) RO 原读法已标“荀子未说实无别由何判定”这一层范围，mapper 删去了。",
+   "fix": "fit 改为：一实是在所给的延续之下跨步同一（Web.Continues）；它不由各步关系定（Turnover.reidentified），守恒在无他者站得相同处定之（World.fixed_iff），否则到相似为止（World.balanced_reidentify_iff_alike）；“二实”以所（关系）分开（identifiesAlike_iff、Reidentify.new_injective）。lean 去掉 Becoming.Web.no_join，加 Becoming.Reidentify.new_injective、Becoming.Turnover.reidentified、Becoming.World.balanced_reidentify_iff_alike。not_carried 加“不带‘同一可由各步关系读出’”。"
+  },
+  {
+   "concept": "共享码：在形成者之间经由听与用而形成的码",
+   "name": "约定俗成",
+   "verdict": "revise",
+   "issues": "已采纳之名，结构与 §4.5 的读法一致（约定俗成指听的次序打破对称，王者制名是中心，名有固善是偏好）。问题有三。(1) not_carried 写“定理只说全体一致后在所述规则下不再变，外加之外留存的形式可使区分回来（outside_returns）”，两句不相容：全体一致（all_agree_rest）时没有“之外”的形式；outside_returns 只对“一个群内一致而群外仍有别形”成立。全体一致之后区分要回来，只能靠新形或新形成者，而模型不给（hearBy_held）。(2) fit 中 run_agrees_every_start_iff 须带条件：两形有别，规则为听即取（always）；shared_iff_in_use 需要一张列出全体的表。(3) attestation「君，臣萌通約也」是把君位界定为众人之约，带单一中心的政治义，用作“约在众人之间”的证据偏了。",
+   "fix": "not_carried 改为：全体一致后在一切规则下不再变（all_agree_rest）；只在群内一致时，群外留存之形可使区分回来（outside_needed、outside_returns）；造新形不在模型内（hearBy_held）。fit 补上条件“两形有别、听即取、有列出全体的表”。「君，臣萌通約也」的 sense_in_context 标明其单一中心层。"
+  },
+  {
+   "concept": "读出：在码一致处，一个形式被读为它的义",
+   "name": "喻",
+   "verdict": "revise",
+   "issues": "(1) PartialReadout.signal_no_exact 与 paired_exact 是通道模型的见证：信号经过可能反转的朝向，参照信号定出朝向（模块头：“A reference reading fixes orientation”）。它们不是“单不足以喻则兼”的一般律。单个读法能否精确，取决于特征在其合并处是否同值（PartialReadout.exact_exists_iff、ExactWithin.lumped）；兼名是更细的映射（PartialReadout.LumpedWithin.finer）。(2) reads_other 要求读者的码把这个形式给了另一个义（crossed: cg n = cf m）。码不一致、而读者码中没有这个形时，读不出任何义，所以 fit “码不一致时读成别的义”过宽。(3) CV1-JL 那条 attestation 写的是“諭”，字与“喻”不同。(4) 喻与已采纳的“识”须划界：识是形成者经耦合所登记者，喻是跨两码的 ReadsAs。可以立名，但要在名表写明。",
+   "fix": "lean 改为 Becoming.SharedCodes.reads_iff、Becoming.SharedCodes.self_reads_iff、Becoming.SharedCodes.reads_other、Becoming.SharedCodes.run_reads_iff、Becoming.PartialReadout.exact_exists_iff、Becoming.PartialReadout.LumpedWithin.finer，去掉 PartialReadout.paired_exact。fit 中“码不一致时读成别的义”改为“读者的码把此形给了别义时读成别义（reads_other）”。CV1-JL 条标“諭（字异）”。"
+  },
+  {
+   "concept": "外加码：一个形成者的码被加于其余",
+   "name": "制名",
+   "verdict": "revise",
+   "issues": "(1) Becoming.SharedCodes.impose_reads 不存在，Lean 源中无此声明。外加之后“每个形成者恰在外加码分开诸义处读每个形成者”，在 run_from_imposition 的第二个合取支中经 self_reads_iff 证出。(2) impose_agrees 是 rfl，impose_loses_iff 是 Iff.rfl（模块头写明“By definition”），都是定义展开，不是推出的律，fit 却把损失写成定理的结论。实质的律是 run_imposed_stays、outside_needed、outside_returns、run_from_imposition。(3) 概念“一个形成者的码被加于其余”比 impose 窄：impose c 中的 c 可以不是任何形成者的码，source_loses_nothing 只在 c = X q 时成立。(4) 荀子的“制名”是立名，包括“有作于新名”，而造新形不在模型内（hearBy_held）。用“制名”名外加，名中多了造名之义，却少了“率民而一”这一外加之义。可比较墨子“壹同”（MO1-S-C11「天子唯能壹同天下之義」，已核）与中庸“書同文”（RU1-S-ZY，年代有争议）；二者也带单一中心层。",
+   "fix": "lean 去掉 impose_reads，改为 Becoming.SharedCodes.run_from_imposition、run_imposed_stays、outside_needed、outside_returns、source_loses_nothing、impose_agrees（注“按定义”）。fit 中 impose_loses_iff 标“按定义”。概念改为“一个码被加于诸形成者（其源可为某一形成者之码）”。alternatives 补“壹同”“同文”及取舍理由。not_carried 加“造新名（有作于新名）不在此结构内”。"
+  },
+  {
+   "concept": "什么都不分开的读法（常值合并）",
+   "name": "达名",
+   "verdict": "keep",
+   "issues": "四个声明都核过：lumped_const_iff 说经常值读法只形成处处相同的动作；goAlike_const 说常值描述对一切过程都携带律；lumped_id 是最细的一端；lumped_of_finer 按细于关系排列。结构准确，墨经与荀子两处出处都在先秦。"
+  },
+  {
+   "concept": "合并：在所论之律下行为相同者归为一类",
+   "name": "类",
+   "verdict": "revise",
+   "issues": "(1) 概念“在所论之律下行为相同者归为一类”把“理”的条件（律在归并上同行：goAlike_iff_lumped）放进了“类”。术语表中“归并”只是一个映射 π（第 1411 行），“理”才是“律在其上同行的归并”（第 1282 行），一名一概念要求两者分开。(2) “一方盡類，俱有法而異”中的“法”是所若而然的标准（如规之于圆），即读法 π，不是变化之律。脉络 MI1-R-SX-form 的认知栏正作“选定形状标准，保留材质差异”。fit “合并的依据是法（律）”把标准读成了律。(3) Learning.Lumped 是一个定义，单靠它作为类的支撑不够，还需要定理。",
+   "fix": "概念改为“归并：读法 π 所并为一者（π 的类）”，不带律的条件。fit 改为“法是归并所依的标准（读法 π），不是律；或木或石不害，是 π 不读材料”。lean 改为 Becoming.Learning.Lumped（定义）、Becoming.Learning.selects_through_lumping、Becoming.lumped_of_finer，并把 goAlike_iff_lumped 移归“理”。"
+  },
+  {
+   "concept": "经由合并而推广",
+   "name": "推类",
+   "verdict": "keep",
+   "issues": "determines_lumped_iff（需两值有别）、lumped_right_iff、lumped_world_right 都存在，结构一致。“取得细了推不到”引 lumped_of_finer 可以成立：读法越细，合乎它的函数越多，有限数据定得越少；宜同时引 determines_lumped_iff。"
+  },
+  {
+   "concept": "有意义的描述：恰把关系上相同者认作相同",
+   "name": "正名",
+   "verdict": "keep",
+   "issues": "identifiesAlike_iff 的两半（π 的核是互模拟；相似者都被认同）与“同则同之，异则异之”“同实同名，异实异名”结构一致；IdentifiesAlike.unique、Twins.naming_not_identifiesAlike、Twins.alike_one 都用得对。风险在论语“正名”的名分义与“由上正之”一层；mapper 已列入 not_carried。中华本首见处须说明：“正”是与关系相合，不是由谁来定。"
+  },
+  {
+   "concept": "携带律的描述",
+   "name": "理",
+   "verdict": "keep",
+   "issues": "理是已采纳名，采纳义为“律在其上同行的归并”（Lumped、goAlike_iff_lumped）。mapper 的概念写作“携带律的描述”（carries_law_iff）。在确定律下，两者经 goAlike_iff_lumped 与 carries_law_iff 等价，可以并为一名；但 carries_law_iff 对一切过程成立，goAlike_iff_lumped 只对确定律成立，所以 fit 宜以采纳义为主，把承载律作为等价表述。"
+  },
+  {
+   "concept": "跨情境成立：凡与形式相关的记录都给出同一个义；其补：义随情境而变的形式",
+   "name": "贯义",
+   "verdict": "revise",
+   "issues": "(1) 贯义是新组合，而先秦已有恰好同结构的词：《经上》「盡，莫不然也。」（MI1-S-JS，已核）正是 stands_iff 的“凡相关记录都给出”；《小取》「或也者，不盡也。」（MI1-S-XQ，已核）正是 stands_false_iff 的“某条相关记录不给出”。体例是先秦已有恰当之词就不另造。(2) “一以贯之”带单一中心原理（道统）之义，借“贯”字就把它带了进来；而 stands 只是一个义对一组记录的全称条件。(3) 现行中文章节已用“立住”译 stands（HANZI-AND-THEORY-TREE.md 第 5 行、CHINESE-SOURCES-AND-BECOMING.md 第 140 行），新名须与之协调。(4) 须先查“盡”是否已被他簇用于 Exhaustion 等，以免一名二义；这一项有待核查。",
+   "fix": "名改为“盡”（若“盡”已被他簇占用则用“立”）。attestation 改用《经上》「盡，莫不然也」与《小取》「或也者，不盡也」，删去「吾道一以貫之」。韩愈定名／虚位、程颐随事而变、孔疏对散则留作 entries 的结构证据。lean 不变（CrossSituational.stands_iff、stands_false_iff）。"
+  },
+  {
+   "concept": "消解：候选义随相关记录收窄，只剩一个时即所指",
+   "name": "通意",
+   "verdict": "keep",
+   "issues": "candidates_append、narrows、resolves_iff（需 Distinct rep）、resolved_is_target（需覆盖）都存在。墨经问“孰，何謂也”取得一条新记录、收窄候选，这一结构准确。出处只有墨经一处，confidence 标 low 合理；not_carried 已排除“意”作心中状态之义。"
+  },
+  {
+   "concept": "码的获得：单名之值与组合之序都探到才得码",
+   "name": "知名",
+   "verdict": "keep",
+   "issues": "声明都存在，“用”对原子之值、“丽”对组合之序，结构平行。须注意：CodeAcquisition 是“一个给定的有限律族，不定义认知或语言”（模块头）。primitives_no_exact 与 missing_composite_no_code 是这一族里的见证，acquired_exact 与 acquired_every_expression 对族内一切码成立。fit 应写明这是一个给定的组合族，不是对一切码的律。"
+  },
+  {
+   "concept": "有限多个标签所确定者",
+   "name": "当簿",
+   "verdict": "reject",
+   "issues": "(1) Becoming.Learnable.label_of_rests 与 Becoming.Learnable.table_rests 不存在。实际的名是 Learnable.label_of_predicts（自外推预测之步起，特征所取每个值都是表中某项的标签）与 Learnable.table_predicts；mapper 把 Lean 中的约束变量名 rests 误作定理名。(2) 结构对不上：Labels 的内容是“至多 N 个、各 N−1 值的带标签名字的有限表足以学得”；荀子“当簿其类”说的是感官把所接之物登记入类，然后征知才可，文本里没有“有限”，没有标签表，也没有可学的条件（mapper 自己也说这一连接最弱）。(3) 登记入类就是已采纳的“识”；另立“当簿”与“识”重叠，违反一名一概念。",
+   "fix": "不立“当簿”为名。Labels 的概念若没有先秦恰当之名，按体例标出、交整合者。“当簿其类”改作“识”的出处，或另立一条 entry，挂 Becoming.Learnable.learnable_iff_reading（特征可学，恰当它从某步起是经映射之未来的一个读法），不挂 Labels。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "xunzi-zhi-ming-yong-li",
+   "verdict": "revise",
+   "issues": "“用丽俱得”对 CodeAcquisition 的结构准确。问题在“单不足以喻则兼”：它被挂到 PartialReadout.signal_no_exact 与 paired_exact，而这两条是通道朝向的见证（参照信号定出朝向），不是“单名合并过多，兼名更细”的一般律。reading 写“单个信号没有精确读法”，作为一般陈述是错的。",
+   "fix": "把 PartialReadout.signal_no_exact、paired_exact 换成 Becoming.PartialReadout.exact_exists_iff、Becoming.PartialReadout.ExactWithin.lumped、Becoming.PartialReadout.LumpedWithin.finer、Becoming.lumped_of_finer。reading 改为：单名合并了需要分开者，就没有精确读法；兼名是更细的映射，合并保持，于是可以精确。并注明 CodeAcquisition 是给定的组合族。"
+  },
+  {
+   "id": "xunzi-hua-yi-shi",
+   "verdict": "revise",
+   "issues": "(1) Web.no_join 讲的是在双向连续条件下，一步前后的两个形成不能被名合为一；“状同异所”是同时的两处，结构不同。(2) reading 中“一实是关系上的无别”与 Identity 相反：各步关系定不了跨步同一（Turnover），守恒只在步后没有他者站得相同处定之（World.fixed_iff）。(3) RO 原读法有一句范围限定（荀子未说“实无别”由何判定），被删去了；按理论的修正，这一条应是 scope。(4) “稽实定数”的结构是 numbers_iff_decided（定数须先判同一），而不是 Flow.reidentify_counts（改认不改每步计数）。",
+   "fix": "kind 改为 scope。去掉 Becoming.Web.no_join 与 Becoming.Flow.reidentify_counts，加 Becoming.Reidentify.new_injective、Becoming.Turnover.reidentified、Becoming.numbers_iff_decided。reading 改为：二实以所（关系）分开（identifiesAlike_iff）；化而为一实，只在守恒且无他者站得相同处由律定出（World.fixed_iff），否则跨步同一是命名给出的前提、到相似为止（balanced_reidentify_iff_alike）；荀子的“实无别”在这一范围内成立。"
+  },
+  {
+   "id": "xunzi-tong-ze-tong-zhi",
+   "verdict": "keep",
+   "issues": "六个声明都存在，结构准确：identifiesAlike_iff 的两半对“同则同之，异则异之”；IdentifiesAlike.unique 对“同实同名”；Law.identifiesAlike_of_law 说保值又携带律的最粗分割有意义。kind agreement 恰当。"
+  },
+  {
+   "id": "xunzi-ming-wu-gu-yi",
+   "verdict": "keep",
+   "issues": "两半分别对应改名不变（rename_*、renamed_carries_iff、run_renamed、renaming_keeps_values）与听的次序形成一致（run_agrees_every_start_iff、shared_iff_in_use、all_agree_rest），声明都存在，结构准确。小注：Web.rename_* 只对每步同一的改名成立，run_renamed 需要规则在改名后同样读码；reading 宜写出这两个条件。"
+  },
+  {
+   "id": "xunzi-wang-zhe-zhi-ming",
+   "verdict": "revise",
+   "issues": "(1) Becoming.SharedCodes.impose_reads 不存在。(2) 第二个片段（析辞擅作名为大奸，其罪犹为符节度量之罪）说的是单一中心以罪维持唯一的码，与 shangjun-ding-ming-fen、hanfei-bu-dang-ming 是同一层，那两条都记为 divergence；此处并入 scope，违反“相分不得并入”。(3) reading 说“‘析辞擅作名’被列为罪，正是关闭了区分回来的唯一来源”，这是过推：outside_needed 只说经由听，被合并的区分只从外加之外留存的形式回来；擅作名是造新形，而模型里听不造形（hearBy_held），定理不涉及造新形。(4) impose_agrees 与 impose_loses_iff 都是按定义成立。",
+   "fix": "把 impose_reads 换成 Becoming.SharedCodes.run_from_imposition（含“恰在外加码分开诸义处互读”）。把片段二拆为一条 divergence entry（单一中心＋罚的维持层）。reading 改为“在只经由听的模型中，区分只从留存之形回来；擅作名是造新形，模型未及（缺口三），禁之则连模型外之路也关闭”。impose_loses_iff 注“按定义”。"
+  },
+  {
+   "id": "xunzi-dang-bu-qi-lei",
+   "verdict": "revise",
+   "issues": "(1) Becoming.Learnable.table_rests 与 Becoming.Learnable.label_of_rests 不存在，实名是 table_predicts、label_of_predicts。(2) “当簿其类，然后征知可”的结构是“经映射的登记先于可学”，文本里没有有限标签表；learnable_iff_table 的“至多 N 个标签”在文本中没有对应。(3) 第二个片段“同类同情者其天官之意物也同”带固定本性层，reading 已说明，记 scope 恰当。",
+   "fix": "declarations 改为 Becoming.Learnable.learnable_iff_reading、Becoming.SharedCodes.reads_iff、Becoming.SharedCodes.self_reads_iff；若保留 Labels，用 Becoming.Learnable.label_of_predicts，并说明“有限”是理论补上的，不在文本里。records 去掉 what-finitely-many-labels-fix，或注为相邻。names_used 去掉“当簿”。"
+  },
+  {
+   "id": "xunzi-da-gong-ming",
+   "verdict": "revise",
+   "issues": "reading 末句“严格的细化每次都多出一个类（Refining.grow）：荀子的终点是所用码的终点，不是关系可分的终点”错用了定理。Refining.grow 只说每次严格细化多出一类；Refining.steady_within 说在 N 个成员的列表中，细化链在其类数之内停止。所以在有限情形下，“至于无别然后至”与律相合，不是被纠正。",
+   "fix": "把 Becoming.Refining.grow 换成或补上 Becoming.Refining.steady_within、Becoming.DistinctUnder.length_le。删去末句，改为：在有限多成员、各步关系可判定之处，推而别之在其类数内止于无别（steady_within），lumped_id 是最细一端。"
+  },
+  {
+   "id": "xunzi-yuan-fang-yi-su",
+   "verdict": "keep",
+   "issues": "reads_iff、reads_other、renamed_tells_apart_iff、References.stays_iff 都存在，用法准确。“翻译是改名的实例”已带条件“两码只差一个分开形式的改名时”。以诸夏为准是中心层，记 scope 恰当。"
+  },
+  {
+   "id": "xunzi-ming-you-gu-shan",
+   "verdict": "revise",
+   "issues": "preferred_breaks_renaming 只说一条带偏好形式的规则打破改名对称，偏好是由所给的规则提供的。“名有固善”的“固”把善归于形式本身。理论不说任何形式本身更善，只说采纳规则可以偏好某一形式；“径易而不拂”是形式与使用者之间的关系。所以“固”这一层超出律，记 agreement 过强。three_agree 与 order_decides 是两个形成者的见证。",
+   "fix": "kind 改为 scope。reading 加一句：“固善”在律中是采纳规则的偏好（规则所给），不是形式自身的属性；律给出它的作用（打破改名对称、使二者一致），不给“固”。何以定案：要看“固善”读作形式本身之性，还是读作形式对使用者的便利；前者为 scope，后者可为 agreement。"
+  },
+  {
+   "id": "xunzi-zhi-ming-gui-jian",
+   "verdict": "keep",
+   "issues": "“下以辨同异”合，“上以明贵贱”加了等级层，记为 divergence 正确。Relabel.valued_alike_iff（一切经映射的估值对二者相同，恰当映射把二者并起来）存在，用得准确。selects_not_right_of_parted 列了而未用，可删。"
+  },
+  {
+   "id": "lunyu-zheng-ming",
+   "verdict": "keep",
+   "issues": "与 RO ru-lunyu-zheng-ming 一致：scope，声明都存在，名分一层已标为理论不涉。"
+  },
+  {
+   "id": "lunyu-ma-mian-bai-xia",
+   "verdict": "revise",
+   "issues": "(1) impose_loses_iff 讲外加码，而众人改拜不是外加，是在听中逐渐形成；“逐义形成的一致可以合并诸义”的律是 SharedCodes.keeps_apart_iff 与 TwoFormations.homonym。(2) 孔子给的理由是“俭”与“泰”，即对形式的评价；脉络 RU1-LY-09-03 的认知栏作“区别可调整的耗费形式与不可由多数决定的敬意要求”。“从众与违众不是对众的态度，而是变化是否只是改名”把评价性的取舍说成结构，理论不给出从或违。mapper 自己也标了“若严格应降为 scope”。",
+   "fix": "kind 改为 scope。去掉 impose_loses_iff，换成 Becoming.SharedCodes.keeps_apart_iff、Becoming.SharedCodes.TwoFormations.homonym。reading 改为：麻冕为纯是改形不改分（run_renamed_tells_apart_iff）；拜上可读为合并了一个区分（AI 读法）；从或违是评价，律不给出。"
+  },
+  {
+   "id": "lunyu-li-yun-li-yun",
+   "verdict": "keep",
+   "issues": "whole_not_in_pairs、separation_faithful_iff、no_judge_of_merged 与“礼不在玉帛”的结构相合，记 scope 恰当。CrossSituational.stands_false_iff 列了而 reading 未用，可删。"
+  },
+  {
+   "id": "mengzi-yi-fu",
+   "verdict": "revise",
+   "issues": "名随所为的关系而定，用 identifiesAlike_iff 准确，记 scope 恰当。但 Twins.naming_not_identifiesAlike 的失败方向相反：它说把关系上相同者分开命名是无意义的；而称纣为“君”的失败，是把关系上不同者认作同类，即核不是互模拟。",
+   "fix": "删去 Becoming.Twins.naming_not_identifiesAlike；如需反面的律，用 identifiesAlike_iff 的第一半（核为互模拟），或 carries_law_iff。"
+  },
+  {
+   "id": "mojing-da-lei-si",
+   "verdict": "revise",
+   "issues": "达、类、私是读法从粗到细的三级（常值、归并、单射），这一结构成立。但 reading 把私名挂到“Reidentify 的每步一一对应”：Reidentify 是两套命名跨步的对应，经文说的是同一时的名之三等，不涉及跨步。lumped_id 只说最细读法形成一切，可以作为最细之端。",
+   "fix": "declarations 删去 Becoming.Reidentify，reading 删去“Reidentify 的每步一一对应”。私名以 identifiesAlike_id_iff 与 lumped_id 作最细之端；如需“一名止于一实”，可引 Becoming.Reidentify.new_injective，并注明是一步之内。"
+  },
+  {
+   "id": "mojing-zhong-tong",
+   "verdict": "revise",
+   "issues": "(1) 重同（二名一实）在每个改认的每一步都成立，rename_tenure 却需要每步同一的对应；reading 把这个条件当成已给。(2) 定理只保证由关系定义的读数改名不变，“知”不是 web 的读数；“知狗即知犬”是另加的前提。(3) 同一部《经下》有「狗，犬也，而殺狗非殺犬也，可，說在重。」（MI1-S-JX，已核），是墨家自己给出的不可互换之例，entry 没有提，而它正是这条律的定域反例。",
+   "fix": "kind 改为 scope。reading 加：保值只对由关系定义的读数、且对应每步同一时成立；“殺狗非殺犬，可”是不经关系定义的谓词下的反例。为该句另立一条 scope entry（MI1-S-JX，经下）。declarations 加 Becoming.Reidentify.new_injective。"
+  },
+  {
+   "id": "mojing-yong-ming",
+   "verdict": "keep",
+   "issues": "勇以“於是”命名，是带情境指标的谓词，Contextual.indexed_fits 准确。stands_iff 的 bearing 条件对“不以不敢於彼害之”也成立。"
+  },
+  {
+   "id": "mojing-shu-niu-ma",
+   "verdict": "revise",
+   "issues": "(1) numbers_iff_decided 与 listsOnce_iff_decided 说的是同一（等号）的可判定性，牛马计二计一说的是计数单位随认定而变，两者结构不同；脉络 MI1-R-SX-count 作“分别以牛马为单位，或以牛马整体为单位”。(2) Flow.reidentify_counts 讲跨步改认不改每步计数，不涉单位。(3) 对的结构是“在较粗的关系下两两相分的成员更少”。",
+   "fix": "declarations 改为 Becoming.DistinctUnder.mono、Becoming.DistinctUnder.length_le、Becoming.Refining.grow。reading 改为：数牛数马是在较细的关系下两两相分，得二；数牛马是在较粗的关系下，得一；细一级则多一类。删去 numbers_iff_decided、listsOnce_iff_decided 与 reidentify_counts，或改注“数须先判同一”（这属于稽实）。"
+  },
+  {
+   "id": "mojing-kuang-ju",
+   "verdict": "revise",
+   "issues": "selects_not_right_of_parted 是本条核心，准确：齿、尾“俱有”，把牛马并在一起，经由它的选择分不开二者。Web.separates_all_iff 是“池化耦合分开恰在成员不全以同法耦合处”，与本段无关；reading 对它的转述（“能分开的恰是不全同的那一维”）也不是它的陈述。",
+   "fix": "删去 Becoming.Web.separates_all_iff 与相应的 reading 句；可加 Becoming.Learning.selects_through_lumping（经映射的选择对映射所并者相同）。"
+  },
+  {
+   "id": "mobian-lei-qu-lei-yu",
+   "verdict": "keep",
+   "issues": "与 RO mobian-lei-qu-lei-yu 一致，声明都存在，结构准确。"
+  },
+  {
+   "id": "mobian-ming-ju-shi",
+   "verdict": "revise",
+   "issues": "“以說出故”沿用 RO 的 agreement，可以成立。“以辭抒意”挂 CodeAcquisition.acquired_every_expression：后者是一个给定的两原子组合族中，探到的码对一切表达式同值，与“辞表达意”只有类比关系，没有同一结构。所以三级合起来记 agreement 过强。",
+   "fix": "拆开：“名舉實”与“說出故”记 agreement（identifiesAlike_iff；Confound.misattributes、Run.not_fixes_of_untaken、apart_only_downstream）；“辭抒意”记 scope 或只作 AI 类比，并注明 CodeAcquisition 是给定的有限族。或者整条 kind 改为 scope。"
+  },
+  {
+   "id": "mojing-ju-wu-sheng",
+   "verdict": "revise",
+   "issues": "误读了“異”的情形。经说“異則或謂之牛，牛或謂之馬也。俱無勝，是不辯也”说的是两人所指不同，因而没有争点；脉络 MI1-R-SX-win 作“先有真正争点再论胜负，避免异名同实的假争辩”。reading 把它说成“两码对称而不打破，永不一致”，挂 never_agrees_of_both 与 crossing_never_agrees，结构不对。“當者勝”是对同一实的两个相反之谓，与所显示者相合的一方成立；CrossSituational.stands_iff 讲的是一个形式的义跨记录成立，不是相反之谓的真假。",
+   "fix": "删去 never_agrees_of_both、TwoFormations.crossing_never_agrees、CrossSituational.stands_iff、resolves_iff。“同”的情形保留 renamed_tells_apart_iff；“異”的情形写为所指不同、无共同之义可争；“當者勝”候选 Becoming.Ideals.refutableBy_iff_compl（否证一方即证实其补），这一条有待核其范围，核不成就标为缺口。"
+  },
+  {
+   "id": "mojing-wei-hu-qi-wei",
+   "verdict": "revise",
+   "issues": "reads_iff 与 self_reads_iff 准确。SharedCodes.kept_iff 讲一个群的一致经听而保持的条件，与“彼惟乎其谓”无关，reading 也没有用。reads_other 要求读者的码把同一形式给了别义（crossed），reading 宜写出这个条件。",
+   "fix": "删去 Becoming.SharedCodes.kept_iff。reading 中“对方的码把同一形式给了别的义”保留并标出这是 reads_other 的前提。"
+  },
+  {
+   "id": "mojing-tong-yi-hou-dui",
+   "verdict": "keep",
+   "issues": "candidates_append、narrows、candidates_eq_iff、resolves_iff、resolved_is_target 都存在，问答收窄候选的结构准确。"
+  },
+  {
+   "id": "mojing-yi-suo-ming",
+   "verdict": "keep",
+   "issues": "determines_lumped_iff、lumped_world_right、lumped_right_iff 准确；“不以所不智疑所明”以世界在归并上同值为前提，reading 已写出。"
+  },
+  {
+   "id": "mojing-yi-fa-jin-lei",
+   "verdict": "revise",
+   "issues": "“法在此是律”是误读。墨经的法是所若而然的标准（意、规、员），即认同所依的读法 π；脉络 MI1-R-SX-form 的认知栏作“选定形状标准，保留材质差异”。经文不涉变化，挂 goAlike_iff_lumped 与 carries_law_iff（变化之律在归并上同行）没有文本依据。",
+   "fix": "reading 改为：法是归类所依的标准（读法 π），同法者为一类，或木或石不害，因为 π 不读材料。declarations 改为 Becoming.Learning.Lumped（定义）、Becoming.Learning.selects_through_lumping、Becoming.lumped_of_finer，删去 goAlike_iff_lumped 与 carries_law_iff，或注明这是理论补上的。"
+  },
+  {
+   "id": "mojing-jian-bai-zai-shi",
+   "verdict": "keep",
+   "issues": "glues_iff_agree、indexed_fits、fitsFree_iff 准确；与 RO 对公孙龙坚白的读法互补。"
+  },
+  {
+   "id": "gongsunlong-bai-ma",
+   "verdict": "keep",
+   "issues": "与 RO 一致，记 scope；“包含而非相异”由 lumped_of_finer 给出，准确。Web.separates_all_iff 沿 RO 列入而 reading 未用，可删。"
+  },
+  {
+   "id": "gongsunlong-zhi-wu",
+   "verdict": "keep",
+   "issues": "Twins.alike_one、Web.rename_tenure、Diagonal.complete_iff_alike 都存在；“读法不是另一界”的范围读法恰当，记 scope 正确。"
+  },
+  {
+   "id": "gongsunlong-ji-zu-san",
+   "verdict": "revise",
+   "issues": "记 scope 正确：谓与数分开相合，“故三”把谓当作被数的一项则相分。但 numbers_iff_decided 与 listsOnce_iff_decided 讲同一的可判定性，不是“谓不是成员”。贴近的律是：Numbers 计的是成员（关系项），列表的长度计的是位置而不是关系项（Listing 头：repeated_same）。",
+   "fix": "declarations 加 Becoming.Numbers.le_length（若需要），reading 改为“Numbers 只数列中之关系项，称谓不是列中之项”。numbers_iff_decided 改作背景，或删去。Flow.reidentify_counts 与本段无关，删去。"
+  },
+  {
+   "id": "gongsunlong-ming-shi",
+   "verdict": "keep",
+   "issues": "identifiesAlike_iff 与 IdentifiesAlike.unique 对“彼彼止于彼”；stays_iff 与 narrows 对“知此之非此則不謂”。结构准确。"
+  },
+  {
+   "id": "gongsunlong-jian-bai",
+   "verdict": "keep",
+   "issues": "与 RO gongsunlong-jian-bai 一致，记 scope，声明都存在。"
+  },
+  {
+   "id": "zhuangzi-wu-wei-zhi-er-ran",
+   "verdict": "revise",
+   "issues": "reading 只用了改名（Web.rename_tenure），得出“谓之而然只在认出与计数的范围内成立，不及于关系本身”。漏了 Identity 的核心：一般改认（跨步换一种称谓）虽不改各步关系（Web.reidentify_step），却改变追随形成的读数，如谁更新、谁消耗、是否生起（Turnover.reidentified）。所以对跨步读数，“物谓之而然”是成立的，定域应划在“各步关系”与“跨步读数”之间。",
+   "fix": "declarations 加 Becoming.Web.reidentify_step、Becoming.Turnover.reidentified。reading 改为：称谓不改各步关系（reidentify_step、rename_tenure），却给出跨步的同一，因而给出生起与存续的读法（Turnover）；“谓之而然”在后者成立，在前者不成立。"
+  },
+  {
+   "id": "zhuangzi-zhao-san-mu-si",
+   "verdict": "keep",
+   "issues": "日总数的读法与朝暮的读法是两种约简：selects_through_lumping、reading_single_iff、values_right_lumped 用法准确。"
+  },
+  {
+   "id": "zhuangzi-yi-yu-yan-wei-er",
+   "verdict": "keep",
+   "issues": "Diagonal.Unfolds 诸律与“一与言为二……巧历不能得”的结构一致，且与 RO 对王弼的 scope 判定相容（庄子不设终点）。"
+  },
+  {
+   "id": "zhuangzi-shu-zhi-zheng-chu",
+   "verdict": "keep",
+   "issues": "stands_false_iff 与 indexed_fits 准确。Clearing.centers_disagree 讲以依赖为界的意义中心不一致，与“正”的评价义相关，可以留。"
+  },
+  {
+   "id": "zhuangzi-tian-di-yi-zhi",
+   "verdict": "keep",
+   "issues": "lumped_const_iff 与 goAlike_const 准确，记 scope 恰当。Twins.alike_one 列了而 reading 未用，可删。"
+  },
+  {
+   "id": "zhuangzi-de-yi-wang-yan",
+   "verdict": "keep",
+   "issues": "形式可换（renamed_carries_iff、run_renamed）而码不可无（reads_iff），记 scope 正确。"
+  },
+  {
+   "id": "zhuangzi-qiushui",
+   "verdict": "keep",
+   "issues": "把俗当作共享码（run_origin、shared_iff_in_use）是一个合法的实例：码把事物映到贵贱。Transfer.unordered 已标明在延续条件下成立；不排序的说法符合 §6.15。"
+  },
+  {
+   "id": "zhuangzi-qiu-li",
+   "verdict": "keep",
+   "issues": "三层各有对应律，声明都存在：合异散同对 lumped_of_finer，百体不得马对 whole_not_in_pairs，号而读之对 numbers_iff_decided。用 numbers_iff_decided 表示“万是号不是数”尚可，因为数只在同一可判定处才有。"
+  },
+  {
+   "id": "lao-01-ming-ke-ming",
+   "verdict": "keep",
+   "issues": "与 RO lao-01-ming-ke-ming 一致。"
+  },
+  {
+   "id": "lao-wu-ming-you-ming",
+   "verdict": "revise",
+   "issues": "(1) reading 用 Law.merged_stays 说“粗读法不生出细读法”，是范畴错用：merged_stays 讲在律之下被一步合并的构形此后保持合并，对象是动力学中的构形，不是读法 π。(2) 脉络 LE-R002 的 limits 已写“不是无名先因果地产生有名”，所以 scope 要纠正的生成次序读法，并不是本文的主张。",
+   "fix": "删去 Becoming.Law.merged_stays。reading 改为：无名与有名是同一整体的两种读法（lumped_const_iff、lumped_of_finer），文本据脉络不断言因果先后，律亦然。kind 可以改为 agreement，并注明本条的范围在于“始/母”不作生成次序。"
+  },
+  {
+   "id": "lao-32-shi-zhi-you-ming",
+   "verdict": "keep",
+   "issues": "与 RO 一致；所加 impose_loses_iff 是条件句（若名是外加码），可以留，宜注“按定义”。"
+  },
+  {
+   "id": "lao-38-shi-dao-er-hou-de",
+   "verdict": "keep",
+   "issues": "沿用 RO 的 divergence（下降序列），声明都存在。"
+  },
+  {
+   "id": "wangbi-32-ming-fen",
+   "verdict": "keep",
+   "issues": "前半“立名分以定尊卑”是等级层，记 divergence 正确；后半与外加码相合，已在 reading 中保留。也可以拆成两条：前半 divergence，后半 agreement 或 scope。impose_agrees 按定义成立。"
+  },
+  {
+   "id": "wangbi-42-you-yan-you-yi",
+   "verdict": "keep",
+   "issues": "与 RO wb-42-you-yan-you-yi 一致，记 scope。"
+  },
+  {
+   "id": "yichuan-si-de-sui-shi",
+   "verdict": "keep",
+   "issues": "与 RO cy-side-qiankun 一致，记 scope。Learning.goAlike_iff_lumped 原是挂在 RO 的“理無形”句上，本 entry 的 fragments 没有这一句，宜删。"
+  },
+  {
+   "id": "xici-lei-ju-qun-fen",
+   "verdict": "keep",
+   "issues": "Lumped、values_right_lumped、selects_not_right_of_parted 准确；吉凶不由分类产生，这一定域恰当。"
+  },
+  {
+   "id": "xici-cheng-ming-xiao",
+   "verdict": "keep",
+   "issues": "determines_lumped_iff 与 lumped_right_iff 准确，记 scope 正确。"
+  },
+  {
+   "id": "xici-yan-bu-jin-yi",
+   "verdict": "revise",
+   "issues": "no_judge_of_merged 与 Diagonal 诸律对“言不尽意”可以成立。PartialReadout.signal_no_exact 是通道模型的见证，reading 写“单个信号没有精确读法”，作为一般陈述是错的。",
+   "fix": "删去 Becoming.PartialReadout.signal_no_exact 及其 reading 句；需要时改引 Becoming.PartialReadout.ExactWithin.lumped（精确需要合并处同值）。"
+  },
+  {
+   "id": "xici-li-xiang-jin-yi",
+   "verdict": "revise",
+   "issues": "记 scope 正确（象补言之所合并，不能尽意）。但“配上第二个信号即可精确读出（paired_exact）”是从通道见证推出的一般陈述，不成立；outside_returns 的“结构”只是类比，不是同一结构。",
+   "fix": "把 Becoming.PartialReadout.paired_exact 换成 Becoming.PartialReadout.LumpedWithin.finer 与 Becoming.PartialReadout.exact_exists_iff。reading 改为：象加上言，得到更细的映射；在特征于其合并处同值之处才精确。outside_returns 删去，或注明只是类比。"
+  },
+  {
+   "id": "wangbi-xun-yan-guan-xiang",
+   "verdict": "keep",
+   "issues": "self_reads_iff、reads_iff、no_judge_of_merged 准确，“言生於象”的先后已标为定理所不涉。"
+  },
+  {
+   "id": "wangbi-he-bi-ma",
+   "verdict": "keep",
+   "issues": "义在健不在马对 renamed_carries_iff 与 renamed_tells_apart_iff；“有馬無乾”恰是 stands_false_iff；“縱復或值”对 nonuniform_fails_transfer（族内见证）。结构准确。"
+  },
+  {
+   "id": "mozi-yi-ren-yi-yi",
+   "verdict": "keep",
+   "issues": "对称的码（never_agrees_of_both）与三种打破对称的方式（three_agree）准确，记 scope 正确。注意 never_agrees_of_both 要求起点在交换与改名下对称；十人十义不一定对称，reading 宜写作“在对称之处”。"
+  },
+  {
+   "id": "mozi-shang-xia-bu-tong-yi",
+   "verdict": "keep",
+   "issues": "赏罚作为信号，在两码不一致处读成别义（reads_other），结构准确。no_judge_of_merged 列了而未用，可删。"
+  },
+  {
+   "id": "mozi-mang-zhe-bai-hei",
+   "verdict": "keep",
+   "issues": "名共享而区分不共享，对 reads_iff 的 TellsApart 前提与 selects_not_right_of_parted，结构准确。"
+  },
+  {
+   "id": "mozi-bian-qi-xi",
+   "verdict": "keep",
+   "issues": "一致是静止（all_agree_rest），却不说明合宜，结构准确；墨子“岂实仁义”的评价不由律推出，reading 已说明。renamed_carries_iff 列了而未用，可删。"
+  },
+  {
+   "id": "simafa-jiao-cheng-su",
+   "verdict": "keep",
+   "issues": "run_origin（起点与次序定所成之形）准确；“道化俗”作外加是条件读法，已写明；“性州異”的固定本性层已标出。"
+  },
+  {
+   "id": "sunzi-xing-ming",
+   "verdict": "revise",
+   "issues": "(1) Becoming.SharedCodes.impose_reads 不存在。(2) “勇者不得独进，怯者不得独退”挂 impose_loses_iff 不对。勇怯之别是不同形成者在同一义上的形不同，外加使他们一致，这是 impose_agrees（按定义）与 run_imposed_stays；impose_loses_iff 讲的是一个形成者自己的码在两义之间的区分被合并。",
+   "fix": "删去 impose_reads 与 impose_loses_iff，换成 Becoming.SharedCodes.run_from_imposition、Becoming.SharedCodes.run_imposed_stays。reading 改为：勇怯在同一号令上原本各取其形，外加使一切形成者一致并保持；这是 impose_agrees（按定义），不是码内区分的损失。"
+  },
+  {
+   "id": "hanfei-bu-dang-ming",
+   "verdict": "revise",
+   "issues": "记 divergence 正确：理论没有把“名与形相当”置于“功”之上的律。但所引外加码诸律与本段结构不合：言与功是所言与所成，即宣称与结果，不是两个码。reading 说“大功恰是在名之外留存的区分”是 AI 过读。",
+   "fix": "保留 divergence。删去“大功恰是名外留存的区分”一句。declarations 只留能说明“理论只给一致与损失、不给排序”的 impose_agrees 与 impose_loses_iff（均注按定义），并在 reading 写明：言与功的相当是宣称与结果，模块没有这一结构。"
+  },
+  {
+   "id": "hanfei-shen-ming-ding-wei",
+   "verdict": "keep",
+   "issues": "“明分以辯類”对 Lumped 与 identifiesAlike_iff；“定位”的等级层已标为定理所不涉，记 scope 正确。"
+  },
+  {
+   "id": "hanfei-gu-xin-xiang-fan",
+   "verdict": "revise",
+   "issues": "kept_bars 与 added_never_replaced 准确：旧记录保留时，新记录只能使消解失去，不能把它换掉。但 reading 说“候选不收窄为一，奸臣便可在候选之间择利”不对：新旧相反的记录合在一起，没有一个义在全部相关记录上成立，候选为空，而不是多个。脉络 FA1-H43-R006 作“奸臣择利援引旧新”：择的是援引哪一组记录，模块不处理“选记录子集”。",
+   "fix": "reading 改为：新旧相勃，合读则消解失去，没有候选（kept_bars、narrows）；奸臣择利是在两组记录之间选读其一，这一步不在模块内。kind 可以保留 agreement（限于“相勃则不定”），否则改为 scope。"
+  },
+  {
+   "id": "hanfei-yi-duo-xin",
+   "verdict": "revise",
+   "issues": "本段的特有结构是“信随言者之数而增”，正是 mapper 缺口一所说的多数规则：SharedCodes 只读两码，模块头的 What is not derived 也列了这一条。律给出的只是“在用之形可成为共享，不论是否当实”（shared_iff_in_use、broadcast_reaches）。所以记 agreement 过强。",
+   "fix": "kind 改为 scope：在用之形不论然否都可共享，且全体一致后静止（all_agree_rest），这部分相合；信随数增需要多码采纳规则，模块没有。reading 保留 gap 字段。"
+  },
+  {
+   "id": "hanfei-pan-shi-xiang-ren",
+   "verdict": "revise",
+   "issues": "按大小、数目把磐石与良田、象人与兵认作同类，失败在核不是互模拟：被合并者在关系上不同，描述不携带律。Twins.naming_not_identifiesAlike 是相反方向的失败（把相同者分开命名），reading 用“（或相反）”也承认方向不合。",
+   "fix": "删去 Becoming.Twins.naming_not_identifiesAlike，保留 identifiesAlike_iff 与 carries_law_iff；可加 Becoming.Readout.law_through_iff（约简所合并者被每个动作送到它所合并者时，才有经约简的律）。"
+  },
+  {
+   "id": "shangjun-ding-ming-fen",
+   "verdict": "keep",
+   "issues": "一致需要打破对称（never_agrees_of_both）这部分相合；以官吏与罪维持唯一码、以“议”为害，这一层记 divergence 正确。impose_agrees 与 impose_loses_iff 宜注“按定义”。"
+  },
+  {
+   "id": "shangjun-quan-shu",
+   "verdict": "revise",
+   "issues": "written_rests 讲每代只把写回的消解传下、早先记录不再传（nextCohort），而“分券”“以券书從事”是保留早先记录，结构是 keep 与 kept_rests（记录保留时消解静止，最初的记录在每代都可读）。kept_bars 准确。",
+   "fix": "把 Becoming.SharedCodes.written_rests 换成 Becoming.SharedCodes.kept_rests，reading 相应改写。"
+  },
+  {
+   "id": "shangjun-ming-bai-yi-zhi",
+   "verdict": "revise",
+   "issues": "Becoming.SharedCodes.impose_reads 不存在。其余用法准确，“明白易知”已以 self_reads_iff 定域。",
+   "fix": "把 impose_reads 换成 Becoming.SharedCodes.run_from_imposition（外加之后，互读恰在外加码分开诸义处）。"
+  },
+  {
+   "id": "jielao-de-sui-chi-du",
+   "verdict": "keep",
+   "issues": "同一“德”字在三个尺度上各有其义，indexed_fits、fitsFree_iff、stands_false_iff 准确。"
+  },
+  {
+   "id": "sima-tan-kong-ming-ze-shi",
+   "verdict": "keep",
+   "issues": "记 scope 正确：“以名为准”的方向与“以关系检查名”相反，已写明。"
+  },
+  {
+   "id": "zhaolun-ming-bu-dang-shi",
+   "verdict": "keep",
+   "issues": "名不自带关系，这部分相合；“名不當實”的全称被 IdentifiesAlike.carries 定域。结构准确。"
+  },
+  {
+   "id": "zhaolun-ci-bi-mo-ding",
+   "verdict": "keep",
+   "issues": "此彼是带立场指标的名，indexed_fits 与 reads_other 准确，记 scope 正确。"
+  },
+  {
+   "id": "zhonglun-jia-ming",
+   "verdict": "keep",
+   "issues": "与 RO zhonglun-yin-yuan-jia-ming 一致，声明都存在。"
+  },
+  {
+   "id": "zhonglun-er-di",
+   "verdict": "keep",
+   "issues": "言说须在码中才可读，说法族有缺；二谛的两层已以“只有一层”定域，记 scope 正确。"
+  },
+  {
+   "id": "weishi-jia-li-zhong-ming",
+   "verdict": "keep",
+   "issues": "识变为先行之地，记 divergence 正确。TwoFormations.homonym 的“逐义形成的一致合并诸义”只是“一形二义”的结构旁证，在 divergence 中可以留。"
+  },
+  {
+   "id": "qixin-li-yan-shuo",
+   "verdict": "keep",
+   "issues": "“无有变异”是先行之地与固定本性，记 divergence 正确，声明都存在。"
+  },
+  {
+   "id": "qixin-yin-yan-qian-yan",
+   "verdict": "keep",
+   "issues": "记 scope 正确；“遣尽”不成立已写明。outside_returns 只是类比，可在 reading 中标“结构近似”。"
+  },
+  {
+   "id": "qixin-ji-ming-zi-xiang",
+   "verdict": "keep",
+   "issues": "依名而行受名的合并所限（selects_through_lumping、selects_not_right_of_parted），结构准确；“妄”一层已定域。"
+  },
+  {
+   "id": "tanjing-dun-jian",
+   "verdict": "keep",
+   "issues": "顿渐是“法×人”这一更细读法上的名，lumped_of_finer 与 indexed_fits 准确。"
+  },
+  {
+   "id": "hanyu-ding-ming-xu-wei",
+   "verdict": "keep",
+   "issues": "定名与虚位分别对 stands_iff、stands_false_iff 加 indexed_fits，结构准确。"
+  },
+  {
+   "id": "hanyu-gong-yan-si-yan",
+   "verdict": "keep",
+   "issues": "记 scope 正确：两码同形异义（reads_other），以“公/私”排序这一层理论不作。Clearing.centers_disagree 讲的是意义中心的不一致，用在“两家之码”上偏远，可删。"
+  }
+ ],
+ "missing": [
+  "《墨子·經下》「景不徙，說在改爲。」与《經說下》「景，光至景亡，若在，盡古息。」（MI1-S-JX、MI1-S-SX，均已核；脉络无关系记录，单元 MI1-U-JX-01）：同一组步，可以读作一影移动，也可以读作每步改为新影；生起与存续随命名而变。这是 Turnover 与 Lineage.one_way 的先秦对应，即理论所说“名之跨步模式承载同一”。本簇缺这一条，也缺这一结构的名。",
+  "《墨子·經下》「狗，犬也，而殺狗非殺犬也，可，說在重。」（MI1-S-JX，已核）：重同与改名保值的定域反例（保值只对由关系定义的读数、且对应每步同一时成立）。须立一条 scope entry，并在重同的 not_carried 中写出。",
+  "《墨子·經上》「盡，莫不然也。」（MI1-S-JS）与《小取》「或也者，不盡也。」（MI1-S-XQ），均已核：正是 CrossSituational.stands_iff（凡相关记录都给出）与 stands_false_iff（某条不给出）的全称与否定结构。可代替新组合“贯义”作名与出处（须先核“盡”是否已被他簇占用）。",
+  "《墨子·經說上》「異，二必異，二也。不連屬，不體也。不同所，不合也。不有同，不類也。」（MI1-S-SS，已核）：与重同成对的“二”，以及以“所”分二实（Reidentify.new_injective、identifiesAlike_iff），一实条与 xunzi-hua-yi-shi 宜引。",
+  "《墨子·經上》「化，徵易也。」（MI1-S-JS，已核）：化是征之易，而延续不断（Web.Continues；World.fixed_iff 定域），一实条缺这一先秦出处。",
+  "名：理论的“标签不承载任何东西，跨步的名之模式承载同一”（Turnover、Lineage；记录 identity-across-steps）在本簇没有名。稽实不合这一结构，私名只覆盖一步之内。",
+  "名：一般改认（Reidentify，每步一一对应、各步关系不变）需要一个名。稽实应 reject；中文版现用“改认”，宜沿用（标新組合）或另选，交整合者定。",
+  "名：已采纳“约定俗成”之下，“码分开诸义”（SharedCodes.TellsApart；荀子“名定而实辨”“下以辨同异”）在本簇的 readings 中反复用到，却没有立名，也没有与他簇的“辨／別”核对。",
+  "《庄子·天下》辩者「飛鳥之景未嘗動也」「狗非犬」「孤駒未嘗有母」（MI1-S-HS，已核；杂篇，年代有争议）：跨步同一由命名而定、二名一实不可互换的辩者命题，可作 parallel 或 scope。",
+  "《礼记·中庸》「非天子不議禮，不制度，不考文。今天下車同軌，書同文，行同倫。」（RU1-S-ZY，已核；关系 RU1-ZY-37-*；中庸年代有争议）：外加码（run_from_imposition）兼单一中心层。理论章节 §4.5 自己就以“书同文”为外加码之例，本簇缺。",
+  "《墨子·尚同上》「天子唯能壹同天下之義，是以天下治也。」（MO1-S-C11，已核）：外加码之名的候选“壹同”，与 mozi-yi-ren-yi-yi 同篇，制名的 alternatives 应讨论。",
+  "核对说明：mapper 在 notes 中称“所有 declarations 都在 Lean 源中核过存在”，不实。Becoming.SharedCodes.impose_reads、Becoming.Learnable.label_of_rests、Becoming.Learnable.table_rests 三个不存在，共涉及 4 个 name 字段引用与 E05、E06、E59、E67 四条 entry。其余 125 个不同声明都存在；156 处引文对冻结文本逐字核过，全部吻合；124 个脉络记录 id 都存在，且属所引之源。"
+ ]
+}

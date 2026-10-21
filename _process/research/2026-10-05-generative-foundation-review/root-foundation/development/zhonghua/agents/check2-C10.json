@@ -1,0 +1,160 @@
+{
+ "cluster": "C10",
+ "corrections": [
+  {
+   "id": "xunzi-zhengming-suo-ke",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0137",
+    "RU2-R0138",
+    "RU2-R0139"
+   ],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（荀子·正名；战国末，传世本经后世编校）",
+   "fragments": [
+    "欲不待可得，而求者从所可",
+    "心之所可中理，则欲虽多，奚伤于治？",
+    "心之所可失理，则欲虽寡，奚止于乱？",
+    "故治乱在于心之所可，亡于情之所欲",
+    "所受乎天之一欲，制于所受乎心之多",
+    "道者，古今之正权也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.selects_through_lumping",
+    "Becoming.Relabel.selected_alike_iff",
+    "Becoming.Learning.selects_right_of_reads",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Learning.selects_right_through"
+   ],
+   "records": [
+    "selection-through-a-model-of-the-options"
+   ],
+   "reading": "AI读法：「欲不待可得，而求者从所可」：求不随欲而出，而是读心之所可而出；所可把诸选项分成类（映射给同一条目者为一类）。脊柱（经映射的选择；交换两个选项的条目即交换所选者，这是假设）：经映射的选择对同类的选项选得相同（Learning.selects_through_lumping），两个选项被每个这样的选择选得相同，恰当映射使二者同类（Relabel.selected_alike_iff）。要紧者 p 能由映射读出时，读它的那个选择经映射且恰选出 p（Learning.selects_right_of_reads）：这是「求者从所可」之下「心之所可中理，则欲虽多，奚伤于治」的结构。映射把 p 所分开的两个选项归为一类时，经它的任何选择都不能恰选出 p，不论是哪一个选择（Learning.selects_not_right_of_parted）：这是「心之所可失理，则欲虽寡，奚止于乱」。一般地，经映射而恰选出 p 的选择，要求 p 在映射之类上随类而同（Learning.selects_right_through）；这是必要条件，不是「恰当」。「亡于情之所欲」在脊柱中是选择的类型：经映射的选择只读映射，欲不是它的输入。这是表示上的事，不是一条律。此处「中理」对应的是要紧者（治乱）在所可之类上随类而同，不是名表之「理」（对变化之律的建模，锚为 Learning.goAlike_iff_lumped，记录自言近于定义展开）：名表之理是构形在一条确定之律下的归并，此处是选项与给出的要紧者，结构不同，所以这里的相合不经「理」字。要紧者与映射在脊柱中都是给出的；哪个映射对、更细的映射从何而来，属于学习（记录 selection-through-a-model-of-the-options 所不示）。剩余与相分：荀子以「所受乎天之一欲，制于所受乎心之多」立心为制欲者，同篇又以「道者，古今之正权也」立一个跨古今的唯一之权。脊柱不立统摄之心，也不立唯一之权；要紧者由所给之条件定。",
+   "gap": "",
+   "tradition": "儒",
+   "work": "荀子·正名",
+   "names_used": [
+    "类"
+   ]
+  },
+  {
+   "id": "lao-36-li-qi",
+   "status": "revised",
+   "record_ids": [
+    "LAO2-C36-R05",
+    "LAO2-C36-R06",
+    "LAO2-C36-R08"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "先秦·经（老子三十六章，据王弼本系统传世经文；《韩非子》喻老、内储说下已引本章，FA1-S-H21、FA1-S-H31）",
+   "fragments": [
+    "将欲歙之，必固张之",
+    "是谓微明",
+    "柔弱胜刚强",
+    "国之利器不可以示人"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Flow.seeking_ends",
+    "Becoming.Flow.more_exhausted",
+    "Becoming.Web.separates_all_iff",
+    "Becoming.Web.pool_adds",
+    "Becoming.Flow.uncoupled_beyond_pool",
+    "Becoming.Flow.unselected_beyond_pool"
+   ],
+   "records": [
+    "where-a-rising-take-ends",
+    "seeking-boundary",
+    "what-pooled-coupling-reaches"
+   ],
+   "reading": "AI读法：沿用 RO 的相分判断，并说清其层与界。经文的句式是「将欲歙之，必固张之」：一方要使对方歙、弱、废、夺，先使之张、强、兴、与。本章称此为「是谓微明」，又说「柔弱胜刚强」，并以「国之利器不可以示人」把手段留在对方所见之外。所以本章的起点是一方对另一方的谋与胜，属「意志或单一中心」与「争胜」两层；理论从整体关系之变起，不从对立之利与胜负起。四式是势之描述还是策略设言，《脉络》保留争议（LAO2-C36-R05 之限）。《韩非子·喻老》以越王弊吴等事作谋略读；王弼以不假刑、器不可睹读利器（LC2-WB-C36-R01）；河上公以权道读利器（LC2-HS-C36-R03）。定域一处：若把先张后歙读作势，脊柱只给从张到歙这一个方向，而且有条件。在平衡之下，一个形成在每个活跃之步，其所取在下一步都上升；所取之条件每步所给至多为 B；它停止后不再活跃。这样，自一个可算出的步起它不再活跃（Flow.seeking_ends）。所立者列出且自某步起每步都衰减之处，没有条件在任意晚的步上还上升（Flow.more_exhausted）。脊柱不给「凡歙必先张」：终结不都经由先前之张。「微明」之明，是施谋一方对反复之势的独见，不是名表之明（感接上一个及于支持所不标记者的选择）；二者只是同字。脊柱中，兼感所分开者，恰是其成员不全耦合无别者（Web.separates_all_iff）；某成员耦合无别而成员不全无别时，兼感有该成员之感所无的选择，差别正是兼感所加（Web.pool_adds）。「不可以示人」就是不与对方兼感：施谋者所分开、对方耦合无别的那些历史，对方仍然分不开。利器若全在对方感域之外，在其余交换固定、感域内所耦合入的条件平衡之下，感域内每个形成对有无此部分的水平耦合无别（Flow.uncoupled_beyond_pool），经对方兼感的任何选择对二者也选得相同（Flow.unselected_beyond_pool）。反过来，在同样条件下，一个其有无使感域内某形成耦合有别的部分，就不全在感域之外。这些律只说隐藏做了什么，不说它更坏：排序只在以广为愈（设，不断言）之下；凡续皆有顾也是设而不断言，它定哪些损失计入，本身不排序。",
+   "gap": "",
+   "ro_passage": "lao-36-jiang-yu-xi-zhi",
+   "tradition": "道",
+   "work": "老子三十六章",
+   "names_used": [
+    "明",
+    "兼感",
+    "感域",
+    "以广为愈",
+    "凡续皆有顾"
+   ]
+  },
+  {
+   "id": "heshanggong-32-tian-ren-xiang-ying",
+   "status": "revised",
+   "record_ids": [
+    "LC2-HS-C32-R02"
+   ],
+   "source_id": "LC-HS-UP",
+   "layer": "秦汉至魏晋南北朝·注（河上公章句三十二章注；题署与成书年代有争议，不确指汉文帝时）",
+   "fragments": [
+    "侯王动作能与天相应和，天即降下甘露善瑞也",
+    "天地相合，以降甘露"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.ExchangeLaw.RespondsTo",
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "where-a-level-couples",
+    "what-a-pools-acts-respond-to",
+    "continuation-condition-yields-living-significance"
+   ],
+   "reading": "AI读法：经文「天地相合，以降甘露」说的是天地相合而有甘露，这是关系之事。河上公注把它改作「侯王动作能与天相应和，天即降下甘露善瑞也」：以一个中心（侯王）的动作与天相应和为条件，天降甘露善瑞以报；「善瑞」又把这一回报读作嘉许。这是「意志或单一中心」一层，并把一个价值安在回应上；《脉络》也以君德与天应的政治宇宙论分出此层（LC2-HS-C32-R02）。脊柱中，应是交换对一个水平的回应（ExchangeLaw.RespondsTo）。感界定应而不固定它：耦合之类已定、某形成把两个历史耦合为有别时，有经每个形成之感而读的律在这两个历史下取得不同，也有同样经感而读、处处交换无别的律（ExchangeLaw.response_not_fixed_by_coupling）。所以即使侯王之动与天「相应和」，也不定回应是降甘露，还是什么也不交换：回应由所给之律定，脊柱不立一个以甘露善瑞回报侯王的天。回应之「善」也不由动力学给出：在同一动力学之下，凡事皆无顾时，活皆有顾在任何活着的事件上都不成立；凡事皆有顾时则成立（Web.significance_undetermined，只评估这两个常值）。至于动力学之律不约束意义，这是表示上的事实（意义不是 World、Web、Flow 的字段），不是定理。凡续皆有顾是设而不断言的条件：它给意义，不给正面之价值，本身也不排序；排序只在以广为愈。「感」「应」二名不带天之嘉许或回报之义。",
+   "gap": "",
+   "tradition": "道",
+   "work": "老子河上公章句·三十二章",
+   "names_used": [
+    "感",
+    "应",
+    "活皆有顾",
+    "凡续皆有顾",
+    "以广为愈"
+   ]
+  },
+  {
+   "id": "tuan-kui-zhi-tong",
+   "status": "revised",
+   "record_ids": [
+    "TP-H38-T-R05",
+    "TP-H38-T-R02"
+   ],
+   "source_id": "YD-JP38",
+   "layer": "先秦·传（彖传·睽；成书年代有争议）",
+   "fragments": [
+    "男女睽，而其志通也",
+    "二女同居，其志不同行"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Law.Commutes.apart",
+    "Becoming.Law.Commutes.iterate",
+    "Becoming.Law.Commutes.pairs_goAlike",
+    "Becoming.Law.Commutes.breaks",
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Hexagram.waxWane_apart",
+    "Becoming.Hexagram.pairOf",
+    "Becoming.Hexagram.pairs_goAlike"
+   ],
+   "records": [
+    "what-a-commuting-law-keeps-apart",
+    "hexagrams-on-the-spine"
+   ],
+   "reading": "AI读法：沿用 RO 的相合判断，只取其结构。「男女睽，而其志通也」：二者相异（睽），所向却相通；同一彖传又说「二女同居，其志不同行」，可见此处之「志」指所向。脊柱的一般律：律与一个移动每个构形的映射交换时，从 x 与从其像出发的运行，在同一步从不处于同一构形（Law.Commutes.apart）；从像出发的运行，在每一步都是从 x 出发之运行的像（Law.Commutes.iterate）。把 x 与其像命为一类，律在这类上随类而同（Law.Commutes.pairs_goAlike）；要把二者合一，律必须破此对称（Law.Commutes.breaks）。六十四卦是这些律在一个构造模型中的实例：消息之律与错卦交换（Hexagram.waxWane_complement，逐卦由定义算出）；互补之卦在同一步从不同处（Hexagram.waxWane_apart）；以 pairOf 命名的互补之对，是律在其上随类而同的归并（Hexagram.pairs_goAlike）。所以「睽而志通」有确切的结构：构形之异与律中的步步相随，在两个层面同时成立；相随不需取消其异，合一反倒要破对称。剩余：文中之「通」若指男女之志彼此相及（相感、相求），那是二者之间的耦合，这些律不给出：它们只说二者在同一条律下互为镜像，不说二者相感。「通」在名表中另有所指（可，运行继续），此处不用其名。天地、男女、万物三组不合为万物同质（TP-H38-T-R05 之限）。",
+   "gap": "",
+   "ro_passage": "tuan-kui",
+   "tradition": "共享经典",
+   "work": "彖传·睽",
+   "names_used": [
+    "类"
+   ]
+  }
+ ],
+ "drops": [],
+ "passed": [],
+ "notes": "四条都改了，没有一条能原样通过。所有片段都用 ctq.py text 对过冻结文本，都确切无误；新加的片段也逐一核过。所引声明都经 resolve.py 解析到自身，并在 Becoming/*.lean 中找到。所引记录都存在。\n\n（1）层次。四条都写成「类·时代」，按规则应是时代在前，现已全部改为「时代·类」，并注明年代争议：彖传、河上公的年代有争议；老子三十六章已见于《韩非子》喻老和内储说下（FA1-S-H21、FA1-S-H31），可算先秦层。\n\n（2）xunzi-zhengming-suo-ke。与 wangbi-27 是同一类错，有三处。\n- 把单向的 selects_right_through 写成「恰在……才对」。它只给必要条件；充分的一面是 selects_right_of_reads，现已补入。\n- 把「中理」等同于 goAlike_iff_lumped。该定理讲构形在确定之律下的归并，记录自言近于定义展开；这里讲的是选项与给出的要紧者（Training.Through），结构不同。所以这里的相合不能经「理」字，已删去这一声明和 generalization-through-lumping 记录。names_used 里的「择」按名表指关于水平历史的主张，「理」又不是本条所用之义，两个都删了，改作「类」。\n- 剩余部分已写明：「制于所受乎心之多」立心为制欲者，「道者，古今之正权也」立唯一之权，这两句已核对并补入片段。\n\n（3）lao-36-li-qi。有四处问题。\n- 「作为自然律读与 seeking_ends 相合」方向不对。该律给的是从张到歙，且有平衡、所给有界、停止后不复活跃三个条件；它不给「凡歙必先张」。现改为定域，并写出这些条件。\n- unselected_beyond_pool 原来的转述「使他者在闭包之外」方向含糊。现改为：手段全在对方感域之外，对方才对它不分。并补入 uncoupled_beyond_pool：在同样条件下，使对方耦合有别的部分不全在感域之外。\n- 本章自称「微明」，与名表之明只是同字，现已注明。\n- 原读法隐含了「兼感更好」，现写明排序只在以广为愈之下，凡续皆有顾设而不断言。\n\n（4）heshanggong-32。有四处问题。\n- 「历程本身不决定哪些差别要紧」超出 significance_undetermined 所证：它只评估两个常值意义；更广的那一句，章内明说是表示上的事实，不是定理。\n- 原文只有降善瑞，没有「惩」，已删去「奖惩」。\n- 补引了经文「天地相合，以降甘露」作对照：经文是关系之事，相分在注这一层。另补了单一中心（侯王）一层。\n- significance_undetermined 所在的记录 continuation-condition-yields-living-significance 漏列了，RespondsTo 的记录 where-a-level-couples 也漏列了，现都补上。\n\n（5）tuan-kui-zhi-tong。有三处问题。\n- 只引了六十四卦这一个构造模型中的实例（waxWane_complement 逐例 rfl），没有说明它们是实例。现补入一般律 Law.Commutes.apart、iterate、pairs_goAlike、breaks。\n- 「经同一律回应」误用了「应」：名表中应只指回应。互补之对互为镜像，并不相应。读法中的「通」也与名表之通（可，运行继续）冲突，现已注明不用其名。\n- 「志通」若指相感，这些律不给出，已列为剩余。\n\n留给整合者：tuan-kui-zhi-tong 的结构（交换之律）本属 C07 或 C17，放在 C10 很勉强，原来与本簇的联系只靠误用的「应」。"
+}

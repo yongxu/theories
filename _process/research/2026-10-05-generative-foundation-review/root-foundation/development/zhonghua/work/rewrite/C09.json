@@ -1,0 +1,142 @@
+{
+ "part": {
+  "key": "C09",
+  "heading": "篇十　名",
+  "intro": "本篇论名：名、所谓、类与约定在一展开中是什么。名不是另立之物，而是读予所读者之值：宇以名标其诸物，描述以名并其诸状，码以名予其诸义项。先说名在大化中之位：每步之关系不随名而改（改认、重同），名本身不载关系（名无固宜），跨步之同一在相续给定处由相续读出，在宇衡而同一定然否处由守恒定到步后同水平为止，余处留给名之序；次说名与同：正名，私名与达名之粗细，以所读者为索引之读族必有所缺，以名读辞须另设；再说一待者怎样读名：义项跨诸记录而贯，记录唯减候选而通意，读者之码辨而二码相合则喻为此且唯此，名并特征之异则阙，码由探测而知，有穷之标签表定可知之特征；最后说名怎样在诸待者之间形成：听不造名，序定所成，同须破对称，同可失辨，制名之同与失，记录写回而止。本篇诸律皆无设而然，每条只在写入其中之局部条件（义项表无重、有表尽诸待者、读者之码辨、宇衡而同一定然否、有截面、所给之式族……）下，对每个如此表示之宇成立；码之共享、外加与写回是否支持或损害生生，诸律不言。延续之条件（凡续皆有顾：凡＋续＋皆有顾，凡延续皆有意义）在意义之篇陈述而不断言，本篇不用；它只定范围，本身不排序，排序唯在以广为愈（以＋广＋为愈：以扩大为更好）。本篇承大化之篇之状与正名、持续之篇之续与化、规律之篇之类与同、识知之篇之读与可知，下接感择之篇。",
+  "tiao": [
+   {
+    "id": "十·一",
+    "title": "名",
+    "body": "**經**　名，所以谓也：读予所读者之值也。物之名，宇所以标其物；状之名，读予状之值；义项之名，码所予之。\n\n**說**　名（name）在形式中出现于四处，结构都是一个映射所给之值。待网以定型之名类标其诸待者与诸所待（`Becoming.Web`，即 `Web F C` 之 `F` 与 `C`），所以某步之某物与次步之某物是否同一，先由名规定（⟦十·二⟧）。描述是从状到名之映射（`Becoming.IdentifiesAlike` 中之 π），并哪些状由它定（⟦十·六⟧）。码（code：每待者所持、从义项到名之映射）以名予义项；读者之码辨时，喻为此义项且唯此，由二码之相合定（`Becoming.SharedCodes.ReadsAs`、`Becoming.SharedCodes.reads_iff`，⟦十·十二⟧）。状之名也可以是它经映射之未来的有穷前段（`Becoming.Law.name`，⟦十·十五⟧）。讀（AI，D23）：名在展开之内，是读，不是展开之外的标签；状之同一读为同（互模拟），以相等论之确定性依赖命名（⟦十·六⟧），凡由关系可知者对同之状都相同。名取「名，達、類、私」〔MI1-S-JS〕，三名之粗细见⟦十·七⟧。对照（相合，mojing-da-lei-si）：「所以謂，名也。所謂，實也。名實耦，合也。」〔MI1-S-SS〕（《墨子·經說上》，战国后期墨家）：名与所谓者是一对，配上即合；本编不立“实”为名，所谓者在宇中是物或状，在码中是义项，其同一在关系能定之处由关系定（⟦十·五⟧）。\n\n**證**　`Becoming.Web`、`Becoming.IdentifiesAlike`、`Becoming.SharedCodes.ReadsAs`、`Becoming.Law.name`；记录 [identity-across-steps](../results/records/identity-across-steps.md)、[a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)、[what-finitely-many-labels-fix](../results/records/what-finitely-many-labels-fix.md)。"
+   },
+   {
+    "id": "十·三",
+    "title": "名无固宜",
+    "body": "**經**　名无固宜，名不载关系也：凡改名，待者之恒、竭、剥，其待之结与解，其作，与待网之不息，皆不改；以不并之改名换一读或一码之名，读之载法、码之所辨，皆不改。改认而非改名者，可改恒、竭、剥、结解、作与不息。\n\n**說**　改名每步用同一个一一对应换名，下列由关系定义而追随一待者之读逐一检验都不变（不是对一切这样之读之一般定理）：恒（更新，`Becoming.Web.RenewingIn`）、竭（消耗）、剥（侵蚀）、结与解（依存之形成与消解）、依存之期、作（生起）与不息（`Becoming.Web.rename_tenure` 按定义成立，其余由每步之不变推出）。对码与描述也一样：不并之改名不改码所辨之义项，也不改描述是否载法——名自由，义项之分组与所载之法不自由。但这不说名之序无所载：改名保持名跨步之序，所以显不出这个序是否载物；一般之改认就显出：Turnover 只改“谁续谁”，每步之关系全同，一恒一竭者变为二竭而无恒，第一步之后无剥，一待者之依存一解一结，且每奇数步有物作，遂成不息，而其作不降低任何所待（`Becoming.Turnover.identified`、`Becoming.Turnover.reidentified`，构造之例）。讀（AI，D23）：标签不载关系，名跨步之序载同一。对照（相合，xunzi-ming-wu-gu-yi）：「名无固宜，约之以命，约定俗成谓之宜，异于约则谓之不宜。」〔RU2-S-XZ22〕（《荀子·正名》，战国末）：前半即改名不变；“宜”在使用者之间形成，见⟦十·十六⟧。又（定域，mojing-sha-gou-fei-sha-quan）：传本《經下》「狗，犬也，而殺狗非殺犬也，可，說在重。」〔MI1-S-JX〕与《經說下》「狗，狗，犬也，而殺狗謂之殺犬，可，若兩𦞙。」〔MI1-S-SX〕相反，诸家常改经文：若殺狗、殺犬是同一组关系上之读，改名之下必同；经文之“非”只在一个不由关系定义、随所用之名而变之谓词下成立。律不判墨家取哪一读。\n\n**證**　`Becoming.Web.rename_renewingIn`、`Becoming.Web.rename_consumingIn`、`Becoming.Web.rename_tenure`、`Becoming.Web.rename_undermining`、`Becoming.Web.rename_unceasing`、`Becoming.SharedCodes.renamed_tells_apart_iff`、`Becoming.SharedCodes.renamed_carries_iff`、`Becoming.Turnover.identified`、`Becoming.Turnover.reidentified`；记录 [identity-across-steps](../results/records/identity-across-steps.md)、[a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)。"
+   },
+   {
+    "id": "十·六",
+    "title": "正名",
+    "body": "**經**　正名，所并者皆同、凡同者皆并之名也。凡二正名，所并者同。以状自名为正名，恰当同之状本为一。确定之法下，一分保映射之值、载法、且并凡经映射之未来皆同者，为正名。\n\n**說**　正名（有意义的描述，description that makes sense）之关系判据在大化之篇（`Becoming.identifiesAlike_iff`）：所并者由一互模拟相连，凡同（相同，`Becoming.Alike`）者皆并；在系辞于同中确定之处，正名载一法（`Becoming.IdentifiesAlike.carries`）。本条加三件。其一，正名只差改名而唯一。其二，给每个状一个名并不就是正名：两个在每一关系上都相同之后继各起一名，就不按同而认（`Becoming.Twins.naming_not_identifiesAlike`，构造之例），以相等论之确定性于是依赖命名（`Becoming.Twins.alike_one`）。其三，在确定之法下，保映射之值而载法、并一切经映射之未来相同者之分，就是正名：理（对结构与变化之律的建模）所取之分在此有其精确之形。讀（AI，待编号）：正名不是名与物之间的对应，而是名之并与关系之同相合。对照（相合，xunzi-tong-ze-tong-zhi）：「同则同之，异则异之」〔RU2-S-XZ22〕，「故使异实者莫不异名也，不可乱也，犹使同实者莫不同名也」〔RU2-S-XZ22〕：同实同名、异实异名，正是正名之两半（`Becoming.identifiesAlike_iff`）。荀子以同异「缘天官」〔RU2-S-XZ22〕，是经感官所作之并；律以关系之同（互模拟）为判据，二者相合，在把荀子之框架取为天官所读者。又（相合，gongsunlong-ming-shi）：「其正者，正其所實也；正其所實者，正其名也。」〔MI1-S-G6〕（《公孫龍子·名實論》，篇章真伪与编纂层有争议）：名随所谓者之关系而正。\n\n**證**　`Becoming.IdentifiesAlike`、`Becoming.identifiesAlike_iff`、`Becoming.IdentifiesAlike.unique`、`Becoming.identifiesAlike_id_iff`、`Becoming.Twins.naming_not_identifiesAlike`、`Becoming.Law.identifiesAlike_of_law`；记录 [configurations-alike-by-relation](../results/records/configurations-alike-by-relation.md)、[the-split-that-makes-sense](../results/records/the-split-that-makes-sense.md)。"
+   },
+   {
+    "id": "十·七",
+    "title": "私名与达名",
+    "body": "**經**　私名，一步之内一名止於一物也；达名，无所辨之名也。凡改认，每步之新名皆私名。凡动随达名之类而同，恰当其处处同；凡动皆随以状自名之类而同；随一名之类而同者，亦随凡更细之名之类而同。达名於凡变皆载法；确定之法下，达名为正名，恰当凡状经映射之未来皆同。\n\n**說**　名表依墨经以三名为读之粗细：私名在一步之内一一（改认之新名即是）；类名按类（归并，lumping，`Becoming.Learning.Lumped`，见规律之篇）并之；达名什么都不分开。随类而同（新组合：随＋类＋而同，一值在一读之每类上只取一值）在此说一动经一读而成：经达名而成者只有处处相同之动，经以状自名之读则一切动皆成，读得愈细，经所读而成者不减。达名载法而不分开任何东西：载法不等于正名，达名只在凡状之后经映射全同之处才是正名（⟦十·六⟧）。讀（AI，待编号）：三名不分高下，是读之粗细。对照（相合，mojing-da-lei-si）：「臧，私也；是名也，止於是實也。」〔MI1-S-SS〕：私名止于一所谓者。又（相合，xunzi-da-gong-ming）：「物也者，大共名也。推而共之，共则有共，至于无共然后止。」〔RU2-S-XZ22〕：共名推到“物”即达名；「推而别之，别则有别，至于无别然后至」〔RU2-S-XZ22〕，在有穷而每步关系可定之列上，细化之链在其类数之内止（`Becoming.Refining.steady_within`）。\n\n**證**　`Becoming.Reidentify.new_injective`、`Becoming.lumped_const_iff`、`Becoming.lumped_id`、`Becoming.lumped_of_finer`、`Becoming.goAlike_const`、`Becoming.carries_law_iff`、`Becoming.Law.const_identifiesAlike_iff`；记录 [where-a-move-is-formed](../results/records/where-a-move-is-formed.md)、[projection-carrying-a-law](../results/records/projection-carrying-a-law.md)、[the-split-that-makes-sense](../results/records/the-split-that-makes-sense.md)。"
+   },
+   {
+    "id": "十·十",
+    "title": "贯",
+    "body": "**經**　贯，凡及一名之记录皆予一义项也。凡义项不贯於一名，恰当有一及此名之记录不予之。\n\n**說**　一待者在多次所遇中遇一名，每次之记录予其时可及之义项；哪些记录及此名、各予何义项，由两个布尔关系读出，对任何记录与义项之类型、任何及与予之读皆成立，无设（模块 CrossSituational）。贯是对所遇之全体说的，不由任何一次所遇给出；不贯之反驳则是局部的，一条记录即足，已不贯者，後之记录不能使之复贯（⟦十·十一⟧）。这与语境中之辞相连：带语境指标之系辞总合所显（`Becoming.Contextual.indexed_fits`，按定义），每辞皆在某语境之内时，无语境之系辞成立，恰当诸语境所显者在每状相粘（`Becoming.Contextual.fitsFree_iff`），即并行不悖（`Becoming.Contextual.glues_iff_agree`；大化之篇之两行）。名取「吾道一以貫之」〔RU1-S-LY〕，只取通贯诸情境之结构，单一原则中心之义不入。对照（相合，zhuangzi-shu-zhi-zheng-chu）：「三者孰知正處？」〔ZH1-S02〕：「正處」〔ZH1-S02〕在民、鰌、猨猴各自之记录上予不同义项，故不贯；带指标之“民之正處”合一切所显，王倪不说无处，只说无贯之正。又（相合，wangbi-he-bi-ma）：「義茍在健，何必馬乎？」〔YWH-LX〕（王弼《周易略例·明象》，曹魏）：「定馬於乾」〔YWH-LX〕是把一情境之配对当作贯之码，别卦之记录不予乾之义项，于是「有馬無乾」〔YWH-LX〕。\n\n**證**　`Becoming.CrossSituational.stands`、`Becoming.CrossSituational.stands_iff`、`Becoming.CrossSituational.stands_false_iff`、`Becoming.Contextual.indexed_fits`、`Becoming.Contextual.fitsFree_iff`；记录 [enacted-scene-binding](../results/records/enacted-scene-binding.md)、[claims-shown-in-context](../results/records/claims-shown-in-context.md)。"
+   },
+   {
+    "id": "十·十一",
+    "title": "通意",
+    "body": "**經**　通意，一名之候选唯余一义项也。凡义项表无重而义项之相等定然否：一名通意於一义项，恰当此义项在表中，凡及此名之记录皆予之，且表中他义项各有一及此名之记录不予之。後之记录唯减候选，所去者不复。所指在表中而凡及此名之记录皆予之，则唯一之候选即所指。\n\n**說**　候选是义项表中贯者（`Becoming.CrossSituational.candidates`）。通意就是分开：两个条件都是局部的，所指由每条记录予之，他义项各被一条记录排除。记录唯减：後之候选是前之候选中在新记录上仍贯者，不及此名之记录不改候选（`Becoming.CrossSituational.candidates_append`）。两个反例给出条件之界：义项表有重，则分开不等于通意（`Becoming.CrossSituational.Repeated.not_resolved`）；一条记录漏去所指，可以留下一个错的唯一候选（`Becoming.CrossSituational.Omitted.wrong_unique`），所以覆盖是唯一候选即所指之条件。对照（相合，mojing-tong-yi-hou-dui）：「通意後對」〔MI1-S-JX〕，其说云「若不問孰何謂，徑應以弗智，則過。」〔MI1-S-SX〕：问「孰，何謂也」〔MI1-S-SX〕取得一条新记录，候选减至唯一而后对；未通而答，是在通意之前作答。又（定域，xunzi-shi-bu-yu）：「实不喻，然后命，命不喻，然后期，期不喻，然后说，说不喻，然后辨。」〔RU2-S-XZ22〕：可读为逐次增加记录直至一义项成立；把命、期、说、辨读为同一种记录之累加，是 AI 之结构读法；荀子把辨说放在中心之势与刑不在之时，以外加在先，律不给出外加在先。\n\n**證**　`Becoming.CrossSituational.candidates_eq_iff`、`Becoming.CrossSituational.resolves_iff`、`Becoming.CrossSituational.narrows`、`Becoming.CrossSituational.resolved_is_target`、`Becoming.CrossSituational.Repeated.not_resolved`、`Becoming.CrossSituational.Omitted.wrong_unique`；记录 [enacted-scene-binding](../results/records/enacted-scene-binding.md)、[encounter-selection-and-revision](../results/records/encounter-selection-and-revision.md)。"
+   },
+   {
+    "id": "十·十二",
+    "title": "辨与喻",
+    "body": "**經**　辨，码不以一名予二义项也。喻，读者之码予一义项之名，正是所闻之名也。凡读者之码辨：读说者予某义项之名为此义项且唯此，恰当二码於此义项同名；读者以说者之名予他义项者，喻为他义项而不为此。码自喻其诸名，恰当其辨。\n\n**說**　辨（`Becoming.SharedCodes.TellsApart`）与喻（`Becoming.SharedCodes.ReadsAs`）都是关系：喻是读者之码与所闻之名之间的事，不是名自身之性。喻之律以读者之码辨为前提，不是其一边：码不辨时，在某一义项处仍可喻为此且唯此（只要无他义项与之同名）。二码不同名时，不是无所读，而是读成他义项。在听之行之每步亦然（`Becoming.SharedCodes.run_reads_iff`）。名表之“喻”只取晓、读出之义，不带譬喻义；“辨”与“别”分开。对照（相合，xunzi-zhi-ming-yong-li）：「名闻而实喻，名之用也。」〔RU2-S-XZ22〕。又（相合，mozi-mang-zhe-bai-hei）：「此譬猶盲者之與人同命白黑之名，而不能分其物也」〔MO1-S-C19〕（《墨子·非攻下》，战国墨家）：盲者之码与人相合，读人之名为其义项且唯此，喻无所缺；所缺在从物到义项之读，它并白物与黑物，经它之择分不开二者（`Becoming.Learning.selects_not_right_of_parted`）：共其名不等于能读其物。\n\n**證**　`Becoming.SharedCodes.TellsApart`、`Becoming.SharedCodes.ReadsAs`、`Becoming.SharedCodes.reads_iff`、`Becoming.SharedCodes.reads_other`、`Becoming.SharedCodes.self_reads_iff`、`Becoming.SharedCodes.run_reads_iff`；记录 [a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)。"
+   },
+   {
+    "id": "十·十三",
+    "title": "阙",
+    "body": "**經**　凡特征经一名读於一域：精确之读必使特征於此域随名之类而同；有截面者，有精确之读，恰当特征於此域随名之类而同。可靠之读，於名并域中特征相异之二状处必阙。随一名之类而同者，旁读他名，仍随其类而同。\n\n**說**　一读可阙（不出值，名表之“阙”），只在一域上判：可靠（sound）是凡所出之值皆是，精确（exact）是域中每处皆出其值。截面（section：名在域中所取之每值，各找回一个取此值之状）是所给之资料，所以存在之律不用选择。名并了特征值不同之状，经它便无精确之读，可靠之读只能阙；旁读第二名使映射更细，单名已足之处旁读之后仍足。处处阙是可靠的（`Becoming.PartialReadout.silent_sound`），在有状之域上不精确（`Becoming.PartialReadout.silent_not_exact`，平凡）。对照（相合，xunzi-zhi-ming-yong-li）：「单足以喻则单，单不足以喻则兼；单与兼无所相避则共；虽共不为害矣。」〔RU2-S-XZ22〕：荀子之兼名可读为更细之映射（讀）；律不保证某一兼名就足，兼名只在把单名所并而特征不同者分开之处才精确。又（相合，xici-yan-bu-jin-yi）：「书不尽言，言不尽意。」〔DS02〕（《易传·系辞上》，先秦至秦汉，年代有争议）：书与言并了意所分开者，就没有经由它们之精确读；读族本身又不尽（⟦十·八⟧）。\n\n**證**　`Becoming.PartialReadout.ExactWithin.lumped`、`Becoming.PartialReadout.exact_exists_iff`、`Becoming.PartialReadout.SoundWithin.silent`、`Becoming.PartialReadout.LumpedWithin.finer`；尚无结果记录。"
+   },
+   {
+    "id": "十·十四",
+    "title": "知名",
+    "body": "**經**　知名，自所示者读得其码也。於二原子以合与倍所成之式族：二原子之值有别者，自二原子与一合之探测读出之码即其码，於凡式与之同值，深无所限；於二原子之值有别诸码中，只读二原子之值，合之序不随其类而同，故无精确之读。\n\n**說**　CodeAcquisition 是一个所给的、有穷之律族：式由二原子以合与倍组成，码予每原子一值并定合之序；文法、探测、训练之程与每次所汲取皆是所给，不是导出的，它不定义认知或语言。三探测是二原子与一合：原子之探测读出原子之值，合之序要合之探测；缺合之探测之记录不得码（`Becoming.CodeAcquisition.missing_composite_no_code`，例子）。一律在三探测上相合、在别处都反其值，不为探测所排除，在新式上失之（`Becoming.CodeAcquisition.nonuniform_fails_transfer`）：偶合不是喻。原子与码一同改名，一切值不变（`Becoming.CodeAcquisition.renaming_keeps_values`），是名无固宜在此族中之例。训练是一变（`Becoming.CodeAcquisition.trainProcess`）。对照（相合，xunzi-zhi-ming-yong-li）：「累而成文，名之丽也。用丽俱得，谓之知名。」〔RU2-S-XZ22〕：讀（AI，待编号）：单名之用对应原子之探测，名相累成文之丽对应合之探测，二者俱得（且二原子之值有别）乃得码。\n\n**證**　`Becoming.CodeAcquisition.acquired_exact`、`Becoming.CodeAcquisition.acquired_every_expression`、`Becoming.CodeAcquisition.primitives_not_lumped`、`Becoming.CodeAcquisition.primitives_no_exact`；尚无结果记录。"
+   },
+   {
+    "id": "十·十五",
+    "title": "名与标签",
+    "body": "**經**　状之名，状经映射之未来前段也。凡确定之法，诸状有一表尽之，其长 N，映射之值相等定然否：一特征经映射可知，恰当有一标签表可学之，表不过 N 条，条各一名、长 N−1，与一标签。以表外推，自其预言之步起，特征所取之每值皆为表中某条之标签。\n\n**說**　状之名（`Becoming.Law.name`）是它自身起经映射之若干值，最近者在前。以表外推（`Becoming.Learnable.byTable`）：在自己的提议上展开以排除而外推者，取其所提之未来以之起首之第一条之标签；它不给诸状、其数与法，也不给表外之特征值，读多远就是名之长。表由每状一条组成：该状行 N 步之后之状，以其经映射之前 N−1 值为名（Moore 之界），以其特征为标签。映射亦载特征时，界前之标签定界后之一切（`Becoming.Learnable.ahead_with_labels`）。而在一切历程上，没有前段定下一值（`Becoming.Learning.no_prefix_fixes_next`，见识知之篇）：此处是一表尽一宇之局部条件。讀（AI，D40）：可学之特征加于前段者是一个有穷之物，至多 N 条带标签之名。对照（相合，mojing-yi-suo-ming）：「夫名以所明正所不智，不以所不智疑所明，若以尺度所不智長。」〔MI1-S-SX〕：其核定之结构是经归并之推广（推类，`Becoming.Learning.determines_lumped_iff`）；以标签表读之是 AI 之引申。\n\n**證**　`Becoming.Law.name`、`Becoming.Learnable.byTable`、`Becoming.Learnable.table_predicts`、`Becoming.Learnable.learnable_iff_table`、`Becoming.Learnable.label_of_predicts`；记录 [what-finitely-many-labels-fix](../results/records/what-finitely-many-labels-fix.md)。"
+   },
+   {
+    "id": "十·十六",
+    "title": "约定俗成",
+    "body": "**經**　约定俗成，码於诸待者之间以听而成也。凡听不造名：听後每待者於每义项之名，或其旧名，或说者之名。一群於一义项同名，凡於此义项之听，听者在群内则说者亦在群内，其同不改。诸待者於一义项皆同名，则凡後之听、凡取舍之规，皆不改之。\n\n**說**　听（hearing）：听者取说者予一义项之名，取与不取由一个读两码之规定（`Becoming.SharedCodes.hearBy`）；听是脊柱之一变（`Becoming.SharedCodes.process`），一段之行是一个听之序。码只因听而变：凡行中所持之名，起点时已在同一义项为某待者所持；一听改一名，恰在听者、所闻之义项、规取之而说者之名不同之处（`Becoming.SharedCodes.run_changes_iff`）。约定俗成已采为共享码之名（模块 SharedCodes）。讀（AI，D56）：约定俗成读为听之序破对称（⟦十·十八⟧）——名之宜在使用之历程中形成，不由物给，也不由中心给；把约定俗成读作听之序是 AI 之结构读法，荀子同篇以王者制名为主，约定从属于制名。诸律不说共享之码支持还是损害生生。对照（相合，mozi-bian-qi-xi）：「此所謂便其習而義其俗者也。」〔MO1-S-C25〕（《墨子·節葬下》）：俗一经全体同名即不再变，所以俗之稳定只说明它已是共享之码，不说明它于关系合宜。又（相合，zhuangzi-qiushui）：「以俗觀之，貴賤不在己。」〔ZH1-S17〕（《庄子·秋水》，外篇，年代有争议）：俗是已成之共享码，所达之名由起点与听之序定，不由被评者定；律也不在码上排序：延续之条件只定范围，排序唯在以广为愈。\n\n**證**　`Becoming.SharedCodes.hearBy_held`、`Becoming.SharedCodes.run_held`、`Becoming.SharedCodes.agreement_kept`、`Becoming.SharedCodes.kept_iff`、`Becoming.SharedCodes.all_agree_rest`；记录 [a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)。"
+   },
+   {
+    "id": "十·十七",
+    "title": "序定所成",
+    "body": "**經**　听皆取所闻之名者：每待者於一义项所得之名，乃起点时其源头之名；名有二异者，一听之序自凡起点皆使诸待者於此义项同名，恰当其使诸待者於此义项同一源头；有表尽诸待者，一序所能使共享之名，恰为起点已在用之名。\n\n**說**　源头（`Becoming.SharedCodes.origin`）是沿听之序倒推所达之待者。所以起点与听之序定所成之名，没有哪个名为序所偏：每一在用之名在某序下传遍（`Becoming.SharedCodes.broadcast_reaches`），二待者一听，二序各达二名之一（`Becoming.SharedCodes.TwoFormations.order_decides`）。指向之律下（每待者立取所指者之码），自凡起点在某步皆同，恰当所指之路自任二待者已会（`Becoming.SharedCodes.follow_agrees_iff`）；只经感（耦合，coupling）相连不足：在路 a—c—b 上各取自身与所感者中编号最小者之码，a、b 永不同（`Becoming.SharedCodes.Path.never_agree`），此否定先前论中国思想来源之章所列缺口中之一式（各取所感者中编号最小者之码，恰在凡感域皆为兼处同；D56 第五项）。未示：实际之交换取何序、诸序之概率、成同所需之时。对照（定域，simafa-jiao-cheng-su）：「人方有性，性州異，教成俗，俗州異，道化俗。」〔BI1-S-SM〕（《司马法·严位》，先秦，今本编纂层次未定）：「俗州異」〔BI1-S-SM〕与起点、序之异相合；「教成俗」〔BI1-S-SM〕「道化俗」〔BI1-S-SM〕近于外加（⟦十·二十⟧）；「性州異」〔BI1-S-SM〕带各地固定之禀赋，是固定本性一层，律只用起点之异。\n\n**證**　`Becoming.SharedCodes.run_origin`、`Becoming.SharedCodes.agrees_every_start_iff`、`Becoming.SharedCodes.run_agrees_every_start_iff`、`Becoming.SharedCodes.shared_iff_in_use`、`Becoming.SharedCodes.run_shared_iff_in_use`；记录 [a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)。"
+   },
+   {
+    "id": "十·十八",
+    "title": "同须破对称",
+    "body": "**經**　凡码之法，不偏其所互换之诸待者，亦不偏其所改之名，而此改名於一义项移其每名：自对称之起点，所互换之待者於此义项永不同名。於二待者之例，中心、所偏之名、听之序，各於一步成同；中心与序破待者之互换，所偏之名破改名。\n\n**說**　一法保一关系，则沿其行保之（`Becoming.Law.KeepsRelation.run`）；与一移动每状之映射交换之法，自一状与自其像起之二行，同步永不相合（`Becoming.Law.Commutes.apart`），要并对称所载之差，须破对称（规律之篇）。码之法是其一例：二待者各立取对方之名，永相换而不同（`Becoming.SharedCodes.TwoFormations.crossing_never_agrees`）。名无固宜在此成为：凡不偏名之听，起点只差一改名之二行，每步只差此改名（`Becoming.SharedCodes.run_renamed`）。中心保凡改名（`Becoming.SharedCodes.TwoFormations.centre_keeps_renaming`），所偏之名保待者之互换（`Becoming.SharedCodes.TwoFormations.preferred_keeps_exchange`）；三者是二待者模型中之见证，不是穷尽之列举。讀（AI，D56）：中心预先打破（荀子之王者制名），所偏之名以名之便打破，听之序以关系自身之历史打破（约定俗成）；律只说须破一对称，不说哪一种破为正。对照（定域，mozi-yi-ren-yi-yi）：「是以一人則一義，二人則二義，十人則十義。」〔MO1-S-C11〕（《墨子·尚同上》）：人各有其义而交相非，是对称之不同无所破；墨子之出路尚同只取中心一途，且外加之码使各人失其原码所辨（⟦十·二十⟧）。又（定域，xunzi-ming-you-gu-shan）：「名有固善，径易而不拂，谓之善名。」〔RU2-S-XZ22〕：偏好由所给之规提供，不是名自身之性，“固”超出律；「径易而不拂」〔RU2-S-XZ22〕是名与使用者之间之便，不是名对所谓者之正。\n\n**證**　`Becoming.SharedCodes.never_agrees_of_both`、`Becoming.SharedCodes.TwoFormations.three_agree`、`Becoming.SharedCodes.TwoFormations.centre_breaks_exchange`、`Becoming.SharedCodes.TwoFormations.ordered_breaks_exchange`、`Becoming.SharedCodes.TwoFormations.preferred_breaks_renaming`、`Becoming.Law.Commutes.breaks`；记录 [a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)、[what-a-commuting-law-keeps-apart](../results/records/what-a-commuting-law-keeps-apart.md)。"
+   },
+   {
+    "id": "十·十九",
+    "title": "同而失辨",
+    "body": "**經**　凡取所闻之名之一听，听者之码原辨者，听後仍辨，恰当所取之名非听者已予他义项之名。逐义项而成之同，可并诸义项。\n\n**說**　约定是逐个义项形成的，每一次听只及一个义项：听者取来之名若正是它已予另一义项之名，它的码就以一名予二义项。二码各辨二义项，一听另一於一义项之名，听者遂以一名予二义项（`Becoming.SharedCodes.TwoFormations.homonym`，例子）：成约可以使码失其所辨。讀（AI，D56）：「同则同之，异则异之」〔RU2-S-XZ22〕是改名所不能改者（⟦十·三⟧）；逐项形成之约定却可以并起先已分之义项。对照（定域，lunyu-ma-mian-bai-xia）：「麻冕，禮也；今也純，儉，吾從眾。拜下，禮也；今拜乎上，泰也。雖違眾，吾從下。」〔RU1-S-LY〕（《论语·子罕》）：麻冕改纯，“禮”所辨未变，只换其名（⟦十·三⟧）；拜下改上，可读为一辨在听中被并（讀（AI，待编号））；孔子一从一违，理由是对名之评价（儉、泰），律不给出；所守是君臣尊卑之分，是等级一层，律不支持其内容。\n\n**證**　`Becoming.SharedCodes.keeps_apart_iff`、`Becoming.SharedCodes.run_keeps_apart_iff`、`Becoming.SharedCodes.TwoFormations.homonym`；记录 [a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)。"
+   },
+   {
+    "id": "十·二十",
+    "title": "制名",
+    "body": "**經**　制名，以一码加於诸待者也。凡制名：诸待者於每义项同名，於凡义项皆相喻（喻为此且唯此），恰当所加之码辨；每待者恰失其原码所辨而所加之码所并者，其码即所加之码者无所失；此後凡听、凡规，皆不改之。所并之辨，群外之待者亦持所加之名者，永不复；自群外所存之异名，取之之一听即复。\n\n**說**　制名（外加码，`Becoming.SharedCodes.impose`）把每待者之码换为所加之码；同在每义项按定义成立，所失（`Becoming.SharedCodes.Loses`：原码分开二义项，而後予之同名）恰为原码所分而所加者所并，也按定义成立。一个在全体处於一义项都持之名，此后在一切听之序、一切规下不改（`Becoming.SharedCodes.held_stays`），所以所加之码与其所并沿此后一切听之行保持。在只经由听之模型中，听不造名（⟦十·十六⟧），没有造新名之一步。讀（AI，D56）：书同文是中心之码一时成为众人之码，其源无所失，余者失其原码所分而所加所并者，被加者之间此后之交换不能复之；所并之辨只从制名之外所存之名回来。名表之“制名”不带王者之中心，不含造新名。对照（定域，xunzi-wang-zhe-zhi-ming）：「故王者之制名，名定而实辨，道行而志通，则慎率民而一焉。」〔RU2-S-XZ22〕：「名定而实辨」〔RU2-S-XZ22〕只在所加之码本身辨所需义项之处成立；同篇「有作于新名」〔RU2-S-XZ22〕是造新名，律中无此步。相分（zhongyong-shu-tong-wen）：「非天子不議禮，不制度，不考文。今天下車同軌，書同文，行同倫。」〔RU1-S-ZY〕（《礼记·中庸》，秦汉，成书年代有争议）：把定码之权限于唯一中心，是意志或单一中心一层；律只给出制名之同与失，不给出谁可定码。\n\n**證**　`Becoming.SharedCodes.impose_agrees`、`Becoming.SharedCodes.impose_loses_iff`、`Becoming.SharedCodes.source_loses_nothing`、`Becoming.SharedCodes.run_from_imposition`、`Becoming.SharedCodes.run_imposed_stays`、`Becoming.SharedCodes.outside_needed`、`Becoming.SharedCodes.outside_returns`；记录 [a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)。"
+   },
+   {
+    "id": "十·二十一",
+    "title": "写回之读",
+    "body": "**經**　凡义项表无重而义项之相等定然否，每代读前代之记录，通意则唯写一只予所通义项之记录：自次代起记录不改，代代通於同一义项；通於同一义项之二史，次代即合，此後凡读皆不能分之。存前代之记录而合读後之记录者，唯通於原义项或不通；记录唯增者，所通可失而不可易。\n\n**說**　每一代以候选读前代之记录（`Becoming.SharedCodes.resolve`），写一条恰予所通义项之记录（`Becoming.SharedCodes.WritesExactly`、`Becoming.SharedCodes.nextCohort`）；不通则原样传下。写回是一个并（`Becoming.Law.merged_stays`）：通於同一义项之诸史从次代起是一个，所以後之任何读都读不回前此之异。有覆盖，止于所指（`Becoming.SharedCodes.covered_rest`）；前代之记录所通为他义项者，所指此后永不再为候选（`Becoming.SharedCodes.omitted_rest`）。存前代之记录者挡另一通意（`Becoming.SharedCodes.kept_bars`，由⟦十·十一⟧之候选唯减）；以新读取代旧记录写入，则旧义永不复为候选（`Becoming.SharedCodes.Gloss.taken_up_locks`，例子）。讀（AI，D56）：一个写回其自身证据之读即刻止而自证，唯存前之、有日期之记录挡之。对照（相合，shangjun-quan-shu）：「即後有物故，以券書從事。」〔FA1-S-SV5〕（《商君書·定分》，旧题商鞅；篇中有丞相、郡县与「比秦一法官」〔FA1-S-SV5〕之制，晚于商鞅，年代有争议）：所问法令之所谓写入券书而存，后有事以券为准——存前代之记录者挡他读；罪罚是维持之手段，律不涉。又（相合，hanfei-gu-xin-xiang-fan）：「利在故新相反，前後相勃」〔FA1-S-H43〕（《韓非子·定法》，战国末）：旧法未息、新法又生，两组记录合读，候选唯减，终无一义项在全部相关记录上成立。\n\n**證**　`Becoming.SharedCodes.written_rests`、`Becoming.SharedCodes.every_cohort_resolves`、`Becoming.SharedCodes.no_reading_recovers`、`Becoming.SharedCodes.kept_bars`、`Becoming.SharedCodes.added_never_replaced`；记录 [a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)。"
+   }
+  ],
+  "duizhao": "#### 对照\n\n- 「所以謂，名也。所謂，實也。名實耦，合也。」〔MI1-S-SS〕——相合：名是读予所谓者之值，二者配对即合；名不载所谓者之关系（mojing-da-lei-si）。\n- 「名无固宜，约之以命，约定俗成谓之宜，异于约则谓之不宜。」〔RU2-S-XZ22〕——相合：不并之改名不改所辨与载法；宜是共享之码，由听之序破对称而成（xunzi-ming-wu-gu-yi）。\n- 「状变而实无别而为异者，谓之化。有化而无别，谓之一实。」〔RU2-S-XZ22〕——定域：跨步之同一在相续给定处由相续读出，在宇衡而无他物同水平处由守恒定，余处由名之序给出（xunzi-hua-yi-shi）。\n- 「通意後對」〔MI1-S-JX〕——相合：记录唯减候选，唯余一义项乃通意，通而后对（mojing-tong-yi-hou-dui）。\n- 「名可名，非常名」〔YD-LAO-BASE〕——相合：以所读者为索引之读族必缺一读，补之复缺，不立名外之本原（lao-01-ming-ke-ming）。\n- 「故王者之制名，名定而实辨，道行而志通，则慎率民而一焉。」〔RU2-S-XZ22〕——定域：制名使诸待者同名，於凡义项皆相喻恰当所加之码辨，每待者失其原码所辨而所加所并者（xunzi-wang-zhe-zhi-ming）。\n- 「非天子不議禮，不制度，不考文。今天下車同軌，書同文，行同倫。」〔RU1-S-ZY〕——相分：定码之权归于唯一中心；律只给制名之同与失，不给谁可定码（zhongyong-shu-tong-wen）。\n- 「故知者为之分别制名以指实，上以明贵贱，下以辨同异。」〔RU2-S-XZ22〕——相分：辨同异与正名相合，明贵贱在名上加等级一层，律不作（xunzi-zhi-ming-gui-jian）。"
+ },
+ "edits": [
+  {
+   "target": "C09",
+   "instruction": "篇十篇首改为：「本篇论名：名、所谓、类与约定在一展开中是什么。名不是另立之物，而是读予所读者之值：宇以名标其诸物，描述以名并其诸状，码以名予其诸义项。先说名在大化中之位：每步之关系不随名而改（改认与重同见十·二），名本身不载关系（名无固宜）；次说名与同：正名之律（正名见一·十五），私名与达名之粗细；再说一待者怎样读名：义项跨诸记录而贯，记录唯减候选而通意，读者之码辨而二码相合则喻为此且唯此，旁读他名，码由探测而知，有穷之标签表定可知之特征；最后说名怎样在诸待者之间形成：听不造名，序定所成，同名须破对称，同名可失辨，制名之同与失，记录写回而止。跨步之同一之律、读族不尽其所读、以名读辞与阙，各见三·十五、九·二十、七·十四、九·十九。本篇诸律皆无设而然，每条只在写入其中之局部条件（义项表无重、有表尽诸待者、读者之码辨、有选取、所给之式族……）下，对每个如此表示之宇成立；码之共享、外加与写回是否支持或损害生生，诸律不言。延续之条件（凡续皆有顾，十五·十六）陈述而不断言，本篇不用；它只定范围，本身不排序，诸程孰愈唯在以广为愈（十六·六）。本篇承篇一之状、读与正名，篇三之改认与续，篇七之类，篇九之读与可知，下接篇十一。」另：本篇各經中「於」改「于」，「後」改「后」，「說」改「说」（引文除外，C88、O38 之二）。"
+  },
+  {
+   "target": "十·一",
+   "instruction": "經末加：「码，予诸义项以名者也；义项，一名所可指之一义也；听，听者取说者于一义项之名也；记录，一次用名所予之义项也。」（O24）「状之名，读予状之值」后加「（前段之名为其一种，十·十五）」（C8）。名表 C09 增码、义项、听、记录。"
+  },
+  {
+   "target": "十·三",
+   "instruction": "經首加自十·二移来之句：「凡改认，每所待之恒持、终不足、绝而终不足皆不改。」經中「码之所辨」改为「码之所辨（辨见十·十二）」（辨定于十·十二，C90 之指向）。"
+  },
+  {
+   "target": "十·六",
+   "instruction": "經删首句之定义「正名，所并者皆同、凡同者皆并之名也。」（正名定于一·十五，O29），改以「正名（一·十五）之律：」起，其后「凡二正名，所并者同……为正名。」不改。本條为七·十二末句之留者；證加 `Becoming.Law.identifiesAlike_of_law`（自七·十二，已有则不重列）。"
+  },
+  {
+   "target": "十·七",
+   "instruction": "經删「凡动随达名之类而同，恰当其处处同；」与「随一名之类而同者，亦随凡更细之名之类而同」（留七·十一，C64），說注见七·十一。證之 `Becoming.lumped_const_iff`、`Becoming.lumped_of_finer` 删。"
+  },
+  {
+   "target": "十·十三",
+   "instruction": "题改「旁读他名」。經改为「随一名之类而同者，旁读他名，仍随其类而同。」删与九·十九重出之句（C73），說注：以名读特征之阙见九·十九。「精确」改「确切」，「截面」改「选取」。證之 `Becoming.PartialReadout.*` 归九·十九。"
+  },
+  {
+   "target": "十·十四",
+   "instruction": "經「故无精确之读」改「故无确切之读」（C73）；「二原子之值有别者」「二原子之值有别诸码」之「有别」改「有异」（别只名十五·十四）。"
+  },
+  {
+   "target": "十·十五",
+   "instruction": "經首句改为「前段之名，以状经映射之未来前段为状之名也。」下文「条各一名」改「条各一前段之名」（C8）。"
+  },
+  {
+   "target": "十·十六",
+   "instruction": "經「一群於一义项同名，凡於此义项之听，听者在群内则说者亦在群内」改为「一组待者于一义项同名，凡于此义项之听，听者在组内则说者亦在组内」（群只名十四·一，此是任意一组待者）。"
+  },
+  {
+   "target": "十·十八",
+   "instruction": "题改「同名须破对称」（同只名互模拟，C18）。"
+  },
+  {
+   "target": "十·十九",
+   "instruction": "题改「同名而失辨」（C18）。"
+  },
+  {
+   "target": "十·二十",
+   "instruction": "經「其码即所加之码者无所失」改为「其码即所加之码者无所遗」（所失只名十二·五）；「群外之待者」「自群外所存之异名」改为「组外之待者」「自组外所存之异名」（群只名十四·一）。"
+  }
+ ],
+ "added": [],
+ "duizhao_issues": []
+}

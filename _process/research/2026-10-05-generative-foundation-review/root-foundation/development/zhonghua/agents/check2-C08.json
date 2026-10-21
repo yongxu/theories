@@ -1,0 +1,352 @@
+{
+ "cluster": "C08",
+ "corrections": [
+  {
+   "id": "xiaoxiang-lv-shuang",
+   "status": "revised",
+   "record_ids": [
+    "TP-H02-X1-R01"
+   ],
+   "source_id": "YD-JP02",
+   "layer": "传·战国至秦汉（易传，年代有争议）",
+   "fragments": [
+    "履霜堅冰，陰始凝也",
+    "馴致其道，至堅冰也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.wane_six",
+    "Becoming.Hexagram.wane_drawn",
+    "Becoming.Hexagram.waxWane_returns",
+    "Becoming.Learning.no_prefix_fixes_next"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "learning-by-refutation"
+   ],
+   "reading": "AI读法：「陰始凝」是只入阴爻之律的第一步，「馴致其道」是历程循此律而行。脊柱上这只是一个构造模型中的见证，不是一般律：在 Becoming.Hexagram 的 wane 律下（每步各爻上移一位，顶爻出，底部入一阴爻），除全阴（坤）外每一卦都被引入全阴（wane_drawn），第六步时一切卦都是全阴（wane_six）。由霜知冰，靠的是律已经给出（馴致其道）；不设律时，没有前缀能固定下一值（no_prefix_fixes_next，一般律）。小象只说「至」，不说坚冰长存：在消息之律（waxWane）下每一卦都返回（waxWane_returns，同一模型中的见证），坤不是吸收态。坚冰是否长存取决于律，不取决于卦（沿用 Y1 lishuang 之读）。",
+   "names_used": []
+  },
+  {
+   "id": "xici-jian-ze-ni-xing",
+   "status": "revised",
+   "record_ids": [
+    "WP-XCS-C08-S01-R01"
+   ],
+   "source_id": "DS02",
+   "layer": "传·战国至秦汉（易传，年代有争议）",
+   "fragments": [
+    "圣人有以见天下之赜，而拟诸其形容，象其物宜，是故谓之象"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.goAlike_iff_lumped",
+    "Becoming.Readout.futures_through_iff",
+    "Becoming.Hexagram.pairs_goAlike",
+    "Becoming.Hexagram.yang_not_goAlike"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "derived-history-law-exactness",
+    "hexagrams-on-the-spine"
+   ],
+   "reading": "AI读法：「拟诸其形容，象其物宜」：象是把繁赜之物映射到少数形容上的模型，映射合在一起的就是一类。传文不设条件地说象合于物宜，脊柱给出它的确切范围。确定律下，一个归并随律同行，恰在律的下一步经它读出时在它所合之处都相同（goAlike_iff_lumped）；一般过程中，归约承载未来，恰在它只合并未来相同的构形处（futures_through_iff）。这两条是一般律。卦上另有两个构造模型中的见证：消息之律下，互补的卦对是同行的归并（pairs_goAlike），阳爻之数不是（yang_not_goAlike：泰、否各三阳，下一步分别变为四阳与二阳）。所以象合物宜只在它所合者同行之处；合并了不同行者，象就失其宜。",
+   "names_used": [
+    "象",
+    "类"
+   ]
+  },
+  {
+   "id": "xici-shu-bu-jin-yan",
+   "status": "revised",
+   "record_ids": [
+    "WP-XCS-C12-S02-R01"
+   ],
+   "source_id": "DS02",
+   "layer": "传·战国至秦汉（易传，年代有争议）",
+   "fragments": [
+    "书不尽言，言不尽意"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Readout.no_judge_of_merged",
+    "Becoming.Readout.judges_iff_lumpedOn",
+    "Becoming.PartialReadout.SoundWithin.silent"
+   ],
+   "records": [
+    "risk-certificate-outcome-distinction"
+   ],
+   "reading": "AI读法：书是言的归约，言是意的归约。传文说「不尽」而不设条件，脊柱给出确切范围。对一个列出的族，只读归约值的判定存在，恰在可观之差在归约所合之处相同（judges_iff_lumpedOn）；归约合并了两个可观有别的成员时，没有判定（no_judge_of_merged），可靠的读出在该处只能阙（SoundWithin.silent）。所以书不尽言、言不尽意，恰在书合并了不同之言、言合并了不同之意的地方；归约不合并所读之差时，可以尽。下文「立象以尽意」受同一界限：象也是归约，只在不合并意之差处尽意。（PartialReadout 尚无结果记录，所引记录只承载前两条。）",
+   "names_used": [
+    "阙"
+   ]
+  },
+  {
+   "id": "lunyu-wen-gu-zhi-xin",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-02-11-R01"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "经·先秦（论语，春秋末至战国）",
+   "fragments": [
+    "溫故而知新，可以為師矣"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.determines_lumped_iff",
+    "Becoming.Learning.no_prefix_fixes_next"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "learning-by-refutation"
+   ],
+   "reading": "AI读法：这里取「由故而得新」一读；另有「既温故又知新」一读，那一读不是推出。故是往（已有的记录），新是未见之点。脊柱：在随类而同的函数之中，给定两个不同的值，有限之往恰在某个已见之点与新点同类时固定新点的值（determines_lumped_iff，前提是所知者随该类而同）；不设类时，没有前缀能固定下一值（no_prefix_fixes_next）。所以「温故而知新」恰在新与故同类、且所知者随类而同之处成立；其余的新，故给不出。",
+   "names_used": [
+    "往",
+    "类"
+   ]
+  },
+  {
+   "id": "lunyu-song-shi-san-bai",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-13-05-R01"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "经·先秦（论语，春秋末至战国）",
+   "fragments": [
+    "誦詩三百，授之以政，不達"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.Training.unselected_beyond_data",
+    "Becoming.Learning.Training.fit_right_iff"
+   ],
+   "records": [
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：诵诗三百是数据之多，授之以政是数据外的新点，「不達」就是数据多而达不到新点。脊柱（一般律，前提是类在该点于数据外自由）：在这样的类中，经数据所作的选取（习）在新点上留下与类同样的自由：对每个被选者，类中任一成员在新点上的值，都有一个与被选者在数据上一致、也被选中的成员取到（unselected_beyond_data）。fit_right_iff 只是「决定」之定义的改写，不是另一条律：拟合在数据外处处正确，就是类由数据决定该点。所以数据再多，只要政事这一点上的类不由所诵者决定，习就不达。",
+   "names_used": [
+    "习"
+   ]
+  },
+  {
+   "id": "wangyangming-zhi-xing",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0211",
+    "RU2-R0212"
+   ],
+   "source_id": "RU2-S-S10",
+   "layer": "论·宋明（王守仁，明）",
+   "fragments": [
+    "知是行的主意，行是知的功夫；知是行之始，行是知之成"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Run.fixes_of_takes",
+    "Becoming.Run.not_fixes_of_untaken",
+    "Becoming.Run.generalizes"
+   ],
+   "records": [
+    "experiment-needs-return",
+    "causal-models-as-processes"
+   ],
+   "reading": "AI读法：沿用 RO 之读，但只取「行是知之成」这一半，所知者是一个行动之所为。脊柱：运行采取了的动作，其结果被记录固定（fixes_of_takes）；在确定过程中，未采取的动作无论读到多少，记录都不固定其结果（not_fixes_of_untaken）。有所给的相若（步骤经投影因子化为确定过程）时，一次的结果代表同类的每个构形（generalizes），但类中仍须有一次之行。所以由记录而来的知，以行而成。「知是行的主意」「知是行之始」说的是知引导并开始行，这些律不给出。同条上下文以知行为「本体」、以私欲为隔断（「不是知行的本体了」），并以孝弟为例：这是本体层，也是德行之知，脊柱都不携带。",
+   "names_used": [
+    "相若"
+   ],
+   "ro_passage": "ru-wangyangming-zhi-xing-he-yi"
+  },
+  {
+   "id": "zhuang-hao-shang",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C17-R-16"
+   ],
+   "source_id": "ZH1-S17",
+   "layer": "论·战国至汉（庄子外杂篇，年代有争议）",
+   "fragments": [
+    "我知之濠上也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.apart_only_downstream",
+    "Becoming.route_forms_by_closing"
+   ],
+   "records": [
+    "observation-is-a-route"
+   ],
+   "reading": "AI读法：惠子「子非魚，安知魚之樂」把同一当作知的条件。庄子「循其本」，把「安知」转成「从何处知」，答以濠上；前文「鯈魚出游從容，是魚樂也」给出这条路线：从鱼之游到观者。脊柱：闻见是从所观者出发的读法之路线。两个只在一处有别的历程，凡不在其下游之处都相同（apart_only_downstream）；路线在某一步经该步作用的耦合而成（route_forms_by_closing）。所以知的条件是处在路线的下游，而不是与所知者同一，这与庄子之答同构。界限有三：此律只给必要条件；濠上的路线是否带到「乐」之差，律不给出；庄子之答借「安」的两种训释，是语用上的重释，不是证明。",
+   "names_used": [
+    "闻见"
+   ]
+  },
+  {
+   "id": "mozi-luan-suo-zi-qi",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C14-R001"
+   ],
+   "source_id": "MO1-S-C14",
+   "layer": "论·先秦（墨子，战国）",
+   "fragments": [
+    "必知亂之所自起，焉能治之；不知亂之所自起，則不能治"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Run.not_fixes_of_untaken",
+    "Becoming.Run.generalizes",
+    "Becoming.carries_law_iff",
+    "Becoming.goAlike_const"
+   ],
+   "records": [
+    "experiment-needs-return",
+    "projection-carrying-a-law",
+    "causal-models-as-processes"
+   ],
+   "reading": "AI读法：治乱如医攻疾，是尚未采取的干预；知乱之所自起，是知道乱随什么而变。脊柱：在确定过程中，未采取之动作的结果不被记录固定（not_fixes_of_untaken）。投影承载律，恰在其下相同者同行之处（carries_law_iff）；步骤经它因子化为确定过程时，一次所固定的结果代表同类的每个构形（generalizes）。不区分任何东西的描述也承载律（goAlike_const），所以「所自起」不是随便哪个承载律的投影，而是能区分出干预结果有别之处的那一个（理）。墨子的必要条件因此在于「知干预之所为」：没有这个理，干预的结果不被固定。余下之处：脊柱不说无此知则干预必不成；不知而偶中仍可能治，只是不能先知其治。",
+   "names_used": [
+    "理"
+   ]
+  },
+  {
+   "id": "mozi-gu-chang",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C25-R002"
+   ],
+   "source_id": "MO1-S-C25",
+   "layer": "论·先秦（墨子，战国）",
+   "fragments": [
+    "然則姑嘗傅而為政乎國家萬民而觀之"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Run.fixes_of_takes",
+    "Becoming.Run.fixes_on_return",
+    "Becoming.Run.not_fixes_other_of_new",
+    "Becoming.Run.generalizes",
+    "Becoming.Confound.varied_refutes"
+   ],
+   "records": [
+    "experiment-needs-return"
+   ],
+   "reading": "AI读法：两派「言則相非，行即相反」，墨子提出把它们施于国家万民之政而观其效，以此断二说。脊柱：所采取的动作，在其构形处的结果被记录固定（fixes_of_takes）。另一动作（相反之政）在同一构形处的结果，只在构形返回、并在那里采取该动作时才被固定（fixes_on_return）；从不返回的运行，除所采取者外不固定任何动作（not_fixes_other_of_new）。一次的结果要代表同类的每个构形，须有所给的相若（步骤经投影因子化为确定过程，generalizes）。Confound.varied_refutes 是一个构造模型中的见证：动作与被略去者同步时，错误的相若永不被排除，动作有所变动才排除它。所以「姑嘗傅而為政乎國家萬民而觀之」能断二说，恰在构形返回且动作改变之处，或有相若之处；一国只行一政而不返回时，记录定不了另一政之所为。篇中下文实际是「計」三利（富貧、衆寡、定危、治亂），即用模型推算其果，不是已施之试。三利作为评价之准不进入这一结构，理论中的次序只在以广为愈。",
+   "names_used": [
+    "试",
+    "相若",
+    "以广为愈"
+   ]
+  },
+  {
+   "id": "mojing-yi-suo-ming",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-SX-known"
+   ],
+   "source_id": "MI1-S-SX",
+   "layer": "论·先秦（墨经，战国后期）",
+   "fragments": [
+    "夫名以所明正所不智，不以所不智疑所明，若以尺度所不智長"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.determines_lumped_iff",
+    "Becoming.Learning.lumped_right_iff"
+   ],
+   "records": [
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：经说下此段的情形是：室外之物的颜色亲知为白，有人说「在室者之色若是其色」，于是知道室中之物也是白的。「若」把未知者与已知者归为一类，名以所明正所不智；尺度也是这样，以已知的刻度正未知之长。脊柱：在随类而同的函数之中，有限数据恰在某个已见之点与新点同类时固定新点的值（determines_lumped_iff）；这一传递是否正确，恰看世界在两者上是否确实取同一个值（lumped_right_iff）。所以以所明正所不智，限于同类之处，对错取决于「若」是否属实。「不以所不智疑所明」不由这两条律给出。",
+   "names_used": [
+    "类"
+   ]
+  },
+  {
+   "id": "wuzi-mei-bian-jie-xi",
+   "status": "revised",
+   "record_ids": [
+    "BI1-WZ-R-15"
+   ],
+   "source_id": "BI1-S-WZ",
+   "layer": "论·先秦（吴子，战国，今本有改订之争议）",
+   "fragments": [
+    "每變皆習，乃授其兵"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.Training.fit_right_iff",
+    "Becoming.Learning.Training.unselected_beyond_data"
+   ],
+   "records": [
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：吴子要求每一种变化（圆方、坐起、行止等）都经过习，才授兵。脊柱：数据中的点，凡与数据一致的拟合都对（平凡）。对数据外的一点，拟合处处正确，恰在类由数据决定该点之时（fit_right_iff，这只是「决定」之定义的改写）；类在该点于数据外自由时，经数据所作的选取留下同样的自由（unselected_beyond_data）。所以「每變皆習」这一要求，恰在类不能由已习之变决定未习之变的地方成立；类能由已习者决定的变，不必逐一去习。吴子的列举有限，未列出的变仍在数据之外。",
+   "names_used": [
+    "习",
+    "类"
+   ]
+  },
+  {
+   "id": "hanfei-shi-zhi-guan-zhi",
+   "status": "revised",
+   "record_ids": [
+    "FA1-H50-R008"
+   ],
+   "source_id": "FA1-S-H50",
+   "layer": "论·先秦（韩非子，战国末）",
+   "fragments": [
+    "觀容服，聽辭言，仲尼不能以必士；試之官職，課其功伐，則庸人不疑於愚智"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Readout.no_judge_of_merged",
+    "Becoming.Readout.judges_iff_lumpedOn",
+    "Becoming.Run.fixes_of_takes",
+    "Becoming.Run.generalizes",
+    "Becoming.carries_law_iff"
+   ],
+   "records": [
+    "risk-certificate-outcome-distinction",
+    "experiment-needs-return",
+    "projection-carrying-a-law"
+   ],
+   "reading": "AI读法：观容服、听辞言，是经过归约去读人；试之官职、课其功伐，是让人去行并记下其果。脊柱：只读归约值的判定存在，恰在可观之差在归约所合之处相同（judges_iff_lumpedOn）；容言合并了能力有别之人时，没有判定（no_judge_of_merged），所以「仲尼不能以必士」恰在这种情形成立。试之于官时，所采取之动作在该构形处的结果被记录固定（fixes_of_takes）。由此推到其人在别的职位、别的时候的「愚智」，须其功经某一投影因子化为确定过程（generalizes），而投影承载律恰在其下相同者同行之处（carries_law_iff）。所以「不疑於愚智」只在功随所试之类同行时成立，不是无误的保证；把愚智读作人的固定本性，脊柱不携带。",
+   "names_used": [
+    "试"
+   ]
+  },
+  {
+   "id": "shangjun-gu-xi",
+   "status": "revised",
+   "record_ids": [
+    "FA1-S01-R005"
+   ],
+   "source_id": "FA1-S-SV1",
+   "layer": "论·先秦（商君书，战国，成书有争议）",
+   "fragments": [
+    "夫常人安於故習，學者溺於所聞。此兩者所以居官守法，非所與論於法之外也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Learning.Training.unselected_beyond_data",
+    "Becoming.Learning.Training.fit_right_iff"
+   ],
+   "records": [
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：公孙鞅以「常人安於故習，學者溺於所聞」为由，把这两类人定为「居官守法」者，排除在「論於法之外」之外。可取的结构是：由故习、所闻（数据）而成的拟合，在数据之外只在类决定之处正确（fit_right_iff，「决定」之定义的改写）；类在该处自由时，经数据所作的选取留下同样的自由（unselected_beyond_data）。但此句把这一有条件的界限写成两类人固定的所限，并据此分派谁守法、谁论法（下文「知者作法，而愚者制焉」），而且出自廷争中驳斥论敌之辞（「子之所言，世俗之言也」）。这是等级与争胜之层，又把脊柱只在条件下给出的东西（类在法外自由）断言为某类人的定分。脊柱中，这一界限属于类与数据，不属于人的品类，对作法的「知者」同样成立。故判为相分。",
+   "names_used": [
+    "习",
+    "类"
+   ]
+  }
+ ],
+ "drops": [],
+ "passed": [
+  "lunyu-xue-er-bu-si"
+ ],
+ "notes": "我对14条全部做了检查：14条的原文片段都用 ctq.py 在对应源文中精确核实；所有引用的声明都用 resolve.py 解析，并在 Lean 文件中读过；所有记录在 records/ 下都存在。读法中新引的上下文语句也都核实过：立象以尽意、在室者之色若是其色、鯈魚出游從容，是魚樂也、不是知行的本体了、知者作法，而愚者制焉、子之所言，世俗之言也、言則相非，行即相反、三利（富貧、衆寡、定危、治亂）。只有 lunyu-xue-er-bu-si 原样通过。其余13条已修订，没有删除。\n\n发现的问题如下。\n\n1. 名不在名表中。xici-shu-bu-jin-yan 用了「默」，名表中原拟的「默」已改为「闕」（沉默，PartialReadout.silent_sound）。zhuang-hao-shang 用了「闻」，名表只有「聞見」（观察：读法之路线）。mozi-gu-chang 列了「验」（检验，Web.Excludes），读法并未用到这一概念，已换为「试」「相若」。\n\n2. 构造模型中的见证被当作一般律引用，没有说明。涉及 Hexagram.wane_drawn、Hexagram.pairs_goAlike、Confound.varied_refutes。另外 Learning.Training.fit_right_iff 只是 Determines 定义的改写（参数对调），凡引它的读法都已注明。\n\n3. 引用了不相干的声明：\n   - xiaoxiang-lv-shuang 引的 Law.alike_iff_sameFuture 讲的是互模拟与同未来，不讲由初兆知终局；同条的 DrawnInto.never_back 讲不回返，小象并未主张，脉络在此关系条下也注明「不由霜冰譬喻推出任何社会恶化都不可逆」。已改为 wane_six、wane_drawn、waxWane_returns（皆模型见证）和一般律 no_prefix_fixes_next，并补入「馴致其道，至堅冰也」作为条件句片段。\n   - wangyangming-zhi-xing 引的 no_prefix_fixes_next 和 varied_refutes 读法中都没有用到。\n   - mojing-yi-suo-ming 引的 Run.fixes_of_takes 不对题：此段讲说知（经「若」而传），不是实验。已换为 lumped_right_iff。\n\n4. 片段被归给了它没有说的话。xici-jian-ze-ni-xing 的读法写「传文以象尽物宜」，但「尽」出自另一句「立象以尽意」；该读法还把繫辭下的 Y1 xiang 条当作此句的出处。\n\n5. 种类有改动：\n   - xici-shu-bu-jin-yan、wuzi-mei-bian-jie-xi、hanfei-shi-zhi-guan-zhi、mozi-gu-chang 由相合改为定域。这些原文都有全称形式（不尽；必须每变皆习；不疑；试而观之即可断两说），而脊柱给出确切范围（judges_iff_lumpedOn；fit_right_iff；生效须因子化；须返回或有相若）。脉络本身也说「不接受原文不疑为现代无误差保证」，并说节葬篇是「篇内提出的检验方法」，篇中实际做的是「計」。\n   - shangjun-gu-xi 由相合改为相分：此句把有条件的界限写成两类人的定分，并按人分派守法与论法，又是驳论敌之辞，属等级与争胜层。脉络称之为「论变资格的排除机制」「是论敌评价」。\n\n6. 其他：\n   - Run.other_move_fixed_of_return 只出现在 Experiment 模块的文档字符串中，并不是声明，所以改引 Run.fixes_on_return。\n   - PartialReadout.SoundWithin.silent 存在，但没有任何结果记录承载它。\n   - mozi-luan-suo-zi-qi 原读法写「知所自起即找到能携带律之投影」，这不够：goAlike_const 表明不区分任何东西的描述也承载律，所以已补上「须区分出干预结果有别之处」。\n   - wangyangming-zhi-xing 只有「行是知之成」一半有律对应；「知是行的主意／之始」以及上下文的「知行的本体」不被携带，已在读法中写明。"
+}

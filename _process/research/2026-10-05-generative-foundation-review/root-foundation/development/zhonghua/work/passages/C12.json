@@ -1,0 +1,1504 @@
+{
+ "cluster": "C12",
+ "entries": [
+  {
+   "id": "yi-gu-gan-fu-zhi-gu",
+   "status": "revised",
+   "record_ids": [
+    "JG2-H18-L1-R01",
+    "JF-R052"
+   ],
+   "source_id": "YD-JG18",
+   "layer": "先秦；经（周易·蛊卦爻辞，约西周，成书有争议）；读法参宋明之注（程颐《伊川易传》）",
+   "fragments": [
+    "幹父之蠱，有子考，无咎，厲終吉。",
+    "裕父之蠱，往見吝。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Gated.kept_along",
+    "Becoming.Gated.change_located",
+    "Becoming.Law.perturbation_reabsorbed",
+    "Becoming.RuleHandoff.changed_rule_requires_adoption",
+    "Becoming.RuleHandoff.successor_can_revise_inherited_rule"
+   ],
+   "records": [
+    "organizational-rule-inheritance",
+    "target-capture"
+   ],
+   "reading": "AI读法：程颐释此卦「蠱之義壊亂也」：前辈留下之事坏了，「幹」之则「厲終吉」，宽缓照旧地「裕」之则「往見吝」。脊柱不给世系上的律，只给这两句的确切范围，且对每个过程都为真：一个量若每个非关卡之动都不改它，则沿全由非关卡之动接起的历程它不改（Gated.kept_along）；值之相等可判定之处，凡改此量之历程，都可拆为不改它的前段、一个改它的关卡步，及其后（Gated.change_located）。若把「裕」读为只走非关卡之动、把「幹」读为过关卡之步（AI读法），则「裕」不改所接下之坏，改只在「幹」那一步。下一构形只看规则、不看状态之处，只扰动状态在下一步就复归（Law.perturbation_reabsorbed）：只动状态而不动规则，坏照旧回来。在所述之协议中，规则之改只在一次采纳之步（RuleHandoff.changed_rule_requires_adoption，逐个检查协议之步即得），后任可以改所接下之规则（RuleHandoff.successor_can_revise_inherited_rule，一个有限构造中以 decide 所得之见证，不是一般律），其采纳要在场者之实际赞同（协议之票）。六四程注「以隂柔而无應助徃安能濟」可读为改所需之助（AI读法）；此「助」是协议中之赞同，不是名表之容（水平满足所需）。关卡之律不言过关卡之步必改什么，也不言改向好；吉凶之辞不映射。所接下的是规则，不是依存之所需，所以此条不涉及传（Flow.TransmitsWithin）。",
+   "names_used": [
+    "动",
+    "步",
+    "复归",
+    "容",
+    "传"
+   ],
+   "relational": "所接下之规则只在关卡步被改；改须在场者之赞同",
+   "tradition": "共享经典（易）",
+   "work": "周易·蛊",
+   "locator": "蛊 初六、六四；程颐注见 YD-CY2",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "yi-xugua-fufu-fuzi",
+   "status": "revised",
+   "record_ids": [
+    "WP-XG-C02-S01-R04",
+    "WP-XG-C02-S01-R03"
+   ],
+   "source_id": "YD-OW-XG",
+   "layer": "先秦至汉初；传（序卦，成书年代有争议）",
+   "fragments": [
+    "有男女然後有夫婦，",
+    "有夫婦然後有父子，"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.DescendsAt",
+    "Becoming.Flow.descends_of_comes",
+    "Becoming.TwoGivers.twofold",
+    "Becoming.Flow.TransmitsWithin.fromSome",
+    "Becoming.Flow.fromSome_supported"
+   ],
+   "records": [
+    "evolution-on-descent",
+    "transmission-is-inheritance-and-need",
+    "living-on-and-descent"
+   ],
+   "reading": "AI读法：序卦以「有夫婦然後有父子」把父子排在夫妇之后：关系由关系而有。脊柱之世系由给予界定：g 在此步在场且给予 x、x 在此步聚（开始作为条件而在），则 x 出于 g（所出，Flow.DescendsAt）；在平衡之处，凡聚者都出于某个在此步给予它的在场者（Flow.descends_of_comes），一个给予者即够。两个给予者只是一种情形：TwoGivers.twofold 是一个有限构造中之见证，一子在同一步出于两个给予者，依一个池，二给予者一依池、一不依；二给予者之间除同在一步给予外不必有任何关系，脊柱也没有「夫婦」这一配对之表示。传择之律在一个聚者处只需从某一给予者之传：聚者所依之条件，某一给予它的在场者在给予之步也依，且所需至多多 δ；只有活动者给予、活动需要支持之处，这就把聚者之所需界于给予步该条件之水平加 δ（Flow.fromSome_supported）。在平衡之处，传推出从某一给予者之传（Flow.TransmitsWithin.fromSome），后者严格较弱：TwoGivers.twofold 中传对每个 δ 都不成立，而从某一给予者之传成立。所以「有夫婦然後有父子」不是世系之律：在两给予者之世系上，父子之前有二给予者在同一步共同给予，这一情形脊柱有；世系本身一个给予者即够，配对之先在脊柱不要求。序卦接着讲「有父子然後有君臣」，RO 曾判此延伸为相分（xugua-fuzi-junchen：等级被读为由次第而来）；本条只取男女、夫妇、父子三节，君臣、上下之等不由给予关系得出。",
+   "names_used": [
+    "所出",
+    "聚",
+    "衡",
+    "传",
+    "传择",
+    "容"
+   ],
+   "relational": "世系是给予关系，不先设两个独立之亲",
+   "tradition": "共享经典（易传）",
+   "work": "序卦",
+   "locator": "序卦 下篇首段",
+   "ro_passage": "xugua-fuzi-junchen",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "yi-xici-yan-hui-bu-fu-xing",
+   "status": "revised",
+   "record_ids": [
+    "WP-XCX-C04-S12-R01"
+   ],
+   "source_id": "DS03",
+   "layer": "先秦至秦汉·传（系辞下；成书年代有争议，战国中晚期至汉初诸说并存；「子曰」之归属亦有争议）",
+   "fragments": [
+    "有不善，未尝不知；知之，未尝复行也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.byElimination",
+    "Becoming.Learning.index_missed",
+    "Becoming.Learning.index_le_succ",
+    "Becoming.Learning.missed_before",
+    "Becoming.Learning.index_le_of_accords",
+    "Becoming.Learning.misses_not_recurring",
+    "Becoming.Learning.diagonal_misses",
+    "Becoming.Learning.diagonal_unrested"
+   ],
+   "records": [
+    "learning-by-refutation"
+   ],
+   "reading": "AI读法：此段之次序（有不善则知之，知之则此后不再为之）读作过则改（排除法外推，Learning.byElimination）之构造：候选依次排列，当前候选从往（前段）所提之值与该步所来之值不符（Misses）时，恰移向下一候选（index_missed；这是 indexOn 之定义在不符一支的展开，依构造而成，不是另一条律）；指标从不后退（index_le_succ），凡被弃之候选皆曾在往中某步不符（missed_before）：所弃者都是知其不符者，弃后不再为当前候选。这是此构造对一切候选列与一切历程的直接性质，以值可分辨（DecidableEq）为条件，不是关于实际形成的律：一个形成是否以过则改而学、其候选为何、其值是否可分辨，脊柱不导出（记录之界）。文中「未尝不知」对应的就是这一条件：不符之被知在脊柱是所设，不是所证；构造中不符之后一步即移，文本未言何时而知（《脉络》节点亦明言不加立即性）。所不再为者是曾不符之候选，不是所提之值：其后的候选仍可提出同一值而再不符。文本未说而脊柱说者有二。其一，若有某候选与此历程相符（Accords：于每一出值之步皆无不符），指标决不越过它（index_le_of_accords），不符不在任意晚之步再出（misses_not_recurring；这是“不符反复出现”之否定，不是“自某步起无不符”）；有无这样的候选，不由过则改给出。其二，若有一映射移动每一值（值可分辨且至少有二时即有之），对每一知来（外推）都有其不测（对角序列），其上所提之每一值皆不符（diagonal_misses），自任何步起都不是步步出值而相符（diagonal_unrested）：故「未尝复行」不保证终于相符。「不善」只读作不符；善与不善之评价不入，不符本身不含评价、不排序，若要说何者为愈，只在以广为愈（设，不断言）。颜回之人格赞述、「其殆庶几乎」与所引「不远复，无祇悔，元吉」之吉断不映射。过则改之名证于《孟子》「古之君子，过则改之」；此条是易传之一例，其成书年代有争议，不据之称先秦。",
+   "names_used": [
+    "过则改",
+    "符",
+    "往",
+    "知来",
+    "不测",
+    "以广为愈",
+    "设"
+   ],
+   "gap": "",
+   "locator": "系辞下·冻结第4章（九章分法）·「子曰：颜氏之子」段",
+   "relational": "改在所遇之不符上逐步而成：每一不符弃一候选，所弃者不再为当前候选",
+   "ro_passage": "",
+   "tradition": "共享经典（易传）",
+   "work": "系辞下",
+   "checked": "corrected"
+  },
+  {
+   "id": "suzhe-deng-xiang-chuan",
+   "status": "revised",
+   "record_ids": [
+    "LC2-SZ-C27-R02"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "layer": "宋明；注（苏辙《老子解》第二十七章注，北宋）",
+   "fragments": [
+    "推吾至明以與之使暗者皆明如燈相傳相襲而不絶"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.ByPassing.passes_within",
+    "Becoming.Web.ByPassing.empty_stays",
+    "Becoming.Web.Whole.needs_new",
+    "Becoming.ResponseLearning.lesson_stock",
+    "Becoming.ResponseLearning.short_receiver_not_repaired"
+   ],
+   "records": [
+    "a-pattern-lasts-through-passing",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：苏辙以「如燈相傳相襲而不絶」喻善者推其所至以给予未至者。「推吾至明」之「明」是苏辙之词，所指是去除「流轉生死為物所蔽」，不是名表之明（耦合接上一个及于支持所不标记者之选择）。脊柱给出这一喻的确切范围。递接前提（Web.ByPassing）：凡在下一步载此样式者，或此步早先载之，或由此步一个载者递给；它是被提供之前提，不是推出的。在此前提下，一个样式从某步起每步都在场、无一载者在相隔 d 步之两步都载，则每 d 个相连之步中有一步被递接（Web.ByPassing.passes_within）；一步无载者，以后再无载者（Web.ByPassing.empty_stays）。不加递接前提也有一律：一个兼（Web.Whole，按界定恰在某部分活动之步活动），其部分之活动各自终止、每步活动之部分各由一个有限列表恰好列出、从某步起每步都活动，则对任何有限之部分列表，并非从某步起其外不再有部分作（Web.Whole.needs_new，双重否定之形，不指出是哪一个）。所以「不絶」不是灯所固有，而是一再有新灯开始被点。苏辙之喻默认受者能燃；读（AI）：受者须自有其油——一课之后两者存量加所汲不改（ResponseLearning.lesson_stock，构造内一般），缺存量之受者其所收之不合不被修好（ResponseLearning.short_receiver_not_repaired，一个构造中之见证）。苏辙本人未讲此条件。",
+   "names_used": [
+    "明",
+    "择",
+    "兼",
+    "作",
+    "终"
+   ],
+   "relational": "样式经递接而在场；受者须有其所依",
+   "tradition": "道",
+   "work": "老子解",
+   "locator": "第27章注",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "daxue-zu-fa-min-fa-zhi",
+   "status": "revised",
+   "record_ids": [
+    "RU1-DX-14-R01",
+    "RU1-DX-14-R02",
+    "RU1-DX-14-R03",
+    "RU1-DX-13-R02"
+   ],
+   "source_id": "RU1-S-DX",
+   "layer": "先秦至汉；原典（礼记·大学，属「记」，成篇年代有争议；朱熹章句列此二段为传九、传十章）",
+   "fragments": [
+    "其為父子兄弟足法，而後民法之也。",
+    "上老老而民興孝，上長長而民興弟，上恤孤而民不倍"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.ResponseLearning.learn_through_interface",
+    "Becoming.ResponseLearning.send_no_response",
+    "Becoming.ResponseLearning.reconstructs_program",
+    "Becoming.ResponseLearning.faithful_loses_distinction",
+    "Becoming.ResponseLearning.peer_keeps_error_example",
+    "Becoming.ResponseLearning.short_receiver_not_repaired"
+   ],
+   "records": [],
+   "reading": "AI读法：在上者之实际所为被在下者取法（「上老老而民興孝」）。脊柱：受者只收到实际回应；从教者所学，只由教者所装之程序及其存量，以及受者自身之存量、部件、所问而定（ResponseLearning.learn_through_interface）；无回应则不添样本（ResponseLearning.send_no_response）；在所述构造中（两插槽之程序），受者从实际回应可重构教者之程序（ResponseLearning.reconstructs_program，构造内一般）。所以「民法之」所学的是所为，不是所令；大学自言「其所令反其所好，而民不從」。「足法，而後民法之」的确切范围：若「足法」读为「其儀不忒」（所为前后一致，可被重构），则在所述构造中、受者有存量之处为真；若读为值得取法，则不为真——所述构造中忠实之重构可以失去任务所需之辨（ResponseLearning.faithful_loses_distinction，见证），伙伴之示范可以留住错误（ResponseLearning.peer_keeps_error_example，见证），不值得之所为一样被取法：大学自言「堯舜率天下以仁，而民從之；桀紂率天下以暴，而民從之。」，河上公注（注层，传统题署）「是以其民化上有为，情伪难治。」，韩非解老亦言「效之則小盜生」。「民興孝」也不保证：缺存量之受者其所收之不合不被修好（ResponseLearning.short_receiver_not_repaired，见证）。絜矩及尊卑之序不在此映射。",
+   "names_used": [
+    "取法"
+   ],
+   "relational": "所学只经他者之实际所为而得",
+   "tradition": "儒",
+   "work": "大学",
+   "locator": "大学 段13、段14（朱熹章句传九、传十）；河上公注见 LC-HS-LOW 第75章；韩非语见 CV1-S-JL",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "lunyu-xing-jin-xi-yuan",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-17-02-R01",
+    "RU1-LY-17-02-R02"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦；经（论语·阳货 17.2，春秋末至战国编定）",
+   "fragments": [
+    "性相近也，習相遠也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.ResponseLearning.learn_through_interface",
+    "Becoming.ResponseLearning.lessons_change_program",
+    "Becoming.ResponseLearning.every_cohort_holds",
+    "Becoming.ResponseLearning.short_receiver_not_repaired"
+   ],
+   "records": [],
+   "reading": "AI读法：「性相近也，習相遠也」：起点相近，所受之课不一样则相远。脊柱没有所受之课必使相远之律，只有一个构造中之所得。从教者所学，只由教者所装之程序及其存量，以及受者之存量、部件、所问（课）而定（ResponseLearning.learn_through_interface）：起点一样、课也一样，所学就一样。一个教者、一个新受者，以不一样之课得不一样之程序（ResponseLearning.lessons_change_program，一个构造中以 decide 所得之见证）；一个教者以一样之课，每一代都带着其程序（ResponseLearning.every_cohort_holds，构造内对每一代一般）。课一样而受者之存量不一样，也可以相远：同一教者、同一课，缺存量之受者其所收之不合不被修好，有存量者得其程序（ResponseLearning.short_receiver_not_repaired 与 lessons_change_program 之第二项，见证）——那是起点不近。所以「相遠」在所受之课不一样之处可以为真，在起点及课都一样之处不为真。此处之「習」是经他者实际回应之学（取法），不是名表之习（训练，Learning.Training.fit_right_iff）。章中「性」之所指不映射。",
+   "names_used": [
+    "取法",
+    "习"
+   ],
+   "relational": "相远经所受之课而有",
+   "tradition": "儒",
+   "work": "论语",
+   "locator": "阳货 17.2",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "lunyu-shang-zhi-xia-yu-bu-yi",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-17-03"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦；经（论语·阳货 17.3）；对照宋明之注（程颐《伊川易传》）及清代之论（戴震《孟子字义疏证》）",
+   "fragments": [
+    "唯上知與下愚不移也。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "固定本性或价值（「上知」「下愚」读为先定而不可改之等差）；争胜与等级（排为上下）",
+   "declarations": [
+    "Becoming.ResponseLearning.lessons_change_program",
+    "Becoming.ResponseLearning.limited_changes_then_stays",
+    "Becoming.ResponseLearning.short_receiver_not_repaired"
+   ],
+   "records": [],
+   "reading": "AI读法：若把此章读为「上知」「下愚」是先定而不能改的两等，则为相分：它主张一个先于一切关系、不经学而定之等差（固定本性或价值层），并把学者排为上下（争胜与等级层）。脊柱所给的是：所学（取法）由实际之课而定（ResponseLearning.lessons_change_program，见证）；所述构造中，一个起初之局限把程序改一次，以后不再改（ResponseLearning.limited_changes_then_stays，见证）；缺存量之受者其所收之不合不被修好（ResponseLearning.short_receiver_not_repaired，见证）。所以「不移」在受者缺其所依、或其局限被锁住之处可以为真，这是关系所给之条件，不是先定之等。注疏一层把此章读近于定域：程颐言「唯自暴者，拒之以不信；自棄者，絕之以不為」，又言「人苟以善自治，則無不可移者」；戴震言「由自絕於學，是以不移」，「究之性能開通，非不可移」——不移出于「自絕於學」，是关系上的。但戴震仍言「生而下愚」，留下起点之异。经文当先定之等读为相分；程、戴之读近于定域，是否另立条目请整合者定。",
+   "names_used": [
+    "取法"
+   ],
+   "relational": "非关系的：等差被定为先于关系；注疏层改读为关系上之条件",
+   "tradition": "儒",
+   "work": "论语",
+   "locator": "阳货 17.3；程颐语见 YD-CY；戴震语见 RU2-S-V3Q01",
+   "gap": "",
+   "checked": "passed"
+  },
+  {
+   "id": "zhongyong-shan-ji-ren-zhi-zhi",
+   "status": "revised",
+   "record_ids": [
+    "RU1-ZY-19-R01"
+   ],
+   "source_id": "RU1-S-ZY",
+   "layer": "先秦至汉；原典（礼记·中庸，属「记」，成篇年代有争议）",
+   "fragments": [
+    "夫孝者，善繼人之志，善述人之事者也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Gated.kept_along",
+    "Becoming.RuleHandoff.repeated_handoff_inherits",
+    "Becoming.RuleHandoff.rule_inherited",
+    "Becoming.RuleHandoff.successor_can_revise_inherited_rule",
+    "Becoming.Law.rests_iff",
+    "Becoming.share_rises"
+   ],
+   "records": [
+    "organizational-rule-inheritance",
+    "seeking-boundary",
+    "target-capture"
+   ],
+   "reading": "AI读法：「善繼人之志，善述人之事」：后来者带着前者之所向（「志」）及所为（「事」）接下去。脊柱有所为之一半：一个量若每个非关卡之动都不改它，则沿只走非关卡之动的历程它不改（Gated.kept_along，对每个过程为真）；在所述之协议中，规则经一再授受而不改（RuleHandoff.repeated_handoff_inherits，按协议之界定即得；RuleHandoff.rule_inherited，协议内一般，是 Gated.kept_along 之实例），后任在有在场者实际赞同（协议之票）之处可以再改（RuleHandoff.successor_can_revise_inherited_rule，见证）——「善」述可读为带着改（AI读法）。所向之一半没有：在确定之律下，寻求停下，恰在其所处之态为律所不改且满足其目标之处（足，Law.rests_iff）；每个带目标之亲代留下之后代多于每个其他亲代、两种都在场之处，带目标者之份额在后代中更大（share_rises，计的是带目标者之后代数，不是后代是否带此目标）。Capture 模块写出后代带着亲代之目标未被推出，Seeking 模块写出这样的目标之形成及其向后代之递下未被陈述：是前提，不是推出之律。字面之「繼」只在引文中，不取为接续（继）之锚。宗庙、序爵、辨贵贱不在此映射。",
+   "names_used": [
+    "动",
+    "足",
+    "继",
+    "所出"
+   ],
+   "relational": "所为经授受而不改；所向之递下未陈述",
+   "tradition": "儒",
+   "work": "中庸",
+   "locator": "中庸 段19",
+   "layer_checked": "",
+   "gap": "目标沿世系之递下：先在 Flow／Web 一层给出「某形成在某步带某目标」之谓词（如 holds : Nat → X → Prop；现今 Seeking 之目标是确定律之状态谓词，Capture 只以列表给出带目标者），再在 Flow.DescendsAt 之下陈述「出于带目标者之后代亦带之」之充要条件；它只能是条件律，其条件须写出。最近：Becoming.Law.rests_iff、Becoming.share_rises、Becoming.Web.inheritsAt_iff_forming、Becoming.RuleHandoff.rule_inherited。",
+   "checked": "corrected"
+  },
+  {
+   "id": "zhongyong-wen-gu-zhi-xin",
+   "status": "revised",
+   "record_ids": [
+    "RU1-ZY-36-R04"
+   ],
+   "source_id": "RU1-S-ZY",
+   "layer": "先秦至汉；原典（礼记·中庸，属「记」，成篇年代有争议）",
+   "fragments": [
+    "溫故而知新"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.no_prefix_fixes_next",
+    "Becoming.Learning.every_determines_nothing",
+    "Becoming.Learning.determines_lumped_iff",
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.Learning.selects_through_lumping"
+   ],
+   "records": [
+    "learning-by-refutation",
+    "generalization-through-lumping",
+    "wisdom-root-without-axiom",
+    "selection-through-a-model-of-the-options"
+   ],
+   "reading": "AI读法：由所记之旧知其新。脊柱的确切范围：没有一段前缀能定下一个值（Learning.no_prefix_fixes_next）；单凭所见之例，在没见过之处什么也定不下（Learning.every_determines_nothing）；在跨一个归并取值一样的映射之中，有限之所见定下未见之处之值，恰在某个见过之处跟它被归并为一之处（Learning.determines_lumped_iff）；带过去之值，恰在世界在二者上之值一样之处是对的（Learning.lumped_right_iff）。所以「知新」不出于「故」之多，而出于读「故」所用之归并（类；对结构与变化之律的建模即理）；择也经这一模型（择之象），而不经往（记录）本身（Learning.selects_through_lumping，几乎按界定即得）。读（AI，不是推出之律）：记得多不等于选得对。论语 2.11「溫故而知新，可以為師矣」是 C08 之条（lunyu-wen-gu-zhi-xin）。",
+   "names_used": [
+    "类",
+    "理",
+    "择",
+    "象",
+    "往"
+   ],
+   "relational": "知新经归并而得，不经记录之多",
+   "tradition": "儒",
+   "work": "中庸",
+   "locator": "中庸 段36",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "passed"
+  },
+  {
+   "id": "xunzi-xing-wei-zhi-fen",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0142",
+    "RU2-R0143"
+   ],
+   "source_id": "RU2-S-XZ23",
+   "layer": "先秦（战国末）；论（荀子·性恶）",
+   "fragments": [
+    "不可学、不可事而在人者谓之性，可学而能、可事而成之在人者谓之伪。",
+    "礼义者，圣人之所生也，人之所学而能，所事而成者也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.InheritsAt",
+    "Becoming.Web.InheritsAt.split",
+    "Becoming.Web.inheritsAt_iff_forming",
+    "Becoming.Web.Forms",
+    "Becoming.World.novel",
+    "Becoming.World.novel_but",
+    "Becoming.World.novel_finite",
+    "Becoming.ResponseLearning.reconstructs_program",
+    "Becoming.Pace.rule_at_reading"
+   ],
+   "records": [
+    "transmission-is-inheritance-and-need",
+    "map-of-premises",
+    "how-fast-a-rule-may-change"
+   ],
+   "reading": "AI读法：荀子以「不可学、不可事而在人者谓之性，可学而能、可事而成之在人者谓之伪」划界，并言「化性而起伪」「凡性者，天之就也」，又言「師法者，所得乎積，非所受乎性」。脊柱给出这一界线之关系读法及其确切范围。一次世系上若有因（承继，Web.InheritsAt：后代在聚后所依之条件，给予者在给予之步也依），因覆盖两种情形：此步新结之依存（Web.Forms），及聚前早先依、跨步仍依者（Web.InheritsAt.split）；聚前不依之处，因恰是一条结之律：此步所结之依存，给予者早先也依（Web.inheritsAt_iff_forming）。读（AI）：「性」对得上聚之际所依者；有因之处，无论此步新结还是跨步仍依，这些依存给予者在给予之步都依；「伪」对得上其后经课或经规则所结者。因不是每个世界都有：有一个有限世界具备除传以外之一切前提，其中子依其亲而亲先前无所依（World.novel_but、World.novel_finite），所以聚之际所依不全是给予者那里早有的。其后之学：所述构造中受者从实际回应可重构教者之程序（ResponseLearning.reconstructs_program，构造内一般）。RO 以规则一层读这一界线：在读规则之步，下一规则由快的那一层之构形及所行之规则给出（Pace.rule_at_reading）；两读不冲突，本条在依存一层，RO 在规则一层。RO 判「性恶」之评价为相分（ru-xunzi-xing-e），本条不改其判；荀子以「礼义者，圣人之所生也」把规则之来源归于一处，这一单一来源不映射。",
+   "names_used": [
+    "因",
+    "聚",
+    "结",
+    "传",
+    "所出",
+    "取法"
+   ],
+   "relational": "所依之依存，一部分在聚之际得自给予者，一部分其后经课及规则而结",
+   "tradition": "儒",
+   "work": "荀子",
+   "locator": "性恶篇；「師法者」句见儒效篇（RU2-S-XZ08）",
+   "ro_passage": "ru-xunzi-xing-e",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "zhangzai-qi-zhi-pian",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0175"
+   ],
+   "source_id": "RU2-S-S03",
+   "layer": "宋明；论（张载《正蒙·诚明篇》，北宋）",
+   "fragments": [
+    "人之刚柔、缓急、有才与不才，气之偏也。",
+    "天本参和不偏，养其气，反之本而不偏，则尽性而天矣。",
+    "形而后有气质之性，善反之则天地之性存焉。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "本原（「天本参和不偏」立一个先于关系之本）；固定本性或价值（以「反之本」回到先定之全为修养之向）",
+   "declarations": [
+    "Becoming.Drawdown.drawdown",
+    "Becoming.Flow.transmitted_within",
+    "Becoming.Flow.TransmitsWithin"
+   ],
+   "records": [
+    "evolution-on-descent"
+   ],
+   "reading": "AI读法：张载以「人之刚柔、缓急、有才与不才」为「气之偏」，以「天本参和不偏」为本，并言「形而后有气质之性，善反之则天地之性存焉」。相分有两层：一个先于一切关系而不偏之本（本原层），及以回到这一先定之全为修养之向（固定本性或价值层）。脊柱没有不偏之本：后代之间所需之异在聚之际就可以出现——Drawdown.drawdown 是一个有限构造中之见证：两后代都出于一个亲，一个所需等于亲之所需，一个所需较少；亲之取用使池下降，前者从聚后起再不被支持，后者被支持、活动并取用。这是起点之异加上亲代之活动造成的歧出，不需要先有一个不偏之本，也不被看为「偏」。在平衡之下，后代之所需加其后所取，至多是起点之水平加其后所给，再加 δ（Flow.transmitted_within：传之界随其间所取所与而移）；传（Flow.TransmitsWithin）本身是前提。「偏」只在有一个「不偏」可以对照之处才有，这一对照是张载所立之价值，脊柱不给；「养其气」之修养不映射。",
+   "names_used": [
+    "所出",
+    "聚",
+    "取",
+    "与",
+    "衡",
+    "传",
+    "容"
+   ],
+   "relational": "非关系的：先立不偏之本，再以偏量度所有之异",
+   "tradition": "儒",
+   "work": "正蒙",
+   "locator": "正蒙 诚明篇",
+   "gap": "",
+   "checked": "passed"
+  },
+  {
+   "id": "zhuangzi-lunbian-bu-ke-chuan",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C13-R-09"
+   ],
+   "source_id": "ZH1-S13",
+   "layer": "先秦至秦汉；原典（庄子·天道，外篇，成篇年代有争议）",
+   "fragments": [
+    "意之所隨者，不可以言傳也",
+    "口不能言，有數存焉於其間，臣不能以喻臣之子，臣之子亦不能受之於臣",
+    "古之人與！其不可傳也，死矣！"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Relabel.selected_alike_iff",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.ResponseLearning.learn_through_interface",
+    "Becoming.ResponseLearning.distinction_lost_every_cohort",
+    "Becoming.ResponseLearning.short_receiver_not_repaired",
+    "Becoming.Web.ByPassing.empty_stays"
+   ],
+   "records": [
+    "selection-through-a-model-of-the-options",
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：轮扁言斲轮之「數」「口不能言」，「臣不能以喻臣之子」，古人所得「其不可傳也，死矣」。脊柱给出其确切范围。两个备择被每个经一个映射之选择选得一样，恰当映射使二者并列（Relabel.selected_alike_iff）；某谓词在映射并列之二者中一真一假之处，任何经此映射之选择都不能恰选出使它为真者，那要更细之映射（Learning.selects_not_right_of_parted）。读（AI）：言语是一个粗之象（择所经之映射），轮扁手上所辨之差，言语把它们并在一起，所以「不可以言傳」——这是对所经之映射而言，不是对一切递接而言。从教者所学，只由教者所装之程序及其存量，以及受者之存量、部件、所问而定（ResponseLearning.learn_through_interface）；所述构造中，一个失去之辨在每一代都失去（ResponseLearning.distinction_lost_every_cohort，构造内对每一代一般）；缺存量之受者其不合不被修好（ResponseLearning.short_receiver_not_repaired，见证）。在递接前提下，一步无载者，以后再无载者（Web.ByPassing.empty_stays）：「死矣」可读为无载者之一步（AI读法）。所以轮扁之言在只经言语之处为真；经实际示范及手上之练，脊柱不排除其递接。",
+   "names_used": [
+    "择",
+    "象",
+    "取法"
+   ],
+   "relational": "所能递接者受所经之映射所界",
+   "tradition": "庄",
+   "work": "庄子",
+   "locator": "天道 轮扁章及其前段",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "passed"
+  },
+  {
+   "id": "zhuangzi-lvliang-zhang-yu-shui",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C19-R-07"
+   ],
+   "source_id": "ZH1-S19",
+   "layer": "先秦至秦汉；原典（庄子·达生，外篇，成篇年代有争议）",
+   "fragments": [
+    "吾生於陵而安於陵，故也。長於水而安於水，性也。不知吾所以然而然，命也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Forms",
+    "Becoming.Web.InheritsAt.split",
+    "Becoming.ResponseLearning.lessons_change_program"
+   ],
+   "records": [
+    "transmission-is-inheritance-and-need"
+   ],
+   "reading": "AI读法：吕梁丈夫言「吾生於陵而安於陵，故也。長於水而安於水，性也。不知吾所以然而然，命也。」，又言「從水之道，而不爲私焉」（ZH1-C19-R-06，C10 之旁证）。读（AI）：「故」是在陵而聚之处所结之依存（Web.Forms：此步之前不依、此步之后依），在因所覆盖之两种情形中属新结一种（Web.InheritsAt.split 把新结及跨步仍依拆为两种）；章中不言此依存来自给予者，所以本条不读为因。「性」是在水中长大后所依者，是其后经实际之课而结的（所述构造中，一个教者以不一样之课得不一样之程序，ResponseLearning.lessons_change_program，见证）。所以丈夫所谓「性」不是先定的，是随所处之关系结起来的。荀子劝学有构造一样之言：「蓬生麻中，不扶而直」，「其質非不美也，所漸者然也」。「不知吾所以然而然」所指之「命」不映射；脊柱不把不知其所以然者读为先定。",
+   "names_used": [
+    "聚",
+    "结",
+    "因",
+    "取法"
+   ],
+   "relational": "所依随所处之关系而结",
+   "tradition": "庄",
+   "work": "庄子",
+   "locator": "达生 吕梁丈夫章；劝学二句见 RU2-S-XZ01",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "passed"
+  },
+  {
+   "id": "mozi-tianzhi-hou-zi-shun-xian-jun",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C28-R007",
+    "MO1-C28-R008"
+   ],
+   "source_id": "MO1-S-C28",
+   "layer": "先秦；原典（墨子·天志下，战国墨家，篇章层次有争议）",
+   "fragments": [
+    "有書之竹帛，藏之府庫。為人後子者，必且欲順其先君之行",
+    "是以攻伐世世而不已者。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Gated.kept_along",
+    "Becoming.RuleHandoff.handoff_preserves_record",
+    "Becoming.RuleHandoff.repeated_handoff_inherits",
+    "Becoming.RuleCapture.favouring_locks",
+    "Becoming.Law.perturbation_reabsorbed",
+    "Becoming.ResponseLearning.faithful_loses_distinction"
+   ],
+   "records": [
+    "organizational-rule-inheritance",
+    "capture-through-the-rule",
+    "target-capture"
+   ],
+   "reading": "AI读法：墨子言好攻伐之君受邻国之贺，「則夫好攻伐之君有重不知此為不仁不義也」，于是「有書之竹帛，藏之府庫」；后嗣「必且欲順其先君之行」，以先君所记为准（「必不曰文武之為正」），于是「攻伐世世而不已」。脊柱给出其确切范围。一个量若每个非关卡之动都不改它，则沿只走非关卡之动的历程它不改（Gated.kept_along，对每个过程为真）：后嗣若只照所记而为，所接下之攻伐就不改。在所述之协议中，授受留住规则及记录（RuleHandoff.handoff_preserves_record），一再授受亦然（RuleHandoff.repeated_handoff_inherits；二者按协议之界定即得）。选出在有利之规则下不降份额、规则单调地读其所选出之份额、所读出之每一规则都有利、起点之规则也有利之处，份额每步不降，回路自第一个读规则之步之后锁住（RuleCapture.favouring_locks）——所记之攻伐被选出，又加重下一次之选，这是劫（C10）之构造；若有规则可以反向，锁住只是起点之条件。下一构形只看规则之处，只扰动状态在下一步就复归（Law.perturbation_reabsorbed）：不改规则，暂且罢攻留不住。忠实之重构，教者所不辨者受者也不辨（ResponseLearning.faithful_loses_distinction，一个构造中之见证）：先君已「不知此為不仁不義」，后嗣忠实地照其所记，此辨在后嗣处也缺着（AI读法）。所以「世世而不已」在规则没有经关卡步被改、且所读出之规则都有利之处为真，不是不可改的。墨子以「天志」为准之来源，这一单一中心不映射。",
+   "names_used": [
+    "动",
+    "劫",
+    "环",
+    "复归"
+   ],
+   "relational": "所记之做法经授受而不改，经选出之回路而锁住",
+   "tradition": "墨",
+   "work": "墨子",
+   "locator": "天志下 段6",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "mozi-minggui-zhu-bo-jin-shi",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C31-R010"
+   ],
+   "source_id": "MO1-S-C31",
+   "layer": "先秦；原典（墨子·明鬼下，战国墨家，篇章层次有争议）",
+   "fragments": [
+    "故書之竹帛，傳遺後世子孫。咸恐其腐蠹絕滅，後世子孫不得而記，故琢之盤盂、鏤之金石以重之。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Whole",
+    "Becoming.Web.Whole.needs_new",
+    "Becoming.Web.Present",
+    "Becoming.Web.ByPassing.empty_stays",
+    "Becoming.Web.ByPassing.ends_within"
+   ],
+   "records": [
+    "whole-persists-through-generation",
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：墨子言先王「書之竹帛，傳遺後世子孫」，又恐「腐蠹絕滅」，所以「琢之盤盂、鏤之金石以重之」：多加载者。脊柱给出其确切范围。兼（Web.Whole）按界定是：恰在某部分活动之步活动；样式在场（Web.Present）按界定是：某载者在此步活动。一个兼，其部分之活动各自终止、每步活动之部分各由一个有限列表恰好列出、从某步起每步都活动，则对任何有限之部分列表，并非从某步起其外不再有部分作（Web.Whole.needs_new，双重否定之形）。竹帛、盘盂、金石都会终止，多加载者只是推迟终止，不能免；所记要一直在场，须一再有新的抄刻。在递接前提下（被提供之前提），一步无载者，以后再无载者（Web.ByPassing.empty_stays）；无一载者跨 d 步而载、且从某步起不再递接，则自其后第 d 步起无一载者（Web.ByPassing.ends_within）。所以「重之」在其后一再有新抄新刻之处有效。C08 以兼爱下篇相近之句（MO1-C16-R009）读所记之回读，可互见。所记鬼神之事不映射。",
+   "names_used": [
+    "兼",
+    "作",
+    "终"
+   ],
+   "relational": "所记经一再有新载者而在场，加载者只推迟终止",
+   "tradition": "墨",
+   "work": "墨子",
+   "locator": "明鬼下 段10",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "mozi-suo-xun-bi-huo-zuo",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C39-R005"
+   ],
+   "source_id": "MO1-S-C39",
+   "layer": "先秦；原典（墨子·非儒下，战国墨家，篇章层次有争议）",
+   "fragments": [
+    "君子循而不作",
+    "且其所循，人必或作之"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.ByPassing.present_back",
+    "Becoming.Web.ByPassing.trace",
+    "Becoming.Web.ByPassing.begins_passed",
+    "Becoming.Flow.no_new_dependence",
+    "Becoming.World.novel",
+    "Becoming.World.novel_but",
+    "Becoming.World.novel_finite"
+   ],
+   "records": [
+    "a-pattern-lasts-through-passing",
+    "transmission-is-inheritance-and-need",
+    "map-of-premises"
+   ],
+   "reading": "AI读法：墨子驳儒者「君子循而不作」：「且其所循，人必或作之」。此处之「作」是创制，不是名表之作（生起，Web.Arises）。脊柱给出这一驳论之确切范围。在递接前提下（Web.ByPassing，被提供之前提），此步在场者上一步也在场（Web.ByPassing.present_back）；后来之载者，或开头即载之，或其间某步被递接（Web.ByPassing.trace）；凡开始载者都是被递给的（Web.ByPassing.begins_passed）。所以今在而先无之样式，递接前提就不能每一步都成立，不成立之处就是创制之处（脊柱只给出前提不全成立，不指出是哪一步）；若一个样式自运行之始就在场，递接之律不要求有谁创制它。依存一层构造一样：在平衡及因之下，此步无一在场者所依之条件，聚者跨此步后也不依（Flow.no_new_dependence）；因不是每个世界都有，有一个有限世界具备除传以外之一切前提，其中子依其亲而亲先前无所依（World.novel_but、World.novel_finite），这就是新依存之创制。论语「述而不作」见新条目 lunyu-shu-er-bu-zuo。",
+   "names_used": [
+    "作",
+    "行",
+    "因",
+    "聚",
+    "衡",
+    "传"
+   ],
+   "relational": "今在而先无者，递接不能每步都成立",
+   "tradition": "墨",
+   "work": "墨子",
+   "locator": "非儒下 段6",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "wuzi-yi-ren-xue-zhan",
+   "status": "revised",
+   "record_ids": [
+    "BI1-WZ-R-14"
+   ],
+   "source_id": "BI1-S-WZ",
+   "layer": "时代未定（传统题署战国吴起；今本含编纂层，成书层有争议，不据人物年代定为先秦）；原典（吴子·治兵，传世兵书）",
+   "fragments": [
+    "一人學戰，教成十人；十人學戰，教成百人；百人學戰，教成千人；千人學戰，教成萬人；萬人學戰，教成三軍。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Copying.doubling_iff",
+    "Becoming.Copying.required_add",
+    "Becoming.Copying.lineage_all_iff",
+    "Becoming.ResponseLearning.lesson_stock",
+    "Becoming.ResponseLearning.every_cohort_holds"
+   ],
+   "records": [
+    "recurrent-chain-assembly",
+    "inherited-structural-copying"
+   ],
+   "reading": "AI读法：一人教十、十人教百，逐级扩到三军。脊柱给出其确切范围：每个单元从一个存量汲取 d 后得两个单元之处，从 k 个单元起 n 轮恰在存量至少 d·k·(2ⁿ−1) 之处都能走完（Copying.doubling_iff、Copying.required_add）；从一个池及支撑抄录 n 次，恰在池中每种料都够 n 倍所用、支撑够 n 倍之处全部放出（Copying.lineage_all_iff）；一课之后两者存量加所汲不改（ResponseLearning.lesson_stock，构造内一般），教不添存量；所述构造中每一代都带着所学之程序（ResponseLearning.every_cohort_holds，构造内一般）。所以逐级之教在所汲被覆盖之处为真，不是无界的；十倍之律本身脊柱尚未陈述（见缺口）。教之效率不映射。",
+   "names_used": [],
+   "relational": "逐级之教受存量所界",
+   "tradition": "兵",
+   "work": "吴子",
+   "locator": "治兵第三",
+   "layer_checked": "",
+   "gap": "b 倍抄录律：每个单元从一个存量汲取 d 后得 b 个单元（b ≥ 1），从 k 个单元起 n 轮恰在 d·R_b(n,k) ≤ m 之处都能走完，其中 R_b(0,k)=0、R_b(n+1,k)=k+R_b(n,b·k)（即 R_b(n,k)·(b−1)+k = k·bⁿ），走完后有 k·bⁿ 个单元、存量余 m−d·R_b(n,k)；b=2 即 Copying.doubling_iff。最近：Becoming.Copying.doubling_iff、Becoming.Copying.required_add、Becoming.Copying.doubling_runs。",
+   "checked": "passed"
+  },
+  {
+   "id": "hanfei-zhi-xing-shou-ming",
+   "status": "revised",
+   "record_ids": [
+    "FA1-H50-R013"
+   ],
+   "source_id": "FA1-S-H50",
+   "layer": "先秦（战国末）；论（韩非子·显学，著者层有争议）",
+   "fragments": [
+    "夫智，性也；壽，命也。性命者，非所學於人也，"
+   ],
+   "kind": "divergence",
+   "layer_checked": "固定本性或价值（「智」定为不经学而改之所禀，并以此否定教）",
+   "declarations": [
+    "Becoming.ResponseLearning.learn_through_interface",
+    "Becoming.ResponseLearning.reconstructs_program",
+    "Becoming.ResponseLearning.lesson_stock",
+    "Becoming.ResponseLearning.short_receiver_not_repaired",
+    "Becoming.Flow.Inherits"
+   ],
+   "records": [
+    "transmission-is-inheritance-and-need"
+   ],
+   "reading": "AI读法：显学以「智」为「性」、以「壽」为「命」，「性命者，非所學於人也」，由此讥教者「以人之所不能爲說人」，转而恃赏罚。相分在于把所能定为不经学而改之所禀，并以此否定教。脊柱：从教者所学，只由教者所装之程序及其存量，以及受者之存量、部件、所问而定（ResponseLearning.learn_through_interface）；所述构造中受者从实际回应可重构教者之程序（ResponseLearning.reconstructs_program，构造内一般）——所能可经课而结，不只是所禀。在有因之世系上（Flow.Inherits），聚后所依之条件给予者也依；因只限聚之那一步所依者，其后所结之依存不受它限。韩非之论有一个关系之核：一课之后两者存量加所汲不改（ResponseLearning.lesson_stock），教不添存量；缺存量之受者其不合不被修好（ResponseLearning.short_receiver_not_repaired，见证）。所以「以人之所不能爲說人」在受者缺其所依之处为真，是定域之一半；推为所能全部不可学，并由此只恃赏罚，脊柱都不给。",
+   "names_used": [
+    "取法",
+    "因",
+    "聚",
+    "结"
+   ],
+   "relational": "非关系的：所能被定为所禀而不可经关系改",
+   "tradition": "法",
+   "work": "韩非子",
+   "locator": "显学 段9",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "weishi-zhongzi-liu-yi",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-CY11"
+   ],
+   "source_id": "FO1-S-CY",
+   "layer": "隋唐（7世纪）；论（成唯识论卷二，玄奘糅译，所据为护法等印度释论）",
+   "fragments": [
+    "此中何法名為種子？謂本識中親生自果，功能差別。",
+    "四、性決定。謂隨因力生善、惡等，功能決定，方成種子。",
+    "五、待眾緣。謂此要待自眾緣合，功能殊勝，方成種子。",
+    "六、引自果。謂於別別色、心等果，各各引生方成種子。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.unsupported_childless",
+    "Becoming.Flow.DescendsAt.supported",
+    "Becoming.Flow.inherited_from_giver",
+    "Becoming.Flow.no_new_dependence",
+    "Becoming.World.drop_but",
+    "Becoming.Web.significance_undetermined"
+   ],
+   "records": [
+    "evolution-on-descent",
+    "transmission-is-inheritance-and-need",
+    "transmission-independent-where-it-binds",
+    "continuation-condition-yields-living-significance"
+   ],
+   "reading": "AI读法：种子六项中，「待眾緣」「引自果」「性決定」三项可以各自看。「待眾緣」：只有活动者给予、活动需要支持之处，不被支持之形成在此步无后代出于它（Flow.unsupported_childless），有后代出于 g 则 g 在此步被支持（Flow.DescendsAt.supported）——支持是必要的，不是够的；脊柱也不界定一个适合度之量。「引自果」：在平衡及因之下，聚者跨步后所依之每个条件，都有一个给予它的在场者早先也依（Flow.inherited_from_giver）；此步无在场者依之条件，聚者也不依（Flow.no_new_dependence）。论中另有「非如種子自類相生」（FO1-R-CY18，属 C03），是否按种相接在此不裁。「性決定」言果之善、恶「隨因力」而「功能決定」，是由起点先定之价值，脊柱不给：所表之律不推出活皆有顾（Web.significance_undetermined：两个处处一样之顾都可加在它上面）。传本身是独立之前提：具备另七个前提、且传在其中起约束之世界，都有一个邻世界（去掉一条依存）具备除传以外之一切（World.drop_but）——传起约束之处，不能由其余前提推出。",
+   "names_used": [
+    "所出",
+    "容",
+    "因",
+    "衡",
+    "聚",
+    "传",
+    "顾",
+    "活皆有顾"
+   ],
+   "relational": "种子之所出须支持；所依随给予而来；善恶之定不由关系给出",
+   "tradition": "佛",
+   "work": "成唯识论",
+   "locator": "卷二 种子六义",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "passed"
+  },
+  {
+   "id": "weishi-shiqi-wu-yin",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-CY15"
+   ],
+   "source_id": "FO1-S-CY",
+   "layer": "隋唐（7世纪）；论（成唯识论卷二，玄奘糅译，所据为护法等印度释论）",
+   "fragments": [
+    "若唯始起，有為無漏無因緣故，應不得生"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.inherited_from_giver",
+    "Becoming.Flow.no_new_dependence",
+    "Becoming.World.novel",
+    "Becoming.World.novel_but",
+    "Becoming.World.novel_finite",
+    "Becoming.Web.InheritsAt.split"
+   ],
+   "records": [
+    "transmission-is-inheritance-and-need",
+    "map-of-premises",
+    "transmission-independent-where-it-binds"
+   ],
+   "reading": "AI读法：论中难「始起」之论：「若唯始起，有為無漏無因緣故，應不得生」——若无先有之种，新者无从而有。脊柱给出这一难之确切范围：在平衡及因之下，聚者跨步后所依之条件，必有给予它的在场者早先也依（Flow.inherited_from_giver）；此步无在场者依之条件，聚者也不依（Flow.no_new_dependence）——在因之内，此难为真。但因是前提，不是定律：有一个有限世界具备除传以外之一切前提，其中亲取用燃料而给予子、使子聚，子依其亲，而亲先前无所依（World.novel、World.novel_but、World.novel_finite）。因覆盖新结及跨步仍依两种情形（Web.InheritsAt.split），而新结一个给予者不依之依存，恰是难中所言「無因緣」之处。所以「應不得生」只在有因之处为真，不是一切世界之律。",
+   "names_used": [
+    "因",
+    "聚",
+    "衡",
+    "传",
+    "结",
+    "取",
+    "与"
+   ],
+   "relational": "新依存之结在因之外；因是前提",
+   "tradition": "佛",
+   "work": "成唯识论",
+   "locator": "卷二 种子新熏说之难",
+   "layer_checked": "",
+   "gap": "一条依存之结的律（充要）：聚者在哪一步新结一个给予者不依之依存。只用给予、取用、水平陈述之条件做不到：去掉一条依存（Web.drop）不改给予、取用及水平，按其界定即得，而凡在这一去掉下不改、又推出传之条件，都推出传不起约束（World.vacuous_of_drop_invariant）。所以须以汲取及依存（draws、requires）陈述；Flow.inherits_of_drawn 给出够的一半（汲取之读法加「汲取即依存」之连接推出因），World.drawn_and_link_needed 示二者在具备其余七个前提之有限世界中缺一不可；必要的一半尚缺。这是章 §8.1 第 9 项所列之开放问题。最近：Becoming.Flow.inherits_of_drawn、Becoming.World.drawn_and_link_needed、Becoming.World.vacuous_of_drop_invariant、Becoming.Web.inheritsAt_iff_forming。",
+   "checked": "corrected"
+  },
+  {
+   "id": "weishi-benyou-shiqi",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-CY16"
+   ],
+   "source_id": "FO1-S-CY",
+   "layer": "隋唐（7世纪）；论（成唯识论卷二，玄奘糅译，所据为护法等印度释论）",
+   "fragments": [
+    "一者本有，謂無始來異熟識中法爾而有",
+    "二者始起，謂無始來，數數現行熏習而有。",
+    "若全無無漏種者，彼二障種永不可害，即立彼為非涅槃法"
+   ],
+   "kind": "divergence",
+   "layer_checked": "固定本性或价值（本有种「法爾而有」，并以无漏种之有无下判「非涅槃法」之种姓）；本原（无始而定之所依）",
+   "declarations": [
+    "Becoming.Web.inheritsAt_iff_forming",
+    "Becoming.Web.InheritsAt.split",
+    "Becoming.Web.ByPassing.trace",
+    "Becoming.Flow.no_new_dependence",
+    "Becoming.World.novel",
+    "Becoming.World.novel_but",
+    "Becoming.World.novel_finite"
+   ],
+   "records": [
+    "transmission-is-inheritance-and-need",
+    "a-pattern-lasts-through-passing",
+    "map-of-premises"
+   ],
+   "reading": "AI读法：论中最后并收本有、始起两种种子。始起「數數現行熏習而有」，是经活动而结之所依，跟脊柱之结相合（熏习之回路见 C11；IN2-R0096 为智旭之注，明末清初注层）。相分在本有：「無始來異熟識中法爾而有」是不经任何结、无始而定之所依；论中又以无漏种之有无下判「彼二障種永不可害，即立彼為非涅槃法」（卷九 FO1-R-CY53 构造一样，本簇列为旁证）——一个先定之种姓定其所能。脊柱：聚前不依之处，聚之际所依者就是此步所结，因在此恰是一条结之律（Web.inheritsAt_iff_forming）；因覆盖新结及跨步仍依两种情形（Web.InheritsAt.split）。在递接前提下，一个载者或开头即载之，或其间某步被递接（Web.ByPassing.trace）——开头即载之只是一个运行之初态，是建模所给，不是「法爾」所定；在因之下，此步无在场者依之条件聚者也不依（Flow.no_new_dependence），但因之外新依存可以结（World.novel_but、World.novel_finite：一个有限世界具备除传以外之一切前提，其中子依其亲而亲先前无所依）。所以脊柱没有「永不可害」之判：一个依存可否结，看其后之给予及支持，不看初态中之有无。",
+   "names_used": [
+    "因",
+    "结",
+    "聚",
+    "环",
+    "容",
+    "行",
+    "所出"
+   ],
+   "relational": "半关系：始起由熏习而结；本有为先定之所依",
+   "tradition": "佛",
+   "work": "成唯识论",
+   "locator": "卷二 种子本有始起二类",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "hanyu-yuandao-chuan",
+   "status": "revised",
+   "record_ids": [
+    "IN1-R-D09"
+   ],
+   "source_id": "IN1-S06",
+   "layer": "隋唐（中唐）；论（韩愈《原道》）",
+   "fragments": [
+    "堯以是傳之舜，舜以是傳之禹",
+    "軻之死，不得其傳焉。",
+    "荀與揚也，擇焉而不精"
+   ],
+   "kind": "divergence",
+   "layer_checked": "意志或单一中心（一条单线授受之统）；争胜与等级（以「擇焉而不精」把旁支排在统外）",
+   "declarations": [
+    "Becoming.TwoGivers.twofold",
+    "Becoming.Drawdown.drawdown",
+    "Becoming.RuleHandoff.fork_retains_source",
+    "Becoming.RuleHandoff.boundary_is_not_exclusive_membership",
+    "Becoming.Web.ByPassing.empty_stays",
+    "Becoming.Web.ByPassing.present_back"
+   ],
+   "records": [
+    "organizational-rule-inheritance",
+    "a-pattern-lasts-through-passing",
+    "transmission-is-inheritance-and-need"
+   ],
+   "reading": "AI读法：韩愈立一条单线之统：「堯以是傳之舜，舜以是傳之禹」，至「軻之死，不得其傳焉」，荀、扬「擇焉而不精」被排在统外；所授受者是「斯吾所謂道也」，所载之文是「其文，《詩》《書》《易》《春秋》」。相分在单线及排他：脊柱之世系不要求单线——一个后代可以出于两个给予者（TwoGivers.twofold，见证），一个亲可以有所需不一样之两后代（Drawdown.drawdown，见证）。在所述之协议中，叉出之支留住其源（RuleHandoff.fork_retains_source，按界定即得），边界不是排他之所属（RuleHandoff.boundary_is_not_exclusive_membership，decide 所得之见证）；这些是协议上之借喻，不是世系之律。若接受递接前提（被提供之前提），则一步无载者以后再无载者（Web.ByPassing.empty_stays），此步在场者上一步也在场（Web.ByPassing.present_back）——韩愈之「不得其傳」若为真，其后之再兴就须是从头再起，不是接下；而他本人以《詩》《書》诸文载之，载者从未缺过。这一张力在韩愈之论中，脊柱不替它裁定。",
+   "names_used": [
+    "所出"
+   ],
+   "relational": "非关系的：把多源之接下读成一条排他之单线",
+   "tradition": "三教互动（韩愈儒学论述）",
+   "work": "原道",
+   "locator": "原道",
+   "gap": "",
+   "checked": "passed"
+  },
+  {
+   "id": "lunyu-yin-sun-yi",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-02-23"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦；经（论语·为政 2.23，春秋末至战国编定）",
+   "fragments": [
+    "殷因於夏禮，所損益可知也；周因於殷禮，所損益可知也；其或繼周者，雖百世可知也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.InheritsAt",
+    "Becoming.Flow.TransmitsWithin",
+    "Becoming.Flow.transmitsWithin_iff",
+    "Becoming.price",
+    "Becoming.selected_uniform",
+    "Becoming.raised",
+    "Becoming.lowered",
+    "Becoming.Flow.no_new_dependence",
+    "Becoming.World.novel",
+    "Becoming.World.novel_but",
+    "Becoming.World.novel_finite",
+    "Becoming.Learning.no_prefix_fixes_next",
+    "Becoming.Learning.determines_lumped_iff"
+   ],
+   "records": [
+    "transmission-is-inheritance-and-need",
+    "evolution-on-descent",
+    "generalization-through-lumping",
+    "learning-by-refutation",
+    "map-of-premises"
+   ],
+   "reading": "AI读法：「殷因於夏禮，所損益可知也」：后代接下前代之制，其增减可知；「雖百世可知」。名表取「因」名承继、取「損益」名变异（升与降），此章是二名共有之出处。脊柱给出其确切范围。因（Web.InheritsAt）讲的是：后代聚后所依之条件，给予者在给予之步也依；后代可以少依，不能依给予者所不依者。传（Flow.TransmitsWithin）是因再加所需之界：后代之所需至多较给予者多 δ（Flow.transmitsWithin_iff）——它只界所需之升，不界其降。Price 之计数等式（price）不加前提：后代总量加所降（lowered）等于按后代数加计之亲代总量加所升（raised），「所損益」即所升所降。加计之总量不是选择本身：每个亲代各有 k 个后代之处，它是亲代总量之 k 倍（selected_uniform），每个亲代恰有一个后代之处它就是亲代总量；它是计数，不是因（依存之所依）。一项全新之制：在平衡及因之下，此步无在场者依之条件，后代也不依（Flow.no_new_dependence），所以它在因之外；有一个有限世界具备除传以外之一切前提，其中新依存结起（World.novel_but、World.novel_finite）。「可知」：没有一段前缀能定下一个值（Learning.no_prefix_fixes_next）；在跨一个归并取值一样之映射中，有限之所见定下未见者之值，恰在某所见者跟它被归并为一之处（Learning.determines_lumped_iff）——「百世可知」只在后世跟所见之代被一个归并并在一起之处为真，不由所因之多担保。C08 以「可知」、C10 以选择读这一章，三读请整合者统一。",
+   "names_used": [
+    "因",
+    "损益",
+    "传",
+    "聚",
+    "衡",
+    "所出",
+    "结",
+    "可知",
+    "类",
+    "择"
+   ],
+   "relational": "后代接下给予者之所依，所需升不过界；可知经归并",
+   "tradition": "儒",
+   "work": "论语",
+   "locator": "为政 2.23",
+   "layer_checked": "",
+   "gap": "多步之界：一条世系 x₀ → x₁ → … → x_n（x_{i+1} 在步 t_i 出于 x_i）上，若每一步都有传、且各 x_i 在两次世系之间一直依 c 而所需不升，则 need(t_{n−1}+1, x_n, c) ≤ need(t₀, x₀, c) + n·δ；在 Flow.Acting、Web.Dependent 之下，首步用 Flow.transmitted_supported，可改为 ≤ level(t₀, c) + n·δ。现有之律都在一步上（Flow.transmitted_supported、Flow.transmitted_within）。最近：Becoming.Flow.transmitted_supported、Becoming.Flow.transmitted_within、Becoming.Flow.TransmitsWithin。",
+   "checked": "corrected"
+  },
+  {
+   "id": "zhuangzi-wanwu-jie-zhong",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-U27"
+   ],
+   "source_id": "ZH1-S27",
+   "layer": "先秦至秦汉；原典（庄子·寓言，杂篇，成篇年代有争议）",
+   "fragments": [
+    "萬物皆種也，以不同形相禪，始卒若環，莫得其倫，是謂天均。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.DescendsAt",
+    "Becoming.raised",
+    "Becoming.lowered",
+    "Becoming.Flow.whole_recurs_of_rest_idle",
+    "Becoming.Flow.whole_not_new_of_rest_idle",
+    "Becoming.Flow.new_from_rest_or_open",
+    "Becoming.Web.counting_new",
+    "Becoming.Flow.counting_given_by_rest",
+    "Becoming.Flow.descent_exhausted"
+   ],
+   "records": [
+    "where-novelty-gain-comes-from",
+    "evolution-on-descent",
+    "returning-novelty-forgetting-on-levels",
+    "target-capture"
+   ],
+   "reading": "AI读法：「萬物皆種也，以不同形相禪，始卒若環」：读（AI）「禪」为代，众形更替而相接。脊柱：世系不要求后代形状跟亲一样——x 出于 g 只要求 g 在场、给予 x 而 x 聚（Flow.DescendsAt），后代之量可升可降于亲（raised、lowered）。「始卒若環」之确切范围：在第一律（Flow.Gainless）之下，一个有限之兼（所有条件列出、不重复），其余从某步起不给它净量，则从任何一步起，其后总有两步构形一样（Flow.whole_recurs_of_rest_idle），即复；它也就不是每步皆新（Flow.whole_not_new_of_rest_idle）——这是够的条件，不是恰在之条件。在第一律之下，成员不重复之族从某步起每步皆新，则在任意晚之步上，它从其余或跨其边界得到多于所付（Flow.new_from_rest_or_open）；一例：其余每步给一单元之计数，每步皆新，永不复（Web.counting_new、Flow.counting_given_by_rest，见证）。所列之所立者从某步起每步衰减之处，世系不在任意晚之步上一再出现（Flow.descent_exhausted）。所以「若環」在有限之兼、第一律之下、其余不给净量之处为真；有从其余或跨边界而来之增益处，可以不复。「天均」不映射。",
+   "names_used": [
+    "所出",
+    "聚",
+    "损益",
+    "复",
+    "日新",
+    "其余",
+    "益",
+    "兼"
+   ],
+   "relational": "异形相接是世系；回返在其余不给之处必然，增益处可以日新",
+   "tradition": "庄",
+   "work": "庄子",
+   "locator": "寓言篇",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "zhuangzi-zhong-you-ji",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-U18"
+   ],
+   "source_id": "ZH1-S18",
+   "layer": "先秦至秦汉；原典（庄子·至乐，外篇，成篇年代有争议）",
+   "fragments": [
+    "種有幾，得水則爲㡭，得水土之際則爲鼃蠙之衣，生於陵屯則爲陵舄",
+    "程生馬，馬生人，人又反入於機。萬物皆出於機，皆入於機。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.DescendsAt",
+    "Becoming.Web.Forms",
+    "Becoming.Flow.no_new_dependence",
+    "Becoming.World.novel",
+    "Becoming.World.novel_but",
+    "Becoming.World.novel_finite"
+   ],
+   "records": [
+    "evolution-on-descent",
+    "transmission-is-inheritance-and-need",
+    "map-of-premises"
+   ],
+   "reading": "AI读法：「種有幾」，随所遇之水、水土之际、陵屯而长为不一样之形，「程生馬，馬生人」，「萬物皆出於機，皆入於機」。此处之「機」是微小之始，不是名表之机（关节）。读（AI）：一个「種」在不一样之条件下长为不一样之形，是聚之际随所处之条件结不一样之依存（Web.Forms：此步之前不依、此步之后依）。脊柱：x 出于 g 只要求 g 给予 x 而 x 聚（Flow.DescendsAt），不要求形状一样；在平衡及因之下，此步无在场者依之条件，后代也不依（Flow.no_new_dependence）——所以新形所需之新依存，在因之内只能来自某在场者早先所依，不然就在因之外；有一个有限世界具备除传以外之一切前提，其中新依存结起（World.novel_but、World.novel_finite）。文中所列之种属序列当对种属之记载读，不映射；文中没有支持之筛选，所以本条不用 Flow.unsupported_childless。",
+   "names_used": [
+    "所出",
+    "聚",
+    "结",
+    "因",
+    "衡",
+    "传",
+    "机"
+   ],
+   "relational": "形随所处之条件而结",
+   "tradition": "庄",
+   "work": "庄子",
+   "locator": "至乐篇末段",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "xunzi-wu-lei-zhi-qi",
+   "status": "revised",
+   "record_ids": [
+    "RU2-U-XZ01"
+   ],
+   "source_id": "RU2-S-XZ01",
+   "layer": "先秦（战国末）；论（荀子·劝学）",
+   "fragments": [
+    "物類之起，必有所始。",
+    "肉腐出蟲，魚枯生蠹。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.descends_of_comes",
+    "Becoming.Flow.rise_given",
+    "Becoming.Flow.DescendsAt"
+   ],
+   "records": [
+    "evolution-on-descent",
+    "where-novelty-gain-comes-from"
+   ],
+   "reading": "AI读法：（脉络于此句无关系之判，record_ids 是阅读单元编号）「物類之起，必有所始」：凡开始而在者有其所从出。脊柱：在平衡之处，凡聚者都出于某个在此步给予它的在场者（Flow.descends_of_comes）；把其余算进来，每个上升都是被给予的（Flow.rise_given，不加前提）。「肉腐出蟲，魚枯生蠹」跟世系构造一样：x 出于 g 由给予界定，不限亲属及种属（Flow.DescendsAt）。条件：前一律要求此处平衡，「必」在此条件下为真。旧以为腐肉自出虫，当对种属之记载读，不映射；荀子以此喻荣辱之来「必象其德」，其评价不映射。",
+   "names_used": [
+    "所出",
+    "聚",
+    "衡",
+    "其余"
+   ],
+   "relational": "凡开始而在者有所从出，所从出是给予之关系",
+   "tradition": "儒",
+   "work": "荀子",
+   "locator": "劝学篇",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "passed"
+  },
+  {
+   "id": "xunzi-chuan-jiu-lun-lue",
+   "status": "revised",
+   "record_ids": [
+    "RU2-U-XZ05"
+   ],
+   "source_id": "RU2-S-XZ05",
+   "layer": "先秦（战国末）；论（荀子·非相）",
+   "fragments": [
+    "傳者久則論略，近則論詳，略則舉大，詳則舉小。",
+    "文久而滅，節族久而絶，",
+    "類不悖，雖久同理"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Law.merged_stays",
+    "Becoming.Law.present_forgets",
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.ResponseLearning.distinction_lost_every_cohort",
+    "Becoming.Web.ByPassing.ends_within"
+   ],
+   "records": [
+    "recurrence-without-premise",
+    "generalization-through-lumping",
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：「傳者久則論略，近則論詳」，「文久而滅，節族久而絶」；此篇又言「類不悖，雖久同理」。脊柱给出其确切范围：律之一步若把两个构形并为一，以后任何一步都不再把它们拆为两个（Law.merged_stays）——失去之辨不再得回，「略」不能回到「詳」；一个律之轨道所经之构形都在一个有限列表中之处，从任何一步起，必有两个不一样之所记历史共有一个当下（Law.present_forgets）——「傳者久則論略」在当下之构形有限之处为真，不是无条件的。「類不悖，雖久同理」之确切范围：一个归并带过去之值，恰在世界在二者上取值一样之处是对的（Learning.lumped_right_iff）。读（AI）：荀子之「同理」可对上理（对结构与变化之律的建模）——类（归并）在世界随它一起之处可以跨很远之年代而用；世界不随它之处，归并在一起不担保带过去之值对。所述构造中，一个失去之辨在每一代都失去（ResponseLearning.distinction_lost_every_cohort，构造内对每一代一般）。在递接前提下，无一载者跨 d 步而载、且从某步起不再递接，则自其后第 d 步起无一载者（Web.ByPassing.ends_within）：「文久而滅」。",
+   "names_used": [
+    "类",
+    "理",
+    "终"
+   ],
+   "relational": "所并者不再拆开；当下有限必有遗忘；类在世界随它之处可用",
+   "tradition": "儒",
+   "work": "荀子",
+   "locator": "非相篇",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "shangjun-dingfen-fa-ling",
+   "status": "revised",
+   "record_ids": [
+    "FA1-S26-R001",
+    "FA1-S26-R003"
+   ],
+   "source_id": "FA1-S-SV5",
+   "layer": "先秦至秦汉；原典（商君书·定分，篇章层次不一，不归商鞅亲著）",
+   "fragments": [
+    "有敢剟定法令，損益一字以上，罪死不赦。",
+    "即以左券予吏民之問法令者，主法令之吏，謹藏其右券木柙",
+    "即後有物故，以券書從事。",
+    "主法令之吏有遷徙物故，輒使學者讀法令所謂，為之程式，使數日而知法令之所謂"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Gated.change_located",
+    "Becoming.RuleHandoff.changed_rule_requires_adoption",
+    "Becoming.RuleHandoff.handoff_preserves_record",
+    "Becoming.Copying.inspect_le_iff",
+    "Becoming.ResponseLearning.successor_keeps",
+    "Becoming.ResponseLearning.faithful_loses_distinction"
+   ],
+   "records": [
+    "formed-copying-correction",
+    "organizational-rule-inheritance"
+   ],
+   "reading": "AI读法：定分篇为「法令」立一套抄录之制：「有敢剟定法令，損益一字以上，罪死不赦」；左右券两处藏，「即後有物故，以券書從事」；「主法令之吏有遷徙物故，輒使學者讀法令所謂，為之程式，使數日而知法令之所謂」。此处之「損益」是抄本对原文之增删，跟名表之损益（后代之量对亲代之升与降）构造相似而所计之量不一样。脊柱：对每个过程，一个量若每个非关卡之动都不改它，则凡改它之历程，其改都在一个关卡步（Gated.change_located）；在所述之协议中，规则之改只在一次采纳之步（RuleHandoff.changed_rule_requires_adoption，逐个检查协议之步即得），授受留住规则及记录（RuleHandoff.handoff_preserves_record，按界定即得）——禁擅改即要求一切非关卡之动都不改法令之文，于是一切改都经关卡。「以券書從事」是对照参照而核：对每一所造之品、每一池及支撑，在某处检查并向参照换回，决不增加对目标之缺失，恰当参照在该处跟目标一致（Copying.inspect_le_iff）——核对之效恰在所藏之券忠实之处。后任之学：所述构造中后任从教者之实际回应留住所装程序（ResponseLearning.successor_keeps，构造内一般），但忠实之重构，教者所不辨者受者也不辨（ResponseLearning.faithful_loses_distinction，见证），所以字不改、所学忠实，也不担保「所謂」合乎所需之辨。死罪之罚及吏民之等不映射。",
+   "names_used": [
+    "损益",
+    "动"
+   ],
+   "relational": "所抄之规则以核对及后任之学而接下",
+   "tradition": "法",
+   "work": "商君书",
+   "locator": "定分第二十六 第2段",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "xunzi-rongru-jin-shou-qi-shu",
+   "status": "new",
+   "record_ids": [
+    "RU2-U-XZ04"
+   ],
+   "source_id": "RU2-S-XZ04",
+   "layer": "先秦（战国末）；论（荀子·荣辱）",
+   "fragments": [
+    "不知其義，謹守其數，慎不敢損益也",
+    "父子相傳，以持王公",
+    "是故三代雖亡，治法猶存"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Gated.kept_along",
+    "Becoming.Web.ByPassing.passes_within",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.ResponseLearning.faithful_loses_distinction"
+   ],
+   "records": [
+    "organizational-rule-inheritance",
+    "a-pattern-lasts-through-passing",
+    "selection-through-a-model-of-the-options"
+   ],
+   "reading": "AI读法：荀子言有司「不知其義，謹守其數，慎不敢損益也」，「父子相傳，以持王公」，「是故三代雖亡，治法猶存」。三句各有所当。其一：一个量若每个非关卡之动都不改它，则沿只走非关卡之动的历程它不改（Gated.kept_along，对每个过程为真）——「慎不敢損益」即只走非关卡之动，所守之「數」不改。其二：在递接前提下（Web.ByPassing，被提供之前提），一个样式从某步起每步都在场、无一载者跨 d 步而载，则每 d 个相连之步中有一步被递接（Web.ByPassing.passes_within）——「三代雖亡，治法猶存」是样式较其载者更长，经「父子相傳」而在场。其三：守其「數」而不知其所以然，是经一个粗之象留住所为：某谓词在映射并列之二者中一真一假之处，经此映射之择都不能恰选出使它为真者（Learning.selects_not_right_of_parted）；所述构造中忠实之重构可以失去任务所需之辨（ResponseLearning.faithful_loses_distinction，见证）——所以守「數」者能留住所守；所需之辨若被其「數」并在一起，守者不能择对（AI读法，荀子未言）。此处之「損益」是增删所守之「數」，不是名表之损益（后代之量对亲代之升与降）；「相傳」是递接，不是名表之传（Flow.TransmitsWithin），也不是名表之因。有司之等不映射。",
+   "names_used": [
+    "动",
+    "象",
+    "择",
+    "损益",
+    "传",
+    "因"
+   ],
+   "relational": "所守经非关卡之动而不改，经递接而较载者更长；守者只经粗映射",
+   "tradition": "儒",
+   "work": "荀子",
+   "locator": "荣辱篇",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "zhongyong-zai-zhe-pei-zhi",
+   "status": "new",
+   "record_ids": [
+    "RU1-ZY-17"
+   ],
+   "source_id": "RU1-S-ZY",
+   "layer": "先秦至汉；原典（礼记·中庸第十七章，属「记」，成篇年代有争议）",
+   "fragments": [
+    "故天之生物，必因其材而篤焉。故栽者培之，傾者覆之。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "意志或单一中心（「天」作施予者，按其所判培之、覆之）；固定本性或价值（「材」读为先定之等）",
+   "declarations": [
+    "Becoming.Flow.unsupported_childless",
+    "Becoming.Flow.DescendsAt.supported",
+    "Becoming.CaptureWorlds.unsupported_leave_none",
+    "Becoming.SelectionTerm.Flow.support_not_against"
+   ],
+   "records": [
+    "evolution-on-descent",
+    "target-capture",
+    "selection-term-over-generations"
+   ],
+   "reading": "AI读法：「故天之生物，必因其材而篤焉。故栽者培之，傾者覆之。」有一个跟传择构造一样之核：立着的得厚，将倒的被覆。脊柱中构造一样之律：只有活动者给予、活动需要支持之处，不被支持之形成在此步无后代出于它（Flow.unsupported_childless），有后代出于 g 则 g 在此步被支持（Flow.DescendsAt.supported）；所列之不被支持者，出于它们而列出之后代在此步之数为零（CaptureWorlds.unsupported_leave_none）；一个读数在被支持之亲代处最高之处，Price 本身之选出项对它不为负（SelectionTerm.Flow.support_not_against）。相分在三处：其一，章中有一个施予者「天」按其所判而培、覆，脊柱中没有这样的选者，只有支持之有无，由其所依条件之水平及其所需而定；其二，「材」被读为先定之等，脊柱中支持是一步上水平满足所需，不是所禀；其三，支持只是必要的，不是够的——被支持者不担保有后代，脊柱也不界定「篤」这样的量。此句之「因」是凭借，不是名表之因（承继）。此章前文诸句为 C14 之条（zhongyong-da-de-bi-de）。",
+   "names_used": [
+    "传择",
+    "所出",
+    "容",
+    "足",
+    "因"
+   ],
+   "relational": "非关系的：支持被读为施予者按先定之材所判",
+   "tradition": "儒",
+   "work": "中庸",
+   "locator": "中庸 第十七章",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "mengzi-mou-mai-di-you-fei-qiao",
+   "status": "new",
+   "record_ids": [
+    "RU2-U-MZ11-07"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦（战国中期）；论（孟子·告子上第七章）",
+   "fragments": [
+    "今夫麰麦，播种而耘之，其地同，树之时又同，浡然而生，至于日至之时，皆熟矣。虽有不同，则地有肥硗，雨露之养，人事之不齐也。",
+    "富岁，子弟多赖；凶岁，子弟多暴"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.supported_of_config",
+    "Becoming.Web.newAt_of_first"
+   ],
+   "records": [
+    "where-novelty-gain-comes-from"
+   ],
+   "reading": "AI读法：「今夫麰麦，播种而耘之，其地同，树之时又同」，而「虽有不同，则地有肥硗，雨露之养，人事之不齐也」；此章前文又言「富岁，子弟多赖；凶岁，子弟多暴」。读（AI）：所长之异来自所处之条件，不来自种之异。脊柱构造一样之律：一个形成所需在一族内固定之处，族之水平在某步支持它，则在构形一样之任何一步也支持它（Web.supported_of_config）——能否结起只看条件之构形，不看哪一步；从 T 起第一次被支持之步，是这一族之构形之第一次到达（Web.newAt_of_first）。二者都由支持之界定直接得出。孟子由此推到「故凡同类者，举相似也」，那一推不在此映射（C07 以之为类之出处）。",
+   "names_used": [
+    "容",
+    "结",
+    "类"
+   ],
+   "relational": "所成之异随条件之构形而定",
+   "tradition": "儒",
+   "work": "孟子",
+   "locator": "告子上 第7章",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "passed"
+  },
+  {
+   "id": "lunyu-shu-er-bu-zuo",
+   "status": "new",
+   "record_ids": [
+    "RU1-LY-07-01"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦；经（论语·述而 7.1，春秋末至战国编定）",
+   "fragments": [
+    "述而不作，信而好古"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.ByPassing.begins_passed",
+    "Becoming.Web.ByPassing.present_back",
+    "Becoming.Web.ByPassing.trace"
+   ],
+   "records": [
+    "a-pattern-lasts-through-passing"
+   ],
+   "reading": "AI读法：「述而不作，信而好古」：只递接所受，不创制。此处之「作」是创制，不是名表之作（生起，Web.Arises）。脊柱给出其确切范围：在递接前提下（Web.ByPassing，被提供之前提），凡开始载此样式者都是被递给的（Web.ByPassing.begins_passed），此步在场者上一步也在场（Web.ByPassing.present_back），后来之载者或开头即载之，或其间某步被递接（Web.ByPassing.trace）。所以「述而不作」恰是递接前提每一步都成立；而一个样式若今在而先无，递接前提就不能每一步都成立，不成立之处即创制之处（脊柱只给出前提不全成立，不指出是哪一步）——墨子「且其所循，人必或作之」（mozi-suo-xun-bi-huo-zuo）讲的恰是这一点。中庸「父作之，子述之」让两代各任创制、递接之一。「信而好古」之取舍不映射。",
+   "names_used": [
+    "作"
+   ],
+   "relational": "递接只接下所受；今在而先无者，递接不能每步都成立",
+   "tradition": "儒",
+   "work": "论语",
+   "locator": "述而 7.1；「父作之，子述之」见 RU1-S-ZY",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "xunzi-lilun-wu-xian-zu-wu-chu",
+   "status": "new",
+   "record_ids": [
+    "RU2-U-XZ19"
+   ],
+   "source_id": "RU2-S-XZ19",
+   "layer": "先秦（战国末）；论（荀子·礼论）",
+   "fragments": [
+    "先祖者，类之本也",
+    "无先祖，恶出？"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.descends_of_comes",
+    "Becoming.Flow.inherited_from_giver",
+    "Becoming.Flow.no_new_dependence",
+    "Becoming.World.novel",
+    "Becoming.World.novel_but",
+    "Becoming.World.novel_finite"
+   ],
+   "records": [
+    "transmission-is-inheritance-and-need",
+    "map-of-premises"
+   ],
+   "reading": "AI读法：「先祖者，类之本也」，「无先祖，恶出？」；此篇又言「天地者，生之本也」，「尊先祖，而隆君师」。读（AI）：「恶出」问的是从何而出，这恰是所出之向：x 出于 g，g 是 x 之所从出。脊柱：在平衡之处，凡聚者都出于某个在此步给予它的在场者（Flow.descends_of_comes）——「无先祖，恶出」在此条件下为真；在平衡及因之下，聚者跨步后所依之每个条件，都有一个给予它的在场者早先也依（Flow.inherited_from_giver），此步无在场者依之条件，聚者也不依（Flow.no_new_dependence）——所依者来自所从出者。确切范围有二：其一，给予者不限亲属及种属；「类之本」之「类」若读为族属，脊柱不把世系限于一个族属。其二，因是前提：有一个有限世界具备除传以外之一切前提，其中子依其亲而亲先前无所依（World.novel_but、World.novel_finite），所以后代所依者不全由先祖所给。以先祖为「本」而尊之、并由此「隆君师」，是本原之向及等级之序，不映射。",
+   "names_used": [
+    "所出",
+    "聚",
+    "衡",
+    "因",
+    "传"
+   ],
+   "relational": "所出是给予之关系；所依随所出而来，但不全来自先祖",
+   "tradition": "儒",
+   "work": "荀子",
+   "locator": "礼论篇",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "xunzi-dalue-bian-yi-ya-zhi-he",
+   "status": "new",
+   "record_ids": [
+    "RU2-U-XZ27"
+   ],
+   "source_id": "RU2-S-XZ27",
+   "layer": "先秦至秦汉；论（荀子·大略，多以为弟子所记，成篇较晚，有争议）",
+   "fragments": [
+    "三王既以定法度，制禮樂而傳之，有不用而改自作，何以異於變易牙之和，更師曠之律？"
+   ],
+   "kind": "divergence",
+   "layer_checked": "固定本性或价值（三王所定被立为不可改之准）；意志或单一中心（以三王为其唯一来源）",
+   "declarations": [
+    "Becoming.Flow.TransmitsWithin",
+    "Becoming.Flow.transmitsWithin_iff",
+    "Becoming.raised",
+    "Becoming.lowered",
+    "Becoming.Gated.change_located",
+    "Becoming.RuleHandoff.successor_can_revise_inherited_rule"
+   ],
+   "records": [
+    "transmission-is-inheritance-and-need",
+    "evolution-on-descent",
+    "organizational-rule-inheritance"
+   ],
+   "reading": "AI读法：「三王既以定法度，制禮樂而傳之，有不用而改自作，何以異於變易牙之和，更師曠之律？」：把三王所定看为不可改之准，改者如乱易牙之调、师旷之律。相分在于立一个不可改之准，且以三王为其唯一来源。脊柱中，传（Flow.TransmitsWithin）只要求后代聚后所依之条件给予者也依、所需至多较给予者多 δ（Flow.transmitsWithin_iff）：不禁所需之降，也不禁所依、所需以外之改；后代之量可升可降于亲（raised、lowered，即损益），是计数等式中的一般情形，不是偏差。对每个过程，一个量若每个非关卡之动都不改它，则凡改它之历程，其改都在一个关卡步（Gated.change_located）——改要经关卡，但关卡之律不言何者可改、何者不可改；在所述之协议中，后任可以改所接下之规则（RuleHandoff.successor_can_revise_inherited_rule，decide 所得之见证）。所以脊柱有改在何处，没有不可改。改得好坏是比较：排序只在以广为愈（C）之下，传本身不排序。",
+   "names_used": [
+    "传",
+    "损益",
+    "动",
+    "以广为愈"
+   ],
+   "relational": "非关系的：把一次所定立为不随关系改之准",
+   "tradition": "儒",
+   "work": "荀子",
+   "locator": "大略篇",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "hanfei-wudu-wu-zi",
+   "status": "new",
+   "record_ids": [
+    "FA1-H49-U02"
+   ],
+   "source_id": "FA1-S-H49",
+   "layer": "先秦（战国末）；论（韩非子·五蠹，著者层有争议）",
+   "fragments": [
+    "今人有五子不爲多，子又有五子，大父未死而有二十五孫。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Reproduction.Flow.born_le_given",
+    "Becoming.Reproduction.Flow.born_within_stock",
+    "Becoming.Reproduction.Flow.lineage_ends",
+    "Becoming.Reproduction.Flow.closed_not_exact",
+    "Becoming.Reproduction.Generations.ByNumber.kept_exact_iff",
+    "Becoming.Reproduction.Generations.ByNumber.rises_exact_iff",
+    "Becoming.Reproduction.Relay.relay"
+   ],
+   "records": [
+    "what-bounds-offspring-numbers"
+   ],
+   "reading": "AI读法：「今人有五子不爲多，子又有五子，大父未死而有二十五孫。」韩非接着论财货跟不上口数（C13 以此章读其名表之争，FA1-H49-R002）。脊柱给出后代数递乘之确切范围：一个亲代之后代数至多是它给予它们之量（Reproduction.Flow.born_le_given：每个后代跨步至少被给一单元）；一族在某步平衡且被耗散之处，族内互异之后代数加此步从族取用之形成数，至多是此步前之存量（Reproduction.Flow.born_within_stock）；世系之后代都在一族之内、此族在其初存量加一那么多步内每步平衡且被耗散，则此后之一代无一员（Reproduction.Flow.lineage_ends），所以已开始繁衍之世系，其后代数不能在这些步上每步都跟亲代之数恰等地递下（Reproduction.Flow.closed_not_exact）。按后代数计、每个后代之后代数恰等于其亲之后代数之处，平均后代数跨步不改，恰当各亲之后代数一样（Reproduction.Generations.ByNumber.kept_exact_iff），上升恰当某两亲之后代数不一样（Reproduction.Generations.ByNumber.rises_exact_iff）。无耗散之处，一个存量为一之族可以每一步都有一员（Reproduction.Relay.relay，见证）。所以「五子」之递乘只在给予及存量跟得上之处为真；在每步平衡且被耗散之族中它必终止。",
+   "names_used": [
+    "所出",
+    "衡",
+    "耗",
+    "终",
+    "取",
+    "与"
+   ],
+   "relational": "后代数由给予及存量所界",
+   "tradition": "法",
+   "work": "韩非子",
+   "locator": "五蠹 第2段",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "mengzi-wu-hou-wei-da",
+   "status": "new",
+   "record_ids": [
+    "RU2-U-MZ07-26"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦（战国中期）；论（孟子·离娄上第二十六章）",
+   "fragments": [
+    "不孝有三，无後为大。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "固定本性或价值（先定把有无后代排为首要）",
+   "declarations": [
+    "Becoming.price",
+    "Becoming.Reproduction.number_never_against",
+    "Becoming.Reproduction.number_none_iff",
+    "Becoming.Flow.descent_reaches",
+    "Becoming.Flow.ancestry_reaches"
+   ],
+   "records": [
+    "evolution-on-descent",
+    "what-bounds-offspring-numbers",
+    "living-on-and-descent"
+   ],
+   "reading": "AI读法：「不孝有三，无後为大。」把有无后代排为首要。相分在于这一先定之排序。脊柱所给的是：Price 之计数等式不加前提（price）；对后代数本身之选出从不为负——按后代计之平均亲代后代数至少是按亲代计之平均后代数（Reproduction.number_never_against），恰在各亲后代数一样之处二者相等（Reproduction.number_none_iff）。这是计数，不是价值：有后者在下一代所占之份额当然更大，但这不言有后更好。在 N_rel（顾沿世系中立地递及）之下，一个方（立场）对某形成任一事件之顾，及于出于它的每个关系项之每个活的事件（Flow.descent_reaches），也及于它所从出之形成之每个活的事件（Flow.ancestry_reaches）——世系扩大顾所及之范围，不排序。凡续皆有顾（§6.4 之条件）是所设之条件，不断言；它只定范围，即谁之失去被算进，本身不排序；排序只在以广为愈（C）之下，其根据未决。所以「无後为大」当价值之序读，脊柱不给；若在以广为愈之下比较，要比较的是整个关系之扩大，不是一家之后代数。",
+   "names_used": [
+    "所出",
+    "顾",
+    "方",
+    "活",
+    "凡续皆有顾",
+    "以广为愈"
+   ],
+   "relational": "非关系的：一个先定之序替代对整个关系之比较",
+   "tradition": "儒",
+   "work": "孟子",
+   "locator": "离娄上 第26章",
+   "gap": "",
+   "checked": "corrected"
+  },
+  {
+   "id": "yi-yi-huo-yi-zhi",
+   "status": "new",
+   "record_ids": [
+    "JG2-H42-L2-R01",
+    "JL-R029"
+   ],
+   "source_id": "YD-JG42",
+   "layer": "先秦；经（周易·益卦六二、上九爻辞，约西周，成书有争议）；读法参宋明之注（程颐《伊川易传》）",
+   "fragments": [
+    "或益之，十朋之龜弗克違",
+    "莫益之，或擊之"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.NetGiver",
+    "Becoming.Flow.rise_netGiver",
+    "Becoming.Flow.rise_given",
+    "Becoming.Flow.rest_netGiver_iff",
+    "Becoming.Flow.BalancesOn.rest_not_netGiver"
+   ],
+   "records": [
+    "where-novelty-gain-comes-from"
+   ],
+   "reading": "AI读法：六二「或益之，十朋之龜弗克違」，上九「莫益之，或擊之」：有无「益之者」定其所得。程颐释上九「故无益之者而或攻擊之矣」，并言「求益之極衆人所共惡」。名表以「益之者」名净给予者（Flow.NetGiver：跨一步在场、给予一族多于从其取用者）。脊柱：把其余算进来，一族之存量跨步上升，必有一个净给予者（Flow.rise_netGiver，不加前提）；这一净给予者或是其余，或是某个形成（Flow.rise_given）；其余是净给予者，恰当该族水平跨步之升（超出各形成净给之量）多于其降（超出净取之量）（Flow.rest_netGiver_iff）；流在该族上平衡之处，其余不是净给予者（Flow.BalancesOn.rest_not_netGiver）。所以益（一族跨一步之存量上升）必有益之者，这在脊柱中不加前提就推出；「莫益之」——无一净给予者，其余算在内——则无上升（Flow.rise_netGiver 之逆否）。「或擊之」及吉凶之辞不映射；小象「自外來」为 C04 之条（yi-yi-zi-wai-lai）。",
+   "names_used": [
+    "益",
+    "益之者",
+    "其余",
+    "衡",
+    "取",
+    "与",
+    "流"
+   ],
+   "relational": "一族之上升必由净给予者给出",
+   "tradition": "共享经典（易）",
+   "work": "周易·益",
+   "locator": "益 六二、上九；程颐注见 YD-CY3",
+   "layer_checked": "",
+   "gap": "",
+   "checked": "passed"
+  }
+ ],
+ "notes": "一、总改动。（1）「所生」全部改为名表之「所出」，方向按 name_flags 第 1 条写作「x 出于 g」。（2）「传」只用于 Flow.TransmitsWithin；样式之递接（Web.ByPassing 等）名表无名，白话写作「递接前提」「被递接」「载者」（name_flags 第 3 条）；mapper 之 names_used 中凡指 ByPassing 之「傳」都删去。（3）「所以擇」「以足擇」不是名表之名，删去；经支持之选出写白话，经映射之选择才用「择」。（4）定义性及见证逐条标出：RuleHandoff.handoff_preserves_record、fork_retains_source、repeated_handoff_inherits 按界定即得（rfl），changed_rule_requires_adoption 逐个检查协议之步即得，rule_inherited 是 Gated.kept_along 在协议中之实例，successor_can_revise_inherited_rule、boundary_is_not_exclusive_membership 是 decide 见证；ResponseLearning 中 faithful_loses_distinction、lessons_change_program、peer_keeps_error_example、short_receiver_not_repaired、limited_changes_then_stays 是见证，learn_through_interface、lesson_stock、send_no_response 一般，reconstructs_program、successor_keeps、every_cohort_holds、distinction_lost_every_cohort 在一个构造之内一般；TwoGivers.twofold、Drawdown.drawdown、Reproduction.Relay.relay、Web.counting_new、Flow.counting_given_by_rest 是见证；Web.Whole、Web.Present 是定义；Web.supported_of_config 由支持之界定直接得出；Learning.selects_through_lumping 几乎按界定得出；Web.Whole.needs_new 是双重否定之形。（5）kind 改动：yi-gu-gan-fu-zhi-gu、lunyu-xing-jin-xi-yuan、zhuangzi-lvliang-zhang-yu-shui、mozi-tianzhi-hou-zi-shun-xian-jun、mozi-minggui-zhu-bo-jin-shi、mozi-suo-xun-bi-huo-zuo、xunzi-chuan-jiu-lun-lue 由 agreement 改 scope。（6）删去之声明：yi-gu 去 Flow.TransmitsWithin（所接下的是规则，不是所需）；lunyu-xing 去 Drawdown.drawdown、Flow.transmitted_within（Drawdown 是起点所需不一样之例，跟「性相近」相反）；xunzi-xing、lvliang 去 transmitted_within；zhuangzi-zhong 去 unsupported_childless、transmitted_supported（文中无筛选）；lunyu-yin 去以 transmitted_supported 读「可知」，改入 gap；zhuangzi-lunbian 以 Relabel.selected_alike_iff、Learning.selects_not_right_of_parted 替 Law.merged_stays；RuleHandoff.rule_inherited、nonadopting_history_inherits、rule_change_located 在 yi-gu 中以 Gated 之一般律替换。（7）措辞更正：learn_through_interface 所言为教者所装之程序及存量，加受者之存量、部件、所问；zhongyong-shan-ji 之「章中明言……不由动力学决定」改为 Capture 写出未被推出、Seeking 写出未被陈述；zhangzai 之 transmitted_within 改述；wanwu 之「恰在」改为够的条件；weishi-shiqi 之 gap 改为以 draws／requires 陈述之充要条件，章节号改为 §8.1 第 9 项；weishi-zhongzi 之 drop_but 改述为「传起约束之处」；zhongyong-wen-gu 所引论语 2.11 改为冻结本「溫故而知新，可以為師矣」；记录 wisdom-root-part-one 改为现名 wisdom-root-without-axiom。\n\n二、未照验证者之修订而改做者。（1）zhongyong-shan-ji：philology 验证者要加 Reidentify.KeepsTenure 及「繼」名；名表「繼」行注明不锚 KeepsTenure，且 KeepsTenure 讲跨任期之接续，不是目标之递下，所以未加（name_flags 第 7 条）。（2）weishi-zhongzi：philology 验证者要把 FO1-R-CY17、CY18、CY19 加入 record_ids；CY17、CY18 是 C03 之条目，CY19 是 C02 之旁证，加入会使一个候选在两处，所以只在读法中引及。（3）philology 验证者以为 C13 已为 PatternPassing 定名，名表中没有；structure 验证者之「经传」撞名，均入 name_flags 第 3 条。（4）lunyu-yin：philology 验证者要写「因在此指 price 之 selected 项」；price 之加计总量是计数，不是 Web.InheritsAt，二者构造不同，所以写成「这一加计之总量不是因」，并写出 selected_uniform 之条件（每亲恰一后代）。（5）zhuxi-dun-shen-tui-dao-heng：structure 验证者判 revise，philology 验证者判 reject；核对全句后从 reject。\n\n三、两验证者都 keep 之条目：yi-xici-yan-hui-bu-fu-xing 列入 kept（names_used：过则改）。另四条（yi-xugua-fufu-fuzi、xunzi-wu-lei-zhi-qi、weishi-benyou-shiqi、shangjun-dingfen-fa-ling）两验证者都 keep，但读法用了旧名「所生」「傳」或须补声明（yi-xugua 补 Flow.fromSome_supported 并注明两给予者不必有关系；shangjun 补 Gated.change_located，层改「原典」，注明此处「損益」是抄本之增删），所以改写后列入 revised。\n\n四、新条目九条（status new），片段及读法中之引文都以 ctq.py 核对：xunzi-rongru-jin-shou-qi-shu（荣辱，critic 覆盖项）、zhongyong-zai-zhe-pei-zhi（中庸十七章，critic 覆盖项，相分）、mengzi-mou-mai-di-you-fei-qiao（告子上七章，含富岁句，critic 覆盖项）、lunyu-shu-er-bu-zuo（述而不作，critic 覆盖项）、xunzi-lilun-wu-xian-zu-wu-chu（礼论，所出之方向）、xunzi-dalue-bian-yi-ya-zhi-he（大略，不可改之准，相分）、hanfei-wudu-wu-zi（五蠹，EV2 Reproduction 之条，critic 覆盖项）、mengzi-wu-hou-wei-da（离娄上，后代数之选出及 C，相分）、yi-yi-huo-yi-zhi（益卦，「益之者」之条，critic 第 3 项）。劝学之「蓬生麻中，不扶而直」「其質非不美也，所漸者然也」并入 zhuangzi-lvliang-zhang-yu-shui 之读法，不另立。新条目之 record_ids 都是阅读单元或本簇之候选；同章之关系 RU1-ZY-17-R01、R02 归 C14（zhongyong-da-de-bi-de），RU2-R0054 归 C17，FA1-H49-R002 归 C13，ZH1-C19-R-06 归 C10 旁证，都不移动。\n\n五、「傳擇」无单一先秦出处（critic 第 3 项要一个条目或一个说明）。传择之几项由下列各条合起来覆盖：lunyu-yin-sun-yi（因、传、损益、可知）、zhongyong-zai-zhe-pei-zhi（经支持之选出，相分）、hanfei-wudu-wu-zi（后代数之界）、mengzi-wu-hou-wei-da（后代数之选出不为负）、wuzi-yi-ren-xue-zhan（逐级之教受存量所界）、zhuangzi-wanwu-jie-zhong（异形相接）。「择」在名表锚 Web.SelectsThrough，跟 Evolution 之选出构造不同（name_flags 第 5 条）。\n\n六、未采之缺项及理由：杂阿含「所生」诸句只言不以出身定位，没有可映射之律，只作「所出」方向之证据；墨子大取之「其所生」是根据，关乎名不关乎构造（C16 之「故」）；郭店太一生水属宇宙生成，归 C01／RO，且转写含拟补之字；泰卦九三归 C05；熏习之回路（IN2-R0096 等）归 C11；老子二十五章及王弼释「法」归 C01 自然之法及 RO lao-25；朱熹释「日新」归 C06／C05；韩非五蠹「世異則事異」是 C17 之旁证 FA1-H49-R004。\n\n七、四个非关系层之覆盖（相分八条）：本原——zhangzai-qi-zhi-pian、weishi-benyou-shiqi，xunzi-lilun-wu-xian-zu-wu-chu 读法中指出（以先祖为本）；固定本性或价值——lunyu-shang-zhi-xia-yu-bu-yi、hanfei-zhi-xing-shou-ming、weishi-benyou-shiqi、zhangzai-qi-zhi-pian、zhongyong-zai-zhe-pei-zhi、xunzi-dalue-bian-yi-ya-zhi-he、mengzi-wu-hou-wei-da；意志或单一中心——zhongyong-zai-zhe-pei-zhi（施予者「天」）、hanyu-yuandao-chuan（单线之统）、xunzi-dalue-bian-yi-ya-zhi-he（三王为唯一来源），mozi-tianzhi 读法中指出（「天志」为准）；争胜与等级——lunyu-shang-zhi-xia-yu-bu-yi、hanyu-yuandao-chuan，xunzi-lilun 读法中指出（隆君师）。\n\n八、伦理之处（mengzi-wu-hou-wei-da、xunzi-dalue-bian-yi-ya-zhi-he）：凡续皆有顾（§6.4 之条件）只定范围，排序只经 C（以扩大为更好）；两条都不写伦理由此条件推出。Flow.descent_reaches／ancestry_reaches 在 N_rel 之下，只扩大顾所及，不排序。\n\n九、互见：C02（FO1-R-CY19）、C03（FO1-R-CY17、CY18；「繼」）、C04（yi-yi-zi-wai-lai）、C07（告子上七章「故凡同类者，举相似也」）、C08（lunyu-wen-gu-zhi-xin；论语 2.23 之「可知」；MO1-C16-R009）、C10（论语 2.23 之选择读法；劫；ZH1-C19-R-06）、C11（熏习之回路）、C13（FA1-H49-R002）、C14（zhongyong-da-de-bi-de；顾、凡续皆有顾）、C17（建议接 ZX130-H33-R01；FA1-H49-R004；RU2-R0054）。论语 2.23 有 C08、C10 及本簇三读，请整合者统一；论语 17.3 之程颐、戴震定域读法是否另立条目，亦交整合者。\n\n十、基线：所有声明及记录以 zhonghua 工作树（708e3172d，分叉点 62c901c7b）之 work/resolve.py 核对，全部解析，无 NONE。main（5cccfe15c）比工作树多 185 次提交，含 EV8 Drift、EV9、EV10（如 Reproduction.covariance_sq_le），跟后代数及选出直接相关；整合者须在 main 上再解析一次，并考虑以之补 hanfei-wudu-wu-zi、mengzi-wu-hou-wei-da。\n\n十一、尚开放之缺口：zhongyong-shan-ji-ren-zhi-zhi（目标随世系之递下）；lunyu-yin-sun-yi（多步之界）；weishi-shiqi-wu-yin（结之律之必要一半，§8.1 第 9 项）；wuzi-yi-ren-xue-zhan（b 倍抄录律）。\n\n十二、文字：读法中之白话词（形成、给予、所需、依存、水平、支持、活动、存量）取自名表之释；跟名表他名同字之常用词（作为、因为、产生、变化、区分、结构、说明、修复等）尽量避开，只在引文或名表之释中出现。读法中以「」标出之字句都是冻结文本之原字，已逐条核对。",
+ "check_notes": "36 条全查。片段与读法中之引文都以 ctq.py text 核过（含程颐、戴震、河上公、解老、序卦「有父子然後有君臣」、论语 2.11 诸旁引），全部一字不差；所引声明及结果记录都以 resolve.py 在工作树之收据上解析为现名；脉络之 record_ids 都存在（无关系之处用阅读单元，与旧例同）。改了 25 条，问题按类：\n(1) 律之前提漏写：Gated.change_located 要「非关卡之动都不改此量」(KeptBy)，shangjun、xunzi-dalue 写成「凡改一个量之历程其改都在关卡步」，无条件为假；Web.Whole.needs_new 要「每步活动之部分各由有限列表恰好列出」(Listed，Countless 示其不可少)，suzhe、mozi-minggui 漏；RuleCapture.favouring_locks 要「所读出之每一规则都有利」(uniform，Alternating 示其不可少)，mozi-tianzhi 漏，且「规则从此不再下降」要 locked_rises 及其 upper 前提，favouring_locks 不给，已删；Reproduction.Flow.lineage_ends 要后代在族内、closed_not_exact 要世系已开始繁衍，hanfei-wudu 补上；Law.present_forgets 之条件是所经构形有限，不是「载者有限」(xunzi-chuan-jiu)；Flow.new_from_rest_or_open 之 Distinct 是成员不重复，不是「不重现」，Flow.descent_exhausted 只给「不在任意晚之步一再出现」(zhuangzi-wanwu)。\n(2) 读法超出 Lean：lunyu-yin-sun-yi 称 selected 为「选出项」(模块明言不是选择本身)，并说「只在每亲恰一后代之处才相等」(selected_uniform 只给充分)；xugua「在两给予者之世系上为真」无据；lunyu-xing-jin「课一样则不相远」，而 short_receiver_not_repaired 与 lessons_change_program 合看，同教者同课、受者存量不同即异，已改并删去「原读」之过程话；daxue「则为真」改为构造内、受者有存量之处；xunzi-rongru 第三层之结论收窄；hanfei-zhi-xing「此后仍可经所耦合者而结新依存」无声明承载，改为「因只限聚之那一步」；mozi-suo-xun、lunyu-shu-er-bu-zuo「必有某一步前提失效」是古典之步，Lean 只给前提不能每步都成立。\n(3) World.novel 是一个世界之定义，不陈述「具备除传以外之一切前提」，亦不陈述有限：六条补 World.novel_but、World.novel_finite (weishi-shiqi 补 novel_finite)。\n(4) 文序：墨子天志下「有重不知此為不仁不義」在「書之竹帛」之前，是先君受贺所致，不是后嗣照记之果；原读「以至」倒置，已改。\n(5) 名：yi-gu、zhongyong-shan-ji 把 RuleHandoff 之「实际支持」(在场者之票) 记为容，已分开；Law.perturbation_reabsorbed 有名复归，补用；排序之前提名以广为愈，mengzi-wu-hou、xunzi-dalue 改用，并写明凡续皆有顾设而不断言、只定范围；xunzi-dalue 把传说成「只界所需之升」，漏了因之一半；zhongyong-zai-zhe「所出之后代」与本簇自定之方向相反，已改。\n过而有保留者：mengzi-mou-mai 所引 Web.supported_of_config 讲一个形成在两步上，孟子比的是不同之麦在同一时，结构相近（所需固定、支持只看条件之构形），算相合可以，整合者可再看；yi-yi 之相合以「莫」含其余为前提，读法已写明。丢弃之 zhuxi-dun-shen-tui-dao-heng 已核全句于 YD-ZX2，弃之有据。name_flags 中所称 Becoming.Succession 之内容、zh 术语表第 1050 行「传递律」均核实。"
+}

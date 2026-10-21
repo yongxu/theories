@@ -1,0 +1,209 @@
+[
+ {
+  "type": "other",
+  "clusters": [
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C08",
+   "C10",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "C17"
+  ],
+  "detail": "基线漂移（AI 核查）。zhonghua 分支（309af1124）落后于 main（共享检出 d3e25d331）。(1) 17 处锚点在 main 上已失效。其中 12 处用的是 R30 已退役的名字：Web.Returns、ReturnsWithin、Returns.not_consumed、RenewedWithin.returns、Unceasing.regeneration_recurs、generation_draws_in、generation_fed_from_beyond、generation_needs_replenishment、dissipation_generation_not_recurring、Fork.split_unceasing、Learnable.label_of_rests、table_rests。它们牵连 復足、不復足、期、开、转、生生、损、汲、自外来、不息、分／合、当簿。另 5 处在分支上存在、main 上已无：LoopReturn.whole_strengths（现为 whole_factors）、SharedCodes.impose_reads、Web.forms_between、Web.dissolves_between、whole_falls_not_recurring。它们牵连 報、制名、結／解、端。核验人说 impose_reads『不存在』不准确，这些锚点是过时，不是捏造。(2) main 的章节已重排：条件由 §6.15 改为 §6.4；词汇表在 27ebe6735 改写，新增核心术语表，五个词各守一义；§10 元闭一行新增 Becoming.ClosedCapture（读法本身从份额形成时，读法之变也被吸收，离开的是律之变）。(3) AGENTS 与章节今作：排序只在 C（称扩展为更好），不变性一步不排序。brief 中『C 与不变性一步』的说法已过时。",
+  "action": "以 main 的一个固定提交为唯一基线。用 r30-names/RENAME-TABLE.json、r32-folds、r35-corpus 重绑全部锚点，重新核对每个声明全名确实存在。改正所有节号（§6.15→§6.4 等）。按 ClosedCapture 重写 元闭 与 柄移 的结构说明。凡说『排序在 C 与不变性一步』之处一律改为『排序只在 C』，至少包括 brief、C14 的 无弃 条，以及条目 xici-ji-zhi-zhe-shan、lao-62。"
+ },
+ {
+  "type": "other",
+  "clusters": [
+   "C01",
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C07",
+   "C08",
+   "C09",
+   "C10",
+   "C11",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "C17"
+  ],
+  "detail": "缺一张跨版本对照表。main 的 .zh.md 词汇表已有现代中文定名，如 生命意义（living significance，词汇表 22 次）、静／停（D45）、生起／止息（D36）、观（view）、读法（reading），各簇的古典名没有与之一一对接。",
+  "action": "建两栏表：古典名 ↔ main zh 词汇表术语，要求一对一；凡一对多或多对一，都归入下面的 collision 条处理。"
+ },
+ {
+  "type": "unmapped-concept",
+  "clusters": [
+   "C01",
+   "C03",
+   "C08",
+   "C17"
+  ],
+  "detail": "动态基元无名：构形（configuration）、动（move）、步（step）、运行（run）、过程（process）、观（view）、框／世界（frame/world）。『理论全述』与核心术语表都以它们为基本词。现有候选：設卦繫辭置信度低；六合已被否决。時 依赖 步 与 构形，所以 時 不能先定。",
+  "action": "按 main 核心术语表逐一定名：先定 步、构形，再定 運／行（run）、程（process）、观（view，与 讀 分开），最后定 時。每个名附一个 Lean 锚（如 World、Flow、Law 的相应定义），注明是一字还是复合词。"
+ },
+ {
+  "type": "unmapped-concept",
+  "clusters": [
+   "C05",
+   "C15",
+   "C03"
+  ],
+  "detail": "更新／消耗作为运行的类（核心术语表条目）无名。现有 恆足／不復足 是条件层的名字，不是运行类。C15 的 绝其长 抢占了『消耗』的位置，又带价值色彩（「不夭其生，不绝其长」，RU2-S-XZ09，原是荀子王制的养长之政）。",
+  "action": "为运行类单独定名（如〈運而复足〉／〈運而耗〉），锚在 main 相应定义上；绝其长 改为条目，不作名。"
+ },
+ {
+  "type": "unmapped-concept",
+  "clusters": [
+   "C16",
+   "C03"
+  ],
+  "detail": "(1) 四种地位无专名：无前提定理、有陈述前提的定理、条件、读法；C16 的 律／定理 与 main『律 = 变化之则，定理 = 已核陈述』冲突。(2) 普查（census）与计数（count）未分名，二者由 counts_iff_decided 联系。(3) 整体（whole）与空间（space）未分名，main 已把两者分开。(4) A（分节）无名。",
+  "action": "四种地位各定一名（如〈無設之理〉〈有設之理〉〈設〉〈讀〉，以示意），律 只作变化之则。普查与计数分名，并注明 counts_iff_decided。整体与空间分名（参看 collision 兼）。A 单独定名。"
+ },
+ {
+  "type": "unplaced-symbol",
+  "clusters": [
+   "C03",
+   "C04",
+   "C01"
+  ],
+  "detail": "有、无、虚、一、多、静、动：无放置或只零星。静 按 D45 是『即时成立者』，与 停（来到静）分开，但无簇放置 静。RO 有 lao-02-you-wu-xiang-sheng（定域）、wb-40-38-yi-wu-wei-ben（相分）。",
+  "action": "静 定为律的不动态（D45），动 为 move 或步的候选，与 步 一并决定。有／无：决定它们是指『成立／不成立』还是指 ComesToStand；王弼 以无为本 作相分条目。虚 不采（张载 太虚 有相分面，但 太虚即气 相合）。一／多：一 不作本体名（见 collision 一實）；多 随计数定名。"
+ },
+ {
+  "type": "unplaced-symbol",
+  "clusters": [
+   "C03",
+   "C06",
+   "C10"
+  ],
+  "detail": "空、缘起：无放置。RO 有 zaahan-ci-you-gu-bi-you（此有故彼有，相合）与 huayan-shi-xuan（定域）。已采的 无明 不是十二因缘里的 无明，但没有任何一处说明这一点。",
+  "action": "缘起 可作 Web.Dependent 前提之名，依阿含 此有故彼有，不取十二支定链。空 只取其关系核心（互模拟、无自性）作相合条目；空 作解脱目标、真如 作本原，作相分条目。另加一则注：已采的 无明（锚 Law.rests_iff 与 Seeking）不同于十二因缘之首支。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C03",
+   "C06",
+   "C12"
+  ],
+  "detail": "生 一字三义：生起（C03 生／滅）、生成（C06 生生、成生、绝生）、所出（C12 所生，世系）。D36 已明定 生起／止息 与 生成／退化 两分。",
+  "action": "生 只留给生成（生生、成生、绝生）。生起／止息 另用一对不含 生、也不含 息 的字（候选 起／滅）。生滅 降为条目。所生 改为 所出，或加注说明只指世系。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C03",
+   "C14"
+  ],
+  "detail": "兼 两义：C03 作整体（Web.Whole 是析取的『任一』结构，并引「體，分於兼也」，MI1-S-JS）；C14 作 Neutral（全称『一切』，引「兼以易別」，MO1-S-C16）。另有 兼感、得兼、兼權 各取不同义。",
+  "action": "兼 定为 Neutral（∀，依 兼以易別）；C03 的整体另择一字（与 unmapped『整体／空间』同时决定）。兼感、得兼、兼權 各注明所取的 兼 义。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C03",
+   "C04"
+  ],
+  "detail": "體／体 两义：部分（墨经「體，分於兼也」）与 C04 的『体现』（embodiment）。",
+  "action": "C04 的体现另择一名；体用 作相分条目（体用 带本原层）。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C03",
+   "C13"
+  ],
+  "detail": "分 两义：分裂（C03）与 足迹（C13，荀子 分）。",
+  "action": "分 定给 C13（依 礼 的结构核心与「群居而無分則爭」）；C03 的分裂改名（如 判／裂）。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C03",
+   "C09",
+   "C08"
+  ],
+  "detail": "跨步同一的名字混乱：一實（C03，Reidentify）与 一实（C09，Web.Continues）字同而锚异；还有 相續、稽实 等近名。C 簇的 繼 锚在 KeepsTenure 上，但 Identity.lean 中它属『Continuity, read one way』，是连续，不是继承；Succession 只是一个见证命名空间。",
+  "action": "词汇表五行（再认／改名、连续、继承、延续、整体／部分）各给一名，互不重复。繼 改锚到 Lineage／Succession／Dormancy 中实际表达继承的声明。一 不作本体名。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C11",
+   "C10",
+   "C03"
+  ],
+  "detail": "余／餘 三义：其余（rest relatum）、余地（余量）、C11 的 餘（剩余，Remainder）。",
+  "action": "三个复合分立，各注其锚，不让 余 单字承担。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C08",
+   "C05",
+   "C03"
+  ],
+  "detail": "往 两义：过去的进程（C08、C05）与 往來 普查平衡（C03）。",
+  "action": "往 统一为过去的进程；C03 的普查平衡另名。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C01",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C08",
+   "C10",
+   "C11",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "C17"
+  ],
+  "detail": "一个概念有两个名字，以及跨簇重复。成对的：状／同；所以迹／所显之…（所以迹 方向颠倒，依天運「夫迹，履之所出，而迹豈履哉」，ZH1-S14，迹是履之所出，律应为『所显之律』）；推／推类；大块／其余（大块是噫气的施动者，而 rest relatum 从不施动）；通为一／一變三讀；相軋／稱；所由／遇；与时转／遲速（以及 變通）；法不自行／不行不至；有力／同力（同力 应锚 MakesDifferenceTogether，DifferenceOnlyTogether 需另名）。跨簇重复：不息、結／解、理、类、益、日新、闭、成闭、护闭、元闭、机／機、应、未。",
+  "action": "每对择一：所显之律 取代 所以迹；其余 取代 大块；其余各对按锚定的 Lean 声明择一，另一个降为条目。跨簇重复各并为一条，由一个簇持有，其余簇引用。"
+ },
+ {
+  "type": "inconsistency",
+  "clusters": [
+   "C03",
+   "C05",
+   "C06"
+  ],
+  "detail": "生生、生生不息、不息 的锚不一致：生生 有的锚在 Web.Widens，有的锚在已退役的 Unceasing.regeneration_recurs；生生不息 锚了具体定理；不息 在 C03 与 C05 分锚。",
+  "action": "生生 → 只锚方向 Web.Widens（D1：生成生成生成）；生生不息 → 不设单一锚（与 Unceasing 比较，附 D5）；不息 → Unceasing（C03、C05 合并为一条）。"
+ },
+ {
+  "type": "coverage",
+  "clusters": [
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C13",
+   "C16",
+   "C17"
+  ],
+  "detail": "传统分布不均。总条目：易 269，儒 233，道 168，庄 102，佛 102，名辩 70，法 59，墨 55，兵 39。兵：C03、C06、C16 没有，C17 只有 8/95。佛：C06、C13 没有，C04、C05、C11、C12、C15 各不多于 3。庄：C04、C05 各 1，C16 只有 2。C02：墨 2，名辩 0。C17：易 占 55%（52/95）。",
+  "action": "定向补充：C02 补墨经『故』（「故，所得而後成也」）；C16 补齐物论与老子；C04、C05 补庄子（秋水、养生主火传、寓言「始卒若環」（ZH1-S27）、則陽）；C06、C13 补佛典；C17 补兵：「其勢險，其節短。勢如彍弩，節如發機」（BI1-S-SZ），联系已采的 机，以及「奇正相生，如循環之無端」；C03、C06 各补一条兵或法的例子。"
+ }
+]

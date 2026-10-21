@@ -1,0 +1,167 @@
+{
+ "edits": [
+  {
+   "id": "八·一",
+   "find": "每物于其中所触之取与，其次皆如其先后。",
+   "replace": "于其中，触每一物之诸取与，其次皆如此物之先后。",
+   "why": "方向反了：名表「触」是取与触物，「所触」是一步之取与所触之物（八·五 立为名）。「物所触之取与」把方向倒过来，又与所触一名相撞。Interleaves c L := ∀ x, ownCourse x L = c x，ownCourse 是触此物之诸取与。"
+  },
+  {
+   "id": "八·三",
+   "find": "恰当每一取与皆触一物，且每二取与",
+   "replace": "恰当每一取与皆至少触一物，且每二取与",
+   "why": "Connected 之第一支是 ∀ e, ∃ x, touches e x：至少触一物。「触一物」在 iff 中可读作恰触一物，那就成了另一条（假的）律。"
+  },
+  {
+   "id": "八·三",
+   "find": "所以须“每一取与皆触一物”",
+   "replace": "所以须“每一取与皆至少触一物”",
+   "why": "与经同改，保持一致。"
+  },
+  {
+   "id": "八·四",
+   "find": "二交错之取与皆各触一物",
+   "replace": "二交错之取与皆至少触一物",
+   "why": "renumber_reindexes 之 Touching L：每一取与至少触一物，不是恰触一物。"
+  },
+  {
+   "id": "八·五",
+   "find": "旷步，读步之中重读前步之步也：读自初步起，每步或重读前步、或读次步，步步皆被读。",
+   "replace": "旷步，读步之中重读其前所读之步者也：读自初步起，每步或重读其前所读之步，或读其次步，步步皆被读。",
+   "why": "Stutter ρ 中旷步是 ρ(n+1)=ρ n，即重读其前所读之步，不是细步之「前步」。「重读前步」可读作重读 ρ n − 1。这里按名表旷步条之写法改。"
+  },
+  {
+   "id": "八·五",
+   "find": "且每一所读之步皆给出读之之移步",
+   "replace": "且每一所读之步皆给出读之之非旷步",
+   "why": "「移步」不是名表之名，经中又未定义。Stutter.Moves ρ σ 给出读每步之非旷步（ρ(σ s)=s，ρ(σ s+1)=s+1），用刚定义之旷步就能确切说出。"
+  },
+  {
+   "id": "八·五",
+   "find": "所触给定而含其取与（不触之物不在其步之取与，跨步不移），则于有穷之一段，易相邻而不相连（相连：共触一物，或一所触之物于其步之始或终待另一所触之物）",
+   "replace": "所触给定而含其取与（不触之物于其步不在场，跨步不移），则于有穷之一段，易相邻而不相连（相连：二取与共触一物，或一取与所触之物于其步之始或终待另一取与所触之物）",
+   "why": "Footprinted.Joined 是：一取与所触之物待另一取与所触之物。「另一所触之物」可读作同一取与所触之另一物，意思就错了。Contains 是 ¬ x ∈ present n，在场是名表之名，「不在其步之取与」不确。"
+  },
+  {
+   "id": "八·五",
+   "find": "`Becoming.Flow.stutter_taken`、`Becoming.stutter_total`、`Becoming.stutter_risen`、`Becoming.stutter_rise_count`、`Becoming.World.withoutIdle_premises`",
+   "replace": "`Becoming.Flow.stutter_taken`、`Becoming.Flow.stutter_given`、`Becoming.stutter_total`、`Becoming.stutter_risen`、`Becoming.stutter_fallen`、`Becoming.stutter_rise_count`、`Becoming.stutter_fall_count`、`Becoming.World.withoutIdle_premises`",
+   "why": "经断言段上「所与」与量之「降」及其步数如故，承载者是 stutter_given、stutter_fallen、stutter_fall_count，原文未引。三者已核：Becoming.Flow.stutter_given 在 Stuttering.lean namespace Flow；Becoming.stutter_fallen、Becoming.stutter_fall_count 在 section Stretches，无 namespace。"
+  },
+  {
+   "id": "八·五",
+   "find": "`Becoming.Flow.stutter_taken`、`Becoming.stutter_risen`",
+   "replace": "`Becoming.Flow.stutter_taken`、`Becoming.Flow.stutter_given`、`Becoming.stutter_risen`",
+   "why": "经中「所与皆如所读之段」须有证，这里补入證（只此一条，免證再长）。"
+  },
+  {
+   "id": "NEW-4",
+   "find": "其逆由一构造之例给出：一宇示每一合律之式，故",
+   "replace": "其逆由构造之例给出：每一合律之式，皆有一构造之宇于一步示之（其步在场者各异），故",
+   "why": "「一宇示每一合律之式」读作一个宇示出所有式，是假的。every_iff 的见证宇随式而定（Witness.world (once P) …），Realized 还要 Distinct (present t)。"
+  },
+  {
+   "id": "八·十",
+   "find": "轻重即⟦六·二十⟧所立者",
+   "replace": "轻重即⟦六·二十⟧之轻重",
+   "why": "名表与 plain-wordings 已决定不用「所立」（立名辞之成立，一字二义），本篇他处已改，此处遗漏。"
+  },
+  {
+   "id": "NEW-5",
+   "find": "凡依类而定之所读，n 步之后之所得随类而同，于凡 n 皆然，恰当于一步然。",
+   "replace": "于凡 n，凡依类而定之所读，n 步之后之所得皆随类而同，恰当凡依类而定之所读，一步之后之所得皆随类而同。",
+   "why": "量词位置。Weights.lumped_iff 是 (∀ n g …) ↔ (∀ g … 于一步)，g 在 iff 两边之内。原句读作对每一 g：(凡 n) ↔ (一步)，这不是所证者，一般也不成立（← 方向用的是另一个 g′ = transfer n ∘ rep）。"
+  },
+  {
+   "id": "NEW-5",
+   "find": "精确恰在其可归并处",
+   "replace": "精确恰在其随类而同处",
+   "why": "「归并」是名表类条之所名（现代词），名表给 Lumped 的名是「随类而同」，经中已用之。"
+  },
+  {
+   "id": "八·十三",
+   "find": "则步步如初，状之异皆不及于规",
+   "replace": "则规步步如初，状之异皆不及于规",
+   "why": "rule_kept 只说规如初，状照常移。「步步如初」可读作整个状与规之行不动。"
+  },
+  {
+   "id": "八·十三",
+   "find": "永不复为自此规起之行之状",
+   "replace": "永不再为自此规起之行之状",
+   "why": "复是名表之名（返回，五·一），本篇八·七 经中正用之。经中不宜以复作副词「又」，改用「再」（名表已有「不再改」）。"
+  },
+  {
+   "id": "八·十三",
+   "find": "持此规之法所不可得之状永不复至（",
+   "replace": "持此规之法所不可得之状永不再至（",
+   "why": "同上：副词之复与名表之复（返回）相混。"
+  },
+  {
+   "id": "八·十三",
+   "find": "持之之法所不可得之状永不复至，固定之规",
+   "replace": "持之之法所不可得之状永不再至，固定之规",
+   "why": "同上。"
+  },
+  {
+   "id": "DUIZHAO",
+   "find": "持之之法所不可得之状永不复至，固定之法",
+   "replace": "持之之法所不可得之状永不再至，固定之法",
+   "why": "同上，与八·十三 一致。"
+  },
+  {
+   "id": "八·十七",
+   "find": "剥「柔變剛也」、复「剛長也」〔YD-HX01〕",
+   "replace": "剥卦「柔變剛也」〔YD-HX01〕、复卦「剛長也」〔YD-HX01〕",
+   "why": "剥、复都是名表之名（剥 C05，复 返回），这里指卦名，须写剥卦、复卦，与八·二十六「复卦六二」同例。「柔變剛也」原无来源编号，体例要求每段引文各带〔〕（已核：YD-HX01 exact 1 hit）。"
+  },
+  {
+   "id": "八·十九",
+   "find": "无一不依境之系辞合于二体之所示",
+   "replace": "不依境之系辞皆不合于二体之所示",
+   "why": "「无一不……」在汉语中读作「没有一个不……」，即「凡依境之系辞皆合」，意思正好反了。halves_no_free_frame 是 ¬∃F, F.P = P ∧ FitsFree F。"
+  },
+  {
+   "id": "八·二十",
+   "find": "先秦综只见「错综其数」，言数",
+   "replace": "先秦综只见「错综其数」〔DS02〕，言数",
+   "why": "引文缺来源编号（体例：「原文」〔编号〕）。ctq.py text DS02 '错综其数' 已核：exact 1 hit。"
+  },
+  {
+   "id": "八·二十",
+   "find": "故二行永不相会",
+   "replace": "故二行于同一步永不同卦",
+   "why": "waxWane_apart 只说同一步 n 二行不同卦。二行在不同步共有诸卦：自 s 之行第 6 步即其错，正是另一行之起点。「永不相会」可读作永不共有一卦。"
+  },
+  {
+   "id": "八·二十五",
+   "find": "《彖》言“上下应”之比、小畜、大有",
+   "replace": "《彖》言“上下应”之比卦、小畜、大有",
+   "why": "比是名表之名（一际之二爻异值），本篇八·十八 刚立。这里指第八卦，须写比卦以别。"
+  },
+  {
+   "id": "八·二十五",
+   "find": "自上出、于初复见",
+   "replace": "自上出，再次步见于初",
+   "why": "副词之复与名表之复相混。sole_top_passes 正是「次步六爻皆同，再次步初爻独异」，改后与经同语。"
+  },
+  {
+   "id": "NEW-6",
+   "find": "（取其像，再取其像即复其本）",
+   "replace": "（其像之像即其本）",
+   "why": "σ (σ x) = x。「复其本」用名表之名复（返回，即沿一变之复）作副词，易误读为复之律。改后更短，也确切。"
+  },
+  {
+   "id": "NEW-6",
+   "find": "《杂卦》之次亦不与三象之任一先后可易（",
+   "replace": "行《杂卦》之次之法亦无一与三象之任一先后可易（",
+   "why": "zagua_not_commutes 说的是行此次之法（RunsThrough next zagua）不与三象先后可易。次本身不是法，无所谓先后可易。"
+  },
+  {
+   "id": "INTRO",
+   "find": "至期所及见篇九",
+   "replace": "至期所及见⟦八·十四⟧",
+   "why": "至期所及有确定之條 ⟦八·十四⟧（outline：九·九 至期所及），本段其余去处皆以 ⟦id⟧ 指，这里一致。"
+  }
+ ],
+ "notes": "I checked the rewritten 篇八 against the Lean sources, the name table, the quotations and the outline. I edited no file. My working files are in /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c17adv/: quotes.json, qcheck.txt and edits.json. Each find string was checked against c17_out.json, which matches the PART text, and each occurs exactly once in its 條, intro or 对照.\n\n**經 against 證.** I read every 經 claim against its Lean declaration: hypotheses, the direction of each iff, and whether it is a witness or a law. Files read: Interleavings, Stuttering, IdleRemoval, Reordering (Footprinted, sorts_iff), Sampling, OneStep (Realized, Every, every_iff, balance_iff, Continues, step_runsDown_iff), Onward, Frame (Run), Horizon (AgreeUpTo), Situations, Weighted (Weights, sum_courses, lumped_iff), Routes, Pace and Switching, Hexagrams, HexagramLaws, HexagramPlaces, HexagramSites, HexagramSequences and HexagramCommuting. Four claims did not match the Lean statement, and the edits correct them:\n- NEW-5: the quantifier of lumped_iff is placed wrongly.\n- 八·十九: 「无一不依境之系辞」 reads as the opposite of what is proved.\n- NEW-4: 「一宇示每一合律之式」 says one world shows every pattern; in fact each pattern has its own witness world.\n- 八·五: Joined and Contains are worded loosely.\n\nThe remaining claims match Lean, including these points:\n- 八·二 to 八·四 and 八·十三: the hypotheses are exact.\n- 八·十一: the extra 「诸动、诸状各有一族尽之」 is harmless, since sum_finer needs no listing.\n- 八·五: withoutIdle needs no listing or DecidableEq, and 經 asks for none.\n- 八·十七: the count 16/16/32 is right.\n- 八·二十三: the eight 卦 are right.\n- NEW-6: the 乾→坤→屯 and 屯→蒙→需 pairs match runsOrder_not_commutes exactly.\n\n**Quotations.** All 61 quotations match the frozen texts exactly. Two lacked a source id; edits add them: 「错综其数」 (DS02) and 「柔變剛也」 (YD-HX01).\n\n**Cross-references and kinds.** Every ⟦id⟧ exists in book-1-outline.txt and points to the intended content. Every 相合/定域/相分 mark names an existing passages.json C17 entry of that kind. No 經 uses a name or law that is defined only in a later 條. All the instructions in C17.json are carried out. The drafter's name substitutions and title changes follow the table, and I kept them.\n\n**Names.** Besides the edits, these remain for the integrator:\n- 「所立」 had survived in 八·十 (an edit fixes it).\n- 「复」 is used as an adverb, \"again\", in 八·十三, the 对照, 八·二十五 and NEW-6. In 篇八, 复 is the name for return, so the edits change these.\n- 剥, 复 and 比 are used as 卦 names but collide with table names. The edits write 剥卦, 复卦 and 比卦. 「解」 in the list 「未济、归妹、解、睽」 (八·二十三 說) collides the same way. The context is clear, so I left it.\n- 「移步」 was undefined. The edit replaces it with 非旷步.\n\n**Not edited, for the integrator:**\n1. 八·五 證 now has 15 declarations, against the style's three to eight. The 條 merges three results, so consider splitting it.\n2. 八·一 and 八·十二 write 經說下 and 經上 in traditional characters in prose, as chapter references. Consider simplified characters or full title form such as 《墨子·經說下》.\n3. 错 and 覆 enter 經 in 八·二十 and NEW-6 but are defined only in 八·二十 說. 互卦之法 in 八·十七 經 is likewise explained only in 說, which is what the instructions asked for.\n4. The table's 所履 entry lists `Footprinted` among its anchors, which conflicts with the 触 entry and with plain-wordings, where Footprinted is 所触. 八·五 says 所触 and 所履 are 不同构. That holds in Lean: Footprinted.touch is per step, while footprint s a belongs to a configuration. Remove Footprinted from 所履's anchors.\n5. Concepts still without a table name:\n   - Weights (the semiring 重 in NEW-5); bare 重 there conflicts with the table's ban on single-character 重.\n   - 一步之式 (Flow.Realizes) and 每步之律 (OneStep.Every).\n   - 自逆之象 (involution).\n   - 《序卦》之次.\n   - 依赖选择之原则.\n   - The moving step of a stuttering, now written 非旷步.\n6. 「凡十二卦」 in 八·二十五 經 rests on sole_iff_flip. The count itself is not a cited declaration.\n\nI did not run verify_zh.py, because it writes work/verify-failures.txt. I did not separately resolve all 188 names on the receipt (the drafter reports they all resolve), but every declaration I read exists at the cited path."
+}

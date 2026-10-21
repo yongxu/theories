@@ -1,0 +1,380 @@
+{
+ "pian": "篇一　大化",
+ "markdown": "## 篇一　大化\n\n本篇论大化：关系之一展开，及读它的诸观。起点不是先立彼此独立的诸物再说它们相关，而是一类之物在每一步的关系：各自的水平、活动、所待、所需、所资，以及步间相与的取与。先说一步之所是（状）、步间之所移（动）、共计之步、可许之移（变）与其实行（行），再说变化为一而三读，动在状中；次说法与历史是一展开的两种读法（自然之法），历史定法至于死路；次说宇即其行，待者与所待是一物之二角，计入其余则凡宇皆衡，诸设各划诸宇之一体；次说系辞与辞、观；然后说状即其所以相关，分而述之失其关系，诸读各于其语境而共成一宇（两行）；终以步之先后读自诸物自身之历程。本篇诸律皆无设而然（不加前提的定理）：每条只在写入其中的局部条件（有穷、有一表尽之、定然否、确定……）下，对每个如此表示之宇成立。延续之条件（凡续皆有顾：凡＋续＋皆有顾，凡延续皆有意义）在意义之篇中陈述而不断言，它只定范围，本身不排序；排序唯在以广为愈（以扩大为更好）。本篇不用二者。后诸篇在此之上论依存与条件、生灭之读、流与停息、持续与复、生成与退化之向。\n\n### 一·一　大化与物\n\n**經**　大化，关系之一展开也：一类之物，步步各有水平、活动、所待、所需、所资，步间相与取与。物，此展开之关系项也。\n\n**說**　大化（展开，the one unfolding）在 Lean 中不是一个对象，形式中有的是读它的诸观（一·十四）：它的表示是每步一个待网之状（`Becoming.WebAt`：每物之水平、是否活动、所待、所需之量、所资）与步间一次取与（`Becoming.Exchange`：在场之物各从谁取多少、与谁多少）。物（关系项，relatum）只是这些关系之项：它不是先于关系的实体，物之名也不携带任何关系（一·十五）。讀（AI，D23）：形式在许多类型上所陈述者（流、待网、宇、变、系辞、语境之系统）都是同一展开的读法。名“大化”取自「列星随旋，日月递炤，四时代御，阴阳大化，风雨博施」〔RU2-S-XZ17〕，在那里是谓语（阴阳大规模地变化），以之名整体之展开是本编的约定；同句「不见其事，而见其功」〔RU2-S-XZ17〕与交换从差别读出相合（相合，xunzi-tianlun-da-hua；见一·十一）。又「天地與其所產焉，物也」〔MI1-S-G6〕（相合，gongsunlong-tiandi-wu）：天地也是物，物之外没有容器，对应于一宇只有一类关系项；这是表示上的一致，不是一条律。\n\n**證**　`Becoming.WebAt`、`Becoming.Exchange`、`Becoming.World`、`Becoming.World.of`；记录 [worlds-are-runs](../results/records/worlds-are-runs.md)、[space-and-its-parts](../results/records/space-and-its-parts.md)。\n\n### 一·二　状、动、步\n\n**經**　状，大化于一步之所是也。动，步间之所移，法于一步所留开者也。步，诸物共计之自然数序也。\n\n**說**　状（构形，configuration）是展开在一步怎样相关；在宇中，它是一个待网之状（待网：依存网，`Becoming.Web`，新组合，待＋网，持水平、活动、所需、需要量与所资）。动（动作，move）是步间之移的标记；在宇中，动就是诸物的取与（`Becoming.World.move`），名取「動，或徙也」〔MI1-S-JS〕之义（一种可能的移易），不带动静之形上义。步只作离散的共同索引：以自然数计步是表示的承诺，不是导出的结论；它在何处可从关系读出，见一·十八。状之同一不由名字给出，而由它怎样相关给出（一·十五）。名“状”取「状变而实无别而为异者，谓之化」〔RU2-S-XZ22〕的状／实之分（定域，xunzi-zhengming-wu-zhuang-shi）：状为构形，实为跨步所认之同一；以处所分实，只在处所即关系之处成立。\n\n**證**　`Generative.Process`、`Becoming.WebAt`、`Becoming.World.move`、`Becoming.withMove_open`；记录 [process-and-frame-as-readings](../results/records/process-and-frame-as-readings.md)、[the-step-index-from-own-courses](../results/records/the-step-index-from-own-courses.md)。\n\n### 一·三　变与行\n\n**經**　变，诸状之间所许之移也：一状以一动而至一状。行，一变之无穷实行也：步步有状有动，自此状以此动至次状，皆其变所许。\n\n**說**　变（过程，process，`Generative.Process`）只说哪些“状—动—状”可许，不说哪一个实际发生；行（运行，run，`Becoming.Run`）是一个变的无穷执行，其任一有限之段都是该变所许的一串移，自段首之状至段末之状（`Becoming.Run.window_trace`）。名“变”取「化而裁之谓之变」〔DS02〕：化而裁成步即是变；它与变化（展开之全体，一·四）同取变义而层次不同。名“行”取「道，行之而成」〔ZH1-S02〕（相合，zhuang-qiwu-dao-xing-zhi-er-cheng）：所显之法由运行而成，见一·六。讀（AI，D23、D43）：行是诸观的形式之根（一·十四），但不是宇之下的另一基底；行按共同之步读出，而步序本身是诸物自身历程的读法（一·十八），所以关系的起点是诸物自身之历程，行是选定一个交错之后的读法。变可以有不被任何行经过之移（死路），见一·八。\n\n**證**　`Generative.Process`、`Becoming.Run`、`Becoming.Run.window_trace`、`Generative.Trace`；记录 [worlds-are-runs](../results/records/worlds-are-runs.md)。\n\n### 一·四　变化\n\n**經**　变化，关系之结、持、化、绝生与解也。凡跨一步之变化，皆一所然之成或毁：读于活动为作、已，读于待为结、解，读于水平之正为聚、散；一变化而三读。\n\n**說**　变化（生成／变化，becoming）是本论所论的全体：关系的形成、维持、转化、退化与消解，不先设为好；成生与绝生在同一展开中而互不重叠，生成只是其中一体，不是每一变化都须满足的条件。跨一步只有一种变化：某一所然开始成立（成）或不再成立（毁）；读于活动是作（生起）与已（止息），读于待是结与解，读于水平是聚与散（`Becoming.Web.change_readings`，由 `Iff.rfl`，即由定义）。所以这三对不是三种变化，而是同一变化的三种读法；它们各自的律（相代、复现、计数）在生灭之篇。名取「刚柔相推而生变化」〔DS02〕（相合，xici-bian-hua-jin-tui）：卦中爻之变兼进退两向，不预设为好。同章「继之者善也，成之者性也」〔DS02〕则相分（xici-ji-zhi-zhe-shan）：它把“善”与“性”直接加在变化的延续上，而依存网所表示的动态不定意义，常假与常真两个顾式（评价，valuation；顾＋式）在同一网上给出相反的结果（`Becoming.Web.significance_undetermined`）。\n\n**證**　`Becoming.Web.change_readings`、`Becoming.ComesToBe`、`Becoming.CeasesToBe`、`Becoming.Web.significance_undetermined`；记录 [coming-and-ceasing-keep-pace](../results/records/coming-and-ceasing-keep-pace.md)、[continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)。\n\n### 一·五　动在状中\n\n**經**　以动入状而复出之，行之状、动皆如故。入状之后，至一状之移许其后任一动；入状之变为法，恰当原变为法，且苟有一移，则动唯一种。宇之动，即其物之取与；宇衡，恰当其水平以取与为动而依取与之法行。\n\n**說**　动入状（`Becoming.withMove`）是把每步所采之动也算作那一步之所是：状成为“状与动”之对，移只剩一种标记；行在两种读法之间往返而不改（`Becoming.Run.ofWithMove_toWithMove`），所以动不是展开之外的第二种东西。读入之后，律在每一移处恰把次动留开（`Becoming.withMove_open`）；入状之变是法（确定），恰当原变已是法，并且只要它有任何一移，动就只有一种（`Becoming.withMove_determined_iff`）。在宇中，衡（平衡：水平的每次变化恰是所取与所与）恰是诸水平以取与为动而依取与之法而行（`Becoming.World.balances_iff_exchange`，由定义）。讀（AI，D23）：行动者之择不是展开之外的第二种因；外来之动所供给的，正是律所留开者。每个行都可读作整体中一体之历程，其动由与之相连的一个计步之钟形成（`Becoming.Run.withClock_restForms`，一个构造）；动在何处、由何而成，本条不导出。对照（定域，zhuang-qiwu-tian-lai）：「夫吹萬不同而使其自己也，咸其自取，怒者其誰邪」〔ZH1-S02〕：没有在整体之外的发动者，这一层相合；同段以「大塊」〔ZH1-S02〕为「噫氣」〔ZH1-S02〕之施动者，不取。\n\n**證**　`Becoming.withMove`、`Becoming.Run.ofWithMove_toWithMove`、`Becoming.withMove_open`、`Becoming.withMove_determined_iff`、`Becoming.World.balances_iff_exchange`、`Becoming.Run.withClock_restForms`；记录 [process-and-frame-as-readings](../results/records/process-and-frame-as-readings.md)、[where-a-move-is-formed](../results/records/where-a-move-is-formed.md)。\n\n### 一·六　法与自然之法\n\n**經**　法，一状一动所至不过一状之变也。自然之法，一历史所显之变，所许唯其所历之移也。凡历史皆其自然之法之行；凡变以一历史为行，恰当其含自然之法之每移：自然之法，以之为行者之最小者也。\n\n**說**　法（律，law，`Becoming.Determined` 所说之确定）是一状一动之后至多一个次状之变。历史在此是任何步步相继的状与动之列（Lean 中的 `g : Nat → S` 与 `m : Nat → A`），不须先有一个变来许它；它所显之变（`Becoming.Shown`）只许它实际经过的“状—动—状”，它总是这个变的行（`Becoming.Shown.run`，由定义），凡以它为行的变都含这些移（`Becoming.shown_le_iff`）。所以律从展开读出，不立于展开之上：先于历史而给出的律，比自然之法多出的只是未采之动，记录定不下它们（一·八）。讀（AI，D23、D32）：律与历史是一展开的两种读法，二者之差是记忆。名“法”取「法，所若而然也」〔MI1-S-JS〕（相合，mojing-fa）：依之而行则得其然，律与所然相互确定；但墨经之法是制作之前所持的模板，方向从法到所然，此处方向相反。“自然之法”取「人法地，地法天，天法道，道法自然」〔YD-LAO-BASE〕（相合，lao-25-dao-fa-zi-ran）：效法之链终于自己如此，没有展开之外的颁律者；取王弼注「在方而法方，在圆而法圆」〔DS01〕之义，法随所然，自然不作本原。\n\n**證**　`Becoming.Determined`、`Becoming.Shown`、`Becoming.Shown.run`、`Becoming.shown_le_iff`、`Becoming.Run.shown_le`；记录 [process-and-frame-as-readings](../results/records/process-and-frame-as-readings.md)、[histories-fix-law-up-to-dead-ends](../results/records/histories-fix-law-up-to-dead-ends.md)。\n\n### 一·七　自然之法何时为法\n\n**經**　自然之法为法，恰当其历史不以一动自一状至二状；有法以一历史为行，亦恰当此。凡法以一历史为行者，于其所显之每移，所至与自然之法同。\n\n**說**　历史一致（`Becoming.Consistent`）是说：它两次到同一状、采同一动时，下一状相同。恰在一致之处，自然之法确定（`Becoming.shown_determined_iff`），也恰在那里有某条法以这段历史为行（`Becoming.exists_law_iff`）；凡这样的法，在历史显出的每一移上都与自然之法给出同一结果（`Becoming.Shown.agrees`）。所以律不是任何一个状，却由历史确定到它所显的每一移。界在不一致处：那里没有法以之为行，只有不确定之变。对照（相合，jielao-de-dao-zhi-gong）：「今道雖不可得聞見，聖人執其見功以處見其形」〔CV1-S-JL〕：从功效读出不可见者，与律由历史确定相合；「聖人執其見功」〔CV1-S-JL〕的圣人中心不取。\n\n**證**　`Becoming.Consistent`、`Becoming.shown_determined_iff`、`Becoming.exists_law_iff`、`Becoming.Shown.agrees`；记录 [process-and-frame-as-readings](../results/records/process-and-frame-as-readings.md)。\n\n### 一·八　历史定法至于死路\n\n**經**　一族历史，为某变之行之全，恰当凡以族中所历之移相接而成者皆在族中。二变之行同，恰当其有行所经之移同；变之有移而无行经之者，历史不显。\n\n**說**　相接（拼接，splice）是把族中历史各自经过的移重新接成一列；含其全部拼接的族，正是某个变的行之全，而这族所显之变（`Becoming.ShownBy`）就是其一（`Becoming.family_iff`）。两个变许同样的行，恰当被某个行经过的移（`Becoming.live`）相同（`Becoming.same_histories_iff`）；变多于其行之处只是死路，即有移而无行经之（`Becoming.DeadEnd.no_history` 是一例），所以历史把律定到死路为止。对应不是同一：历史回到旧状时，它所显之法许一段它未走过的行（`Becoming.Splice.spliced`）；历史从不重回旧状时，所显之法只许它自己（`Becoming.Shown.runs_of_new`）；一个把自身历史记入状中的行，所显之法只许这一个行（`Becoming.Run.keepHistory_shown`），代价是这样的行永不复返（`Becoming.Law.withHistory_never_returns`，复之篇）。讀（AI，D32）：律从所在之处作答，不问怎样来到此处；拼接就是记忆之缺。对照（定域，zhuang-tianyun-ji）：「夫迹，履之所出，而迹豈履哉」〔ZH1-S14〕：迹不是所以迹，历史与律不是同一种东西，这一层相合；陈迹不得所以迹，只在死路处，及有限之往定不下下一步处成立（值不止一种时，任一有限之前段都有两列同此前段而下一值不同者，由此前段所推之下一值至少错其一，`Becoming.Learning.no_prefix_fixes_next`）。\n\n**證**　`Becoming.ShownBy`、`Becoming.family_iff`、`Becoming.live`、`Becoming.same_histories_iff`、`Becoming.DeadEnd.no_history`、`Becoming.Splice.spliced`、`Becoming.Shown.runs_of_new`、`Becoming.Run.keepHistory_shown`、`Becoming.Law.withHistory_never_returns`、`Becoming.Learning.no_prefix_fixes_next`；记录 [histories-fix-law-up-to-dead-ends](../results/records/histories-fix-law-up-to-dead-ends.md)、[process-and-frame-as-readings](../results/records/process-and-frame-as-readings.md)。\n\n### 一·九　宇\n\n**經**　宇，一类之物，步步有待网之状，步间有取与之动，许每移之变之行也。凡宇皆其自然之法之行，以此行读为宇，即其宇；凡行，状为待网之状、动为取与者，读为宇，其每步之待网之状即其状。宇衡，恰当其自然之法之每移皆合取与之法。\n\n**說**　宇（世界，world，`Becoming.World`）的定义就是一个行：其变许每一移（`Becoming.everyStep`），其状是待网之状，其动是取与；所以宇按其类型就是行，二者为一，由 `rfl`（`Becoming.World.run_world`、`Becoming.Run.world_webAt`）。取与之法是：每物在一移之后的水平加其所被取，等于之前的水平加其所被与；宇衡恰当它所显之法落在此法之内（`Becoming.World.balanced_iff_law`）。衡是一个条件，不随每宇而给出；计入其余后则每宇皆衡（一·十一）。名取「宇，彌異所也」〔MI1-S-JS〕之义（遍及异所），不带宇宙为实体之义；每个宇是一观，回到大化（一·十四）。讀（AI，D43）：宇加于其行者无有。对照（相合，lu-jiuyuan-dao-wai-wu-shi）：「道外无事事外无道」〔RU2-S-S18〕：律不在运行之外，运行也不在律之外。\n\n**證**　`Becoming.World`、`Becoming.World.run`、`Becoming.World.run_world`、`Becoming.Run.world_webAt`、`Becoming.World.balanced_iff_law`；记录 [worlds-are-runs](../results/records/worlds-are-runs.md)。\n\n### 一·十　待者与所待\n\n**經**　待者，物之待他而资之之角也；所待，物之为他所待之角也：一物而可兼二角。凡分待者、所待为二类之待网，皆可读为一类之物之待网，读之而成一宇，有待、不息、作皆如故。\n\n**說**　待者（形成，formation；新组合，待＋者）与所待（条件，condition）不是两类东西，而是同一物在一个依存中的两个位置：一宇的待网是一类之物的待网，同一物可此处为待者、彼处为所待。分为两类的写法总可嵌入一类：待者作为所待立于水平零、无物待之，所待从不活动、亦无所待（`Becoming.Web.roles`、`Becoming.Flow.roles`），嵌入后成一宇（`Becoming.World.ofRoles`），有待（活动则受支撑，`Becoming.Web.roles_dependent`）、不息（`Becoming.Web.roles_unceasing`）与作（`Becoming.Web.roles_arises`）都读得一样。但这只是类型的统一：嵌入之中没有一物兼有二角。兼有二角是一类之宇本身的事：在一个构造的例子里，蜂与花各只待对方，各自既是待者又是所待（`Becoming.Mutualism.apart`）；把所待重新标号后各待自身，而有待不变，可见哪个所待是哪个物，有待看不见（`Becoming.Mutualism.apart_relabelled`）。名取「吾有待而然者邪？吾所待，又有待而然者邪」〔ZH1-S02〕（定域，zhuang-qiwu-wang-liang-wen-jing）：依存之链是有的，而链有无首、所待是否又有所待，依存网的定义不作规定；原文只问不答。又「即此一法為他因時具斯六義，與他作果時即唯有二義」〔FO2-FQ〕（相合，fazang-yin-men-liu-yi）：同一法时而为因、时而为果。\n\n**證**　`Becoming.Web.roles`、`Becoming.Flow.roles`、`Becoming.World.ofRoles`、`Becoming.Web.roles_dependent`、`Becoming.Web.roles_unceasing`、`Becoming.Web.roles_arises`、`Becoming.Mutualism.apart`、`Becoming.Mutualism.apart_relabelled`；记录 [space-and-its-parts](../results/records/space-and-its-parts.md)、[life-as-condition-of-life](../results/records/life-as-condition-of-life.md)。\n\n### 一·十一　其余\n\n**經**　其余，兼中宇所不含者，计为一物，其取与由水平之变与宇中取与之差读出者也。计其余，凡宇皆衡，与者、取者皆活动，所取唯其所资。宇自衡，恰当计其余时其余每步皆不活动；宇之变化以水平读与以取与读，每步并行不悖，恰当宇衡；计其余，则每宇每步皆然。\n\n**說**　其余（整体的其余；新组合，其＋余）不是假定的另一实体：它的取与就是诸物水平之变与诸物取与之间的差，计为一个关系项（`Becoming.World.withRest`、`Becoming.Flow.withImbalance`，构造）。计入它之后每宇皆衡（`Becoming.World.withRest_balanced`），与取只出于活动者（`Becoming.Flow.readOff_acting`、`Becoming.Flow.readOff_taking`）；这几项由构造成立，对任何宇都对，所以本身不说明什么。有内容的是后两项：一宇自身的两种变化之读处处并行不悖，恰当它衡（`Becoming.Flow.changeReadings_glue_everywhere_iff`），衡又恰当其余从不活动（`Becoming.World.withRest_closed_iff`）；四项合为 `Becoming.World.unity`。于是原来作为前提的衡，成了一体之状态：其余是否闲置。其余之活动只是不衡之读，它不是发动者，名表“其余从不施动”只在此义下成立。对照（相合，huishi-da-yi）：「至大无外，謂之大一」〔MI1-S-HS〕：计入其余之后交换没有外面可去；“大一”只作对照，不立为名。相分（lao-6-xuan-pin）：「玄牝之门，是谓天地根。绵绵若存，用之不勤」〔YD-LAO-BASE〕立一个不死不竭之根，而其余随所列之物而定，不是固定之根，也没有一条律说它不竭。\n\n**證**　`Becoming.World.withRest`、`Becoming.Flow.withImbalance`、`Becoming.World.withRest_balanced`、`Becoming.Flow.readOff_acting`、`Becoming.Flow.readOff_taking`、`Becoming.World.withRest_closed_iff`、`Becoming.Flow.changeReadings_glue_everywhere_iff`、`Becoming.World.unity`；记录 [imbalance-as-relatum](../results/records/imbalance-as-relatum.md)、[premises-read-off-the-exchange](../results/records/premises-read-off-the-exchange.md)、[unity-of-readings](../results/records/unity-of-readings.md)。\n\n### 一·十二　诸宇\n\n**經**　诸宇，凡所表之宇之类也。无设之律，于诸宇之每宇皆然。有待、衡、耗、有形、蓄等七设，每设皆有宇合之、有宇不合之：设各划诸宇之一体。\n\n**說**　诸宇（空间，space；新组合，诸＋宇）兼成生与绝生，不先设变化为善：退化、终止与混合之变在同一展开中，不改名为生成。无设之律对每个如此表示之宇成立，其局部条件写在律中：例如在有穷而活动定然否（已定：或然或否）之宇中，作无尽复现恰当已无尽复现（`Becoming.World.arising_iff_ceasing`）；不加定然否而对每个有穷之宇要求此律，恰等价于排中律（`Becoming.World.law_iff_em`），所以定然否是这条律自己的条件，不是表示的承诺；物无穷时，作与已可各自复现而另一不复现（`Becoming.World.separate`），有穷是它的另一条件。设则不然：活动需要支持（有待）、衡、只有活动者与、只有活动者取且只取其所资、耗、有形、以蓄承活动，这七设每一设都有宇合之、有宇不合之（`Becoming.World.contingent`），所以它们是前提，不是律。讀（AI，D2、D43）：律属于整体，前提属于部分。对照（定域，xugua-ying-tian-di-wei-wan-wu）：「盈天地之間者，唯萬物」〔YD-OW-XG〕：只有一类关系项，这一层相合；序卦把天地放在万物之外作容器，而形式中没有容器。\n\n**證**　`Becoming.World`、`Becoming.World.contingent`、`Becoming.World.arising_iff_ceasing`、`Becoming.World.law_iff_em`、`Becoming.World.separate`；记录 [space-and-its-parts](../results/records/space-and-its-parts.md)、[map-of-premises](../results/records/map-of-premises.md)。\n\n### 一·十三　系辞与辞\n\n**經**　系辞，变而每状各系其所成之辞者也；辞，状之所成，或成或不成者也。沿一行，系辞为一宇：其物即辞，辞成即其物之活动，辞新成即其物之作。以状为辞，二行之宇活动处处相同，则二行步步之状相同。\n\n**說**　系辞（框架，frame，`Becoming.Frame`；新组合，取辞系于每个状，如系辞于卦，书名则加书名号作《系辞》以别）只在变之上加一事：每个状成立哪些辞（主张，claim）。沿一行读之，辞是一宇之物，活动恰在其成立之处（`Becoming.Frame.world`、`Becoming.Frame.world_active`，由定义），辞新成就是一物之作（`Becoming.Frame.arises_iff`），所以活动之律也是辞之律。以诸状本身为辞（`Becoming.Frame.configurations`），每个行都是一宇，而且宇定其行（`Becoming.Frame.world_fixes_run`）。代价是：辞之宇中无物立有水平、无物取与，所以从系辞读出的宇不保留动与水平。讀（AI，D23）：辞是关系项；认识也在展开之中，辞之成与毁服从与他物同样的律。名“系辞”“辞”取「系辞焉而明吉凶」〔DS02〕，不带占断。\n\n**證**　`Becoming.Frame`、`Becoming.Frame.world`、`Becoming.Frame.world_active`、`Becoming.Frame.arises_iff`、`Becoming.Frame.configurations`、`Becoming.Frame.world_fixes_run`；记录 [process-and-frame-as-readings](../results/records/process-and-frame-as-readings.md)。\n\n### 一·十四　观\n\n**經**　观，变、系辞、宇之总名也。凡宇皆其自然之法之行；凡法自一状之轨，皆其变之一行，而其变之行皆自起点之轨；系辞与诸语境之读，沿一行皆为一宇。\n\n**說**　观（视图，view）只指读法之所施：变读其移，系辞读其辞，宇读其水平与取与。每一观都回到展开：宇是其自然之法之行（`Becoming.World.run`），凡状为待网之状、动为取与之行都是一宇（`Becoming.Run.world`），一条法的轨道是其变之行（`Becoming.Law.run`），这变的每个行都是自其起点的轨道（`Becoming.Branching.law_run_state`），系辞之辞（`Becoming.Frame.world`）与语境中的读（`Becoming.Contextual.world`，一·十七）沿一行都是一宇。讀（AI，D23、D43）：形式之根是行，而行不是宇下的基底；变是把状分为律所定者与律所留开者的读法，系辞是经其辞而读的宇，没有哪一观是另一观的根据。不由此导出：每个变都是某宇之律（变之状未必是待网之状），诸读必相粘（衡是条件，不是所予）。观只指视图，不作读法之名，读法另名“读”。名取「观其会通」〔DS02〕。\n\n**證**　`Becoming.World.run`、`Becoming.Run.world`、`Becoming.Law.run`、`Becoming.Branching.law_run_state`、`Becoming.Frame.world`、`Becoming.Contextual.world`；记录 [worlds-are-runs](../results/records/worlds-are-runs.md)、[process-and-frame-as-readings](../results/records/process-and-frame-as-readings.md)。\n\n### 一·十五　状即其所以相关\n\n**經**　二状同，恰当有一关联连之：所关联者成同辞，一者每移，他者以同动移至所关联者。同之状，历同一串动之后所能成之辞皆同。一读为正名，恰当所并者相随而同，且凡同者皆并之；系辞于同中确定，则正名载一法。二系辞皆于同中确定，则二状同，恰当自二状可历之动串皆同，且历之后所能成之辞皆同。\n\n**說**　状（构形）就是它怎样相关：不问它叫什么，只问它成哪些辞、能以哪些动走到哪里。同（相同，互模拟，`Becoming.Alike`、`Becoming.Bisimulation`）是等价关系，作为关系来陈述，因为取商要用 `Quot.sound`；同之状在一串动之后所能成之辞相同（`Becoming.Alike.tests`）。“同中确定”是说一状以一动所至之诸状皆同；在两个系辞都如此之处，反之亦然（`Becoming.alike_iff_sameTests`），而分支未定之处，动串与辞定不下同（`Becoming.Choosing.not_alike`，一个构造的例子）。正名（有意义的描述）恰把同者并为一（`Becoming.identifiesAlike_iff`），在同中确定之处载一法（`Becoming.IdentifiesAlike.carries`）；给每个状一个名字并不就是正名：两个在每一关系上都相同的后继各起一名，不是按同去认（`Becoming.Twins.naming_not_identifiesAlike`）。讀（AI，D23）：状之名不携带任何东西，凡可知者，对同之状都相同。对照（相合，fazang-yuan-cheng-yi）：「所言一者，非自性一，緣成故」〔FO2-FQ〕：一由其关系而成。相分（jin-shizi-jin-xing-bu-bian）：「金性不變，故號圓成」〔FO2-KS-P〕把“金性”立为一个不随关系而定之性；形式中的状只是其所以相关，没有这样的性。\n\n**證**　`Becoming.Bisimulation`、`Becoming.Alike`、`Becoming.Alike.tests`、`Becoming.identifiesAlike_iff`、`Becoming.IdentifiesAlike.carries`、`Becoming.alike_iff_sameTests`、`Becoming.Choosing.not_alike`、`Becoming.Twins.naming_not_identifiesAlike`；记录 [configurations-alike-by-relation](../results/records/configurations-alike-by-relation.md)、[tests-fix-likeness-where-determined](../results/records/tests-fix-likeness-where-determined.md)。\n\n### 一·十六　分而述之失其关系\n\n**經**　凡兼分为二体，各记其所可而分述之，不增所无，恰当一体之所可与他体之所可任相配；否则所失恰为其关系，复见为多出之合。三体可相关，而其任二体皆无所关。\n\n**說**　二体之为一对，是由关系：它们能一同是什么，或怎样一同走下去。分述二体，只记每体自己能是什么，恰在整体呈“任相配”之形——一体之任一所可与他体之任一所可都能相配——时给回整体（`Becoming.Rectangular`、`Becoming.separation_faithful_iff`）；否则失去的恰是关系，它以原本不出现的组合重现：两个总是同行的体，分述后可以分道（`Becoming.separation_admits_extra`，例子）。三位奇偶是诸对给不回的整体：任两位可取任意值，三位不可（`Becoming.whole_not_in_pairs`，例子），所以三是整体持有一种任何部分都不持有之关系的最少之数。在一条法之下，一对是有意义的分：单取所立或单取所过，都不是正名（`Becoming.Motion.neither_alone`，一个构造的运动之例）。讀（AI，D33）：二以关系为对，诸成员从对中读出；对是最小的分，不是最小的关系。对照（相合，zhangzai-liang-bu-li-yi-bu-ke-jian）：「两不立则一不可见，一不可见则两之用息」〔RU2-S-S02〕：分化与统一相互需要。又（定域，lao-28-pu-san-wei-qi）：「朴散则为器，圣人用之，则为官长，故大制不割」〔YD-LAO-BASE〕：割裂失去关系，这一层相合；若读作先在未分之朴散为诸器，则是本原一层，不取。\n\n**證**　`Becoming.Rectangular`、`Becoming.Separated`、`Becoming.separation_faithful_iff`、`Becoming.separation_admits_extra`、`Becoming.whole_not_in_pairs`、`Becoming.Motion.neither_alone`；记录 [separation-loses-the-relation](../results/records/separation-loses-the-relation.md)、[the-split-that-makes-sense](../results/records/the-split-that-makes-sense.md)。\n\n### 一·十七　两行\n\n**經**　两行，诸读各于其语境而成，共成一宇也。沿一行，诸语境之辞各带其语境，皆为一宇之物，活动恰在其语境示之之处，不待并行不悖。每辞有一语境含之，则：有不依语境之系辞合之，恰当每状皆并行不悖；一状并行不悖，恰当凡共含一辞之二语境于此所示皆同。若诸语境之所可各只系其所含之辞，无一不依语境之读合乎诸语境之所可，且有一状守此所可，则无不依语境之系辞合之。\n\n**說**　两行（语境中的读法共成一个世界，`Becoming.Contextual.world`）是一般情形：凡读展开者都在某一语境中读，带着语境的诸辞总是一宇之物（`Becoming.Contextual.world_active`，由定义），不须先合为一。不依语境的描述是一个承诺，恰在诸读并行不悖之处成立（`Becoming.Contextual.fitsFree_iff`；并行不悖即拼合，其律 `Becoming.Contextual.glues_iff_agree`）；宇连同其衡就是这样一处，一宇的两种变化之读并行不悖恰当它衡（一·十一）。也有处处不能并行不悖的：Specker 的三盒，任开两盒恰有一盒有宝，没有一种放法合乎每一种开法（`Becoming.Specker.noGlobal`），于是没有不依语境的系辞合乎守此者之宇（`Becoming.Contextual.no_free_frame`），而以语境为索引的系辞总合（`Becoming.Contextual.indexed_fits`）；量子测量所示属于此类。语境各要求一奇偶时，不依语境的读法恰在没有语境之选相矛盾处存在（`Becoming.ParitySystem.glues_iff`）。讀（AI，D23、D33）：宇不是起点，是诸读相粘之处；以语境为索引的代价是，在两个语境中所示的一辞是两辞。对照（相合，zhuang-qiwu-liang-xing）：「是以聖人和之以是非，而休乎天均，是之謂兩行」〔ZH1-S02〕：彼此之是非各在其语境中成立而并行；「和之以是非」〔ZH1-S02〕「休乎天均」〔ZH1-S02〕是圣人的实践取向，形式只说何处并行不悖、何处不。又（相合，jin-shizi-yin-xian）：「謂金與師子同時成立，圓滿具足」〔FO2-KS-P〕：看金与看师子是同一状在两个语境中的读法，各自成立。\n\n**證**　`Becoming.Contextual.world`、`Becoming.Contextual.world_active`、`Becoming.Contextual.fitsFree_iff`、`Becoming.Contextual.glues_iff_agree`、`Becoming.Contextual.indexed_fits`、`Becoming.Contextual.no_free_frame`、`Becoming.Specker.noGlobal`、`Becoming.ParitySystem.glues_iff`；记录 [unity-of-readings](../results/records/unity-of-readings.md)、[claims-shown-in-context](../results/records/claims-shown-in-context.md)、[gluing-under-parity](../results/records/gluing-under-parity.md)。\n\n### 一·十八　步之先后\n\n**經**　凡取与各只改其所触之物，所改唯依其所触之物，且诸物有一表尽之：二取与之串，使每物之自身历程皆同者，自同一状至同一状；诸物之自身历程定其串，恰当每取与皆触一物，且每二取与或同一、或共触一物。同一诸历程之二交错所成之宇，物之水平某性，于此宇有一步有之，恰当于彼宇有一步有之；于此宇每步有之，恰当于彼宇每步有之。\n\n**說**　步之共同索引（一·二）是表示的承诺；本条说它在何处可从关系读出。取与局部作用时（`Becoming.Interleavings.LocalLaw`），每物所经者是其自身历程（`Becoming.Interleavings.LocalLaw.ownCourse`），步序只是这些历程的一个交错（`Becoming.Interleavings.LocalLaw.Interleaves`）；自身历程相同的两个交错到达同一状（`Becoming.Interleavings.LocalLaw.run_of_courses`），交错恰在每两个取与共触一物处被历程定下（`Becoming.Interleavings.LocalLaw.unique_iff`）。由同一诸历程的任两个交错所建之宇，经每物自身之步读出者皆同（`Becoming.Interleavings.LocalLaw.world_reads_alike`）：交错之选移动的是水平落在步序何处，不是物经过哪些水平、以何先后；而读一步之取与所不触之诸物的关系，则随交错而异（`Becoming.Interleavings.Pair.apart_differs`）。在一段之内，互换相邻而不相连之取与所能达到的重编号，恰是保持相连之取与之次序者（`Becoming.Footprinted.sorts_iff`）：显出来的只有变化的先后（步序）。讀（AI，D30、D43）：共同之步序是关系之读，不是其根；在每两个取与共触一物之处它是导出的，在别处它是表示的承诺，是关系所留开、诸状所不读的一个选择。未示：无尽之历程，连续之时，以及是否每一变化都有局部之法。\n\n**證**　`Becoming.Interleavings.LocalLaw.run_of_courses`、`Becoming.Interleavings.LocalLaw.unique_iff`、`Becoming.Interleavings.LocalLaw.world_reads_alike`、`Becoming.Interleavings.Pair.apart_differs`、`Becoming.Footprinted.sorts_iff`；记录 [the-step-index-from-own-courses](../results/records/the-step-index-from-own-courses.md)、[only-the-order-of-change-shows](../results/records/only-the-order-of-change-shows.md)、[the-world-an-interleaving-builds](../results/records/the-world-an-interleaving-builds.md)。\n\n#### 对照\n\n- 「不见其事，而见其功」〔RU2-S-XZ17〕——相合：交换从差别读出，计入其余则每宇皆衡；同句「阴阳大化」〔RU2-S-XZ17〕原为谓语，以之名展开是本编的约定（xunzi-tianlun-da-hua）。\n- 「道，行之而成；物，謂之而然」〔ZH1-S02〕——相合：律从运行读出，每段历史都是其自然之法之行（zhuang-qiwu-dao-xing-zhi-er-cheng）。\n- 「法，所若而然也」〔MI1-S-JS〕——相合：律与所然相互确定；墨经之法在制作之前，方向与此相反（mojing-fa）。\n- 「夫迹，履之所出，而迹豈履哉」〔ZH1-S14〕——定域：历史与律不是同一种东西；历史定律至于死路，有限之前段定不下下一步（`Becoming.Learning.no_prefix_fixes_next`；zhuang-tianyun-ji）。\n- 「是之謂兩行」〔ZH1-S02〕——相合：诸读各于其语境成立而共成一宇，不依语境之读只在并行不悖处（zhuang-qiwu-liang-xing）。\n- 「至大无外，謂之大一」〔MI1-S-HS〕——相合：计入其余，交换无外；大一不立为名（huishi-da-yi）。\n- 「有物混成，先天地生」〔YD-LAO-BASE〕——相分：本原一层；律不先于行，整体靠部分不息之作而久，不独立不改（lao-25-you-wu-hun-cheng）。\n- 「故明于天人之分，则可谓至人矣」〔RU2-S-XZ17〕——相分：先分两个职分再相参的二元框架；形式中“分”只是动作归属的一种读法（xunzi-tianlun-tian-ren-zhi-fen）。\n",
+ "declarations": [
+  "Becoming.WebAt",
+  "Becoming.Exchange",
+  "Becoming.World",
+  "Becoming.World.of",
+  "Becoming.Web",
+  "Becoming.World.move",
+  "Generative.Process",
+  "Becoming.withMove_open",
+  "Becoming.Run",
+  "Becoming.Run.window_trace",
+  "Generative.Trace",
+  "Becoming.Web.change_readings",
+  "Iff.rfl",
+  "Becoming.Web.significance_undetermined",
+  "Becoming.ComesToBe",
+  "Becoming.CeasesToBe",
+  "Becoming.withMove",
+  "Becoming.Run.ofWithMove_toWithMove",
+  "Becoming.withMove_determined_iff",
+  "Becoming.World.balances_iff_exchange",
+  "Becoming.Run.withClock_restForms",
+  "Becoming.Determined",
+  "Becoming.Shown",
+  "Becoming.Shown.run",
+  "Becoming.shown_le_iff",
+  "Becoming.Run.shown_le",
+  "Becoming.Consistent",
+  "Becoming.shown_determined_iff",
+  "Becoming.exists_law_iff",
+  "Becoming.Shown.agrees",
+  "Becoming.ShownBy",
+  "Becoming.family_iff",
+  "Becoming.live",
+  "Becoming.same_histories_iff",
+  "Becoming.DeadEnd.no_history",
+  "Becoming.Splice.spliced",
+  "Becoming.Shown.runs_of_new",
+  "Becoming.Run.keepHistory_shown",
+  "Becoming.Law.withHistory_never_returns",
+  "Becoming.Learning.no_prefix_fixes_next",
+  "Becoming.everyStep",
+  "rfl",
+  "Becoming.World.run_world",
+  "Becoming.Run.world_webAt",
+  "Becoming.World.balanced_iff_law",
+  "Becoming.World.run",
+  "Becoming.Web.roles",
+  "Becoming.Flow.roles",
+  "Becoming.World.ofRoles",
+  "Becoming.Web.roles_dependent",
+  "Becoming.Web.roles_unceasing",
+  "Becoming.Web.roles_arises",
+  "Becoming.Mutualism.apart",
+  "Becoming.Mutualism.apart_relabelled",
+  "Becoming.World.withRest",
+  "Becoming.Flow.withImbalance",
+  "Becoming.World.withRest_balanced",
+  "Becoming.Flow.readOff_acting",
+  "Becoming.Flow.readOff_taking",
+  "Becoming.Flow.changeReadings_glue_everywhere_iff",
+  "Becoming.World.withRest_closed_iff",
+  "Becoming.World.unity",
+  "Becoming.World.arising_iff_ceasing",
+  "Becoming.World.law_iff_em",
+  "Becoming.World.separate",
+  "Becoming.World.contingent",
+  "Becoming.Frame",
+  "Becoming.Frame.world",
+  "Becoming.Frame.world_active",
+  "Becoming.Frame.arises_iff",
+  "Becoming.Frame.configurations",
+  "Becoming.Frame.world_fixes_run",
+  "Becoming.Run.world",
+  "Becoming.Law.run",
+  "Becoming.Branching.law_run_state",
+  "Becoming.Contextual.world",
+  "Becoming.Alike",
+  "Becoming.Bisimulation",
+  "Quot.sound",
+  "Becoming.Alike.tests",
+  "Becoming.alike_iff_sameTests",
+  "Becoming.Choosing.not_alike",
+  "Becoming.identifiesAlike_iff",
+  "Becoming.IdentifiesAlike.carries",
+  "Becoming.Twins.naming_not_identifiesAlike",
+  "Becoming.Rectangular",
+  "Becoming.separation_faithful_iff",
+  "Becoming.separation_admits_extra",
+  "Becoming.whole_not_in_pairs",
+  "Becoming.Motion.neither_alone",
+  "Becoming.Separated",
+  "Becoming.Contextual.world_active",
+  "Becoming.Contextual.fitsFree_iff",
+  "Becoming.Contextual.glues_iff_agree",
+  "Becoming.Specker.noGlobal",
+  "Becoming.Contextual.no_free_frame",
+  "Becoming.Contextual.indexed_fits",
+  "Becoming.ParitySystem.glues_iff",
+  "Becoming.Interleavings.LocalLaw",
+  "Becoming.Interleavings.LocalLaw.ownCourse",
+  "Becoming.Interleavings.LocalLaw.Interleaves",
+  "Becoming.Interleavings.LocalLaw.run_of_courses",
+  "Becoming.Interleavings.LocalLaw.unique_iff",
+  "Becoming.Interleavings.LocalLaw.world_reads_alike",
+  "Becoming.Interleavings.Pair.apart_differs",
+  "Becoming.Footprinted.sorts_iff"
+ ],
+ "records": [
+  "claims-shown-in-context",
+  "coming-and-ceasing-keep-pace",
+  "configurations-alike-by-relation",
+  "continuation-condition-yields-living-significance",
+  "gluing-under-parity",
+  "histories-fix-law-up-to-dead-ends",
+  "imbalance-as-relatum",
+  "life-as-condition-of-life",
+  "map-of-premises",
+  "only-the-order-of-change-shows",
+  "premises-read-off-the-exchange",
+  "process-and-frame-as-readings",
+  "separation-loses-the-relation",
+  "space-and-its-parts",
+  "tests-fix-likeness-where-determined",
+  "the-split-that-makes-sense",
+  "the-step-index-from-own-courses",
+  "the-world-an-interleaving-builds",
+  "unity-of-readings",
+  "where-a-move-is-formed",
+  "worlds-are-runs"
+ ],
+ "quotes": [
+  {
+   "text": "列星随旋，日月递炤，四时代御，阴阳大化，风雨博施",
+   "source_id": "RU2-S-XZ17"
+  },
+  {
+   "text": "不见其事，而见其功",
+   "source_id": "RU2-S-XZ17"
+  },
+  {
+   "text": "天地與其所產焉，物也",
+   "source_id": "MI1-S-G6"
+  },
+  {
+   "text": "動，或徙也",
+   "source_id": "MI1-S-JS"
+  },
+  {
+   "text": "状变而实无别而为异者，谓之化",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "化而裁之谓之变",
+   "source_id": "DS02"
+  },
+  {
+   "text": "道，行之而成",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "刚柔相推而生变化",
+   "source_id": "DS02"
+  },
+  {
+   "text": "继之者善也，成之者性也",
+   "source_id": "DS02"
+  },
+  {
+   "text": "夫吹萬不同而使其自己也，咸其自取，怒者其誰邪",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "大塊",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "噫氣",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "法，所若而然也",
+   "source_id": "MI1-S-JS"
+  },
+  {
+   "text": "人法地，地法天，天法道，道法自然",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "在方而法方，在圆而法圆",
+   "source_id": "DS01"
+  },
+  {
+   "text": "今道雖不可得聞見，聖人執其見功以處見其形",
+   "source_id": "CV1-S-JL"
+  },
+  {
+   "text": "聖人執其見功",
+   "source_id": "CV1-S-JL"
+  },
+  {
+   "text": "夫迹，履之所出，而迹豈履哉",
+   "source_id": "ZH1-S14"
+  },
+  {
+   "text": "宇，彌異所也",
+   "source_id": "MI1-S-JS"
+  },
+  {
+   "text": "道外无事事外无道",
+   "source_id": "RU2-S-S18"
+  },
+  {
+   "text": "吾有待而然者邪？吾所待，又有待而然者邪",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "即此一法為他因時具斯六義，與他作果時即唯有二義",
+   "source_id": "FO2-FQ"
+  },
+  {
+   "text": "至大无外，謂之大一",
+   "source_id": "MI1-S-HS"
+  },
+  {
+   "text": "玄牝之门，是谓天地根。绵绵若存，用之不勤",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "盈天地之間者，唯萬物",
+   "source_id": "YD-OW-XG"
+  },
+  {
+   "text": "系辞焉而明吉凶",
+   "source_id": "DS02"
+  },
+  {
+   "text": "观其会通",
+   "source_id": "DS02"
+  },
+  {
+   "text": "所言一者，非自性一，緣成故",
+   "source_id": "FO2-FQ"
+  },
+  {
+   "text": "金性不變，故號圓成",
+   "source_id": "FO2-KS-P"
+  },
+  {
+   "text": "两不立则一不可见，一不可见则两之用息",
+   "source_id": "RU2-S-S02"
+  },
+  {
+   "text": "朴散则为器，圣人用之，则为官长，故大制不割",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "是以聖人和之以是非，而休乎天均，是之謂兩行",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "和之以是非",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "休乎天均",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "謂金與師子同時成立，圓滿具足",
+   "source_id": "FO2-KS-P"
+  },
+  {
+   "text": "阴阳大化",
+   "source_id": "RU2-S-XZ17"
+  },
+  {
+   "text": "道，行之而成；物，謂之而然",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "是之謂兩行",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "有物混成，先天地生",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "故明于天人之分，则可谓至人矣",
+   "source_id": "RU2-S-XZ17"
+  }
+ ],
+ "missing_names": [
+  {
+   "concept": "level (amount a relatum holds)",
+   "used": "水平"
+  },
+  {
+   "concept": "activity / active",
+   "used": "活动"
+  },
+  {
+   "concept": "need (amount required)",
+   "used": "所需、所需之量"
+  },
+  {
+   "concept": "history (any sequence of configurations and moves, g : Nat → S, m : Nat → A)",
+   "used": "历史"
+  },
+  {
+   "concept": "Determined (a determined process)",
+   "used": "确定（法之所说），written 法为确定之变"
+  },
+  {
+   "concept": "Consistent (a history never takes one move at one configuration to two outcomes)",
+   "used": "一致"
+  },
+  {
+   "concept": "splice",
+   "used": "相接（拼接）"
+  },
+  {
+   "concept": "dead end / live steps (Becoming.DeadEnd, Becoming.live)",
+   "used": "死路；有行所经之移"
+  },
+  {
+   "concept": "context (Contextual)",
+   "used": "语境"
+  },
+  {
+   "concept": "context-free frame",
+   "used": "不依语境之系辞"
+  },
+  {
+   "concept": "exchange law (level change = taken minus given)",
+   "used": "取与之法"
+  },
+  {
+   "concept": "own course (Interleavings.LocalLaw.ownCourse)",
+   "used": "自身历程"
+  },
+  {
+   "concept": "interleaving (Interleavings.LocalLaw.Interleaves)",
+   "used": "交错"
+  },
+  {
+   "concept": "renumbering (permutation reached by adjacent swaps, Footprinted.sorts_iff)",
+   "used": "重编号"
+  },
+  {
+   "concept": "Rectangular (every part-possibility pairs with every other)",
+   "used": "任相配"
+  },
+  {
+   "concept": "Acting and Taking premises (only active relata give; only active relata take and only what they draw on)",
+   "used": "只有活动者与；只有活动者取且只取其所资"
+  },
+  {
+   "concept": "test / SameTests (claims realizable after a sequence of moves)",
+   "used": "历一串动之后所能成之辞 (avoiding 验, which names Web.Excludes)"
+  },
+  {
+   "concept": "finite window of a run (Run.window, Trace)",
+   "used": "有限之段，该变所许的一串移 (迹 is a symbol not adopted)"
+  },
+  {
+   "concept": "kept history (keepHistory / withHistory)",
+   "used": "把自身历史记入状中的行"
+  },
+  {
+   "concept": "prefix / predictor (Learning.prefixOf, pred)",
+   "used": "有限之前段；由此前段所推之下一值"
+  }
+ ],
+ "open": "1. 大化 has no Lean object. Its 經 is a stipulation that the formal views (Process, Frame, World, Contextual) read one unfolding (D23, D43); no theorem states that unity. Whether the whole is deductively necessary is open (chapter §8.1).\n\n2. 其余 has two senses in the name table: World.withRest here, and the rest of the whole in move formation (Run.withClock_restForms). The table note 「其余从不施动」 holds only in the withRest sense, as the cell (一·十一) says.\n\n3. 自然之法 contains 法 but names the shown process (Becoming.Shown). That process is a 法 (Determined) only where the history is Consistent (一·七), so the name reads more strongly than its object outside that case.\n\n4. Three anchors are not contentful theorems.\n   - 法 is anchored on `Law`, which is a namespace; here 法 is cited through Becoming.Determined.\n   - 两行 is anchored on Contextual.world, a definition; its contentful laws are fitsFree_iff and glues_iff_agree. glues_iff_agree also anchors 并行不悖, so the two names share one law.\n   - World.run_world, Run.world_webAt and Web.change_readings hold by rfl or Iff.rfl. They are identifications by definition, not substantive laws.\n\n5. The step index (一·十八) is derived only for local exchanges, with relata listed by a finite table, and only for finite stretches. Not represented: courses without end, continuous time, and runs without beginning or end (the BiRun reading of 「无始无終」). Whether every becoming has a local law is open (chapter §8.5).\n\n6. Several cited results are constructed examples, not laws over every world: Mutualism.apart / apart_relabelled, Choosing.not_alike, Twins.naming_not_identifiesAlike, separation_admits_extra, whole_not_in_pairs, Motion.neither_alone, Specker.noGlobal and Run.withClock_restForms. The text marks each as 例子 or 构造.\n\n7. The name source of 宇 (「宇，彌異所也」) is filed among C17's entries, not C01's. It is cited here for the name only.\n\n8. The 相分 against 「继之者善也」 rests on Web.significance_undetermined, which shows only that dependence structure alone fixes no valuation.\n   - The continuation condition is stated in its 篇, not asserted. It fixes scope and orders nothing; any ordering lies in C (以广为愈) alone.\n   - This 篇 uses neither, and no ethical claim is made here.\n\n9. 讀（AI，D2、D43） in 一·十二 cites D2 together with D43. If D2 has since been revised, the citation should be re-pointed.\n\n10. The step index by natural numbers, the discrete steps, natural-number amounts and Prop-valued activity are modelling commitments. The empty axiom report does not cover them."
+}

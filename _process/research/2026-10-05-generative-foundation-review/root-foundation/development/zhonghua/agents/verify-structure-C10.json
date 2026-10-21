@@ -1,0 +1,577 @@
+{
+ "cluster": "C10",
+ "lens": "STRUCTURE",
+ "names": [
+  {
+   "concept": "耦合（一个形成以阈或以水平耦合入一个条件）/ coupling, couples into",
+   "name": "感",
+   "verdict": "revise",
+   "issues": "（1）concept 把方向写反了。glossary 与 Lean 都是“一个条件耦合入一个形成”：Web.CoupledInto obs g c := W.DependsOn g c ∨ obs g c，条件 c 耦合入形成 g。（2）古典“感”兼含“动”。程颐「感，動也，有感必有應」把感与动、应合为一，而理论正要把二者分开：耦合界定回应，但不固定回应（ExchangeLaw.response_not_fixed_by_coupling）。所以这句只能放进 not_carried，不能作正面用例。（3）阈与水平两种方式没有古典上的分别，属于约定。（4）咸彖「二氣感應以相與」与荀子「精合感应」只证明“感应”二字并称，不证明“感於”的方向。fit 所引“觀其所感而情可見”也不是冻结文本原文，中间脱了“，而天地萬物之”。（5）形成与形成之间的感（h 与耦合入 g 的条件交换）在 Lean 中是 Flow.CoupledFrom，fit 没有写明。",
+   "fix": "concept 改为“一个条件以阈（需是否满足）或以水平（obs）耦合入一个形成 / a condition couples into a formation”。主用例换成方向明确的几条：「感於物而動」与「夫物之感人無窮」（《樂記》，礼记篇，秦汉成书，由戴震《孟子字義疏證》引，RU2-S-V3Q01，清）；「人心虛故物能感之」（程颐《伊川易传》中孚大象，YD-CY4，宋）；杨倞注「外物所感者也」（RU2-S-XZ08，唐注层）。其中「感於物而動」把感与动分在先后，可作“感（耦合）在先、动（回应）在后”的佐证。「感，動也，有感必有應」移入 not_carried，注明不承载“感即动”和“感必应”。fit 注明“阈与水平二式是本理论的约定”，并补一句：形成之间 h 感 g 即 Flow.CoupledFrom W obs g h。lean 增 Becoming.Flow.CoupledFrom 与 Becoming.Web.DependsOn。"
+  },
+  {
+   "concept": "回应（一个交换回应一个水平）/ response, responds to",
+   "name": "应",
+   "verdict": "keep",
+   "issues": "与 §10 对照表中 Ren 的标记“应”一致（ExchangeLaw.RespondsTo；耦合界定回应而不固定回应）。三条用例都属先秦层，刻意为外篇、年代有争议，mapper 已注明。爻之正应、报应、应当都已列入 not_carried。未见结构问题。"
+  },
+  {
+   "concept": "供给闭包 / feeding closure",
+   "name": "所资",
+   "verdict": "revise",
+   "issues": "（1）「萬物資始」中万物所资的是乾元，属于先在根据一层，结构与供给闭包不同。（2）苏辙「道方無名則物之所資始也」在 not_carried 中已被判为先在根据，却仍列为用例，前后矛盾。（3）“所资”的古典义是单步的“所取资者”，对应 Flow.FedBy（h 给予 g 所需的条件）；而本概念是闭包 Flow.WithinFeeding。fit 用“所资之所资，逐环封闭”把闭包义读进单词里，单步关系与闭包没有分开。",
+   "fix": "删去上面两条用例，或移入 not_carried。改以戴震为主用例：「所資以養者之氣」与「所資雖在外，能化為血氣以益其內」（RU2-S-V3Q01，清）；后一句给出“由外给予、进入其所需”的方向。pre_qin 仍为 false，置信度 medium。名分两层：“所资”只名单步 Flow.FedBy；闭包写作“所资闭包”，或用整合者为四个“所X”统一的闭包标记。lean 首列 Becoming.Flow.FedBy，其后列 Becoming.Flow.WithinFeeding、Becoming.Flow.beyond_gives_nothing。"
+  },
+  {
+   "concept": "影响闭包（可影响一个形成者，对“被影响”封闭）/ influence closure",
+   "name": "所待",
+   "verdict": "revise",
+   "issues": "（1）用例「彼且惡乎待哉」说的是逍遥游的“无待”理想，正是理论所否认的：每个形成都有它的影响闭包。这句不能作正面用例。（2）fit 把「惡識所以然」对到 Flow.Balances.uncoupled_beyond_influence，不对。景所待的形就在它的影响闭包之内。“不识所以然”的结构是：只按阈耦合入的条件只传出需是否满足，不传出水平（Web.alike_of_threshold、Flow.subthreshold_alike）；这与“闭包之外”无关。（3）单步关系（Flow.AffectedBy，或 W.DependsOn）与闭包（Flow.WithinInfluence）没有分开。",
+   "fix": "以「此雖免乎行，猶有所待者也」（ZH1-S01，脉络 ZH1-C01-R-05，先秦内篇）替换「彼且惡乎待哉」，后者移入 not_carried。fit 改为：“「惡識所以然」：所待者只按阈耦合入时，只传出需是否满足，不传出水平（Web.alike_of_threshold、Flow.subthreshold_alike）”。“所待”只名单步 AffectedBy，闭包采用与“所资”相同的统一标记。lean 增 Becoming.Web.alike_of_threshold 与 Becoming.Flow.subthreshold_alike。"
+  },
+  {
+   "concept": "耦合闭包 / coupling closure",
+   "name": "所感",
+   "verdict": "revise",
+   "issues": "（1）方向相反。Flow.WithinCoupling f 是逆向闭包：经“耦合入 f 者”而能影响 f 的形成（Flow.CoupledFrom g h：h 与耦合入 g 的条件交换）。两条用例中的“所感”却都是前向的。咸彖“其所感”承上文“天地感而萬物化生，聖人感人心”，指天地、圣人所感动者。程颐「夫貞一則所感無不通」，以及同段「夫以思慮之私心感物，所感狹矣」，说的都是以心感物所达到的范围。用例与概念方向相反。（2）fit 说“只有观察能加宽它”，不确切（glossary 原句也有同样的缺陷）。Lean 证明的是：闭包含影响闭包（withinCoupling_of_withinInfluence）；只按阈耦合时二者相等（withinCoupling_thresholdOnly）；闭包随水平耦合增大（withinCoupling_mono_obs），也随交换增大（withinCoupling_mono_flow）。“只有观察”只在同一流、同一依存之下、相对于影响闭包而言才成立。（3）“所感”要与“感”的受控方向（X 感於 Y）一致才能组合，fit 没有写明这一点。",
+   "fix": "写明受控义：“所感 = 其所感於者，即经耦合入它者而能影响它的形成”。方向证据改用「感於物而動」（RU2-S-V3Q01 引《樂記》）与「人心虛故物能感之」（YD-CY4）。「因案人之所感」（ZH1-S04，人間世）可作“所感”复词的先秦用例，但其方向须据注疏核定，脉络中没有此处的读法。咸彖与程颐的前向用法移入 not_carried。在找到逆向的“所感”复词用例之前，confidence 降为 low。fit 改为：“含所待；只按阈耦合时等于所待（withinCoupling_thresholdOnly）；超出所待的部分只经水平耦合而来（withinCoupling_mono_obs），闭包也随交换增大（withinCoupling_mono_flow）”。lean 增 Becoming.Flow.CoupledFrom（单步）、Becoming.Flow.withinCoupling_mono_obs、Becoming.Flow.withinCoupling_mono_flow。如果整合者要求名本身显出方向，就改用“感於”系的组成名。"
+  },
+  {
+   "concept": "所及闭包；一个部分之所及 / reach closure, what a part reaches",
+   "name": "所及",
+   "verdict": "revise",
+   "issues": "（1）concept 把 glossary 的两行合成了一行。一行是 reach closure（Flow.WithinReach，对 Flow.Affects 封闭的闭包）；另一行是 what a part reaches（部分所及：Flow.Reaches、Flow.ReachesBefore、Flow.Balances.comparison_within_reach），后者是单步、逐步、以部分为主语的关系。lean 只列了前者。（2）course 所引张载“物有未體則心為有外”不是冻结文本原文，RU2-S-S04 作「物有未体，则心为有外」。（3）“前向而有中心”中的“有中心”容易读成单一中心，而 Lean 中只是以 f 为种子的闭包。（4）用例的方向正确：荀子王制「职而不通，则职之所不及者必队」、程颐「思之所及者有能感而動」都是前向。",
+   "fix": "拆成两名，或一名而明列两义。“所及”名单步或部分的所及：Flow.Reaches、Flow.ReachesBefore；又 Flow.reaches_withinReach：部分成员都在 f 的所及闭包之内时，部分所及者也在其内。“所及闭包”名 Flow.WithinReach。lean 增 Becoming.Flow.Reaches、Becoming.Flow.ReachesBefore、Becoming.Flow.reaches_withinReach、Becoming.Flow.Balances.comparison_within_reach（record comparison-within-reach）。course 改引「物有未体，则心为有外」。“前向而有中心”改为“前向，以一个形成为种子”。"
+  },
+  {
+   "concept": "回应所及（两个流之间，部分在“经所耦合入者而被影响”下的闭包）/ responsive reach",
+   "name": "感应所及",
+   "verdict": "keep",
+   "issues": "构造与 Flow.WithinResponse、Flow.withinResponse_iff_coupling 一致。二程「所应复为感，所感复有应」正是这种逐环的构造。荀子「精合感应」只证明“感应”是一个合词，不承载回应所及的结构，但这不影响名的成立。",
+   "fix": "可选：把「精合感应」的 sense_in_context 标为“仅为合词用例”。"
+  },
+  {
+   "concept": "选择（对水平历史的保持、奖赏、复制或训练所向）/ selection",
+   "name": "择",
+   "verdict": "revise",
+   "issues": "（1）「選則不徧」证明的是“选”，不是“择”。mapper 自己又以“选”带等级义为由弃用了“选”，用例与名不一致。（2）两条“择”的用例（「情然而心为之择谓之虑」「擇乎中庸」）都是心在诸选项之间取舍，结构是经一个选项模型的选择（Learning.selects_right_through，record selection-through-a-model-of-the-options）。这只是 Web.SelectsThrough（对水平历史的任何保持、奖赏、复制、训练）的特例。理论中的选择不需要取舍者，“择”的核心义却带取舍者，所以用“择”名一般的选择是收窄了义，需要写明。（3）glossary 中有两行“selection（选择）”：一行锚在 Web.SelectsThrough，另一行锚在 unsupported_childless、selected（只有受支持者留下后代）。一名两义，mapper 未处理。",
+   "fix": "删去「選則不徧」，或把它改为“选”的平行用例，并注明其结构“有所选即有所遗”。两条“择”用例的 lean 改挂 Becoming.Learning.selects_right_through。fit 写明：以“择”名 Web.SelectsThrough，是把取舍义扩展到没有取舍者的选择，是使用者之间的约定（CrossSituational.stands_iff 意义上），名不承载择者。请整合者在 C10 与 C12 之间定下一名一义：glossary 的两行“选择”是同名还是分名。"
+  },
+  {
+   "concept": "经耦合的选择（选择者之耦合无别的历史被选得相同）/ selection through the couplings",
+   "name": "缘感而择",
+   "verdict": "revise",
+   "issues": "（1）glossary 中 Web.SelectsThrough 已是已采用名“识”的锚（识：A formation's own further course, factoring through the lumping its couplings make（D45），锚 Web.SelectsThrough）。再立“缘感而择”挂同一声明，违反一概念一名。mapper 称本名是识的“选择一例”，但两者锚点完全相同，没有可检验的差别。（2）正名「何缘而以同异？曰：缘天官」讲的是制名时同异所依据的东西，下文接「故比方之疑似而通，是所以共其约名以相期也」。这在结构上连到约定俗成（Becoming.SharedCodes，已采用名），不是一般的选择。（3）“缘”的佛典义（因缘、所缘）很强，用它组成的名容易混淆。",
+   "fix": "不另立名。Web.SelectsThrough 用“识”。如果须专指选择，就用以“识”组成的名（例如“识择”，即经识的择），并注明与“识”同锚。正名这条用例改挂“识”，另外连到约定俗成：Becoming.SharedCodes.reads_iff，record a-code-formed-between-formations。"
+  },
+  {
+   "concept": "选择的缺口（所及闭包减去耦合闭包）/ the gap of selection",
+   "name": "及而不感",
+   "verdict": "revise",
+   "issues": "（1）缺口是两个位置之差：候选者的所及闭包减去选择者的耦合闭包（glossary gap 行）。“及而不感”读起来是同一个主语，只在候选者就是选择者时才精确，即自身行为的情形（Flow.act_unselected）。（2）名依赖“所感”的方向；“所感”修正之前，本名不能成立。（3）glossary 的锚还含 Clearing.unselected、Clearing.selected_pooled、Diversion.favours，mapper 未列。",
+   "fix": "定义写作“彼之所及而此之所不感（候选者所及闭包减去选择者耦合闭包）”，并注明同一主语的读法只适用于自身行为的缺口。本名随“所感”一同修正。lean 补 Becoming.Clearing.unselected 与 Becoming.Clearing.selected_pooled。荀子君道一例（人主之守司对耳目之明）恰是同一主语，可以保留，并注明这一点。"
+  },
+  {
+   "concept": "位置之不见（选择在其耦合闭包之外所不能到达；§7.2 定律一）/ what a selection cannot reach from its position",
+   "name": "蔽",
+   "verdict": "revise",
+   "issues": "（1）理论明言“位置不是缺陷”（§7.2 读法）。两条用例却都带理论不承认的“缺陷、可除”义，所以 confidence high 不成立。荀子之蔽是「心术之公患」，可以经「虚壹而静，谓之大清明。万物莫形而不见」而解除（RU2-S-XZ21）。戴震之蔽是“知之失”：「自以為得理，而所執之實謬，乃蔽而不明」，即一个错误的模型（Stationary.model_error），是缺陷，不是位置之盲。（2）fit 中“两个耦合不同者各有对方无别而自己分开者，此即相为”不是定理。Web.pool_adds 是单向的：某成员不分而池分。两成员的耦合可以比较时，只有一方分得更多；“相为”只在耦合不可比较时成立。（3）说戴震的私、蔽二分与理论的蔽、无明二分“同构”，言之过度。私是欲之失（欲不能遂人之欲），不是锁定于不能安顿之目标的求。（4）解蔽「欲为蔽，恶为蔽」是偏于一侧的归并（Learning.selects_not_right_of_parted），属于模型，不属于位置。（5）course 所引陆九渊“蒙蔽移夺”是脉络关系的标题，不是原文。",
+   "fix": "名改为与“所感”组成的中性名“所不感”，指耦合闭包之外者（Flow.unselected_beyond_coupling）。“蔽”降为古典对应，判为定域兼相分：荀子“莫不相为蔽”在诸位置的耦合不可比较时成立；“大清明”之可除与理论相分，因为合用只把边界移到池的边界（Flow.unselected_beyond_pool），并不消除它。戴震之蔽改挂 Becoming.Stationary.model_error。删去把“相为”说成定理的话。confidence 降为 low。陆九渊改引原文「有所𮐃蔽有所移夺有所陷溺」（RU2-S-S16），或去掉引号。"
+  },
+  {
+   "concept": "无明（使求锁定于不能安顿之目标的不见；§7.2 读法，D45）",
+   "name": "无明",
+   "verdict": "revise",
+   "issues": "（1）concept 描述错了。glossary 的定义是：无明是“锁定于不能安顿之目标的求”（seeking locked onto a target that cannot rest）。§7.2 读法：“The position is not a defect; 无明 is the seeking it leaves locked.” 无明是那个求，不是使求锁定的“不见”；mapper 的写法会把位置（不见）重新读成无明，而这正是 D45 所排除的。（2）「無明住地」在 not_carried 中已被判为形上之根、“唯如来能断”，却仍作用例，前后矛盾。（3）古典的无明是“不知”（杂阿含「云何無明？若不知前際、不知後際」），而理论的无明在缘起链中对应由无明所缘起的爱、取之求，义有移动，fit 没有写明。（4）中论「以如實見故，則無明滅」只证明“见则灭”，不证明锁定之求的结构。",
+   "fix": "concept 改为“无明：锁定于不能安顿之目标的求（位置本身不是无明；§7.2 读法，D45）”。主用例改用中论第二十六品：颂「以因三受故，而生於渴愛。因愛有四取，因取故有有」，青目释「凡夫為無明所盲故，以身口意業，為後身起六趣諸行」（FO1-S-MMK，脉络 FO1-R-M26-06、FO1-R-M26-07；龙树颂、青目释，后秦鸠摩罗什译，属魏晋南北朝层，印度论释传统）。「無明住地」移入 not_carried。fit 写明：理论以“无明”名“不见”所留下的锁定之求（爱、取），比古典的“不知”移了一步，这是约定（D26、D45）。lean 增 Becoming.Law.aboveAll_never_rests（§7.2 第七律）。"
+  },
+  {
+   "concept": "明（加到选择上的、到达支持所不标出者的耦合；§7.3）",
+   "name": "明",
+   "verdict": "revise",
+   "issues": "（1）论语「浸潤之譖，膚受之愬，不行焉，可謂明也已矣」只给出否定的一半。一条什么都不交换的律也满足“不行”：它经一切耦合读取（ExchangeLaw.zero_through），而理论不称之为明，因为明要求一条耦合加到选择上，到达支持所不标出者。（2）韩非「人主以一國目視」与荀子「兼聽齊明」中的明，都以人主为所归的中心。not_carried 只列了“明君、明主作为位分之称”，没有列中心之合用。（3）course 所引戴震“无欲亦愚”不是冻结文本原文。",
+   "fix": "论语用例的 sense_in_context 改为“只给否定条件：喂入的差异不独自决定选择；正面的加宽不在此句之内”。not_carried 增“以人主为合用之所归（一中心）”。course 改引「有生而愚者，雖無欲，亦愚也」（RU2-S-V3Q01）。可增荀子致士「夫是之謂衡聽、顯幽、重明、退姦、進良之術」（RU2-S-XZ14，先秦）及杨倞注「顯幽，謂使幽人明顯，不壅蔽也」（唐注层），作为“到达所不标出者”（顯幽）的用例。"
+  },
+  {
+   "concept": "合用耦合（经每个成员耦合之合的选择）/ pooled coupling",
+   "name": "兼感",
+   "verdict": "keep",
+   "issues": "「體，分於兼也」说兼是全、体是其中之分，成员不被抹去，与 Web.SelectsThroughAll（经每个成员耦合之合的选择）一致。荀子兼听中的听者中心已列入 not_carried。组成依赖“感”的方向修正，但组成方式本身不变。"
+  },
+  {
+   "concept": "劫持（由奖赏不能安顿者的选择形成、被胜者书写的规则保持的目标）/ hijacking",
+   "name": "劫",
+   "verdict": "revise",
+   "issues": "（1）glossary 中的劫持（AI 读法）有两半：目标由奖赏不能安顿者的选择形成；又由胜者所写的规则保持。三条用例只证明后一半（三守「凡劫有三」、二柄「子罕徒用刑而宋君劫」），而且与“柄移”重叠；前一半，即选择怎样形成目标，没有用例。（2）荀子「心不可劫而使易意」是“强使”义，只是词汇用例。（3）lean 所列 Web.pooled_iff_member 不是 glossary 劫持的锚（锚是 share_rises 与 Law.perturbation_reabsorbed）。它只说池在什么条件下等于一个成员，不说池怎样退化成一个成员。（4）劫的本义是以强力夺取，带争胜与强制的框架（属相分层），not_carried 只写了“阴谋与意志”。",
+   "fix": "增二柄两句为前一半的用例：「任賢，則臣將乘於賢以劫其君」与「故人主好賢，則羣臣飾行以要君欲，則是羣臣之情不效；羣臣之情不效，則人主無以異其臣矣」（FA1-S-H07，FA1-H07-R011，先秦）。结构是：选择所奖赏者，被选者便按选择者的耦合去修饰（share_rises_through；携带者“一起”上升由 Web.SelectsThrough 的定义给出）；于是选择者分不开他们（Web.selects_alike_iff）；由此成劫。荀子一条改标“仅为词汇用例”。lean 删 Becoming.Web.pooled_iff_member（或注为 AI 扩展），加 Becoming.share_rises_through；Law.perturbation_reabsorbed 注明需 byRule（下一构形只依规则）。not_carried 增“强制、争胜的框架”。"
+  },
+  {
+   "concept": "俘获（规则持有结果；Becoming.Capture）/ capture",
+   "name": "元闭",
+   "verdict": "reject",
+   "issues": "（1）正文 §10 明说：“稳与元闭是同一结构……判词不同而结构相同，所以估值只经 §6.4 的条件之下的比较进入，从不经由定义。”元闭是 Ren 早期文本中的一种“闭”，是负面的判语。用它名中性的“规则持住结果”结构，等于把一个判词放进了定义。（2）没有任何古典用例，标为 coinage 却给 confidence high。（3）fit 称“已在第十章交叉对照中放到规则持有结果之上（D49）”。但交叉对照是把 Ren 的词对到定律上，不是把定律命名为那个词。",
+   "fix": "为本结构另立一个中性名，建议以“持”组成（例如“法持”），标为 coinage、confidence low，待整合者与“法”“律”的名统一。锚：Becoming.Law.rule_absorbing、Becoming.Law.perturbation_reabsorbed（需 byRule）、Becoming.Captured.rule_perturbation_changes。元闭与稳并列留在对照表中，作为同一结构的两种判语。"
+  },
+  {
+   "concept": "经规则的俘获（规则从它所选者的份额读出；Becoming.RuleCapture）/ capture through the rule",
+   "name": "柄移",
+   "verdict": "revise",
+   "issues": "（1）名说的是柄从君移到臣，是持有者之间的一次转移事件；而概念是一个回路：规则从它所选者的份额中读出（RuleCapture.ReadsShare）。二者不同构：柄移之后，规则不一定读份额；读份额的规则也不一定经过转移。（2）fit 说“之后锁定，只有改变规则怎样读才离开”，不确切。按 Lean：favouring_locks 在第一个读取步之后锁定；uniform_locks 在第二个读取步之后锁定（第二步是确切的，Second.second_exact）；离开须改变律、读法或选择三者之一；读法只在阈上偏向时，越过阈的构形改变也会离开（RuleCapture.Reversed.not_absorbed）。（3）用例中君臣争胜的框架属相分层，mapper 已列。",
+   "fix": "改名为直接说出回路的组成名，例如“柄随所择”或“以所择定柄”（规则由选择所给的份额读定），“柄移”留作韩非的古典对应。fit 改为：“读法在每一份额都偏向时，自第二个读取步之后锁定（RuleCapture.uniform_locks，第二步确切：RuleCapture.Second.second_exact）；离开须改变律、读法或选择；读法只在阈上偏向时，越过阈的构形改变也离开（RuleCapture.Reversed.not_absorbed）”。"
+  },
+  {
+   "concept": "规则改变之速（规则在读取步之前是初始规则；Becoming.Pace）/ pace",
+   "name": "与时转",
+   "verdict": "revise",
+   "issues": "（1）概念的结构是：规则只在读取步改变，读取步之前是起初的规则（Pace.rule_until_reading、Pace.rule_at_reading）。“与时转”只说随时而转，不含读取步，也不含速度。（2）“转”是 Ren 开之四相之一（仍能修正、回返、转变；对照表中挂在 Returns、Dependence、Rejoining 等上）。fit 把它与 Pace 组合，一字承载了两个结构。（3）「所損益可知」与 pace_law 的对应没有文本支持。pace_law 说的是：长 L 的保持段，在 L ≥ 2N−1 时确定它所生的进程（不是确定规则）；Pace.dissolving 则说短于此者不能确定。论语“百世可知”式的普遍外推，正是 dissolving 所否认的。（4）never_reads_loses 需有限多个构形且有一次归并，fit 没有写。",
+   "fix": "改名为“应时而变”（「禮義法度者，應時而變者也」，ZH1-S14，庄子·天運，外篇，年代有争议），受控义为“规则只在读取步依所读的快层而变”。以「法與時轉則治」「時移而治不易者亂」（FA1-S-H54，心度篇真伪有争议）为同构用例。读取步的名与 C17 的“时”协调。删去「所損益可知」与 pace_law 的对应，或改为定域：“只在保持段不短于 2N−1 时成立”。not_carried 增“Ren 的‘转’（开之四相）”。fit 补“never_reads_loses 需有限构形与一次归并”。"
+  },
+  {
+   "concept": "被请求的改变须是可执行的序列（§7.6）/ a requested change must be an executable sequence",
+   "name": "法不自行",
+   "verdict": "revise",
+   "issues": "（1）名只说了否定的一半（规则不会自己完成），而所挂的律是正面的判据：确定过程中，一个计划完成恰当它运行且每个终点合于目标（Assurance.completes_iff_runs，需 determined）；非确定过程中可以运行而不完成（Assurance.Branch.runs_not_completes）；计数之工恰在燃料覆盖时完成（Countdown.completes_iff）；有保留出口时完成（Courses.runs_valid_completes）。（2）fit 把孟子的“善”读成“接受改变的倾向”，不确切。语境是「今有仁心仁闻而民不被其泽……不行先王之道也」，善是为政者的仁心，不是被请求的系统接受改变的倾向。（3）孟子同段「遵先王之法而过者，未之有也」是固定标准，not_carried 只写了“先王之法”，没有写其“必不过”的普遍断言。",
+   "fix": "名改为正面的组成名，例如“行而能至”。以荀子修身「道雖邇，不行不至；事雖小，不爲不成」（RU2-S-XZ02，脉络 RU2-R0247，先秦）为用例，它给出“完成须运行”这一半。“法不自行”留作否定一半的古典对应。fit 中的“善”改为“为政者的仁心（意愿）”，与 §7.6 的“接受倾向”只在“意愿不等于完成”这一点上同构。not_carried 增「遵先王之法而过者，未之有也」所代表的固定标准。lean 增 Becoming.Assurance.runs_of_completes（完成蕴含运行）。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "xunzi-zhengming-yuan-tianguan",
+   "verdict": "revise",
+   "issues": "「凡同类同情者，其天官之意物也同」说的是不同成员的耦合作出相同的归并，结构是 Web.pooled_iff_member：凡一成员耦合无别者，一切成员也都无别时，池的选择就是该成员的选择。Learning.goAlike_iff_lumped 说的是一条确定律在一个归并上同去，恰当下一构形经该归并同去，讲的是律与归并的关系，不是成员之间的关系。同段下文「故比方之疑似而通，是所以共其约名以相期也」把“同感”连到共名（约定俗成，SharedCodes），读法没有连上。records 用的是旧 id。",
+   "fix": "declarations 以 Becoming.Web.pooled_iff_member 替换 Becoming.Learning.goAlike_iff_lumped，records 删去 generalization-through-lumping。增片段「故比方之疑似而通，是所以共其约名以相期也」，声明增 Becoming.SharedCodes.reads_iff，record 增 a-code-formed-between-formations。读法补一句（AI读法）：SharedCodes 以共同的义空间为给定（这是建模选择），荀子以“同类同情”说明它何以可共。selection-through-registration 改为 selection-through-couplings。names_used 中的“缘感而择”随名改为“识”。"
+  },
+  {
+   "id": "xunzi-zhengming-suo-ke",
+   "verdict": "keep",
+   "issues": "“所可中理、失理”与 Learning.selects_right_through、Learning.selects_not_right_of_parted 同构。读法已写明“中理”是归并合于律，不是一个先在之理。records 都是现行 id。"
+  },
+  {
+   "id": "xunzi-tianlun-tianguan-tianjun",
+   "verdict": "revise",
+   "issues": "读法以 Web.separates_all_iff_member 说“池恰分开某成员所分开者”，却没有写它的条件：成员列出，且各成员的耦合可判定。不带条件的形式是 Web.separates_all_iff：池分开两段历史，恰当成员不全耦合无别。天君为单一中心，判为相分是对的。",
+   "fix": "读法改为：“池分开两段历史，恰当成员不全耦合无别（Web.separates_all_iff）；成员列出且可判定时，恰当某成员把它们耦合开（Web.separates_all_iff_member）”。declarations 增 Becoming.Web.separates_all_iff。"
+  },
+  {
+   "id": "xunzi-jundao-shousi",
+   "verdict": "revise",
+   "issues": "records 用的是旧 id。其余已核对无误：定域判断成立，unselected_beyond_coupling_all 与 act_selected_by_pool 是一般定律。Clearing.dweller_within_reach 与 Clearing.pool_closes_gap 是 Clearing 例中的见证，读法写得像一般命题。",
+   "fix": "selection-through-registration 改为 selection-through-couplings。在两处 Clearing 声明前加“在 Clearing 例中”。"
+  },
+  {
+   "id": "xunzi-jiebi-xiang-wei-bi",
+   "verdict": "revise",
+   "issues": "（1）“脊柱无前提地给出同一普遍性”不确切：Flow.unselected_beyond_coupling 有条件，即余者固定（WithheldLevels），以及闭包内所耦合入的条件上平衡（BalancesOn）。（2）“两个耦合不同者各有对方无别而自己分开者，此即相为”不是定理：Web.pool_adds 是单向的；两成员耦合可比较时只有一方多分，“相为”只在不可比较时成立。（3）荀子以蔽为「心术之公患」，可解至大清明，与“位置不是缺陷”相分；读法自己也写了这一剩余，所以整体不能判为相合。（4）「蔽于一曲，而暗于大理」是偏于一侧的归并，属于模型，不属于位置。records 用的是旧 id。",
+   "fix": "kind 改为 scope。读法改为：“在 Flow.unselected_beyond_coupling 的条件下，选择在耦合闭包之外是盲的。‘莫不相为蔽’在诸位置耦合不可比较时成立；可比较时只有较粗者被蔽（Web.pool_adds 是单向的）。‘公患’可解至‘大清明’一点与理论相分：合用只把边界移到池的边界（Flow.unselected_beyond_pool）”。「蔽于一曲」改挂 Becoming.Learning.selects_not_right_of_parted。records 改为 selection-through-couplings。"
+  },
+  {
+   "id": "xunzi-jiebi-jian-chen",
+   "verdict": "revise",
+   "issues": "读法自己承认“县衡若是单一固定归并，衡所归在一起者仍分不开”。「兼陈万物而中县衡焉」是以一衡居中来定众异，而脊柱不给出单一标准（池没有中心），所以本条是定域，不是相合。separates_all_iff_member 的条件读法已写，正确。",
+   "fix": "kind 改为 scope。读法末句改为：“范围：并陈（即合用）所分开者由 Web.member_separates_all 给出；‘中县衡’的单一标准不由脊柱给出，只在衡的归并合于所量之事时成立（Learning.selects_right_through）”。declarations 增 Becoming.Learning.selects_right_through。"
+  },
+  {
+   "id": "xunzi-jiebi-xu-yi",
+   "verdict": "revise",
+   "issues": "方向反了。「不以所已臧害所将受」说的是旧者（已藏的模型或区分）不害新者（将受之差）；Web.SelectsThrough.widen 说的却是旧选择在更多观察下仍经耦合，即新者不害旧者。脊柱中“旧害新”的结构是：错误的模型排除成立者（Stationary.model_error），较窄的模型排除更多（Web.ExcludesWithin.narrow）。“不害”的条件是：模型容纳成立者时，成立者永不被排除（Web.ExcludesWithin.not_meets）。records 用的是旧 id。",
+   "fix": "「虚」一句改挂 Becoming.Stationary.model_error、Becoming.Web.ExcludesWithin.narrow、Becoming.Web.ExcludesWithin.not_meets。读法改为（AI读法）：“虚：只经容纳成立者的模型去排除（ExcludesWithin.not_meets）；已臧的模型过窄，就会排除成立者（model_error、ExcludesWithin.narrow）”。「壹」一句保留 Web.SelectsThroughAll.and 与 Web.SelectsThrough.all。Web.SelectsThrough.widen 删去，或改述为“新耦合不使旧区分失效”。records 改为 selection-through-couplings。"
+  },
+  {
+   "id": "xunzi-bugou-pian-shang",
+   "verdict": "revise",
+   "issues": "Diversion.favours 只是见证。§7.2 第三律的一般定律是 Flow.favours_reaching_beyond：在平衡流中，只在所耦合者上升时才成立的选择，只在有形成从无成员耦合入的条件拿取时成立（需 Distinct 列表与 gainless）。「兼權之，孰計之」是把另一侧也耦合进来，使选择能分开更多，结构是 Web.Excludes.widen（更多水平耦合排除更多）；SelectsThrough.widen 只说旧选择仍成立。records 用的是旧 id。",
+   "fix": "declarations 以 Becoming.Flow.favours_reaching_beyond 为主（record raising-what-couples-in-draws-from-beyond），Diversion.favours 注为见证。「兼權」改挂 Becoming.Web.Excludes.widen。records 改为 selection-through-couplings。"
+  },
+  {
+   "id": "xunzi-wangzhi-fa-er-bu-yi",
+   "verdict": "revise",
+   "issues": "读法末句自己承认“‘必废’‘必队’在规则从不读取、诸职不相通时成立”，这就是定域，kind 应为 scope。Pace.never_reads_loses 需要有限多个快层构形且有一次归并，读法却写成无条件的“所失者保持丧失、所并者丧失构形”。G2 缺口没有引 PRE-QIN-AND-WENYAN §2；该节已以 Pace.rule_until_reading、Pace.rule_unreached 与 Clearing.pool_closes_gap 读《察今》，只是还没有把二者合成的律。",
+   "fix": "kind 改为 scope。Pace.never_reads_loses 前加“快层构形有限多个且有归并时”。gap 增“已有散文：PRE-QIN-AND-WENYAN §2；所缺只是把读取步与合用耦合合成的律”。"
+  },
+  {
+   "id": "xunzi-ke-xin",
+   "verdict": "revise",
+   "issues": "ExchangeLaw.acts_alike_all_iff 说的是：在每一条经耦合读取的律之下，成员交换无别，恰当成员都耦合无别（需可判定）。这是“耦合对回应之界是确切的”，不是“成员各自所循之律决定其所为”。response_not_fixed_by_coupling 也需要可判定的条件。",
+   "fix": "改述为：“耦合界定回应：在一切经耦合读取的律之下，成员交换无别，恰当一切成员耦合无别（ExchangeLaw.acts_alike_all_iff，各类可判定时）；界内的回应并不固定（ExchangeLaw.response_not_fixed_by_coupling；零律也经一切耦合读取）”。"
+  },
+  {
+   "id": "zhuangzi-keyi-gan-hou-ying",
+   "verdict": "keep",
+   "issues": "TimedResponse 三个声明的条件（平衡、起点相同、经耦合回应、可判定），读法以“在 TimedResponse 的条件下”写明。把“感而後應”读作必要的先后，而非感则必应，正确。外篇年代有争议，已注明。"
+  },
+  {
+   "id": "yi-xian-tuan-gan-ying",
+   "verdict": "revise",
+   "issues": "（1）Loop.response_returns 是一个见证：其中回应者从行为者的条件拿取，行为者因而失去支持，是升级，恰与「以相與」相反。回环的一般构造是 Flow.WithinResponse 与 forms_by_closing。（2）「觀其所感，而天地萬物之情可見矣」对到 Web.selects_alike_iff，说过了头：该定理给出的是选择所能分开者之界，不给出“情”，即所循之律（耦合不固定回应）。（3）此处的“所感”是前向的（天地、圣人所感动者），与名“所感”的逆向闭包不一致。records 用的是旧 id。",
+   "fix": "declarations 以 Becoming.Flow.WithinResponse、Becoming.forms_by_closing 替换 Loop.response_returns；后者若保留，注为“见证，是升级的例子”。读法改为：“观其所感，只给出其所能分开者之界（Web.selects_alike_iff），不给出其情（ExchangeLaw.response_not_fixed_by_coupling）”。注明“此处‘所感’是前向用法”。records 改为 selection-through-couplings。"
+  },
+  {
+   "id": "chengyi-xian-jiusi-suo-ji",
+   "verdict": "revise",
+   "issues": "（1）读法自己承认此处的“所感”“所及”都是前向的，与名“所感”（逆向的耦合闭包）不一致。（2）「是其朋類則從其思也」说的是他者的回应（被感者跟随），结构是回应所及（Flow.WithinResponse），不是选择（Web.SelectsThrough、selects_alike_iff）。（3）「所不及者不能感也」说的是所及闭包之外不被到达（Flow.reaches_withinReach），不是选择者耦合闭包之外不被选出（Flow.unselected_beyond_coupling）。records 用的是旧 id。",
+   "fix": "declarations 改为 Becoming.Flow.WithinReach、Becoming.Flow.reaches_withinReach、Becoming.Flow.WithinResponse，删去 Web.SelectsThrough、Web.selects_alike_iff、Flow.unselected_beyond_coupling。records 改为 comparison-within-reach 与 comparison-where-the-rest-responds。读法注明“此处‘所感’是前向用法”。"
+  },
+  {
+   "id": "ercheng-you-gan-bi-you-ying",
+   "verdict": "revise",
+   "issues": "（1）“所应复为感，所感复有应”的逐环构造是 Flow.WithinResponse 的定义与 withinResponse_iff_coupling。Flow.Balances.comparison_within_response 说的是“比较在回应所及之内决定”，不是构造。（2）声明列了 LoopReturn.nothing_between，读法却没有用它；RO 原读法用了：整数强度下，回路要么闭合，要么保持，要么失控。（3）“故‘有感必有应’在环节守恒的范围内成立”把两件事混在一起。loop_kept 给出的是“不已”：环节给回所受时，差异保持。“有感必有应”作为普遍断言是一个前提（RO：在 Response 中回应是被供给的），而 response_not_fixed_by_coupling 给出它的反例。（4）“‘天地之间只有一个感与应’……与理论相合”越过了 RO 的原判（“承接其结构，不承接其普遍性”）。另外，LoopReturn 以一个数表示差异，是一种简化。",
+   "fix": "构造改挂 Becoming.Flow.WithinResponse 与 Becoming.Flow.withinResponse_iff_coupling，comparison_within_response 留作“比较在其内决定”。恢复 RO 对 nothing_between 的读法。“有感必有应”改为“作为普遍断言是前提；耦合不固定回应（response_not_fixed_by_coupling）”。“不已”改为“在无环节衰减时成立（loop_kept），这里以一个数表示差异，是简化”。末句恢复 RO 的“承接其结构，不承接其普遍性”。"
+  },
+  {
+   "id": "ercheng-kuoran-shunying",
+   "verdict": "revise",
+   "issues": "“没有耦合一切者”不是定理。obs 处处为真时，一个形成的耦合闭包含一切与任何条件交换的形成（Flow.CoupledFrom 一步即达），脊柱并不排除这种情形。脊柱给出的是：闭包之外者不被选出（Flow.unselected_beyond_pool）；池的闭包是成员闭包之并（withinClosureOf_iff）。它并不说“无所不通”不可达。",
+   "fix": "删去“但没有耦合一切者”，改为：“‘廓然无所不通’只在耦合闭包为全体时成立；脊柱既不给出它可达，也不排除它；可说的是，闭包之外者不被选出”。"
+  },
+  {
+   "id": "mengzi-jian-niu",
+   "verdict": "revise",
+   "issues": "（1）读法说“理论不取这一方向：明在于加宽所感”，把估值加进了“明”。正文说 Seeing is not valuing：加宽所耦合者只改变能分开者，不决定何者要紧。RO 原读法只作描述：“缩小选择所经的耦合，它不保持羊或牛的延续，只是使回应不形成”。（2）读法讨论了「是以君子远庖厨也」，片段却没有收这一句。（3）records 中两个是旧 id。",
+   "fix": "恢复 RO 的描述句，删去“理论不取这一方向”。fragments 增「是以君子远庖厨也」。records 改为 selection-through-couplings 与 testing-within-couplings。"
+  },
+  {
+   "id": "mengzi-tian-shi-min-shi",
+   "verdict": "revise",
+   "issues": "读法以「天不言，以行与事示之」挂 exists_law_iff，片段却没有收这一句（RO 原有）。Clearing.pool_closes_gap 是 Clearing 例中的见证，读法写成了一般命题。",
+   "fix": "fragments 增「天不言，以行与事示之而已矣」（RU2-S-MZ）。pool_closes_gap 前加“在 Clearing 例中”，一般形式引 Becoming.Flow.act_selected_by_pool。"
+  },
+  {
+   "id": "mengzi-tu-fa-bu-zi-xing",
+   "verdict": "revise",
+   "issues": "“仅有接受之意（善）”不确切。语境是「今有仁心仁闻而民不被其泽……不行先王之道也」，善是为政者的仁心，不是被请求的系统接受改变的倾向；与 §7.6 只在“意愿不等于完成”这一点上同构。同段「遵先王之法而过者，未之有也」是固定标准，读法没有记下这一剩余。",
+   "fix": "“善”改为“为政者的仁心（意愿）”。剩余增：“「遵先王之法而过者，未之有也」所代表的固定标准不承接”。names_used 随“法不自行”的改名而改。"
+  },
+  {
+   "id": "mengzi-fan-qiu-zhu-ji",
+   "verdict": "keep",
+   "issues": "Loop.response_returns 在这里只作“回应可以经闭包返回”的存在见证，用得恰当。以 response_not_fixed_by_coupling 对“皆”作定域，正确。records 都是现行 id。"
+  },
+  {
+   "id": "daizhen-si-bi",
+   "verdict": "revise",
+   "issues": "（1）戴震之蔽是“知之失”：「自以為得理，而所執之實謬，乃蔽而不明」。这是一个错误的模型（Stationary.model_error、Learning.selects_not_right_of_parted），是缺陷，不是“位置之不见”；理论说位置不是缺陷。（2）私是欲之失（欲不能遂人之欲），读法自己也承认它比锁定之求宽。所以“与理论的区分同构”言之过度，应为定域。（3）「雖無欲，亦愚也」与理论相合：去欲并不增加耦合（Web.observed_raise_couples），应保留。records 用的是旧 id。",
+   "fix": "kind 改为 scope。蔽改挂 Becoming.Stationary.model_error 与 Becoming.Learning.selects_not_right_of_parted，fragments 增「自以為得理，而所執之實謬，乃蔽而不明」。读法改为：“戴震的二失与理论的二分不同构：其蔽是模型之失，而理论中位置之盲不是失；只取‘去欲不能代替明’一点相合”。records 改为 selection-through-couplings。"
+  },
+  {
+   "id": "daizhen-yi-li-sha-ren",
+   "verdict": "keep",
+   "issues": "沿用 RO，声明与 RO 一致，records 是现行 id。读法对 Flow.act_unselected_pool 的释义正确。"
+  },
+  {
+   "id": "zhoudunyi-jing-xu-ze-ming",
+   "verdict": "revise",
+   "issues": "“只有观察能加宽耦合闭包（Flow.withinCoupling_mono_obs）”：该定理只说闭包随水平耦合增大，闭包也随交换增大（withinCoupling_mono_flow），“只有”二字不由 Lean 给出。读法中的「虽无欲，亦愚也」是简体转写，冻结文本作「雖無欲，亦愚也」。",
+   "fix": "改为“观察加宽耦合闭包（withinCoupling_mono_obs）；静虚不增加任何水平耦合”。引文改用冻结文本的字形。"
+  },
+  {
+   "id": "zhangzai-da-qi-xin",
+   "verdict": "revise",
+   "issues": "（1）Diagonal.gap_unsaid 需要一个使每个值都移动的映射（Moves same f），是 Lawvere 对角论证；读法没有写这个条件，而且该定理说的是“读法之族”，不是心之所体。（2）“‘有外’是常态”不是定理（见 ercheng-kuoran：obs 全真时闭包可以是全体）；脊柱只说闭包之外者不被选出。records 用的是旧 id registration-within-what-it-registers。",
+   "fix": "gap_unsaid 加条件“值上有一个处处移动的映射时”。删去“常态”，改为“在闭包之外者不被选出（Flow.unselected_beyond_pool）；有外与否由耦合闭包决定，脊柱不给出其必然”。records 改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "lunyu-zizhang-wen-ming",
+   "verdict": "revise",
+   "issues": "（1）「不行焉」只给出否定的条件。零律（什么都不交换，经一切耦合读取，ExchangeLaw.zero_through）也满足它，而理论不称零律为明。读法末句“另有一条耦合到达它们不标出者”是 AI 加上的，文本里没有。所以判为相合言之过度，应为定域。（2）Confound.confounded 是见证：动作与隐藏位同步时，记录永不排除错误的投影。读法说“控制耦合进来者”，但见证中并无“控制”。（3）records 中两个是旧 id。",
+   "fix": "kind 改为 scope。读法改为：“论语只给出否定的一半，即喂入之差不独自决定；正面的加宽（Web.observed_raise_couples）是理论所补（AI读法）；零律也满足‘不行’（ExchangeLaw.zero_through）”。Confound 按见证原义改述。records 改为 selection-through-couplings 与 runaway-distance-uncoupled。"
+  },
+  {
+   "id": "lunyu-feng-cao",
+   "verdict": "revise",
+   "issues": "“池只在众人耦合都与中心相同时才等于中心”误述了 Web.pooled_iff_member。其条件是：凡中心耦合无别者，众人也都无别（中心最细），并不要求众人与中心相同。share_rises_through 需要奖赏者的后代至少 a 个，其余至多 b 个，且 b < a，读法没有写这个条件。",
+   "fix": "改为：“池的选择就是中心的选择，恰当凡中心耦合无别者，每个成员也都耦合无别（Web.pooled_iff_member）”。share_rises_through 加上 a > b 的后代条件。"
+  },
+  {
+   "id": "daxue-pi-yan",
+   "verdict": "revise",
+   "issues": "records 用的是旧 id。其余（Relabel.valued_alike_iff、selects_not_right_of_parted 的释义）已核对无误。",
+   "fix": "selection-through-registration 改为 selection-through-couplings。"
+  },
+  {
+   "id": "zhongyong-yu-zhi",
+   "verdict": "revise",
+   "issues": "records 用的是旧 id。break_not_bounded 的条件（不按水平耦合；在视界之内是唯一可能不满足的需）读法已写。",
+   "fix": "runaway-distance-unregistered 改为 runaway-distance-uncoupled。"
+  },
+  {
+   "id": "zhongyong-zhi-wei-zhi-xian",
+   "verdict": "keep",
+   "issues": "“知風之自”对 WithinInfluence（能影响自己者）、“知遠之近”对 WithinReach，方向都正确。records 是现行 id。“三个对象”一说已标为 AI 读法。"
+  },
+  {
+   "id": "zhuangzi-cheng-xin",
+   "verdict": "revise",
+   "issues": "records 用的是旧 id。“小成是在局部合于变化之律的归并”中的“局部”不在 goAlike_iff_lumped 之中，属于 AI 的引申。",
+   "fix": "selection-through-registration 改为 selection-through-couplings。“局部”一语标为 AI 读法。"
+  },
+  {
+   "id": "zhuangzi-wangliang-you-dai",
+   "verdict": "revise",
+   "issues": "「惡識所以然」对到 Flow.Balances.uncoupled_beyond_influence 不对。景所待的形就在它的影响闭包之内；“不识所以然”的结构是阈下耦合：只按阈耦合入的条件只传出需是否满足（Web.alike_of_threshold、Flow.subthreshold_alike）。读法又把 uncoupled_beyond_influence 释为“只经阈耦合者不按水平进来”，是误述；该定理说的是闭包之外者不与成员所依之条件交换。",
+   "fix": "「惡識所以然」改挂 Becoming.Web.alike_of_threshold 与 Becoming.Flow.subthreshold_alike。uncoupled_beyond_influence 只保留它本来的意义，或删去。"
+  },
+  {
+   "id": "zhuangzi-dao-shu",
+   "verdict": "revise",
+   "issues": "records 用的是旧 id contextual-registration。RO 段 zhuangzi-qiwu-dao-shu-liang-xing 的 records 含 gluing-under-parity，mapper 漏掉了。",
+   "fix": "contextual-registration 改为 claims-shown-in-context，并恢复 gluing-under-parity。"
+  },
+  {
+   "id": "zhuangzi-xin-zhai",
+   "verdict": "revise",
+   "issues": "“虚而待物是不让已有模型封住新的耦合（Web.SelectsThrough.widen）”方向反了：widen 说的是旧选择在更多观察下仍然成立。“已有模型不封住所待之物”的结构是：模型容纳成立者时，成立者永不被排除（Web.ExcludesWithin.not_meets），相反的情形是 Stationary.model_error（已在声明中）。records 用的是旧 id。",
+   "fix": "以 Becoming.Web.ExcludesWithin.not_meets 替换 Web.SelectsThrough.widen，读法相应改述。testing-within-registration 改为 testing-within-couplings。"
+  },
+  {
+   "id": "zhuangzi-wei-da-ren-xin",
+   "verdict": "keep",
+   "issues": "Loop.response_returns 这个见证正是升级：回应者从行为者拿取，行为者失去支持，恰合「菑人者，人必反菑之」中伤害的返回。“必”字以 response_not_fixed_by_coupling 定域，正确。"
+  },
+  {
+   "id": "zhuangzi-jing-ying-er-bu-cang",
+   "verdict": "keep",
+   "issues": "沿用 RO，声明与 records 一致。“不藏在无环处足以不伤，在有环处不够”有 Withholding 诸定律支持。"
+  },
+  {
+   "id": "zhuangzi-diao-ling",
+   "verdict": "revise",
+   "issues": "螳螂搏蝉、异鹊利螳螂，这些目标都能被满足，即能安顿。按 Law.rests_iff，它们不是“不能安顿之目标”，所以“锁定于不能安顿之目标的求……正是理论所名之无明”用错了地方。此段实际给出的是位置之盲：各求者都不耦合入以它为目标者（Flow.unselected_beyond_coupling、Web.break_not_bounded）。“本条同时示出蔽与无明”不成立。records 中两个是旧 id。",
+   "fix": "删去 Law.rests_iff、more_needs_open 与“无明”之说，只保留位置之盲。如要连到无明，须另找目标不能安顿的段落。records 改为 selection-through-couplings 与 runaway-distance-uncoupled，并删去 seeking-boundary。"
+  },
+  {
+   "id": "zhuangzi-tianxia-er-mu",
+   "verdict": "revise",
+   "issues": "Web.separates_all_iff_member 的条件（成员列出、可判定）读法没有写。读法引文以简体转写繁体文本。records 用的是旧 id。",
+   "fix": "补上条件，或改引 Becoming.Web.separates_all_iff。引文改用冻结文本的字形。selection-through-registration 改为 selection-through-couplings。"
+  },
+  {
+   "id": "zhuangzi-quqie",
+   "verdict": "revise",
+   "issues": "“读法在每一份额都偏向时只有改变律才离开（RuleCapture.uniform_locks）”不完整。Lean 说的是：自第二个读取步之后锁定，离开须改变律、读法或选择三者之一。favouring_locks 的锁定始于第一个读取步之后，读法没有区分这两者。",
+   "fix": "改为：“读法在每一份额都偏向时，自第二个读取步之后锁定（uniform_locks）；离开须改变律、读法或选择”。“加一条规则不等于改变规则怎样读”一句保留。"
+  },
+  {
+   "id": "lao-29-shen-qi",
+   "verdict": "keep",
+   "issues": "act_unselected 以“行为之差留在闭包之外”为条件，读法写了。Run.not_fixes_of_untaken 与 no_prefix_fixes_next 的用法正确。“必败”以定域处理，正确。"
+  },
+  {
+   "id": "lao-36-li-qi",
+   "verdict": "keep",
+   "issues": "沿用 RO 的相分判断，声明与 records 一致。“隐藏耦合就是使他者处在闭包之外”属于争胜一层，归类恰当。"
+  },
+  {
+   "id": "lao-65-yu-min",
+   "verdict": "revise",
+   "issues": "records 用的是旧 id（RO 已改）。相分判断正确。",
+   "fix": "runaway-distance-unregistered 改为 runaway-distance-uncoupled。"
+  },
+  {
+   "id": "lao-74-yi-si-ju-zhi",
+   "verdict": "revise",
+   "issues": "“阈已全被越过时威胁不再分开任何历史”的结构是 Web.alike_of_threshold：在两段历史下都满足需时，二者经耦合无别。声明没有列这一条。records 用的是旧 id。",
+   "fix": "declarations 增 Becoming.Web.alike_of_threshold。selection-through-registration 改为 selection-through-couplings。"
+  },
+  {
+   "id": "heshanggong-22-yin-tianxia-zhi-mu",
+   "verdict": "revise",
+   "issues": "读法的剩余说“注文以圣人为合用之所归，理论之池无中心”，这就是脊柱对其中心框架所作的定域。同一结构的 hanfei-ding-fa-yi-guo-mu-shi、hanfei-zhong-duan-can-guan、mozi-shangtong 都判为 scope，此条判 agreement，前后不一。",
+   "fix": "kind 改为 scope，范围写为：“合用的结构相合；以圣人为合用之所归不承接”。"
+  },
+  {
+   "id": "heshanggong-32-tian-ren-xiang-ying",
+   "verdict": "keep",
+   "issues": "属意志层的相分，归类正确。Web.significance_undetermined 存在，用法恰当。"
+  },
+  {
+   "id": "suzhe-33-bi-jin-wei-ming",
+   "verdict": "revise",
+   "issues": "records 用的是旧 id registration-within-what-it-registers。RO 段 sz-33-bi-jin-wei-ming 的 growth-constrained-fragmentation 被漏掉了。读法中「塞而闭之……以神应物」是简体转写，冻结文本 LC-SZ-ALL 作“塞而閉之……以神應物”。",
+   "fix": "records 改为 readings-within-what-they-read，并恢复 growth-constrained-fragmentation。引文改用冻结文本的字形。"
+  },
+  {
+   "id": "wangbi-05-zi-xiang-zhi-li",
+   "verdict": "keep",
+   "issues": "沿用 RO，声明与 records 一致。“池无中心之佐证”是 AI 的引申，已标为 AI 读法。"
+  },
+  {
+   "id": "wangbi-27-zi-ren-qi-zhi",
+   "verdict": "revise",
+   "issues": "records 用的是旧 id testing-within-registration。读法其余部分（excludesWithin_iff_conjunction、model_error、selects_right_through）已核对无误。",
+   "fix": "testing-within-registration 改为 testing-within-couplings。"
+  },
+  {
+   "id": "xici-ri-yong-bu-zhi",
+   "verdict": "revise",
+   "issues": "records 中两个是旧 id（RO 已改）。定域判断与声明都与 RO 一致。",
+   "fix": "runaway-distance-unregistered 改为 runaway-distance-uncoupled，testing-within-registration 改为 testing-within-couplings。"
+  },
+  {
+   "id": "xici-shen-er-ming-zhi",
+   "verdict": "revise",
+   "issues": "records 用的是旧 id。",
+   "fix": "testing-within-registration 改为 testing-within-couplings。"
+  },
+  {
+   "id": "daxiang-guan-xing-fang",
+   "verdict": "keep",
+   "issues": "省方对读取步、观民对水平耦合、设教对读取之后的规则，与 Pace.rule_until_reading、rule_at_reading 同构。先王为中心的框架已列为不承接。"
+  },
+  {
+   "id": "daxiang-dui-pengyou-jiang-xi",
+   "verdict": "keep",
+   "issues": "无中心的合用，与 pool_adds、separates_all_iff（无条件形式）、SelectionsThroughAll.and 一致。"
+  },
+  {
+   "id": "tuan-kui-zhi-tong",
+   "verdict": "keep",
+   "issues": "沿用 RO 的相合判断，声明与 records 一致。"
+  },
+  {
+   "id": "mozi-shangtong",
+   "verdict": "revise",
+   "issues": "（1）“池只在一切成员耦合都与上相同时才等于上”误述了 Web.pooled_iff_member，其条件是凡“上”耦合无别者每个成员也都无别（“上”最细）。（2）separates_all_iff_member 的条件（成员列出、可判定）没有写。（3）records 用的是旧 id。",
+   "fix": "改为：“池的选择就是上的选择，恰当凡上耦合无别者每个成员亦无别（Web.pooled_iff_member）”。separates_all_iff_member 补上条件。selection-through-registration 改为 selection-through-couplings。"
+  },
+  {
+   "id": "mozi-jianai-zhong",
+   "verdict": "revise",
+   "issues": "“环节给回少于所受时差异在有限圈内关闭（LoopReturn.closes_within）”误述了该定理。closes_within 的条件是整个返回映射 f 满足 f 0 = 0，且对一切正数 x 有 f x < x；某一环节给回较少，只是 closing_needs_less 给出的必要条件，并不充分。RO 原读法也有同样的不确切。share_rises_through 的补入可以接受，须注明需要 a > b 的后代条件。",
+   "fix": "改为：“返回映射对每个正的差异都给回较少（且 f 0 = 0）时，差异在 d 圈之内关闭（closes_within）；要关闭，必须有一个环节给回较少（closing_needs_less）”。share_rises_through 补上条件。"
+  },
+  {
+   "id": "mozi-jianai-xia",
+   "verdict": "revise",
+   "issues": "RO 剩余说“定理不依赖回报的计算”，表述不确切。Withholding.Ring.givesFirst_restores 依赖其余成员都循“所待者给则给”之律，这正是墨子所设之“報”的结构；定理所不依赖的，只是先给者对回报的计算。读法所引“上说之……民可移”不是原文；文本中给出奖惩之选择的是「苟有上說之者，勸之以賞譽，威之以刑罰」。",
+   "fix": "剩余改为：“定理以其余成员循等待之律（即墨子之‘報’）为条件，不依赖先给者对回报的计算”。fragments 增「苟有上說之者，勸之以賞譽，威之以刑罰」作为 share_rises_through 的依据。"
+  },
+  {
+   "id": "mozi-ming-xiao-bu-ming-da",
+   "verdict": "revise",
+   "issues": "墨子自己给出的机制是：小事「恐其敗財也」，所以必索良宰、良工；国家大事则「骨肉之親、無故富貴、面目美好者，則舉之」，并以反问「則王公大人之親其國家也，不若其親一危弓、罷馬、衣裳、牛羊之財與」作结。“后果是否耦合进来”是 AI 读法，只有这句反问部分支持它。以亲、富、貌来选人，是一个把能与不能归并在一起的模型，结构是 Learning.selects_not_right_of_parted，读法只引了 selects_right_through。",
+   "fix": "fragments 增「恐其敗財也」与上引反问句。declarations 增 Becoming.Learning.selects_not_right_of_parted，用于以亲、富、貌为归并的选人。“差别在后果是否耦合进来”一句明标 AI 读法。"
+  },
+  {
+   "id": "sunzi-gui-dao",
+   "verdict": "revise",
+   "issues": "records 中两个是旧 id（RO 已改）。“控制耦合进对方的东西”用在诡道上是贴切的，但 Confound.confounded 这个见证中并没有控制者，只是动作与隐藏位同步。",
+   "fix": "records 改为 selection-through-couplings 与 testing-within-couplings。在 Confound 后注明“见证：动作与隐藏位同步；‘控制’是 AI 对诡道的读法”。"
+  },
+  {
+   "id": "wuzi-qun-chen-mo-ji",
+   "verdict": "revise",
+   "issues": "G1 的标题“奖赏与某成员耦合相同者的选择会消去合用所加”言之过度。按 SelectsThroughAll，池能分开者只取决于池中有哪些耦合类型（Web.separates_all_iff），与各类型所占份额无关。share_rises_through 只提高份额；只要其余类型仍有后代（b ≥ 1，且后代与亲代耦合相同），下一代的池所分开者与上一代相同。只有其余类型绝灭（b = 0 或灭绝）时，池才退化为 m。mapper 文中“b = 0 时……恰为 m 的选择”是对的，但标题与结论把“份额上升”当成了“消去”。",
+   "fix": "G1 改述为：“在 SelectsThroughAll 之下，池能分开者只取决于在场的耦合类型；份额动态只经绝灭（b = 0 或有限群体中的丢失）而消去合用所加。要使份额本身起作用，需要一个按份额加权的池（例如多数）之律，这才是所缺”。最近声明保留 share_rises_through、pooled_iff_member、separates_all_iff。"
+  },
+  {
+   "id": "simafa-zhuan-yu-fa",
+   "verdict": "revise",
+   "issues": "「與下畏法」是持法者与下同受法的约束；把它对到 Flow.act_selected_by_pool（行为改变其接纳的形成，其接纳是含它之池的选择）没有文本支持。“专”与“法”的分别，在于持规则者是否在规则之内，而 RuleCapture 并不建模这一点，所以“‘专’不必然锁定、‘法’不必然不锁定”并不是对本段的定域，而是换了一根轴。",
+   "fix": "删去 Flow.act_selected_by_pool。本条改为缺口条目：所缺之律是“读法含持规则者自身（持者也是被选者）时锁定与否的条件”，与现有 G3 合并。如果要保留 kind，请标“无脊柱定律，待补”。"
+  },
+  {
+   "id": "hanfei-er-bing",
+   "verdict": "revise",
+   "issues": "records 用的是旧 id（RO 已改）。“只有改变规则怎样读才离开（RuleCapture.uniform_locks）”不完整，应为改变律、读法或选择三者之一（锁定始于第二个读取步之后）。",
+   "fix": "selection-through-registration 改为 selection-through-couplings。uniform_locks 一句按 Lean 改述。"
+  },
+  {
+   "id": "hanfei-san-shou",
+   "verdict": "revise",
+   "issues": "（1）事劫（「壹心同辭」）对到 Web.pooled_iff_member 是对的：一切成员耦合都无别，池就等于一个成员。（2）gap 沿用了 wuzi 的 G1 标题，言之过度，见 wuzi-qun-chen-mo-ji。（3）Law.perturbation_reabsorbed 需要 byRule（下一构形只依规则而不依状态），读法写成了无条件的“状态之扰动被规则吸收”。",
+   "fix": "gap 按 wuzi 的修正改述。Law.perturbation_reabsorbed 前加“下一构形只依规则时（byRule）”。"
+  },
+  {
+   "id": "hanfei-shang-yong-mu-xia-shi-guan",
+   "verdict": "revise",
+   "issues": "“凡经这些耦合无别的亲代一起作为携带者”这一“一起”，在 Lean 中由 Web.SelectsThrough 的定义给出（share_rises_through 的说明正是这样写的），读法却把它归给 share_rises_through。share_rises_through 还需要 a > b 的后代条件。records 用的是旧 id。",
+   "fix": "“一起”改引 Web.SelectsThrough 与 Web.selects_alike_iff；share_rises_through 补上条件。selection-through-registration 改为 selection-through-couplings。"
+  },
+  {
+   "id": "hanfei-shi-fa-ze-ren",
+   "verdict": "keep",
+   "issues": "以法择人是经一个模型的选择；selects_right_through、selects_not_right_of_parted、model_error 的用法都正确。“法数本身也会被饰”与相关条目的连接恰当。定域判断成立。"
+  },
+  {
+   "id": "hanfei-qu-hao-qu-wu",
+   "verdict": "revise",
+   "issues": "records 用的是旧 id。属争胜（隐藏）一层的相分，判断正确。",
+   "fix": "selection-through-registration 改为 selection-through-couplings。"
+  },
+  {
+   "id": "hanfei-ding-fa-yi-guo-mu-shi",
+   "verdict": "revise",
+   "issues": "ExchangeLaw.Through.acts_separate_member 需要成员列出、各成员耦合可判定；读法写成无条件的“池之行为分开两段历史时有成员把它们耦合开”。response_not_fixed_by_coupling 也需要可判定。「知而弗言」对零律，贴切。",
+   "fix": "在 acts_separate_member 与 response_not_fixed_by_coupling 两处补上“成员列出、可判定”的条件。"
+  },
+  {
+   "id": "hanfei-zhong-duan-can-guan",
+   "verdict": "revise",
+   "issues": "「聽有門户則臣壅塞」的结构已由读法后半给出：门户一侧的耦合即是所闻，即 Web.pooled_iff_member。读法引 Confound.confounded 并说“控制耦合进来者可使错误投影永不被排除”，但这个见证说的是动作与隐藏位同步，并无控制者，与壅塞也不同构。",
+   "fix": "删去 Confound.confounded（records 随之删去 experiment-needs-return）；壅塞只以 pooled_iff_member 说明。"
+  },
+  {
+   "id": "hanfei-xin-du-yu-shi-zhuan",
+   "verdict": "revise",
+   "issues": "（1）读法自己说“范围：……‘与时转’不保证治，只是复得的必要条件”，应判为 scope。（2）“一段长 L 的保持恰在 L ≥ 2N−1 时确定规则”不对：pace_law 确定的是保持的规则所生的进程，不是规则本身。说这是论语“所損益可知也”的确切部分，没有文本支持；而且这是在韩非条目中引论语，Pace.dissolving 也正反对其普遍外推。（3）never_reads_loses 需要有限构形与一次归并。",
+   "fix": "kind 改为 scope。pace_law 一句改为“确定所生的进程（held_fixed、pace_law）”。删去论语一句，或移到另立的论语条目中作为定域。never_reads_loses 补上条件。"
+  },
+  {
+   "id": "hanfei-xianxue-jian-ting",
+   "verdict": "revise",
+   "issues": "“池只在一切成员耦合相同时才等于一个成员”误述了 Web.pooled_iff_member（条件是：凡该成员耦合无别者，一切成员也都无别）。“相反之辞并存……不是乱的原因”不是定理：乱与不乱取决于池怎样行动（response_not_fixed_by_coupling），应标为 AI 读法。",
+   "fix": "改正 pooled_iff_member 的释义。“不是乱的原因”改为：“脊柱只说并存之辞是合用所加；合用之后乱与不乱，由所循之律决定（AI读法）”。"
+  },
+  {
+   "id": "shangjun-shang-suo-yu",
+   "verdict": "revise",
+   "issues": "share_rises 与 share_rises_through 数的是后代：携带者留下的后代较多。用在“民战、民学问”上，须有一个传递的前提：所奖赏的行为被后来者（模仿者或后代）承袭，并与亲代经选择者的耦合无别。读法没有写这个前提。“选择是什么由它实际所奖定（Web.SelectsThrough）”是误述：SelectsThrough 是经选择者耦合的选择的定义，“实际所奖”是 glossary 中选择者一行（taken as what actually couples into it）。读法中的大学、论语引文是简体转写。records 用的是旧 id。",
+   "fix": "补上传递前提：“后代（或模仿者）与亲代经选择者之耦合无别，才计为携带者”。SelectsThrough 改述为“经选择者耦合的选择；选择者取其实际所耦合入者”。引文改用冻结文本的字形。selection-through-registration 改为 selection-through-couplings。"
+  },
+  {
+   "id": "tanjing-shan-zhishi",
+   "verdict": "revise",
+   "issues": "读法说“‘自悟者不假外求’作为普遍说法不成立”，过当了。原句是条件句「若自悟者，不假外求」：如果自己的耦合已经分开了，那么对这个差异，合用不再有所加。这恰与 Web.pooled_iff_member 一致（自己最细时，池的选择就是自己的选择）。脊柱所否认的，只是“有人在一切差异上都最细”这一读法。",
+   "fix": "改为：“‘若自悟者，不假外求’在自己的耦合已分开处成立（Web.pooled_iff_member）；‘不能自悟，須求善知識’在自己不分而他者分开处成立（Web.pool_adds）；‘救不可得’在回应之律不变处成立（response_not_fixed_by_coupling）”。declarations 增 Becoming.Web.pooled_iff_member。"
+  },
+  {
+   "id": "zaahan-er-jian",
+   "verdict": "keep",
+   "issues": "沿用 RO，Widening 已依 R22 改为 LoopReturn。closes_within 说的是“返回低于所受”（返回映射），runs_away 说的是“每个环节至少加倍”，释义都正确。"
+  },
+  {
+   "id": "zhonglun-wu-ming-mie",
+   "verdict": "revise",
+   "issues": "「以如實見故，則無明滅」说“见”就使锁定之求熄灭。理论中，见（耦合加宽）只改变能分开者，不固定回应：Coupling is not compliance（ExchangeLaw.response_not_fixed_by_coupling）；Seeing is not valuing。读法没有对“见则灭”作这一定域。“链在其条件被切断处随之而止”以 consumption_ends_with_feeders 定域，可以接受。",
+   "fix": "declarations 增 Becoming.ExchangeLaw.response_not_fixed_by_coupling。范围增一句：“如实见加宽所耦合者，而求是否解锁由所循之律决定，不由见本身决定”。"
+  },
+  {
+   "id": "shengman-wu-ming-zhu-di",
+   "verdict": "revise",
+   "issues": "“没有完全的知者”不由 Diagonal.gap_unsaid 无条件给出。该定理需要一个使每个值都移动的映射（Moves）；Diagonal.fixed_of_complete 说的是：每个读法都可说时，每个映射都有不动值。所以“完全”只在值空间没有处处移动的映射时才可能。records 用的是旧 id。",
+   "fix": "gap_unsaid 补条件“值上有处处移动的映射时”。records 改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "guanjing-yi-xiang-bi-de",
+   "verdict": "keep",
+   "issues": "属意志层的相分；completes_iff_runs 已写“确定过程”，用法正确。"
+  }
+ ],
+ "missing": [
+  "名：选择者（glossary「selector (选择者)」，即 Web.SelectsThrough 中的 g、Web.SelectsThroughAll 中的 group；取其实际所耦合入者）。本簇没有为它立名，须与“择”“识”协调。",
+  "名：部分所及（glossary「what a part reaches」：Flow.Reaches、Flow.ReachesBefore、Flow.Balances.comparison_within_reach；record comparison-within-reach）。应与所及闭包 Flow.WithinReach 分开立名。",
+  "名的形式：单步关系 Flow.FedBy、Flow.AffectedBy、Flow.CoupledFrom、Flow.Affects 与它们的闭包 WithinFeeding、WithinInfluence、WithinCoupling、WithinReach 要用不同的形式，由整合者为四个“所X”定一个统一的闭包标记。",
+  "名：经耦合而应（glossary「responds through the couplings」：Flow.RespondsThroughCoupling、Flow.respondsThroughCoupling_withhold）。glossary 有此行，本簇没有立名。",
+  "名或明确的组合：为一切的对齐（§7.4）。“兼感”只给出合用耦合这一半，缺少“成员的行为能回应”的另一半（ExchangeLaw.acts_alike_all_iff、ExchangeLaw.response_not_fixed_by_coupling、Clearing.separated_unresponded）。可写作组合“兼感而能应”，或由整合者明确决定不另立名。",
+  "条目：韩非子·二柄 「人主有二患：任賢，則臣將乘於賢以劫其君」与「故人主好賢，則羣臣飾行以要君欲，則是羣臣之情不效；羣臣之情不效，則人主無以異其臣矣」（FA1-S-H07；FA1-H07-R011 现在只是平行）。结构：share_rises_through 加上 Web.selects_alike_iff（选择者分不开）。这是劫持“由选择形成”一半最清楚的先秦陈述，应作相合条目，并作“劫”的用例。",
+  "条目：§7.2 第三律（Flow.favours_reaching_beyond、Flow.Balances.rise_paid_from_beyond；record raising-what-couples-in-draws-from-beyond）在簇中没有对应段落。候选：老子七十七章「人之道则不然，损不足以奉有馀」（YD-LAO-BASE）。它只给出“上升由别处支付”，不给出“别处在所耦合者之外”，宜作定域，还须核对。",
+  "条目：荀子·致士「夫是之謂衡聽、顯幽、重明、退姦、進良之術」（RU2-S-XZ14，先秦），与杨倞注「顯幽，謂使幽人明顯，不壅蔽也」（唐注层）。结构：明到达支持所不标出者（顯幽），加上不偏一侧之听（衡聽）。",
+  "平行（share_rises_through，与 shangjun-shang-suo-yu、hanfei-shang-yong-mu-xia-shi-guan 同一条律）：「楚莊王好細腰，故朝有餓人」（荀子·君道 RU2-S-XZ12）、「上有好者，下必有甚焉者矣」（孟子·滕文公上 RU2-S-MZ）、「楚靈王好細腰而國中多餓人」（韩非子·二柄 FA1-S-H07）。",
+  "用例，各名所缺（都已核对冻结文本）：「感於物而動」「夫物之感人無窮」（RU2-S-V3Q01 引《樂記》）、「人心虛故物能感之」（YD-CY4）、「此雖免乎行，猶有所待者也」（ZH1-S01）、「所資雖在外，能化為血氣以益其內」（RU2-S-V3Q01）、「以因三受故，而生於渴愛。因愛有四取，因取故有有」（FO1-S-MMK）、「禮義法度者，應時而變者也」（ZH1-S14）、「道雖邇，不行不至；事雖小，不爲不成」（RU2-S-XZ02）。",
+  "交叉：PRE-QIN-AND-WENYAN §2 已经以 Pace.rule_until_reading、Pace.rule_unreached 和 Clearing.pool_closes_gap 读过《察今》。与时转、xunzi-wangzhi-fa-er-bu-yi 的 G2 以及 hanfei-xin-du-yu-shi-zhuan 都应引用它；G2 所缺只是一条把读取步与合用耦合合成的律。",
+  "G1 应重述：在 SelectsThroughAll 之下，池能分开者只取决于在场的耦合类型，份额上升本身不消去合用所加，只有绝灭才会。要让份额起作用，需要一条“按份额加权之池”的律（见 wuzi-qun-chen-mo-ji）。",
+  "系统修正一：31 条条目的 records 仍用 R35 之前的旧 id（selection-through-registration→selection-through-couplings，testing-within-registration→testing-within-couplings，runaway-distance-unregistered→runaway-distance-uncoupled，registration-within-what-it-registers→readings-within-what-they-read，contextual-registration→claims-shown-in-context）。重定向页虽能解析，仍应改为现行 id。另有两条 RO 段丢了 RO 的记录：zhuangzi-dao-shu 缺 gluing-under-parity，suzhe-33 缺 growth-constrained-fragmentation。",
+  "系统修正二：许多读法把繁体冻结文本转写成简体来引用（例如“观其所感，而天地万物之情可见矣”“能为可信，而不能使人必信己”），按 brief，引文须保持冻结文本的字形。名的 fit、course 中有四处引文不准：张载“物有未體則心為有外”（冻结文本作「物有未体，则心为有外」）；戴震“无欲亦愚”（作「有生而愚者，雖無欲，亦愚也」）；孟子“徒法不能自行”（作「徒法不能以自行」）；陆九渊“蒙蔽移夺”是脉络关系的标题，不是原文（原文作「有所𮐃蔽有所移夺有所陷溺」）。",
+  "上游提示（给整合者）：正文 §10 对照表的“元闭”行，英文作“only a change of the reading leaves”，中文作“只有改变读法才离开”。而 RuleCapture 模块对 uniform_locks 的说明是：改变律、读法或选择都可离开；读法只在阈上偏向时，越过阈的构形改变也离开（Reversed.not_absorbed）。柄移、hanfei-er-bing、zhuangzi-quqie 都沿用了对照表的窄说法。"
+ ]
+}

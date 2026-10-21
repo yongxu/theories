@@ -1,0 +1,101 @@
+{
+ "edits": [
+  {
+   "id": "NEW-11",
+   "find": "一应者感入此所待",
+   "replace": "此所待以积感入一应者",
+   "why": "The direction is reversed. In this book 感入 runs from a condition into a formation: the 所待 is the subject, as in 十一·四's 感入其中者之所待 and 十一·十's 栖地不感入清除者. In Replenishing the Lean has obs responder held = True, so the condition couples into the responder by level, not the other way round."
+  },
+  {
+   "id": "六·十三",
+   "find": "为规所执之状吸回也",
+   "replace": "为规所定之状吸回也",
+   "why": "执 names capture (`Capture`), and that name is defined only in ⟦十一·十八⟧, which comes after ⟦六·十三⟧ in book-1-outline (十一·二十 comes before 十一·二十一). This 經 therefore uses a name before its definition. 所定 is not a name, and the clause matches perturbation_reabsorbed and perturbation_drawnInto (next (x,g) is the state the rule fixes)."
+  },
+  {
+   "id": "六·十三",
+   "find": "只扰状之他分者入规所执之状而不复（`Becoming.Captured.state_perturbation_drawn`），扰其规者则入新规所执之状",
+   "replace": "只扰状之他分者入规所定之状而不复（`Becoming.Captured.state_perturbation_drawn`），扰其规者则入新规所定之状",
+   "why": "Same as the 經 edit: 执 is not yet defined here. This keeps 說 and 經 worded alike."
+  },
+  {
+   "id": "NEW-9",
+   "find": "一积有其补而二者之和定处，或应随此积不减处，以积感入即是待于此积与其量之所往；只有补一无补之积之缺之应，须另给以积感入。",
+   "replace": "应随此积不减处，唯待此积之诸待者即可与之；一积有其补而二者之和定处，以积感入即是待于此积与其量之所往；无和定之补而应随此积有降处（补其缺之应即是），须另给以积感入。",
+   "why": "carried_iff_rising says that, without a complement, a response is carried exactly where it rises with the level. So every response that falls somewhere needs coupling by level, as the LevelCoupling doc says ('a response falling with it needs coupling by level'). The deficit-supply response (supply_not_carried) is only one instance, so 「只有补…之缺之应」 is too narrow. The old sentence also tied 「其量之所往」 to the rising case, which needs no complement."
+  },
+  {
+   "id": "NEW-9",
+   "find": "故一应，与一所待之量唯定于所待 d 于其步之积",
+   "replace": "故所待之同异定然否，则一应，与一所待之量唯定于所待 d 于其步之积",
+   "why": "carried_iff_rising (section Exactly, variable [DecidableEq C], used by onlyAt) and supply_not_carried ([DecidableEq C]) both take decidable equality of conditions. The brief requires 經 to state such local conditions (已定), and this 經 already does so for not_not_obs_iff_respondsByLevel."
+  },
+  {
+   "id": "NEW-9",
+   "find": "d 与一他所待于其步之积之和定为 N，则有一族待者",
+   "replace": "所待之同异定然否，d 与一他所待于其步之积之和定为 N，则有一族待者",
+   "why": "Complement.law_through, Complement.law_needsSupport and supply_carried_by_complement all use [DecidableEq C], because the complement web reads `if c = d`. The hypothesis belongs in the 經."
+  },
+  {
+   "id": "NEW-9",
+   "find": "律只及交换之步之积",
+   "replace": "律只及取与之步之积",
+   "why": "The table's word for an exchange is 取与. 交 names Web.Interacts, so 交换 brings an unadopted modern word into a name's territory."
+  },
+  {
+   "id": "十一·十二",
+   "find": "凡流衡，一域诸员所感之所待皆在一员各异之族中",
+   "replace": "凡流衡，所待之同异定然否，一域诸员所感之所待皆在一员各异之族中",
+   "why": "favours_reaching_beyond is stated with [DecidableEq C], which is needed to find a condition outside the family (rise_takes_beyond). The 經 omits this decidability hypothesis."
+  },
+  {
+   "id": "十一·十四",
+   "find": "凡在场者之族之员各异，族连族外之族之员各异",
+   "replace": "凡所待与待者之同异定然否，在场者之族之员各异，族连族外之族之员各异",
+   "why": "Above.room, optimum_beyond, optimum_untouched, optimum_lowers_iff, MutualBest.full, mutual_beyond and mutual_as_one all take [DecidableEq F] [DecidableEq C], and MutualBest itself uses decide for `alone`. The course laws of ⟦十一·十五⟧ inherit 十一·十四's conditions, so stating the hypothesis here covers them too. The wording follows NEW-9."
+  },
+  {
+   "id": "十四·二十一",
+   "find": "一求者之量于一状多于其余每一求者之量也",
+   "replace": "一求者之量于一状多于每一他求者之量也",
+   "why": "其余 is a table name: the rest of the whole read as one relatum (World.withRest; 其余从不施动). Using it in a 經 to mean 'the other seekers' makes one word name two concepts. AboveAll is ∀ j ≠ i, q j s < q i s, so 每一他求者 is exact."
+  },
+  {
+   "id": "十四·二十一",
+   "find": "是求多于其余一切者之竞",
+   "replace": "是求多于一切他者之竞",
+   "why": "The same 其余 clash, in the 說."
+  },
+  {
+   "id": "十一·十三",
+   "find": "一族与所列之族外：",
+   "replace": "一族与族外之族：",
+   "why": "列 is the table's name for a census (Web.Census). rest is simply a List, which the table calls 族, and ⟦十一·十四⟧ already writes 族外之族."
+  },
+  {
+   "id": "NEW-10",
+   "find": "诸联列为一族",
+   "replace": "诸联为一族",
+   "why": "Same 列/census clash. The links are just a List (族)."
+  },
+  {
+   "id": "十一·十三",
+   "find": "此即庄与哈德菲尔德-梅内尔（2020）之定理一",
+   "replace": "此即西蒙·庄与迪伦·哈德菲尔德-梅内尔（2020）之定理一",
+   "why": "In a book that cites 庄子 throughout, a bare 庄 reads as 庄子. The cited authors are Simon Zhuang and Dylan Hadfield-Menell, so the full transliterated names remove the ambiguity and keep the text Chinese."
+  },
+  {
+   "id": "十一·二十五",
+   "find": "不是中和（⟦十二·十六⟧）之带",
+   "replace": "不带中和（⟦十二·十六⟧）之义",
+   "why": "「…之带」 does not parse. The intended sense, in the table's convention of senses not carried (所不带), is that this 和 does not carry the meaning of 中和."
+  },
+  {
+   "id": "十一·十五",
+   "find": "则每一莫上之者不取而任其以所与之速复长",
+   "replace": "则每一莫上之者，于其积未及 y 之诸步皆不取，任其以所与之速复长",
+   "why": "frontier_rebuilds concludes only for steps where the rising course is still below y (rise R y s (t+1) < y → x(t+1) = x t + R(x t)). Once y is reached the optimum need not keep abstaining (frontier_rebuilt holds it at y). The unqualified wording overstates the law."
+  }
+ ],
+ "notes": "I checked all 31 條 plus the 篇首 and 对照. There are 15 edits, all in 說 or 經 wording; no law is misstated in a way that needs a new Lean result.\n\nChecks run:\n- **Declarations:** all 197 cited `Becoming.*` names are in core receipt 20261021T175617.330751Z (main checkout) and in the worktree receipt.\n- **Quotations:** all 53 「…」〔ID〕 pass ctq.py text as exact.\n- **对照 and 說 kinds:** every kind matches passages.json (34 entries). laozi-22-fu-wei-bu-zheng is agreement there, so 相合 is right.\n- **References:** every ⟦id⟧ exists in book-1-outline, and the content each points to checked out. 十二·十二 is 未兆 (去绝之远近). 十二·六 is 滋. 九·八 is 验之界. 九·十二 is 往. 四·十 holds more_exhausted. 四·二十三's last law is the slack break. 八·十二 is 变通. 三·十二 is 静.\n- **Characters:** no traditional characters appear outside quotations and the 經/說/證/讀 labels.\n- **Instructions:** the C10 instructions were carried out, with the table's names preferred over the instruction wording (相为莫上, 规不改者, 族, 合所求, 积之历).\n- **經 against Lean:** I read the Lean for every 經. ExchangeLaw.RespondsTo and Through, response_not_fixed_by_coupling, the closure definitions and inclusions, beyond_*, Cuts and GrownBy, WithinResponse, SelectionGap, Rejoining, SelectionReach and DrawnBeyond, Optimum, Seeking, Capture, Pace, RuleCapture, ClosedCapture, SelectionPool and PoolResponse all match their 經 in hypotheses, iff direction and conclusion, apart from the issues below.\n\nSubstantive findings:\n1. **NEW-11 說, coupling direction:** it reverses the direction of 感入. In Replenishing the condition couples into the responder (obs responder = True).\n2. **六·十三 經, forward name:** it uses 执 (为规所执之状), a name defined only in 十一·十八, which comes later in the outline.\n3. **NEW-9 說, too narrow:** 「只有补…之缺之应须另给」 narrows the law. By carried_iff_rising, every non-rising response needs coupling by level where no complement exists; supply is one case.\n4. **Missing decidability hypotheses (the brief's 已定):**\n   - NEW-9 sentences 2–3 need it: carried_iff_rising, supply_not_carried and Complement.* all use [DecidableEq C].\n   - 十一·十二's first law needs it: favours_reaching_beyond [DecidableEq C].\n   - 十一·十四 needs it: Above.room, optimum_beyond, MutualBest.* and mutual_* use [DecidableEq F][DecidableEq C]. ⟦十一·十五⟧ inherits it.\n5. **Name clashes:**\n   - 其余 in 十四·二十一 經, where it means 'other seekers' but names the rest-relatum.\n   - 列 used as 'listed' (十一·十三, NEW-10), but it names a census.\n   - The bare 庄 for Simon Zhuang, which reads as 庄子.\n\nMinor, not edited:\n- 十一·十五 說 rebuild clause: edited above to add the 'below y' qualifier.\n- 十一·二十一 說 counts steps ordinally: 规自第二步起 (open_turned) is index 2. 十一·六 and 十一·二十四 say 第三步 for index 2. Both copy their Lean docs, so the integrator may want one convention.\n- Readings without a decision number:\n  - 十一·二十五 and 十一·二十六 use 讀（AI，§7.4）.\n  - 十一·十五 uses 讀（AI）.\n- 證 lengths: 十一·十三 and 十一·十四 list 9 declarations each, against a guide of 3–8.\n\nFor the integrator:\n- 复合 and 依附而长 are still missing from the table. 复合 clashes with the 报 and 阶 rows; 附 is the Adheres name.\n- 十一·一 (C08) still needs its pointer to ⟦NEW-9⟧.\n- 胶不是成闭 and 其三与其二相连而成闭 follow the 胶 row's note.\n\nPaths:\n- Part under review (transcribed): /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c10rev/part.json\n- Instructions: /Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/rewrite/C10.json\n- Main Lean files: LevelCoupling.lean, Cuts.lean, Rejoining.lean, Optimum.lean, RuleCapture.lean and ClosedCapture.lean, all under /Users/ren/theories/.claude/worktrees/zhonghua/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/"
+}

@@ -1,0 +1,196 @@
+{
+ "part": {
+  "key": "C04",
+  "heading": "篇四　流与衡",
+  "intro": "本篇把同一展开读作诸物跨步相取相与之量。篇一立大化、宇、其余，篇二立待、待网、足、绝、持、有待、有形，篇三立作、已、升、降、列与止（停息）；本篇在其上说：一步之取与（流）怎样读；衡（步后之水平加所取，等于步前之水平加所与）怎样是一个局部条件，而计其余则处处成立；与不过取、与如其取、耗三者一层强于一层；耗之下，族之存量随取者而降，一员之升伴他员之降，不停之变需开，续取之族须自外来；止需端或有穷之读，无端则可趋而不至，以任意之量读之亦然。然后说诸取者之间所分化者：各取不过与而共取可以过与，共取过与终其所待者，绝依所需，各取皆在“水平加共与高出所需之量”之内时不属任一取者，一族之升由族外之降付出，全取排除他取，存量涸；最后是常取之下的不返之点与行止于何处，以及每步取其序之最优者怎样使族外之待绝而终不足（序与感之关系在篇十）。本篇之律都在写入其中的局部条件下，对每个如此表示之宇成立；步为离散、量为自然数是表示的承诺，凡律依之处皆写明，⟦四·十四⟧至⟦四·十九⟧说止所依者，并说去掉“量为自然数”时它靠什么。“于任意晚之步皆有”在本篇是说：每一步之后皆有一步如此。延续之条件（凡续皆有顾，新组合：凡＋续＋皆有顾，凡延续皆有意义）在本篇只于⟦四·二十三⟧作为设出现，不断言：它只定谁之失在计内，本身不排序；排序唯在以广为愈（以扩大为更好，C；新组合：以＋广＋为＋愈，篇十五），而以广为愈在本篇亦只作设（⟦四·二十二⟧、⟦四·二十三⟧）。下一篇论持续、更新、回返与复，恒、竭、复都用本篇之取与。",
+  "tiao": [
+   {
+    "id": "四·四",
+    "title": "取不息则与不息",
+    "body": "**經**　凡衡，族之取于任意晚之步皆有为正者，则其与不能自某步起皆为零。凡衡而多而无已，则族之与无终界；每物每步与族不过一定之量，则与之者之数亦无终界。\n\n**說**　第一句（`Becoming.Flow.uptake_needs_replenishment`）只用衡：一再之取需要一再之与，否则存量被取尽。第二句（`Becoming.Flow.More.replenishment_unbounded`、`Becoming.Flow.More.renewers_unbounded`，后者之条件为 `Becoming.Flow.Capacity`）中“无终界”是说没有一个数自某步起限住它；它不说每步都有与之者：与之者可在无穷多步上为零（`Becoming.Pulse.pulsed`）。与之者也可以就是取者自己：封闭之环中每物还其所取，总量不变而多而无已（`Becoming.Cycle.closed_more`），所以“与”不必来自族外；要说它必须来自族外，需要耗（⟦四·七⟧、⟦四·十二⟧）。第二句依赖自然数之量：二进分数之量稠密且积小以高大，其中取者多而无已而每取越来越小，每步与一整份即可（`Becoming.Halving.takes_halve`）；在积小以高大之量中，它真正的条件是每取有一个最小之量（`Becoming.Amounts.replenishment_unbounded`，结论是与不在最小之取之任何倍数之内）。有形者之作本身就是被与：衡而唯活动者与之下，有形之物（有形，新组合：有＋形，活动恰在水平为正之处，篇二）作时，必有另一活动之物与之（`Becoming.Web.Embodied.arises_given`）；讀（AI，D4）：有形之物读作生之一种（生不限于有形），所以有形之生，其作经由他物之与。对照（相合，daxue-sheng-zhi-zhe-zhong）：「生之者衆，食之者寡，為之者疾，用之者舒，則財恆足矣」〔RU1-S-DX〕（礼记·大学，先秦至秦汉，成书有争议）：相合有二层：所存常足，在于出入相掩则水平不降（⟦四·二十⟧）；与之者、取者之数只在必要之向上相合：取者多而无已而每物与有定量，则与之者之数无终界。计数本身不保存量；生财之财政义不取。\n\n**證**　`Becoming.Flow.uptake_needs_replenishment`、`Becoming.Flow.More.replenishment_unbounded`、`Becoming.Flow.More.renewers_unbounded`、`Becoming.Flow.Capacity`、`Becoming.Pulse.pulsed`、`Becoming.Cycle.closed_more`、`Becoming.Halving.takes_halve`、`Becoming.Web.Embodied.arises_given`；记录 [unceasing-generation-needs-renewal](../results/records/unceasing-generation-needs-renewal.md)、[more-needs-renewers](../results/records/more-needs-renewers.md)、[generation-is-replenishment](../results/records/generation-is-replenishment.md)。"
+   },
+   {
+    "id": "四·五",
+    "title": "封与围",
+    "body": "**經**　封，族于一步，在场之物皆不自族外取、亦不与族外也。步有封，有不重复之有穷族封于其步也。围，有不重复之有穷族含此族而封于其步也；围所立者，有不重复之有穷族含步前步后凡水平为正者而封于其步也。凡所待有穷而尽在一不重复之表，则每步有封。凡所待之同异皆定然否，步有封则围每一族；不问其同异定然否，步有封则其围每一族不可非。\n\n**說**　封（封闭，closed，`Becoming.Flow.ClosedAt`）是一步与一个所举之族之间的关系，不是一道墙：边界只是一个表，其外有无交换，由在场诸物之取与读出。步有封（`Becoming.Flow.Enclosed`）是说这一步之交换落在有穷多所待之内；所待本来有穷而尽在一表之处，每步皆有封（`Becoming.Flow.enclosed_of_finite`）。围（`Becoming.Flow.Around`）要求封住的族含所给之族；围所立者（`Becoming.Flow.AroundStanding`）要求它含此步前后一切水平为正者（下称所立者），这是止之律（⟦四·十八⟧）所用之形。从“步有封”到“围此族”需要所待之同异定然否（定然否，新组合：定＋然否，已定，篇十六；`Becoming.Flow.Enclosed.around`），否则只得其不可非（不可非，新组合：不＋可非，双重否定，篇十六；`Becoming.Flow.Enclosed.around_not_not`）。封与闭不同：闭（篇七）是律从不离开的区域，封是一步之交换不出所举之族。名“封”取「夫道未始有封」〔ZH1-S02〕（庄子·齐物论，内篇）之界义；“道”不采为名。\n\n**證**　`Becoming.Flow.ClosedAt`、`Becoming.Flow.Enclosed`、`Becoming.Flow.Around`、`Becoming.Flow.AroundStanding`、`Becoming.Flow.enclosed_of_finite`、`Becoming.Flow.Enclosed.around`、`Becoming.Flow.Enclosed.around_not_not`；记录 [no-finite-part-bears-taking](../results/records/no-finite-part-bears-taking.md)、[continued-change-needs-openness](../results/records/continued-change-needs-openness.md)。"
+   },
+   {
+    "id": "四·六",
+    "title": "与不过取、与如其取",
+    "body": "**經**　与不过取，族于一步，在场之每物与族不过其自族所取也；与如其取，与族恰如其自族所取也。凡衡，族于一步与不过取，则步后之存量加其取过于与之量，等于步前之存量；与如其取，则取过于与之量为零。凡衡，自某步起族每步与如其取而其状不复，则其有变之步不过其存量分于诸员之方式之数；自某步起每步与不过取，而其状于任意晚之步有变，则其状之复不可非。\n\n**說**　与不过取（无中不生，第一定律，gainless，`Becoming.Flow.GainlessOn`；新组合：与＋不过＋取）与与如其取（守恒，conserving，`Becoming.Flow.ConservingOn`；新组合：与＋如其取）都是对一族一步之取与的条件；对每步每个封住的不重复之族都成立者，即 `Becoming.Flow.Gainless`、`Becoming.Flow.Conserving`。它们是条件，不是律：理论不断言展开处处与不过取。在与不过取之下，族之“取过于与之量”恰是存量之降（`Becoming.Flow.Balances.stock_lost`），与如其取则此量为零（`Becoming.Flow.ConservingOn.lost_zero`）。与如其取之下，状可以变而量不变：状不复则有变之步有穷，其界是玻尔兹曼之数（`Becoming.Flow.Balances.changes_within_conserving`）；与不过取而变不停，则“永不复”不能成立（`Becoming.Flow.Balances.unending_change_revisits`，只得双重否定之形，不构造出复在哪一步）。讀（AI，D29）：熵读作守恒之量中的记录：每次交换都守恒，而记录仍增。物理之一读（外围，用实数与测度）：读量为可用功，热力学第二定律给出与不过取（`Becoming.EntropyProduction.gainless_of_secondLaw`），单靠它不给出耗（⟦四·七⟧）。对照（相合，zhibeiyou-chou-fu-shen-qi）：「臭腐復化爲神奇，神奇復化爲臭腐」〔ZH1-S22〕（庄子·知北遊，外篇，年代有争议）：所变者是状，量不增不减，变而不停则“不复”不能成立；同段之“一气”若读作共同之质料基底，属本原一层，不取。相分（fazang-jin-wu-zeng-jian）：「師子雖有生滅，金體本無增減。故曰無生。」〔FO2-KS-P〕（法藏《金师子章》，唐）以金体之不增不减立不生之本；律中量之不变只在与如其取之步，衡且耗则总量降（⟦四·七⟧），状上之作也不因量不变而被否定。\n\n**證**　`Becoming.Flow.GainlessOn`、`Becoming.Flow.ConservingOn`、`Becoming.Flow.Gainless`、`Becoming.Flow.Conserving`、`Becoming.Flow.Balances.stock_lost`、`Becoming.Flow.ConservingOn.lost_zero`、`Becoming.Flow.Balances.changes_within_conserving`、`Becoming.Flow.Balances.unending_change_revisits`；记录 [entropy-history-and-record](../results/records/entropy-history-and-record.md)、[least-loss-from-entropy-production](../results/records/least-loss-from-entropy-production.md)。"
+   },
+   {
+    "id": "四·七",
+    "title": "耗",
+    "body": "**經**　耗，凡于一步封之不重复之族，在场之每物与族不过其自族所取，有取则少于所取也。凡衡，族于一步耗，则步后之存量加其取者之数，不过步前之存量；一段步上族每步衡且耗，则段末之存量加其间取者之总数，不过段首之存量。凡耗，步有封，则在场之物有与必有取。\n\n**說**　耗（耗散，dissipation；一族一步者为 `Becoming.Flow.DissipatesOn`，每步每个封住的不重复之族皆然者为 `Becoming.Flow.Dissipative`）比与不过取多一分：有取则所与必少于所取；量为自然数，少于即至少少一单位，这一单位就是端（⟦四·十四⟧）在整数中之例。由此，族在衡且耗之步至少降其取者之数（`Becoming.Flow.Balances.runs_down`），一段步上取者之总数受段首之存量所限（`Becoming.Flow.takers_within_on`，它是任意之量中“诸步之降相加不过始之量”之律 `Becoming.Amounts.losses_within` 的整数之例）；有封之步上，凡与者必有所取（`Becoming.Flow.Dissipative.giving_needs_uptake`）。耗只在有封之处才有约束：若无一步有封，耗空然成立，与之者可与而不取（`Becoming.Spray.spray`）。物理之一读（外围）：每次自封住之族之取都毁去一些可用功，且量为整单位，则流耗（`Becoming.EntropyProduction.dissipative_of_irreversible`）。对照（相合，jielao-shu-bian-ye）：「一人之作，日亡半日，十日則亡五人之功矣」〔CV1-S-JL〕（韩非子·解老，战国末）：每次变业至少失一定之量，人越多、变越频，所亏越大，正是每次至少降一端之计数结构；法令、民苦之治国语汇不取。\n\n**證**　`Becoming.Flow.DissipatesOn`、`Becoming.Flow.Dissipative`、`Becoming.Flow.Balances.runs_down`、`Becoming.Flow.takers_within_on`、`Becoming.Amounts.losses_within`、`Becoming.Flow.Dissipative.giving_needs_uptake`、`Becoming.Spray.spray`；记录 [laws-of-one-step](../results/records/laws-of-one-step.md)、[no-finite-part-bears-taking](../results/records/no-finite-part-bears-taking.md)、[least-loss-from-entropy-production](../results/records/least-loss-from-entropy-production.md)。"
+   },
+   {
+    "id": "四·八",
+    "title": "损",
+    "body": "**經**　损，一事于其每步，族中无所升则有所降也。凡衡，一事之每步族耗而有取者，则其事损其族。凡衡，族于一步耗而有取者，则族中有降者，不论他员升否；族中一员升，则同步族中他员有降者。\n\n**說**　损（有限家族之消耗，depletion，`Becoming.Web.Depletes`）原是作之读中所设的一个前提，在衡且耗之下成了定理（`Becoming.Flow.Balances.depletes`、`Becoming.Flow.Balances.falls_of_taking`）。降只是水平之低，不是已：降者可仍立。一员之升必伴他员之降（`Becoming.Flow.rise_with_fall`），这是一次取与从两端读，一端之升即另一端之降；无耗则不然，一员可以聚（开始作为所待而在）而无一降者（`Becoming.Brood.rise_without_fall`）。对照（相合，yi-wuwang-xingren-de-niu）：「行人得牛，邑人災也」〔YD-JP25〕（小象传·无妄六三，战国，有争议）：行人之得、邑人之灾是同一次取与之两端；灾异与吉凶之义不取。名“损”取「損 、益 ，盛衰之始也」〔YD-OW-ZG〕（杂卦，有争议），与益（篇六）成对；墨经「損，偏去也」〔MI1-S-JS〕只给偏去（篇六）。\n\n**證**　`Becoming.Web.Depletes`、`Becoming.Flow.Balances.depletes`、`Becoming.Flow.Balances.falls_of_taking`、`Becoming.Flow.rise_with_fall`、`Becoming.Brood.rise_without_fall`；记录 [rising-and-falling-in-one-exchange](../results/records/rising-and-falling-in-one-exchange.md)、[unceasing-generation-needs-renewal](../results/records/unceasing-generation-needs-renewal.md)。"
+   },
+   {
+    "id": "四·九",
+    "title": "衰",
+    "body": "**經**　衰，族于一步不重复，含步前步后凡所立者，且衡且耗也。凡族于一步衰，有所待之水平升或降，恰当族之总量降。\n\n**說**　衰（下降，running down，`Becoming.Flow.RunsDownOn`；宇中有某族衰为 `Becoming.Flow.RunsDown`）不要求封：族只须含此步前后一切所立者，且其上衡而耗。这是一步之律（`Becoming.Flow.RunsDownOn.changes_iff`）：在衰之步，有升降恰是总量之降，所以每一升降都使所立者之总量至少降一单位。下一条由此得到“不停之变需开”。对照（相合，yi-zagua-sun-yi-shengshuai）：「損 、益 ，盛衰之始也」〔YD-OW-ZG〕（杂卦，有争议）对举损益而不言何者为盛、何者为衰，相合在表中之配对（`Becoming.Hexagram.zagua_partners`）；以下是 AI 之引申，不计入相合：一次取与本身不定升降，在衰之步上有所升降，恰当总量降。\n\n**證**　`Becoming.Flow.RunsDownOn`、`Becoming.Flow.RunsDown`、`Becoming.Flow.RunsDownOn.changes_iff`、`Becoming.Hexagram.zagua_partners`；记录 [laws-of-one-step](../results/records/laws-of-one-step.md)、[hexagram-arrangements-and-laws](../results/records/hexagram-arrangements-and-laws.md)。"
+   },
+   {
+    "id": "四·十",
+    "title": "不停之变需开",
+    "body": "**經**　凡所立者有列，所立者之水平于任意晚之步皆有升降，恰当其于所立者不衰之步、于任意晚之步皆有升降。凡衡且耗，所立者有列，自某步起每步围所立者不可非，则不能于任意晚之步皆有在场之物有取或有与。凡所立者有列，自某步起每步所立者衰，则无一所待之升于任意晚之步皆有。\n\n**說**　第一句是“不停之变需开”的确切之形（`Becoming.Flow.change_recurs_iff`）：不停之变只能落在所立者不衰之步；取与亦然，惟其所避者是衰而封之步（`Becoming.Flow.exchange_recurs_iff`）。第二句是其推论（`Becoming.Flow.exchange_not_recurring_around`；宇中之形 `Becoming.World.exchange_not_recurring`）：自某步起围所立者，衡且耗之下交换必停。第三句（`Becoming.Flow.more_exhausted`）说：所立者自某步起不停地衰，则升也停，停于所立者之衰，不停于足而止（篇十五）。这里的“列”（普查，篇三）要求每步所立者有穷而各列一次（`Becoming.Web.StandingCensus`）；没有它，围也不能使交换停（⟦四·十三⟧）。对照（相合，yi-xici-wang-lai-bu-qiong）：「往来不穷谓之通」〔DS02〕（系辞上，战国，有争议）：往来读作取与一再出现，系辞以之定义通，律给出它何时可能：只在所立者不衰之步。名表之“通”只取「推而行之谓之通」〔DS02〕，此处不作名用。\n\n**證**　`Becoming.Flow.change_recurs_iff`、`Becoming.Flow.exchange_recurs_iff`、`Becoming.Flow.exchange_not_recurring_around`、`Becoming.World.exchange_not_recurring`、`Becoming.Flow.more_exhausted`、`Becoming.Web.StandingCensus`；记录 [seeking-boundary](../results/records/seeking-boundary.md)、[continued-change-needs-openness](../results/records/continued-change-needs-openness.md)、[laws-of-one-step](../results/records/laws-of-one-step.md)。"
+   },
+   {
+    "id": "四·十一",
+    "title": "输、自外来、汲",
+    "body": "**經**　输，在场之一物于一步自一所待有取、于一所待有与也。自外来，族外之一所待于一步输于族内之一员也。一步不汲，于其步凡与族者皆只取于族内也；汲，非不汲也。凡所待之同异皆定然否，一步不汲，恰当其步无自外来。\n\n**說**　输（输送，conveying，`Becoming.Flow.Conveys`）是取与连成的关系：取于此，与于彼。自外来（从其外得到供给，`Becoming.Flow.FedFromBeyond`；复词，取小象传「自外來」〔YD-JP42〕）说族之边界上有输入；汲（汲入，drawing in）是同一事的另一写法：一步不汲（`Becoming.Flow.Inward`），即与族者只取于族内；所待之同异定然否之处，不汲与无自外来恰为一事（`Becoming.Flow.inward_iff_not_fed`），所以凡汲之律都读作自外来之律。讀（AI，D12）：输是一种所结之关系（结，篇二），与交、食、所出并列；它使延续之族之边界是结成而实在的，而不是关系中的一刀。对照（相合，yi-jing-yang-er-bu-qiong）：「巽乎水而上水，井；井養而不窮也」〔YD-JP48〕（彖传·井，战国，有争议）：井入水而使水上来，一取一与，是输；养而不穷不是存量无穷，而是所取与回补相当（⟦四·二十五⟧）。名“汲”取「夫山居而谷汲者」〔FA1-S-H49〕（韩非子·五蠹，战国末）。相分（lao-66-jiang-hai-shan-xia）：「江海所以能为百谷王者，以其善下之，故能为百谷王」〔YD-LAO-BASE〕（老子六十六章）：居下而受众输，这一段与律相合；经文由此立汇集之处为统领之中心，属单一中心一层；律中汇集处之延续依赖输者，不是输者依赖它，沿供给也推不出评价之中心（`Becoming.Clearing.center_not_derived`，构造之反模型，不是普遍之律）。\n\n**證**　`Becoming.Flow.Conveys`、`Becoming.Flow.FedFromBeyond`、`Becoming.Flow.Inward`、`Becoming.Flow.inward_iff_not_fed`、`Becoming.Clearing.center_not_derived`；记录 [conveyance-crosses-the-boundary](../results/records/conveyance-crosses-the-boundary.md)、[continuing-self-fed-from-beyond](../results/records/continuing-self-fed-from-beyond.md)、[derived-extent-limits](../results/records/derived-extent-limits.md)。"
+   },
+   {
+    "id": "四·十二",
+    "title": "续取之族自外来",
+    "body": "**經**　凡衡且耗，取于一族者于任意晚之步皆有，则凡含此族之不重复有穷族，不能自某步起每步皆封。若此族不重复，自某步起每步被围，则不能自某步起每步皆不汲；所待之同异皆定然否，则亦不能自某步起每步皆无自外来。族员于任意晚之步皆有升者，亦然；物皆一类而族中有形之员于任意晚之步皆有作者，亦然。\n\n**說**　这一组律（`Becoming.Flow.Dissipative.opens`、`Becoming.Flow.taking_draws_in`、`Becoming.Flow.fed_from_beyond`、`Becoming.Flow.rising_fed_from_beyond`、`Becoming.Web.embodiedArising_fed_from_beyond`）说：在耗之下，没有一个有穷之部分能独自承担不停之取；所待若本来有穷而尽在一表，取根本不会一再出现（`Becoming.Flow.Dissipative.finite_taking_not_recurring`）。结论是双重否定之形（“不能自某步起每步皆无”），不指出哪一步有输入。它依赖自然数之量：以稠密之量（如二进分数），每次之降可以几何地缩小，律便不成立（⟦四·十九⟧之见证 `Becoming.HalvingPass.never_rests`：二物之族每步被围而交换不停）。需要的是被供给，不是某一来源之一再出现：一池每步皆有自外来，而每份燃料过其步之后不再被输出（`Becoming.Lone.fed_not_recurring`）。讀（AI）：靠自外来而延续，是对族外之待，不是独立于族外。对照（相合，yi-yi-zi-wai-lai）：「或益之，自外來也」〔YD-JP42〕（小象传·益六二，战国，有争议）：所益不出于本爻自身；外只对一个所举之族而言，不是另一实在。相分（suzhe-81-yi-wu-jin）：「推其所有以與人人有盡而一無盡」〔LC-SZ-ALL〕（苏辙《老子解》，北宋）立一个与而不减、取之不尽之源，属本原一层；律中无此源，唯一与而不在账内者是其余，而它只是一个关系项，衡恰是它闲置（⟦四·二⟧）。\n\n**證**　`Becoming.Flow.Dissipative.opens`、`Becoming.Flow.taking_draws_in`、`Becoming.Flow.fed_from_beyond`、`Becoming.Flow.rising_fed_from_beyond`、`Becoming.Web.embodiedArising_fed_from_beyond`、`Becoming.Flow.Dissipative.finite_taking_not_recurring`、`Becoming.Lone.fed_not_recurring`；记录 [continuing-self-fed-from-beyond](../results/records/continuing-self-fed-from-beyond.md)、[no-finite-part-bears-taking](../results/records/no-finite-part-bears-taking.md)。"
+   },
+   {
+    "id": "二·十六",
+    "title": "截",
+    "body": "**經**　截，一域无一相关出之也。以输读相关：若衡且耗，一不重复之有限族自某步起见围，取者无止地复现，则其界不能自某步起恒无输穿之，其域非截。读为一类之物，输使二所待相关，交、食、所出皆不使二所待相关。\n\n**說**　截（切口，cut，`Becoming.Flow.Cut`；取代\"不交\"，使交只有一义）随所取之相关而定。输（输送，`Becoming.Flow.Conveys`：一物于同步从一所待取、向另一所待与）在此读作相关（`Becoming.Flow.conveyance`）。`Becoming.Flow.region_not_a_cut` 与 `Becoming.Flow.boundary_crossed` 都由自外来（`Becoming.Flow.fed_from_beyond`，流之篇）得出：延续之族所取之处必与其外相连；此律需自然数之量，只说界不能永无穿越，不排除一时之不穿。它说的是供给之关系，不是待：脊柱不由此推出凡物必有所待，表示可容一个无所需、无所资、无所取之源（`Becoming.EmbodiedSource.embodied_source`）。对照（定域，tuan-tai-pi-jiao）：「天地交而萬物通也」〔YD-HX01〕与「天地不交而萬物不通也」〔YD-HX01〕：此\"交\"是输，\"不交\"是截；脊柱证延续者之域不能自某步起恒为截，不证有交必通，天地上下为固定两位之义不取；此交不是名表之交，输使二所待相关，交从不如此。「恃天下者，天下去之；自恃者，得天下。」〔FA1-S-SV4〕则相分（shangjun-huace-zi-shi）：若\"自恃\"读作不待外与，与自外来之律相反；以得天下、胜强敌为延续之途，属争胜与等级之层。\n\n**證**　`Becoming.Flow.Cut`、`Becoming.Flow.Conveys`、`Becoming.Flow.conveyance`、`Becoming.Flow.region_not_a_cut`、`Becoming.Flow.boundary_crossed`、`Becoming.Flow.roles_conveyance`、`Becoming.Flow.roles_conditions_unrelated`、`Becoming.Flow.fed_from_beyond`；记录 [conveyance-crosses-the-boundary](../results/records/conveyance-crosses-the-boundary.md)、[continuing-self-fed-from-beyond](../results/records/continuing-self-fed-from-beyond.md)。"
+   },
+   {
+    "id": "三·二十一",
+    "title": "继",
+    "body": "**經**　继，所资者每步皆由先后相继之源与之，而无一源再与也。有其例：流衡而耗，唯活动者与，每步取于池者一，池每步自外来，而无一源参与于二步，亦无一源活动于二步。\n\n**說**　继（接续：由先后相继之源供给，`Becoming.Successive.relay`）是一个构造之见证，不是律：每步一源，只在其本步活动，燃其本步之薪而与池一单位；一食者每步取于池。合 `Becoming.Lone.fed_not_recurring`（流衡而耗，池每步自外来，而无薪于其步之后被输），延续所须是被供给，不是某一供给者，也不是某一所待之复现。讀（AI，D12）：一延续之族所待于外者，是输送本身，输送可由一物递于他物。未证：诸源本身由流而作。继与⟦三·十六⟧之接（合终者与始者为一名）不同：继不改任何命名。中庸之“继志”不在此名之内，留作缺口。\n\n**證**　`Becoming.Successive.relay`、`Becoming.Lone.fed_not_recurring`；记录 [continuing-self-fed-from-beyond](../results/records/continuing-self-fed-from-beyond.md)。"
+   },
+   {
+    "id": "四·十三",
+    "title": "开",
+    "body": "**經**　开，取与出于每一有穷之族也：不能自某步起每步有封。凡宇，活动者有列，诸物皆有形，衡，耗，作不息，则开。宇合八设而开，作不必不息。\n\n**說**　开（开放，openness）在形式中没有单独之定义，它就是 `Becoming.World.arising_opens` 之结论：作不息与“自某步起每步有封”不能并存。反过来不成立：一宇合八设（`Becoming.World.Premised`：有待、衡、唯活动者与、唯活动者取且只取其所资、耗、有形、活动者有列、所传有界）而无一步有封，作与已却都不一再出现（`Becoming.World.holding_world`），所以开是必要的，不是充分的。所需之列与有形不能省（`Becoming.World.rest_needs_standing`）：只有作者有形时，一宇活动者有列、衡、耗，每步被围而作不息（其所立者不可列）；诸物皆有形而活动者不可列时，一宇亦每步有封、衡、耗而作不息。讀（AI，D7）：开是出于每一有穷之族之交换，可在净流为零时成立；净流入是益（篇六），不是开，二者分开：不停之变需开，日新需益。开只对应早先“开”之四相中的“未”一相；可、应、转三相另有其律（见附录之对照表）。对照（定域，yi-fu-zhi-ri-bi-guan）：「雷在地中，復；先王以至日閉關，商旅不行，后不省方。」〔YD-JP24〕（大象传·复，战国，有争议）：至日闭关是一步之封，律容许某些步封，不容许自某步起每步封而交换与作不停；所言来复需要其后重开，这是 AI 之推论，经文不言；先王、商旅、省方之政治语境不取。\n\n**證**　`Becoming.World.arising_opens`、`Becoming.World.holding_world`、`Becoming.World.rest_needs_standing`、`Becoming.World.Counted`、`Becoming.World.Embodied`；记录 [continued-change-needs-openness](../results/records/continued-change-needs-openness.md)。"
+   },
+   {
+    "id": "四·十四",
+    "title": "端与积小以高大",
+    "body": "**經**　积小以高大，凡大于零之量，于任一所给之量，积之若干次则不在其内也。端，一量每逢所计之事至少所降之量，大于零者也。整数之量积小以高大。\n\n**說**　量（`Becoming.Amounts`）只要求：有加法（结合、交换，以零为单位），有一个加法保持且可消去之序，无小于零者；不要求是整数，两量之间可以有第三量。积小以高大（阿基米德之量，`Becoming.Amounts.Archimedean`，以 `Becoming.Amounts.times` 计若干次）与端（最小损失，least loss）是整数之量为止之律供给的两样东西（⟦四·十五⟧）；整数之量是二者都有之例：它积小以高大（`Becoming.Amounts.whole_archimedean`），每次严降至少降一，端可取一。名“端”取墨经（定域，mojing-fei-ban-duan）：「非半弗𣃈，則不動，說在端」〔MI1-S-JX〕（墨子·经下，战国后期；𣃈为疑字，依一般校释读作斫）：取半而至端则不可再取，即“有端则所取有穷”；墨经之端是不可再分之点，此处之端是每次所降之下界，二者只在整数之量中重合。名“积小以高大”取「地中生木，升；君子以順德，積小以高大。」〔YD-JP46〕（大象传·升，战国，有争议；定域，yi-sheng-ji-xiao-gao-da）：书证说的是积累，读作阿基米德之量是 AI 之强读（本编之约定），其反面见证是分层之量（`Becoming.Layered.not_archimedean`）；顺德之修养义不取。\n\n**證**　`Becoming.Amounts`、`Becoming.Amounts.Archimedean`、`Becoming.Amounts.times`、`Becoming.Amounts.whole_archimedean`、`Becoming.Layered.not_archimedean`；记录 [least-loss-rest](../results/records/least-loss-rest.md)。"
+   },
+   {
+    "id": "四·十五",
+    "title": "止需端",
+    "body": "**經**　凡量自某步起不升，每逢所计之事至少降一端，而有一数 m，m 个端相加不在其于此步之值之内，则其事不能于任意晚之步皆有。量积小以高大，则有大于零之端即可。\n\n**說**　这是止之律（⟦四·十八⟧）所依之一步，对任意之量成立（`Becoming.Amounts.rests`；积小以高大之量中 `Becoming.Amounts.rests_of_archimedean`）；整数之量是其例：自某步起不升之整数，不能于任意晚之步皆降（`Becoming.falls_not_recurring`）。二前提各不可缺。无端：二进分数之量稠密且积小以高大，存量每步减半，每次所降皆大于零，而无一大于零之量不过每次所降，存量每步皆降，永不止（`Becoming.Halving.never_rests`）。有端而存量不在有穷多端之内：分层之量中每步至少降一端，存量超出端之一切倍数，亦永不止（`Becoming.Layered.never_rests`）。又：有穷多状中，有大于零之降，则律必使状同归（`Becoming.Law.loss_needs_merge`）；所以端所供之止，属于使状同归之律（把状归并之描述）；有穷多状上不使状同归之律，其行复而不止（篇五）。对照（定域，bianzhe-ri-qu-qi-ban）：「一尺之捶，日取其半，萬世不竭」〔MI1-S-HS〕（庄子·天下所述辩者之说，战国末；天下篇年代有争议）在无端之量中成立，有端而存量在有穷多端之内则不成立；与墨经「非半弗𣃈，則不動，說在端」〔MI1-S-JX〕对读，二说之分由有端与积小以高大两个前提定域，各在其量中成立。\n\n**證**　`Becoming.Amounts.rests`、`Becoming.Amounts.rests_of_archimedean`、`Becoming.falls_not_recurring`、`Becoming.Halving.never_rests`、`Becoming.Layered.never_rests`、`Becoming.Law.loss_needs_merge`；记录 [least-loss-rest](../results/records/least-loss-rest.md)。"
+   },
+   {
+    "id": "四·十六",
+    "title": "读自有穷之表则不需端",
+    "body": "**經**　凡量读自一有穷之表所含之状，自某步起不升，则其严降之步不能于任意晚之步皆有；于任意之量皆然，不需端，不需积小以高大。\n\n**說**　这是止的另一条路（`Becoming.Amounts.rests_of_finite_reading`）：一次严降就离开一个此后不再读到之状（抽屉原理），所以严降之次数受表之长所限，不需端，不需序之全，也不需判定；沿每一变之行亦然（`Becoming.Branching.rests_along_run`）。由此，不停之降需要一个无表能含之读法：减半之存量，其值无表能含（`Becoming.Halving.stock_unlisted`）；它之无端与它之值无穷，是一事两读。⟦四·十九⟧把这条路带到宇。\n\n**證**　`Becoming.Amounts.rests_of_finite_reading`、`Becoming.Branching.rests_along_run`、`Becoming.Halving.stock_unlisted`；记录 [rest-from-a-finite-reading](../results/records/rest-from-a-finite-reading.md)。"
+   },
+   {
+    "id": "四·十七",
+    "title": "趋而不至",
+    "body": "**經**　趋而不至，量趋于止而不至于止也。凡积小以高大之量，自某步起每步之值加其所降不过步前之值，则于任一大于零之 ε，必有一数，自此步起无此数之步各降至少 ε；至少降 ε 之步不能于任意晚之步皆有。无端，则量可趋而不至：减半之存量至少降 ε 之步不一再出现，而每步皆降。\n\n**說**　趋于止只需积小以高大，不需端（`Becoming.Amounts.few_large_losses_of_archimedean`、`Becoming.Amounts.approaches_rest`）：诸步之降相加不过始之量（`Becoming.Amounts.losses_within`），所以大的降只能有穷多次。可是“大的降不一再出现”不是“降不一再出现”：减半之存量正是如此，趋而不至（`Becoming.Halving.approaches_without_reaching`；无大于零之量不过其每次所降，`Becoming.Halving.no_least_loss`），如指数弛豫。趋而不至（新组合：趋＋而不至）与止（篇三）分开：止在宇是自某步起无作无已，在量是自某步起不再严降；趋而不至是任何大于零之降终于不再一再出现，而降永不停。对照（相合，lao-15-zhuo-yi-jing-zhi-xu-qing）：「孰能浊以静之徐清」〔YD-LAO-BASE〕（老子十五章）：浊水不再被搅，逐渐澄清，每步之扰随之减少，“徐”与趋相合；“静之”是一步上不再加扰，不是先在之静，也不是名表之静（一时成立者）。\n\n**證**　`Becoming.Amounts.few_large_losses_of_archimedean`、`Becoming.Amounts.approaches_rest`、`Becoming.Amounts.losses_within`、`Becoming.Halving.approaches_without_reaching`、`Becoming.Halving.no_least_loss`；记录 [least-loss-rest](../results/records/least-loss-rest.md)。"
+   },
+   {
+    "id": "四·十八",
+    "title": "止之律",
+    "body": "**經**　凡宇，活动者有列，所立者有列，凡作者皆有形，衡，耗，自某步起每步围所立者，则“自某步起止”不可非。凡合八设、活动定然否之有穷宇，若皆能指其自何步起无作，则无穷可尽。\n\n**說**　止（停息，篇三：自某步起无作无已，`Becoming.World.RestsFrom`）之律（停息定理，`Becoming.World.comes_to_rest_unrefuted`）经由“升降之停不可非”（`Becoming.Flow.change_stops_unrefuted`）得出，而后者是止需端之律在整数之量中之例（`Becoming.Amounts.rests_unrefuted`：每一升降使所立者之总量至少降一）。诸条件不可省，各有见证：一有穷之宇，耗、诸物有形、每步其全族封，唯不衡，而作不息（`Becoming.World.leaking_world`）；一宇活动者有列、作者有形、衡、耗、每步围其二边之族，而所立者不可列，作不息（`Becoming.World.rest_needs_standing`）。止之律所需者是每步所立者、活动者有列而且被围，不是宇之有穷；而凡合其诸条件之宇，曾活动者、曾立者皆不能无界（`Becoming.World.rest_few`）：它比有穷之宇多出的，只是从不立、从不活动之物。结论只是不可非；第二句说，要对每个合八设、活动定然否之有穷宇指出“自此步起无作”，需无穷可尽（LPO，新组合：无穷＋可尽，篇十六；`Becoming.World.lpo_of_finite_ends`）。止不是静（篇三）：静是一时成立者。对照（定域，mojing-zhi-yi-jiu）：「止，以久也」〔MI1-S-JS〕（墨子·经上，战国后期）所言是有久之不动，即一段停顿；在步间插入停顿，升降是否一再出现不变（`Becoming.World.stutter_change_recurs_iff`），所以一段停顿不定是否止。对照（定域，xugua-zhong-dong-zhong-zhi）：「物不可以終動，止之，故受之以艮」〔YD-OW-XG〕（序卦，有争议）在本律之条件下成立；在不使状同归之有穷之律下，每状皆复而不止，此句不成立。相分（wangbi-ji-ran-da-jing-wei-ben）：「故為復則至於寂然大靜」〔YWH-F〕（王弼周易注·复，魏晋）以寂然至无为复之本，把一种可能的终态立为变化之根据，属本原一层；律中止只是展开之中有条件之一种情形，复是状之再得（篇五），不至于静。\n\n**證**　`Becoming.World.comes_to_rest_unrefuted`、`Becoming.World.RestsFrom`、`Becoming.Flow.change_stops_unrefuted`、`Becoming.Amounts.rests_unrefuted`、`Becoming.World.leaking_world`、`Becoming.World.rest_needs_standing`、`Becoming.World.rest_few`、`Becoming.World.lpo_of_finite_ends`；记录 [recurrence-without-decidedness](../results/records/recurrence-without-decidedness.md)、[continued-change-needs-openness](../results/records/continued-change-needs-openness.md)、[least-loss-rest](../results/records/least-loss-rest.md)。"
+   },
+   {
+    "id": "四·十九",
+    "title": "止于任意之量",
+    "body": "**經**　以任意之量读宇之水平与取与：族衡，步后之水平加所取在步前之水平加所与之内；族耗，在场之物与族不过所取，而与如其取者无取。凡衡且耗，族中一员之水平有升降，则族之总量严降，不需端。凡宇，活动者有列，诸物皆有形，衡，耗，自某步起每步有封，活动者之总量读自一有穷之表所含之状，则“自某步起止”不可非。\n\n**說**　这一条把止之律从整数之量移到任意之量（`Becoming.World.InAmounts`）：衡只要求一个方向（不凭空多出量），耗之严格不靠端，而靠“还其所取者无取”，于是每一升降都使总量严降，即步前之总量不在步后之内（`Becoming.World.InAmounts.change_lowers`）；止经由有穷之读（⟦四·十六⟧）而得（`Becoming.World.InAmounts.rests_unrefuted_enclosed`；一族自某步起含一切活动者之形，`Becoming.World.InAmounts.rests_unrefuted_covering`）。整数之宇是其例（`Becoming.World.rests_unrefuted_enclosed_read`），整数中不需读法，一单位之端即可。界：稠密之量中，一份所立在二物之间传递，每传减半，衡、耗、作者有形、活动者皆在二物之内，而每步一作一已，永不止（`Becoming.HalvingPass.never_rests`）；其降无端，其值无表能含（`Becoming.HalvingPass.levels_unlisted`），两条路都走不通。\n\n**證**　`Becoming.World.InAmounts`、`Becoming.World.InAmounts.change_lowers`、`Becoming.World.InAmounts.rests_unrefuted_enclosed`、`Becoming.World.InAmounts.rests_unrefuted_covering`、`Becoming.World.rests_unrefuted_enclosed_read`、`Becoming.HalvingPass.never_rests`、`Becoming.HalvingPass.levels_unlisted`；记录 [rest-theorem-in-any-amounts](../results/records/rest-theorem-in-any-amounts.md)。"
+   },
+   {
+    "id": "四·二十",
+    "title": "共取过与与出入相掩",
+    "body": "**經**　共取过与，在场诸物于一步自一所待共取，多于其步所与之也；出入相掩，共取不过所与也。凡衡，出入相掩，则水平此步不降；每步出入相掩，则水平不低于其始。凡衡，共取过与之每步，水平至少降一；自某步起 n 步共取过与，则 n 步后之水平加 n 不过其始。各取皆不过所与，不保出入相掩。\n\n**說**　共取过与（联合超出，joint excess；新组合：共＋取＋过＋与；不作“合取过与”，因“合取”在逻辑中另有所指）与出入相掩（`Becoming.Flow.WithinJoint`，篇十三）说的是在场诸物之和，不是任一物之取。各取不过所与（`Becoming.Flow.WithinOwn`）可与共取过与并存（`Becoming.Pair.own_not_joint`）：每一取者自计其取皆在所与之内，并不读出其合。出入相掩则水平不降（`Becoming.Flow.joint_keeps`、`Becoming.Flow.level_kept`）；共取过与之每步至少降一单位（`Becoming.Flow.excess_lowers`），所以它连续之步数不能多于原有之量（`Becoming.Flow.excess_bounded`）；“至少降一”依赖自然数之量。对照（相合，xunzi-li-yu-wu-xiang-chi）：「使欲必不穷于物，物必不屈于欲。两者相持而长」〔RU2-S-XZ19〕（荀子·礼论，战国后期）：取在所与之内，水平不低于其始，而有形者不停地作时与也不停，二者相持；经文把界归于先王制礼，律只说界是延续之条件，不说谁定界。对照（定域，xunzi-yu-duo-wu-gua）：「欲惡同物，欲多而物寡，寡則必爭矣」〔RU2-S-XZ10〕（荀子·富国，战国后期）：众物同待一所待（同患）而合计过所与，律推出水平之降与所待者之终（下条），推不出争；争（篇十三）是对这一结构的一种回应。\n\n**證**　`Becoming.Flow.WithinJoint`、`Becoming.Flow.WithinOwn`、`Becoming.Pair.own_not_joint`、`Becoming.Flow.joint_keeps`、`Becoming.Flow.level_kept`、`Becoming.Flow.excess_lowers`、`Becoming.Flow.excess_bounded`；记录 [own-count-misses-joint-excess](../results/records/own-count-misses-joint-excess.md)、[what-taking-all-excludes](../results/records/what-taking-all-excludes.md)。"
+   },
+   {
+    "id": "四·二十一",
+    "title": "共取过与终其所待者",
+    "body": "**經**　凡衡，唯活动者与，有待，凡此所待之与之者皆以至少 m 之需待之：水平一旦少于 m，则此后每步皆少于 m，凡以至少 m 之需待之者皆不活动。自某步起 n 步共取过与而始之水平少于 n＋m，则 n 步之后水平每步皆少于 m，凡以至少 m 之需待之者皆不活动，取者若以此需待之，亦在其中。一族亦然：凡与族员者皆以至少 m 之需待族之某员，族之取过其与 n 步而始之存量少于 n＋m，则凡以至少 m 之需待族之任一员者皆不活动。\n\n**說**　条件“凡与之者皆以至少 m 之需待之”是说与依赖于它所与者；有待（篇二）是“活动则其所待者容之”（容，篇六）之为前提。在此条件下，水平一旦落到所需之下便回不来（`Becoming.Flow.stays_below`、`Becoming.Flow.ends_below`）；共取过与把水平带到所需之下，就终结与之者与一切以此需待之者，取者若如此待之也一并终结（`Becoming.Flow.joint_excess_ends`）；一族之形不要求每一员各自共取过与（`Becoming.Flow.family_excess_ends`）。见证：一个与之者与两个取者，各取皆在所与之内，二步后皆不活动（`Becoming.Exceeding.own_not_joint`、`Becoming.Exceeding.all_end`）；只有一个取者时，同一与之者守住水平而皆续（`Becoming.Alone.all_continue`）。一部分合取过与，无论部外一员取多少，凡以此需待之者皆终（`Becoming.Flow.outrun_ends`）。兼亦如此：诸体各亡，活动之体有列，诸体之作须待一族于至少 m 之需而族之与亦以此为门，族之取过其与 n 步而始之存量少于 n＋m，则自此无体作，兼亦亡（`Becoming.Web.Whole.family_excess_ends`；所取是共取，兼不必是取者）。讀（AI，D48）：一个集体可以靠消耗他者而被保住，被保住不是恒（篇五）。对照（相合，lao-75-shang-shi-shui-zhi-duo）：「民之饥，以其上食税之多，是以饥」〔YD-LAO-BASE〕（老子七十五章）：一部分自众物所待之所待取得多，众物便饥，相合在净取越过余地（篇六）与共取过与终其所待者之结构；“上”“税”之社会财政语汇不取。\n\n**證**　`Becoming.Flow.stays_below`、`Becoming.Flow.ends_below`、`Becoming.Flow.joint_excess_ends`、`Becoming.Flow.family_excess_ends`、`Becoming.Exceeding.own_not_joint`、`Becoming.Exceeding.all_end`、`Becoming.Alone.all_continue`、`Becoming.Flow.outrun_ends`、`Becoming.Web.Whole.family_excess_ends`；记录 [own-count-misses-joint-excess](../results/records/own-count-misses-joint-excess.md)、[the-rest-outruns-the-renewal](../results/records/the-rest-outruns-the-renewal.md)、[whole-drawing-beyond-renewal-ends](../results/records/whole-drawing-beyond-renewal-ends.md)。"
+   },
+   {
+    "id": "四·二十三",
+    "title": "族外之降",
+    "body": "**經**　凡衡，一族与族外诸所待合而于一步与不过取，则二者步后之存量加合之取过于与之量，等于二者步前之存量；合于一步耗，则二者步后之存量加合之取者之数，不过步前之存量。一段步上合每步与不过取，则段末二者之存量不过段首：族之升不过族外之降。族之存量升过段首二者之合，则不能段中每步合皆与不过取。凡衡，族外诸所待各有一物以其所足之需待之，于一步合与不过取，族步后之存量加合之取过于与之量，多于族步前之存量加族外诸所待高出诸需之和，则族外必有一待绝。\n\n**說**　这一组律（`Becoming.Flow.Balances.beyond_falls_exactly`、`Becoming.Flow.Balances.rise_lowers_beyond_dissipating`、`Becoming.Flow.Balances.rise_bounded_by_beyond`、`Becoming.Flow.Balances.open_of_rise_above`、`Becoming.Flow.Balances.breaks_beyond`）把自外来倒过来读：族之升，在合与不过取时，恰由族外之降付出，还要加上所过；升加所过超出族外诸待“高出所需之量”，族外便有一待绝；界是确切的，升恰等于此量则无所绝（`Becoming.DrawnBeyond.WithinSlack.within_slack`）。一族之升以含它之族中族外部分被取之量为上界（`Becoming.Flow.Balances.rise_paid_from_beyond`）；偏向此升之择看不见所绝之待，那是篇十（及而不感，新组合：及＋而不＋感：所及而不在感域之中者）之事。讀（AI）：一升自族外所汲者，一旦升加所过超出那里诸待之所高出，便是有物所待者；这不说汲是错，也不说终是害，只说汲落在何处。对照（相合，lao-77-ren-zhi-dao）：「人之道则不然，损不足以奉有馀」〔YD-LAO-BASE〕（老子七十七章）：计入其余，有所升则有益之者（`Becoming.Flow.rise_netGiver`），升之所出受族外所限，一员升则他员降：这些是关于方向与来源之律，不含评价。「不然」只说人之道异于天之道；要判其当否，需要两个设：若凡续皆有顾（新组合：凡＋续＋皆有顾，凡延续皆有意义；延续之条件，设而不断言，篇十四），则族外之失也在计内，这只定范围；排序唯在以广为愈。\n\n**證**　`Becoming.Flow.Balances.beyond_falls_exactly`、`Becoming.Flow.Balances.rise_lowers_beyond_dissipating`、`Becoming.Flow.Balances.rise_bounded_by_beyond`、`Becoming.Flow.Balances.open_of_rise_above`、`Becoming.Flow.Balances.breaks_beyond`、`Becoming.DrawnBeyond.WithinSlack.within_slack`、`Becoming.Flow.Balances.rise_paid_from_beyond`、`Becoming.Flow.rise_netGiver`；记录 [what-a-rise-draws-from-beyond](../results/records/what-a-rise-draws-from-beyond.md)、[raising-what-couples-in-draws-from-beyond](../results/records/raising-what-couples-in-draws-from-beyond.md)、[where-novelty-gain-comes-from](../results/records/where-novelty-gain-comes-from.md)。"
+   },
+   {
+    "id": "四·二十四",
+    "title": "全取",
+    "body": "**經**　全取，在场之一物于一步自一所待所取，不少于其步所与之全也。凡所待每步所与不过 B，一物之取每步多于其前，历 n 步而 n 多于 B，则于 n 步之末，此物若在场，即全取。凡衡，无一物能于自某步起之 L＋1 步皆在场而取过所与，L 为其始之水平。凡衡，唯活动者与，有待，凡与之者皆以至少 m 之需待之：一物 n 步全取而他物于此 n 步皆取之，始之水平少于 n＋m，则自此凡以至少 m 之需待之者皆不活动，全取者若以此需待之亦然；一物每步全取、每步以至少 m 之需待之而每步活动，则无他物能于自任一步起之 L＋1 步皆取之，L 为彼步之水平。\n\n**說**　全取（取到所与之全部，takes all，`Becoming.Flow.TakesAll`；新组合：全＋取）是一个阶段，不是取之所止：所取逐步增多（每步多于其前，`Becoming.MoreThanNow`）而所与有界，终至全取（`Becoming.Flow.takesAll_of_more`）；取过所与之取不能连续 L＋1 步（`Becoming.Flow.beyond_given_bounded`）。全取者旁有他取者，则以此需待之者皆终，全取者若以此需待之亦在其中（`Becoming.Flow.full_taking_ends`）；全取而续者旁不能另有续取者（`Becoming.Flow.continuing_excludes`）。讀（AI，D44）：终结他者服务于全取，不是服务于延续本身：同样的三物，各取一份时皆续，一物全取时另一物终（`Becoming.Excluding.three_courses`），而以容（篇六）比较两程看不出这一终（`Becoming.Excluding.admission_alike`）：失去的是那一成员之延续。讀（AI，D46）：寻求“比现在更多”而以取为之者自致其终：所与有界之处，衡下这样的取者不能活动过一个有界之窗，其活动一停即不复起之处，它终（`Becoming.Flow.seeking_ends`）；全取而取不再增者可以续（`Becoming.Alone.takes_all`）。对照（相合，zhuangzi-ma-li-jie）：「其馬力竭矣，而猶求焉，故曰敗」〔ZH1-S19〕（庄子·达生，外篇，年代有争议）：存量已尽而仍求取，由存量与所取读出终结。对照（定域，yi-qian-ying-bu-ke-jiu）：「亢龍有悔，盈不可久也。」〔YD-JP01〕（小象传·乾上九，战国，有争议）：盈本身可以持续（出入相掩则水平不低于其始，⟦四·二十⟧），不能久的是取过所与与不停之增。\n\n**證**　`Becoming.Flow.TakesAll`、`Becoming.Flow.takesAll_of_more`、`Becoming.Flow.beyond_given_bounded`、`Becoming.Flow.full_taking_ends`、`Becoming.Flow.continuing_excludes`、`Becoming.Excluding.three_courses`、`Becoming.Excluding.admission_alike`、`Becoming.Flow.seeking_ends`；记录 [what-taking-all-excludes](../results/records/what-taking-all-excludes.md)、[where-a-rising-take-ends](../results/records/where-a-rising-take-ends.md)。"
+   },
+   {
+    "id": "四·二十五",
+    "title": "涸",
+    "body": "**經**　涸，一存量降至于零也。凡变之每步，步后之存量加此步所取不过步前之存量，且存量为正之步必有所取，则凡长不短于其始之存量之程，终于零；自零之步，一无所取。\n\n**說**　这是对任意之变（不只是流）成立之律（`Becoming.Stock.FallsBy`、`Becoming.Stock.exhausted_within`、`Becoming.Stock.draws_nothing_from_empty`）：沿任一程，所取之总加程末之存量，不过程首之存量（`Becoming.Stock.trace_falls`）。条件“步后加所取不过步前”说的是无所补；有补之处，一程能无穷次重做，恰当首程可行而其补覆盖其取（`Becoming.Stock.repeat_covered_iff`；恒，篇五）。涸与竭（篇五：所资之所待对某待者永失其容）不同：涸只说一个存量到零。对照（相合，mengzi-yuan-quan-you-ben）：「源泉混混，不舍昼夜，盈科而后进，放乎四海；有本者如是」〔RU2-S-MZ〕与「其涸也，可立而待也」〔RU2-S-MZ〕（孟子·离娄下，战国）：有本即有不停之与；无本之盈每取必降而无补，于其所立之数之步内涸；“本”在此是水源，不是先在之本；「盈科而后进」〔RU2-S-MZ〕之阈见盈科（篇六）。名“涸”取「泉涸，魚相與處於陸」〔ZH1-S06〕（庄子·大宗师，内篇）。\n\n**證**　`Becoming.Stock.FallsBy`、`Becoming.Stock.exhausted_within`、`Becoming.Stock.draws_nothing_from_empty`、`Becoming.Stock.trace_falls`、`Becoming.Stock.repeat_covered_iff`；记录 [renewing-consuming-formation](../results/records/renewing-consuming-formation.md)、[recurring-reference-revision](../results/records/recurring-reference-revision.md)。"
+   },
+   {
+    "id": "四·二十六",
+    "title": "常取之下的不返之点",
+    "body": "**經**　一所待于每步先被取 H（不及 H 则取尽），后依所剩 z 而与 g(z)。凡 z 少于 y 时 g(z) 皆少于 H，g(0) 为零，则始于少于 H＋y 之水平者，历其始之水平之步而为零。凡 z 不少于 y 而 z＋H 不过 hi 时 g(z) 皆不少于 H，且一步不使不过 hi 之水平出于 hi，则始于 H＋y 至 hi 者，永不低于其始，不高于 hi。二者俱而 H＋y 大于零，则始于不过 hi 之水平者终为零，恰当其始少于 H＋y。凡 z 少于所需 m 时 g(z) 为零，H 为正，y 为 g 不少于 H 之最小者，则 m 少于 y，恰当 g(m) 少于 H。\n\n**說**　这是一个常取之下的余地（体制之余量，margin of a regime；步为 `Becoming.RegimeMargin.step`）。篇六之余地之律把他物之取与固定为原样来比较有无一体之水平，在测得之数据上那只是恒等式；能检验的是所待自己之与随所剩而应的余地。H＋y 是不返之点：在它之下，所与不能抵常取，存量一路降到零（`Becoming.RegimeMargin.ends_below`）；在它以上，水平守住（`Becoming.RegimeMargin.holds`）；点是确切的（`Becoming.RegimeMargin.ends_iff_below`）。最后一句（`Becoming.RegimeMargin.beyond_draw_iff`）说：所与在所需之下全无时，不返之点至少高出所需一个常取，而它高出所需多于一个常取，恰当所需处之与不能抵常取；所需是体制之所需。所需以上之与次可加、合取下之与不多于各取下之与时，合取 H₁＋H₂ 下所与满足取之最小水平高出所需之量，不少于各取单独时所高出之和减一（`Becoming.RegimeMargin.harms_superadditive`）；二取各自之下所待可守（`Becoming.RegimeMargin.Peaked.each_holds`），合之则自每一水平终（`Becoming.RegimeMargin.Peaked.together_ends`）。捕捞理论在实数上说同一结构（Clark 1976；May 1977），此处在整数中陈述。讀（AI）：不返之点由所待自身之与读出，所以同一所需在不同常取之下有不同之点。\n\n**證**　`Becoming.RegimeMargin.step`、`Becoming.RegimeMargin.ends_below`、`Becoming.RegimeMargin.holds`、`Becoming.RegimeMargin.ends_iff_below`、`Becoming.RegimeMargin.beyond_draw_iff`、`Becoming.RegimeMargin.harms_superadditive`、`Becoming.RegimeMargin.Peaked.each_holds`、`Becoming.RegimeMargin.Peaked.together_ends`；记录 [margin-of-a-regime](../results/records/margin-of-a-regime.md)。"
+   },
+   {
+    "id": "四·二十七",
+    "title": "常取之下行止于何处",
+    "body": "**經**　凡 g 随所剩而不降，一步不使不过 hi 之水平出于 hi，则始于不过 hi 之水平之行，于不过 hi 之某步起不变，止于常取之一步所不改之水平。g 不随所剩而升者，其行可于此界内永不止。\n\n**說**　一法之行，若有一记数沿行不降、每变必升而有界，则行于界内止，而状之同异定然否时，“是否还会变”每步可判，不需无穷可尽（`Becoming.LastChange.still_within`）；这与止之律（⟦四·十八⟧）之需无穷可尽相对。g 随所剩而不降，常取之一步保持水平之序，行只朝一向动，于是止（`Becoming.RegimeMargin.rests_within`）。所与兼读所剩与前一步之与而调整之处：调整随二者皆升、只在体制给出常取之处止于常取、一步不出界 hi，则每行至迟 3hi＋3 步止，或在常取处而水平为体制之步所不改，或在常取之下而水平等于前与（`Becoming.RegimeMargin.Adjusted.comes_to_rest`）；对每一不过 hi 之前与，止于常取之下者恰是始于某一最小水平之下者，此水平不随前与之升而升（`Becoming.RegimeMargin.Adjusted.falls_iff_below`、`Becoming.RegimeMargin.Adjusted.threshold_falls`），在体制之步下它就是 H＋y（`Becoming.RegimeMargin.threshold_regime`）：不返之点是水平与前与之平面上一条下降之线。界：g 自零为二、多则为零，常取为一，行在一与二之间永不止（`Becoming.RegimeMargin.Alternation.alternates`），如过补偿之更新循环（May 1976）。在任意线序之量中，调整随二者而升时，行之形状仍定：水平与前与各朝一向、至多一转（`Becoming.RegimeMargin.Drawn.run_shape`）；整数所加的只是止在有穷步内达到。\n\n**證**　`Becoming.LastChange.still_within`、`Becoming.RegimeMargin.rests_within`、`Becoming.RegimeMargin.Adjusted.comes_to_rest`、`Becoming.RegimeMargin.Adjusted.falls_iff_below`、`Becoming.RegimeMargin.Adjusted.threshold_falls`、`Becoming.RegimeMargin.threshold_regime`、`Becoming.RegimeMargin.Alternation.alternates`、`Becoming.RegimeMargin.Drawn.run_shape`；记录 [where-a-run-of-a-regime-comes-to-rest](../results/records/where-a-run-of-a-regime-comes-to-rest.md)、[threshold-in-the-state-plane](../results/records/threshold-in-the-state-plane.md)、[regime-point-under-adjusting-giving](../results/records/regime-point-under-adjusting-giving.md)、[regime-in-any-amounts](../results/records/regime-in-any-amounts.md)。"
+   },
+   {
+    "id": "十二·十四",
+    "title": "平面之阈",
+    "body": "**經**　凡所与读所剩与近来所与而定（其法 A），A 随二者而升，一步使水平与近来所与皆不过 hi 者之次水平不过 hi：则于每一不过 hi 之近来所与 r，自不过 hi 之水平 x 起之行，终在常取之下自某步起不再变，恰当 x 在一阈之下；此阈不随 r 之升而升。所与只读所剩、随之而升、合⟦十二·十三⟧之条件、而带及此点者，其阈于每一 r 皆为 H+y。有所与不随所剩而升而守其带者，无一阈分其行。\n\n**說**　所与之调整（`Becoming.RegimeMargin.Adjusted.step`）：状是水平与近来所与，常取先取，所与是 A（所剩，近来所与）。只读所剩者是⟦十二·十三⟧之步；只读近来所与者是所与冻结如前。A 随二者而升、守一带，又以 H 为近来所与时，所与恰在 g 给出 H 处为 H（`Becoming.RegimeMargin.Adjusted.RestsAtDraw`），则凡起于带内之行，至多 3hi+3 步之后即不再变：或在常取处，水平为常取之步所不改者；或在常取之下，水平与近来所与相等（`Becoming.RegimeMargin.Adjusted.comes_to_rest`）；是否再变，每步可判定，不须全知（`Becoming.LastChange.still_within`）。于是不可回返之点在水平与近来所与之平面上是一条不随近来所与之升而升之线（`Becoming.RegimeMargin.Adjusted.falls_iff_below`、`Becoming.RegimeMargin.Adjusted.threshold_falls`、`Becoming.RegimeMargin.threshold_regime`）。升之条件不可去：所与自一为二、自他处为零，于常取二之下守至四之带，而自四之行终于零，自三之行自某步起常为三，无一最小水平分开二者（`Becoming.RegimeMargin.Notch.no_threshold`）；所与自零为二、自更多为零，于常取一之下，自一之行每步往返于一与二之间（`Becoming.RegimeMargin.Alternation.alternates`）。这些不须以自然数计量：在任何有常取之线性有序之量中，升之调整之步保序，其行之形与其不再变之处皆同（`Becoming.RegimeMargin.Drawn.run_shape`、`Becoming.RegimeMargin.Drawn.still_iff`）；自然数所加者，是有尽步之内即不再变、于一定之步而定。\n\n**證**　`Becoming.RegimeMargin.Adjusted.step`、`Becoming.RegimeMargin.Adjusted.falls_iff_below`、`Becoming.RegimeMargin.Adjusted.threshold_falls`、`Becoming.RegimeMargin.threshold_regime`、`Becoming.RegimeMargin.Notch.no_threshold`、`Becoming.RegimeMargin.Adjusted.comes_to_rest`；记录 [threshold-in-the-state-plane](../results/records/threshold-in-the-state-plane.md)、[where-a-run-of-a-regime-comes-to-rest](../results/records/where-a-run-of-a-regime-comes-to-rest.md)、[regime-in-any-amounts](../results/records/regime-in-any-amounts.md)。"
+   }
+  ],
+  "duizhao": "#### 对照\n\n- 「天下之水，莫大於海，萬川歸之，不知何時止，而不盈，尾閭泄之，不知何時已，而不虛」〔ZH1-S17〕——相合：入出皆不停而存量不盈不虚，是衡下一段步上存量与取与之账（zhuangzi-qiushui-bu-ying-bu-xu）。\n- 「或益之，自外來也」〔YD-JP42〕——相合：所益出于本爻之外；续取之族不能自某步起皆无自外来，外只对所举之族而言（yi-yi-zi-wai-lai）。\n- 「非半弗𣃈，則不動，說在端」〔MI1-S-JX〕——定域：有端则所取有穷；墨经之端是不可再分之点，此处之端是每次所降之下界，二者只在整数之量中重合（mojing-fei-ban-duan）。\n- 「一尺之捶，日取其半，萬世不竭」〔MI1-S-HS〕——定域：在无端之量中成立，有端而存量在有穷多端之内则不成立（bianzhe-ri-qu-qi-ban）。\n- 「使欲必不穷于物，物必不屈于欲。两者相持而长」〔RU2-S-XZ19〕——相合：出入相掩则水平不低于其始；谁定界不在律中（xunzi-li-yu-wu-xiang-chi）。\n- 「人之道则不然，损不足以奉有馀」〔YD-LAO-BASE〕——相合：升有益之者、升受族外之降所限；判其当否须设凡续皆有顾与以广为愈（lao-77-ren-zhi-dao）。\n- 「師子雖有生滅，金體本無增減。故曰無生。」〔FO2-KS-P〕——相分：以量之不增不减立不生之本；律中量之不变只在与如其取之步，衡且耗则总量降（fazang-jin-wu-zeng-jian）。\n- 「故為復則至於寂然大靜」〔YWH-F〕——相分：以静为复之本；律中止是展开之中有条件之一种情形，不是根据（wangbi-ji-ran-da-jing-wei-ben）。"
+ },
+ "edits": [
+  {
+   "target": "C04",
+   "instruction": "篇四篇首改为：「本篇承篇一之流、取与、衡、取者与与之者（四·一至四·三），把同一展开读作诸物跨步相取相与之量。篇二立待、足、绝、持、有待、有形，篇三立作、已、升、降、列与止；本篇在其上说：封与围；与不过取、与如其取、耗三者一层强于一层；耗之下，族之存量随取者而降，一员之升伴他员之降，不停之变需开，续取之族须自外来，截与继随之；止需端或有穷之读，无端则可趋而不至，以任意之量读之亦然（无自增）。然后说诸取者之间所分化者：各取不过与而共取可以过与，共取过与终其所待者，一族之升由族外之降付出，全取排除他取，存量涸；最后是每步同取之下的不返之点、行止于何处与平面之阈。一待之绝依所需见二·五；每步取其序之最优者怎样使族外之待绝而终不足，见十一·十三至十一·十五。本篇之律都在写入其中的局部条件与所名之宇之设（衡、耗、有待、唯活动者取与……）下，对每个如此表示之宇成立；以宇之设为若者有设而然。步为离散、量为自然数是表示的承诺，凡律依之处皆写明，四·十四至四·十九说止所依者，并说去掉“量为自然数”时它靠什么。“于任意晚之步皆有”在本篇是说：每一步之后皆有一步如此。延续之条件（凡续皆有顾，十五·十六）在本篇只于四·二十三之說作为设出现，不断言：它只定谁之失在计内，本身不排序；诸程孰愈唯在以广为愈（十六·六），在本篇亦只作设。下一篇论复、闭与恒。」（S5、C22、S3）"
+  },
+  {
+   "target": "四·五",
+   "instruction": "說「（定然否，……已定，篇十六；」改为「（定然否，……已定，凡·五；」；「（不可非，……双重否定，篇十六；」改为「（不可非，……双重否定，凡·六；」。（C22）"
+  },
+  {
+   "target": "四·六",
+   "instruction": "經首见「其状不复」处改为「其状不复（复见五·一）」（复定于篇五，C90 之指向）。"
+  },
+  {
+   "target": "四·十",
+   "instruction": "說「不停于足而止（篇十五）」改为「不停于足而止（十六·二十）」。（C22）"
+  },
+  {
+   "target": "二·十六",
+   "instruction": "（已移至四·十二之后）經改为「截，一域无一相关出之也。以输读相关：凡衡且耗，一不重复之有穷族自某步起每步见围，取于之者于任意晚之步皆有，则其域非截。读为一类之物，输使二所待相关，交、食皆不使二所待相关。」（与四·十二之律之所出 `fed_from_beyond` 归四·十二，此留其截之推论 `region_not_a_cut`，且保「不重复之有穷族」之若；「所出」定于十三·三，移入說：所出亦不使二所待相关。C41）證留 `Becoming.Flow.Cut`、`Becoming.Flow.Conveys`、`Becoming.Flow.conveyance`、`Becoming.Flow.region_not_a_cut`、`Becoming.Flow.boundary_crossed`、`Becoming.Flow.roles_conveyance`、`Becoming.Flow.roles_conditions_unrelated`；`Becoming.Flow.fed_from_beyond` 归四·十二。"
+  },
+  {
+   "target": "四·十三",
+   "instruction": "經末句「宇合八设而开，作不必不息。」改为「有宇，合有待、衡、唯活动者与、唯活动者取、耗、有形、有列而开，作不息不然。」（传定于十三·五，经不先用；见证亦合传，于說注之。）"
+  },
+  {
+   "target": "四·十八",
+   "instruction": "經末句「凡合八设、活动定然否之有穷宇，若皆能指其自何步起无作，则无穷可尽。」改为「凡合有待、衡、唯活动者与、唯活动者取、耗、有形、有列七设、活动定然否之有穷宇，若皆能指其自何步起无作，则无穷可尽。」（类大则其若强，律仍然；传于說注。）說「（LPO，……无穷＋可尽，篇十六；」改为「……，凡·二三；」（C22）。證加 `Becoming.World.lpo_of_finite_ends`（自凡·二三，已有则不重列）。本條为止之律唯一之处（三·十一已删）。"
+  },
+  {
+   "target": "四·十九",
+   "instruction": "經之「衡」于任意之量之读改名「无自增」（C4；不用「无所生」，生只名生成）：「以任意之量读宇之水平与取与：族无自增，步后之水平加所取在步前之水平加所与之内（于自然数之量，衡即其等式之形）；族耗，在场之物与族不过所取，而与如其取者无取。凡无自增且耗，族中一员之水平有升降，则族之总量严降，不需端。凡宇，活动者有列，诸物皆有形，无自增，耗，自某步起每步有封，活动者之总量读自一有穷之表所含之状，则『自某步起止』不可非。」名表增「无自增」（新组合，锚 `Becoming.World.InAmounts.Balanced`）。"
+  },
+  {
+   "target": "四·二十",
+   "instruction": "說「出入相掩（`Becoming.Flow.WithinJoint`，篇十三）」改为「出入相掩（`Becoming.Flow.WithinJoint`，十四·五）」；「争（篇十三）」改为「争（十四·九）」。（C22）本條为出入相掩之定义与律唯一之处（十四·五、十四·九改为指向）。"
+  },
+  {
+   "target": "四·二十三",
+   "instruction": "說「那是篇十（及而不感」改为「那是十一·十（及而不感」；「延续之条件，设而不断言，篇十四」改为「延续之条件，设而不断言，十五·十六」。（C22、S3）"
+  },
+  {
+   "target": "四·二十六",
+   "instruction": "题改「每步同取之下的不返之点」，經与說中「常取」皆改「每步同取」（常只名不变量，C34、O34）。證并入十二·十三之声明（`Becoming.RegimeMargin.rises_by_draw` 等未列者）。"
+  },
+  {
+   "target": "四·二十七",
+   "instruction": "题改「每步同取之下行止于何处」，經中「常取」改「每步同取」。"
+  },
+  {
+   "target": "十二·十四",
+   "instruction": "（已移至四·二十七之后）經中「合十二·十三之条件」改为「合四·二十六之条件」，「常取之下」改为「每步同取之下」（C50）。"
+  }
+ ],
+ "added": [],
+ "duizhao_issues": []
+}

@@ -1,0 +1,6 @@
+{
+ "real": true,
+ "why": "The finding is real, and the same paragraph has a second wrong number the reviewer missed. The text is in theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md (§五·三, lines 236–238), not in the ZHONGHUA chapter. build_tables.py generates the table between the ZH-TABLE:names markers from work/names-decisions.tsv and work/names-checked.json. Counting those files again gives 447 names: 198 古, 118 复 and 131 新. Of these, 201 have no quotation: 105 新, 60 古 and 36 复. 域之兼 is 新 and has no quotation, which matches the table rows (新 105, 合计 201). The prose was written for 446 names and never updated. It says 未录引文的 200 个 (should be 201, since 447 − 246 quoted = 201) and 104 个是新组合 (should be 105). The 96 for 古/复 is still right (60 + 36). The find below is one exact string, found once in the chapter, and fixes both numbers. No Lean is involved: this is a count of the name table.",
+ "find": "未录引文的 200 个分两种：\n\n- 104 个是新组合，由古字组成",
+ "replace": "未录引文的 201 个分两种：\n\n- 105 个是新组合，由古字组成"
+}

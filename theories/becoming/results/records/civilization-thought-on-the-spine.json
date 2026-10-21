@@ -1,0 +1,179 @@
+{
+  "schema_version": 2,
+  "id": "civilization-thought-on-the-spine",
+  "title": {
+    "en": "《中华思想脉络》 on the spine, and the theory in classical names",
+    "zh": "《中华思想脉络》在脊柱上，与以古典之名所写的理论"
+  },
+  "kind": "assessment",
+  "status": "reviewed-scoped",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T22:12:39+00:00",
+  "statement": {
+    "en": "Every one of the 5,673 judgments of 《中华思想脉络》 v1.0 is read against the spine: 3,499 bear on its structures, each placed once, in 1,300 checked entries (453 agreements, 647 exact scopes, 200 divergences). 447 classical names, one per concept, state the theory in the 中华本《变化论》.",
+    "zh": "《中华思想脉络》v1.0 的 5,673 条判断逐条对照脊柱：3,499 条关乎其结构，各落一处，成 1,300 个已检查条目（相合 453、定域 647、相分 200）；447 个古典之名，每概念一个，写成中华本《变化论》。"
+  },
+  "hypotheses": [
+    {
+      "en": "No Lean and no premise is added: each entry is tied to audited declarations and records as they stand; its kind, its reading and the names are the AI's (D62). A passage counts as relational when it reads the relation first and lets the terms differentiate within it, not from a prior ground, a nature or value fixed before relations, a will or single centre, or a contest or rank: a method requirement, not a proof of the ontology. The names are a code formed among the theory's users, constrained by the attested senses, not a sense recovered from history.",
+      "zh": "不新增 Lean，不加前提：每个条目对应到现有的已审计声明与记录，其关系类别、读法与名都是 AI 的（D62）。“关系的”以方法的要求检验：先读关系，让诸项在其中分化；其反面是先在的根据、先于关系而定的性或价值、意志或单一中心、争胜与等级。这是方法的要求，不是本体论的证明。名是理论的用者之间形成的码，受所见之义约束，不是从历史中复原的意义。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That any passage is true as stated, or that its authors meant these laws; agreement means the spine has a law of that structure, often under conditions the reading names.",
+      "zh": "任何一段如所说那样为真，或其作者意谓这些律；相合是说脊柱上有结构相同之律，常在读法写明的条件下。",
+      "kind": "correspondence"
+    },
+    {
+      "en": "That the language or the tradition is relational by nature: the relational start is a dominant thread strongest at the earliest layer, not a property of every system; the distribution by era is of this corpus, whose later texts were chosen for their debates on ground and nature.",
+      "zh": "语言或传统天然是关系的：关系的起点是一条在最早一层最强的主导线索，不是每一体系的性质；按时代的分布是这一语料的，其后世文本多为本原与心性之争而选。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That the classical names recover what the texts meant, or that names without a recorded witness were in pre-Qin use: 96 classical words in the table carry no checked quotation.",
+      "zh": "古典之名复原了文本之意，或未录出处之名在先秦已有用例：名表中 96 个古名与复名没有经核对的引文。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a divergence of standing (a text asserting what the theory gives only under the continuation condition) shows the text wrong; the theory asserts no ethical axiom.",
+      "zh": "地位的相分（原文断言理论只在延续条件之下给出者）说明原文错了；理论不断言伦理公理。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation",
+    "nondual-method-not-proof"
+  ],
+  "validation_scope": {
+    "en": "verify_zh.py passes: the import (438 files by SHA-256), one verdict per judgment, each flagged one placed once, every fragment verbatim, 1495 declarations in the current receipt, 196 records, the name table, and both chapters' quotations, declarations, links, 对照 kinds and tables. Each entry had three readings (mapper, reviser, independent checker); the 中华本 was reviewed as one book three times. All readers were AI; no collation with a printed edition.",
+    "zh": "verify_zh.py 通过：导入（438 个文件以 SHA-256 绑定）、每条判断一个分拣裁定、每条所标判断恰落一处、每个片段在其冻结原文中逐字可见、1495 个声明在现行回执中、196 份记录、名表（锚为现行之名、引文逐字、简化后无重），以及两章的引文、声明、记录链接与生成之表。每个条目经三读（映射者、以现行主干重读的修订者、独立检查者）；中华本各篇起草后经对抗审读改为精确修改。读者都是 AI；未与刻本对校。"
+  },
+  "next_delta": {
+    "en": "The gaps the texts raise, each to be claimed before it is written: a conjunctive or graded whole; saturation of a coupling by what it has carried; one-sided and local regulation; equal division; copying growth; witnesses that are functions of one another; measures of a juncture; a pool weighted by share. Then the three RO and 易传 kinds decided in the chapter written into those maps.",
+    "zh": "古典文字提出的缺口，各先认领再写：合取或分级的整体；耦合随已传之量而饱和；单侧与局部的调节；均分；抄录之增；互为函数的见证；机之度量；按份额加权的池。然后把本章判定的 RO 与易传三处类别写入那两份对应。"
+  },
+  "correspondence": {
+    "en": "Ren, 19 October 2026, after extending his database to Chinese culture: “请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代……现在不用改英文版本，我们只是做中华版本，用中华的体系和符号系统 - 它自然就是一元的，关系的，动态的……同时，请把我做的这个脉络，也整合进我们的theories” (provenance, not warrant). The chapter places the 脉络 in the theory and tests the thesis judgment by judgment; the 中华本 states the theory in the classical names, with 經, 說 and 證 for each law and the classical passages set beside it. Reading (the AI's, D62): the thesis holds at the root and in most mapped judgments, needs a scope in its universal forms, and fails as a property of every system.",
+    "zh": "Ren，2026年10月19日，把数据库扩展到中华文化之后说：“请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代……现在不用改英文版本，我们只是做中华版本，用中华的体系和符号系统 - 它自然就是一元的，关系的，动态的……同时，请把我做的这个脉络，也整合进我们的theories”（来历，不是根据）。本章把脉络安放在理论中，并逐条检验论题；中华本以古典之名陈述理论，每条律有经、说、证，并列出相对照的古典文字。读法（AI 的，D62）：论题在根上与大多数已对应的判断中成立，其全称形式需要定域，作为每一体系的性质不成立。"
+  },
+  "canonical_source": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+  "aliases": [
+    "《中华思想脉络》 on the spine",
+    "中华思想脉络",
+    "中华本",
+    "变化论",
+    "the 中华 edition",
+    "the theory in classical names",
+    "古典之名"
+  ],
+  "dependencies": [
+    {
+      "id": "chinese-sources-on-the-spine",
+      "relation": "interpretive",
+      "detail": {
+        "en": "Extends the RO map from 248 chosen passages to every judgment of the 脉络, with the same three kinds and four layers.",
+        "zh": "把 RO 的对应从选读的 248 段扩展到脉络的全部判断，用同样的三种关系与四层。"
+      }
+    },
+    {
+      "id": "a-code-formed-between-formations",
+      "relation": "interpretive",
+      "detail": {
+        "en": "Why the name table is a convention among users: a code forms between formations (约定俗成).",
+        "zh": "名表为何是用者之间的约定：码在形成之间形成（约定俗成）。"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "hexagrams-on-the-spine",
+      "detail": {
+        "en": "Its 易传 entries keep these maps' correspondences.",
+        "zh": "其易传条目沿用这些对应。"
+      }
+    },
+    {
+      "id": "hexagram-arrangements-and-laws",
+      "detail": {
+        "en": "Its 易传 entries keep these maps' correspondences.",
+        "zh": "其易传条目沿用这些对应。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "3422f2eb6a69a87b2bf6e89e31d5f75c3ca48d6f020cf3dfe4e0efd62450611f"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md",
+      "role": "statement",
+      "sha256": "273bd9e499e23bef9c8c551b527bcfcaa017cbb089d4dfbfd729bc27b04aa5dc"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/passages.json",
+      "role": "integration",
+      "sha256": "f4b91c9e885d698e85e2f0371c3ad2470bcadda5e03f6c9d288856338ca71cff"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/coverage.json",
+      "role": "integration",
+      "sha256": "afeb64d6a64b6476cfa60c427e6d839183e3061f2d3f2c52a33299cfadcbaec6"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/names-decisions.tsv",
+      "role": "integration",
+      "sha256": "6d3d9920e756fdf4e5cff436efedf99f73400aad0310bac26755f7f422140c5a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/verify_zh.py",
+      "role": "integration",
+      "sha256": "467d0a0b4449cf9b37d51945f24f6134158ca5e7b8189c13c14875f89d8a6609"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/build_tables.py",
+      "role": "integration",
+      "sha256": "cddb8fe87e548638ba4778f020da31242ce557a1bb53aba330d71662273bfa1c"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "review",
+      "sha256": "b42e8238e805aa0756bb4448dffd3e923b3c867f7e30f8f81aab7cb05e46472b"
+    },
+    {
+      "path": "theories/becoming/chapters/CHINESE-SOURCES-AND-BECOMING.md",
+      "role": "statement",
+      "sha256": "db0e4d2eca1afaecec80fa3a7f1e2cb0edd8531568c1af00db16f5d2e0da7118"
+    },
+    {
+      "path": "sources/civilization-thought-v1.0/PROVENANCE.json",
+      "role": "provenance",
+      "sha256": "ecca9973df6aceeef7a75fe5b668c5627c7379bc2b75520c1d050cac759845ca"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md",
+      "role": "provenance",
+      "sha256": "d1063df842afadf98c731b204019bfae48034d665c9a3361dfe3fb00d88462ef"
+    }
+  ],
+  "proof_bindings": [],
+  "progress": [
+    {
+      "en": "What the full reading found, the name table, the 中华本, and the gaps the texts raise.",
+      "zh": "全读所得、名表、中华本，以及古典文字提出的缺口。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#328-中华思想脉络-on-the-spine-and-the-中华本-zh"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (ZH), on Ren's request for a 中华 edition and for the 脉络 to be joined to the theories; study section 328; readings D62.",
+      "zh": "2026年10月21日：新增（ZH），按 Ren 关于中华本、并把脉络整合进理论的要求；研究第 328 节；读法 D62。"
+    }
+  ]
+}

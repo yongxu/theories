@@ -1,0 +1,1011 @@
+{
+ "cluster": "C08 识、知、察与验",
+ "lens": "STRUCTURE",
+ "names": [
+  {
+   "concept": "识（已采用）：一个形成所登记、所读出之差 / registration",
+   "name": "识",
+   "verdict": "revise",
+   "issues": "概念栏用的是已退役之原语义：“登记/registration”在N1中因其二元义而改名；已采用之识在zh章词汇表第919行为“一个形成自身的进一步历程，经由其耦合所作的归并而分解（D45）”，锚 Becoming.Web.SelectsThrough；命名研究§7规定原语另用 耦合入、经g之耦合无别、映射/归并。三条书证中，论语7.27“多見而識之”与19.22“賢者識其大者，不賢者識其小者”是记取（记忆）义，属前段/往，不是D45之识，后者又带贤/不贤之等级；只有墨子“然今天下之情僞，未可得而識也”是分辨义，接近D45。fit“形成经其耦合登记并区分之差”把登记义带回。entries中识又被用作记录义（daxiang-duo-shi-qian-yan、lunyu-duo-wen-duo-jian、xunzi-xu）与原语义（mojing-zhi-yu-wu、xunzi-zheng-zhi、jielao-qian-shi），违一名一义。",
+   "fix": "concept改为“识（已采用，D45）：一个形成自身的进一步历程，经由其耦合所作的归并而分解”，lean留 Becoming.Web.SelectsThrough、Becoming.Web.selects_alike_iff，删去“登记/registration”。书证以墨子非命中“然今天下之情僞，未可得而識也”（MO1-C36-R001）为首；论语7.27、19.22改标“记取义，属前段，非本名所取”或移出；补成唯识“「識」謂了別”（FO1-R-CY06，隋唐，玄奘译糅）为后起之相合义，nc保留能变与藏识。fit改为“AI读法：识是所读能否分开之条件：形成之后续只随其耦合之归并而分；‘未可得而識’即归并不分之处”。各entry按其义改names_used（见各entry）。"
+  },
+  {
+   "concept": "读法（reading：经一映射读一展开）",
+   "name": "觀",
+   "verdict": "revise",
+   "issues": "(1) zh章词汇表第889行已立“观：过程、框架、世界”（view）为术语，觀再名reading即一字二义；C16以讀名reading，两族冲突。(2) 首证老子54“以身观身…以天下观天下”是同尺度、按情境索引之读（Contextual.indexed_fits），不是一般之“经一映射读一展开”。(3) 概念未落到确切Lean：经一映射读一确定律是 Becoming.Law.frameBy（映射之值即所主张），所列 Readout.futures_through_iff 是归约携带未来之条件，不是读法之定义。(4) 大觀在上之中心/位阶义虽列nc，tuan-da-guan却以之为本名之素材。",
+   "fix": "由整合者三择一并与C16协调：(a) 觀留给zh已用之“观（过程、框架、世界）”，reading用C16之讀，或只用关系标记“以X觀Y”（HANZI §6）表“经X之映射读Y”而不立名词；(b) 若觀名reading，须同改zh词汇表之观。lean改为 Becoming.Law.frameBy（定义）加 Becoming.Readout.futures_through_iff（条件）。老子54改标“情境索引之读”（定域义），首证改用观卦“觀我生，進退”（JF-R058）或老子1“以觀其妙…以觀其徼”（LE-R003、LE-R004）。"
+  },
+  {
+   "concept": "记录与前缀（record／course prefix：运行至某步所保留之已行之程）",
+   "name": "往",
+   "verdict": "revise",
+   "issues": "概念把记录（Run.Fixes：记录在所采取处固定一动作之结果）与前段（Learning.prefixOf）合为一名，违一名一义；命名研究§7已采“前段”为prefix，“record”保留其熵义。fit以“往者不可諫”对应记录之固定是字面类比：Run.Fixes 是相对于记录与确定性之固定（fixes_of_takes、not_fixes_of_untaken、fixes_on_return），不是“过去不可改”；“不可諫”是劝谏之伦理语。Y1以往来名爻之往复运动（往＝去），与名词“往＝已行之程”同字异义。",
+   "fix": "概念限为前段（course prefix，Becoming.Learning.prefixOf），并注明与已采“前段”之关系（往为前段之古名，或不另立）；记录不并入往，沿用已采词。删去“往者不可諫”之对应，改列nc（劝谏之伦理义）。书证以论语“吿諸往而知來者”与说卦“數往者順”为主，注明与Y1“往来”之动词义区分。"
+  },
+  {
+   "concept": "外推（extrapolation：由前缀提出下一值）",
+   "name": "以往知來",
+   "verdict": "revise",
+   "issues": "名中“知”断言成功；而脊柱之外推只“提出”下一值，无前段固定它（Learning.no_prefix_fixes_next），每一外推在其对角程上不合（Learning.diagonal_misses）。RO shuogua-shuwang-zhilai 之读法明言知来要有律、不能从已往之前段读出，此名恰名所否定者。首证墨子“謀而不得，則以往知來，以見知隱”在本族mozi-jing-yu-ren中被映到归并迁移（Learning.determines_lumped_iff），不是沿一历程由前段提出下一值，名与首证结构不一。与已采“外推”“提出／默”之关系未说明。",
+   "fix": "外推沿用已采“外推”，提出/默沿用已采词；若要古名，取不含“知”之组合，例如以已证之“推”“來”组为“推來”并标coinage（HANZI §4），由整合者定。“以往知來”只可名定域义：在律已定且所历同归并处由往及来（Learning.determines_lumped_iff、Law.alike_iff_sameFuture）。confidence降为low。"
+  },
+  {
+   "concept": "回读（retrodiction：由记录推回先前之包及其来源关系）",
+   "name": "數往",
+   "verdict": "revise",
+   "issues": "fit“回读正是在记录固定处正确”误述 Becoming.Retrodiction.reading_right_iff：回读读对一早先内容，恰当每一给出同一包而内容不同之族历史都被某一有日期之控制分开。RO已判此句为scope，读法为“数往顺但不是无条件的”。“RO shuogua”不是RO之id，应为 shuogua-shuwang-zhilai。“數往”只说卦一见；同句“易逆數也”之數是筮数，与極數之數、术数相涉；“數”（计数）不带有日期之控制这一结构。",
+   "fix": "fit改为“AI读法：数往者顺对应回读之方向；回读之正确条件是每一同包异内容之对手历史被某有日期之控制分开（reading_right_iff），两控制之间之变化不被定位（change_unlocated）；‘顺’只在此条件下成立”。RO引用改为 shuogua-shuwang-zhilai。confidence降为low；alternatives补孟子“以意逆志”之逆（RU2-R0048），并注其方向与说卦“知來者逆”之逆相反，须标歧义；与稽、考一并由整合者定。"
+  },
+  {
+   "concept": "框架（frame：一个声明的过程及其在各构型所实现之命题）",
+   "name": "設卦繫辭",
+   "verdict": "revise",
+   "issues": "两条书证之“系辞”都服务于吉凶之断（“系辞焉而明吉凶”，及同族“系辞焉以断其吉凶”），作者为圣人；框架在各构型所实现之主张是事实命题，不是吉凶评价。四字新组合不简洁；zh章已有“框架”，并列于“观：过程、框架、世界”。第二条书证“设卦以尽情伪”正为 Frame.self_incomplete 所否定，却同时被用作正名之证。",
+   "fix": "二择一，由整合者定。(a) 保留此名：fit写明所取只是“设卦”（声明构型）与“系辞”（各卦爻上之辞）之结构，吉凶之断与圣人作者相分（属评价与单一中心之层）；以 Becoming.Web.significance_undetermined（所表示之动力学不蕴含意义）说明评价不由框架给出；第二条书证改标定域/相分。(b) 沿用zh已有之“框架”，不另立古名。"
+  },
+  {
+   "concept": "检验（testing：命题只经耦合进来之差被排除）",
+   "name": "驗",
+   "verdict": "keep",
+   "issues": "小处：孙子标“经”是宋代武经七书之后起分类，应与吴子一样标为论（兵书）。驗与徵之分工（驗＝排除一侧，Web.Excludes；徵＝验证一侧，verifiable_iff_verified）未在fit中写明；与已采“排除”之关系未说明。",
+   "fix": "孙子层改为“论·先秦（孙子，春秋末至战国，成书有争议；‘经’为后起分类）”。fit补“AI读法：驗名排除一侧（Becoming.Web.Excludes.not_of_alike），与徵（验证一侧）分工；与已采‘排除’并用时，驗名检验之活动，排除名其结果”。"
+  },
+  {
+   "concept": "验证（verification：有限片段使一读法被验证）",
+   "name": "徵",
+   "verdict": "keep",
+   "issues": "fit引“無徵不信”，却未列为书证；第三条书证“徵以先王之書”无记录ID。",
+   "fix": "补中庸书证“上焉者雖善無徵，無徵不信”（RU1-S-ZY，单元RU1-ZY-39，传·战国至秦汉，年代有争议；已核）；墨子一条补关系记录ID，或标“无关系记录”。"
+  },
+  {
+   "concept": "实验（experiment：采取一动作，由记录固定其结果）",
+   "name": "試",
+   "verdict": "revise",
+   "issues": "zh章词汇表定义“实验”为“在配置（按实验者的读法）返回之处变动自己的动作”，锚含 Run.fixes_on_return；本名概念漏去返回这一定义性条件：无返回则一次结果不固定另一动作会如何。墨子书证只引两字“試用”，原句“然胡不賞使家君試用家君發憲布令其家”文字有讹（賞或当作嘗），不足以立名。nc未列韩非书证所含“課其功伐”之考课与赏罚义。",
+   "fix": "concept改为“实验：在配置（按读法）返回处变动自己之动作；返回之后，所采取动作之结果被记录固定”，lean补 Becoming.Run.fixes_on_return。墨子书证引全句并注文字问题，或删去，以韩非“試之官職，課其功伐”为首证；nc补“课功考绩与赏罚（韩非）”。"
+  },
+  {
+   "concept": "对照（control：其余相若，只变一项以排除错误投影）",
+   "name": "相若",
+   "verdict": "revise",
+   "issues": "zh章词汇表“对照”为“两次场合之间不同的与变化无关这一模型：步骤经读法分解为确定过程”，锚 FactorsThrough、Run.generalizes、Confound。本名概念“其余相若，只变一项”是控制变量之操作，不是对照之模型。变动动作以排除错误投影在脊柱只有具体例（Confound.varied_refutes）；混淆不被排除也是具体例（Confound.confounded）。相若在韩非句中是“与人相若”，所名者应是“经此模型读为相同之场合”。lean缺 FactorsThrough、Run.generalizes。与C07之“同”相邻。",
+   "fix": "concept改为“对照：步骤经一读法分解为确定过程（FactorsThrough），故一次结果代表其类（Run.generalizes）；相若＝在此模型下读为相同之场合”。lean补 Becoming.FactorsThrough、Becoming.Run.generalizes、Becoming.Confound.confounded，并注明 Confound.* 为具体例（证其可有，不证普遍）。与C07协调同与相若之分工。"
+  },
+  {
+   "concept": "观察是读出之路线（observation as a route）",
+   "name": "聞",
+   "verdict": "revise",
+   "issues": "第三条书证（經說上“知，傳受之，聞也。方不㢓，說也。身觀焉，親也。”）在知之三分中以聞（传受）对親（身观），聞恰不含親，与fit“亲是零长路线、属闻”相反。墨经在两层用聞：作为知之三源之一，排除親；在“聞，傳、親”中，又含親。脊柱之观察是任意读出路线（route_forms_by_closing、apart_only_downstream），包括身观；本族 mojing-zhi-yu-wu、zhuang-hao-shang、yinming-xian-bi（现量）都是親知，标聞即不合。论语“是『聞』也，非『達』也”之名声义与本名冲突，lunyu-shi-wen-fei-da 却把它标为聞之用。",
+   "fix": "第三条书证换为經說上“聞，或告之，傳也。身觀焉，親也。”（MI1-S-SS，已核），并在fit写明知三分中之聞不含親。若概念取观察路线全体，名宜不偏于听：由整合者在見、親、聞之间定，或令聞只名“经他者之路线”、親名零长路线，二名并立。nc补“耳之聪”义与知三分中之狭义。"
+  },
+  {
+   "concept": "辨识（identification：有界时前缀固定历史）",
+   "name": "極數",
+   "verdict": "reject",
+   "issues": "两条书证都是筮法：“极其数，遂定天下之象”之數是揲蓍之数，“极数知来之谓占”以之为占；Y1 dayan 已把大衍数术判为相分。此名把有界情形下前段固定历史（Identification.prefix_fixes、bounded_induction）与筮数相连，引入数术；又与數往之數冲突。数不是状态数之界。",
+   "fix": "不立極數为名。概念沿用zh词汇表“辨识／给定界的外推”，或以已证之字组成一个带“界”之名（标coinage），由整合者定。系辞两句只作定域/相分之entry（见xici-ji-qi-shu、xici-ji-shu-zhi-lai），不作名之书证；xici-ji-qi-shu、xici-ji-shu-zhi-lai、wangbi-qing-wei-fei-shu 之names_used随之删去。荀子非相“類不悖，雖久同理”（RU2-S-XZ05，已核）可作“同类之律久而不变”之书证，但它更近归并而非状态之界，须写明。"
+  },
+  {
+   "concept": "运行分开（runs part：两运行在某步前相同、该步分开）",
+   "name": "衢",
+   "verdict": "keep",
+   "issues": "首条书证“此夫过举蹞步，而觉跌千里者夫”不含衢字。fit之“千里”放大（分开后相距愈远）不在Lean：Parting.PartAt 只说在该步分开，free_parts_after 只说任何前段之后自由运行仍会分开，脊柱无距离增长之律。",
+   "fix": "首证改为王霸“杨朱哭衢涂”，并补同段“此亦荣辱、安危、存亡之衢已”（RU2-S-XZ11，皆已核）；劝学“行衢道者不至”对应 Parting.not_right_on_both（无外推对两者都对），可留。“千里”移入nc（距离增长不在律中）。"
+  },
+  {
+   "concept": "典型非由律导出（typicality by counting）",
+   "name": "大率",
+   "verdict": "revise",
+   "issues": "名非先秦（杨倞注、张载、程颢），已标pre_qin false。三条书证中正蒙、定性书两条是“大体而言”之泛语，不是计数中之典型。概念把两件事合为一名：一是典型（计数中，Typicality.typical、offBy、concentrated），二是“非由律导出”。后者之锚是每一历程都是自由分支之运行（Parting.freeRun），且任何前段之后仍会分开（Parting.free_parts_after）；记录typicality-by-counting已列后者。few_far_ahead 只证权重1,1之情形。Typicality 之模型是二值、各步同权（p:q）之历程计数，此建模假设未写。",
+   "fix": "concept改为“典型（计数中）：Typicality.typical、Typicality.concentrated（一般p,q）；few_far_ahead为权重1,1之例；模型为各步同权之二值历程”。“非由律导出”另立一句，锚 Becoming.Parting.freeRun、Becoming.Parting.free_parts_after，并与C17之遇协调。书证：先秦结构用荀子荣辱“安危利害之常體”，最确切之后起释义用杨倞注“其中雖未必皆然，然其大分如此矣”（RU2-S-XZ04，注·隋唐，已核）；删去正蒙、定性书。名在大率与大分之间由整合者定；大分在荀子正文有“榮辱之大分”之位阶义，须标。"
+  },
+  {
+   "concept": "对角程（diagonal course：沿每一外推所不预之值而行之程）",
+   "name": "出其不意",
+   "verdict": "revise",
+   "issues": "名带对抗层（诡道，取敌之不意），而对角程是对任一外推之构造，不含对手。Y1 buce 已把“阴阳不测”对应 Learning.diagonal_misses，同一结构有两个名。fit“战胜不复对应对角程不是套索”过度：Learning.diagonal_not_lasso 只说逐除外推于套索候选（byElimination lassos）之对角程不是套索；对常值外推，对角程为常值，正是套索。",
+   "fix": "对角程之名以“不測”为基（与Y1 buce统一，注明‘神’之义不取）；出其不意降为定域/平行之书证（对抗层列nc）。fit改为“AI读法：对每一外推，对角程在其所提出之值处都不合（diagonal_misses）；对逐除套索候选之外推，其对角程不是套索（diagonal_not_lasso），不是对一切外推”。"
+  },
+  {
+   "concept": "敏感性与最小识（sensitivity：有限读之律经其所敏感者读）",
+   "name": "察",
+   "verdict": "revise",
+   "issues": "“最小识”是退役义，出自旧记录名 sensitivity-is-the-least-registration。Lean名 ExchangeLaw.ReadsFinitely.least_coupling 陈述的是“敏感是最小耦合”（含¬¬形式），zh词汇表已有“敏感”。entries中察多为一般观察义（仰观俯察、察其所安、察其進、心之察），不是敏感；zhoudunyi-tong-wei、zhuang-zi-xi-shi-da、hanfei-zhan-shou 之片段中甚至没有察字。只有 jielao-mu-bu-ming 引 least_coupling。敏感既是最小耦合，以C10之耦合名（所感）组合是可检验之组合（HANZI §5），mapper弃所感之理由（归C10）不足。",
+   "fix": "concept改为“敏感：形成之交换对一条件敏感；读有限多条件之律经其所敏感者读，此为最小耦合（least_coupling，¬¬形式）”，删去“最小识”。名在察与由C10耦合名组成之词（如所感）之间，由整合者与C10定。若留察，须删去一般观察义entries中之察：xici-yang-guan-fu-cha、suzhe-xiao-cha、lunyu-shi-qi-suo-yi、zhoudunyi-tong-wei、zhuang-zi-xi-shi-da、mojing-xin-zhi-cha、wuzi-guan-di-zhi-wai、hanfei-zhan-shou。"
+  },
+  {
+   "concept": "可学（learnable）",
+   "name": "可知",
+   "verdict": "revise",
+   "issues": "已采“可学”（命名研究§7），本名与之并立而未说明。论语“所損益可知”是由继承（因）之制度推知其损益，不是可学之条件（经映射同未来之构型，其特征终于一致，Learnable.learnable_iff）；且 learnable_iff 有“世界为一列表所持”之假设（world : ∀ s, s ∈ l），fit未写。“百世可知”之普遍预言正是脊柱不给者。“可知”带可知论/不可知论之形上立场。荀子“可以知，物之理也”说物有可知之理，不是可学之条件。",
+   "fix": "沿用已采“可学”（荀子“可学而能”之性/伪义列nc即可）；若取古名，用可學而不用可知。concept补“在一列表所持之世界中”之假设。论语“因…損益可知”改作定域entry（只在继承同一结构且同归并处），不作名之书证。"
+  },
+  {
+   "concept": "所见范围（scope of an inquiry）",
+   "name": "涯",
+   "verdict": "revise",
+   "issues": "C17以涯名视界（有限视野），本族以涯名所见范围（Scope：策略实际执行可达之配置），一字跨族二义。“吾生也有涯”之涯是生命之限，合视界/有限前段，不合Scope（由信念经实际路径所达）；只有秋水“出於涯涘”说范围随所历之路径而扩。",
+   "fix": "与C17协调：涯留给视界（有涯＝寿限、有限前段），本概念改用“涯涘”（秋水，ZH1-C17-R-02），或沿用zh已有之“所见范围”，由整合者定。“吾生也有涯”之书证移至视界。"
+  },
+  {
+   "concept": "一步之情境（situation of a step：步骤由其一更细之情境实现，权重计数情境）",
+   "name": "所由",
+   "verdict": "revise",
+   "issues": "C17以“遇”名同一概念，一概念二名。庄子“其所由以生乎”是“从何而生”之来源义，不是一步之一种走法。概念之要点“权重计数情境”（Situations.situations_typical）在书证中无对应：论语“觀其所由”是观人所经由之道，带道德评价。",
+   "fix": "与C17协调，由整合者在遇与所由中定一。若留所由，删庄子书证，fit写明“计数情境”是脊柱所加、书证未说。concept按zh词汇表“情境（一步的）：一步的一种走法，以它为动作时律是确定的”，锚 Becoming.Situations.finerLaw、Situations.finer、Situations.situations_of_course。"
+  },
+  {
+   "concept": "训练（training：经数据选择类之成员）",
+   "name": "習",
+   "verdict": "keep",
+   "issues": "小处：lean缺 Learning.Training.loss_through（zh词汇表“训练”之锚：数据上之损失经数据而选）；荀子正名“虑积焉，能习焉，而后成谓之伪”带性/伪之二分，nc未列。",
+   "fix": "lean补 Becoming.Learning.Training.loss_through；nc补“荀子性/伪之二分（习而成伪）不取”。"
+  },
+  {
+   "concept": "排除法外推（extrapolation by elimination）",
+   "name": "過則改",
+   "verdict": "revise",
+   "issues": "名是一句德目格言，“过”之核心是道德过失，带对/错之二元（M4已因“correct”之二元义把Correction改为Rejoining）。已采“逐除外推”。fit所说之“不贰过”（被越过之候选不再提出）对应 Learning.index_mono（候选序号单调不减），lean却只列 index_le_of_accords。",
+   "fix": "沿用已采“逐除外推”；论语三句改作定域/平行之entry（过＝不合，改＝移向下一候选）。名不取“過”；lunyu-ting-yan-guan-xing、zhongyong-sui-yu-bi-ming、xunzi-xu、xunzi-can-xing、xunzi-fei-wo-er-dang、zhuang-liu-shi-hua、tiantai-shi-xiu-zhi之names_used随之改。若整合者仍取古名，至少lean补 Becoming.Learning.index_mono，并在nc标“过”之道德义。"
+  },
+  {
+   "concept": "相符／不符（accords／misses）",
+   "name": "符",
+   "verdict": "revise",
+   "issues": "已采“相合／不合”（命名研究§7），与对应三类之“相合”同字冲突；符可避开此冲突，但须由整合者定并说明。Learning.Accords 是“在任何一步都不不合”，沉默（不提出值）也算相符，fit“读出与所读之值相合为符”漏了这一点。韩非“四徵者符”是诸路线之读彼此一致（交叉核验），不是一外推之所提与值相合。",
+   "fix": "fit改为“AI读法：符＝外推在任何一步都不不合，凡所提出之值皆对，沉默不算不合（Learning.Accords）”。“四徵者符”改作參驗之书证，或标为“诸路线一致”之引申义。若采符，“相合”只留给对应之一类；由整合者定。"
+  },
+  {
+   "concept": "套索程（lasso：从某步起以某周期重复之程）",
+   "name": "終而復始",
+   "verdict": "revise",
+   "issues": "套索是“从某步起周期重复”，含前段（重复之前之程）与周期两部分；終而復始只名周期部分。孙子语境是奇正之变（“奇正相生，如循環之無端”），带对抗之用。与C05之复相邻。",
+   "fix": "concept限名“套索之周期部分”，或以组合表“前段＋周期”，由整合者与C05定；fit注明前段不在书证中，奇正之对抗用法列nc。"
+  },
+  {
+   "concept": "沉默（silence：读出在合并处不出值，可靠而不确切）",
+   "name": "默",
+   "verdict": "revise",
+   "issues": "第三条书证（“知之爲知之，不知爲不知，是知也”）是杨倞注所引，层为注·隋唐，应直接引论语2.17。第二条“默而識之”是不言而记，默是不言说，不是读出在合并处不出值，识又是记取义。本名与已采“默”（提出/默）同义，但未写明。PartialReadout 诸声明尚无结果记录。",
+   "fix": "第三条改为论语“知之為知之，不知為不知，是知也”（RU1-S-LY，记录RU1-LY-02-17-R01，经·先秦，已核）；第二条删去或改标“不言”义；补荀子同篇“信信，信也；疑疑，亦信也”（RU2-S-XZ06，已核）。fit写明与已采“默”同义；records注明 PartialReadout 尚无记录。"
+  },
+  {
+   "concept": "以可错之见证交叉核验（cross-checking with fallible witnesses）",
+   "name": "參驗",
+   "verdict": "revise",
+   "issues": "fit“不使羣臣相爲語…正是交叉核验之条件”过度：complete_diagnosability_iff_cross_separation 之条件是故障包络之交叉分离，见证独立未被陈述为一般律（mapper之G1）。脊柱只有具体例：WitnessRefinement.duplicated_fifth_no_repair（第五见证与第三共因，加之无补）与 uncovered_correlation_deletes_actual（未覆盖之相关故障可删去实际模型），都由decide证明。",
+   "fix": "fit改为“AI读法：参验对应以可错见证之交叉分离诊断（complete_diagnosability_iff_cross_separation）；‘不使羣臣相爲語’所防之相通见证，脊柱只有共因之具体例（duplicated_fifth_no_repair、uncovered_correlation_deletes_actual），一般律未证（G1）”。lean补此二声明（记录fallible-witness-diagnosability列之）。"
+  },
+  {
+   "concept": "判断过程（judgment process：在受判构型以可接受应答结束判断）",
+   "name": "斷",
+   "verdict": "keep",
+   "issues": "首证“系辞焉以断其吉凶”是占断吉凶，属评价与筮占，nc未列。",
+   "fix": "nc补“占断吉凶（筮占）”；首证改以墨子“豈足以斷疑哉”（MO1-C31-R008）为主。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-guan-wo-sheng",
+   "verdict": "revise",
+   "issues": "records中 selection-through-registration 是旧ID；其余正确。",
+   "fix": "records：selection-through-registration → selection-through-couplings。"
+  },
+  {
+   "id": "shuogua-shu-wang-zhi-lai",
+   "verdict": "revise",
+   "issues": "读法“回读在记录与实际关系相合处正确”误述 reading_right_iff。“‘易逆數’之知来只在可列或有界处有正确范围”不由所列声明支持：有界须Identification，可列须held类声明。wisdom-root-part-one 是旧ID。",
+   "fix": "读法改为“AI读法：回读读对一早先内容，恰当每一给出同一包而内容不同之对手历史都被某有日期之控制分开（reading_right_iff），两控制间之变化不被定位（change_unlocated）；知来无前段固定下一值（no_prefix_fixes_next），须有律（Law.alike_iff_sameFuture）。‘易逆數’之筮数不在其中”。删“可列或有界”句，或补 Identification.prefix_fixes 并写明界之假设。records：wisdom-root-part-one → wisdom-root-without-axiom。"
+  },
+  {
+   "id": "xiaoxiang-lv-shuang",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-da-guan",
+   "verdict": "revise",
+   "issues": "“大觀在上…中正以觀天下”立居上中正者观天下，属四层之单一中心与位阶，Y1亦以尊位为相分。读法自言“‘在上’不增所观”，即否定此文，故kind不应为scope。Web.separates_all_iff_member 须有“成员被列出、各成员之耦合是否无别可判定”二假设，读法未写。selection-through-registration 是旧ID。names_used 觀不当：中心之观不是本名之义。",
+   "fix": "kind改divergence，或拆为二：“观经耦合而达”定域，“在上中正以观天下”相分。读法补“在成员可列、可判定之处”。records：selection-through-registration → selection-through-couplings。names_used删觀。"
+  },
+  {
+   "id": "daxiang-duo-shi-qian-yan",
+   "verdict": "revise",
+   "issues": "names_used 识是记取义（多识前言往行），不是D45之识。",
+   "fix": "names_used去识，留往（前段）；读法“多识前言往行即保留往之记录”改为“多识（记取）前言往行”。"
+  },
+  {
+   "id": "xici-yang-guan-fu-cha",
+   "verdict": "revise",
+   "issues": "names_used 察是一般观察义（俯察地理），不是敏感。testing-within-registration 是旧ID。",
+   "fix": "names_used去察；records：testing-within-registration → testing-within-couplings。"
+  },
+  {
+   "id": "xici-jian-zhi-wei-zhi",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID。读法未写Y1 jianzhi之条件：一读法只在其所并者同行处携带律。",
+   "fix": "records：selection-through-registration → selection-through-couplings；读法补“AI读法：读法携律只在其所并者同行处（Learning.goAlike_iff_lumped）”。"
+  },
+  {
+   "id": "xici-jian-ze-ni-xing",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "xici-she-gua-xi-ci",
+   "verdict": "revise",
+   "issues": "kind agreement不当：两句之系辞都服务于吉凶之断，作者为圣人；框架所实现之主张是事实命题，吉凶是评价。记录 metaethical-core-characterization 不列 judgeProcess、commonResponse_judge_iff。",
+   "fix": "kind改scope。读法补“AI读法：设卦、系辞、刚柔相推之结构合于Frame；吉凶之断是评价，不由框架之动力学给出（Web.significance_undetermined，记录continuation-condition-yields-living-significance），圣人作者属单一中心之层”。records以 testing-within-couplings 换 metaethical-core-characterization。"
+  },
+  {
+   "id": "xici-sui-zhi-lai-wu",
+   "verdict": "revise",
+   "issues": "names_used 以往知來不对：此文是问筮而知来物之前知，不是由往推来。",
+   "fix": "names_used删以往知來（本族无名，或标“前知（相分）”）。"
+  },
+  {
+   "id": "xici-ji-qi-shu",
+   "verdict": "revise",
+   "issues": "“极其数”之数是揲蓍之数，“定天下之象”是定卦象。读法“恰在有界处成立”把筮数读为状态之界，未写数术之相分（Y1 dayan）。",
+   "fix": "读法改为“AI读法：此‘数’为大衍筮数（Y1 dayan判为相分）；结构上只在有界历史中前段固定历史有对应（Identification.prefix_fixes、bounded_induction），筮数定象不被承认”。names_used删極數。"
+  },
+  {
+   "id": "xici-cang-wang",
+   "verdict": "revise",
+   "issues": "“神以知来”是不经耦合之前知，与xici-sui-zhi-lai-wu同层；读法承认它“不在理论之内”，kind却仍是scope。“知以藏往”相合。",
+   "fix": "拆为二：“知以藏往”为agreement（Run.fixes_of_takes、Retrodiction.actual_candidate），“神以知来”为divergence（前知/先在之地）；或整体标divergence，并写明藏往部分相合。"
+  },
+  {
+   "id": "xici-shu-bu-jin-yan",
+   "verdict": "keep",
+   "issues": "PartialReadout.SoundWithin.silent 尚无结果记录；risk-certificate-outcome-distinction 只列 Readout.no_judge_of_merged。",
+   "fix": "records旁注“PartialReadout：模块已证，无记录”。"
+  },
+  {
+   "id": "xici-jin-qing-wei",
+   "verdict": "revise",
+   "issues": "末句“所能尽者限于有限可列之范围”不由 Frame.self_incomplete、Diagonal.claims_incomplete 支持：二者对一切以所读为索引之族成立，未给“有限可列则尽”之正面律。registration-within-what-it-registers 是旧ID。",
+   "fix": "末句改为“AI读法：传文之‘尽’被否定：无以所读为索引之族实现每一模式”。records：→ readings-within-what-they-read。names_used随設卦繫辭之决定。"
+  },
+  {
+   "id": "xici-guo-ci-yi-wang",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID；metaethical-core-characterization 列有 Scope.secures，可留。",
+   "fix": "records：selection-through-registration → selection-through-couplings。"
+  },
+  {
+   "id": "xici-zhang-wang-cha-lai",
+   "verdict": "revise",
+   "issues": "读法误述 reading_right_iff；“‘备’限于彰往与可列之处”之“可列”不由所列声明支持；judgeProcess 无记录支持。",
+   "fix": "改述为“回读正确，恰当每一同包异内容之对手历史被某有日期之控制分开”；删“可列”；records补 testing-within-couplings。"
+  },
+  {
+   "id": "xici-chu-nan-zhi",
+   "verdict": "revise",
+   "issues": "“难易是前缀长短之差”暗示前段愈长愈能定下一值，脊柱否认：任何长度之前段都不固定下一值（no_prefix_fixes_next），只有有界时才有固定长度（Identification）。",
+   "fix": "读法改为“AI读法：上爻时一卦之程已行毕，所行者被固定（Run.fixes_of_takes），故易知；初爻时无前段固定其后（no_prefix_fixes_next），故难知。难易在于程是否行毕，不在前段长短”。"
+  },
+  {
+   "id": "xici-yin-yang-bu-ce",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID。",
+   "fix": "records：→ testing-within-couplings。"
+  },
+  {
+   "id": "xici-ji-shu-zhi-lai",
+   "verdict": "keep",
+   "issues": "names_used 極數随名之reject而删；可补Y1 jishu-zhilai所用之 Learning.goAlike_iff_lumped。",
+   "fix": "names_used删極數；declarations可补 Becoming.Learning.goAlike_iff_lumped。"
+  },
+  {
+   "id": "wangbi-qing-wei-fei-shu",
+   "verdict": "revise",
+   "issues": "registration-within-what-it-registers 是旧ID；names_used 極數随名之reject而删。",
+   "fix": "records：→ readings-within-what-they-read；names_used删極數。"
+  },
+  {
+   "id": "wangbi-yao-ren-wei-shi",
+   "verdict": "revise",
+   "issues": "kind scope不当：“人不妄動，則時皆可知”给出的正是 Readout.judges_iff_lumpedOn 所陈之条件（经归约之判定存在，恰在被并者可观值相同处），结构相合，mapper notes亦列为已覆盖。FactorsThrough（对照之模型）不在此结构中。names_used 所由与所引声明不合。",
+   "fix": "kind改agreement；declarations删 FactorsThrough，records删 projection-carrying-a-law，只留 risk-certificate-outcome-distinction；names_used删所由。"
+  },
+  {
+   "id": "lao-yi-shen-guan-shen",
+   "verdict": "revise",
+   "issues": "contextual-registration 是旧ID；gluing-under-parity 只列 Specker.noGlobal，不列 Contextual.indexed_fits、glues_iff_agree；record_ids为空。脉络中只有苏辙注之关系 LC2-SZ-C54-R02（注·宋明），经文本身无关系记录。",
+   "fix": "records改为 claims-shown-in-context、unity-of-readings，删 gluing-under-parity；record_ids标“经文无关系记录；苏辙注见LC2-SZ-C54-R02”。"
+  },
+  {
+   "id": "heshang-qiu-zhi-yi-shen",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID。",
+   "fix": "records：→ testing-within-couplings。"
+  },
+  {
+   "id": "lao-wu-yu-guan-miao",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID；读法“同出而异名”超出所引片段。",
+   "fix": "records：→ selection-through-couplings；若用“同出而異名”，须补入fragments并核对。"
+  },
+  {
+   "id": "lao-wei-xue-ri-yi",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "lao-zhi-bu-zhi",
+   "verdict": "revise",
+   "issues": "registration-within-what-it-registers 是旧ID。",
+   "fix": "records：→ readings-within-what-they-read。"
+  },
+  {
+   "id": "suzhe-zi-yi-er-er",
+   "verdict": "revise",
+   "issues": "registration-within-what-it-registers 是旧ID。",
+   "fix": "records：→ readings-within-what-they-read。"
+  },
+  {
+   "id": "suzhe-xing-quan",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID。",
+   "fix": "records：→ selection-through-couplings。"
+  },
+  {
+   "id": "suzhe-xiao-cha",
+   "verdict": "revise",
+   "issues": "registration-within-what-it-registers 是旧ID；names_used 察（小察）是一般分辨义，不是敏感。",
+   "fix": "records：→ readings-within-what-they-read；names_used删察。"
+  },
+  {
+   "id": "lao-shi-zhi-bu-jian",
+   "verdict": "revise",
+   "issues": "runaway-distance-unregistered、selection-through-registration 是旧ID。",
+   "fix": "records：runaway-distance-unregistered → runaway-distance-uncoupled；selection-through-registration → selection-through-couplings。"
+  },
+  {
+   "id": "lao-bu-ke-shi",
+   "verdict": "revise",
+   "issues": "“强为之容”是给出一个不确切之描绘，不是沉默；所引 PartialReadout.silent_not_exact 说沉默不确切，与此文不对。“强为之容”所对应者是：非沉默之读在映射合并处不可靠。kind agreement应为scope。names_used 默不合；识可留，但须写明是读者之归并不分，非对象之性。",
+   "fix": "读法改为“AI读法：不可识＝无确切之读（特征未被映射所并时无确切读出，ExactWithin.lumped）；‘强为之容’给出值而非沉默，在映射合并处不可靠（Readout.no_judge_of_merged），故只是勉强”；kind改scope；names_used删默。"
+  },
+  {
+   "id": "lao-bu-chu-hu",
+   "verdict": "revise",
+   "issues": "learnable-through-registration 是旧ID；Learnable.learnable_iff 有“世界为一列表所持”之假设，读法未写；names_used 可知随名之决定。",
+   "fix": "records：→ learnable-through-a-map；读法补“在一列表所持之世界中”；names_used可知改可学（随名）。"
+  },
+  {
+   "id": "zhuxi-ge-wu-bu-zhuan",
+   "verdict": "keep",
+   "issues": "小处：Confound.varied_refutes 是一具体例（证其可有）。",
+   "fix": ""
+  },
+  {
+   "id": "wangyangming-bu-jia-wai-qiu",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "wangyangming-ming-jing",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID。",
+   "fix": "records：→ selection-through-couplings。"
+  },
+  {
+   "id": "mojing-zhi-yu-wu",
+   "verdict": "revise",
+   "issues": "names_used 识是原语义（知材遇物），不是D45；聞亦不合：以知遇物而貌之是亲知，在墨经知三分中属親，不属聞。",
+   "fix": "names_used删识、聞；在聞之fit中把此条列为親知之例（见名聞）。"
+  },
+  {
+   "id": "lunyu-shi-qi-suo-yi",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID；names_used 察（察其所安）是一般观察义，所由（观其所由）是人所经由之道，不是一步之情境。",
+   "fix": "records：→ testing-within-couplings；names_used删察、所由。"
+  },
+  {
+   "id": "daxue-xin-bu-zai",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID。",
+   "fix": "records：→ selection-through-couplings。"
+  },
+  {
+   "id": "lunyu-wen-gu-zhi-xin",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "lunyu-xue-er-bu-si",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "lunyu-si-er-bu-xue",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID；Stationary.model_error 是一具体例，读法“错误模型排除实际成立者”宜写作“可以排除”。",
+   "fix": "records：→ testing-within-couplings；读法改为“错误模型可以排除实际成立者（一具体例，model_error）”。"
+  },
+  {
+   "id": "lunyu-wen-xian-bu-zu",
+   "verdict": "revise",
+   "issues": "读法“回读在与记录相合处正确”误述 reading_right_iff；文献之足对应的是有日期之控制足够。",
+   "fix": "读法改为“AI读法：文献足，则有足够之有日期之控制，使每一同包异内容之对手历史被分开（reading_right_iff），征乃可得；有限片段不驳倒其余（remainder_not_refuted）”。"
+  },
+  {
+   "id": "lunyu-yi-si-wen",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID。",
+   "fix": "records：→ testing-within-couplings。"
+  },
+  {
+   "id": "lunyu-ting-yan-guan-xing",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID；names_used 過則改随名之决定。",
+   "fix": "records：→ testing-within-couplings；names_used 過則改改为逐除外推（随名）。"
+  },
+  {
+   "id": "lunyu-ju-yi-yu",
+   "verdict": "revise",
+   "issues": "读法以“愤悱”为归并，不对：愤悱是求知之状态。对应归并者是“隅”之方形结构：一隅与三隅同属一方。names_used 以往知來不合：此为归并迁移，不是由前段外推。",
+   "fix": "读法改为“AI读法：一隅与三隅同属一方（同一归并），故由一隅之数据定三隅之值（Learning.determines_lumped_iff），迁移在跨归并同行处正确（lumped_right_iff）；不能反三即未得此归并。愤悱是求之状态，不是归并”；names_used删以往知來。"
+  },
+  {
+   "id": "lunyu-fei-sheng-er-zhi",
+   "verdict": "revise",
+   "issues": "Learning.every_determines_nothing 被误用：它说数据本身不固定任何未试之值，须有归并/类，不是“无数据则不固定”。learnable_iff 有列表所持之假设。learnable-through-registration 是旧ID。kind宜为scope：脊柱给出知之条件（数据加归并），“好古敏求”只在其中成立。",
+   "fix": "读法改为“AI读法：数据本身不固定未试之值（every_determines_nothing），由求古所得之知须有归并（Learning.determines_lumped_iff）；可学在列表所持之世界中有确切条件（learnable_iff）”；kind改scope；records：→ learnable-through-a-map。"
+  },
+  {
+   "id": "lunyu-duo-wen-duo-jian",
+   "verdict": "revise",
+   "issues": "names_used 识是记取义（多見而識之），属前段/往，不是D45之识。",
+   "fix": "names_used识改为往（前段）。"
+  },
+  {
+   "id": "lunyu-bu-bao-qi-wang",
+   "verdict": "reject",
+   "issues": "文义是孔子接纳互乡童子之态度（与其洁，不保其往），属伦理立场。judgeProcess 不陈述“判断不以往之记录为担保”；记录 metaethical-core-characterization 不列二声明。按mapper自身之剔除标准（态度不入律），应剔除。",
+   "fix": "移入rejected，或作无律之平行。"
+  },
+  {
+   "id": "lunyu-bu-gan-chang",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "lunyu-shi-wen-fei-da",
+   "verdict": "revise",
+   "issues": "names_used 聞在此为名声义，正是名聞之nc所排；所引 apart_only_downstream 只说差沿下游传，没有说出“名声不等于行”。确切之对应是：名声之读合并了达与不达之差，故无判定。",
+   "fix": "names_used删聞；declarations补 Becoming.Readout.no_judge_of_merged，records补 risk-certificate-outcome-distinction。"
+  },
+  {
+   "id": "lunyu-song-shi-san-bai",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "lunyu-xiang-ren-jie-hao",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID。",
+   "fix": "records：→ testing-within-couplings。"
+  },
+  {
+   "id": "zhongyong-sheng-xue-kun",
+   "verdict": "revise",
+   "issues": "读法“‘生而知之’若指无数据之知则不被承认”过窄：脊柱可把生而知之读为经继承所给之归并（类），不必是无数据之知（Flow.transmitsWithin_iff）。learnable-through-registration 是旧ID；learnable_iff 之列表假设未写。",
+   "fix": "读法改为“AI读法：生而知之可读为经继承所给之归并；学知、困知是由数据加归并而得；‘及其知之，一也’只在同一可学条件下（列表所持之世界）”；records：→ learnable-through-a-map。"
+  },
+  {
+   "id": "zhongyong-sui-yu-bi-ming",
+   "verdict": "keep",
+   "issues": "names_used 過則改随名之决定。",
+   "fix": ""
+  },
+  {
+   "id": "zhongyong-ben-zhu-shen",
+   "verdict": "revise",
+   "issues": "Web.separates_all_iff_member 有“成员被列出、可判定”之假设，读法未写；“多见证者在交叉分离处可诊断”未写见证独立未证（G1）。",
+   "fix": "读法补“在诸见证可列、可判定且故障包络交叉分离之处”。"
+  },
+  {
+   "id": "mengzi-yi-yi-ni-zhi",
+   "verdict": "revise",
+   "issues": "读法误述 reading_right_iff；names_used 數往随名之决定。",
+   "fix": "读法改为“AI读法：逆志可得，恰当每一给出同一文辞而志不同之解释都被文中某处（有日期之控制）分开（reading_right_iff）；文辞合并了志之差处无判定（no_judge_of_merged）”。"
+  },
+  {
+   "id": "mengzi-liang-zhi",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "mengzi-jin-xin-shu",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID；WitnessRefinement.fifth_witness_fallible 是一具体例（覆盖允许第五见证单独出错，decide），记录 fallible-witness-diagnosability 不列此名；Stationary.model_error 亦是具体例。",
+   "fix": "records：→ testing-within-couplings；读法注“见证可错由一具体例示之（fifth_witness_fallible）”；fallible-witness-diagnosability 可留作模块记录。"
+  },
+  {
+   "id": "xunzi-han-zhi",
+   "verdict": "keep",
+   "issues": "小处：few_far_ahead 只证权重1,1；一般p,q之形式是 Typicality.typical、concentrated。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-xu",
+   "verdict": "revise",
+   "issues": "names_used 识不当：所已臧是记取义；過則改随名之决定。",
+   "fix": "names_used识改为往（前段）；過則改随名。"
+  },
+  {
+   "id": "xunzi-yi",
+   "verdict": "revise",
+   "issues": "contextual-registration 是旧ID；glues_iff_agree 由 unity-of-readings 所列。",
+   "fix": "records：contextual-registration → claims-shown-in-context，并补 unity-of-readings。"
+  },
+  {
+   "id": "xunzi-ding-shi-fei",
+   "verdict": "revise",
+   "issues": "metaethical-core-characterization 不列 judgeProcess、commonResponse_judge_iff、Web.class_judge_iff；testing-within-registration 是旧ID。",
+   "fix": "records改为 testing-within-couplings、wisdom-root-without-axiom，删 metaethical-core-characterization。"
+  },
+  {
+   "id": "xunzi-zheng-zhi",
+   "verdict": "revise",
+   "issues": "读法用“登记”（退役词）；names_used 识是原语义。",
+   "fix": "“各当其类地登记”改为“各当其类地读入（当簿其类）”；names_used删识。"
+  },
+  {
+   "id": "zhoudunyi-tong-wei",
+   "verdict": "revise",
+   "issues": "runaway-distance-unregistered、registration-within-what-it-registers 是旧ID；片段中无察字，names_used 察不当。",
+   "fix": "records：→ runaway-distance-uncoupled、readings-within-what-they-read；names_used删察。"
+  },
+  {
+   "id": "zhangzai-de-xing-suo-zhi",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "wangyangming-zhi-xing",
+   "verdict": "keep",
+   "issues": "小处：Confound.varied_refutes 是一具体例。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-can-xing",
+   "verdict": "revise",
+   "issues": "读法“‘行無過’只在可列世界之有界止息后成立”不由所引 byElimination、diagonal_misses 支持，须有列表所持世界中有界止息之声明。",
+   "fix": "declarations补 Becoming.Learning.held_byElimination_bounded；names_used 過則改随名。"
+  },
+  {
+   "id": "xunzi-fei-wo-er-dang",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID。",
+   "fix": "records：→ testing-within-couplings。"
+  },
+  {
+   "id": "xunzi-mo-er-dang",
+   "verdict": "revise",
+   "issues": "record_ids为空，但脉络有 RU2-R0255（“言默之知取决于当”，已核）；PartialReadout 无结果记录。",
+   "fix": "record_ids：[RU2-R0255]；records旁注 PartialReadout 无记录。"
+  },
+  {
+   "id": "xunzi-ke-yi-zhi",
+   "verdict": "revise",
+   "issues": "learnable-through-registration、registration-within-what-it-registers 是旧ID；脉络无关系记录（已查）；learnable_iff 之列表假设未写。",
+   "fix": "records：→ learnable-through-a-map、readings-within-what-they-read；record_ids标“无关系记录”；读法补列表假设。"
+  },
+  {
+   "id": "xunzi-qu-tu",
+   "verdict": "revise",
+   "issues": "“觉跌千里”之放大不在Lean（见名衢）；脉络无关系记录（已查）。",
+   "fix": "读法删“千里”之对应，或列为未被律承载之余项；record_ids标“无关系记录”；可补“此亦荣辱、安危、存亡之衢已”。"
+  },
+  {
+   "id": "xunzi-chang-ti",
+   "verdict": "revise",
+   "issues": "“乐易者常寿长”之因果联系是书中所给之经验主张，脊柱只给“常”之计数形式，故不是agreement。“不是无例外之律”须锚于典型非由律导出。",
+   "fix": "kind改scope；读法补“AI读法：乐易与寿长之联系是所给之假设；典型由计数（Typicality.typical），非由律导出（Parting.freeRun、free_parts_after）；杨倞注‘其中雖未必皆然，然其大分如此矣’是此结构之确切释义”；record_ids标“无关系记录”。"
+  },
+  {
+   "id": "zhuang-chao-jun",
+   "verdict": "revise",
+   "issues": "读法“短于此则不固定下一值”须有“短于此确有两历史前段同而下一值异”之声明。",
+   "fix": "declarations补 Becoming.Identification.bounded_agree_exact、Becoming.Identification.prefix_short；names_used 涯随名之决定（此句更合视界）。"
+  },
+  {
+   "id": "zhuang-you-ya",
+   "verdict": "revise",
+   "issues": "registration-within-what-it-registers 是旧ID；此句之涯是生命之限，合C17之视界，不合Scope。",
+   "fix": "records：→ readings-within-what-they-read；names_used 涯随名之决定，此条移作视界之书证。"
+  },
+  {
+   "id": "zhuang-you-suo-dai",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID；Stationary.model_error 是具体例。",
+   "fix": "records：→ testing-within-couplings。"
+  },
+  {
+   "id": "zhuang-jing-wa",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID。",
+   "fix": "records：→ selection-through-couplings。"
+  },
+  {
+   "id": "zhuang-zi-xi-shi-da",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID；片段中无察字。",
+   "fix": "records：→ selection-through-couplings；names_used删察。"
+  },
+  {
+   "id": "zhuang-hao-shang",
+   "verdict": "keep",
+   "issues": "names_used 聞与此亲知（知之濠上）不合，随名聞之决定改。",
+   "fix": ""
+  },
+  {
+   "id": "zhuang-shen-gui",
+   "verdict": "revise",
+   "issues": "registration-within-what-it-registers 是旧ID。",
+   "fix": "records：→ readings-within-what-they-read。"
+  },
+  {
+   "id": "zhuang-liu-shi-hua",
+   "verdict": "keep",
+   "issues": "names_used 過則改随名之决定。",
+   "fix": ""
+  },
+  {
+   "id": "zhuang-ying-er-neng-yan",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID；脉络无关系记录（已查）。",
+   "fix": "records：→ selection-through-couplings；record_ids标“无关系记录”。"
+  },
+  {
+   "id": "mozi-de-xia-zhi-qing",
+   "verdict": "revise",
+   "issues": "Web.separates_all_iff_member 之“成员被列出、可判定”二假设未写。",
+   "fix": "读法补“在成员可列、各成员之耦合可判定之处”。"
+  },
+  {
+   "id": "mozi-luan-suo-zi-qi",
+   "verdict": "keep",
+   "issues": "无（causal-models-as-processes 列 Run.generalizes，projection-carrying-a-law 列 carries_law_iff）。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-zhu-bo",
+   "verdict": "revise",
+   "issues": "读法误述 reading_right_iff。",
+   "fix": "改为“AI读法：由竹帛金石之传文读圣王之行，恰当每一给出同一传文而所行不同之历史都被某有日期之控制分开（reading_right_iff）；亲闻是零长路线”。"
+  },
+  {
+   "id": "mozi-wan-ren-shi",
+   "verdict": "revise",
+   "issues": "few_far_ahead 只证权重1,1，此例之权重远非1:1，不适用。频率是在万人上计数，须写明模型：每人一步，各步同权。",
+   "fix": "declarations以 Becoming.Typicality.concentrated 换 few_far_ahead；读法补“AI读法：在‘每人一步、各步同权’之模型下”。"
+  },
+  {
+   "id": "mozi-jing-yu-ren",
+   "verdict": "keep",
+   "issues": "names_used 以往知來随名之决定；此处映到归并迁移是对的。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-gu-chang",
+   "verdict": "keep",
+   "issues": "小处：Confound.varied_refutes 是一具体例；一次施政不返回同一配置，读法已写“在因子化处代表其类”，即 Run.generalizes 之条件。",
+   "fix": ""
+  },
+  {
+   "id": "mozi-er-mu-zhi-shi",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID；WitnessRefinement.fifth_witness_fallible 是一具体例，无记录列其名。读法“不被读不等于不存在”（unread_carried_nowhere）正确。",
+   "fix": "records：→ testing-within-couplings；读法注 fifth_witness_fallible 为具体例。"
+  },
+  {
+   "id": "mozi-du-bo",
+   "verdict": "revise",
+   "issues": "“众所同见同闻”是不同之人同源（共因），不是同一名单重列；doubled_roster_same 弱于此。更近之声明是 duplicated_fifth_no_repair：与既有见证共因之见证不增诊断（具体例）。",
+   "fix": "declarations补 Becoming.WitnessRefinement.duplicated_fifth_no_repair、Becoming.WitnessRefinement.uncovered_correlation_deletes_actual；读法改为“AI读法：同源之众证在共因之具体例中不增诊断，甚至可删去实际（G1之一般律未证）”。"
+  },
+  {
+   "id": "mozi-san-biao",
+   "verdict": "revise",
+   "issues": "第三表“觀其中國家百姓人民之利”以利为准，是评价；脊柱之实验只固定结果，不给“利”之排序。",
+   "fix": "读法补“AI读法：以‘利’为准是所给之评价；排序之依据在C与不变之步，不由检验给出”。"
+  },
+  {
+   "id": "mozi-shi-wei-yi",
+   "verdict": "revise",
+   "issues": "kind agreement不当：“此世未易，民未渝”断言其余不变，结论只在“所不同者与变化无关”之模型下成立（FactorsThrough），隐藏之变可混淆而不被排除（Confound.confounded），与hanfei-yu-ren-xiang-ruo同类。causal-models-as-processes 不列 FactorsThrough、Confound。",
+   "fix": "kind改scope；declarations补 Becoming.Confound.confounded；records以 determinacy-up-to-likeness 换 causal-models-as-processes（experiment-needs-return 留）。"
+  },
+  {
+   "id": "mozi-tian-gui-zhi-zhi",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID；Clearing.tested_by_dweller 是具体例。此处“未可得而識”是分辨义，正合D45之识。",
+   "fix": "records：→ testing-within-couplings；建议以此句为识之首证。"
+  },
+  {
+   "id": "mozi-chuan-liu",
+   "verdict": "revise",
+   "issues": "读法误述 reading_right_iff。",
+   "fix": "改为“AI读法：追问传述之源，即要求有日期之控制分开‘出于善人’与‘出于暴人’二历史（reading_right_iff）；变化处可能不被定位（change_unlocated）”。"
+  },
+  {
+   "id": "mojing-wen-shuo-qin",
+   "verdict": "revise",
+   "issues": "读法以經說上“傳受之，聞也…身觀焉，親也”解“聞，傳、親”，不对：此條經說解的是“知，聞、說、親”；解“聞，傳、親”者是“聞，或告之，傳也。身觀焉，親也”。脉络无关系记录（已查）。",
+   "fix": "读法中之經說引文改为“聞，或告之，傳也。身觀焉，親也”（MI1-S-SS，已核），并写明知三分中聞不含親；record_ids标“无关系记录”。"
+  },
+  {
+   "id": "gongsunlong-jian-bai",
+   "verdict": "revise",
+   "issues": "contextual-registration 是旧ID；gluing-under-parity 列 Specker.noGlobal，可留。",
+   "fix": "records：contextual-registration → claims-shown-in-context。"
+  },
+  {
+   "id": "mojing-xin-zhi-cha",
+   "verdict": "keep",
+   "issues": "names_used 察是心之分辨义，不是敏感，随名察之决定改。",
+   "fix": ""
+  },
+  {
+   "id": "mojing-suo-yi-ran",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "mojing-lv",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "mojing-xin",
+   "verdict": "reject",
+   "issues": "經上“信，言合於意也”定义信为言与意相合（诚）；經說“信，不以其言之當也，使人視城得金”说信不以言之当否为准，信与当分开。脉络记录 MI1-R-SS-trust 判定“后例训释未定”。把它读为“由独立路线之验得”是反读，不是验证。",
+   "fix": "剔除出验证之entries；可改作平行（言—意之合与言—事之当是两种关系），或交C16。"
+  },
+  {
+   "id": "mojing-yi-suo-ming",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "mojing-liang-zhi",
+   "verdict": "revise",
+   "issues": "所引 Diagonal.gap_unsaid 由 readings-within-what-they-read 所列，records未列；PartialReadout 无记录。",
+   "fix": "records补 readings-within-what-they-read；旁注 PartialReadout 无记录。"
+  },
+  {
+   "id": "sunzi-ce-zhi",
+   "verdict": "keep",
+   "issues": "小处：孙子层标“经”是后起分类；Confound.varied_refutes 是一具体例。",
+   "fix": ""
+  },
+  {
+   "id": "sunzi-di-sheng-du",
+   "verdict": "revise",
+   "issues": "“稱生勝”断言比较产生胜，是所给之兵家主张（对抗层），故不是agreement。route_forms_by_closing 讲路线经耦合闭合而成，不是“度量数称”之逐次归约；应引归约与判定之声明。片段中无觀字，names_used 不当。",
+   "fix": "kind改scope；declarations以 Becoming.Readout.judges_iff_lumpedOn 换 route_forms_by_closing（留 Readout.law_through_iff），records改为 risk-certificate-outcome-distinction、derived-history-law-exactness；names_used删觀。"
+  },
+  {
+   "id": "sunzi-zhi-bi-zhi-ji",
+   "verdict": "revise",
+   "issues": "selection-through-registration、testing-within-registration 是旧ID；separates_all_iff_member 之列表与可判定假设未写。",
+   "fix": "records：→ selection-through-couplings、testing-within-couplings；读法补假设。"
+  },
+  {
+   "id": "sunzi-bi-qu-yu-ren",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID。",
+   "fix": "records：→ selection-through-couplings。"
+  },
+  {
+   "id": "sunzi-chu-qi-bu-yi",
+   "verdict": "revise",
+   "issues": "“对角程不是套索”只对逐除套索候选之外推成立（diagonal_not_lasso），对常值外推不成立；脉络无关系记录（已查）。",
+   "fix": "读法改为“对逐除套索候选之外推，其对角程不是套索”；record_ids标“无关系记录”；names_used随名之决定（不測）。"
+  },
+  {
+   "id": "wuzi-guan-di-zhi-wai",
+   "verdict": "revise",
+   "issues": "“觀敵之外，以知其內”断言由外可知内；读法自己限定“外显合并了内情之差处无判定”，故应为scope。testing-within-registration 是旧ID；names_used 察是一般观察义。",
+   "fix": "kind改scope；records：→ testing-within-couplings；names_used删察。"
+  },
+  {
+   "id": "wuzi-mei-bian-jie-xi",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "hanfei-xing-ming-can-tong",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID。",
+   "fix": "records：→ testing-within-couplings。"
+  },
+  {
+   "id": "hanfei-ce-ji-er-yan",
+   "verdict": "revise",
+   "issues": "Run.fixes_of_takes 被误用：筴籍是言之书面记录，不是“记录在所采取处固定一动作之结果”。G2不是缺口：经数据选出之命题不被这些数据排除，是 Web.Excludes.not_of_alike 取满足命题之历史与实际无别之推论（AlikeThroughUpTo 自反），配 Web.AlikeThroughUpTo.earlier 即得。testing-within-registration 是旧ID。",
+   "fix": "declarations删 Run.fixes_of_takes，补 Becoming.Web.AlikeThroughUpTo.earlier；读法改为“AI读法：先立筴籍使所言在事发前固定；事后拟合之言不被同一事排除，是Excludes之直接推论”；删“见gap”；records：→ testing-within-couplings。"
+  },
+  {
+   "id": "hanfei-bu-shi-xiang-yu",
+   "verdict": "revise",
+   "issues": "“不使羣臣相爲語”所防者是共因或相通之见证；脊柱不只有完全重复（doubled_roster_same），还有共因之具体例 duplicated_fifth_no_repair 与 uncovered_correlation_deletes_actual，读法未引。G1应重述为“一般律未证、具体例已有”。",
+   "fix": "declarations补 Becoming.WitnessRefinement.duplicated_fifth_no_repair、Becoming.WitnessRefinement.uncovered_correlation_deletes_actual；读法改为“AI读法：共因之见证不增诊断、可删去实际，脊柱有具体例；见证相通时名单等同于其一之一般律未证（G1）”。"
+  },
+  {
+   "id": "hanfei-wu-can-yan",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID。",
+   "fix": "records：→ testing-within-couplings。"
+  },
+  {
+   "id": "hanfei-si-zheng-fu",
+   "verdict": "revise",
+   "issues": "“四徵者符，乃可以觀矣”断言四路一致即足；脊柱只在交叉分离处使一致有诊断力，共因之路可同错（uncovered_correlation_deletes_actual），故为scope。separates_all_iff_member 之假设未写。names_used 符：此为诸路线一致，不是Accords。",
+   "fix": "kind改scope；读法补“在诸路线故障包络交叉分离、成员可列可判定处”；declarations补 uncovered_correlation_deletes_actual；names_used 符随名之决定。"
+  },
+  {
+   "id": "hanfei-yi-bian-zhi-hou",
+   "verdict": "revise",
+   "issues": "读法误述 reading_right_iff；“己喜則求其所納，己怒則察其所搆”以君主之喜怒为调查之起点，属君主中心之层，未标。",
+   "fix": "改述 reading_right_iff；读法补“以君主之喜怒为起点，属单一中心之层，不取”。"
+  },
+  {
+   "id": "hanfei-shou-zhu",
+   "verdict": "revise",
+   "issues": "Run.fixes_on_return 被误用：兔触株不是农夫之动作；fixes_on_return 讲自己之动作在配置返回处之结果。此处之结构是：一次结果只在步骤经一模型分解时才代表其类。",
+   "fix": "declarations以 Becoming.Run.generalizes 换 Run.fixes_on_return（留 no_prefix_fixes_next）；读法改为“AI读法：一次兔触株之结果，只在步骤经一模型分解时才代表其类（Run.generalizes），此处无此模型，且无前段固定下一值”。"
+  },
+  {
+   "id": "hanfei-yu-ren-xiang-ruo",
+   "verdict": "revise",
+   "issues": "仅记录：causal-models-as-processes 不列 Confound.*、FactorsThrough（experiment-needs-return 列之）。",
+   "fix": "records以 determinacy-up-to-likeness 换 causal-models-as-processes。"
+  },
+  {
+   "id": "hanfei-shi-zhi-guan-zhi",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "hanfei-zhan-shou",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID；片段中无察字。",
+   "fix": "records：→ selection-through-couplings；names_used删察。"
+  },
+  {
+   "id": "shangjun-gu-xi",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "jielao-qian-shi",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID；names_used 识（前識＝先知，不是D45）与以往知來（前識恰是无缘之妄度，与由往推来相反）都不合。老子38经文本身未立entry。",
+   "fix": "records：→ testing-within-couplings；names_used删识、以往知來；补老子38“前识者，道之华，而愚之始”（YD-LAO-BASE，经·先秦，已核）为经文entry，以此条为其传。"
+  },
+  {
+   "id": "jielao-mu-bu-ming",
+   "verdict": "revise",
+   "issues": "sensitivity-is-the-least-registration 是旧ID。",
+   "fix": "records：→ sensitivity-is-the-least-coupling。"
+  },
+  {
+   "id": "jielao-jian-gong",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "weishi-shi-liao-bie",
+   "verdict": "revise",
+   "issues": "读法“识是一形成所分开之差”误述已采之识（D45：一个形成自身之进一步历程，经由其耦合所作之归并而分解）。selection-through-registration 是旧ID。",
+   "fix": "读法改为“AI读法：了别对应D45之识：形成之后续只随其耦合之归并而分；以识为能变则不在其中”；records：→ selection-through-couplings。"
+  },
+  {
+   "id": "weishi-wu-jing",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID。",
+   "fix": "records：→ testing-within-couplings。"
+  },
+  {
+   "id": "weishi-zi-zheng",
+   "verdict": "revise",
+   "issues": "“自知无遗”是mapper之概括，论文所断言者是四分互证而“無無窮過”。registration-within-what-it-registers 是旧ID。",
+   "fix": "fragments补“具所、能緣，無無窮過”（FO1-S-CY，已核）；读法改为“AI读法：论以第三、第四分互证而免无穷之过；脊柱：族内无成员说出其缺口（Diagonal.gap_unsaid），二分互证仍是一族，缺口仍在”；records：→ readings-within-what-they-read。"
+  },
+  {
+   "id": "yinming-xian-bi",
+   "verdict": "revise",
+   "issues": "names_used 聞（现量是亲证，非闻）与以往知來（比量是藉相比度之推，属归并迁移，非外推）都不合。",
+   "fix": "names_used删聞、以往知來。"
+  },
+  {
+   "id": "jingang-yi-se-jian-wo",
+   "verdict": "revise",
+   "issues": "registration-within-what-it-registers 是旧ID。",
+   "fix": "records：→ readings-within-what-they-read。"
+  },
+  {
+   "id": "ahan-shi-ru-shi-zhi",
+   "verdict": "keep",
+   "issues": "无。",
+   "fix": ""
+  },
+  {
+   "id": "ahan-yi-qie",
+   "verdict": "revise",
+   "issues": "selection-through-registration 是旧ID。",
+   "fix": "records：→ selection-through-couplings。"
+  },
+  {
+   "id": "fahua-wei-fo-yu-fo",
+   "verdict": "revise",
+   "issues": "registration-within-what-it-registers 是旧ID。",
+   "fix": "records：→ readings-within-what-they-read。"
+  },
+  {
+   "id": "fazang-yin-fen-guo-fen",
+   "verdict": "revise",
+   "issues": "registration-within-what-it-registers 是旧ID；PartialReadout 无记录。",
+   "fix": "records：→ readings-within-what-they-read；旁注 PartialReadout 无记录。"
+  },
+  {
+   "id": "guanjing-yu-xiu-duo-luo-he",
+   "verdict": "revise",
+   "issues": "testing-within-registration 是旧ID；Stationary.model_error 是具体例。",
+   "fix": "records：→ testing-within-couplings。"
+  },
+  {
+   "id": "tiantai-shi-xiu-zhi",
+   "verdict": "keep",
+   "issues": "names_used 過則改随名之决定。",
+   "fix": ""
+  },
+  {
+   "id": "zongmi-san-liang",
+   "verdict": "revise",
+   "issues": "separates_all_iff_member 之列表与可判定假设未写；“比、现是独立路线”断言了见证独立，脊柱未证（G1）。",
+   "fix": "读法补假设，并把“独立路线”改为“不同之路线（其独立性脊柱未证，G1）”。"
+  }
+ ],
+ "missing": [
+  "论语2.17“知之為知之，不知為不知，是知也”（RU1-S-LY，RU1-LY-02-17-R01，经·先秦，已核）：默/沉默之先秦主证，应直接引而不经杨倞注。",
+  "荀子非相“以類度類”“類不悖，雖久同理”“以近知遠，以一知萬，以微知明”“欲觀千歲則數今日”（RU2-S-XZ05，只有阅读单元、无关系记录，已核；原文间杂杨倞注，须分句引），及不苟“千人萬人之情，一人之情是也”（RU2-S-XZ03，已核）：由近及远之归并迁移（Learning.determines_lumped_iff、lumped_right_iff）之先秦主证；“古今一度”只在同归并处成立，宜作scope。",
+  "荀子天论“卜筮然后决大事，非以为得求也，以文之也”（RU2-S-XZ17，RU2-R0117，已核）：传统内部不以筮为知来之法，宜与 xici-sui-zhi-lai-wu、xici-cang-wang 之前知相分对照。",
+  "老子38“前识者，道之华，而愚之始”（YD-LAO-BASE，无关系记录，已核）：jielao-qian-shi 所解之经文本身，应立entry（经·先秦）。",
+  "墨经經說上“聞，或告之，傳也。身觀焉，親也”（MI1-S-SS，已核）：聞之分传/亲之正解，应替换名聞之第三条书证及 mojing-wen-shuo-qin 读法中之引文。",
+  "中庸“上焉者雖善無徵，無徵不信”（RU1-S-ZY，RU1-ZY-39，已核）：徵之书证。",
+  "荀子荣辱杨倞注“其中雖未必皆然，然其大分如此矣”（RU2-S-XZ04，注·隋唐，已核）：典型（计数中）最确切之后起释义；王霸“此亦荣辱、安危、存亡之衢已”（RU2-S-XZ11，已核）：衢含衢字之书证。",
+  "墨子公输“治於神者，衆人不知其功”（MO1-S-C50，MO1-C50-R008，已核）：被避免之事不被记录，对应 Run.not_fixes_of_untaken（未采取之分支不固定），可选。",
+  "墨辩“其然也同，其所以然不必同”（RO mobian-qi-ran-suo-yi-ran）与本族 mojing-suo-yi-ran：一个名给“携带律之投影／机制”（carries_law_iff），本族缺此名；所以然可为候选，须与C10协调。",
+  "一个名给“对照之模型”（FactorsThrough、Run.generalizes），一个名给“重复＝返回”（Run.fixes_on_return），须与C05之复协调。",
+  "Lean声明：WitnessRefinement.duplicated_fifth_no_repair、WitnessRefinement.uncovered_correlation_deletes_actual（G1之具体例，记录fallible-witness-diagnosability）；Run.fixes_on_return（試）；FactorsThrough、Run.generalizes、Confound.confounded（相若/对照）；Identification.bounded_agree_exact、Identification.prefix_short（前段不足之确切长度）；Parting.freeRun、Parting.free_parts_after（典型非由律导出）；Learning.index_mono（不贰过）；Learning.Training.loss_through（習）；Web.significance_undetermined（吉凶之评价不入框架）；Law.frameBy（读法之定义）；Typicality.concentrated（一般p,q）；Learning.held_byElimination_bounded（有界止息）。",
+  "G2（先登记后检验）不是缺口：它是 Web.Excludes.not_of_alike（AlikeThroughUpTo 自反）配 Web.AlikeThroughUpTo.earlier 之一行推论；G1应重述为“共因见证之具体例已有，见证相通时名单等同于其一之一般律未证”。",
+  "PartialReadout 诸声明（silent_sound、silent_not_exact、SoundWithin.silent、ExactWithin.lumped）无结果记录；整合者须标“模块已证、无记录”或补记录。",
+  "名之冲突须由整合者一并裁定：觀与zh词汇表之“观（过程、框架、世界）”及C16之讀；所由与C17之遇；涯与C17之视界；本族之往、以往知來、默、符、過則改、可知、驗与已采之前段、外推、提出/默、相合/不合、逐除外推、可学、排除；出其不意与Y1之不測；察与C10之所感。",
+  "吕氏春秋察今（刻舟、循表夜涉）是“以往之律用于已变之今”之先秦相关文本，但不在脉络中，不能引；记为脉络之缺。"
+ ]
+}

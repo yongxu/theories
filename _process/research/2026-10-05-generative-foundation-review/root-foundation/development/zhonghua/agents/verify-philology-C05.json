@@ -1,0 +1,445 @@
+{
+ "cluster": "C05 持续、更新、回返与复",
+ "lens": "PHILOLOGY（文献学）：用 ctq.py text 逐字核对全部 attestation 引文、条目 fragments，以及 fit、course、reading、notes、parallels、rejected 中的「」内引语（均在冻结文本中原样或仅空白有别地找到，无一缺失）；用 src 与上下文核对层次、年代和语境义；Ren 的三句九句之语与「不息：不是永不消亡，而是不使生成之源枯竭」已在 sources 中逐字核对；另核对了所引 Lean 名在当前 main（R30 之后）是否存在。",
+ "names": [
+  {
+   "concept": "更新 renewal（Becoming.Web.Renewed；每步皆 Web.Kept）",
+   "name": "恆足",
+   "verdict": "revise",
+   "issues": "引文全部准确。(1) 大学一例的 layer 作「传（礼记·大学）」，locator 作「传十章」。RU1-S-DX 是《礼记·大学》古本，本身没有经传之分；「经一章／传十章」是朱熹据程子改定的后起分章（RU2-S-S09：「其传十章，则曾子之意而门人记之也。旧本颇有错简」）。按脉络规则，后起分类须标为后起。(2) IN2-S08 的 sense_in_context 与原文不符。原文是「大約賢臣。決以愛民為務。聚斂。決定便是小人。故仁者只須得一賢臣。則不必聚財而恆足」：恆足来自得一位贤臣、不用聚敛之臣，不是「生与用相应」。书是智旭《大学直指》（自序1647，已入清顺治），本页是江谦1934年的【补注】本，所引一句是智旭原注；脉络年代作「明末清初」，又是僧人释儒典，属三教互动。标作「注（蕅益《大学直指补注》）·宋明（明末）」不确。(3) course 说程頤井卦注「汲之而不竭存之而不盈」「同其结构」，说过了。程頤原注是「井之為物常而不可改也…无䘮无得其徳也常」，即水平不降也不升的常（C07 之常）；按 fit，恆足允许水平上升，两者不是同一结构。(4) 成唯识论只标「唐」，没有依脉络注明「玄奘译糅，7世纪；印度论释传统」。",
+   "fix": "大学例 layer 改为「原典（礼记·大学）·先秦至秦汉（成篇年代有争议）；『传十章』是朱熹章句的后起分章」。IN2-S08 的 sense 改为「智旭以得一爱民之贤臣、不用聚敛之臣说恆足：恆足由所用之人而来，不由聚积」，layer 改为「注（智旭《大学直指》原注，江谦补注本所载）·明末清初，三教互动」。course 中程頤一句改为「程頤井卦注『汲之而不竭存之而不盈』读作常（水平不降不升），比恆足强，属 C07」。成唯识论补注「玄奘糅译，印度论释传统」。"
+  },
+  {
+   "concept": "回程 return（Becoming.Web.Returns，R30 后为 Web.Restored）",
+   "name": "復足",
+   "verdict": "revise",
+   "issues": "(1) YD-JG24 卦辞「七日來復」的復是动词「返、来复」，不是復足所用的副词「再」（復＋状态）。sense「取復之“再得”义」是加给经文的；这一构词由孙子「怒可以復喜」证明，卦辞不能证明。(2) 孙子标作「经」：孙子入《武经七书》是北宋元丰年间的事，脉络作「传统题署孙武；传世兵书形成与编定层次有争议」，先秦层应标为原典（兵家）。(3) 机械性：R30（e936f8ee6）已改名，Web.Returns→Web.Restored，Web.Returns.not_consumed→Web.Restored.not_consumed，Web.RenewedWithin.returns→Web.RenewedWithin.restored。R30 把 return 专留给构形之再得，把水平回到所需称为 restored，这正好支持復与復足分开命名。",
+   "fix": "卦辞一例或移出，或改标为「只证復的返义；復＋状态的副词构词由孙子例证明」。孙子 layer 改为「原典（兵家·孙子·火攻）·先秦（成书层次有争议）」。concept 与 lean 按 R30 改名表重绑：Web.Restored、Web.Restored.not_consumed、Web.RenewedWithin.restored。"
+  },
+  {
+   "concept": "消耗 consumption（Becoming.Web.Consumed；Web.consumed_iff）",
+   "name": "不復足",
+   "verdict": "revise",
+   "issues": "(1) FA1-S-H31 的 sense 把主体弄反了。原文是「勢重者，人主之淵也；臣者，勢重之魚也。魚失於淵而不可復得也，人主失其勢重於臣而不可復收也」：不可復得的是脱出淵的魚（喻借给臣下的势），失去者是人主，不是「失其所依之渊者」。(2) 所列先秦例都是「不可（以）復＋V」，带情态（不能再），且多为劝诫。脉络中有更贴切、不带情态的「不復＋V」（此后不再）先秦例：论语·述而「久矣，吾不復夢見周公」（RU1-S-LY），未收。(3) 司马谈一例紧前是「神大用則竭，形大勞則敝，形神離則死」，紧后是「神者生之本也」：前者正是竭、敝的结构，后者立神为本（先在之本）。sense 应注明这一上下文。(4) 孙子标「经」，问题同復足。(5) 机械性：Web.Returns.not_consumed→Web.Restored.not_consumed。",
+   "fix": "韩非例 sense 改为「鱼脱于渊则不可复得：喻人主之势一旦借于臣，即不可复收；失而此后不再得」。增论语「久矣，吾不復夢見周公」为首例（不復＋V＝此后不再）。司马谈例注明上下文中的竭／敝与「神者生之本」。孙子 layer 照復足改。lean 重绑为 Web.Restored.not_consumed。"
+  },
+  {
+   "concept": "回程之期 return bound（Web.ReturnsWithin p，R30 后为 Web.RestoredWithin；Web.RenewedWithin p）",
+   "name": "期",
+   "verdict": "revise",
+   "issues": "(1) 期有两读，条目把它们混为一义，没有说明。一读 jī，指一整周：论语「期可已矣」是旧谷没、新谷升、钻燧改火的一岁之周，中庸「期月」是一整月。另一读 qī，指所约之时、时限：朱熹「七日者所占來復之期也」说的是来复所在之时。(2) 条目自相抵牾。alternatives 以「周是绕行之圈…不要求循环」否定周，可是论语、中庸两例的期（jī）正是一整周。同时 not_carried 排除「期作期限」，而 RestoredWithin p（在 p 步之内）恰是时限义（qī）。(3) record_id RU1-LY-17-21 是阅读单元，不是关系记录。(4) 中庸的 layer 作「传」不对：中庸是礼记中的一篇，不是哪一部经的传（RO 作「经」，脉络作原典）。(5) 机械性：Web.ReturnsWithin→Web.RestoredWithin。",
+   "fix": "明定此名取 qī「时限、所期之内」来名 p；jī 两例只证明期可指一轮的跨度。not_carried 改为只排除期望、约会、死期，不再排除期限。周的 why_not 改为「周强调绕回同一处，回程之界不要求回到同一构形」，并承认期（jī）也含一周之义。record_id 标明是阅读单元。中庸 layer 改为「原典（礼记·中庸）·先秦至秦汉（年代有争议）」。lean 重绑。"
+  },
+  {
+   "concept": "构形之复返（Becoming.Law.Returns；Branching.Returns；Law.lossless_iff_returns）",
+   "name": "復",
+   "verdict": "revise",
+   "issues": "(1) BI1-S-SZ「亡國不可以復存」的復是副词「再」，不是动词复返。脉络规则是同字不自动同义，这一例属于不復足，不能证明构形之復。(2) fit 说「七日來復即消息之律自乾第七步一阳复生」，这是程頤（「姤陽之始消也七變而成復」）和朱熹（自五月姤一阴始生「至此七爻而一陽來復」）的数法。王弼作「陽氣始剝盡至來復時，凡七日」，孔疏以六日七分、隔坤一卦来解，并记褚氏、莊氏「五月一陰生，至十一月一陽生」七月之说。数法不同，须标明层次。(3) course 说「苏辙以复性读之」：苏辙的复性见《老子解》第十六章，讲的是复命（RO sz-16-fu-xing），不是在读復卦或天地之心。(4) course 中孔疏「復謂反本，靜為動本」疏的是王弼大象注「冬至陰之復，夏至陽之復」，不是彖注。",
+   "fix": "删孙子一例，或移入不復足。fit 改为「依程朱数法，七日来复是消息之律自乾起的第七步（Hexagram.seventh_step）；王弼、孔疏以剝盡至復计七日，另有数法」。course 改为「苏辙解老子十六章，以复性读复命」。孔疏一句注明出处为「復·大象王弼注之疏」。"
+  },
+  {
+   "concept": "合并 merge（Becoming.Law.Merges；其否定 Law.Lossless）",
+   "name": "同歸",
+   "verdict": "revise",
+   "issues": "引文与层次都准确。(1) form 作「复词」不确：在先秦它是「同＋歸」的短语。(2) not_carried 只说「同归之处作先在之目的」，没有点出传统中最常见的一义：归于一宗、一主、一源。例如王弼四十七章注「事有宗，而物有主，途虽殊而同归也，虑虽百而其致一也」（DS01），宗密「同歸一源」（IN1-S04），戴震「“同歸”，如歸於仁至義盡是也」。这是单一中心或先在之本的读法，与 Merges 的方向相反：Merges 是损失，不带褒贬。汉志引此语时的上文是「相滅亦相生…相反而皆相成也」，是调和义，也宜写明。",
+   "fix": "form 改为「短语」。not_carried 增「归于一宗、一主、一源（王弼四十七章注、宗密），即单一中心之读」，并注汉志的调和义。"
+  },
+  {
+   "concept": "带着历史 kept history（Becoming.Law.withHistory）",
+   "name": "藏往",
+   "verdict": "keep",
+   "issues": "两例文字、层次准确。系辞的上下文是「卦之德方以知…神以知来，知以藏往」，藏往的是卦这个固定之象，not_carried 已用「外在之仓」排除。fit 把大畜彖（日新其德）与大象（多識前言往行）合读，两者是不同的传层，这一合读宜在 fit 中标明。不妨碍采用。",
+   "fix": ""
+  },
+  {
+   "concept": "侵蚀 undermining（Becoming.Web.UnderminingAt／On、MetAbove）",
+   "name": "剝",
+   "verdict": "keep",
+   "issues": "三例的文字与层次（经、小象、程頤注）准确。王弼「蔑猶削也」、程頤「自下而剝漸至于身也」支持「自下削其所依」之义。not_carried 已排除卦名、阴剥阳的人格评价、杂卦的爛义和现代剥削义。无需修改。",
+   "fix": ""
+  },
+  {
+   "concept": "通过变化之持续 persisting through change（恆读作久）",
+   "name": "久",
+   "verdict": "revise",
+   "issues": "(1) 墨经「久，彌異時也」与「宇，彌異所也」并列，界说的是时间（宙）这一范畴。脉络节点 MI1-N-JS-024 的 cognitive 一栏写的是「为先后与时长比较提供时间维度」。sense 作「跨时之在，不是不变」，加进了「某物之在」和「不是不变」。而 not_carried 又排除「久作单纯时长之量」，那恰是墨经之义，自相抵牾。(2) 帛书「不失其所者久也」的 sense 作「不失其所依之处」：所＝其位、其处（王弼「量力而行，不失其所」；苏辙「物變無窮而心未甞失則久矣」），「依」字是加上的。(3) course 与 not_carried 漏了先秦最强的反向用例：孙子·作战「久暴師則國用不足」「故兵貴勝，不貴久」（BI1-SZ-R-05、BI1-SZ-R-09）。那里的久是耗竭国用的时长，带负值，与恆足、不復足直接相关，名下应明言不取此义。(4) 司马法标「经」不当：入武经七书是北宋之事，脉络作「今本编纂层次未定」。",
+   "fix": "墨经例的 sense 改为「久为跨不同之时的时间延展（与宇对举）：只证久含跨时，不证通过变化之持续」，并相应改写 not_carried 中与之矛盾的一句（改为「不取久为时间范畴本身」）。帛书例的 sense 改为「不失其位者能久」。not_carried 加「孙子之久：耗竭国用之时长（兵貴勝，不貴久）」。司马法 layer 改为「原典（兵家）·先秦（今本编纂层次未定）」。"
+  },
+  {
+   "concept": "不息 unceasing arising（Becoming.Web.Unceasing）",
+   "name": "不息",
+   "verdict": "revise",
+   "issues": "引文准确。(1) not_carried 漏了息的「生长、滋息」义，而这一义正见于本簇所用的文本：孟子牛山章「是其日夜之所息」（息＝夜间的生长，即回补），易的「消息」（C03 之名），程頤「男女交而後有生息」。读者可能把不息读成「不生长、不回补」，与所名之义正相反，必须写明只取息＝止息。(2) form 作「复词」：不息是否定短语。(3) 中庸 layer 作「传」不对（同期）。(4) 机械性：Web.generation_needs_replenishment→Web.embodiedArising_needs_replenishment（fit 与 lean 两处）。",
+   "fix": "not_carried 首列「息作生长、滋息（孟子『日夜之所息』，消息之息）——不息不取此义，只取息＝止息」。form 改为「短语」。中庸 layer 改为原典（礼记·中庸）。lean 与 fit 重绑。"
+  },
+  {
+   "concept": "生生不息（D5）",
+   "name": "生生不息",
+   "verdict": "revise",
+   "issues": "引文准确。(1) course 说「合为一语见于宋明」，却只举了明代例。脉络中最早一例是南宋陈淳（陈安卿），由戴震引出：「二氣流行萬古，生生不息，不成隻是空氣，必有主宰之者，理是也」（RU2-S-V3Q01）。此例立理为主宰，属先在之本，是四种非关系层之一；戴震引它正是为了驳理气二本。(2) not_carried 说「戴震的气化作为质料」不准确。戴震说「道，猶行也；氣化流行，生生不息，是故謂之道」，是以流行的过程本身为道，并明确反对在过程之外另立主宰，较近于一个关系的展开。(3) 北宋程頤「女之歸男乃生生相續之道」（YD-CY4）是生生与相續连用的早期例，course 未收。",
+   "fix": "course 加陈淳一例（南宋，戴震《孟子字义疏证》卷中引），注明它立理为主宰（相分）以及戴震之驳；并补程頤「生生相續之道」。not_carried 中戴震一句改为「戴震以气化流行为道，反对另立主宰；名中不取气的质料义」。"
+  },
+  {
+   "concept": "延续 continuation（Unrestricted 之延续；Web.Continues）",
+   "name": "續",
+   "verdict": "revise",
+   "issues": "(1) 在所检的先秦文本中，續几乎都作「接、补其短」：荀子礼论「断长续短，损有馀，益不足」，韩非观行「以長續短之謂明主」，庄子「鳧脛雖短，續之則憂」。时间上的「继续」只见于彖「不續終也」，而易传年代有争议。pre_qin=true 只靠这一个年代有争议的传，必须说明。(2) not_carried 漏了两义。其一是续短＝补其不足，与復足、回补之义相撞。其二是佛典的「相續」（santāna：刹那相续而无常住者），如杂阿含「此火相續長夜熾然不？」、成唯识论「恒轉如流」；这是后世最主要的延续义，结构上近于 Web.Continues，应当权衡。(3) 程頤「相續不窮」「生生相續之道」表明北宋已用相續说延续；alternatives 未考虑「相續」这个更确切的复词。",
+   "fix": "course 写明：先秦續多作接、补，继续义只见于彖（年代有争议）。not_carried 加「續短（补其不足）」与「佛典相續（刹那相续）」，并说明各自取或不取的理由。alternatives 加「相續」（程頤，佛典），说明取舍。pre_qin 保留，但注明「仅易传一例，年代有争议」。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-fu-qiri-laifu",
+   "verdict": "revise",
+   "issues": "fragments 与层次准确。reading 用「自乾…第七步一阳复生」计数，这是程頤（「姤陽之始消也七變而成復」）和朱熹的数法。王弼「陽氣始剝盡至來復時，凡七日」、孔疏（六日七分，隔坤一卦）、褚氏和莊氏（五月至十一月）的数法不同。「七日是复所在之期」是朱熹之说（ZX-R005）。机械性：Web.ReturnsWithin→Web.RestoredWithin。",
+   "fix": "reading 开头改为「依程朱数法」，并补一句「王弼、孔疏以剝盡至復计七日，褚莊计七月；无论用哪种数法，复都在一定步数处，结构相合不变」。declarations 重绑。"
+  },
+  {
+   "id": "yi-fu-bu-yuan-fu",
+   "verdict": "revise",
+   "issues": "文字、层次与读法都准确。王弼「最處復初，始復者也…不遠而復，幾悔而反」支持「偏离未远即回」。祇字的训释有分歧（韩氏「祇，大也」，朱熹「祇抵也」），只关涉评价，不影响结构。只有机械性问题：Web.ReturnsWithin→Web.RestoredWithin。",
+   "fix": "按 R30 改名表重绑 declarations。"
+  },
+  {
+   "id": "yi-fu-pin-fu",
+   "verdict": "revise",
+   "issues": "reading 把「頻復＝屡失屡复」当作经文之义，但这是宋代读法（程頤「復之頻數而不能固」、朱熹「婁失婁復之象」）。王弼注与孔疏都读頻為頻蹙：「頻，頻蹙之貌也…巳失復遠矣，是以蹙也。蹙而求復，未至於迷，故雖危無咎也」，孔疏「頻謂頻蹙…去復稍遠」。按王孔，这是迟而勉强之复（期较长的復足），不是季节性的屡落屡复。脉络的 YCM130-F-Z-F10-R01（王弼「復道宜速，蹙而乃復」）是本爻的注，却被列到 wangbi-fu-bu-su 下。机械性：Web.Returns.not_consumed、Web.RenewedWithin.returns 已在 R30 改名。",
+   "fix": "reading 并列两读并标层：王孔读頻蹙，对应期较长的复（Web.RestoredWithin 取较大的 p，或 Slowing.slowing_recovery）；程朱读屡，对应 seasonal_renewed_within_two、fluctuating_neither。两读都给出恆足与不復足之间的中间等级，所以 agreement 可以保留，但须写明所依之层。把 YCM130-F-Z-F10-R01 同列为本条的平行。declarations 重绑。"
+  },
+  {
+   "id": "yi-fu-mi-fu",
+   "verdict": "keep",
+   "issues": "fragments 与层次准确。王弼「以迷求復，故曰迷復也」与 reading 相合。「凶」「大敗」「反君道」已留在律外。",
+   "fix": ""
+  },
+  {
+   "id": "wangbi-fu-bu-su",
+   "verdict": "revise",
+   "issues": "fragment、层次（王弼注，魏）、读法都准确：王弼确实说「復之不速，遂至迷凶」。周敦颐「识不早，力不易也」出自通书·势第二十七，讲势之「极重不可反」，经 RO 引入，可用。只有机械性问题：Web.ReturnsWithin→Web.RestoredWithin，gap 中的名同样要改。",
+   "fix": "按 R30 重绑 declarations 与 gap 中的声明名。"
+  },
+  {
+   "id": "yi-tai-wuwang-bufu",
+   "verdict": "keep",
+   "issues": "经与小象的文字、层次准确。scope 的读法不改动经文。",
+   "fix": ""
+  },
+  {
+   "id": "yi-bo-chuang",
+   "verdict": "keep",
+   "issues": "五个 fragments 准确，经与小象分开标了层。程頤「自下而剝漸至于身也」与「先削所依，后及于身」的读法相合。评价已留在律外。",
+   "fix": ""
+  },
+  {
+   "id": "yi-heng-tuan-jiu",
+   "verdict": "keep",
+   "issues": "彖文准确，沿用 RO tuan-heng-jiu。附注一点：程頤读恆彖作「天地常久之道」，宋注以常训恆；本条依彖以久读恆，并不受影响。",
+   "fix": ""
+  },
+  {
+   "id": "yi-heng-jun-heng",
+   "verdict": "revise",
+   "issues": "经文准确。但 reading 把「恆不自带正值」配到 Web.significance_undetermined，并记为 agreement：爻辞并没有陈述「动力学不决定意义」这一结构，它只给了一个评价（凶）。凶附在「浚」上，不附在恆本身：小象「浚恆之凶，始求深也」；程頤「浚恒謂求恒之深也…是知常而不知變也…泥常如此无所往而利矣」（YD-CY3）。条目明确不取经文传层自己给出的理由，换成另一义，不忠于语境。脉络 JF-R088 也只是一个否定性的观察（恒字不能独自带来正面评价）。",
+   "fix": "主读改依小象与程頤：浚恒是在开始时就求恒之深、泥于常而不知变，所以凶。这与久名「久在变中，不在不变」同构（例如 Web.consumed_continues_transformed、Web.Whole.needs_new），kind 改为 scope（程注层）。Web.significance_undetermined 只作「久不自带正值」的旁注，或并入久的 not_carried。"
+  },
+  {
+   "id": "yi-kui-sang-ma-zi-fu",
+   "verdict": "keep",
+   "issues": "经文准确。reading 已写明「经文说的是此处之事，不是普遍律」，并给出条件。JL-R508 核对为震六二，无误。",
+   "fix": ""
+  },
+  {
+   "id": "yi-jing-gai-yi-bu-gai-jing",
+   "verdict": "revise",
+   "issues": "经文准确。「无喪无得」是两面的：既不失，也不增。reading 只用 Flow.level_kept（不低于起点）映射了「无喪」，悄悄丢掉了「无得」。程頤恰把这一句读成两面的常：「井之為物常而不可改也…汲之而不竭存之而不盈无䘮无得也…其徳也常」。reading 却说程注「是同一结构」，并归入恆足（恆足允许水平上升），读法不忠于程注。",
+   "fix": "写明：「无喪」对应 Flow.level_kept；「无得」（不盈，水平不升）是单面的律所不载者，属 C07 之常，或另引一个两面的律（水平每步等于起点）。删去「程頤注是同一结构」，改为「程頤读作常，比恆足强」。"
+  },
+  {
+   "id": "yi-jing-zhou-xiu-jing",
+   "verdict": "keep",
+   "issues": "小象文字与层次准确。甃＝修治井壁（王弼「以砖垒井，修井之壞」），与「修井是使条件復足的给予」相合。",
+   "fix": ""
+  },
+  {
+   "id": "yi-jiji-chu-ji-zhong-luan",
+   "verdict": "keep",
+   "issues": "经文准确。彖「終止則亂，其道窮也」与程頤「无常止也」都核对过。程頤还说「唯聖人為能通其變於未窮…故有終而无亂」，支持本条「终乱不是普遍律」的范围说明。",
+   "fix": ""
+  },
+  {
+   "id": "yi-shuogua-gen-zhong-shi",
+   "verdict": "keep",
+   "issues": "说卦两段文字准确，scope 恰当，方位与时序之配已留在律外。",
+   "fix": ""
+  },
+  {
+   "id": "yi-xugua-within-pairs",
+   "verdict": "keep",
+   "issues": "三处 fragments 准确，沿用 RO。范围说明（对内结构，不说每个理由成立）恰当。",
+   "fix": ""
+  },
+  {
+   "id": "yi-xugua-heng-zhe-jiu",
+   "verdict": "keep",
+   "issues": "序卦、杂卦文字准确，「以久释恆，不以常释」对易传成立。括注中引墨经「久，彌異時也」作「跨时之在」，有与久名相同的过度读法（见久），只是旁证，不影响本条。",
+   "fix": ""
+  },
+  {
+   "id": "yi-zagua-bo-lan-fu-fan",
+   "verdict": "keep",
+   "issues": "杂卦文字准确。对举不是因果，爛与侵蚀之别也已说明。",
+   "fix": ""
+  },
+  {
+   "id": "yi-xugua-weiji-zhong",
+   "verdict": "keep",
+   "issues": "fragment 只有空白之差，层次准确。",
+   "fix": ""
+  },
+  {
+   "id": "yi-xici-qiong-bian-tong-jiu",
+   "verdict": "keep",
+   "issues": "文字准确。把穷读作老爻是筮法（之卦）的读法，而系辞下第二章的语境是黄帝尧舜「通其变，使民不倦」的制作。reading 已用「在此律之内」限定，可以保留。",
+   "fix": ""
+  },
+  {
+   "id": "yi-xici-riyue-xiangtui",
+   "verdict": "keep",
+   "issues": "两段文字准确，读法忠于「相推而明生、岁成」。",
+   "fix": ""
+  },
+  {
+   "id": "yi-xici-cheng-xing-cun-cun",
+   "verdict": "revise",
+   "issues": "文字准确。reading 取「存存＝使已成者继续存在」一读，没有说明歧义：脉络节点 WP-XCS-C07-S02-N03 明言「成性是否侧重既成之性或成就其性，不在此唯一裁定」；孔疏「性，謂稟其始也。存，謂保其終也」（YWH-H5）把性读作开始时所禀受者，这是一个固定本性的读法，本身就是相分的一个来源。",
+   "fix": "reading 补上两读与孔疏，写明相分有两处：道义之门的规范断言，以及（按孔疏）稟其始之性这一固定本性。"
+  },
+  {
+   "id": "lao-16-guan-fu-gui-gen",
+   "verdict": "keep",
+   "issues": "文字准确，郭店本的版本说明无误。附注：帛书甲本有「萬物旁作吾以觀其復也」与「是胃復﹦命﹦常也」，可证复命一句早于传世本，不影响本条。",
+   "fix": ""
+  },
+  {
+   "id": "lao-25-shi-yuan-fan",
+   "verdict": "revise",
+   "issues": "文字准确。版本说明「郭店本与帛书乙本皆无「周行而不殆」」不完整：脉络所收帛书甲本（V130-LAO-MA）作「獨立□□□」后即接「可以為天地母」，也没有周行一句。RO 同样漏了这一点。",
+   "fix": "改为「郭店本、帛书甲本与帛书乙本都没有「周行而不殆」，这一断言只属于传世本」。"
+  },
+  {
+   "id": "lao-40-fan-zhe-dao-zhi-dong",
+   "verdict": "keep",
+   "issues": "文字准确，scope 恰当，已改用 LoopReturn 的新名。",
+   "fix": ""
+  },
+  {
+   "id": "lao-58-zheng-fu-wei-qi",
+   "verdict": "keep",
+   "issues": "文字准确。已说明此复是「又转为」，与构形之复只是同字。",
+   "fix": ""
+  },
+  {
+   "id": "lao-76-rou-ruo-sheng-zhi-tu",
+   "verdict": "keep",
+   "issues": "文字准确，沿用 RO，与本簇的联系已注明是间接的。",
+   "fix": ""
+  },
+  {
+   "id": "lao-28-fu-gui-yu-pu",
+   "verdict": "keep",
+   "issues": "文字准确，判为相分理由充分，常德乃足的足作自足也已说明。",
+   "fix": ""
+  },
+  {
+   "id": "wangbi-fu-fan-ben",
+   "verdict": "revise",
+   "issues": "三个 fragments 准确，layer 分王弼注与孔疏也对。但 locator「周易正義·復·彖注及疏」不准：「復謂反本，靜為動本」与「冬至一陽生，是陽動用而陰復於靜也」是孔疏疏王弼大象注（「冬至陰之復，夏至陽之復」），不是彖注之疏。另外，王弼彖注下文「寂然至無，是其本矣」正说明其本是寂然至无的先在之本，可引来加强相分。",
+   "fix": "locator 改为「周易正義·復·彖王弼注；大象王弼注之孔疏」。可补「寂然至無，是其本矣」。"
+  },
+  {
+   "id": "yi-fu-tiandi-zhixin",
+   "verdict": "keep",
+   "issues": "彖文准确。王弼、程頤两路的分歧都已核对（程頤「先儒皆以静為見天地之心盖不知動之端乃天地之心也」）。",
+   "fix": ""
+  },
+  {
+   "id": "yi-qian-zi-qiang-bu-xi",
+   "verdict": "revise",
+   "issues": "文字与读法准确。只有机械性问题：Web.generation_fed_from_beyond→Web.embodiedArising_fed_from_beyond（R30）。",
+   "fix": "重绑 declarations 与 reading 中的名。"
+  },
+  {
+   "id": "daxue-ri-xin",
+   "verdict": "revise",
+   "issues": "(1) locator「大学·传二章」与 layer「传」都是朱熹改本的分章。礼记古本的次序是「皆自明也。湯之盤銘曰…」，紧接在明德诸引之后。(2) reading 的关键判断（「每日回到同一洁净之态，是复足而不是每步皆异…此处之新不是新奇」）只依朱熹的沐浴之训，而且超出了朱熹。朱熹说的是「因其已新者，而日日新之」，即在已新者之上逐日再新，是累进的，不是回到同一状态。大学本文紧接着说「作新民」与「周雖舊邦，其命惟新」，新在这里是成为新的（新命）。说盘铭之新不是新奇，礼记本文不支持，朱熹也只部分支持。(3) 机械性：Web.RenewedWithin.returns→restored。",
+   "fix": "layer 改为「原典（礼记·大学引汤之盘铭）·先秦至秦汉；经传分章是朱熹章句之后起」。只保留朱熹「不可略有间断」与恆足（每步皆持）的对应，并标为宋注层；删去「每日回到同一洁净之态／不是新奇」，补上下文「其命惟新」。kind 改为 scope，或明写「只对朱熹之读为 agreement」。declarations 重绑。"
+  },
+  {
+   "id": "daxue-ming-bu-yu-chang",
+   "verdict": "revise",
+   "issues": "文字准确，读法恰当。layer 作「传（礼记·大学引康诰）」：「惟命不於常」出自《尚书·康诰》（周书，经，西周），被礼记·大学所引；「道善則得之，不善則失之矣」是大学自己的解释。「传」字是朱熹分章，不应作层名。",
+   "fix": "layer 改为「经（尚书·康诰，西周）为原典（礼记·大学）所引；『道善則得之…』是大学之释·先秦至秦汉」。"
+  },
+  {
+   "id": "lunyu-zhi-ji-ren-shou",
+   "verdict": "keep",
+   "issues": "文字准确。「必失之」比脊柱强，reading 已用附加前提给出范围。",
+   "fix": ""
+  },
+  {
+   "id": "zhongyong-bu-xi-ze-jiu",
+   "verdict": "revise",
+   "issues": "文字与读法准确，gap 陈述清楚。layer「传（礼记·中庸）」不对：中庸是礼记中的一篇，不是某一部经的传（RO 作经，脉络作原典）。",
+   "fix": "layer 改为「原典（礼记·中庸）·先秦至秦汉（年代有争议）」。"
+  },
+  {
+   "id": "mengzi-niu-shan-ye-qi",
+   "verdict": "revise",
+   "issues": "两个 fragments 准确。(1) 原文给回补用的字正是息：「是其日夜之所息，雨露之所潤」「其日夜之所息，平旦之氣」，息＝生长。reading 说「夜气是每夜之回补」却不引原文此语，错过了本簇不息之名最需要注明的歧义。(2) layer 作「经·先秦（孟子）」：孟子升为经是宋代之事，先秦层应作原典（战国）。(3) 机械性：Web.generation_needs_replenishment→Web.embodiedArising_needs_replenishment。",
+   "fix": "fragments 加「是其日夜之所息」，reading 写明息在此是生长（回补），与不息之息（止）同字异义。layer 改为原典（战国）。declarations 重绑。"
+  },
+  {
+   "id": "simafa-die-zhan-ze-jiu",
+   "verdict": "revise",
+   "issues": "文字与读法准确。layer「经·先秦（司马法）」不当：司马法入《武经七书》是北宋之事，脉络作「今本编纂层次未定」。",
+   "fix": "layer 改为「原典（兵家·司马法·定爵）·先秦（今本编纂层次未定）」。"
+  },
+  {
+   "id": "simafa-tui-bi-you-fan-lv",
+   "verdict": "revise",
+   "issues": "文字准确。返慮与進路对举，是「退时须有回转（回到阵地或回击）之虑」，读作「保留可回之路」大致可以。layer 标「经」的问题同上。",
+   "fix": "layer 改为「原典（兵家·司马法·用众）·先秦（编纂层次未定）」。"
+  },
+  {
+   "id": "wangbi-lao33-liang-li-jiu-chang",
+   "verdict": "revise",
+   "issues": "注文准确。reading 把「量力而行」读作「汲取在回补之内」，并以 Stock.repeat_covered_iff、cycles_need 映射。但量力是按自己之力而行；王弼本章的语境是自知、自胜、知足（「自足者不失」），没有回补。回补是 AI 加上的前提，不是注文所说。",
+   "fix": "主映射改为在所给之内拿取（Flow.level_kept、Flow.beyond_given_bounded），回补一层标为 AI 补加的前提。kind 改为 scope。"
+  },
+  {
+   "id": "wangbi-lao35-yong-zhi-bu-ke-qiong",
+   "verdict": "keep",
+   "issues": "注文准确，reading 已指出原文说的是道之言，不是存量。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-fuguo-jie-yuan-kai-yuan",
+   "verdict": "revise",
+   "issues": "两个 fragments 准确，layer 恰当，财政语境已排除。只有机械性问题：Web.generation_needs_replenishment→Web.embodiedArising_needs_replenishment。",
+   "fix": "按 R30 重绑。"
+  },
+  {
+   "id": "hanfei-xuji-suo",
+   "verdict": "revise",
+   "issues": "fragment 准确（原文出现两次）。初见秦是一篇上秦王书，说者自称「臣」，脉络注「编次与个别篇作者有争议」。把耗尽归于「其謀臣皆不盡其忠也」的是这位说者，reading 直说「韩非把这一耗尽归于谋臣不忠」，越过了作者争议。",
+   "fix": "改为「初见秦之说者把这一耗尽归于秦之谋臣不忠」。layer 补「作者有争议」。"
+  },
+  {
+   "id": "zhuangzi-huo-chuan",
+   "verdict": "keep",
+   "issues": "文字准确，内篇标注无误，与慧远薪火之喻的区分也恰当。指字有读作脂者，不影响「薪尽而火传」的结构。",
+   "fix": ""
+  },
+  {
+   "id": "suzhe-lao07-chang-jiu-you-liang",
+   "verdict": "keep",
+   "issues": "注文准确，scope 恰当。",
+   "fix": ""
+  },
+  {
+   "id": "suzhe-lao39-wei-ju-lie",
+   "verdict": "keep",
+   "issues": "注文准确，「必至需要不復足之前提」的范围说明恰当。",
+   "fix": ""
+  },
+  {
+   "id": "lao-15-bu-ying",
+   "verdict": "keep",
+   "issues": "文字准确，断读与用字之疑已保留。帛书甲本（「…以能□□□成」）与之相合。",
+   "fix": ""
+  },
+  {
+   "id": "zhiyi-zhiguan-jian-jue",
+   "verdict": "revise",
+   "issues": "fragment 只有空白之差，层次（隋）准确，读法忠于原文「一切時中，常修定慧方便」。只有机械性问题：Web.Returns→Web.Restored。",
+   "fix": "按 R30 重绑。"
+  },
+  {
+   "id": "weishi-chi-zhong-bu-shi",
+   "verdict": "revise",
+   "issues": "文字与读法准确（「恒轉如流」已核对）。layer 只写「论·隋唐（成唯识论，玄奘译编）」，没有依脉络与工作要求注明印度来源：「唐玄奘译糅，7世纪；印度论释传统」。",
+   "fix": "layer 改为「论·隋唐（成唯识论，玄奘糅译护法等对《唯识三十颂》的印度论释，7世纪）」。"
+  },
+  {
+   "id": "qixin-wang-sheng-bu-tui",
+   "verdict": "revise",
+   "issues": "(1) layer「隋唐」不对：脉络作「传统题署梁真谛译；作者、译者与成书地问题有争议」，即6世纪南北朝（或为中土撰述）。(2) tradition 作「佛（净土）」不当：这是起信论（如来藏一系）中劝修念佛往生的一段。(3) 文本给出的不退之因是「常見佛故」，即一个每步都在的关系，结构上是支持条件的恆足。把全句读成「由外在中心保证」，过度了。非关系的部分只在「終無有退」这一不可逆的全称保证，以及把他方佛土当作另一处所。",
+   "fix": "layer 改为「论·魏晋南北朝（传统题署马鸣造、梁真谛译，6世纪；作者、译者与成书地有争议）」。tradition 改为「佛（起信论·劝修念佛之段）」。reading 改为：在常见佛这一恆足条件之下，无侵蚀则不退，这一点相合；「終無有退」作为对一切后来条件的全称保证，这一点相分。kind 改为 scope。"
+  },
+  {
+   "id": "yi-daguo-ku-yang-sheng-hua",
+   "verdict": "keep",
+   "issues": "小象文字准确，读法恰当。",
+   "fix": ""
+  },
+  {
+   "id": "yi-guimei-yong-zhong-zhi-bi",
+   "verdict": "keep",
+   "issues": "大象与程注的引文准确（程頤「天下之事莫不有終有敝莫不有可繼可久之道」支持「相继」之读）。程頤原注把敝说成夫妇离隙，reading 已声明只取相继的结构。",
+   "fix": ""
+  },
+  {
+   "id": "yangming-shengsheng-buxi",
+   "verdict": "revise",
+   "issues": "三个 fragments 准确，两层分开，读法忠于原文。只有机械性问题：Web.generation_needs_replenishment→Web.embodiedArising_needs_replenishment。",
+   "fix": "按 R30 重绑。"
+  },
+  {
+   "id": "yi-daxu-ri-xin-qi-de",
+   "verdict": "keep",
+   "issues": "彖文准确（标点从程朱，作「剛健篤實輝光，日新其德」）。程頤彖注说的是「人之才剛健篤實則所畜能大…畜之不已則其徳日新也」，所畜是才德；「所畜者是往：前言往行」取自大象。两层合读这一点 reading 已明说「彖说德日新，大象说其法」，可以保留。",
+   "fix": ""
+  },
+  {
+   "id": "wangbi-lao79-shang-bu-fu",
+   "verdict": "keep",
+   "issues": "注文准确，读法忠于王弼「其伤不复」，并给出了限度。",
+   "fix": ""
+  },
+  {
+   "id": "suzhe-xing-fu",
+   "verdict": "keep",
+   "issues": "注文准确。区分「相分在根据，不在结论」很精确。",
+   "fix": ""
+  },
+  {
+   "id": "mengzi-yuan-quan-you-ben",
+   "verdict": "revise",
+   "issues": "两个 fragments 准确。(1) reading 说「这是对论语「逝者如斯夫！不舍晝夜。」的一种读法」，没有根据：徐子问的是「仲尼亟稱於水，曰：『水哉，水哉！』」，今本论语没有这句，也不是川上章。两处同用「不舍昼夜」，按脉络规则，同语不等于同指，也不等于相承。(2) layer「经·先秦（孟子）」：先秦层应作原典（战国）。(3) 机械性：Web.generation_needs_replenishment 已在 R30 改名。",
+   "fix": "删去「这是对论语…的一种读法」，改为「徐子所问是孔子称水之语（『水哉，水哉』，今本论语无此语）。此段与川上章同用『不舍昼夜』，二者是否同指，文本不定」。layer 改为原典（战国）。declarations 重绑。"
+  },
+  {
+   "id": "lunyu-shi-zhe-ru-si",
+   "verdict": "revise",
+   "issues": "fragment 准确。(1) reading 说「所逝者是水，不止者是川…部分逝去，整体不息」，加进了原文没有的部分与整体之分：原文的主语是逝者，不舍昼夜的是逝本身。这一分法是宋儒「道体」之读；近思录卷四第41条自言「自汉以来，儒者皆不识此意」，可见汉魏另有读法（叹逝）。(2)「孟子以「源泉混混，不舍昼夜」释之」没有根据（见上一条）。(3)「二程」之说可以更精确：此条在近思录第36条「明道先生曰」之后、第43条「伊川先生曰」之前，按近思录体例属程颢。notes 中「未定为程颢或程颐」也应随之改。",
+   "fix": "reading 改为：原文结构是逝（终止、流过）在任意晚之步复现，可对应 Web.Unceasing 一类的复现之律；「所逝之水与不止之川」标为宋儒道体之读（程颢，近思录卷四第41条），并注明此前另有读法。删去孟子释之一句。kind 保留 agreement，但写明是对宋代读法，或改为 scope。"
+  }
+ ],
+ "missing": [
+  "论语·述而「久矣，吾不復夢見周公」（RU1-S-LY）：无情态的「不復＋V」（此后不再），是不復足最贴切的先秦构词例；现有各例都是带情态的「不可（以）復」。",
+  "孙子·作战「久暴師則國用不足」「取用於國，因糧於敵，故軍食可足也」「故兵貴勝，不貴久」（BI1-S-SZ；BI1-SZ-R-05、BI1-SZ-R-09）：耗竭之久与由外部回补之足，是先秦最直接的消耗与更新的对照。应立一个条目，并写入久的 not_carried。",
+  "杂阿含（刘宋求那跋陀罗译，FO1-S-SA，二八五、二八六经）「若不增油治炷」「此火相續長夜熾然不？」：火要延续就须续薪，不增樵草就会熄灭。这与 Flow.uptake_needs_replenishment、Web.Carries.arising_not_recurring 同构，而经文用它来劝灭，评价方向相反，正好显示结构本身不带正值。这也是續的佛典相續义。",
+  "孟子·告子上「一日暴之，十日寒之，未有能生者也」（RU2-S-MZ，阅读单元 RU2-U-MZ11-09）：支持的间隔太长就不生长，可作期的先秦条目。",
+  "孟子牛山章「是其日夜之所息」（RU2-S-MZ）：息＝生长（回补）。应加入 mengzi-niu-shan-ye-qi 的 fragments，并写入不息的 not_carried。",
+  "陈淳（南宋）经戴震引出：「二氣流行萬古，生生不息，不成隻是空氣，必有主宰之者，理是也」（RU2-S-V3Q01）：生生不息在脉络中最早的一例，立理为主宰（相分），戴震引它是为了驳斥。",
+  "程頤归妹彖注「女之歸男乃生生相續之道」（YD-CY4）：北宋生生与相續连用的例子，宜入生生不息与續的 course。",
+  "程頤恒初六注「浚恒謂求恒之深也」「是知常而不知變也」（YD-CY3）：泥于常则凶，说明久不在不变，应作为 yi-heng-jun-heng 的主读。",
+  "王弼注与孔疏的頻復之读「頻，頻蹙之貌也」（YWH-F）：与程朱「屡失屡复」并存的早期读法。YCM130-F-Z-F10-R01 应列为 yi-fu-pin-fu 的平行。",
+  "王弼乾文言注引诗「靡不有初，鮮克有終」（YWH-Q，孔疏有释）：开端不决定结局。本簇的视界律（Renewable.prefix_does_not_decide）没有名，这句可作名的候选，至少应立为条目。",
+  "王弼四十七章注「事有宗，而物有主，途虽殊而同归也」（DS01）：同歸的单一中心义，应写入同歸的 not_carried。",
+  "司马谈「神大用則竭，形大勞則敝，形神離則死」「神者生之本也」（CT1-S-SJ）：紧邻不復足所引之句，前者是竭、敝的结构，后者是立神为本的相分。",
+  "荀子礼论「断长续短，损有馀，益不足」（RU2-S-XZ19）、韩非观行「以長續短之謂明主」（FA1-S-H24）：先秦的續多作补其不足，續之名须排除或说明这一义。",
+  "帛书甲本二十五章「獨立□□□」后即接「可以為天地母」（V130-LAO-MA）：帛书甲本也没有「周行而不殆」，lao-25 与 RO 的版本说明都应补上。",
+  "複詞「相續」（佛典 santāna；程頤「相續不窮」）作为續或 Web.Continues 的候选名，尚未经过权衡。"
+ ]
+}

@@ -1,0 +1,125 @@
+{
+ "edits": [
+  {
+   "id": "INTRO",
+   "find": "最后说择者经其象而取，学经他者之实应（取法）",
+   "replace": "最后说择经择者之象（象），学经他者之实应（取法）",
+   "why": "取 is the table's name for uptake (Flow). The fixed plain wording for this structure is 择经象, and the table note says 择之象 is the 象 a selection goes through. The new text matches 十三·二十 說「择经择者之象」."
+  },
+  {
+   "id": "十三·六",
+   "find": "凡宇具传以外之七设（⟦NEW-12⟧），而其中有出者跨步后有所待，则去其一所出于与之步之一待，所得之宇具传以外之七设而传不成立。",
+   "replace": "凡宇有待、衡、唯运者与之、唯运者取且唯取于其所资、耗、有形、有列（传以外之七设），而其中有出者跨步后有所待，则去其一所出于与之步之一待，所得之宇具此七设而传不成立。",
+   "why": "In the outline NEW-12 is 十三·五 and comes after this 條 (十三·四), so a 經 cannot lean on its list of the eight 设. The seven are now written out, each defined in an earlier 條. This follows the plain wording world.premise (「凡宇有待、衡、唯运者与、……，而……」) and the C04 rewrite of 四·十八. drop_but needs exactly these seven, with transmission binding."
+  },
+  {
+   "id": "十三·六",
+   "find": "有穷之宇具其余七设者",
+   "replace": "有穷之宇具此七设者",
+   "why": "Follows from the previous edit: the seven are now named in this 經. drawn_and_link_needed quantifies over finite worlds with exactly these seven."
+  },
+  {
+   "id": "NEW-12",
+   "find": "宇有形，恰当宇衡而每物",
+   "replace": "宇有形，恰当宇自衡而每物",
+   "why": "withRest_embodied_iff reads w.withRest.Embodied ↔ w.Balanced ∧ …, and its Balanced is the world's own balance, without the rest. This sentence sits under「凡宇计其余」, and ⟦一·十一⟧ says that with the rest counted every world balances. So「宇衡」would be vacuous and the iff false. 「宇自衡」is the C01 wording for w.Balanced."
+  },
+  {
+   "id": "NEW-12",
+   "find": "每步在场者之族员各异",
+   "replace": "每步在场者之族之员各异",
+   "why": "The fixed plain wording for Distinct is「族之员各异」(core list decision)."
+  },
+  {
+   "id": "NEW-12",
+   "find": "读于布散之法",
+   "replace": "读于遍与之法（一待者与每一物）",
+   "why": "散 is the table's name for ceasing to stand as a condition (Web.ComesToStand), so 布散 borrows it. The spreading law is the one in which a formation gives to every relatum (spreading_not_enclosed)."
+  },
+  {
+   "id": "NEW-12",
+   "find": "⟦纲·八⟧论题一以此为关系起点之主证",
+   "replace": "⟦纲·八⟧论题一引此为关系起点之一证",
+   "why": "In ⟦纲·八⟧, thesis one cites the reading of the eight 设 as one of four supports, beside identifiesAlike_iff, shown_le_iff and separation_faithful_iff. It is not called its main proof."
+  },
+  {
+   "id": "十三·九",
+   "find": "以出者之数为轻重：员数乘按出者计之总",
+   "replace": "择项，以出者之数为轻重之一致减不一致也。以出者之数为轻重：员数乘按出者计之总",
+   "why": "The 條 is titled 择项 and 十三·十一 and 十三·十六 use 择项 in their 經, yet no 經 defines it. Only 說 did. This is the table's definition: Price's selection term proper, concordance less discordance with offspring numbers as weights."
+  },
+  {
+   "id": "十三·十三",
+   "find": "未陈述。题称解而不称分：分只名足迹之分。",
+   "replace": "未陈述。",
+   "why": "This is a note about how the title was chosen, not content for the reader. The name question goes to the integrator (see notes)."
+  },
+  {
+   "id": "十三·十四",
+   "find": "出者之数不能每步都无损益地递下",
+   "replace": "出者之数不能于始总积之前每步皆无损益",
+   "why": "递 is the table's name for passing a pattern (Web.PassesAt). closed_not_exact says exactly ¬∀ t < stock0, Exact: transmission is not exact at every step before the starting stock."
+  },
+  {
+   "id": "十三·十七",
+   "find": "在基上，初立之值较少者",
+   "replace": "在流上，初立之值较少者",
+   "why": "基 is the table's name for the basic tier (Lexical, C15). The declarations are in GroupEnding.Flow, and 十三·十六 說 already writes 在流上."
+  },
+  {
+   "id": "十三·十七",
+   "find": "此量之均自二分之一升至一而守住",
+   "replace": "此量之均自二分之一升至一，次一步不改，仍在起点之上",
+   "why": "Assorted.kept proves only Raises 0, the mean kept from generation 1 to 2, and generation 2 above generation 0. It does not prove the mean held at every later step, which 守住 suggests."
+  },
+  {
+   "id": "十三·十八",
+   "find": "在基上，这一步是组间之终止时亦然",
+   "replace": "在流上，这一步是组间之终止时亦然",
+   "why": "Same as 十三·十七: 基 is the table's basic tier, and the declaration is Drift.Flow.ended_falls_back."
+  },
+  {
+   "id": "十三·十八",
+   "find": "但没有一种大小能排除它",
+   "replace": "但后类不空时，没有一种大小能排除它",
+   "why": "falls_back_ge gives only q^n ≤ the weight. With q = 0 (no second kind) falling back has weight zero, so the universal claim needs q > 0."
+  },
+  {
+   "id": "十三·十八",
+   "find": "次世不即出者之族，而自出者之族有放回抽 n 次而成：",
+   "replace": "拟次世不即出者之族，而自出者之族有放回抽 n 次而成：",
+   "why": "Sampling the next generation is a modelling choice (說:「所拟」), not a law. The theorems are about samplings of p and q. 拟 is the table's name for a representation, which marks the sentence's status in 經."
+  },
+  {
+   "id": "十三·十九",
+   "find": "每世自前世按其类之数有放回抽 N 次，抽时无选择：",
+   "replace": "每世自前世唯按其类之数有放回抽 N 次：",
+   "why": "选择 is neither a table name nor a plain wording, and it should not appear in 經. 「唯按其类之数」 states exactly what Drift.sampled does: draws weighted by counts, nothing else."
+  },
+  {
+   "id": "十三·二十",
+   "find": "每象至多取一之取所取",
+   "replace": "每象至多择一之择所择",
+   "why": "取 is the table's name for uptake. The fixed plain wording relabel.equivariant reads「至多择一者为 EquivariantChoice」, and the same 經 already writes 择经象, 经象之择 and 可择者. The instruction's reason (择 only for claims about level histories) would condemn those words too, so it does not justify 取."
+  },
+  {
+   "id": "十三·二十",
+   "find": "至多取一者，每象至多择出一可择者",
+   "replace": "至多择一者，每象至多择出一可择者",
+   "why": "Matches the 經 edit; 說 itself explains the term by 择出."
+  },
+  {
+   "id": "十三·五",
+   "find": "，没有不可改之准。",
+   "replace": "，不立不可改之准。",
+   "why": "The spine does have lock-ins, for example ResponseLearning.limited_changes_then_stays (cited in 十三·二十一 說) and RuleCapture.favouring_locks. What it lacks is a standard fixed as unrevisable before any relation. 「不立」 states that exactly; 「没有」 overclaims."
+  },
+  {
+   "id": "DUIZHAO",
+   "find": "后任可改所接之准，没有不可改之准",
+   "replace": "后任可改所接之准，不立不可改之准",
+   "why": "Same correction as in 十三·五 說."
+  }
+ ],
+ "notes": "I checked all 20 條 and the intro against the Lean in /Users/ren/theories/.claude/worktrees/zhonghua/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/*.lean.\n- **Declarations:** all 142 cited declarations resolve. Hypotheses and the direction of each iff were compared for every 經.\n- **Quotations:** all 25 quotations pass ctq.py text exactly.\n- **對照 entries:** all 13 entry ids exist in passages.json, each with a matching kind.\n- **References:** every ⟦id⟧ exists in book-1-outline.txt and points to the right content.\n- **Language:** no English remains outside Lean names, record ids and the AI label.\n\nSubstantive fixes (the edits above):\n1. NEW-12 wrote 宇衡 under 计其余. With the rest counted every world balances, so the iff became false. It now reads 宇自衡, which is w.Balanced.\n2. 十三·六's 經 relied on the list of eight 设 that only NEW-12 gives, and NEW-12 comes later in the outline (十三·五 after 十三·四). The seven are now written out.\n3. 十三·九 is titled 择项, but no 經 defined the name. A definition is added.\n4. 取 in 十三·二十 and in the intro is reverted to 择. This goes against the integrator's instruction, but the plain wordings are binding, and the same 經 uses 择经象 and 可择者.\n5. Smaller precision fixes:\n   - 守住 overclaims Assorted.kept.\n   - q > 0 is needed for drift to stay possible at every sample size.\n   - 不立不可改之准 replaces 没有不可改之准.\n   - 纲·八 cites the eight 设 as one support, not the main proof.\n   - 拟 now marks the drift sampling model.\n   - 选择 is removed from a 經.\n6. Name collisions in 說: 基 becomes 在流上, 散 becomes 遍与之法, 递下 is rewritten. The meta sentence about the title is removed.\n\nLeft for the integrator (not edited):\n- **解:** 解 is the table's name for Web.Dissolves, yet it was used as instructed in three places: the 十三·十三 title (加性之解), 十三·十五 經「亦有与之对应之解」 and the intro「组之解」. The title field cannot be edited by find/replace. I suggest 加性之部 (Lean: \"the additive part is at most the whole\") and 对应之式.\n- **Titles:** four titles in book-1-outline.txt are older than the part: 选择项, 世代之均, 容者不被逆选, 加性之分. The part has 择项, 诸世之均, 被容者不被逆选, 加性之解. Sync one with the other.\n- **Names the table still lacks:** 一致/不一致 (used in ten 經), 漂变, 抽样/有放回抽/前类/后类, 样本 (十三·二十一 經), 按出者计之总. Anchors for 有列/唯运者与之/唯运者取 and for 门 (NEW-3) are still to be added.\n- **Premise wordings:** world.premised fixes 运者有列 and 所传有界, while the part writes 有列 and 传.\n- **Two wordings for one concept:** Nonanticipating is written 唯读已立者之法 here and 只读已往之法 in exchangelaw.through.\n- **历:** 历 is the table's name for a history. It is used as a verb in 十三·十七 經「历世」 (the wording comes from the selectionlevels.lineage example) and in 十三·十六 說「所待历共取过与」.\n- **世 vs 代:** conflict as the drafter reported. I kept 世, following G9."
+}

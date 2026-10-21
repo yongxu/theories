@@ -1,0 +1,465 @@
+225 names flagged
+## 两行 x1
+   C01 | 语境索引的读法（Contextual.world：语境中的读法总构成一个世界；Contextual.fitsFree_iff：不依语境的读法恰在相交处一致时存在）是本簇用得最多的结构，名表中没有它的名字，读法只能写作“语境中的读法”。《齐物论》「是之謂兩行」正是这一结构。 => 采纳「两行」为 Contextual 的名（诸读法在各自语境中成立而共成一个世界，不须先合为一），或在名表中注明以“语境读法”描述；整合者决定。
+## 际 x1
+   C01 | mapper 以「際」作关系之名。《知北遊》「物物者與物无際……不際之際，際之不際者也」的「際」是分界、界限义，不是关系；C17 以交界、缝合义用之。若以「际」名关系，会与先秦用法相反。 => 解释性用语保留“关系”；若要立「际」，只取分界或交界义，不作“关系”的名。
+## 大化 x1
+   C01 | 先秦唯一用例是《荀子·天论》「阴阳大化」，为谓语（阴阳大规模地变化）；名词义“整体的展开”是后起用法。本簇在 xunzi-tianlun-da-hua 中已说明。 => 保留为约定名（约定俗成），名表注明先秦为谓语用法，名词义是本编的约定。
+## 无际、所以迹、大块、六合、通为一、所待又有待、一 x1
+   C01 | mapper 的 names_used 用了这些词，它们都不是名表中的名（迹、一 已明确不采纳；大块、所以迹 在 symbols-not-adopted 中）。 => 本簇已全部替换为名表中的名，或只在「」引文中出现；若有需要立名，由整合者决定。
+## 体 x1
+   C01 | 名表中「体」只作部分（part）。读法中常见“一体”“成体”“体现”等日常复合词，引文中又有体用之「體」，读者易混。 => 名表注明「体」只作部分；体用之「體」只在引文中出现，不作名。
+## 交 x1
+   C02 | 名表锚 Web.Interacts，并注明须核对与 Hexagram.meets 是否同构。核对结果：不同构。Interacts 是事件经一个条件的关系（一方取用，另一方依之），两向对称；meets 是卦在某一高度上的 Bool 谓词（下卦之爻不断、上卦之爻断），用来分辨泰否，而 Lean 文档已把 => 交只指 Web.Interacts；易章把 Hexagram.meets 另名「卦交」；泰彖之交在本簇读作输（tuan-tai-pi-jiao）。交之引改用庄子·庚桑楚「相與交食乎地而交樂乎天」（ZH1-S23，已核）：二者都以地为食（LivesOn＝取用且以正需依之），则各自取用而对方依之，Int
+## 相待 x1
+   C02 | 锚“MutualDependence”是模块名，不是声明（resolve 为 NONE）。另外，先秦与汉译中的相待（荀子「離居不相待則窮」，中论「則無有相待」，韩非「輔依車，車亦依輔」）多指直接的两向依存，即各以对方为所待（Mutualism.apart 的形状，此结构无专名）；Flow.Mutua => 相待锚为 Becoming.Flow.MutuallyDependent，引荀子·富国「離居不相待則窮」（已核）。直接两向依存若需名，另立复词，例如“互待”，由整合者定；并请为“两个具身关系项互以正需相依，则在 Dependent 下同一步同活动”补一条具名引理（现在只是 active_along 
+## 足 x1
+   C02 | 足与容都锚 Web.Admits，而 supported_iff_admits 是 Iff.rfl。足的第二锚 Law.rests_iff（够：目标在静时被满足）是另一概念。足之引「知足不辱」恰是名表注明要排除的修养义。 => 足只指单个依存之需被满足（need ≤ level）；容指 Admits／Supported，即一个形成的每个所需都被满足（C06）。“够”另名，归C15。足之引改为论语「足食，足兵」（已核于 RU1-S-LY）。
+## 有力 x1
+   C02 | 先秦“有力／无力”义为力量、承载之力：逍遥游「負大舟也无力」在本簇读作足之否，与差别制造无关。有力作差别制造义，最近的结构出处是华严因门六义，属隋唐，且所判之事是生果，不是依存之绝。 => 保留为复词并注明不承先秦之义；或以论语「微管仲，吾其被髮左衽矣」（已核于 RU1-S-LY）的「微」立但书之名（“微之”：去此一分而断不发生）。由整合者择定。
+## 小故 x1
+   C02 | 名表锚为空（必要条件）。本簇以 Web.Dependent（活动蕴含受支撑）读之。“有之不必然”须有非空见证：Sleeper.sleeper 的 requires 恒为 False，是空见证；改用 Hibernation.readings 与 Hibernation.web（第1步受支撑而不活动）。 => 小故锚为 Becoming.Web.Dependent（逐步的必要方向），见证用 Becoming.Hibernation.readings；与C16的必要／充分对应表一致之后，再定大故是否有锚（脊柱没有由支撑推出活动之律，大故目前无锚）。
+## 俱亡 x1
+   C02 | 新复词，无引。先秦“俱亡”的已核用例（庄子·骈拇的俱亡其羊、韩非子·难二的虞曹俱亡）义为都失去、都灭亡，不含依存。依存而随亡的结构，在先秦作「從之」（十过「虢朝亡而虞夕從之」），在汉译作「隨滅」。 => 保留俱亡为新名，注明不承先秦用例；引十过「虢朝亡而虞夕從之」（hanfei-shiguo-fu-yi-che）为结构出处，其中滞后的部分对应蓄（Carries.coextinct_lasts）。
+## 绝 x1
+   C02 | 本簇已有先秦出处：墨子·非攻中「糧食輟絕而不繼」（新条）。但同一字在本簇另有渡义（荀子·劝学「絶江河」，xunzi-shan-jia-yu-wu）；名表注说它与绝生、絕其長同义（断）。 => 绝之引用「糧食輟絕而不繼」；在名表注中写明渡义、竭义不入。
+## 持 x1
+   C02 | 本簇没有以持为结构的条目，其出处（荀子·礼论「相持而長」）在C04、C13、C15的条目中。本簇只在 mengzi-heng-chan 中用持解释 Web.Renewed（每步每个依存都持）。 => 持保留，引用C04、C13、C15已收的礼论之条；整合者确认其中的「持」是 Web.Kept 而不是相互维系的闭包。
+## 结／解 x1
+   C02 | 名表无引。本簇有大宗师「物有結之」（zhuang-dazongshi-jie-jie）；语文核验者另指老子二十七章「善结无绳约而不可解」（已核）为更早的出处，但那一句没有律的内容。 => 结、解之引用大宗师「物有結之」，老子二十七章作字义旁证。
+## 资 x1
+   C02 | 资在经文中另有财货义（如「資斧」），名表注说资是关系名。王弼注「资，取也」（DS01，已核）正好支持“取用”（draws）这一义。 => 资之引保留「萬物資生」，并附王弼「资，取也」；财货义写入不取之列。
+## 自持 x1
+   C02 | 取代自待，是对的，但有两点须注明。其一，Mutualism.apart_relabelled 表明自持随条件的标法而定，Dependent 看不到这一区别。其二，墨子「賴其力者生」是 Flow.FedBy 取 e＝e′（向自己所需之条件给予），中庸「誠者自成」读作自我生成也不是自持，二者都不是自持的 => 自持锚 Web.SelfBearing，名表注写明“随标法而定，非独立性质”，不立先秦之引。
+## （无名）Dependent／Embodied／Bearing x1
+   C02 | 本簇几乎每条都要用三个结构：Web.Dependent（活动则受支撑）、Web.Embodied（活动恰在水平为正时）、Web.Bearing（所需为正之依存）。它们都无名，只能用现代汉语描述；批评者也提出活动、水平、需要无名。 => 请整合者为这三者定名（例如“依存则立”“具身”“正需”一类的复词），避免用生、息；本簇之后据以改写。
+## 方 x2
+   C02 | C14 以齐物论「方生方死」为“方＝立场”之引。在该句中「方」义为正当、同时（方且），不是立场。 => C14 另择“方＝立场”之引，或改用复词；「方生方死」在本簇读作生灭同时（zhuangzi-qiwu-bi-chu-yu-shi）。
+   C14 | The table's anchor 「方生方死」 uses 方 as an adverb (just as, while), not as a standpoint. The C14 sources use 方 in several senses: 立不易方 (TP-H32-DX-R02, dir => Anchor 方 in 秋水 「是謂无方」 (by negation) or in 齐物论's 彼/是 (「物无非彼，物无非是，自彼則不見，自知則知之」, see zhuangzi-qiwu-bi-shi). Add 方术, 方法 and 方向 to not_carried.
+## 所待 x1
+   C02 | 批评者指出，所X 在C10用作影响闭包。本簇的所待只指单步之条件，与名表注一致。 => 维持“所X只指单步对象”；闭包用统一标记，由C10处理。
+## 已 x1
+   C03 | 名表以「已」名止息（Web.Ceases），引「已，成、亡」；但墨经此条以已为一事之完成，兼成与亡，《經說上》「已，爲衣，成也。治病，亡也。」：所引恰好表明已不专指止息。 => 改引「學不可以已。」（RU2-S-XZ01，已核），此处已即停止；墨经「已，成、亡」改作「成」「毀」二名的旁证。
+## 毀（毁） x1
+   C03 | 名表「毀」的锚写作 ComesToBe，应为 CeasesToBe（所名是不再成立）。 => 锚改为 CeasesToBe。
+## 蟄（蛰） x1
+   C03 | 锚为 Dormancy，但所引「龍蛇之蟄，以存身也」是有所持守的休眠，结构是 Hibernation.readings；Dormancy 的见证恰是休眠步无任何持守、跨它作一只是读法（RO xici-chihuo-longshe 以之为反衬）。 => 锚改为 Hibernation（Hibernation.readings）、Web.Holds 与 Web.waking_not_arising；Dormancy 留作反衬。
+## 終（终） x1
+   C03 | 以「終」名 Web.Ends（自某步起永不活动），而名表自己的「終而復始」（C08，套索程）与「終則有始」、孙子「終而復始」、王夫之「终日终而终日始」都以终为一时之止、其后复始。终字两义并存，名不唯一。 => Ends 改用「亡」（如「死而不亡者寿」，YD-LAO-BASE，已核），或注明「終」在此专指终而不复。
+## 定數（定数） x1
+   C03 | 荀子「此事之所以稽实定数也」中定数是动宾（定其数），又带后起的命数、定数义；名表之 symbols 表已说「数」去定数、命数义。 => 名改为“稽實定數”作一个复合名，或保留定数而加注：只取先定实之同异而后能数，不取命数义。
+## 無閒（无间） x1
+   C03 | 简体形式不定：閒可作「间」或「闲」；名表注文写作无闲，而所名连续（无间隙）应作「无间」。 => 简体统一作「无间」。
+## 相續（相续） x1
+   C03 | 锚为 Web.ArisesFrom，但所名是延续关系本身，即 Web.Continues、Web.ArisesFrom、Web.CeasesFrom 共用的参数 R；而「續」（C05）又锚 Web.Continues。其古代用例（起信「相續相」、唯识「一類相續」、肇论「因不來今」）都是一对一之流（W => 相续锚改为延续关系 R（以 Web.Continues 的定义为据），注明古代用例为一对一；续保留为 Web.Continues 一项（某形成延续一前者）。
+## 一實（一实） x1
+   C03 | 「一實」与「化」同锚 Reidentify：一实是跨步之同一（重认），化是构形改变而同一不别，二者是同一构造的两面，名表应写明分工。 => 一实锚 Reidentify；化锚 Reidentify 加「状变」（构形改变，Alike 不成立）一条件，或注明化是一实在状变处的特例。
+## 存 x1
+   C03 | 「存」与「久」（C05）同锚 Web.Holds：存是一步的持存，久是跨步的持续。 => 存锚 Web.Holds（一步）；久锚 Web.steady_held／Web.named_throughout（持存之整段只有一名），或另注分工。
+## 消息 x3
+   C03 | 易学中消息专指十二消息卦之消长（Hexagram.waxWane）；名表以消息名普查平衡 held_over_stretch。本篇临、剥、复诸条须避开“消息律”之称以免混同。 => 保留消息＝held_over_stretch，名表加注与 Hexagram.waxWane 之别；waxWane 另称“消长之律”。
+   C04 | 名表以消息名普查平衡（C03）；剥彖「君子尚消息盈虛，天行也」在本簇读作消长之律（Hexagram.waxWane），两义不同。 => 剥彖此句不作消息之书证；waxWane 用描述“消长之律”。
+   C17 | 名表的消息（C03，普查平衡，held_over_stretch）与易学十二消息卦（Hexagram.waxWane 的消长环）同字；C17 原各条以“消息之律”指 waxWane。 => waxWane 不以消息为名，只在引文与“十二消息卦”这一史名中出现，读法中写作“消长环”（现代词）；名表的消息保持 C03 之义。C17 的修订读法已照此改写。
+## 繼（继） x1
+   C03 | 「繼」无锚（—）；离大象「繼明」与程颐注所取是作一命名，结构是 Lineage.readings／Lineage.one_way，不是接续读法（Succession）。 => 繼锚 Lineage.one_way（作一命名保持分开命名的一切连续）。
+## （缺名）著形 x1
+   C03 | Web.Embodied（活动当且仅当水平为正）在本篇多处是关键条件（聚散与生灭只在此处相合），名表无名；不宜用「體」，体已名部分。 => 另立一名，如“著形”或“形著”，锚 Web.Embodied。
+## （缺名）火傳 x1
+   C03 | 型式经载体传递而延续（Web.ByPassing、PatternRelay）无名；「相續」不宜兼此义，「傳」（C12）锚 Flow.TransmitsWithin，是另一结构。 => 立「火傳」（「指窮於爲薪，火傳也」），锚 Web.ByPassing。
+## （缺名）升／降 x1
+   C03 | Web.Rises、Web.Falls（水平之升降）无名；韩康伯「聚極則散」、系辞屈伸诸条之聚散实为升降，与名表聚散（开始或不再作为条件而在）不同义。 => 立「升」「降」二名（或「盈」「虛」，「君子尚消息盈虛」），锚 Web.Rises、Web.Falls。
+## （缺名）兼之合取 x1
+   C03 | 脊柱只有析取的整体（Web.Whole）；华严总相、墨经「損」、苏辙车之诸件会合都是合取或分级的整体，现无锚也无名。 => 待合取整体之定理落地（见 huayan-liu-xiang 的 gap）后，以「兼」分析取、合取两义，或另立名。
+## 止 x1
+   C04 | 书证「止，以久也」（墨经·经上）言有久之不动，即一段停顿（经说上「無久之不止」「有久之不止」），而名表之止是 World.RestsFrom（自某步起无物生起）；书证与所名不合。 => 书证改用序卦「物不可以終止，故受之以漸」（YD-OW-XG，已核），并把墨经之止（一段停顿，World.stutter_change_recurs_iff 一线）列入不携带；或依评审意见另立「終止」，但「終」已名 ends，须整合者定。
+## 端 x1
+   C04 | 墨经之端是不可再分之点（「端，體之無序而最前者也」），脊柱之端是损失的下界（Amounts.rests）；二者只在整数之量中重合。 => 保留端名，书证改用或并列「非半弗𣃈，則不動，說在端。」（MI1-S-JX），注明点与损失下界之别；C14 的种子另择一名（评审已提）。
+## 积小以高大 x1
+   C04 | 书证（升大象）言积累；读作阿基米德的量是 AI 的强读。 => 名表注明“AI 强读”，并注明其反面见证 Becoming.Layered.not_archimedean。
+## 汲 x1
+   C04 | Flow.taking_draws_in 跟 Flow.fed_from_beyond 在可判定相等时是同一律（Flow.inward_iff_not_fed），汲与自外来名同一律的两种写法；中文版又以「汲取」译 Web.draws（资）。 => 汲只锚 Flow.taking_draws_in 并注明与自外来等价；Stock 之 draw 不译「汲取」，用「取」「回补」。先秦书证可用韩非子·五蠹「夫山居而谷汲者，膢臘而相遺以水」（FA1-S-H49，已核：从所居之外的源取水）。
+## 衰（缺） x1
+   C04 | Flow.RunsDownOn／RunsDown（家族衡且耗而总量下降的一步）没有名；本簇多处要用（杂卦盛衰、孙子、解老、序卦）。 => 立「衰」，锚 Flow.RunsDownOn；书证庄子·天道「盛衰之殺，變化之流也」（ZH1-S13，已核）或杂卦「損 、益 ，盛衰之始也」。
+## 守恒、无中不生（缺） x1
+   C04 | Flow.Conserving／ConservingOn（所给恰等所取）与 Flow.Gainless／GainlessOn（所给不多于所取，第一定律）没有名；fazang、zhibeiyou、lao-81、yi-yi 都要用。 => 以固定短语锚定：「与如其取」→ Flow.ConservingOn，「与不过取」→ Flow.GainlessOn；评审的第一批定名也列守恒。
+## 阖／辟 x1
+   C04 | 名表两行无锚。本簇用它们名容之闭合与开启：Flow.Balances.supported_of_net_give（阖需净取：净给予的部分不阖）与 Flow.Balances.admits_of_net_draw（辟需净与：净取的部分辟不出新的被容者），记录 closing-needs-net-dra => 闔 锚 supported_of_net_give，闢 锚 admits_of_net_draw，书证「一闔一闢謂之變」不变；由整合者跟 C06 核对。
+## 合取过与 x1
+   C04 | 「合取」在逻辑中是 ∧（conjunction），读者易误。 => 改作「共取过与」或「并取过与」。
+## 与者 x1
+   C04 | 「与」可读 yù（参与），「与者」易读作参与者。 => 注明读 yǔ，或改作「与之者」。
+## 流 x1
+   C04 | 无书证；系辞「旁行而不流」之流是流淫义（哲学一侧的意见），不可作证。 => 书证用庄子·天道「盛衰之殺，變化之流也」（ZH1-S13，外篇，已核）；流淫义列入不携带。
+## 衡 x2
+   C04 | 墨经之衡是杠杆：「兩加焉，重相若，則標必下，標得權也」（MI1-S-SX，已核），两边之积相抵，不是水平变化的记账。 => 若以墨经为书证，注明“杠杆之平，不携带力矩义”；或不以墨经为衡之书证。
+   C10 | 名表之衡是平衡（Flow.Balances）；荀子·解蔽「中县衡」「何谓衡？曰：道」与致士「衡聽」是标准义，同字异义。 => 名表注明荀子之衡不入；本簇只在引文中出现。
+## 全取（缺） x1
+   C04 | Flow.TakesAll（取到所与之全部）没有名；yi-tuan-jie、yi-qian、lao-36、lao-42 都用到 takesAll_of_more、full_taking_ends。 => 立「全取」，锚 Flow.TakesAll。
+## 趋停而不至（缺） x1
+   C04 | Amounts.approaches_rest、few_large_losses_of_archimedean 与 Halving.approaches_without_reaching（无端而任意趋近于停）没有名；lao-15、辩者条要用，须跟止分开。 => 立固定短语「趋而不至」，锚 Halving.approaches_without_reaching 与 Amounts.few_large_losses_of_archimedean。
+## 开 x1
+   C04 | Seeking.more_needs_open 所言 open（所经构形不被任何有限列表容纳）不是开所锚的 World.arising_opens（交换超出每个有限家族）。 => 开只锚 arising_opens；more_needs_open 用描述性说法，不借开名（本簇已如此处理）。
+## 损 x2
+   C04 | 名表以「損，偏去也」为损（下降）之书证，而同一句又是偏去（扣留一部分）之书证；墨经此句所定的是偏去，不是水平之降。 => 损另择书证，如杂卦「損 、益 ，盛衰之始也」或经说下「損，飽者去餘」（MI1-S-SX，已核：去其多出之量）。
+   C06 | 损（C04，下降）与偏去（本簇）同引“損，偏去也”；此句以损为偏去（部分之去），不是水平之降。 => 损改引韩非解老“動盡則損也”（CV1-S-JL，已核），“損，偏去也”只给偏去。
+## 耗 x1
+   C04 | 先秦「秏」之义是乱、虚竭：荀子·修身「多而亂曰秏」（RU2-S-XZ02，已核），不是耗散。 => 书证择取时注明本义；耗散义是现代转义。
+## 体现（缺） x1
+   C04 | World.Embodied／ArisingEmbodied 是停息、开等定律的前提，没有名；评审已指出「体」在名表是部分，C04 不能再用体名体现。 => 另立一名或固定短语锚 World.Embodied；本簇读法暂以描述“有体现”书写。
+## 久 x1
+   C05 | 锚 Web.Holds 不对：Web.Holds 是“一步之时活跃，或某依存在那时成立”，即 C03 之存（名表已以存锚之），一名两锚；久（通过变化之持续）在脊柱上没有单一声明。出处「久，彌異時也」只说遍及异时，不说经由变化。not_carried 缺三项：孙子「久暴師則國用不足」（BI1-S-SZ => 锚改为结构组：Web.Whole.arises_within、Web.Whole.needs_arising（整体经由部分之生起而久）与 Web.ByPassing.passes_within（样式经由传递而久）；出处加「四時變化而能久成」（恒彖，YD-HX01）或「迭戰則久」（司马法，BI1-S-
+## 恒 x1
+   C05 | 出处「天地之道，恆久而不已也」本身以久释「恆」（序卦「恆者久也」、杂卦「恒 久也」），而名表把恒锚在运行之类 Web.RenewingIn、久另锚，易传之「恆」与名表之恒一字两指；程頤又以「常久之道」读「恆」。另外，条件层 Web.Renewed（每个依存每步皆持）没有名，本簇各条只能写“每步皆持” => 恒之注写明“易传之「恆」读为久；名表之恒只名运行之类”；为 Web.Renewed 立复词「恆持」（恒＋持，持 = Web.Kept），作为恒的条件层同根名。
+## 不恒 x1
+   C05 | 以「不」成对暗示二分，但 SupportGatedWebs.fluctuating_neither 证明有既非 RenewingIn 也非 ConsumingIn 的形成；所名之注“某依存者永久失去支持”描述的是条件层 Web.Consumed（某依存此后永不再被满足），不是 Web.Consumi => 不恒之注改为“所汲取之某条件被消耗（Web.ConsumingIn）；不是恒之否定（fluctuating_neither）”；为 Web.Consumed 立「不復足」（复足之否：Web.consumed_iff，某依存此后永不再被满足），先秦构词可引论语「久矣，吾不復夢見周公」（RU1-S-LY
+## （Web.Lost 无名） x1
+   C05 | 满足过而断、此后不再满足（Web.Lost）没有名；王弼「其伤不复」、孙子「亡國不可以復存」一类的证据实是 Lost，不只是 Consumed（Consumed 不要求此前已满足）。 => 立复词「絶而不復足」（絶 = Web.Broken，C02），锚 Becoming.Web.Lost。
+## 期 x1
+   C05 | 锚为“—”；本簇实际所用是 Web.RestoredWithin p t g c（依存在其后 p 步内被满足）与 Web.RenewedWithin p c，这是上界，随 p 单调（Web.RenewedWithin.mono），p = 0 退化。复卦辞「七日來復」是确切步数（Hexagram.se => 锚 Becoming.Web.RestoredWithin、Becoming.Web.RenewedWithin；注“读 qī（期限），只指上界；确切步数不名期”；先秦条目可用孟子「一日暴之，十日寒之」（mengzi-yi-ri-pu-zhi）。
+## 復足 x1
+   C05 | 所名“回程（restored：依存再被满足）”之「再」不准：Web.Restored 只要求每个依存在其后某步被满足，不要求它此前已被满足（Web.Consumed 之注：“It need not have been met at that step; Lost requires that”）。 => 注改为“每个依存在其后某步被满足（不要求此前已满足）”；保留复（构形之再得，Branching.Returns）与复足（依存，Web.Restored）分名，D49 以「转」兼名二者，须在对照表注明。
+## 同歸 x1
+   C05 | 锚为“—”；结构是 Law.Merges（两个不同构形被带到同一构形）、Law.Merges.loses（有限构形中失去一个可能）、Law.merged_stays。王弼四十七章注「事有宗，而物有主，途虽殊而同归也」把同归读作单一中心；九句之「歸」（D49：无损之复）方向与合并之失相反。 => 锚 Becoming.Law.Merges；not_carried 加“单一中心之义（王弼47章注）”与“无损之复（九句之歸）”。
+## 藏往 x1
+   C05 | 锚为“—”；本簇所用是 Law.withHistory 及 withHistory_new、withHistory_never_returns、withHistory_unlisted。「積」（量之累积，如荀子「积善而不息」）常被误并入藏往。 => 锚 Becoming.Law.withHistory；注排除「積」。
+## 剝 x1
+   C05 | 注须排除三项：经文之判（凶、蔑貞；D6：剥之判不是评价）；剥削之社会义；「自下而剝」之次第（一串剥的事件，脊柱无此次第之律）。杂卦「剝 爛也」之剝是卦名，爛是自然朽坏，不是某形成之汲取。 => 剝之注写明以上三项与卦名之别。
+## 相續 x1
+   C05 | 锚 Web.ArisesFrom 是反的：ArisesFrom t f 是“跨步后活跃，且不延续任何此前活跃之形成”（新起），恰非延续。佛典「相續」（santāna，杂阿含「此火相續長夜熾然」）与程頤「相續不窮」「生生相續之道」（YD-CY4）都是延续义。续另有补短义（荀子礼论「断长续短」、韩非观行 => 相續 改锚延续读法本身（Web.Continues 所据之关系 R），或与续并为一条；Web.ArisesFrom 另立名（如「新作」）；续之注排除补短义。
+## （Web.ByPassing 无名） x1
+   C05 | “只经由传递而延续之样式”（Web.ByPassing 及 passes_within、begins_within、ByPassing.ends_within、present_of_le）在本簇火传、四时、川上诸条都用，没有名；传 已锚 Flow.TransmitsWithin。 => 立「火傳」（养生主「指窮於爲薪，火傳也，不知其盡也」，ZH1-S03）锚 Becoming.Web.ByPassing，或在传之下另列为样式之传。
+## 不息 x1
+   C05 | 锚 Web.Unceasing 对；course 缺 Recycle.closed_unceasing（D5：有不息而无生生之例）与 Web.unceasing_iff_covering（清单覆盖时生起不止恰当止息不止）；not_carried 缺「息」之生长义（孟子「是其日夜之所息」）。 => 照加；注“与消息之息（长）、孟子日夜所息（长）异义”。
+## 生生不息 x1
+   C05 | 不设单一锚（D5：生生在整体上继续，且仍有更多能形成）；脉络中较早之连用见陈淳（经戴震引，RU2-S-V3Q01），王阳明「仁是造化生生不息之理」立先在之理，二者都是相分之出处，不能作名之出处。 => 名表不立「生生不息」为名；在生生之下加对照注：与 Web.Unceasing（不息）、Web.Widens（生生）、Recycle.closed_unceasing、Flow.whole_not_new_of_rest_idle 比较。
+## 靜 x1
+   C05 | 名表之静只写“一时成立者（D45）”，而 D49 把「极」读作律所不改变之构形，名之为静（不是熄、停）。老子「归根曰静」、既济彖「終止則亂」、Hexagram.run_never_rests、Hexagram.MarkedLines.run_rests、Law.rests_iff 之不动之构形都要这 => 静之注加“律所不改变之构形（D49；Law.rests_iff 之不动点）”，锚 Becoming.Law.rests_iff；与止（停息，World.RestsFrom）分开；C04 lao-16 之条改读。
+## 反（不采表） x1
+   C05 | 不采表说「穷则反，终则始」入「复」「环」的条目；则阳此句在本簇是定域条目：只在有限且不同归之律、生起与止息相随之处成立，只消之律下坤卦为闭、穷而不反。 => 改为“入复、环的定域条目（zhuangzi-zeyang-qiong-ze-fan）”。
+## 無喪 x2
+   C05 | 名表 C15 无丧锚 Web.Retains（一条水平路径保留另一条所容者），出处却是井卦辞「无喪无得」；在井卦辞中「无喪」是水平不低于起点（Flow.level_kept），不是两条路径之比较。 => 换出处，或注明井卦辞之「无喪」是 Flow.level_kept（本簇 yi-jing-gai-yi-bu-gai-jing），与比较之无丧同字异构。
+   C15 | 荀子“无丧而有得”是同类可换的交换按数净计，只在交出与所得同类可换时等于逐一保留（Web.Retains）；墨经“損而不害”用的是損，区分了下降与丧；更早的周易井卦辞“无喪无得”是常而不竭之义（记录 JL-R043、JL-R046 在他簇）。 => 名条写明无丧在同类可换的交换中与 Web.Retains 相合，跨类时荀子的计数不取；墨经“損而不害。說在餘”作为损与丧之分的证（条目 mojing-sun-er-bu-hai）；井卦辞补入 course，注明其义不同。
+## （Renewable.prefix_does_not_decide 无名） x1
+   C05 | 任何有限之往都不定运行之类（Renewable.prefix_does_not_decide）是本簇反复用到的律，无名；往（记录、前段）与涯（视界）各只名一项。 => 立复词「初不定終」，出处王弼乾文言注引诗「靡不有初，鮮克有終」（YWH-Q；诗出大雅·荡，先秦），锚 Becoming.Renewable.prefix_does_not_decide。
+## 復歸 x2
+   C05 | 锚 Law.perturbation_reabsorbed（下一构形只依规则时，状态之扰自下一步被吸收），出处老子十六章「夫物芸芸，各复归其根」；但老子二十八章「复归于朴」与王弼十六章注「卒复归于虚静」是回到先在之初、静本之义，本簇列为相分。 => 复归之注加 not_carried：“回到先在之本或未分之初（老子28章、王弼16章注）”。
+   C07 | 锚 Law.perturbation_reabsorbed（只扰动状态时，从下一步起轨迹同于原来），所引老子十六章「各復歸其根」说的是各返其根，没有扰动；本簇 laozi-16-55-zhi-chang 以复（返回）与常读此句。 => 复归另择出处（有扰而复之文句），或把老子十六章之引改为对照；以免同一句在两名下读法不同。
+## 日新 x1
+   C05 | 锚写 Novelty（模块名），不是一个声明；本簇所用是 Becoming.unheld_of_new 与 Becoming.Law.withHistory_new。 => 锚改为 Becoming.unheld_of_new（并列 Becoming.Law.withHistory_new）；注仍排除朱熹「自新」（RU2-S-S09 之沐浴之训在本簇是一步之期内复足）。
+## 阖 x1
+   C06 | 名表之引“一闔一闢謂之變”是时间上的交替（跨步之失去支持与获得支持，Web.LosesSupport.falls／Web.GainsSupport.rises），而名的结构是一部分的反事实作用（阖需净汲取，Flow.Balances.supported_of_net_give）；孔疏又以“閉藏翕斂” => 阖锚 Flow.Balances.supported_of_net_give（“什么也不阖”锚 Flow.Balances.closes_nothing），辟锚 Flow.Balances.admits_of_net_draw（Flow.Balances.opens_nothing）；注明引文属交替
+## 辟 x1
+   C06 | 简体“辟”与墨辩小取“辟也者，舉也物而以明之也”（譬）相撞，又有辟＝法、君之义；名表所立为“闢”。 => 中华版正文保留“闢”字形，或简体只在“阖辟”成对处使用；锚同上条。
+## 有所长 x1
+   C06 | “长”带长处之评价义，把“更好”藏进 Web.Exceeds 之名；又与墨经“木與夜孰長”之长度义相撞；先秦“皆有所長”（天下）说的是诸家之长处。 => 改名“有所出”（须排除孟子“出于其类，拔乎其萃”之出众义），或保留而加注“长不含优劣，只指在某步容许对方所不容许者”。
+## 各有所长 x1
+   C06 | 先秦只见“皆有所長”（天下）；“各有所長”成词首见于唐宗密，带评价义。 => 标为后起复词并注“不含优劣”；或改作“互有所出”，与上条一并定。
+## 赅 x1
+   C06 | 冻结语料中“賅／赅”一次也不出现，只有“該”（天下“不該不徧”）。 => 字形取“該”，引天下“不該不徧”；或保留“赅”而注明语料只见“該”。
+## 绝生 x1
+   C06 | 名表注“绝生之绝同义（断）”；但退化（无此部分之水平广于有之）可以在后来复得，不是永久之断，永久者是成闭；“绝”字易被读成不可复。 => 注明“绝生不含永久；不可再得者另称成闭”。
+## 穷 x2
+   C06 | 名表之穷＝断点（C11），引墨经“窮，或有前不容尺也”（空间有界）；本簇所涉系辞“易窮則變”之窮是历程不能再续（Onward），序卦“物不可窮”之窮是终尽，二者都不是断点。 => C11 之穷加 not_carried：“系辞之穷（不能再续）、序卦之窮（终尽）”；本簇条目对此二处只用平常语。
+   C11 | 只确切对应 ExchangeLaw.ReadsBelow 之断裂（存量降到阈值以下，律由不读转为读）及其与 Runaway 断裂之接合；mapper 曾以之兼名 Closing.Threshold 的上升之阈与「穷尽」义，一名两构。 => 穷只名降到阈下之断裂；上升之阈另立名，建议「盈科」（《孟子》「盈科而后进」，RU2-S-MZ 已核，义为满其坎而后进，正是升到阈值而后形成新的耦合）；穷尽义（「孰能窮之」「不可勝窮」）不入名。
+## 容 x1
+   C06 | 名行无引。先秦结构义只见墨经“窮，或有前不容尺也”（空间之容）；秦誓“寔能容之”、临大象“容保民”都是包容之品行义（不携带）。所容的先秦用例多是处所义，受事读法是约定。 => 容引墨经此句并注“空间之容，只取关系形式（水平与所需）”；所容注“约定：此刻诸水平所容许者之全体，对一条水平路径、在一步”。
+## 益 x1
+   C06 | 名表之益＝一族存量跨一步上升（Gain）。本簇所见古例多是“增之、有助”：苏辙“生不可益”、王弼“益之则忧”、程颐“无益於枯”。 => 益加 not_carried：“增之、有助之义”；本簇条目已不以这些例为益之出处。
+## 复归 x1
+   C06 | 章 §10 元闭一行在 main 上新增 Becoming.ClosedCapture（读法本身由份额形成时，读法之变也被吸收）；复归只锚 Law.perturbation_reabsorbed，未说它覆盖此行之哪一部分。 => 在复归名行注明它只名“只扰状态者被吸回”；ClosedCapture 之情形另立复词或条目，由 C07／整合者定。
+## 伪开 x1
+   C06 | 早期文本之词，名表未立名；其三型对应三种已有结构：I 合取过与（Pair.own_not_joint、Flow.joint_excess_ends），II 未兆与有限前段不定类（Web.break_not_bounded、Renewable.prefix_does_not_decide），III 复 => 不立名，只留在对照表中作早期之词；条目用三种结构名（laozi-52 已用入、未兆、明）。
+## 成生之限／绝生之限 x1
+   C06 | 早期文本之词，名表未立名；D49 判其结构同护闭与成闭。二名与成生／绝生（广之方向）同字而异构：限之判在能否再得，不在广狭。护开（keep open）亦无名。 => 不立名；对照表中写“结构同护闭／成闭”，并注明与成生、绝生不同构，免一字二义。
+## 常／闭 x1
+   C07 | 常锚 Invariant（每一可容许之步所保持之性质），闭之所名写「律从不离开的区域（吸收区域；对过程是不变量）」。确定之法下二者是同一结构（Law.absorbing_iff_invariant），名表自己的注把闭也说成不变量，两名指同一物。 => 常只名 Invariant（对一个过程，每一可容许之步所保持者）；闭只名确定之法从不离开之区域（Law.Absorbing），注改为「确定之法下与常相同（Law.absorbing_iff_invariant）」，不再说「对过程是不变量」。
+## 並行不悖 x2
+   C07 | 四字形不见于冻结文本（只有《中庸》「道並行而不相悖」）；「並行」义为并存、并进，同段「如四時之錯行」是定序之交替；所锚 Law.Commutes 是一法与一对称交换（T(σx)=σ(Tx)），与「并行」不是一个结构。名表已以錯行名 Interleavings，结构上与「並行」最近者是 World.c => Law.Commutes 另立一名（例如新组合「与对称相易」，或标未决）；並行不悖若保留，改锚 World.commute_laws，并在注中写明 RO ru-zhongyong-bing-yu-bing-xing 之条件（粘合、排除、联合计划）；否则不立。本簇读法中暂不用此名。
+   C13 | 名表锚 Law.Commutes（交换之律，C07），用例「道並行而不相悖」；而 RO ru-zhongyong-bing-yu-bing-xing 与本簇 zhongyong-bing-yu-bu-xiang-hai 把同一句读为各语境之拼合（Contextual.glues_iff_agree、 => 由整合者定此句之主读：若名取交换之律，RO 之拼合读法作为条目层之另一结构并注明；若取拼合，则 C07 改锚。
+## 類 x1
+   C07 | 锚 Learning.Lumped，但 Lumped π g 之义是「g 随 π 之类而同」（g 在 π 之每一类上取一值）；归并 π 本身（读法与其所分之类）是另一概念。一名兼二者，读法中「X 是类」与「X 随类而同」混用。 => 類名归并（读法 π 及其所分之类）；Learning.Lumped π g 读作「随类而同」（复词），注中写明。
+## 明／知幾 x1
+   C07 | 明与知幾锚于同一声明 Web.observed_raise_couples，两名一锚；而 YI-ZHUAN p-zhiji 对「知幾」所用者是 Web.observed_level_couples（Testing）与 Web.break_not_bounded。 => 知幾改锚 Web.observed_level_couples（以 observed_raise_couples 为其一例）；明另锚其「及于支持所不标记者」之结构（如 SelectionGap 一侧），或在注中写明二名在此锚上之分工。
+## 未兆 x1
+   C07 | 所引老子六十四章「其未兆易謀」说的是尚无征兆时容易图谋，结构上是机之前护闭（喻老以堤穴释之），不是锚 Web.break_not_bounded 所说之「断裂之前无耦合入之物界定其远近」。 => 未兆另择与 break_not_bounded 同构之出处，或把锚之所名改为「未被耦合读到之处」并注明老子六十四章只作对照；hanfei-yulao-bian-que 以机、护闭读此句。
+## 勢／所歸／同歸／推類 x1
+   C07 | 四名在名表中无锚（「—」）。本簇读法实际所用：势＝入于同一回环之构形（只在互卦之法上有 Hexagram.qian_basin、kun_basin、cycle_basin、basin_counts，一般之分划未证）；所归＝Law.drawnInto_returning（其注明言「what retur => 照此补锚，并在势之注中写明一般之势分划是缺口。
+## 識不早 x1
+   C07 | 锚只写模块 Regulation，未指声明。 => 锚 Becoming.Regulation.no_narrower_band（迟读 ℓ 步之规则所能保持之带不窄于 2(ℓ+1)d），tongshu-shi 据此读「识不早，力不易也」。
+## 理 x2
+   C07 | 所引「理者，成物之文也」（解老）只支持理之「区分」一半；同篇「凡理者，方圓、短長……之分也」亦然。理之「变化」一半（goAlike_iff_lumped）之古典支持在韩康伯「盡聚散之理，則能知變化之道」（魏晋注）。 => 注中写明二源及其层次：先秦给分，魏晋注给变化；或补一条先秦之变化用例。
+   C09 | 所引「理者，成物之文也」后文是「短長、大小、方圓、堅脆、輕重、白黑之謂理。理定而物易割也」：解老之理是读法所能分辨的形质，不是对律的建模。 => 注中写明：解老之理对应读法所分开者，携带律是理论另加的条件；或另选一个直接说结构与变化之律的出处。
+## 機／知幾（字形） x1
+   C07 | 简体中机（機，弩之发机）与几（幾，动之微）分开，但读者易混；系辞「幾者，動之微」之字是幾，不是機。 => 机之注写明只取孙子「節如發機」之機，系辞之幾只入知几；引文一律保留繁体字形。
+## 聞（闻） x1
+   C08 | 名表释为观察（从所观察者出发的读法之路线），锚 apart_only_downstream；Observation 中一个按水平耦合入之存量在其自身之下游，长为零之路线即直接观察，故此释义含亲见。但名之书证墨经‘知，聞、說、親’与经说‘聞，或告之，傳也。身觀焉，親也’正以闻为传受、与亲相别。按名表， => 二择其一：(a) 闻只名经他者之路线（长不为零，传），长为零之路线另名‘親’（墨经‘身觀焉，親也’），观察之总名另取，可考虑墨经‘惟以五路智’之‘路’；(b) 保留闻为观察之总名，而在 not_carried 写明墨经之闻只是其中经他者之一类。本稿未在 mojing-zhi-yu-wu、yinmin
+## 察 x1
+   C08 | 释义‘敏感性与最小识’用退役之义：记录已改名为 sensitivity-is-the-least-coupling，律为 ExchangeLaw.ReadsFinitely.least_coupling（敏感即最小耦合，双重否定之形）。语料中之察多为察看（俯察）、苛察（苏辙‘以察為明’）、分辨（墨经 => 释义改为‘敏感性：读有限多条件之律之最小耦合（Sensitivity）’；not_carried 加察看、苛察、心之察（分辨）、监察；并给一条书证（如解老‘目不明，則不能決黑白之分’之结构，或另觅先秦以察名敏于微差之句）。
+## 以往知來（以往知来） x1
+   C08 | 名表所给之引‘神以知来，知以藏往’不含此语；此语见墨子非攻中所引古语‘謀而不得，則以往知來，以見知隱’，下句断言‘可得而知矣’，其结构是经归并之迁移（推类，Learning.determines_lumped_iff），不是外推：脊柱之外推只提出值，并在其对角程上失误（Learning.diagon => 外推另取一名或用现代词‘外推’，锚 Learning.byElimination／Learning.diagonal_misses；以往知来之墨子书证移作推类之书证。本稿只在 hanfei-shou-zhu（失败之外推）与 mengzi-qiu-qi-gu 用以往知来，mozi-jing-yu-re
+## 默 x1
+   C08 | 名表无书证、无锚。荀子‘默而當，亦知也’讲言默之当（言谈之节），在不能确定处不出值之义出自杨倞注所引论语；论语‘多聞闕疑’‘君子於其所不知，蓋闕如也’才是不知处不出值之先秦本义，其字是闕。 => 锚 PartialReadout.silent_sound／SoundWithin.silent（并请补结果记录）；名可改为‘闕’（论语），或保留默而以论语‘蓋闕如也’为书证。论语2.17、2.18 之条目在 C16（lunyu-zhi-zhi-wei-zhi-zhi），本族新立 lunyu-gai
+## 符 x1
+   C08 | 名表无书证、无锚。Learning.Accords 是从不 MissesAt：一外推在每一出值处与历程无失误，沉默亦算相符；韩非‘四徵者符’是诸路一致，不是此结构。 => 锚 Learning.Accords／Learning.Misses；释义写明‘相符：在每一出值处无失误（不出值亦相符）；不符：某一出值处失误’；韩非‘四徵者符’不作此名之书证。本稿 hanfei-si-zheng-fu 已去符名，只 hanfei-xing-ming-can-tong 保留。
+## 過則改（过则改） x1
+   C08 | 所引‘過則勿憚改’之过是过失，道德义不被携带；逐字之‘过则改之’见孟子公孙丑下。结构是排除法外推：失误则换下一候选（Learning.byElimination），被越过者不再回来（Learning.index_mono），从不越过无失误者（Learning.index_le_of_accords） => 锚 Learning.byElimination；not_carried 写明过失之道德义；书证加孟子‘古之君子，过则改之’（新条 mengzi-guo-ze-gai）。荀子劝学‘行無過’之过是无过失，不作此名之用。
+## 往 x1
+   C08 | 释义合记录与前段为一；有两处用法与之相反：系辞‘过此以往’之以往是此后，论语‘不保其往’之往一说是去后之行。论语‘多見而識之’之识是记取，属往而不属已采之识。锚空。 => not_carried 加‘以往＝此后’与‘不保其往’之二读；锚 Learning.prefixOf（前段）与 Run.Fixes（记录固定所采取者）；与 C05 之‘藏往’（带着历史）分工：往名前段与记录，藏往名带着历史之过程。
+## 識（识） x1
+   C08 | 名表无书证。论语‘多見而識之’是记取，属往；墨子非命‘然今天下之情僞，未可得而識也’是辨认，正合 D45：情伪能否辨认取决于经耦合之归并。 => 以墨子非命此句为识之先秦首证（条目 mozi-tian-gui-zhi-zhi）；not_carried 写明记取义归往。
+## 所見（所见） x1
+   C08 | 名表无书证、无锚；所见在现代汉语又是‘所看到者’，与 Scope（实际执行从所信之构形所到达者）不尽相合。庄子则阳‘言之所盡，知之所至，極物而已’之‘所至’正是所达。 => 锚 Scope（Inquiry），并以 Scope.reached 为其律；考虑改名为‘所至’（则阳），或保留所见而以则阳为书证（新条 zhuang-zhi-zhi-suo-zhi）。
+## 相若 x1
+   C08 | 名表无书证、无锚。墨经‘權重相若也’与大取‘其親也相若’正是对照：其余相若，只变一项；与 C07 之‘同’（互模拟）不同：相若是所给之控制，不是被证之无别。 => 锚 FactorsThrough（对照之模型）与 Run.generalizes；书证用墨经两句（新条 mojing-quan-zhong-xiang-ruo、mojing-er-zi-shi-qin）；Confound.confounded 作其边界（不控制则混淆不被排除）。
+## 終而復始（终而复始） x1
+   C08 | 名表无书证、无锚，‘与环之别由修订者核对’。核对：套索（Learning.Lasso）是一程之历程自某步起周期重复，是历程之性质；C11 之環是耦合之回路，是关系网之结构；C05 之復是构形之返回。三者不同：列表所持之世界其历程必为套索（Learning.lasso_of_held）。荀子王制‘始则 => 锚 Learning.Lasso；书证孙子兵势‘終而復始，日月是也’（新条 sunzi-zhong-er-fu-shi）。
+## 出其不意 x1
+   C08 | 无锚；属争胜之层；Y1 以‘不測’名对角之失误（系辞‘阴阳不测之谓神’，Learning.diagonal_misses），一结构二名。 => 锚 Learning.diagonal；整合者在出其不意与不测中择一，另一降为条目；not_carried 写明诡道之争胜。
+## 參驗（参验） x1
+   C08 | 无锚、无书证。交叉核验之诊断力要求故障包络交叉分离；见证相通时不增分辨之一般律未证（G1）。荀子劝学‘日參省乎己’之參，杨倞训三，不是参验。 => 锚 WitnessRefinement.complete_diagnosability_iff_cross_separation；书证韩非‘無參驗而必之者，愚也’；not_carried 写明荀子之參＝三。
+## 驗／徵／試（验／征／试） x1
+   C08 | 三名皆无书证；验无锚。征在荀子‘征知’一说训召，不可作验证之书证。 => 验锚 Web.Excludes（testing-within-couplings），书证韩非‘結智者事發而驗’；征书证论语‘文獻不足故也，足，則吾能徵之矣’；试书证论语‘如有所譽者，其有所試矣’（新条 lunyu-you-suo-shi）与韩非‘試之官職’。
+## 衢 x1
+   C08 | 无锚、无书证。 => 锚 Parting.PartAt；书证荀子王霸‘此亦荣辱、安危、存亡之衢已’（已加入 xunzi-qu-tu）。
+## 讀（读） x1
+   C08 | 名表以讀名带地位之读法（AI 读法之标），不作结构之名；本族原以觀名经映射之读，已全部撤去（觀＝视图）。经映射读一律（Law.frameBy）之结构因此无名。 => 整合者决定 Law.frameBy 是否另立名，或明言它只是框架之构造、不需名。
+## 斷（断） x1
+   C08 | 无锚、无书证；系辞‘系辞焉以断其吉凶’之断是吉凶之评价，不是判断过程。 => 锚 judgeProcess（定义）与 commonResponse_judge_iff；书证另觅，荀子‘足以定是非决嫌疑’之决可作参考。
+## 當簿 x1
+   C09 | 两个校验都拒绝以它名 Labels：文本中没有有限的标签表；训诂有争议（簿记、主记，或读为薄、接触）；它与识（D45）的范围重叠。 => Labels（有限多个标签所确定者）改用说明短语，或另找名；「当簿其类」只作 xunzi-dang-bu-qi-lei 的证据，连 Learnable.learnable_iff_reading，不连 Labels。
+## 重同 x1
+   C09 | 《經說上》「二名一實，重同也」只说一步之内两名指一实；改名（Reidentify.rename）要求每一步用同一个对应，文本没有这一条。传本《經下》「殺狗非殺犬也，可，說在重」是墨家自己给的不可互换之例，与《經說下》「殺狗謂之殺犬，可」相反。 => 重同只名一步之内的二名一实（每个改认在每一步给出的对应）；改名（每步同一）沿用中文章节已有的说明短语「改名」，或以《經上》「謂，移、舉、加」与《經說上》「謂，狗犬，命也」之「移」为候选（交整合者定）；注中写出经与说相反、换名保值只对由关系定义的读数成立。
+## 一實 x1
+   C09 | 注文把两件事放在一个名下：跨步之同一（由命名给出，Turnover.reidentified；只在 World.fixed_iff 之处由守恒定出，其余到相似为止）与 Reidentify（两套命名之间的对应）。锚 Reidentify 与重同的锚相同，且 C03 已以一实名 reidentific => 一实只名「跨步之同一」（荀子「有化而无别」），锚改为 Web.Continues 加 World.fixed_iff 的定域；Reidentify 本身另名，沿用中文章节的「改认」（新组合）。
+## 私名 x1
+   C09 | 「止於是實」的一名一实只在一步之内成立（Reidentify.new_injective、identifiesAlike_id_iff、lumped_id 的最细一端）；跨步守一不在私名原文里。「聲出口，俱有名，若姓字灑」总说三等名，「灑」字可疑。 => 注改为「一步之内一一对应的名」；改名不变的内容移到名无固宜；「私」的偏私义先秦已有（《韩非子·五蠹》「自環者謂之私」，FA1-H49-R010），course 照改。
+## 法 x1
+   C09 | 所引「法，所若而然也」在墨经中是照着做就成其然的标准（「一方盡類，俱有法而異」），对应归类所依的读法 π，不是变化之律；表把它锚到 Law（律）。C09 的 mojing-yi-fa-jin-lei 因此不用法作名。 => 或为 Law 另找证明「确定的过程」义的出处，或在注中写明墨经之法是标准、读法之义，律是理论的延伸；归类所依的标准可作读法（读）的一个出处。
+## 制名 x2
+   C09 | 荀子「王者之制名」包括「有作于新名」（造新形，SharedCodes 中听不造形）与单一中心以罚维持的一层；表把制名注为外加码而不带这两层的说明。可比较的候选「壹同」（《墨子·尚同上》「天子唯能壹同天下之義」）与「書同文」（《中庸》）都带单一中心层。 => 保留制名，注中写「一个码被加于诸形成者（其源可为某一形成者之码）；不带王者之中心，不含造新名」；壹同、同文列为对照。
+   C13 | 名表〈制名〉（外加码）无锚；本簇孙子軍爭「夫金鼓旌旗者，所以一民之耳目也」正是外加之码，不是〈约定俗成〉之用之次序。 => 锚 SharedCodes.run_from_imposition 与 SharedCodes.outside_returns；用例可加孙子軍爭（BI1-S-SZ）。
+## 貫 x1
+   C09 | 所引「吾道一以貫之」带一个单一原则的中心，与「跨情境成立」的结构不同；结构校验建议用墨经「盡，莫不然也」「或也者，不盡也」，但盡已被 C14 用作中立（Neutral）。 => 为貫换一个出处，或在注中写明只取「通贯诸情境」之结构；其补集（同一形式在某处不给出某义项，stands_false_iff、TwoFormations.homonym）可以墨经「同名」（《經下》「物盡同名」，传本文字有讹）为候选名，交整合者定。
+## 約定俗成 x1
+   C09 | C09 各条把约定俗成读作「听的次序」打破对称，这是AI的结构读法；荀子以王者制名为主，约定从属于制名。 => 注中加：「把约定俗成读作听的次序是AI的结构读法；荀子中约定从属于王者制名」；不带「中心」一层。
+## 喻 x1
+   C09 | C09 各条反复用到读出（SharedCodes.reads_iff：读者的码分开诸义项、且两码在该处一致），表中没有名；映射者用「喻」，各条 names_used 只能写成说明短语。先秦已兼有「晓」（《论语·里仁》「君子喻於義，小人喻於利。」、荀子「名闻而实喻」）与「譬说」两义。 => 新增「喻」：读出（reads_iff、self_reads_iff、reads_other），只取晓、读出一义，不带譬喻义；或交整合者以说明短语处理。
+## 辨 x1
+   C09 | 「码分开诸义项」（SharedCodes.TellsApart；荀子「名定而实辨」「下以辨同异」）在 C09 中反复用到而没有名；表中「别」已作有界规则（Within）。 => 新增「辨」：码分开诸义项（TellsApart），与「别」分开；或用说明短语。
+## 通意 x1
+   C09 | 消解（CrossSituational.resolves_iff：只剩一个候选义项）在 C09 中出现（mojing-tong-yi-hou-dui、xunzi-shi-bu-yu、shangjun-quan-shu），表中没有名；《經下》「通意後對」是先秦出处。 => 新增「通意」：消解（resolves_iff），或用说明短语；交整合者定。
+## 择／缘感而择／识 x1
+   C10 | 名表中擇与識同锚 Web.SelectsThrough；而 Web.selects_alike_iff 由 SelectsThrough 的定义直接给出（定义律），以它为缘感而择之锚会把定义当作实质律；識按 D45 是形成自身的后续进程，由其耦合所作的归并解出，不是选择谓词。 => 擇 = 选择谓词本身（含 C12 的繁衍之选择）；緣感而擇 = Web.SelectsThrough，以 Web.selects_alike_iff 为其定义等价并标为定义律；識 = D45 的自身进程，不再锚 SelectsThrough。
+## 应域（新） x1
+   C10 | Flow.WithinResponse 无名，本簇暂写“回应范围”；它恰是感域的对偶（Flow.withinResponse_iff_coupling），与资域／扰域／及域／感域同属闭包一系。 => 立 應域 名 Flow.WithinResponse，记其与感域之对偶。
+## 择者（新） x1
+   C10 | 选择者无名，本簇写“选择者”。 => 擇者，依 待者／取者／與者 之式，指选择所经耦合的那个形成。
+## 劫 x1
+   C10 | 名表中劫无锚。 => 锚 RuleCapture（记录 capture-through-the-rule），以 share_rises_through 为其形成一半；出处引韩非子·三守「凡劫有三：有明劫，有事劫，有刑劫」（FA1-S-H16，已核）；不带入君臣框架。
+## 柄／劫及其读（RuleCapture、ClosedCapture、Capture） x1
+   C10 | 三个模块无名；元闭 未采且与 §10 元闭一行的含义不合；“柄移”不成词；中文本 §4.5 小标题“经规则的劫持”与 PRE-QIN“经由规则的捕获”相撞。 => 柄 = 选择之规则（韩非子「柄者，殺生之制也」，FA1-S-H48，已核）；劫 = RuleCapture；劫及其讀 = ClosedCapture（读取本身也随份额而被俘）；中文本与 PRE-QIN 统一用语。
+## 读取步 x1
+   C10 | Pace 的读取步无名，本簇写“读取步”。 => 時稽（荀子·王制「兼听而时稽之」，已核）；兼感与時稽合用之律即 G2。
+## 迟速／与时转 x1
+   C10 | 两名都曾指 Pace。 => 保留 遲速 名 Pace；與時轉 只作韩非子·心度「法與時轉則治」的引文。
+## 明 x1
+   C10 | 名表引「知常曰明」，它对应常（C07），不是明之结构（耦合到达支持所不标之处）。 => 改引荀子·致士「顯幽」（杨倞注「顯幽，謂使幽人明顯，不壅蔽也」）或论语·颜渊「浸潤之譖，膚受之愬，不行焉，可謂明也已矣」，二者均已核。
+## 感 x1
+   C10 | 名表所引「天地感而萬物化生」是主动义；古典之感以主动为主（咸彖、程颐「以私心感物」），名表取受控方向（条件耦合进形成）是约定，名表未写明。 => 名表注明方向是使用者之间的约定，并以荀子·性恶「感而自然，不待事而后生之者也」作受动义的先秦佐证（已核）。
+## 无明 x1
+   C10 | 锚只有 Law.rests_iff 与 Seeking；rests_iff 是停息的边界，不是锁定之求本身。 => 锚加 Becoming.Law.aboveAll_never_rests 与 Becoming.more_needs_open，rests_iff 作边界；保留“不同于十二因缘之首支”之注（中论、胜鬘两条按此处理）。
+## 及而不感 x1
+   C10 | 定义未写明；单一主体的读法只适用于自身行为。 => 定义为 Flow.WithinReach 中不在 Flow.WithinCoupling 者；自身行为之及而不感锚 Flow.act_unselected、Flow.consequence_unselected。
+## §7.4 对齐 x1
+   C10 | 原稿拟另立一名。 => 不另立名：它就是兼感加上每个成员各自的应，另立名会与 C13 相撞。
+## 不行不至 x2
+   C10 | §7.6 无声明之锚。 => 锚 Becoming.Assurance.completes_iff_runs 与 Becoming.Assurance.runs_of_completes。
+   C15 | 名只说到达须一步步走完，不含请求不等于完成、经中介到达他者；§7.6 的保证到达（assured-route-criterion）与风险界和结果之分（risk-certificate-outcome-distinction）在名与条目中都没有专门的承载。名条引的 Stock 与 Revising 之 => 以墨经“使，令謂，謂也，不必成”为主证（条目 mojing-shi-ling-wei，Countdown.exits 与 Countdown.Slow.misses 读作“故”），可考虑组合名「令不必成」（新组合，交整合者定）；若保留不行不至，名条写明请求与完成之分由墨经承担，Stock 与 Rev
+## 资域 x1
+   C10 | 缺古典引文。 => 荀子·天论「财非其类以养其类」（已核）。
+## 扰域 x1
+   C10 | 缺古典引文。 => 中庸「知風之自」（已核）。
+## 及域 x1
+   C10 | 缺古典引文。 => 中庸「知遠之近」（已核）。
+## 参验 x1
+   C10 | 名表无锚。 => 锚 Becoming.Web.Excludes.not_of_alike；衆端參觀 一义加 Becoming.Web.separates_all_iff_member。
+## 滋 x1
+   C11 | 锚「Runaway」指向断裂距离不被耦合界定的模块（Web.break_not_bounded 等），那是未兆之锚；失控之律在 LoopReturn 与 Loops。滋之循环失控义是约定，不是复原古义（滋本义为滋长）。 => 锚改为 LoopReturn.runs_away、runs_away_unbounded、carried_doubles_around、carried_runaway，并注 polynomial_iff_no_loop（含其前提：强度不随时间变、每步同一组形成、一切条件已列、部分自起点后不给差）与 
+## 所致 x1
+   C11 | 「所致」先秦以来多作因果归属（《韩非子·难三》「力之所致也」，荀子杨倞注、河上公注同类），与「携带量」之〈能达到之最大差异〉不合；结构校验者驳之。 => 改用「可致」或「能致」（公孙龙「求馬，黃、黑馬皆可致」，庄子「所適者猶可致也」，荀子「能致是者」，皆已在冻结文本中），或用平实之「所及之量」；锚保留 carried、most_difference_arrives、carried_attained。
+## 报 x1
+   C11 | 先秦「报」多指一个环节对所受的回应（投桃报李、以德报怨），而锚 LoopReturn.returnMap 是各环节回应复合而交回起点之量；且「报」带报答、交换义，易与先施混。 => 概念写作「各环节回应复合后交回起点之量（环返映射）」，单环节之回应用应；明注排除报答、交易义；与 C 簇之「让」（闭合之环节）协调，交回为零之环节可称「报为零」而不另立名。
+## 一偏 x1
+   C11 | 锚 Regulation.OneSided 是空流见证（流为空、水平恒为 2、m=1，下侧相反只空真），只说明单侧前提不是调节；有交换的单侧之律脊柱没有。 => 名保留，概念改写为「只对一侧回应（单侧前提而非调节）」；在缺口中登记有交换的单侧之律（见 lao-37-zhen-zhi），落地后改锚。
+## 识不早 x1
+   C11 | 只确切对应 Regulation.ReadsLate（读入晚 ℓ 步）及 late_band、no_narrower_band、lateReturn_band；mapper 兼用于「辯之不早」（未读入），一名两构。 => 限于迟读；未读入之情形用未兆（断裂远近不被耦合界定）或「不读」平语。
+## 不求备 x1
+   C11 | 容忍为零（tol=0）恰是不念旧恶之律（Tolerance.tolerating_zero：等于 Withholding.answers 之历程），不是「求备」；mapper 以「求备」名 tol=0 不对。 => 不求备只名 tol≥1 的容差（Tolerance.tolerating）；锚加 Tolerance.web_tolerating（依存网中的容差即此律）；tol=0 写作「容忍为零，即不念旧恶之律」。
+## 有以待之 x1
+   C11 | 锚 Tolerance.restores_iff 需要源可判定，且是先施之律的刻画；〈自每个起点成立〉的一般形式是 Tolerance.worst_start（在 KeepsInclusion 下）。另「待」与 C02 之「待」（依存）及 Withholding 之等待相撞。 => 锚改为 Tolerance.worst_start（附 KeepsInclusion 条件）、restored_stays、rises_from_withheld；注明此处「待」为应对义。
+## 先施 x1
+   C11 | 锚空。脊柱之先给（givesFirst）是源每一步都给（Withholding.Ring.givesFirst_restores 为见证，Tolerance.restores_iff 为一般刻画）；一次性的先给只沿环循环（Ring.answers_circulates 之对偶，AI 手算未经 Lea => 概念写作「持续先给（每步都给，不看所等待者）」；锚 Withholding.Ring.givesFirst_restores、Tolerance.restores_iff、Tolerance.givesFirst_restores_of_answers；一次性先给之循环可作 Lean 小项。
+## 宽猛相济 x1
+   C11 | 四字形式不见于冻结文本（出处在脉络之外），且宽猛是治者之词（意志或单一中心层）。 => 改用「抑举」（《老子》第七十七章「高者抑之，下者举之」）或「张弛」；锚 Regulation.relay、relay_threshold，并连 AssurancePlans.Regulation.opposite_moves、Regulation.rise_run、fall_run。
+## 频数 x1
+   C11 | 计数义是现代的；古之「頻數」多作副词（屡屡），王弼、程颐对「频复」之「频」读法亦不同。 => 标为约定、低置信；或以「数」（已采为计数）加限定作「作用之数」。
+## 还 x1
+   C11 | 回馈义只从河上公、苏辙起有明确用例（「必還報之」），王弼读「还反无为」、河上公读「好还自责」；先秦最确切之词是「反」（曾子「出乎尔者，反乎尔者也」），但反不立名。宗密「還執為我」之还是副词。 => 名保留并注其回馈义始见于注层；先秦对应句列曾子语；条目中副词之还不计为名。
+## （缺名）经由规则之俘获、日程已定 x1
+   C11 | 名表无 RuleCapture（经由规则之俘获：规则所读偏向份额而锁定）之名，C10 之「柄移」未采；无 SettledFrom（自某步起每个耦合都不已）之名，「已不已分」未采。本簇 hanfei-gufen、yulao-li-qi-zhi-chen、yuanren 用平语。 => RuleCapture 可考虑「柄移」或「器在臣」类先秦构语，由整合者定；SettledFrom 可写作「自某步起皆不已」，不另立名。
+## 知几／明 x1
+   C11 | 二名同锚 Web.observed_raise_couples（按水平耦合则抬升立即被读出）；本簇以知几名〈及早按水平读入〉，以明名〈耦合接上支持所不标记者〉，概念不同而锚相同。 => 知几锚保留 observed_raise_couples；明之锚改为其本义所在之声明（耦合闭包扩展所及者），避免一锚两名。
+## 所失 x1
+   C11 | Remainder 的「所失」是对同一历程按回应之阶的截断计算（carried_eq_carriedWithin_add），不是世界中另留之余量；把「余怨」读作所失需注明。 => 概念写作「截断于某阶所未计入之量」，在读法中明说为计算之所失；世界中之余量（介入后是否归零）登记为缺口（见 lao-79-he-da-yuan）。
+## 所出 x1
+   C12 | 方向与古义相反之险。古书「x之所（從）出」指 x 之来源：荀子君子篇「動知所出矣」，杨倞注「所出，謂所從也」（RU2-S-XZ24，注层为唐）；墨子天志中「義之所從出」「義何從出」（MO1-S-C27）；礼论「无先祖，恶出？」（RU2-S-XZ19）。若写「g 之所出」指 g 之后代，就把古义倒过来 => 在名表注中定方向：关系写作「x 出于 g」（x 聚而 g 给予 x）；「x 之所出」或「x 所从出」＝给予者 g；后代写作「出于 g 者」；不写「g 之所出」指后代（及物之出如「肉腐出蟲」除外）。并注明「出」随聚（Web.ComesToStand），不随作（Web.Arises）。本簇各条已按此写。
+## 傳 x1
+   C12 | 其一，跟分层标签「经／传／注／疏／论」之「传」撞名，而 layer 字段必须用此标签。其二，本簇所见「傳」之用例几乎都是样式之递接（Web.ByPassing）：「火傳」（ZH1-S03）、「知，傳受之，聞也」（MI1-S-SS）、「傳遺後世子孫」（MO1-S-C31）、「父子相傳」（RU2-S-X => 保留「传」名 Flow.TransmitsWithin，但在注中写明：只取「因而所需有界」一构；古书「傳」多指递接，那一构另有名（见下条）；分层标签之「传」是文献层，不是此名。若整合者以为撞名太重，可改用复合如「因而有度」，交整合者定。
+## （样式之递接，无名） x1
+   C12 | Web.ByPassing（递接前提）、Web.PassesAt、Web.Present 及 ByPassing 诸律在本簇九条中用到，名表没有名；本输出暂以白话「递接前提」「被递接」「载者」描述。philology 验证者说「C13 为 PatternPassing 所定之名」，名表中没有此名；s => 名「火傳」：庄子养生主「指窮於爲薪，火傳也，不知其盡也」（ZH1-S03，先秦内篇），薪是载者、各自终止，火是样式、经递接而不尽，构造恰是 a-pattern-lasts-through-passing；候选「相襲」（苏辙「如燈相傳相襲而不絶」，北宋）。不取「经传」。
+## 損益 x1
+   C12 | 注「损、益各同其单字义」不确：raised／lowered 比较的是后代之量跟其亲代之量（跨一次世系），而 C04 之「損」（下降）、C06 之「益」（一族跨一步之存量上升）是一族跨步之水平改动，构造不同。又 Price 计数等式（Becoming.price）本身无名；中文版正文术语表（THE-T => 改注为「损益：后代之量对其亲代之量之升与降（raised、lowered）；跟 C04 之损、C06 之益构造不同」。Price 等式或名「损益之计」，或只用描述「Price 计数等式」；并请整合者改正 zh 术语表之「传递律」。
+## 傳擇 x1
+   C12 | 名表之「擇」锚 Web.SelectsThrough（经一个映射之选择，有选者）；而 Evolution 之选出是经支持之有无（Flow.unsupported_childless、SelectionTerm.Flow.support_not_against），没有选者，也不经映射；Evolutio => 改所名为「经世系之演化：只有被支持者有后代；在界内所传之所需在界内被选出（Becoming.Evolution 诸律）」，并注明此「择」不是 Web.SelectsThrough；或另造不含「择」之名（如「传容」：经传及容之演化），交整合者定。识／择之共锚须各写所名之界（见下条）。
+## 象 x1
+   C12 | 象（选择所经之归并之映射）、择之象、識（D45：一个形成自身之历程经其耦合之归并而分解）、緣感而擇 都落在一个构造上（Learning.Training.web_selectsThrough_iff、Learning.selects_through_lumping、Relabel.selected_ => 在名表中写明：象＝映射本身（r : K → V）；择＝经映射之等变选择；择之象＝一个择所经之象；识＝一个形成自身之历程经其耦合之归并而分解（D45）；缘感而择若指经耦合之择，须写出跟识之别。象可锚 Becoming.Relabel.selected_alike_iff 一组。
+## 繼 x1
+   C12 | 名表注云「修订者改锚到实际表达继承的声明（Lineage／Succession），不锚 KeepsTenure」。Becoming.Succession 讲的是由先后相继之源供给（Successive.relay），不是承继；Lineage 只是命名。真正的承继是「因」（Web.InheritsAt => 「繼」若名接续，锚 Becoming.Succession，并改所名为「由先后相继之源供给」；不锚 KeepsTenure，也不锚任何承继之声明（那属「因」）；中庸之继志留作开放之缺口（见 zhongyong-shan-ji-ren-zhi-zhi 之 gap）。
+## 取法 x1
+   C12 | 本簇 mapper 所列之用例中，庄子天道「大匠取法焉」（ZH1-S13）是以静水之平为准而核对，构造同 Copying.inspect_le_iff，不是经他者实际回应之学；佛典之「取法」是执取诸法，所指相反。名表此行无引、无锚。 => 以孟子「有王者起，必来取法」（RU2-S-MZ）及大学「其為父子兄弟足法，而後民法之也」（RU1-S-DX）为出处；把「大匠取法焉」列为不带之义（核对参照）；佛典执取义列为不带；锚 Becoming.ResponseLearning.learn_through_interface。
+## 益之者 x1
+   C12 | 式标「新」，但此复合见于程颐《伊川易传》益卦上九注「故无益之者而或攻擊之矣」（YD-CY3，北宋）；先秦经文有「或益之」「莫益之」（YD-JG42）。 => 式改「复」，引「故无益之者而或攻擊之矣」，并列经文「或益之」「莫益之」为先秦出处；本簇新条目 yi-yi-huo-yi-zhi 即其条目。
+## 群 x1
+   C13 | 无锚。闭包（〈群域〉，Flow.WithinSystem）对牛马同饮一水也成立，不能区分荀子「人能群，彼不能群也」之能群；荀子以「人何以能群？曰：分」把能群放在分上，富國「離居不相待則窮，群居而無分則爭」把群居与分分开。原说明之「相互依待」混入 C02〈相待〉，共享不推出相互依赖（Clearing. => 群＝〈群域〉之群居加〈分〉：锚 Flow.WithinSystem（经〈群域〉）、Flow.system_whole_of_common，并以〈分〉之足迹之界补足；边界 Flow.SharesThroughout（定义）、Clearing.shares_not_mutual（构造之例）；直接用例加富
+## 分 x1
+   C13 | 无锚；原说明以「所给」述分，混同足迹（JointPlans）与流之所给（Flow.given）；由分到合取不超出所给（Flow.WithinJoint）没有已证之桥（记录 exclusive-footprint-support 只说二者相关）。与 C03 之分裂同字异指（批评者 collision） => 分只给足迹：PartsWithin、PartsApart、Supports（均为定义）与 JointPlan.supports_of_realizes；说明写明分本身不推出不争，gap 见 xunzi-wangzhi-qun-fen-yi；首要用例加韩非子用人「明君使事不相干，故莫訟；使士不兼官，故
+## 同力 x1
+   C13 | 锚 Dependence.MakesDifferenceTogether 正确，但说明「只在合起来时造成的差别」描述的是 DifferenceOnlyTogether（合起来造成而无一部分单独造成，即多重决定）；用例「三軍同力」「比知同力」「二人同心」都是每一方不可少之合起来造成。 => 说明改为「合起来造成的差别（difference made together）」：一并扣留则同一走法保持依赖（MakesDifferenceTogether，定义）；加 Dependence.makesDifference_iff_together（Iff.rfl，与〈有力〉之桥：单个部分之有力即单
+## （DifferenceOnlyTogether 未命名） x1
+   C13 | Dependence.DifferenceOnlyTogether（多重决定：合起来造成而无一部分单独造成，Pool 三取者之例）在名表中无名；mapper 把它误挂在「同力」上。积羽沉舟、众口铄金不在冻结文本中。 => 另立一名或作固定短语（如「合致而无独致」），标 coined，待找冻结文本之用例；锚 Dependence.DifferenceOnlyTogether、DifferenceOnlyTogether.two_le_length、differenceOnlyTogether_iff。
+## 出入相揜 x1
+   C13 | 原文「皆使衣食百用出入相揜，必時臧餘，謂之稱數。故自天子通於庶人」是逐一单位之收支相抵并留余，在「德必稱位，位必稱祿，祿必稱用」之等级比例框架中；原说明「合计之律而非个人之律」与以 Exceeding.own_not_joint 为证都不合原文。 => 说明改为：在一个条件上，一步之所取不多于所给；逐单位读近于 Flow.WithinOwn（定义），合于一个存量时是 Flow.WithinJoint（定义），水平不降（Flow.joint_keeps、Flow.level_kept）；「必時臧餘」要求留余，储备只推迟终结（Web.Carries.a
+## 爭 x1
+   C13 | 无锚；原说明「一切依此条件之部分」过宽（Flow.race_ends_greatest 之末一合取只对需要不小于 m 者成立）；缺边界。结构核验说「每步至少降一」未证、Lean 只证「n 步之内过与至多 n」，这不对：Flow.excess_lowers_at 证一步合取超出至少降一，Flow.ex => 锚 Flow.joint_excess_ends（终结需要不小于 m 者，取者在内）、Flow.ends_at_race_end（位置不入）、Flow.race_ends_greatest、Flow.excess_lowers_at、Flow.excess_bounded；边界 Clearing.g
+## 為天下先 x1
+   C13 | 名表未采，但本簇多条（laozi-22、laozi-68、suzhe-68、qian-yong-jiu）之结构正是这一目标；今只能在引号内出现。其结构与 C10〈无明〉（锁在不能静止之目标上之寻求，锚 Law.rests_iff、Seeking）相邻。 => 加为有出处之名，或作〈无明〉之用例：锚 aboveAll_unique、Law.aboveAll_never_rests（并 Law.rests_iff 为〈足而止〉之界）；用例：老子第67章「不敢为天下先」（YD-LAO-BASE）、王弼第68章注「武，尚先陵人也」（DS01）、河上公第67章注「
+## 稱 x2
+   C13 | 名表以〈称〉锚 RelativePosition，并说「相轧作对照条目」（已由 zhuangzi-renjianshi-ming-xiang-ya 承担）；但冻结文本中「稱」另有相称、比例之义：富國「德必稱位，位必稱祿，祿必稱用」「謂之稱數」、禮論「贫富轻重皆有称者也」，与相对位置不是同一结构。 => 锚保留 RelativePosition.positions_balance、change_opposed；位置之竞之律（change_balances、rise_needs_fall、not_all_rise、DrawingMore.grow_and_fall、Flow.drawn_positio
+   C17 | 名表的稱锚 RelativePosition：一部分之量对全族之和（n 倍己量对总和）。孙子「以鎰稱銖」是两量之比；两方之族时二者同向，多方时不同。老子「高下相倾」的零和读法只在传世本，郭店、帛书作「相盈」。孟子「权，然后知轻重」是权衡之义。 => 注明稱只名对全族之和的相对位置；两量之比与「相盈」作对照；「权」已是 C14 之名，不另取。
+## 讓 x1
+   C13 | 名表之义是闭合之一环（交回少于所受），但所列用例（论语3.7「揖讓而升」、4.13「禮讓」、大学「一家讓」、荀子「能讓」）都是让先、让物，不含此结构；与 C11〈报〉（returnMap）相邻。 => 用例改为论语8.5「犯而不校」（RU1-LY-08-05，新条目 lunyu-fan-er-bu-jiao）与司马法「取過在己」（BI1-S-SM，今本编纂层次未定），或改名「不校」；若保留「讓」字，标 derived，写明以让之不全取类比环中之不全交回是 AI 之引申；锚 LoopReturn.c
+## 念舊惡 x1
+   C13 | 肯定式「念舊惡」不见于冻结文本，是由「不念舊惡」反推。 => 标 derived；结构用例加荀子仲尼「志驕盈而輕舊怨」与杨倞注「輕舊怨，謂輕報舊怨」（RU2-S-XZ07），韩非子用人「怒積於上而怨積於下。以積怒而御積怨，則兩危矣。」（新条目 hanfei-yongren-ji-nu-ji-yuan）；锚 Withholding.waitsAll（定义）与 w
+## 不念舊惡 x1
+   C13 | 结构核验之 fix 把 withholding_returns 当作有记忆一侧、把 Ring.givesFirst_restores 当作不念之律，都不对：Lean 文档 withholding_returns 是无记忆（answers）下扣留在环上每回合返回，givesFirst 是一个来源无论所 => 锚 Withholding.answers（定义）、gives_without_chain（无长链处扣留消失）、withholding_returns 与 Ring.answers_circulates（环上扣留绕行返回）；说明写明有记忆者不复、无记忆者在无环处复而在环上绕行，环之恢复需〈先施〉（R
+## 同患 x1
+   C13 | 无锚。原 attestation YWH-LZ 之引文只证「同舟」不含「同患」；司马法「同患同利以合諸侯」之「同利以合」是以利害之一致合诸侯之术，属诱因，OPENING [^aligned] 明言这些定理关乎依赖与意义，不关乎诱因；Web.coextinct 已是 C02〈俱亡〉之锚。 => 锚 Flow.mutuallyDependent_of_common（人人依赖并交换之共同条件使流相互依赖）与 Flow.feeding_unrestricted_of_common（条件句），引用〈俱亡〉（Web.coextinct）而不以之为锚；主用例孙子九地「夫吳人與越人相惡也，當其同舟而濟」
+## 交相資 x1
+   C13 | 锚未填；墨子原文作「兼相愛、交相利」，利之价值义不携带（批评者已改名）；「交」在理论中允许间接（at some remove）；与 C10〈资域〉须协调。 => 锚 Flow.MutuallyFed（定义：每个形成都在每个形成之〈资域〉内），推论 MutuallyFed.mutuallyDependent，边界 Drawing.mutual_not_fed（相互依赖而无给予，构造之例），条件句 MutuallyFed.unrestricted；用例墨子兼愛中
+## 和而不同 x1
+   C13 | 名表锚为 SelectionPool 模块，与 C10〈兼感〉（同为 SelectionPool）同锚，一个结构两名；也须与〈中和〉（Regulation）之和分开。法藏六相之「同」（同相，共成）与此「同」字义相反。 => 〈兼感〉保留 SelectionPool（合用之耦合本身）；〈和而不同〉锚 Web.pool_adds 与 Web.separates_all_iff（合用所加之分辨）；说明注明不是〈中和〉之调节之带。
+## 同而不和 x1
+   C13 | 同上之同锚问题；原说明「同者相加什么也不加」只是诸成员全同之特例：Web.pooled_iff_member 之条件是凡该成员视为同者每个成员都视为同，即一成员之分辨已含其余一切。 => 锚 Web.pooled_iff_member；说明按定理陈述，全同为特例；不带君子／小人之品第。
+## 得兼 x1
+   C13 | 锚未填；「兼」另见 C03〈兼〉（整体）、C15〈兼权〉，同字异构。 => 锚 Viability.kernel_and_iff（每一走法计入时共同之守护即各自之守护），并 Viability.ChoicePoint.each_not_joint、no_rule_decides_joint（构造之例：各自可保持而共同不可）；用例孟子告子上「二者不可得兼」；说明注明与 C03
+## 機 x2
+   C13 | C07 之〈机〉是走法分叉之关节（Becoming.Junctures，用例「節如發機」）；大学「其機如此」之機是发动之枢之喻（一处发动而全体随之），mapper 把二者同一。 => 〈机〉之 not_carried 加大学「其機如此」之发动义；本簇 daxue-yi-jia-rang 已改。
+   C17 | 名表出处「節如發機」：原文以发机喻节之短促急发，一发不可收，并不说两种去向；关节（护与失并在）之读出于 D52，是 AI 读法。庄子至乐「萬物皆出於機，皆入於機」之機是万物所出所入之本（本原一层，在 C12 的 zhuangzi-zhong-you-ji 条），名表未列。 => 名表注明「節如發機」只出发机不可收之义，关节之读出于 D52；not_carried 加至乐之機（本原义）。
+## 分數 x1
+   C13 | JointPlan 是二分嵌套，「分數」含多分编组与各级员额之数，员额不载；孙子成书层次有争议未注；记录 joint-plan-composition 陈述的是 Viability.Plan.zip_keeps，不是 JointPlan。 => 说明加「多分编组按二分嵌套读，员额不载」；attestation 注孙子成书与编定层次有争议；记录用 joint-code-plan-lifting（JointPlan.realizes_image_iff）或 exclusive-footprint-support。
+## 别 x1
+   C14 | The table gives 别 = Within (a rule accepted only inside a formed bound). 墨子's 「別」 (兼爱下, 天志) has the structure of `bounded`: inside the region it is si => Either move 别 to `bounded`, the source sense, and give Within a phrase such as 畛内皆然 or a new name, or keep 别 = Within with a note that 墨子's 別 is `boun
+## 无亲 x1
+   C14 | The anchor 「天道無親」 is one standpoint (天道) being impartial toward everything, which is the shape of subTrue_total_iff. It is not significance passing al => Anchor 无亲 in 天運 「至仁无親」 (also in 庚桑楚), which denies exactly kinship-bounded transmission (see zhuangzi-zhi-ren-wu-qin). Keep 老子79 only as a partial use
+## 无方 x1
+   C14 | The anchor 「神無方而易無體」 means having no fixed place or form, not standpoint neutrality. => Change the anchor to 秋水 「是謂无方」 (with 「其孰承翼」, favoring no one; see zhuangzi-qiushui-wu-fang). Add 立贤无方 (no fixed category) and 无方之民 (without method) to
+## 顾 x1
+   C14 | 顾 has no anchor passage. 经下 「不知其所處，不害愛之」 runs against the gaze and perception sense. 人间世 「匠伯不顧」 uses 顾 for regard-for-use (route (b)), a different str => Anchor 顾 in 荀子荣辱 「長慮顧後而保萬世」 (regard for what comes after; see xunzi-rongru-chang-lv-gu-hou). Add 注视/知觉, 看中其用 (route (b), 匠伯) and 照料 (care as implement
+## 在己 x1
+   C14 | In 荀子 「在己者」 means what is within one's control. Valuation.Held is a global condition: every living claim falls within some standpoint's own region. => Consider a form that cannot be read as control, such as 皆在己 or 各在己域, or add 荀子's control sense to not_carried.
+## 皆顾之活 x1
+   C14 | Frame.relevance concerns realized living content whose continuation is significant from every standpoint. The name leaves out the realized condition. => Use 已然皆顾之活, or add a gloss that the content is realized.
+## 活 x1
+   C14 | Sources use 活 in the survival or saving sense (民非水火不生活, 自作孽不可活, 使活), which is not active ∧ not 剥. 活 must also stay distinct from 生生 (D1). => Add 存活/使活 to not_carried and note that 活 ≠ 生生.
+## 萌 x1
+   C14 | 萌 can be read as spontaneous growth (自长). Valuation.Seed is only existential: significance at one point at least. => Add 自长 to not_carried.
+## (missing) SubTrue / SuperTrue x1
+   C14 | Readings use 次真 and 超真 as plain descriptions of SubTrue and SuperTrue (true under some admissible boundary, true under every one). Neither has a table => Adopt names or plain glosses for SubTrue and SuperTrue (for example 某畛下真 and 诸畛下皆真), or confirm that 次真/超真 may stand as plain logic terms.
+## (missing) bounded / route (b) x1
+   C14 | `bounded`, bounded_closure_iff and route (b) (significance bounded by each center's closure, regard-for-use) recur across C14 (xici-mao, si-duan, jing => Adopt a name for `bounded`, for example 界内之顾, or 别 if 别 moves (see the 别 flag).
+## (missing) Valuation.related, covering, Connected/Grounds x1
+   C14 | Several readings need 'related along formed relations', 'every formation lies within some center's closure' (covering) and 'connected whole' (Connecte => Give table names or fixed plain phrases so that readings across clusters state these hypotheses the same way.
+## 從所可 x1
+   C15 | 两校都拒此名。荀子“求者从所可”的所可是心之所可，以“中理”为准，是一个认可的中心，与 J4（正当可行的选择）不合；条目 xunzi-zhengming-cong-suo-ke 已改为相分（意志或单一中心）。名表的锚 FrontierWorlds 是模块名，不是 J4 的声明；J4 的正当一半（被授 => 不采此名。以荀子正名“欲不待可得”的“可得”名一步可达的选项（Becoming.FrontierFrames.Options）；J4 另立组合名，例如「取於可得」（新组合，交整合者定；“擇”已为 C10 所用，勿混），其正当一半另立名或注明暂缺；孙子地形“主曰必戰，無戰可也”是与正当一半相张的例（条
+## 粹 x1
+   C15 | 荀子“所欲未尝粹而来”的粹义为不杂，即所取与所舍内容不混；它对应的是各有所长（Web.Mixed）的反面，也就是以广为愈不排序之处，不是提升规则 L 的“每一结果都在其上”。条目 xunzi-zhengming-cui 已不挂 L 的声明。 => 不以粹名 L。L 以孙子军争“軍爭為利，軍爭為危”（条目 sunzi-junzheng-wei-li-wei-wei）与经说上“所爲與所不爲，與相疑也，非謀也”（条目 mojing-yi-suo-yi-zhi-suo-yu）为证，名取含“皆”之义的组合，例如「皆愈」（新组合，交整合者定）。若保留粹，
+## 兼權 x1
+   C15 | 荀子不苟只给出 J1 的完全比较一半；“孰計之”是净算，与保留损失相反；锚 Lexical.BasicPriority 是 J1/J2 合一的条件，不承载保留损失。 => 名条写明兼权只名完全比较，或在名中加入保留一支（交整合者定）。保留一半以老子79“和大怨，必有馀怨”为主证（lao-79-he-da-yuan），大取“害之中取小，不得已也”（mojing-daqu-hai-zhong-qu-xiao）为旁证；锚加 Becoming.Frame.ReadsAt.lo
+## 無以小害大 x1
+   C15 | 孟子告子上14的小大是层（体之贵贱），不是量；读作量时与同類積小的“小”相撞。名不带“无论多少”之义，而 J2 的原文义（可选增益不许可施加的基本剥夺）由公孙丑上“行一不义、杀一不辜而得天下，皆不为也”给得更准。郭店《五行》“不以小道害大道”是更早的见证，但其分类（以大义执诛）与 J2 相分。名表锚 => 优先考虑以公孙丑上一句为主证（条目 mencius-xing-yi-bu-yi），名取其结构，例如「不以天下易一不辜」或「不以利易生」（新组合，交整合者定；显学、让王为旁证，不取其语境）。若保留无以小害大，名条写明小大是层不是量、不失大时养小不受禁止（告子上“饮食之人，无有失也”，条目 menciu
+## 量力而任 x1
+   C15 | 名只含能力之界，不含责任之据（正当的承担与可问责的依存改变）与余责；名条所引系辞一句的原义是力小任重则少有能免，不是量力而任（训诂校验已指出）；“任”与经上“任，士損己而益所爲也”（无界之任）相撞；左传“量力而行之”未在冻结文本中核对。 => 以论语雍也“力不足者，中道而廢；今女畫”为主证（条目 lunyu-li-bu-zu-zhong-dao-er-fei），孟子“不为也，非不能也”补余责一边（条目 mencius-bu-wei-fei-bu-neng）；考虑改以“力不足／自画”之分命名；墨经之任立为定域条目（mojing-ren-su
+## 同類積小 x1
+   C15 | FR 是可修订的承诺（Frame.SufficientMatching），不是律；名条须标为承诺。两处“小”所指的层不同：J2 的小是增益层，FR 的小是较轻的可恢复基本损失；古文中没有“较重者不对任意多的较轻者保持充分优先”之义，名是约定。 => 名条写明：同類（内容类，Frame.strictLossMatch_iff_length_of_alike）加積小（C04 的积小以高大）即同类之内不设永久的轻重词典序；只在可恢复的基本损失之内，终局伤害与不同的强制不在其内；与无以小害大并列时说明两个“小”。
+## 足而止 x1
+   C15 | 足一字两义：C02 作满足需要，本名作目标在静止处被满足；大学“財恆足”是流量义（补充覆盖消耗），不属本名。不确定之律下的可能之足与保证之足（Enough.assured_iff、Enough.Free.stays_meet_not_assured）无名。本名替换中文版现名“够”，须写明理由。 => 名条注明本名之足＝目标在静止处被满足，不取流量义（流量义归覆盖与存量一族）；与已采的无明以同一条律 Law.rests_iff 为界，是一界的两侧。另立可能之足与保证之足两个名，例如「或足」「必足」（新组合，交整合者定），主证荀子性恶“可以为禹”与“能为禹”之分（条目 xunzi-xinge-ke-
+## 先取 x1
+   C15 | 本名替换中文版现名“先占”：“占”带占有的语汇，先取只说在依赖形成之前汲取。名表锚 Preemption.not_undermining_yet_loses 是一个构造的见证，不是通则。批评者指出“絕其長”不应作名，已改为条目（xunzi-wangzhi-bu-jue-qi-zhang）。 => 作为对中文版术语的替换提案写明上述理由；锚注明为见证，并加通则 Becoming.Flow.Balances.includes_of_renewed（每个所汲取的条件在整个运行上被更新，就保住能形成者）作为不先取的充分条件；证用荀子王制与孟子“斧斤以时入山林”（mencius-fu-jin-yi-s
+## 權 x1
+   C15 | 名承载三种结构：在给定整体之内按所给比较定轻重；在处境中越过常规（孟子嫂溺）；秤的单一标量全序（荀子“古今之正权”）。理论在移动上的选择对应大取的“求”（“於事爲之中而權輕重，之謂求”），而求字在无明一系另有寻求之义。 => 把权限定为在给定整体（所體＝兼之一分）之内按所给比较定轻重；秤的全序与“古今之正权”写入不取（条目 xunzi-zhengming-zheng-quan 为相分）；越过常规的权义注明先秦已有，本名只取称量结构，不取例外许可；移动上的选择另说，不用“求”字作名，以免与寻求相撞。
+## 关系标记（必 或 皆 莫 莫不 不必 未 若 则 故） x1
+   C16 | 本簇的概念清单含这些关系标记，名表没有一行。读法中只能把它们当作普通虚词，而 C16 的若干条（mojing-bi-jin、mojing-bi-zhi、hanfei-mao-dun-bu-liang-li、lunyu-bi-you-bu-bi-you、lao-81-shan-zhe-bu-bian） => 立为一组结构标记，不作名：必＝对所论之域的全称，以经说上「一然者一不然者，必不必也」为证（一个不然者即否定之），经上「必，不已也」只入引文，因「不已」在名表已作复现；不取经说上「必也者，可勿疑」的认知义。或＝非全称（小取「或也者，不盡也」），不取经下「或，過名也」。莫不＝¬∃¬（经上「盡，莫不然也」
+## 盡 x1
+   C16 | 名表以盡名中立（Neutral：∀），出处为经上「盡，莫不然也」。但「莫不然」是 ¬∃¬，在构造的读法下弱于 ∀；二者只在每一情形定然否之处相等（Decided.of_not_not；对列出之族，not_not_all 只给到 ¬¬∀）。 => 盡仍名 ∀（C14），注中写明出处之式是 ¬∃¬，与 ∀ 只在每一情形定然否处重合；C16 中 ¬∃¬ 只用标记「莫不」，不另立名。
+## 設 x1
+   C16 | 所名「条件、假设」与一词一义冲突：条件在名表是所待（关系项的角色）。注「律的局部前提亦名设」又使「无设而然」自相矛盾：无前提的定理照样带局部假设（如 Derivation.relative_throughout 之 premise）。 => 设只名「陈述而不断言」者：延续条件（凡续皆有顾）、以广为愈、作为具名条件的 LPO 等，以及推导中作为前提而不被断言者（兼爱下「設以為二士」）。一条律的局部假设以标记「若」写出，不叫设；所名删去「条件」二字。
+## 無窮可盡 x1
+   C16 | 一个名合了 LPO、WLPO、Markov、LLPO 与依赖选择，而这些是强弱不同的原则，脊柱对它们分别作校准（Change.LPO、Sensitivity.WLPO、Horizon.Markov、Likeness.LLPO）。出处「無窮不害兼」是墨家说无穷不妨碍兼爱，其解说「盈無窮，則無窮盡也」是 => 无穷可尽只名 LPO（每一布尔序列或有一处为真，或处处为假）；WLPO 名「无穷可定其皆否」；Markov 名「非皆否则有是」；LLPO 与依赖选择由整合者定。出处保留经下「無窮不害兼」，注明是对照。
+## 不然者、不可非、定然否、或不當（出处） x1
+   C16 | 这些名的引一栏是空的；或不当之注要求修订者核对出处。 => 不然者：经说上「一然者一不然者，必不必也」。不可非：经说下「其理不可非」。定然否：荀子解蔽「未可定然否也」（RU2-S-XZ21）。或不当：经说上「不俱當，必或不當」，并注明它只对相矛盾的一对辞成立（同条「不若，若犬」），作为对一切辞的全称是弱排中律，属设（exists_undominated_if
+## 稳定（¬¬q → q） x1
+   C16 | 定然否的读法在 mobian-wu-qiong-ying-fou、mobian-yi-yan-wei-jin-bei 中都要说「结论稳定」，名表没有名。不采的「稳」是另一个概念（扰而复归）。 => 用复合「不可非则然」，由名表之名组成；不用「稳」。
+## 表示（一个说明所用的表示） x1
+   C16 | 方法要求说「一个表示略去的关系不是说明的失败」，名表没有表示之名；用「模型」又会撞上象（选择所经之归并）。 => 擬，出处系辞「擬之而後言」（YD-ZX7），与象、读分开；本簇读法暂写「表示」。
+## 相合 x1
+   C16 | 没有出处（注只写「RO 三种关系」）。 => 经说上「所以謂，名也。所謂，實也。名實耦，合也。」与经上「合，正、宜、必。」；单字「合」已名形成之并合（C03），只用复合「相合」。不取杨倞「合之以爲驗也」（RU2-S-XZ08）与经说上「俱處於室，合同也」。
+## 相分 x1
+   C16 | 与唯识「相分」（所缘之相）同字而所指不同；weishi-zheng-zi-zheng 一条两者同时出现。 => 保留相分为三种关系之一；凡引唯识，「相分」一律放在引号中并注其所缘之相义。不改用「相违」，因为相违是因明的术语（自教相违等），会撞上另一处。
+## 充分条件（有之必然） x1
+   C16 | 名表有小故（必要）与大故（充分且必要），没有单独的充分条件；mojing-gu-xiao-da 要说「活跃的充分条件不由依存给出」。 => 用经说上大故定义的前一半「有之必然」作固定短语，作单独充分之名。
+## 未決 x1
+   C16 | 没有出处。 => 程颐《伊川易传》乾九四「疑者未決之辭。處非可必也」（YD-CY，宋明），以论语「多聞闕疑」（先秦）为结构上的对照。
+## 止、不已（墨经的第二义） x1
+   C16 | 名表之止（停息）取经上「止，以久也」；经上「止，因以別道」与经下「止，類以行之」中的止却是以一个不然者止住推及。名表之不已（复现）取中庸「於穆不已」；经上「必，不已也」以同二字释必。 => 两名保留名表之义；推理上的止与「必，不已也」只入引文，经由不然者与标记「必」去读，不另立名。
+## 當 x1
+   C16 | C16 的墨辩各条都要用当、不当（辞与所争之彼相合），名表只有复合「或不当」与「当位」「当簿」，没有单字当。 => 若整合者要为当立名，出处取经上「辯勝，當也」，并与易章之当位分开；否则读法中当、不当只作对墨辩用语的提及。
+## 錯行 x1
+   C17 | 中庸「如四時之錯行，如日月之代明」的錯行与代明对文，义为更迭，说的是一个周期诸段依次相继，不是几个关系项各有自身进程而合成一列的交错；「錯」在说卦「八卦相錯」与错卦（Hexagram.complement）中又是互补之义，一字两用。所以以「如四時之錯行」为交错（Interleavings）之出处不准 => 交错另取名：以现代复词「交错」作新名（式：新），锚 Interleavings.LocalLaw.run_of_courses、unique_iff，并注明 D43（步序是读法，只在每两次交换共享关系项处由关系推出）；「錯」留给互补。荀子天论「列星随旋，日月递炤，四时代御」之递、代也只是更迭，可作对
+## 遲速 x1
+   C17 | 遲速与與時轉（C10）同指 Pace，名表自注“由修订者定”，一概念两名。遲速无先秦出处可锚：司马法「遲速不過誡命」（BI1-SM-R-11，在 C02 为平行）只说快慢受命令所限，不是规则改变之速。 => 删去遲速作 Pace 之名，保留與時轉（出处《韩非子·心度》「法與時轉則治」，锚 Becoming.Pace 与 Pace.pace_law）；「遲速不過誡命」留作 C02 的平行。
+## 時 x1
+   C17 | 名表以王弼「夫卦者，時也」为出处，但王弼之時在结构上是诸位之读法同时被实现的那一构形（Hexagram.atSites 中的构形，指标是位），不是 Situations 中使一步确定的情境（动作之分，finerLaw 的 (a, m, k)）。以此为出处会把构形（狀）与情境混为一名。注中所说先秦出处 => 出处改为荀子宥坐「夫遇不遇者，時也；賢不肖者，材也」（先秦；遇与材对举，正是情境与所行之分，见新条目 xunzi-yuzuo-yu-shi），以大取「或遇孰，或遇凶」为同构之证；王弼「卦者，時也」作对照条目（lueli-gua-shi-yao-bian），注明其時是构形。C17 原用的「遇」不另立名
+## 及（ReachedBy，无名） x1
+   C17 | TimedResponse.ReachedBy（到时限为止，来源经耦合到达读者）无名。C17 的 lunyu-yan-jizhi、wenyan-jishi、sunzi-cheng-ren-zhi-buji、sunzi-qianhou-bu-xiangji、xici-daishi-erdong 都以「 => 与 C10 合议，由一个簇持有：以复词“至期所及”（式：新）名 ReachedBy，出处取孙子九地「能使敵人前後不相及」（否定形）与论语「言未及之而言」；窗口待 G9 证成后再定名。
+## 定位（fixedPhase，无名） x1
+   C17 | Hexagram.fixedPhase（只在两端之间有定奇偶）无名；C17 原各条用「定位」（王弼「無陰陽定位」），而说卦「天地定位」的定位是八卦方位之定，同字异义；「陰陽定位」又含不采之阴阳。 => 以王弼辩位「去初上而論位分」的「位分」名 fixedPhase（式：古），注明不带王弼由尊卑推位之义（见 lueli-bianwei-zunbei）；说卦之「定位」不入名。
+## 比 x1
+   C17 | 名表的比（相邻两线相异，alternates）只是王弼亲比的必要条件：邢璹注屯六二、初九「爻雖相近，守貞不從」，相邻而异而不比；复六二王弼则许其比初。程颐又以「剛柔接」「剛柔之際」说二五、初四之相应，所以「剛柔接」不宜作比的先秦复词名（结构核查此议不取）。 => 注中写明比是约定：只名相邻相异，不带亲附；not_carried 列亲比与「守貞不從」之例；「剛柔接」只作对照，两读（比、相应）并存。
+## 承 x1
+   C17 | 名表的承（一缝下柔上刚，rises）是约定。邢璹注「陰承陽則順，陽承陰則逆」：承的通义是在下者承上，不限柔刚；归妹初九「相承也」是相助之义。 => 注明承只名下柔上刚之缝；not_carried 列在下承上的通义与「相承」相助之义（归妹初九，已移入 rejected）。
+## 乘 x1
+   C17 | 孙子「乘人之不及」之乘是趁，与名表乘（下刚上柔，falls）同形；夬彖「柔乘五剛」是一柔在五刚之上，合一缝之乘与全卦之独异。 => not_carried 列趁、驾之义；注明「乘五剛」只取最上一缝之乘，其余归独异。
+## 正 x1
+   C17 | 《小象》的正常为贞正之义：艮初六「艮其趾，未失正也」、晋初六「晉如，摧如；獨行正也」、艮六五「以中正也」都以「正」说不合奇偶的柔线，程颐释艮六五「言以得中為正」。另 HexagramPlaces 文档把 inPhase 标作“(正, 當位)”，而名表以當位名 holdsPlace（两端之间之正），一 => 名表注明正只名 inPhase，贞正之例不入列；HexagramPlaces 文档中 inPhase 的标注去掉「當位」，當位只名 holdsPlace（交模块所有者，在 board 上定）。
+## 涯 x1
+   C17 | 名表锚为 Horizon 模块，而有涯随无涯最近的一般律是 Diagonal.Unfolds.unheld 与 Learning.no_prefix_fixes_next；HorizonWebs.prefix_does_not_decide 只是例，Run.AgreeUpTo 是定义。C08 又以涯 => 涯的锚加 Diagonal.Unfolds.unheld、Learning.no_prefix_fixes_next，注明 prefix_does_not_decide 是例；涯只名视界，范围另取名（C08）。
+## 先後 x1
+   C17 | 名表无出处、无锚；C17 原以大学「知所先後」为最近之例，而大学之先后是本末定序（单一中心一层），不宜作步序之出处。 => 出处取墨经下「行脩以久，說在先後」或郭店《老子》甲「先后之相堕（随）也」；锚 Interleavings.LocalLaw.ownCourse、run_of_courses，注明 D43。
+## 變通 x1
+   C17 | 名表无锚；C17 所引 Pace.rule_at_reading 与 rule_kept 是所定义的随读之进程的展开，Switching.fixed_loses、changing_regains 是例，不是一般律。 => 锚为 Becoming.Pace（paced 之定义）与 Pace.rule_alike_until_reading；注明 Switching 是例。
+## 勢 x1
+   C17 | 名表只取吸引域义；C17 各条之势多是他义：韩非难势与孤愤的位势，苏辙「積而為勢」的积于关系之量，孙子「其勢險」「勢如彍弩」的蓄势、「無成勢」的阵势，孟子「其势则然」的外加之境。 => 名表 not_carried 列出位势、蓄势、阵势、外加之境四义；C17 各条已逐一注明其势不是名表的势。
+## 两半、高度、接缝、相异（无名） x1
+   C17 | Hexagram.halves（王弼「內外」「舉二體」）、Height（下中上）、Seam、answers（任意两位之线相异）都无名。「際」有争议：C01 拟以際名关系（知北遊），而解初六「剛柔之際」程颐读作初四相应。若把高度译作「高下」，会与王弼「高下不必均」（全卦中的上下）相撞。 => halves 名「二體」（式：古，王弼「舉二體」），Height、Seam、answers 用现代词“高度”“接缝”“相异”；際留给 C01。交整合者。
+## 步（与时） x1
+   C17 | 时、先后、机都以一步（Run 的一步、一次交换）为基；C17 的易传各条常以「时」说步（如损益彖「與時偕行」），而名表的时是情境，不作步之名。 => 易传中读作“在各步上”的「時」一律只在引文中出现，读法写作步（C01 之名）；C17 修订读法已照此区分。

@@ -99,6 +99,7 @@ On 19 October 2026 Ren answered for the register as a whole, “integrate all, t
 | D59 | the readings of the step of invariance and its objections (20 October) | adopted with exact scope: “what wants its continuation” the centers of standpoints, whose own presupposition holds; a standpoint's order a positive weighting, partial in its weights and counting everything; the impartial order what every such weighting shares (C); partiality the mixed comparisons; a weight of zero a denial of scope; the de se question left open |
 | D60 | the readings of the de se question and of graded significance (20 October) | adopted with exact scope: a content held de se Lewis's self-ascribed property, held de dicto one proposition; a grade's positivity standing, the grade status; a formation's level the steps of its continuation admitted; priority a strictly increasing transform of levels, strictly concave up to a bound; sufficiency a transform rising no further from a threshold |
 | D61 | the ethics' scope as the one closure (21 October) | adopted with exact scope: relational neutrality read as closedness under the formed relations' steps, so that the scope the two neutralities force is the closure of a valued living claim; the step of invariance read as the claim that the relation carrying significance connects everything living; the same law as 无明's reach through couplings; the order untouched, C alone ranking |
+| D62 | the readings of 《中华思想脉络》 on the spine and of the classical names (22 October) | adopted with exact scope: the three kinds of D47 and the four layers of D54 over every judgment of the 脉络; the 1,300 readings with the scope each states; the thesis holds at the root, needs a scope in its universal forms, fails as every system's property; the 447 names as a convention among the theory's users, each with what it does not carry; five RO and 易传 kinds decided for exact scope |
 
 <a id="1-生生与生成的空间--生生-and-the-generative-space"></a>
 ## 1. 生生 and the generative space
@@ -586,6 +587,7 @@ L1, S1 and S2 are D40-D42.
 - The line toward the aim of 20 October 2026 set by the session that started board item IV1 (no source record of the aim's words; none is quoted): D59 ([study section 256](BECOMING-RENEWAL-READING.md#256-the-step-of-invariance-what-it-reaches-across-standpoints-and-the-order-every-weighting-shares-iv1)).
 - The same line, continued by board item IV2 (the de se question, graded significance): D60 ([study section 260](BECOMING-RENEWAL-READING.md#260-the-de-se-question-and-graded-significance-iv2)).
 - Ren's message of 21 October 2026, “aim elegant completion” ([words](../../../../sources/15-codex-theory-conversations/2026-10-21-aim-elegant-completion.md)), taken up by board item EC: D61 ([study section 313](BECOMING-RENEWAL-READING.md#313-the-ethics-scope-as-the-one-closure-ec4)).
+- Ren's request of 19 October 2026 for a 中华 edition in the classical symbol system and the 脉络 joined to the theories, “请把中华文化中所有在theory of becoming上有映射，或者对应的，找出来，并寻找到非同于英文系统的一套符号系统，这个系统存在于古中文之中，在历史长河中一直在演变和迭代，所以，它应该是一套比英文更加适合的，生生不息的，道法自然的，我们需要的表达” ([words](../../../../sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md)): D62 ([study section 328](BECOMING-RENEWAL-READING.md#328-中华思想脉络-on-the-spine-and-the-中华本-zh)).
 
 <a id="13-一个说明--one-account"></a>
 ## 13. One account
@@ -806,3 +808,20 @@ Where: study section 313 (board item EC, its fourth step); the module `Becoming.
 **Reasons.** Each reading says no more than the laws it names: the equivalences are proved, and the readings name what they equate. Reading the scope as a closure keeps scope and order apart, as the theory requires, and puts the open warrant question in a form the laws can sharpen.
 
 **What would change it.** A representation of significance in which it spreads by something other than a relation's steps (by weights that decay along a path, for instance). There the scope would not be a closure, and graded significance (D60) would carry the scope as well as the status.
+
+<a id="d62-the-readings-of-the-civilization-thought-on-the-spine-and-of-the-classical-names"></a>
+### The readings of 《中华思想脉络》 on the spine and of the classical names
+
+Where: the chapters [CIVILIZATION-THOUGHT-AND-BECOMING](../../../../theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md) and [THE-THEORY-OF-BECOMING-ZHONGHUA](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md); the map [passages.json](development/zhonghua/passages.json) and the name table [names-decisions.tsv](development/zhonghua/work/names-decisions.tsv); the record [civilization-thought-on-the-spine](../../../../theories/becoming/results/records/civilization-thought-on-the-spine.md); study section 328 ([ZH](BECOMING-RENEWAL-READING.md#328-中华思想脉络-on-the-spine-and-the-中华本-zh)). Decided in the one account of D45; continues D54.
+
+**Decision.** Adopted with exact scope.
+1. **Kinds and layers.** The three kinds of D47 and the four non-relational layers of D54 are applied to every complete judgment of the 脉络, with two further kinds of divergence: a claim a checked law refutes, and knowing without coupling.
+2. **The readings.** The 1,300 readings of the map are adopted with the scope each states; a passage read for two structures has two entries.
+3. **The thesis.** One relational unfolding is the dominant thread, strongest at the earliest layer; universal forms mostly need a scope; it is not every system's property, and the language does not guarantee it.
+4. **The names.** The 447 names are a convention among the theory's users, constrained by the attested senses (`Becoming.SharedCodes`); each states the sense taken and what it does not carry; 道, 气, 天, 心, 性, 仁 and the other symbols of the not-adopted list are not names.
+5. **RO and the 易传 map.** Where both maps read one structure of one passage and differ (荀子「一实」, 孙子「同舟」, 系辞「贞夫一」, 杂阿含「此有故彼有」, 老子「柔弱者生之徒」), the exact scope is adopted.
+6. **The edition's own readings.** The readings of the 中华本 that no earlier decision covers carry this number (讀（AI，D62）) and are adopted with the scope each states.
+
+**Reasons.** Each reading names the declarations it rests on and says no more than they prove; the layers are named before the test so the thesis can fail; the names are chosen by their attested sense and anchored on current declarations, so the vocabulary can be checked rather than trusted.
+
+**What would change it.** A law that a reading contradicts; a reading of a passage, argued from the text and its commentaries, under which its kind changes; a printed edition whose text differs at a quoted fragment; an attested sense under which a name carries what its note says it does not.

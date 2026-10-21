@@ -1,0 +1,591 @@
+{
+ "cluster": "C01 一元与展开",
+ "lens": "STRUCTURE",
+ "names": [
+  {
+   "concept": "生成／变化（becoming）：同一展开中关系的形成、维持、转化、退化与消解，不预设为好；生起与止息、形成与解散是同一变化的读法",
+   "name": "变化",
+   "verdict": "revise",
+   "issues": "AI审读。（1）用例有误：五条用例中「状变而实无别而为异者，谓之化」（RU2-S-XZ22）与「同則无好也，化則无常也」（ZH1-S06）只含「化」，不含「变化」，不能作本名的用例。系辞两条与荀子礼论一条含「变化」，可以保留。（2）层次有误：not_carried 把「乾道变化，各正性命」归于周敦颐，但此句出自《彖传·乾》（YD-HX01，脉络 HX-N012／HX-R003），《通书》只是引用。传这一层自己就以乾道为变化的主语，并把变化收束到各正的性命（固定本性一层），应在传层标出。（3）fit 误述 Becoming.keep_pace。它只说：在有限族中，任一段上生起与止息的计数之差不超过族的成员数。「复现相伴」是 Becoming.coming_recurs_iff（有限的确定族）或 Becoming.World.arising_iff_ceasing（有限且活动可判定的世界）。不加可判定性时，后者对每个有限世界成立恰等价于排中律（Becoming.World.law_iff_em）。（4）一名一概念：「同一展开」同时由「大化」命名，又与 C03「生灭与变化之读」重叠。",
+   "fix": "删去两条只含「化」的用例，或移作单字「化」的用例。not_carried 中「乾道變化，各正性命」改记为彖传层（YD-HX01），作相分的所不带。fit 改写为：有限族中生起与止息的计数之差不超过成员数（keep_pace）；有限确定族中生起复现恰当止息复现（coming_recurs_iff）；有限且活动可判定的世界中同理（World.arising_iff_ceasing），不加可判定性即为排中律（World.law_iff_em）。「同一展开」只留一个名：建议以「变化」名整个展开，「大化」不作受控名。由整合者会同 C03 决定。"
+  },
+  {
+   "concept": "同一展开（the one unfolding）：算入其余，每个世界是交换之律的一次运行，诸读法处处粘合；律由这一运行读出，不在它之外",
+   "name": "大化",
+   "verdict": "revise",
+   "issues": "AI审读。（1）概念误述 World.unity。Becoming.World.unity 的四个合取项是：①算入其余，世界是 exchange 之律的一次运行；②算入其余后，变化的两种读法（水平之读与交换之读）处处粘合；③自身读法处处粘合恰当平衡；④平衡恰当其余从不活跃。①② 由其余的构造成立（World.withRest_balanced），不是「诸读法」一般都粘合。（2）以 World.unity 定义「同一展开」，等于把 World 当作起点。章节 §1 已说明：World 是诸读法粘合之处的读法，不是起点；展开是语境中的读法（Contextual.world、Contextual.fitsFree_iff）与运行（World.run_world、Shown.run）。（3）用例「天行有常，不为尧存，不为桀亡」与「小德川流，大德敦化」不含「大化」。荀子的「阴阳大化」与列星、日月、四时、风雨并列，是其中一项，指阴阳之化，不是整体之名。周敦颐的「大顺大化」已转为教化义。（4）与「变化」同名一概念。",
+   "fix": "删去两条不含「大化」的用例。概念改由 Contextual.world／fitsFree_iff 与 World.run_world 陈述；World.unity 只作补充，写明四个合取项和「①②由构造」。与「变化」二选一；若保留「大化」，须注明荀子用例只是阴阳之化一项。"
+  },
+  {
+   "concept": "整体的统一（unity）：算入其余，诸交换合为一次运行，诸读法处处粘合；语境中的读法总构成一个世界",
+   "name": "一",
+   "verdict": "reject",
+   "issues": "AI审读。（1）一名一概念：章节对照表已有「Yi (一)」一行，指 Ren 的唯一原语，最近的术语是角色（Web.roles）。再以「一」名 World.unity，会让同一个名带两个概念。（2）单字「一」义项过多：数目、齐同、统一、专一、太一。（3）概念夸大了 World.unity：粘合的只是变化的两种读法，而且算入其余后由构造成立（见「大化」条）。（4）Becoming.whole_not_in_pairs 是一个三位奇偶的例子，不是「整体不能拆成成对关系」的全称律。（5）not_carried 称王弼「主必致一也」已在本簇判为相分，但本簇没有这一条，只在 xici-zhen-fu-yi 的读法中顺带提到。",
+   "fix": "不立裸字「一」为受控名。World.unity 的内容用说明语陈述：算入其余，每个世界是交换之律的一次运行；自身的变化读法处处粘合，恰当平衡，也恰当其余从不活跃。相关条目照留。如需古典名，可检验《墨子·經上》（MI1-S-JS）「同，異而俱於之一也」。补王弼《周易略例·明彖》（YWH-LM，脉络 YCM130-LM-W-02-R01）为相分条。"
+  },
+  {
+   "concept": "关系项（relatum）：一个世界的关系项只有一类（World），形成与条件是一个关系项的两种读法（Web.roles）",
+   "name": "物",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：荀子「物也者，大共名也」与 World 只有一类关系项同构。需要修订的措辞有四处：（1）章节术语表把形成与条件称为「两种角色」，不是「两种读法」。（2）Becoming.Web.roles 的像中，形成恒在水平零、无物依之，条件永不活跃，所以没有一个关系项同时兼两角。它给的是类型上的统一；兼两角要在一类网 Web X X 中（Web.Embodied、Mutualism.web）。（3）序卦用例「盈天地之間者，唯萬物」紧接「有天地，然後萬物生焉」，天地被置于万物之外，充当容器。（4）对照表「一」与「位／际」两行涉及同一概念；「物」还有物我、心物的后起对待义。",
+   "fix": "概念中「两种读法」改为「两种角色」，并补 Becoming.World.ofRoles（两类读法作为一个世界）。fit 注明 Web.roles 只给类型统一。序卦用例注明天地不在万物之计内。与对照表「一」「位／际」两行互注。"
+  },
+  {
+   "concept": "配置由它怎样关联而定：互模拟所联系的配置相同，相同恰是通过同样的检验；跨步认同只由关系固定",
+   "name": "状",
+   "verdict": "reject",
+   "issues": "AI审读。（1）方向相反：在荀子正名中，状恰是不足以定同异的那一项。「状同而为异所者，虽可合，谓之二实」：状同而所异者是二，计数靠「所」（RO xunzi-hua-yi-shi：「二实以所计数，所是关系」）。以「状」名「配置由关系而定」，正把荀子的结构倒了过来。（2）概念混了两个结构：一是配置相似（Bisimulation、Alike，两过程状态间的关系）；二是跨步认同（Becoming.World.fixed_iff：在平衡世界中，守恒固定一个关系项的同一，恰当步后没有别的关系项与它水平相同；需要 DecidableEq）。（3）Becoming.alike_iff_sameTests 要求两框架在相似意义上确定（DeterminedAt）；不确定之处同检验而不相似（Becoming.Choosing.not_alike）。（4）「无状之状，无物之象」是对道的否定描述，不是「状不限于可见之形」的用例。（5）与 C07、C09 的相似、名实项重叠。",
+   "fix": "不以「状」名此概念，并把「配置相似」与「跨步认同」分为两个概念。候选可检验《墨子·經說上》（MI1-S-SS）「同，二名一實，重同也。不外於兼，體同也。俱處於室，合同也。有以同，類同也」中的四种同。荀子的「所」「实」作为认同之读的用例，交给名实簇统一处理。"
+  },
+  {
+   "concept": "历史（history）：一次运行留下的记录；两条律有相同的历史恰当它们只差死路，历史与所显之律的差别是记忆",
+   "name": "迹",
+   "verdict": "revise",
+   "issues": "AI审读。（1）与「轨迹」= Trace 冲突：中文版正文第 130 行有「核心的轨迹 `Trace`」，记录 trace-law-equivalence 题为「规律与轨迹」。（2）概念有误：脊柱的历史就是运行本身（各步的配置与动作；每段历史是它所显之律的运行，Shown.run），不是运行「留下的记录」。Run.keepHistory_shown 说的是：保留历史的律只容纳那一段历史；这不是「记录」。（3）「履之所出」把一个先在的行者放在迹之前。（4）唯一的先秦用例在外篇《天运》，年代有争议；孙绰、周敦颐两条是后起用例。",
+   "fix": "概念改为：历史是一次运行（各步的配置与动作），每段历史是它所显之律的运行（Becoming.Shown.run）；两律有相同历史恰当只差死路（same_histories_iff、DeadEnd.no_history）。pre_qin 注明「外篇，年代有争议」。若采用「迹」，只名运行之历史；有限的含两端之迹归「轨迹」（Trace）。not_carried 补上「履先于迹」的先在行者图像。"
+  },
+  {
+   "concept": "所显之律（law shown）：一段历史所显示的律；某个律恰在历史一致处容纳它；律与历史是同一展开的两种读法",
+   "name": "所以迹",
+   "verdict": "reject",
+   "issues": "AI审读。（1）「所以」标原因、凭借，正是先在的方向（所以然）。（2）在《天运》中，所以迹恰是迹所不能给的；脊柱上则相反：律由一切历史读出到死路为止（same_histories_iff），由一切含两端的有限迹恰好固定（Becoming.same_finite_histories_iff、Becoming.same_steps_iff_traces）。（3）fit 有三处误述：exists_law_iff 说的是「确定之律」恰在历史一致处存在；shown_le_iff 说所显之律是容纳该历史的最小之律，不是「随历史细化单调」；律多于历史之处是走不出历史的死路（DeadEnd.no_history），不是 Learning.no_prefix_fixes_next（那条说的是由一个运行的前段预测下一步）。（4）玄学的本末位次。",
+   "fix": "不立此名。律用说明语「所显之律」（Shown），与 C16 以「律」作地位标记的用法分开，由整合者统一。《天运》条保留为定域（见 zhuang-tianyun-ji）。"
+  },
+  {
+   "concept": "语境中的读法总构成一个世界（Contextual.world）；以语境为索引的框架总是合；不依语境的描述恰在诸读法相交处一致时存在",
+   "name": "两行",
+   "verdict": "revise",
+   "issues": "AI审读。名与结构相符。三处要改：（1）alternatives 把道枢读为「近于不依语境的立场」，与 RO 相反。RO（zhuangzi-qiwu-dao-shu-liang-xing）读「樞始得其環中，以應无窮」为以语境为索引的框架（Contextual.indexed_fits）。（2）Contextual.world 是定义，Contextual.indexed_fits 是 Iff.rfl，都由定义成立；实质内容在 glues_iff_agree 与 fitsFree_iff。（3）Specker.noGlobal 是一个见证（三盒系统），不是「有的世界处处不粘合」之律。",
+   "fix": "alternatives 中道枢改按 RO：道枢／环中是索引框架之位，两行是保留带索引的判定。fit 写明 world 与 indexed_fits 由定义成立，并把 Specker.noGlobal 述为「一个没有不依语境读法的系统」。"
+  },
+  {
+   "concept": "生起与止息、形成与解散是同一变化的读法（Web.change_readings）；有限世界里二者复现相伴",
+   "name": "通为一",
+   "verdict": "reject",
+   "issues": "AI审读。（1）概念属于 C03：Becoming.Web.change_readings 是 Iff.rfl 的定义三读（生起、形成、立起分别是活动、依存、水平的「成为」），不是「一处之成即另一处之毁」。（2）用例「其分也，成也；其成也，毀也」的结构是同一交换中此升彼降：Becoming.Flow.rise_with_fall 与 Becoming.Flow.standing_with_fall。条件是平衡，且该族在该步耗散：一成员升高或立起时，同族另一成员同步下降；下降（Falls）不是止息。（3）keep_pace 误述（见「变化」条）。（4）「道通为一」以道为主语。",
+   "fix": "不立为名，概念交给 C03 命名。zhuang-qiwu-tong-wei-yi 保留为定域并改锚（见该条）。张载「通一无二」的用例移到 zhangzai-tong-yi-wu-er。"
+  },
+  {
+   "concept": "形成与条件是一个关系项的两种角色（Web.roles、Flow.roles）：一个关系项既是他者的条件，又依条件而成；哪个条件就是哪个关系项由表示的共同索引给出",
+   "name": "所待又有待",
+   "verdict": "revise",
+   "issues": "AI审读。（1）Becoming.Web.roles 被误述：其像中形成在水平零、无物依之，条件永不活跃，没有一个关系项同时是条件与形成。兼两角只在一类网 Web X X 中出现：Web.Embodied（作为条件立着恰当活跃），以及 Mutualism.web（蜂与花各依自身与对方）。（2）fit 中「链上没有第一个所待」没有 Lean 支持：SourceSeed.web 的 source 始终活跃、立于零、不依任何物，脊柱也没有无穷后退之律。（3）《庄子》原句是问句（「吾有待而然者邪？」），以「惡識所以然」作结，不是断言。（4）须与 C02 一致：C02 以「待」名依存、「所待」名条件、「相待」名相互依存、「自待」名承担自身。",
+   "fix": "lean 改为 Web.Embodied、Web.Embodied.active_of_bearing、Web.active_along、Web.coextinct、Mutualism.web、Web.relabel_dependent、Mutualism.apart_relabelled；Web.roles 只作类型统一。删去「没有第一个」。与 C02 协调：可用 C02 的「所待」「待」说明，不另立短语名；若保留，用简式「所待／有待」并登记于 C02 词表。用例注明原句是问句。"
+  },
+  {
+   "concept": "没有两个实在：律由展开读出，不在展开之外；整体之外不失去什么；物与物的分界是读法所作",
+   "name": "无际",
+   "verdict": "reject",
+   "issues": "AI审读。（1）章节对照表「位／际」以「际」为关系（relation），「无际」会读成「无关系」，与理论正相反。（2）后世主义是无边无际。（3）概念是读法（DELEGATED-CHOICES D23、D43：律与历史是同一展开的两读），不是一条定理。（4）锚点误用：Becoming.Web.not_losesBeyond_whole 只说以恒真谓词为区域时没有区域外的准入损失，是平凡命题，不说整体之外无物；exists_law_iff 说的是确定之律。（5）用例全在外篇（知北遊、在宥），年代有争议。",
+   "fix": "不立为名。「没有两个实在」用说明语陈述并改锚：Becoming.Shown.run、Becoming.shown_le_iff、Becoming.same_histories_iff、Becoming.DeadEnd.no_history、Becoming.same_steps_iff_traces、Becoming.Run.withClock_restForms（无需从整体之外供给动作）。知北遊条见 zhuang-zhibeiyou-wu-wu-zhe-wu-ji。"
+  },
+  {
+   "concept": "整体的其余算作一个关系项（World.withRest）：它给与取超出诸关系项净交换的部分；平衡恰是其余闲置",
+   "name": "大块",
+   "verdict": "reject",
+   "issues": "AI审读。（1）一名一概念：C04 已以「其余」名同一概念（Flow.withImbalance，不平衡作为关系项）。（2）大块在《齐物论》中是含有万窍的整体（「山林之畏隹，大木百圍之竅穴」），不是表示所列关系项之外的余项。（3）「載我以形，勞我以生」是施事语法。（4）其余的「给与取」由构造成立：任何世界算入其余后都平衡（World.withRest_balanced）；其余也随所列的关系项而定。",
+   "fix": "采用 C04 的「其余」。tian-lai 与 da-kuai 两条保留，作为与「其余」对照的条目。"
+  },
+  {
+   "concept": "一个世界的表示（World：一类关系项、流与网）所及的范围；范围之外者算入其余，被保留而不被描述",
+   "name": "六合",
+   "verdict": "reject",
+   "issues": "AI审读。（1）不是有锚点的理论概念：「表示所及的范围」没有对应的声明。（2）本义是空间容器（上下四方）。（3）知北遊「六合爲巨，未離其內」位于「萬物自古以固存……此之謂本根」一段之中，带本根义。（4）World.withRest_counted 引用缺条件：它需要各步在场者的无重复列表，以及闭合每步的命名族；有限世界用 World.Finite.withRest_counted。（5）Web.not_losesBeyond_whole 是平凡命题。（6）C08 已以「范围」名框架（Frame）。",
+   "fix": "不立为名。齐物论条改为定域（见 zhuang-qiwu-liu-he）。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "zhuang-zhibeiyou-wu-wu-zhe-wu-ji",
+   "verdict": "revise",
+   "issues": "AI审读。（1）「彼爲盈虛非盈虛……彼爲積散非積散」与 Web.change_readings 不同构：change_readings 是活动、依存、水平之「成为」的定义三读（Iff.rfl），不说盈虚、积散是读法。（2）World.unity 与本段无关，且其平衡由构造。（3）exists_law_iff 说的是「确定之律」。（4）「无乎逃物＝没有不在物上的律」是延伸，没有对应。",
+   "fix": "删去 Web.change_readings、World.unity，以及记录 coming-and-ceasing-keep-pace、unity-of-readings。「彼爲盈虛非盈虛」改读为「律不是任何一个配置」，锚为每段历史是它所显之律的运行（Becoming.Shown.run）、所显之律是容纳该历史的最小之律（Becoming.shown_le_iff）。exists_law_iff 写作「确定之律」。加记录 histories-fix-law-up-to-dead-ends。"
+  },
+  {
+   "id": "zhuang-zhibeiyou-wu-chu-bu-de-xian-wu",
+   "verdict": "revise",
+   "issues": "AI审读。（1）Web.not_losesBeyond_whole 是平凡命题，不支持「整体之外什么都没有」。（2）Parting.before 是构造（def），只给「律容纳一步走入起点，则可向前补一步」这一方向，读法写的「恰当」过强。（3）gap 不成立。把 P 的步反转作为一个过程，(i) 正说该族持续可动（KeepsMoving）：有限配置时由 Becoming.Onward.KeepsMoving.run 即得（无可判定性、无选择），一般恰需 Becoming.Onward.DependentChoice（Onward.runs_iff_dependentChoice）。这是推论，不是新律。（4）gap 中的 Becoming.Onward.DependentSelection 不存在。「有限且可判定时可构造」多加了可判定性。（5）「无始」真正的限度是：运行以 Nat 计步、从 0 起，属于表示的范围（章节 §8）。",
+   "fix": "删去 Web.not_losesBeyond_whole 与 loss-beyond-a-region。Parting.before 改述为充分方向。gap 改写为：「无始」的限度是表示以 Nat 为步序；向后无尽是反向过程上 Onward.KeepsMoving.run（有限配置）与 Onward.runs_iff_dependentChoice（一般）的推论，若需要，只作二者的实例陈述。DependentSelection 改为 Onward.DependentChoice，并加记录 where-a-run-goes-on。保留 Law.withHistory_loses_beginning。"
+  },
+  {
+   "id": "zhuang-qiwu-dao-xing-zhi-er-cheng",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：Shown.run、shown_le_iff 正是「行之而成」的方向，律由历史读出。只需注明 Contextual.world 由定义成立，「无物不然」的对应也是定义性的。",
+   "fix": "读法注明 Contextual.world 由定义成立；exists_law_iff 写作「确定之律」。"
+  },
+  {
+   "id": "zhuang-qiwu-liang-xing",
+   "verdict": "revise",
+   "issues": "AI审读。（1）道枢的读法与 RO 相反：RO 读「樞始得其環中，以應无窮」为以语境为索引的框架（indexed_fits）；本条却以道枢对应「不依语境的读法只在相交处存在」，并据此否定第三立场。（2）Specker.noGlobal 是一个见证，不是「有的世界处处不粘合」。（3）记录 contextual-registration 已改名。",
+   "fix": "「樞始得其環中，以應无窮」改读为以语境为索引的框架总合（Contextual.indexed_fits，由定义成立）。「莫得其偶」读为不取一个对立面之外、不依语境的胜者：fitsFree_iff 给出这样的读法何处存在，Specker.noGlobal 给出一个它不存在的系统。记录 contextual-registration 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "zhuang-qiwu-tong-wei-yi",
+   "verdict": "revise",
+   "issues": "AI审读。（1）「其分也，成也；其成也，毀也」与 Web.change_readings 不同构（见名「通为一」）。（2）keep_pace 被误述为「复现相伴」，它只限定计数之差不超过族的成员数。（3）记录 contextual-registration 已改名。定域判断本身成立。",
+   "fix": "主锚改为 Becoming.Flow.rise_with_fall 与 Becoming.Flow.standing_with_fall：平衡且该族在该步耗散时，一成员升高或立起，同族另一成员同步下降；写明「毁」在 Lean 中是下降（Falls），不必是止息，定域条件是平衡与耗散。加记录 rising-and-falling-in-one-exchange。删去 keep_pace（复现相伴改用 coming_recurs_iff）。保留 Law.lost_stays、Law.DrawnInto.never_back 对「復通爲一」的限定，以及 fitsFree_iff 对「道通爲一」的限定。contextual-registration 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "zhuang-qiwu-yi-yu-yan-wei-er",
+   "verdict": "revise",
+   "issues": "AI审读。Frame.self_incomplete、Diagonal.Unfolds 与「一與言爲二……巧歷不能得」相符。但 World.unity 不说「说者也在其中」，Contextual.world 是定义。记录 registration-within-what-it-registers 已改名。",
+   "fix": "删去 World.unity 与 unity-of-readings。「萬物與我爲一」改读为读者是其所读之中的关系项（Frame.self_incomplete）。记录 registration-within-what-it-registers 改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "zhuang-qiwu-tian-lai",
+   "verdict": "revise",
+   "issues": "AI审读。（1）Clearing.center_not_derived 讲意义之中心：一个立场的意义沿供给闭合，仍不满足立场中立。它与「怒者其誰」（没有发动者）不是同一结构。（2）以大块对应其余，与 C04「其余」重名（见名「大块」）。（3）其余的给与取由构造成立，应写明。World.withRest、readOff_acting、readOff_taking、withRest_closed_iff 对应「咸其自取」「是唯无作」，可留。",
+   "fix": "「怒者其誰」改锚：Becoming.Run.withClock_restForms（任何运行都是一个整体中部分之程，动作由其余形成，无需从整体之外供给）、Becoming.TwoClocks.one_course_two_laws（历程不固定动作归谁）、Becoming.partForms_iff。删去 center_not_derived 与 derived-extent-limits，加 where-a-move-is-formed。名用 C04 的「其余」，并写明其余的给取由构造。"
+  },
+  {
+   "id": "zhuang-dazongshi-da-kuai",
+   "verdict": "revise",
+   "issues": "AI审读。判相合过强。Lean 说的是：在 Gainless 与有限列出下，条件的水平之升来自其余或开放来源（rise_from_rest_or_open、whole_rise_from_rest）。它不说形成的生（Arises）与死（Ceases）由其余给与。「載我以形……息我以死」说的正是生死。另有两点：其余的给取由构造成立；施事语法。",
+   "fix": "kind 改为 scope：只在「水平之升来自其余或开放来源（Gainless、有限列出）」处成立；生死由其余给与，Lean 不支持。读法写明其余随所列的关系项而定，名用 C04 的「其余」。"
+  },
+  {
+   "id": "zhuang-qiwu-wang-liang-wen-jing",
+   "verdict": "revise",
+   "issues": "AI审读。（1）Web.roles 的像中没有关系项兼条件与形成。读法中「一个关系项可以是体现的」要在一类网 Web X X 中才成立。（2）「惡識所以然」对应 relabel_dependent（标号不为依存所见），是弱读法，应标为推测。",
+   "fix": "declarations 改为 Web.Embodied、Web.Embodied.active_of_bearing、Web.active_along、Web.coextinct、Mutualism.web、Mutualism.apart_relabelled，Web.roles 只作类型统一。「惡識所以然」一句标为弱读法。不写「链无第一项」：SourceSeed.web 有一个不依任何物的源。"
+  },
+  {
+   "id": "zhuang-qiwu-liu-he",
+   "verdict": "revise",
+   "issues": "AI审读。（1）World.withRest_counted 有条件：各步在场者的无重复列表，以及闭合每步的命名族。（2）Web.significance_undetermined（动力学不定意义）与「論而不議」（言说节制）不同构。（3）六合是空间容器，判相合过强。（4）记录 one-axiom-yields-g0 已改名，本条不需要它。",
+   "fix": "kind 改为 scope。删去 Web.significance_undetermined、one-axiom-yields-g0；withRest_counted 写明条件，或改用 World.Finite.withRest_counted。保留 World.withRest、World.withRest_closed_iff：「存而不论」对应其余被计入而不被描述，只就表示所列之外而言，空间义不带。"
+  },
+  {
+   "id": "zhuang-tianyun-ji",
+   "verdict": "revise",
+   "issues": "AI审读。把「律在未取之动上多于迹」锚为 Learning.no_prefix_fixes_next 有误。律多于历史之处是死路（same_histories_iff、DeadEnd.no_history）；no_prefix_fixes_next 说的是由一个运行的有限前段作外推，必在某个过程上落空。读法还漏了两条：含两端的有限迹恰好固定律（same_finite_histories_iff、same_steps_iff_traces）；状态有界时，有限前段固定历史（Identification.prefix_fixes）。",
+   "fix": "读法改为三分：①一切历史固定律到死路为止；②一切有限迹恰好固定律；③一个运行的有限前段一般不定下一步，状态有界时则定。「陈迹不得所以迹」只在①的死路与③的一般情形上成立。declarations 加 Becoming.same_finite_histories_iff、Becoming.same_steps_iff_traces、Becoming.Identification.prefix_fixes；记录加 trace-law-equivalence、identification-where-bounded。"
+  },
+  {
+   "id": "zhuang-dazongshi-zi-ben-zi-gen",
+   "verdict": "revise",
+   "issues": "AI审读。相分成立。两处要改：（1）Web.not_losesBeyond_whole 是平凡命题，不支持「整体之外什么都没有」。（2）读法说庄子书内有张力（大宗师对知北遊），但知北遊自身也说「萬物自古以固存」，并称「此之謂本根」，张力不只在两篇之间。",
+   "fix": "删去 Web.not_losesBeyond_whole 与 loss-beyond-a-region。相分依据改为律由历史读出：Shown.run、shown_le_iff、exists_law_iff（写作确定之律）。对照处补知北遊「萬物自古以固存……此之謂本根」（ZH1-S22）。"
+  },
+  {
+   "id": "zhuang-dazongshi-qi-yi-ye-yi",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：两种读法各在其语境成立，不相取代。World.unity 与本段无关；Contextual.world、indexed_fits 由定义成立。记录 contextual-registration 已改名。",
+   "fix": "记录 contextual-registration 改为 claims-shown-in-context；可删 World.unity。"
+  },
+  {
+   "id": "lao-25-dao-fa-zi-ran",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：律由展开读出，没有展开之外的颁律者；等级义已列为所不带。World.unity 多余。",
+   "fix": "可删 World.unity。"
+  },
+  {
+   "id": "lao-42-dao-sheng-yi",
+   "verdict": "revise",
+   "issues": "AI审读。（1）whole_not_in_pairs 是一个例子（三位奇偶），读法写成全称「整体不在成对的关系里」。（2）World.unity 与「一」无关，且由构造。",
+   "fix": "改写为：有的关系为整体所持，而不为任何两部分所持（whole_not_in_pairs，三位奇偶之例）。删去 World.unity 与 unity-of-readings。"
+  },
+  {
+   "id": "lao-37-wu-wei-er-wu-bu-wei",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：TwoClocks.one_course_two_laws（历程不固定动作归谁）与 partForms_iff 正是定域依据；侯王中心已标出。",
+   "fix": "无。"
+  },
+  {
+   "id": "lao-40-you-sheng-yu-wu",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符，来源律的条件（平衡、Gainless、有限列出）已在读法中给出范围；先在之无已标为不取。",
+   "fix": "无。"
+  },
+  {
+   "id": "lao-6-xuan-pin",
+   "verdict": "revise",
+   "issues": "AI审读。（1）其余随表示所列的关系项而定，换一种列出，其余就不同，不是一个固定之门。（2）Flow.rise_from_rest_or_open 还需要有限列出，读法只写了「在第一律之下」。（3）其余之给由构造成立。",
+   "fix": "写明其余随所列关系项而定；条件写作 Gainless 与有限列出；「天地根」作为固定之根没有对应。"
+  },
+  {
+   "id": "lao-39-de-yi",
+   "verdict": "revise",
+   "issues": "AI审读。（1）「得一」在本章是使各者得其功能的条件（脉络 LE-N052；LE-R058 类型 enabling），同章还有「侯王得一以为天下贞」（单一中心）。（2）World.unity 由构造对每个世界成立，所以「得一在算入其余时对每个世界成立」是空的。（3）fragments 漏了侯王一句。",
+   "fix": "kind 改为 divergence：各者所得之一是先在的、使其成其功能者，同章含侯王为天下贞的单一中心。fragments 补「侯王得一以为天下贞」（YD-LAO-BASE）。World.unity 只作对照，并写明由构造。"
+  },
+  {
+   "id": "lao-22-bao-yi-wei-tian-xia-shi",
+   "verdict": "keep",
+   "issues": "AI审读。相分成立。Clearing.center_not_derived 讲的是一个立场的意义沿供给闭合而不中立，正合「为天下式」以一人之式为众人之式。读法应按此表述。记录 contextual-registration 已改名。",
+   "fix": "读法把 center_not_derived 述为「一个立场沿供给闭合的意义不满足立场中立」。记录 contextual-registration 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "lao-28-pu-san-wei-qi",
+   "verdict": "revise",
+   "issues": "AI审读。（1）whole_not_in_pairs 是例子，不是全称。（2）Web.not_losesBeyond_whole 是平凡命题。separation_faithful_iff 对「大制不割」是对的。",
+   "fix": "删去 Web.not_losesBeyond_whole 与 loss-beyond-a-region；whole_not_in_pairs 写为例子。「大制不割」加 Becoming.separation_admits_extra：把总相伴的两部分分开描述，失去的关系会以多出的组合出现。"
+  },
+  {
+   "id": "lao-74-si-sha-zhe-heshang",
+   "verdict": "keep",
+   "issues": "AI审读。相分成立（意志与单一中心）。记录 one-axiom-yields-g0 已改名。",
+   "fix": "记录 one-axiom-yields-g0 改为 continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "jielao-de-dao-zhi-gong",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：由见功定形就是律由历史读出到死路为止；shown_le_iff、Shown.agrees 述得准确。",
+   "fix": "无。"
+  },
+  {
+   "id": "jielao-bu-de-bu-hua",
+   "verdict": "revise",
+   "issues": "AI审读。（1）TwoClocks.one_course_two_laws 说的是历程不固定动作归谁，与「不得不化」无关。（2）Pace.never_reads_loses 有条件：快层配置有限，且规则之律合并两个配置；读法没写。（3）「無常操」更贴近 Pace 中的 Switching 见证：每个固定规则自第一步起失去一个配置，复得需要换规则。",
+   "fix": "删去 TwoClocks.one_course_two_laws 与 where-a-move-is-formed。加 Becoming.Switching.fixed_loses、Becoming.Switching.changing_regains，标为见证，不是一般律。never_reads_loses 写明条件。"
+  },
+  {
+   "id": "xunzi-zhengming-wu-zhuang-shi",
+   "verdict": "revise",
+   "issues": "AI审读。与 RO 一致的部分成立。两处要改：（1）Web.roles 不对应「大共名」：它给的是形成与条件的和类型；一类关系项就是 World 的 Relatum 本身。（2）World.fixed_iff 的方向应写明：步后另有关系项与它水平相同（状同）时，守恒不固定谁是谁，这正对应「虽可合」。",
+   "fix": "「大共名」改锚为 World（一类关系项），删去 Web.roles 与 space-and-its-parts。读法加一句：状同之处守恒不定其同一（World.fixed_iff），所以计数靠所，即关系。加 Becoming.Twins.left_alike_right（RO 已用）。"
+  },
+  {
+   "id": "xunzi-tianlun-da-hua",
+   "verdict": "revise",
+   "issues": "AI审读。（1）「天行有常」作为相合片段过强：脊柱不断言整体之律不变；规则只在从不读快层时保持（Pace.rule_kept），复得需要换规则（Switching）。（2）World.unity 由构造。（3）significance_undetermined 只能读作同一网可配不同估值，方向要写明。（4）记录 one-axiom-yields-g0 已改名。",
+   "fix": "把「天行有常」移出相合片段，或整条改为 scope，并加 Pace.rule_kept、Switching.changing_regains。World.unity 写明算入其余后的平衡由构造。记录 one-axiom-yields-g0 改为 continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "lunyu-ren-neng-hong-dao",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：律由历史读出，一族历史所显之律随这族历史而定（shownBy_le_iff）。",
+   "fix": "无。"
+  },
+  {
+   "id": "hanfei-zhudao-dao-zhe-wan-wu-zhi-shi",
+   "verdict": "keep",
+   "issues": "AI审读。相分成立（先在之始、固定标准、单一中心）。两条记录已改名。",
+   "fix": "one-axiom-yields-g0 改为 continuation-condition-yields-living-significance；contextual-registration 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "xici-bian-hua-jin-tui",
+   "verdict": "revise",
+   "issues": "AI审读。Hexagram.changes_keeps 的内容是 KeepsPossibilities ∧ ¬Lossless：每个可能都保留，而过程合并（Hexagram.changes_merges）。读法写成「保持区分」，正相反。另外，「刚柔相推」在 Lean 中只是表示层的单爻翻转（flip）。",
+   "fix": "「保持区分」改为「保留每个可能而合并（非无损）」，加 Becoming.Hexagram.changes_merges。注明 flip 是表示层的一步。"
+  },
+  {
+   "id": "xici-yi-yin-yi-yang",
+   "verdict": "keep",
+   "issues": "AI审读。准确：arising_iff_ceasing 的条件（有限、活动可判定）与 law_iff_em 都写对了。",
+   "fix": "无。"
+  },
+  {
+   "id": "xici-ji-zhi-zhe-shan",
+   "verdict": "revise",
+   "issues": "AI审读。（1）Becoming.g0_of_unrestricted 已改名为 Becoming.livingSignificance_of_unrestricted（Relevance.lean）。（2）记录 one-axiom-yields-g0 已改名。（3）读法写了条件本身不排序，但应补出排序在何处。",
+   "fix": "改名两处。读法补一句：排序在于 C（称拓宽为更好）与不变之步，不在延续之条件。"
+  },
+  {
+   "id": "xici-tai-ji",
+   "verdict": "keep",
+   "issues": "AI审读。定域准确：作为二分组合成立，作为先在之太极不成立。",
+   "fix": "无。"
+  },
+  {
+   "id": "xici-dao-qi",
+   "verdict": "keep",
+   "issues": "AI审读。定域准确，等级义已标出。",
+   "fix": "无。"
+  },
+  {
+   "id": "xici-tong-bian-zhi-wei-shi",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符。",
+   "fix": "无。"
+  },
+  {
+   "id": "xici-tian-di-she-wei",
+   "verdict": "revise",
+   "issues": "AI审读。Frame.world_fixes_run 只说两运行的配置之世界在活动上一致，则各步状态一致。它固定的是各步配置，不是动作。记录 contextual-registration 已改名。",
+   "fix": "读法写作「固定各步配置」。记录 contextual-registration 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "xici-qian-zhi-da-shi-kun-zuo-cheng-wu",
+   "verdict": "revise",
+   "issues": "AI审读。（1）「始」与「成」不是条件与形成两角，而是把起始与完成分派给乾坤二者。（2）Web.roles 的像中无兼两角者；relabel 与本段无关。（3）同段有「乾道成男，坤道成女」「干以易知，坤以简能」（冻结文本作「干」），是否以乾坤为两个本原，要由此判定。",
+   "fix": "锚改为 Becoming.Web.change_readings（生起即活动之成为，立起即水平之成为：始与成作为同一变化的两读）与 Becoming.TwoClocks.one_course_two_laws（历程不固定动作归谁）。保留定域：作为一个变化的两读成立，作为两个本原不成立。若同段上下文把乾坤读成分任始成的二本原（固定本性），改判相分。"
+  },
+  {
+   "id": "xici-fan-wei-bu-yi",
+   "verdict": "keep",
+   "issues": "AI审读。定域准确：对配置与律成立，对保留历史的展开不成立。",
+   "fix": "无。"
+  },
+  {
+   "id": "xici-xian-ren-cang-yong",
+   "verdict": "keep",
+   "issues": "AI审读。定域依据相符。两条记录已改名。",
+   "fix": "runaway-distance-unregistered 改为 runaway-distance-uncoupled；testing-within-registration 改为 testing-within-couplings。"
+  },
+  {
+   "id": "xici-zhen-fu-yi",
+   "verdict": "revise",
+   "issues": "AI审读。（1）World.unity 中「每个世界是交换之律的一次运行」在算入其余后由构造成立，所以「贞夫一」对每个世界空洞地成立；实质内容只在「自身读法粘合，恰当平衡，恰当其余从不活跃」。（2）王弼《略例》的单一中心读法只在所不带中提到，没有单独成条。",
+   "fix": "读法写明哪部分由构造成立、哪部分有实质内容。另立王弼《周易略例·明彖》条为相分（YWH-LM，YCM130-LM-W-02-R01：「故眾之所以得咸存者，主必致一也」），可与《老子》三十九章「侯王得一以为天下贞」对照。"
+  },
+  {
+   "id": "xugua-you-tian-di",
+   "verdict": "revise",
+   "issues": "AI审读。（1）所引声明（互卦之律的不动点与循环、过程复归恰当终止）讲的不是序卦卦序。（2）卦序在 HexagramSequences 已证只是一张表的运行：运行卦序之律读每一线（Hexagram.runsOrder_reads），不与任何合并同行（Hexagram.runsOrder_not_lumped）；序卦以言辞给理由，不以律。（3）「有天地，然後萬物生焉」是时间上的生成次序；下篇「有君臣然後有上下，有上下然後禮儀有所錯」接入位次。并行条 WP-XG-C02-S01-R02 把下篇当作同一卦序起点，掩盖了位次。",
+   "fix": "kind 改为 scope：作为一张表的顺序成立（Becoming.Hexagram.runsOrder_iff、Becoming.Hexagram.orderNext_runsOrder、Becoming.Hexagram.runsOrder_reads；记录 hexagram-arrangements-and-laws），作为宇宙生成次序不成立。下篇的位次链另列相分（YD-OW-XG，脉络 OW-N064），并改写并行条的说明。"
+  },
+  {
+   "id": "xugua-ying-tian-di-wei-wan-wu",
+   "verdict": "revise",
+   "issues": "AI审读。（1）「盈天地之間者，唯萬物」紧接「有天地，然後萬物生焉」，天地被置于万物之外作容器。读法说「天地本身在序卦中也是卦」，是调和。（2）Web.roles 被述为一类读法。",
+   "fix": "kind 改为 scope：在天地之间只有一类成立；天地作为容器不在计内，而脊柱没有容器。锚改为 World（一类关系项）与 Becoming.World.ofRoles。"
+  },
+  {
+   "id": "shuogua-jian-san-cai",
+   "verdict": "revise",
+   "issues": "AI审读。（1）Hexagram.halves_indexed 只给上下两卦（二体）两个语境，不是天地人三才（初二、三四、五上三对）。（2）脊柱没有三才的语境；Hexagram.atSites_glues_iff 对任意位点类型成立，三才只是它一个未写出的实例。（3）记录 contextual-registration 已改名。",
+   "fix": "kind 改为 scope。删去以 halves_indexed 为三才依据的说法，改述为：以三对位为位点类型，是 Hexagram.atSites_glues_iff 的一个实例（AI读法，Lean 中未写；如需写出，须另行认领）。记录 contextual-registration 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "shuogua-shen-miao-wan-wu",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：神作为说法，不是施事。记录 registration-within-what-it-registers 已改名。",
+   "fix": "改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "tuan-kui",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：合并下同行而消息之律仍分开，两种读法各有范围。",
+   "fix": "无。"
+  },
+  {
+   "id": "xiaoxiang-guan-wo-sheng",
+   "verdict": "revise",
+   "issues": "AI审读。（1）脊柱上的检验是从该配置出发的动作序列及其所见，不是「与他者（民）的关系」一般。「观我生，观民也」是借他者的回应认己，与 alike_iff_sameTests 不完全同构。（2）alike_iff_sameTests 要求两框架确定；不确定之处同检验而不相似（Choosing.not_alike）。",
+   "fix": "kind 改为 scope：只在「配置由检验固定且框架确定」之处成立。读法写明检验的意义，并加 Becoming.Choosing.not_alike 与记录 tests-fix-likeness-where-determined。君民位次保留在所不带中。"
+  },
+  {
+   "id": "dayou-zi-tian-you-zhi",
+   "verdict": "keep",
+   "issues": "AI审读。相分成立（意志层）。记录 one-axiom-yields-g0 已改名。",
+   "fix": "改为 continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "wfz-qian-kun-bing-jian",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：Law.Commutes.rest_paired、not_drawn_to_one 对应无主辅。World.unity 只作补充。",
+   "fix": "无。"
+  },
+  {
+   "id": "wfz-wei-ji-tong-shi",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符。",
+   "fix": "无。"
+  },
+  {
+   "id": "han-dao-wu-zhi-cheng",
+   "verdict": "keep",
+   "issues": "AI审读。定域准确。",
+   "fix": "无。"
+  },
+  {
+   "id": "han-you-shi-yu-wu",
+   "verdict": "keep",
+   "issues": "AI审读。相分成立。Frame.novel_iff_arises 有记录条件，读法写的「新者恰是生起者」应带上这个条件。",
+   "fix": "注明 novel_iff_arises 的条件。"
+  },
+  {
+   "id": "kong-tai-ji-yuan-qi",
+   "verdict": "keep",
+   "issues": "AI审读。相分成立（先在之未分实体）。",
+   "fix": "无。"
+  },
+  {
+   "id": "han-du-hua-yu-da-xu",
+   "verdict": "revise",
+   "issues": "AI审读。（1）「豈有使之然哉」（没有发动者）锚为 center_not_derived 有误，那条讲的是意义之中心。（2）Flow.fed_from_beyond 的条件（平衡、耗散、有限无重复族自某步起被围、取者在任意晚的步出现）与 nothing_supported_stays 的条件都没写。",
+   "fix": "前半改锚为 Run.withClock_restForms、TwoClocks.one_course_two_laws；删去 center_not_derived 与 derived-extent-limits，加 where-a-move-is-formed。fed_from_beyond、nothing_supported_stays 写明条件。"
+  },
+  {
+   "id": "wangbi-yi-wu-wei-ben",
+   "verdict": "revise",
+   "issues": "AI审读。相分成立，但 Web.not_losesBeyond_whole 是平凡命题，不说整体之外没有本。",
+   "fix": "删去 Web.not_losesBeyond_whole 与 loss-beyond-a-region，改用 Shown.run、shown_le_iff（律由历史读出，没有先于运行的本）。"
+  },
+  {
+   "id": "heshang-dao-qi-sheng-hua",
+   "verdict": "keep",
+   "issues": "AI审读。相分成立。",
+   "fix": "无。"
+  },
+  {
+   "id": "su-zhe-ti-yong",
+   "verdict": "keep",
+   "issues": "AI审读。定域准确，后起与本体义均已标出。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhongyong-tian-ming-zhi-wei-xing",
+   "verdict": "keep",
+   "issues": "AI审读。相分成立。alike_iff_sameTests 要求框架确定，读法漏了这个条件。记录 one-axiom-yields-g0 已改名。",
+   "fix": "写明「在确定之处」；记录改为 continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "zhongyong-cheng-zhe-zi-cheng",
+   "verdict": "keep",
+   "issues": "AI审读。定域准确。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhangzai-tong-yi-wu-er",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符（有无、隐显作读法）。所选片段不是 RO 所判的「太虚即气」原句；World.unity 只作补充，由构造。",
+   "fix": "注明片段与 RO 段落的关系。"
+  },
+  {
+   "id": "zhangzai-liang-bu-li-yi-bu-ke-jian",
+   "verdict": "revise",
+   "issues": "AI审读。World.unity、Contextual.world 都不说「一只在两中可见」；whole_not_in_pairs 是例子。",
+   "fix": "锚改为：Becoming.Motion.neither_alone（立与过二者，单独都不能按相似认同）、Becoming.Motion.still_identifiesAlike（无所过之处，立单独即可认同，二合为一）、separation_faithful_iff、Becoming.separation_admits_extra。记录用 the-split-that-makes-sense、separation-loses-the-relation，删去 unity-of-readings。"
+  },
+  {
+   "id": "lu-jiuyuan-dao-wai-wu-shi",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符，心学背景已标出。",
+   "fix": "无。"
+  },
+  {
+   "id": "cheng-hao-xing-ji-qi",
+   "verdict": "keep",
+   "issues": "AI审读。定域准确。「一类关系项」宜锚 World 本身，不必用 Web.roles。",
+   "fix": "Web.roles 改为 World。"
+  },
+  {
+   "id": "sengzhao-dong-jing",
+   "verdict": "revise",
+   "issues": "AI审读。（1）Web.change_readings 不说「立着是变化的一种读法」：它说立起、止立是水平的成为与止为。（2）responsive 与 still 是一对见证，水平相同而交换不同：静（水平不变）可以与动（交换）同在，也可以不同在。ExchangeLaw.still_levels 正是无交换之静，与「必求靜於諸動」的全称相反。",
+   "fix": "kind 改为 scope：「静不离动」在回应之律那样的世界成立（ExchangeLaw.responsive_embodied、responsive_not_dissipative）；静止之律下水平相同而无交换（ExchangeLaw.still_levels）。删去 Web.change_readings 与 coming-and-ceasing-keep-pace。注明静不等于停。"
+  },
+  {
+   "id": "sengzhao-bu-er-yu-wu",
+   "verdict": "revise",
+   "issues": "AI审读。（1）「没有读法之外的第二层实在」不由 World.run_world 给出；World.unity 与本段无关。（2）簇内处理不一致：名「所待又有待」的 not_carried 说僧肇「有非真有」加入真与非真二层，本条却以「有非真生」判相合。",
+   "fix": "「立處即真……觸事而真」改锚为 Shown.run、shown_le_iff（律不在展开之外）；「豈以諦二而二於物」保留 Contextual.world；「有非真生」保留 Web.Dependent，并在所不带中写明真／非真的位次。删去 World.unity，与名条用同一表述。"
+  },
+  {
+   "id": "zhonglun-yin-yuan-jia-ming",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：认同是读法。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhonglun-yuan-cheng-you-guo",
+   "verdict": "revise",
+   "issues": "AI审读。「緣成由於果」说的是：条件之为条件，由它所支持的形成而定，即依存关系本身。Web.roles 的像中角色是固定的，不对应。",
+   "fix": "锚改为 Web.DependsOn、Web.Dependent、Web.relabel_dependent，删去 Web.roles、Flow.roles。"
+  },
+  {
+   "id": "zaahan-yuan-sheng-lao-si",
+   "verdict": "revise",
+   "issues": "AI审读。「老死屬誰」先设一个拥有者，对应的结构是「跨步认同是读法」；Web.roles 与本段无关。",
+   "fix": "锚改为 Web.reidentify_dependent（重认保持依存）、Web.rename_unceasing、Web.Dependent、Web.change_readings。删去 Web.roles 与 space-and-its-parts，记录用 identity-across-steps。"
+  },
+  {
+   "id": "weishi-suo-qu-neng-qu-xiang-dai",
+   "verdict": "revise",
+   "issues": "AI审读。「所取、能取相待立」是相互依存。名「所待又有待」的 alternatives 已说「相待」对应 MutualDependence，C02 也以「相待」名之；Web.roles 不对应。",
+   "fix": "锚改为 Flow.MutuallyDependent、Becoming.Flow.mutuallyDependent_iff_reach、Mutualism.web（各依对方）、Mutualism.apart_relabelled，记录用 mutual-dependence-and-its-pace，删去 Web.roles。"
+  },
+  {
+   "id": "weishi-san-xing-fei-yi-fei-bu-yi",
+   "verdict": "keep",
+   "issues": "AI审读。定域准确。记录 contextual-registration 已改名。",
+   "fix": "改为 claims-shown-in-context。"
+  },
+  {
+   "id": "weishi-shi-bian",
+   "verdict": "keep",
+   "issues": "AI审读。相分成立。center_not_derived 讲意义之中心，对「识为唯一所依」只是旁证。",
+   "fix": "读法把 center_not_derived 述为意义之中心不由依存推出。"
+  },
+  {
+   "id": "fazang-yin-men-liu-yi",
+   "verdict": "revise",
+   "issues": "AI审读。同一法为他作因、为他作果，是一个关系项兼两角。Web.roles、Flow.roles 的像中没有兼两角者。",
+   "fix": "锚改为一类网：Web.Embodied、Web.Embodied.active_of_bearing、Mutualism.web，删去 Web.roles、Flow.roles、Web.relabel。"
+  },
+  {
+   "id": "fazang-yuan-cheng-yi",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符（缘成之一，不是自性之一）。World.unity 应写明由构造。",
+   "fix": "注明 World.unity 中哪部分由构造成立。"
+  },
+  {
+   "id": "fazang-xiang-rong-bu-tong",
+   "verdict": "revise",
+   "issues": "AI审读。（1）Bisimulation 联系的是两过程的配置，不说「每个关系项的配置由它与一切他者的关系刻画」。（2）脊柱没有相入、相即之律。（3）whole_not_in_pairs 是例子。判相合过强。",
+   "fix": "kind 改为 scope。锚改为 Flow.MutuallyDependent（每个形成都在每个形成的影响闭包之内，即一中有多）与 Flow.mutuallyDependent_iff_reach，只就相互依存之流而言。删去 Bisimulation、Alike.tests、whole_not_in_pairs。"
+  },
+  {
+   "id": "jin-shizi-yin-xian",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符：两语境两读，同时成立。记录 contextual-registration 已改名。",
+   "fix": "改为 claims-shown-in-context。"
+  },
+  {
+   "id": "jin-shizi-jin-xing-bu-bian",
+   "verdict": "keep",
+   "issues": "AI审读。相分成立（不变之性）。",
+   "fix": "无。"
+  },
+  {
+   "id": "tiantai-fei-zong-fei-heng",
+   "verdict": "revise",
+   "issues": "AI审读。Bisimulation 不给「任何一处都关联全体」；World.unity 与本段无关。",
+   "fix": "删去 Bisimulation、Alike.tests、World.unity。「縱亦不可，橫亦不可」锚为 Contextual.world 与 Shown.run（读法不需容器，律由历史读出）。「具三千」若保留，锚为 Flow.MutuallyDependent，并只就相互依存之流而言。"
+  },
+  {
+   "id": "tiantai-san-di",
+   "verdict": "keep",
+   "issues": "AI审读。结构相符。记录 contextual-registration 已改名。",
+   "fix": "改为 claims-shown-in-context。"
+  },
+  {
+   "id": "shengman-ru-lai-zang",
+   "verdict": "revise",
+   "issues": "AI审读。相分成立，但 Web.not_losesBeyond_whole 是平凡命题，不说整体之外没有承持者。",
+   "fix": "删去 Web.not_losesBeyond_whole 与 loss-beyond-a-region，保留 Web.Whole.needs_arising、Web.change_readings。"
+  },
+  {
+   "id": "qixin-yi-xin-er-men",
+   "verdict": "keep",
+   "issues": "AI审读。相分成立。center_not_derived 是旁证（意义之中心）。",
+   "fix": "读法照 weishi-shi-bian 条改述 center_not_derived。"
+  },
+  {
+   "id": "tanjing-ding-hui-yi-ti",
+   "verdict": "revise",
+   "issues": "AI审读。（1）定与慧是修行；「定是慧體，慧是定用」是体用，体居先，不是形成与条件两角，Web.roles 不对应。（2）与 su-zhe 条（体用判定域）及名「所待又有待」的 alternatives（体用后起、体为本）处理不一致。（3）宗宝本是元代编本。",
+   "fix": "kind 改为 scope：「不分先后」作为一事两读成立（Contextual.world），体用之体居先不取。删去 Web.roles、Flow.roles。也可作为修行论剔除。"
+  },
+  {
+   "id": "zongmi-yuan-ren-ben-mo",
+   "verdict": "revise",
+   "issues": "AI审读。相分成立，但 Web.not_losesBeyond_whole 是平凡命题。",
+   "fix": "删去 Web.not_losesBeyond_whole 与 loss-beyond-a-region，改用 Shown.run、shown_le_iff。"
+  }
+ ],
+ "missing": [
+  "名辩一系完全缺席（先秦后期，墨辩成篇年代有争议）。《墨子·經上》（MI1-S-JS）：「體，分於兼也」「同，異而俱於之一也」「化，徵易也」「損，偏去也」「久，彌異時也」「宇，彌異所也」。《經說上》（MI1-S-SS）：「化，若鼃爲鶉」「同，二名一實，重同也。不外於兼，體同也。俱處於室，合同也。有以同，類同也」。這些是先秦最接近定义体的整体／部分、同一、变化与时所之文。「體，分於兼也」可检验为记录 space-and-its-parts（整体与其部分：无前提之律对每个世界成立，前提划出部分）的古典名。注意 C04 已以「体」名 Embodied、C14 已以「兼」名 Neutral，采用前须协调。",
+  "《庄子·知北遊》（ZH1-S22，外篇）：「通天下一氣耳。聖人故貴一」与「臭腐復化爲神奇，神奇復化爲臭腐」（复归须是无损之律，Law.lost_stays 定域）；本根段「萬物自古以固存。六合爲巨，未離其內……此之謂本根」，是知北遊自身先在之根的张力。",
+  "《彖传·乾》（YD-HX01，脉络 HX-N012／HX-R003）「乾道變化，各正性命」：传这一层把变化收束于各正的性命，应列为相分（固定本性），不只作周敦颐的所不带。",
+  "《序卦》下篇（YD-OW-XG，脉络 OW-N064）「有君臣然後有上下，有上下然後禮儀有所錯」：生成次序接入位次，应列为相分（竞争与位次层）。",
+  "惠施（《庄子·天下》，ZH1-S33／MI1-S-HS，杂篇所述）「至大无外，謂之大一；至小无內，謂之小一」：可检验为算入其余之后的整体（World.withRest 之世界）之名的候选；注意后起的太一神格义。",
+  "王弼《周易略例·明彖》（YWH-LM，脉络 YCM130-LM-W-02-R01）「故眾之所以得咸存者，主必致一也」：单一中心层的相分条。名「一」的 not_carried 称已判相分，但本簇没有这一条。",
+  "《老子》三十九章「侯王得一以为天下贞」（YD-LAO-BASE，脉络 LE-R058 enabling）：lao-39 同章的单一中心句。",
+  "本簇没有为「过程与框架是读法」（记录 process-and-frame-as-readings）与「共享步序是读法」（Becoming.Interleavings）命名；步序与先后宜与 C17 的「先後」「錯行」互参。",
+  "「没有两个实在」（DELEGATED-CHOICES D23、D43 的读法）缺正确的锚：Becoming.Shown.run、Becoming.shown_le_iff、Becoming.same_histories_iff、Becoming.DeadEnd.no_history、Becoming.same_steps_iff_traces、Becoming.Run.withClock_restForms。本簇多条以平凡的 Web.not_losesBeyond_whole 代替。",
+  "R30／R35 的机械改名，本簇共 19 条涉及。记录：one-axiom-yields-g0 改为 continuation-condition-yields-living-significance；contextual-registration 改为 claims-shown-in-context；registration-within-what-it-registers 改为 readings-within-what-they-read；runaway-distance-unregistered 改为 runaway-distance-uncoupled；testing-within-registration 改为 testing-within-couplings。声明：Becoming.g0_of_unrestricted 改为 Becoming.livingSignificance_of_unrestricted。涉及条目：zhuang-qiwu-liang-xing、zhuang-qiwu-tong-wei-yi、zhuang-qiwu-yi-yu-yan-wei-er、zhuang-qiwu-liu-he、zhuang-dazongshi-qi-yi-ye-yi、lao-22、lao-74、xunzi-tianlun、hanfei-zhudao、xici-ji-zhi-zhe-shan、xici-tian-di-she-wei、xici-xian-ren-cang-yong、shuogua-jian-san-cai、shuogua-shen-miao、dayou、zhongyong-tian-ming、weishi-san-xing、jin-shizi-yin-xian、tiantai-san-di。"
+ ]
+}

@@ -1,0 +1,36 @@
+[
+ {
+  "type": "other",
+  "clusters": [
+   "C01",
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C07",
+   "C08",
+   "C09",
+   "C10",
+   "C11",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "C17"
+  ],
+  "detail": "缺一张跨版本对照表。main 的 .zh.md 词汇表已有现代中文定名，如 生命意义（living significance，词汇表 22 次）、静／停（D45）、生起／止息（D36）、观（view）、读法（reading），各簇的古典名没有与之一一对接。",
+  "action": "建两栏表：古典名 ↔ main zh 词汇表术语，要求一对一；凡一对多或多对一，都归入下面的 collision 条处理。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C03",
+   "C09",
+   "C08"
+  ],
+  "detail": "跨步同一的名字混乱：一實（C03，Reidentify）与 一实（C09，Web.Continues）字同而锚异；还有 相續、稽实 等近名。C 簇的 繼 锚在 KeepsTenure 上，但 Identity.lean 中它属『Continuity, read one way』，是连续，不是继承；Succession 只是一个见证命名空间。",
+  "action": "词汇表五行（再认／改名、连续、继承、延续、整体／部分）各给一名，互不重复。繼 改锚到 Lineage／Succession／Dormancy 中实际表达继承的声明。一 不作本体名。"
+ }
+]

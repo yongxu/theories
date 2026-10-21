@@ -4,7 +4,7 @@
 
 Original material and its provenance: Ren's writings and directions, exported conversations, imported papers and data. Files here are kept byte for byte and are never edited or moved; corrections and readings live in the studies and theory chapters that cite them. The hand-kept [provenance manifest](SOURCES.md) records each import with its scope; the [directive index](../_process/DIRECTIVE-INDEX.md) lists the directive records of groups 15 and 16, and the [directive register](../_process/RESEARCH-DIRECTIVES.md) curates the authorizations among them.
 
-57 groups: 43 numbered and 14 named by subject. Where two numbered groups share a number, the alias adds a letter in name order.
+58 groups: 43 numbered and 15 named by subject. Where two numbered groups share a number, the alias adds a letter in name order.
 
 ## Numbered groups
 
@@ -60,6 +60,7 @@ Original material and its provenance: Ren's writings and directions, exported co
 |---|---|---:|---|
 | `biological-scale-correspondence/` | — | 30 |  |
 | [chinese-classical-texts/](chinese-classical-texts/README.md) | Chinese classical texts quoted by the passage map of board item RO | 95 |  |
+| [civilization-thought-v1.0/](civilization-thought-v1.0/README.md) | 中华思想脉络 · 1.0.0 | 439 |  |
 | `collective-alignment/` | — | 2 | 2026-10-08 |
 | [communication-authorship/](communication-authorship/README.md) | Communication attribution: link-only provenance | 2 |  |
 | [community-kitchen-evidence/](community-kitchen-evidence/README.md) | Community-kitchen evidence: provenance and reading scope | 5 |  |

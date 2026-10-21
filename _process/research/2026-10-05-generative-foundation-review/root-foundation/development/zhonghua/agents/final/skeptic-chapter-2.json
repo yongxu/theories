@@ -1,0 +1,6 @@
+{
+ "real": true,
+ "why": "The finding is real, but the reviewer's replacement fixes only half of it. The chapter is theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md, §五·三, not the 中华本 itself. The generated ZH-TABLE:names now reads: new combinations 131, of which 105 have no quotation; 古 60 and 复 36 without one; 201 in total, out of 447 names. I recounted from work/names-decisions.tsv and work/names-checked.json, the same sources build_tables.py t_names uses, and got the same numbers. 域之兼 is marked 新 and has no quotation found. In commit 638206708 the table said 446 / 200 / 新 104, matching the prose. d9aceb0ef added 域之兼 and regenerated the table, but the hand-written prose under it was not updated. The prose still says 200 in total and 104 for the new combinations, so both numbers have to change: 201 = 105 + 96. The 96 for 古 and 复 (60 + 36) and the 246 quoted names (447 − 201) are still correct. My find spans both lines and occurs once in the chapter. Separately, §五·二's \"326 个名\" plus \"新增 120 个名\" adds up to 446, because it describes the naming pass, before the later table pass that added 域之兼. That is a missing step in the history, not a wrong number, and is outside this finding.",
+ "find": "未录引文的 200 个分两种：\n\n- 104 个是新组合",
+ "replace": "未录引文的 201 个分两种：\n\n- 105 个是新组合"
+}

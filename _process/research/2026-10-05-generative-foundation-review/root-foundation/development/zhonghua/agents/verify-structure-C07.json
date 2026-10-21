@@ -1,0 +1,587 @@
+{
+ "cluster": "C07 规律、理、常与吸引",
+ "lens": "STRUCTURE（结构：关系、条件、方向是否与已检之律相同；是否带入独立实体、二元、先在根据、单一中心、等级或评价；一概念一名；每条声明逐一检于 Lean）。核查范围：156 个所引声明全部存在（新建索引，lean/becoming/Becoming/*.lean）；名下与条目中全部引文以 ctq.py 对冻结本核过（均在，FO2-TJ 两条只差空白）；全部 record_id、平行、否决记录均存在，来源相符。",
+ "names": [
+  {
+   "concept": "规律（law）",
+   "name": "常",
+   "verdict": "revise",
+   "issues": "(1) 一概念多名之冲突：C01 定稿明拒以常名律（'常带不变与常道（固定本性）义'），并以「所以迹」名所显之律；现行中文版词表 law＝律（规则之变：一个确定之过程，由所治之历史读出）；C16 以律为地位标记。本簇单独采常，会使律、常、所以迹三名并存。(2) 概念说明混同 Process（过程，可分支）与 law（确定之过程）；词表之 law 只指后者。(3) 不带之列失准：脊柱之过程每步同一（step 不随步号变），所以'不变'相对于所取之描述恰是被带入的；规则之变是更细描述中构形之一分（adaptive_state_law_iff：状态自有其律，恰当规则对它无差别；Run.steps_by_rule）。Captured.rule_perturbation_changes 只是 Bool×Bool 上一例，被扰动者是构形中之规则分量，律（next）本身未变，不能支持'不断言任何常永不改易'。(4) 老子十六章之常上承「复命曰常」（LE-R069；归根→静→复命→常，LE-R023），结构是回返（Law.Returns），不是一般之律；五十五章「知和曰常」又是和。以 LE-R025 证'知变化之常'是词面的，且与 C05 之复、本簇之所归相交；RO lao-16-gui-gen-yue-jing 已记郭店本无「复命曰常，知常曰明」。(5) fit 称'只在构形复现处可期（Run.fixes_on_return）'不确：所取之动作在被取之处即被记录固定（Run.fixes_of_takes），复返只为固定别样动作之所致。",
+   "fix": "概念改为'确定之过程：每一构形、每一动作至多一个所至，每步同一，由所治之历史读出（Shown、shown_le_iff、exists_law_iff）'；not_carried 改为'不带构形之常住、不带先于一切描述之常、不带常道之先在根据；每步同一相对于所取之描述为所带'，以 Becoming.adaptive_state_law_iff、Becoming.Run.steps_by_rule 代 Captured.rule_perturbation_changes；老子十六章改列为常之回返义（复命，交 C05／所归），不作律之证；fit 中'可期'改为 fixes_of_takes（所取者即定）与 fixes_on_return（别样动作待复返）；与 C01（所以迹）、词表（律）、C16（律）交整合者一并定名，定前标'待定'。"
+  },
+  {
+   "concept": "所显之律（law shown）",
+   "name": "所显之常",
+   "verdict": "revise",
+   "issues": "(1) C01 以「所以迹」名同一概念（Shown、shown_le_iff、exists_law_iff），一概念二名；名中之常随'常'一名未定。(2) Shown g m 是过程，历史不一致时有分支，不是确定之律：'所显之常'在不一致处名实不符。(3) alternatives 未列「所以迹」，而结构论据在本簇一侧：所以迹（庄子天运「夫迹，履之所出，而迹豈履哉」，ZH1-S14，外篇有争议）指使迹成迹者，方向易读为由源至迹（先在之源）；'所显'指由迹读出，合 shown_le_iff 之方向。此论据应写出，供整合者裁定。",
+   "fix": "名表定义加'历史不一致时所显者只是过程，不是确定之律（exists_law_iff）'；alternatives 加「所以迹」并写上述方向之理由；交整合者与 C01 择一；常若不采，改为整合者所定之律名加'所显之'。"
+  },
+  {
+   "concept": "相同／互模拟（alike, bisimulation）",
+   "name": "同",
+   "verdict": "revise",
+   "issues": "(1) 墨经「同，异而俱于之一也」是同之总名（经上随即分重、体、合、类），'俱于之一'即在某一方面同，结构近类同（经说上「有以同，类同也」）；互模拟是'凡验皆同'之全称，墨经无此；fit 称'互模拟正是这样的关系'过强。全称之结构只见老子十四章'不可致诘'。(2) alike_iff_sameTests 只在双方处处至同（DeterminedAt）时成立；名表拟写'同，凡验皆同也'未带此条件——在分支处，凡验皆同不蕴含互模拟（只有 Alike.tests 一向）。(3) 单字同在中华本中必遍用于同样、同一、类同（本簇类之定义）、同歸（C05 以之名合并）；C01 以「状」名'构形由其关联而定，相同恰是同样检验'，与此重叠。(4) alternatives 未列现行中文本之「相同」。",
+   "fix": "名改为复词（如「验同」）或保留同而名表写'同：有保持诸断言与诸步之关系相连者（Bisimulation、Alike）；双方处处至同时，即凡验皆同（alike_iff_sameTests）'；fit 改为'墨经给同之总名与四分，互模拟取其异而相俱之关系形式；凡验之全称出自老子十四章'；与 C01 状、C05 同歸、本簇类同之用字交整合者定于一处；alternatives 加「相同」。"
+  },
+  {
+   "concept": "相同之下确定（determined up to likeness）",
+   "name": "至同",
+   "verdict": "revise",
+   "issues": "(1) 新造，两证都只是字证（坤小象之至、墨经之同）。(2) 至同易读为'所至相同'而误作两构形会于一（合并，C05 同歸）或'极同'；DeterminedAt 是一个构形处之性质（同一动作之任二所至皆同），名中无'一动'与'于此'。(3) alternatives 未列现行中文「相同之下确定」与词表之锚 Twins.alike_one。",
+   "fix": "名改为「一动所至皆同」（或「至皆同」），名表写'于构形 s：同一动作之任二所至皆同（DeterminedAt）；以等同为之只在断言命名构形处（determined_iff_named）'；TP-H02-X1-R02 标为字证；alternatives 加「相同之下确定」。"
+  },
+  {
+   "concept": "归并（lumping）",
+   "name": "类",
+   "verdict": "revise",
+   "issues": "(1) 概念与 fit 把归并 π 与 Learning.Lumped 混为一：Lumped π g 是'函数 g 在 π 之同类上取同值'，是 g 相对于 π 之性质，归并本身是 π。(2) fit 以 lumped_of_finer 为'更细之读法分开更多'误：该定理说经较粗读法而成者经每一较细读法亦成，细是前提而非结论。(3) 与 C09 同名须合一（mapper 已注）。",
+   "fix": "类＝读法 π 所分之类（π 本身）；Lumped 写'随类而同'；lumped_of_finer 照原文转述（粗者所成，细者亦成）；与 C09 合一。"
+  },
+  {
+   "concept": "推广（generalization through a lumping）",
+   "name": "推",
+   "verdict": "keep",
+   "issues": "结构相合：小取'以其所不取之，同于其所取者，予之'与 determines_lumped_iff、'行而异…流而离本'与 lumped_right_iff 同构；论语一例字为反，已注。注意 C08 以「推来」名外推（由前段提出下一值），与此之经类推广是二概念，名表须分开写。"
+  },
+  {
+   "concept": "理（结构与变化之律的建模）",
+   "name": "理",
+   "verdict": "revise",
+   "issues": "名为已采，无误；fit 与证有二误。(1) fit 称解老「凡理者，方圆、短长、麤靡、坚脆之分也，故理定而后可得道也」与 goAlike_iff_lumped、carries_law_iff '相同'：解老之理是属性之分，不要求变化跨之同样；脊柱之理须世界跨此归并同样（D26），故解老只给结构一半，'理定而后可得道'之全称须 carries_law_iff 之条件；戴震分理同此。(2) 以王弼「物無妄然，必由其理」为理之证，与本簇条目 wangbi-wu-wu-wang-ran 自己之定域（无妄给常，不给理）相悖。",
+   "fix": "fit 改为'解老、戴震给理之为分（结构）；理之为理须变化跨此分同样（goAlike_iff_lumped），此为脊柱所加；理定而后可得道恰在 carries_law_iff 之条件下成立'；王弼一证之 sense_in_context 注'细至历史表处总成立；作理须加 carries_law_iff 之条件'。"
+  },
+  {
+   "concept": "不变区域／吸收区域（invariant / absorbing region）",
+   "name": "闭",
+   "verdict": "revise",
+   "issues": "(1) 证「阖户谓之坤」下文即「辟户谓之乾，一阖一辟谓之变，往来不穷谓之通」（XC-R031）：阖是与辟交替、往来复返之一相，结构与'律永不离开之域'相反；且阖是 C06 已采之名（一部分使无它时被容许之形成不受支持），不能作闭之证。(2) 古义之闭（闭门、阖户）两向不通；Invariant／Law.Absorbing 是单向：自内不出，自外可入（吸引域）；名表未写此不对称。(3) 全体与空域平凡为闭；闭之确义是'诸步下封闭'（Invariant：每一许可之步保持之性质），宜用此式定义。(4) 老子二十七章之引文无关系记录；「善」带评价，章旨在'无弃人'；'闭由所行本身成，不由外加之楗'是 AI 之读，须标。(5) C06 已立同名同义之闭、成闭、护闭、元闭，须合于一处。",
+   "fix": "删 WP-XCS-C11-S04-R01 之证，移入 not_carried 作反例（阖辟交替而复返）；名表写'闭：自其中之每一步仍在其中（Invariant；确定之律下即吸收区域，Law.absorbing_iff_invariant）；可自外入，不可自内出'；老子二十七章标'无关系记录，AI 读法'；与 C06 合并。"
+  },
+  {
+   "concept": "被吸入、吸引域（drawn into, basin）",
+   "name": "入",
+   "verdict": "revise",
+   "issues": "(1) 单字入过泛：Law.DrawnInto 只说'在域外而其行程入之'，不要求所入之域为闭；吸引域与 Law.Drawn 才要求所入者为吸收区域。名无此限定则与日常之入不分。(2) 证中「巽者入也」只是字训，「其溺之所为之」字为溺，皆非结构之证；坎初六与王弼五十章是结构之证。",
+   "fix": "名改为复词「入闭」（入一闭者，Law.Drawn）；DrawnInto 写'入某域'；吸引域写'入此闭者'；巽之训标为字训。"
+  },
+  {
+   "concept": "吸引子（attractor）",
+   "name": "所归",
+   "verdict": "revise",
+   "issues": "(1) fit 称'有限处所归恰是「归」（返回）之域，与 Ren 九句以归为回返相合'，而 C05 已以「復」名构形之复返（Law.Returns）、以「同歸」名合并（Law.Merges）；中华本内归不能再读回返，所归只能读'终于何处'。(2) not_carried'在开放世界中所归未必存在'错：后继数下 0 被吸入一闭（Law.succ_drawn_lossless：Drawn Nat.succ 0），吸引子存在，只是无一构形返回。(3) 返回者之域是闭只对确定之律（Law.returning_absorbing）；分支过程中可以不是（Branching.Transit.returning_not_invariant），未注。(4) 序卦「進必有所歸」在一对之内（渐→归妹，二卦覆、变兼合，YI-ZHUAN p-feifu），归是归妹（嫁）之归。",
+   "fix": "fit 删与九句之归相合之句，改为'所归：众行程所终入之闭；有限而确定处即返回者之域（enters_returning、returning_absorbing）'；not_carried 改为'开放世界中所归不必由返回者组成（succ_drawn_lossless）；分支过程中返回者之域不必为闭（Becoming.Branching.Transit.returning_not_invariant）'；序卦一证注归妹之归与对内之位。"
+  },
+  {
+   "concept": "锁定（lock-in）",
+   "name": "成闭",
+   "verdict": "revise",
+   "issues": "(1) 坛经「心若住法，名为自缚」之缚可由不住而解（FO2-TJ-R014「念念不住，即无缚也」），结构是'所取之动皆保持此域则留其中'（Run.stays）与'离开须一不保持此域之动'（Run.leaving_needs），不是闭而不复开；作成闭之证与成闭之义相反。(2) 大壮上六之「艰则吉」（mapper 读为离开之动）若成立，则该域非对每一动皆不出，Invariant.locks_out 不适用。(3) fit '而 s 不可得之域本身是闭，故失去即成闭'无 Lean 引证（检索无此定理）。",
+   "fix": "删 FO2-TJ-R012、JL-R005 作成闭之证（前者移入 not_carried，注其结构是 Run.stays）；(3) 改为可检之陈述：失去之步至 z（¬Reach P z s）之后，行程在 z 之前方（Becoming.Branching.Ahead P z），此域是闭（Becoming.Branching.invariant_ahead）而不含 s；或标为未检之步。"
+  },
+  {
+   "concept": "可能被吸入（possibly drawn into）",
+   "name": "或入",
+   "verdict": "keep",
+   "issues": "结构相合（PossiblyDrawnInto、possiblyDrawn_iff）；或取小取'不尽'义，与 C16 之或一致。OneWay.possibly_not_necessarily 是一例，'可在他径返回'应读为'可以（有例）'，不是一般之律。"
+  },
+  {
+   "concept": "必然被吸入（necessarily drawn into）",
+   "name": "必入",
+   "verdict": "keep",
+   "issues": "结构相合（NecessarilyDrawnInto、necessarilyDrawn_iff_not_returns）；与 C16 之必一致。唯一之证「進必有所歸」之必是序卦编排者之断言，宜补一条以必言'每一行程'之先秦结构证（可借 C16 之证）。"
+  },
+  {
+   "concept": "关节（juncture）",
+   "name": "机",
+   "verdict": "revise",
+   "issues": "名为已采（D52），无名之误。(1) fit 以系辞「几者，动之微，吉之先见者也」为机之结构，而 YI-ZHUAN p-zhiji 已把同一句判为定域，经耦合读（Web.break_not_bounded、Web.observed_level_couples、Flow.policy_uses_after_failure：几之先见恰在相关条件耦合入读法之处），本簇未调和。(2) '微'（差别之小）不在 Juncture 之中（Junctures 明言未导出一机失去多少步之度），'先见'是预见之征，属耦合之读，不属关节之定义。(3) C17 以「機」名同一概念，须合一。",
+   "fix": "fit 写'Juncture 只承「动」处两种去向之分：有一步之后 s 仍可得、有一步之后不可得（juncture_iff、Juncture.outcomes_differ）；微与先见属几之可见，照 YI-ZHUAN p-zhiji'；与 C17 合并。"
+  },
+  {
+   "concept": "在机处保住（keeping）",
+   "name": "护闭",
+   "verdict": "revise",
+   "issues": "名为已采（D52）。(1) 证「几事不密则害成」（WP-XCS-C08-S09-R03）句义是保密：上文「君不密则失臣，臣不密则失身」，下文「是以君子慎密而不出也」；带君臣等级，与机处保住只同一几字。(2) 缺先秦本文：老子六十四章「其安易持，其未兆易谋…为之于未有，治之于未乱」（YD-LAO-BASE；RO lao-64-wei-zhi-yu-wei-you 已判定域，引 keeping_greatest、loss_passes_juncture），本名只引河上公注。(3) C06 已立同名同义之护闭。",
+   "fix": "删 WP-XCS-C08-S09-R03（移入 rejected）；加老子六十四章为先秦之证（照 RO 定域，并注其'易在可干预，难在可发现'之界）；与 C06 合并。"
+  },
+  {
+   "concept": "交换（commuting law）与变化之序",
+   "name": "并行不悖",
+   "verdict": "revise",
+   "issues": "(1) 一名二概念：概念说明把'与对称 σ 交换之律 T(σx)=σ(Tx)'（Law.Commutes，即词表之 commuting law）与'两侧分开之独立交换换序而结果之律不变、变化之序只在相连处不变'（World.commute_laws、Footprinted.sorts_iff）合为一；前者是一律与一对称之交换，后者是两交换之次序可换，结构不同。(2) '并行'之同时义恰合后者（独立之交换即可并发者），not_carried'交换不要求同时'对后者不确；对前者'并行'无对应。(3) 次序之可换与相连处之序与 C17 相交（C17 已以「先後」名步序、以「錯行」名交错，并以中庸「四时之错行」为证）；本名之证「譬如四時之錯行」是交替而行，合 C17 之错行，不合交换。",
+   "fix": "并行不悖只名独立交换之次序可换（World.commute_laws、Footprinted.sorts_iff、Footprinted.reorder_precedes），并与 C17 协调；Law.Commutes 另立一名（交整合者定），Law.Commutes.apart、Commutes.breaks、Commutes.not_drawn_to_one 归其下；删「四时之错行」之证（归 C17）。"
+  },
+  {
+   "concept": "未定（undecided）",
+   "name": "未定",
+   "verdict": "revise",
+   "issues": "名合（与 C16 之未、定然否一致）。(1) 证「吾虑不清，未可定然否也」（RU2-R0126）是知者因虑不清而暂不判，与本名否决「疑」之理由（疑名知者之状态）相同，用作未定之证自相矛盾；庄子齐物论、大宗师二例是所言、所待之值未定，方合。(2) 条目 dazongshi-te-wei-ding 写'有限而封闭者终定'与 settles、stays_undecided 不合（见该条）。",
+   "fix": "删 RU2-R0126 之证（或移入疑之 why_not 作同类例）；名保留。"
+  },
+  {
+   "concept": "奇偶（parity）",
+   "name": "奇偶",
+   "verdict": "keep",
+   "issues": "名与结构相合（系辞以画数之奇偶分卦，odd3_iff）。Hexagram.phaseCount_parity 说消息每一步翻转当位数之奇偶，是奇偶之律而非按奇偶之归并；fit 可只引 odd3_iff 与 yangOdd_goAlike。"
+  },
+  {
+   "concept": "矛盾（contradiction in a parity system）",
+   "name": "矛盾",
+   "verdict": "keep",
+   "issues": "矛楯为最小例成立（一主张、两语境、计两次、0＋1 为奇）。glues_iff 另需诸主张互异（Distinct S.claims）与语境列出，reading 未写；名表宜写'奇偶系统之矛盾'，以别于逻辑之否定与辩证法之矛盾。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "xunzi-tian-xing-you-chang",
+   "verdict": "revise",
+   "issues": "(1) '动作之所致只在构形回来之处被记录固定（Run.fixes_of_takes、Run.fixes_on_return）'误：fixes_of_takes 说所取之动作在被取处即定，无须复返；复返只为别样动作。(2) '比较只在其余部分有回应之范围内（comparison_within_response）'与定理不符，也与所沿用之 RO 不同（RO：比较在部分的回应可达范围内决定）；且荀子之'应之'是人应天，方向与'其余部分回应'相反。(3) '天行有常'在 exists_law_iff 下对任一致历史平凡成立；荀子之实质主张是天行与在位者之德无耦合，此是经验前提，脊柱未证。",
+   "fix": "(1) 改为'所取者即定（fixes_of_takes），别样之应只在复返处定（fixes_on_return）'；(2) 照定理原文转述或删；(3) 加'不为尧存，不为桀亡（天行与在位者无耦合）是此读之前提，不是定理'；kind 保留 agreement（所合者为律由展开读出之形式）。"
+  },
+  {
+   "id": "laozi-16-55-zhi-chang",
+   "verdict": "revise",
+   "issues": "十六章「知常曰明」之常上承「复命曰常」（LE-R069），是回返之常，不是一般之律；RO 原条已记郭店十六章无此句、郭店与帛书甲五十五章之明是知和，本条只写'帛书常或作恆'，略去改变结构读法之异文；与名表常＝律相冲（见名常）。",
+   "fix": "reading 加'十六章之常即复命，结构是回返（Law.Returns）；经类而知常是 AI 之推广'；照 RO lao-16-zhi-chang-yue-ming 补郭店、帛书异文；names_used 中常标回返义。"
+  },
+  {
+   "id": "xici-dong-jing-you-chang",
+   "verdict": "revise",
+   "issues": "同段先言「天尊地卑，乾坤定矣。卑高以陈，贵贱位矣」，孔疏读'动静有常'为天动地静各有常度，在此读下是固定之性；agreement 只在 AI 读'常为行程之律、刚柔由律读出'下成立，reading 未分。identifiesAlike_of_law 说的是保持映射且承载律之最粗之分有意义，刚柔二分是否最粗未证。",
+   "fix": "reading 分注疏层（固定之性）与 AI 读；'所以断是由常读出之分'改为'在 AI 读下，断是承载律之分，其核为互模拟（kernel_bisimulation）'；或改 kind 为 scope。"
+  },
+  {
+   "id": "xici-dian-chang",
+   "verdict": "revise",
+   "issues": "冻结本同段前文「变动不居，周流六虚，上下无常，刚柔相易，不可为典要，唯变所适」（WP-XCX-C07-S01-R01）：爻位一层无常、不可为典要，循辞揆方一层有典常——常相对于所取之描述，这是本条最要紧之结构，reading 未用。",
+   "fix": "加该句为 fragment 与 record_id；reading 加'爻位一层无常，循辞一层有常：一投影承载律恰当其下相同者同样变化（carries_law_iff）'。"
+  },
+  {
+   "id": "wangfuzhi-dao-qi",
+   "verdict": "keep",
+   "issues": "结构与范围写对（律依行程而读，道器之本体论断言不采）；family_iff 只是旁证。names_used 随常、所显之常之定名而改。"
+  },
+  {
+   "id": "jielao-chang-wu-ding-li",
+   "verdict": "revise",
+   "issues": "(1) 以 Captured.rule_perturbation_changes 说'规则可被扰动而改结果，不断言任何常永不改易'错位：该例被扰动者是构形之规则分量，律本身未变，律相对于其描述每步同一。(2) 解老'不随物存亡'一面，结构上近于 C16 之律（对每一如此表示之世界成立，不随物生灭），相分之处是把它立为与天地同生、不可道之常者（先在根据），reading 未指出。",
+   "fix": "删 rule_perturbation_changes，改为'脊柱之律相对于描述而读出（exists_law_iff），规则之变是更细描述中构形之一分（adaptive_state_law_iff）；无先于一切描述、不可言说之常'；补'不随物存亡'对 C16 律之说明；kind 保留 divergence。"
+  },
+  {
+   "id": "zhuxi-qi-li",
+   "verdict": "keep",
+   "issues": "沿用 RO 定域，范围写对。"
+  },
+  {
+   "id": "chengyi-li-wu-xing",
+   "verdict": "keep",
+   "issues": "沿用 RO 定域，范围写对。"
+  },
+  {
+   "id": "shuogua-qiong-li",
+   "verdict": "keep",
+   "issues": "穷理只在给定描述内成立（Frame.self_incomplete）写对；性命之先定不采写对。"
+  },
+  {
+   "id": "xici-yi-jian-li-de",
+   "verdict": "revise",
+   "issues": "Learning.no_prefix_fixes_next（前段不定下一值）与'简之读法是否承载律'无关，误引；YI-ZHUAN p-yijian 已对同句定域，以 Hexagram.pairs_lumped、yang_not_lumped 给确切例（六十四归三十二对成律，按阳爻数归并不成）。",
+   "fix": "删 no_prefix_fixes_next，加 Becoming.Hexagram.pairs_lumped、Becoming.Hexagram.yang_not_lumped，注沿用 YI-ZHUAN p-yijian。"
+  },
+  {
+   "id": "wangbi-wu-wu-wang-ran",
+   "verdict": "keep",
+   "issues": "定域准确（无妄给常，不给理）；应据此修名理之证（见名理）。"
+  },
+  {
+   "id": "hankangbo-fan-wei",
+   "verdict": "keep",
+   "issues": "周备只对不含模型自身之描述成立，写对。"
+  },
+  {
+   "id": "xici-xiang-si-bu-wei",
+   "verdict": "keep",
+   "issues": "Alike 定义于两框架之间，恰合模型与天地；相似之程度义已注。"
+  },
+  {
+   "id": "xici-xiang-yao",
+   "verdict": "keep",
+   "issues": "与 YI-ZHUAN p-xiang 一致。"
+  },
+  {
+   "id": "xici-can-wu-cuo-zong",
+   "verdict": "revise",
+   "issues": "此段之数是揲蓍之数（参伍以变、错综其数），'极其数'是推尽占筮之数而定卦象；读为'状态数有界'是 AI 之推广，reading 未说明；YI-ZHUAN p-cuozong 已对同段定域（Hexagram.Symmetry、classes_goAlike 等，并注错综为后世注家之用），本条未调和。",
+   "fix": "reading 加'原文之数为占筮之数，状态数之界是 AI 读法（与 C08 极数同）'；引 YI-ZHUAN p-cuozong 并说两读分工。"
+  },
+  {
+   "id": "xici-he-tu-luo-shu",
+   "verdict": "keep",
+   "issues": "相分理由成立（所则之模式为给出而非读出）；同章「天地变化，圣人效之」相合已对照。"
+  },
+  {
+   "id": "xici-qiankun-hui",
+   "verdict": "revise",
+   "issues": "沿用 RO 相合无误；但 names_used 列并行不悖，所引 waxWane_apart、complement_moves 是与对称交换之律（Law.Commutes）之结构，与'独立交换次序可换'不是一概念。",
+   "fix": "names_used 去并行不悖，待 Law.Commutes 另立名后用之。"
+  },
+  {
+   "id": "xici-yanggua-qi",
+   "verdict": "keep",
+   "issues": "沿用 RO 定域，写对。"
+  },
+  {
+   "id": "xici-tong-gui-shu-tu",
+   "verdict": "revise",
+   "issues": "(1) '所以「天下一归」须律合并'无对应之律：Merges.not_both_return 是合并之后果（被合并之二不都返回），不是'同归需合并'；且同入一回环者可以不合并（同一回环上相位不同者）。(2) C05 已以「同歸」名合并（Law.Merges），本条以同归为'入同一所归'，两读不一致。",
+   "fix": "(1) 改为'把一切带到同一构形，须律不与任何移动每一构形之对称交换（Commutes.not_drawn_to_one）'；(2) 与 C05 协调：同歸＝合并，所归＝所入之闭，reading 照此分写。"
+  },
+  {
+   "id": "xugua-jin-bi-you-suo-gui",
+   "verdict": "revise",
+   "issues": "渐→归妹在一对之内（二卦互为覆、亦互为变，YI-ZHUAN p-feifu；Hexagram.order_paired），reading 称'其编排另见 xugua-between-pairs'错；归是归妹（嫁）之归，'进必有所归'在序卦是递承之辞。",
+   "fix": "改为'其对内之递承见 xugua-within-pair（Hexagram.order_paired、order_paired_by_law）'；注归之字义；kind scope 保留。"
+  },
+  {
+   "id": "xugua-between-pairs",
+   "verdict": "keep",
+   "issues": "沿用 RO 相分；平行诸条皆核为对间（渐→归妹除外，已列于上条）。"
+  },
+  {
+   "id": "xugua-within-pair",
+   "verdict": "keep",
+   "issues": "屯→蒙为覆，写对；可补渐→归妹（WP-XG-C02-S24-R02）为同类。"
+  },
+  {
+   "id": "shuogua-xiang-lei",
+   "verdict": "keep",
+   "issues": "沿用 RO 相分，写对。"
+  },
+  {
+   "id": "shuogua-di-chu-zhen",
+   "verdict": "revise",
+   "issues": "reading 增'「帝」又立一单一中心'，与所沿用之 RO 相反：RO 据说卦本章自释（万物出乎震…）认为'帝出不应读成一个意志之主'；本条把 RO 已排除之非关系层加回而未说明。",
+   "fix": "删此句，或明说与 RO 之分歧及文本理由；相分只据站序是指派之表（stations_not_commutes、stations_not_rules）。"
+  },
+  {
+   "id": "tuan-ge",
+   "verdict": "keep",
+   "issues": "沿用 RO 相合，写对。"
+  },
+  {
+   "id": "daxiang-ge",
+   "verdict": "keep",
+   "issues": "沿用 RO 相分，写对。"
+  },
+  {
+   "id": "tuan-kui",
+   "verdict": "keep",
+   "issues": "沿用 RO 相合，写对。"
+  },
+  {
+   "id": "tuan-jing-gai-yi",
+   "verdict": "revise",
+   "issues": "片段只有「改邑不改井，乃以剛中也」，所引 Run.draws_iff_replenishes 与 RO 之相合属「井养而不穷」，不在片段内；'改邑不改井'之确切结构是一个分量为每一步所保持、其值之域为闭，即 Law.rule_absorbing（规则自持时，具某规则之构形是律永不离开之域），比 invariant_iff_every_move 更切；'乃以刚中也'是位读，不是律；整条判 agreement 过宽。",
+   "fix": "删 draws_iff_replenishes（或把「井养而不穷」加入片段）；加 Becoming.Law.rule_absorbing；reading 分两半：前半相合，后半为位读（定域），或整条改 scope。"
+  },
+  {
+   "id": "laozi-48-ri-sun",
+   "verdict": "revise",
+   "issues": "'损有界：永不读者失（Pace.never_reads_loses）'语义不清：该定理说'从不读取之规则，其律所合并者失去'；RO 原读之下界是最粗而承载律之读法（identifiesAlike_of_law），越此则律不再经约简通行（law_through_iff 之反面）。",
+   "fix": "照 RO lao-48-wei-dao-ri-sun 写下界，并照原文转述 never_reads_loses。"
+  },
+  {
+   "id": "chengyi-xing-ji-li",
+   "verdict": "revise",
+   "issues": "declarations 列 adaptive_state_law_iff（状态自有其律恰当规则对它无差别），reading 未用，与'性即理'亦无关（RO 原条同此）。",
+   "fix": "删之，或写明其义与此处之关系。"
+  },
+  {
+   "id": "zhuxi-li-ju-yu-xin",
+   "verdict": "keep",
+   "issues": "相分理由成立（理先具而为实）。"
+  },
+  {
+   "id": "lujiuyuan-xin-ji-li",
+   "verdict": "keep",
+   "issues": "相分理由成立。"
+  },
+  {
+   "id": "daizhen-fen-li",
+   "verdict": "revise",
+   "issues": "'读法愈细所分愈多（lumped_of_finer）'误述：该定理说经较粗读法而成者经每一较细读法亦成；'分理'只给理之结构一半（区别），不含变化跨之同样之条件。",
+   "fix": "照原文转述 lumped_of_finer；加'理之为理须变化跨此分同样（goAlike_iff_lumped），此为脊柱所加'。"
+  },
+  {
+   "id": "daizhen-li-qing-yu",
+   "verdict": "keep",
+   "issues": "沿用 RO 相合，写对。"
+  },
+  {
+   "id": "jielao-li-fen",
+   "verdict": "revise",
+   "issues": "kind agreement 过强：'凡理者，方圆短长粗靡坚脆之分也'是属性之分，'理定而后可得道'是全称；脊柱给其确切范围：一分承载变化之律恰当其下相同者同样变化（carries_law_iff），非任一分皆可得道。",
+   "fix": "kind 改 scope；reading 写'理定而后可得道，恰在世界跨此分同样之处成立（carries_law_iff）；方圆短长之分未必承载律'。"
+  },
+  {
+   "id": "jielao-de-shi-li",
+   "verdict": "keep",
+   "issues": "定域写对（得理是成功之条件，不是保证）。"
+  },
+  {
+   "id": "zhuangzi-pao-ding",
+   "verdict": "keep",
+   "issues": "沿用 RO 相合；'所行之路在物之间'无声明，是 AI 之附读，可留。"
+  },
+  {
+   "id": "zhuangzi-qiushui-da-li",
+   "verdict": "keep",
+   "issues": "定域写对，外篇已注。"
+  },
+  {
+   "id": "zhuangzi-de-chong-fu-tong-yi",
+   "verdict": "revise",
+   "issues": "'读法愈细分开愈多（lumped_of_finer）'误述（同 daizhen-fen-li）；其余（lumped_const_iff）写对。",
+   "fix": "照原文转述 lumped_of_finer：经较粗读法而成者经较细读法亦成。"
+  },
+  {
+   "id": "laozi-14-hun-er-wei-yi",
+   "verdict": "revise",
+   "issues": "(1) '混而为一是同，不是重同（不说它们是一物）'与文本不合：'混而为一'正说三者为一；其结构是'不可致诘者合而为一'，即以相同者为一之描述（IdentifiesAlike：恰识同者为一），比单纯之同多一步。(2) alike_iff_sameTests 须双方处处至同之条件未写。",
+   "fix": "加 Becoming.IdentifiesAlike、Becoming.identifiesAlike_iff；改写为'不可致诘（凡验皆同）→混而为一（识同为一，有意义之描述之所为，不断言先有一物）'；删'不是重同'；补 alike_iff_sameTests 之条件。"
+  },
+  {
+   "id": "laozi-14-zhi-gu-yu-jin",
+   "verdict": "keep",
+   "issues": "定域写对（今复古或状态有界之处）。"
+  },
+  {
+   "id": "laozi-52-mu-zi",
+   "verdict": "revise",
+   "issues": "Run.keepHistory_shown（保存历史时所显之律只容许那一历史）不是'确定之常加起点固定行程'之定理，误引；后者是确定之律之定义（Law.run）；母在本章是天下之始，读为'律＋起点'是 AI 读法，未标。",
+   "fix": "删 keepHistory_shown 或照原文转述其义；'确定之常加起点固定行程'标为定义；注母子之读为 AI 读法。"
+  },
+  {
+   "id": "mojing-tong",
+   "verdict": "revise",
+   "issues": "'「异而俱于之一」正是同之关系定义…中华本同取此义'过强：经上之同是总名，下分重体合类，'俱于之一'即在某一方面同，结构近类同；互模拟（凡验皆同）在墨经无直接对应；重同＝等同、同＝互模拟、类同＝归并之三配是 AI 之安排。",
+   "fix": "reading 改为'墨经给同之总名与四分；脊柱之等同（alike_configurations、determined_iff_named）、互模拟（Bisimulation、Alike）、类同（Learning.Lumped）可与之相配，此配是 AI 读法'；agreement 只保留于'同是异者间之关系，不要求一物'。"
+  },
+  {
+   "id": "mojing-lei-tong-xing",
+   "verdict": "revise",
+   "issues": "'读法愈细所分愈多（lumped_of_finer）'误述；其余写对。",
+   "fix": "照原文转述 lumped_of_finer。"
+  },
+  {
+   "id": "xiaoqu-you-yi-tong",
+   "verdict": "keep",
+   "issues": "部分之同（类同）不即全同，结构合。"
+  },
+  {
+   "id": "xiaoqu-tui",
+   "verdict": "keep",
+   "issues": "结构合（determines_lumped_iff、lumped_right_iff）。"
+  },
+  {
+   "id": "xiaoqu-qi-ran-suo-yi-ran",
+   "verdict": "keep",
+   "issues": "沿用 RO 相合，写对。"
+  },
+  {
+   "id": "mojing-huo-jin-duo-shao",
+   "verdict": "revise",
+   "issues": "(1) '按多少之更细读法才承载（lumped_of_finer）'误：该定理是单调性（粗者所成，细者亦成），不说细者承载而粗者不承载。(2) '按类之投影不承载这条律'是经说之事例，脊柱无此例之 Lean，carries_law_iff 只给条件。(3) 未引其所释之经「五行毋常勝，說在宜」（MI1-S-JX，阅读单元 MI1-U-JX-01），而那正是论常之句。",
+   "fix": "删 lumped_of_finer 或照原文转述；reading 写'按类之读法不承载胜负之律是经说所举之事，非定理；脊柱给其条件（carries_law_iff）'；加经文片段。"
+  },
+  {
+   "id": "weishi-si-fen-she",
+   "verdict": "revise",
+   "issues": "'读法愈细分开愈多（lumped_of_finer）'误述；'哪一粒度承载变化（goAlike_iff_lumped）'是原文所无之问题，只可作 AI 附读。",
+   "fix": "照原文转述 lumped_of_finer；goAlike 一句标为 AI 附读或删。"
+  },
+  {
+   "id": "xunzi-yi-lei-ju",
+   "verdict": "keep",
+   "issues": "结构合；法为法令之义已不带。"
+  },
+  {
+   "id": "mengzi-wu-zhi-bu-qi",
+   "verdict": "keep",
+   "issues": "结构合；价格语境已不采。"
+  },
+  {
+   "id": "mengzi-sao-ni",
+   "verdict": "keep",
+   "issues": "定域写对。"
+  },
+  {
+   "id": "lunyu-ju-yi-yu",
+   "verdict": "keep",
+   "issues": "结构合。"
+  },
+  {
+   "id": "xici-chu-lei-er-zhang",
+   "verdict": "keep",
+   "issues": "定域写对。"
+  },
+  {
+   "id": "suzhe-20-yi-zhi",
+   "verdict": "keep",
+   "issues": "结构合。"
+  },
+  {
+   "id": "suzhe-22-xun-li",
+   "verdict": "keep",
+   "issues": "定域写对。"
+  },
+  {
+   "id": "suzhe-73-chang-li",
+   "verdict": "keep",
+   "issues": "定域写对；此常即 C08 之大率（典型），宜互指。"
+  },
+  {
+   "id": "suzhe-76-chang-li-shang-xia",
+   "verdict": "keep",
+   "issues": "相分理由成立。"
+  },
+  {
+   "id": "zhongyong-lv-xing",
+   "verdict": "revise",
+   "issues": "declarations 列 Flow.Balances.admits_unreached、comparison_within_reach，二者属 RO 对同段「致中和」之定域，与本条所论「天命之谓性，率性之谓道」无关，记于本条会使人以为本条之相分依它们。",
+   "fix": "删此二声明，只在 reading 中以 RO 编号互指。"
+  },
+  {
+   "id": "zhongyong-bing-xing-bu-bei",
+   "verdict": "revise",
+   "issues": "混用两种结构：World.commute_laws、Footprinted.sorts_iff、reorder_precedes 是独立交换次序可换，Law.Commutes.apart 是与对称交换之律不合并其所分者（一律与一对称），后者与'道并行'不是同一结构；RO 原条之 Flow.level_kept、Viability.Plan.zip_keeps、Viability.ChoicePoint.no_rule_decides_joint 被删而未说明。",
+   "fix": "删 Law.Commutes.apart；保留 commute_laws 一组为并行不悖之读；恢复或说明 RO 之 Viability 诸声明。"
+  },
+  {
+   "id": "mozi-fa-yi",
+   "verdict": "revise",
+   "issues": "'工具是一个读法，与之同者通过同样测验（Alike.tests）'错配：规矩所给是一个读法（方与非方之归并），合之者是在此读法下类同（Learning.Lumped），不是与工具互模拟；Alike.tests 说相同者过同样测验，方向亦不对。",
+   "fix": "改引 Becoming.Learning.Lumped（法为读法 π，合法者 π 值同），删 Alike.tests。"
+  },
+  {
+   "id": "mozi-fei-ming",
+   "verdict": "keep",
+   "issues": "相分对象（所引有命者）写对。"
+  },
+  {
+   "id": "wangbi-50-ru-wu-sheng",
+   "verdict": "keep",
+   "issues": "结构合；王弼生生义不采写对。"
+  },
+  {
+   "id": "qiwulun-mo-shi-fu-yang",
+   "verdict": "keep",
+   "issues": "结构合（入而不复）。"
+  },
+  {
+   "id": "tongshu-shi",
+   "verdict": "keep",
+   "issues": "沿用 RO 相合，LoopReturn 新名写对。"
+  },
+  {
+   "id": "dazhuang-shang-liu",
+   "verdict": "revise",
+   "issues": "'艰则吉'是'处艰而守则吉'之断，读为'不保持该域之另一动'无据；且若有离开之动，该域就不是对每一动皆不出，Invariant.locks_out 不适用，与本条自己之读相冲；'不能退，不能遂'更近于所取之动皆留于原处。",
+   "fix": "删 Invariant.locks_out 与'艰则吉即另一动'之读；以 Run.stays（所取之动皆保持此域则留其中）读'不能退不能遂'；'艰则吉'标为判断，不在律中；kind 改 scope。"
+  },
+  {
+   "id": "kun-chu-liu-jian-bing",
+   "verdict": "revise",
+   "issues": "未据 YI-ZHUAN p-lishuang（同一传文已相合于 Hexagram.wane、wane_six、wane_drawn、wane_never_back，并注'在消息之律下坤并非吸收态，坚冰是否长存在律不在卦'），只引一般之 DrawnInto；消息之律下坤每十二步复得（Hexagram.waxWane_returns），'至坚冰'不是入闭，本条未写此界。",
+   "fix": "declarations 换为 Hexagram.wane、wane_six、wane_drawn、wane_never_back，加 Hexagram.waxWane_returns 为界；reading 写'只入阴之律下驯致六步皆入坤而不复离；消息之律下坤复得，坚冰非闭'；并引 RO wenyan-jian（由辩之不早辩）。"
+  },
+  {
+   "id": "pi-zhong-ze-qing",
+   "verdict": "revise",
+   "issues": "'合并之律可使坤成为闭'所据应是 Hexagram.wane_drawn、wane_never_back（只消之律把一切吸入坤）；所引 wane_breaks 只说此律破全变之对称。",
+   "fix": "加 Becoming.Hexagram.wane_drawn、Becoming.Hexagram.wane_never_back。"
+  },
+  {
+   "id": "yu-tuan-si-shi-bu-te",
+   "verdict": "revise",
+   "issues": "'顺动读为不合并之动'是把一个条件加入原文（顺在彖传为顺从、依序）；lossless_iff_returns 之前提（有限构形、无损）原文未说；结构上相合者只是'四时不忒'＝确切复得，'以顺动'为因是 AI 之附加。",
+   "fix": "kind 改 scope：'以顺动故不忒'恰在有限而无损之处成立（Law.lossless_iff_returns）；或 agreement 只保留于'四时不忒＝复得'，删对'顺'之读。"
+  },
+  {
+   "id": "lin-tuan-gang-zhong-er-ying",
+   "verdict": "revise",
+   "issues": "未引 YI-ZHUAN p-gangzhong-erying：'刚中而应'是已编码之关系（Hexagram.middleUnbrokenOpposed，五卦全检），相合；本条之定域只对'大亨以正，天之道也'之推断成立，reading 未分两半。",
+   "fix": "加 Becoming.Hexagram.middleUnbrokenOpposed、Becoming.Hexagram.middleOppositionStatements_agree；reading 分两半：关系相合，由之断亨与天之道为判断。"
+  },
+  {
+   "id": "xici-ji-zhe-dong-zhi-wei",
+   "verdict": "revise",
+   "issues": "YI-ZHUAN p-zhiji 已把同一句判为定域（Web.break_not_bounded、observed_level_couples、Flow.policy_uses_after_failure：几之先见恰在相关条件耦合入读法之处），本条判 agreement 于 Juncture 而未调和；'微'（差别之小）与'吉之先见'（预见之征）都不在 Juncture 之定义中。",
+   "fix": "reading 分两半：'动之微'所指之处＝机（Juncture、juncture_iff、outcomes_differ），相合；'吉之先见'＝几之可见，恰在耦合入读法之处（照 YI-ZHUAN p-zhiji），定域；或整条改 scope 并引 p-zhiji。"
+  },
+  {
+   "id": "xici-zhi-ji-qi-shen",
+   "verdict": "revise",
+   "issues": "'对一切过程都找到每一失去之机，就是 LPO'过强：lpo_of_junctures_found 只证'都找得到则蕴含 LPO'，未证其逆；与 YI-ZHUAN p-zhiji（几之先见经耦合）未调和。gap（机可待之步数）检过：Junctures 模块明言未导出，成立。",
+   "fix": "'就是'改为'蕴含（需要）'；加'预见机须相关条件按水平耦合入读法（YI-ZHUAN p-zhiji）'。"
+  },
+  {
+   "id": "wangbi-bu-shi-qi-ji",
+   "verdict": "revise",
+   "issues": "条目本身写对；但平行 WP-XCS-C08-S09-R03「几事不密则害成」句义是保密（上文君臣，下文「是以君子慎密而不出也」），不是机处失去之步，作平行只是字面相同。",
+   "fix": "删此平行，移入 rejected。"
+  },
+  {
+   "id": "tanjing-zi-fu",
+   "verdict": "revise",
+   "issues": "坛经之缚由住而成，可由不住而解（FO2-TJ-R014「念念不住，即无缚也」），结构是'所取之动皆保持此域则留其中'（Run.stays）与'离开须一不保持此域之动'（Run.leaving_needs）；Invariant.locks_out、Run.locked_in、DrawnInto.never_back 说的是不可离开，与原文'不住，道即通流'相反。",
+   "fix": "删 locks_out、locked_in、never_back，以 Run.stays、Run.leaving_needs 为据；names_used 去成闭，改闭（所住之域）；kind 保留 agreement。"
+  },
+  {
+   "id": "tanjing-jing-fu",
+   "verdict": "revise",
+   "issues": "同上：净缚是住于净相之缚，可解，locks_out、locked_in 不是其结构；'锁定与所锁之价值无关'之论点由 Run.stays 对任何域成立即可得；Web.significance_undetermined 原说网之动力不蕴含活的意义（两个常值意义），'意义不由律定'是转述，未照原文。",
+   "fix": "以 Run.stays 代 locks_out、locked_in；照原文转述 significance_undetermined。"
+  },
+  {
+   "id": "amituo-bu-tui",
+   "verdict": "revise",
+   "issues": "'经文以佛愿断言此条件'无据：冻结本此段之愿是闻者'应当发愿，愿生彼国'，不退转由彼佛国土之成就功德陈述，不是佛愿。scope 之判断本身可留。",
+   "fix": "改为'经文以彼土之成就陈述此条件，不从行程读出'；层之归类若留'中心'须另给文本之据。"
+  },
+  {
+   "id": "dazongshi-te-wei-ding",
+   "verdict": "revise",
+   "issues": "'有限而封闭者终定'错：Undecided.settles 说 N 步内停（不再变），停时可仍未定（不含常量者全停于未定，stays_undecided；说谎者停于未定）；本条前句已引 stays_undecided，后句自相矛盾。",
+   "fix": "改为'有限而封闭者 N 步内停于最小不动点（settles、least_fixed），所定者只是常量所先定者之所及；无常量者停于全未定（stays_undecided）；二值无不动点者每一不动点留一未定之句（undecided_of_moves）'。"
+  },
+  {
+   "id": "hanfei-mao-dun",
+   "verdict": "keep",
+   "issues": "最小例成立；glues_iff 另需诸主张互异（Distinct S.claims），可补。"
+  },
+  {
+   "id": "laozi-66-jiang-hai",
+   "verdict": "keep",
+   "issues": "定域写对；王之中心义不采写对。"
+  }
+ ],
+ "missing": [
+  "老子十六章「夫物芸芸，各复归其根。归根曰静，是谓复命。复命曰常」（YD-LAO-BASE；LE-R023、LE-R069；RO lao-16-gui-gen-yue-jing 定域，郭店本作'各复其根'而无'复命曰常'）：常之回返义与所归、归根，名常与所归皆须据之。",
+  "系辞下「变动不居，周流六虚，上下无常，刚柔相易，不可为典要，唯变所适」（DS03，WP-XCX-C07-S01-R01）：与「既有典常」同段，爻位无常而循辞有常，正是常相对于描述（carries_law_iff）。",
+  "系辞上「一阖一辟谓之变；往来不穷谓之通」（DS02，XC-R031、WP-XCS-C11-S04-R05）：闭之反例（阖与辟交替而复返），名闭之 not_carried 须列。",
+  "墨经·经下「五行毋常勝，說在宜」（MI1-S-JX，阅读单元 MI1-U-JX-01）：mojing-huo-jin-duo-shao 所释之经，直接论常（按类之读法无常胜之律）。",
+  "老子六十四章「其安易持，其未兆易谋。其脆易泮，其微易散。为之于未有，治之于未乱」（YD-LAO-BASE，无关系记录；RO lao-64-wei-zhi-yu-wei-you 定域）：机与护闭之先秦本文，本簇只引河上公注。",
+  "韩非子·喻老「千丈之堤，以螻蟻之穴潰；百尺之室，以突隙之煙焚…白圭之行堤也塞其穴」（FA1-S-H21）：每一失去经一机、护闭于细之法家读法。",
+  "坤文言「其所由來者漸矣，由辯之不早辯也」（RO wenyan-jian 相合）与 YI-ZHUAN p-lishuang（Hexagram.wane、wane_six、wane_drawn、wane_never_back）：kun-chu-liu-jian-bing 应据二者。",
+  "YI-ZHUAN p-zhiji（「知幾其神乎」「幾者，動之微，吉之先見者也」，定域，Web.break_not_bounded、Web.observed_level_couples、Flow.policy_uses_after_failure）：机之二条目须与之调和。",
+  "YI-ZHUAN p-gangzhong-erying（「剛中而應」，Hexagram.middleUnbrokenOpposed）与 p-cuozong、p-yijian：本簇三条目所论同句已有之相合／定域，须引用。",
+  "庄子·天运「夫六經，先王之陳迹也，豈其所以迹哉…夫迹，履之所出，而迹豈履哉」（ZH1-S14，外篇，年代有争议）：C01 以「所以迹」名所显之律，与本簇「所显之常」冲突，须据此段之方向（由履至迹，抑或由迹读出）裁定。",
+  "系辞上「方以类聚，物以群分，吉凶生矣」（DS02，WP-XCS-C01-S01-R03）：类与评价相连，与 xici-dong-jing-you-chang 同段，宜立一条（定域或相分），不只在 not_carried 一提。",
+  "荀子·正名「状同而为异所者…谓之二实；状变而实无别而为异者，谓之化」（RO xunzi-hua-yi-shi）：同与等同（重同）之别；C01 以之立「状」，须与本簇之同协调。",
+  "老子五十二章「塞其兑，闭其门，终身不勤。开其兑，济其事，终身不救。见小曰明…是为习常」（YD-LAO-BASE）：闭、开带相反之评价，见小曰明（机前之明），习常。",
+  "苏辙《老子解》十六章「惟復于性而後湛然常存矣」（RO sz-16-fu-xing 相分）：常存之义，名常之 not_carried 之证。",
+  "名：与对称交换之律（Law.Commutes：T(σx)=σ(Tx)；Commutes.apart、Commutes.breaks、Commutes.not_drawn_to_one）须另立一名，与「并行不悖」（独立交换次序可换）分开。",
+  "跨簇一名一概念待整合者裁定：律／常／所以迹（C01、C16、词表、本簇）；同／状（C01）；同歸（C05＝合并）与本簇所归、同归之读；闭、成闭、护闭（C06 重出）；机（C17 作機）；类（C09）；推与推来（C08）。"
+ ]
+}

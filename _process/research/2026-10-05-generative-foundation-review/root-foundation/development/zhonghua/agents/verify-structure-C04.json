@@ -1,0 +1,540 @@
+{
+ "cluster": "C04 流、交换、平衡、耗散与停息",
+ "lens": "STRUCTURE（结构之镜：看是否同一关系、同一条件、同一方向，不看共用一字）。以下判断都是 AI 读法。映射者依据的是 309af1124，声明已按现行 main cce935e7c 的 Lean 逐一核对。其后有两处改动必须替换：R29 删去 Becoming.whole_falls_not_recurring 与 Becoming.Flow.takers_within_on_whole；R30 改名，Flow.Lossless 改为 Flow.Conserving，Web.generation_* 改为 Web.embodiedArising_*，Web.dissipation_generation_not_recurring 改为 Web.dissipation_arising_not_recurring。其余被引声明在现行树中都存在。本文新引的每一句原文都已用 ctq.py text 对冻结文本核过。",
+ "names": [
+  {
+   "concept": "流（Becoming.Flow）",
+   "name": "流",
+   "verdict": "revise",
+   "issues": "一、fit 说孟子「流水之为物也，不盈科不行」显出「流随水平而行，与衡之下水平只随所取所与而变相合」。原句说的是水注满坑坎才前行，是过了门槛才通过；它不是衡的记账恒等式，这里的相合是硬配。二、fit 说流是「在诸处之间移动」的东西。Becoming.Flow 只有 present、take、give 三项，即每步每个在场形成对每个条件所取、所与之量；它不搬运同一物，也不含守恒。从一处到另一处有所输送，是 Flow.Conveys（输），不是 Flow 本身。三、名下没有说明流与取与之别：流是跨诸步的索引族，取与是一步（World.move）。",
+   "fix": "一、concept 改为「流：诸形成跨各步于诸条件之所取与所与之量（Becoming.Flow 的 present、take、give；Flow.taken、Flow.given 是其和）；不立承载者，不含守恒；诸处之间的输送另名为输（Flow.Conveys）；一步之流即取与」。二、fit 删去「孟子『不盈科不行』还显出流随水平而行，与衡之下水平只随所取所与而变相合」。孟子此句或者移出书证，或者改注为「满而后行」的门槛结构，并说明它不对应 Flow.Balances。三、fit 中「在诸处之间移动」改为「随所在之处而取与」。"
+  },
+  {
+   "concept": "一次交换（Becoming.Exchange、World.move）",
+   "name": "取与",
+   "verdict": "revise",
+   "issues": "一、fit 的「此处所取，即彼处所与」断言了守恒，理论没有这条律。Flow.Balances 只就每一条件说：步后水平连同所被取，等于步前水平连同所被与。它不规定一个形成之所取等于他处之所与。二、耗散之下，封闭家族上 give + sign(take) ≤ take（Flow.DissipatesOn），有所取时所与严格少于所取。所与恰等所取是另加的条件 Flow.ConservingOn／Flow.Conserving。三、两条书证（荀子·富国「其於貨財取與計數也」、孟子「可以取，可以无取，取伤廉」）处在财货与德性语境，只能作字义佐证。",
+   "fix": "fit 首句改为：「取与把一步的交换读成在场诸形成于各条件之所取与所与（World.move、Becoming.Exchange）；同一交换从取的一端与与的一端读，不先立给者与受者为两类存在；所取与所与之间不设等量（等量是守恒 Flow.Conserving，另为条件；耗散之下所与少于所取）」。书证下注明：财货与廉惠之语境不取。"
+  },
+  {
+   "concept": "取（Flow.take、taken、uptake）",
+   "name": "取",
+   "verdict": "revise",
+   "issues": "一、fit 的「使该条件的水平下降（每一降都有所取，Balances.fall_taken）」把蕴涵方向说反了。fall_taken 说的是凡下降必有所取；有所取而同一步有所与时，水平可以不降。二、书证「將欲取之，必固與之」在韩非子·喻老中是谋略，属竞逐之层。",
+   "fix": "一、fit 改为：「取是一个形成跨一步从一个条件取走之量；凡水平下降必有所取（Flow.Balances.fall_taken），所取不必致降；家族之取用是其成员所被取之和（Flow.uptake）」。二、在韩非子书证下注明：谋略语境不取，只作字义佐证。"
+  },
+  {
+   "concept": "与（Flow.give、given、replenishment）",
+   "name": "与",
+   "verdict": "revise",
+   "issues": "一、fit 的「使其水平上升（每一升都有所与，Balances.rise_given）」同样把蕴涵方向说反了：rise_given 说凡上升必有所与，所与不必致升。二、老子三十六章「将欲夺之，必固与之」是谋略（竞逐之层）。三、八十一章「既以与人己愈多」是理论要定域的断言（见 lao-81 条），不能当作对此名的佐证。",
+   "fix": "一、fit 改为：「与是一个形成跨一步给予一个条件之量；凡水平上升必有所与（Flow.Balances.rise_given；把其余计入的形式见 Flow.rise_netGiver），所与不必致升」。二、书证下注明：三十六章为谋略之层，不取；八十一章为待定域之断言。"
+  },
+  {
+   "concept": "取者（Flow.takers）",
+   "name": "取者",
+   "verdict": "keep",
+   "issues": "计数结构确切：Flow.takers 是跨一步从家族取用的形成之数。Flow.takers_within_on 给出：在一段步上家族每步都衡（BalancesOn）且耗（DissipatesOn）时，取者之和连同终点存量不超过起点存量。fit 的「以起点的存量为界」漏写了这两个前提。「取者」是新组合，书证只是大学「食之者」的「…之者」结构，而大学成书年代有争议。",
+   "fix": "名不改。fit 末句补前提，改为：「一段步上家族每步衡且耗时，这段上的取者之数以起点存量为界（Flow.takers_within_on）」。"
+  },
+  {
+   "concept": "与者（Flow.renewers）",
+   "name": "与者",
+   "verdict": "keep",
+   "issues": "计数确切。但 fit 的「取者无界地增多，与者必无界地增多」夸大了结论的形式。Flow.More.renewers_unbounded 需要两个前提：Flow.Balances，以及每个形成每步所与不超过定量 g（Flow.Capacity cs g）。它的结论是：自任何一步起，都没有一个界能约束与者之数（¬∀t≥T₀, renewers ≤ M）。这是否定形式，不是构造出来的无界增多。",
+   "fix": "名不改。fit 改为：「在衡且每个形成每步所与不超过一定量（Flow.Capacity）之下，取者多而无已（Flow.More）时，自任何一步起都无界能约束与者之数（Flow.More.renewers_unbounded）」。"
+  },
+  {
+   "concept": "衡（Flow.Balances）",
+   "name": "衡",
+   "verdict": "revise",
+   "issues": "一、墨经书证在句中截断。冻结文本（MI1-S-SX，經說下）续文是「相衡則本短標長，兩加焉，重相若，則標必下，標得權也」：衡是秤杆，两边加等重而标端必下，杆上的相衡依力臂，不依等量。所以 fit 说「正是这一结构」是误读，两者只在「一旁有加，必见于衡」这一点相通。二、荀子「衡者，平之至」与「礼者，人道之极也」并举，衡在那里是法度之极，又带入 fit 自己在 not_carried 中排除的平、均等之义。三、fit 说衡「不需要前提」，这有误导。所列关系项之衡是许多律的前提（runs_down、fed_from_beyond 等都以 Balances 为假设）；只有把整体之其余算作关系项之后，流才按构造而衡（Flow.withImbalance_balances）。",
+   "fix": "一、fit 改为：「衡是每一条件跨一步的出入相抵：步后水平连同所被取，等于步前水平连同所被与（Flow.Balances）。所列关系项之衡是律中的条件；把整体之其余算作关系项后，每个流按构造而衡（Flow.withImbalance_balances），原有之衡恰是其余闲置（Flow.balances_iff_idle）」。二、墨经只引「衡加重於其一旁，必捶」，并注明：墨经之衡是秤杆，等重两加而标下，与理论之衡只在「一旁有加，必见于衡」上相通，不是同一律。三、荀子「衡者，平之至」移出书证，或标为相分（法度之极、平之义）。"
+  },
+  {
+   "concept": "整体之其余（Flow.withImbalance；World.withRest）",
+   "name": "其余",
+   "verdict": "revise",
+   "issues": "一、C01 已把同一概念（World.withRest、Flow.withImbalance）名为「大块」，两簇对一概念用了两个名。二、单用「其余」是日常词，与条目中的用法互相冲突：mojing-sun-er-bu-hai 与 mozi-sha-suo-bu-zu 用它指余量（餘，supported_iff_within_margin 的 margin）；sunzi-wu-suo-bu-bei 用它指家族之内其余部分（total_split）；这些都不是整体之其余。三、论语「其餘，則日月至焉而已矣」指其余诸弟子，带比较与位序，只能作字义佐证。",
+   "fix": "一、术语写作复合「整体之其余」，绝不单用「其余」作术语。二、与 C01 的「大块」由整合者择一，使 World.withRest 与 Flow.withImbalance 只有一个名。三、mojing-sun-er-bu-hai、mozi-sha-suo-bu-zu 的 names_used 改为「余量（餘）」；sunzi-wu-suo-bu-bei 删去「其余」，改说「家族之其余部分」。"
+  },
+  {
+   "concept": "耗（Flow.Dissipative、DissipatesOn）",
+   "name": "耗",
+   "verdict": "keep",
+   "issues": "名与结构相合：跨一步封闭的家族上，所与加上（有所取时的）一单位不超过所取。fit 有两处要改。一、「封闭而取用复现的家族必须从其外得到供给」自相矛盾：按定义，ClosedAt 的家族在该步不从其外取，也不向其外与。fed_from_beyond 说的是被围住（Around：含于某个封闭家族）、衡且耗、取者复现的家族。二、「失而不回」加进了不可逆，而 DissipatesOn 只是一步的不等式，不涉及是否回返。",
+   "fix": "名不改。一、fit 删去「失而不回」。二、末句改为：「被围住（Flow.Around）、衡且耗而取者在任意晚的步复现的家族，不能自某步起不再自外得与（Flow.fed_from_beyond，否定形式）」。"
+  },
+  {
+   "concept": "最小损失（Amounts.rests 的 loses 前提）",
+   "name": "端",
+   "verdict": "revise",
+   "issues": "一、墨经之端（「端，體之無序而最前者也」「非半弗𣃈，則不動，說在端」）是量本身有不可再分的最小份。它只对应整数之量（Amounts.whole，最小损失可取一）。理论的最小损失是每次被计的变化所失的下界，在没有原子的稠密之量中也可以成立。两者结构不同，fit 说「端正是这一前提」是过度对应。二、lean 列表中的 Becoming.whole_falls_not_recurring 已在 R29 删去，现行陈述是 Becoming.falls_not_recurring。三、fit 漏写 Amounts.rests 的「不升」（still）前提，并把其结论说成止。实际结论是 P 不复现，不是自某步起停息。四、此名与 C14 冲突（C14 以「端」名 Valuation.Seed），也与孟子四端（「恻隐之心，仁之端也」）冲突。",
+   "fix": "一、术语改为复合「失有端」，定义为「每次被计之变化所失不小于一个大于无之量 ε」，并明言它不是量的不可分。二、单字「端」只用于墨经对照与整数之量的定域书证。三、lean 列表中 Becoming.whole_falls_not_recurring 改为 Becoming.falls_not_recurring。四、fit 补全三项前提：不升、每次至少失 ε、起点存量少于有限份 ε。结论写作「P 不复现」。五、与 C14 的冲突交整合者裁定。"
+  },
+  {
+   "concept": "阿基米德的量（Amounts.Archimedean）",
+   "name": "积小以高大",
+   "verdict": "keep",
+   "issues": "短语恰好陈述阿基米德性（任一大于无之量，有限多份即超过任何量）。书证大象·升「積小以高大」在「君子以順德」的修养语境中，fit 已排除其德行义。这一性质不是一切量的事实：Becoming.Layered.not_archimedean 给出有最小损失而非阿基米德、存量永不止的量。所以引它的条目应记为定域。名的书证页（YD-HX02 大象）与条目页（YD-JP46）不同，但是同一段大象文，属小差。",
+   "fix": "名不改。条目 yi-sheng-ji-xiao-gao-da 的 kind 改为 scope（见该条）。"
+  },
+  {
+   "concept": "停息（World.RestsFrom：自某步以往无所生起亦无所止息）",
+   "name": "止",
+   "verdict": "revise",
+   "issues": "一、ZH 词汇表以「生起、止息」对 arising、ceasing，止息即 Web.Ceases，C01 也这样用；C11 用「已止」（StopsBy）。以「止」名停息与之相撞。名下所引程颐「息為止息，又為生息」，在冻结文本中续为「革之相息，謂止息也」「物止而後有生」：止息在那里是熄灭、止灭，正是 ceasing。二、概念行「自某步起此后每一步都不再变化」与章节词汇表（自某步起无所生起亦无所止息）不一致；而且相关定理只有不可非（¬¬）的形式（World.comes_to_rest_unrefuted、Flow.change_stops_unrefuted），C16 称之为不可非。三、lean 列表混了四个概念：World 的停息（¬¬）、水平的停变（¬¬）、Law.rests_iff（律的轨道到达不动点而满足目标，C15 名之为「足而止」）、Amounts.rests（P 不复现，更弱）。四、墨经「止，以久也」与經說上「無久之不止…有久之不止」说的是有久的不动（一段有限时间），对应理论的停顿（World.stutter_change_recurs_iff），不是自某步以往。五、朱熹「能止而又不可終於止」表明单字止本身包含暂止。",
+   "fix": "一、名改为「終止」。书证：序卦「物不可以終止，故受之以漸」（易传，年代有争议）、彖·既济「終止則亂」。二、概念以 World.RestsFrom 为准，律写作不可非：World.comes_to_rest_unrefuted；水平之停变用 Flow.change_stops_unrefuted。三、Law.rests_iff 归 C15「足而止」；Amounts.rests 另述为「P 不复现」。四、单字「止」只留给一步之静或暂止（墨经之止对应停顿，World.stutter_change_recurs_iff），或采 C11 的「已」系；止息仍专指 Web.Ceases。五、凡 names_used 含「止」的条目都随之改。"
+  },
+  {
+   "concept": "输送（Flow.Conveys）",
+   "name": "输",
+   "verdict": "revise",
+   "issues": "一、现代汉语单字「输」首义是输赢之输（竞逐之义），作术语会被误读。二、fit 的「远输有损」漏了条件：只有沿途每一程的家族跨步封闭且耗时，每程才至少失一（Balances.runs_down）。三、lean 列表中的 Flow.region_not_a_cut 经 Valuation（conveyance）陈述，own、sig 为任意立场参数，它的内容就是 fed_from_beyond（经 boundary_crossed），作主证偏弱。",
+   "fix": "一、术语写作「输送」，或首次使用时定义为「一形成跨一步从 c 有所取、向 d 有所与（Flow.Conveys）」。二、「远输有损」改为：「若每一程之家族跨步封闭且耗，每程至少失一（Flow.Balances.runs_down），远输有损」。三、以 Flow.fed_from_beyond 为主证，region_not_a_cut 只作旁证。"
+  },
+  {
+   "concept": "自外得与（Flow.FedFromBeyond）",
+   "name": "自外来",
+   "verdict": "revise",
+   "issues": "一、fit 漏了前提与形式。fed_from_beyond 需要：衡、耗、家族为 Distinct、自 T₀ 起被围住（Around），且取者在任意晚的步复现；结论是否定形式（不能自某步起皆无自外来者）。二、fit 说小象「或擊之，自外來也」「正合理论」，这是反例而不是相合。击是自外之取：该步家族不封闭（¬ClosedAt），而不是 FedFromBeyond（家族外 c 被取、家族内 d 被与）。三、lean 中的 Becoming.Web.generation_fed_from_beyond 已在 R30 改名。",
+   "fix": "一、fit 改为：「衡、耗，家族自某步起被围住，取者在任意晚的步复现时，不能自某步起皆无自外来而与其成员者（Flow.fed_from_beyond）」。二、名的范围限于「自外来而与其成员」。三、「或擊之，自外來也」从相合中拿出，另作对照：自外之取，即家族该步不封闭。四、lean 改为 Becoming.Web.embodiedArising_fed_from_beyond。"
+  },
+  {
+   "concept": "汲入（Flow.taking_draws_in、Inward）",
+   "name": "汲",
+   "verdict": "reject",
+   "issues": "一、Flow.inward_iff_not_fed 说 Inward ↔ ¬FedFromBeyond，所以 taking_draws_in（¬∀t≥N Inward）与 fed_from_beyond（¬∀t≥N ¬Fed）说的是同一件事；fit 自己也写「两名说同一结构的两面」。为同一概念立两个名，违反命名一致。二、fit 描述的「取于此，与于彼」是 Flow.Conveys（输），不是 taking_draws_in。三、中文版已以「汲取」对 Web.draws，C02 以「资」名 draws，再立「汲」会第三次相撞。四、lean 中的 Becoming.Web.generation_draws_in 已在 R30 改名为 Becoming.Web.embodiedArising_draws_in。",
+   "fix": "一、不立此名，并入「自外来」。taking_draws_in 在说解中注为「自外来」的取者一侧读法。二、「汲」只在說中作字义注（井之汲水）。三、用到它的条目（yi-jing-yang-er-bu-qiong、lao-04-05-chong-xu-bu-qu）的 names_used 改为「输送／自外来」。四、lean 改为 Becoming.Web.embodiedArising_draws_in。"
+  },
+  {
+   "concept": "合取过与（¬Flow.WithinJoint）",
+   "name": "合取过与",
+   "verdict": "keep",
+   "issues": "名与条件恰合：它就是 ¬WithinJoint（家族的合取多于所与），正是 Flow.excess_lowers、excess_bounded、joint_excess_ends 所用的条件。概念行的「各自在所与之内取用，合起来超出」把一个可能情形写进了定义：「各自在内」只由 Becoming.Pair.own_not_joint（及 Becoming.Exceeding.own_not_joint）示其可能，不是名的一部分。C13b 以「出入相揜」名 WithinJoint，依赖此名为其否定。",
+   "fix": "名不改。概念行改为：「合取过与：¬Flow.WithinJoint（家族之合取多于所与）；各自不过而合起来过，是其可能情形（Becoming.Pair.own_not_joint）」。"
+  },
+  {
+   "concept": "更多而无已（Flow.More）",
+   "name": "多而无已",
+   "verdict": "keep",
+   "issues": "Flow.More 是 ∀K ∃T ∀t≥T, K ≤ takers，与庄子「多而无已」的无上界相合。小差：More.renewers_unbounded 还需要 Flow.Capacity 前提，fit 未写。",
+   "fix": "名不改。fit 中「与者无界」一句补前提「每个形成每步所与不超过定量（Flow.Capacity）」。"
+  },
+  {
+   "concept": "开放（World.arising_opens、Flow.new_beyond_every）",
+   "name": "未",
+   "verdict": "revise",
+   "issues": "一、fit 漏了前提，结论也写偏了。arising_opens 需要普查、每一关系项皆体现、衡、耗。new_beyond_every 需要第一定律（Flow.Gainless），结论是析取：在任意晚的步，或者其余净与之，或者该家族不封闭。二、not_carried 说「openness_contingent：开放是必要条件而不充分」，引错了声明。openness_contingent 只说八前提对围住与开放两不定；证明不充分的是 World.holding_world，它也说明只要求生起者体现时开放并不必要。三、「未」已是 C16 的关系标记「尚未」（Learning.no_prefix_fixes_next、Web.tail_unexcluded），又是 Ren 早期「开」四相之一（章节交叉对照），单字作此律之名会相撞。",
+   "fix": "一、fit 补全前提与析取结论。二、「不充分」改引 Becoming.World.holding_world。三、正文用复合名为开放之律命名：可选「不可窮」（序卦「物不可窮也，故受之以未濟」）或「未濟」。单字「未」只留于交叉对照与 C16 的标记，由整合者与 C16 协调。"
+  },
+  {
+   "concept": "损事件（Web.Depletes）",
+   "name": "损",
+   "verdict": "revise",
+   "issues": "一、墨经「損，偏去也」与經說上「損，偏也者，兼之體也。其體或去或存，謂其存者損」说的是整体之部分去而部分存，是静态的部分去除。它没有 Depletes 的条件结构（事件之每步，家族中无一上升则必有一下降），所以 fit 的「正是」夸大了。二、名下的说法前后不一致：概念为 Web.Depletes（事件之性质）；衰的 alternatives 说损「名单个条件的下降」；耗的 alternatives 说损「名下降（depletion），不必有所取」。三、此名与损益、损有余、损卦等书证的通常义相撞：yi-xugua-sun-er-bu-yi、yi-zagua-sun-yi-shengshuai、lao-77-tian-zhi-dao、lao-42、lao-77-ren 都把卦名或通常义记成了此名。四、lean 中的 Becoming.Web.dissipation_generation_not_recurring 已在 R30 改名。",
+   "fix": "一、fit 的「正是」改为「部分相合：偏去即家族中有一下降；Depletes 另加『无一上升时』的条件」。二、名下三处统一为 Web.Depletes。三、可考虑采用墨经自己的定义「偏去」为术语，以免与损益之损相撞，由整合者定。四、条目中卦名或通常义的「损」不记入 names_used。五、lean 改为 Becoming.Web.dissipation_arising_not_recurring。"
+  },
+  {
+   "concept": "衰（Flow.RunsDownOn）",
+   "name": "衰",
+   "verdict": "keep",
+   "issues": "结构确切：RunsDownOn.changes_iff 说衡且耗的一步上有所改变恰当总量下降。书证杂卦「損 、益 ，盛衰之始也。」只给出衰的衰减字义，不陈述这一结构，只是字义佐证。",
+   "fix": "名不改。书证下注明「只为字义佐证，结构由 RunsDownOn.changes_iff 给出」。"
+  },
+  {
+   "concept": "竭（Stock.exhausted_within）",
+   "name": "竭",
+   "verdict": "keep",
+   "issues": "结构与书证都相合：庄子·达生「其馬力竭矣，而猶求焉」是在存量为无之后仍要取（draws_nothing_from_empty）；惠施「萬世不竭」只在可二分之量中成立，fit 已作此定域。庄子外篇年代有争议，层次标注已写明。",
+   "fix": "无。"
+  },
+  {
+   "concept": "体现（Web.Embodied：∀t, active t x ↔ 0 < level t x）",
+   "name": "体",
+   "verdict": "reject",
+   "issues": "一、书证文言「君子體仁足以長人」是君子以仁为体、足以居人之上，带位序（长人）与德性。它没有「一个关系项恰在活跃时作为条件而在」的结构，fit 的「行与所是不二」是加上去的。二、墨经「體，分於兼也」与损之經說用「體」作部分，同一字在本簇书证中已有相反之义。三、宋明「体用」带先在之本。单字「体」作术语，会同时引入这三种读法。",
+   "fix": "一、不以单字「体」为术语，改用复合「体现」（现代复词，非先秦），首次使用时定义为「关系项恰在活跃时作为条件而在（Web.Embodied）」。二、文言书证移出，或改注为字义来源。三、与 C13 对「體」（部分）的用法由整合者协调。"
+  },
+  {
+   "concept": "封闭（Flow.ClosedAt）",
+   "name": "闭关",
+   "verdict": "keep",
+   "issues": "一步之封闭的结构确切，大象「至日閉關」也只是一时。书证语境是先王、商旅、省方，属政治与商旅；后起的「闭关锁国」联想须在首次使用时排除。lean 列表中的 Flow.Enclosed（某个有限家族封闭）属于围，不属于闭关。名的书证页 YD-HX02 与条目页 YD-JP24 不同，但是同一段大象文。",
+   "fix": "名不改。一、lean 列表去掉 Becoming.Flow.Enclosed，归入「围」。二、首次使用时注明「只指跨一步的封闭，不带闭关修行、闭关锁国之义」。"
+  },
+  {
+   "concept": "围住（Flow.Around；Flow.Enclosed）",
+   "name": "围",
+   "verdict": "revise",
+   "issues": "一、书证孙子「十則圍之」是兵家包围敌军，属竞逐之层；not_carried 已说不取其义，却仍把它列为书证。二、单字「围」的现代首义也是包围。三、系辞「范围天地之化而不过」说的是易书范围天地（认知义），先秦层且有争议，可留作有注的书证。",
+   "fix": "一、术语写作复合「围住」（现行中文版已用）。二、删去孙子「十則圍之」书证。三、保留系辞「范围天地之化而不过」，并注明其认知义与年代争议。四、Flow.Enclosed 归于此名。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-tuan-sun-yi",
+   "verdict": "keep",
+   "issues": "沿用 RO 的定域，确切。声明都存在；守恒只说阳爻数（组态之事实），不由方向相反推出守恒，这一限定保留得正确。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-tuan-bo-xiaoxi-yingxu",
+   "verdict": "keep",
+   "issues": "run_never_rests 确是消息之律（waxWane）上的定理，与彖·剥之消息盈虚对应正确；回返而不止的读法与 lossless_iff_returns 一致。names_used「止」须随该名的改动而改。",
+   "fix": "若采纳「終止」，names_used 中的「止」改为「終止」。"
+  },
+  {
+   "id": "yi-tuan-jie",
+   "verdict": "keep",
+   "issues": "两界（beyond_given_bounded／takesAll_of_more 与 waitsAll_more_waiting／withholding_absorbs）与「苦節不可貞，其道窮」的结构相合，社会语汇已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-tai-xiao-wang-da-lai",
+   "verdict": "revise",
+   "issues": "一、彖（YD-HX01）释小往大来为「天地交而萬物通也」「內陽而外陰」，说的是内外卦之间阴阳的相易与所处之位，不是一处的净受。卦辞层本身只说小往大来。二、引 Flow.whole_rise_from_rest 却没写它的前提 Flow.Gainless（第一定律）。三、彖同段「內君子而外小人」是位序之层，未作相分记录。",
+   "fix": "一、reading 改为：卦辞只说小往大来；彖（战国，有争议）释之为内外之相易，结构是一次取与从两端读（World.exchange_step_iff、Hexagram.across_exchange）。「净受」降为另一种 AI 读法。二、引 whole_rise_from_rest 处写明需要 Flow.Gainless。三、加相分子句：「內君子而外小人」之位序不取。kind 维持 scope。"
+  },
+  {
+   "id": "yi-kan-bu-ying-ji-ping",
+   "verdict": "revise",
+   "issues": "所引 withinGap_iff_between、regulates、settles、crosses_of_above 是两侧调节之律，已由 C11 名为中和、中節。names_used 只记了「衡」。",
+   "fix": "names_used 改为「中和、中節、衡」。"
+  },
+  {
+   "id": "yi-qian-ying-bu-ke-jiu",
+   "verdict": "revise",
+   "issues": "declarations 中有 Becoming.Web.Carries.arising_not_recurring，但 reading 没有用到它；其余定域确切。",
+   "fix": "从 declarations 删去 Becoming.Web.Carries.arising_not_recurring；或者在 reading 中加一句说明它在此处的作用（若无法写出，就删）。"
+  },
+  {
+   "id": "yi-xugua-sun-er-bu-yi",
+   "verdict": "revise",
+   "issues": "一、损益在卦序中只是翻转配对（Hexagram.reverse、order_paired）。Hexagram.both_fixed_iff 讲的是翻转不动之卦，与此句无关。二、律的层面只是编码，即表的次序。三、names_used「损」是卦名，不是 Web.Depletes。",
+   "fix": "一、从 declarations 删去 Becoming.Hexagram.both_fixed_iff。二、names_used 删去「损」（卦名不记）。三、reading 末加一句：相合只在表的翻转配对。"
+  },
+  {
+   "id": "yi-zagua-sun-yi-shengshuai",
+   "verdict": "revise",
+   "issues": "一、相合只在配对（zagua_partners）。补上的 RunsDownOn.changes_iff、rise_given 是 AI 的引申，杂卦文本并未陈述。二、names_used 的「损」是卦名。",
+   "fix": "一、reading 把「补一层」标为 AI 引申，不计入相合。二、names_used 删去「损」，「取与、衰」保留作引申之名。"
+  },
+  {
+   "id": "yi-fu-zhi-ri-bi-guan",
+   "verdict": "keep",
+   "issues": "一步封闭（ClosedAt）与「自某步起每步被围住」两者区分得正确，前提（衡且耗）写在了句中。政治语境已排除。名的书证页与本条页不同（YD-HX02／YD-JP24），是同一段大象文。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-wuwang-xingren-de-niu",
+   "verdict": "keep",
+   "issues": "一次取与从两端读，rise_given、fall_taken、rise_with_fall、rise_needs_fall 都确切；灾异与吉凶已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "yi-yi-zi-wai-lai",
+   "verdict": "revise",
+   "issues": "一、「或擊之，自外來也」被说成「正合理论」。击是自外之取：家族该步不封闭（¬ClosedAt）；它不是 FedFromBeyond（外者被取、成员被与）。二、Balances.rise_paid_from_beyond 的 GainlessOn 前提加在含 ds 的家族 es 上，reading 却写成「家族不自增时」。三、rising_fed_from_beyond 的结论是否定形式，reading 写成了「必从其外得到供给」。",
+   "fix": "一、把条目分为两段：益六二「或益之，自外來也」为相合（FedFromBeyond、rise_paid_from_beyond、rising_fed_from_beyond）；上九「或擊之，自外來也」改记为对照，即自外之取、家族不封闭，不入相合。二、reading 改为「含此家族的家族 es 无中不生时（GainlessOn es t），其升以 es 中家族之外者所被取为上界」。三、「必从其外得到供给」改为「不能自某步起皆无自外来者」。"
+  },
+  {
+   "id": "yi-sheng-ji-xiao-gao-da",
+   "verdict": "revise",
+   "issues": "一、「積小以高大」只在阿基米德的量中成立。Becoming.Layered.not_archimedean 给出有最小损失而存量永不止的非阿基米德之量，所以这是定域，不是相合。二、rests_of_archimedean 的结论是 P 不复现，不是「止」。三、名的书证页 YD-HX02 与本条 YD-JP46 不同页（同一大象文）。",
+   "fix": "一、kind 由 agreement 改为 scope。二、reading 加界：「此性质是前提，不是一切量的事实（Becoming.Layered.not_archimedean）」。三、「有最小损失则止」改为「有最小损失则 P 不复现」。"
+  },
+  {
+   "id": "yi-jing-yang-er-bu-qiong",
+   "verdict": "revise",
+   "issues": "一、「从源中取而送至用处（taking_draws_in 的结构）」：这个结构是 Flow.Conveys；taking_draws_in 说的是被围住而取者复现的家族自外得与，与 fed_from_beyond 同义。二、「汲」之名已驳回。三、records 中的 generation-is-replenishment 一类名称须核对 R30 之后的现名。",
+   "fix": "一、reading 改为「井是输送：入于水而使水上来，一取一与（Flow.Conveys）；养而不穷，需被围住之源不能自某步起不再自外得与（Flow.fed_from_beyond）」。二、declarations 把 taking_draws_in 换为 Flow.Conveys 与 Flow.fed_from_beyond，或两者并列。三、names_used「汲」改为「输送、自外来」。四、核对 records 现名。"
+  },
+  {
+   "id": "yi-xugua-jin-shang-huan-shi",
+   "verdict": "revise",
+   "issues": "一、進、緩都不是取。reading 用 Flow.Dissipative、Balances.runs_down（只管封闭家族上的取）来解「必有所傷／所失」，是共用一字的配对。二、真正的定域在于：损失需要一条有所合并的律（Law.loss_needs_merge），无合并之律无所失而回返（lossless_iff_returns）；loses_times 给出最小损失之下的计数。",
+   "fix": "一、declarations 删去 Becoming.Flow.Dissipative、Becoming.Flow.Balances.runs_down。二、reading 只保留：「必有所失」恰在律有所合并处成立（loss_needs_merge、lossless_iff_returns），且有最小损失时失随复现而累计（loses_times）。三、names_used 删去「耗」，「端」随名改为「失有端」。kind 维持 scope。也可以把整条移入 parallels。"
+  },
+  {
+   "id": "yi-xugua-yi-er-bu-yi",
+   "verdict": "revise",
+   "issues": "一、「益而不已即多而无已」不对：益是水平上升，Flow.More 计的是取者之数。映射者自己在「多而无已」的 alternatives 中也这样说。二、因此 More.replenishment_unbounded、More.renewers_unbounded、seeking_ends 都对错了对象。",
+   "fix": "一、reading 改为：「益而不已」即成员在任意晚的步上升。被围住、衡且耗之下，这不能自某步起皆无自外来者（Flow.rising_fed_from_beyond）；所立者自某步起每步衰减时，无一条件在任意晚的步上升（Flow.more_exhausted）。所以「必決」只在被围住处成立，开放处益可以不已。二、declarations 改为 Becoming.Flow.rising_fed_from_beyond、Becoming.Flow.more_exhausted、Becoming.more_needs_open。三、names_used 改为「益（C06／C12）、自外来、竭」，删去「多而无已、与者」。"
+  },
+  {
+   "id": "yi-zagua-jiji-ding",
+   "verdict": "revise",
+   "issues": "「卦变之律下没有运行在任何一步止住」标错了律名。Hexagram.run_never_rests 与 never_comes_to_rest 是消息之律（waxWane），changes_run_never_rests 是一爻之变（changes）。卦变的交换步是 Hexagram.exchanges，这里没有被引用。",
+   "fix": "reading 改为「消息之律与一爻之变之律下，没有运行在任何一步止住（run_never_rests、never_comes_to_rest；changes_run_never_rests）」。若要说卦变，另引 Becoming.Hexagram.exchanges 并核实结论。"
+  },
+  {
+   "id": "yi-xici-wang-lai-bu-qiong",
+   "verdict": "revise",
+   "issues": "一、Flow.exchange_recurs_iff 说的是：交换复现，恰当它在所立者并非封闭地衰减（¬RunsDownClosed）的步上复现。reading 写成「不下降的步」，不确切。二、arising_opens 讲生起，new_beyond_every 讲恒新，都不是交换。直接相关的是 Flow.exchange_not_recurring_around：衡、耗、普查、自某步起不可非地被围住时，交换不复现。",
+   "fix": "一、「在不下降的步上」改为「在所立者并非封闭地衰减的步上」。二、「所以往来不穷需要开放…（arising_opens、new_beyond_every）」改为「所以衡且耗之下，往来不穷与自某步起每步被围住不相容（Flow.exchange_not_recurring_around）」。三、arising_opens、new_beyond_every 移为邻近之律，或删去。"
+  },
+  {
+   "id": "yi-xici-ding-jiao-hou-qiu",
+   "verdict": "keep",
+   "issues": "等待给出的给出（waitsAll_closed、withholding_*）与「无交而求，则民不与」结构相合，社会角色已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "lao-04-05-chong-xu-bu-qu",
+   "verdict": "revise",
+   "issues": "一、「所与即所汲」与耗散相抵触：封闭家族上所与少于所取，Conveys 也不要求所与等于所取。二、「似万物之宗」已说不取，但没有作为相分子句记录。三、「汲」之名已驳回。",
+   "fix": "一、「所与即所汲」改为「所与出于所取（Flow.Conveys：一取一与，所与不多于所取）」。二、fragments 加相分子句：「似万物之宗」是先在之本一层。三、names_used「汲」删去，保留「输送、自外来」。"
+  },
+  {
+   "id": "lao-15-zhuo-yi-jing-zhi-xu-qing",
+   "verdict": "keep",
+   "issues": "趋近而止（approaches_rest、few_large_losses_of_archimedean）与「徐清」相合，「静之」也读得确切。小差：「有最小损失时才真正止（rests）」中 rests 的结论是 P 不复现。",
+   "fix": "「才真正止（rests）」改为「才使扰动不复现（Amounts.rests）」；names_used 随名改为「失有端、終止」。"
+  },
+  {
+   "id": "lao-16-gui-gen-yue-jing",
+   "verdict": "keep",
+   "issues": "沿用 RO 定域，郭店本之说保留，静与停的区分正确。",
+   "fix": "「中华本以「止」名停息」随名改为「終止」。"
+  },
+  {
+   "id": "lao-36-jiang-yu-duo-zhi",
+   "verdict": "revise",
+   "issues": "一、「所立来自所与」是夸大：起点水平（W.level 0）不出于任何所与；律只说凡上升必有所与。二、谋略（微明）已说不取，但没有作为相分子句记录。",
+   "fix": "一、改为「一个条件只能被取到它所立之量；步后之升来自所与（rise_given），起点之量不出于所与」。二、fragments 加相分子句：经文用作谋略，是竞逐之层。"
+  },
+  {
+   "id": "lao-42-sun-zhi-er-yi",
+   "verdict": "revise",
+   "issues": "一、「恰在所损者是净汲取者之处（admits_of_net_draw）」把单向定理说成了恰当（iff）。二、admits_of_net_draw 只说：净汲取的部分若去掉，凡有它时被支持者，无它时仍被容纳（开需净与）。它不证明「益」，只证明不失容纳。三、此误读承自 RO 的 lao-42 条。",
+   "fix": "一、reading 改为「所损者若是净汲取者，损之不使任何有它时被支持者失去容纳（Balances.admits_of_net_draw）；『益』律未给出」。二、在「或」的条件化中保留 supported_of_net_give、takesAll_of_more、full_taking_ends、excess_bounded。三、在 RO 的 lao-42 条留一条更正说明，交整合者。"
+  },
+  {
+   "id": "lao-44-zhi-zu-zhi-zhi",
+   "verdict": "keep",
+   "issues": "沿用 RO 相合，rests_iff 读为足之界（即 C15 之足而止），条件写明。",
+   "fix": "无。若采纳新名，names_used「止」改为「足而止（C15）」。"
+  },
+  {
+   "id": "lao-57-wu-shi-zi-fu",
+   "verdict": "revise",
+   "issues": "「部分只经由净汲取才使能形成者失去支持」是闭需净取，对应 Balances.supported_of_net_give 的逆否；reading 却引了 admits_of_net_draw（开需净与）。names_used「其余」应为整体之其余。",
+   "fix": "一、该句的声明改为 Becoming.Flow.Balances.supported_of_net_give（闭需净取：净与者不闭），declarations 相应替换。二、names_used「其余」改为「整体之其余」。"
+  },
+  {
+   "id": "lao-59-se",
+   "verdict": "revise",
+   "issues": "储备之律（Carries.lasts、carries_of_held、carries_zero）是 C02 以「蓄」所名的概念；names_used 只记了竭、取。",
+   "fix": "names_used 加「蓄（C02）」。"
+  },
+  {
+   "id": "lao-66-jiang-hai-shan-xia",
+   "verdict": "keep",
+   "issues": "相分判断正确：单一中心一层，center_not_derived 沿用 RO 惯例；相合只在「善下而受输」一段，方向相反的说明也确切。",
+   "fix": "无。names_used「输」随名改为「输送」。"
+  },
+  {
+   "id": "lao-67-jian-gu-neng-guang",
+   "verdict": "keep",
+   "issues": "joint_keeps、level_kept、supported_of_net_give（净与者不闭）、excess_bounded 都确切；「俭是广之必要而非充分」的定域正确。",
+   "fix": "无。"
+  },
+  {
+   "id": "lao-75-shang-shi-shui-zhi-duo",
+   "verdict": "revise",
+   "issues": "一、「部分只经由超出余量的净汲取使之失去支持」是闭需净取，应引 Balances.supported_of_net_give，而不是 admits_of_net_draw。二、loses_iff_beyond_margin 带立场参数 sig 与 p（失去有意义的延续），结构上只需 supported_iff_within_margin。",
+   "fix": "一、declarations 中 Becoming.Flow.Balances.admits_of_net_draw 改为 Becoming.Flow.Balances.supported_of_net_give。二、loses_iff_beyond_margin 留作带立场的旁证，并注明其 sig 参数。"
+  },
+  {
+   "id": "lao-77-tian-zhi-dao",
+   "verdict": "revise",
+   "issues": "「损有馀而补不足」之损是通常义，不是 Web.Depletes。所引两侧调节之律已由 C11 名为中和、中節。",
+   "fix": "names_used 改为「中和、中節、衡」，删去「损」。"
+  },
+  {
+   "id": "lao-77-ren-zhi-dao",
+   "verdict": "keep",
+   "issues": "沿用 RO 相合。rise_netGiver（凡上升有所与，其余计入）、rise_paid_from_beyond、share_rises、continuing_excludes 都确切；评价需要延续之条件，这一点写明了。names_used「损」是通常义。",
+   "fix": "names_used 删去「损」。"
+  },
+  {
+   "id": "lao-81-yu-ren-ji-yu-duo",
+   "verdict": "revise",
+   "issues": "LoopReturn.closing_not_lossless 讲的是回路闭合正差异的环，与「与人己愈多」中所存之量无关。真正的约束是：封闭家族上无中不生（Flow.Gainless），耗之下所与少于所取（Flow.DissipatesOn）。",
+   "fix": "一、declarations 删去 Becoming.LoopReturn.closing_not_lossless，加 Becoming.Flow.Gainless、Becoming.Flow.DissipatesOn。二、reading「回路不能凭空返回更多…」改为「封闭的一步无中不生（Gainless），耗之下所与少于所取（DissipatesOn）」。"
+  },
+  {
+   "id": "daxue-cai-ju-min-san",
+   "verdict": "revise",
+   "issues": "一、「散」是离去，unfed_consumption_ends 的结论是不再活跃，两者不同。二、「净给予只开不闭（supported_of_net_give）」夸大：此定理只证净与者不闭，没有证明它开。三、「財聚則民散」的「則」只在衡、只有活跃者给予、活动需要支持之下成立，应为定域。",
+   "fix": "一、「只开不闭」改为「不闭」。平行条 TP-H41-X6-R01 的同一措辞一并改。二、reading 注明「散」读作依存者不再活跃，是 AI 的结构化读法。三、kind 改为 scope。"
+  },
+  {
+   "id": "daxue-bei-chu-bei-ru",
+   "verdict": "keep",
+   "issues": "回路返回（withholding_returns、never_closes_of_no_less）与有记忆时吸收的定域都确切。「悖」是规范语，只取出入之式。",
+   "fix": "reading 注一句：「悖」的规范义不取。"
+  },
+  {
+   "id": "daxue-sheng-zhi-zhe-zhong",
+   "verdict": "keep",
+   "issues": "计数结构确切。小差：renewers_unbounded 需 Capacity；takers_within_on 需这一段上每步衡且耗。",
+   "fix": "补上 Capacity 与「这一段上每步衡且耗」两个前提。"
+  },
+  {
+   "id": "mengzi-bu-wei-nong-shi",
+   "verdict": "revise",
+   "issues": "Becoming.Web.generation_needs_replenishment 已在 R30 改名，因为「generation」保留给生生之扩展。reading 的「生成带着补充的要求」随之误名。",
+   "fix": "declarations 改为 Becoming.Web.embodiedArising_needs_replenishment；reading 改为「体现者之生起带着补充的要求」。"
+  },
+  {
+   "id": "mengzi-tong-gong-yi-shi",
+   "verdict": "revise",
+   "issues": "一、「开需要净给予」就是 Balances.admits_of_net_draw 本身（其文档为 Opening needs a net give），不是「supported_of_net_give 与 admits_of_net_draw 的对偶」。二、Overshoot.steady_continues 是一个具体世界的见证（steadyFlow），不是律。",
+   "fix": "一、该句改为「部分只经由净给予才开出有它时被支持而无它时不被容纳者（Balances.admits_of_net_draw：开需净与）」。二、steady_continues 注明为见证例，不当作律。"
+  },
+  {
+   "id": "xunzi-li-yu-wu-xiang-chi",
+   "verdict": "revise",
+   "issues": "Becoming.Web.generation_needs_replenishment 已在 R30 改名；「生成带着补充」也须改。",
+   "fix": "declarations 改为 Becoming.Web.embodiedArising_needs_replenishment；reading 改为「体现者之生起带着补充的要求」。"
+  },
+  {
+   "id": "xunzi-yu-duo-wu-gua",
+   "verdict": "keep",
+   "issues": "合取过与（own_not_joint、excess_lowers、excess_bounded、joint_excess_ends）确切；「必爭」作竞逐之层不取，判断正确。",
+   "fix": "无。"
+  },
+  {
+   "id": "zhuangzi-ma-li-jie",
+   "verdict": "keep",
+   "issues": "draws_nothing_from_empty、exhausted_within、seeking_exhausts 都确切；外篇年代争议已注明。",
+   "fix": "无。"
+  },
+  {
+   "id": "huishi-ri-qu-qi-ban",
+   "verdict": "revise",
+   "issues": "辩者之说只在可二分之量中成立（Halving），在整数之量中竭（Becoming.falls_not_recurring）。这与 mojing-fei-ban-duan 对称，应同为定域。",
+   "fix": "kind 由 agreement 改为 scope，界写「只在可二分（无最小损失）之量中成立」；names_used「端」改为「失有端」。"
+  },
+  {
+   "id": "mojing-fei-ban-duan",
+   "verdict": "revise",
+   "issues": "Becoming.whole_falls_not_recurring 已在 R29 删去，现行陈述是 Becoming.falls_not_recurring。",
+   "fix": "declarations 与 reading 中的 whole_falls_not_recurring 改为 Becoming.falls_not_recurring；names_used「端」随名改为「失有端」（墨经之端在 reading 中保留为字义）。"
+  },
+  {
+   "id": "mojing-sun-er-bu-hai",
+   "verdict": "revise",
+   "issues": "一、「部分只经由超出余量的净汲取使之关闭（admits_of_net_draw）」引错了声明：闭需净取是 Balances.supported_of_net_give。二、names_used「其余」应为余量（餘）。三、gap 说「无律可对」过强：Web.Admits 确实只有下界，但上界之害可以用带上界的所需或余地条件来表达；两侧之界的读法已有 Flow.withinGap_iff_between。",
+   "fix": "一、declarations 中 admits_of_net_draw 改为 Becoming.Flow.Balances.supported_of_net_give。二、names_used「其余」改为「余量（餘）」。三、gap 改写为「尚缺带上界的接纳及其对偶定理；可由带余地条件的所需表达」。"
+  },
+  {
+   "id": "mojing-zhi-yi-jiu",
+   "verdict": "revise",
+   "issues": "墨经「止，以久也」与經說上「無久之不止…有久之不止」以久（一段有限时间）定止：止是有久的不动，对应理论的停顿（World.stutter_change_recurs_iff）。它不是「自某步起此后都不变」。reading 把它与 rests_iff、comes_to_rest_unrefuted 说成相合，是误配。",
+   "fix": "一、kind 改为 scope。二、reading 改为：「墨经之止是有久之不动，即一段停顿；理论在此之上分出终止（World.RestsFrom，不可非）：一段停顿不定是否终止（stutter_change_recurs_iff）」。三、names_used「止」保留为一步之静或暂止之名。"
+  },
+  {
+   "id": "mozi-sha-suo-bu-zu",
+   "verdict": "revise",
+   "issues": "一、失去支持（闭）需净取，应引 Balances.supported_of_net_give，而不是 admits_of_net_draw。二、loses_iff_beyond_margin 带立场参数 sig 与 p。三、真正的相合在 Web.Admits 的逐条件之∀结构：有余的条件不补另一条件之失，reading 已说到，应作为主证。四、names_used「其余」应为余量。",
+   "fix": "一、declarations 中 admits_of_net_draw 改为 Becoming.Flow.Balances.supported_of_net_give，并加 Becoming.Web.Admits。二、注明 loses_iff_beyond_margin 的 sig 参数。三、names_used「其余」改为「余量（餘）」。"
+  },
+  {
+   "id": "sunzi-jiu-ze-dun-bing",
+   "verdict": "keep",
+   "issues": "计数结构确切（runs_down、takers_within_on、exhausted_within、loses_times），竞逐之层已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "sunzi-yuan-shu",
+   "verdict": "revise",
+   "issues": "一、「食敵一鍾，當吾二十鍾」是孙子的经验比率。律只给每取至少失一的下界，不给量级，reading 的「给出这一损失的量级」是夸大。二、「所以输送越远，所失越多」须加条件：沿途每程之家族跨步封闭且耗。",
+   "fix": "一、「给出这一损失的量级」改为「是孙子的经验比率，律只给下界」。二、补条件：「若沿途每程之家族跨步封闭且耗」。gap 保留。"
+  },
+  {
+   "id": "sunzi-wu-suo-bu-bei",
+   "verdict": "revise",
+   "issues": "一、gap 所举的最近声明不全：RelativePosition.greatest_not_behind（总量不超过处数乘最大一处）与 greatest_exists 已有；所缺的是其对偶「总量不少于处数乘最小一处，即至少一处不多于平均」。二、names_used「其余」不对：total_split 之余是家族之内其余部分，不是整体之其余。",
+   "fix": "一、gap 的最近声明加 Becoming.RelativePosition.greatest_not_behind、Becoming.RelativePosition.greatest_exists，缺口写成「最小一处之对偶」。二、names_used 删去「其余」。"
+  },
+  {
+   "id": "jielao-shu-bian-ye",
+   "verdict": "revise",
+   "issues": "一、Becoming.Flow.takers_within_on_whole 已在 R29 删去，现名 Becoming.Flow.takers_within_on。二、Law.loss_needs_merge 说的是：有限组态上一条运行之律若有大于无之损失，必合并组态（不单射）。「每次变业把已成之功合并掉」不是这个意思，是误用。",
+   "fix": "一、declarations 改为 Becoming.Flow.takers_within_on。二、删去 loss_needs_merge 及其句子，相合只保留 loses_times、runs_down、takers_within_on 的计数结构。"
+  },
+  {
+   "id": "heshang-39-bu-ke-dan-yu-ying",
+   "verdict": "keep",
+   "issues": "沿用 RO 相合，more_never_rests、more_needs_open、more_exhausted、excess_bounded、Whole.needs_arising 都确切；河上公的年代争议已注明。",
+   "fix": "无。"
+  },
+  {
+   "id": "wangbi-dong-xi-ze-jing",
+   "verdict": "revise",
+   "issues": "章节词汇表区分静（一时所成立者）与停息。reading 说「王弼的『静』是动之息，即止（停）」，把两者合并了。王弼「動息則靜，靜非對動者也」的相合在于：静只由该步无变化来定义，不是第二实在。",
+   "fix": "把「即止（停）」改为「即理论之静：该步无所变化（律不改变之状态，Law.rests_iff 所说的状态）」；comes_to_rest_unrefuted 只作停息之对照。"
+  },
+  {
+   "id": "wangbi-ji-ran-da-jing-wei-ben",
+   "verdict": "revise",
+   "issues": "「复卦所在的卦变之律无一运行止住（run_never_rests）」标错律名：复在消息之律（waxWane）中，run_never_rests 是消息之律上的定理。相分判断本身正确。",
+   "fix": "改为「复卦所在的消息之律（Hexagram.waxWane）无一运行止住（Hexagram.run_never_rests）」。"
+  },
+  {
+   "id": "wangbi-44-bu-tong-bu-san",
+   "verdict": "keep",
+   "issues": "合取过与与扣留之律确切，「必」的定域与竞逐之层的排除都正确。",
+   "fix": "无。"
+  },
+  {
+   "id": "fazang-jin-wu-zeng-jian",
+   "verdict": "revise",
+   "issues": "一、Becoming.Flow.Lossless 已在 R30 改名为 Becoming.Flow.Conserving（守恒），因为「无损」保留给 Law.Lossless（不合并），C05 已以「不同歸」名之。二、「故曰無生」作华严理事之说已说不取，但应作为相分子句记录。",
+   "fix": "一、declarations 改为 Becoming.Flow.Conserving；reading「无损（Lossless：所与恰等所取）」改为「守恒（Flow.Conserving／ConservingOn：所与恰等所取）」。二、fragments 加相分子句：「故曰無生」以金体为不变之本，是先在之本一层。"
+  },
+  {
+   "id": "chengyi-gen-zhi-qi-suo",
+   "verdict": "revise",
+   "issues": "一、Branching.keeping 已采名为「护闭」，names_used 未记。二、相合是部分的：畜止「以力止之」之「力」未被建模，keeping 只是对步的约束；艮止「安止」对 rests_iff 也只是部分相合。",
+   "fix": "一、names_used 加「护闭」。二、reading 把「相合在区分本身」改为「部分相合：区分本身相合，畜止之力与安止之安不在律中」。"
+  },
+  {
+   "id": "zhuxi-jian-bu-ke-zhong-yu-zhi",
+   "verdict": "keep",
+   "issues": "「能止」与「終於止」之分，与停顿和终止之分相合（stutter_change_recurs_iff），还给「終止」之名提供了宋明层的佐证。小差：change_recurs_iff 说的是在非衰减（¬RunsDown）的步上，不是「不下降的步」。",
+   "fix": "「不下降的步」改为「所立者不衰减的步」；names_used「止」改为「終止」。"
+  },
+  {
+   "id": "zhuxi-gen-xing-er-zhi",
+   "verdict": "keep",
+   "issues": "读法相对之止（Strobe.coarse_quiet、fine_arises）确切；工夫义已排除。",
+   "fix": "无。"
+  },
+  {
+   "id": "suzhe-81-yi-wu-jin",
+   "verdict": "keep",
+   "issues": "相分判断正确：「一無盡」是先在之本，其余只是一个关系项，衡恰是其闲置。",
+   "fix": "names_used「其余」改为「整体之其余」。"
+  }
+ ],
+ "missing": [
+  "名：「余量（餘）」。即 Balances.supported_iff_within_margin 的 margin（所需连同部分至今之净取，不超过无部分时之水平）。书证墨经「損而不害。說在餘。」（經下，先秦）。供 mojing-sun-er-bu-hai、mozi-sha-suo-bu-zu、lao-75 使用，与「整体之其余」分开。",
+  "名：一步之静（该步无所变化；律之不动点，即 Law.rests_iff 所说「律不改变之状态」）。与「終止」（World.RestsFrom）成对，合章节词汇表「静是一时所成立者，停是自某步起」之分；单字「止」可留于此。",
+  "名：守恒（Flow.Conserving、ConservingOn）与第一定律「无中不生」（Flow.Gainless、GainlessOn）。fazang、yi-tai、yi-yi、lao-81 与 new_beyond_every 都要用，却没有名。",
+  "名：净与者与净取者（Flow.NetGiver），以及两条方向律：开需净与（Balances.admits_of_net_draw）、闭需净取（Balances.supported_of_net_give）。lao-42、lao-57、lao-75、mojing-sun-er-bu-hai、mozi-sha-suo-bu-zu、daxue-cai-ju-min-san、mengzi-tong-gong-yi-shi 都依赖这对方向，因为没有名，方向屡被说反。",
+  "名：趋止而不至（Amounts.approaches_rest、Halving.approaches_without_reaching）。惠施与老子十五章都用到，与「終止」分开。",
+  "名：全取（Flow.TakesAll；takesAll_of_more、full_taking_ends）。yi-tuan-jie、yi-qian-ying-bu-ke-jiu、lao-36、lao-42 都用到。",
+  "条目：孟子·离娄下「源泉混混，不舍昼夜，盈科而后进，放乎四海；有本者如是」与「为无本，七、八月之间雨集，沟浍皆盈；其涸也，可立而待也」（RU2-S-MZ，先秦；脉络中无关系）。定域：有源持续自外得与则流不竭（Flow.uptake_needs_replenishment、Flow.fed_from_beyond），无源之盈在所立之数的步内竭（Stock.exhausted_within）。「本」在此是源，不是先在之本，须注明。",
+  "条目：庄子·秋水「萬川歸之，不知何時止，而不盈，尾閭泄之，不知何時已，而不虛」（ZH1-S17，外篇，年代有争议）。相合：入与出都复现，而水平不盈不虚。这是衡（水平之变等于所与减所取，Flow.Balances）之下开放的交换不息，正是本簇核心结构的先秦表述。",
+  "条目：老子四十八章「为道日损。损之又损，以至于无为。」（YD-LAO-BASE；脉络关系 LL-R014）。定域：「以至于」需要最小损失（Amounts.rests）；在可二分之量中损之又损而不至（Halving.never_rests、Halving.approaches_without_reaching）。",
+  "条目：序卦「物不可以終動，止之，故受之以艮」与「物不可以終止，故受之以漸」（YD-OW-XG；脉络 WP-XG-C02-S22-R01、WP-XG-C02-S23-R01；易传，年代有争议；冻结文本在「；」前有空格）。定域：普查、体现、衡、耗且自某步起被围住时，终止不可被否证（World.comes_to_rest_unrefuted），「物不可以終止」只在开放处成立。此条也是「終止」之名的书证。",
+  "条目：彖·既济「終止則亂」（YD-HX01，彖传，年代有争议）。作为「終止」之名的书证；RO 的 tuan-jiji-weiji 已读同一彖文，引用时连同其条。",
+  "条目：老子二十三章「故飘风不终朝，骤雨不终日。孰为此者？天地。天地尚不能久，而况于人乎？」（YD-LAO-BASE；河上公 LC2-HS-C23-R01）。定域：过所与之取不能持续（Flow.beyond_given_bounded），合取过与不能持续（Flow.excess_bounded）；「天地尚不能久」的普遍形式只在被围住处成立。",
+  "条目：庄子·养生主「指窮於爲薪，火傳也，不知其盡也」（ZH1-S03，内篇）。每一薪竭（Stock.exhausted_within），火经输送而延续，需自外得与（Flow.fed_from_beyond）。也可能归 C12（传承），交整合者定。",
+  "跨簇冲突，交整合者裁定：其余↔C01「大块」（同一概念两名）；端↔C14（Valuation.Seed）与孟子四端；未↔C16 的关系标记「尚未」；止↔ZH 词汇表与 C01 的「止息」（Web.Ceases）、C11「已止」（StopsBy）、C15「足而止」（Law.rests_iff）；汲↔中文版「汲取」（Web.draws）与 C02「资」；体↔墨经「體」（部分，C13）；损↔一切损益、损有余之通常义与卦名。"
+ ]
+}

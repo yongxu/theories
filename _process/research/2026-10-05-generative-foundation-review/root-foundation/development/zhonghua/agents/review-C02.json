@@ -1,0 +1,137 @@
+{
+ "edits": [
+  {
+   "id": "二·十三",
+   "find": "相得读作经活之事（⟦十五·六⟧）以交相连",
+   "replace": "相得读作经活之事（⟦十五·七⟧）以交相连",
+   "why": "Wrong pointer. In the outline, id 十五·六 is 畛. 活 is defined in id 十五·七 (顾式与活, number 十五·六). The writer used the number in place of the id."
+  },
+  {
+   "id": "二·五",
+   "find": "恰当其需加共取不过所待之积加共与",
+   "replace": "恰当其需加共取不过步首所待之积加共与",
+   "why": "Flow.Balances.kept_iff reads need t + taken t ≤ level t + given t, so the level is the one at the start of the step. Right after 「跨步后」, a bare 所待之积 reads as the level after the step, and that version is false."
+  },
+  {
+   "id": "二·五",
+   "find": "恰当所待之积加共与不及其需加共取",
+   "replace": "恰当步首所待之积加共与不及其需加共取",
+   "why": "Flow.Balances.broken_iff reads level t + given t < need t + taken t, so the level is the one at the start of the step. Same ambiguity as the sentence before."
+  },
+  {
+   "id": "二·五",
+   "find": "而此步在场之每物所取加此需皆不过积加共与",
+   "replace": "而此步在场之每物所取加此需皆不过步首之积加共与",
+   "why": "Flow.Balances.broken_shared has the hypothesis take f + need ≤ level t + given t, which uses the level at the start of the step."
+  },
+  {
+   "id": "二·五",
+   "find": "各取皆在其内，共取绝第三物之待",
+   "replace": "各取加此需皆不过其积，共取绝第三物之待",
+   "why": "「其内」 points to nothing. TwoDrawers.shared states exactly that each take plus the third formation's need is within the level plus giving (1+1 ≤ 2, and giving is 0)."
+  },
+  {
+   "id": "二·五",
+   "find": "俭（单字之名，新入名表；取老子六十七章",
+   "replace": "俭（单字之名，取老子六十七章",
+   "why": "「新入名表」 is a note about the drafting process and means nothing to a reader of the book. The table marks 俭 as 古, not 新, so no account of how it is composed is needed."
+  },
+  {
+   "id": "二·十三",
+   "find": "单字之名，新入名表，取「是事之變」",
+   "replace": "单字之名，取「是事之變」",
+   "why": "Process wording does not belong in the edition. The table marks 事 as 古."
+  },
+  {
+   "id": "二·六",
+   "find": "取与读为一关系（一步可许多种取与）：待读作必然之应",
+   "replace": "取与读为一关系（一步可许多种取与），运读作在场而有取与：待读作必然之应",
+   "why": "The law depends on a local condition that the 經 omits. ExchangeRelation.readWeb is Flow.readOff, so activity is read off the exchange (Exchanging: present, and takes or gives something positive). readWeb_dependent holds only under this reading. STYLE requires such conditions to be written in the 經. At present the 說 states it alone."
+  },
+  {
+   "id": "二·六",
+   "find": "与实历不同",
+   "replace": "与所读之历不同",
+   "why": "The name table reserves 实 for identity across steps (the 状/實 distinction from 荀子). In RespondsBelow, the history is just the history l being read, and 所读之历 says that without borrowing 实."
+  },
+  {
+   "id": "二·十二",
+   "find": "若有待，有形而自持者于一步已，则凡于此步资之者",
+   "replace": "若有待，有形而自持者于一步运而次步不运，则凡于此步资之者",
+   "why": "已 is defined only in ⟦三·二⟧ (number 三·一), which comes later. The C01 edit removed 作/已 from the 經 of 一·四, so no 經 in this part may use 已 before it is defined. The new wording is exactly Embodied.ending_breaks's hypotheses (active t x, ¬active (t+1) x). The 說 still points to 已 at ⟦三·二⟧."
+  },
+  {
+   "id": "二·四",
+   "find": "跨此步或持或绝，必居其一而不兼",
+   "replace": "跨此步或持或绝，恰居其一",
+   "why": "兼 now names only 大化之一切. The C01 edit replaced 兼二角 with 居二角 for this reason, so 「不兼」 in a 經 conflicts with the name. 「恰居其一」 states kept_or_broken together with kept_not_broken, and it also avoids 必, which the 凡例 (凡·四) reserves for branching."
+  },
+  {
+   "id": "六·九",
+   "find": "一族之员于某步无一见容，自此每步其员之每一待跨步犹在而需不减，且凡与其员之所待者皆其员，则此后其员无一见容",
+   "replace": "一域之物于某步无一见容，自此每步域中每物之每一待跨步犹在而需不减，且凡与其所待者皆在域中，则此后域中无一见容",
+   "why": "Flow.unsupported_stays quantifies over member : F → Prop, a set given by a predicate, and the table's name for that is 域. 族 names a finite list. With 族, the 經 states only a special case of what Lean proves."
+  },
+  {
+   "id": "六·九",
+   "find": "没有族外之与，一族一旦无一见容，此后再无见容者",
+   "replace": "没有域外之与，一域一旦无一见容，此后域中再无见容者",
+   "why": "Follows the 經 change: unsupported_stays is stated for a 域 (a predicate), not a 族. It also says where 「再无见容者」 holds: within the 域."
+  },
+  {
+   "id": "六·九",
+   "find": "族外有与（`Becoming.Restoring.Inflow.restores`）",
+   "replace": "域外有与（`Becoming.Restoring.Inflow.restores`）",
+   "why": "Same: the hypothesis that this witness breaks is the closure condition on the 域 (member predicate)."
+  },
+  {
+   "id": "六·九",
+   "find": "相濡以沫是族内之与",
+   "replace": "相濡以沫是域内之与",
+   "why": "Keeps the 对照 consistent with the 經's 域."
+  },
+  {
+   "id": "六·九",
+   "find": "（族外之与使所容",
+   "replace": "（域外之与使所容",
+   "why": "Keeps the wording consistent with the 經's 域."
+  },
+  {
+   "id": "DUIZHAO",
+   "find": "族内之与不使见容再来",
+   "replace": "域内之与不使见容再来",
+   "why": "Matches the 經 of ⟦六·九⟧, which is now stated for a 域."
+  },
+  {
+   "id": "六·九",
+   "find": "每一设都不可少，构造之例中各有其反",
+   "replace": "三设与二若，每一都不可少，构造之例中各有其反",
+   "why": "Only three of the five witnesses break a world premise (Idle breaks Acting, Carried breaks Dependent, Spontaneous breaks Balances). Adapting and Inflow break local conditions, namely that requirements do not loosen and that givers are members. ⟦凡·十⟧ and ⟦凡·十七⟧ keep 若 (a local condition) apart from 设."
+  },
+  {
+   "id": "六·九",
+   "find": "且设江湖之积广于涸泉时成立",
+   "replace": "且设江湖之积之历广于涸泉之历时成立",
+   "why": "广 (Web.Widens) is a relation between level histories, compared by what they admit. 「积广于」 reads as a comparison of amounts."
+  },
+  {
+   "id": "三·十",
+   "find": "其中一体永不亡，以之为体之兼每步运",
+   "replace": "其中一体永不亡，以之为体之族之兼（⟦三·二十三⟧）每步运",
+   "why": "The C01 edit (一·一, 一·十) and the C03 edit (三·二十三) restrict bare 兼 to 大化之一切 and name Web.Whole as 族之兼. Immortal.immortal is a statement about web.Whole."
+  },
+  {
+   "id": "二·十一",
+   "find": "是 `Becoming.Web.active_along` 之逆否；",
+   "replace": "是 `Becoming.Web.active_along` 之逆否，只说一步；所及者自某步起永不运（亡，⟦三·十⟧），而此链于其后每步皆在，则逐步用之，沿链及之者自此亦永不运，故名俱亡；",
+   "why": "Web.coextinct is a law about a single step (not active at t, so not active at t). The name table gives 亡 in 俱亡 the sense of ⟦三·十⟧ (自某步起永不运). Without this note, 「是谓俱亡」 names a one-step law with an ending word. Applying the law at each step, under the 經's 有待, gives the ending reading."
+  },
+  {
+   "id": "INTRO",
+   "find": "⟦二·五⟧之說引一条以以广为愈为设之结论",
+   "replace": "⟦二·五⟧之說引一条结论，其设为以广为愈",
+   "why": "Readability: 「以以广为愈为设」 stacks two 以. The claim is unchanged."
+  }
+ ],
+ "notes": "I checked every 經 against Lean in the zhonghua worktree. All 111 cited declarations and all 17 records resolve, and all are core. Every 「…」〔ID〕 is exact (ctq.py text), and every passage id and kind matches passages.json. The 條 order and titles match book-1-outline.txt. The C02 instructions are carried out: intro, 二·五, 二·六, 六·九, 二·七, 三·十, 二·九 and 二·十三, with the declarations merged.\n\nHypotheses and directions agree with Lean: supported_of, kept_iff and broken_iff, of_need_le, broken_drawn, broken_shared, kept_of_restrained (only the later flow needs to balance, and the 經 says only that), RespondsBelow and MayRespondBelow, readWeb_dependent, free_unsupported, relation_readWeb_requires and relation_readWeb_may, rise_given_by_supported, gains_from_supported (the 經 correctly writes GainsSupport where the instruction had 「所需不松而见容」), unsupported_stays, inactive_below and ceases_below, consumed_continues_transformed and consumed_ends_when_fixed, loss_does_not_decide (three runs exact), Carries and its lasts, ends_within and lpo_of_ending laws, carries_of_held, Embodied and SelfBearing laws, active_along and coextinct, Interacts, Idle, LivesOn, and the Mutualism witnesses.\n\nProblems found, with edits above:\n(a) ⟦十五·六⟧ points to 畛; 活 is ⟦十五·七⟧.\n(b) 二·五: three bare 「积」 should be 步首之积.\n(c) 二·六: the 經 omits that activity is read off the exchange.\n(d) 二·十二 經: 已 is used before its definition in ⟦三·二⟧.\n(e) 二·四 「不兼」 and 三·十 「体之兼」 conflict with the restriction of 兼.\n(f) 六·九 uses 族 for a predicate, which should be 域, and calls two local conditions 设.\n(g) 「新入名表」 is process wording.\n\nFor the integrator, not edited:\n1. 「必然之应／可能之应」 are not in the name table. They come from the C02 instruction. 可能 is not the 或 of ⟦凡·四⟧, and 必然 collides with 有之必然 (⟦凡·十四⟧, sufficiency). The table's own pattern (必足／或足／必至) suggests 必应／或应. If adopted, replace in the intro (once), the 二·六 經 (twice) and the 二·六 說 (four times, including 「可能应之」).\n2. 「程」 (二·六 經 「于其程」, 說 「其程」) is not a name. 「于其所生之行」 would use the name 行 (course_runs).\n3. 二·七 經 keeps 「已（已见⟦三·二⟧）」, the forward use the instruction asks for (C90). If the edit to 二·十二 is taken, this is the only 經 in the part that uses a name defined only later. 「步首运者，跨此步由运而不运」 would remove it.\n4. 二·八 經 「容为待者运之小故」 includes 有之不必然 by its own definition. The witness for that, Hibernation's 「见容」 at step 1, has no named lemma (說 and 證 mark it 未决). The intro's 「故非大故」 relies on it too.\n5. The 說 of 二·五 (about 14 sentences) and of 二·六 (about 12) exceed STYLE's three to eight. The 證 of 二·五 (11 declarations) and 二·九 (14) exceed eight, because the instructions merged declarations. 二·五's 說 cites Ranking.ThirdParty.stepwise_not_monotone, which its 證 does not list.\n6. The merges dropped two 对照 from deleted 條. 四·二十二 had mojing-sun-er-bu-hai 「損，飽者去餘，適足不害，能害飽」. 五·十六 had yi-xici-qiong-bian-tong-jiu 「易穷则变…」. These are optional, since the full table is in the other chapter.\n7. NAMES-ZH.md still anchors 兼 to Web.Whole and has no 族之兼 row. It needs updating to match the C01 and C03 edits.\n8. The passages.json reading of lao-67-jian-gu-neng-guang (俭 read as 出入相掩) is older than the name table's 俭 note (restraint ranking under 全行之读) that 二·五 follows. Reconcile the passage's reading."
+}

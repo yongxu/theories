@@ -1,0 +1,83 @@
+{
+ "findings": [
+  {
+   "where": "序（本书说什么、四种地位、限度、篇目）与 论纲篇首",
+   "problem": "The preface says the theses section is not in the book: 「英文本中的“论纲与猜想”……未收入本书」. It also says 「每一断言有四种地位之一」 and 「每一条都由 Lean 检查」. But the book does contain 论纲 (纲·一 to 纲·九, line 3509). The 论纲 opening says its claims are outside the four standings and graded 已证／有支持／猜想／论题, and several are unchecked conjectures. The 篇目 list leaves 论纲 out. So the preface misstates both what the book contains and the standing of its claims.",
+   "fix": "In 限度, replace 「本书陈述已检查之律及其条件。英文本中的“论纲与猜想”（理论最强的主张及其地位）未收入本书。」 with 「前十六篇陈述已检查之律及其条件。末篇论纲以全强陈理论最强之辞，其地位另分四等（已证、有支持、猜想、论题），每条于說中写明，不在上列四种地位之内，也不给前十六篇添一证。」. In 本书说什么, change 「每一条都由 Lean 检查」 to 「前十六篇每一条都由 Lean 检查」. After 「凡例说明这些地位，以及推理与证明之名。」 add 「论纲之辞不在此四种之内，其地位见论纲篇首。」. In 篇目, add 「- 论纲：理论关于实际之系统、AI 与伦理的最强之辞，及其地位。」",
+   "severity": "error"
+  },
+  {
+   "where": "篇一、篇五、篇六、篇九、篇十、篇十一、篇十二 篇首; 篇十五 篇首; 篇十六 篇首",
+   "problem": "凡·十, 凡·十七 and 凡·十八 make the World premises 设 and say a law that takes them as 若 is 有设而然. 凡·十八 说 says so in so many words: 「宇之诸设下的律亦是有设而然」. The English register agrees (balance, activity needing support and a supplied law of exchange give 'theorem under stated premises'). Yet several 篇 openings call every law 无设而然 while listing World premises among the local conditions. Examples: 篇五 lists 有待 and 有蓄; 篇六 lists 衡 and 唯活动者取与; 篇九 and 篇十一 list 衡; 篇十 lists 宇衡; 篇十二 claims 无设而然 although 十二·十 and 十二·十二 take 衡 and a supplied law of exchange. The records cited there are rated 'under stated premises' in English: closing-needs-net-draw, support-from-the-supported, selection-through-couplings, testing-within-couplings, becoming-dependence-dynamics, runaway-distance-uncoupled, what-a-pools-acts-respond-to. 篇十六 says the margin laws hold 「不加前提」, but 十六·二 needs 衡. 篇十五's list of three standings omits 衡 (十五·四, 十五·十五).",
+   "fix": "篇五: replace 「本篇诸律皆无设而然：每条只在写入其中的局部条件（有一表尽其状、有待、有蓄、每步有表举活动之体、火传、相续……）下」 with 「本篇诸律或无设而然，或以宇之设（有待、蓄）为若而有设而然（如五·八至五·十一、五·十四、五·十六）：每条只在写入其中的局部条件（有一表尽其状、每步有表举活动之体、火传、相续……）与所名之设下」.\n篇六: replace 「除末条外，本篇诸律皆无设而然（不加前提的定理），只在写入其中的局部条件（衡、唯活动者取与、所需不松、有穷之表、定然否……）下」 with 「除末条外，本篇诸律或无设而然（如六·二、六·三），或以宇之设（衡、有待、唯活动者取与）为若而有设而然（如六·四、六·六至六·九、六·十五、六·十九）；局部条件（所需不松、有穷之表、定然否……）写入其中」.\n篇九: replace 「诸律都是无设而然：只在写入其中的局部条件（衡、有穷、有一表尽之、定然否、有界……）下」 with 「诸律或无设而然，或以衡为设而有设而然（如九·四、九·八）：局部条件（有穷、有一表尽之、定然否、有界……）写入其中」.\n篇十: replace 「本篇诸律皆无设而然，每条只在写入其中之局部条件（义项表无重、有表尽诸待者、读者之码辨、宇衡而同一定然否、有截面、所给之式族……）下」 with 「本篇诸律除十·五以衡为设者有设而然外皆无设而然，每条只在写入其中之局部条件（义项表无重、有表尽诸待者、读者之码辨、同一定然否、有截面、所给之式族……）下」.\n篇十一: replace 「本篇诸律皆无设而然（不加前提的定理）：每条只在写入其中的局部条件（衡、在场者同、起点同、取与之法经感而读、有列、定然否、列而无重……）下」 with 「本篇诸律或无设而然，或以衡与所给之取与之法（经感而读）为设而有设而然（如十一·六、十一·十至十一·十二、十一·二十六至十一·二十八）：局部条件（在场者同、起点同、有列、定然否、列而无重……）写入其中」.\n篇十二: replace 「本篇诸律皆无设而然：每条只在写入其中的局部条件下」 with 「本篇诸律或无设而然，或以衡与所给之取与之法为设而有设而然（如十二·十、十二·十二）：每条只在写入其中的局部条件与所名之设下」.\n篇十五: replace 「或对任何顾成立，」 with 「或对任何顾成立（其中十五·四、十五·十五以衡为设），」.\n篇十六: replace 「这些对任何顾都成立，不加前提」 with 「这些对任何顾都成立，不加关于顾之设；余地之界与自身之广以衡为设」.\n篇一: replace 「本篇诸律皆无设而然」 with 「本篇诸律除以宇之设或所给之取与之法为若者（一·十八）外皆无设而然」.",
+   "severity": "error"
+  },
+  {
+   "where": "篇十六 十六·六 以广为愈（經）; 篇六 六·二十一（說）; 篇十五 十五·二十一（說）",
+   "problem": "The 經 sentence 「故以广读愈，以广为愈于活之每一读皆立」 reads as asserting C, two clauses after 「设，不断言」. Lean `Web.paths_comparison_widens` shows only that the relation 'widens' fits the C schema (`Comparison W.paths living Widens`). It holds by definition, and its docstring says that widening is better 'is supplied by the reading of better, not shown here'. 六·二十一 说 (「在水平之路上 C 成立」) and 十五·二十一 说 (「水平之路上以广为愈成立」) use the same wording.",
+   "fix": "十六·六 經: replace 「故以广读愈，以广为愈于活之每一读皆立。」 with 「故以广读愈，于活之每一读，广皆合以广为愈之式：此由定义而然，不证广为愈，称广为愈仍是设。」\n六·二十一 說: 「在水平之路上 C 成立，只因“更好”读作广」 → 「在水平之路上广合 C 之式，只因“更好”读作广」.\n十五·二十一 說: 「水平之路上以广为愈成立，是因为把“更好”读作广」 → 「水平之路上广合以广为愈之式，是因为把“更好”读作广」.",
+   "severity": "error"
+  },
+  {
+   "where": "篇四 篇首; 四·二十三（說）; 四·二十八（說）; 篇六 篇首; 六·三（說）; 六·二十（說）; 六·二十一（說）",
+   "problem": "The cross-references that say where the continuation condition, 以广为愈, 感 and 及而不感 are stated are off by one 篇, apparently from an earlier numbering. The condition is stated in 篇十五 (十五·十六), not 篇十四. 以广为愈 is in 篇十六 (十六·六), not 篇十五. 感 and 及而不感 are in 篇十一, not 篇十. A reader following them looks for the condition in 篇十四 (群与分), where it is not stated.",
+   "fix": "篇四篇首: 「（序与感之关系在篇十）」 → 「（序与感之关系在篇十一）」; 「以＋广＋为＋愈，篇十五」 → 「以＋广＋为＋愈，篇十六」.\n四·二十三 說: 「那是篇十（及而不感」 → 「那是篇十一（及而不感」; 「延续之条件，设而不断言，篇十四」 → 「延续之条件，设而不断言，十五·十六」.\n四·二十八 說: 「耦合之闭包，篇十）」 → 「耦合之闭包，篇十一）」; 「（及而不感，篇十）」 → 「（及而不感，篇十一）」.\n篇六篇首: 「感与明在篇十，顾与延续之条件在篇十四，以广为愈与取舍在篇十五」 → 「感与明在篇十一，顾与延续之条件在篇十五，以广为愈与取舍在篇十六」.\n六·三 說: 「设；篇十五）」 → 「设；十六·六）」.\n六·二十 說: 「以广为较好仍是设（篇十五）」 → 「以广为较好仍是设（十六·六）」.\n六·二十一 說: 「是篇十四所陈述而不断言的全称条件」 → 「是十五·十六所陈述而不断言的全称条件」.",
+   "severity": "error"
+  },
+  {
+   "where": "凡例 凡·十七 设（經）; 附录一 名表 以广为愈之注; 篇十五 十五·二十九（經、說）; 篇十六 十六·十四、十六·十五",
+   "problem": "凡·十七 says without restriction 「凡言排序，只引以广为愈」, and the name table says 「所有说排序之处只引它」. The book itself contradicts this. 无以小害大 (J2, `Lexical.BasicPriority`, whose `Above` ranks a strict basic gain above any loss of 增益) orders pairs that 以广为愈 leaves mixed (十六·十五: 「一状存彼之每一基本之辞，又成一彼所无之基本之辞，则愈于彼，增益不论」). 兼权 is half of that lexical order. 十五·二十九 經 orders by graded weights (「以级为权之计数自每方排序皆同」) and does not cite 以广为愈. Optimizers' own orders (四·二十八, 十一·十三至十五, 十四·十四) also rank. The intended rule (only C ranks courses in the ethics; practical commitments and agents' orders are named separately, as the English 'the order is C's and J's' admits) is stated too broadly.",
+   "fix": "凡·十七 經: replace 「凡言排序，只引以广为愈。」 with 「凡言诸程孰愈（伦理之次序），只引以广为愈；实践之承诺（皆愈、兼权、无以小害大、取于可得、量力而任、同类积小）所定之取舍，与择者、优化者自身之序，各名其设或所出，不是伦理之次序。」\n名表 以广为愈 注: 「所有说排序之处只引它」 → 「凡说伦理之次序之处只引它；实践之承诺与择者之序各自写明」.\n十五·二十九 經: 「以级为权之计数自每方排序皆同」 → 「以级为重之计数，自每方所排之先后皆同（计数之先后，不是以广为愈之愈）」.\n十六·十五 說: at the end add 「无以小害大是实践之承诺：它排以广为愈所不排之互有所长者，所定之序不是伦理之次序；伦理之次序只在以广为愈。」",
+   "severity": "inconsistency"
+  },
+  {
+   "where": "篇二 二·六 有待（經）; 篇三 三·十一 止（經）; 篇十三 十三·六 传之独立（經）; 篇二、篇三、篇四、篇十三、篇十四 篇首",
+   "problem": "The eight World premises (有待、衡、唯活动者与、唯活动者取、耗、有形、有列、传, plus the weaker 蓄) are 设 in 凡·十七 (宇之诸设) and in 一·十二, 四·十三 and 四·十八 (七设／八设). Elsewhere they are called 「律之局部前提」 (二·六, which also says 「三前提」), 「八条件」 (三·十一), 「七前提」 (十三·六), or listed among 局部条件 (篇二、三、四、十三、十四 openings; 篇四 says 衡 「怎样是一个局部条件」). The 凡例 standings depend on this distinction: a local condition leaves a law 无设而然, a 设 makes it 有设而然. So the mixed naming misreports standing.",
+   "fix": "二·六 經: 「律之局部前提，不断言」 → 「宇之一设，陈而不断」; 「又同此三前提」 → 「又同此三设」.\n三·十一 經: 「合八条件（有待、衡、唯活动者与、唯活动者取而所取唯其所资、耗、物皆有形、有列、传）」 → 「合宇之八设（有待、衡、唯活动者与、唯活动者取而所取唯其所资、耗、物皆有形、有列、传）」.\n十三·六 經: 「凡宇具传以外之七前提」 → 「凡宇具传以外之七设」; 「有尽之宇具其余七前提者」 → 「有尽之宇具其余七设者」.\n篇二篇首: 「本篇诸律都是写入局部条件（衡、有待、有形、正需、唯活动者与之等）的定理」 → 「本篇诸律都是定理：局部条件（正需等）写入其中，宇之设（衡、有待、有形、唯活动者与之等）以若写入者有设而然」.\n篇三篇首: 「局部条件（有穷、有列、定然否、有界、衡、耗、围……）」 → 「局部条件（有穷、有列、定然否、有界、围……）与所名之宇之设（衡、耗……）」.\n篇四篇首: 「衡（步后之水平加所取，等于步前之水平加所与）怎样是一个局部条件」 → 「衡（步后之水平加所取，等于步前之水平加所与）怎样是宇之一设」; 「本篇之律都在写入其中的局部条件下」 → 「本篇之律都在写入其中的局部条件与所名之宇之设（衡、耗、有待、唯活动者取与……）下」.\n篇十三篇首: 「局部条件（衡、耗、有待、唯活动者与、传之界 δ、无损益、各组员数同……）」 → 「宇之设（衡、耗、有待、唯活动者与、传）与局部条件（传之界 δ、无损益、各组员数同……）」.\n篇十四篇首: 「局部条件（衡、有待、与之者依其所与之所待而所需不下于 m、不重出、互为最优……）」 → 「宇之设（衡、有待）与局部条件（与之者依其所与之所待而所需不下于 m、不重出、互为最优……）」.",
+   "severity": "inconsistency"
+  },
+  {
+   "where": "凡例 凡·二一 或不当（經）; 凡·二二（說）",
+   "problem": "凡·二二 to 凡·二五 each mark their universal logical principle as 设 in the 經 (「设也」). 凡·二一 does not, though its own 說 says 辞皆或不当 「属设」. Its 經 also uses 愈 for an arbitrary irreflexive transitive relation (`exists_undominated_iff_weakly`). 愈 is the word the book reserves for 'better' under 以广为愈, and the 說 has to add 「此「愈」……不带以广为愈之义」 to undo it. 凡·二二 說 does the same (「每一愈」「莫愈之者」).",
+   "fix": "凡·二一 經: replace 「辞皆或不当，恰当：凡非空之选项单，其上之愈不自愈而可传，则单中有一员，莫愈之者。」 with 「辞皆或不当，设也；它恰当：凡非空之选项单，其上一序不自上而可传，则单中有一员，莫上之者。」 (莫上之者 is the book's own word for 'undominated', 纲·三).\n凡·二二 說: 「每一选项单、每一愈与每一性质皆有「每一缺此性者皆有一员愈之，则每一莫愈之者皆有此性」」 → 「每一选项单、每一不自上而可传之序与每一性质皆有「每一缺此性者皆有一员上之，则每一莫上之者皆有此性」」; 「愈与此性于单上皆定然否时」 → 「此序与此性于单上皆定然否时」.",
+   "severity": "inconsistency"
+  },
+  {
+   "where": "篇六 六·十四 生生（經）",
+   "problem": "The 經 states 生生 as a definition with content no cited declaration carries: 「所成者保、补、递、创后生之所待与生者」. The 證 and 說 call it 讀（AI，D1、D5）, and the English says widening can fail to register 生生 read this way (§6.1 'What widening counts'). Where a whole 經 is a reading, the book elsewhere marks it in the 經 itself (十一·十六 无明, 十一·二十二 明). Unmarked, this 經 looks like a checked law.",
+   "fix": "六·十四 經: 「生生，生而所生又生也：所成者保、补、递、创后生之所待与生者；其向以广较之。」 → 「讀（AI，D1、D5）：生生，生而所生又生也：所成者保、补、递、创后生之所待与生者；其向以广较之，而广之所记不尽生生（六·十六、六·十七）。」",
+   "severity": "inconsistency"
+  },
+  {
+   "where": "论纲 纲·一至纲·七、纲·九（經）; 纲·五、纲·九（經）; 纲·三（經）",
+   "problem": "Each 纲 經 is stated at full strength by design, with its grade (已证／有支持／猜想／论题) given only in the 說. 纲·八 puts its grade in the 經 (论题一、论题二); the others do not. So conjectures that failed their test (纲·五: VD1, every rule failed) or are untested (纲·四) read in the 經 like the checked laws of 篇一 to 篇十六. 纲·九 「二曰以广为愈即正评价者之所共」 equates C with what is proved: `Weighting.widens_iff_every_positive` proves that 广, not 'calling 广 better', is what every positive weighting ranks higher. 纲·五 經 touches the ethics' order without saying that counting with positive weights is where C's premise now sits, as its 說 does (「是 C 之前提挪了位置」), and without naming the scope premise. 纲·三 經 uses 市价, a financial word the naming rules exclude.",
+   "fix": "Begin each 經 with its grade, as 纲·八 does: 纲·一 「（有设而然之律；实际所待满足其设为猜想）」; 纲·二 「（猜想）」; 纲·三 「（律有设而然；为跨域之一法是猜想）」; 纲·四 「（猜想）」; 纲·五 「（归约有设而然；经验之辞为猜想，VD1 败）」; 纲·六 「（不可见之一半有设而然；为跨域之一律是猜想）」; 纲·七 「（于拟中无设而然；实际之度如此为猜想）」; 纲·九 「（四律各有其地位；为跨域之一法是猜想）」.\n纲·九 經: 「二曰以广为愈即正评价者之所共」 → 「二曰广即诸正定重之所共（称之为愈仍是以广为愈之设）」.\n纲·五 經: 「称广为愈，于以正重计其所计之外，无所需。」 → 「称广为愈，于以正重计其所计之外，无所需：以正重计即此设之所在，计一切即凡续皆有顾所定之范围。」\n纲·三 經: 「（奖励、训练、市价、自然选择皆是）」 → 「（奖励、训练、自然选择之类，读为此者）」.",
+   "severity": "inconsistency"
+  },
+  {
+   "where": "凡例 凡·十五 证（經）",
+   "problem": "「凡核心之证，其检查之报无一逻辑公理」 is weaker than what the checker enforces and the 說 states: every core source declaration has an empty axiom report (no propext, Quot.sound, Classical.choice, and no other axiom). The project requires the report's content to be stated exactly.",
+   "fix": "凡·十五 經: 「凡核心之证，其检查之报无一逻辑公理。」 → 「凡核心之证，其公理之报为空（无 propext、Quot.sound、Classical.choice）。」",
+   "severity": "style"
+  },
+  {
+   "where": "篇十五 十五·十 活皆有顾（說）",
+   "problem": "「生生是伦理方向之所向，以广比较（十五·一）」 refers to the ethical direction without naming either premise. Ethics passages are supposed to name both (scope from 凡续皆有顾, order from 以广为愈).",
+   "fix": "十五·十 說: 「生生是伦理方向之所向，以广比较（十五·一）」 → 「生生是伦理方向之所向，以广比较（十五·一）；其范围由凡续皆有顾定，称广为愈只在以广为愈（十六·六），二者皆设」.",
+   "severity": "style"
+  },
+  {
+   "where": "篇六 六·二十（說）; 十五·二十九、十五·三十、十六·七、十六·八、纲·五（經）",
+   "problem": "六·二十 說 still has a drafting note 「名待整合者定」. `Weighting` is named 定重 in 六·二十, 加权 in 十五·三十, 十六·七 and 十六·八, 正重 in 纲·五, and 以级为权 in 十五·二十九. The 加权 and 权 forms borrow 权, which the name table reserves for 实践判断; 六·二十 說 itself says 「名表之权另名实践判断，不借」.",
+   "fix": "Delete 「名待整合者定；」 from 六·二十 說, add 定重 (Weighting) to 名表, and use one name throughout: 加权 → 定重, 正加权 → 正定重, 正重 → 正定重, 以级为权 → 以级为重 (十五·二十九、十五·三十、十六·七、十六·八、纲·五 and their 說).",
+   "severity": "style"
+  },
+  {
+   "where": "篇十三 十三·二十一 取法（經）",
+   "problem": "The 經 states a general law of learning (「教者已装一程序，则受者自之所学，同于……」). Its anchor `ResponseLearning.learn_through_interface` is an application-ring module, and its preface says the programs, grammar, schedule, faithful reception and stocks are supplied. Those supplied premises do not appear in the 經.",
+   "fix": "十三·二十一 經: 「教者已装一程序，」 → 「于所拟之教受之对（所受唯教者之实应；程序、文法、课与存量为所给）中，教者已装一程序，」.",
+   "severity": "style"
+  }
+ ],
+ "summary": "Read BRIEF-ZH, STYLE-ZH, NAMES-ZH and all of jing-all.md, then checked the 經 against their 證, 說 and Lean (Extension, Direction, Lexical, MutualDependence, Space, Openness, Novelty, Gain, Recurrence, Identification, Pace, Regulation, Tolerance, Feedback, Weightings, Metaethics, ResponseLearning) and against the English standing table.\n\nWhat holds:\n- The continuation condition (凡续皆有顾) is never asserted: every 經 that uses it is conditional (若), an iff, or a witness.\n- The 經 generally keep the Lean's local conditions, iff directions and witness markers. No 經 universalises a witness from a single constructed model.\n- No 經 starts from separate entities. 活 (active and not undermining) is a disclosed reading (D10).\n\nMain problems:\n1. **Preface vs 论纲.** The preface says the theses section is not included, and that every claim has one of four standings and is Lean-checked. The book contains 论纲, whose claims carry their own grades and include untested or failed conjectures.\n2. **World premises mis-standed.** Several 篇 openings (五, 六, 九, 十, 十一, 十二, and 一 for its premised law 一·十八) say every law is 无设而然 while listing 衡, 有待, 蓄 or a supplied law of exchange as local conditions. The 凡例 and the English register make these 设, so the laws that use them are 有设而然. 二·六, 三·十一 and 十三·六 call the same premises 局部前提, 条件 or 前提.\n3. **\"凡言排序，只引以广为愈\" (凡·十七) is too broad.** The book itself orders by J2 lexical priority, which ranks pairs that are mixed under C, by graded weights (十五·二十九), and by optimizers' own orders.\n4. **十六·六 reads as asserting C.** 「以广为愈于活之每一读皆立」 states what Lean proves only by definition (widening fits the C schema). The same wording appears in 六·二十一 and 十五·二十一.\n5. **Off-by-one cross-references.** Several references say the condition is in 篇十四 (it is 十五·十六), 以广为愈 in 篇十五 (it is 十六·六), and 感 in 篇十 (it is 篇十一).\n\nSmaller problems:\n- 凡·二一 does not mark its principle as 设 and uses 愈 for an arbitrary relation.\n- 六·十四 生生 is a 經 that is wholly a reading but carries no 讀 marker.\n- 纲 經 lack standing tags (only 纲·八 has one); 纲·九 equates 以广为愈 with what is proved about 广.\n- 凡·十五 understates the empty axiom report.\n- 十五·十 refers to the ethics without naming both premises.\n- Weighting has inconsistent names that borrow 权.\n- 取法 omits its supplied apparatus.\n\nNo file was edited. The book is /Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md."
+}

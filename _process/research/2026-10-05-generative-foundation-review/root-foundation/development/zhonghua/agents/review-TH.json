@@ -1,0 +1,125 @@
+{
+ "edits": [
+  {
+   "id": "纲·一",
+   "find": "则此所待之共取每步皆在其余地之内",
+   "replace": "则此所待之共取，其过与者未尝出其余地",
+   "why": "「每步皆」把经改成逐步之辞，说的是每一步之共取（名表：共取＝Flow.taken，所取之合计）都在余地之内。没有一条律这样说：joint_excess_ends 所界者是「共取过与」连续之步之长（起积少于 n＋m 者终），英文 T1 也只说 joint net draw kept within the margin。指令（C87、C89）的用意是去掉「常」（常名不变量），改写为「未尝」同样不用常、恒，又与下句「共取过与之连续，未有长于余地者」相合。"
+  },
+  {
+   "id": "纲·一",
+   "find": "、自 y 至 hi 及常取、",
+   "replace": "、所留不下于 y 而加常取不过 hi 时及常取、",
+   "why": "`RegimeMargin.Meets` 是 ∀ z, y ≤ z → z + H ≤ hi → H ≤ g z：所留自 y 起、且加常取不过 hi，而不是所留到 hi 为止。重写注中说已写全 ends_iff_below 之设，但这一款写宽了。"
+  },
+  {
+   "id": "纲·一",
+   "find": "其余取者所取合计过与即可终之",
+   "replace": "他取者所取合计过与即可终之",
+   "why": "「其余」是名表之名（World.withRest，把兼之其余读作一物），这里却指其他诸取者（outrun_ends 中之 rest : List F），一名二义。本条前文已用「他者之取」，故改作「他取者」。"
+  },
+  {
+   "id": "纲·二",
+   "find": "调整随所留与前所与而升、一步使积与前所与皆不过 hi 之状其积仍不过 hi 时",
+   "replace": "调整如上、又随所留与前所与而升、一步使积与前所与皆不过 hi 之状其积仍不过 hi 时",
+   "why": "`Adjusted.comes_to_rest` 除 Rises、Band 外还要 restsAt（RestsAtDraw：恰在常与给出常取之处静于常取），结论「静于常与之点」靠的就是它。原句另起一组条件，把这个设丢了，「如上」把它接回来。"
+  },
+  {
+   "id": "纲·二",
+   "find": "这些律不依计数之量：序、行之形与其静，在任何有常取之线性有序之量中立（`Becoming.RegimeMargin.Drawn.run_shape`）；于实数上，域内每一行皆收敛，",
+   "replace": "上述诸律之中，序、行之形与其静不依计数之量，在任何有常取之线性有序之量中立（`Becoming.RegimeMargin.Drawn.run_shape`）；于有穷步内而静则依之：于实数上，域内每一行皆收敛而不必静，",
+   "why": "「这些律不依计数之量」把紧接其前的 comes_to_rest（至多 3hi＋3 步而静）与以积为界之阈也包了进去。可是 RegimeReals 明言实数上之行不必静（Relaxation.never_rests），整数所给的有穷步内而静，到实数上只是收敛。只有序、行之形与静点在任何量中立。"
+  },
+  {
+   "id": "纲·三",
+   "find": "莫上之者是可选者中无一可选者为其序所上者",
+   "replace": "莫上之者是可选者中依其序无一可选者上之者",
+   "why": "「为其序所上」缺宾语，方向读不出，可读作「被序排上」。名表定义是「可选者中，依所给之序，无一可选者上之」（Frontier：没有可选者被排在它之上），按此改。"
+  },
+  {
+   "id": "纲·三",
+   "find": "恰在有取限处降低",
+   "replace": "恰在有取限且余者有所留之处降低",
+   "why": "`Optimum.optimum_lowers_iff` 之右边是两个合取：0 < capacity，且 0 < 余者所留。余者无所留时，即使有取限也降不下去，故须补上第二个条件。"
+  },
+  {
+   "id": "纲·三",
+   "find": "每一莫上之者于首步即使其自身所资之所待亡",
+   "replace": "每一莫上之者于首步即使其自身所资之所待涸",
+   "why": "`frontier_exhausts` 的结论是 x (t+1) = 0，即积降至零，名表名为「涸」。「亡」名 Web.Ends，指待者自某步起永不运，不用于所待。"
+  },
+  {
+   "id": "纲·三",
+   "find": "离散守恒之形",
+   "replace": "离散而衡之形",
+   "why": "「守恒」是名表「与如其取」（Flow.ConservingOn）所代的现代词，又含「恒」字，而恒只名更新（C89）。Optimum 之驱所依是衡（Flow.Balances）加兼无所增，不是与如其取，故写衡。"
+  },
+  {
+   "id": "纲·五",
+   "find": "或误读其事",
+   "replace": "或误读其所较",
+   "why": "「事」是名表之名（一待者于一步，即轻重所计之项），同一句已有「一事之重为负」。这里的「其事」却指所判之情形，一名二义。改作「其所较」，即二历之较。"
+  },
+  {
+   "id": "纲·五",
+   "find": "读对其事之方",
+   "replace": "读对其所较之方",
+   "why": "与经同改：避免「事」在本条中兼指轻重之项与所判之情形。"
+  },
+  {
+   "id": "纲·五",
+   "find": "（`Becoming.Weighting.neutral_ranks_by_number`，⟦十五·二十九⟧）",
+   "replace": "（`Becoming.Weighting.neutral_ranks_by_number`，⟦六·二十⟧）",
+   "why": "「每事同重，以所容之数为序」这一律写在⟦六·二十⟧之经中。⟦十五·二十九⟧（计入与多少）之经讲的是分级之顾与以级为重之计数，其經中并无此律。本条说中已以⟦六·二十⟧指轻重之计，所指宜一致。"
+  },
+  {
+   "id": "纲·六",
+   "find": "或其所以亡之跨临界之点",
+   "replace": "或其所以涸之跨临界之点",
+   "why": "主语是「所测之所待」。它在跨临界之点积降至零，名表名为「涸」；「亡」只名待者之终（Web.Ends）。"
+  },
+  {
+   "id": "纲·六",
+   "find": "接近其自身之折或亡",
+   "replace": "接近其自身之折或涸",
+   "why": "与经同改：这里说的是被测之数自身之积到零（涸），不是一待者之亡。"
+  },
+  {
+   "id": "纲·六",
+   "find": "与先于跨临界之亡",
+   "replace": "与先于跨临界之涸",
+   "why": "与经、所排同改，使跨临界之点在本条中只用一名。"
+  },
+  {
+   "id": "纲·六",
+   "find": "一所待唯以阈感入待者，且至第 u 步",
+   "replace": "一所待唯以阈感入待者，所待之同异定然否，且至第 u 步",
+   "why": "`Web.break_not_bounded` 带 [DecidableEq C]（⟦十二·十二⟧之经写作「诸物之同异可定」）。重写已为 fed_from_beyond 补了「所待之同异定然否」，这里同样补上，用的是 plain-wordings 所定之说法。"
+  },
+  {
+   "id": "纲·七",
+   "find": "其条件以若写入：",
+   "replace": "其条件皆以若写入，如：",
+   "why": "冒号后只列两款，读来像是条件之全部。可是 lock_outlives_loss 还要始于胶、Raises、ReadsShare、upper，readers_uniform_locks 还要 readMono、formed，故改为举例之式。"
+  },
+  {
+   "id": "纲·七",
+   "find": "已胶之程久于其率外：率外每步至少增一，第 t 步",
+   "replace": "已胶之程久于其率外：始于一胶之状，偏向之规下择不降率，所读之规随率不降，凡不低于一偏向之规者亦偏向，率外每步至少增一，则第 t 步",
+   "why": "`ClosedCapture.lock_outlives_loss` 之设除 Accrues 外，还有 locked（始于胶）、raises（偏向之规下择不降率）、monotone（ReadsShare，所读之规随率不降）、upper（不低于偏向之规者亦偏向），原句只写了率外之增。补上之后，说所言恰是 Lean 所证。"
+  },
+  {
+   "id": "纲·八",
+   "find": "是以之为行之最小之法",
+   "replace": "是以之为行之最小之变",
+   "why": "`shown_le_iff` 说的是变（Process）之序：Shown 是以此历为行之最小之变。⟦一·六⟧之经也是「凡变以一历史为行……以之为行者之最小者」。法（名表：确定之变）不一定在其中，因为自然之法为法恰当此历不忒（shown_determined_iff）。"
+  },
+  {
+   "id": "纲·九",
+   "find": "（四律各有其地位；为跨域之一律是猜想）",
+   "replace": "（四律各有其地位；其一、其二、其四为跨域之一律是猜想，其三无设而然，不陈为猜想）",
+   "why": "括注说四者为跨域之一律都是猜想，可是說其三明言「以律存之，不陈为猜想」，地位是无设而然（英文统一表此行作 proved）。经首之地位与說自相矛盾，改作分别写明。"
+  }
+ ],
+ "notes": "我没有改动任何文件。审阅所据之文本是 /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/th/out.json（与 PART 一致；每条 find 都在 out.json 中、在其条内恰出现一次）。\n\n【已核】\n- 引用：论纲共引 79 个声明，74 个在最新 core receipt 中（work/resolve.py）。其余 5 个是模块或外围：Becoming.RegimeMargin、RuleCapture、ClosedCapture、ExchangePremises 之 .lean 都在；Drawn.converges 在 lean/regime/RegimeReals.lean（外围，用 Mathlib）。35 个记录都在。\n- 经与证：逐条对照 Lean 读了以下声明的设与结论（iff 之方向、构造之例与律之分、¬¬ 之形）：\n  - joint_excess_ends、family_excess_ends、Whole.family_excess_ends、outrun_ends、Pair.own_not_joint；\n  - fed_from_beyond（∀N ¬∀t≥N ¬Fed，说中写法恰当）；\n  - RegimeMargin.ends_iff_below、beyond_draw_iff；Adjusted.rests_iff、comes_to_rest、falls_iff_below、threshold_falls；Drawn.run_shape；\n  - Optimum.least_iff、Room、optimum_broken_iff、keeping_optimum_takes_slack、optimum_lowers_iff、frontier_exhausts、course_lost_iff、course_kept_iff、mutual_course_lost；\n  - unselected_beyond_pool、Direction.widening_selected_by_pool；\n  - Weighting.widens_iff_every_positive、widens_iff_every_of_class、mixed_either_way、neutral_ranks_by_number；\n  - break_not_bounded（确无衡之设，重写之更正对）、policy_uses_after_failure、observed_raise_couples；\n  - ClosedCapture 诸律；identifiesAlike_iff、shown_le_iff、separation_faithful_iff、ownClosure_standpointInvariant_iff、Clearing.loses_beyond；\n  - Law.lossless_iff_returns、Law.loss_needs_merge、Law.Lossless.narrowing_spreads、withHistory_never_returns。\n  \n  不合之处都已写成上面的修改。\n- ⟦id⟧：全部 34 个都在 book-1-outline.txt 中。我按 id 在 book-1.json 中查了经与证，每个所指内容都对（例如 ⟦十二·十四⟧→四·二十六「平面之阈」，⟦十一·十⟧→十一·九「及而不感」，⟦NEW-12⟧ 与 ⟦NEW-2⟧ 合于 C12、C05 之新条规格）。只有 ⟦十五·二十九⟧ 不如 ⟦六·二十⟧ 切，已列入修改。\n- 指令：TH.json 之八项都已施行。纲·五 用「轻重」而不用「定重」、用「不须他设」而不用「无所需」，纲·三、纲·九 用「一律」而不用「一法」，纲·七 用「规」而不用「度」，都合名表与 plain-wordings（NAMES-ZH.md 中没有「定重」）。唯一的问题是指令所定之「每步皆」改坏了经义，已另行改写。\n- 其余：论纲无古典引文（无〔ID〕），对照空着是对的。全文只用中文：拉丁字母只出现于 Lean 名、人名、模型名与实验代号。\n\n【未改，交整合者】\n1. 「域」一字三义。名表与 plain-wordings 中，域名一组状或物（region），也名兼感之组（group/pool）和 band。可是 plain-wordings 所定之「其辞所未名之待者与域亦在所顾之中」又以域名学科、应用之域，于是同一条中两义并见：纲·四（「一域诸员之感」与「于一域所立之所顾于另一域败」）、纲·二（「自此域起之每一行」与「任何域中」）。纲·三、纲·六、纲·九、序中之「跨域」「他域」也是后一义。这需要为 domain 定一个说法，我没有另造。\n2. 纲·八 之「事实与评价」中的「事」与名表之「事」（event）相撞；plain-wordings 的「分别」一条没有为所列诸分别定字。\n3. book-1-outline.txt 中 纲·四、纲·五 之题仍是旧题（「范围可立，亦行于未名者」「以广为愈，正重者所共」），与重写后之题不一致。⟦六·二十⟧ 之题「广为诸定重之所共」用的「定重」不在名表中（C06 之指令要求增「定重」，但最终名表用的是「轻重」）。这些要在别处对齐。\n4. HEAD 之序仍写「有支持」，论纲写「验而未排」（重写者已指出这一点），序须对齐。\n5. 小处（不影响真假，未改）：\n   - 纲·二 「调整连续时收敛于一静」所依之律是 Drawn.limit_rest，证中只列了 Drawn.converges；\n   - 纲·九 「诸状无一族尽之」所依是 withHistory_unlisted，未列；\n   - 纲·六 policy_uses_after_failure 另须二流在场者同；\n   - 纲·四 widening_selected_by_pool 之设（余者循一经感而读之律、二流衡、同始、域内动无别）在说中没有写出；\n   - 纲·五 所引“进步就是让过时的东西让位”“杂物”是英文提示之译文，却写作引文，宜标「译」；\n   - plain-wordings 中「唯运者与」与「唯运者与之」两种写法并存。"
+}

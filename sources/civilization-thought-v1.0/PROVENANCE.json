@@ -1,0 +1,4471 @@
+{
+ "about": "《中华思想脉络》 v1.0 (a research project built with Codex at Ren's direction), imported for board item ZH. Every file is an archive member byte for byte, one renamed and the CBETA TEI headers as exact byte spans; import_civilization.py --check re-hashes them.",
+ "archive": {
+  "path": "/Users/ren/Documents/Codex/2026-10-13/referenced-chatgpt-conversation-this-is-an/outputs/civilization-thought-v1.0.zip",
+  "sha256": "154592f818e1aa6cd22342f6b6fa92ad64b8a1fe07f14f817fcd5bbe19a5a3fe",
+  "bytes": 127451605,
+  "members": 1112,
+  "kept_outside": "the web page, derived graphs and indexes, the SQLite index, raw responses, lineage snapshots, audits and tools"
+ },
+ "model_sha256": "0a8ab02d0b15f9dcfd143f11ad636a0d7b65a89ed296154fc3a0410368f06b36",
+ "files": [
+  {
+   "file": "README.md",
+   "sha256": "d59adede9c2bca075370a4e2fcd5c42fec5671d72e5af54d252624cab63dddd9",
+   "bytes": 3341,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/README.md"
+  },
+  {
+   "file": "LICENSES.md",
+   "sha256": "dcff5c2447a85e344cfcf4296149b6192b20e530c9b3fcd9aaab343c5bfcb9cc",
+   "bytes": 1235,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/LICENSES.md"
+  },
+  {
+   "file": "PROJECT_MAP.json",
+   "sha256": "ccc9a7aa902a46886824fdd8654b7434b62076030393b96168590aef5d332596",
+   "bytes": 1676,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/PROJECT_MAP.json"
+  },
+  {
+   "file": "manifest.json",
+   "sha256": "541999195c952a04b9a7a4c2ebf2d0b18c370191210bcf2c0d8d65e04d79bb93",
+   "bytes": 211517,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/manifest.json"
+  },
+  {
+   "file": "docs/本轮覆盖.md",
+   "sha256": "a7f8076e09628327ba259b581878c30bed21bd3b5ef4ce4edaac7edf04c0d015",
+   "bytes": 32160,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/docs/本轮覆盖.md"
+  },
+  {
+   "file": "docs/数据与关系.md",
+   "sha256": "c371a4d09dbcf0ad6611a800209374b254dd8d6169f3f06a87703d7637a77f7a",
+   "bytes": 3023,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/docs/数据与关系.md"
+  },
+  {
+   "file": "docs/研究包格式.md",
+   "sha256": "ece3f45dba89a53884380529985921ead3250e625ec73d099735347a533da7f3",
+   "bytes": 6327,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/docs/研究包格式.md"
+  },
+  {
+   "file": "data/model.json",
+   "sha256": "0a8ab02d0b15f9dcfd143f11ad636a0d7b65a89ed296154fc3a0410368f06b36",
+   "bytes": 45321749,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/data/model.json"
+  },
+  {
+   "file": "MAINTENANCE-AGENTS.md",
+   "sha256": "bd96786d668253345f4c408acd81f2b3b846ece035dfc87ca741a671822bb285",
+   "bytes": 3470,
+   "form": "archive-member, renamed",
+   "archive_member": "civilization-thought-v1.0/AGENTS.md",
+   "note": "the project's maintenance conventions; renamed so that no agent reads them as instructions for this repository"
+  },
+  {
+   "file": "evidence/texts/DS01.txt",
+   "sha256": "406c0334574ee1e704fe9c0f91467794a70b465691a2cf676ba587c921de1e33",
+   "bytes": 89430,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/DS01.txt",
+   "source_id": "DS01",
+   "title": "道德經 (王弼本)",
+   "url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93%20%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29"
+  },
+  {
+   "file": "evidence/texts/DS02.txt",
+   "sha256": "8d83498593d03daabb65d6c15ab6f61ea3c6546726e0e4082ded3cc051ed946e",
+   "bytes": 8922,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/DS02.txt",
+   "source_id": "DS02",
+   "title": "周易/繫辭上",
+   "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8A"
+  },
+  {
+   "file": "evidence/texts/DS03.txt",
+   "sha256": "79dbf2c744908b60fa55b58fbe5025c6be0993095da69e68b7570780a29bcdb5",
+   "bytes": 8422,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/DS03.txt",
+   "source_id": "DS03",
+   "title": "周易/繫辭下",
+   "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%B9%AB%E8%BE%AD%E4%B8%8B"
+  },
+  {
+   "file": "evidence/texts/DS04.txt",
+   "sha256": "058442c8a0d3a07d237cf6faa9c62959e9e450b22ac2ca593c72e4baa75c51f7",
+   "bytes": 4141,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/DS04.txt",
+   "source_id": "DS04",
+   "title": "周易/說卦",
+   "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E8%AA%AA%E5%8D%A6"
+  },
+  {
+   "file": "evidence/texts/DS10.txt",
+   "sha256": "0b5683959739c89fde1e0df012dcdf7e98d8b9dcf0c24623e76b840421725f30",
+   "bytes": 4114,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/DS10.txt",
+   "source_id": "DS10",
+   "title": "周易/乾",
+   "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E4%B9%BE"
+  },
+  {
+   "file": "evidence/texts/DS11.txt",
+   "sha256": "31f2c07b67352eecab97390bbaf89e2466d20c0bae9897386a696f02cbc2b59e",
+   "bytes": 2134,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/DS11.txt",
+   "source_id": "DS11",
+   "title": "周易/坤",
+   "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E5%9D%A4"
+  },
+  {
+   "file": "evidence/texts/DS12.txt",
+   "sha256": "99769945e5a5a820f6e5812f7dd1e1bc92e68bbb9a333a0524134785adbd7d13",
+   "bytes": 913,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/DS12.txt",
+   "source_id": "DS12",
+   "title": "周易/謙",
+   "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E8%AC%99"
+  },
+  {
+   "file": "evidence/texts/DS13.txt",
+   "sha256": "446a971011c32af1f0e4f4303c1308527deea02544500a8a2d5662310c86729c",
+   "bytes": 1009,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/DS13.txt",
+   "source_id": "DS13",
+   "title": "周易/損",
+   "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E6%90%8D"
+  },
+  {
+   "file": "evidence/texts/DS14.txt",
+   "sha256": "c22d94018573bb1b14f5fde8695e25b081ef607471a86c17d687d27db279173c",
+   "bytes": 1072,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/DS14.txt",
+   "source_id": "DS14",
+   "title": "周易/益",
+   "url": "https://zh.wikisource.org/zh-hans/%E5%91%A8%E6%98%93/%E7%9B%8A"
+  },
+  {
+   "file": "evidence/texts/V3D02.txt",
+   "sha256": "e0696e464a346872fcf11a87df502834a42cadf1b60f3f66a23b3ed7530791c4",
+   "bytes": 940,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/V3D02.txt",
+   "source_id": "V3D02",
+   "title": "周易/咸",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%92%B8"
+  },
+  {
+   "file": "evidence/texts/V3D03.txt",
+   "sha256": "1b5f06b1e1727027181b0e16da9785de79c3d8c3c6aa6f902581648c6ed738dc",
+   "bytes": 946,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/V3D03.txt",
+   "source_id": "V3D03",
+   "title": "周易/復",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%BE%A9"
+  },
+  {
+   "file": "evidence/texts/YD-LAO-BASE.txt",
+   "sha256": "6ca5db3c5d789383deedc73f7464ab0a391a7374b82db625116a32d43cc21d07",
+   "bytes": 20440,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-LAO-BASE.txt",
+   "source_id": "YD-LAO-BASE",
+   "title": "道德经·传世王弼本系统经文（去注派生转录）",
+   "url": "https://zh.wikisource.org/zh-hans/%E9%81%93%E5%BE%B7%E7%B6%93%20%28%E7%8E%8B%E5%BC%BC%E6%9C%AC%29"
+  },
+  {
+   "file": "evidence/texts/YD-OW-SG.txt",
+   "sha256": "29e59af36a37b77e9e738621c91e533658819ec2316ccac9466926b7c9b3bf2e",
+   "bytes": 4092,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-OW-SG.txt",
+   "source_id": "YD-OW-SG",
+   "title": "易傳/說卦",
+   "url": "https://zh.wikisource.org/wiki/易傳/說卦"
+  },
+  {
+   "file": "evidence/texts/YD-OW-XG.txt",
+   "sha256": "0dd9c453819d07f7df6d3924e0d8089a196fb644d0d4c1c142162f941c36b304",
+   "bytes": 3427,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-OW-XG.txt",
+   "source_id": "YD-OW-XG",
+   "title": "易傳/序卦",
+   "url": "https://zh.wikisource.org/wiki/易傳/序卦"
+  },
+  {
+   "file": "evidence/texts/YD-OW-ZG.txt",
+   "sha256": "8c5de10b5ffebedb9f6a4e32c25e370ffb9d70c585ac77b133a0815411d8a0de",
+   "bytes": 2125,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-OW-ZG.txt",
+   "source_id": "YD-OW-ZG",
+   "title": "易傳/雜卦",
+   "url": "https://zh.wikisource.org/wiki/易傳/雜卦"
+  },
+  {
+   "file": "evidence/texts/YD-OW-WY.txt",
+   "sha256": "bf8c92fc38a4165af88a3bb0e5633b6cdc9513fa9fcfb0c6a2e9f32d934a450d",
+   "bytes": 8247,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-OW-WY.txt",
+   "source_id": "YD-OW-WY",
+   "title": "周易/文言",
+   "url": "https://zh.wikisource.org/wiki/周易/文言"
+  },
+  {
+   "file": "evidence/texts/YD-HX01.txt",
+   "sha256": "a640c1998d551abf72e64fc6225951d2dd0ecd856a8088bcadf04d50f2294f33",
+   "bytes": 12979,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-HX01.txt",
+   "source_id": "YD-HX01",
+   "title": "周易/彖",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%BD%96"
+  },
+  {
+   "file": "evidence/texts/YD-HX02.txt",
+   "sha256": "7cacb26ea1a7626d79320cbca8d1d23366b12714b96a5bbfc0843b5222ca3c58",
+   "bytes": 3766,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-HX02.txt",
+   "source_id": "YD-HX02",
+   "title": "周易/大象",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A4%A7%E8%B1%A1"
+  },
+  {
+   "file": "evidence/texts/YD-HX04.txt",
+   "sha256": "1b5f06b1e1727027181b0e16da9785de79c3d8c3c6aa6f902581648c6ed738dc",
+   "bytes": 946,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-HX04.txt",
+   "source_id": "YD-HX04",
+   "title": "周易/復（经传合页，按篇层引用）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%BE%A9"
+  },
+  {
+   "file": "evidence/texts/YD-HX03.txt",
+   "sha256": "a37a84ffd04df6c2dfc6c7248f45e0eac08ba7427310db0bb4d8a90e4740708a",
+   "bytes": 18039,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-HX03.txt",
+   "source_id": "YD-HX03",
+   "title": "周易/小象（维基文库现行不转换页面）",
+   "url": "https://zh.wikisource.org/wiki/周易/小象"
+  },
+  {
+   "file": "evidence/texts/YD-JG01.txt",
+   "sha256": "c06201c04af763de79c2cf4a6048a09e1758ad2266ae87d1e651319e29b5cfaa",
+   "bytes": 284,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG01.txt",
+   "source_id": "YD-JG01",
+   "title": "周易/乾（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E4%B9%BE"
+  },
+  {
+   "file": "evidence/texts/YD-JG02.txt",
+   "sha256": "5ff359a989d0ae0718361e4e672e953476274c14d28de1b73765685c0d528fc1",
+   "bytes": 373,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG02.txt",
+   "source_id": "YD-JG02",
+   "title": "周易/坤（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%9D%A4"
+  },
+  {
+   "file": "evidence/texts/YD-JG03.txt",
+   "sha256": "38d6293ebebe73468094119b4c87665359505484f28b6f508cd6e547d0211f71",
+   "bytes": 403,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG03.txt",
+   "source_id": "YD-JG03",
+   "title": "周易/屯（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B1%AF"
+  },
+  {
+   "file": "evidence/texts/YD-JG04.txt",
+   "sha256": "7a36072929e82b95293bc872bb63092b0c97c3101b89b3d85776f465944b7a1e",
+   "bytes": 358,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG04.txt",
+   "source_id": "YD-JG04",
+   "title": "周易/蒙（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%92%99"
+  },
+  {
+   "file": "evidence/texts/YD-JG05.txt",
+   "sha256": "9011dc8de628ba9d8d45424a0a3b761eabc1ff0bdd3d1ec12e2e57785a7ac541",
+   "bytes": 301,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG05.txt",
+   "source_id": "YD-JG05",
+   "title": "周易/需（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%9C%80"
+  },
+  {
+   "file": "evidence/texts/YD-JG06.txt",
+   "sha256": "fd8d6053d3163554100793edfa804832a8e475d19ada641225adb3d0cece7e44",
+   "bytes": 370,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG06.txt",
+   "source_id": "YD-JG06",
+   "title": "周易/訟（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%A8%9F"
+  },
+  {
+   "file": "evidence/texts/YD-JG07.txt",
+   "sha256": "5a22bb3d03b0bc5e4ef89b3246765d0641c469f60c99da0734f2c4f547cab8b9",
+   "bytes": 319,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG07.txt",
+   "source_id": "YD-JG07",
+   "title": "周易/師（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B8%AB"
+  },
+  {
+   "file": "evidence/texts/YD-JG08.txt",
+   "sha256": "fa2dafc4b065240b40ed9936ceb38f34013ed0c1ae12c847bd587bf1ac793844",
+   "bytes": 328,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG08.txt",
+   "source_id": "YD-JG08",
+   "title": "周易/比（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%AF%94"
+  },
+  {
+   "file": "evidence/texts/YD-JG09.txt",
+   "sha256": "ad7d6421c32e7349b8f969fb73f6d5320ece10616bd0e4f94b69e50cde7262bb",
+   "bytes": 307,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG09.txt",
+   "source_id": "YD-JG09",
+   "title": "周易/小畜（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B0%8F%E7%95%9C"
+  },
+  {
+   "file": "evidence/texts/YD-JG10.txt",
+   "sha256": "a85c8f825dd7a3e5e08519ba112e4ecf270ca1ad0c5fde12f63fbe7794565a0e",
+   "bytes": 289,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG10.txt",
+   "source_id": "YD-JG10",
+   "title": "周易/履（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B1%A5"
+  },
+  {
+   "file": "evidence/texts/YD-JG11.txt",
+   "sha256": "6cb85d655761c5124820b37b9ccba0f4d7edc4658c879ff6cb73e405be591744",
+   "bytes": 382,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG11.txt",
+   "source_id": "YD-JG11",
+   "title": "周易/泰（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%B3%B0"
+  },
+  {
+   "file": "evidence/texts/YD-JG12.txt",
+   "sha256": "81bb6e1614ad1146b57be22f46e877b27aa010deb1f8d3c6fb36bb54bf6d5d8d",
+   "bytes": 298,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG12.txt",
+   "source_id": "YD-JG12",
+   "title": "周易/否（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%90%A6"
+  },
+  {
+   "file": "evidence/texts/YD-JG13.txt",
+   "sha256": "ac0daed2f62269125bbeb2a3b03f590c02680233d639b719f6171e0ef51b1b62",
+   "bytes": 305,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG13.txt",
+   "source_id": "YD-JG13",
+   "title": "周易/同人（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%90%8C%E4%BA%BA"
+  },
+  {
+   "file": "evidence/texts/YD-JG14.txt",
+   "sha256": "ac2c209ba33490e761db1645383a69eba18e5e3f959c6a2fa90e280086ab6867",
+   "bytes": 268,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG14.txt",
+   "source_id": "YD-JG14",
+   "title": "周易/大有（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A4%A7%E6%9C%89"
+  },
+  {
+   "file": "evidence/texts/YD-JG15.txt",
+   "sha256": "162be9ab7d770bbc29c1bc5742f9391ee35193f2ec81d5d83c9cab0e6ae2f445",
+   "bytes": 274,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG15.txt",
+   "source_id": "YD-JG15",
+   "title": "周易/謙（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%AC%99"
+  },
+  {
+   "file": "evidence/texts/YD-JG16.txt",
+   "sha256": "41be851851bec2dcc7d062a4fa8511923b654758597f1808568d9f7a0eeaca30",
+   "bytes": 253,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG16.txt",
+   "source_id": "YD-JG16",
+   "title": "周易/豫（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%B1%AB"
+  },
+  {
+   "file": "evidence/texts/YD-JG17.txt",
+   "sha256": "63b7e45b98605f4fb25075bad7bd604fcfb2b5b8546c22e8a3fb6ff036d7a314",
+   "bytes": 331,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG17.txt",
+   "source_id": "YD-JG17",
+   "title": "周易/隨（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%9A%A8"
+  },
+  {
+   "file": "evidence/texts/YD-JG18.txt",
+   "sha256": "44b8ecc3b9795dafbb45ac279461507a47fd6cfd24861c5d829c6bae45546400",
+   "bytes": 316,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG18.txt",
+   "source_id": "YD-JG18",
+   "title": "周易/蠱（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%A0%B1"
+  },
+  {
+   "file": "evidence/texts/YD-JG19.txt",
+   "sha256": "b27a99bc31750453434044f1a736776305e59067ff30e384149dd0236c076b51",
+   "bytes": 259,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG19.txt",
+   "source_id": "YD-JG19",
+   "title": "周易/臨（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%87%A8"
+  },
+  {
+   "file": "evidence/texts/YD-JG20.txt",
+   "sha256": "8331b6d4c9bf2e7d2c82730d2141f5ef85a5a87ff63d68cc508e8ffd860811bd",
+   "bytes": 262,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG20.txt",
+   "source_id": "YD-JG20",
+   "title": "周易/觀（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%A7%80"
+  },
+  {
+   "file": "evidence/texts/YD-JG21.txt",
+   "sha256": "bf08ea9771f92b4cb2b5e5737fede245ac97b2c24e57694f2aa5dda266291bfb",
+   "bytes": 280,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG21.txt",
+   "source_id": "YD-JG21",
+   "title": "周易/噬嗑（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%99%AC%E5%97%91"
+  },
+  {
+   "file": "evidence/texts/YD-JG22.txt",
+   "sha256": "4253074cca3ba3ee04b5c88f75d596033a3662913ac8789e52371933ee0a0817",
+   "bytes": 265,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG22.txt",
+   "source_id": "YD-JG22",
+   "title": "周易/賁（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%B3%81"
+  },
+  {
+   "file": "evidence/texts/YD-JG23.txt",
+   "sha256": "00438d8c1ae7961f489b6581d97d76fd570dbe36ad33826d26933418dc40c1bc",
+   "bytes": 262,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG23.txt",
+   "source_id": "YD-JG23",
+   "title": "周易/剝（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%89%9D"
+  },
+  {
+   "file": "evidence/texts/YD-JG24.txt",
+   "sha256": "64dfe000810a6338d8fc4c3aba8b83f4199677f37a4fd010b76cc93c876d39c1",
+   "bytes": 352,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG24.txt",
+   "source_id": "YD-JG24",
+   "title": "周易/復（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%BE%A9"
+  },
+  {
+   "file": "evidence/texts/YD-JG25.txt",
+   "sha256": "8b22f843b780ab55a917545fb2c7cd5abad1cee766b4d071294ea99c04b04fe5",
+   "bytes": 325,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG25.txt",
+   "source_id": "YD-JG25",
+   "title": "周易/无妄（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%97%A0%E5%A6%84"
+  },
+  {
+   "file": "evidence/texts/YD-JG26.txt",
+   "sha256": "0f49ab145df1adb7c8226d7d74ec5d687d60106892fb0dd6d9e6d5e2981f2e1a",
+   "bytes": 262,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG26.txt",
+   "source_id": "YD-JG26",
+   "title": "周易/大畜（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A4%A7%E7%95%9C"
+  },
+  {
+   "file": "evidence/texts/YD-JG27.txt",
+   "sha256": "8eea932761ecf178080d8e4e17775072d5783945f7764469a0f5d2657ae27acc",
+   "bytes": 343,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG27.txt",
+   "source_id": "YD-JG27",
+   "title": "周易/頤（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%A0%A4"
+  },
+  {
+   "file": "evidence/texts/YD-JG28.txt",
+   "sha256": "e7ca48acddc7f23eb60e6f10ca474b4fdab31d07df4e4afc42af7388f47042cd",
+   "bytes": 295,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG28.txt",
+   "source_id": "YD-JG28",
+   "title": "周易/大過（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A4%A7%E9%81%8E"
+  },
+  {
+   "file": "evidence/texts/YD-JG29.txt",
+   "sha256": "2fc6b2c64eb1bddf1cd1e5067ec921657ef3a6fbad7ea2c50f5e320cd0798e6a",
+   "bytes": 343,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG29.txt",
+   "source_id": "YD-JG29",
+   "title": "周易/坎（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%9D%8E"
+  },
+  {
+   "file": "evidence/texts/YD-JG30.txt",
+   "sha256": "230a9abcbac6cec456e2abf6832084c79aaf757606ed3336c5dc9c5107b21fe9",
+   "bytes": 334,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG30.txt",
+   "source_id": "YD-JG30",
+   "title": "周易/離（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%9B%A2"
+  },
+  {
+   "file": "evidence/texts/YD-JG31.txt",
+   "sha256": "21cf39db3cdceced23fecbbbd6b653cfaa3111f8d03b3a11674ade83054d3619",
+   "bytes": 256,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG31.txt",
+   "source_id": "YD-JG31",
+   "title": "周易/咸（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%92%B8"
+  },
+  {
+   "file": "evidence/texts/YD-JG32.txt",
+   "sha256": "f1f1777ccf228b5d78ab0fe0dd68d2fb481c5883b871a11afa34d78c3d1521f6",
+   "bytes": 253,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG32.txt",
+   "source_id": "YD-JG32",
+   "title": "周易/恒（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%81%92"
+  },
+  {
+   "file": "evidence/texts/YD-JG33.txt",
+   "sha256": "883eb06ccdcd28782c9780a85bef89a09e3ec7ec72e0df4f961bc8dc9349c117",
+   "bytes": 262,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG33.txt",
+   "source_id": "YD-JG33",
+   "title": "周易/遯（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%81%AF"
+  },
+  {
+   "file": "evidence/texts/YD-JG34.txt",
+   "sha256": "2f17482137047de1d436ef76fd4253153be920e5e78ff95fc09e543ccfe075f0",
+   "bytes": 322,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG34.txt",
+   "source_id": "YD-JG34",
+   "title": "周易/大壯（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A4%A7%E5%A3%AF"
+  },
+  {
+   "file": "evidence/texts/YD-JG35.txt",
+   "sha256": "bff7254c20135c0a92b060926cad9630d97a81e0ba34ef15ddb46c38b2461173",
+   "bytes": 346,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG35.txt",
+   "source_id": "YD-JG35",
+   "title": "周易/晉（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%99%89"
+  },
+  {
+   "file": "evidence/texts/YD-JG36.txt",
+   "sha256": "eead18bf5d7447ff03ac412d1f78086d4d04d093c065b43989197f598efd14b0",
+   "bytes": 376,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG36.txt",
+   "source_id": "YD-JG36",
+   "title": "周易/明夷（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%98%8E%E5%A4%B7"
+  },
+  {
+   "file": "evidence/texts/YD-JG37.txt",
+   "sha256": "e19b7df46aab7fe010c3d26c8d5c58a4a17b8e9a3721e13c72f976004d560b9f",
+   "bytes": 259,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG37.txt",
+   "source_id": "YD-JG37",
+   "title": "周易/家人（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%AE%B6%E4%BA%BA"
+  },
+  {
+   "file": "evidence/texts/YD-JG38.txt",
+   "sha256": "3bff50d96fd355056268d0b3d869c3b3877bceb972c334f0c3a73c8fe5a5cd35",
+   "bytes": 394,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG38.txt",
+   "source_id": "YD-JG38",
+   "title": "周易/睽（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E7%9D%BD"
+  },
+  {
+   "file": "evidence/texts/YD-JG39.txt",
+   "sha256": "c193f495d4527465bb35db0effed69eafba4511663b7257690e5b0297fd4e6c2",
+   "bytes": 247,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG39.txt",
+   "source_id": "YD-JG39",
+   "title": "周易/蹇（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%B9%87"
+  },
+  {
+   "file": "evidence/texts/YD-JG40.txt",
+   "sha256": "a5aaa98fd9a9d8e4b6e94d37495a3202513fb109b12ab65b426d314fa1646a2d",
+   "bytes": 328,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG40.txt",
+   "source_id": "YD-JG40",
+   "title": "周易/解（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%A7%A3"
+  },
+  {
+   "file": "evidence/texts/YD-JG41.txt",
+   "sha256": "07fda4223f9cb97258693364c9c6b90812f510897b501851fc97cd921e98023b",
+   "bytes": 415,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG41.txt",
+   "source_id": "YD-JG41",
+   "title": "周易/損（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%90%8D"
+  },
+  {
+   "file": "evidence/texts/YD-JG42.txt",
+   "sha256": "e8ba9d3afec250bc089692a681f08425d77013dbbe09da3ae482ac2598e27432",
+   "bytes": 397,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG42.txt",
+   "source_id": "YD-JG42",
+   "title": "周易/益（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E7%9B%8A"
+  },
+  {
+   "file": "evidence/texts/YD-JG43.txt",
+   "sha256": "d68ba6068b2e701e3556428195b120a725f1bd8108c7ea5042c0b8ee663317a2",
+   "bytes": 391,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG43.txt",
+   "source_id": "YD-JG43",
+   "title": "周易/夬（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A4%AC"
+  },
+  {
+   "file": "evidence/texts/YD-JG44.txt",
+   "sha256": "cfe3c7e912015f72b3498ae174f88692ffedaeae727b8eae42132a5cef33caa9",
+   "bytes": 325,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG44.txt",
+   "source_id": "YD-JG44",
+   "title": "周易/姤（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A7%A4"
+  },
+  {
+   "file": "evidence/texts/YD-JG45.txt",
+   "sha256": "b735927ff8d383991efccd0a734e1a39899fbfd984c2d20f8b0c70df68f19ea4",
+   "bytes": 394,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG45.txt",
+   "source_id": "YD-JG45",
+   "title": "周易/萃（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%90%83"
+  },
+  {
+   "file": "evidence/texts/YD-JG46.txt",
+   "sha256": "c33b625500e94ae6baffc2b2964f33c847f592fc712aee48cb85b209e74ae085",
+   "bytes": 250,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG46.txt",
+   "source_id": "YD-JG46",
+   "title": "周易/升（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%8D%87"
+  },
+  {
+   "file": "evidence/texts/YD-JG47.txt",
+   "sha256": "275b04ee67f52252196496b6e6585e8cef7f5672b3dc8282dd727500e8d839ef",
+   "bytes": 439,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG47.txt",
+   "source_id": "YD-JG47",
+   "title": "周易/困（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%9B%B0"
+  },
+  {
+   "file": "evidence/texts/YD-JG48.txt",
+   "sha256": "1aba59cc7be0f62959ca6fc19cb9535fcbd486cfdce3cb47cd9c31eeab4477b4",
+   "bytes": 346,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG48.txt",
+   "source_id": "YD-JG48",
+   "title": "周易/井（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E4%BA%95"
+  },
+  {
+   "file": "evidence/texts/YD-JG49.txt",
+   "sha256": "9e4fa5dad6bc92f8247a661d932c014833955472b79b46b97b4222de9a9ea216",
+   "bytes": 319,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG49.txt",
+   "source_id": "YD-JG49",
+   "title": "周易/革（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%9D%A9"
+  },
+  {
+   "file": "evidence/texts/YD-JG50.txt",
+   "sha256": "e2b0db579f86fea56c8eba43b88c0b76cbaca9f2b86fa3bb8b8e9fd8746e747a",
+   "bytes": 346,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG50.txt",
+   "source_id": "YD-JG50",
+   "title": "周易/鼎（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%BC%8E"
+  },
+  {
+   "file": "evidence/texts/YD-JG51.txt",
+   "sha256": "a9c03d1a774143f54b39544a809d7422601f068ef5fd045d103ebf13ae25011f",
+   "bytes": 394,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG51.txt",
+   "source_id": "YD-JG51",
+   "title": "周易/震（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%9C%87"
+  },
+  {
+   "file": "evidence/texts/YD-JG52.txt",
+   "sha256": "2bc236cf61750c6afb3d97213c23119d55547fa0ba66360bbbce56e1f1439b1c",
+   "bytes": 310,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG52.txt",
+   "source_id": "YD-JG52",
+   "title": "周易/艮（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%89%AE"
+  },
+  {
+   "file": "evidence/texts/YD-JG53.txt",
+   "sha256": "e464e41802ca3c899d7380b2806b86efdc02d4b0b48576ec9976ea7a62c00b19",
+   "bytes": 367,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG53.txt",
+   "source_id": "YD-JG53",
+   "title": "周易/漸（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%BC%B8"
+  },
+  {
+   "file": "evidence/texts/YD-JG54.txt",
+   "sha256": "0b38381a1f2d2e6f120b7865f58ed41a6a2dc5156415df02a1e9860ff99927c2",
+   "bytes": 337,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG54.txt",
+   "source_id": "YD-JG54",
+   "title": "周易/歸妹（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%AD%B8%E5%A6%B9"
+  },
+  {
+   "file": "evidence/texts/YD-JG55.txt",
+   "sha256": "60f66f152e30d41a05d495c0c887f1d5bbb172ad76b5a13c36dd6aec2e6bf2bc",
+   "bytes": 409,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG55.txt",
+   "source_id": "YD-JG55",
+   "title": "周易/豐（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%B1%90"
+  },
+  {
+   "file": "evidence/texts/YD-JG56.txt",
+   "sha256": "3eea77a6911e8b243e0f8ed5c4f27d0c2be547cbf66d22f83aef6670526de4b0",
+   "bytes": 331,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG56.txt",
+   "source_id": "YD-JG56",
+   "title": "周易/旅（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%97%85"
+  },
+  {
+   "file": "evidence/texts/YD-JG57.txt",
+   "sha256": "133bdf64959c3e0dabacec8d632b4c6aa5a40ebef17b4dcfc8447e077f2ae747",
+   "bytes": 334,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG57.txt",
+   "source_id": "YD-JG57",
+   "title": "周易/巽（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B7%BD"
+  },
+  {
+   "file": "evidence/texts/YD-JG58.txt",
+   "sha256": "8b018c5dde2739ac61d32d3abf8047fbb69092e14d91784fecec35edb1ad448b",
+   "bytes": 199,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG58.txt",
+   "source_id": "YD-JG58",
+   "title": "周易/兌（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%85%8C"
+  },
+  {
+   "file": "evidence/texts/YD-JG59.txt",
+   "sha256": "71e7d18ed55083c776200e02fb9e249bbb364cde8f690298481947852fe81f4b",
+   "bytes": 307,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG59.txt",
+   "source_id": "YD-JG59",
+   "title": "周易/渙（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%B8%99"
+  },
+  {
+   "file": "evidence/texts/YD-JG60.txt",
+   "sha256": "7163cbcf09d15f498005b0f582559b05eead5caf7c441f37b1050d0204386cc4",
+   "bytes": 238,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG60.txt",
+   "source_id": "YD-JG60",
+   "title": "周易/節（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E7%AF%80"
+  },
+  {
+   "file": "evidence/texts/YD-JG61.txt",
+   "sha256": "c1732a7f623c3d4f0a2f54ef67157bf0979f3be2fe26d92f1b779b39f196259b",
+   "bytes": 316,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG61.txt",
+   "source_id": "YD-JG61",
+   "title": "周易/中孚（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E4%B8%AD%E5%AD%9A"
+  },
+  {
+   "file": "evidence/texts/YD-JG62.txt",
+   "sha256": "3e48cffbcafc142166692e840f1670bb32eed46b4aa6b8856179f804af547864",
+   "bytes": 424,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG62.txt",
+   "source_id": "YD-JG62",
+   "title": "周易/小過（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B0%8F%E9%81%8E"
+  },
+  {
+   "file": "evidence/texts/YD-JG63.txt",
+   "sha256": "1e94ab2756402bfe937d40182a87fd01332b8fa745d519ef063b30820178ca4e",
+   "bytes": 319,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG63.txt",
+   "source_id": "YD-JG63",
+   "title": "周易/既濟（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%97%A2%E6%BF%9F"
+  },
+  {
+   "file": "evidence/texts/YD-JG64.txt",
+   "sha256": "c4e87db9c115398b53402f6209446bfa87ea0b34aa305b4776ff99857841aee5",
+   "bytes": 349,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JG64.txt",
+   "source_id": "YD-JG64",
+   "title": "周易/未濟（仅经文：卦辞、爻辞及用九用六）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%9C%AA%E6%BF%9F"
+  },
+  {
+   "file": "evidence/texts/YD-JP01.txt",
+   "sha256": "bb761592b2f655ba15e1ca6854f2034a5ca9fe25d9483a5280d9f0f4eb7d05a8",
+   "bytes": 4083,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP01.txt",
+   "source_id": "YD-JP01",
+   "title": "周易/乾（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E4%B9%BE"
+  },
+  {
+   "file": "evidence/texts/YD-JP02.txt",
+   "sha256": "6f74eb5eedde9409897f9b3901b9d767600294f4354235e37a63b510d82113b5",
+   "bytes": 2125,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP02.txt",
+   "source_id": "YD-JP02",
+   "title": "周易/坤（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%9D%A4"
+  },
+  {
+   "file": "evidence/texts/YD-JP03.txt",
+   "sha256": "7aeee11607169ff3ab7cd6c81f9f7dc9155d4d50fad6b5387c0cef1b8e018516",
+   "bytes": 957,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP03.txt",
+   "source_id": "YD-JP03",
+   "title": "周易/屯（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B1%AF"
+  },
+  {
+   "file": "evidence/texts/YD-JP04.txt",
+   "sha256": "a8493e02f8152a879a7f2023f66c4aa2df75ec8829032755d240e9eb0f0304a6",
+   "bytes": 945,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP04.txt",
+   "source_id": "YD-JP04",
+   "title": "周易/蒙（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%92%99"
+  },
+  {
+   "file": "evidence/texts/YD-JP05.txt",
+   "sha256": "31b173a5417babbf1567437251d65c23ceb6f6e07d09734f85dcd8178f68033b",
+   "bytes": 964,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP05.txt",
+   "source_id": "YD-JP05",
+   "title": "周易/需（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%9C%80"
+  },
+  {
+   "file": "evidence/texts/YD-JP06.txt",
+   "sha256": "b2d9d72921a3d540945a4c707a2b6cdba95311247d82475f0fa185994dc08583",
+   "bytes": 1000,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP06.txt",
+   "source_id": "YD-JP06",
+   "title": "周易/訟（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%A8%9F"
+  },
+  {
+   "file": "evidence/texts/YD-JP07.txt",
+   "sha256": "3ea95916090405685e29e921639df5cb3dfdd5ff1a0e8fac11ba11f6ed877e37",
+   "bytes": 928,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP07.txt",
+   "source_id": "YD-JP07",
+   "title": "周易/師（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B8%AB"
+  },
+  {
+   "file": "evidence/texts/YD-JP08.txt",
+   "sha256": "3616dac45f6d70d4ca39f8c65e541307f9b8a9295087bba814f3e98ebc65300d",
+   "bytes": 922,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP08.txt",
+   "source_id": "YD-JP08",
+   "title": "周易/比（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%AF%94"
+  },
+  {
+   "file": "evidence/texts/YD-JP09.txt",
+   "sha256": "ec416511990a9ce0930d591bd0b4d38b266ab5338a0f61f7437cf8c1e1aa23bd",
+   "bytes": 868,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP09.txt",
+   "source_id": "YD-JP09",
+   "title": "周易/小畜（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B0%8F%E7%95%9C"
+  },
+  {
+   "file": "evidence/texts/YD-JP10.txt",
+   "sha256": "7dd66fca29ed44b3e1559b14c752d4903cc5ee228409e87ca69f633dea7f1acf",
+   "bytes": 904,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP10.txt",
+   "source_id": "YD-JP10",
+   "title": "周易/履（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B1%A5"
+  },
+  {
+   "file": "evidence/texts/YD-JP11.txt",
+   "sha256": "9c4642ff6e7155a15112825baf279ec571a69b2948d9e0bd0bcbaf378fc92770",
+   "bytes": 1070,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP11.txt",
+   "source_id": "YD-JP11",
+   "title": "周易/泰（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%B3%B0"
+  },
+  {
+   "file": "evidence/texts/YD-JP12.txt",
+   "sha256": "7c7cf6e328f4b7d907eb6840c12edbfdfba0050528dd6e87d0d7818bc6ebd1a1",
+   "bytes": 912,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP12.txt",
+   "source_id": "YD-JP12",
+   "title": "周易/否（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%90%A6"
+  },
+  {
+   "file": "evidence/texts/YD-JP13.txt",
+   "sha256": "5d21b451da29c57d8588562231cbfbe0437862b8a98b5bc02ec18bf991bda42e",
+   "bytes": 971,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP13.txt",
+   "source_id": "YD-JP13",
+   "title": "周易/同人（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%90%8C%E4%BA%BA"
+  },
+  {
+   "file": "evidence/texts/YD-JP14.txt",
+   "sha256": "fda75f0536e1a4dbe8b33e23abe4644f231f94001e806fd3a0e48e3e9976f038",
+   "bytes": 852,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP14.txt",
+   "source_id": "YD-JP14",
+   "title": "周易/大有（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A4%A7%E6%9C%89"
+  },
+  {
+   "file": "evidence/texts/YD-JP15.txt",
+   "sha256": "aeb3a4375f4a593395cb2b32231b5a41eaa39e88847cf63e6ae22b930c0390c9",
+   "bytes": 904,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP15.txt",
+   "source_id": "YD-JP15",
+   "title": "周易/謙（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%AC%99"
+  },
+  {
+   "file": "evidence/texts/YD-JP16.txt",
+   "sha256": "9cbceb9bf63673f354dfa795880679695a2c51eb73e05c416a919d1886aa1143",
+   "bytes": 922,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP16.txt",
+   "source_id": "YD-JP16",
+   "title": "周易/豫（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%B1%AB"
+  },
+  {
+   "file": "evidence/texts/YD-JP17.txt",
+   "sha256": "ce4191dba45d86d652757ec953da0e01bff34669251f89c147c96093ad00d8c5",
+   "bytes": 859,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP17.txt",
+   "source_id": "YD-JP17",
+   "title": "周易/隨（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%9A%A8"
+  },
+  {
+   "file": "evidence/texts/YD-JP18.txt",
+   "sha256": "4175c090a2d3e68fc276db5af7d0e1bc91bceb695e26b9dfcd7a2b9c51a96319",
+   "bytes": 856,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP18.txt",
+   "source_id": "YD-JP18",
+   "title": "周易/蠱（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%A0%B1"
+  },
+  {
+   "file": "evidence/texts/YD-JP19.txt",
+   "sha256": "2dc4cbed154681bc9bba9c6253e3f88966ee2f7cd9310fb21715d90d389e6289",
+   "bytes": 799,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP19.txt",
+   "source_id": "YD-JP19",
+   "title": "周易/臨（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%87%A8"
+  },
+  {
+   "file": "evidence/texts/YD-JP20.txt",
+   "sha256": "054ce277cabffbd5638b49f6210c04274e571c4a680f23f03fe0eddd7bdf5857",
+   "bytes": 826,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP20.txt",
+   "source_id": "YD-JP20",
+   "title": "周易/觀（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%A7%80"
+  },
+  {
+   "file": "evidence/texts/YD-JP21.txt",
+   "sha256": "67e70068d0f8daa4a283e882ce72853068b780e9049084096e83fd75f950cf38",
+   "bytes": 778,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP21.txt",
+   "source_id": "YD-JP21",
+   "title": "周易/噬嗑（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%99%AC%E5%97%91"
+  },
+  {
+   "file": "evidence/texts/YD-JP22.txt",
+   "sha256": "92ced70b9343274f1580bbbcdd6861a63214c453d451e044056fd3910fcca6fa",
+   "bytes": 880,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP22.txt",
+   "source_id": "YD-JP22",
+   "title": "周易/賁（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%B3%81"
+  },
+  {
+   "file": "evidence/texts/YD-JP23.txt",
+   "sha256": "3866ed3a4eaf55c2dd4cee998ef1233927fef7a9a8b0dea00cfedbd0edec191b",
+   "bytes": 802,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP23.txt",
+   "source_id": "YD-JP23",
+   "title": "周易/剝（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%89%9D"
+  },
+  {
+   "file": "evidence/texts/YD-JP24.txt",
+   "sha256": "bd33f3c640f72ec1894ade738cfe184b3eee49c41e1c6751ec87537b0c9d789f",
+   "bytes": 937,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP24.txt",
+   "source_id": "YD-JP24",
+   "title": "周易/復（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%BE%A9"
+  },
+  {
+   "file": "evidence/texts/YD-JP25.txt",
+   "sha256": "fdfc6468e2d43472d4cf28883b415bdf3e82a1844f6012cd142fb316d6a07fb8",
+   "bytes": 914,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP25.txt",
+   "source_id": "YD-JP25",
+   "title": "周易/无妄（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%97%A0%E5%A6%84"
+  },
+  {
+   "file": "evidence/texts/YD-JP26.txt",
+   "sha256": "045fdb5be2622926817210e60b54cb2682894095e5ac30873c5ce92504028611",
+   "bytes": 811,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP26.txt",
+   "source_id": "YD-JP26",
+   "title": "周易/大畜（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A4%A7%E7%95%9C"
+  },
+  {
+   "file": "evidence/texts/YD-JP27.txt",
+   "sha256": "4569ea5d42b562ffaf541a18c3a14090509b7c7ef65fcaf2472ca324fb58ea12",
+   "bytes": 904,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP27.txt",
+   "source_id": "YD-JP27",
+   "title": "周易/頤（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%A0%A4"
+  },
+  {
+   "file": "evidence/texts/YD-JP28.txt",
+   "sha256": "30e0e6b09808c2c96a5b1fee368a0d5bdd069ea312fc47993eeac90be977f88b",
+   "bytes": 865,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP28.txt",
+   "source_id": "YD-JP28",
+   "title": "周易/大過（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A4%A7%E9%81%8E"
+  },
+  {
+   "file": "evidence/texts/YD-JP29.txt",
+   "sha256": "cd1c9560cda5716e8657490958f112e67bd51f3f56c93b89546c51c1e102f4d1",
+   "bytes": 938,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP29.txt",
+   "source_id": "YD-JP29",
+   "title": "周易/坎（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%9D%8E"
+  },
+  {
+   "file": "evidence/texts/YD-JP30.txt",
+   "sha256": "c404eb81cca55c3d94c1a281240d69213e91b38ef4f0ee656b3275656cc836ff",
+   "bytes": 854,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP30.txt",
+   "source_id": "YD-JP30",
+   "title": "周易/離（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%9B%A2"
+  },
+  {
+   "file": "evidence/texts/YD-JP31.txt",
+   "sha256": "59410fd30761e85bd117f0b33c08ac98e473e7fbc9133817645c78b009f8f3c2",
+   "bytes": 916,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP31.txt",
+   "source_id": "YD-JP31",
+   "title": "周易/咸（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%92%B8"
+  },
+  {
+   "file": "evidence/texts/YD-JP32.txt",
+   "sha256": "b0075f258ebee6757319421b316431f27eea60b837811401a769b37e8e01f36f",
+   "bytes": 1008,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP32.txt",
+   "source_id": "YD-JP32",
+   "title": "周易/恒（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%81%92"
+  },
+  {
+   "file": "evidence/texts/YD-JP33.txt",
+   "sha256": "67732c9ba45f82f189e040b1d9f159b1c26a395080b3683ef168bd89338d7505",
+   "bytes": 805,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP33.txt",
+   "source_id": "YD-JP33",
+   "title": "周易/遯（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%81%AF"
+  },
+  {
+   "file": "evidence/texts/YD-JP34.txt",
+   "sha256": "6765d55f646c4ffdf02280be4dd4df46f3df6edfe880c4a82606ebd9f979a862",
+   "bytes": 844,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP34.txt",
+   "source_id": "YD-JP34",
+   "title": "周易/大壯（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A4%A7%E5%A3%AF"
+  },
+  {
+   "file": "evidence/texts/YD-JP35.txt",
+   "sha256": "4910b94e46e2ac5b78d1bf79141b3b41d1664f6ece9e724dec206ab5af580fad",
+   "bytes": 877,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP35.txt",
+   "source_id": "YD-JP35",
+   "title": "周易/晉（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%99%89"
+  },
+  {
+   "file": "evidence/texts/YD-JP36.txt",
+   "sha256": "6b92410667785eb11cb6c60038e1cc28da2db841424de9276845aa381120f207",
+   "bytes": 952,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP36.txt",
+   "source_id": "YD-JP36",
+   "title": "周易/明夷（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%98%8E%E5%A4%B7"
+  },
+  {
+   "file": "evidence/texts/YD-JP37.txt",
+   "sha256": "1297c1c267432c53e83ccc9e9f2230a1c88266ae81e48a42d994466e865399c5",
+   "bytes": 901,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP37.txt",
+   "source_id": "YD-JP37",
+   "title": "周易/家人（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%AE%B6%E4%BA%BA"
+  },
+  {
+   "file": "evidence/texts/YD-JP38.txt",
+   "sha256": "319048f56012924e36ef94ea62db1f991cc666e15a15db555e0d6998073418ad",
+   "bytes": 1051,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP38.txt",
+   "source_id": "YD-JP38",
+   "title": "周易/睽（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E7%9D%BD"
+  },
+  {
+   "file": "evidence/texts/YD-JP39.txt",
+   "sha256": "05df990def489acd80e7933383111f4965195a92b71511906c4278fddf0764c3",
+   "bytes": 859,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP39.txt",
+   "source_id": "YD-JP39",
+   "title": "周易/蹇（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%B9%87"
+  },
+  {
+   "file": "evidence/texts/YD-JP40.txt",
+   "sha256": "51bd7c1d8513ab024d446f0ade1f3cfdf23f0f13d52b3302c131f94fa4aeec93",
+   "bytes": 952,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP40.txt",
+   "source_id": "YD-JP40",
+   "title": "周易/解（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%A7%A3"
+  },
+  {
+   "file": "evidence/texts/YD-JP41.txt",
+   "sha256": "ae2411bef279f04a5a9538c03308837a50174c9fe751c21fb7e3d7c73d323486",
+   "bytes": 985,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP41.txt",
+   "source_id": "YD-JP41",
+   "title": "周易/損（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%90%8D"
+  },
+  {
+   "file": "evidence/texts/YD-JP42.txt",
+   "sha256": "1c8f0fa2295cc159ba7ad32755248daf2d96ab39e8500da567c9888bded7c12c",
+   "bytes": 1048,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP42.txt",
+   "source_id": "YD-JP42",
+   "title": "周易/益（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E7%9B%8A"
+  },
+  {
+   "file": "evidence/texts/YD-JP43.txt",
+   "sha256": "69aefe0926d24510d48671dff5ed4b802f39021f1907a2b68aab41916f5c8371",
+   "bytes": 1012,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP43.txt",
+   "source_id": "YD-JP43",
+   "title": "周易/夬（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A4%AC"
+  },
+  {
+   "file": "evidence/texts/YD-JP44.txt",
+   "sha256": "0b1fe608ff1b1e5bb06d44e89576dc31bb29c37b27c8f4663622c022fa2b9383",
+   "bytes": 883,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP44.txt",
+   "source_id": "YD-JP44",
+   "title": "周易/姤（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%A7%A4"
+  },
+  {
+   "file": "evidence/texts/YD-JP45.txt",
+   "sha256": "f1ef50555598e7b3dda221031dc32e6627e4c2ae23343501df747296f0b1769f",
+   "bytes": 985,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP45.txt",
+   "source_id": "YD-JP45",
+   "title": "周易/萃（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%90%83"
+  },
+  {
+   "file": "evidence/texts/YD-JP46.txt",
+   "sha256": "2bb68f07007fd147e6532d9645816e9c9871f0ee5885c4f4257141a82c0b409f",
+   "bytes": 757,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP46.txt",
+   "source_id": "YD-JP46",
+   "title": "周易/升（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%8D%87"
+  },
+  {
+   "file": "evidence/texts/YD-JP47.txt",
+   "sha256": "587cff071ebdd1e3539a89953c63145b2db8f9108eaaf4dcd04c400f63fbbdb2",
+   "bytes": 1097,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP47.txt",
+   "source_id": "YD-JP47",
+   "title": "周易/困（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%9B%B0"
+  },
+  {
+   "file": "evidence/texts/YD-JP48.txt",
+   "sha256": "56105691cc6bf787bccd0e614df37c8f57156751c60da13fbd81aac0f886229d",
+   "bytes": 904,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP48.txt",
+   "source_id": "YD-JP48",
+   "title": "周易/井（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E4%BA%95"
+  },
+  {
+   "file": "evidence/texts/YD-JP49.txt",
+   "sha256": "b29f101f79afbbdfe2d2e61e2bc32227aecf058f4d6e7266dba7009fa18f4335",
+   "bytes": 973,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP49.txt",
+   "source_id": "YD-JP49",
+   "title": "周易/革（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%9D%A9"
+  },
+  {
+   "file": "evidence/texts/YD-JP50.txt",
+   "sha256": "3799a654fd0d6754164a8a72ac2e1696a49f20ccf415bc9ab62dffe8495af3e2",
+   "bytes": 931,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP50.txt",
+   "source_id": "YD-JP50",
+   "title": "周易/鼎（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%BC%8E"
+  },
+  {
+   "file": "evidence/texts/YD-JP51.txt",
+   "sha256": "62d5bc3e6d40bef998f13feac63e243730353479c56aaba81320cef1bbfe31c9",
+   "bytes": 983,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP51.txt",
+   "source_id": "YD-JP51",
+   "title": "周易/震（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E9%9C%87"
+  },
+  {
+   "file": "evidence/texts/YD-JP52.txt",
+   "sha256": "b97c690c3cd6fd7846dcf612240a100e6643bdd7eccac24b21969131d219e607",
+   "bytes": 863,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP52.txt",
+   "source_id": "YD-JP52",
+   "title": "周易/艮（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%89%AE"
+  },
+  {
+   "file": "evidence/texts/YD-JP53.txt",
+   "sha256": "974be4953f1b2ca20f720d285518e321b039608d0edc71476215aa17e0727d44",
+   "bytes": 973,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP53.txt",
+   "source_id": "YD-JP53",
+   "title": "周易/漸（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%BC%B8"
+  },
+  {
+   "file": "evidence/texts/YD-JP54.txt",
+   "sha256": "1fc13b2fc7cd662c23947ff441bfe50769cb78cda27759415f52e78e5a7fe5b4",
+   "bytes": 961,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP54.txt",
+   "source_id": "YD-JP54",
+   "title": "周易/歸妹（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%AD%B8%E5%A6%B9"
+  },
+  {
+   "file": "evidence/texts/YD-JP55.txt",
+   "sha256": "0086e5e9fcdd5392b3e0eac154f0168230f5dfd9f48b319cfb104ec425e1c954",
+   "bytes": 1111,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP55.txt",
+   "source_id": "YD-JP55",
+   "title": "周易/豐（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E8%B1%90"
+  },
+  {
+   "file": "evidence/texts/YD-JP56.txt",
+   "sha256": "4ca036058b3e75aa968131fd61251727d01a4d3f70fb8cb34f12c1c9a6ab158e",
+   "bytes": 931,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP56.txt",
+   "source_id": "YD-JP56",
+   "title": "周易/旅（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%97%85"
+  },
+  {
+   "file": "evidence/texts/YD-JP57.txt",
+   "sha256": "3989754fd08d5171ccdd10f43d5fd9b601f1f41c8c3d67aadd7438c609f5279f",
+   "bytes": 848,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP57.txt",
+   "source_id": "YD-JP57",
+   "title": "周易/巽（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B7%BD"
+  },
+  {
+   "file": "evidence/texts/YD-JP58.txt",
+   "sha256": "09f07f50616ae727ec2bae79279b5f919bd05d4270b901f529e169cdf5f3f0f7",
+   "bytes": 722,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP58.txt",
+   "source_id": "YD-JP58",
+   "title": "周易/兌（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%85%8C"
+  },
+  {
+   "file": "evidence/texts/YD-JP59.txt",
+   "sha256": "3ffad8dbfb8697eddb96c1c92e2f3ddc773997f14781086cfd9d5f8c463db099",
+   "bytes": 797,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP59.txt",
+   "source_id": "YD-JP59",
+   "title": "周易/渙（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%B8%99"
+  },
+  {
+   "file": "evidence/texts/YD-JP60.txt",
+   "sha256": "dab3278c7555ccf4ad5ede32575f2d5308be416b0ec2f37b7757011adc006cb5",
+   "bytes": 808,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP60.txt",
+   "source_id": "YD-JP60",
+   "title": "周易/節（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E7%AF%80"
+  },
+  {
+   "file": "evidence/texts/YD-JP61.txt",
+   "sha256": "61e1f7195e1a63e7cdc2b7051f1565ad590d396419df26b0b45c2c6ba883537a",
+   "bytes": 874,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP61.txt",
+   "source_id": "YD-JP61",
+   "title": "周易/中孚（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E4%B8%AD%E5%AD%9A"
+  },
+  {
+   "file": "evidence/texts/YD-JP62.txt",
+   "sha256": "0ddb2e681449077fe22969af24e7c66d8d352d303130a045ca4a9171ac21ddfa",
+   "bytes": 1111,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP62.txt",
+   "source_id": "YD-JP62",
+   "title": "周易/小過（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E5%B0%8F%E9%81%8E"
+  },
+  {
+   "file": "evidence/texts/YD-JP63.txt",
+   "sha256": "fa0318af2b0ff6a495ba69c4c1cd4d8f726885155fdb1e6c651d3f11179b5aa5",
+   "bytes": 870,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP63.txt",
+   "source_id": "YD-JP63",
+   "title": "周易/既濟（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%97%A2%E6%BF%9F"
+  },
+  {
+   "file": "evidence/texts/YD-JP64.txt",
+   "sha256": "61428f9f46918b7d9f39dd4deb5805d506d7b005dc357fabdf55f75e98ce16c7",
+   "bytes": 882,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-JP64.txt",
+   "source_id": "YD-JP64",
+   "title": "周易/未濟（经传合页正文；夹注另存）",
+   "url": "https://zh.wikisource.org/wiki/%E5%91%A8%E6%98%93/%E6%9C%AA%E6%BF%9F"
+  },
+  {
+   "file": "evidence/texts/YWH-LM.txt",
+   "sha256": "be64298c826cf4666fed3e07eb4740b6419f7c562d5749a6c2e4743ede2029c7",
+   "bytes": 3449,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-LM.txt",
+   "source_id": "YWH-LM",
+   "title": "周易略例/明彖",
+   "url": "https://zh.wikisource.org/wiki/周易略例/明彖"
+  },
+  {
+   "file": "evidence/texts/YWH-LX.txt",
+   "sha256": "3a5fc5a9a008f304484863d5d233b0ab2a77d70816b1e8ce5ec62787c25a9721",
+   "bytes": 2121,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-LX.txt",
+   "source_id": "YWH-LX",
+   "title": "周易略例/明象",
+   "url": "https://zh.wikisource.org/wiki/周易略例/明象"
+  },
+  {
+   "file": "evidence/texts/YWH-LG.txt",
+   "sha256": "8180ea38517bcbae6badf944d1329026f63a8974969540f5aa4c4c45ef5ab469",
+   "bytes": 4164,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-LG.txt",
+   "source_id": "YWH-LG",
+   "title": "周易略例/明卦適變通爻",
+   "url": "https://zh.wikisource.org/wiki/周易略例/明卦適變通爻"
+  },
+  {
+   "file": "evidence/texts/YWH-LB.txt",
+   "sha256": "9413d0962be27957402ab752f4c25bad0dcd650cf2ffee59714614f4b7e66691",
+   "bytes": 1647,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-LB.txt",
+   "source_id": "YWH-LB",
+   "title": "周易略例/辯位",
+   "url": "https://zh.wikisource.org/wiki/周易略例/辯位"
+  },
+  {
+   "file": "evidence/texts/YWH-LZ.txt",
+   "sha256": "0babc8faf49de83d123447d48813f134b01f16897a2a281cc49b06dedcf413b0",
+   "bytes": 5806,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-LZ.txt",
+   "source_id": "YWH-LZ",
+   "title": "周易略例/明爻通變",
+   "url": "https://zh.wikisource.org/wiki/周易略例/明爻通變"
+  },
+  {
+   "file": "evidence/texts/YWH-H4.txt",
+   "sha256": "e7793d13f580f2f8bc2d9c78f6a897a2ec7f6bfe1cc8262a502d49a924958996",
+   "bytes": 10121,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-H4.txt",
+   "source_id": "YWH-H4",
+   "title": "周易正義/07.04",
+   "url": "https://zh.wikisource.org/wiki/周易正義/07.04"
+  },
+  {
+   "file": "evidence/texts/YWH-H5.txt",
+   "sha256": "61476ecc1d5d0bc1ad3690fccdb13dfe51a643ba5d0ba6f3caeb772821a72250",
+   "bytes": 10427,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-H5.txt",
+   "source_id": "YWH-H5",
+   "title": "周易正義/07.05",
+   "url": "https://zh.wikisource.org/wiki/周易正義/07.05"
+  },
+  {
+   "file": "evidence/texts/YWH-H11.txt",
+   "sha256": "739ce1a3428aa9b63ac0d0a1a26824636e3a2beca7cda8376c46bdfb463ed813",
+   "bytes": 5729,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-H11.txt",
+   "source_id": "YWH-H11",
+   "title": "周易正義/07.11",
+   "url": "https://zh.wikisource.org/wiki/周易正義/07.11"
+  },
+  {
+   "file": "evidence/texts/YWH-H12.txt",
+   "sha256": "1e7d4d5e019b73deb21aaee87155bd8314075b1249bb9660994838759894e0e6",
+   "bytes": 6441,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-H12.txt",
+   "source_id": "YWH-H12",
+   "title": "周易正義/07.12",
+   "url": "https://zh.wikisource.org/wiki/周易正義/07.12"
+  },
+  {
+   "file": "evidence/texts/YWH-Q.txt",
+   "sha256": "92c809f9b9b0d2b497441a9aed138cdac195a89a131bb84d05e49c4722e98f0b",
+   "bytes": 68965,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-Q.txt",
+   "source_id": "YWH-Q",
+   "title": "周易正義/01乾",
+   "url": "https://zh.wikisource.org/wiki/周易正義/01乾"
+  },
+  {
+   "file": "evidence/texts/YWH-F.txt",
+   "sha256": "6aff057fc225f367039c891a60d6eb963458779f067d4b70462cca138c1ffab4",
+   "bytes": 10819,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-F.txt",
+   "source_id": "YWH-F",
+   "title": "周易正義/03復",
+   "url": "https://zh.wikisource.org/wiki/周易正義/03復"
+  },
+  {
+   "file": "evidence/texts/YWH-ATTR.txt",
+   "sha256": "5fcc762ce6fafae8ac377d2c98f0cee646da7cf3355cca5f5221b24ae69b0bb7",
+   "bytes": 3132,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YWH-ATTR.txt",
+   "source_id": "YWH-ATTR",
+   "title": "周易註 (四庫全書本)/提要",
+   "url": "https://zh.wikisource.org/wiki/周易註 (四庫全書本)/提要"
+  },
+  {
+   "file": "evidence/texts/YD-CY.txt",
+   "sha256": "4be026c822250aff3bafc6d62983bac396638cfe3f0487aeefedbb09c62af323",
+   "bytes": 98208,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-CY.txt",
+   "source_id": "YD-CY",
+   "title": "伊川易傳",
+   "url": "https://zh.wikisource.org/wiki/%E4%BC%8A%E5%B7%9D%E6%98%93%E5%82%B3"
+  },
+  {
+   "file": "evidence/texts/YD-CY2.txt",
+   "sha256": "c3d411760b17c68388363fea22ea38b522cfb3f547e0de6e0f626a7fe33870e4",
+   "bytes": 97321,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-CY2.txt",
+   "source_id": "YD-CY2",
+   "title": "伊川易傳 (四庫全書本)/卷2",
+   "url": "https://zh.wikisource.org/wiki/%E4%BC%8A%E5%B7%9D%E6%98%93%E5%82%B3%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B72"
+  },
+  {
+   "file": "evidence/texts/YD-CY3.txt",
+   "sha256": "324916fabcd65867328c6e6a7a5e885de8e53d4b8f44963d1923d4624130044b",
+   "bytes": 105014,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-CY3.txt",
+   "source_id": "YD-CY3",
+   "title": "伊川易傳 (四庫全書本)/卷3",
+   "url": "https://zh.wikisource.org/wiki/%E4%BC%8A%E5%B7%9D%E6%98%93%E5%82%B3%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B73"
+  },
+  {
+   "file": "evidence/texts/YD-CY4.txt",
+   "sha256": "7cbdef4e5b4e591a6f2d4bfac6fdcfd837e3721d63a78531c53122bc5e21018c",
+   "bytes": 104093,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-CY4.txt",
+   "source_id": "YD-CY4",
+   "title": "伊川易傳 (四庫全書本)/卷4",
+   "url": "https://zh.wikisource.org/wiki/%E4%BC%8A%E5%B7%9D%E6%98%93%E5%82%B3%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B74"
+  },
+  {
+   "file": "evidence/texts/YD-CYSK.txt",
+   "sha256": "199e586a4d0f215240f9ef3dff1528e936fad9a723aa66866959c8c6b801b81a",
+   "bytes": 90665,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-CYSK.txt",
+   "source_id": "YD-CYSK",
+   "title": "伊川易傳 (四庫全書本)/全覽",
+   "url": "https://zh.wikisource.org/wiki/%E4%BC%8A%E5%B7%9D%E6%98%93%E5%82%B3%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%85%A8%E8%A6%BD"
+  },
+  {
+   "file": "evidence/texts/YD-WF1.txt",
+   "sha256": "8aa53e9022ff51aa1133302e3f7693ea9043cde63b472cf4b4ae699d8a29ffd0",
+   "bytes": 16622,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-WF1.txt",
+   "source_id": "YD-WF1",
+   "title": "周易外传·系辞上传第一章",
+   "url": "https://www.xuges.com/mj/w/wfz/zywz/65.htm"
+  },
+  {
+   "file": "evidence/texts/YD-WF12.txt",
+   "sha256": "d7e61cc46f89c3b654ee163e40acada174924388b901cc20f47ff2554545c38a",
+   "bytes": 6410,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-WF12.txt",
+   "source_id": "YD-WF12",
+   "title": "周易外传·系辞上传第十二章",
+   "url": "https://www.xuges.com/mj/w/wfz/zywz/76.htm"
+  },
+  {
+   "file": "evidence/texts/YD-WF64.txt",
+   "sha256": "d31c4eb75d0c0fc5934934fd99c7d26db96d6b553e2b7d11dede9717fa431a73",
+   "bytes": 11988,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-WF64.txt",
+   "source_id": "YD-WF64",
+   "title": "周易外传·未济",
+   "url": "https://www.xuges.com/mj/w/wfz/zywz/64.htm"
+  },
+  {
+   "file": "evidence/texts/YD-ZX1.txt",
+   "sha256": "6f53076bf20eccbe07e53eadfb6e0d01feb38a56e3afe7b811ba323371d91b76",
+   "bytes": 45394,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-ZX1.txt",
+   "source_id": "YD-ZX1",
+   "title": "原本周易本義 (四庫全書本)/卷01",
+   "url": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B701"
+  },
+  {
+   "file": "evidence/texts/YD-ZX2.txt",
+   "sha256": "91b20c0b65ca0a4cd8957ba47f14bd96bdcfc2bf42a5f4f01b649dcec6db6047",
+   "bytes": 47804,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-ZX2.txt",
+   "source_id": "YD-ZX2",
+   "title": "原本周易本義 (四庫全書本)/卷02",
+   "url": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B702"
+  },
+  {
+   "file": "evidence/texts/YD-ZX7.txt",
+   "sha256": "b064a23844b0d45f0ed7162603099a48693882a930303ce7335f5622fbea68d2",
+   "bytes": 20403,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/YD-ZX7.txt",
+   "source_id": "YD-ZX7",
+   "title": "原本周易本義 (四庫全書本)/卷07",
+   "url": "https://zh.wikisource.org/wiki/%E5%8E%9F%E6%9C%AC%E5%91%A8%E6%98%93%E6%9C%AC%E7%BE%A9%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B707"
+  },
+  {
+   "file": "evidence/texts/LC-HS-UP.txt",
+   "sha256": "9720fbb9c44e5c13f9adab4b94d0d10f628599a4380cdcd743d055bdd8e8266b",
+   "bytes": 39262,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/LC-HS-UP.txt",
+   "source_id": "LC-HS-UP",
+   "title": "老子河上公章句·道经",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%80%81%E5%AD%90%E6%B2%B3%E4%B8%8A%E5%85%AC%E7%AB%A0%E5%8F%A5/%E4%B8%8A"
+  },
+  {
+   "file": "evidence/texts/LC-HS-LOW.txt",
+   "sha256": "5ef47f4d73d14f81603bb06a3f50dcda661dc572ca9795c2da107011d324a4f3",
+   "bytes": 43836,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/LC-HS-LOW.txt",
+   "source_id": "LC-HS-LOW",
+   "title": "老子河上公章句·德经",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%80%81%E5%AD%90%E6%B2%B3%E4%B8%8A%E5%85%AC%E7%AB%A0%E5%8F%A5/%E5%BE%B7%E7%B6%93"
+  },
+  {
+   "file": "evidence/texts/LC-SZ-ALL.txt",
+   "sha256": "4b45008f08478aee78a1b88612088e19edfe4943c99b8479b22176f3b797f68f",
+   "bytes": 74956,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/LC-SZ-ALL.txt",
+   "source_id": "LC-SZ-ALL",
+   "title": "苏辙老子解（四库全书本）全览",
+   "url": "https://zh.wikisource.org/zh/%E8%80%81%E5%AD%90%E8%A7%A3_(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)/%E5%85%A8%E8%A6%BD"
+  },
+  {
+   "file": "evidence/texts/V130-LAO-MA.txt",
+   "sha256": "17e16d768293d1829910b03f17d2000486ed28dd83adfdce8d23b884ead859d7",
+   "bytes": 20363,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/V130-LAO-MA.txt",
+   "source_id": "V130-LAO-MA",
+   "title": "老子 (帛書甲本)（公开转录；未据原简帛图版校勘）",
+   "url": "https://zh.wikisource.org/wiki/%E8%80%81%E5%AD%90_%28%E5%B8%9B%E6%9B%B8%E7%94%B2%E6%9C%AC%29"
+  },
+  {
+   "file": "evidence/texts/V130-LAO-MB.txt",
+   "sha256": "0e18a218f14015d5fc545519001382ebbf082e1727f0b760afe458f944c930d0",
+   "bytes": 20162,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/V130-LAO-MB.txt",
+   "source_id": "V130-LAO-MB",
+   "title": "老子 (帛書乙本)（公开转录；未据原简帛图版校勘）",
+   "url": "https://zh.wikisource.org/wiki/%E8%80%81%E5%AD%90_%28%E5%B8%9B%E6%9B%B8%E4%B9%99%E6%9C%AC%29"
+  },
+  {
+   "file": "evidence/texts/V130-LAO-GD.txt",
+   "sha256": "be9df86660e6fa0c81f95f8170fa2f211e39840532ee11e647f0bca8646f904e",
+   "bytes": 79458,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/texts/V130-LAO-GD.txt",
+   "source_id": "V130-LAO-GD",
+   "title": "郭店楚墓竹簡（公开转录；未据原简帛图版校勘）",
+   "url": "https://zh.wikisource.org/wiki/%E9%83%AD%E5%BA%97%E6%A5%9A%E5%A2%93%E7%AB%B9%E7%B0%A1"
+  },
+  {
+   "file": "evidence/additions/ru1/RU1-S-LY.txt",
+   "sha256": "cb2576885909b1c8a216d4fc9f3a7b1529b81f32e705c1cd55bc17343686947e",
+   "bytes": 66115,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru1/RU1-S-LY.txt",
+   "source_id": "RU1-S-LY",
+   "title": "論語/全覽",
+   "url": "https://zh.wikisource.org/zh-hant/%E8%AB%96%E8%AA%9E/%E5%85%A8%E8%A6%BD"
+  },
+  {
+   "file": "evidence/additions/ru1/RU1-S-DX.txt",
+   "sha256": "82682928c7df79cf5f383d5ca60e00da5c0de1e29abae5e3f1afd1e80a250bb8",
+   "bytes": 6509,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru1/RU1-S-DX.txt",
+   "source_id": "RU1-S-DX",
+   "title": "禮記/大學",
+   "url": "https://zh.wikisource.org/zh-hant/%E7%A6%AE%E8%A8%98/%E5%A4%A7%E5%AD%B8"
+  },
+  {
+   "file": "evidence/additions/ru1/RU1-S-ZY.txt",
+   "sha256": "5b616f4170f4c3e0908496bbe7b393f28358caac87836f3dd6a7f3d61bca041e",
+   "bytes": 13325,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru1/RU1-S-ZY.txt",
+   "source_id": "RU1-S-ZY",
+   "title": "禮記/中庸",
+   "url": "https://zh.wikisource.org/zh-hant/%E7%A6%AE%E8%A8%98/%E4%B8%AD%E5%BA%B8"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-MZ.txt",
+   "sha256": "9512f50d3e87714167c96495f1791779d20991c3147f8c56e3e1d71558b22c2b",
+   "bytes": 139839,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-MZ.txt",
+   "source_id": "RU2-S-MZ",
+   "title": "《孟子》",
+   "url": "https://zh.wikisource.org/zh-hans/%E5%AD%9F%E5%AD%90/%E5%85%A8%E8%A6%BD"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S01.txt",
+   "sha256": "0c79d0a6ff3c97e4d459dabae045f4843baaefc6a01686e9ae163ea8c20bcc10",
+   "bytes": 11411,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S01.txt",
+   "source_id": "RU2-S-S01",
+   "title": "通書",
+   "url": "https://zh.wikisource.org/zh-hans/%E9%80%9A%E6%9B%B8"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S02.txt",
+   "sha256": "7f18bf4e031a25fb86be588e09b28f7d3d460a8d8ceb8054f77f651e0dc1a40b",
+   "bytes": 5194,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S02.txt",
+   "source_id": "RU2-S-S02",
+   "title": "正蒙/01",
+   "url": "https://zh.wikisource.org/zh-hans/%E6%AD%A3%E8%92%99/01"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S03.txt",
+   "sha256": "a0c78bc2892cecd6f6d08c5eaea83e27c173ffd1ccd7b4f53885e2a292d92c49",
+   "bytes": 5147,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S03.txt",
+   "source_id": "RU2-S-S03",
+   "title": "正蒙/06",
+   "url": "https://zh.wikisource.org/zh-hans/%E6%AD%A3%E8%92%99/06"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S04.txt",
+   "sha256": "3f17b967357526cdd6dab8854ba604a28f13bec2486501129aaa023174da2cd2",
+   "bytes": 2559,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S04.txt",
+   "source_id": "RU2-S-S04",
+   "title": "正蒙/07",
+   "url": "https://zh.wikisource.org/zh-hans/%E6%AD%A3%E8%92%99/07"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S05.txt",
+   "sha256": "c52a86a278350348e8c7c8d437fa9d0369e7e2ec512d3249e42aaedfb2e0d02a",
+   "bytes": 6747,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S05.txt",
+   "source_id": "RU2-S-S05",
+   "title": "正蒙/17",
+   "url": "https://zh.wikisource.org/zh-hans/%E6%AD%A3%E8%92%99/17"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S06.txt",
+   "sha256": "8e64db1cdaeb1fa37aa131dc15b951ede6ed4af4f2a3b8295485c44fd97695c3",
+   "bytes": 21012,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S06.txt",
+   "source_id": "RU2-S-S06",
+   "title": "近思錄/卷01",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%BF%91%E6%80%9D%E9%8C%84/%E5%8D%B701"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S07.txt",
+   "sha256": "6b81d0458d1834ff727ed53272116d8383837cbb5b7eca83f3c5b1ba4b551e3e",
+   "bytes": 22222,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S07.txt",
+   "source_id": "RU2-S-S07",
+   "title": "近思錄/卷02",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%BF%91%E6%80%9D%E9%8C%84/%E5%8D%B702"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S08.txt",
+   "sha256": "5e6641f976cffe6bdca3b9808a75933992f5d14c3751755a83492371fcb09f68",
+   "bytes": 14452,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S08.txt",
+   "source_id": "RU2-S-S08",
+   "title": "近思錄/卷04",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%BF%91%E6%80%9D%E9%8C%84/%E5%8D%B704"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S09.txt",
+   "sha256": "3454675135aa2096023a44890430a1c47221db58b13cc35e977215c538f35262",
+   "bytes": 22927,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S09.txt",
+   "source_id": "RU2-S-S09",
+   "title": "四書章句集注/大學章句",
+   "url": "https://zh.wikisource.org/zh-hans/%E5%9B%9B%E6%9B%B8%E7%AB%A0%E5%8F%A5%E9%9B%86%E6%B3%A8/%E5%A4%A7%E5%AD%B8%E7%AB%A0%E5%8F%A5"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S10.txt",
+   "sha256": "9114abd500c0e0bb051ad432c25c2d8d1ad690152686db6d003c5e8ac90ca63a",
+   "bytes": 82299,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S10.txt",
+   "source_id": "RU2-S-S10",
+   "title": "傳習錄/卷上",
+   "url": "https://zh.wikisource.org/zh-hans/%E5%82%B3%E7%BF%92%E9%8C%84/%E5%8D%B7%E4%B8%8A"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S13.txt",
+   "sha256": "23264d41c25a0dee59beba2cfc9aeefc28f1684dad52fd2155108185d79c2f48",
+   "bytes": 17111,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S13.txt",
+   "source_id": "RU2-S-S13",
+   "title": "朱子語類 (四庫全書本)/卷009",
+   "url": "https://zh.wikisource.org/zh-hans/%E6%9C%B1%E5%AD%90%E8%AA%9E%E9%A1%9E%20%28%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC%29/%E5%8D%B7009"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S16.txt",
+   "sha256": "107edc6984fdb4b9f9febde6b4f5def8099a584fb6a3e6424da1f7552684e531",
+   "bytes": 18904,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S16.txt",
+   "source_id": "RU2-S-S16",
+   "title": "象山先生全集 (四部叢刊本)/卷第十一",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%B1%A1%E5%B1%B1%E5%85%88%E7%94%9F%E5%85%A8%E9%9B%86%20%28%E5%9B%9B%E9%83%A8%E5%8F%A2%E5%88%8A%E6%9C%AC%29/%E5%8D%B7%E7%AC%AC%E5%8D%81%E4%B8%80"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-S18.txt",
+   "sha256": "83260c3d80828d570ae9930132f315a061675ef00183b1d442d2c5c0b37fbdda",
+   "bytes": 52432,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-S18.txt",
+   "source_id": "RU2-S-S18",
+   "title": "象山先生全集 (四部叢刊本)/卷第三十四",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%B1%A1%E5%B1%B1%E5%85%88%E7%94%9F%E5%85%A8%E9%9B%86%20%28%E5%9B%9B%E9%83%A8%E5%8F%A2%E5%88%8A%E6%9C%AC%29/%E5%8D%B7%E7%AC%AC%E4%B8%89%E5%8D%81%E5%9B%9B"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-V3Q01.txt",
+   "sha256": "f5b1878516044a27055fe7e90637f9112f934b4bd48fa358534e3327dbaf22ca",
+   "bytes": 114068,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-V3Q01.txt",
+   "source_id": "RU2-S-V3Q01",
+   "title": "孟子字義疏證",
+   "url": "https://zh.wikisource.org/wiki/%E5%AD%9F%E5%AD%90%E5%AD%97%E7%BE%A9%E7%96%8F%E8%AD%89"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ09.txt",
+   "sha256": "f35e2f065bfb9ea9b8b0cb18c3e215a90e902368af47bbda391d759813d63d34",
+   "bytes": 14728,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ09.txt",
+   "source_id": "RU2-S-XZ09",
+   "title": "荀子/王制篇",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%8D%80%E5%AD%90/%E7%8E%8B%E5%88%B6%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ11.txt",
+   "sha256": "84654637e78e185896999a6020872eb564d69ff8969e959f7fa18c09d0c40ca7",
+   "bytes": 17141,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ11.txt",
+   "source_id": "RU2-S-XZ11",
+   "title": "荀子/王霸篇",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%8D%80%E5%AD%90/%E7%8E%8B%E9%9C%B8%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ19.txt",
+   "sha256": "ca73e9e2565c12d5741951ecd6b910eb30ae65d0857abc7b2d303c7b247b1cfe",
+   "bytes": 15061,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ19.txt",
+   "source_id": "RU2-S-XZ19",
+   "title": "荀子/礼論篇",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%8D%80%E5%AD%90/%E7%A6%AE%E8%AB%96%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ21.txt",
+   "sha256": "6fa2b8b91a84fd803e05bde8af2914ef6f8cda36398169906c9876374fb04cb9",
+   "bytes": 11430,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ21.txt",
+   "source_id": "RU2-S-XZ21",
+   "title": "荀子/解蔽篇",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%8D%80%E5%AD%90/%E8%A7%A3%E8%94%BD%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ22.txt",
+   "sha256": "d5010f6b43861156c7993c26250e067439b4e4680a79c733049d9ae6f6ff20e9",
+   "bytes": 10486,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ22.txt",
+   "source_id": "RU2-S-XZ22",
+   "title": "荀子/正名篇",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%8D%80%E5%AD%90/%E6%AD%A3%E5%90%8D%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ23.txt",
+   "sha256": "e1cb1a75921790a7736faf0c7574e4edd0813bdd2cdfa0d907adad6d6ca71398",
+   "bytes": 21424,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ23.txt",
+   "source_id": "RU2-S-XZ23",
+   "title": "荀子/性惡篇",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%8D%80%E5%AD%90/%E6%80%A7%E6%83%A1%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ17.txt",
+   "sha256": "2cbb861c741220e0008ea813ca6d62d70c44743238fdbd6fdb37bc3fcc3b4715",
+   "bytes": 6538,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ17.txt",
+   "source_id": "RU2-S-XZ17",
+   "title": "荀子/天論篇",
+   "url": "https://zh.wikisource.org/zh-hans/%E8%8D%80%E5%AD%90/%E5%A4%A9%E8%AB%96%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ01.txt",
+   "sha256": "bd8ee40303f6290eaf6416b19aab79065005d813c3dd639d822029f058c890ec",
+   "bytes": 15169,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ01.txt",
+   "source_id": "RU2-S-XZ01",
+   "title": "荀子/勸學篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E5%8B%B8%E5%AD%B8%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ02.txt",
+   "sha256": "4ae33f7f025966e367a10124657dedf6ea77d2872e6b09219410d7366e3979d1",
+   "bytes": 14759,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ02.txt",
+   "source_id": "RU2-S-XZ02",
+   "title": "荀子/修身篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E4%BF%AE%E8%BA%AB%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ03.txt",
+   "sha256": "74c4f05fee78e6912181e7d77110720f73089741cbf4e0de1c3b006ccfaf8ce7",
+   "bytes": 13921,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ03.txt",
+   "source_id": "RU2-S-XZ03",
+   "title": "荀子/不苟篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E4%B8%8D%E8%8B%9F%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ04.txt",
+   "sha256": "e0de40e51093ac7e62e5dc9177f10ba7fc2db98d0995b1a21e85106c65747ca5",
+   "bytes": 18631,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ04.txt",
+   "source_id": "RU2-S-XZ04",
+   "title": "荀子/榮辱篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E6%A6%AE%E8%BE%B1%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ05.txt",
+   "sha256": "071e60cbf557ce5e5f2db4a7009a8d5493d473fe13631341f0165315c10dc33b",
+   "bytes": 16923,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ05.txt",
+   "source_id": "RU2-S-XZ05",
+   "title": "荀子/非相篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E9%9D%9E%E7%9B%B8%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ06.txt",
+   "sha256": "5a61e14467d0c3be23a08db90965fe4b8f2956b65dd4a0ea0087177ff1a9ab5a",
+   "bytes": 15960,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ06.txt",
+   "source_id": "RU2-S-XZ06",
+   "title": "荀子/非十二子篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E9%9D%9E%E5%8D%81%E4%BA%8C%E5%AD%90%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ07.txt",
+   "sha256": "193c7906667ed0537525e02ad5173d107bf986985e3c0d4bec97e7ee9edf24cc",
+   "bytes": 10333,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ07.txt",
+   "source_id": "RU2-S-XZ07",
+   "title": "荀子/仲尼篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E4%BB%B2%E5%B0%BC%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ08.txt",
+   "sha256": "1b0be0dc10655265a2cb5c7b0ceff001cfdbae5ecc5a5e26fe783b939c3a7cba",
+   "bytes": 32646,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ08.txt",
+   "source_id": "RU2-S-XZ08",
+   "title": "荀子/儒效篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E5%84%92%E6%95%88%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ10.txt",
+   "sha256": "cd67dc437f77964aeb640417f32fce070e054cd8f174cbfd8d58c63a027b7f40",
+   "bytes": 14671,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ10.txt",
+   "source_id": "RU2-S-XZ10",
+   "title": "荀子/富國篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E5%AF%8C%E5%9C%8B%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ12.txt",
+   "sha256": "a1f21a415da2cd58a285c62917750b89ea9650b11fadbd0027726369a7bd5d11",
+   "bytes": 13578,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ12.txt",
+   "source_id": "RU2-S-XZ12",
+   "title": "荀子/君道篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E5%90%9B%E9%81%93%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ13.txt",
+   "sha256": "7cee71952473f9d634b26f2553f3a2993b302be4e4e53b84566cc7bbf1fcdd57",
+   "bytes": 14091,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ13.txt",
+   "source_id": "RU2-S-XZ13",
+   "title": "荀子/臣道篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E8%87%A3%E9%81%93%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ14.txt",
+   "sha256": "78fbd8af8da5f61df9db8a8c91734427c4d9253b749d6a0a62d0a289fa6e5cbc",
+   "bytes": 6407,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ14.txt",
+   "source_id": "RU2-S-XZ14",
+   "title": "荀子/致士篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E8%87%B4%E5%A3%AB%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ15.txt",
+   "sha256": "20c977a950ada26311a548818e93ec19b1472f89b379dece7df110b1334b978f",
+   "bytes": 13942,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ15.txt",
+   "source_id": "RU2-S-XZ15",
+   "title": "荀子/議兵篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E8%AD%B0%E5%85%B5%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ16.txt",
+   "sha256": "ff0e87fc250e710fa8d9e040c812089960f6892b874d8aeeffcee455557b665a",
+   "bytes": 9683,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ16.txt",
+   "source_id": "RU2-S-XZ16",
+   "title": "荀子/彊國篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E5%BD%8A%E5%9C%8B%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ18.txt",
+   "sha256": "28c56b2e6b6061523be2671b50dadd0067f70cc199add0c96ca80ed8cf897054",
+   "bytes": 14596,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ18.txt",
+   "source_id": "RU2-S-XZ18",
+   "title": "荀子/正論篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E6%AD%A3%E8%AB%96%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ20.txt",
+   "sha256": "a34b87e7e8cce8a0317fd742b704ceb08b1049ac8e0644c31ec0d3a569fdae61",
+   "bytes": 6194,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ20.txt",
+   "source_id": "RU2-S-XZ20",
+   "title": "荀子/樂論篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E6%A8%82%E8%AB%96%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ24.txt",
+   "sha256": "2ec3ae33b5eb928e8fb5ac4e549acf31198bd6d11c5d1fb6f5b9244566537df6",
+   "bytes": 5964,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ24.txt",
+   "source_id": "RU2-S-XZ24",
+   "title": "荀子/君子篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E5%90%9B%E5%AD%90%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ25.txt",
+   "sha256": "ce340f31111764fe469a5c07e70d5f56c37b18da856fabfbb34ffa840f9b02f6",
+   "bytes": 15189,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ25.txt",
+   "source_id": "RU2-S-XZ25",
+   "title": "荀子/成相篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E6%88%90%E7%9B%B8%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ26.txt",
+   "sha256": "e7e6c9dd48ccc3870a46c63233f9aee79bbaac1ca5944fb92088f2ef71593d8d",
+   "bytes": 13306,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ26.txt",
+   "source_id": "RU2-S-XZ26",
+   "title": "荀子/賦篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E8%B3%A6%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ27.txt",
+   "sha256": "11575f1d496eb7da826aec76a8a22a2854c7958ca23a1c6f08956b7e1fc17f5c",
+   "bytes": 16057,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ27.txt",
+   "source_id": "RU2-S-XZ27",
+   "title": "荀子/大略篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E5%A4%A7%E7%95%A5%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ28.txt",
+   "sha256": "b410f3604cbf77fef1e8ba0e7ca48501e760850261be993aac2fb038544e4e25",
+   "bytes": 11948,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ28.txt",
+   "source_id": "RU2-S-XZ28",
+   "title": "荀子/宥坐篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E5%AE%A5%E5%9D%90%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ29.txt",
+   "sha256": "194f7445b101f9c34df30336480dfc829e65df2232938077b01e7284968bc0f5",
+   "bytes": 6208,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ29.txt",
+   "source_id": "RU2-S-XZ29",
+   "title": "荀子/子道篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E5%AD%90%E9%81%93%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ30.txt",
+   "sha256": "5daf2474c7d6dfb86a86fdf6aa13a4588de19ae0d7a0f6e6ec74e5291f4b01f5",
+   "bytes": 4372,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ30.txt",
+   "source_id": "RU2-S-XZ30",
+   "title": "荀子/法行篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E6%B3%95%E8%A1%8C%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ31.txt",
+   "sha256": "f941fcb2d73a073d967d7c975d5d2e6440a0995a3462b542700dc8f6ac85678a",
+   "bytes": 12559,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ31.txt",
+   "source_id": "RU2-S-XZ31",
+   "title": "荀子/哀公篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E5%93%80%E5%85%AC%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/ru2/RU2-S-XZ32.txt",
+   "sha256": "d9f096d0d5604bd79b986cf2923c6698e900c9af8d0d6d7e222f1eddf9c330a9",
+   "bytes": 8803,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ru2/RU2-S-XZ32.txt",
+   "source_id": "RU2-S-XZ32",
+   "title": "荀子/堯問篇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8D%80%E5%AD%90/%E5%A0%AF%E5%95%8F%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/fo1/FO1-S-NY.txt",
+   "sha256": "fa5302ec96d252e518b3d3ccfd8b9ce8f5e56426a9288c9813ff4caa8fada2ac",
+   "bytes": 10415,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-NY.txt",
+   "source_id": "FO1-S-NY",
+   "title": "因明入正理论",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T32n1630_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO1-S-NY.teiHeader.xml",
+   "sha256": "5aed04668970f3eb9815fdb8eb19de741bab1382f504b084f593a1cb1795c904",
+   "bytes": 3870,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-NY.raw",
+   "span": [
+    280,
+    4150
+   ],
+   "member_sha256": "7925c5bea44aa3fe9d167e308bf3e0741189c9a5bac3ef703e63a245d0902628",
+   "source_id": "FO1-S-NY",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo1/FO1-S-SA.txt",
+   "sha256": "484b0710d0e875cd792971cdb485722bb3967e0e0e867b5c4529478c91254f07",
+   "bytes": 1771693,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-SA.txt",
+   "source_id": "FO1-S-SA",
+   "title": "杂阿含经",
+   "url": "https://raw.githubusercontent.com/cbeta-org/xml-p5/master/T/T02/T02n0099.xml"
+  },
+  {
+   "file": "evidence/tei-headers/FO1-S-SA.teiHeader.xml",
+   "sha256": "75465baf64f7b5a9fa73ed7f469a69b8e8d542e3befc4386293b3bbcf617679a",
+   "bytes": 27872,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-SA.raw",
+   "span": [
+    280,
+    28152
+   ],
+   "member_sha256": "6cb6d3371943705c712909ea66d48cccec0ec42a1380aab55cc15e0b4750ab73",
+   "source_id": "FO1-S-SA",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo1/FO1-S-HEART.txt",
+   "sha256": "e9c5151e362e6442ea6c7b9ec4b8d86947af14c5158e9d0b214bbc47a83f61d5",
+   "bytes": 3882,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-HEART.txt",
+   "source_id": "FO1-S-HEART",
+   "title": "般若波罗蜜多心经",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T08n0251_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO1-S-HEART.teiHeader.xml",
+   "sha256": "ddc6a3ede53691ff9c7b2db50fb6b706e10435f5921854c22daa30aadbd47fe2",
+   "bytes": 3212,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-HEART.raw",
+   "span": [
+    280,
+    3492
+   ],
+   "member_sha256": "f5507df86309f861ef2b92e9ba9db985c6db0ad357553599c6e921e15deca761",
+   "source_id": "FO1-S-HEART",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo1/FO1-S-DIAMOND.txt",
+   "sha256": "c156c0ce546e278f02ccf3fc816a47f5684af4673a841614487418f2e5a6d268",
+   "bytes": 19541,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-DIAMOND.txt",
+   "source_id": "FO1-S-DIAMOND",
+   "title": "金刚般若波罗蜜经",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T08n0235_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO1-S-DIAMOND.teiHeader.xml",
+   "sha256": "1367ba05273040ee9367f9ce9b883f47a144f4454b142da21c4b9c3e3812a8b9",
+   "bytes": 3969,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-DIAMOND.raw",
+   "span": [
+    280,
+    4249
+   ],
+   "member_sha256": "45c5103fa03a6f12338cb7c5680a7b9a82e034c661ea9687e4b9f99540adea55",
+   "source_id": "FO1-S-DIAMOND",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo1/FO1-S-MMK.txt",
+   "sha256": "bc4d8f5f8ea7465b3c35b1636e776f525e483316ad68aaac1a41484b1883e9f8",
+   "bytes": 157250,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.txt",
+   "source_id": "FO1-S-MMK",
+   "title": "中论",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T30n1564_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO1-S-MMK.teiHeader.xml",
+   "sha256": "63d386a3d1c7826883ff65a994b5ed281d07493850b322161f6bf0005627e929",
+   "bytes": 3778,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-MMK.raw",
+   "span": [
+    280,
+    4058
+   ],
+   "member_sha256": "8a5f8f49d6d2f1447f44fbb2e2c127974b46f3ab16ec9a1e29e6e69feaa30d48",
+   "source_id": "FO1-S-MMK",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo1/FO1-S-CY.txt",
+   "sha256": "c73afbd4884db9a02db131e0ff41236222c3d4cf4376bbb5e242c690f20645df",
+   "bytes": 292330,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-CY.txt",
+   "source_id": "FO1-S-CY",
+   "title": "成唯识论",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T31n1585_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO1-S-CY.teiHeader.xml",
+   "sha256": "fb81ac9cd3e9473f31b6001a1d786be6ff9c39ea8ffa0c8c9cbc78582322d672",
+   "bytes": 8361,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo1/FO1-S-CY.raw",
+   "span": [
+    280,
+    8641
+   ],
+   "member_sha256": "937ba4533286abbd45d43e1d31008d129d6f8c25feb69864e003b7b5dd3b5f43",
+   "source_id": "FO1-S-CY",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-MH.txt",
+   "sha256": "1a8e6bb20093b7e15b52afba3d29cf9a515af27797d1589123f8456ee78caa79",
+   "bytes": 721616,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-MH.txt",
+   "source_id": "FO2-MH",
+   "title": "摩诃止观",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T46n1911_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-MH.teiHeader.xml",
+   "sha256": "4362dcd4475730673089bc8f262cea727668900288688bc5a29d459b9628b988",
+   "bytes": 17187,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-MH.raw",
+   "span": [
+    280,
+    17467
+   ],
+   "member_sha256": "fbba865a4824f81eda71d9592409fb0a383e38c5f02bc1d4413d172472edc191",
+   "source_id": "FO2-MH",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-XZG.txt",
+   "sha256": "2a0d7cf0c2a4489b2068752b4f1a2eb4eaaeb07bd7d52dad21f1ee1eae18c9fb",
+   "bytes": 67282,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-XZG.txt",
+   "source_id": "FO2-XZG",
+   "title": "修习止观坐禅法要（小止观）",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T46n1915_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-XZG.teiHeader.xml",
+   "sha256": "8bf37fc133753295229dbd7776ccf8f22c9e0984536ce91e8c1c1025957d95fb",
+   "bytes": 4650,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-XZG.raw",
+   "span": [
+    280,
+    4930
+   ],
+   "member_sha256": "ef10956bb0e0eaa5a6415c14ac16de74118c45ad480b68285a495035d55341c7",
+   "source_id": "FO2-XZG",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-KS.txt",
+   "sha256": "eaf07a68799f40ff61a48883cd0fd30b879498eebaf69e0892b1b740e05140dd",
+   "bytes": 15781,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-KS.txt",
+   "source_id": "FO2-KS",
+   "title": "华严经金师子章注",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T45n1881_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-KS.teiHeader.xml",
+   "sha256": "5a599912be58164b2866047f2d2ea271c5c1eaf387a56cae6e1216c57ff8ec9e",
+   "bytes": 4779,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-KS.raw",
+   "span": [
+    280,
+    5059
+   ],
+   "member_sha256": "d85971a54dd5abd9277c42987ab48adcc7d6e9e579ca87b266e48867c3902a92",
+   "source_id": "FO2-KS",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-FQ.txt",
+   "sha256": "2b85009d3a62fdc7135a905d5b0d66aa8f065f66dc22cf8ac7b022bf3ddb8ba3",
+   "bytes": 153992,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-FQ.txt",
+   "source_id": "FO2-FQ",
+   "title": "华严一乘教义分齐章",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T45n1866_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-FQ.teiHeader.xml",
+   "sha256": "6702ad48877ad6e18f418a4b3afefdb05d0f3af77cc2efda848ad2af8863a4f1",
+   "bytes": 4003,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-FQ.raw",
+   "span": [
+    280,
+    4283
+   ],
+   "member_sha256": "97f7af7cec77bc2120f7da0ce273bd58b33b33b7da77aeeee2905e2cba810bde",
+   "source_id": "FO2-FQ",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-TJ.txt",
+   "sha256": "7195bb7722876b7526125cd4c49e11c4f1f6fc0b905e07bab8a54717ee7753b0",
+   "bytes": 99795,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-TJ.txt",
+   "source_id": "FO2-TJ",
+   "title": "六祖大师法宝坛经（宗宝本）",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T48n2008_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-TJ.teiHeader.xml",
+   "sha256": "9c7e9271d86d56a15a0e2dde1f47f9d8630d566fcecabace9599633162066acd",
+   "bytes": 4368,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-TJ.raw",
+   "span": [
+    280,
+    4648
+   ],
+   "member_sha256": "f9d1737493075891b5b2b1d7a69764c5f8ddf20c33794fe07f9d2499247666f9",
+   "source_id": "FO2-TJ",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-SM.txt",
+   "sha256": "80648391ae82afbd195a7975614ebcc4152b466f02ac382a35e03a32039deccd",
+   "bytes": 31008,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-SM.txt",
+   "source_id": "FO2-SM",
+   "title": "胜鬘师子吼一乘大方便方广经",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T12n0353_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-SM.teiHeader.xml",
+   "sha256": "79287d60edc59f8653754b2b23cd31ff8bb6a27279fe022c7a6cd5b2a6a740c8",
+   "bytes": 3759,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-SM.raw",
+   "span": [
+    280,
+    4039
+   ],
+   "member_sha256": "a7f9ddb56caec19633dd8520d25c2a4d12b3762bf53be09b930a0d17bf3d4c58",
+   "source_id": "FO2-SM",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-AM.txt",
+   "sha256": "023b4b878c8b61c5e89d2a1ae4ff96b49d6d7c50ee77d139f9ad80f143184cec",
+   "bytes": 7506,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-AM.txt",
+   "source_id": "FO2-AM",
+   "title": "佛说阿弥陀经",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T12n0366_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-AM.teiHeader.xml",
+   "sha256": "1c4984c537468d52af3ae3d5ecf1a6ad7979282d289cb7447bed0e8bb0108b19",
+   "bytes": 4954,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-AM.raw",
+   "span": [
+    280,
+    5234
+   ],
+   "member_sha256": "93da2ce198913efcd8d7dbe47ea37bbeb22f11c6a02d0aea610151b29d4a9b7f",
+   "source_id": "FO2-AM",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-YJ.txt",
+   "sha256": "c79cabf42ddb08817a3ec97dea176e66396eb57f85921a99406e5da1274ce4ec",
+   "bytes": 56032,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-YJ.txt",
+   "source_id": "FO2-YJ",
+   "title": "佛说阿弥陀经要解",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T37n1762_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-YJ.teiHeader.xml",
+   "sha256": "7f474bba6a39d8e74f9ba3d405bec46d6a4b269ed43fe4015a5257a74a7fa64c",
+   "bytes": 4447,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-YJ.raw",
+   "span": [
+    280,
+    4727
+   ],
+   "member_sha256": "3eda614123728014dea802d5247dcd0b0810d12b58ac7cfde94005017a610135",
+   "source_id": "FO2-YJ",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-GW.txt",
+   "sha256": "e6bf0ca4f83f9b2dd10a28fa7384696cb5a19c83aa159396f56175400af1d60e",
+   "bytes": 28344,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-GW.txt",
+   "source_id": "FO2-GW",
+   "title": "佛说观无量寿佛经",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T12n0365_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-GW.teiHeader.xml",
+   "sha256": "c82ccfe6f38f770e337c97f23c39d3f5d5bece05dcd56aaec8f05afafa87fd69",
+   "bytes": 5011,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-GW.raw",
+   "span": [
+    280,
+    5291
+   ],
+   "member_sha256": "964e5905bd68e411d65268cf1747a1a08cf5118bb19768b35f2644c9684e26f5",
+   "source_id": "FO2-GW",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-QX.txt",
+   "sha256": "34cf1a1a13441279799dad7acc891d7009e9a2a60c0c461c64e2060132be811b",
+   "bytes": 39418,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-QX.txt",
+   "source_id": "FO2-QX",
+   "title": "大乘起信论（传统题署马鸣造、真谛译）",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T32n1666_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-QX.teiHeader.xml",
+   "sha256": "b4f4fbe1fbd05f9a6a928d0ccb19809486878b27136bdb13f22758527ca60e5e",
+   "bytes": 3693,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-QX.raw",
+   "span": [
+    280,
+    3973
+   ],
+   "member_sha256": "1e558e83154d0b7002c08a716c3c9527777d07baf192c6c336515421aee6319d",
+   "source_id": "FO2-QX",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-FH.txt",
+   "sha256": "f8aa2dfef6ca76dc73076381a59c1db4d65ccfaf9646a9d1e9a0b472cb26f218",
+   "bytes": 260659,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-FH.txt",
+   "source_id": "FO2-FH",
+   "title": "妙法莲华经",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T09n0262_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-FH.teiHeader.xml",
+   "sha256": "edd208ae46e23655a1a9b59c2c89b2aa7df76f1a10ec4e66fcbfd8aeed85a327",
+   "bytes": 16506,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-FH.raw",
+   "span": [
+    280,
+    16786
+   ],
+   "member_sha256": "c8975bef9da3bbe0faec9d47ab3f2efb8147fb530d5c17f130045a336c5df017",
+   "source_id": "FO2-FH",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-KS-P.txt",
+   "sha256": "9fe1bfbfe21ea2ee43fcdac07f2a0a11b20df95d43d86e3bd0d02dadbe03ade6",
+   "bytes": 4458,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-KS-P.txt",
+   "source_id": "FO2-KS-P",
+   "title": "法藏《金师子章》章文（从承迁注本分层提取）",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T45n1881_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-KS-P.teiHeader.xml",
+   "sha256": "5a599912be58164b2866047f2d2ea271c5c1eaf387a56cae6e1216c57ff8ec9e",
+   "bytes": 4779,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-KS-P.raw",
+   "span": [
+    280,
+    5059
+   ],
+   "member_sha256": "d85971a54dd5abd9277c42987ab48adcc7d6e9e579ca87b266e48867c3902a92",
+   "source_id": "FO2-KS-P",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/fo2/FO2-KS-C.txt",
+   "sha256": "ca40d793b9cc6a30e59a1c7ddd0863c33a5f9c99d5f993bec58bf93a5eb28dc1",
+   "bytes": 6088,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-KS-C.txt",
+   "source_id": "FO2-KS-C",
+   "title": "承迁《金师子章注》注文（分层提取）",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T45n1881_001"
+  },
+  {
+   "file": "evidence/tei-headers/FO2-KS-C.teiHeader.xml",
+   "sha256": "5a599912be58164b2866047f2d2ea271c5c1eaf387a56cae6e1216c57ff8ec9e",
+   "bytes": 4779,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fo2/FO2-KS-C.raw",
+   "span": [
+    280,
+    5059
+   ],
+   "member_sha256": "d85971a54dd5abd9277c42987ab48adcc7d6e9e579ca87b266e48867c3902a92",
+   "source_id": "FO2-KS-C",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/in1/IN1-S01.txt",
+   "sha256": "f3ea780c8e481cb0e026e4e6d5502c3fa0c05a5b59f081d325bf8abec48ed211",
+   "bytes": 28821,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S01.txt",
+   "source_id": "IN1-S01",
+   "title": "牟子理惑論",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T2102_001"
+  },
+  {
+   "file": "evidence/tei-headers/IN1-S01.teiHeader.xml",
+   "sha256": "c72386495102c413cdd32d7d4d328f34f62b07ed4ee687111a85f943754f6591",
+   "bytes": 45416,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S01.raw",
+   "span": [
+    280,
+    45696
+   ],
+   "member_sha256": "ea7c0d0f0d84ec5c8e6853d089fa82e19d4102816f677f88d7ee16c179245352",
+   "source_id": "IN1-S01",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/in1/IN1-S02.txt",
+   "sha256": "deb30164358857555e8237f3453ae8e599088dc0117661cb8c61ff23330509f1",
+   "bytes": 7438,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S02.txt",
+   "source_id": "IN1-S02",
+   "title": "孫綽喻道論",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T2102_003"
+  },
+  {
+   "file": "evidence/tei-headers/IN1-S02.teiHeader.xml",
+   "sha256": "c72386495102c413cdd32d7d4d328f34f62b07ed4ee687111a85f943754f6591",
+   "bytes": 45416,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S02.raw",
+   "span": [
+    280,
+    45696
+   ],
+   "member_sha256": "ea7c0d0f0d84ec5c8e6853d089fa82e19d4102816f677f88d7ee16c179245352",
+   "source_id": "IN1-S02",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/in1/IN1-S03.txt",
+   "sha256": "c4de8b1cf811e02ab058c5599a4e88a0631da882106f7c696f3b57daa31ec693",
+   "bytes": 12469,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S03.txt",
+   "source_id": "IN1-S03",
+   "title": "沙門不敬王者論",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T2102_005"
+  },
+  {
+   "file": "evidence/tei-headers/IN1-S03.teiHeader.xml",
+   "sha256": "c72386495102c413cdd32d7d4d328f34f62b07ed4ee687111a85f943754f6591",
+   "bytes": 45416,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S03.raw",
+   "span": [
+    280,
+    45696
+   ],
+   "member_sha256": "ea7c0d0f0d84ec5c8e6853d089fa82e19d4102816f677f88d7ee16c179245352",
+   "source_id": "IN1-S03",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/in1/IN1-S04.txt",
+   "sha256": "05e2d431d6957d09c57448377cf5c498be0528c6cad14e764090bfc8968c0683",
+   "bytes": 17573,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S04.txt",
+   "source_id": "IN1-S04",
+   "title": "原人論",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T1886"
+  },
+  {
+   "file": "evidence/tei-headers/IN1-S04.teiHeader.xml",
+   "sha256": "3709f8ab52e12d310bec43c848c14bcc3ecd902337ccd45e3f25e456a21bbe69",
+   "bytes": 2982,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S04.raw",
+   "span": [
+    280,
+    3262
+   ],
+   "member_sha256": "2e718fb65a9e831adc5cd27c014e7cb539b853ac30353cefa3f70c8c052c3561",
+   "source_id": "IN1-S04",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/in1/IN1-S05.txt",
+   "sha256": "c69dcedfa8324854169bac3927319edb1260a7ec080dd8236a56c1e0e6ebdd9d",
+   "bytes": 77307,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S05.txt",
+   "source_id": "IN1-S05",
+   "title": "禪源諸詮集都序",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T2015"
+  },
+  {
+   "file": "evidence/tei-headers/IN1-S05.teiHeader.xml",
+   "sha256": "9179582cbee64e408051ffc72a5951020731ef2bed7d8ff2f1138b9cb650128c",
+   "bytes": 5902,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S05.raw",
+   "span": [
+    280,
+    6182
+   ],
+   "member_sha256": "037cf216655f859f158b59b7a034fbca61fbbca1c1bb2eb3457dbdf1bc990d4e",
+   "source_id": "IN1-S05",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/in1/IN1-S06.txt",
+   "sha256": "551cbd79b04e90145350201299f116a96faa9b3e085fd7f6a18dae472f70cd64",
+   "bytes": 5201,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S06.txt",
+   "source_id": "IN1-S06",
+   "title": "原道",
+   "url": "https://zh.wikisource.org/w/index.php?title=原道&oldid=2595219"
+  },
+  {
+   "file": "evidence/additions/in1/IN1-S07.txt",
+   "sha256": "62f4cbf9ea765b1c3583a94d0cde3e3c95097b84e9c9baa0d17e900c22bda23e",
+   "bytes": 3227,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in1/IN1-S07.txt",
+   "source_id": "IN1-S07",
+   "title": "論佛骨表",
+   "url": "https://zh.wikisource.org/w/index.php?title=論佛骨表&oldid=2569676"
+  },
+  {
+   "file": "evidence/additions/in2/IN2-S01.txt",
+   "sha256": "08244805757bc47d88e9d62e50f871e6c0247507c636f1b2f13913e121dcd2ec",
+   "bytes": 33828,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in2/IN2-S01.txt",
+   "source_id": "IN2-S01",
+   "title": "朱子語類/125",
+   "url": "https://zh.wikisource.org/zh/%E6%9C%B1%E5%AD%90%E8%AA%9E%E9%A1%9E/125"
+  },
+  {
+   "file": "evidence/additions/in2/IN2-S02.txt",
+   "sha256": "64cb7a54783b41a21f8ae25b68c663b3685b4396700c83084d13f495f62dbf87",
+   "bytes": 64353,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in2/IN2-S02.txt",
+   "source_id": "IN2-S02",
+   "title": "朱子語類/126",
+   "url": "https://zh.wikisource.org/zh/%E6%9C%B1%E5%AD%90%E8%AA%9E%E9%A1%9E/126"
+  },
+  {
+   "file": "evidence/additions/in2/IN2-S03.txt",
+   "sha256": "0e2d0b45e9bdd6ca12d52b1f23b07aa00bedfe911359a419518dfbfceb37a49a",
+   "bytes": 106327,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in2/IN2-S03.txt",
+   "source_id": "IN2-S03",
+   "title": "傳習錄/卷中",
+   "url": "https://zh.wikisource.org/zh/%E5%82%B3%E7%BF%92%E9%8C%84/%E5%8D%B7%E4%B8%AD"
+  },
+  {
+   "file": "evidence/additions/in2/IN2-S04.txt",
+   "sha256": "941a9523c9ec3efe018f606a1d9e96065d2a3f246630cdb6d33c4ba38726a09f",
+   "bytes": 5679,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in2/IN2-S04.txt",
+   "source_id": "IN2-S04",
+   "title": "重陽立教十五論",
+   "url": "https://zh.wikisource.org/zh/%E9%87%8D%E9%99%BD%E5%8D%81%E4%BA%94%E8%AB%96"
+  },
+  {
+   "file": "evidence/additions/in2/IN2-S05.txt",
+   "sha256": "d0e523756b11e4e79eb72feee5f8a15d9ae476605934dd0c22963db955283346",
+   "bytes": 23292,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in2/IN2-S05.txt",
+   "source_id": "IN2-S05",
+   "title": "悟真篇",
+   "url": "https://zh.wikisource.org/zh/%E6%82%9F%E7%9C%9F%E7%AF%87"
+  },
+  {
+   "file": "evidence/additions/in2/IN2-S06.txt",
+   "sha256": "fa882163e0b83ff0b0e10084b2637bc7e1a82a0edce16196fd36be5912962097",
+   "bytes": 36128,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in2/IN2-S06.txt",
+   "source_id": "IN2-S06",
+   "title": "老子道德經註/序",
+   "url": "https://zh.wikisource.org/zh/%E8%80%81%E5%AD%90%E9%81%93%E5%BE%B7%E7%B6%93%E8%A8%BB/%E5%BA%8F"
+  },
+  {
+   "file": "evidence/additions/in2/IN2-S07.txt",
+   "sha256": "83feb9b61b9d803d5fbc1cb7e7638da18b744119dce6c91fed648f981db492ff",
+   "bytes": 7003,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in2/IN2-S07.txt",
+   "source_id": "IN2-S07",
+   "title": "四書蕅益解·序",
+   "url": "https://tripitaka2.zensoul.org/OY/OY0001/1"
+  },
+  {
+   "file": "evidence/additions/in2/IN2-S08.txt",
+   "sha256": "557b6ae4bb4321031d548e2a8f4501bef1f4d94f025e057bce7799bf8c3aeed3",
+   "bytes": 30044,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/in2/IN2-S08.txt",
+   "source_id": "IN2-S08",
+   "title": "四書蕅益解·大學直指補註",
+   "url": "https://tripitaka2.zensoul.org/OY/OY0001/2"
+  },
+  {
+   "file": "evidence/additions/root/RT1-S001.txt",
+   "sha256": "e9c5151e362e6442ea6c7b9ec4b8d86947af14c5158e9d0b214bbc47a83f61d5",
+   "bytes": 3882,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/root/RT1-S001.txt",
+   "source_id": "RT1-S001",
+   "title": "《大明太祖高皇帝御制般若心经序》所在《心经》电子见证",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T08n0251_001"
+  },
+  {
+   "file": "evidence/tei-headers/RT1-S001.teiHeader.xml",
+   "sha256": "ddc6a3ede53691ff9c7b2db50fb6b706e10435f5921854c22daa30aadbd47fe2",
+   "bytes": 3212,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/root/RT1-S001.raw",
+   "span": [
+    280,
+    3492
+   ],
+   "member_sha256": "f5507df86309f861ef2b92e9ba9db985c6db0ad357553599c6e921e15deca761",
+   "source_id": "RT1-S001",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/CT1/CT1-S-SJ.txt",
+   "sha256": "1978b2d05e856753a4a0ca68018b9e519aecfeec7ba85f51906fd9a89a7519e9",
+   "bytes": 3553,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/CT1/CT1-S-SJ.txt",
+   "source_id": "CT1-S-SJ",
+   "title": "《史记》卷一百三十·太史公自序·论六家要指",
+   "url": "https://zh.wikisource.org/zh-hant/史記/卷130"
+  },
+  {
+   "file": "evidence/additions/CT1/CT1-S-HS.txt",
+   "sha256": "e87a122f03c607f3af3c8c0a291167330b286999873b47971f3d6140535cd4b2",
+   "bytes": 10482,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/CT1/CT1-S-HS.txt",
+   "source_id": "CT1-S-HS",
+   "title": "《汉书》卷三十·艺文志·诸子略与兵书略",
+   "url": "https://zh.wikisource.org/zh-hant/漢書/卷030"
+  },
+  {
+   "file": "evidence/additions/CT1/CT1-S-ZL.txt",
+   "sha256": "739cf177b9231110f414cebbb05a1ebdf915847de5e121f4b5a0bb38fa378179",
+   "bytes": 10385,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/CT1/CT1-S-ZL.txt",
+   "source_id": "CT1-S-ZL",
+   "title": "《肇论》物不迁论第一、不真空论第二",
+   "url": "https://cbetaonline.dila.edu.tw/zh/T1858_001"
+  },
+  {
+   "file": "evidence/tei-headers/CT1-S-ZL.teiHeader.xml",
+   "sha256": "63738eadd81493242d192d786ae3c30e483be3d9e4f67185b8acbbe8b54d59a7",
+   "bytes": 4021,
+   "form": "byte span of an archive member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/CT1/CT1-S-ZL.raw",
+   "span": [
+    280,
+    4301
+   ],
+   "member_sha256": "47ced111ddf52b212cbafcbd83b8fd0867e9fe344153ebfea14575436ad92e24",
+   "source_id": "CT1-S-ZL",
+   "note": "the CBETA rights and edition statement of the raw TEI file, kept with the text"
+  },
+  {
+   "file": "evidence/additions/root/CV1-S-JL.txt",
+   "sha256": "1f26b596679c2ba64e48421c4c6a2661a7cb918ee0baa4aa9f5b5014f1acb6fa",
+   "bytes": 21412,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/root/CV1-S-JL.txt",
+   "source_id": "CV1-S-JL",
+   "title": "韩非子·解老",
+   "url": "https://zh.wikisource.org/zh-hant/韓非子/解老"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-JS.txt",
+   "sha256": "c06ca012dc03188049f3668006fe559081bc6af5f18f66f49619050e2c6eedf6",
+   "bytes": 2255,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-JS.txt",
+   "source_id": "MI1-S-JS",
+   "title": "墨子/經上",
+   "url": "https://zh.wikisource.org/wiki/墨子/經上"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-JX.txt",
+   "sha256": "f5ad8158fc797560e30da527fdbf062ae8841d42d21036742a5d37218138ec51",
+   "bytes": 3228,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-JX.txt",
+   "source_id": "MI1-S-JX",
+   "title": "墨子/經下",
+   "url": "https://zh.wikisource.org/wiki/墨子/經下"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-SS.txt",
+   "sha256": "2bd8fce02c29a57790110d3e62e19b4f91614099ebee32577a81c47f84a26f23",
+   "bytes": 5948,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-SS.txt",
+   "source_id": "MI1-S-SS",
+   "title": "墨子/經說上",
+   "url": "https://zh.wikisource.org/wiki/墨子/經說上"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-SX.txt",
+   "sha256": "18190b3174476fa22f09ad3577a0e6462870b814faafe814d5fcb956b9e9515e",
+   "bytes": 11125,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-SX.txt",
+   "source_id": "MI1-S-SX",
+   "title": "墨子/經說下",
+   "url": "https://zh.wikisource.org/wiki/墨子/經說下"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-DQ.txt",
+   "sha256": "34de91d583a9dc5394a81c779e9f7b1aceab3f2032f76ed31e3a962776757b56",
+   "bytes": 6561,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-DQ.txt",
+   "source_id": "MI1-S-DQ",
+   "title": "墨子/大取",
+   "url": "https://zh.wikisource.org/wiki/墨子/大取"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-XQ.txt",
+   "sha256": "4d444225e0a209fdcc27851ba6dcadbd41381da8cff2a116f6040a512518d33a",
+   "bytes": 3501,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-XQ.txt",
+   "source_id": "MI1-S-XQ",
+   "title": "墨子/小取",
+   "url": "https://zh.wikisource.org/wiki/墨子/小取"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-HS.txt",
+   "sha256": "ac7216ae0729ebb0a7877f6732e22a4d2d3ceed121798b2e611a492f7e9354b1",
+   "bytes": 10261,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-HS.txt",
+   "source_id": "MI1-S-HS",
+   "title": "莊子/天下",
+   "url": "https://zh.wikisource.org/wiki/莊子/天下"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-G1.txt",
+   "sha256": "b2678e78abbdceeb7580a0a3e86ba0021318aa6dc59261b6e59f24c18820ce96",
+   "bytes": 4106,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-G1.txt",
+   "source_id": "MI1-S-G1",
+   "title": "公孫龍子/1",
+   "url": "https://zh.wikisource.org/wiki/公孫龍子/1"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-G2.txt",
+   "sha256": "de30f494531eaebfa0e32d089aa5dff158f2f7c86441b6625256e93b8a183eaa",
+   "bytes": 1934,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-G2.txt",
+   "source_id": "MI1-S-G2",
+   "title": "公孫龍子/2",
+   "url": "https://zh.wikisource.org/wiki/公孫龍子/2"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-G3.txt",
+   "sha256": "3293d413299b366089d65fb676eb340774f5b15d38fe0932add99220b39e2a7a",
+   "bytes": 981,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-G3.txt",
+   "source_id": "MI1-S-G3",
+   "title": "公孫龍子/3",
+   "url": "https://zh.wikisource.org/wiki/公孫龍子/3"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-G4.txt",
+   "sha256": "ab106c2593926d7ec150dcdc27e1e5a0a48c59f7c7de8e5d3102b4861c48629b",
+   "bytes": 2306,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-G4.txt",
+   "source_id": "MI1-S-G4",
+   "title": "公孫龍子/4",
+   "url": "https://zh.wikisource.org/wiki/公孫龍子/4"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-G5.txt",
+   "sha256": "5f262267e40ef22e3cb0c08fa88836ddf83220994f97ae790ae8c0eab0316c9a",
+   "bytes": 2031,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-G5.txt",
+   "source_id": "MI1-S-G5",
+   "title": "公孫龍子/5",
+   "url": "https://zh.wikisource.org/wiki/公孫龍子/5"
+  },
+  {
+   "file": "evidence/additions/ming/MI1-S-G6.txt",
+   "sha256": "4f231ff7551cbb3c12ee37fdf3d98f9a0e6f46b120fc36a4cc7089b9b1d2e72f",
+   "bytes": 939,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/ming/MI1-S-G6.txt",
+   "source_id": "MI1-S-G6",
+   "title": "公孫龍子/6",
+   "url": "https://zh.wikisource.org/wiki/公孫龍子/6"
+  },
+  {
+   "file": "evidence/additions/bing/BI1-S-SZ.txt",
+   "sha256": "cabd0fa0e689c0adec837897df49ced4642172f57fd1e0cf966230fc55eac571",
+   "bytes": 22570,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/bing/BI1-S-SZ.txt",
+   "source_id": "BI1-S-SZ",
+   "title": "孙子兵法·维基文库传世正文",
+   "url": "https://zh.wikisource.org/w/index.php?oldid=7906064"
+  },
+  {
+   "file": "evidence/additions/bing/BI1-S-WZ.txt",
+   "sha256": "dc9af2c17a9a98a52d3fc6ebb4ed20131c7786c3700e69cf9b1ab82f5d42656d",
+   "bytes": 17938,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/bing/BI1-S-WZ.txt",
+   "source_id": "BI1-S-WZ",
+   "title": "吴子·维基文库传世正文",
+   "url": "https://zh.wikisource.org/w/index.php?oldid=2358297"
+  },
+  {
+   "file": "evidence/additions/bing/BI1-S-SM.txt",
+   "sha256": "83755bf4310df93f7ba55e8470275fa434773baf8353cb22d63d17245fbc7ea8",
+   "bytes": 13035,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/bing/BI1-S-SM.txt",
+   "source_id": "BI1-S-SM",
+   "title": "司马法·维基文库传世正文",
+   "url": "https://zh.wikisource.org/w/index.php?oldid=2358301"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S01.txt",
+   "sha256": "b5f9146f66ae56f2586a29534440739ec60af7fc111fa2c469bf4bc83f0bbb4f",
+   "bytes": 5374,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S01.txt",
+   "source_id": "ZH1-S01",
+   "title": "庄子·逍遙遊",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%80%8D%E9%81%99%E9%81%8A"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S02.txt",
+   "sha256": "cbd146c1ede12a5bec3b7a26b923f89323c6ad751b242f9afc5c9a49b5d9b28b",
+   "bytes": 11020,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S02.txt",
+   "source_id": "ZH1-S02",
+   "title": "庄子·齊物論",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%BD%8A%E7%89%A9%E8%AB%96"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S03.txt",
+   "sha256": "bf31a79052872d37cbd9ca57f4f68cc2fe499e154c836c414653ebd28b95ff65",
+   "bytes": 2155,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S03.txt",
+   "source_id": "ZH1-S03",
+   "title": "庄子·養生主",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A4%8A%E7%94%9F%E4%B8%BB"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S04.txt",
+   "sha256": "709ab3dabb9662834dbadd36ace45651148aa44bed1c82337b7202148a38436b",
+   "bytes": 10381,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S04.txt",
+   "source_id": "ZH1-S04",
+   "title": "庄子·人間世",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E4%BA%BA%E9%96%93%E4%B8%96"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S05.txt",
+   "sha256": "0a715055a1c8881f62ca7bb79f0ebd789dc332f05f781b1975c6fde32a3bc40d",
+   "bytes": 6989,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S05.txt",
+   "source_id": "ZH1-S05",
+   "title": "庄子·德充符",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%BE%B7%E5%85%85%E7%AC%A6"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S06.txt",
+   "sha256": "57ec0ffa25a5aa7cc2f54d6874d507f994609de486a776b2eedfc5e5b63546ea",
+   "bytes": 11258,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S06.txt",
+   "source_id": "ZH1-S06",
+   "title": "庄子·大宗師",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A7%E5%AE%97%E5%B8%AB"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S07.txt",
+   "sha256": "3dc59b81881e4ffb77e7612e0be376632f7a781c505d277a8ea89e11277a1d72",
+   "bytes": 4076,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S07.txt",
+   "source_id": "ZH1-S07",
+   "title": "庄子·應帝王",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E6%87%89%E5%B8%9D%E7%8E%8B"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S08.txt",
+   "sha256": "5de5411e624ec64068774eecac7519b3011724ff4228db13a2543ec70e954078",
+   "bytes": 3721,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S08.txt",
+   "source_id": "ZH1-S08",
+   "title": "庄子·駢拇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A7%A2%E6%8B%87"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S09.txt",
+   "sha256": "fc94387e2b70d608b2f27cb98f6cbbae9003a7ebbf1e2e9a1ba36766aaf8f2f1",
+   "bytes": 2045,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S09.txt",
+   "source_id": "ZH1-S09",
+   "title": "庄子·馬蹄",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%A6%AC%E8%B9%84"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S10.txt",
+   "sha256": "8ae2a74570132e02d0f08b1ea219b17a5d3280faede1ab99c2f587c86957e7d1",
+   "bytes": 4636,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S10.txt",
+   "source_id": "ZH1-S10",
+   "title": "庄子·胠篋",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E8%83%A0%E7%AF%8B"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S11.txt",
+   "sha256": "228dcc8d38fbcb2efa6ccd866dd8c1f0400ca41912129ddebe4a449d88ee686a",
+   "bytes": 8508,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S11.txt",
+   "source_id": "ZH1-S11",
+   "title": "庄子·在宥",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%9C%A8%E5%AE%A5"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S12.txt",
+   "sha256": "89d7fa3177027f7e41581759972534f5248bf687e5c0e230dca790fe2702a32e",
+   "bytes": 11752,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S12.txt",
+   "source_id": "ZH1-S12",
+   "title": "庄子·天地",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A9%E5%9C%B0"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S13.txt",
+   "sha256": "d215cad0c59f882bf3d2c97e1f8377fcb28b6a847d3f958cbd60ea110b130d94",
+   "bytes": 8605,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S13.txt",
+   "source_id": "ZH1-S13",
+   "title": "庄子·天道",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A9%E9%81%93"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S14.txt",
+   "sha256": "3fc514bcc146cd85c45f4ecb6163f98794f39e0e7564ab48247c8ec54d5582a3",
+   "bytes": 9502,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S14.txt",
+   "source_id": "ZH1-S14",
+   "title": "庄子·天運",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A9%E9%81%8B"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S15.txt",
+   "sha256": "87a6fbb2c836b241d8d4ddd00968d8e732b90540356efa236ff91740fe6c4569",
+   "bytes": 2431,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S15.txt",
+   "source_id": "ZH1-S15",
+   "title": "庄子·刻意",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%88%BB%E6%84%8F"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S16.txt",
+   "sha256": "849cfe1fd2ce3e4765eee0c0e494c8f729476b365445fba300e240558beffccc",
+   "bytes": 2332,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S16.txt",
+   "source_id": "ZH1-S16",
+   "title": "庄子·繕性",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E7%B9%95%E6%80%A7"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S17.txt",
+   "sha256": "bcf5408f9ce79147b0acf53fcbeb1744daccfe897d59aa52e9256cdf05883b37",
+   "bytes": 10505,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S17.txt",
+   "source_id": "ZH1-S17",
+   "title": "庄子·秋水",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E7%A7%8B%E6%B0%B4"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S18.txt",
+   "sha256": "01cc3ca3096483703c3e973e049b675f9c4ad6f112e5b7d132c93e70197d9850",
+   "bytes": 5270,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S18.txt",
+   "source_id": "ZH1-S18",
+   "title": "庄子·至樂",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E8%87%B3%E6%A8%82"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S19.txt",
+   "sha256": "455604debfc56dbdf6bd5d4c9b1b302790234265a73bab5a063bc2d77094829d",
+   "bytes": 8834,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S19.txt",
+   "source_id": "ZH1-S19",
+   "title": "庄子·達生",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E9%81%94%E7%94%9F"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S20.txt",
+   "sha256": "5cd044811d1e7d31844018d95f0d2f5a4f8a0ae83940c58ed942e3adea350192",
+   "bytes": 8294,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S20.txt",
+   "source_id": "ZH1-S20",
+   "title": "庄子·山木",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%B1%B1%E6%9C%A8"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S21.txt",
+   "sha256": "4d610dfb6d6593d01b090c471b66f11aedabd0952a7553c5f2cee6ce7cfe4c56",
+   "bytes": 8200,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S21.txt",
+   "source_id": "ZH1-S21",
+   "title": "庄子·田子方",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E7%94%B0%E5%AD%90%E6%96%B9"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S22.txt",
+   "sha256": "2ef6c14b3ac1fd04e2d1d1fd634706339ce32ce1e35797f61da844e847630a34",
+   "bytes": 9882,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S22.txt",
+   "source_id": "ZH1-S22",
+   "title": "庄子·知北遊",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E7%9F%A5%E5%8C%97%E9%81%8A"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S23.txt",
+   "sha256": "6a61130282697216f2651f162ec070b7a2ef2610585ff90f632be0ae64d669d9",
+   "bytes": 9072,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S23.txt",
+   "source_id": "ZH1-S23",
+   "title": "庄子·庚桑楚",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%BA%9A%E6%A1%91%E6%A5%9A"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S24.txt",
+   "sha256": "90915084bec514d928105b31be316b93572a9e4d4e9a9ec4615e7993d4119dab",
+   "bytes": 12862,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S24.txt",
+   "source_id": "ZH1-S24",
+   "title": "庄子·徐無鬼",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%BE%90%E7%84%A1%E9%AC%BC"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S25.txt",
+   "sha256": "764eac3912808199bf7a9891f3da78c45146b7dee7fa60bc0312e1ca437de40e",
+   "bytes": 9641,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S25.txt",
+   "source_id": "ZH1-S25",
+   "title": "庄子·則陽",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%89%87%E9%99%BD"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S26.txt",
+   "sha256": "99de90b278a997f6ca4245460b06a6f9bd420668fd699404b851189d48d9a006",
+   "bytes": 5740,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S26.txt",
+   "source_id": "ZH1-S26",
+   "title": "庄子·外物",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%96%E7%89%A9"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S27.txt",
+   "sha256": "195b282bf27f42156ba6360adef9dd30d8aad862817941873a3c3a3fedbc01e4",
+   "bytes": 3514,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S27.txt",
+   "source_id": "ZH1-S27",
+   "title": "庄子·寓言",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%AF%93%E8%A8%80"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S28.txt",
+   "sha256": "72c7b6ce6b1537c1a23a2ce4152597d7707d19070cf0f092b47101934b842ee4",
+   "bytes": 10202,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S28.txt",
+   "source_id": "ZH1-S28",
+   "title": "庄子·讓王",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E8%AE%93%E7%8E%8B"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S29.txt",
+   "sha256": "bc7b6c5ab5bfbed8cd9a9cf287365f126aeca5848cbac49eebef1a9456daf334",
+   "bytes": 11496,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S29.txt",
+   "source_id": "ZH1-S29",
+   "title": "庄子·盜跖",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E7%9B%9C%E8%B7%96"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S30.txt",
+   "sha256": "dcd0312b2e43e53d76ee1b1e8e6e254d2eb3b10ab15aa5d63f9a8d4b7fac9a00",
+   "bytes": 3391,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S30.txt",
+   "source_id": "ZH1-S30",
+   "title": "庄子·說劍",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E8%AA%AA%E5%8A%8D"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S31.txt",
+   "sha256": "894f680992776965a4fea2e552212e927d22cbdae33666ab1133a9168f6269d2",
+   "bytes": 5886,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S31.txt",
+   "source_id": "ZH1-S31",
+   "title": "庄子·漁父",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E6%BC%81%E7%88%B6"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S32.txt",
+   "sha256": "f91d94b66d3d1d7cc70ef87546b3e3b288aa1ba90df898360c9cb1a213eabae8",
+   "bytes": 5969,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S32.txt",
+   "source_id": "ZH1-S32",
+   "title": "庄子·列禦寇",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%88%97%E7%A6%A6%E5%AF%87"
+  },
+  {
+   "file": "evidence/additions/zhuang/ZH1-S33.txt",
+   "sha256": "1bb104cc2d51a5b12bce32ae111182932e2fc5aaaaafb036ca7e7bb6ae5ebd67",
+   "bytes": 9886,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/zhuang/ZH1-S33.txt",
+   "source_id": "ZH1-S33",
+   "title": "庄子·天下",
+   "url": "https://zh.wikisource.org/wiki/%E8%8E%8A%E5%AD%90/%E5%A4%A9%E4%B8%8B"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C04.txt",
+   "sha256": "7732676d9c088ca24c60c2e4fe81c4a62cd8d224e585da0d2ea6bd91665b0901",
+   "bytes": 2449,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C04.txt",
+   "source_id": "MO1-S-C04",
+   "title": "《墨子·法儀》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E6%B3%95%E5%84%80"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C08.txt",
+   "sha256": "beaf7ad594eab7f169b260e7c0cba59d8f27f9f28d48b75bceceaed01d221f20",
+   "bytes": 2950,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C08.txt",
+   "source_id": "MO1-S-C08",
+   "title": "《墨子·尚賢上》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%B0%9A%E8%B3%A2%E4%B8%8A"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C09.txt",
+   "sha256": "feebcecf3b623785b3e24e84f34687a6b9137044d2a45b4fe6d68e5d9de1469a",
+   "bytes": 8277,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C09.txt",
+   "source_id": "MO1-S-C09",
+   "title": "《墨子·尚賢中》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%B0%9A%E8%B3%A2%E4%B8%AD"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C10.txt",
+   "sha256": "2fb9728fc5d8d47bceae5eb4955df394d0e614d772012e268b5b51737fd848fa",
+   "bytes": 5362,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C10.txt",
+   "source_id": "MO1-S-C10",
+   "title": "《墨子·尚賢下》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%B0%9A%E8%B3%A2%E4%B8%8B"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C11.txt",
+   "sha256": "bf35d5960c8d7718da57dc85cd5d7937767359b1b45b324df1396b9c5cc632a8",
+   "bytes": 2800,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C11.txt",
+   "source_id": "MO1-S-C11",
+   "title": "《墨子·尚同上》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%B0%9A%E5%90%8C%E4%B8%8A"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C12.txt",
+   "sha256": "52dd2852d03452613936274aa915339fafa7b4f1e63382ca42cb00bbc1fec354",
+   "bytes": 8481,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C12.txt",
+   "source_id": "MO1-S-C12",
+   "title": "《墨子·尚同中》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%B0%9A%E5%90%8C%E4%B8%AD"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C13.txt",
+   "sha256": "7e27f237f0e2f7f9d5bff3cd3eb927f1d47f120bddf03552b054d5dfb8c6abaf",
+   "bytes": 6605,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C13.txt",
+   "source_id": "MO1-S-C13",
+   "title": "《墨子·尚同下》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%B0%9A%E5%90%8C%E4%B8%8B"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C14.txt",
+   "sha256": "9a6c9bd054f39d160b06da3c14706d38995be1d34ff1dbf06130b84ebb7da2c1",
+   "bytes": 2050,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C14.txt",
+   "source_id": "MO1-S-C14",
+   "title": "《墨子·兼愛上》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%85%BC%E6%84%9B%E4%B8%8A"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C15.txt",
+   "sha256": "bf494cb0826142ef8f580f35d012d9cbe8477f3e786c1c0031f32f2b6b2d1e4e",
+   "bytes": 4717,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C15.txt",
+   "source_id": "MO1-S-C15",
+   "title": "《墨子·兼愛中》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%85%BC%E6%84%9B%E4%B8%AD"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C16.txt",
+   "sha256": "99acf685cf6d293b582805cd9de0c858cce18bc0c873f43975c7afb37e0e15bb",
+   "bytes": 9663,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C16.txt",
+   "source_id": "MO1-S-C16",
+   "title": "《墨子·兼愛下》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%85%BC%E6%84%9B%E4%B8%8B"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C17.txt",
+   "sha256": "55e6e09928f2af1feed8abc05638d3848c522820c0b297151d3b7d63d9e4094d",
+   "bytes": 1607,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C17.txt",
+   "source_id": "MO1-S-C17",
+   "title": "《墨子·非攻上》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E9%9D%9E%E6%94%BB%E4%B8%8A"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C18.txt",
+   "sha256": "ccadfc57e32fff0e3c318b6fc41b3da0d64937a8faeb37cece444b7330586898",
+   "bytes": 4440,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C18.txt",
+   "source_id": "MO1-S-C18",
+   "title": "《墨子·非攻中》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E9%9D%9E%E6%94%BB%E4%B8%AD"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C19.txt",
+   "sha256": "6ed631dfc6e1dc3c76e1ab35321921eb69ad4d69050b807768b4ac3da7bc847a",
+   "bytes": 7108,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C19.txt",
+   "source_id": "MO1-S-C19",
+   "title": "《墨子·非攻下》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E9%9D%9E%E6%94%BB%E4%B8%8B"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C20.txt",
+   "sha256": "da1041dfa1f4a9cd0f9d65a35bb77bf9958fc901efe800ffe1a86c732ba3939a",
+   "bytes": 2154,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C20.txt",
+   "source_id": "MO1-S-C20",
+   "title": "《墨子·節用上》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E7%AF%80%E7%94%A8%E4%B8%8A"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C21.txt",
+   "sha256": "689f472c502678fec3e6bc2ba511d7d5da42dba35e46c925ead1e54d2dbdd6ac",
+   "bytes": 2080,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C21.txt",
+   "source_id": "MO1-S-C21",
+   "title": "《墨子·節用中》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E7%AF%80%E7%94%A8%E4%B8%AD"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C25.txt",
+   "sha256": "7c90957e67163d4157cd924f9b2959826b175a09d449dbb7e5e4f6f5db78fa0a",
+   "bytes": 9831,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C25.txt",
+   "source_id": "MO1-S-C25",
+   "title": "《墨子·節葬下》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E7%AF%80%E8%91%AC%E4%B8%8B"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C26.txt",
+   "sha256": "13186f9288cc1ab34448e0d9950f3d0ec6d215697c4bb4c1400c5f60896a29fc",
+   "bytes": 4968,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C26.txt",
+   "source_id": "MO1-S-C26",
+   "title": "《墨子·天志上》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%A4%A9%E5%BF%97%E4%B8%8A"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C27.txt",
+   "sha256": "4ad820c60dc7f3ce1edbe288ff71f294568f20e825021042072884a6456e9fa2",
+   "bytes": 8245,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C27.txt",
+   "source_id": "MO1-S-C27",
+   "title": "《墨子·天志中》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%A4%A9%E5%BF%97%E4%B8%AD"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C28.txt",
+   "sha256": "004650cf9987c317f01ed03c0d19787cefc697a671d90a1a7777ff2f55a29e06",
+   "bytes": 8178,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C28.txt",
+   "source_id": "MO1-S-C28",
+   "title": "《墨子·天志下》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%A4%A9%E5%BF%97%E4%B8%8B"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C31.txt",
+   "sha256": "142a5d7a532a34595e0f213f30db99b119735120efc759f5cdc94729237d16f2",
+   "bytes": 12250,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C31.txt",
+   "source_id": "MO1-S-C31",
+   "title": "《墨子·明鬼下》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E6%98%8E%E9%AC%BC%E4%B8%8B"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C32.txt",
+   "sha256": "fcdc0dafc5bc8100b6270460ef40ca9e5a43bebdb7f1b780310aa2a10d56d766",
+   "bytes": 5519,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C32.txt",
+   "source_id": "MO1-S-C32",
+   "title": "《墨子·非樂上》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E9%9D%9E%E6%A8%82%E4%B8%8A"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C35.txt",
+   "sha256": "9061c2389e0465f0b94a414098d26107aad463332b47dcd098c6f47fac281b1b",
+   "bytes": 5343,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C35.txt",
+   "source_id": "MO1-S-C35",
+   "title": "《墨子·非命上》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E9%9D%9E%E5%91%BD%E4%B8%8A"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C36.txt",
+   "sha256": "1bd053b53d49eb6e91f63d527f7382d28c36777580d5005ca7199e8a20201fd0",
+   "bytes": 3563,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C36.txt",
+   "source_id": "MO1-S-C36",
+   "title": "《墨子·非命中》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E9%9D%9E%E5%91%BD%E4%B8%AD"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C37.txt",
+   "sha256": "ed4212089a4c08e38d2a1fcb9971d97aec62aa5a35719dc17371bfec566af0bb",
+   "bytes": 5160,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C37.txt",
+   "source_id": "MO1-S-C37",
+   "title": "《墨子·非命下》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E9%9D%9E%E5%91%BD%E4%B8%8B"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C39.txt",
+   "sha256": "03754ad40378c68809be1de0eb09e0b17a6289fb11d2147bd24335c12f16a110",
+   "bytes": 7178,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C39.txt",
+   "source_id": "MO1-S-C39",
+   "title": "《墨子·非儒下》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E9%9D%9E%E5%84%92%E4%B8%8B"
+  },
+  {
+   "file": "evidence/additions/mo/MO1-S-C50.txt",
+   "sha256": "e54a1129f359472143153182e8bdbb4d19bfb5d0cad47c99cedcf038c1b13a96",
+   "bytes": 2197,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/mo/MO1-S-C50.txt",
+   "source_id": "MO1-S-C50",
+   "title": "《墨子·公輸》",
+   "url": "https://zh.wikisource.org/zh-hant/%E5%A2%A8%E5%AD%90/%E5%85%AC%E8%BC%B8"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-HINDEX.txt",
+   "sha256": "a1fc82f1e3c3d40a318c771251dfa8763146c40619e72fe4b2feb3a574432eca",
+   "bytes": 198,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-HINDEX.txt",
+   "source_id": "FA1-S-HINDEX",
+   "title": "韓非子",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90&oldid=2393232"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-SINDEX.txt",
+   "sha256": "3de06131b703425213ddbad758c27672a1366c3e96cebc3eee1763475c234e3e",
+   "bytes": 685,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-SINDEX.txt",
+   "source_id": "FA1-S-SINDEX",
+   "title": "商君書",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E5%95%86%E5%90%9B%E6%9B%B8&oldid=2593685"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H01.txt",
+   "sha256": "6279adedc3fa3c5ba8e2b8f042d8ecf02242caccb0c6e8ecd7cddfe390850819",
+   "bytes": 5832,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H01.txt",
+   "source_id": "FA1-S-H01",
+   "title": "韓非子/初見秦",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%88%9D%E8%A6%8B%E7%A7%A6&oldid=2327652"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H02.txt",
+   "sha256": "9b0a726ee87bf793cb631713aa8ead23830fc2e44154e9d8b0494f776383c129",
+   "bytes": 5627,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H02.txt",
+   "source_id": "FA1-S-H02",
+   "title": "韓非子/存韓",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%AD%98%E9%9F%93&oldid=2327666"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H03.txt",
+   "sha256": "e42ff0f808681fee859281de56c401bb00bdda20cca4105bc674e5b23e5c63af",
+   "bytes": 2067,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H03.txt",
+   "source_id": "FA1-S-H03",
+   "title": "韓非子/難言",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E9%9B%A3%E8%A8%80&oldid=2327690"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H04.txt",
+   "sha256": "a4ab3b2fc1bce927fbb90ac25bded4142687e22c08c6c64617bc273b4edb0448",
+   "bytes": 1356,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H04.txt",
+   "source_id": "FA1-S-H04",
+   "title": "韓非子/愛臣",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E6%84%9B%E8%87%A3&oldid=2327674"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H05.txt",
+   "sha256": "c69790e34ac7888262962e56551b4d7c49edbdf9b21469bbdfa4b6032f91c7f7",
+   "bytes": 3011,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H05.txt",
+   "source_id": "FA1-S-H05",
+   "title": "韓非子/主道",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E4%B8%BB%E9%81%93&oldid=2327639"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H06.txt",
+   "sha256": "cfbbb24aa29f9546ecb4b8faf589bc8e53188d7eb93413fed89808874c5feaf5",
+   "bytes": 5163,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H06.txt",
+   "source_id": "FA1-S-H06",
+   "title": "韓非子/有度",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E6%9C%89%E5%BA%A6&oldid=2327676"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H07.txt",
+   "sha256": "cc058c424cd2d22e4fa0a1180c77a5629f8152f6b492b0f330903a086ed925f4",
+   "bytes": 3119,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H07.txt",
+   "source_id": "FA1-S-H07",
+   "title": "韓非子/二柄",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E4%BA%8C%E6%9F%84&oldid=2327640"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H08.txt",
+   "sha256": "345871c72e7a95eefa278e2b4a86e0d4d445c976032342872be00b26d62fffbe",
+   "bytes": 4789,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H08.txt",
+   "source_id": "FA1-S-H08",
+   "title": "韓非子/揚權",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E6%8F%9A%E6%AC%8A&oldid=2327675"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H09.txt",
+   "sha256": "a2fd7a516a838ebf4e58bca7175e4d0bd5c854cbef8430d8c195bea45233c59a",
+   "bytes": 4052,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H09.txt",
+   "source_id": "FA1-S-H09",
+   "title": "韓非子/八姦",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%85%AB%E5%A7%A6&oldid=2327648"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H10.txt",
+   "sha256": "60db5ef00b3781a64bbb5f43860379df15edddb2e3b81d7dc5377af94075706a",
+   "bytes": 17710,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H10.txt",
+   "source_id": "FA1-S-H10",
+   "title": "韓非子/十過",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%8D%81%E9%81%8E&oldid=2327655"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H11.txt",
+   "sha256": "927482e20ddadbd3d9419a280accfcdaf1375ee2b0dacd15964a562f631a4cbd",
+   "bytes": 4939,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H11.txt",
+   "source_id": "FA1-S-H11",
+   "title": "韓非子/孤憤",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%AD%A4%E6%86%A4&oldid=2327667"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H12.txt",
+   "sha256": "1f7b1113777b1daf7a89762c79c98fc862bd5eb165a208d6130ae18167b0e405",
+   "bytes": 4316,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H12.txt",
+   "source_id": "FA1-S-H12",
+   "title": "韓非子/說難",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E8%AA%AA%E9%9B%A3&oldid=2327684"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H13.txt",
+   "sha256": "472c8532c203004171628210598eb87d6eaa25e49e1f6467d644f8ec30ad36be",
+   "bytes": 2108,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H13.txt",
+   "source_id": "FA1-S-H13",
+   "title": "韓非子/和氏",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%92%8C%E6%B0%8F&oldid=2327657"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H14.txt",
+   "sha256": "11fc4289252a1efa36483c37ce3bb57bc9a2714601d00228986f3f04764c2e56",
+   "bytes": 10938,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H14.txt",
+   "source_id": "FA1-S-H14",
+   "title": "韓非子/奸劫弑臣",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%A5%B8%E5%8A%AB%E5%BC%91%E8%87%A3&oldid=2327665"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H15.txt",
+   "sha256": "2a3998e867aa3c0e36d808d58179a8c05179385e2a080a4ad73aa02eb5a828b9",
+   "bytes": 4518,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H15.txt",
+   "source_id": "FA1-S-H15",
+   "title": "韓非子/亡徵",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E4%BA%A1%E5%BE%B5&oldid=2327641"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H16.txt",
+   "sha256": "0ae7dd472f8d2aecdda5de08f365877cacfc484f4c0a517ab365832fe21ac2d0",
+   "bytes": 1506,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H16.txt",
+   "source_id": "FA1-S-H16",
+   "title": "韓非子/三守",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E4%B8%89%E5%AE%88&oldid=2327638"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H17.txt",
+   "sha256": "c4d3d86d8e0e20b58ded5b6075a74b712a405c4295b7cf688e5af4d86a30d861",
+   "bytes": 3095,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H17.txt",
+   "source_id": "FA1-S-H17",
+   "title": "韓非子/備內",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%82%99%E5%85%A7&oldid=2327645"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H18.txt",
+   "sha256": "9e55aa17bda0f76e488acd85e5c0c1a9377bd5750efdf972f7adc2962e733743",
+   "bytes": 3019,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H18.txt",
+   "source_id": "FA1-S-H18",
+   "title": "韓非子/南面",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%8D%97%E9%9D%A2&oldid=2327656"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H19.txt",
+   "sha256": "7960840763956fb4cefbb5b6edca32f991e151ff817317d442fa6ab43b74b62d",
+   "bytes": 7097,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H19.txt",
+   "source_id": "FA1-S-H19",
+   "title": "韓非子/飾邪",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E9%A3%BE%E9%82%AA&oldid=2327693"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H20.txt",
+   "sha256": "b23c2079bf19a82cc172ff545c5a55ab35607adf1497e6144fff85e7c5d76815",
+   "bytes": 21413,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H20.txt",
+   "source_id": "FA1-S-H20",
+   "title": "韓非子/解老",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E8%A7%A3%E8%80%81&oldid=2327679"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H21.txt",
+   "sha256": "a4f1fd2848a7eea6a0928683aeca2dc0b3fe6e1e5b574fc5855cfc81c96eea11",
+   "bytes": 9553,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H21.txt",
+   "source_id": "FA1-S-H21",
+   "title": "韓非子/喻老",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%96%BB%E8%80%81&oldid=2266728"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H22.txt",
+   "sha256": "13428d5100b896f693e4049a139171cb7b0a7720a5f1bd243d4a5af91c2430f8",
+   "bytes": 10830,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H22.txt",
+   "source_id": "FA1-S-H22",
+   "title": "韓非子/說林上",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E8%AA%AA%E6%9E%97%E4%B8%8A&oldid=2327681"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H23.txt",
+   "sha256": "27760e0c92a46744a2da903e00b98f8f21d096bf2dd4d0efd0e7b705e5848051",
+   "bytes": 9850,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H23.txt",
+   "source_id": "FA1-S-H23",
+   "title": "韓非子/說林下",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E8%AA%AA%E6%9E%97%E4%B8%8B&oldid=2327682"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H24.txt",
+   "sha256": "bf03536b01a570b0e962180b29a7dbe8c9896d4962888b2d86f916a7da7485f5",
+   "bytes": 1164,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H24.txt",
+   "source_id": "FA1-S-H24",
+   "title": "韓非子/觀行",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E8%A7%80%E8%A1%8C&oldid=2327678"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H25.txt",
+   "sha256": "24161c7f63f84f3243a398ca83e72e954cacc50e97e3063413925e0ededc7335",
+   "bytes": 2741,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H25.txt",
+   "source_id": "FA1-S-H25",
+   "title": "韓非子/安危",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%AE%89%E5%8D%B1&oldid=2327669"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H26.txt",
+   "sha256": "383e4a57465e7946446d1e0f51083d9976f1134365ded49ec911b71a50884dd2",
+   "bytes": 2483,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H26.txt",
+   "source_id": "FA1-S-H26",
+   "title": "韓非子/守道",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%AE%88%E9%81%93&oldid=2327668"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H27.txt",
+   "sha256": "5042070e7b546313fc69bb286f2a4b6b255e8059abe6a1604f6f3dcae75f0d93",
+   "bytes": 3582,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H27.txt",
+   "source_id": "FA1-S-H27",
+   "title": "韓非子/用人",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E7%94%A8%E4%BA%BA&oldid=2327677"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H28.txt",
+   "sha256": "1435f289c295acf64e7efcf0f6a121ee266d6f04d3da44058268be586c454611",
+   "bytes": 1761,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H28.txt",
+   "source_id": "FA1-S-H28",
+   "title": "韓非子/功名",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%8A%9F%E5%90%8D&oldid=2327654"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H29.txt",
+   "sha256": "b79f8a65d418828e2f9f01229d7f00101173528bfc24bf073e769ef7084725bf",
+   "bytes": 1545,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H29.txt",
+   "source_id": "FA1-S-H29",
+   "title": "韓非子/大體",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%A4%A7%E9%AB%94&oldid=2327664"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H30.txt",
+   "sha256": "c8d42e6b8688aa7931c20c71d9dee2d29352282bafed55883e7d5b09bfd1ab41",
+   "bytes": 19179,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H30.txt",
+   "source_id": "FA1-S-H30",
+   "title": "韓非子/內儲說上七術",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%85%A7%E5%84%B2%E8%AA%AA%E4%B8%8A%E4%B8%83%E8%A1%93&oldid=2431944"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H31.txt",
+   "sha256": "0604464b225fe8a6d8d7d9e3c9a994d45cc888cabb6cd317248498a537b386cf",
+   "bytes": 16007,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H31.txt",
+   "source_id": "FA1-S-H31",
+   "title": "韓非子/內儲說下六微",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%85%A7%E5%84%B2%E8%AA%AA%E4%B8%8B%E5%85%AD%E5%BE%AE&oldid=2327647"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H32.txt",
+   "sha256": "d2fca0216f091121fba827529a34d20feccda7705b829e79f34bac57eb0ebdbe",
+   "bytes": 22324,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H32.txt",
+   "source_id": "FA1-S-H32",
+   "title": "韓非子/外儲說左上",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%A4%96%E5%84%B2%E8%AA%AA%E5%B7%A6%E4%B8%8A&oldid=2327662"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H33.txt",
+   "sha256": "48a5ca7dc0bf748c8fb906b8a1e269b3c22040faacfe13103bf07953d5bf2af3",
+   "bytes": 14553,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H33.txt",
+   "source_id": "FA1-S-H33",
+   "title": "韓非子/外儲說左下",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%A4%96%E5%84%B2%E8%AA%AA%E5%B7%A6%E4%B8%8B&oldid=2327663"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H34.txt",
+   "sha256": "d9581d80c522d636047edf9d644f9e893e4e8dc21a9b5f44b2af74581826fd36",
+   "bytes": 21236,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H34.txt",
+   "source_id": "FA1-S-H34",
+   "title": "韓非子/外儲說右上",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%A4%96%E5%84%B2%E8%AA%AA%E5%8F%B3%E4%B8%8A&oldid=2327660"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H35.txt",
+   "sha256": "675ad71224a22c04ebf3f5235af35d99714881518dfafeeb7904f4c43b30e1e1",
+   "bytes": 14858,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H35.txt",
+   "source_id": "FA1-S-H35",
+   "title": "韓非子/外儲說右下",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%A4%96%E5%84%B2%E8%AA%AA%E5%8F%B3%E4%B8%8B&oldid=2327661"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H36.txt",
+   "sha256": "73c11a5a44d4a62cfb56b27687317aa7b2c1f39428a3da0a2eb76c51229015fc",
+   "bytes": 12344,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H36.txt",
+   "source_id": "FA1-S-H36",
+   "title": "韓非子/難一",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E9%9B%A3%E4%B8%80&oldid=2327685"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H37.txt",
+   "sha256": "f754a2e35d87dcc171e18ea84fae1ddb0f9289ad0d75c00832e7eac59b79810b",
+   "bytes": 9269,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H37.txt",
+   "source_id": "FA1-S-H37",
+   "title": "韓非子/難二",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E9%9B%A3%E4%BA%8C&oldid=2327687"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H38.txt",
+   "sha256": "062e6bfe84c1054944b0c77e8b5161986aa079e51517a0704f358749d0de10fe",
+   "bytes": 10921,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H38.txt",
+   "source_id": "FA1-S-H38",
+   "title": "韓非子/難三",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E9%9B%A3%E4%B8%89&oldid=2327686"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H39.txt",
+   "sha256": "4d47093ac6cde021d3137bc872b18a7fdfe846118255b48f7eb3dd832ca8536a",
+   "bytes": 6020,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H39.txt",
+   "source_id": "FA1-S-H39",
+   "title": "韓非子/難四",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E9%9B%A3%E5%9B%9B&oldid=2327689"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H40.txt",
+   "sha256": "91617e1ec3afb60f22590b8e270a117abce0a4cdfe940a35e275cb22a5ebd79f",
+   "bytes": 4897,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H40.txt",
+   "source_id": "FA1-S-H40",
+   "title": "韓非子/難勢",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E9%9B%A3%E5%8B%A2&oldid=2327688"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H41.txt",
+   "sha256": "da30c691881461d8b0338f710b7b20979a950754f7191cf4b06a09a524e11ddc",
+   "bytes": 1471,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H41.txt",
+   "source_id": "FA1-S-H41",
+   "title": "韓非子/問辯",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%95%8F%E8%BE%AF&oldid=2327659"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H42.txt",
+   "sha256": "15c49b3cae42b220fd682fb2488899f442d030ec3253ca5c3e29b97910b59f46",
+   "bytes": 1491,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H42.txt",
+   "source_id": "FA1-S-H42",
+   "title": "韓非子/問田",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%95%8F%E7%94%B0&oldid=2327658"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H43.txt",
+   "sha256": "85819ee6bd2beb1ee02f59962436bb1ae99853223fabbaae4a84cebd68af2d27",
+   "bytes": 2867,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H43.txt",
+   "source_id": "FA1-S-H43",
+   "title": "韓非子/定法",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%AE%9A%E6%B3%95&oldid=2327670"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H44.txt",
+   "sha256": "025e22a85b4b0de48bd2c1a7d4f6e5727a539930e755da344ecc7daee43fe783",
+   "bytes": 8886,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H44.txt",
+   "source_id": "FA1-S-H44",
+   "title": "韓非子/說疑",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E8%AA%AA%E7%96%91&oldid=2327683"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H45.txt",
+   "sha256": "dce41e3505a124aff5dabdee7d623580070bffd2a7517c467a5ef10d6de551b5",
+   "bytes": 4925,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H45.txt",
+   "source_id": "FA1-S-H45",
+   "title": "韓非子/詭使",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E8%A9%AD%E4%BD%BF&oldid=2327680"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H46.txt",
+   "sha256": "2c7fdaee85ecb88343264556d47b7fedb7c8b1c15b23f3b0e71b2db4518e2dfe",
+   "bytes": 7663,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H46.txt",
+   "source_id": "FA1-S-H46",
+   "title": "韓非子/六反",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%85%AD%E5%8F%8D&oldid=2327651"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H47.txt",
+   "sha256": "ce38b54913b838fbfe169c8d89eeb50cbb79b4b0d98859ac05c2eb783c393768",
+   "bytes": 6560,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H47.txt",
+   "source_id": "FA1-S-H47",
+   "title": "韓非子/八說",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%85%AB%E8%AA%AA&oldid=2327650"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H48.txt",
+   "sha256": "76a5f10c37d19e1afde98d9b6f65567abb1f01473c365ceaf8194246d40a67e4",
+   "bytes": 7629,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H48.txt",
+   "source_id": "FA1-S-H48",
+   "title": "韓非子/八經",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%85%AB%E7%B6%93&oldid=2327649"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H49.txt",
+   "sha256": "57cb92ebdf99e411f4dee283867989ce14c7dc9d015d400638d7caa3ffcf7a1e",
+   "bytes": 14279,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H49.txt",
+   "source_id": "FA1-S-H49",
+   "title": "韓非子/五蠹",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E4%BA%94%E8%A0%B9&oldid=2642850"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H50.txt",
+   "sha256": "c2cac0f64ee0d6d82cc86d96bd63486509690735a631c49a04798d692ab8453c",
+   "bytes": 7800,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H50.txt",
+   "source_id": "FA1-S-H50",
+   "title": "韓非子/顯學",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E9%A1%AF%E5%AD%B8&oldid=2327691"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H51.txt",
+   "sha256": "46af59679324dfa688b007a3bdc45859caf8e3b81589e4e214ecbf7e95098f38",
+   "bytes": 4714,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H51.txt",
+   "source_id": "FA1-S-H51",
+   "title": "韓非子/忠孝",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%BF%A0%E5%AD%9D&oldid=2327672"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H52.txt",
+   "sha256": "9d809fd8e302a86d7fb0526f62adc53143bee39d3487f94d1f1649d76323275d",
+   "bytes": 2478,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H52.txt",
+   "source_id": "FA1-S-H52",
+   "title": "韓非子/人主",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E4%BA%BA%E4%B8%BB&oldid=2327644"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H53.txt",
+   "sha256": "eb02058e64ca20e2d3d31b8d9de64b4f29adf830188b2248495c78f022cb36e6",
+   "bytes": 1337,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H53.txt",
+   "source_id": "FA1-S-H53",
+   "title": "韓非子/飭令",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E9%A3%AD%E4%BB%A4&oldid=2327692"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H54.txt",
+   "sha256": "c2186d41391cc44989bc52e3bfd0c1cd0f5efa5e39461303050ca59024bd33d3",
+   "bytes": 1928,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H54.txt",
+   "source_id": "FA1-S-H54",
+   "title": "韓非子/心度",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%BF%83%E5%BA%A6&oldid=2327671"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-H55.txt",
+   "sha256": "18269bc11314a8fbdca17cbd7b5d74840f8cde4f4baa8859e512af67c6eb6fa3",
+   "bytes": 2241,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-H55.txt",
+   "source_id": "FA1-S-H55",
+   "title": "韓非子/制分",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E9%9F%93%E9%9D%9E%E5%AD%90%2F%E5%88%B6%E5%88%86&oldid=2327653"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-SV1.txt",
+   "sha256": "ef8c7ea17c831510eaded9788bf07f67547faec2fb5728213d2a132d18eb3075",
+   "bytes": 15997,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-SV1.txt",
+   "source_id": "FA1-S-SV1",
+   "title": "商君書/卷一",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E5%95%86%E5%90%9B%E6%9B%B8%2F%E5%8D%B7%E4%B8%80&oldid=850643"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-SV2.txt",
+   "sha256": "ddb6b6128c90f37dd2dcc41da093ee62748c036b6cfd5943058b03e7f7988aa4",
+   "bytes": 13057,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-SV2.txt",
+   "source_id": "FA1-S-SV2",
+   "title": "商君書/卷二",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E5%95%86%E5%90%9B%E6%9B%B8%2F%E5%8D%B7%E4%BA%8C&oldid=850644"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-SV3.txt",
+   "sha256": "f1afb080460a006e5f05750383f4b498933fc11c306fa9cf9b7d36c41ad9283f",
+   "bytes": 13141,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-SV3.txt",
+   "source_id": "FA1-S-SV3",
+   "title": "商君書/卷三",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E5%95%86%E5%90%9B%E6%9B%B8%2F%E5%8D%B7%E4%B8%89&oldid=850645"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-SV4.txt",
+   "sha256": "4c10783d4a7778d8a382caf7d287b7699787ff3f41ef0c097ae569276dabcfe5",
+   "bytes": 13280,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-SV4.txt",
+   "source_id": "FA1-S-SV4",
+   "title": "商君書/卷四",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E5%95%86%E5%90%9B%E6%9B%B8%2F%E5%8D%B7%E5%9B%9B&oldid=1741809"
+  },
+  {
+   "file": "evidence/additions/fa/FA1-S-SV5.txt",
+   "sha256": "9f0b52a5af1d7c4f526194c38061d6b2c6a229ab270f06e7bbfab3d18f3c2e5c",
+   "bytes": 17809,
+   "form": "archive-member",
+   "archive_member": "civilization-thought-v1.0/evidence/additions/fa/FA1-S-SV5.txt",
+   "source_id": "FA1-S-SV5",
+   "title": "商君書/卷五",
+   "url": "https://zh.wikisource.org/w/index.php?title=%E5%95%86%E5%90%9B%E6%9B%B8%2F%E5%8D%B7%E4%BA%94&oldid=2648348"
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "edits": [
+  {
+   "id": "三·八",
+   "find": "前步之数为所留者加毁者之数，后步之数为所留者加成者之数",
+   "replace": "前步之数为两步皆列者加毁者之数，后步之数为两步皆列者加成者之数",
+   "why": "所留 is a name in the table for a different concept: the level left after a prior draw (RegimeMargin.step, Optimum.course_beyond). The table's 所留 row asks that this C03 phrase be rewritten as the members listed at both ends of the step (\"两表皆列者\"; 表 is now 族/列). In FamilyCounts.tally (Tally: n t = k + c t, n (t+1) = k + a t), k is exactly the number of members listed at both steps."
+  },
+  {
+   "id": "三·八",
+   "find": "计一有列者，每步所留者加其毁者为前步之数，加其成者为后步之数",
+   "replace": "计一有列者，跨每一步，两步皆列者加其毁者为前步之数，加其成者为后步之数",
+   "why": "The same 所留 name collision in the 說. Changed together with the 經 so the two use the same wording."
+  },
+  {
+   "id": "三·十二",
+   "find": "其行无状复而其间有改者",
+   "replace": "其行无某步之状其后再得而其间有改者",
+   "why": "复 is defined only in ⟦五·一⟧, which comes later, so this 經 uses a later name. The plan for 三·十二 explicitly says 复定于五·一，不先用 (and it changed 可复其前状 to 可再至其前状 for the same reason). The new wording is the gloss already given in the 說 and matches Settling.ChangesInLoop (state (i+p+1) = state i with a change between) exactly."
+  },
+  {
+   "id": "三·十二",
+   "find": "第二律说何时可知一行自何步不再改：状复而其间有改，谓某步之状其后再得而其间某步有改；无此者",
+   "replace": "第二律说何时可知一行自何步不再改：某步之状其后再得而其间某步有改（即状复而其间有改，复见⟦五·一⟧）；无此者",
+   "why": "Keeps the 說 in line with the 經 after 复 is removed there. The fixed plain wording 状复而其间有改 is still named, with a pointer to where 复 is defined."
+  },
+  {
+   "id": "三·十二",
+   "find": "诸若见其记录",
+   "replace": "诸若见记录 [where-a-run-of-a-regime-comes-to-rest](../results/records/where-a-run-of-a-regime-comes-to-rest.md)",
+   "why": "When RegimeMargin.Adjusted.comes_to_rest was moved into the 說, its record was dropped from the 證. As a result, \"see its record\" now points to a record that is linked nowhere in the 條. The record exists."
+  },
+  {
+   "id": "三·十五",
+   "find": "则有使之仍衡之改认以 c 续为 d。物跨一步而作",
+   "replace": "则有使之仍衡之改认以 c 续为 d；物跨一步而作",
+   "why": "World.arises_fixed_iff needs both a balanced world and DecidableEq w.Relatum. With 。 the sentence moved here from 十·五 falls outside the scope of 宇衡而物之同异定然否：, so the 經 would state the law without its conditions. With ； the scope covers it."
+  },
+  {
+   "id": "三·二十",
+   "find": "存，待者于一步运，或其某待于此步成立也。",
+   "replace": "存，待者于一步运，或于此步待一所待也。",
+   "why": "Web.Holds t f := active t f ∨ ∃ c, requires t f c. 成立 in a 經 collides with the name 成 (comes to hold). The 然 row asks that 成立-sense uses be rewritten and that 成 be kept for 始然. The replacement uses only the table's 待 and 所待, and states the disjunct exactly."
+  },
+  {
+   "id": "三·十八",
+   "find": "以出芽读之，亦有裂，而自第一步后无新作",
+   "replace": "以另一有裂之相续读之，自第一步后无新作",
+   "why": "出芽 is not a name in the table; the drafter's own note says it is not adopted. It stays in the 說 as a description of the example. The existential claim needs only another continuation with a split under which nothing newly arises after step 1. Budding.growth_without_arising gives exactly that: ¬NoSplit buds and ∀ t ≥ 1, ¬ArisesFrom."
+  },
+  {
+   "id": "三·六",
+   "find": "读于运，族中屡有作恰当族中屡有已（`Becoming.Web.arising_recurs_iff`），只要自某步起有一族含每步之运者（`Becoming.Web.unceasing_iff_covering`）。",
+   "replace": "读于运，族中屡有作恰当族中屡有已（`Becoming.Web.arising_recurs_iff`）；不限于一族，自某步起有一族含每步之运者，则屡有作恰当屡有已（`Becoming.Web.unceasing_iff_covering`）。",
+   "why": "As written, the covering condition attaches to the family law, but arising_recurs_iff (a family fs) needs no covering. The covering list is the condition of unceasing_iff_covering, which is about Unceasing over all formations, not about one family."
+  },
+  {
+   "id": "三·十一",
+   "find": "止之律之结论只是不可非，要对每个有穷之宇名出那一步，即得无穷可尽；以任意之量读之亦然。",
+   "replace": "止之律之结论只是不可非（以任意之量读之亦然）；要对每个有穷、运定然否而合八设（⟦NEW-12⟧）之宇名出其后无作之步，即得无穷可尽。",
+   "why": "World.lpo_of_finite_ends assumes the step can be named for every world that has decided activity, is Premised (the eight premises) and is Finite. 每个有穷之宇 drops two of those hypotheses. The trailing 亦然 also reads as if the any-amounts reading gave LPO, when what carries over is only the not-refuted conclusion (InAmounts.rests_unrefuted_enclosed)."
+  },
+  {
+   "id": "三·二十",
+   "find": "以存读运，入蛰非已，与此相应；",
+   "replace": "以存读运，入蛰非已，貌杀非杀即指此；",
+   "why": "相应 is the table's name for the relation between 爻. The plan removed it from 十·二 for this reason. 相合 or 一致 cannot replace it either: 相合 is a kind label and this passage is 定域, and 一致 is used for coordination."
+  },
+  {
+   "id": "三·九",
+   "find": "族二所待之总积每步皆一",
+   "replace": "其族二所待，总积每步皆一",
+   "why": "Readability. 族二所待之总积 does not parse cleanly. 其族 ties the example to the family named in the premises above (Recycle.closed_unceasing: Depletes [a,b] and stock [a,b] = 1)."
+  }
+ ],
+ "notes": "I edited no files; my working copy is /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c03rev/part.json, the drafter's part.json, which matched every passage I compared with the given text, including every find string above.\n\nWhat checked out:\n- **Quotations:** all 40 「…」〔ID〕 match the frozen text exactly (ctq.py text).\n- **Declarations:** all 129 resolve to current names (resolve.py) and exist under these full names in the worktree's Becoming/*.lean.\n- **Records:** all 20 linked records exist.\n- **Cross-references:** every ⟦id⟧ is in book-1-outline.txt, none is a deleted id, and each points to the right content (⟦八·五⟧ the stutter laws, ⟦二·十⟧ 有形, ⟦四·二⟧ 衡 with Balances.fall_taken, ⟦四·三⟧ 多而无已, ⟦七·十⟧ 同, ⟦NEW-12⟧ the eight premises, ⟦十一·十七⟧ 足而止之界, ⟦四·十三⟧ 开 with arising_opens, ⟦六·十一⟧ whole_not_new_of_rest_idle).\n- **Passage entries:** every id in the 說 and the 对照 is in passages.json with the same kind; the 对照 has 8 lines, 2 of them 相分.\n\nEach 經 checked against Lean:\n- **Matches, including hypotheses and the direction of each iff:** 三·二–三·七, 三·九, 三·十一, 三·十三, 十·二, 三·十四 (marked 讀（AI）, as the alike-key note requires), 三·十六, 三·十七, 三·二十三.\n- **三·九:** the depletion premise is now written as a condition, as the verify-G3 note asked.\n- **三·十二:** rests_iff, settles_iff_decided, not_not_settles, still_within (Marks, B ≤ d + q s), still_same, lpo_iff_settles and TailRuns.lpo_iff_runs all match.\n- **Defects fixed by the edits:** 所留 collides with a name (三·八); 复 is used before its definition (三·十二); the conditions of arises_fixed_iff drop out of scope (三·十五); 成立 in a 經 (三·二十); the unnamed 出芽 in a 經 (三·十八).\n\nThe plan's instructions were carried out, with three deviations I accept:\n- 化 is written 状跨步不同而续, following plain-wordings and the 同 row of the table.\n- The 五·十八 declarations were not merged into 三·九; they are already in ⟦六·十一⟧ and ⟦四·十三⟧.\n- The 族之兼 definition avoids 族中, because the parts of Web.Whole are given by a predicate.\n\nFor the integrator (no edit proposed):\n1. **数 is used before its definition.** 数 is defined only in ⟦三·八⟧, but 三·五, 三·六 and 三·七 use it in their 經 (成之数, 族之员数, 其数不过此界). 列 in 三·五 gets a pointer under the plan's C90 handling; 数 gets none. A pointer would not fix this; moving 三·八 before 三·五 would.\n2. **族之兼 states a wrong meaning.** 族 is a finite List, while Web.Whole parts is a predicate, and Countless shows the parts can be infinite. The 說 itself says 其体由一谓词给出. 域之兼 would be exact (域 = a set of things given by a predicate). This needs one book-wide decision and a 名表 row.\n3. **Title mismatch.** The outline gives 三·二十三 the title 兼与体; the part, as instructed, uses 族之兼与体.\n4. **Plain wording conflicts with the order.** 状复而其间有改 contains 复, which is defined in 五·一, while its uses (三·十二, the old 凡·二三) come earlier. Consider re-fixing it as 某步之状其后再得而其间有改.\n5. **静 row in the 名表.** Its 所名 column still says D45 一时成立者, while its anchor and note are D49 / Law.rests_iff.\n6. **Name-table additions pending.** 族之兼 must be added with anchor Web.Whole, and 兼's anchor reduced to World.withRest. The 十·三 and 五·十七 rewriters should pick up reidentify_renewed/consumed/lost and renewingIn_held, as the drafter notes."
+}

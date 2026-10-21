@@ -1,0 +1,60 @@
+{
+  "title": "中华思想脉络",
+  "version": "1.0.0",
+  "start_here": [
+    "README.md",
+    "AGENTS.md",
+    "docs/数据与关系.md",
+    "docs/本轮覆盖.md"
+  ],
+  "canonical_model": "data/model.json",
+  "query_database": "data/index.sqlite",
+  "query_interface": "tools/query.py",
+  "web_entry": "中华思想.html",
+  "search_indexes": [
+    "data/lexical_index.json",
+    "data/topology_index.json",
+    "data/coverage_index.json"
+  ],
+  "graphs": {
+    "semantic_hypergraph": "data/graph.json",
+    "all_explicit_references": "data/multilayer_graph.json",
+    "documentary": "data/documentary_graph.json",
+    "interactions": "data/interactions_graph.json"
+  },
+  "editorial_navigation": [
+    "data/interaction_catalog.json",
+    "data/chronology_catalog.json"
+  ],
+  "frozen_evidence": "evidence/",
+  "ancestry": "lineage/",
+  "current_research_audits": "audit/research/",
+  "release_review_bindings": "audit/release-inputs.json",
+  "file_inventory": "manifest.json",
+  "licenses": "LICENSES.md",
+  "counts": {
+    "nodes": 10608,
+    "relations": 5673,
+    "sources": 403,
+    "systems": 96,
+    "comparisons": 100,
+    "interactions": 96,
+    "reading_units": 2295
+  },
+  "current_additions": {
+    "nodes": 1977,
+    "relations": 964,
+    "sources": 141,
+    "systems": 52,
+    "comparisons": 36,
+    "interactions": 37,
+    "reading_units": 587
+  },
+  "rules": [
+    "稳定ID与原文不可静默覆盖。",
+    "先核读来源，再提取完整判断。",
+    "共字、共源、年代先后不生成蕴涵或传承。",
+    "现代问题对读、文献交涉、原典判断分别保存。",
+    "已审定包不得被作者临时脚本覆盖。"
+  ]
+}

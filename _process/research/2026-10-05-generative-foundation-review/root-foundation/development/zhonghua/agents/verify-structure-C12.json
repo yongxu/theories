@@ -1,0 +1,278 @@
+{
+ "cluster": "C12 演化、世系与传递",
+ "lens": "STRUCTURE（结构：每个名之古义是否与脊柱概念同关系、同条件、同方向；每条对应之声明是否存在、是否陈述所称之结构；种类是否正确）。核对范围：/Users/ren/theories 主线（41a72eb7b）之 Lean 全部声明、结果记录、章 §8.1／§10 词汇表、RO passages.json、脉络 v1.0 冻结文本。mapper 所引全部声明（约一百个）均以全名存在；全部引文均与冻结文本逐字相合；全部 record_ids 存在。以下问题都在结构与措辞上。",
+ "names": [
+  {
+   "concept": "世系 descent（Flow.DescendsAt／Descends）",
+   "name": "所生",
+   "verdict": "revise",
+   "issues": "(1) 与 C03 冲突。C03 以「生／滅」名 Web.Arises（不活动→活动），以「聚／散」名 Web.ComesToStand（水平由 0 升为正）。DescendsAt 的第三项是 W.ComesToStand t x，不是 Arises。脊柱中有反例：Drawdown.descends_same 里 .same 是 .parent 之所生，但 web.active _ .same 恒为 False，永远不「生」（C03 义）。若「所生」以 C03 之「生」为根，此例中「所生」为假。fit 说「其定名由 C03 定」，而 C03 已定为「聚」。(2) 方向有歧义。「所生」在古文中也指出身、所从生者：杂阿含「不以所生故，名為婆羅門」（FO1-S-SA，刘宋译）。名须定向。(3) 成唯识「緣所生」之缘是所待之条件（依存，C02「待」），不是 DescendsAt 之给予者（参与此步且 give>0）。拿它证「生者读为诸缘」，就把依存与给予混为一谈。(4) 老子四十二章证的是及物之「生」，不是「所生」。",
+   "fix": "保留「所生」作约定复词，在說中明定：「x 為 g 之所生」即 g 參與此步而與 x，x 由此聚（C03 之聚，ComesToStand），不要求 x 生（Arises）；以 Drawdown.descends_same 说明所生可以不生。补方向之证：戴震《孟子字義疏證》「愛其生之者及愛其所生」（RU2-S-V3Q01，清，已核），生之者即给予者 g，所生即 x；立「生之者」为 g 之位之名（另参大学「生之者衆」）。杂阿含之「所生」（出身）列入 not_carried。「緣所生」改列为所不带（依存，不是给予）或删去。老子四十二章改作「生」之及物用例。请整合者与 C03 二选一：或让 C03 之「生」兼读 ComesToStand，或本名改以「聚」为根。"
+  },
+  {
+   "concept": "承继 inheritance（Web.InheritsAt／Flow.Inherits）",
+   "name": "因",
+   "verdict": "revise",
+   "issues": "(1) 论六家要指「以因循為用」之因是顺应。同段有「有法無法，因時為業；有度無度，因物與合」「因者君之綱」，意思是顺其时、顺其物，不是「后者所依者前者已依之」。而且 alternatives 以「循」只是样式之随为由拒之，却又拿「因循」作证，前后矛盾。(2) 因时、因物、因势之顺应义可能与 C17 之名冲突（C17 seeds 有「因势」），not_carried 未列。(3) fit「后者所持即前者所持」漏了方向：InheritsAt 是对每个给予者 g 的蕴涵 requires (t+1) x c → requires t g c，即后代之依存包含于给予者之依存，可少不可多；在平衡与承继之下，世系不形成新依存（Flow.no_new_dependence）。论语之因与此方向一致，但须写出来。",
+   "fix": "删去 CT1-S-SJ 之证，或改标为另义（顺应）。not_carried 加「因时、因物、因势之顺应」，并请整合者与 C17 核对。fit 改为：「后代开始而在时所依者，给予者在给予之步已依之（Web.InheritsAt）：可少不可多；在平衡且对一切给予者承继之处，无新依存（Flow.no_new_dependence）；新依存在承继之外（World.novel）。」"
+  },
+  {
+   "concept": "传递 transmission（Flow.TransmitsWithin c δ）",
+   "name": "傳",
+   "verdict": "revise",
+   "issues": "(1) 结构不合。所列古证（养生主「火傳也」、苏辙「如燈相傳相襲而不絶」、明鬼「傳遺後世子孫」、墨经「傳受之」、非相「傳者久則論略」、原道「堯以是傳之舜」、慧远「火之傳於薪」）讲的都是一个样式经一个又一个承载者而续。这正是 Becoming.PatternPassing 的 Web.PassesAt／Web.ByPassing（t+1 时之承载者，或 t 时已承载，或由 t 时之承载者给予）；docstring 明言 ByPassing 与 TransmitsWithin 是两个前提。TransmitsWithin 讲的是后代开始而在时之依存为给予者所持、所需之升不过 δ。只有宗密「傳體相續」证世系之传。(2) 一名二义。entries zhuxi、suzhe、mozi-minggui、mozi-suo-xun、hanyu、zhuangzi-lunbian、xunzi-chuan 都以「传递（前提）」称 ByPassing，并在 names_used 列「傳」；名之概念却是 TransmitsWithin。mapper 自驳 (a) 已见到，未改。(3) fit「傳＝因加所损益有度」有误。TransmitsWithin 只界所需之升（W.need (t+1) x c ≤ W.need t g c + δ），所需之降不界，也不许增依存。应为「所益有度，所损不限」。(4) fit「荀子“傳者久則論略”说明所传之界随距离放宽」没有 Lean 支持：δ 是每一步之界，多步累积未陈述（mapper 自己列为缺口）；同一句在 xunzi-chuan 条中又映到 Law.merged_stays（区分之失），不是所需之界。",
+   "fix": "把「傳」改派给 PatternPassing 之经传而续：Web.PassesAt 是一个承载者传给下一个，Web.ByPassing 是经传之前提，古证即现列诸条。TransmitsWithin 不另立单字名，以其组成陈述为「因而所益有度」（Flow.transmitsWithin_iff：Inherits ∧ NeedsWithin δ），以论语 2.23「殷因於夏禮，所損益可知也」与宗密「傳體相續」为证。若整合者把「傳」留给 TransmitsWithin（现行中文版用「传递」，词汇表称 price 为「传递律」），就须为 PatternPassing 另立名，并把所有引 ByPassing 之条目改称该名。无论哪种，fit 中「所损益有度」改为「所益有度（所损不限，且不得新依）」，删去「所传之界随距离放宽」。"
+  },
+  {
+   "concept": "变异 variation（raised／lowered；price）",
+   "name": "所損益",
+   "verdict": "revise",
+   "issues": "(1) 论语之损益是礼之条目之增减，即所依者之有无，不只是量。脊柱中后代可以少依（InheritsAt 只要求后代之依存包含于给予者之依存），不可以新依（Flow.no_new_dependence），新依存在承继之外（World.novel）。所以「所益」若指增一条目，就不在传递之内。raised／lowered 只计同一量（Nat）在亲代与所生之间的超出与不及。(2) 把 price 分解成「因」（亲代之量）加「所損益」，只在每一亲代恰有一所生时才对：此时加权之项就是亲代之量（selected_uniform 取 k=1；unselected）。否则加权之项混入所生之数，不是「因」。fit 未写这个条件。(3) 商君书「損益一字以上」不带「所」；「靑取之於藍」证的是所益之义，不含此词。(4) 章 §10 词汇表称 price 为「传递律（law of transmission）」，本名把它称为「Price 计数恒等式」，须对齐。",
+   "fix": "concept 写明是「量之所損益（raised／lowered：同一量读于亲代与所生）」。not_carried 把两义分开：「条目之减」在承继之内；「条目之增（后代新依一条件）」在承继之外（World.novel）。fit 中 price 之分解加条件：「每一亲代一所生时（selected_uniform，k=1），加权之项即亲代之量，此时恰为所因之量加所益、减所损。」price 之名与词汇表「传递律」对齐，交整合者。"
+  },
+  {
+   "concept": "经支持之选择 selection through support（Flow.unsupported_childless 等）",
+   "name": "以足擇",
+   "verdict": "revise",
+   "issues": "(1) 方向。律给的是必要条件：某步不足（¬Supported）者，跨此步无所生（unsupported_childless）；足并不致有所生。「以足擇」容易读成充分。所列证中，孟子「茍得其养，无物不长」、至乐「得水則爲㡭」都带充分；只有成唯识「待眾緣…方成種子」是必要（「方」）。(2) 擇。C10 以「择」名 Becoming.Selection 之选择（对水平历史之主张，经选择者之耦合）。Lean 中没有定理把 unsupported_childless 读为这种选择，名之组合宣称了一个未证的实例。荀子「心为之择」之择有择者，名会把它带进来。(3) 足。C02 以「足」名 Supported；C15 以「足而止」名 enough（Law.rests_iff），同字二义。",
+   "fix": "以律之形立名：經作「不足無所生」，名作「足而後有所生」（「而後」示必要，与大学「足法而後民法之」同构）。主证用成唯识「五、待眾緣。謂此要待自眾緣合，功能殊勝，方成種子。」（FO1-R-CY19）。孟子、至乐二证改标为「带充分之全称，脊柱只给必要（定域）」。若要保留「擇」，须先有一条定理把「哪些形成在 t 有所生」读为 Becoming.Selection 意义上的选择，并说明它不经任何选择者之耦合；否则不用「擇」。C02 之「足」与 C15 之「足而止」如何分，请整合者裁定。"
+  },
+  {
+   "concept": "演化 evolution（Becoming.Evolution）",
+   "name": "傳擇",
+   "verdict": "revise",
+   "issues": "(1) 继承了「傳」（结构不合）与「擇」（实例未证、方向）的问题。(2) 名只含四项中的两项，没有世系，也没有变异；fit「合成恰是演化模块之四项」不实。(3) Becoming.Evolution 是一组律，不是一个谓词：price 无前提；选择与传递之界在 Acting、Dependent、TransmitsWithin 之下。docstring 明言「That descendants carry their parents' dependences is a premise」，选择项本身（协方差）未陈述。立单名会把前提藏起来，把前提读成已成之事。",
+   "fix": "不为整个模块立单名。中华本以其组成陈述：所生、因而所益有度、足而後有所生、其間所取所與定其後可傳之所需之界（Flow.transmitted_within），各用已定之名，并在說中写明传递是前提、选择项本身未陈述。若必须立名，待「傳」「擇」裁定之后再组合。"
+  },
+  {
+   "concept": "增益 gain",
+   "name": "益",
+   "verdict": "revise",
+   "issues": "定义不一。本簇定为「一族跨一步之存量上升」；C06 定为「一族被给予多于其所取」；mapper 自己在所損益 not_carried 中又写「C06 之益（一族跨一步之净流入）」。章 §10 词汇表把「net giver / gain（净给予者／增益）」并为一行，定义为净给予之关系项；而 Gain 模块以 gain 指存量之升（Web.rises_late_of_new：新需要升）。存量之升与净给予不是同一谓词，二者之间的联系正是定理 Flow.rise_netGiver（算入其余，无前提）。若「益」兼两义，「凡益必有益之者」就读成定义，掩去了定理的内容。",
+   "fix": "定「益」为一族之存量跨一步上升（W.stock cs t < W.stock cs (t+1)），与「新需要益」（Web.rises_late_of_new）一致。「益之者」为 NetGiver。以 rise_netGiver 作二者之间的定理（算入其余，无前提）。通知整合者改 C06 之定义，并与词汇表之行对齐。"
+  },
+  {
+   "concept": "净给予者 net giver（Flow.NetGiver）",
+   "name": "益之者",
+   "verdict": "keep",
+   "issues": "结构相合：NetGiver 是参与此步、向一族给予多于其所取者；「或益之」之「或」为不定之某者，「莫益之」为无净给予。rest_netGiver_iff 之描述正确。依赖「益」之定义修正。",
+   "fix": "「益」修正后，在說中写明：在 withImbalance 中，益之者可以是其余（none），不必是参与之形成。"
+  },
+  {
+   "concept": "新 novelty（Web.rises_late_of_new 等）",
+   "name": "日新",
+   "verdict": "revise",
+   "issues": "(1) 价值。脉络中「日新」每个用例都是德之辞：系辞「日新之谓盛德」（WP-XCS-C05-S04-R02，与「生生之谓易」同章并举）；大学汤盘铭（RU1-DX-05-R01，normative，用以支持「無所不用其極」）；大畜彖「日新其德」；杨倞「爲治當日新」。理论之新不带值，可以是退化之新：Gain 只要求存量上升，与成生无关。名之正值恰是 brief 所警的「凡新皆善」，又在系辞中与生生并列，容易把新读成生生。(2) 结构。汤之盘是洗濯之器，朱熹读为「去其旧染之污而自新」、复其初，是还原；不是「自某步起每一构型皆异于先前」。(3) 这是 C06 之名，本簇只是沿用。",
+   "fix": "交整合者与 C06 复核。结构上最准的是 C05「復」之否定：「無復」，即自某步起无一构型复返（∀ i<j，config(T+i) ≠ config(T+j)）。以泰九三「无平不陂，无往不復」（YD-JG11，JF-R032，已核）作相对之定域条：有界且其余不给之整体必复（Flow.whole_recurs_of_rest_idle）。若保留「日新」，not_carried 须明写「盛德、自新之正值；复初之还原义；与生生之并举」，說中第一次出现时说明新可以是退化之新；可加最中性之证，韩康伯「體化合變，故曰「日新」」（YCM130-H5-H-04-R01）。"
+  },
+  {
+   "concept": "选择者之模型 the selector's model（Relabel.selected_alike_iff、Learning.selects_through_lumping）",
+   "name": "所以擇",
+   "verdict": "revise",
+   "issues": "(1) alternatives 中关于「識」的理由是错的。章 §10 词汇表（THE-THEORY-OF-BECOMING.md 第 1283 行）定「识」为 A formation's own further course, factoring through the lumping its couplings make（Web.SelectsThrough）；「登记（registration）」已退役（§3 读法、N6）。Becoming.Learning.Training.web_selectsThrough_iff 证明 Web.SelectsThrough 就是经「耦合下相同」之归并的选择（Training.Through）；selects_through_lumping 证明经映射之选择就是经其归并之选择，也是 Training.Through。所以识与选择者之模型是同一结构，差别只在归并由谁的耦合或由哪个映射给出。说「識正是模型所不是者」与脊柱相反。C10 又以「缘感而择」名 Web.SelectsThrough，三名同构。(2) fit 以论语 7.27「多見而識之」之「識」（记）为记录，与已采用之「识」同字异义，在中华本中会混。(3) 「记录给出区分，不给出相关」是读法：Selection.lean 与 Learning.lean 中 Ren 16 日更正的 AI 读法（memory gives distinctions, not their relevance），不是定理；concept 把它与定理并列，未标「讀」。(4) 「论语把择与识分为二事，正是“记忆不是相关”」过强：该章只是把二者并列为「知之次」（RU1-LY-07-27-R01）。",
+   "fix": "alternatives 中「識」的理由改为：「识（已采用，Web.SelectsThrough）是本概念在“归并由形成自身之耦合给出”时之情形（Learning.Training.web_selectsThrough_iff 与 Learning.selects_through_lumping 同为 Training.Through），所以擇名一般之映射。」请整合者与 C08、C10 定识、缘感而择、所以擇三名之分工。fit 中「正是」改「可读为」，并标「讀」。concept 中「记录给出区分，不给出相关」标为读法（16 日之更正），以 selects_not_right_of_parted 为证。说中注明论语 7.27 之「識」（zhì，记）不是已采用之「识」。"
+  },
+  {
+   "concept": "经他者实际回应之学（Becoming.ResponseLearning）",
+   "name": "取法",
+   "verdict": "revise",
+   "issues": "(1) 天道「大匠取法焉」所取的是静水之平，作为准（参照）。其结构是对照参照之核（Copying.inspect_le_iff：参照在该处忠实，检查才不增缺失），不是经他者之回应而成程序；水不是有所装程序之教者。(2) fit「所取只能是所行……恰是 learn_through_interface」过强。该定理说的是：所学只取决于教者所装之程序与存量（与教者其他状态无关），并未区分「所行」与「所令」。ResponseLearning 的结构还包括受者所问（query）与所汲之存量，取法中没有「问」。(3) 各律只在所述构造中成立（两插座程序、受者二十五单位八部件），名之說须标明。",
+   "fix": "天道之证改标为参照义，移作 shangjun 一类核对之证，或删去。fit 改为：「所得只经教者之实际回应（send_interface、lesson_interface），从教者所学只取决于教者所装之程序与存量（learn_through_interface）；“所行”与“所令”之分为读法。」并加注「诸律在所述构造中」。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-gu-gan-fu-zhi-gu",
+   "verdict": "revise",
+   "issues": "agreement 过强。RuleHandoff 是声明的有限治理协议（名册、表决、14 日、三分之二）。「只有采纳改规则」由 step 之定义而得（rule_kept、Gated.kept_along），不是对每个世界成立之律。successor_can_revise_inherited_rule 是一个 decide 见证。爻辞本身是占断（JG2-H18-L1-R01 judgment；JF-R052 constraint）。mapper 自驳 (c) 已承认偏强。names_used 列「傳」，但此处无 TransmitsWithin。",
+   "fix": "kind 改 scope。reading 加一句「RuleHandoff 为声明之协议，所述结构在其中由构造成立」，并补一般律 Law.perturbation_reabsorbed：下一构型只取决于规则时，只改状态者被吸回，所以「幹」须及于规则，「裕」者所遗照行。names_used 去掉「傳」。"
+  },
+  {
+   "id": "yi-xugua-fufu-fuzi",
+   "verdict": "keep",
+   "issues": "定域正确：descends_of_comes 给出一个给予者就够；TwoGivers.twofold 是见证；TransmitsWithin.fromSome 引用对。小处：TwoGivers 中两给予者彼此无关（第二给予者无所依），夫妇之结合不在脊柱之中。",
+   "fix": "reading 加一句：「TwoGivers 之两给予者彼此不必有任何关系；夫妇之结合不被表示。」"
+  },
+  {
+   "id": "yi-xici-yan-hui-bu-fu-xing",
+   "verdict": "keep",
+   "issues": "结构相合：所过之候选不再取用（index_le_succ），失则移（index_missed），在有相合候选处不合有界（index_le_of_accords、misses_not_recurring），对角程使「不复行」不保证得正（diagonal_misses）。所用名「過則改」与 c08v2 一致（c08 早版为「学」）。",
+   "fix": ""
+  },
+  {
+   "id": "zhuxi-dun-shen-tui-dao-heng",
+   "verdict": "revise",
+   "issues": "「在传递前提下」所指的是 Web.ByPassing（经传之前提），不是 TransmitsWithin。names_used「傳」按名表指 TransmitsWithin，一名二义。定域本身正确。",
+   "fix": "「传递前提」改为经传之前提（ByPassing）所定之名；names_used 随「傳」之裁定改。"
+  },
+  {
+   "id": "suzhe-deng-xiang-chuan",
+   "verdict": "revise",
+   "issues": "同上：passes_within、empty_stays 属经传之前提（ByPassing），文中称「传递」。Whole.needs_new 是不能驳倒之形式（¬∀…¬Arises），reading 写成肯定。",
+   "fix": "改称经传；needs_new 句改为「不能有一段之后再无新部分生起」。"
+  },
+  {
+   "id": "daxue-zu-fa-min-fa-zhi",
+   "verdict": "keep",
+   "issues": "定域正确，见证都已标出，learn_through_interface 之「其」指教者，没有错。records 空，确实没有记录引用 ResponseLearning。",
+   "fix": ""
+  },
+  {
+   "id": "lunyu-xing-jin-xi-yuan",
+   "verdict": "revise",
+   "issues": "(1) Drawdown 读错了。二后代从开始而在之步起所需就不同（same 需 2，varied 需 1），这是起点之别：所損益发生在出生之时。分化又出于亲代之取用，不出于后代自己之習。所以「相远出于所损益与其间之活动，不出于起点之别」自相矛盾，Drawdown 不是「性相近、習相遠」之例。(2) transmitted_within 界的是所生之所需，不是一个形成自身之习得。(3) 只有见证，没有「習必使相远」之律：lessons_change_program 是同一教者、同一新受者、不同之课而得不同程序；every_cohort_holds 反而显示同课使各代相同。agreement 过强。",
+   "fix": "删去 Drawdown 与 transmitted_within。以 lessons_change_program 为主（见证：同始而异课则异），加 every_cohort_holds（同课则同）。kind 改 scope：「習相遠」在课不同之处可以成立（见证），课相同之处不成立。"
+  },
+  {
+   "id": "lunyu-shang-zhi-xia-yu-bu-yi",
+   "verdict": "keep",
+   "issues": "相分正确：固定之性加能力之等。见证用法对（limited_changes_then_stays、short_receiver_not_repaired、lessons_change_program）。",
+   "fix": ""
+  },
+  {
+   "id": "zhongyong-shan-ji-ren-zhi-zhi",
+   "verdict": "revise",
+   "issues": "(1) 「目标怎样被传递，章中明言不由动力学决定」不准。Capture 写的是 What is not derived: … that offspring carry their parents' targets；Seeking 写的是 the formation and transmission of such targets, is not stated。这是未导出、未陈述，不是「不由动力学决定」。(2) gap 缺表示：Seeking 之目标是确定律之状态谓词，Flow／Web 中没有「某形成持某目标」的表示；Capture 只以名单 ms 给出持者。(3) RuleHandoff 之引用是协议类比。",
+   "fix": "(1) 改措辞为「Capture 与 Seeking 明言后代是否带亲代之目标未被导出（是前提）」。(2) gap 先要求一个 Web 层的持目标谓词（如 holds : Nat → X → Prop），再陈述 DescendsAt 下之条件律。(3) 标「RuleHandoff 为协议」。"
+  },
+  {
+   "id": "zhongyong-wen-gu-zhi-xin",
+   "verdict": "keep",
+   "issues": "定域正确：determines_lumped_iff、lumped_right_iff、every_determines_nothing、no_prefix_fixes_next 都如所述。「记忆不是相关」应标为读法。",
+   "fix": "「记忆不是相关」后加「（读，16 日之更正）」。"
+  },
+  {
+   "id": "xunzi-xing-wei-zhi-fen",
+   "verdict": "revise",
+   "issues": "(1) 与 RO ru-xunzi-zheng-ming-wei-cheng 结构不同。RO 把伪映到规则之形成（Pace.rule_at_reading），把性映到规则不起作用时状态自己之律（adaptive_state_law_iff）；本条把性映到 InheritsAt，把伪映到 Web.Forms 与 reconstructs_program。说「与二者一致」掩去了两个不同的结构。(2) 「其后之所需可被其间之活动改变（Flow.transmitted_within）」误述：该律界的是所生之所需（以给予之后之取与计），不是一个形成在其后之所需。(3) 「性是从给予者所因」须加条件「在承继成立之处」：World.novel 显示开始而在时之依存可以在承继之外形成。",
+   "fix": "写明两映射之关系：性是开始而在时所持，含所因与新成；伪是其后经课或经规则之形成，Pace 是规则一层之读法。或者直接用 RO 之结构。删去 transmitted_within，或改述为「所生之所需之界随其间之取与而移」。「所因」加条件。"
+  },
+  {
+   "id": "zhangzai-qi-zhi-pian",
+   "verdict": "revise",
+   "issues": "相分正确。小处：Drawdown 是见证，未标；「其间之取与改变其后之所能（transmitted_within）」误，该律界的是所生之所需，不是所能。",
+   "fix": "Drawdown 标「见证」；transmitted_within 一句改为「其间所取所与移动所生之所需之界」。"
+  },
+  {
+   "id": "zhuangzi-lunbian-bu-ke-chuan",
+   "verdict": "revise",
+   "issues": "(1) Law.merged_stays 说的是律之一步把两构型带到同一构型（C05「同歸」），而言语是读法或映射之归并。以 merged_stays 说「言语是一个归并」混了两个结构。(2) empty_stays 属经传之前提，文中称「传递」。",
+   "fix": "言作为映射，用 Relabel.selected_alike_iff 与 Learning.selects_not_right_of_parted：映射所并者，经它之选择无一能分。merged_stays 只在把「教者→受者」读作一律之步时用：两技经言得同一受者状态，此后不再分开。改称经传。"
+  },
+  {
+   "id": "zhuangzi-lvliang-zhang-yu-shui",
+   "verdict": "revise",
+   "issues": "agreement 过强。Web.InheritsAt、Web.Forms 是定义，lessons_change_program 是见证，transmitted_within 讲的是所生之所需，不是游者自身之长成。",
+   "fix": "kind 改 scope（见证：经所处之课可以成不同之程序）。或者采用 RO 对荀子「伪」之结构（Pace.rule_at_reading：规则在读取步由快构形给出），把「長於水而安於水」读为规则之形成。删去 transmitted_within。注明「長」近 C08 之「習」（训练）。"
+  },
+  {
+   "id": "mozi-tianzhi-hou-zi-shun-xian-jun",
+   "verdict": "revise",
+   "issues": "agreement 过强：handoff_preserves_record、repeated_handoff_inherits、nonadopting_history_inherits 都是声明协议中由定义成立的。更近的一般结构是规则俘获：Becoming.RuleCapture（读取步之规则读所选者之份额，favouring_locks、locked_stays），以及 Capture 之读法「胜者书写其规则」（D26，即 C10 之「劫」「柄移」）。mapper 自驳已承认偏强。",
+   "fix": "kind 改 scope。reading 以 Law.perturbation_reabsorbed 为主，加 RuleCapture.favouring_locks（标「最近，份额之读须核」）；RuleHandoff 标为协议类比；与 C10 之劫、柄移交叉引用。"
+  },
+  {
+   "id": "mozi-minggui-zhu-bo-jin-shi",
+   "verdict": "revise",
+   "issues": "墨子以为刻于金石、多书几份就够了。脊柱中每个承载者都终止时，整体只能经新部分不断生起而持续（Whole.needs_new，不能驳倒之形式）；金石也会终，加承载者只是延迟。所以是定域，不是相合。Web.Whole 是定义。empty_stays、ends_within 属经传之前提。",
+   "fix": "kind 改 scope：「重之」延迟而不免终，持续需要不断重抄重刻（needs_new）；Web.Whole 标为定义；改称经传。"
+  },
+  {
+   "id": "mozi-suo-xun-bi-huo-zuo",
+   "verdict": "revise",
+   "issues": "reading 本身正确：「作」恰在经传之前提于某步不成立之处；自始即在者不要求有人作之。只是「在传递前提下」与 names_used「傳」所指是 ByPassing，不是 TransmitsWithin。",
+   "fix": "改称经传之前提（ByPassing），names_used 随裁定改；reading 加一句「作即经传之前提在某步不成立之处」；与论语 7.1「述而不作」并列（见 missing）。"
+  },
+  {
+   "id": "wuzi-yi-ren-xue-zhan",
+   "verdict": "keep",
+   "issues": "定域正确。doubling_iff、required_add、lineage_all_iff、lesson_stock、every_cohort_holds 都如所述。b 倍之缺口已核对：R_b(n+1,k)=k+R_b(n,b·k)，R_b·(b−1)+k=k·bⁿ，b=2 时就是 doubling_iff。",
+   "fix": ""
+  },
+  {
+   "id": "hanfei-zhi-xing-shou-ming",
+   "verdict": "revise",
+   "issues": "「所学只取决于受者所装之程序、存量与所收之实际回应（learn_through_interface）」误：该定理（learn t stock parts es = learn (source p t.stock) stock parts es）说的是教者 t 所装之程序与存量。相分之判正确。",
+   "fix": "改为「从教者所学只取决于教者所装之程序与存量（learn_through_interface），以及受者之存量、部件与所问」。"
+  },
+  {
+   "id": "weishi-zhongzi-liu-yi",
+   "verdict": "revise",
+   "issues": "(1) 「性決定」之性是善、恶、无记之性（「隨因力生善、惡等」），讲的是价值随因而定，不是依存之承继。理论不让意义由动力学决定（Web.significance_undetermined）。只有「引自果」（色种生色、心种生心）可以读为承继。(2) 「承继约束之世界」措辞不准：World.drop_but 讲的是 Premise.transmitting（传递）约束之世界。",
+   "fix": "把性決定移出承继之对应，标为「价值随因，脊柱不给」；只以引自果对 inherited_from_giver、no_new_dependence；drop_but 一句改为「传递约束之处」。"
+  },
+  {
+   "id": "weishi-shiqi-wu-yin",
+   "verdict": "revise",
+   "issues": "(1) gap 提法不成立。Web.drop 只改 requires，不改水平、活动、汲取、所需与流（Transmission docstring；drop_keeps_next、drop_not_inherits），所以「以此步之给予、取用与水平陈述」的充要条件不可能存在，与 World.vacuous_of_drop_invariant 同理。已有的结果：Flow.inherits_of_drawn（DependsOnDrawn 加 DrawingDepends 给出承继），World.drawn_and_link_needed（二者缺一不可）。(2) 「章 §9 待决第 9 项」应为 §8.1 第 9 项；§9 是形式脊柱。",
+   "fix": "gap 改为「以给予者之汲取与依存（draws、requires）陈述之充要条件」，并注明：只用给予、取用、水平陈述者，被 drop 不变性排除。改章节号。"
+  },
+  {
+   "id": "weishi-benyou-shiqi",
+   "verdict": "keep",
+   "issues": "相分正确，关系内核（始起即熏习）写出了，「自始被承载只是初态，是建模之所给」也准确。",
+   "fix": ""
+  },
+  {
+   "id": "hanyu-yuandao-chuan",
+   "verdict": "revise",
+   "issues": "「脊柱中传是多线的」过强：脊柱容许多线（Drawdown 一亲二所生；TwoGivers 一所生二给予者），但不断言传是多线的。fork_retains_source 在声明协议中由定义成立（rfl）。present_back、empty_stays 属经传之前提。",
+   "fix": "改为「脊柱不要求单线：一亲可有多所生（Drawdown），一所生可有多给予者（TwoGivers），协议中分叉保留其源」；改称经传。"
+  },
+  {
+   "id": "lunyu-yin-sun-yi",
+   "verdict": "revise",
+   "issues": "(1) price 之「因」项只在每亲一所生时（selected_uniform 取 k=1）才是亲代之量。殷→周是单线，可以满足，但须写明。(2) 若「所益」是新条目（周有而殷无之礼），就在承继之外（no_new_dependence；World.novel）；TransmitsWithin 只界所需之升，所损不限。(3) transmitted_supported 要在 Acting 与 Dependent 之下才成立；gap 第二式也须加此二前提。",
+   "fix": "把上述三点写入 reading；gap 第二式加「在 Acting、Dependent 之下」；notes 中「章 §9」改为 §8.1 第 9 项。"
+  },
+  {
+   "id": "zhuangzi-wanwu-jie-zhong",
+   "verdict": "revise",
+   "issues": "「若環恰在有界且其余不给之处成立」：whole_recurs_of_rest_idle 只给充分条件，不是「恰在」。「开放之处可以不复归」缺证。",
+   "fix": "「恰在」改为「在有界且其余不给之处必然（充分）」；补见证 Web.counting_new 与 Flow.counting_given_by_rest：其余每步给一单位，每步皆新。"
+  },
+  {
+   "id": "zhuangzi-zhong-you-ji",
+   "verdict": "keep",
+   "issues": "定域正确；「機」与已采用之「机」（D52）之碰撞已标出。原文「得水則爲」带充分，脊柱只给必要，reading 已用「定域」处理。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-wu-lei-zhi-qi",
+   "verdict": "keep",
+   "issues": "相合正确，平衡之条件已写出（descends_of_comes），rise_given 无前提。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-chuan-jiu-lun-lue",
+   "verdict": "revise",
+   "issues": "merged_stays 给的是失而不复得（单调），不给「久则必略」；present_forgets 要求轨道在有限名单之内；ends_within 属经传之前提，文中称「传递」。",
+   "fix": "reading 改为「失去之区分不复得（merged_stays）；轨道在有限名单内时，有限之现在必有遗忘（present_forgets）——“久则略”在有限承载处成立」；改称经传。"
+  },
+  {
+   "id": "shangjun-dingfen-fa-ling",
+   "verdict": "keep",
+   "issues": "定域正确：券书核对与 Copying.inspect_le_iff 结构相合，「字不变不等于所谓不变」与 faithful_loses_distinction 相合，RuleHandoff 部分已在定域中标为协议。",
+   "fix": ""
+  }
+ ],
+ "missing": [
+  "中庸17「故天之生物，必因其材而篤焉。故栽者培之，傾者覆之。」（RU1-S-ZY；RU1-ZY-17-R01、R02，已核）：经支持之选择最直接的先秦对应。相分在于天作择者，以及「大德必受命」之值与位；关系内核是 unsupported_childless：足是必要而非充分",
+  "孟子告子上7「富岁，子弟多赖；凶岁，子弟多暴。非天之降才尔殊也，其所以陷溺其心者然也。」与「虽有不同，则地有肥硗，雨露之养，人事之不齐也」（RU2-S-MZ；RU2-R0054，已核）：同种之差出于支持之条件，不出于禀赋。与 transmitted_supported、unsupported_childless 对应，可与论语17.2并列",
+  "论语7.1「述而不作，信而好古」（RU1-LY-07-01）：墨子非儒所驳之本。经传之前提下每个开始都是一次经传（ByPassing.begins_passed），作在此前提之外，属定域",
+  "中庸18「父作之，子述之」（RU1-ZY-18，已核）：作与述在世系上之分工",
+  "杂阿含「不以所生故，名為婆羅門，業為婆羅門」（FO1-S-SA，刘宋译，已核）：否定以出身定等，以业定之。与 DescendsAt 不带位、适应度不定义、Flow.transmitted_within 相合；也证「所生」之出身义（方向）",
+  "孟子离娄上「不孝有三，无後为大」（RU2-U-MZ07-26，已核）：以有无后代定其值。属相分：后代之数只是 price 中之权，适应度不定义",
+  "韩非五蠹「世異則事異」「事異則備變」「上古競於道德，中世逐於智謀，當今爭於氣力」（FA1-S-H49；FA1-H49-R004，已核）：所宜随条件而变，属定域（支持只相对于此步之水平，适应度不定义）；争之层属相分",
+  "熏习之环：蕅益《大学直指》「現行熏成種子」（IN2-S08；IN2-R0096）与「種子生現行」（IN2-R0098），摩诃止观「世世熏習則成根性」（FO2-MH，已核）：其间之活动定其后之所传，对应 transmitted_within，可交 C11 作回路",
+  "荀子劝学「蓬生麻中，不扶而直」「其質非不美也，所漸者然也」（RU2-S-XZ01，已核）：由所处之关系而成，可与达生、习相远并列",
+  "荀子大略「三王既以定法度，制禮樂而傳之，有不用而改自作，何以異於變易牙之和，更師曠之律？」（RU2-S-XZ27，已核）：以所传为不可改之准，属相分（TransmitsWithin 容变）",
+  "戴震《孟子字義疏證》「愛其生之者及愛其所生」（RU2-S-V3Q01，清，已核）：「所生」（后代）与「生之者」（给予者）之方向之证",
+  "郭店《太一生水》「四时4者，○（阴）○（阳）之所生。○（阴）○（阳）者，神明之所生也。」至「天○（地）5者，大（太）一之所生也」（V130-LAO-GD，转录含复原字，已核）：一条所生之链回到唯一先在之根，属相分；同篇「复相○（辅）」为关系内核",
+  "泰九三「无平不陂，无往不復」（YD-JG11；JF-R032，已核）：与新相对之定域，有界且其余不给之整体必复（Flow.whole_recurs_of_rest_idle），宜与 C05 共用",
+  "名：DescendsAt 中给予者 g 之位（建议「生之者」）",
+  "名：price 本身（词汇表称「传递律 law of transmission」），本簇只为其中的 raised、lowered 立了名",
+  "名：若「傳」改派给 PatternPassing，TransmitsWithin 之陈述名（建议「因而所益有度」）；反之则 PatternPassing 之 Web.PassesAt 与 ByPassing 需另立名",
+  "名：Flow.TransmitsFromSome（由某一被支持之给予者传；yi-xugua 条已用到，无名）"
+ ]
+}

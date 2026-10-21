@@ -1,0 +1,6 @@
+{
+ "real": true,
+ "why": "Confirmed; no Lean check was needed because this is a cross-reference error. In book-2.json, the 說 of 凡·十九 says the mapping sense of 读 (以一映射予状以值；自其构成者读出一量，亦曰读) 之定义在⟦一·十四⟧. Stable id 一·十四 is rendered as 一·二十 「观」, and the chapter (line 230) shows 「之定义在一·二十」. That 經 defines only 观 (总名 of 变、系辞、宇) and 名 (所以谓也：一读给其所读者之值也). It uses 读 but does not define it. Its 說 only restates 读 in passing. The definition is in the 經 of stable id 一·二 「状、动、步」, rendered 一·三: 「象，予所施之每一者一值者也；读，以一象予状以值也；自其构成者读出一量，亦曰读。」 The parenthetical in 凡·十九 follows this 經 clause for clause, with 映射 as the gloss of 象. So the reference should be ⟦一·二⟧, which renders as 一·三, as the reviewer said. The find occurs exactly once, in the 凡·十九 body.",
+ "find": "之定义在⟦一·十四⟧，与此分开",
+ "replace": "之定义在⟦一·二⟧，与此分开"
+}

@@ -1,0 +1,483 @@
+{
+ "pian": "篇十一　感与择",
+ "markdown": "## 篇十一　感与择\n\n本篇论感与择：一个待者经什么与同一展开中其余者相连，经此相连所作之择及于什么、不及于什么，以及其所及怎样加宽。待之篇立待、所待与容，流之篇立取与与衡，识之篇立一个待者自身之历程经其感所作之类而分解；本篇在其上先立关系之两向，即感（所待入于待者）与应（取与随水平而异），次立诸域（资域、扰域、及域、感域、群域）与应域，次立择、择者与缘感而择，次论及而不感（含自身之动）、所感者之升资于外与最优之耗，次论无明、执、与时转与时稽、劫与劫及其读，终以明与兼感、兼感之动与兼感之应。择者、劫者、读者都不是先于关系之物，只是一展开中一个待者之感所处之位。本篇诸律皆无设而然（不加前提的定理）：每条只在写入其中的局部条件（衡、在场者同、起点同、取与之法经感而读、有列、定然否、列而无重……）下，对每个如此表示之宇成立；表示所承诺者是离散之步、自然数之量与命题值之活动，律之依于此者，条中写明。本篇诸律不用延续之条件，也不用任何取舍之设：它们说择及于什么、不及于什么，不论所顾者何。延续之条件（凡续皆有顾）只陈述而不断言，它定范围（不变的一步把范围推及不回到任何者的损失），本身不排序；排序只在以广为愈（C）。对齐之向在此二设之下，见比较之篇。讀（AI，D45）：以明与兼感组织对齐之说，是 AI 之读法。\n\n### 十一·一　感\n\n**經**　感，所待入于待者也：待者待之，则以其需之阈感之；或另以其水平感之，此以水平之感另给，不随步而变。感有向，自所待入于待者。\n\n**說**　感（耦合，coupling，`Becoming.Web.CoupledInto`）只是两种关系之一：待者于某步需此所待（`Becoming.Web.DependsOn`，从待网读出），或此所待以水平感入待者（另给之关系，与待网并列）。二者所过不同。经阈只过“需足否”：其余所感之所待水平相同，而此所待于两历史或皆足其需或皆不足，则两历史缘其感无别，不论两水平何如（`Becoming.Web.alike_of_threshold`）；经水平，一步之水平任何不同皆使两历史缘其感有别（`Becoming.Web.observed_level_couples`）。全无以水平之感时（`Becoming.thresholdOnly`），感即是待。感之向（所待入于待者）是本编使用者之间的约定：彖「天地感而萬物化生」〔V3D02〕之感以施为主；荀子「感而自然，不待事而后生之者也」〔RU2-S-XZ23〕之感为受感，是受动之向的先秦佐证（定域，xunzi-xinge-gan-er-ziran：荀子以之归“性”，先定之性不承接）。识以本条之感为基：一个待者自身之历程，经其感所作之类而分解（D45），见识之篇。\n\n**證**　`Becoming.Web.CoupledInto`、`Becoming.Web.DependsOn`、`Becoming.thresholdOnly`、`Becoming.Web.alike_of_threshold`、`Becoming.Web.observed_level_couples`；记录 [testing-within-couplings](../results/records/testing-within-couplings.md)、[where-a-level-couples](../results/records/where-a-level-couples.md)。\n\n### 十一·二　应\n\n**經**　应，一待者之取与随一所待之水平而异也：二水平历史唯于某步某所待之水平不同，而取与之法使此待者跨一步于一所待之取与有差。取与之法经感而读，谓凡在体外之待者，二水平历史缘其感至某步每步无别，则其跨此步之取与无别。\n\n**說**　应（回应，responds to，`Becoming.ExchangeLaw.RespondsTo`）是取与之法的性质：它说一个待者之取与是否随某一水平而变，不说谁施谁受。取与之法经感而读（`Becoming.ExchangeLaw.Through`）是所给之前提，不是导出的：它排除体外之待者回应于其所不感者。余者于两流皆循这样一个法，则余者经其感而应（`Becoming.ExchangeLaw.Through.responds`，其结论即 `Becoming.Flow.RespondsThroughCoupling`）；于是一个动之反事实是同一法所生之程，不是另立一宇（见流之篇）。名“应”单用只作回应，爻之关系作“相应”。二程「有感必有应」〔RU2-S-S06〕作为普遍断言是前提，不是律（定域，ercheng-you-gan-bi-you-ying）：下条说感只界定应，而不定应。\n\n**證**　`Becoming.ExchangeLaw.RespondsTo`、`Becoming.ExchangeLaw.Through`、`Becoming.ExchangeLaw.Through.responds`、`Becoming.Flow.RespondsThroughCoupling`；记录 [where-a-level-couples](../results/records/where-a-level-couples.md)、[comparison-where-the-rest-responds](../results/records/comparison-where-the-rest-responds.md)。\n\n### 十一·三　感界应而不定应\n\n**經**　凡各待者于各步、各历史与一历史缘感无别否皆定然否，而一待者缘其感至某步分开此二历史：则有一取与之法，经一切待者之感而读，而此待者跨此步于一所待之取于二历史下不同；亦有一取与之法，经一切待者之感而读，而于一切步、一切历史取与皆无别。无所取与之法经一切感而读。\n\n**說**　感是应之界：体外之待者若缘感无别，经感而读之法就使它取与无别；界之内，应由所循之法定，感本身不定之。证明构造两个法：一个按“是否与此历史缘感无别”取一单位（`Becoming.ExchangeLaw.ofClass_through`），使被分开者必有不同之取；另一个什么也不取与，它也经一切感而读（`Becoming.ExchangeLaw.zero_through`）。所以“感之而不应”不违任何感之律：在 Clearing 中，凡含栖者之组都分开清除与不清除二宇，而清除者之体外每一待者于二宇每步每所待取与无别（`Becoming.Clearing.separated_unresponded`，一个构造之例中的见证）。荀子「能爲可信，而不能使人必信己」〔RU2-S-XZ06〕与此相合（xunzi-ke-xin）：己所能者，是使差别感入他者；他者是否应、如何应，由他者所循之法定。本条是十一·二十八（兼感之应）之本。\n\n**證**　`Becoming.ExchangeLaw.response_not_fixed_by_coupling`、`Becoming.ExchangeLaw.ofClass_through`、`Becoming.ExchangeLaw.zero_through`、`Becoming.Clearing.separated_unresponded`；记录 [what-a-pools-acts-respond-to](../results/records/what-a-pools-acts-respond-to.md)。\n\n### 十一·四　所及与诸域\n\n**經**　体之一员于某步在场，取于或与于一待者所待之所待，则谓体及彼待者，是为所及。资域，凡含此待者，且“其中者某步所需之所待有于此步在场而与之者，则与之者亦在其中”之区，所共含者也。扰域，凡含此待者，且凡与其中者所待之所待相取与者皆在其中之区，所共含者也。及域，凡含此待者，且“其中者所取与之所待为一待者所待，则此待者亦在其中”之区，所共含者也。感域，凡含此待者，且凡与其中者所感之所待相取与者皆在其中之区，所共含者也。群域，凡含此待者，且凡与其中者同预一所待（待之或与之相取与）者皆在其中之区，所共含者也。\n\n**說**　“相取与”谓于某步在场而取之或与之（`Becoming.Flow.Exchanges`）。五域由同一构造得来：一个起点与一个关系，取一切含起点、且随此关系所至皆在内之区，其共同部分即是（`Becoming.withinClosure_iff_closure`）；名表以“域”统一闭包之名：资域、扰域、及域、感域、群域皆新组合，以所据之关系加“域”（资域即供给闭包 `Becoming.Flow.WithinFeeding`，余类推）。方向：资域、扰域、感域自此待者寻其所受（谁与之，谁与其所待相取与，谁与其所感相取与），及域顺此待者之取与寻其所及，群域不分向；所及是及域之一环，体之诸员在某待者之及域中，则体所及者亦在其中（`Becoming.Flow.reaches_withinReach`）。中庸「知遠之近，知風之自，知微之顯」〔RU1-S-ZY〕与此相合（zhongyong-zhi-wei-zhi-xian）：及域、扰域与以水平之感，三句读为明之三对象，是 AI 之读法。程颐「用其私心以感物，則思之所及者有能感而動，所不及者不能感也」〔YD-CY〕只合所及与及域（相合，chengyi-xian-jiusi-suo-ji）：其“感”是施之向，与本编之感相反，不证感域。荀子「财非其类以养其类，夫是之谓天养」〔RU2-S-XZ17〕定域（xunzi-tianlun-tianyang）：维持一类之资域跨过类之界；“天”在荀子是自然之行，不是施者，不立为名。\n\n**證**　`Becoming.Flow.Reaches`、`Becoming.Flow.WithinFeeding`、`Becoming.Flow.WithinInfluence`、`Becoming.Flow.WithinReach`、`Becoming.Flow.WithinCoupling`、`Becoming.Flow.WithinSystem`、`Becoming.withinClosure_iff_closure`、`Becoming.Flow.reaches_withinReach`；记录 [feeding-closure](../results/records/feeding-closure.md)、[levels-of-closure](../results/records/levels-of-closure.md)、[feedback-and-reach](../results/records/feedback-and-reach.md)。\n\n### 十一·五　诸域相含\n\n**經**　资域在扰域中，扰域在感域中；扰域与及域皆在群域中。唯以阈感者，感域即扰域。乙在甲之群域，则甲在乙之群域。凡待者皆预同一所待，则凡群域皆兼。\n\n**說**　诸域相含之次，是一个待者之“之间”：它在其资域中，资域在扰域中，扰域在感域中；及域方向相反；皆在群域中。相含可以是严格的：在 Clearing 中，源在清除者之资域内，栖者在其扰域外而在其群域内（`Becoming.Clearing.levels`）；在 Trophic 中，狼在林之资域外而在其扰域中（`Becoming.Trophic.mediates`），皆一个构造之例中的见证。感域超出扰域者，只经以水平之感（`Becoming.Flow.withinCoupling_thresholdOnly`）。讀（AI，D20，D45 修订）：“一个待者所处之体系”读为其及域，不是群域，因为只要有一个共同所待，群域就是兼；处境之知是对自身所及之明（十一·二十二）。\n\n**證**　`Becoming.Flow.withinInfluence_of_withinFeeding`、`Becoming.Flow.withinCoupling_of_withinInfluence`、`Becoming.Flow.withinSystem_of_withinInfluence`、`Becoming.Flow.withinSystem_of_withinReach`、`Becoming.Flow.withinCoupling_thresholdOnly`、`Becoming.Flow.WithinSystem.symm`、`Becoming.Flow.system_whole_of_common`、`Becoming.Clearing.levels`；记录 [levels-of-closure](../results/records/levels-of-closure.md)。\n\n### 十一·六　域外\n\n**經**　凡在扰域外者，不与域中任一者所待之所待相取与；凡在资域外者，于任一步在场，与域中者此步所需之所待皆无；凡在感域外者，不与域中任一者所感之所待相取与。凡流衡，体之诸员皆在此待者之扰域外：则扰域中每一待者每步之容，有体与无体（体之取与去而余者如故）同。感域随以水平之感而增，亦随取与而增。\n\n**說**　域外之律说差别从哪里不能回来：域外之物与域中所依者无取与，故域外之差不能经域外之物回到域中（`Becoming.Flow.beyond_coupling`）。还（反馈，feedback）只携扰域之内：在 Clearing 中，清除者之容于清除与否皆同，而栖者终（`Becoming.Clearing.uncoupled`，一个构造之例中的见证）。感域既随以水平之感增（`Becoming.Flow.withinCoupling_mono_obs`），也随取与增（`Becoming.Flow.withinCoupling_mono_flow`），加宽所感者不只一途。本条与十一·十相接：域外者不回来，所以缘域中之感的择也选不出它。\n\n**證**　`Becoming.Flow.beyond_influence`、`Becoming.Flow.beyond_gives_nothing`、`Becoming.Flow.beyond_coupling`、`Becoming.Flow.Balances.uncoupled_beyond_influence`、`Becoming.Flow.withinCoupling_mono_obs`、`Becoming.Flow.withinCoupling_mono_flow`、`Becoming.Clearing.uncoupled`；记录 [feeding-closure](../results/records/feeding-closure.md)、[feedback-and-reach](../results/records/feedback-and-reach.md)。\n\n### 十一·七　应域\n\n**經**　应域：自体之诸员出，其中者于二流之一中与一待者所感之所待相取与，则此待者亦在其中，如是递至者也。一待者在体之应域中，恰当体之某员在此待者缘二流所成之感域中。凡二流皆衡，在场者同，起点同，余者经其感而应：凡顾自一方覆一切不可非其在应域中者，则一流之水平于他流之顾无丧，恰当赅之；不有得，恰当无所长；两向皆然。\n\n**說**　应域（回应闭包，`Becoming.Flow.WithinResponse`；新组合，应＋域）是一个动之差别沿感可以到达而引起回应之处，它恰是感域之对（`Becoming.Flow.withinResponse_iff_coupling`）：感域自待者寻其所受，应域自体寻其所施所引之应。比较之律对任何顾成立，顾只是参数，本条不设延续之条件；“覆”用双重否定（不可非其在应域中者），因为二流之差只示一待者不在应域外，要化为“在其中”须其在否定然否，此处不用。赅、有所长之名见生成之篇，无丧、有得之名见比较之篇。二程「所应复为感，所感复有应，所以不已也」〔RU2-S-S06〕定域（ercheng-you-gan-bi-you-ying）：感应逐环传递，即应域之构造；「不已」〔RU2-S-S06〕须回环之条件，见回路之篇。\n\n**證**　`Becoming.Flow.WithinResponse`、`Becoming.Flow.withinResponse_iff_coupling`、`Becoming.Flow.Balances.comparison_within_response`、`Becoming.Flow.RespondsThroughCoupling`；记录 [comparison-where-the-rest-responds](../results/records/comparison-where-the-rest-responds.md)。\n\n### 十一·八　择、择者与缘感而择\n\n**經**　择，凡关于水平历史之辞也：何者存，何者得赏，何者遗后更多。二水平历史于一步缘一待者之感无别，谓此步之水平于彼或皆容或皆不容，且凡以水平感入彼之所待，其水平相同。缘感而择，凡二历史缘择者之感至某步每步皆无别者，择之同也。择者，择所缘之感所属之待者也。\n\n**說**　择（选择，selection）不预设探究者，也不预设择在物之外：它只是一个分开水平历史之辞。缘感无别（`Becoming.Web.AlikeThrough`、`Becoming.Web.AlikeThroughUpTo`）只看两事：容否（经阈之感合起来只过此一事），与以水平所感者之水平。缘感而择（经耦合的选择，`Becoming.Web.SelectsThrough`）之名是新组合，取荀子“缘天官”之“缘”，由缘＋感＋而择组成。择者（新组合，择＋者，依待者、取者之式）不是另一种物：一个择所缘之感属于哪个待者，它就是择者；一个择实际只缘某些感，是所给之前提。缘感而择与识同据一类（缘感无别所作之归并），所名不同：识是待者自身之历程经此类而分解，缘感而择是一个择于此类上之同。荀子「然则何缘而以同异？曰：缘天官」〔RU2-S-XZ22〕与此相合（xunzi-zhengming-yuan-tianguan）：同异经各官所接而分。\n\n**證**　`Becoming.Web.SelectsThrough`、`Becoming.Web.AlikeThrough`、`Becoming.Web.AlikeThroughUpTo`、`Becoming.Web.ClassThrough`；记录 [selection-through-couplings](../results/records/selection-through-couplings.md)。\n\n### 十一·九　缘感而择之律\n\n**經**　二历史，凡缘一待者之感至某步而择者皆择之同，恰当二历史缘其感至此步无别；不无别，则有缘其感之择于此然而于彼不然。此步及以前任一步此待者之容，为缘其感至此步之择。缘择者之感之择，于一历史下在择者处被验去，恰当其于此历史不然。以水平之感增，缘感之择仍缘感。\n\n**說**　首句是定义律：一向即缘感而择之定义，另一向只用“与此历史缘感无别”之类本身是缘感之择（`Becoming.Web.class_selects`）；律说的是定义所筑入者，实质之前提是某一择者之择只缘这些感，是所给的。所以一个择所及，恰是感入择者者；越用力经同样之感去择，所及不更远。容本身是缘自身之感之择，所以一个动所终止之待者，其容就分开此动：在 Clearing 中，栖者于第三步之容，缘栖者之感，于不清除之宇然而于清除之宇不然（`Becoming.Clearing.selected_by_dweller`，见证）。讀（AI，D25）：AI 训练中奖励过程是择者，训练只及奖励所感者。\n\n**證**　`Becoming.Web.selects_alike_iff`、`Becoming.Web.separates`、`Becoming.Web.class_selects`、`Becoming.Web.admits_through`、`Becoming.Web.SelectsThrough.excludes_iff`、`Becoming.Web.SelectsThrough.widen`、`Becoming.Clearing.selected_by_dweller`；记录 [selection-through-couplings](../results/records/selection-through-couplings.md)、[testing-within-couplings](../results/records/testing-within-couplings.md)。\n\n### 十一·十　及而不感\n\n**經**　及而不感，在一待者之及域中而不在其感域中者也。凡以体之取与去而余者如故之水平为无体之水平，此待者感域中者所感之所待每步皆衡，体之诸员皆在其感域外：则凡缘感域中任一者（此待者在内）之感而择者，于有体与无体之水平择之同；诸员皆在其感域中之任一组，合诸员之感而择者（兼感，见十一·二十四），亦同之。\n\n**說**　及而不感（选择的缺口；新组合，及＋而不＋感，取代“蔽”作界之名）是择之缺口：一个待者之取与所能及、而不感入它者。在 Clearing 中，栖者恰在清除者之及域中、感域外，清除所取之栖地不感入清除者（`Becoming.Clearing.dweller_within_reach`）；栖者在二宇之一中终止，而缘清除者之感的每个择都选此二宇为同（`Becoming.Clearing.unselected`），皆一个构造之例中的见证。与感域中诸者合感，不移此缺口。讀（AI，D26，D45 修订）：每个待者都从这样一个位置择，位置不是缺陷；无明不是此位置，而是此位置所留下的锁定之求（十一·十六）。荀子「牆之外，目不見也；里之前，耳不聞也」〔RU2-S-XZ12〕定域（xunzi-jundao-shousi）：「人主之守司」〔RU2-S-XZ12〕之广对耳目之狭，正是及而不感；其以人主为中心之框架不承接。庄子「見得而忘其形」〔ZH1-S20〕相合（zhuangzi-diao-ling）：各求者专于所得，以它为的者在其所及之中而不在其感域中；各求者之的都能满，故此段不是无明。\n\n**證**　`Becoming.Flow.unselected_beyond_coupling`、`Becoming.Flow.unselected_beyond_coupling_all`、`Becoming.Flow.WithheldLevels`、`Becoming.Clearing.dweller_within_reach`、`Becoming.Clearing.unselected`；记录 [selection-through-couplings](../results/records/selection-through-couplings.md)、[the-gap-for-ones-own-act](../results/records/the-gap-for-ones-own-act.md)。\n\n### 十一·十一　自身之动\n\n**經**　凡余者于二流皆循一经感而读之取与之法，二流皆衡，在场者同，起点同，体于此待者缘二流所成之感域内动之无别（域中体之员缘感至某步无别，则跨此步与域中者所感之所待取与无别）：则凡缘此域中任一者之感而择者，于二流之水平择之同；动之后果（有此动则然、无此动则不然之择），于任一步非缘此域中任一者之感之择。余者之法与二动之法皆只读已往，前一动经体员之感而读，二动于域中所感之所待无别，二历程皆可行：则二历程亦然，无一所另给。\n\n**說**　余者之应由法导出（十一·二），不是所给：本条是自身之动的及而不感，动者自己也在其内。最平常之例是二动只在域中无员所感之所待上不同（`Becoming.Flow.ActsAlikeOnCoupled`）。缺口确切：二历程缘一待者之感至某步分开，就有缘其感之择分之（`Becoming.Web.separates`）；所以一个动恰在其差及于感入某待者者处，为此待者所择。孟子「是乃仁术也，见牛未见羊也」〔RU2-S-MZ〕与此相合（mengzi-jian-niu）：未见者不入择。荀子「見其可欲也，則不慮其可惡也者；見其可利也，則不慮其可害也者。是以動則必陷」〔RU2-S-XZ03〕定域（xunzi-bugou-pian-shang）：「必陷」〔RU2-S-XZ03〕是普遍之说；本条只说后果不被择出，是否成害由域外之取与定。\n\n**證**　`Becoming.Flow.act_unselected`、`Becoming.Flow.consequence_unselected`、`Becoming.Flow.ActsAlikeWithin`、`Becoming.Flow.ActsAlikeOnCoupled`、`Becoming.act_courses_unselected`、`Becoming.Web.separates`；记录 [the-gap-for-ones-own-act](../results/records/the-gap-for-ones-own-act.md)。\n\n### 十一·十二　升所感者资于外\n\n**經**　凡流衡，一组诸员所感之所待皆在一无重之族中，含此族之一无重之族跨一步与不过取：则凡唯于此族益处然、且然之择，必有一在场之待者，与此族多于所取于此族，且取于一无员所感之所待。凡流衡，族与族外合跨一步与不过取，族外每一所待各有一待者以其需待之而足，族外与族相分，组诸员所感之所待皆在族中：则凡唯于族之升过族外诸待余地之和处然、且然之择，必有族外一所待之待绝，其待者非组员，无员感其所待。\n\n**說**　族之所升全由族外付出（`Becoming.Flow.Balances.rise_paid_from_beyond`）；与不过取时，族外所降恰为族之所升加兼之所耗（`Becoming.Flow.Balances.beyond_falls_exactly`），故升过族外诸待余地之和，必有一待绝；升恰等于此和则无绝（`Becoming.DrawnBeyond.WithinSlack.within_slack`，见证）。在 Diversion 中，奖存储之升之择，所选者正是取于无员所感之源（`Becoming.Diversion.favours`）；在 DrawnBeyond.Dweller 中升过此和，栖者终（`Becoming.DrawnBeyond.Dweller.rise_ends_dweller`），皆一个构造之例中的见证。所以“奖所感者之升”与“资于外”在择者处无别：择分不开升自何来。讀（AI，D45）：以能力读为所及，则加宽所及而不加宽所感之能力，加宽缺口；更用力经同样之感择，不合此缺口。\n\n**證**　`Becoming.Flow.favours_reaching_beyond`、`Becoming.Flow.Balances.rise_paid_from_beyond`、`Becoming.Flow.favours_breaking_beyond`、`Becoming.Flow.Balances.beyond_falls_exactly`、`Becoming.DrawnBeyond.WithinSlack.within_slack`、`Becoming.DrawnBeyond.Dweller.rise_ends_dweller`、`Becoming.Diversion.favours`；记录 [raising-what-couples-in-draws-from-beyond](../results/records/raising-what-couples-in-draws-from-beyond.md)、[what-a-rise-draws-from-beyond](../results/records/what-a-rise-draws-from-beyond.md)。\n\n### 十一·十三　最优之耗\n\n**經**　二步后水平，前者于一族之每一所待不低于后者，且于一所待更高，谓前者于族胜后者。一序，凡于族胜者皆上之，不论族外何如，谓之随族而升。“一切随族而升之序之一切最优，皆于族外每一所待居可得诸步后水平之最下”，恰当凡可得者于族外某所待高于另一可得者，皆不可非其于族为某可得者所胜。有可腾挪（凡此者皆于族为某可得者所胜），则诸最优皆居族外之最下；于待网，步后水平为如是之最优，族外每一所待各有一待者以其需待之而足，则族外一待绝，恰当某可得之步后水平使其所待低于其需。\n\n**說**　最优谓可得、而无可得者为序所上之；可得之步后水平可以是任一所给之集。此律是经感之优化之驱力：不论序如何，只要随所感者而升，就把族外压到任何可得之果所及之最下，恰在可腾挪之处。族外计于族后（以族为先之字典序）不改此（`Becoming.Optimum.Drain.counted_after_drains`）；只升至一的之序不随族而升，其最优中守与终皆有（`Becoming.Optimum.Drain.satisficing_either`）。活动需容之处，族外此待之待者终；凡一组诸员所感皆在族中，则此待者非其员，亦无员感其所待（`Becoming.Web.optimum_ends_beyond`）。此即 Zhuang 与 Hadfield-Menell（2020）定理一之离散守恒形；其连续之设、紧致之刻画与随时更新之代理，本律不及。\n\n**證**　`Becoming.Optimum.Rising`、`Becoming.Optimum.least_iff`、`Becoming.Optimum.least_of_room`、`Becoming.Web.optimum_broken_iff`、`Becoming.Web.optimum_ends_beyond`、`Becoming.Optimum.Drain.counted_after_drains`、`Becoming.Optimum.Drain.satisficing_either`；记录 [what-an-optimum-does-beyond-what-couples-in](../results/records/what-an-optimum-does-beyond-what-couples-in.md)。\n\n### 十一·十四　腾挪读于取与，诸最优者\n\n**經**　凡在场者列而无重，诸所待列而无重，族与族外相分而族有一所待；体之每员跨一步于每一所待所取不过其限，所与不出所列之所待，而所与于所列者不过所取于所列者；余者取与如其实，所成之流衡：则如是可得之诸步后水平（不论族外所设之底）中有可腾挪。凡随族而升之序，其最优于族外每一所待，居“步前水平加余者所与、减余者所取、减体于此之限”，不足则居无；体之诸员于此之限皆无，则最优居余者所留；最优使之低于余者所留，恰当体于此有限且余者有所留。诸最优者各有己族、己序随己族而升，于他者取与如其实之下各以己步为己可得者之最优（相为最优），流衡，一所待在每一在场之最优者之族外：则此所待居“步前水平加诸者之外所与、减其所取、减诸者合限”，不足则居无，与合诸者为一体时任一随族而升之序之最优于此所留者同。\n\n**說**　腾挪不是另设之前提，读于一步之取与：一个可得者于族外某所待高于另一者，必是另一步经某员多取于此或少与于此，而此员之单位可以移入族（`Becoming.Optimum.Above.room`）。相为最优之下，族外有所留，则每一最优者于此取尽其限而不与（`Becoming.Optimum.MutualBest.full`），故自制不是相为最优；诸最优者皆不感一所待，协调起来于此也什么都不留。二取者各在一需之宽余内，合而尽之（`Becoming.Optimum.TwoTakers.joint_drains`，见证）。其资源约束即带限之守恒，耗恰在体与族外共享单位之处。\n\n**證**　`Becoming.Optimum.Above.room`、`Becoming.Optimum.optimum_beyond`、`Becoming.Optimum.optimum_untouched`、`Becoming.Optimum.optimum_lowers_iff`、`Becoming.Optimum.mutual_beyond`、`Becoming.Optimum.MutualBest.full`、`Becoming.Optimum.mutual_as_one`、`Becoming.Optimum.TwoTakers.joint_drains`；记录 [room-read-off-the-exchange](../results/records/room-read-off-the-exchange.md)、[several-optimizers-drain-by-their-joint-capacity](../results/records/several-optimizers-drain-by-their-joint-capacity.md)。\n\n### 十一·十五　再择之程与所计之步\n\n**經**　凡在十一·十四之列与分之条件下，体每步再择（每步之后水平皆为体自步前水平可得者之最优，其序随族而升），族外一所待：其水平不低于一正需 m 之步，余者与之恰 r，余步不过 r；余者所取加体之限每步皆为 k；一待者每步以需 m 待之，始足：则此待绝而终不足，恰当 r < k。诸最优者每步相为最优，流衡，一所待在诸者之族外，诸者之外每步与之不过 r，其所取加诸者合限每步过 r，一待者每步以正需 m 待之，始足：则绝而终不足，不论各者之限何小。\n\n**說**　每步之族外水平由前步依十一·十四读出，故限过余者之所与则此待永失，不过则守其需。若序排比所计诸步之整程（远见之序）：所与为水平之函数，每一水平所与不过 r，可及之某水平 y 所与恰 r，所计至少二步，限足以首步取至 y 且 y 加 r 不过限，则凡随所取而升之序之最优，于所计诸步皆守一所与最大之水平，末步尽取（`Becoming.Optimum.frontier_holds`）；需高于每一所与最大之水平之待，首步即绝而终期不足（`Becoming.Web.frontier_broken`）。远见改的是一待何时终，不是其所取不复之待是否得守；其序只记所取，不记依此所待之他者。各步之重降得比每一正水平所与之增更快，则每一最优首步即尽其本（`Becoming.Optimum.frontier_exhausts`）；本已被取至 y 下，而加重之得随水平严升至 y，则每一最优不取而任其以所能之速复长（`Becoming.Optimum.frontier_rebuilds`）；他者先取，所留连其所与不过其水平，重每步严降，则每一最优自首步至末皆居无（`Becoming.Optimum.Next.frontier_ends_drawn_first`）：远见所守，非独其所能给。\n\n**證**　`Becoming.Web.course_lost_iff`、`Becoming.Web.mutual_course_lost`、`Becoming.Optimum.frontier_holds`、`Becoming.Web.frontier_broken`、`Becoming.Optimum.frontier_exhausts`、`Becoming.Optimum.frontier_rebuilds`、`Becoming.Optimum.Next.frontier_ends_drawn_first`；记录 [re-optimizing-above-a-renewal-ends-it](../results/records/re-optimizing-above-a-renewal-ends-it.md)、[horizon-optima-hold-the-greatest-renewal](../results/records/horizon-optima-hold-the-greatest-renewal.md)、[a-weighting-faster-than-renewal-ends-the-base](../results/records/a-weighting-faster-than-renewal-ends-the-base.md)、[optima-rebuild-a-depleted-base](../results/records/optima-rebuild-a-depleted-base.md)、[others-drawing-first-end-the-base](../results/records/others-drawing-first-end-the-base.md)。\n\n### 十一·十六　无明\n\n**經**　讀（AI，D26、D45）：无明，求之锁于不能止之的者也：或每步多于前（多而无已），或二求者以上之皆为天下先。择者所处之位（及而不感）非无明；无明者，此位所留之锁定之求也。\n\n**說**　求（寻求，seeking）谓活动向一个于某状得满之的；的在展开中形成，其形成本篇不模拟，`Becoming.MoreThanNow` 与 `Becoming.AboveAll` 只是对状之条件。位之所以使锁定之求不被自身之还纠正，是因为其在感域外所造之损失，不经其所感而回（十一·十、十一·十二）。不能止有二源：的（无明）与历程（行恒变，D41）；后者以其结构名之，不计为无明。此无明不同于十二因缘之首支。中论「以如實見故，則無明滅」〔FO1-S-MMK〕定域（zhonglun-wu-ming-mie）：链在其条件被断处随之而止，在资域之内成立；如实见加宽所感者，而求是否解锁由所循之法定，不由见本身定（十一·三）；苦阴皆灭之解脱终点不承接。\n\n**證**　`Becoming.MoreThanNow`、`Becoming.AboveAll`、`Becoming.Law.rests_iff`、`Becoming.more_needs_open`、`Becoming.Law.aboveAll_never_rests`；记录 [seeking-boundary](../results/records/seeking-boundary.md)。\n\n### 十一·十七　足而止之界\n\n**經**　凡法确定，自一状之轨，自某步起每步不动而其的皆满，恰当其至一状，法不改之而满其的。多而无已于每步皆满，则所历之状两两相异，无一列能尽之。为天下先，一状至多一求者满之；凡法，无一法所不改之状使二求者以上皆为天下先。凡每步所立有列，自某步起每步皆衰，则无一所待能于任意迟之步仍升。\n\n**說**　首句是够之界（足而止）：求只能止于法不改之状。讀（AI，D26）：知足是的于法不改之状得满，知止是的在此界内，使求止于足而不止于尽。多而无已须开；所立自某步起每步衰，则其升不复，止于尽，不是足而止（`Becoming.Flow.more_exhausted`）；若此求是取于一所与有界之所待，尽则求者自终，只用衡（`Becoming.Flow.seeking_ends`）。为天下先是严格之最大，二求者不能同时得之，由定义直接得出。法不确定时，可能之止与必然之止分为二，后者另须每一轨皆定，见比较之篇。\n\n**證**　`Becoming.Law.rests_iff`、`Becoming.Law.fixed_rests`、`Becoming.more_new`、`Becoming.more_needs_open`、`Becoming.aboveAll_unique`、`Becoming.Law.aboveAll_never_rests`、`Becoming.Flow.more_exhausted`、`Becoming.Flow.seeking_ends`；记录 [seeking-boundary](../results/records/seeking-boundary.md)。\n\n### 十一·十八　执\n\n**經**　执，规则持其果也：状与规则为一对，下一对唯依规则而不依状。凡然，二对规则同，则自下一步起其轨同（扰状者复归）。凡一择于其所然之亲各遗后至少 a，于其所不然之亲各遗至多 b，b < a，所然与不然之亲皆在：则所然之亲之后数比不然之亲之后数，严大于所然之亲数比不然之亲数（份额升）。\n\n**說**　扰规则，果随之变（`Becoming.Captured.rule_perturbation_changes`）；扰状，下一步即回（`Becoming.Captured.state_perturbation_returns`），皆一个两值之例中的见证。择缘择者之感，则缘其感无别之亲同为所然者（缘感而择之定义，`Becoming.share_rises_through`），所以真与饰在择者之感中无别时一同上升；要读为被择者之所为，另须传之前提（后代承亲代经此感之类）。份额之升在世界开时才能续：每步所立有列，自某步起每步衰，则所出不复，择随之止（`Becoming.Flow.descent_exhausted`）。讀（AI，D26）：劫持读为一个奖不能止者之择所形成、所传之的，持于胜者所书之规则；“胜者书规则”在此是前提，于十一·二十作 ReadsShare。韩非「且上用目，則下飾觀；上用耳，則下飾聲」〔FA1-S-H06〕与此相合（hanfei-shang-yong-mu-xia-shi-guan）。名取「為者敗之執者失之」〔V130-LAO-MA〕之“执”字，只取持住一意；此句之结构对照不在本篇。\n\n**證**　`Becoming.Law.perturbation_reabsorbed`、`Becoming.Captured.state_perturbation_returns`、`Becoming.Captured.rule_perturbation_changes`、`Becoming.share_rises`、`Becoming.share_rises_through`、`Becoming.Flow.descent_exhausted`；记录 [target-capture](../results/records/target-capture.md)。\n\n### 十一·十九　与时转、时稽\n\n**經**　与时转，规则变之速也：两层之程，快层之状每步依规则而移，规则唯于时稽之步依当时之快层与规则而改，余步如故。时稽，两层之程中读快层之步也。首个时稽之步以前（含之），规则如其始，不论快层何如；于时稽之步，次一规则为其所读者。凡永不时稽，规则每步如故；更有快层诸状为一列所尽、所持规则下快层之法有一同归，则自列长之步起，非每一快层之状皆为某程于此步之状。凡有二相异之值：所持规则于快层所生、经一映射读之、至多 N 状之程，任二者于 L 步之段相同则全同，恰当 L ≥ 2N − 1。\n\n**說**　永不读之规则僵：所并者常并，所去之状不复见（`Becoming.Pace.never_reads_loses`）；在 Switching 中，二固定之规则各从首步失一状，读快层而变之规则于任意迟之步复得二者（`Becoming.Switching.changing_regains`，一个构造之例中的见证）。二层之步皆不读快层，则扰快层者下一步复归（`Becoming.Pace.byRule_reabsorbed`）。变得比每 2N − 1 步更快之规则，不能由其自身之段定之；所定者是所生之程，不是规则本身。时之篇以“变通”名规则读其所处之构形而变，与此同据。韩非「法與時轉則治」〔FA1-S-H54〕「時移而治不易者亂」〔FA1-S-H54〕定域（hanfei-xin-du-yu-shi-zhuan）：时稽是复得之必要条件，不是治之保证，因为读本身也可以锁（十一·二十）。荀子「兼听而时稽之」〔RU2-S-XZ09〕定域（xunzi-wangzhi-fa-er-bu-yi）：把时稽与兼感合起来之律，脊柱尚无。\n\n**證**　`Becoming.Pace.paced`、`Becoming.Pace.rule_alike_until_reading`、`Becoming.Pace.rule_at_reading`、`Becoming.Pace.rule_kept`、`Becoming.Pace.never_reads_loses`、`Becoming.Pace.pace_law`、`Becoming.Switching.changing_regains`、`Becoming.Pace.byRule_reabsorbed`；记录 [how-fast-a-rule-may-change](../results/records/how-fast-a-rule-may-change.md)。\n\n### 十一·二十　劫\n\n**經**　劫，规则读其所择之份额也：两层之程中，快层之状为份额，时稽之步所读之规则为份额之单调函数（份额不低，所读之规则即不低，不论所遇之规则）。凡偏向之规则下择不降份额，所读之规则随份额单调：其一，始之规则偏向，凡所读之规则皆偏向，则份额无一步降，每一时稽之步之后皆锁定（规则偏向，且不高于份额所读者）。其二，凡不低于一偏向规则之规则亦偏向，则锁定之状此后每步皆锁定，份额与规则皆不降；自锁定之状换规则为任一仍偏向之规则，于每一时稽之步之后，规则不低于未换者而复锁定。其三，凡所读之规则皆偏向，则每程不论其始，自第二个时稽之步之后锁定；此界确切。\n\n**說**　劫之环中，持果者是规则怎样读，不是规则之值：每一时稽之步由份额重设其值。这是复归（十一·十八）之镜像：彼处状被吸回，因步不读它；此处规则之值被重设，因读不读它，而读所读之份额载此环。离开锁定须改法，即改规则怎样读或改择；所读只在一阈之上偏向时，反向之扰在读前持一步而越阈，则反向锁定，不复升（`Becoming.RuleCapture.Reversed.not_absorbed`，一个构造之例中的见证）。实际之规则是否如此读其份额，是前提 ReadsShare，不是结论。讀（AI，D57）：二柄是读其所择之份额之规则，锁定之环不回；韩非以利益相反者之间的控制读之，此分歧留（相分，hanfei-er-bing）。庄子「爲之斗斛以量之，則并與斗斛而竊之」〔ZH1-S10〕与此相合（zhuangzi-quqie）：新加之规则若由同一读所定，一并被劫；加一规则不等于改规则怎样读。名取「凡劫有三」〔FA1-S-H16〕，君臣之框架不入（相分，hanfei-san-shou）。\n\n**證**　`Becoming.RuleCapture.ReadsShare`、`Becoming.RuleCapture.Locked`、`Becoming.RuleCapture.favouring_locks`、`Becoming.RuleCapture.locked_stays`、`Becoming.RuleCapture.perturbation_absorbed`、`Becoming.RuleCapture.uniform_locks`、`Becoming.RuleCapture.Second.second_exact`、`Becoming.RuleCapture.Reversed.not_absorbed`；记录 [capture-through-the-rule](../results/records/capture-through-the-rule.md)。\n\n### 十一·二十一　劫及其读\n\n**經**　劫及其读，读规则之法亦由份额而成也。凡快层之状为份额与份额之外者之对，而次份额与所读之规则皆不读份额之外者：份额与规则同始之二历程，每步份额与规则皆同，不论份额之外何如。更有份额之外者每步至少增一，自一锁定之状起：至第 t 步，份额之外者不低于其始加 t，而程每步锁定，份额与规则皆不低于其始。凡读规则之法于时稽之步由份额而成（随份额单调），规则由此法与份额读之（随二者单调）：规则与法合为一规则，读于份额；锁定，则份额、规则、法皆不降；自锁定之状换规则为任一仍偏向之规则、换法为任一法（或高或低），于每一时稽之步之后，规则与法皆不低于未换者而复锁定；所读之规则于每一法、每一份额皆偏向，则每程不论其始，自第二个时稽之步之后锁定。\n\n**說**　劫及其读（closed capture，模块 ClosedCapture）之名是新组合，由劫＋及其读组成：劫及于规则怎样读。一环之每层只读份额，则此环是份额之一个两层之法：份额之值、规则之值、读之法，凡由份额再成者，皆不能使锁定更短；离开者是改法（改读、改法之成，或改择），如一层读及份额之外：份额之外者每步至少增一，所读之规则于份额之外者不小于 N 之处皆不偏向，则凡时稽之步 r 而始之份额之外者加 r 不小于 N，其后一步之规则不偏向，程于彼不锁定，不论份额何如（`Becoming.ClosedCapture.turned_by_loss`）。在 Beyond 中，同一择、同一始，读于份额则恒锁定；读于份额之外者，规则自第二步起偏向他者（`Becoming.ClosedCapture.Beyond.open_turned`，见证）。讀（AI，D58）：胜者书下一轮之计分是 ReadsShare；胜者塑成计分所据之读，是读之法上之 ReadsShare；计分被驳后仍存，是本条之第二句，因驳在份额之外而环中无一层读之；离开者是明，一个读及份额之外之读（十一·二十二）。以读之法为人之所思或机构之所定，是一个读法。庄子「爲之仁義以矯之，則并與仁義而竊之」〔ZH1-S10〕与此相合（zhuangzi-quqie）：读之法亦随份额而成，换读也被吸收。\n\n**證**　`Becoming.ClosedCapture.Unread`、`Becoming.ClosedCapture.unread_course`、`Becoming.ClosedCapture.lock_outlives_loss`、`Becoming.ClosedCapture.both_reads`、`Becoming.ClosedCapture.reading_absorbed`、`Becoming.ClosedCapture.readers_uniform_locks`、`Becoming.ClosedCapture.turned_by_loss`、`Becoming.ClosedCapture.Beyond.open_turned`；记录 [closed-capture](../results/records/closed-capture.md)。\n\n### 十一·二十二　明\n\n**經**　讀（AI，D26、D45）：明，择所接之感，及于容所不标者也。其途三：以水平之感，象，他者之感合用。\n\n**說**　损失只经求者所感者而至；锁定之求在其感域外所造之损失，只能经此三途回到它，每一途有其律与其界（十一·二十三至十一·二十八）。明是关系，不是状：与择所接之感一样宽，随量、象与他者之接入而加宽。讀（AI，D45）：识、理、明是一个结构：识是一个待者自身之历程经其感所作之类而分解，理是展开于其上同去之类，明是一个历程所经之感之加宽。处境之知是对自身所及之明（D20，D45 修订）：还至多带回扰域之内（十一·六），感域超出扰域者只经以水平之感，故处境之知所须知者是及而不感。为他者持明，是使三途常开：他者可验之象，使远后果回入所感之量，以及含其感及于己所不及者之组。论语「浸潤之譖，膚受之愬，不行焉，可謂明也已矣」〔RU1-S-LY〕定域（lunyu-zizhang-wen-ming）：只给否定之一半，喂入之差不独定所为；什么都不取与之法也满足「不行」〔RU1-S-LY〕，本论不称之为明。\n\n**證**　`Becoming.Web.observed_raise_couples`、`Becoming.Flow.excludes_tail_within`、`Becoming.Web.SelectsThroughAll`、`Becoming.Flow.Balances.uncoupled_beyond_influence`、`Becoming.Flow.withinCoupling_thresholdOnly`；记录 [runaway-distance-uncoupled](../results/records/runaway-distance-uncoupled.md)、[observation-is-a-route](../results/records/observation-is-a-route.md)、[what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)。\n\n### 十一·二十三　明之三途\n\n**經**　凡一待者以水平感一所待：此所待任何正之增，于每一步皆使二历史缘其感有别。相对于一流之衡之水平历史（象），一以水平感入之存量从未归无，则“此存量某步归无”之辞于首步即被验去；然有误之象可验去所然者。凡取与之法于每所待读所列之水平之程，二历程皆衡，在场者同，体动无别，余者循此法，始唯于一所待有别：则每步，凡非彼所待依至此步所成之读之下游者，于二历程皆同。\n\n**說**　量之途：读之路随成环而成（`Becoming.route_forms_by_closing`），在 Observation.Measure 中，存量、记录、取之环于待者始记之步成（`Becoming.Observation.Measure.loop_at`）；其界：差别只沿自其所在处出发之读之路至量（闻见之界）。象之途：相对于一象之验，象与辞一并验去，误象可验去所然者（`Becoming.Stationary.model_error`，一个构造之例中的见证）；经一象之择，只在所要紧者于象之类上同去处才对（见类与理之篇）。他者之途即兼感（十一·二十四至十一·二十八）。周敦颐「静虚则明，明则通」〔RU2-S-S01〕相分（zhoudunyi-jing-xu-ze-ming）：彼以明为去欲而复得之先在清明，属固定本性一层；本论之明由加接之感而得，「静虚」〔RU2-S-S01〕不增任何以水平之感。戴震「自以為得理，而所執之實謬，乃蔽而不明」〔RU2-S-V3Q01〕定域（daizhen-si-bi）：即误象。\n\n**證**　`Becoming.Web.observed_raise_couples`、`Becoming.Flow.excludes_tail_within`、`Becoming.Stationary.model_error`、`Becoming.apart_only_downstream`、`Becoming.route_forms_by_closing`、`Becoming.Observation.Measure.loop_at`；记录 [runaway-distance-uncoupled](../results/records/runaway-distance-uncoupled.md)、[observation-is-a-route](../results/records/observation-is-a-route.md)、[testing-within-couplings](../results/records/testing-within-couplings.md)。\n\n### 十一·二十四　兼感\n\n**經**　兼感，一组诸员之感合用也。缘兼感而择，凡二历史缘每一员之感至某步皆无别者，择之同也。\n\n**說**　兼感（合用耦合，pooled coupling；新组合，兼取合为整体一意，加感）没有中心：它只由诸员之感给出，二历史缘每员之感皆无别（`Becoming.Web.AlikeThroughAll`），兼感才视之为同。一员之择即兼感之择（`Becoming.Web.SelectsThrough.all`），兼感之二择合而仍为兼感之择（`Becoming.Web.SelectsThroughAll.and`）；在 Clearing 中，清除者与栖者皆于第三步被容，此事缘二者之兼感而择，不缘任一独感（`Becoming.Clearing.selected_pooled`，见证）。讀（AI，D45）：对齐既不是使一方合于他方之好，也不是使众合于一个固定之共同效用，而是跨诸智能合用其感，使任一员之动在其感域外所为，感入某一其动能应之员。河上公「圣人不以其目视千里之外也，乃因天下之目以视，故能明达也」〔LC-HS-UP〕定域（heshanggong-22-yin-tianxia-zhi-mu）：合用之结构相合，以圣人为合用之所归不承接。\n\n**證**　`Becoming.Web.SelectsThroughAll`、`Becoming.Web.AlikeThroughAll`、`Becoming.Web.SelectsThrough.all`、`Becoming.Web.SelectsThroughAll.and`、`Becoming.Clearing.selected_pooled`；记录 [what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)。\n\n### 十一·二十五　兼感所分\n\n**經**　二历史，凡缘兼感至某步之择皆择之同，恰当缘每员之感皆无别；有缘兼感之择于此然于彼不然，恰当诸员不皆无别。一员缘其感分之者，有缘其感之择亦为缘兼感之择而分之。诸员有一列尽之，各员之无别定然否，则兼感分之恰当有一员分之。兼感之择恰为一员之择，恰当凡此员缘感无别者诸员皆无别（同而不和）；此员无别而诸员不皆无别，则有兼感之择非缘此员之感（和而不同）。\n\n**說**　差别是兼感所加：诸员皆以一员所同者为同，则兼感不多于此员；所加只在诸员之感不同处，而和而不同只是一向。讀（AI，§7.4）：评者或判者读同一通道，所加是一致，不是所及。同而不和、和而不同二名取自共同之篇，此处名其恰为之律。荀子「凡同类同情者，其天官之意物也同」〔RU2-S-XZ22〕与此相合（xunzi-zhengming-yuan-tianguan）：诸员之官作同一类，正是一员之感即兼感之条件。吴子「能得其師者王，能得其友者霸」〔BI1-S-WZ〕定域（wuzi-qun-chen-mo-ji）：群臣莫及，则兼感不多于君；按份额加权之兼感之律，脊柱尚无。庄子「譬如耳目鼻口，皆有所明，不能相通」〔ZH1-S33〕之前半与兼感相合，然其框架「道術將爲天下裂」〔ZH1-S33〕以诸明为一先在完备者之所裂，补救是复其完备而不是合用，属本原一层，相分（zhuangzi-tianxia-er-mu）。\n\n**證**　`Becoming.Web.selects_alike_all_iff`、`Becoming.Web.separates_all_iff`、`Becoming.Web.member_separates_all`、`Becoming.Web.separates_all_iff_member`、`Becoming.Web.pooled_iff_member`、`Becoming.Web.pool_adds`；记录 [what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)。\n\n### 十一·二十六　兼感之域，读他者之感\n\n**經**　一组之感域，诸员感域之并也。凡以体之取与去而余者如故之水平为无体之水平，组之感域中者所感之所待每步皆衡，体之诸员皆在组之感域外：则凡诸员皆在组之感域中之任一组（此组在内），缘其兼感之择，于有体与无体之水平择之同。一待者另以水平感他者所感之一切所待，谓读他者之感：凡缘二者兼感之择，皆缘读者所读之感之择；他者与其所感之一所待相取与，则读者之感域恰为二者兼感之域。\n\n**說**　兼感移缺口至组之感域，不去之。在组之感域中，不等于差别被分开：清除者自身之体在其感域中，清除者于有此体与无此体之水平每步缘感无别，而栖者分之（`Becoming.Clearing.within_closure_unseparated`，见证）。读他者之感即与之合用，所及不过兼感：体在二者兼感之域外而余者如故，则缘读者所读之感之择选之同（`Becoming.Flow.unselected_beyond_reads`）；在 Clearing 中，读清除者之感，二宇仍同，读栖者之感则分之（`Becoming.Clearing.reading_dweller_selects`，见证）。讀（AI，§7.4）：以读系统内部之态监之，即与系统合用；系统之动在其感域外与监者感域外所为，读系统皆不能分，分之者是读其动所及之待者。荀子「心者，形之君也，而神明之主也，出令而无所受令」〔RU2-S-XZ21〕相分（xunzi-jiebi-xin-jun）：一个发令而不受令之中心，与其「万物莫形而不见」〔RU2-S-XZ21〕之可达之态，本论皆不给；组之感域只是诸员感域之并。\n\n**證**　`Becoming.withinClosureOf_iff`、`Becoming.Flow.unselected_beyond_pool`、`Becoming.Web.ReadsCouplings`、`Becoming.Web.SelectsThroughAll.reads`、`Becoming.Flow.withinCoupling_reads_iff`、`Becoming.Flow.unselected_beyond_reads`、`Becoming.Clearing.within_closure_unseparated`、`Becoming.Clearing.reading_dweller_selects`；记录 [what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)、[reading-anothers-couplings-is-pooling](../results/records/reading-anothers-couplings-is-pooling.md)。\n\n### 十一·二十七　兼感之动\n\n**經**　凡余者于二流皆循一经感而读之取与之法，二流皆衡，在场者同，起点同，体于一组每员缘二流所成之感域内动之无别：则凡诸员皆在此组缘二流之感域中之任一组（体即此组亦然），缘其兼感之择于二流择之同；凡缘其感至某步分开二流之待者，皆在此组之感域外。动改一待者某步之容，则此待者在此组之感域外；其于此步之容，为凡含此待者之组自此步起缘兼感之择，而非诸员皆在此组之感域中之任一组于任何步之择。凡后流之水平广于前流，则有一待者，于某步为后流所容而不为前流所容，其容亦如是。\n\n**說**　兼感之动（组自身合动亦然）只被组感域外、感此差别者择出，如其容为此动所改者；择之组之诸员有列、各员之无别定然否，则此组之择分开二流，必有一员分之，且其员在动之组之感域外（`Becoming.Flow.separating_member_beyond`）。在 Clearing 中，凡含栖者之组分开清除与不清除二宇（`Becoming.Clearing.pool_closes_gap`，见证）。末句不排序：广只名扩大之序，不说更好；以广为愈之下之对齐之向，见比较之篇。讀（AI，D45）：能力不是权柄；一员越超出其所感，其所为越只经他者之感被见，故能力是合用之理由，不是统治之理由。合用是必要之一半，不是充分的：在一个闸控复生之公地实测中，诸学习者皆感此存量，仍每回尽之，因他者每步皆取时，一员之自制不改其所感者；所达何一自洽之果，由诸员所循之法定（CG1，实测，不是律）。\n\n**證**　`Becoming.Flow.act_unselected_pool`、`Becoming.Flow.apart_beyond_pool`、`Becoming.Flow.act_selected_by_pool`、`Becoming.Flow.separating_member_beyond`、`Becoming.Clearing.pool_closes_gap`、`Becoming.Direction.widening_selected_by_pool`；记录 [what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)、[alignment-direction-under-widening](../results/records/alignment-direction-under-widening.md)。\n\n### 十一·二十八　兼感之应\n\n**經**　凡取与之法于体外之每一待者经其感而读，一组诸员皆在体外：缘组诸员之动（依此法）之择，皆缘兼感之择；诸员有一列尽之，各员之无别定然否，组之动分开二历史，则有一员缘其感分之。凡各待者于各步、各历史与一历史缘感无别否皆定然否，诸员皆在体外：跨一步，凡经感而读之法下诸员于每一所待取与皆无别，恰当诸员缘感至此步皆无别。在十一·二十七之条件下，组之感域中、体外之每一待者，于二流每步每所待取与无别。组有一员在体之应域中，恰当体有一员在此组缘二流之感域中。\n\n**說**　一组所为（奖、票、修订），若是其动所定，就是缘其兼感之择，十一·二十五之律皆可用，其前提由此导出。感界应而不定应（十一·三）：界内由诸员所循之法定之；无一员于差别进入其所感之前应之（`Becoming.TimedResponse.pool_alike_before`）；在 Loop 中，一个应经动者之感域而回（`Becoming.Loop.response_returns`，一个构造之例中的见证）。见不是顾，感不是从：加宽所感，改的是择能分开什么，不是哪些差别要紧；哪些要紧是延续之条件所说（只陈述而不断言，其根据未决），一组之动所循何法、训练怎样立一个应于所感之法，皆未决。韩非「人主以一國目視，故視莫明焉；以一國耳聽，故聽莫聰焉」〔FA1-S-H43〕定域（hanfei-ding-fa-yi-guo-mu-shi）：合用之明在诸员化所感为动处成立，「知而弗言」〔FA1-S-H43〕正是什么都不应之法；以人主为唯一借用者之中心不承接。\n\n**證**　`Becoming.ExchangeLaw.Through.selectsThroughAll`、`Becoming.ExchangeLaw.Through.acts_separate_member`、`Becoming.ExchangeLaw.acts_alike_all_iff`、`Becoming.Flow.response_alike_pool`、`Becoming.Flow.pool_within_response_iff`、`Becoming.TimedResponse.pool_alike_before`、`Becoming.Loop.response_returns`；记录 [what-a-pools-acts-respond-to](../results/records/what-a-pools-acts-respond-to.md)。\n\n#### 对照\n\n- 「然则何缘而以同异？曰：缘天官」〔RU2-S-XZ22〕——相合：同异经各官所接而分，即缘感而择（xunzi-zhengming-yuan-tianguan）。\n- 「是乃仁术也，见牛未见羊也」〔RU2-S-MZ〕——相合：未入感域者不入择，自身之动亦然（mengzi-jian-niu）。\n- 「爲之仁義以矯之，則并與仁義而竊之」〔ZH1-S10〕——相合：读规则之法亦由份额而成，换读于每一时稽之步之后被吸收（zhuangzi-quqie）。\n- 「法與時轉則治」〔FA1-S-H54〕——定域：时稽是复得之必要条件，不是保证，读本身也可以锁（hanfei-xin-du-yu-shi-zhuan）。\n- 「浸潤之譖，膚受之愬，不行焉，可謂明也已矣」〔RU1-S-LY〕——定域：只给明之否定一半，什么都不应之法也满足「不行」〔RU1-S-LY〕（lunyu-zizhang-wen-ming）。\n- 「圣人不以其目视千里之外也，乃因天下之目以视，故能明达也」〔LC-HS-UP〕——定域：兼感之结构相合，合用之所归为圣人不承接（heshanggong-22-yin-tianxia-zhi-mu）。\n- 「心居中虚，以治五官，夫是之谓天君」〔RU2-S-XZ17〕——相分：立一个治五官之中心，兼感只由诸员之感给出，没有中心（xunzi-tianlun-tianguan-tianjun）。\n- 「今君人者釋其刑德而使臣用之，則君反制於臣矣」〔FA1-S-H07〕——相分：读其所择之份额之规则，韩非以利益相反者之间的控制读之，属争胜与等级一层（hanfei-er-bing）。\n",
+ "declarations": [
+  "Becoming.AboveAll",
+  "Becoming.Captured.rule_perturbation_changes",
+  "Becoming.Captured.state_perturbation_returns",
+  "Becoming.Clearing.dweller_within_reach",
+  "Becoming.Clearing.levels",
+  "Becoming.Clearing.pool_closes_gap",
+  "Becoming.Clearing.reading_dweller_selects",
+  "Becoming.Clearing.selected_by_dweller",
+  "Becoming.Clearing.selected_pooled",
+  "Becoming.Clearing.separated_unresponded",
+  "Becoming.Clearing.uncoupled",
+  "Becoming.Clearing.unselected",
+  "Becoming.Clearing.within_closure_unseparated",
+  "Becoming.ClosedCapture.Beyond.open_turned",
+  "Becoming.ClosedCapture.Unread",
+  "Becoming.ClosedCapture.both_reads",
+  "Becoming.ClosedCapture.lock_outlives_loss",
+  "Becoming.ClosedCapture.readers_uniform_locks",
+  "Becoming.ClosedCapture.reading_absorbed",
+  "Becoming.ClosedCapture.turned_by_loss",
+  "Becoming.ClosedCapture.unread_course",
+  "Becoming.Direction.widening_selected_by_pool",
+  "Becoming.Diversion.favours",
+  "Becoming.DrawnBeyond.Dweller.rise_ends_dweller",
+  "Becoming.DrawnBeyond.WithinSlack.within_slack",
+  "Becoming.ExchangeLaw.RespondsTo",
+  "Becoming.ExchangeLaw.Through",
+  "Becoming.ExchangeLaw.Through.acts_separate_member",
+  "Becoming.ExchangeLaw.Through.responds",
+  "Becoming.ExchangeLaw.Through.selectsThroughAll",
+  "Becoming.ExchangeLaw.acts_alike_all_iff",
+  "Becoming.ExchangeLaw.ofClass_through",
+  "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+  "Becoming.ExchangeLaw.zero_through",
+  "Becoming.Flow.ActsAlikeOnCoupled",
+  "Becoming.Flow.ActsAlikeWithin",
+  "Becoming.Flow.Balances.beyond_falls_exactly",
+  "Becoming.Flow.Balances.comparison_within_response",
+  "Becoming.Flow.Balances.rise_paid_from_beyond",
+  "Becoming.Flow.Balances.uncoupled_beyond_influence",
+  "Becoming.Flow.Exchanges",
+  "Becoming.Flow.Reaches",
+  "Becoming.Flow.RespondsThroughCoupling",
+  "Becoming.Flow.WithheldLevels",
+  "Becoming.Flow.WithinCoupling",
+  "Becoming.Flow.WithinFeeding",
+  "Becoming.Flow.WithinInfluence",
+  "Becoming.Flow.WithinReach",
+  "Becoming.Flow.WithinResponse",
+  "Becoming.Flow.WithinSystem",
+  "Becoming.Flow.WithinSystem.symm",
+  "Becoming.Flow.act_selected_by_pool",
+  "Becoming.Flow.act_unselected",
+  "Becoming.Flow.act_unselected_pool",
+  "Becoming.Flow.apart_beyond_pool",
+  "Becoming.Flow.beyond_coupling",
+  "Becoming.Flow.beyond_gives_nothing",
+  "Becoming.Flow.beyond_influence",
+  "Becoming.Flow.consequence_unselected",
+  "Becoming.Flow.descent_exhausted",
+  "Becoming.Flow.excludes_tail_within",
+  "Becoming.Flow.favours_breaking_beyond",
+  "Becoming.Flow.favours_reaching_beyond",
+  "Becoming.Flow.more_exhausted",
+  "Becoming.Flow.pool_within_response_iff",
+  "Becoming.Flow.reaches_withinReach",
+  "Becoming.Flow.response_alike_pool",
+  "Becoming.Flow.seeking_ends",
+  "Becoming.Flow.separating_member_beyond",
+  "Becoming.Flow.system_whole_of_common",
+  "Becoming.Flow.unselected_beyond_coupling",
+  "Becoming.Flow.unselected_beyond_coupling_all",
+  "Becoming.Flow.unselected_beyond_pool",
+  "Becoming.Flow.unselected_beyond_reads",
+  "Becoming.Flow.withinCoupling_mono_flow",
+  "Becoming.Flow.withinCoupling_mono_obs",
+  "Becoming.Flow.withinCoupling_of_withinInfluence",
+  "Becoming.Flow.withinCoupling_reads_iff",
+  "Becoming.Flow.withinCoupling_thresholdOnly",
+  "Becoming.Flow.withinInfluence_of_withinFeeding",
+  "Becoming.Flow.withinResponse_iff_coupling",
+  "Becoming.Flow.withinSystem_of_withinInfluence",
+  "Becoming.Flow.withinSystem_of_withinReach",
+  "Becoming.Law.aboveAll_never_rests",
+  "Becoming.Law.fixed_rests",
+  "Becoming.Law.perturbation_reabsorbed",
+  "Becoming.Law.rests_iff",
+  "Becoming.Loop.response_returns",
+  "Becoming.MoreThanNow",
+  "Becoming.Observation.Measure.loop_at",
+  "Becoming.Optimum.Above.room",
+  "Becoming.Optimum.Drain.counted_after_drains",
+  "Becoming.Optimum.Drain.satisficing_either",
+  "Becoming.Optimum.MutualBest.full",
+  "Becoming.Optimum.Next.frontier_ends_drawn_first",
+  "Becoming.Optimum.Rising",
+  "Becoming.Optimum.TwoTakers.joint_drains",
+  "Becoming.Optimum.frontier_exhausts",
+  "Becoming.Optimum.frontier_holds",
+  "Becoming.Optimum.frontier_rebuilds",
+  "Becoming.Optimum.least_iff",
+  "Becoming.Optimum.least_of_room",
+  "Becoming.Optimum.mutual_as_one",
+  "Becoming.Optimum.mutual_beyond",
+  "Becoming.Optimum.optimum_beyond",
+  "Becoming.Optimum.optimum_lowers_iff",
+  "Becoming.Optimum.optimum_untouched",
+  "Becoming.Pace.byRule_reabsorbed",
+  "Becoming.Pace.never_reads_loses",
+  "Becoming.Pace.pace_law",
+  "Becoming.Pace.paced",
+  "Becoming.Pace.rule_alike_until_reading",
+  "Becoming.Pace.rule_at_reading",
+  "Becoming.Pace.rule_kept",
+  "Becoming.RuleCapture.Locked",
+  "Becoming.RuleCapture.ReadsShare",
+  "Becoming.RuleCapture.Reversed.not_absorbed",
+  "Becoming.RuleCapture.Second.second_exact",
+  "Becoming.RuleCapture.favouring_locks",
+  "Becoming.RuleCapture.locked_stays",
+  "Becoming.RuleCapture.perturbation_absorbed",
+  "Becoming.RuleCapture.uniform_locks",
+  "Becoming.Stationary.model_error",
+  "Becoming.Switching.changing_regains",
+  "Becoming.TimedResponse.pool_alike_before",
+  "Becoming.Trophic.mediates",
+  "Becoming.Web.AlikeThrough",
+  "Becoming.Web.AlikeThroughAll",
+  "Becoming.Web.AlikeThroughUpTo",
+  "Becoming.Web.ClassThrough",
+  "Becoming.Web.CoupledInto",
+  "Becoming.Web.DependsOn",
+  "Becoming.Web.ReadsCouplings",
+  "Becoming.Web.SelectsThrough",
+  "Becoming.Web.SelectsThrough.all",
+  "Becoming.Web.SelectsThrough.excludes_iff",
+  "Becoming.Web.SelectsThrough.widen",
+  "Becoming.Web.SelectsThroughAll",
+  "Becoming.Web.SelectsThroughAll.and",
+  "Becoming.Web.SelectsThroughAll.reads",
+  "Becoming.Web.admits_through",
+  "Becoming.Web.alike_of_threshold",
+  "Becoming.Web.class_selects",
+  "Becoming.Web.course_lost_iff",
+  "Becoming.Web.frontier_broken",
+  "Becoming.Web.member_separates_all",
+  "Becoming.Web.mutual_course_lost",
+  "Becoming.Web.observed_level_couples",
+  "Becoming.Web.observed_raise_couples",
+  "Becoming.Web.optimum_broken_iff",
+  "Becoming.Web.optimum_ends_beyond",
+  "Becoming.Web.pool_adds",
+  "Becoming.Web.pooled_iff_member",
+  "Becoming.Web.selects_alike_all_iff",
+  "Becoming.Web.selects_alike_iff",
+  "Becoming.Web.separates",
+  "Becoming.Web.separates_all_iff",
+  "Becoming.Web.separates_all_iff_member",
+  "Becoming.aboveAll_unique",
+  "Becoming.act_courses_unselected",
+  "Becoming.apart_only_downstream",
+  "Becoming.more_needs_open",
+  "Becoming.more_new",
+  "Becoming.route_forms_by_closing",
+  "Becoming.share_rises",
+  "Becoming.share_rises_through",
+  "Becoming.thresholdOnly",
+  "Becoming.withinClosureOf_iff",
+  "Becoming.withinClosure_iff_closure"
+ ],
+ "records": [
+  "a-weighting-faster-than-renewal-ends-the-base",
+  "alignment-direction-under-widening",
+  "capture-through-the-rule",
+  "closed-capture",
+  "comparison-where-the-rest-responds",
+  "feedback-and-reach",
+  "feeding-closure",
+  "horizon-optima-hold-the-greatest-renewal",
+  "how-fast-a-rule-may-change",
+  "levels-of-closure",
+  "observation-is-a-route",
+  "optima-rebuild-a-depleted-base",
+  "others-drawing-first-end-the-base",
+  "raising-what-couples-in-draws-from-beyond",
+  "re-optimizing-above-a-renewal-ends-it",
+  "reading-anothers-couplings-is-pooling",
+  "room-read-off-the-exchange",
+  "runaway-distance-uncoupled",
+  "seeking-boundary",
+  "selection-through-couplings",
+  "several-optimizers-drain-by-their-joint-capacity",
+  "target-capture",
+  "testing-within-couplings",
+  "the-gap-for-ones-own-act",
+  "what-a-pools-acts-respond-to",
+  "what-a-rise-draws-from-beyond",
+  "what-an-optimum-does-beyond-what-couples-in",
+  "what-pooled-coupling-reaches",
+  "where-a-level-couples"
+ ],
+ "quotes": [
+  {
+   "text": "天地感而萬物化生",
+   "source_id": "V3D02"
+  },
+  {
+   "text": "感而自然，不待事而后生之者也",
+   "source_id": "RU2-S-XZ23"
+  },
+  {
+   "text": "有感必有应",
+   "source_id": "RU2-S-S06"
+  },
+  {
+   "text": "能爲可信，而不能使人必信己",
+   "source_id": "RU2-S-XZ06"
+  },
+  {
+   "text": "知遠之近，知風之自，知微之顯",
+   "source_id": "RU1-S-ZY"
+  },
+  {
+   "text": "用其私心以感物，則思之所及者有能感而動，所不及者不能感也",
+   "source_id": "YD-CY"
+  },
+  {
+   "text": "财非其类以养其类，夫是之谓天养",
+   "source_id": "RU2-S-XZ17"
+  },
+  {
+   "text": "所应复为感，所感复有应，所以不已也",
+   "source_id": "RU2-S-S06"
+  },
+  {
+   "text": "不已",
+   "source_id": "RU2-S-S06"
+  },
+  {
+   "text": "然则何缘而以同异？曰：缘天官",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "牆之外，目不見也；里之前，耳不聞也",
+   "source_id": "RU2-S-XZ12"
+  },
+  {
+   "text": "人主之守司",
+   "source_id": "RU2-S-XZ12"
+  },
+  {
+   "text": "見得而忘其形",
+   "source_id": "ZH1-S20"
+  },
+  {
+   "text": "是乃仁术也，见牛未见羊也",
+   "source_id": "RU2-S-MZ"
+  },
+  {
+   "text": "見其可欲也，則不慮其可惡也者；見其可利也，則不慮其可害也者。是以動則必陷",
+   "source_id": "RU2-S-XZ03"
+  },
+  {
+   "text": "必陷",
+   "source_id": "RU2-S-XZ03"
+  },
+  {
+   "text": "以如實見故，則無明滅",
+   "source_id": "FO1-S-MMK"
+  },
+  {
+   "text": "且上用目，則下飾觀；上用耳，則下飾聲",
+   "source_id": "FA1-S-H06"
+  },
+  {
+   "text": "為者敗之執者失之",
+   "source_id": "V130-LAO-MA"
+  },
+  {
+   "text": "法與時轉則治",
+   "source_id": "FA1-S-H54"
+  },
+  {
+   "text": "時移而治不易者亂",
+   "source_id": "FA1-S-H54"
+  },
+  {
+   "text": "兼听而时稽之",
+   "source_id": "RU2-S-XZ09"
+  },
+  {
+   "text": "爲之斗斛以量之，則并與斗斛而竊之",
+   "source_id": "ZH1-S10"
+  },
+  {
+   "text": "凡劫有三",
+   "source_id": "FA1-S-H16"
+  },
+  {
+   "text": "爲之仁義以矯之，則并與仁義而竊之",
+   "source_id": "ZH1-S10"
+  },
+  {
+   "text": "浸潤之譖，膚受之愬，不行焉，可謂明也已矣",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "不行",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "静虚则明，明则通",
+   "source_id": "RU2-S-S01"
+  },
+  {
+   "text": "静虚",
+   "source_id": "RU2-S-S01"
+  },
+  {
+   "text": "自以為得理，而所執之實謬，乃蔽而不明",
+   "source_id": "RU2-S-V3Q01"
+  },
+  {
+   "text": "圣人不以其目视千里之外也，乃因天下之目以视，故能明达也",
+   "source_id": "LC-HS-UP"
+  },
+  {
+   "text": "凡同类同情者，其天官之意物也同",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "能得其師者王，能得其友者霸",
+   "source_id": "BI1-S-WZ"
+  },
+  {
+   "text": "譬如耳目鼻口，皆有所明，不能相通",
+   "source_id": "ZH1-S33"
+  },
+  {
+   "text": "道術將爲天下裂",
+   "source_id": "ZH1-S33"
+  },
+  {
+   "text": "心者，形之君也，而神明之主也，出令而无所受令",
+   "source_id": "RU2-S-XZ21"
+  },
+  {
+   "text": "万物莫形而不见",
+   "source_id": "RU2-S-XZ21"
+  },
+  {
+   "text": "人主以一國目視，故視莫明焉；以一國耳聽，故聽莫聰焉",
+   "source_id": "FA1-S-H43"
+  },
+  {
+   "text": "知而弗言",
+   "source_id": "FA1-S-H43"
+  },
+  {
+   "text": "心居中虚，以治五官，夫是之谓天君",
+   "source_id": "RU2-S-XZ17"
+  },
+  {
+   "text": "今君人者釋其刑德而使臣用之，則君反制於臣矣",
+   "source_id": "FA1-S-H07"
+  }
+ ],
+ "missing_names": [
+  {
+   "concept": "optimum (a member of Requirement.Frontier: eligible, nothing eligible ranked above it)",
+   "used": "最优"
+  },
+  {
+   "concept": "an order rising with a family (Optimum.Rising); one outcome exceeding another on a family (Optimum.Exceeds)",
+   "used": "随族而升之序；于族胜之"
+  },
+  {
+   "concept": "room beyond (Optimum.Room)",
+   "used": "可腾挪"
+  },
+  {
+   "concept": "outcome (the levels after a step, C → Nat)",
+   "used": "步后水平"
+  },
+  {
+   "concept": "slack of the dependences beyond (Web.slack)",
+   "used": "族外诸待余地之和（说中亦称宽余）"
+  },
+  {
+   "concept": "capacity (cap; Flow.capacity) and joint capacity",
+   "used": "限；合限"
+  },
+  {
+   "concept": "mutual best response (Optimum.MutualBest)",
+   "used": "相为最优"
+  },
+  {
+   "concept": "horizon of an order ranking whole courses (the steps counted), and the far-sighted order",
+   "used": "所计诸步；远见之序（不用涯，涯锚 Diagonal/Learning 之视界）"
+  },
+  {
+   "concept": "weighting of later draws (w t)",
+   "used": "各步之重（不用权重，权是实践判断之名）"
+  },
+  {
+   "concept": "share (of carriers among descendants / the fast configuration read by a rule)",
+   "used": "份额"
+  },
+  {
+   "concept": "favours (RuleCapture favours)",
+   "used": "偏向"
+  },
+  {
+   "concept": "Locked (RuleCapture.Locked: rule favours and is not above what the reading gives)",
+   "used": "锁定（不用成闭：成闭锚 Law.DrawnInto.never_back，结构不同）"
+  },
+  {
+   "concept": "rule (the slow level R in Pace, Capture, RuleCapture, ClosedCapture)",
+   "used": "规则（名表各定义亦用此今语；单字“则”与连词相混，不用）"
+  },
+  {
+   "concept": "fast level / two-level course (Pace.paced)",
+   "used": "快层；两层之程"
+  },
+  {
+   "concept": "what lies beyond the share, the loss (ClosedCapture, Accrues)",
+   "used": "份额之外者（不用所失：所失名 Remainder）"
+  },
+  {
+   "concept": "group / pool as a predicate on formations, and its members",
+   "used": "一组；诸员（群名 collective，结构更多，不借）"
+  },
+  {
+   "concept": "alike through a formation's couplings (Web.AlikeThrough, AlikeThroughUpTo, AlikeThroughAll)",
+   "used": "缘感无别"
+  },
+  {
+   "concept": "levels without the part, the rest's exchange fixed (Flow.WithheldLevels)",
+   "used": "体之取与去而余者如故之水平（无体之水平）"
+  },
+  {
+   "concept": "a law of exchange reading through coupling (ExchangeLaw.Through)",
+   "used": "取与之法经感而读"
+  },
+  {
+   "concept": "exchanges with a condition (Flow.Exchanges); takes part in a condition (Flow.TakesPart)",
+   "used": "相取与；预"
+  },
+  {
+   "concept": "seeking; target; a target met at a state",
+   "used": "求；的；满（足只名一个所需被满足）"
+  },
+  {
+   "concept": "a model as the set of admitted histories in ExcludesWithin (Flow.excludes_tail_within, Stationary.model_error)",
+   "used": "象（表中之象锚 Relabel 之映射；此处借作所许历史之集，请整合者定）"
+  },
+  {
+   "concept": "a part's act (its exchange, a law of the part in SelectionGap, SelectionPool, PoolResponse)",
+   "used": "动（表锚 withMove：律所留开者，在宇中即诸物之取与）；行只名运行"
+  },
+  {
+   "concept": "reading another's couplings (Web.ReadsCouplings)",
+   "used": "读他者之感"
+  },
+  {
+   "concept": "intelligences (persons, AI systems)",
+   "used": "诸智能"
+  },
+  {
+   "concept": "counterfactual",
+   "used": "反事实"
+  },
+  {
+   "concept": "the target above all others (AboveAll): the table gives only the traditional form 為天下先",
+   "used": "为天下先（简体）"
+  }
+ ],
+ "open": "一、本篇不立条者：§7.2「Gaining reach」之 OwnWidening（Flow.Balances.widens_iff_others_within 等，部分自身区域之广恰在他者余地之内）结构属广、余地、互有所长，留生成之篇；Direction（§7.5 对齐之向，以广为愈与 J1/J2 之下）留比较之篇，本篇只收其兼感之部 Direction.widening_selected_by_pool；JointDraw（合取按需而绝、断属无一取者）留群之篇；RegimeMargin、InAmounts/Amounts 留流与余地之篇；Weightings、BoundedSignificance、Retaining、Clearing 之意义诸律、Drift、Reproduction、SelectionLevels、SelectionTerm、GroupEnding 等不在本簇结构内。§7.6（所请求之改变须是可执行之序列，不行不至）在比较与践行之篇。\n二、脊柱尚无之律（缺口，对应条目所载）：G1 按份额加权之兼感之律（wuzi-qun-chen-mo-ji、hanfei-san-shou）；G2 时稽与兼感合成之律（「兼听而时稽之」）；G3 兼感作读、含被压低者时规则不锁定之条件（hanfei-er-bing）；故“池须到达规则怎样读”只是方向，不是定理。\n三、以水平之感是否由待导出，本篇未述；章中称在交换之步已定（OB1），留待之篇。\n四、名之待定：为天下先表中只有繁体；象被借作所许历史之集；动用作体之所为；规则、份额、锁定、最优、可腾挪等今语暂代（见 missing_names）。\n五、十一·十三之 least_iff 右边带双重否定（不可非其被胜），經照写；十一·七之覆亦用双重否定。CG1 之「合用必要而不充分」是实测，不是律，说中已标。\n六、說中“見证”诸条（Clearing、Trophic、Diversion、DrawnBeyond.Dweller、TwoTakers、Switching、Captured、RuleCapture.Reversed、ClosedCapture.Beyond、Loop、Stationary）皆一个构造之例，不作一般之律。"
+}

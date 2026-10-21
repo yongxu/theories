@@ -1,0 +1,6 @@
+{
+ "real": true,
+ "why": "Confirmed. In book-2-outline.txt the stable ids map to these rendered numbers: 十六·十一→十六·七 (皆愈), 十六·十五→十六·十 (无以小害大), 十六·十四→十六·十一 (兼权), 十六·十六→十六·十二 (取于可得), 十六·十八→十六·十四 (量力而任), 十六·十九→十六·十五 (同类积小). The chapter (line 206) renders the citation as 十六·七、十六·十一至十六·十二、十六·十四、十六·十五. Because 无以小害大 was moved ahead of 兼权, the stable range ⟦十六·十四⟧至⟦十六·十六⟧ now renders as 十六·十一至十六·十二, which leaves out 十六·十. So 无以小害大 is named in the text but never cited, and the listed order (兼权 before 无以小害大) runs against the book's order. I read 十六·十 in jing-all.md and it is marked (设), so it is a practical commitment and belongs in the list. The replacement cites each one separately rather than as a stable-id range, because a range no longer follows rendered order after the move. It renders as 十六·七、十六·十、十六·十一、十六·十二、十六·十四、十六·十五, in the same order as the names. The find occurs exactly once in the body of 凡·十七. The reviewer's replacement is correct as it stands.",
+ "find": "实践之承诺为皆愈、兼权、无以小害大、取于可得、量力而任、同类积小（⟦十六·十一⟧、⟦十六·十四⟧至⟦十六·十六⟧、⟦十六·十八⟧、⟦十六·十九⟧）",
+ "replace": "实践之承诺为皆愈、无以小害大、兼权、取于可得、量力而任、同类积小（⟦十六·十一⟧、⟦十六·十五⟧、⟦十六·十四⟧、⟦十六·十六⟧、⟦十六·十八⟧、⟦十六·十九⟧）"
+}

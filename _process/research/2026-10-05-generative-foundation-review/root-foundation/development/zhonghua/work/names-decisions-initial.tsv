@@ -1,0 +1,289 @@
+名	篇	所名	锚	引	式	注
+大化	C01	展开（the one unfolding）	World.run_world	阴阳大化	复	不带荀子天论中阴阳二气之本体义；只取一切变化合为一个展开
+變化	C01	生成／变化（becoming）：关系的形成、维持、转化、退化与消解	Web.change_readings	剛柔相推而生變化	复	不带易传中与吉凶占断相连之义；单说「生」指生成（与退化相对），不指变化全体
+物	C01	关系项（relatum）	Web.roles	物，謂之而然	古	物只是关系项，不是先于关系的实体
+待者	C01	形成（formation）：关系项依存并汲取他者的角色	Web.roles	吾有待而然者邪	新	待＋者；与所待成对，是同一关系项的两种角色
+所待	C01	条件（condition）：他者所依存者这一角色中的关系项	Web.roles；Flow.roles	吾所待又有待而然者邪	复	所X只指单步之所X；「所待又有待」即一关系项兼两角色
+狀	C01	构形（configuration）：展开在一步之所是，它怎样相关	Alike	状变而实无别而为异者	古	取荀子正名「狀／實」之分；狀为构形，實为跨步所认之同一
+動	C01	动作（move）：律在一步所留开者	withMove	動，或徙也	古	墨经义：或徙，一种可能的移易；不带「动静」形上义
+步	C01	步（step）：自然数步的共同索引	World.run_world	不積跬步	古	只作离散的共同索引；时之义见「時」
+行	C01	运行（run）：一个过程无穷的实际执行，唯一的基底	Run；World.run_world	道行之而成	古	取「道行之而成」：所显之法由运行而成；不带「五行」「德行」义
+變	C01	过程（process）：可容许的变化，动作读入构形	Generative.Process	化而裁之謂之變	古	取系辞：化而裁之为变（裁成步）；与变化（展开全体）同取「变」义而层次不同
+繫辭	C01	框架（frame）：过程加上每个构形所实现的主张	Frame	繫辭焉而明吉凶	新	系辞＝系辞于卦：辞系于每个构形；书名作《系辞》加书名号以别；不带占断
+辭	C01	主张（claim）	Frame	繫辭焉而明吉凶	古	一个构形所实现、可以成立或不成立者
+宇	C01	世界（world）：一类关系项，带流与依存网，是容许每一步之过程的运行	World；World.run_world	宇，彌異所也	古	墨经义：遍及异所；每个宇是一观，回到展开；不带「宇宙」为实体之义
+久	C05	通过变化之持续（persisting through change）	Web.Holds	久，彌異時也	古	墨经义：遍及异时；与「常」（不变量）分开
+觀	C01	观（view）：过程、框架、世界的总名	Generative.Process；Frame；World	觀其會通	古	观只指视图；读法另名「讀」
+讀	C08	读法（reading）：带地位的解释；量从其构成者读出	—	桓公讀書於堂上	古	读法标「讀（AI）」；不指诵读
+兼	C03	整体（whole）：同一展开中的一切	Web.Whole；World.withRest	體，分於兼也	古	取墨经兼体之兼（整体）；墨子「兼以易别」之兼另作对照条目（见「盡」）
+體	C03	部分（part）	Web.Whole	體，分於兼也	古	墨经义：体是兼之一分；不带体用之本原义（体用另作相分条目）
+其餘	C01	整体的其余（the rest of the whole read as one relatum）	World.withRest	—	新	其余从不施动；取代「大块」
+諸宇	C01	空间（space）：所表示世界之类	—	—	新	諸＋宇
+待	C02	依存（dependence）：一个形成所需者及其多少，以阈给出	Web	吾有待而然者邪	古	待是关系谓词，不是物
+待網	C02	依存网（web）：持有水平、活动、所需、需要量与汲取	Web	—	新	待＋网；与「流」（Flow）并列而不同
+足	C02	满足（a level meets a need）；够（enough：目标在其所求之处被满足）	Web.Admits；Law.rests_iff	知足不辱	古	足只指所需被满足；不带「知足」的修养义
+容	C06	支持、容纳（support, admission）：水平满足一个形成在一步的每个所需	Web.Admits；Web.Supported	—	古	支持与容纳同一定义（supported_iff_admits），一名
+資	C02	汲取（draws）	Web	萬物資生	古	资是关系名
+食	C02	以之为生（lives on）	Web.LivesOn	—	古	—
+交	C02	交互（interacts）	Web.Interacts	天地交而萬物通也	古	一义；修订者核对它与 Hexagram.meets 是否同构：同构则同名，不同构则易章另作「卦交」
+相待	C02	相互依存（mutual dependence）	MutualDependence	—	复	—
+持	C02	维持（kept）	Web.Kept	—	古	与「絶」成对
+絶	C02	断裂（broken）	Web.Broken	—	古	与「持」成对；绝生之「绝」同义（断）
+結	C02	关系之形成（forms）	Web.Forms	—	古	与「解」成对
+解	C02	消解（dissolves）	Web.Dissolves	—	古	与「結」成对
+俱亡	C02	共灭（coextinct）	Web.coextinct	—	新	取代「随灭」（滅为后起佛典之词）
+蓄	C02	储备（carries）	Web.Carries	—	古	—
+自持	C02	承担自身（self-bearing）	Web.SelfBearing	—	新	取代「自待」
+截	C02	切口（cut）	Flow.Cut	—	古	取代「不交」，使「交」只有一义
+小故	C02	必要条件	—	小故，有之不必然，無之必不然	古	墨辩：无之必不然；与「有力」（差别制造）分开
+大故	C02	充分且必要之条件	—	大故，有之必然，無之必不然	古	墨辩
+有力	C02	差别制造（makes a difference）：一个依存之断的但书	Dependence.MakesDifference	—	新	修订者另择有出处之名亦可；不与「故」相混
+同力	C13	只在合起来时造成的差别（difference made only together）	Dependence.MakesDifferenceTogether	—	新	与「有力」成对
+作	C03	生起（arising）：活动跨一步开始	Web.Arises	萬物並作	古	取老子十六章「并作」；不用「生」（生只指生成）
+已	C03	止息（ceasing）：活动跨一步停止	Web.Ceases	已，成、亡	古	墨经义：已为终了；「不已」即不止而复现
+成	C03	开始成立（comes to hold）	ComesToBe	其分也，成也；其成也，毀也	古	与「毁」成对；成生、成闭之「成」同义（成就）
+毀	C03	不再成立（ceases to hold）	ComesToBe	其分也，成也；其成也，毀也	古	与「成」成对
+聚	C03	开始作为条件而在（comes to stand as a condition）	Web.ComesToStand	—	古	与「散」成对；不带「气之聚」之本体义
+散	C03	不再作为条件而在	Web.ComesToStand	—	古	与「聚」成对
+相代	C03	同步（keep pace）：生起与止息相差不过成员之数	keep_pace	日夜相代乎前	复	—
+消息	C03	普查平衡（census balance over a stretch）	held_over_stretch	君子尚消息盈虛	复	消息之「息」为长，与「不息」之「息」（止）异义；只作复词
+列	C03	普查（census）：每步成立者的列表，各一次	Web.Census	—	古	与「數」分名
+數	C03	计数（count）：恰在所计者已定之处存在	counts_iff_decided	—	古	只作计数，不带定数、命数义
+定數	C03	列一次即判定同一（lists once iff decided）	listsOnce_iff_decided	此事之所以稽实定数也	复	荀子正名
+不息	C03	不息（unceasing）：生起无止地复现	Web.Unceasing	—	古	一名一锚，C03 与 C05 合为一条
+終	C03	终止（ends）	Web.Ends	原始反終	古	—
+止	C03	停息（coming to rest）：从某步起无物生起	World.RestsFrom；World.comes_to_rest_unrefuted	止，以久也	古	止只指停；静另名「靜」
+靜	C03	静（holds at a time）：一时成立者（D45）	—	—	古	静不是停；不带「主静」修养义
+一實	C03	跨步之同一（reidentification）	Reidentify	有化而无别，谓之一实	复	荀子正名；一不作本体名
+化	C03	构形改变而同一不别	Reidentify	状变而实无别而为异者，谓之化	古	只取荀子正名之定义；大化、变化中之「化」同义
+重同	C09	改名（renaming）	Reidentify	二名一實，重同也	复	墨经
+續	C05	延续（continuation）	Web.Continues	—	古	—
+相續	C03	延续关系（continuation relation）	Web.ArisesFrom	—	复	—
+無閒	C03	连续（continuity）	Reidentify.KeepsActive	—	复	墨经「有闲／无闲」
+繼	C03	接续（succession）	—	—	古	修订者改锚到实际表达继承的声明（Lineage／Succession），不锚 KeepsTenure
+蟄	C03	休眠（dormancy）	Dormancy	龍蛇之蟄，以存身也	古	—
+存	C03	持存（holds, persists）	Web.Holds	—	古	—
+裂	C03	分裂（split）	Web.NoSplit	—	古	取代「分」，使「分」只给足迹
+合	C03	并合（merge，形成之并合）	Web.NoMerge	—	古	取代「并」（简体与「並」同形）；与构形之「同归」分开
+流	C04	流（flow）：每个形成跨一步从每个条件取与给	Flow	—	古	流是 Flow，不是待网
+取	C04	取用（uptake）	Flow	—	古	—
+與	C04	补充（replenishment，给）	Flow	—	古	—
+取與	C04	一次交换（one exchange）	Flow	—	复	—
+取者	C04	取用者（takers）	Flow.takers	—	复	—
+與者	C04	补充者（renewers）	Flow.renewers	—	复	—
+衡	C04	平衡（balance）：水平的每次变化恰是所取与所给	Flow.Balances	—	古	—
+耗	C04	耗散（dissipation）	Flow.Dissipative	—	古	—
+端	C04	最小损失、最小之量（least loss）	Amounts.rests	端，體之無序而最前者也	古	墨经义；与「萌」（种子）分开
+積小以高大	C04	阿基米德的量（Archimedean amounts）	—	積小以高大	复	—
+輸	C04	输送（conveying）	Flow	—	古	—
+自外來	C04	从其外得到供给（fed from beyond）	Flow.FedFromBeyond；Flow.fed_from_beyond	—	复	—
+汲	C04	汲入（drawing in）	Flow	—	古	修订者核对与「资」（Web.draws）之别
+合取過與	C04	联合超出（joint excess）	Flow.excess_bounded；Flow.joint_excess_ends	—	新	—
+多而無已	C04	不止地更多（more without end）	—	—	新	「已」同「止息」义
+損	C04	下降（depletion）	—	損，偏去也	古	墨经；与「益」成对
+竭	C04	耗尽（exhaustion）	—	—	古	—
+封	C04	封闭（closed：家族跨一步不与外交换）	—	夫道未始有封	古	取代「闭关」，使「闭」只指吸收区域
+圍	C04	围住（enclosed around）	—	—	古	—
+開	C04	开放（openness）：超出每个有限家族的交换	World.arising_opens	—	古	只对应 Ren 的「开」之「未」一相；未、可、应、转见对照表
+恆	C05	更新（renewing）：所参与的每个条件都继续支持每个依存者	Web.RenewingIn	天地之道，恆久而不已也	古	运行之类
+不恆	C05	消耗（consuming）：某依存者永久失去支持	Web.ConsumingIn	—	复	与「恆」以「不」成对
+復	C05	返回（return of a configuration）	Branching.Returns	反復其道，七日來復	古	只指构形再得
+復足	C05	回程（restored：依存再被满足）	Web.Restored	—	新	復＋足
+期	C05	回程之期（return bound）	—	—	古	—
+同歸	C05	合并（merge of courses）	—	天下同歸而殊塗	复	—
+藏往	C05	带着历史（kept history）	—	知以藏往	复	—
+剝	C05	侵蚀（undermining）	Web.UnderminingOn	—	古	—
+生生	C06	生生：整体中的生及其继续生成（D1）；方向以扩大比较	Web.Widens	生生之謂易	复	不带老子五十章「生生之厚」之执生义；不是谓词 living
+生	C06	生成（generation），与退化相对	—	—	古	生只指生成；生起另名「作」
+成生	C06	生成的（generative）：部分扩大之处	Web.Widens	—	新	Ren 之词
+絶生	C06	退化的（degenerative）	—	—	新	Ren 之词
+所容	C06	生成的空间（the generative space）	—	—	复	—
+賅	C06	包含（includes）	—	—	古	—
+有所長	C06	超出（exceeds）	—	—	复	—
+廣	C06	扩大（widens）	Web.Widens	—	古	广只名扩大序，不带「更好」；排序另名
+狹	C06	缩小（narrows）	—	—	古	—
+相賅	C06	保持（keeps：互相包含）	Web.Keeps	—	复	—
+各有所長	C06	混合（mixed）	Web.Mixed	—	复	—
+偏去	C06	扣留一个部分（a part withheld）	—	損，偏去也	复	墨经
+餘地	C06	余量（margin）	Flow.Balances.supported_iff_within_margin	恢恢乎其於遊刃必有餘地矣	复	余只在复词中：其余、余地、所失各不相借
+闔	C06	闭合（closing）	—	一闔一闢謂之變	古	—
+闢	C06	开启（opening）	—	一闔一闢謂之變	古	—
+日新	C06	新（novelty）：从某步起每一构形皆异于先前	Novelty	日新之謂盛德	复	只名新；不带朱熹「自新」之德性义
+益	C06	增益（gain）：一族跨一步之存量上升	Gain	—	古	与「损」成对
+閉	C07	闭：律从不离开的区域（吸收区域；对过程是不变量）	Law.Absorbing；Law.drawn_iff_not_returns	—	古	Ren 之词，结构如对照表；不带负价值
+成閉	C07	成闭（锁定，lock-in）	Law.DrawnInto.never_back；Run.locked_in	—	新	Ren 之词
+護閉	C07	护闭（关节处的保持，keeping）	Becoming.Junctures	—	新	Ren 之词；D52
+機	C07	机（关节，juncture）	Becoming.Junctures	節如發機	古	D52
+知幾	C07	及早被读到的水平耦合	Web.observed_raise_couples	几者，动之微，吉之先见者也	古	知几＝及早读到水平之升而耦合入；与「未兆」相反，与「机」并存；不带吉凶
+復歸	C06	扰而复归（perturbation reabsorbed）	Law.perturbation_reabsorbed	夫物芸芸，各復歸其根	复	取代「稳」「元闭」二名的结构义；稳、元闭只留在对照表中
+常	C07	不变量（invariant）	Invariant	復命曰常	古	与「久」分开
+同	C07	相同／互模拟（alike, bisimulation）	Alike	同，異而俱於之一也	古	墨经
+類	C07	归并（lumping）	Learning.Lumped	以類取，以類予	古	墨辩
+推類	C07	经由归并而推广（generalization through lumping）	—	推類之難	复	合「推」于此
+理	C07	理：对结构与变化之律的建模	Learning.goAlike_iff_lumped；carries_law_iff	理者，成物之文也	古	已采；凡理皆类，类不皆理；不带「理先气后」
+法	C01	律（law）：确定的过程，从它所支配的历史读出	Law	法，所若而然也	古	墨经义；不带法家之法令、佛法义
+自然之法	C01	所显之律（law shown）：一段历史是其运行的最小之律	Shown；shown_le_iff	道法自然	复	取王弼「在方而法方，在圆而法圆」：法随所然；不带自然作本原
+勢	C07	吸引域（basin）	—	如轉圓石於千仞之山者，勢也	古	只取盆地义；兵家位势作条目
+入	C07	被吸入（drawn into）	Law.DrawnInto	—	古	或入、必入以「或」「必」组合
+所歸	C07	吸引子（attractor）	—	—	复	—
+並行不悖	C07	交换（commuting）	Law.Commutes	道並行而不相悖	复	—
+未定	C07	未定（undecided）	—	—	复	未只作虚词
+奇偶	C07	奇偶（parity）	—	—	复	—
+矛盾	C07	奇偶系统中的矛盾	—	—	复	—
+識	C08	识：一个形成自身的进一步历程，经由其耦合所作的归并而分解（D45）	Web.SelectsThrough	—	古	已采；去「登记」义
+往	C08	记录、历程之前段（record, course prefix）	—	彰往而察来	古	往只指过去之历程
+以往知來	C08	外推（extrapolation）	—	神以知来，知以藏往	复	—
+數往	C08	回读（retrodiction）	—	數往者順，知來者逆	复	—
+驗	C08	检验（testing）	—	—	古	—
+徵	C08	验证（verification）	Verification	—	古	—
+試	C08	实验（experiment）	Experiment	—	古	—
+相若	C08	对照（control）	—	—	复	—
+聞	C08	观察（observation）：从所观察者出发的读法之路线	apart_only_downstream	知：聞、說、親	古	墨经三知之「闻」：传受之知
+察	C08	敏感性与最小识（sensitivity）	Sensitivity	—	古	—
+可知	C08	可学（learnable）	Learnable	—	复	—
+所見	C08	所见范围（scope of an inquiry）	—	—	复	取代「涯」之一义
+涯	C17	视界（horizon）	Horizon	吾生也有涯，而知也无涯	古	只名视界
+習	C08	训练（training）	Learning.Training.fit_right_iff	—	古	—
+過則改	C08	排除法外推（extrapolation by elimination）	—	過則勿憚改	复	修订者核对结构
+符	C08	相符／不符（accords／misses）	—	—	古	—
+終而復始	C08	套索程（lasso）	—	—	复	与「环」之别由修订者核对
+默	C08	沉默（silence）	—	—	古	—
+參驗	C08	以可错之见证交叉核验	—	—	复	韩非子
+斷	C08	判断过程（judgment process）	—	—	古	—
+衢	C08	运行分开（runs part）	—	—	古	—
+大率	C08	典型（typicality by counting）	Typicality	—	复	—
+出其不意	C08	对角序列（diagonal course）	—	出其不意	复	孙子
+名	C09	名（name）	—	名：達、類、私	古	墨经
+私名	C09	一一对应的命名（只作标识的名）	—	名：達、類、私	复	—
+達名	C09	什么都不分开的读法（常值归并）	—	—	复	—
+名無固宜	C09	标签不携带关系	—	名无固宜	复	荀子正名
+約定俗成	C09	共享码（shared codes）	SharedCodes	约定俗成谓之宜	复	已采
+制名	C09	外加码（imposed code）	—	—	复	荀子正名
+正名	C09	有意义的描述	—	—	复	—
+貫	C09	跨情境成立（cross-situational standing）	CrossSituational.stands_iff	吾道一以貫之	古	只取「通贯诸情境」之结构，不带「吾道」
+知名	C09	码的获得	—	—	复	—
+當簿	C09	有限多个标签所确定者	—	—	复	—
+感	C10	耦合（coupling；couples into）	Web.CoupledInto	天地感而萬物化生	古	感是关系谓词
+應	C10	回应（responds to）	ExchangeLaw.RespondsTo	—	古	单用只作回应；爻之关系作「相應」
+資域	C10	供给闭包（feeding closure）	Flow.WithinFeeding	—	新	闭包统一以「域」：资域、扰域、及域、感域、群域
+擾域	C10	影响闭包（influence closure）	Flow.WithinInfluence	—	新	—
+及域	C10	所及闭包（reach closure）	Flow.WithinReach	—	新	—
+感域	C10	耦合闭包（coupling closure）	Flow.WithinCoupling	—	新	—
+群域	C10	系统闭包（system closure）	Flow.WithinSystem	—	新	—
+所及	C10	部分所及（what a part reaches）	—	—	复	单步之所及
+擇	C10	选择（selection）	Web.SelectsThrough	—	古	—
+緣感而擇	C10	经耦合的选择（selection through couplings）	Web.selects_alike_iff	—	新	—
+及而不感	C10	选择的缺口（the gap of a selection）	SelectionGap	—	新	取代「蔽」作界限之名
+無明	C10	无明：锁定在不能停息之目标上的寻求	Law.rests_iff；Seeking	—	复	已采；不同于十二因缘之首支
+明	C10	明：耦合接上一个及于支持所不标记者的选择	Web.observed_raise_couples	知常曰明	古	已采
+兼感	C10	合用耦合（pooled coupling）	SelectionPool	—	新	兼取「合为整体」义
+劫	C10	劫持（hijacking）	—	—	古	修订者核对锚
+與時轉	C10	规则改变之速（pace）	Pace	—	复	与「遲速」合一，保留一名由修订者定
+不行不至	C15	请求的改变须是可执行的序列	—	道雖邇，不行不至	复	合「法不自行」于此
+環	C11	回路（loop）	OnLoop	—	古	—
+成環	C11	成环（closing）	Closing	—	新	—
+還	C11	反馈（feedback）	—	—	古	—
+報	C11	回路之报（return map）	LoopReturn.returnMap	—	古	—
+滋	C11	失控（runaway through a loop）	Runaway	—	古	—
+未兆	C11	断裂之前未被读到（the break not read before it）	Web.break_not_bounded	其未兆易謀	复	—
+窮	C11	断点（the break）	—	窮，或有前不容尺也	古	墨经
+頻數	C11	耦合的频度（frequency）	Frequency	—	复	—
+不已	C11	复现（a coupling recurs）	CouplingRecurs	惟天之命，於穆不已	复	已为止息，不已即不止而复现
+所失	C11	截断所失（what a cut loses）	Remainder	—	复	取代「余」
+應倍	C11	耦合强度（coupling strength）	—	—	新	—
+所致	C11	所携带的量（carried amount）	carried；most_difference_arrives	—	复	—
+中和	C11	中和（two-sided regulation）	Regulation	致中和	复	已采
+中節	C11	界恰为无过冲	Regulation	發而皆中節謂之和	复	—
+過正	C11	过冲（overshoot）	Regulation	—	复	—
+一偏	C11	单侧回应	Regulation	—	复	—
+識不早	C11	迟读（reading late）	Regulation	—	新	—
+寬猛相濟	C11	接力（the relay）	Regulation	—	复	左传昭公二十年「宽以济猛，猛以济宽」不在脉络冻结文本中，修订者从 RO 冻结文本或他处核出处；否则只作新组合
+不求備	C11	容差（tolerance）	Tolerance	無求備於一人	复	—
+有以待之	C11	从每个起点恢复（restoring from every start）	Tolerance.restores_iff	恃吾有以待之	复	孙子
+先施	C11	先给（gives first）	—	所求乎朋友，先施之	复	中庸
+所出	C12	世系（descent）	Flow.DescendsAt	—	复	取代「所生」
+因	C12	承继（inheritance）	Web.InheritsAt	殷因於夏禮，所損益可知也	古	与「损益」同出论语
+傳	C12	传递（transmission）	Flow.TransmitsWithin	—	古	—
+損益	C12	变异（variation：升与降）	—	殷因於夏禮，所損益可知也	复	损、益各同其单字义
+傳擇	C12	演化（evolution）	Evolution	—	新	—
+益之者	C12	净给予者（net giver）	Flow.NetGiver	—	新	—
+象	C12	模型（model）：选择所经之归并之映射	—	象也者，像也	古	取系辞「象」；选择者之模型作「择之象」
+取法	C12	经他者实际回应之学	—	—	复	—
+群	C13	群（collective）	—	—	古	—
+分	C13	分（exclusive footprints）	—	群而無分則爭	古	分只给足迹
+分數	C13	联合计划（joint plan）	JointPlans	凡治衆如治寡，分數是也	复	孙子
+出入相揜	C13	在所给之内的联合取用	—	—	复	—
+爭	C13	在共享条件处的竞逐（race at a shared condition）	—	—	古	—
+稱	C13	相对位置（relative position）	RelativePosition	—	古	相轧作对照条目
+同患	C13	共同条件（a condition every formation shares）	—	—	复	—
+交相資	C13	互相供给（mutual feeding）	—	兼相愛，交相利	新	取代「交相利」；利之价值义不携带
+和而不同	C13	合用之所增（what pooling adds）	SelectionPool	君子和而不同	复	—
+同而不和	C13	等于一个成员的合用	SelectionPool	小人同而不和	复	不带君子／小人之品第
+讓	C13	闭合的一环（the closing link）	—	—	古	—
+念舊惡	C13	有记忆的等待之给	—	伯夷、叔齊不念舊惡	复	—
+不念舊惡	C13	无记忆的等待之给	—	伯夷、叔齊不念舊惡	复	—
+得兼	C13	诸条件同时保持	—	二者不可得兼	复	孟子
+顧	C14	意义（significance）：唯一给出的评价参数	—	—	古	不分级，不是价值取向
+顧式	C14	评价（valuation）	Valuation	—	新	—
+活	C14	活的（living）	—	—	古	—
+活皆有顧	C14	生命意义（living significance）	LivingSignificance；Valuation.significant_iff	—	新	取代「仁」；仁作相分条目
+凡續皆有顧	C14	延续条件（the continuation condition）：陈述而不断言；定范围，不排序	Unrestricted	—	新	设，不断言；取代「无弃」
+方	C14	立场（standpoint）	—	方生方死	古	—
+我	C14	中心（center，评价之中心）	—	—	古	修订者核对 center_not_derived 之结构
+己	C14	自身区域（own region）	—	—	古	—
+萌	C14	种子（seed）	—	而莫知其所萌	古	取代「端」之种子义
+自顧	C14	自身意义（self-significance）	—	—	新	取代「自爱」
+無親	C14	关系中立（relational neutrality）	—	天道無親	复	不带「常与善人」
+無方	C14	立场中立与立场不变（standpoint neutrality）	—	神無方而易無體	复	—
+盡	C14	中立（Neutral：∀）	Neutral	盡，莫不然也	古	墨经；兼爱「兼以易别」作对照条目
+別	C14	有界规则（Within）	—	—	古	—
+在己	C14	被持有（held）	—	—	复	—
+畛	C14	自身的边界（the boundary of a self）	—	爲是而有畛也	古	齐物论
+畛內之顧	C14	预设（the presupposition）	SignificantWithin	—	新	—
+不易乎畛	C14	不变的一步（the step of invariance）：预设不随边界怎样划而改变	BoundaryInvariant	不易乎世	新	只定范围，不排序；无己作相分条目
+皆顧之活	C14	从意义读出的正面相关	—	—	新	—
+權	C15	实践判断（practical judgment）	—	於所體之中而權輕重之謂權	古	墨子大取
+以廣爲愈	C15	C，扩大的比较：扩大更好；唯一排序历程的前提	Comparison；Web.paths_comparison_widens	—	新	设，明载「更好」；所有说排序之处只引它
+無喪	C15	保留（retains）	Web.Retains	無喪無得	复	与「有得」成对
+有得	C15	增加（adds）	Web.Adds	—	复	与「无丧」成对
+粹	C15	提升规则 L（lifting rule）	LiftBetter	—	古	修订者核对出处与结构
+兼權	C15	J1 完全比较与保留的损失	Lexical.BasicPriority	—	复	—
+無以小害大	C15	J2 基本条件优先	FrontierFrames.Priority	无以小害大	复	孟子；不带「无以贱害贵」之等级义
+量力而任	C15	J3 有界责任	—	—	复	—
+從所可	C15	J4 正当可行的选择	FrontierWorlds	—	复	—
+同類積小	C15	FR 有限回应（finite responsiveness）	—	—	新	—
+足而止	C15	够而停（rests exactly where the target is met）	Law.rests_iff	知足不辱，知止不殆	复	—
+先取	C15	先占（preemption）	Preemption.not_undermining_yet_loses	—	新	绝其长作条目
+設	C16	条件、假设（a supposition：陈述而不断言）	—	—	古	四种地位之一；律的局部前提亦名设
+無設而然	C16	不加前提的定理	—	—	新	四种地位之一
+有設而然	C16	在所述前提下的定理	—	—	新	四种地位之一
+證	C16	已检查的陈述（定理）与其检查	—	—	古	经说证三分之「证」
+未決	C16	未决（open）	—	—	复	—
+說	C16	推导（derivation）	Derivation.Derives	說，所以明也	古	墨经；经说证之「说」同义（所以明）
+不然者	C16	反例与反模型	—	—	复	—
+定然否	C16	已定（decided：p 或非 p）	Decided	—	新	—
+不可非	C16	双重否定（¬¬p）	—	—	新	—
+辭皆定然否	C16	排中律	—	—	新	—
+或不當	C16	弱已定（weakly decided）	WeaklyDecided	—	新	修订者核对出处
+無窮可盡	C16	全知原则（LPO、WLPO 等）作为具名条件	—	無窮不害兼	新	—
+相合	C16	相合（agreement）	—	—	复	RO 三种关系
+定域	C16	定域（scope）	—	—	新	RO 三种关系
+相分	C16	相分（divergence）	—	—	复	RO 三种关系
+以明	C16	非二方法（the nondual method）	—	莫若以明	复	方法要求，不设 Lean 锚；「照之于天」之圣人中心不携带
+時	C17	情境（situation）	Situations	夫卦者，時也	古	王弼；先秦作彖传「随时之义」；不作步之名
+先後	C17	步序	—	—	复	—
+錯行	C17	交错（interleavings）	Interleavings	如四時之錯行	复	中庸
+位	C17	位（place）	HexagramPlaces	—	古	已有易章
+當位	C17	当位	HexagramPlaces	—	复	—
+正	C17	正	HexagramPlaces	—	古	—
+中位	C17	中位	HexagramPlaces	—	复	—
+相應	C17	爻之相应（opposed lines）	Hexagram.opposed	—	复	单用「应」只作回应
+比	C17	比（adjacent lines）	—	—	古	—
+承	C17	承	—	—	古	—
+乘	C17	乘	—	—	古	—
+獨異	C17	独异之线（sole line）	HexagramSites	—	新	取代「上下应」
+變通	C17	规则读取所处之构形而变	—	变通者，趣时者也	复	—
+遲速	C17	步速（pace）	Pace	—	复	与「与时转」合一，由修订者定
+通	C17	可（the run continues）	Onward.run_iff_continues	推而行之謂之通	古	只取一构
+剛柔	C17	爻值	Hexagram	剛柔相推而生變化	复	取代阴阳作爻值之名
+大一	C01	（对照条目）至大无外	World.withRest	至大无外，謂之大一	复	不立为名，作「兼」的相合条目

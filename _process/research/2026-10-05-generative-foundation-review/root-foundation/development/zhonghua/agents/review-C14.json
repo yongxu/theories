@@ -1,0 +1,281 @@
+{
+ "edits": [
+  {
+   "id": "十三·二十二",
+   "find": "以所出为辞间之关系，若无亲",
+   "replace": "以交或所出（两向）为辞间之关系，若无亲",
+   "why": "Flow.descent 之辞间之关系是「交，或一方出于另一方（两向）」（related e e' := (∃ c, Interacts c e e') ∨ Descends e'.1 e.1 ∨ Descends e.1 e'.1）；descent_reaches、ancestry_reaches 之前件是此顾式之无亲（Neutral (L.descent W own sig).transmits），不是只沿所出之无亲。经须照 Lean 写出所用之关系。交为⟦二·十三⟧，在前。"
+  },
+  {
+   "id": "十五·十二",
+   "find": "**經**　凡顾式皆在己：活皆有顾",
+   "replace": "**經**　凡皆在己之顾式：活皆有顾",
+   "why": "「凡顾式皆在己」读作全称断言（每一顾式都皆在己），是假辞；significant_iff_held 以 held : V.Held 为前件，经应写「凡皆在己之顾式」，与次句「凡诸活辞连属之顾式」同式。"
+  },
+  {
+   "id": "十五·十四",
+   "find": "`Becoming.bounded`、`Becoming.Within`、",
+   "replace": "`Becoming.bounded`、`Becoming.Within`、`Becoming.bounded_rival`、",
+   "why": "经「别于其域内皆然」即 bounded_rival 之前一合取（Within region (bounded region)），证中无承载此句之声明；补之。"
+  },
+  {
+   "id": "十五·二十",
+   "find": "展开之律本身不定顾（⟦十五·三⟧），所以条件与以广为愈的根据都未决",
+   "replace": "所表示之展开之律不蕴含活皆有顾（⟦十五·三⟧）；条件与以广为愈之根据都未决",
+   "why": "⟦十五·三⟧之说明言该条只示所表示之展开之律不蕴含活皆有顾，「不是“展开不定顾”的证据」（英文章 §5 同：not evidence that becoming leaves significance undetermined）；此处以⟦十五·三⟧证「展开之律不定顾」并由之推出根据未决，与之相违。改为该条所证者，删去不成立之「所以」。"
+  },
+  {
+   "id": "十五·二十",
+   "find": "剥是丧之征：一剥之事",
+   "replace": "剥是丧之征：条件之下，一剥之事",
+   "why": "Web.UnderminingOn.not_retains_unrestricted 以 unrestricted : Unrestricted sig 为前件；句中「自每方……不无丧」须注明在条件之下。"
+  },
+  {
+   "id": "十五·二十二",
+   "find": "而偏去之积容每一物，清除者每步皆见容，所以偏去此体并不终止任何物",
+   "replace": "而条件之下偏去之积之历于有此体之积之历无丧，清除者每步皆见容、于偏去之积亦见容，所以偏去此体并不终止任何物",
+   "why": "Clearing.clearer_loses_dweller 所证为 web.Retains sig p l web.level（条件之下）与 ∀ t, web.Supported t .clearer ∧ web.Admits (l t) t .clearer，不是「偏去之积容每一物」。照所证写。"
+  },
+  {
+   "id": "十五·十八",
+   "find": "其后一半，凡使活皆有顾成立者皆含之，证中不用条件",
+   "replace": "其后一半，凡使活皆有顾成立者皆含之；此半之证不用条件，而所检之律仍以条件为设",
+   "why": "relevance_least 两合取共带 unrestricted 之前件；后半之证项虽不用它，脊柱并无不带此设之律。说须言所检者，免读作无设之律。"
+  },
+  {
+   "id": "十五·二十六",
+   "find": "有宇焉，沿喂养划畛",
+   "replace": "有宇焉，沿资域所据之关系划畛",
+   "why": "「喂养」不是名表之名，经中只用名；同条后文已写「资域所据之关系」（FedFrom，资域即沿之之域，withinFeeding_iff），统一用之。"
+  },
+  {
+   "id": "十五·十三",
+   "find": "有宇焉：每物持且顾其自身之事，清除者亦顾与其资源者（源）之事",
+   "replace": "有宇焉：每物之己即其自身之事，每物顾其自身之事，清除者亦顾与其资源者（源）之事",
+   "why": "Clearing.own f e := e.1 = f，正是「己即其自身之事」，照之写更确；又持是名表 Web.Kept（维持，与绝成对）之名，此处作「持有」，一字二义。"
+  },
+  {
+   "id": "NEW-17",
+   "find": "一者唯待其本，每步运而见容",
+   "replace": "一者唯待一所待，每步运而见容",
+   "why": "「本」不是名表之名，又带本原之义（RO 四非关系层之一）；Lean 之 ground 只是此者唯一之所待（∀ t c, requires t .self c → c = .ground），照写。"
+  },
+  {
+   "id": "NEW-17",
+   "find": "一者之续之所须唯其本",
+   "replace": "一者之续之所须唯此所待",
+   "why": "与经之改一致（本带本原义，不是名表之名）。"
+  },
+  {
+   "id": "NEW-17",
+   "find": "一物唯运于首二步",
+   "replace": "一物唯运于第零步与第一步",
+   "why": "本条以下写第二步、第三步、第四步，皆计自第零步（Mortal 之 ¬active 2、∀ n f, ¬active (n+3)；Downstream 之 ¬active (n+4)；Clearing 之 UnderminingAt 1）；「首二步」与「第二步」并用，按序数读（第一步＝首步）则「第二步」落在首二步之内，「自第三步起诸物皆不运」即与后继者于步二仍运相违。写明第零步，计法即定（⟦十五·十三⟧亦写零步）。"
+  },
+  {
+   "id": "十五·二十一",
+   "find": "此条件不排互有所长之较",
+   "replace": "此设不排互有所长之较",
+   "why": "经中「条件」不是名，且今语条件是名表所待之所名；所指是前文之凡续皆有顾，以名表之「设」指之。"
+  },
+  {
+   "id": "NEW-17",
+   "find": "这三者都不说一中心欲其续",
+   "replace": "这三者都不说一我欲其续",
+   "why": "中心是名表我之所名；说中不以今语代名。"
+  },
+  {
+   "id": "NEW-14",
+   "find": "二互利者每步皆运",
+   "replace": "二物各资于彼、每步皆运",
+   "why": "「互利」带利之价值与经济义（附录：交相利不采，利带价值与经济义）；Mutualism.web 之构造是二物各资于彼（draws _ x y := y = other x）、每步皆运，照之写。"
+  },
+  {
+   "id": "十五·十四",
+   "find": "自清除者之方保留一切有顾者",
+   "replace": "自清除者之方无丧",
+   "why": "保留是无丧之今语（Web.Retains），说中用名表之名；centers_disagree 之前一合取正是 web.Retains … .clearer web.level l。"
+  },
+  {
+   "id": "十五·十四",
+   "find": "令每物之顾止于其沿依存之域",
+   "replace": "令每物之顾止于其沿待之域",
+   "why": "依存是待之今语；经已写「沿待之域」，说同之。"
+  },
+  {
+   "id": "十五·十四",
+   "find": "以依存为界的诸我判断不一",
+   "replace": "以沿待之域为界的诸我判断不一",
+   "why": "依存是待之今语，说中用名。"
+  },
+  {
+   "id": "十五·十四",
+   "find": "中沿依存之域正是导出之资域",
+   "replace": "中沿待之域正是导出之资域",
+   "why": "依存是待之今语，说中用名。"
+  },
+  {
+   "id": "十五·十三",
+   "find": "沿依存所能导出的都成立",
+   "replace": "沿待所能导出的都成立",
+   "why": "依存是待之今语，说中用名（经与⟦十五·十四⟧经皆写待）。"
+  },
+  {
+   "id": "十五·十三",
+   "find": "所以沿依存，展开定一个我须计之域",
+   "replace": "所以沿待，展开定一个我须计之域",
+   "why": "依存是待之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十三",
+   "find": "二者是同一预设之二读",
+   "replace": "二者是同一畛内之顾之二读",
+   "why": "预设是名表畛内之顾之所名（今语）；STYLE：不以今语代名，只在首见时括注（本条说首句已注）。预设又含名表之「设」字，易与陈而不断之设相混。"
+  },
+  {
+   "id": "十五·二十三",
+   "find": "是使每方之预设于某一可许之畛然之最小之顾",
+   "replace": "是使每方之畛内之顾于某一可许之畛然之最小之顾",
+   "why": "预设是畛内之顾之今语，说中用名（同上）。"
+  },
+  {
+   "id": "十五·二十三",
+   "find": "即沿无一相关之关系之预设",
+   "replace": "即沿无一相关之关系之畛内之顾",
+   "why": "预设是畛内之顾之今语，说中用名（同上）。"
+  },
+  {
+   "id": "十五·二十四",
+   "find": "它就是自身之预设（于某一可许之畛然）",
+   "replace": "它就是自身之畛内之顾（于某一可许之畛然）",
+   "why": "预设是畛内之顾之今语，说中用名；又与名表之设相混。"
+  },
+  {
+   "id": "十五·二十四",
+   "find": "条件蕴含预设，所以条件即“预设，且由预设至条件”",
+   "replace": "条件蕴含畛内之顾，所以条件即“畛内之顾，且由畛内之顾至条件”",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十四",
+   "find": "条件超出自身之预设之全部内容",
+   "replace": "条件超出自身之畛内之顾之全部内容",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十四",
+   "find": "连自身之预设也不能于任何可许之畛然",
+   "replace": "连自身之畛内之顾也不能于任何可许之畛然",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十四",
+   "find": "或某一方持预设，或放弃预设",
+   "replace": "或某一方持畛内之顾，或放弃畛内之顾",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十四",
+   "find": "去己即去掉预设本身",
+   "replace": "去己即去掉畛内之顾本身",
+   "why": "预设是畛内之顾之今语，说中用名；对照节已写「去己即去掉畛内之顾」，此同之。"
+  },
+  {
+   "id": "十五·二十四",
+   "find": "保留己之预设，只让它",
+   "replace": "保留己之畛内之顾，只让它",
+   "why": "预设是畛内之顾之今语；对照节已写「保留己之畛内之顾」，此同之。"
+  },
+  {
+   "id": "十五·二十五",
+   "find": "与“每方之预设于某一可许之畛然”",
+   "replace": "与“每方之畛内之顾于某一可许之畛然”",
+   "why": "预设是畛内之顾之今语，说中用名（经即如此写）。"
+  },
+  {
+   "id": "十五·二十五",
+   "find": "使每方之预设然",
+   "replace": "使每方之畛内之顾然",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十五",
+   "find": "没有给出覆盖与各方之预设",
+   "replace": "没有给出覆盖与各方之畛内之顾",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十六",
+   "find": "去掉预设本身，不变空洞成立",
+   "replace": "去掉畛内之顾本身，不变空洞成立",
+   "why": "预设是畛内之顾之今语，说中用名；本条题即「畛内之顾诸读之强弱」。"
+  },
+  {
+   "id": "十五·二十六",
+   "find": "去掉不变，预设于资域然而清除者之预设推不到栖居者",
+   "replace": "去掉不变，畛内之顾于资域然而清除者之畛内之顾推不到栖居者",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十六",
+   "find": "不变与预设都然",
+   "replace": "不变与畛内之顾都然",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十六",
+   "find": "预设之诸读有强弱",
+   "replace": "畛内之顾之诸读有强弱",
+   "why": "预设是畛内之顾之今语，说中用名（与本条题一致）。"
+  },
+  {
+   "id": "十五·二十六",
+   "find": "沿及域所据之关系然之预设",
+   "replace": "沿及域所据之关系然之畛内之顾",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十六",
+   "find": "它是预设之诸读之次第",
+   "replace": "它是畛内之顾之诸读之次第",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十六",
+   "find": "去己即去掉预设，所余",
+   "replace": "去己即去掉畛内之顾，所余",
+   "why": "预设是畛内之顾之今语，说中用名（与⟦十五·二十四⟧对照同）。"
+  },
+  {
+   "id": "十五·二十七",
+   "find": "关于自身之续的预设出发",
+   "replace": "关于自身之续的畛内之顾（沿无一相关之关系）出发",
+   "why": "预设是畛内之顾之今语，说中用名；atCenters_least、forced_iff_center 所用者正是沿无一相关之关系之畛内之顾（SubTrue (Boundary (fun _ _ => False) (center q)) …），并注明之。"
+  },
+  {
+   "id": "十五·二十七",
+   "find": "一方自身之预设所迫者",
+   "replace": "一方自身之畛内之顾所迫者",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十七",
+   "find": "即自身之预设成立者",
+   "replace": "即自身之畛内之顾成立者",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十八",
+   "find": "就己而持，预设给每我其自身之域",
+   "replace": "就己而持，畛内之顾给每我其自身之域",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  },
+  {
+   "id": "十五·二十八",
+   "find": "自身之预设是否就一个",
+   "replace": "自身之畛内之顾是否就一个",
+   "why": "预设是畛内之顾之今语，说中用名。"
+  }
+ ],
+ "notes": "Reviewed all 35 條, the intro and the 对照 against the Lean (Becoming/*.lean), the name table, the plain wordings, book-1-outline and passages.json. All 46 edits were applied in order to a copy of the part (scratch copy: /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c14rev/applied.json). Each find matched exactly once at the moment it was applied. No repository file was edited.\n\nWhat checked clean:\n- **Declarations:** every backticked declaration exists under its full name. Bare names like Clearing, Model, Pos, own, sig, related and center are namespaces or fields. Every record link resolves.\n- **Quotations:** all 38 「…」〔ID〕 match exactly under ctq.py text.\n- **对照 kinds:** every passage id exists in passages.json, and every stated kind (in the 條 and in 对照) matches the map.\n- **⟦id⟧ references:** every one is live in book-1-outline and points to the right content. Spot checks: ⟦一·十二⟧ holds arising_iff_ceasing, ⟦十一·十⟧ holds unselected_beyond_coupling, ⟦十一·七⟧ is 应域, ⟦十一·二⟧ is 应, ⟦NEW-7⟧ is the counterfactual 條, ⟦四·五⟧ is 封, ⟦七·二⟧ is 闭, ⟦七·十三⟧ is 推类, ⟦十三·十二⟧ is the offspring-number 條, ⟦十六·六⟧ is 以广为愈, ⟦六·二十⟧ is 广为诸定重之所共.\n- **Name order:** no 經 relies on a name defined only later. 凡续皆有顾 (used in the 經 of 十五·十五) and 以广为愈 (used in the 經 of 十五·二十九) already appear in the 經 of 凡·十七.\n- **經 against Lean:** apart from the edits below, every 經 matches its 證. I checked hypotheses, iff direction, existence-versus-law, and ¬Adds↔¬Exceeds against Adds↔Exceeds.\n- **Instructions:** carried out. I accept the drafter's three departures as better fits for the plain wordings and the name table: 不带正负 moved to 說 in 十五·二; 历 rather than 路; 辞间之关系.\n\nSubstantive fixes in the edits:\n1. **十三·二十二:** Flow.descent relates events by 交 *or* by 所出 in either direction, so 无亲 is assumed over that combined relation.\n2. **十五·十二:** 「凡顾式皆在己」 reads as a false universal statement, so it becomes 「凡皆在己之顾式」.\n3. **十五·十四 證:** added bounded_rival to support 「别于其域内皆然」.\n4. **十五·二十 說:** it cited ⟦十五·三⟧ for 「展开之律不定顾」, which that 條's own 說 (and §5 of the English chapter) says it does not show. Replaced with what the theorem does show.\n5. **十五·二十二 說:** 「偏去之积容每一物」 is not what clearer_loses_dweller proves; replaced with what it does prove.\n6. **十五·十八 說:** the proof-term remark no longer reads as a law without the condition.\n7. **NEW-17:** steps are now counted from 第零步. Read as ordinals, 首二步 next to 第二步 contradicts the successor still being active at step 2.\n\nName fixes in the edits:\n- 喂养 in a 經 (十五·二十六).\n- 本 in NEW-17: it carries the 本原 sense.\n- 互利 (the 利 sense was not adopted).\n- 中心 used for 我.\n- 保留 used for 无丧.\n- 依存 used for 待, in the 說 of 十五·十三 and 十五·十四.\n- 预设 used for 畛内之顾 throughout the 說 of 十五·二十三 to 十五·二十八. The table gives 预设 as the modern gloss of 畛内之顾, and the word also contains 设.\n\nLeft for the integrator (not edited):\n- **所然 against 然:** the 然 entry says to write 「辞于状然」 and not 「状之所然」, but 十五·十 and 十五·十八 write 「一状所然之活辞」 and 「所然之活内容」. The table's own 扩 and 可介 entries use 所然, and the step-indexed 辞 entry seems to have retired the 所然 sense. Please decide, then either rewrite (e.g. 「于一状然之活辞」) or relax the 然 entry.\n- **持 has two meanings:**\n  - The table name 持 is Web.Kept.\n  - The 己 definition in 十五·五 (「此方所持之辞」), the 皆在己 gloss and 就己而持／就辞而持 in 十五·二十八 use 持 to mean holding. No table name exists for de se or de dicto.\n- **沿资 in NEW-17's 經:** feeding closure is along FedFrom, while 资 alone names drawing (Web.draws). 「沿资域所据之关系」 would be exact. 喂养 also stays as a plain word in the 說 of 十五·六, 十五·二十二 and 十五·二十七.\n- **Two wordings for the whole-run reading:** plain-wordings gives both 全行之读 (row 54) and 全程之读 (row 80). This part uses 全行之读.\n- **Titles:** these differ from the outline: 十五·三, NEW-14, NEW-15, 十五·十九, 十五·二十一, 十五·二十六, 十五·二十七, 十五·三十. book.py renders the part's own title, and the new titles avoid 动, 连通, 及于, 范围, 次序 and 所及 as names, so I kept them.\n- **十五·二十一 證:** per instruction C14 it now cites no declarations. Its 經 combines mixed_iff_adds with Retains.not_added, and those are cited only through ⟦十五·二十⟧ and ⟦十六·一⟧.\n- **Still lacking table names:** 所导出之范围 (it uses 范围, which the 所顾 entry rejects for scope), 所须 and 展开之律. 关系之读 is used in the 經 of 十五·十七 but is introduced only in the 說 of 十五·七."
+}

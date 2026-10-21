@@ -1,0 +1,831 @@
+{
+ "cluster": "C10",
+ "corrections": [
+  {
+   "id": "xunzi-jundao-shousi",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ12",
+   "layer": "先秦·论（荀子·君道）",
+   "fragments": [
+    "牆之外，目不見也；里之前，耳不聞也；而人主之守司，遠者天下，近者境內，不可不略知也",
+    "耳目之明，如是其狹也；人主之守司，如是其廣也；其中不可以不知也，如是其危也",
+    "便嬖左右者，人主之所以窺遠收眾之門戶牖嚮也",
+    "無便嬖左右足信者，謂之闇"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.WithinReach",
+    "Becoming.Flow.WithinCoupling",
+    "Becoming.Flow.unselected_beyond_coupling",
+    "Becoming.Flow.unselected_beyond_coupling_all",
+    "Becoming.Flow.act_selected_by_pool",
+    "Becoming.Clearing.dweller_within_reach",
+    "Becoming.Clearing.pool_closes_gap"
+   ],
+   "records": [
+    "selection-through-couplings",
+    "the-gap-for-ones-own-act",
+    "what-pooled-coupling-reaches"
+   ],
+   "reading": "AI读法：荀子以「人主之守司」之广对「耳目之明」之狭：「其中不可以不知也，如是其危也」。这是及而不感：及域（Flow.WithinReach）中落在感域（Flow.WithinCoupling）之外的部分。余者固定、闭包内所耦合入的条件平衡时，这部分的差别不被经感域内任何形成之耦合的选择选出（Flow.unselected_beyond_coupling）；在 Clearing 例中，被清除者恰在及域之内、感域之外（Clearing.dweller_within_reach，一个构造模型中的见证）。荀子以便嬖左右为「窺遠收眾之門戶牖嚮」，脊柱给出这一补救的范围：池的成员若都在中心的感域之内，合用仍选不出闭包外的差别（Flow.unselected_beyond_coupling_all），近习之选正有此险；把行为改变其接纳的那个形成纳入池中，该接纳就成为经兼感的选择，而成员都在原池感域之内的任何群体都仍选不出它（Flow.act_selected_by_pool，在 Flow.act_unselected_pool 的条件下；在 Clearing 例中为 Clearing.pool_closes_gap）。荀子以「足信」为条件，理论以耦合是否到达为条件；「人主之守司」所设的中心框架不承接。",
+   "names_used": [
+    "及而不感",
+    "及域",
+    "感域",
+    "兼感",
+    "择"
+   ],
+   "tradition": "儒",
+   "work": "荀子·君道"
+  },
+  {
+   "id": "xunzi-jiebi-xiang-wei-bi",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0119"
+   ],
+   "source_id": "RU2-S-XZ21",
+   "layer": "先秦·论（荀子·解蔽）",
+   "fragments": [
+    "欲为蔽，恶为蔽，始为蔽，终为蔽，远为蔽，近为蔽，博为蔽，浅为蔽，古为蔽，今为蔽",
+    "凡万物异则莫不相为蔽，此心术之公患也",
+    "凡人之患，蔽于一曲，而暗于大理"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.unselected_beyond_coupling",
+    "Becoming.Web.selects_alike_iff",
+    "Becoming.Web.pool_adds",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Flow.unselected_beyond_pool",
+    "Becoming.Web.pooled_iff_member",
+    "Becoming.Flow.withinCoupling_mono_obs"
+   ],
+   "records": [
+    "selection-through-couplings",
+    "what-pooled-coupling-reaches",
+    "selection-through-a-model-of-the-options",
+    "testing-within-couplings"
+   ],
+   "reading": "AI读法：「欲为蔽，恶为蔽，始为蔽，终为蔽……古为蔽，今为蔽」表明，相互遮挡的是成对相异的两端：执其一，另一端就不进入。脊柱对应的是：余者固定、闭包内所耦合入的条件平衡时，选择在感域之外选不出差别（Flow.unselected_beyond_coupling）；选择恰到达耦合进来者（缘感而择，Web.selects_alike_iff）。「凡万物异则莫不相为蔽」作为两两相遮，只在两方耦合不可比较时成立；可比较时只有较粗的一方被遮，因为兼感所加是单向的：某成员耦合无别而成员不全无别，兼感就多出该成员没有的选择（Web.pool_adds），反之凡该成员耦合无别者一切成员都无别时兼感一无所加（Web.pooled_iff_member）。「蔽于一曲，而暗于大理」是另一结构：模型把要紧之事所分开者归在一起时，经它的任何选择都不对（Learning.selects_not_right_of_parted）。剩余与相分：荀子称之「心术之公患」，求解至「大清明」；脊柱读位置本身不是缺陷，选择之界随按水平的耦合而移（Flow.withinCoupling_mono_obs），经合用移到池的边界（Flow.unselected_beyond_pool），但不能一般去除；无明是位置所留下的锁定之求，不是位置本身。",
+   "names_used": [
+    "感域",
+    "缘感而择",
+    "兼感",
+    "类",
+    "无明"
+   ],
+   "tradition": "儒",
+   "work": "荀子·解蔽"
+  },
+  {
+   "id": "yi-xian-tuan-gan-ying",
+   "status": "revised",
+   "record_ids": [
+    "HX-R026"
+   ],
+   "source_id": "YD-HX01",
+   "layer": "先秦·传（彖传·咸；成书年代有争议）",
+   "fragments": [
+    "咸，感也。柔上而剛下，二氣感應以相與",
+    "觀其所感，而天地萬物之情可見矣",
+    "天地感而萬物化生，聖人感人心而天下和平"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.ExchangeLaw.RespondsTo",
+    "Becoming.Flow.WithinResponse",
+    "Becoming.Flow.withinResponse_iff_coupling",
+    "Becoming.forms_by_closing",
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.exists_law_iff",
+    "Becoming.Learning.no_prefix_fixes_next"
+   ],
+   "records": [
+    "where-a-level-couples",
+    "comparison-where-the-rest-responds",
+    "how-loops-form",
+    "what-a-pools-acts-respond-to",
+    "process-and-frame-as-readings",
+    "learning-by-refutation"
+   ],
+   "reading": "AI读法：彖以「咸，感也」释卦名，「二氣感應以相與」：两方互相耦合、互相回应。彖中之感以主动为主（「天地感而萬物化生，聖人感人心而天下和平」），名表之感取受动的方向（条件耦合进形成），这是约定，不是此句的确定义。互感互应的一般构造是回应范围：从一方的行为出发，沿耦合到达会回应的形成（Flow.WithinResponse），它恰是感域的对偶（Flow.withinResponse_iff_coupling）；回环在形成之步经过一个当时起作用的耦合（成环，forms_by_closing）；每个回应是交换对水平的回应（ExchangeLaw.RespondsTo）。「觀其所感，而天地萬物之情可見矣」：此处「所感」是前向用法，所观是物之所为及其回应。读「情」为所循之律：有确定之律容纳一段历史，恰当这段历史一致（exists_law_iff），律可从历程读出；但任何有限的前段都不确定下一个值（Learning.no_prefix_fixes_next），耦合本身也不固定回应（ExchangeLaw.response_not_fixed_by_coupling）。所以「情可見」在有一个律之模型可供检验处成立，不由所观之有限一段单独给出。范围修正：彖由前句类推到「聖人感人心而天下和平」，把感推为普遍保证；耦合不固定回应，感不保证和平，且这是一个中心动众，不承接。",
+   "names_used": [
+    "感",
+    "应",
+    "感域",
+    "环",
+    "成环"
+   ],
+   "tradition": "共享经典",
+   "work": "彖传·咸"
+  },
+  {
+   "id": "chengyi-xian-jiusi-suo-ji",
+   "status": "revised",
+   "record_ids": [
+    "JG2-H31-L4-R01"
+   ],
+   "source_id": "YD-CY",
+   "layer": "先秦·经（咸九四爻辞）；宋明·注（程颐《伊川易传》）",
+   "fragments": [
+    "憧憧往來，朋從爾思",
+    "用其私心以感物，則思之所及者有能感而動，所不及者不能感也，是其朋類則從其思也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.Reaches",
+    "Becoming.Flow.WithinReach",
+    "Becoming.Flow.reaches_withinReach",
+    "Becoming.Flow.WithinResponse"
+   ],
+   "records": [
+    "feedback-and-reach",
+    "comparison-within-reach",
+    "comparison-where-the-rest-responds"
+   ],
+   "reading": "AI读法：咸九四爻辞「憧憧往來，朋從爾思」，程颐注：「用其私心以感物，則思之所及者有能感而動，所不及者不能感也，是其朋類則從其思也」。程颐之感是主动义（以己感物），「所及」是前向之及。结构：部分的成员与另一形成所依存的条件交换，即所及（Flow.Reaches）；逐步推及成及域（Flow.WithinReach），成员都在及域之内时，部分之所及也在其内（Flow.reaches_withinReach）；「所不及者不能感也」即及域之外不被到达。「是其朋類則從其思也」是他者的回应：从行为出发、沿耦合会回应的形成，构成回应范围（Flow.WithinResponse）。此处的「感」与「所及」都是前向用法，与名表之感的受动方向相反，只证所及，不证感域。程颐同段以「天下之理一也」为「無不感通」的根据，是另一层，见 chengyi-xian-jiusi-yi-li。经文本身只并叙二句，不扩为普遍的因果。",
+   "names_used": [
+    "感",
+    "应",
+    "所及",
+    "及域",
+    "感域"
+   ],
+   "tradition": "共享经典",
+   "work": "伊川易传·咸九四"
+  },
+  {
+   "id": "ercheng-you-gan-bi-you-ying",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-S06",
+   "layer": "宋明·注（程颐《伊川易传》咸九四注，近思录卷一第12条辑）；宋明·论（程颢语录，近思录卷一第34条）",
+   "fragments": [
+    "有感必有应。凡有动皆为感，感则必有应。所应复为感，所感复有应，所以不已也",
+    "天地之间，只有一个感与应而已"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.WithinResponse",
+    "Becoming.Flow.withinResponse_iff_coupling",
+    "Becoming.Flow.Balances.comparison_within_response",
+    "Becoming.forms_by_closing",
+    "Becoming.LoopReturn.loop_kept",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.nothing_between",
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling"
+   ],
+   "records": [
+    "comparison-where-the-rest-responds",
+    "how-loops-form",
+    "whether-a-loop-closes-a-difference",
+    "what-a-pools-acts-respond-to"
+   ],
+   "reading": "AI读法：沿用 RO 的定域判断（RO 所引 Widening.* 依 R22 已改为 LoopReturn.*）。「所应复为感，所感复有应」是感应逐环传递，即回应范围的构造（Flow.WithinResponse），它恰是感域的对偶（Flow.withinResponse_iff_coupling）；对任何覆盖回应范围的意义（延续条件之下的意义即如此；该条件只陈述，不断言），两流之间的保持与增加恰由包含与超出给出，比较在回应范围之内决定（Flow.Balances.comparison_within_response）；回环在形成之步经过一个当时起作用的耦合（成环，forms_by_closing）。「有感必有应」作为普遍断言是前提：耦合不固定回应，有一切步都交换无别的律同样经一切耦合读取（ExchangeLaw.response_not_fixed_by_coupling）。「所以不已也」：回路每一环节都把所受原样给出时，差异保持（LoopReturn.loop_kept）；要关闭一个差异，需某一环节给出少于所受（LoopReturn.closing_needs_less）；环节都是整数倍乘时，回路不会逐渐关闭差异，每一回合要么为零，要么不小于上一回合（LoopReturn.nothing_between）。LoopReturn 以一个数表示差异，是简化。「天地之间，只有一个感与应而已」：承接其结构，不承接其普遍性。",
+   "names_used": [
+    "感",
+    "应",
+    "感域",
+    "环",
+    "成环"
+   ],
+   "locator": "近思录卷一第12条（程颐咸九四注；YD-CY 同文作“感復有應”）；卷一第34条（明道先生曰）",
+   "ro_passage": "ru-chengyi-gan-ying",
+   "tradition": "儒",
+   "work": "程颐《伊川易传》咸九四注；程颢语（并见《近思录》卷一）"
+  },
+  {
+   "id": "mengzi-jian-niu",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·经（孟子·梁惠王上）",
+   "fragments": [
+    "是乃仁术也，见牛未见羊也",
+    "是以君子远庖厨也",
+    "今恩足以及禽兽，而功不至于百姓者，独何与？",
+    "舆薪之不见，为不用明焉；百姓之不见保，为不用恩焉"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.unselected_beyond_coupling",
+    "Becoming.Flow.act_unselected",
+    "Becoming.Flow.consequence_unselected",
+    "Becoming.Web.SelectsThrough.widen",
+    "Becoming.Web.observed_level_couples"
+   ],
+   "records": [
+    "selection-through-couplings",
+    "the-gap-for-ones-own-act",
+    "testing-within-couplings"
+   ],
+   "reading": "AI读法：沿用 RO 的相合判断。「见牛未见羊也」：不忍经所见而起，未见者不进入选择。余者固定、条件平衡时，感域之外的差别不被经耦合的选择选出（Flow.unselected_beyond_coupling）；行为者自己行为之差若留在感域之外，也被选得相同，其后果在任何一步都不是经感域内耦合的选择（Flow.act_unselected、Flow.consequence_unselected），即自身行为的及而不感。按水平耦合时，一个条件的任何差异都使历史经该耦合有别（Web.observed_level_couples），选择在更多观察下仍经耦合（Web.SelectsThrough.widen）。「是以君子远庖厨也」是缩小选择所经的耦合：它不保持羊或牛的延续，只是使回应不形成。孟子全段的走向是推及：「今恩足以及禽兽，而功不至于百姓者，独何与？」「舆薪之不见，为不用明焉；百姓之不见保，为不用恩焉」，由所见推及未见，与明加宽所耦合者同向；「为不用明焉」之「明」是目力，与名表之明同字而不同义，只作字面旁证：所缺不是能及之力，而是不用。加宽只改变能分开者，不决定何者要紧。",
+   "names_used": [
+    "感",
+    "感域",
+    "及而不感",
+    "明",
+    "择"
+   ],
+   "ro_passage": "ru-mengzi-jian-niu-wei-jian-yang",
+   "tradition": "儒",
+   "work": "孟子·梁惠王上"
+  },
+  {
+   "id": "mengzi-tian-shi-min-shi",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·经（孟子·万章上，引泰誓）",
+   "fragments": [
+    "天视自我民视，天听自我民听",
+    "天不言，以行与事示之而已矣"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.pooled_iff_member",
+    "Becoming.Flow.unselected_beyond_pool",
+    "Becoming.Flow.act_selected_by_pool",
+    "Becoming.Clearing.pool_closes_gap",
+    "Becoming.exists_law_iff",
+    "Becoming.Law.alike_iff_sameFuture"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches",
+    "process-and-frame-as-readings",
+    "configurations-alike-by-relation"
+   ],
+   "reading": "AI读法：沿用 RO 的相合判断。「天视自我民视，天听自我民听」：所说的视听就是众民视听之合。经兼感的选择恰是经某成员耦合的选择，只在凡该成员耦合无别者一切成员也无别时（Web.pooled_iff_member），否则池分开更多；余者固定、条件平衡时，池感域之外仍选不出（Flow.unselected_beyond_pool）；把行为改变其接纳的形成纳入池中，该接纳就成为经兼感的选择，成员都在原池感域之内的池则都选不出它（Flow.act_selected_by_pool；在 Clearing 例中为 Clearing.pool_closes_gap，见证）。「天不言，以行与事示之而已矣」：律从历程读出：有确定之律容纳一段历史，恰当这段历史一致（exists_law_iff）；确定之律下两个构形无别，恰当经映射的未来相同（Law.alike_iff_sameFuture）。剩余：语境是君位传授的合法性论证，意志义不承接。",
+   "names_used": [
+    "兼感",
+    "感域",
+    "法"
+   ],
+   "ro_passage": "ru-mengzi-tian-bu-yan",
+   "tradition": "儒",
+   "work": "孟子·万章上（引泰誓）"
+  },
+  {
+   "id": "daizhen-yi-li-sha-ren",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0240"
+   ],
+   "source_id": "RU2-S-V3Q01",
+   "layer": "清·论（戴震《孟子字义疏证》卷上·理）",
+   "fragments": [
+    "尊者以理責卑，長者以理責幼，貴者以理責賤，雖失，謂之順",
+    "於是下之人不能以天下之同情、天下所同欲達之於上",
+    "人死於法，猶有憐之者；死於理，其誰憐之！"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Relabel.valued_alike_iff",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Flow.unselected_beyond_coupling",
+    "Becoming.Flow.act_unselected_pool",
+    "Becoming.Flow.unselected_beyond_pool",
+    "Becoming.Flow.act_selected_by_pool",
+    "Becoming.Clearing.pool_closes_gap"
+   ],
+   "records": [
+    "selection-through-a-model-of-the-options",
+    "what-pooled-coupling-reaches",
+    "the-gap-for-ones-own-act",
+    "selection-through-couplings"
+   ],
+   "reading": "AI读法：沿用 RO 的相合判断。一个位置的「理」被施于他者，「於是下之人不能以天下之同情、天下所同欲達之於上」。这里的「理」是一个位置的归并，不是名表之理（对结构与变化之律的建模）。经一映射的一切估值对两者无别，恰当映射把它们归在一起（Relabel.valued_alike_iff），经它的选择分不开所归并者（Learning.selects_not_right_of_parted）；余者固定、条件平衡时，选择在感域之外选不出差别（Flow.unselected_beyond_coupling）；在 Flow.act_alike_pool 的条件下，池的行为经池感域内任何群体的兼感都把两流选得相同（Flow.act_unselected_pool）。戴震以「天下之同情、天下所同欲」对治，结构上是兼感：池感域之外仍选不出（Flow.unselected_beyond_pool），成员都在原池感域之内的池选不出，把行为改变其接纳的形成纳入池中就选得出（Flow.act_selected_by_pool；在 Clearing 例中为 Clearing.pool_closes_gap）。",
+   "names_used": [
+    "兼感",
+    "感域",
+    "类",
+    "择"
+   ],
+   "ro_passage": "ru-daizhen-yi-li-sha-ren",
+   "tradition": "儒",
+   "work": "戴震《孟子字义疏证》卷上·理"
+  },
+  {
+   "id": "zhuangzi-dao-shu",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C02-R-06"
+   ],
+   "source_id": "ZH1-S02",
+   "layer": "先秦·经（庄子·齐物论，内篇）",
+   "fragments": [
+    "彼是莫得其偶，謂之道樞。樞始得其環中，以應无窮"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Contextual.indexed_fits",
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Contextual.fitsFree_iff",
+    "Becoming.Specker.noGlobal",
+    "Becoming.ParitySystem.contradicts_noGlobal"
+   ],
+   "records": [
+    "claims-shown-in-context",
+    "gluing-under-parity",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：沿用 RO 的相合判断。「彼是莫得其偶，謂之道樞」：每个是非是一个位置上的判定，枢不是又一个位置，而是持有每个判定及其位置的框架：以语境为索引的框架适合一切所显示者（Contextual.indexed_fits，由定义直接给出，是 Iff.rfl）；诸语境所显示者能粘合，恰当诸语境在相交处一致（Contextual.glues_iff_agree）；与语境无关的判定之框架，恰在每个构形处都能粘合时适合（Contextual.fitsFree_iff）；在矛盾系统中没有这样的全局判定（Specker.noGlobal、ParitySystem.contradicts_noGlobal）。「樞始得其環中，以應无窮」在本簇中说：应以位置为索引，不以一个无位置的胜者回应。",
+   "names_used": [
+    "应"
+   ],
+   "ro_passage": "zhuangzi-qiwu-dao-shu-liang-xing",
+   "tradition": "庄",
+   "work": "庄子·齐物论"
+  },
+  {
+   "id": "zhuangzi-xin-zhai",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C04-R-02"
+   ],
+   "source_id": "ZH1-S04",
+   "layer": "先秦·经（庄子·人间世，内篇）",
+   "fragments": [
+    "聽止於耳，心止於符。氣也者，虛而待物者也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Stationary.model_error",
+    "Becoming.Web.ExcludesWithin.not_meets",
+    "Becoming.Web.tail_unexcluded",
+    "Becoming.Flow.beyond_needs_model"
+   ],
+   "records": [
+    "selection-through-a-model-of-the-options",
+    "testing-within-couplings"
+   ],
+   "reading": "AI读法：「聽止於耳，心止於符」：耳只接其所接，所认只是与已有符契相合者。结构：经一个映射的选择只在要紧之事于其归并上同去之处才对（Learning.selects_right_through），映射合并了要紧之事所分开者时分不开（Learning.selects_not_right_of_parted）；错误的模型排除成立者（Stationary.model_error，一个构造模型中的见证）。这一半相合。「氣也者，虛而待物者也」给出范围：若「虛」读作已有模型不预先封住将受之物，它在模型容纳实际历史处成立，这时对实际为真的断言永不被排除（Web.ExcludesWithin.not_meets）；若「虛」是去掉一切模型（「心齋」），脊柱不承接：没有模型时，有限的前段不排除其后任何走向（Web.tail_unexcluded），感域之外只有模型能判（Flow.beyond_needs_model）。剩余：以「氣」为虚而待物之质料，以及「心齋」修持，不承接。",
+   "names_used": [
+    "象",
+    "类",
+    "验"
+   ],
+   "tradition": "庄",
+   "work": "庄子·人间世"
+  },
+  {
+   "id": "zhuangzi-diao-ling",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C20-R-08"
+   ],
+   "source_id": "ZH1-S20",
+   "layer": "先秦至秦汉·论（庄子·山木，外篇，年代有争议）",
+   "fragments": [
+    "螳蜋執翳而搏之，見得而忘其形；異鵲從而利之，見利而忘其眞",
+    "物固相累，二類相召也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.unselected_beyond_coupling",
+    "Becoming.Web.break_not_bounded"
+   ],
+   "records": [
+    "selection-through-couplings",
+    "runaway-distance-uncoupled"
+   ],
+   "reading": "AI读法：雕陵之喻：螳螂「見得而忘其形」，异鹊「見利而忘其眞」，庄周执弹又为虞人所逐，「物固相累，二類相召也」。各求者的目标都能被满足，不是无明那种不能停息的目标；此段给出的是位置之界：每个求者的所为（「見得而忘其形」）改变以它为目标者所依存者，后者因而在它的所及之内，却不在它的感域之内，即及而不感。余者固定、条件平衡时，经耦合的选择在感域之外选不出差别（Flow.unselected_beyond_coupling）；一个存量不按水平耦合进来、且在视界内是唯一可能不满足的需时，断裂之前没有任何耦合进来者给出离断裂多远（Web.break_not_bounded，即未兆）。所求为不能停息之目标（如比现在更多）时才是无明，此段不是。",
+   "names_used": [
+    "及而不感",
+    "所及",
+    "感域",
+    "未兆",
+    "无明"
+   ],
+   "tradition": "庄",
+   "work": "庄子·山木"
+  },
+  {
+   "id": "zhuangzi-tianxia-er-mu",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C33-R-03"
+   ],
+   "source_id": "ZH1-S33",
+   "layer": "先秦至秦汉·论（庄子·天下，杂篇，年代有争议）",
+   "fragments": [
+    "譬如耳目鼻口，皆有所明，不能相通",
+    "不該不徧，一曲之士也",
+    "道術將爲天下裂"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.separates_all_iff",
+    "Becoming.Web.pool_adds",
+    "Becoming.withinClosureOf_iff",
+    "Becoming.Flow.unselected_beyond_coupling"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches",
+    "selection-through-couplings"
+   ],
+   "reading": "AI读法：「譬如耳目鼻口，皆有所明，不能相通」「不該不徧，一曲之士也」：诸家各有所明，各通其一。脊柱：池分开两段历史，恰当成员不全耦合无别（Web.separates_all_iff）；某成员耦合无别而成员不全无别时，兼感多出该成员没有的选择（Web.pool_adds）；池的感域是成员感域之并（withinClosureOf_iff）；单一成员在其感域外选不出差别（Flow.unselected_beyond_coupling，余者固定、条件平衡时）。「不能相通」说诸明未合用，这一半相合。剩余与相分：此篇的框架是「道術將爲天下裂」，诸家各明一端是从一个先在完备的「道術」分裂而来，补救是复其完备，不是合用；理论不承接这一先在完备（本原一层）。以合用补之，是汉志的读法，不是此篇的。前半与脊柱相合，此篇的主张属本原一层，记为相分。",
+   "names_used": [
+    "明",
+    "兼感",
+    "感域"
+   ],
+   "tradition": "庄",
+   "work": "庄子·天下",
+   "layer_checked": "本原"
+  },
+  {
+   "id": "zhuangzi-quqie",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "ZH1-S10",
+   "layer": "先秦至秦汉·论（庄子·胠箧，外篇，年代有争议）",
+   "fragments": [
+    "爲之斗斛以量之，則并與斗斛而竊之",
+    "爲之仁義以矯之，則并與仁義而竊之",
+    "彼竊鉤者誅，竊國者爲諸侯，諸侯之門而義士存焉"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.RuleCapture.ReadsShare",
+    "Becoming.RuleCapture.locked_stays",
+    "Becoming.RuleCapture.perturbation_absorbed",
+    "Becoming.RuleCapture.uniform_locks",
+    "Becoming.RuleCapture.Second.second_exact",
+    "Becoming.RuleCapture.favouring_locks",
+    "Becoming.RuleCapture.Reversed.not_absorbed",
+    "Becoming.ClosedCapture.reading_absorbed",
+    "Becoming.ClosedCapture.readers_uniform_locks",
+    "Becoming.share_rises"
+   ],
+   "records": [
+    "capture-through-the-rule",
+    "closed-capture",
+    "target-capture"
+   ],
+   "reading": "AI读法：「爲之斗斛以量之，則并與斗斛而竊之」「爲之仁義以矯之，則并與仁義而竊之」。结构：规则的读取只是份额的单调函数时（RuleCapture.ReadsShare），一个已锁定的构形此后每一步都保持锁定（RuleCapture.locked_stays）；保持方向的规则扰动在下一读取步之后被吸收，规则不低于扰动之前（RuleCapture.perturbation_absorbed）；读取在每一份额都偏向时，每个历程自第二个读取步之后锁定，无论起点（RuleCapture.uniform_locks），这一界是确切的（RuleCapture.Second.second_exact）；没有规则与读取相逆时，锁定始于第一个读取步之后（RuleCapture.favouring_locks）。在这些条件下，离开锁定须改变律、读取或选择三者之一；在一个构造模型中，跨过阈的反向扰动也不被吸收（RuleCapture.Reversed.not_absorbed，见证）。新加的「斗斛」若由同一读取设定，就一并被俘：加一条规则不等于改变规则怎样读。「并與仁義而竊之」更进一步：读取本身也是份额的单调函数时，从一个锁定构形把规则换成仍偏向的规则、把读取换成另一读取（高或低），在每个读取步之后规则不低于原规则、读取不低于原读取，并再次锁定（ClosedCapture.reading_absorbed）；读取在每一读取与份额都偏向时，规则与读取之对自第二个读取步之后锁定（ClosedCapture.readers_uniform_locks）；这时改变读取也被吸收，离开要靠改变律。「彼竊鉤者誅，竊國者爲諸侯」：规则由胜者所书而得保持，这是劫；携带者的后代多于其余者且两类都在时，携带者份额上升（share_rises）。剩余：胠箧由此主张弃绝圣知，这一结论不取。结构上，在 ClosedCapture 的条件下换读取之值也被吸收，离开要改变律，或使读取不再随份额单调；§7.4 的 AI 读法由此说池须到达规则怎样读，池作读取时是否解除锁定，脊柱尚无定律（G3，见 hanfei-er-bing）。",
+   "names_used": [
+    "劫",
+    "择"
+   ],
+   "tradition": "庄",
+   "work": "庄子·胠箧",
+   "gap": "G4（已大体由 ClosedCapture 覆盖，实例，非新律）：规则与读取之积，在每一读取与份额都偏向时，自第二个读取步之后锁定（Becoming.ClosedCapture.readers_uniform_locks），读取之变被吸收（Becoming.ClosedCapture.reading_absorbed），这就是「并與仁義而竊之」。尚未陈述的只是两条规则之积（新加的斗斛也由同一份额单调读出）在首个读取步之后即锁定的形式，即 Becoming.RuleCapture.favouring_locks 的积形式。最近声明：Becoming.RuleCapture.favouring_locks、Becoming.ClosedCapture.readers_uniform_locks。"
+  },
+  {
+   "id": "wangbi-27-zi-ren-qi-zhi",
+   "status": "revised",
+   "record_ids": [
+    "LC2-WB-C27-R01",
+    "LC2-WB-C47-R01"
+   ],
+   "source_id": "DS01",
+   "layer": "魏晋南北朝·注（王弼《老子注》二十七章、四十七章）",
+   "fragments": [
+    "虽有其智，自任其智，不因物，于其道必失。故曰，虽智大迷",
+    "明物之性，因之而已。故虽不为而使之成矣"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Stationary.model_error",
+    "Becoming.Web.excludesWithin_iff_conjunction",
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.goAlike_iff_lumped"
+   ],
+   "records": [
+    "selection-through-a-model-of-the-options",
+    "testing-within-couplings",
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：「虽有其智，自任其智，不因物，于其道必失。故曰，虽智大迷」与「明物之性，因之而已」：只经自己的模型而不经物之差去选择就迷；明在让选择经过物的变化之律。王弼之「性」此处不读作先定之性，只取选择受物之差检验一义。脊柱：相对于模型的排除，是模型与断言一起被排除（Web.excludesWithin_iff_conjunction）；错误的模型排除成立者（Stationary.model_error，一个构造模型中的见证）；经一个映射的选择只在要紧之事于其归并上同去之处才对（Learning.selects_right_through）；要紧之事是下一构形时，这就是归并合于变化之律：一条确定之律在一个归并上同去，恰当下一构形经该归并同去（Learning.goAlike_iff_lumped）。「因」是让模型受物之差检验，不是放弃模型。",
+   "names_used": [
+    "明",
+    "理",
+    "象",
+    "验"
+   ],
+   "tradition": "道",
+   "work": "老子王弼注·二十七章、四十七章"
+  },
+  {
+   "id": "xici-ri-yong-bu-zhi",
+   "status": "revised",
+   "record_ids": [
+    "WP-XCS-C05-S02-R03"
+   ],
+   "source_id": "DS02",
+   "layer": "先秦·传（系辞上；成书年代有争议）",
+   "fragments": [
+    "百姓日用而不知，故君子之道鲜矣"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.ExchangeLaw.Through.crosses_of_unobserved",
+    "Becoming.crossing_passes_iff",
+    "Becoming.not_not_obs_iff_respondsByLevel",
+    "Becoming.Web.observed_level_couples",
+    "Becoming.Web.break_not_bounded"
+   ],
+   "records": [
+    "where-a-level-couples",
+    "runaway-distance-uncoupled",
+    "testing-within-couplings"
+   ],
+   "reading": "AI读法：沿用 RO 的定域判断。「百姓日用而不知」：经一条耦合行动，而不按水平读入它。经耦合读取的律对不按水平耦合进来的条件，其回应只是越过阈（ExchangeLaw.Through.crosses_of_unobserved）；有经耦合读取的律回应一个条件在某步的越阈，恰当形成在该步以正的需要求该条件（crossing_passes_iff）；按水平耦合，与有经耦合读取的律回应该条件不越阈的水平之变，二者在双重否定下等价（not_not_obs_iff_respondsByLevel），这时任何差异都传进来（Web.observed_level_couples）；断裂之前离断裂多远不进来（Web.break_not_bounded，即未兆）。明是把这条耦合按水平读进来。王弼二注（LC2-WB-C17-R02、LC2-WB-C34-R01）同属此结构。剩余：「故君子之道鲜矣」不承接。",
+   "names_used": [
+    "明",
+    "感",
+    "未兆"
+   ],
+   "ro_passage": "xici-xian-ren-cang-yong",
+   "tradition": "共享经典",
+   "work": "系辞上"
+  },
+  {
+   "id": "shangjun-shang-suo-yu",
+   "status": "revised",
+   "record_ids": [
+    "FA1-S23-R006",
+    "FA1-S23-R007"
+   ],
+   "source_id": "FA1-S-SV5",
+   "layer": "先秦·论（商君书·卷五君臣；篇章层次不一）",
+   "fragments": [
+    "上以功勞與，則民戰",
+    "上以詩書與，則民學問",
+    "民之於利也，若水於下也，四旁無擇也",
+    "民徒可以得利而為之者，上與之也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.share_rises",
+    "Becoming.share_rises_through",
+    "Becoming.Web.SelectsThrough"
+   ],
+   "records": [
+    "target-capture",
+    "selection-through-couplings"
+   ],
+   "reading": "AI读法：「上以功勞與，則民戰」「上以詩書與，則民學問」：上之所与（所奖），民之所为随之；「民徒可以得利而為之者，上與之也」。脊柱：携带者每个至少留下 a 个后代、其余者每个至多 b 个且 b < a、两类都在时，携带者的后代与其余者的后代之比，严格大于携带者与其余者之比（share_rises）；选择经选择者的耦合时，经这些耦合无别的亲代一同为携带者（share_rises_through；这一同由 Web.SelectsThrough 的定义给出，选择者取其实际所耦合入者）。要读成民战、民学问，需一条传递前提：后来者（后代或模仿者）与亲代经选择者之耦合无别，才计为携带者。「民之於利也，若水於下也，四旁無擇也」：这里不需要意志，只是流向所奖者。韩非、墨子关于赏罚的诸条（hanfei-shang-yong-mu-xia-shi-guan、hanfei-er-bing-hao-xian、mozi-jianai-xia）同此结构。剩余：商君书以此为一中心驱民于农战之术，单一中心与驱不承接。",
+   "names_used": [
+    "择"
+   ],
+   "tradition": "法",
+   "work": "商君书·卷五"
+  },
+  {
+   "id": "tanjing-shan-zhishi",
+   "status": "revised",
+   "record_ids": [
+    "FO2-TJ-R006",
+    "FO2-TJ-R007"
+   ],
+   "source_id": "FO2-TJ",
+   "layer": "隋唐·经（托名慧能；现本为元代宗宝编）",
+   "fragments": [
+    "不能自悟，須求善知識指示方見；若自悟者，不假外求",
+    "若起邪迷、妄念顛倒，外善知識雖有教授，救不可得"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.pooled_iff_member",
+    "Becoming.Web.pool_adds",
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.Clearing.separated_unresponded"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches",
+    "what-a-pools-acts-respond-to"
+   ],
+   "reading": "AI读法：「不能自悟，須求善知識指示方見；若自悟者，不假外求」与「若起邪迷、妄念顛倒，外善知識雖有教授，救不可得」：他者能指出自己看不到的，但他者之教不能替代自己的回应。脊柱：「若自悟者，不假外求」在自己的耦合已分开处成立：凡自己耦合无别者一切成员也都无别时，经兼感的选择恰是自己的选择（Web.pooled_iff_member）；「不能自悟，須求善知識指示方見」在自己不分而他者分开处成立：兼感多出自己没有的选择（Web.pool_adds）；「救不可得」在回应之律不变处成立：耦合界定回应而不固定回应（ExchangeLaw.response_not_fixed_by_coupling，可判定时），在 Clearing 例中被分开者仍可不被回应（Clearing.separated_unresponded，见证）。脊柱不预设有某一方在一切差异上都最细；「不假外求」只在自己是最细者处成立。",
+   "names_used": [
+    "兼感",
+    "应"
+   ],
+   "tradition": "佛",
+   "work": "六祖坛经（宗宝本）"
+  },
+  {
+   "id": "xunzi-xinge-gan-er-ziran",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ23",
+   "layer": "先秦·论（荀子·性恶）",
+   "fragments": [
+    "感而自然，不待事而后生之者也",
+    "夫感而不能然，必且待事而后然者，谓之生于伪"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+    "Becoming.ExchangeLaw.zero_through",
+    "Becoming.ExchangeLaw.RespondsTo"
+   ],
+   "records": [
+    "what-a-pools-acts-respond-to",
+    "where-a-level-couples"
+   ],
+   "reading": "AI读法：「感而自然，不待事而后生之者也」与「夫感而不能然，必且待事而后然者，谓之生于伪」：有的回应随所受之感而成，有的须待人为之事才成。这里的「感」是受动义（受感），是名表之感取受动方向的先秦佐证。脊柱：每个回应是交换对水平的回应（ExchangeLaw.RespondsTo）；耦合界定回应而不固定回应：可判定时，某形成把两段历史耦合开，就有经一切耦合读取的律在二者下取得不同，也有一切步都交换无别的律同样经一切耦合读取（ExchangeLaw.response_not_fixed_by_coupling）；什么都不交换的律也经一切耦合读取（ExchangeLaw.zero_through）。所以「感而自然」是某些律的性质，不是耦合本身的结果；「待事而后然」说回应不由此时之感与所循之律直接给出，须经另外的历程（事）才形成。作定域：荀子把前者归于「性」，即先定之本性，理论不承接这一固定本性一层，只取回应随律而异的结构。",
+   "names_used": [
+    "感",
+    "应"
+   ],
+   "tradition": "儒",
+   "work": "荀子·性恶"
+  },
+  {
+   "id": "xunzi-tianlun-tianyang",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ17",
+   "layer": "先秦·论（荀子·天论）",
+   "fragments": [
+    "财非其类以养其类，夫是之谓天养"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.WithinFeeding",
+    "Becoming.Flow.WithinFeeding.of_fedBy",
+    "Becoming.Flow.beyond_gives_nothing",
+    "Becoming.Flow.fed_from_beyond"
+   ],
+   "records": [
+    "feeding-closure",
+    "continuing-self-fed-from-beyond"
+   ],
+   "reading": "AI读法：「财非其类以养其类，夫是之谓天养」：一类之维持，由非其类者供给。脊柱：资域是含某形成的一切对供给封闭之区域所共有者（Flow.WithinFeeding）；在某步供给一个形成之延续者在其资域之内（Flow.WithinFeeding.of_fedBy）；资域之外者在任何一步都不给资域成员所需的条件任何东西（Flow.beyond_gives_nothing）。在平衡且耗散、有限的无重复家族在无限迟的步上仍被拿取、且自某步起被围住时，这个持续的家族不能自某步起不从其外得到供给（Flow.fed_from_beyond，即自外来）。「非其类」读作类之外：维持一类的资域跨过类的边界，含有他类。作定域：「天养」之「天」在荀子是自然之行，不是施者；本条不以「天」立名，只取以非其类养其类之结构。",
+   "names_used": [
+    "资域",
+    "类",
+    "自外来"
+   ],
+   "tradition": "儒",
+   "work": "荀子·天论"
+  },
+  {
+   "id": "wuzi-qun-chen-mo-ji",
+   "status": "revised",
+   "record_ids": [
+    "BI1-WZ-R-08"
+   ],
+   "source_id": "BI1-S-WZ",
+   "layer": "先秦·论（吴子·图国；编纂层未定）",
+   "fragments": [
+    "能得其師者王，能得其友者霸。今寡人不才而群臣莫及者，楚國其殆矣"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.pooled_iff_member",
+    "Becoming.Web.pool_adds"
+   ],
+   "records": [
+    "what-pooled-coupling-reaches"
+   ],
+   "reading": "AI读法：「能得其師者王，能得其友者霸。今寡人不才而群臣莫及者，楚國其殆矣」：「莫及」是比较能力，没有一个臣比得上君；庄王所忧在缺一个高于自己的师友。脊柱所承接的只是一点：经兼感的选择恰是经某成员耦合的选择，恰当凡该成员耦合无别者每个成员也都耦合无别（Web.pooled_iff_member），这时兼感一无所加；某成员耦合无别而成员不全无别时，兼感才多出该成员没有的选择（Web.pool_adds）。作定域：「殆」在池退化为一个成员时成立；能力不及者是否耦合不同，文本未定，能力高下不等于耦合之差。「師」「友」的等级框架属争胜与等级一层，不承接。",
+   "names_used": [
+    "兼感"
+   ],
+   "tradition": "兵",
+   "work": "吴子·图国",
+   "gap": "G1（改述）：在 SelectsThroughAll 之下，池能分开者只取决于在场的耦合类型（Becoming.Web.separates_all_iff），与各类型所占份额无关；份额动态（Becoming.share_rises_through）只经绝灭（b = 0，或有限群体中某类型丢失）才消去兼感所加，这时下一代之池若只余与某成员同一耦合类型者，其选择恰为该成员的选择（Becoming.Web.pooled_iff_member）。要使份额本身影响池所分开者，需要一条按份额加权的池（例如多数读取）之律，这才是所缺。最近声明：Becoming.share_rises_through、Becoming.Web.pooled_iff_member、Becoming.Web.separates_all_iff、Becoming.Web.pool_adds。"
+  },
+  {
+   "id": "hanfei-san-shou",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "FA1-S-H16",
+   "layer": "先秦·论（韩非子·三守；篇目有争议）",
+   "fragments": [
+    "因傳柄移藉，使殺生之機、奪予之要在大臣，如是者侵",
+    "凡劫有三：有明劫，有事劫，有刑劫",
+    "人臣有大臣之尊，外操國要以資羣臣，使外内之事非己不得行",
+    "雖有賢良，逆者必有禍，而順者必有福",
+    "諸用事之人，壹心同辭以語其美，則主言惡者必不信矣，此謂事劫",
+    "至於守司囹圄，禁制刑罰，人臣擅之，此謂刑劫",
+    "三守不完，則劫殺之徵也"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.share_rises_through",
+    "Becoming.RuleCapture.ReadsShare",
+    "Becoming.RuleCapture.locked_stays",
+    "Becoming.Law.perturbation_reabsorbed",
+    "Becoming.Web.pooled_iff_member"
+   ],
+   "records": [
+    "target-capture",
+    "capture-through-the-rule",
+    "what-pooled-coupling-reaches",
+    "selection-through-couplings"
+   ],
+   "reading": "AI读法：篇首言三守，其一之不完是「因傳柄移藉，使殺生之機、奪予之要在大臣，如是者侵」：选择之规则（柄）移到其所选者手中；「三守不完，則劫殺之徵也」。下文「凡劫有三：有明劫，有事劫，有刑劫」。明劫：「人臣有大臣之尊，外操國要以資羣臣，使外内之事非己不得行」「雖有賢良，逆者必有禍，而順者必有福」：大臣书写赏罚之律，所奖者在 b < a 的后代条件下份额上升（share_rises_through）；规则的读取若只是所选者份额的单调函数（RuleCapture.ReadsShare），已锁定的构形保持锁定（RuleCapture.locked_stays）；下一构形只依规则时，状态的扰动被吸收（复归，Law.perturbation_reabsorbed）。事劫：「諸用事之人，壹心同辭以語其美，則主言惡者必不信矣，此謂事劫」：众声被造成一声，凡一成员耦合无别者一切成员都无别时，经兼感的选择恰是该成员的选择（Web.pooled_iff_member）。刑劫：「至於守司囹圄，禁制刑罰，人臣擅之，此謂刑劫」：刑罚之柄为臣所专，同是规则移到所选者手中，即上面的 RuleCapture 读取。这是劫之名的出处。分歧在框架：韩非以君臣利益相反为前提、以君独握其柄为对治；理论不设单一中心。结构上，锁定只经改变律、读取之律或选择而离开；§7.4 的 AI 读法由此说池须到达规则怎样读，但池作读取时是否不锁定，脊柱尚无定律（见 hanfei-er-bing 的 G3）。",
+   "names_used": [
+    "劫",
+    "兼感",
+    "复归",
+    "择"
+   ],
+   "tradition": "法",
+   "work": "韩非子·三守",
+   "gap": "同 wuzi-qun-chen-mo-ji 之缺（已改述）：在 SelectsThroughAll 之下池能分开者只取决于在场的耦合类型；事劫使成员同辞，是使耦合类型变少，不是份额上升；所缺的是按份额加权的池之律。最近声明：Becoming.share_rises_through、Becoming.Web.pooled_iff_member、Becoming.Web.separates_all_iff。",
+   "layer_checked": "争胜与等级"
+  },
+  {
+   "id": "hanfei-shi-fa-ze-ren",
+   "status": "revised",
+   "record_ids": [
+    "FA1-H06-R002",
+    "FA1-H06-R007"
+   ],
+   "source_id": "FA1-S-H06",
+   "layer": "先秦·论（韩非子·有度）",
+   "fragments": [
+    "故明主使法擇人，不自舉也；使法量功，不自度也",
+    "先王以三者爲不足，故舍己能而因法數，審賞罰",
+    "能者不可弊，敗者不可飾"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Web.SelectsThrough",
+    "Becoming.Stationary.model_error"
+   ],
+   "records": [
+    "selection-through-a-model-of-the-options",
+    "selection-through-couplings",
+    "testing-within-couplings"
+   ],
+   "reading": "AI读法：「故明主使法擇人，不自舉也；使法量功，不自度也」「舍己能而因法數」：以法数代替君之耳目。脊柱：以法择人是经一个映射的选择，只在要紧之事于其归并上同去之处才对（Learning.selects_right_through）；法数归并了要紧之事所分开者时，经它的任何选择都不对（Learning.selects_not_right_of_parted）；错误的模型排除成立者（Stationary.model_error，一个构造模型中的见证）；所用之法也仍经其所读之耦合（Web.SelectsThrough）。所以「能者不可弊，敗者不可飾」在法数之归并合于所量之事处成立，不因用法而必然；法数本身也会被饰（见 hanfei-shang-yong-mu-xia-shi-guan）。",
+   "names_used": [
+    "择",
+    "象",
+    "类",
+    "验"
+   ],
+   "tradition": "法",
+   "work": "韩非子·有度"
+  }
+ ],
+ "drops": [],
+ "passed": [
+  "xunzi-zhengming-yuan-tianguan",
+  "xunzi-tianlun-tianguan-tianjun",
+  "xunzi-jiebi-jian-chen",
+  "xunzi-jiebi-xu-yi",
+  "xunzi-bugou-pian-shang",
+  "xunzi-wangzhi-fa-er-bu-yi",
+  "xunzi-ke-xin",
+  "zhuangzi-keyi-gan-hou-ying",
+  "ercheng-kuoran-shunying",
+  "mengzi-tu-fa-bu-zi-xing",
+  "mengzi-fan-qiu-zhu-ji",
+  "daizhen-si-bi",
+  "zhoudunyi-jing-xu-ze-ming",
+  "zhangzai-da-qi-xin",
+  "lunyu-zizhang-wen-ming",
+  "lunyu-feng-cao",
+  "daxue-pi-yan",
+  "zhongyong-yu-zhi",
+  "zhongyong-zhi-wei-zhi-xian",
+  "zhuangzi-cheng-xin",
+  "zhuangzi-wangliang-you-dai",
+  "zhuangzi-wei-da-ren-xin",
+  "zhuangzi-jing-ying-er-bu-cang",
+  "lao-29-shen-qi",
+  "lao-65-yu-min",
+  "lao-74-yi-si-ju-zhi",
+  "heshanggong-22-yin-tianxia-zhi-mu",
+  "suzhe-33-bi-jin-wei-ming",
+  "wangbi-05-zi-xiang-zhi-li",
+  "xici-shen-er-ming-zhi",
+  "daxiang-guan-xing-fang",
+  "daxiang-dui-pengyou-jiang-xi",
+  "mozi-shangtong",
+  "mozi-jianai-zhong",
+  "mozi-jianai-xia",
+  "mozi-ming-xiao-bu-ming-da",
+  "sunzi-gui-dao",
+  "hanfei-er-bing",
+  "hanfei-shang-yong-mu-xia-shi-guan",
+  "hanfei-qu-hao-qu-wu",
+  "hanfei-ding-fa-yi-guo-mu-shi",
+  "hanfei-zhong-duan-can-guan",
+  "hanfei-xin-du-yu-shi-zhuan",
+  "hanfei-xianxue-jian-ting",
+  "zaahan-er-jian",
+  "zhonglun-wu-ming-mie",
+  "shengman-wu-ming-zhu-di",
+  "guanjing-yi-xiang-bi-de",
+  "hanfei-er-bing-hao-xian",
+  "xunzi-zhishi-xian-you",
+  "xunzi-jiebi-xin-jun",
+  "wenyan-tong-sheng-xiang-ying",
+  "chengyi-xian-jiusi-yi-li"
+ ],
+ "notes": "我检查了全部 75 条（68 条修订、7 条新增）。机械核对的结果：每个片段都用 ctq.py text 对过冻结文本，都确切无误，其中坛经两条只差空白。所引 140 个声明在 zhonghua 工作树的 Becoming/*.lean 中都有，全名一致；resolve.py 解析这些声明和 46 个记录，结果都指向自身。所引脉络关系编号都存在，出处也对：JG2-H31-L4-R01 取自 YD-JG31，是经文这一层，与条目的分层说明一致。近思录卷一第12条确实在 YD-CY 咸九四传中，在程颐引系辞「屈信相感」一段之下。RO 引的 Widening.* 经 R22 已改名为 LoopReturn.*，核实无误。\n\n有 22 条要修正，原因如下：\n（1）以下几处结论比 Lean 证明的强。xunzi-jundao、mengzi-tian-shi-min-shi、daizhen-yi-li-sha-ren 用了「才成为／才选得出」，但 act_selected_by_pool 只证明含 x 的池选得出、成员都在原池感域内的池选不出，没有证明非纳入 x 不可。xunzi-jiebi-xiang-wei-bi 的「兼感才多出」只引了 pool_adds，所以补引 pooled_iff_member；同条「选择之界只能经合用移动」不对，感域也随按水平的耦合而增（withinCoupling_mono_obs）。wangbi-27 把单向的 selects_right_through 写成「恰」，又把 Training.Through 与 goAlike 当成一回事。xici-ri-yong 丢了 not_not_obs_iff_respondsByLevel 的双重否定，crossing_passes_iff 的转述也不对。tanjing 写「脊柱所否认」，实际是脊柱不预设。\n（2）方向或结构有误。yi-xian-tuan 说「所感」是前向用法，却引了 selects_alike_iff，那条讲的是耦合进选择者的方向，前后矛盾；现改引 exists_law_iff 和 no_prefix_fixes_next 作定域。zhuangzi-diao-ling 把及而不感的方向说反了。hanfei-san-shou 把「因傳柄移藉…如是者侵」归入刑劫，原文这句是三守之一不完，见「三守不完，則劫殺之徵也」；「以明劫为主」原文也没有。\n（3）把相分硬写成相合。zhuangzi-tianxia-er-mu 自己的读法已把「道術將爲天下裂」判为本原一层，现改为相分。zhuangzi-xin-zhai 若把「虛」读作去掉一切模型，与 tail_unexcluded、beyond_needs_model 相违，和周敦颐「静虚」那条一样不能承接，现改为定域，并删去被借作他义的「待」。\n（4）名与条件。ercheng-you-gan 的「连续性条件」名不对，应作延续条件，现注明只陈述不断言；层次中的「语录」改为「论」。三条里的「受控方向」都改为「受动方向」，「受控」带控制之义，不合结构。zhuangzi-quqie 和 hanfei-san-shou 写「理论所指的（对治）方向」，没有出处，quqie 还与同条「改变读取也被吸收」相矛盾，现改为结构陈述，并引 §7.4 的 AI 读法。mengzi-jian-niu 把目力之「明」当作名表之明的用例，是同字认同，现改为字面旁证。xunzi-tianlun-tianyang 把荀子之「天」说成施者，荀子的天是自然之行，现已更正，并删去未用的「资」。\n（5）零碎问题。zhuangzi-dao-shu 引的 indexed_fits 是 Iff.rfl，现注明由定义给出。shangjun 的「见 parallels」没有着落，「大学、论语」一句也说过了头。wuzi 的缺口说明里有一个未定义的「m」。hanfei-shi-fa-ze-ren 在读法里引了「能者不可弊，敗者不可飾」，现补入片段，已核对。\n\n以下几点没有改，留给整合者：\n- 孟子、论语、庄子标作「经」是后起的地位，荀子则标作「论」，全簇做法一致，但应在分层规则里写明。\n- names_used 列的是概念名，读法里常用今语的注解来表达，比如用「归并」表达「类」、用「耦合」表达「感」，这不算错。\n- 几条引 share_rises_through 的条目把 target-capture 列为记录，那里只有 share_rises，但同时也列了 selection-through-couplings，可以接受。\n- selects_alike_iff 是定义律，只有 xunzi-zhengming 注明了这一点。其他条目都只拿它作辅助，没有哪一条的判断单靠它，所以没有逐条改。\n- 修订者的名表提议我抽查了几处引文：「柄者，殺生之制也」（FA1-S-H48）和「法與時轉則治」（FA1-S-H54）都已核对。"
+}

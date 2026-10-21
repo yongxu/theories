@@ -1,0 +1,600 @@
+{
+ "cluster": "C01 「一元与展开」",
+ "lens": "PHILOLOGY（文献：用例逐字、层与时代、语境中的义、更早或更好的用例、所不带是否诚实）。全部用例与片段均已用冻结文本核过：逐字或只差空白（序卦「有天 地 ，」、坛经两条），无误引；各处「」引文也都找到出处，省略号引文逐段核过。下面列的是语义、语境、记录号、层次方面的问题，另有几处机械性的改名。机械问题：(a) Becoming.g0_of_unrestricted 不存在（R30 已把 G0 改为 LivingSignificance），应为 Becoming.livingSignificance_of_unrestricted；(b) gap 中的 Becoming.Onward.DependentSelection 已改名为 Becoming.Onward.DependentChoice；(c) 五个记录号在 10 月 20 日的 ee8ebc82e 中改名，旧号现在只是重定向页：contextual-registration→claims-shown-in-context，registration-within-what-it-registers→readings-within-what-they-read，runaway-distance-unregistered→runaway-distance-uncoupled，testing-within-registration→testing-within-couplings，one-axiom-yields-g0→continuation-condition-yields-living-significance。其余所有 Lean 声明都按全名核过，确实存在。",
+ "names": [
+  {
+   "concept": "生成／变化（becoming）：关系的形成、维持、转化、退化与消解，不预设为好",
+   "name": "变化",
+   "verdict": "revise",
+   "issues": "(1) 记录号错配。「刚柔相推而生变化」挂的是 WP-XCS-C02-S02-R02，这条其实是「变化被说为进退之象」，对应的是第二条用例；第一条的关系是 XC-R015（刚柔相推生变化），第二条却空着。「同則无好也，化則无常也」挂的 ZH1-C06-R-15 是「颜回以离形去知同大通说明坐忘」，证据里没有这一句，应为 ZH1-C06-R-17（仲尼称化则无常）。这一句是仲尼这个角色在坐忘语境中说的修养话，而本簇自己把 R-15 判为剔除。(2) 第 4、5 条用例是单字「化」，不是复词「变化」。荀子正名里的化恰是「状变而实无别」那一种，mapper 在 alternatives 里自己说「化」不能涵盖形成与消解，又拿它作变化的用例，前后矛盾。(3) 系辞上第二章的语境是卦爻：「圣人设卦观象……刚柔相推而生变化……变化者，进退之象也……六爻之动，三极之道也」。这里的变化是爻变，是进退的象；进与退是行止两向，不是形成与消解。fit 里「变化包含形成与消解两向」在此没有文本依据。先秦真正说出盛与衰同属变化的是《庄子·天道》「盛衰之殺，變化之流也」（外篇），但同段紧接着就是「夫天地，至神，而有尊卑先後之序」。(4) not_carried 和 course 把「乾道变化，各正性命」算作周敦颐（宋明）所加。这句其实是《乾·彖》原文，前面还有「大哉乾元，万物资始，乃统天」；周敦颐《通书·诚上》是加引号引用的（RU2-U-ZD01「“乾道变化，各正性命”，诚斯立焉」）。可见先在之元与固定性命在传这一层就已经有了，这正是 notes 说要避免的「先秦关系、后世失落」的叙事。(5) 荀子礼论那一句的语境没有交代：它是给「性伪合而天下治」作类比，性被定为「性者、本始材朴也」，下文说「天能生物，不能辨物也……宇中万物生人之属，待圣人然后分也」，这里有固定本性和单一中心两层。(6) alternatives 漏掉了内篇的「物化」：齐物论「周與胡蝶，則必有分矣，此之謂物化」，脉络节点 ZH1-C02-N-change 释为「周蝶有分而经验身份相转的物之变化」。它既保留分，又说转化，应当列出来比较。",
+   "fix": "用例改为四条：DS02「刚柔相推而生变化」（XC-R015）；DS02「变化者，进退之象也」（WP-XCS-C02-S02-R02，sense 写成「爻之变化作为行止进退之象」）；RU2-S-XZ19「天地合而万物生，阴阳接而变化起」；新增 ZH1-S13「盛衰之殺，變化之流也」（先秦，《庄子》外篇，年代有争议；sense：盛与衰同为变化之流）。删去荀子正名「化」和庄子「化則无常」两条，作为单字化的旁证移入 course，后者的 record 改为 ZH1-C06-R-17。fit 里删去「变化包含形成与消解两向」，改为「天道以盛衰同为变化之流」。not_carried 改写为：《乾·彖》「乾道变化，各正性命」（传·先秦，年代有争议）把变化收束于各正的性命，前接「大哉乾元，万物资始，乃统天」；周敦颐引此句立诚；荀子礼论这一句为性伪合、「待圣人然后分」作类比；天道同段立「尊卑先後之序」。course 里的宋明一段相应修改。alternatives 加「物化」并说明取舍（后世也用作死亡的婉称，引用前须先核对冻结文本）。"
+  },
+  {
+   "concept": "同一展开（the one unfolding）：算入其余，每个世界是交换之律的一次运行",
+   "name": "大化",
+   "verdict": "revise",
+   "issues": "(1) 四条用例中只有荀子天论一条含「大化」。在原文「列星随旋，日月递炤，四时代御，阴阳大化，风雨博施」五个并列的主谓结构里，大化是「阴阳」的谓语，只是并列诸过程之一，并不统摄列星、日月、四时、风雨。这一段把整体称为「神」「天功」（「夫是之谓神。皆知其所以成，莫知其无形，夫是之谓天功」）。所以 fit 说「荀子把大化放在列星、日月、四时、风雨的交换之中……一个整体的交换」，是读错了句法。(2)「天行有常，不为尧存，不为桀亡」里没有「大化」，不能作这个名的用例。(3)「小德川流，大德敦化」应切分为「大德／敦化」，与「小德／川流」对举，其中没有复词大化。(4) 周敦颐「大顺大化」是教化义（上文「圣德修而万民化」），下接「故天下之众，本在一人」，只能放进 course。(5) not_carried 漏掉了天论的总框架：「故明于天人之分，则可谓至人矣」「不与天争职」「天有其时，地有其财，人有其治」，即天职与人治的二分；同段随后还有「心居中虚，以治五官，夫是之谓天君」（单一中心）。(6) alternatives 漏了两个内篇用语：「一化」（大宗师「又況萬物之所係，而一化之所待乎」，所待者即下文「自本自根」之道）和「萬化」（「萬化而未始有極也」）。",
+   "fix": "用例只留 RU2-S-XZ17「阴阳大化，风雨博施，万物各得其和以生」，sense_in_context 改为「阴阳大规模地转化，与列星随旋等并列，同为天职中的过程；整体在此段称神、天功」。删去「天行有常」「大德敦化」两条（前者可放进 fit 作旁证）；周敦颐一条移入 course。confidence 由 high 降为 low：「同一展开」这一名词义是后起的，先秦只有谓语义，这一点要在 fit 里写明。not_carried 补上天人之分与天君。alternatives 加「一化」（内篇；它的所待是道，带先在之根，须在定义中排除）和「萬化」（指众多的转化，不指统一）。如果整合者要求名词义在先秦已经存在，本名就不满足，需要另选。"
+  },
+  {
+   "concept": "整体的统一（unity）：算入其余，诸交换合为一次运行，诸读法处处粘合",
+   "name": "一",
+   "verdict": "revise",
+   "issues": "(1) 法藏一条读错了。原文是「數十錢法」：「初向上數十門，一者，一是本數。何以故？緣成故」；「所言一者，非自性一，緣成故，是故一中有十者，是緣成一」；「若無十，即一不成」。这里的一是十钱中作为本数的第一枚，讲的是一个部分由它与其余诸项的关系而成，不是整体的统一。所以 fit 说「一是诸关系的合一」、notes 说「这是对一最贴切的古典说明之一」，都不对。法藏为它给出的根据是「由此緣起是法界家實德故」。(2)「天下之动，贞夫一者也」的语境是「吉凶者，贞胜者也。天地之道，贞观者也；日月之道，贞明者也」，贞即正。脉络里这句唯一的注是王弼《略例·明彖》「制天下之動者，貞夫一者也……主必致一也」，加上邢璹注「一為君體」「眾由一制也」，都是单一中心的读法；脉络关系 WP-XCX-C01-S03-R02 也把它当作诸「贞」的并论。sense「诸交换合为一次运行」既无语境依据，也无注疏依据。(3) 张载「两不立则一不可见」下文是「两体者，虚实也，动静也，聚散也，清浊也，其究一而已」，这个一是气（基质），not_carried 没有列。(4) concept 把 World.unity、Contextual.world、whole_not_in_pairs 三条不同的律绑在一个最常用作数字的单字上。(5)「萬物與我爲一」挂的 ZH1-C02-R-13，证据从「旣已爲一矣」开始，不含这一句。",
+   "fix": "删去法藏一条，移到「配置由其关系而定」这一概念下，sense 改为「作为本数的一由与其余诸数的缘而成」。贞夫一一条的 sense 改为「天下之动以一为正（贞）」，并在 not_carried 写明脉络里仅有的注读是王弼以一为主、邢璹以一为君体。新增先秦用例 MI1-S-JS「同，異而俱於之一也」（名辩，战国后期，作者与编纂层有争议；sense：不同者共属于一而保留其异），这是「一不抹去区分」的直接定义。「萬物與我爲一」的 record 改为单元 ZH1-U02。张载一条的 not_carried 加「其究一而已」（一为气）。concept 只对 World.unity，Contextual.world 与 whole_not_in_pairs 另行对应。confidence 降为 low。"
+  },
+  {
+   "concept": "关系项（relatum）：一个世界的关系项只有一类；形成与条件是一个关系项的两种读法",
+   "name": "物",
+   "verdict": "revise",
+   "issues": "(1)《序卦》「盈天地之間者，唯萬物」的语境是「有天地，然後萬物生焉。盈天地之間者，唯萬物，故受之以屯；屯者盈也」。天地在先，又在外作为容器；「唯萬物」是用「盈」来解释屯卦的卦序理由，脉络关系 WP-XG-C01-S02-R01 也是这样解的。它没有说「只有一类」，反倒把天地和万物分成了两层，所以 sense 与 fit 中「一类而无别类」是误读。(2) 有一条先秦用例直接把天地算作物，却没有用上：《公孙龙子·名实论》「天地與其所產焉，物也」（脉络节点 MI1-N-G6-wu，释「天地及其所产生的对象」；篇章真伪有争议）。(3) 荀子「物也者，大共名也」与「名无固宜，约之以命，约定俗成谓之宜」在同一段，物是一个约定的共名。这对受控名有利，但 fit 没有写出来。(4) not_carried 漏了格物之物（大学）和公孙龙的指物之辨。",
+   "fix": "序卦一条的 sense 改为「天地之间所充满的是万物（以盈释屯；天地在先、在外）」，并在 not_carried 写明序卦把天地与万物分作两层。新增 MI1-S-G6「天地與其所產焉，物也」（名辩，战国，传统题属公孙龙，真伪有争议），作为天地也是物的用例。fit 补上荀子共名是约定之名一层。not_carried 加格物之物与指物之辨。"
+  },
+  {
+   "concept": "配置由它怎样关联而定：互模拟所联系者相同；跨步认同只由关系固定",
+   "name": "状",
+   "verdict": "revise",
+   "issues": "(1) 荀子正名的状是外形、外貌：「物有同状而异所者，有异状而同所者，可别也。状同而为异所者，虽可合，谓之二实。状变而实无别而为异者，谓之化。有化而无别，谓之一实」。状恰恰是不决定认同的那一项；认同（实）由所和跨步的延续来定。拿状去名「跨步认同只由关系固定」（World.fixed_iff），等于用荀子明说不定认同的那个字来名认同。(2) 所是处所。脊柱上与它较近的是表示的共同索引（Web.relabel），不是关系。World.fixed_iff 说的是：只有在没有别的关系项与它同样立着时，守恒才固定它的认同。所以状同者恰恰不被关系固定，只被索引分开。(3)《老子》十四章「无状之状，无物之象」是说道（夷、希、微，「此三者，不可致诘，故混而为一」「复归于无物」）没有可感的形，不能支持「状不限于可见之形，而是关系」。(4) 河上公同章注「言一无形状，而能为万物作形状也」把状交给一个先在的一，not_carried 没有列。",
+   "fix": "concept 拆成两个。状只名配置，即一个关系项怎样立着，相同由互模拟与检验刻画（Bisimulation、Alike.tests、alike_iff_sameTests）。跨步认同另取荀子的「实」「一实」作候选（「有化而无别，谓之一实」），World.fixed_iff 归到它下面，并写明荀子以所（处所）分二实，对应的是表示的索引而非关系。老子十四章一条删去，或移入 not_carried 作反例。not_carried 加河上公「为万物作形状」。可供比较的先秦定义：《墨子·經上》「同，重、體、合、類」「化，徵易也」。confidence 降为 low。"
+  },
+  {
+   "concept": "历史（history）：一次运行留下的记录；与所显之律的差别是记忆",
+   "name": "迹",
+   "verdict": "revise",
+   "issues": "(1) notes 自我反驳第 (8) 条说迹只有外篇天运的用例，这不对。冻结文本里有两条先秦用例：《老子》二十七章「善行无辙迹」；《孟子·离娄下》「王者之迹熄而《诗》亡，《诗》亡然后《春秋》作」。后者把迹与诗、史书连成一线，正是「运行留下、可以记录」的意思。(2) 天运里老子同一段话随后说「性不可易，命不可變，時不可止，道不可壅」，固定本性与命就在迹的语境中，not_carried 没有列。(3) 孙绰的迹是圣人应世的外在行事（「外聖有深淺之跡」），他的所以跡被明确归为本（「周孔救極弊。佛教明其本耳」），不只是会通义。",
+   "fix": "新增两条用例：YD-LAO-BASE「善行无辙迹」（先秦；sense：行走留下的辙迹）；RU2-S-MZ「王者之迹熄而《诗》亡，《诗》亡然后《春秋》作」（先秦，战国；sense：王者行事之迹熄灭，诗亡而史书继起）。not_carried 加天运「性不可易，命不可變」和孙绰「佛教明其本耳」的本末之分。notes 第 (8) 条改正：迹另有内篇以外的先秦用例，受年代争议影响的只有所以迹和无际。"
+  },
+  {
+   "concept": "所显之律（law shown）：一段历史所显示的律；律与历史是同一展开的两种读法",
+   "name": "所以迹",
+   "verdict": "revise",
+   "issues": "(1) fit 说「所以二字标出的正是读法的方向：律是从迹读出的」，这是对字义的错误陈述。古汉语「所以 X」是「X 所由以然者」（凭借、根据），方向是从迹回指使迹产生的东西，与「由迹读出」正相反。(2) 天运语境里与所以迹对应的是「履」（行走），以及老子要孔子做到的「與化爲人」（「不與化爲人，安能化人」），即活着的行与化。它比「所显之律」更接近运行本身；同一段还有「性不可易，命不可變」。(3) 孙绰「然其所以跡者。何常有際哉」的上文是「周孔救極弊。佛教明其本耳」，所以跡就是本。郭象以下的本末义 mapper 已经承认，而这正是方法要排除的先在之根与位次。(4) 只有外篇用例，年代有争议。(5) alternatives 没有考虑两条更贴切的先秦定义。一是《墨子·經上》「法，所若而然也」（脉络节点 MI1-N-JS-035）：法是遵从它就会如此的东西，「历史是律的一次运行」正是「若之而然」。二是《孟子·告子上》引孔子「故有物必有则」：每一物有它的则，但诗句是「天生蒸民，有物有则」，又接「民之秉彝，好是懿德」，带天的施事和固定的德性。另外，律的 why_not 不完整：《中庸》「上律天時，下襲水土」里律是「遵从、取法」，不只是音律和法令。",
+   "fix": "删去 fit 中「所以二字标出读法方向」一句，改为：「所以迹字面指迹所由以成者，方向与所显之律（由历史读出）相反，用作名须在定义中把方向倒过来」。sense_in_context 改为「陈迹不是使迹成为迹的行（履）」。not_carried 加天运「與化爲人」「性不可易，命不可變」和孙绰「佛教明其本耳」。alternatives 加「法」（墨经义；带法令和佛法之义，须说明）与「则」（孟子引诗；带天生与秉彝）。律的 why_not 补上中庸「上律天時」的遵从义。confidence 降为 low。怎样定下来：先由整合者决定名本身是否必须标出「由迹读出」的方向。如果必须，所以迹、法、则三者都不满足，只能用说明语「所显之律」。"
+  },
+  {
+   "concept": "语境中的读法总构成一个世界；不依语境的描述恰在诸读法相交处一致时存在",
+   "name": "两行",
+   "verdict": "revise",
+   "issues": "(1) 第二条用例「彼亦一是非，此亦一是非」挂的 ZH1-C02-R-06 是道枢的关系，证据从「彼是莫得其偶」开始，不含这一句。这一句属于道枢段，那一段以「樞始得其環中，以應无窮」作结，说的是道枢，不是两行。(2) 脉络节点 ZH1-C02-N-two 把两行释为「和之以是非而休乎天均的并行取向」，是圣人的一种取向，直接语境是朝三暮四（「名實未虧，而喜怒爲用，亦因是也」）；sense 没有交代这一点。(3) mapper 对道枢有两种互相冲突的说法：alternatives 说道枢「近于不依语境的立场」，条目 zhuang-qiwu-liang-xing 又说道枢对应「不能要求一个对立面之外的第三立场」。RO（zhuangzi-qiwu-dao-shu-liang-xing）则把「枢始得其环中，以应无穷」读作以语境为索引的框架（indexed_fits）。原文「是亦一无窮，非亦一无窮也」说枢逐一应对每个是与每个非，RO 的读法更贴文本。",
+   "fix": "第二条用例的 record 改为单元 ZH1-U02，或者删去这条，在第一条下注 RO 段落号。sense 写明这是圣人「和之以是非」的并行取向。alternatives 中道枢的 why_not 改为：「道枢（环中应无穷）对应以语境为索引的框架本身（indexed_fits，从 RO），与两行同指，可作并列候选；不取它，是因为樞、環中带一个中心的图像」。"
+  },
+  {
+   "concept": "生起与止息、形成与解散是同一变化的读法（Web.change_readings）；有限世界里二者复现相伴",
+   "name": "通为一",
+   "verdict": "reject",
+   "issues": "名取自「復通爲一」「道通爲一」「唯達者知通爲一」，这些在原文是齐同之论：「舉莛與楹，厲與西施，恢恑憰怪，道通爲一」把美丑齐同，又紧接「凡物无成與毀」。RO（zhuangzi-qiwu-fen-cheng-hui）判为定域，正是针对这一半，因为脊柱保留真实的失去（Law.lost_stays）。与概念相合的只有前一半「其分也，成也；其成也，毀也」。所以这个名取自被限定的那一半；它的字面义是通而为一（同一化），不是「一个变化，两种读法」；mapper 在 not_carried 里也自己说不带齐同义。按「名只在陈述恰是此义处采用」，此名不合格。张载「通一无二」是在气上立论，也是同一化。有更合的先秦候选。其一是内篇「方生方死，方死方生」（齐物论；脉络 ZH1-C02-R-04「彼出于是，是亦因彼」、R-05；RO 段落 zhuangzi-qiwu-bi-chu-yu-shi 判相合；惠施「物方生方死」见天下篇），生与死在同一刻是同一变化的两种读法。其二是《系辞上》第十一章「一阖一辟谓之变；往来不穷谓之通」（Y1 段落 wanglai-butong；脉络 XC-R031、WP-XCS-C11-S04-R05），一闭一开就是一次变，往来不穷对应 keep_pace 的复现相伴，而且与 Ren 已用的开、闭直接相接。",
+   "fix": "不采用「通为一」。候选一：「方生方死」（短语，先秦内篇，庄子引惠施之说；sense：方生即方死，生与死是同一变化的两种读法；not_carried：庄子接着说「是以聖人不由，而照之于天」，并不停在此说）。候选二：「阖辟」（复词，传·先秦，年代有争议；sense：一阖一辟谓之变；not_carried：「阖户谓之坤，辟户谓之干」的乾坤配属）。keep_pace 另用「往来不穷」命名。「其分也，成也；其成也，毀也」留在 fit 中作对照。各条目 names_used 中的「通为一」相应替换。"
+  },
+  {
+   "concept": "形成与条件是一个关系项的两种角色（Web.roles、Flow.roles）",
+   "name": "所待又有待",
+   "verdict": "revise",
+   "issues": "(1) 原文是景的一串反问：「吾有待而然者邪？吾所待，又有待而然者邪？吾待，蛇蚹蜩翼邪？惡識所以然？惡識所以不然？」，以不知所以然收尾；上文紧接「化聲之相待，若其不相待」。sense「每一项既是所待又是有待」把问句读成了断言。郭象正是据这一章立「非待」与独化，mapper 只在 not_carried 里提了一句。(2) 名截自「吾所待，又有待而然者邪」，原文没有「所待又有待」这个连续字串，coinage 却标为 false。(3) 唯识「所取、能取相待立故」讲的是两项互相依待；mapper 在 alternatives 里自己说「相待……对应的是相互依存（Becoming.MutualDependence），不是一个关系项兼两种角色」，却又拿它作本名的用例，前后矛盾。而且那一句在加行位，用来证「二取空」（「印二取空」）。(4)《中论》「緣成由於果」是青目释中破因缘的一步，这一段的结论是「是故果不從緣生。緣尚不生，何況非緣」，不是正面立「两种角色」。(5)《知北遊》「死生有待邪？皆有所一體」与本名直接相关，没有用上。",
+   "fix": "sense_in_context 改为「景反问：我所待者是否又有所待；问而不答，以不知所以然作结」。form 写明是截取的短语，coinage 改为 true，并说明它由庄子用语「所待」「有待」组合而成。删去唯识一条，移到 MutualDependence 的名下。中论一条的 sense 加上「这是青目破缘之论中的一步，结论为果不从缘生」。not_carried 加「化聲之相待，若其不相待」和郭象的非待之读。可新增 ZH1-S22「死生有待邪？皆有所一體」（先秦，外篇）。"
+  },
+  {
+   "concept": "没有两个实在：律由展开读出，不在展开之外；整体之外不失去；物与物的分界是读法所作",
+   "name": "无际",
+   "verdict": "revise",
+   "issues": "(1) 第二条用例的 sense「物际是读法所划；不际者也是被读出的」不是原文的意思。原句是「不際之際，際之不際者也，謂盈虛衰殺」，mapper 截掉了「謂盈虛衰殺」；原文把不际之际说成盈虚衰杀，也就是变化，并没有说「读法所划」。(2)《在宥》一条的语境是治天下者：「夫有土者，有大物也。有大物者，不可以物；物而不物，故能物物。明夫物物者之非物也……獨有之人，是之謂至貴」，带单一中心与位次（至贵）。not_carried 只说到「治天下者的德」，没有写独有、至贵。(3) concept 把三件事绑在一起：律不在展开之外、整体之外不失去（Web.not_losesBeyond_whole）、物际是读法。无际在原文只说物物者与物之间没有分界。「整体之外不失去」有更合的先秦名：惠施「至大无外，謂之大一」（天下篇；RO huishi-li-wu 判定域），mapper 在 alternatives 里也承认无外「近于算入其余」。(4) 按传统读法，「彼爲盈虛非盈虛」中的彼是物物者，即道使盈虚而自己不是盈虚，句式带施事。",
+   "fix": "第二条 sense 改为「物物者与物无际，物与物有际；不际之际，就是所谓盈虚衰杀」，quote 可补全到「謂盈虛衰殺」。在宥一条的 not_carried 补「獨有之人，是之謂至貴」。concept 删去 Web.not_losesBeyond_whole，交给「无外」或「大一」一名；lean 只留 World.run_world 和 exists_law_iff。"
+  },
+  {
+   "concept": "整体的其余算作一个关系项（World.withRest）",
+   "name": "大块",
+   "verdict": "revise",
+   "issues": "(1) 大宗师「佚我以老，息我以死」的佚、息是安逸、休息，不是「收回」「取」；sense「大块给我形与生，也收回（老、死）」把给与取的结构读进了原文。(2) 这句在大宗师出现两次，第二次在子來临终的对话里，上下文是「偉哉！造化又將奚以汝爲？」「陰陽於人，不翅於父母」「唯命之從」「今一以天地爲大鑪，以造化爲大冶」。大块与造化、大冶、命同处一段，施事与命的层就在语境里。mapper 在 alternatives 里因「造」带造物者而不取「造化」，却没有在 not_carried 写出大块与造化并举。(3) 天籁的「夫吹萬不同而使其自己也，咸其自取」正是郭象独化（「自己而然」）的文本依据，而本簇把独化判为相分；本名取的是「无发动者」，不是「自生」，这一点须写明。",
+   "fix": "第二条 sense 改为「大块以形载我，以生劳我，以老佚我，以死息我：生老死都是大块所给的境况」。fit 中给与取的结构只以齐物论的风与窍为据。not_carried 加子來段「以天地爲大鑪，以造化爲大冶」「唯命之從」，并写明「咸其自取」可被读成独化，本名不取这一读。"
+  },
+  {
+   "concept": "一个世界的表示所及的范围；范围之外者算入其余，被保留而不被描述",
+   "name": "六合",
+   "verdict": "reject",
+   "issues": "(1) 六合本义是上下四方，各层都以空间义为主，mapper 自己也只给 low。(2)《知北遊》「六合爲巨，未離其內」的「其」指上文「今彼神明，至精與！……而萬物自古以固存」中的神明，下文以「此之謂本根，可以觀於天矣」作结。意思是六合在本根之内，属先在之根层，不是「不离整体之内」；sense 和 fit 都读错了这个代词。(3)《则阳》一条只是少知的问句，真正有关系内容的是答句：「陰陽相照，相蓋相治，四時相代，相生相殺……聚散以成」和「或之使，莫之爲，未免於物」，这两句被略过了。(4) 齐物论六合句的上文就有更合的先秦名：「夫道未始有封，言未始有常，爲是而有畛也。請言其畛……」。畛是言（「爲是」）划出的界，正是一个表示所及的范围；下文「故分也者，有不分也；辯也者，有不辯也」说任何划分都留下不分者，也就是其余；上一段还有「其次以爲有物矣而未始有封也，其次以爲有封焉而未始有是非也」。mapper 的条目定位语（「起语：夫道未始有封」）已经写到这里，却没有取它。(5) 畛之后列出的八德包含「有競有爭」：庄子把争放在划界之后，这在文本内部说明了第四个非关系层（争与位次）的来由，值得记下。",
+   "fix": "不采用「六合」。候选一：「畛」（单字，先秦内篇；sense：爲是而有畛，即言所划的界；not_carried：田界的本义，以及八德中的競、爭）。候选二：「封」（同段；sense：界限，道未始有封）。「存而不論」保留，作为其余被计入而不被描述的原文对照；「分也者，有不分也」作为每次划分都留有其余的用例。知北遊一条移入相分或 not_carried（本根）。条目 zhuang-qiwu-liu-he 的 names_used 相应修改。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "zhuang-zhibeiyou-wu-wu-zhe-wu-ji",
+   "verdict": "revise",
+   "issues": "这一段答的是「道恶乎在」（「无所不在」），「彼爲盈虛非盈虛……彼爲積散非積散」中的彼是物物者，句式是「彼为X而非X」：物物者使盈虚而自己不是盈虚。这与「物物者非物」是同一主张，不是说盈与虚是同一变化的两种读法，所以对到 Web.change_readings 不成立。第二个片段截在「際之不際者也」，原文下接「謂盈虛衰殺」。「物际是读法所作」原文并没有说。",
+   "fix": "删去 Web.change_readings 和 coming-and-ceasing-keep-pace；把「彼爲盈虛非盈虛」改读为「律不是任何一个配置」（同系辞「易无体」，可引 xici-fan-wei-bu-yi 的读法）。第二个片段补到「謂盈虛衰殺」。relational 删去「物与物的分界是读法」。"
+  },
+  {
+   "id": "zhuang-zhibeiyou-wu-chu-bu-de-xian-wu",
+   "verdict": "revise",
+   "issues": "gap 引用的 Becoming.Onward.DependentSelection 已在 R30 改名为 Becoming.Onward.DependentChoice，旧名不存在。「无古无今，无始无終」是仲尼回答冉求「未有天地，可知邪」（「可，古猶今也」）的话，讲的是天地之前能否被知，读法没有交代说话者和所答的问题。同段「死生有待邪？皆有所一體」没有用上。",
+   "fix": "把 DependentSelection 改为 DependentChoice。reading 补上「这是仲尼答冉求『未有天地，可知邪』，『古猶今也』」。可加片段「死生有待邪？皆有所一體」，并注明与所待一名相关。"
+  },
+  {
+   "id": "zhuang-qiwu-dao-xing-zhi-er-cheng",
+   "verdict": "revise",
+   "issues": "「道，行之而成」中的道是路，路因行走而成；走出来的路本身就是迹（历史），不是从历史读出的律，对到 Shown.run、shown_le_iff 多走了一步。「物，謂之而然」与上文「可乎可，不可乎不可」、下文「惡乎然？然於然」相连，讲的是然与不然由称谓给出，更接近约定俗成（SharedCodes），不是 Contextual.world。names_used 列了所以迹、两行，片段里都没有这两个名。",
+   "fix": "reading 先写原文义「路由行走而成，路就是所行之迹」，再写 AI 读法：所显之律是从这条迹读出的最小之律。「物謂之而然」一句加上 SharedCodes 的对应或说明。names_used 改为迹、物。"
+  },
+  {
+   "id": "zhuang-qiwu-liang-xing",
+   "verdict": "revise",
+   "issues": "道枢的读法与 RO 不同，却写着「沿用 RO」。RO 把「枢始得其环中，以应无穷」读作以语境为索引的框架（indexed_fits），mapper 读作「不能要求一个对立面之外的第三立场」，名表 alternatives 又说道枢「近于不依语境的立场」，三种说法互相冲突。原文「是亦一无窮，非亦一无窮也」支持 RO 的读法。records 中的 contextual-registration 已改名。",
+   "fix": "道枢一句改用 RO 的读法：环中应无穷即 indexed_fits；不依语境的判定只在粘合处才有（fitsFree_iff）；不粘合处没有这样的判定（Specker.noGlobal）。删去「所以不能要求……第三立场」。records 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "zhuang-qiwu-tong-wei-yi",
+   "verdict": "revise",
+   "issues": "定域的判断与 RO 一致。把「道通爲一」读作粘合是 AI 读法，原文是齐同美丑（舉莛與楹，厲與西施），须写明。records 中的 contextual-registration 已改名。names_used 里用了被否决的「通为一」。",
+   "fix": "records 改为 claims-shown-in-context；reading 补上「道通爲一在原文是齐同美丑之论」；names_used 换成新名（方生方死或阖辟）。"
+  },
+  {
+   "id": "zhuang-qiwu-yi-yu-yan-wei-er",
+   "verdict": "revise",
+   "issues": "结构对应可以成立，片段与语境都没有问题。records 中的 registration-within-what-it-registers 已改名（registration 是退役的二元用词）。",
+   "fix": "record 改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "zhuang-qiwu-tian-lai",
+   "verdict": "revise",
+   "issues": "reading 开头说「大塊是一」，与本条把大块对到其余（World.withRest，诸关系项之外的一个关系项）相矛盾。「使其自己也，咸其自取」是郭象独化（自己而然）的文本依据，与本簇判为相分的 han-du-hua-yu-da-xu 有张力，没有交代。",
+   "fix": "删去「大塊是一」，改为「大块噫气，风过万窍」。所不带加：「咸其自取」若读作各窍自生（郭象独化），则与 Web.Dependent 相分，见 han-du-hua-yu-da-xu；本条只取「怒者其誰」所说的没有发动者。"
+  },
+  {
+   "id": "zhuang-dazongshi-da-kuai",
+   "verdict": "revise",
+   "issues": "佚、息是安逸、休息，reading 说「也收回（老、死）」，把「取」读进了原文。冻结文本中这一句出现两次，第二次在子來段，与「造化」「大冶」「唯命之從」同处，所不带只写了评价，没有写施事与命。locator 没有说明取的是哪一次。",
+   "fix": "reading 改为「大块以形载我，以生劳我，以老佚我，以死息我：生老死都是所给的境况」；给与取的结构只作 AI 读法，并限于 Flow.withImbalance。所不带加「以造化爲大冶」和「唯命之從」。locator 写明取的是鱼相忘段（「與其譽堯而非桀也」之后）那一次。"
+  },
+  {
+   "id": "zhuang-qiwu-wang-liang-wen-jing",
+   "verdict": "revise",
+   "issues": "原文是反问，以「惡識所以然？惡識所以不然？」收尾，reading 却把这条链当作断言。「惡識所以然」说的是不知自己如此的根据，不是「哪个条件就是哪个关系项不为依存所见」，对到 Web.relabel_dependent、Mutualism.apart_relabelled 没有文本依据。郭象正据这一章立非待与独化，reading 没有引来对照。kind 判为 agreement 偏强。",
+   "fix": "kind 改为 scope：链式的两种角色在脊柱上有（Web.roles、Web.Embodied.active_of_bearing），原文只把它当作问题提出。删去两个 relabel 声明和相应读法。所不带加郭象的非待和韩康伯的独化（见 han-du-hua-yu-da-xu）。"
+  },
+  {
+   "id": "zhuang-qiwu-liu-he",
+   "verdict": "revise",
+   "issues": "六合是空间义。表示范围与其余的结构在本段的上文和下文：上文「夫道未始有封，言未始有常，爲是而有畛也」，下文「故分也者，有不分也；辯也者，有不辯也」，片段都没有取。records 中的 one-axiom-yields-g0 已改名。names_used 用了被否决的「六合」。",
+   "fix": "片段补上「夫道未始有封，言未始有常，爲是而有畛也」和「故分也者，有不分也；辯也者，有不辯也」。records 改为 continuation-condition-yields-living-significance。names_used 改为畛（或封）。reading 改为：畛是言所划的界，界外者存而不论，即计入其余而不描述；任何划分都留有不分者。"
+  },
+  {
+   "id": "zhuang-tianyun-ji",
+   "verdict": "revise",
+   "issues": "老子同一段话里有「性不可易，命不可變，時不可止，道不可壅」，所不带没有列。在语境中与所以迹对应的是履（行）和「與化爲人」，即活的运行，读法却只说「律」。原文说的是迹出于履，所不带里「履先于迹的时间图像」是 mapper 自己的说法。",
+   "fix": "所不带加「性不可易，命不可變」（固定本性与命）。reading 加上：天运以迹对履，所以迹指活着的行与化（「與化爲人」）；本条只取「迹不是所以迹」，并以 same_histories_iff 给出迹在多大范围内固定律。"
+  },
+  {
+   "id": "zhuang-dazongshi-zi-ben-zi-gen",
+   "verdict": "keep",
+   "issues": "相分的判断与原文相符，片段与层次都正确。上文「又況萬物之所係，而一化之所待乎」中，一化所待者就是这个道，同属先在之根，可以补入。",
+   "fix": "可选：片段加上「又況萬物之所係，而一化之所待乎」。"
+  },
+  {
+   "id": "zhuang-dazongshi-qi-yi-ye-yi",
+   "verdict": "revise",
+   "issues": "主语是真人（「是之謂眞人」）。「其一也一，其不一也一」描述真人的修养：他一也是一，不一也是一。把它读作「两种读法属同一世界」是 AI 读法，须标明。「與天爲徒」「與人爲徒」是两种同伴关系，不是两种读法。下文「死生，命也；其有夜旦之常，天也」带命。records 中的 contextual-registration 已改名。",
+   "fix": "reading 先写原文义（真人好与不好、一与不一皆一），再写 AI 读法。所不带加「死生，命也」。records 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "lao-25-dao-fa-zi-ran",
+   "verdict": "keep",
+   "issues": "判断与 RO 一致，片段（第二十五章、第五十一章）与层次都正确。",
+   "fix": ""
+  },
+  {
+   "id": "lao-42-dao-sheng-yi",
+   "verdict": "keep",
+   "issues": "判断与 RO 一致；脉络节点 LL-N002 也只把一定为数序中的第一项，与本条的定域相符。",
+   "fix": ""
+  },
+  {
+   "id": "lao-37-wu-wei-er-wu-bu-wei",
+   "verdict": "keep",
+   "issues": "判断与 RO 一致。片段与 RO 不同：RO 取了「吾将镇之以无名之朴」，本条取了「侯王若能守之」，两者都对，后者正好显出单一中心。",
+   "fix": ""
+  },
+  {
+   "id": "lao-40-you-sheng-yu-wu",
+   "verdict": "keep",
+   "issues": "判断与 RO 一致，片段正确。",
+   "fix": ""
+  },
+  {
+   "id": "lao-6-xuan-pin",
+   "verdict": "revise",
+   "issues": "记录 LE-R013 的证据包含「谷神不死，是谓玄牝」，片段没有取。「天地根」是天地（整体）之根，而 World.withRest 的其余是世界之内被计入的一个关系项，不可能是整体之根，这个对应错了位。原文立了一个不死的、作为天地之根的玄牝，属先在之根层。",
+   "fix": "kind 改为 divergence；或者保留 scope，但写明：作为新者来自其余的来源结构，可对 Flow.rise_from_rest_or_open；作为天地之根、谷神不死，则相分。片段补上「谷神不死，是谓玄牝」。"
+  },
+  {
+   "id": "lao-39-de-yi",
+   "verdict": "revise",
+   "issues": "原文接下来是「其致之，天无以清将恐裂，地无以宁将恐发」：一是各物必须得到才能成其功能的根据。脉络节点 LE-N052 释为「得一使各类存在得其功能」，河上公注「一，无为，道之子也」。读法把得一对到「算入其余时的一次运行」和「平衡处粘合」，是很重的 AI 读法，又没有交代一在这里是根据。",
+   "fix": "reading 先写原文义：一是各物所得、借以成其清、宁、生的根据，不得则裂、发、灭。再给 AI 读法。所不带写「一作为各物所得的根据（先在之根）」。kind 维持 scope，并写明相合的部分只是 AI 读法。"
+  },
+  {
+   "id": "lao-22-bao-yi-wei-tian-xia-shi",
+   "verdict": "revise",
+   "issues": "相分的判断正确，片段无误。只是 records 中的 contextual-registration 已改名。",
+   "fix": "records 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "lao-28-pu-san-wei-qi",
+   "verdict": "keep",
+   "issues": "定域的判断成立。「大制不割」在原文是治理语境（圣人用之则为官长），所不带已经列出。",
+   "fix": ""
+  },
+  {
+   "id": "lao-74-si-sha-zhe-heshang",
+   "verdict": "revise",
+   "issues": "相分的判断与层次（注）都正确。records 中的 one-axiom-yields-g0 已改名。",
+   "fix": "records 改为 continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "jielao-de-dao-zhi-gong",
+   "verdict": "keep",
+   "issues": "读法与语境相符。脉络把它的层标为「传世解经文本」，layer 最好写成「解（先秦对《老子》的解释）」，以便与经分开。",
+   "fix": "可选：layer 改为「解经·先秦（《韩非子·解老》，战国末；作者归属有争议）」。"
+  },
+  {
+   "id": "jielao-bu-de-bu-hua",
+   "verdict": "keep",
+   "issues": "定域的判断成立。同一段上文「理者，成物之文也；道者，萬物之所以成也」与已采用的「理」有关（先秦的理是成物之文），可以记下；layer 的问题同上一条。",
+   "fix": "可选：所不带加「道者，萬物之所以成也」（所以成，带根据义）。"
+  },
+  {
+   "id": "xunzi-zhengming-wu-zhuang-shi",
+   "verdict": "revise",
+   "issues": "所是处所，荀子用所来计二实。RO 的读法「处所不同即关系不同」把所等同于关系，原文不支持。World.fixed_iff 说守恒只在没有别的关系项与它同样立着时才固定认同，也就是说，状同（同样立着）者的认同不被关系固定；荀子用所把它们分成二实，对应的是表示的索引（Web.relabel）。所以本条更准确的判断是定域：「化而一实」在 fixed_iff 的唯一性条件下成立，「状同异所为二实」由索引而不是由关系给出。「物也者，大共名也」对 Web.roles 是 AI 读法，原文讲的是命名，与「约定俗成谓之宜」在同一段。",
+   "fix": "kind 改为 scope，并写明与 RO 不同的理由。reading 按上面的分析改写，加上 Web.relabel。「大共名」一句加 SharedCodes 的对应，或者说明它是命名约定。"
+  },
+  {
+   "id": "xunzi-tianlun-da-hua",
+   "verdict": "revise",
+   "issues": "大化是阴阳的谓语，与列星随旋等并列；整体在这一段称神、天功。把「不为尧存，不为桀亡」对到 Web.significance_undetermined 不切：原文下接「应之以治则吉，应之以乱则凶」，说的是天行之常不随人君存亡、吉凶在人如何应对，对应的是律不以某一中心为转移，不是意义不由网决定。所不带漏了本篇「故明于天人之分，则可谓至人矣」「不与天争职」的二分框架，以及天君。records 中的 one-axiom-yields-g0 已改名。",
+   "fix": "reading 改写大化的句法。significance_undetermined 换成 Clearing.center_not_derived，或者删去。所不带加天人之分与「心居中虚，以治五官，夫是之谓天君」。records 改名。"
+  },
+  {
+   "id": "lunyu-ren-neng-hong-dao",
+   "verdict": "keep",
+   "issues": "论语里的道是人所行的文化与伦理之道，对到 shownBy_le_iff 是 AI 读法，reading 已经标明；没有实质错误。",
+   "fix": ""
+  },
+  {
+   "id": "hanfei-zhudao-dao-zhe-wan-wu-zhi-shi",
+   "verdict": "revise",
+   "issues": "相分的判断正确。records 中的 one-axiom-yields-g0 和 contextual-registration 都已改名。",
+   "fix": "records 分别改为 continuation-condition-yields-living-significance 和 claims-shown-in-context。"
+  },
+  {
+   "id": "xici-bian-hua-jin-tui",
+   "verdict": "keep",
+   "issues": "读法与卦爻语境相符：「不预设为好」有「吉凶者，失得之象也」的并列作根据。本条在 Y1 的片段之外又加了两条，都正确。可以补一句：这里的变化是爻之变（「六爻之动」）。",
+   "fix": "可选：reading 加「此处的变化是卦中爻之变，作为行止进退之象」。"
+  },
+  {
+   "id": "xici-yi-yin-yi-yang",
+   "verdict": "keep",
+   "issues": "与 Y1 一致。",
+   "fix": ""
+  },
+  {
+   "id": "xici-ji-zhi-zhe-shan",
+   "verdict": "revise",
+   "issues": "Becoming.g0_of_unrestricted 不存在（G0 已退役），Y1 段落 jizhi-shan 用的是 Becoming.livingSignificance_of_unrestricted。records 中的 one-axiom-yields-g0 已改名。",
+   "fix": "声明改为 Becoming.livingSignificance_of_unrestricted；records 改为 continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "xici-tai-ji",
+   "verdict": "keep",
+   "issues": "与 Y1 一致。",
+   "fix": ""
+  },
+  {
+   "id": "xici-dao-qi",
+   "verdict": "keep",
+   "issues": "与 Y1 一致。",
+   "fix": ""
+  },
+  {
+   "id": "xici-tong-bian-zhi-wei-shi",
+   "verdict": "revise",
+   "issues": "在语境中，事是事业、人事：同一句群是「富有之谓大业，日新之谓盛德，生生之谓易……极数知来之谓占，通变之谓事」，通变是会通其变以成事业。把事读作运行是 AI 读法，kind 判为 agreement 偏强。同一句群的「生生之谓易」（脉络 XC-R057）没有进入本簇，它把易等同于生生，直接牵涉理论中「生生（生成）不等于含退化在内的整个展开」这一区分。",
+   "fix": "reading 先写原文义（通其变以成事业），再给 AI 读法，kind 改为 scope。补一条「生生之谓易」，作为易名的对照：判为相分或定域，理由是理论把生生与整个展开分开。"
+  },
+  {
+   "id": "xici-tian-di-she-wei",
+   "verdict": "revise",
+   "issues": "这是第七章：「夫易，圣人所以崇德而广业也，知崇礼卑，崇效天，卑法地。天地设位，而易行乎其中矣。成性存存，道义之门」。这里的易是圣人崇德广业的易（书与教），设位是崇卑之位。所不带没有列崇卑位次和「成性存存」（固定本性）。records 中的 contextual-registration 已改名。",
+   "fix": "reading 补上语境（崇效天、卑法地，设位即崇卑之位）。所不带加位次与「成性存存，道义之门」。records 改名。"
+  },
+  {
+   "id": "xici-qian-zhi-da-shi-kun-zuo-cheng-wu",
+   "verdict": "keep",
+   "issues": "定域的判断成立；冻结文本作「干」，reading 已注明。",
+   "fix": ""
+  },
+  {
+   "id": "xici-fan-wei-bu-yi",
+   "verdict": "keep",
+   "issues": "与 RO 一致。",
+   "fix": ""
+  },
+  {
+   "id": "xici-xian-ren-cang-yong",
+   "verdict": "revise",
+   "issues": "判断与 RO 一致。records 中的 runaway-distance-unregistered 和 testing-within-registration 已改名。",
+   "fix": "records 改为 runaway-distance-uncoupled 和 testing-within-couplings。"
+  },
+  {
+   "id": "xici-zhen-fu-yi",
+   "verdict": "revise",
+   "issues": "语境是「吉凶者，贞胜者也。天地之道，贞观者也；日月之道，贞明者也」，贞即正。脉络中对这句的唯一注读是王弼《略例·明彖》「制天下之動者，貞夫一者也」，邢璹注「一為君體」，即单一中心。Y1 的相合只是 AI 读法，没有任何注疏支持，reading 却把王弼一读当作「所不带」，好像另有一个更早的本义。",
+   "fix": "reading 先写原文义「天下之动以一为正」，并写明脉络中仅有的注读以一为主或君体；相合部分标为 AI 读法。或者把 kind 改为 scope：算入其余时，统一对每个世界成立（World.unity），但「以一为正」的标准义，脊柱不给。怎样定下来：以韩康伯、孔颖达对系辞下第一章的注疏核对，这部分不在冻结文本中。"
+  },
+  {
+   "id": "xugua-you-tian-di",
+   "verdict": "keep",
+   "issues": "片段与冻结文本只差空白（「有天 地 ，」），可以接受；读法只取卦序的起点，不取时间先后，是正确的。",
+   "fix": ""
+  },
+  {
+   "id": "xugua-ying-tian-di-wei-wan-wu",
+   "verdict": "revise",
+   "issues": "原文是「有天地，然後萬物生焉。盈天地之間者，唯萬物，故受之以屯；屯者盈也」：天地在先、在外，「唯萬物」用盈来解释屯，脉络关系 WP-XG-C01-S02-R01 也作卦序理由解。它没有说只有一类，反而分出天地与万物两层，判为 agreement 不成立。",
+   "fix": "kind 改为 scope：只在把天地也算作物时，才与 World 的一类关系项相合，而序卦本身把天地放在万物之先、之外。对照补上 MI1-S-G6「天地與其所產焉，物也」（先秦名辩，真伪有争议），那里天地也是物。"
+  },
+  {
+   "id": "shuogua-jian-san-cai",
+   "verdict": "revise",
+   "issues": "同章开头是「將以順性命之理」，又有「立人之道，曰仁與義」，固定性命与价值都在语境中，所不带只写了宇宙等级。records 中的 contextual-registration 已改名。",
+   "fix": "所不带加「順性命之理」与仁义的价值；records 改名。"
+  },
+  {
+   "id": "shuogua-shen-miao-wan-wu",
+   "verdict": "revise",
+   "issues": "读法与语境相符。records 中的 registration-within-what-it-registers 已改名。挂在本条下的并行 WH-R027「造之非我，理自玄應；化之無主，數自冥運」，是韩注「莫不獨化於大虛，欻爾而自造矣」的下文，而本簇判独化为相分；把它说成「同一结构」，须写明只取「无主」。",
+   "fix": "record 改为 readings-within-what-they-read；并行 WH-R027 的 note 加「只取化之無主，不取同段的独化自造」。"
+  },
+  {
+   "id": "tuan-kui",
+   "verdict": "keep",
+   "issues": "与 RO 一致。",
+   "fix": ""
+  },
+  {
+   "id": "xiaoxiang-guan-wo-sheng",
+   "verdict": "keep",
+   "issues": "读法可以成立；所不带已列九五的君位。「我生」按传统读法是「我之所行」，可以写明。",
+   "fix": "可选：reading 把「观我之生」写作「观我之所行（我生）」。"
+  },
+  {
+   "id": "dayou-zi-tian-you-zhi",
+   "verdict": "revise",
+   "issues": "相分的判断与经层的标注都正确。records 中的 one-axiom-yields-g0 已改名。",
+   "fix": "records 改为 continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "wfz-qian-kun-bing-jian",
+   "verdict": "revise",
+   "issues": "判断与 RO 一致。层标为「注」不准确：《周易外传》是议论体的外传，不是逐句的注；来源年代标的是「明清之际」，mapper 写作「清初」。",
+   "fix": "layer 改为「外传·明清之际（王夫之《周易外传》，议论体，非逐句注）」。"
+  },
+  {
+   "id": "wfz-wei-ji-tong-shi",
+   "verdict": "revise",
+   "issues": "判断与 RO 一致；层的问题同上一条。",
+   "fix": "layer 改为「外传·明清之际（王夫之《周易外传·未济》）」。"
+  },
+  {
+   "id": "han-dao-wu-zhi-cheng",
+   "verdict": "keep",
+   "issues": "与 RO 一致，注层标注正确。",
+   "fix": ""
+  },
+  {
+   "id": "han-you-shi-yu-wu",
+   "verdict": "keep",
+   "issues": "与 RO 一致。",
+   "fix": ""
+  },
+  {
+   "id": "kong-tai-ji-yuan-qi",
+   "verdict": "keep",
+   "issues": "与 RO 一致，疏层标注正确。",
+   "fix": ""
+  },
+  {
+   "id": "han-du-hua-yu-da-xu",
+   "verdict": "keep",
+   "issues": "相分的判断与原文相符；前后半分开判断是合适的。",
+   "fix": ""
+  },
+  {
+   "id": "wangbi-yi-wu-wei-ben",
+   "verdict": "keep",
+   "issues": "片段都是注文，层次正确，判断成立。",
+   "fix": ""
+  },
+  {
+   "id": "heshang-dao-qi-sheng-hua",
+   "verdict": "keep",
+   "issues": "判断成立；年代争议已经写明。",
+   "fix": ""
+  },
+  {
+   "id": "su-zhe-ti-yong",
+   "verdict": "keep",
+   "issues": "定域的判断成立，已注明体用是后起之说。",
+   "fix": ""
+  },
+  {
+   "id": "zhongyong-tian-ming-zhi-wei-xing",
+   "verdict": "revise",
+   "issues": "相分的判断正确。records 中的 one-axiom-yields-g0 已改名。",
+   "fix": "records 改为 continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "zhongyong-cheng-zhe-zi-cheng",
+   "verdict": "keep",
+   "issues": "与 RO 一致。",
+   "fix": ""
+  },
+  {
+   "id": "zhangzai-tong-yi-wu-er",
+   "verdict": "revise",
+   "issues": "reading 说「沿用 RO 对张载『太虚即气』段的相合判断（同一段落）」，这不对。RO 的片段「气之聚散于太虚，犹冰凝释于水，知太虚即气，则无无」在冻结文本里位于后面另一段，与「知虚空即气……通一无二」隔了好几段，不能直接沿用。本段的内容还有「能推本所从来，则深于易者也」，有「不识所谓有无混一之常」，并且同时攻驳老氏「有生于无」与浮屠，所不带都没有写到。",
+   "fix": "删去「同一段落」，给出本条自己的判断。相合的只是有无、隐显是同一整体的读法这一点（Web.change_readings）。所不带加「推本所从来」（溯本）、「有无混一之常」和气作为基质。"
+  },
+  {
+   "id": "zhangzai-liang-bu-li-yi-bu-ke-jian",
+   "verdict": "revise",
+   "issues": "reading 没有所不带。下文「两体者，虚实也，动静也，聚散也，清浊也，其究一而已」中的一是气；「感而后有通，不有两则无一。故圣人以刚柔立本」又立了本。",
+   "fix": "所不带加「其究一而已」（一为气，属基质义）和「以刚柔立本」。"
+  },
+  {
+   "id": "lu-jiuyuan-dao-wai-wu-shi",
+   "verdict": "keep",
+   "issues": "出自门人语录，层次已标；读法成立。",
+   "fix": ""
+  },
+  {
+   "id": "cheng-hao-xing-ji-qi",
+   "verdict": "keep",
+   "issues": "定域的判断成立，北宋语、南宋辑本的分层已写明。",
+   "fix": ""
+  },
+  {
+   "id": "sengzhao-dong-jing",
+   "verdict": "revise",
+   "issues": "片段是《物不遷論》开头的方法句，这篇论的主张恰好相反：「夫生死交謝，寒暑迭遷，有物流動。人之常情。余則謂之不然」；「昔物自在昔，不從今以至昔……物不相往來」；「江河兢注而不流」。僧肇否认物在时间中流动。reading 用回应之律的例子（水平不变而交换不停）说明「静不等于停」，这个结构不是僧肇说的「各时之物各住其时、不相往来」，而且所不带完全没有提这篇论的主旨。",
+   "fix": "所不带写出物不遷论的主旨。相合只保留在「动静未始异」这一方法句上；另立一条「昔物自在昔，不從今以至昔」，判为定域（保留历史时，过去的配置留在过去：Law.withHistory_never_returns；跨步认同是读法：Web.reidentify_dependent）或相分（「江河兢注而不流」否认运动）。"
+  },
+  {
+   "id": "sengzhao-bu-er-yu-wu",
+   "verdict": "revise",
+   "issues": "读法成立。所不带写作「真谛」，冻结文本作「真諦」，引号内的字须照原文。",
+   "fix": "把「真谛」改为「真諦」。"
+  },
+  {
+   "id": "zhonglun-yin-yuan-jia-ming",
+   "verdict": "keep",
+   "issues": "与 RO 一致。",
+   "fix": ""
+  },
+  {
+   "id": "zhonglun-yuan-cheng-you-guo",
+   "verdict": "revise",
+   "issues": "「緣成由於果」是青目释中「已總破一切因緣」的一步，这一段的结论是「是故果不從緣生。緣尚不生，何況非緣」，否认缘能生果，与 Web.Dependent（形成依其条件）不合。相合的只有「缘因果而得名、不是本性」这一角色之点。",
+   "fix": "kind 改为 scope：角色由所成者而得名，这一点相合（Web.roles）；破因缘、果不从缘生的结论则超出脊柱。所不带写出这个结论。"
+  },
+  {
+   "id": "zaahan-yuan-sheng-lao-si",
+   "verdict": "keep",
+   "issues": "译经层标注与经号（二九七）都正确，读法成立。",
+   "fix": ""
+  },
+  {
+   "id": "weishi-suo-qu-neng-qu-xiang-dai",
+   "verdict": "revise",
+   "issues": "所取、能取「相待立」是两项互相依待。mapper 在名表 alternatives 里自己说相待对应 Becoming.MutualDependence，不是一个关系项兼两种角色，可本条对的却是 Web.roles。这句在加行位，用来证「印二取空」，是在证二取都空，所不带须写出。",
+   "fix": "declarations 改为 Becoming.Flow.MutuallyDependent 和 Becoming.Flow.mutuallyDependent_iff_reach（MutualDependence 模块）；所不带加「此句在加行位，用以印二取空」。"
+  },
+  {
+   "id": "weishi-san-xing-fei-yi-fei-bu-yi",
+   "verdict": "revise",
+   "issues": "定域的判断成立。records 中的 contextual-registration 已改名。",
+   "fix": "records 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "weishi-shi-bian",
+   "verdict": "keep",
+   "issues": "相分的判断成立。",
+   "fix": ""
+  },
+  {
+   "id": "fazang-yin-men-liu-yi",
+   "verdict": "keep",
+   "issues": "「同一法为因时具六义、为果时具二义」读作两种角色，忠于原文。",
+   "fix": ""
+  },
+  {
+   "id": "fazang-yuan-cheng-yi",
+   "verdict": "revise",
+   "issues": "原文是「數十錢法」：「一者，一是本數。何以故？緣成故」；「若無十，即一不成」。这里的一是十钱中作为本数的一枚，讲的是部分由它与其余的关系而成，去掉一缘即一切不成，不是整体的统一，对到 World.unity 错了。所引的根据是「由此緣起是法界家實德故」，带法界实德的根据，所不带没有列。",
+   "fix": "declarations 改为关系项由关系而定的那些：Becoming.Alike.tests、Becoming.Bisimulation、Becoming.Web.Dependent（去一缘即不成）；删去 World.unity。reading 改为「本数之一由与其余诸数的缘而成」。所不带加「法界家實德」。names_used 从一改为状（或新定的配置之名）。"
+  },
+  {
+   "id": "fazang-xiang-rong-bu-tong",
+   "verdict": "keep",
+   "issues": "读法保留了「仍不相是」的区分，忠于原文。",
+   "fix": ""
+  },
+  {
+   "id": "jin-shizi-yin-xian",
+   "verdict": "revise",
+   "issues": "读法成立。records 中的 contextual-registration 已改名。",
+   "fix": "records 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "jin-shizi-jin-xing-bu-bian",
+   "verdict": "keep",
+   "issues": "相分的判断成立；章文与宋注分层正确。",
+   "fix": ""
+  },
+  {
+   "id": "tiantai-fei-zong-fei-heng",
+   "verdict": "keep",
+   "issues": "定域的判断成立。",
+   "fix": ""
+  },
+  {
+   "id": "tiantai-san-di",
+   "verdict": "revise",
+   "issues": "读法成立。records 中的 contextual-registration 已改名。",
+   "fix": "records 改为 claims-shown-in-context。"
+  },
+  {
+   "id": "shengman-ru-lai-zang",
+   "verdict": "keep",
+   "issues": "相分的判断成立。",
+   "fix": ""
+  },
+  {
+   "id": "qixin-yi-xin-er-men",
+   "verdict": "keep",
+   "issues": "相分的判断成立；作者与译者的争议已经写明。",
+   "fix": ""
+  },
+  {
+   "id": "tanjing-ding-hui-yi-ti",
+   "verdict": "keep",
+   "issues": "片段与冻结文本只差空白；宗宝本的文本层次已标明。",
+   "fix": ""
+  },
+  {
+   "id": "zongmi-yuan-ren-ben-mo",
+   "verdict": "keep",
+   "issues": "相分的判断成立。",
+   "fix": ""
+  }
+ ],
+ "missing": [
+  "《庄子·齊物論》（ZH1-S02，先秦内篇）「方生方死，方死方生」与「彼出於是，是亦因彼」（脉络 ZH1-C02-R-04、R-05；RO zhuangzi-qiwu-bi-chu-yu-shi 判相合）：这是「生起与止息是同一变化的读法」最直接的先秦文句，应作条目，并作为「通为一」的替代名。",
+  "《系辞上》第十一章（DS02）「一阖一辟谓之变；往来不穷谓之通」（脉络 XC-R031、WP-XCS-C11-S04-R05；Y1 wanglai-butong 判定域）：变与通的定义，可作 change_readings 与 keep_pace 的名候选，并与开、闭的既有用语相接。",
+  "《系辞上》第五章（DS02）「生生之谓易」（脉络 XC-R057）：与「通变之谓事」同一句群，它把易等同于生生，须在易这个名的 why_not 中处理，并把生生与整个展开（含退化）分开。",
+  "《庄子·天道》（ZH1-S13，外篇）「盛衰之殺，變化之流也」，同段有「夫天地，至神，而有尊卑先後之序」：先秦明言盛与衰同属变化的用例，同段又有位次层。",
+  "《庄子·齊物論》「周與胡蝶，則必有分矣，此之謂物化」（脉络节点 ZH1-C02-N-change、关系 ZH1-C02-R-19）：变化一名应当比较的内篇候选，它保留分。",
+  "《公孙龙子·名实论》（MI1-S-G6）「天地與其所產焉，物也」（脉络节点 MI1-N-G6-wu）：天地也算作物，是物的直接用例；同段还有實、位的定义。",
+  "《墨子·經上》（MI1-S-JS）「法，所若而然也」（MI1-N-JS-035）、「同，異而俱於之一也」、「同，重、體、合、類」、「化，徵易也」：分别可作律、一、相同、化的先秦定义候选。",
+  "《孟子·告子上》（RU2-S-MZ）「故有物必有则」（引诗「天生蒸民，有物有则」，同句有「民之秉彝」）：律的又一候选，带天生与秉彝两层。",
+  "《老子》二十七章「善行无辙迹」（YD-LAO-BASE）与《孟子·离娄下》「王者之迹熄而《诗》亡，《诗》亡然后《春秋》作」（RU2-S-MZ）：迹的先秦用例，不在外篇。",
+  "《庄子·齊物論》「夫道未始有封，言未始有常，爲是而有畛也」「故分也者，有不分也；辯也者，有不辯也」「其次以爲有物矣而未始有封也，其次以爲有封焉而未始有是非也」，以及八德中的「有競有爭」：表示的范围（畛、封）、每次划分留有其余，以及争出于划界。应作条目，并作为六合的替代名。",
+  "《庄子·則陽》（ZH1-S25，杂篇）太公调答少知：「陰陽相照，相蓋相治，四時相代，相生相殺……聚散以成」「或之使，莫之爲，未免於物」「道者，爲之公。因其大，以號而讀之，則可也」：万物生于诸相互关系，既不是有所使，也不是无所为，道是对共同者的称呼，与本簇的核心直接相关。",
+  "《庄子·天運》开篇「孰主張是？孰維綱是？」（ZH1-U14）：对展开背后有无主使者的发问，可与「怒者其誰」并列。",
+  "惠施「至大无外，謂之大一」（ZH1-S33；RO huishi-li-wu 判定域）：「整体之外不失去」（Web.not_losesBeyond_whole）的名候选，以取代无际中的这一部分。",
+  "《庄子·大宗師》「又況萬物之所係，而一化之所待乎」与「萬化而未始有極也」：一化、万化是大化的内篇替代候选，一化所待者是道（先在之根）。",
+  "《庄子·知北遊》「死生有待邪？皆有所一體」：所待与一体的用例。",
+  "僧肇《物不遷論》的主旨「昔物自在昔，不從今以至昔……物不相往來」「江河兢注而不流」（CT1-S-ZL）：跨步认同与运动问题，应另立条目，判定域或相分。",
+  "《荀子·天論》「故明于天人之分，则可谓至人矣」与「心居中虚，以治五官，夫是之谓天君」（RU2-S-XZ17）：大化一条所在篇章的二分框架与单一中心，应进入所不带或另立相分条目。",
+  "《乾·彖》（DS10）「大哉乾元，万物资始，乃统天……乾道变化，各正性命」：变化在传层就被收束于先在之元与固定性命，应作相分条目，不宜只当作周敦颐的引文。",
+  "《中庸》「上律天時，下襲水土」（RU1-S-ZY）：律在先秦有「遵从、取法」义，律的 why_not 应改正。"
+ ]
+}

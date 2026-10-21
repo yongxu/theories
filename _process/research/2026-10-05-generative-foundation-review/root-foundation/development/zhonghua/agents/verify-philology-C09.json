@@ -1,0 +1,586 @@
+{
+ "cluster": "C09",
+ "lens": "PHILOLOGY（文字、层次、语境、年代）。机械核对：57条名的attestation与129个entry片段都用冻结文本逐字核过，全部exact；每个entry的record都核了存在与否、证据是否落在所给片段上；所引declarations都对照Lean源检查过。下列问题都是在这些核对之后仍然存在的。",
+ "names": [
+  {
+   "concept": "一一对应的命名（只作标识的名）",
+   "name": "私名",
+   "verdict": "revise",
+   "issues": "四条引文逐字无误。(1)「聲出口，俱有名，若姓字灑。」总说三等名（达、类、私），不专指私名。「灑」是传本疑字，诸家多校作「麗/儷」，义为名附于实。mapper所说「如姓字一样人人可有」是加出来的释义，原文没有。(2) course说韩愈「一人之私言」使「私」转成价值贬义，这是错的。先秦已有与「公」相背的价值义：《韩非子·五蠹》「自環者謂之私，背私謂之公」（FA1-S-H49，脉络FA1-H49-R010，逐字核过）。(3) fit把两件事并在一起。「止於是實」只支持一名一实、最细的命名（lumped_id、identifiesAlike_id_iff）。「名只作标识、改名不变」（Web.rename_tenure、Flow.reidentify_counts）不在私名原文里。",
+   "fix": "「聲出口」句降为旁证，sense_in_context写明它总说三等名、「灑」字可疑。course改为：「私」的偏私义、与公相背义先秦已有（《韩非子·五蠹》，FA1-H49-R010），与墨经「私名」（专指一实）同时并存。fit只保留「止於是實＝一名一实」，改名不变的内容移到名无固宜条。"
+  },
+  {
+   "concept": "标签不携带关系：改名不变",
+   "name": "名无固宜",
+   "verdict": "revise",
+   "issues": "引文逐字无误，荀子和王弼两条都合。朱熹「『惺惺』字則同，所作工夫則異」说的是同一个形式装不同内容（同形异义，即虚位、stands_false_iff、TwoFormations.homonym一侧），与「名无固宜」的异形同义、改名保值方向相反。放在这里会把两个结构混为一个。",
+   "fix": "把IN2-R0010从本名的attestation中移出，归到贯义条（或其补集「同名」）。course中「朱熹……用于辨别同名异实」一句一并移走。"
+  },
+  {
+   "concept": "改名：每一步同一个对应",
+   "name": "重同",
+   "verdict": "revise",
+   "issues": "三条引文逐字无误。漏了一条决定性的先秦文本：《經下》「狗，犬也，而殺狗非殺犬也，可，說在重。」（MI1-S-JX，逐字核过）。按冻结的经文，正因为「重」，「殺狗非殺犬」才「可」，也就是说同实的两个名在「殺」的语境中不能互换。而《經說下》作「狗，狗，犬也，而殺狗謂之殺犬，可，若兩𦞙。」（MI1-S-SX，逐字核过），经与说正相反，诸家常改经文。fit断言「凡由一套名读出的，换成另一套都一样读出」，没有提这个校勘难点，等于把一个有争议的地方当成没有争议的相合。",
+   "fix": "attestations加入上面经、说两句，sense_in_context写明二者相反。not_carried加上：传本经文「殺狗非殺犬」否认替换。confidence由high降为medium。fit的「都一样读出」限定为「就关系项而言，依《經說下》读法」。另可把墨经「移」（《經上》「謂，移、舉、加。」；《經說上》「謂，狗犬，命也。狗犬，舉也。叱狗，加也。」，均逐字核过）列为改名动作的先秦候选名。"
+  },
+  {
+   "concept": "重新认定（Reidentify）",
+   "name": "稽实",
+   "verdict": "revise",
+   "issues": "三条引文逐字无误。(1) 名与概念不合。「稽」是考核、核定，「稽实」是考定其实。荀子此句给的是判定一实、二实的判据，并据此定数，同段说「此制名之枢要也」。Reidentify却是两套命名之间每一步的一一对应，并非考定。(2) 墨经「數牛數馬則牛馬二，數牛馬則牛馬一」，按脉络MI1-R-SX-count，是以牛、马为单位还是以牛马整体为单位，即合并的粗细，计数因此改变。fit却引Flow.reidentify_counts说重新认定保持计数，这条attestation与所立的概念正相反。(3) ZH1-S25《則陽》层次标作「传·秦汉」是错的。《庄子》杂篇是子书正文，不是传；脉络的era作「主要战国至秦汉」。entry zhuangzi-qiu-li对同一来源也标作论，两处不一致。(4) not_carried把督责义归到「汉以后'控名责实''循名责实'」，这是错的。《韩非子·定法》已有「術者，因任而授官，循名而責實，操殺生之柄，課羣臣之能者也。」（FA1-S-H43，脉络FA1-H43-R001/R002，逐字核过）。course把这一转向记在司马谈名下，同样应前移。",
+   "fix": "有两种改法。一是把概念改为「认定：按状、所、化定一实二实，再定数」（World.fixed_iff、listsOnce_iff_decided、numbers_iff_decided；跨步读数随认定而变则用Turnover.identified/reidentified），Reidentify另外命名（候选墨经「移」；若没有合适的先秦名，就用说明短语「改认」）。二是保留现在的概念，但换掉名。墨经牛马句移到类或mojing-shu-niu-ma，对应lumped_of_finer、Refining.grow。ZH1-S25的层次改为「子·战国至秦汉（《庄子》杂篇·則陽，年代有争议）」。not_carried和course改为：先秦《韩非子·定法》「循名而責實」已是以名督实（FA1-H43-R001）。"
+  },
+  {
+   "concept": "跨步同一（一个形成的延续）",
+   "name": "一实",
+   "verdict": "revise",
+   "issues": "引文逐字无误。(1) fit把「状同而为异所者……谓之二实」对到Web.no_join（「两条延续不在一步上合并」）。no_join说的是：在KeepsActive的前提下，跨一步被同名的两个形成是同一个。这是跨步的命名约束。荀子的「异所」则是同一时刻处所不同，是共时的区别。RO对同一段用identifiesAlike_iff与Twins处理二实（所是关系），那是对的。(2) 僧肇「言去不必去……稱住不必住」（CT1-R-ZL04）讲称谓的对治作用，不涉跨步同一。与一实直接相关的是同一论中的「是謂昔物自在昔，不從今以至昔；今物自在今，不從昔以至今。」（CT1-S-ZL，脉络CT1-R-ZL03，逐字核过），它否认物跨时延续，是相分。",
+   "fix": "二实改对identifiesAlike_iff、Twins.naming_not_identifiesAlike（所异即关系异）。no_join只用于「化而无别」一侧，并写出其前提KeepsActive。把CT1-R-ZL04换成CT1-R-ZL03，sense写作：否认物跨时延续，与一实相分；在理论中，跨步同一由延续关系给出（Web.Continues的R），而不是物自身携带。confidence由high降为medium。"
+  },
+  {
+   "concept": "共享码：在形成者之间形成的码",
+   "name": "约定俗成",
+   "verdict": "revise",
+   "issues": "引文逐字无误，是已采纳的名。(1)《經上》「君，臣萌通約也」所约定的是「君」，即众人共约出一个中心。它可以说明约是众人之间的，但同时也是中心打破对称（TwoFormations.centre_breaks_exchange）的例子，sense没有写出这一点。(2)《司马法》「教成俗……道化俗」中俗由「教」而成，是自上而下的形成，更接近制名、impose，sense应当注明。(3) fit说荀子同篇「三种打破都有」，并把约定俗成对到「听的先后」（ordered_breaks_exchange）。这是AI的结构指派：原文「约之以命，约定俗成」没有说听的次序，荀子的约定是在「王者之制名……慎率民而一焉」之下的，不是与中心并列的另一种机制。(4) fit中的「order_decides」全名应为Becoming.SharedCodes.TwoFormations.order_decides。",
+   "fix": "两条sense分别补上「约出一个君（中心）」和「俗由教成，属外加一途」。fit改为：荀子以王者制名为主，约定俗成说的是名在使用中被接受；三种对称的打破是AI的结构读法，荀子没有把它们分为三种机制。declaration补全名。"
+  },
+  {
+   "concept": "读出：在码一致处，形式被读为它的义",
+   "name": "喻",
+   "verdict": "revise",
+   "issues": "引文逐字无误。(1) course说「后代'喻'多作譬喻」，又把《解老》「諭內」列为后起，这两点都错。譬说义先秦已有：本簇自己用到的《齐物论》「以指喻指之非指」，以及《孟子·梁惠王上》「王好战，请以战喻」（RU2-S-MZ，逐字核过）。《解老》传统归韩非，属战国末，与荀子同期，不能称「后代」。(2) 漏了比荀子更早的先秦用例：《论语·里仁》「君子喻於義，小人喻於利。」（RU1-S-LY，逐字核过），各依自己的码所分开者读出，正合reads_iff。又有《大学》「所藏乎身不恕，而能喻諸人者，未之有也。」（RU1-S-DX，节点RU1-DX-12-N08，使人喻）。(3) CV1-JL-R006同时出现在rejected里和本名的attestation里，状态自相矛盾。(4) not_carried没有列因明的「喻」（例证，FO1-S-NY，汉译佛典的专门义）。",
+   "fix": "course改为：先秦已兼有「晓」（论语、荀子）与「譬说」（孟子、庄子）两义，本名只取晓、读出一义。attestation加入《论语·里仁》句。CV1-JL-R006要么从rejected中删去，要么从attestation中删去，二者只能取一。not_carried加上「因明三支之喻（例证）」。"
+  },
+  {
+   "concept": "外加码",
+   "name": "制名",
+   "verdict": "revise",
+   "issues": "引文逐字无误。(1) fit引的「impose_reads」在Lean中不存在。SharedCodes.lean的Imposed一节只有impose_agrees、impose_loses_iff、source_loses_nothing、held_stays、run_imposed_stays、outside_needed、outside_returns。(2)《老子》「始制有名」应读作「始制，有名」，制是裁割朴（第二十八章有「朴散则为器」），并非复词「制名」。fit里「不知止则合并累加」既不在经文中，也不是任何定理的内容：run_imposed_stays只说合并保持，没有说累加。(3) 同篇紧接着的单一中心层没有收入：「夫民易一以道，而不可与共故。故明君临之以埶，道之以道，申之以命，章之以论，禁之以刑。」（RU2-S-XZ22，逐字核过）。",
+   "fix": "删去impose_reads，改述为「外加码之下读出仍依reads_iff，外加码须分开所需的诸义」。老子attestation的sense改为「朴被裁割而有名，名既有须知止」，删去「合并累加」。not_carried和course补上「不可与共故」与「临之以埶……禁之以刑」。"
+  },
+  {
+   "concept": "什么都不分开的读法（常值合并）",
+   "name": "达名",
+   "verdict": "revise",
+   "issues": "墨经、荀子两条引文逐字无误，名的选择也恰当。华严FO2-FQ的引文截在「故名為純；」，冻结原文紧接着是「又即此人門，具含理事等一切差別法，故名為雜。」（脉络FO2-FQ-R021 claim：「一门收摄为纯，同时含差别为杂」）。法藏说的是纯杂同时具足，不是什么都不分开。截断之后，sense「常值合并被读成一即一切」就失真了。",
+   "fix": "引文补到「故名為雜。」。sense改为：一门收摄一切为纯，同时具含一切差别为杂；这不是常值合并，而是一种读法兼存合与分。注明这是唐代华严判教的义门，只作对照。"
+  },
+  {
+   "concept": "合并（Learning.Lumped）",
+   "name": "类",
+   "verdict": "revise",
+   "issues": "引文逐字无误。fit和entry mojing-yi-fa-jin-lei把墨经「俱有法而異」的「法」读成「律」。按《經上》「法，所若而然也。」（MI1-S-JS，逐字核过），法是照着做就能成其然的样式、标准（规、员之类），也就是判为同类的依据，对应读法π或共同的判据，不是变化之律。这是同字滑移。concept「在所论之律下行为相同者归为一类」又把Learning.Lumped（经π相同者取同值）与goAlike_iff_lumped（合并对某一律有用的条件）并成了一件事。",
+   "fix": "改为：合并的依据是法（所若而然的标准），不是材料；合并对某一律有用的条件，另由goAlike_iff_lumped给出。concept改为「依同一读法归为一类」。牟子attestation加record_id IN1-R-M17。"
+  },
+  {
+   "concept": "经由合并而推广",
+   "name": "推类",
+   "verdict": "keep",
+   "issues": "四条引文逐字无误，层次正确，sense合原文语境。只有一点：《經下》「推類之難，說在之大小」是传本文字，「之」前诸家或补「名」字。",
+   "fix": "可在sense注明「传本疑有脱字」。"
+  },
+  {
+   "concept": "有意义的描述（IdentifiesAlike）",
+   "name": "正名",
+   "verdict": "revise",
+   "issues": "引文逐字无误。(1)《论语》attestation的sense_in_context只写了「名不正则言不顺、事不成」，没有写语境是卫君父子的名分。RO ru-lunyu-zheng-ming已经说明这一点，本簇的entry lunyu-zheng-ming也写了，名的attestation却省掉了。(2)「正」的本义是使之正确、合标准。项目已因「correct」是二元的而把Correction改名为Rejoining。「正名」若作术语，须按RO已经定下的读法限定：正不是找到一个本来正确的名字，而是命名与它所归并之物的变化相合（HANZI-AND-THEORY-TREE.md第26行）。(3) course可补先秦法家的用例《商君书·定分》「名正，愚智遍能知之。」（FA1-S-SV5，逐字核过）。",
+   "fix": "论语attestation的sense补上「语境为卫君父子的名分」。fit开头加上RO的限定语。course加入商君书句。"
+  },
+  {
+   "concept": "携带律的描述",
+   "name": "理",
+   "verdict": "revise",
+   "issues": "引文逐字无误，是已采纳的名，宋明「天理」已列入not_carried。《解老》「理者，成物之文也」在原文中紧接「短長、大小、方圓、堅脆、輕重、白黑之謂理。理定而物易割也。」（CV1-S-JL，逐字核过）。解老的理是成物可分辨的形质，即静态的读出特征，不是携带律的描述。sense「物之可分辨的条理」写得对，但fit把它当作「携带律」的证据。",
+   "fix": "解老attestation的sense写成「理是物的短长、大小、方圆、坚脆、轻重、白黑等可分辨的形质」。fit说明：解老之理对应读法所分开的东西，「携带律」是理论另加的条件。"
+  },
+  {
+   "concept": "跨情境成立（CrossSituational.stands_iff）及其补集",
+   "name": "贯义",
+   "verdict": "revise",
+   "issues": "引文逐字无误。(1)「义」作「词义、意思」是汉魏以后的用法，本簇王弼「義茍在健」就属魏晋层。先秦的「义」主要是宜、正当，墨子「一人一義」即是非之准。在以先秦为主的词表里，「贯义」很容易被读成「贯通的道义」，not_carried里一句话挡不住。(2) 韩愈attestation的sense「定名在各家各处义同」是误读。韩愈的定名是他自己规定的内容（「博愛之謂仁，行而宜之之謂義」），同一段又说老子「以煦煦爲仁，孑孑爲義」，可见仁义在各家并不同义。脉络IN1-R-D01的limits是：「本节点不可与老子或宗密的道德同名合并」。所以定名一侧更接近规定之码（制名），只有虚位一侧对应stands_false_iff。(3) 结构证据漏了先秦：《經下》「物盡同名，二與鬭，愛，食與招，白與視，麗與暴，夫與履。」与《經說下》「同名，俱鬭，不俱二，二與鬭也。」（均逐字核过）。一形多义在先秦已有「同名」这个术语，正是贯义的补集。(4) stands_iff是学习者跨场合消解所用的判据（每条相关记录都给出此义），fit应写明它是对记录取交，不是对使用者作统计。",
+   "fix": "定名一侧改写为：韩愈以定名自定仁义的内容，同段承认老子另有所谓仁义，因此定名是规定，不是跨家成立；虚位一侧对应stands_false_iff。attestation加入墨经「物盡同名」两句，作为补集的先秦术语。若保留新组合，在glossary中注明「义」取汉魏以后的「意义」义，并考虑与墨经「同名」成对命名。confidence保持low。"
+  },
+  {
+   "concept": "消解：候选义随相关记录收窄",
+   "name": "通意",
+   "verdict": "keep",
+   "issues": "引文逐字无误，层次正确。confidence定为low是诚实的。荀子「实不喻，然后命，命不喻，然后期，期不喻，然后说，说不喻，然后辨。」（RU2-S-XZ22，逐字核过）是同一结构（逐级增加记录，直到读出）的第二个先秦出处，可以补入。",
+   "fix": "可选：把荀子这一句加为attestation。"
+  },
+  {
+   "concept": "码的获得",
+   "name": "知名",
+   "verdict": "keep",
+   "issues": "引文逐字无误。用、丽的读法与原文相合。同段「辞也者，兼异实之名以论一意也」（RU2-S-XZ22）可直接支撑「丽＝组合」。现代义「著名」已在not_carried中注明。",
+   "fix": "可选：把「辞也者」句加为attestation。"
+  },
+  {
+   "concept": "有限多个标签所确定者（Becoming.Labels）",
+   "name": "当簿",
+   "verdict": "reject",
+   "issues": "(1) Lean中不存在Becoming.Learnable.label_of_rests和Becoming.Learnable.table_rests。Labels.lean的Learnable一节只有table_predicts、learnable_iff_table、label_of_predicts、labels_of_still等；fit里的「label_of_rests」同样不存在。(2) 训诂有争议。杨倞一系读「当」为主、「簿」为簿记；另一读以「簿」为「薄」（迫近、接触）。脉络自己的节点RU2-N0269和relation RU2-R0133读作「心征知仍待感官适当接物」。mapper只取登记一读，没有提另一读。(3)「有限的标签表」在原文中不存在，mapper自己也承认；「当簿」又与已采纳的「识」（登记）重叠。(4) 同段「五官簿之而不知，心征知而无说，则人莫不然谓之不知。」（逐字核过）说的是感官簿了而心未知，即有登记而无读出。这与识、喻之别相关，与Labels无关。",
+   "fix": "不用作Labels的名。xunzi-dang-bu-qi-lei保留为scope entry，改对「感官各接其类、心依之而征知；簿而不知＝有登记而无读出」（识与喻之别、Observation、PartialReadout）。若仍要连到Labels，只引存在的Learnable.table_predicts、Learnable.label_of_predicts。Labels另找名，或用说明短语。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "xunzi-zhi-ming-yong-li",
+   "verdict": "keep",
+   "issues": "两段逐字无误，层次正确，gap说明恰当。把「兼」对到PartialReadout.paired_exact是结构读法（兼名如「白马」是两个名相配），可以接受。"
+  },
+  {
+   "id": "xunzi-hua-yi-shi",
+   "verdict": "revise",
+   "issues": "逐字无误。「状同而所异是二实：两条延续在一步上不并为一（Web.no_join）」用错了：no_join是在KeepsActive前提下，跨一步同名者为同一形成；「异所」是共时的处所之别。RO同段用identifiesAlike_iff与Twins处理二实。原文紧接的「此制名之枢要也」说明稽实定数属于制名，reading没有提。",
+   "fix": "二实改对identifiesAlike_iff、Twins.naming_not_identifiesAlike（所异即关系异）。no_join只用于「化而无别」一侧，并写出KeepsActive前提。补上「此制名之枢要也」的定位。"
+  },
+  {
+   "id": "xunzi-tong-ze-tong-zhi",
+   "verdict": "keep",
+   "issues": "逐字无误，与RO同一passage的相合判定一致。"
+  },
+  {
+   "id": "xunzi-ming-wu-gu-yi",
+   "verdict": "revise",
+   "issues": "entry本身逐字无误，与RO相合。挂在它下面的parallel ZH1-C01-R-07「名者，實之賓也」是许由让天下时说的话，「吾將爲名乎」中的名是名声，不是名号。这只是同字，不是同一结构，违反「结构而非词汇」的规则。",
+   "fix": "把ZH1-C01-R-07从parallels移到rejected，理由写「名为名声义，同字不同构」。"
+  },
+  {
+   "id": "xunzi-wang-zhe-zhi-ming",
+   "verdict": "revise",
+   "issues": "逐字无误。declarations和reading中的Becoming.SharedCodes.impose_reads在Lean中不存在。同篇漏收的「夫民易一以道，而不可与共故。故明君临之以埶，道之以道，申之以命，章之以论，禁之以刑。」比「符节度量之罪」更直接地显出单一中心，以及不与民共享其理由，属相分层。",
+   "fix": "删去impose_reads（可改述为外加码下reads_iff的应用，或不引）。把上面这句列为本条的divergence部分，或另立divergence entry。"
+  },
+  {
+   "id": "xunzi-dang-bu-qi-lei",
+   "verdict": "revise",
+   "issues": "逐字无误。declarations中的Becoming.Learnable.table_rests、Becoming.Learnable.label_of_rests都不存在。「当簿」的训诂有争议（主记/簿记，或薄/接触），脉络RU2-R0133读作「感官适当接物」。漏了同段「五官簿之而不知，心征知而无说，则人莫不然谓之不知。」。「天官……意物也同」被当作固定本性，这一判断本身是对的。",
+   "fix": "declarations改为存在的Learnable.table_predicts、Learnable.label_of_predicts，或者干脆不连Labels。reading改为「感官各接其类，心依之征知；簿而不知＝有登记而无读出（识与喻之别）」，并注明训诂争议。片段加入「五官簿之」句。"
+  },
+  {
+   "id": "xunzi-da-gong-ming",
+   "verdict": "keep",
+   "issues": "逐字无误。「荀子的终点是所用码的终点」一句是恰当的定域说明。"
+  },
+  {
+   "id": "xunzi-yuan-fang-yi-su",
+   "verdict": "revise",
+   "issues": "逐字无误。「因之而为通」的「之」指上文「诸夏之成俗曲期」：远方异俗借诸夏已成之名以相通，是拿一个中心码当通用码，不是两码之间的翻译。「翻译是改名的一个实例」是AI的延伸，原文没有。「诸夏/远方异俗」还带有中心—边缘的等级层，reading只说了「选定一个中心码」。",
+   "fix": "删去翻译一句，或明确标为AI延伸。写明「诸夏之名为中心码，远方因之以通」，并指出华夏—远方的等级层是相分层。"
+  },
+  {
+   "id": "xunzi-ming-you-gu-shan",
+   "verdict": "revise",
+   "issues": "逐字无误，「善名是便利，不是名对实的正确」这一点读对了。但「荀子同篇三者俱全……约定俗成（次序，order_decides）」是AI的结构指派：原文没有听的次序，而且荀子的约定在王者制名之下。",
+   "fix": "改为：可以从中读出三种对称打破的结构，但荀子没有把它们分成三种机制，约定俗成从属于王者制名。"
+  },
+  {
+   "id": "xunzi-zhi-ming-gui-jian",
+   "verdict": "keep",
+   "issues": "逐字无误。divergence的判定与脉络RU2-R0132的limits「政治贵贱并非现代中性分类，必须保留」一致。"
+  },
+  {
+   "id": "lunyu-zheng-ming",
+   "verdict": "keep",
+   "issues": "逐字无误。reading已写出卫君父子名分的语境，与RO的定域判定一致。"
+  },
+  {
+   "id": "lunyu-ma-mian-bai-xia",
+   "verdict": "revise",
+   "issues": "逐字无误。孔子明言的理由是「儉」与「泰」。拜下所保的区分是君臣尊卑（拜于堂下以示臣礼），属于等级层。「合并了一个区分」和outside_returns是AI的结构读法，原文的理由不是改名与合并。mapper自己也承认应当降级。",
+   "fix": "kind由agreement改为scope。reading写明：从下所守的是尊卑区分；理论只给出结构（一次形式改动是否合并了某个区分），不支持所守区分的等级内容。"
+  },
+  {
+   "id": "lunyu-li-yun-li-yun",
+   "verdict": "revise",
+   "issues": "片段与冻结文本一致，但冻结文本作「禮雲禮雲」，「雲」应是「云」的繁简转换讹字，reading不能依据这个字。whole_not_in_pairs（整体持有、任何两两部分都不持有的关系）与「礼不在玉帛」不是同一结构。传统读法是礼在敬、仁而不在器币（文与质、内与外），脉络也拿RU1-LY-03-03-R01「人而不仁，如禮何？」来相参。mapper在别处把「外饰諭內」判为内外二层，这里也应同样披露。parallel note中的「人而不仁如礼何」与原文不完全一致。",
+   "fix": "reading改为：礼是人与人之间的关系，玉帛是其中的项（AI读法）；传统以敬、仁为内、玉帛为外，是内外二层，理论不取。whole_not_in_pairs改为类比说明，或换成Readout.no_judge_of_merged一类的「只读项、不读关系」。注明「雲」为讹字。note改为原文「人而不仁，如禮何？」。"
+  },
+  {
+   "id": "mengzi-yi-fu",
+   "verdict": "revise",
+   "issues": "entry逐字无误，reading的定域说明恰当，脉络RU2-R0278的limits也一致。但parallel MO1-C12-R009的方向与本条相反。墨子是保留「正长」「刑」之名，只说用法不同（同名而内容异，属虚位一侧）；孟子是按所为撤去「君」之名。note中的「用刑不善」也与原文不一致，原文是「用刑則不善」。",
+   "fix": "把MO1-C12-R009改挂到hanyu-ding-ming-xu-wei，或移出parallels。note改用原文「則此豈刑不善哉？用刑則不善也」。"
+  },
+  {
+   "id": "mojing-da-lei-si",
+   "verdict": "revise",
+   "issues": "内容可以。两段片段都出自《經說上》，layer写作「经/传」不准确。",
+   "fix": "layer改为「传·先秦（《經說上》，战国后期墨家）」。"
+  },
+  {
+   "id": "mojing-zhong-tong",
+   "verdict": "revise",
+   "issues": "逐字无误。漏了《經下》「狗，犬也，而殺狗非殺犬也，可，說在重。」和《經說下》「狗，狗，犬也，而殺狗謂之殺犬，可，若兩𦞙。」两句，经与说相反。依传本经文，同实二名在「殺」的语境里不能互换，这直接牵涉reading所说的「改名保值」。layer应为传。",
+   "fix": "加入这两句，reading写明经、说相反，改名保值只在依《經說下》的读法下成立。layer改为「传·先秦（《經說下》）」。"
+  },
+  {
+   "id": "mojing-yong-ming",
+   "verdict": "revise",
+   "issues": "逐字无误。「不敢於彼」是同一个人的记录，显然与「勇」有关。按stands_iff，不带指标的「勇」在这条记录下就不成立。墨经的处理是把勇限定于「是」（於是之勇），也就是Contextual.indexed_fits，而不是把「彼」判为不相关。layer应为传（經說上）。",
+   "fix": "删去「不相关之处的记录不参与」这一stands_iff解释，以indexed_fits为主。layer改为传。"
+  },
+  {
+   "id": "mojing-shu-niu-ma",
+   "verdict": "revise",
+   "issues": "逐字无误。脉络MI1-R-SX-count说的是「分别以牛马为单位，或以牛马整体为单位」，即计数单位（合并的粗细）改变，计数随之由二变一。Flow.reidentify_counts（一一重新认定保持计数）与此无关，numbers_iff_decided也不是这句的要点。layer应为传（經說下）。",
+   "fix": "declarations以lumped_of_finer、Refining.grow为主，删去「在同一认定下……reidentify_counts」一句。layer改为传。"
+  },
+  {
+   "id": "mojing-kuang-ju",
+   "verdict": "keep",
+   "issues": "逐字无误，与RO一致。layer宜写作「传（經說下）」。",
+   "fix": "layer细化为传。"
+  },
+  {
+   "id": "mobian-lei-qu-lei-yu",
+   "verdict": "revise",
+   "issues": "逐字无误，与RO一致。小取既不是经也不是说，layer应为「论（小取）」。parallel MI1-R-XQ-thief（「殺盜人非殺人也」）被当作本条「推广失效处」的同类，但《荀子·正名》明确判定「“见侮不辱”，“圣人不爱己”，“杀盗非杀人也”，此惑于用名以乱名者也。」（逐字核过）。盗是人的一类，「杀」在这个合并上取同值，「杀盗非杀人」是借名辩形式作出的规范判断，与「乘车非乘木」（所乘的是车，不是材料）不同。脉络的limits也说「这是本段墨者的论辩立场」。parallel notes中的「乘白马即乘马」「盗人人也，杀盗非杀人」不是原文，原文是「白馬，馬也；乘白馬，乘馬也」「殺盜人非殺人也」。",
+   "fix": "把MI1-R-XQ-thief移出parallels，另立scope或divergence entry，配上荀子三惑句。notes改用原文。layer改为论。"
+  },
+  {
+   "id": "mobian-ming-ju-shi",
+   "verdict": "keep",
+   "issues": "逐字无误。layer宜为「论（小取）」。CodeAcquisition目前没有记录挂靠，mapper已经声明。",
+   "fix": "layer改为论。"
+  },
+  {
+   "id": "mojing-ju-wu-sheng",
+   "verdict": "revise",
+   "issues": "逐字无误。原文先说「謂，所謂非同也，則異也」，可知「異」是所指不同（一人称此物为牛，另一人称彼物为马），二人并不是就同一物相争，所以「俱無勝，是不辯也」。mapper读成「对同一物一说牛一说马」，并引never_agrees_of_both、crossing_never_agrees，这是误读。",
+   "fix": "「异」一侧改为：所指不同，没有共同对象，所以无可辩。删去never_agrees_of_both和crossing_never_agrees。保留「同」一侧（改名，renamed_tells_apart_iff）和「當者勝」（stands_iff、resolves_iff）。layer改为传（經說下）。"
+  },
+  {
+   "id": "mojing-wei-hu-qi-wei",
+   "verdict": "keep",
+   "issues": "逐字无误，惟（唯）＝应合的读法与语境相合。"
+  },
+  {
+   "id": "mojing-tong-yi-hou-dui",
+   "verdict": "keep",
+   "issues": "逐字无误。不问而径答是在消解之前作答，读法正确。"
+  },
+  {
+   "id": "mojing-yi-suo-ming",
+   "verdict": "keep",
+   "issues": "逐字无误，以尺量长的比喻读法正确。"
+  },
+  {
+   "id": "mojing-yi-fa-jin-lei",
+   "verdict": "revise",
+   "issues": "逐字无误。「'法'在此是律」是同字滑移。《經上》「法，所若而然也。」（逐字核过）：法是照着做就能成其然的样式、标准，是判为同类的依据，不是变化之律。",
+   "fix": "改为：法是同类的判据（对应读法π或共同标准）；合并对某一律有用另由goAlike_iff_lumped给出。layer改为传（經說下）。"
+  },
+  {
+   "id": "mojing-jian-bai-zai-shi",
+   "verdict": "keep",
+   "issues": "逐字无误。《經上》「堅白，不相外也」核过存在。两种接触读出的是不同的属性，在石上粘合，读法正确。"
+  },
+  {
+   "id": "gongsunlong-bai-ma",
+   "verdict": "revise",
+   "issues": "三段逐字无误，与RO的定域判定一致。entry列了record MI1-R-G2-filter，但它的证据「馬者，無去取于色，故黃、黑馬皆所以應；白馬者，有去取于色，黃、黑馬皆以所色去，故唯白馬獨可以應耳。」不在fragments里。parallel MI1-R-G1-chu出自《跡府》，属后起的记述层，note没有注明。",
+   "fix": "把上面这句补为fragment（逐字核过），它正是「选择」结构的原文。note中注明《跡府》为记述层、编纂时代未定。"
+  },
+  {
+   "id": "gongsunlong-zhi-wu",
+   "verdict": "revise",
+   "issues": "逐字无误。「指」的语义历来有争议（指认、概念、共相、手指），脉络MI1-R-G3-condition的limits是「指与谓物的语义有争议，只保存条件原句，不重构存在论」。mapper把指径直读作「指认、读法」，又把「所无/所有」读成「两界」，重构了一种存在论。",
+   "fix": "reading先说明「指」义有争议，只取「无指则物不可谓」这一条件结构。「两界」改写为「原文区分所有与所无，其存在论地位不作断定」。"
+  },
+  {
+   "id": "gongsunlong-ji-zu-san",
+   "verdict": "keep",
+   "issues": "逐字无误。「谓」与「数」不可相加，scope判定恰当。"
+  },
+  {
+   "id": "gongsunlong-ming-shi",
+   "verdict": "keep",
+   "issues": "逐字无误。「知此之不在此」也可以读作跨时、跨处名随实止，与stays_iff的读法并不冲突。"
+  },
+  {
+   "id": "gongsunlong-jian-bai",
+   "verdict": "revise",
+   "issues": "逐字无误，与RO定域一致。按脉络MI1-R-G5-know，此段的「离」首先是认识上的分离（有知有不知，有见有不见）。在坚白石中，视与拊读出的是不同的属性，并不冲突，是可以粘合的。所以公孙龙否认坚白石为一，在这里是相分，不是在不粘合处成立；Specker.noGlobal所说的并不是这种情形。",
+   "fix": "reading改为：「知與不知相與離」与indexed_fits相合；在坚白石上两读可以粘合，「离也者藏也」所否认的合一与glues_iff_agree相分；Specker只作对照。"
+  },
+  {
+   "id": "zhuangzi-wu-wei-zhi-er-ran",
+   "verdict": "revise",
+   "issues": "逐字无误。在语境中，「惡乎然？然於然……物固有所然，物固有所可。无物不然，无物不可」说的是每一物都从它自己被肯定（然於然），由此导向「道通爲一」（脉络ZH1-C02-R-08：「物谓之而然，并各有所然有所可」）。这句并不是「然与可在关系里，不在谓之中」。称谓不改关系是理论自己的修正，不是庄子的话。",
+   "fix": "reading改为：庄子说物各有其然、无物不然（齐同）；理论另外给出称谓不改关系（Web.rename_tenure、Law.alike_iff_sameFuture），用来限定「谓之而然」的范围。"
+  },
+  {
+   "id": "zhuangzi-zhao-san-mu-si",
+   "verdict": "keep",
+   "issues": "逐字无误。「（而）」是冻结文本的校勘括号，照录是对的。"
+  },
+  {
+   "id": "zhuangzi-yi-yu-yan-wei-er",
+   "verdict": "keep",
+   "issues": "逐字无误，层次正确。"
+  },
+  {
+   "id": "zhuangzi-shu-zhi-zheng-chu",
+   "verdict": "keep",
+   "issues": "逐字无误。发言者是王倪，reading已经注明。"
+  },
+  {
+   "id": "zhuangzi-tian-di-yi-zhi",
+   "verdict": "revise",
+   "issues": "逐字无误。「针对公孙龙《指物論》《白馬論》而发」是一个影响断言。现存《公孙龙子》的篇章年代有争议，按脉络的规则，共用字词和年代先后都不能构成影响。",
+   "fix": "改为：传统上常读作回应名家指、马之辩，二者的关系未定。"
+  },
+  {
+   "id": "zhuangzi-de-yi-wang-yan",
+   "verdict": "keep",
+   "issues": "逐字无误，外杂篇的年代争议已标出。parallels中WH-R003和WH-R004的limits（保留得象、得意的条件）与reading一致。"
+  },
+  {
+   "id": "zhuangzi-qiushui",
+   "verdict": "keep",
+   "issues": "逐字无误，与RO相合。"
+  },
+  {
+   "id": "zhuangzi-qiu-li",
+   "verdict": "keep",
+   "issues": "逐字无误。layer作「论」，与名条稽实对同一来源的「传」不一致，应以本条为准。"
+  },
+  {
+   "id": "lao-01-ming-ke-ming",
+   "verdict": "revise",
+   "issues": "entry逐字无误，与RO一致。parallel LC2-SZ-C19-R03 note中的「可言皆似」「達者識真」不是原文，冻结文本作「可言皆其似者也」「逹者因偽以識真」。",
+   "fix": "note改用原文。"
+  },
+  {
+   "id": "lao-wu-ming-you-ming",
+   "verdict": "revise",
+   "issues": "逐字无误。reading依据的是王弼本的句读「无名，天地之始」。脉络LE-R002的limits说「不是无名先因果地产生有名；其他句读可能重划节点」：宋人读作「无，名天地之始；有，名万物之母」，那样的话无名、有名就不再是两个术语。",
+   "fix": "reading加注句读之争，说明本读依王弼句读。"
+  },
+  {
+   "id": "lao-32-shi-zhi-you-ming",
+   "verdict": "revise",
+   "issues": "entry逐字无误，与RO一致。parallel LC2-SZ-C32-R02 note中的「散朴制器」不是原文，原文作「散朴為器因器制名」。",
+   "fix": "note改用原文。"
+  },
+  {
+   "id": "lao-38-shi-dao-er-hou-de",
+   "verdict": "keep",
+   "issues": "逐字无误，与RO的divergence一致。"
+  },
+  {
+   "id": "wangbi-32-ming-fen",
+   "verdict": "revise",
+   "issues": "逐字无误。后半句「遂任名以号物，则失治之母也」中的「治之母」是朴、本（王弼的本末框架），属先行之地一层。把它读成「失去的是名所合并掉的关系」并算作相合，掩盖了这一层。",
+   "fix": "reading注明：「母」是本，属先行之地层；后半只在「任名而失其所合并」这一结构上与impose_loses_iff相应，「母」本身不入。"
+  },
+  {
+   "id": "wangbi-42-you-yan-you-yi",
+   "verdict": "keep",
+   "issues": "逐字无误，与RO的定域判定一致。"
+  },
+  {
+   "id": "yichuan-si-de-sui-shi",
+   "verdict": "keep",
+   "issues": "逐字无误，与RO cy-side-qiankun一致，层次标为注·北宋正确。"
+  },
+  {
+   "id": "xici-lei-ju-qun-fen",
+   "verdict": "revise",
+   "issues": "逐字无误。原文前句是「天尊地卑，乾坤定矣。卑高以陈，贵贱位矣。」，脉络的limits说「尊卑贵贱是本段宇宙与位置论述」。类聚群分处在一个有等级的宇宙位序之中，reading没有披露。",
+   "fix": "reading补上：本段以尊卑贵贱定位，属等级层，理论只取类聚群分的合并结构。"
+  },
+  {
+   "id": "xici-cheng-ming-xiao",
+   "verdict": "revise",
+   "issues": "entry逐字无误。parallel WP-XCX-C05-S02-R01 note中的「其稱名也，雜而不越，於稽其類」用了繁体，冻结的DS03是简体「其称名也，杂而不越，于稽其类」，字形不一致。",
+   "fix": "note改为冻结字形「其称名也，杂而不越，于稽其类」。"
+  },
+  {
+   "id": "xici-yan-bu-jin-yi",
+   "verdict": "keep",
+   "issues": "逐字无误，与脉络XC-R019的limits「不推出语言无用」一致。"
+  },
+  {
+   "id": "xici-li-xiang-jin-yi",
+   "verdict": "keep",
+   "issues": "逐字无误，「尽」的定域处理恰当。"
+  },
+  {
+   "id": "wangbi-xun-yan-guan-xiang",
+   "verdict": "keep",
+   "issues": "逐字无误。原文前句「盡意莫若象，盡象莫若言」也可作为「尽」的定域补证。"
+  },
+  {
+   "id": "wangbi-he-bi-ma",
+   "verdict": "keep",
+   "issues": "逐字无误，与WH-R005的limits「不表示所有象可无条件互换」一致（reading限定在分开形式之处）。"
+  },
+  {
+   "id": "mozi-yi-ren-yi-yi",
+   "verdict": "keep",
+   "issues": "逐字无误。此处的「义」是是非之准，不是词义。把它对到码是AI结构读法，reading可以注一句。"
+  },
+  {
+   "id": "mozi-shang-xia-bu-tong-yi",
+   "verdict": "keep",
+   "issues": "逐字无误，三个record的证据都落在片段上。"
+  },
+  {
+   "id": "mozi-mang-zhe-bai-hei",
+   "verdict": "keep",
+   "issues": "逐字无误，读法正确。"
+  },
+  {
+   "id": "mozi-bian-qi-xi",
+   "verdict": "keep",
+   "issues": "逐字无误（片段在原文中重出多次，照录可以）。"
+  },
+  {
+   "id": "simafa-jiao-cheng-su",
+   "verdict": "revise",
+   "issues": "逐字无误。「教成俗」是由教而成的自上而下的形成，「道化俗」是用一个道去统一，二者都更接近外加，只有「俗州异」与run_origin相合。layer写作「经·先秦」是把宋代「武经七书」的经典化回填到先秦层，属年代错置。",
+   "fix": "kind改为scope，reading注明「教」「道」是外加的一途。layer改为「子·先秦（《司马法》，今本编纂层次未定）」。"
+  },
+  {
+   "id": "sunzi-xing-ming",
+   "verdict": "revise",
+   "issues": "逐字无误。declarations和reading中的impose_reads在Lean中不存在。把「形名」解作旌旗之形、金鼓之名，是注家（曹操注）的释义，没有标出注的层次。layer「经·先秦」同样是宋代武经的回填。",
+   "fix": "删去impose_reads。注明「形名＝旌旗金鼓」是注家的读法。layer改为「子·先秦（《孙子》，形成层次有争议）」。"
+  },
+  {
+   "id": "hanfei-bu-dang-ming",
+   "verdict": "keep",
+   "issues": "逐字无误，divergence判定恰当。"
+  },
+  {
+   "id": "hanfei-shen-ming-ding-wei",
+   "verdict": "keep",
+   "issues": "逐字无误，与FA1-H08-R005的limits一致。"
+  },
+  {
+   "id": "hanfei-gu-xin-xiang-fan",
+   "verdict": "keep",
+   "issues": "逐字无误，reading把单一中心的出路明确排除在外，是对的。"
+  },
+  {
+   "id": "hanfei-yi-duo-xin",
+   "verdict": "revise",
+   "issues": "逐字无误。核心结构「以多信」是一条多数规则，而mapper自己在gap中声明SharedCodes没有多数规则。核心结构缺定理，却记为agreement，不一致。语境中紧接的「聽不參，則無以責下」（逐字核过）说的是交叉核验，reading没有提。",
+   "fix": "kind改为scope，或标出核心缺口，只保留「一致不担保与实相当」这一相合部分。加入「聽不參」的语境。"
+  },
+  {
+   "id": "hanfei-pan-shi-xiang-ren",
+   "verdict": "keep",
+   "issues": "逐字无误，与FA1-H50-R010的「功能标准」读法一致。"
+  },
+  {
+   "id": "shangjun-ding-ming-fen",
+   "verdict": "keep",
+   "issues": "逐字无误（含罕用字𩤝）。divergence判定与FA1-S26-R008的limits「不抹去……以下为上的等级立场」一致。"
+  },
+  {
+   "id": "shangjun-quan-shu",
+   "verdict": "keep",
+   "issues": "逐字无误，结构读法恰当，罪罚已排除在外。"
+  },
+  {
+   "id": "shangjun-ming-bai-yi-zhi",
+   "verdict": "revise",
+   "issues": "逐字无误。declarations中的impose_reads在Lean中不存在。同段还有「名正，愚智遍能知之。」，可以补入。",
+   "fix": "删去impose_reads，可以reads_iff代替。片段可加「名正，愚智遍能知之。」。"
+  },
+  {
+   "id": "jielao-de-sui-chi-du",
+   "verdict": "keep",
+   "issues": "逐字无误。「早见于《解老》」只是年代陈述，不应读成影响。"
+  },
+  {
+   "id": "sima-tan-kong-ming-ze-shi",
+   "verdict": "revise",
+   "issues": "逐字无误。「控名责实在汉以后多作以名督责」把督责义定在汉以后，这是错的：《韩非子·定法》「術者，因任而授官，循名而責實」（FA1-H43-R001）已是先秦以名督实。司马谈在这里是肯定名家「控名責實，參伍不失」，是一种评价。",
+   "fix": "改为：先秦《韩非子·定法》已有「循名而責實」的督责用法；司马谈此处是对名家方法的肯定性评价。"
+  },
+  {
+   "id": "zhaolun-ming-bu-dang-shi",
+   "verdict": "keep",
+   "issues": "逐字无误。原文紧接「名實無當，萬物安在？」，全称否定的定域判定恰当。"
+  },
+  {
+   "id": "zhaolun-ci-bi-mo-ding",
+   "verdict": "keep",
+   "issues": "逐字无误，与CT1-R-ZL24一致。"
+  },
+  {
+   "id": "zhonglun-jia-ming",
+   "verdict": "revise",
+   "issues": "逐字无误。两段都是青目释的散文，不是龙树的颂。layer写「龙树造」，把释误归为颂，经、注不分。假名是「假」（施设、非实），带有真俗二谛一层，mapper在私名的alternatives中自己说过「假名……加了理论不作的真/假层」，这里却记为agreement，前后矛盾。",
+   "fix": "layer改为「释·魏晋南北朝（青目释，鸠摩罗什译，5世纪初；印度论释传统）」。kind改为scope，或在reading中写明二谛（真/俗）层不入。"
+  },
+  {
+   "id": "zhonglun-er-di",
+   "verdict": "keep",
+   "issues": "逐字无误。第一段是龙树颂，被引在青目释中；第二段是青目释。layer可写作「颂与释」。"
+  },
+  {
+   "id": "weishi-jia-li-zhong-ming",
+   "verdict": "keep",
+   "issues": "逐字无误。识所变是先行之地层，divergence判定恰当，与RO weishi-wei-shi-wu-jing一致。"
+  },
+  {
+   "id": "qixin-li-yan-shuo",
+   "verdict": "revise",
+   "issues": "逐字无误，divergence恰当。layer标「隋唐」不对：脉络era作「传统题署梁真谛译」，即使看作中土撰述也是6世纪中叶，隋代经录已著录并疑其题署，应属南北朝晚期。这也与mapper把中论标为魏晋南北朝的做法不一致。",
+   "fix": "layer改为「论·南北朝晚期（6世纪；传统题署马鸣造、真谛译，作者与成书地有争议）」。"
+  },
+  {
+   "id": "qixin-yin-yan-qian-yan",
+   "verdict": "revise",
+   "issues": "逐字无误，定域判定恰当。年代问题同qixin-li-yan-shuo。",
+   "fix": "layer改为「论·南北朝晚期（6世纪；题署有争议）」。"
+  },
+  {
+   "id": "qixin-ji-ming-zi-xiang",
+   "verdict": "revise",
+   "issues": "逐字无误，定域判定恰当。年代问题同上。",
+   "fix": "layer改为「论·南北朝晚期（6世纪；题署有争议）」。"
+  },
+  {
+   "id": "tanjing-dun-jian",
+   "verdict": "revise",
+   "issues": "逐字无误。冻结文本是元代宗宝编本（脉络era：「托名唐代慧能说；现据元代宗宝编本」），layer只写「隋唐」，没有标出所引的版本层。",
+   "fix": "layer改为「传慧能语·唐（引文据元宗宝编本，版本层次有争议）」。"
+  },
+  {
+   "id": "hanyu-ding-ming-xu-wei",
+   "verdict": "revise",
+   "issues": "逐字无误。reading说「定名者，凡相关的记录都给出同一义（stands_iff）」，这误读了韩愈。他的定名是自己规定的内容（「博愛之謂仁，行而宜之之謂義」），同段承认老子「以煦煦爲仁，孑孑爲義」，可见仁义并不跨家同义；IN1-R-D01的limits也说「本节点不可与老子或宗密的道德同名合并」。只有虚位一侧对应stands_false_iff和indexed_fits。parallel IN2-R0010的note「惺惺字同，工夫異」不是原文，原文作「『惺惺』字則同，所作工夫則異」。",
+   "fix": "kind改为scope：虚位一侧与stands_false_iff、indexed_fits相合；定名一侧是规定之码（近制名），并非跨情境成立。note改用原文。"
+  },
+  {
+   "id": "hanyu-gong-yan-si-yan",
+   "verdict": "keep",
+   "issues": "逐字无误，以公、私给码排序的定域判定恰当。"
+  }
+ ],
+ "missing": [
+  "Lean中不存在的declaration：Becoming.SharedCodes.impose_reads（见于制名的fit、xunzi-wang-zhe-zhi-ming、sunzi-xing-ming、shangjun-ming-bai-yi-zhi），Becoming.Learnable.label_of_rests和Becoming.Learnable.table_rests（见于当簿、xunzi-dang-bu-qi-lei）。实有的是Learnable.table_predicts、Learnable.label_of_predicts、Learnable.labels_of_still。mapper的notes说「所有declarations都在Lean源中核过存在」，与此不符。",
+  "notes的账目不准：entries实际引用了103个不同的record_id，不是97个。CV1-JL-R006同时出现在rejected和喻的attestation中。",
+  "《荀子·正名》三惑及其后文（RU2-S-XZ22，均逐字核过），是相分层，并且直接反驳本簇所引小取的「杀盗非杀人」：「“见侮不辱”，“圣人不爱己”，“杀盗非杀人也”，此惑于用名以乱名者也。」「“非而谒楹”，“有牛马非马也，”此惑于用名以乱实者也。」「夫民易一以道，而不可与共故。故明君临之以埶，道之以道，申之以命，章之以论，禁之以刑。」",
+  "《荀子·正名》「实不喻，然后命，命不喻，然后期，期不喻，然后说，说不喻，然后辨。」：逐级增加记录直到读出，对应通意、CrossSituational.candidates_append、PartialReadout.paired_exact。",
+  "《荀子·正名》「五官簿之而不知，心征知而无说，则人莫不然谓之不知。」：有登记而无读出，涉及识与喻之别。",
+  "《墨子·經下》「狗，犬也，而殺狗非殺犬也，可，說在重。」与《經說下》「狗，狗，犬也，而殺狗謂之殺犬，可，若兩𦞙。」：重同与改名保值的校勘难点，经与说相反。",
+  "《墨子·經上》「謂，移、舉、加。」与《經說上》「謂，狗犬，命也。狗犬，舉也。叱狗，加也。」：谓的三种动作，其中「移/命」可作改认、改名的先秦候选名。",
+  "《墨子·經下》「物盡同名，二與鬭，愛，食與招，白與視，麗與暴，夫與履。」与《經說下》「同名，俱鬭，不俱二，二與鬭也。」：一形多义的先秦术语「同名」，对应TwoFormations.homonym和stands_false_iff，是贯义的补集。",
+  "《论语·里仁》「君子喻於義，小人喻於利。」（RU1-S-LY）：比荀子更早的「喻」，即各依自己的码读出。《大学》「所藏乎身不恕，而能喻諸人者，未之有也。」（RU1-DX-12-N08）：使人喻。《孟子·梁惠王上》「王好战，请以战喻」：说明譬说义在先秦已有。",
+  "《韩非子·定法》「術者，因任而授官，循名而責實，操殺生之柄，課羣臣之能者也。」（FA1-H43-R001/R002）：先秦已有以名督实的用法，可纠正稽实条与sima-tan条的年代说法。",
+  "《韩非子·五蠹》「自環者謂之私，背私謂之公」（FA1-H49-R010）：「私」的价值义先秦已有，可纠正私名条的course。",
+  "《肇论·物不迁论》「是謂昔物自在昔，不從今以至昔；今物自在今，不從昔以至今。」（CT1-R-ZL03）：否认跨步同一，是一实的相分，应替换CT1-R-ZL04。",
+  "《公孙龙子·白馬論》「馬者，無去取于色，故黃、黑馬皆所以應；白馬者，有去取于色，黃、黑馬皆以所色去，故唯白馬獨可以應耳。」：MI1-R-G2-filter已被引用，片段却缺。",
+  "《解老》「短長、大小、方圓、堅脆、輕重、白黑之謂理。理定而物易割也。」：解老中「理」的本义，用于理条。",
+  "《墨子·經上》「法，所若而然也。」：「法」的本义，用于类条和mojing-yi-fa-jin-lei。",
+  "《商君书·定分》「名正，愚智遍能知之。」：先秦法家对「名正」的用法，用于正名的course。",
+  "Becoming.Labels（有限标签表）和Reidentify（每一步一一对应的改认）都还没有站得住的名：当簿应予拒绝，稽实与Reidentify不合，需另外找名或改用说明短语。"
+ ]
+}

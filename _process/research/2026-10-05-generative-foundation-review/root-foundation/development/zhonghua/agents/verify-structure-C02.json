@@ -1,0 +1,610 @@
+{
+ "cluster": "C02 关系、依存与条件",
+ "lens": "STRUCTURE（结构）：逐名核对所证之义与理论概念的关系、条件、方向是否相同；逐条在主干 Lean（/Users/ren/theories 的 main，3ca02e323）上核对每个声明的全名与陈述，核对 kind 与 reading 是否恰是 Lean 所证。总的发现：(1) 映射者的基底早于 R30／R32／R35：主干上 4 个所引声明已改名或删除（Web.generation_needs_replenishment→Web.embodiedArising_needs_replenishment；Web.forms_between→arises_at_a_step；Web.dissolves_between→ceases_at_a_step；Flow.withinInfluence_iff_withinReach→WithinClosure.converse），4 个记录 id 已改名（testing-within-registration→testing-within-couplings；closure-verdict-meets-axiom→closure-verdict-meets-continuation-condition；registration-within-what-it-registers→readings-within-what-they-read；axiom-decomposition→continuation-condition-decomposition）；notes 称「所有声明均在当前脊柱」在主干上不成立。(2) 全部引文（约 170 句）以 ctq.py text 复核，均逐字命中；但有 3 条名的出处不含所名之字，1 条片段截断（「酬因曰」缺「報」）。(3) 反复出现的结构错配：Web.roles 被当作「同一关系项兼两角色」（实为两类表示嵌入「无一项兼两角色」的一类读法）；Dependence.MakesDifference 被当作一般的「缺之则不生」（实为一次依存断裂的 but-for）；Clearing.center_not_derived 被当作「依存无唯一总源」（实为估值中心不由依存动力学导出）；Web.change_readings 被当作「生起实在」之证（实为定义上的 Iff.rfl）；Sleeper.sleeper 被当作「有所待而不成」的见证（其关系项无任何所需，支撑是空真的）；「缺口一、二」其实是现有律的推论或已有对应（active_along 两向、arises_given）。",
+ "names": [
+  {
+   "concept": "依存 dependence（requires/need；Bearing；Dependent）",
+   "name": "待",
+   "verdict": "revise",
+   "issues": "(1) 概念栏把三件事并为一名：依存关系本身（Becoming.Dependence 的 requires、need）、正需（Web.Bearing）、以及整个依存网的前提 Web.Dependent（活动只在受支撑处，章中单列，排除缓冲与滞后）。一名二义。(2) YD-JP54「愆期之志，有待而行也」是等待义：《脉络》自己的节点 TP-H54-X4-N02 释为「有所等待而后行动的方式」，同爻经文「愆期遲歸，有時」；这正是本名 not_carried 排除的「等待」，以之为出处自相矛盾。(3) 文言单用「待」默认义是等候、对待；Lean 的依存是同一步内的关系（requires t g c），不含先后，经文中单用易被读成时间上的候。其余结构（有向：X待Y不蕴含Y待X；「而後然」之必要；「所待又有待」成链）相合。",
+   "fix": "概念改为「依存：g 在 t 依于 c，所需为 need t g c；正需者为 Web.Bearing」；Web.Dependent 另立（交整合者定名，不归入『待』）。删去 YD-JP54 出处（移入 not_carried 作等待义之例）。lean 加 `Becoming.Dependence`（字段 requires、need）。说中首次出现时写明：待与所待之足在同一步，不含等候。"
+  },
+  {
+   "concept": "条件（依存中被依之关系项）",
+   "name": "所待",
+   "verdict": "revise",
+   "issues": "(1) Web.roles（Roles.lean 188）把两类表示嵌入一类读法，其像中形成的水平恒为零、无物依之，条件从不活动：没有一个关系项兼两种角色（章 §10「角色」条：两类读法嵌入没有形成作为条件的一类读法）。故「所待又有待……正是 Web.roles」不成立；同一关系项既依又被依，是一类依存网中依存链的中项（Web.bearing 的 Reach，Web.active_along、Web.coextinct）。(2) C01 已以「所待又有待」名 Web.roles，两簇引同一声明，概念重叠。(3) 本书「条件」有两义：关系中被依之项（此名）与推理中陈述而不断言的条件（C16 定名「設」），名表须区分。(4) Web.relabel_dependent 只说哪个条件是哪个关系项不为 Dependent 所见，不承担本名。",
+   "fix": "概念改为「依存中被依之关系项（requires t g c 之 c；正需者经 Web.Bearing）」；lean 改为 `Becoming.Dependence`、`Becoming.Web.Bearing`、`Becoming.Web.bearing`、`Becoming.Web.active_along`；fit 删 Web.roles 句，改为「所待又有待：一类依存网中依存链的中项兼二位；Web.roles 只表明两类表示是其中无一项兼二位的特例」。与 C01 协调：C01 名角色之读法，本簇名被依之项。名表注明此「条件」不是 C16 之「設」。"
+  },
+  {
+   "concept": "支撑 Web.Supported（need ≤ level）",
+   "name": "足",
+   "verdict": "revise",
+   "issues": "(1) 文言「足」有两种结构：「足X」＝所给不低于所需（合 need ≤ level）；「足以Y」＝有之则Y成（充分）。ZH1-S19「養形果不足以存生」是后者：达生篇说养形不充分于存生，即本簇 zhuang-dasheng 条所用的「有之不必然」，不是 level < need。列为 Web.Supported 的出处，会把「足」读成「足以行」，而脊柱从不由支撑导出活动。(2) 「足食，足兵」是逐一条件之足，Web.Supported 是所有所需条件的合取；名应落在逐条件之足上，才与 C05 的「恆足」（Web.Renewed）、「復足」（Web.Returns）组合一致。(3) 名冲突：C15「足而止」以「足」名 Law.rests_iff（目标于静止处被满足）；C06 以「容」名 Web.Admits，而 Web.supported_iff_admits 是 Iff.rfl（支撑即以所立之量容之），须对接。",
+   "fix": "概念改为「足：一个依存在 t 被满足，need t g c ≤ level t c；所待皆足即 Web.Supported」。删去 ZH1-S19 出处，移入 not_carried：「足以」（充分）不用于支撑。fit 写明 `Becoming.Web.supported_iff_admits`：足＝以所立之量容（接 C06『容』）。请整合者裁定 C15『足而止』之『足』（目标之满足）与此『足』（需之满足）是否须改名分开。"
+  },
+  {
+   "concept": "汲取 Web.draws",
+   "name": "资",
+   "verdict": "revise",
+   "issues": "(1) 概念是 Becoming.Dependence 的字段 draws（f 在 t 取用 c，命题，不计量），lean 栏却没有引 draws 本身，所引 LivesOn、Interacts、UnderminingOn 都是以 draws 为一支的复合。(2) FO2-FQ 出处「二空有力待緣」不含「資」。(3) 「资」是现代资本、资金、资源的词根，规则禁用金融词；单字名在经中极易被读作资财。(4) 老子「善人之资」之「资」是名词（被取之物），指条件一端，不是取用关系。(5) 须与 C04 的「取与」（Flow 的 take/give，计量）、「汲」（汲入）分开：draws 是许可取用的关系，take 是量（Flow.Taking：只有活跃者取用，且只从所汲取者取用）。",
+   "fix": "lean 改为 `Becoming.Dependence`（字段 draws）、`Becoming.Web.Participates`、`Becoming.Flow.Taking`、`Becoming.Web.LivesOn`。FO2-FQ 出处换为已核对的「二因有力待緣，相資發故」。fit 写明 draws 与 Flow 之 take 的关系，与 C04 协调。请整合者裁定是否接受金融联想之险；若不接受，与 C04 统一用「取」系命名 draws。"
+  },
+  {
+   "concept": "以之为生 Web.LivesOn",
+   "name": "食",
+   "verdict": "revise",
+   "issues": "结构相合：取用且依之于正需正是 LivesOn 的合取，LivesOn.stands 亦合。问题在首条出处：YD-JP06「食舊德」在讼六三通读为享食旧有之禄（王弼注「保食其禄」），正是本名 not_carried 排除的「食禄、食邑」义；以之为第一出处会把禄位义带进名中。",
+   "fix": "YD-JP06 降为次要出处，sense 写明本义为食禄、只取其结构；以「贵食母」（只取食）、「需者飲食之道也」与离彖「百穀草木麗乎土」（li-tuan-li-hu-tu）为主出处。"
+  },
+  {
+   "concept": "交互 Web.Interacts",
+   "name": "交",
+   "verdict": "revise",
+   "issues": "(1) Web.Interacts（Correspondence.lean 127）：一事件取用条件 c，另一事件以正需依于 c，在任何步上，不计先后；两事件经第三者相关，彼此之间无往来。泰否「天地交」「上下交」是两方之间的往来交通，其结构是 Flow.conveyance（同一步某物从一方输送到另一方，Standpoints.lean 256）；章中明言输送所加的是两个条件之间的关系，而交互、以之为生、世系都不关联两个条件（Flow.roles_conditions_unrelated、Clearing.conveyance_only）。天地两域之交恰是交互所不能关联者。(2) 本簇「不交」所引 Flow.region_not_a_cut 是对输送之切口，「不交」于是不是「交」之否定，一对名不一致。(3) 随初九「出門交有功」是社会交往义，正是 not_carried 所排除者。(4) fit「往来有所经由」原文无据。(5) C13b「交相利」（MutuallyFed）亦用「交」。",
+   "fix": "二择其一交整合者，推荐 (a)：(a)「交」改名输送关系（Flow.conveyance 的 related，与 C04『输送』协调），「不交」＝对输送之切口，与 region_not_a_cut 一致；Interacts 另觅一名，其所证结构须是「一方取用、一方依之于同一条件」。(b) 若保留「交」为 Interacts：删去泰彖、屯彖、随初九三条出处，「不交」改定义为对 Web.interaction 之切口并注明 region_not_a_cut 只对输送证明。"
+  },
+  {
+   "concept": "相互依存 Flow.MutuallyDependent",
+   "name": "相待",
+   "verdict": "revise",
+   "issues": "(1) 字面「相＋待」是彼此直接依于对方（如 Mutualism.apart：各只依于对方）；Flow.MutuallyDependent 是全流的闭包性质：每个形成在每个形成的影响闭包之内，影响＝某方与另一方所依之条件交换（Flow.AffectedBy），「在某一距离上」。直接互依与闭包互依不同，名须标出闭包。(2) FO1-S-MMK 出处「因自性有他性」不含「相待」，而中论自有含「相待」之句。(3) ZH1-S02「化聲之相待，若其不相待」是是非之言相对而立，结构近 Negation.each_through_other，且正是 not_carried 所列的「对待」义。(4) 同模块中相互依存严格介于共享条件（SharesThroughout）与相互给养（MutuallyFed）之间；C13b 已以「交相利」名 MutuallyFed，三者须成一组。",
+   "fix": "概念写明闭包义；经中以组合标出闭包（例如「展轉相待」，「展轉」见成唯识论「三法展轉因果同時」，组合由整合者核定）。FO1-S-MMK 出处换为已核对的「若燃不相待成，則自住其體，何用可燃？」；ZH1-S02 移入 not_carried 作对待义之例。lean 加 `Becoming.Flow.mutuallyDependent_iff_reach`、`Becoming.WithinClosure.converse`、`Becoming.Flow.SharesThroughout`。"
+  },
+  {
+   "concept": "维持／断裂 Web.Kept／Web.Broken",
+   "name": "持／絕",
+   "verdict": "revise",
+   "issues": "(1) Web.Broken：依存在 t 成立且被满足，跨一步后条件之量低于所需，依存仍在；「絕」的首义是关系本身断开，即 Web.Dissolves（本簇已名「解」）。CT1-S-SJ「恩絕」是关系断绝义，结构偏 Dissolves；BI1-S-SM「不絕人馬之力」是不竭其力，倒合 Broken 的量之结构。(2) 名冲突：「绝」已在 Ren 的「绝生」（C06，退化）与 C15「絕其長」（先占）中，三处三义。(3) 「持」的出处只截「两者相持而长」，其结构在上句「物必不屈于欲」（物之量跨步不低于欲之需）；「相持」现代义为僵持（争胜之层）；该段以「先王……制礼义以分之」起，带单一施设者之层。(4) Web.Kept 的定义不含 requires，只比较需与前后之量。",
+   "fix": "推荐以「足」组合：Kept＝「前後皆足」，Broken＝「待而足、後不足」（依存仍在而跨步不足），与 C05「恆足」「復足」一系，避开「绝生」「絕其長」，也不与「解」相混。若保留「持／絕」：「絕」须定义为依存仍在而量不及，CT1-S-SJ 改作 Dissolves 之例；「持」的出处换为已核对的「使欲必不穷于物，物必不屈于欲。两者相持而长」，not_carried 加僵持义与先王制礼之层。"
+  },
+  {
+   "concept": "形成／消解 Web.Forms／Web.Dissolves",
+   "name": "結／解",
+   "verdict": "revise",
+   "issues": "(1) lean 栏 `Becoming.Web.forms_between`、`Becoming.Web.dissolves_between` 在主干上已被 R32 作为纯转发删去（r32-folds/removals.json：→ `Becoming.arises_at_a_step`、`Becoming.ceases_at_a_step`，二者对任一谓词成立）。(2) 庄子「物有結之」「縣解」：結是为物所系缚，縣解是解倒悬之苦，文本本身带负向（被结）与正向（得解）之评价，不只是佛教义；名用于中性的依存形成／消解，须明说不带。(3) 序卦「解者緩也」是松缓，不是依存之消解。",
+   "fix": "lean 改为 `Becoming.Web.Forms`、`Becoming.Web.Dissolves`、`Becoming.arises_at_a_step`、`Becoming.ceases_at_a_step`、`Becoming.Web.change_readings`。not_carried 加「庄子之结为系缚、悬解为脱苦的评价方向」。YD-OW-XG「解者緩也」删去或标为旁例。"
+  },
+  {
+   "concept": "共灭 Web.coextinct",
+   "name": "隨滅",
+   "verdict": "keep",
+   "issues": "结构相合：起信「唯風滅故動相隨滅，非是水滅」给出共灭的方向与不及另一条件；Web.coextinct 在 Dependent 下为同一步，有储备时为滞后（Carries.coextinct_lasts）。小问题：只有 FO2-QX 一条含「隨滅」本身；FO2-SM（隨斷）、FO1-S-SA 未标为结构先例（ZH1-S21 已标）。",
+   "fix": "FO2-SM、FO1-S-SA 标为结构先例；说中注明「隨」在 Dependent 下是同一步之随，滞后者以「蓄」限之。可加已核对的孙绰《喻道论》「未之聞見皮之不存。毛將安附。」（IN1-S02，东晋，设难者之语）为方向之旁证。"
+  },
+  {
+   "concept": "储备 Web.Carries",
+   "name": "蓄",
+   "verdict": "keep",
+   "issues": "结构相合（Carries、carries_zero、Carries.lasts、carries_of_held）。C05 以同名「蓄」名同一概念，须合并，不是冲突。YD-JP14（積）、LC-HS-LOW（藏、守）不含名本身。另：本簇 lao-51 条把「德畜之」读作储备，与本名 not_carried「畜养」相冲（见该条）。",
+   "fix": "与 C05 合并为一条（共用概念说明与出处）；YD-JP14、LC-HS-LOW 标为结构旁例。"
+  },
+  {
+   "concept": "承担自身 Web.SelfBearing",
+   "name": "自待",
+   "verdict": "revise",
+   "issues": "(1) SelfBearing 是在索引对应（哪个条件就是哪个关系项）之下的读法：Mutualism.apart_relabelled 证「各只依于对方」之网经 other 重标即成「各依于自身」，Dependent 不变；自待与相待之别不为依存所见。fit 未说。(2) SelfBearing.met_iff：对体现者，自依恰在活动时满足，「此外不记录任何东西」；名须说明它是退化的依存。(3) 结构先例 MO1-S-C32「賴其力者生」不合：墨子说人以自身劳作产出所需（对照禽兽「因其羽毛……水草」），结构是形成给予其所需之条件（Flow.FedBy，e＝e′），不是依于自身之立（requires t x x）。(4) 「自」在郭象「自生、獨化、非待」系统中正是不待（RO 判相分），「自待」易被读作自足无待。",
+   "fix": "fit 加：「自待是索引对应下的读法；重标可使相待成自待（Mutualism.apart_relabelled）；对体现者它不记录活动以外之事（SelfBearing.met_iff）」；lean 加 `Becoming.Mutualism.apart_relabelled`。删 MO1-S-C32 作先例。not_carried 加郭象「自」系。请整合者判断中华本是否需立此名，或在说中叙述代之。"
+  },
+  {
+   "concept": "切口 Flow.Cut",
+   "name": "不交",
+   "verdict": "revise",
+   "issues": "(1) Flow.Cut 对任一估值的 related 定义（Standpoints.lean 295）；所引 Flow.region_not_a_cut 是对输送（Flow.conveyance）之切口，前提为平衡、耗散、不重复有限家族、自某步起每步被围住、取用者在任意晚之步出现。本簇「交」名 Interacts，故「不交」不是「交」之否定（见「交」条）。(2) Flow.Cut 与 region_not_a_cut 无任何结果记录绑定。(3) 「切口」另有一义（截断所失，Becoming.Remainder，C11），名表须注明本名不指截断。",
+   "fix": "与「交」一并修：推荐「交」＝输送，「不交」＝对输送之切口；fit 写出 region_not_a_cut 的前提；注明本名不是 Remainder 的截断；引用时注明未入记录。"
+  },
+  {
+   "concept": "差别制造 Dependence.MakesDifference",
+   "name": "有力",
+   "verdict": "revise",
+   "issues": "(1) MakesDifference（Joint.lean 109）是对一次依存断裂的 but-for：自 s 以动作 a 的一步断裂 g 对 c 的依存，而扣除 f 之分后同一动作可取且每一步都维持依存。所判之事是断裂（损失），差别在断与持之间。法藏「有力」是因对果之生的力：同段「由此滅故，果法得生，是有力也」（已核对）。形式（单独／与他分一同两维）相似，所判之事不同（生 vs 断）。(2) fit 称「無力」对应 Overdetermined.no_difference、「不造成差别者不是条件」：但法藏六义中「空無力待緣」「有無力待緣」仍是因，只「無力不待緣」不立；joint-difference-making 记录的要点正是多重决定下一分不造成差别、关系读法仍计其参与。所以「无力而仍为因」与记录相合，「不造成差别者不是条件」与之相反；且脊柱的条件由 requires 定义，不由差别定义。(3) 「力」带内在之力、势力义，易引入「部分自有因果力」之独立实体读法，而 MakesDifference 相对于一个固定动作与一个扣除算子。",
+   "fix": "概念写明「于一次断裂：扣其分而同动则依存得持」；fit 删「有力＝造成结果之不同」「不造成差别者不是条件」，改为「法藏以有力／待緣判因之生果，脊柱以 but-for 与联合判一分之于断裂；形式相应，所判之事异；无力待缘仍为因，与 joint-difference-making『参与不随差别而定』相合」。若整合者不接受「力」之内在义风险，改在说中以「差别」叙述，不立古名。"
+  },
+  {
+   "concept": "必要而不充分条件（墨辩小故）",
+   "name": "小故",
+   "verdict": "reject",
+   "issues": "(1) 「必要而不充分」不是脊柱的一个概念：必要一半是 Web.Dependent，「不充分」只是脊柱无由支撑导出活动之律，不是被陈述的性质。(2) 见证 Sleeper.sleeper 的关系项无任何依存（Reserve.lean 1012–1018：requires 恒为 False），「始终受支撑」是空真的，不能见证「有所待而依者不成」。(3) C16 已以「無之必不然」名必要条件、「有之必然」名充分条件，并以「故」名前提；再立「小故」则一概念二名，且「故」将兼前提与条件二义。(4) RO mojing-gu-xiao-da 已在图上（定域）。",
+   "fix": "从本簇名表删去，名归 C16「無之必不然」；墨经此句留作 C16 出处与 RO mojing-gu-xiao-da；本簇各条 names_used 中「小故」改为「無之必不然」。如需非空见证，陈述一个正需被满足而形成不活动的两行见证交整合者。"
+  },
+  {
+   "concept": "充分且必要条件（墨辩大故）",
+   "name": "大故",
+   "verdict": "reject",
+   "issues": "脊柱没有「某条件对某活动既必要又充分」的概念。lean 栏 Becoming.Determined（Laws.lean 43）是「自一构形一动作至多一个后继」，说动作决定下一步，不是某依存充分，列为大故之 Lean 是错配。C16 已以「有之必然」名充分条件、以「恰當」表充要。",
+   "fix": "删去；墨经此句归 C16；说中如需，写「充分方向须另有前提（如 Determined）」，不立名。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "yi-tuan-qiankun-zi",
+   "verdict": "revise",
+   "issues": "`Becoming.Web.generation_needs_replenishment` 已由 R30 改名（「generation」留给扩宽）。Clearing.center_not_derived 说的是估值中心不由依存动力学导出（derived-extent-limits），不是「依存无唯一总源」，以之驳「統天」错配。arises_given 只对「资始」（生起）成立，「资生」是依存／以之为生。",
+   "fix": "改为 `Becoming.Web.embodiedArising_needs_replenishment`；删 center_not_derived，定域剩余写「统属（統天、順承天）属单一中心之层，脊柱无对应律；SourceSeed.source_gives 只表明表示可容一个无所依之源，不导出它，也不导出其唯一」；资生一半加 `Becoming.Web.LivesOn`。"
+  },
+  {
+   "id": "tuan-tai-pi-jiao",
+   "verdict": "revise",
+   "issues": "记录 testing-within-registration 已由 R35 改为 testing-within-couplings。所加 Flow.Cut／region_not_a_cut 是对输送之切口，其前提（平衡、耗散、不重复有限家族、自某步起被围住、取用者复现）未写；本簇「交」名 Interacts，与此处「交」＝输送不一致。二声明无记录绑定。",
+   "fix": "records 改 testing-within-couplings；reading 写明「此处之交是两域之间的输送（Flow.conveyance），不交是对输送之切口」并列出前提；names_used 随「交」名之裁定。"
+  },
+  {
+   "id": "yi-xian-ganying-xiangyu",
+   "verdict": "revise",
+   "issues": "「感應以相與」是相互应答（C10「感」），Web.Interacts 不含应答。Mutualism.dependent 只陈述见证网满足 Dependent，不陈述互依（互依在 Mutualism.web／apart 的定义中）。names_used「交」「相待」原文无。",
+   "fix": "删 Web.Interacts、Web.interaction、Mutualism.dependent；加 `Becoming.Mutualism.apart`、`Becoming.Flow.MutuallyFed.mutuallyDependent` 及 C10「感」的耦合声明；主条归 C10，本簇作平行；names_used 只留「相待」。"
+  },
+  {
+   "id": "shuogua-tiandi-dingwei",
+   "verdict": "revise",
+   "issues": "新加 Web.Embodied.arises_given 不合：「然後能變化，既成萬物」说一般之变化，arises_given 只说体现关系项在平衡、只有活跃者给予之下经他者之给而生起。names_used「交」「待」原文无（原文为相逮、相薄、通氣）。记录 what-a-commuting-law-keeps-apart 不绑定所列任何声明（RO 旧有）。",
+   "fix": "删 arises_given 之增补及理由，回到 RO 原判；names_used 清空。"
+  },
+  {
+   "id": "xici-debo-weizun",
+   "verdict": "keep",
+   "issues": "沿 RO 相合，结构（所担之需超过所能给）正确。「足」是读入之名，原文作「胜」。",
+   "fix": "names_used 注明原文作「不胜其任」。"
+  },
+  {
+   "id": "zhuang-xiaoyao-ji-hou-fu-da",
+   "verdict": "revise",
+   "issues": "结构相合（积之量对所需）。names_used「蓄」错：此处「積」是条件之量（level），不是储备（Carries：不受支撑时随活动而降之量）。「而後乃今培風」之先后不是缺口：给在前一步、生起在后一步已由 Embodied.arises_given 表出。",
+   "fix": "names_used 删「蓄」；「另见缺口二」改为「先后之次第见 Embodied.arises_given」。"
+  },
+  {
+   "id": "zhuang-xiaoyao-you-suo-dai",
+   "verdict": "revise",
+   "issues": "Web.consumed_continues_transformed 的前提是一次无回程的损失（T 后条件永低于先前之需），原文无损失：列子免乎行是换了凭借，不是失所待而仍行。其余（Bearing、active_of_bearing）相合。",
+   "fix": "删 consumed_continues_transformed；或在 reading 中写明它只适用于「失所待而仍行」，标为 AI 推想。"
+  },
+  {
+   "id": "zhuang-xiaoyao-wu-suo-dai",
+   "verdict": "revise",
+   "issues": "「依于整体之变者不因某一部分之失而终止」无 Lean 依据，且与 Web.Supported 相反：支撑是对每个所需条件的合取，所依愈多，任一不足即不受支撑。fed_from_beyond、region_not_a_cut 的前提未写。",
+   "fix": "删该句；或改为「若所待读作整体之其余这一个关系项（`Becoming.World.withRest`）」并引之；写出两律的前提。"
+  },
+  {
+   "id": "zhuang-qiwu-wangliang-dai",
+   "verdict": "revise",
+   "issues": "Web.roles 不陈述「所待又有待」：它把两类表示嵌入无一项兼两角色的一类读法。此结构是 Web.bearing 之链，已由 active_along、coextinct 承担。",
+   "fix": "删 Web.roles，加 `Becoming.Web.bearing`；reading 改为「形既依于他者又为景所依：依存链之中项兼二位（Web.bearing 的 Reach）」。"
+  },
+  {
+   "id": "zhuang-tianzifang-you-dai",
+   "verdict": "revise",
+   "issues": "「是出則存」是充分方向，脊柱不证；reading 写「所待者在则存」为相合，与本簇中庸、杂阿含条对充分方向的处理不一致。Web.change_readings 是「生起止息、形成消解、开始与不再作为条件而在是同一变化的三种读法」（定义上 Iff.rfl），不是「生与死是同一依存的两种读法」。",
+   "fix": "reading 改为「『是入則亡』相合（coextinct）；『是出則存』是充分方向，脊柱不给」；change_readings 照 Lean 描述。"
+  },
+  {
+   "id": "xunzi-fuguo-bu-xiang-dai",
+   "verdict": "keep",
+   "issues": "相合；「人不能兼技」（一人之给不足己需）是原文所给的前提，reading 已用。names_used「资」原文无。",
+   "fix": "names_used 删「资」。"
+  },
+  {
+   "id": "ru-xunzi-qun-fen-yi",
+   "verdict": "revise",
+   "issues": "片段与 RO 不同（同段异句），可以；但 reading 把「离则弱」对到 Flow.WithinJoint、joint_excess_ends 不合：二律对应的是「群而无分则争」一支（各在其分内不保证合在所给之内，Exceeding.own_not_joint），不是离散之弱；「失去给养闭包后所需无所出」引 beyond_gives_nothing，而本条未列。群、分归 C13。",
+   "fix": "reading 改为：「群而无分则争」对 Exceeding.own_not_joint、Flow.joint_excess_ends；「争则乱，乱则离，离则弱，弱则不能胜物」为文本经验链，脊柱不给；「胜物」属争胜之层。主条归 C13，本簇作平行；names_used 删「相待」。"
+  },
+  {
+   "id": "xici-fei-suo-ju",
+   "verdict": "keep",
+   "issues": "相合；「必」之前提（依存不变、条件不复）已写。"
+  },
+  {
+   "id": "xici-kanglong-wu-fu",
+   "verdict": "revise",
+   "issues": "原文无取用，Web.UnderminingOn（取用使条件跌至曾被满足之需以下）不适用；「动而有悔」不由脊柱导出：Dependent 下不受支撑者不活动，有储备时只能活动储备那么多次。全句骨架是位次（贵、高、下位），抽去后只剩「高者之立依于下承」。",
+   "fix": "删 UnderminingOn，加 `Becoming.Web.Carries.lasts`；kind 改 scope：依于下承之结构相合，「动而有悔」与位次之义不给。"
+  },
+  {
+   "id": "zhongyong-qi-ren-cun-wang",
+   "verdict": "revise",
+   "issues": "Web.ByPassing.ends_within 的前提是 ByPassing（模式只经传递而延续）与载者短暂（Brief）；reading 把「模式只经由传递而延续」写成所证之结论。",
+   "fix": "reading 改为「在『模式只经传递而延续、载者短暂』之前提下，传递停止则模式在一跨度内终止」。"
+  },
+  {
+   "id": "kongshu-genzhu",
+   "verdict": "revise",
+   "issues": "「互依则同存同亡的一般律脊柱尚无」不确：Dependent 下两个体现关系项互以正需相依，Web.active_along 两向各用一次即得每步同活动。Mutualism.dependent 只说见证网满足 Dependent，不陈述两向依存。",
+   "fix": "删「见缺口一」与 gap 字段，改为「无储备时同活动由 Web.active_along 两向给出；有储备时为滞后共灭（Carries.coextinct_lasts），孔疏『僅有微生，將死不久』正是后者」；Mutualism.dependent 换为 `Becoming.Mutualism.apart`。"
+  },
+  {
+   "id": "xici-qiankun-hui",
+   "verdict": "revise",
+   "issues": "reading 把 RO 之读（构形以关系而同、全变所保持者）改写为「两者互以对方为显现与延续之条件」，而所列声明（Law.alike_iff_sameFuture 等）不陈述互依；记录 process-and-frame-as-readings 不绑定所列声明。",
+   "fix": "回到 RO 之 reading；若加互依之读，须加 `Becoming.Web.active_along`、`Becoming.Mutualism.apart` 并标为本簇新增、写理由。"
+  },
+  {
+   "id": "bo-daxiang-hou-xia",
+   "verdict": "revise",
+   "issues": "「山附地上」之附是承于其上，无取用；Web.LivesOn 要求取用且依之。其余（restores、consumption_ends_with_feeders）相合。",
+   "fix": "Web.LivesOn 换为 `Becoming.Web.Bearing`。"
+  },
+  {
+   "id": "cy-yi-xiahou",
+   "verdict": "revise",
+   "issues": "记录 closure-verdict-meets-axiom 已由 R35 改名。",
+   "fix": "records 改为 closure-verdict-meets-continuation-condition。"
+  },
+  {
+   "id": "li-tuan-li-hu-tu",
+   "verdict": "keep",
+   "issues": "相合：百穀草木取用于土且依之，正是 LivesOn。"
+  },
+  {
+   "id": "xugua-xian-bi-you-suo-li",
+   "verdict": "keep",
+   "issues": "定域可；fed_from_beyond 的前提宜写。",
+   "fix": "reading 写出平衡、耗散、被围住、取用复现之前提。"
+  },
+  {
+   "id": "xugua-yang",
+   "verdict": "revise",
+   "issues": "`Becoming.Web.generation_needs_replenishment` 已由 R30 改名。",
+   "fix": "改为 `Becoming.Web.embodiedArising_needs_replenishment`。"
+  },
+  {
+   "id": "xugua-wu-xu-ran-hou-ke-yang",
+   "verdict": "keep",
+   "issues": "相合；Stock 二律无本条所列记录绑定，引用时注明。"
+  },
+  {
+   "id": "song-shi-jiu-de",
+   "verdict": "keep",
+   "issues": "「食舊德」本义为食旧禄；把旧德读作不再补给之储备是 AI 读法，reading 已判定域。",
+   "fix": "reading 写明本义为食禄，只取结构。"
+  },
+  {
+   "id": "xici-you-qin-ke-jiu",
+   "verdict": "keep",
+   "issues": "定域可（有亲读作相互给养是 AI 读法，「可」字留余地）；Flow.carries_of_held 列而未用。",
+   "fix": "删 carries_of_held 或在 reading 中说明其用。"
+  },
+  {
+   "id": "xici-tian-zhu-shun",
+   "verdict": "revise",
+   "issues": "原文以天为施助者、以「吉无不利」为保证；《脉络》该关系（WP-XCS-C12-S01-R02／R04）limits 亦写「天助为文本信念」。把天改读作「整体之给」是为相容而读入，把意志之层改作关系。center_not_derived 说估值中心，不是外在施助者。",
+   "fix": "kind 改 divergence（天之施助与保证属意志／单一中心之层）；保留「若顺读作在余量之内取用，则与 Flow.Balances.supported_iff_within_margin 相容」为剩余相合部分；删 center_not_derived。"
+  },
+  {
+   "id": "xici-jin-er-bu-xiang-de",
+   "verdict": "keep",
+   "issues": "相合：Shared.connection_by_living_use 中共处（co-participation 相连）与经用相连（用维持支撑时）之分，正对「近」与「相得」。该声明无记录绑定，注明。"
+  },
+  {
+   "id": "sui-chu-men-jiao",
+   "verdict": "reject",
+   "issues": "「出門交有功」是出门与人交往，正是「交」名 not_carried 所排除的社会交往义；Idle.not_interacts（闲置条件上无交互）、inert_connects（添惰性条件只经共处相连）与本句所说无对应。",
+   "fix": "移入 rejected：「社会交往义；所引二律与本句无对应」；其平行 TP-H17-X1-R02 随之移出。"
+  },
+  {
+   "id": "guimei-you-dai-er-xing",
+   "verdict": "reject",
+   "issues": "「有待而行」是等待义（《脉络》TP-H54-X4-N02「有所等待而后行动的方式」；同爻经文「愆期遲歸，有時」），为「待」名所排除；Dependent、active_of_bearing 说同一步之必要，与等待无关。所附缺口二亦不成立。",
+   "fix": "移入 rejected（等待义）；其平行 FO1-R-CY19、BI1-SZ-R-19 另归他条（FO1-R-CY19 可并入 zhaolun-dai-yuan）。"
+  },
+  {
+   "id": "xugua-qiong-bi-guai",
+   "verdict": "keep",
+   "issues": "定域正确：Crossing.loss_does_not_decide 否定「必」之普遍形式。"
+  },
+  {
+   "id": "lao-02-you-wu-xiang-sheng",
+   "verdict": "keep",
+   "issues": "沿 RO 定域。"
+  },
+  {
+   "id": "lao-27-shi-zi",
+   "verdict": "revise",
+   "issues": "本簇自定「资」＝取用而不断言正需（以别于「食」＝LivesOn），此条却以 Web.LivesOn 读「善人之资」，自相不一。Omitted.loses_own 所对的「不贵其师，不爱其资」不在 fragments 中；该声明无记录绑定。",
+   "fix": "LivesOn 换为 `Becoming.Dependence`（draws）、`Becoming.Web.Participates`；fragments 加已核对的「不贵其师，不爱其资」，以 Omitted.loses_own 读之并标 AI 读法、注明未入记录。"
+  },
+  {
+   "id": "lao-11-dang-qi-wu",
+   "verdict": "keep",
+   "issues": "沿 RO 定域。"
+  },
+  {
+   "id": "lao-42-chong-qi-yi-wei-he",
+   "verdict": "keep",
+   "issues": "沿 RO 定域，LoopReturn 现名已正确更新；names_used「交」原文无。",
+   "fix": "names_used 删「交」。"
+  },
+  {
+   "id": "lao-58-qi-wu-zheng",
+   "verdict": "revise",
+   "issues": "记录 registration-within-what-it-registers 已由 R35 改名。",
+   "fix": "records 改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "lao-34-shi-zhi-er-sheng",
+   "verdict": "revise",
+   "issues": "记录 axiom-decomposition 已由 R35 改名。center_not_derived 说估值中心，不是「流外施予万物之道」；后者属先在之根之层。",
+   "fix": "records 改为 continuation-condition-decomposition；删 center_not_derived，剩余写「道作为流外施予者属先在之根（RO §7），脊柱无对应律」。"
+  },
+  {
+   "id": "lao-51-sheng-xu",
+   "verdict": "revise",
+   "issues": "「德畜之」之畜是养育（给予一方），正是「蓄」名 not_carried 排除的「畜养」；读作 Web.Carries（储备）错。center_not_derived 错配同上。",
+   "fix": "Web.Carries 换为 `Becoming.Flow.FedBy`（向所需之条件给予）；删 center_not_derived；names_used 删「蓄」。"
+  },
+  {
+   "id": "lao-67-ci-gu-neng-yong",
+   "verdict": "keep",
+   "issues": "相合（德目作条件是 AI 读法，已标不取其内容）；coextinct 要求所依者为体现关系项，宜写明。"
+  },
+  {
+   "id": "lao-36-yu-yuan",
+   "verdict": "keep",
+   "issues": "相合。"
+  },
+  {
+   "id": "lao-20-gui-shi-mu",
+   "verdict": "revise",
+   "issues": "Web.lived_on_reaches：在 N_rel（中性传递，评价前提）下，看重被依之关系项（母）的事件，传到以之为生的活事件（我）；方向由所食者到食者。「贵食母」是我看重所食之母，reading「所看重的正是这一取用关系」与 Lean 不同。「我独异于人」是圣众之对。",
+   "fix": "kind 改 scope：「食母」＝LivesOn 相合；lived_on_reaches 给出的是对母之看重（在 N_rel 下）传到以之为生者，不是对取用关系之看重；N_rel 写明为评价前提。"
+  },
+  {
+   "id": "wangbi-chong-ben-xi-mo",
+   "verdict": "revise",
+   "issues": "「脊柱中依存多向」不由 center_not_derived 给出（它说估值中心）；多向依存的见证是 Mutualism.apart、Flow.mutuallyDependent_of_common。center_not_derived 只可用于「崇本」之价值次第不由依存导出。",
+   "fix": "加 `Becoming.Mutualism.apart`；reading 把 center_not_derived 限于价值次第。"
+  },
+  {
+   "id": "ru-daxue-ben-mo",
+   "verdict": "revise",
+   "issues": "gap「依存决定生起先后」不是缺口：时间之「而後」对应 Embodied.arises_given（给者在生起前一步活动），必要之「而後」对应同一步的 Dependent／active_along；脊柱有意不把依存读成先后。",
+   "fix": "gap 清空；reading 中「尚无……一般律（缺口二）」改为「先后由给予之律表出（arises_given），依存本身是同一步之必要」。"
+  },
+  {
+   "id": "daxue-you-de-ci-you-ren",
+   "verdict": "keep",
+   "issues": "定域正确（此有链为充分方向，德本财末为价值次第）；center_not_derived 在此用于「价值次第不由依存导出」，用得其所。"
+  },
+  {
+   "id": "mengzi-tianxia-zhi-ben",
+   "verdict": "revise",
+   "issues": "kind 与同构之大学条不一致：大学「其本亂而末治者否」「壹是皆以修身為本」与此「家之本在身」同一结构，RO 与本簇都判大学为定域，此条判相分；依存链本身脊柱允许（Downstream.one_way 即一条单向链），原文亦未断言身不依于家国。Flow.GrownBy.every_condition_needed（附加长成之世界中每个条件都为系统所需）与唯一之本无关；center_not_derived 说估值中心。",
+   "fix": "kind 改 scope（必要方向之链相合；唯一之本与单向为不导出之剩余，标先在之根之层）；声明改为 `Becoming.Web.active_along`、`Becoming.Downstream.one_way`、`Becoming.Mutualism.apart`。若坚持相分，须同时重判大学两条并写出区别。"
+  },
+  {
+   "id": "ru-lunyu-zheng-ming",
+   "verdict": "keep",
+   "issues": "沿 RO 定域，所加 coextinct、active_along 有理由且限于文本所断言之依存。"
+  },
+  {
+   "id": "lunyu-min-wu-xin-bu-li",
+   "verdict": "keep",
+   "issues": "相合；去兵去食之次序是价值排序，reading 已说脊柱不给次序之理由。"
+  },
+  {
+   "id": "lunyu-zhi-ji-ren-shou",
+   "verdict": "keep",
+   "issues": "相合：合取之形。"
+  },
+  {
+   "id": "zaahan-san-shi-he-he",
+   "verdict": "revise",
+   "issues": "Dependence.MakesDifference 是对一次断裂的 but-for，不是「缺一则不生」；必要方向由 Web.Supported（合取）与 Web.Dependent 承担即足。Sleeper.sleeper 的关系项无任何所需，支撑空真，不能见证「三事具而触不生」。names_used「小故」「大故」随名之删除而改。",
+   "fix": "删 MakesDifference；Sleeper 改为「Web.Dependent 只是活动→受支撑，无律反推」（定义），如需见证另陈述非空者；names_used 改为「所待」「無之必不然」。"
+  },
+  {
+   "id": "ru-zhongyong-cheng-zi-cheng",
+   "verdict": "keep",
+   "issues": "沿 RO 定域；取「自待」不取「自成」之理由与名条一致（但见「自待」条的重标限制）。"
+  },
+  {
+   "id": "mengzi-heng-chan",
+   "verdict": "revise",
+   "issues": "「无恒产因无恒心」是恒常被满足之条件对恒常活动之必要，结构是更新（C05「恆足」，Web.Renewed）与 Dependent，不是储备；储备是不受支撑时承载活动之量，原文无不受支撑之步，「一遇不受支撑之步即不能维持」是读入。",
+   "fix": "声明改为 `Becoming.Web.Dependent`、`Becoming.Web.Renewed`、`Becoming.Web.consumed_ends_when_fixed`；names_used「蓄」改为「足」。"
+  },
+  {
+   "id": "ru-mengzi-niu-shan",
+   "verdict": "revise",
+   "issues": "`Becoming.Web.generation_needs_replenishment` 已由 R30 改名（RO 主干之图已用新名）。",
+   "fix": "改为 `Becoming.Web.embodiedArising_needs_replenishment`。"
+  },
+  {
+   "id": "mengzi-zhi-qi",
+   "verdict": "revise",
+   "issues": "`Becoming.Flow.withinInfluence_iff_withinReach` 已被 R32 删去（纯转发）。",
+   "fix": "改为 `Becoming.WithinClosure.converse`（或 `Becoming.Flow.mutuallyDependent_iff_reach`）。"
+  },
+  {
+   "id": "xunzi-xing-wei",
+   "verdict": "revise",
+   "issues": "「无性则伪之无所加，无伪则性不能自美」是两个必要条件之合取，Web.Supported 即足；Dependence.MakesDifference（断裂之 but-for）不适用；Web.roles（形成与条件嵌入一类读法）不陈述「材与文理两种角色」。",
+   "fix": "删 MakesDifference、Web.roles，加 `Becoming.Web.Dependent`。"
+  },
+  {
+   "id": "xunzi-shan-jia-yu-wu",
+   "verdict": "keep",
+   "issues": "相合：Restoring.Inflow.widens（外给扩大可成者）正对「善假於物」。"
+  },
+  {
+   "id": "xunzi-yu-min-tian-fei",
+   "verdict": "revise",
+   "issues": "carried_pow_around 说每步都成立的耦合回路上绕 R 圈后「能到达之最大差别」至少 2^R 倍，是差之传播（敏感度），不是产出之量；「出實百倍」读作此律是错配。原文是一条链（裕民→民富→田肥→出实），回路是读入。",
+   "fix": "删 carried_pow_around；kind 改 scope：若读入出实回给于民，则成相互给养（Flow.MutuallyFed）；倍数脊柱不给。"
+  },
+  {
+   "id": "zhuangzi-qiwu-bi-chu-yu-shi",
+   "verdict": "revise",
+   "issues": "所加 Web.roles 不合：彼／是是立足之处（立场），Web.roles 也不陈述一关系项居两位。",
+   "fix": "删 Web.roles 之增补，回到 RO 原判。"
+  },
+  {
+   "id": "zhuang-renjianshi-yi-neng-ku-sheng",
+   "verdict": "keep",
+   "issues": "相合：取用者与自依之木经同一条件交互，Embodied.ending_breaks 对其终结之步。"
+  },
+  {
+   "id": "zhuang-dasheng-yang-xing-bu-zu",
+   "verdict": "revise",
+   "issues": "Sleeper.sleeper 是空真之支撑，不能见证「所待具而依者不成」。「不足以存生」之「足以」是充分义，与名「足」（需之满足）不同，本条正好说明二者之别，宜写出。names_used「小故」随名删除而改。",
+   "fix": "Sleeper 改为定义之点（Dependent 只是一向的蕴含）；reading 加「足以＝充分，非支撑」；names_used 改为「無之必不然」「足」。"
+  },
+  {
+   "id": "zhuang-waiwu-wu-yong-zhi-yong",
+   "verdict": "keep",
+   "issues": "相合：Omitted.loses_own 中略去之所需被自身之取用削弱，正对「廁足而墊之」。该声明无记录绑定，注明。"
+  },
+  {
+   "id": "mozi-fei-ming-shang-xia",
+   "verdict": "keep",
+   "issues": "相合。"
+  },
+  {
+   "id": "mozi-lai-qi-li-zhe-sheng",
+   "verdict": "revise",
+   "issues": "结构不合 SelfBearing：墨子以人须以自身劳作产出所需对照禽兽，结构是形成给予其所需之条件；SelfBearing.met_iff 说对体现者自依不记录活动以外之事，以之承担墨子此论是空的。Flow.carries_of_own（持有者自取所持者为储备）亦不同。",
+   "fix": "声明改为 `Becoming.Flow.FedBy`（e＝e′：向自身所需之条件给予）与记录 support-from-the-supported；kind 改 scope；删 SelfBearing 三条与 carries_of_own；不再作「自待」之先例。"
+  },
+  {
+   "id": "jielao-fa-ling-geng",
+   "verdict": "revise",
+   "issues": "`Becoming.Web.forms_between`、`Becoming.Web.dissolves_between` 已被 R32 删去。",
+   "fix": "改为 `Becoming.arises_at_a_step`、`Becoming.ceases_at_a_step`（对 requires 取 p）。"
+  },
+  {
+   "id": "sima-tan-en-jue",
+   "verdict": "keep",
+   "issues": "相合：恩之所需仍在而不给，读作 Broken 可；可行一时对 Carries.lasts。注意「絕」在此亦可读作关系断开（Dissolves），见名「持／絕」。"
+  },
+  {
+   "id": "zhaolun-guo-bu-ju-yin",
+   "verdict": "revise",
+   "issues": "「在同步互依上见缺口一」不确（同步互依由 active_along 两向给出）。此句在《物不迁论》是「物不遷」之前提，reading 只取前提，未标其所服务之结论。",
+   "fix": "删缺口一之说；reading 加「僧肇以此推物不迁；跨步之同一在脊柱中由索引规定、是读法，结论不取」。"
+  },
+  {
+   "id": "zhaolun-dai-yuan",
+   "verdict": "revise",
+   "issues": "Web.change_readings 是定义上的 Iff.rfl，不证「生起是实在的变化」；生起之有由见证给出（如 SourceSeed.source_gives 中 Arises 0 .seed）。",
+   "fix": "reading 改为「生起与止息是同一变化的读法（change_readings，定义）；某一表示中生起之有见 SourceSeed.source_gives」；可并入平行 FO1-R-CY19。"
+  },
+  {
+   "id": "zhonglun-wu-sheng",
+   "verdict": "revise",
+   "issues": "同上：以 change_readings 说「实在的生起」是过度。",
+   "fix": "改为「若『無生』读作无任何生起，与表示中生起之见证（SourceSeed.source_gives）不合」。"
+  },
+  {
+   "id": "zhonglun-yin-yuan-jia-ming",
+   "verdict": "keep",
+   "issues": "沿 RO 相合。"
+  },
+  {
+   "id": "zhonglun-xian-you-he-yong-yuan",
+   "verdict": "revise",
+   "issues": "MakesDifference 判的是一分之于一次断裂，中论判的是缘之于果之生；「条件之为条件在于有力」与脊柱相反（条件由 requires 定义；joint-difference-making 记录说参与不随差别而定）。中论此偈用作对缘生之归谬，reading 只取一半。",
+   "fix": "kind 改 scope；删「条件之为条件在于有力」；reading 写明 but-for 形式相应、所判之事（生 vs 断）不同，以及偈之归谬用意。"
+  },
+  {
+   "id": "huayan-yin-men-liu-yi",
+   "verdict": "revise",
+   "issues": "「有力」是因对果之生（「由此滅故，果法得生，是有力也」），MakesDifference 是对断裂之 but-for。「無力不待緣不立為因＝不造成差别也不参与联合造成差别者不是条件」与脊柱相反：脊柱之条件不由差别定义，记录且说不造成差别者其参与仍计；而法藏「無力待緣」仍是因，恰与此相合。",
+   "fix": "kind 改 scope；reading 改为「两维判因之形式相应；所判之事为生果，脊柱为断裂；無力待緣仍为因，与 joint-difference-making『参与不随差别而定』相合」，删「不是条件」句。"
+  },
+  {
+   "id": "huayan-shi-xuan",
+   "verdict": "revise",
+   "issues": "记录 registration-within-what-it-registers 已由 R35 改名。",
+   "fix": "records 改为 readings-within-what-they-read。"
+  },
+  {
+   "id": "huayan-yin-guo-tong-ti",
+   "verdict": "keep",
+   "issues": "相分正确：依存有向、生起跨步、相互依存非同体。"
+  },
+  {
+   "id": "chengqian-wu-gu-dan-fa",
+   "verdict": "keep",
+   "issues": "定域正确（表示可容未连接者）。"
+  },
+  {
+   "id": "jinshizi-qi-dan-shi-yuan",
+   "verdict": "revise",
+   "issues": "「師子相起」是一相之生起（Web.Arises），不是依存之形成（Web.Forms）；Web.roles 只可用于「金与匠是一类关系项」，不陈述「不同角色」。",
+   "fix": "Web.Forms 换为 `Becoming.Web.Arises`；Web.roles 的描述改为「两类读法嵌入一类读法」。"
+  },
+  {
+   "id": "mohe-zhiguan-yin-yuan",
+   "verdict": "revise",
+   "issues": "片段「酬因曰」截断，缺所释之「報」；冻结文本作「酬因曰「報」」。MakesDifferenceTogether 判断裂，不判招果；Web.roles 同上之误。",
+   "fix": "片段改为已核对的「酬因曰「報」」；删 MakesDifferenceTogether 与 Web.roles，加 `Becoming.Web.Supported`（因缘并具）；定域剩余（主因助缘之分）照旧。"
+  },
+  {
+   "id": "qixin-shi-jue",
+   "verdict": "revise",
+   "issues": "「本觉」作不依任何东西的一切之根据，属先在之根之层；以 center_not_derived（估值中心）判之错配。kind 定域只在本条限于「依……而有」之链时成立。",
+   "fix": "删 center_not_derived，加 `Becoming.SourceSeed.source_gives`（无所依之源可表示而不导出、不唯一）；若读本觉为一切之根据，kind 改 divergence，链之部分作剩余相合。"
+  },
+  {
+   "id": "shengman-sui-duan",
+   "verdict": "keep",
+   "issues": "相合：所依断则依者随断（coextinct）；斷之修行方向已除。"
+  },
+  {
+   "id": "qixin-feng-shui-sui-mie",
+   "verdict": "keep",
+   "issues": "相合：方向与不及他条件皆对 coextinct。"
+  },
+  {
+   "id": "weishi-xun-xi",
+   "verdict": "revise",
+   "issues": "「俱生俱滅」「蘆束更互相依」所说之同步互依，脊柱已有：Dependent 下互以正需相依之体现关系项，active_along 两向即得每步同活动；gap「脊柱尚无一般律」不确。",
+   "fix": "gap 清空；reading 改为「同步互依之同活动由 Web.active_along 两向给出；RO 所述离散步之读与此不冲突」；加 `Becoming.Web.active_along`。"
+  },
+  {
+   "id": "zaahan-ci-you-gu-bi-you",
+   "verdict": "keep",
+   "issues": "沿 RO 相合；片段取自他经（「此起故彼起」），与 RO 片段不同，可。"
+  },
+  {
+   "id": "zaahan-yi-xiang",
+   "verdict": "keep",
+   "issues": "相合：依存有向。"
+  },
+  {
+   "id": "yuanren-fei-yin-yuan",
+   "verdict": "revise",
+   "issues": "Dependence.makesDifference_iff 判断裂之 but-for，不承担「无因缘则处处应生」；「生無前後」不是缺口（给在前一步：arises_given）。",
+   "fix": "删 makesDifference_iff；「见缺口二」改为「先后由 arises_given 表出」。"
+  },
+  {
+   "id": "yuandao-shi-zhe-zhong",
+   "verdict": "keep",
+   "issues": "相合：联合超取；排佛老之论与民之分类已除。"
+  },
+  {
+   "id": "zhuang-dazongshi-jie-jie",
+   "verdict": "revise",
+   "issues": "`Becoming.Web.forms_between` 已被 R32 删去。縣解为解倒悬之苦，带评价方向，reading 只提「当求之境界」，应明说结为系缚之负向。",
+   "fix": "改为 `Becoming.arises_at_a_step`；reading 加「结之系缚与解之脱苦的评价方向不取」。"
+  }
+ ],
+ "missing": [
+  "主干对齐：映射基于 R30／R32／R35 之前的树；整合前须按 r30-names/RENAME-TABLE.json、r32-folds/removals.json、r35-corpus/plans/R35-E4-renames.tsv 改 4 个声明名与 4 个记录 id（见 lens），并删 notes 中「所有声明均在当前脊柱」之语。",
+  "Web.Dependent（活动只在受支撑处，章中单列的前提）须有自己的名，不与「待」合并。",
+  "Web.Embodied（体现：恰在活跃时以正水平作为条件而在）无名，而共灭、所待之链、自待都以它为条件；须与 C01／C03 确认归属并定名。",
+  "Web.draws 本身（Becoming.Dependence 字段）未被任何名的 lean 栏引用；须与 C04 的 take（取）、汲入（汲）排成一组。",
+  "Flow.conveyance（输送）：泰否之「交」与 Flow.Cut 之所用皆是它；须与 C04「输送」协调，并决定「交」归输送还是交互。",
+  "Becoming.MutualDependence 三层之其余二名：共享条件（Flow.SharesThroughout）与相互给养（Flow.MutuallyFed，C13b 拟「交相利」），须与「相待」排成严格递进的一组。",
+  "Mutualism.apart_relabelled（重标使相待成自待，Dependent 不变）须进入「自待」「相待」二名之说明。",
+  "非空见证：一个正需被满足而形成不活动的两行见证（支撑不导出活动），以替代空真的 Sleeper.sleeper。",
+  "缺口之重述：「互依同活动」是 Web.active_along 两向之推论（可陈述，非理论缺陷）；「所待先于依者」之时间先后由 Web.Embodied.arises_given（给者在生起前一步活动）表出，依存本身是同一步之必要。原「缺口一、二」不应列为缺口。",
+  "出处：中论「染者及染法，俱成則不然；染者染法俱，則無有相待。」（FO1-S-MMK，已核对）——中论否认同时者相待，与唯识「因果俱時」及脊柱同一步之依存相对，应作一条（定域或相分）。",
+  "出处：中论「若燃不相待成，則自住其體，何用可燃？」（FO1-S-MMK，已核对）——「相待」的正出处，替代不含名的「因自性有他性」。",
+  "出处：孙绰《喻道论》「未之聞見皮之不存。毛將安附。」（IN1-S02，东晋，设难者之语，已核对）——共灭方向之旁证。",
+  "出处：起信论「以依動故能見；不動則無見。」（FO2-QX，FO2-QX-R014，已核对）——依存与随灭。",
+  "出处：荀子礼论「使欲必不穷于物，物必不屈于欲。两者相持而长」（RU2-S-XZ19，已核对）——跨步之足（Kept）的确切结构，并须标出「先王制礼」之单一施设者层。",
+  "出处：荀子臣道杨倞注「夫輔車相依，今趙存則魏安」（RU2-S-XZ13，唐注层，已核对）——互依之旁证（注层，非荀子原文）。",
+  "被拒两条（sui-chu-men-jiao、guimei-you-dai-er-xing）所挂之平行（TP-H17-X1-R02、FO1-R-CY19、BI1-SZ-R-19）须另归；FO1-R-CY19「待眾緣」宜并入 zhaolun-dai-yuan。",
+  "跨簇名冲突待整合者裁定：「所待」与 C01「所待又有待」（同引 Web.roles）；「足」与 C15「足而止」、C06「容」（supported_iff_admits 为 Iff.rfl）、C05「恆足／復足」；「絕」与 C06「绝生」、C15「絕其長」；「蓄」与 C05 同名同概念（合并）；「小故／大故」与 C16「無之必不然／有之必然」及 C16 之「故」（前提）；「交」与 C13b「交相利」、C04「输送」；「资」与 C04「取与」「汲」。"
+ ]
+}

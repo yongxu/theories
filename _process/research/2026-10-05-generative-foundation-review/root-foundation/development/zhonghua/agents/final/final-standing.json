@@ -1,0 +1,117 @@
+{
+ "findings": [
+  {
+   "id": "C02:INTRO",
+   "problem": "The 篇二 opening still says 「容为运之小故（容而不运者有构造之例，故非大故）」. After round 2, 二·八 經 asserts only the half 无之必不然 (不容则不运). It marks the other half of 小故, 有之不必然 (support without activity), as 未决, because no named Lean declaration proves that the hibernator is supported at step 1. `Hibernation.readings` proves ¬active and Holds, not Supported. So the opening asserts the very claim the 經 withholds, and presents the 「容而不运」 example as established.",
+   "find": "容为运之小故（容而不运者有构造之例，故非大故）",
+   "replace": "不容则不运（容于运无之必不然；有之不必然尚无具名之证，未决，⟦二·八⟧）",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "三·十",
+   "problem": "Rendered 二·九 亡, 說: 「在有待之处，运以容为小故（⟦二·八⟧）」 asserts full 小故 status, the same overclaim as the 篇二 opening. 二·八 經 proves only 不容则不运; its 有之不必然 half is 未决.",
+   "find": "运以容为小故（⟦二·八⟧）",
+   "replace": "不容则不运（⟦二·八⟧）",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "凡·十四",
+   "problem": "說: 「诸足合起来不是运之大故（⟦二·八⟧）」 states as fact that support is not sufficient for activity. That needs the 容而不运 witness, which 二·八 marks 未决 (no named proof that the hibernator is supported). What holds is only that 有待 does not give sufficiency.",
+   "find": "诸足合起来不是运之大故（⟦二·八⟧）",
+   "replace": "不给诸足合起来为运之大故（容而不运之例尚无具名之证，⟦二·八⟧）",
+   "severity": "style"
+  },
+  {
+   "id": "十五·十",
+   "problem": "Rendered 十五·十一 活皆有顾, 說, on 杀身成仁: 「两历互有所长，条件本身不排之（⟦十五·二十一⟧），排序只在以广为愈或另加一度」. This credits 以广为愈 with ordering a mixed pair. Yet 十六·四 經 says 「互有所长者不相广，以广为愈不定其序」, and 十六·二 說 says 「互有所长，凡续皆有顾不排，以广为愈也不排」. Only an added measure, which 凡·十六 says is a separately named 设 and not the ethical order, could rank this case.",
+   "find": "两历互有所长，条件本身不排之（⟦十五·二十一⟧），排序只在以广为愈或另加一度。",
+   "replace": "两历互有所长，条件本身不排之（⟦十五·二十一⟧），以广为愈也不排之（⟦十六·八⟧）；要排之须另加一度，那是另名之设，不是伦理之次序。",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "十一·二十七",
+   "problem": "Rendered 十一·三十 兼感之动, 說: 「对齐之向在此二设之下，见⟦十六·十七⟧」. Round 2 corrected this same misstatement in the 篇十一 opening but left it here. 十六·十三 动之向 (`Direction.chosen_keeps_basic`, `narrowed_not_chosen`) is conditioned on 无以小害大 (`FrontierFrames.Priority`), and its 說 says 「凡续皆有顾在此不用…伦理之次序仍只在以广为愈，取舍之序在无以小害大诸承诺」.",
+   "find": "所顾由凡续皆有顾定（只陈述而不断言），序由以广为愈（C）定，对齐之向在此二设之下，见⟦十六·十七⟧。",
+   "replace": "所顾由凡续皆有顾定（只陈述而不断言），序由以广为愈（C）定；对齐之向（⟦十六·十七⟧）之取舍又以无以小害大（实践之承诺）为设，称其所向为愈仍只在以广为愈。",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·六",
+   "problem": "The 經 grade 「不可见之一半有设而然」 treats the whole invisible half as premised. Its first claim, 「凡感入此待者者，皆不界其去绝之远近」, is `Web.break_not_bounded`, whose only hypotheses are local conditions: threshold-only coupling, decided identity, and c being the only possibly unmet need up to u. Under 凡·十七 and the 论纲 opening that makes it 无设而然. Only 「其中无一兆先于绝」 (`Flow.policy_uses_after_failure`, balance on the coupled conditions) is 有设而然. Round 2 split 纲·三's grade the same way.",
+   "find": "（不可见之一半有设而然；为跨域之一律是猜想）",
+   "replace": "（不可见之一半已证：「不界其去绝之远近」无设而然，「无一兆先于绝」以衡为设而有设而然；为跨域之一律是猜想）",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·六",
+   "problem": "The 地位 paragraph says 「不可见之一半在其若下已证（有设而然）」 and then lists only local conditions for `Web.break_not_bounded`. By 凡·十七 those are 若, not 设, so that law is 无设而然. This conflates 若 with 设, as round 2 corrected in 纲·二, 纲·三, 纲·五 and 纲·九.",
+   "find": "地位：不可见之一半在其若下已证（有设而然）：",
+   "replace": "地位：不可见之一半已证。不界其远近之律无设而然，其条件以若写入：",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·六",
+   "problem": "Once the 地位 opening is corrected, the policy law needs its own standing. It is the part that takes 衡, on the conditions coupled into the dependent, as a premise.",
+   "find": "（`Becoming.Flow.policy_uses_after_failure`，设感入此待者之诸所待皆衡）",
+   "replace": "（`Becoming.Flow.policy_uses_after_failure`，以感入此待者之诸所待皆衡为设，有设而然）",
+   "severity": "style"
+  },
+  {
+   "id": "纲·一",
+   "problem": "The 經 grade calls the whole entry 「有设而然之律」. Its last law (「涸界属常与…需处之所与不及常取，则涸界高于需加常取」, `RegimeMargin.beyond_draw_iff`, with `ends_iff_below` in the 說) has only local hypotheses: Gated, 0<H, Root, Short, FromNothing, Meets, Keeps. In the model it is therefore 无设而然, as round 2 ruled for the same RegimeMargin laws in 纲·二. The joint-excess and fed-from-beyond laws do take 衡, 唯运者与, 有待 and 耗.",
+   "find": "（有设而然之律；实际所待满足其设为猜想）",
+   "replace": "（律于拟中已证：共取过与与自外来诸句有设而然，涸界一句无设而然；实际所待满足其设为猜想）",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·一",
+   "problem": "The 地位 paragraph calls everything proved here 有设而然. The 涸界 laws it cites (`RegimeMargin.ends_iff_below`, `beyond_draw_iff`) use no 设. This is the same pattern round 2 fixed in 纲·二 (「于拟中无设而然：自然数之量是拟之所定」).",
+   "find": "地位：于拟（自然数之量，离散之步）中有设而然，其设各律所名。",
+   "replace": "地位：于拟（自然数之量，离散之步）中已证：共取过与与自外来之律有设而然，其设各律所名；涸界之律无设而然，其条件以若写入。",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·一",
+   "problem": "「设衡与耗，族之员各异，所待之同异定然否」 lists the local hypotheses of `Flow.fed_from_beyond` (Distinct ds, DecidableEq C) under 设. Under 凡·十七 they are 若. Only 衡 and 耗 are 宇之设.",
+   "find": "（`Becoming.Flow.fed_from_beyond`，设衡与耗，族之员各异，所待之同异定然否；",
+   "replace": "（`Becoming.Flow.fed_from_beyond`，以衡与耗为设，族之员各异、所待之同异定然否以若写入；",
+   "severity": "style"
+  },
+  {
+   "id": "凡·十九",
+   "problem": "讀（AI） is defined as 「…标其决定之号者也」, and only as a reading of 所证之内容. The book uses about 30 bare marks: 16 「讀（AI）：」 and about 15 「（讀，AI）」. One more is 「讀（AI，尚无决定编号…）」 at 二·五. Many of these are readings of classical passages, not of proved content (e.g. 十·十四, 十二·五, 十二·十). Round 2 flagged the mismatch without a fix, and it remains. The definition should admit both forms, so that the marks in use fit the standing as defined.",
+   "find": "讀（AI），于所证之内容所取之解，与其论并取，标其决定之号者也。",
+   "replace": "讀（AI），于所证之内容或古文之结构所取之解，与其论并取者也；已入决定记录者，标其决定之号。",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "凡·十九",
+   "problem": "The 說 says 「全书 AI 读法之标记一律如此」 (all marked 讀（AI，Dn）), which the book contradicts in about 30 places.",
+   "find": "标为「讀（AI，Dn）」，Dn 是它在决定记录中的号；全书 AI 读法之标记一律如此。",
+   "replace": "已入决定记录者标为「讀（AI，Dn）」，Dn 是它在决定记录中的号；未入者（多为名之出处与古文对照之读）标为「讀（AI）」或「（讀，AI）」，地位相同。",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "HEAD",
+   "problem": "The preface's list of the four standings defines 讀（AI） as 「AI 读法，标决定编号」. As with 凡·十九, about 30 readings in the book carry no decision number.",
+   "find": "- **讀（AI）**：AI 读法，标决定编号。",
+   "replace": "- **讀（AI）**：AI 读法，已入决定记录者标其编号。",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "C16:INTRO",
+   "problem": "The 凡例 opening defines 讀（AI） as 「带论证之解，标其决定之号」, the same mismatch with the unnumbered marks used throughout the book.",
+   "find": "讀（AI），带论证之解，标其决定之号；",
+   "replace": "讀（AI），带论证之解，已入决定记录者标其决定之号；",
+   "severity": "style"
+  },
+  {
+   "id": "C03:INTRO",
+   "problem": "The 篇三 opening lists 耗 among the 宇之设 that 篇三's laws take. No 經 in 篇三 (三·一 to 三·十九) takes 耗 as a premise. 衡 (三·十四) and 运者有列 (三·四, 三·六, 三·十六, 三·十七) are the ones used.",
+   "find": "与所名之宇之设（衡、耗、运者有列……）",
+   "replace": "与所名之宇之设（衡、运者有列……）",
+   "severity": "style"
+  }
+ ],
+ "summary": "Round 3, standing lens. I read BRIEF-ZH, STYLE-ZH, the 名表 header and all of jing-all.md, and every 篇 opening, the preface and the appendices from book-2.json. I dumped every 條's 經 next to the Lean statements its 證 cites (from /Users/ren/theories/.claude/worktrees/zhonghua/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/*.lean) and checked them 篇 by 篇. I re-read the 說 of 篇十五, 篇十六 and the 论纲 in full. I also ran two scripted checks across all 條: 恰当 claims against ↔ in the cited Lean, and universal 經 against declarations that are only constructions. Every proposed find occurs exactly once in its body in book-2.json. All cited declarations exist; the unresolved names are a namespace (`Closing.Threshold`), a module (`ExchangePremises`) and periphery theorems in lean/physics and lean/regime. No file was edited.\n\nWhat holds:\n- All round-1 and round-2 standing fixes are in place, including 二·八, 一·十七, NEW-12, NEW-13, 识 marked 讀, the 论纲 grades and the preface grade names.\n- The 經 keep their Lean local conditions and iff directions throughout; I found no remaining 經 that turns a witness into a law.\n- The continuation condition is only ever stated: every 經 using it is 若…则, an iff, or a witness.\n- Ethical order is attributed only to 以广为愈, and practical commitments are named as 设 that are not the ethical order. Both premises are named wherever the ethics is touched.\n\nStill wrong:\n1. **小故.** 二·八 經 now proves only 不容则不运 and marks 有之不必然 as 未决. Three places still say more:\n   - the 篇二 opening: 「容为运之小故（容而不运者有构造之例，故非大故）」;\n   - 二·九 亡 說: 「运以容为小故」;\n   - 凡·十四 說: 「诸足合起来不是运之大故」.\n2. **Mixed pairs.** 十五·十一 說 says a mixed pair's order lies 「只在以广为愈或另加一度」. But 以广为愈 does not order 互有所长 (十六·四).\n3. **Alignment direction.** 十一·三十 說 still says the alignment direction is 「在此二设之下」. Round 2 fixed this same claim in the 篇十一 opening: 动之向 rests on 无以小害大, and the condition is not used there.\n4. **论纲 grades.** 纲·六 and 纲·一 still call local-condition laws 有设而然, contrary to 凡·十七 and to round 2's treatment of 纲·二, 纲·三, 纲·五 and 纲·九:\n   - 纲·六: `Web.break_not_bounded` is 无设而然;\n   - 纲·一: the 涸界 laws `RegimeMargin.ends_iff_below` and `beyond_draw_iff` are 无设而然;\n   - 纲·一 說 also lists Distinct and DecidableEq under 设.\n5. **讀 marks.** 讀（AI） is defined in three places (凡·十九, the preface, the 凡例 opening) as always carrying a decision number. About 30 marks have none. Round 2 flagged this without a fix; the edits above give one.\n6. **Minor.** The 篇三 opening lists 耗, which no 篇三 law uses."
+}

@@ -1,0 +1,834 @@
+{
+ "cluster": "C17",
+ "corrections": [
+  {
+   "id": "mojing-xianhou-jiu",
+   "status": "revised",
+   "record_ids": [
+    "MI1-U-SX-59",
+    "MI1-U-JX-01",
+    "MI1-U-JS-01",
+    "MI1-U-SX-11",
+    "MI1-U-SS-39"
+   ],
+   "source_id": "MI1-S-SX",
+   "layer": "先秦／经·经说（战国后期墨家；六篇作者与编纂层未定）",
+   "fragments": [
+    "行，者行者，必先近而後遠。遠近，脩也；先後，久也。民行脩，必以久也。",
+    "長，宇徙而有處宇。宇南北在旦，有在莫，宇徙久。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Interleavings.LocalLaw",
+    "Becoming.Interleavings.LocalLaw.ownCourse",
+    "Becoming.Interleavings.LocalLaw.run_of_courses",
+    "Becoming.Interleavings.LocalLaw.standings_of_courses",
+    "Becoming.Interleavings.LocalLaw.trace_of_interleavings"
+   ],
+   "records": [
+    "the-step-index-from-own-courses",
+    "the-world-an-interleaving-builds"
+   ],
+   "reading": "AI读法：經下「行脩以久，說在先後」，經說下释为行者「必先近而後遠」：远近是所经之处的次第（脩），先后是所经之步的次第，二者从同一行程读出。經下「宇或徙，說在長宇久」，經說下释为「宇南北在旦，有在莫，宇徙久」：行者所处之宇随旦莫而移，宇之移与其久也从同一行程读出。这一层说的是先后（步序）由行读出。經上「久，彌異時也」把久定为遍及诸异时者，是总括，不由行引出；經說上「始，時或有久，或無久，始當無久」又说时可以有久也可以无久，始就是无久之时，与經上「始，當時也」相应。所以墨经并不只说久依于行：經上、經說上一层先给出诸时之总与无久之始，經下、經說下一层才从行者读出先后。脊柱相合的是后一层。在 LocalLaw 之设下，每次交换只读、只改它所触及的关系项，关系项有限列出。这时共享的步序是各关系项自身进程（ownCourse）的一种读法：给每个关系项相同自身进程的两列交换，从同一起点到达同一构形（run_of_courses）；每个关系项在其自身每次交换之后的站位也相同（standings_of_courses）；交错的选择不改变构形所读的任何东西（trace_of_interleavings）。在这些条件之外，共享的步序是表示所作的承诺，只在每两次交换都共享关系项之处才由关系推出（D43）。所余：墨经以一个行者为例，没有多条进程的交错，交错可多种而结果同一，是脊柱补出的结构；經上的诸时之总与无久之始，不由这些定理承载。名表的久（通过变化之持续）以經上此句为出处，此条只引其“遍及异时”之义，不以久为名。",
+   "names_used": [
+    "先后",
+    "步"
+   ],
+   "locator": "經說下「行，者行者」條；經說下「長，宇徙」條",
+   "relational": "先后由一个行程中各处的次第读出；经上另以久为诸异时之总，这一层不由行引出。",
+   "tradition": "名辩（后期墨家）",
+   "work": "《墨子·經說下》（并参經上、經下、經說上）"
+  },
+  {
+   "id": "zhongyong-cuoxing",
+   "status": "revised",
+   "record_ids": [
+    "RU1-ZY-40-R01"
+   ],
+   "source_id": "RU1-S-ZY",
+   "layer": "先秦／传（《礼记·中庸》；成篇年代与层次有争议，或下及秦汉）",
+   "fragments": [
+    "譬如四時之錯行，如日月之代明。萬物並育而不相害，道並行而不相悖。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Excluding.three_courses",
+    "Becoming.Flow.level_kept",
+    "Becoming.Viability.Plan.zip_keeps",
+    "Becoming.Viability.ChoicePoint.no_rule_decides_joint",
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.no_whole",
+    "Becoming.Specker.no_whole",
+    "Becoming.Interleavings.LocalLaw.Apart",
+    "Becoming.Interleavings.LocalLaw.act_comm"
+   ],
+   "records": [
+    "what-taking-all-excludes",
+    "joint-plan-composition",
+    "conditions-kept-together",
+    "gluing-under-parity",
+    "claims-shown-in-context",
+    "the-step-index-from-own-courses"
+   ],
+   "reading": "AI读法：「錯行」与「代明」对文，义为更迭：四时之錯行是一个周期诸段依次相继，日月之代明是两种光明依次相代。它们不是几个各有自身进程的关系项合成一列的交错，所以名表的错行（交错，Interleavings）在此只是词面相连，不作相合（见名「錯行」的意见）。能系于脊柱的是后两句，RO 已对二者定域（ru-zhongyong-bing-yu-bing-xing）。「萬物並育而不相害」：同样的成员可以分取而全部持续，也可以一方取尽而排除另一方，或共同超取而全部终止（Excluding.three_courses，所构之例）；在平衡之流中，每步共同所取在所给之内，水平就不低于起初（Flow.level_kept）；联合之步投影到各部分之步、两部分之计划相容时，联合计划保持两者之护（Viability.Plan.zip_keeps）。但各自可保持不等于共同可保持：ChoicePoint 是一个所构之例，两个条件各自可保持，合起来不可保持；在这个例中，任何只读两个各自判断的规则都定不了合判（Viability.ChoicePoint.no_rule_decides_joint）。「道並行而不相悖」有两读。RO 以拼合读之：在每一主张都有所属语境时，诸语境所示能拼合，恰在它们相遇处一致之时（Contextual.glues_iff_agree）；诸语境的可能若没有不带语境的读法，而某一语境确有所许，它们就不是任何整体的部分（Becoming.no_whole；Specker.no_whole 是三盒之例）。名表以并行不悖名交换（Law.Commutes），C17 补交换之读：在 LocalLaw 之设下（每次交换只读、只改它所触及的关系项），不共享关系项（Apart）的两次交换先后可换，到达同一构形（act_comm）；共享关系项的交换次序有别（见 sunzi-qinfu-fa 的 gap），所以这一读只在不共享者之间成立。两读都带条件。所以此章两句只在诸条件可以共同保持、诸语境相遇处一致、诸交换不共享关系项的范围内成立，不是无条件的。「此天地之所以為大也」的赞辞不带入。",
+   "names_used": [
+    "并行不悖"
+   ],
+   "locator": "中庸·仲尼祖述段",
+   "relational": "「錯行」「代明」是一个周期诸段的更迭；「並育而不相害」只在诸条件可共同保持处成立；「並行而不相悖」或读作诸语境相遇处一致而拼合，或读作不共享关系项者先后可换。",
+   "ro_passage": "ru-zhongyong-bing-yu-bing-xing",
+   "tradition": "儒",
+   "work": "《礼记·中庸》"
+  },
+  {
+   "id": "xunzi-jieyu-ming",
+   "status": "revised",
+   "record_ids": [
+    "RU2-U-XZ22"
+   ],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦／论（《荀子·正名》，战国晚期）",
+   "fragments": [
+    "性伤谓之病。节遇谓之命"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Situations.finerLaw",
+    "Becoming.Situations.finerLaw_step_iff",
+    "Becoming.Situations.finerLaw_determined",
+    "Becoming.Situations.situations_typical"
+   ],
+   "records": [
+    "weights-count-situations"
+   ],
+   "reading": "AI读法：《正名》列「散名之在人者」，以「节遇谓之命」收尾：命是在某一时节所遇者，与性（生之所以然）、能（所以能之在人者）分别命名。Situations 中，一步的去向由所行与所处情境（时）合起来固定：以情境为动作的细律是确定的（finerLaw_determined），这是构造所致，因为每个情境本身含其所到的构形；律只说哪些情境可取（finerLaw_step_iff）。在两个值、每步各有 p 与 q 个情境的情形下，n 步的细进程共有 (p+q)^n 条；其进程偏离至少 d 的那些，条数乘以 d，至多为 n·p·q·(p+q)^n（situations_typical）。所以大多数情境给出接近权重之比的频率。这一计数是脊柱补出的，引文本身不说；实际发生的是哪一个情境，不是计数，脊柱不固定它（模块说明，不是定理）。所以「命」在此读为步的情境分量，不带意志或预定。所余：荀子他处的「命」与「节」的训释（时节或节制）有争议，不由此条决定。",
+   "names_used": [
+    "时"
+   ],
+   "locator": "正名篇「散名之在人者」段末",
+   "relational": "命是所遇的情境一分；一步之去向由所行与所遇合定，命不带意志或预定（性是生之所以然，不是所行）。",
+   "tradition": "儒",
+   "work": "《荀子·正名》"
+  },
+  {
+   "id": "zhonglun-guanshi",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "FO1-S-MMK",
+   "layer": "魏晋南北朝／论（颂：龙树，梵本 Mūlamadhyamakakārikā 第十九品，约二至三世纪；释：青目长行，约四世纪，年代有争议；姚秦鸠摩罗什译）",
+   "fragments": [
+    "因物故有時，離物何有時？物尚無所有，何況當有時！",
+    "因物生故則名時，若離物則無時。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Interleavings.LocalLaw",
+    "Becoming.Interleavings.LocalLaw.ownCourse",
+    "Becoming.Interleavings.LocalLaw.run_of_courses",
+    "Becoming.Interleavings.LocalLaw.trace_of_interleavings",
+    "Becoming.Interleavings.LocalLaw.unique_iff"
+   ],
+   "records": [
+    "the-step-index-from-own-courses"
+   ],
+   "reading": "AI读法：第一片段是龙树颂，第二片段「因物生故則名時，若離物則無時」是青目的长行释。二者都说时依物而有、离物无时。同品释文的结论是「如是相待有故，實無有時」「物無故，何有時」：时只相待而有，无实有。这里的「無」是无自性，不是什么都没有：观四谛品释文说「是法無性故不得言有，亦無空故不得言無」，又说「空亦復空。但為引導眾生故，以假名說，離有無二邊，故名為中道」。脊柱与此相合的部分：在 LocalLaw 之设下（每次交换只读、只改它所触及的关系项，关系项有限列出），共享的步序是关系项自身进程（ownCourse）的读法：给每个关系项相同自身进程的两列交换到达同一构形（run_of_courses、trace_of_interleavings）；自身进程唯一固定步序，恰在每次交换都触及某一关系项、每两次交换都相同或共享关系项之时（unique_iff）。在此之外，共享步序是表示所作的承诺（D43）。所以步序只是关系的读法，不是其根据，这与把「相待有故，實無有時」读作时无自性相合；步序作为读法可以检验，也不说它是「無」，这与「離有無二邊」不冲突。原读把「物尚無所有，何況當有時」读成否定时之有、与脊柱相分，是把无自性误作无，此处改正。定域：只在 LocalLaw 之设下，时之先后才由关系项的进程完全读出。所余：中观以空亦复空，连关系与展开本身也不立为有自性者，二谛与中道之说都不由这些定理承载；脊柱以一个关系的展开为起点，对它是否有自性不作断言。",
+   "names_used": [
+    "步",
+    "先后"
+   ],
+   "locator": "中论·观时品第十九：第一片段为颂（第六偈），第二片段为青目长行释",
+   "relational": "时因物（关系项的进程）而名，不先于、不离于进程；「實無有時」读作时无自性：步序是关系的读法，不是其根据，也不是无。",
+   "tradition": "佛（中观）",
+   "work": "龙树《中论·观时品》颂；青目释（鸠摩罗什译）"
+  },
+  {
+   "id": "hanfei-gufen-shi",
+   "status": "revised",
+   "record_ids": [
+    "FA1-H11-R005",
+    "FA1-H11-U02"
+   ],
+   "source_id": "FA1-S-H11",
+   "layer": "先秦／论（《韩非子·孤愤》，战国末；篇章作者有争议）",
+   "fragments": [
+    "法術之士操五不勝之勢，以歲數而又不得見，當塗之人乘五勝之資，而旦暮獨說於前。",
+    "故資必不勝而勢不兩存"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.RuleCapture.favouring_locks",
+    "Becoming.RuleCapture.locked_stays",
+    "Becoming.RuleCapture.Alternating.never_locked",
+    "Becoming.RelativePosition.change_opposed"
+   ],
+   "records": [
+    "capture-through-the-rule",
+    "relative-position-is-zero-sum"
+   ],
+   "reading": "AI读法：法術之士「以歲數而又不得見」，當塗之人「旦暮獨說於前」。据前文「又且習故」推，近者因近而更近，远者因远而更远；原文只列五不胜之势与这一不对称，累积是推断。若把它读成选择之规则读其所选之份额，脊柱说：在其所列条件下（偏向之规则下选择不降低被选者的份额，所读出的规则是份额的单调函数，起初的规则与每个读出的规则都偏向被选者），份额每步不降，并自第一个读取之步的下一步起锁定（RuleCapture.favouring_locks）；在偏向对不更低的规则保持之时，锁定之后每一步都保持锁定（RuleCapture.locked_stays）。「勢不兩存」是相对位置（称）的一升一降（RelativePosition.change_opposed，对任何量的读法成立）；原文用的字是勢，不是稱，这里的勢是位势，不是名表的势（吸引域）。定域：锁定只在规则读份额、且所读出的规则偏向被选者之处发生。RuleCapture.Alternating 是一个所构之例：起作用的规则逆其所读、读取迟一步时，份额与规则交替下降，没有尽头，任何一步都不向任一方锁定（never_locked）。所以「勢不兩存」不是普遍律，而是这种选择规则之下的结果。所余：韩非以君臣之势论治，属意志或单一中心与争胜一层，不带入。",
+   "names_used": [
+    "称"
+   ],
+   "locator": "孤愤 转录第2段及其后",
+   "relational": "近者因近而更近，远者因远而更远：选择读其所选，位置一升一降。",
+   "tradition": "法",
+   "work": "《韩非子·孤愤》"
+  },
+  {
+   "id": "lao02-gaoxia-qianhou",
+   "status": "revised",
+   "record_ids": [
+    "LE-R006"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "先秦／经（传世本；郭店楚简《老子》甲作「高下之相○（盈）也……先后之相堕（随）也」，帛书甲作「高下之相盈也……先後之相隋恆也」，乙同）",
+   "fragments": [
+    "故有无相生，难易相成，长短相较，高下相倾，音声相和，前后相随。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Negation.each_through_other",
+    "Becoming.Listed.coming_iff_ceasing",
+    "Becoming.Web.unceasing_iff_bounded",
+    "Becoming.World.arising_iff_ceasing",
+    "Becoming.ceasing_needs_arising",
+    "Becoming.RelativePosition.positions_balance",
+    "Becoming.RelativePosition.change_opposed"
+   ],
+   "records": [
+    "the-split-that-makes-sense",
+    "bounded-census-keeps-pace",
+    "ceasing-needs-arising",
+    "relative-position-is-zero-sum"
+   ],
+   "reading": "AI读法：RO 已对六对之「相生」定域（lao-02-you-wu-xiang-sheng）：互为界说只见于所构之例（Negation.each_through_other：二值否定的运行，每一状态经由另一状态而得）；作为生灭同步，「相生」只在有界之处精确：自某步起列出者不超过 B 时，开始成立无尽复现恰当不再成立无尽复现（Listed.coming_iff_ceasing；形成层面 Web.unceasing_iff_bounded；有限世界在活动可判定时亦然，World.arising_iff_ceasing）；界无界增长时可以只生不灭，止息之复现需要生起之复现，反之不然（ceasing_needs_arising）。C17 只补两对。高下：郭店、帛书作「相盈」，传世本作「相倾」。两本都支持的只是高下对彼此而有（相对读法）；「相盈」是相满、相成，不说一升一降。一方之高即他方之下，正是相对位置（称）的计数律（RelativePosition.positions_balance、change_opposed，对任何量的读法成立），但这一读法只依传世本之「倾」，是定域内的一读。传世本「相倾」常被认为是避汉惠帝刘盈之讳而改，此说待核。先后：郭店、帛书作「先后之相堕（随）」「先後之相隋」，传世本作「前后相随」；先后只在一个次序中相对而有，与 Interleavings 的读法一致（步序是关系的读法，见 mojing-xianhou-jiu），此处不另引定理。定域沿用 RO：「相生」不是任一对都可无条件互生之律。",
+   "names_used": [
+    "称",
+    "先后"
+   ],
+   "locator": "《道德经》二章",
+   "relational": "高下、前后都只对彼此而有：一方之高即他方之下（只依传世本之「倾」）。",
+   "ro_passage": "lao-02-you-wu-xiang-sheng",
+   "tradition": "道",
+   "work": "《老子》第二章"
+  },
+  {
+   "id": "shuogua-sancai-liuhua",
+   "status": "revised",
+   "record_ids": [
+    "OW-R009"
+   ],
+   "source_id": "YD-OW-SG",
+   "layer": "先秦／传（易传成书年代有争议，部分或下及秦汉）",
+   "fragments": [
+    "兼三才而兩之，故易六畫而成卦。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Hexagram.Place",
+    "Becoming.Hexagram.places",
+    "Becoming.Hexagram.line",
+    "Becoming.Hexagram.Height",
+    "Becoming.Hexagram.halves"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "place-relations-in-context"
+   ],
+   "reading": "AI读法：「兼三才而兩之」有两种古读，孔颖达《周易正义·乾》疏两说并记。其一是两体之读：「先儒以為重卦之時，重於上下兩體，故初與四相應，二與五相應，三與上相應。是上下兩體，論天地人各別」：每一三画各具天地人（下中上），重为上下两体而成六。其二是六位之读：同疏「及其六位，則一、二為地道，三、四為人道，五、上為天道」，朱熹《本义》卷七「六爻𥘉二為地三四為人五上為天」同；说卦上文「立天之道，曰陰與陽；立地之道，曰柔與剛；立人之道，曰仁與義」每道一对，本章语境更近这一读。脊柱的 HexagramPlaces 以两个三画（halves）与三个高度（Height）合成六位（places，每位一线 line），高度（下中上）在两半中各出一次：结构上是第一读（先儒两体之读），只是高度只为位置的次序，不带天地人之分属。原读说以高度读三才没有古注支持，不确，此处改正；原读又说朱熹卷八系辞下注同，卷八不在已登记的冻结语料中，不引。第二读的三才之带脊柱尚未定义，是本条的主要缺口（gap）。所以本条在“六画由两个三画合成、每画三高度”这一层相合（同 Y1 hexagrams-on-the-spine），在本章语境更近的带之读上未及。天地人之分属，三道各自所立之对，「將以順性命之理」所说之理，都不带入。",
+   "names_used": [
+    "位"
+   ],
+   "locator": "说卦第二章",
+   "relational": "六位由两个三画合成、每画具下中上三高度（先儒两体之读）；三才之带（每才两位）是另一种划分，尚未在脊柱定义。",
+   "gap": "在 HexagramPlaces 中定义三才之带（初二、三四、五上各为一带），并证带与高度是两种不同的划分：每一带的两位高度不同（地带：初 low、二 middle；人带：三 high、四 low；天带：五 middle、上 high），每一高度的两位分属两带，所以带不是高度的函数，高度也不是带的函数；并证每一带恰跨一条接缝（s12、s34、s56），人带所跨的 s34 正是两半之交。最近：Becoming.Hexagram.Height、Becoming.Hexagram.heightOf、Becoming.Hexagram.halves、Becoming.Hexagram.Seam。",
+   "tradition": "易（共享经典）",
+   "work": "《说卦》"
+  },
+  {
+   "id": "xiaoxiang-xu-shangliu",
+   "status": "revised",
+   "record_ids": [
+    "TP-H05-X6-R02"
+   ],
+   "source_id": "YD-JP05",
+   "layer": "先秦／传（易传成书年代有争议，部分或下及秦汉）",
+   "fragments": [
+    "雖不當位，未大失也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.xu_top_inPhase",
+    "Becoming.Hexagram.xu_top_no_place",
+    "Becoming.Hexagram.holdsPlace",
+    "Becoming.Hexagram.fixedPhase",
+    "Becoming.Hexagram.top_no_parity"
+   ],
+   "records": [
+    "fixed-places-and-sole-lines"
+   ],
+   "reading": "AI读法：需上六柔居六：线与位的奇偶相合（正，xu_top_inPhase），而上位无定奇偶（xu_top_no_place），所以当位（holdsPlace）为假。王弼据此句立初上「無陰陽定位」之说，他的论证是：「若以上為陰位邪？則《需》上六不得雲不當位也。若以上陽位邪？則《乾》上九不得雲貴而無位也。」脊柱证明同一结构：上位无论取何种奇偶，需上六之柔与乾上九之刚两处必有一处正，与文本两处都说不在位不合（top_no_parity）；所以上位不配奇偶，在位与线的第二种关系（fixedPhase）下「雖不當位」成立（D53）。程颐另有读法：「不當位謂以陰而在上也」，下文又说「明陰宜在下而居上為不當位也」，是上下之义，不是奇偶。所以本条的相合以王弼之读为条件；D53 也不主张王弼读法就是《小象》作者原意。「敬之終吉」的占断不带入。",
+   "names_used": [
+    "当位",
+    "正"
+   ],
+   "locator": "需上六小象",
+   "relational": "当位依两端之间的定奇偶而定，上位无定奇偶故不当位（王弼之读）。",
+   "tradition": "易（共享经典）",
+   "work": "《小象·需上六》"
+  },
+  {
+   "id": "xici-hua-er-cai",
+   "status": "revised",
+   "record_ids": [
+    "WP-XCS-C12-S04-R04",
+    "WP-XCS-C12-S06-R03"
+   ],
+   "source_id": "DS02",
+   "layer": "先秦／传（易传成书年代有争议，部分或下及秦汉）",
+   "fragments": [
+    "化而裁之谓之变，",
+    "化而裁之存乎变；"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.span",
+    "Becoming.Flow.sample",
+    "Becoming.Flow.BalancesOn.sample",
+    "Becoming.Flow.sample_changes_iff",
+    "Becoming.Flow.sample_comesToStand_iff",
+    "Becoming.Cancelling.coarse_not_fine"
+   ],
+   "records": [
+    "laws-at-coarser-steps"
+   ],
+   "reading": "AI读法：「化而裁之谓之变」。注疏不以裁为截取：韩康伯注以「制其會通」说之，孔颖达疏说「陰陽變化而相裁節之，謂之變也」。把裁读作在某一步长上截取，是 AI 借用裁的字面义（裁剪），此下都是这一 AI 读法。脊柱的较粗之步是把一段细步之化（离散）合成一个粗步（span、Flow.sample）。家族上的平衡，在每个关系项于细步中只列一次时，跨粗步合成（Flow.BalancesOn.sample）；在细步平衡、耗散且每个关系项只列一次的条件下，某一站立跨粗步而变，恰在家族总量在粗步之末小于其始之时（Flow.sample_changes_iff）；在细步平衡之下，一条件跨粗步开始站立，恰在它原先不站立而细步给它的多于取走的之时（Flow.sample_comesToStand_iff）。定域：反方向不合成。Cancelling 是一个所构之例：粗步上平衡，细步上不平衡，细步的不平衡相消（coarse_not_fine）。所以「裁」保留一些律、丢掉另一些，不是无损的。名表以此句为「變」（过程：动作读入构形，裁成步）之出处；本条的粗步之读是另一读，这里的「变」不作名表之變，两读的关系交整合者。",
+   "names_used": [
+    "步"
+   ],
+   "locator": "系辞上第十二章",
+   "relational": "化而裁之：AI 读作把细步之化合成较粗之步，粗步保留一些律、丢掉另一些；注疏以裁为相裁节。",
+   "tradition": "易（共享经典）",
+   "work": "《系辞上》"
+  },
+  {
+   "id": "lueli-gua-shi-yao-bian",
+   "status": "revised",
+   "record_ids": [
+    "WH-R010",
+    "WH-R011"
+   ],
+   "source_id": "YWH-LG",
+   "layer": "魏晋南北朝／论（王弼《周易略例》）",
+   "fragments": [
+    "夫卦者，時也；",
+    "爻者，適時之變者也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.flip",
+    "Becoming.Hexagram.changes",
+    "Becoming.Contextual.indexed_fits",
+    "Becoming.Hexagram.atSites_indexed",
+    "Becoming.Hexagram.halves_no_free_frame"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "claims-shown-in-context",
+    "place-relations-in-context"
+   ],
+   "reading": "AI读法：「卦者，時也」：卦作为一时，是诸位之读法同时被实现的那一构形。读法的指标是位，不是卦：在 Hexagram.atSites 中，构形是诸位之关系被实现之处，指标是位（atSites_indexed）。Contextual.indexed_fits 是定义的展开（Iff.rfl）：带指标的框架在构形 s 处实现 (k, c, b)，恰在 c 属于 k、且 k 在 s 处示 b 之时。这两条只是形式，承载相合的是一条律：在任何过程之下，都没有不带指标的框架容纳上下两体在诸高度之所示，因为泰的上下两体在同一高度所示不同而拼不成（halves_no_free_frame）；所以一线之所示离不开它所在之体与位，指标不能去掉。「爻者，適時之變者也」：一线之变（flip）是从这一构形出发的一步（changes，定义），其义依这一构形而定。相合：时不是构形之外的刻度。同篇「夫時有否泰，故用有行藏」支持“时即构形”之读。王弼此处的「時」是构形，与名表的时（Situations 中使一步确定的情境）结构不同，见名「時」的意见。",
+   "names_used": [
+    "位"
+   ],
+   "locator": "略例·明卦适变通爻首句",
+   "relational": "卦是诸位之读法同时被实现的那一构形；爻变是从此构形出发的一步。",
+   "tradition": "易（共享经典）",
+   "work": "王弼《周易略例·明卦适变通爻》"
+  },
+  {
+   "id": "lueli-yishi-zhizhi-kefan",
+   "status": "revised",
+   "record_ids": [
+    "YCM130-LG-W-02-R01"
+   ],
+   "source_id": "YWH-LG",
+   "layer": "魏晋南北朝／论（王弼《周易略例》）",
+   "fragments": [
+    "一時之制，可反而用也。一時之吉，可反而兇也。",
+    "故卦以反對，而爻亦皆變"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.reverse",
+    "Becoming.Hexagram.inPhase_reverse",
+    "Becoming.Hexagram.rises_reverse",
+    "Becoming.Hexagram.opposed_reverse",
+    "Becoming.Contextual.Glues.agree",
+    "Becoming.Contextual.fitsFree_iff",
+    "Becoming.Contextual.indexed_fits",
+    "Becoming.ChangingContext.erased_not_lifted",
+    "Becoming.erasedLaw_exact_iff_lifts"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "place-relations-in-context",
+    "claims-shown-in-context",
+    "becoming-context-coherence"
+   ],
+   "reading": "AI读法：王弼紧接着说「故卦以反對，而爻亦皆變」，邢璹注举丰与旅：一时之吉，反之为羁旅之凶。所以「反」指覆卦（綜），即一卦上下颠倒（Hexagram.reverse）。脊柱中覆卦的结构是：覆之，各位之正在镜像位皆反（inPhase_reverse）；承乘互换（rises_reverse）；各高度之相应在镜像高度保持（opposed_reverse）。这三条是对全部六十四卦逐例检验的计算。所以一时之制、一时之吉，到其反对之卦中可以反：同一读法在两个构形示相反之值。一般的补充是：两个语境在同一主张上示不同之值，则在该构形处不拼合（Glues.agree 的逆否）；在每一主张都有所属语境时，一个不带指标的框架能容纳诸语境，恰在每个构形都拼合之时（fitsFree_iff），所以这里没有不带指标的框架。带指标的框架则容纳一切所示，这是定义的展开（indexed_fits，Iff.rfl）。忘掉语境的律从每个语境出发都准确，恰在每个语境都能跟上每一被忘掉的步之时（erasedLaw_exact_iff_lifts）；ChangingContext.erased_not_lifted 是一个所构之例。相合。此处「一時」是王弼之时（一卦，即一构形），不是名表的时（情境），所以不以时为名。吉凶的评价不带入。",
+   "names_used": [
+    "正",
+    "承",
+    "乘",
+    "相应"
+   ],
+   "locator": "略例·明卦适变通爻",
+   "relational": "一卦覆之即其反对之卦；覆之则正与不正在镜像位互换，承乘互换，相应保持。",
+   "tradition": "易（共享经典）",
+   "work": "王弼《周易略例·明卦适变通爻》"
+  },
+  {
+   "id": "wenyan-jishi",
+   "status": "revised",
+   "record_ids": [
+    "OW-R025",
+    "OW-R026"
+   ],
+   "source_id": "DS10",
+   "layer": "先秦／传（易传成书年代有争议，部分或下及秦汉）",
+   "fragments": [
+    "上下无常，非为邪也。进退无恒，非离群也。君子进德修业，欲及时也。故无咎。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.TimedResponse.ReachedBy",
+    "Becoming.TimedResponse.different_answers_require_reached",
+    "Becoming.TimedResponse.different_answers_not_unreached",
+    "Becoming.TimedResponse.answer_alike_before"
+   ],
+   "records": [
+    "timely-response-necessity"
+   ],
+   "reading": "AI读法：「君子进德修业，欲及时也」是行者赶及时限，方向与 ReachedBy 不同，须先指明谁是来源、谁是读者。来源是君子的进德修业；读者是到时所取之步，即君子在那一构形中的应对。此处「时」是时限，不是名表的时（情境）。TimedResponse.ReachedBy 说：到时限为止，有一条路由从来源进入耦合到读者之物。在该节所列前提下（两世界在时限之前平衡、在场者与起点相同、来源之外的部分只经过去的耦合回应、读取经耦合而得），没有到达，则两个只在来源上不同的世界中，经耦合读出的回答相同（answer_alike_before）；回答有所不同，便不能是未到达（different_answers_not_unreached，结论为双重否定）；在到达与否可判定时即须先到达（different_answers_require_reached）。这样读，「及时」是来源在时限之前到达读者，是必要条件，不是充分条件：到达的也可能不被用（见 sunzi-huo-fa-bing-jing）。若时限是一个机，到达须在机过之前，这是 G9（窗口：到达之后、机过之前），未证。「无咎」是占断，不带入。",
+   "names_used": [
+    "机"
+   ],
+   "locator": "乾文言·九四",
+   "relational": "来源（进德修业）须在时限之前经耦合到达读者（到时所取之步）；时限若是机，到达须在机之前，未证。",
+   "tradition": "易（共享经典）",
+   "work": "《文言·乾九四》"
+  },
+  {
+   "id": "shuogua-tiandi-dingwei",
+   "status": "revised",
+   "record_ids": [
+    "WP-SG-C03-S01-R01"
+   ],
+   "source_id": "YD-OW-SG",
+   "layer": "先秦／传（易传成书年代有争议，部分或下及秦汉）",
+   "fragments": [
+    "天地定位，山澤通氣，雷風相薄，水火不相射"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.complement",
+    "Becoming.Hexagram.opposed",
+    "Becoming.Hexagram.oppositions_glue_iff",
+    "Becoming.Hexagram.halves_no_free_frame",
+    "Becoming.Hexagram.xian_opposed",
+    "Becoming.Hexagram.heng_opposed",
+    "Becoming.Hexagram.weiJi_opposed",
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Hexagram.Trigram.complement3",
+    "Becoming.Hexagram.Trigram.opposite_stations"
+   ],
+   "records": [
+    "place-relations-in-context",
+    "what-a-commuting-law-keeps-apart",
+    "hexagram-arrangements-and-laws"
+   ],
+   "reading": "AI读法：沿用 RO：第三章四对（乾坤、艮兑、震巽、坎离）恰是三画层面的四对互补（Trigram.complement3、Trigram.opposite_stations；六画之互补为 Hexagram.complement）。把一对上下相叠，得到每个高度都相应的卦；三个高度上的相应拼成全卦的一个读法，恰在每一高度都相应（上下两体互补）或都不相应（重卦）之时（oppositions_glue_iff）；没有不带指标的框架容纳上下两体在诸高度之所示（halves_no_free_frame）；咸、恒、未济每个高度都相应（xian_opposed、heng_opposed、weiJi_opposed）；消长之律与互补可交换（waxWane_complement）。所以「定位」是两两相反者的配对。C17 只记：此处「定位」是八卦相对而定的方位，与王弼「無陰陽定位」不同义（后者是 fixedPhase）；名表没有这一名，fixedPhase 的定名见名的意见。此处「位」是方位，不是名表的位（卦中之位）。",
+   "names_used": [
+    "相应"
+   ],
+   "locator": "说卦第三章",
+   "relational": "诸卦之位由两两相反而定。",
+   "ro_passage": "shuogua-tiandi-dingwei",
+   "tradition": "易（共享经典）",
+   "work": "《说卦》"
+  },
+  {
+   "id": "tuan-bi-roulai-wengang",
+   "status": "revised",
+   "record_ids": [
+    "TP-H22-T-R01",
+    "TP-H22-T-R02"
+   ],
+   "source_id": "YD-JP22",
+   "layer": "先秦／传（易传成书年代有争议，部分或下及秦汉）",
+   "fragments": [
+    "柔來而文剛，故亨。",
+    "分剛上而文柔，故小利有攸往。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.three_iff",
+    "Becoming.Hexagram.across",
+    "Becoming.Hexagram.across_exchange",
+    "Becoming.Hexagram.swap",
+    "Becoming.Hexagram.tai"
+   ],
+   "records": [
+    "hexagram-arrangements-and-laws",
+    "rising-and-falling-in-one-exchange"
+   ],
+   "reading": "AI读法：贲三刚三柔，在 three_iff 所列二十卦之中（泰、否及与之隔一次跨两半交换者）。按卦变读法，贲是泰的二与上两线互换（手算，Lean 未单列此例）：一柔来居二（柔來而文剛），一刚上居上（分剛上而文柔）。跨两半的交换是交换之律的一步，一半之所给即另一半之所取（across_exchange）。相合于交换的结构。冻结语料中，程颐释此彖：「下體本乾柔来文其中而為離上體本坤剛往文其上而為艮」，又说「分乾之中爻往文於艮之上也」：下体本是三刚、上体本是三柔，一柔来居下体之中，一刚往居上体之上，与泰之二、上相易同构；他也明说「又取卦變柔来文剛剛上文柔」，只是不说自泰卦而来。虞翻以泰之二、上相易说此句，通行王弼注以坤之上六来居二位、乾之九二分居上位说此句，这两说都不在冻结语料中，待核。所以交换之读有宋人注之证，争议只在它是否为《彖》本义。「文」的文饰之义不带入。",
+   "names_used": [
+    "刚柔",
+    "位"
+   ],
+   "locator": "贲彖",
+   "relational": "一线之来与一线之上是两半之间的一次交换。",
+   "tradition": "易（共享经典）",
+   "work": "《彖·贲》"
+  },
+  {
+   "id": "sunzi-cheng-ren-zhi-buji",
+   "status": "revised",
+   "record_ids": [
+    "BI1-SZ-R-52"
+   ],
+   "source_id": "BI1-S-SZ",
+   "layer": "先秦／论（《孙子》传世十三篇，题孙武；成书层次有争议）",
+   "fragments": [
+    "故兵之情主速，乘人之不及，由不虞之道，攻其所不戒也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.TimedResponse.ReachedBy",
+    "Becoming.TimedResponse.answer_alike_before",
+    "Becoming.TimedResponse.levels_alike_before",
+    "Becoming.TimedResponse.coupling_alike_before"
+   ],
+   "records": [
+    "timely-response-necessity"
+   ],
+   "reading": "AI读法：「乘人之不及」：乘对方来不及应（同篇有「能使敵人前後不相及」，见 sunzi-qianhou-bu-xiangji）。结构上，到时限 D 为止，我之动没有路由及于对方（ReachedBy 不成立），对方的回答不能依我之动而异。在该节所列前提下（两世界在 D 之前平衡、在场者与起点相同、来源之外的部分只经过去的耦合回应、读取经耦合而得），在两个只在来源（我之动）上不同的世界中，凡未被潜在路由所及的条件，其水平到 D 为止相同（levels_alike_before）；所以若到 D 没有从来源进入对方的路由，对方所耦合者到 D 为止相同（coupling_alike_before），经耦合读出的回答也相同（answer_alike_before）。定域：这只在时限之前成立，一旦有路由到达即不成立。此处的「乘」是趁，与名表的乘（一缝之下刚上柔）同形异义。「攻其所不戒」的取胜属争胜一层，不带入。",
+   "names_used": [],
+   "locator": "九地第十一",
+   "relational": "我之动在对方被到达之前：对方的回答不能依我之动而异。",
+   "tradition": "兵",
+   "work": "《孙子·九地》"
+  },
+  {
+   "id": "laozi-sz-yusu",
+   "status": "revised",
+   "record_ids": [
+    "LC2-SZ-C53-R01"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "layer": "宋明／注（北宋苏辙《老子解》）",
+   "fragments": [
+    "凢舍其自然而有所施設者皆欲速者也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Pace.never_reads_lost"
+   ],
+   "records": [
+    "how-fast-a-rule-may-change"
+   ],
+   "reading": "AI读法：苏辙原文说大道夷易，世人以为迂远而「好徑以求捷」，所以「凢舍其自然而有所施設者皆欲速者也」：欲速是舍大道而走捷径，即舍其自然而施设，不是规则变得比它能固定其进程更快。若把「施設」读作一个从不读取所处构形的规则，脊柱说：在从不读取的规则之下，一个快层构形若在第 n 步上不能由该规则之律从任何起点得到，则从第 n 步起它不是该规则下任何进程的快层构形，所失者不再得（Pace.never_reads_lost）。这是 AI 读法，文本未言规则。把欲速与步速之律（pace_law）连起来，只有在把「施設」读作一个持得不够长的规则时才相关，这是 AI 组合，文本未言，此处不引。",
+   "names_used": [],
+   "locator": "老子解·第五十三章",
+   "relational": "欲速是舍其自然而施设；若把施设读作从不读取的规则，所失者不再得。",
+   "tradition": "道",
+   "work": "苏辙《老子解》第五十三章"
+  },
+  {
+   "id": "mengzi-xianni-qixin",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0054"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦／论（《孟子》，战国中期；后入经部）",
+   "fragments": [
+    "非天之降才尔殊也，其所以陷溺其心者然也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Confound.confounded",
+    "Becoming.Situations.finerLaw_determined"
+   ],
+   "records": [
+    "experiment-needs-return",
+    "weights-count-situations"
+   ],
+   "reading": "AI读法：孟子说人之所为不同，不由所禀之才不同，而由所处之境陷溺其心；上文「富岁，子弟多赖；凶岁，子弟多暴」与大取「或遇孰，或遇凶」同构。孟子是据所见断定差在陷溺而不在才。Confound.confounded 是 Experiment 所构的一个例：所行与一个隐藏之量同步时，记录在每一步都不排除那个错误的归因；要排除它，须变动所行以对抗隐藏之量，并能返回（experiment-needs-return）。这个例说明：记录可以永远不排除错误的归因，所以孟子之断须有变动与返回才能检验。去向由所行与情境（时）合定；以情境为动作的细律是确定的（Situations.finerLaw_determined），这是构造所致。定域：差异可以属于所处之境，但要定它属于境而不属于才，须有实验。「天之降才」与人皆同善之才的主张，属固定本性或价值一层，不带入。",
+   "names_used": [
+    "时"
+   ],
+   "locator": "告子上·富岁子弟章",
+   "relational": "所为之差可以属于所处之境；要定它属于境而不属于所禀，须有变动与返回。",
+   "tradition": "儒",
+   "work": "《孟子·告子上》"
+  },
+  {
+   "id": "mengzi-shui-shi",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0051"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦／论（《孟子》，战国中期；后入经部）",
+   "fragments": [
+    "是岂水之性哉？其势则然也。人之可使为不善，其性亦犹是也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Situations.finerLaw_determined",
+    "Becoming.Confound.misattributes"
+   ],
+   "records": [
+    "weights-count-situations",
+    "experiment-needs-return"
+   ],
+   "reading": "AI读法：水被搏而跃、被激而行，是所处之势使然，不是水之性。此处「其势」是外加于水的处境（搏、激），不是名表的势（吸引域）。结构上，去向由所行与情境（时）合定；以情境为动作的细律是确定的（finerLaw_determined），这是构造所致。把激跃归于水之性是误归；Confound.misattributes 是所构的一个例，显示这种误归可以发生，不是一般律。定域：这一结构只在把「性」读作给定条件下的律（水就下）时成立；孟子以「人性之善也，犹水之就下也」立论，是给律加上一个固定的价值，属固定本性或价值一层，脊柱不支持这一步。「水之性」「人性」都不带入。",
+   "names_used": [
+    "时"
+   ],
+   "locator": "告子上·湍水章",
+   "relational": "去向之异属于所处之势；律不带价值。",
+   "tradition": "儒",
+   "work": "《孟子·告子上》"
+  },
+  {
+   "id": "laozi-sz-ji-er-wei-shi",
+   "status": "revised",
+   "record_ids": [
+    "LC-R035"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "layer": "宋明／注（北宋苏辙《老子解》）",
+   "fragments": [
+    "物則不能自成逺近相取剛柔相交積而為勢"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Pool.difference_belongs_to_the_joint",
+    "Becoming.Dependence.differenceOnlyTogether_iff",
+    "Becoming.Flow.rise_netGiver",
+    "Becoming.carriedFrom_carried",
+    "Becoming.onLoop_succ_iff"
+   ],
+   "records": [
+    "joint-difference-making",
+    "where-novelty-gain-comes-from",
+    "how-a-carried-difference-grows",
+    "how-loops-form"
+   ],
+   "reading": "AI读法：沿用 RO：物不能自成，远近相取、刚柔相交而积为势：所成之差属于诸方之合。在其所列前提下，Dependence.differenceOnlyTogether_iff 刻画“诸部分合起来造成差别，而单独任何一个都不造成”；Pool.difference_belongs_to_the_joint 是一个所构之例：同一部分是否造成差别，取决于其余部分所为，例不是一般律。存量之升必有净给出者（Flow.rise_netGiver）；所携之量由耦合携带并携带自身（carriedFrom_carried），回路经由闭合而成（onLoop_succ_iff）。C17 只记：此「勢」是积于关系中的可发之量，不是名表的势（吸引域），二者的关系交 C07；此处「剛柔」是苏辙之语，不是名表的刚柔（爻值）。",
+   "names_used": [],
+   "locator": "老子解·第五十一章",
+   "relational": "势由远近相取、刚柔相交积成，不属一物。",
+   "ro_passage": "sz-51-ji-er-wei-shi",
+   "tradition": "道",
+   "work": "苏辙《老子解》第五十一章"
+  },
+  {
+   "id": "zhuangzi-anshi-chushun",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C03-R-05"
+   ],
+   "source_id": "ZH1-S03",
+   "layer": "先秦／论（《庄子》内篇；各篇层次有争议）",
+   "fragments": [
+    "適來，夫子時也；適去，夫子順也；安時而處順，哀樂不能入也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.change_readings",
+    "Becoming.ceasing_needs_arising"
+   ],
+   "records": [
+    "coming-and-ceasing-keep-pace",
+    "ceasing-needs-arising"
+   ],
+   "reading": "AI读法：来是其时，去是其顺：来与去在同一展开中各依其情境（时）。脊柱：生起与止息、形成与消解、开始与不再作为条件而在，是同一变化（成与毁）从活动、依存与站立三面读出，这是定义（Web.change_readings，各分句为 Iff.rfl），只说来去是一个变化的两面。可证的律是：在一段无物开始成立的步中，止息者都在起初所列之中，终了尚在者与其间止息者合计恰为起初之数（ceasing_needs_arising）；所以去不能多于先已来者，止息之无尽复现需要生起之无尽复现。原映射所引的重现律（兴起反复出现恰在停止反复出现之时）说的是重现，文本说的是一生之来去，不取。定域：「安時而處順，哀樂不能入」是一种态度，不由律推出；「帝之縣解」的帝不带入。",
+   "names_used": [
+    "时"
+   ],
+   "locator": "养生主·老聃死",
+   "relational": "来去各依其时，在同一展开中相伴；去以先已来者为限。",
+   "tradition": "庄",
+   "work": "《庄子·养生主》"
+  },
+  {
+   "id": "zhuangzi-wu-gujin",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C06-R-13"
+   ],
+   "source_id": "ZH1-S06",
+   "layer": "先秦／论（《庄子》内篇；各篇层次有争议）",
+   "fragments": [
+    "朝徹而後能見獨，見獨而後能无古今，无古今而後能入於不死不生。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Interleavings.LocalLaw.trace_of_interleavings",
+    "Becoming.Law.withHistory_never_returns"
+   ],
+   "records": [
+    "the-step-index-from-own-courses",
+    "recurrence-without-premise"
+   ],
+   "reading": "AI读法：女偊章「朝徹」「見獨」「无古今」「不死不生」是修养的次第，说的是修行者之状态。作修养次第读，「无古今」是不执著于古今之分，与先后（步序）之为读法相容：在 LocalLaw 之设下，交错相同自身进程的两条迹，终于同一构形（trace_of_interleavings），共享的步序是读法。但读法之可换不是先后之无：保留历史的进程永不回到先前（Law.withHistory_never_returns），各进程之内的先后不消失。所以本条定域：作修养次第读则相容；若按字面本体义，把「无古今」「不死不生」读作一个没有先后、没有生灭的所在，则越出脊柱，这一半相分（断言先后与生灭之外的所在）。",
+   "names_used": [
+    "先后"
+   ],
+   "locator": "大宗师·女偊章",
+   "relational": "作修养次第读，「无古今」是不执著于古今之分，与步序之为读法相容；按字面本体义读则断言先后与生灭之外的所在。",
+   "tradition": "庄",
+   "work": "《庄子·大宗师》"
+  },
+  {
+   "id": "huayan-shixuan-tongshi",
+   "status": "revised",
+   "record_ids": [
+    "FO2-FQ-R015"
+   ],
+   "source_id": "FO2-FQ",
+   "layer": "隋唐／论（法藏《华严一乘教义分齐章》）",
+   "fragments": [
+    "此上十義同時相應，成一緣起，無有前後始終等別"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Diagonal.claims_incomplete",
+    "Becoming.Frame.self_incomplete",
+    "Becoming.Diagonal.complete_iff_alike",
+    "Becoming.Diagonal.Unfolds.unheld",
+    "Becoming.boundaryInvariant_iff_standpointInvariant",
+    "Becoming.Interleavings.LocalLaw.act_comm",
+    "Becoming.Interleavings.LocalLaw.unique_iff"
+   ],
+   "records": [
+    "readings-within-what-they-read",
+    "process-and-frame-as-readings",
+    "continuation-condition-decomposition",
+    "the-step-index-from-own-courses"
+   ],
+   "reading": "AI读法：上文所立「十義」是教義、理事、解行、因果、人法、分齊境位、師弟法智、主伴依正、隨其根欲示現、逆順體用自在等十类法门。「同時相應……無有前後始終等別」，同段说「此依海印三昧，炳然同時顯現成矣」：十类法门同时显现、不按次第，不是说诸事件没有时间先后（RO huayan-shi-xuan 与脉络 FO2-FQ-R015 都不作时间读）。这样读，它与脊柱的步序之为读法相容：共享的步序只在每两次交换都共享关系项之处才由关系推出，此外是表示所作的承诺（D43）。RO 对十玄全体的定域沿用：读法族在其所读之中，不完全（Diagonal.claims_incomplete、Frame.self_incomplete），除非诸值无可区分（complete_iff_alike）；在所列条件下，任何有限的一组读法都持不住一个展开族所漏掉的东西（Diagonal.Unfolds.unheld）；在所列前提下，预设之边界不变恰是意义之立场不变（boundaryInvariant_iff_standpointInvariant），这是 RO 对「舉一為首，餘則為伴」（因陀羅網境界門）的读法，不出于本片段。若把「無有前後」读作时间先后之无，则只在不共享关系项的两次交换之间成立：在 LocalLaw 之设下，它们先后可换，到达同一构形（Interleavings.LocalLaw.act_comm）；十义中的因果共享关系项，其先后记在共享者自身的进程之中，自身进程唯一固定交错，恰在每次交换都触及某一关系项、每两次交换都相同或共享关系项之时（unique_iff）。按这一读法，在因果之间与脊柱相分。",
+   "names_used": [
+    "先后"
+   ],
+   "locator": "义理分齐·十玄",
+   "relational": "十类法门同时相应，不按次第；不是诸事件没有时间先后。",
+   "ro_passage": "huayan-shi-xuan",
+   "tradition": "佛（华严）",
+   "work": "法藏《华严一乘教义分齐章》（十玄门）"
+  },
+  {
+   "id": "sunzi-qianhou-bu-xiangji",
+   "status": "new",
+   "record_ids": [
+    "BI1-SZ-U11"
+   ],
+   "source_id": "BI1-S-SZ",
+   "layer": "先秦／论（《孙子》传世十三篇，题孙武；成书层次有争议）",
+   "fragments": [
+    "能使敵人前後不相及，衆寡不相恃，貴賤不相救，上下不相收"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.TimedResponse.ReachedBy",
+    "Becoming.TimedResponse.levels_alike_before",
+    "Becoming.TimedResponse.coupling_alike_before",
+    "Becoming.TimedResponse.answer_alike_before"
+   ],
+   "records": [
+    "timely-response-necessity"
+   ],
+   "reading": "AI读法：「能使敵人前後不相及，衆寡不相恃，貴賤不相救，上下不相收」：使敌人诸部分之间的到达被切断。此处的前後是军之前与后，不是步序。结构上，到时限 D 为止，一部分的变动没有路由进入另一部分（ReachedBy 不成立）。在该节所列前提下（两世界在 D 之前平衡、在场者与起点相同、来源之外的部分只经过去的耦合回应、读取经耦合而得），在两个只在该部分上不同的世界中，凡未被潜在路由所及的条件，其水平到 D 为止相同（levels_alike_before）；所以另一部分所耦合者到 D 为止相同（coupling_alike_before），经耦合读出的回答也相同（answer_alike_before）：另一部分不能依它而回应，所以不相救、不相收。定域：这只在时限之前、路由被切断时成立。切断路由的用兵之法、贵贱之分与取胜，属争胜与等级一层，不带入。",
+   "names_used": [],
+   "locator": "九地第十一",
+   "relational": "诸部分之间的路由被切断，则一部分不能依另一部分而回应。",
+   "tradition": "兵",
+   "work": "《孙子·九地》"
+  }
+ ],
+ "drops": [],
+ "passed": [
+  "daqu-yushu-yuxiong",
+  "zhuangzi-youya",
+  "sunzi-shu-sheng-cheng",
+  "shuogua-dieyong-gangrou",
+  "tuan-liuwei-shicheng",
+  "lueli-zhongshi-zhidi",
+  "lueli-chushang-wu-dingwei",
+  "xiaoxiang-weidang",
+  "xiaoxiang-zhongzheng",
+  "xiaoxiang-gen-liuwu",
+  "xiaoxiang-yizhong",
+  "xiaoxiang-chenggang",
+  "tuan-guai-cheng-wugang",
+  "xiaoxiang-cheng-shangdao",
+  "xiaoxiang-gangrou-jie",
+  "tuan-gangzhong-erying",
+  "tuan-bi-shangxia-ying",
+  "lueli-yiyao-weizhu",
+  "lueli-lizhu-dingyi",
+  "lueli-yi-er-ti",
+  "lueli-shibian-xiang",
+  "lueli-tongbian-yingbi",
+  "xici-tonggong-yiwei",
+  "xici-liuyao-xiangza",
+  "xici-wen-budang",
+  "xici-biandong-buju",
+  "xici-guijian-wei",
+  "xici-daishi-erdong",
+  "xici-biantong-qushi",
+  "tuan-sun-yi-yushi",
+  "tuan-gen-shizhi",
+  "wenyan-jiusan-yinshi",
+  "xiaoxiang-qianlong",
+  "xiaoxiang-shangqiong",
+  "wangbi-fu-liuer",
+  "wangbi-fu-liusi",
+  "shuogua-di-chu-zhen",
+  "simafa-rong-bu-xiangru",
+  "jing-jie-buchu-huting",
+  "jinsilu-zhong-yi-ting",
+  "zhongyong-su-qiwei",
+  "zhongyong-qinqin-zhi-sha",
+  "sunzi-qinfu-fa",
+  "lunyu-yan-jizhi",
+  "lunyu-ke-yu-yan",
+  "sunzi-huo-fa-bing-jing",
+  "sunzi-sidi",
+  "sunzi-shi-jie-ji",
+  "laozi-sz-weizhi-yuweiyou",
+  "zhuangzi-hezhe-zhi-fu",
+  "zhongyong-yu-ze-li",
+  "jing-guimei-chiqi",
+  "jing-wuwang-liusan",
+  "zhuangzi-bu-guishou",
+  "sunzi-wu-chengshi",
+  "shangjun-fagu-wuguo",
+  "shangjun-dangshi-lifa",
+  "hanfei-nanshi-shi-yu-ren",
+  "hanfei-nanshi-renshe",
+  "zhuangzi-shanmu-cai-bucai",
+  "zhuangzi-paoding-zhizu",
+  "fahua-fangbian",
+  "jinshizi-shishi-gefa",
+  "zhuangzi-shuqi-shuji",
+  "lueli-bianwei-zunbei",
+  "xunzi-yuzuo-yu-shi"
+ ],
+ "notes": "核查范围：修订者 89 条（88 条 revised，1 条 new）全部核过。改正 23 条，通过 66 条，没有删除的条目。修订者删去 xiaoxiang-guimei-xiangcheng（「相承」与线间之承同形异义），这一删除成立。\n\n核查方法：所有片段都用 ctq.py text 对照冻结文本，全部逐字相符，出处也对。所引全部声明都用 resolve.py 对照最新回执并在 Lean 中 grep 过，都以全名存在，所引记录也都能解析。改正中新加的引文共 122 处，都在冻结文本中逐字核过；YWH-Q 孔疏、YD-CY2 程颐、FO1-S-MMK 观四谛品释、YWH-LB 辩位、MI1-S-JX 經下、FO2-FQ 海印三昧句与「舉一為首，餘則為伴」都有命中。\n\n改正要点：\n（1）shuogua-sancai：「以高度读三才，没有古注支持」不确。孔疏两说并记：先儒以为上下两体各论天地人，与 halves×Height 同构；又有「一、二為地道」的六位之读。「朱熹卷八系辞下注同」无法核：YD-ZX8 虽有文件，但未登记进 model，ctq 查不到，所以改为不引。\n（2）zhonglun：原读把无自性当作无，改用观四谛品释文；同时去掉“相分的一半”之说。\n（3）zhongyong-cuoxing：原读对 RO 所引失实，RO 以 three_courses、level_kept、zip_keeps、no_rule_decides_joint 读并育，以 glues_iff_agree、no_whole 读并行。现恢复 RO 的分配，交换之读另作第二读，并写明其条件。\n（4）huayan：原读讲因果共享关系项之序，却没有引 Interleavings。现补 act_comm、unique_iff，并注明 boundaryInvariant 一条是 RO 对主伴（因陀羅網境界門）的读法。\n（5）hanfei：favouring_locks 的条件原读写错，已按 Lean 改正。Alternating 是逆其所读、迟一步读取的所构之例。\n（6）shuogua-tiandi：oppositions_glue_iff 的成立条件是每一高度都相应，或都不相应（重卦）。\n（7）sunzi 两条：levels_alike_before 只说未被路由所及的条件水平相同；对方所耦合者相同要另引 coupling_alike_before。\n（8）laozi-yusu：never_reads_lost 说的是第 n 步上不能由该律从任何起点得到（Law.Reachable），不是“n 步内”。\n（9）zhuangzi-anshi：Web.change_readings 是定义（Iff.rfl），原读未说明，现改正，并把 ceasing_needs_arising 的计数内容写准确。\n（10）xunzi：性是生之所以然，不是所行。\n（11）lao02：RO 的定域是有界性，原读写成“相对一个划分”，已改正；each_through_other 是所构之例。\n（12）xici-hua-er-cai：名表以此句为「變」（过程）的出处，与本条的粗步之读是两种读法，已注明。\n（13）tuan-bi：补入程颐，虞翻与王弼注两说标为待核。\n（14）mojing：补經下「宇或徙」；mojing、lueli-yishi、wenyan-jishi 三条的 names_used 删去不是为其本概念而用的久和时。\n（15）mengzi-shui-shi：「其势」改为冻结文本的简体字形。\n（16）lueli-gua-shi-yao-bian：原读只靠定义，现补 halves_no_free_frame 一条律作为承载。\n\n所有读法都没有把延续条件当作断言，也没有排序，排序只在 C。\n\n通过条目中的未尽之处（不影响结论）：\n- Lean 文档注释把 odd_above 标为「迭用柔剛」，shuogua-dieyong 则把它归于「分阴分阳」，这是两种 AI 读法之间的分歧，交整合者。\n- zhongyong-qinqin 引了 Flow.withinInfluence_of_withinFeeding，xiaoxiang-chenggang 引了 guiMei_falls，但读法正文都没有提到。\n- 「可回与否可判定时，存在一个机」一句的依据是 Branching.loss_passes_juncture_decided，相关条目没有引它。\n- xici-biantong 对 rule_alike_until_reading 的措辞是近似说法：该定理比较的是两条进程。\n- sunzi-wu-chengshi 所引的 rule_kept 要求规则从不读取。\n\n名的意见：名表以 Law.Commutes 一般地锚定并行不悖，不限于不共享关系项的交换；「時」在王弼处指构形，在文言「及時」中指时限，都不是名表的时（情境）。"
+}

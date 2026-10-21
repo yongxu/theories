@@ -1,0 +1,153 @@
+[
+ {
+  "type": "other",
+  "clusters": [
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C08",
+   "C10",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "C17"
+  ],
+  "detail": "基线漂移（AI 核查）。zhonghua 分支（309af1124）落后于 main（共享检出 d3e25d331）。(1) 17 处锚点在 main 上已失效。其中 12 处用的是 R30 已退役的名字：Web.Returns、ReturnsWithin、Returns.not_consumed、RenewedWithin.returns、Unceasing.regeneration_recurs、generation_draws_in、generation_fed_from_beyond、generation_needs_replenishment、dissipation_generation_not_recurring、Fork.split_unceasing、Learnable.label_of_rests、table_rests。它们牵连 復足、不復足、期、开、转、生生、损、汲、自外来、不息、分／合、当簿。另 5 处在分支上存在、main 上已无：LoopReturn.whole_strengths（现为 whole_factors）、SharedCodes.impose_reads、Web.forms_between、Web.dissolves_between、whole_falls_not_recurring。它们牵连 報、制名、結／解、端。核验人说 impose_reads『不存在』不准确，这些锚点是过时，不是捏造。(2) main 的章节已重排：条件由 §6.15 改为 §6.4；词汇表在 27ebe6735 改写，新增核心术语表，五个词各守一义；§10 元闭一行新增 Becoming.ClosedCapture（读法本身从份额形成时，读法之变也被吸收，离开的是律之变）。(3) AGENTS 与章节今作：排序只在 C（称扩展为更好），不变性一步不排序。brief 中『C 与不变性一步』的说法已过时。",
+  "action": "以 main 的一个固定提交为唯一基线。用 r30-names/RENAME-TABLE.json、r32-folds、r35-corpus 重绑全部锚点，重新核对每个声明全名确实存在。改正所有节号（§6.15→§6.4 等）。按 ClosedCapture 重写 元闭 与 柄移 的结构说明。凡说『排序在 C 与不变性一步』之处一律改为『排序只在 C』，至少包括 brief、C14 的 无弃 条，以及条目 xici-ji-zhi-zhe-shan、lao-62。"
+ },
+ {
+  "type": "other",
+  "clusters": [
+   "C02"
+  ],
+  "detail": "断代标签格式不一：C02 用 经／传／子 加『战国』标注层次，没有用 brief 的六期（先秦、秦汉、魏晋南北朝、隋唐、宋明、清）。按期统计时 C02 显示先秦 0 条，这是假象。",
+  "action": "C02 每条证据补上六期标签，保留经／传／子层次作为第二字段；易传、中庸、庄子外杂篇的断代争议照 brief 注明。"
+ },
+ {
+  "type": "other",
+  "clusters": [
+   "C01",
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C07",
+   "C08",
+   "C09",
+   "C10",
+   "C11",
+   "C12",
+   "C13",
+   "C14",
+   "C15",
+   "C16",
+   "C17"
+  ],
+  "detail": "缺一张跨版本对照表。main 的 .zh.md 词汇表已有现代中文定名，如 生命意义（living significance，词汇表 22 次）、静／停（D45）、生起／止息（D36）、观（view）、读法（reading），各簇的古典名没有与之一一对接。",
+  "action": "建两栏表：古典名 ↔ main zh 词汇表术语，要求一对一；凡一对多或多对一，都归入下面的 collision 条处理。"
+ },
+ {
+  "type": "unmapped-concept",
+  "clusters": [
+   "C01",
+   "C17",
+   "C02"
+  ],
+  "detail": "关系、活动、层级、需要，以及前提 Web.Dependent 都无名。C01 自己的条目里已有 際：「物物者，與物无際。而物有際者，所謂物際者也」（ZH1-S22，庄子·知北遊）。但 C17 拟用 際 指卦的接缝，一字两用。",
+  "action": "在 際（关系，依 知北遊）与 C17 的卦缝之间择一。若 際 定为关系，C17 改用 爻際 或 位際。活动、层级、需要另行定名，避免用 生、息（见 collision 生）。"
+ },
+ {
+  "type": "unmapped-concept",
+  "clusters": [
+   "C02",
+   "C10"
+  ],
+  "detail": "形成者（formation）这一关系项角色与 web 无名。所待 已作条件（relatum role），但与之互补的形成者角色没有对应名；web 也只有 流 一类近名，没有专名。",
+  "action": "形成者定为〈待者〉，条件定为〈所待〉，两者成对，可组合成 所待又有待。web 另立一名，与 流 并列，并注明 流 是 Flow 而非 Web。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C02",
+   "C04",
+   "C17"
+  ],
+  "detail": "交 三义：C02 的 Interacts；Y1 已落地的 Hexagram.meets（泰）；C04 拟用的交换。泰彖「天地交而萬物通也」（YD-HX01）在系统里只能有一个读法。",
+  "action": "交 择一义；建议保留 Y1 已落地的 meets，并核对它与 Interacts 是否同构：同构则合并，不同构则 C02 另选字。C04 的交换另名。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C02",
+   "C10",
+   "C11"
+  ],
+  "detail": "所待 与 所X 标记两用：所待 在 C02 是条件（单步对象），在 C10 是影响闭包。所X 混用于单步对象与闭包；四个闭包用了四种不同形式（所资、所待、所及、群）。",
+  "action": "所X 只指单步对象。闭包用一个统一标记（如〈所X之域〉），四个闭包按此改写。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C04",
+   "C02",
+   "C05",
+   "C15"
+  ],
+  "detail": "止／静／停／足 交错：C04 的 止 混合了 World.RestsFrom 与 Law.rests_iff。足 在 C02、C05 作 support，在 C15 作 enough；supported_iff_admits 是 Iff.rfl，即 support 与 admits 定义相同。",
+  "action": "作一张表一并决定：静 = 不动态（D45）；終止 = World.RestsFrom（序卦「物不可以終止」，YD-OW-XG）；止 不单用；止息（停止）另立字；足 = 需要被满足；support = 被常设层满足（注明与 admits 同义）；enough = 目标在 静 时被满足（C15 另名）。"
+ },
+ {
+  "type": "collision",
+  "clusters": [
+   "C16",
+   "C02"
+  ],
+  "detail": "故 两义：前提标记（C16）与条件之类（C02，依「故，所得而後成也」，MI1-S-JS）。另外 小故／大故 与 無之必不然／有之必然 的对应在两簇中也不一致。",
+  "action": "故 只作前提标记。C16 的名字承载 必要／充分；小故／大故 作墨辩条目，注明与 必要／充分 的对应。C02 的条件之类另名。"
+ },
+ {
+  "type": "coverage",
+  "clusters": [
+   "C02",
+   "C04",
+   "C08",
+   "C10",
+   "C12",
+   "C14",
+   "C16"
+  ],
+  "detail": "有名无条目：持／絕（C02）；流、体（C04）；終而復始（C08）；所资（C10）；傳擇、益之者（C12）；在己、皆顾之活（C14）；律、定理（C16）。",
+  "action": "每名至少一条条目；或注明它由哪些已有条目覆盖。"
+ },
+ {
+  "type": "coverage",
+  "clusters": [
+   "C02",
+   "C03",
+   "C04",
+   "C05",
+   "C06",
+   "C13",
+   "C16",
+   "C17"
+  ],
+  "detail": "传统分布不均。总条目：易 269，儒 233，道 168，庄 102，佛 102，名辩 70，法 59，墨 55，兵 39。兵：C03、C06、C16 没有，C17 只有 8/95。佛：C06、C13 没有，C04、C05、C11、C12、C15 各不多于 3。庄：C04、C05 各 1，C16 只有 2。C02：墨 2，名辩 0。C17：易 占 55%（52/95）。",
+  "action": "定向补充：C02 补墨经『故』（「故，所得而後成也」）；C16 补齐物论与老子；C04、C05 补庄子（秋水、养生主火传、寓言「始卒若環」（ZH1-S27）、則陽）；C06、C13 补佛典；C17 补兵：「其勢險，其節短。勢如彍弩，節如發機」（BI1-S-SZ），联系已采的 机，以及「奇正相生，如循環之無端」；C03、C06 各补一条兵或法的例子。"
+ },
+ {
+  "type": "coverage",
+  "clusters": [
+   "C02",
+   "C04",
+   "C11",
+   "C16"
+  ],
+  "detail": "相分条目分布不均：全体 1,122 条中，相合 573，定域 411，相分 138。C16 1/37、C02 2/83、C04 3/58、C11 3/62 极少；C14 21/71、C13 18/71、C01 17/80 较多。相分少的簇，等于没有检验『它自然就是一元的，关系的，动态的』（Ren，2026-10-19，sources/15-codex-theory-conversations/2026-10-19-zhonghua-edition.md；这是待检的论题，不是前提）。",
+  "action": "在每个相分偏少的簇中，至少逐一检查四个非关系层各一次（本原、固定本性或价值、意志或单一中心、争胜与等级），把真反例记为相分条目，不硬作相合。"
+ }
+]

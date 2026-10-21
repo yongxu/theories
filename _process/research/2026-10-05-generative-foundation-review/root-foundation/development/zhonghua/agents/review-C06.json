@@ -1,0 +1,161 @@
+{
+ "edits": [
+  {
+   "id": "INTRO",
+   "find": "本篇不用顾、方、畛，也不用伦理之二设",
+   "replace": "本篇诸律不用顾、方、畛，也不用伦理之二设",
+   "why": "Read literally, the claim is false. The 說 of 六·二十 gives a reading (D59) in terms of 方 and 所顾, and the 說 of 六·八 points to the 顾 form. Only the laws avoid them."
+  },
+  {
+   "id": "INTRO",
+   "find": "见容只自见容者之与来，在篇二（⟦六·九⟧）",
+   "replace": "得容而需不减者，不可谓与其所待者皆不见容（衡、唯运者与之、有待之下），在篇二（⟦六·九⟧）",
+   "why": "Flow.gains_from_supported is a double negation. It holds only under Balances, Acting, Dependent and Unloosened. 「只自…来」 states it as unconditional and as a positive existence claim."
+  },
+  {
+   "id": "六·一",
+   "find": "，所以积升而所容不减。",
+   "replace": "；跨步则待与需可变，积升不保所容不减（跨步之律见⟦二·二⟧）。",
+   "why": "Web.Admits.mono compares two level assignments at one step, under that step's needs. 升 is a cross-step name, and across a step the requirements and needs can change. So 「积升而所容不减」 does not follow and is false in general. The cross-step law, with its conditions, is in 二·二."
+  },
+  {
+   "id": "六·二",
+   "find": "凡历自赅",
+   "replace": "凡积之历自赅",
+   "why": "In the table, 历 is any sequence of states and moves, and 积之历 is one kind of it. Includes.refl is stated for level paths only, so the universal must be over 积之历."
+  },
+  {
+   "id": "六·三",
+   "find": "互有所长，彼此各有所长也",
+   "replace": "互有所长，此有所长于彼、彼亦有所长于此也",
+   "why": "The 說 of the same 條 says not to use 「各有所长」, because the phrase is late and evaluative (the name-table note says the same). Yet the 經 defined the new name with that very phrase. The new wording is exactly Mixed = Exceeds l l' ∧ Exceeds l' l."
+  },
+  {
+   "id": "五·十五",
+   "find": "凡物于一步剥一所待，而凡待此所待者，其待跨步犹在而需不减：若一积之历于步后容凡待之者，则此历有所长于待网之积；待网之积赅此历，则其步无物剥此所待。",
+   "replace": "于一步，凡待一所待者，其待跨步犹在而需不减，而一积之历于步后容凡待之者：若有物于其步剥此所待，则此历有所长于待网之积；待网之积赅此历，则其步无物剥此所待。",
+   "why": "As drafted, undermining is the governing premise of the whole sentence, so the second clause concludes the negation of its own premise. Now holds and admits are the shared premises. UnderminingOn.exceeded is the first clause (undermining → Exceeds l W.level). Includes.not_undermining is the second (includes W.level l → ¬UnderminingOn), as in Lean."
+  },
+  {
+   "id": "六·四",
+   "find": "余者守之之较止于所及（⟦十五·十五⟧），余者经其感而应之较见⟦NEW-16⟧",
+   "replace": "体外者守其取与之较止于所及（⟦十五·十五⟧），体外者经其感而应之较见⟦NEW-16⟧",
+   "why": "「余者」 sits in a 篇 where 其余 (World.withRest) is used on almost every page, and it would be read as 其余. The same paragraph already calls these 体外者. 「守之」 also had no clear object."
+  },
+  {
+   "id": "六·五",
+   "find": "其体之运皆亡",
+   "replace": "其体皆亡",
+   "why": "In the table, 亡 is predicated of a formation (自某步起永不运; Web.Ends p). The premise of Whole.needs_new is `∀ p, parts p → W.Ends p`."
+  },
+  {
+   "id": "六·八",
+   "find": "早期所说“不损”读作无丧",
+   "replace": "早期所说“不损”（其损非名表之损）读作无丧（⟦十六·一⟧）",
+   "why": "In the table, 损 names 下降, so the early 「不损」 must be marked as a different sense (the earlier draft said so). 无丧 is defined only later, in 十六·一 (rendered 十五·四), so the pointer is needed."
+  },
+  {
+   "id": "六·十一",
+   "find": "或族于其步不封。一族自某步起日新",
+   "replace": "或族于其步不封；一族自某步起日新",
+   "why": "「凡与不过取：」 scoped only its own sentence, so the second law (new_beyond_every) stood without the Gainless hypothesis it needs. With 「；」 the colon's scope carries on."
+  },
+  {
+   "id": "六·十一",
+   "find": "或不封。自 T 起，诸待者各于一步初见容（自 T 以来首见容），其步递增而无尽，",
+   "replace": "或不封；自 T 起，无尽之诸待者各于一步初见容（自 T 以来首见容），后者之步皆晚于前者，",
+   "why": "newly_supported_from_rest_or_open also needs Gainless, so the 「凡与不过取」 scope must reach this sentence too. In the table, 递 names Web.PassesAt, and its note asks that the adverbial 递 in 經 be reworded (as with 「递至」 in C10). 「后者之步皆晚于前者」 is `increasing`, and 「无尽之诸待者」 is f : Nat → F."
+  },
+  {
+   "id": "六·十四",
+   "find": "也不是“活”：其结构由诸律分担。",
+   "replace": "也不是“活”：其结构由诸律分担。經中之递是名表之递（载者跨一步把所载交给次步之载者，⟦三·二十二⟧）之扩用：所递者是后生之所待与生者，不是样式，是 D1 之读，不锚于递之律。",
+   "why": "In the table, 递 is Web.PassesAt (passing a pattern). The 递 note says that 生生's 「保、补、递、创」 is not that sense, and that it should either be declared in the 說 as an extended use or replaced. This takes the first option and keeps the mandated 經 text."
+  },
+  {
+   "id": "六·十四",
+   "find": "无自外来之与时，待者之得容唯由见容者之与（⟦六·九⟧）",
+   "replace": "凡衡、唯运者与之、有待，一待者跨步而得容、其每一待犹在而需不减，则不可谓与其所待者皆不见容（⟦六·九⟧）",
+   "why": "「无自外来之与」 is not a hypothesis of Flow.gains_from_supported. The real ones are Balances, Acting, Dependent and Unloosened, and the conclusion is a double negation, not 「唯由」."
+  },
+  {
+   "id": "六·十四",
+   "find": "其体之运皆亡",
+   "replace": "其体皆亡",
+   "why": "Same as in 六·五: 亡 is a predicate of a formation (Web.Ends), and Whole.needs_arising takes `ends : ∀ p, parts p → W.Ends p`."
+  },
+  {
+   "id": "六·十五",
+   "find": "所以“生尽”只在恒不继之处才可能",
+   "replace": "所以“生尽”只能落在非恒者之上",
+   "why": "继 is a table name (Succession). Web.renewing_keeps_support says a RenewingIn formation is supported at every step, so 「生尽」 can only fall on formations that are not 恒. The new wording says exactly that."
+  },
+  {
+   "id": "六·十六",
+   "find": "则长成之宇沿旧之入而广，恰当某步容一新待者",
+   "replace": "则以每一旧待者读为长成之宇中之其自身，长成之宇沿此读而广，恰当某步容一新待者",
+   "why": "入 is a table name (被吸入, Law.DrawnInto) and cannot also name the inclusion Sum.inl. The new wording states the reading e = Sum.inl directly."
+  },
+  {
+   "id": "六·十六",
+   "find": "沿旧之入广旧宇",
+   "replace": "沿以旧待者读为其自身之读广旧宇",
+   "why": "The same 入 collision, in the 說."
+  },
+  {
+   "id": "六·十六",
+   "find": "以一新所待附一新待者（新待者唯以需 k 待此所待）",
+   "replace": "增一新所待与一新待者（新待者唯以需 k 待此所待）",
+   "why": "附 is a table name (Adheres: 一行附一读). 增 is the plain verb the 經 already uses for this growth (Web.grow with attach)."
+  },
+  {
+   "id": "六·二十",
+   "find": "凡一类之序，含诸正轻重之序而皆合以广为愈者，一历广他历",
+   "replace": "凡一类之序，含诸正轻重之序，而其每序皆上每一广者于其所广者：一历广他历",
+   "why": "以广为愈 is defined only in 十六·六 (rendered 十六·三), later in the outline, so this 經 used a later name. The replacement states Weighting.Increasing directly (every widening ranked above what it widens). The 說 already explains this as 「合以广为愈之序」."
+  },
+  {
+   "id": "六·二十",
+   "find": "权（⟦十六·十三⟧）所衡者即轻重，一衡一所衡",
+   "replace": "权（⟦十六·十三⟧）所权者即轻重",
+   "why": "衡 is a table name (Flow.Balances, used throughout this 篇), so it cannot also mean 'weighs'. 「所权者」 follows the quoted 「權輕重」 exactly."
+  },
+  {
+   "id": "六·二十",
+   "find": "其中有先计所容少者之序（以每一待者所见容之事之数经一严格递增之变换而后相加，`Becoming.Weighting.increasing_prior`）",
+   "replace": "其中有以每一待者所容之事之数经一严格增之变换而后相加之序（`Becoming.Weighting.increasing_prior`，凡所列之事皆属一所列之待者；变换严格凹时，即先计所容少者之序）",
+   "why": "increasing_prior holds for every strictly increasing transform, under the `covers` hypothesis (every listed item belongs to a listed formation). It is a prioritarian order only when the transform is strictly concave (see the docstring of `prior`). The count is of items the path admits (容), not 见容 (supported by the standing levels). This also drops the adverbial 递."
+  },
+  {
+   "id": "六·二十",
+   "find": "从不把有物不见容之历上于无之者",
+   "replace": "从不把有物不容之历上于无此不容之历",
+   "why": "not_widens_of_closes compares arbitrary level paths l and l'. 见容 names Web.Supported, which is admission by the standing levels, so here the right word is 容."
+  },
+  {
+   "id": "DUIZHAO",
+   "find": "相合：需不增时失容只因某所待之积降，需不减时得容只因某所待之积升",
+   "replace": "相合：步后之每一待步首已在而需不增，则失容者不可谓其所待无一降；每一待跨步犹在而需不减，则得容者不可谓其所待无一升",
+   "why": "LosesSupport.falls and GainsSupport.rises conclude double negations (¬∀…¬Falls), not 「只因某所待之积降」. Their premises Untightened and Unloosened also require the dependences to persist, not only the needs to be monotone. The new wording matches the 說 of 六·七."
+  },
+  {
+   "id": "DUIZHAO",
+   "find": "相合：彼此各有所长是互有所长",
+   "replace": "相合：此有所长于彼、彼亦有所长于此，是互有所长",
+   "why": "This matches the corrected definition in the 經 of 六·三 and avoids 「各有所长」, which the 說 of 六·三 rejects."
+  },
+  {
+   "id": "DUIZHAO",
+   "find": "其续之供给者皆不见容者，其运有界而终",
+   "replace": "其续之供给者皆不见容者，其连续运之步数有界",
+   "why": "consumption_ends_with_feeders bounds the number of consecutive active steps from T by the level at T. It does not give Web.Ends. 终 was also dropped as a single-character name (names-dropped: 终 only in compounds)."
+  },
+  {
+   "id": "DUIZHAO",
+   "find": "脊柱中与之者在其与之之步自身见容",
+   "replace": "脊柱中，唯运者与之且有待之处，与之者在其与之之步自身见容",
+   "why": "A giver is supported only under Flow.Acting (only active formations give) together with Web.Dependent (active implies supported). Without them the spine does not say this, and the 相分 must not overclaim."
+  }
+ ],
+ "notes": "I found 26 problems in the rewritten 篇六 and give an exact edit for each. Every find string occurs exactly once in the 條, intro or 对照 it names. No file was edited.\n\n**What checks out as written:**\n- **Quotations:** all 29 「…」〔ID〕 pass `ctq.py text` exactly.\n- **Declarations:** all 107 backticked names are in the newest core receipt (20261021T102032), so nothing is periphery.\n- **Records:** all 18 record links exist.\n- **Cross-references:** every ⟦id⟧ is in book-1-outline and points to the right content. For example ⟦六·九⟧ is 二·六 容之所从来, ⟦十五·十五⟧ is 十五·十八 较止于所及, and ⟦十六·十三⟧ is 十六·九 权与可得.\n- **对照 lines:** every entry and kind matches passages.json. The two lines that had been flagged are fixed.\n- **Instructions:** C06.json's edits are all carried out.\n- **經 against Lean:** I read every 經 against its Lean statement (hypotheses, direction of each iff, witness or law), and all match except the points in the edits. The checks covered:\n  - WithheldLevels, Balances.withheld and withheld_at (whose premise is BalancesOn [c] only);\n  - supported_iff_within_margin(_at) and widens_iff_within_margin(_at);\n  - supported_of_net_give and admits_of_net_draw (non-strict hypotheses, so their contrapositives are strict), and closes/opens/changes_nothing (per-step hypotheses);\n  - rises_within_of_new (steps T..T+N, with the rise at T ≤ t < T+N);\n  - rest_netGiver_iff;\n  - rise_from_rest_or_open, new_beyond_every, newly_supported_from_rest_or_open (RequiresWithin, FirstSupported), and whole_recurs/not_new_of_rest_idle;\n  - includes_of_renewed, narrows_of_consumed and keeps_of_not_arising;\n  - grow_*, attach_widensAlong_iff, IncludesAcross/ExceedsAcross, Bud.bud_adds_nothing, and the Regions laws;\n  - the Weighting laws.\n\n**Main defects:**\n1. The 經 of 五·十五 made undermining its governing premise, so its second clause negated its own premise. The edit restructures it.\n2. In 六·十一, 「凡与不过取：」 scoped only its first sentence. That left new_beyond_every and newly_supported_from_rest_or_open stated without the Gainless hypothesis they need.\n3. 六·一 wrongly inferred 「积升而所容不减」 from Admits.mono, which is a same-step law.\n4. The 說 of 六·十四 named a hypothesis Lean does not have (「无自外来之与」).\n5. The 經 of 六·三 defined 互有所长 with 「各有所长」, the phrase its own 說 rejects.\n6. The 經 of 六·二十 used 以广为愈, which is defined only in 十六·六 (rendered 十六·三).\n7. Several characters were used for a concept other than the one the name table gives them:\n   - 入 for the inclusion Sum.inl;\n   - 附 for attach;\n   - 衡 for 'weighs';\n   - 继 for 'continue';\n   - 余者 beside 其余;\n   - adverbial 递 in a 經.\n8. 递 in the 生生 經 is used outside its table sense. Following the table's own note, the edit declares it in the 說 as an extended use.\n\n**Left for you:**\n- **The 經 of 六·十四 cites ⟦六·十六⟧ and ⟦六·十七⟧ (later 條).** C06.json mandates those citations, so I did not edit them. 「广之所记不尽生生」 already stands as the D1 reading on its own, and the 說 repeats both citations. You may prefer to drop them from the 經.\n- **「与不多于取／与不少于取」 in the 經 of 六·七 and 六·十五.** These per-part, per-step premises sit close to the first-law name 与不过取. They are scoped (体每步于每所待), which the 取过与 note allows, but 「取不少于与」 would remove any risk.\n- **Titles differ from book-1-outline:** 广之界, 日新须益, 沿续而广, 兼与域, 广为诸轻重之所共. They follow the table's notes, so make sure the renderer takes titles from the part and not from the outline.\n- **Still not in the name table** (as the drafter flagged): 见容, 累取／累与, 长成之宇, 芽出, 域外有失. 见容 is already used in 二·二's 經.\n- **「自第二步起」** in 五·十五 and 六·十八 means step index 2. That fits the book's 第零步 usage, though the Lean docstrings say 'step two' (Clearing.undermines_within_renewal) and 'third step' (Clearing.loses_beyond) for the same n+2.\n- **「社会选择论」** in the 說 of 六·二十 is a literature pointer, not a structural name. Remove it if the social-vocabulary ban is meant to be absolute.\n\nThe review copy of the draft is at /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c06/part.json, and my check scripts are in /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c06adv/."
+}

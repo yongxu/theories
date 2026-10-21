@@ -1,0 +1,733 @@
+{
+ "cluster": "C17 时、位、势与情境",
+ "lens": "STRUCTURE（结构）：名之所见义是否与理论概念同构；是否带入独立实体、二元、先在之根、单一中心、等级或评价；概念本身是否说对；与已采之名是否一概念一名。条目：所引声明是否以全名存在并陈述所称之结构；kind 是否对、有无把相分强作相合；读法是否恰为 Lean 所证。核对范围：247 个所引声明全部在 Becoming/ 下存在；171 条引文逐字见于冻结文本；记录 id 全在，并按所绑定的源文件核对；349 条主记录无遗漏、无重复。以下皆为 AI 读法。",
+ "names": [
+  {
+   "concept": "时：共享步序上的一点连同其处之配置，作为诸读法的指标（time; Interleavings 的步序之为读法，Contextual 的指标）",
+   "name": "時",
+   "verdict": "revise",
+   "issues": "概念描述有误。在 Contextual.indexed_fits 中，被指标的是语境 k（在 Hexagram.atSites 中 k 是位），配置 s 是主张被实现之处；「一点连同其处之配置，作为诸读法的指标」把实现之处说成了指标。王弼「卦者，時也」中的卦，在 atSites 里正是配置 Hexagram，不是指标。「时依于进程」只在 Interleavings.LocalLaw 之设下得证，条件是每一交换至少触及一个所列关系项、关系项以有限列表列出；此外的步序是表示所作的承诺（D43）。fit 末句「方向是时依于进程」未带这一条件。名本身可留：四条见证都含「時」，义为诸异之点、一卦之时、依物而有之时，与「一步」相符。",
+   "fix": "概念改为：「时：一列进程中的一步连同其配置（Becoming.Run.state t），诸主张在此被实现；在 LocalLaw 之下（交换皆触及所列关系项，关系项有限列出），共享步序是各关系项自身进程的一种读法（run_of_courses、trace_of_interleavings）」。lean 栏以 Becoming.Run.state 与 trace_of_interleavings 为主；indexed_fits 只作「时可作语境之一种」的旁证，并写明指标是语境、不是配置。fit 末句改为「在 LocalLaw 所设之处，时依于进程」。"
+  },
+  {
+   "concept": "步序：交换与交换之间的先后次序，由各关系项自身进程读出（order of steps; Interleavings.LocalLaw.unique_iff、run_of_courses）",
+   "name": "先後",
+   "verdict": "revise",
+   "issues": "墨經两条（「行脩以久，說在先後」「遠近，脩也；先後，久也」）与 run_of_courses 同构：先后由一个行程读出。但概念所说「由各关系项自身进程读出」只在 LocalLaw 下成立。unique_iff 说的是：自身进程唯一定出交错，恰在所列关系项相连（Connected）之时；概念把它写成无条件的次序。大学「知所先後」所先后者是「物有本末，事有終始」的定序，带入先定的次第（RO 四层中的先在之序），方向与「由进程读出」相反，只是字面见证。",
+   "fix": "概念改为「步序：在 LocalLaw 之下，交换与交换的先后由各关系项自身进程读出；自身进程唯一定出这一步序，恰在所列关系项相连之时（unique_iff）」。以墨經两条为主见证；大学一条注「本末之序为定序，不带」，或移为旁证。"
+  },
+  {
+   "concept": "交错：几个关系项的自身进程合成一列交换（interleaving; Interleavings.LocalLaw.Interleaves）",
+   "name": "錯行",
+   "verdict": "reject",
+   "issues": "中庸「四時之錯行，如日月之代明」中，「錯行」与「代明」对文，义为更迭、轮替。这正是 mapper 自己以「迭」「代」为由不取的结构。四时、日月是一个周期的诸相，不是各有自身进程、其交换合成一列的几个关系项，与 Interleaves 不同构。「錯」在说卦「八卦相錯」及 Lean 文档的錯卦中已名互补（Hexagram.complement），一字两指会在同一体系中相撞。mapper 自定置信度为 low。",
+   "fix": "删去此名。Interleavings.LocalLaw.Interleaves 暂不定古名，交整合者：可用现代复词「交错」并标 coinage=true。若考虑「並行」（中庸「道並行而不相悖」），只能用它名不共享关系项的诸进程之并存（act_comm 的条件），不能名交错本身。zhongyong-cuoxing 的 names_used 同改。"
+  },
+  {
+   "concept": "情境：一步被取于其中的情境；以情境为动作的细律是确定的，忘掉情境即粗律（situation of a step; Situations.finerLaw）",
+   "name": "遇",
+   "verdict": "revise",
+   "issues": "共四处问题。(1) fit 说遇是「所行之外、与所行合而定去向者」，引入行者与外境之分；在 Situations 中，情境是一步被取的整个方式（finerLaw 以情境为细动作，动作在其中），不是行之外者。(2) 系辞「三与五同功而异位，其遇不同：三多凶，五多功，贵贱之等也」中，「遇」是由贵贱之等定出的遭遇，带入等级层；而且「其遇不同」四字只见于冻结的维基文库简体本，通行本此处是否有这四字须对校（AI 未核）。(3) lean 栏与 fit 把 Situations.coarse 称为「粗律」，但 coarse 是进程上的函数（把细进程读成只记动作的粗进程），不是律。(4) 权重计数情境的一面（situations_typical，记录 weights-count-situations）没有任何见证承载。大取「或遇孰，或遇凶」与荀子「节遇谓之命」两条与 finerLaw_determined 同构。",
+   "fix": "fit 改为「遇：一步被取于其中的情境——同一动作在不同情境中所到不同；以情境为细动作的律是确定的（finerLaw_determined），只记动作即得粗进程（coarse）」，删去「所行之外」。删去系辞「其遇不同」一条，或注明等级层与版本问题后降为旁证。「粗律」改为「粗进程」。注明「名只承载情境，不承载计数」。"
+  },
+  {
+   "concept": "位：六画之位，由高度与上下两半合成（place; Hexagram.Place）",
+   "name": "位",
+   "verdict": "keep",
+   "issues": "三条见证（说卦「易六位而成章」、王弼「位者，爻所處之象也」、乾彖「六位時成」）皆为卦中之位，与 Hexagram.Place、heightOf、halves 同构。not_carried 已排除等级之位、处境之位与「天地定位」的方位之位。",
+   "fix": ""
+  },
+  {
+   "concept": "定位：位有定的奇偶——两端之间（二至五）有，初与上无（betweenEnds、fixedPhase；王弼的第二种位的关系）",
+   "name": "定位",
+   "verdict": "revise",
+   "issues": "(1) 概念把 betweenEnds（二至五之位）与 fixedPhase 并列为名之所指。fixedPhase 在二至五给出该位所定之奇偶，在两端给出无；「定位」所名的是这一关系，betweenEnds 只是它有值之处。(2) 三条见证中只有王弼「無陰陽定位」含「定位」：「無陰陽本位」是同义异字；文言「贵而无位」不含「定位」，脉络节点 OW-N039 读作社会之位，与等级相杂。(3) 先秦已有说卦「天地定位」，义为方位之定，比王弼义更早，单用「定位」二字易被读成那一义。pre_qin=false 正确。",
+   "fix": "概念改为「定位：一位有所定之奇偶（fixedPhase）——在两端之间（betweenEnds，二至五）有，在初、上无（fixedPhase_end）」。名改用王弼全语「陰陽定位」（有陰陽定位／無陰陽定位），或至少在名表注明不取说卦「天地定位」之义。「贵而无位」移出名之见证，只作 HexagramSites 中 topStatements 的结构旁证，并注明等级层。"
+  },
+  {
+   "concept": "当位：线在两端之间且正（holdsPlace = betweenEnds ∧ inPhase）",
+   "name": "當位",
+   "verdict": "keep",
+   "issues": "需上六「雖不當位」之线阴居六，inPhase 为真而仍不当位，正支持 holdsPlace 的读法而不是 inPhase 的读法；未济彖「雖不當位」两读皆通。名与概念相符（D53）。另：Lean 中 HexagramPlaces 的文档把 inPhase 也标作「正, 當位」，与本名所指的 holdsPlace 一名两指。",
+   "fix": "名留。交整合者把 HexagramPlaces 中 inPhase 文档的「當位」去掉、只留「正」，使「當位」只指 holdsPlace（只改文档，不改声明）。"
+  },
+  {
+   "concept": "正：线之阴阳与位之奇偶相合，六位皆论（inPhase，第一种关系）",
+   "name": "正",
+   "verdict": "revise",
+   "issues": "未济九二小象「九二贞吉，中以行正也」（HX-R063）之线阳居二，不正（inPhase 为假）。「正」在此是行之正，不是线与位之奇偶相合，作为 inPhase 的见证是错的。易中的「正」常带正面评价（贞、吉），not_carried 须排除。其余两条（既济彖「剛柔正而位當也」、需九五「以中正也」）同构。",
+   "fix": "删去 HX-R063 一条，换为履九五小象「夬履貞厲，位正當也」（YD-JP10，九五阳居五，正）。not_carried 加「正作行之正、贞正、吉的评价义」。"
+  },
+  {
+   "concept": "中位：二与五，各居上下两半之中（Hexagram.middle）",
+   "name": "中位",
+   "verdict": "keep",
+   "issues": "概念与 Hexagram.middle 精确相合。复词「中位」只见于王弼（「既處中位」）；小象两条是「位中」「以中」，所以 pre_qin=false 正确。王弼句的「親仁善鄰」带评价，不带。",
+   "fix": "可选：注明小象两条是「中」的见证，复词出于王弼。"
+  },
+  {
+   "concept": "应：同一高度上下两半之线相异（opposed；相同则为敌应）",
+   "name": "應",
+   "verdict": "revise",
+   "issues": "概念与见证同构（未济彖「剛柔應也」、艮彖「上下敵應」、师彖「剛中而應」）。但单字「應」在已采体系中另有所指：Ren 的「开」四标之「应」（读作 ExchangeLaw.RespondsTo）、词表的「经耦合而应」（Flow.RespondsThroughCoupling）、本簇「上下應」所用的宽义，以及感应之应。not_carried 只排除了回应、感应等义，没有处理与已采之名的冲突；一字多指，违反一概念一名。",
+   "fix": "名改为复词「剛柔應」（未济彖「雖不當位，剛柔應也」，易传，先秦至秦汉），相同者为「敵應」（艮彖「上下敵應，不相與也」）。单字「應」留给已采之义。"
+  },
+  {
+   "concept": "比：相邻两线相异（alternates；一般相异关系 answers 在一条接缝两侧的情形）",
+   "name": "比",
+   "verdict": "revise",
+   "issues": "概念与 Hexagram.alternates 同构，但「比」与已采的「比较」（比较 C）同字，而比卦之比是亲附、下顺从（单一中心）。not_carried 虽已排除这两义，名表中一个核心比较仍与之同字。三条见证皆非先秦（pre_qin=false），程颐「以昵比相親」带亲疏评价。先秦已有确切复词：蒙九二小象「剛柔接也」。",
+   "fix": "名改为「剛柔接」（蒙九二小象「子克家，剛柔接也」，YD-JP04，易传，先秦至秦汉；xiaoxiang-gangrou-jie 已核其线：九二阳，初六、六三皆阴）。这一复词把「相邻而相异」明写。「比」只作王弼用语的旁证。"
+  },
+  {
+   "concept": "承：一缝之下线阴、上线阳（rises）",
+   "name": "承",
+   "verdict": "keep",
+   "issues": "节六四小象「承上道也」：六四阴、九五阳，正是 s45 上的 rises。王弼「承乘者，逆順之象也」把承读作顺，带顺从与等级。巽彖「柔皆順乎剛」不含「承」字，只是结构旁证。词表已采「承担」（Bearing），同字。",
+   "fix": "名留。把「柔皆順乎剛」移为结构旁证；not_carried 加「承作顺从、奉承之义」；名表注「承不同于承担」。"
+  },
+  {
+   "concept": "乘：一缝之下线阳、上线阴（falls）",
+   "name": "乘",
+   "verdict": "revise",
+   "issues": "概念与 falls 同构，小象「乘剛也」五处皆是。但单字「乘」在本簇自相撞：孙子「乘人之不及」（乘作趁）被列为名「及」的见证；「時乘六龍」与「乘勢」之乘是驾、趁；RelativePosition 的 n·a 也须说乘。not_carried 已排除这些义，但同一簇内同字两读仍会混淆。王弼「承乘者，逆順之象也」带逆（等级）。",
+   "fix": "名改为复词「乘剛」（屯六二、豫六五、噬嗑六二、困六三、震六二小象「乘剛也」，并归妹彖「柔乘剛」、夬彖「柔乘五剛」），单字「乘」不入名表。"
+  },
+  {
+   "concept": "独异之线：一线与其余五线各各相异，为其余五线所应（sole；仅一阳或五阳之卦有之）",
+   "name": "上下應",
+   "verdict": "keep",
+   "issues": "比彖「上下應也」与大有彖「大中而上下應之」两处易传逐字即 sole_answered：一线与其余五线各异，为其所应。程颐一条只见「剛應」「眾應」，不是此名的见证。此名用「應」之宽义（众线应一线），与 opposed 之窄义不同；若名「應」改为「剛柔應」，二者不再相撞。",
+   "fix": "名留；程颐一条移为结构旁证。"
+  },
+  {
+   "concept": "相对位置：一部分之量对其余之量而读，全族领先与落后之数相等（relative position; RelativePosition）",
+   "name": "稱",
+   "verdict": "revise",
+   "issues": "孙子「以鎰稱銖」是两量相权（大小之比）。相对位置之律（positions_balance、change_opposed、rise_needs_fall）说的是全族领先与落后相等、一升须一降，是零和结构；「稱」只承载相对读取，不承载零和。「稱」又与称呼命名之稱、荀子「德必稱位」（等级）、「稱生勝」（竞争）同字。老子「高下相倾」恰说一方之高即他方之下；而 lao02-gaoxia-qianhou 的 names_used 列「稱」，文中实无此字。",
+   "fix": "名改为候选「高下相傾」或「相傾」（老子第二章，先秦），须核其义为「一方之高即他方之下」，而不是相生。「稱」只留作两量相权的旁证。lao02-gaoxia-qianhou 的 names_used 改为所采之名。"
+  },
+  {
+   "concept": "规则读取所处之配置而变：规则只在读取之步改变，变所依者是当时快层所示（Pace.rule_at_reading、Switching.changing_regains）",
+   "name": "變通",
+   "verdict": "revise",
+   "issues": "系辞「变通莫大乎四时」说四时循环，是一层的周期，不是规则在读取之步依快层所示而变（rule_at_reading），与 Pace 的两层结构不同构。「变通者，趣时者也」与韩康伯「適變之道」同构。",
+   "fix": "删去「变通莫大乎四时」一条，加系辞上「推而行之谓之通」（DS02，与「化而裁之谓之变」连读）为见证。概念不改。"
+  },
+  {
+   "concept": "步速：快慢两层的相对速度；规则须持得够长（L ≥ 2N − 1）才固定它所生成的进程（pace; Pace.pace_law、dissolving）",
+   "name": "遲速",
+   "verdict": "reject",
+   "issues": "两条见证中的迟速，都是快层（舞者、马）随规则（乐、御者）行进的快慢，不是规则的变化率相对于快层。pace_law 说一段长 L 的步能定下所持规则生成的每一至多 N 状态之进程，恰在 L ≥ 2N − 1；这一阈值结构没有见证承载。概念中「固定」应作「定下（可辨）」。杂阿含「隨御者心」带入意志中心。mapper 自定置信度为 low。",
+   "fix": "删去此名。候选「節」（孙子「其節短」「節如發機」：两节点之间的一段，可读作两次读取之间规则所持之段），须另核其义与 2N − 1 之段的关系后再定。概念中「固定」改为「定下（可辨）」。"
+  },
+  {
+   "concept": "机：从一处有一步之后所护者仍可再得、有一步之后不可再得（juncture; Branching.Juncture、juncture_iff）——已采之名（D52）",
+   "name": "機",
+   "verdict": "keep",
+   "issues": "D52 已采。孙子「節如發機」、系辞「樞機之發」两条含「機」，义为一发而不可复之处，与 juncture_iff 同构。第三条「疾戰則存，不疾戰則亡者，為死地」无「機」字，是结构旁证，不是名之见证。系辞「榮辱之主」带评价，不带。",
+   "fix": "名留；「死地」一条移为结构旁证（sunzi-sidi 已载）。"
+  },
+  {
+   "concept": "到达：到时限 T 为止，有一条路由从来源进入耦合到读者之物（ReachedBy；回应有所不同须先到达）",
+   "name": "及",
+   "verdict": "revise",
+   "issues": "TimedResponse.ReachedBy 是：到 T 为止，有一条经耦合回应的路由（Spread）从来源进入耦合到读者之物。结构上它是已采「回应所及」（Flow.WithinResponse）的限时之形。单字「及」与词表的「所及」（Flow.WithinReach）、「部分所及」（Flow.Reaches、ReachesBefore）、「回应所及」同族而另立一名，违反一概念一名；ReachedBy 与 WithinResponse 限于 T 的关系也未证。见证方面：文言「欲及时也」是行者赶及时限，方向与「来源及于读者」相反；孙子「乘人之不及」与本簇名「乘」相撞；「及」又是连词。mapper 曾考虑的「及期」在冻结语料中只见庄子「及期年也」一处，无此义。",
+   "fix": "不另立单字名，在已采「所及」一族中命名 ReachedBy，例如「T 前之回应所及」，由整合者定，并注明 ReachedBy 保留交换次序、与 WithinResponse 的关系未证。见证留论语「言未及之而言」「言及之而不言」；「欲及时也」移入窗口概念（见 missing）。"
+  },
+  {
+   "concept": "视界：一个读法所有的有限前缀；前缀不决定其后（finite horizon; Run.AgreeUpTo、HorizonWebs.prefix_does_not_decide）",
+   "name": "涯",
+   "verdict": "revise",
+   "issues": "C05 以「初」名同一概念（有限前段，Run.AgreeUpTo），而「初」在本簇是初爻之位（王弼「初上者」），造成一概念两名、「初」一名两指。庄子「以有涯隨无涯，殆已」的结构是有限者追随不止之展开而不能及，最近的检验律是 Diagonal.Unfolds.unheld（有限的读法之储不能持住展开族所漏者）；Run.AgreeUpTo 只是定义，HorizonWebs.prefix_does_not_decide 只是某一支持门控律中对每一视界的例子。mapper 自定置信度为 low。",
+   "fix": "与 C05 合一：视界之界 h 用「涯」，前段用「涯内」或「有涯之前段」，「初」只留给初爻。lean 栏加 Becoming.Diagonal.Unfolds.unheld（记录 readings-within-what-they-read），prefix_does_not_decide 标为「例」。"
+  }
+ ],
+ "entries": [
+  {
+   "id": "mojing-xianhou-jiu",
+   "verdict": "keep",
+   "issues": "引文、声明、记录俱核。先後由一个行程读出，与 run_of_courses、trace_of_interleavings 同向；reading 已注「一行者、无多进程之交错」为所余。四条律都在 LocalLaw 之设下。",
+   "fix": "可选：reading 末加「以上皆在 LocalLaw 之设下（交换触及所列关系项，有限列出）」。"
+  },
+  {
+   "id": "zhongyong-cuoxing",
+   "verdict": "revise",
+   "issues": "reading 说「脊柱无条件给出其中一半」，这是错的：run_of_courses、act_comm、unique_iff 都在 LocalLaw 之下（交换触及所列关系项、关系项有限列出），act_comm 还要求两次交换不共享关系项。「錯行」与「代明」对文，义为更迭；四时、日月是一个周期的诸相，不是各有自身进程的关系项，所以 Interleavings 三条在此只是词面相连（见名「錯行」）。「道並行而不相悖」一半的定域（Viability.ChoicePoint.no_rule_decides_joint、Specker.no_whole 等）沿用 RO，正确。",
+   "fix": "删去 Interleavings.LocalLaw.act_comm、run_of_courses、unique_iff 及记录 the-step-index-from-own-courses；或只把 act_comm 系于「並行而不相悖」，并写明条件：不共享关系项的交换可交换，共享者次序有别（见 sunzi-qinfu-fa 的 gap）。删去「无条件」一语。kind 保持 scope。"
+  },
+  {
+   "id": "daqu-yushu-yuxiong",
+   "verdict": "keep",
+   "issues": "同一所行（事亲）因所遇（孰、凶）而得不同，与 finerLaw_determined、coarse 同构；gap 正确指出 Confound.misattributes 只是单例。「外埶無能厚吾利者」的利害评价未带入。",
+   "fix": ""
+  },
+  {
+   "id": "xunzi-jieyu-ming",
+   "verdict": "keep",
+   "issues": "「节遇谓之命」以一时所遇定命，命不作先在之天命，与 finerLaw 的情境同构。situations_typical 承载的计数一面，引文本身不说，reading 只能作为脊柱补出。",
+   "fix": ""
+  },
+  {
+   "id": "zhonglun-guanshi",
+   "verdict": "revise",
+   "issues": "(1) 第二片段「因物生故則名時，若離物則無時」是青目的释（长行），不是龙树颂；层次栏只写龙树原论与罗什译，未分颂与释。(2) 「时依物」对应 Interleavings 只在 LocalLaw 之下成立，此外步序是表示的承诺（D43），reading 未写。(3) 下文「物尚無所有，何況當有時」以物无自性而否定时；脊柱的配置与步不因此而无，这一半不被映射承载。kind 作 scope 合适。",
+   "fix": "层次栏改为「颂：龙树（梵本 MMK 第十九品）；释：青目（长行）；姚秦鸠摩罗什译」，并标第二片段为释。reading 加 LocalLaw 条件与 D43。写明「物尚無所有」的无自性义是所余，不由此条承载。"
+  },
+  {
+   "id": "zhuangzi-youya",
+   "verdict": "revise",
+   "issues": "「以有涯隨无涯，殆已」的结构是有限者追随不止之展开而不能及。最近的检验律是 Diagonal.Unfolds.unheld，未列。所列声明中，Run.AgreeUpTo 是定义，HorizonWebs.prefix_does_not_decide 是某一支持门控律中的例子，Learning.no_prefix_fixes_next 与 diagonal_misses 承载「前缀不定其后」。「殆」是评价，不带。",
+   "fix": "加 Becoming.Diagonal.Unfolds.unheld 与记录 readings-within-what-they-read，把 prefix_does_not_decide 标为「例」。若不加 unheld，kind 改为 scope。"
+  },
+  {
+   "id": "sunzi-shu-sheng-cheng",
+   "verdict": "keep",
+   "issues": "度量数称胜之链与相对位置的计数律相应；kind 作 scope 正确，因为 race_ends_greatest 只在所设条件下给出领先者终为最大。「稱生勝」的胜负是竞争层，不带。",
+   "fix": ""
+  },
+  {
+   "id": "hanfei-gufen-shi",
+   "verdict": "keep",
+   "issues": "「勢不兩存」与 change_opposed（一升须一降）同构；RuleCapture.Alternating.never_locked 给出不锁定的范围，所以 kind 作 scope 合适。法術之士与當塗之人之争是竞争层，不带。",
+   "fix": ""
+  },
+  {
+   "id": "lao02-gaoxia-qianhou",
+   "verdict": "keep",
+   "issues": "与 RO lao-02 一致。「高下相倾」恰是 positions_balance 的零和结构，「前后相随」只引已有读法。names_used 列「稱」，但文中无此字。",
+   "fix": "names_used 中「稱」改为所采之名（见名「稱」的修改）。"
+  },
+  {
+   "id": "shuogua-sancai-liuhua",
+   "verdict": "revise",
+   "issues": "说卦上文「立天之道，曰陰與陽；立地之道，曰柔與剛；立人之道，曰仁與義。兼三才而兩之」：每才有两面，所以「兩之」更近带的读法（初二、三四、五上各一带）；而带在脊柱中尚无定义（gap 自承）。以 Height 与 halves 映射为 agreement，是把一种可能读法当成了文本的结构。「將以順性命之理」的性命之理也须不带。",
+   "fix": "kind 改为 scope；或把相合限于「六畫」，即六位由二与三合成，如 Y1（hexagrams-on-the-spine）所取。reading 写明：上文使「兩之」近于每才两位之带，高度×两半是另一读法。保留 gap（定义三才之带）。"
+  },
+  {
+   "id": "shuogua-dieyong-gangrou",
+   "verdict": "keep",
+   "issues": "「分陰分陽，迭用柔剛」：位之奇偶交替（odd、odd_above），inPhase_all_iff 与 alternates_all_iff 承载；相合正确。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-liuwei-shicheng",
+   "verdict": "keep",
+   "issues": "六位随消息之卦依次而成（line_waxWane_above、inPhase_waxWane_above、phase_qian_orbit）；kind 作 scope 合适。「時成」不带「合时为善」。",
+   "fix": ""
+  },
+  {
+   "id": "lueli-zhongshi-zhidi",
+   "verdict": "keep",
+   "issues": "王弼以两端为终始之地，与 betweenEnds、fixedPhase_end、sole_top_passes 同构（D53）。",
+   "fix": ""
+  },
+  {
+   "id": "lueli-chushang-wu-dingwei",
+   "verdict": "keep",
+   "issues": "「無陰陽定位」逐字即 fixedPhase 在两端为无；holdsPlace_iff 与 placeStatements_between 承载。",
+   "fix": ""
+  },
+  {
+   "id": "xiaoxiang-xu-shangliu",
+   "verdict": "keep",
+   "issues": "需上六阴居六：inPhase 为真而无定位（xu_top_inPhase、xu_top_no_place），「不當位」恰是 holdsPlace 为假，即 D53 的第二种关系，结构精确。",
+   "fix": ""
+  },
+  {
+   "id": "xiaoxiang-weidang",
+   "verdict": "keep",
+   "issues": "履六三阴居三而不正，由 placeStatements_agree 承载；gap（恒九四、涣九五补入，噬嗑六五不入列）合理。另：贲六四 (22, .p4, true) 已在 Lean 列表中，本簇却未列为平行（见 missing）。",
+   "fix": ""
+  },
+  {
+   "id": "xiaoxiang-zhongzheng",
+   "verdict": "keep",
+   "issues": "需九五阳居五，中且正，与 centreStatements_agree 同构；gap（彖之「中正」普查）合理。",
+   "fix": ""
+  },
+  {
+   "id": "xiaoxiang-gen-liuwu",
+   "verdict": "keep",
+   "issues": "艮六五阴居五而不正，小象却称「中正」；gen_fifth_out_of_phase 证其不正，这是小象用字与 inPhase 的真实反例。记为 divergence（冲突结构）合适，没有强作相合。",
+   "fix": ""
+  },
+  {
+   "id": "xiaoxiang-yizhong",
+   "verdict": "keep",
+   "issues": "大壮九二「以中也」在中位；middle 与 lineTextMiddle_places 承载；gap 普查方案合适。",
+   "fix": ""
+  },
+  {
+   "id": "xiaoxiang-chenggang",
+   "verdict": "keep",
+   "issues": "屯六二阴、初九阳：s12 下阳上阴即 falls，由 fallStatements_agree 承载；「難」是占断，不带。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-guai-cheng-wugang",
+   "verdict": "keep",
+   "issues": "夬上六一阴乘五阳：s56 为 falls，且为唯一之线（guai_sole），结构精确。",
+   "fix": ""
+  },
+  {
+   "id": "xiaoxiang-cheng-shangdao",
+   "verdict": "keep",
+   "issues": "节六四阴、九五阳：s45 为 rises，同构。gap 中把归妹初九「相承也」列为「例外」，宜改为「不入列」（见 xiaoxiang-guimei-xiangcheng）。",
+   "fix": "gap 中把归妹初九由「例外」改为「同形异义，不入列」。"
+  },
+  {
+   "id": "xiaoxiang-guimei-xiangcheng",
+   "verdict": "reject",
+   "issues": "归妹初九「跛能履吉，相承也」中的「相承」是娣辅助、相助之义（同形异义），不是线与线之间的承，也不是与 rises 冲突的结构。作为 divergence，是把同形词当成冲突结构。",
+   "fix": "移入 rejected，理由写「同形异义：相承为相助，非线间之承」；在 xiaoxiang-cheng-shangdao 的普查 gap 中改列为不入列。"
+  },
+  {
+   "id": "xiaoxiang-gangrou-jie",
+   "verdict": "keep",
+   "issues": "蒙九二阳，初六、六三皆阴：两侧都是 alternates；「剛柔接」是 alternates 的确切先秦复词（见名「比」的修改）。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-gangzhong-erying",
+   "verdict": "keep",
+   "issues": "师九二阳居中位而应六五，由 middleUnbrokenOpposed 与 middleOppositionStatements_agree 承载；「毒天下而民從之」不带。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-weiji-gangrou-ying",
+   "verdict": "keep",
+   "issues": "opposed_iff_phase 使「雖」所示的转折成为必然（六线皆不正，必然各高度皆应）；kind 作 scope 的读法正确。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-jiji-zhengwei",
+   "verdict": "keep",
+   "issues": "既济六线皆正（jiJi_inPhase、inPhase_all_iff），phases_glue_iff 承载拼合；相合。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-dangwei-yijie",
+   "verdict": "keep",
+   "issues": "节九五 holdsPlace，由 tuanPlaceStatements_agree 承载；相合。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-bi-shangxia-ying",
+   "verdict": "keep",
+   "issues": "比九五为唯一阳线：sole、sole_answered 精确；「不寧方來」不带。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-dayou-zunwei",
+   "verdict": "keep",
+   "issues": "大有六五为唯一阴线，在中位而不正：sole 与 middle 相合；「尊位」是等级层，归为 divergence 正确。",
+   "fix": ""
+  },
+  {
+   "id": "lueli-yiyao-weizhu",
+   "verdict": "keep",
+   "issues": "「一陰為之主」即 sole（D53：主只作此关系），soleAny_count 计数正确。",
+   "fix": ""
+  },
+  {
+   "id": "lueli-lizhu-dingyi",
+   "verdict": "keep",
+   "issues": "「立主以定」把主立为定全卦者（单一中心）；none_sole、feng_no_sole 证许多卦无唯一之线，主不能普遍成立。divergence 正确。",
+   "fix": ""
+  },
+  {
+   "id": "lueli-yi-er-ti",
+   "verdict": "keep",
+   "issues": "无独异之线时举二体（halves）；kind 作 scope，由 feng_no_sole 等承载。",
+   "fix": ""
+  },
+  {
+   "id": "lueli-shibian-xiang",
+   "verdict": "keep",
+   "issues": "六种象各有声明对应；kind 作 scope 合适。「承乘者，逆順之象也」的逆顺（等级、顺从）与「同誌」的意向须写明不带。",
+   "fix": "可选：reading 明标「逆順」「同誌」不带。"
+  },
+  {
+   "id": "lueli-tongbian-yingbi",
+   "verdict": "keep",
+   "issues": "「近不必比，遠不必乖」：相邻不必相异、相隔不必相背，alternates 与 opposed 各是其关系，不由距离决定；「同聲相應」由 goAlike_iff_lumped 承载。kind 作 scope 合适。",
+   "fix": ""
+  },
+  {
+   "id": "xici-tonggong-yiwei",
+   "verdict": "revise",
+   "issues": "奇偶相同、高度与中位不同的分解正确。但「近也」所近的是五，五为君位：四近五而多惧，这一距离的意义来自尊位，属等级层；reading 只把「近五」写成 Seam 上的位置，未标明这一层。「誉、惧」是评价，不带。",
+   "fix": "reading 加一句：「「近」指近五，五为尊位，其多惧之义出于等级层，不带入；结构上只取 p4 与 p5 相邻」。"
+  },
+  {
+   "id": "xici-liuyao-xiangza",
+   "verdict": "keep",
+   "issues": "「六爻相杂，唯其时物也」：每线在其位与卦中读，halves_indexed、atSites_glues_iff 承载；相合。",
+   "fix": ""
+  },
+  {
+   "id": "xici-wen-budang",
+   "verdict": "revise",
+   "issues": "inPhase 部分正确；「吉凶生焉」把评价由不当直接生出，是固定价值层，归为 divergence 合适。但 Web.significance_undetermined 属记录 continuation-condition-yields-living-significance，records 未列。",
+   "fix": "records 加 continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "xici-biandong-buju",
+   "verdict": "keep",
+   "issues": "「不可为典要，唯变所适」：no_prefix_fixes_next 与 fitsFree_iff 承载；run_six_steps 承载「周流六虚」。相合可立。",
+   "fix": ""
+  },
+  {
+   "id": "xici-guijian-wei",
+   "verdict": "revise",
+   "issues": "「列贵贱者存乎位」是等级层，归为 divergence 正确。但 holdsPlace 在 HexagramSites 中（记录 fixed-places-and-sole-lines），Web.significance_undetermined 属 continuation-condition-yields-living-significance，records 只列了 place-relations-in-context。",
+   "fix": "records 加 fixed-places-and-sole-lines 与 continuation-condition-yields-living-significance。"
+  },
+  {
+   "id": "xici-hua-er-cai",
+   "verdict": "revise",
+   "issues": "reading 说「把连续的化截成段」：span、Flow.sample 讲的是离散的细步合成粗步（laws-at-coarser-steps），化是细步之列，不是连续。其余（不可逆合成，Cancelling.coarse_not_fine）正确。",
+   "fix": "「连续的化」改为「细步之化（离散）」。若要说连续，另引连续时间作塔的记录，并写明它是塔，不是连续统。"
+  },
+  {
+   "id": "xici-daishi-erdong",
+   "verdict": "keep",
+   "issues": "写明了「待」只在护持之处无损、回应不同须先到达（路由可判定时）；kind 作 scope 合适。",
+   "fix": ""
+  },
+  {
+   "id": "xici-biantong-qushi",
+   "verdict": "keep",
+   "issues": "与 RO xici-biantong-qushi 一致；rule_at_reading、changing_regains 同构。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-sun-yi-yushi",
+   "verdict": "revise",
+   "issues": "reading 说「何时损、何时益由所处之配置而定」，这无证，且与 RO tuan-sun-yi 的「哪一端该增减取决于步」不同。World.exchange_step_iff 与 Flow.Balances.rise_given、fall_taken 只说每一步的损益是该步交换的两端，不说配置决定何时损益。",
+   "fix": "该句改为：「每一步的损与益是这一步交换的两端（World.exchange_step_iff、Flow.Balances.rise_given、fall_taken）；哪一端增减取决于步（沿用 RO）」。「與時」只读作「在各步上」，不带「合时为宜」。"
+  },
+  {
+   "id": "tuan-gen-shizhi",
+   "verdict": "revise",
+   "issues": "World.rests_unrefuted_enclosed 有条件：Counted、Embodied、Balanced、Dissipative，并且自某步 T 起每步围住（Enclosed）；结论是「自某步起静止」不可被驳（双重否定），不是「静止」。reading 未写这些。只有「時止則止」一半被映射，「時行則行」一半未映射。Law.rests_iff 是 Seeking 中「止」的刻画。",
+   "fix": "reading 写出 rests_unrefuted_enclosed 的五个条件与双重否定的结论；「時行則行」一半标为未映射，或系于 Branching.juncture_iff 并注明依 G9。若不补，kind 改为 scope。"
+  },
+  {
+   "id": "lueli-gua-shi-yao-bian",
+   "verdict": "revise",
+   "issues": "reading 说「一个配置就是一个时，是诸读法的指标」「配置本身作为读法的指标」，这是错位。在 Hexagram.atSites 中，配置 Hexagram 是诸位之关系被实现之处，指标是位 K（atSites_indexed）；indexed_fits 说的是：带指标的框架在配置 s 处实现 (k, c, b)，恰在 c 属于 k、且 k 在 s 处示 b 之时。atSites_indexed 在 HexagramPlaces 中，records 未列其记录。",
+   "fix": "reading 改为：「卦作为一时，是诸位之读法同时被实现的那一配置；指标是位；一线之变（flip）是从这一配置出发的一步（changes）」。records 加 place-relations-in-context。"
+  },
+  {
+   "id": "lueli-yishi-zhizhi-kefan",
+   "verdict": "revise",
+   "issues": "Contextual.no_free_frame 需要 Local、NoGlobal 与 Respects 三个前提，文本与 reading 都没有给出。文本所示只是同一制在不同时示相反之值，即两个语境在同一主张上不一致；由 Glues.agree 的逆否可知该配置处不拼合，再由 fitsFree_iff 可知没有不带指标的框架。",
+   "fix": "把 Contextual.no_free_frame 换为 Becoming.Contextual.fitsFree_iff 与 Becoming.Contextual.Glues.agree，并写明 fitsFree_iff 需要每一主张有一个所属语境（home、covers）。"
+  },
+  {
+   "id": "wenyan-jishi",
+   "verdict": "revise",
+   "issues": "「欲及时也」是行者（君子）赶及时限；ReachedBy 是来源经耦合到达读者，二者方向不同，reading 没有指出谁是来源、谁是读者。「在时限之内到达」作为窗口义（到达在机之前），是 G9，尚未证。",
+   "fix": "reading 写明来源与读者各为何物；若做不到，注明本条依赖 G9（窗口：到达之后、机过之前，未证），kind 保持 scope。"
+  },
+  {
+   "id": "wenyan-jiusan-yinshi",
+   "verdict": "revise",
+   "issues": "middle、halves、Seam 与 betweenEnds 的读法正确（九三不中、在两半之交）。但 betweenEnds 在 HexagramSites 中，records 只列了 place-relations-in-context。",
+   "fix": "records 加 fixed-places-and-sole-lines。"
+  },
+  {
+   "id": "xiaoxiang-qianlong",
+   "verdict": "keep",
+   "issues": "乾初九「陽在下也」：初为 fixedPhase_end；kind 作 scope 合适，「勿用」不带。",
+   "fix": ""
+  },
+  {
+   "id": "xiaoxiang-shangqiong",
+   "verdict": "revise",
+   "issues": "比被放在两类：gap 把比彖「其道窮也」列入「全卦一类，不入此普查」，而 parallels 中 TP-H08-T-R05 又作为本条（线一类）的平行，并注「指上六」。",
+   "fix": "二者择一。建议按 parallels 之注（後夫指上六）留在线一类，从 gap 的全卦一类中删去「比」，并注明普查也包括指一线的彖句。"
+  },
+  {
+   "id": "wangbi-fu-liuer",
+   "verdict": "keep",
+   "issues": "复六二阴居二，正且中（holdsPlace、middle），在初九之上（falls）、与初相邻而异（alternates），结构精确；「親仁善鄰」不带。",
+   "fix": ""
+  },
+  {
+   "id": "wangbi-fu-liusi",
+   "verdict": "keep",
+   "issues": "复六四上下各二阴，居其中（lineTextMiddle），得位且应初（opposed）；kind 作 scope 合适，因「中行」不是中位。",
+   "fix": ""
+  },
+  {
+   "id": "shuogua-tiandi-dingwei",
+   "verdict": "keep",
+   "issues": "与 RO 一致：第三章四对皆互补（Trigram.opposite_stations）。注意此处「定位」是方位之定，与名「定位」不同义（见名「定位」）。",
+   "fix": ""
+  },
+  {
+   "id": "shuogua-shuwang-zhilai",
+   "verdict": "keep",
+   "issues": "「數往者順，知來者逆」：已往可读、将来不由前缀定（no_prefix_fixes_next）；kind 作 scope 合适。",
+   "fix": ""
+  },
+  {
+   "id": "shuogua-di-chu-zhen",
+   "verdict": "revise",
+   "issues": "reading 说「帝」是一个行于诸位之上的单一中心。RO shuogua-di-chu-zhen 明言传文自己把「帝」解为万物之出，「帝出」不应读成意志之主；RO 的相分只落在这一循环是指派之序，不由组态关系导出（stations_not_commutes、stations_not_rules）。C17 的读法与 RO 相反，相分的根据放错了地方。",
+   "fix": "删去「帝是单一中心」一句，相分的根据改为：这一循环是指派的列表之序，不是任何与互补、翻转、轮转可交换之律的进程（沿用 RO）。C17 补出的「时序是排列的次序，不是关系项自身进程的步序」可留。"
+  },
+  {
+   "id": "shuogua-yi-suo",
+   "verdict": "keep",
+   "issues": "一索、三索即一线之翻（flip）而得之卦，flip_complement、changes_symmetric 承载；相合。",
+   "fix": ""
+  },
+  {
+   "id": "tuan-bi-roulai-wengang",
+   "verdict": "keep",
+   "issues": "贲自泰而来，下卦与上卦交换一线（across_exchange、three_iff），与 Y5 卦变相符；相合。",
+   "fix": ""
+  },
+  {
+   "id": "simafa-rong-bu-xiangru",
+   "verdict": "keep",
+   "issues": "国容、军容各有其律，合并即越界而失（pooled_crosses、not_inOne、pooledLaw_exact_iff_joinClosed）；相合。「民德廢、弱」是评价，不带。",
+   "fix": ""
+  },
+  {
+   "id": "jing-jie-buchu-huting",
+   "verdict": "revise",
+   "issues": "同一「不出」在初、二两位得相反之断，是语境不一致，结构对。但 Contextual.no_free_frame 需要 Local、NoGlobal、Respects，这里没有给出；atSites_indexed 在 HexagramPlaces 中，records 未列其记录。户庭、门庭也不全是同一动作，吉凶是评价，都要说明。",
+   "fix": "把 Contextual.no_free_frame 换为 Becoming.Contextual.fitsFree_iff 与 Becoming.Contextual.Glues.agree；records 加 place-relations-in-context；reading 注明户庭、门庭之别与吉凶不带。"
+  },
+  {
+   "id": "jinsilu-zhong-yi-ting",
+   "verdict": "keep",
+   "issues": "中随所取之界（厅、家、国）而定：Boundary、SuperTrue、superTrue_iff 同构，与 RO 一致。",
+   "fix": ""
+  },
+  {
+   "id": "zhongyong-su-qiwei",
+   "verdict": "revise",
+   "issues": "「素其位而行」：所行依其所处之位（语境）而定，Contextual.indexed_fits 同构。但 Hexagram.atSites_indexed 在 HexagramPlaces 中，records 未列其记录。此「位」是处境（富贵、贫贱等），不是卦位，也不是等级。",
+   "fix": "records 加 place-relations-in-context；reading 注明「位」作处境，不作等级。"
+  },
+  {
+   "id": "zhongyong-qinqin-zhi-sha",
+   "verdict": "keep",
+   "issues": "亲亲之杀、尊贤之等是等级层，归为 divergence 正确；Transfer.unordered 与 Clearing.centers_disagree 承载。",
+   "fix": ""
+  },
+  {
+   "id": "daxue-zhi-suo-xianhou",
+   "verdict": "keep",
+   "issues": "kind 作 scope 正确：先后之知，限于不共享关系项的交换可换（act_comm）、相连者次第唯一（unique_iff）；本末之定序不带。",
+   "fix": ""
+  },
+  {
+   "id": "sunzi-qinfu-fa",
+   "verdict": "keep",
+   "issues": "亲附与罚共享关系项（士卒），所以次序有别，正落在 act_comm 条件之外；gap（给出共享关系项而次序不同的见证）正确。",
+   "fix": ""
+  },
+  {
+   "id": "lunyu-yan-jizhi",
+   "verdict": "keep",
+   "issues": "「言未及之而言」：所答者未到达而答，answer_alike_before 承载；「躁、隱、瞽」是评价，不带。",
+   "fix": ""
+  },
+  {
+   "id": "lunyu-ke-yu-yan",
+   "verdict": "keep",
+   "issues": "可与言、不可与言是对读者状态的读取；constant_read_ignores 承载「到达而不用」的一面。kind 作 scope 合适。",
+   "fix": ""
+  },
+  {
+   "id": "sunzi-cheng-ren-zhi-buji",
+   "verdict": "keep",
+   "issues": "「乘人之不及」：对方在时限前未被到达，levels_alike_before 与 answer_alike_before 同构。此处「乘」是趁，与名「乘」（falls）同形（见名「乘」）。",
+   "fix": ""
+  },
+  {
+   "id": "sunzi-huo-fa-bing-jing",
+   "verdict": "keep",
+   "issues": "火发而敌静，则待而视其可从与否：Delayed.answers_before_and_after 与 constant_read_ignores 承载；相合。",
+   "fix": ""
+  },
+  {
+   "id": "sunzi-sidi",
+   "verdict": "keep",
+   "issues": "「疾戰則存，不疾戰則亡」恰是一处既有护之步、又有失之步（juncture_iff、Juncture.outcomes_differ）；相合。",
+   "fix": ""
+  },
+  {
+   "id": "sunzi-shi-jie-ji",
+   "verdict": "keep",
+   "issues": "「節如發機」的機是弩牙，一发不可复，与 Juncture 同构；kind 作 scope 合适。「其節短」的節未映射（见 missing）。",
+   "fix": ""
+  },
+  {
+   "id": "laozi-sz-weizhi-yuweiyou",
+   "verdict": "revise",
+   "issues": "gap G9 的方向对，但陈述不全：它没有指明同一过程；而「两个只在来源上不同的世界在 x 取同一步」需要读者在 t₀ 处于同一配置 x，这要求两世界在到达前读者之状态相同，answer_alike_before 只给出回答相同，不给出配置相同。",
+   "fix": "G9 改述为：「在同一过程 P 中，设两世界在 t₀ 前只在来源上不同，读者在 t₀ 于两者中处于同一配置 x，x 是所护者 s 的一个机，读者在 x 之步是其经耦合所读之回答的函数；若到 t₀ 未到达，则两者在 x 取同一步……」，并列出 different_answers_require_reached 所需的可判定性。"
+  },
+  {
+   "id": "laozi-sz-bu-shishi",
+   "verdict": "keep",
+   "issues": "窗口两端各自可证、合一的定理缺（G9），已明说；「天命」只读作所遇之时，不带意志。kind 作 scope 合适。",
+   "fix": ""
+  },
+  {
+   "id": "zhuangzi-hezhe-zhi-fu",
+   "verdict": "revise",
+   "issues": "reading 称「须在机之前到达（different_answers_require_reached）」。该定理只给出：在 ReachedBy 可判定且章节前提成立时，回答不同则到 D 已到达；「在机之前」这一半是 G9，未证。",
+   "fix": "改为：「回应要有所不同，来源须先到达（路由可判定时，different_answers_require_reached）；到达须在机之前，是 G9，未证」。"
+  },
+  {
+   "id": "zhongyong-yu-ze-li",
+   "verdict": "revise",
+   "issues": "Branching.loss_passes_juncture 需要 Returns P s（所护者可返回），结论是双重否定（不能没有一个机）；different_answers_require_reached 需要 ReachedBy 可判定。reading 未写这些条件。",
+   "fix": "reading 写出 Returns 前提、双重否定的结论与可判定性前提。"
+  },
+  {
+   "id": "jing-guimei-chiqi",
+   "verdict": "keep",
+   "issues": "「遲歸有時」：在无机之处，迟延无所失（no_juncture_of_keeps、keeping_keeps）；kind 作 scope 合适。",
+   "fix": ""
+  },
+  {
+   "id": "jing-wuwang-liusan",
+   "verdict": "revise",
+   "issues": "同一事（牛被牵走）一得一灾，其确切结构是一次交换从两端读（World.exchange_step_iff、Flow.Balances.rise_given、fall_taken），比 RelativePosition 的零和计数更近。Confound.misattributes 承载「无妄之災」（灾不由邑人所行），正确。",
+   "fix": "加 Becoming.World.exchange_step_iff、Becoming.Flow.Balances.rise_given、Becoming.Flow.Balances.fall_taken 与记录 process-and-frame-as-readings、rising-and-falling-in-one-exchange；RelativePosition 降为次要。"
+  },
+  {
+   "id": "zhuangzi-bu-guishou",
+   "verdict": "keep",
+   "issues": "同一不龟手之药，所用之情境不同而结果异：finerLaw_determined 与 coarse 同构；相合。",
+   "fix": ""
+  },
+  {
+   "id": "mengzi-xianni-qixin",
+   "verdict": "revise",
+   "issues": "Confound.confounded 指向相反：只要所行与一隐藏之量同步，记录永远不排除错误的归因；要排除，须变动所行以对抗隐藏之量（实验需返回）。孟子据所见断定差在陷溺而不在才，正是记录不能单独定的归因。「天之降才」与性善带入定性一层。",
+   "fix": "kind 改为 scope；reading 写明 Confound.confounded 说明此归因不能由记录定，须变动与返回（experiment-needs-return）；「降才」与性善不带。"
+  },
+  {
+   "id": "mengzi-shui-shi",
+   "verdict": "keep",
+   "issues": "「其势则然」：势（情境）决定所到，finerLaw_determined 同构；kind 作 scope 合适。「水之性」「人性」是定性层，须不带。",
+   "fix": "可选：reading 明标「性」不带。"
+  },
+  {
+   "id": "sunzi-wu-chengshi",
+   "verdict": "keep",
+   "issues": "「兵無成勢…因敵變化」：规则在读取所处之配置时变（rule_at_reading），固定规则有所失（fixed_loses）；kind 作 scope 合适。「神」不带。",
+   "fix": ""
+  },
+  {
+   "id": "laozi-sz-yusu",
+   "verdict": "revise",
+   "issues": "Pace 的映射是词面的（速对步速）：reading 把「规则变得太快」（pace_law、dissolving、stretch_fixed）与「从不读取」（施設，never_reads_lost）混为一谈。苏辙句的结构是舍其自然而施設，即规则不读所处之配置，只与 never_reads_lost 同构。",
+   "fix": "删去 Pace.pace_law、Pace.dissolving、Pace.stretch_fixed，只留 Pace.never_reads_lost，以「施設」为不读取之规则。"
+  },
+  {
+   "id": "shangjun-fagu-wuguo",
+   "verdict": "keep",
+   "issues": "「法古無過」主张固定不变之法：Switching.fixed_loses 与 never_reads_lost 给出其所失；divergence 正确。",
+   "fix": ""
+  },
+  {
+   "id": "shangjun-dangshi-lifa",
+   "verdict": "keep",
+   "issues": "「當時而立法，因事而制禮」：规则在读取所处之配置时变（rule_at_reading）；kind 作 scope 合适。",
+   "fix": ""
+  },
+  {
+   "id": "hanfei-nanshi-shi-yu-ren",
+   "verdict": "revise",
+   "issues": "Dependence.DifferenceOnlyTogether 是：所有部分合起来扣去时依赖得保，扣去任一时同一动作仍致失，即多因冗余（overdetermination 一类），结构不对。韩非之意是：同一势，是否致治乱取决于用者，单扣去势本身也会改变结果。differenceOnlyTogether_iff 还需要 Determined 等前提。",
+   "fix": "把 Dependence.differenceOnlyTogether_iff 换为 Becoming.Dependence.MakesDifference（定义）与 Becoming.Pool.difference_belongs_to_the_joint（同一部分是否造成差别，取决于其余部分所为）。贤、不肖与治、乱不带。"
+  },
+  {
+   "id": "hanfei-nanshi-renshe",
+   "verdict": "revise",
+   "issues": "把人设之势映射为 RuleCapture（读其所选之份额并偏向之的规则会锁定）是 AI 的类比，不是文本所述的结构：人设之势是要不论居位者贤否都能治，即对居位者不变，并不读取份额。相分的真实根据是单一中心：「抱法處勢則治，背法去勢則亂」（FA1-S-H40）。",
+   "fix": "相分的根据改为「抱法處勢則治」的单一中心层；RuleCapture 三条或删去，或标为「AI 类比：脊柱于偏向份额之规则所说」，不作文本所述之结构。"
+  },
+  {
+   "id": "laozi-sz-ji-er-wei-shi",
+   "verdict": "keep",
+   "issues": "「物則不能自成…積而為勢」：单个不成、合则成，正是 DifferenceOnlyTogether 的结构；与 RO sz-51 一致。",
+   "fix": ""
+  },
+  {
+   "id": "zhuangzi-shanmu-cai-bucai",
+   "verdict": "keep",
+   "issues": "材与不材都不能在两种情形中都对（Parting.not_right_on_both），「與時俱化」与 no_prefix_fixes_next 同构；与 RO 一致。",
+   "fix": ""
+  },
+  {
+   "id": "zhuangzi-paoding-zhizu",
+   "verdict": "keep",
+   "issues": "「每至於族…視為止，行為遟」：在机处慢行（loss_passes_juncture），平常处依所归之类而行（goAlike_iff_lumped）；与 RO 一致。",
+   "fix": ""
+  },
+  {
+   "id": "zhuangzi-anshi-chushun",
+   "verdict": "revise",
+   "issues": "World.arising_iff_ceasing 是一条重现律（在有限、可判定的世界中，兴起反复出现恰在停止反复出现之时），而文本说的是一生之来去各依其时，不是重现。Web.change_readings 与 ceasing_needs_arising 同构。",
+   "fix": "删去 World.arising_iff_ceasing 及只为它而列的记录 space-and-its-parts，保留 Web.change_readings、ceasing_needs_arising。"
+  },
+  {
+   "id": "zhuangzi-wu-gujin",
+   "verdict": "revise",
+   "issues": "脉络把「朝徹→見獨→无古今→不死不生」读作修养的次第，即修行者之状态，不是「没有先后」的本体断言；reading 自己也承认作认知状态读时与步序之为读法相容。按字面本体义读才是相分。Law.withHistory_never_returns 只说保留历史者不返回，对「无古今」的反驳很弱。records 缺 withHistory_never_returns（Recurrence）与 arising_iff_ceasing（Space）所在之记录。",
+   "fix": "除非明言按字面本体义读，否则 kind 改为 scope（作修养次第，与步序为读法相容），或移入 rejected。records 加 recurrence-without-premise 与 space-and-its-parts。"
+  },
+  {
+   "id": "fahua-fangbian",
+   "verdict": "revise",
+   "issues": "「隨其本性…方便力而為說法」：诸说依听者语境而示，indexed_fits 同构；但《法华》以诸说为方便，归于一佛乘，一乘统摄诸说，是先在之根或单一中心，「本性」带定性层，所以 agreement 过强。Contextual.no_free_frame 需要 Local、NoGlobal、Respects，文本未给；诸说相异只需 Glues.agree 的逆否与 fitsFree_iff。",
+   "fix": "kind 改为 scope；把 Contextual.no_free_frame 换为 Becoming.Contextual.fitsFree_iff 与 Becoming.Contextual.Glues.agree；reading 写明一佛乘与「本性」不带。"
+  },
+  {
+   "id": "huayan-shixuan-tongshi",
+   "verdict": "revise",
+   "issues": "RO huayan-shi-xuan 明言「同时相应，无有前后」是说十门不按次第，不是说展开无先后；脉络 FO2-FQ-R015 也不作时间读。所以加入的 Interleavings 三条（run_of_courses、trace_of_interleavings、unique_iff）无据。boundaryInvariant_iff_standpointInvariant 在 Boundaries.lean 中，其记录 continuation-condition-decomposition 未列。",
+   "fix": "删去 Interleavings.LocalLaw.run_of_courses、trace_of_interleavings、unique_iff 及记录 the-step-index-from-own-courses；records 加 continuation-condition-decomposition。"
+  },
+  {
+   "id": "jinshizi-shishi-gefa",
+   "verdict": "revise",
+   "issues": "九世（三际各三）是一念中所分的时位，不是各有自身进程、交换合成一列的关系项；standings_of_courses 与 trace_of_interleavings 的前提（LocalLaw 下关系项的自身进程）在此没有对应。Contextual.indexed_fits（各世作为语境）可立。",
+   "fix": "写明九世作为关系项各有何种自身进程；若写不出，删去 Interleavings.LocalLaw.standings_of_courses、trace_of_interleavings 及记录 the-step-index-from-own-courses，只留 indexed_fits。"
+  },
+  {
+   "id": "zhuangzi-shuqi-shuji",
+   "verdict": "keep",
+   "issues": "「梁麗可以衝城，而不可以窒穴」：同一器之用随所处而定，indexed_fits 与 finerLaw_determined 同构；kind 作 scope 合适。",
+   "fix": ""
+  }
+ ],
+ "missing": [
+  "「步」本身之名：時、先後、遇、機都以一步（Run 的一步、一次交换）为基，本簇未给「步」定名；须与其他簇核对后交整合者。",
+  "接缝 Hexagram.Seam 之名：候选「際」（解初六小象「剛柔之際，義无咎也」，YD-JP40，易传，先秦至秦汉）；但此句之際是剛柔相接之处，须定「際」名缝本身，还是名缝两侧相异。",
+  "两半 Hexagram.halves 之名：王弼「內外者，出處之象也」「或有遺爻而舉二體者」（内外、二体；注明「内外」不作内外对立）；高度 Hexagram.Height、heightOf 之名（下、中、上）。",
+  "Hexagram.answers（一般相异关系，opposed 与 alternates 皆为其例）之名。",
+  "窗口概念：到达之后、机过之前（G9，名与定理俱缺）。苏辙「不失時」、系辞「趣時」、文言「欲及时也」之时都指此，现散在名「及」「機」「時」之中。",
+  "庄子秋水「時无止，分无常，終始无故」（ZH1-S17，外篇，先秦至秦汉，有争议）：时不止、分无常，可接名「時」「涯」（Diagonal.Unfolds.unheld、Learning.no_prefix_fixes_next）。",
+  "系辞上「推而行之谓之通」（DS02）：作「變通」之通的见证，与「化而裁之谓之变」连读。",
+  "墨經上「宇，彌異所也」（MI1-S-JS，先秦）：与「久，彌異時也」对举，为所与位的一般义（不限卦位），可接名「位」与 RelativePosition。",
+  "重叠种子未覆盖：幾（系辞下「几者，动之微，吉之先见者也」，XC-R045；须定其与已采之「機」（D52）之别）；形、形勢（孙子形篇与势篇之分）；節、候（节候与节律）；時中（与 C15 的「中」合议）。",
+  "「節」作步速之段（两次读取之间规则所持之段）的候选：孙子「其節短」「節如發機」（BI1-S-SZ），须核其义与 pace_law 之 2N − 1 段的关系。",
+  "贲六四小象「六四，當位疑也。」（YD-JP22，TP-H22-X4-R01）已在 Lean 的 Hexagram.placeStatements 中作 (22, .p4, true)，却不在本簇种子与 parallels 中；应补为 xiaoxiang-weidang 的平行。",
+  "说卦「八卦相錯」（YD-OW-SG 第三章）：「錯」名互补的先秦见证，支持删去「錯行」，并与錯卦（Hexagram.complement）之名对齐。",
+  "「並行」（中庸「道並行而不相悖」，RU1-S-ZY）：可作 act_comm 条件（不共享关系项的诸进程并存而不相悖）的候选名，只名并存，不名交错。"
+ ]
+}

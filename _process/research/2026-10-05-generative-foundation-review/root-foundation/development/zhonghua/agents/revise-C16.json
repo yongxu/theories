@@ -1,0 +1,1541 @@
+{
+ "cluster": "C16",
+ "revised": [
+  {
+   "id": "mojing-bi-jin",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "MI1-S-JS",
+   "layer": "先秦；经（墨经·经上）；战国后期墨家，诸篇年代有争议",
+   "fragments": [
+    "必，不已也。",
+    "盡，莫不然也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Derivation.no_countermodel",
+    "Becoming.Derivation.closed_throughout",
+    "Becoming.Derivation.countermodel_excludes",
+    "Becoming.Decided.of_not_not",
+    "Becoming.not_not_all"
+   ],
+   "records": [
+    "derivation-soundness",
+    "counts-exist-where-decided",
+    "laws-of-one-step"
+   ],
+   "reading": "AI读法：经上以“莫不然”释盡，以“不已”释必。“莫不然”即「没有一个不然者」（¬∃¬）。脊柱对无前提推出之主张所证的正是这一形式：在基底处处成立的域上，没有一个构形使它不成立（Derivation.no_countermodel），域中有一个不然者就把它排除于闭包之外（Derivation.countermodel_excludes）；处处成立（Derivation.closed_throughout）推出莫不然。反过来，由莫不然回到处处成立，在构造的读法下须每一情形已定（定然否，Decided.of_not_not；对列出之族，诸员之不可非合为全体之不可非，not_not_all）。这一强弱之分属于理论，不归于墨经。“必，不已也”在经上与“動，或徙也。止，以久也。”同在一组；依名表，「已」为终了，「不已」是不止而复现，经上此条原意近于「持续而不中止」。把“不已”推到「在所论之域中无一处例外」是 AI 读法，不归于墨经。此二条在脉络中只有节点，无关系记录。名表以盡名中立（∀），出处即此条，而“莫不然”在构造上弱于 ∀，见 name_flags。",
+   "names_used": [
+    "不然者",
+    "定然否",
+    "不可非"
+   ],
+   "locator": "墨子/經上",
+   "relational": "必与盡说一个主张与它所论之域中每一情形的关系，不说孤立的命题",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經上》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mojing-bi-bu-ke-liang-bu-ke",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "MI1-S-JS",
+   "layer": "先秦；经（墨经·经上），说见经说上；战国后期墨家，诸篇年代有争议",
+   "fragments": [
+    "彼，不可兩，不可也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.not_not_decided",
+    "Becoming.Decided"
+   ],
+   "records": [
+    "counts-exist-where-decided"
+   ],
+   "reading": "AI读法：此经的解说在经说上：“彼，凡牛，樞非牛，兩也，無以非也。”所争之彼有牛与非牛两辞，“無以非也”是二者不能俱被否定。依此，经文读作「彼，不可两不可也」：两辞不能俱不可。按构造的读法，这是 ¬(¬p ∧ ¬¬p)，与 ¬¬(p ∨ ¬p) 等价，即所争者之定然否不可非：脊柱无前提地证明之（not_not_decided）。传统有直读为排中律（p ∨ ¬p）者，此处不取：那要求所争者定然否（Decided），对一切辞则是辞皆定然否，脊柱只把它作为设（见 mobian-dang-zhe-sheng）。「不能俱可」（¬(p ∧ ¬p)）不在此经，见经说上辩条“是不俱當”（mobian-bian-bu-ju-dang）。断句有争议，换一种断句此条须重做。",
+   "names_used": [
+    "定然否",
+    "不可非",
+    "辞皆定然否",
+    "设"
+   ],
+   "locator": "墨子/經上",
+   "relational": "彼是两辞相对而成的所争者；两辞不能俱不可是两辞与同一彼的关系",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經上》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mobian-bian-bu-ju-dang",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-SS-debate"
+   ],
+   "source_id": "MI1-S-SS",
+   "layer": "先秦；经说（墨经·经说上）；战国后期墨家",
+   "fragments": [
+    "辯，或謂之牛，或謂之非牛，是爭彼也。是不俱當。不俱當，必或不當。不若，若犬。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.WeaklyDecided",
+    "Becoming.Decided.weakly",
+    "Becoming.exists_undominated_iff_weakly",
+    "Becoming.not_not_decided"
+   ],
+   "records": [
+    "counts-exist-where-decided",
+    "practical-judgment-under-living-significance",
+    "organizational-formation-from-generative-comparison"
+   ],
+   "reading": "AI读法：一谓之牛、一谓之非牛，所争为 p 与非 p。“是不俱當”是 ¬(p ∧ ¬p)，构造上无前提成立。由此推到“必或不當”，即 ¬p ∨ ¬¬p，正是或不当（WeaklyDecided）。末句“不若，若犬”把相反之名排除在外：若另一辞不是非牛而是犬，二辞可以俱不当，所以“必或不當”只对 p 与非 p 一对成立。脊柱给出此步成立的确切范围：p 定然否之处它成立（Decided.weakly），例如一个有穷可查的「是否是牛」；作为对一切辞的全称，即辞皆或不当（弱排中律），它是设而不是律，脊柱证明它恰等价于：每个非空的列出选项单，在其上非自反且传递的关系之下，都有一个不被胜过者（exists_undominated_iff_weakly）。无此设时只得或不当之不可非（由 not_not_decided 与 Decided.weakly 合得，未单列为定理）。所以经说上这一步在所争者定然否时相合，其全称形式须定域。",
+   "names_used": [
+    "或不当",
+    "定然否",
+    "设",
+    "不可非",
+    "定域"
+   ],
+   "locator": "墨子/經說上",
+   "relational": "当与不当是辞与所争之彼的关系；只有相矛盾的两辞对同一彼才必有一不当",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經說上》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mobian-dang-zhe-sheng",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-SX-win"
+   ],
+   "source_id": "MI1-S-SX",
+   "layer": "先秦；经说（墨经·经说下，释经下“謂辯無勝，必不當”）；战国后期墨家",
+   "fragments": [
+    "謂，所謂非同也，則異也。同則或謂之狗，其或謂之犬也。異則或謂之牛，牛或謂之馬也。俱無勝，是不辯也。辯也者，或謂之是，或謂之非，當者勝也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Decided",
+    "Becoming.not_not_decided",
+    "Becoming.Decided.of_not_not",
+    "Becoming.World.law_iff_em"
+   ],
+   "records": [
+    "counts-exist-where-decided",
+    "recurrence-without-decidedness"
+   ],
+   "reading": "AI读法：此为经下“謂辯無勝，必不當。說在辯。”的解说（经见 mojing-wei-bian-wu-sheng）。经说下先分出不成辩的两种：同则一谓之狗、一谓之犬，二名一实（重同），所争非二，无可胜；异则一谓之牛、一谓之马，二名相反而不相矛盾，二者可以俱不当，所以“俱無勝，是不辯也”，与经说上“不若，若犬”同一结构。只有对同一彼“或謂之是，或謂之非”这一对矛盾之辞才“當者勝也”。这里预设二者之中实有一当，即所争之辞定然否（Decided）。脊柱给出范围：「无一方当」这一主张不能成立（not_not_decided），定然否之处不可非者即成立（Decided.of_not_not）；但「必有一方当」作为对一切辞的全称是辞皆定然否（排中律），脊柱只把它作为设，并证明某一全称律恰需要它：「每个有穷世界中生起复现恰当止息复现」对一切有穷世界成立，恰等价于排中律（World.law_iff_em）。经上“辯，爭彼也。辯勝，當也。”同此。所以当者胜在所争者定然否之处成立，其普遍形式须定域。胜负在这里由辞与所争之彼的关系定，不由言者之力：墨辩已在传统内部把争胜读成当否。",
+   "names_used": [
+    "重同",
+    "定然否",
+    "不可非",
+    "辞皆定然否",
+    "设",
+    "定域"
+   ],
+   "locator": "墨子/經說下",
+   "relational": "胜负不由言者之力，而由辞与所争之彼的关系定",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經說下》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mobian-wu-qiong-ying-fou",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "MI1-S-SX",
+   "layer": "先秦；经说（墨经·经说下，释经下“無窮不害兼，說在盈否”）；战国后期墨家",
+   "fragments": [
+    "南者有窮則可盡，無窮則不可盡。有窮無窮未可智，則可盡不可盡未可智。人之盈之否未可智，人之可盡不可盡亦未可智。而必人之可盡愛也，誖。",
+    "人若不盈无窮，則人有窮也，盡有窮無難。盈無窮，則無窮盡也，盡有窮無難。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Counts.over_stretch",
+    "Becoming.not_not_decided",
+    "Becoming.nat_eq_of_not_not",
+    "Becoming.LastChange.not_not_settles",
+    "Becoming.LastChange.lpo_iff_settles",
+    "Becoming.LPO"
+   ],
+   "records": [
+    "counts-exist-where-decided",
+    "the-last-change-of-a-run",
+    "sensitivity-is-the-least-coupling"
+   ],
+   "reading": "AI读法：这是经下“無窮不害兼，說在盈否”的解说。难者说：南方有穷无穷未可知，则可尽不可尽未可知；人之盈否未可知，则人之可尽与否亦未可知，而断言人可尽爱，是誖。答者（冻结文本中在引号内）不判定盈否，分两种情形：人不盈无穷则人有穷，尽之无难；盈无穷则无穷已被尽，尽之也无难。第二情形之“盡有窮無難”文有校改之争，此处不据其字立论。这是对一个未定命题（盈否）的分情形论证。在构造的读法中，这样的论证一般只得结论之不可非；此处结论“無難”是否定式，而否定式总是稳定的（¬¬¬q 推出 ¬q），所以论证不需盈否定然否也成立。这是理论对论证形式的读法，不归于墨经的自觉。脊柱的普查之律用同一模式：中间各步是否成立未定，借定然否之不可非（not_not_decided）分情形，所得是数的等式，而数的等式不可非即成立（nat_eq_of_not_not），所以 Counts.over_stretch 不需定然否。对比：一次运行终将定住，脊柱只证其不可非（LastChange.not_not_settles，在构形有穷、无变化回路的前提下）；要对一切这样的有穷过程断言每一运行定住，恰等价于 LPO（LastChange.lpo_iff_settles），即无穷可尽之一。",
+   "names_used": [
+    "不可非",
+    "定然否",
+    "无穷可尽"
+   ],
+   "locator": "墨子/經說下（释经下“無窮不害兼，說在盈否”）",
+   "relational": "尽爱是人与所问之人逐一的关系，不待先数出人的总数",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經說下》",
+   "gap": "theorem Decided.cases_stable {p q : Prop} (stable : ¬¬q → q) (yes : p → q) (no : ¬p → q) : q——结论稳定时对一个未定命题分情形论证成立。纯逻辑引理，Counts.over_stretch 与 CountsAcross.keep_pace 的证明已内联同一模式；按规则是需要它之项的引理，不是独立结果，列为最低一级。最近的声明：Becoming.not_not_decided、Becoming.nat_eq_of_not_not、Becoming.Counts.over_stretch。",
+   "layer_checked": ""
+  },
+  {
+   "id": "mojing-bi-zhi",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-SS-stop"
+   ],
+   "source_id": "MI1-S-SS",
+   "layer": "先秦；经说（墨经·经说上）；战国后期墨家",
+   "fragments": [
+    "必，謂臺執者也，若弟兄。一然者一不然者，必不必也，是非，必也。",
+    "止，彼舉然者以爲此其然也，則舉不然者而問之。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Derivation.countermodel_excludes",
+    "Becoming.Derivation.no_countermodel",
+    "Becoming.Learning.no_prefix_fixes_next",
+    "Becoming.Web.tail_unexcluded"
+   ],
+   "records": [
+    "derivation-soundness",
+    "learning-by-refutation",
+    "testing-within-couplings"
+   ],
+   "reading": "AI读法：“一然者一不然者，必不必也”：所论之中只要有一个不然者，必就不成立。脊柱上，域中一个使主张不成立的构形把它排除于闭包之外（Derivation.countermodel_excludes），无前提推出之主张在域中没有这样的构形（Derivation.no_countermodel）；不然者须在所论之域中，即 countermodel_excludes 之假设 ∃ s, D s ∧ ¬ p s 中的 D s，域外的「反例」不反驳。此处之“止”是经上“止，因以別道。”的解说，与名表之止（停息）所指不同：举然者不足以说此亦然，举一不然者，这一推就不能再进。前一半是不对称的：没有一个有限前段定得了下一值（Learning.no_prefix_fixes_next：对任何预测者，与前段一致的两种接续，它不能两种都不错），有限前段之后两种可能都未被排除（Web.tail_unexcluded）。同类之要求见经下“止，類以行之，說在同。”；经说下又说“我以此其不然也，疑是其然也”：墨经以举不然者使人疑其然，脊柱的域内不然者则排除全称，比疑更强。“是非，必也”一句读法有争议，此处不取。",
+   "names_used": [
+    "不然者"
+   ],
+   "locator": "墨子/經說上",
+   "relational": "必与不必是主张与域中诸情形的关系；一个不然者凭其在域中而止推",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經說上》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mojing-gu-xiao-da",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-PAIR-cause",
+    "MI1-R-SS-cause-small",
+    "MI1-R-SS-cause-great"
+   ],
+   "source_id": "MI1-S-SS",
+   "layer": "先秦；经说（墨经·经说上，释经上“故，所得而後成也”）；战国后期墨家",
+   "fragments": [
+    "故，小故，有之不必然，無之必不然，體也，若有端。",
+    "大故，有之必然，無之必不然，若見之成見也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Supported",
+    "Becoming.Web.supported_iff_admits",
+    "Becoming.Web.coextinct"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "support-from-the-supported"
+   ],
+   "reading": "AI读法：（说层，承 RO 段之类别「定域」，改其大故一半的读法）经上“故，所得而後成也”，经说上分小故、大故。小故“有之不必然，無之必不然”是必要之一项：脊柱上，在依存网（待）中，一个形成只在被支持时活跃（Web.Dependent，定义），所需之一不被满足则不被支持，因而不活跃；被支持与站立水平容纳它是同一回事（容，Web.supported_iff_admits）；沿依存链，所依者不活跃，依存者也不活跃（俱亡，Web.coextinct）。大故“有之必然，無之必不然”是充分且必要。脊柱有它的一处确切实例：一个形成被支持（容，Web.Supported）按定义恰是它此刻所需的每一条件都被满足，每一项是小故，合起来恰是被支持的大故，经说“體也”（小故是大故的一部分）在这里成立。但脊柱不由支持推出活跃：Web.Dependent 只陈述「活跃者必被支持」一个方向，所以对活跃而言，所列诸小故合起来不是大故，活跃的充分条件不由依存给出。旧读法所说「充分只在确定之律下成立（Determined）」不成立：Determined 只说一个动作的后继若有则唯一，不给充分性，已删（RO 同名段须同改）。所以「無之必不然」有确切对应，「有之必然」在被支持本身成立，对活跃须定域。",
+   "names_used": [
+    "小故",
+    "大故",
+    "体",
+    "定域",
+    "待",
+    "容",
+    "俱亡"
+   ],
+   "locator": "墨子/經說上（释经上“故，所得而後成也”）",
+   "relational": "故是一个结果与其条件的关系：小故是无之则不成者，诸小故合为大故",
+   "ro_passage": "mojing-gu-xiao-da",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經說上》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mobian-xiaoqu-xiao",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-XQ-standard"
+   ],
+   "source_id": "MI1-S-XQ",
+   "layer": "先秦；论（墨辩·小取）；战国后期墨家",
+   "fragments": [
+    "效者，爲之法也；所效者，所以爲之法也。故中效，則是也；不中效，則非也。此效也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Derivation.Derives.sound",
+    "Becoming.Derivation.relative_throughout",
+    "Becoming.Derivation.closure_throughout_iff",
+    "Becoming.Derivation.claim_not_closed",
+    "Becoming.Derivation.countermodel_excludes"
+   ],
+   "records": [
+    "derivation-soundness",
+    "wisdom-root"
+   ],
+   "reading": "AI读法：效是立一个准（“爲之法”），所效者是依之而为准者；“中效，則是也；不中效，則非也”。是非在这里相对于所立之准：经上“法，所若而然也”。「中效则是」与脊柱相合：由所立之基底推出的主张，在基底成立之处成立（Derivation.Derives.sound）；在局部前提之下推出者，在前提成立之处成立（Derivation.relative_throughout）；闭包恰在基底成立之处处处成立（Derivation.closure_throughout_iff），所以中效使一辞相对于所效之准为是，准本身是否成立是另一问题。「不中效则非」若只说「相对于此准不是」，是按定义；若说此辞因此不成立，则过强：脊柱中未由基底推出者不因此不成立，在平凡基底之 Bool 例中，主张 w = true 无前提推不出（Derivation.claim_not_closed，构造之例），却在 true 处成立。主张被排除，要域中有一个使它不成立的构形，即一个不然者（Derivation.countermodel_excludes），方向与效相反。所以此条中效一半相合，不中效一半须定域。",
+   "names_used": [
+    "不然者",
+    "定域"
+   ],
+   "locator": "墨子/小取",
+   "relational": "是与非是辞与所立之准的关系，不是辞自身的属性",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·小取》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mobian-xiaoqu-bi-mou-yuan-tui",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-XQ-stop"
+   ],
+   "source_id": "MI1-S-XQ",
+   "layer": "先秦；论（墨辩·小取）；战国后期墨家",
+   "fragments": [
+    "夫物有以同而不率遂同。",
+    "是故辟、侔、援、推之辭，行而異，轉而危，遠而失，流而離本，則不可不審也，不可常用也。",
+    "夫物或乃是而然，或是而不然，或不是而然，或一周而一不周，或一是而一非也，不可常用也。故言多方，殊類異故，則不可偏觀也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.Learning.determines_lumped_iff",
+    "Becoming.Learning.selects_not_right_of_parted"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "selection-through-a-model-of-the-options"
+   ],
+   "reading": "AI读法：（承 RO 段 mobian-lei-qu-lei-yu 之读法与类别；“辭之侔也，有所至而正”一句留在该段，此处不重收）辟、侔、援、推都是按类推及之辞（推类）。“夫物有以同而不率遂同”：两物在一处相同，不因此处处相同。脊柱上，一个推及在世界跨所用之类一致之处恰为对（Learning.lumped_right_iff：在适合数据且跨类一致的函数下，由 d 推到与 d 同类的 x，恰在世界于 d 与 x 处取值相同时为对）；有限数据固定 x 处之值，恰当某个已观察的输入与 x 同类（Learning.determines_lumped_iff）。越过这一范围，“行而異，轉而危，遠而失，流而離本”。“或是而不然”即同类之推在某处不再一致：经由不分开二者的特征去选，选不对（Learning.selects_not_right_of_parted）。所以“不可不審”“不可偏觀”是推及之前先查所用之类在何处不再一致。",
+   "names_used": [
+    "类",
+    "推类"
+   ],
+   "locator": "墨子/小取",
+   "relational": "诸辞的推及依于事物之间的类的关系，类在何处一致，推及就到何处",
+   "ro_passage": "mobian-lei-qu-lei-yu",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·小取》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mobian-daqu-ci-yi-gu-sheng",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-DQ-ci-gu",
+    "MI1-R-DQ-ci-li",
+    "MI1-R-DQ-ci-lei",
+    "MI1-R-DQ-ground",
+    "MI1-R-DQ-class"
+   ],
+   "source_id": "MI1-S-DQ",
+   "layer": "先秦；论（墨辩·大取）；战国后期墨家，大取多错简",
+   "fragments": [
+    "夫辭以故生，以理長，以類行者也。立辭而不明於其所生，妄也。",
+    "夫辭以類行者也，立辭而不明於其類，則必困矣。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Derivation.Derives.sound",
+    "Becoming.Derivation.closure_throughout_iff",
+    "Becoming.Derivation.lemma_throughout",
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.Learning.selects_not_right_of_parted"
+   ],
+   "records": [
+    "derivation-soundness",
+    "generalization-through-lumping",
+    "selection-through-a-model-of-the-options"
+   ],
+   "reading": "AI读法：大取说辞有三重关系：以故生、以理长、以类行。以故生：辞由其据推出，所推出者在据成立之处成立（Derivation.Derives.sound），而闭包不为不成立之据作保（Derivation.closure_throughout_iff），所以“立辭而不明於其所生，妄也”：不出其据之辞不可立。以理长：此理指论辞之条理，不取名表之理（对结构与变化之律的建模）；与脊柱的对应只在结构：推出的引理加入基底，闭包仍在原基底成立之处成立（Derivation.lemma_throughout），辞依其条理增长而不离其据。以类行：推及只在世界跨所用之类一致之处为对（Learning.lumped_right_iff），“立辭而不明於其類，則必困矣”：经由一个把应分者归为一类的读法去选，选不对（Learning.selects_not_right_of_parted）。",
+   "names_used": [
+    "辞",
+    "类"
+   ],
+   "locator": "墨子/大取",
+   "relational": "一个辞与其所由生之据、所依之条理、所行之类三者相关，辞不是孤立的断言",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·大取》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mojing-fa-yi-guan-yi",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-JS-methoddifferent"
+   ],
+   "source_id": "MI1-S-JS",
+   "layer": "先秦；经（墨经·经上），说见经说上；战国后期墨家，诸篇年代有争议",
+   "fragments": [
+    "法同，則觀其同。法異，則觀其宜。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.selects_not_right_of_parted"
+   ],
+   "records": [
+    "claims-shown-in-context",
+    "selection-through-a-model-of-the-options"
+   ],
+   "reading": "AI读法：经说上释此经：“法，取同，觀巧傳。”与“法，取此擇彼，問故觀宜。以人之有黑者有不黑者也，止愛黑人；有愛於人有不愛於人。與以心愛人，是孰宜？”所依之准不同时，是在两准之间问其所以而择所宜（“是孰宜？”），不是让每一准下的判定各依其准并存。前一半有对应：诸准在共论之处一致，才有一个不依准的判定，恰当诸准相交处一致（Contextual.glues_iff_agree），准同则观其同。后一半「问故观宜」与经由读法的选择同构：一个选择要选对，必须跟随所关键者跨其类一致（Learning.selects_right_through）；经由把应分者归为一类的特征去选，选不对（Learning.selects_not_right_of_parted），如以黑与不黑定爱与不爱（AI 对此例的读法）。定域之处：墨经在两准不同时择一；脊柱不以择一准取代带语境索引的诸判定：两准各在其语境中成立而在相交处不一致时，不存在一个不依语境的判定（Contextual.glues_iff_agree 之反面），择一就丢掉另一语境的判定。所以「择宜」在两准答同一问之处成立；两准答不同语境之问时，二者各带其索引而并存。",
+   "names_used": [
+    "择",
+    "类",
+    "定域"
+   ],
+   "locator": "墨子/經上",
+   "relational": "判定依于所用之准；准不同时问其所以，准与所判者的关系决定何者为宜",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經上》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mobian-yi-yan-wei-jin-bei",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-JX-reflex"
+   ],
+   "source_id": "MI1-S-JX",
+   "layer": "先秦；经（墨经·经下），说见经说下；战国后期墨家",
+   "fragments": [
+    "以言爲盡誖，誖。說在其言。",
+    "非誹者誖，說在弗非。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Derivation.countermodel_excludes"
+   ],
+   "records": [
+    "derivation-soundness"
+   ],
+   "reading": "AI读法：说「一切言皆誖」，此言本身也是言。经说下给出墨经自己的论证：“以，誖，不可也。之人之言可，是不誖，則是有可也。之人之言不可，以當，必不審。”分两种情形：此言可，则它本身是一个不誖之言，是「尽誖」的不然者（Derivation.countermodel_excludes 之式：域中一个不然者排除全称），与所言相反；此言不可，则以之为当必不审。两种情形都否定「尽誖」。这是 (p → ¬p) → ¬p 一式，结论为否定式，与 mobian-wu-qiong-ying-fou 同一模式，不需此言之可否定然否。“非誹者誖，說在弗非”同构：非难诽者，自身就是一诽。此结构是自指之归谬，不是对角论证，旧读法所引对角诸律（Diagonal.claims_gap、Diagonal.gap_unsaid、Diagonal.moves_not）已删。",
+   "names_used": [
+    "不然者",
+    "定然否"
+   ],
+   "locator": "墨子/經下",
+   "relational": "一个言与它所论之一切言的关系包括它自身",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經下》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "zhuang-qiwu-bian-wu-sheng",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C02-R-16",
+    "ZH1-C02-R-17",
+    "ZH1-C02-R-18"
+   ],
+   "source_id": "ZH1-S02",
+   "layer": "先秦；论（庄子·齐物论，内篇）；战国中期",
+   "fragments": [
+    "旣使我與若辯矣，若勝我，我不若勝，若果是也，我果非也邪？",
+    "其或是也，其或非也邪？其俱是也，其俱非也邪？",
+    "我與若，不能相知也，則人固受其黮闇，吾誰使正之？",
+    "丘也與汝皆夢也，予謂汝夢，亦夢也。是其言也，其名爲弔詭。",
+    "是若果是也，則是之異乎不是也，亦无辯；然若果然也，則然之異乎不然也，亦无辯。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Contextual.fitsFree_iff",
+    "Becoming.ParitySystem.contradicts_noGlobal",
+    "Becoming.Specker.noGlobal",
+    "Becoming.not_not_decided",
+    "Becoming.Web.Excludes.not_of_alike"
+   ],
+   "records": [
+    "claims-shown-in-context",
+    "gluing-under-parity",
+    "counts-exist-where-decided",
+    "testing-within-couplings"
+   ],
+   "reading": "AI读法：庄子把辩胜与果是分开：胜我者未必果是（ZH1-C02-R-16），这正是墨辩“當者勝也”所预设而未证的一步。请谁来裁定？同乎我者、同乎若者、异乎我与若者、同乎我与若者，都只是又一个立场（R-17）：一个不依语境的判定恰在诸语境相交处一致时存在（Contextual.glues_iff_agree；以框架言，Contextual.fitsFree_iff），在矛盾的奇偶语境系统中不存在（ParitySystem.contradicts_noGlobal；Specker 三盒是一个构造之例，Specker.noGlobal），它不靠加一个中立的裁判而得。“予謂汝夢，亦夢也”（R-18）：说者在所说之域中。定域之处有二。其一，若所争为同一彼之是与非，“其俱是也，其俱非也邪”两问都有确切回答：俱是不成立（¬(p ∧ ¬p)），俱非也不成立（定然否不可非，not_not_decided）。其二，脊柱仍经耦合进来的差异排除主张（Web.Excludes.not_of_alike：经观察者之耦合至某步相同的两段历史，一个主张在其一成立，就不在另一段被排除），所以“吾誰使正之”不推出无从判定：没有中立的裁判，判定经由耦合与诸语境的一致而来。",
+   "names_used": [
+    "定然否",
+    "不可非",
+    "定域"
+   ],
+   "locator": "庄子·齊物論（长梧子与瞿鹊子章）",
+   "relational": "是非是从一个立场作出的判定；裁判也是一个立场，判定只能在诸立场的关系中得",
+   "ro_passage": "",
+   "tradition": "庄子",
+   "work": "《庄子·齊物論》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "zhuang-qiwu-yi-ming",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "ZH1-S02",
+   "layer": "先秦；论（庄子·齐物论，内篇）；战国中期",
+   "fragments": [
+    "欲是其所非而非其所是，則莫若以明。物无非彼，物无非是，自彼則不見，自知則知之。",
+    "是亦一无窮，非亦一无窮也，故曰「莫若以明」。",
+    "是故滑疑之耀，聖人之所圖也，爲是不用而寓諸庸，此之謂以明。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Contextual.indexed_fits",
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Contextual.fitsFree_iff",
+    "Becoming.ParitySystem.contradicts_noGlobal",
+    "Becoming.Specker.noGlobal"
+   ],
+   "records": [
+    "claims-shown-in-context",
+    "gluing-under-parity",
+    "unity-of-readings"
+   ],
+   "reading": "AI读法：（承 RO 段 zhuangzi-qiwu-dao-shu-liang-xing 之类别；此为以明之名的主证）与其各以己之是非相非，不如以明。每物从此为是、从彼为彼，是与非各随其所出之处，各是一个“无窮”。原文自释以明为“爲是不用而寓諸庸”：不执一己之是，寓于各自之用。这与带语境索引的读法相应：带语境读，所显示的一切都是一个主张（Contextual.indexed_fits，按定义成立）；一个不依语境的判定恰在诸语境相交处一致时存在（Contextual.glues_iff_agree、Contextual.fitsFree_iff），在矛盾的奇偶语境系统中不存在（ParitySystem.contradicts_noGlobal；Specker 三盒为构造之例，Specker.noGlobal）。以明之名在中华本中指非二方法，是方法要求，不是定理，不以上列诸律为锚；上列诸律只对应此段「是非各随其所出之处」的结构。诸家对“寓諸庸”的异读未核。剩余：同段“是以聖人不由，而照之于天，亦因是也”以「照之于天」者为视点，与“道通爲一”之齐，都超出脊柱，不取；脊柱仍经耦合进来的差异排除主张。",
+   "names_used": [
+    "以明"
+   ],
+   "locator": "庄子·齊物論",
+   "relational": "彼与是互为对方而成，以明是看见每一判定从何处作出",
+   "ro_passage": "zhuangzi-qiwu-dao-shu-liang-xing",
+   "tradition": "庄子",
+   "work": "《庄子·齊物論》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mobian-ren-yi-nei-wai",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-SX-renyi"
+   ],
+   "source_id": "MI1-S-SX",
+   "layer": "先秦；经说（墨经·经说下）；战国后期墨家",
+   "fragments": [
+    "仁，仁，愛也。義，利也。愛利，此也；所愛、所利，彼也。愛利不相爲內外，所愛利亦不相爲外內。其爲仁內也、義外也，舉愛與所利也，是狂舉也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Run.part_act_eq_rest_act",
+    "Becoming.partForms_and_restForms_iff",
+    "Becoming.separation_faithful_iff"
+   ],
+   "records": [
+    "where-a-move-is-formed",
+    "separation-loses-the-relation"
+   ],
+   "reading": "AI读法：爱与利在施者一边（此），所爱与所利在受者一边（彼）；爱利之间不分内外，所爱所利之间也不分外内。说「仁内义外」，是拿施者一边的爱去比受者一边的所利，两边混举，所以是“狂舉”。脊柱上，施与受是同一关系的两面：在耦合的整体中，部分所做即其余所受（Run.part_act_eq_rest_act）；一个动作既是部分的又是其余的，恰当它处处相同（partForms_and_restForms_iff），所以「谁的」取决于所用之读法；把一个关系拆成两边的边缘会多出组合，除非两边本不相关（separation_faithful_iff）。这正是以明（非二方法）的要求：内外之分须在同一关系基础上说出。",
+   "names_used": [
+    "以明"
+   ],
+   "locator": "墨子/經說下",
+   "relational": "「仁」「义」在此被读作一个关系的两面：施者之爱利与受者之所爱所利",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經說下》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mobian-xian-wen-suo-wei",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-SX-question"
+   ],
+   "source_id": "MI1-S-SX",
+   "layer": "先秦；经说（墨经·经说下，释经下“通意後對”）；战国后期墨家",
+   "fragments": [
+    "通，問者曰：「子智孰乎？」應之曰：「孰，何謂也？」彼曰：「孰，施。」則智之。若不問孰何謂，徑應以弗智，則過。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.SharedCodes.reads_iff",
+    "Becoming.SharedCodes.reads_other"
+   ],
+   "records": [
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：此为经下“通意後對，說在不知其誰謂也。”的解说。答「知不知」之前先问所问之名何所指；不问而径答，则过。脊柱上，一个形成以分得开诸所指的码，去读另一形成为某一所指所给的形式，读作该所指且只读作该所指，恰当双方的码在此所指上一致（SharedCodes.reads_iff）；码交叉之处，一个形式被读作另一所指而不读作原所指（SharedCodes.reads_other），所以不先对齐共享码（约定俗成）就答，所答的可能是另一问。同条之后的“智，智狗不智犬，重則過，不重則不過”（对应经下“知狗而自謂不知犬，過也，說在重。”）说的是同一知者对二名一实（重同）的同指，不是两个形成之间的码，SharedCodes 的函数式之码表示不了一实二名；此句已从本条片段中移出，归名一簇的重同条。",
+   "names_used": [
+    "约定俗成",
+    "重同"
+   ],
+   "locator": "墨子/經說下",
+   "relational": "问与答之间的名，经双方的码而有其所指，不是名自身带着所指",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經說下》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mobian-jia",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "MI1-S-XQ",
+   "layer": "先秦；论（墨辩·小取），经下与经说下有相应之条；战国后期墨家",
+   "fragments": [
+    "假者，今不然也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Derivation.Derives",
+    "Becoming.Derivation.relative_throughout",
+    "Becoming.Run.not_fixes_of_untaken",
+    "Becoming.counterfactual_fixed"
+   ],
+   "records": [
+    "derivation-soundness",
+    "experiment-needs-return",
+    "counterfactual-is-the-course"
+   ],
+   "reading": "AI读法：小取以“今不然”定义假：假是与当下所行之程相反的设想。经下“假必誖，說在不然。”，经说下“假必非也，而後假。狗假霍也，猶氏霍也。”：作为对今的断言，假按定义不当。定域之处：假若作为设（陈述而不断言）放入推导，它不被断言为真，也不被断言为假：脊柱的推导把局部前提作为与基底不同的构造子（Derivation.Derives 之 premise），在其下推出者在前提成立之处成立（Derivation.relative_throughout），即有设而然。所以“假必誖”对作断言之假成立，对作设之假不成立。由假设推及其后果还须律：在一个确定的过程中，一次运行未采取的动作，其结果不被这次运行所固定（Run.not_fixes_of_untaken，须至少有两个不同构形）；在律不预取、双方平衡、行动相同、起点相同之处，反事实之程由律与行动固定（counterfactual_fixed）。此条支持以设而不以假名「陈述而不断言」者。",
+   "names_used": [
+    "设",
+    "有设而然"
+   ],
+   "locator": "墨子/小取",
+   "relational": "假是一个设想与当下所行之程的关系：与之相反",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·小取》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mozi-she-er-shi",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C16-R006",
+    "MO1-C16-R008"
+   ],
+   "source_id": "MO1-S-C16",
+   "layer": "先秦；论（墨子·兼爱下）；战国墨家",
+   "fragments": [
+    "姑嘗兩而進之，設以為二士，使其一士者執別，使其一士者執兼。",
+    "當使若二士者，言必信，行必果，使言行之合，猶合符節也，無言而不行也。",
+    "死生之權未可識也；",
+    "我以為當其於此也，天下無愚夫愚婦，雖非兼之人，必寄託之於兼之有是也。",
+    "姑嘗兩而進之，設以為二君，使其一君者執兼，使其一君者執別。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Derivation.relative_throughout",
+    "Becoming.Derivation.Derives",
+    "Becoming.Derivation.claim_under_itself",
+    "Becoming.Derivation.claim_implies_itself",
+    "Becoming.Derivation.claim_not_closed"
+   ],
+   "records": [
+    "derivation-soundness"
+   ],
+   "reading": "AI读法：兼爱下以“姑嘗兩而進之”引出设：设二士（后设二君），并把局部条件写进设定：“言必信，行必果”，言行一致如符节；再在“死生之權未可識”的处境中问人会托亲于谁。论证形式是在设之下推论：在局部前提之下推出者，在前提成立之处成立（Derivation.relative_throughout），设只入前提一栏而不被断言（Derivation.Derives 之 premise）。在平凡基底之 Bool 例中，脊柱示出同一区分：主张在以自身为前提时推出（Derivation.claim_under_itself），消去前提成为蕴含（Derivation.claim_implies_itself），而它本身无前提推不出（Derivation.claim_not_closed）；这三条是构造之例，不是一般之律。定域之处：墨子随后把结论推为对所有人的全称断言（“天下無愚夫愚婦，雖非兼之人，必寄託之於兼之有是也”），这一步越出设定：结论只在设定之下成立（有设而然），脊柱不给出对每一个人的断言。兼与别何者更好，理论也不由此论证取得；这里只取其论证形式。",
+   "names_used": [
+    "设",
+    "有设而然",
+    "定域"
+   ],
+   "locator": "《墨子·兼愛下》",
+   "relational": "设定是论者与一个未断言的情形之间的关系，结论只随此关系成立",
+   "ro_passage": "",
+   "tradition": "墨家（墨子十论）",
+   "work": "《墨子·兼愛下》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mozi-ming-gui-fen-qing",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C31-R014",
+    "MO1-C31-R015"
+   ],
+   "source_id": "MO1-S-C31",
+   "layer": "先秦；论（墨子·明鬼下）；战国墨家",
+   "fragments": [
+    "若使鬼神請有，是得其父母姒兄而飲食之也，豈非厚利哉？",
+    "雖使鬼神請亡，此猶可以合驩聚衆，取親於鄉里。",
+    "上以交鬼之福，下以合驩聚衆，取親乎鄉里。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Derivation.relative_throughout",
+    "Becoming.Derivation.Derives.sound"
+   ],
+   "records": [
+    "derivation-soundness"
+   ],
+   "reading": "AI读法：《明鬼下》对鬼神有无不作判定。“雖使鬼神請亡，此猶可以合驩聚衆，取親於鄉里”是让步（雖……猶）：合欢聚众之利不依鬼神有无而成立；同段总结“上以交鬼之福，下以合驩聚衆，取親乎鄉里”也把它与交鬼之福并列为两项。所以「祭祀有利」不经分情形即成立，不需鬼神有无定然否。分情形只定额外的厚利：“若使鬼神請有”之下才有“得其父母姒兄而飲食之”，这是有设而然：在前提之下推出者，在前提成立之处成立（Derivation.relative_throughout；其可靠性见 Derivation.Derives.sound）。旧读法说结论只到「不可非」，不成立，已改。剩余：此篇所据的鬼神是有赏罚的意志（意志之层），论证恰被构造成不依赖它；原文同段又诉诸“此上逆聖王之書”（以圣王之书为据，权威之层）：二者都不取。",
+   "names_used": [
+    "设",
+    "有设而然",
+    "定然否",
+    "不可非"
+   ],
+   "locator": "《墨子·明鬼下》",
+   "relational": "祭祀之利在祭者与所聚之众的关系中成立，亡亲之利（若有）只在设之下",
+   "ro_passage": "",
+   "tradition": "墨家（墨子十论）",
+   "work": "《墨子·明鬼下》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mozi-feigong-tong-lei",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C17-R001",
+    "MO1-C17-R002",
+    "MO1-C17-R003"
+   ],
+   "source_id": "MO1-S-C17",
+   "layer": "先秦；论（墨子·非攻上）；战国墨家",
+   "fragments": [
+    "此何也？以虧人自利也。",
+    "是何故也？以虧人愈多，其不仁茲甚，罪益厚。",
+    "若以此說往，殺十人十重不義，必有十死罪矣；",
+    "今有人於此，少見黑曰黑，多見黑曰白，則以此人不知白黑之辯矣；"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.Balances.loses_iff_beyond_margin",
+    "Becoming.Clearing.clearer_loses_dweller",
+    "Becoming.Transfer.unordered",
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Derivation.Derives.sound"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "comparison-by-widening",
+    "selection-through-a-model-of-the-options",
+    "derivation-soundness"
+   ],
+   "reading": "AI读法：（承 RO 段 mozi-feigong 之类别「定域」与其声明，另加一句推导之读）“以虧人自利”有确切对应：没有某一部分时水平所容纳的有意义之延续，在有它的实际进程中失去，恰当它对某一所需条件的净汲取超出余量（余地；Flow.Balances.loses_iff_beyond_margin）；在延续条件（凡续皆有顾，陈述而不断言）之下，清除者一例中清除者之部分使居住者失去（Clearing.clearer_loses_dweller，构造之例）。“以虧人愈多，其不仁茲甚，罪益厚”是标量累加：脊柱的比较以无丧（保留）为准，在延续条件之下的转移一例中双方各有所得、互不保留，即各有所长而不排序（Transfer.unordered，构造之例）；排序只出于以广为愈这一前提。所以累加只在一方保留另一方之处成立：此为定域。“若以此說往”只对应同一规则对每一人成立（推导中对每个自然数实例化一步，Derivation.Derives 之 allNatElim，其可靠性见 Derivation.Derives.sound）；“十重不義，必有十死罪”之累加不在推导之中，属上文之定域。到攻国却“從而譽之，謂之義”，是经一个把应分者归为一类的读法去判（Learning.selects_not_right_of_parted），“少見黑曰黑，多見黑曰白”正是同一读法因量而变；判断只在所关键者跨其类一致时才对（Learning.selects_right_through）。",
+   "names_used": [
+    "余地",
+    "凡续皆有顾",
+    "无丧",
+    "有得",
+    "各有所长",
+    "以广为愈",
+    "类",
+    "定域"
+   ],
+   "locator": "《墨子·非攻上》",
+   "relational": "亏人自利把一方之得与另一方之失放在一次交换中；判断须随同一规则遍及每一情形",
+   "ro_passage": "mozi-feigong",
+   "tradition": "墨家（墨子十论）",
+   "work": "《墨子·非攻上》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "hanfei-mao-dun-bu-liang-li",
+   "status": "revised",
+   "record_ids": [
+    "FA1-H40-R008"
+   ],
+   "source_id": "FA1-S-H40",
+   "layer": "先秦；论（韩非子·难势，复应者所引客语）；战国末，篇之作者与编次有争议",
+   "fragments": [
+    "人有鬻矛與楯者，譽其楯之堅：『物莫能陷也。』俄而又譽其矛曰：『吾矛之利，物無不陷也。』",
+    "以爲不可陷之楯，與無不陷之矛，爲名不可兩立也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Derivation.rows_each_met",
+    "Becoming.Derivation.rows_not_together",
+    "Becoming.Derivation.rows_not_pointwise",
+    "Becoming.Derivation.no_countermodel"
+   ],
+   "records": [
+    "finite-basis-common-interpretation",
+    "derivation-soundness"
+   ],
+   "reading": "AI读法：“物莫能陷”是「没有一物能陷此楯」（¬∃），“物無不陷”是「没有一物此矛不陷」（¬∃¬，莫不然之式）。各自单独都可满足；放在同一处境（“以子之矛，陷子之楯”）中，没有一个构形同时满足二者，所以“不可兩立”。脊柱有一个同形的构造之例，不是一般之律：Bool 上的两个主张 b = w（b 取 false 与 true），各自可满足（Derivation.rows_each_met），却没有一个构形同时满足（Derivation.rows_not_together）；二者之合取可推出而无构形满足，所以其闭包不能逐条满足（Derivation.rows_not_pointwise）。「莫」与「莫不」之分在此可见：前者否定存在，后者否定不然者（Derivation.no_countermodel 之式）。此篇以此喻势与贤之不两立，此处只取其逻辑结构；规律一簇另以奇偶之矛盾系统处理同一段，二者相容。",
+   "names_used": [
+    "不然者"
+   ],
+   "locator": "韓非子/難勢",
+   "relational": "矛与楯之誉各自成立，矛盾只在二者相遇的那一关系中出现",
+   "ro_passage": "",
+   "tradition": "法家",
+   "work": "《韓非子·難勢》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "xunzi-wei-ke-ding-ran-fou",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0126"
+   ],
+   "source_id": "RU2-S-XZ21",
+   "layer": "先秦；论（荀子·解蔽）；战国末",
+   "fragments": [
+    "凡观物有疑，中心不定，则外物不清。吾虑不清，未可定然否也。",
+    "冥冥而行者，见寝石以为伏虎也，见植林以为后人也：冥冥蔽其明也。",
+    "瞽者仰视而不见星，人不以定有无：用精惑也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Decided",
+    "Becoming.not_not_decided",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Web.Excludes.not_of_alike"
+   ],
+   "records": [
+    "counts-exist-where-decided",
+    "selection-through-a-model-of-the-options",
+    "testing-within-couplings"
+   ],
+   "reading": "AI读法：荀子说思虑不清时“未可定然否也”：这与脊柱不对每一命题假定定然否（Decided 不被假定，而定然否不可非，not_not_decided）相容；用字不证明构造之意，同段即有“中心不定”。冥行者把寝石读作伏虎：一个把二者归为一类的读法，经它的选择分不开二者（Learning.selects_not_right_of_parted）。瞽者不见星，人不据以定星之有无：一个主张只经耦合进来的差异被排除（Web.Excludes.not_of_alike），瞽者之不见与星之有无没有耦合，所以既不排除有，也不排除无。三处都说：然否之定须经确实耦合的读出，读出不清之处标为未决。剩余：同篇“心者，形之君也”立单一中心，不在此对应中。",
+   "names_used": [
+    "定然否",
+    "不可非",
+    "类",
+    "未决"
+   ],
+   "locator": "荀子/解蔽篇",
+   "relational": "然否之定是观者与所观经由读出的关系，不是观者单方的断定",
+   "ro_passage": "",
+   "tradition": "儒家（荀子）",
+   "work": "《荀子·解蔽》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "xunzi-yi-yi-jue-yi",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0127"
+   ],
+   "source_id": "RU2-S-XZ21",
+   "layer": "先秦；论（荀子·解蔽）；战国末",
+   "fragments": [
+    "有人焉以此时定物，则世之愚者也。彼愚者之定物，以疑决疑，决必不当。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Derivation.closure_throughout_iff",
+    "Becoming.Derivation.relative_throughout"
+   ],
+   "records": [
+    "derivation-soundness",
+    "wisdom-root"
+   ],
+   "reading": "AI读法：以疑决疑：用一个未立之据去裁定另一个疑问。脊柱上，闭包恰在基底成立之处成立（Derivation.closure_throughout_iff），由未立之据推出者只在据成立处成立（Derivation.relative_throughout），所以这样的裁定没有被证成，问题仍是未决。定域之处：荀子说“决必不当”，即必然错误；脊柱只给出「未被证成」，所推出者仍可能恰好成立。所以此句在「不能作为已定的裁定」这一范围内成立，“必不当”的全称形式须改为「不由此而当」。",
+   "names_used": [
+    "未决",
+    "定域"
+   ],
+   "locator": "荀子/解蔽篇",
+   "relational": "一个裁定与它所据的关系决定它是否被证成",
+   "ro_passage": "",
+   "tradition": "儒家（荀子）",
+   "work": "《荀子·解蔽》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "xunzi-chi-zhi-you-gu",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ06",
+   "layer": "先秦；论（荀子·非十二子），注为隋唐（唐杨倞注）；战国末",
+   "fragments": [
+    "然而其持之有故，其言之成理，足以欺惑愚衆，"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Derivation.closure_throughout_iff",
+    "Becoming.Derivation.Derives.sound"
+   ],
+   "records": [
+    "derivation-soundness"
+   ],
+   "reading": "AI读法：荀子评它嚻、魏牟等：其学“持之有故，其言之成理”，仍“足以欺惑愚衆”。“有故”有两读：今读为「有其据」；杨倞注作“妄稱古之人亦有如此者”，读为援引古人先例（以先例为据，此读不取）。此处取今读，两读并存。依今读：推导（说）只保证所推出者在其据成立之处成立（Derivation.Derives.sound），闭包不为一个不成立之据作保（Derivation.closure_throughout_iff），所以有据、言有条理是必要的，却不足以使其学成立：据本身须成立。",
+   "names_used": [
+    "说"
+   ],
+   "locator": "荀子/非十二子篇",
+   "relational": "一种学问与其所据的关系：有据而据不立，其学仍不立",
+   "ro_passage": "",
+   "tradition": "儒家（荀子）",
+   "work": "《荀子·非十二子》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "xunzi-ke-yi-wei-yu",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0147"
+   ],
+   "source_id": "RU2-S-XZ23",
+   "layer": "先秦；论（荀子·性恶）；战国末",
+   "fragments": [
+    "故涂之人可以为禹则然，涂之人能为禹则未必然也。虽不能为禹，无害可以为禹。",
+    "然则可以为，未必能也；虽不能，无害可以为。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Branching.PossiblyDrawnInto",
+    "Becoming.Branching.NecessarilyDrawnInto",
+    "Becoming.Branching.NecessarilyDrawnInto.possibly",
+    "Becoming.Branching.OneWay.possibly_not_necessarily"
+   ],
+   "records": [
+    "necessarily-drawn-is-not-returning"
+   ],
+   "reading": "AI读法：可以为与能为分开：可以为是有一条路达到，能为是实际达到。脊柱上：从一个构形出发有一程进入某区域（或入，Branching.PossiblyDrawnInto），与从它出发的每一运行都进入（必入，Branching.NecessarilyDrawnInto），是两个条件；必入在有一运行时推出或入（Branching.NecessarilyDrawnInto.possibly）。“未必然”即非必入；“虽不能为禹，无害可以为禹”即或入而非必入之形：脊柱在一个构造的 Bool 过程中示出此形（Branching.OneWay.possibly_not_necessarily：false 可进入 {true}，而停在 false 的运行永不进入），这是构造之例，不是一般之律。一次实际运行未进入，不反驳有一程进入。「性恶」之论（固定本性之层）不在此对应中，只取可与能之别。",
+   "names_used": [
+    "入"
+   ],
+   "locator": "荀子/性惡篇",
+   "relational": "可以为是一个处境与其所能达的诸路的关系，能为是其中实际所行之路",
+   "ro_passage": "",
+   "tradition": "儒家（荀子）",
+   "work": "《荀子·性惡》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "lunyu-zhi-zhi-wei-zhi-zhi",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-02-17-R01",
+    "RU1-LY-02-18-R01",
+    "RU1-LY-02-18-R02"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦；原典正文（论语·为政 2.17、2.18）；春秋末至战国言论传统，经战国秦汉传承编定",
+   "fragments": [
+    "知之為知之，不知為不知，是知也。",
+    "多聞闕疑，愼言其餘，則寡尤；多見闕殆，愼行其餘，則寡悔。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.World.comes_to_rest_unrefuted",
+    "Becoming.World.lpo_of_finite_ends",
+    "Becoming.LastChange.not_not_settles",
+    "Becoming.LastChange.lpo_iff_settles"
+   ],
+   "records": [
+    "continued-change-needs-openness",
+    "counting-where-the-counts-exist",
+    "the-last-change-of-a-run"
+   ],
+   "reading": "AI读法：知之为知之，不知为不知：把所知与所不知如实标出，本身是一种知；“多聞闕疑，愼言其餘”，是把疑处标为未决，只断言没有疑问的部分。此章的对应者是理论的地位标记（无设而然、有设而然、设、读，与未决分开写出），不是某一条律的内容。定域在于：脊柱在知与不知之间多出一层，有些主张只能说其不可非，而说不出其见证。例如：在一个平衡、耗散、生起有所承载、有活动者与在者之普查、自某步起围住在者的世界中，「自某步起停息」（止）不可非（World.comes_to_rest_unrefuted）；而对一切满足前提的有穷世界说出在哪一步之后再无生起，推出 LPO（World.lpo_of_finite_ends），即须无穷可尽之设。一次运行终将定住亦只证其不可非（LastChange.not_not_settles），要断言每一这样的运行定住恰等价于 LPO（LastChange.lpo_iff_settles）。所以理论之知分三：无设而然者、在所名之设下而然者、只到不可非者，其外为未决；「知之／不知」的二分须如此细化。此章的动机（干禄、寡尤）不取。",
+   "names_used": [
+    "未决",
+    "无设而然",
+    "有设而然",
+    "设",
+    "读",
+    "不可非",
+    "无穷可尽",
+    "定域",
+    "止"
+   ],
+   "locator": "論語·為政 2.17、2.18",
+   "relational": "知是知者与所知的关系，其中包括对此关系之界的知",
+   "ro_passage": "",
+   "tradition": "儒家",
+   "work": "《論語·為政》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "lunyu-bu-zhi-qi-ren",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-05-08-R01",
+    "RU1-LY-05-19-R01",
+    "RU1-LY-05-19-R02",
+    "RU1-LY-14-02-R01"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦；原典正文（论语·公冶长、宪问）；春秋末至战国言论传统，经战国秦汉传承编定",
+   "fragments": [
+    "由也，千乘之國，可使治其賦也；不知其仁也。",
+    "未知，焉得仁？",
+    "可以為難矣，仁則吾不知也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.no_prefix_fixes_next",
+    "Becoming.Web.tail_unexcluded"
+   ],
+   "records": [
+    "learning-by-refutation",
+    "testing-within-couplings"
+   ],
+   "reading": "AI读法：孔子肯定子路、冉求、公西华的具体能力，肯定子文之「忠」、文子之「清」、克伐怨欲不行之难，却不由这些推出其「仁」，说“不知”“未知”。这是不由有限的所见推出所未见：没有一个有限前段定得了下一值（Learning.no_prefix_fixes_next），有限前段之后两种可能都未被排除（Web.tail_unexcluded）。“未知，焉得仁？”的“知”历来有两读：一读「不知」，一读作「智」（未「智」，怎能算「仁」）；本读取「不知」；在「智」读下此句说的是「仁」须有「智」，不是推论的克制。在不知之读下，用“未”而不断言其不然：不是断言不「仁」，而是不由此定，标为未决。「仁」作为一种「德」的内容不在此对应中，只取其推论的克制。",
+   "names_used": [
+    "未决"
+   ],
+   "locator": "論語·公冶長 5.8、5.19；憲問 14.2（依脉络原页「十四之二」，通行本分章或作 14.1）",
+   "relational": "对一个人的判定须经与其所行的关系，有限的所见不定其全",
+   "ro_passage": "",
+   "tradition": "儒家",
+   "work": "《論語》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "lunyu-bi-you-bu-bi-you",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-14-05-R01",
+    "RU1-LY-14-05-R02",
+    "RU1-LY-14-05-R03",
+    "RU1-LY-14-05-R04"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦；原典正文（论语·宪问 14.5）；春秋末至战国言论传统，经战国秦汉传承编定",
+   "fragments": [
+    "有德者必有言，有言者不必有德。仁者必有勇，勇者不必有仁。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Listed.coming_of_ceasing",
+    "Becoming.World.census_one_way",
+    "Becoming.World.arising_of_ceasing",
+    "Becoming.Derivation.countermodel_excludes"
+   ],
+   "records": [
+    "ceasing-needs-arising"
+   ],
+   "reading": "AI读法：此条是关系标记「必」与「不必」之证，不是「德」与言之律：脊柱没有关于「德」与言、「仁」与「勇」的律，相合只在「A 必 B，B 不必 A」这一单向之式。在这一式上脊柱有同形之律：在列出之族中，止息复现推出生起复现（Listed.coming_of_ceasing；在有普查（列）且活动可判定的世界中，World.arising_of_ceasing）；反方向不成立，脊柱以一个构造的世界否定之：accretion 有普查、生起复现而止息不复现（World.census_one_way；同一定理又以 attrition 示出，无普查时前一方向也可失）。这个世界就是逆命题的不然者（Derivation.countermodel_excludes 之式）。以小故之式说：「有言」于「有德」是无之必不然，而「有言」不是「有德」之大故。",
+   "names_used": [
+    "不然者",
+    "小故",
+    "大故",
+    "列"
+   ],
+   "locator": "論語·憲問 14.5",
+   "relational": "必与不必说两种状态之间单向的条件关系",
+   "ro_passage": "",
+   "tradition": "儒家",
+   "work": "《論語·憲問》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "yinming-si-yin",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-NY08",
+    "FO1-R-NY09",
+    "FO1-R-NY10",
+    "FO1-R-NY11",
+    "FO1-R-NY12",
+    "FO1-R-NY17"
+   ],
+   "source_id": "FO1-S-NY",
+   "layer": "隋唐；论（因明入正理论，商羯罗主造，唐玄奘汉译）；印度论理传统",
+   "fragments": [
+    "不成、不定及與相違，是名似因。",
+    "常無常品皆共此因，是故不定。",
+    "此因唯於異品中有，是故相違。",
+    "無合者，謂於是處無有配合，但於瓶等雙現能立、所立二法。",
+    "倒合者，謂應說言「諸所作者皆是無常」，而倒說言「諸無常者皆是所作」"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Derivation.countermodel_excludes",
+    "Becoming.Derivation.claim_not_throughout",
+    "Becoming.World.census_one_way"
+   ],
+   "records": [
+    "selection-through-a-model-of-the-options",
+    "derivation-soundness",
+    "ceasing-needs-arising"
+   ],
+   "reading": "AI读法：似因有三。不定：因在「常」与「无常」两类中都有，经一个不分开二者的特征去选，选不出任何一方（Learning.selects_not_right_of_parted）。相违：因只在异品中有，有因之处恰是所立无之处，每一个都是不然者（Derivation.countermodel_excludes）。似喻中的无合：只在瓶上同现能立、所立二法，未说出「凡有因者皆有所立」的遍及关系；一处同现不等于处处成立（脊柱在平凡基底之 Bool 例中示出：主张在 true 处成立而不处处成立，Derivation.claim_not_throughout，构造之例）。倒合：把“諸所作者皆是無常”倒为“諸無常者皆是所作”，单向之关系不可倒转：脊柱上有单向之律，其逆由一个构造的世界否定（World.census_one_way）。由似因所生之知为似比量（FO1-R-NY17）。",
+   "names_used": [
+    "不然者"
+   ],
+   "locator": "因明入正理论",
+   "relational": "因之真与似取决于因与所立在诸实例中的关系是否遍及、是否单向",
+   "ro_passage": "",
+   "tradition": "佛教（因明）",
+   "work": "《因明入正理论》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "yinming-si-zong",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-NY07"
+   ],
+   "source_id": "FO1-S-NY",
+   "layer": "隋唐；论（因明入正理论，商羯罗主造，唐玄奘汉译）；印度论理传统",
+   "fragments": [
+    "雖樂成立，由與現量等相違故，名似立宗。謂現量相違、比量相違、自教相違、世間相違、自語相違、能別不極成、所別不極成、俱不極成、相符極成。",
+    "自教相違者，如勝論師立「聲為常」。世間相違者，如說「懷兔非月，有故」，又如說言「人頂骨淨，眾生分故，猶如螺貝」。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Derivation.countermodel_excludes",
+    "Becoming.Derivation.Derives.sound",
+    "Becoming.Derivation.closure_throughout_iff",
+    "Becoming.SharedCodes.reads_iff"
+   ],
+   "records": [
+    "derivation-soundness",
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：九种似宗中，现量相违、比量相违是论题与所见或所推相冲突，即域中有一个使之不成立的情形（不然者，Derivation.countermodel_excludes）。自语相违（“我母是其石女”）是一辞同时断言 p 与非 p，在任何构形都不成立，域中任一构形都是其不然者。自教相违（“勝論師立「聲為常」”）：胜论自宗以声为「无常」，所以这是论题与立者自己所立之基底相违，即自身不一致：在自宗之基底下推出者在基底成立之处成立（Derivation.Derives.sound），所立在那里处处不成立而被排除；自宗之基底本身是否成立是另一问题（Derivation.closure_throughout_iff）。此读法取其结构，不取学派之权威。世间相违中“懷兔非月”违反世间约定之名（怀兔是月的俗称）：读出须双方之码在此所指上一致（SharedCodes.reads_iff），否认它是以另一码读同一形式；能别、所别、俱不极成是论题之名不为双方共许，同一结构。定域之处：世间相违另一例“人頂骨淨”以世人共许为准，脊柱不以世人共许为不然者；相符极成（立敌已共许，立之无用）是对辩之条件，不是成立条件。所以此条除这两处外相合，此两处须定域。",
+   "names_used": [
+    "不然者",
+    "约定俗成",
+    "定域"
+   ],
+   "locator": "因明入正理论",
+   "relational": "一宗之立依于它与所见、所推、立者自宗之基底及双方之名的关系",
+   "ro_passage": "",
+   "tradition": "佛教（因明）",
+   "work": "《因明入正理论》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "yinming-neng-po",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-NY18",
+    "FO1-R-NY19"
+   ],
+   "source_id": "FO1-S-NY",
+   "layer": "隋唐；论（因明入正理论，唐玄奘汉译）；印度论理传统",
+   "fragments": [
+    "復次若正顯示能立過失，說名能破。",
+    "若不實顯能立過言，名似能破。",
+    "如是言說，名似能破，以不能顯他宗過失，彼無過故。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Derivation.countermodel_excludes",
+    "Becoming.Derivation.no_countermodel"
+   ],
+   "records": [
+    "derivation-soundness"
+   ],
+   "reading": "AI读法：能破须确实显出能立之过失；于无过之能立妄指其过，是似能破，“彼無過故”。脊柱上：一个不然者须是所论之域中使主张不成立的构形（Derivation.countermodel_excludes 之假设 ∃ s, D s ∧ ¬ p s 中的 D s）；对一个由成立之基底无前提推出的主张，域中没有这样的构形（Derivation.no_countermodel），所指的「过失」就只是似破。这也是方法中的一条：在更弱的表示里随意改动一个谓词所得的「反例」，不在所论之域中，不反驳更完整的说明。",
+   "names_used": [
+    "不然者"
+   ],
+   "locator": "因明入正理论",
+   "relational": "破与所破的关系：破须落在所破之域中真实的过失上",
+   "ro_passage": "",
+   "tradition": "佛教（因明）",
+   "work": "《因明入正理论》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "zhonglun-xian-jian-he",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-M19"
+   ],
+   "source_id": "FO1-S-MMK",
+   "layer": "魏晋南北朝；论释（中论，青目释依题署，后秦鸠摩罗什汉译）；印度论释传统",
+   "fragments": [
+    "比知名先見故後比類而知，如人先見火有烟，後但見烟則知有火。神義不然，誰能先見神與五陰合，後見五陰知有神？"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.determines_lumped_iff",
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.Web.Excludes.not_of_alike"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "testing-within-couplings"
+   ],
+   "reading": "AI读法：青目释比知：先见火有烟，后但见烟则知有火；由见「五阴」推知有「神」，须先见过「神」与「五阴」同在，从未见过二者的关联，就无从由此推彼。脊柱上：有限数据固定某处之值，恰当某个已观察的输入与之同类（Learning.determines_lumped_iff）；推及只在世界跨所用之类一致之处为对（Learning.lumped_right_iff）。没有任何观察把「神」与「五阴」连在一起，所以由「五阴」推「神」无数据可依；一个主张也只经耦合进来的差异被排除（Web.Excludes.not_of_alike）。此句破的是由所见推知从未见过者的推论，中论关于「空」的论旨不在此对应中。同段以贤圣所说为四种「信」之一，那是以圣人之语为知之据，另立相分条（zhonglun-si-xin）。",
+   "names_used": [
+    "类"
+   ],
+   "locator": "中论第十八品，青目释",
+   "relational": "由此知彼须经已见的此彼之关联，推论依于这一关系",
+   "ro_passage": "",
+   "tradition": "佛教（中观）",
+   "work": "《中论》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "weishi-zheng-zi-zheng",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-CY29"
+   ],
+   "source_id": "FO1-S-CY",
+   "layer": "隋唐；论（成唯识论，唐玄奘译糅，7世纪）；印度论释传统",
+   "fragments": [
+    "此若無者，誰證第三？",
+    "第三、第四皆現量攝，故心、心所四分合成，具所、能緣，無無窮過，非即、非離，唯識理成。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Derivation.closure_throughout_iff",
+    "Becoming.Frame.self_incomplete"
+   ],
+   "records": [
+    "derivation-soundness",
+    "readings-within-what-they-read"
+   ],
+   "reading": "AI读法：成唯识论立四分：自证分证见分，又立证自证分以证自证分，而第三与第四互证，皆属现量，所以“無無窮過”，“唯識理成”。这是一个闭合的自证：「识」在自身之内证成自身而无缺口。脊柱与此相分：闭包恰在基底成立之处成立（Derivation.closure_throughout_iff），系统内诸分的互证不使其基底成立；与之相关，一个以自身构形为主张的框架不能实现关于其构形的每一种主张（Frame.self_incomplete）。论以「识」为证成一切的根据，属先在根据之层；理论中的知是在一个展开中分化出来的关系，不自证无缺。唯识所谓「相分」（所缘之相）与三种关系之一的相分同字而所指不同，此处前者在引号中。C08 另有一条以同一段说自知之完备（weishi-zi-zheng，记录 FO1-R-CY32），二者重叠，交整合者。",
+   "names_used": [
+    "相分"
+   ],
+   "locator": "成唯识论（四分之说）",
+   "relational": "论把证成放在「识」自身之内的分与分之间，理论把知放在展开中诸形成的关系之中",
+   "ro_passage": "",
+   "tradition": "佛教（唯识）",
+   "work": "《成唯识论》",
+   "gap": "",
+   "layer_checked": "本原（先在的根据）"
+  },
+  {
+   "id": "mobian-xiaoqu-yi-shuo-chu-gu",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-XQ-shuo"
+   ],
+   "source_id": "MI1-S-XQ",
+   "layer": "先秦；论（墨辩·小取）；战国后期墨家",
+   "fragments": [
+    "以名舉實，以辭抒意，以說出故。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Derivation.Derives.sound",
+    "Becoming.Derivation.closure_throughout_iff"
+   ],
+   "records": [
+    "derivation-soundness"
+   ],
+   "reading": "AI读法：名举实，辞抒意，说出「故」：三种关系。在名、辞、说并列之中，此句之「故」是辞之据（大取“辭以故生”）：说出「故」，即推导（说）把一个主张的前提显出。脊柱的推导把基底中的主张与局部前提作为不同的构造子，不抹去任何前提，所推出者在其据成立处成立（Derivation.Derives.sound），闭包不为不成立之据作保（Derivation.closure_throughout_iff）。墨经自己把物之所以然与知之之据分开：经下“物之所以然，與所以知之，與所以使人知之，不必同，說在病。”RO 段 mobian-qi-ran-suo-yi-ran 把同一句与“其然也同，其所以然不必同”合读为物之「故」，以混淆诸律（Confound）对应；那一半留在 RO 段（其记录 MI1-R-XQ-reason 在规律一簇），本条只取辞之「故」，不再列 Confound 诸声明。两种读法相容：物之「故」经变动而得，辞之「故」经推导而出。",
+   "names_used": [
+    "名",
+    "辞",
+    "说"
+   ],
+   "locator": "墨子/小取",
+   "relational": "名与实、辞与意、说与「故」是三种关系，不是三种物",
+   "ro_passage": "mobian-qi-ran-suo-yi-ran",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·小取》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "mojing-wei-bian-wu-sheng",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "MI1-S-JX",
+   "layer": "先秦；经（墨经·经下），说见经说下；战国后期墨家，诸篇年代有争议",
+   "fragments": [
+    "謂辯無勝，必不當。說在辯。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.not_not_decided",
+    "Becoming.Decided"
+   ],
+   "records": [
+    "counts-exist-where-decided"
+   ],
+   "reading": "AI读法：说「辩无胜」，即说所争之两辞都不当；经下判此说必不当。设所争为 p 与非 p，「无胜」是 ¬p ∧ ¬¬p，也就是 ¬(p ∨ ¬p)；它必不当，即 ¬¬(p ∨ ¬p)：所争者之定然否不可非。脊柱无前提地证明之（not_not_decided）。此经只判「无胜」这一主张不当，不说必有一方当；后者要所争者定然否（Decided），对一切辞是辞皆定然否，脊柱只作为设。其解说在经说下（见 mobian-dang-zhe-sheng），经说把可辩者限于对同一彼的是与非。此句在脉络中只有阅读单元，无关系记录。",
+   "names_used": [
+    "定然否",
+    "不可非",
+    "辞皆定然否",
+    "设"
+   ],
+   "locator": "墨子/經下",
+   "relational": "辩之胜负是两辞与所争之彼的关系；「无胜」这一主张自身也落在这一关系中",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經下》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "lao-81-shan-zhe-bu-bian",
+   "status": "new",
+   "record_ids": [
+    "LL-R043"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "先秦；经（老子·第八十一章，王弼本系统传世经文）；成书与分章年代有争议；所引苏辙注为宋明（宋）",
+   "fragments": [
+    "信言不美，美言不信。善者不辩，辩者不善。知者不博，博者不知。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Derivation.countermodel_excludes",
+    "Becoming.Derivation.no_countermodel"
+   ],
+   "records": [
+    "derivation-soundness"
+   ],
+   "reading": "AI读法：此章以「A 者不 B」连说三对：凡「信言」不美，凡善者不辩，凡知者不博；每对的后一句是前一句的逆否，说的是同一全称。在关系标记上，“辩者不善”是全称之否定（没有一个辩者善，莫之式），比「辩者不必善」（并非每个辩者都善）强得多。脊柱分开二者：举一个辩而不善者（不然者），只排除「辩者必善」这一全称（Derivation.countermodel_excludes）；要断言「辩者不善」，须所论之域中没有一个辩而善者（Derivation.no_countermodel 之式），而这要一条推出它的律或逐一之查，此章未给。脊柱也没有关于言之「信」与美、人之善与辩的律，所以此条只是关系标记之定域：章中全称之「不」，就所能举之据只到「不必」。同一传统内部已作此修正：苏辙解此章作“信則為實而已故不必美”“以辯為主則未必善”“博學而日益者未必知道也”，把全称之不读成不必或未必（平行条 LC2-SZ-C81-R01、LC2-SZ-C81-R02，及于五十六章同式之 LC2-SZ-C56-R01）。",
+   "names_used": [
+    "不然者",
+    "定域"
+   ],
+   "locator": "老子·第八十一章",
+   "relational": "「信」与美、善与辩、知与博各是言者与所言中的一对性状；章以全称之不断其不相容",
+   "ro_passage": "",
+   "tradition": "道家（老子）",
+   "work": "《老子》",
+   "gap": "",
+   "layer_checked": ""
+  },
+  {
+   "id": "xunzi-bu-ke-yu-gong-gu",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦；论（荀子·正名）；战国末",
+   "fragments": [
+    "故明君知其分而不与辨也。夫民易一以道，而不可与共故。故明君临之以埶，道之以道，申之以命，章之以论，禁之以刑。故民之化道也如神，辨说恶用矣哉！",
+    "今圣王没，天下乱，奸言起，君子无埶以临之，无刑以禁之，故辨说也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Derivation.Derives.sound",
+    "Becoming.Derivation.closure_throughout_iff",
+    "Becoming.SharedCodes.run_from_imposition"
+   ],
+   "records": [
+    "derivation-soundness",
+    "a-code-formed-between-formations"
+   ],
+   "reading": "AI读法：《荀子·正名》在三惑之后说：“明君知其分而不与辨也”；民“易一以道，而不可与共故”，所以“明君临之以埶，道之以道，申之以命，章之以论，禁之以刑”，民化如神，“辨说恶用矣哉”；只有圣王没、君子无埶无刑之时，才“辨说也”。这里有两层理论不断言之物：一是单一中心（以君之埶与刑代替辨说），二是等级（民不可与共其故，只受结论不受据）。脊柱与此相分。其一，主张的地位由它的据与推导定：所推出者在其据成立之处成立（Derivation.Derives.sound），闭包恰在基底成立之处成立（Derivation.closure_throughout_iff）；推导是主张之间的关系，其定义中不出现谁持有埶，埶与刑不是基底中的主张，不使任何据成立。其二，以一码强加于众，脊柱算出其所失：自强加之步起，沿每一次听取之程，众人在每一所指上一致；彼此之读恰当所强加之码分得开诸所指时才准确；各人恰失去自己之码所分而所强加之码所合者；只有其码被强加于众者无所失（SharedCodes.run_from_imposition）；这是外加码（制名）的所失，不是其当否。同篇内部另有一途：无埶之时，荀子自己转向“实不喻，然后命，命不喻，然后期，期不喻，然后说，说不喻，然后辨”，又以“约定俗成谓之宜”定名（约定俗成），名与辨在他那里也有不依埶的一途。名一簇（C09）的核验者建议把同句收为制名一条的相分，二者重叠，交整合者定一处。",
+   "names_used": [
+    "相分",
+    "制名",
+    "约定俗成"
+   ],
+   "locator": "荀子/正名篇",
+   "relational": "论者与民之间：荀子以埶与刑代替共享之据；理论中据经推导而成，推导不分持埶者与否",
+   "ro_passage": "",
+   "tradition": "儒家（荀子）",
+   "work": "《荀子·正名》",
+   "gap": "",
+   "layer_checked": "意志或单一中心（兼等级：民不可与共故）"
+  },
+  {
+   "id": "hanfei-wen-bian-yan-wu-er-gui",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "FA1-S-H41",
+   "layer": "先秦；论（韩非子·问辩）；战国末，篇之作者与编次有争议",
+   "fragments": [
+    "明主之國，令者，言最貴者也；法者，事最適者也。言無二貴，法不兩適，故言行而不軌於法令者必禁。",
+    "若其無法令而可以接詐、應变、生利、揣事者，上必采其言而責其實。言當則有大利，不當則有重罪，是以愚者畏罪而不敢言，智者無以訟。此所以無辯之故也。",
+    "故曰：「上不明，則辯生焉。」"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Contextual.glues_iff_agree",
+    "Becoming.Derivation.closure_throughout_iff"
+   ],
+   "records": [
+    "claims-shown-in-context",
+    "derivation-soundness"
+   ],
+   "reading": "AI读法：问辩说“上不明，則辯生焉”：“明主之國，令者，言最貴者也”，“言無二貴，法不兩適”，言行不合者必禁；无令之处，上“采其言而責其實”，当则大利，不当则重罪，于是“愚者畏罪而不敢言，智者無以訟”，所以无辩。理论不断言的是：一个中心之令是一切言的唯一量度，辩是这一中心失职的症状。脊柱与此相分。其一，“法不兩適”要一个对一切事都成立的判定；脊柱给出这样一个不依语境的判定存在的确切条件：恰在诸语境相交处一致时（Contextual.glues_iff_agree）；语境在相交处不一致时，以一令覆盖就违背其中某一语境的判定，并不使之一致。其二，令作为基底中的一条主张，其推出者只在令成立之处成立，闭包不为令本身作保（Derivation.closure_throughout_iff）：令之贵不是令之成立。其三，以重罪使人不敢言，是去掉检验，不是检验。同篇也有不依令的一途：无令之处“采其言而責其實”，以及“夫言行者，以功用爲之的彀者也”，以言行之效检验其言；这一半与脊柱以所采动作之结果检验主张的路相近，此处只记其在，不另立相合。",
+   "names_used": [
+    "相分",
+    "验"
+   ],
+   "locator": "韓非子/問辯",
+   "relational": "言与令的关系：一切言以一中心之令为量度；理论中言之当否在言与所论之域的关系中",
+   "ro_passage": "",
+   "tradition": "法家",
+   "work": "《韓非子·問辯》",
+   "gap": "",
+   "layer_checked": "意志或单一中心（兼争胜与等级：以重罪使人不敢言）"
+  },
+  {
+   "id": "zhonglun-si-xin",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "FO1-S-MMK",
+   "layer": "魏晋南北朝；论释（中论，青目释依题署，后秦鸠摩罗什汉译）；印度论释传统",
+   "fragments": [
+    "若謂以有信故有神，是事不然。何以故？信有四種：一現事可信；二名比知可信，如見烟知有火；三名譬喻可信，如國無鍮石喻之如金；四名賢聖所說故可信，如說有地獄、有天、有欝單曰。無有見者，信聖人語故知。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.Excludes.not_of_alike",
+    "Becoming.Derivation.closure_throughout_iff"
+   ],
+   "records": [
+    "testing-within-couplings",
+    "derivation-soundness"
+   ],
+   "reading": "AI读法：青目列四种「信」：现事、比知、譬喻、贤圣所说；第四种“如說有地獄、有天、有欝單曰。無有見者，信聖人語故知”：对无人见过者，以圣人之语为知。理论不断言这一种据。脊柱上，一个主张只经耦合进来的差异被排除（Web.Excludes.not_of_alike）：无人见过、无任何耦合之处，主张与其否定都不被排除，问题留为未决；圣人之语若作为基底中的一条主张，其推出者只在它成立之处成立，闭包不为它作保（Derivation.closure_throughout_iff）：说者的身份不使所说成立。这是相分。同段内部的张力：青目随即以四种「信」逐一检查，“是神於一切信中不可得”，用以破「神」；若圣人之语本身足以为据，有人说有「神」，「神」便可得，所以第四种「信」在他自己的论证里也只在不与另外三种相冲突时起作用（此为 AI 读法，未据注疏核）。此句在脉络中只有阅读单元，无关系记录；同段的比知一句见 zhonglun-xian-jian-he。",
+   "names_used": [
+    "相分",
+    "未决"
+   ],
+   "locator": "中论第十八品，青目释",
+   "relational": "知者与所知之间：以说者的身份为据；理论中所知之当否只在所论之域与耦合中",
+   "ro_passage": "",
+   "tradition": "佛教（中观）",
+   "work": "《中论》",
+   "gap": "",
+   "layer_checked": "意志或单一中心（以圣人之语为知之据）"
+  }
+ ],
+ "kept": [
+  {
+   "id": "mobian-bu-zhi-qi-shu",
+   "names_used": [
+    "定然否",
+    "数"
+   ]
+  },
+  {
+   "id": "mobian-xiaoqu-zhou-huo",
+   "names_used": [
+    "不然者",
+    "入"
+   ]
+  },
+  {
+   "id": "yinming-san-xiang",
+   "names_used": [
+    "说",
+    "不然者",
+    "不可非"
+   ]
+  }
+ ],
+ "dropped": [],
+ "candidate_changes": [
+  {
+   "record_id": "LC2-SZ-C81-R01",
+   "now": "parallel",
+   "same_as_entry": "lao-81-shan-zhe-bu-bian",
+   "why": "苏辙解老子八十一章「信則為實而已故不必美」，把章中全称之不读成不必：这正是新条目 lao-81-shan-zhe-bu-bian 所说的传统内部修正，比挂在 mojing-bi-zhi（一个不然者否定必）下更贴切。"
+  },
+  {
+   "record_id": "LC2-SZ-C81-R02",
+   "now": "parallel",
+   "same_as_entry": "lao-81-shan-zhe-bu-bian",
+   "why": "同章苏辙「以辯為主則未必善」，同上。"
+  },
+  {
+   "record_id": "LC2-SZ-C56-R01",
+   "now": "parallel",
+   "same_as_entry": "lao-81-shan-zhe-bu-bian",
+   "why": "苏辙解五十六章「知者不言，言者不知」作「未必」，与八十一章同一结构（全称之不到不必），归同一新条目。"
+  }
+ ],
+ "name_flags": [
+  {
+   "name": "关系标记（必 或 皆 莫 莫不 不必 未 若 则 故）",
+   "issue": "本簇的概念清单含这些关系标记，名表没有一行。读法中只能把它们当作普通虚词，而 C16 的若干条（mojing-bi-jin、mojing-bi-zhi、hanfei-mao-dun-bu-liang-li、lunyu-bi-you-bu-bi-you、lao-81-shan-zhe-bu-bian）正是这些标记的证。",
+   "proposal": "立为一组结构标记，不作名：必＝对所论之域的全称，以经说上「一然者一不然者，必不必也」为证（一个不然者即否定之），经上「必，不已也」只入引文，因「不已」在名表已作复现；不取经说上「必也者，可勿疑」的认知义。或＝非全称（小取「或也者，不盡也」），不取经下「或，過名也」。莫不＝¬∃¬（经上「盡，莫不然也」）。莫＝¬∃（难势「物莫能陷」）。不必＝¬∀（论语「有言者不必有德」）。未＝未定（「未可定然否也」，未只作虚词，与名表「未定」之注一致）。若＝局部前提之标记（明鬼下「若使鬼神請有」）。则＝蕴含。故＝辞之据（大取「辭以故生」），与物之所以然以及小故、大故分开。"
+  },
+  {
+   "name": "盡",
+   "issue": "名表以盡名中立（Neutral：∀），出处为经上「盡，莫不然也」。但「莫不然」是 ¬∃¬，在构造的读法下弱于 ∀；二者只在每一情形定然否之处相等（Decided.of_not_not；对列出之族，not_not_all 只给到 ¬¬∀）。",
+   "proposal": "盡仍名 ∀（C14），注中写明出处之式是 ¬∃¬，与 ∀ 只在每一情形定然否处重合；C16 中 ¬∃¬ 只用标记「莫不」，不另立名。"
+  },
+  {
+   "name": "設",
+   "issue": "所名「条件、假设」与一词一义冲突：条件在名表是所待（关系项的角色）。注「律的局部前提亦名设」又使「无设而然」自相矛盾：无前提的定理照样带局部假设（如 Derivation.relative_throughout 之 premise）。",
+   "proposal": "设只名「陈述而不断言」者：延续条件（凡续皆有顾）、以广为愈、作为具名条件的 LPO 等，以及推导中作为前提而不被断言者（兼爱下「設以為二士」）。一条律的局部假设以标记「若」写出，不叫设；所名删去「条件」二字。"
+  },
+  {
+   "name": "無窮可盡",
+   "issue": "一个名合了 LPO、WLPO、Markov、LLPO 与依赖选择，而这些是强弱不同的原则，脊柱对它们分别作校准（Change.LPO、Sensitivity.WLPO、Horizon.Markov、Likeness.LLPO）。出处「無窮不害兼」是墨家说无穷不妨碍兼爱，其解说「盈無窮，則無窮盡也」是分情形而不判定盈否，是对照，不是 LPO 之证。",
+   "proposal": "无穷可尽只名 LPO（每一布尔序列或有一处为真，或处处为假）；WLPO 名「无穷可定其皆否」；Markov 名「非皆否则有是」；LLPO 与依赖选择由整合者定。出处保留经下「無窮不害兼」，注明是对照。"
+  },
+  {
+   "name": "不然者、不可非、定然否、或不當（出处）",
+   "issue": "这些名的引一栏是空的；或不当之注要求修订者核对出处。",
+   "proposal": "不然者：经说上「一然者一不然者，必不必也」。不可非：经说下「其理不可非」。定然否：荀子解蔽「未可定然否也」（RU2-S-XZ21）。或不当：经说上「不俱當，必或不當」，并注明它只对相矛盾的一对辞成立（同条「不若，若犬」），作为对一切辞的全称是弱排中律，属设（exists_undominated_iff_weakly 给出它的等价形式）。辞皆定然否是复合，不需单独出处。"
+  },
+  {
+   "name": "稳定（¬¬q → q）",
+   "issue": "定然否的读法在 mobian-wu-qiong-ying-fou、mobian-yi-yan-wei-jin-bei 中都要说「结论稳定」，名表没有名。不采的「稳」是另一个概念（扰而复归）。",
+   "proposal": "用复合「不可非则然」，由名表之名组成；不用「稳」。"
+  },
+  {
+   "name": "表示（一个说明所用的表示）",
+   "issue": "方法要求说「一个表示略去的关系不是说明的失败」，名表没有表示之名；用「模型」又会撞上象（选择所经之归并）。",
+   "proposal": "擬，出处系辞「擬之而後言」（YD-ZX7），与象、读分开；本簇读法暂写「表示」。"
+  },
+  {
+   "name": "相合",
+   "issue": "没有出处（注只写「RO 三种关系」）。",
+   "proposal": "经说上「所以謂，名也。所謂，實也。名實耦，合也。」与经上「合，正、宜、必。」；单字「合」已名形成之并合（C03），只用复合「相合」。不取杨倞「合之以爲驗也」（RU2-S-XZ08）与经说上「俱處於室，合同也」。"
+  },
+  {
+   "name": "相分",
+   "issue": "与唯识「相分」（所缘之相）同字而所指不同；weishi-zheng-zi-zheng 一条两者同时出现。",
+   "proposal": "保留相分为三种关系之一；凡引唯识，「相分」一律放在引号中并注其所缘之相义。不改用「相违」，因为相违是因明的术语（自教相违等），会撞上另一处。"
+  },
+  {
+   "name": "充分条件（有之必然）",
+   "issue": "名表有小故（必要）与大故（充分且必要），没有单独的充分条件；mojing-gu-xiao-da 要说「活跃的充分条件不由依存给出」。",
+   "proposal": "用经说上大故定义的前一半「有之必然」作固定短语，作单独充分之名。"
+  },
+  {
+   "name": "未決",
+   "issue": "没有出处。",
+   "proposal": "程颐《伊川易传》乾九四「疑者未決之辭。處非可必也」（YD-CY，宋明），以论语「多聞闕疑」（先秦）为结构上的对照。"
+  },
+  {
+   "name": "止、不已（墨经的第二义）",
+   "issue": "名表之止（停息）取经上「止，以久也」；经上「止，因以別道」与经下「止，類以行之」中的止却是以一个不然者止住推及。名表之不已（复现）取中庸「於穆不已」；经上「必，不已也」以同二字释必。",
+   "proposal": "两名保留名表之义；推理上的止与「必，不已也」只入引文，经由不然者与标记「必」去读，不另立名。"
+  },
+  {
+   "name": "當",
+   "issue": "C16 的墨辩各条都要用当、不当（辞与所争之彼相合），名表只有复合「或不当」与「当位」「当簿」，没有单字当。",
+   "proposal": "若整合者要为当立名，出处取经上「辯勝，當也」，并与易章之当位分开；否则读法中当、不当只作对墨辩用语的提及。"
+  }
+ ],
+ "notes": "【总】34 条修订，5 条新增，3 条两位核验者都保留（kept），0 条删除；3 个苏辙平行条改挂新条目。所有片段与读法中的引文都用 ctq.py 在冻结文本中逐字核过（片段只取本条 source_id；他篇之句以引号放进读法，也逐句核过出处）。所有声明与记录都用 resolve.py 解析，没有 NONE；5 个旧记录名换为现名：contextual-registration→claims-shown-in-context，practical-judgment-g0-j→practical-judgment-under-living-significance，registration-within-what-it-registers→readings-within-what-they-read，sensitivity-is-the-least-registration→sensitivity-is-the-least-coupling，testing-within-registration→testing-within-couplings。\n\n【按定义或构造之例的声明，读法中已逐一注明】Contextual.indexed_fits 是 Iff.rfl（按定义）；Web.Dependent、Web.Supported 是定义；Derivation.rows_each_met/rows_not_together/rows_not_pointwise 是 Bool 上两行的构造之例；Derivation.claim_under_itself/claim_implies_itself/claim_not_closed/claim_not_throughout 是平凡基底在 Bool 上的构造之例；Specker.noGlobal 是三盒的构造之例，一般之律是 ParitySystem.contradicts_noGlobal；Branching.OneWay.possibly_not_necessarily 是构造的 Bool 过程；World.census_one_way 是两个构造的世界；Clearing.clearer_loses_dweller 与 Transfer.unordered 是在延续条件之下的构造之例。exists_undominated_iff_weakly 写出了它的条件（非空的列出选项单，在其上非自反且传递的关系）；World.comes_to_rest_unrefuted 写出了全部前提；LastChange.not_not_settles 写出了「构形有穷、无变化回路」。\n\n【逐条改动】mojing-bi-jin：读「莫不然」为 ¬∃¬（no_countermodel 之式），强弱之分（Decided.of_not_not、not_not_all）归理论；「不已」原在动、止、久一组，名表之不已为复现，推到「域中无例外」标为 AI 读法；加 laws-of-one-step 记录。mojing-bi-bu-ke-liang-bu-ke：以经说上「彼，凡牛，樞非牛，兩也，無以非也」读为「两辞不能俱不可」＝not_not_decided；删 World.law_iff_em 与 Diagonal.moves_not；不取直读为排中律；断句有争议。mobian-bian-bu-ju-dang：片段补全到「不若，若犬」；改为定域：此步只对 p 与非 p 成立，全称形式是弱排中律（设，exists_undominated_iff_weakly）；删 moves_not。mobian-dang-zhe-sheng：删 SharedCodes.reads_iff 与码记录；读作经下「謂辯無勝」的解说，同（重同）与异（相反而不矛盾）都不成辩；law_iff_em 写成其确切陈述；记墨辩在传统内部已把争胜读成当否。mobian-wu-qiong-ying-fou：片段一补全到「誖」；分开难者与答者；「盡有窮無難」有校改之争，不据其字；结论为否定式所以稳定，属理论读法；加 LastChange 两条与 LPO；保留 gap Decided.cases_stable 为最低一级引理。mojing-bi-zhi：删 Web.Excludes.not_of_alike（它说的是耦合内的不排除，不是举反例）；明写不然者须在域中（countermodel_excludes 假设中的 D s）；引经上「止，因以別道」、经下「止，類以行之」、经说下「我以此其不然也，疑是其然也」，指出墨经说「疑」，脊柱的域内不然者是「排除」，更强。mojing-gu-xiao-da：删 Determined（只说后继唯一，不给充分性）；大故以 Web.Supported 的定义为确切实例，对活跃只有 Dependent 一个方向，所以对活跃定域；用名表之待、容、俱亡。mobian-xiaoqu-xiao：改为定域：中效则是相合，不中效则非若作真值判定过强（claim_not_closed 之 Bool 例）。mobian-xiaoqu-bi-mou-yuan-tui：片段改为三句，「辭之侔也，有所至而正」留在 RO 段只引不收；声明改为 Learning 三条。mobian-daqu-ci-yi-gu-sheng：大取「以理长」之理是论辞之条理，不等同名表之理，lemma_throughout 只在结构上对应。mojing-fa-yi-guan-yi：改为定域，引经说上「法，取同，觀巧傳」与「法，取此擇彼，問故觀宜……是孰宜？」：墨经在两准之间择一，脊柱在两准答不同语境之问时让二者各带索引并存。mobian-yi-yan-wei-jin-bei：删 Diagonal 三条；以经说下「以，誖，不可也……」读为 (p→¬p)→¬p 的自指归谬，不是对角论证。zhuang-qiwu-bian-wu-sheng：删 Frame.self_incomplete；加 fitsFree_iff、ParitySystem.contradicts_noGlobal（一般之律）与 Specker.noGlobal（标为例）。zhuang-qiwu-yi-ming：加片段「是故滑疑之耀……此之謂以明」；以明是方法要求，无 Lean 锚；「照之于天」与「道通爲一」作剩余不取。mobian-ren-yi-nei-wai：只改层与 relational（「仁」「义」入引号），读法加「以明」。mobian-xian-wen-suo-wei：移出「智，智狗不智犬」一句（属名一簇的重同）；读法写明 reads_iff 要求码分得开诸所指（TellsApart）。mobian-jia：删 claim_not_closed；「假必誖」只对作断言之假成立，对作设之假不成立。mozi-she-er-shi：加片段「我以為當其於此也……必寄託之於兼之有是也」；对所有人的全称结论越出设定，此为定域；三条 Bool 例注明。mozi-ming-gui-fen-qing：kind 由定域改为相合：「雖……猶」是让步，合欢聚众之利不依鬼神有无；厚利才是有设而然；撤回旧读法「只到不可非」；鬼神之意志与「此上逆聖王之書」之权威作剩余。mozi-feigong-tong-lei：allNatElim 一句改为「同一规则对每一人」，「十重不義，必有十死罪」之累加不在推导中；两条构造之例注明在延续条件（陈述而不断言）之下；排序只出于以广为愈；「以虧人愈多，其不仁茲甚，罪益厚」全句引出。hanfei-mao-dun-bu-liang-li：rows_* 注明为构造之例；用冻结文本「以子之矛，陷子之楯」；层注明是复应者所引客语。xunzi-wei-ke-ding-ran-fou：撤回「用『未可』而不用『不可』即构造之意」一说（同段有「中心不定」）；「心者，形之君也」作剩余。xunzi-yi-yi-jue-yi：删 Decided.of_not_not。xunzi-chi-zhi-you-gu：两读并存，杨倞注「妄稱古之人亦有如此者」读为援引先例，此读不取；层注明唐注。xunzi-ke-yi-wei-yu：加 OneWay.possibly_not_necessarily（构造之例）；引文按冻结文本的简体「虽不能为禹，无害可以为禹」。lunyu-zhi-zhi-wei-zhi-zhi：对应者改为理论的地位标记；声明换为 comes_to_rest_unrefuted（写全前提）、lpo_of_finite_ends、LastChange 两条；层按「先秦；原典正文……」。lunyu-bu-zhi-qi-ren：删 not_of_alike；「知／智」两读并存；locator 记「十四之二」与通行本 14.1 之异。lunyu-bi-you-bu-bi-you：明写此条只是标记必与不必之证；accretion 是逆命题的不然者，attrition 示出普查前提不可少。yinming-si-yin：claim_not_throughout 与 census_one_way 注明为构造之例。yinming-si-zong：加片段「自教相違者……猶如螺貝」；自教相违读为与立者自宗之基底相违（自身不一致）；「懷兔」读为世间约定之名（reads_iff）；只有「人頂骨淨」与「相符極成」须定域；删 moves_not。yinming-neng-po：删 not_of_alike，以 D s 立锚。zhonglun-xian-jian-he：片段补全到「後見五陰知有神？」；层改为「魏晋南北朝；论释……」；以贤圣所说为据的一半另立相分条。weishi-zheng-zi-zheng：主声明 closure_throughout_iff，Frame.self_incomplete 为相关；删 gap_unsaid；「识」「相分」入引号。mobian-xiaoqu-yi-shuo-chu-gu：删 Confound、not_fixes_of_untaken、apart_only_downstream；本条只取辞之据，物之所以然一半留在 RO 段 mobian-qi-ran-suo-yi-ran；引经下「物之所以然，與所以知之……說在病」。另：读法中的未采符号（信、德、智、仁、义、空、照之于天等）一律放进引号，名表之名（止、位、正、明、合、相合等）不再借作他义。\n\n【两位核验者原判保留而改列修订者】hanfei-mao-dun-bu-liang-li 与 yinming-si-yin 须把所引之例注明为构造之例，不作一般之律；mobian-ren-yi-nei-wai 的 relational 中有未采之符号（仁、义）须入引号。\n\n【核验者的修法有误之处】一、语文核验者把因明「自教相违」读为违背学派所承认者；按同句之例「勝論師立『聲為常』」，胜论自宗以声为无常，这是与立者自宗之基底相违，即自身不一致，我按结构核验者的读法改。二、结构核验者在 lunyu-bi-you-bu-bi-you 中把 attrition 当作逆命题的反例；实际 accretion（有普查、生起复现而止息不复现）才是逆命题的不然者，attrition 示出无普查时前一方向也可失。三、结构核验者建议以 Derivation.Derives.sound 作大故之锚；它说的是推导的可靠性，不是条件的充分性；我改用 Web.Supported 的定义作确切实例，并说明对活跃不成立。四、两位核验者都有把他篇之句加为片段的建议（如在经上条目加经说上之句）；片段必须出自本条 source_id，所以这些句子改为在读法中引出，并逐句核过。五、mozi-ming-gui-fen-qing：两位核验者都在定域内修改；按「雖……猶」的让步结构，主结论不依鬼神有无而成立，改为相合，额外之厚利才是有设而然。\n\n【平行条注记的更正（位置不变）】FO1-R-SA031 只显示「有之不必然」一半；ZH1-C22-R-05 属外篇，年代有争议；MI1-R-G1-standard 出自迹府，是后编之篇。\n\n【交整合者的重叠】weishi-zheng-zi-zheng 与 C08 weishi-zi-zheng（FO1-R-CY32）同段；xunzi-bu-ke-yu-gong-gu 与 C09 核验者建议的制名之相分条同句；hanfei-mao-dun-bu-liang-li 与规律一簇（奇偶之矛盾系统）同段，二者相容；RO 段 mojing-gu-xiao-da 的大故一半须照本条同改（删 Determined）；RO 段 mobian-qi-ran-suo-yi-ran 的物之所以然一半保留，本条只取辞之据。\n\n【「缺失」各项中未收者及理由】推类之难：在 C09/C07 已有主条。MI1-R-JX-three 与 MI1-R-SX-metacog：是 C08 的主候选。「無說而懼」：没有本簇特有的结构。正名中辞与辨说的定义及「听则合文，辨则尽故」：除推导的设计本身外没有律可对应，其「期、命、辨、说」之序已作为 xunzi-bu-ke-yu-gong-gu 的内部之途引出。因明「所作性故」：并入「故」标记的名表建议。已检验之名：名表已有證，参验在 C08。兵家：其推理之段（BI1-SZ-R-04 庙算、BI1-SZ-R-58 用间、虚实之「策之」）是 C08/C10/C15 的主候选，没有本簇特有的兵家段落。\n\n【四个非关系之层，按传统】墨家：本原层不出现；意志层（明鬼之赏罚之鬼神）与权威层（「此上逆聖王之書」）在 mozi-ming-gui-fen-qing 中作剩余，论证恰被构造得不依赖它们；天志属 C13/C14，三表属 C08；争胜层由墨辩自己读成当否（mobian-dang-zhe-sheng、mojing-wei-bian-wu-sheng），不是相分。庄子：「照之于天」的视点在 zhuang-qiwu-yi-ming 中作剩余（定域），胜与是之分是相合。儒家：意志或单一中心兼等级——荀子正名「民……不可与共故」，以埶与刑代替辨说，新立相分条 xunzi-bu-ke-yu-gong-gu；固定本性层（孟子是非之心「我固有之也」、荀子性恶）在 C14 处理，本簇只在 xunzi-ke-yi-wei-yu 中记「性恶」为剩余。法家：单一中心兼争胜与等级——韩非子问辩「言無二貴，法不兩適」，新立相分条 hanfei-wen-bian-yan-wu-er-gui。佛教：本原层——成唯识论证自证分（weishi-zheng-zi-zheng，原有相分）；权威层——中论青目释以贤圣所说为四种「信」之一，新立相分条 zhonglun-si-xin。道家：老子八十一章是关系标记之定域（全称之不只到不必），苏辙在传统内部作此修正；本簇在道家中没有找到真正的相分，不硬立。相分由 1 条增到 4 条。\n\n【新条目的出处】mojing-wei-bian-wu-sheng（经下，原只有阅读单元，无关系记录，故 record_ids 为空）；lao-81-shan-zhe-bu-bian（LL-R043，分诊为「-」，不在任何一簇作主候选）；xunzi-bu-ke-yu-gong-gu、hanfei-wen-bian-yan-wu-er-gui（FA1-S-H41 在脉络中没有节点与关系）、zhonglun-si-xin 皆无关系记录，record_ids 为空。\n\n【仍未决】大取多错简，「以理长」的读法未据注疏核；齐物论「寓諸庸」诸家异读未核；中论四种「信」一段「第四种信只在不与其余三种冲突时起作用」是 AI 读法，未据注疏核；mojing-bi-bu-ke-liang-bu-ke 若换断句须重做。工作脚本与中间结果在 /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/zh/c16r/（build.py、fix.py、final.py、chk.py、final.json）；仓库中未改任何文件。"
+}

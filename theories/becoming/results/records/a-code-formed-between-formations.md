@@ -75,6 +75,8 @@ RO's chapter on the Chinese sources found the spine lacking a law of a code form
 - related, not a proved adapter: [what-finitely-many-labels-fix](what-finitely-many-labels-fix.md). A code read off finitely many labels of a given feature: supplied to one side, where here the code forms between formations.
 - related, not a proved adapter: [historical-source-binding](historical-source-binding.md). Dated controls separate rival histories; here records kept from before are what bar a reading written back (kept_bars).
 
+**Used by:** [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md) (interpretive)
+
 <a id="sources--来源"></a>
 ### Sources
 

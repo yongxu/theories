@@ -1,0 +1,398 @@
+{
+ "pian": "篇十三　传（C12 演化、世系与传递）",
+ "markdown": "## 篇十三　传\n\n本篇论传：在一个展开之中，一族之存量何以升而须有益之者，日新何以须益；新的物何以由给予而聚（所出），聚时所待何以承自所出（因），所需何以有界（传）；容何以决定谁有出者（传择）。然后在计数中把一代之变分为选择项与损益，读其在世代、出者之数、组与抽样中的进程；最后说择者经其象而择、学者经他者实应而学（取法），以及所出怎样推广顾之所及而不排序。起点不是先立亲与子两个独立之物再说它们相关：所出本身由一步之取与界定（在场、与、聚），因与传是依存在这一步怎样结的律，传择是容对给予的约束，选择与损益都是同一展开中的计数。本篇诸律在写入其中的局部条件（衡、耗、有待、唯活动者与、传之界 δ、无损益、各组员数同……）下，对每个如此表示之宇成立；损益之计、选择项、出者之数之选与组之分是不加前提的计数恒等式。所出、因、传不带估值：适应度不被定义，出者之数只是权与读数，不说哪一种量更好。凡续皆有顾（延续之条件）在意义之篇陈述而不断言，它定所顾之范围，自身不排序；排序唯在以广为愈（C），其根据未决。本篇承流与停息之篇（取、与、衡、耗、共取过与）与生灭之篇（聚、作、结），下接群与分之篇。说中与篇末之古典对照都是读法（讀（AI，D54）），只说结构之同异。\n\n### 十三·一　益之者\n\n**經**　益之者，跨一步在场、与一族多于其所取于族者也。凡一族跨一步而益，计入其余，则有益之者：或其余，或一在场之待者。其余为益之者，恰当族之诸水平所升逾诸待者净与者，多于所降逾其净取者；流于其族跨此步衡，则其余非益之者。\n\n**說**　益之者（净给予者，net giver，`Flow.NetGiver`）是复名：益（一族跨一步之存量上升）加“之者”，取损卦六五「或益之」〔DS13〕。其余在此按剩余界定（`Flow.withImbalance`）：计入其余，每一次益都有益之者，这一条不加前提，益之者由逐个核对在场者找到，不判定任何无穷之事（`Flow.rise_netGiver`）；它或是其余，或是某个在场之待者（形成，formation）（`Flow.rise_given`）。其余何时为益之者有恰当之条件（`Flow.rest_netGiver_iff`），流在族上衡时其余不给净量（`Flow.BalancesOn.rest_not_netGiver`）。益不是开：一族可以封（跨步不与其外交换）而从其余得益（见下条之计数之网），所以益与开分名（讀（AI，D7））。对照（相合，yi-yi-huo-yi-zhi）：「或益之，十朋之龜弗克違」〔YD-JG42〕「莫益之，或擊之」〔YD-JG42〕：有无益之者定其所得；读「莫」为连其余在内无一益之者，则「莫益之」而无益正是上一律之逆否；「或擊之」与吉凶之辞不映射（经文约西周，成书有争议）。下条由此说日新何以须益。\n\n**證**　`Becoming.Flow.NetGiver`、`Becoming.Flow.withImbalance`、`Becoming.Flow.rise_netGiver`、`Becoming.Flow.rise_given`、`Becoming.Flow.rest_netGiver_iff`、`Becoming.Flow.BalancesOn.rest_not_netGiver`；记录 [where-novelty-gain-comes-from](../results/records/where-novelty-gain-comes-from.md)。\n\n### 十三·二　日新须益\n\n**經**　凡一族自 T 至 T＋N 诸步其状两两相异（N 为 T 时存量之内其状之数），则其间某步益；自某步起步步日新，则于任意晚之步益。若与不过取、族之单无重，则日新之族于任意晚之步，或其余为益之者，或族于其步不封。若一单无重而尽持诸所待，与不过取，自 T 起其余不为益之者，则自任一步起皆有二步其状同：复，而非步步日新。\n\n**說**　日新（新，novelty）在此是一族之状（构形）自某步起两两相异。T 时存量之内之状只有有限多，所以新到一定步数必有一步益（`Web.rises_within_of_new`），步步日新则于任意晚之步益（`Web.rises_late_of_new`），这两条不加前提。在与不过取（第一定律：所给不多于所取，`Flow.Gainless`）之下，无重之族之益来自其余或跨其界（不封，`Flow.ClosedAt` 之否）（`Flow.rise_from_rest_or_open`、`Flow.new_from_rest_or_open`）；无止地首得容之待者，各所需定于族内，也须族无止地益（`Flow.newly_supported_from_rest_or_open`）：新形成须益。反之，尽持诸所待之有限整体，其余不给净量时只能复（`Flow.whole_recurs_of_rest_idle`、`Flow.whole_not_new_of_rest_idle`）。见证：计数之网水平即步数，无一待者在场，步步日新，其余每步给一单位（`Flow.counting_given_by_rest`）：族封而有益。对照（定域，zhuangzi-wanwu-jie-zhong）：「萬物皆種也，以不同形相禪，始卒若環」〔ZH1-S27〕：「若環」在有限之兼、与不过取、其余不给净量之处成立，这是充分条件，不是恰当之条件；有自其余或跨界而来之益处，可以不复；「天均」不映射（庄子杂篇，成篇年代有争议）。\n\n**證**　`Becoming.Web.rises_within_of_new`、`Becoming.Web.rises_late_of_new`、`Becoming.Flow.rise_from_rest_or_open`、`Becoming.Flow.new_from_rest_or_open`、`Becoming.Flow.newly_supported_from_rest_or_open`、`Becoming.Flow.whole_recurs_of_rest_idle`、`Becoming.Flow.whole_not_new_of_rest_idle`、`Becoming.Flow.counting_given_by_rest`；记录 [where-novelty-gain-comes-from](../results/records/where-novelty-gain-comes-from.md)。\n\n### 十三·三　所出\n\n**經**　所出：g 跨一步在场而与 x，x 跨此步而聚，则 x 出于 g，g 为 x 之所出。凡物跨一步而聚，于其物跨此步衡，则有其所出。凡流衡、唯活动者与，一有形之物跨一步而作，则有一他物于其步活动而为其所出。有所出而其作在后步、作时无所与者；有不息而无一所出者。\n\n**說**　所出（世系，descent，`Flow.DescendsAt`）有三个合取：给予者在场、在这一步与 x、x 跨这一步聚（开始作为条件而在）。方向依名表：“x 出于 g”，g 是 x 之所出；出于 g 者（后代）下文简称出者。在 x 处衡，聚就是被给予的，所以必有所出（`Flow.descends_of_comes`）；在衡且唯活动者与之流中，有形之物（活动恰在水平为正之处）之作也必有一个活动之所出（`Web.Embodied.descends`）。所出随聚，不随作：种子在休眠时被供给，次步作时无所与，仍出于其亲（`Provisioned.descends`）；从休眠中醒来，作不息而无所出（`Sleeper.no_descent`）。不在场者之给予不入任何水平，不成所出（`Brood.not_descends`）；所出按给予计，不按净量，给而又取回同样多的在场者仍是所出，所出者也不必有形。讀（AI，D9、D36）：所出是一个已形成的关系，不是直接的估值，也不加任何次序。对照（相合，xunzi-wu-lei-zhi-qi）：「物類之起，必有所始。」〔RU2-S-XZ01〕在衡之条件下即上一律；（定域，xunzi-lilun-wu-xian-zu-wu-chu）「无先祖，恶出？」〔RU2-S-XZ19〕问的正是所出之向，但所出不限亲属与族属，以先祖为本而尊之是本原之向，不映射。\n\n**證**　`Becoming.Flow.DescendsAt`、`Becoming.Flow.Descends`、`Becoming.Flow.descends_of_comes`、`Becoming.Web.Embodied.descends`、`Becoming.Provisioned.descends`、`Becoming.Sleeper.no_descent`、`Becoming.Brood.not_descends`；记录 [evolution-on-descent](../results/records/evolution-on-descent.md)、[living-on-and-descent](../results/records/living-on-and-descent.md)。\n\n### 十三·四　因\n\n**經**　因，x 出于 g 之步，x 跨步后所待，g 于与之步亦待之也。因兼二者：x 跨此步新结之待，与 x 先已待、跨步仍待者。x 于与之步不待 c，则 x 于 c 有因，恰当 x 跨此步结 c 之待则 g 于与之步待 c。凡物跨一步而聚，于其物衡，凡其所出皆于 c 有因：其跨步后待 c，则有一所出于与之步亦待 c；此步在场者莫待 c，则其跨步后不待 c。\n\n**說**　因（承继，inheritance，`Web.InheritsAt`）只说出者所待之所待来自所出，不说所需多少；所需之界在下条之传。因覆盖新结与仍待两种情形（`Web.InheritsAt.split`）；出者先前不待 c 时，因恰是一条结之律（`Web.inheritsAt_iff_forming`）。在衡与因之下，出者所待者都有一个所出先待之（`Flow.inherited_from_giver`），在场者都不待者出者也不待（`Flow.no_new_dependence`）：经所出可以改所需，不能添所待；后代经所出而新待其亲，正在因之外（记录之界）。因不是每个宇都有：有尽之宇 novel 具除传以外的一切前提（`World.novel_finite`、`World.novel_but`），其中子出于亲而待其亲，亲先无所待。讀（AI，D31）：因是依存在一次所出处怎样结的律，不是加于全体的又一假设。对照（定域，weishi-shiqi-wu-yin）：「若唯始起，有為無漏無因緣故，應不得生」〔FO1-S-CY〕在因之内为真（上一律），但因是前提，因之外新待可以结，所以「應不得生」不是一切宇之律（成唯识论，唐玄奘糅译，所据为印度释论）。\n\n**證**　`Becoming.Web.InheritsAt`、`Becoming.Web.InheritsAt.split`、`Becoming.Web.inheritsAt_iff_forming`、`Becoming.Flow.Inherits`、`Becoming.Flow.inherited_from_giver`、`Becoming.Flow.no_new_dependence`、`Becoming.World.novel_but`、`Becoming.World.novel_finite`；记录 [transmission-is-inheritance-and-need](../results/records/transmission-is-inheritance-and-need.md)、[map-of-premises](../results/records/map-of-premises.md)。\n\n### 十三·五　传\n\n**經**　传，因而所需有界也：凡 x 出于 g、x 跨步后待 c，则 g 于与之步待 c，且 x 之所需不过 g 之所需加 δ。传恰是因与所需之界二者并。流衡，则传有自某所出之传：凡聚而待 c 者，有一所出于与之步待 c，且其所需不过该所出之所需加 δ。后者严弱于传：有宇衡、唯活动者与、有待，自某所出之传成立，而传于任何 δ 皆不成立。\n\n**說**　传（传递，transmission，`Flow.TransmitsWithin`）在名表中只名这一个结构：因加所需之界（`Flow.transmitsWithin_iff`）。它只界所需之升，不界其降，也不禁所待、所需以外之改。两个所出是一种情形：一子在同一步出于二所出，一待池、一不待，自某所出之传成立而传对每个 δ 都不成立（`TwoGivers.twofold`）；传择之界只需自某所出之传（`Flow.fromSome_supported`），二所出之间除同步给予外不必有任何关系。讀（AI，D31）：宇之传之前提不弱化为自某所出之传，后者作为较弱之律另行陈述。对照（定域，yi-xugua-fufu-fuzi）：「有夫婦然後有父子」〔YD-OW-XG〕：二所出同步共与是脊柱所有的一种情形，但所出一个即够，配对之先在不被要求（序卦，成书年代有争议）。（相分，xunzi-dalue-bian-yi-ya-zhi-he）「三王既以定法度，制禮樂而傳之，有不用而改自作，何以異於變易牙之和，更師曠之律？」〔RU2-S-XZ27〕立一不可改之准且以三王为唯一来源；传不禁所需之降与其他之改，传本身也不排序，改之得失只在以广为愈之下比较。\n\n**證**　`Becoming.Flow.TransmitsWithin`、`Becoming.Flow.transmitsWithin_iff`、`Becoming.Flow.TransmitsFromSome`、`Becoming.Flow.TransmitsWithin.fromSome`、`Becoming.TwoGivers.twofold`、`Becoming.Flow.fromSome_supported`；记录 [transmission-is-inheritance-and-need](../results/records/transmission-is-inheritance-and-need.md)。\n\n### 十三·六　传之独立\n\n**經**　凡宇具传以外之七前提，而传于其中有所约（有出者跨步后有所待），则有一邻宇，去一待而具传以外之一切，传不成立。凡宇之条件，去一待而不改，且推出传者，则凡具之之宇，传于其中无所约。读出者初聚所待唯其诸所出于与之步所汲者，加“汲即待”，则推出因；有尽之宇具其余七前提者，二者缺一皆不足以推出因。凡有尽之宇衡、耗、有形、有待，传恰当诸所待皆有因。\n\n**說**　去掉所出者于一步对 c 之一条待，不改任何水平、活动、汲取、所需与流，其余七前提与有尽都保持，而传对每个 δ 都失去（`World.drop_but`）：所以凡看不见这一去的条件都推不出起约束之传（`World.vacuous_of_drop_invariant`）。其余七前提只限依存，从不要求一个依存存在；传要求所出之待，所以推导须一条要求某依存存在之律。汲之读（`Flow.DependsOnDrawn`）加“汲即待”（`Web.DrawingDepends`）是这样的一对，合则推出因（`Flow.inherits_of_drawn`），缺一不可（`World.drawn_and_link_needed`）；在有尽、衡、耗、有形、有待之宇中，所需之界随之而得，传就是因（`World.transmitting_iff_inherits`）。讀（AI，D31）：“汲即待”不采为结之律（采之则是又一前提，且它只够不必），作为已检验其推论之候选留着。\n\n**證**　`Becoming.World.drop_but`、`Becoming.World.vacuous_of_drop_invariant`、`Becoming.Flow.DependsOnDrawn`、`Becoming.Web.DrawingDepends`、`Becoming.Flow.inherits_of_drawn`、`Becoming.World.drawn_and_link_needed`、`Becoming.World.transmitting_iff_inherits`；记录 [transmission-independent-where-it-binds](../results/records/transmission-independent-where-it-binds.md)。\n\n### 十三·七　传择\n\n**經**　传择，唯被容者有出于之者，而于界内所传之所需，于界内被选出也。凡唯活动者与、有待：x 出于 g 之步，g 被容；一步不被容者，此步无出于之者；终不被容者，终无出于之者。若又传 c 之待于 δ 内，则凡 x 出于 g 而跨步后待 c 者，x 之所需不过 c 于与之步之水平加 δ。若流又衡，则 x 之所需加自 S 步以来所取于 c 者，不过 c 于 S 之水平加其间所与 c 者加 δ。\n\n**說**　传择（经世系之演化，evolution）是新组合：传加择；此“择”是以容之有无而选出，不是缘感而择（经耦合之选择）。容是一步上水平满足每个所需，所以只有被容者能给予而有出者（`Flow.DescendsAt.supported`、`Flow.unsupported_childless`、`Flow.never_supported_childless`）；容只必要不够，被容者不担保有出者。所传者在界内被选出（`Flow.transmitted_supported`）；在衡之流中，其间之取与进入日后能传之界：活动定后来之选出（`Flow.transmitted_within`）。见证：一亲以所需二待池，取于池而与二出者；承其所需者自初聚之步起不被容，因亲之取使池下降，所需较少者被容、活动而取：传、损益、选出与活动对选出之回馈在一个展开之中（`Drawdown.drawdown`）。界：无有待时，所传之所需可逾与之步之水平（`Unchecked.unchecked`）；δ 为一时，出者之所需可逾其所待在与之步及每一步之水平（`Slack.slack`）。适应度不被定义，也不说何种所需为优。对照（相分，zhongyong-zai-zhe-pei-zhi）：「故天之生物，必因其材而篤焉。故栽者培之，傾者覆之。」〔RU1-S-ZY〕有一个与传择相同之核，但它设一施予者「天」按所判培覆，又以「材」为先定之等；脊柱中没有这样的选者，容由所待之水平与所需而定，且只必要不够（中庸，成篇年代有争议）。\n\n**證**　`Becoming.Flow.DescendsAt.supported`、`Becoming.Flow.unsupported_childless`、`Becoming.Flow.never_supported_childless`、`Becoming.Flow.transmitted_supported`、`Becoming.Flow.transmitted_within`、`Becoming.Drawdown.drawdown`、`Becoming.Unchecked.unchecked`、`Becoming.Slack.slack`；记录 [evolution-on-descent](../results/records/evolution-on-descent.md)。\n\n### 十三·八　损益\n\n**經**　损益，出者之量对其所出之量之升与降也。凡有尽之单，各员各有其出者之单，任以自然数读员与出者之量：出者之量之总加诸所降，等于各员之量按其出者之数计之总加诸所升（损益之计）。各员之出者皆 k 个，则按出者计之总为诸员之总之 k 倍。\n\n**說**　所升、所降（`raised`、`lowered`）逐对计出者之量超出或不及其员之量者，每一对至多一个不为零。损益之计（Price 方程的计数形式，`price`）是一个算术恒等式，不加前提：员之单与出者之单可以重叠、重复，不须是所出。它把出者之总分为按出者之数加权的员之量与损益两部分，但这个加权之总不是选择项：各员出者数相同时它只是员之总的倍数（`selected_uniform`），一员一出者而量不变时它就是员之量（`unselected`）。复名损益与单字之损、益（一族跨步之存量改动）构造不同。名与因同出「殷因於夏禮，所損益可知也；周因於殷禮，所損益可知也；其或繼周者，雖百世可知也。」〔RU1-S-LY〕（定域，lunyu-yin-sun-yi）：「所損益」即所升所降；「可知」只在后世与所见之代被一个类（归并）并在一起之处成立（`Learning.determines_lumped_iff`），不由所因之多担保；多步之界尚未陈述。\n\n**證**　`Becoming.offspring`、`Becoming.selected`、`Becoming.raised`、`Becoming.lowered`、`Becoming.price`、`Becoming.selected_uniform`、`Becoming.unselected`；记录 [evolution-on-descent](../results/records/evolution-on-descent.md)。\n\n### 十三·九　选择项\n\n**經**　凡有尽之单，任以自然数读诸员之权与量：员数乘诸员权量之积之总，加不一致，等于总权乘总量，加一致。以出者之数为权，按出者计之总逾其均分（出者之数乘员之总，除以员数），恰当一致多于不一致；不逾亦不不及，恰当二者等。并损益之计：员数乘出者之总，加如是计之所降与不一致，等于出者之数乘员之总，加一致与如是计之所升。\n\n**說**　一致（`SelectionTerm.concord`）是遍历有序之对、一员之权多于另一员而其量也多的程度（两个超出之积之总），不一致（`SelectionTerm.discord`）是权多而量少的程度；一致减不一致，除以员数之平方，就是权与量之协方差，所以这一条是消去分母的协方差（`SelectionTerm.covariation`），不加前提。以出者之数为权时，一致减不一致就是真正的选择项（`SelectionTerm.selection_exceeds_iff`、`SelectionTerm.selection_none_iff`），与损益之计合起来即带选择项的 Price 方程（`SelectionTerm.offspring_covariation`）。出者之数相同或量相同时，一致与不一致都为零：加权之总可以移动而没有选择项，见证是两员各有两个出者，加权之总为员之总之二倍而均值不改（`SelectionTerm.Doubling.doubling`）。选择项名表无名，此处用白话；它是计数，不是适应度，也不说何者为优。\n\n**證**　`Becoming.SelectionTerm.concord`、`Becoming.SelectionTerm.discord`、`Becoming.SelectionTerm.covariation`、`Becoming.SelectionTerm.selection_exceeds_iff`、`Becoming.SelectionTerm.selection_none_iff`、`Becoming.SelectionTerm.offspring_covariation`、`Becoming.SelectionTerm.Doubling.doubling`；记录 [selection-term-over-generations](../results/records/selection-term-over-generations.md)。\n\n### 十三·十　世代之均\n\n**經**　世代：首代一单，每代各员有其出者之单，次代即其出者。均值以交乘相比：跨一步不改，恰当员数乘所降加不一致，等于一致加员数乘所升；升，恰当前者少于后者。一代之均异于首代，则其前有一步不相抵，逐步判之即得；诸步无损益（各出者之量等于其员之量），则其前有一步不一致异于一致；诸步各员出者之数皆同，则其前有一步所降异于所升。\n\n**說**　世代（`SelectionTerm.Generations`）是一个以单记之的进程：出者之数是次代之员数，出者之量之总是次代之总，所以一步之均怎样移动，正是上条之式（`SelectionTerm.Generations.mean_step`、`SelectionTerm.Generations.kept_step_iff`、`SelectionTerm.Generations.rises_step_iff`）。均值以自然数交乘相比，不用比值。均值移动了，就有一步选择项与损益不相抵，每一步之相抵是自然数之等式，逐步判之即得，不须判定任何无穷之事（`SelectionTerm.Generations.moved_unbalanced`）；无损益时那一步有选择项（`SelectionTerm.Generations.moved_by_selection`），出者数均匀时那一步有损益（`SelectionTerm.Generations.moved_by_transmission`）。见证：一员带一单位而有二出者，旁一员无所带亦无出者，无损益，一致为二，均值自二分之一升至一（`SelectionTerm.Rising.rising`）。\n\n**證**　`Becoming.SelectionTerm.Generations`、`Becoming.SelectionTerm.Generations.mean_step`、`Becoming.SelectionTerm.Generations.kept_step_iff`、`Becoming.SelectionTerm.Generations.rises_step_iff`、`Becoming.SelectionTerm.Generations.moved_unbalanced`、`Becoming.SelectionTerm.Generations.moved_by_selection`、`Becoming.SelectionTerm.Generations.moved_by_transmission`、`Becoming.SelectionTerm.Rising.rising`；记录 [selection-term-over-generations](../results/records/selection-term-over-generations.md)。\n\n### 十三·十一　容者不被逆选\n\n**經**　凡唯活动者与、有待，单中诸出者皆于此步出于其员：一读数于每一被容之员处不低于诸员，则不一致为零，选择项不为负。凡世代皆由所出而成，一读数于每代被容之员处不低于该代诸员：若一段诸步所降皆为零，则其均于此段不降；若此段诸步无损益而其均有改，则其改为升，且有一步一致多于不一致。\n\n**說**　这是传择的协方差之形：不被容者无出者（十三·七），所以出者多之员，其读数不低于出者少之员，无一对不一致（`SelectionTerm.Flow.support_not_against`）；沿由所出而成之世代（`SelectionTerm.Flow.Descended`），这一读数之均不降（`SelectionTerm.Flow.support_not_lower`），无损益时只经选择项而升（`SelectionTerm.Flow.support_moved_rises`）。所读的是在被容者处最高之读数，不是由所出所带之容本身；损益不降之是前提，如传之为前提。见证：Drawdown 之流满足这些前提，那里均值之升来自所升，因唯一之亲不成对（`SelectionTerm.SupportedDescent.supported_descent`）。不被逆选不是“更好”：排序只在以广为愈。\n\n**證**　`Becoming.SelectionTerm.Flow.support_not_against`、`Becoming.SelectionTerm.Flow.Descended`、`Becoming.SelectionTerm.Flow.support_not_lower`、`Becoming.SelectionTerm.Flow.support_moved_rises`、`Becoming.SelectionTerm.SupportedDescent.supported_descent`；记录 [selection-term-over-generations](../results/records/selection-term-over-generations.md)。\n\n### 十三·十二　出者之数之选\n\n**經**　以权读其自身则无不一致：员数乘诸权平方之总，等于总权之平方加一致（诸对差之平方）；故不低于总权之平方，恰当诸权皆同乃等。以出者之数为权：员数乘按出者计之出者数，不低于出者之数之平方，恰当诸员出者之数皆同乃等。世代以出者之数读之：某步所降为零，则平均出者之数跨此步不降；此步无损益，则平均出者之数升恰当一致为正，不改恰当诸员出者之数皆同。\n\n**說**　这是对出者之数本身的选择：权读其自身时没有不一致之对，选择项就是诸对差之平方，从不为负（`Reproduction.variation`、`Reproduction.never_against`、`Reproduction.none_iff_uniform`）。在出者上计其员之出者数，其均不低于在员上计之均（`Reproduction.number_variation`、`Reproduction.number_never_against`、`Reproduction.number_none_iff`）。以出者之数读世代（`Reproduction.Generations.ByNumber`），无损益之步就是 Fisher 基本定理的计数形式（`Reproduction.Generations.ByNumber.rises_exact_iff`、`Reproduction.Generations.ByNumber.kept_exact_iff`）。出者之数在此只是权与读数，不是价值之量：出者多者在次代所占之份大，这不说出者多为优。\n\n**證**　`Becoming.Reproduction.variation`、`Becoming.Reproduction.none_iff_uniform`、`Becoming.Reproduction.number_never_against`、`Becoming.Reproduction.number_none_iff`、`Becoming.Reproduction.Generations.ByNumber.not_lower_step`、`Becoming.Reproduction.Generations.ByNumber.rises_exact_iff`、`Becoming.Reproduction.Generations.ByNumber.kept_exact_iff`；记录 [what-bounds-offspring-numbers](../results/records/what-bounds-offspring-numbers.md)。\n\n### 十三·十三　加性之分\n\n**經**　凡有尽之单，任以自然数读权与量：一致加不一致之平方，不过权之诸对差平方之总乘量之诸对差平方之总；量即权自身则等。世代中某步无损益，则其均（交乘）之升或降之平方，不过出者之数之诸对差平方之总乘此量之诸对差平方之总。\n\n**說**　这是计数形式的 Cauchy–Schwarz（`Reproduction.bound_sq`）：除尽之后，协方差之平方不过二者方差之积，所以出者之数的方差中经由某一所带之量的加性部分不过全部（`Reproduction.additive_le`、`Reproduction.covariance_sq_le`），该量即出者之数本身时取全部（`Reproduction.additive_self`），无损益时该量之均之响应亦受此界（`Reproduction.Generations.response_sq_le`）。界：一量可与出者之数各自有异而毫无协方差，三员出者之数一、二、三，唯中员带量一，一致与不一致各为一（`Reproduction.Unrelated.unrelated`）。同时经由多个量、以及含回归系数（一个比值）的 Fisher 恒等式，未陈述。\n\n**證**　`Becoming.Reproduction.bound_sq`、`Becoming.Reproduction.additive_le`、`Becoming.Reproduction.covariance_sq_le`、`Becoming.Reproduction.additive_self`、`Becoming.Reproduction.Generations.response_sq_le`、`Becoming.Reproduction.Unrelated.unrelated`；记录 [additive-part-of-offspring-variance](../results/records/additive-part-of-offspring-variance.md)。\n\n### 十三·十四　出者之数之界\n\n**經**　一员一步之出者皆出于之，其数不过其此步与诸出者之总。一族跨一步衡且耗：立于族内、互异之出者之数，加此步取于族之取者之数，不过此步前族之存量。世代皆由所出而成，出者皆立于一族之内，此族自首步至其始存量之步，每步衡且耗，则编号为始存量加一之代空（首代编号为零）；以出者之数读之，若次代有员，则于始存量之步前有一步，员数乘所降多于一致加员数乘所升。\n\n**說**　每个出者跨所出之步至少被与一单位（所出之定义），所以出者之数受所与约束（`Reproduction.Flow.born_le_given`）；出者互异、立于跨步而耗之族内时，出者之数（有出者时加一）不过所出从族所取（`Reproduction.Flow.number_within_take`）：权是流所定之量。衡且耗之族中，出者连同取者不过存量（`Reproduction.Flow.born_within_stock`），世系在其存量之内终止（`Reproduction.Flow.lineage_ends`）；所以对出者之数，损益之降终究胜过选择项与所升（`Reproduction.Flow.closed_lineage_lowered`），出者之数不能每步都无损益地递下（`Reproduction.Flow.closed_not_exact`）。界：无耗时，无损之接力使存量为一之族中每步都有一员（`Reproduction.Relay.relay`）。对照（定域，hanfei-wudu-wu-zi）：「今人有五子不爲多，子又有五子，大父未死而有二十五孫。」〔FA1-S-H49〕：递乘只在所与与存量跟得上之处成立，在每步衡且耗之族中必终止（韩非子，著者层有争议）。\n\n**證**　`Becoming.Reproduction.Flow.born_le_given`、`Becoming.Reproduction.Flow.number_within_take`、`Becoming.Reproduction.Flow.born_within_stock`、`Becoming.Reproduction.Flow.lineage_ends`、`Becoming.Reproduction.Flow.closed_lineage_lowered`、`Becoming.Reproduction.Flow.closed_not_exact`、`Becoming.Reproduction.Relay.relay`；记录 [what-bounds-offspring-numbers](../results/records/what-bounds-offspring-numbers.md)。\n\n### 十三·十五　组内与组间\n\n**經**　一族记为 k 组、各组员数同：整体之一致，加 k 倍各组自身之不一致与组间之不一致，等于整体之不一致，加 k 倍各组自身之一致与组间之一致。故组内一致不多于不一致之量，整体之选择项为正，唯组间一致多于不一致。组之大小不一者，取诸组大小之一公倍数，各组自身之项按其大小计，组间之项以诸组之均逐员读之，亦有同式之分；一代记为诸均相同之组而无损益，则其均升，恰当组内（如是计之）一致多于不一致。\n\n**說**　这是多层的 Price 方程：除尽之后，整体之协方差是各组协方差之均加各组均值之协方差（`SelectionLevels.levels`；大小任意者为 `SelectionLevels.levels_sized`，等大小是其每个因数为一之情形）。组内逆之之量，整体选之唯组间选之（`SelectionLevels.among_for_of_rises`）；组内之计相同，整体可往任一方（`SelectionLevels.AmongWins.among_wins`、`SelectionLevels.WithinWins.within_wins`）。大小不等之组按总量读可看不出组间之选，而整体之选全在诸均之间（`SelectionLevels.ByMeans.by_means`）。次代怎样分组不进入这一步，却定下一步之组间部分（`SelectionLevels.rises_exact_iff_within_of_alike`）。哪一层胜出是从计数读出的，不是解释；组是什么、怎样形成，这里不说。\n\n**證**　`Becoming.SelectionLevels.levels`、`Becoming.SelectionLevels.levels_sized`、`Becoming.SelectionLevels.among_for_of_rises`、`Becoming.SelectionLevels.AmongWins.among_wins`、`Becoming.SelectionLevels.WithinWins.within_wins`、`Becoming.SelectionLevels.ByMeans.by_means`、`Becoming.SelectionLevels.rises_exact_iff_within_of_alike`；记录 [selection-within-and-among-groups](../results/records/selection-within-and-among-groups.md)、[selection-within-and-among-groups-of-any-sizes](../results/records/selection-within-and-among-groups-of-any-sizes.md)。\n\n### 十三·十六　以无出者选于组间\n\n**經**　诸组员数同，凡某量少于他组之组皆无出者，则组间无不一致；故整体之选择项为正，恰当 k 倍组内不一致少于 k 倍组内一致加组间一致；诸组于此量又各均，则整体之选择项不为负。于流：流衡、唯活动者与、有待，凡在场而与 c 者皆以至少 m 之所需待 c，自 T 起 n 步 c 之所取多于所与，c 于 T 之水平少于 n 加 m，则自 T＋n 起，于其步以至少 m 之所需待 c 者，无出于之者。唯活动者与，世代由所出而成，一代之员皆不活动，则次代空。\n\n**說**　终止决定组间之部分：某量少之组不留出者时，组间不会逆此量（`GroupEnding.rises_iff_ended`、`GroupEnding.not_against_of_ended`）；在流上，这样的组是其所待遭遇共取过与者（`GroupEnding.Flow.excess_childless`，经 `Flow.joint_excess_ends`）。诸组共待之一所待终止诸组，次代空，不留可选之组（`GroupEnding.Flow.all_end`）；诸组之员所待属同一合读为一之族（与其一员者皆以至少 m 之所需待其某员）时，诸组一同终止，组间无所选（`GroupEnding.Flow.coupled_end_together`），所以终止只在族与族之间选组（`GroupEnding.Flow.ended_of_family`）。终止也能用尽它所作用之差：两个带此量之组旁一个无出者之组，此量经组间而升，次代之组于此量相同，再一步此量之均降到起点以下（`GroupEnding.Exhausted.next_step`）。哪一组之所待遭遇共取过与、为何如此，凡出现处都是假设；维持条件更好之类的排序只经以广为愈。\n\n**證**　`Becoming.GroupEnding.Ended`、`Becoming.GroupEnding.rises_iff_ended`、`Becoming.GroupEnding.not_against_of_ended`、`Becoming.GroupEnding.Flow.excess_childless`、`Becoming.GroupEnding.Flow.all_end`、`Becoming.GroupEnding.Flow.coupled_end_together`、`Becoming.GroupEnding.Flow.ended_of_family`、`Becoming.GroupEnding.Exhausted.next_step`；记录 [selection-among-groups-by-ending](../results/records/selection-among-groups-by-ending.md)、[groups-whose-conditions-are-coupled](../results/records/groups-whose-conditions-are-coupled.md)。\n\n### 十三·十七　由所出而成之组\n\n**經**　首代记为诸组，各组之员于一量皆为其组初立之值，诸步无损益：则各组之系，历代每员皆带其初立之值；系内无选择项，其步均升，恰当以诸系大小之一公倍数读之，诸系之均与出者之数一致多于不一致。于流：唯活动者与，世代由所出而成，若某步之前每步初立较低之系其员皆不活动，则其步之均不低于其始；某步初立较低之系其员皆不活动，而一初立较高之系有员于一初立较低而有员之系之旁留出者，则其步均升。\n\n**說**　系（`SelectionLevels.lineage`）是一组及其历代之出者；首代分为诸组时，诸系记下此后每一代（`SelectionLevels.lineages_whole`）。无损益时系带其初立之值（`SelectionLevels.lineage_value`），系内无选择，选择全在系与系之间（`SelectionLevels.rises_iff_lineages`）：这是以相聚读组间选择的完全相聚之端（Hamilton 1975）。在基上，较低之系不活动时均值永不低于起点（`GroupEnding.Flow.lineages_not_lower`），较高之系在较低之系旁留出者则升（`GroupEnding.Flow.lineages_raises`）；见证：同一对组改为由所出而成，此量升而守住（`GroupEnding.Assorted.kept`），而上条混合之组降到起点以下。组间之选择是积累还是退回，由次代之组怎样形成而定；较低之系为何终止，凡出现处都是假设。\n\n**證**　`Becoming.SelectionLevels.lineage`、`Becoming.SelectionLevels.lineages_whole`、`Becoming.SelectionLevels.lineage_value`、`Becoming.SelectionLevels.rises_iff_lineages`、`Becoming.GroupEnding.Flow.lineages_not_lower`、`Becoming.GroupEnding.Flow.lineages_raises`、`Becoming.GroupEnding.Assorted.kept`；记录 [groups-formed-by-descent](../results/records/groups-formed-by-descent.md)。\n\n### 十三·十八　漂变\n\n**經**　次代自所记之出者有放回抽 n 次，前类 p 个、后类 q 个，各抽样以其抽法之数为权：p＋q 乘前类之加权抽数，等于 n·p·(p＋q)ⁿ。若 (p＋q)·h＋g＝N·p，则前类之份不过 h/N 之抽样，其权乘 n²·g²，不过 N²·n·p·q·(p＋q)ⁿ；其权不少于 qⁿ。\n\n**說**　漂变（drift）在此是出者被抽样而不是被列出：每一抽样是一条历程，以抽出它的方式数为权，(p＋q)ⁿ 种抽法都计入。平均而言抽样之份即所记之份（`Drift.expected_ones`），离散度恰为 n·p·q·(p＋q)ⁿ（`Typicality.spread`）。一步所记把前类之份自 h/N 升至 p/(p＋q)，撤销此步之抽样随 n 增大而稀少，其份至多按 1/n 下降（`Drift.falls_back`）；但没有一种大小能排除它，全失前类之抽样恰重 qⁿ（`Drift.lost_weight`、`Drift.falls_back_ge`）。在所记之世代中，凡使持有与否之量之均升的一步都有正之差与此界（`Drift.Generations.raised_falls_back`）；在基上，这一步是组间之终止时亦然（`Drift.Flow.ended_falls_back`）。计数为诸抽样加权，不说哪一个发生：漂变被读为抽样与所记可以不同的方式之数，不是设想于展开中的机遇。\n\n**證**　`Becoming.Drift.expected_ones`、`Becoming.Typicality.spread`、`Becoming.Drift.falls_back`、`Becoming.Drift.lost_weight`、`Becoming.Drift.falls_back_ge`、`Becoming.Drift.Generations.raised_falls_back`、`Becoming.Drift.Flow.ended_falls_back`；记录 [drift-offspring-sampled](../results/records/drift-offspring-sampled.md)。\n\n### 十三·十九　漂变之定\n\n**經**　N 员之族，前类 h 员（h 不过 N），每代自前代按其数有放回抽 N 次，抽时无选择：k 代诸史（各以其抽法之数为权）末代前类数之总，等于 h·(N^N)^k。始于无者诸史皆无，始于全者诸史皆全。若 r＋2＝N^N，则 k 代后仍有二类之史，其权不过 r^k；定于前类之史，其权乘 N 不过 h·(N^N)^k，加 N·r^k 则不少于之。\n\n**說**　无选择则无方向：平均而言漂变保持其数（`Drift.sampled_count`）；两端吸收（`Drift.sampled_none`、`Drift.sampled_all`）；自有异之族，定于前类与失去前类之抽样各至少重一，所以仍有异之史按几何速率消失（`Drift.varied_vanishes`）；定于前类之史之份趋于 h/N（通常称中性固定概率；此处只是计数之份）（`Drift.fixation`）。见证：二员各一类、一代，四史中一定、一失、二仍有异（`Drift.TwoMembers.one_generation`）。界：固定所需之时只有很粗之上界；抽时有选择或突变、多于二类、族之大小改变，都未陈述。\n\n**證**　`Becoming.Drift.sampled`、`Becoming.Drift.sampled_count`、`Becoming.Drift.sampled_none`、`Becoming.Drift.sampled_all`、`Becoming.Drift.varied_vanishes`、`Becoming.Drift.fixation`、`Becoming.Drift.TwoMembers.one_generation`；记录 [fixation-by-drift](../results/records/fixation-by-drift.md)。\n\n### 十三·二十　象\n\n**經**　象，择所经之映射也：予每一备择一项。择经象者，换二备择之项则换其所择。凡备择之同异可定：二备择为每一经象之择所同择，恰当象予二者同项；一备择可为一经象、每象至多择一之择所择，恰当他备择之项皆异于其项。所要者于象予同项之二备择一然一否，则无经此象之择恰择其然者。\n\n**說**　象（模型，model：映射本身）取「象也者，像也」〔DS03〕之名；择经象（`Relabel.Equivariant`）是说交换二备择之项即交换所择。择所经之象是一个类（归并）：经象之择即经其类之择（`Learning.selects_through_lumping`），它只在所要者随类而同之处能对（`Learning.selects_not_right_of_parted`），所要者从象读出时经象读之即对（`Learning.selects_right_of_reads`）。哪个象对、什么是所要者，这里是给定的；更细之象从哪里来属于学。讀（AI，D26、D45）：择经择者之象，不经往（所记）本身；记得多不等于择得对。对照（定域，zhongyong-wen-gu-zhi-xin）：「溫故而知新」〔RU1-S-ZY〕：知新不出于故之多，而出于读故所用之类；（定域，zhuangzi-lunbian-bu-ke-chuan）「意之所隨者，不可以言傳也」〔ZH1-S13〕：言是一个较粗之象，把手上所辨之差并为一，此言在只经言之处为真，经实际示范与手上之练则脊柱不排除其递接。\n\n**證**　`Becoming.Relabel.Equivariant`、`Becoming.Relabel.selected_alike_iff`、`Becoming.Relabel.singled_iff_untied`、`Becoming.Learning.selects_through_lumping`、`Becoming.Learning.selects_not_right_of_parted`、`Becoming.Learning.selects_right_of_reads`；记录 [selection-through-a-model-of-the-options](../results/records/selection-through-a-model-of-the-options.md)。\n\n### 十三·二十一　取法\n\n**經**　取法，经他者实应之学也。教者已装一程序，则受者自之所学，同于自一只装此程序、存量同之教者所学（受者之存量、部件与所问同）。无应则受者不添样本；一课之后，教受二者之存量加所汲不改。\n\n**說**　取法（`ResponseLearning.learn_through_interface`）在一个教受之对中陈述：受者所收只是教者的实际之应，所以所学只由教者所装之程序与存量、及受者之存量、部件与所问而定；教不添存量（`ResponseLearning.lesson_stock`），无应无所添（`ResponseLearning.send_no_response`）。在所述构造中（两插槽之程序，七单位），受者重构教者之程序（`ResponseLearning.reconstructs_program`），每一代都带着它（`ResponseLearning.every_cohort_holds`）；但忠实不等于对：教者所不辨者受者也不辨，且代代如此（`ResponseLearning.faithful_loses_distinction`、`ResponseLearning.distinction_lost_every_cohort`）；同一教者以不同之课得不同之程序（`ResponseLearning.lessons_change_program`），缺存量之受者其所收之不合不被修好（`ResponseLearning.short_receiver_not_repaired`），这些是构造中之见证。名取「有王者起，必来取法」〔RU2-S-MZ〕。对照（定域，lunyu-xing-jin-xi-yuan）：「性相近也，習相遠也。」〔RU1-S-LY〕：所受之课不同处可以相远，起点与课都同处不相远；（相分，lunyu-shang-zhi-xia-yu-bu-yi）「唯上知與下愚不移也。」〔RU1-S-LY〕若读为先定而不可改之两等，则立先于关系之等差并排学者为上下，脊柱只给关系所给的「不移」之条件：缺其所依，或一局限改程序一次之后锁住（`ResponseLearning.limited_changes_then_stays`）。\n\n**證**　`Becoming.ResponseLearning.learn_through_interface`、`Becoming.ResponseLearning.send_no_response`、`Becoming.ResponseLearning.lesson_stock`、`Becoming.ResponseLearning.reconstructs_program`、`Becoming.ResponseLearning.faithful_loses_distinction`、`Becoming.ResponseLearning.lessons_change_program`、`Becoming.ResponseLearning.short_receiver_not_repaired`；应用模块（守核心之条件，在核心之外），无结果记录。\n\n### 十三·二十二　所出与顾\n\n**經**　若无亲（顾沿所出之关系尽传）：一方顾一物之任一事，则及于出于之者之每一活事；顾一物之任一事，亦及其所出之每一活事。\n\n**說**　无亲（关系中立）在此是前件，不是所断言者（`Flow.descent_reaches`、`Flow.ancestry_reaches`）；所出因而推广顾之所及，及于出者与所出之活事，不加权，也不排序（讀（AI，D9））。新的作是否使结果更好：只在它广（扩大）所能形成者之处，在以广为愈之下排在其无之上；不增加任何可能之待者与其无相持（`Ranking.possible_tie`），理论不另加次序破此相持。凡续皆有顾（延续之条件，`Unrestricted`：任何物，其延续于未来有意义）是意义之篇所陈述的条件，设而不断言；它定范围，即谁之失去被计入，不易乎畛（不变的一步）把范围推及不回到任何者之失去；它自身不排序。排序唯在以广为愈（C），其根据未决；出者之数在本篇只是权与读数。对照（相分，mengzi-wu-hou-wei-da）：「不孝有三，无後为大。」〔RU2-S-MZ〕把有无出者排为首要，是一个先定之序；脊柱有出者多者在次代所占之份更大（十三·十二），这不说有出者更好；若在以广为愈之下比较，要比的是整个关系之扩大，不是一家之出者之数。\n\n**證**　`Becoming.Flow.descent_reaches`、`Becoming.Flow.ancestry_reaches`、`Becoming.Ranking.possible_tie`、`Becoming.Unrestricted`；记录 [living-on-and-descent](../results/records/living-on-and-descent.md)。\n\n#### 对照\n\n- 「或益之，十朋之龜弗克違」〔YD-JG42〕——相合：一族之益必有益之者，莫益之则无益（yi-yi-huo-yi-zhi）。\n- 「物類之起，必有所始。」〔RU2-S-XZ01〕——相合：于其物衡之处，凡聚者皆有所出（xunzi-wu-lei-zhi-qi）。\n- 「殷因於夏禮，所損益可知也」〔RU1-S-LY〕——定域：因与损益之结构相合；「可知」只在后世与所见之代被一类并合之处成立（lunyu-yin-sun-yi）。\n- 「若唯始起，有為無漏無因緣故，應不得生」〔FO1-S-CY〕——定域：在因之内为真；因是前提，有尽之宇中新待可以结（weishi-shiqi-wu-yin）。\n- 「今人有五子不爲多，子又有五子，大父未死而有二十五孫。」〔FA1-S-H49〕——定域：递乘只在所与与存量跟得上之处；每步衡且耗之族中世系必终（hanfei-wudu-wu-zi）。\n- 「故天之生物，必因其材而篤焉。故栽者培之，傾者覆之。」〔RU1-S-ZY〕——相分：施予者「天」与先定之「材」；脊柱只有容之有无，且容只必要不够（zhongyong-zai-zhe-pei-zhi）。\n- 「三王既以定法度，制禮樂而傳之，有不用而改自作，何以異於變易牙之和，更師曠之律？」〔RU2-S-XZ27〕——相分：立不可改之准与唯一来源；传只界所需之升，不禁其降与他改（xunzi-dalue-bian-yi-ya-zhi-he）。\n- 「不孝有三，无後为大。」〔RU2-S-MZ〕——相分：先定之序；所出推广顾之所及而不排序，排序唯在以广为愈（mengzi-wu-hou-wei-da）。\n",
+ "declarations": [
+  "Becoming.Flow.NetGiver",
+  "Becoming.Flow.withImbalance",
+  "Becoming.Flow.rise_netGiver",
+  "Becoming.Flow.rise_given",
+  "Becoming.Flow.rest_netGiver_iff",
+  "Becoming.Flow.BalancesOn.rest_not_netGiver",
+  "Becoming.Web.rises_within_of_new",
+  "Becoming.Web.rises_late_of_new",
+  "Becoming.Flow.Gainless",
+  "Becoming.Flow.ClosedAt",
+  "Becoming.Flow.rise_from_rest_or_open",
+  "Becoming.Flow.new_from_rest_or_open",
+  "Becoming.Flow.newly_supported_from_rest_or_open",
+  "Becoming.Flow.whole_recurs_of_rest_idle",
+  "Becoming.Flow.whole_not_new_of_rest_idle",
+  "Becoming.Flow.counting_given_by_rest",
+  "Becoming.Flow.DescendsAt",
+  "Becoming.Flow.descends_of_comes",
+  "Becoming.Web.Embodied.descends",
+  "Becoming.Provisioned.descends",
+  "Becoming.Sleeper.no_descent",
+  "Becoming.Brood.not_descends",
+  "Becoming.Flow.Descends",
+  "Becoming.Web.InheritsAt",
+  "Becoming.Web.InheritsAt.split",
+  "Becoming.Web.inheritsAt_iff_forming",
+  "Becoming.Flow.inherited_from_giver",
+  "Becoming.Flow.no_new_dependence",
+  "Becoming.World.novel_finite",
+  "Becoming.World.novel_but",
+  "Becoming.Flow.Inherits",
+  "Becoming.Flow.TransmitsWithin",
+  "Becoming.Flow.transmitsWithin_iff",
+  "Becoming.TwoGivers.twofold",
+  "Becoming.Flow.fromSome_supported",
+  "Becoming.Flow.TransmitsFromSome",
+  "Becoming.Flow.TransmitsWithin.fromSome",
+  "Becoming.World.drop_but",
+  "Becoming.World.vacuous_of_drop_invariant",
+  "Becoming.Flow.DependsOnDrawn",
+  "Becoming.Web.DrawingDepends",
+  "Becoming.Flow.inherits_of_drawn",
+  "Becoming.World.drawn_and_link_needed",
+  "Becoming.World.transmitting_iff_inherits",
+  "Becoming.Flow.DescendsAt.supported",
+  "Becoming.Flow.unsupported_childless",
+  "Becoming.Flow.never_supported_childless",
+  "Becoming.Flow.transmitted_supported",
+  "Becoming.Flow.transmitted_within",
+  "Becoming.Drawdown.drawdown",
+  "Becoming.Unchecked.unchecked",
+  "Becoming.Slack.slack",
+  "Becoming.raised",
+  "Becoming.lowered",
+  "Becoming.price",
+  "Becoming.selected_uniform",
+  "Becoming.unselected",
+  "Becoming.Learning.determines_lumped_iff",
+  "Becoming.offspring",
+  "Becoming.selected",
+  "Becoming.SelectionTerm.concord",
+  "Becoming.SelectionTerm.discord",
+  "Becoming.SelectionTerm.covariation",
+  "Becoming.SelectionTerm.selection_exceeds_iff",
+  "Becoming.SelectionTerm.selection_none_iff",
+  "Becoming.SelectionTerm.offspring_covariation",
+  "Becoming.SelectionTerm.Doubling.doubling",
+  "Becoming.SelectionTerm.Generations",
+  "Becoming.SelectionTerm.Generations.mean_step",
+  "Becoming.SelectionTerm.Generations.kept_step_iff",
+  "Becoming.SelectionTerm.Generations.rises_step_iff",
+  "Becoming.SelectionTerm.Generations.moved_unbalanced",
+  "Becoming.SelectionTerm.Generations.moved_by_selection",
+  "Becoming.SelectionTerm.Generations.moved_by_transmission",
+  "Becoming.SelectionTerm.Rising.rising",
+  "Becoming.SelectionTerm.Flow.support_not_against",
+  "Becoming.SelectionTerm.Flow.Descended",
+  "Becoming.SelectionTerm.Flow.support_not_lower",
+  "Becoming.SelectionTerm.Flow.support_moved_rises",
+  "Becoming.SelectionTerm.SupportedDescent.supported_descent",
+  "Becoming.Reproduction.variation",
+  "Becoming.Reproduction.never_against",
+  "Becoming.Reproduction.none_iff_uniform",
+  "Becoming.Reproduction.number_variation",
+  "Becoming.Reproduction.number_never_against",
+  "Becoming.Reproduction.number_none_iff",
+  "Becoming.Reproduction.Generations.ByNumber",
+  "Becoming.Reproduction.Generations.ByNumber.rises_exact_iff",
+  "Becoming.Reproduction.Generations.ByNumber.kept_exact_iff",
+  "Becoming.Reproduction.Generations.ByNumber.not_lower_step",
+  "Becoming.Reproduction.bound_sq",
+  "Becoming.Reproduction.additive_le",
+  "Becoming.Reproduction.covariance_sq_le",
+  "Becoming.Reproduction.additive_self",
+  "Becoming.Reproduction.Generations.response_sq_le",
+  "Becoming.Reproduction.Unrelated.unrelated",
+  "Becoming.Reproduction.Flow.born_le_given",
+  "Becoming.Reproduction.Flow.number_within_take",
+  "Becoming.Reproduction.Flow.born_within_stock",
+  "Becoming.Reproduction.Flow.lineage_ends",
+  "Becoming.Reproduction.Flow.closed_lineage_lowered",
+  "Becoming.Reproduction.Flow.closed_not_exact",
+  "Becoming.Reproduction.Relay.relay",
+  "Becoming.SelectionLevels.levels",
+  "Becoming.SelectionLevels.levels_sized",
+  "Becoming.SelectionLevels.among_for_of_rises",
+  "Becoming.SelectionLevels.AmongWins.among_wins",
+  "Becoming.SelectionLevels.WithinWins.within_wins",
+  "Becoming.SelectionLevels.ByMeans.by_means",
+  "Becoming.SelectionLevels.rises_exact_iff_within_of_alike",
+  "Becoming.GroupEnding.rises_iff_ended",
+  "Becoming.GroupEnding.not_against_of_ended",
+  "Becoming.GroupEnding.Flow.excess_childless",
+  "Becoming.Flow.joint_excess_ends",
+  "Becoming.GroupEnding.Flow.all_end",
+  "Becoming.GroupEnding.Flow.coupled_end_together",
+  "Becoming.GroupEnding.Flow.ended_of_family",
+  "Becoming.GroupEnding.Exhausted.next_step",
+  "Becoming.GroupEnding.Ended",
+  "Becoming.SelectionLevels.lineage",
+  "Becoming.SelectionLevels.lineages_whole",
+  "Becoming.SelectionLevels.lineage_value",
+  "Becoming.SelectionLevels.rises_iff_lineages",
+  "Becoming.GroupEnding.Flow.lineages_not_lower",
+  "Becoming.GroupEnding.Flow.lineages_raises",
+  "Becoming.GroupEnding.Assorted.kept",
+  "Becoming.Drift.expected_ones",
+  "Becoming.Typicality.spread",
+  "Becoming.Drift.falls_back",
+  "Becoming.Drift.lost_weight",
+  "Becoming.Drift.falls_back_ge",
+  "Becoming.Drift.Generations.raised_falls_back",
+  "Becoming.Drift.Flow.ended_falls_back",
+  "Becoming.Drift.sampled_count",
+  "Becoming.Drift.sampled_none",
+  "Becoming.Drift.sampled_all",
+  "Becoming.Drift.varied_vanishes",
+  "Becoming.Drift.fixation",
+  "Becoming.Drift.TwoMembers.one_generation",
+  "Becoming.Drift.sampled",
+  "Becoming.Relabel.Equivariant",
+  "Becoming.Learning.selects_through_lumping",
+  "Becoming.Learning.selects_not_right_of_parted",
+  "Becoming.Learning.selects_right_of_reads",
+  "Becoming.Relabel.selected_alike_iff",
+  "Becoming.Relabel.singled_iff_untied",
+  "Becoming.ResponseLearning.learn_through_interface",
+  "Becoming.ResponseLearning.lesson_stock",
+  "Becoming.ResponseLearning.send_no_response",
+  "Becoming.ResponseLearning.reconstructs_program",
+  "Becoming.ResponseLearning.every_cohort_holds",
+  "Becoming.ResponseLearning.faithful_loses_distinction",
+  "Becoming.ResponseLearning.distinction_lost_every_cohort",
+  "Becoming.ResponseLearning.lessons_change_program",
+  "Becoming.ResponseLearning.short_receiver_not_repaired",
+  "Becoming.ResponseLearning.limited_changes_then_stays",
+  "Becoming.Flow.descent_reaches",
+  "Becoming.Flow.ancestry_reaches",
+  "Becoming.Ranking.possible_tie",
+  "Becoming.Unrestricted"
+ ],
+ "records": [
+  "where-novelty-gain-comes-from",
+  "evolution-on-descent",
+  "living-on-and-descent",
+  "transmission-is-inheritance-and-need",
+  "map-of-premises",
+  "transmission-independent-where-it-binds",
+  "selection-term-over-generations",
+  "what-bounds-offspring-numbers",
+  "additive-part-of-offspring-variance",
+  "selection-within-and-among-groups",
+  "selection-within-and-among-groups-of-any-sizes",
+  "selection-among-groups-by-ending",
+  "groups-whose-conditions-are-coupled",
+  "groups-formed-by-descent",
+  "drift-offspring-sampled",
+  "fixation-by-drift",
+  "selection-through-a-model-of-the-options"
+ ],
+ "quotes": [
+  {
+   "text": "或益之",
+   "source_id": "DS13"
+  },
+  {
+   "text": "或益之，十朋之龜弗克違",
+   "source_id": "YD-JG42"
+  },
+  {
+   "text": "莫益之，或擊之",
+   "source_id": "YD-JG42"
+  },
+  {
+   "text": "萬物皆種也，以不同形相禪，始卒若環",
+   "source_id": "ZH1-S27"
+  },
+  {
+   "text": "物類之起，必有所始。",
+   "source_id": "RU2-S-XZ01"
+  },
+  {
+   "text": "无先祖，恶出？",
+   "source_id": "RU2-S-XZ19"
+  },
+  {
+   "text": "若唯始起，有為無漏無因緣故，應不得生",
+   "source_id": "FO1-S-CY"
+  },
+  {
+   "text": "有夫婦然後有父子",
+   "source_id": "YD-OW-XG"
+  },
+  {
+   "text": "三王既以定法度，制禮樂而傳之，有不用而改自作，何以異於變易牙之和，更師曠之律？",
+   "source_id": "RU2-S-XZ27"
+  },
+  {
+   "text": "故天之生物，必因其材而篤焉。故栽者培之，傾者覆之。",
+   "source_id": "RU1-S-ZY"
+  },
+  {
+   "text": "殷因於夏禮，所損益可知也；周因於殷禮，所損益可知也；其或繼周者，雖百世可知也。",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "殷因於夏禮，所損益可知也",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "今人有五子不爲多，子又有五子，大父未死而有二十五孫。",
+   "source_id": "FA1-S-H49"
+  },
+  {
+   "text": "象也者，像也",
+   "source_id": "DS03"
+  },
+  {
+   "text": "溫故而知新",
+   "source_id": "RU1-S-ZY"
+  },
+  {
+   "text": "意之所隨者，不可以言傳也",
+   "source_id": "ZH1-S13"
+  },
+  {
+   "text": "有王者起，必来取法",
+   "source_id": "RU2-S-MZ"
+  },
+  {
+   "text": "性相近也，習相遠也。",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "唯上知與下愚不移也。",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "不孝有三，无後为大。",
+   "source_id": "RU2-S-MZ"
+  }
+ ],
+ "missing_names": [
+  {
+   "concept": "stock of a family of conditions (Web.stock)",
+   "used": "存量（族之存量）"
+  },
+  {
+   "concept": "level of a condition (Web.level)",
+   "used": "水平"
+  },
+  {
+   "concept": "family: a list of conditions read together (cs, ds)",
+   "used": "族"
+  },
+  {
+   "concept": "takes part in a step (Flow.present)",
+   "used": "在场"
+  },
+  {
+   "concept": "active / activity (Web.active)",
+   "used": "活动"
+  },
+  {
+   "concept": "only active formations give (Flow.Acting)",
+   "used": "唯活动者与"
+  },
+  {
+   "concept": "offspring, a relatum descending from g (the table writes 出于 g 者)",
+   "used": "出者（出于 g 者之省）；出者之数 for offspring number"
+  },
+  {
+   "concept": "list (List) and a member of a listed family (a parent in price)",
+   "used": "单；员"
+  },
+  {
+   "concept": "amount / reading of members (a : α → Nat)",
+   "used": "量；读数"
+  },
+  {
+   "concept": "weight (w)",
+   "used": "权"
+  },
+  {
+   "concept": "concordance / discordance over ordered pairs (SelectionTerm.concord / discord)",
+   "used": "一致／不一致"
+  },
+  {
+   "concept": "the selection term proper (concordance less discordance with offspring number as weight)",
+   "used": "选择项"
+  },
+  {
+   "concept": "uniform share of the weighted total (born × total ÷ members)",
+   "used": "均分"
+  },
+  {
+   "concept": "mean of a generation compared by cross-multiplying",
+   "used": "均、均值（以交乘相比）"
+  },
+  {
+   "concept": "listed generations (SelectionTerm.Generations)",
+   "used": "世代"
+  },
+  {
+   "concept": "exact transmission in Price's sense (SelectionTerm.Exact: each offspring carries its parent's amount); 传 is reserved for Flow.TransmitsWithin",
+   "used": "无损益"
+  },
+  {
+   "concept": "group, within-group, among-group (SelectionLevels)",
+   "used": "组；组内；组间"
+  },
+  {
+   "concept": "lineage of a group (SelectionLevels.lineage); 所出 names descent, so 世系 could not be reused",
+   "used": "系"
+  },
+  {
+   "concept": "drift, sampling, fixation, history of sampled generations (Drift)",
+   "used": "漂变；抽样；固定；史"
+  },
+  {
+   "concept": "alternatives of a selection through a map (Relabel)",
+   "used": "备择"
+  },
+  {
+   "concept": "what matters (a given predicate p)",
+   "used": "所要者"
+  },
+  {
+   "concept": "a selection factoring through the map (Relabel.Equivariant)",
+   "used": "择经象（换二备择之项则换其所择）"
+  },
+  {
+   "concept": "teacher, receiver, program, lesson, query, parts (ResponseLearning)",
+   "used": "教者；受者；程序；课；所问；部件"
+  },
+  {
+   "concept": "premise of the map of premises (World.Premise)",
+   "used": "前提（七前提）"
+  },
+  {
+   "concept": "a premise binds in a world (Premise.Binds)",
+   "used": "有所约"
+  },
+  {
+   "concept": "transmission from some giver (Flow.TransmitsFromSome)",
+   "used": "自某所出之传"
+  },
+  {
+   "concept": "drawing is depending (Web.DrawingDepends) and the reading of drawing (Flow.DependsOnDrawn)",
+   "used": "“汲即待”；汲之读"
+  },
+  {
+   "concept": "the coupled gate / a family of conditions read as one (Flow.family_excess_ends)",
+   "used": "凡在场而与 c 者皆以至少 m 之所需待 c；合读为一之族"
+  },
+  {
+   "concept": "event of a relatum (X × Nat) in a valuation",
+   "used": "事；活事"
+  },
+  {
+   "concept": "the count of configurations within a stock (configurationsWithin)",
+   "used": "T 时存量之内其状之数"
+  },
+  {
+   "concept": "a family listed without repetition (Distinct)",
+   "used": "族之单无重"
+  },
+  {
+   "concept": "counted world with the rest as residual is not open (Flow.ClosedAt negated); 开 is reserved for arising_opens",
+   "used": "不封"
+  }
+ ],
+ "open": "1. Gaps the passages raise, still unstated on the spine: (a) a multi-step bound of transmission along a lineage (need ≤ start + n·δ; lunyu-yin-sun-yi); (b) the necessary half of a law of forming, stated with drawing and dependence, chapter §8.1 item 9 (weishi-shiqi-wu-yin); (c) a target carried down a lineage, as a predicate on Flow/Web under Flow.DescendsAt (zhongyong-shan-ji-ren-zhi-zhi); (d) b-fold copying generalizing Copying.doubling_iff (wuzi-yi-ren-xue-zhan); (e) Fisher's identity with the regression ratio, and several carried amounts at once; (f) mixed groups and migration between lineages, so the among-group share as a function of assortment (Hamilton 1975); (g) the time to fixation, selection or mutation inside the draw, more than two kinds.\n\n2. Names: the table names none of the evolution-line notions landed since 20 October (selection term, concordance, generations, group, lineage, drift, exact transmission). This 篇 writes them in plain modern Chinese; see missing_names. 出者 (short for 出于 g 者) and 单 (list, following the 凡例 draft) need the integrator's confirmation. 择 is used in three places: 传择, selection through a map (象), and plain 选出 for selection by support, as the C12 check notes direct. The integrator may prefer a classical name for 选择项.\n\n3. Readings: the classical readings carry no D number of their own and are labelled 讀（AI，D54）. The three readings of 论语 2.23 (C08, C10 and this 篇) still need unifying. This 篇 uses it for 因／损益, with 可知 scoped by Learning.determines_lumped_iff. Two readings of 论语 17.3 are not given their own entries here: 程颐's and 戴震's, which come close to an exact scope.\n\n4. Status: ResponseLearning (取法) is an application module, outside the core by direction and held to the core's conditions, with no result record. 十三·二十一 cites declarations only. Most ResponseLearning laws are witnesses inside one construction.\n\n5. Exactness limits:\n   - The 經 of 十三·十五 summarizes levels_sized as 同式之分 without its full scaling factors.\n   - 十三·二十二 uses Unrestricted only as the stated, not asserted, condition. The relational neutrality in descent_reaches and ancestry_reaches (无亲) is an antecedent.\n   - Every name was resolved against the worktree's newest core receipt. Main is 23 commits ahead of this worktree, so the integrator should resolve once more on main.\n   - No new module after 21 October (for example ReadingSchedule) was checked for this cluster.\n\n6. Placement: of the modules added since 20 October, only SelectionTerm, Reproduction, SelectionLevels, GroupEnding and Drift have this cluster's structure, and all are placed here. Optimum, RegimeMargin, JointDraw, DrawnBeyond, InAmounts, Growth/OwnWidening, Weightings and the rest belong to other 篇."
+}
