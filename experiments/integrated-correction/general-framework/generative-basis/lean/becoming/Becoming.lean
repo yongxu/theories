@@ -1430,6 +1430,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   broken at the first step as before. Witnesses: under a gate, keeping the source at the
   dweller's need through and past the horizon is an optimum, no optimum by the draw alone;
   under the logistic law every optimum still breaks the dweller.
+  At any worth above one for each unit left, where no course leaves more than one step's
+  regrowth from a level of greatest renewal, every optimum holds such a level through the
+  horizon and regrows to that most at the last step: a dependence above those levels is
+  broken at the first step and restored only at the end. At every worth a coupling of keeping
+  a need is outweighed as without the value, keeping forgoing (r - q) n against the course
+  regrowing at the end. Witness: under the logistic law the source is drawn to one and
+  regrown to the dweller's need at the last step.
   Kept at a need through the horizon, where what is given at or above the need is at most q,
   a course draws with what it leaves at most the start with q a step, and the optima among
   the keeping courses hold where q is given and leave exactly the need; so keeping forgoes,

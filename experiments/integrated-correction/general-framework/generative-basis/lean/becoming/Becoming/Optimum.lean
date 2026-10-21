@@ -183,6 +183,30 @@ it). The family `ds` is what couples in, `rest` the conditions beyond, listed ap
   from the level the dweller needs, under the logistic law, keeping the dweller through `n + 2`
   steps forgoes `n + 3`, and the order by what the taker draws with a coupling `w` of the dweller
   has optima, all breaking it below that and all keeping it above.
+* **Valuing what is left at any worth.** With `v` for each unit left after the horizon, `v` at least
+  one, what a course draws with what it leaves at that worth is what it draws with what it leaves and
+  `v - 1` for each unit left (`Optimum.valued_eq`). So where no open course leaves more than one
+  step's regrowth `y + r` from a level `y` of greatest renewal, it is at most the start with what is
+  given there, `r` for each step after and `v - 1` for each unit of `y + r`
+  (`Optimum.open_valued_le_most`), and the course holding `y` through the horizon and regrowing at
+  the last step reaches it and is an optimum (`Optimum.regrowing_valued`,
+  `Optimum.regrowing_frontier`; its steps are `Optimum.holdingTo_steps_of`, of which the steps of a
+  course ending at most at `y` are the case). Where `v` exceeds one, the bound is reached exactly
+  where a course stands at a level of greatest renewal at every step to the `n`-th and leaves `y + r`
+  (`Optimum.valued_most_iff`), so every optimum of every order rising with that worth does so, and
+  these are exactly the optima of the order by it (`Optimum.frontier_holds_valued`,
+  `Optimum.frontier_valued_iff`, `Optimum.byDrawnLeftAt`): a dependence above every level of
+  greatest renewal is broken at the first step, unmet through the horizon and met again only at its
+  end, regrown (`Web.frontier_rebuilt_valued`). Whatever the worth, a coupling `w` of a dependence
+  at or above whose need at most `q` is given leaves only optima breaking it within the horizon where
+  `w + q n < r n` (`Optimum.frontier_breaks_valued`, `Web.frontier_breaks_valued`): against the course
+  regrowing at the end, keeping forgoes `(r - q) n`, the value on what is left had by both. With the
+  order by what is drawn alone (`Optimum.frontier_holds`) and by what is drawn and left alike
+  (`Optimum.frontier_holds_left`), every worth in whole numbers is covered, each under its premises.
+  `Holding.logistic_valued` is the instance: from the level a dweller needs, under the logistic law,
+  at every worth the course drawing the source to one and regrowing it to two at the last step is an
+  optimum; above one every optimum does so, the dweller broken at the first step and restored only
+  at the end; and at every worth a coupling of the dweller below the horizon is outweighed.
 * **A coupling added for each step a dependence is kept.** A course standing at a need `m` or
   above at every step to the `j`-th draws across the horizon, with `r` for each of those steps, at
   most the start with what is given there, `r` a step and `q` for each of those steps
@@ -318,6 +342,17 @@ optimum of every order rising with what is drawn and left holds such a level thr
 the optima of the order by what is drawn and left are exactly the open courses doing so, the
 capacity need cover only the renewal, and the terminal value removes the end's drain and nothing
 else: a dependence whose need lies above every such level is broken at the first step as before.
+A terminal value above the worth of the draw changes what is left, not the path: every optimum still
+holds a level of greatest renewal through the horizon and leaves it only at the last step, to regrow
+to the most it can leave, so a dependence above those levels is broken at the first step and
+restored only at the end. This is the turnpike in exact form (Dorfman, Samuelson and Solow 1958): a
+finite-horizon optimum stays on the path of greatest yield and departs from it only at the end, the
+departure set by the terminal value, a drain where what is left is worth nothing and a regrowth where
+it is worth more than the draw. A dependence measured only at the horizon is restored for the
+measurement, a measure becoming the target (Goodhart 1975). What the spine's form adds: every
+optimum of every order rising with the valued draw does this, the optima of the order are exactly
+these courses, and what keeping a dependence forgoes against them is `(r - q) n` whatever the value,
+so a long enough horizon outweighs every coupling fixed in total, a terminal value or not.
 Weighting later draws less is discounting (Ramsey 1928; Koopmans 1960). A level gains, weighted,
 `w (t + 1) (z + R z)` less `w t z`; at a constant rate `δ`, `w t = (1 + δ) w (t + 1)`, that is
 `w (t + 1) (R z - δ z)`, so a level of greatest weighted gain is one of greatest renewal less `δ`
@@ -356,8 +391,8 @@ may give what it takes to any condition of that family (a member giving only to 
 covered); over a course, against a renewal varying with the level, the optimum where a level of
 greatest gain is out of one step's reach and the next level does not rise with the level
 below it, or the capacity cannot draw down to it in one step or draw everything at the
-horizon's last step, an order valuing what is left at the horizon at another worth than what
-is drawn, the
+horizon's last step, a worth on what is left where the most a course can leave is not regrown in
+one step from a level of greatest renewal, the
 weighted optimum where no course gains the most against every open course, whether others' draws,
 supplied as a rule reading the level, are themselves a best response, so several optimizers each
 ranking courses at a mutual best response, and how optimizers come to one; for several optimizers,
@@ -3394,27 +3429,40 @@ with `k`. -/
 theorem drawnAt_le_of {a b c k : Nat} (le : a + b ≤ c + k) : a + b - c ≤ k :=
   Nat.le_trans (sub_le_sub_right_of_le le c) (Nat.le_of_eq (Naturals.add_sub_cancel_left c k))
 
+/-- **The steps of the course holding `y` and ending at `e` within the horizon, `e` within `y` with
+`r`.** Over a horizon of at least two steps, with a capacity covering what the first step draws down
+to `y`, `r`, and `y` with `r` down to `e`, each step to the `n`-th leaves at most the level with what
+is given and draws at most `k`: the end may lie above `y`, regrown at the last step. -/
+theorem holdingTo_steps_of (greatest : R y = r) (reach : y ≤ s + R s) (rises : e ≤ y + r)
+    (drawsDown : s + R s ≤ y + k) (middle : r ≤ k) (holds : y + r ≤ e + k) (long : 0 < n) :
+    ∀ t, t ≤ n → holdingTo s y e n (t + 1) ≤ holdingTo s y e n t + R (holdingTo s y e n t) ∧
+      drawnAt (holdingTo s y e n) (fun t => R (holdingTo s y e n t)) t ≤ k
+  | 0, _ => ⟨Nat.le_trans (Nat.le_of_eq (holdingTo_before long)) reach, drawnAt_le_of
+      (Nat.le_trans drawsDown (Nat.le_of_eq (congrArg (· + k) (holdingTo_before long).symm)))⟩
+  | t + 1, le =>
+    have stands : holdingTo s y e n (t + 1) + R (holdingTo s y e n (t + 1)) = y + r :=
+      (congrArg (fun z => z + R z) (holdingTo_before (Nat.lt_of_succ_le le))).trans
+        (congrArg (y + ·) greatest)
+    match Nat.lt_or_ge (t + 1) n with
+    | .inl lt => ⟨Nat.le_trans (Nat.le_of_eq (holdingTo_before lt))
+          (Nat.le_trans (Nat.le_add_right y r) (Nat.le_of_eq stands.symm)),
+        drawnAt_le_of (Nat.le_trans (Nat.le_of_eq stands) (Nat.le_trans (Nat.add_le_add_left middle y)
+          (Nat.le_of_eq (congrArg (· + k) (holdingTo_before lt).symm))))⟩
+    | .inr ge => ⟨Nat.le_trans (Nat.le_of_eq (holdingTo_after ge))
+          (Nat.le_trans rises (Nat.le_of_eq stands.symm)),
+        drawnAt_le_of (Nat.le_trans (Nat.le_of_eq stands)
+          (Nat.le_trans holds (Nat.le_of_eq (congrArg (· + k) (holdingTo_after ge).symm))))⟩
+
 /-- **The steps of the course holding `y` and ending at `e` within the horizon.** Over a horizon of
 at least two steps, with a capacity covering what the first step draws down to `y` and `y` with `r`
 down to `e`, each step to the `n`-th leaves at most the level with what is given and draws at most
-`k`. -/
+`k`: the case of `holdingTo_steps_of` ending at most at `y`. -/
 theorem holdingTo_steps (greatest : R y = r) (reach : y ≤ s + R s) (settles : e ≤ y)
     (drawsDown : s + R s ≤ y + k) (holds : y + r ≤ e + k) (long : 0 < n) :
     ∀ t, t ≤ n → holdingTo s y e n (t + 1) ≤ holdingTo s y e n t + R (holdingTo s y e n t) ∧
-      drawnAt (holdingTo s y e n) (fun t => R (holdingTo s y e n t)) t ≤ k
-  | 0, _ => ⟨holdingTo_within reach settles 0, drawnAt_le_of (Nat.le_trans drawsDown
-      (Nat.le_of_eq (congrArg (· + k) (holdingTo_before long).symm)))⟩
-  | t + 1, le => ⟨holdingTo_within reach settles (t + 1), drawnAt_le_of (by
-      show holdingTo s y e n (t + 1) + R (holdingTo s y e n (t + 1)) ≤
-        holdingTo s y e n (t + 1 + 1) + k
-      rw [holdingTo_before (Nat.lt_of_succ_le le), greatest]
-      match Nat.lt_or_ge (t + 1) n with
-      | .inl lt =>
-        rw [holdingTo_before lt]
-        exact Nat.le_trans holds (Nat.add_le_add_right settles k)
-      | .inr ge =>
-        rw [holdingTo_after ge]
-        exact holds)⟩
+      drawnAt (holdingTo s y e n) (fun t => R (holdingTo s y e n t)) t ≤ k :=
+  holdingTo_steps_of greatest reach (Nat.le_trans settles (Nat.le_add_right y r)) drawsDown
+    (Naturals.le_of_add_le_add_left (Nat.le_trans holds (Nat.add_le_add_right settles k))) holds long
 
 /-- **The course holding `y` and ending at `e` is open**, over a horizon of at least two steps, with
 a capacity covering what the first step draws down to `y`, `y` with `r` down to `e`, and what is
@@ -4309,6 +4357,192 @@ theorem continued_kept_frontier {worth : (Nat → Nat) → Nat} {w : Nat}
     | .inr ⟨t, le, lt⟩ => Nat.le_of_lt (lt_of_forgone_beyond (uncoupled b t opens le lt)
         (open_le_most renews opens n) most least beyond))⟩
 
+/-! ### Valuing what is left at any worth
+
+With `v` for each unit a course leaves after the horizon, the course holding a level of greatest
+renewal and regrowing at the last step to the most any course can leave draws and leaves the most; at
+a worth above one every optimum does so, and a coupling of keeping a need is outweighed as without the
+value. -/
+
+/-- The order of courses by what they draw across `n + 1` steps with `v` for each unit they leave
+after them: more is better. -/
+def byDrawnLeftAt (R : Nat → Nat) (v n : Nat) (b a : Nat → Nat) : Prop :=
+  drawnOver R a (n + 1) + v * a (n + 1) < drawnOver R b (n + 1) + v * b (n + 1)
+
+/-- At a worth of at least one, what is drawn with `v` for each unit left is what is drawn with what
+is left and `v - 1` for each unit left. -/
+theorem valued_eq {d l : Nat} : ∀ {v : Nat}, 0 < v → d + v * l = d + l + (v - 1) * l
+  | 0, pos => absurd pos (Nat.lt_irrefl 0)
+  | j + 1, _ => by
+    show d + (j + 1) * l = d + l + j * l
+    rw [Nat.succ_mul, Nat.add_comm (j * l) l, Nat.add_assoc]
+
+/-- Two sums each at most another, the sums equal, are each equal. -/
+theorem eq_of_add_eq_of_le {a b c d : Nat} (ab : a ≤ b) (cd : c ≤ d) (same : a + c = b + d) :
+    a = b ∧ c = d :=
+  have first : a = b := Nat.le_antisymm ab (Naturals.le_of_add_le_add_right
+    (Nat.le_trans (Nat.le_of_eq same.symm) (Nat.add_le_add_left cd a)))
+  ⟨first, Naturals.add_left_cancel (same.trans (congrArg (· + d) first.symm))⟩
+
+/-- Multiplying by a positive number cancels. -/
+theorem mul_left_cancel_of_pos {k : Nat} (pos : 0 < k) : ∀ {a b : Nat}, k * a = k * b → a = b
+  | 0, 0, _ => rfl
+  | 0, b + 1, same => absurd same (Nat.ne_of_lt (Nat.lt_of_lt_of_le pos (Nat.le_add_left k (k * b))))
+  | a + 1, 0, same => absurd same.symm
+      (Nat.ne_of_lt (Nat.lt_of_lt_of_le pos (Nat.le_add_left k (k * a))))
+  | _ + 1, _ + 1, same => congrArg Nat.succ (mul_left_cancel_of_pos pos (Naturals.add_right_cancel same))
+
+/-- **What a course draws with `v` for each unit it leaves, at most.** Where `R` gives at most `r`,
+an open course leaving at most `e` after `n + 1` steps draws across them, with `v` of at least one
+for each unit it leaves, at most the start with what is given there, `r` for each step after and
+`v - 1` for each unit of `e`. -/
+theorem open_valued_le_most (renews : ∀ z, R z ≤ r) {v e : Nat} (pos : 0 < v) {x : Nat → Nat}
+    (opens : OpenCourse R k s x) (bounded : x (n + 1) ≤ e) :
+    drawnOver R x (n + 1) + v * x (n + 1) ≤ s + R s + r * n + (v - 1) * e :=
+  Nat.le_trans (Nat.le_of_eq (valued_eq pos))
+    (Nat.add_le_add (open_left_le_most renews opens n) (Nat.mul_le_mul_left (v - 1) bounded))
+
+/-- A course drawing and leaving the most, leaving `e`, draws with `v` for each unit it leaves the
+start with what is given there, `r` for each step after and `v - 1` for each unit of `e`. -/
+theorem valued_of_most {v e : Nat} (pos : 0 < v) {x : Nat → Nat}
+    (most : drawnOver R x (n + 1) + x (n + 1) = s + R s + r * n) (left : x (n + 1) = e) :
+    drawnOver R x (n + 1) + v * x (n + 1) = s + R s + r * n + (v - 1) * e :=
+  (valued_eq pos).trans (Eq.subst (motive := fun z => drawnOver R x (n + 1) + x (n + 1) +
+    (v - 1) * z = s + R s + r * n + (v - 1) * e) left.symm (congrArg (· + (v - 1) * e) most))
+
+/-- **Exactly which courses draw and leave the most at a worth above one.** Where `R` gives at most
+`r` and `v` exceeds one, an open course leaving at most `e` after `n + 1` steps draws across them,
+with `v` for each unit it leaves, the start with what is given there, `r` for each step after and
+`v - 1` for each unit of `e` exactly where it stands at a level of greatest renewal at every step
+from the first to the `n`-th and leaves `e`. -/
+theorem valued_most_iff (renews : ∀ z, R z ≤ r) {v e : Nat} (more : 1 < v) {x : Nat → Nat}
+    (opens : OpenCourse R k s x) (bounded : x (n + 1) ≤ e) :
+    drawnOver R x (n + 1) + v * x (n + 1) = s + R s + r * n + (v - 1) * e ↔
+      (∀ t, t < n → R (x (t + 1)) = r) ∧ x (n + 1) = e :=
+  have pos : 0 < v := Nat.lt_trans (Nat.zero_lt_one) more
+  have identity := most_left_iff (x := x) (g := fun t => R (x t)) (fun t => (opens.2 t).1)
+    (fun t => renews (x t)) n
+  have start : x 0 + R (x 0) + r * n = s + R s + r * n :=
+    congrArg (fun z => z + R z + r * n) opens.1
+  ⟨fun most =>
+    have parts := eq_of_add_eq_of_le (open_left_le_most renews opens n)
+      (Nat.mul_le_mul_left (v - 1) bounded) ((valued_eq pos).symm.trans most)
+    ⟨identity.mp (parts.1.trans start.symm),
+     mul_left_cancel_of_pos (SupportGated.sub_pos_of_lt more) parts.2⟩,
+   fun ⟨renewed, left⟩ => valued_of_most pos ((identity.mpr renewed).trans start) left⟩
+
+/-- **The course regrowing at the end draws and leaves the most.** Where `R` gives at most `r` and
+`r` at `y`, within the start with what is given there, over a horizon of at least two steps, with a
+capacity covering what the first step draws down to `y` and `r`, the course holding `y` to the
+`n`-th step, regrowing to `y` with `r` at the last and drawing nothing after it, is open, and draws
+across `n + 1` steps, with `v` of at least one for each unit it leaves, the start with what is given
+there, `r` for each step after and `v - 1` for each unit of `y` with `r`. -/
+theorem regrowing_valued (renews : ∀ z, R z ≤ r) {v : Nat} (pos : 0 < v) (greatest : R y = r)
+    (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k) (middle : r ≤ k) (long : 0 < n) :
+    OpenCourse R k s (continued R (holdingTo s y (y + r) n) n) ∧
+      drawnOver R (continued R (holdingTo s y (y + r) n) n) (n + 1) +
+        v * continued R (holdingTo s y (y + r) n) n (n + 1) =
+          s + R s + r * n + (v - 1) * (y + r) :=
+  have opens : OpenCourse R k s (continued R (holdingTo s y (y + r) n) n) :=
+    continued_open (x := holdingTo s y (y + r) n) rfl
+      (holdingTo_steps_of greatest reach (Nat.le_refl _) drawsDown middle (Nat.le_add_right _ k) long)
+  have left : continued R (holdingTo s y (y + r) n) n (n + 1) = y + r :=
+    (continued_le (Nat.le_refl _)).trans (holdingTo_after (Nat.le_refl n))
+  have most := (most_left_iff (x := continued R (holdingTo s y (y + r) n) n)
+    (g := fun t => R (continued R (holdingTo s y (y + r) n) n t)) (fun t => (opens.2 t).1)
+    (fun _ => renews _) n).mpr fun _ lt =>
+      (congrArg R ((continued_le (Nat.succ_le_succ (Nat.le_of_lt lt))).trans
+        (holdingTo_before lt))).trans greatest
+  ⟨opens, valued_of_most pos most left⟩
+
+/-- **The course regrowing at the end is an optimum at every worth of at least one.** Under the
+conditions of `regrowing_valued`, where no open course leaves after `n + 1` steps more than `y` with
+`r`, the course holding `y` and regrowing at the last step is an optimum of the order by what is drawn
+with `v` for each unit left. -/
+theorem regrowing_frontier (renews : ∀ z, R z ≤ r) {v : Nat} (pos : 0 < v)
+    (bounded : ∀ a, OpenCourse R k s a → a (n + 1) ≤ y + r) (greatest : R y = r)
+    (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k) (middle : r ≤ k) (long : 0 < n) :
+    Frontier (OpenCourse R k s) (byDrawnLeftAt R v n) (continued R (holdingTo s y (y + r) n) n) :=
+  have witness := regrowing_valued renews pos greatest reach drawsDown middle long
+  ⟨witness.1, fun a opens more => Nat.not_le_of_gt more (Nat.le_trans
+    (open_valued_le_most renews pos opens (bounded a opens)) (Nat.le_of_eq witness.2.symm))⟩
+
+/-- **At a worth above one, every optimum holds a level of greatest renewal and leaves the most.**
+Where `R` gives at most `r` at every level and `r` at some `y` within the start with what is given
+there, over a horizon of at least two steps, with a capacity covering what the first step draws down
+to `y` and `r`, and no open course leaves after `n + 1` steps more than `y` with `r`: every optimum
+of every order on the open courses rising with what is drawn across them with `v` above one for each
+unit left stands at a level of greatest renewal at every step from the first to the `n`-th and leaves
+`y` with `r`, regrown at the last step. -/
+theorem frontier_holds_valued {better : (Nat → Nat) → (Nat → Nat) → Prop}
+    (renews : ∀ z, R z ≤ r) {v : Nat} (more : 1 < v)
+    (rising : ∀ a b, drawnOver R a (n + 1) + v * a (n + 1) < drawnOver R b (n + 1) + v * b (n + 1) →
+      better b a)
+    (bounded : ∀ a, OpenCourse R k s a → a (n + 1) ≤ y + r) (greatest : R y = r)
+    (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k) (middle : r ≤ k) (long : 0 < n)
+    {x : Nat → Nat} (front : Frontier (OpenCourse R k s) better x) :
+    (∀ t, t < n → R (x (t + 1)) = r) ∧ x (n + 1) = y + r :=
+  have pos : 0 < v := Nat.lt_trans (Nat.zero_lt_one) more
+  have witness := regrowing_valued renews pos greatest reach drawsDown middle long
+  (valued_most_iff renews more front.1 (bounded x front.1)).mp
+    (Nat.le_antisymm (open_valued_le_most renews pos front.1 (bounded x front.1))
+      (Nat.ge_of_not_lt fun less => front.2 _ witness.1
+        (rising x _ (Nat.lt_of_lt_of_le less (Nat.le_of_eq witness.2.symm)))))
+
+/-- **Exactly the optima at a worth above one.** Under the conditions of `frontier_holds_valued`, the
+optima of the order by what is drawn with `v` above one for each unit left are exactly the open
+courses standing at a level of greatest renewal at every step from the first to the `n`-th and
+leaving `y` with `r`. -/
+theorem frontier_valued_iff (renews : ∀ z, R z ≤ r) {v : Nat} (more : 1 < v)
+    (bounded : ∀ a, OpenCourse R k s a → a (n + 1) ≤ y + r) (greatest : R y = r)
+    (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k) (middle : r ≤ k) (long : 0 < n)
+    {x : Nat → Nat} :
+    Frontier (OpenCourse R k s) (byDrawnLeftAt R v n) x ↔
+      OpenCourse R k s x ∧ (∀ t, t < n → R (x (t + 1)) = r) ∧ x (n + 1) = y + r :=
+  ⟨fun front => ⟨front.1, frontier_holds_valued renews more (fun _ _ less => less) bounded greatest
+     reach drawsDown middle long front⟩,
+   fun ⟨opens, held⟩ => ⟨opens, fun a opens' less => Nat.not_le_of_gt less (Nat.le_trans
+     (open_valued_le_most renews (Nat.lt_trans (Nat.zero_lt_one) more) opens' (bounded a opens'))
+     (Nat.le_of_eq ((valued_most_iff renews more opens (bounded x opens)).mpr held).symm))⟩⟩
+
+/-- Comparing a keeping course's worth with the regrowing course's, at any worth. -/
+theorem lt_of_valued_below {A D L S w q' r' u : Nat} (coupled : A ≤ D + L + u + w)
+    (kept : D + L ≤ S + q') (left : u ≤ u') (below : w + q' < r') : A < S + r' + u' :=
+  calc A ≤ D + L + u + w := coupled
+    _ ≤ S + q' + u' + w := Nat.add_le_add_right (Nat.add_le_add kept left) w
+    _ = S + u' + (w + q') := by
+      rw [Nat.add_assoc S q' u', Nat.add_comm q' u', ← Nat.add_assoc, Nat.add_assoc, Nat.add_comm q' w]
+    _ < S + u' + r' := Nat.add_lt_add_left below _
+    _ = S + r' + u' := Nat.add_right_comm _ _ _
+
+/-- **A value on what is left does not change what keeping forgoes.** Where `R` gives at most `r` at
+every level, `r` at some `y` within the start with what is given there and at most `q` at every level
+at or above `m`, over a horizon of at least two steps, with a capacity covering what the first step
+draws down to `y` and `r`, and no open course leaves after `n + 1` steps more than `y` with `r`:
+every optimum, among the open courses, of every order rising with a worth at least what a course
+draws with `v` of at least one for each unit it leaves, and at most `w` more for a course keeping its
+level at `m` or above, falls below `m` within the horizon, where `w + q n < r n`, whatever `v`: the
+value on what is left is had by the course that draws down and regrows at the end. -/
+theorem frontier_breaks_valued {better : (Nat → Nat) → (Nat → Nat) → Prop}
+    {worth : (Nat → Nat) → Nat} {v w : Nat}
+    (rising : ∀ a b, worth a < worth b → better b a) (pos : 0 < v)
+    (values : ∀ a, drawnOver R a (n + 1) + v * a (n + 1) ≤ worth a)
+    (coupled : ∀ a, OpenCourse R k s a → Keeps m n a →
+      worth a ≤ drawnOver R a (n + 1) + v * a (n + 1) + w)
+    (renews : ∀ z, R z ≤ r) (above : ∀ z, m ≤ z → R z ≤ q) (below : w + q * n < r * n)
+    (bounded : ∀ a, OpenCourse R k s a → a (n + 1) ≤ y + r) (greatest : R y = r)
+    (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k) (middle : r ≤ k) (long : 0 < n)
+    {x : Nat → Nat} (front : Frontier (OpenCourse R k s) better x) : ¬ Keeps m n x := fun keeps =>
+  have witness := regrowing_valued renews pos greatest reach drawsDown middle long
+  have kept : drawnOver R x (n + 1) + x (n + 1) ≤ s + R s + q * n :=
+    Eq.subst (motive := fun z => drawnOver R x (n + 1) + x (n + 1) ≤ z + R z + q * n) front.1.1
+      (keeping_le_most above (fun t => (front.1.2 t).1) keeps)
+  front.2 _ witness.1 (rising x _ (Nat.lt_of_lt_of_le
+    (lt_of_valued_below
+      (Nat.le_trans (coupled x front.1 keeps) (Nat.le_of_eq (congrArg (· + w) (valued_eq pos))))
+      kept (Nat.mul_le_mul_left (v - 1) (bounded x front.1)) below)
+    (Nat.le_trans (Nat.le_of_eq witness.2.symm) (values _))))
+
 end Optimum
 
 namespace Flow
@@ -4419,6 +4653,51 @@ theorem frontier_keeps_above
   fun t le => Nat.le_trans (Nat.le_of_eq (need t))
     (Optimum.frontier_keeps_above rising coupled uncoupled renews beyond greatest meets ends reach
       settles drawsDown holds long front t le)
+
+/-- **At a worth above one, far-sight draws a dependence above every level of greatest renewal down at
+the first step and rebuilds only at the end.** Under the conditions of
+`Optimum.frontier_holds_valued`, where every level where `R` gives `r` lies below a formation's need
+on the condition, met at the start: every optimum, among the open courses, of every order rising
+with what is drawn across `n + 1` steps with `v` above one for each unit left breaks the dependence at
+the first step, leaves it unmet at every step to the `n`-th and stands at `y` with `r` after the last,
+regrown there. -/
+theorem frontier_rebuilt_valued (renews : ∀ z, R z ≤ r) {v : Nat} (more : 1 < v)
+    (rising : ∀ a b, drawnOver R a (n + 1) + v * a (n + 1) < drawnOver R b (n + 1) + v * b (n + 1) →
+      better b a)
+    (bounded : ∀ a, OpenCourse R k s a → a (n + 1) ≤ y + r) (greatest : R y = r)
+    (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k) (middle : r ≤ k) (long : 0 < n)
+    (front : Frontier (OpenCourse R k s) better fun t => W.level t c)
+    (above : ∀ z, R z = r → z < m) (depends : W.requires 0 f c) (need : W.need 0 f c = m)
+    (start : m ≤ s) :
+    W.Broken 0 f c ∧ (∀ t, t < n → W.level (t + 1) c < m) ∧ W.level (n + 1) c = y + r :=
+  have held := Optimum.frontier_holds_valued renews more rising bounded greatest reach drawsDown
+    middle long front
+  have unmet : ∀ t, t < n → W.level (t + 1) c < m := fun t before => above _ (held.1 t before)
+  ⟨⟨depends, Nat.le_trans (Nat.le_of_eq need) (Eq.subst (motive := fun z => m ≤ z) front.1.1.symm start),
+    Nat.lt_of_lt_of_le (unmet 0 long) (Nat.le_of_eq need.symm)⟩, unmet, held.2⟩
+
+/-- **A value on what is left breaks the dependence within the horizon as without it.** Under the
+premises of `Optimum.frontier_breaks_valued`, with a formation depending on the condition at the need
+`m` at every step, met at the start: every optimum, among the open courses, of every order rising
+with a worth at least what a course draws with `v` of at least one for each unit left and at most `w`
+more for a course keeping the condition at `m` or above breaks the dependence at some step to the
+`n`-th, where `w + q n < r n`, whatever `v`. -/
+theorem frontier_breaks_valued {v : Nat}
+    (rising : ∀ a b, worth a < worth b → better b a) (pos : 0 < v)
+    (values : ∀ a, drawnOver R a (n + 1) + v * a (n + 1) ≤ worth a)
+    (coupled : ∀ a, OpenCourse R k s a → Optimum.Keeps m n a →
+      worth a ≤ drawnOver R a (n + 1) + v * a (n + 1) + w)
+    (renews : ∀ z, R z ≤ r) (above : ∀ z, m ≤ z → R z ≤ q) (below : w + q * n < r * n)
+    (bounded : ∀ a, OpenCourse R k s a → a (n + 1) ≤ y + r) (greatest : R y = r)
+    (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k) (middle : r ≤ k) (long : 0 < n)
+    (front : Frontier (OpenCourse R k s) better fun t => W.level t c)
+    (depends : ∀ t, W.requires t f c) (need : ∀ t, W.need t f c = m) (start : m ≤ s) :
+    ∃ t, t ≤ n ∧ W.Broken t f c :=
+  match drops_of_not_keeps (Eq.subst (motive := fun z => m ≤ z) front.1.1.symm start)
+      (Optimum.frontier_breaks_valued rising pos values coupled renews above below bounded greatest
+        reach drawsDown middle long front) with
+  | ⟨t, le, met, lt⟩ => ⟨t, le, depends t, Nat.le_trans (Nat.le_of_eq (need t)) met,
+      Nat.lt_of_lt_of_le lt (Nat.le_of_eq (need t).symm)⟩
 
 end Web
 
@@ -4589,6 +4868,71 @@ theorem logistic_coupled (n w : Nat) :
         (Nat.le_trans (Nat.le_of_eq (Nat.add_zero _)) beyond) rfl (Nat.le_refl 2)
         (Nat.le_refl 2) (Nat.le_refl 2) (Nat.le_refl 2) (Nat.le_add_right 2 2)
         (Nat.le_add_right 2 2) (Nat.succ_pos n) front (fun _ => rfl)⟩⟩
+
+/-- Under the logistic law a level at most two with what is given there is at most two. -/
+theorem logistic_within : ∀ z, z ≤ 2 → z + logistic z ≤ 2
+  | 0, _ => Nat.zero_le 2
+  | 1, _ => Nat.le_refl 2
+  | 2, _ => Nat.le_refl 2
+  | z + 3, le => absurd le (Nat.not_le_of_gt (Nat.lt_of_lt_of_le (Nat.lt_succ_self 2)
+      (Nat.le_add_left 3 z)))
+
+/-- Every course open from two under the logistic law stands at two or below. -/
+theorem logistic_open_le {k : Nat} {x : Nat → Nat} (opens : OpenCourse logistic k 2 x) :
+    ∀ t, x t ≤ 2
+  | 0 => Nat.le_of_eq opens.1
+  | t + 1 => Nat.le_trans (opens.2 t).1 (logistic_within _ (logistic_open_le opens t))
+
+/-- **The logistic witness at any worth: drawn down, and regrown at the end.** From a source at two,
+the level the dweller needs, under the logistic law with capacity two: at every worth `v` of at least
+one for each unit the source is left with after `n + 2` steps, the course holding the source at one
+through the horizon and regrowing it to two at the last step, drawing nothing after, is an optimum of
+the order by what the taker draws with `v` for each unit left (`regrowing_frontier`); at every worth
+above one, the optima of that order are exactly the open courses standing at one through the horizon
+and at two after it (`frontier_valued_iff`), and every optimum of that order breaks the dweller at the first step, leaves it unmet through
+the horizon and stands at two, the dweller's need, after its last step
+(`Web.frontier_rebuilt_valued`); and with a coupling `w` of the dweller below `n + 1`, every optimum
+of the order by what the taker draws with `w` where the dweller stays met and `v` for each unit left
+breaks the dweller within the horizon, whatever `v` (`Web.frontier_breaks_valued`). -/
+theorem logistic_valued (n v w : Nat) (pos : 0 < v) :
+    Frontier (OpenCourse logistic 2 2) (byDrawnLeftAt logistic v (n + 1))
+        (continued logistic (holdingTo 2 1 2 (n + 1)) (n + 1)) ∧
+      (1 < v → ∀ x, (Frontier (OpenCourse logistic 2 2) (byDrawnLeftAt logistic v (n + 1)) x ↔
+        OpenCourse logistic 2 2 x ∧ (∀ t, t < n + 1 → logistic (x (t + 1)) = 1) ∧
+          x (n + 1 + 1) = 1 + 1)) ∧
+      (1 < v → ∀ x, Frontier (OpenCourse logistic 2 2) (byDrawnLeftAt logistic v (n + 1)) x →
+        (web (onSource x)).Broken 0 .dweller .source ∧
+        (∀ t, t < n + 1 → (web (onSource x)).level (t + 1) .source < 2) ∧
+        (web (onSource x)).level (n + 1 + 1) .source = 2) ∧
+      (w < n + 1 → ∀ x, Frontier (OpenCourse logistic 2 2)
+        (fun b a => coupledDraw logistic 2 w (n + 1) a + v * a (n + 1 + 1) <
+          coupledDraw logistic 2 w (n + 1) b + v * b (n + 1 + 1)) x →
+        ∃ t, t ≤ n + 1 ∧ (web (onSource x)).Broken t .dweller .source) :=
+  have bounded : ∀ a, OpenCourse logistic 2 2 a → a (n + 1 + 1) ≤ 1 + 1 :=
+    fun _ opens => logistic_open_le opens _
+  ⟨regrowing_frontier (R := logistic) (k := 2) (s := 2) (y := 1) (r := 1) (n := n + 1) logistic_le
+      pos bounded rfl (Nat.le_succ 1) (Nat.le_succ 2) (Nat.le_succ 1) (Nat.succ_pos n),
+   fun more _ => frontier_valued_iff (R := logistic) (k := 2) (s := 2) (y := 1) (r := 1) (n := n + 1)
+     logistic_le more bounded rfl (Nat.le_succ 1) (Nat.le_succ 2) (Nat.le_succ 1) (Nat.succ_pos n),
+   fun more x front => Web.frontier_rebuilt_valued (W := web (onSource x)) (c := Place.source)
+     (f := Formation.dweller) (R := logistic) (k := 2) (s := 2) (y := 1) (r := 1) (m := 2)
+     (n := n + 1) logistic_le more (fun _ _ less => less) bounded rfl (Nat.le_succ 1)
+     (Nat.le_succ 2) (Nat.le_succ 1) (Nat.succ_pos n) front logistic_greatest trivial rfl
+     (Nat.le_refl 2),
+   fun short x front =>
+    have below : w + 0 * (n + 1) < 1 * (n + 1) := by
+      rw [Nat.zero_mul, Nat.one_mul, Nat.add_zero]; exact short
+    Web.frontier_breaks_valued (W := web (onSource x)) (c := Place.source)
+      (f := Formation.dweller) (R := logistic) (k := 2) (s := 2) (y := 1) (r := 1) (q := 0)
+      (m := 2) (n := n + 1) (w := w)
+      (worth := fun a => coupledDraw logistic 2 w (n + 1) a + v * a (n + 1 + 1))
+      (fun _ _ less => less) pos
+      (fun _ => Nat.add_le_add_right (Nat.le_add_right _ _) _)
+      (fun _ _ keeps => Nat.le_of_eq (by
+        show coupledDraw logistic 2 w (n + 1) _ + _ = _
+        rw [coupledDraw_of_keeps keeps, Nat.add_right_comm]))
+      logistic_le logistic_above below bounded rfl (Nat.le_succ 1) (Nat.le_succ 2) (Nat.le_succ 1)
+      (Nat.succ_pos n) front (fun _ => trivial) (fun _ => rfl) (Nat.le_refl 2)⟩
 
 end Holding
 
