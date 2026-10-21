@@ -246,6 +246,13 @@
         "en": "What keeping a dependence above the levels of greatest renewal forgoes, and the coupling that keeps it.",
         "zh": "保持高于最大更新水平的依存所放弃者，以及保持它的耦合。"
       }
+    },
+    {
+      "id": "a-weighting-faster-than-renewal-ends-the-base",
+      "detail": {
+        "en": "An order weighting later draws less: far-sight keeps the own base only where the weighting falls slower than the base renews; falling faster than every positive level renews, every optimum ends it at the first step.",
+        "zh": "后来的汲取权重更小之序：远见只在权重下降慢于基础更新时保住自身的基础；下降快于每个正水平的更新时，每个最优在第一步终结它。"
+      }
     }
   ],
   "references": [
@@ -305,7 +312,7 @@
         "Becoming.Web.frontier_broken",
         "Becoming.Web.frontier_kept"
       ],
-      "sha256": "320dd59cf30d6d0ceb951e5e0e342ba7d3d8ae8cee5ea32faedc1e25cf7e4466"
+      "sha256": "814499c86249cfcf6e0ab73cc2b8439fbb3c51f849b982e8f9c818f7859d6ebd"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -394,7 +401,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "61fc2af787ca7c9efba9034044bad40eae513b36b5a63c00a401b834339ed5aa"
+      "sha256": "73d42588f90a47ef67a8bc0dd7d2bee27fca88a9338c88ea0291e059cc4c63c0"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T052543.695066Z/verification.json",
@@ -407,12 +414,18 @@
       "role": "receipt",
       "sha256": "69934241ea513a08301044bf1d2d8ddb3e4eeac55b1524eff9b332c481a209fa",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T063915.104780Z/verification.json",
+      "role": "receipt",
+      "sha256": "d9be8fe0f29de4ed233fb6f65244c1c50ca92adf48415c915a5858c0d8387312",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T060215.969427Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T063915.104780Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -475,6 +488,10 @@
     {
       "en": "21 October 2026, SG6: keeping a dependence at its need forgoes the renewal given up there each step and the need left at the end, and a coupling keeps it exactly beyond that (record keeping-forgoes-the-renewal-at-the-need, study section 293); drawn_add_shortfall and drawn_add_shortfall_after are now cases of the laws on the steps counted, the holding course the case of holdingTo ending at nothing; this record's laws and their statements are unchanged.",
       "zh": "2026年10月21日，SG6：把依存保持在其所需处放弃那里每步放弃的更新与终了所留的所需，耦合恰在超过此量时保持它（记录 keeping-forgoes-the-renewal-at-the-need，研究第 293 节）；drawn_add_shortfall 与 drawn_add_shortfall_after 现为所计步上之律的情形，保持的过程为 holdingTo 终于零的情形；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "21 October 2026, SG8: under an order weighting later draws less, every optimum gains at each step what a course of greatest weighted gain does, and ends its own base at the first step where the weighting falls faster than every positive level renews (record a-weighting-faster-than-renewal-ends-the-base, study section 295); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG8：在后来的汲取权重更小之序下，每个最优每步的增益等于最大加权增益进程的增益，权重下降快于每个正水平的更新时在第一步终结自己的基础（记录 a-weighting-faster-than-renewal-ends-the-base，研究第 295 节）；本记录的定律及其陈述不变。"
     }
   ]
 }

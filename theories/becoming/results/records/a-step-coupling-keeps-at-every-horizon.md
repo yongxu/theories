@@ -71,6 +71,8 @@ The end of a finite horizon: in finitely repeated play cooperation sustained by 
 - related, not a proved adapter: [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md). A coupling of the whole keeping is outweighed by far-sight; here a coupling a step that no horizon outweighs.
 - related, not a proved adapter: [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md). Far-sight keeps the optimizer's own resource base; here what keeps anything else at every horizon.
 
+**Used by:** [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -88,6 +90,7 @@ The end of a finite horizon: in finitely repeated play cooperation sustained by 
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T063915.104780Z/verification.json) | — |
 
 Aliases: `a coupling a step keeps a dependence at every horizon`, `a coupling added for each step a dependence is kept`, `the rate a step coupling needs`, `the end of the horizon breaks at the last step`, `每步的耦合在每个视野都保持依存`, `Becoming.Optimum.frontier_keeps_stepwise`, `Becoming.Optimum.frontier_met_before_end`, `Becoming.Web.frontier_breaks_last`
 

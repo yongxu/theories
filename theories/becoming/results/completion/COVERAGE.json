@@ -112,7 +112,8 @@
         "re-optimizing-above-a-renewal-ends-it",
         "horizon-optima-hold-the-greatest-renewal",
         "keeping-forgoes-the-renewal-at-the-need",
-        "a-step-coupling-keeps-at-every-horizon"
+        "a-step-coupling-keeps-at-every-horizon",
+        "a-weighting-faster-than-renewal-ends-the-base"
       ],
       "declarations": [
         "Becoming.Flow.Balances.consumption_ends_with_feeders",
@@ -125,7 +126,8 @@
         "Becoming.Web.course_lost_iff",
         "Becoming.Web.frontier_broken",
         "Becoming.Web.frontier_breaks_below",
-        "Becoming.Web.frontier_keeps_stepwise"
+        "Becoming.Web.frontier_keeps_stepwise",
+        "Becoming.Web.frontier_exhausts"
       ],
       "status": "proved",
       "open_items": [
@@ -572,6 +574,7 @@
         "horizon-optima-hold-the-greatest-renewal",
         "keeping-forgoes-the-renewal-at-the-need",
         "a-step-coupling-keeps-at-every-horizon",
+        "a-weighting-faster-than-renewal-ends-the-base",
         "the-gap-for-ones-own-act",
         "what-pooled-coupling-reaches",
         "what-a-pools-acts-respond-to",
@@ -589,6 +592,7 @@
         "Becoming.Web.frontier_broken",
         "Becoming.Web.frontier_breaks_below",
         "Becoming.Web.frontier_keeps_stepwise",
+        "Becoming.Web.frontier_exhausts",
         "Becoming.Flow.unselected_beyond_pool",
         "Becoming.Flow.withinCoupling_reads_iff",
         "Becoming.Flow.act_selected_by_pool",
