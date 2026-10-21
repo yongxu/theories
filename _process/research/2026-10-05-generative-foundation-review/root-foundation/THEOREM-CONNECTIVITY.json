@@ -1,11 +1,11 @@
 {
- "commit": "b58eb5d6a4b3b2df29a1808d091657b032ae9e38",
+ "commit": "be039cd9bb3310dfa01643aac4887aa8a6d52206",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261021T173313.402629Z",
+ "core_receipt_at_commit": "20261021T175617.330751Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 301,
- "constants": 39324,
- "spine_theorems": 12933,
+ "constants": 39350,
+ "spine_theorems": 12951,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,10 +28,10 @@
  "classes": {
   "statement on both families": 1003,
   "statement on Process/Frame/Run/Trace": 2915,
-  "statement on World/Flow/Web": 3016,
+  "statement on World/Flow/Web": 3019,
   "statement on the base only through a law of its own module": 243,
   "proof through a base family": 155,
-  "used by a theorem on the base": 4799,
+  "used by a theorem on the base": 4814,
   "instance on the base recorded": 155,
   "apart: own vocabulary": 588,
   "apart: prelude-only statement": 59
@@ -514,7 +514,7 @@
   ],
   "Becoming.Optimum": [
    1,
-   381
+   399
   ],
   "Becoming.LoopReturn": [
    1,
@@ -584,15 +584,15 @@
  "rings": {
   "core": {
    "modules": 285,
-   "theorems": 12187,
+   "theorems": 12205,
    "apart": 567,
    "classes": {
     "statement on both families": 989,
     "statement on Process/Frame/Run/Trace": 2704,
-    "statement on World/Flow/Web": 2991,
+    "statement on World/Flow/Web": 2994,
     "statement on the base only through a law of its own module": 197,
     "proof through a base family": 144,
-    "used by a theorem on the base": 4440,
+    "used by a theorem on the base": 4455,
     "instance on the base recorded": 155,
     "apart: own vocabulary": 509,
     "apart: prelude-only statement": 58
@@ -691,7 +691,7 @@
  "records_by_best_alias_class": {
   "statement on both families": 71,
   "statement on Process/Frame/Run/Trace": 120,
-  "statement on World/Flow/Web": 93,
+  "statement on World/Flow/Web": 94,
   "statement on the base only through a law of its own module": 4,
   "proof through a base family": 1,
   "used by a theorem on the base": 7,
@@ -7396,6 +7396,7 @@
   "Becoming.Optimum.holding_within": "used by a theorem on the base",
   "Becoming.Optimum.holding_most": "used by a theorem on the base",
   "Becoming.Optimum.drawnAt_le_of": "used by a theorem on the base",
+  "Becoming.Optimum.holdingTo_steps_of": "used by a theorem on the base",
   "Becoming.Optimum.holdingTo_steps": "used by a theorem on the base",
   "Becoming.Optimum.holdingTo_open": "used by a theorem on the base",
   "Becoming.Optimum.holding_open": "used by a theorem on the base",
@@ -7452,11 +7453,25 @@
   "Becoming.Optimum.continued_breaking_frontier": "used by a theorem on the base",
   "Becoming.Optimum.frontier_keeps_above": "used by a theorem on the base",
   "Becoming.Optimum.continued_kept_frontier": "used by a theorem on the base",
+  "Becoming.Optimum.valued_eq": "used by a theorem on the base",
+  "Becoming.Optimum.eq_of_add_eq_of_le": "used by a theorem on the base",
+  "Becoming.Optimum.mul_left_cancel_of_pos": "used by a theorem on the base",
+  "Becoming.Optimum.open_valued_le_most": "used by a theorem on the base",
+  "Becoming.Optimum.valued_of_most": "used by a theorem on the base",
+  "Becoming.Optimum.valued_most_iff": "used by a theorem on the base",
+  "Becoming.Optimum.regrowing_valued": "used by a theorem on the base",
+  "Becoming.Optimum.regrowing_frontier": "used by a theorem on the base",
+  "Becoming.Optimum.frontier_holds_valued": "used by a theorem on the base",
+  "Becoming.Optimum.frontier_valued_iff": "used by a theorem on the base",
+  "Becoming.Optimum.lt_of_valued_below": "used by a theorem on the base",
+  "Becoming.Optimum.frontier_breaks_valued": "used by a theorem on the base",
   "Becoming.Flow.Balances.keeping_taken_le": "statement on World/Flow/Web",
   "Becoming.Web.frontier_keeps": "statement on World/Flow/Web",
   "Becoming.Web.frontier_breaks_below": "statement on World/Flow/Web",
   "Becoming.Web.frontier_breaks_long": "statement on World/Flow/Web",
   "Becoming.Web.frontier_keeps_above": "statement on World/Flow/Web",
+  "Becoming.Web.frontier_rebuilt_valued": "statement on World/Flow/Web",
+  "Becoming.Web.frontier_breaks_valued": "statement on World/Flow/Web",
   "Becoming.Optimum.Holding.metThrough_of_keeps": "used by a theorem on the base",
   "Becoming.Optimum.Holding.metThrough_of_below": "used by a theorem on the base",
   "Becoming.Optimum.Holding.coupledDraw_of_keeps": "used by a theorem on the base",
@@ -7465,6 +7480,9 @@
   "Becoming.Optimum.Holding.gated_left": "statement on World/Flow/Web",
   "Becoming.Optimum.Holding.logistic_left": "statement on World/Flow/Web",
   "Becoming.Optimum.Holding.logistic_coupled": "statement on World/Flow/Web",
+  "Becoming.Optimum.Holding.logistic_within": "used by a theorem on the base",
+  "Becoming.Optimum.Holding.logistic_open_le": "used by a theorem on the base",
+  "Becoming.Optimum.Holding.logistic_valued": "statement on World/Flow/Web",
   "Becoming.Optimum.le_sub_add_of_le": "used by a theorem on the base",
   "Becoming.Optimum.shortfall_ge": "used by a theorem on the base",
   "Becoming.Optimum.met_drawn_le": "used by a theorem on the base",
