@@ -1,0 +1,24 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/st1/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/st1-stepwise-easing/tree",
+  "modules": 41,
+  "ran": [
+    "Becoming.Ranking",
+    "Becoming.JointDraw",
+    "BecomingRankingAxiomAudit",
+    "BecomingJointDrawAxiomAudit"
+  ],
+  "reused": 39,
+  "unclean": [],
+  "audits": {
+    "Becoming.Ranking": {
+      "theorems": 45,
+      "declarations": 68,
+      "with_axioms": {}
+    },
+    "Becoming.JointDraw": {
+      "theorems": 24,
+      "declarations": 30,
+      "with_axioms": {}
+    }
+  }
+}

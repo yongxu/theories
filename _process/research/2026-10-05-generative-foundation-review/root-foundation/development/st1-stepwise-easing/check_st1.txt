@@ -1,0 +1,13 @@
+<a id="easing-check"></a>
+## A check: the stepwise law of easing (21 October 2026, ST1)
+
+An AI check (one session, 21 October), made while the Lean was written. It asks whether the stepwise reading's failure to rank restraint above overdraw (`Ranking.ThirdParty`) is a defect of the reading or a boundary it marks. **Verdict: a boundary, now exact. Under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing; so restraint that lets no level fall is ranked above overdraw for any number of drawers under both readings. ThirdParty's restrained course raises a level only to draw it below a need it then met, and the stepwise reading counts exactly that.**
+
+```text
+Result(s): new record stepwise-law-of-easing (ST1, new laws of Becoming.Ranking and Becoming.JointDraw)
+Delta: the stepwise law of easing is exact (no event the first includes undermined by the second); a course whose levels never fall undermines nothing; restraint over any number of drawers under the stepwise reading where the restrained flow takes within what it gives
+Supplied premises / correspondence: the readings of living, easing, the gating of activity, balanced flows; the theory's own comparison laws, no outside form
+Evidence: Lean in the record's receipt
+Boundary: AI check, one session; the flow premise is sufficient, not necessary; the relation-level reading and the form of L stay open
+Integration: chapter §6 and §8.1 item 11, the record table
+```
