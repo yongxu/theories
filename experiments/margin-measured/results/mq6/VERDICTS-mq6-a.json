@@ -1,0 +1,94 @@
+{
+ "A": {
+  "by_level": {
+   "2": {
+    "sucrose": 1.0,
+    "need": 0.007480156855926019,
+    "level": 1.6268907885700705,
+    "populations": 88,
+    "alive": 74,
+    "alive_by_floor": 64,
+    "empirical_need": 0.010971807052623557,
+    "empirical_accuracy": 0.8863636363636364,
+    "empirical_need_by_floor": 0.010971807052623557,
+    "high_n": 64,
+    "low_n": 0,
+    "high_alive": 1.0,
+    "low_extinct": null,
+    "testable": false
+   },
+   "4": {
+    "sucrose": 0.6,
+    "need": 0.015192703430517863,
+    "level": 1.6107902901960822,
+    "populations": 88,
+    "alive": 64,
+    "alive_by_floor": 56,
+    "empirical_need": 0.0176406837621332,
+    "empirical_accuracy": 0.9090909090909091,
+    "empirical_need_by_floor": 0.0176406837621332,
+    "high_n": 56,
+    "low_n": 31,
+    "high_alive": 1.0,
+    "low_extinct": 0.7419354838709677,
+    "testable": true,
+    "A1": false,
+    "A2": true
+   },
+   "6": {
+    "sucrose": 0.4,
+    "need": 0.026738961663811386,
+    "level": 1.521038413174554,
+    "populations": 88,
+    "alive": 53,
+    "alive_by_floor": 49,
+    "empirical_need": 0.037032791537186936,
+    "empirical_accuracy": 0.875,
+    "empirical_need_by_floor": 0.037032791537186936,
+    "high_n": 48,
+    "low_n": 37,
+    "high_alive": 0.9375,
+    "low_extinct": 0.7837837837837838,
+    "testable": true,
+    "A1": false,
+    "A2": true
+   },
+   "8": {
+    "sucrose": 0.2,
+    "need": 0.07116924242247318,
+    "level": 1.0383254477853876,
+    "populations": 88,
+    "alive": 42,
+    "alive_by_floor": 33,
+    "empirical_need": 0.12249672755050103,
+    "empirical_accuracy": 0.8863636363636364,
+    "empirical_need_by_floor": 0.12249672755050103,
+    "high_n": 32,
+    "low_n": 48,
+    "high_alive": 1.0,
+    "low_extinct": 0.7916666666666666,
+    "testable": true,
+    "A1": false,
+    "A2": false
+   }
+  },
+  "tested_levels_A1": 3,
+  "tested_levels_A2": 3,
+  "verdict": "failed",
+  "verdict_A2": "failed"
+ },
+ "A3_reported": {
+  "empirical_needs": {
+   "2.0": 0.010013195294210535,
+   "1.0": 0.010971807052623557,
+   "0.8": 0.010517176054346909,
+   "0.6": 0.0176406837621332,
+   "0.5": 0.014198275932635765,
+   "0.4": 0.037032791537186936,
+   "0.3": 0.023537686755482706,
+   "0.2": 0.12249672755050103,
+   "0.16": 0.15022177311138216
+  },
+  "note": "reported only: the paper (Fig. 2B) already shows the need rising as sucrose falls"
+ }
+}
