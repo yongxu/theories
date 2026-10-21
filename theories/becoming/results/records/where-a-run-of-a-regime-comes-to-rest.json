@@ -1,0 +1,367 @@
+{
+  "schema_version": 2,
+  "id": "where-a-run-of-a-regime-comes-to-rest",
+  "title": {
+    "en": "Where a run of a regime comes to rest",
+    "zh": "一个体制的运行静于何处"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T09:37:13+00:00",
+  "statement": {
+    "en": "Every run of an adjustment of giving rising with what is left and with the recent giving, within a band up to hi, comes to rest within 3 hi + 3 steps, at the regime's point or below the draw; whether it changes again is decided at each step.",
+    "zh": "所给之调整随所剩与近来所给而升时，至 hi 的带内每个运行至多 3 hi + 3 步后静止，静于体制之点或汲取之下；是否再变每步可判定。"
+  },
+  "laws": [
+    {
+      "en": "A law's run is fixed by its law: where the law leaves a configuration as it is, the run stays there. Where a quantity never falls along a law's run, rises at every change and stays at most d above its start, the run is still from some step at most d, decided at each step, with no omniscience.",
+      "zh": "定律的运行由其定律决定：定律不动一个构形处，运行停留于此。一个量沿定律的运行永不下降、每次变化皆上升、且至多高出起点 d 时，运行至多自第 d 步起静止；每步皆可判定，无需全知。",
+      "declarations": [
+        "Becoming.LastChange.still_of_fixed",
+        "Becoming.LastChange.still_succ",
+        "Becoming.LastChange.still_within"
+      ]
+    },
+    {
+      "en": "Where giving rises with what is left, the regime's step keeps the order of levels, so a run moves one way only, and within a band up to hi every run from a level up to hi is still from some step at most hi.",
+      "zh": "所给随所剩而升时，体制之步保持水平之序，故运行只朝一个方向；在至 hi 的带内，自至 hi 的水平出发的每个运行至多自第 hi 步起静止。",
+      "declarations": [
+        "Becoming.RegimeMargin.step_mono",
+        "Becoming.RegimeMargin.rests_within"
+      ]
+    },
+    {
+      "en": "Where the adjustment rises with what is left and with the recent giving, the adjusted step keeps the order of states; a run whose first step lowers neither its level nor its recent giving never lowers either and, within a band, is still within 2 hi - (x + r) steps; one whose first step raises neither is still within x + r steps.",
+      "zh": "调整随所剩与近来所给而升时，调整之步保持状态之序；首步不降水平也不降近来所给的运行两者皆永不降，在带内至多 2 hi - (x + r) 步后静止；首步两者皆不升的运行至多 x + r 步后静止。",
+      "declarations": [
+        "Becoming.RegimeMargin.Adjusted.Rises",
+        "Becoming.RegimeMargin.Adjusted.Below",
+        "Becoming.RegimeMargin.Adjusted.Band",
+        "Becoming.RegimeMargin.Adjusted.step_mono",
+        "Becoming.RegimeMargin.Adjusted.sum_lt_of_below",
+        "Becoming.RegimeMargin.Adjusted.given_le_level",
+        "Becoming.RegimeMargin.Adjusted.in_band",
+        "Becoming.RegimeMargin.Adjusted.run_rises",
+        "Becoming.RegimeMargin.Adjusted.run_falls",
+        "Becoming.RegimeMargin.Adjusted.rests_rising",
+        "Becoming.RegimeMargin.Adjusted.rests_falling"
+      ]
+    },
+    {
+      "en": "A step that neither raises nor lowers both the level and the recent giving lowers a count bounded by the recent giving's distance from the draw, so every run from a level and a recent giving up to hi within a band is still within 3 hi + 3 steps, at rest: at the draw with a level the regime's step leaves as it is, or below the draw with level and recent giving equal.",
+      "zh": "水平与近来所给不同升也不同降的一步，使一个以近来所给与汲取之距为界的计数下降；故带内自至 hi 的水平与近来所给出发的每个运行至多 3 hi + 3 步后静止：静于汲取且水平为体制之步所不动，或静于汲取之下且水平与近来所给相等。",
+      "declarations": [
+        "Becoming.RegimeMargin.Adjusted.unordered",
+        "Becoming.RegimeMargin.Adjusted.unordered_below",
+        "Becoming.RegimeMargin.Adjusted.unordered_le",
+        "Becoming.RegimeMargin.Adjusted.unordered_falls",
+        "Becoming.RegimeMargin.Adjusted.rests_from",
+        "Becoming.RegimeMargin.Adjusted.AtRest",
+        "Becoming.RegimeMargin.Adjusted.fixed_iff",
+        "Becoming.RegimeMargin.Adjusted.comes_to_rest"
+      ]
+    },
+    {
+      "en": "Witnesses: giving two from nothing and nothing from more keeps a band up to two under a draw of one, yet the run from one moves between one and two at every step; with no band, the gated giving's run from five rises at every step; a constant giving of one rests below a draw of two.",
+      "zh": "见证：自无给二、多则给无的所给在汲取一下保持至二的带，但自一的运行每步在一与二之间移动；无带时，门限所给自五的运行每步上升；常给一者静于汲取二之下。",
+      "declarations": [
+        "Becoming.RegimeMargin.Alternation.giving",
+        "Becoming.RegimeMargin.Alternation.keeps",
+        "Becoming.RegimeMargin.Alternation.returns",
+        "Becoming.RegimeMargin.Alternation.alternates",
+        "Becoming.RegimeMargin.Crossing.giving_rises",
+        "Becoming.RegimeMargin.Crossing.climbs",
+        "Becoming.RegimeMargin.Crossing.rises_without_rest",
+        "Becoming.RegimeMargin.Adjusted.rests_short"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; the state the level and one recent giving; for each law its own premises as hypotheses: giving, or the adjustment, rising with what is left (and with the recent giving), and a band the step keeps. RestsAtDraw only names the regime, since every adjustment A satisfies it for g e = A e H.",
+      "zh": "不加公理。整数量与离散步；一个条件；汲取先取，有多少取多少；状态是水平与一个近来所给；各律自身的前提为假设：所给或调整随所剩（与近来所给）而升，以及步所保持的带。RestsAtDraw 只为体制命名，因每个调整 A 对 g e = A e H 皆满足它。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Convergence over the reals: in whole numbers each change moves an amount by at least one, so a run rests in finitely many steps; over the reals the corresponding statement is convergence, not stated.",
+      "zh": "实数上的收敛：在整数中每次变化至少移动一个单位，故运行在有限步内静止；在实数上相应的陈述是收敛，未被陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "That measured giving rises over its band: MQ5's law rises in both arguments exactly where its regime's giving rises with what is left, which is not checked on the data.",
+      "zh": "所测的所给在其带上上升：MQ5 之律恰在其体制所给随所剩而升时于两个变元上皆升，这未在数据上检查。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "That 3 hi + 3 is the least bound; a state with a further lag; coupled conditions.",
+      "zh": "3 hi + 3 是最小的界；带再一个滞后的状态；相互耦合的条件。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "detail": {
+        "en": "Alternation.alternates: giving that falls as what is left rises keeps a band, yet its run alternates for ever; Crossing.rises_without_rest: with no band a rising run climbs at every step; Adjusted.rests_short: a rest below the draw where something is given from nothing.",
+        "zh": "Alternation.alternates：随所剩上升而下降的所给保持一个带，其运行却永远交替；Crossing.rises_without_rest：无带时上升的运行每步攀升；Adjusted.rests_short：自无有所给时，静于汲取之下。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T093053.215253Z): the 32 declarations Becoming.LastChange and Becoming.RegimeMargin gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 300; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T093053.215253Z）：Becoming.LastChange 与 Becoming.RegimeMargin 新增的 32 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 300 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Convergence over the reals; whether measured giving laws rise over their bands; the least bound; a state with a further lag; coupled conditions; an independent review.",
+    "zh": "实数上的收敛；所测的所给之律在其带上是否上升；最小的界；带再一个滞后的状态；相互耦合的条件；独立审查。"
+  },
+  "correspondence": {
+    "en": "Compensatory renewal settles and overcompensating renewal cycles (Beverton and Holt 1957; May 1976); orbits of planar cooperative maps are eventually componentwise monotone under regularity conditions (Smith 1998; Hirsch and Smith 2005); deciding where a bounded monotone sequence stops is an omniscience principle (Bridges and Richman 1987). On the spine, constructive and exact in its premises: a law's run still for one step is still for ever, so a bounded mark decides its rest; the adjusted step need not be one to one, and its own structure, moving the level by the new giving less the draw, bounds the steps before its run moves one way only. Rising giving and the band are each shown needed by a witness.",
+    "zh": "补偿性更新会安定，过度补偿的更新会循环（Beverton 与 Holt 1957；May 1976）；平面合作映射的轨道在正则条件下终将逐分量单调（Smith 1998；Hirsch 与 Smith 2005）；判定有界单调序列何处停止是一个全知原理（Bridges 与 Richman 1987）。在脊柱上，构造性且在其前提上精确：定律的运行静止一步即永远静止，故有界的标记判定其静止；调整之步未必一一对应，其自身结构（水平按新所给减汲取而动）界定了运行只朝一向之前的步数。所给上升与带各由见证表明不可少。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+  "aliases": [
+    "where a run of a regime comes to rest",
+    "every run of a rising adjustment comes to rest",
+    "a law's run with a bounded mark",
+    "一个体制的运行静于何处",
+    "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+    "Becoming.RegimeMargin.rests_within",
+    "Becoming.LastChange.still_within"
+  ],
+  "dependencies": [
+    {
+      "id": "regime-point-under-adjusting-giving",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The adjusted step, RestsAtDraw and the rest law at or above the draw are reused; the rest law is extended below the draw and the run is shown to reach it.",
+        "zh": "沿用调整之步、RestsAtDraw 与汲取及其上的静止之律；静止之律扩展到汲取之下，并表明运行会到达它。"
+      },
+      "interface": {
+        "output": {
+          "en": "Adjusted.step, RestsAtDraw, rest_iff and orbit_regime.",
+          "zh": "Adjusted.step、RestsAtDraw、rest_iff 与 orbit_regime。"
+        },
+        "input": {
+          "en": "Every run of a rising adjustment within a band comes to rest at such a point or below the draw.",
+          "zh": "带内上升调整的每个运行都静于此种点或汲取之下。"
+        },
+        "conditions": {
+          "en": "Whole-number amounts; the draw taken first.",
+          "zh": "整数量；汲取先取。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+      }
+    },
+    {
+      "id": "the-last-change-of-a-run",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "StillFrom is reused; for a law's run a bounded mark decides settling, a premise the last-change laws left open.",
+        "zh": "沿用 StillFrom；对定律的运行，有界的标记判定安定，这是最后变化之律留下的开放前提。"
+      },
+      "interface": {
+        "output": {
+          "en": "StillFrom, and settling for every process as the limited principle of omniscience.",
+          "zh": "StillFrom，以及对每个过程的安定即有限全知原理。"
+        },
+        "input": {
+          "en": "A law's run with a bounded mark is still within the bound, decided.",
+          "zh": "有有界标记的定律运行在界内静止，可判定。"
+        },
+        "conditions": {
+          "en": "Decidable configurations; a deterministic law.",
+          "zh": "可判定的构形；确定的定律。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "margin-of-a-regime",
+      "detail": {
+        "en": "The regime's step: with giving rising with what is left, every run within a band comes to rest within hi steps.",
+        "zh": "体制之步：所给随所剩而升时，带内每个运行至多 hi 步后静止。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RegimeMargin.Adjusted.AtRest",
+        "Becoming.RegimeMargin.Adjusted.Band",
+        "Becoming.RegimeMargin.Adjusted.Below",
+        "Becoming.RegimeMargin.Adjusted.FromNothing",
+        "Becoming.RegimeMargin.Adjusted.RestsAtDraw",
+        "Becoming.RegimeMargin.Adjusted.Rises",
+        "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+        "Becoming.RegimeMargin.Adjusted.fixed_iff",
+        "Becoming.RegimeMargin.Adjusted.given_le_level",
+        "Becoming.RegimeMargin.Adjusted.in_band",
+        "Becoming.RegimeMargin.Adjusted.orbit_regime",
+        "Becoming.RegimeMargin.Adjusted.rest_iff",
+        "Becoming.RegimeMargin.Adjusted.rests_falling",
+        "Becoming.RegimeMargin.Adjusted.rests_from",
+        "Becoming.RegimeMargin.Adjusted.rests_rising",
+        "Becoming.RegimeMargin.Adjusted.rests_short",
+        "Becoming.RegimeMargin.Adjusted.run_falls",
+        "Becoming.RegimeMargin.Adjusted.run_rises",
+        "Becoming.RegimeMargin.Adjusted.step",
+        "Becoming.RegimeMargin.Adjusted.step_mono",
+        "Becoming.RegimeMargin.Adjusted.sum_lt_of_below",
+        "Becoming.RegimeMargin.Adjusted.unordered",
+        "Becoming.RegimeMargin.Adjusted.unordered_below",
+        "Becoming.RegimeMargin.Adjusted.unordered_falls",
+        "Becoming.RegimeMargin.Adjusted.unordered_le",
+        "Becoming.RegimeMargin.Alternation.alternates",
+        "Becoming.RegimeMargin.Alternation.giving",
+        "Becoming.RegimeMargin.Alternation.keeps",
+        "Becoming.RegimeMargin.Alternation.returns",
+        "Becoming.RegimeMargin.Crossing.climbs",
+        "Becoming.RegimeMargin.Crossing.giving",
+        "Becoming.RegimeMargin.Crossing.giving_rises",
+        "Becoming.RegimeMargin.Crossing.rises_without_rest",
+        "Becoming.RegimeMargin.Keeps",
+        "Becoming.RegimeMargin.rests_within",
+        "Becoming.RegimeMargin.step",
+        "Becoming.RegimeMargin.step_mono"
+      ],
+      "sha256": "81d0d0477bfc431bd97196f7f31115dc9e0905e5742676a07fea8d2a9f3d975f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.LastChange.StillFrom",
+        "Becoming.LastChange.lpo_iff_settles",
+        "Becoming.LastChange.still_of_fixed",
+        "Becoming.LastChange.still_succ",
+        "Becoming.LastChange.still_within"
+      ],
+      "sha256": "a31360deed2add792d3baae95c78d5cfcda2b5716caf3003033dd593e9d9897e"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Law.orbit",
+        "Becoming.Law.orbit_mul",
+        "Becoming.Law.orbit_shift",
+        "Becoming.Marks"
+      ],
+      "sha256": "78c79cc4e644639a898d1615bcf77134e2d84bdfd7b720bced7acd8a41db2d9b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Lasting.orbit_mono"
+      ],
+      "sha256": "ead33dc198328da7040d9c39b0a9c3ab27778d268af34ccdeea4500541eba3c9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.sub_le_sub_left_of_le"
+      ],
+      "sha256": "7526caba61894416df89321f15812f042f552a482ec14693433e39a5d1f69d07"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Requirement.Formation.sub_lt_sub_of_lt"
+      ],
+      "sha256": "bf3ecf28d3d7dd5b196ff64a69e1a8cfc7fcd329c7c35732aa77f650c6648525"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
+      "role": "receipt",
+      "sha256": "ddd3a762660716774a04ab287ebd6e064a47ec2e16d6f71824a4603966c34c24"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "29a221097865929c9ceb1937d3fd9eb2aa30913362687aa16ed25d612119730d"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "39c28eba6d2cbd83585daf13717d5e75618875a431168161282935e97848e719"
+    },
+    {
+      "path": "experiments/margin-measured/README.md",
+      "role": "integration",
+      "sha256": "7e647b762abdc50d2e76a05faecab48a197fe972329aafe06ea506dc1598ccb4"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "892e88ba031ec4b2b69b65127ed651fda60d4252ad6269c685611dc2c255305e"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LastChange",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Recurrence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Lasting",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frontier",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (RM3), where a run of a regime comes to rest: a law's run with a bounded mark rests within the bound, decided; every run of an adjustment rising in both arguments within a band rests within 3 hi + 3 steps, at the regime's point or below the draw; study section 300.",
+      "zh": "2026年10月21日：新增（RM3），一个体制的运行静于何处：有有界标记的定律运行在界内静止，可判定；带内在两个变元上皆升的调整的每个运行至多 3 hi + 3 步后静止，静于体制之点或汲取之下；研究第 300 节。"
+    }
+  ]
+}

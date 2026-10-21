@@ -247,7 +247,7 @@ MQ5 tests both on the stocks no analysis had read, which carry spawning biomass 
 
 - **The lag is giving moving toward the draw.** The level changes by giving less the draw, so E_{t−1} − E_t = H_t − γ_{t−1}.
   - A giving that reads last year's escapement is therefore a giving that reads this year's draw. Three readings give that one dependence: an age structure, the other order of draw and giving, and MQ3's compensation. The test does not separate them.
-  - At a fixed point the lag vanishes. Every rest of the state at or above the draw is then RM1's regime point: RM2 proves this in whole numbers for every adjustment of giving that rests at the draw where the regime does (`RegimeMargin.Adjusted.rests_iff`, study section 299). Whether a run comes to rest is not proved.
+  - At a fixed point the lag vanishes. Every rest of the state at or above the draw is then RM1's regime point: RM2 proves this in whole numbers for every adjustment of giving that rests at the draw where the regime does (`RegimeMargin.Adjusted.rests_iff`, study section 299). RM3 proves that every run within a band comes to rest, at the regime's point or below the draw, where the adjustment rises with what is left and with the recent giving (`RegimeMargin.Adjusted.comes_to_rest`, study section 300). MQ5's law weighs the recent giving by 0.41 and the regime's giving by 0.04, so it rises in both exactly where the regime's giving rises with what is left, which is not checked on the data.
   - φ = 0.96 is MQ4's. λ = 0.55 was chosen on MQ3's and MQ4's stocks and frozen.
 - **The draw as a law of the stock.** No future catch is used.
   - ε = 0 holds the draw (the frozen rest). ε = 1 holds the exploitation rate.

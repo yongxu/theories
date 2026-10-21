@@ -24,7 +24,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Settling without LPO: the count of changes is bounded, the step of the last change is not; a premise the core accepts that decides settling (a bound on how long a run stays before changing again, say) is not stated.
+- Settling without LPO for a process's runs: the count of changes is bounded, the step of the last change is not. For a law's run a bounded mark of its changes decides it (LastChange.still_within, where-a-run-of-a-regime-comes-to-rest).
 - Configurations whose equality is not decided, where the double negation needs stability of equality; worlds no list holds, where change can recur without a loop.
 - **Counterexample:** Settling.OneWay: two configurations with no way back from true; no run keeps changing, each run changes at most once, and every run from false settling gives LPO (Settling.OneWay.lpo_of_settles), which lpo_iff_settles uses for its second direction. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Settling.lean)
 
@@ -40,7 +40,7 @@ Canonical source: [LastChange.lean](../../../../experiments/integrated-correctio
 <a id="next--下一步"></a>
 ## Next
 
-A premise the core accepts under which settling is decided; configurations whose equality is not decided; an independent review.
+A premise the core accepts under which settling of a process's runs, not only a law's, is decided; configurations whose equality is not decided; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -57,6 +57,9 @@ The record when-the-runs-of-a-process-settle left "Whether the limited principle
 - related, not a proved adapter: [the-boundary-of-enough-under-undetermined-laws](the-boundary-of-enough-under-undetermined-laws.md). There assured enough is every reachable stay meeting the target and every run settling; here, with LPO, the second part is that no reachable change can be undone.
 - related, not a proved adapter: [how-often-couplings-act](how-often-couplings-act.md). There every schedule settling gives LPO through RecursOrStops; here the count of changes is bounded by the list, and settling every run with no reachable undoable change is exactly LPO.
 - related, not a proved adapter: [what-a-method-comes-to-say-in-the-limit](what-a-method-comes-to-say-in-the-limit.md). Settling, decided outright here exactly under the limited principle of omniscience, is verified in the limit with decidable configurations and refuted in the limit by no method under Markov's principle.
+- related, not a proved adapter: [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md). For a law's run, a quantity marking its changes and bounded along it decides settling with no omniscience.
+
+**Used by:** [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md)
 
 **Law family:** Settling (lead: [when-the-runs-of-a-process-settle](when-the-runs-of-a-process-settle.md)). Whether a run settles is whether it is decided that it changes again. The members calibrate settling three ways, and the three differ: that no run keeps changing does not give settling, already LPO for two configurations (the lead); in a world a list holds, settling wherever no reachable change can be undone is exactly LPO (the-last-change-of-a-run); every schedule settling is exactly Σ⁰₂ excluded middle (how-often-couplings-act). Members: [when-the-runs-of-a-process-settle](when-the-runs-of-a-process-settle.md) · [how-often-couplings-act](how-often-couplings-act.md).
 
@@ -72,6 +75,7 @@ The record when-the-runs-of-a-process-settle left "Whether the limited principle
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | provenance | [2026-10-18-representation-scope-go.md](../../../../sources/15-codex-theory-conversations/2026-10-18-representation-scope-go.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json) | — |
 
 Aliases: `the last change of a run`, `一次运行的最后一次变化`, `fewer than N changes`, `变化少于 N 次`, `not not settled`, `不是不安定`, `settling is deciding whether it changes again`, `安定即判定是否再变化`, `settling is exactly LPO`, `安定恰是 LPO`
 
@@ -84,6 +88,7 @@ Aliases: `the last change of a run`, `一次运行的最后一次变化`, `fewer
 - 19 October 2026, O2: related entry for what-a-method-comes-to-say-in-the-limit (study section 206). The claim is unchanged.
 - 20 October 2026, R30 (one notion, one name: names that stated a meaning the statement does not have, or collided, renamed by one table, development/r30-names/RENAME-TABLE.json): Re-pointed after reading the change: THE-THEORY-OF-BECOMING.md, names follow the R30 rename table; the retired Lean names of 20 October are in the glossary; §9 (receipt) follows R30. Also re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 221 added; the links of earlier sections to the renamed modules' files follow the table, their text unchanged. The claim is unchanged.
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Proof bindings (LastChange.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; LastChange.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; Settling.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
+- 21 October 2026, RM3: LastChange gained still_of_fixed, still_succ and still_within, a law's run with a bounded mark coming to rest within the bound, decided (record where-a-run-of-a-regime-comes-to-rest, study section 300); what this record does not show and its next delta now say that this premise is stated for a law's run. Its laws are unchanged.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](the-last-change-of-a-run.json).
 
 <a id="earlier-text--早期文本"></a>

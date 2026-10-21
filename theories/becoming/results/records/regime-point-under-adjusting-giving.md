@@ -24,7 +24,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That a run comes to rest, or how fast: the laws say where a run can rest and which fates the state decides, not that the state converges.
+- That a run comes to rest, or how fast: these laws say where a run can rest, not that it does; record where-a-run-of-a-regime-comes-to-rest states that it does for adjustments rising in both arguments within a band.
 - The threshold in the plane of level and recent giving where recent giving lies on the other side of the draw; a state with a further lag; coupled conditions.
 - That MQ3's failed check F3 is explained: the reading that the point separates fates on the state, not the level alone, is post hoc and untested.
 - **Counterexample:** Crossing.frozen_stays: the frozen rest lies between the recent and the regime's giving, yet its run from four with recent giving three stays at four, where the regime's step ends the condition; Crossing.crosses: with recent giving on the other side, five, the point, ends and four, below it, holds. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
@@ -41,7 +41,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Whether and how fast a run comes to rest; the threshold curve in the plane of level and recent giving; a state with a further lag; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often than those with it met; an independent review.
+Which adjustments that do not rise still bring every run to rest; the threshold curve in the plane of level and recent giving; a state with a further lag; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often than those with it met; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -58,6 +58,9 @@ Partial adjustment, a quantity moving at a rate toward its target, rests where t
   - Input: The same point on the state of level and recent giving, under any adjustment.
   - Preserved conditions: Whole-number amounts; the draw taken first. [RegimeMargin.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 - related, not a proved adapter: [margin-of-a-regime](margin-of-a-regime.md). With giving read off the level alone, the point of no return is exact on the level; with giving that adjusts, it is exact on the state where recent giving lies on the level's side, and every rest at or above the draw is the regime's.
+- related, not a proved adapter: [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md). Where the adjustment rises with what is left and with the recent giving and a band keeps the state, every run comes to rest within 3 hi + 3 steps, at the regime's point or below the draw.
+
+**Used by:** [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -71,6 +74,7 @@ Partial adjustment, a quantity moving at a rate toward its target, rests where t
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | integration | [README.md](../../../../experiments/margin-measured/README.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json) | — |
 
 Aliases: `the regime's point under giving that adjusts`, `giving that adjusts`, `rests of an adjusting giving`, `所给调整下的体制之点`, `Becoming.RegimeMargin.Adjusted.rests_iff`, `Becoming.RegimeMargin.Adjusted.ends_iff_below`, `Becoming.RegimeMargin.Crossing.crosses`
 
@@ -78,6 +82,7 @@ Aliases: `the regime's point under giving that adjusts`, `giving that adjusts`, 
 ### History
 
 - 21 October 2026: added (RM2), the regime's point over every adjustment of giving: RM1's laws on ending and holding hold over any law of what is left and of the recent giving, the regime's step the case; every rest at or above the draw is the regime's where the adjustment rests at the draw where the regime gives it; study section 299.
+- 21 October 2026, RM3: whether a run comes to rest, left open here, is answered for adjustments rising in both arguments within a band (record where-a-run-of-a-regime-comes-to-rest, study section 300); what this record does not show and its next delta now say so. Its laws are unchanged.
 
 </details>
 

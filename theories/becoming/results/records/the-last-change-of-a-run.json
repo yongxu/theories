@@ -77,8 +77,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Settling without LPO: the count of changes is bounded, the step of the last change is not; a premise the core accepts that decides settling (a bound on how long a run stays before changing again, say) is not stated.",
-      "zh": "没有有限全知原理的安定：变化的次数有界，最后一次变化的步不是；核心接受的、使安定可判定的前提（例如一次运行再变化之前能停留多久的界）未被陈述。",
+      "en": "Settling without LPO for a process's runs: the count of changes is bounded, the step of the last change is not. For a law's run a bounded mark of its changes decides it (LastChange.still_within, where-a-run-of-a-regime-comes-to-rest).",
+      "zh": "过程之运行在没有有限全知原理时的安定：变化次数有界，最后变化之步不是；定律的运行由其变化的有界标记判定（LastChange.still_within）。",
       "kind": "scope"
     },
     {
@@ -109,8 +109,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261018T093527.497358Z）：Becoming.LastChange 的 24 项声明（20 项定理）公理报告为空；检查器并核对核心纯净。作者自审见研究第 178 节；未经独立审查。"
   },
   "next_delta": {
-    "en": "A premise the core accepts under which settling is decided; configurations whose equality is not decided; an independent review.",
-    "zh": "核心接受的、使安定可判定的前提；相等不可判定的构形；独立审查。"
+    "en": "A premise the core accepts under which settling of a process's runs, not only a law's, is decided; configurations whose equality is not decided; an independent review.",
+    "zh": "核心接受的、使过程之运行（不只定律之运行）的安定可判定的前提；相等不可判定的构形；独立审查。"
   },
   "correspondence": {
     "en": "The record when-the-runs-of-a-process-settle left \"Whether the limited principle of omniscience with no reachable undoable change gives it is not stated\", and the chapter's open programme (section 8.2, Seeking, capture and runaway) asked \"whether, with the limited principle of omniscience, no reachable change that can be undone gives settling\". Ren, 18 October 2026: \"alright, generally agree, please make your own pareto frontier decisions, and push the frontier - words are important, but i think you are capable\" (provenance, not warrant); the AI chose this item. The answer is yes, and exactly: for every process of decidable configurations in a world a list holds the two are equivalent.",
@@ -158,6 +158,13 @@
         "en": "Settling, decided outright here exactly under the limited principle of omniscience, is verified in the limit with decidable configurations and refuted in the limit by no method under Markov's principle.",
         "zh": "止定在此恰在有限全知原则下被直接判定；构型可判定时它在极限中被证实，在马尔可夫原则下没有方法在极限中否证它。"
       }
+    },
+    {
+      "id": "where-a-run-of-a-regime-comes-to-rest",
+      "detail": {
+        "en": "For a law's run, a quantity marking its changes and bounded along it decides settling with no omniscience.",
+        "zh": "对定律的运行，标记其变化且沿之有界的量判定安定，无需全知。"
+      }
     }
   ],
   "references": [
@@ -190,7 +197,7 @@
         "Becoming.LastChange.settles_of_still",
         "Becoming.LastChange.settles_or_changes"
       ],
-      "sha256": "6834d45f75fc8e1af39d99e65189fecf47f82d015b4d9eafe63a4957c13dc866"
+      "sha256": "a31360deed2add792d3baae95c78d5cfcda2b5716caf3003033dd593e9d9897e"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261018T093527.497358Z/verification.json",
@@ -222,12 +229,18 @@
       "role": "receipt",
       "sha256": "6ea918ef99c29d6911a506173194b82dde4acefe42dbb544952394e2730c517c",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
+      "role": "receipt",
+      "sha256": "ddd3a762660716774a04ab287ebd6e064a47ec2e16d6f71824a4603966c34c24",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LastChange",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -260,6 +273,10 @@
     {
       "en": "2026-10-20: 19 bookkeeping notes condensed from 18 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/ad37a49ef0e7d81b/the-last-change-of-a-run.json and in git.",
       "zh": "2026-10-20：19 条记账性说明合并（18 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/ad37a49ef0e7d81b/the-last-change-of-a-run.json 和 git 中。"
+    },
+    {
+      "en": "21 October 2026, RM3: LastChange gained still_of_fixed, still_succ and still_within, a law's run with a bounded mark coming to rest within the bound, decided (record where-a-run-of-a-regime-comes-to-rest, study section 300); what this record does not show and its next delta now say that this premise is stated for a law's run. Its laws are unchanged.",
+      "zh": "2026年10月21日，RM3：LastChange 新增 still_of_fixed、still_succ 与 still_within，有有界标记的定律运行在界内静止，可判定（记录 where-a-run-of-a-regime-comes-to-rest，研究第 300 节）；本记录所不表明者与其下一步现已说明此前提对定律的运行已陈述。其规律不变。"
     }
   ],
   "text_versions": [

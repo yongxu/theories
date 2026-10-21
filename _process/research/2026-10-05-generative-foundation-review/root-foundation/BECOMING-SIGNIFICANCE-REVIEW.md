@@ -1005,3 +1005,23 @@ Evidence: the prior forms from memory, not reread; Lean in the record's receipt
 Boundary: AI check, one session; whether and how fast a run comes to rest, a further lag and the threshold curve in the state's plane are not stated; StaysShort's need shown by reasoning only; the witnesses' giving and adjustment chosen
 Integration: chapter §2.3, thesis T2's standing and evidence, the record table
 ```
+
+<a id="rest-check"></a>
+## A check: where a run of a regime comes to rest (21 October 2026, RM3)
+
+An AI check (one session, 21 October), made while the Lean was written. It asks what RM2 left open: whether a run of an adjusting giving comes to rest, and how fast, and under what premise settling needs no omniscience. **Verdict: the mathematics is known in its kind. Compensatory renewal settles and overcompensating renewal cycles, and orbits of planar cooperative maps are eventually monotone under regularity conditions. The spine's form is constructive and exact in its premises. A law's run with a bounded mark comes to rest within the bound, decided at each step. Every run of an adjustment rising with what is left and with the recent giving, within a band up to `hi`, is still within `3 hi + 3` steps, at the regime's point or below the draw. Rising giving and the band are each shown needed by a witness on the run. The reals are not stated.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Compensatory renewal (recruitment rising with stock) settles monotonically; overcompensating renewal (recruitment falling at high stock) cycles and can be chaotic | Beverton and Holt, *On the Dynamics of Exploited Fish Populations* (1957); May, "Simple mathematical models with very complicated dynamics", Nature 261 (1976) (from memory) | Giving rising with what is left: every run of the regime's step within a band comes to rest (`RegimeMargin.rests_within`); giving falling as what is left rises: a run alternates within its band for ever (`RegimeMargin.Alternation.alternates`) |
+| Monotone dynamical systems: orbits of planar cooperative maps are eventually componentwise monotone, under regularity conditions | Smith, "Planar competitive and cooperative difference equations", Journal of Difference Equations and Applications 3 (1998); Hirsch and Smith, "Monotone maps: a review", Journal of Difference Equations and Applications 11 (2005) (from memory) | The adjusted step need not be one to one; its own structure brings an unordered step's recent giving toward the draw (`RegimeMargin.Adjusted.unordered_falls`), so every run within a band comes to rest within `3 hi + 3` steps (`RegimeMargin.Adjusted.comes_to_rest`); exchanging two coordinates keeps the order and cycles, so the structure is needed |
+| Constructive settling: deciding where a monotone bounded sequence stops is an omniscience principle | the last-change laws (`LastChange.lpo_iff_settles`); Bridges and Richman, *Varieties of Constructive Mathematics* (1987) (from memory) | A law's run is fixed by its law, so a run still for one step is still for ever, and a bounded mark of its changes decides where it rests with no omniscience (`LastChange.still_within`) |
+
+```text
+Result(s): new record where-a-run-of-a-regime-comes-to-rest (RM3, new laws of Becoming.LastChange and Becoming.RegimeMargin)
+Delta: a law's run with a bounded mark comes to rest within the bound, decided; every run of the regime's step with rising giving within a band rests within hi steps; every run of an adjustment rising in both arguments within a band rests within 3 hi + 3 steps, at the regime's point or below the draw; witnesses that rising giving and the band are needed and that a rest below the draw occurs
+Supplied premises / correspondence: whole-number amounts; discrete steps; the state the level and one recent giving; the adjustment rising in both arguments; a band. Correspondence: Beverton and Holt 1957; May 1976; Smith 1998; Hirsch and Smith 2005; Bridges and Richman 1987
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; convergence over the reals, a further lag, coupled conditions and the bound's tightness are not stated; whether measured giving laws rise over their band is not checked; the witnesses' giving chosen
+Integration: chapter §2.3, thesis T2's standing, the record table
+```

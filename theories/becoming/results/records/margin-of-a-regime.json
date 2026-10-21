@@ -258,7 +258,7 @@
         "Becoming.RegimeMargin.step_ge",
         "Becoming.RegimeMargin.Adjusted.step_holds"
       ],
-      "sha256": "125210cae87e7082f651e302106d562225e05ab2abaaeea67de2783eacb88312"
+      "sha256": "81d0d0477bfc431bd97196f7f31115dc9e0905e5742676a07fea8d2a9f3d975f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -278,24 +278,30 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "520b2ee845543b7f0d74f2534691fbf7941d8ee6fd04912a6f98d3dacc2b9a23"
+      "sha256": "7e647b762abdc50d2e76a05faecab48a197fe972329aafe06ea506dc1598ccb4"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "15f7b66b8f8537fe38d651251e47dca0290e0dfacfaa4ed25cb51326e1fa25ce"
+      "sha256": "892e88ba031ec4b2b69b65127ed651fda60d4252ad6269c685611dc2c255305e"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T084948.266489Z/verification.json",
       "role": "receipt",
       "sha256": "a4acb81da30e5d80f3ebc35353d1f9021a590a0bffdffc4311da59034ca0d76e",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
+      "role": "receipt",
+      "sha256": "ddd3a762660716774a04ab287ebd6e064a47ec2e16d6f71824a4603966c34c24",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T084948.266489Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
