@@ -296,9 +296,9 @@
 
 **要点。** 给予等待给予之处，有记忆的扣留停留并扩散，无记忆的绕每个回路返回；更多的等待从不给出更多。对每个保持包含的律，最坏的起点是全部扣留，从它只有给予其所等待之一切的形成恢复，恰恢复入每条足够长的等待链所经过的形成。回路只经一个给回少于所得的环节关闭差别。只在读取步改变的规则在 2N − 1 的段上固定它所持者；从两侧持住的水平恰在响应不过冲之处稳定。
 
-**定理。** 本节陈述 `withholding_absorbs`、`withholding_returns`、`worst_start`、`restores_iff`、`closing_needs_less`、`pace_law`、`Flow.withinGap_iff_between`、`Regulation.no_narrower_band`；完整陈述见[英文版 §4.4](THE-THEORY-OF-BECOMING.md#44-giving-that-waits-on-giving-tolerance-loops-pace-and-regulation)。
+**定理。** 本节陈述 `withholding_absorbs`、`withholding_returns`、`worst_start`、`restores_iff`、`closing_needs_less`、`pace_law`、`Flow.withinGap_iff_between`、`Regulation.no_narrower_band`、`ReadingSchedule.keeps_iff_within`（每步读一个条件的日程，恰在每个窗口内读到一个条件时才使它保持在余量之内；一个读者能保持的窗口倒数之和至多为一，低于一未必足够，二分之一足够，即轮转调度，`ReadingSchedule.spare_not_enough`、`ReadingSchedule.keeps_of_half`）；完整陈述见[英文版 §4.4](THE-THEORY-OF-BECOMING.md#44-giving-that-waits-on-giving-tolerance-loops-pace-and-regulation)。
 
-记录：[giving-that-waits-on-giving](../results/records/giving-that-waits-on-giving.md)、[restoring-giving-from-the-worst-start](../results/records/restoring-giving-from-the-worst-start.md)、[thresholds-of-waiting](../results/records/thresholds-of-waiting.md)、[whether-a-loop-closes-a-difference](../results/records/whether-a-loop-closes-a-difference.md)、[how-fast-a-rule-may-change](../results/records/how-fast-a-rule-may-change.md)、[two-sided-regulation-and-late-reading](../results/records/two-sided-regulation-and-late-reading.md)。
+记录：[giving-that-waits-on-giving](../results/records/giving-that-waits-on-giving.md)、[restoring-giving-from-the-worst-start](../results/records/restoring-giving-from-the-worst-start.md)、[thresholds-of-waiting](../results/records/thresholds-of-waiting.md)、[whether-a-loop-closes-a-difference](../results/records/whether-a-loop-closes-a-difference.md)、[how-fast-a-rule-may-change](../results/records/how-fast-a-rule-may-change.md)、[two-sided-regulation-and-late-reading](../results/records/two-sided-regulation-and-late-reading.md)、[one-reader-several-conditions](../results/records/one-reader-several-conditions.md)。
 
 ### 4.5 传递、共享的代码与经规则的劫持
 
@@ -767,6 +767,7 @@
 | [从最坏的开始恢复给出](../results/records/restoring-giving-from-the-worst-start.md) | 不加前提的定理 | — | §4.4 |
 | [等待的阈值](../results/records/thresholds-of-waiting.md) | 不加前提的定理 | — | §4.4 |
 | [双向调节，与迟读的调节](../results/records/two-sided-regulation-and-late-reading.md) | 不加前提的定理 | — | §4.4 |
+| [一个读者，多个条件](../results/records/one-reader-several-conditions.md) | 在所述前提下的定理 | 平衡；每步汲取有界，读到后固定步数撤回；每步读一个；半数定理需整数权重在二的幂之内 | §4.4、§7.3 |
 | [在形成之间形成的编码](../results/records/a-code-formed-between-formations.md) | 不加前提的定理 | — | §4.5 |
 | [比承载者更持久的样式经传递而持续](../results/records/a-pattern-lasts-through-passing.md) | 不加前提的定理 | — | §4.5 |
 | [经由规则的捕获：规则读其所选出之份额的选择](../results/records/capture-through-the-rule.md) | 不加前提的定理 | — | §4.5 |
@@ -859,7 +860,7 @@
 | 9. 意义不在动力学中；范围与次序（§5、§6.4–§6.5） | 是与应当之间的鸿沟（Hume 1739）；开放问题论证（Moore 1903）；从自身能动性出发的普遍化，Gewirth 的类属一致原则（1978），以及 Hare（1963、1981）、Nagel（1970）、Sidgwick（1874）；支配序的不完全（Sen 1970） | 覆盖假设被指名为前提；范围与次序分开，并证明条件单独不排序任何东西 | 近乎定义；已知论证的重述；这一区分是澄清 |
 | 10. 回路（§2.6） | 有向图无环恰当其邻接矩阵幂零，此时 (I + N)ᵗ 是 t 的多项式；正整数权的环使谱半径大于一（Perron–Frobenius）；偏差放大的回路（Maruyama 1963） | 对整数的量与时间表的构造性陈述；稀疏时间表的情形 | 已知结果的重述 |
 
-十项之外的结果：从其外的供给与位置／迁移网的实例是排序函数论证，严格正的 P-次不变量界定每个点火序列（Lautenbach 1975；Memmi and Roucairol 1980；Murata 1989），所以网显示的是与已知理论一致，不是对一般性的独立支持；热力学对应重述持续的结构需要通量（Schrödinger 1944；Prigogine 1977）与 Landauer 的下界，其计数（在不合并的律中部分的合并由其余部分承接）就是 Landauer 自己的论证（1961；Bennett 2003；Ladyman、Presnell、Short 与 Groisman 2007），而物理给出的每种最小损失（合并、有限时间、精度、有限热库）都是随机热力学中带有自身前提的定理（[最小损失的检查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#least-loss-check)）；调节重述无差拍控制、有延迟的扰动抑制（Dahleh and Pearson 1987）与必要多样性（Ashby 1956）；选择项是 Price（1970）的；余量之内的自身扩大（§7.2）是在区域上分开的余量之律，对守恒的量回答了寻求权力定理（Turner 等 2021）意义上的保留选项何时关闭他者的选项，常和博弈中的权力稀缺（Turner and Stavrianos 2021）是没有余量的情形，福利经济学中有余量才有帕累托改进是其类比；一个体制的余量（§2.3）是以整数陈述的、减损性下的收获与被收获平衡的折叠（Clark 1976；May 1977），更新为凹时联合汲取的损害超可加，即凹更新之逆的凸性；`Web.break_not_bounded` 成立是因为按假设存量不被观察，存量被观察之处断裂可以预先看到（§3.4）。
+十项之外的结果：从其外的供给与位置／迁移网的实例是排序函数论证，严格正的 P-次不变量界定每个点火序列（Lautenbach 1975；Memmi and Roucairol 1980；Murata 1989），所以网显示的是与已知理论一致，不是对一般性的独立支持；热力学对应重述持续的结构需要通量（Schrödinger 1944；Prigogine 1977）与 Landauer 的下界，其计数（在不合并的律中部分的合并由其余部分承接）就是 Landauer 自己的论证（1961；Bennett 2003；Ladyman、Presnell、Short 与 Groisman 2007），而物理给出的每种最小损失（合并、有限时间、精度、有限热库）都是随机热力学中带有自身前提的定理（[最小损失的检查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#least-loss-check)）；调节重述无差拍控制、有延迟的扰动抑制（Dahleh and Pearson 1987）与必要多样性（Ashby 1956）；选择项是 Price（1970）的；余量之内的自身扩大（§7.2）是在区域上分开的余量之律，对守恒的量回答了寻求权力定理（Turner 等 2021）意义上的保留选项何时关闭他者的选项，常和博弈中的权力稀缺（Turner and Stavrianos 2021）是没有余量的情形，福利经济学中有余量才有帕累托改进是其类比；一个体制的余量（§2.3）是以整数陈述的、减损性下的收获与被收获平衡的折叠（Clark 1976；May 1977），更新为凹时联合汲取的损害超可加，即凹更新之逆的凸性；`Web.break_not_bounded` 成立是因为按假设存量不被观察，存量被观察之处断裂可以预先看到（§3.4）；经规则的捕获与闭合的回路（§4.5，T7）是对合并整体之读取下的可观测性，读者在受控对象之内（Wakaiki、Tabuada 与 Hespanha 2019）、被污染的奖励通道（Everitt 等 2017）与闭环可辨识性（Borkar 与 Varaiya 1979），`ClosedCapture.Unread` 恰是单独读一部分之律（`ClosedCapture.identifiesAlike_iff_unread`）；被其所选塑造的读取既不比对读取的有界外来攻击更难，也不受其界限，因为决定者是读取所归并的（[观测检查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#endogenous-observation-check)）。
 
 **留下什么。** 三样，都不是发现：前提账及其见证与校准（方法上的；§0、§8.6）；范围与次序分开的伦理，其中普遍化的一步是 Gewirth 的，C 是机会集文献的单调性（§6.4–§6.5）；以及一套词汇，守恒的记账、受观察限制的选择与机会集的比较在其中一起陈述。会改变这些裁定的是：专家不能从定义预见的定理，对实际系统的、可能失败而未失败的预测，或从比文献已有者更弱的东西推出一个前提。
 
@@ -934,7 +935,7 @@
 
 *主张。* 选择的规则以及规则怎样被读，都由其所选的份额形成之处，这一回路是份额的一条律：它不读取的损失改变不了它所做的任何事，所以它活得比越过一切界的损失更久；对该损失的证据只有进入规则所读者才能使它转向。这样被劫持的度量只在对损失的读取改变规则之处被放弃（份额之外的读者、进入份额的损失、新的读法），从不只因证据累积。
 
-- *地位。* 在模型中已证（`ClosedCapture.unread_course`、`ClosedCapture.lock_outlives_loss`、`ClosedCapture.turned_by_loss`、`ClosedCapture.readers_uniform_locks`、`RuleCapture.uniform_locks`）。实际的度量由其所选份额形成，是猜想。近邻：Goodhart（1975）与 Campbell（1979）；自我确认均衡（Fudenberg 与 Levine 1993）；表现性稳定（Perdomo 等 2020）；路径依赖（Arthur 1989）。
+- *地位。* 在模型中已证（`ClosedCapture.unread_course`、`ClosedCapture.lock_outlives_loss`、`ClosedCapture.turned_by_loss`、`ClosedCapture.readers_uniform_locks`、`RuleCapture.uniform_locks`）。其前一半就是同一条归并之律，它也决定学习者能辨识什么、选择能达到什么：回路不读的损失不改变它所做的任何事，恰在份额与规则自身成立之时（`ClosedCapture.identifiesAlike_iff_unread`、`ClosedCapture.courses_alike_iff_unread`）；在进程之内形成的读者是对进程的一种读取，没有外在的读者。实际的度量由其所选份额形成，是猜想。近邻：Goodhart（1975）与 Campbell（1979）；监督控制中的可观测性，读者在受控对象之内时是对合并整体的读取（Wakaiki、Tabuada 与 Hespanha 2019，定理 4.1）；被污染的奖励通道，一致的污染与没有污染无法区分，而回路不形成的读取是出路（Everitt、Krakovna、Orseau 与 Legg 2017，定理 11 与 19）；闭环可辨识性（Borkar 与 Varaiya 1979）；自我确认均衡（Fudenberg 与 Levine 1993）；表现性稳定（Perdomo 等 2020）；路径依赖（Arthur 1989）（[观测检查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#endogenous-observation-check)）。
 - *禁止。* 由其所选者设定与读取的度量，在读者与所读都未改变时，被他们因其损失的证据而放弃；只改读法而规则仍偏向同一份额的改革，持续到下一次读取之后。
 - *驳倒它的观察。* 机构度量（科学评价、基准排行榜、临床目标、国民账户）的改革中，度量自己的选择者因证据累积放弃它，既无外部读者，也无损失进入其份额。
 - *至今的证据。* 尚无冻结的检验；检验需要在读案例之前固定改革事件的编码。
@@ -1027,17 +1028,17 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261021T124304.830826Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 308 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#308-one-rest-theorem-over-any-amounts-exactly-where-the-total-stops-falling-lc3)）。
+**当前回执**是运行 [`20261021T130926.237994Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T130926.237994Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 310 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#310-one-reader-several-conditions-keeping-is-reading-within-the-window-and-what-one-reader-can-keep-rs1)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Bec| 核心模块（含根 `Becoming`） | 284 个模块，12,067 条定理 |
+| 核心模块（含根 `Bec| 核心模块（含根 `Becoming`） | 285 个模块，12,137 条定理 |
 | 实例模块 | 7 个模块，567 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 300 个模块，12,887 条定理 |
-| 审计的脊柱声明 | 17,575 |
-| 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 199 条 |
+| 闭包（核心、环与根基） | 301 个模块，12,957 条定理 |
+| 审计的脊柱声明 | 17,666 |
+| 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 201 条 |
 | 被取代的外围模块（不在运行中，字节保留） | 75 |
 **完整情节比较。** 冻结的回执 `20261013T204910.042715Z` 检查 `Becoming.RepairComparison` 的 36 条定理，公理报告为空；完整情节匹配的规范充分性仍是明确的假设，实际内容的对应尚待建立；F3 清扫之后 `Becoming.MatchedCourses` 以核心的名称陈述其历程（见[英文版 §9](THE-THEORY-OF-BECOMING.md#complete-episode-comparison-anchors)）。
 

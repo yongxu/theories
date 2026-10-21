@@ -13729,3 +13729,93 @@ Not done:
 - the other laws of flows, webs and worlds over any amounts;
 - a least loss in energy;
 - a constructive equivalence of rest over every world with an amounts property.
+
+## 309. Capture read as the part that makes sense alone (LU1)
+
+```text
+Result(s): no new record; closed-capture extended (new laws of Becoming.ClosedCapture); reuses the-split-that-makes-sense
+       (Law.now_identifiesAlike_iff_goAlike, Law.sameFuture_of_goAlike, Law.part_identifiesAlike_iff_step),
+       generalization-through-lumping (Learning.goAlike_iff_lumped), how-fast-a-rule-may-change (Pace.step,
+       Pace.paced_run).
+Delta: ClosedCapture.Unread, neither the next share nor the rule read reading what lies beyond the share, is exactly
+       the spine's law of a part read alone on the two-level step: what the loop reads (share, rule and step count,
+       ClosedCapture.loopPart) goes alike under the step where Unread holds (goAlike_of_unread), it makes sense by
+       itself along every schedule exactly then (identifiesAlike_iff_unread), and courses from starts alike in share
+       and rule stay alike along every schedule exactly then (courses_alike_iff_unread). unread_course is derived from
+       Law.sameFuture_of_goAlike read along the course, its direct induction removed, its statement unchanged
+       (board rule 9).
+Premises / correspondence: none beyond what each theorem names; discrete steps and a schedule of reading steps, as in
+       Pace. Correspondence: observability in supervisory control with the reader inside the plant, a reading of the
+       joined whole (Wakaiki, Tabuada and Hespanha 2019, Theorem 4.1); the corrupted reward channel (Everitt,
+       Krakovna, Orseau and Legg 2017, Theorems 11 and 19); closed-loop identifiability (Borkar and Varaiya 1979).
+Evidence: core receipt 20261021T125537.657165Z (passed); the prior forms read for the observation check (significance review),
+       Borkar and Varaiya by abstract only.
+Boundary: join_course (the joined law runs as the share's law alone) keeps its direct proof: it is a reduced law
+       commuting with the step, which the identification laws do not state for orbits; the readings' part
+       (readers_uniform_locks and the rest) is unchanged; nothing new about which loops are closed in fact.
+Output → input: record closed-capture (a new law, the lumping law's place); chapter section 9 (ClosedCapture's
+       bullet), T7's standing and the relation to known results (EN, ZH); the significance review's observation check.
+```
+
+**The question.** The observation check ([significance review](BECOMING-SIGNIFICANCE-REVIEW.md#endogenous-observation-check)) found every capture law a correspondence: a reading shaped by what it selects is, in supervisory control, a fixed reading of the joined whole, the reader inside the plant, and the supervisor's laws apply to it unchanged. The question left for the spine was whether its own capture laws are a separate law there, or the law it already has for what a reading can tell apart.
+
+**What was built** (new laws of `Becoming.ClosedCapture`, pure core, every axiom report empty).
+
+- *What the loop reads.* `loopPart` reads, of a configuration of `Pace.step`, the share, the rule and the step count, leaving out what lies beyond the share.
+- *The step goes alike by it.* Where `Unread` holds, the two-level step goes alike by what the loop reads, under every schedule (`goAlike_of_unread`, through `Learning.goAlike_iff_lumped`).
+- *Exactly the part law.* What the loop reads makes sense by itself along every schedule (`IdentifiesAlike` of `Becoming.Unfolding` for the step framed by it) exactly where `Unread` holds (`identifiesAlike_iff_unread`): `Law.now_identifiesAlike_iff_goAlike` on the two-level step, the case of `Law.part_identifiesAlike_iff_step` in which the part is what the loop reads. The converse reads one step from two starts alike in share and rule under the schedule that reads at every step.
+- *On courses.* Courses from starts alike in share and rule stay alike along every schedule exactly where `Unread` holds (`courses_alike_iff_unread`). `unread_course` is now `Law.sameFuture_of_goAlike` read along the course through `Pace.paced_run`; its direct induction, beside the general law, is gone (board rule 9), its statement unchanged; `reads_beyond_of_apart` and `join_alike` follow from it as before.
+
+**Against the prior form.** The observation check's reduction, point 1, says that a known endogenous alteration of what a supervisor reads is a fixed reading of the joined plant, and that the existence condition is observability for the relation it induces. On the spine the counterpart is now a theorem: the capture loop's `Unread` is the law of a part read alone, the same law that settles what a learner can identify (`Learning.goAlike_iff_lumped`) and what a selection through couplings reaches (`Web.selects_alike_iff`). Nothing here is new mathematics: that a projection carries a law exactly where its fibres go alike is lumpability (Kemeny and Snell 1960), and its use for observation is observability.
+
+*Reading* [AI reading, D45]. A reader formed within the run is a reading of the run. Nothing in the capture laws supposes that what reads stands outside what it reads; what a loop can tell apart, and so what it can turn on, is settled by the one law of lumping, whether the reader is a learner, a selection or the rule a share sets. T7's first half is that law, and its second half (`lock_outlives_loss`, `turned_by_loss`) what the lock does under it.
+
+**Self-review.** The claim on the board said `join_course` would also be derived. It was not: it says the joined law, read by what the loop reads, is the share's own law, a reduced law commuting with the step, and the spine states commuting reduced laws for words (`Readout.foldl_semiconj`), not for the orbits of `Law.run`; deriving it would need an orbit form of that law, which is a separate item. `goAlike_of_unread` needs the step count in what the loop reads, because the schedule reads it; the equivalence quantifies over every schedule, and the converse uses only the schedule that reads at every step.
+
+**The run.** Core 284 modules and 12,070 theorems, instances 7 and 567, applications 6 and 179; 11 Lean steps ran, 1,189 reused. 4 declarations added to Becoming.ClosedCapture, 3 of them theorems (39 declarations before, 43 now), none removed, all with empty axiom reports. Connectivity: 647 of 12,816 apart, unchanged; the new laws are stated on the base (`Law.process`, `Law.frameBy`), none apart; register check passes.
+
+## 310. One reader, several conditions: keeping is reading within the window, and what one reader can keep (RS1)
+
+```text
+Result(s): a schedule keeps a condition within its margin against every balanced flow's draws withdrawn
+       ell steps after a reading exactly where it reads the condition within its window, for
+       (a + ell) d <= m < (a + 1 + ell) d (Becoming.ReadingSchedule: ReadingSchedule.keeps_iff_within,
+       from Flow.Balances.retains_of_read and the witness ReadingSchedule.within_of_keeps; in a given flow
+       a stretch left unread loses what lies beyond the margin, Flow.Balances.loses_of_unread); the
+       windows' counts q c with q c a c <= P total at most P (ReadingSchedule.density, keeps_density;
+       a pool naming k a step, pool_density); windows 2, 3 and any M are never read together, though
+       for M >= 7 the reader is idle a share 1/6 - 1/M (no_two_three, two_three_room,
+       spare_not_enough); windows with reciprocals summing to at most one half are read by one
+       schedule and kept (kraft_reads, half_suffices, keeps_of_half); record one-reader-several-conditions.
+Delta: the oversight check (significance review, oversight-check) found the oversight theorem known as
+       supervisory control under partial observation and delay, and left the reader's capacity open;
+       Regulation read one condition at a time. This states which sets of conditions one reader,
+       reading one a step, can keep, exactly where a law holds and with the known threshold cited.
+Premises: balance; a part drawing on one condition, at most d a step, from a start until ell steps
+       after a step at or after the start that reads the condition; the levels without the part
+       exceeding the need by the margin. For counting, conditions distinct by their names; for the
+       half theorem, positive windows and whole weights 2^(D+1) <= q c a c totalling at most 2^D.
+Evidence: core receipt 20261021T130926.237994Z (passed; Becoming.ReadingSchedule 67 theorems in 87
+       declarations, every axiom report empty; core 285 modules and 12,137 theorems, instances 7 and 567, applications 6 and 179; 11 Lean steps ran, 1,193 reused); the connectivity rerun (647 of 12,883 apart, 0 of the module's 67; register check passes);
+       render, check, links and tests.
+Boundary: natural-number amounts, discrete steps; one reading a step (k for a pool); the withdrawal a
+       fixed ell steps after a reading; the draw bounded a step and on one condition per drawer for
+       keeping (several at once by retains_of_read). Rounding windows to powers of two loses up to half
+       the reader; between one half and five sixths nothing is proved here, and the five-sixths
+       threshold (Kawamura 2024) is cited, not proved. Concentrated attacks (one act that must be
+       caught) and random auditing are not modelled.
+Output → input: oversight capacity is a pinwheel density: the margin law gives each condition its
+       window, lateness shortens every window by one, and a reader's attention keeps a set of
+       conditions only where the windows can be interleaved, which summed rates do not decide.
+```
+
+The kit is [`development/rs1-reading-schedule/`](development/rs1-reading-schedule/): the module's source (`tree/`), its join to the package (`integrate.py`), this landing's text (`apply_text.py`, `study_rs1.txt`, `review_section.txt`) and record (`make_record.py`), and the checker and connectivity logs.
+
+- **Keeping is reading within the window.** `Keeps s name c ℓ d m` quantifies over every balanced flow and every part drawing on `c` alone, at most `d` a step, from any start `T` until `ℓ` steps after a step at or after `T` at which the schedule reads `c`'s name: the part retains what has significance without it wherever the levels without it exceed the need by `m`. Sufficiency is the margin law: such a part takes at most `(a + ℓ) d` up to any step where the schedule reads `c` within `a` (`Flow.taken_of_read`, through `total_of_stretch`), so `Flow.Balances.retains_iff_within_margin` gives retention (`Flow.Balances.retains_of_read`, for several conditions at once; `keeps_of_within` is its one-condition case). Necessity is a witness: where `c` is unread for `a` steps from `T`, the flow `Drawer.flow` takes `d` from `c` at each of the `a + 1 + ℓ` steps from `T`, the web `Drawer.web` starts every condition at `(a + 1 + ℓ) d + m` and requires `c` at need `(a + 1 + ℓ) d` of one formation, balances (`Drawer.balances`), and leaves `c` at `m` after the stretch (`Drawer.take_total_end`), so the formation is lost and the schedule does not keep `c` (`within_of_keeps`). With equality decided, a stretch either reads `c` or leaves it unread (`read_or_unread`, `within_iff`), so the contrapositive needs no omniscience.
+- **Counting.** A pool reading the lists `r t` names each condition at least `n` times over `n a` steps (`PoolWithin.count`); exchanging the order of the two totals (`total_swap`) and counting each step's list once per distinct name (`total_is_le_one`) gives `pool_density`; one reader is the pool of one (`Within.pool`, `density`).
+- **The gap.** `no_two_three`: a reading of the third condition at a step `j + 1` has readings of the first at `j` and `j + 2` (windows of 2), so the window of 3 from `j` holds no reading of the second. `two_three_room` gives the counts over `6 M` steps, `3 M + 2 M + 6 < 6 M` for `M ≥ 7`; `spare_not_enough` states both on the base.
+- **Half a reader.** `weave` interleaves two schedules, the first at even steps (`weave_even`, `weave_odd`), each read within twice its window (`weave_left`, `weave_right`, through `halves`). A `Code` is a binary tree of conditions read by weaving its branches; a condition at depth `k` is read within `2 ^ k` (`Code.At.reads`). `build` places items of depth at most `D` from the deepest level up: the leaves at depth zero, and the codes for the deeper items paired (`pair`, an odd one with an idle branch) one level down; `build_length` bounds the count of built codes by the items' Kraft weight, so under Kraft's inequality one code is left (`first_of_short`), and `build_holds` places every item no deeper than its depth. `lg` (by `climb`) is the floor of the binary logarithm with `2 ^ lg a ≤ a < 2 ^ (lg a + 1)`, so rounding a window down to a power of two at most doubles its weight (`weight_le`), and `half_suffices` follows; `keeps_of_half` joins it to keeping.
+- **Purity.** Four core lemmas carry axioms (`Nat.lt_of_mul_lt_mul_right` choice, `Nat.add_mul` and `Nat.mul_assoc` `propext`); the module uses its own `lt_of_mul_lt_mul` and the prelude's `add_mul_split` and `mul_assoc_nat`. Every declaration has an empty axiom report.
+- **Connectivity and naming.** The pure scheduling laws are used by the base theorems (`keeps_density`, `spare_not_enough`, `keeps_of_half`), so none is apart.
+
+**Self-review.** The keeping predicate quantifies over every balanced flow, which is what makes the iff exact: a given flow may be kept by a schedule that reads less, and `loses_of_unread` is the law for a given flow. The draw is diffuse: a bounded amount a step, caught by any reading within the window. A concentrated act, caught only if that very act is read, is the case random auditing in AI control is built for, and it is not modelled. The windows are integers derived from the margin, draw bound and lateness; the derivation is the margin law, near-definitional. The scheduling content is pinwheel scheduling from 1989, restated, with the one-half theorem proved constructively through a Kraft code; the exact threshold is Kawamura's, cited. What the module adds is the correspondence and the exact base form, not a theorem a scheduling specialist would not foresee.

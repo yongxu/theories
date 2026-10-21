@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/musing-lederberg-1b8044/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rs1-reading-schedule/tree",
+  "modules": 35,
+  "ran": [
+    "Becoming.ReadingSchedule",
+    "BecomingReadingScheduleAxiomAudit"
+  ],
+  "reused": 34,
+  "unclean": [],
+  "audits": {
+    "Becoming.ReadingSchedule": {
+      "theorems": 67,
+      "declarations": 87,
+      "with_axioms": {}
+    }
+  }
+}

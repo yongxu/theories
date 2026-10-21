@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/suspicious-montalcini-73d09e/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/lu1-one-lumping/tree",
+  "modules": 300,
+  "ran": [
+    "Becoming",
+    "BecomingAxiomAudit"
+  ],
+  "reused": 299,
+  "unclean": [],
+  "audits": {
+    "Becoming": {
+      "theorems": 0,
+      "declarations": 0,
+      "with_axioms": {}
+    }
+  }
+}

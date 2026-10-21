@@ -1,0 +1,43 @@
+## {N}. Capture read as the part that makes sense alone (LU1)
+
+```text
+Result(s): no new record; closed-capture extended (new laws of Becoming.ClosedCapture); reuses the-split-that-makes-sense
+       (Law.now_identifiesAlike_iff_goAlike, Law.sameFuture_of_goAlike, Law.part_identifiesAlike_iff_step),
+       generalization-through-lumping (Learning.goAlike_iff_lumped), how-fast-a-rule-may-change (Pace.step,
+       Pace.paced_run).
+Delta: ClosedCapture.Unread, neither the next share nor the rule read reading what lies beyond the share, is exactly
+       the spine's law of a part read alone on the two-level step: what the loop reads (share, rule and step count,
+       ClosedCapture.loopPart) goes alike under the step where Unread holds (goAlike_of_unread), it makes sense by
+       itself along every schedule exactly then (identifiesAlike_iff_unread), and courses from starts alike in share
+       and rule stay alike along every schedule exactly then (courses_alike_iff_unread). unread_course is derived from
+       Law.sameFuture_of_goAlike read along the course, its direct induction removed, its statement unchanged
+       (board rule 9).
+Premises / correspondence: none beyond what each theorem names; discrete steps and a schedule of reading steps, as in
+       Pace. Correspondence: observability in supervisory control with the reader inside the plant, a reading of the
+       joined whole (Wakaiki, Tabuada and Hespanha 2019, Theorem 4.1); the corrupted reward channel (Everitt,
+       Krakovna, Orseau and Legg 2017, Theorems 11 and 19); closed-loop identifiability (Borkar and Varaiya 1979).
+Evidence: core receipt {RECEIPT} (passed); the prior forms read for the observation check (significance review),
+       Borkar and Varaiya by abstract only.
+Boundary: join_course (the joined law runs as the share's law alone) keeps its direct proof: it is a reduced law
+       commuting with the step, which the identification laws do not state for orbits; the readings' part
+       (readers_uniform_locks and the rest) is unchanged; nothing new about which loops are closed in fact.
+Output → input: record closed-capture (a new law, the lumping law's place); chapter section 9 (ClosedCapture's
+       bullet), T7's standing and the relation to known results (EN, ZH); the significance review's observation check.
+```
+
+**The question.** The observation check ([significance review](BECOMING-SIGNIFICANCE-REVIEW.md#endogenous-observation-check)) found every capture law a correspondence: a reading shaped by what it selects is, in supervisory control, a fixed reading of the joined whole, the reader inside the plant, and the supervisor's laws apply to it unchanged. The question left for the spine was whether its own capture laws are a separate law there, or the law it already has for what a reading can tell apart.
+
+**What was built** (new laws of `Becoming.ClosedCapture`, pure core, every axiom report empty).
+
+- *What the loop reads.* `loopPart` reads, of a configuration of `Pace.step`, the share, the rule and the step count, leaving out what lies beyond the share.
+- *The step goes alike by it.* Where `Unread` holds, the two-level step goes alike by what the loop reads, under every schedule (`goAlike_of_unread`, through `Learning.goAlike_iff_lumped`).
+- *Exactly the part law.* What the loop reads makes sense by itself along every schedule (`IdentifiesAlike` of `Becoming.Unfolding` for the step framed by it) exactly where `Unread` holds (`identifiesAlike_iff_unread`): `Law.now_identifiesAlike_iff_goAlike` on the two-level step, the case of `Law.part_identifiesAlike_iff_step` in which the part is what the loop reads. The converse reads one step from two starts alike in share and rule under the schedule that reads at every step.
+- *On courses.* Courses from starts alike in share and rule stay alike along every schedule exactly where `Unread` holds (`courses_alike_iff_unread`). `unread_course` is now `Law.sameFuture_of_goAlike` read along the course through `Pace.paced_run`; its direct induction, beside the general law, is gone (board rule 9), its statement unchanged; `reads_beyond_of_apart` and `join_alike` follow from it as before.
+
+**Against the prior form.** The observation check's reduction, point 1, says that a known endogenous alteration of what a supervisor reads is a fixed reading of the joined plant, and that the existence condition is observability for the relation it induces. On the spine the counterpart is now a theorem: the capture loop's `Unread` is the law of a part read alone, the same law that settles what a learner can identify (`Learning.goAlike_iff_lumped`) and what a selection through couplings reaches (`Web.selects_alike_iff`). Nothing here is new mathematics: that a projection carries a law exactly where its fibres go alike is lumpability (Kemeny and Snell 1960), and its use for observation is observability.
+
+*Reading* [AI reading, D45]. A reader formed within the run is a reading of the run. Nothing in the capture laws supposes that what reads stands outside what it reads; what a loop can tell apart, and so what it can turn on, is settled by the one law of lumping, whether the reader is a learner, a selection or the rule a share sets. T7's first half is that law, and its second half (`lock_outlives_loss`, `turned_by_loss`) what the lock does under it.
+
+**Self-review.** The claim on the board said `join_course` would also be derived. It was not: it says the joined law, read by what the loop reads, is the share's own law, a reduced law commuting with the step, and the spine states commuting reduced laws for words (`Readout.foldl_semiconj`), not for the orbits of `Law.run`; deriving it would need an orbit form of that law, which is a separate item. `goAlike_of_unread` needs the step count in what the loop reads, because the schedule reads it; the equivalence quantifies over every schedule, and the converse uses only the schedule that reads at every step.
+
+**The run.** {RUN}

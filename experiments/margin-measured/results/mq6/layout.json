@@ -1,0 +1,476 @@
+{
+ "files": {
+  "deterioration/all_DF.txt": {
+   "lines": 48,
+   "fields_per_line": {
+    "21": 48
+   }
+  },
+  "deterioration/all_DF_control.txt": {
+   "lines": 48,
+   "fields_per_line": {
+    "21": 48
+   }
+  },
+  "deterioration/all_SUC.txt": {
+   "lines": 48,
+   "fields_per_line": {
+    "21": 48
+   }
+  },
+  "deterioration/subset_DF.txt": {
+   "lines": 20,
+   "fields_per_line": {
+    "21": 20
+   }
+  },
+  "deterioration/subset_DF_control.txt": {
+   "lines": 20,
+   "fields_per_line": {
+    "21": 20
+   }
+  },
+  "deterioration/subset_SUC.txt": {
+   "lines": 20,
+   "fields_per_line": {
+    "25": 20
+   }
+  },
+  "SUCindicator/all_SUC1.txt": {
+   "lines": 64,
+   "fields_per_line": {
+    "5": 64
+   }
+  },
+  "SUCindicator/all_SUC2.txt": {
+   "lines": 56,
+   "fields_per_line": {
+    "5": 56
+   }
+  },
+  "SUCindicator/all_SUC3.txt": {
+   "lines": 56,
+   "fields_per_line": {
+    "5": 56
+   }
+  },
+  "SUCindicator/all_SUC4.txt": {
+   "lines": 48,
+   "fields_per_line": {
+    "5": 48
+   }
+  },
+  "SUCindicator/all_SUC5.txt": {
+   "lines": 48,
+   "fields_per_line": {
+    "5": 48
+   }
+  },
+  "SUCindicator/all_SUC6.txt": {
+   "lines": 48,
+   "fields_per_line": {
+    "5": 48
+   }
+  },
+  "SUCindicator/all_SUC7.txt": {
+   "lines": 40,
+   "fields_per_line": {
+    "5": 40
+   }
+  },
+  "SUCindicator/all_SUC8.txt": {
+   "lines": 32,
+   "fields_per_line": {
+    "5": 32
+   }
+  },
+  "SUCindicator/all_SUC9.txt": {
+   "lines": 24,
+   "fields_per_line": {
+    "5": 24
+   }
+  },
+  "SUCindicator/subset_SUC1.txt": {
+   "lines": 53,
+   "fields_per_line": {
+    "5": 53
+   }
+  },
+  "SUCindicator/subset_SUC2.txt": {
+   "lines": 47,
+   "fields_per_line": {
+    "5": 47
+   }
+  },
+  "SUCindicator/subset_SUC3.txt": {
+   "lines": 44,
+   "fields_per_line": {
+    "5": 44
+   }
+  },
+  "SUCindicator/subset_SUC4.txt": {
+   "lines": 32,
+   "fields_per_line": {
+    "5": 32
+   }
+  },
+  "SUCindicator/subset_SUC5.txt": {
+   "lines": 41,
+   "fields_per_line": {
+    "5": 41
+   }
+  },
+  "SUCindicator/subset_SUC6.txt": {
+   "lines": 30,
+   "fields_per_line": {
+    "5": 30
+   }
+  },
+  "SUCindicator/subset_SUC7.txt": {
+   "lines": 32,
+   "fields_per_line": {
+    "5": 32
+   }
+  },
+  "SUCindicator/subset_SUC8.txt": {
+   "lines": 27,
+   "fields_per_line": {
+    "5": 27
+   }
+  },
+  "SUCindicator/subset_SUC9.txt": {
+   "lines": 21,
+   "fields_per_line": {
+    "5": 21
+   }
+  },
+  "SUCbifurcation/sucrose1_day1.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose1_day2.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose1_day3.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose1_day4.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose1_day5.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose1_day6.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose2_day1.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose2_day2.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose2_day3.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose2_day4.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose2_day5.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose2_day6.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose3_day1.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose3_day2.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose3_day3.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose3_day4.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose3_day5.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose3_day6.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose4_day1.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose4_day2.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose4_day3.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose4_day4.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose4_day5.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose4_day6.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose5_day1.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose5_day2.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose5_day3.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose5_day4.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose5_day5.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose5_day6.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose6_day1.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose6_day2.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose6_day3.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose6_day4.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose6_day5.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose6_day6.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose7_day1.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose7_day2.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose7_day3.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose7_day4.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose7_day5.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose7_day6.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose8_day1.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose8_day2.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose8_day3.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose8_day4.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose8_day5.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose8_day6.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose9_day1.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose9_day2.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose9_day3.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose9_day4.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose9_day5.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  },
+  "SUCbifurcation/sucrose9_day6.txt": {
+   "lines": 8,
+   "fields_per_line": {
+    "11": 8
+   }
+  }
+ },
+ "token_styles_all_files": {
+  "scientific": 12831
+ },
+ "scope": "layout only; no value printed"
+}

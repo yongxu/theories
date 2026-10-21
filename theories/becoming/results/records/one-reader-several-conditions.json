@@ -1,0 +1,347 @@
+{
+  "schema_version": 2,
+  "id": "one-reader-several-conditions",
+  "title": {
+    "en": "One reader, several conditions",
+    "zh": "一个读者，多个条件"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T13:11:37+00:00",
+  "statement": {
+    "en": "A schedule keeps a condition within its margin exactly where it reads it within its window; one reader carries windows whose reciprocals sum to at most one; below one need not suffice (windows 2, 3, M); one half suffices, by a dyadic code.",
+    "zh": "日程恰在窗口内读到一个条件时才使它保持在余量之内；一个读者承载的窗口倒数之和至多为一；低于一未必足够（窗口 2、3、M）；二分之一足够，由二进码构成。"
+  },
+  "laws": [
+    {
+      "en": "A schedule keeps a condition within the margin m, against every balanced flow's draws on it of at most d a step withdrawn l steps after a reading, exactly where it reads the condition within every a steps, for (a + l) d <= m < (a + 1 + l) d: sufficiency is the margin law, necessity a witness drawer.",
+      "zh": "日程恰在每 a 步内读到一个条件时，才使它在余量 m 之内，抵御每个平衡流中每步至多 d、读到后 l 步撤回的汲取，其中 (a + l) d <= m < (a + 1 + l) d：充分性是余量定律，必要性由一个见证汲取者给出。",
+      "declarations": [
+        "Becoming.ReadingSchedule.Keeps",
+        "Becoming.ReadingSchedule.keeps_iff_within",
+        "Becoming.ReadingSchedule.keeps_of_within",
+        "Becoming.ReadingSchedule.within_of_keeps",
+        "Becoming.Flow.taken_of_read",
+        "Becoming.Flow.Balances.retains_of_read",
+        "Becoming.ReadingSchedule.within_iff",
+        "Becoming.ReadingSchedule.read_or_unread"
+      ]
+    },
+    {
+      "en": "In a given balanced flow, a stretch of k steps left unread lets a drawer giving nothing take (k + 1 + l) d, and a formation needing more than the level without it then holds is lost.",
+      "zh": "在给定的平衡流中，未被读到的 k 步让一个不给予的汲取者取走 (k + 1 + l) d，所需超过其后无该汲取者时水平的构成即失去。",
+      "declarations": [
+        "Becoming.Flow.Balances.loses_of_unread"
+      ]
+    },
+    {
+      "en": "Counting: a schedule reading conditions distinct by name within windows a c gives counts q c with q c a c <= P totalling at most P; readers naming k a step carry P k. In rates, the windows' reciprocals sum to at most one (k for a pool).",
+      "zh": "计数：日程在窗口 a c 内读到按名相异的诸条件时，满足 q c a c <= P 的读数 q c 之和至多为 P；每步读 k 个的读者承载 P k。以速率言，窗口倒数之和至多为一（池为 k）。",
+      "declarations": [
+        "Becoming.ReadingSchedule.PoolWithin",
+        "Becoming.ReadingSchedule.pool_density",
+        "Becoming.ReadingSchedule.density",
+        "Becoming.ReadingSchedule.Within.pool",
+        "Becoming.ReadingSchedule.keeps_density"
+      ]
+    },
+    {
+      "en": "Spare capacity is not enough: no schedule reads three conditions within every 2, 3 and M steps, for any M, though for M >= 7 the counts over 6 M steps total 5 M + 6, the reader idle a share 1/6 - 1/M.",
+      "zh": "空闲不足以保持：没有日程能在每 2、3 与 M 步内分别读到三个条件，无论 M 为何；而当 M >= 7 时，6 M 步内的读数共 5 M + 6，读者有 1/6 - 1/M 的份额空闲。",
+      "declarations": [
+        "Becoming.ReadingSchedule.no_two_three",
+        "Becoming.ReadingSchedule.two_three_room",
+        "Becoming.ReadingSchedule.spare_not_enough"
+      ]
+    },
+    {
+      "en": "Half a reader suffices: two schedules interleaved read within twice their windows; a binary code reads a condition at depth k within 2^k; under Kraft's inequality one code reads every item; so windows with reciprocals summing to at most one half are read by one schedule and kept.",
+      "zh": "半个读者即足够：两个交织的日程在两倍窗口内读到；二进码在 2^k 步内读到深度 k 的条件；满足 Kraft 不等式时一个码读到每一项；所以窗口倒数之和至多为二分之一时，一个日程读到并保持全部。",
+      "declarations": [
+        "Becoming.ReadingSchedule.weave",
+        "Becoming.ReadingSchedule.weave_left",
+        "Becoming.ReadingSchedule.weave_right",
+        "Becoming.ReadingSchedule.Code.At.reads",
+        "Becoming.ReadingSchedule.build_length",
+        "Becoming.ReadingSchedule.build_holds",
+        "Becoming.ReadingSchedule.kraft_reads",
+        "Becoming.ReadingSchedule.lg_spec",
+        "Becoming.ReadingSchedule.half_suffices",
+        "Becoming.ReadingSchedule.keeps_of_half"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Balance; a part drawing on one condition at most d a step, from a start until l steps after a step at or after the start at which the schedule reads that condition (several conditions at once for retains_of_read); the levels without the part exceeding the need by the margin. For counting, conditions distinct by their names; for the half theorem, positive windows and whole weights 2^(D+1) <= q c a c totalling at most 2^D.",
+      "zh": "不加公理。平衡；部分每步至多从一个条件汲取 d，从起点直到日程在起点或之后读到该条件之步后的 l 步（retains_of_read 可同时多个条件）；无该部分时的水平超出需求达余量。计数需诸条件按名相异；半数定理需窗口为正，且整数权重 2^(D+1) <= q c a c 之和至多为 2^D。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "The density threshold: every set of windows whose reciprocals sum to at most five sixths can be read (Kawamura 2024, by computer search over finitely many cases) is cited, not proved; between one half and five sixths this record proves nothing.",
+      "zh": "密度阈值：窗口倒数之和至多为六分之五的每组窗口都可读到（Kawamura 2024，经对有限多情形的计算机搜索）只是引用，未证明；在二分之一与六分之五之间本记录不证明任何东西。",
+      "kind": "scope"
+    },
+    {
+      "en": "Concentrated acts, caught only if that very act is read, and random auditing against them, as in AI control: the draw here is diffuse, a bounded amount a step caught by any reading within the window.",
+      "zh": "集中的单次行为（只有恰好读到该行为才能发现）及针对它的随机审查，如 AI 控制中所做：这里的汲取是分散的，每步有界，窗口内任何一次读到都能发现。",
+      "kind": "scope"
+    },
+    {
+      "en": "That an actual overseer's conditions have known margins and draw bounds, or that its reading is one condition a step: the windows are derived from these premises, which are not measured here.",
+      "zh": "实际监督者的条件有已知余量与汲取上界，或其读取为每步一个条件：窗口由这些前提导出，这里未加测量。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a condition beyond the margin ought to be kept: the laws say what a reader can keep, not what it should.",
+      "zh": "超出余量的条件应当被保持：这些规律说的是读者能保持什么，不是应当保持什么。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean",
+      "detail": {
+        "en": "Windows 2, 3 and M for three conditions distinct by name: the counts fit with room for M >= 7, and no schedule reads the three (no_two_three, two_three_room): the counting bound is necessary, not sufficient. The witness drawer (Drawer.flow, Drawer.web): a stretch of a steps left unread loses the formation needing the condition, so a schedule that reads less than the window does not keep it.",
+        "zh": "按名相异的三个条件，窗口 2、3 与 M：M >= 7 时读数有余裕，却没有日程能读到这三个（no_two_three、two_three_room）：计数界是必要的，不是充分的。见证汲取者（Drawer.flow、Drawer.web）：未被读到的 a 步使需要该条件的构成失去，所以读得少于窗口的日程不保持它。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T130926.237994Z): the 87 declarations of Becoming.ReadingSchedule, 67 of them theorems, have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 310; prior art in the significance review (reading-schedule-check); not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T130926.237994Z）：Becoming.ReadingSchedule 的 87 项声明（67 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 310 节；先行文献见重要性审查（reading-schedule-check）；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "The density threshold between one half and five sixths on the spine; drawers whose draw a step varies with the level; concentrated acts and randomized reading; measured margins and draw bounds for an actual overseer; an independent review.",
+    "zh": "在脊柱上证明二分之一与六分之五之间的密度阈值；每步汲取随水平变化的汲取者；集中的单次行为与随机读取；实际监督者的余量与汲取上界的测量；独立审查。"
+  },
+  "correspondence": {
+    "en": "Pinwheel scheduling (Holte, Mok, Rosier, Tulchinsky and Varvel 1989), motivated by a ground station reading satellites one at a time: the counting bound, the instance 2, 3, M and the one-half theorem are known there, and the five-sixths threshold is Kawamura's (2024). Deterministic patrolling with penetration times is the same window condition with travel. Keeping as reading within the window is delay observability (Park and Cho 2007) for one counter with a threshold. Reading (the AI's): oversight capacity is a pinwheel density, and spare attention does not show that a set of conditions can be kept.",
+    "zh": "轮转调度（Holte、Mok、Rosier、Tulchinsky 与 Varvel 1989），源自一个地面站一次读一颗卫星：计数界、2、3、M 的情形与二分之一定理在那里已知，六分之五的阈值属于 Kawamura（2024）。带渗透时间的确定性巡逻是同一窗口条件加上移动。保持即在窗口内读到，是一个带阈值的计数器上的延迟可观测性（Park 与 Cho 2007）。读法（AI 的）：监督能力是轮转调度的密度，空闲的注意力不能表明一组条件可以被保持。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean",
+  "aliases": [
+    "one reader, several conditions",
+    "一个读者，多个条件",
+    "pinwheel scheduling as oversight",
+    "keeping is reading within the window",
+    "Becoming.ReadingSchedule.keeps_iff_within",
+    "Becoming.ReadingSchedule.spare_not_enough",
+    "Becoming.ReadingSchedule.keeps_of_half"
+  ],
+  "dependencies": [
+    {
+      "id": "significance-retained-within-margin",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Becoming.Retaining's margin law (Flow.Balances.retains_iff_within_margin, Flow.Balances.loses_iff_beyond_margin): retention exactly where a part's net draw stays within the margin.",
+        "zh": "复用 Becoming.Retaining 的余量定律（Flow.Balances.retains_iff_within_margin、Flow.Balances.loses_iff_beyond_margin）：恰在部分的净汲取不超出余量处保留。"
+      },
+      "interface": {
+        "output": {
+          "en": "Retention exactly within the margin, under balance.",
+          "zh": "平衡下恰在余量之内保留。"
+        },
+        "input": {
+          "en": "The window a reader must keep: the draw a withdrawal allows within the margin.",
+          "zh": "读者须保持的窗口：撤回所允许的、在余量之内的汲取。"
+        },
+        "conditions": {
+          "en": "Balance.",
+          "zh": "平衡。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean"
+      }
+    },
+    {
+      "id": "two-sided-regulation-and-late-reading",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses Becoming.Regulation's totals over stretches of steps (total_steps_le, total_steps_congr, total_steps_const); extends its one condition read at a time to one reader for several, its lateness shortening every window by one.",
+        "zh": "复用 Becoming.Regulation 中步段上的总和（total_steps_le、total_steps_congr、total_steps_const）；把其一次读一个条件推广为一个读者读多个，其延迟使每个窗口缩短一步。"
+      },
+      "interface": {
+        "output": {
+          "en": "A rule reading l late keeps no band narrower than 2 (l + 1) d.",
+          "zh": "迟读 l 步的规则保持不了窄于 2 (l + 1) d 的带。"
+        },
+        "input": {
+          "en": "The lateness l of a withdrawal after a reading.",
+          "zh": "读到后撤回的延迟 l。"
+        },
+        "conditions": {
+          "en": "Discrete steps, whole-number amounts.",
+          "zh": "离散步、整数量。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "two-sided-regulation-and-late-reading",
+      "detail": {
+        "en": "Regulation reads one condition at a time; here one reader reads several, one a step.",
+        "zh": "调节一次读一个条件；这里一个读者每步读一个，读多个。"
+      }
+    },
+    {
+      "id": "what-pooled-coupling-reaches",
+      "detail": {
+        "en": "A pool reaches the union of its members' closures; here a pool naming k conditions a step carries k times what one reader carries.",
+        "zh": "池触及其成员闭包的并；这里每步读 k 个条件的池承载一个读者的 k 倍。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.Balances.loses_of_unread",
+        "Becoming.Flow.Balances.retains_of_read",
+        "Becoming.Flow.taken_of_read",
+        "Becoming.ReadingSchedule.Code",
+        "Becoming.ReadingSchedule.Code.At",
+        "Becoming.ReadingSchedule.Code.At.reads",
+        "Becoming.ReadingSchedule.Code.reader",
+        "Becoming.ReadingSchedule.Drawer.balances",
+        "Becoming.ReadingSchedule.Drawer.flow",
+        "Becoming.ReadingSchedule.Drawer.partTaken_eq",
+        "Becoming.ReadingSchedule.Drawer.sub_add_of_le",
+        "Becoming.ReadingSchedule.Drawer.take_le",
+        "Becoming.ReadingSchedule.Drawer.take_total",
+        "Becoming.ReadingSchedule.Drawer.take_total_end",
+        "Becoming.ReadingSchedule.Drawer.web",
+        "Becoming.ReadingSchedule.Drawer.withheld",
+        "Becoming.ReadingSchedule.Keeps",
+        "Becoming.ReadingSchedule.PoolWithin",
+        "Becoming.ReadingSchedule.PoolWithin.count",
+        "Becoming.ReadingSchedule.Unread",
+        "Becoming.ReadingSchedule.Within",
+        "Becoming.ReadingSchedule.Within.mono",
+        "Becoming.ReadingSchedule.Within.pool",
+        "Becoming.ReadingSchedule.Within.unread_lt",
+        "Becoming.ReadingSchedule.build",
+        "Becoming.ReadingSchedule.build_holds",
+        "Becoming.ReadingSchedule.build_length",
+        "Becoming.ReadingSchedule.cap",
+        "Becoming.ReadingSchedule.cap_le",
+        "Becoming.ReadingSchedule.climb",
+        "Becoming.ReadingSchedule.climb_spec",
+        "Becoming.ReadingSchedule.deeper",
+        "Becoming.ReadingSchedule.deeper_mem",
+        "Becoming.ReadingSchedule.density",
+        "Becoming.ReadingSchedule.double_lt",
+        "Becoming.ReadingSchedule.even_add",
+        "Becoming.ReadingSchedule.first",
+        "Becoming.ReadingSchedule.first_of_short",
+        "Becoming.ReadingSchedule.half_suffices",
+        "Becoming.ReadingSchedule.halves",
+        "Becoming.ReadingSchedule.ite_le",
+        "Becoming.ReadingSchedule.keeps_density",
+        "Becoming.ReadingSchedule.keeps_iff_within",
+        "Becoming.ReadingSchedule.keeps_of_half",
+        "Becoming.ReadingSchedule.keeps_of_within",
+        "Becoming.ReadingSchedule.kraft_reads",
+        "Becoming.ReadingSchedule.leaves",
+        "Becoming.ReadingSchedule.leaves_length",
+        "Becoming.ReadingSchedule.leaves_mem",
+        "Becoming.ReadingSchedule.lg",
+        "Becoming.ReadingSchedule.lg_spec",
+        "Becoming.ReadingSchedule.lt_of_mul_lt_mul",
+        "Becoming.ReadingSchedule.lt_two_pow",
+        "Becoming.ReadingSchedule.mul_lt_mul_left'",
+        "Becoming.ReadingSchedule.no_two_three",
+        "Becoming.ReadingSchedule.odd_add",
+        "Becoming.ReadingSchedule.odd_add_odd",
+        "Becoming.ReadingSchedule.ofItems",
+        "Becoming.ReadingSchedule.one_le_times",
+        "Becoming.ReadingSchedule.one_le_total_steps",
+        "Becoming.ReadingSchedule.pair",
+        "Becoming.ReadingSchedule.pair_length",
+        "Becoming.ReadingSchedule.pair_lift",
+        "Becoming.ReadingSchedule.pool_density",
+        "Becoming.ReadingSchedule.read_or_unread",
+        "Becoming.ReadingSchedule.shift_le",
+        "Becoming.ReadingSchedule.shift_lt",
+        "Becoming.ReadingSchedule.spare_not_enough",
+        "Becoming.ReadingSchedule.times",
+        "Becoming.ReadingSchedule.total_is_le_one",
+        "Becoming.ReadingSchedule.total_le_of_inside",
+        "Becoming.ReadingSchedule.total_of_stretch",
+        "Becoming.ReadingSchedule.total_prefix_le",
+        "Becoming.ReadingSchedule.total_steps_ge",
+        "Becoming.ReadingSchedule.two_pow_le",
+        "Becoming.ReadingSchedule.two_pow_pos",
+        "Becoming.ReadingSchedule.two_three_room",
+        "Becoming.ReadingSchedule.weave",
+        "Becoming.ReadingSchedule.weave_even",
+        "Becoming.ReadingSchedule.weave_left",
+        "Becoming.ReadingSchedule.weave_odd",
+        "Becoming.ReadingSchedule.weave_right",
+        "Becoming.ReadingSchedule.weight_le",
+        "Becoming.ReadingSchedule.weight_split",
+        "Becoming.ReadingSchedule.weight_zero",
+        "Becoming.ReadingSchedule.within_iff",
+        "Becoming.ReadingSchedule.within_of_keeps"
+      ],
+      "sha256": "4bcbf3509a156cbb279bdfaadecc956c1ec46842f89e5062ba3a24ac12938473"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
+      "role": "proof",
+      "sha256": "dd483a1fe58158c68d5cef175cee6c31de04a141590d66161cc9e9419168cf4b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regulation.lean",
+      "role": "proof",
+      "sha256": "4bff73082522e9f1c28d099beab8946494a5d3645d8a06145432ccfa19019716"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T130926.237994Z/verification.json",
+      "role": "receipt",
+      "sha256": "1ec01e6d79614d0a9b581de5fe5451112a4be9f9efa82965007600625ba6072e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "7aafef8949a2b21e13ada617758aa735866e665f6570d3696695649724bcffe1"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "review",
+      "sha256": "eb3a3540db7f0d1472108e2f763de764e2dac6095c68a11e16a6b936e7d0ef4b"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "ad0999ac3a25846928f9de8064fb351e4c18bdb30b2f8a5224cb7196f19f3a5d"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T130926.237994Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ReadingSchedule",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (RS1), after the oversight check left the reader's capacity open: keeping is reading within the window, and what one reader can keep; study section 310.",
+      "zh": "2026年10月21日：新增（RS1），监督检查留下读者容量的问题之后：保持即在窗口内读到，以及一个读者能保持什么；研究第 310 节。"
+    }
+  ]
+}

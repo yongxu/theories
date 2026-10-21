@@ -85,7 +85,7 @@ Answering Ren's “what is that "make sense" itself? what makes a pair, a pair?�
 - related, not a proved adapter: [generalization-through-lumping](generalization-through-lumping.md). Its goAlike_iff_lumped (on a deterministic law's process the steps go alike across a lumping exactly where lumped states step to lumped states) is the law this record cites.
 - related, not a proved adapter: [learning-by-refutation](learning-by-refutation.md). Its Lasso is two moments being one state (lasso_iff_sameAhead).
 
-**Used by:** [identification-where-bounded](identification-where-bounded.md) · [identification-where-runs-part](identification-where-runs-part.md) · [wisdom-root](wisdom-root.md) (interpretive)
+**Used by:** [closed-capture](closed-capture.md) · [identification-where-bounded](identification-where-bounded.md) · [identification-where-runs-part](identification-where-runs-part.md) · [wisdom-root](wisdom-root.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources

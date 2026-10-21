@@ -92,7 +92,7 @@ Every file of the study, by kind. The study's [overview](README.md) is the gener
 
 | Folder | Files |
 |---|---:|
-| `development/` | 1492 |
+| `development/` | 1537 |
 | `reason-action-evidence/` | 1 |
 | `twentieth-review/` | 39 |
 
