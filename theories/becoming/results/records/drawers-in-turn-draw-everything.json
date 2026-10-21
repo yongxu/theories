@@ -1,0 +1,238 @@
+{
+  "schema_version": 2,
+  "id": "drawers-in-turn-draw-everything",
+  "title": {
+    "en": "Drawers in turn draw everything",
+    "zh": "轮流的抽取者全部抽取"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T18:54:21+00:00",
+  "statement": {
+    "en": "With two drawers in turn, each ranking what it draws over the steps that remain, every profile at a mutual best response at every step from every level draws everything: the base stands from the first step at what stands at nothing.",
+    "zh": "两个抽取者轮流、各自按其后各步所抽取排序时，每步、从每个水平都处于相互最优回应的每个组合都全部抽取：自第一步起基础立于零处所立者。"
+  },
+  "laws": [
+    {
+      "en": "Two drawers in turn at each step, the first leaving part of the level and the second part of that, what remains standing at the next step by a law G; what each draws over the steps that remain, defined back from the horizon; a profile perfect where each leaves at most what it is given and the two are at a mutual best response at every step from every level.",
+      "zh": "每步两个抽取者轮流，第一个留下水平的一部分，第二个留下其中一部分，所余按律 G 立于下一步；各自在其后各步所抽取者，自视野回溯定义；每者所留至多为所给且每步、从每个水平都处于相互最优回应的组合为完美。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.next",
+        "Becoming.Optimum.InTurn.levels",
+        "Becoming.Optimum.InTurn.firstDrawn",
+        "Becoming.Optimum.InTurn.secondDrawn",
+        "Becoming.Optimum.InTurn.BestAt",
+        "Becoming.Optimum.InTurn.Perfect"
+      ]
+    },
+    {
+      "en": "Backward from the horizon: where the second draws nothing over the rest, a mutual best response has both leave nothing, whatever the first leaves the second drawing and whatever the second leaves the first drawing at its next move; so every perfect profile has both leave nothing at every step, whatever stands at nothing, and the base stands from the first step at what stands at nothing.",
+      "zh": "自视野回溯：第二个在其余各步不抽取时，相互最优回应使两者都不留，第一个所留第二个抽取，第二个所留第一个在下一次抽取；故每个完美组合每步都使两者不留，不论零处所立为何，自第一步起基础立于零处所立者。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.zero_of_le_sub",
+        "Becoming.Optimum.InTurn.step_ends",
+        "Becoming.Optimum.InTurn.ends_at",
+        "Becoming.Optimum.InTurn.perfect_ends",
+        "Becoming.Optimum.InTurn.perfect_levels"
+      ]
+    },
+    {
+      "en": "Drawing everything is perfect over every horizon.",
+      "zh": "全部抽取在每个视野上都是完美的。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.zero_secondDrawn",
+        "Becoming.Optimum.InTurn.perfect_of_zero"
+      ]
+    },
+    {
+      "en": "On a web, along every perfect profile a dependence on the base whose need, met at the start, is above what stands at nothing is broken at the first step.",
+      "zh": "在网上，沿每个完美组合，起始时被满足、所需高于零处所立者的对基础的依存在第一步被打破。",
+      "declarations": [
+        "Becoming.Web.perfect_broken"
+      ]
+    },
+    {
+      "en": "Witness: under a gate from the dweller's need two, alone the course holding the source at two is an optimum keeping the dweller through the horizon; in turn, drawing everything is perfect and every perfect profile breaks the dweller at the first step.",
+      "zh": "见证：门控下自居者所需二出发，单独时把源保持在二的进程是最优，在视野内保持居者；轮流时全部抽取是完美的，每个完美组合在第一步打破居者。",
+      "declarations": [
+        "Becoming.Optimum.Holding.gated_in_turn"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Any law G of what stands; two drawers in turn at each step, the first moving first, no capacity limiting a draw; each ranking the plain sum of its draws over the steps that remain; rules reading the step and the level; natural amounts, discrete steps.",
+      "zh": "不加公理。任一所立之律 G；每步两个抽取者轮流，第一个先抽，无容量限制抽取；各自按其后各步所抽取之和排序；规则读取步与水平；自然数量，离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Drawers whose capacities limit a draw, more than two drawers, or drawing at once with a rule of sharing.",
+      "zh": "抽取受容量限制的抽取者、多于两个抽取者，或按分享规则同时抽取。",
+      "kind": "scope"
+    },
+    {
+      "en": "How drawers come to a mutual best response; rules reading more than the step and the level.",
+      "zh": "抽取者如何达到相互最优回应；读取多于步与水平的规则。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the drain is a harm or restraint better: no evaluation enters; the laws say what perfect profiles do.",
+      "zh": "抽干是伤害或克制更好：没有评价进入；这些律只说完美组合做什么。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T184941.328469Z): the 15 declarations Becoming.Optimum gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 324; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T184941.328469Z）：Becoming.Optimum 新增的 15 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 324 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Capacities limiting a draw; more than two drawers or drawing at once; how drawers come to a mutual best response; an independent review.",
+    "zh": "容量限制抽取；多于两个抽取者或同时抽取；抽取者如何达到相互最优回应；独立审查。"
+  },
+  "correspondence": {
+    "en": "The dynamic commons with linear payoffs (Levhari and Mirman 1980): with no limit on a draw the subgame-perfect outcome is immediate exhaustion, here for every perfect profile of drawers in turn, by backward induction (Kuhn 1953; Selten 1965).",
+    "zh": "线性收益的动态公地（Levhari 与 Mirman 1980）：抽取无限制时子博弈完美的结果是立即耗尽，此处对轮流抽取者的每个完美组合成立，由逆向归纳（Kuhn 1953；Selten 1965）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "drawers in turn draw everything",
+    "the others' rule derived",
+    "轮流的抽取者全部抽取",
+    "Becoming.Optimum.InTurn.perfect_ends",
+    "Becoming.Web.perfect_broken"
+  ],
+  "dependencies": [
+    {
+      "id": "others-drawing-first-end-the-base",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The law of what stands and the others drawing first are reused; the rule supplied there is derived for two drawers in turn.",
+        "zh": "沿用所立之律与他者先抽取；该处给出的规则在两个轮流抽取者的情形被导出。"
+      },
+      "interface": {
+        "output": {
+          "en": "leftBy, frontier_ends_drawn_first.",
+          "zh": "leftBy、frontier_ends_drawn_first。"
+        },
+        "input": {
+          "en": "The others' rule as a best response.",
+          "zh": "作为最优回应的他者规则。"
+        },
+        "conditions": {
+          "en": "No capacity limiting a draw.",
+          "zh": "无容量限制抽取。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    },
+    {
+      "id": "horizon-optima-hold-the-greatest-renewal",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The optimum alone under the gate, keeping the dweller, is the contrast.",
+        "zh": "门控下单独的最优（保持居者）为对照。"
+      },
+      "interface": {
+        "output": {
+          "en": "gated_alike.",
+          "zh": "gated_alike。"
+        },
+        "input": {
+          "en": "The witness in turn.",
+          "zh": "轮流的见证。"
+        },
+        "conditions": {
+          "en": "The gate from the dweller's need.",
+          "zh": "自居者所需出发的门控。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "several-optimizers-drain-by-their-joint-capacity",
+      "detail": {
+        "en": "At one step several optimizers at a mutual best response drain by their joint capacity; here over courses.",
+        "zh": "在一步中处于相互最优回应的多个优化者以合计容量抽干；此处在过程上。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.Holding.gate",
+        "Becoming.Optimum.Holding.gated_alike",
+        "Becoming.Optimum.Holding.gated_in_turn",
+        "Becoming.Optimum.Holding.onSource",
+        "Becoming.Optimum.InTurn.BestAt",
+        "Becoming.Optimum.InTurn.Perfect",
+        "Becoming.Optimum.InTurn.ends_at",
+        "Becoming.Optimum.InTurn.firstDrawn",
+        "Becoming.Optimum.InTurn.levels",
+        "Becoming.Optimum.InTurn.next",
+        "Becoming.Optimum.InTurn.perfect_ends",
+        "Becoming.Optimum.InTurn.perfect_levels",
+        "Becoming.Optimum.InTurn.perfect_of_zero",
+        "Becoming.Optimum.InTurn.secondDrawn",
+        "Becoming.Optimum.InTurn.step_ends",
+        "Becoming.Optimum.InTurn.zero_of_le_sub",
+        "Becoming.Optimum.InTurn.zero_secondDrawn",
+        "Becoming.Optimum.Next.frontier_ends_drawn_first",
+        "Becoming.Optimum.Next.leftBy",
+        "Becoming.Optimum.OpenCourse",
+        "Becoming.Optimum.byDrawn",
+        "Becoming.Web.perfect_broken"
+      ],
+      "sha256": "52aa34b05946e465f5af5803238304ee7749c198c350a2ff9f91cb9ed6755f1f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json",
+      "role": "receipt",
+      "sha256": "271775d0167cb1a8468ba5cf6975c11ff145dc1d8868046d33a4f110e127b9ae"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "78b921bc2305b085e612fecec44788b4e99cf202662a5b7f1e63f25d4c9ea372"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "cb126f397e4159514912dcbace2cfce8a8af2f37e05b47f821f66bf62c5e1565"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "328a3b9bdc41a0427c38b346b02fd50ef66527f6cefa62221e3b82dc33df4eb5"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (SG14), drawers in turn, each ranking courses: every perfect profile draws everything, the base standing from the first step at what stands at nothing; study section 324.",
+      "zh": "2026年10月22日：新增（SG14），轮流的抽取者各自按过程排序：每个完美组合都全部抽取，自第一步起基础立于零处所立者；研究第 324 节。"
+    }
+  ]
+}

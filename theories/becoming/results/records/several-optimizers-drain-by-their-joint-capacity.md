@@ -64,6 +64,7 @@ The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the over
 - related, not a proved adapter: [room-read-off-the-exchange](room-read-off-the-exchange.md). Room read off one step for one optimizing part; this record states several at once.
 - related, not a proved adapter: [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md). Which dependence a joint draw breaks, with the flows supplied; here the draws of optimizers at a mutual best response are derived.
 - related, not a proved adapter: [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md). Mutual best responses at every step of a course against a renewal.
+- related, not a proved adapter: [drawers-in-turn-draw-everything](drawers-in-turn-draw-everything.md). With two drawers in turn, each ranking courses, every perfect profile draws everything, the base standing from the first step at what stands at nothing.
 
 **Used by:** [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md)
 
@@ -97,6 +98,7 @@ The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the over
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json) | — |
 
 Aliases: `several optimizers drain by their joint capacity`, `a mutual best response beyond`, `the blind commons`, `多个优化者以合计容量抽干`, `Becoming.Optimum.MutualBest`, `Becoming.Optimum.mutual_beyond`, `Becoming.Optimum.mutual_as_one`
 
@@ -105,6 +107,7 @@ Aliases: `several optimizers drain by their joint capacity`, `a mutual best resp
 
 - 21 October 2026: added (SG3), several optimizers at a mutual best response: a condition beyond every family falls by their joint capacity, as under one optimizer of that capacity, and restraint is no mutual best response; study section 290.
 - 21 October 2026, SG4: mutual best responses at every step of a course: jointly above the renewal, the optimizers lose it (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.
+- 22 October 2026, SG14: with two drawers in turn, each ranking courses, every perfect profile draws everything (record drawers-in-turn-draw-everything, study section 324). Its laws are unchanged.
 
 </details>
 

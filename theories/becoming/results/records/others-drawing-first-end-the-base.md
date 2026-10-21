@@ -25,7 +25,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- That the others' rule is itself a best response: this is one optimizer's side of the dynamic commons, not a mutual best response among several optimizers ranking courses, nor how optimizers come to one.
+- That the others' rule is a best response where capacities limit a draw, with more than two drawers or drawing at once: for two drawers in turn without a limit it is (drawers-in-turn-draw-everything); nor how optimizers come to one.
 - Holding a level where what stands at it falls below it; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; an overcompensating renewal.
 - That a base ought to be kept, or that others ought not to draw: no evaluation enters; the laws say what the optima of an order do.
 
@@ -41,7 +41,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-Several optimizers each ranking courses at a mutual best response, and how they come to one; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; an overcompensating renewal; an independent review.
+Several optimizers ranking courses whose capacities limit a draw, or drawing at once, and how they come to a mutual best response; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; an overcompensating renewal; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -74,6 +74,9 @@ Open access dissipates the rent of a common stock, what one harvester leaves bei
 - related, not a proved adapter: [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md). With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.
 - related, not a proved adapter: [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md). At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.
 - related, not a proved adapter: [steps-met-again-after-a-fall](steps-met-again-after-a-fall.md). Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start.
+- related, not a proved adapter: [drawers-in-turn-draw-everything](drawers-in-turn-draw-everything.md). With two drawers in turn, each ranking courses, every perfect profile draws everything, the base standing from the first step at what stands at nothing.
+
+**Used by:** [drawers-in-turn-draw-everything](drawers-in-turn-draw-everything.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -97,6 +100,7 @@ Open access dissipates the rent of a common stock, what one harvester leaves bei
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json) | — |
 
 Aliases: `others drawing first end the base`, `over every law of what stands`, `the dynamic commons`, `open-access dissipation`, `他者先抽取则终结基础`, `Becoming.Optimum.Next.frontier_ends_drawn_first`, `Becoming.Web.Next.frontier_ends_drawn_first`, `Becoming.Optimum.Next.frontier_exhausts`
 
@@ -107,6 +111,7 @@ Aliases: `others drawing first end the base`, `over every law of what stands`, `
 - 22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.
 - 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
 - 22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.
+- 22 October 2026, SG14: with two drawers in turn, each ranking courses, every perfect profile draws everything (record drawers-in-turn-draw-everything, study section 324). Its laws are unchanged.
 
 </details>
 

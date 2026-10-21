@@ -124,8 +124,8 @@
   ],
   "does_not_show": [
     {
-      "en": "That the others' rule is itself a best response: this is one optimizer's side of the dynamic commons, not a mutual best response among several optimizers ranking courses, nor how optimizers come to one.",
-      "zh": "他者的规则本身是最优回应：这是动态公地中一个优化者的一侧，不是多个对过程排序的优化者之间的相互最优回应，也不是优化者如何达到它。",
+      "en": "That the others' rule is a best response where capacities limit a draw, with more than two drawers or drawing at once: for two drawers in turn without a limit it is (drawers-in-turn-draw-everything); nor how optimizers come to one.",
+      "zh": "他者的规则在容量限制抽取、多于两个抽取者或同时抽取时是最优回应：两个轮流且无限制时它是（drawers-in-turn-draw-everything）；也不是优化者如何达到它。",
       "kind": "scope"
     },
     {
@@ -153,8 +153,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T075336.250274Z）：Becoming.Optimum 新增的 67 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 298 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Several optimizers each ranking courses at a mutual best response, and how they come to one; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; an overcompensating renewal; an independent review.",
-    "zh": "多个各自对过程排序的优化者的相互最优回应及其如何达到；以最多所留不能一步再生的价值对视野末所留赋值之序；过度补偿的更新；独立审查。"
+    "en": "Several optimizers ranking courses whose capacities limit a draw, or drawing at once, and how they come to a mutual best response; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; an overcompensating renewal; an independent review.",
+    "zh": "受容量限制或同时抽取的多个对过程排序的优化者，及其如何达到相互最优回应；以最多所留不能一步再生的价值对视野末所留赋值之序；过度补偿的更新；独立审查。"
   },
   "correspondence": {
     "en": "Open access dissipates the rent of a common stock, what one harvester leaves being taken by another (Gordon 1954); in the dynamic commons each player's far-sight is cut by the others' draws, the equilibrium stock falling as players are added (Levhari and Mirman 1980; Clark 1990). On the spine, one optimizer's side, exact for every order rising with the weighted draw: the threshold for ending the base at once moves from what the base renews to what the others' leaving renews, and the same order that rebuilds the base alone ends it among others. The far-sighted laws hold over any law of what stands, decay and changing renewal among the cases. Reading (the AI's): keeping a shared base is not one optimizer's to give; the destruction comes from the relation, not from any change in the optimizer.",
@@ -300,6 +300,13 @@
         "en": "Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start.",
         "zh": "按每个被满足的步计数（不论位置）时，每步的耦合在 r + e < q + c + m 且 e < c 时使每个最优保持所需，严格高于自起点计数的门槛。"
       }
+    },
+    {
+      "id": "drawers-in-turn-draw-everything",
+      "detail": {
+        "en": "With two drawers in turn, each ranking courses, every perfect profile draws everything, the base standing from the first step at what stands at nothing.",
+        "zh": "两个抽取者轮流、各自按过程排序时，每个完美组合都全部抽取，自第一步起基础立于零处所立者。"
+      }
     }
   ],
   "references": [
@@ -402,7 +409,7 @@
         "Becoming.Web.Next.frontier_leaves",
         "Becoming.Web.Next.frontier_rebuilds"
       ],
-      "sha256": "d98370b00ccec5e6dfa0fb71121207e932986fd932d720cbe4aebacd3854b90c"
+      "sha256": "52aa34b05946e465f5af5803238304ee7749c198c350a2ff9f91cb9ed6755f1f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -484,7 +491,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "0c2400e88fdd1df6afeb63c3a82532fd8f54561cfd1504074157cecf2ee4c49f"
+      "sha256": "328a3b9bdc41a0427c38b346b02fd50ef66527f6cefa62221e3b82dc33df4eb5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
@@ -515,12 +522,18 @@
       "role": "receipt",
       "sha256": "a5086799820515cf847aa0d2805f59a1af988c67ff29e568d36d4aa9aeed3838",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json",
+      "role": "receipt",
+      "sha256": "271775d0167cb1a8468ba5cf6975c11ff145dc1d8868046d33a4f110e127b9ae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -591,6 +604,10 @@
     {
       "en": "22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.",
       "zh": "2026年10月22日，SG13：跌落后再被满足的步已回答（记录 steps-met-again-after-a-fall，研究第 323 节）；其开放项如此说明。其规律不变。"
+    },
+    {
+      "en": "22 October 2026, SG14: with two drawers in turn, each ranking courses, every perfect profile draws everything (record drawers-in-turn-draw-everything, study section 324). Its laws are unchanged.",
+      "zh": "2026年10月22日，SG14：两个抽取者轮流、各自按过程排序时，每个完美组合都全部抽取（记录 drawers-in-turn-draw-everything，研究第 324 节）。其规律不变。"
     }
   ]
 }

@@ -201,6 +201,13 @@
         "en": "Mutual best responses at every step of a course against a renewal.",
         "zh": "对更新的过程中每步的相互最优回应。"
       }
+    },
+    {
+      "id": "drawers-in-turn-draw-everything",
+      "detail": {
+        "en": "With two drawers in turn, each ranking courses, every perfect profile draws everything, the base standing from the first step at what stands at nothing.",
+        "zh": "两个抽取者轮流、各自按过程排序时，每个完美组合都全部抽取，自第一步起基础立于零处所立者。"
+      }
     }
   ],
   "references": [
@@ -251,7 +258,7 @@
         "Becoming.sub_lt_self_iff",
         "Becoming.total_split"
       ],
-      "sha256": "d98370b00ccec5e6dfa0fb71121207e932986fd932d720cbe4aebacd3854b90c"
+      "sha256": "52aa34b05946e465f5af5803238304ee7749c198c350a2ff9f91cb9ed6755f1f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
@@ -342,7 +349,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "0c2400e88fdd1df6afeb63c3a82532fd8f54561cfd1504074157cecf2ee4c49f"
+      "sha256": "328a3b9bdc41a0427c38b346b02fd50ef66527f6cefa62221e3b82dc33df4eb5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T000629.905649Z/verification.json",
@@ -415,12 +422,18 @@
       "role": "receipt",
       "sha256": "a5086799820515cf847aa0d2805f59a1af988c67ff29e568d36d4aa9aeed3838",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json",
+      "role": "receipt",
+      "sha256": "271775d0167cb1a8468ba5cf6975c11ff145dc1d8868046d33a4f110e127b9ae",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -490,6 +503,10 @@
     {
       "en": "21 October 2026, SG4: mutual best responses at every step of a course: jointly above the renewal, the optimizers lose it (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.",
       "zh": "2026年10月21日，SG4：过程中每步的相互最优回应：合计超出更新时，优化者使其丧失（记录 re-optimizing-above-a-renewal-ends-it，研究第 291 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "22 October 2026, SG14: with two drawers in turn, each ranking courses, every perfect profile draws everything (record drawers-in-turn-draw-everything, study section 324). Its laws are unchanged.",
+      "zh": "2026年10月22日，SG14：两个抽取者轮流、各自按过程排序时，每个完美组合都全部抽取（记录 drawers-in-turn-draw-everything，研究第 324 节）。其规律不变。"
     }
   ]
 }
