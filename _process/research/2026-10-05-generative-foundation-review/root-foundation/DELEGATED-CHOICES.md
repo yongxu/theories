@@ -585,7 +585,7 @@ L1, S1 and S2 are D40-D42.
 - Ren's message of 20 October 2026 on OPENING's note on the meta-attractor, “this needs to be fully taken care of” ([words](../../../../sources/15-codex-theory-conversations/2026-10-20-meta-attractor-note-taken-care-of.md)): D58 ([study section 242](BECOMING-RENEWAL-READING.md#242-the-meta-attractors-loop-closed-on-the-spine-ma1)).
 - The line toward the aim of 20 October 2026 set by the session that started board item IV1 (no source record of the aim's words; none is quoted): D59 ([study section 256](BECOMING-RENEWAL-READING.md#256-the-step-of-invariance-what-it-reaches-across-standpoints-and-the-order-every-weighting-shares-iv1)).
 - The same line, continued by board item IV2 (the de se question, graded significance): D60 ([study section 260](BECOMING-RENEWAL-READING.md#260-the-de-se-question-and-graded-significance-iv2)).
-- Ren's message of 21 October 2026, “aim elegant completion” ([words](../../../../sources/15-codex-theory-conversations/2026-10-21-aim-elegant-completion.md)), taken up by board item EC: D61 ([study section @N4@](BECOMING-RENEWAL-READING.md#@SLUG4@)).
+- Ren's message of 21 October 2026, “aim elegant completion” ([words](../../../../sources/15-codex-theory-conversations/2026-10-21-aim-elegant-completion.md)), taken up by board item EC: D61 ([study section 313](BECOMING-RENEWAL-READING.md#313-the-ethics-scope-as-the-one-closure-ec4)).
 
 <a id="13-一个说明--one-account"></a>
 ## 13. One account
@@ -795,7 +795,7 @@ Where: the chapter [THE-STEP-OF-INVARIANCE](../../../../theories/becoming/chapte
 <a id="d61-the-ethics-scope-as-the-one-closure"></a>
 ### The ethics' scope as the one closure
 
-Where: study section @N4@ (board item EC, its fourth step); the module `Becoming.ValuationFrames`; the record [what-the-step-across-standpoints-reaches](../../../../theories/becoming/results/records/what-the-step-across-standpoints-reaches.md).
+Where: study section 313 (board item EC, its fourth step); the module `Becoming.ValuationFrames`; the record [what-the-step-across-standpoints-reaches](../../../../theories/becoming/results/records/what-the-step-across-standpoints-reaches.md).
 
 **Decision.** Adopted with exact scope.
 1. **Relational neutrality as closedness.** The rule that significance transmits along formed relations (N_rel) is read as the closedness of each standpoint's significance under the relations' steps (`Valuation.transmits_iff_closed`). So the scope the two neutralities force from a valued living claim is that claim's closure (`Valuation.forced_iff_reach`), the same closure as the frame's (`WithinClosure`, `reach_iff_withinClosure`).
