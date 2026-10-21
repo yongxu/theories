@@ -44,7 +44,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions with a recent giving, or more than two; the order of fates above the level law's peak, where measured giving falls as the level rises; an independent review.
+A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions with a recent giving; the order of fates above the level law's peak, where measured giving falls as the level rises; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -66,7 +66,7 @@ Orbits of planar cooperative (order-preserving) maps are eventually componentwis
   - Preserved conditions: The adjustment rising in both; a band. [RegimeReals.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean)
 - related, not a proved adapter: [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md). The rest law: at or above the draw every rest is the regime's, here in any amounts.
 
-**Used by:** [coupled-regimes](coupled-regimes.md)
+**Used by:** [coupled-regimes](coupled-regimes.md) · [coupled-webs](coupled-webs.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -88,6 +88,7 @@ Orbits of planar cooperative (order-preserving) maps are eventually componentwis
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json) | — |
 
 Aliases: `the regime in any amounts`, `the shape of a run of the adjusted step`, `runs of the regime over the reals`, `任何量中的体制`, `Becoming.RegimeMargin.Drawn.run_shape`, `Becoming.RegimeMargin.Drawn.converges`, `Becoming.RegimeMargin.Drawn.Relaxation.never_rests`
 
@@ -97,6 +98,7 @@ Aliases: `the regime in any amounts`, `the shape of a run of the adjusted step`,
 - 21 October 2026: added (RM5), the regime in any amounts, and its runs over the reals: the order, the shape of a run and its rests in any linearly ordered amounts with a draw; over the non-negative reals every run of a rising adjustment within a band converges, to a rest where the adjustment is continuous, with fates down-closed, and need not rest; study section 302.
 - 21 October 2026: whether measured adjustments rise in both over their bands is answered post hoc on MQ5's stocks (study section 280): the field's giving rises in the recent giving in 65 of 69 stocks, and in what is left only below each stock's level-law peak (a median 41% of its observed escapements); the next step now names the order above the peak. Its laws are unchanged.
 - 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
+- 21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.
 
 </details>
 

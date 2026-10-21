@@ -1,0 +1,344 @@
+{
+  "schema_version": 2,
+  "id": "coupled-webs",
+  "title": {
+    "en": "Coupled webs: support across a web, and the cascade of ends",
+    "zh": "耦合之网：网中的支持与终结的级联"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T13:28:16+00:00",
+  "statement": {
+    "en": "Any number of conditions each giving from what is left of all: under mutual support raising any level never ends one that held; along every chain of total dependence, with positive draws, the end of one ends everything downstream, a dependence cycle ending together.",
+    "zh": "任意多个条件各从所有所余中给出：相互支持下升高任一水平从不使一个维持者终结；沿每条完全依赖之链，汲取为正时，一个的终结终结其下游的一切，依赖之环同终。"
+  },
+  "laws": [
+    {
+      "en": "Any number of conditions, indexed by any type, each under its draw taken first, as much as there is, and giving a law of what is left of all, in any amounts with a draw; a level ends where it is nothing from some step on.",
+      "zh": "任意多个条件，以任意类型为指标，各在其先取（有多少取多少）的汲取之下，各所给是所有所余之律，在任何带汲取的量中；一个水平自某步起为无即终结。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.left",
+        "Becoming.RegimeMargin.Coupled.Indexed.step",
+        "Becoming.RegimeMargin.Coupled.Indexed.Below",
+        "Becoming.RegimeMargin.Coupled.Indexed.Rises",
+        "Becoming.RegimeMargin.Coupled.Indexed.Ends"
+      ]
+    },
+    {
+      "en": "Under mutual support, every giving rising with what is left of each, the step keeps the order of states condition by condition, along runs too, so a level ending from a state ends from every state below it: raising any condition's level never ends one that held.",
+      "zh": "相互支持下（各所给随每个所余而升），步逐个条件保持状态之序，沿运行亦然，故自一状态终结的水平自其下每个状态终结：升高任一条件的水平从不使一个维持者终结。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.step_mono",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_of_below"
+      ]
+    },
+    {
+      "en": "Where i gives nothing wherever nothing is left of j, i drains once j stays within its draw; in whole numbers it falls by its draw at every step and, the draw positive, is nothing within as many steps as its level, so j's end ends i.",
+      "zh": "i 在 j 一无所余处给无时，只要 j 留在其汲取之内，i 即流尽；在整数中它每步按汲取下降，汲取为正时至多经其水平之步数即为无，故 j 的终结终结 i。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.DependsOn",
+        "Becoming.RegimeMargin.Coupled.Indexed.drains",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_after",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_of_partner"
+      ]
+    },
+    {
+      "en": "Along every chain of dependence, where every dependent's draw is positive, wherever a condition ends every condition downstream of it ends, and two conditions each downstream of the other end together or not at all.",
+      "zh": "沿每条依赖之链，每个依赖者的汲取为正时，一个条件在何处终结，其下游的每个条件即终结；彼此互为下游的两个条件同终或皆不终。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.Downstream",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_together"
+      ]
+    },
+    {
+      "en": "The pair is the web indexed by Bool: at every step the web's run has the pair's levels, a pair's level ends exactly where the web's does, and the pair's mutual support is the web's; the pair's laws of order, ending and dependence are read off these.",
+      "zh": "一对即以 Bool 为指标的网：每步网的运行具有一对的水平，一对的水平恰在网的水平终结处终结，一对的相互支持即网的；一对的序、终结与依赖之律由此读出。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.pairGiving",
+        "Becoming.RegimeMargin.Coupled.pairDraw",
+        "Becoming.RegimeMargin.Coupled.ofPair",
+        "Becoming.RegimeMargin.Coupled.pair_run",
+        "Becoming.RegimeMargin.Coupled.ends_pair",
+        "Becoming.RegimeMargin.Coupled.pair_rises"
+      ]
+    },
+    {
+      "en": "Witness, a chain: three conditions, the second giving one where at least one is left of the first, the third where at least one is left of the second, under draws of one; the third does not depend on the first, yet the first ends and so does the third. With no draw on the second, the third holds at two for ever.",
+      "zh": "见证，一条链：三个条件，第二个在第一个所余至少为一处给一，第三个在第二个所余至少为一处给一，汲取为一；第三个不依赖第一个，但第一个终结，第三个亦终结。第二个无汲取时，第三个永远维持于二。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.Chain.giving",
+        "Becoming.RegimeMargin.Coupled.Indexed.Chain.start",
+        "Becoming.RegimeMargin.Coupled.Indexed.Chain.first_falls",
+        "Becoming.RegimeMargin.Coupled.Indexed.Chain.cascades",
+        "Becoming.RegimeMargin.Coupled.Indexed.Chain.stopped"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Discrete steps; conditions indexed by any type; each draw taken first, as much as there is; each giving a law of what is left of all; amounts linearly ordered with a truncated difference, whole numbers for the drain's count and the cascade; each law's own premises as hypotheses: mutual support, total dependence (nothing given wherever nothing is left of the other), positive draws on dependents.",
+      "zh": "不加公理。离散步；以任意类型为指标的条件；各汲取先取，有多少取多少；各所给是所有所余之律；量线性有序且有截断差，流尽之计数与级联需整数；各律自身的前提为假设：相互支持、完全依赖（他者一无所余处给无）、依赖者的汲取为正。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Rest and thresholds of webs: a web's state is a function of the conditions, and a still run would need equality of functions, an extensionality the pure core does not assume; the pair's are stated.",
+      "zh": "网的静止与阈值：网的状态是条件的函数，静止的运行需要函数相等，纯核心不假设这种外延性；一对的已陈述。",
+      "kind": "scope"
+    },
+    {
+      "en": "Partial dependence, where giving falls without stopping; the time of a cascade along a chain beyond each link's; webs with a recent giving; the reals and continuous time.",
+      "zh": "部分依赖（所给下降而不停止）；链上级联的时间（逐环之外）；带近来所给的网；实数与连续时间。",
+      "kind": "scope"
+    },
+    {
+      "en": "That measured webs have total dependence or positive draws on their chains: the cascade is proved under these premises; how far it reaches in a field web is untested.",
+      "zh": "所测的网在其链上有完全依赖或为正的汲取：级联在这些前提下已证；在野外之网中它及于多远未经检验。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "detail": {
+        "en": "Coupled.Indexed.Chain.stopped: with no draw on the middle of a chain the first still ends, yet the third, downstream of it, holds at two for ever: positive draws on dependents cannot be dropped.",
+        "zh": "Coupled.Indexed.Chain.stopped：链中间无汲取时第一个仍终结，但其下游的第三个永远维持于二：依赖者的汲取为正不可去掉。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T132557.057625Z): the 26 declarations Becoming.RegimeMargin gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 311; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T132557.057625Z）：Becoming.RegimeMargin 新增的 26 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 311 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Rest and thresholds of webs (stated on finitely many conditions read as a list); partial dependence with a rate; the time of a cascade along a chain; webs with a recent giving; a field web whose dependences are measured; an independent review.",
+    "zh": "网的静止与阈值（以列表读出的有限多个条件上陈述）；带比率的部分依赖；链上级联的时间；带近来所给的网；依赖经测量的野外之网；独立审查。"
+  },
+  "correspondence": {
+    "en": "Cooperative (monotone) systems keep the order of states in any dimension, and their extinction sets are down-closed (Smith 1995; Hirsch and Smith 2005); secondary extinctions cascade through food webs, their reach set by the web's structure (Pimm 1980; Dunne, Williams and Martinez 2002); coextinction of dependents (Koh et al. 2004). On the spine, constructive and exact in its premises: the cascade along any chain of total dependence follows from one link's law, each link's steps counted, a dependence cycle ends together, and positive draws on dependents are shown needed by a witness; the pair is the web's case.",
+    "zh": "合作（单调）系统在任意维数上保持状态之序，其灭绝集向下封闭（Smith 1995；Hirsch 与 Smith 2005）；次级灭绝经食物网级联，其所及由网的结构决定（Pimm 1980；Dunne、Williams 与 Martinez 2002）；依赖者的共灭绝（Koh 等 2004）。在脊柱上，构造性且在其前提上精确：沿任何完全依赖之链的级联由单环之律推出，每环步数可计，依赖之环同终，依赖者的汲取为正由见证表明不可少；一对是网的情形。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+  "aliases": [
+    "coupled webs",
+    "the cascade of ends",
+    "coextinction along a chain of dependence",
+    "耦合之网",
+    "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream",
+    "Becoming.RegimeMargin.Coupled.Indexed.step_mono"
+  ],
+  "dependencies": [
+    {
+      "id": "coupled-regimes",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The pair's step and its laws of order, ending and dependence are this record's case: the pair is the web indexed by Bool, and its laws are now read off the web's.",
+        "zh": "一对的步及其序、终结与依赖之律是本记录的情形：一对即以 Bool 为指标的网，其律现由网的律读出。"
+      },
+      "interface": {
+        "output": {
+          "en": "Coupled.step, Coupled.Ends.",
+          "zh": "Coupled.step、Coupled.Ends。"
+        },
+        "input": {
+          "en": "Coupled.pair_run and ends_pair: RM6's laws re-derived from the web's.",
+          "zh": "Coupled.pair_run 与 ends_pair：由网的律重新推出 RM6 之律。"
+        },
+        "conditions": {
+          "en": "Two conditions.",
+          "zh": "两个条件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+      }
+    },
+    {
+      "id": "regime-in-any-amounts",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Amounts with a draw, rising giving and sub_mono are reused; the web is stated in them.",
+        "zh": "沿用带汲取的量、上升的所给与 sub_mono；网在其中陈述。"
+      },
+      "interface": {
+        "output": {
+          "en": "Drawn, Drawn.Rises, Drawn.sub_mono and Drawn.whole.",
+          "zh": "Drawn、Drawn.Rises、Drawn.sub_mono 与 Drawn.whole。"
+        },
+        "input": {
+          "en": "The web's step and its order under mutual support in any amounts with a draw.",
+          "zh": "任何带汲取的量中网的步及其在相互支持下之序。"
+        },
+        "conditions": {
+          "en": "Linearly ordered amounts with a truncated difference.",
+          "zh": "带截断差的线性有序量。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "detail": {
+        "en": "That record reads a family of coupled conditions as one and ends it by joint excess; here each condition of a web keeps its own giving law of what is left of all, and the end of one reaches what depends on it, link by link.",
+        "zh": "该记录把一族耦合条件读作一个，以联合超出终结之；此处网的每个条件各保有以所有所余为变元的所给之律，一个的终结逐环及于依赖它者。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Ends",
+        "Becoming.RegimeMargin.Coupled.Indexed.Below",
+        "Becoming.RegimeMargin.Coupled.Indexed.Chain.cascades",
+        "Becoming.RegimeMargin.Coupled.Indexed.Chain.first_falls",
+        "Becoming.RegimeMargin.Coupled.Indexed.Chain.giving",
+        "Becoming.RegimeMargin.Coupled.Indexed.Chain.start",
+        "Becoming.RegimeMargin.Coupled.Indexed.Chain.stopped",
+        "Becoming.RegimeMargin.Coupled.Indexed.DependsOn",
+        "Becoming.RegimeMargin.Coupled.Indexed.Downstream",
+        "Becoming.RegimeMargin.Coupled.Indexed.Ends",
+        "Becoming.RegimeMargin.Coupled.Indexed.Rises",
+        "Becoming.RegimeMargin.Coupled.Indexed.drains",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_after",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_of_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_of_partner",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_together",
+        "Becoming.RegimeMargin.Coupled.Indexed.left",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.step",
+        "Becoming.RegimeMargin.Coupled.Indexed.step_mono",
+        "Becoming.RegimeMargin.Coupled.drains",
+        "Becoming.RegimeMargin.Coupled.ends_after",
+        "Becoming.RegimeMargin.Coupled.ends_of_below",
+        "Becoming.RegimeMargin.Coupled.ends_of_partner",
+        "Becoming.RegimeMargin.Coupled.ends_pair",
+        "Becoming.RegimeMargin.Coupled.ends_together",
+        "Becoming.RegimeMargin.Coupled.ofPair",
+        "Becoming.RegimeMargin.Coupled.pairDraw",
+        "Becoming.RegimeMargin.Coupled.pairGiving",
+        "Becoming.RegimeMargin.Coupled.pair_rises",
+        "Becoming.RegimeMargin.Coupled.pair_run",
+        "Becoming.RegimeMargin.Coupled.step",
+        "Becoming.RegimeMargin.Coupled.step_mono",
+        "Becoming.RegimeMargin.Drawn",
+        "Becoming.RegimeMargin.Drawn.Rises",
+        "Becoming.RegimeMargin.Drawn.sub_mono",
+        "Becoming.RegimeMargin.Drawn.whole"
+      ],
+      "sha256": "e7c7a7138cc1e20b42cd00002d392cd6d17b65188f5a524d613095425d6793d4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Law.orbit",
+        "Becoming.Law.run"
+      ],
+      "sha256": "78c79cc4e644639a898d1615bcf77134e2d84bdfd7b720bced7acd8a41db2d9b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Lasting.orbit_mono"
+      ],
+      "sha256": "ead33dc198328da7040d9c39b0a9c3ab27778d268af34ccdeea4500541eba3c9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Amounts.add_le_add_left",
+        "Becoming.Amounts.add_zero",
+        "Becoming.Amounts.le_of_eq"
+      ],
+      "sha256": "dd51aa6f8eaafe4731e5a64462eb176d5c3e19392a162e25095f58bf4fe2b9f7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Naturals.sub_sub",
+        "Becoming.sub_eq_zero_of_le"
+      ],
+      "sha256": "806e95fad20b5a22ad532429698511ec066b63e9160a1018f1b7a736e6724176"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
+      "role": "receipt",
+      "sha256": "822940b6c939ea5eb1fbbfb6cb6d7be2da97d45a30b523812f4b4adb838c5c5e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "08f1b1087a292d3951ddf0de20dd3820ae8543394d07d76b48dddbe0260b2da4"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "f97ab5d34881ac1d9bf69ab8b1e7f9169d9c85bf2d2d45943b765bbd3dc394eb"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "10d789904696ca160f7be5a587f9fbf2d56395df5c95c1e666e79b6c8de02560"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Recurrence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Lasting",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Amounts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (RM7), coupled webs: any number of conditions each giving from what is left of all; under mutual support the order of states is kept and ending is down-closed; along every chain of total dependence, with positive draws, the end of one ends everything downstream, a dependence cycle ending together; the pair is the web's case and RM6's laws are read off the web's; study section 311.",
+      "zh": "2026年10月21日：新增（RM7），耦合之网：任意多个条件各从所有所余中给出；相互支持下状态之序得保持，终结向下封闭；沿每条完全依赖之链，汲取为正时，一个的终结终结其下游的一切，依赖之环同终；一对是网的情形，RM6 之律由网的律读出；研究第 311 节。"
+    }
+  ]
+}

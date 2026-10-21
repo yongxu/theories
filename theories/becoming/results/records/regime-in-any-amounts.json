@@ -150,8 +150,8 @@
     "zh": "机器检查：核心 Becoming.RegimeMargin 新增的 25 项声明由 Lean 4.29.1 合并检查器实查（回执 20261021T102032.314972Z），公理报告为空；外围模块 RegimeReals 的 17 项声明由其自身检查器以 Lean 4.30.0-rc2 与固定的 Mathlib 实查（回执 20261021T102713.696033Z），只用 Lean 标准公理，核心模块与已通过回执相符。一个会话中构建并审查，无另设审查者；作者审查见研究第 302 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions with a recent giving, or more than two; the order of fates above the level law's peak, where measured giving falls as the level rises; an independent review.",
-    "zh": "实数上计算出的阈值与体制情形 H + y；连续时间；带再一个滞后的状态；带近来所给或多于两个的相互耦合条件；水平规律峰值之上的命运之序，那里所测的所给随水平上升而下降；独立审查。"
+    "en": "A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions with a recent giving; the order of fates above the level law's peak, where measured giving falls as the level rises; an independent review.",
+    "zh": "实数上计算出的阈值与体制情形 H + y；连续时间；带再一个滞后的状态；带近来所给的相互耦合条件；水平规律峰值之上的命运之序，那里所测的所给随水平上升而下降；独立审查。"
   },
   "correspondence": {
     "en": "Orbits of planar cooperative (order-preserving) maps are eventually componentwise monotone under regularity conditions, so bounded orbits converge (Smith 1998; Hirsch and Smith 2005); convergence of a bounded monotone sequence is not constructive (Bridges and Richman 1987); partial adjustment and delay-difference models of renewal (Deriso 1980; Schnute 1985). On the spine the shape needs no regularity condition: the level moves by the new giving less the draw, so every step neither up nor down moves the recent giving toward the draw, whatever the adjustment; the core states it constructively in any amounts, the periphery the convergence over the reals.",
@@ -260,7 +260,7 @@
         "Becoming.RegimeMargin.Drawn.whole",
         "Becoming.RegimeMargin.Drawn.whole_run"
       ],
-      "sha256": "328b909264c9f19c3dc73b2bb7203b0060cc3742a9f7f2161d111a4508a157fc"
+      "sha256": "e7c7a7138cc1e20b42cd00002d392cd6d17b65188f5a524d613095425d6793d4"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean",
@@ -362,7 +362,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "d4b0f8fcece991661a98ce18bf8264d704e4dd72bdd658815a8f727d6ac0b024"
+      "sha256": "10d789904696ca160f7be5a587f9fbf2d56395df5c95c1e666e79b6c8de02560"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json",
@@ -375,12 +375,18 @@
       "role": "receipt",
       "sha256": "09ddcac71c633eedc06f3add850c502a8748972f55084e189a6645487738591e",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
+      "role": "receipt",
+      "sha256": "822940b6c939ea5eb1fbbfb6cb6d7be2da97d45a30b523812f4b4adb838c5c5e",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -440,6 +446,10 @@
     {
       "en": "21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show and its next delta now say what stays open. Its laws are unchanged.",
       "zh": "2026年10月21日，RM6：此处留下的相互耦合条件，对体制之步下的两个条件已陈述（记录 coupled-regimes，研究第 306 节）；本记录所不表明者与其下一步现已说明仍开放者。其规律不变。"
+    },
+    {
+      "en": "21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.",
+      "zh": "2026年10月21日，RM7：多于两个的耦合条件已作为体制之步下的网陈述（记录 coupled-webs，研究第 311 节）；其下一步不再列出。其规律不变。"
     }
   ]
 }

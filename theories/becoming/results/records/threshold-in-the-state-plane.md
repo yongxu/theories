@@ -42,7 +42,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-A computed threshold over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; the order of fates above the level law's peak, where measured giving falls as the level rises; a state with a further lag; coupled conditions with a recent giving, or more than two; an independent review.
+A computed threshold over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; the order of fates above the level law's peak, where measured giving falls as the level rises; a state with a further lag; coupled conditions with a recent giving; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -91,6 +91,7 @@ For order-preserving maps the boundary between basins of attraction is unordered
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json) | — |
 
 Aliases: `the threshold in the plane of level and recent giving`, `the point of no return as a falling curve`, `a run has at most one rest`, `水平与近来所给之平面上的阈值`, `Becoming.RegimeMargin.Adjusted.falls_iff_below`, `Becoming.RegimeMargin.Adjusted.threshold_falls`, `Becoming.RegimeMargin.threshold_regime`
 
@@ -101,6 +102,7 @@ Aliases: `the threshold in the plane of level and recent giving`, `the point of 
 - 21 October 2026, RM5: over the reals every run of a rising adjustment within a band converges and the fates below the draw are down-closed and fewer as the recent giving rises (record regime-in-any-amounts, study section 302); what this record does not show and its next delta now say so. Its laws are unchanged.
 - 21 October 2026: whether measured adjustments rise in both over their bands is answered post hoc on MQ5's stocks (study section 280): the field's giving rises in the recent giving in 65 of 69 stocks, and in what is left only below each stock's level-law peak (a median 41% of its observed escapements); the next step now names the order above the peak. Its laws are unchanged.
 - 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
+- 21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.
 
 </details>
 

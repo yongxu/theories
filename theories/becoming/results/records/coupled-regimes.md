@@ -29,7 +29,7 @@
 ## Does not show
 
 - Thresholds beyond a band: within one, mutual support gives within each draw; beyond it only the cycle is stated, and no bound on a run decides ending.
-- More than two conditions, a web of them; coupled conditions with a recent giving (the adjusted step); the reals and continuous time.
+- Coupled conditions with a recent giving (the adjusted step); the reals and continuous time; record coupled-webs states webs of any number.
 - That measured conditions are coupled by mutual support, or how strongly: a partner's level would be a fourth variable in T2's state; how strong coupling is in the field is untested.
 - **Counterexample:** MutualInhibition.breaks_order: where each gives only where nothing is left of the other, within a band the first ends from two and two yet holds from two and nothing, below it: no down-closure without mutual support, and the threshold rises with the partner. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 - **Counterexample:** Coupled.alternation_never_rests: a band without mutual support gives no rest. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
@@ -47,7 +47,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Thresholds beyond a band, with a bound on the run in its place; more than two conditions, a web; coupled conditions with a recent giving; over the reals; a frozen field test of whether a partner's level adds to T2's state for coupled conditions; an independent review.
+Thresholds beyond a band, with a bound on the run in its place; rest and thresholds of webs; coupled conditions with a recent giving; over the reals; a frozen field test of whether a partner's level adds to T2's state for coupled conditions; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -80,6 +80,9 @@ Cooperative (monotone) dynamical systems keep the order of states and their exti
   - Input: A coupled run still from a step stays there, so ending is read at its rest.
   - Preserved conditions: A run of any process. [LastChange.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean)
 - related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). That record reads a family of coupled conditions as one, under balance, and ends it by joint excess; here each of two conditions keeps its own giving law of what is left of both, and a condition's point of no return is read against its partner's level.
+- related, not a proved adapter: [coupled-webs](coupled-webs.md). The pair is the web indexed by Bool: its laws of order, ending, draining, ending after and ending together are read off the web's, whose cascade along chains of dependence the pair cannot show.
+
+**Used by:** [coupled-webs](coupled-webs.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -97,6 +100,7 @@ Cooperative (monotone) dynamical systems keep the order of states and their exti
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json) | — |
 
 Aliases: `coupled regimes`, `a margin that is not its own`, `the point of no return of a coupled condition`, `coextinction under a draw`, `耦合的体制`, `Becoming.RegimeMargin.Coupled.ends_iff_below`, `Becoming.RegimeMargin.Coupled.threshold_falls`, `Becoming.RegimeMargin.Coupled.ends_after`
 
@@ -104,6 +108,7 @@ Aliases: `coupled regimes`, `a margin that is not its own`, `the point of no ret
 ### History
 
 - 21 October 2026: added (RM6), coupled regimes: two conditions under draws, each giving from what is left of both; under mutual support the order of states is kept and ending is down-closed; within a band in whole numbers runs rest within 2 hi + 1 steps and the first condition ends exactly below a least level that does not rise as its partner rises; a dependent drains by its draw once its partner has nothing left; study section 306.
+- 21 October 2026, RM7: more than two coupled conditions are stated as a web (record coupled-webs, study section 311); this record's laws of order, ending, draining, ending after and ending together keep their statements and are now proved from the web's; what it does not show and its next delta say so.
 
 </details>
 

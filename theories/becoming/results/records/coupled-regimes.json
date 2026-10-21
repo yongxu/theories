@@ -137,8 +137,8 @@
       "kind": "scope"
     },
     {
-      "en": "More than two conditions, a web of them; coupled conditions with a recent giving (the adjusted step); the reals and continuous time.",
-      "zh": "多于两个条件或其网；带近来所给的耦合条件（调整之步）；实数与连续时间。",
+      "en": "Coupled conditions with a recent giving (the adjusted step); the reals and continuous time; record coupled-webs states webs of any number.",
+      "zh": "带近来所给的耦合条件（调整之步）；实数与连续时间；记录 coupled-webs 陈述任意多个之网。",
       "kind": "scope"
     },
     {
@@ -183,8 +183,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T105805.152152Z）：Becoming.RegimeMargin 新增的 55 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 306 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Thresholds beyond a band, with a bound on the run in its place; more than two conditions, a web; coupled conditions with a recent giving; over the reals; a frozen field test of whether a partner's level adds to T2's state for coupled conditions; an independent review.",
-    "zh": "带外的阈值，以运行之界代替带；多于两个条件、其网；带近来所给的耦合条件；实数上；冻结的野外检验：对耦合条件，伙伴的水平是否加入 T2 的状态；独立审查。"
+    "en": "Thresholds beyond a band, with a bound on the run in its place; rest and thresholds of webs; coupled conditions with a recent giving; over the reals; a frozen field test of whether a partner's level adds to T2's state for coupled conditions; an independent review.",
+    "zh": "带外的阈值，以运行之界代替带；网的静止与阈值；带近来所给的耦合条件；实数上；冻结的野外检验：对耦合条件，伙伴的水平是否加入 T2 的状态；独立审查。"
   },
   "correspondence": {
     "en": "Cooperative (monotone) dynamical systems keep the order of states and their extinction sets are down-closed (Smith 1995; Hirsch and Smith 2005); in obligate mutualism a threshold curve separates extinction from persistence, each partner needing less as the other has more (Dean 1983), and dependents are lost with their partner (coextinction, Koh et al. 2004); competitive maps keep the order with one coordinate reversed, and planar cooperative maps are eventually monotone only under regularity conditions (Smith 1998). On the spine, constructive and exact in its premises: the threshold for each partner's level is the least level a finite search finds within a band, the dependent's drain is counted, and the uncoupled case is the regime itself; mutual support and the band are each shown needed by a witness.",
@@ -325,6 +325,13 @@
         "en": "That record reads a family of coupled conditions as one, under balance, and ends it by joint excess; here each of two conditions keeps its own giving law of what is left of both, and a condition's point of no return is read against its partner's level.",
         "zh": "该记录在平衡下把一族耦合条件读作一个，以联合超出终结之；此处两个条件各保有以两者所余为变元的所给之律，一个条件的不归点对照其伙伴的水平读出。"
       }
+    },
+    {
+      "id": "coupled-webs",
+      "detail": {
+        "en": "The pair is the web indexed by Bool: its laws of order, ending, draining, ending after and ending together are read off the web's, whose cascade along chains of dependence the pair cannot show.",
+        "zh": "一对即以 Bool 为指标的网：其序、终结、流尽、在后终结与同终之律由网的律读出，网沿依赖之链的级联是一对所不能显示的。"
+      }
     }
   ],
   "references": [
@@ -403,7 +410,7 @@
         "Becoming.RegimeMargin.leading_true",
         "Becoming.RegimeMargin.step"
       ],
-      "sha256": "328b909264c9f19c3dc73b2bb7203b0060cc3742a9f7f2161d111a4508a157fc"
+      "sha256": "e7c7a7138cc1e20b42cd00002d392cd6d17b65188f5a524d613095425d6793d4"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
@@ -473,19 +480,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "d4b0f8fcece991661a98ce18bf8264d704e4dd72bdd658815a8f727d6ac0b024"
+      "sha256": "10d789904696ca160f7be5a587f9fbf2d56395df5c95c1e666e79b6c8de02560"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json",
       "role": "receipt",
       "sha256": "09ddcac71c633eedc06f3add850c502a8748972f55084e189a6645487738591e",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
+      "role": "receipt",
+      "sha256": "822940b6c939ea5eb1fbbfb6cb6d7be2da97d45a30b523812f4b4adb838c5c5e",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -530,6 +543,10 @@
     {
       "en": "21 October 2026: added (RM6), coupled regimes: two conditions under draws, each giving from what is left of both; under mutual support the order of states is kept and ending is down-closed; within a band in whole numbers runs rest within 2 hi + 1 steps and the first condition ends exactly below a least level that does not rise as its partner rises; a dependent drains by its draw once its partner has nothing left; study section 306.",
       "zh": "2026年10月21日：新增（RM6），耦合的体制：两个条件各在汲取之下，各从两者所余中给出；相互支持下状态之序得保持，终结向下封闭；在整数的带内运行在 2 hi + 1 步内静止，第一个条件恰在一个不随伙伴上升而升的最小水平之下终结；依赖者在伙伴一无所余后按汲取流尽；研究第 306 节。"
+    },
+    {
+      "en": "21 October 2026, RM7: more than two coupled conditions are stated as a web (record coupled-webs, study section 311); this record's laws of order, ending, draining, ending after and ending together keep their statements and are now proved from the web's; what it does not show and its next delta say so.",
+      "zh": "2026年10月21日，RM7：多于两个的耦合条件已作为网陈述（记录 coupled-webs，研究第 311 节）；本记录的序、终结、流尽、在后终结与同终之律陈述不变，现由网的律证明；本记录所不表明者与其下一步已如此说明。"
     }
   ]
 }

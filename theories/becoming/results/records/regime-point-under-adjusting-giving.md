@@ -80,6 +80,7 @@ Partial adjustment, a quantity moving at a rate toward its target, rests where t
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json) | — |
 
 Aliases: `the regime's point under giving that adjusts`, `giving that adjusts`, `rests of an adjusting giving`, `所给调整下的体制之点`, `Becoming.RegimeMargin.Adjusted.rests_iff`, `Becoming.RegimeMargin.Adjusted.ends_iff_below`, `Becoming.RegimeMargin.Crossing.crosses`
 

@@ -1143,3 +1143,23 @@ Evidence: web searches on 21 October 2026 (pinwheel origin and the (2,3,M) insta
 Boundary: AI check, one session; the five-sixths threshold not proved; random auditing against concentrated attacks not modelled; whether any actual overseer's draws are diffuse and bounded not checked
 Integration: chapter §7.3, the relation to known results, the record table
 ```
+
+<a id="web-check"></a>
+## A check: coupled webs and the cascade of ends (21 October 2026, RM7)
+
+An AI check (one session, 21 October), made while the Lean was written. It asks what is known of webs of conditions each giving from what is left of all, and of cascades of ends along dependence. **Verdict: the structure is known. Cooperative systems keep the order of states in any dimension, and secondary extinctions cascade through webs of dependence. The spine states both exactly under the draw: the cascade along any chain of total dependence follows from one link's law, each link's steps counted, a dependence cycle ending together, and a witness that a draw of nothing on the chain stops the cascade.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Cooperative (monotone) systems in any dimension keep the order of states; extinction sets are down-closed | Smith, *Monotone Dynamical Systems* (1995); Hirsch and Smith 2005 (from memory) | `RegimeMargin.Coupled.Indexed.step_mono`, `Coupled.Indexed.ends_of_below` |
+| Secondary extinctions cascade through food webs; their reach depends on the web's structure and connectance | Pimm, "Food web design and the effect of species deletion", *Oikos* 35 (1980); Dunne, Williams and Martinez, *Ecology Letters* 5 (2002) (from memory) | `Coupled.Indexed.ends_downstream`, `Coupled.Indexed.Chain.cascades` |
+| Coextinction of dependents (mutualists, parasites) | Koh et al., *Science* 305 (2004) (from memory) | `Coupled.Indexed.ends_of_partner`, `Coupled.Indexed.ends_together` |
+
+```text
+Result(s): new record coupled-webs (RM7, new laws of Becoming.RegimeMargin)
+Delta: under mutual support a web's step keeps the order of states and ending is down-closed; along every chain of total dependence, with positive draws, the end of one ends everything downstream, a dependence cycle ending together; the pair is the web indexed by Bool
+Supplied premises / correspondence: discrete steps; conditions indexed by any type; draws taken first; each giving a law of what is left of all; mutual support, dependence, positive draws, as each law states. Correspondence: Smith 1995; Hirsch and Smith 2005; Pimm 1980; Dunne, Williams and Martinez 2002; Koh et al. 2004
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; rest and thresholds of webs, partial dependence and the time of a cascade are not stated
+Integration: chapter §2.3, thesis T1's standing, the record table
+```

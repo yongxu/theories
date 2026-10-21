@@ -49,7 +49,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; each series' timing read from its assessment before a balance is read off it; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; webs of conditions; an independent review.
+Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; each series' timing read from its assessment before a balance is read off it; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -86,6 +86,7 @@ Harvesting theory: depensation and critical depensation, the fold of the harvest
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json) | — |
 
 Aliases: `margin of a regime`, `一个体制的余量`, `point of no return under a standing draw`, `the need is the regime's`, `harms super-additive`, `Becoming.RegimeMargin.ends_iff_below`, `Becoming.RegimeMargin.beyond_draw_iff`, `Becoming.RegimeMargin.harms_superadditive`
 
@@ -100,6 +101,7 @@ Aliases: `margin of a regime`, `一个体制的余量`, `point of no return unde
 - 21 October 2026, RM2: this record's laws on ending and holding hold over every adjustment of giving (RegimeMargin.Adjusted; record regime-point-under-adjusting-giving, study section 299), the regime's step the case. They keep their statements, each proof now one line; the regime forms of lemmas no law reads any more were removed, and this record cites their general forms (4 law citations moved, the proof references with them).
 - 21 October 2026: the premise of the regime's order laws measured post hoc on MQ5's stocks (study section 280): the field's giving, read as an adjustment, rises in the recent giving in 65 of 69 stocks and in what is left only below the level law's peak, so those laws reach the field's state on the low side, where the point of no return lies; a scope item added.
 - 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); its next delta now says what stays open. Its laws are unchanged.
+- 21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.
 
 </details>
 
