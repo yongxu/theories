@@ -1,0 +1,289 @@
+{
+ "scope": "post hoc, after the frozen MQ7 test; not verdicts",
+ "where": {
+  "ICES SAG:ane.27.9aS": {
+   "name": "Anchovy (Engraulis encrasicolus) in the southern part of Division 9.a (Gulf of Cadiz and southern coast of Portugal)",
+   "kappa": 0.0,
+   "timing": 0.0,
+   "test_origins": 15,
+   "catch not held": 7,
+   "no draw on the level (kappa 0)": 6,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "ICES SAG:anf.27.3a46": {
+   "name": "Anglerfish (Lophius budegassa, Lophius piscatorius) in subareas 4 and 6 and in Division 3.a (North Sea, Rockall and West of Scotland, Skagerrak, Kattegat)",
+   "kappa": 0.4,
+   "timing": 0.0,
+   "test_origins": 30,
+   "below the point, low side": 27,
+   "catch not held": 1,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "ICES SAG:ank.27.78abd": {
+   "name": "Black-bellied anglerfish (Lophius budegassa) in Subarea 7 and in divisions 8.a, 8.b, and 8.d (Celtic Seas, Bay of Biscay)",
+   "kappa": 0.0,
+   "timing": 0.0,
+   "test_origins": 16,
+   "no draw on the level (kappa 0)": 14,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "ICES SAG:ank.27.8c9a": {
+   "name": "Black-bellied anglerfish (Lophius budegassa) in divisions 8.c and 9.a (Cantabrian Sea, Atlantic Iberian waters)",
+   "kappa": 0.0,
+   "timing": 0.0,
+   "test_origins": 14,
+   "no draw on the level (kappa 0)": 11,
+   "catch not held": 1,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "ICES SAG:boc.27.6-8": {
+   "name": "Boarfish (Capros aper) in subareas 6\u20138 (Celtic Seas, English Channel, Bay of Biscay)",
+   "kappa": 1.0,
+   "timing": 0.0,
+   "test_origins": 11,
+   "catch not held": 5,
+   "not below the point": 4,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "ICES SAG:caa.27.5a": {
+   "name": "Atlantic wolffish (Anarhichas lupus)  in Division 5.a (Iceland grounds)",
+   "kappa": 0.2,
+   "timing": 0.0,
+   "test_origins": 18,
+   "high side of the peak": 1,
+   "not below the point": 15,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "ICES SAG:cod.27.1-2.coastN": {
+   "name": "Cod (Gadus morhua) in subareas 1 and 2, north of 67\u00b0N (Norwegian Sea and Barents Sea), northern Norwegian coastal cod ",
+   "kappa": 1.05,
+   "timing": 0.5,
+   "test_origins": 12,
+   "not below the point": 1,
+   "catch not held": 5,
+   "below the point, low side": 4,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "ICES SAG:ghl.27.561214": {
+   "name": "Greenland halibut (Reinhardtius hippoglossoides) in subareas 5, 6, 12, and 14 (Iceland and Faroes grounds, West of Scotland, North of Azores, East of Greenland)",
+   "kappa": 0.25,
+   "timing": 0.0,
+   "test_origins": 16,
+   "below the point, low side": 11,
+   "not below the point": 3,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "ICES SAG:pol.27.67": {
+   "name": "Pollack (Pollachius pollachius) in subareas 6 and 7 (Celtic Seas, English Channel)",
+   "kappa": 1.0,
+   "timing": 0.0,
+   "test_origins": 30,
+   "below the point, low side": 20,
+   "not below the point": 6,
+   "catch not held": 2,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "ICES SAG:reb.27.5a14": {
+   "name": "Beaked redfish  (Sebastes mentella) in Subarea 14 and in Division 5.a; Icelandic slope stock (East of Greenland, Iceland grounds)",
+   "kappa": 0.95,
+   "timing": 0.0,
+   "test_origins": 20,
+   "not below the point": 15,
+   "catch not held": 3,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "Stock SMART:11997": {
+   "name": "Flame snapper - American Samoa",
+   "kappa": 0.5,
+   "timing": 0.0,
+   "test_origins": 21,
+   "catch not held": 19,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "Stock SMART:11998": {
+   "name": "Rusty jobfish - American Samoa",
+   "kappa": 0.6,
+   "timing": 0.0,
+   "test_origins": 21,
+   "catch not held": 16,
+   "high side of the peak": 3,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "Stock SMART:11999": {
+   "name": "Green jobfish - American Samoa",
+   "kappa": 0.55,
+   "timing": 0.0,
+   "test_origins": 21,
+   "catch not held": 16,
+   "below the point, low side": 2,
+   "not below the point": 1,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "Stock SMART:12003": {
+   "name": "Golden eye jobfish - American Samoa",
+   "kappa": 0.45,
+   "timing": 0.0,
+   "test_origins": 21,
+   "catch not held": 17,
+   "not below the point": 2,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "Stock SMART:12005": {
+   "name": "Oblique-banded snapper - American Samoa",
+   "kappa": 0.25,
+   "timing": 0.0,
+   "test_origins": 21,
+   "below the point, low side": 3,
+   "catch not held": 16,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "Stock SMART:12007": {
+   "name": "Black jack - American Samoa",
+   "kappa": 0.35,
+   "timing": 0.0,
+   "test_origins": 21,
+   "not below the point": 7,
+   "catch not held": 12,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "Stock SMART:12011": {
+   "name": "Yellow-edged lyretail - American Samoa",
+   "kappa": 0.7,
+   "timing": 0.0,
+   "test_origins": 21,
+   "catch not held": 18,
+   "not below the point": 1,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "Stock SMART:12013": {
+   "name": "Spotcheek emperor - American Samoa",
+   "kappa": 0.3,
+   "timing": 0.0,
+   "test_origins": 21,
+   "catch not held": 19,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "Stock SMART:12215": {
+   "name": "Common bluestripe snapper - American Samoa",
+   "kappa": 0.0,
+   "timing": 0.0,
+   "test_origins": 21,
+   "catch not held": 17,
+   "no draw on the level (kappa 0)": 2,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "Stock SMART:12809": {
+   "name": "Hogfish - Florida Keys / East Florida",
+   "kappa": 0.0,
+   "timing": 0.0,
+   "test_origins": 11,
+   "no draw on the level (kappa 0)": 2,
+   "catch not held": 7,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  },
+  "Stock SMART:14516": {
+   "name": "Pacific Coast Blackspotted and Rougheye Rockfish Complex",
+   "kappa": 0.8,
+   "timing": 0.0,
+   "test_origins": 41,
+   "catch not held": 25,
+   "high side of the peak": 6,
+   "below the point, low side": 8,
+   "no t0 - 1 or t0 + 3 in the run": 2
+  }
+ },
+ "compared": {
+  "ICES SAG:anf.27.3a46": {
+   "episodes": 27,
+   "short": 16,
+   "meets": 11,
+   "short_falls": 0.75,
+   "meets_falls": 0.09090909090909091,
+   "C1_within_stock": 0.6590909090909091
+  },
+  "ICES SAG:cod.27.1-2.coastN": {
+   "episodes": 4,
+   "short": 2,
+   "meets": 2,
+   "short_falls": 0.5,
+   "meets_falls": 1.0,
+   "C1_within_stock": 0.0
+  },
+  "ICES SAG:ghl.27.561214": {
+   "episodes": 11,
+   "short": 4,
+   "meets": 7,
+   "short_falls": 0.5,
+   "meets_falls": 0.2857142857142857,
+   "C1_within_stock": -0.30000000000000004
+  },
+  "ICES SAG:pol.27.67": {
+   "episodes": 20,
+   "short": 11,
+   "meets": 9,
+   "short_falls": 0.8181818181818182,
+   "meets_falls": 0.5555555555555556,
+   "C1_within_stock": 0.21892189218921893
+  },
+  "Stock SMART:11999": {
+   "episodes": 2,
+   "short": 2,
+   "meets": 0,
+   "short_falls": 1.0,
+   "meets_falls": null,
+   "C1_within_stock": null
+  },
+  "Stock SMART:12005": {
+   "episodes": 3,
+   "short": 0,
+   "meets": 3,
+   "short_falls": null,
+   "meets_falls": 0.0,
+   "C1_within_stock": null
+  },
+  "Stock SMART:14516": {
+   "episodes": 8,
+   "short": 4,
+   "meets": 4,
+   "short_falls": 0.75,
+   "meets_falls": 0.0,
+   "C1_within_stock": 0.6666666666666666
+  }
+ },
+ "bootstrap": {
+  "resamples": 2000,
+  "share_at_or_below_zero": 0.0545,
+  "share_exactly_zero": 0.005,
+  "share_below_zero": 0.0495,
+  "median": 0.3788521404842988
+ },
+ "kappa_zero": {
+  "stocks": [
+   "ICES SAG:ane.27.9aS",
+   "ICES SAG:ank.27.78abd",
+   "ICES SAG:ank.27.8c9a",
+   "Stock SMART:12215",
+   "Stock SMART:12809"
+  ],
+  "C1_with_them_at_kappa_1": {
+   "difference": 0.3405716513225026,
+   "lower_95": -0.13461538461538464,
+   "episodes": {
+    "True": 36,
+    "False": 28
+   },
+   "stocks_compared": 6,
+   "verdict": "failed"
+  },
+  "C2_with_them_at_kappa_1": {
+   "difference": 0.3111650485436893,
+   "lower_95": -0.12820512820512822,
+   "episodes": {
+    "True": 27,
+    "False": 20
+   },
+   "stocks_compared": 4,
+   "verdict": "not testable"
+  }
+ }
+}

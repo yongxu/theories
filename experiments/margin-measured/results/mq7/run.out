@@ -1,0 +1,512 @@
+{
+ "stocks": {
+  "SSB | primary": 21,
+  "TB | control": 3,
+  "TB | other": 2,
+  "survey | other": 5
+ },
+ "excluded": {
+  "ICES SAG | SSB | control | short": 1,
+  "ICES SAG | SSB | primary | short": 3,
+  "Stock SMART | TB | other | short": 1
+ },
+ "verdicts": {
+  "C1": "failed",
+  "C2": "not testable"
+ },
+ "SSB | primary | summary": {
+  "stocks": 21,
+  "episodes": 140,
+  "below_low": 75,
+  "below_low_stocks": 7,
+  "C1": {
+   "difference": 0.38782922457893676,
+   "lower_95": 0.0,
+   "episodes": {
+    "True": 35,
+    "False": 27
+   },
+   "stocks_compared": 5,
+   "verdict": "failed"
+  },
+  "C2": {
+   "difference": 0.3111650485436893,
+   "lower_95": -0.12820512820512822,
+   "episodes": {
+    "True": 27,
+    "False": 20
+   },
+   "stocks_compared": 4,
+   "verdict": "not testable"
+  },
+  "C2_discordant": {
+   "short_level_rose": 7,
+   "meets_level_fell": 7
+  },
+  "falls_short_meets": [
+   0.7435897435897436,
+   0.2777777777777778
+  ],
+  "C1_pooled_level_strata": {
+   "difference": 0.4623482337586509,
+   "lower_95": 0.08376963350785344,
+   "episodes": {
+    "True": 39,
+    "False": 36
+   },
+   "stocks_compared": 7,
+   "verdict": "passed"
+  },
+  "C3_reported": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C1_k5": {
+   "difference": 0.06577851790174853,
+   "lower_95": -0.5,
+   "episodes": {
+    "True": 20,
+    "False": 13
+   },
+   "stocks_compared": 4,
+   "verdict": "not testable"
+  }
+ },
+ "SSB | primary | at f = 0": {
+  "C1": {
+   "difference": 0.3643280198454618,
+   "lower_95": -0.08661959703805751,
+   "episodes": {
+    "True": 36,
+    "False": 26
+   },
+   "stocks_compared": 5,
+   "verdict": "failed"
+  },
+  "C2": {
+   "difference": 0.3324688796680498,
+   "lower_95": -0.15151515151515155,
+   "episodes": {
+    "True": 26,
+    "False": 19
+   },
+   "stocks_compared": 3,
+   "verdict": "not testable"
+  }
+ },
+ "SSB | primary | Stock SMART": {
+  "stocks": 11,
+  "episodes": 33,
+  "below_low": 13,
+  "below_low_stocks": 3,
+  "C1": {
+   "difference": 0.6666666666666666,
+   "lower_95": 0.6666666666666666,
+   "episodes": {
+    "True": 3,
+    "False": 2
+   },
+   "stocks_compared": 1,
+   "verdict": "not testable"
+  },
+  "C2": {
+   "difference": 0.7142857142857143,
+   "lower_95": 0.7142857142857143,
+   "episodes": {
+    "True": 3,
+    "False": 2
+   },
+   "stocks_compared": 1,
+   "verdict": "not testable"
+  },
+  "C2_discordant": {
+   "short_level_rose": 2,
+   "meets_level_fell": 1
+  }
+ },
+ "SSB | primary | ICES SAG": {
+  "stocks": 10,
+  "episodes": 107,
+  "below_low": 62,
+  "below_low_stocks": 4,
+  "C1": {
+   "difference": 0.3620580112288163,
+   "lower_95": -0.13636363636363638,
+   "episodes": {
+    "True": 32,
+    "False": 25
+   },
+   "stocks_compared": 4,
+   "verdict": "not testable"
+  },
+  "C2": {
+   "difference": 0.24029680365296807,
+   "lower_95": -0.15151515151515152,
+   "episodes": {
+    "True": 24,
+    "False": 18
+   },
+   "stocks_compared": 3,
+   "verdict": "not testable"
+  },
+  "C2_discordant": {
+   "short_level_rose": 5,
+   "meets_level_fell": 6
+  }
+ },
+ "TB | control | summary": {
+  "stocks": 3,
+  "episodes": 21,
+  "below_low": 5,
+  "below_low_stocks": 1,
+  "C1": {
+   "difference": 0.0,
+   "lower_95": 0.0,
+   "episodes": {
+    "True": 1,
+    "False": 2
+   },
+   "stocks_compared": 1,
+   "verdict": "not testable"
+  },
+  "C2": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2_discordant": {
+   "short_level_rose": 0,
+   "meets_level_fell": 0
+  },
+  "falls_short_meets": [
+   1.0,
+   1.0
+  ],
+  "C1_pooled_level_strata": {
+   "difference": 0.0,
+   "lower_95": 0.0,
+   "episodes": {
+    "True": 1,
+    "False": 4
+   },
+   "stocks_compared": 1,
+   "verdict": "not testable"
+  },
+  "C3_reported": {
+   "difference": 0.7238805970149255,
+   "lower_95": 0.7238805970149255,
+   "episodes": {
+    "True": 5,
+    "False": 11
+   },
+   "stocks_compared": 1,
+   "verdict": "not testable"
+  },
+  "C1_k5": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  }
+ },
+ "TB | control | at f = 0": {
+  "C1": {
+   "difference": 0.0,
+   "lower_95": 0.0,
+   "episodes": {
+    "True": 1,
+    "False": 2
+   },
+   "stocks_compared": 1,
+   "verdict": "not testable"
+  },
+  "C2": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  }
+ },
+ "TB | control | Stock SMART": {
+  "stocks": 3,
+  "episodes": 21,
+  "below_low": 5,
+  "below_low_stocks": 1,
+  "C1": {
+   "difference": 0.0,
+   "lower_95": 0.0,
+   "episodes": {
+    "True": 1,
+    "False": 2
+   },
+   "stocks_compared": 1,
+   "verdict": "not testable"
+  },
+  "C2": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2_discordant": {
+   "short_level_rose": 0,
+   "meets_level_fell": 0
+  }
+ },
+ "TB | other | summary": {
+  "stocks": 2,
+  "episodes": 9,
+  "below_low": 0,
+  "below_low_stocks": 0,
+  "C1": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2_discordant": {
+   "short_level_rose": 0,
+   "meets_level_fell": 0
+  },
+  "falls_short_meets": [
+   null,
+   null
+  ],
+  "C1_pooled_level_strata": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C3_reported": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C1_k5": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  }
+ },
+ "TB | other | at f = 0": {
+  "C1": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  }
+ },
+ "TB | other | Stock SMART": {
+  "stocks": 2,
+  "episodes": 9,
+  "below_low": 0,
+  "below_low_stocks": 0,
+  "C1": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2_discordant": {
+   "short_level_rose": 0,
+   "meets_level_fell": 0
+  }
+ },
+ "survey | other | summary": {
+  "stocks": 5,
+  "episodes": 24,
+  "below_low": 0,
+  "below_low_stocks": 0,
+  "C1": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2_discordant": {
+   "short_level_rose": 0,
+   "meets_level_fell": 0
+  },
+  "falls_short_meets": [
+   null,
+   null
+  ],
+  "C1_pooled_level_strata": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C3_reported": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C1_k5": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  }
+ },
+ "survey | other | at f = 0": {
+  "C1": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  }
+ },
+ "survey | other | Stock SMART": {
+  "stocks": 5,
+  "episodes": 24,
+  "below_low": 0,
+  "below_low_stocks": 0,
+  "C1": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2": {
+   "difference": null,
+   "lower_95": null,
+   "episodes": {
+    "True": 0,
+    "False": 0
+   },
+   "stocks_compared": 0,
+   "verdict": "not testable"
+  },
+  "C2_discordant": {
+   "short_level_rose": 0,
+   "meets_level_fell": 0
+  }
+ }
+}
+python3 -I mq7.py test $SP/data/stocksmart $SP/data/sag  7.42s user 0.14s system 96% cpu 7.803 total
