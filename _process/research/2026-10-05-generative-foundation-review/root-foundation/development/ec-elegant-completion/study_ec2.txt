@@ -30,6 +30,10 @@ Board item EC, its second step ([plan](development/ec-elegant-completion/PLAN.md
 
 **Evidence.** The checker run `@RECEIPT@` passed with every axiom report empty. The connectivity check and the measure are recorded below.
 
+**The measure.** Counted per row, as `measure.py` reports, 67 of the 126 central declarations rest on no master law, against 74 after EC1 (`after-ec2.json`).
+- Six of the seven come from the derivation. The frontier laws `Web.frontier_broken`, `Web.frontier_breaks_below` and `Web.frontier_keeps_stepwise` each stand in two rows, alignment and degeneration, and now rest on balance through `Optimum.level_add_drawn_of_within`.
+- The seventh comes from the measure. `Listed.coming_of_ceasing` already used `balance_over_stretch_on`, which counts as an anchor of the balance law from this step on.
+
 **Boundary.** This is a restructuring of proofs and a measurement of Lean dependency, and it changes no record's claim. The measure counts `balance_over_stretch_on` among the balance law's anchors from this step on.
 
 **Output → input.** EC3 (finite runs, on LC3's `Amounts.FallsStop`), EC4 (the ethics as closure and order) and EC5 (the statement and the measure in the connectivity run) build on the frame's closure (EC1) and the prelude's stretch balance (EC2).
