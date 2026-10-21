@@ -39,6 +39,15 @@
       "plan_entry": "drafts/2026-10-10-opening/OPENING-V10.md"
     },
     {
+      "old_path": "drafts/2026-10-10-opening/OPENING-V11.md",
+      "new_path": "drafts/2026-10-10-opening/history/OPENING-V11.md",
+      "sha256": "9cd50ab55e4f7e9884b4827ac42bba523f2ad55c2d2fa917cc018090cd37cd07",
+      "blob": "c213e99ef34ac943588ab8ebc75877427bfc17e5",
+      "batch": "opening-v11",
+      "reason": "frozen: the applied version 11 of the opening (22 October 2026)",
+      "plan_entry": "drafts/2026-10-10-opening/OPENING-V11.md"
+    },
+    {
       "old_path": "drafts/2026-10-10-opening/OPENING-V2.md",
       "new_path": "drafts/2026-10-10-opening/history/OPENING-V2.md",
       "sha256": "3e767a2b36245a7b18f414ad9df00ffcb347380236c7e35120bec2ef3b07808c",

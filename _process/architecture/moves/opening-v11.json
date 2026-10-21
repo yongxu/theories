@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "batch": "opening-v11",
+  "date": "2026-10-21T21:31:54+00:00",
+  "base_commit": "3d06b4b5c13cfa3ed8b2c26395dca6ffc5a80c16",
+  "tool": "tools/research/moves.py",
+  "files": [
+    {
+      "old_path": "drafts/2026-10-10-opening/OPENING-V11.md",
+      "new_path": "drafts/2026-10-10-opening/history/OPENING-V11.md",
+      "sha256": "9cd50ab55e4f7e9884b4827ac42bba523f2ad55c2d2fa917cc018090cd37cd07",
+      "blob": "c213e99ef34ac943588ab8ebc75877427bfc17e5",
+      "reason": "frozen: the applied version 11 of the opening (22 October 2026)",
+      "plan_entry": "drafts/2026-10-10-opening/OPENING-V11.md"
+    }
+  ],
+  "keep_references": false,
+  "rewritten": [],
+  "history_roots": [
+    "drafts/2026-10-10-opening/history"
+  ],
+  "generated_pages_to_rerender": [],
+  "verification_errors": []
+}
