@@ -1,6 +1,6 @@
 ## @N@. One closure: the closure of a relation at the frame (EC1)
 
-Board item EC, its first step ([Ren, 21 October 2026](../../../sources/15-codex-theory-conversations/2026-10-21-aim-elegant-completion.md): “aim elegant completion”; plan `development/ec-elegant-completion/PLAN.md`). Core receipt `@RECEIPT@`.
+Board item EC, its first step ([Ren, 21 October 2026](../../../../sources/15-codex-theory-conversations/2026-10-21-aim-elegant-completion.md): “aim elegant completion”; plan `development/ec-elegant-completion/PLAN.md`). Core receipt `@RECEIPT@`.
 
 **Why.**
 - The criterion K1–K7 is met, and it does not measure elegance.
@@ -46,6 +46,8 @@ Board item EC, its first step ([Ren, 21 October 2026](../../../sources/15-codex-
   - the time-ordered chains need a closure over events, not formations.
 
 **Evidence.** The checker run `@RECEIPT@` passed with every axiom report empty. The connectivity check and the measure are recorded below.
+
+**The measure.** On the landed tree, with lumping counted (anchor `GoAlikeUnder`, proposed by line A for LU1), 73 of the 125 central declarations rest on no master law, against 75 on `c03c85f00`: `Flow.beyond_gives_nothing` and `Valuation.significant_iff` now rest on the one closure (`development/ec-elegant-completion/after-ec1.json`). The defined notions in their statements stay 313, since no statement changed.
 
 **Boundary.** This is a measurement of Lean dependency and a restructuring of proofs, and it changes no record's claim. The measure's master laws are candidates, adopted by this study, and the measure judges no statement's meaning. Elegance is not a criterion of K1–K7.
 
