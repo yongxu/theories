@@ -1,0 +1,310 @@
+{
+  "schema_version": 2,
+  "id": "regime-point-under-adjusting-giving",
+  "title": {
+    "en": "The regime's point under giving that adjusts",
+    "zh": "所给调整下的体制之点"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T08:56:29+00:00",
+  "statement": {
+    "en": "Where giving adjusts, reading what is left and the recent giving, every rest of the state at or above the draw is the regime's if the adjustment rests at the draw where the regime gives it; the point decides the fate where recent giving lies on the level's side.",
+    "zh": "所给调整、读所剩与近来所给时，若调整在体制给出汲取处静于汲取，汲取及其上的每个静止状态都是体制的；近来所给在水平一侧时，此点决定命运。"
+  },
+  "laws": [
+    {
+      "en": "A condition whose giving adjusts has as its state its level x and its recent giving r; the draw H takes first, and the giving is a law A of what is left and of the recent giving: the next state is (x - H + A (x - H) r, A (x - H) r). The regime's step is the case A e r = g e, along every run its level the regime's run; the frozen rest is the case A e r = r, which lies between the recent and the regime's giving.",
+      "zh": "所给调整的条件，其状态是水平 x 与近来所给 r；汲取 H 先取，所给是所剩与近来所给之律 A：下一状态为 (x - H + A (x - H) r, A (x - H) r)。体制之步是 A e r = g e 的情形，沿每一运行其水平即体制的运行；冻结之静是 A e r = r 的情形，介于近来所给与体制所给之间。",
+      "declarations": [
+        "Becoming.RegimeMargin.Adjusted.step",
+        "Becoming.RegimeMargin.Adjusted.StaysShort",
+        "Becoming.RegimeMargin.Adjusted.StaysMet",
+        "Becoming.RegimeMargin.Adjusted.RestsAtDraw",
+        "Becoming.RegimeMargin.Adjusted.FromNothing",
+        "Becoming.RegimeMargin.Adjusted.Keeps",
+        "Becoming.RegimeMargin.Adjusted.Between",
+        "Becoming.RegimeMargin.Adjusted.Settles",
+        "Becoming.RegimeMargin.Adjusted.orbit_regime",
+        "Becoming.RegimeMargin.Adjusted.regime_staysShort",
+        "Becoming.RegimeMargin.Adjusted.regime_staysMet",
+        "Becoming.RegimeMargin.Adjusted.regime_fromNothing",
+        "Becoming.RegimeMargin.Adjusted.regime_keeps",
+        "Becoming.RegimeMargin.Adjusted.frozen_between"
+      ]
+    },
+    {
+      "en": "Where A rests at the draw exactly where the regime gives the draw, a state at or above the draw is left as it is exactly where its recent giving is the draw and the regime's step leaves its level, and its run stays where it started exactly where the regime's run from its level does; every giving between the recent and the regime's that moves wherever it differs from the regime's has that property.",
+      "zh": "A 恰在体制给出汲取处静于汲取时，汲取及其上的状态恰在其近来所给为汲取且体制之步不动其水平时不动，其运行恰在体制自其水平的运行停留时停留于起点；介于近来所给与体制所给之间、凡与体制所给不同处皆移动的每个所给都有此性质。",
+      "declarations": [
+        "Becoming.RegimeMargin.Adjusted.rest_iff",
+        "Becoming.RegimeMargin.Adjusted.rests_iff",
+        "Becoming.RegimeMargin.Adjusted.frozen_rests",
+        "Becoming.RegimeMargin.Adjusted.Between.restsAtDraw",
+        "Becoming.RegimeMargin.Adjusted.Between.rests_iff"
+      ]
+    },
+    {
+      "en": "Below the point of no return, with the recent giving short of the draw and A short of it where the recent and the regime's giving are, a positive level falls at every step and is nothing after as many steps as it stood where A gives nothing from nothing, and stays nothing; whatever A gives from nothing, with y positive, the level is at most the draw from x - H steps on.",
+      "zh": "在不可回返点之下，近来所给不足汲取、且近来所给与体制所给皆不足处 A 亦不足时，正的水平每步下降，在 A 无中不生有时于其所立的步数之后为无并保持为无；无论 A 自无给出什么，y 为正时，自 x - H 步起水平至多为汲取。",
+      "declarations": [
+        "Becoming.RegimeMargin.Adjusted.draw_pos",
+        "Becoming.RegimeMargin.Adjusted.left_falls",
+        "Becoming.RegimeMargin.Adjusted.left_below",
+        "Becoming.RegimeMargin.Adjusted.step_below",
+        "Becoming.RegimeMargin.Adjusted.from_zero",
+        "Becoming.RegimeMargin.Adjusted.orbit_bound",
+        "Becoming.RegimeMargin.Adjusted.ends_below",
+        "Becoming.RegimeMargin.Adjusted.stays_ended",
+        "Becoming.RegimeMargin.Adjusted.left_bound",
+        "Becoming.RegimeMargin.Adjusted.taken_whole"
+      ]
+    },
+    {
+      "en": "At or above the point, with the recent giving meeting the draw and A meeting it where the recent and the regime's giving do, the level never falls below its start; the point is exact on the state: where the recent giving falls short of the draw exactly where the level is below H + y, the condition ends exactly from below it, for every giving between the recent and the regime's too.",
+      "zh": "在此点及其上，近来所给满足汲取、且两者皆满足处 A 亦满足时，水平永不低于其起点；此点在状态上是确切的：近来所给恰在水平低于 H + y 时不足汲取者，条件恰在起点低于它时终结，对介于两者之间的每个所给亦然。",
+      "declarations": [
+        "Becoming.RegimeMargin.Adjusted.step_holds",
+        "Becoming.RegimeMargin.Adjusted.holds",
+        "Becoming.RegimeMargin.Adjusted.holds_from",
+        "Becoming.RegimeMargin.Adjusted.ends_iff_below",
+        "Becoming.RegimeMargin.Adjusted.Between.staysShort",
+        "Becoming.RegimeMargin.Adjusted.Between.staysMet",
+        "Becoming.RegimeMargin.Adjusted.Between.ends_iff_below"
+      ]
+    },
+    {
+      "en": "Witnesses: giving gated at two under a draw of three, the point five. Moving one unit a step toward the regime's giving, from four with recent giving six the level is at least seven from the second step on, and from five with recent giving nothing it is nothing, where the regime's step ends four and holds five; the frozen rest's run stays at four with recent giving three.",
+      "zh": "见证：门限于二的所给、汲取三，此点为五。每步向体制所给移动一单位时，自四、近来所给六，第二步起水平至少为七；自五、近来所给为无，则为无；而体制之步终结四、维持五；冻结之静自四、近来所给三的运行停留于四。",
+      "declarations": [
+        "Becoming.RegimeMargin.Crossing.giving",
+        "Becoming.RegimeMargin.Crossing.toward",
+        "Becoming.RegimeMargin.Crossing.fromNothing",
+        "Becoming.RegimeMargin.Crossing.root",
+        "Becoming.RegimeMargin.Crossing.meets_from",
+        "Becoming.RegimeMargin.Crossing.toward_between",
+        "Becoming.RegimeMargin.Crossing.toward_settles",
+        "Becoming.RegimeMargin.Crossing.crosses",
+        "Becoming.RegimeMargin.Crossing.frozen_stays"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Whole-number amounts and discrete steps; one condition; the draw taken first, as much as there is; the state the level and one recent giving, with no further hidden state; RM1's premises on the regime's giving (Short, Meets, Keeps) and each law's own premises on the adjustment (RestsAtDraw, StaysShort, StaysMet, FromNothing, Keeps, Between, Settles) as hypotheses.",
+      "zh": "不加公理。整数量与离散步；一个条件；汲取先取，有多少取多少；状态是水平与一个近来所给，无其他隐藏状态；RM1 关于体制所给的前提（Short、Meets、Keeps）与各律关于调整的前提（RestsAtDraw、StaysShort、StaysMet、FromNothing、Keeps、Between、Settles）为假设。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a run comes to rest, or how fast: the laws say where a run can rest and which fates the state decides, not that the state converges.",
+      "zh": "运行会静止，或多快静止：这些规律说运行能在何处静止、状态决定哪些命运，不说状态收敛。",
+      "kind": "scope"
+    },
+    {
+      "en": "The threshold in the plane of level and recent giving where recent giving lies on the other side of the draw; a state with a further lag; coupled conditions.",
+      "zh": "近来所给在汲取另一侧时，水平与近来所给之平面上的阈值；带再一个滞后的状态；相互耦合的条件。",
+      "kind": "scope"
+    },
+    {
+      "en": "That MQ3's failed check F3 is explained: the reading that the point separates fates on the state, not the level alone, is post hoc and untested.",
+      "zh": "MQ3 未通过的检验 F3 已被解释：此点按状态而非单按水平区分命运这一读法是事后的，未经检验。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "detail": {
+        "en": "Crossing.frozen_stays: the frozen rest lies between the recent and the regime's giving, yet its run from four with recent giving three stays at four, where the regime's step ends the condition; Crossing.crosses: with recent giving on the other side, five, the point, ends and four, below it, holds.",
+        "zh": "Crossing.frozen_stays：冻结之静介于近来所给与体制所给之间，但其自四、近来所给三的运行停留于四，而体制之步终结此条件；Crossing.crosses：近来所给在另一侧时，五（此点）终结，四（其下）维持。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T084948.266489Z): the 45 declarations Becoming.RegimeMargin gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 299; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T084948.266489Z）：Becoming.RegimeMargin 新增的 45 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 299 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Whether and how fast a run comes to rest; the threshold curve in the plane of level and recent giving; a state with a further lag; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often than those with it met; an independent review.",
+    "zh": "运行是否与多快静止；水平与近来所给之平面上的阈值曲线；带再一个滞后的状态；在未经任何分析读过的存量上冻结检验：近来所给不足捕捞的点下片段是否比满足者更常下降；独立审查。"
+  },
+  "correspondence": {
+    "en": "Partial adjustment, a quantity moving at a rate toward its target, rests where the target does (Nerlove 1958); delay-difference models share the equilibria of their yield curve (Deriso 1980; Schnute 1985); with a second state variable a threshold is a curve that transients cross (Hastings 2004). On the spine, exact over every adjustment with named properties: the rest law needs that the adjustment rests at the draw where the regime does, the fates that giving stays on the side of the draw where the recent and the regime's giving lie, each shown needed by a witness. MQ5's law, under a standing draw met in full, is A e r = (phi - lam) r + (1 - phi) g e + lam H, phi = 0.96, lam = 0.55: over the reals it rests at the draw where the regime does and keeps both sides, but is not between; a correspondence by premises.",
+    "zh": "部分调整（一个量按速率向其目标移动）静于目标所静之处（Nerlove 1958）；延迟差分模型与其产量曲线共有平衡（Deriso 1980；Schnute 1985）；有第二个状态变量时，阈值是瞬态可越过的曲线（Hastings 2004）。在脊柱上，对具名性质的每个调整都精确：静止之律需调整在体制给出汲取处静于汲取，命运之律需所给保持在近来所给与体制所给所在的汲取一侧，各由见证表明不可少。MQ5 之律在全额满足的常设汲取下为 A e r = (phi - lam) r + (1 - phi) g e + lam H（phi = 0.96，lam = 0.55）：在实数上它在体制处静于汲取并保持两侧，但不在两者之间；这是按前提的对应。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+  "aliases": [
+    "the regime's point under giving that adjusts",
+    "giving that adjusts",
+    "rests of an adjusting giving",
+    "所给调整下的体制之点",
+    "Becoming.RegimeMargin.Adjusted.rests_iff",
+    "Becoming.RegimeMargin.Adjusted.ends_iff_below",
+    "Becoming.RegimeMargin.Crossing.crosses"
+  ],
+  "dependencies": [
+    {
+      "id": "margin-of-a-regime",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "RM1's laws on ending and holding restated over every adjustment of giving; they are now the regime's case, and RM1's premises on the regime's giving are reused.",
+        "zh": "RM1 关于终结与维持的规律对每个所给调整重述；它们现为体制的情形，RM1 关于体制所给的前提被沿用。"
+      },
+      "interface": {
+        "output": {
+          "en": "The regime's step, Short, Meets, Keeps and Root, and the point of no return H + y.",
+          "zh": "体制之步、Short、Meets、Keeps 与 Root，以及不可回返点 H + y。"
+        },
+        "input": {
+          "en": "The same point on the state of level and recent giving, under any adjustment.",
+          "zh": "同一点在水平与近来所给的状态上，在任何调整下。"
+        },
+        "conditions": {
+          "en": "Whole-number amounts; the draw taken first.",
+          "zh": "整数量；汲取先取。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "margin-of-a-regime",
+      "detail": {
+        "en": "With giving read off the level alone, the point of no return is exact on the level; with giving that adjusts, it is exact on the state where recent giving lies on the level's side, and every rest at or above the draw is the regime's.",
+        "zh": "所给只读自水平时，不可回返点在水平上是确切的；所给调整时，近来所给在水平一侧处它在状态上是确切的，汲取及其上的每个静止都是体制的。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RegimeMargin.Adjusted.Between",
+        "Becoming.RegimeMargin.Adjusted.Between.ends_iff_below",
+        "Becoming.RegimeMargin.Adjusted.Between.restsAtDraw",
+        "Becoming.RegimeMargin.Adjusted.Between.rests_iff",
+        "Becoming.RegimeMargin.Adjusted.Between.staysMet",
+        "Becoming.RegimeMargin.Adjusted.Between.staysShort",
+        "Becoming.RegimeMargin.Adjusted.FromNothing",
+        "Becoming.RegimeMargin.Adjusted.Keeps",
+        "Becoming.RegimeMargin.Adjusted.RestsAtDraw",
+        "Becoming.RegimeMargin.Adjusted.Settles",
+        "Becoming.RegimeMargin.Adjusted.StaysMet",
+        "Becoming.RegimeMargin.Adjusted.StaysShort",
+        "Becoming.RegimeMargin.Adjusted.draw_pos",
+        "Becoming.RegimeMargin.Adjusted.ends_below",
+        "Becoming.RegimeMargin.Adjusted.ends_iff_below",
+        "Becoming.RegimeMargin.Adjusted.from_zero",
+        "Becoming.RegimeMargin.Adjusted.frozen_between",
+        "Becoming.RegimeMargin.Adjusted.frozen_rests",
+        "Becoming.RegimeMargin.Adjusted.holds",
+        "Becoming.RegimeMargin.Adjusted.holds_from",
+        "Becoming.RegimeMargin.Adjusted.left_below",
+        "Becoming.RegimeMargin.Adjusted.left_bound",
+        "Becoming.RegimeMargin.Adjusted.left_falls",
+        "Becoming.RegimeMargin.Adjusted.orbit_bound",
+        "Becoming.RegimeMargin.Adjusted.orbit_regime",
+        "Becoming.RegimeMargin.Adjusted.regime_fromNothing",
+        "Becoming.RegimeMargin.Adjusted.regime_keeps",
+        "Becoming.RegimeMargin.Adjusted.regime_staysMet",
+        "Becoming.RegimeMargin.Adjusted.regime_staysShort",
+        "Becoming.RegimeMargin.Adjusted.rest_iff",
+        "Becoming.RegimeMargin.Adjusted.rests_iff",
+        "Becoming.RegimeMargin.Adjusted.stays_ended",
+        "Becoming.RegimeMargin.Adjusted.step",
+        "Becoming.RegimeMargin.Adjusted.step_below",
+        "Becoming.RegimeMargin.Adjusted.step_holds",
+        "Becoming.RegimeMargin.Adjusted.taken_whole",
+        "Becoming.RegimeMargin.Crossing.crosses",
+        "Becoming.RegimeMargin.Crossing.fromNothing",
+        "Becoming.RegimeMargin.Crossing.frozen_stays",
+        "Becoming.RegimeMargin.Crossing.giving",
+        "Becoming.RegimeMargin.Crossing.meets_from",
+        "Becoming.RegimeMargin.Crossing.root",
+        "Becoming.RegimeMargin.Crossing.toward",
+        "Becoming.RegimeMargin.Crossing.toward_between",
+        "Becoming.RegimeMargin.Crossing.toward_settles",
+        "Becoming.RegimeMargin.FromNothing",
+        "Becoming.RegimeMargin.Keeps",
+        "Becoming.RegimeMargin.Meets",
+        "Becoming.RegimeMargin.Root",
+        "Becoming.RegimeMargin.Short",
+        "Becoming.RegimeMargin.ends_below",
+        "Becoming.RegimeMargin.ends_iff_below",
+        "Becoming.RegimeMargin.holds",
+        "Becoming.RegimeMargin.stays_ended",
+        "Becoming.RegimeMargin.step"
+      ],
+      "sha256": "125210cae87e7082f651e302106d562225e05ab2abaaeea67de2783eacb88312"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Law.orbit",
+        "Becoming.Law.orbit_add",
+        "Becoming.Law.orbit_mul"
+      ],
+      "sha256": "78c79cc4e644639a898d1615bcf77134e2d84bdfd7b720bced7acd8a41db2d9b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T084948.266489Z/verification.json",
+      "role": "receipt",
+      "sha256": "a4acb81da30e5d80f3ebc35353d1f9021a590a0bffdffc4311da59034ca0d76e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "46493e67b090dbd4087d363a1982f46c2f61c11b8f38c9aedbf7518aca8e2909"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "ab9d01eadc3541e66b0bab7cf335e590b70a10ff902551c96fe3a1f9992789d6"
+    },
+    {
+      "path": "experiments/margin-measured/README.md",
+      "role": "integration",
+      "sha256": "520b2ee845543b7f0d74f2534691fbf7941d8ee6fd04912a6f98d3dacc2b9a23"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "15f7b66b8f8537fe38d651251e47dca0290e0dfacfaa4ed25cb51326e1fa25ce"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T084948.266489Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T084948.266489Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Recurrence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (RM2), the regime's point over every adjustment of giving: RM1's laws on ending and holding hold over any law of what is left and of the recent giving, the regime's step the case; every rest at or above the draw is the regime's where the adjustment rests at the draw where the regime gives it; study section 299.",
+      "zh": "2026年10月21日：新增（RM2），每个所给调整下的体制之点：RM1 关于终结与维持的规律对所剩与近来所给之任一律成立，体制之步是其情形；调整在体制给出汲取处静于汲取时，汲取及其上的每个静止都是体制的；研究第 299 节。"
+    }
+  ]
+}

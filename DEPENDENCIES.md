@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-320 registered results: 300 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 803 curated edges join 273 results to the results they draw on.
+321 registered results: 301 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 804 curated edges join 274 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -193,6 +193,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [recurrence-without-decidedness][] ← <a id="recurrence-without-decidedness--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="recurrence-without-decidedness--space-and-its-parts"></a>[space-and-its-parts][]
 - [recurrent-chain-assembly][] ← <a id="recurrent-chain-assembly--material-preparation-output"></a>[material-preparation-output][] · <a id="recurrent-chain-assembly--growth-constrained-fragmentation"></a>[growth-constrained-fragmentation][]
 - [recurring-reference-revision][] ← <a id="recurring-reference-revision--consequence-revised-reference-plan"></a>[consequence-revised-reference-plan][] · <a id="recurring-reference-revision--process-and-frame-as-readings"></a>[process-and-frame-as-readings][]
+- [regime-point-under-adjusting-giving][] ← <a id="regime-point-under-adjusting-giving--margin-of-a-regime"></a>[margin-of-a-regime][]
 - [relata-counted-up-to-indiscernibility][] ← <a id="relata-counted-up-to-indiscernibility--listing-once-is-decided-identity"></a>[listing-once-is-decided-identity][]
 - [relational-reading-comparison][] ← <a id="relational-reading-comparison--relational-renewal-classification"></a>[relational-renewal-classification][]
 - [relative-position-is-zero-sum][] ← <a id="relative-position-is-zero-sum--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="relative-position-is-zero-sum--derived-extent-limits"></a>[derived-extent-limits][] · <a id="relative-position-is-zero-sum--whole-first-and-bounded-centers"></a>[whole-first-and-bounded-centers][]
@@ -435,6 +436,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [loss-beyond-a-region]: theories/becoming/results/records/loss-beyond-a-region.md
 [losses-of-the-sum-over-histories]: theories/becoming/results/records/losses-of-the-sum-over-histories.md
 [map-of-premises]: theories/becoming/results/records/map-of-premises.md
+[margin-of-a-regime]: theories/becoming/results/records/margin-of-a-regime.md
 [market-finite-support-obstruction]: theories/becoming/results/records/market-finite-support-obstruction.md
 [market-partial-correction-boundary]: theories/becoming/results/records/market-partial-correction-boundary.md
 [market-protected-continuation]: theories/becoming/results/records/market-protected-continuation.md
@@ -486,6 +488,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [recurrence-without-premise]: theories/becoming/results/records/recurrence-without-premise.md
 [recurrent-chain-assembly]: theories/becoming/results/records/recurrent-chain-assembly.md
 [recurring-reference-revision]: theories/becoming/results/records/recurring-reference-revision.md
+[regime-point-under-adjusting-giving]: theories/becoming/results/records/regime-point-under-adjusting-giving.md
 [relata-counted-up-to-indiscernibility]: theories/becoming/results/records/relata-counted-up-to-indiscernibility.md
 [relational-generative-comparison]: theories/becoming/results/records/relational-generative-comparison.md
 [relational-reading-comparison]: theories/becoming/results/records/relational-reading-comparison.md

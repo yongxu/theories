@@ -985,3 +985,23 @@ Evidence: the prior forms from memory, not reread; Lean in the record's receipt
 Boundary: AI check, one session; not an equilibrium: whether the others' rule is a best response, a mutual best response among several optimizers ranking courses and how optimizers come to one are not stated; the witness's law, rule and capacity chosen
 Integration: chapter §3.4, §7.1, §8.1 item 10 and the relation-to-known-results row 6
 ```
+
+<a id="adjusted-giving-check"></a>
+## A check: giving that adjusts (21 October 2026, RM2)
+
+An AI check (one session, 21 October), made while the Lean was written. It asks what RM1's margin of a regime and thesis T2 left open: whether the margin's laws need giving read off the level alone, and what an adjusting giving does to the point of no return. **Verdict: the mathematics is known in its kind. A partial adjustment rests where its target does, delay-difference models share the equilibria of their yield curve, and with a second state variable a threshold is a curve that transients cross. The spine's form is exact over every adjustment with named properties, not one rate. Every rest of the state at or above the draw is the regime's exactly where the adjustment rests at the draw where the regime gives it. The fates hold exactly where giving stays on the side of the draw where the recent and the regime's giving lie. A witness on the run shows each of these premises needed. That a run comes to rest is not stated.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Partial adjustment: a quantity moves at a fixed rate from where it was toward its target, and its rest points are the target's | Nerlove, *Distributed Lags and Demand Analysis for Agricultural and Other Commodities*, USDA Agriculture Handbook 141 (1958) (from memory) | Every rest of the state at or above the draw is the regime's for every adjustment resting at the draw where the regime gives it, on the run (`RegimeMargin.Adjusted.rests_iff`), so for every giving between the recent and the regime's that moves wherever it differs (`Adjusted.Between.rests_iff`); the frozen rest, a partial adjustment at rate nothing, rests everywhere at the draw, so the premise is needed (`Crossing.frozen_stays`) |
+| Delay-difference models: biomass dynamics carrying a level and a lagged recruitment, whose equilibria are those of the equilibrium yield curve | Deriso, Canadian Journal of Fisheries and Aquatic Sciences 37 (1980); Schnute, same journal 42 (1985) (from memory) | MQ5's law, under a standing draw met in full, is an adjustment of the recent giving toward a weighting of the regime's giving and the draw, which over the reals rests at the draw exactly where the regime gives it and keeps both sides, but is not between the recent and the regime's giving; a correspondence by premises, the Lean in whole numbers |
+| Transients: the state's own history carries it across thresholds over finite times; in a state of more than one variable a threshold is a curve, not a level | Hastings, "Transients: the key to long-term ecological understanding?", Trends in Ecology and Evolution 19 (2004) (from memory) | With the recent giving on the level's side of the draw the level's point decides the fate (`Adjusted.ends_below`, `Adjusted.holds`, `Adjusted.ends_iff_below`); on the other side the point is crossed both ways (`Crossing.crosses`); the curve in the plane of level and recent giving is not stated |
+
+```text
+Result(s): new record regime-point-under-adjusting-giving (RM2, new laws of Becoming.RegimeMargin)
+Delta: RM1's laws hold over any adjustment of giving, a law of what is left and of the recent giving, the regime's step the case; every rest of the state at or above the draw is the regime's where the adjustment rests at the draw where the regime gives it; the fates hold with the recent giving on the level's side of the draw, and on the other side the point is crossed both ways
+Supplied premises / correspondence: whole-number amounts; the state the level and one recent giving; each law's premises on the adjustment; discrete steps. Correspondence: Nerlove 1958; Deriso 1980; Schnute 1985; Hastings 2004
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; whether and how fast a run comes to rest, a further lag and the threshold curve in the state's plane are not stated; StaysShort's need shown by reasoning only; the witnesses' giving and adjustment chosen
+Integration: chapter §2.3, thesis T2's standing and evidence, the record table
+```
