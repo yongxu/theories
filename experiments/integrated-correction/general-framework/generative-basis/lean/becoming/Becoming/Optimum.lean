@@ -182,11 +182,11 @@ it). The family `ds` is what couples in, `rest` the conditions beyond, listed ap
 * **An order weighting later draws less.** With the draw of the step from `t` weighted by `w t`,
   any weighting, what a course could draw at a step, with what it drew before, changes from one
   step to the next by what the level it leaves gains: that level with its renewal weighted at the
-  next step, against it held, weighted at this one (`Optimum.drawable_step`). So against an open
+  next step, against it held, weighted at this one (`Optimum.Next.drawable_step`). So against an open
   course from the start leaving nothing whose level at each step gains the most, no course draws
   more, weighted, and every optimum of every order rising with the weighted draw gains at each
   step what that course's level gains and leaves nothing weighted at the end
-  (`Optimum.weighted_le_of_gains`, `Optimum.frontier_gains_weighted`); that course is an optimum
+  (`Optimum.Next.weighted_le_of_gains`, `Optimum.frontier_gains_weighted`); that course is an optimum
   (`Optimum.weighted_frontier`), the course holding a level of greatest weighted gain a case
   (`Optimum.weighted_holding_frontier`), and every optimum breaks at the first step a dependence
   above every level of greatest weighted gain (`Optimum.frontier_below_weighted`,
@@ -198,7 +198,7 @@ it). The family `ds` is what couples in, `rest` the conditions beyond, listed ap
   (`Optimum.exhausting_frontier`); where nothing is given at nothing and some level within reach
   renews faster than the weighting falls, `w t y < w (t + 1) (y + R y)`, the course holding it
   outdraws every course ending the base at once, and no optimum stands at nothing after the first
-  step (`Optimum.ended_outdrawn`, `Optimum.frontier_leaves`, `Web.frontier_leaves`). The instance
+  step (`Optimum.Next.ended_outdrawn`, `Optimum.frontier_leaves`, `Web.frontier_leaves`). The instance
   `Holding.logistic_weighted`: under the logistic law, where one returns two for one, a weighting
   falling more than twofold at every step ends the source at once and breaks the dweller; one
   falling by less than half holds the source at one and breaks the dweller; at exactly twofold both
@@ -209,9 +209,9 @@ it). The family `ds` is what couples in, `rest` the conditions beyond, listed ap
   at least what any level does is the case (`Optimum.weighted_frontier`,
   `Optimum.frontier_gains_weighted`). Where the start lies below a level `y` and the next level
   rises with the level below `y`, the course rising as fast as what is given allows up to `y`
-  stands at each step at or above every open course below `y` (`Optimum.le_rise`); so where the
+  stands at each step at or above every open course below `y` (`Optimum.Next.le_rise`); so where the
   weighted gain rises with the level up to `y` and is greatest there, that course, leaving nothing
-  at the end, gains the most and is an optimum (`Optimum.rebuilding_gainsMost`,
+  at the end, gains the most and is an optimum (`Optimum.Next.rebuilding_gainsMost`,
   `Optimum.rebuilding_frontier`). Where the gain rises strictly below `y`, every optimum stands at
   its level at every step where that level is below `y`, drawing nothing at the step before
   (`Optimum.frontier_rebuilds`), and restores every dependence whose need that level meets
@@ -5816,79 +5816,7 @@ the step from `t` weighted by `w t`. -/
 def weightedOver (w R : Nat → Nat) (x : Nat → Nat) (n : Nat) : Nat :=
   Next.weighted w (fun _ z => z + R z) x n
 
-/-- What a course drew, weighted, before the step from `t`, with all it could draw at that step,
-its level there with what is given there, weighted by `w t`. -/
-def drawable (w R : Nat → Nat) (x : Nat → Nat) (t : Nat) : Nat :=
-  Next.drawable w (fun _ z => z + R z) x t
-
 variable {w R : Nat → Nat} {k s y m n : Nat}
-
-/-- **The weighted draw to the last step.** Where each step leaves at most the level with what is
-given, what a course draws across `n + 1` steps, weighted, with what it leaves weighted at the last
-step, is what it could draw at the `n`-th with what it drew before. -/
-theorem weighted_add_left {x : Nat → Nat} (within : ∀ t, x (t + 1) ≤ x t + R (x t)) (n : Nat) :
-    weightedOver w R x (n + 1) + w n * x (n + 1) = drawable w R x n :=
-  Next.weighted_add_left (G := fun _ z => z + R z) within n
-
-/-- **A step of the weighted draw.** What a course could draw at the step from `t + 1`, with what
-it drew before and the level it left there weighted by `w t`, is what it could draw at the step
-from `t`, with what it drew before, and that level with its renewal weighted by `w (t + 1)`. -/
-theorem drawable_step {x : Nat → Nat} (within : ∀ t, x (t + 1) ≤ x t + R (x t)) (t : Nat) :
-    drawable w R x (t + 1) + w t * x (t + 1) =
-      drawable w R x t + w (t + 1) * (x (t + 1) + R (x (t + 1))) :=
-  Next.drawable_step (G := fun _ z => z + R z) within t
-
-/-- **Against a course gaining the most.** Where each step of two courses from one start leaves
-at most the level with what is given, and at each step to the `n`-th the level the first leaves
-gains, weighted, at most what the level the second leaves gains (`w (t + 1)` on it with its renewal,
-against `w t` on it held), what the first could draw at each step to the `n`-th, with what it drew
-before, is at most what the second could. -/
-theorem drawable_le_of_gains {x h : Nat → Nat} (within : ∀ t, x (t + 1) ≤ x t + R (x t))
-    (withinH : ∀ t, h (t + 1) ≤ h t + R (h t)) (start : x 0 = h 0)
-    (gains : ∀ t, t < n → w (t + 1) * (x (t + 1) + R (x (t + 1))) + w t * h (t + 1) ≤
-      w (t + 1) * (h (t + 1) + R (h (t + 1))) + w t * x (t + 1)) :
-    ∀ t, t ≤ n → drawable w R x t ≤ drawable w R h t :=
-  Next.drawable_le_of_gains (G := fun _ z => z + R z) within withinH start gains
-
-/-- Where, besides, the level the first course leaves at some step before the `n`-th gains less
-than the second's, the first could draw less at every later step to the `n`-th. -/
-theorem drawable_lt_of_gains {x h : Nat → Nat} (within : ∀ t, x (t + 1) ≤ x t + R (x t))
-    (withinH : ∀ t, h (t + 1) ≤ h t + R (h t)) (start : x 0 = h 0)
-    (gains : ∀ t, t < n → w (t + 1) * (x (t + 1) + R (x (t + 1))) + w t * h (t + 1) ≤
-      w (t + 1) * (h (t + 1) + R (h (t + 1))) + w t * x (t + 1)) {j : Nat} (lt : j < n)
-    (short : w (j + 1) * (x (j + 1) + R (x (j + 1))) + w j * h (j + 1) <
-      w (j + 1) * (h (j + 1) + R (h (j + 1))) + w j * x (j + 1)) :
-    ∀ i, j + 1 + i ≤ n → drawable w R x (j + 1 + i) < drawable w R h (j + 1 + i) :=
-  Next.drawable_lt_of_gains (G := fun _ z => z + R z) within withinH start gains lt short
-
-/-- What a course leaving nothing at the last step draws, weighted, across `n + 1` steps is what it
-could draw at the `n`-th with what it drew before. -/
-theorem weighted_of_ends {h : Nat → Nat} (withinH : ∀ t, h (t + 1) ≤ h t + R (h t))
-    (ends : h (n + 1) = 0) : weightedOver w R h (n + 1) = drawable w R h n :=
-  Next.weighted_of_ends (G := fun _ z => z + R z) withinH ends
-
-/-- **No course outdraws, weighted, a course gaining the most and leaving nothing.** Where each
-step of two courses from one start leaves at most the level with what is given, the second leaves
-nothing at the last step, and at each step to the `n`-th the level the first leaves gains,
-weighted, at most what the second's gains, the first draws across `n + 1` steps, weighted, at most
-what the second does. -/
-theorem weighted_le_of_gains {x h : Nat → Nat} (within : ∀ t, x (t + 1) ≤ x t + R (x t))
-    (withinH : ∀ t, h (t + 1) ≤ h t + R (h t)) (start : x 0 = h 0) (ends : h (n + 1) = 0)
-    (gains : ∀ t, t < n → w (t + 1) * (x (t + 1) + R (x (t + 1))) + w t * h (t + 1) ≤
-      w (t + 1) * (h (t + 1) + R (h (t + 1))) + w t * x (t + 1)) :
-    weightedOver w R x (n + 1) ≤ weightedOver w R h (n + 1) :=
-  Next.weighted_le_of_gains (G := fun _ z => z + R z) within withinH start ends gains
-
-/-- Where, besides, the level the first course leaves at some step before the `n`-th gains less
-than the second's, or the first leaves something weighted at the last step, it draws less. -/
-theorem weighted_lt_of_gains {x h : Nat → Nat} (within : ∀ t, x (t + 1) ≤ x t + R (x t))
-    (withinH : ∀ t, h (t + 1) ≤ h t + R (h t)) (start : x 0 = h 0) (ends : h (n + 1) = 0)
-    (gains : ∀ t, t < n → w (t + 1) * (x (t + 1) + R (x (t + 1))) + w t * h (t + 1) ≤
-      w (t + 1) * (h (t + 1) + R (h (t + 1))) + w t * x (t + 1))
-    (short : (∃ j, j < n ∧ w (j + 1) * (x (j + 1) + R (x (j + 1))) + w j * h (j + 1) <
-      w (j + 1) * (h (j + 1) + R (h (j + 1))) + w j * x (j + 1)) ∨ 0 < w n * x (n + 1)) :
-    weightedOver w R x (n + 1) < weightedOver w R h (n + 1) :=
-  Next.weighted_lt_of_gains (G := fun _ z => z + R z) within withinH start ends gains short
 
 /-- **A course gaining the most against every open course.** At each step to the `n`-th the level
 `h` leaves gains, weighted, at least what the level any course open from `s` leaves there does. -/
@@ -5985,21 +5913,10 @@ theorem weighted_holding_frontier
     (long : 0 < n) :
     Frontier (OpenCourse R k s)
       (fun b a => weightedOver w R a (n + 1) < weightedOver w R b (n + 1)) (holding s y n) :=
-  Next.holding_frontier (G := fun _ z => z + R z) greatest reach drawsDown (fun _ =>
-    Nat.le_add_right y (R y)) (fun _ => holds) (fun _ => Nat.le_trans (Nat.le_of_eq (Nat.zero_add (R
-    0))) rests) long
-
-/-- Where the weighting falls at least as fast as every positive level renews, nothing gains at
-least what any level does. -/
-theorem outpaced_greatest (outpaced : ∀ t, t < n → ∀ z, 0 < z → w (t + 1) * (z + R z) ≤ w t * z) :
-    ∀ t, t < n → ∀ z, w (t + 1) * (z + R z) + w t * 0 ≤ w (t + 1) * (0 + R 0) + w t * z :=
-  Next.outpaced_greatest (G := fun _ z => z + R z) outpaced
-
-/-- Where the weighting falls faster than every positive level renews, every positive level gains
-less than nothing does. -/
-theorem outpaced_above (strictly : ∀ t, t < n → ∀ z, 0 < z → w (t + 1) * (z + R z) < w t * z) :
-    ∀ t, t < n → ∀ z, 1 ≤ z → w (t + 1) * (z + R z) + w t * 0 < w (t + 1) * (0 + R 0) + w t * z :=
-  Next.outpaced_above (G := fun _ z => z + R z) strictly
+  weighted_frontier (holding_open_at reach drawsDown holds rests long)
+    (holding_after (Nat.le_refl n))
+    (holding_gains (P := fun t v => ∀ z, w (t + 1) * (z + R z) + w t * v ≤
+      w (t + 1) * (v + R v) + w t * z) greatest)
 
 /-- **The course ending the base at once is an optimum** where the weighting falls at least as fast
 as every positive level renews, over a horizon of at least two steps, with a capacity covering the
@@ -6025,27 +5942,6 @@ theorem frontier_exhausts {better : (Nat → Nat) → (Nat → Nat) → Prop}
     (front : Frontier (OpenCourse R k s) better x) : ∀ t, t < n → x (t + 1) = 0 :=
   Next.frontier_exhausts (G := fun _ z => z + R z) rising strictly drawsDown (fun _ => Nat.le_trans
     (Nat.le_of_eq (Nat.zero_add (R 0))) rests) long front
-
-/-- **Ending the base at once is outdrawn by a level renewing faster than the weighting falls.**
-Where each step of a course from `s` leaves at most the level with what is given and the course
-stands at nothing at every step from the first to the `n`-th, and some `y` within the start with
-what is given there gains, weighted, more than nothing does at each step to the `n`-th, over a
-horizon of at least two steps, the course holding `y` and leaving nothing draws more, weighted,
-across `n + 1` steps. -/
-theorem ended_outdrawn {x : Nat → Nat} (within : ∀ t, x (t + 1) ≤ x t + R (x t))
-    (start : x 0 = s) (ended : ∀ t, t < n → x (t + 1) = 0) (reach : y ≤ s + R s)
-    (outgrows : ∀ t, t < n → w (t + 1) * (0 + R 0) + w t * y < w (t + 1) * (y + R y))
-    (long : 0 < n) :
-    weightedOver w R x (n + 1) < weightedOver w R (holding s y n) (n + 1) :=
-  Next.ended_outdrawn (G := fun _ z => z + R z) within start ended reach (fun _ => Nat.le_add_right
-    y (R y)) outgrows long
-
-/-- A course leaving at most the level with what is given stays at nothing after reaching it, where
-nothing is given at nothing. -/
-theorem stays_empty {x : Nat → Nat} (within : ∀ t, x (t + 1) ≤ x t + R (x t)) (empty : R 0 = 0)
-    (ended : x 1 = 0) : ∀ t, x (t + 1) = 0 :=
-  Next.stays_empty (G := fun _ z => z + R z) within (fun _ => (Nat.zero_add (R 0)).trans empty)
-    ended
 
 /-- **No optimum ends the base at once where a level renews faster than the weighting falls.**
 Where nothing is given at nothing and some `y` within the start with what is given there renews
@@ -6085,8 +5981,8 @@ theorem frontier_broken_weighted
     (long : 0 < n) (front : Frontier (OpenCourse R k s) better fun t => W.level t c)
     (depends : W.requires 0 f c) (met : W.need 0 f c ≤ W.level 0 c) (need : m ≤ W.need 0 f c) :
     W.Broken 0 f c :=
-  Web.Next.frontier_broken (G := fun _ z => z + R z) rising opens ends greatest above long front
-    depends met need
+  ⟨depends, met, Nat.lt_of_lt_of_le (Optimum.frontier_below_weighted rising opens ends greatest
+    above front 0 long) need⟩
 
 /-- **A weighting falling faster than every level renews ends the condition at once.** Under the
 premises of `Optimum.frontier_exhausts`, every optimum, among the open courses, of every order
@@ -6100,8 +5996,8 @@ theorem frontier_exhausts
     (front : Frontier (OpenCourse R k s) better fun t => W.level t c)
     (depends : W.requires 0 f c) (met : W.need 0 f c ≤ W.level 0 c) (needs : 0 < W.need 0 f c) :
     W.Broken 0 f c ∧ ∀ t, t < n → W.level (t + 1) c = 0 :=
-  Web.Next.frontier_exhausts (G := fun _ z => z + R z) rising strictly drawsDown (fun _ =>
-    Nat.le_trans (Nat.le_of_eq (Nat.zero_add (R 0))) rests) long front depends met needs
+  have ended := Optimum.frontier_exhausts rising strictly drawsDown rests long front
+  ⟨⟨depends, met, Nat.lt_of_le_of_lt (Nat.le_of_eq (ended 0 long)) needs⟩, ended⟩
 
 /-- **Where a level renews faster than the weighting falls, no optimum ends the condition at
 once.** Under the premises of `Optimum.frontier_leaves`, every optimum, among the open courses, of
@@ -6112,8 +6008,7 @@ theorem frontier_leaves
     (empty : R 0 = 0) (outgrows : ∀ t, t < n → w t * y < w (t + 1) * (y + R y))
     (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k) (holds : y + R y ≤ k) (long : 0 < n)
     (front : Frontier (OpenCourse R k s) better fun t => W.level t c) : 0 < W.level 1 c :=
-  Web.Next.frontier_leaves (G := fun _ z => z + R z) rising (fun _ => (Nat.zero_add (R 0)).trans
-    empty) outgrows reach drawsDown (fun _ => Nat.le_add_right y (R y)) (fun _ => holds) long front
+  Optimum.frontier_leaves rising empty outgrows reach drawsDown holds long front
 
 end Web
 
@@ -6307,94 +6202,9 @@ def rebuilding (R : Nat → Nat) (y s n : Nat) : Nat → Nat :=
 
 variable {w R : Nat → Nat} {k s y n : Nat}
 
-/-- One step of the rising course. -/
-theorem rise_succ (t : Nat) : rise R y s (t + 1) =
-    if rise R y s t + R (rise R y s t) ≤ y then rise R y s t + R (rise R y s t) else y :=
-  rfl
-
-/-- After its start the rising course stands at most at `y`. -/
-theorem rise_le (t : Nat) : rise R y s (t + 1) ≤ y :=
-  Next.rise_le (G := fun _ z => z + R z) t
-
-/-- From a start at most `y` the rising course stands at most at `y`. -/
-theorem rise_le_top (low : s ≤ y) : ∀ t, rise R y s t ≤ y :=
-  Next.rise_le_top (G := fun _ z => z + R z) low
-
-/-- Each step of the rising course leaves at most the level with what is given. -/
-theorem rise_within (t : Nat) : rise R y s (t + 1) ≤ rise R y s t + R (rise R y s t) :=
-  Next.rise_within (G := fun _ z => z + R z) t
-
-/-- Where the rising course stands below `y` after a step, that step drew nothing. -/
-theorem rise_of_below {t : Nat} (below : rise R y s (t + 1) < y) :
-    rise R y s (t + 1) = rise R y s t + R (rise R y s t) :=
-  Next.rise_of_below (G := fun _ z => z + R z) below
-
-/-- Once at `y`, the rising course stays there. -/
-theorem rise_at_top {t : Nat} (top : rise R y s t = y) : rise R y s (t + 1) = y :=
-  Next.rise_at_top (G := fun _ z => z + R z) (fun _ => Nat.le_add_right y (R y)) top
-
-/-- Where the rising course stands below `y` after two steps, it stood below `y` after one. -/
-theorem rise_below_before {t : Nat} (below : rise R y s (t + 1 + 1) < y) : rise R y s (t + 1) < y :=
-  Next.rise_below_before (G := fun _ z => z + R z) (fun _ => Nat.le_add_right y (R y)) below
-
 /-- Once at `y`, the rising course stands there at every later step. -/
 theorem rise_stays {j : Nat} (top : rise R y s j = y) : ∀ i, rise R y s (j + i) = y :=
   Next.rise_stays (G := fun _ z => z + R z) (fun _ => Nat.le_add_right y (R y)) top
-
-/-- **Nothing open rises faster.** Where the next level rises with the level below `y`, every course
-from `s` at most `y` whose steps each leave at most the level with what is given stands, at each
-step, at or below the rising course, or the rising course stands at `y`. -/
-theorem le_rise {x : Nat → Nat} (within : ∀ t, x (t + 1) ≤ x t + R (x t)) (start : x 0 = s)
-    (low : s ≤ y) (grows : ∀ z z', z ≤ z' → z' ≤ y → z + R z ≤ z' + R z') :
-    ∀ t, x t ≤ rise R y s t ∨ rise R y s t = y :=
-  Next.le_rise (G := fun _ z => z + R z) within start low (fun _ => grows) (fun _ =>
-    Nat.le_add_right y (R y))
-
-/-- The rebuilding course stands at the rising course's level from the first step to the `n`-th. -/
-theorem rebuilding_before {t : Nat} (before : t < n) :
-    rebuilding R y s n (t + 1) = rise R y s (t + 1) :=
-  Next.rebuilding_before (G := fun _ z => z + R z) before
-
-/-- The rebuilding course stands at nothing after the `n`-th step. -/
-theorem rebuilding_after {t : Nat} (after : n ≤ t) : rebuilding R y s n (t + 1) = 0 :=
-  Next.rebuilding_after (G := fun _ z => z + R z) after
-
-/-- To the `n`-th step the rebuilding course stands where the rising course does. -/
-theorem rebuilding_at : ∀ {t : Nat}, t ≤ n → rebuilding R y s n t = rise R y s t :=
-  Next.rebuilding_at (G := fun _ z => z + R z)
-
-/-- Each step of the rebuilding course leaves at most the level with what is given. -/
-theorem rebuilding_within (t : Nat) :
-    rebuilding R y s n (t + 1) ≤ rebuilding R y s n t + R (rebuilding R y s n t) :=
-  Next.rebuilding_within (G := fun _ z => z + R z) t
-
-/-- At each step the rebuilding course with what is given is within a capacity covering `y` with
-what is given there and what is given at nothing, from a start at most `y`, where the next level
-rises with the level below `y`. -/
-theorem rebuilding_le_cap (low : s ≤ y) (grows : ∀ z z', z ≤ z' → z' ≤ y → z + R z ≤ z' + R z')
-    (holds : y + R y ≤ k) (rests : R 0 ≤ k) :
-    ∀ t, rebuilding R y s n t + R (rebuilding R y s n t) ≤ k :=
-  Next.rebuilding_le_cap (G := fun _ z => z + R z) low (fun _ => grows) (fun _ => holds) (fun _ =>
-    Nat.le_trans (Nat.le_of_eq (Nat.zero_add (R 0))) rests)
-
-/-- **The rebuilding course is open**, from a start at most `y`, where the next level rises with the
-level below `y`, with a capacity covering `y` with what is given there and what is given at
-nothing. -/
-theorem rebuilding_open (low : s ≤ y) (grows : ∀ z z', z ≤ z' → z' ≤ y → z + R z ≤ z' + R z')
-    (holds : y + R y ≤ k) (rests : R 0 ≤ k) : OpenCourse R k s (rebuilding R y s n) :=
-  Next.rebuilding_open (G := fun _ z => z + R z) low (fun _ => grows) (fun _ => holds) (fun _ =>
-    Nat.le_trans (Nat.le_of_eq (Nat.zero_add (R 0))) rests)
-
-/-- **The rebuilding course gains the most against every open course**, from a start at most `y`,
-where the next level rises with the level below `y` and, at each step to the `n`-th, the weighted
-gain rises with the level up to `y` and is greatest at `y`. -/
-theorem rebuilding_gainsMost (low : s ≤ y) (grows : ∀ z z', z ≤ z' → z' ≤ y → z + R z ≤ z' + R z')
-    (rises : ∀ t, t < n → ∀ z z', z ≤ z' → z' ≤ y →
-      w (t + 1) * (z + R z) + w t * z' ≤ w (t + 1) * (z' + R z') + w t * z)
-    (top : ∀ t, t < n → ∀ z, w (t + 1) * (z + R z) + w t * y ≤ w (t + 1) * (y + R y) + w t * z) :
-    GainsMost w R k s n (rebuilding R y s n) :=
-  Next.rebuilding_gainsMost (G := fun _ z => z + R z) low (fun _ => grows) (fun _ =>
-    Nat.le_add_right y (R y)) rises top
 
 /-- **The rebuilding course is an optimum**, under the premises of `rebuilding_gainsMost`, with a
 capacity covering `y` with what is given there and what is given at nothing: of the order by the
@@ -6480,9 +6290,10 @@ theorem frontier_rebuilds
         W.level (t + 1) c = W.level t c + R (W.level t c)) ∧
     ∀ f j, j < n → Optimum.rise R y s (j + 1) < y → W.need 0 f c ≤ Optimum.rise R y s (j + 1) →
       W.RestoredWithin (j + 1) 0 f c :=
-  Web.Next.frontier_rebuilds (G := fun _ z => z + R z) rising low (fun _ => grows) (fun _ =>
-    Nat.le_add_right y (R y)) rises strictly top (fun _ => holds) (fun _ => Nat.le_trans
-    (Nat.le_of_eq (Nat.zero_add (R 0))) rests) front
+  have stands := Optimum.frontier_rebuilds rising low grows rises strictly top holds rests front
+  ⟨stands, fun _ j lt below meets => ⟨j + 1, Nat.succ_pos j, Nat.le_refl _,
+    Nat.le_trans meets (Nat.le_of_eq ((stands j lt below).1.symm.trans
+      (congrArg (W.level · c) (Nat.zero_add (j + 1)).symm)))⟩⟩
 
 end Web
 
