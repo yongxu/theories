@@ -1133,7 +1133,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   occurrence. Under easing the stepwise reading withdraws exactly the events the easing
   course undermines, so its law of easing adds that premise; a course whose levels never
   fall undermines nothing. The relation-level reading withdraws under easing exactly the
-  relations the easing course no longer takes part in or undermines.
+  relations the easing course no longer takes part in or undermines. Read with the sustaining
+  formation's events as the basic tier, J1 ranks absence above malignant growth under the
+  stepwise and relation-level readings, where C alone leaves them unranked.
 * `Becoming.ActiveReading` (L1): the reading of every active event beside the whole-run reading
   (no premise): the whole-run reading withholds a consumer's events, and living significance on it
   credits exactly the active events of non-consuming formations (`livingSignificance_wholeRun_iff`); under the
