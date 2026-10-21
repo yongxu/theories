@@ -67,7 +67,7 @@ Only formations admitted are compared, step by step; withholding a part leaves t
 
 - Related, not a proved adapter: [becoming-stepwise-reading](becoming-stepwise-reading.md). Preemption shows that living on the stepwise reading (active and not undermining) differs from retaining: the stepwise reading counts only dependences met, retaining also counts what can still form.
 
-**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [comparison-within-reach](comparison-within-reach.md) · [continuation-condition-decomposition](continuation-condition-decomposition.md) · [presupposition-scopes](presupposition-scopes.md) · [ranking-under-readings](ranking-under-readings.md) · [the-run-classes-and-widening](the-run-classes-and-widening.md) · [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md)
+**Used by:** [closure-verdict-meets-continuation-condition](closure-verdict-meets-continuation-condition.md) · [comparison-within-reach](comparison-within-reach.md) · [continuation-condition-decomposition](continuation-condition-decomposition.md) · [one-reader-several-conditions](one-reader-several-conditions.md) · [presupposition-scopes](presupposition-scopes.md) · [ranking-under-readings](ranking-under-readings.md) · [the-run-classes-and-widening](the-run-classes-and-widening.md) · [whole-first-and-bounded-centers](whole-first-and-bounded-centers.md)
 
 <a id="来源与既有回执-sources-and-existing-receipts"></a>
 ## Sources and existing receipts

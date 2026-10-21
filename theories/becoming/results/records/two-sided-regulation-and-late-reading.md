@@ -76,6 +76,8 @@ The map of Chinese sources onto the spine found no law for a level held from bot
 - related, not a proved adapter: [how-fast-a-rule-may-change](how-fast-a-rule-may-change.md). A slow rule reading a fast level at stretches; reading late, here, needs a band of 2(l + 1)d.
 - related, not a proved adapter: [chinese-sources-on-the-spine](chinese-sources-on-the-spine.md). Closes the first gap of the map: 损有余而补不足 and 张弓, 冲气以为和, 济其不及以泄其过 and 宽猛相济, and 中节 are re-pointed to these laws.
 
+**Used by:** [one-reader-several-conditions](one-reader-several-conditions.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

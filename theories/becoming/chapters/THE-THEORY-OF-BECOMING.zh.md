@@ -296,9 +296,9 @@
 
 **要点。** 给予等待给予之处，有记忆的扣留停留并扩散，无记忆的绕每个回路返回；更多的等待从不给出更多。对每个保持包含的律，最坏的起点是全部扣留，从它只有给予其所等待之一切的形成恢复，恰恢复入每条足够长的等待链所经过的形成。回路只经一个给回少于所得的环节关闭差别。只在读取步改变的规则在 2N − 1 的段上固定它所持者；从两侧持住的水平恰在响应不过冲之处稳定。
 
-**定理。** 本节陈述 `withholding_absorbs`、`withholding_returns`、`worst_start`、`restores_iff`、`closing_needs_less`、`pace_law`、`Flow.withinGap_iff_between`、`Regulation.no_narrower_band`；完整陈述见[英文版 §4.4](THE-THEORY-OF-BECOMING.md#44-giving-that-waits-on-giving-tolerance-loops-pace-and-regulation)。
+**定理。** 本节陈述 `withholding_absorbs`、`withholding_returns`、`worst_start`、`restores_iff`、`closing_needs_less`、`pace_law`、`Flow.withinGap_iff_between`、`Regulation.no_narrower_band`、`ReadingSchedule.keeps_iff_within`（每步读一个条件的日程，恰在每个窗口内读到一个条件时才使它保持在余量之内；一个读者能保持的窗口倒数之和至多为一，低于一未必足够，二分之一足够，即轮转调度，`ReadingSchedule.spare_not_enough`、`ReadingSchedule.keeps_of_half`）；完整陈述见[英文版 §4.4](THE-THEORY-OF-BECOMING.md#44-giving-that-waits-on-giving-tolerance-loops-pace-and-regulation)。
 
-记录：[giving-that-waits-on-giving](../results/records/giving-that-waits-on-giving.md)、[restoring-giving-from-the-worst-start](../results/records/restoring-giving-from-the-worst-start.md)、[thresholds-of-waiting](../results/records/thresholds-of-waiting.md)、[whether-a-loop-closes-a-difference](../results/records/whether-a-loop-closes-a-difference.md)、[how-fast-a-rule-may-change](../results/records/how-fast-a-rule-may-change.md)、[two-sided-regulation-and-late-reading](../results/records/two-sided-regulation-and-late-reading.md)。
+记录：[giving-that-waits-on-giving](../results/records/giving-that-waits-on-giving.md)、[restoring-giving-from-the-worst-start](../results/records/restoring-giving-from-the-worst-start.md)、[thresholds-of-waiting](../results/records/thresholds-of-waiting.md)、[whether-a-loop-closes-a-difference](../results/records/whether-a-loop-closes-a-difference.md)、[how-fast-a-rule-may-change](../results/records/how-fast-a-rule-may-change.md)、[two-sided-regulation-and-late-reading](../results/records/two-sided-regulation-and-late-reading.md)、[one-reader-several-conditions](../results/records/one-reader-several-conditions.md)。
 
 ### 4.5 传递、共享的代码与经规则的劫持
 
@@ -767,6 +767,7 @@
 | [从最坏的开始恢复给出](../results/records/restoring-giving-from-the-worst-start.md) | 不加前提的定理 | — | §4.4 |
 | [等待的阈值](../results/records/thresholds-of-waiting.md) | 不加前提的定理 | — | §4.4 |
 | [双向调节，与迟读的调节](../results/records/two-sided-regulation-and-late-reading.md) | 不加前提的定理 | — | §4.4 |
+| [一个读者，多个条件](../results/records/one-reader-several-conditions.md) | 在所述前提下的定理 | 平衡；每步汲取有界，读到后固定步数撤回；每步读一个；半数定理需整数权重在二的幂之内 | §4.4、§7.3 |
 | [在形成之间形成的编码](../results/records/a-code-formed-between-formations.md) | 不加前提的定理 | — | §4.5 |
 | [比承载者更持久的样式经传递而持续](../results/records/a-pattern-lasts-through-passing.md) | 不加前提的定理 | — | §4.5 |
 | [经由规则的捕获：规则读其所选出之份额的选择](../results/records/capture-through-the-rule.md) | 不加前提的定理 | — | §4.5 |
@@ -1027,17 +1028,17 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261021T125537.657165Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T125537.657165Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 309 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#309-capture-read-as-the-part-that-makes-sense-alone-lu1)）。
+**当前回执**是运行 [`20261021T130926.237994Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T130926.237994Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 310 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#310-one-reader-several-conditions-keeping-is-reading-within-the-window-and-what-one-reader-can-keep-rs1)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Bec| 核心模块（含根 `Becoming`） | 284 个模块，12,070 条定理 |
+| 核心模块（含根 `Bec| 核心模块（含根 `Becoming`） | 285 个模块，12,137 条定理 |
 | 实例模块 | 7 个模块，567 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 300 个模块，12,890 条定理 |
-| 审计的脊柱声明 | 17,579 |
-| 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 199 条 |
+| 闭包（核心、环与根基） | 301 个模块，12,957 条定理 |
+| 审计的脊柱声明 | 17,666 |
+| 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 201 条 |
 | 被取代的外围模块（不在运行中，字节保留） | 75 |
 **完整情节比较。** 冻结的回执 `20261013T204910.042715Z` 检查 `Becoming.RepairComparison` 的 36 条定理，公理报告为空；完整情节匹配的规范充分性仍是明确的假设，实际内容的对应尚待建立；F3 清扫之后 `Becoming.MatchedCourses` 以核心的名称陈述其历程（见[英文版 §9](THE-THEORY-OF-BECOMING.md#complete-episode-comparison-anchors)）。
 

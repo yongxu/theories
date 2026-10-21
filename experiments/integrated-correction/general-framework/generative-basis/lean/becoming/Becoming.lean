@@ -214,6 +214,7 @@ import Becoming.Typicality
 import Becoming.Situations
 import Becoming.Propagation
 import Becoming.Regulation
+import Becoming.ReadingSchedule
 import Becoming.RegimeMargin
 import Becoming.ListingRefutations
 import Becoming.Loops
@@ -2454,6 +2455,17 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   relay overshoots its band by lateness times step; past `b + 2 ≤ a + (ℓ + 1) M` a start held
   below the band crosses both ends without end, within it every such start settles, and the
   relay runs for every start where `(ℓ + 1) M ≤ b + 1`, so the threshold is exact.
+* `Becoming.ReadingSchedule` (L1): one reader, several conditions. A schedule reads one
+  condition a step, and a drawer on a condition is withdrawn `ℓ` steps after a step that reads
+  it: the selection only withdraws. With `(a + ℓ) d ≤ m < (a + 1 + ℓ) d`, a schedule keeps a
+  condition within the margin `m` against every balanced flow's draws of at most `d` a step
+  exactly where it reads the condition within every `a` steps (one side the margin law, the
+  other a witness drawer). Over every `P` steps the windows' counts `q c` with `q c a c ≤ P`
+  total at most `P` (`k` readers: `P k`); windows 2, 3 and any `M` are never read together,
+  though for `M ≥ 7` a share `1/6 - 1/M` of the reader is idle; windows with reciprocals
+  summing to at most one half are read by one schedule, a dyadic code built from Kraft's
+  inequality, two readers interleaved being one at half speed. Pinwheel scheduling read as a
+  selection that only withdraws; the five-sixths threshold is cited, not proved.
 * `Becoming.RegimeMargin` (L1): the margin of a regime, with giving read off the level under a
   standing draw (`step g H x = (x - H) + g (x - H)`), stated on `Law.run`. Where giving falls short of
   the draw below `y` and nothing gives from nothing, a level below `H + y` falls at every step and is
