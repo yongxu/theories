@@ -1381,6 +1381,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   Witnesses on `Diversion`: the drive, no room, a satisficing order, keeping, a taker of
   capacity `k` whose optimum breaks the dweller exactly where `0 < k`; two takers each within
   the slack of a need of one leave nothing at their mutual best response.
+  Over a course in which a part chooses again at every step, each step is read off the one
+  before; against a renewal of `r` a step at a positive need, at most `r` below it, a draw
+  `k` loses a dependence at that need exactly where `r < k`, the level then below the need
+  once the steps exceed its starting excess, and for good; where the renewal stops below the
+  need what the course draws is then bounded, and where something is given at every step it
+  has no bound; several optimizers each within the renewal lose it where their joint capacity
+  exceeds it. Witnesses: a taker re-optimizing its store against a renewing dweller, and two takers
+  of capacity one at mutual best responses losing a source renewed by one that either alone
+  keeps, holding less than the course in which one restrains.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
