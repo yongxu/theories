@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-315 registered results: 295 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 788 curated edges join 268 results to the results they draw on.
+316 registered results: 296 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 790 curated edges join 269 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -124,6 +124,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [joint-difference-making][] ← <a id="joint-difference-making--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="joint-difference-making--becoming-return-grades"></a>[becoming-return-grades][]
 - [joint-plan-composition][] ← <a id="joint-plan-composition--finite-continuation-plans"></a>[finite-continuation-plans][]
 - [joint-practice-forms-continuation][] ← <a id="joint-practice-forms-continuation--organizational-rule-inheritance"></a>[organizational-rule-inheritance][]
+- [keeping-forgoes-the-renewal-at-the-need][] ← <a id="keeping-forgoes-the-renewal-at-the-need--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="keeping-forgoes-the-renewal-at-the-need--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [laws-at-coarser-steps][] ← <a id="laws-at-coarser-steps--laws-of-one-step"></a>[laws-of-one-step][] · <a id="laws-at-coarser-steps--census-balance"></a>[census-balance][] · <a id="laws-at-coarser-steps--map-of-premises"></a>[map-of-premises][]
 - [laws-at-finer-units][] ← <a id="laws-at-finer-units--laws-of-one-step"></a>[laws-of-one-step][] · <a id="laws-at-finer-units--rest-at-every-resolution"></a>[rest-at-every-resolution][]
 - [laws-of-one-step][] ← <a id="laws-of-one-step--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="laws-of-one-step--more-needs-renewers"></a>[more-needs-renewers][] · <a id="laws-of-one-step--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="laws-of-one-step--census-balance"></a>[census-balance][]
@@ -406,6 +407,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [joint-difference-making]: theories/becoming/results/records/joint-difference-making.md
 [joint-plan-composition]: theories/becoming/results/records/joint-plan-composition.md
 [joint-practice-forms-continuation]: theories/becoming/results/records/joint-practice-forms-continuation.md
+[keeping-forgoes-the-renewal-at-the-need]: theories/becoming/results/records/keeping-forgoes-the-renewal-at-the-need.md
 [laws-at-coarser-steps]: theories/becoming/results/records/laws-at-coarser-steps.md
 [laws-at-finer-units]: theories/becoming/results/records/laws-at-finer-units.md
 [laws-of-one-step]: theories/becoming/results/records/laws-of-one-step.md

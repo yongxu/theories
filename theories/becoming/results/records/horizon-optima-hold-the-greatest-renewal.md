@@ -67,6 +67,9 @@ The maximum sustainable yield at the level of greatest renewal, half of room in 
   - Preserved conditions: An order rising with the draw across the horizon. [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
 - related, not a proved adapter: [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md). An optimizer ranking each step; here an order ranks whole courses over a horizon.
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Several optimizers at one mutual best response; several ranking courses are not stated here.
+- related, not a proved adapter: [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md). What keeping a dependence above the levels of greatest renewal forgoes, and the coupling that keeps it.
+
+**Used by:** [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -85,6 +88,7 @@ The maximum sustainable yield at the level of greatest renewal, half of room in 
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T052543.695066Z/verification.json) | — |
 
 Aliases: `horizon optima hold the greatest renewal`, `courses ranked over a horizon`, `far-sight holds the levels of greatest renewal`, `maximum sustainable yield level`, `在视野上，最优保持在最大更新处`, `Becoming.Optimum.frontier_holds`, `Becoming.Optimum.most_iff`, `Becoming.Web.frontier_broken`
 
@@ -92,6 +96,7 @@ Aliases: `horizon optima hold the greatest renewal`, `courses ranked over a hori
 ### History
 
 - 21 October 2026: added (SG5), courses ranked over a horizon: what a course draws, leaves and forgoes adds to the start with the greatest renewal a step; every optimum of every order rising with the draw holds a level of greatest renewal and leaves nothing, breaking at the first step a dependence above every such level and keeping to the horizon one they all meet; study section 292.
+- 21 October 2026, SG6: keeping a dependence at its need forgoes the renewal given up there each step and the need left at the end, and a coupling keeps it exactly beyond that (record keeping-forgoes-the-renewal-at-the-need, study section 293); drawn_add_shortfall and drawn_add_shortfall_after are now cases of the laws on the steps counted, the holding course the case of holdingTo ending at nothing; this record's laws and their statements are unchanged.
 
 </details>
 

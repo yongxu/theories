@@ -110,7 +110,8 @@
         "capture-through-the-rule",
         "margin-of-a-regime",
         "re-optimizing-above-a-renewal-ends-it",
-        "horizon-optima-hold-the-greatest-renewal"
+        "horizon-optima-hold-the-greatest-renewal",
+        "keeping-forgoes-the-renewal-at-the-need"
       ],
       "declarations": [
         "Becoming.Flow.Balances.consumption_ends_with_feeders",
@@ -121,7 +122,8 @@
         "Becoming.RuleCapture.favouring_locks",
         "Becoming.RegimeMargin.ends_iff_below",
         "Becoming.Web.course_lost_iff",
-        "Becoming.Web.frontier_broken"
+        "Becoming.Web.frontier_broken",
+        "Becoming.Web.frontier_breaks_below"
       ],
       "status": "proved",
       "open_items": [
@@ -566,6 +568,7 @@
         "several-optimizers-drain-by-their-joint-capacity",
         "re-optimizing-above-a-renewal-ends-it",
         "horizon-optima-hold-the-greatest-renewal",
+        "keeping-forgoes-the-renewal-at-the-need",
         "the-gap-for-ones-own-act",
         "what-pooled-coupling-reaches",
         "what-a-pools-acts-respond-to",
@@ -581,6 +584,7 @@
         "Becoming.Optimum.mutual_beyond",
         "Becoming.Web.course_lost_iff",
         "Becoming.Web.frontier_broken",
+        "Becoming.Web.frontier_breaks_below",
         "Becoming.Flow.unselected_beyond_pool",
         "Becoming.Flow.withinCoupling_reads_iff",
         "Becoming.Flow.act_selected_by_pool",

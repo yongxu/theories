@@ -239,6 +239,13 @@
         "en": "Several optimizers at one mutual best response; several ranking courses are not stated here.",
         "zh": "多个优化者在一次相互最优回应中；多个对过程排序者此处未陈述。"
       }
+    },
+    {
+      "id": "keeping-forgoes-the-renewal-at-the-need",
+      "detail": {
+        "en": "What keeping a dependence above the levels of greatest renewal forgoes, and the coupling that keeps it.",
+        "zh": "保持高于最大更新水平的依存所放弃者，以及保持它的耦合。"
+      }
     }
   ],
   "references": [
@@ -298,7 +305,7 @@
         "Becoming.Web.frontier_broken",
         "Becoming.Web.frontier_kept"
       ],
-      "sha256": "aa3524160e707eaba393e6bb7dc9eb6c2e0e4368f11366fe38cfe6c650bbf8c2"
+      "sha256": "a1f43195cff6d41fc4817df4e447c16417ea09c7501a4720cc8fa3d901e7e976"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -377,23 +384,29 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "7eff7b9288e3c3ce03687b313b0f6a124746007da12fc738c178bd39905097a7"
+      "sha256": "168a1cfdf5d790c678b4792cf3daa11585109ecf9f5324a99f43ce2faa287405"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
       "role": "integration",
-      "sha256": "1781caaecad8889ebc12be8f10258d74984868d26919d4346878e5a729357c6d"
+      "sha256": "c0216d7d8c8de1dab6f9c82e02e2097dba202cf181cd20d825c968f1293c02cd"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "c8c75df998901e6402e19020caa140580a1ff9b1560cb24fbeb76fa774f1339d"
+      "sha256": "1634b28f3667ea88678a1b78014e2e440cd421d6721d1036c6a7763cbfbace15"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T052543.695066Z/verification.json",
+      "role": "receipt",
+      "sha256": "ee92a629693118ace827c81983f7483abd49214c17c6cca4fdaefc556c7d6893",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T043313.566491Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T052543.695066Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -452,6 +465,10 @@
     {
       "en": "21 October 2026: added (SG5), courses ranked over a horizon: what a course draws, leaves and forgoes adds to the start with the greatest renewal a step; every optimum of every order rising with the draw holds a level of greatest renewal and leaves nothing, breaking at the first step a dependence above every such level and keeping to the horizon one they all meet; study section 292.",
       "zh": "2026年10月21日：新增（SG5），在视野上对过程排序：过程所汲取、所留与所放弃之和是起始加每步最大更新；随汲取升高之序的每个最优都保持在最大更新的水平并终了不留，在第一步打破需要高于所有这些水平的依存，并把它们都满足的依存保持到视野之末；研究第 292 节。"
+    },
+    {
+      "en": "21 October 2026, SG6: keeping a dependence at its need forgoes the renewal given up there each step and the need left at the end, and a coupling keeps it exactly beyond that (record keeping-forgoes-the-renewal-at-the-need, study section 293); drawn_add_shortfall and drawn_add_shortfall_after are now cases of the laws on the steps counted, the holding course the case of holdingTo ending at nothing; this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG6：把依存保持在其所需处放弃那里每步放弃的更新与终了所留的所需，耦合恰在超过此量时保持它（记录 keeping-forgoes-the-renewal-at-the-need，研究第 293 节）；drawn_add_shortfall 与 drawn_add_shortfall_after 现为所计步上之律的情形，保持的过程为 holdingTo 终于零的情形；本记录的定律及其陈述不变。"
     }
   ]
 }
