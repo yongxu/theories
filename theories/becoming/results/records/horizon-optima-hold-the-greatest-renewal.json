@@ -117,8 +117,8 @@
   ],
   "does_not_show": [
     {
-      "en": "An order valuing what is left at the horizon or discounting later draws (a terminal value or a discount); with a discount the optimum may hold below the levels of greatest renewal.",
-      "zh": "对视野末所留赋值或对后来汲取折现之序（终值或折现）；有折现时最优可能保持在最大更新的水平之下。",
+      "en": "An order valuing what is left at the horizon at another worth than what is drawn, or discounting later draws; with a discount the optimum may hold below the levels of greatest renewal.",
+      "zh": "以不同于所汲取之价值对视野末所留赋值或对后来汲取折现之序；有折现时最优可能保持在最大更新的水平之下。",
       "kind": "scope"
     },
     {
@@ -159,8 +159,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T043313.566491Z）：Becoming.Optimum 新增的 48 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 292 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "An order with a terminal value or a discount; the optimum rebuilding from below; several optimizers ranking courses; existence of a mutual best response; an independent review.",
-    "zh": "带终值或折现的序；自下重建的最优；多个对过程排序的优化者；相互最优回应的存在；独立审查。"
+    "en": "An order with a terminal value at another worth than the draw, or a discount; the optimum rebuilding from below; several optimizers ranking courses; existence of a mutual best response; an independent review.",
+    "zh": "带与汲取不同价值之终值或折现的序；自下重建的最优；多个对过程排序的优化者；相互最优回应的存在；独立审查。"
   },
   "correspondence": {
     "en": "The maximum sustainable yield at the level of greatest renewal, half of room in the logistic law (Schaefer 1954); the sole owner ranking the whole course keeps the stock (Scott 1955); a finite horizon with no value on what is left ends in depletion (Clark, Mathematical Bioeconomics, 1976); single-species management of a forage stock for its own yield leaves its predators' needs uncounted (Pikitch and others 2012); instrumental convergence, that a long-horizon agent keeps its resources (Omohundro 2008; Turner and others 2021). On the spine the identity is conservation over the horizon, for every course and every renewal bounded by r, and the optimum covers every order rising with the draw. Reading (the AI's): what a course draws registers its levels only through what is renewed there; keeping one's resource base is real, and it is not alignment with what else depends on the condition.",
@@ -253,6 +253,13 @@
         "en": "An order weighting later draws less: far-sight keeps the own base only where the weighting falls slower than the base renews; falling faster than every positive level renews, every optimum ends it at the first step.",
         "zh": "后来的汲取权重更小之序：远见只在权重下降慢于基础更新时保住自身的基础；下降快于每个正水平的更新时，每个最优在第一步终结它。"
       }
+    },
+    {
+      "id": "valuing-what-is-left-at-the-horizon",
+      "detail": {
+        "en": "With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.",
+        "zh": "视野末所留与所抽取一比一计值时，每个最优在视野内保持在最大更新的水平，终了的抽干不再被迫；高于每个这样水平的依存仍被打破。"
+      }
     }
   ],
   "references": [
@@ -312,7 +319,7 @@
         "Becoming.Web.frontier_broken",
         "Becoming.Web.frontier_kept"
       ],
-      "sha256": "21b4a51bc20777966c457307d3270601a952c883fada63d2b9258ca2561b9e0a"
+      "sha256": "d2871524906c5d5d08906f1d4725d7acd21bcbd79011540b9e83966b89a07bd9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -401,7 +408,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
+      "sha256": "ab9f23fa3d0d11abbccb1bd97fc485ef527adb0c081a8b7826cabf7c94427f38"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T052543.695066Z/verification.json",
@@ -444,12 +451,18 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
+      "role": "receipt",
+      "sha256": "4995c024b8e3f9c9f013718e4be2dbc8d218fbc1a65f064171400f3df5fc6932",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -516,6 +529,10 @@
     {
       "en": "21 October 2026, SG8: under an order weighting later draws less, every optimum gains at each step what a course of greatest weighted gain does, and ends its own base at the first step where the weighting falls faster than every positive level renews (record a-weighting-faster-than-renewal-ends-the-base, study section 295); this record's laws and their statements are unchanged.",
       "zh": "2026年10月21日，SG8：在后来的汲取权重更小之序下，每个最优每步的增益等于最大加权增益进程的增益，权重下降快于每个正水平的更新时在第一步终结自己的基础（记录 a-weighting-faster-than-renewal-ends-the-base，研究第 295 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.",
+      "zh": "2026年10月22日，SG11：对视野末所留赋值之序已就一比一计值回答（记录 valuing-what-is-left-at-the-horizon，研究第 321 节）；开放项改为另一价值。其规律不变。"
     }
   ]
 }

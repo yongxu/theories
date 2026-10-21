@@ -27,7 +27,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- An order valuing what is left at the horizon or discounting later draws (a terminal value or a discount); with a discount the optimum may hold below the levels of greatest renewal.
+- An order valuing what is left at the horizon at another worth than what is drawn, or discounting later draws; with a discount the optimum may hold below the levels of greatest renewal.
 - The optimum where no level of greatest renewal lies within the start with what is given there (rebuilding from below), or where the capacity cannot draw down to one in a step or draw everything at the last.
 - Several optimizers ranking courses (equilibria of the course) and how optimizers come to them.
 - That the loss is a harm, or that a longer horizon or a coupling is better: no evaluation enters; the order ranks only what the optimizer draws.
@@ -45,7 +45,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-An order with a terminal value or a discount; the optimum rebuilding from below; several optimizers ranking courses; existence of a mutual best response; an independent review.
+An order with a terminal value at another worth than the draw, or a discount; the optimum rebuilding from below; several optimizers ranking courses; existence of a mutual best response; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -69,8 +69,9 @@ The maximum sustainable yield at the level of greatest renewal, half of room in 
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Several optimizers at one mutual best response; several ranking courses are not stated here.
 - related, not a proved adapter: [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md). What keeping a dependence above the levels of greatest renewal forgoes, and the coupling that keeps it.
 - related, not a proved adapter: [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md). An order weighting later draws less: far-sight keeps the own base only where the weighting falls slower than the base renews; falling faster than every positive level renews, every optimum ends it at the first step.
+- related, not a proved adapter: [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md). With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.
 
-**Used by:** [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md) · [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md) · [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md) · [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md) · [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md)
+**Used by:** [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md) · [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md) · [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md) · [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md) · [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md) · [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -96,6 +97,7 @@ The maximum sustainable yield at the level of greatest renewal, half of room in 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json) | — |
 
 Aliases: `horizon optima hold the greatest renewal`, `courses ranked over a horizon`, `far-sight holds the levels of greatest renewal`, `maximum sustainable yield level`, `在视野上，最优保持在最大更新处`, `Becoming.Optimum.frontier_holds`, `Becoming.Optimum.most_iff`, `Becoming.Web.frontier_broken`
 
@@ -105,6 +107,7 @@ Aliases: `horizon optima hold the greatest renewal`, `courses ranked over a hori
 - 21 October 2026: added (SG5), courses ranked over a horizon: what a course draws, leaves and forgoes adds to the start with the greatest renewal a step; every optimum of every order rising with the draw holds a level of greatest renewal and leaves nothing, breaking at the first step a dependence above every such level and keeping to the horizon one they all meet; study section 292.
 - 21 October 2026, SG6: keeping a dependence at its need forgoes the renewal given up there each step and the need left at the end, and a coupling keeps it exactly beyond that (record keeping-forgoes-the-renewal-at-the-need, study section 293); drawn_add_shortfall and drawn_add_shortfall_after are now cases of the laws on the steps counted, the holding course the case of holdingTo ending at nothing; this record's laws and their statements are unchanged.
 - 21 October 2026, SG8: under an order weighting later draws less, every optimum gains at each step what a course of greatest weighted gain does, and ends its own base at the first step where the weighting falls faster than every positive level renews (record a-weighting-faster-than-renewal-ends-the-base, study section 295); this record's laws and their statements are unchanged.
+- 22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.
 
 </details>
 

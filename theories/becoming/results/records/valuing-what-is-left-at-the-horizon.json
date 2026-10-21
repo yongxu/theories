@@ -1,0 +1,274 @@
+{
+  "schema_version": 2,
+  "id": "valuing-what-is-left-at-the-horizon",
+  "title": {
+    "en": "Valuing what is left at the horizon",
+    "zh": "对视野末所留的计值"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T17:38:09+00:00",
+  "statement": {
+    "en": "With what is left after the horizon valued as much as what is drawn, every optimum holds a level of greatest renewal to the horizon and the drain at the end is no longer forced; a dependence above every such level is still broken at the first step.",
+    "zh": "视野之后所留与所抽取同等计值时，每个最优都在视野内保持在最大更新的水平，终了的抽干不再被迫；高于每个这样水平的依存仍在第一步被打破。"
+  },
+  "laws": [
+    {
+      "en": "What a course draws across n + 1 steps with what it leaves after them is at most the start with what is given there and r for each step after, exactly where r is given at every step after the first, whatever is left; so for every course open from the start.",
+      "zh": "过程在 n + 1 步中所抽取与其后所留之和至多是起始加所给再加之后每步 r，恰在第一步之后每步都给出 r 时取等，不论所留多少；自起点开放的每个过程皆然。",
+      "declarations": [
+        "Becoming.Optimum.drawn_add_left_le_most",
+        "Becoming.Optimum.most_left_iff",
+        "Becoming.Optimum.open_left_le_most"
+      ]
+    },
+    {
+      "en": "The order by what is drawn and what is left after the horizon, valued alike. The course standing at a level y of greatest renewal at every step after the start draws and leaves the most and is open over any horizon where the capacity covers what the first step draws down to y and r, so it is an optimum; the course draining y at the end is one too.",
+      "zh": "按所抽取与视野之后所留（同等计值）的序。起点之后每步都处于最大更新水平 y 的进程所抽取与所留最多，容量足以承担第一步降到 y 的抽取与 r 时在任何视野上开放，故是最优；终了抽干 y 的进程亦是。",
+      "declarations": [
+        "Becoming.Optimum.byDrawnLeft",
+        "Becoming.Optimum.holdingTo_same",
+        "Becoming.Optimum.keeping_left_most",
+        "Becoming.Optimum.keeping_open",
+        "Becoming.Optimum.keeping_frontier_left",
+        "Becoming.Optimum.holding_frontier_left"
+      ]
+    },
+    {
+      "en": "Every optimum of every order rising with what is drawn and left stands at a level of greatest renewal at every step to the horizon, and the optima of the order by what is drawn and left are exactly the open courses doing so; where y is positive, the course keeping it is no optimum of the order by the draw alone.",
+      "zh": "随所抽取与所留升高之序的每个最优在视野内每步都处于最大更新的水平，按所抽取与所留之序的最优恰是如此的开放进程；y 为正时，保持它的进程不是只按汲取之序的最优。",
+      "declarations": [
+        "Becoming.Optimum.frontier_holds_left",
+        "Becoming.Optimum.frontier_left_iff",
+        "Becoming.Optimum.keeping_not_frontier"
+      ]
+    },
+    {
+      "en": "On a web, from a start s, a dependence every level of greatest renewal meets stands through the horizon under every such optimum, and one above every such level is broken at the first step and unmet through the horizon.",
+      "zh": "在网上，自起点 s，被每个最大更新水平满足的依存在每个这样的最优下于视野内被保持，高于每个这样水平的依存在第一步被打破并在视野内不被满足。",
+      "declarations": [
+        "Becoming.Web.frontier_kept_left",
+        "Becoming.Web.frontier_broken_left"
+      ]
+    },
+    {
+      "en": "Witnesses: under a gate, from the dweller's need with capacity three, keeping the source at the need through and past the horizon is an optimum keeping the dweller at every step, draining at the end is one too, the optima are exactly the courses standing where the gate renews, and keeping is no optimum by the draw alone; under the logistic law every such optimum breaks the dweller at the first step.",
+      "zh": "见证：门控下自居者所需处、容量为三，把源保持在所需处直到视野之后是最优并在每步保持居者，终了抽干亦是最优，最优恰是处于门控更新处的进程，只按汲取时保持者不是最优；逻辑斯谛律下每个这样的最优在第一步打破居者。",
+      "declarations": [
+        "Becoming.Optimum.Holding.gated_left",
+        "Becoming.Optimum.Holding.logistic_left"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A renewal law R of the level, at most r at every level and r at some y with y ≤ s + R s; a capacity k with s + R s ≤ y + k and r ≤ k, any horizon (the course draining at the end also y + r ≤ k and at least two steps; the broken law at least two steps); what is left valued one for one with what is drawn; natural amounts, discrete steps.",
+      "zh": "不加公理。水平的更新之律 R，各水平至多 r，在某个 y ≤ s + R s 处为 r；容量 k 满足 s + R s ≤ y + k 与 r ≤ k，任何视野（终了抽干的进程另需 y + r ≤ k 且视野至少两步；打破之律视野至少两步）；所留与所抽取一比一计值；自然数量，离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "An order valuing what is left at another worth than what is drawn.",
+      "zh": "以不同于所汲取之价值对所留计值的序。",
+      "kind": "scope"
+    },
+    {
+      "en": "That valuing what is left keeps what depends on the levels passed through: a dependence above every level of greatest renewal is still broken at the first step.",
+      "zh": "对所留计值保持依存于所经水平者：高于每个最大更新水平的依存仍在第一步被打破。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Which optimum is taken: the last step's draw is left free, keeping and draining both optima.",
+      "zh": "取哪个最优：最后一步的抽取是自由的，保持与抽干都是最优。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Several optimizers ranking courses; steps met again after a fall.",
+      "zh": "多个对过程排序的优化者；跌落后再被满足的步。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T173313.402629Z; the first receipt 20261021T172745.076672Z passed but left four of the laws apart and is superseded): the 16 declarations Becoming.Optimum gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 321; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T173313.402629Z；第一次回执 20261021T172745.076672Z 通过但留下四条游离之律，已被取代）：Becoming.Optimum 新增的 16 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 321 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "A terminal value at another worth than the draw; what keeping a dependence forgoes under the order by what is drawn and left; several optimizers ranking courses; an independent review.",
+    "zh": "与汲取不同价值的终值；在按所抽取与所留之序下保持依存所放弃者；多个对过程排序的优化者；独立审查。"
+  },
+  "correspondence": {
+    "en": "A terminal or salvage value in a finite-horizon problem: the payoff counts the stock left at the end. Without it a finite-horizon harvest ends by drawing everything (Clark 1976); valued one for one, the end drain disappears and the steady yield at a level of greatest renewal is an optimum to the end and after.",
+    "zh": "有限视野问题中的终值（残值）：收益计入终了所留存量。无此值时有限视野收获以抽尽告终（Clark 1976）；一比一计值时终了的抽干消失，最大更新水平上的稳定产出直到终了及其后都是最优。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "valuing what is left at the horizon",
+    "a terminal value at the worth of the draw",
+    "对视野末所留的计值",
+    "Becoming.Optimum.frontier_holds_left",
+    "Becoming.Optimum.frontier_left_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "horizon-optima-hold-the-greatest-renewal",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The conservation identity over a horizon, the holding courses and SG5's optima are reused; the open item its boundary names is answered for a one-for-one value.",
+        "zh": "沿用视野上的守恒恒等式、保持进程与 SG5 的最优；就一比一计值回答了其边界所列的开放项。"
+      },
+      "interface": {
+        "output": {
+          "en": "drawn_add_shortfall_after, holdingTo, holding_open, frontier_holds.",
+          "zh": "drawn_add_shortfall_after、holdingTo、holding_open、frontier_holds。"
+        },
+        "input": {
+          "en": "The optima of every order rising with what is drawn and left.",
+          "zh": "随所抽取与所留升高之每个序的最优。"
+        },
+        "conditions": {
+          "en": "What is left valued one for one with what is drawn.",
+          "zh": "所留与所抽取一比一计值。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    },
+    {
+      "id": "keeping-forgoes-the-renewal-at-the-need",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The web laws take SG6's form, from a start s, and the witness reads the web of any course.",
+        "zh": "网之律取 SG6 的形式（自起点 s），见证读任一进程的网。"
+      },
+      "interface": {
+        "output": {
+          "en": "onSource, the web laws with a start s.",
+          "zh": "onSource、自起点 s 的网之律。"
+        },
+        "input": {
+          "en": "Web.frontier_kept_left, Web.frontier_broken_left, Holding.logistic_left.",
+          "zh": "Web.frontier_kept_left、Web.frontier_broken_left、Holding.logistic_left。"
+        },
+        "conditions": {
+          "en": "A dependence met at the start.",
+          "zh": "起始时被满足的依存。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "a-step-coupling-keeps-at-every-horizon",
+      "detail": {
+        "en": "Its open item, an order valuing what is left at the horizon, is answered here for a one-for-one value.",
+        "zh": "其开放项（对视野末所留赋值之序）在此就一比一计值得到回答。"
+      }
+    },
+    {
+      "id": "a-weighting-faster-than-renewal-ends-the-base",
+      "detail": {
+        "en": "Its open item, an order valuing what is left at the horizon, is answered here for a one-for-one value.",
+        "zh": "其开放项（对视野末所留赋值之序）在此就一比一计值得到回答。"
+      }
+    },
+    {
+      "id": "optima-rebuild-a-depleted-base",
+      "detail": {
+        "en": "Its open item, an order valuing what is left at the horizon, is answered here for a one-for-one value.",
+        "zh": "其开放项（对视野末所留赋值之序）在此就一比一计值得到回答。"
+      }
+    },
+    {
+      "id": "others-drawing-first-end-the-base",
+      "detail": {
+        "en": "Its open item, an order valuing what is left at the horizon, is answered here for a one-for-one value.",
+        "zh": "其开放项（对视野末所留赋值之序）在此就一比一计值得到回答。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.Holding.gate",
+        "Becoming.Optimum.Holding.gated_left",
+        "Becoming.Optimum.Holding.logistic",
+        "Becoming.Optimum.Holding.logistic_left",
+        "Becoming.Optimum.Holding.onSource",
+        "Becoming.Optimum.OpenCourse",
+        "Becoming.Optimum.byDrawn",
+        "Becoming.Optimum.byDrawnLeft",
+        "Becoming.Optimum.drawnOver",
+        "Becoming.Optimum.drawn_add_left_le_most",
+        "Becoming.Optimum.drawn_add_shortfall_after",
+        "Becoming.Optimum.frontier_holds",
+        "Becoming.Optimum.frontier_holds_left",
+        "Becoming.Optimum.frontier_left_iff",
+        "Becoming.Optimum.holding",
+        "Becoming.Optimum.holdingTo",
+        "Becoming.Optimum.holdingTo_same",
+        "Becoming.Optimum.holdingTo_within",
+        "Becoming.Optimum.holding_frontier_left",
+        "Becoming.Optimum.holding_most",
+        "Becoming.Optimum.holding_open",
+        "Becoming.Optimum.keeping_frontier_left",
+        "Becoming.Optimum.keeping_left_most",
+        "Becoming.Optimum.keeping_not_frontier",
+        "Becoming.Optimum.keeping_open",
+        "Becoming.Optimum.most_left_iff",
+        "Becoming.Optimum.open_left_le_most",
+        "Becoming.Web.frontier_broken",
+        "Becoming.Web.frontier_broken_left",
+        "Becoming.Web.frontier_kept",
+        "Becoming.Web.frontier_kept_left"
+      ],
+      "sha256": "d2871524906c5d5d08906f1d4725d7acd21bcbd79011540b9e83966b89a07bd9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
+      "role": "receipt",
+      "sha256": "4995c024b8e3f9c9f013718e4be2dbc8d218fbc1a65f064171400f3df5fc6932"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "7c39d2002bd88c31943b4eaf756cffec16d8c0be15864d11299c23e9e916686a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "c20a0bab8973da2a00fdd54d343ba94944e4d2c43e09e5b0518552b919332132"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "ab9f23fa3d0d11abbccb1bd97fc485ef527adb0c081a8b7826cabf7c94427f38"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (SG11), valuing what is left at the horizon: with what is left valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken; study section 321.",
+      "zh": "2026年10月22日：新增（SG11），对视野末所留的计值：所留与所抽取一比一计值时，每个最优在视野内保持在最大更新的水平，终了的抽干不再被迫；高于每个这样水平的依存仍被打破；研究第 321 节。"
+    }
+  ]
+}

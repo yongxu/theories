@@ -129,8 +129,8 @@
       "kind": "scope"
     },
     {
-      "en": "Holding a level where what stands at it falls below it; an order valuing what is left at the horizon; steps met again after a fall; an overcompensating renewal.",
-      "zh": "在其处所立者低于它的水平上保持；对视野末所留赋值之序；跌落后再被满足的步；过度补偿的更新。",
+      "en": "Holding a level where what stands at it falls below it; an order valuing what is left at the horizon at another worth than what is drawn; steps met again after a fall; an overcompensating renewal.",
+      "zh": "在其处所立者低于它的水平上保持；以不同于所汲取之价值对视野末所留赋值之序；跌落后再被满足的步；过度补偿的更新。",
       "kind": "scope"
     },
     {
@@ -153,8 +153,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T075336.250274Z）：Becoming.Optimum 新增的 67 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 298 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Several optimizers each ranking courses at a mutual best response, and how they come to one; an order valuing what is left at the horizon; steps met again after a fall; an overcompensating renewal; an independent review.",
-    "zh": "多个各自对过程排序的优化者的相互最优回应及其如何达到；对视野末所留赋值之序；跌落后再被满足的步；过度补偿的更新；独立审查。"
+    "en": "Several optimizers each ranking courses at a mutual best response, and how they come to one; an order valuing what is left at the horizon at another worth than what is drawn; steps met again after a fall; an overcompensating renewal; an independent review.",
+    "zh": "多个各自对过程排序的优化者的相互最优回应及其如何达到；以不同于所汲取之价值对视野末所留赋值之序；跌落后再被满足的步；过度补偿的更新；独立审查。"
   },
   "correspondence": {
     "en": "Open access dissipates the rent of a common stock, what one harvester leaves being taken by another (Gordon 1954); in the dynamic commons each player's far-sight is cut by the others' draws, the equilibrium stock falling as players are added (Levhari and Mirman 1980; Clark 1990). On the spine, one optimizer's side, exact for every order rising with the weighted draw: the threshold for ending the base at once moves from what the base renews to what the others' leaving renews, and the same order that rebuilds the base alone ends it among others. The far-sighted laws hold over any law of what stands, decay and changing renewal among the cases. Reading (the AI's): keeping a shared base is not one optimizer's to give; the destruction comes from the relation, not from any change in the optimizer.",
@@ -279,6 +279,13 @@
         "en": "Alone, every optimum rebuilds a depleted base; with others drawing first, the same order ends it.",
         "zh": "单独时每个最优重建耗竭的基础；他者先抽取时，同一序终结它。"
       }
+    },
+    {
+      "id": "valuing-what-is-left-at-the-horizon",
+      "detail": {
+        "en": "With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.",
+        "zh": "视野末所留与所抽取一比一计值时，每个最优在视野内保持在最大更新的水平，终了的抽干不再被迫；高于每个这样水平的依存仍被打破。"
+      }
     }
   ],
   "references": [
@@ -381,7 +388,7 @@
         "Becoming.Web.Next.frontier_leaves",
         "Becoming.Web.Next.frontier_rebuilds"
       ],
-      "sha256": "21b4a51bc20777966c457307d3270601a952c883fada63d2b9258ca2561b9e0a"
+      "sha256": "d2871524906c5d5d08906f1d4725d7acd21bcbd79011540b9e83966b89a07bd9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -463,7 +470,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
+      "sha256": "ab9f23fa3d0d11abbccb1bd97fc485ef527adb0c081a8b7826cabf7c94427f38"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
@@ -476,12 +483,18 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
+      "role": "receipt",
+      "sha256": "4995c024b8e3f9c9f013718e4be2dbc8d218fbc1a65f064171400f3df5fc6932",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -540,6 +553,10 @@
     {
       "en": "21 October 2026: added (SG10), over every law of what stands: SG8's and SG9's laws hold over any law of what a level gives at a step, the renewal law the case; where others first draw from what an optimizer leaves at least what the remainder renews, every optimum of an order whose weighting falls at every step ends the base at once; study section 298.",
       "zh": "2026年10月21日：新增（SG10），对每一所立之律：SG8 与 SG9 之律对一个水平在一步给出什么的任一律成立，更新之律是其情形；他者先从优化者所留中抽取不少于剩余之更新时，权重每步下降之序的每个最优立即终结基础；研究第 298 节。"
+    },
+    {
+      "en": "22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.",
+      "zh": "2026年10月22日，SG11：对视野末所留赋值之序已就一比一计值回答（记录 valuing-what-is-left-at-the-horizon，研究第 321 节）；开放项改为另一价值。其规律不变。"
     }
   ]
 }

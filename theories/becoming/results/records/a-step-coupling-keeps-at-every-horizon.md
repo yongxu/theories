@@ -29,7 +29,7 @@
 ## Does not show
 
 - Steps met again after a fall, which the coupling does not count; the keeping course as an optimum at c = m, where it ties with the course ending at nothing.
-- An order with a terminal value or a discount; the optimum rebuilding from below; several optimizers ranking courses.
+- An order with a terminal value at another worth than the draw, or a discount; the optimum rebuilding from below; several optimizers ranking courses.
 - That the dependence ought to be kept or a coupling set: no evaluation enters; the laws say which optima a coupling leaves.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -44,7 +44,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-Steps met again after a fall; an order with a terminal value or a discount; the optimum rebuilding from below; several optimizers ranking courses; an independent review.
+Steps met again after a fall; an order with a terminal value at another worth than the draw, or a discount; the optimum rebuilding from below; several optimizers ranking courses; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -70,6 +70,7 @@ The end of a finite horizon: in finitely repeated play cooperation sustained by 
   - Preserved conditions: An order rising with the worth across the horizon. [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
 - related, not a proved adapter: [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md). A coupling of the whole keeping is outweighed by far-sight; here a coupling a step that no horizon outweighs.
 - related, not a proved adapter: [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md). Far-sight keeps the optimizer's own resource base; here what keeps anything else at every horizon.
+- related, not a proved adapter: [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md). With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.
 
 **Used by:** [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md)
 
@@ -95,6 +96,7 @@ The end of a finite horizon: in finitely repeated play cooperation sustained by 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json) | — |
 
 Aliases: `a coupling a step keeps a dependence at every horizon`, `a coupling added for each step a dependence is kept`, `the rate a step coupling needs`, `the end of the horizon breaks at the last step`, `每步的耦合在每个视野都保持依存`, `Becoming.Optimum.frontier_keeps_stepwise`, `Becoming.Optimum.frontier_met_before_end`, `Becoming.Web.frontier_breaks_last`
 
@@ -102,6 +104,7 @@ Aliases: `a coupling a step keeps a dependence at every horizon`, `a coupling ad
 ### History
 
 - 21 October 2026: added (SG7), a coupling added for each step a dependence is kept: it keeps the dependence at every horizon where it covers the renewal forgone a step and exceeds the end; below the need the horizon's end breaks it, at the last step alone above that rate; below the rate a long horizon outweighs it; optima in every case; study section 294.
+- 22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.
 
 </details>
 

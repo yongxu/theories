@@ -1205,3 +1205,23 @@ Evidence: Lean in the record's receipt
 Boundary: AI check, one session; the two-part family; the assignment of tiers is a reading
 Integration: chapter §6 and §8.1 item 11, the record table
 ```
+
+<a id="left-check"></a>
+## A check: valuing what is left at the horizon (22 October 2026, SG11)
+
+An AI check (one session, 22 October), made while the Lean was written. It asks what SG5 ([horizon check](#horizon-check)) left open: whether valuing what is left at the horizon changes what a far-sighted optimum keeps. **Verdict: the mathematics is known in its kind. A terminal or salvage value on the state left at the end is standard in finite-horizon optimal control. Without one, a finite-horizon harvest ends by drawing everything. The spine's form is exact for every order rising with what is drawn and left, valued one for one. The end's drain is then no longer forced, and the optima are exactly the courses holding a level of greatest renewal to the horizon. What depends on the condition above those levels is broken at the first step as before. The step that is the form's own is that the terminal value removes the end effect and nothing else.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| A terminal (salvage) value: the payoff counts the state left at the horizon | Finite-horizon optimal control; Clark, *Mathematical Bioeconomics* (1976) (from memory) | The order by what is drawn and left (`Optimum.byDrawnLeft`); every optimum of every order rising with it holds a level of greatest renewal to the horizon, and these are exactly its optima (`Optimum.frontier_holds_left`, `Optimum.frontier_left_iff`) |
+| The end of a finite-horizon harvest: with no value on what is left, the stock is drawn down at the end | Clark (1976) (from memory) | SG5's drain at the last step (`Optimum.frontier_holds`); valued one for one, keeping and draining are both optima (`Optimum.keeping_frontier_left`, `Optimum.holding_frontier_left`), and keeping is none by the draw alone (`Optimum.keeping_not_frontier`) |
+| Single-species management leaves predators of a forage stock uncounted | Pikitch and others (2012) (from memory) | A dependence above every level of greatest renewal is broken at the first step under every optimum valuing what is left (`Web.frontier_broken_left`, `Optimum.Holding.logistic_left`) |
+
+```text
+Result(s): new record valuing-what-is-left-at-the-horizon (SG11, new laws of Becoming.Optimum)
+Delta: with what is left valued one for one with what is drawn, every optimum of every order rising with it holds a level of greatest renewal to the horizon, the optima of that order being exactly the open courses doing so; the course keeping that level past the horizon is an optimum and the drain at the end is no longer forced; a dependence above every such level is still broken at the first step
+Supplied premises / correspondence: a renewal law of the level with a greatest renewal r reached at some y within the start's reach; a capacity covering the first step's draw and r; one-for-one value on what is left; natural amounts; discrete steps. Correspondence: terminal value in optimal control; Clark 1976; Pikitch and others 2012
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; a terminal value at another worth than the draw is not stated; the witnesses' laws, starts and capacities chosen
+Integration: chapter §3.4, §7.1, §8.1 item 10 and the relation-to-known-results row 6
+```

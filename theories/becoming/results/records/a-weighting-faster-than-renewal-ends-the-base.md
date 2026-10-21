@@ -28,7 +28,7 @@
 ## Does not show
 
 - The optimum where no course whose level gains the most at each step is open; whether an optimum ends the base after the first step where some level renews faster at the first steps.
-- An order valuing what is left at the horizon; steps met again after a fall; rebuilding from below; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one.
+- An order valuing what is left at the horizon at another worth than what is drawn; steps met again after a fall; rebuilding from below; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one.
 - That a weighting ought to be flatter or a base kept: no evaluation enters; the laws say which optima a weighting leaves.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -43,7 +43,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-The optimum where no reference course is open; ending after the first step; an order valuing what is left at the horizon; rebuilding from below; several optimizers ranking courses; an independent review.
+The optimum where no reference course is open; ending after the first step; an order valuing what is left at the horizon at another worth than what is drawn; rebuilding from below; several optimizers ranking courses; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -71,6 +71,7 @@ Discounting (Ramsey 1928; Koopmans 1960); at a constant rate δ a level's weight
 - related, not a proved adapter: [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md). A coupling a step keeps a dependence at every horizon; here what a weighting does to the optimizer's own base.
 - related, not a proved adapter: [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md). Rebuilding from below: where the weighting falls slower than the base renews, every optimum rebuilds a base below a level out of one step's reach.
 - related, not a proved adapter: [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md). Over every law of what stands: these laws hold over any law of what a level gives at a step; with others drawing first, every optimum of a falling weighting ends the base at once.
+- related, not a proved adapter: [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md). With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.
 
 **Used by:** [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md) · [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md)
 
@@ -94,6 +95,7 @@ Discounting (Ramsey 1928; Koopmans 1960); at a constant rate δ a level's weight
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json) | — |
 
 Aliases: `a weighting falling faster than renewal ends the base`, `an order weighting later draws less`, `discounting ends the base`, `the modified golden rule on the spine`, `权重下降快于更新时终结基础`, `Becoming.Optimum.frontier_gains_weighted`, `Becoming.Optimum.frontier_exhausts`, `Becoming.Web.frontier_exhausts`
 
@@ -103,6 +105,7 @@ Aliases: `a weighting falling faster than renewal ends the base`, `an order weig
 - 21 October 2026: added (SG8), an order weighting later draws less: every optimum gains at each step what a course of greatest weighted gain does; where the weighting falls faster than every positive level renews every optimum ends its own base at the first step; where a level within reach renews faster none does; at the tie both are optima in the witness; study section 295.
 - 21 October 2026, SG9: weighted_frontier and frontier_gains_weighted are now the case of frontier_of_gainsMost and frontier_gains_of_most, a course gaining the most against every open course (record optima-rebuild-a-depleted-base, study section 296); this record's laws and their statements are unchanged.
 - 21 October 2026, SG10: this record's laws hold over every law of what stands (Optimum.Next, Web.Next; record others-drawing-first-end-the-base, study section 298), the level with its renewal the case. Those still read in the renewal form keep their statements, each proof now one line; the renewal forms no law reads any more were removed, and this record cites their general forms (12 law citations moved, the proof references with them).
+- 22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.
 
 </details>
 

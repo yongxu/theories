@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-331 registered results: 311 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 829 curated edges join 284 results to the results they draw on.
+332 registered results: 312 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 831 curated edges join 285 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -264,6 +264,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [unanchored-incidence-collapse][] ← <a id="unanchored-incidence-collapse--joining-open-map-factor"></a>[joining-open-map-factor][]
 - [unceasing-generation-needs-renewal][] ← <a id="unceasing-generation-needs-renewal--becoming-renewal-reading"></a>[becoming-renewal-reading][] · <a id="unceasing-generation-needs-renewal--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="unceasing-generation-needs-renewal--becoming-stepwise-reading"></a>[becoming-stepwise-reading][] · <a id="unceasing-generation-needs-renewal--becoming-return-grades"></a>[becoming-return-grades][]
 - [unity-of-readings][] ← <a id="unity-of-readings--claims-shown-in-context"></a>[claims-shown-in-context][] · <a id="unity-of-readings--process-and-frame-as-readings"></a>[process-and-frame-as-readings][] · <a id="unity-of-readings--premises-read-off-the-exchange"></a>[premises-read-off-the-exchange][] · <a id="unity-of-readings--continuation-condition-decomposition"></a>[continuation-condition-decomposition][]
+- [valuing-what-is-left-at-the-horizon][] ← <a id="valuing-what-is-left-at-the-horizon--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="valuing-what-is-left-at-the-horizon--keeping-forgoes-the-renewal-at-the-need"></a>[keeping-forgoes-the-renewal-at-the-need][]
 - [weights-count-situations][] ← <a id="weights-count-situations--typicality-by-counting"></a>[typicality-by-counting][] · <a id="weights-count-situations--sum-over-histories-exact"></a>[sum-over-histories-exact][] · <a id="weights-count-situations--losses-of-the-sum-over-histories"></a>[losses-of-the-sum-over-histories][]
 - [what-a-commuting-law-keeps-apart][] ← <a id="what-a-commuting-law-keeps-apart--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="what-a-commuting-law-keeps-apart--readings-within-what-they-read"></a>[readings-within-what-they-read][] · <a id="what-a-commuting-law-keeps-apart--returning-where-the-course-branches"></a>[returning-where-the-course-branches][] · <a id="what-a-commuting-law-keeps-apart--hexagrams-on-the-spine"></a>[hexagrams-on-the-spine][] *(application)* · <a id="what-a-commuting-law-keeps-apart--generalization-through-lumping"></a>[generalization-through-lumping][] · <a id="what-a-commuting-law-keeps-apart--every-loss-passes-a-juncture"></a>[every-loss-passes-a-juncture][]
 - [what-a-cut-loses][] ← <a id="what-a-cut-loses--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][] · <a id="what-a-cut-loses--how-much-difference-arrives"></a>[how-much-difference-arrives][] · <a id="what-a-cut-loses--recurrence-without-premise"></a>[recurrence-without-premise][]
@@ -576,6 +577,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [unanchored-incidence-collapse]: theories/becoming/results/records/unanchored-incidence-collapse.md
 [unceasing-generation-needs-renewal]: theories/becoming/results/records/unceasing-generation-needs-renewal.md
 [unity-of-readings]: theories/becoming/results/records/unity-of-readings.md
+[valuing-what-is-left-at-the-horizon]: theories/becoming/results/records/valuing-what-is-left-at-the-horizon.md
 [versioned-request-completion]: theories/becoming/results/records/versioned-request-completion.md
 [weights-count-situations]: theories/becoming/results/records/weights-count-situations.md
 [what-a-commuting-law-keeps-apart]: theories/becoming/results/records/what-a-commuting-law-keeps-apart.md

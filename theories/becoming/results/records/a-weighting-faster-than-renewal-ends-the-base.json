@@ -109,8 +109,8 @@
       "kind": "scope"
     },
     {
-      "en": "An order valuing what is left at the horizon; steps met again after a fall; rebuilding from below; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one.",
-      "zh": "对视野末所留赋值之序；跌落后再被满足的步；自下重建；多个对过程排序的优化者；把 SG5 的律作为权重皆为一的情形重新导出。",
+      "en": "An order valuing what is left at the horizon at another worth than what is drawn; steps met again after a fall; rebuilding from below; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one.",
+      "zh": "以不同于所汲取之价值对视野末所留赋值之序；跌落后再被满足的步；自下重建；多个对过程排序的优化者；把 SG5 的律作为权重皆为一的情形重新导出。",
       "kind": "scope"
     },
     {
@@ -133,8 +133,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T063915.104780Z）：Becoming.Optimum 新增的 35 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 295 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "The optimum where no reference course is open; ending after the first step; an order valuing what is left at the horizon; rebuilding from below; several optimizers ranking courses; an independent review.",
-    "zh": "没有开放参照进程时的最优；第一步之后的终结；对视野末所留赋值之序；自下重建；多个对过程排序的优化者；独立审查。"
+    "en": "The optimum where no reference course is open; ending after the first step; an order valuing what is left at the horizon at another worth than what is drawn; rebuilding from below; several optimizers ranking courses; an independent review.",
+    "zh": "没有开放参照进程时的最优；第一步之后的终结；以不同于所汲取之价值对视野末所留赋值之序；自下重建；多个对过程排序的优化者；独立审查。"
   },
   "correspondence": {
     "en": "Discounting (Ramsey 1928; Koopmans 1960); at a constant rate δ a level's weighted gain is w (t + 1) (R z − δ z), so the level held is the modified golden rule's, where the marginal renewal equals the rate (Clark and Munro 1975); a sole owner finding extinction optimal where the rate exceeds the greatest rate of renewal (Clark 1973); the discount factor of reinforcement learning (Sutton and Barto 1998); a rate changing with delay (Ainslie 1975). On the spine the laws cover every order rising with the weighted draw and any weighting, through a reference course whose level gains the most at each step; the threshold is exact, the tie admitting both ending and holding; the break is a law of the dependence web. Reading (the AI's): far-sight keeps the optimizer's own base only where its weighting falls slower than the base renews.",
@@ -250,6 +250,13 @@
         "en": "Over every law of what stands: these laws hold over any law of what a level gives at a step; with others drawing first, every optimum of a falling weighting ends the base at once.",
         "zh": "对每一所立之律：这些规律对一个水平在一步给出什么的任一律成立；他者先抽取时，权重下降之序的每个最优立即终结基础。"
       }
+    },
+    {
+      "id": "valuing-what-is-left-at-the-horizon",
+      "detail": {
+        "en": "With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.",
+        "zh": "视野末所留与所抽取一比一计值时，每个最优在视野内保持在最大更新的水平，终了的抽干不再被迫；高于每个这样水平的依存仍被打破。"
+      }
     }
   ],
   "references": [
@@ -303,7 +310,7 @@
         "Becoming.Web.frontier_exhausts",
         "Becoming.Web.frontier_leaves"
       ],
-      "sha256": "21b4a51bc20777966c457307d3270601a952c883fada63d2b9258ca2561b9e0a"
+      "sha256": "d2871524906c5d5d08906f1d4725d7acd21bcbd79011540b9e83966b89a07bd9"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -377,7 +384,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
+      "sha256": "ab9f23fa3d0d11abbccb1bd97fc485ef527adb0c081a8b7826cabf7c94427f38"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T070401.903190Z/verification.json",
@@ -402,12 +409,18 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
+      "role": "receipt",
+      "sha256": "4995c024b8e3f9c9f013718e4be2dbc8d218fbc1a65f064171400f3df5fc6932",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -467,6 +480,10 @@
     {
       "en": "21 October 2026, SG10: this record's laws hold over every law of what stands (Optimum.Next, Web.Next; record others-drawing-first-end-the-base, study section 298), the level with its renewal the case. Those still read in the renewal form keep their statements, each proof now one line; the renewal forms no law reads any more were removed, and this record cites their general forms (12 law citations moved, the proof references with them).",
       "zh": "2026年10月21日，SG10：本记录之律对每一所立之律成立（Optimum.Next、Web.Next；记录 others-drawing-first-end-the-base，研究第 298 节），水平加更新是其情形。仍以更新形式被读取者陈述不变，每个证明现为一行；不再被任何规律读取的更新形式已移除，本记录改引其一般形式（规律中移动 12 处引用，证明引用随之）。"
+    },
+    {
+      "en": "22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.",
+      "zh": "2026年10月22日，SG11：对视野末所留赋值之序已就一比一计值回答（记录 valuing-what-is-left-at-the-horizon，研究第 321 节）；开放项改为另一价值。其规律不变。"
     }
   ]
 }
