@@ -1,0 +1,206 @@
+@Becoming.Dyadic.ext' : ∀ {a b : Becoming.Dyadic}, a.num = b.num → a.exp = b.exp → a = b
+@Becoming.Dyadic.le_trans' : ∀ {a b c : Becoming.Dyadic}, a.le b → b.le c → a.le c
+Becoming.Dyadic.add_assoc' : ∀ (a b c : Becoming.Dyadic), (a.add b).add c = a.add (b.add c)
+Becoming.Dyadic.add_comm' : ∀ (a b : Becoming.Dyadic), a.add b = b.add a
+Becoming.Dyadic.zero_add' : ∀ (a : Becoming.Dyadic), Becoming.Dyadic.zero.add a = a
+Becoming.Dyadic.expand : ∀ (x y e f g : Nat),
+  (x * 2 ^ g + y * 2 ^ e) * 2 ^ (f + g) = x * 2 ^ f * (2 ^ g * 2 ^ g) + y * (2 ^ e * 2 ^ f * 2 ^ g)
+@Becoming.Dyadic.add_le_add_right' : ∀ {a b : Becoming.Dyadic} (c : Becoming.Dyadic), a.le b → (a.add c).le (b.add c)
+@Becoming.Dyadic.le_of_add_le_add_right' : ∀ {a b : Becoming.Dyadic} (c : Becoming.Dyadic),
+  (a.add c).le (b.add c) → a.le b
+Becoming.Dyadic.zero_le' : ∀ (a : Becoming.Dyadic), Becoming.Dyadic.zero.le a
+@Becoming.Dyadic.num_pos : ∀ {a : Becoming.Dyadic}, ¬a.le Becoming.Dyadic.zero → 0 < a.num
+@Becoming.Dyadic.half_below : ∀ {a : Becoming.Dyadic},
+  ¬a.le Becoming.Dyadic.zero →
+    ¬{ num := a.num, exp := a.exp + 1 }.le Becoming.Dyadic.zero ∧ ¬a.le { num := a.num, exp := a.exp + 1 }
+Becoming.Dyadic.times_ge : ∀ (n k m : Nat),
+  { num := m * n, exp := k }.le (Becoming.Dyadic.amounts.times m { num := n, exp := k })
+Becoming.Dyadic.archimedean : Becoming.Dyadic.amounts.Archimedean
+Becoming.Halving.falls : ∀ (t : Nat),
+  Becoming.Dyadic.amounts.le (Becoming.Dyadic.amounts.add (Becoming.Halving.stock (t + 1)) (Becoming.Halving.loss t))
+    (Becoming.Halving.stock t)
+Becoming.Halving.loss_positive : ∀ (t : Nat),
+  ¬Becoming.Dyadic.amounts.le (Becoming.Halving.loss t) Becoming.Dyadic.amounts.zero
+Becoming.Halving.no_least_loss : ∀ (ε : Becoming.Dyadic),
+  ¬Becoming.Dyadic.amounts.le ε Becoming.Dyadic.amounts.zero →
+    ¬∀ (t : Nat), Becoming.Dyadic.amounts.le ε (Becoming.Halving.loss t)
+Becoming.Halving.falls_strictly : ∀ (t : Nat),
+  ¬Becoming.Dyadic.amounts.le (Becoming.Halving.stock t) (Becoming.Halving.stock (t + 1))
+Becoming.Halving.never_rests : (∀ (t : Nat),
+    Becoming.Dyadic.amounts.le (Becoming.Dyadic.amounts.add (Becoming.Halving.stock (t + 1)) (Becoming.Halving.loss t))
+      (Becoming.Halving.stock t)) ∧
+  (∀ (t : Nat), Becoming.Dyadic.amounts.le (Becoming.Halving.stock (t + 1)) (Becoming.Halving.stock t)) ∧
+    (∀ (t : Nat), ¬Becoming.Dyadic.amounts.le (Becoming.Halving.loss t) Becoming.Dyadic.amounts.zero) ∧
+      (∀ (ε : Becoming.Dyadic),
+          ¬Becoming.Dyadic.amounts.le ε Becoming.Dyadic.amounts.zero →
+            ¬∀ (t : Nat), Becoming.Dyadic.amounts.le ε (Becoming.Halving.loss t)) ∧
+        Becoming.Dyadic.amounts.Archimedean ∧
+          ∀ (N : Nat),
+            ∃ t, N ≤ t ∧ ¬Becoming.Dyadic.amounts.le (Becoming.Halving.stock t) (Becoming.Halving.stock (t + 1))
+Becoming.Halving.approaches_without_reaching : (∀ (ε : Becoming.Dyadic),
+    ¬Becoming.Dyadic.amounts.le ε Becoming.Dyadic.amounts.zero →
+      (∃ m,
+          ¬∃ f,
+              0 ≤ f 0 ∧
+                (∀ (i : Nat), f i < f (i + 1)) ∧
+                  ∀ (i : Nat), i < m → Becoming.Dyadic.amounts.le ε (Becoming.Halving.loss (f i))) ∧
+        ¬∀ (N : Nat), ∃ t, N ≤ t ∧ Becoming.Dyadic.amounts.le ε (Becoming.Halving.loss t)) ∧
+  ∀ (t : Nat), ¬Becoming.Dyadic.amounts.le (Becoming.Halving.stock t) (Becoming.Halving.stock (t + 1))
+Becoming.Halving.times_le_num : ∀ (n k m : Nat),
+  (Becoming.Dyadic.amounts.times m { num := n, exp := k }).le { num := m * n, exp := k }
+Becoming.Halving.le_two_pow : ∀ (K : Nat), K ≤ 2 ^ K
+Becoming.Halving.takes_within_one : ∀ (t : Nat),
+  Becoming.Dyadic.amounts.le (Becoming.Dyadic.amounts.times (2 ^ (t + 1)) (Becoming.Halving.loss t))
+    Becoming.Halving.one
+Becoming.Halving.takes_halve : (∀ (t : Nat),
+    Becoming.Dyadic.amounts.le
+      (Becoming.Dyadic.amounts.add Becoming.Halving.one
+        (Becoming.Dyadic.amounts.times (2 ^ (t + 1)) (Becoming.Halving.loss t)))
+      (Becoming.Dyadic.amounts.add Becoming.Halving.one Becoming.Halving.one)) ∧
+  (∀ (t : Nat), ¬Becoming.Dyadic.amounts.le (Becoming.Halving.loss t) Becoming.Dyadic.amounts.zero) ∧
+    (∀ (K : Nat), ∃ T, ∀ (t : Nat), T ≤ t → K ≤ 2 ^ (t + 1)) ∧
+      ∀ (ε : Becoming.Dyadic),
+        ¬Becoming.Dyadic.amounts.le ε Becoming.Dyadic.amounts.zero →
+          ¬∀ (t : Nat), Becoming.Dyadic.amounts.le ε (Becoming.Halving.loss t)
+@Becoming.Layered.ext' : ∀ {a b : Becoming.Layered}, a.coarse = b.coarse → a.fine = b.fine → a = b
+@Becoming.Layered.le_trans' : ∀ {a b c : Becoming.Layered}, a.le b → b.le c → a.le c
+@Becoming.Layered.add_le_add_right' : ∀ {a b : Becoming.Layered} (c : Becoming.Layered), a.le b → (a.add c).le (b.add c)
+@Becoming.Layered.le_of_add_le_add_right' : ∀ {a b : Becoming.Layered} (c : Becoming.Layered),
+  (a.add c).le (b.add c) → a.le b
+Becoming.Layered.least_positive : ¬Becoming.Layered.amounts.le Becoming.Layered.least Becoming.Layered.amounts.zero
+Becoming.Layered.loses : ∀ (t : Nat),
+  Becoming.Layered.amounts.le (Becoming.Layered.amounts.add (Becoming.Layered.stock (t + 1)) Becoming.Layered.least)
+    (Becoming.Layered.stock t)
+Becoming.Layered.times_coarse : ∀ (m : Nat),
+  (Becoming.Layered.amounts.times m Becoming.Layered.least).coarse.le Becoming.Dyadic.zero
+Becoming.Layered.beyond_every_multiple : ∀ (m : Nat),
+  Becoming.Layered.amounts.le (Becoming.Layered.amounts.times m Becoming.Layered.least) (Becoming.Layered.stock 0)
+Becoming.Layered.never_rests : (∀ (t : Nat),
+    Becoming.Layered.amounts.le (Becoming.Layered.stock (t + 1)) (Becoming.Layered.stock t)) ∧
+  (∀ (t : Nat),
+      Becoming.Layered.amounts.le (Becoming.Layered.amounts.add (Becoming.Layered.stock (t + 1)) Becoming.Layered.least)
+        (Becoming.Layered.stock t)) ∧
+    ¬Becoming.Layered.amounts.le Becoming.Layered.least Becoming.Layered.amounts.zero ∧
+      (∀ (m : Nat),
+          Becoming.Layered.amounts.le (Becoming.Layered.amounts.times m Becoming.Layered.least)
+            (Becoming.Layered.stock 0)) ∧
+        ∀ (N : Nat),
+          ∃ t, N ≤ t ∧ ¬Becoming.Layered.amounts.le (Becoming.Layered.stock t) (Becoming.Layered.stock (t + 1))
+Becoming.Layered.not_archimedean : ¬Becoming.Layered.amounts.Archimedean
+@Becoming.Amounts.fallsStop_congr : ∀ {A : Type} {M : Becoming.Amounts A} {s s' : Nat → A} {T : Nat},
+  (∀ (t : Nat), T ≤ t → s t = s' t) → M.FallsStop s' T → M.FallsStop s T
+@Becoming.Amounts.noEndlessFall_of_fallsAtLeast : ∀ {A : Type} {M : Becoming.Amounts A},
+  M.Archimedean → ∀ {ε : A}, ¬M.le ε M.zero → M.FallsAtLeast ε → M.NoEndlessFall
+Becoming.Amounts.whole_fallsAtLeast : Becoming.Amounts.whole.FallsAtLeast 1
+Becoming.Amounts.whole_noEndlessFall : Becoming.Amounts.whole.NoEndlessFall
+Becoming.Halving.falls_back : ∀ (t : Nat),
+  Becoming.Dyadic.amounts.le (Becoming.Halving.stock t)
+    (Becoming.Dyadic.amounts.add (Becoming.Halving.stock (t + 1)) (Becoming.Halving.loss t))
+Becoming.Halving.endless : Becoming.Dyadic.amounts.EndlessFall
+Becoming.Halving.no_least_fall : ∀ (ε : Becoming.Dyadic),
+  ¬Becoming.Dyadic.amounts.le ε Becoming.Dyadic.amounts.zero → ¬Becoming.Dyadic.amounts.FallsAtLeast ε
+Becoming.Layered.endless : Becoming.Layered.amounts.EndlessFall
+Becoming.Layered.fallsAtLeast : Becoming.Layered.amounts.FallsAtLeast Becoming.Layered.least
+@Becoming.Amounts.rising_apart : ∀ {f : Nat → Nat} {K : Nat},
+  (∀ (i : Nat), i < K → f i < f (i + 1)) → ∀ (i d : Nat), i + d ≤ K → f i + d ≤ f (i + d)
+@Becoming.Amounts.from_start : ∀ {f : Nat → Nat} {K T : Nat},
+  T ≤ f 0 → (∀ (i : Nat), i < K → f i < f (i + 1)) → ∀ {n : Nat}, n ≤ K → T ≤ f n
+@Becoming.Amounts.falls_within_reading : ∀ {A : Type} {M : Becoming.Amounts A} {S : Type} {g : Nat → S} {q : S → A}
+  {l : List S} {T : Nat},
+  (∀ (t : Nat), T ≤ t → g t ∈ l) →
+    (∀ (t : Nat), T ≤ t → ¬¬M.le (q (g (t + 1))) (q (g t))) →
+      ∀ {f : Nat → Nat},
+        T ≤ f 0 →
+          (∀ (i : Nat), i < l.length → f i < f (i + 1)) →
+            ¬∀ (i : Nat), i ≤ l.length → ¬M.le (q (g (f i))) (q (g (f i + 1)))
+@Becoming.Amounts.extend_falls : ∀ {A : Type} {M : Becoming.Amounts A} {S : Type} {g : Nat → S} {q : S → A} {T m : Nat}
+  {f : Nat → Nat},
+  T ≤ f 0 →
+    (∀ (i : Nat), i < m → f i < f (i + 1)) →
+      (∀ (i : Nat), i ≤ m → ¬M.le (q (g (f i))) (q (g (f i + 1)))) →
+        ∀ {t : Nat},
+          f m + 1 ≤ t →
+            ¬M.le (q (g t)) (q (g (t + 1))) →
+              ∃ f',
+                T ≤ f' 0 ∧
+                  (∀ (i : Nat), i < m + 1 → f' i < f' (i + 1)) ∧
+                    ∀ (i : Nat), i ≤ m + 1 → ¬M.le (q (g (f' i))) (q (g (f' i + 1)))
+@Becoming.Amounts.rests_unrefuted_of_finite_reading : ∀ {A : Type} {M : Becoming.Amounts A} {S : Type} {g : Nat → S}
+  {q : S → A} {l : List S} {T : Nat},
+  (∀ (t : Nat), T ≤ t → g t ∈ l) →
+    (∀ (t : Nat), T ≤ t → ¬¬M.le (q (g (t + 1))) (q (g t))) → M.FallsStop (fun t => q (g t)) T
+@Becoming.Amounts.rests_of_finite_reading : ∀ {A : Type} {M : Becoming.Amounts A} {S : Type} {g : Nat → S} {q : S → A}
+  {l : List S} {T : Nat},
+  (∀ (t : Nat), T ≤ t → g t ∈ l) →
+    (∀ (t : Nat), T ≤ t → M.le (q (g (t + 1))) (q (g t))) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ ¬M.le (q (g t)) (q (g (t + 1)))
+Becoming.Halving.stock_unlisted : ¬∃ l, ∀ (t : Nat), Becoming.Halving.stock t ∈ l
+@Becoming.Branching.Lossless.loses_nothing : ∀ {S Act : Type} {P : Generative.Process S Act} {A : Type}
+  {M : Becoming.Amounts A},
+  Becoming.Branching.Lossless P →
+    ∀ (r : Becoming.Run P) {l : List S},
+      (∀ (n : Nat), r.state n ∈ l) →
+        ∀ {q : S → A} {d : Nat → A},
+          (∀ (n : Nat), M.le (M.add (q (r.state (n + 1))) (d n)) (q (r.state n))) → ∀ (n : Nat), M.le (d n) M.zero
+@Becoming.Branching.loss_needs_merge : ∀ {S Act : Type} {P : Generative.Process S Act} {A : Type}
+  {M : Becoming.Amounts A} (r : Becoming.Run P) {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) →
+    ∀ {q : S → A} {d : Nat → A},
+      (∀ (n : Nat), M.le (M.add (q (r.state (n + 1))) (d n)) (q (r.state n))) →
+        ∀ {n : Nat}, ¬M.le (d n) M.zero → ¬Becoming.Branching.Lossless P
+@Becoming.Branching.rests_along_run : ∀ {S Act : Type} {P : Generative.Process S Act} {A : Type}
+  {M : Becoming.Amounts A} (r : Becoming.Run P) {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) →
+    ∀ {q : S → A} {T : Nat},
+      (∀ (t : Nat), T ≤ t → M.le (q (r.state (t + 1))) (q (r.state t))) →
+        ¬∀ (N : Nat), ∃ t, N ≤ t ∧ ¬M.le (q (r.state t)) (q (r.state (t + 1)))
+@Becoming.Law.Lossless.regains : ∀ {S A : Type} {M : Becoming.Amounts A} {next : S → S},
+  Becoming.Law.Lossless next →
+    ∀ {all : List S},
+      (∀ (s : S), s ∈ all) →
+        ∀ {q : S → A} {s : S},
+          (∀ (n : Nat), M.le (q (Becoming.Law.orbit next s (n + 1))) (q (Becoming.Law.orbit next s n))) →
+            ∀ (n : Nat), M.le (q s) (q (Becoming.Law.orbit next s n))
+@Becoming.Law.Lossless.loses_nothing : ∀ {S A : Type} {M : Becoming.Amounts A} {next : S → S},
+  Becoming.Law.Lossless next →
+    ∀ {all : List S},
+      (∀ (s : S), s ∈ all) →
+        ∀ {q : S → A} {d : Nat → A} {s : S},
+          (∀ (n : Nat), M.le (M.add (q (Becoming.Law.orbit next s (n + 1))) (d n)) (q (Becoming.Law.orbit next s n))) →
+            ∀ (n : Nat), M.le (d n) M.zero
+@Becoming.Law.loss_needs_merge : ∀ {S A : Type} {M : Becoming.Amounts A} {next : S → S} {all : List S},
+  (∀ (s : S), s ∈ all) →
+    ∀ {q : S → A} {d : Nat → A} {s : S},
+      (∀ (n : Nat), M.le (M.add (q (Becoming.Law.orbit next s (n + 1))) (d n)) (q (Becoming.Law.orbit next s n))) →
+        ∀ {n : Nat}, ¬M.le (d n) M.zero → ¬Becoming.Law.Lossless next
+@Becoming.Law.distinct_within : ∀ {S P E : Type} {part : S → P} {rest : S → E},
+  (∀ (x y : S), part x = part y → rest x = rest y → x = y) →
+    ∀ {h : Nat → S} {k : Nat},
+      (∀ (i j : Nat), i < j → j < k → h i ≠ h j) →
+        ∀ {ps : List P} {es : List E},
+          (∀ (i : Nat), i < k → part (h i) ∈ ps) → (∀ (i : Nat), i < k → rest (h i) ∈ es) → ¬ps.length * es.length < k
+@Becoming.Law.Lossless.keeps_apart : ∀ {S : Type} {next : S → S},
+  Becoming.Law.Lossless next →
+    ∀ {h : Nat → S} {k : Nat},
+      (∀ (i j : Nat), i < j → j < k → h i ≠ h j) →
+        ∀ (n i j : Nat), i < j → j < k → Becoming.Law.orbit next (h i) n ≠ Becoming.Law.orbit next (h j) n
+@Becoming.Law.Lossless.narrowing_spreads : ∀ {S P E : Type} {next : S → S},
+  Becoming.Law.Lossless next →
+    ∀ {part : S → P} {rest : S → E},
+      (∀ (x y : S), part x = part y → rest x = rest y → x = y) →
+        ∀ {h : Nat → S} {k : Nat},
+          (∀ (i j : Nat), i < j → j < k → h i ≠ h j) →
+            ∀ (n : Nat) {ps : List P} {es : List E},
+              (∀ (i : Nat), i < k → part (Becoming.Law.orbit next (h i) n) ∈ ps) →
+                (∀ (i : Nat), i < k → rest (Becoming.Law.orbit next (h i) n) ∈ es) → ¬ps.length * es.length < k
+@Becoming.Law.Lossless.reset_unlisted : ∀ {S P : Type} {next : S → S},
+  Becoming.Law.Lossless next →
+    ∀ {part : S → P} {p : P}, (∀ (x : S), part (next x) = p) → ∀ {y : S}, part y ≠ p → ¬∃ all, ∀ (s : S), s ∈ all
+Becoming.Reset.lossless : Becoming.Law.Lossless Becoming.Reset.next
+Becoming.Reset.part_merges : ∀ (x : Bool × List Bool), (Becoming.Reset.next x).fst = false
+Becoming.Reset.rest_length : ∀ (x : Bool × List Bool) (n : Nat),
+  (Becoming.Law.orbit Becoming.Reset.next x n).snd.length = x.snd.length + n
+Becoming.Reset.kept_by_rest : Becoming.Law.Lossless Becoming.Reset.next ∧
+  (∀ (x : Bool × List Bool), (Becoming.Reset.next x).fst = false) ∧
+    (Becoming.Reset.next (true, [])).fst = (Becoming.Reset.next (false, [])).fst ∧
+      (∀ (x : Bool × List Bool), ¬∃ l, ∀ (n : Nat), (Becoming.Law.orbit Becoming.Reset.next x n).snd ∈ l) ∧
+        ¬∃ all, ∀ (s : Bool × List Bool), s ∈ all

@@ -1,0 +1,39 @@
+## @N@. One stretch balance in the prelude (EC2)
+
+Board item EC, its second step ([plan](development/ec-elegant-completion/PLAN.md); EC1 is study §307). Core receipt `@RECEIPT@`.
+
+**Why.**
+- The balance law has a stretch form: a count balanced at each step of a stretch, what it gains against what it loses, is balanced over the stretch. That form was stated once as a general law, `balance_over_stretch_on` in `Becoming.Change`, with its forms `balance_over_stretch`, `le_over_stretch` and `ge_over_stretch` in `Becoming.Population`.
+- It was also re-proved by its own induction four times:
+  - for a flow's stock over a family (`Flow.accumulates_on`, in `Becoming.Flow`, below `Becoming.Change`);
+  - for an amount's rises and falls (`Change.over_stretch`, in the module that states the general law, above it);
+  - for one condition's level (`Regulation.accumulates_at`);
+  - for a course and what it draws (`Optimum.level_add_drawn_of_within`, over the whole numbers' sum).
+- So the general law was not the reason for the four special ones (board rule 9).
+
+**What changed.**
+- **The law moved to the prelude.** `balance_over_stretch_on`, `balance_over_stretch`, `le_over_stretch` and `ge_over_stretch` moved to `Becoming.Prelude` unchanged, with their names. They need only `total` and `steps`, which the prelude states.
+- **The four special laws are derived from it**, their statements unchanged and their direct inductions gone:
+  - `Change.over_stretch` is `balance_over_stretch` at an amount's rises and falls (`Change.across`).
+  - `Flow.accumulates_on` is `balance_over_stretch_on` at the stock of a family, through `Flow.BalancesOn.over`.
+  - `Regulation.accumulates_at` is `balance_over_stretch_on` at one condition's level. The step balance at `t` is read off `T + (t - T)`, through the prelude's `Naturals.add_sub_of_le`, since core `Nat` subtraction lemmas use `propext`.
+  - `Optimum.level_add_drawn_of_within` is `balance_over_stretch` at a course and what it draws, the whole numbers' sum read as a total over steps (`Amounts.whole_sum`).
+
+**Delta.**
+- One stretch balance at the lowest layer that holds a count.
+- Four re-proofs gone: three below or beside it, and one in the module that stated it after its own special case.
+- No statement changed.
+
+**Not done here, and why.**
+- `MutualDependence.Flow.Balances.level_add_drawn` telescopes with its own sum, `drawnBefore`, which is the whole numbers' sum from zero by another recursion. Reading it through the one stretch balance needs `drawnBefore` stated as a total over steps, which changes fifteen uses in its module. That is left to EC5's list.
+- `Change.steps_last` and the auxiliary `Amounts.whole_sum.total_steps_last` (`Becoming.Dissipation`) state the same last-step split of a total. This is also left to EC5's list.
+
+**Evidence.** The checker run `@RECEIPT@` passed with every axiom report empty. The connectivity check and the measure are recorded below.
+
+**The measure.** Counted per row, as `measure.py` reports, 68 of the 127 central declarations rest on no master law on the landed tree (`after-ec24.json`). Of the 126 counted after EC1, 67 rest on none, against 74. The 127th, `RegimeMargin.Coupled.Indexed.ends_downstream`, came with RM7 and rests on none.
+- Six of the seven come from the derivation. The frontier laws `Web.frontier_broken`, `Web.frontier_breaks_below` and `Web.frontier_keeps_stepwise` each stand in two rows, alignment and degeneration, and now rest on balance through `Optimum.level_add_drawn_of_within`.
+- The seventh comes from the measure. `Listed.coming_of_ceasing` already used `balance_over_stretch_on`, which counts as an anchor of the balance law from this step on.
+
+**Boundary.** This is a restructuring of proofs and a measurement of Lean dependency, and it changes no record's claim. The measure counts `balance_over_stretch_on` among the balance law's anchors from this step on.
+
+**Output → input.** EC3 (finite runs, on LC3's `Amounts.FallsStop`), EC4 (the ethics as closure and order) and EC5 (the statement and the measure in the connectivity run) build on the frame's closure (EC1) and the prelude's stretch balance (EC2).

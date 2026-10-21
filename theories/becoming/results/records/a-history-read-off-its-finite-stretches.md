@@ -115,6 +115,7 @@ Decision D45 (4) joined IdealWarrant with CompletionRole and HistoryIdeals as on
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/completion/formal/ideals-correspondence-checks/20261020T162022.465111Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `a history read off its finite stretches`, `从有限片段读出的历史`, `ideals of finite stretches`, `有限片段的理想`, `closed classes of histories`, `历史的闭类`, `Becoming.Stretches.classification`, `Becoming.Stretches.refutable_closed_iff`, `Becoming.Stretches.cut_decided_iff_lpo`, `Becoming.HistoryIdealsTraces.classification`, `Becoming.HistoryIdealsTraces.history_without_run`
 

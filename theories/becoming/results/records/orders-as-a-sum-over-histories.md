@@ -103,6 +103,7 @@ Ren, 12 October 2026, asked about the integration for laws that are not determin
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `orders as a sum over histories`, `阶作为历史之和`, `sum over routes`, `路线之和`, `route back in time`, `沿时间往回的路线`, `expansion by order of a sum over histories`, `历史之和按阶展开`, `horizon and order`, `视界与阶`, `joining the orders to the sum over histories`, `把各阶接到历史之和`
 

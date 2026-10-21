@@ -90,6 +90,7 @@ what-a-pools-acts-respond-to left open which responses to what a pool separates 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `where two courses rejoin`, `两个进程在何处重合`, `rejoining makes up the gap`, `重合补足差距`, `what closes a difference couples apart`, `闭合差别者耦合得有别`, `rejoining is a response`, `重合是一种回应`
 

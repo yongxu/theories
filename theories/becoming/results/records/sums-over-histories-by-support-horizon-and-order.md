@@ -94,6 +94,7 @@ The four laws were listed as candidates (W1–W4) by the review of the explorato
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `sums over histories by support, horizon and exact order`, `历史之和：支撑、视界与确切阶`, `support of a sum over histories`, `exact orders`, `the steps between`, `first-listed weighting`, `Becoming.Weights.transfer_zero_of_impossible`, `Becoming.Weights.transfer_split`, `Becoming.Weights.exactly_eq_courses`, `Becoming.Weights.within_eq_sum_exactly`, `Becoming.Weights.transfer_eq_sum_exactly`, `Becoming.Weights.transfer_between`, `Becoming.HistorySums.grouping_needs_commuting`, `Becoming.HistorySums.trace_split_iff`, `Becoming.HistorySums.exactly_responses_trace`, `Becoming.Weights.transfer_between_traces`
 

@@ -385,24 +385,9 @@ outside the stretch. -/
 theorem accumulates_on {cs : List C} :
     ∀ T N, (∀ t, T ≤ t → t < T + N → L.BalancesOn W cs t) →
       W.stock cs (T + N) + total (steps T N) (L.uptake cs) =
-        W.stock cs T + total (steps T N) (L.replenishment cs)
-  | _, 0, _ => rfl
-  | T, N + 1, balances =>
-    have later := accumulates_on (T + 1) N fun t after below =>
-      balances t (Nat.le_of_succ_le after)
-        (Nat.lt_of_lt_of_le below (Nat.le_of_eq (Nat.add_right_comm T 1 N)))
-    have step := (balances T (Nat.le_refl T) (Nat.lt_of_lt_of_le (Nat.lt_succ_self T)
-      (Nat.succ_le_succ (Nat.le_add_right T N)))).over
-    calc W.stock cs (T + (N + 1)) + (L.uptake cs T + total (steps (T + 1) N) (L.uptake cs))
-        = L.uptake cs T + (W.stock cs (T + 1 + N) + total (steps (T + 1) N) (L.uptake cs)) :=
-          (congrArg (· + _) (congrArg (W.stock cs) (Nat.add_right_comm T 1 N).symm)).trans
-            (Nat.add_left_comm _ _ _)
-      _ = L.uptake cs T + (W.stock cs (T + 1) + total (steps (T + 1) N) (L.replenishment cs)) :=
-          congrArg (L.uptake cs T + ·) later
-      _ = W.stock cs (T + 1) + L.uptake cs T + total (steps (T + 1) N) (L.replenishment cs) :=
-          (Nat.add_assoc _ _ _).symm.trans (congrArg (· + _) (Nat.add_comm _ _))
-      _ = W.stock cs T + (L.replenishment cs T + total (steps (T + 1) N) (L.replenishment cs)) :=
-          (congrArg (· + _) step).trans (Nat.add_assoc _ _ _)
+        W.stock cs T + total (steps T N) (L.replenishment cs) :=
+  fun T N balances => balance_over_stretch_on (q := fun t => W.stock cs t) T N
+    fun t from_ below => (balances t from_ below).over
 
 /-- The balance over a stretch of steps. -/
 theorem Balances.accumulates (balances : L.Balances W) (cs : List C) :

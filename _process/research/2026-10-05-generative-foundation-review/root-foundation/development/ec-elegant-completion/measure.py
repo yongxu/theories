@@ -20,7 +20,7 @@ ROOT = HERE.parents[5]
 COVERAGE = ROOT / 'theories/becoming/results/completion/COVERAGE.json'
 LAWS = {
     'closure': ['Becoming.WithinClosure'],
-    'balance': ['Becoming.Flow.Balances', 'Becoming.Flow.BalancesOn'],
+    'balance': ['Becoming.Flow.Balances', 'Becoming.Flow.BalancesOn', 'Becoming.balance_over_stretch_on'],
     'return': ['Becoming.Branching.Returns', 'Becoming.Branching.Lossless', 'Becoming.revisits_within'],
     'order': ['Becoming.Web.Widens'],
     'lumping': ['Becoming.GoAlikeUnder'],

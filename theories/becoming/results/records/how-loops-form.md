@@ -111,6 +111,7 @@ On 16 October 2026 Ren took P118's third reading in its refined form, “which l
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T082411.919148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `how loops form`, `回路怎样形成`, `loop formation`, `回路的形成`, `a loop forms by closing`, `回路由闭合而形成`, `loops formed by a step`, `到某步形成的回路`, `strengths before a step`, `某步之前的强度`, `strengths read off the course`, `从进程读出的强度`, `onset of a loop`, `回路的开始`, `threshold witness`, `阈值的见证`
 

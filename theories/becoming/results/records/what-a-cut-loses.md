@@ -114,6 +114,7 @@ Ren, 12 October 2026, on the loops: “how how accurate can we do that uh what i
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T082411.919148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `what a cut loses`, `截断所失`, `exact remainder`, `精确余项`, `chain of couplings in time order`, `按时间次序的耦合链`, `time-respecting path`, `coupling that recurs`, `复现的耦合`, `settled schedule`, `安定的时程`, `couplings that come and go`, `时有时无的耦合`, `loop of the couplings that go on`, `继续着的耦合的回路`
 

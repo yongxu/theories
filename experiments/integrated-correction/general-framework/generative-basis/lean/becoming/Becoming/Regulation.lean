@@ -639,24 +639,12 @@ variable {L : Flow F C} {W : Web F C}
 everything given. -/
 theorem accumulates_at {c : C} {T : Nat} : ∀ N, (∀ k, k < N → L.BalancesOn W [c] (T + k)) →
     W.level (T + N) c + total (steps T N) (fun s => L.taken s c) =
-      W.level T c + total (steps T N) (fun s => L.given s c)
-  | 0, _ => rfl
-  | N + 1, balances =>
-    have before := accumulates_at N fun k lt => balances k (Nat.lt_succ_of_lt lt)
-    have step := balances N (Nat.lt_succ_self N) c (.head [])
-    calc W.level (T + (N + 1)) c + total (steps T (N + 1)) (fun s => L.taken s c)
-        = W.level (T + N + 1) c + (total (steps T N) (fun s => L.taken s c) + L.taken (T + N) c) :=
-          congrArg (_ + ·) (steps_last _ T N)
-      _ = (W.level (T + N + 1) c + L.taken (T + N) c) + total (steps T N) (fun s => L.taken s c) :=
-          (congrArg (_ + ·) (Nat.add_comm _ _)).trans (Nat.add_assoc _ _ _).symm
-      _ = (W.level (T + N) c + L.given (T + N) c) + total (steps T N) (fun s => L.taken s c) :=
-          congrArg (· + _) step
-      _ = (W.level (T + N) c + total (steps T N) (fun s => L.taken s c)) + L.given (T + N) c :=
-          Nat.add_right_comm _ _ _
-      _ = (W.level T c + total (steps T N) (fun s => L.given s c)) + L.given (T + N) c :=
-          congrArg (· + _) before
-      _ = W.level T c + total (steps T (N + 1)) (fun s => L.given s c) :=
-          (Nat.add_assoc _ _ _).trans (congrArg (_ + ·) (steps_last _ T N).symm)
+      W.level T c + total (steps T N) (fun s => L.given s c) :=
+  fun N balances => balance_over_stretch_on (q := fun s => W.level s c) T N fun t from_ below =>
+    have back : T + (t - T) = t := Naturals.add_sub_of_le from_
+    Eq.subst (motive := fun s => W.level (s + 1) c + L.taken s c = W.level s c + L.given s c) back
+      (balances (t - T) (Nat.lt_of_add_lt_add_left
+        (Eq.subst (motive := fun s => s < T + N) back.symm below)) c (.head []))
 
 end Flow
 

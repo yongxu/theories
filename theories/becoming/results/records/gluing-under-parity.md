@@ -100,6 +100,7 @@ Ren asked on 12 October 2026 whether what a frame loses is like “wave/particle
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `when readings in context glue, for parity`, `奇偶约束下语境中的读法何时粘合`, `the parity law of gluing`, `粘合的奇偶律`, `a Bell-type bound without probability`, `不用概率的 Bell 型界`, `the only obstruction to context-free values`, `不依语境之值的唯一障碍`, `the parity law of a cycle`, `环的奇偶律`
 

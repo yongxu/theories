@@ -1,6 +1,6 @@
 python3 -B tools/research/research.py render
 {
-  "records": 325,
+  "records": 328,
   "selected_records": [
     "a-code-formed-between-formations",
     "a-history-read-off-its-finite-stretches",
@@ -68,6 +68,7 @@ python3 -B tools/research/research.py render
     "counting-where-the-counts-exist",
     "counts-exist-where-decided",
     "coupled-regimes",
+    "coupled-webs",
     "derivation-soundness",
     "derived-extent-limits",
     "derived-history-law-exactness",
@@ -180,6 +181,7 @@ python3 -B tools/research/research.py render
     "no-finite-part-bears-taking",
     "normal-forms-need-decided-apartness",
     "observation-is-a-route",
+    "one-reader-several-conditions",
     "one-step-missing-laws",
     "only-the-order-of-change-shows",
     "open-form-realization-under-revision",
@@ -230,6 +232,7 @@ python3 -B tools/research/research.py render
     "reserved-shutdown-during-recovery",
     "residual-continuation-correspondence",
     "rest-at-every-resolution",
+    "rest-exactly-where-falls-stop",
     "rest-from-a-finite-reading",
     "rest-theorem-in-any-amounts",
     "rest-with-refinement-counted",
@@ -332,13 +335,13 @@ python3 -B tools/research/research.py render
   "source_drift": [],
   "unrelated_source_drift": [],
   "style_warnings": {
-    "findings": 621,
-    "records": 193,
+    "findings": 631,
+    "records": 195,
     "by_severity": {
-      "warning": 621
+      "warning": 631
     },
     "by_rule": {
-      "length": 485,
+      "length": 495,
       "status-restatement": 34,
       "stock-boundary": 26,
       "negation-lead": 20,
@@ -353,7 +356,7 @@ python3 -B tools/research/research.py render
     },
     "list": "python3 -B tools/research/research.py lint [--ids ...]"
   },
-  "changed_outside_cited": 491,
+  "changed_outside_cited": 512,
   "reading_drift": 89,
   "stale_indexes": [],
   "scope": "Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation."

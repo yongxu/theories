@@ -13872,3 +13872,81 @@ Output → input: chapter 2.3 (coupled webs), thesis T1's standing, the record t
 **Self-review.** The first plan stated rest and the threshold for webs too. They were left with the pair: a web's state is a function of the conditions, and a run being still is an equality of states, which for functions needs extensionality, an axiom the pure core does not assume; order, ending and dependence read the state condition by condition and need none. Dependence is total here (nothing given wherever nothing is left of the other); partial dependence, where giving falls but does not stop, would need a rate and is not stated. The positivity premise is placed on dependents only (`pos : ∀ i j, DependsOn G i j → 0 < H i`), not on every condition. RM6's pair laws were re-derived rather than left beside the web's, so the pair has one proof of each law, the web's; `Coupled.run_below`, `Coupled.run_swap` and the band and threshold laws keep their own. Re-deriving the pair's ending-after law from the web's left the pair's law of draining read by no law on a run, a new apart root at the first connectivity check; `Coupled.Relay.second_alone` now proves its dependent's fall by that law, which is what the witness shows, and the second check found none apart beyond main's. The connectivity check was planned before the checker ran: every new law is stated on a run or read by one that is. Limits: rest and thresholds of webs; partial dependence; the time of a cascade along a chain; webs with a recent giving.
 
 **The run.** Core 285 modules and 12,151 theorems, instances 7 and 567, applications 6 and 179; 9 Lean steps ran, 1,195 reused. 26 declarations added to Becoming.RegimeMargin, 14 of them theorems (215 before, 241 now), none removed, all with empty axiom reports. Connectivity: 647 of 12,897 apart, unchanged; no new apart root, every new law stated on a run or read by one that is, the witnesses on the run; register check passes.
+
+## 312. One stretch balance in the prelude (EC2)
+
+Board item EC, its second step ([plan](development/ec-elegant-completion/PLAN.md); EC1 is study §307). Core receipt `20261021T133545.845568Z`.
+
+**Why.**
+- The balance law has a stretch form: a count balanced at each step of a stretch, what it gains against what it loses, is balanced over the stretch. That form was stated once as a general law, `balance_over_stretch_on` in `Becoming.Change`, with its forms `balance_over_stretch`, `le_over_stretch` and `ge_over_stretch` in `Becoming.Population`.
+- It was also re-proved by its own induction four times:
+  - for a flow's stock over a family (`Flow.accumulates_on`, in `Becoming.Flow`, below `Becoming.Change`);
+  - for an amount's rises and falls (`Change.over_stretch`, in the module that states the general law, above it);
+  - for one condition's level (`Regulation.accumulates_at`);
+  - for a course and what it draws (`Optimum.level_add_drawn_of_within`, over the whole numbers' sum).
+- So the general law was not the reason for the four special ones (board rule 9).
+
+**What changed.**
+- **The law moved to the prelude.** `balance_over_stretch_on`, `balance_over_stretch`, `le_over_stretch` and `ge_over_stretch` moved to `Becoming.Prelude` unchanged, with their names. They need only `total` and `steps`, which the prelude states.
+- **The four special laws are derived from it**, their statements unchanged and their direct inductions gone:
+  - `Change.over_stretch` is `balance_over_stretch` at an amount's rises and falls (`Change.across`).
+  - `Flow.accumulates_on` is `balance_over_stretch_on` at the stock of a family, through `Flow.BalancesOn.over`.
+  - `Regulation.accumulates_at` is `balance_over_stretch_on` at one condition's level. The step balance at `t` is read off `T + (t - T)`, through the prelude's `Naturals.add_sub_of_le`, since core `Nat` subtraction lemmas use `propext`.
+  - `Optimum.level_add_drawn_of_within` is `balance_over_stretch` at a course and what it draws, the whole numbers' sum read as a total over steps (`Amounts.whole_sum`).
+
+**Delta.**
+- One stretch balance at the lowest layer that holds a count.
+- Four re-proofs gone: three below or beside it, and one in the module that stated it after its own special case.
+- No statement changed.
+
+**Not done here, and why.**
+- `MutualDependence.Flow.Balances.level_add_drawn` telescopes with its own sum, `drawnBefore`, which is the whole numbers' sum from zero by another recursion. Reading it through the one stretch balance needs `drawnBefore` stated as a total over steps, which changes fifteen uses in its module. That is left to EC5's list.
+- `Change.steps_last` and the auxiliary `Amounts.whole_sum.total_steps_last` (`Becoming.Dissipation`) state the same last-step split of a total. This is also left to EC5's list.
+
+**Evidence.** The checker run `20261021T133545.845568Z` passed with every axiom report empty. The connectivity check and the measure are recorded below.
+
+**The measure.** Counted per row, as `measure.py` reports, 68 of the 127 central declarations rest on no master law on the landed tree (`after-ec24.json`). Of the 126 counted after EC1, 67 rest on none, against 74. The 127th, `RegimeMargin.Coupled.Indexed.ends_downstream`, came with RM7 and rests on none.
+- Six of the seven come from the derivation. The frontier laws `Web.frontier_broken`, `Web.frontier_breaks_below` and `Web.frontier_keeps_stepwise` each stand in two rows, alignment and degeneration, and now rest on balance through `Optimum.level_add_drawn_of_within`.
+- The seventh comes from the measure. `Listed.coming_of_ceasing` already used `balance_over_stretch_on`, which counts as an anchor of the balance law from this step on.
+
+**Boundary.** This is a restructuring of proofs and a measurement of Lean dependency, and it changes no record's claim. The measure counts `balance_over_stretch_on` among the balance law's anchors from this step on.
+
+**Output → input.** EC3 (finite runs, on LC3's `Amounts.FallsStop`), EC4 (the ethics as closure and order) and EC5 (the statement and the measure in the connectivity run) build on the frame's closure (EC1) and the prelude's stretch balance (EC2).
+
+**The run.** Core 285 modules and 12,154 theorems, instances 7 and 567, applications 6 and 179; 27 Lean steps ran, 1,177 reused. 133 declarations of Becoming.Prelude, 123 of them theorems, all with empty axiom reports. Connectivity: 647 of 12,900 apart, 2 of the module's 123; register check passes.
+
+## 313. The ethics' scope as the one closure (EC4)
+
+Board item EC, its fourth step, landed with EC2 in one checker run (study §312). Core receipt `20261021T133545.845568Z`.
+
+**Why.**
+- The ethics rests on two premises with two roles: the continuation condition for scope, and C for order.
+- The order is already one law: C is what every positive weighting over everything at stake shares (`Weighting.widens_iff_every_positive`, IV1).
+- The scope had two readings. One is IV1's, on boundaries: the step across standpoints forces significance exactly within the closure the presupposition reaches (`forced_iff_within`). The other is the valuations', in `Becoming.Metaethics`: living significance on a connected whole follows from a seed and the two neutralities (`Valuation.significant_iff`). The second was not stated as a closure, although after EC1 its proof already went through the frame's closure (`Invariant.reach`).
+- Board rule 9 asks for the general law to be the reason for the special one.
+
+**What changed (`Becoming.ValuationFrames`, laws added, no definition changed).**
+- **Relational neutrality is closedness** (`Valuation.transmits_iff_closed`). Significance transmits along formed relations exactly where each standpoint's significance is a region closed under the relations' steps (`Steps`, EC1).
+- **What the rules force is the closure** (`Valuation.forced_iff_reach`). Take a living claim significant from one standpoint. Every significance meeting the two neutralities gives a claim significance from any standpoint exactly where the claim is reached from the valued one through formed relations among living claims.
+  - Standpoint neutrality carries the seed to every standpoint.
+  - Relational neutrality, being closedness, carries it through the closure and no further: the significance holding exactly on what is reached meets both rules.
+- **The whole is forced exactly where it is connected** (`Valuation.forced_whole_iff_connected`). Every living claim is forced significant from every valued living claim exactly where the formed relations connect the living claims.
+- **`Valuation.significant_of_grounds` is derived from `forced_iff_reach`** (the closure is the whole). Its statement is unchanged, its direct proof is gone, and `Valuation.significant_iff`, which uses it, now rests on the forced closure.
+
+**Reading [AI reading, D61].** The ethics' scope and 无明 are one law. What a selection reaches through couplings (`Flow.unselected_beyond_coupling`), what a test can exclude (`Flow.unexcluded_beyond_coupling`), what the step across standpoints forces (`forced_iff_within`) and what the neutralities force (`Valuation.forced_iff_reach`) are each the closure of a relation. They are closed under it and reach nothing beyond it.
+- The continuation condition's content beyond the self, the step of invariance, is the claim that the relation along which significance is forced connects everything living. `forced_whole_iff_connected` states exactly that equivalence on valuations.
+- So the open warrant question of §8.5 for the step has a structural form: is the relation that carries significance the relation of being related at all, or a narrower one? This is IV2's privileged-relation question, now read as which relation's closure is the scope.
+- The order is unchanged: what ranks still comes from C alone. A closure fixes whose losses count, and orders nothing.
+
+**Delta.**
+- The two readings of the ethics' scope are one law, the frame's closure, under the valuation's relation or the boundary's.
+- One theorem (`significant_of_grounds`) is now a corollary of the general law.
+- The step of invariance is stated as connectivity of the relation that carries significance.
+
+**Not done here.** `forced_iff_within` (boundaries) and `forced_iff_reach` (valuations) are two instances of the frame's closure in two representations, not one theorem. A map from a valuation to a boundary family would join them; that is left to EC5.
+
+**Evidence.** Same checker run as EC2 (`20261021T133545.845568Z`), every axiom report empty.
+
+**Boundary.** No ethical premise is added or removed. The laws state what the two neutralities force, and the neutralities stay premises (§6.4). Connectivity is a property of the represented relations, not a warrant.
+
+**Output → input.** EC5 states the theory as its master laws: closure, balance, finite runs, lumping, and the order of widening with its two premises. The ethics' scope enters as closure, the ethics' order as order.

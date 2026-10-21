@@ -73,6 +73,7 @@ Enough.assured_iff splits assured enough into a part about the target and every 
 | provenance | [2026-10-18-representation-scope-go.md](../../../../sources/15-codex-theory-conversations/2026-10-18-representation-scope-go.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `when the runs of a process settle`, `过程的运行何时安定`, `change within a loop`, `回路之内的变化`, `undoable change`, `可撤回的变化`, `keeps changing`, `不断变化`, `settling is LPO`, `安定即 LPO`
 

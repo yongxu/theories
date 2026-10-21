@@ -1,0 +1,34 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/blissful-borg-449b4b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/tree2",
+  "modules": 14,
+  "ran": [
+    "Becoming.Change",
+    "Becoming.Population",
+    "BecomingChangeAxiomAudit",
+    "BecomingPopulationAxiomAudit"
+  ],
+  "reused": 14,
+  "unclean": [],
+  "audits": {
+    "Becoming.Prelude": {
+      "theorems": 123,
+      "declarations": 133,
+      "with_axioms": {}
+    },
+    "Becoming.Flow": {
+      "theorems": 97,
+      "declarations": 134,
+      "with_axioms": {}
+    },
+    "Becoming.Change": {
+      "theorems": 54,
+      "declarations": 71,
+      "with_axioms": {}
+    },
+    "Becoming.Population": {
+      "theorems": 121,
+      "declarations": 146,
+      "with_axioms": {}
+    }
+  }
+}

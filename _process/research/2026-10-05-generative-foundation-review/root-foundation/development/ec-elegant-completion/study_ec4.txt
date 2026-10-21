@@ -1,0 +1,35 @@
+## @N@. The ethics' scope as the one closure (EC4)
+
+Board item EC, its fourth step, landed with EC2 in one checker run (study §@N2@). Core receipt `@RECEIPT@`.
+
+**Why.**
+- The ethics rests on two premises with two roles: the continuation condition for scope, and C for order.
+- The order is already one law: C is what every positive weighting over everything at stake shares (`Weighting.widens_iff_every_positive`, IV1).
+- The scope had two readings. One is IV1's, on boundaries: the step across standpoints forces significance exactly within the closure the presupposition reaches (`forced_iff_within`). The other is the valuations', in `Becoming.Metaethics`: living significance on a connected whole follows from a seed and the two neutralities (`Valuation.significant_iff`). The second was not stated as a closure, although after EC1 its proof already went through the frame's closure (`Invariant.reach`).
+- Board rule 9 asks for the general law to be the reason for the special one.
+
+**What changed (`Becoming.ValuationFrames`, laws added, no definition changed).**
+- **Relational neutrality is closedness** (`Valuation.transmits_iff_closed`). Significance transmits along formed relations exactly where each standpoint's significance is a region closed under the relations' steps (`Steps`, EC1).
+- **What the rules force is the closure** (`Valuation.forced_iff_reach`). Take a living claim significant from one standpoint. Every significance meeting the two neutralities gives a claim significance from any standpoint exactly where the claim is reached from the valued one through formed relations among living claims.
+  - Standpoint neutrality carries the seed to every standpoint.
+  - Relational neutrality, being closedness, carries it through the closure and no further: the significance holding exactly on what is reached meets both rules.
+- **The whole is forced exactly where it is connected** (`Valuation.forced_whole_iff_connected`). Every living claim is forced significant from every valued living claim exactly where the formed relations connect the living claims.
+- **`Valuation.significant_of_grounds` is derived from `forced_iff_reach`** (the closure is the whole). Its statement is unchanged, its direct proof is gone, and `Valuation.significant_iff`, which uses it, now rests on the forced closure.
+
+**Reading [AI reading, D61].** The ethics' scope and 无明 are one law. What a selection reaches through couplings (`Flow.unselected_beyond_coupling`), what a test can exclude (`Flow.unexcluded_beyond_coupling`), what the step across standpoints forces (`forced_iff_within`) and what the neutralities force (`Valuation.forced_iff_reach`) are each the closure of a relation. They are closed under it and reach nothing beyond it.
+- The continuation condition's content beyond the self, the step of invariance, is the claim that the relation along which significance is forced connects everything living. `forced_whole_iff_connected` states exactly that equivalence on valuations.
+- So the open warrant question of §8.5 for the step has a structural form: is the relation that carries significance the relation of being related at all, or a narrower one? This is IV2's privileged-relation question, now read as which relation's closure is the scope.
+- The order is unchanged: what ranks still comes from C alone. A closure fixes whose losses count, and orders nothing.
+
+**Delta.**
+- The two readings of the ethics' scope are one law, the frame's closure, under the valuation's relation or the boundary's.
+- One theorem (`significant_of_grounds`) is now a corollary of the general law.
+- The step of invariance is stated as connectivity of the relation that carries significance.
+
+**Not done here.** `forced_iff_within` (boundaries) and `forced_iff_reach` (valuations) are two instances of the frame's closure in two representations, not one theorem. A map from a valuation to a boundary family would join them; that is left to EC5.
+
+**Evidence.** Same checker run as EC2 (`@RECEIPT@`), every axiom report empty.
+
+**Boundary.** No ethical premise is added or removed. The laws state what the two neutralities force, and the neutralities stay premises (§6.4). Connectivity is a property of the represented relations, not a warrant.
+
+**Output → input.** EC5 states the theory as its master laws: closure, balance, finite runs, lumping, and the order of widening with its two premises. The ethics' scope enters as closure, the ethics' order as order.

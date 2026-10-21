@@ -80,6 +80,7 @@ The earlier 义理·形式逻辑 (§三) states Kleene–Kripke revision and a �
 | provenance | [SSBX-REPOSITORY-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/SSBX-REPOSITORY-REVIEW.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `revision with an undecided value`, `带未定值的修正`, `the gap reappears as undecidedness`, `Kleene strong tables`, `Kripke least fixed point (finite case)`, `Becoming.Undecided.least_fixed`, `Becoming.Undecided.undecided_of_moves`
 

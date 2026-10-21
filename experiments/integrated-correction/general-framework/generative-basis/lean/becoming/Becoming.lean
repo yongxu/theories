@@ -1231,7 +1231,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
 * `Becoming.ValuationFrames` (L2): the valuations of `Becoming.Metaethics` and the continuation
   condition of `Becoming.Significance` read on frames and runs of a labelled process (the relations
   a valuation reads off a frame, living significance and `universal_reason`, comparison and
-  extension, the models showing each hypothesis needed, the paths of a web).
+  extension, the models showing each hypothesis needed, the paths of a web). Relational
+  neutrality is closedness under the relations' steps, and what the two neutralities force from a
+  valued living claim is exactly the frame's closure of it (`Valuation.forced_iff_reach`), the
+  whole forced exactly where it is connected (board item EC4).
 * `Becoming.Interdependence` (L1): how far the route without axiom reaches. What a
   formation's continuation depends on is its feeding closure, the least region holding it
   that is closed under feeding, and nothing beyond the closure gives to what it requires.
@@ -2005,7 +2008,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   of whole numbers (`add_right_cancel`, `Naturals.sub_sub`, `mul_assoc_nat`), what `all`, `any`,
   `contains`, `filter`, `find?`, `bind` and `map` test (`ListTests.all_true_iff`,
   `ListTests.find_none_iff`), and membership in joined and mapped lists (`mem_append_cases`,
-  `preimage_of_mem_map`), proved by recursion where the prelude uses `propext`.
+  `preimage_of_mem_map`), proved by recursion where the prelude uses `propext`; and the one balance
+  over a stretch, a count balanced at each step being balanced over it (`balance_over_stretch_on`),
+  from which the stretch balances of flows, amounts, courses and censuses are derived.
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order
   (no premise; it imports nothing). A refutable reading holds, up to double negation, where a
   point adheres, and what adheres is closed. A class of ideals is closed exactly where it is the

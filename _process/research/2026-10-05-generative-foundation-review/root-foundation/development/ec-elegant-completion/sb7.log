@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/blissful-borg-449b4b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/tree4",
+  "modules": 33,
+  "ran": [
+    "Becoming.ValuationFrames",
+    "BecomingValuationFramesAxiomAudit"
+  ],
+  "reused": 32,
+  "unclean": [],
+  "audits": {
+    "Becoming.ValuationFrames": {
+      "theorems": 26,
+      "declarations": 32,
+      "with_axioms": {}
+    }
+  }
+}

@@ -144,20 +144,8 @@ theorem across (q : Nat → Nat) (t : Nat) : q (t + 1) + fall q t = q t + rise q
 /-- Over any stretch of steps, an amount at the end with everything it fell is the amount
 at the start with everything it rose. -/
 theorem over_stretch (q : Nat → Nat) :
-    ∀ S n, q (S + n) + total (steps S n) (fall q) = q S + total (steps S n) (rise q)
-  | _, 0 => rfl
-  | S, n + 1 => calc
-      q (S + (n + 1)) + (fall q S + total (steps (S + 1) n) (fall q))
-          = fall q S + (q (S + 1 + n) + total (steps (S + 1) n) (fall q)) :=
-        (congrArg (· + _) (congrArg q (Nat.add_right_comm S 1 n).symm)).trans
-          (Nat.add_left_comm _ _ _)
-      _ = fall q S + (q (S + 1) + total (steps (S + 1) n) (rise q)) :=
-        congrArg (fall q S + ·) (over_stretch q (S + 1) n)
-      _ = (q (S + 1) + fall q S) + total (steps (S + 1) n) (rise q) :=
-        (Nat.add_left_comm _ _ _).trans (Nat.add_assoc _ _ _).symm
-      _ = (q S + rise q S) + total (steps (S + 1) n) (rise q) :=
-        congrArg (· + _) (across q S)
-      _ = q S + (rise q S + total (steps (S + 1) n) (rise q)) := Nat.add_assoc _ _ _
+    ∀ S n, q (S + n) + total (steps S n) (fall q) = q S + total (steps S n) (rise q) :=
+  balance_over_stretch (across q)
 
 /-- What the members of a finite family of amounts rose across the step from `t`. -/
 def risen (as : List α) (q : α → Nat → Nat) (t : Nat) : Nat :=
@@ -233,28 +221,6 @@ theorem steps_mono (q : Nat → Nat) (T n : Nat) :
   | 0 => Nat.le_refl _
   | m + 1 => Nat.le_trans (steps_mono q T n m)
       (Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq (steps_last q T (n + m)).symm))
-
-/-- A count balanced across each step of a stretch, what it gains against what it loses, is
-balanced over the stretch: at the end with everything lost, it is the count at the start with
-everything gained. Nothing is asked of the steps outside the stretch. -/
-theorem balance_over_stretch_on {q x y : Nat → Nat} :
-    ∀ S n, (∀ t, S ≤ t → t < S + n → q (t + 1) + x t = q t + y t) →
-      q (S + n) + total (steps S n) x = q S + total (steps S n) y
-  | _, 0, _ => rfl
-  | S, n + 1, across => calc
-      q (S + (n + 1)) + (x S + total (steps (S + 1) n) x)
-          = x S + (q (S + 1 + n) + total (steps (S + 1) n) x) :=
-        (congrArg (· + _) (congrArg q (Nat.add_right_comm S 1 n).symm)).trans
-          (Nat.add_left_comm _ _ _)
-      _ = x S + (q (S + 1) + total (steps (S + 1) n) y) :=
-        congrArg (x S + ·) (balance_over_stretch_on (S + 1) n fun t from_ below =>
-          across t (Nat.le_of_succ_le from_)
-            (Nat.lt_of_lt_of_le below (Nat.le_of_eq (Nat.add_right_comm S 1 n))))
-      _ = (q (S + 1) + x S) + total (steps (S + 1) n) y :=
-        (Nat.add_left_comm _ _ _).trans (Nat.add_assoc _ _ _).symm
-      _ = (q S + y S) + total (steps (S + 1) n) y :=
-        congrArg (· + _) (across S (Nat.le_refl S) (Nat.lt_add_of_pos_right (Nat.succ_pos n)))
-      _ = q S + (y S + total (steps (S + 1) n) y) := Nat.add_assoc _ _ _
 
 /-! ## Recurrence -/
 
