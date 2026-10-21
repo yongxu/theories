@@ -33,7 +33,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T141520.308357Z): the 7 declarations Becoming.Ranking, Becoming.Relevance and Becoming.JointDraw gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 317; not independently reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T141520.308357Z): the 7 declarations Becoming.Ranking, Becoming.Relevance and Becoming.JointDraw gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 318; not independently reviewed by a person.
 
 Canonical source: [Ranking.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean)
 
@@ -79,7 +79,7 @@ Aliases: `the relation-level law of easing`, `restraint under the relation-level
 <a id="history--沿革"></a>
 ### History
 
-- 21 October 2026: added (RL1), the relation-level reading on courses, its exact law of easing, its whole-run form, restraint over any number of drawers under it and the two-part family unranked; study section 317.
+- 21 October 2026: added (RL1), the relation-level reading on courses, its exact law of easing, its whole-run form, restraint over any number of drawers under it and the two-part family unranked; study section 318.
 
 </details>
 
