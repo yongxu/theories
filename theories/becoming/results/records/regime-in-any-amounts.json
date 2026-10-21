@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-21T10:30:54+00:00",
+  "reviewed_at_utc": "2026-10-21T11:33:06+00:00",
   "statement": {
     "en": "The regime's order, the shape of its runs and its rests hold in any linearly ordered amounts with a draw; over the reals every run of a rising adjustment within a band converges, to a rest where the adjustment is continuous, and need not come to rest.",
     "zh": "体制之序、其运行的形状及其静止在任何带汲取的线性有序量中成立；在实数上，带内上升调整的每个运行都收敛，调整连续时收敛于一个静止，且不必到达静止。"
@@ -150,8 +150,8 @@
     "zh": "机器检查：核心 Becoming.RegimeMargin 新增的 25 项声明由 Lean 4.29.1 合并检查器实查（回执 20261021T102032.314972Z），公理报告为空；外围模块 RegimeReals 的 17 项声明由其自身检查器以 Lean 4.30.0-rc2 与固定的 Mathlib 实查（回执 20261021T102713.696033Z），只用 Lean 标准公理，核心模块与已通过回执相符。一个会话中构建并审查，无另设审查者；作者审查见研究第 302 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions; whether measured adjustments rise in both over their bands; an independent review.",
-    "zh": "实数上计算出的阈值与体制情形 H + y；连续时间；带再一个滞后的状态；相互耦合的条件；所测的调整在其带上是否于两者皆升；独立审查。"
+    "en": "A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions; the order of fates above the level law's peak, where measured giving falls as the level rises; an independent review.",
+    "zh": "实数上计算出的阈值与体制情形 H + y；连续时间；带再一个滞后的状态；相互耦合的条件；水平规律峰值之上的命运之序，那里所测的所给随水平上升而下降；独立审查。"
   },
   "correspondence": {
     "en": "Orbits of planar cooperative (order-preserving) maps are eventually componentwise monotone under regularity conditions, so bounded orbits converge (Smith 1998; Hirsch and Smith 2005); convergence of a bounded monotone sequence is not constructive (Bridges and Richman 1987); partial adjustment and delay-difference models of renewal (Deriso 1980; Schnute 1985). On the spine the shape needs no regularity condition: the level moves by the new giving less the draw, so every step neither up nor down moves the recent giving toward the draw, whatever the adjustment; the core states it constructively in any amounts, the periphery the convergence over the reals.",
@@ -352,7 +352,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "d8d8f46d53b923a5a40cce5810f0f8396d292d709dda416d6fa9fdf6e9d3243d"
+      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -420,6 +420,10 @@
     {
       "en": "21 October 2026: added (RM5), the regime in any amounts, and its runs over the reals: the order, the shape of a run and its rests in any linearly ordered amounts with a draw; over the non-negative reals every run of a rising adjustment within a band converges, to a rest where the adjustment is continuous, with fates down-closed, and need not rest; study section 302.",
       "zh": "2026年10月21日：新增（RM5），任何量中的体制及其在实数上的运行：任何带汲取的线性有序量中的序、运行的形状及其静止；在非负实数上，带内上升调整的每个运行都收敛，调整连续时收敛于一个静止，命运向下封闭，且不必到达静止；研究第 302 节。"
+    },
+    {
+      "en": "21 October 2026: whether measured adjustments rise in both over their bands is answered post hoc on MQ5's stocks (study section 280): the field's giving rises in the recent giving in 65 of 69 stocks, and in what is left only below each stock's level-law peak (a median 41% of its observed escapements); the next step now names the order above the peak. Its laws are unchanged.",
+      "zh": "2026年10月21日：所测的调整在其带上是否于两者皆升，已在 MQ5 的存量上事后回答（研究第 280 节）：野外的所给在 69 个存量中的 65 个随近来所给而升，随所剩则只在各存量水平规律峰值之下上升（其所见逃逸量的中位 41%）；下一步现改为峰值之上的序。其规律不变。"
     }
   ]
 }

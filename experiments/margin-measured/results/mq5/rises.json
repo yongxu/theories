@@ -1,0 +1,153 @@
+{
+ "scope": "post hoc, after the frozen MQ5 test; a measurement of a premise, not a verdict",
+ "test_primary": {
+  "all": {
+   "stocks": 69,
+   "free": {
+    "stocks": 69,
+    "rises_in_left": 17,
+    "median_slope_in_left": -0.007138237023669891,
+    "rises_in_recent": 65,
+    "median_slope_in_recent": 0.6575795374911807,
+    "rises_in_both": 15
+   },
+   "frozen": {
+    "phi_minus_lam": 0.4099999999999999,
+    "g_rises_over_whole_band": 4,
+    "median_share_of_escapements_below_peak": 0.40816326530612246
+   }
+  },
+  "New Zealand": {
+   "stocks": 34,
+   "free": {
+    "stocks": 34,
+    "rises_in_left": 6,
+    "median_slope_in_left": -0.005774558111047573,
+    "rises_in_recent": 34,
+    "median_slope_in_recent": 0.7744069865143687,
+    "rises_in_both": 6
+   },
+   "frozen": {
+    "phi_minus_lam": 0.4099999999999999,
+    "g_rises_over_whole_band": 0,
+    "median_share_of_escapements_below_peak": 0.31333333333333335
+   }
+  },
+  "not New Zealand": {
+   "stocks": 35,
+   "free": {
+    "stocks": 35,
+    "rises_in_left": 11,
+    "median_slope_in_left": -0.007864908767063028,
+    "rises_in_recent": 31,
+    "median_slope_in_recent": 0.5953279397411726,
+    "rises_in_both": 9
+   },
+   "frozen": {
+    "phi_minus_lam": 0.4099999999999999,
+    "g_rises_over_whole_band": 4,
+    "median_share_of_escapements_below_peak": 0.5128205128205128
+   }
+  }
+ },
+ "dev_SSB_primary": {
+  "all": {
+   "stocks": 142,
+   "free": {
+    "stocks": 142,
+    "rises_in_left": 41,
+    "median_slope_in_left": -0.008177526458840123,
+    "rises_in_recent": 125,
+    "median_slope_in_recent": 0.6790620909108763,
+    "rises_in_both": 34
+   },
+   "frozen": {
+    "phi_minus_lam": 0.4099999999999999,
+    "g_rises_over_whole_band": 12,
+    "median_share_of_escapements_below_peak": 0.48050974512743627
+   }
+  },
+  "New Zealand": {
+   "stocks": 10,
+   "free": {
+    "stocks": 10,
+    "rises_in_left": 2,
+    "median_slope_in_left": -0.005729743253924974,
+    "rises_in_recent": 10,
+    "median_slope_in_recent": 0.7127189741267239,
+    "rises_in_both": 2
+   },
+   "frozen": {
+    "phi_minus_lam": 0.4099999999999999,
+    "g_rises_over_whole_band": 2,
+    "median_share_of_escapements_below_peak": 0.4538696149447198
+   }
+  },
+  "not New Zealand": {
+   "stocks": 132,
+   "free": {
+    "stocks": 132,
+    "rises_in_left": 39,
+    "median_slope_in_left": -0.008715394681401336,
+    "rises_in_recent": 115,
+    "median_slope_in_recent": 0.6790620909108763,
+    "rises_in_both": 32
+   },
+   "frozen": {
+    "phi_minus_lam": 0.4099999999999999,
+    "g_rises_over_whole_band": 10,
+    "median_share_of_escapements_below_peak": 0.48423645320197045
+   }
+  }
+ },
+ "dev_TB_primary": {
+  "all": {
+   "stocks": 189,
+   "free": {
+    "stocks": 189,
+    "rises_in_left": 80,
+    "median_slope_in_left": -0.0005971610492130353,
+    "rises_in_recent": 166,
+    "median_slope_in_recent": 0.6656483516909659,
+    "rises_in_both": 68
+   },
+   "frozen": {
+    "phi_minus_lam": 0.4099999999999999,
+    "g_rises_over_whole_band": 26,
+    "median_share_of_escapements_below_peak": 0.48
+   }
+  },
+  "New Zealand": {
+   "stocks": 14,
+   "free": {
+    "stocks": 14,
+    "rises_in_left": 1,
+    "median_slope_in_left": -0.004569964389145864,
+    "rises_in_recent": 14,
+    "median_slope_in_recent": 0.6901296233531958,
+    "rises_in_both": 1
+   },
+   "frozen": {
+    "phi_minus_lam": 0.4099999999999999,
+    "g_rises_over_whole_band": 0,
+    "median_share_of_escapements_below_peak": 0.36637438048036597
+   }
+  },
+  "not New Zealand": {
+   "stocks": 175,
+   "free": {
+    "stocks": 175,
+    "rises_in_left": 79,
+    "median_slope_in_left": -0.00023292724750787613,
+    "rises_in_recent": 152,
+    "median_slope_in_recent": 0.6656483516909659,
+    "rises_in_both": 67
+   },
+   "frozen": {
+    "phi_minus_lam": 0.4099999999999999,
+    "g_rises_over_whole_band": 26,
+    "median_share_of_escapements_below_peak": 0.484375
+   }
+  }
+ }
+}

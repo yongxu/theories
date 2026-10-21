@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T18:26:51+00:00",
+  "reviewed_at_utc": "2026-10-21T11:33:06+00:00",
   "statement": {
     "en": "With giving read off the level under a standing draw, the condition holds exactly from a least level up, which lies more than the draw above the need where giving there falls short of it, rises with the draw, and harms of joint draws are super-additive up to one unit.",
     "zh": "在常设汲取下所给读自水平时，不可回返点是确切的；在需求处所给不足汲取时高出需求不止一份汲取；随汲取升高；联合汲取的损害在一单位之内超可加。"
@@ -125,6 +125,11 @@
     {
       "en": "That the draw's response explains why the level staying put wins at ten years in the field: the catch follows the stock where the series report the level before the year's catch, but knowing the catches closes little of the held draw's gap, and once giving moves toward the draw, how the draw is read makes no difference.",
       "zh": "汲取的回应解释了野外十年尺度上“水平保持不变”的胜出：在序列于当年捕捞之前报告水平之处，捕捞随种群而变，但知道实际捕捞只弥合持有汲取差距的一小部分；一旦所给向汲取移动，汲取怎样读已无差别。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the regime's order laws reach the field's state over its whole band: the measured adjustment rises in the recent giving, but in what is left only below the level law's peak, where the point of no return lies.",
+      "zh": "体制的序之规律在其整个带上达到野外的状态：所测的调整随近来所给而升，随所剩则只在水平规律峰值之下上升，即不归点所在之处。",
       "kind": "scope"
     },
     {
@@ -273,12 +278,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "168a1cfdf5d790c678b4792cf3daa11585109ecf9f5324a99f43ce2faa287405"
+      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
     },
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "4fddc5805679dce79d3e7ca2f379d3dc3d24425b23f85df8d659425ed30b5051"
+      "sha256": "7cef043372ae46e4c10f8c90e8f456c2714b362abbb8086a755aa8db09cd9811"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
@@ -343,6 +348,10 @@
     {
       "en": "21 October 2026, RM2: this record's laws on ending and holding hold over every adjustment of giving (RegimeMargin.Adjusted; record regime-point-under-adjusting-giving, study section 299), the regime's step the case. They keep their statements, each proof now one line; the regime forms of lemmas no law reads any more were removed, and this record cites their general forms (4 law citations moved, the proof references with them).",
       "zh": "2026年10月21日，RM2：本记录关于终结与维持的规律对每个所给调整成立（RegimeMargin.Adjusted；记录 regime-point-under-adjusting-giving，研究第 299 节），体制之步是其情形。陈述不变，每个证明现为一行；不再被任何规律读取的体制形式已移除，本记录改引其一般形式（规律中移动 4 处引用，证明引用随之）。"
+    },
+    {
+      "en": "21 October 2026: the premise of the regime's order laws measured post hoc on MQ5's stocks (study section 280): the field's giving, read as an adjustment, rises in the recent giving in 65 of 69 stocks and in what is left only below the level law's peak, so those laws reach the field's state on the low side, where the point of no return lies; a scope item added.",
+      "zh": "2026年10月21日：在 MQ5 的存量上事后测量体制的序之规律的前提（研究第 280 节）：野外的所给读作调整，在 69 个存量中的 65 个随近来所给而升，随所剩则只在水平规律峰值之下上升，故这些规律在低侧、即不归点所在之处达到野外的状态；增一项范围条目。"
     }
   ]
 }

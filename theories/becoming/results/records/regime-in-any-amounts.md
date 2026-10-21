@@ -44,7 +44,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions; whether measured adjustments rise in both over their bands; an independent review.
+A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions; the order of fates above the level law's peak, where measured giving falls as the level rises; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -91,7 +91,8 @@ Aliases: `the regime in any amounts`, `the shape of a run of the adjusted step`,
 ### History
 
 - 21 October 2026: added (RM5), the regime in any amounts, and its runs over the reals: the order, the shape of a run and its rests in any linearly ordered amounts with a draw; over the non-negative reals every run of a rising adjustment within a band converges, to a rest where the adjustment is continuous, with fates down-closed, and need not rest; study section 302.
+- 21 October 2026: whether measured adjustments rise in both over their bands is answered post hoc on MQ5's stocks (study section 280): the field's giving rises in the recent giving in 65 of 69 stocks, and in what is left only below each stock's level-law peak (a median 41% of its observed escapements); the next step now names the order above the peak. Its laws are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-21T10:30:54+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-21T11:33:06+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

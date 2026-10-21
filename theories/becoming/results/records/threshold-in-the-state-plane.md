@@ -42,7 +42,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-A computed threshold over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; whether measured adjustments rise in both over their bands; a state with a further lag; coupled conditions; an independent review.
+A computed threshold over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; the order of fates above the level law's peak, where measured giving falls as the level rises; a state with a further lag; coupled conditions; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -96,7 +96,8 @@ Aliases: `the threshold in the plane of level and recent giving`, `the point of 
 
 - 21 October 2026: added (RM4), the threshold in the plane of level and recent giving: under an adjustment rising in both arguments within a band, the runs resting below the draw are exactly those from levels below a least level for each recent giving, decided at step 3 hi + 3, and that level does not rise as the recent giving rises; under the regime's step it is H + y; study section 301.
 - 21 October 2026, RM5: over the reals every run of a rising adjustment within a band converges and the fates below the draw are down-closed and fewer as the recent giving rises (record regime-in-any-amounts, study section 302); what this record does not show and its next delta now say so. Its laws are unchanged.
+- 21 October 2026: whether measured adjustments rise in both over their bands is answered post hoc on MQ5's stocks (study section 280): the field's giving rises in the recent giving in 65 of 69 stocks, and in what is left only below each stock's level-law peak (a median 41% of its observed escapements); the next step now names the order above the peak. Its laws are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-21T10:01:18+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-21T11:33:06+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

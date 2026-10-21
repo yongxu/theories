@@ -12124,6 +12124,18 @@ Why D1 and D2 failed (post hoc, asked after the run; posthoc_mq5.py why, results
        New Zealand 20 against 14). Mis-timing on synthetic stocks hides a true lag (20 -> 8 detected),
        produced at most 18 of 149 detections without one, and produced S4's gain without one (32
        against 5).
+The premise of the regime's laws (post hoc, asked after the run; posthoc_mq5.py rises,
+       results/mq5/rises.json): the order laws over giving that adjusts (RM3-RM5: rest, the threshold
+       in the plane, convergence) need the adjustment to rise in what is left and in the recent giving
+       within a band. Read through the balance as an adjustment, the field's giving rises in the recent
+       giving in 65 of 69 test stocks (median slope 0.66; development 125 of 142), and not in what is
+       left: the one-step fit gives it no slope (median -0.01, positive in 17 of 69), and each stock's
+       fitted level law is humped, rising over a median 41% of its observed escapements and over the
+       whole band in 4 of 69 (development 12 of 142). MQ5's law rises in the recent giving (phi - lam =
+       0.41) and in what is left exactly where its level law does, so the premise holds below the level
+       law's peak, the low side where the point of no return lies; RM2's rests need no rising, and MQ5's
+       law at the draw is the draw plus (1 - phi)(g(e) - draw), the draw exactly where the regime gives
+       it (elementary).
 Output -> input: on stocks no analysis had read, the state is the level, the recent giving and the
        lag, and with the lag nothing more is needed in the median stock; read through the balance,
        giving moves toward the draw at about 0.3 a year in sample, with the same coefficients on both
@@ -12135,7 +12147,10 @@ Output -> input: on stocks no analysis had read, the state is the level, the rec
        catches closes little of the held draw's gap, the draw's law closes more only by damping the
        forecast's own error, and once giving moves toward the draw, how the draw is read makes no
        difference at ten years. Of the frozen rest's two held exchanges, both move in these stocks, and
-       the giving carries the forecast. The margin-of-a-regime record and chapter section 8.7 now say so.
+       the giving carries the forecast. The regime's order laws reach the field's state on the low side
+       of its level law, below the peak, where the point of no return lies; above it giving falls as the
+       level rises. The margin-of-a-regime record, the regime records' next steps, thesis T2 and the
+       margin README's finding 3 now say so.
        Open: separating the three readings of the lag (age structure, the other order, compensation),
        which survey series with an observation model or an age-structured reading could do; each
        series' timing read from its assessment before a balance is read off it; a lam per stock or per
