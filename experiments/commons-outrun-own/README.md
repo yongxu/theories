@@ -1,25 +1,35 @@
-# Whether a stepwise learner's own later acts outrun what it reads (CG3)
+# Whether a stepwise learner's own later acts outrun what it reads (CG3, CG3b, CG3c)
 
-Board item CG3, 20 October 2026. AI-written (a Claude Code session started from CG2's line). It tests the post hoc reading of CG2's failed contrast X5 ([`../commons-outrun`](../commons-outrun/README.md), study §250). There, one tabular learner chose 0–3 requests a step on a gated 3×3 patch, rewarded with all the apples plus 6 × the level after the last step. It emptied the patch in every seed, though the exact optimum keeps it. The reading was that the outrunning rest is the learner's own later acts: the end reading's value reaches a state only where its own later policy does not end the condition first (`Flow.outrun_reading_alike` read across time).
+Board items CG3, CG3b and CG3c, 20–21 October 2026. AI-written (a Claude Code session started from CG2's line). It tests the post hoc reading of CG2's failed contrast X5 ([`../commons-outrun`](../commons-outrun/README.md), study §250). There, one tabular learner chose 0–3 requests a step on a gated 3×3 patch, rewarded with all the apples plus 6 × the level after the last step. It emptied the patch in every seed, though the exact optimum keeps it. The reading was that the outrunning rest is the learner's own later acts: the end reading's value reaches a state only where its own later policy does not end the condition first (`Flow.outrun_reading_alike` read across time).
 
-**In brief.**
-1. The reading is false in its exact form, and that was settled before any run. One sweep of exact policy improvement from the full draw keeps the patch in every condition, even with no end reading. One's own later acts are improved together with the present act, so they are not a fixed rest. The step's apples already read the renewal.
-2. What fails is sampled learning, and that is the known exploration problem ([literature check](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#own-later-acts-check)).
-3. Two frozen rounds located where the learner's own acts outrun the renewal: at the start of a course, where its values are least trained and its greedy act is the full draw, not at the end. The sharp prediction of round 2 held: training the start rescues the one learner whose mid-course restraint was learned, and not the one whose was not.
-4. Both rounds' threshold accounts failed somewhere. The boundary depends jointly on the two quantities, and neither threshold locates it.
-5. Round 3 (board item CG3b) mapped the boundary on 16 new conditions. A boundary fitted on half the grid placed 5 of the 7 held-out conditions within the frozen rules (W1 passed), but its error was not below round 2's threshold rule (W2 failed). A mechanistic visit index tried first failed its fit before any run.
+## The account
+
+1. **One's own later acts are not a rest.** Settled exactly before any run: one sweep of policy improvement from the full draw keeps the patch in every condition, even with no end reading. An apple withheld now is still taken later and meanwhile lets the empty cells around it regrow, and one's own later acts are improved together with the present act. `Flow.outrun_reading_alike` explains a selection blind to an act where the rest is held fixed (CG2). It does not explain a selector's blindness to its own later acts. The learners agree: neither removing the end reading nor multiplying its weight by eight changed any outcome.
+2. **Where one's own acts do outrun the renewal: the start of a course, in sampled learning.** Uniform exploring starts train the first steps of a course least, and there the learner's greedy act is still the full draw, whose apples it learned first. Where that draw ends the patch before the course reaches the steps where restraint is learned, the patch is lost. This is `Flow.joint_excess_ends` with the learner's own untrained takes as the part (0 violations in 7.8 million windows over four rounds). The prediction that followed from it held: training the start rescued the learner whose mid-course restraint was learned (0.84) and not the one whose was not (0.00). Optimistic initial values, the known remedy, kept the patch.
+3. **The boundary's quantitative form is the learner's, not the condition's.** Four frozen rounds proposed a form for where the boundary lies in two exact quantities of the condition: `cov`, how long the early behaviour's courses stand, and `full`, how long the full draw's do. A one-constant index of training visits was also tried. Each form was read from the rounds before it, and each failed on the sharpest new case it was frozen against: coverage alone (round 1), a threshold on the full draw (round 2), a fitted sigmoid (round 3, no better than round 2's rule) and a band in the full draw (round 4, where high coverage kept the patch below the band). The best of them, round 4's band, beat both earlier predictors on new conditions (V2), so the forms improved, but none located the boundary. Over all 36 conditions with uniform starts the ordering is clear (see [the map](#the-boundary-over-36-conditions-read-after-the-runs)), but a law for it would be a law of the learner's sample complexity, which is learning theory. The theory's part is items 1 and 2.
+
+The mechanisms are known ([literature check](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#own-later-acts-check): policy improvement, dithering exploration, non-ergodic exploration, zero-initialised Q-learning, exploring starts). What these tests add is the boundary they set on CG2's law, and frozen evidence for where the learner's own outrun sits.
+
+Count over four rounds: 30 graded conditions, 22 passed and 8 failed; 14 contrasts, 9 passed and 5 failed. Round 3's 9 half-A conditions carried no predictions. Identity checks passed in every round.
 
 | File | What it is |
 |---|---|
-| [PREDICTIONS-2026-10-20.md](PREDICTIONS-2026-10-20.md) | Round 1: the exact result, the account (own exploratory coverage), nine conditions, contrasts Y1–Y5 against union, draw-cap, end-weight and end-distance accounts. Frozen at `f6a88683d` |
-| [PREDICTIONS-ROUND2-2026-10-20.md](PREDICTIONS-ROUND2-2026-10-20.md) | Round 2: what round 1 left, the two-quantity account, six conditions, contrasts Z1–Z3. Frozen at `87b6a0b36` with round 1's results |
-| [exact.py](exact.py) | Exact dynamic programmes over the 512 configurations: optimum, full draw, policy iteration from the full draw, the coverage curves (output [results/exact.json](results/exact.json)) |
+| [PREDICTIONS-2026-10-20.md](PREDICTIONS-2026-10-20.md) | Round 1: the exact result, the account (own exploratory coverage), nine conditions, contrasts Y1–Y5. Frozen at `f6a88683d` |
+| [PREDICTIONS-ROUND2-2026-10-20.md](PREDICTIONS-ROUND2-2026-10-20.md) | Round 2: the two-quantity account, six conditions, contrasts Z1–Z3. Frozen at `87b6a0b36` |
+| [PREDICTIONS-ROUND3-2026-10-20.md](PREDICTIONS-ROUND3-2026-10-20.md) | Round 3 (CG3b): the failed visit index; 16 conditions in two halves, the fitted boundary, W1–W2. Design frozen at `997e800b9`, predictions for half B at `2576b3e0d` |
+| [PREDICTIONS-ROUND4-2026-10-21.md](PREDICTIONS-ROUND4-2026-10-21.md) | Round 4 (CG3c): the band rule, eight conditions (five at a draw cap of four), V1–V4. Frozen at `7de8bf5e3` |
+| [exact.py](exact.py) | Exact dynamic programmes over the 512 configurations: optimum, full draw, policy iteration from the full draw, the standing curves (output [results/exact.json](results/exact.json)) |
 | [conditions.py](conditions.py), [own.py](own.py), [run.py](run.py), [analyze.py](analyze.py) | Round 1: conditions, the learner (CG2's `learners.Q`, CG1's environment and checks, imported unchanged), the run, the verdict rules |
-| [round2.py](round2.py) | Round 2: conditions, training with early starts, exact quantities, run and verdict rules |
-| [PREDICTIONS-ROUND3-2026-10-20.md](PREDICTIONS-ROUND3-2026-10-20.md), [round3.py](round3.py) | Round 3 (CG3b): the failed visit index; the grid, its halves, the fitted boundary, the verdict rules. Design frozen at `997e800b9`, predictions for half B at `2576b3e0d` |
-| [results/](results/) | `runs.json`, `VERDICTS.json`, `run.log`, `FROZEN-AT` (round 1); `round2-*` (round 2); `round3-*`, `round3B-FROZEN-AT` (round 3) |
+| [round2.py](round2.py), [round3.py](round3.py), [round4.py](round4.py) | Rounds 2–4: conditions, training, exact quantities, runs and verdict rules |
+| [results/](results/) | Each round's runs, verdicts and `FROZEN-AT` files |
 
-To reproduce (Python 3.11, standard library, CPU): `python3 exact.py && python3 run.py all && python3 analyze.py`, then `python3 round2.py exact && python3 round2.py all && python3 round2.py analyze`, then `python3 round3.py fit && python3 round3.py grid && python3 round3.py runA && python3 round3.py predict && python3 round3.py runB && python3 round3.py analyze`. The runs took 26.0, 19.6 and 46.0 CPU-minutes. The exact computations took a few minutes in rounds 1 and 2, and about 31 CPU-minutes for round 3's index fit.
+To reproduce (Python 3.11, standard library, CPU):
+- round 1: `python3 exact.py && python3 run.py all && python3 analyze.py`;
+- round 2: `python3 round2.py exact && python3 round2.py all && python3 round2.py analyze`;
+- round 3: `python3 round3.py fit && python3 round3.py grid && python3 round3.py runA && python3 round3.py predict && python3 round3.py runB && python3 round3.py analyze`;
+- round 4: `python3 round4.py exact && python3 round4.py all && python3 round4.py analyze`.
+
+The runs took 26.0, 19.6, 46.0 and 89.1 worker-minutes (the sum of the runs' wall times). Round 4's figure is inflated by a machine at load 80 on 12 cores, and its wall time was 15 minutes. The exact computations took about 35 CPU-minutes.
 
 ## The exact result (before any run)
 
@@ -74,6 +84,12 @@ Account (frozen at `87b6a0b36` with round 1's results): `cov` decides whether re
 
 Identity checks, both **passed**: I1 over 211.2 million steps and 1.25 million own-excess windows, and I2 on 11,543 emptied courses, with 0 violations.
 
+Behind Z3 (round 1's greedy tables, read before this round was frozen):
+- In `J3s8` the learner had learned restraint in mid-course: at level 6 its greedy request falls from 2.6 at the start to 0.6 with 50 steps left.
+- From a full patch, its full draw at the start ends the patch within about four steps, before the course gets there.
+
+`R3s8early` then emptied the patch near the end (alive at H 0.06), because the late steps were now the less trained: the same mechanism, displaced.
+
 ## Round 3 verdicts (CG3b)
 
 [Design](PREDICTIONS-ROUND3-2026-10-20.md) frozen at `997e800b9` before any round-3 run.
@@ -105,28 +121,51 @@ Identity checks **passed**: CG1's checks with the learner's own takes as the par
 
 The fit had converged (more iterations change the coefficients by 0.01). Its two failures both sit where a measured share is near 0 or 1 and the smooth boundary predicts about 0.4–0.7.
 
-Count over three rounds: 22 graded conditions, 17 passed and 5 failed; 10 contrasts, 7 passed and 3 failed. Round 3's 9 half-A conditions carried no predictions.
+## Round 4 verdicts (CG3c)
 
-## What the results say
+The band rule, read from the 28 conditions of rounds 1–3 with uniform starts and frozen at `7de8bf5e3` before any round-4 run:
 
-**One's own later acts are not a rest.** CG2's law reads a rest whose takes are fixed: there, depletion was locked for every end weight (X2). For one selector the exact computation finds no lock, because one improvement sweep already keeps the patch. The learners show the same separation from the end reading. Removing it (`J3w0`) or multiplying it by eight (`J3w48`) changed nothing at three requests a step (0.00 in all three), and at one request a step the patch was kept with or without it (`J1`, `J1w0`: 1.00). The end reading neither causes the failure nor cures it. CG2's post hoc wording, values unconverged far from the end reading, describes the symptom, not the cause.
+| Region | Predicted |
+|---|---|
+| `full` ≤ 4.4 | depleted |
+| `full` ≥ 8.4 | kept |
+| 4.4 < `full` < 8.4 and `cov` ≥ 60 | kept |
+| 4.4 < `full` < 8.4 and `cov` ≤ 16 | depleted |
+| 4.4 < `full` < 8.4, otherwise | between, rising with `cov` |
 
-**Where the learner's own acts do outrun the renewal: the start of a course.**
-- Exploring starts uniform over the step reach a state t steps into a course only from starts at or before t, so the first steps of a course are the least trained. There the learner's greedy act is still the full draw, whose apples it learned first.
-- Where its exploration lets courses stand long enough (`cov` about 24 or more), it learns restraint in mid-course: in `J3s8`, at level 6 the greedy request falls from 2.6 at the start to 0.6 with 50 steps left. But from a full patch the full draw ends the condition within about four steps, before the course reaches that region.
-- Training the start fixed this exactly where the account said: `R3s8early`, the same learner with half its training starting in the first ten steps, kept the patch (0.84, 17 of 20 seeds). The same manipulation left `R3early` at regrowth ×1, whose mid-course restraint is never learned, at 0.00. It then emptied the patch near the end (alive at H 0.06), because the late steps were now the less trained. That is the same mechanism, displaced.
-- Optimistic initial values (`J3opt`), the known remedy, kept the patch everywhere it was tried.
+Twelve seeds per condition.
 
-So the theory's reading survives in a corrected place. The part whose joint taking outruns the renewal is the learner's own full draw in the region its values have not reached (`Flow.joint_excess_ends` read across time, held by I1 in 3.25 million windows), and that region is set by where training starts and how long its own exploration lets courses stand.
+| Condition | m | s | `cov` | `full` | Band | Measured | Seeds (min–max) | Verdict |
+|---|---|---|---|---|---|---|---|---|
+| `G4s12` | 4 | 12 | 22.6 | 3.0 | depleted | 0.04 | 0.00–0.10 | **passed** |
+| `G4s14` | 4 | 14 | 36.9 | 3.5 | depleted | 0.49 | 0.20–0.85 | **failed** |
+| `G4s16` | 4 | 16 | 59.4 | 4.3 | depleted | 0.96 | 0.85–1.00 | **failed** |
+| `G4s18` | 4 | 18 | 83.3 | 5.9 | kept | 1.00 | 1.00–1.00 | **passed** |
+| `G4s20` | 4 | 20 | 97.7 | 11.2 | kept | 1.00 | 1.00–1.00 | **passed** |
+| `G3s10.5` | 3 | 10.5 | 61.2 | 5.6 | kept | 0.81 | 0.51–0.94 | **passed** |
+| `G2s4.5` | 2 | 4.5 | 24.5 | 5.8 | between | 0.28 | 0.01–1.00 | **passed** |
+| `G1s0.1` | 1 | 0.1 | 17.5 | 8.1 | between | 0.00 | 0.00–0.00 | **failed** |
 
-**Neither threshold locates the boundary.** Round 1's single quantity failed at `J3s8`. Round 2's threshold on the full draw failed in turn: `R3s10` (full draw standing 5.3 steps, coverage 54.9) was kept in 11 of 20 seeds (0.80), and `R2s4` (5.4, 20.2) split (0.28). High coverage also trains the start region, because the few early starts then pass through many early states. So the boundary is a joint function of the two quantities, and neither threshold, set from the anchors of the round before, locates it.
+| Contrast | Verdict |
+|---|---|
+| V1 at least 6 of 8 pass | **failed** (5) |
+| V2 the band's mean absolute error below round 3's sigmoid's and round 2's rule's | **passed**: 0.226, against 0.298 and 0.378 |
+| V3 every four-request condition follows the band | **failed** (`G4s14`, `G4s16`) |
+| V4 the between conditions rise with `cov` | **passed** (0.00 at 17.5, 0.28 at 24.5) |
 
-**The boundary, read post hoc from all 28 conditions with uniform starts (not counted).**
-- **`full` ≤ 4.4** (a full patch stands about four steps or fewer under the full draw): all 9 conditions were depleted (≤ 0.01), even at coverage 24.5.
-- **`full` ≥ 8.4:** all 10 were kept (≥ 0.80).
-- **Between:** the share kept rises with coverage: 0.00 at 11.6, 0.07 at 14.7, 0.28 at 20.2, 0.44 at 30.6, 0.25 at 36.8, 0.56 at 49.0, 0.80 at 54.9, 0.94 at 67.3 and 0.99 at 78.5. That is one inversion in nine.
+Identity checks **passed**: CG1's checks with the learner's own takes as the part over 147.3 million steps and 0.97 million own-excess windows, and `Regulation.accumulates_at` on 8,183 emptied courses, with 0 violations.
 
-This fits the mechanism round 2 found. The full draw's standing time decides whether a course from the start can pass the untrained start region at all. Within the band where it might, coverage decides, because longer-standing exploratory courses from the few early starts train that region. The predictor frozen in round 3 (one sigmoid in both quantities) cannot be sharp along one and gradual along the other, which is why its error did not beat a threshold rule. This band form is a candidate for a further frozen test; it was found after the runs and is not a result.
+At four requests, coverage kept the patch even where the full draw ends a course from a full patch in under four steps (`G4s16`: coverage 59.4, kept 0.96). The band's lower edge is not fixed by `full` alone. Near the upper edge, low coverage lost the patch (`G1s0.1`: coverage 17.5, `full` 8.1, 0.00 in every seed), so that edge is not fixed by `full` alone either.
+
+## The boundary over 36 conditions, read after the runs
+
+Not counted. Sorted by coverage, every condition at `cov` ≤ 17.5 was depleted (≤ 0.07; 10 conditions) and every condition at `cov` ≥ 54.9 was kept (≥ 0.80; 14 conditions). Between them (19.7 ≤ `cov` ≤ 49.0, 12 conditions), those whose full draw stands at least 8.6 steps were kept (1.00; three one-request conditions), and the rest lay between 0.01 and 0.56.
+
+In the mechanism's terms:
+- Coverage sets how far the early behaviour's own courses carry training back into the start region. It is the primary axis.
+- The full draw's standing time matters only where coverage leaves the start region partly untrained.
+
+Round 4's band had the roles the other way round. This reading too came after the runs and was not frozen. The forms so far have each come from the round before and failed on the next round's sharpest case, so I end the series here (item 3 of the account).
 
 ## What is new against prior work, and what is not
 
@@ -137,18 +176,19 @@ New here, as frozen tests with their outcomes:
 - the measured irrelevance of the end reading for this learner (Y2, Y3);
 - the location of the outrun at the start of the course, predicted before the run that tested it (Z3);
 - the failure of each round's threshold (Y1, Z1);
-- the boundary mapped over 28 conditions, with a fitted boundary that carried to held-out conditions only as well as a frozen threshold rule (W1 passed, W2 failed).
+- the boundary mapped over 36 conditions, and four frozen forms for it, each read from the rounds before and each failing on its sharpest new case. The last of them (round 4's band) predicted new conditions better than the earlier two (V2).
 
 Their value for the theory is a boundary on what `Flow.outrun_reading_alike` explains. It explains a selection blind to an act where the rest is held fixed (CG2), and not a selector's blindness to its own later acts. The latter is the sampling of its own courses: what it has evaluated, set by its training and by how long its own acts let the condition stand.
 
 ## Corrections after the freezes
 
-None. Round 1 ran from `f6a88683d` and round 2 from `87b6a0b36` (`results/FROZEN-AT`, `results/round2-FROZEN-AT`). Round 3's half A ran from `997e800b9` and half B from `2576b3e0d` (`results/round3-FROZEN-AT`, `results/round3B-FROZEN-AT`). No code, condition or rule changed after any of them. Round 2 was designed after round 1's verdicts, from its greedy tables and new exact quantities, and frozen before any of its runs. Its anchors are round 1's outcomes, as its file states.
+None. Round 1 ran from `f6a88683d` and round 2 from `87b6a0b36` (`results/FROZEN-AT`, `results/round2-FROZEN-AT`). Round 3's half A ran from `997e800b9` and half B from `2576b3e0d` (`results/round3-FROZEN-AT`, `results/round3B-FROZEN-AT`). Round 4 ran from `7de8bf5e3` (`results/round4-FROZEN-AT`). No code, condition or rule changed after any of them. Rounds 2, 3 and 4 were each designed after the verdicts of the rounds before and frozen before any of their own runs. Their anchors and thresholds are earlier rounds' outcomes, as their files state.
 
 ## Limits
 
 - The environment is CG1's (one isolated 3×3 patch, no walking or tagging), the regrowth scale is a manipulation, and the learner and training are CG2's (tabular Q, uniform exploring starts, 30,000 episodes), with 20 seeds per condition.
 - The exact computations are over policies reading the whole configuration; the learner reads the level and the steps left.
 - The diagnosis of the start region rests on greedy tables averaged over seeds and on one manipulation (`R3s8early`, `R3early`). A law for the boundary as a joint function of coverage and the full draw was not derived.
-- Round 3 used 12 seeds per condition. It did not vary the start distribution, which round 2 showed matters.
-- Total compute was 92 CPU-minutes of runs and about 35 of exact computation.
+- Rounds 3 and 4 used 12 seeds per condition, and only uniform starts.
+- Near the boundary, seeds of one condition range widely (`G2s4.5`: 0.01–1.00).
+- Total compute: 181 worker-minutes of runs (round 4 under heavy load) and about 35 CPU-minutes of exact computation.

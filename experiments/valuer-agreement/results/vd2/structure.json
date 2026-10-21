@@ -1,0 +1,1660 @@
+{
+ "frames": [
+  {
+   "frame": "F01",
+   "order": [
+    "rowing club",
+    "heron colony",
+    "water mill",
+    "eel population",
+    "willow wood",
+    "riverside allotments"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "eel population",
+      "heron colony",
+      "rowing club",
+      "water mill"
+     ],
+     "B": [
+      "eel population",
+      "heron colony",
+      "water mill"
+     ],
+     "added": "rowing club"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "eel population",
+      "heron colony",
+      "water mill",
+      "willow wood"
+     ],
+     "B": [
+      "eel population",
+      "water mill",
+      "willow wood"
+     ],
+     "added": "heron colony"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "eel population",
+      "riverside allotments",
+      "water mill",
+      "willow wood"
+     ],
+     "B": [
+      "eel population",
+      "riverside allotments",
+      "willow wood"
+     ],
+     "added": "water mill"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "eel population",
+      "riverside allotments",
+      "rowing club",
+      "willow wood"
+     ],
+     "B": [
+      "riverside allotments",
+      "rowing club",
+      "willow wood"
+     ],
+     "added": "eel population"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "heron colony",
+      "riverside allotments",
+      "rowing club",
+      "willow wood"
+     ],
+     "B": [
+      "heron colony",
+      "riverside allotments",
+      "rowing club"
+     ],
+     "added": "willow wood"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "heron colony",
+      "riverside allotments",
+      "rowing club",
+      "water mill"
+     ],
+     "B": [
+      "heron colony",
+      "rowing club",
+      "water mill"
+     ],
+     "added": "riverside allotments"
+    }
+   ]
+  },
+  {
+   "frame": "F02",
+   "order": [
+    "fen village pub",
+    "windmill museum",
+    "birdwatchers' society",
+    "reed-cutting trade",
+    "crane breeding pairs",
+    "peat bog"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "birdwatchers' society",
+      "fen village pub",
+      "reed-cutting trade",
+      "windmill museum"
+     ],
+     "B": [
+      "birdwatchers' society",
+      "reed-cutting trade",
+      "windmill museum"
+     ],
+     "added": "fen village pub"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "birdwatchers' society",
+      "crane breeding pairs",
+      "reed-cutting trade",
+      "windmill museum"
+     ],
+     "B": [
+      "birdwatchers' society",
+      "crane breeding pairs",
+      "reed-cutting trade"
+     ],
+     "added": "windmill museum"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "birdwatchers' society",
+      "crane breeding pairs",
+      "peat bog",
+      "reed-cutting trade"
+     ],
+     "B": [
+      "crane breeding pairs",
+      "peat bog",
+      "reed-cutting trade"
+     ],
+     "added": "birdwatchers' society"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "crane breeding pairs",
+      "fen village pub",
+      "peat bog",
+      "reed-cutting trade"
+     ],
+     "B": [
+      "crane breeding pairs",
+      "fen village pub",
+      "peat bog"
+     ],
+     "added": "reed-cutting trade"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "crane breeding pairs",
+      "fen village pub",
+      "peat bog",
+      "windmill museum"
+     ],
+     "B": [
+      "fen village pub",
+      "peat bog",
+      "windmill museum"
+     ],
+     "added": "crane breeding pairs"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "birdwatchers' society",
+      "fen village pub",
+      "peat bog",
+      "windmill museum"
+     ],
+     "B": [
+      "birdwatchers' society",
+      "fen village pub",
+      "windmill museum"
+     ],
+     "added": "peat bog"
+    }
+   ]
+  },
+  {
+   "frame": "F03",
+   "order": [
+    "swift colony",
+    "community choir",
+    "Saturday market",
+    "old cinema",
+    "chess club",
+    "family bakery"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "Saturday market",
+      "community choir",
+      "old cinema",
+      "swift colony"
+     ],
+     "B": [
+      "Saturday market",
+      "community choir",
+      "old cinema"
+     ],
+     "added": "swift colony"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "Saturday market",
+      "chess club",
+      "community choir",
+      "old cinema"
+     ],
+     "B": [
+      "Saturday market",
+      "chess club",
+      "old cinema"
+     ],
+     "added": "community choir"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "Saturday market",
+      "chess club",
+      "family bakery",
+      "old cinema"
+     ],
+     "B": [
+      "chess club",
+      "family bakery",
+      "old cinema"
+     ],
+     "added": "Saturday market"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "chess club",
+      "family bakery",
+      "old cinema",
+      "swift colony"
+     ],
+     "B": [
+      "chess club",
+      "family bakery",
+      "swift colony"
+     ],
+     "added": "old cinema"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "chess club",
+      "community choir",
+      "family bakery",
+      "swift colony"
+     ],
+     "B": [
+      "community choir",
+      "family bakery",
+      "swift colony"
+     ],
+     "added": "chess club"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "Saturday market",
+      "community choir",
+      "family bakery",
+      "swift colony"
+     ],
+     "B": [
+      "Saturday market",
+      "community choir",
+      "swift colony"
+     ],
+     "added": "family bakery"
+    }
+   ]
+  },
+  {
+   "frame": "F04",
+   "order": [
+    "street-art festival",
+    "dockworkers' football club",
+    "night shelter",
+    "library branch",
+    "tea house",
+    "bat roost"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "dockworkers' football club",
+      "library branch",
+      "night shelter",
+      "street-art festival"
+     ],
+     "B": [
+      "dockworkers' football club",
+      "library branch",
+      "night shelter"
+     ],
+     "added": "street-art festival"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "dockworkers' football club",
+      "library branch",
+      "night shelter",
+      "tea house"
+     ],
+     "B": [
+      "library branch",
+      "night shelter",
+      "tea house"
+     ],
+     "added": "dockworkers' football club"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "bat roost",
+      "library branch",
+      "night shelter",
+      "tea house"
+     ],
+     "B": [
+      "bat roost",
+      "library branch",
+      "tea house"
+     ],
+     "added": "night shelter"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "bat roost",
+      "library branch",
+      "street-art festival",
+      "tea house"
+     ],
+     "B": [
+      "bat roost",
+      "street-art festival",
+      "tea house"
+     ],
+     "added": "library branch"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "bat roost",
+      "dockworkers' football club",
+      "street-art festival",
+      "tea house"
+     ],
+     "B": [
+      "bat roost",
+      "dockworkers' football club",
+      "street-art festival"
+     ],
+     "added": "tea house"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "bat roost",
+      "dockworkers' football club",
+      "night shelter",
+      "street-art festival"
+     ],
+     "B": [
+      "dockworkers' football club",
+      "night shelter",
+      "street-art festival"
+     ],
+     "added": "bat roost"
+    }
+   ]
+  },
+  {
+   "frame": "F05",
+   "order": [
+    "cancer screening programme",
+    "rare-disease research team",
+    "hospice",
+    "mobile dental clinic",
+    "maternity ward",
+    "hospital chaplaincy"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "cancer screening programme",
+      "hospice",
+      "mobile dental clinic",
+      "rare-disease research team"
+     ],
+     "B": [
+      "hospice",
+      "mobile dental clinic",
+      "rare-disease research team"
+     ],
+     "added": "cancer screening programme"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "hospice",
+      "maternity ward",
+      "mobile dental clinic",
+      "rare-disease research team"
+     ],
+     "B": [
+      "hospice",
+      "maternity ward",
+      "mobile dental clinic"
+     ],
+     "added": "rare-disease research team"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "hospice",
+      "hospital chaplaincy",
+      "maternity ward",
+      "mobile dental clinic"
+     ],
+     "B": [
+      "hospital chaplaincy",
+      "maternity ward",
+      "mobile dental clinic"
+     ],
+     "added": "hospice"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "cancer screening programme",
+      "hospital chaplaincy",
+      "maternity ward",
+      "mobile dental clinic"
+     ],
+     "B": [
+      "cancer screening programme",
+      "hospital chaplaincy",
+      "maternity ward"
+     ],
+     "added": "mobile dental clinic"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "cancer screening programme",
+      "hospital chaplaincy",
+      "maternity ward",
+      "rare-disease research team"
+     ],
+     "B": [
+      "cancer screening programme",
+      "hospital chaplaincy",
+      "rare-disease research team"
+     ],
+     "added": "maternity ward"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "cancer screening programme",
+      "hospice",
+      "hospital chaplaincy",
+      "rare-disease research team"
+     ],
+     "B": [
+      "cancer screening programme",
+      "hospice",
+      "rare-disease research team"
+     ],
+     "added": "hospital chaplaincy"
+    }
+   ]
+  },
+  {
+   "frame": "F06",
+   "order": [
+    "peer support groups",
+    "youth crisis line",
+    "art therapy studio",
+    "addiction clinic",
+    "dementia day centre",
+    "eating-disorder unit"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "addiction clinic",
+      "art therapy studio",
+      "peer support groups",
+      "youth crisis line"
+     ],
+     "B": [
+      "addiction clinic",
+      "art therapy studio",
+      "youth crisis line"
+     ],
+     "added": "peer support groups"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "addiction clinic",
+      "art therapy studio",
+      "dementia day centre",
+      "youth crisis line"
+     ],
+     "B": [
+      "addiction clinic",
+      "art therapy studio",
+      "dementia day centre"
+     ],
+     "added": "youth crisis line"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "addiction clinic",
+      "art therapy studio",
+      "dementia day centre",
+      "eating-disorder unit"
+     ],
+     "B": [
+      "addiction clinic",
+      "dementia day centre",
+      "eating-disorder unit"
+     ],
+     "added": "art therapy studio"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "addiction clinic",
+      "dementia day centre",
+      "eating-disorder unit",
+      "peer support groups"
+     ],
+     "B": [
+      "dementia day centre",
+      "eating-disorder unit",
+      "peer support groups"
+     ],
+     "added": "addiction clinic"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "dementia day centre",
+      "eating-disorder unit",
+      "peer support groups",
+      "youth crisis line"
+     ],
+     "B": [
+      "eating-disorder unit",
+      "peer support groups",
+      "youth crisis line"
+     ],
+     "added": "dementia day centre"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "art therapy studio",
+      "eating-disorder unit",
+      "peer support groups",
+      "youth crisis line"
+     ],
+     "B": [
+      "art therapy studio",
+      "peer support groups",
+      "youth crisis line"
+     ],
+     "added": "eating-disorder unit"
+    }
+   ]
+  },
+  {
+   "frame": "F07",
+   "order": [
+    "heirloom wheat",
+    "sheepdog trials",
+    "family orchard",
+    "dairy cooperative",
+    "wild bees",
+    "old hedgerows"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "dairy cooperative",
+      "family orchard",
+      "heirloom wheat",
+      "sheepdog trials"
+     ],
+     "B": [
+      "dairy cooperative",
+      "family orchard",
+      "sheepdog trials"
+     ],
+     "added": "heirloom wheat"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "dairy cooperative",
+      "family orchard",
+      "sheepdog trials",
+      "wild bees"
+     ],
+     "B": [
+      "dairy cooperative",
+      "family orchard",
+      "wild bees"
+     ],
+     "added": "sheepdog trials"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "dairy cooperative",
+      "family orchard",
+      "old hedgerows",
+      "wild bees"
+     ],
+     "B": [
+      "dairy cooperative",
+      "old hedgerows",
+      "wild bees"
+     ],
+     "added": "family orchard"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "dairy cooperative",
+      "heirloom wheat",
+      "old hedgerows",
+      "wild bees"
+     ],
+     "B": [
+      "heirloom wheat",
+      "old hedgerows",
+      "wild bees"
+     ],
+     "added": "dairy cooperative"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "heirloom wheat",
+      "old hedgerows",
+      "sheepdog trials",
+      "wild bees"
+     ],
+     "B": [
+      "heirloom wheat",
+      "old hedgerows",
+      "sheepdog trials"
+     ],
+     "added": "wild bees"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "family orchard",
+      "heirloom wheat",
+      "old hedgerows",
+      "sheepdog trials"
+     ],
+     "B": [
+      "family orchard",
+      "heirloom wheat",
+      "sheepdog trials"
+     ],
+     "added": "old hedgerows"
+    }
+   ]
+  },
+  {
+   "frame": "F08",
+   "order": [
+    "temple water festival",
+    "mango grove",
+    "frog population",
+    "water-buffalo herds",
+    "farmers' credit union",
+    "rice terraces"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "frog population",
+      "mango grove",
+      "temple water festival",
+      "water-buffalo herds"
+     ],
+     "B": [
+      "frog population",
+      "mango grove",
+      "water-buffalo herds"
+     ],
+     "added": "temple water festival"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "farmers' credit union",
+      "frog population",
+      "mango grove",
+      "water-buffalo herds"
+     ],
+     "B": [
+      "farmers' credit union",
+      "frog population",
+      "water-buffalo herds"
+     ],
+     "added": "mango grove"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "farmers' credit union",
+      "frog population",
+      "rice terraces",
+      "water-buffalo herds"
+     ],
+     "B": [
+      "farmers' credit union",
+      "rice terraces",
+      "water-buffalo herds"
+     ],
+     "added": "frog population"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "farmers' credit union",
+      "rice terraces",
+      "temple water festival",
+      "water-buffalo herds"
+     ],
+     "B": [
+      "farmers' credit union",
+      "rice terraces",
+      "temple water festival"
+     ],
+     "added": "water-buffalo herds"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "farmers' credit union",
+      "mango grove",
+      "rice terraces",
+      "temple water festival"
+     ],
+     "B": [
+      "mango grove",
+      "rice terraces",
+      "temple water festival"
+     ],
+     "added": "farmers' credit union"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "frog population",
+      "mango grove",
+      "rice terraces",
+      "temple water festival"
+     ],
+     "B": [
+      "frog population",
+      "mango grove",
+      "temple water festival"
+     ],
+     "added": "rice terraces"
+    }
+   ]
+  },
+  {
+   "frame": "F09",
+   "order": [
+    "small-boat fleet",
+    "village school",
+    "puffin colony",
+    "seagrass meadow",
+    "seaweed harvesting",
+    "lighthouse"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "puffin colony",
+      "seagrass meadow",
+      "small-boat fleet",
+      "village school"
+     ],
+     "B": [
+      "puffin colony",
+      "seagrass meadow",
+      "village school"
+     ],
+     "added": "small-boat fleet"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "puffin colony",
+      "seagrass meadow",
+      "seaweed harvesting",
+      "village school"
+     ],
+     "B": [
+      "puffin colony",
+      "seagrass meadow",
+      "seaweed harvesting"
+     ],
+     "added": "village school"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "lighthouse",
+      "puffin colony",
+      "seagrass meadow",
+      "seaweed harvesting"
+     ],
+     "B": [
+      "lighthouse",
+      "seagrass meadow",
+      "seaweed harvesting"
+     ],
+     "added": "puffin colony"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "lighthouse",
+      "seagrass meadow",
+      "seaweed harvesting",
+      "small-boat fleet"
+     ],
+     "B": [
+      "lighthouse",
+      "seaweed harvesting",
+      "small-boat fleet"
+     ],
+     "added": "seagrass meadow"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "lighthouse",
+      "seaweed harvesting",
+      "small-boat fleet",
+      "village school"
+     ],
+     "B": [
+      "lighthouse",
+      "small-boat fleet",
+      "village school"
+     ],
+     "added": "seaweed harvesting"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "lighthouse",
+      "puffin colony",
+      "small-boat fleet",
+      "village school"
+     ],
+     "B": [
+      "puffin colony",
+      "small-boat fleet",
+      "village school"
+     ],
+     "added": "lighthouse"
+    }
+   ]
+  },
+  {
+   "frame": "F10",
+   "order": [
+    "boatyard",
+    "fish market",
+    "coral reef",
+    "sailors' chapel",
+    "dolphin pod",
+    "island ferry"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "boatyard",
+      "coral reef",
+      "fish market",
+      "sailors' chapel"
+     ],
+     "B": [
+      "coral reef",
+      "fish market",
+      "sailors' chapel"
+     ],
+     "added": "boatyard"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "coral reef",
+      "dolphin pod",
+      "fish market",
+      "sailors' chapel"
+     ],
+     "B": [
+      "coral reef",
+      "dolphin pod",
+      "sailors' chapel"
+     ],
+     "added": "fish market"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "coral reef",
+      "dolphin pod",
+      "island ferry",
+      "sailors' chapel"
+     ],
+     "B": [
+      "dolphin pod",
+      "island ferry",
+      "sailors' chapel"
+     ],
+     "added": "coral reef"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "boatyard",
+      "dolphin pod",
+      "island ferry",
+      "sailors' chapel"
+     ],
+     "B": [
+      "boatyard",
+      "dolphin pod",
+      "island ferry"
+     ],
+     "added": "sailors' chapel"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "boatyard",
+      "dolphin pod",
+      "fish market",
+      "island ferry"
+     ],
+     "B": [
+      "boatyard",
+      "fish market",
+      "island ferry"
+     ],
+     "added": "dolphin pod"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "boatyard",
+      "coral reef",
+      "fish market",
+      "island ferry"
+     ],
+     "B": [
+      "boatyard",
+      "coral reef",
+      "fish market"
+     ],
+     "added": "island ferry"
+    }
+   ]
+  },
+  {
+   "frame": "F11",
+   "order": [
+    "old-growth beech",
+    "mountain hut",
+    "ski club",
+    "summer pasture",
+    "lynx population",
+    "valley dialect"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "mountain hut",
+      "old-growth beech",
+      "ski club",
+      "summer pasture"
+     ],
+     "B": [
+      "mountain hut",
+      "ski club",
+      "summer pasture"
+     ],
+     "added": "old-growth beech"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "lynx population",
+      "mountain hut",
+      "ski club",
+      "summer pasture"
+     ],
+     "B": [
+      "lynx population",
+      "ski club",
+      "summer pasture"
+     ],
+     "added": "mountain hut"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "lynx population",
+      "ski club",
+      "summer pasture",
+      "valley dialect"
+     ],
+     "B": [
+      "lynx population",
+      "summer pasture",
+      "valley dialect"
+     ],
+     "added": "ski club"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "lynx population",
+      "old-growth beech",
+      "summer pasture",
+      "valley dialect"
+     ],
+     "B": [
+      "lynx population",
+      "old-growth beech",
+      "valley dialect"
+     ],
+     "added": "summer pasture"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "lynx population",
+      "mountain hut",
+      "old-growth beech",
+      "valley dialect"
+     ],
+     "B": [
+      "mountain hut",
+      "old-growth beech",
+      "valley dialect"
+     ],
+     "added": "lynx population"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "mountain hut",
+      "old-growth beech",
+      "ski club",
+      "valley dialect"
+     ],
+     "B": [
+      "mountain hut",
+      "old-growth beech",
+      "ski club"
+     ],
+     "added": "valley dialect"
+    }
+   ]
+  },
+  {
+   "frame": "F12",
+   "order": [
+    "salmon run",
+    "pilgrimage trail",
+    "rafting company",
+    "honey producers",
+    "gorge lichen",
+    "hill village"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "honey producers",
+      "pilgrimage trail",
+      "rafting company",
+      "salmon run"
+     ],
+     "B": [
+      "honey producers",
+      "pilgrimage trail",
+      "rafting company"
+     ],
+     "added": "salmon run"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "gorge lichen",
+      "honey producers",
+      "pilgrimage trail",
+      "rafting company"
+     ],
+     "B": [
+      "gorge lichen",
+      "honey producers",
+      "rafting company"
+     ],
+     "added": "pilgrimage trail"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "gorge lichen",
+      "hill village",
+      "honey producers",
+      "rafting company"
+     ],
+     "B": [
+      "gorge lichen",
+      "hill village",
+      "honey producers"
+     ],
+     "added": "rafting company"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "gorge lichen",
+      "hill village",
+      "honey producers",
+      "salmon run"
+     ],
+     "B": [
+      "gorge lichen",
+      "hill village",
+      "salmon run"
+     ],
+     "added": "honey producers"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "gorge lichen",
+      "hill village",
+      "pilgrimage trail",
+      "salmon run"
+     ],
+     "B": [
+      "hill village",
+      "pilgrimage trail",
+      "salmon run"
+     ],
+     "added": "gorge lichen"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "hill village",
+      "pilgrimage trail",
+      "rafting company",
+      "salmon run"
+     ],
+     "B": [
+      "pilgrimage trail",
+      "rafting company",
+      "salmon run"
+     ],
+     "added": "hill village"
+    }
+   ]
+  },
+  {
+   "frame": "F13",
+   "order": [
+    "harvest festival",
+    "manuscript archive",
+    "folk dance group",
+    "puppet theatre",
+    "minority-language radio",
+    "regional newspaper"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "folk dance group",
+      "harvest festival",
+      "manuscript archive",
+      "puppet theatre"
+     ],
+     "B": [
+      "folk dance group",
+      "manuscript archive",
+      "puppet theatre"
+     ],
+     "added": "harvest festival"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "folk dance group",
+      "manuscript archive",
+      "minority-language radio",
+      "puppet theatre"
+     ],
+     "B": [
+      "folk dance group",
+      "minority-language radio",
+      "puppet theatre"
+     ],
+     "added": "manuscript archive"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "folk dance group",
+      "minority-language radio",
+      "puppet theatre",
+      "regional newspaper"
+     ],
+     "B": [
+      "minority-language radio",
+      "puppet theatre",
+      "regional newspaper"
+     ],
+     "added": "folk dance group"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "harvest festival",
+      "minority-language radio",
+      "puppet theatre",
+      "regional newspaper"
+     ],
+     "B": [
+      "harvest festival",
+      "minority-language radio",
+      "regional newspaper"
+     ],
+     "added": "puppet theatre"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "harvest festival",
+      "manuscript archive",
+      "minority-language radio",
+      "regional newspaper"
+     ],
+     "B": [
+      "harvest festival",
+      "manuscript archive",
+      "regional newspaper"
+     ],
+     "added": "minority-language radio"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "folk dance group",
+      "harvest festival",
+      "manuscript archive",
+      "regional newspaper"
+     ],
+     "B": [
+      "folk dance group",
+      "harvest festival",
+      "manuscript archive"
+     ],
+     "added": "regional newspaper"
+    }
+   ]
+  },
+  {
+   "frame": "F14",
+   "order": [
+    "observatory",
+    "student orchestra",
+    "evening school",
+    "seed bank",
+    "classics department",
+    "botanical garden"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "evening school",
+      "observatory",
+      "seed bank",
+      "student orchestra"
+     ],
+     "B": [
+      "evening school",
+      "seed bank",
+      "student orchestra"
+     ],
+     "added": "observatory"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "classics department",
+      "evening school",
+      "seed bank",
+      "student orchestra"
+     ],
+     "B": [
+      "classics department",
+      "evening school",
+      "seed bank"
+     ],
+     "added": "student orchestra"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "botanical garden",
+      "classics department",
+      "evening school",
+      "seed bank"
+     ],
+     "B": [
+      "botanical garden",
+      "classics department",
+      "seed bank"
+     ],
+     "added": "evening school"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "botanical garden",
+      "classics department",
+      "observatory",
+      "seed bank"
+     ],
+     "B": [
+      "botanical garden",
+      "classics department",
+      "observatory"
+     ],
+     "added": "seed bank"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "botanical garden",
+      "classics department",
+      "observatory",
+      "student orchestra"
+     ],
+     "B": [
+      "botanical garden",
+      "observatory",
+      "student orchestra"
+     ],
+     "added": "classics department"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "botanical garden",
+      "evening school",
+      "observatory",
+      "student orchestra"
+     ],
+     "B": [
+      "evening school",
+      "observatory",
+      "student orchestra"
+     ],
+     "added": "botanical garden"
+    }
+   ]
+  },
+  {
+   "frame": "F15",
+   "order": [
+    "brass band",
+    "textile mill",
+    "union local",
+    "small brewery",
+    "bicycle cooperative",
+    "barn owls"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "brass band",
+      "small brewery",
+      "textile mill",
+      "union local"
+     ],
+     "B": [
+      "small brewery",
+      "textile mill",
+      "union local"
+     ],
+     "added": "brass band"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "bicycle cooperative",
+      "small brewery",
+      "textile mill",
+      "union local"
+     ],
+     "B": [
+      "bicycle cooperative",
+      "small brewery",
+      "union local"
+     ],
+     "added": "textile mill"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "barn owls",
+      "bicycle cooperative",
+      "small brewery",
+      "union local"
+     ],
+     "B": [
+      "barn owls",
+      "bicycle cooperative",
+      "small brewery"
+     ],
+     "added": "union local"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "barn owls",
+      "bicycle cooperative",
+      "brass band",
+      "small brewery"
+     ],
+     "B": [
+      "barn owls",
+      "bicycle cooperative",
+      "brass band"
+     ],
+     "added": "small brewery"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "barn owls",
+      "bicycle cooperative",
+      "brass band",
+      "textile mill"
+     ],
+     "B": [
+      "barn owls",
+      "brass band",
+      "textile mill"
+     ],
+     "added": "bicycle cooperative"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "barn owls",
+      "brass band",
+      "textile mill",
+      "union local"
+     ],
+     "B": [
+      "brass band",
+      "textile mill",
+      "union local"
+     ],
+     "added": "barn owls"
+    }
+   ]
+  },
+  {
+   "frame": "F16",
+   "order": [
+    "bus line",
+    "craft circle",
+    "stork nest",
+    "corner shop",
+    "fire brigade",
+    "post office"
+   ],
+   "pairs": [
+    {
+     "pair": 0,
+     "A": [
+      "bus line",
+      "corner shop",
+      "craft circle",
+      "stork nest"
+     ],
+     "B": [
+      "corner shop",
+      "craft circle",
+      "stork nest"
+     ],
+     "added": "bus line"
+    },
+    {
+     "pair": 1,
+     "A": [
+      "corner shop",
+      "craft circle",
+      "fire brigade",
+      "stork nest"
+     ],
+     "B": [
+      "corner shop",
+      "fire brigade",
+      "stork nest"
+     ],
+     "added": "craft circle"
+    },
+    {
+     "pair": 2,
+     "A": [
+      "corner shop",
+      "fire brigade",
+      "post office",
+      "stork nest"
+     ],
+     "B": [
+      "corner shop",
+      "fire brigade",
+      "post office"
+     ],
+     "added": "stork nest"
+    },
+    {
+     "pair": 3,
+     "A": [
+      "bus line",
+      "corner shop",
+      "fire brigade",
+      "post office"
+     ],
+     "B": [
+      "bus line",
+      "fire brigade",
+      "post office"
+     ],
+     "added": "corner shop"
+    },
+    {
+     "pair": 4,
+     "A": [
+      "bus line",
+      "craft circle",
+      "fire brigade",
+      "post office"
+     ],
+     "B": [
+      "bus line",
+      "craft circle",
+      "post office"
+     ],
+     "added": "fire brigade"
+    },
+    {
+     "pair": 5,
+     "A": [
+      "bus line",
+      "craft circle",
+      "post office",
+      "stork nest"
+     ],
+     "B": [
+      "bus line",
+      "craft circle",
+      "stork nest"
+     ],
+     "added": "post office"
+    }
+   ]
+  }
+ ],
+ "presentations_per_model": 4608,
+ "sign_words_mean": {
+  "1": 143.28125,
+  "2": 143.28125
+ },
+ "rank_words_mean": 191.1875,
+ "rank_a_first_share": 0.5,
+ "rank_framing_continue_share": 0.5
+}

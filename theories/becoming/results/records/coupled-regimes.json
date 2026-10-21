@@ -179,8 +179,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T105805.152152Z): the 55 declarations Becoming.RegimeMargin gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 303; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T105805.152152Z）：Becoming.RegimeMargin 新增的 55 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 303 节；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T105805.152152Z): the 55 declarations Becoming.RegimeMargin gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 304; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T105805.152152Z）：Becoming.RegimeMargin 新增的 55 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 304 节；未经人的独立审查。"
   },
   "next_delta": {
     "en": "Thresholds beyond a band, with a bound on the run in its place; more than two conditions, a web; coupled conditions with a recent giving; over the reals; a frozen field test of whether a partner's level adds to T2's state for coupled conditions; an independent review.",
@@ -522,8 +522,8 @@
   ],
   "history": [
     {
-      "en": "21 October 2026: added (RM6), coupled regimes: two conditions under draws, each giving from what is left of both; under mutual support the order of states is kept and ending is down-closed; within a band in whole numbers runs rest within 2 hi + 1 steps and the first condition ends exactly below a least level that does not rise as its partner rises; a dependent drains by its draw once its partner has nothing left; study section 303.",
-      "zh": "2026年10月21日：新增（RM6），耦合的体制：两个条件各在汲取之下，各从两者所余中给出；相互支持下状态之序得保持，终结向下封闭；在整数的带内运行在 2 hi + 1 步内静止，第一个条件恰在一个不随伙伴上升而升的最小水平之下终结；依赖者在伙伴一无所余后按汲取流尽；研究第 303 节。"
+      "en": "21 October 2026: added (RM6), coupled regimes: two conditions under draws, each giving from what is left of both; under mutual support the order of states is kept and ending is down-closed; within a band in whole numbers runs rest within 2 hi + 1 steps and the first condition ends exactly below a least level that does not rise as its partner rises; a dependent drains by its draw once its partner has nothing left; study section 304.",
+      "zh": "2026年10月21日：新增（RM6），耦合的体制：两个条件各在汲取之下，各从两者所余中给出；相互支持下状态之序得保持，终结向下封闭；在整数的带内运行在 2 hi + 1 步内静止，第一个条件恰在一个不随伙伴上升而升的最小水平之下终结；依赖者在伙伴一无所余后按汲取流尽；研究第 304 节。"
     }
   ]
 }

@@ -13392,7 +13392,41 @@ Output → input: chapter 2.3 (the regime over any amounts), thesis T2's standin
 
 **The run.** Core 284 modules and 11,979 theorems, instances 7 and 567, applications 6 and 179; 11 Lean steps ran, 1,189 reused. 25 declarations added to Becoming.RegimeMargin, 17 of them theorems (135 before, 160 now), none removed, all with empty axiom reports. Periphery: RegimeReals checked with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261021T102713.696033Z): 14 theorems, 17 declarations, each on Lean's standard axioms only; its 61 core modules match passed receipts. Connectivity: 651 of 12,725 apart, unchanged; no new apart root, every new law stated on a run or read by one that is, the witnesses on the run; register check passes.
 
-## 303. Coupled regimes: a margin that is not its own (RM6)
+## 303. The band form tested, and the CG3 line closed (CG3c)
+
+```text
+Result(s): none new as mathematics; a frozen test of the band form read after section 264
+       (experiments/commons-outrun-own, round 4, frozen at 7de8bf5e3), and the CG3 line's account.
+Delta: section 264's open output. The band rule (full <= 4.4 depleted, >= 8.4 kept, between kept at
+       cov >= 60, depleted at cov <= 16, otherwise between and rising with cov) on eight new
+       conditions, five at a draw cap of four requests never trained, 12 seeds each.
+Premises: as section 254.
+Verdicts: V1 failed (5 of 8: G4s12 0.04, G4s18 1.00, G4s20 1.00, G3s10.5 0.81, G2s4.5 0.28 passed;
+       G4s14 0.49 and G4s16 0.96 where depletion was predicted, G1s0.1 0.00 where between was);
+       V2 passed (the band's mean absolute error 0.226, against 0.298 for round 3's sigmoid and
+       0.378 for round 2's rule); V3 failed (coverage keeps the patch at four requests below the
+       band's lower edge); V4 passed. Identity checks passed (147.3M steps, 0.97M own-excess
+       windows, 8,183 emptied courses, 0 violations). Over four rounds: 30 graded conditions, 22
+       passed; 14 contrasts, 9 passed.
+Evidence: experiments/commons-outrun-own (README, PREDICTIONS-ROUND4, round4-*.json).
+Boundary: 12 seeds, uniform starts; worker-minutes inflated by a machine at load 80.
+Output → input: the CG3 line closes on three statements. (1) One's own later acts are not a rest:
+       exact policy improvement keeps the patch in one sweep, so Flow.outrun_reading_alike bounds a
+       selection blind to an act where the rest is held fixed and not a selector's blindness to its
+       own later acts (section 254). (2) In sampled learning the learner's own untrained full draw
+       at the start of a course is the part whose joint taking outruns the renewal
+       (Flow.joint_excess_ends; Z3 predicted and held). (3) Where the boundary lies is a property of
+       the learner's sample complexity: four frozen forms in exact quantities of the condition
+       each failed on their sharpest new case, though they improved (V2); post hoc over 36
+       conditions coverage is the primary axis (<= 17.5 all depleted, >= 54.9 all kept) and the
+       full draw matters between. The series ends there; a law of the boundary belongs to
+       learning theory. For TH1's T3: the learner failures it cites are, for one selector, failures
+       of sampling its own courses, not of a reading that cannot see the act.
+```
+
+**Self-review.** The band rule was read post hoc from rounds 1-3 and frozen before round 4; it failed V1 and V3 and is reported failed. The decision to stop is argued, not forced: each round's form came from the round before and failed on the next round's sharpest case, and the exact quantities of the condition did not yield a mechanistic index (round 3), so a further round would fit the learner rather than test a law of the condition.
+
+## 304. Coupled regimes: a margin that is not its own (RM6)
 
 ```text
 Result(s): new record coupled-regimes (new laws of Becoming.RegimeMargin); reuses margin-of-a-regime (the regime's
