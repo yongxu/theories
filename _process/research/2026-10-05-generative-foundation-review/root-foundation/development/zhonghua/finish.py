@@ -16,7 +16,7 @@ import book as B
 
 ROOT = os.path.abspath(os.path.join(HERE, *(['..'] * 6)))
 OUT = os.path.join(ROOT, 'theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md')
-ROUNDS = ['work/round2-edits.json', 'work/round3-edits.json']
+ROUNDS = ['work/round2-edits.json', 'work/round3-edits.json', 'work/round4-edits.json']
 DECL = re.compile(r'`(Becoming\.[^`]+)`')
 QUOTE = re.compile(r'「([^」]{2,})」〔([A-Za-z0-9\-]+)〕')
 
@@ -115,6 +115,19 @@ def main():
             else:
                 rep['failed'].append({'id': i, 'count': tgt[field].count(e['find']), 'find': e['find'][:60], 'why': e['why'][:120]})
     b['tail'] = open(os.path.join(HERE, 'work/appendices.md'), encoding='utf-8').read()
+    for g in load(os.path.join(HERE, 'work/global-replacements.json')) or []:
+        n = 0
+        for p in b['parts']:
+            for fld in ('intro', 'duizhao', 'heading'):
+                n += p[fld].count(g['find']); p[fld] = p[fld].replace(g['find'], g['replace'])
+            for t in p['tiao']:
+                for fld in ('title', 'body'):
+                    n += t[fld].count(g['find']); t[fld] = t[fld].replace(g['find'], g['replace'])
+        n += b['head'].count(g['find']); b['head'] = b['head'].replace(g['find'], g['replace'])
+        report.setdefault('global-replacements', {'applied': 0, 'failed': []})['applied'] += n
+    mv = load(os.path.join(HERE, 'work/moves-after-rounds.json')) or []
+    B.apply(b, mv)
+    report['moves-after-rounds'] = {'applied': len(mv), 'failed': []}
     json.dump(report, open(os.path.join(HERE, 'work/finish-report.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     for k, v in report.items():
         if 'applied' in v:

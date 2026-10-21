@@ -82,9 +82,14 @@ def apply(book, plan):
             p, i = find(book, op['id'])
             t = p['tiao'].pop(i)
             q = parts[op['to']]
-            j = 0 if op.get('after') in (None, '', 'start') else find(book, op['after'])[1] + 1
-            if op.get('after') not in (None, '', 'start') and find(book, op['after'])[0] is not q:
-                raise ValueError('after %s is not in %s' % (op['after'], op['to']))
+            if op.get('before'):
+                j = find(book, op['before'])[1]
+                if find(book, op['before'])[0] is not q:
+                    raise ValueError('before %s is not in %s' % (op['before'], op['to']))
+            else:
+                j = 0 if op.get('after') in (None, '', 'start') else find(book, op['after'])[1] + 1
+                if op.get('after') not in (None, '', 'start') and find(book, op['after'])[0] is not q:
+                    raise ValueError('after %s is not in %s' % (op['after'], op['to']))
             q['tiao'].insert(j, t)
         elif op['op'] == 'delete':
             p, i = find(book, op['id'])

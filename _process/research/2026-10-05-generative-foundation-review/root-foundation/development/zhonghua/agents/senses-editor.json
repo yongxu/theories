@@ -1,0 +1,347 @@
+{
+ "edits": [
+  {
+   "id": "凡·九",
+   "find": "说之可靠：所出之辞，在据与若都然之状上然",
+   "replace": "说之可靠：所推出之辞，在据与若都然之状上然",
+   "why": "所出于此指说之所推出者，非名表之所出（C12 世系）；推导所得一律写所推出之辞"
+  },
+  {
+   "id": "凡·十",
+   "find": "在说中，若下所出之辞只在若然处然",
+   "replace": "在说中，若下所推出之辞只在若然处然",
+   "why": "同上：若下所推出者，改所推出之辞"
+  },
+  {
+   "id": "凡·十一",
+   "find": "则之消去，所出者在据然之处然",
+   "replace": "则之消去，所推出之辞在据然之处然",
+   "why": "同上：则之消去所得者，改所推出之辞"
+  },
+  {
+   "id": "凡·十三",
+   "find": "新据无若所推出者仍于域皆然",
+   "replace": "新据无若所推出之辞仍于域皆然",
+   "why": "推导所得一律写所推出之辞；所推出者含名表之名出者之字串，亦改"
+  },
+  {
+   "id": "凡·十三",
+   "find": "说不为其据作保：所出者于域皆然",
+   "replace": "说不为其据作保：所推出之辞于域皆然",
+   "why": "所出者指说之所推出者，改所推出之辞（closure_throughout_iff）"
+  },
+  {
+   "id": "凡·十三",
+   "find": "推出之辞加入据，所出者仍然",
+   "replace": "推出之辞加入据，其后所推出之辞仍然",
+   "why": "同上（lemma_throughout）"
+  },
+  {
+   "id": "凡·十六",
+   "find": "说之所出于据与若皆然之处然",
+   "replace": "说所推出之辞于据与若皆然之处然",
+   "why": "同上（Derives.sound）"
+  },
+  {
+   "id": "凡·十八",
+   "find": "说中若下所出者亦只在若然处然",
+   "replace": "说中若下所推出之辞亦只在若然处然",
+   "why": "同上（relative_throughout）"
+  },
+  {
+   "id": "凡·二七",
+   "find": "所推出者仍可能恰好然",
+   "replace": "所推出之辞仍可能恰好然",
+   "why": "推导所得一律写所推出之辞；所推出者含出者之字串，亦改"
+  },
+  {
+   "id": "凡·二八",
+   "find": "令作为据，其所出只在令然处然",
+   "replace": "令作为据，其所推出之辞只在令然处然",
+   "why": "所出指令作为据时所推出者，改所推出之辞（closure_throughout_iff）"
+  },
+  {
+   "id": "凡·二八",
+   "find": "同一传统内部常已有回应",
+   "replace": "同一传统内部常已有异议",
+   "why": "回应只作应（ExchangeLaw.RespondsTo）之注；此处是常义之驳议"
+  },
+  {
+   "id": "凡·一",
+   "find": "是与非各随其所出之处",
+   "replace": "是与非各随其所从言之处",
+   "why": "所出于此指是非所从说出之处，非世系；与本条下文「从何处说出」相应"
+  },
+  {
+   "id": "C16:DUIZHAO",
+   "find": "是非各随其所出之处",
+   "replace": "是非各随其所从言之处",
+   "why": "同凡·一：是非所从说出之处，非世系"
+  },
+  {
+   "id": "C16:DUIZHAO",
+   "find": "所出于域皆然恰当据于域皆然",
+   "replace": "所推出之辞于域皆然恰当据于域皆然",
+   "why": "所出指说之所推出者，改所推出之辞（closure_throughout_iff）"
+  },
+  {
+   "id": "一·五",
+   "find": "施为者所出之动不是展开之外的第二种因",
+   "replace": "施为者之动不是展开之外的第二种因",
+   "why": "所出于此指施为者所施之动，非世系；删去即确"
+  },
+  {
+   "id": "四·二十三",
+   "find": "升之所出受族外所限",
+   "replace": "升之来源受族外所限",
+   "why": "所出于此指升所自付之来源（rise_paid_from_beyond），非世系"
+  },
+  {
+   "id": "六·五",
+   "find": "把后出者排成单向的丧失之梯",
+   "replace": "把后起者排成单向的丧失之梯",
+   "why": "后出者（后起之物）含名表之名出者，改后起者"
+  },
+  {
+   "id": "六·五",
+   "find": "不能从“后出”推出“退化”",
+   "replace": "不能从“后起”推出“退化”",
+   "why": "与上句后起者一致"
+  },
+  {
+   "id": "八·三",
+   "find": "恰当以诸先后所含取与之总数为步数调度之而有所出",
+   "replace": "恰当以诸先后所含取与之总数为步数调度之而能完",
+   "why": "有所出于此指调度完毕（schedule … = some L，schedule_iff），非世系"
+  },
+  {
+   "id": "八·三",
+   "find": "有所出即有，无所出即无",
+   "replace": "能完即有，不能完即无",
+   "why": "同上：调度能完与否（schedule_iff）"
+  },
+  {
+   "id": "九·十九",
+   "find": "凡读于一域，所出之值皆为特征之值",
+   "replace": "凡读于一域，所给之值皆为特征之值",
+   "why": "读所出之值，依指示写所给之值，非世系"
+  },
+  {
+   "id": "九·十九",
+   "find": "类于域中所出之每值，皆有所给之一状出此值者",
+   "replace": "类于域中之每值，皆给出域中出此值之一状",
+   "why": "类于域中所出之每值指类映射于域中之值，非世系；照說之写法改，免同一經中所给另作所给之资料一义"
+  },
+  {
+   "id": "九·十九",
+   "find": "于域符（所出之值皆是，不出值亦可）",
+   "replace": "于域符（所给之值皆是，不出值亦可）",
+   "why": "读所出之值，改所给之值"
+  },
+  {
+   "id": "九·十九",
+   "find": "此以所出皆是陈之",
+   "replace": "此以所给之值皆是陈之",
+   "why": "同上"
+  },
+  {
+   "id": "九·十九",
+   "find": "（类于域中所出之每一值，给出域中出此值之一状；",
+   "replace": "（类于域中之每一值，给出域中出此值之一状；",
+   "why": "类映射于域中之值（exact_exists_iff），非世系"
+  },
+  {
+   "id": "九·二十一",
+   "find": "则所出之值不为不符者，即所来之值",
+   "replace": "则所给之值不为不符者，即所来之值",
+   "why": "知来所出之值，改所给之值"
+  },
+  {
+   "id": "九·二十一",
+   "find": "配一所出之值或阙之任一象",
+   "replace": "配一所给之值或阙之任一象",
+   "why": "同上（Lean 之 pred 所配之值）"
+  },
+  {
+   "id": "九·二十一",
+   "find": "所出之值不为不符者即所来之值",
+   "replace": "所给之值不为不符者即所来之值",
+   "why": "同上（eq_of_not_missed）"
+  },
+  {
+   "id": "九·二十一",
+   "find": "符只说所出之值都得",
+   "replace": "符只说所给之值都得",
+   "why": "同上"
+  },
+  {
+   "id": "九·二十二",
+   "find": "凡知来于其上所出之值皆不符之历程也",
+   "replace": "凡知来于其上所给之值皆不符之历程也",
+   "why": "同上"
+  },
+  {
+   "id": "九·二十二",
+   "find": "则凡知来于其不测之历程上所出之每值皆不符",
+   "replace": "则凡知来于其不测之历程上所给之每值皆不符",
+   "why": "同上"
+  },
+  {
+   "id": "九·二十二",
+   "find": "在其上所出之每一值皆不符",
+   "replace": "在其上所给之每一值皆不符",
+   "why": "同上（diagonal_misses）"
+  },
+  {
+   "id": "九·二十三",
+   "find": "所出之值即当前者所出之值也",
+   "replace": "所给之值即当前者所给之值也",
+   "why": "过则改所出之值，改所给之值"
+  },
+  {
+   "id": "九·二十三",
+   "find": "一当前候选，一所出之值",
+   "replace": "一当前候选，一所给之值",
+   "why": "同上（byElimination）"
+  },
+  {
+   "id": "十四·五",
+   "find": "每一单位之积一步之所出不多于所入",
+   "replace": "每一单位之积一步之共取不过所与",
+   "why": "所出于此指一积一步之出，非世系；以出入相掩之定义（共取不过所与，Flow.WithinJoint）写之"
+  },
+  {
+   "id": "十六·十五",
+   "find": "名之所出；小大在此是层",
+   "replace": "名之出处；小大在此是层",
+   "why": "所出于此指名之出处，非世系；全书以「名之出处」为式"
+  },
+  {
+   "id": "十六·二十三",
+   "find": "名之所出；距离再小",
+   "replace": "名之出处；距离再小",
+   "why": "同上"
+  },
+  {
+   "id": "十六·二十三",
+   "find": "或只有所出之令",
+   "replace": "或只有所颁之令",
+   "why": "所出之令指所颁之令，非世系"
+  },
+  {
+   "id": "纲·九",
+   "find": "四者在其所出之域实已知",
+   "replace": "四者在其各自之域实已知",
+   "why": "所出之域指四者各自所在之学域，非世系"
+  },
+  {
+   "id": "纲·九",
+   "find": "它排除其所出之域所开者",
+   "replace": "它排除其各自之域所开者",
+   "why": "同上"
+  },
+  {
+   "id": "十六·十二",
+   "find": "A，一方可介一回应，而此回应之每一所许之果皆有一前所不然、自此方有顾之辞，则此方于此回应有由也（设）。",
+   "replace": "A，一方可介一所可为者，而此所可为者之每一所许之果皆有一前所不然、自此方有顾之辞，则此方于此所可为者有由也（设）。",
+   "why": "回应于此是 articulates 之 R（一方可介入者），非名表之应（ExchangeLaw.RespondsTo），改所可为者"
+  },
+  {
+   "id": "十六·十二",
+   "find": "其每一所许之果皆有一前所不然之辞之回应皆有由",
+   "replace": "其每一所许之果皆有一前所不然之辞之所可为者皆有由",
+   "why": "同上（articulates）"
+  },
+  {
+   "id": "十六·十二",
+   "find": "其每一所许之果皆有一前所不然之活辞之回应皆有由",
+   "replace": "其每一所许之果皆有一前所不然之活辞之所可为者皆有由",
+   "why": "同上（articulatesLiving）"
+  },
+  {
+   "id": "十六·十二",
+   "find": "则于其新辞皆非活之回应亦迫出由",
+   "replace": "则于其新辞皆非活之所可为者亦迫出由",
+   "why": "同上（bare_forces_reason）"
+  },
+  {
+   "id": "十六·十二",
+   "find": "是一中立之设：一方可介一回应，又自此方得新的、有顾之辞",
+   "replace": "是一中立之设：一方可介一所可为者（`Becoming.articulates` 之 R：各有其所许之果；可靠之策亦是一所可为者，`Becoming.universal_reason`；不是名表之应），又自此方得新的、有顾之辞",
+   "why": "R 改所可为者，于說首见处注其 Lean 之位，并明其不是名表之应；universal_reason 中可靠之策即一所可为者"
+  },
+  {
+   "id": "十六·十二",
+   "find": "可＋介，一方可介入一回应；",
+   "replace": "可＋介，一方可介入一所可为者；",
+   "why": "书引可介之所名，随之改；名表可介之注亦须同改（见 notes）"
+  },
+  {
+   "id": "十六·十一",
+   "find": "同一回应之果有利有危，不能按果把它整体排在另一回应之上或之下",
+   "replace": "同一动之果有利有危，不能按果把它整体排在另一动之上或之下",
+   "why": "回应于此是皆愈所比之行，皆愈把序提升到动（LiftBetter … (a b : A)），經即作动"
+  },
+  {
+   "id": "四·二十",
+   "find": "争（⟦十四·九⟧）是对这一结构的一种回应",
+   "replace": "争（⟦十四·九⟧）是处此结构之一种方式",
+   "why": "回应只作应之注；此处是常义之对待"
+  },
+  {
+   "id": "七·八",
+   "find": "未决：回应须在机之前到达（至期所及与机放进同一个模型）尚未证。",
+   "replace": "未决：到达须在机之前（把至期所及与机放进同一个模型）尚未证。",
+   "why": "须在机之前者是到达（至期所及；G9 之窗口），不是一应"
+  },
+  {
+   "id": "八·十四",
+   "find": "一步之回应至早影响次步之积",
+   "replace": "一步之应至早影响次步之积",
+   "why": "义即名表之应（取与依感入之积而应），正文用名，不用其今语之注"
+  },
+  {
+   "id": "八·十五",
+   "find": "这是及时回应的必要之界",
+   "replace": "这是及时之答的必要之界",
+   "why": "經称读者之出为答；回应只作应之注"
+  },
+  {
+   "id": "九·十三",
+   "find": "以己之动引出彼之回应以知之",
+   "replace": "以己之动引出彼之动以知之",
+   "why": "常义之反应，非名表之应；孙子作之而知动静，所知是彼之动"
+  },
+  {
+   "id": "十一·七",
+   "find": "可以到达而引起回应之处",
+   "replace": "可以到达而有所应之处",
+   "why": "义即名表之应，正文用名；回应只留在应域之注（回应闭包）"
+  },
+  {
+   "id": "十二·二十三",
+   "find": "先施不以对方之应为条件：恢复不依赖对方是否回应之计算。",
+   "replace": "先施不以对方之与为条件：恢复不依赖对对方是否也与之计算。",
+   "why": "先施所不待者是所俟者之与（經），不是名表之应；改用名表之与"
+  },
+  {
+   "id": "十二·二十三",
+   "find": "墨子以对方之回应立论，而定理所证之恢复不依赖对方之回应。",
+   "replace": "墨子以对方随后之与立论，而定理所证之恢复不依赖对方之与。",
+   "why": "同上：墨子之报我是对方之与；报是名表之名（LoopReturn.returnMap），不借用"
+  },
+  {
+   "id": "十四·八",
+   "find": "以同样之量回应恰使其差如故，回应更多则滋",
+   "replace": "以同样之量交回恰使其差如故，交回更多则滋",
+   "why": "报之环节所为是交回（經之动词）；回应只作应之注"
+  },
+  {
+   "id": "十六·十九",
+   "find": "（FR，有限回应；",
+   "replace": "（FR，finite responsiveness；",
+   "why": "有限回应以回应作第三义（比较对损失之应变）；FR 改以英文全称注之"
+  }
+ ],
+ "notes": "57 edits, all checked against work/book-2.json. Each find occurs exactly once in its field when the edits are applied in list order (simulated in the scratchpad). No find contains 域之兼, so the edits still match if they go into a round file (for example work/round4-edits.json, which ROUNDS already lists) that runs before global-replacements.json changes 族之兼 to 域之兼. Ids are stable ids; rendered numbers differ: 九·十九/二十一/二十二/二十三 = rendered 九·二十七/二十九/三十/三十一; 十六·十二 = 十六·八; 十六·十一 = 十六·七; 十二·二十三 = 十四·十一; 七·八 = 五·十五; 八·十四/十五 = 九·九/十; 十一·七 = 十一·八; 十四·八 = 十四·十二; 六·五 = 六·六; 四·二十三 = 四·二十一; 四·二十 = 四·十九; 一·五 = 一·十; 十四·五 = 十四·六; 十六·十五 = 十六·十; 十六·二十三 = 十六·十七; 十六·十九 = 十六·十五.\n\nNOT EXPRESSIBLE AS A BODY EDIT\n(a) The title of 凡·十三, 所出与据 → 所推与据. The edit format reaches only body, INTRO, DUIZHAO and HEAD. Simplest fix: add an entry to work/global-replacements.json, {\"find\":\"所出与据\",\"replace\":\"所推与据\"}. The string occurs in the book only in that title (also in work/jing-all.md, a work file).\n(b) Table rows in work/names-decisions.tsv, the source of NAMES-ZH.md and of appendix 一. The book renders these rows, and 十六·十二 quotes the 可介 gloss.\n- 可介: 所名 「可＋介，一方可介一回应」 → 「可＋介，一方可介一所可为者」. In 注: 「新组合：可＋介，一方可介一回应。」 → 「新组合：可＋介，一方可介一所可为者（所可为者：articulates 之 R，各有所许之果；不是名表之应）。」, and 「经中写「一方可介一回应」。」 → 「经中写「一方可介一所可为者」。」\n- 由: 所名 and 注 「一方于一回应有一助成之由（contributory reason，A、D 之所出）」 → 「一方于一所可为者有一助成之由（contributory reason，A、D 之结论）」. In 注: 「于此回应有由」 → 「于此所可为者有由」.\n- 據: 「推导之所出之诸辞」 → 「推导所从出之诸辞」, which is the book's wording in 凡·九. Also 「诸律所出之前提」 → 「诸律所从出之前提」.\n- 得 注: 「则所出者或阙或得」 → 「则所给之值或阙或得」.\n- 狀值 注: 「（所出之值皆其状之 f 值）」, 「于域中所出者皆其状之状值」 and 「与所出之值方向相反」 → use 所给之值 in each.\n- 規 注: 「C15 之回应 R」 → 「C15 之所可为者 R」.\n- 出者 注: the line about C16 using 所出者 for derived claims is now settled (C16 writes 所推出之辞). Update or drop it.\n- 同類積小 所名: 「FR 有限回应（finite responsiveness）」 → 「FR（finite responsiveness）」, to match 十六·十九.\n- 取法 所名 「经他者实际回应之学」: I did not check whether this 回应 means 应. Please verify.\n- Keep as they are: 應, 相應, 應域, 應式, 報 (its 「单环节之回应用「应」」 already gives 回应 as the gloss of 应), 共對, 一偏, 所履 (quotation), 下游, 代 and 在場 (lineage).\n\nJUDGMENT CALLS\n- 十六·十一: the 回应 there is what 皆愈 compares, and LiftBetter compares moves (a b : A). The 經 says 动, so I wrote 动 rather than 所可为者. That also avoids using 所可为者 one 條 before it is glossed in 十六·十二.\n- I added a one-time gloss of 所可为者 in the 說 of 十六·十二: its place in Lean (R of Becoming.articulates; the sound policy in universal_reason is one), and that it is not 应.\n- 回应 used with the sense of 应 in running text was changed to the name 应 (八·十四, 十一·七). The cases that were not 应 were reworded with the 經's own terms: 答 in 八·十五, 交回 in 十四·八, 动 in 九·十三, and 到达 for the G9 window in 七·八.\n- 十二·二十三: 「对方之应」 was also changed, to 与. It is reciprocal giving, not ExchangeLaw.RespondsTo. 报 could not be used, because 报 is the table's name for LoopReturn.returnMap.\n- 所给之值 brings in a second sense of 所给. The book uses 所给 about 100 times for 'given' (premise or data): 同为所给, 所给之序, and 所给之截面 in 九·十九 itself. In 九·十九's 經 I reworded the section clause so that the 經 has 所给 in only one sense. The 說 still has both senses. If this matters, the 篇九 wording should be revisited.\n\nKEPT ON PURPOSE\n- Every lineage use of 所出 / 出者 is kept: all of 篇十三 including NEW-12; C12 INTRO and DUIZHAO; C13 and C14 INTRO; 四·十一, 二·十六, 十一·十八 (parents in share_rises_through; descent_exhausted), 十五·五, 十三·二十二.\n- The quotation 「夫迹，履之所出」 is kept verbatim (C01:DUIZHAO, 一·八).\n- Places that match only as a substring are kept: 导出者 in 九·十三, 十二·十六, NEW-13, NEW-17, and 读出者 in the 經 of 一·十一. In 凡例, the verb in 无若而出之辞 is not 所出 and is also kept.\n- 回应 is kept where it glosses 应: 八·十八, 九·十, 十一·二 (twice), 十一·七 (应域（回应闭包）). The new gloss in 十六·十二 names 应 but contains no 回应. Appendix 三, from work/appendices.md and not reachable by 條 id, keeps 开·应（仍能回应）… 交换回应一个积: this is the sense of 应.\n\nFLAGGED, NOT CHANGED (outside the two strings)\n出于 is the verb that defines lineage (x 出于 g), but it also appears in other senses: 'comes from', 'goes out of', 'exceeds'. In a 經: 四·十三 「取与出于每一族」 (also its 讀); 四·二十六, 四·二十七 (twice) and 纲·一 「积出于 hi」; NEW-7 「有出于此历所显者之步」. In 說 or 对照: 四·三, 一·十一, 二·五 (3 times), C04:DUIZHAO, 四·十, 四·十二, 七·七, 九·二十五, 十二·十二, 十二·十八, 十四·十二, 纲·五. The 經 uses are the most likely to be read as lineage."
+}

@@ -211,7 +211,7 @@ def t_namelist(P, rows, verdicts):
     out = []
     for c, pian in PIAN.items():
         rs = [r for r in rows if r['篇'] == c]
-        out += ['### %s　%s' % (pian, titles[c]), '', '| 名 | 所名 | 锚 | 出处 | 注 |', '|---|---|---|---|---|']
+        out += ['### 名组：%s' % titles[c], '', '| 名 | 所名 | 锚 | 出处 | 注 |', '|---|---|---|---|---|']
         for r in rs:
             n = r['名']
             sn = simp(n)

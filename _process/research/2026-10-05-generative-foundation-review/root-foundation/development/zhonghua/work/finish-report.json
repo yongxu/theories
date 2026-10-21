@@ -252,6 +252,12 @@
   "edits": 21,
   "failed": [],
   "lost": {
+   "四·十二": {
+    "declarations": [
+     "Becoming.HalvingPass.never_rests"
+    ],
+    "quotations": []
+   },
    "二·十六": {
     "declarations": [
      "Becoming.Flow.fed_from_beyond"
@@ -260,6 +266,8 @@
    },
    "四·十九": {
     "declarations": [
+     "Becoming.HalvingPass.levels_unlisted",
+     "Becoming.HalvingPass.never_rests",
      "Becoming.World.rests_unrefuted_enclosed_read"
     ],
     "quotations": []
@@ -725,5 +733,66 @@
   "edits": 20,
   "failed": [],
   "lost": {}
+ },
+ "round2-edits.json": {
+  "applied": 123,
+  "failed": [
+   {
+    "id": "九·十二",
+    "count": 0,
+    "find": "往定一动于一状之所至为某状，谓凡法许此行此步之前每一移者，皆以此动送此状至彼状也。凡行于此步之前既于一状采一动，往定其所",
+    "why": "consistency (inconsistency): 九·十八經以「所至」名一动于一状之果（`Run.fixes_of_takes`：往定一动之果）。名表以所至名一策之探究所达（所见范围，九·十七 知之所至），以果名「一步之所至：一状一"
+   },
+   {
+    "id": "纲·一",
+    "count": 0,
+    "find": "凡有取于一有穷之族而不已，其族自某步起每步被围，则其族自外来。",
+    "why": "standing (inconsistency): 纲·一 經 is graded 「有设而然之律」, but this sentence states more than was proved. The 說 itself gives th"
+   },
+   {
+    "id": "七·十一",
+    "count": 0,
+    "find": "象，配所论之每一者一值也；一者所得之值，谓之其像。",
+    "why": "order (inconsistency): 象一名三定：一·二十「象，予所施之每一者一值者也」，七·一「象，配所论之每一者一值也」，十三·十九「象，择所经之映射也：配每一可择者一值」；名表只有一象（映射本身）。七·一 之說已云「象在此指一"
+   },
+   {
+    "id": "十三·二十",
+    "count": 0,
+    "find": "象，择所经之映射也：配每一可择者一值。",
+    "why": "order (inconsistency): 同上：十三·十九 不再立象，只言择所经之象；此条所立者是择经象（「择经象者，换二可择者之值则换其所择」），条题可改为「择经象」，篇十三篇首「最后说择经择者之象（象）」随之。"
+   },
+   {
+    "id": "三·二十三",
+    "count": 0,
+    "find": "族之兼，每步运恰当其体有一运者也；体，族之兼所合之待者也。凡待者皆其自身之族之兼；有待网焉，二待者每步皆运而互为族之兼。",
+    "why": "order (inconsistency): 同一结构 `Becoming.Web.Whole`（其体由一谓词给出）三·十九 名族之兼，五·十六（久）与篇五篇首名域之兼；五·十六 之經用域之兼，而域之兼无处立义。名表之族是有穷之列（List"
+   },
+   {
+    "id": "TAIL",
+    "why": "no such place",
+    "find": "本书所用之名，每个理论概念一个，按定义它的篇排列。"
+   },
+   {
+    "id": "TAIL",
+    "why": "no such place",
+    "find": "| 伪开·三（表层开，元间闭） | 执 | 从状态看的执：状态可变可扰，扰动都被吸回规所持者 |"
+   }
+  ]
+ },
+ "round3-edits.json": {
+  "applied": 4,
+  "failed": []
+ },
+ "round4-edits.json": {
+  "applied": 57,
+  "failed": []
+ },
+ "global-replacements": {
+  "applied": 15,
+  "failed": []
+ },
+ "moves-after-rounds": {
+  "applied": 4,
+  "failed": []
  }
 }

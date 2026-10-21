@@ -305,3 +305,10 @@ if os.path.exists(_nn):
     with open(F, 'w', encoding='utf-8') as fh:
         w = csv.DictWriter(fh, fieldnames=FIELDS, delimiter='\t', lineterminator='\n'); w.writeheader(); w.writerows(by.values())
     print('fifth pass:', len(nn['added']), 'names added;', len(by), 'names')
+# sixth pass (22 October, second whole-book review): 兼 alone is the whole of the one unfolding; the whole of the
+# parts a predicate gives (Web.Whole, parts not necessarily a finite 族) is 域之兼
+up('兼', anchor='World.withRest', what='整体（whole）：同一展开中的一切；计其余而为一物', note='+单言兼只指大化之一切（World.withRest）；部分由一谓词给出之兼名域之兼（Web.Whole）')
+add('域之兼', 'C03', '部分之整体（whole of given parts）：每步运恰当其体有一运者', 'Web.Whole', '—', '新', '域＋之＋兼：体由一谓词给出，不必为有穷之族（族之兼为其旧稿之名）；兼单言指大化之一切')
+with open(F, 'w', encoding='utf-8') as fh:
+    w = csv.DictWriter(fh, fieldnames=FIELDS, delimiter='\t', lineterminator='\n'); w.writeheader(); w.writerows(by.values())
+print('sixth pass:', len(by), 'names')
