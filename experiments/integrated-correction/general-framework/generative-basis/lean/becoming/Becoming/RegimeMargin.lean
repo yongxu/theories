@@ -169,19 +169,32 @@ the regime's and not the level's alone.
   point of no return is a falling function of everything that stands with it. The pair's rest and
   points of no return are these laws read for the two conditions (`Coupled.band_web`,
   `Coupled.pair_still`, `Coupled.threshold_pair`). Beyond a band, a bound on the run takes its place.
-  A run that stays within `B` (`Coupled.Indexed.StaysWithin`) has its levels among the `(B + 1)` to the
+  These laws hold for any law of states read condition by condition (`Coupled.Indexed.ReadsPointwise`,
+  `Coupled.Indexed.run_alike_of`), the web's step one (`Coupled.Indexed.pointwise_step`). A run that
+  stays within `B` (`Coupled.Indexed.StaysWithin`) has its levels among the `(B + 1)` to the
   conditions' count lists of levels within `B` (`Coupled.Indexed.levelLists`,
   `Coupled.Indexed.levelLists_length`), so within that many steps it comes back to a state it was in
   (`Coupled.Indexed.returns_within`) and repeats from there (`Coupled.Indexed.repeats`). Whether a
-  condition ends is then decided by a finite check, with no band and no order of states: it ends
-  exactly where it is nothing at every step from that count `L` to `2 L`, and where it ends it is
-  nothing from step `L` on (`Coupled.Indexed.ends_iff_within`). Under mutual support, wherever the run
-  from a condition's top level considered stays within `B`, its point of no return given the others is
-  exact (`Coupled.Indexed.thresholdWithin`, `Coupled.Indexed.ends_iff_below_within`) and does not rise
-  as any other level rises (`Coupled.Indexed.threshold_falls_within`). `Relay` keeps no band from three
+  condition ends (`Coupled.Indexed.EndsUnder`) is then decided by a finite check, with no band and no
+  order of states: it ends exactly where it is nothing at every step from that count `L` to `2 L`, and
+  where it ends it is nothing from step `L` on (`Coupled.Indexed.ends_iff_within`). Under a law keeping
+  the order of states (`Coupled.Indexed.KeepsBelow`), as the web's step does under mutual support
+  (`Coupled.Indexed.step_keepsBelow`), which reads states condition by condition
+  (`Coupled.Indexed.reads_of_keepsBelow`), wherever the run from a condition's top level considered
+  stays within `B`, its point of no return given the others is exact
+  (`Coupled.Indexed.thresholdWithin`, `Coupled.Indexed.ends_iff_below_within`) and does not rise as any
+  other level rises (`Coupled.Indexed.threshold_falls_within`). `Relay` keeps no band from three
   up, yet from two with its partner at three its run stays within three: its first condition's
   threshold is three with the partner at two and two with the partner at three
-  (`Coupled.Relay.threshold_beyond_band`).
+  (`Coupled.Relay.threshold_beyond_band`). A web with a recent giving (`Coupled.Indexed.Recent.step`)
+  holds each condition's level and what it gave last, its giving a law of what is left of all and what
+  each gave; under mutual support (`Coupled.Indexed.Recent.Rises`) it keeps the order of states
+  (`Coupled.Indexed.Recent.keepsBelow`), so these laws hold of it with every recent giving among the
+  others; the plain web is its case where giving reads nothing of what was given
+  (`Coupled.Indexed.Recent.plain`), and one condition is the adjusted regime
+  (`Coupled.Indexed.Recent.adjusted`). What a condition gave last can lower its point of no return:
+  a giving ramping with what was given has its threshold fall from four to three as its last giving
+  rises from nothing to one (`Coupled.Indexed.Recent.Momentum.threshold_falls_with_recent`).
 * **The need is the regime's.** Where giving stops below a need `m` (`Gated g m`), every level at
   which giving meets a positive draw lies at or above the need (`root_above_need`), so the point of
   no return lies at least the draw above the need, and more than the draw above it exactly where
@@ -2384,12 +2397,27 @@ theorem step_alike (pointwise : Pointwise G) {x y : ι → Nat}
   show x i - H i + G i (left Drawn.whole H x) = y i - H i + G i (left Drawn.whole H y) from
     congr (congrArg (· + ·) (same i)) (pointwise i _ _ same)
 
+/-- **A law of states reads them condition by condition**: states alike at every condition go to states
+alike at every condition. -/
+def ReadsPointwise (f : (ι → Nat) → (ι → Nat)) : Prop :=
+  ∀ x y, (∀ j, x j = y j) → ∀ i, f x i = f y i
+
+/-- Under a law reading states condition by condition, runs from states alike at every condition stay
+alike at every condition. -/
+theorem run_alike_of {f : (ι → Nat) → (ι → Nat)} (reads : ReadsPointwise f) {x y : ι → Nat}
+    (same : ∀ j, x j = y j) : ∀ n i, (Law.run f x).state n i = (Law.run f y).state n i
+  | 0 => same
+  | n + 1 => reads _ _ (run_alike_of reads same n)
+
+/-- Where each giving reads what is left condition by condition, the web's step reads states so. -/
+theorem pointwise_step (pointwise : Pointwise G) : ReadsPointwise (step Drawn.whole G H) :=
+  fun _ _ same => step_alike pointwise fun j => congrArg (· - H j) (same j)
+
 /-- Where each giving reads what is left condition by condition, runs from states alike at every
 condition stay alike at every condition. -/
 theorem run_alike (pointwise : Pointwise G) {x y : ι → Nat} (same : ∀ j, x j = y j) :
-    ∀ n i, (Law.run (step Drawn.whole G H) x).state n i = (Law.run (step Drawn.whole G H) y).state n i
-  | 0 => same
-  | n + 1 => step_alike pointwise fun j => congrArg (· - H j) (run_alike pointwise same n j)
+    ∀ n i, (Law.run (step Drawn.whole G H) x).state n i = (Law.run (step Drawn.whole G H) y).state n i :=
+  run_alike_of (pointwise_step pointwise) same
 
 /-- Where each giving reads what is left condition by condition, a condition ends from one of two
 states alike at every condition exactly where it ends from the other. -/
@@ -2650,13 +2678,16 @@ theorem fates [DecidableEq ι] (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Na
 
 /-! #### Beyond a band: a bound on the run
 
-Without a band, a web's run under mutual support need not rest (`Relay.cycles`). Where the run stays
+Without a band, a web's run under mutual support need not rest (`Relay.cycles`). Where a run stays
 within a bound, its states are among finitely many lists of levels, so by pigeonhole it comes back to
-a state it was in, and from there it repeats. Whether a condition ends is then decided by a finite
-check, with no band and, for the check, no order of states: only that each giving reads what is left
-condition by condition. Under mutual support each condition's point of no return, given the others,
-is exact wherever the run from the top of the levels considered stays within the bound, and it does
-not rise as any other level rises. -/
+a state it was in, and from there it repeats. These laws are stated once for any law `f` of states
+that reads them condition by condition (`ReadsPointwise`): the web's step is one
+(`pointwise_step`), and a web with a recent giving another (`Recent.step`). Whether a condition ends
+is then decided by a finite check, with no band and no order of states. Where the law keeps the order
+of states (`KeepsBelow`), as the web's step does under mutual support (`step_keepsBelow`), it reads
+condition by condition (`reads_of_keepsBelow`), and each condition's point of no return, given the
+others, is exact wherever the run from the top of the levels considered stays within the bound, and
+does not rise as any other level rises. -/
 
 /-- The levels of the listed conditions, in order. -/
 def levels (x : ι → Nat) : List ι → List Nat
@@ -2721,38 +2752,75 @@ theorem levels_mem {B : Nat} {x : ι → Nat} (high : ∀ i, x i ≤ B) :
   | [] => .head _
   | c :: cs => mem_withFirstUpTo (levels_mem high cs) B (high c)
 
-/-- **The run from `s` stays within `B`**: every level at every step is at most `B`. -/
-def StaysWithin (G : ι → (ι → Nat) → Nat) (H : ι → Nat) (B : Nat) (s : ι → Nat) : Prop :=
-  ∀ n i, (Law.run (step Drawn.whole G H) s).state n i ≤ B
+/-- **A condition ends under a law**: from some step on, its level is nothing. A web's `Ends` at a
+condition is this for the web's step. -/
+def EndsUnder (f : (ι → Nat) → (ι → Nat)) (c : ι) (s : ι → Nat) : Prop :=
+  ∃ N, ∀ k, (Law.run f s).state (N + k) c = 0
 
-/-- Under mutual support, below a run that stays within `B`, every run stays within it. -/
-theorem within_below (rises : ∀ i, Rises Drawn.whole (G i)) {B : Nat} {x y : ι → Nat}
-    (below : Below Drawn.whole x y) (within : StaysWithin G H B y) : StaysWithin G H B x :=
-  fun n i => Nat.le_trans (run_below rises H below n i) (within n i)
+/-- **A law keeps the order of states**, condition by condition. -/
+def KeepsBelow (f : (ι → Nat) → (ι → Nat)) : Prop :=
+  ∀ x y, Below Drawn.whole x y → Below Drawn.whole (f x) (f y)
+
+/-- Under mutual support the web's step keeps the order of states. -/
+theorem step_keepsBelow (rises : ∀ i, Rises Drawn.whole (G i)) : KeepsBelow (step Drawn.whole G H) :=
+  fun _ _ below => step_mono rises H below
+
+/-- **A law keeping the order of states reads them condition by condition**, by antisymmetry. -/
+theorem reads_of_keepsBelow {f : (ι → Nat) → (ι → Nat)} (keeps : KeepsBelow f) : ReadsPointwise f :=
+  fun _ _ same i => Nat.le_antisymm (keeps _ _ (fun j => Nat.le_of_eq (same j)) i)
+    (keeps _ _ (fun j => Nat.le_of_eq (same j).symm) i)
+
+/-- Runs of a law keeping the order keep it at every step. -/
+theorem run_below_of {f : (ι → Nat) → (ι → Nat)} (keeps : KeepsBelow f) {x y : ι → Nat}
+    (below : Below Drawn.whole x y) :
+    ∀ n, Below Drawn.whole ((Law.run f x).state n) ((Law.run f y).state n) :=
+  Lasting.orbit_mono (rel := Below Drawn.whole) keeps below
+
+/-- Under a law keeping the order, a condition ending from a state ends from every state below it. -/
+theorem endsUnder_of_below {f : (ι → Nat) → (ι → Nat)} (keeps : KeepsBelow f) {c : ι} {x y : ι → Nat}
+    (below : Below Drawn.whole x y) (ends : EndsUnder f c y) : EndsUnder f c x :=
+  match ends with
+  | ⟨N, gone⟩ => ⟨N, fun k => Nat.le_antisymm (Nat.le_trans (run_below_of keeps below (N + k) c)
+      (Nat.le_of_eq (gone k))) (Nat.zero_le _)⟩
+
+/-- **A run that reaches a state its law leaves as it is stays there**, condition by condition. -/
+theorem stays_at {f : (ι → Nat) → (ι → Nat)} (reads : ReadsPointwise f) {s p : ι → Nat} {m : Nat}
+    (at_ : ∀ c, (Law.run f s).state m c = p c) (fixed : ∀ c, f p c = p c) :
+    ∀ k c, (Law.run f s).state (m + k) c = p c
+  | 0, c => at_ c
+  | k + 1, c => (reads _ _ (stays_at reads at_ fixed k) c).trans (fixed c)
+
+/-- **The run from `s` stays within `B`**: every level at every step is at most `B`. -/
+def StaysWithin (f : (ι → Nat) → (ι → Nat)) (B : Nat) (s : ι → Nat) : Prop :=
+  ∀ n i, (Law.run f s).state n i ≤ B
+
+/-- Under a law keeping the order, below a run that stays within `B`, every run stays within it. -/
+theorem within_below {f : (ι → Nat) → (ι → Nat)} (keeps : KeepsBelow f) {B : Nat} {x y : ι → Nat}
+    (below : Below Drawn.whole x y) (within : StaysWithin f B y) : StaysWithin f B x :=
+  fun n i => Nat.le_trans (run_below_of keeps below n i) (within n i)
 
 /-- **A run within a bound comes back.** For finitely many conditions, listed by `cs`, a run that stays
 within `B` is, at some step `j` at most `(B + 1) ^ cs.length`, at every condition as it was at an
 earlier step `i`. -/
-theorem returns_within {cs : List ι} (covers : ∀ i, i ∈ cs) {B : Nat} {s : ι → Nat}
-    (within : StaysWithin G H B s) :
+theorem returns_within {f : (ι → Nat) → (ι → Nat)} {cs : List ι} (covers : ∀ i, i ∈ cs) {B : Nat}
+    {s : ι → Nat} (within : StaysWithin f B s) :
     ∃ i j, i < j ∧ j ≤ (B + 1) ^ cs.length ∧ ∀ c,
-      (Law.run (step Drawn.whole G H) s).state i c = (Law.run (step Drawn.whole G H) s).state j c :=
+      (Law.run f s).state i c = (Law.run f s).state j c :=
   match revisits_within (levelLists B cs.length)
-      (fun n => levels ((Law.run (step Drawn.whole G H) s).state n) cs)
+      (fun n => levels ((Law.run f s).state n) cs)
       (fun n _ => levels_mem (within n) cs) with
   | ⟨i, j, lt, le, same⟩ => ⟨i, j, lt, Nat.le_trans le (Nat.le_of_eq (levelLists_length B cs.length)),
       fun c => levels_alike same c (covers c)⟩
 
-/-- **A run that comes back repeats.** Where each giving reads what is left condition by condition and
-the run is at step `j` as it was at step `i`, condition by condition, it is at step `i + m` as at step
-`j + m`, for every `m`. -/
-theorem repeats (pointwise : Pointwise G) {s : ι → Nat} {i j : Nat}
-    (same : ∀ c, (Law.run (step Drawn.whole G H) s).state i c = (Law.run (step Drawn.whole G H) s).state j c) :
-    ∀ m c, (Law.run (step Drawn.whole G H) s).state (i + m) c =
-      (Law.run (step Drawn.whole G H) s).state (j + m) c := fun m c =>
-  (congrArg (· c) (Law.orbit_add (step Drawn.whole G H) s i m)).trans
-    ((run_alike pointwise same m c).trans
-      (congrArg (· c) (Law.orbit_add (step Drawn.whole G H) s j m)).symm)
+/-- **A run that comes back repeats.** Where the law reads states condition by condition and the run is
+at step `j` as it was at step `i`, condition by condition, it is at step `i + m` as at step `j + m`, for
+every `m`. -/
+theorem repeats {f : (ι → Nat) → (ι → Nat)} (reads : ReadsPointwise f) {s : ι → Nat} {i j : Nat}
+    (same : ∀ c, (Law.run f s).state i c = (Law.run f s).state j c) :
+    ∀ m c, (Law.run f s).state (i + m) c =
+      (Law.run f s).state (j + m) c := fun m c =>
+  (congrArg (· c) (Law.orbit_add f s i m)).trans
+    ((run_alike_of reads same m c).trans (congrArg (· c) (Law.orbit_add f s j m)).symm)
 
 /-- A sequence repeating with period `p` from step `i` repeats with every multiple of `p`. -/
 theorem repeats_mul {f : Nat → Nat} {i p : Nat} (period : ∀ t, i ≤ t → f t = f (t + p)) :
@@ -2781,43 +2849,43 @@ theorem zero_from_window {f : Nat → Nat} {i p L : Nat} (period : ∀ t, i ≤ 
       (fun small => window m small)
 
 /-- **Whether a condition ends is decided within the count of states.** For finitely many conditions,
-listed by `cs`, where each giving reads what is left condition by condition and the run stays within
-`B`, condition `c` ends exactly where it is nothing at every step from `L` to `2 L`, `L` being
+listed by `cs`, where the law reads states condition by condition and the run stays within `B`,
+condition `c` ends exactly where it is nothing at every step from `L` to `2 L`, `L` being
 `(B + 1) ^ cs.length`, the number of lists of levels within `B`; and where it ends it is nothing from
 step `L` on. No band, no order of states and no omniscience is needed. -/
-theorem ends_iff_within (pointwise : Pointwise G) {cs : List ι} (covers : ∀ i, i ∈ cs) {B : Nat}
-    {s : ι → Nat} (within : StaysWithin G H B s) (c : ι) :
-    (Ends Drawn.whole G H (fun x => x c) s ↔ ∀ m, m ≤ (B + 1) ^ cs.length →
-      (Law.run (step Drawn.whole G H) s).state ((B + 1) ^ cs.length + m) c = 0) ∧
-    (Ends Drawn.whole G H (fun x => x c) s → ∀ k,
-      (Law.run (step Drawn.whole G H) s).state ((B + 1) ^ cs.length + k) c = 0) :=
+theorem ends_iff_within {f : (ι → Nat) → (ι → Nat)} (reads : ReadsPointwise f) {cs : List ι}
+    (covers : ∀ i, i ∈ cs) {B : Nat} {s : ι → Nat} (within : StaysWithin f B s) (c : ι) :
+    (EndsUnder f c s ↔ ∀ m, m ≤ (B + 1) ^ cs.length →
+      (Law.run f s).state ((B + 1) ^ cs.length + m) c = 0) ∧
+    (EndsUnder f c s → ∀ k,
+      (Law.run f s).state ((B + 1) ^ cs.length + k) c = 0) :=
   match returns_within covers within with
   | ⟨i, j, lt, le, same⟩ =>
     have jpi : i + (j - i) = j := Becoming.add_sub_of_le (Nat.le_of_lt lt)
-    have period : ∀ t, i ≤ t → (Law.run (step Drawn.whole G H) s).state t c =
-        (Law.run (step Drawn.whole G H) s).state (t + (j - i)) c := fun t le =>
+    have period : ∀ t, i ≤ t → (Law.run f s).state t c =
+        (Law.run f s).state (t + (j - i)) c := fun t le =>
       have tt : i + (t - i) = t := Becoming.add_sub_of_le le
-      (congrArg (fun n => (Law.run (step Drawn.whole G H) s).state n c) tt).symm.trans
-        ((repeats pointwise same (t - i) c).trans
-          (congrArg (fun n => (Law.run (step Drawn.whole G H) s).state n c)
+      (congrArg (fun n => (Law.run f s).state n c) tt).symm.trans
+        ((repeats reads same (t - i) c).trans
+          (congrArg (fun n => (Law.run f s).state n c)
             (((congrArg (· + (t - i)) jpi).symm.trans (Nat.add_right_comm i (j - i) (t - i))).trans
               (congrArg (· + (j - i)) tt))))
     have pos : 0 < j - i := SupportGated.sub_pos_of_lt lt
     have start : i ≤ (B + 1) ^ cs.length := Nat.le_trans (Nat.le_of_lt lt) le
     have short : j - i ≤ (B + 1) ^ cs.length + 1 :=
       Nat.le_trans (Nat.sub_le j i) (Nat.le_trans le (Nat.le_succ _))
-    have toWindow : Ends Drawn.whole G H (fun x => x c) s → ∀ m, m ≤ (B + 1) ^ cs.length →
-        (Law.run (step Drawn.whole G H) s).state ((B + 1) ^ cs.length + m) c = 0 :=
+    have toWindow : EndsUnder f c s → ∀ m, m ≤ (B + 1) ^ cs.length →
+        (Law.run f s).state ((B + 1) ^ cs.length + m) c = 0 :=
       fun ⟨N, gone⟩ m _ =>
         have far : N ≤ (B + 1) ^ cs.length + m + (j - i) * N :=
           Nat.le_trans (Nat.le_of_eq (Nat.one_mul N).symm)
             (Nat.le_trans (Nat.mul_le_mul_right N pos) (Nat.le_add_left _ _))
         (repeats_mul period N _ (Nat.le_trans start (Nat.le_add_right _ m))).trans
-          ((congrArg (fun n => (Law.run (step Drawn.whole G H) s).state n c)
+          ((congrArg (fun n => (Law.run f s).state n c)
             (Becoming.add_sub_of_le far).symm).trans (gone _))
     have fromWindow : (∀ m, m ≤ (B + 1) ^ cs.length →
-        (Law.run (step Drawn.whole G H) s).state ((B + 1) ^ cs.length + m) c = 0) → ∀ k,
-        (Law.run (step Drawn.whole G H) s).state ((B + 1) ^ cs.length + k) c = 0 :=
+        (Law.run f s).state ((B + 1) ^ cs.length + m) c = 0) → ∀ k,
+        (Law.run f s).state ((B + 1) ^ cs.length + k) c = 0 :=
       fun window k => zero_from_window period pos start short window k k (Nat.le_refl k)
     ⟨⟨toWindow, fun window => ⟨(B + 1) ^ cs.length, fromWindow window⟩⟩,
      fun ends => fromWindow (toWindow ends)⟩
@@ -2832,65 +2900,261 @@ theorem below_of {f : Nat → Bool} : ∀ {n}, (∀ z, z < n → f z = true) →
 
 /-- Whether condition `i`, from level `a` with the others as in `y`, is nothing at every step from `L`
 to `2 L`. -/
-def endingWithin [DecidableEq ι] (G : ι → (ι → Nat) → Nat) (H : ι → Nat) (L : Nat) (y : ι → Nat)
-    (i : ι) (a : Nat) : Bool :=
-  below (fun m => decide ((Law.run (step Drawn.whole G H) (setAt y i a)).state (L + m) i = 0)) (L + 1)
+def endingWithin [DecidableEq ι] (f : (ι → Nat) → (ι → Nat)) (L : Nat) (y : ι → Nat) (i : ι)
+    (a : Nat) : Bool :=
+  below (fun m => decide ((Law.run f (setAt y i a)).state (L + m) i = 0)) (L + 1)
 
 /-- **Condition `i`'s point of no return beyond a band, the others as in `y`.** The least level up to
 `hi + 1` from which condition `i` is not nothing at every step from `L` to `2 L`, `L` the number of
 lists of levels within `B`. -/
-def thresholdWithin [DecidableEq ι] (G : ι → (ι → Nat) → Nat) (H : ι → Nat) (cs : List ι)
-    (B hi : Nat) (y : ι → Nat) (i : ι) : Nat :=
-  leading (endingWithin G H ((B + 1) ^ cs.length) y i) (hi + 1)
+def thresholdWithin [DecidableEq ι] (f : (ι → Nat) → (ι → Nat)) (cs : List ι) (B hi : Nat)
+    (y : ι → Nat) (i : ι) : Nat :=
+  leading (endingWithin f ((B + 1) ^ cs.length) y i) (hi + 1)
 
 /-- Within a bound, the finite check says whether a condition ends. -/
-theorem ending_iff [DecidableEq ι] (pointwise : Pointwise G) {cs : List ι} (covers : ∀ i, i ∈ cs)
-    {B : Nat} {y : ι → Nat} {i : ι} {a : Nat} (within : StaysWithin G H B (setAt y i a)) :
-    Ends Drawn.whole G H (fun x => x i) (setAt y i a) ↔
-      endingWithin G H ((B + 1) ^ cs.length) y i a = true :=
-  (ends_iff_within pointwise covers within i).1.trans
+theorem ending_iff [DecidableEq ι] {f : (ι → Nat) → (ι → Nat)} (reads : ReadsPointwise f)
+    {cs : List ι} (covers : ∀ i, i ∈ cs) {B : Nat} {y : ι → Nat} {i : ι} {a : Nat}
+    (within : StaysWithin f B (setAt y i a)) :
+    EndsUnder f i (setAt y i a) ↔ endingWithin f ((B + 1) ^ cs.length) y i a = true :=
+  (ends_iff_within reads covers within i).1.trans
     ⟨fun zero => below_of fun m lt => decide_eq_true (zero m (Nat.le_of_lt_succ lt)),
      fun check m le => of_decide_eq_true (below_spec check m (Nat.lt_succ_of_le le))⟩
 
-/-- **The point of no return is exact beyond a band.** Under mutual support, for finitely many
-conditions, where the run from condition `i` at `hi`, the others as in `y`, stays within `B`,
-condition `i` ends from a level up to `hi` exactly where its level is below `thresholdWithin`. -/
-theorem ends_iff_below_within [DecidableEq ι] (rises : ∀ i, Rises Drawn.whole (G i)) {cs : List ι}
-    (covers : ∀ i, i ∈ cs) {B hi : Nat} {y : ι → Nat} {i : ι} {a : Nat}
-    (within : StaysWithin G H B (setAt y i hi)) (high : a ≤ hi) :
-    Ends Drawn.whole G H (fun x => x i) (setAt y i a) ↔ a < thresholdWithin G H cs B hi y i :=
-  have pointwise := pointwise_of_rises rises
-  have withinAt : ∀ {b}, b ≤ hi → StaysWithin G H B (setAt y i b) := fun le =>
-    within_below rises (setAt_below le fun j => Nat.le_refl (y j)) within
-  ⟨fun ends => (Nat.lt_or_ge a (thresholdWithin G H cs B hi y i)).elim id fun ge =>
-      have short : thresholdWithin G H cs B hi y i < hi + 1 :=
+/-- **The point of no return is exact beyond a band.** Under a law keeping the order of states, for
+finitely many conditions, where the run from condition `i` at `hi`, the others as in `y`, stays within
+`B`, condition `i` ends from a level up to `hi` exactly where its level is below `thresholdWithin`. -/
+theorem ends_iff_below_within [DecidableEq ι] {f : (ι → Nat) → (ι → Nat)} (keeps : KeepsBelow f)
+    {cs : List ι} (covers : ∀ i, i ∈ cs) {B hi : Nat} {y : ι → Nat} {i : ι} {a : Nat}
+    (within : StaysWithin f B (setAt y i hi)) (high : a ≤ hi) :
+    EndsUnder f i (setAt y i a) ↔ a < thresholdWithin f cs B hi y i :=
+  have reads := reads_of_keepsBelow keeps
+  have withinAt : ∀ {b}, b ≤ hi → StaysWithin f B (setAt y i b) := fun le =>
+    within_below keeps (setAt_below le fun j => Nat.le_refl (y j)) within
+  ⟨fun ends => (Nat.lt_or_ge a (thresholdWithin f cs B hi y i)).elim id fun ge =>
+      have short : thresholdWithin f cs B hi y i < hi + 1 :=
         Nat.lt_of_le_of_lt ge (Nat.lt_succ_of_le high)
-      have notEnds : ¬ Ends Drawn.whole G H (fun x => x i) (setAt y i (thresholdWithin G H cs B hi y i)) :=
-        fun e => Bool.noConfusion ((leading_false (endingWithin G H ((B + 1) ^ cs.length) y i) (hi + 1)
-          short).symm.trans ((ending_iff pointwise covers (withinAt (Nat.le_of_lt_succ short))).1 e))
-      absurd (ends_of_below rises (fun _ _ b => b i) (setAt_below ge fun j => Nat.le_refl (y j)) ends)
-        notEnds,
-   fun lt => (ending_iff pointwise covers (withinAt high)).2
-      (leading_true (endingWithin G H ((B + 1) ^ cs.length) y i) (hi + 1) a lt)⟩
+      have notEnds : ¬ EndsUnder f i (setAt y i (thresholdWithin f cs B hi y i)) :=
+        fun e => Bool.noConfusion ((leading_false (endingWithin f ((B + 1) ^ cs.length) y i) (hi + 1)
+          short).symm.trans ((ending_iff reads covers (withinAt (Nat.le_of_lt_succ short))).1 e))
+      absurd (endsUnder_of_below keeps (setAt_below ge fun j => Nat.le_refl (y j)) ends) notEnds,
+   fun lt => (ending_iff reads covers (withinAt high)).2
+      (leading_true (endingWithin f ((B + 1) ^ cs.length) y i) (hi + 1) a lt)⟩
 
-/-- **Beyond a band, the point of no return does not rise as any other level rises.** Under mutual
-support, where the run from condition `i` at `hi`, the others as in `y'`, stays within `B`, others'
-levels at or below `y'` give condition `i` a threshold no lower than `y'` gives. -/
-theorem threshold_falls_within [DecidableEq ι] (rises : ∀ i, Rises Drawn.whole (G i)) {cs : List ι}
-    (covers : ∀ i, i ∈ cs) {B hi : Nat} {y y' : ι → Nat} {i : ι} (le : ∀ j, y j ≤ y' j)
-    (within' : StaysWithin G H B (setAt y' i hi)) :
-    thresholdWithin G H cs B hi y' i ≤ thresholdWithin G H cs B hi y i :=
-  have within : StaysWithin G H B (setAt y i hi) :=
-    within_below rises (setAt_below (Nat.le_refl hi) le) within'
-  (Nat.lt_or_ge (thresholdWithin G H cs B hi y i) (thresholdWithin G H cs B hi y' i)).elim
+/-- **Beyond a band, the point of no return does not rise as any other level rises.** Under a law
+keeping the order of states, where the run from condition `i` at `hi`, the others as in `y'`, stays
+within `B`, others' levels at or below `y'` give condition `i` a threshold no lower than `y'` gives. -/
+theorem threshold_falls_within [DecidableEq ι] {f : (ι → Nat) → (ι → Nat)} (keeps : KeepsBelow f)
+    {cs : List ι} (covers : ∀ i, i ∈ cs) {B hi : Nat} {y y' : ι → Nat} {i : ι} (le : ∀ j, y j ≤ y' j)
+    (within' : StaysWithin f B (setAt y' i hi)) :
+    thresholdWithin f cs B hi y' i ≤ thresholdWithin f cs B hi y i :=
+  have within : StaysWithin f B (setAt y i hi) :=
+    within_below keeps (setAt_below (Nat.le_refl hi) le) within'
+  (Nat.lt_or_ge (thresholdWithin f cs B hi y i) (thresholdWithin f cs B hi y' i)).elim
     (fun lt =>
-      have high : thresholdWithin G H cs B hi y i ≤ hi :=
+      have high : thresholdWithin f cs B hi y i ≤ hi :=
         Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lt (leading_le _ _))
-      have ends := ends_of_below rises (fun _ _ b => b i)
-        (setAt_below (Nat.le_refl (thresholdWithin G H cs B hi y i)) le)
-        ((ends_iff_below_within rises covers within' high).2 lt)
-      absurd ((ends_iff_below_within rises covers within high).1 ends) (Nat.lt_irrefl _))
+      have ends := endsUnder_of_below keeps
+        (setAt_below (Nat.le_refl (thresholdWithin f cs B hi y i)) le)
+        ((ends_iff_below_within keeps covers within' high).2 lt)
+      absurd ((ends_iff_below_within keeps covers within high).1 ends) (Nat.lt_irrefl _))
     id
+
+/-! #### Webs with a recent giving
+
+Each condition's state is its level and what it gave last; what it gives is a law of what is left of
+every condition and of what each gave last. The step reads states condition by condition, and where
+each giving rises with what is left and with what was given it keeps the order of states, so the
+bounded laws above hold: ending decided by a finite check, and each condition's point of no return,
+given the other levels and every recent giving, exact and not rising as any of them rises. The web
+whose giving reads nothing of what was given runs as the plain web (`Recent.plain`), and one
+condition is the adjusted regime (`Recent.adjusted`). -/
+
+namespace Recent
+
+/-- **One step of a web with a recent giving.** The state holds each condition's level at `(i, true)`
+and what it gave last at `(i, false)`. Each draw takes first, as much as there is; condition `i` gives
+`G i` of what is left of every condition and of what each gave last; its next level is what is left
+of it with what it gives, and what it gives is its next recent giving. -/
+def step (G : ι → (ι → Nat) → (ι → Nat) → Nat) (H : ι → Nat) (x : ι × Bool → Nat) : ι × Bool → Nat
+  | (i, true) => (x (i, true) - H i) + G i (fun j => x (j, true) - H j) (fun j => x (j, false))
+  | (i, false) => G i (fun j => x (j, true) - H j) (fun j => x (j, false))
+
+/-- Each giving rises with what is left of each condition and with what each gave last. -/
+def Rises (G : ι → (ι → Nat) → (ι → Nat) → Nat) : Prop :=
+  ∀ i e e' r r', (∀ j, e j ≤ e' j) → (∀ j, r j ≤ r' j) → G i e r ≤ G i e' r'
+
+/-- **Under mutual support a web with a recent giving keeps the order of states.** -/
+theorem keepsBelow {G : ι → (ι → Nat) → (ι → Nat) → Nat} {H : ι → Nat} (rises : Rises G) :
+    KeepsBelow (step G H) := fun _ _ below p =>
+  match p with
+  | (i, true) => Nat.add_le_add (Nat.sub_le_sub_right (below (i, true)) (H i))
+      (rises i _ _ _ _ (fun j => Nat.sub_le_sub_right (below (j, true)) (H j)) (fun j => below (j, false)))
+  | (i, false) => rises i _ _ _ _ (fun j => Nat.sub_le_sub_right (below (j, true)) (H j))
+      (fun j => below (j, false))
+
+/-- Both parts of every listed condition. -/
+def both : List ι → List (ι × Bool)
+  | [] => []
+  | i :: cs => (i, true) :: (i, false) :: both cs
+
+/-- Both parts of a listed condition are listed. -/
+theorem mem_both {i : ι} : ∀ {cs : List ι}, i ∈ cs → ∀ b, (i, b) ∈ both cs
+  | _ :: _, .head _, true => .head _
+  | _ :: _, .head _, false => .tail _ (.head _)
+  | _ :: _, .tail _ mem, b => .tail _ (.tail _ (mem_both mem b))
+
+/-- Where a list covers the conditions, `both` of it covers their parts. -/
+theorem covers_both {cs : List ι} (covers : ∀ i, i ∈ cs) : ∀ p : ι × Bool, p ∈ both cs
+  | (i, b) => mem_both (covers i) b
+
+/-- **Where giving reads nothing of what was given, the levels run as the plain web's.** Each level of a
+web with a recent giving whose giving is `G'` of what is left alone is, at every step, the level of
+the plain web's run from the same levels. -/
+theorem plain {G' : ι → (ι → Nat) → Nat} {H : ι → Nat} (pointwise : Indexed.Pointwise G')
+    (x : ι × Bool → Nat) : ∀ n i, (Law.run (step (fun i e _ => G' i e) H) x).state n (i, true) =
+      (Law.run (Indexed.step Drawn.whole G' H) (fun j => x (j, true))).state n i
+  | 0, _ => rfl
+  | n + 1, i => congr (congrArg (· + ·) (congrArg (· - H i) (plain pointwise x n i)))
+      (pointwise i _ _ fun j => congrArg (· - H j) (plain pointwise x n j))
+
+/-- A state of the adjusted regime, its level and recent giving, read as one condition's. -/
+def ofAdjusted (p : Nat × Nat) : Unit × Bool → Nat
+  | (_, true) => p.1
+  | (_, false) => p.2
+
+/-- **One condition with a recent giving is the adjusted regime.** -/
+theorem adjusted (A : Nat → Nat → Nat) (H : Nat) (p : Nat × Nat) :
+    ∀ n, (Law.run (step (fun _ e r => A (e ()) (r ())) (fun _ => H)) (ofAdjusted p)).state n ((), true) =
+        ((Law.run (Adjusted.step A H) p).state n).1 ∧
+      (Law.run (step (fun _ e r => A (e ()) (r ())) (fun _ => H)) (ofAdjusted p)).state n ((), false) =
+        ((Law.run (Adjusted.step A H) p).state n).2
+  | 0 => ⟨rfl, rfl⟩
+  | n + 1 =>
+    have ih := adjusted A H p n
+    ⟨by
+      show (Law.run (step (fun _ e r => A (e ()) (r ())) (fun _ => H)) (ofAdjusted p)).state n ((), true) - H +
+          A ((Law.run (step (fun _ e r => A (e ()) (r ())) (fun _ => H)) (ofAdjusted p)).state n ((), true) - H)
+            ((Law.run (step (fun _ e r => A (e ()) (r ())) (fun _ => H)) (ofAdjusted p)).state n ((), false)) = _
+      rw [ih.1, ih.2]; try rfl,
+     by
+      show A ((Law.run (step (fun _ e r => A (e ()) (r ())) (fun _ => H)) (ofAdjusted p)).state n ((), true) - H)
+            ((Law.run (step (fun _ e r => A (e ()) (r ())) (fun _ => H)) (ofAdjusted p)).state n ((), false)) = _
+      rw [ih.1, ih.2]; try rfl⟩
+
+/-! ##### A giving that ramps with what was given -/
+
+namespace Momentum
+
+/-- Nothing where nothing is left; where something is, one where nothing was given last and two where
+something was. -/
+def gives (e r : Nat) : Nat := if 1 ≤ e then (if 1 ≤ r then 2 else 1) else 0
+
+/-- The ramping giving of one condition. -/
+def giving : Unit → (Unit → Nat) → (Unit → Nat) → Nat := fun _ e r => gives (e ()) (r ())
+
+theorem gives_rises {e e' r r' : Nat} (le : e ≤ e') (le' : r ≤ r') : gives e r ≤ gives e' r' :=
+  if h : 1 ≤ e then
+    have h' : 1 ≤ e' := Nat.le_trans h le
+    if g : 1 ≤ r then Nat.le_of_eq ((if_pos h).trans ((if_pos g).trans
+        ((if_pos (Nat.le_trans g le')).symm.trans (if_pos h').symm)))
+    else
+      Nat.le_trans (Nat.le_of_eq ((if_pos h).trans (if_neg g)))
+        (if g' : 1 ≤ r' then Nat.le_trans (Nat.le_succ 1) (Nat.le_of_eq ((if_pos g').symm.trans (if_pos h').symm))
+         else Nat.le_of_eq ((if_neg g').symm.trans (if_pos h').symm))
+  else Nat.le_trans (Nat.le_of_eq (if_neg h)) (Nat.zero_le _)
+
+theorem rises : Rises giving := fun _ _ _ _ _ le le' => gives_rises (le ()) (le' ())
+
+/-- The state of one condition at level `a` having given `r` last. -/
+def at_ (a r : Nat) : Unit × Bool → Nat
+  | (_, true) => a
+  | (_, false) => r
+
+/-- The ramping step under a draw of two. -/
+def ramp : (Unit × Bool → Nat) → (Unit × Bool → Nat) := step giving (fun _ => 2)
+
+theorem set_at (a r : Nat) : ∀ p, Indexed.setAt (at_ 0 r) ((), true) a p = at_ a r p
+  | ((), true) => rfl
+  | ((), false) => rfl
+
+theorem ends_from {a r : Nat} {m : Nat} (at_m : ∀ p, (Law.run ramp (at_ a r)).state m p = at_ 0 0 p) :
+    EndsUnder ramp ((), true) (Indexed.setAt (at_ 0 r) ((), true) a) :=
+  ⟨m, fun k => (run_alike_of (reads_of_keepsBelow (keepsBelow rises)) (set_at a r) (m + k) ((), true)).trans
+    (stays_at (reads_of_keepsBelow (keepsBelow rises)) at_m
+      (fun p => match p with
+        | ((), true) => rfl
+        | ((), false) => rfl) k ((), true))⟩
+
+theorem holds_from {a r b c : Nat} {m : Nat} (pos : 0 < b)
+    (at_m : ∀ p, (Law.run ramp (at_ a r)).state m p = at_ b c p) (fixed : ∀ p, ramp (at_ b c) p = at_ b c p) :
+    ¬ EndsUnder ramp ((), true) (Indexed.setAt (at_ 0 r) ((), true) a) := fun ⟨N, gone⟩ =>
+  have reads := reads_of_keepsBelow (keepsBelow rises)
+  Nat.ne_of_gt pos ((((gone m).symm.trans (run_alike_of reads (set_at a r) (N + m) ((), true))).trans
+    ((congrArg (fun n => (Law.run ramp (at_ a r)).state n ((), true)) (Nat.add_comm N m)).trans
+      (stays_at reads at_m fixed N ((), true)))).symm)
+
+/-- **What a condition gave last lowers its point of no return.** One condition, drawn by two, gives
+one where something is left and nothing was given last, and two where something was. From four having
+given one, its run stays within four. Having given nothing, it ends from three and holds from four, so
+its threshold, levels up to four, is four; having given one, it ends from two and holds from three, so
+its threshold is three. -/
+theorem threshold_falls_with_recent :
+    StaysWithin ramp 4 (Indexed.setAt (at_ 0 1) ((), true) 4) ∧
+    thresholdWithin ramp (both [()]) 4 4 (at_ 0 0) ((), true) = 4 ∧
+    thresholdWithin ramp (both [()]) 4 4 (at_ 0 1) ((), true) = 3 :=
+  have keeps : KeepsBelow ramp := keepsBelow rises
+  have reads := reads_of_keepsBelow keeps
+  have covers : ∀ p : Unit × Bool, p ∈ both [()] := covers_both fun _ => .head _
+  have fixed₄ : ∀ p, ramp (at_ 4 2) p = at_ 4 2 p := fun p => match p with
+    | ((), true) => rfl
+    | ((), false) => rfl
+  have within₁ : StaysWithin ramp 4 (Indexed.setAt (at_ 0 1) ((), true) 4) := fun n p =>
+    have at1 : ∀ p, (Law.run ramp (at_ 4 1)).state 1 p = at_ 4 2 p := fun p => match p with
+      | ((), true) => rfl
+      | ((), false) => rfl
+    Nat.le_trans (Nat.le_of_eq (run_alike_of reads (set_at 4 1) n p)) (match n, p with
+      | 0, ((), true) => Nat.le_refl 4
+      | 0, ((), false) => Nat.le_succ_of_le (Nat.le_succ_of_le (Nat.le_succ 1))
+      | k + 1, ((), true) => Nat.le_of_eq ((congrArg (fun m => (Law.run ramp (at_ 4 1)).state m ((), true))
+          (Nat.add_comm k 1)).trans (stays_at reads at1 fixed₄ k ((), true)))
+      | k + 1, ((), false) => Nat.le_trans (Nat.le_of_eq ((congrArg (fun m => (Law.run ramp (at_ 4 1)).state m ((), false))
+          (Nat.add_comm k 1)).trans (stays_at reads at1 fixed₄ k ((), false)))) (Nat.le_succ_of_le (Nat.le_succ 2)))
+  have within₀ : StaysWithin ramp 4 (Indexed.setAt (at_ 0 0) ((), true) 4) :=
+    within_below keeps (Indexed.setAt_below (Nat.le_refl 4) fun p => match p with
+      | ((), true) => Nat.le_refl 0
+      | ((), false) => Nat.zero_le 1) within₁
+  have fixed₃ : ∀ p, ramp (at_ 3 2) p = at_ 3 2 p := fun p => match p with
+    | ((), true) => rfl
+    | ((), false) => rfl
+  have ends₃ : EndsUnder ramp ((), true) (Indexed.setAt (at_ 0 0) ((), true) 3) :=
+    ends_from (m := 2) fun p => match p with
+      | ((), true) => rfl
+      | ((), false) => rfl
+  have holds₄ : ¬ EndsUnder ramp ((), true) (Indexed.setAt (at_ 0 0) ((), true) 4) :=
+    holds_from (m := 2) (Nat.succ_pos 2) (fun p => match p with
+      | ((), true) => rfl
+      | ((), false) => rfl) fixed₃
+  have ends₂ : EndsUnder ramp ((), true) (Indexed.setAt (at_ 0 1) ((), true) 2) :=
+    ends_from (m := 1) fun p => match p with
+      | ((), true) => rfl
+      | ((), false) => rfl
+  have holds₃ : ¬ EndsUnder ramp ((), true) (Indexed.setAt (at_ 0 1) ((), true) 3) :=
+    holds_from (m := 1) (Nat.succ_pos 2) (fun p => match p with
+      | ((), true) => rfl
+      | ((), false) => rfl) fixed₃
+  ⟨within₁,
+   Nat.le_antisymm
+    ((Nat.lt_or_ge 4 (thresholdWithin ramp (both [()]) 4 4 (at_ 0 0) ((), true))).elim
+      (fun lt => absurd ((ends_iff_below_within keeps covers within₀ (Nat.le_refl 4)).2 lt) holds₄) id)
+    ((ends_iff_below_within keeps covers within₀ (Nat.le_succ 3)).1 ends₃),
+   Nat.le_antisymm
+    ((Nat.lt_or_ge 3 (thresholdWithin ramp (both [()]) 4 4 (at_ 0 1) ((), true))).elim
+      (fun lt => absurd ((ends_iff_below_within keeps covers within₁ (Nat.le_succ 3)).2 lt) holds₃) id)
+    ((ends_iff_below_within keeps covers within₁ (Nat.le_succ_of_le (Nat.le_succ 2))).1 ends₂)⟩
+
+end Momentum
+
+end Recent
 
 end Indexed
 
@@ -3327,11 +3591,11 @@ ends, and two with its partner at three, from nothing and one it ends and from t
 threshold falls as the partner rises, beyond any band. -/
 theorem threshold_beyond_band :
     (∀ hi, 3 ≤ hi → ¬ Indexed.Band (pairGiving first second) (pairDraw 1 1) hi) ∧
-    Indexed.StaysWithin (pairGiving first second) (pairDraw 1 1) 3 (Indexed.setAt (ofPair (0, 3)) true 2) ∧
-    Indexed.thresholdWithin (pairGiving first second) (pairDraw 1 1) [true, false] 3 2 (ofPair (0, 2)) true = 3 ∧
-    Indexed.thresholdWithin (pairGiving first second) (pairDraw 1 1) [true, false] 3 2 (ofPair (0, 3)) true = 2 :=
+    Indexed.StaysWithin (Indexed.step Drawn.whole (pairGiving first second) (pairDraw 1 1)) 3 (Indexed.setAt (ofPair (0, 3)) true 2) ∧
+    Indexed.thresholdWithin (Indexed.step Drawn.whole (pairGiving first second) (pairDraw 1 1)) [true, false] 3 2 (ofPair (0, 2)) true = 3 ∧
+    Indexed.thresholdWithin (Indexed.step Drawn.whole (pairGiving first second) (pairDraw 1 1)) [true, false] 3 2 (ofPair (0, 3)) true = 2 :=
   have rises := pair_rises (D := Drawn.whole) first_rises second_rises
-  have within : Indexed.StaysWithin (pairGiving first second) (pairDraw 1 1) 3
+  have within : Indexed.StaysWithin (Indexed.step Drawn.whole (pairGiving first second) (pairDraw 1 1)) 3
       (Indexed.setAt (ofPair (0, 3)) true 2) := fun n j =>
     have pairs := pair_run (D := Drawn.whole) first second 1 1 (2, 3) n
     have small : ((Law.run (step Drawn.whole first second 1 1) (2, 3)).state n).1 ≤ 3 ∧
@@ -3345,9 +3609,9 @@ theorem threshold_beyond_band :
       (match j with
         | true => Nat.le_trans (Nat.le_of_eq pairs.1) small.1
         | false => Nat.le_trans (Nat.le_of_eq pairs.2) small.2)
-  have within₂ : Indexed.StaysWithin (pairGiving first second) (pairDraw 1 1) 3
+  have within₂ : Indexed.StaysWithin (Indexed.step Drawn.whole (pairGiving first second) (pairDraw 1 1)) 3
       (Indexed.setAt (ofPair (0, 2)) true 2) :=
-    Indexed.within_below rises (Indexed.setAt_below (Nat.le_refl 2) fun j =>
+    Indexed.within_below (Indexed.step_keepsBelow rises) (Indexed.setAt_below (Nat.le_refl 2) fun j =>
       match j with
       | true => Nat.le_refl 0
       | false => Nat.le_succ 2) within
@@ -3373,13 +3637,13 @@ theorem threshold_beyond_band :
         (Nat.add_assoc (hi - 1) 1 1)).trans (congrArg (hi - 1 + ·) gives.symm))) up),
    within,
    Nat.le_antisymm (leading_le _ _)
-    ((Indexed.ends_iff_below_within rises covers_pair within₂ (Nat.le_refl 2)).1 (ends_set.1 endsTwo)),
+    ((Indexed.ends_iff_below_within (Indexed.step_keepsBelow rises) covers_pair within₂ (Nat.le_refl 2)).1 (ends_set.1 endsTwo)),
    Nat.le_antisymm
-    ((Nat.lt_or_ge 2 (Indexed.thresholdWithin (pairGiving first second) (pairDraw 1 1) [true, false] 3 2
+    ((Nat.lt_or_ge 2 (Indexed.thresholdWithin (Indexed.step Drawn.whole (pairGiving first second) (pairDraw 1 1)) [true, false] 3 2
         (ofPair (0, 3)) true)).elim
-      (fun lt => absurd (ends_set.2 ((Indexed.ends_iff_below_within rises covers_pair within
+      (fun lt => absurd (ends_set.2 ((Indexed.ends_iff_below_within (Indexed.step_keepsBelow rises) covers_pair within
         (Nat.le_refl 2)).2 lt)) holds) id)
-    ((Indexed.ends_iff_below_within rises covers_pair within (Nat.le_succ 1)).1 (ends_set.1 endsOne))⟩
+    ((Indexed.ends_iff_below_within (Indexed.step_keepsBelow rises) covers_pair within (Nat.le_succ 1)).1 (ends_set.1 endsOne))⟩
 
 end Relay
 

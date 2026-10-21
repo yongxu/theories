@@ -2573,7 +2573,10 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   of lists of levels within B and repeats, so whether a condition ends is decided by a finite
   check, with no band and no order of states, and under mutual support each point of no return
   is exact and falls as others rise wherever the run from the top level considered stays
-  within B.
+  within B. These hold for any law of states read condition by condition, and so for a web with
+  a recent giving, each condition holding its level and what it gave last: under mutual support
+  its thresholds fall as any level or recent giving rises; the plain web and the adjusted regime
+  are its cases.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of
