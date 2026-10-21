@@ -51,6 +51,14 @@ theorem names.
   pool's members and each member's coupling of the two flows is decided, a pool whose selection
   separates the two flows has a member that couples them apart, lying beyond the closure
   (`Flow.separating_member_beyond`).
+* **Reading another's law.** Knowing a law is no coupling. Every selection through `a`'s couplings
+  is one through `o`'s exactly when whatever `o` couples alike `a` couples alike
+  (`Web.anticipates_iff`); where `o` couples two histories alike and `a` does not, some selection
+  through `a`'s couplings goes through none of `o`'s (`Web.anticipation_misses`); where the
+  coupling is that fine and the law reads through `a`'s, `a` exchanges alike across every step
+  under histories `o` couples alike (`ExchangeLaw.Through.anticipated`). Reading `a`'s couplings
+  is that fine (`Web.SelectsThrough.read`). What the law does under histories not taken is not
+  fixed by a run (`not_fixes_of_untaken`): it is a model.
 * **Reading another's couplings.** A formation `o` reads `a`'s couplings where, beside its own,
   it is coupled by level into every condition coupled into `a` (`Web.ReadsCouplings`). Two
   histories `o` then couples alike at a step, `o` and `a` both couple alike there
@@ -400,6 +408,33 @@ theorem SelectsThroughAll.reads
     | .inl same => same ▸ (AlikeThrough.of_reads (alike s le)).1
     | .inr same => same ▸ (AlikeThrough.of_reads (alike s le)).2
 
+/-- **Anticipating another's selections is coupling as finely.** Every selection through `a`'s
+couplings up to `t` is one through `o`'s, under any coupling by level `obs'` for `o`, exactly when
+whatever `o` couples alike up to `t` `a` couples alike. Knowing a law is no coupling: what `o` can
+anticipate of `a`, under any law reading through `a`'s couplings, is fixed by this
+(`Revision.web_keeps_iff` is the case of one formation at two steps). -/
+theorem anticipates_iff {obs' : F → C → Prop} :
+    (∀ select, W.SelectsThrough obs a t select → W.SelectsThrough obs' o t select) ↔
+      ∀ l l', W.AlikeThroughUpTo obs' o l l' t → W.AlikeThroughUpTo obs a l l' t :=
+  ⟨fun every l l' alike =>
+    ((every (W.ClassThrough obs a l t) class_selects) l l' alike).mp fun s _ => AlikeThrough.refl s,
+   fun finer _ through l l' alike => through l l' (finer l l' alike)⟩
+
+/-- **A coarser reader misses one of the other's selections.** Where `o` couples two histories
+alike up to `t` and `a` does not, the class alike through `a` is a selection through `a`'s
+couplings and through no coupling of `o`'s up to `t`, whatever `o` knows of `a`'s law. -/
+theorem anticipation_misses {obs' : F → C → Prop} (alike : W.AlikeThroughUpTo obs' o l l' t)
+    (differ : ¬ W.AlikeThroughUpTo obs a l l' t) :
+    ∃ select, W.SelectsThrough obs a t select ∧ ¬ W.SelectsThrough obs' o t select :=
+  ⟨W.ClassThrough obs a l t, class_selects,
+   fun through => differ ((through l l' alike).mp fun s _ => AlikeThrough.refl s)⟩
+
+/-- **Reading another's couplings anticipates every selection through them.** -/
+theorem SelectsThrough.read (through : W.SelectsThrough obs a t select) :
+    W.SelectsThrough (W.ReadsCouplings obs o a) o t select :=
+  anticipates_iff.mpr (fun _ _ alike s le => (AlikeThrough.of_reads (alike s le)).2) select
+    through
+
 end Web
 
 /-- A law reading through a coupling reads through every coupling holding it. -/
@@ -407,6 +442,17 @@ theorem ExchangeLaw.Through.widen {law : ExchangeLaw F C} {W : Web F C}
     {obs obs' : F → C → Prop} {part : F → Bool} (larger : ∀ g c, obs g c → obs' g c)
     (through : law.Through W obs part) : law.Through W obs' part :=
   fun h outside t l l' alike => through h outside t l l' (alike.of_obs larger)
+
+/-- **Another's acts are anticipated where its coupling is.** Where the law reads through the
+coupling of `a`, outside the part, and whatever `o` couples alike up to `t` `a` couples alike,
+`a` exchanges alike across every step up to `t` under two histories `o` couples alike up to `t`:
+with the law, `o` anticipates `a`'s acts. -/
+theorem ExchangeLaw.Through.anticipated {law : ExchangeLaw F C} {W : Web F C}
+    {obs obs' : F → C → Prop} {part : F → Bool} {o a : F} {l l' : Nat → C → Nat} {t : Nat}
+    (through : law.Through W obs part) (outside : part a = false)
+    (finer : ∀ m m', W.AlikeThroughUpTo obs' o m m' t → W.AlikeThroughUpTo obs a m m' t)
+    (alike : W.AlikeThroughUpTo obs' o l l' t) : ∀ s, s ≤ t → law.GivesAlike s a l l' :=
+  fun _ le => through a outside _ l l' ((finer l l' alike).earlier le)
 
 /-- **A closure read through another's steps is the pool's.** Where every step of `rel'` is a step
 of `rel`, or a step of `rel` from `a` taken at `o`, what lies within `o`'s closure under `rel'`
