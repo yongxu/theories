@@ -108,7 +108,8 @@
         "the-rest-outruns-the-renewal",
         "every-loss-passes-a-juncture",
         "capture-through-the-rule",
-        "margin-of-a-regime"
+        "margin-of-a-regime",
+        "re-optimizing-above-a-renewal-ends-it"
       ],
       "declarations": [
         "Becoming.Flow.Balances.consumption_ends_with_feeders",
@@ -117,7 +118,8 @@
         "Becoming.Flow.outrun_below",
         "Becoming.Branching.loss_passes_juncture",
         "Becoming.RuleCapture.favouring_locks",
-        "Becoming.RegimeMargin.ends_iff_below"
+        "Becoming.RegimeMargin.ends_iff_below",
+        "Becoming.Web.course_lost_iff"
       ],
       "status": "proved",
       "open_items": [
@@ -560,6 +562,7 @@
         "what-an-optimum-does-beyond-what-couples-in",
         "room-read-off-the-exchange",
         "several-optimizers-drain-by-their-joint-capacity",
+        "re-optimizing-above-a-renewal-ends-it",
         "the-gap-for-ones-own-act",
         "what-pooled-coupling-reaches",
         "what-a-pools-acts-respond-to",
@@ -573,6 +576,7 @@
         "Becoming.Web.optimum_broken_iff",
         "Becoming.Optimum.optimum_beyond",
         "Becoming.Optimum.mutual_beyond",
+        "Becoming.Web.course_lost_iff",
         "Becoming.Flow.unselected_beyond_pool",
         "Becoming.Flow.withinCoupling_reads_iff",
         "Becoming.Flow.act_selected_by_pool",

@@ -67,8 +67,9 @@ Zhuang and Hadfield-Menell (NeurIPS 2020) assume, for their Theorem 1, a resourc
 - related, not a proved adapter: [what-an-optimum-does-beyond-what-couples-in](what-an-optimum-does-beyond-what-couples-in.md). What an optimum does beyond what couples in, with room supplied; this record derives room for one step of exchange.
 - related, not a proved adapter: [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md). What a rise draws from beyond; here the optimum's draw is exact, by capacity.
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Several optimizers at a mutual best response, each a part alone.
+- related, not a proved adapter: [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md). A course of such steps against a renewal.
 
-**Used by:** [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md)
+**Used by:** [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md) · [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -90,6 +91,7 @@ Zhuang and Hadfield-Menell (NeurIPS 2020) assume, for their Theorem 1, a resourc
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T000629.905649Z/verification.json) | — |
 
 Aliases: `room read off the exchange`, `room from conservation with capacity`, `the drain where units are shared`, `从交换读出的余地`, `Becoming.Optimum.Above.room`, `Becoming.Optimum.optimum_beyond`, `Becoming.Web.optimum_broken_iff_capacity`
 
@@ -98,6 +100,7 @@ Aliases: `room read off the exchange`, `room from conservation with capacity`, `
 
 - 21 October 2026: added (SG2), room read off one step of exchange: room among the outcomes open to a part within its capacity, every optimum beyond exactly at what the rest leaves less the capacity, untouched where no units are shared; study section 288.
 - 21 October 2026, SG3: several optimizers at a mutual best response, each a part alone (record several-optimizers-drain-by-their-joint-capacity, study section 290); this record's laws and their statements are unchanged.
+- 21 October 2026, SG4: a course of re-optimizing steps against a renewal, each step read off by this record's law (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.
 
 </details>
 

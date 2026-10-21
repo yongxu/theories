@@ -282,6 +282,13 @@
         "en": "The same laws over a family of conditions read as one, from which these are now derived.",
         "zh": "对读作一体的条件族的同一定律，现由其推出本记录的定律。"
       }
+    },
+    {
+      "id": "re-optimizing-above-a-renewal-ends-it",
+      "detail": {
+        "en": "The joint excess and the gap between own and joint draw, derived for optimizers along a course.",
+        "zh": "联合超出以及自身与联合汲取之间的差距，对过程中的优化者导出。"
+      }
     }
   ],
   "references": [
@@ -504,6 +511,10 @@
     {
       "en": "20 October 2026, EV6: the joint count and the gated ending are stated over a family of conditions read as one (Flow.family_excess_bounded, Flow.family_excess_ends; record groups-whose-conditions-are-coupled, study section 265); excess_lowers_at, excess_bounded_at, stays_below_at, ends_below_at and joint_excess_ends_at are now derived as the family of one condition, their statements unchanged. The claim is unchanged.",
       "zh": "2026年10月20日，EV6：联合计入与门控终结陈述于读作一体的条件族（Flow.family_excess_bounded、Flow.family_excess_ends；记录 groups-whose-conditions-are-coupled，研究第 265 节）；excess_lowers_at、excess_bounded_at、stays_below_at、ends_below_at、joint_excess_ends_at 现作为单元族的情形推出，陈述不变。论断不变。"
+    },
+    {
+      "en": "21 October 2026, SG4: the joint excess these laws take as given, derived for optimizers re-optimizing along a course, the loss exactly where the draw exceeds the renewal and, for a draw the same at every step, without the premise that renewal stops below the need (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG4：这些律所给定的联合超出，对沿过程重新优化的优化者导出，恰在汲取超出更新时丧失，每步汲取相同时不需要更新在需要之下停止这一前提（记录 re-optimizing-above-a-renewal-ends-it，研究第 291 节）；本记录的定律及其陈述不变。"
     }
   ],
   "text_versions": [

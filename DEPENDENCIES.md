@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-313 registered results: 293 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 783 curated edges join 266 results to the results they draw on.
+314 registered results: 294 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 786 curated edges join 267 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -180,6 +180,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [proposition-identity][] ← <a id="proposition-identity--generalization-through-lumping"></a>[generalization-through-lumping][]
 - [raising-what-couples-in-draws-from-beyond][] ← <a id="raising-what-couples-in-draws-from-beyond--selection-through-couplings"></a>[selection-through-couplings][] · <a id="raising-what-couples-in-draws-from-beyond--entropy-history-and-record"></a>[entropy-history-and-record][]
 - [ranking-under-readings][] ← <a id="ranking-under-readings--relational-reading-comparison"></a>[relational-reading-comparison][] · <a id="ranking-under-readings--becoming-stepwise-reading"></a>[becoming-stepwise-reading][] · <a id="ranking-under-readings--relational-renewal-classification"></a>[relational-renewal-classification][] · <a id="ranking-under-readings--continuation-condition-yields-living-significance"></a>[continuation-condition-yields-living-significance][] · <a id="ranking-under-readings--significance-retained-within-margin"></a>[significance-retained-within-margin][] · <a id="ranking-under-readings--closing-needs-net-draw"></a>[closing-needs-net-draw][]
+- [re-optimizing-above-a-renewal-ends-it][] ← <a id="re-optimizing-above-a-renewal-ends-it--room-read-off-the-exchange"></a>[room-read-off-the-exchange][] · <a id="re-optimizing-above-a-renewal-ends-it--several-optimizers-drain-by-their-joint-capacity"></a>[several-optimizers-drain-by-their-joint-capacity][] · <a id="re-optimizing-above-a-renewal-ends-it--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [reading-anothers-couplings-is-pooling][] ← <a id="reading-anothers-couplings-is-pooling--what-pooled-coupling-reaches"></a>[what-pooled-coupling-reaches][] · <a id="reading-anothers-couplings-is-pooling--the-gap-for-ones-own-act"></a>[the-gap-for-ones-own-act][]
 - [readings-within-what-they-read][] ← <a id="readings-within-what-they-read--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [recoverable-mediated-change][] ← <a id="recoverable-mediated-change--mediated-evidence-transport"></a>[mediated-evidence-transport][]
@@ -465,6 +466,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [proposition-identity]: theories/becoming/results/records/proposition-identity.md
 [raising-what-couples-in-draws-from-beyond]: theories/becoming/results/records/raising-what-couples-in-draws-from-beyond.md
 [ranking-under-readings]: theories/becoming/results/records/ranking-under-readings.md
+[re-optimizing-above-a-renewal-ends-it]: theories/becoming/results/records/re-optimizing-above-a-renewal-ends-it.md
 [reading-anothers-couplings-is-pooling]: theories/becoming/results/records/reading-anothers-couplings-is-pooling.md
 [readings-within-what-they-read]: theories/becoming/results/records/readings-within-what-they-read.md
 [recoverable-mediated-change]: theories/becoming/results/records/recoverable-mediated-change.md

@@ -244,6 +244,13 @@
         "en": "Several optimizers at a mutual best response, each a part alone.",
         "zh": "处于相互最优回应的多个优化者，各自独为一个部分。"
       }
+    },
+    {
+      "id": "re-optimizing-above-a-renewal-ends-it",
+      "detail": {
+        "en": "A course of such steps against a renewal.",
+        "zh": "对更新的这样的步组成的过程。"
+      }
     }
   ],
   "references": [
@@ -312,7 +319,7 @@
         "Becoming.total_raise_at",
         "Becoming.total_split"
       ],
-      "sha256": "2a1e427542d683aefb018f4e48a652cb9a7141419e48f84a9b83eb660db65cea"
+      "sha256": "c7b32877720e6a9ce85836da05c171c98210418afefdbb9ffd5c50d7a6e9b31a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
@@ -415,19 +422,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "c179d8507fc444cbb73a8ba7eafab9b06444df63d162aede68f9a3284d25c392"
+      "sha256": "63289d6b39a1b79d04eac92ed57aa0638b6da0582c8189c812adff2533883d4a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
       "role": "receipt",
       "sha256": "02c3a69e9269f65195c00671f54b696eacdc197f90f530b63ed15a42ffe9e378",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T000629.905649Z/verification.json",
+      "role": "receipt",
+      "sha256": "d5cd1664e30855143817d41ca20e4352cfb7ae3e8805817df1932d6a517e605a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T000629.905649Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -504,6 +517,10 @@
     {
       "en": "21 October 2026, SG3: several optimizers at a mutual best response, each a part alone (record several-optimizers-drain-by-their-joint-capacity, study section 290); this record's laws and their statements are unchanged.",
       "zh": "2026年10月21日，SG3：处于相互最优回应的多个优化者，各自独为一个部分（记录 several-optimizers-drain-by-their-joint-capacity，研究第 290 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "21 October 2026, SG4: a course of re-optimizing steps against a renewal, each step read off by this record's law (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG4：对更新的重新优化过程，每步由本记录之律读出（记录 re-optimizing-above-a-renewal-ends-it，研究第 291 节）；本记录的定律及其陈述不变。"
     }
   ]
 }

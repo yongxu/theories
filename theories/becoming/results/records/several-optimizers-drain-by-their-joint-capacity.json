@@ -194,6 +194,13 @@
         "en": "Which dependence a joint draw breaks, with the flows supplied; here the draws of optimizers at a mutual best response are derived.",
         "zh": "联合汲取打断哪个依存（流给定）；此处导出处于相互最优回应的优化者的汲取。"
       }
+    },
+    {
+      "id": "re-optimizing-above-a-renewal-ends-it",
+      "detail": {
+        "en": "Mutual best responses at every step of a course against a renewal.",
+        "zh": "对更新的过程中每步的相互最优回应。"
+      }
     }
   ],
   "references": [
@@ -244,7 +251,7 @@
         "Becoming.sub_lt_self_iff",
         "Becoming.total_split"
       ],
-      "sha256": "2a1e427542d683aefb018f4e48a652cb9a7141419e48f84a9b83eb660db65cea"
+      "sha256": "c7b32877720e6a9ce85836da05c171c98210418afefdbb9ffd5c50d7a6e9b31a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
@@ -335,13 +342,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "c179d8507fc444cbb73a8ba7eafab9b06444df63d162aede68f9a3284d25c392"
+      "sha256": "63289d6b39a1b79d04eac92ed57aa0638b6da0582c8189c812adff2533883d4a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T000629.905649Z/verification.json",
+      "role": "receipt",
+      "sha256": "d5cd1664e30855143817d41ca20e4352cfb7ae3e8805817df1932d6a517e605a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T224903.262106Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T000629.905649Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -407,6 +420,10 @@
     {
       "en": "21 October 2026: added (SG3), several optimizers at a mutual best response: a condition beyond every family falls by their joint capacity, as under one optimizer of that capacity, and restraint is no mutual best response; study section 290.",
       "zh": "2026年10月21日：新增（SG3），处于相互最优回应的多个优化者：每个族之外的条件降低它们的合计容量，与一个具有该容量的优化者相同，节制不是相互最优回应；研究第 290 节。"
+    },
+    {
+      "en": "21 October 2026, SG4: mutual best responses at every step of a course: jointly above the renewal, the optimizers lose it (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG4：过程中每步的相互最优回应：合计超出更新时，优化者使其丧失（记录 re-optimizing-above-a-renewal-ends-it，研究第 291 节）；本记录的定律及其陈述不变。"
     }
   ]
 }

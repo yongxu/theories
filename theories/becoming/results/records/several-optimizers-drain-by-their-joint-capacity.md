@@ -63,6 +63,9 @@ The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the over
   - Preserved conditions: A dependence met at the step. [DrawnBeyond.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean)
 - related, not a proved adapter: [room-read-off-the-exchange](room-read-off-the-exchange.md). Room read off one step for one optimizing part; this record states several at once.
 - related, not a proved adapter: [what-a-rise-draws-from-beyond](what-a-rise-draws-from-beyond.md). Which dependence a joint draw breaks, with the flows supplied; here the draws of optimizers at a mutual best response are derived.
+- related, not a proved adapter: [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md). Mutual best responses at every step of a course against a renewal.
+
+**Used by:** [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -82,6 +85,7 @@ The tragedy of the commons (Hardin 1968), open access (Gordon 1954) and the over
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T000629.905649Z/verification.json) | — |
 
 Aliases: `several optimizers drain by their joint capacity`, `a mutual best response beyond`, `the blind commons`, `多个优化者以合计容量抽干`, `Becoming.Optimum.MutualBest`, `Becoming.Optimum.mutual_beyond`, `Becoming.Optimum.mutual_as_one`
 
@@ -89,6 +93,7 @@ Aliases: `several optimizers drain by their joint capacity`, `a mutual best resp
 ### History
 
 - 21 October 2026: added (SG3), several optimizers at a mutual best response: a condition beyond every family falls by their joint capacity, as under one optimizer of that capacity, and restraint is no mutual best response; study section 290.
+- 21 October 2026, SG4: mutual best responses at every step of a course: jointly above the renewal, the optimizers lose it (record re-optimizing-above-a-renewal-ends-it, study section 291); this record's laws and their statements are unchanged.
 
 </details>
 
