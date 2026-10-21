@@ -1,11 +1,11 @@
 {
- "commit": "97c18a6708b7bce0b5ce9979e48136e824e20d01",
+ "commit": "fb808076e8f2e6acb6cc1ce0c3a31ec4117727e1",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261021T191937.039634Z",
+ "core_receipt_at_commit": "20261021T213117.130056Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 301,
- "constants": 39485,
- "spine_theorems": 13010,
+ "constants": 39513,
+ "spine_theorems": 13020,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -28,10 +28,10 @@
  "classes": {
   "statement on both families": 1003,
   "statement on Process/Frame/Run/Trace": 2916,
-  "statement on World/Flow/Web": 3023,
+  "statement on World/Flow/Web": 3025,
   "statement on the base only through a law of its own module": 254,
   "proof through a base family": 155,
-  "used by a theorem on the base": 4857,
+  "used by a theorem on the base": 4865,
   "instance on the base recorded": 155,
   "apart: own vocabulary": 588,
   "apart: prelude-only statement": 59
@@ -514,7 +514,7 @@
   ],
   "Becoming.Optimum": [
    1,
-   432
+   442
   ],
   "Becoming.LoopReturn": [
    1,
@@ -584,15 +584,15 @@
  "rings": {
   "core": {
    "modules": 285,
-   "theorems": 12264,
+   "theorems": 12274,
    "apart": 567,
    "classes": {
     "statement on both families": 989,
     "statement on Process/Frame/Run/Trace": 2705,
-    "statement on World/Flow/Web": 2998,
+    "statement on World/Flow/Web": 3000,
     "statement on the base only through a law of its own module": 208,
     "proof through a base family": 144,
-    "used by a theorem on the base": 4498,
+    "used by a theorem on the base": 4506,
     "instance on the base recorded": 155,
     "apart: own vocabulary": 509,
     "apart: prelude-only statement": 58
@@ -691,7 +691,7 @@
  "records_by_best_alias_class": {
   "statement on both families": 71,
   "statement on Process/Frame/Run/Trace": 121,
-  "statement on World/Flow/Web": 96,
+  "statement on World/Flow/Web": 97,
   "statement on the base only through a law of its own module": 4,
   "proof through a base family": 1,
   "used by a theorem on the base": 7,
@@ -7642,11 +7642,21 @@
   "Becoming.Optimum.InTurn.step_ends": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.ends_at": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.perfect_ends": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.levels_of_zero": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.perfect_levels": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.zero_secondDrawn": "used by a theorem on the base",
   "Becoming.Optimum.InTurn.perfect_of_zero": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.secondDrawn_of_zero": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.revisions_end": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.bestUpTo_le": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.bestUpTo_max": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.revise_revises": "used by a theorem on the base",
+  "Becoming.Optimum.InTurn.revised_draw_all": "used by a theorem on the base",
   "Becoming.Web.perfect_broken": "statement on World/Flow/Web",
+  "Becoming.Web.revised_broken": "statement on World/Flow/Web",
   "Becoming.Optimum.Holding.gated_in_turn": "statement on World/Flow/Web",
+  "Becoming.Optimum.Holding.gated_restraint_keeps": "used by a theorem on the base",
+  "Becoming.Optimum.Holding.gated_revised": "statement on World/Flow/Web",
   "Becoming.Web.pooledClass_selects": "statement on World/Flow/Web",
   "Becoming.Web.separates_all_iff": "statement on World/Flow/Web",
   "Becoming.Web.member_separates_all": "statement on World/Flow/Web",
