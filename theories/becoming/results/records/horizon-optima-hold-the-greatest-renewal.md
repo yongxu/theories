@@ -69,7 +69,7 @@ The maximum sustainable yield at the level of greatest renewal, half of room in 
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). Several optimizers at one mutual best response; several ranking courses are not stated here.
 - related, not a proved adapter: [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md). What keeping a dependence above the levels of greatest renewal forgoes, and the coupling that keeps it.
 
-**Used by:** [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md)
+**Used by:** [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md) · [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -89,6 +89,7 @@ The maximum sustainable yield at the level of greatest renewal, half of room in 
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T052543.695066Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T060215.969427Z/verification.json) | — |
 
 Aliases: `horizon optima hold the greatest renewal`, `courses ranked over a horizon`, `far-sight holds the levels of greatest renewal`, `maximum sustainable yield level`, `在视野上，最优保持在最大更新处`, `Becoming.Optimum.frontier_holds`, `Becoming.Optimum.most_iff`, `Becoming.Web.frontier_broken`
 

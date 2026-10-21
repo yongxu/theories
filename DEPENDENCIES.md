@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-316 registered results: 296 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 790 curated edges join 269 results to the results they draw on.
+317 registered results: 297 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 793 curated edges join 270 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -17,6 +17,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [a-law-through-changing-coupling-along-one-run][] ← <a id="a-law-through-changing-coupling-along-one-run--a-law-through-coupling-along-one-run"></a>[a-law-through-coupling-along-one-run][] · <a id="a-law-through-changing-coupling-along-one-run--testing-within-couplings"></a>[testing-within-couplings][] · <a id="a-law-through-changing-coupling-along-one-run--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="a-law-through-changing-coupling-along-one-run--becoming-renewal-reading"></a>[becoming-renewal-reading][]
 - [a-law-through-coupling-along-one-run][] ← <a id="a-law-through-coupling-along-one-run--a-law-through-a-projection-along-one-run"></a>[a-law-through-a-projection-along-one-run][] · <a id="a-law-through-coupling-along-one-run--determinacy-up-to-likeness"></a>[determinacy-up-to-likeness][] · <a id="a-law-through-coupling-along-one-run--testing-within-couplings"></a>[testing-within-couplings][] · <a id="a-law-through-coupling-along-one-run--becoming-dependence-dynamics"></a>[becoming-dependence-dynamics][] · <a id="a-law-through-coupling-along-one-run--becoming-renewal-reading"></a>[becoming-renewal-reading][]
 - [a-pattern-lasts-through-passing][] ← <a id="a-pattern-lasts-through-passing--whole-persists-through-generation"></a>[whole-persists-through-generation][]
+- [a-step-coupling-keeps-at-every-horizon][] ← <a id="a-step-coupling-keeps-at-every-horizon--keeping-forgoes-the-renewal-at-the-need"></a>[keeping-forgoes-the-renewal-at-the-need][] · <a id="a-step-coupling-keeps-at-every-horizon--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="a-step-coupling-keeps-at-every-horizon--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [acquired-binding-compositional-use][] ← <a id="acquired-binding-compositional-use--transition-grouping-word-partition"></a>[transition-grouping-word-partition][]
 - [acquired-revision-of-pending-task][] ← <a id="acquired-revision-of-pending-task--versioned-request-completion"></a>[versioned-request-completion][] · <a id="acquired-revision-of-pending-task--formed-goal-revision-continuation"></a>[formed-goal-revision-continuation][]
 - [additive-part-of-offspring-variance][] ← <a id="additive-part-of-offspring-variance--what-bounds-offspring-numbers"></a>[what-bounds-offspring-numbers][] · <a id="additive-part-of-offspring-variance--selection-term-over-generations"></a>[selection-term-over-generations][]
@@ -287,6 +288,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [a-law-through-changing-coupling-along-one-run]: theories/becoming/results/records/a-law-through-changing-coupling-along-one-run.md
 [a-law-through-coupling-along-one-run]: theories/becoming/results/records/a-law-through-coupling-along-one-run.md
 [a-pattern-lasts-through-passing]: theories/becoming/results/records/a-pattern-lasts-through-passing.md
+[a-step-coupling-keeps-at-every-horizon]: theories/becoming/results/records/a-step-coupling-keeps-at-every-horizon.md
 [acquired-binding-compositional-use]: theories/becoming/results/records/acquired-binding-compositional-use.md
 [acquired-revision-of-pending-task]: theories/becoming/results/records/acquired-revision-of-pending-task.md
 [additive-part-of-offspring-variance]: theories/becoming/results/records/additive-part-of-offspring-variance.md

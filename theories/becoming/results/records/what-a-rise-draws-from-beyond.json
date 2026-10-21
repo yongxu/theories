@@ -391,7 +391,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "1634b28f3667ea88678a1b78014e2e440cd421d6721d1036c6a7763cbfbace15"
+      "sha256": "61fc2af787ca7c9efba9034044bad40eae513b36b5a63c00a401b834339ed5aa"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",

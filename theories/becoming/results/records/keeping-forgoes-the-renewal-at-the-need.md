@@ -67,6 +67,9 @@ The exact penalty: a penalty beyond the value of a constraint makes the constrai
   - Preserved conditions: An order rising with the worth across the horizon. [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
 - related, not a proved adapter: [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md). Far-sight keeps the optimizer's own resource base; here what keeping anything else forgoes, and the coupling that keeps it.
 - related, not a proved adapter: [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md). An optimizer ranking each step loses a dependence where its draw exceeds the renewal; here an order ranking courses with a coupling.
+- related, not a proved adapter: [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md). A coupling added for each step the dependence is kept, which no horizon outweighs where it covers the renewal forgone a step and exceeds the end.
+
+**Used by:** [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -85,6 +88,7 @@ The exact penalty: a penalty beyond the value of a constraint makes the constrai
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T060215.969427Z/verification.json) | — |
 
 Aliases: `keeping forgoes the renewal at the need`, `what keeping a dependence forgoes over a horizon`, `the coupling needed to keep a dependence`, `far-sight outweighs a fixed coupling`, `保持依存放弃其所需处的更新`, `Becoming.Optimum.frontier_breaks_below`, `Becoming.Optimum.frontier_keeps_above`, `Becoming.Web.frontier_breaks_long`
 
@@ -92,6 +96,7 @@ Aliases: `keeping forgoes the renewal at the need`, `what keeping a dependence f
 ### History
 
 - 21 October 2026: added (SG6), what keeping a dependence forgoes over a horizon: the renewal given up at the need for each step and the need left at the end; a coupling below that leaves only optima breaking the dependence within the horizon, one beyond it only optima keeping it, both attained; where the need lies above every level of greatest renewal the amount grows with the horizon; study section 293.
+- 21 October 2026, SG7: a coupling added for each step the dependence is kept keeps it at every horizon where it covers the renewal forgone a step and exceeds the end (record a-step-coupling-keeps-at-every-horizon, study section 294); keeps_or_drops is now the case of keeps_or_falls; this record's laws and their statements are unchanged.
 
 </details>
 

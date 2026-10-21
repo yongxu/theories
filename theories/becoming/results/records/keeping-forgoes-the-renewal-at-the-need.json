@@ -239,6 +239,13 @@
         "en": "An optimizer ranking each step loses a dependence where its draw exceeds the renewal; here an order ranking courses with a coupling.",
         "zh": "对每一步排序的优化者在其汲取超过更新处丧失依存；此处为带耦合、对过程排序之序。"
       }
+    },
+    {
+      "id": "a-step-coupling-keeps-at-every-horizon",
+      "detail": {
+        "en": "A coupling added for each step the dependence is kept, which no horizon outweighs where it covers the renewal forgone a step and exceeds the end.",
+        "zh": "每保持依存一步就加入的耦合；它覆盖每步放弃的更新且超过终点时不被任何视野压过。"
+      }
     }
   ],
   "references": [
@@ -316,7 +323,7 @@
         "Becoming.Web.frontier_keeps",
         "Becoming.Web.frontier_keeps_above"
       ],
-      "sha256": "a1f43195cff6d41fc4817df4e447c16417ea09c7501a4720cc8fa3d901e7e976"
+      "sha256": "320dd59cf30d6d0ceb951e5e0e342ba7d3d8ae8cee5ea32faedc1e25cf7e4466"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -402,13 +409,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "1634b28f3667ea88678a1b78014e2e440cd421d6721d1036c6a7763cbfbace15"
+      "sha256": "61fc2af787ca7c9efba9034044bad40eae513b36b5a63c00a401b834339ed5aa"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T060215.969427Z/verification.json",
+      "role": "receipt",
+      "sha256": "69934241ea513a08301044bf1d2d8ddb3e4eeac55b1524eff9b332c481a209fa",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T052543.695066Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T060215.969427Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -467,6 +480,10 @@
     {
       "en": "21 October 2026: added (SG6), what keeping a dependence forgoes over a horizon: the renewal given up at the need for each step and the need left at the end; a coupling below that leaves only optima breaking the dependence within the horizon, one beyond it only optima keeping it, both attained; where the need lies above every level of greatest renewal the amount grows with the horizon; study section 293.",
       "zh": "2026年10月21日：新增（SG6），在视野上保持依存所放弃者：所需处每步放弃的更新与终了所留的所需；低于此量的耦合只留下在视野内打破依存的最优，高于此量的只留下保持它的最优，两者都取得；所需高于每个最大更新的水平时此量随视野增长；研究第 293 节。"
+    },
+    {
+      "en": "21 October 2026, SG7: a coupling added for each step the dependence is kept keeps it at every horizon where it covers the renewal forgone a step and exceeds the end (record a-step-coupling-keeps-at-every-horizon, study section 294); keeps_or_drops is now the case of keeps_or_falls; this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG7：每保持依存一步就加入的耦合，覆盖每步放弃的更新且超过终点时在每个视野都保持它（记录 a-step-coupling-keeps-at-every-horizon，研究第 294 节）；keeps_or_drops 现为 keeps_or_falls 的情形；本记录的定律及其陈述不变。"
     }
   ]
 }
