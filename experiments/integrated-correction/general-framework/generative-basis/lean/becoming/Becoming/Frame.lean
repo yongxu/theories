@@ -24,14 +24,16 @@ transitive, grows with the relation, is symmetric under a symmetric relation, an
 within it bears the relation to what lies beyond it (`WithinClosure.refl`,
 `WithinClosure.trans`, `WithinClosure.mono`, `WithinClosure.symm`, `WithinClosure.not_rel`).
 A region is an element's closure exactly when it holds the element, is closed and lies within
-the closure (`closure_iff_certified`). A process's reach is the closure of its steps
+the closure (`closure_iff_certified`). A group's closure is the union of its members' closures
+(`WithinClosureOf`). A process's reach is the closure of its steps
 (`reach_iff_withinClosure`), and an invariant is a region closed under them
 (`invariant_iff_closedUnder`), so what holds where a process starts and is kept by its steps
 holds wherever it reaches because the closure is closed (`Invariant.reach`). The closures of
 the later layers, under feeding, influence, reach, sharing, coupling and pooled coupling, and
 the scope a presupposition reaches, are this closure under their relations. `ClosedUnder`,
 `WithinClosure` and their laws moved here unchanged, with their names, from
-`Becoming.Feedback` (board item EC1, 21 October 2026), stated for elements of any type.
+`Becoming.Feedback`, and `WithinClosureOf` from `Becoming.Selection`, now defined as the union it
+was proved to be (board item EC1, 21 October 2026), all stated for elements of any type.
 -/
 
 namespace Becoming
@@ -137,6 +139,38 @@ theorem not_within_of_closed {X : Type u} {rel : X → X → Prop} {region : X �
     (closed : ClosedUnder rel region) (holds : region f) (outside : ¬ region g) :
     ¬ WithinClosure rel f g :=
   fun within => outside (within region closed holds)
+
+/-- `g` lies within a group's closure under a relation: within some member's closure. -/
+def WithinClosureOf {X : Type u} (rel : X → X → Prop) (group : X → Prop) (g : X) : Prop :=
+  ∃ f, group f ∧ WithinClosure rel f g
+
+/-- **A group's closure is the union of its members' closures**, by definition. -/
+theorem withinClosureOf_iff {X : Type u} {rel : X → X → Prop} {group : X → Prop} {g : X} :
+    WithinClosureOf rel group g ↔ ∃ f, group f ∧ WithinClosure rel f g :=
+  Iff.rfl
+
+/-- What lies within a member's closure lies within the group's. -/
+theorem WithinClosureOf.of_member {X : Type u} {rel : X → X → Prop} {group : X → Prop} {f g : X}
+    (member : group f) (within : WithinClosure rel f g) : WithinClosureOf rel group g :=
+  ⟨f, member, within⟩
+
+/-- A group's closure lies in every region closed under the relation that holds every member: it
+is the least such region. -/
+theorem WithinClosureOf.least {X : Type u} {rel : X → X → Prop} {group : X → Prop} {g : X}
+    (within : WithinClosureOf rel group g) (region : X → Prop) (closed : ClosedUnder rel region)
+    (holds : ∀ f, group f → region f) : region g :=
+  match within with
+  | ⟨f, member, inside⟩ => inside region closed (holds f member)
+
+/-- A group's closure is closed under the relation. -/
+theorem closedUnder_withinClosureOf {X : Type u} {rel : X → X → Prop} {group : X → Prop} :
+    ClosedUnder rel (WithinClosureOf rel group) :=
+  fun _ _ ⟨f, member, within⟩ related => ⟨f, member, within.trans (WithinClosure.of_rel related)⟩
+
+/-- The closure of the group holding one element is that element's closure. -/
+theorem withinClosureOf_single {X : Type u} {rel : X → X → Prop} {f g : X} :
+    WithinClosureOf rel (fun x => x = f) g ↔ WithinClosure rel f g :=
+  ⟨fun ⟨_, same, within⟩ => same ▸ within, fun within => ⟨f, rfl, within⟩⟩
 
 /-! ## Reachability -/
 

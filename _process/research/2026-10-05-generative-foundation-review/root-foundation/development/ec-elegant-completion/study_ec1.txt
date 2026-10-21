@@ -29,18 +29,22 @@ Board item EC, its first step ([Ren, 21 October 2026](../../../../sources/15-cod
   - Its laws are the closure's.
   - `Flow.WithinFeeding.across` is `WithinClosure.mono`, and `Flow.beyond_gives_nothing_across` is `WithinClosure.not_rel`.
   - `Flow.withinFeedingAcross_iff_of_unheld` is two monotonicity steps.
+- **The closure of a group is the union of its members' closures, by definition, at the frame.**
+  - `WithinClosureOf` moved from `Becoming.Selection` to `Becoming.Frame`. It had been defined by regions and proved to be the union (`withinClosureOf_iff`); it is now defined as the union, and `withinClosureOf_iff` holds by definition. The name is kept, since records, chapters and frozen predictions cite it.
+  - `WithinClosureOf.of_member`, `closedUnder_withinClosureOf` and `withinClosureOf_single` moved with it, reproved from the union.
+  - New: the group's closure lies in every closed region holding the group (`WithinClosureOf.least`). The one proof that read the old definition by regions (`Clearing.reading_clearer_unselected`, `Becoming.SelectionPool`) uses it.
+  - Its consumers in `Becoming.Selection`, `Becoming.SelectionPool` and `Becoming.PoolResponse` read the union directly.
 - **The seed–edge closure is derived from reach.** `withinClosure_iff_closure` (`Becoming.EdgeClosure`) is now derived from reach being the closure of the steps, and the module imports only the frame.
 - The certified examples (`Clearing.fedClosed`, `Clearing.dependenceRegion_closed`, `Provision.young_alone`, `Trophic.fed_closed`) are restated for the closedness under being fed at some step.
 
 **Delta.**
 - One closure law at the lowest layer that holds a relation, the frame.
 - A process's reach and invariants are read through it.
-- Two closures that had their own definitions and proofs (feeding, and feeding across steps) are instances by definition.
+- Three closures that had their own definitions and proofs (feeding, feeding across steps, and the closure of a group) are instances by definition.
 - One theorem beside a definition is gone, and one module (EdgeClosure) is lowered.
 - No result is weakened and no statement's meaning changes. The feeding closure was already proved equivalent to the closure under being fed, and now is it.
 
 **Not done here, and why.**
-- `WithinClosureOf` (the closure of a group, `Becoming.Selection`) already reaches `WithinClosure` through `WithinClosureOf.of_member` and `withinClosureOf_iff`. Defining it as the union of the members' closures would change `Becoming.SelectionPool`, which AP2 is editing, so it waits for AP2's landing.
 - The one-link transmission of significance (`Neutral` along `LivesOn`, `Descends`), the loop chains of `Becoming.Loops` and the waiting chains of `Becoming.Withholding` belong to later EC steps:
   - significance is EC4;
   - the time-ordered chains need a closure over events, not formations.

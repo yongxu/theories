@@ -67,14 +67,21 @@ def add(rec, mod, names):
             r['declarations'].append(n)
 
 
+FROM_SELECTION = ['Becoming.WithinClosureOf', 'Becoming.WithinClosureOf.of_member',
+                  'Becoming.closedUnder_withinClosureOf', 'Becoming.withinClosureOf_iff',
+                  'Becoming.withinClosureOf_single']
+for n in FROM_SELECTION:
+    assert n in elab['Becoming.Frame'], n
 changed = {}
 for f in sorted(RECORDS.glob('*.json')):
     rec = json.loads(f.read_text())
     moved = []
     for r in list(rec['references']):
-        if r['path'] != src('Feedback') or not r.get('declarations'):
+        if r['path'] not in (src('Feedback'), src('Selection')) or not r.get('declarations'):
             continue
-        for names, mod in ((TO_FRAME, 'Frame'), (TO_INTER, 'Interdependence')):
+        pairs = ((TO_FRAME, 'Frame'), (TO_INTER, 'Interdependence')) if r['path'] == src('Feedback') \
+            else ((FROM_SELECTION, 'Frame'),)
+        for names, mod in pairs:
             hit = [n for n in r['declarations'] if n in names]
             if hit:
                 r['declarations'] = [n for n in r['declarations'] if n not in hit]
