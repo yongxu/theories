@@ -69,7 +69,7 @@ Zhuang and Hadfield-Menell (NeurIPS 2020), Theorem 1: optimizing a proxy that re
 - related, not a proved adapter: [raising-what-couples-in-draws-from-beyond](raising-what-couples-in-draws-from-beyond.md). Raising what couples in is paid from beyond; an optimum takes the beyond to the least level where that leaves room.
 - related, not a proved adapter: [room-read-off-the-exchange](room-read-off-the-exchange.md). Derives the room this record supplies, for one step of exchange.
 
-**Used by:** [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md) · [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md) · [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md) · [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md) · [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md) · [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md) · [room-read-off-the-exchange](room-read-off-the-exchange.md)
+**Used by:** [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md) · [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md) · [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md) · [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md) · [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md) · [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md) · [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md) · [room-read-off-the-exchange](room-read-off-the-exchange.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -91,6 +91,7 @@ Zhuang and Hadfield-Menell (NeurIPS 2020), Theorem 1: optimizing a proxy that re
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T060215.969427Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T063915.104780Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T070401.903190Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json) | — |
 
 Aliases: `what an optimum does beyond what couples in`, `the drive to the least level`, `optimizing a proxy`, `最优对耦合入者之外做什么`, `Becoming.Optimum.least_iff`, `Becoming.Web.optimum_broken_iff`, `Becoming.Flow.keeping_optimum_takes_slack`
 

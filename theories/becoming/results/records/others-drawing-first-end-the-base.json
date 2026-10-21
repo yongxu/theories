@@ -1,0 +1,533 @@
+{
+  "schema_version": 2,
+  "id": "others-drawing-first-end-the-base",
+  "title": {
+    "en": "Others drawing first end the base",
+    "zh": "他者先抽取则终结基础"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F04",
+  "reviewed_at_utc": "2026-10-21T08:07:58+00:00",
+  "statement": {
+    "en": "The far-sighted weighted optimum laws hold over any law of what stands; where others first draw from what an optimizer leaves at least what the remainder renews, every optimum of an order whose weighting falls at every step ends the base at once.",
+    "zh": "远见加权最优之律对任一“所立之律”成立；他者先从优化者所留中抽取不少于剩余之更新时，权重每步下降之序的每个最优都立即终结基础。"
+  },
+  "laws": [
+    {
+      "en": "Under any law G of what stands, a level z at the step from t giving G t z: what could be drawn changes from step to step by what stands at the level left, weighted at the next step, against it held; a course gaining the most against every open course and leaving nothing is an optimum, every optimum gains what it does, and every optimum stands below a need above every level of greatest gain.",
+      "zh": "在任一“所立之律” G 下（水平 z 在自 t 之步给出 G t z）：可抽取者每步按所留水平处所立者（下一步加权）对其被保持（本步加权）而变；对每个开放进程增益最大且最后不留的进程是最优，每个最优增益与它相同，并低于每个最大增益水平之上的需要。",
+      "declarations": [
+        "Becoming.Optimum.Next.Open",
+        "Becoming.Optimum.Next.weighted",
+        "Becoming.Optimum.Next.drawable",
+        "Becoming.Optimum.Next.weighted_add_left",
+        "Becoming.Optimum.Next.drawable_step",
+        "Becoming.Optimum.Next.drawable_le_of_gains",
+        "Becoming.Optimum.Next.drawable_lt_of_gains",
+        "Becoming.Optimum.Next.weighted_of_ends",
+        "Becoming.Optimum.Next.weighted_le_of_gains",
+        "Becoming.Optimum.Next.weighted_lt_of_gains",
+        "Becoming.Optimum.Next.GainsMost",
+        "Becoming.Optimum.Next.gainsMost_of_greatest",
+        "Becoming.Optimum.Next.frontier_of_gainsMost",
+        "Becoming.Optimum.Next.frontier_gains_of_most",
+        "Becoming.Optimum.Next.frontier_below",
+        "Becoming.Web.Next.frontier_broken"
+      ]
+    },
+    {
+      "en": "Holding a level y of greatest weighted gain, where what stands at y is at least y, is an optimum; where the weighting falls faster than what stands at every positive level rises over it, every optimum ends the base at once, breaking every dependence on it; where nothing stands at nothing and some level within reach rises faster, no optimum ends it at once.",
+      "zh": "在 y 处所立者不少于 y 时，保持最大加权增益的水平 y 是最优；权重下降快于每个正水平处所立者高出水平之速时，每个最优立即终结基础，破坏对它的每个依存；零处无所立且某可及水平升得更快时，没有最优立即终结它。",
+      "declarations": [
+        "Becoming.Optimum.Next.holding_within",
+        "Becoming.Optimum.Next.holding_open",
+        "Becoming.Optimum.Next.holding_frontier",
+        "Becoming.Optimum.Next.outpaced_greatest",
+        "Becoming.Optimum.Next.outpaced_above",
+        "Becoming.Optimum.Next.exhausting_frontier",
+        "Becoming.Optimum.Next.frontier_exhausts",
+        "Becoming.Optimum.Next.ended_outdrawn",
+        "Becoming.Optimum.Next.stays_empty",
+        "Becoming.Optimum.Next.frontier_leaves",
+        "Becoming.Web.Next.frontier_exhausts",
+        "Becoming.Web.Next.frontier_leaves"
+      ]
+    },
+    {
+      "en": "Where what stands rises with the level below y and is at least y at y, nothing open rises faster than the course rising as fast as what stands allows; where the weighted gain rises up to y and is greatest there, that course is an optimum; where it rises strictly, every optimum follows it below y, drawing nothing, restoring every dependence whose need it meets, and stands at y after where y gains the most strictly.",
+      "zh": "所立者在 y 之下随水平上升且在 y 处不少于 y 时，没有开放进程比按所立尽快上升的进程升得更快；加权增益升至 y 且在那里最大时它是最优；严格上升时，每个最优在 y 之下随它、不抽取，恢复其需要被满足的每个依存，y 增益严格最大时此后处于 y。",
+      "declarations": [
+        "Becoming.Optimum.Next.rise",
+        "Becoming.Optimum.Next.rebuilding",
+        "Becoming.Optimum.Next.rise_succ",
+        "Becoming.Optimum.Next.rise_le",
+        "Becoming.Optimum.Next.rise_le_top",
+        "Becoming.Optimum.Next.rise_within",
+        "Becoming.Optimum.Next.rise_of_below",
+        "Becoming.Optimum.Next.rise_at_top",
+        "Becoming.Optimum.Next.rise_below_before",
+        "Becoming.Optimum.Next.rise_stays",
+        "Becoming.Optimum.Next.le_rise",
+        "Becoming.Optimum.Next.rebuilding_before",
+        "Becoming.Optimum.Next.rebuilding_after",
+        "Becoming.Optimum.Next.rebuilding_at",
+        "Becoming.Optimum.Next.rebuilding_within",
+        "Becoming.Optimum.Next.rebuilding_le_cap",
+        "Becoming.Optimum.Next.rebuilding_open",
+        "Becoming.Optimum.Next.rebuilding_gainsMost",
+        "Becoming.Optimum.Next.rebuilding_frontier",
+        "Becoming.Optimum.Next.frontier_rebuilds",
+        "Becoming.Optimum.Next.frontier_rebuilt",
+        "Becoming.Web.Next.frontier_rebuilds"
+      ]
+    },
+    {
+      "en": "Where at each step what stands at a level is at most the level, every optimum of every order whose weighting falls at every step stands at nothing from the first step; where it is less than every positive level, so under positive weights rising at no step. Where others first leave K t z of z and that renews by R, what stands is K t z + R (K t z), and every dependence on the base is broken at the first step.",
+      "zh": "每步各水平处所立者不超过水平时，权重每步下降之序的每个最优自第一步起处于零；少于每个正水平时，正且不上升的权重下亦然。他者先从 z 中留下 K t z、它按 R 更新时，所立者为 K t z + R (K t z)，对基础的每个依存在第一步被破坏。",
+      "declarations": [
+        "Becoming.Optimum.Next.leftBy",
+        "Becoming.Optimum.Next.frontier_ends_of_le",
+        "Becoming.Optimum.Next.frontier_ends_of_lt",
+        "Becoming.Optimum.Next.frontier_ends_drawn_first",
+        "Becoming.Optimum.Next.frontier_ends_drawn_more",
+        "Becoming.Web.Next.frontier_ends_drawn_first",
+        "Becoming.Web.Next.frontier_ends_drawn_more"
+      ]
+    },
+    {
+      "en": "Witness: a source doubling up to eight, from two, capacity sixteen, over n + 3 steps: under w (t + 1) ≤ w t < 2 w (t + 1), alone every optimum stands at four, then eight; with others first drawing all but a quarter, every optimum ends it and breaks the dweller; drawing all but half, every optimum ends it under weights falling at every step, and at equal weights ending and holding at two are both optima.",
+      "zh": "见证：源每级翻倍至八，自二、容量十六、n + 3 步：w (t + 1) ≤ w t < 2 w (t + 1) 下，单独时每个最优处于四、再八；他者先抽取到只剩四分之一时，每个最优终结它并破坏居者；只剩一半时，权重每步下降下每个最优终结它，同权时终结与保持在二都是最优。",
+      "declarations": [
+        "Becoming.Optimum.Holding.halved",
+        "Becoming.Optimum.Holding.halved_twice",
+        "Becoming.Optimum.Holding.halved_left_le",
+        "Becoming.Optimum.Holding.halved_lt",
+        "Becoming.Optimum.Holding.quartered_left_lt",
+        "Becoming.Optimum.Holding.halfLeft",
+        "Becoming.Optimum.Holding.quarterLeft",
+        "Becoming.Optimum.Holding.linear_falls",
+        "Becoming.Optimum.Holding.doubling_drawn_first",
+        "Becoming.Optimum.Holding.doubling_drawn_first_linear"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Discrete steps, natural amounts, natural weights. Any law G of what stands; holding or rising to y needs what stands at y at least y; otherwise the premises of SG8's and SG9's laws with G t z for z + R z. For others drawing first: what they leave of every level, with its renewal, at most the level and a weighting falling at every step, or less and positive weights rising at no step.",
+      "zh": "不加公理。离散步、自然数量与自然数权重。任一“所立之律” G；保持或升至 y 需 y 处所立者不少于 y；其余为 SG8、SG9 之律的前提，以 G t z 代 z + R z。他者先抽取：所留连同更新不超过水平且权重每步下降，或少于水平且权重为正不上升。"
+    },
+    {
+      "en": "A capacity covering what stands at the start and at nothing; for the web laws, a dependence met at the start with a positive need. The others' draws are a supplied rule reading the level; which formation optimizes, by which order, weighting, capacity and horizon, and the law of what stands are supplied.",
+      "zh": "容量足以承担起点处与零处所立者；对网之律，起始时被满足、需要为正的依存。他者的抽取是读取水平的给定规则；哪个构成优化、按何序、权重、容量与视野，以及所立之律，都是给定的。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the others' rule is itself a best response: this is one optimizer's side of the dynamic commons, not a mutual best response among several optimizers ranking courses, nor how optimizers come to one.",
+      "zh": "他者的规则本身是最优回应：这是动态公地中一个优化者的一侧，不是多个对过程排序的优化者之间的相互最优回应，也不是优化者如何达到它。",
+      "kind": "scope"
+    },
+    {
+      "en": "Holding a level where what stands at it falls below it; an order valuing what is left at the horizon; steps met again after a fall; an overcompensating renewal.",
+      "zh": "在其处所立者低于它的水平上保持；对视野末所留赋值之序；跌落后再被满足的步；过度补偿的更新。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a base ought to be kept, or that others ought not to draw: no evaluation enters; the laws say what the optima of an order do.",
+      "zh": "基础应当被保持，或他者不应抽取：没有评价进入；这些律只说一个序的最优做什么。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T075336.250274Z): the 67 declarations Becoming.Optimum gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 298; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T075336.250274Z）：Becoming.Optimum 新增的 67 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 298 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Several optimizers each ranking courses at a mutual best response, and how they come to one; an order valuing what is left at the horizon; steps met again after a fall; an overcompensating renewal; an independent review.",
+    "zh": "多个各自对过程排序的优化者的相互最优回应及其如何达到；对视野末所留赋值之序；跌落后再被满足的步；过度补偿的更新；独立审查。"
+  },
+  "correspondence": {
+    "en": "Open access dissipates the rent of a common stock, what one harvester leaves being taken by another (Gordon 1954); in the dynamic commons each player's far-sight is cut by the others' draws, the equilibrium stock falling as players are added (Levhari and Mirman 1980; Clark 1990). On the spine, one optimizer's side, exact for every order rising with the weighted draw: the threshold for ending the base at once moves from what the base renews to what the others' leaving renews, and the same order that rebuilds the base alone ends it among others. The far-sighted laws hold over any law of what stands, decay and changing renewal among the cases. Reading (the AI's): keeping a shared base is not one optimizer's to give; the destruction comes from the relation, not from any change in the optimizer.",
+    "zh": "开放进入耗散共有存量的租金，一个收获者所留被另一个拿走（Gordon 1954）；在动态公地中，每个参与者的远见被他者的抽取削减，均衡存量随参与者增加而下降（Levhari 与 Mirman 1980；Clark 1990）。在脊柱上是一个优化者的一侧，对随加权抽取升高的每个序都精确：立即终结基础的阈值从基础的更新移到他者所留的更新，单独时重建基础的同一序在他者之中终结它。远见之律对任一所立之律成立，衰减与变化的更新都是其情形。读法（AI 的）：保持共享的基础不是一个优化者所能给予的；破坏来自关系，而非优化者的任何改变。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "others drawing first end the base",
+    "over every law of what stands",
+    "the dynamic commons",
+    "open-access dissipation",
+    "他者先抽取则终结基础",
+    "Becoming.Optimum.Next.frontier_ends_drawn_first",
+    "Becoming.Web.Next.frontier_ends_drawn_first",
+    "Becoming.Optimum.Next.frontier_exhausts"
+  ],
+  "dependencies": [
+    {
+      "id": "a-weighting-faster-than-renewal-ends-the-base",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Every law of the weighted draw restated over any law of what stands; this record's laws are now the case where what stands is the level with its renewal.",
+        "zh": "加权抽取的每条规律对任一所立之律重述；该记录之律现为所立者为水平加更新的情形。"
+      },
+      "interface": {
+        "output": {
+          "en": "The weighted draw, the comparison against a course gaining the most and ending at once.",
+          "zh": "加权抽取、相对于增益最大进程的比较与立即终结。"
+        },
+        "input": {
+          "en": "The same laws over any law of what stands.",
+          "zh": "同样的规律，对任一所立之律。"
+        },
+        "conditions": {
+          "en": "Natural weights; courses open from a start.",
+          "zh": "自然数权重；自起点开放的过程。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    },
+    {
+      "id": "optima-rebuild-a-depleted-base",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Rebuilding from below restated over any law of what stands; the witness's alone branch uses its laws.",
+        "zh": "自下重建对任一所立之律重述；见证的单独分支用其规律。"
+      },
+      "interface": {
+        "output": {
+          "en": "The rising and rebuilding courses and every optimum following them.",
+          "zh": "上升与重建的进程，及随之的每个最优。"
+        },
+        "input": {
+          "en": "The same over any law of what stands, with what stands at y at least y.",
+          "zh": "对任一所立之律同样成立，y 处所立者不少于 y。"
+        },
+        "conditions": {
+          "en": "What stands rising with the level below y.",
+          "zh": "所立者在 y 之下随水平上升。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    },
+    {
+      "id": "horizon-optima-hold-the-greatest-renewal",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The holding course, what a step draws (drawnAt) and the open courses, of which the general open courses are the form over any law.",
+        "zh": "保持的进程、一步所抽取（drawnAt）与开放的过程，一般的开放过程是其对任一律的形式。"
+      },
+      "interface": {
+        "output": {
+          "en": "The courses open from a start.",
+          "zh": "自起点开放的过程。"
+        },
+        "input": {
+          "en": "The courses open under a law of what stands.",
+          "zh": "在所立之律下开放的过程。"
+        },
+        "conditions": {
+          "en": "Each step leaving at most what stands and drawing at most k.",
+          "zh": "每步所留不超过所立者、所抽取至多 k。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    },
+    {
+      "id": "what-an-optimum-does-beyond-what-couples-in",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The optima are the frontier of an order (Requirement.Frontier); the witness uses the Diversion places and web, the dweller depending on the source at need two.",
+        "zh": "最优是一个序的前沿（Requirement.Frontier）；见证用 Diversion 的处所与网，居者在需要二处依存于源。"
+      },
+      "interface": {
+        "output": {
+          "en": "The frontier of an order rising with what the part gains.",
+          "zh": "随部分所得升高之序的前沿。"
+        },
+        "input": {
+          "en": "The frontier over courses ranked by the weighted draw.",
+          "zh": "按加权抽取排序的过程上的前沿。"
+        },
+        "conditions": {
+          "en": "An order rising with the weighted draw across the horizon.",
+          "zh": "随视野内加权抽取升高之序。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "several-optimizers-drain-by-their-joint-capacity",
+      "detail": {
+        "en": "In one step several optimizers at a mutual best response drain as one; over a course, others drawing first end what far-sight alone keeps.",
+        "zh": "一步中多个处于相互最优回应的优化者如一般耗竭；在过程上，他者先抽取则终结远见单独时所保持者。"
+      }
+    },
+    {
+      "id": "optima-rebuild-a-depleted-base",
+      "detail": {
+        "en": "Alone, every optimum rebuilds a depleted base; with others drawing first, the same order ends it.",
+        "zh": "单独时每个最优重建耗竭的基础；他者先抽取时，同一序终结它。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.GainsMost",
+        "Becoming.Optimum.Holding.doubling",
+        "Becoming.Optimum.Holding.doubling_above",
+        "Becoming.Optimum.Holding.doubling_drawn_first",
+        "Becoming.Optimum.Holding.doubling_drawn_first_linear",
+        "Becoming.Optimum.Holding.doubling_grows",
+        "Becoming.Optimum.Holding.doubling_high",
+        "Becoming.Optimum.Holding.doubling_low",
+        "Becoming.Optimum.Holding.doubling_rises",
+        "Becoming.Optimum.Holding.doubling_rises_strictly",
+        "Becoming.Optimum.Holding.doubling_top",
+        "Becoming.Optimum.Holding.halfLeft",
+        "Becoming.Optimum.Holding.halved",
+        "Becoming.Optimum.Holding.halved_left_le",
+        "Becoming.Optimum.Holding.halved_lt",
+        "Becoming.Optimum.Holding.halved_twice",
+        "Becoming.Optimum.Holding.linear_falls",
+        "Becoming.Optimum.Holding.mul_lt_of_pos",
+        "Becoming.Optimum.Holding.onSource",
+        "Becoming.Optimum.Holding.pos_of_lt_two_mul",
+        "Becoming.Optimum.Holding.quarterLeft",
+        "Becoming.Optimum.Holding.quartered_left_lt",
+        "Becoming.Optimum.Next.GainsMost",
+        "Becoming.Optimum.Next.Open",
+        "Becoming.Optimum.Next.drawable",
+        "Becoming.Optimum.Next.drawable_le_of_gains",
+        "Becoming.Optimum.Next.drawable_lt_of_gains",
+        "Becoming.Optimum.Next.drawable_step",
+        "Becoming.Optimum.Next.ended_outdrawn",
+        "Becoming.Optimum.Next.exhausting_frontier",
+        "Becoming.Optimum.Next.frontier_below",
+        "Becoming.Optimum.Next.frontier_ends_drawn_first",
+        "Becoming.Optimum.Next.frontier_ends_drawn_more",
+        "Becoming.Optimum.Next.frontier_ends_of_le",
+        "Becoming.Optimum.Next.frontier_ends_of_lt",
+        "Becoming.Optimum.Next.frontier_exhausts",
+        "Becoming.Optimum.Next.frontier_gains_of_most",
+        "Becoming.Optimum.Next.frontier_leaves",
+        "Becoming.Optimum.Next.frontier_of_gainsMost",
+        "Becoming.Optimum.Next.frontier_rebuilds",
+        "Becoming.Optimum.Next.frontier_rebuilt",
+        "Becoming.Optimum.Next.gainsMost_of_greatest",
+        "Becoming.Optimum.Next.holding_frontier",
+        "Becoming.Optimum.Next.holding_open",
+        "Becoming.Optimum.Next.holding_within",
+        "Becoming.Optimum.Next.le_rise",
+        "Becoming.Optimum.Next.leftBy",
+        "Becoming.Optimum.Next.outpaced_above",
+        "Becoming.Optimum.Next.outpaced_greatest",
+        "Becoming.Optimum.Next.rebuilding",
+        "Becoming.Optimum.Next.rebuilding_after",
+        "Becoming.Optimum.Next.rebuilding_at",
+        "Becoming.Optimum.Next.rebuilding_before",
+        "Becoming.Optimum.Next.rebuilding_frontier",
+        "Becoming.Optimum.Next.rebuilding_gainsMost",
+        "Becoming.Optimum.Next.rebuilding_le_cap",
+        "Becoming.Optimum.Next.rebuilding_open",
+        "Becoming.Optimum.Next.rebuilding_within",
+        "Becoming.Optimum.Next.rise",
+        "Becoming.Optimum.Next.rise_at_top",
+        "Becoming.Optimum.Next.rise_below_before",
+        "Becoming.Optimum.Next.rise_le",
+        "Becoming.Optimum.Next.rise_le_top",
+        "Becoming.Optimum.Next.rise_of_below",
+        "Becoming.Optimum.Next.rise_stays",
+        "Becoming.Optimum.Next.rise_succ",
+        "Becoming.Optimum.Next.rise_within",
+        "Becoming.Optimum.Next.stays_empty",
+        "Becoming.Optimum.Next.weighted",
+        "Becoming.Optimum.Next.weighted_add_left",
+        "Becoming.Optimum.Next.weighted_le_of_gains",
+        "Becoming.Optimum.Next.weighted_lt_of_gains",
+        "Becoming.Optimum.Next.weighted_of_ends",
+        "Becoming.Optimum.OpenCourse",
+        "Becoming.Optimum.add_steps",
+        "Becoming.Optimum.drawnAt",
+        "Becoming.Optimum.frontier_exhausts",
+        "Becoming.Optimum.frontier_rebuilds",
+        "Becoming.Optimum.frontier_rebuilt",
+        "Becoming.Optimum.holding",
+        "Becoming.Optimum.holding_after",
+        "Becoming.Optimum.holding_before",
+        "Becoming.Optimum.holding_gains",
+        "Becoming.Optimum.rebuilding",
+        "Becoming.Optimum.rise",
+        "Becoming.Optimum.rise_stays",
+        "Becoming.Optimum.sub_le_sub_right_of_le",
+        "Becoming.Optimum.weightedOver",
+        "Becoming.Web.Next.frontier_broken",
+        "Becoming.Web.Next.frontier_ends_drawn_first",
+        "Becoming.Web.Next.frontier_ends_drawn_more",
+        "Becoming.Web.Next.frontier_exhausts",
+        "Becoming.Web.Next.frontier_leaves",
+        "Becoming.Web.Next.frontier_rebuilds"
+      ],
+      "sha256": "7526caba61894416df89321f15812f042f552a482ec14693433e39a5d1f69d07"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Naturals.add_sub_cancel_left",
+        "Becoming.Naturals.add_sub_of_le",
+        "Becoming.Naturals.le_of_add_le_add_right",
+        "Becoming.le_dest"
+      ],
+      "sha256": "806e95fad20b5a22ad532429698511ec066b63e9160a1018f1b7a736e6724176"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web"
+      ],
+      "sha256": "9d05b714c28d3497235330e5d5fb4221415ea3ae25ec32d730425299b5479428"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Amounts.sum",
+        "Becoming.Amounts.whole"
+      ],
+      "sha256": "dd51aa6f8eaafe4731e5a64462eb176d5c3e19392a162e25095f58bf4fe2b9f7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.Broken"
+      ],
+      "sha256": "1c85d21fa7ec00debcac668785b51fdd7cdc3a97a66d50c6700047956cdaf5df"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Restoration.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Web.RestoredWithin"
+      ],
+      "sha256": "15ca795c65405065276fa214f3a151c19f31fc9c8923e2e37e37554b17ee8aa7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Diversion.Formation",
+        "Becoming.Diversion.Place",
+        "Becoming.Diversion.web"
+      ],
+      "sha256": "8f41fcf1bdbab92ede8b09ba5e9ce414ef8c42ea7be46f596eaf54bfec2287ce"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Requirement.Frontier"
+      ],
+      "sha256": "bf3ecf28d3d7dd5b196ff64a69e1a8cfc7fcd329c7c35732aa77f650c6648525"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
+      "role": "receipt",
+      "sha256": "28d96baae09ab3e50503bcb9858b62f27ad9ec6f905c7fc97a0390a0fbb18004"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "86cf7c3777c7eeaf542ba1617dfafa40b64c34ab24990ee944a2e432d670fa24"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "045ab203c69465259d6a3be7d126146b74d2078502759e49c7e99cb18d5e8a48"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "a2bf60a23cd97c1f79ada7f8e9d296db1cb1cc1e7349f702e389ba112fc566b2"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.World",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Amounts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Dependence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Restoration.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Restoration",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Selection",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frontier",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (SG10), over every law of what stands: SG8's and SG9's laws hold over any law of what a level gives at a step, the renewal law the case; where others first draw from what an optimizer leaves at least what the remainder renews, every optimum of an order whose weighting falls at every step ends the base at once; study section 298.",
+      "zh": "2026年10月21日：新增（SG10），对每一所立之律：SG8 与 SG9 之律对一个水平在一步给出什么的任一律成立，更新之律是其情形；他者先从优化者所留中抽取不少于剩余之更新时，权重每步下降之序的每个最优立即终结基础；研究第 298 节。"
+    }
+  ]
+}

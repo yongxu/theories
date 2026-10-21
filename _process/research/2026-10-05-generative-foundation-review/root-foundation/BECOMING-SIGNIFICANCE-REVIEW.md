@@ -966,3 +966,22 @@ Evidence: the prior forms from memory, not reread; Lean in the record's receipt
 Boundary: AI check, one session; an overcompensating renewal, a gain with several peaks, an order valuing what is left at the horizon, steps met again after a fall and several optimizers ranking courses not stated; the witness's law and capacity chosen
 Integration: chapter §3.4, §7.1, §8.1 item 10 and the relation-to-known-results row 6
 ```
+
+<a id="drawn-first-check"></a>
+## A check: others drawing first (21 October 2026, SG10)
+
+An AI check (one session, 21 October), made while the Lean was written, of what SG8 ([weighted check](#weighted-check)) and SG9 ([rebuilding check](#rebuilding-check)) left open: whether their laws need the renewal form, and what a far-sighted optimizer does where others draw from the same base. **Verdict: the mathematics is known in its kind. Under open access the rent of a common stock is dissipated, what one harvester leaves being taken by another, and in the dynamic commons each player's far-sight is cut by the others' draws, the equilibrium stock falling as players are added. The spine's form is one optimizer's side of it, exact for every order rising with the weighted draw: the threshold for ending the base at once moves from what the base renews to what the others' leaving renews, so the same order that rebuilds a base alone ends it among others. That the far-sighted laws hold over any law of what stands, decay, changing renewal and others' draws being cases, is the form's own step. It is not an equilibrium result: the others' draws are a supplied rule.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Open access dissipates the rent of a common stock: no harvester gains from leaving what another will take | Gordon, "The Economic Theory of a Common-Property Resource: The Fishery", Journal of Political Economy 62 (1954) (from memory) | Where others first draw at least what the remainder renews, what an optimizer leaves stands no higher at the next step, and every optimum of every order whose weighting falls at every step ends the base at once (`Optimum.Next.frontier_ends_drawn_first`, `Web.Next.frontier_ends_drawn_first`) |
+| The dynamic commons: with several players drawing a renewing stock, each with its own far-sight, the equilibrium stock is lower than one owner's and falls as players are added | Levhari and Mirman, "The Great Fish War", Bell Journal of Economics 11 (1980); Clark, *Mathematical Bioeconomics*, second edition (1990) (from memory) | One optimizer's side, exact: given the others' rule, every optimum ends the base where their leaving renews at most to the level under any falling weighting, and where less under any positive weighting rising at no step (`Optimum.Next.frontier_ends_drawn_more`); in the witness the same order rebuilds the base alone (`Optimum.Holding.doubling_drawn_first`, `doubling_drawn_first_linear`). Not derived: that the others' rule is itself a best response |
+
+```text
+Result(s): new record others-drawing-first-end-the-base (SG10, new laws of Becoming.Optimum)
+Delta: SG8's and SG9's laws hold over any law of what stands, the renewal law the case; where others first draw from what an optimizer leaves at least what the remainder renews, every optimum of an order whose weighting falls at every step ends the base at once, and where they draw more, every optimum of an order with positive weights rising at no step; every dependence on the base with a positive need is broken at the first step
+Supplied premises / correspondence: any law of what stands; the others' draws a rule reading the level; weights falling at every step (or positive, rising at no step); capacities covering what stands at the start and at nothing; natural weights; discrete steps. Correspondence: Gordon 1954; Levhari and Mirman 1980; Clark 1990
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; not an equilibrium: whether the others' rule is a best response, a mutual best response among several optimizers ranking courses and how optimizers come to one are not stated; the witness's law, rule and capacity chosen
+Integration: chapter §3.4, §7.1, §8.1 item 10 and the relation-to-known-results row 6
+```

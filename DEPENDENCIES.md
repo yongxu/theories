@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-319 registered results: 299 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 799 curated edges join 272 results to the results they draw on.
+320 registered results: 300 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 803 curated edges join 273 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -168,6 +168,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [orders-as-a-sum-over-histories][] ← <a id="orders-as-a-sum-over-histories--losses-of-the-sum-over-histories"></a>[losses-of-the-sum-over-histories][] · <a id="orders-as-a-sum-over-histories--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][]
 - [organizational-formation-from-generative-comparison][] ← <a id="organizational-formation-from-generative-comparison--practical-judgment-under-living-significance"></a>[practical-judgment-under-living-significance][] · <a id="organizational-formation-from-generative-comparison--alignment-direction-under-widening"></a>[alignment-direction-under-widening][] *(interpretive)*
 - [organizational-rule-inheritance][] ← <a id="organizational-rule-inheritance--recurrent-chain-assembly"></a>[recurrent-chain-assembly][] *(interpretive)*
+- [others-drawing-first-end-the-base][] ← <a id="others-drawing-first-end-the-base--a-weighting-faster-than-renewal-ends-the-base"></a>[a-weighting-faster-than-renewal-ends-the-base][] · <a id="others-drawing-first-end-the-base--optima-rebuild-a-depleted-base"></a>[optima-rebuild-a-depleted-base][] · <a id="others-drawing-first-end-the-base--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="others-drawing-first-end-the-base--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [own-count-misses-joint-excess][] ← <a id="own-count-misses-joint-excess--more-needs-renewers"></a>[more-needs-renewers][] · <a id="own-count-misses-joint-excess--renewing-consuming-formation"></a>[renewing-consuming-formation][] *(interpretive)* · <a id="own-count-misses-joint-excess--laws-of-one-step"></a>[laws-of-one-step][]
 - [own-good-to-reachable-living-significance][] ← <a id="own-good-to-reachable-living-significance--positive-ground-open-futures"></a>[positive-ground-open-futures][]
 - [own-widening-within-the-margin][] ← <a id="own-widening-within-the-margin--four-cases-of-a-part"></a>[four-cases-of-a-part][]
@@ -458,6 +459,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [orders-as-a-sum-over-histories]: theories/becoming/results/records/orders-as-a-sum-over-histories.md
 [organizational-formation-from-generative-comparison]: theories/becoming/results/records/organizational-formation-from-generative-comparison.md
 [organizational-rule-inheritance]: theories/becoming/results/records/organizational-rule-inheritance.md
+[others-drawing-first-end-the-base]: theories/becoming/results/records/others-drawing-first-end-the-base.md
 [own-count-misses-joint-excess]: theories/becoming/results/records/own-count-misses-joint-excess.md
 [own-good-to-reachable-living-significance]: theories/becoming/results/records/own-good-to-reachable-living-significance.md
 [own-widening-within-the-margin]: theories/becoming/results/records/own-widening-within-the-margin.md

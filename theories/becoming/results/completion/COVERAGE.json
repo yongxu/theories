@@ -114,7 +114,8 @@
         "keeping-forgoes-the-renewal-at-the-need",
         "a-step-coupling-keeps-at-every-horizon",
         "a-weighting-faster-than-renewal-ends-the-base",
-        "optima-rebuild-a-depleted-base"
+        "optima-rebuild-a-depleted-base",
+        "others-drawing-first-end-the-base"
       ],
       "declarations": [
         "Becoming.Flow.Balances.consumption_ends_with_feeders",
@@ -129,7 +130,8 @@
         "Becoming.Web.frontier_breaks_below",
         "Becoming.Web.frontier_keeps_stepwise",
         "Becoming.Web.frontier_exhausts",
-        "Becoming.Web.frontier_rebuilds"
+        "Becoming.Web.frontier_rebuilds",
+        "Becoming.Web.Next.frontier_ends_drawn_first"
       ],
       "status": "proved",
       "open_items": [
@@ -578,6 +580,7 @@
         "a-step-coupling-keeps-at-every-horizon",
         "a-weighting-faster-than-renewal-ends-the-base",
         "optima-rebuild-a-depleted-base",
+        "others-drawing-first-end-the-base",
         "the-gap-for-ones-own-act",
         "what-pooled-coupling-reaches",
         "what-a-pools-acts-respond-to",
@@ -597,6 +600,7 @@
         "Becoming.Web.frontier_keeps_stepwise",
         "Becoming.Web.frontier_exhausts",
         "Becoming.Web.frontier_rebuilds",
+        "Becoming.Web.Next.frontier_ends_drawn_first",
         "Becoming.Flow.unselected_beyond_pool",
         "Becoming.Flow.withinCoupling_reads_iff",
         "Becoming.Flow.act_selected_by_pool",

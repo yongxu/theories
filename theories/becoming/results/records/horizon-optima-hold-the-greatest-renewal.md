@@ -70,7 +70,7 @@ The maximum sustainable yield at the level of greatest renewal, half of room in 
 - related, not a proved adapter: [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md). What keeping a dependence above the levels of greatest renewal forgoes, and the coupling that keeps it.
 - related, not a proved adapter: [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md). An order weighting later draws less: far-sight keeps the own base only where the weighting falls slower than the base renews; falling faster than every positive level renews, every optimum ends it at the first step.
 
-**Used by:** [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md) · [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md) · [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md) · [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md)
+**Used by:** [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md) · [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md) · [keeping-forgoes-the-renewal-at-the-need](keeping-forgoes-the-renewal-at-the-need.md) · [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md) · [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -93,6 +93,7 @@ The maximum sustainable yield at the level of greatest renewal, half of room in 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T060215.969427Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T063915.104780Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T070401.903190Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json) | — |
 
 Aliases: `horizon optima hold the greatest renewal`, `courses ranked over a horizon`, `far-sight holds the levels of greatest renewal`, `maximum sustainable yield level`, `在视野上，最优保持在最大更新处`, `Becoming.Optimum.frontier_holds`, `Becoming.Optimum.most_iff`, `Becoming.Web.frontier_broken`
 

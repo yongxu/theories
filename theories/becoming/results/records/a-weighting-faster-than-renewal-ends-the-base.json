@@ -19,9 +19,9 @@
       "zh": "以 w t 加权自 t 起一步的抽取（任意权重）：每步所留不超过水平加所给时，进程 n + 1 步的加权抽取加最后所留之加权，是它在第 n 步可抽取的连同之前所抽取的；一步使之变化 w (t + 1) 乘所留水平加其更新，对 w t 乘该水平。",
       "declarations": [
         "Becoming.Optimum.weightedOver",
-        "Becoming.Optimum.drawable",
-        "Becoming.Optimum.weighted_add_left",
-        "Becoming.Optimum.drawable_step",
+        "Becoming.Optimum.Next.drawable",
+        "Becoming.Optimum.Next.weighted_add_left",
+        "Becoming.Optimum.Next.drawable_step",
         "Becoming.Optimum.add_steps"
       ]
     },
@@ -29,11 +29,11 @@
       "en": "Of two courses from one start, where the first's level gains at each step to the n-th at most what the second's does, the first could draw at most the second at every step, and less from a step where it gains less; with the second leaving nothing at the last step, the first draws at most the second, weighted, and less where it gains less at some step or leaves something weighted.",
       "zh": "同一起点的两个进程，前者的水平到第 n 步每步增益至多后者时，前者每步可抽取的至多后者，自增益较少之步起更少；后者最后不留时，前者加权抽取至多后者，在某步增益较少或留下加权之物时更少。",
       "declarations": [
-        "Becoming.Optimum.drawable_le_of_gains",
-        "Becoming.Optimum.drawable_lt_of_gains",
-        "Becoming.Optimum.weighted_of_ends",
-        "Becoming.Optimum.weighted_le_of_gains",
-        "Becoming.Optimum.weighted_lt_of_gains"
+        "Becoming.Optimum.Next.drawable_le_of_gains",
+        "Becoming.Optimum.Next.drawable_lt_of_gains",
+        "Becoming.Optimum.Next.weighted_of_ends",
+        "Becoming.Optimum.Next.weighted_le_of_gains",
+        "Becoming.Optimum.Next.weighted_lt_of_gains"
       ]
     },
     {
@@ -59,8 +59,8 @@
       "en": "Where w (t + 1) (z + R z) ≤ w t z for every positive z, nothing gains the most and the course ending the base at the first step is an optimum; where <, every optimum of every order rising with the weighted draw stands at nothing at every step to the n-th, breaking every dependence on the base with a positive need, met at the start.",
       "zh": "每个正的 z 都有 w (t + 1) (z + R z) ≤ w t z 时，零增益最大，在第一步终结基础的进程是最优；为 < 时，随加权抽取升高之序的每个最优到第 n 步每步都在零处，打破每个对基础、所需为正、起始时被满足的依存。",
       "declarations": [
-        "Becoming.Optimum.outpaced_greatest",
-        "Becoming.Optimum.outpaced_above",
+        "Becoming.Optimum.Next.outpaced_greatest",
+        "Becoming.Optimum.Next.outpaced_above",
         "Becoming.Optimum.exhausting_frontier",
         "Becoming.Optimum.frontier_exhausts",
         "Becoming.Web.frontier_exhausts"
@@ -70,8 +70,8 @@
       "en": "Where R 0 = 0 a course at nothing stays there. Where some y within reach gains more than nothing does at each step, the course holding y outdraws every course at nothing from the first step; so where R 0 = 0 and w t y < w (t + 1) (y + R y) at each step, with a capacity drawing down to y and holding it, no optimum stands at nothing at the first step.",
       "zh": "R 0 = 0 时在零处的进程留在零处。可及的某个 y 每步增益多于零时，保持 y 的进程比自第一步起在零处的每个进程抽取更多；故 R 0 = 0 且每步 w t y < w (t + 1) (y + R y)、容量足以降到 y 并保持时，没有最优在第一步处于零。",
       "declarations": [
-        "Becoming.Optimum.stays_empty",
-        "Becoming.Optimum.ended_outdrawn",
+        "Becoming.Optimum.Next.stays_empty",
+        "Becoming.Optimum.Next.ended_outdrawn",
         "Becoming.Optimum.frontier_leaves",
         "Becoming.Web.frontier_leaves"
       ]
@@ -243,6 +243,13 @@
         "en": "Rebuilding from below: where the weighting falls slower than the base renews, every optimum rebuilds a base below a level out of one step's reach.",
         "zh": "自下重建：权重下降慢于基础更新时，每个最优重建低于一步不可及水平的基础。"
       }
+    },
+    {
+      "id": "others-drawing-first-end-the-base",
+      "detail": {
+        "en": "Over every law of what stands: these laws hold over any law of what a level gives at a step; with others drawing first, every optimum of a falling weighting ends the base at once.",
+        "zh": "对每一所立之律：这些规律对一个水平在一步给出什么的任一律成立；他者先抽取时，权重下降之序的每个最优立即终结基础。"
+      }
     }
   ],
   "references": [
@@ -264,12 +271,12 @@
         "Becoming.Optimum.Holding.pos_of_lt_two_mul",
         "Becoming.Optimum.OpenCourse",
         "Becoming.Optimum.add_steps",
-        "Becoming.Optimum.drawable",
-        "Becoming.Optimum.drawable_le_of_gains",
-        "Becoming.Optimum.drawable_lt_of_gains",
-        "Becoming.Optimum.drawable_step",
+        "Becoming.Optimum.Next.drawable",
+        "Becoming.Optimum.Next.drawable_le_of_gains",
+        "Becoming.Optimum.Next.drawable_lt_of_gains",
+        "Becoming.Optimum.Next.drawable_step",
         "Becoming.Optimum.drawnAt",
-        "Becoming.Optimum.ended_outdrawn",
+        "Becoming.Optimum.Next.ended_outdrawn",
         "Becoming.Optimum.exhausting_frontier",
         "Becoming.Optimum.frontier_below_weighted",
         "Becoming.Optimum.frontier_exhausts",
@@ -282,21 +289,21 @@
         "Becoming.Optimum.holding_gains",
         "Becoming.Optimum.holding_open_at",
         "Becoming.Optimum.holding_within",
-        "Becoming.Optimum.outpaced_above",
-        "Becoming.Optimum.outpaced_greatest",
-        "Becoming.Optimum.stays_empty",
+        "Becoming.Optimum.Next.outpaced_above",
+        "Becoming.Optimum.Next.outpaced_greatest",
+        "Becoming.Optimum.Next.stays_empty",
         "Becoming.Optimum.weightedOver",
-        "Becoming.Optimum.weighted_add_left",
+        "Becoming.Optimum.Next.weighted_add_left",
         "Becoming.Optimum.weighted_frontier",
         "Becoming.Optimum.weighted_holding_frontier",
-        "Becoming.Optimum.weighted_le_of_gains",
-        "Becoming.Optimum.weighted_lt_of_gains",
-        "Becoming.Optimum.weighted_of_ends",
+        "Becoming.Optimum.Next.weighted_le_of_gains",
+        "Becoming.Optimum.Next.weighted_lt_of_gains",
+        "Becoming.Optimum.Next.weighted_of_ends",
         "Becoming.Web.frontier_broken_weighted",
         "Becoming.Web.frontier_exhausts",
         "Becoming.Web.frontier_leaves"
       ],
-      "sha256": "148dd31aca08bfd836e241f865d61ac7842ada8619ad64b9bfc878f8d0098b52"
+      "sha256": "7526caba61894416df89321f15812f042f552a482ec14693433e39a5d1f69d07"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -370,19 +377,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "73df6bcb827f7fa6c4deffce457daac3a174359ae3c8a32e2f3280b264ad8e75"
+      "sha256": "a2bf60a23cd97c1f79ada7f8e9d296db1cb1cc1e7349f702e389ba112fc566b2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T070401.903190Z/verification.json",
       "role": "receipt",
       "sha256": "5c584c2668b3ce2204014e6072bb285109fd5164fd48256617f911068c42c968",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
+      "role": "receipt",
+      "sha256": "28d96baae09ab3e50503bcb9858b62f27ad9ec6f905c7fc97a0390a0fbb18004",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T070401.903190Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -438,6 +451,10 @@
     {
       "en": "21 October 2026, SG9: weighted_frontier and frontier_gains_weighted are now the case of frontier_of_gainsMost and frontier_gains_of_most, a course gaining the most against every open course (record optima-rebuild-a-depleted-base, study section 296); this record's laws and their statements are unchanged.",
       "zh": "2026年10月21日，SG9：weighted_frontier 与 frontier_gains_weighted 现为 frontier_of_gainsMost 与 frontier_gains_of_most（对每个开放进程增益最大的进程）的情形（记录 optima-rebuild-a-depleted-base，研究第 296 节）；本记录的定律及其陈述不变。"
+    },
+    {
+      "en": "21 October 2026, SG10: this record's laws hold over every law of what stands (Optimum.Next, Web.Next; record others-drawing-first-end-the-base, study section 298), the level with its renewal the case. Those still read in the renewal form keep their statements, each proof now one line; the renewal forms no law reads any more were removed, and this record cites their general forms (12 law citations moved, the proof references with them).",
+      "zh": "2026年10月21日，SG10：本记录之律对每一所立之律成立（Optimum.Next、Web.Next；记录 others-drawing-first-end-the-base，研究第 298 节），水平加更新是其情形。仍以更新形式被读取者陈述不变，每个证明现为一行；不再被任何规律读取的更新形式已移除，本记录改引其一般形式（规律中移动 12 处引用，证明引用随之）。"
     }
   ]
 }
