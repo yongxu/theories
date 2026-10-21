@@ -155,3 +155,5 @@ So the budget is $9: `vd2_run.CONFIG["budget_usd"]` is 9.0 from this note on, an
 
 Standpoint 0 had already started under the $6 guard after the freeze landed (`f8e7992e1`). Nothing else in the design, the rules or the prompts changes.
 
+
+**21 October 2026, after standpoint 0: the projection.** Standpoint 0 ended with 1,723 of its 1,728 presentations valid; Nemotron's 5 invalid rows are retried by later passes. Its reported cost was $0.37. The projection (`vd2_run.py --project 0`, costs and keys only) is $5.87 for the valuers: Nemotron $2.00, Qwen $1.89, DeepSeek $0.74, Haiku $0.58, luna $0.41, GLM $0.25. With the calibration's $0.19 and the judges' estimate of about $0.5, the total is about $6.6, within $9. The rest of the run was started with the $9 guard. No judgment was read.
