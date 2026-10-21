@@ -103,8 +103,8 @@
       "kind": "scope"
     },
     {
-      "en": "The threshold in the plane of level and recent giving where recent giving lies on the other side of the draw; a state with a further lag; coupled conditions.",
-      "zh": "近来所给在汲取另一侧时，水平与近来所给之平面上的阈值；带再一个滞后的状态；相互耦合的条件。",
+      "en": "The threshold in the plane for adjustments that do not rise in both arguments: record threshold-in-the-state-plane states it, a falling curve, for those that do within a band; a state with a further lag; coupled conditions.",
+      "zh": "不在两个变元上皆升的调整在平面上的阈值：记录 threshold-in-the-state-plane 对带内皆升者陈述它是一条下降曲线；带再一个滞后的状态；相互耦合的条件。",
       "kind": "scope"
     },
     {
@@ -135,8 +135,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T084948.266489Z）：Becoming.RegimeMargin 新增的 45 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 299 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Which adjustments that do not rise still bring every run to rest; the threshold curve in the plane of level and recent giving; a state with a further lag; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often than those with it met; an independent review.",
-    "zh": "哪些不上升的调整仍使每个运行静止；水平与近来所给之平面上的阈值曲线；带再一个滞后的状态；在未经任何分析读过的存量上冻结检验：近来所给不足捕捞的点下片段是否比满足者更常下降；独立审查。"
+    "en": "Which adjustments that do not rise still bring every run to rest; the threshold in the plane for adjustments that do not rise in both arguments; a state with a further lag; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often than those with it met; an independent review.",
+    "zh": "哪些不上升的调整仍使每个运行静止；不在两个变元上皆升的调整在平面上的阈值；带再一个滞后的状态；在未经任何分析读过的存量上冻结检验：近来所给不足捕捞的点下片段是否比满足者更常下降；独立审查。"
   },
   "correspondence": {
     "en": "Partial adjustment, a quantity moving at a rate toward its target, rests where the target does (Nerlove 1958); delay-difference models share the equilibria of their yield curve (Deriso 1980; Schnute 1985); with a second state variable a threshold is a curve that transients cross (Hastings 2004). On the spine, exact over every adjustment with named properties: the rest law needs that the adjustment rests at the draw where the regime does, the fates that giving stays on the side of the draw where the recent and the regime's giving lie, each shown needed by a witness. MQ5's law, under a standing draw met in full, is A e r = (phi - lam) r + (1 - phi) g e + lam H, phi = 0.96, lam = 0.55: over the reals it rests at the draw where the regime does and keeps both sides, but is not between; a correspondence by premises.",
@@ -190,6 +190,13 @@
       "detail": {
         "en": "Where the adjustment rises with what is left and with the recent giving and a band keeps the state, every run comes to rest within 3 hi + 3 steps, at the regime's point or below the draw.",
         "zh": "调整随所剩与近来所给而升且带保持状态时，每个运行至多 3 hi + 3 步后静止，静于体制之点或汲取之下。"
+      }
+    },
+    {
+      "id": "threshold-in-the-state-plane",
+      "detail": {
+        "en": "Where the adjustment rises with what is left and with the recent giving within a band, the runs resting below the draw are exactly those from levels below a least level for each recent giving, which falls as the recent giving rises; under the regime's step it is H + y.",
+        "zh": "调整在带内随所剩与近来所给而升时，静于汲取之下的运行恰是自低于每个近来所给之最小水平出发者，该水平随近来所给上升而降；在体制之步下为 H + y。"
       }
     }
   ],
@@ -254,7 +261,7 @@
         "Becoming.RegimeMargin.stays_ended",
         "Becoming.RegimeMargin.step"
       ],
-      "sha256": "81d0d0477bfc431bd97196f7f31115dc9e0905e5742676a07fea8d2a9f3d975f"
+      "sha256": "51411ed73a2046bf6ba65aef85c106dac8d56b79b04b0b4006172f362c5ab40a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -284,24 +291,30 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "7e647b762abdc50d2e76a05faecab48a197fe972329aafe06ea506dc1598ccb4"
+      "sha256": "b4384b424c06709d287898ea0960af09fe2ad523abb95d3d4d16798a201cdf66"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "892e88ba031ec4b2b69b65127ed651fda60d4252ad6269c685611dc2c255305e"
+      "sha256": "3520d57ffea92a1c63ff1d31a434edeb1f1817b93e0d27ccce52b2e4fbf10258"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
       "role": "receipt",
       "sha256": "ddd3a762660716774a04ab287ebd6e064a47ec2e16d6f71824a4603966c34c24",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json",
+      "role": "receipt",
+      "sha256": "bc7209f5dcb5231dcee077425f7145c335386fad7636ad83c4b8f69a233c1844",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -322,6 +335,10 @@
     {
       "en": "21 October 2026, RM3: whether a run comes to rest, left open here, is answered for adjustments rising in both arguments within a band (record where-a-run-of-a-regime-comes-to-rest, study section 300); what this record does not show and its next delta now say so. Its laws are unchanged.",
       "zh": "2026年10月21日，RM3：此处留下的运行是否静止，对带内在两个变元上皆升的调整已得回答（记录 where-a-run-of-a-regime-comes-to-rest，研究第 300 节）；本记录所不表明者与其下一步现已如此说明。其规律不变。"
+    },
+    {
+      "en": "21 October 2026, RM4: the threshold in the plane of level and recent giving, left open here, is stated for adjustments rising in both arguments within a band (record threshold-in-the-state-plane, study section 301); what this record does not show and its next delta now say so. Its laws are unchanged.",
+      "zh": "2026年10月21日，RM4：此处留下的水平与近来所给之平面上的阈值，对带内在两个变元上皆升的调整已陈述（记录 threshold-in-the-state-plane，研究第 301 节）；本记录所不表明者与其下一步现已如此说明。其规律不变。"
     }
   ]
 }

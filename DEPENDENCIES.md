@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-322 registered results: 302 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 806 curated edges join 275 results to the results they draw on.
+323 registered results: 303 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 810 curated edges join 276 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -244,6 +244,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [the-split-that-makes-sense][] ← <a id="the-split-that-makes-sense--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] · <a id="the-split-that-makes-sense--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="the-split-that-makes-sense--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="the-split-that-makes-sense--readings-within-what-they-read"></a>[readings-within-what-they-read][]
 - [the-world-an-interleaving-builds][] ← <a id="the-world-an-interleaving-builds--the-step-index-from-own-courses"></a>[the-step-index-from-own-courses][] · <a id="the-world-an-interleaving-builds--worlds-are-runs"></a>[worlds-are-runs][] · <a id="the-world-an-interleaving-builds--order-of-exchanges-is-the-invariant"></a>[order-of-exchanges-is-the-invariant][]
 - [theory-of-becoming-foundation][] ← <a id="theory-of-becoming-foundation--becoming-context-coherence"></a>[becoming-context-coherence][] *(interpretive)* · <a id="theory-of-becoming-foundation--control-coherence-loss"></a>[control-coherence-loss][] *(interpretive)*
+- [threshold-in-the-state-plane][] ← <a id="threshold-in-the-state-plane--where-a-run-of-a-regime-comes-to-rest"></a>[where-a-run-of-a-regime-comes-to-rest][] · <a id="threshold-in-the-state-plane--regime-point-under-adjusting-giving"></a>[regime-point-under-adjusting-giving][] · <a id="threshold-in-the-state-plane--margin-of-a-regime"></a>[margin-of-a-regime][] · <a id="threshold-in-the-state-plane--the-last-change-of-a-run"></a>[the-last-change-of-a-run][]
 - [thresholds-of-waiting][] ← <a id="thresholds-of-waiting--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="thresholds-of-waiting--giving-that-waits-on-giving"></a>[giving-that-waits-on-giving][]
 - [timely-response-necessity][] ← <a id="timely-response-necessity--comparison-where-the-rest-responds"></a>[comparison-where-the-rest-responds][] · <a id="timely-response-necessity--testing-within-couplings"></a>[testing-within-couplings][] · <a id="timely-response-necessity--finite-fallible-inquiry-necessity"></a>[finite-fallible-inquiry-necessity][]
 - [trace-law-equivalence][] ← <a id="trace-law-equivalence--finite-trace-transport"></a>[finite-trace-transport][]
@@ -546,6 +547,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [the-step-index-from-own-courses]: theories/becoming/results/records/the-step-index-from-own-courses.md
 [the-world-an-interleaving-builds]: theories/becoming/results/records/the-world-an-interleaving-builds.md
 [theory-of-becoming-foundation]: theories/becoming/results/records/theory-of-becoming-foundation.md
+[threshold-in-the-state-plane]: theories/becoming/results/records/threshold-in-the-state-plane.md
 [thresholds-of-waiting]: theories/becoming/results/records/thresholds-of-waiting.md
 [timely-response-necessity]: theories/becoming/results/records/timely-response-necessity.md
 [trace-law-equivalence]: theories/becoming/results/records/trace-law-equivalence.md

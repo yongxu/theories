@@ -63,6 +63,8 @@ Compensatory renewal settles and overcompensating renewal cycles (Beverton and H
   - Preserved conditions: Decidable configurations; a deterministic law. [LastChange.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean)
 - related, not a proved adapter: [margin-of-a-regime](margin-of-a-regime.md). The regime's step: with giving rising with what is left, every run within a band comes to rest within hi steps.
 
+**Used by:** [threshold-in-the-state-plane](threshold-in-the-state-plane.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -79,6 +81,7 @@ Compensatory renewal settles and overcompensating renewal cycles (Beverton and H
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | integration | [README.md](../../../../experiments/margin-measured/README.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json) | — |
 
 Aliases: `where a run of a regime comes to rest`, `every run of a rising adjustment comes to rest`, `a law's run with a bounded mark`, `一个体制的运行静于何处`, `Becoming.RegimeMargin.Adjusted.comes_to_rest`, `Becoming.RegimeMargin.rests_within`, `Becoming.LastChange.still_within`
 

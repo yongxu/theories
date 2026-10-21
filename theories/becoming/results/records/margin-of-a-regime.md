@@ -65,7 +65,7 @@ Harvesting theory: depensation and critical depensation, the fold of the harvest
 - related, not a proved adapter: [own-count-misses-joint-excess](own-count-misses-joint-excess.md). Own draws within what is given can jointly exceed it; Peaked shows two draws each held alone that together end the condition, with giving read off the level.
 - related, not a proved adapter: [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md). Giving that adjusts: these laws on ending and holding hold over any law of what is left and of the recent giving, and every rest at or above the draw is the regime's where the adjustment rests where the regime does.
 
-**Used by:** [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md)
+**Used by:** [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -80,6 +80,7 @@ Harvesting theory: depensation and critical depensation, the fold of the harvest
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T084948.266489Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json) | — |
 
 Aliases: `margin of a regime`, `一个体制的余量`, `point of no return under a standing draw`, `the need is the regime's`, `harms super-additive`, `Becoming.RegimeMargin.ends_iff_below`, `Becoming.RegimeMargin.beyond_draw_iff`, `Becoming.RegimeMargin.harms_superadditive`
 

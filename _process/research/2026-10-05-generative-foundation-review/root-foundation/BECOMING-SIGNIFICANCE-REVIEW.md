@@ -1025,3 +1025,22 @@ Evidence: the prior forms from memory, not reread; Lean in the record's receipt
 Boundary: AI check, one session; convergence over the reals, a further lag, coupled conditions and the bound's tightness are not stated; whether measured giving laws rise over their band is not checked; the witnesses' giving chosen
 Integration: chapter §2.3, thesis T2's standing, the record table
 ```
+
+<a id="threshold-check"></a>
+## A check: the threshold in the plane of level and recent giving (21 October 2026, RM4)
+
+An AI check (one session, 21 October), made while the Lean was written. It asks what RM2 left open: the threshold in the plane of level and recent giving, where the recent giving lies on the other side of the draw. **Verdict: the mathematics is known in its kind: the boundary between basins of an order-preserving map is unordered, so in the plane a falling curve. The spine's form is exact and constructive in whole numbers within a band. For an adjustment rising in both arguments, the runs come to rest below the draw exactly from levels below a least level, decided at a fixed step, and that level does not rise as the recent giving rises. Under the regime's step it is RM1's point of no return at every recent giving. A witness shows that without rising giving no such level exists.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Order-preserving maps: the boundary between basins of attraction is unordered, so in the plane it is a curve along which one coordinate falls as the other rises | Hirsch and Smith, "Monotone maps: a review", Journal of Difference Equations and Applications 11 (2005) (from memory) | Under an adjustment rising in both, within a band, the runs come to rest below the draw exactly from levels below the threshold (`RegimeMargin.Adjusted.falls_iff_below`), which does not rise with the recent giving (`RegimeMargin.Adjusted.threshold_falls`); the basins are decided at step `3 hi + 3` (`RegimeMargin.Adjusted.falls_iff`) |
+| A point of no return as a level: depensation and the fold of the harvested equilibrium | Clark 1976; May 1977 (as cited by RM1) | Under the regime's step the threshold is the point `H + y` at every recent giving (`RegimeMargin.threshold_regime`) |
+
+```text
+Result(s): new record threshold-in-the-state-plane (RM4, new laws of Becoming.RegimeMargin and Becoming.LastChange)
+Delta: under an adjustment rising in both arguments within a band, the fates are down-closed and decided, so a least level for each recent giving separates the runs resting below the draw from those resting at the regime's point, exactly, falling as the recent giving rises; under the regime's step it is H + y; without rising giving no such level exists
+Supplied premises / correspondence: whole-number amounts; discrete steps; the state the level and one recent giving; the adjustment rising in both arguments; a band. Correspondence: Hirsch and Smith 2005; Clark 1976; May 1977
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; the reals, a further lag and coupled conditions are not stated; whether measured adjustments rise in both over their band is not checked; the field frequency of the curve's direction is untested; the witness's giving chosen
+Integration: chapter §2.3, thesis T2's standing and evidence, the record table
+```
