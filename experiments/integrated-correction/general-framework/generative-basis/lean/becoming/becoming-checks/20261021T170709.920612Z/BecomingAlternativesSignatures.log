@@ -1,0 +1,75 @@
+@Becoming.LivingSignificance.new_realization : ∀ {S A C : Type} {F : Becoming.Frame S A C} {living : C → Prop}
+  {relevance : S → C → Prop},
+  Becoming.LivingSignificance F living relevance →
+    ∀ {s t : S}, Becoming.Extension F living s t → ∃ c, relevance t c ∧ ¬F.realized s c
+@Becoming.Extension.new_relevance : ∀ {S A Q F Pos : Type} (M : Becoming.Frame S A Q) (living : Q → Prop)
+  {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (formation : Q → F) (step : Q → Nat) {s t : S},
+      Becoming.Extension M living s t → ∃ c, M.relevance living sig formation step t c ∧ ¬M.realized s c
+@Becoming.Alternatives.reason_of_extension : ∀ {S A C R : Type} {F : Becoming.Frame S A C} {living : C → Prop}
+  {X : Becoming.Alternatives S R} {Better : S → S → Prop} {Reason : R → R → Prop},
+  Becoming.Comparison F living Better →
+    X.Articulation Better Reason →
+      ∀ {a b : R}, X.feasible a → X.feasible b → Becoming.Extension F living (X.realize a) (X.realize b) → Reason a b
+@Becoming.Alternatives.survives_of_coherent : ∀ {S A C R : Type} {F : Becoming.Frame S A C} {living : C → Prop}
+  {X : Becoming.Alternatives S R} {Better : S → S → Prop} {Selected : R → Prop},
+  Becoming.Comparison F living Better →
+    X.Coherent Better Selected → ∀ {a : R}, Selected a → Becoming.Alternatives.Survives F living X a
+@Becoming.Alternatives.survives_restrict : ∀ {S A C R : Type} {F : Becoming.Frame S A C} {living : C → Prop}
+  {X : Becoming.Alternatives S R} (restricted : R → Prop) {a : R},
+  Becoming.Alternatives.Survives F living X a →
+    restricted a →
+      Becoming.Alternatives.Survives F living { feasible := fun b => X.feasible b ∧ restricted b, realize := X.realize }
+        a
+@Becoming.Alternatives.no_survivor : ∀ {S A C R : Type} {F : Becoming.Frame S A C} {living : C → Prop}
+  {X : Becoming.Alternatives S R},
+  (∀ (a : R), X.feasible a → ∃ b, X.feasible b ∧ Becoming.Extension F living (X.realize a) (X.realize b)) →
+    ∀ (a : R), ¬Becoming.Alternatives.Survives F living X a
+@Becoming.Alternatives.enabled_iff : ∀ {S R : Type} (X : Becoming.Alternatives S R) (s : S) (a : R),
+  Generative.Enabled (X.process s) s a ↔ X.feasible a
+@Becoming.Alternatives.lift_iff : ∀ {S C R : Type} (X : Becoming.Alternatives S R) (s : S) (realized : S → C → Prop)
+  (better : S → S → Prop) {a b : R},
+  X.feasible a →
+    X.feasible b →
+      (Becoming.LiftBetter { P := X.process s, realized := realized } better s a b ↔ better (X.realize a) (X.realize b))
+@Becoming.Alternatives.survives_iff_lifted : ∀ {S C R : Type} (X : Becoming.Alternatives S R) (s : S)
+  (realized : S → C → Prop) (living : C → Prop) (a : R),
+  Becoming.Alternatives.Survives { P := X.process s, realized := realized } living X a ↔
+    Becoming.LiftSurvives { P := X.process s, realized := realized } living s a
+@Becoming.Alternatives.articulation_iff_lifted : ∀ {S C R : Type} (X : Becoming.Alternatives S R) (s : S)
+  (realized : S → C → Prop) (Better : S → S → Prop) (Reason : R → R → Prop),
+  X.Articulation Better Reason ↔ Becoming.LiftedArticulation { P := X.process s, realized := realized } Better s Reason
+@Becoming.Alternatives.restricted_survives : ∀ {S C R : Type} (X : Becoming.Alternatives S R) (s : S)
+  (realized : S → C → Prop) (living : C → Prop) (restricted : R → Prop) {a : R},
+  Becoming.LiftSurvives { P := X.process s, realized := realized } living s a →
+    restricted a →
+      Becoming.LiftSurvives
+        { P := { feasible := fun b => X.feasible b ∧ restricted b, realize := X.realize }.process s,
+          realized := realized }
+        living s a
+@Becoming.Profiles.lost : ∀ {s t : Becoming.Profiles.Profile},
+  Becoming.Extension Becoming.Profiles.frame Becoming.Profiles.living s t →
+    ∀ (c : Bool), Becoming.Profiles.realized s c → ¬Becoming.Profiles.realized t c → False
+Becoming.Profiles.respects : ∀ (score : Becoming.Profiles.Profile → Nat),
+  score (false, false) < score (true, false) →
+    score (false, false) < score (false, true) →
+      score (false, false) < score (true, true) →
+        score (true, false) < score (true, true) →
+          score (false, true) < score (true, true) →
+            Becoming.Comparison Becoming.Profiles.frame Becoming.Profiles.living (Becoming.Profiles.ScoreBetter score)
+Becoming.Profiles.both_respect : Becoming.Comparison Becoming.Profiles.frame Becoming.Profiles.living
+    (Becoming.Profiles.ScoreBetter Becoming.Profiles.firstAppraisal) ∧
+  Becoming.Comparison Becoming.Profiles.frame Becoming.Profiles.living
+    (Becoming.Profiles.ScoreBetter Becoming.Profiles.secondAppraisal)
+Becoming.Profiles.opposite : Becoming.Profiles.ScoreBetter Becoming.Profiles.firstAppraisal (false, true)
+    (true, false) ∧
+  Becoming.Profiles.ScoreBetter Becoming.Profiles.secondAppraisal (true, false) (false, true)
+Becoming.Profiles.both_survive : Becoming.Alternatives.Survives Becoming.Profiles.frame Becoming.Profiles.living
+    Becoming.Profiles.tradeoff (true, false) ∧
+  Becoming.Alternatives.Survives Becoming.Profiles.frame Becoming.Profiles.living Becoming.Profiles.tradeoff
+    (false, true)
+Becoming.Profiles.different_selections : (Becoming.Profiles.tradeoff.Coherent
+    (Becoming.Profiles.ScoreBetter Becoming.Profiles.firstAppraisal) fun p => p = (true, false)) ∧
+  Becoming.Profiles.tradeoff.Coherent (Becoming.Profiles.ScoreBetter Becoming.Profiles.secondAppraisal) fun p =>
+    p = (false, true)
