@@ -26,7 +26,7 @@
 ## Does not show
 
 - Runs that grow without bound: there whether a condition ends is not decided here.
-- That the decision's step count, (B + 1) to the conditions' count, is tight; webs with a recent giving; amounts beyond whole numbers.
+- That the decision's step count, (B + 1) to the conditions' count, is tight; amounts beyond whole numbers.
 - That measured webs stay within a bound or meet mutual support.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -41,7 +41,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Webs with a recent giving; a field web whose couplings are measured; an independent review.
+A field web whose couplings are measured; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -61,6 +61,9 @@ A deterministic map on a finite set is eventually periodic within its size (pige
   - Output: run_below, ends_of_below, Ends.
   - Input: Down-closure of ending under mutual support.
   - Preserved conditions: Mutual support. [RegimeMargin.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
+- related, not a proved adapter: [webs-with-a-recent-giving](webs-with-a-recent-giving.md). Its bounded laws are stated for any law read condition by condition, and hold of webs with a recent giving.
+
+**Used by:** [webs-with-a-recent-giving](webs-with-a-recent-giving.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -72,6 +75,7 @@ A deterministic map on a finite set is eventually periodic within its size (pige
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json) | — |
 
 Aliases: `thresholds beyond a band`, `a bound on the run in place of the band`, `带外的阈值`, `Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within`, `Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within`
 
@@ -79,6 +83,7 @@ Aliases: `thresholds beyond a band`, `a bound on the run in place of the band`, 
 ### History
 
 - 22 October 2026: added (RM9), thresholds on coupled webs beyond a band, a bound on the run in its place; the web's alike laws stated for pointwise reading; study section 327.
+- 22 October 2026, RM10: its bounded laws are now stated for any law of states read condition by condition, the web's step an instance, and applied to webs with a recent giving (record webs-with-a-recent-giving, study section 331). Their content for the web is unchanged.
 
 </details>
 

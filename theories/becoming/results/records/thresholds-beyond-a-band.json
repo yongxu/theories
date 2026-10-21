@@ -92,8 +92,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the decision's step count, (B + 1) to the conditions' count, is tight; webs with a recent giving; amounts beyond whole numbers.",
-      "zh": "判定的步数 (B + 1) 的条件数次方是紧的；带近来所给的网；整数之外的量。",
+      "en": "That the decision's step count, (B + 1) to the conditions' count, is tight; amounts beyond whole numbers.",
+      "zh": "判定的步数 (B + 1) 的条件数次方是紧的；整数之外的量。",
       "kind": "scope"
     },
     {
@@ -116,8 +116,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T215226.263303Z）：Becoming.RegimeMargin 新增的 28 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 327 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Webs with a recent giving; a field web whose couplings are measured; an independent review.",
-    "zh": "带近来所给的网；耦合经测量的野外之网；独立审查。"
+    "en": "A field web whose couplings are measured; an independent review.",
+    "zh": "耦合经测量的野外之网；独立审查。"
   },
   "correspondence": {
     "en": "A deterministic map on a finite set is eventually periodic within its size (pigeonhole); finite-state properties are decided by bounded checks (bounded model checking, Biere et al. 1999); the comparison principle of monotone systems (Hirsch 1985; Smith 1995).",
@@ -179,7 +179,15 @@
       }
     }
   ],
-  "related": [],
+  "related": [
+    {
+      "id": "webs-with-a-recent-giving",
+      "detail": {
+        "en": "Its bounded laws are stated for any law read condition by condition, and hold of webs with a recent giving.",
+        "zh": "其有界之律对任何逐条件读取之律陈述，并对带近来所给的网成立。"
+      }
+    }
+  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
@@ -242,7 +250,7 @@
         "Becoming.RegimeMargin.leading_le",
         "Becoming.RegimeMargin.leading_true"
       ],
-      "sha256": "303c6912b883a7bb4cbcd574157ca172883997e90039306391f610f51bc8e0be"
+      "sha256": "03746d31f21df89b9dfca102312b07823f6816b51b3205c71dbc28967b622d3c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json",
@@ -262,13 +270,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "78ebcea696f73e5fd046c46d84b9d165f6c38a1e63ba8ffb7258f947a13c2ac7"
+      "sha256": "3317db1c9bdc8260ec8c2f67e9f15d50eab6e7fad43497da2a8ddba7d1b88165"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json",
+      "role": "receipt",
+      "sha256": "2e55e957277c6850ab333116aff5b4dff2fce182955a5c60e4c0d6e9aeabbb0c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -278,6 +292,10 @@
     {
       "en": "22 October 2026: added (RM9), thresholds on coupled webs beyond a band, a bound on the run in its place; the web's alike laws stated for pointwise reading; study section 327.",
       "zh": "2026年10月22日：新增（RM9），带外的耦合之网阈值，以运行之界代替带；网的相同律以逐条件读取陈述；研究第 327 节。"
+    },
+    {
+      "en": "22 October 2026, RM10: its bounded laws are now stated for any law of states read condition by condition, the web's step an instance, and applied to webs with a recent giving (record webs-with-a-recent-giving, study section 331). Their content for the web is unchanged.",
+      "zh": "2026年10月22日，RM10：其有界之律今对任何逐条件读取状态之律陈述，网之步是其实例，并用于带近来所给的网（记录 webs-with-a-recent-giving，研究第 331 节）。其对网的内容不变。"
     }
   ]
 }

@@ -95,8 +95,8 @@
       "kind": "scope"
     },
     {
-      "en": "Webs with a recent giving; amounts beyond whole numbers. Thresholds beyond a band, a bound on the run in its place, are stated (record thresholds-beyond-a-band).",
-      "zh": "带近来所给的网；整数之外的量。带外的阈值（以运行之界代替带）已陈述（记录 thresholds-beyond-a-band）。",
+      "en": "Amounts beyond whole numbers; rest within a band with a recent giving. Thresholds beyond a band and webs with a recent giving are stated (records thresholds-beyond-a-band, webs-with-a-recent-giving).",
+      "zh": "整数之外的量；带近来所给时带内的静止。带外的阈值与带近来所给的网已陈述（记录 thresholds-beyond-a-band、webs-with-a-recent-giving）。",
       "kind": "scope"
     },
     {
@@ -119,8 +119,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T191937.039634Z）：Becoming.RegimeMargin 新增的 37 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 325 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Webs with a recent giving; a field web whose couplings are measured; an independent review.",
-    "zh": "带近来所给的网；耦合经测量的野外之网；独立审查。"
+    "en": "A field web whose couplings are measured; an independent review.",
+    "zh": "耦合经测量的野外之网；独立审查。"
   },
   "correspondence": {
     "en": "A monotone map on a finite ordered set iterated from a state it does not raise reaches a fixed point within the set's height (Kleene; Tarski 1955); monotone systems keep the order of solutions, the comparison principle (Hirsch 1985; Smith 1995).",
@@ -188,6 +188,13 @@
       "detail": {
         "en": "Beyond a band, a bound on the run decides ending by a finite check, and each threshold is exact and falls as others rise.",
         "zh": "在带之外，运行之界以有限检查判定终结，每个阈值是精确的且随其他上升而下降。"
+      }
+    },
+    {
+      "id": "webs-with-a-recent-giving",
+      "detail": {
+        "en": "Webs with a recent giving keep the order under mutual support; their bounded runs have ending decided and exact thresholds.",
+        "zh": "带近来所给的网在相互支持下保持序；其有界运行的终结可判定，阈值精确。"
       }
     }
   ],
@@ -257,7 +264,7 @@
         "Becoming.RegimeMargin.leading_false",
         "Becoming.RegimeMargin.leading_true"
       ],
-      "sha256": "303c6912b883a7bb4cbcd574157ca172883997e90039306391f610f51bc8e0be"
+      "sha256": "03746d31f21df89b9dfca102312b07823f6816b51b3205c71dbc28967b622d3c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json",
@@ -277,19 +284,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "78ebcea696f73e5fd046c46d84b9d165f6c38a1e63ba8ffb7258f947a13c2ac7"
+      "sha256": "3317db1c9bdc8260ec8c2f67e9f15d50eab6e7fad43497da2a8ddba7d1b88165"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json",
       "role": "receipt",
       "sha256": "c9b4aacffe091890c71a56b15d54de6cc71fe1891fc2d4619a91e403a92597be",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json",
+      "role": "receipt",
+      "sha256": "2e55e957277c6850ab333116aff5b4dff2fce182955a5c60e4c0d6e9aeabbb0c",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -303,6 +316,10 @@
     {
       "en": "22 October 2026, RM9: thresholds beyond a band are stated with a bound on the run in its place (record thresholds-beyond-a-band, study section 327); step_alike, run_alike and ends_alike now take pointwise reading, of which mutual support is the case. The statements of its laws are unchanged.",
       "zh": "2026年10月22日，RM9：以运行之界代替带陈述了带外的阈值（记录 thresholds-beyond-a-band，研究第 327 节）；step_alike、run_alike 与 ends_alike 今以逐条件读取为前提，相互支持是其情形。其律的陈述不变。"
+    },
+    {
+      "en": "22 October 2026, RM10: webs with a recent giving are stated (record webs-with-a-recent-giving, study section 331); run_alike is now derived from run_alike_of. The statements of its laws are unchanged.",
+      "zh": "2026年10月22日，RM10：带近来所给的网已陈述（记录 webs-with-a-recent-giving，研究第 331 节）；run_alike 今由 run_alike_of 导出。其律的陈述不变。"
     }
   ]
 }

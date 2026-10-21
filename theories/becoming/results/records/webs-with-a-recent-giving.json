@@ -1,0 +1,270 @@
+{
+  "schema_version": 2,
+  "id": "webs-with-a-recent-giving",
+  "title": {
+    "en": "Webs with a recent giving",
+    "zh": "带近来所给的网"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T22:35:14+00:00",
+  "statement": {
+    "en": "A web whose giving reads what each condition gave last keeps the order of states under mutual support, so its bounded runs have ending decided and each threshold exact and at most what it was as any level or recent giving rises; what was given can lower a threshold.",
+    "zh": "所给读取各条件上次所给的网，在相互支持下保持状态之序，故其有界运行的终结可判定，每个阈值精确，且在任何水平或近来所给上升时至多为原值；所给可降低阈值。"
+  },
+  "laws": [
+    {
+      "en": "A law of states reads them condition by condition where states alike at every condition go to states alike; runs of such a law stay alike, and the web's step is one; the web's run_alike is now this law's case.",
+      "zh": "状态在每个条件上相同则去往相同的状态时，状态之律逐条件读取它们；此律的运行保持相同，网之步即是一个；网的 run_alike 今为其情形。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.ReadsPointwise",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_alike_of",
+        "Becoming.RegimeMargin.Coupled.Indexed.pointwise_step"
+      ]
+    },
+    {
+      "en": "Ending under a law; a law keeping the order of states reads them condition by condition, by antisymmetry; the web's step keeps it under mutual support; runs keep the order, ending is down-closed, and a run reaching a state its law leaves as it is stays there.",
+      "zh": "律下的终结；保持状态之序的律以反对称逐条件读取它们；相互支持下网之步保持之；运行保持序，终结向下封闭，到达律所不动之状态的运行停在那里。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.EndsUnder",
+        "Becoming.RegimeMargin.Coupled.Indexed.KeepsBelow",
+        "Becoming.RegimeMargin.Coupled.Indexed.step_keepsBelow",
+        "Becoming.RegimeMargin.Coupled.Indexed.reads_of_keepsBelow",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_below_of",
+        "Becoming.RegimeMargin.Coupled.Indexed.endsUnder_of_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.stays_at"
+      ]
+    },
+    {
+      "en": "A web with a recent giving holds each condition's level and what it gave last, its giving a law of what is left of all and what each gave; under mutual support it keeps the order of states, so RM9's bounded laws hold of it.",
+      "zh": "带近来所给的网持有每个条件的水平与其上次所给，其所给是所有所余与各自所给之律；相互支持下它保持状态之序，故 RM9 的有界之律对它成立。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.step",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Rises",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.keepsBelow",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.both",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.mem_both",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.covers_both"
+      ]
+    },
+    {
+      "en": "Where giving reads nothing of what was given, its levels run as the plain web's; one condition is the adjusted regime, level and recent giving at every step.",
+      "zh": "所给不读取已给者时，其水平如普通之网运行；一个条件即调整的体制，每步的水平与近来所给皆同。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.plain",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.ofAdjusted",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.adjusted"
+      ]
+    },
+    {
+      "en": "Witness: one condition under a draw of two gives one where something is left and nothing was given last, two where something was; its threshold, levels up to four, is four having given nothing and three having given one.",
+      "zh": "见证：汲取为二的一个条件，有所余而上次未给时给一，上次有给时给二；其阈值（水平至多四）在未给时为四，给一时为三。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.gives",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.giving",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.gives_rises",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.rises",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.at_",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.ramp",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.set_at",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.ends_from",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.holds_from",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.threshold_falls_with_recent"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Whole numbers; finitely many conditions listed by a list covering them; draws taken first, as much as there is; each giving a law of what is left of all and what each gave last, read condition by condition (for the decision) and rising with each (mutual support, for the threshold); the run from the top level considered within a bound B; discrete steps.",
+      "zh": "不加公理。整数；由覆盖列表列出的有限多个条件；汲取先取，有多少取多少；各所给是所有所余与各自上次所给之律，逐条件读取（用于判定），且随每个上升（相互支持，用于阈值）；自所考虑顶水平的运行在界 B 之内；离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Rest within a band for webs with a recent giving: RM3's measure for one condition is not lifted to webs.",
+      "zh": "带近来所给之网在带内的静止：RM3 对一个条件的度量未提升到网。",
+      "kind": "scope"
+    },
+    {
+      "en": "Giving reading more than the last step; runs without bound; amounts beyond whole numbers.",
+      "zh": "读取多于上一步的所给；无界的运行；整数之外的量。",
+      "kind": "scope"
+    },
+    {
+      "en": "That measured conditions give by what they gave last, or by how much.",
+      "zh": "所测的条件按其上次所给而给，或给多少。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T223241.379489Z): the 29 declarations Becoming.RegimeMargin gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 331; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T223241.379489Z）：Becoming.RegimeMargin 新增的 29 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 331 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Rest within a band for webs with a recent giving; a field web whose couplings are measured; an independent review.",
+    "zh": "带近来所给之网在带内的静止；耦合经测量的野外之网；独立审查。"
+  },
+  "correspondence": {
+    "en": "State augmentation gives a system memory and keeps it monotone where output rises with state and past (Smith 1995, on monotone systems with delay); history-dependent response is hysteresis (Mayergoyz 2003).",
+    "zh": "状态扩充赋予系统记忆，输出随状态与过去上升时保持单调（Smith 1995，关于有延迟的单调系统）；依赖历史的响应即滞后（Mayergoyz 2003）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+  "aliases": [
+    "webs with a recent giving",
+    "coupled webs with memory",
+    "带近来所给的网",
+    "Becoming.RegimeMargin.Coupled.Indexed.Recent.keepsBelow",
+    "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.threshold_falls_with_recent"
+  ],
+  "dependencies": [
+    {
+      "id": "thresholds-beyond-a-band",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its bounded laws are stated for any law read condition by condition and applied to the web with a recent giving; its open item is answered.",
+        "zh": "其有界之律对任何逐条件读取之律陈述，并用于带近来所给的网；回答其开放项。"
+      },
+      "interface": {
+        "output": {
+          "en": "StaysWithin, ends_iff_within, thresholdWithin, ends_iff_below_within, threshold_falls_within.",
+          "zh": "StaysWithin、ends_iff_within、thresholdWithin、ends_iff_below_within、threshold_falls_within。"
+        },
+        "input": {
+          "en": "A law of states read condition by condition, keeping their order.",
+          "zh": "逐条件读取并保持状态之序的律。"
+        },
+        "conditions": {
+          "en": "Finitely many parts; a bound on the run.",
+          "zh": "有限多个部分；运行之界。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+      }
+    },
+    {
+      "id": "rest-on-coupled-webs",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "setAt and the web's alike laws are reused; run_alike is derived from the general law.",
+        "zh": "沿用 setAt 与网的相同律；run_alike 由一般之律导出。"
+      },
+      "interface": {
+        "output": {
+          "en": "setAt, setAt_below, step_alike, run_alike.",
+          "zh": "setAt、setAt_below、step_alike、run_alike。"
+        },
+        "input": {
+          "en": "The web's step as one law read condition by condition.",
+          "zh": "网之步作为一个逐条件读取之律。"
+        },
+        "conditions": {
+          "en": "Pointwise reading.",
+          "zh": "逐条件读取。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RegimeMargin.Adjusted.step",
+        "Becoming.RegimeMargin.Coupled.Indexed.Below",
+        "Becoming.RegimeMargin.Coupled.Indexed.EndsUnder",
+        "Becoming.RegimeMargin.Coupled.Indexed.KeepsBelow",
+        "Becoming.RegimeMargin.Coupled.Indexed.Pointwise",
+        "Becoming.RegimeMargin.Coupled.Indexed.ReadsPointwise",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.at_",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.ends_from",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.gives",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.gives_rises",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.giving",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.holds_from",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.ramp",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.rises",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.set_at",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Momentum.threshold_falls_with_recent",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.Rises",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.adjusted",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.both",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.covers_both",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.keepsBelow",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.mem_both",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.ofAdjusted",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.plain",
+        "Becoming.RegimeMargin.Coupled.Indexed.Recent.step",
+        "Becoming.RegimeMargin.Coupled.Indexed.StaysWithin",
+        "Becoming.RegimeMargin.Coupled.Indexed.endingWithin",
+        "Becoming.RegimeMargin.Coupled.Indexed.ending_iff",
+        "Becoming.RegimeMargin.Coupled.Indexed.endsUnder_of_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.pointwise_step",
+        "Becoming.RegimeMargin.Coupled.Indexed.reads_of_keepsBelow",
+        "Becoming.RegimeMargin.Coupled.Indexed.repeats",
+        "Becoming.RegimeMargin.Coupled.Indexed.returns_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_alike_of",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_below_of",
+        "Becoming.RegimeMargin.Coupled.Indexed.setAt",
+        "Becoming.RegimeMargin.Coupled.Indexed.setAt_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.stays_at",
+        "Becoming.RegimeMargin.Coupled.Indexed.step",
+        "Becoming.RegimeMargin.Coupled.Indexed.step_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.step_keepsBelow",
+        "Becoming.RegimeMargin.Coupled.Indexed.thresholdWithin",
+        "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.within_below",
+        "Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band"
+      ],
+      "sha256": "03746d31f21df89b9dfca102312b07823f6816b51b3205c71dbc28967b622d3c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json",
+      "role": "receipt",
+      "sha256": "2e55e957277c6850ab333116aff5b4dff2fce182955a5c60e4c0d6e9aeabbb0c"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "20ffd702ea18fce9354794fdc7537c0c04938d573a1ccf4f32fde8ddde26f968"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "bfa0f62e4f7e3b0f4e8ab640cafc5667f4d10e3f88649e4eb2cf1636bc5f20f1"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "3317db1c9bdc8260ec8c2f67e9f15d50eab6e7fad43497da2a8ddba7d1b88165"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (RM10), webs with a recent giving; RM9's bounded laws stated for any law read condition by condition; study section 331.",
+      "zh": "2026年10月22日：新增（RM10），带近来所给的网；RM9 的有界之律对任何逐条件读取之律陈述；研究第 331 节。"
+    }
+  ]
+}

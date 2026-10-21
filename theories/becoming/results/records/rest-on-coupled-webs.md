@@ -25,7 +25,7 @@
 ## Does not show
 
 - Infinitely many conditions: the decision whether a step changes what is left runs over the covering list.
-- Webs with a recent giving; amounts beyond whole numbers. Thresholds beyond a band, a bound on the run in its place, are stated (record thresholds-beyond-a-band).
+- Amounts beyond whole numbers; rest within a band with a recent giving. Thresholds beyond a band and webs with a recent giving are stated (records thresholds-beyond-a-band, webs-with-a-recent-giving).
 - That measured webs meet mutual support and a band: how far a field web's thresholds fall is untested.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -40,7 +40,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Webs with a recent giving; a field web whose couplings are measured; an independent review.
+A field web whose couplings are measured; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -61,8 +61,9 @@ A monotone map on a finite ordered set iterated from a state it does not raise r
   - Input: The pair read as the web indexed by Bool.
   - Preserved conditions: Mutual support; a band. [RegimeMargin.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 - related, not a proved adapter: [thresholds-beyond-a-band](thresholds-beyond-a-band.md). Beyond a band, a bound on the run decides ending by a finite check, and each threshold is exact and falls as others rise.
+- related, not a proved adapter: [webs-with-a-recent-giving](webs-with-a-recent-giving.md). Webs with a recent giving keep the order under mutual support; their bounded runs have ending decided and exact thresholds.
 
-**Used by:** [thresholds-beyond-a-band](thresholds-beyond-a-band.md)
+**Used by:** [thresholds-beyond-a-band](thresholds-beyond-a-band.md) · [webs-with-a-recent-giving](webs-with-a-recent-giving.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -75,6 +76,7 @@ A monotone map on a finite ordered set iterated from a state it does not raise r
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json) | — |
 
 Aliases: `rest and points of no return on coupled webs`, `coupled webs come to rest`, `耦合之网的静止`, `Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest`, `Becoming.RegimeMargin.Coupled.Indexed.threshold_falls`
 
@@ -83,6 +85,7 @@ Aliases: `rest and points of no return on coupled webs`, `coupled webs come to r
 
 - 22 October 2026: added (RM8), rest and points of no return on coupled webs of finitely many conditions, stated condition by condition; the pair's laws derived from them; study section 325.
 - 22 October 2026, RM9: thresholds beyond a band are stated with a bound on the run in its place (record thresholds-beyond-a-band, study section 327); step_alike, run_alike and ends_alike now take pointwise reading, of which mutual support is the case. The statements of its laws are unchanged.
+- 22 October 2026, RM10: webs with a recent giving are stated (record webs-with-a-recent-giving, study section 331); run_alike is now derived from run_alike_of. The statements of its laws are unchanged.
 
 </details>
 

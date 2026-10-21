@@ -84,6 +84,7 @@ Cooperative (monotone) systems keep the order of states in any dimension, and th
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T223241.379489Z/verification.json) | — |
 
 Aliases: `coupled webs`, `the cascade of ends`, `coextinction along a chain of dependence`, `耦合之网`, `Becoming.RegimeMargin.Coupled.Indexed.ends_downstream`, `Becoming.RegimeMargin.Coupled.Indexed.step_mono`
 
