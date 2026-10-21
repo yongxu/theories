@@ -1,0 +1,380 @@
+{
+ "hypothesis": {
+  "verdicts": {
+   "A1": "passed",
+   "A2": "passed",
+   "T1a-DF": "passed",
+   "T1b-DF": "passed",
+   "T2-DF": "passed",
+   "T1a-SUC": "passed",
+   "T1b-SUC": "passed",
+   "T2-SUC": "passed",
+   "C1": "passed",
+   "L": "passed"
+  },
+  "A_tested_levels": [
+   2,
+   3
+  ],
+  "DF": {
+   "T1a_k3": {
+    "RM": 0.06168421402392627,
+    "FR": 0.21810699041692608,
+    "RW": 0.21804917890390083,
+    "TR": 0.2568708130407765
+   },
+   "T1b_k3": {
+    "RM": 0.06595011282253774,
+    "FR": 0.5150373603966683,
+    "RW": 0.5151962463638532,
+    "TR": 0.24737937805226176
+   },
+   "T2": {
+    "agreement": 1.0,
+    "median_observed": null,
+    "median_predicted": null
+   },
+   "onset_day": null,
+   "map_fold_day": 19
+  },
+  "SUC": {
+   "T1a_k3": {
+    "RM": 0.06710050211546344,
+    "FR": 0.4302675372387007,
+    "RW": 0.4303491452008636,
+    "TR": 0.3027712074323601
+   },
+   "T1b_k3": {
+    "RM": 0.0874682280211852,
+    "FR": 0.9376137119166532,
+    "RW": 0.9381919388980848,
+    "TR": 0.4139367939905626
+   },
+   "T2": {
+    "agreement": 1.0,
+    "median_observed": 23.0,
+    "median_predicted": 23.0
+   },
+   "onset_day": 23,
+   "map_fold_day": 19
+  },
+  "fold_sucrose_fitted": 0.14722024950000026,
+  "C1_ratio": 1.0086911178931919,
+  "L_ac": -0.06514205269512625
+ },
+ "carried anomaly": {
+  "verdicts": {
+   "A1": "passed",
+   "A2": "failed",
+   "T1a-DF": "passed",
+   "T1b-DF": "failed",
+   "T2-DF": "passed",
+   "T1a-SUC": "passed",
+   "T1b-SUC": "passed",
+   "T2-SUC": "passed",
+   "C1": "passed",
+   "L": "failed"
+  },
+  "A_tested_levels": [
+   2,
+   3
+  ],
+  "DF": {
+   "T1a_k3": {
+    "RM": 0.149782623929781,
+    "FR": 0.2516935852937885,
+    "RW": 0.2519495976997814,
+    "TR": 0.20022287501785782
+   },
+   "T1b_k3": {
+    "RM": 0.16381000760009923,
+    "FR": 0.44954652530644285,
+    "RW": 0.44979167324852354,
+    "TR": 0.20403126158876117
+   },
+   "T2": {
+    "agreement": 1.0,
+    "median_observed": null,
+    "median_predicted": null
+   },
+   "onset_day": null,
+   "map_fold_day": 19
+  },
+  "SUC": {
+   "T1a_k3": {
+    "RM": 0.14396355646606895,
+    "FR": 0.4677091552878451,
+    "RW": 0.46809646856238885,
+    "TR": 0.2976403107388762
+   },
+   "T1b_k3": {
+    "RM": 0.22996363842012563,
+    "FR": 0.936558811830635,
+    "RW": 0.936904386015134,
+    "TR": 0.4203121941127489
+   },
+   "T2": {
+    "agreement": 1.0,
+    "median_observed": 23.0,
+    "median_predicted": 23.0
+   },
+   "onset_day": 23,
+   "map_fold_day": 19
+  },
+  "fold_sucrose_fitted": 0.15231365550000045,
+  "C1_ratio": 0.9992619870058947,
+  "L_ac": 0.6668035002750218
+ },
+ "earlier dilution fold": {
+  "verdicts": {
+   "A1": "passed",
+   "A2": "passed",
+   "T1a-DF": "passed",
+   "T1b-DF": "failed",
+   "T2-DF": "failed",
+   "T1a-SUC": "passed",
+   "T1b-SUC": "passed",
+   "T2-SUC": "passed",
+   "C1": "passed",
+   "L": "passed"
+  },
+  "A_tested_levels": [
+   2,
+   3
+  ],
+  "DF": {
+   "T1a_k3": {
+    "RM": 0.21904613266707307,
+    "FR": 0.4402212190021726,
+    "RW": 0.440527325632986,
+    "TR": 0.4697824994462444
+   },
+   "T1b_k3": {
+    "RM": 1.694903774302242,
+    "FR": 2.03497690651139,
+    "RW": 2.0354070904610717,
+    "TR": 1.011392290598104
+   },
+   "T2": {
+    "agreement": 0.0,
+    "median_observed": 18.0,
+    "median_predicted": null
+   },
+   "onset_day": 18,
+   "map_fold_day": 19
+  },
+  "SUC": {
+   "T1a_k3": {
+    "RM": 0.06322042773441149,
+    "FR": 0.45824965332566286,
+    "RW": 0.45847152895011956,
+    "TR": 0.32048842680359224
+   },
+   "T1b_k3": {
+    "RM": 0.07236274220750313,
+    "FR": 0.9498806949946925,
+    "RW": 0.9504752578275938,
+    "TR": 0.40189549898565163
+   },
+   "T2": {
+    "agreement": 1.0,
+    "median_observed": 23.0,
+    "median_predicted": 23.0
+   },
+   "onset_day": 23,
+   "map_fold_day": 19
+  },
+  "fold_sucrose_fitted": 0.1489476355000004,
+  "C1_ratio": 0.92180954569788,
+  "L_ac": -0.10878817747958944
+ },
+ "level offset": {
+  "verdicts": {
+   "A1": "passed",
+   "A2": "passed",
+   "T1a-DF": "passed",
+   "T1b-DF": "passed",
+   "T2-DF": "passed",
+   "T1a-SUC": "passed",
+   "T1b-SUC": "passed",
+   "T2-SUC": "passed",
+   "C1": "failed",
+   "L": "passed"
+  },
+  "A_tested_levels": [
+   2,
+   3
+  ],
+  "DF": {
+   "T1a_k3": {
+    "RM": 0.2034046299118533,
+    "FR": 0.2238456127008672,
+    "RW": 0.22423161927001145,
+    "TR": 0.2796164625162554
+   },
+   "T1b_k3": {
+    "RM": 0.18630891134925842,
+    "FR": 0.4910119904046789,
+    "RW": 0.4912446955890753,
+    "TR": 0.29142831929887625
+   },
+   "T2": {
+    "agreement": 1.0,
+    "median_observed": null,
+    "median_predicted": null
+   },
+   "onset_day": null,
+   "map_fold_day": 19
+  },
+  "SUC": {
+   "T1a_k3": {
+    "RM": 0.06047691583336418,
+    "FR": 0.44869731594469997,
+    "RW": 0.44883124438982974,
+    "TR": 0.34249307631128584
+   },
+   "T1b_k3": {
+    "RM": 0.06412523291221983,
+    "FR": 0.9181574884921384,
+    "RW": 0.9182445809461917,
+    "TR": 0.5576826435859445
+   },
+   "T2": {
+    "agreement": 1.0,
+    "median_observed": 23.0,
+    "median_predicted": 23.0
+   },
+   "onset_day": 23,
+   "map_fold_day": 19
+  },
+  "fold_sucrose_fitted": 0.15916925950000013,
+  "C1_ratio": 1.2393779979070383,
+  "L_ac": -0.07359334026091681
+ },
+ "sucrose kink within range": {
+  "verdicts": {
+   "A1": "passed",
+   "A2": "failed",
+   "T1a-DF": "passed",
+   "T1b-DF": "passed",
+   "T2-DF": "passed",
+   "T1a-SUC": "passed",
+   "T1b-SUC": "passed",
+   "T2-SUC": "passed",
+   "C1": "passed",
+   "L": "passed"
+  },
+  "A_tested_levels": [
+   3,
+   2
+  ],
+  "DF": {
+   "T1a_k3": {
+    "RM": 0.06124168587395583,
+    "FR": 0.23023966970902512,
+    "RW": 0.23087569241360853,
+    "TR": 0.26579571890513554
+   },
+   "T1b_k3": {
+    "RM": 0.058821025649785905,
+    "FR": 0.4868983881307077,
+    "RW": 0.4871351987019336,
+    "TR": 0.27252970600468773
+   },
+   "T2": {
+    "agreement": 1.0,
+    "median_observed": null,
+    "median_predicted": null
+   },
+   "onset_day": null,
+   "map_fold_day": 19
+  },
+  "SUC": {
+   "T1a_k3": {
+    "RM": 0.06159027419698259,
+    "FR": 0.5741018834644867,
+    "RW": 0.5748569998556308,
+    "TR": 0.43176517784721397
+   },
+   "T1b_k3": {
+    "RM": 0.0,
+    "FR": 2.1645719148883527,
+    "RW": 2.1673860180248035,
+    "TR": 0.9760730170228562
+   },
+   "T2": {
+    "agreement": 1.0,
+    "median_observed": 18.0,
+    "median_predicted": 18.0
+   },
+   "onset_day": 18,
+   "map_fold_day": 16
+  },
+  "fold_sucrose_fitted": 0.3226532225,
+  "C1_ratio": 0.9985909912212542,
+  "L_ac": -0.008280601019230286
+ },
+ "sucrose threshold below the fitted levels": {
+  "verdicts": {
+   "A1": "passed",
+   "A2": "passed",
+   "T1a-DF": "passed",
+   "T1b-DF": "passed",
+   "T2-DF": "passed",
+   "T1a-SUC": "passed",
+   "T1b-SUC": "passed",
+   "T2-SUC": "failed",
+   "C1": "passed",
+   "L": "passed"
+  },
+  "A_tested_levels": [
+   2,
+   3
+  ],
+  "DF": {
+   "T1a_k3": {
+    "RM": 0.06340418460433617,
+    "FR": 0.21677361870356038,
+    "RW": 0.21708683730857253,
+    "TR": 0.2529228607301551
+   },
+   "T1b_k3": {
+    "RM": 0.07886537134116733,
+    "FR": 0.5168011892401058,
+    "RW": 0.5170316784502933,
+    "TR": 0.29353630662110947
+   },
+   "T2": {
+    "agreement": 1.0,
+    "median_observed": null,
+    "median_predicted": null
+   },
+   "onset_day": null,
+   "map_fold_day": 19
+  },
+  "SUC": {
+   "T1a_k3": {
+    "RM": 0.07426275938046162,
+    "FR": 0.4340639756655764,
+    "RW": 0.43435985572506003,
+    "TR": 0.3379818342510677
+   },
+   "T1b_k3": {
+    "RM": 0.3104669848646652,
+    "FR": 1.595625975321747,
+    "RW": 1.5978430596914304,
+    "TR": 0.6671594572566596
+   },
+   "T2": {
+    "agreement": 0.5,
+    "median_observed": 20.5,
+    "median_predicted": 23.0
+   },
+   "onset_day": 20,
+   "map_fold_day": 19
+  },
+  "fold_sucrose_fitted": 0.1470966005000005,
+  "C1_ratio": 1.003917586772063,
+  "L_ac": -0.06716292166037993
+ }
+}
