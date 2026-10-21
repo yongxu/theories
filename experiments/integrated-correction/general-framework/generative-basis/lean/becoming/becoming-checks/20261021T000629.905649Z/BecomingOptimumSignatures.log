@@ -1,0 +1,931 @@
+@Becoming.Optimum.Exceeds.total_lt : ∀ {C : Type} {o o' : C → Nat} {ds : List C},
+  Becoming.Optimum.Exceeds ds o' o → Becoming.total ds o < Becoming.total ds o'
+@Becoming.Optimum.rising_total : ∀ {C : Type} (ds : List C),
+  Becoming.Optimum.Rising ds fun o' o => Becoming.total ds o < Becoming.total ds o'
+@Becoming.Optimum.Rising.mono : ∀ {C : Type} {ds : List C} {better : (C → Nat) → (C → Nat) → Prop},
+  Becoming.Optimum.Rising ds better →
+    ∀ {better' : (C → Nat) → (C → Nat) → Prop},
+      (∀ (o' o : C → Nat), better o' o → better' o' o) → Becoming.Optimum.Rising ds better'
+@Becoming.Optimum.least_iff : ∀ {C : Type} {ds rest : List C} {eligible : (C → Nat) → Prop},
+  (∀ (better : (C → Nat) → (C → Nat) → Prop),
+      Becoming.Optimum.Rising ds better →
+        ∀ (o : C → Nat), Becoming.Requirement.Frontier eligible better o → Becoming.Optimum.Least rest eligible o) ↔
+    ∀ (o o' : C → Nat),
+      eligible o →
+        eligible o' → ∀ (c : C), c ∈ rest → o' c < o c → ¬¬∃ o'', eligible o'' ∧ Becoming.Optimum.Exceeds ds o'' o
+@Becoming.Optimum.least_of_room : ∀ {C : Type} {ds rest : List C} {eligible : (C → Nat) → Prop}
+  {better : (C → Nat) → (C → Nat) → Prop},
+  Becoming.Optimum.Rising ds better →
+    Becoming.Optimum.Room ds rest eligible →
+      ∀ {o : C → Nat}, Becoming.Requirement.Frontier eligible better o → Becoming.Optimum.Least rest eligible o
+@Becoming.Optimum.transfer_exceeds : ∀ {C : Type} {ds : List C} [inst : DecidableEq C] {c d : C},
+  ¬c ∈ ds → d ∈ ds → ∀ (o : C → Nat), Becoming.Optimum.Exceeds ds (Becoming.Optimum.transfer c d o) o
+@Becoming.Optimum.Shared.room : ∀ {C : Type} {ds rest : List C} {eligible : (C → Nat) → Prop} [inst : DecidableEq C],
+  (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+    ∀ {d : C}, d ∈ ds → Becoming.Optimum.Shared ds rest eligible → Becoming.Optimum.Room ds rest eligible
+@Becoming.Optimum.least_of_shared : ∀ {C : Type} {ds rest : List C} {eligible : (C → Nat) → Prop}
+  {better : (C → Nat) → (C → Nat) → Prop} [inst : DecidableEq C],
+  Becoming.Optimum.Rising ds better →
+    (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+      ∀ {d : C},
+        d ∈ ds →
+          Becoming.Optimum.Shared ds rest eligible →
+            ∀ {o : C → Nat}, Becoming.Requirement.Frontier eligible better o → Becoming.Optimum.Least rest eligible o
+@Becoming.Web.optimum_broken_iff : ∀ {F C : Type} {W : Becoming.Web F C} {ds rest : List C}
+  {eligible : (C → Nat) → Prop} {better : (C → Nat) → (C → Nat) → Prop} {dep : C → F} {t : Nat},
+  Becoming.Optimum.Rising ds better →
+    Becoming.Optimum.Room ds rest eligible →
+      Becoming.Requirement.Frontier eligible better (W.level (t + 1)) →
+        W.MetOn dep rest t → ∀ {c : C}, c ∈ rest → (W.Broken t (dep c) c ↔ ∃ o, eligible o ∧ o c < W.need t (dep c) c)
+@Becoming.Web.optimum_ends_beyond : ∀ {F C : Type} {W : Becoming.Web F C} {ds rest : List C}
+  {eligible : (C → Nat) → Prop} {better : (C → Nat) → (C → Nat) → Prop} {dep : C → F} {t : Nat} {obs : F → C → Prop}
+  {members : F → Prop},
+  Becoming.Optimum.Rising ds better →
+    Becoming.Optimum.Room ds rest eligible →
+      Becoming.Requirement.Frontier eligible better (W.level (t + 1)) →
+        W.MetOn dep rest t →
+          W.Dependent →
+            (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+              (∀ (h : F) (c : C), members h → W.CoupledInto obs h c → c ∈ ds) →
+                ∀ {c : C},
+                  c ∈ rest →
+                    ∀ {o : C → Nat},
+                      eligible o →
+                        o c < W.need t (dep c) c →
+                          W.requires (t + 1) (dep c) c ∧ W.need t (dep c) c ≤ W.need (t + 1) (dep c) c →
+                            W.Broken t (dep c) c ∧
+                              ¬W.active (t + 1) (dep c) ∧
+                                ¬members (dep c) ∧ ∀ (h : F), members h → ¬W.CoupledInto obs h c
+@Becoming.Flow.Balances.family_le_iff : ∀ {F C : Type} {ds rest : List C} {t : Nat} {L L' : Becoming.Flow F C}
+  {W W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      L.GainlessOn (ds ++ rest) t →
+        L'.GainlessOn (ds ++ rest) t →
+          W.stock ds t + W.stock rest t = W'.stock ds t + W'.stock rest t →
+            (W.stock ds (t + 1) ≤ W'.stock ds (t + 1) ↔
+              W'.stock rest (t + 1) + L'.lost (ds ++ rest) t ≤ W.stock rest (t + 1) + L.lost (ds ++ rest) t)
+@Becoming.Flow.top_iff_least : ∀ {F C : Type} {ds rest : List C} {t : Nat} {A : Type} {L : A → Becoming.Flow F C}
+  {W : A → Becoming.Web F C},
+  (∀ (a : A), (L a).Balances (W a)) →
+    (∀ (a : A), (L a).GainlessOn (ds ++ rest) t) →
+      (∀ (a b : A), (W a).stock ds t + (W a).stock rest t = (W b).stock ds t + (W b).stock rest t) →
+        ∀ (a : A),
+          (∀ (b : A), (W b).stock ds (t + 1) ≤ (W a).stock ds (t + 1)) ↔
+            ∀ (b : A),
+              (W a).stock rest (t + 1) + (L a).lost (ds ++ rest) t ≤
+                (W b).stock rest (t + 1) + (L b).lost (ds ++ rest) t
+@Becoming.Flow.keeping_optimum_takes_slack : ∀ {F C : Type} {ds rest : List C} {t : Nat} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {eligible : (C → Nat) → Prop} {better : (C → Nat) → (C → Nat) → Prop} {dep : C → F},
+  L.Balances W →
+    L.GainlessOn (ds ++ rest) t →
+      W.MetOn dep rest t →
+        Becoming.Optimum.Rising ds better →
+          (Becoming.Optimum.Room ds rest fun o => eligible o ∧ ∀ (c : C), c ∈ rest → W.need t (dep c) c ≤ o c) →
+            (∀ (c : C),
+                c ∈ rest →
+                  ∃ o, (eligible o ∧ ∀ (c : C), c ∈ rest → W.need t (dep c) c ≤ o c) ∧ o c ≤ W.need t (dep c) c) →
+              Becoming.Requirement.Frontier (fun o => eligible o ∧ ∀ (c : C), c ∈ rest → W.need t (dep c) c ≤ o c)
+                  better (W.level (t + 1)) →
+                (∀ (c : C), c ∈ rest → ¬W.Broken t (dep c) c) ∧
+                  W.stock ds (t + 1) + L.lost (ds ++ rest) t = W.stock ds t + W.slack dep rest t
+Becoming.Optimum.Drain.storeOrder_rising : Becoming.Optimum.Rising [Becoming.Diversion.Place.store]
+  Becoming.Optimum.Drain.storeOrder
+Becoming.Optimum.Drain.split_shared : Becoming.Optimum.Shared [Becoming.Diversion.Place.store]
+  [Becoming.Diversion.Place.source] Becoming.Optimum.Drain.Split
+Becoming.Optimum.Drain.drained_optimum : Becoming.Requirement.Frontier Becoming.Optimum.Drain.Split
+  Becoming.Optimum.Drain.storeOrder ((Becoming.Diversion.web Becoming.Optimum.Drain.drainedLevel).level 1)
+Becoming.Optimum.Drain.taker_couples_store : ∀ (level : Nat → Becoming.Diversion.Place → Nat)
+  (h : Becoming.Diversion.Formation) (c : Becoming.Diversion.Place),
+  h = Becoming.Diversion.Formation.taker →
+    (Becoming.Diversion.web level).CoupledInto Becoming.Diversion.gauge h c → c ∈ [Becoming.Diversion.Place.store]
+Becoming.Optimum.Drain.drained_ends : (Becoming.Diversion.web Becoming.Optimum.Drain.drainedLevel).Broken 0
+    Becoming.Diversion.Formation.dweller Becoming.Diversion.Place.source ∧
+  ¬(Becoming.Diversion.web Becoming.Optimum.Drain.drainedLevel).active 1 Becoming.Diversion.Formation.dweller ∧
+    ¬Becoming.DrawnBeyond.dwellerOn Becoming.Diversion.Place.source = Becoming.Diversion.Formation.taker ∧
+      ¬(Becoming.Diversion.web Becoming.Optimum.Drain.drainedLevel).CoupledInto Becoming.Diversion.gauge
+          Becoming.Diversion.Formation.taker Becoming.Diversion.Place.source
+@Becoming.Optimum.Drain.counted_after_drains : ∀ {o : Becoming.Diversion.Place → Nat},
+  Becoming.Requirement.Frontier Becoming.Optimum.Drain.Split Becoming.Optimum.Drain.countedAfter o →
+    o Becoming.Diversion.Place.source = 0
+Becoming.Optimum.Drain.satisficing_either : ¬Becoming.Optimum.Rising [Becoming.Diversion.Place.store]
+      Becoming.Optimum.Drain.satisficing ∧
+  Becoming.Requirement.Frontier Becoming.Optimum.Drain.Split Becoming.Optimum.Drain.satisficing
+      Becoming.Optimum.Drain.keptLevel ∧
+    Becoming.Requirement.Frontier Becoming.Optimum.Drain.Split Becoming.Optimum.Drain.satisficing
+        ((Becoming.Diversion.web Becoming.Optimum.Drain.drainedLevel).level 1) ∧
+      (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).need 0 Becoming.Diversion.Formation.dweller
+            Becoming.Diversion.Place.source ≤
+          Becoming.Optimum.Drain.keptLevel Becoming.Diversion.Place.source ∧
+        (Becoming.Diversion.web Becoming.Optimum.Drain.drainedLevel).level 1 Becoming.Diversion.Place.source <
+          (Becoming.Diversion.web Becoming.Optimum.Drain.drainedLevel).need 0 Becoming.Diversion.Formation.dweller
+            Becoming.Diversion.Place.source
+Becoming.Optimum.Drain.room_needed : Becoming.Requirement.Frontier Becoming.Optimum.Drain.Spilling
+    Becoming.Optimum.Drain.storeOrder (Becoming.Optimum.Drain.drainedLevel 0) ∧
+  ¬Becoming.Optimum.Least [Becoming.Diversion.Place.source] Becoming.Optimum.Drain.Spilling
+      (Becoming.Optimum.Drain.drainedLevel 0)
+Becoming.Optimum.Drain.keeping_room : Becoming.Optimum.Room [Becoming.Diversion.Place.store]
+  [Becoming.Diversion.Place.source] Becoming.Optimum.Drain.Keeping
+Becoming.Optimum.Drain.kept_takes_slack : Becoming.Requirement.Frontier Becoming.Optimum.Drain.Keeping
+    Becoming.Optimum.Drain.storeOrder ((Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).level 1) ∧
+  (∀ (c : Becoming.Diversion.Place),
+      c ∈ [Becoming.Diversion.Place.source] →
+        ¬(Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).Broken 0 (Becoming.DrawnBeyond.dwellerOn c)
+            c) ∧
+    (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).stock [Becoming.Diversion.Place.store] 1 +
+        Becoming.Diversion.diverting.lost ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) 0 =
+      (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).stock [Becoming.Diversion.Place.store] 0 +
+        (Becoming.Diversion.web Becoming.DrawnBeyond.WithinSlack.level).slack Becoming.DrawnBeyond.dwellerOn
+          [Becoming.Diversion.Place.source] 0
+@Becoming.total_raise_at : ∀ {α : Type} {p q : α → Nat} {a : α},
+  p a = q a + 1 →
+    (∀ (x : α), ¬x = a → p x = q x) →
+      ∀ {l : List α}, Becoming.Distinct l → a ∈ l → Becoming.total l p = Becoming.total l q + 1
+@Becoming.total_split : ∀ {α : Type} (part : α → Bool) (f : α → Nat) (l : List α),
+  Becoming.total l f =
+    (Becoming.total l fun a => bif part a then 0 else f a) + Becoming.total l fun a => bif part a then f a else 0
+Becoming.sub_lt_self_iff : ∀ (n k : Nat), n - k < n ↔ 0 < k ∧ 0 < n
+@Becoming.Flow.Outcome.of_balances : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {W : Becoming.Web F C}
+  {cap : F → C → Nat} {cs : List C} {t : Nat},
+  L.Balances W → L.ActsWithin part cap cs t L → L.Outcome part (W.level t) cap cs t (W.level (t + 1))
+@Becoming.Flow.capacity_eq_zero : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat} {t : Nat}
+  {c : C}, (∀ (h : F), h ∈ L.present t → part h = true → cap h c = 0) → L.capacity part cap t c = 0
+@Becoming.Flow.ActsWithin.taken_eq : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {cs : List C} {t : Nat} {L' : Becoming.Flow F C},
+  L.ActsWithin part cap cs t L' →
+    ∀ (c : C),
+      L'.taken t c = L.restTaken part t c + Becoming.total (L.present t) fun h => bif part h then L'.take t h c else 0
+@Becoming.Flow.ActsWithin.given_eq : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {cs : List C} {t : Nat} {L' : Becoming.Flow F C},
+  L.ActsWithin part cap cs t L' →
+    ∀ (c : C),
+      L'.given t c = L.restGiven part t c + Becoming.total (L.present t) fun h => bif part h then L'.give t h c else 0
+@Becoming.Flow.ActsWithin.part_taken_le : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {cs : List C} {t : Nat} {L' : Becoming.Flow F C},
+  L.ActsWithin part cap cs t L' →
+    ∀ (c : C), (Becoming.total (L.present t) fun h => bif part h then L'.take t h c else 0) ≤ L.capacity part cap t c
+@Becoming.Flow.other_of_out : ∀ {F : Type} {part : F → Bool} {h : F}, part h = true → ∀ {g : F}, part g = false → ¬g = h
+@Becoming.Flow.moveUnit_take : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d : C} (g : F) (x : C),
+  (L'.moveUnit t h c d).take t g x = if g = h ∧ x = c then L'.take t g x + 1 else L'.take t g x
+@Becoming.Flow.moveUnit_give : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d : C} (g : F) (x : C),
+  (L'.moveUnit t h c d).give t g x = if g = h ∧ x = d then L'.give t g x + 1 else L'.give t g x
+@Becoming.Flow.redirect_give : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d : C} (g : F) (x : C),
+  (L'.redirect t h c d).give t g x =
+    if g = h ∧ x = c then L'.give t g x - 1 else if g = h ∧ x = d then L'.give t g x + 1 else L'.give t g x
+@Becoming.Flow.moveUnit_taken_at : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d : C},
+  Becoming.Distinct (L'.present t) → h ∈ L'.present t → (L'.moveUnit t h c d).taken t c = L'.taken t c + 1
+@Becoming.Flow.moveUnit_taken_off : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d x : C}, ¬x = c → (L'.moveUnit t h c d).taken t x = L'.taken t x
+@Becoming.Flow.moveUnit_given_at : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d : C},
+  Becoming.Distinct (L'.present t) → h ∈ L'.present t → (L'.moveUnit t h c d).given t d = L'.given t d + 1
+@Becoming.Flow.moveUnit_given_off : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d x : C}, ¬x = d → (L'.moveUnit t h c d).given t x = L'.given t x
+@Becoming.Flow.redirect_given_at : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d : C},
+  Becoming.Distinct (L'.present t) →
+    h ∈ L'.present t → 0 < L'.give t h c → (L'.redirect t h c d).given t c + 1 = L'.given t c
+@Becoming.Flow.redirect_given_to : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d : C},
+  Becoming.Distinct (L'.present t) → h ∈ L'.present t → ¬c = d → (L'.redirect t h c d).given t d = L'.given t d + 1
+@Becoming.Flow.redirect_given_off : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d x : C}, ¬x = c → ¬x = d → (L'.redirect t h c d).given t x = L'.given t x
+@Becoming.Flow.moveUnit_balances : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d : C} {l o : C → Nat},
+  Becoming.Distinct (L'.present t) →
+    h ∈ L'.present t →
+      ¬c = d →
+        0 < o c →
+          (∀ (x : C), o x + L'.taken t x = l x + L'.given t x) →
+            ∀ (x : C),
+              Becoming.Optimum.transfer c d o x + (L'.moveUnit t h c d).taken t x =
+                l x + (L'.moveUnit t h c d).given t x
+@Becoming.Flow.redirect_balances : ∀ {F C : Type} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F]
+  [inst_1 : DecidableEq C] {h : F} {c d : C} {l o : C → Nat},
+  Becoming.Distinct (L'.present t) →
+    h ∈ L'.present t →
+      ¬c = d →
+        0 < o c →
+          0 < L'.give t h c →
+            (∀ (x : C), o x + L'.taken t x = l x + L'.given t x) →
+              ∀ (x : C),
+                Becoming.Optimum.transfer c d o x + (L'.redirect t h c d).taken t x =
+                  l x + (L'.redirect t h c d).given t x
+@Becoming.Flow.ActsWithin.moveUnit : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {cs : List C} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F] [inst_1 : DecidableEq C] {h : F} {c d : C},
+  L.ActsWithin part cap cs t L' →
+    part h = true →
+      L'.take t h c < cap h c →
+        Becoming.Distinct cs → c ∈ cs → d ∈ cs → L.ActsWithin part cap cs t (L'.moveUnit t h c d)
+@Becoming.Flow.ActsWithin.redirect : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {cs : List C} {t : Nat} {L' : Becoming.Flow F C} [inst : DecidableEq F] [inst_1 : DecidableEq C] {h : F} {c d : C},
+  L.ActsWithin part cap cs t L' →
+    part h = true →
+      Becoming.Distinct cs →
+        c ∈ cs → d ∈ cs → ¬c = d → 0 < L'.give t h c → L.ActsWithin part cap cs t (L'.redirect t h c d)
+@Becoming.Optimum.transfer_above : ∀ {C : Type} {ds rest : List C} [inst : DecidableEq C] {floor o : C → Nat} {c d : C},
+  (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+    d ∈ ds →
+      floor c < o c →
+        (∀ (x : C), x ∈ rest → floor x ≤ o x) → ∀ (x : C), x ∈ rest → floor x ≤ Becoming.Optimum.transfer c d o x
+@Becoming.Optimum.Above.transfer : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {t : Nat} {l : C → Nat} {ds rest : List C} [DecidableEq F] [inst : DecidableEq C] {floor o : C → Nat}
+  {L' : Becoming.Flow F C},
+  Becoming.Distinct (L.present t) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {c d : C},
+          c ∈ rest →
+            d ∈ ds →
+              L.ActsWithin part cap (ds ++ rest) t L' →
+                (∀ (x : C), o x + L'.taken t x = l x + L'.given t x) →
+                  (∀ (x : C), x ∈ rest → floor x ≤ o x) →
+                    floor c < o c →
+                      ∀ {h : F},
+                        h ∈ L.present t →
+                          part h = true →
+                            L'.take t h c < cap h c ∨ 0 < L'.give t h c →
+                              Becoming.Optimum.Above L part l cap ds rest t floor (Becoming.Optimum.transfer c d o)
+@Becoming.Optimum.member_below : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat} {t : Nat}
+  {L₁ L₂ : Becoming.Flow F C} {cs : List C},
+  L.ActsWithin part cap cs t L₁ →
+    L.ActsWithin part cap cs t L₂ →
+      ∀ {q₁ q₂ : F → Nat},
+        Becoming.total (L₁.present t) q₁ < Becoming.total (L₂.present t) q₂ →
+          (∀ (g : F), part g = false → q₁ g = q₂ g) → ∃ g, g ∈ L.present t ∧ part g = true ∧ q₁ g < q₂ g
+@Becoming.Optimum.Above.room : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat} {t : Nat}
+  {l : C → Nat} {ds rest : List C} [DecidableEq F] [DecidableEq C],
+  Becoming.Distinct (L.present t) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {d : C},
+          d ∈ ds →
+            ∀ (floor : C → Nat), Becoming.Optimum.Room ds rest (Becoming.Optimum.Above L part l cap ds rest t floor)
+@Becoming.Optimum.Above.full : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat} {t : Nat}
+  {l : C → Nat} {ds rest : List C} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F] [DecidableEq C]
+  {floor o : C → Nat} {L' : Becoming.Flow F C},
+  Becoming.Distinct (L.present t) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {d : C},
+          d ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              Becoming.Requirement.Frontier (Becoming.Optimum.Above L part l cap ds rest t floor) better o →
+                L.ActsWithin part cap (ds ++ rest) t L' →
+                  (∀ (x : C), o x + L'.taken t x = l x + L'.given t x) →
+                    ∀ {c : C},
+                      c ∈ rest →
+                        floor c < o c →
+                          ∀ {h : F}, h ∈ L.present t → part h = true → L'.take t h c = cap h c ∧ L'.give t h c = 0
+@Becoming.Optimum.Above.floor_or_full : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {t : Nat} {l : C → Nat} {ds rest : List C} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F] [DecidableEq C]
+  {floor o : C → Nat},
+  Becoming.Distinct (L.present t) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {d : C},
+          d ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              Becoming.Requirement.Frontier (Becoming.Optimum.Above L part l cap ds rest t floor) better o →
+                ∀ {c : C},
+                  c ∈ rest →
+                    o c = floor c ∨ o c + L.restTaken part t c + L.capacity part cap t c = l c + L.restGiven part t c
+@Becoming.Optimum.above_nothing : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat} {t : Nat}
+  {l : C → Nat} {ds rest : List C} {better : (C → Nat) → (C → Nat) → Prop} {o : C → Nat},
+  Becoming.Requirement.Frontier (L.Outcome part l cap (ds ++ rest) t) better o →
+    Becoming.Requirement.Frontier (Becoming.Optimum.Above L part l cap ds rest t fun x => 0) better o
+@Becoming.Optimum.optimum_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {t : Nat} {l : C → Nat} {ds rest : List C} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F] [DecidableEq C],
+  Becoming.Distinct (L.present t) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {d : C},
+          d ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              ∀ {o : C → Nat},
+                Becoming.Requirement.Frontier (L.Outcome part l cap (ds ++ rest) t) better o →
+                  ∀ {c : C},
+                    c ∈ rest → o c = l c + L.restGiven part t c - L.restTaken part t c - L.capacity part cap t c
+@Becoming.Optimum.optimum_untouched : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {t : Nat} {l : C → Nat} {ds rest : List C} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F] [DecidableEq C],
+  Becoming.Distinct (L.present t) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {d : C},
+          d ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              ∀ {o : C → Nat},
+                Becoming.Requirement.Frontier (L.Outcome part l cap (ds ++ rest) t) better o →
+                  ∀ {c : C},
+                    c ∈ rest →
+                      (∀ (h : F), h ∈ L.present t → part h = true → cap h c = 0) →
+                        o c = l c + L.restGiven part t c - L.restTaken part t c
+@Becoming.Optimum.optimum_lowers_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {t : Nat} {l : C → Nat} {ds rest : List C} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F] [DecidableEq C],
+  Becoming.Distinct (L.present t) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {d : C},
+          d ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              ∀ {o : C → Nat},
+                Becoming.Requirement.Frontier (L.Outcome part l cap (ds ++ rest) t) better o →
+                  ∀ {c : C},
+                    c ∈ rest →
+                      (o c < l c + L.restGiven part t c - L.restTaken part t c ↔
+                        0 < L.capacity part cap t c ∧ 0 < l c + L.restGiven part t c - L.restTaken part t c)
+@Becoming.Web.optimum_broken_iff_capacity : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat}
+  {t : Nat} {ds rest : List C} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F] [DecidableEq C]
+  {W : Becoming.Web F C} {dep : C → F},
+  Becoming.Distinct (L.present t) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {d : C},
+          d ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              Becoming.Requirement.Frontier (L.Outcome part (W.level t) cap (ds ++ rest) t) better (W.level (t + 1)) →
+                W.MetOn dep rest t →
+                  ∀ {c : C},
+                    c ∈ rest →
+                      (W.Broken t (dep c) c ↔
+                        W.level t c + L.restGiven part t c - L.restTaken part t c - L.capacity part cap t c <
+                          W.need t (dep c) c)
+Becoming.Optimum.Drain.formations_distinct : Becoming.Distinct
+  [Becoming.Diversion.Formation.taker, Becoming.Diversion.Formation.dweller]
+Becoming.Optimum.Drain.store_source_distinct : Becoming.Distinct
+  ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source])
+Becoming.Optimum.Drain.drawing_within : ∀ (k : Nat),
+  (Becoming.Optimum.Drain.drawing k).ActsWithin Becoming.Optimum.Drain.takerPart (Becoming.Optimum.Drain.takerCap k)
+    ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) 0 (Becoming.Optimum.Drain.drawing k)
+@Becoming.Optimum.Drain.drawing_optimum : ∀ {k : Nat},
+  k ≤ 2 →
+    Becoming.Requirement.Frontier
+      ((Becoming.Optimum.Drain.drawing k).Outcome Becoming.Optimum.Drain.takerPart Becoming.Optimum.Drain.before
+        (Becoming.Optimum.Drain.takerCap k) ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) 0)
+      Becoming.Optimum.Drain.storeOrder (Becoming.Optimum.Drain.drawnTo k)
+@Becoming.Optimum.Drain.drawing_broken_iff : ∀ {k : Nat},
+  k ≤ 2 →
+    ((Becoming.Diversion.web (Becoming.Optimum.Drain.drawnLevel k)).Broken 0 Becoming.Diversion.Formation.dweller
+        Becoming.Diversion.Place.source ↔
+      0 < k)
+@Becoming.Optimum.alone_self : ∀ {F : Type} [inst : DecidableEq F] (h : F), Becoming.Optimum.alone h h = true
+@Becoming.Optimum.MutualBest.full : ∀ {F C : Type} {L : Becoming.Flow F C} {optimizer : F → Bool} {l : C → Nat}
+  {cap : F → C → Nat} {ds rest : F → List C} {better : F → (C → Nat) → (C → Nat) → Prop} {t : Nat} {o : C → Nat}
+  [inst : DecidableEq F] [DecidableEq C],
+  Becoming.Distinct (L.present t) →
+    (∀ (h : F), optimizer h = true → Becoming.Distinct (ds h ++ rest h)) →
+      (∀ (h : F), optimizer h = true → ∀ (c : C), c ∈ rest h → ¬c ∈ ds h) →
+        (∀ (h : F), optimizer h = true → ∃ d, d ∈ ds h) →
+          (∀ (h : F), optimizer h = true → Becoming.Optimum.Rising (ds h) (better h)) →
+            Becoming.Optimum.MutualBest L optimizer l cap ds rest better t o →
+              (∀ (x : C), o x + L.taken t x = l x + L.given t x) →
+                ∀ {h : F},
+                  h ∈ L.present t →
+                    optimizer h = true → ∀ {c : C}, c ∈ rest h → 0 < o c → L.take t h c = cap h c ∧ L.give t h c = 0
+@Becoming.Optimum.mutual_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {optimizer : F → Bool} {l : C → Nat}
+  {cap : F → C → Nat} {ds rest : F → List C} {better : F → (C → Nat) → (C → Nat) → Prop} {t : Nat} {o : C → Nat}
+  [inst : DecidableEq F] [DecidableEq C],
+  Becoming.Distinct (L.present t) →
+    (∀ (h : F), optimizer h = true → Becoming.Distinct (ds h ++ rest h)) →
+      (∀ (h : F), optimizer h = true → ∀ (c : C), c ∈ rest h → ¬c ∈ ds h) →
+        (∀ (h : F), optimizer h = true → ∃ d, d ∈ ds h) →
+          (∀ (h : F), optimizer h = true → Becoming.Optimum.Rising (ds h) (better h)) →
+            Becoming.Optimum.MutualBest L optimizer l cap ds rest better t o →
+              (∀ (x : C), o x + L.taken t x = l x + L.given t x) →
+                ∀ {c : C},
+                  (∀ (h : F), h ∈ L.present t → optimizer h = true → c ∈ rest h) →
+                    o c = l c + L.restGiven optimizer t c - L.restTaken optimizer t c - L.capacity optimizer cap t c
+@Becoming.Optimum.mutual_as_one : ∀ {F C : Type} {L : Becoming.Flow F C} {optimizer : F → Bool} {l : C → Nat}
+  {cap : F → C → Nat} {ds rest : F → List C} {better : F → (C → Nat) → (C → Nat) → Prop} {t : Nat} {o : C → Nat}
+  [inst : DecidableEq F] [DecidableEq C],
+  Becoming.Distinct (L.present t) →
+    (∀ (h : F), optimizer h = true → Becoming.Distinct (ds h ++ rest h)) →
+      (∀ (h : F), optimizer h = true → ∀ (c : C), c ∈ rest h → ¬c ∈ ds h) →
+        (∀ (h : F), optimizer h = true → ∃ d, d ∈ ds h) →
+          (∀ (h : F), optimizer h = true → Becoming.Optimum.Rising (ds h) (better h)) →
+            Becoming.Optimum.MutualBest L optimizer l cap ds rest better t o →
+              (∀ (x : C), o x + L.taken t x = l x + L.given t x) →
+                ∀ {c : C},
+                  (∀ (h : F), h ∈ L.present t → optimizer h = true → c ∈ rest h) →
+                    ∀ {dsJ restJ : List C},
+                      Becoming.Distinct (dsJ ++ restJ) →
+                        (∀ (c : C), c ∈ restJ → ¬c ∈ dsJ) →
+                          ∀ {dJ : C},
+                            dJ ∈ dsJ →
+                              ∀ {betterJ : (C → Nat) → (C → Nat) → Prop},
+                                Becoming.Optimum.Rising dsJ betterJ →
+                                  ∀ {o' : C → Nat},
+                                    Becoming.Requirement.Frontier (L.Outcome optimizer l cap (dsJ ++ restJ) t) betterJ
+                                        o' →
+                                      c ∈ restJ → o c = o' c
+@Becoming.Optimum.mutual_lowers_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {optimizer : F → Bool} {l : C → Nat}
+  {cap : F → C → Nat} {ds rest : F → List C} {better : F → (C → Nat) → (C → Nat) → Prop} {t : Nat} {o : C → Nat}
+  [inst : DecidableEq F] [DecidableEq C],
+  Becoming.Distinct (L.present t) →
+    (∀ (h : F), optimizer h = true → Becoming.Distinct (ds h ++ rest h)) →
+      (∀ (h : F), optimizer h = true → ∀ (c : C), c ∈ rest h → ¬c ∈ ds h) →
+        (∀ (h : F), optimizer h = true → ∃ d, d ∈ ds h) →
+          (∀ (h : F), optimizer h = true → Becoming.Optimum.Rising (ds h) (better h)) →
+            Becoming.Optimum.MutualBest L optimizer l cap ds rest better t o →
+              (∀ (x : C), o x + L.taken t x = l x + L.given t x) →
+                ∀ {c : C},
+                  (∀ (h : F), h ∈ L.present t → optimizer h = true → c ∈ rest h) →
+                    (o c < l c + L.restGiven optimizer t c - L.restTaken optimizer t c ↔
+                      0 < L.capacity optimizer cap t c ∧
+                        0 < l c + L.restGiven optimizer t c - L.restTaken optimizer t c)
+@Becoming.Web.mutual_broken_iff_capacity : ∀ {F C : Type} [inst : DecidableEq F] [DecidableEq C] {W : Becoming.Web F C}
+  {L : Becoming.Flow F C} {optimizer : F → Bool} {cap : F → C → Nat} {ds rest : F → List C}
+  {better : F → (C → Nat) → (C → Nat) → Prop} {t : Nat} {g : F} {c : C},
+  Becoming.Distinct (L.present t) →
+    (∀ (h : F), optimizer h = true → Becoming.Distinct (ds h ++ rest h)) →
+      (∀ (h : F), optimizer h = true → ∀ (c : C), c ∈ rest h → ¬c ∈ ds h) →
+        (∀ (h : F), optimizer h = true → ∃ d, d ∈ ds h) →
+          (∀ (h : F), optimizer h = true → Becoming.Optimum.Rising (ds h) (better h)) →
+            Becoming.Optimum.MutualBest L optimizer (W.level t) cap ds rest better t (W.level (t + 1)) →
+              (∀ (x : C), W.level (t + 1) x + L.taken t x = W.level t x + L.given t x) →
+                (∀ (h : F), h ∈ L.present t → optimizer h = true → c ∈ rest h) →
+                  W.requires t g c →
+                    W.need t g c ≤ W.level t c →
+                      (W.Broken t g c ↔
+                        W.level t c + L.restGiven optimizer t c - L.restTaken optimizer t c -
+                            L.capacity optimizer cap t c <
+                          W.need t g c)
+Becoming.Optimum.TwoTakers.members_distinct : Becoming.Distinct
+  [Becoming.Optimum.TwoTakers.Member.taker true, Becoming.Optimum.TwoTakers.Member.taker false,
+    Becoming.Optimum.TwoTakers.Member.dweller]
+Becoming.Optimum.TwoTakers.joint_within : ∀ (w : Bool),
+  Becoming.Optimum.TwoTakers.joint.ActsWithin (Becoming.Optimum.alone (Becoming.Optimum.TwoTakers.Member.taker w))
+    Becoming.Optimum.TwoTakers.capOf ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) 0
+    Becoming.Optimum.TwoTakers.joint
+Becoming.Optimum.TwoTakers.joint_balances : ∀ (x : Becoming.Diversion.Place),
+  Becoming.Optimum.TwoTakers.drained x + Becoming.Optimum.TwoTakers.joint.taken 0 x =
+    Becoming.Optimum.Drain.before x + Becoming.Optimum.TwoTakers.joint.given 0 x
+@Becoming.Optimum.TwoTakers.gives_at_most_one : ∀ {w : Bool}
+  {L' : Becoming.Flow Becoming.Optimum.TwoTakers.Member Becoming.Diversion.Place},
+  Becoming.Optimum.TwoTakers.joint.ActsWithin (Becoming.Optimum.alone (Becoming.Optimum.TwoTakers.Member.taker w))
+      Becoming.Optimum.TwoTakers.capOf ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) 0 L' →
+    L'.give 0 (Becoming.Optimum.TwoTakers.Member.taker w) Becoming.Diversion.Place.store ≤ 1
+Becoming.Optimum.TwoTakers.joint_optimum : ∀ (w : Bool),
+  Becoming.Requirement.Frontier
+    (Becoming.Optimum.TwoTakers.joint.Outcome (Becoming.Optimum.alone (Becoming.Optimum.TwoTakers.Member.taker w))
+      Becoming.Optimum.Drain.before Becoming.Optimum.TwoTakers.capOf
+      ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) 0)
+    Becoming.Optimum.Drain.storeOrder Becoming.Optimum.TwoTakers.drained
+Becoming.Optimum.TwoTakers.joint_best : Becoming.Optimum.MutualBest Becoming.Optimum.TwoTakers.joint
+  Becoming.Optimum.TwoTakers.takers Becoming.Optimum.Drain.before Becoming.Optimum.TwoTakers.capOf
+  (fun x => [Becoming.Diversion.Place.store]) (fun x => [Becoming.Diversion.Place.source])
+  (fun x => Becoming.Optimum.Drain.storeOrder) 0 Becoming.Optimum.TwoTakers.drained
+Becoming.Optimum.TwoTakers.lists : (∀ (h : Becoming.Optimum.TwoTakers.Member),
+    Becoming.Optimum.TwoTakers.takers h = true →
+      Becoming.Distinct ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source])) ∧
+  (∀ (h : Becoming.Optimum.TwoTakers.Member),
+      Becoming.Optimum.TwoTakers.takers h = true →
+        ∀ (c : Becoming.Diversion.Place),
+          c ∈ [Becoming.Diversion.Place.source] → ¬c ∈ [Becoming.Diversion.Place.store]) ∧
+    (∀ (h : Becoming.Optimum.TwoTakers.Member),
+        Becoming.Optimum.TwoTakers.takers h = true → ∃ d, d ∈ [Becoming.Diversion.Place.store]) ∧
+      ∀ (h : Becoming.Optimum.TwoTakers.Member),
+        Becoming.Optimum.TwoTakers.takers h = true →
+          Becoming.Optimum.Rising [Becoming.Diversion.Place.store] Becoming.Optimum.Drain.storeOrder
+Becoming.Optimum.TwoTakers.joint_drains : Becoming.Optimum.TwoTakers.drained Becoming.Diversion.Place.source =
+    Becoming.Optimum.Drain.before Becoming.Diversion.Place.source -
+      Becoming.Optimum.TwoTakers.joint.capacity Becoming.Optimum.TwoTakers.takers Becoming.Optimum.TwoTakers.capOf 0
+        Becoming.Diversion.Place.source ∧
+  Becoming.Optimum.TwoTakers.joint.capacity Becoming.Optimum.TwoTakers.takers Becoming.Optimum.TwoTakers.capOf 0
+      Becoming.Diversion.Place.source =
+    2
+Becoming.Optimum.TwoTakers.within_slack_jointly_below : (∀ (w : Bool),
+    Becoming.Optimum.TwoTakers.joint.take 0 (Becoming.Optimum.TwoTakers.Member.taker w)
+          Becoming.Diversion.Place.source +
+        1 ≤
+      Becoming.Optimum.Drain.before Becoming.Diversion.Place.source) ∧
+  Becoming.Optimum.TwoTakers.drained Becoming.Diversion.Place.source < 1
+Becoming.Optimum.TwoTakers.restrained_balances : ∀ (x : Becoming.Diversion.Place),
+  Becoming.Optimum.TwoTakers.kept x + Becoming.Optimum.TwoTakers.restrained.taken 0 x =
+    Becoming.Optimum.Drain.before x + Becoming.Optimum.TwoTakers.restrained.given 0 x
+Becoming.Optimum.TwoTakers.restrained_not_mutual : ¬Becoming.Optimum.MutualBest Becoming.Optimum.TwoTakers.restrained
+    Becoming.Optimum.TwoTakers.takers Becoming.Optimum.Drain.before Becoming.Optimum.TwoTakers.capOf
+    (fun x => [Becoming.Diversion.Place.store]) (fun x => [Becoming.Diversion.Place.source])
+    (fun x => Becoming.Optimum.Drain.storeOrder) 0 Becoming.Optimum.TwoTakers.kept
+@Becoming.Optimum.sub_le_sub_right_of_le : ∀ {n k : Nat}, n ≤ k → ∀ (a : Nat), n - a ≤ k - a
+@Becoming.Optimum.sub_le_sub_left_of_le : ∀ {a b : Nat}, a ≤ b → ∀ (n : Nat), n - b ≤ n - a
+@Becoming.Optimum.never_rises : ∀ {x g d : Nat → Nat} {r : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) → ∀ {t : Nat}, g t ≤ r → r < d t → x (t + 1) ≤ x t
+@Becoming.Optimum.level_stays_below : ∀ {x g d : Nat → Nat} {r m : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    (∀ (t : Nat), g t ≤ r) → (∀ (t : Nat), r < d t) → ∀ {s : Nat}, x s < m → ∀ (j : Nat), x (s + j) < m
+@Becoming.Optimum.level_le_start : ∀ {x g d : Nat → Nat} {r : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) → (∀ (t : Nat), g t ≤ r) → (∀ (t : Nat), r < d t) → ∀ (t : Nat), x t ≤ x 0
+@Becoming.Optimum.falls_over : ∀ {x g d : Nat → Nat} {r : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) → ∀ {t : Nat}, g t ≤ r → r < d t → 0 < x t → x (t + 1) + 1 ≤ x t
+@Becoming.Optimum.ends_within : ∀ {x g d : Nat → Nat} {r m : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    (∀ (t : Nat), g t ≤ r) → (∀ (t : Nat), r < d t) → 0 < m → ∀ (t : Nat), x 0 < m + t → x t < m
+@Becoming.Optimum.kept_at_need : ∀ {x g d : Nat → Nat} {r m : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    (∀ (t : Nat), m ≤ x t → g t = r) → (∀ (t : Nat), d t ≤ r) → m ≤ x 0 → ∀ (t : Nat), m ≤ x t ∧ x t ≤ x (t + 1)
+@Becoming.Optimum.renews_of : ∀ {x g : Nat → Nat} {r m : Nat},
+  (∀ (t : Nat), m ≤ x t → g t = r) → (∀ (t : Nat), x t < m → g t = 0) → ∀ (t : Nat), g t ≤ r
+@Becoming.Optimum.kept_iff_within : ∀ {x g d : Nat → Nat} {r m : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    ∀ {k : Nat},
+      (∀ (t : Nat), m ≤ x t → g t = r) →
+        (∀ (t : Nat), g t ≤ r) → (∀ (t : Nat), d t = k) → 0 < m → m ≤ x 0 → ((∀ (t : Nat), m ≤ x t) ↔ k ≤ r)
+@Becoming.Optimum.level_add_drawn : ∀ {x g d : Nat → Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    ∀ (n : Nat),
+      x n + Becoming.Amounts.whole.sum (Becoming.Optimum.drawnAt x g) 0 n = x 0 + Becoming.Amounts.whole.sum g 0 n
+@Becoming.Optimum.sum_le_mul : ∀ {g : Nat → Nat} {r : Nat},
+  (∀ (t : Nat), g t ≤ r) → ∀ (n : Nat), Becoming.Amounts.whole.sum g 0 n ≤ r * n
+@Becoming.Optimum.sum_le_mul_until : ∀ {g : Nat → Nat} {r N : Nat},
+  (∀ (t : Nat), g t ≤ r) → (∀ (t : Nat), N ≤ t → g t = 0) → ∀ (n : Nat), Becoming.Amounts.whole.sum g 0 n ≤ r * N
+@Becoming.Optimum.drawn_within : ∀ {x g d : Nat → Nat} {r : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    (∀ (t : Nat), g t ≤ r) → ∀ (n : Nat), Becoming.Amounts.whole.sum (Becoming.Optimum.drawnAt x g) 0 n ≤ x 0 + r * n
+@Becoming.Optimum.ended_drawn_le : ∀ {x g d : Nat → Nat} {r m : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    (∀ (t : Nat), g t ≤ r) →
+      (∀ (t : Nat), x t < m → g t = 0) →
+        (∀ (t : Nat), r < d t) →
+          0 < m → ∀ (n : Nat), Becoming.Amounts.whole.sum (Becoming.Optimum.drawnAt x g) 0 n ≤ x 0 + r * x 0
+@Becoming.Optimum.mul_le_sum : ∀ {g : Nat → Nat} {a : Nat},
+  (∀ (t : Nat), a ≤ g t) → ∀ (n : Nat), a * n ≤ Becoming.Amounts.whole.sum g 0 n
+@Becoming.Optimum.given_le_drawn : ∀ {x g d : Nat → Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    ∀ {n : Nat},
+      x n ≤ x 0 → Becoming.Amounts.whole.sum g 0 n ≤ Becoming.Amounts.whole.sum (Becoming.Optimum.drawnAt x g) 0 n
+@Becoming.Optimum.drawn_at_least : ∀ {x g d : Nat → Nat} {r : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    ∀ {a : Nat},
+      (∀ (t : Nat), g t ≤ r) →
+        (∀ (t : Nat), a ≤ g t) →
+          (∀ (t : Nat), r < d t) → ∀ (n : Nat), a * n ≤ Becoming.Amounts.whole.sum (Becoming.Optimum.drawnAt x g) 0 n
+@Becoming.Optimum.drawn_unbounded : ∀ {x g d : Nat → Nat} {r : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    (∀ (t : Nat), g t ≤ r) →
+      (∀ (t : Nat), 0 < g t) →
+        (∀ (t : Nat), r < d t) → ¬∃ B, ∀ (n : Nat), Becoming.Amounts.whole.sum (Becoming.Optimum.drawnAt x g) 0 n ≤ B
+@Becoming.Optimum.sub_sub_of_le : ∀ {a k : Nat}, k ≤ a → a - (a - k) = k
+@Becoming.Optimum.kept_drawn : ∀ {x g d : Nat → Nat} {r m : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    ∀ {k : Nat},
+      (∀ (t : Nat), m ≤ x t → g t = r) →
+        (∀ (t : Nat), d t = k) →
+          k ≤ r → m ≤ x 0 → ∀ (n : Nat), Becoming.Amounts.whole.sum (Becoming.Optimum.drawnAt x g) 0 n = k * n
+@Becoming.Optimum.keeping_draws_more : ∀ {x g d : Nat → Nat} {r m : Nat} {x' g' d' : Nat → Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    (∀ (t : Nat), g t ≤ r) →
+      (∀ (t : Nat), x t < m → g t = 0) →
+        (∀ (t : Nat), r < d t) →
+          0 < m →
+            (∀ (t : Nat), x' (t + 1) = x' t + g' t - d' t) →
+              (∀ (t : Nat), m ≤ x' t → g' t = r) →
+                (∀ (t : Nat), d' t = r) →
+                  m ≤ x' 0 →
+                    ∀ {n : Nat},
+                      x 0 + r * x 0 < r * n →
+                        Becoming.Amounts.whole.sum (Becoming.Optimum.drawnAt x g) 0 n <
+                          Becoming.Amounts.whole.sum (Becoming.Optimum.drawnAt x' g') 0 n
+@Becoming.Optimum.drawn_bounded_iff : ∀ {x g d : Nat → Nat} {r m : Nat},
+  (∀ (t : Nat), x (t + 1) = x t + g t - d t) →
+    ∀ {k : Nat},
+      (∀ (t : Nat), m ≤ x t → g t = r) →
+        (∀ (t : Nat), x t < m → g t = 0) →
+          (∀ (t : Nat), d t = k) →
+            0 < k →
+              0 < m →
+                m ≤ x 0 →
+                  ((∃ B, ∀ (n : Nat), Becoming.Amounts.whole.sum (Becoming.Optimum.drawnAt x g) 0 n ≤ B) ↔ r < k)
+@Becoming.Optimum.last_before : ∀ {P : Nat → Prop} [DecidablePred P],
+  P 0 → ∀ {n : Nat}, ¬P n → ∃ T, T < n ∧ P T ∧ ¬P (T + 1)
+@Becoming.Optimum.course_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool}
+  {cap : F → C → Nat} {ds rest : List C} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F] [DecidableEq C],
+  (∀ (t : Nat), Becoming.Distinct (L.present t)) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {e : C},
+          e ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              Becoming.Optimum.Reoptimizes L W part cap ds rest better →
+                ∀ {c : C},
+                  c ∈ rest →
+                    ∀ (t : Nat),
+                      W.level (t + 1) c =
+                        W.level t c + L.restGiven part t c - (L.restTaken part t c + L.capacity part cap t c)
+@Becoming.Optimum.mutual_course_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cap : F → C → Nat} [inst : DecidableEq F] [DecidableEq C] {optimizer : F → Bool} {dsOf restOf : F → List C}
+  {betterOf : F → (C → Nat) → (C → Nat) → Prop},
+  (∀ (t : Nat), Becoming.Distinct (L.present t)) →
+    (∀ (h : F), optimizer h = true → Becoming.Distinct (dsOf h ++ restOf h)) →
+      (∀ (h : F), optimizer h = true → ∀ (c : C), c ∈ restOf h → ¬c ∈ dsOf h) →
+        (∀ (h : F), optimizer h = true → ∃ e, e ∈ dsOf h) →
+          (∀ (h : F), optimizer h = true → Becoming.Optimum.Rising (dsOf h) (betterOf h)) →
+            (∀ (t : Nat),
+                Becoming.Optimum.MutualBest L optimizer (W.level t) cap dsOf restOf betterOf t (W.level (t + 1))) →
+              L.Balances W →
+                ∀ {c : C},
+                  (∀ (t : Nat) (h : F), h ∈ L.present t → optimizer h = true → c ∈ restOf h) →
+                    ∀ (t : Nat),
+                      W.level (t + 1) c =
+                        W.level t c + L.restGiven optimizer t c -
+                          (L.restTaken optimizer t c + L.capacity optimizer cap t c)
+@Becoming.Flow.restGiven_unsupported : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {part : F → Bool}
+  {t : Nat} {c : C} {m : Nat},
+  L.GiversSupported W t c →
+    (∀ (h : F), h ∈ L.present t → part h = false → 0 < L.give t h c → W.requires t h c ∧ m ≤ W.need t h c) →
+      W.level t c < m → L.restGiven part t c = 0
+@Becoming.Web.lost_over : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {f : F} {r m : Nat} {g d : Nat → Nat},
+  (∀ (t : Nat), W.level (t + 1) c = W.level t c + g t - d t) →
+    (∀ (t : Nat), g t ≤ r) →
+      (∀ (t : Nat), r < d t) →
+        0 < m → (∀ (t : Nat), W.requires t f c) → (∀ (t : Nat), W.need t f c = m) → m ≤ W.level 0 c → W.Lost c
+@Becoming.Web.lost_iff : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {f : F} {r m : Nat} {g d : Nat → Nat} {k : Nat},
+  (∀ (t : Nat), W.level (t + 1) c = W.level t c + g t - d t) →
+    (∀ (t : Nat), m ≤ W.level t c → g t = r) →
+      (∀ (t : Nat), g t ≤ r) →
+        (∀ (t : Nat), d t = k) →
+          0 < m →
+            (∀ (t : Nat), W.requires t f c) → (∀ (t : Nat), W.need t f c = m) → m ≤ W.level 0 c → (W.Lost c ↔ r < k)
+@Becoming.Web.course_lost_iff : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {f : F} {r m : Nat}
+  {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat} {ds rest : List C}
+  {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F] [DecidableEq C],
+  (∀ (t : Nat), Becoming.Distinct (L.present t)) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {e : C},
+          e ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              Becoming.Optimum.Reoptimizes L W part cap ds rest better →
+                c ∈ rest →
+                  ∀ {k : Nat},
+                    (∀ (t : Nat), m ≤ W.level t c → L.restGiven part t c = r) →
+                      (∀ (t : Nat), L.restGiven part t c ≤ r) →
+                        (∀ (t : Nat), L.restTaken part t c + L.capacity part cap t c = k) →
+                          0 < m →
+                            (∀ (t : Nat), W.requires t f c) →
+                              (∀ (t : Nat), W.need t f c = m) → m ≤ W.level 0 c → (W.Lost c ↔ r < k)
+@Becoming.Web.course_kept_iff : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {r m : Nat} {L : Becoming.Flow F C}
+  {part : F → Bool} {cap : F → C → Nat} {ds rest : List C} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F]
+  [DecidableEq C],
+  (∀ (t : Nat), Becoming.Distinct (L.present t)) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {e : C},
+          e ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              Becoming.Optimum.Reoptimizes L W part cap ds rest better →
+                c ∈ rest →
+                  ∀ {k : Nat},
+                    (∀ (t : Nat), m ≤ W.level t c → L.restGiven part t c = r) →
+                      (∀ (t : Nat), L.restGiven part t c ≤ r) →
+                        (∀ (t : Nat), L.restTaken part t c + L.capacity part cap t c = k) →
+                          0 < m → m ≤ W.level 0 c → ((∀ (t : Nat), m ≤ W.level t c) ↔ k ≤ r)
+@Becoming.Web.course_drawn_within : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {r : Nat} {L : Becoming.Flow F C}
+  {part : F → Bool} {cap : F → C → Nat} {ds rest : List C} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F]
+  [DecidableEq C],
+  (∀ (t : Nat), Becoming.Distinct (L.present t)) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {e : C},
+          e ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              Becoming.Optimum.Reoptimizes L W part cap ds rest better →
+                c ∈ rest →
+                  (∀ (t : Nat), L.restGiven part t c ≤ r) →
+                    ∀ (n : Nat),
+                      Becoming.Amounts.whole.sum
+                          (Becoming.Optimum.drawnAt (fun t => W.level t c) fun t => L.restGiven part t c) 0 n ≤
+                        W.level 0 c + r * n
+@Becoming.Web.course_ended_drawn : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {r m : Nat} {L : Becoming.Flow F C}
+  {part : F → Bool} {cap : F → C → Nat} {ds rest : List C} {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F]
+  [DecidableEq C],
+  (∀ (t : Nat), Becoming.Distinct (L.present t)) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {e : C},
+          e ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              Becoming.Optimum.Reoptimizes L W part cap ds rest better →
+                c ∈ rest →
+                  (∀ (t : Nat), L.restGiven part t c ≤ r) →
+                    (∀ (t : Nat), W.level t c < m → L.restGiven part t c = 0) →
+                      (∀ (t : Nat), r < L.restTaken part t c + L.capacity part cap t c) →
+                        0 < m →
+                          ∀ (n : Nat),
+                            Becoming.Amounts.whole.sum
+                                (Becoming.Optimum.drawnAt (fun t => W.level t c) fun t => L.restGiven part t c) 0 n ≤
+                              W.level 0 c + r * W.level 0 c
+@Becoming.Web.course_drawn_unbounded : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {f : F} {r m : Nat}
+  {L : Becoming.Flow F C} {part : F → Bool} {cap : F → C → Nat} {ds rest : List C}
+  {better : (C → Nat) → (C → Nat) → Prop} [DecidableEq F] [DecidableEq C],
+  (∀ (t : Nat), Becoming.Distinct (L.present t)) →
+    Becoming.Distinct (ds ++ rest) →
+      (∀ (c : C), c ∈ rest → ¬c ∈ ds) →
+        ∀ {e : C},
+          e ∈ ds →
+            Becoming.Optimum.Rising ds better →
+              Becoming.Optimum.Reoptimizes L W part cap ds rest better →
+                c ∈ rest →
+                  ∀ {a : Nat},
+                    (∀ (t : Nat), L.restGiven part t c ≤ r) →
+                      (∀ (t : Nat), a ≤ L.restGiven part t c) →
+                        (∀ (t : Nat), r < L.restTaken part t c + L.capacity part cap t c) →
+                          0 < m →
+                            (∀ (t : Nat), W.requires t f c) →
+                              (∀ (t : Nat), W.need t f c = m) →
+                                m ≤ W.level 0 c →
+                                  W.Lost c ∧
+                                    (∀ (n : Nat),
+                                        a * n ≤
+                                          Becoming.Amounts.whole.sum
+                                            (Becoming.Optimum.drawnAt (fun t => W.level t c) fun t =>
+                                              L.restGiven part t c)
+                                            0 n) ∧
+                                      (0 < a →
+                                        ¬∃ B,
+                                            ∀ (n : Nat),
+                                              Becoming.Amounts.whole.sum
+                                                  (Becoming.Optimum.drawnAt (fun t => W.level t c) fun t =>
+                                                    L.restGiven part t c)
+                                                  0 n ≤
+                                                B)
+@Becoming.Web.mutual_course_lost : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {f : F} {r m : Nat}
+  {L : Becoming.Flow F C} {cap : F → C → Nat} [inst : DecidableEq F] [DecidableEq C] {optimizer : F → Bool}
+  {dsOf restOf : F → List C} {betterOf : F → (C → Nat) → (C → Nat) → Prop},
+  (∀ (t : Nat), Becoming.Distinct (L.present t)) →
+    (∀ (h : F), optimizer h = true → Becoming.Distinct (dsOf h ++ restOf h)) →
+      (∀ (h : F), optimizer h = true → ∀ (c : C), c ∈ restOf h → ¬c ∈ dsOf h) →
+        (∀ (h : F), optimizer h = true → ∃ e, e ∈ dsOf h) →
+          (∀ (h : F), optimizer h = true → Becoming.Optimum.Rising (dsOf h) (betterOf h)) →
+            (∀ (t : Nat),
+                Becoming.Optimum.MutualBest L optimizer (W.level t) cap dsOf restOf betterOf t (W.level (t + 1))) →
+              L.Balances W →
+                (∀ (t : Nat) (h : F), h ∈ L.present t → optimizer h = true → c ∈ restOf h) →
+                  (∀ (t : Nat), L.restGiven optimizer t c ≤ r) →
+                    (∀ (t : Nat), r < L.restTaken optimizer t c + L.capacity optimizer cap t c) →
+                      0 < m →
+                        (∀ (t : Nat), W.requires t f c) → (∀ (t : Nat), W.need t f c = m) → m ≤ W.level 0 c → W.Lost c
+@Becoming.Optimum.Renewing.source_within : ∀ {k r s₀ : Nat} (t : Nat),
+  Becoming.Optimum.Renewing.source k r s₀ (t + 1) ≤
+    Becoming.Optimum.Renewing.source k r s₀ t + Becoming.Optimum.Renewing.renewed k r s₀ t
+@Becoming.Optimum.Renewing.renewed_at : ∀ {k r s₀ t : Nat},
+  2 ≤ Becoming.Optimum.Renewing.source k r s₀ t → Becoming.Optimum.Renewing.renewed k r s₀ t = r
+@Becoming.Optimum.Renewing.renewed_below : ∀ {k r s₀ t : Nat},
+  Becoming.Optimum.Renewing.source k r s₀ t < 2 → Becoming.Optimum.Renewing.renewed k r s₀ t = 0
+Becoming.Optimum.Renewing.renewal_le : ∀ (r s : Nat), Becoming.Optimum.Renewing.renewal r s ≤ r
+@Becoming.Optimum.Renewing.draw_le : ∀ {k r s₀ : Nat} (t : Nat), Becoming.Optimum.Renewing.draw k r s₀ t ≤ k
+@Becoming.Optimum.Renewing.le_draw : ∀ {k r s₀ a : Nat} (t : Nat),
+  a ≤ k →
+    a ≤ Becoming.Optimum.Renewing.source k r s₀ t + Becoming.Optimum.Renewing.renewed k r s₀ t →
+      a ≤ Becoming.Optimum.Renewing.draw k r s₀ t
+@Becoming.Optimum.Renewing.course_balances : ∀ {k r s₀ : Nat},
+  (Becoming.Optimum.Renewing.course k r s₀).Balances (Becoming.Diversion.web (Becoming.Optimum.Renewing.level k r s₀))
+@Becoming.Optimum.Renewing.course_within : ∀ {k r s₀ : Nat} (t : Nat),
+  (Becoming.Optimum.Renewing.course k r s₀).ActsWithin Becoming.Optimum.Drain.takerPart
+    (Becoming.Optimum.Drain.takerCap k) ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) t
+    (Becoming.Optimum.Renewing.course k r s₀)
+@Becoming.Optimum.Renewing.course_optimum : ∀ {k r s₀ : Nat} (t : Nat),
+  Becoming.Requirement.Frontier
+    ((Becoming.Optimum.Renewing.course k r s₀).Outcome Becoming.Optimum.Drain.takerPart
+      (Becoming.Optimum.Renewing.level k r s₀ t) (Becoming.Optimum.Drain.takerCap k)
+      ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) t)
+    Becoming.Optimum.Drain.storeOrder (Becoming.Optimum.Renewing.level k r s₀ (t + 1))
+@Becoming.Optimum.Renewing.course_reoptimizes : ∀ {k r s₀ : Nat},
+  Becoming.Optimum.Reoptimizes (Becoming.Optimum.Renewing.course k r s₀)
+    (Becoming.Diversion.web (Becoming.Optimum.Renewing.level k r s₀)) Becoming.Optimum.Drain.takerPart
+    (Becoming.Optimum.Drain.takerCap k) [Becoming.Diversion.Place.store] [Becoming.Diversion.Place.source]
+    Becoming.Optimum.Drain.storeOrder
+@Becoming.Optimum.Renewing.source_beyond : ∀ {k r s₀ : Nat} (t : Nat),
+  (Becoming.Diversion.web (Becoming.Optimum.Renewing.level k r s₀)).level (t + 1) Becoming.Diversion.Place.source =
+    (Becoming.Diversion.web (Becoming.Optimum.Renewing.level k r s₀)).level t Becoming.Diversion.Place.source +
+        (Becoming.Optimum.Renewing.course k r s₀).restGiven Becoming.Optimum.Drain.takerPart t
+          Becoming.Diversion.Place.source -
+      ((Becoming.Optimum.Renewing.course k r s₀).restTaken Becoming.Optimum.Drain.takerPart t
+          Becoming.Diversion.Place.source +
+        (Becoming.Optimum.Renewing.course k r s₀).capacity Becoming.Optimum.Drain.takerPart
+          (Becoming.Optimum.Drain.takerCap k) t Becoming.Diversion.Place.source)
+@Becoming.Optimum.Renewing.restGiven_source : ∀ {k r s₀ : Nat} (t : Nat),
+  (Becoming.Optimum.Renewing.course k r s₀).restGiven Becoming.Optimum.Drain.takerPart t
+      Becoming.Diversion.Place.source =
+    Becoming.Optimum.Renewing.renewed k r s₀ t
+@Becoming.Optimum.Renewing.draws_source : ∀ {k r s₀ : Nat} (t : Nat),
+  (Becoming.Optimum.Renewing.course k r s₀).restTaken Becoming.Optimum.Drain.takerPart t
+        Becoming.Diversion.Place.source +
+      (Becoming.Optimum.Renewing.course k r s₀).capacity Becoming.Optimum.Drain.takerPart
+        (Becoming.Optimum.Drain.takerCap k) t Becoming.Diversion.Place.source =
+    k
+@Becoming.Optimum.Renewing.renewing_source : ∀ {k r s₀ : Nat} (t : Nat),
+  2 ≤ (Becoming.Diversion.web (Becoming.Optimum.Renewing.level k r s₀)).level t Becoming.Diversion.Place.source →
+    (Becoming.Optimum.Renewing.course k r s₀).restGiven Becoming.Optimum.Drain.takerPart t
+        Becoming.Diversion.Place.source =
+      r
+@Becoming.Optimum.Renewing.unsupported_source : ∀ {k r s₀ : Nat} (t : Nat),
+  (Becoming.Diversion.web (Becoming.Optimum.Renewing.level k r s₀)).level t Becoming.Diversion.Place.source < 2 →
+    (Becoming.Optimum.Renewing.course k r s₀).restGiven Becoming.Optimum.Drain.takerPart t
+        Becoming.Diversion.Place.source =
+      0
+@Becoming.Optimum.Renewing.lost_iff : ∀ {k r s₀ : Nat},
+  2 ≤ s₀ →
+    ((Becoming.Diversion.web (Becoming.Optimum.Renewing.level k r s₀)).Lost Becoming.Diversion.Place.source ↔ r < k)
+@Becoming.Optimum.Renewing.store_eq_sum : ∀ {k r s₀ : Nat} (n : Nat),
+  Becoming.Optimum.Renewing.store k r s₀ n = Becoming.Amounts.whole.sum (Becoming.Optimum.Renewing.draw k r s₀) 0 n
+@Becoming.Optimum.Renewing.store_bounded : ∀ {k r s₀ : Nat},
+  r < k →
+    ∀ (n : Nat),
+      (Becoming.Diversion.web (Becoming.Optimum.Renewing.level k r s₀)).level n Becoming.Diversion.Place.store ≤
+        s₀ + r * s₀
+@Becoming.Optimum.Renewing.store_kept : ∀ {k r s₀ : Nat},
+  2 ≤ s₀ →
+    k ≤ r →
+      ∀ (n : Nat),
+        (Becoming.Diversion.web (Becoming.Optimum.Renewing.level k r s₀)).level n Becoming.Diversion.Place.store = k * n
+@Becoming.Optimum.Renewing.keeping_holds_more : ∀ {k r s₀ : Nat},
+  2 ≤ s₀ →
+    r < k →
+      ∀ {n : Nat},
+        s₀ + r * s₀ < r * n →
+          (Becoming.Diversion.web (Becoming.Optimum.Renewing.level k r s₀)).level n Becoming.Diversion.Place.store <
+            (Becoming.Diversion.web (Becoming.Optimum.Renewing.level r r s₀)).level n Becoming.Diversion.Place.store
+@Becoming.Optimum.Renewing.store_bounded_iff : ∀ {k r s₀ : Nat},
+  2 ≤ s₀ →
+    0 < k →
+      ((∃ B,
+          ∀ (n : Nat),
+            (Becoming.Diversion.web (Becoming.Optimum.Renewing.level k r s₀)).level n Becoming.Diversion.Place.store ≤
+              B) ↔
+        r < k)
+Becoming.Optimum.Renewing.takeOne_le_one : ∀ (a : Nat), Becoming.Optimum.Renewing.takeOne a ≤ 1
+Becoming.Optimum.Renewing.sub_takeOne : ∀ (a : Nat), a - Becoming.Optimum.Renewing.takeOne a = a - 1
+Becoming.Optimum.Renewing.takeOne_split : ∀ (a : Nat), Becoming.Optimum.Renewing.takeOne a + (a - 1) = a
+@Becoming.Optimum.Renewing.le_takeOne : ∀ {x a : Nat}, x ≤ 1 → x ≤ a → x ≤ Becoming.Optimum.Renewing.takeOne a
+@Becoming.Optimum.Renewing.joint_split : ∀ {r s₀ : Nat} (t : Nat),
+  Becoming.Optimum.Renewing.jointSource r s₀ (t + 1) +
+      (Becoming.Optimum.Renewing.first r s₀ t + Becoming.Optimum.Renewing.second r s₀ t) =
+    Becoming.Optimum.Renewing.avail r s₀ t
+@Becoming.Optimum.Renewing.joint_course_balances : ∀ {r s₀ : Nat},
+  (Becoming.Optimum.Renewing.jointCourse r s₀).Balances
+    (Becoming.Optimum.Renewing.jointWeb (Becoming.Optimum.Renewing.jointLevel r s₀))
+@Becoming.Optimum.Renewing.joint_course_within : ∀ {r s₀ : Nat} (w : Bool) (t : Nat),
+  (Becoming.Optimum.Renewing.jointCourse r s₀).ActsWithin
+    (Becoming.Optimum.alone (Becoming.Optimum.TwoTakers.Member.taker w)) Becoming.Optimum.TwoTakers.capOf
+    ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) t
+    (Becoming.Optimum.Renewing.jointCourse r s₀)
+@Becoming.Optimum.Renewing.first_optimum : ∀ {r s₀ : Nat} (t : Nat),
+  Becoming.Requirement.Frontier
+    ((Becoming.Optimum.Renewing.jointCourse r s₀).Outcome
+      (Becoming.Optimum.alone (Becoming.Optimum.TwoTakers.Member.taker true))
+      (Becoming.Optimum.Renewing.jointLevel r s₀ t) Becoming.Optimum.TwoTakers.capOf
+      ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) t)
+    Becoming.Optimum.Drain.storeOrder (Becoming.Optimum.Renewing.jointLevel r s₀ (t + 1))
+@Becoming.Optimum.Renewing.second_optimum : ∀ {r s₀ : Nat} (t : Nat),
+  Becoming.Requirement.Frontier
+    ((Becoming.Optimum.Renewing.jointCourse r s₀).Outcome
+      (Becoming.Optimum.alone (Becoming.Optimum.TwoTakers.Member.taker false))
+      (Becoming.Optimum.Renewing.jointLevel r s₀ t) Becoming.Optimum.TwoTakers.capOf
+      ([Becoming.Diversion.Place.store] ++ [Becoming.Diversion.Place.source]) t)
+    Becoming.Optimum.Drain.storeOrder (Becoming.Optimum.Renewing.jointLevel r s₀ (t + 1))
+@Becoming.Optimum.Renewing.joint_course_best : ∀ {r s₀ : Nat} (t : Nat),
+  Becoming.Optimum.MutualBest (Becoming.Optimum.Renewing.jointCourse r s₀) Becoming.Optimum.TwoTakers.takers
+    (Becoming.Optimum.Renewing.jointLevel r s₀ t) Becoming.Optimum.TwoTakers.capOf
+    (fun x => [Becoming.Diversion.Place.store]) (fun x => [Becoming.Diversion.Place.source])
+    (fun x => Becoming.Optimum.Drain.storeOrder) t (Becoming.Optimum.Renewing.jointLevel r s₀ (t + 1))
+@Becoming.Optimum.Renewing.joint_restGiven : ∀ {r s₀ : Nat} (t : Nat),
+  (Becoming.Optimum.Renewing.jointCourse r s₀).restGiven Becoming.Optimum.TwoTakers.takers t
+      Becoming.Diversion.Place.source =
+    Becoming.Optimum.Renewing.renewal r (Becoming.Optimum.Renewing.jointSource r s₀ t)
+@Becoming.Optimum.Renewing.joint_course_lost : ∀ {r s₀ : Nat},
+  2 ≤ s₀ →
+    r < 2 →
+      (Becoming.Optimum.Renewing.jointWeb (Becoming.Optimum.Renewing.jointLevel r s₀)).Lost
+        Becoming.Diversion.Place.source
+@Becoming.Optimum.Renewing.alone_kept : ∀ {s₀ : Nat},
+  2 ≤ s₀ → ¬(Becoming.Diversion.web (Becoming.Optimum.Renewing.level 1 1 s₀)).Lost Becoming.Diversion.Place.source
+@Becoming.Optimum.Renewing.joint_store_eq_sum : ∀ {r s₀ : Nat} (n : Nat),
+  Becoming.Optimum.Renewing.jointStore r s₀ n =
+    Becoming.Amounts.whole.sum
+      (Becoming.Optimum.drawnAt (Becoming.Optimum.Renewing.jointSource r s₀) fun t =>
+        Becoming.Optimum.Renewing.renewal r (Becoming.Optimum.Renewing.jointSource r s₀ t))
+      0 n
+@Becoming.Optimum.Renewing.joint_store_bounded : ∀ {r s₀ : Nat},
+  r < 2 → ∀ (n : Nat), Becoming.Optimum.Renewing.jointStore r s₀ n ≤ s₀ + r * s₀
+@Becoming.Optimum.Renewing.restrained_course_balances : ∀ {s₀ : Nat},
+  2 ≤ s₀ →
+    (Becoming.Optimum.Renewing.restrainedCourse s₀).Balances
+      (Becoming.Optimum.Renewing.jointWeb (Becoming.Optimum.Renewing.restrainedLevel s₀))
+@Becoming.Optimum.Renewing.restrained_course_not_best : ∀ {s₀ : Nat},
+  2 ≤ s₀ →
+    ∀ (t : Nat),
+      ¬Becoming.Optimum.MutualBest (Becoming.Optimum.Renewing.restrainedCourse s₀) Becoming.Optimum.TwoTakers.takers
+          (Becoming.Optimum.Renewing.restrainedLevel s₀ t) Becoming.Optimum.TwoTakers.capOf
+          (fun x => [Becoming.Diversion.Place.store]) (fun x => [Becoming.Diversion.Place.source])
+          (fun x => Becoming.Optimum.Drain.storeOrder) t (Becoming.Optimum.Renewing.restrainedLevel s₀ (t + 1))
+@Becoming.Optimum.Renewing.restraint_holds_more : ∀ {s₀ n : Nat},
+  s₀ + s₀ < n →
+    (Becoming.Optimum.Renewing.jointWeb (Becoming.Optimum.Renewing.jointLevel 1 s₀)).level n
+        Becoming.Diversion.Place.store <
+      (Becoming.Optimum.Renewing.jointWeb (Becoming.Optimum.Renewing.restrainedLevel s₀)).level n
+        Becoming.Diversion.Place.store
