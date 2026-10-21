@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-21T11:33:06+00:00",
+  "reviewed_at_utc": "2026-10-21T16:22:45+00:00",
   "statement": {
     "en": "Under an adjustment rising with what is left and with the recent giving, within a band, the runs that rest below the draw are exactly those from levels below a least level for each recent giving, decided; that level does not rise as the recent giving rises.",
     "zh": "调整随所剩与近来所给而升时，在带内，静于汲取之下的运行恰是自低于每个近来所给之最小水平出发者，可判定；该水平不随近来所给上升而升。"
@@ -85,8 +85,8 @@
       "kind": "scope"
     },
     {
-      "en": "That measured adjustments rise in both arguments over their band, or how often below-point episodes with recent giving short of the catch fall in the field: the curve's direction is proved under the premises, its field frequency untested.",
-      "zh": "所测的调整在其带上于两个变元上皆升，或野外点下片段中近来所给不足捕捞者多常下降：曲线的方向是前提下的定理，其野外频率未经检验。",
+      "en": "That measured adjustments rise in both arguments over their band, or how often below-point episodes with recent giving short of the catch fall in the field: the curve's direction is proved under the premises. Its field frequency was tested once, on the 21 stocks with a level in tonnes that no analysis had read (MQ7): the episodes short of the catch fell 0.39 more often than those meeting it, in the same stock at the same deficit, but from 5 stocks, and the frozen bound was not met (failed), so the frequency is not established.",
+      "zh": "所测的调整在其带上于两个变元上皆升，或野外点下片段中近来所给不足捕捞者多常下降：曲线的方向是前提下的定理。其野外频率已检验一次，在 21 个以吨计水平、未经任何分析读过的存量上（MQ7）：同一存量、同一亏缺档内，不足捕捞的片段比满足者多下降 0.39，但只来自 5 个存量，未达冻结的界（未通过），故此频率未得确立。",
       "kind": "non-implication"
     },
     {
@@ -117,8 +117,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T095626.485439Z）：Becoming.LastChange 与 Becoming.RegimeMargin 新增的 21 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 301 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A computed threshold over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; the order of fates above the level law's peak, where measured giving falls as the level rises; a state with a further lag; coupled conditions with a recent giving; an independent review.",
-    "zh": "实数上计算出的阈值；在未经任何分析读过的存量上冻结检验：近来所给不足捕捞的点下片段是否更常下降；水平规律峰值之上的命运之序，那里所测的所给随水平上升而下降；带再一个滞后的状态；带近来所给的相互耦合条件；独立审查。"
+    "en": "A computed threshold over the reals; that frozen test on more stocks no analysis has read, which MQ7's 21 (5 of them compared) did not settle; the order of fates above the level law's peak, where measured giving falls as the level rises; a state with a further lag; coupled conditions with a recent giving; an independent review.",
+    "zh": "实数上计算出的阈值；在更多未经任何分析读过的存量上做这一冻结检验，MQ7 的 21 个存量（其中 5 个可比）未能定之；水平规律峰值之上的命运之序，那里所测的所给随水平上升而下降；带再一个滞后的状态；带近来所给的相互耦合条件；独立审查。"
   },
   "correspondence": {
     "en": "For order-preserving maps the boundary between basins of attraction is unordered, so in the plane it is a curve along which one coordinate falls as the other rises (Hirsch and Smith 2005); a point of no return as a level: depensation and the fold of the harvested equilibrium (Clark 1976; May 1977). On the spine, constructive and exact in its premises: the basins are resting below the draw and resting at the regime's point, decided at a fixed step, and the curve is the least level a finite search finds, with no omniscience; its regime case is the point H + y. Rising giving is shown needed by a witness.",
@@ -426,6 +426,10 @@
     {
       "en": "21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.",
       "zh": "2026年10月21日，RM7：多于两个的耦合条件已作为体制之步下的网陈述（记录 coupled-webs，研究第 311 节）；其下一步不再列出。其规律不变。"
+    },
+    {
+      "en": "21 October 2026, MQ7: the field frequency of fates on either side of the curve was put to a frozen test on the 21 primary stocks in NOAA Stock SMART and ICES Stock Assessment Graphs that no analysis had read (study section 316): below the regime's point, on the low side, episodes short of the catch fell 0.39 more often than those meeting it, in the same stock at the same deficit, from 5 stocks, with a lower bound of 0.00 (C1 failed; C2 not testable). What this record does not show and its next delta now say so. Its laws are unchanged.",
+      "zh": "2026年10月21日，MQ7：曲线两侧命运的野外频率已在 NOAA Stock SMART 与 ICES Stock Assessment Graphs 中未经任何分析读过的 21 个主组存量上做冻结检验（研究第 316 节）：在体制之点以下、峰值低侧，同一存量、同一亏缺档内，不足捕捞的片段比满足者多下降 0.39，来自 5 个存量，下界为 0.00（C1 未通过；C2 不可检验）。本记录所不表明者与其下一步现已如此说明。其规律不变。"
     }
   ]
 }

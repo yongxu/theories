@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-21T08:56:29+00:00",
+  "reviewed_at_utc": "2026-10-21T16:22:45+00:00",
   "statement": {
     "en": "Where giving adjusts, reading what is left and the recent giving, every rest of the state at or above the draw is the regime's if the adjustment rests at the draw where the regime gives it; the point decides the fate where recent giving lies on the level's side.",
     "zh": "所给调整、读所剩与近来所给时，若调整在体制给出汲取处静于汲取，汲取及其上的每个静止状态都是体制的；近来所给在水平一侧时，此点决定命运。"
@@ -108,8 +108,8 @@
       "kind": "scope"
     },
     {
-      "en": "That MQ3's failed check F3 is explained: the reading that the point separates fates on the state, not the level alone, is post hoc and untested.",
-      "zh": "MQ3 未通过的检验 F3 已被解释：此点按状态而非单按水平区分命运这一读法是事后的，未经检验。",
+      "en": "That MQ3's failed check F3 is explained: the reading that the point separates fates on the state, not the level alone, holds on the RAM stocks already read (development) and failed its frozen test on the 21 stocks no analysis had read (MQ7: a difference of 0.39 of the predicted sign, from 5 stocks, lower bound 0.00), so it is not established.",
+      "zh": "MQ3 未通过的检验 F3 已被解释：此点按状态而非单按水平区分命运这一读法，在已读的 RAM 存量上成立（开发），在 21 个未经任何分析读过的存量上未通过其冻结检验（MQ7：差 0.39，符号如所预测，来自 5 个存量，下界 0.00），故未得确立。",
       "kind": "non-implication"
     }
   ],
@@ -135,8 +135,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T084948.266489Z）：Becoming.RegimeMargin 新增的 45 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 299 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Which adjustments that do not rise still bring every run to rest; the threshold in the plane for adjustments that do not rise in both arguments; a state with a further lag; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often than those with it met; an independent review.",
-    "zh": "哪些不上升的调整仍使每个运行静止；不在两个变元上皆升的调整在平面上的阈值；带再一个滞后的状态；在未经任何分析读过的存量上冻结检验：近来所给不足捕捞的点下片段是否比满足者更常下降；独立审查。"
+    "en": "Which adjustments that do not rise still bring every run to rest; the threshold in the plane for adjustments that do not rise in both arguments; a state with a further lag; that frozen test on more stocks no analysis has read, which MQ7's 21 (5 of them compared) did not settle; an independent review.",
+    "zh": "哪些不上升的调整仍使每个运行静止；不在两个变元上皆升的调整在平面上的阈值；带再一个滞后的状态；在更多未经任何分析读过的存量上做这一冻结检验，MQ7 的 21 个存量（其中 5 个可比）未能定之；独立审查。"
   },
   "correspondence": {
     "en": "Partial adjustment, a quantity moving at a rate toward its target, rests where the target does (Nerlove 1958); delay-difference models share the equilibria of their yield curve (Deriso 1980; Schnute 1985); with a second state variable a threshold is a curve that transients cross (Hastings 2004). On the spine, exact over every adjustment with named properties: the rest law needs that the adjustment rests at the draw where the regime does, the fates that giving stays on the side of the draw where the recent and the regime's giving lie, each shown needed by a witness. MQ5's law, under a standing draw met in full, is A e r = (phi - lam) r + (1 - phi) g e + lam H, phi = 0.96, lam = 0.55: over the reals it rests at the draw where the regime does and keeps both sides, but is not between; a correspondence by premises.",
@@ -291,7 +291,7 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "6ca6aa3b156484ab44661bb6d0143bbde06c5b6814276bba7fb1d8686a743dd1"
+      "sha256": "7569abff4be57cb61613955a5145c64bf9925a838690a5c88973245f1c997d43"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
@@ -367,6 +367,10 @@
     {
       "en": "21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show now says what stays open. Its laws are unchanged.",
       "zh": "2026年10月21日，RM6：此处留下的相互耦合条件，对体制之步下的两个条件已陈述（记录 coupled-regimes，研究第 306 节）；本记录所不表明者现已说明仍开放者。其规律不变。"
+    },
+    {
+      "en": "21 October 2026, MQ7: the reading that the point separates fates on the state failed its frozen field test on the 21 primary stocks no analysis had read (study section 316; C1 failed, C2 not testable); what this record does not show and its next delta now say so. Its laws are unchanged.",
+      "zh": "2026年10月21日，MQ7：此点按状态区分命运这一读法，在未经任何分析读过的 21 个主组存量上未通过其冻结的野外检验（研究第 316 节；C1 未通过，C2 不可检验）；本记录所不表明者与其下一步现已如此说明。其规律不变。"
     }
   ]
 }

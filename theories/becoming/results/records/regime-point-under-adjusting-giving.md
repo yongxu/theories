@@ -26,7 +26,7 @@
 
 - That a run comes to rest, or how fast: these laws say where a run can rest, not that it does; record where-a-run-of-a-regime-comes-to-rest states that it does for adjustments rising in both arguments within a band.
 - The threshold in the plane for adjustments that do not rise in both arguments: record threshold-in-the-state-plane states it, a falling curve, for those that do within a band; a state with a further lag; coupled adjusted conditions.
-- That MQ3's failed check F3 is explained: the reading that the point separates fates on the state, not the level alone, is post hoc and untested.
+- That MQ3's failed check F3 is explained: the reading that the point separates fates on the state, not the level alone, holds on the RAM stocks already read (development) and failed its frozen test on the 21 stocks no analysis had read (MQ7: a difference of 0.39 of the predicted sign, from 5 stocks, lower bound 0.00), so it is not established.
 - **Counterexample:** Crossing.frozen_stays: the frozen rest lies between the recent and the regime's giving, yet its run from four with recent giving three stays at four, where the regime's step ends the condition; Crossing.crosses: with recent giving on the other side, five, the point, ends and four, below it, holds. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -41,7 +41,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Which adjustments that do not rise still bring every run to rest; the threshold in the plane for adjustments that do not rise in both arguments; a state with a further lag; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often than those with it met; an independent review.
+Which adjustments that do not rise still bring every run to rest; the threshold in the plane for adjustments that do not rise in both arguments; a state with a further lag; that frozen test on more stocks no analysis has read, which MQ7's 21 (5 of them compared) did not settle; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -91,7 +91,8 @@ Aliases: `the regime's point under giving that adjusts`, `giving that adjusts`, 
 - 21 October 2026, RM3: whether a run comes to rest, left open here, is answered for adjustments rising in both arguments within a band (record where-a-run-of-a-regime-comes-to-rest, study section 300); what this record does not show and its next delta now say so. Its laws are unchanged.
 - 21 October 2026, RM4: the threshold in the plane of level and recent giving, left open here, is stated for adjustments rising in both arguments within a band (record threshold-in-the-state-plane, study section 301); what this record does not show and its next delta now say so. Its laws are unchanged.
 - 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show now says what stays open. Its laws are unchanged.
+- 21 October 2026, MQ7: the reading that the point separates fates on the state failed its frozen field test on the 21 primary stocks no analysis had read (study section 316; C1 failed, C2 not testable); what this record does not show and its next delta now say so. Its laws are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-21T08:56:29+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-21T16:22:45+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
