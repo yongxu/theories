@@ -3,6 +3,7 @@ import Becoming.Resolution
 import Becoming.Recurrence
 import Becoming.Branching
 import Becoming.Likeness
+import Becoming.InAmounts
 
 /-!
 # Least loss: rest over amounts that may be dense
@@ -50,7 +51,8 @@ dense, with what the whole numbers supplied named as two premises.
   (`Law.loss_needs_merge`). The same holds along a run of every process
   (`Branching.Lossless.loses_nothing`, `Branching.loss_needs_merge`). Rest is a law of descriptions that lump configurations and dissipate;
   a finite world that merges nothing returns rather than rests.
-* **Rest from a finite reading.** Where a list holds the configurations an amount is read off,
+* **Rest from a finite reading** (stated in `Becoming.InAmounts` since EC3, below the worlds that use
+  it). Where a list holds the configurations an amount is read off,
   steps across which it falls strictly do not recur, and of any `l.length + 1` steps not every one
   falls (`Amounts.rests_of_finite_reading`, `Amounts.falls_within_reading`), over any amounts: no
   least loss, no Archimedean property, no totality and no decision; with the amount's not rising
@@ -60,7 +62,8 @@ dense, with what the whole numbers supplied named as two premises.
   need a reading no list holds, as the halving stock's values (`Halving.stock_unlisted`). Along a
   run of every process held by a list (`Branching.rests_along_run`), a run's falls come to rest,
   and where the process merges nothing it loses nothing at all.
-* **One premise: the strict falls stop.** Both rest laws conclude the same thing, that an amount's
+* **One premise: the strict falls stop** (stated in `Becoming.InAmounts` since EC3, with the worlds
+  over dyadic and layered amounts that never rest stated here). Both rest laws conclude the same thing, that an amount's
   strict falls stop from a step on, as far as can be refuted (`Amounts.FallsStop`), and it is the one
   premise rest needs over any amounts (`World.InAmounts.change_stops_iff`). Amounts in which every
   amount not rising stops falling have no endless fall (`Amounts.NoEndlessFall`); a least fall
@@ -428,67 +431,6 @@ theorem not_archimedean : ¬ amounts.Archimedean :=
 
 end Layered
 
-/-! ## One premise: an amount's strict falls stop -/
-
-namespace Amounts
-
-variable {A : Type} (M : Amounts A)
-
-/-- An amount's strict falls stop from `T` on, as far as can be refuted: it is not the case that
-after every step from `T` on a later step across which it falls strictly (is not, after the step,
-back within its value before) stays unrefuted. Both rest laws conclude this, the least-loss law
-(`Amounts.rests_unrefuted`) and the finite-reading law (`Amounts.rests_unrefuted_of_finite_reading`),
-and it is the one premise of rest over any amounts (`World.InAmounts.change_stops_iff`). -/
-def FallsStop (s : Nat → A) (T : Nat) : Prop :=
-  ¬ ∀ N, T ≤ N → ¬¬ ∃ t, N ≤ t ∧ ¬ M.le (s t) (s (t + 1))
-
-/-- No amount falls without end: every amount that, as far as can be refuted, does not rise from a
-step on has its strict falls stop from there. -/
-def NoEndlessFall : Prop :=
-  ∀ (s : Nat → A) (T : Nat), (∀ t, T ≤ t → ¬¬ M.le (s (t + 1)) (s t)) → M.FallsStop s T
-
-/-- Some amount falls strictly at every step. -/
-def EndlessFall : Prop :=
-  ∃ s : Nat → A, ∀ t, M.le (s (t + 1)) (s t) ∧ ¬ M.le (s t) (s (t + 1))
-
-/-- Every strict fall is by at least `ε`: an amount within another that does not hold it, with `ε`,
-is still within it. -/
-def FallsAtLeast (ε : A) : Prop :=
-  ∀ a b, M.le b a → ¬ M.le a b → M.le (M.add b ε) a
-
-variable {M}
-
-/-- The falls stop for an amount wherever they stop for one equal to it from `T` on. -/
-theorem fallsStop_congr {s s' : Nat → A} {T : Nat} (same : ∀ t, T ≤ t → s t = s' t)
-    (stops : M.FallsStop s' T) : M.FallsStop s T :=
-  fun falling => stops fun N from_ none_ => falling N from_ fun ⟨t, after, fall⟩ =>
-    have later : T ≤ t := Nat.le_trans from_ after
-    none_ ⟨t, after, fun le => fall
-      (Eq.subst (motive := fun x => M.le x (s (t + 1))) (same t later).symm
-        (Eq.subst (motive := fun x => M.le (s' t) x) (same (t + 1) (Nat.le_succ_of_le later)).symm
-          le))⟩
-
-/-- **A least fall, in Archimedean amounts, leaves no endless fall.** Where every strict fall is
-by at least an amount `ε` above nothing and every amount lies within finitely many copies of `ε`
-(`Amounts.Archimedean`), every amount not rising from a step on stops falling strictly: the
-least-loss law (`Amounts.rests_unrefuted`), with the falls themselves as the steps counted. -/
-theorem noEndlessFall_of_fallsAtLeast (archimedean : M.Archimedean) {ε : A}
-    (positive : ¬ M.le ε M.zero) (least : M.FallsAtLeast ε) : M.NoEndlessFall :=
-  fun s T still => match archimedean (s T) ε positive with
-  | ⟨_, within⟩ => rests_unrefuted (P := fun t => ¬ M.le (s t) (s (t + 1))) still
-      (fun t later falls no => still t later fun down => no (least _ _ down falls)) within
-
-/-- In whole numbers every strict fall is by at least one. -/
-theorem whole_fallsAtLeast : Amounts.whole.FallsAtLeast 1 :=
-  fun _ _ _ falls => Nat.gt_of_not_le falls
-
-/-- **No whole number falls without end.** -/
-theorem whole_noEndlessFall : Amounts.whole.NoEndlessFall :=
-  noEndlessFall_of_fallsAtLeast whole_archimedean (fun le => Nat.not_succ_le_zero 0 le)
-    whole_fallsAtLeast
-
-end Amounts
-
 namespace Halving
 
 theorem falls_back (t : Nat) :
@@ -532,125 +474,6 @@ theorem fallsAtLeast : amounts.FallsAtLeast least := fun a b down strict =>
     Nat.gt_of_not_le fun fine => strict ⟨back, fun _ => fine⟩⟩
 
 end Layered
-
-/-! ## Rest from a finite reading: no least loss -/
-
-namespace Amounts
-
-variable {A : Type} {M : Amounts A} {S : Type}
-
-/-- Steps rising one after another, `f i < f (i + 1)` below `K`, lie at least as far apart as
-their indices. -/
-theorem rising_apart {f : Nat → Nat} {K : Nat} (rising : ∀ i, i < K → f i < f (i + 1)) (i : Nat) :
-    ∀ d, i + d ≤ K → f i + d ≤ f (i + d)
-  | 0, _ => Nat.le_refl _
-  | d + 1, within => Nat.le_trans (Nat.succ_le_succ (rising_apart rising i d
-      (Nat.le_of_succ_le within))) (rising (i + d) within)
-
-/-- Steps rising one after another below `K`, the first from `T` on, are each from `T` on. -/
-theorem from_start {f : Nat → Nat} {K T : Nat} (start : T ≤ f 0)
-    (rising : ∀ i, i < K → f i < f (i + 1)) {n : Nat} (within : n ≤ K) : T ≤ f n :=
-  Nat.le_trans start (Nat.le_trans (Nat.le_add_right (f 0) n)
-    (Nat.le_trans (rising_apart rising 0 n (Nat.le_trans (Nat.le_of_eq (Nat.zero_add n)) within))
-      (Nat.le_of_eq (congrArg f (Nat.zero_add n)))))
-
-/-- **A finite reading counts the falls.** Read an amount `q` off configurations `g t` that a
-list `l` holds from `T` on, and let it not rise across any step from `T` on, as far as can be
-refuted. Then of any `l.length + 1` steps `f 0 < f 1 < ⋯` from `T` on, not every one is a step
-across which the amount falls strictly (is not, after the step, back within its value before): at
-most `l.length` steps fall strictly. No least loss is asked, no Archimedean property, no totality
-and no decision: a strict fall leaves a configuration the amount never reads again, and the list
-has room for only so many. -/
-theorem falls_within_reading {g : Nat → S} {q : S → A} {l : List S} {T : Nat}
-    (held : ∀ t, T ≤ t → g t ∈ l) (still : ∀ t, T ≤ t → ¬¬ M.le (q (g (t + 1))) (q (g t)))
-    {f : Nat → Nat} (start : T ≤ f 0) (rising : ∀ i, i < l.length → f i < f (i + 1)) :
-    ¬ ∀ i, i ≤ l.length → ¬ M.le (q (g (f i))) (q (g (f i + 1))) := fun falls =>
-  match revisits_within l (fun i => g (f i))
-      (fun n within => held (f n) (from_start start rising within)) with
-  | ⟨i, j, lt, le, same⟩ =>
-    match gap_of_lt lt with
-    | ⟨d, at_j⟩ =>
-      have from_i : T ≤ f i := from_start start rising (Nat.le_trans (Nat.le_of_lt lt) le)
-      have apart : f i + 1 ≤ f j :=
-        Nat.le_trans (Nat.succ_le_succ (Nat.le_add_right (f i) d))
-          (Nat.le_trans (rising_apart rising i (d + 1) (Nat.le_trans (Nat.le_of_eq at_j.symm) le))
-            (Nat.le_of_eq (congrArg f at_j.symm)))
-      match le_dest apart with
-      | ⟨e, at_fj⟩ =>
-        still_le (s := fun t => q (g t)) still e (f i + 1) (Nat.le_succ_of_le from_i) fun down =>
-          falls i (Nat.le_trans (Nat.le_of_lt lt) le)
-            (Eq.subst (motive := fun x => M.le (q x) (q (g (f i + 1)))) same.symm
-              (Eq.subst (motive := fun x => M.le (q (g x)) (q (g (f i + 1)))) at_fj.symm down))
-
-/-- A chain of `m + 1` strict falls from `T` on, at rising steps, extended by one more strict fall
-after its last. -/
-theorem extend_falls {g : Nat → S} {q : S → A} {T m : Nat} {f : Nat → Nat} (start : T ≤ f 0)
-    (rising : ∀ i, i < m → f i < f (i + 1))
-    (falls : ∀ i, i ≤ m → ¬ M.le (q (g (f i))) (q (g (f i + 1)))) {t : Nat} (after : f m + 1 ≤ t)
-    (fall : ¬ M.le (q (g t)) (q (g (t + 1)))) :
-    ∃ f' : Nat → Nat, T ≤ f' 0 ∧ (∀ i, i < m + 1 → f' i < f' (i + 1)) ∧
-      ∀ i, i ≤ m + 1 → ¬ M.le (q (g (f' i))) (q (g (f' i + 1))) := by
-  refine ⟨fun i => if i ≤ m then f i else t, ?_, ?_, ?_⟩
-  · exact Eq.subst (motive := fun x => T ≤ x) (if_pos (Nat.zero_le m)).symm start
-  · intro i below
-    have at_i : (if i ≤ m then f i else t) = f i := if_pos (Nat.le_of_lt_succ below)
-    show (if i ≤ m then f i else t) < (if i + 1 ≤ m then f (i + 1) else t)
-    rw [at_i]
-    match Nat.decLe (i + 1) m with
-    | isTrue next =>
-      rw [if_pos next]
-      exact rising i next
-    | isFalse past =>
-      rw [if_neg past]
-      have same : i = m := Nat.le_antisymm (Nat.le_of_lt_succ below)
-        (Nat.le_of_lt_succ (Nat.gt_of_not_le past))
-      rw [same]
-      exact after
-  · intro i _
-    match Nat.decLe i m with
-    | isTrue earlier =>
-      show ¬ M.le (q (g (if i ≤ m then f i else t))) (q (g ((if i ≤ m then f i else t) + 1)))
-      rw [if_pos earlier]
-      exact falls i earlier
-    | isFalse later =>
-      show ¬ M.le (q (g (if i ≤ m then f i else t))) (q (g ((if i ≤ m then f i else t) + 1)))
-      rw [if_neg later]
-      exact fall
-
-/-- **Rest from a finite reading, unrefuted.** Where a list holds, from `T` on, the configurations
-an amount is read off, and that the amount does not rise across any step from `T` on is not
-refuted, it is not the case that after every step from `T` on a later step across which it falls
-strictly stays unrefuted. Over any amounts: no least loss, no Archimedean property, no totality of
-the order and no decision is asked. Each chain of strict falls is extended inside the refutation,
-so only the `l.length + 1` falls the list cannot hold are ever used. -/
-theorem rests_unrefuted_of_finite_reading {g : Nat → S} {q : S → A} {l : List S} {T : Nat}
-    (held : ∀ t, T ≤ t → g t ∈ l) (still : ∀ t, T ≤ t → ¬¬ M.le (q (g (t + 1))) (q (g t))) :
-    M.FallsStop (fun t => q (g t)) T := fun recurs =>
-  have chain : ∀ m, ¬¬ ∃ f : Nat → Nat, T ≤ f 0 ∧ (∀ i, i < m → f i < f (i + 1)) ∧
-      ∀ i, i ≤ m → ¬ M.le (q (g (f i))) (q (g (f i + 1))) := fun m => by
-    induction m with
-    | zero =>
-      exact fun no => recurs T (Nat.le_refl T) fun ⟨t, after, fall⟩ =>
-        no ⟨fun _ => t, after, fun i below => absurd below (Nat.not_lt_zero i), fun _ _ => fall⟩
-    | succ m ih =>
-      exact fun no => ih fun ⟨f, start, rising, falls⟩ =>
-        recurs (f m + 1) (Nat.le_succ_of_le (from_start start rising (Nat.le_refl m)))
-          fun ⟨t, after, fall⟩ => no (extend_falls start rising falls after fall)
-  chain l.length fun ⟨f, start, rising, falls⟩ => falls_within_reading held still start rising falls
-
-/-- **Rest from a finite reading.** Where a list holds, from `T` on, the configurations an amount
-is read off and the amount does not rise across any step from `T` on, steps across which it falls
-strictly do not recur. Over any amounts: no least loss, no Archimedean property, no totality of the
-order and no decision is asked (`rests_unrefuted_of_finite_reading` is the stronger form). The least
-loss on which `Amounts.rests` turns is needed only where the amount reads configurations no list
-holds: falls that recur need an unbounded reading (`Halving.stock_unlisted`). -/
-theorem rests_of_finite_reading {g : Nat → S} {q : S → A} {l : List S} {T : Nat}
-    (held : ∀ t, T ≤ t → g t ∈ l) (still : ∀ t, T ≤ t → M.le (q (g (t + 1))) (q (g t))) :
-    ¬ ∀ N, ∃ t, N ≤ t ∧ ¬ M.le (q (g t)) (q (g (t + 1))) := fun recurs =>
-  rests_unrefuted_of_finite_reading held (fun t later no => no (still t later))
-    fun N _ no => no (recurs N)
-
-end Amounts
 
 namespace Halving
 
@@ -869,5 +692,25 @@ theorem kept_by_rest :
      (fun same => Bool.noConfusion same)⟩
 
 end Reset
+
+/-! ## Worlds in amounts that never rest (moved from `Becoming.InAmounts`, EC3) -/
+
+/-- **Without a least fall, some world never rests.** Dyadic amounts are Archimedean, no amount above
+nothing is within every strict fall, and some world in them never rests. -/
+theorem Halving.worlds_need_not_rest :
+    Dyadic.amounts.Archimedean ∧
+      (∀ ε, ¬ Dyadic.amounts.le ε Dyadic.amounts.zero → ¬ Dyadic.amounts.FallsAtLeast ε) ∧
+      ¬ Dyadic.amounts.WorldsRest :=
+  ⟨Dyadic.archimedean, Halving.no_least_fall,
+   fun rest => Amounts.not_endlessFall_of_worldsRest rest Halving.endless⟩
+
+/-- **Without the Archimedean property, some world never rests.** In layered amounts every strict
+fall is by at least a fine unit above nothing, the amounts are not Archimedean, and some world in
+them never rests. -/
+theorem Layered.worlds_need_not_rest :
+    Layered.amounts.FallsAtLeast Layered.least ∧ ¬ Layered.amounts.le Layered.least Layered.amounts.zero ∧
+      ¬ Layered.amounts.Archimedean ∧ ¬ Layered.amounts.WorldsRest :=
+  ⟨Layered.fallsAtLeast, Layered.least_positive, Layered.not_archimedean,
+   fun rest => Amounts.not_endlessFall_of_worldsRest rest Layered.endless⟩
 
 end Becoming

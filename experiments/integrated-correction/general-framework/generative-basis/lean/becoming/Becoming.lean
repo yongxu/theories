@@ -970,9 +970,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   so it stops changing exactly where its total stops falling. Where the census's total stops
   falling, the world rests from some step on, unrefuted, enclosed at each step or covered by one
   family; a finite reading gives that premise, and so do amounts with no endless fall, where
-  every such world rests, whole-number worlds with their own premises the instance. Along any
-  amount falling at every step a standing passing between two relata meets every other premise
-  and arises and ceases without end, its levels held by no list.
+  every such world rests, whole-number worlds with their own premises the instance: the rest
+  theorems of whole numbers (`World.rests_unrefuted`, `World.rests_unrefuted_enclosed`) are stated
+  here as its cases, below `Becoming.Space`, which derives its covering form from it (board item
+  EC3). Along any amount falling at every step a standing passing between two relata meets every
+  other premise and arises and ceases without end, its levels held by no list.
 * `Becoming.Entropy` (L1): what becoming leaves, and what holding it costs. In a balanced
   flow every change of a level is an exchange, so the history of exchanges grows at every
   change without a dissipation premise, and an exchange and its reverse restore every level but not the

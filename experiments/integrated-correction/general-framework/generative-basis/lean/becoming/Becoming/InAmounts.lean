@@ -1,5 +1,6 @@
-import Becoming.LeastLoss
-import Becoming.Space
+import Becoming.Amounts
+import Becoming.Recurrence
+import Becoming.Roles
 
 /-!
 # A world in amounts: the rest theorem over any amounts
@@ -53,10 +54,12 @@ exactly a family's rest, and locates where amounts supply it.
   (`World.wholeAmounts`), whose balance, dissipation, embodiment and enclosure are the world's own
   (`World.balanced_whole`, `World.dissipative_whole`, `World.embodied_whole`,
   `World.arisingEmbodied_whole`, `World.enclosed_whole`). No whole number falls without end
-  (`Amounts.whole_noEndlessFall`), so a world meeting the premises of `World.rests_unrefuted` or
-  `World.rests_unrefuted_enclosed`, and nothing more, rests by the law over any amounts
-  (`World.rests_unrefuted_whole`, `World.rests_unrefuted_enclosed_whole`). The whole-number theorems
-  keep their own proofs below this module, which reads `World` and so lies above them.
+  (`Amounts.whole_noEndlessFall`), so a finite world, or one with a census and enclosed steps,
+  rests by the law over any amounts: these are the rest theorems of whole numbers, stated here as its
+  cases (`World.rests_unrefuted`, `World.rests_unrefuted_enclosed`), and `Becoming.Space`'s covering
+  form is derived the same way (`World.rests_unrefuted_covering`, through `World.balancesOn_whole`
+  and `World.dissipatesOn_whole`). One rest theorem, with its whole-number cases below the worlds
+  that use them (board item EC3, 21 October 2026).
 * **An endless fall keeps a world from rest.** In `Pass` one standing passes between two relata
   along any amount `d` falling strictly at every step, in any amounts: the holder stands at `d t`,
   takes it all from itself and gives `d (t + 1)` to the other. The world has a census of its active
@@ -68,9 +71,24 @@ exactly a family's rest, and locates where amounts supply it.
   whole numbers, `Amounts.whole_worldsRest`), and it leaves no amount falling at every step
   (`Amounts.not_endlessFall_of_worldsRest`). So dyadic amounts, Archimedean with no least fall, and
   layered amounts, with a least fall but not Archimedean, each carry a world that never rests
-  (`Halving.worlds_need_not_rest`, `Layered.worlds_need_not_rest`). Rest over every world lies
+  (`Halving.worlds_need_not_rest`, `Layered.worlds_need_not_rest`, in `Becoming.LeastLoss`). Rest over every world lies
   between no endless fall and no fall at every step; the two coincide where the steps at which an
   amount falls can be chosen (classically, with dependent choice).
+
+**What lies here and where it came from (EC3).** So that the general law lies below the worlds that
+use it, this module imports only the amounts, the laws of finite runs and what lies below
+`Becoming.Space` (`Becoming.Roles`). The world-level notions the rest theorem reads moved here
+unchanged, with their names, from `Becoming.Space` (`World.Finite`, `World.RestsFrom`,
+`World.Balanced`, `World.Dissipative`, `World.Embodied`, `World.ArisingEmbodied`,
+`World.Embodied.arising`, `World.rests_unrefuted_iff`, `World.arising_unrefuted_covering`) and
+`Becoming.Premises` (`World.Counted`), and the amount-level laws from `Becoming.LeastLoss` (the one
+premise, `Amounts.FallsStop`, with `Amounts.NoEndlessFall`, `Amounts.EndlessFall`,
+`Amounts.FallsAtLeast` and their laws, and rest from a finite reading,
+`Amounts.rests_unrefuted_of_finite_reading`). The worlds over dyadic and layered amounts that never
+rest moved to `Becoming.LeastLoss`, with those amounts. `World.rests_unrefuted` replaces its direct
+proof in `Becoming.Space`, and `World.rests_unrefuted_enclosed` its direct proof in
+`Becoming.Openness`; the names `World.rests_unrefuted_whole` and
+`World.rests_unrefuted_enclosed_whole`, which stated the same theorems a second time, are gone.
 
 The representation commits to discrete steps and to Prop-valued activity; amounts are any
 `Amounts`. Every premise is named where it is used. Every declaration has an empty axiom report. No
@@ -78,6 +96,257 @@ ethical predicate, ranking or axiom occurs.
 -/
 
 namespace Becoming
+
+/-! ## One premise: an amount's strict falls stop -/
+
+namespace Amounts
+
+variable {A : Type} (M : Amounts A)
+
+/-- An amount's strict falls stop from `T` on, as far as can be refuted: it is not the case that
+after every step from `T` on a later step across which it falls strictly (is not, after the step,
+back within its value before) stays unrefuted. Both rest laws conclude this, the least-loss law
+(`Amounts.rests_unrefuted`) and the finite-reading law (`Amounts.rests_unrefuted_of_finite_reading`),
+and it is the one premise of rest over any amounts (`World.InAmounts.change_stops_iff`). -/
+def FallsStop (s : Nat → A) (T : Nat) : Prop :=
+  ¬ ∀ N, T ≤ N → ¬¬ ∃ t, N ≤ t ∧ ¬ M.le (s t) (s (t + 1))
+
+/-- No amount falls without end: every amount that, as far as can be refuted, does not rise from a
+step on has its strict falls stop from there. -/
+def NoEndlessFall : Prop :=
+  ∀ (s : Nat → A) (T : Nat), (∀ t, T ≤ t → ¬¬ M.le (s (t + 1)) (s t)) → M.FallsStop s T
+
+/-- Some amount falls strictly at every step. -/
+def EndlessFall : Prop :=
+  ∃ s : Nat → A, ∀ t, M.le (s (t + 1)) (s t) ∧ ¬ M.le (s t) (s (t + 1))
+
+/-- Every strict fall is by at least `ε`: an amount within another that does not hold it, with `ε`,
+is still within it. -/
+def FallsAtLeast (ε : A) : Prop :=
+  ∀ a b, M.le b a → ¬ M.le a b → M.le (M.add b ε) a
+
+variable {M}
+
+/-- The falls stop for an amount wherever they stop for one equal to it from `T` on. -/
+theorem fallsStop_congr {s s' : Nat → A} {T : Nat} (same : ∀ t, T ≤ t → s t = s' t)
+    (stops : M.FallsStop s' T) : M.FallsStop s T :=
+  fun falling => stops fun N from_ none_ => falling N from_ fun ⟨t, after, fall⟩ =>
+    have later : T ≤ t := Nat.le_trans from_ after
+    none_ ⟨t, after, fun le => fall
+      (Eq.subst (motive := fun x => M.le x (s (t + 1))) (same t later).symm
+        (Eq.subst (motive := fun x => M.le (s' t) x) (same (t + 1) (Nat.le_succ_of_le later)).symm
+          le))⟩
+
+/-- **A least fall, in Archimedean amounts, leaves no endless fall.** Where every strict fall is
+by at least an amount `ε` above nothing and every amount lies within finitely many copies of `ε`
+(`Amounts.Archimedean`), every amount not rising from a step on stops falling strictly: the
+least-loss law (`Amounts.rests_unrefuted`), with the falls themselves as the steps counted. -/
+theorem noEndlessFall_of_fallsAtLeast (archimedean : M.Archimedean) {ε : A}
+    (positive : ¬ M.le ε M.zero) (least : M.FallsAtLeast ε) : M.NoEndlessFall :=
+  fun s T still => match archimedean (s T) ε positive with
+  | ⟨_, within⟩ => rests_unrefuted (P := fun t => ¬ M.le (s t) (s (t + 1))) still
+      (fun t later falls no => still t later fun down => no (least _ _ down falls)) within
+
+/-- In whole numbers every strict fall is by at least one. -/
+theorem whole_fallsAtLeast : Amounts.whole.FallsAtLeast 1 :=
+  fun _ _ _ falls => Nat.gt_of_not_le falls
+
+/-- **No whole number falls without end.** -/
+theorem whole_noEndlessFall : Amounts.whole.NoEndlessFall :=
+  noEndlessFall_of_fallsAtLeast whole_archimedean (fun le => Nat.not_succ_le_zero 0 le)
+    whole_fallsAtLeast
+
+end Amounts
+
+/-! ## Rest from a finite reading: no least loss -/
+
+namespace Amounts
+
+variable {A : Type} {M : Amounts A} {S : Type}
+
+/-- Steps rising one after another, `f i < f (i + 1)` below `K`, lie at least as far apart as
+their indices. -/
+theorem rising_apart {f : Nat → Nat} {K : Nat} (rising : ∀ i, i < K → f i < f (i + 1)) (i : Nat) :
+    ∀ d, i + d ≤ K → f i + d ≤ f (i + d)
+  | 0, _ => Nat.le_refl _
+  | d + 1, within => Nat.le_trans (Nat.succ_le_succ (rising_apart rising i d
+      (Nat.le_of_succ_le within))) (rising (i + d) within)
+
+/-- Steps rising one after another below `K`, the first from `T` on, are each from `T` on. -/
+theorem from_start {f : Nat → Nat} {K T : Nat} (start : T ≤ f 0)
+    (rising : ∀ i, i < K → f i < f (i + 1)) {n : Nat} (within : n ≤ K) : T ≤ f n :=
+  Nat.le_trans start (Nat.le_trans (Nat.le_add_right (f 0) n)
+    (Nat.le_trans (rising_apart rising 0 n (Nat.le_trans (Nat.le_of_eq (Nat.zero_add n)) within))
+      (Nat.le_of_eq (congrArg f (Nat.zero_add n)))))
+
+/-- **A finite reading counts the falls.** Read an amount `q` off configurations `g t` that a
+list `l` holds from `T` on, and let it not rise across any step from `T` on, as far as can be
+refuted. Then of any `l.length + 1` steps `f 0 < f 1 < ⋯` from `T` on, not every one is a step
+across which the amount falls strictly (is not, after the step, back within its value before): at
+most `l.length` steps fall strictly. No least loss is asked, no Archimedean property, no totality
+and no decision: a strict fall leaves a configuration the amount never reads again, and the list
+has room for only so many. -/
+theorem falls_within_reading {g : Nat → S} {q : S → A} {l : List S} {T : Nat}
+    (held : ∀ t, T ≤ t → g t ∈ l) (still : ∀ t, T ≤ t → ¬¬ M.le (q (g (t + 1))) (q (g t)))
+    {f : Nat → Nat} (start : T ≤ f 0) (rising : ∀ i, i < l.length → f i < f (i + 1)) :
+    ¬ ∀ i, i ≤ l.length → ¬ M.le (q (g (f i))) (q (g (f i + 1))) := fun falls =>
+  match revisits_within l (fun i => g (f i))
+      (fun n within => held (f n) (from_start start rising within)) with
+  | ⟨i, j, lt, le, same⟩ =>
+    match gap_of_lt lt with
+    | ⟨d, at_j⟩ =>
+      have from_i : T ≤ f i := from_start start rising (Nat.le_trans (Nat.le_of_lt lt) le)
+      have apart : f i + 1 ≤ f j :=
+        Nat.le_trans (Nat.succ_le_succ (Nat.le_add_right (f i) d))
+          (Nat.le_trans (rising_apart rising i (d + 1) (Nat.le_trans (Nat.le_of_eq at_j.symm) le))
+            (Nat.le_of_eq (congrArg f at_j.symm)))
+      match le_dest apart with
+      | ⟨e, at_fj⟩ =>
+        still_le (s := fun t => q (g t)) still e (f i + 1) (Nat.le_succ_of_le from_i) fun down =>
+          falls i (Nat.le_trans (Nat.le_of_lt lt) le)
+            (Eq.subst (motive := fun x => M.le (q x) (q (g (f i + 1)))) same.symm
+              (Eq.subst (motive := fun x => M.le (q (g x)) (q (g (f i + 1)))) at_fj.symm down))
+
+/-- A chain of `m + 1` strict falls from `T` on, at rising steps, extended by one more strict fall
+after its last. -/
+theorem extend_falls {g : Nat → S} {q : S → A} {T m : Nat} {f : Nat → Nat} (start : T ≤ f 0)
+    (rising : ∀ i, i < m → f i < f (i + 1))
+    (falls : ∀ i, i ≤ m → ¬ M.le (q (g (f i))) (q (g (f i + 1)))) {t : Nat} (after : f m + 1 ≤ t)
+    (fall : ¬ M.le (q (g t)) (q (g (t + 1)))) :
+    ∃ f' : Nat → Nat, T ≤ f' 0 ∧ (∀ i, i < m + 1 → f' i < f' (i + 1)) ∧
+      ∀ i, i ≤ m + 1 → ¬ M.le (q (g (f' i))) (q (g (f' i + 1))) := by
+  refine ⟨fun i => if i ≤ m then f i else t, ?_, ?_, ?_⟩
+  · exact Eq.subst (motive := fun x => T ≤ x) (if_pos (Nat.zero_le m)).symm start
+  · intro i below
+    have at_i : (if i ≤ m then f i else t) = f i := if_pos (Nat.le_of_lt_succ below)
+    show (if i ≤ m then f i else t) < (if i + 1 ≤ m then f (i + 1) else t)
+    rw [at_i]
+    match Nat.decLe (i + 1) m with
+    | isTrue next =>
+      rw [if_pos next]
+      exact rising i next
+    | isFalse past =>
+      rw [if_neg past]
+      have same : i = m := Nat.le_antisymm (Nat.le_of_lt_succ below)
+        (Nat.le_of_lt_succ (Nat.gt_of_not_le past))
+      rw [same]
+      exact after
+  · intro i _
+    match Nat.decLe i m with
+    | isTrue earlier =>
+      show ¬ M.le (q (g (if i ≤ m then f i else t))) (q (g ((if i ≤ m then f i else t) + 1)))
+      rw [if_pos earlier]
+      exact falls i earlier
+    | isFalse later =>
+      show ¬ M.le (q (g (if i ≤ m then f i else t))) (q (g ((if i ≤ m then f i else t) + 1)))
+      rw [if_neg later]
+      exact fall
+
+/-- **Rest from a finite reading, unrefuted.** Where a list holds, from `T` on, the configurations
+an amount is read off, and that the amount does not rise across any step from `T` on is not
+refuted, it is not the case that after every step from `T` on a later step across which it falls
+strictly stays unrefuted. Over any amounts: no least loss, no Archimedean property, no totality of
+the order and no decision is asked. Each chain of strict falls is extended inside the refutation,
+so only the `l.length + 1` falls the list cannot hold are ever used. -/
+theorem rests_unrefuted_of_finite_reading {g : Nat → S} {q : S → A} {l : List S} {T : Nat}
+    (held : ∀ t, T ≤ t → g t ∈ l) (still : ∀ t, T ≤ t → ¬¬ M.le (q (g (t + 1))) (q (g t))) :
+    M.FallsStop (fun t => q (g t)) T := fun recurs =>
+  have chain : ∀ m, ¬¬ ∃ f : Nat → Nat, T ≤ f 0 ∧ (∀ i, i < m → f i < f (i + 1)) ∧
+      ∀ i, i ≤ m → ¬ M.le (q (g (f i))) (q (g (f i + 1))) := fun m => by
+    induction m with
+    | zero =>
+      exact fun no => recurs T (Nat.le_refl T) fun ⟨t, after, fall⟩ =>
+        no ⟨fun _ => t, after, fun i below => absurd below (Nat.not_lt_zero i), fun _ _ => fall⟩
+    | succ m ih =>
+      exact fun no => ih fun ⟨f, start, rising, falls⟩ =>
+        recurs (f m + 1) (Nat.le_succ_of_le (from_start start rising (Nat.le_refl m)))
+          fun ⟨t, after, fall⟩ => no (extend_falls start rising falls after fall)
+  chain l.length fun ⟨f, start, rising, falls⟩ => falls_within_reading held still start rising falls
+
+/-- **Rest from a finite reading.** Where a list holds, from `T` on, the configurations an amount
+is read off and the amount does not rise across any step from `T` on, steps across which it falls
+strictly do not recur. Over any amounts: no least loss, no Archimedean property, no totality of the
+order and no decision is asked (`rests_unrefuted_of_finite_reading` is the stronger form). The least
+loss on which `Amounts.rests` turns is needed only where the amount reads configurations no list
+holds: falls that recur need an unbounded reading (`Halving.stock_unlisted`). -/
+theorem rests_of_finite_reading {g : Nat → S} {q : S → A} {l : List S} {T : Nat}
+    (held : ∀ t, T ≤ t → g t ∈ l) (still : ∀ t, T ≤ t → M.le (q (g (t + 1))) (q (g t))) :
+    ¬ ∀ N, ∃ t, N ≤ t ∧ ¬ M.le (q (g t)) (q (g (t + 1))) := fun recurs =>
+  rests_unrefuted_of_finite_reading held (fun t later no => no (still t later))
+    fun N _ no => no (recurs N)
+
+end Amounts
+
+/-! ## The world-level notions the rest theorem reads (moved from `Becoming.Space` and `Becoming.Premises`, EC3) -/
+
+namespace World
+
+variable (w : World)
+
+/-- Finitely many relata are all there is, each listed once. -/
+def Finite : Prop :=
+  ∃ all : List w.Relatum, Distinct all ∧ ∀ x, x ∈ all
+
+/-- The world rests from step `N` on: at no step from `N` on does any relatum arise or cease.
+That some such step exists, with no decision procedure, can at most not be refuted: naming
+one for every finite world is a principle of omniscience (`World.lpo_of_finite_ends`). -/
+def RestsFrom (N : Nat) : Prop :=
+  ∀ t, N ≤ t → ∀ x, ¬ w.web.Arises t x ∧ ¬ w.web.Ceases t x
+
+/-- The flow balances. -/
+def Balanced : Prop :=
+  w.flow.Balances w.web
+
+/-- The flow dissipates. -/
+def Dissipative : Prop :=
+  w.flow.Dissipative
+
+/-- Every relatum stands as a condition exactly while it is active. -/
+def Embodied : Prop :=
+  ∀ x, w.web.Embodied x
+
+/-- Whatever arises is embodied. -/
+def ArisingEmbodied : Prop :=
+  ∀ t x, w.web.Arises t x → w.web.Embodied x
+
+/-- A census lists the relata active at each step, each once: finitely many are active at
+each step (`Web.Census`). -/
+def Counted : Prop :=
+  ∃ alive, w.web.Census alive
+
+variable {w}
+
+theorem Embodied.arising (embodied : w.Embodied) : w.ArisingEmbodied :=
+  fun _ x _ => embodied x
+
+/-- That the world rests from some step on cannot be refuted exactly where, for arising and for
+ceasing each, it is not the case that after every step a later one stays unrefuted: the two
+stoppings, each unrefuted, give one common step unrefuted. No decidedness is needed. -/
+theorem rests_unrefuted_iff :
+    (¬ ¬ ∃ N, w.RestsFrom N) ↔
+      (¬ ∀ M, ¬ ¬ ∃ t x, M ≤ t ∧ w.web.Arises t x) ∧ (¬ ∀ M, ¬ ¬ ∃ t x, M ≤ t ∧ w.web.Ceases t x) :=
+  ⟨fun rest => ⟨fun arising => rest fun ⟨N, quiet⟩ =>
+      arising N fun ⟨t, x, later, arises⟩ => (quiet t later x).1 arises,
+    fun ceasing => rest fun ⟨N, quiet⟩ =>
+      ceasing N fun ⟨t, x, later, ceases⟩ => (quiet t later x).2 ceases⟩,
+   fun ⟨arising, ceasing⟩ no => arising fun M noArising => ceasing fun M' noCeasing =>
+     no ⟨M + M', fun t later x =>
+       ⟨fun arises => noArising ⟨t, x, Nat.le_trans (Nat.le_add_right M M') later, arises⟩,
+        fun ceases => noCeasing ⟨t, x, Nat.le_trans (Nat.le_add_left M' M) later, ceases⟩⟩⟩⟩
+
+/-- With a list covering what is active from step `T` on, where after every step a later
+ceasing is not refuted (as where ceasing recurs), after every step from `T` on a later arising of
+a member is not refuted. No decidedness is needed (`Covers.not_not_coming_from`). -/
+theorem arising_unrefuted_covering {ds : List w.Relatum} {T : Nat}
+    (covers : ∀ t, T ≤ t → ∀ x, w.web.active t x → x ∈ ds)
+    (ceasing : ∀ M, ¬ ¬ ∃ t x, M ≤ t ∧ w.web.Ceases t x) :
+    ∀ M, T ≤ M → ¬ ¬ ∃ t x, M ≤ t ∧ x ∈ ds ∧ w.web.Arises t x :=
+  fun M from_ none_ => Covers.not_not_coming_from (p := fun x t => w.web.active t x)
+    (L := ds) (N := M) (fun x active => covers M from_ x active) ceasing
+    fun ⟨t, x, later, arises⟩ => none_ ⟨t, x, later,
+      covers (t + 1) (Nat.le_succ_of_le (Nat.le_trans from_ later)) x arises.2, arises⟩
+
+end World
 
 namespace Amounts
 
@@ -664,14 +933,17 @@ theorem nothing_of_sign {G T : Nat} (within : G + sign T ≤ T) (back : T ≤ G)
   | 0, _, _ => Nat.le_refl 0
   | _ + 1, within, back => absurd (Nat.le_trans within back) (Nat.not_succ_le_self G)
 
-/-- A world's dissipation is its dissipation in whole-number amounts: what gives back all it takes
-takes nothing, since a whole number that takes something loses at least one. -/
-theorem dissipative_whole (dissipative : w.Dissipative) :
-    w.wholeAmounts.Dissipative Amounts.whole := fun ds t distinct closed f mem =>
-  have closedAt : w.flow.ClosedAt ds t := fun f mem c outside =>
-    ⟨Nat.le_antisymm (closed f mem c outside).1 (Nat.zero_le _),
-     Nat.le_antisymm (closed f mem c outside).2 (Nat.zero_le _)⟩
-  have within := dissipative ds t distinct closedAt f mem
+/-- A family's balance across a step is its balance in whole-number amounts. -/
+theorem balancesOn_whole {ds : List w.Relatum} {t : Nat} (balances : w.flow.BalancesOn w.web ds t) :
+    w.wholeAmounts.BalancesOn Amounts.whole ds t :=
+  fun c member => Nat.le_of_eq ((congrArg (w.web.level (t + 1) c + ·) (Amounts.totalOf_whole _)).trans
+    ((balances c member).trans (congrArg (w.web.level t c + ·) (Amounts.totalOf_whole _)).symm))
+
+/-- A family dissipated on across a step is dissipated on in whole-number amounts: what gives back
+all it takes takes nothing, since a whole number that takes something loses at least one. -/
+theorem dissipatesOn_whole {ds : List w.Relatum} {t : Nat} (dissipates : w.flow.DissipatesOn ds t) :
+    w.wholeAmounts.DissipatesOn Amounts.whole ds t := fun f mem =>
+  have within := dissipates f mem
   have takes := Amounts.totalOf_whole (a := w.flow.take t f) ds
   have gives := Amounts.totalOf_whole (a := w.flow.give t f) ds
   ⟨Eq.subst (motive := fun x => x ≤ Amounts.whole.totalOf ds (w.flow.take t f)) gives.symm
@@ -681,6 +953,13 @@ theorem dissipative_whole (dissipative : w.Dissipative) :
       (nothing_of_sign within
         (Eq.subst (motive := fun x => total ds (w.flow.take t f) ≤ x) gives
           (Eq.subst (motive := fun x => x ≤ Amounts.whole.totalOf ds (w.flow.give t f)) takes back)))⟩
+
+/-- A world's dissipation is its dissipation in whole-number amounts. -/
+theorem dissipative_whole (dissipative : w.Dissipative) :
+    w.wholeAmounts.Dissipative Amounts.whole := fun ds t distinct closed =>
+  dissipatesOn_whole (dissipative ds t distinct fun f mem c outside =>
+    ⟨Nat.le_antisymm (closed f mem c outside).1 (Nat.zero_le _),
+     Nat.le_antisymm (closed f mem c outside).2 (Nat.zero_le _)⟩)
 
 /-- A world whose arising is embodied has it embodied in whole-number amounts. -/
 theorem arisingEmbodied_whole (embodied : w.ArisingEmbodied) :
@@ -698,11 +977,11 @@ theorem enclosed_whole {t : Nat} (enclosed : w.flow.Enclosed t) :
   | ⟨es, distinct, closed⟩ => ⟨es, distinct, fun f mem c outside =>
       ⟨Nat.le_of_eq (closed f mem c outside).1, Nat.le_of_eq (closed f mem c outside).2⟩⟩
 
-/-- **The whole-number instance, finite.** A finite world whose flow balances and dissipates and
-whose arising is embodied rests from some step on, unrefuted, with the premises of
-`World.rests_unrefuted` and nothing more, by the law over any amounts: no whole number falls without
-end (`Amounts.whole_noEndlessFall`). -/
-theorem rests_unrefuted_whole (finite : w.Finite) (balanced : w.Balanced)
+/-- **Dissipation brings a finite world to rest, unrefuted.** A finite world whose flow balances and
+dissipates and whose arising is embodied rests from some step on, unrefuted: the whole-number case of
+the law over any amounts, since no whole number falls without end (`Amounts.whole_noEndlessFall`). No
+decision procedure; naming the step is a principle of omniscience (`World.lpo_of_finite_ends`). -/
+theorem rests_unrefuted (finite : w.Finite) (balanced : w.Balanced)
     (dissipative : w.Dissipative) (embodied : w.ArisingEmbodied) : ¬ ¬ ∃ N, w.RestsFrom N :=
   match finite with
   | ⟨all, distinct, every⟩ =>
@@ -715,12 +994,11 @@ theorem rests_unrefuted_whole (finite : w.Finite) (balanced : w.Balanced)
       (Amounts.whole_noEndlessFall _ 0 fun t later no =>
         no (InAmounts.stock_still (balances t later) (dissipates t later)))
 
-/-- **The whole-number instance, enclosed.** A world with a census of its active relata, all
-embodied, a balanced and dissipative flow and every step from `T` on enclosed rests from some step
-on, unrefuted, with the premises of `World.rests_unrefuted_enclosed` and nothing more, by the law
-over any amounts (`InAmounts.rests_unrefuted_enclosed_of_noEndlessFall`): no whole number falls
-without end. -/
-theorem rests_unrefuted_enclosed_whole (counted : w.Counted) (embodied : w.Embodied)
+/-- **The rest theorem, enclosed.** A world with a census of its active relata, all embodied, a
+balanced and dissipative flow and every step from `T` on enclosed rests from some step on, unrefuted:
+the whole-number case of the law over any amounts
+(`InAmounts.rests_unrefuted_enclosed_of_noEndlessFall`), since no whole number falls without end. -/
+theorem rests_unrefuted_enclosed (counted : w.Counted) (embodied : w.Embodied)
     (balanced : w.Balanced) (dissipative : w.Dissipative) {T : Nat}
     (enclosed : ∀ t, T ≤ t → w.flow.Enclosed t) : ¬ ¬ ∃ N, w.RestsFrom N :=
   match counted with
@@ -982,23 +1260,5 @@ theorem whole_worldsRest : Amounts.whole.WorldsRest :=
   worldsRest_of_noEndlessFall whole_noEndlessFall
 
 end Amounts
-
-/-- **Without a least fall, some world never rests.** Dyadic amounts are Archimedean, no amount above
-nothing is within every strict fall, and some world in them never rests. -/
-theorem Halving.worlds_need_not_rest :
-    Dyadic.amounts.Archimedean ∧
-      (∀ ε, ¬ Dyadic.amounts.le ε Dyadic.amounts.zero → ¬ Dyadic.amounts.FallsAtLeast ε) ∧
-      ¬ Dyadic.amounts.WorldsRest :=
-  ⟨Dyadic.archimedean, Halving.no_least_fall,
-   fun rest => Amounts.not_endlessFall_of_worldsRest rest Halving.endless⟩
-
-/-- **Without the Archimedean property, some world never rests.** In layered amounts every strict
-fall is by at least a fine unit above nothing, the amounts are not Archimedean, and some world in
-them never rests. -/
-theorem Layered.worlds_need_not_rest :
-    Layered.amounts.FallsAtLeast Layered.least ∧ ¬ Layered.amounts.le Layered.least Layered.amounts.zero ∧
-      ¬ Layered.amounts.Archimedean ∧ ¬ Layered.amounts.WorldsRest :=
-  ⟨Layered.fallsAtLeast, Layered.least_positive, Layered.not_archimedean,
-   fun rest => Amounts.not_endlessFall_of_worldsRest rest Layered.endless⟩
 
 end Becoming

@@ -90,12 +90,13 @@ giving needs uptake there; a fall is taken from.
   the same flow with every relatum embodied, every step is enclosed and nothing is listed
   (`World.rest_needs_standing`).
 * **Its cases.** A finite world lists what stands and is enclosed around it at every step
-  (`World.Finite.standing`), so the finite rest of `Becoming.Space` (`World.rests_unrefuted`) is a case
+  (`World.Finite.standing`), so the finite rest (`World.rests_unrefuted`, `Becoming.InAmounts`) is a case
   of the rest theorem, its relata covering whatever is active (`World.comes_to_rest_unrefuted_from`). Where every
   relatum is embodied, the census of what is
   active lists what stands (`World.rests_unrefuted_around`), and enclosure from some step on
   suffices, with no decision of equality: an enclosed step is not not enclosed around
-  what stands, and the totals compared are numbers (`World.rests_unrefuted_enclosed`). Both
+  what stands, and the totals compared are numbers (`World.rests_unrefuted_enclosed`, stated since
+  EC3 in `Becoming.InAmounts` as the whole-number case of the rest theorem over any amounts). Both
   conclude that the world rests from some step on is unrefuted, `¬ ¬ ∃ N, RestsFrom N`, under
   the census, embodiment, balance and dissipation, not that a step of rest is given. Read the
   other way, arising without end in such a world is incompatible with every step from
@@ -668,23 +669,6 @@ theorem rests_unrefuted_around {alive : Nat → List w.Relatum} (census : w.web.
     comes_to_rest_unrefuted ⟨alive, census⟩
     (standingCensus census embodied) embodied.arising balanced dissipative around
 
-/-- Enclosure from some step on suffices, with no decision of equality: each enclosed step
-is not not enclosed around what stands, which is enough for that standing stops changing to be
-unrefuted (`Flow.change_stops_unrefuted_around`); an embodied relatum arising rises, and one
-ceasing falls. So that the world rests from some step on cannot be refuted. -/
-theorem rests_unrefuted_enclosed (counted : w.Counted) (embodied : w.Embodied)
-    (balanced : w.Balanced) (dissipative : w.Dissipative) {T : Nat}
-    (enclosed : ∀ t, T ≤ t → w.flow.Enclosed t) : ¬ ¬ ∃ N, w.RestsFrom N :=
-  match counted with
-  | ⟨alive, census⟩ =>
-    have still := Flow.change_stops_unrefuted_around balanced dissipative
-      (standingCensus census embodied) fun t later =>
-        (enclosed t later).aroundStanding_not_not alive
-    rests_unrefuted_iff.mpr
-    ⟨fun arising => still fun M _ none_ => arising M fun ⟨t, x, later, arises⟩ =>
-        none_ ⟨t, x, later, .inl (rises_of_arises embodied arises)⟩,
-     fun ceasing => still fun M _ none_ => ceasing M fun ⟨t, x, later, ceases⟩ =>
-        none_ ⟨t, x, later, .inr (falls_of_ceases embodied ceases)⟩⟩
 
 /-- So arising without end, in a world with a census whose relata are embodied and
 whose flow balances and dissipates, is incompatible with every step from any point on
