@@ -18,3 +18,4 @@ Retired material, moved here with its bytes unchanged. Each file's former path, 
 | [OPENING-V7.md](OPENING-V7.md) | `drafts/2026-10-10-opening/OPENING-V7.md` | 1 | frozen: the applied version 7 of the opening (19 October 2026) | opening-v7 |
 | [OPENING-V8-PROPOSAL.md](OPENING-V8-PROPOSAL.md) | `drafts/2026-10-10-opening/OPENING-V8-PROPOSAL.md` | 1 | applied: the version 8 proposal; the applied text is theories/becoming/OPENING.md (20 October 2026) | opening-v8 |
 | [OPENING-V8.md](OPENING-V8.md) | `drafts/2026-10-10-opening/OPENING-V8.md` | 1 | frozen: the applied version 8 of the opening (20 October 2026) | opening-v8 |
+| [OPENING-V9.md](OPENING-V9.md) | `drafts/2026-10-10-opening/OPENING-V9.md` | 1 | frozen: the applied version 9 of the opening (21 October 2026) | opening-v9 |

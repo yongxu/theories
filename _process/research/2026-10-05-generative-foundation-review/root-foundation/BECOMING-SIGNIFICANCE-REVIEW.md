@@ -854,6 +854,8 @@ Boundary: AI review, one session; the evolution line and the CG tests read at su
 Integration: none applied; TH1's three corrections listed for its owner and for Ren
 ```
 
+*Applied (21 October 2026, OP9).* On Ren's word "continue pease, implement proposals", TH1's thirteen proposals, with SA2's corrections, are OPENING's version 9 ([source](../../../../sources/15-codex-theory-conversations/2026-10-21-opening-v9.md); frozen copy `drafts/2026-10-10-opening/history/OPENING-V9.md`). One more scope correction was made in applying them: B8's "all who value anything" became "all who count everything at stake", for the same reason as B7's. B8's colon clause was dropped because the paragraph says it two sentences later. The list above keeps its wording as the record of what was proposed.
+
 <a id="horizon-check"></a>
 ## A check: courses ranked over a horizon (21 October 2026, SG5)
 
