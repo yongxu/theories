@@ -2477,6 +2477,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   curve in the plane of level and recent giving, the regime's point of no return at every recent
   giving under the regime's step. A giving that falls from one level to the next shows that
   rising giving is needed.
+  In any linearly ordered amounts with a draw taken first the adjusted step keeps the order of
+  states, a step neither raising nor lowering both climbs or sinks toward the draw and the next
+  such step is of its kind, a step raising or lowering both is followed by such steps for ever,
+  and the rests are the regime's point or below the draw with level and recent giving equal; whole
+  numbers are an instance.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of
