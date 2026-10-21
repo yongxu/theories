@@ -1,0 +1,13 @@
+<a id="j1-check"></a>
+## A check: the priority of basic conditions, step by step (21 October 2026, J1S)
+
+An AI check (one session, 21 October), made while the Lean was written. It asks whether J1/J2, the priority of basic conditions, ranks the absence of a malignant formation above its occurrence where the stepwise and relation-level readings leave them unranked under C. **Verdict: it does, in the two-part family, with the sustaining formation's events read as the basic tier: the course without the malignant formation keeps every basic claim and holds one the other loses after the loss, so it is lexically above, and no gain of the malignant formation trades for that loss.**
+
+```text
+Result(s): new record basic-priority-step-by-step (J1S, new laws of Becoming.Ranking)
+Delta: J1 ranks absence above malignant growth under the stepwise and relation-level readings in the two-part family, where C alone leaves them unranked
+Supplied premises / correspondence: the two-part family's premises; J1/J2 as BasicPriority; the basic tier read as the sustaining formation's events; the theory's own comparison laws
+Evidence: Lean in the record's receipt
+Boundary: AI check, one session; the two-part family; the assignment of tiers is a reading
+Integration: chapter §6 and §8.1 item 11, the record table
+```
