@@ -129,6 +129,7 @@ Following Ren's “yes, put it on the board and start”: the split “configura
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 
 Aliases: `Becoming.Bisimulation`, `Becoming.Alike`, `Becoming.Alike.trace`, `Becoming.Alike.tests`, `Becoming.DeterminedAt`, `Becoming.DeterminedAt.transfer`, `Becoming.DeterminedAt.goAlike`, `Becoming.Twins.alike_one`, `Becoming.exchangeFrame`, `Becoming.exchange_alike_iff`, `Becoming.exchange_determinedAt`, `bisimulation`, `互模拟`, `relational identity`, `关系的同一`, `alike`, `相同`, `determined up to likeness`, `相同之下确定`, `Becoming.IdentifiesAlike`, `Becoming.identifiesAlike_iff`, `Becoming.IdentifiesAlike.carries`, `Becoming.identifiesAlike_id_iff`, `makes sense`, `有意义的描述`, `Becoming.Law.SameFuture`, `Becoming.Law.alike_iff_sameFuture`, `same registered future`, `所识的未来相同`
 

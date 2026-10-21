@@ -356,7 +356,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean",
       "role": "proof",
-      "sha256": "96f4546f209e766553d27576c5882fd47244912de912c2572c684dc822344bad"
+      "sha256": "6f80291124914c32ad379e25853eea9bb56cf46138b870b7ef06988579ec1c72"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean",

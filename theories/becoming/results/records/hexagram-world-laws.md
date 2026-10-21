@@ -132,6 +132,7 @@ Laws H1 to H5 of the review of the earlier 生生不息 repository (SSBX review,
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T235844.485705Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T045544.667431Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 
 Aliases: `the nuclear law`, `互`, `互卦`, `中爻`, `the cast`, `之卦`, `老少`, `用九`, `用六`, `錯綜`, `错综`, `錯`, `綜`, `the four symmetries`, `Klein four-group`, `the counter adding one`, `加一`, `the six orbits of waxing and waning`, `消息之六轨`, `changes around`, `Becoming.Hexagram.returns_iff_attractor`, `Becoming.Hexagram.process_returns_iff_ends`, `Becoming.Hexagram.basin_counts`, `Becoming.Hexagram.class_census`, `Becoming.Hexagram.MarkedLines.returns_iff`, `Becoming.Hexagram.addOne_one_orbit`, `Becoming.Hexagram.orbit_census`
 

@@ -81,6 +81,7 @@ Interpretability-based oversight (Olah et al. 2020; Elhage et al. 2021) and elic
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 
 Aliases: `reading another's couplings`, `reading is pooling`, `reading a system`, `读取他者的耦合`, `Becoming.Flow.withinCoupling_reads_iff`, `Becoming.Flow.unselected_beyond_reads`
 

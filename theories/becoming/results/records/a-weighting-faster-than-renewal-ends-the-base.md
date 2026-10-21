@@ -92,6 +92,7 @@ Discounting (Ramsey 1928; Koopmans 1960); at a constant rate δ a level's weight
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T070401.903190Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T075336.250274Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 
 Aliases: `a weighting falling faster than renewal ends the base`, `an order weighting later draws less`, `discounting ends the base`, `the modified golden rule on the spine`, `权重下降快于更新时终结基础`, `Becoming.Optimum.frontier_gains_weighted`, `Becoming.Optimum.frontier_exhausts`, `Becoming.Web.frontier_exhausts`
 

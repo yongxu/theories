@@ -374,9 +374,17 @@
   ],
   "references": [
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "role": "proof",
+      "sha256": "892cd79092aea2af1ec1dc801955a53bfa8794ba8574a9311ea1ea7092781451",
+      "declarations": [
+        "Becoming.closedUnder_withinClosure"
+      ]
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
       "role": "proof",
-      "sha256": "cb86cadd870f66707432b21b9b7f2d469a498fd413ab5cb4d4311d6c371d4f4a",
+      "sha256": "ddc680f4502c31fbd08f675edf87f279a72b91905f27603d804606f66c7df479",
       "declarations": [
         "Becoming.Flow.Balances.retains_transfer",
         "Becoming.Flow.Balances.not_adds_transfer",
@@ -398,7 +406,6 @@
         "Becoming.Flow.ReachesBefore",
         "Becoming.Flow.Balances.admits_unreached_before",
         "Becoming.Flow.WithinReach",
-        "Becoming.closedUnder_withinClosure",
         "Becoming.Flow.withinSystem_closed",
         "Becoming.Trophic.wolvesPart",
         "Becoming.Trophic.withoutWolves",
@@ -584,12 +591,18 @@
       "role": "receipt",
       "sha256": "d13bb7a8bef2993ffda38f33b45958c5824182e0d2d8e117869c45d403c19a2b",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "role": "receipt",
+      "sha256": "9596c1a0b53bd9a26d9975f2cf00180c6d63402a1459924d1016b3ddbc2edcb6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Feedback",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -633,6 +646,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T093308.742793Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Retaining",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frame",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -717,6 +737,10 @@
     {
       "en": "2026-10-20: 59 bookkeeping notes condensed from 2026-10-11 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/659e43c30a9be16f/comparison-within-reach.json and in git.",
       "zh": "2026-10-20：59 条记账性说明合并（2026-10-11 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/659e43c30a9be16f/comparison-within-reach.json 和 git 中。"
+    },
+    {
+      "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: closedUnder_withinClosure to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：closedUnder_withinClosure to Becoming.Frame。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ],
   "text_versions": [
