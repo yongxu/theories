@@ -1,0 +1,177 @@
+@Becoming.Amounts.add_add_add_comm : ∀ {A : Type} {M : Becoming.Amounts A} (a b c d : A),
+  M.add (M.add a b) (M.add c d) = M.add (M.add a c) (M.add b d)
+@Becoming.Amounts.totalOf_le : ∀ {A : Type} {M : Becoming.Amounts A} {X : Type} {a b : X → A} {l : List X},
+  (∀ (x : X), x ∈ l → M.le (a x) (b x)) → M.le (M.totalOf l a) (M.totalOf l b)
+@Becoming.Amounts.totalOf_congr : ∀ {A : Type} {M : Becoming.Amounts A} {X : Type} {a b : X → A} {l : List X},
+  (∀ (x : X), x ∈ l → a x = b x) → M.totalOf l a = M.totalOf l b
+@Becoming.Amounts.totalOf_add : ∀ {A : Type} {M : Becoming.Amounts A} {X : Type} {a b : X → A} (l : List X),
+  (M.totalOf l fun x => M.add (a x) (b x)) = M.add (M.totalOf l a) (M.totalOf l b)
+@Becoming.Amounts.totalOf_zero : ∀ {A : Type} {M : Becoming.Amounts A} {X : Type} (l : List X),
+  (M.totalOf l fun x => M.zero) = M.zero
+@Becoming.Amounts.totalOf_swap : ∀ {A : Type} {M : Becoming.Amounts A} {X Y : Type} (k : X → Y → A) (xs : List X)
+  (ys : List Y), (M.totalOf xs fun x => M.totalOf ys (k x)) = M.totalOf ys fun y => M.totalOf xs fun x => k x y
+@Becoming.Amounts.le_totalOf : ∀ {A : Type} {M : Becoming.Amounts A} {X : Type} {a : X → A} {l : List X} {x : X},
+  x ∈ l → M.le (a x) (M.totalOf l a)
+@Becoming.Amounts.totalOf_le_zero : ∀ {A : Type} {M : Becoming.Amounts A} {X : Type} {a : X → A} {l : List X},
+  (∀ (x : X), x ∈ l → M.le (a x) M.zero) → M.le (M.totalOf l a) M.zero
+@Becoming.Amounts.le_of_totalOf_le : ∀ {A : Type} {M : Becoming.Amounts A} {X : Type} {a b : X → A} {l : List X},
+  (∀ (x : X), x ∈ l → M.le (b x) (a x)) → M.le (M.totalOf l a) (M.totalOf l b) → ∀ (x : X), x ∈ l → M.le (a x) (b x)
+@Becoming.Amounts.totalOf_whole : ∀ {X : Type} {a : X → Nat} (l : List X),
+  Becoming.Amounts.whole.totalOf l a = Becoming.total l a
+@Becoming.Amounts.add_left_comm : ∀ {A : Type} {M : Becoming.Amounts A} (a b c : A),
+  M.add a (M.add b c) = M.add b (M.add a c)
+@Becoming.Amounts.totalOf_insert : ∀ {A : Type} {M : Becoming.Amounts A} {X : Type} {a : X → A} (y : X) (p q : List X),
+  M.totalOf (p ++ y :: q) a = M.add (a y) (M.totalOf (p ++ q) a)
+@Becoming.Amounts.mem_insert_cases : ∀ {X : Type} {y x : X} {p q : List X}, x ∈ p ++ y :: q → x = y ∨ x ∈ p ++ q
+@Becoming.Amounts.fresh_insert : ∀ {X : Type} {y : X} {p q : List X}, Becoming.Distinct (p ++ y :: q) → ¬y ∈ p ++ q
+@Becoming.Amounts.totalOf_support : ∀ {A : Type} {M : Becoming.Amounts A} {X : Type} {a : X → A} {U D : List X},
+  Becoming.Distinct U →
+    Becoming.Distinct D →
+      (∀ (x : X), x ∈ D → x ∈ U) →
+        (∀ (x : X), x ∈ U → ¬x ∈ D → ¬¬M.le (a x) M.zero) →
+          ¬¬(M.le (M.totalOf U a) (M.totalOf D a) ∧ M.le (M.totalOf D a) (M.totalOf U a))
+@Becoming.World.InAmounts.rises_of_arises : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A}
+  {v : w.InAmounts A},
+  Becoming.World.InAmounts.ArisingEmbodied M v →
+    ∀ {t : Nat} {x : w.Relatum}, w.web.Arises t x → Becoming.World.InAmounts.Rises M v t x
+@Becoming.World.InAmounts.taken_total : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A} {v : w.InAmounts A}
+  (ds : List w.Relatum) (t : Nat),
+  M.totalOf ds (Becoming.World.InAmounts.taken M v t) = M.totalOf (w.flow.present t) fun f => M.totalOf ds (v.take t f)
+@Becoming.World.InAmounts.given_total : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A} {v : w.InAmounts A}
+  (ds : List w.Relatum) (t : Nat),
+  M.totalOf ds (Becoming.World.InAmounts.given M v t) = M.totalOf (w.flow.present t) fun f => M.totalOf ds (v.give t f)
+@Becoming.World.InAmounts.balance_total : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A} {v : w.InAmounts A}
+  {ds : List w.Relatum} {t : Nat},
+  Becoming.World.InAmounts.BalancesOn M v ds t →
+    M.le (M.add (Becoming.World.InAmounts.stock M v ds (t + 1)) (M.totalOf ds (Becoming.World.InAmounts.taken M v t)))
+      (M.add (Becoming.World.InAmounts.stock M v ds t) (M.totalOf ds (Becoming.World.InAmounts.given M v t)))
+@Becoming.World.InAmounts.stock_still : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A} {v : w.InAmounts A}
+  {ds : List w.Relatum} {t : Nat},
+  Becoming.World.InAmounts.BalancesOn M v ds t →
+    Becoming.World.InAmounts.DissipatesOn M v ds t →
+      M.le (Becoming.World.InAmounts.stock M v ds (t + 1)) (Becoming.World.InAmounts.stock M v ds t)
+@Becoming.World.InAmounts.steady_of_stock_le : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A}
+  {v : w.InAmounts A} {ds : List w.Relatum} {t : Nat},
+  Becoming.World.InAmounts.BalancesOn M v ds t →
+    Becoming.World.InAmounts.DissipatesOn M v ds t →
+      M.le (Becoming.World.InAmounts.stock M v ds t) (Becoming.World.InAmounts.stock M v ds (t + 1)) →
+        ∀ (c : w.Relatum), c ∈ ds → M.le (v.level (t + 1) c) (v.level t c) ∧ M.le (v.level t c) (v.level (t + 1) c)
+@Becoming.World.InAmounts.change_lowers : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A} {v : w.InAmounts A}
+  {ds : List w.Relatum} {t : Nat},
+  Becoming.World.InAmounts.BalancesOn M v ds t →
+    Becoming.World.InAmounts.DissipatesOn M v ds t →
+      ∀ {c : w.Relatum},
+        c ∈ ds →
+          Becoming.World.InAmounts.Rises M v t c ∨ Becoming.World.InAmounts.Falls M v t c →
+            ¬M.le (Becoming.World.InAmounts.stock M v ds t) (Becoming.World.InAmounts.stock M v ds (t + 1))
+@Becoming.World.InAmounts.change_stops_unrefuted : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A}
+  {v : w.InAmounts A} {ds : List w.Relatum} {T : Nat} {S : Type} {g : Nat → S} {q : S → A} {l : List S},
+  (∀ (t : Nat), T ≤ t → Becoming.World.InAmounts.BalancesOn M v ds t) →
+    (∀ (t : Nat), T ≤ t → Becoming.World.InAmounts.DissipatesOn M v ds t) →
+      (∀ (t : Nat), T ≤ t → g t ∈ l) →
+        (∀ (t : Nat), T ≤ t → Becoming.World.InAmounts.stock M v ds t = q (g t)) →
+          ¬∀ (N : Nat),
+              T ≤ N →
+                ¬¬∃ t c,
+                      N ≤ t ∧ c ∈ ds ∧ (Becoming.World.InAmounts.Rises M v t c ∨ Becoming.World.InAmounts.Falls M v t c)
+@Becoming.World.InAmounts.rests_unrefuted_covering : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A}
+  {v : w.InAmounts A} {ds : List w.Relatum} {T : Nat} {S : Type} {g : Nat → S} {q : S → A} {l : List S},
+  (∀ (t : Nat), T ≤ t → ∀ (x : w.Relatum), w.web.active t x → x ∈ ds) →
+    (∀ (t : Nat), T ≤ t → Becoming.World.InAmounts.BalancesOn M v ds t) →
+      (∀ (t : Nat), T ≤ t → Becoming.World.InAmounts.DissipatesOn M v ds t) →
+        Becoming.World.InAmounts.ArisingEmbodied M v →
+          (∀ (t : Nat), T ≤ t → g t ∈ l) →
+            (∀ (t : Nat), T ≤ t → Becoming.World.InAmounts.stock M v ds t = q (g t)) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.InAmounts.rests_unrefuted_reading : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A}
+  {v : w.InAmounts A} {ds : List w.Relatum} {T : Nat} {S : Type} {g : Nat → S} {read : S → w.Relatum → A} {l : List S},
+  (∀ (t : Nat), T ≤ t → ∀ (x : w.Relatum), w.web.active t x → x ∈ ds) →
+    (∀ (t : Nat), T ≤ t → Becoming.World.InAmounts.BalancesOn M v ds t) →
+      (∀ (t : Nat), T ≤ t → Becoming.World.InAmounts.DissipatesOn M v ds t) →
+        Becoming.World.InAmounts.ArisingEmbodied M v →
+          (∀ (t : Nat), T ≤ t → g t ∈ l) →
+            (∀ (t : Nat), T ≤ t → ∀ (c : w.Relatum), c ∈ ds → v.level t c = read (g t) c) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.InAmounts.rests_unrefuted : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A}
+  {v : w.InAmounts A},
+  w.Finite →
+    Becoming.World.InAmounts.Balanced M v →
+      Becoming.World.InAmounts.Dissipative M v →
+        Becoming.World.InAmounts.ArisingEmbodied M v →
+          ∀ {ls : List (w.Relatum → A)}, (∀ (t : Nat), v.level t ∈ ls) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.InAmounts.Enclosed.around_not_not : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A}
+  {v : w.InAmounts A} {t : Nat},
+  Becoming.World.InAmounts.Enclosed M v t →
+    ∀ (ds : List w.Relatum),
+      ¬¬∃ es, Becoming.Distinct es ∧ (∀ (c : w.Relatum), c ∈ ds → c ∈ es) ∧ Becoming.World.InAmounts.ClosedAt M v es t
+@Becoming.World.InAmounts.falls_of_ceases : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A}
+  {v : w.InAmounts A},
+  Becoming.World.InAmounts.Embodied M v →
+    ∀ {t : Nat} {x : w.Relatum}, w.web.Ceases t x → Becoming.World.InAmounts.Falls M v t x
+@Becoming.World.InAmounts.stock_census : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A} {v : w.InAmounts A}
+  {alive : Nat → List w.Relatum},
+  w.web.Census alive →
+    Becoming.World.InAmounts.Embodied M v →
+      ∀ {es : List w.Relatum},
+        Becoming.Distinct es →
+          ∀ {t : Nat},
+            (∀ (c : w.Relatum), c ∈ alive t → c ∈ es) →
+              ¬¬(M.le (Becoming.World.InAmounts.stock M v es t) (Becoming.World.InAmounts.stock M v (alive t) t) ∧
+                    M.le (Becoming.World.InAmounts.stock M v (alive t) t) (Becoming.World.InAmounts.stock M v es t))
+@Becoming.World.InAmounts.rests_unrefuted_enclosed : ∀ {w : Becoming.World} {A : Type} {M : Becoming.Amounts A}
+  {v : w.InAmounts A} {alive : Nat → List w.Relatum},
+  w.web.Census alive →
+    Becoming.World.InAmounts.Embodied M v →
+      Becoming.World.InAmounts.Balanced M v →
+        Becoming.World.InAmounts.Dissipative M v →
+          ∀ {T : Nat},
+            (∀ (t : Nat), T ≤ t → Becoming.World.InAmounts.Enclosed M v t) →
+              ∀ {S : Type} {g : Nat → S} {q : S → A} {l : List S},
+                (∀ (t : Nat), T ≤ t → g t ∈ l) →
+                  (∀ (t : Nat), T ≤ t → Becoming.World.InAmounts.stock M v (alive t) t = q (g t)) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.balanced_whole : ∀ {w : Becoming.World},
+  w.Balanced → Becoming.World.InAmounts.Balanced Becoming.Amounts.whole w.wholeAmounts
+@Becoming.World.nothing_of_sign : ∀ {G T : Nat}, G + Becoming.sign T ≤ T → T ≤ G → T ≤ 0
+@Becoming.World.dissipative_whole : ∀ {w : Becoming.World},
+  w.Dissipative → Becoming.World.InAmounts.Dissipative Becoming.Amounts.whole w.wholeAmounts
+@Becoming.World.arisingEmbodied_whole : ∀ {w : Becoming.World},
+  w.ArisingEmbodied → Becoming.World.InAmounts.ArisingEmbodied Becoming.Amounts.whole w.wholeAmounts
+@Becoming.World.rests_unrefuted_listed : ∀ {w : Becoming.World},
+  w.Finite →
+    w.Balanced →
+      w.Dissipative →
+        w.ArisingEmbodied → ∀ {ls : List (w.Relatum → Nat)}, (∀ (t : Nat), w.web.level t ∈ ls) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.embodied_whole : ∀ {w : Becoming.World},
+  w.Embodied → Becoming.World.InAmounts.Embodied Becoming.Amounts.whole w.wholeAmounts
+@Becoming.World.enclosed_whole : ∀ {w : Becoming.World} {t : Nat},
+  w.flow.Enclosed t → Becoming.World.InAmounts.Enclosed Becoming.Amounts.whole w.wholeAmounts t
+@Becoming.World.rests_unrefuted_enclosed_read : ∀ {w : Becoming.World} {alive : Nat → List w.Relatum},
+  w.web.Census alive →
+    w.Embodied →
+      w.Balanced →
+        w.Dissipative →
+          ∀ {T : Nat},
+            (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) →
+              ∀ {S : Type} {g : Nat → S} {q : S → Nat} {l : List S},
+                (∀ (t : Nat), T ≤ t → g t ∈ l) →
+                  (∀ (t : Nat), T ≤ t → Becoming.total (alive t) (w.web.level t) = q (g t)) → ¬¬∃ N, w.RestsFrom N
+Becoming.HalvingPass.at_self : ∀ (h : Bool) (s : Becoming.Dyadic), Becoming.HalvingPass.at_ h h s = s
+Becoming.HalvingPass.total_at : ∀ (h : Bool) (s : Becoming.Dyadic),
+  (Becoming.Dyadic.amounts.totalOf [true, false] fun c => Becoming.HalvingPass.at_ h c s) = s
+Becoming.HalvingPass.not_self : ∀ (h : Bool), ¬(!h) = h
+Becoming.HalvingPass.stock_positive : ∀ (t : Nat),
+  ¬Becoming.Dyadic.amounts.le (Becoming.Halving.stock t) Becoming.Dyadic.amounts.zero
+Becoming.HalvingPass.stands_iff : ∀ (h x : Bool) {s : Becoming.Dyadic},
+  ¬Becoming.Dyadic.amounts.le s Becoming.Dyadic.amounts.zero →
+    (x = h ↔ ¬Becoming.Dyadic.amounts.le (Becoming.HalvingPass.at_ h x s) Becoming.Dyadic.amounts.zero)
+Becoming.HalvingPass.covers : ∀ (t : Nat) (x : Bool), Becoming.HalvingPass.world.web.active t x → x ∈ [true, false]
+Becoming.HalvingPass.balances : ∀ (t : Nat),
+  Becoming.World.InAmounts.BalancesOn Becoming.Dyadic.amounts Becoming.HalvingPass.amounts [true, false] t
+@Becoming.HalvingPass.present_holder : ∀ {t : Nat} {f : Bool},
+  f ∈ Becoming.HalvingPass.world.flow.present t → f = Becoming.HalvingPass.even t
+Becoming.HalvingPass.dissipates : ∀ (t : Nat),
+  Becoming.World.InAmounts.DissipatesOn Becoming.Dyadic.amounts Becoming.HalvingPass.amounts [true, false] t
+Becoming.HalvingPass.embodied : Becoming.World.InAmounts.ArisingEmbodied Becoming.Dyadic.amounts
+  Becoming.HalvingPass.amounts
+Becoming.HalvingPass.arises : ∀ (t : Nat), Becoming.HalvingPass.world.web.Arises t !Becoming.HalvingPass.even t
+Becoming.HalvingPass.ceases : ∀ (t : Nat), Becoming.HalvingPass.world.web.Ceases t (Becoming.HalvingPass.even t)
+Becoming.HalvingPass.never_rests : ∀ (N : Nat), ¬Becoming.HalvingPass.world.RestsFrom N
+Becoming.HalvingPass.levels_unlisted : ¬∃ ls, ∀ (t : Nat), Becoming.HalvingPass.amounts.level t ∈ ls

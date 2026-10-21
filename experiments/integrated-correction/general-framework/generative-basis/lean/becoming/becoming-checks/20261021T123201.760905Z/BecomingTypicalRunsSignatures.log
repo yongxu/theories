@@ -1,0 +1,52 @@
+@Becoming.TypicalRuns.split_of_mem : ∀ {α : Type u_1} {a : α} {l : List α}, a ∈ l → ∃ l₁ l₂, l = l₁ ++ a :: l₂
+@Becoming.TypicalRuns.mem_of_mem_drop : ∀ {α : Type u_1} {a x : α} {l₁ l₂ : List α}, x ∈ l₁ ++ l₂ → x ∈ l₁ ++ a :: l₂
+@Becoming.TypicalRuns.mem_drop_or : ∀ {α : Type u_1} {a x : α} {l₁ l₂ : List α},
+  x ∈ l₁ ++ a :: l₂ → x = a ∨ x ∈ l₁ ++ l₂
+@Becoming.TypicalRuns.distinct_drop : ∀ {α : Type u_1} {a : α} {l₁ l₂ : List α},
+  Becoming.Distinct (l₁ ++ a :: l₂) → ¬a ∈ l₁ ++ l₂ ∧ Becoming.Distinct (l₁ ++ l₂)
+@Becoming.TypicalRuns.sum_listing : ∀ {α : Type u_1} (f : α → Nat) {l m : List α},
+  Becoming.Distinct l →
+    Becoming.Distinct m → (∀ (x : α), x ∈ l ↔ x ∈ m) → Becoming.counting.sum l f = Becoming.counting.sum m f
+@Becoming.TypicalRuns.sum_listed : ∀ {α : Type u_1} {M : α → Prop} {l m : List α},
+  Becoming.TypicalRuns.Listing M l →
+    Becoming.TypicalRuns.Listing M m → ∀ (f : α → Nat), Becoming.counting.sum l f = Becoming.counting.sum m f
+@Becoming.TypicalRuns.length_listed : ∀ {α : Type u_1} {M : α → Prop} {l m : List α},
+  Becoming.TypicalRuns.Listing M l → Becoming.TypicalRuns.Listing M m → l.length = m.length
+Becoming.TypicalRuns.total_eq_sum : ∀ (f : List Bool → Nat) (ws : List (List Bool)),
+  Becoming.total ws f = Becoming.counting.sum ws f
+@Becoming.TypicalRuns.total_listing : ∀ {M : List Bool → Prop} {l m : List (List Bool)},
+  Becoming.TypicalRuns.Listing M l →
+    Becoming.TypicalRuns.Listing M m → ∀ (f : List Bool → Nat), Becoming.total l f = Becoming.total m f
+Becoming.TypicalRuns.record_ofRecord : ∀ (w : List Bool),
+  Becoming.Learning.prefixOf (Becoming.TypicalRuns.ofRecord w) w.length = w
+@Becoming.TypicalRuns.mem_courses_iff : ∀ {n : Nat} {w : List Bool},
+  w ∈ Becoming.Typicality.courses n ↔ ∃ r, Becoming.TypicalRuns.record r n = w
+@Becoming.TypicalRuns.distinct_extend : ∀ {ws : List (List Bool)},
+  Becoming.Distinct ws → Becoming.Distinct (Becoming.Typicality.extend ws)
+Becoming.TypicalRuns.distinct_courses : ∀ (n : Nat), Becoming.Distinct (Becoming.Typicality.courses n)
+Becoming.TypicalRuns.courses_records : ∀ (n : Nat), Becoming.TypicalRuns.Records n (Becoming.Typicality.courses n)
+@Becoming.TypicalRuns.records_count : ∀ {n : Nat} {l : List (List Bool)},
+  Becoming.TypicalRuns.Records n l → l.length = 2 ^ n
+@Becoming.TypicalRuns.records_weight : ∀ {n : Nat} {l : List (List Bool)},
+  Becoming.TypicalRuns.Records n l → ∀ (p q : Nat), Becoming.total l (Becoming.Typicality.weight p q) = (p + q) ^ n
+@Becoming.TypicalRuns.histories_records : ∀ {n : Nat} {l : List (List Bool)},
+  Becoming.TypicalRuns.Records n l →
+    ∀ (p q : Nat) (s : Bool),
+      Becoming.counting.sum (Becoming.courses [()] [true, false] n)
+          (Becoming.counting.along (Becoming.Typicality.stepWeight p q) (fun x => 1) s) =
+        Becoming.total l (Becoming.Typicality.weight p q)
+@Becoming.TypicalRuns.records_spread : ∀ {n : Nat} {l : List (List Bool)},
+  Becoming.TypicalRuns.Records n l →
+    ∀ (p q : Nat),
+      (Becoming.total l fun w => Becoming.Typicality.weight p q w * Becoming.Typicality.square p q w) =
+        (Becoming.total l fun w => Becoming.Typicality.weight p q w * Becoming.Typicality.cross p q w) +
+          n * (p * q * (p + q) ^ n)
+@Becoming.TypicalRuns.records_typical : ∀ {n : Nat} {l : List (List Bool)},
+  Becoming.TypicalRuns.Records n l →
+    ∀ (p q d : Nat), Becoming.total l (Becoming.Typicality.offBy p q d) * d ≤ n * (p * q * (p + q) ^ n)
+@Becoming.TypicalRuns.records_concentrated : ∀ {n : Nat} {l : List (List Bool)},
+  Becoming.TypicalRuns.Records n l →
+    ∀ (p q k : Nat) {u v : Nat},
+      v ≤ u → Becoming.total l (Becoming.Typicality.atLeast p q k) * (u ^ k * v ^ n) ≤ (p * u + q * v) ^ n * v ^ k
+@Becoming.TypicalRuns.records_few_far_ahead : ∀ {n : Nat} {l : List (List Bool)},
+  Becoming.TypicalRuns.Records n l → ∀ (k : Nat), Becoming.total l (Becoming.Typicality.atLeast 1 1 k) * 3 ^ k ≤ 4 ^ n

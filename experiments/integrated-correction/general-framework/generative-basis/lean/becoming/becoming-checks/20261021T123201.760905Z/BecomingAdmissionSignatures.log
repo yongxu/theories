@@ -1,0 +1,230 @@
+@Becoming.unitStep_pos : ∀ {t : Nat}, 0 < t → 1 ≤ Becoming.unitStep t
+@Becoming.Web.GainsSupport.rises : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  W.GainsSupport t f → W.Unloosened t f → ¬∀ (c : C), W.requires t f c → ¬W.Rises t c
+@Becoming.Web.LosesSupport.falls : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  W.LosesSupport t f → W.Untightened t f → ¬∀ (c : C), W.requires (t + 1) f c → ¬W.Falls t c
+@Becoming.Flow.rise_given_by_supported_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {c : C},
+  L.BalancesOn W [c] t →
+    L.GiversSupported W t c → W.Rises t c → ∃ g, g ∈ L.present t ∧ 0 < L.give t g c ∧ W.Supported t g
+@Becoming.Flow.rise_given_by_supported : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent → ∀ {t : Nat} {c : C}, W.Rises t c → ∃ g, g ∈ L.present t ∧ 0 < L.give t g c ∧ W.Supported t g
+@Becoming.Flow.gains_from_supported_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {f : F},
+  (∀ (c : C), W.requires t f c → L.BalancesOn W [c] t) →
+    (∀ (c : C), W.requires t f c → L.GiversSupported W t c) →
+      W.GainsSupport t f →
+        W.Unloosened t f →
+          ¬∀ (c : C), W.requires t f c → ∀ (g : F), g ∈ L.present t → 0 < L.give t g c → ¬W.Supported t g
+@Becoming.Flow.gains_from_supported : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {t : Nat} {f : F},
+          W.GainsSupport t f →
+            W.Unloosened t f →
+              ¬∀ (c : C), W.requires t f c → ∀ (g : F), g ∈ L.present t → 0 < L.give t g c → ¬W.Supported t g
+@Becoming.Flow.unsupported_stays_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {member : F → Prop}
+  {T : Nat},
+  (∀ (n : Nat) (f : F), member f → W.Unloosened (T + n) f) →
+    (∀ (n : Nat) (f : F) (c : C),
+        member f → W.requires (T + n) f c → ∀ (g : F), g ∈ L.present (T + n) → 0 < L.give (T + n) g c → member g) →
+      (∀ (f : F), member f → ¬W.Supported T f) →
+        ∀ (n : Nat),
+          (∀ (k : Nat) (f : F) (c : C), k < n → member f → W.requires (T + k) f c → L.BalancesOn W [c] (T + k)) →
+            (∀ (k : Nat) (f : F) (c : C), k < n → member f → W.requires (T + k) f c → L.GiversSupported W (T + k) c) →
+              ∀ (f : F), member f → ¬W.Supported (T + n) f
+@Becoming.Flow.unsupported_stays : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {member : F → Prop} {T : Nat},
+          (∀ (n : Nat) (f : F), member f → W.Unloosened (T + n) f) →
+            (∀ (n : Nat) (f : F) (c : C),
+                member f →
+                  W.requires (T + n) f c → ∀ (g : F), g ∈ L.present (T + n) → 0 < L.give (T + n) g c → member g) →
+              (∀ (f : F), member f → ¬W.Supported T f) → ∀ (n : Nat) (f : F), member f → ¬W.Supported (T + n) f
+@Becoming.Flow.nothing_supported_stays_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {T n : Nat},
+  (∀ (n : Nat) (f : F), W.Unloosened (T + n) f) →
+    (∀ (f : F), ¬W.Supported T f) →
+      (∀ (k : Nat) (f : F) (c : C), k < n → W.requires (T + k) f c → L.BalancesOn W [c] (T + k)) →
+        (∀ (k : Nat) (f : F) (c : C), k < n → W.requires (T + k) f c → L.GiversSupported W (T + k) c) →
+          ∀ (f : F), (W.active (T + n) f → W.Supported (T + n) f) → ¬W.Supported (T + n) f ∧ ¬W.active (T + n) f
+@Becoming.Flow.nothing_supported_stays : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {T : Nat},
+          (∀ (n : Nat) (f : F), W.Unloosened (T + n) f) →
+            (∀ (f : F), ¬W.Supported T f) → ∀ (n : Nat) (f : F), ¬W.Supported (T + n) f ∧ ¬W.active (T + n) f
+@Becoming.Web.supported_iff_admits : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  W.Supported t f ↔ W.Admits (W.level t) t f
+@Becoming.Web.Admits.mono : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : C → Nat} {t : Nat} {f : F},
+  (∀ (c : C), l' c ≤ l c) → W.Admits l' t f → W.Admits l t f
+@Becoming.Web.Includes.refl : ∀ {F C : Type} {W : Becoming.Web F C} (l : Nat → C → Nat), W.Includes l l
+@Becoming.Web.Includes.trans : ∀ {F C : Type} {W : Becoming.Web F C} {l l' l'' : Nat → C → Nat},
+  W.Includes l l' → W.Includes l' l'' → W.Includes l l''
+@Becoming.Web.Includes.not_exceeded : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  W.Includes l l' → ¬W.Exceeds l' l
+@Becoming.rebalance : ∀ {a b x y p q P Q m k : Nat},
+  a + (x + p) = b + (y + q) → m + x = k + y → b + P = k + Q → a + (P + p) = m + (Q + q)
+@Becoming.Flow.split_at : ∀ {F : Type} (part : F → Bool) (q : F → Nat) (f : F),
+  q f = (if part f = true then 0 else q f) + if part f = true then q f else 0
+@Becoming.Flow.taken_withhold : ∀ {F C : Type} (L : Becoming.Flow F C) (part : F → Bool) (t : Nat) (c : C),
+  L.taken t c = (L.withhold part).taken t c + L.partTaken part t c
+@Becoming.Flow.given_withhold : ∀ {F C : Type} (L : Becoming.Flow F C) (part : F → Bool) (t : Nat) (c : C),
+  L.given t c = (L.withhold part).given t c + L.partGiven part t c
+@Becoming.Flow.WithheldLevels.unique : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {W : Becoming.Web F C}
+  {l l' : Nat → C → Nat}, L.WithheldLevels part W l → L.WithheldLevels part W l' → ∀ (t : Nat) (c : C), l t c = l' t c
+@Becoming.Flow.withheld_at : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {W : Becoming.Web F C}
+  {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {c : C} (t : Nat),
+      (∀ (s : Nat), s < t → L.BalancesOn W [c] s) →
+        (W.level t c + Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) =
+          l t c + Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c
+@Becoming.Flow.Balances.withheld : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ (t : Nat) (c : C),
+          (W.level t c + Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) =
+            l t c + Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c
+@Becoming.Flow.supported_of_net_give_at : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C} {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {t : Nat} {f : F},
+      (∀ (c : C), W.requires t f c → ∀ (s : Nat), s < t → L.BalancesOn W [c] s) →
+        (∀ (c : C),
+            W.requires t f c →
+              (Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) ≤
+                Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c) →
+          W.Admits (l t) t f → W.Supported t f
+@Becoming.Flow.admits_of_net_draw_at : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {W : Becoming.Web F C}
+  {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {t : Nat} {f : F},
+      (∀ (c : C), W.requires t f c → ∀ (s : Nat), s < t → L.BalancesOn W [c] s) →
+        (∀ (c : C),
+            W.requires t f c →
+              (Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c) ≤
+                Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) →
+          W.Supported t f → W.Admits (l t) t f
+@Becoming.Flow.supported_iff_within_margin_at : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C} {l : Nat → C → Nat},
+  L.WithheldLevels part W l →
+    ∀ {t : Nat} {f : F},
+      (∀ (c : C), W.requires t f c → ∀ (s : Nat), s < t → L.BalancesOn W [c] s) →
+        (W.Supported t f ↔
+          ∀ (c : C),
+            W.requires t f c →
+              (W.need t f c + Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) ≤
+                l t c + Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c)
+@Becoming.Flow.Balances.supported_of_net_give : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {t : Nat} {f : F},
+          (∀ (c : C),
+              W.requires t f c →
+                (Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) ≤
+                  Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c) →
+            W.Admits (l t) t f → W.Supported t f
+@Becoming.Flow.Balances.admits_of_net_draw : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {t : Nat} {f : F},
+          (∀ (c : C),
+              W.requires t f c →
+                (Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c) ≤
+                  Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) →
+            W.Supported t f → W.Admits (l t) t f
+@Becoming.Flow.Balances.supported_iff_within_margin : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        ∀ {t : Nat} {f : F},
+          W.Supported t f ↔
+            ∀ (c : C),
+              W.requires t f c →
+                (W.need t f c + Becoming.total (Becoming.steps 0 t) fun s => L.partTaken part s c) ≤
+                  l t c + Becoming.total (Becoming.steps 0 t) fun s => L.partGiven part s c
+@Becoming.Flow.Balances.closes_nothing : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        (∀ (t : Nat) (c : C), L.partTaken part t c ≤ L.partGiven part t c) → W.Includes W.level l
+@Becoming.Flow.Balances.opens_nothing : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        (∀ (t : Nat) (c : C), L.partGiven part t c ≤ L.partTaken part t c) → W.Includes l W.level
+@Becoming.Flow.Balances.changes_nothing : ∀ {F C : Type} {L : Becoming.Flow F C} {part : F → Bool}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {l : Nat → C → Nat},
+      L.WithheldLevels part W l →
+        (∀ (t : Nat) (c : C), L.partTaken part t c = L.partGiven part t c) → W.Includes W.level l ∧ W.Includes l W.level
+Becoming.Restoring.balances_unitStep : ∀ (active : Nat → Bool → Prop) (requires : Nat → Bool → Unit → Prop)
+  (need : Nat → Bool → Unit → Nat),
+  Becoming.Restoring.flow.Balances
+    { level := fun t x => Becoming.unitStep t, active := active, requires := requires, need := need,
+      draws := fun x x_1 x_2 => False }
+Becoming.Restoring.Adapting.restores : Becoming.Flow.still.Balances Becoming.Restoring.Adapting.web ∧
+  Becoming.Flow.still.Acting Becoming.Restoring.Adapting.web ∧
+    Becoming.Restoring.Adapting.web.Dependent ∧
+      (∀ (x : Bool), ¬Becoming.Restoring.Adapting.web.Supported 0 x) ∧
+        ¬Becoming.Restoring.Adapting.web.Unloosened 0 false ∧ Becoming.Restoring.Adapting.web.Supported 1 false
+Becoming.Restoring.Inflow.restores : Becoming.Restoring.flow.Balances Becoming.Restoring.Inflow.web ∧
+  Becoming.Restoring.flow.Acting Becoming.Restoring.Inflow.web ∧
+    Becoming.Restoring.Inflow.web.Dependent ∧
+      (∀ (n : Nat), Becoming.Restoring.Inflow.web.Unloosened n false) ∧
+        ¬Becoming.Restoring.Inflow.web.Supported 0 false ∧
+          Becoming.Restoring.Inflow.web.Supported 1 false ∧
+            0 < Becoming.Restoring.flow.give 0 true () ∧ Becoming.Restoring.Inflow.web.requires 0 false ()
+Becoming.Restoring.Inflow.withheld : Becoming.Restoring.flow.WithheldLevels Becoming.Restoring.Inflow.giverPart
+  Becoming.Restoring.Inflow.web fun x x_1 => 0
+@Becoming.Restoring.Inflow.widens : ∀ {l : Nat → Unit → Nat},
+  Becoming.Restoring.flow.WithheldLevels Becoming.Restoring.Inflow.giverPart Becoming.Restoring.Inflow.web l →
+    Becoming.Restoring.Inflow.web.Includes Becoming.Restoring.Inflow.web.level l ∧
+      Becoming.Restoring.Inflow.web.Exceeds Becoming.Restoring.Inflow.web.level l ∧
+        ∀ (t : Nat),
+          ¬Becoming.Restoring.Inflow.web.Admits (l t) t false ∧ Becoming.Restoring.Inflow.web.Supported (t + 1) false
+Becoming.Restoring.Idle.restores : Becoming.Restoring.flow.Balances Becoming.Restoring.Idle.web ∧
+  ¬Becoming.Restoring.flow.Acting Becoming.Restoring.Idle.web ∧
+    Becoming.Restoring.Idle.web.Dependent ∧
+      (∀ (n : Nat) (x : Bool), Becoming.Restoring.Idle.web.Unloosened n x) ∧
+        (∀ (x : Bool), ¬Becoming.Restoring.Idle.web.Supported 0 x) ∧ Becoming.Restoring.Idle.web.Supported 1 false
+Becoming.Restoring.Carried.restores : Becoming.Restoring.flow.Balances Becoming.Restoring.Carried.web ∧
+  Becoming.Restoring.flow.Acting Becoming.Restoring.Carried.web ∧
+    ¬Becoming.Restoring.Carried.web.Dependent ∧
+      (∀ (n : Nat) (x : Bool), Becoming.Restoring.Carried.web.Unloosened n x) ∧
+        (∀ (x : Bool), ¬Becoming.Restoring.Carried.web.Supported 0 x) ∧ Becoming.Restoring.Carried.web.Supported 1 false
+Becoming.Restoring.Spontaneous.restores : ¬Becoming.Flow.still.Balances Becoming.Restoring.Spontaneous.web ∧
+  Becoming.Flow.still.Acting Becoming.Restoring.Spontaneous.web ∧
+    Becoming.Restoring.Spontaneous.web.Dependent ∧
+      (∀ (n : Nat) (x : Bool), Becoming.Restoring.Spontaneous.web.Unloosened n x) ∧
+        (∀ (x : Bool), ¬Becoming.Restoring.Spontaneous.web.Supported 0 x) ∧
+          Becoming.Restoring.Spontaneous.web.Supported 1 false
+Becoming.Transfer.balances : Becoming.Transfer.flow.Balances Becoming.Transfer.web
+Becoming.Transfer.acting : Becoming.Transfer.flow.Acting Becoming.Transfer.web
+Becoming.Transfer.taking : Becoming.Transfer.flow.Taking Becoming.Transfer.web
+Becoming.Transfer.dependent : Becoming.Transfer.web.Dependent
+Becoming.Transfer.withheld : Becoming.Transfer.flow.WithheldLevels Becoming.Transfer.conveyorPart Becoming.Transfer.web
+  Becoming.Transfer.withheldLevel
+@Becoming.Transfer.mixed : ∀ {l : Nat → Bool → Nat},
+  Becoming.Transfer.flow.WithheldLevels Becoming.Transfer.conveyorPart Becoming.Transfer.web l →
+    Becoming.Transfer.web.Exceeds Becoming.Transfer.web.level l ∧
+      Becoming.Transfer.web.Exceeds l Becoming.Transfer.web.level ∧
+        ∀ (t : Nat),
+          Becoming.Transfer.web.Admits (l t) t Becoming.Transfer.Formation.first ∧
+            ¬Becoming.Transfer.web.Admits (l t) t Becoming.Transfer.Formation.second ∧
+              Becoming.Transfer.web.Supported (t + 1) Becoming.Transfer.Formation.second ∧
+                ¬Becoming.Transfer.web.Supported (t + 1) Becoming.Transfer.Formation.first

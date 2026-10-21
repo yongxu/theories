@@ -1,0 +1,232 @@
+@Becoming.ClosedCapture.turn_unread : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} {f : A × B → R → A × B}
+  {h : A × B → R → R},
+  Becoming.ClosedCapture.Unread f h →
+    ∀ (r : Bool) (p q : (A × B) × R),
+      p.fst.fst = q.fst.fst →
+        p.snd = q.snd →
+          (Becoming.Pace.turn f h r p).fst.fst = (Becoming.Pace.turn f h r q).fst.fst ∧
+            (Becoming.Pace.turn f h r p).snd = (Becoming.Pace.turn f h r q).snd
+@Becoming.ClosedCapture.unread_course : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} {f : A × B → R → A × B}
+  {h : A × B → R → R},
+  Becoming.ClosedCapture.Unread f h →
+    ∀ (reads : Nat → Bool) {c c' : (A × B) × R},
+      c.fst.fst = c'.fst.fst →
+        c.snd = c'.snd →
+          ∀ (t : Nat),
+            (Becoming.Pace.paced f h reads c t).fst.fst = (Becoming.Pace.paced f h reads c' t).fst.fst ∧
+              (Becoming.Pace.paced f h reads c t).snd = (Becoming.Pace.paced f h reads c' t).snd
+@Becoming.ClosedCapture.reads_beyond_of_apart : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} {f : A × B → R → A × B}
+  {h : A × B → R → R} {reads : Nat → Bool} {c c' : (A × B) × R},
+  c.fst.fst = c'.fst.fst →
+    c.snd = c'.snd →
+      ∀ {t : Nat},
+        ¬((Becoming.Pace.paced f h reads c t).fst.fst = (Becoming.Pace.paced f h reads c' t).fst.fst ∧
+              (Becoming.Pace.paced f h reads c t).snd = (Becoming.Pace.paced f h reads c' t).snd) →
+          ¬Becoming.ClosedCapture.Unread f h
+@Becoming.ClosedCapture.join_unread : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} (fA : A → R → A)
+  (fB : A × B → R → B) (hA : A → R → R),
+  Becoming.ClosedCapture.Unread (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA)
+@Becoming.ClosedCapture.join_alike : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} (fA : A → R → A)
+  (fB : A × B → R → B) (hA : A → R → R) (reads : Nat → Bool) (a : A) (b b' : B) (g : R) (t : Nat),
+  (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads ((a, b), g)
+            t).fst.fst =
+      (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads ((a, b'), g)
+            t).fst.fst ∧
+    (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads ((a, b), g)
+          t).snd =
+      (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads ((a, b'), g)
+          t).snd
+@Becoming.ClosedCapture.turn_join : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} (fA : A → R → A) (fB : A × B → R → B)
+  (hA : A → R → R) (r : Bool) (p : (A × B) × R) (q : A × R),
+  p.fst.fst = q.fst →
+    p.snd = q.snd →
+      (Becoming.Pace.turn (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) r p).fst.fst =
+          (Becoming.Pace.turn fA hA r q).fst ∧
+        (Becoming.Pace.turn (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) r p).snd =
+          (Becoming.Pace.turn fA hA r q).snd
+@Becoming.ClosedCapture.join_course : ∀ {A : Type u_1} {B : Type u_2} {R : Type u_3} (fA : A → R → A)
+  (fB : A × B → R → B) (hA : A → R → R) (reads : Nat → Bool) (c : (A × B) × R) (t : Nat),
+  (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads c t).fst.fst =
+      (Becoming.Pace.paced fA hA reads (c.fst.fst, c.snd) t).fst ∧
+    (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads c t).snd =
+      (Becoming.Pace.paced fA hA reads (c.fst.fst, c.snd) t).snd
+@Becoming.ClosedCapture.loss_grows : ∀ {A : Type u_1} {R : Type u_2} {fA : A → R → A} {fB : A × Nat → R → Nat}
+  {h : A × Nat → R → R} {reads : Nat → Bool},
+  Becoming.ClosedCapture.Accrues fB →
+    ∀ (c : (A × Nat) × R) (t : Nat),
+      c.fst.snd + t ≤ (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) h reads c t).fst.snd
+@Becoming.ClosedCapture.turned_by_loss : ∀ {A : Type u_1} {R : Type u_2} {fA : A → R → A} {fB : A × Nat → R → Nat}
+  {h : A × Nat → R → R} {reads : Nat → Bool} {favours : R → Prop},
+  Becoming.ClosedCapture.Accrues fB →
+    ∀ {N : Nat},
+      (∀ (p : A × Nat) (g : R), N ≤ p.snd → ¬favours (h p g)) →
+        ∀ {a : A} {b : Nat} {g : R} {r : Nat},
+          reads r = true →
+            N ≤ b + r →
+              ¬favours (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) h reads ((a, b), g) (r + 1)).snd
+@Becoming.ClosedCapture.lock_outlives_loss : ∀ {A : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder A}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {fA : A → R → A} {fB : A × Nat → R → Nat} {hA : A → R → R}
+  {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours fA →
+    Becoming.RuleCapture.ReadsShare P M hA →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        Becoming.ClosedCapture.Accrues fB →
+          ∀ {a : A} {b : Nat} {g : R},
+            Becoming.RuleCapture.Locked M favours hA (a, g) →
+              ∀ (t : Nat),
+                b + t ≤
+                    (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA) reads
+                          ((a, b), g) t).fst.snd ∧
+                  Becoming.RuleCapture.Locked M favours hA
+                      ((Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA)
+                              reads ((a, b), g) t).fst.fst,
+                        (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA)
+                            reads ((a, b), g) t).snd) ∧
+                    P.le a
+                        (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA)
+                              reads ((a, b), g) t).fst.fst ∧
+                      M.le g
+                        (Becoming.Pace.paced (Becoming.ClosedCapture.join fA fB) (Becoming.ClosedCapture.joinRead hA)
+                            reads ((a, b), g) t).snd
+Becoming.ClosedCapture.Beyond.closed_locked : ∀ (t : Nat),
+  t ≤ (Becoming.ClosedCapture.Beyond.closed t).fst.snd ∧
+    Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+        Becoming.ClosedCapture.Beyond.closedRead
+        ((Becoming.ClosedCapture.Beyond.closed t).fst.fst, (Becoming.ClosedCapture.Beyond.closed t).snd) ∧
+      Becoming.RuleCapture.CarrierCounts.order.le Becoming.RuleCapture.CarrierCounts.twoToOne
+        (Becoming.ClosedCapture.Beyond.closed t).fst.fst
+Becoming.ClosedCapture.Beyond.open_falls : (Becoming.ClosedCapture.Beyond.opened 1).snd =
+    Becoming.RuleCapture.CarrierCounts.hi ∧
+  (Becoming.ClosedCapture.Beyond.opened 2).snd = Becoming.RuleCapture.CarrierCounts.lo ∧
+    ¬Becoming.RuleCapture.CarrierCounts.order.le (Becoming.ClosedCapture.Beyond.opened 2).fst.fst
+        (Becoming.ClosedCapture.Beyond.opened 3).fst.fst
+Becoming.ClosedCapture.Beyond.lossRead_turns : ∀ (p : Becoming.RuleCapture.CarrierCounts × Nat)
+  (g : Becoming.RuleCapture.CarrierCounts), 1 ≤ p.snd → ¬(Becoming.ClosedCapture.Beyond.lossRead p g).favours
+@Becoming.ClosedCapture.Beyond.open_turned : ∀ {r : Nat},
+  1 ≤ r → ¬(Becoming.ClosedCapture.Beyond.opened (r + 1)).snd.favours
+Becoming.ClosedCapture.Beyond.open_reads : ¬Becoming.ClosedCapture.Unread
+    (Becoming.ClosedCapture.join Becoming.RuleCapture.CarrierCounts.select Becoming.ClosedCapture.Beyond.lossStep)
+    Becoming.ClosedCapture.Beyond.lossRead
+@Becoming.ClosedCapture.both_reads : ∀ {S : Type u_1} {G : Type u_2} {Q : Type u_3} {P : Becoming.Ideals.Preorder S}
+  {MG : Becoming.Ideals.Preorder G} {MQ : Becoming.Ideals.Preorder Q} {read : Q → S → G → G} {mind : S → Q → Q},
+  (∀ (q q' : Q) (x y : S) (g g' : G), MQ.le q q' → P.le x y → MG.le (read q x g) (read q' y g')) →
+    Becoming.RuleCapture.ReadsShare P MQ mind →
+      Becoming.RuleCapture.ReadsShare P (Becoming.ClosedCapture.both MG MQ) (Becoming.ClosedCapture.readers read mind)
+@Becoming.ClosedCapture.byRule_raises : ∀ {S : Type u_1} {G : Type u_2} {Q : Type u_3} {P : Becoming.Ideals.Preorder S}
+  {favours : G → Prop} {f : S → G → S},
+  Becoming.RuleCapture.Raises P favours f →
+    Becoming.RuleCapture.Raises P (fun p => favours p.fst) (Becoming.ClosedCapture.byRule f)
+@Becoming.ClosedCapture.both_upper : ∀ {G : Type u_1} {Q : Type u_2} {MG : Becoming.Ideals.Preorder G}
+  {MQ : Becoming.Ideals.Preorder Q} {favours : G → Prop},
+  (∀ {g g' : G}, MG.le g g' → favours g → favours g') →
+    ∀ {p p' : G × Q}, (Becoming.ClosedCapture.both MG MQ).le p p' → favours p.fst → favours p'.fst
+@Becoming.ClosedCapture.readers_not_below : ∀ {S : Type u_1} {G : Type u_2} {Q : Type u_3}
+  {P : Becoming.Ideals.Preorder S} {MG : Becoming.Ideals.Preorder G} {MQ : Becoming.Ideals.Preorder Q}
+  {favours : G → Prop} {f : S → G → S} {read : Q → S → G → G} {mind : S → Q → Q} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours f →
+    (∀ {g g' : G}, MG.le g g' → favours g → favours g') →
+      (∀ (q q' : Q) (x y : S) (g g' : G), MQ.le q q' → P.le x y → MG.le (read q x g) (read q' y g')) →
+        Becoming.RuleCapture.ReadsShare P MQ mind →
+          ∀ {c : S × G × Q} {t : Nat},
+            Becoming.RuleCapture.Locked (Becoming.ClosedCapture.both MG MQ) (fun p => favours p.fst)
+                (Becoming.ClosedCapture.readers read mind)
+                (Becoming.Pace.paced (Becoming.ClosedCapture.byRule f) (Becoming.ClosedCapture.readers read mind) reads
+                  c t) →
+              ∀ (k : Nat),
+                P.le
+                    (Becoming.Pace.paced (Becoming.ClosedCapture.byRule f) (Becoming.ClosedCapture.readers read mind)
+                        reads c t).fst
+                    (Becoming.Pace.paced (Becoming.ClosedCapture.byRule f) (Becoming.ClosedCapture.readers read mind)
+                        reads c (t + k)).fst ∧
+                  MG.le
+                      (Becoming.Pace.paced (Becoming.ClosedCapture.byRule f) (Becoming.ClosedCapture.readers read mind)
+                            reads c t).snd.fst
+                      (Becoming.Pace.paced (Becoming.ClosedCapture.byRule f) (Becoming.ClosedCapture.readers read mind)
+                            reads c (t + k)).snd.fst ∧
+                    MQ.le
+                      (Becoming.Pace.paced (Becoming.ClosedCapture.byRule f) (Becoming.ClosedCapture.readers read mind)
+                            reads c t).snd.snd
+                      (Becoming.Pace.paced (Becoming.ClosedCapture.byRule f) (Becoming.ClosedCapture.readers read mind)
+                            reads c (t + k)).snd.snd
+@Becoming.ClosedCapture.reading_absorbed : ∀ {S : Type u_1} {G : Type u_2} {Q : Type u_3}
+  {P : Becoming.Ideals.Preorder S} {MG : Becoming.Ideals.Preorder G} {MQ : Becoming.Ideals.Preorder Q}
+  {favours : G → Prop} {f : S → G → S} {read : Q → S → G → G} {mind : S → Q → Q} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours f →
+    (∀ {g g' : G}, MG.le g g' → favours g → favours g') →
+      (∀ (q q' : Q) (x y : S) (g g' : G), MQ.le q q' → P.le x y → MG.le (read q x g) (read q' y g')) →
+        Becoming.RuleCapture.ReadsShare P MQ mind →
+          ∀ {x : S} {g g' : G} {q q' : Q},
+            Becoming.RuleCapture.Locked (Becoming.ClosedCapture.both MG MQ) (fun p => favours p.fst)
+                (Becoming.ClosedCapture.readers read mind) (x, g, q) →
+              favours g' →
+                ∀ {r : Nat},
+                  reads r = true →
+                    MG.le g
+                        (Becoming.Pace.paced (Becoming.ClosedCapture.byRule f)
+                              (Becoming.ClosedCapture.readers read mind) reads (x, g', q') (r + 1)).snd.fst ∧
+                      MQ.le q
+                          (Becoming.Pace.paced (Becoming.ClosedCapture.byRule f)
+                                (Becoming.ClosedCapture.readers read mind) reads (x, g', q') (r + 1)).snd.snd ∧
+                        Becoming.RuleCapture.Locked (Becoming.ClosedCapture.both MG MQ) (fun p => favours p.fst)
+                          (Becoming.ClosedCapture.readers read mind)
+                          (Becoming.Pace.paced (Becoming.ClosedCapture.byRule f)
+                            (Becoming.ClosedCapture.readers read mind) reads (x, g', q') (r + 1))
+@Becoming.ClosedCapture.readers_uniform_locks : ∀ {S : Type u_1} {G : Type u_2} {Q : Type u_3}
+  {P : Becoming.Ideals.Preorder S} {MG : Becoming.Ideals.Preorder G} {MQ : Becoming.Ideals.Preorder Q}
+  {favours : G → Prop} {f : S → G → S} {read : Q → S → G → G} {mind : S → Q → Q} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours f →
+    (∀ (q q' : Q) (x y : S) (g g' : G), MQ.le q q' → P.le x y → MG.le (read q x g) (read q' y g')) →
+      Becoming.RuleCapture.ReadsShare P MQ mind →
+        (∀ (q : Q) (x : S) (g : G), favours (read q x g)) →
+          ∀ {c : S × G × Q} {r r' : Nat},
+            reads r = true →
+              reads r' = true →
+                r < r' →
+                  Becoming.RuleCapture.Locked (Becoming.ClosedCapture.both MG MQ) (fun p => favours p.fst)
+                    (Becoming.ClosedCapture.readers read mind)
+                    (Becoming.Pace.paced (Becoming.ClosedCapture.byRule f) (Becoming.ClosedCapture.readers read mind)
+                      reads c (r' + 1))
+Becoming.ClosedCapture.Proportional.readMono : ∀ (q q' x y g g' : Becoming.RuleCapture.CarrierCounts),
+  Becoming.RuleCapture.CarrierCounts.order.le q q' →
+    Becoming.RuleCapture.CarrierCounts.order.le x y →
+      Becoming.RuleCapture.CarrierCounts.order.le (Becoming.ClosedCapture.Proportional.read q x g)
+        (Becoming.ClosedCapture.Proportional.read q' y g')
+Becoming.ClosedCapture.Proportional.formed : Becoming.RuleCapture.ReadsShare Becoming.RuleCapture.CarrierCounts.order
+  Becoming.RuleCapture.CarrierCounts.order Becoming.ClosedCapture.Proportional.mind
+Becoming.ClosedCapture.Proportional.start_locked : Becoming.RuleCapture.Locked
+  (Becoming.ClosedCapture.both Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.order)
+  (fun p => p.fst.favours)
+  (Becoming.ClosedCapture.readers Becoming.ClosedCapture.Proportional.read Becoming.ClosedCapture.Proportional.mind)
+  (Becoming.RuleCapture.CarrierCounts.twoToOne, Becoming.RuleCapture.CarrierCounts.twoToOne,
+    Becoming.RuleCapture.CarrierCounts.twoToOne)
+@Becoming.ClosedCapture.Proportional.reform_absorbed : ∀ {reads : Nat → Bool} {r : Nat},
+  reads r = true →
+    Becoming.RuleCapture.CarrierCounts.order.le Becoming.RuleCapture.CarrierCounts.twoToOne
+        (Becoming.Pace.paced (Becoming.ClosedCapture.byRule Becoming.RuleCapture.CarrierCounts.select)
+              (Becoming.ClosedCapture.readers Becoming.ClosedCapture.Proportional.read
+                Becoming.ClosedCapture.Proportional.mind)
+              reads
+              (Becoming.RuleCapture.CarrierCounts.twoToOne, Becoming.RuleCapture.CarrierCounts.twoToOne,
+                Becoming.RuleCapture.CarrierCounts.lo)
+              (r + 1)).snd.fst ∧
+      Becoming.RuleCapture.CarrierCounts.order.le Becoming.RuleCapture.CarrierCounts.twoToOne
+          (Becoming.Pace.paced (Becoming.ClosedCapture.byRule Becoming.RuleCapture.CarrierCounts.select)
+                (Becoming.ClosedCapture.readers Becoming.ClosedCapture.Proportional.read
+                  Becoming.ClosedCapture.Proportional.mind)
+                reads
+                (Becoming.RuleCapture.CarrierCounts.twoToOne, Becoming.RuleCapture.CarrierCounts.twoToOne,
+                  Becoming.RuleCapture.CarrierCounts.lo)
+                (r + 1)).snd.snd ∧
+        Becoming.RuleCapture.Locked
+          (Becoming.ClosedCapture.both Becoming.RuleCapture.CarrierCounts.order
+            Becoming.RuleCapture.CarrierCounts.order)
+          (fun p => p.fst.favours)
+          (Becoming.ClosedCapture.readers Becoming.ClosedCapture.Proportional.read
+            Becoming.ClosedCapture.Proportional.mind)
+          (Becoming.Pace.paced (Becoming.ClosedCapture.byRule Becoming.RuleCapture.CarrierCounts.select)
+            (Becoming.ClosedCapture.readers Becoming.ClosedCapture.Proportional.read
+              Becoming.ClosedCapture.Proportional.mind)
+            reads
+            (Becoming.RuleCapture.CarrierCounts.twoToOne, Becoming.RuleCapture.CarrierCounts.twoToOne,
+              Becoming.RuleCapture.CarrierCounts.lo)
+            (r + 1))

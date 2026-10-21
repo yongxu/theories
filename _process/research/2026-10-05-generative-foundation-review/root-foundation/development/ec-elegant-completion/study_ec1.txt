@@ -51,7 +51,7 @@ Board item EC, its first step ([Ren, 21 October 2026](../../../../sources/15-cod
 
 **Evidence.** The checker run `@RECEIPT@` passed with every axiom report empty. The connectivity check and the measure are recorded below.
 
-**The measure.** On the landed tree, with lumping counted (anchor `GoAlikeUnder`, proposed by line A for LU1), 73 of the 125 central declarations rest on no master law, against 75 on `c03c85f00`: `Flow.beyond_gives_nothing` and `Valuation.significant_iff` now rest on the one closure (`development/ec-elegant-completion/after-ec1.json`). The defined notions in their statements stay 313, since no statement changed.
+**The measure.** On the landed tree, with lumping counted (anchor `GoAlikeUnder`, proposed by line A for LU1), 74 of the 126 central declarations rest on no master law (`development/ec-elegant-completion/after-ec1.json`). Of the 125 the baseline counted on `c03c85f00`, 73 now rest on none, against 75: `Flow.beyond_gives_nothing` and `Valuation.significant_iff` now rest on the one closure. The 126th, `RegimeMargin.Coupled.threshold_falls`, came with RM6 and rests on none. The defined notions in the central statements are 316 (313 at the baseline, three more with RM6's declaration); EC1 changed no statement.
 
 **Boundary.** This is a measurement of Lean dependency and a restructuring of proofs, and it changes no record's claim. The measure's master laws are candidates, adopted by this study, and the measure judges no statement's meaning. Elegance is not a criterion of K1–K7.
 

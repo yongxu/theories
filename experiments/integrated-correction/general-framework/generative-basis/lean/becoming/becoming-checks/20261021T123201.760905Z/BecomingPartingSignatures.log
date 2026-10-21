@@ -1,0 +1,191 @@
+@Becoming.Parting.after_eq_onward : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  (k : Nat), Becoming.Parting.after r k = r.onward k
+@Becoming.Parting.joinAt_before : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (k : Nat)
+  (r r' : Becoming.Run P) (meet : r'.state 0 = r.state k) (n : Nat),
+  n ≤ k → (Becoming.Parting.joinAt k r r' meet).val.state n = r.state n
+@Becoming.Parting.joinAt_after : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (k : Nat)
+  (r r' : Becoming.Run P) (meet : r'.state 0 = r.state k) (n : Nat),
+  (Becoming.Parting.joinAt k r r' meet).val.state (k + n) = r'.state n
+@Becoming.Parting.not_right_on_both : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  (pred : List R → Option R) {reg : S → R} {r r' : Becoming.Run P} {t : Nat},
+  Becoming.Parting.PartAt reg r r' t → ¬(Becoming.Parting.RightAt pred reg r t ∧ Becoming.Parting.RightAt pred reg r' t)
+@Becoming.Parting.not_parting_of_right : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {pred : List R → Option R} {reg : S → R} {s : S} {T : Nat},
+  (∀ (r : Becoming.Run P), r.state 0 = s → ∀ (t : Nat), T ≤ t → Becoming.Parting.RightAt pred reg r t) →
+    ∀ (r r' : Becoming.Run P), r.state 0 = s → r'.state 0 = s → ∀ {t : Nat}, T ≤ t → ¬Becoming.Parting.PartAt reg r r' t
+@Becoming.Parting.unparted_iff : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  [DecidableEq R] {reg : S → R} {s : S},
+  Becoming.Parting.Unparted P reg s ↔
+    ∀ (r r' : Becoming.Run P), r.state 0 = s → r'.state 0 = s → ∀ (t : Nat), ¬Becoming.Parting.PartAt reg r r' t
+@Becoming.Parting.Unparted.along : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {reg : S → R} {s : S},
+  Becoming.Parting.Unparted P reg s →
+    ∀ {r : Becoming.Run P}, r.state 0 = s → ∀ (k : Nat), Becoming.Parting.Unparted P reg (r.state k)
+@Becoming.Parting.course_statesBelow : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {reg : S → R} {s : S},
+  Becoming.Parting.Unparted P reg s →
+    ∀ {r : Becoming.Run P},
+      r.state 0 = s →
+        ∀ {l : List S}, (∀ (n : Nat), r.state n ∈ l) → Becoming.StatesBelow (Becoming.Parting.course reg r) l.length
+@Becoming.Parting.leastBound_right : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  [inst : DecidableEq R] {reg : S → R} {s : S},
+  Becoming.Parting.Unparted P reg s →
+    ∀ {r : Becoming.Run P},
+      r.state 0 = s →
+        ∀ {l : List S},
+          (∀ (n : Nat), r.state n ∈ l) →
+            ∀ {t : Nat},
+              l.length + l.length - 1 ≤ t → Becoming.Parting.RightAt Becoming.Identification.leastBound reg r t
+@Becoming.Parting.states_agree : ∀ {S : Type u_1} {P : Generative.Process S Unit},
+  Becoming.Determined P → ∀ {r r' : Becoming.Run P}, r.state 0 = r'.state 0 → ∀ (n : Nat), r.state n = r'.state n
+@Becoming.Parting.unparted_of_determined : ∀ {S : Type u_1} {R : Type u_2} {P : Generative.Process S Unit},
+  Becoming.Determined P → ∀ (reg : S → R) (s : S), Becoming.Parting.Unparted P reg s
+@Becoming.Parting.rest_earliest_runs : ∀ {R : Type u_1} {x y : R},
+  x ≠ y →
+    ∀ (pred : List R → Option R) (M : Nat),
+      ¬∀ (P : Generative.Process (Fin (M + 2)) Unit) (reg : Fin (M + 2) → R) (r : Becoming.Run P),
+          Becoming.Parting.Unparted P reg (r.state 0) → Becoming.Parting.RightAt pred reg r (M + M + 2)
+@Becoming.Parting.unparted_at_of_late : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  [DecidableEq R] {reg : S → R} {s : S} {T : Nat},
+  (∀ (r r' : Becoming.Run P),
+      r.state 0 = s → r'.state 0 = s → ∀ (t : Nat), T ≤ t → ¬Becoming.Parting.PartAt reg r r' t) →
+    ∀ {r : Becoming.Run P}, r.state 0 = s → Becoming.Parting.Unparted P reg (r.state T)
+@Becoming.Parting.statesBelow_shift : ∀ {O : Type u_1} {o : Nat → O} {T N : Nat},
+  Becoming.StatesBelow (fun n => o (T + n)) N → Becoming.StatesBelow o (T + N)
+@Becoming.Parting.late_statesBelow : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  [DecidableEq R] {reg : S → R} {s : S} {T : Nat},
+  (∀ (r r' : Becoming.Run P),
+      r.state 0 = s → r'.state 0 = s → ∀ (t : Nat), T ≤ t → ¬Becoming.Parting.PartAt reg r r' t) →
+    ∀ {r : Becoming.Run P},
+      r.state 0 = s →
+        ∀ {l : List S},
+          (∀ (n : Nat), r.state n ∈ l) → Becoming.StatesBelow (Becoming.Parting.course reg r) (T + l.length)
+@Becoming.Parting.late_right : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  [inst : DecidableEq R] {reg : S → R} {s : S} {T : Nat},
+  (∀ (r r' : Becoming.Run P),
+      r.state 0 = s → r'.state 0 = s → ∀ (t : Nat), T ≤ t → ¬Becoming.Parting.PartAt reg r r' t) →
+    ∀ {r : Becoming.Run P},
+      r.state 0 = s →
+        ∀ {l : List S},
+          (∀ (n : Nat), r.state n ∈ l) →
+            ∀ {t : Nat},
+              T + l.length + (T + l.length) - 1 ≤ t →
+                Becoming.Parting.RightAt Becoming.Identification.leastBound reg r t
+@Becoming.Parting.anyOf_true : ∀ {α : Type u_1} {p : α → Bool} {l : List α},
+  Becoming.Parting.anyOf l p = true → ∃ x, x ∈ l ∧ p x = true
+@Becoming.Parting.anyOf_of_mem : ∀ {α : Type u_1} {p : α → Bool} {x : α} {l : List α},
+  x ∈ l → p x = true → Becoming.Parting.anyOf l p = true
+@Becoming.Parting.mem_keepIf : ∀ {α : Type u_1} {p : α → Bool} {x : α} {l : List α},
+  x ∈ Becoming.Parting.keepIf p l ↔ x ∈ l ∧ p x = true
+@Becoming.Parting.path_of_continues : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (m : Nat) (y : S),
+  Becoming.Lasting.Continues P m y → ∃ g, g 0 = y ∧ ∀ (k : Nat), k < m → ∃ a, P.step (g k) a (g (k + 1))
+@Becoming.Parting.continues_cycle : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g : Nat → S}
+  {i j : Nat},
+  (∀ (k : Nat), k < j → ∃ a, P.step (g k) a (g (k + 1))) →
+    i < j → g i = g j → ∀ (m k : Nat), k < j → Becoming.Lasting.Continues P m (g k)
+@Becoming.Parting.continues_persists : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {all : List S},
+  (∀ (x : S), x ∈ all) →
+    ∀ {y : S},
+      Becoming.Lasting.Continues P all.length y → ∃ a z, P.step y a z ∧ Becoming.Lasting.Continues P all.length z
+@Becoming.Parting.continues_any : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {all : List S},
+  (∀ (x : S), x ∈ all) →
+    ∀ (n : Nat) (y : S), Becoming.Lasting.Continues P all.length y → Becoming.Lasting.Continues P n y
+@Becoming.Parting.unbounded_of_continues : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {all : List S},
+  (∀ (x : S), x ∈ all) → ∀ {y : S}, Becoming.Lasting.Continues P all.length y → Becoming.Lasting.Unbounded P y
+@Becoming.Parting.live_succ_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  [inst : (x : S) → (a : A) → (y : S) → Decidable (P.step x a y)] {moves : List A} {all : List S},
+  (∀ (a : A), a ∈ moves) →
+    (∀ (x : S), x ∈ all) →
+      ∀ {m : Nat} {y : S},
+        Becoming.Parting.live P moves all (m + 1) y = true ↔
+          ∃ a z, P.step y a z ∧ Becoming.Parting.live P moves all m z = true
+@Becoming.Parting.live_of_run : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  [inst : (x : S) → (a : A) → (y : S) → Decidable (P.step x a y)] {moves : List A} {all : List S},
+  (∀ (a : A), a ∈ moves) →
+    (∀ (x : S), x ∈ all) → ∀ (r : Becoming.Run P) (m n : Nat), Becoming.Parting.live P moves all m (r.state n) = true
+@Becoming.Parting.live_iff_continues : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  [inst : (x : S) → (a : A) → (y : S) → Decidable (P.step x a y)] {moves : List A} {all : List S},
+  (∀ (a : A), a ∈ moves) →
+    (∀ (x : S), x ∈ all) →
+      ∀ (m : Nat) (y : S), Becoming.Parting.live P moves all m y = true ↔ Becoming.Lasting.Continues P m y
+@Becoming.Parting.live_persists : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  [inst : (x : S) → (a : A) → (y : S) → Decidable (P.step x a y)] {moves : List A} {all : List S},
+  (∀ (a : A), a ∈ moves) →
+    (∀ (x : S), x ∈ all) →
+      ∀ {y : S},
+        Becoming.Parting.live P moves all all.length y = true →
+          ∃ a z, P.step y a z ∧ Becoming.Parting.live P moves all all.length z = true
+@Becoming.Parting.firstLive_spec : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  [inst : (x : S) → (a : A) → (y : S) → Decidable (P.step x a y)] {moves : List A} {all l : List S} {y : S},
+  Becoming.Parting.firstLive P moves all l = some y → y ∈ l ∧ Becoming.Parting.live P moves all all.length y = true
+@Becoming.Parting.firstLive_found : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  [inst : (x : S) → (a : A) → (y : S) → Decidable (P.step x a y)] {moves : List A} {all l : List S} {y : S},
+  y ∈ l → Becoming.Parting.live P moves all all.length y = true → ∃ z, Becoming.Parting.firstLive P moves all l = some z
+@Becoming.Parting.run_in_candidates : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  [inst : (x : S) → (a : A) → (y : S) → Decidable (P.step x a y)] {moves : List A} {all : List S}
+  [inst_1 : DecidableEq R] (reg : S → R) (s : S),
+  (∀ (a : A), a ∈ moves) →
+    (∀ (x : S), x ∈ all) →
+      ∀ (r : Becoming.Run P),
+        r.state 0 = s →
+          ∀ (t : Nat),
+            r.state t ∈
+              Becoming.Parting.candidates P moves all reg s
+                (Becoming.Learning.prefixOf (Becoming.Parting.course reg r) t)
+@Becoming.Parting.candidates_run : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  [inst : (x : S) → (a : A) → (y : S) → Decidable (P.step x a y)] {moves : List A} {all : List S}
+  [inst_1 : DecidableEq R] (reg : S → R) (s : S) (record : List R) (y : S),
+  y ∈ Becoming.Parting.candidates P moves all reg s record →
+    ∀ (q : Becoming.Run P),
+      q.state 0 = y →
+        ∃ r',
+          r'.state 0 = s ∧
+            Becoming.Learning.prefixOf (Becoming.Parting.course reg r') record.length = record ∧
+              ∀ (n : Nat), r'.state (record.length + n) = q.state n
+@Becoming.Parting.world_right : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  [inst : (x : S) → (a : A) → (y : S) → Decidable (P.step x a y)] {moves : List A} {all : List S}
+  [inst_1 : DecidableEq R] (reg : S → R) (s : S),
+  (∀ (a : A), a ∈ moves) →
+    (∀ (x : S), x ∈ all) →
+      ∀ {t : Nat},
+        (∀ (r r' : Becoming.Run P), r.state 0 = s → r'.state 0 = s → ¬Becoming.Parting.PartAt reg r r' t) →
+          ∀ (r : Becoming.Run P),
+            r.state 0 = s → Becoming.Parting.RightAt (Becoming.Parting.fromProcess P moves all reg s) reg r t
+@Becoming.Parting.world_right_iff : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  [inst : (x : S) → (a : A) → (y : S) → Decidable (P.step x a y)] {moves : List A} {all : List S}
+  [inst_1 : DecidableEq R] (reg : S → R) (s : S),
+  (∀ (a : A), a ∈ moves) →
+    (∀ (x : S), x ∈ all) →
+      ∀ (t : Nat),
+        (∀ (r : Becoming.Run P),
+            r.state 0 = s → Becoming.Parting.RightAt (Becoming.Parting.fromProcess P moves all reg s) reg r t) ↔
+          ∀ (r r' : Becoming.Run P), r.state 0 = s → r'.state 0 = s → ¬Becoming.Parting.PartAt reg r r' t
+@Becoming.Parting.some_right_iff : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  [(x : S) → (a : A) → (y : S) → Decidable (P.step x a y)] {moves : List A} {all : List S} [DecidableEq R] (reg : S → R)
+  (s : S),
+  (∀ (a : A), a ∈ moves) →
+    (∀ (x : S), x ∈ all) →
+      ∀ (t : Nat),
+        (∃ pred, ∀ (r : Becoming.Run P), r.state 0 = s → Becoming.Parting.RightAt pred reg r t) ↔
+          ∀ (r r' : Becoming.Run P), r.state 0 = s → r'.state 0 = s → ¬Becoming.Parting.PartAt reg r r' t
+@Becoming.Parting.freeRun_course : ∀ {V : Type u_1} (o : Nat → V),
+  Becoming.Parting.course id (Becoming.Parting.freeRun o) = o
+@Becoming.Parting.free_unparted_const : ∀ {V : Type u_2} {R : Type u_1} (x : R) (s : V),
+  Becoming.Parting.Unparted (Becoming.Parting.free V) (fun x_1 => x) s
+@Becoming.Parting.free_parts_after : ∀ {V : Type u_1} {x y : V},
+  x ≠ y →
+    ∀ (o : Nat → V) (t : Nat),
+      ∃ r r',
+        Becoming.Learning.prefixOf (Becoming.Parting.course id r) t = Becoming.Learning.prefixOf o t ∧
+          Becoming.Learning.prefixOf (Becoming.Parting.course id r') t = Becoming.Learning.prefixOf o t ∧
+            Becoming.Parting.PartAt id r r' t
+@Becoming.Parting.free_open : ∀ {V : Type u_1} [DecidableEq V] {x y : V},
+  x ≠ y →
+    ∀ (pred : List V → Option V) (o : Nat → V) (t : Nat),
+      ∃ r,
+        Becoming.Learning.prefixOf (Becoming.Parting.course id r) t = Becoming.Learning.prefixOf o t ∧
+          ¬Becoming.Parting.RightAt pred id r t
+Becoming.Parting.free_never_right : ∀ (pred : List Bool → Option Bool),
+  ∃ r, ∀ (t : Nat), ¬Becoming.Parting.RightAt pred id r t
+Becoming.Parting.free_held : ∀ (r : Becoming.Run (Becoming.Parting.free Bool)) (n : Nat), r.state n ∈ [true, false]
+Becoming.Parting.free_unbounded : ∃ r, ∀ (N : Nat), ¬Becoming.StatesBelow (Becoming.Parting.course id r) N

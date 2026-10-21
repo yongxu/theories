@@ -1,0 +1,67 @@
+@Becoming.Law.Commutes.iterate : ∀ {S : Type u_1} {T σ : S → S},
+  Becoming.Law.Commutes T σ →
+    ∀ (x : S) (n : Nat), (Becoming.Law.run T (σ x)).state n = σ ((Becoming.Law.run T x).state n)
+@Becoming.Law.Commutes.apart : ∀ {S : Type u_1} {T σ : S → S},
+  Becoming.Law.Commutes T σ →
+    Becoming.Diagonal.Moves Eq σ →
+      ∀ (x : S) (n : Nat), (Becoming.Law.run T (σ x)).state n ≠ (Becoming.Law.run T x).state n
+@Becoming.Law.Commutes.breaks : ∀ {S : Type u_1} {T σ : S → S},
+  Becoming.Diagonal.Moves Eq σ →
+    ∀ {x : S} {n : Nat},
+      (Becoming.Law.run T (σ x)).state n = (Becoming.Law.run T x).state n → ¬Becoming.Law.Commutes T σ
+@Becoming.Law.Commutes.not_drawn_to_one : ∀ {S : Type u_1} {T σ : S → S},
+  Becoming.Law.Commutes T σ →
+    Becoming.Diagonal.Moves Eq σ → ∀ (c : S) (n : Nat), ¬∀ (x : S), (Becoming.Law.run T x).state n = c
+@Becoming.Law.Commutes.keeps_fixed : ∀ {S : Type u_1} {T σ : S → S},
+  Becoming.Law.Commutes T σ →
+    ∀ {x : S}, σ x = x → ∀ (n : Nat), σ ((Becoming.Law.run T x).state n) = (Becoming.Law.run T x).state n
+@Becoming.Law.Commutes.rest_paired : ∀ {S : Type u_1} {T σ : S → S},
+  Becoming.Law.Commutes T σ →
+    Becoming.Diagonal.Moves Eq σ →
+      ∀ {x : S},
+        (∀ (n : Nat), (Becoming.Law.run T x).state n = x) →
+          (∀ (n : Nat), (Becoming.Law.run T (σ x)).state n = σ x) ∧ σ x ≠ x
+@Becoming.Law.Commutes.paired_halfway : ∀ {S : Type u_1} {T σ : S → S},
+  Becoming.Law.Commutes T σ →
+    (∀ (x : S), σ (σ x) = x) →
+      ∀ {x : S} {k : Nat},
+        (Becoming.Law.run T x).state k = σ x →
+          (∀ (n : Nat), (Becoming.Law.run T x).state (k + n) = σ ((Becoming.Law.run T x).state n)) ∧
+            (Becoming.Law.run T x).state (k + k) = x
+@Becoming.Law.Commutes.pairs_lumped : ∀ {S : Type u_1} {T σ : S → S} {K : Type u_2},
+  Becoming.Law.Commutes T σ →
+    ∀ {q : S → K},
+      (∀ (x y : S), q x = q y → y = x ∨ y = σ x) →
+        (∀ (x : S), q (σ x) = q x) → Becoming.Learning.Lumped q fun x => q (T x)
+@Becoming.Law.Commutes.pairs_goAlike : ∀ {S : Type u_1} {T σ : S → S} {K : Type u_2},
+  Becoming.Law.Commutes T σ →
+    ∀ {q : S → K},
+      (∀ (x y : S), q x = q y → y = x ∨ y = σ x) →
+        (∀ (x : S), q (σ x) = q x) → Becoming.GoAlike (Becoming.Law.process T) q
+@Becoming.Law.Commutes.self_apart : ∀ {S : Type u_1} {f : S → S},
+  Becoming.Diagonal.Moves Eq f →
+    ∀ (b : S) (n : Nat), (Becoming.Law.run f b).state (n + 1) ≠ (Becoming.Law.run f b).state n
+@Becoming.Branching.Symmetric.reach : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {σ : S → S},
+  Becoming.Branching.Symmetric P σ → ∀ {x y : S}, Becoming.Reach P x y → Becoming.Reach P (σ x) (σ y)
+@Becoming.Branching.Symmetric.returns : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {σ : S → S},
+  Becoming.Branching.Symmetric P σ → ∀ {x : S}, Becoming.Branching.Returns P x → Becoming.Branching.Returns P (σ x)
+@Becoming.Branching.Symmetric.juncture : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {σ : S → S},
+  Becoming.Branching.Symmetric P σ →
+    (∀ (x : S), σ (σ x) = x) →
+      ∀ {s x : S}, Becoming.Branching.Juncture P s x → Becoming.Branching.Juncture P (σ s) (σ x)
+@Becoming.Branching.mirror_apart : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {σ : S → S}
+  (symmetric : Becoming.Branching.Symmetric P σ),
+  Becoming.Diagonal.Moves Eq σ →
+    ∀ (r : Becoming.Run P) (n : Nat), (Becoming.Branching.mirror symmetric r).state n ≠ r.state n
+@Becoming.Branching.law_symmetric : ∀ {S : Type u_1} {σ T : S → S},
+  Becoming.Law.Commutes T σ → Becoming.Branching.Symmetric (Becoming.Law.process T) σ
+@Becoming.Law.Commutes.returns_paired : ∀ {S : Type u_1} {T σ : S → S},
+  Becoming.Law.Commutes T σ →
+    ∀ {x : S},
+      Becoming.Branching.Returns (Becoming.Law.process T) x → Becoming.Branching.Returns (Becoming.Law.process T) (σ x)
+@Becoming.Law.Commutes.halfway_returns : ∀ {S : Type u_1} {T σ : S → S},
+  Becoming.Law.Commutes T σ →
+    (∀ (x : S), σ (σ x) = x) →
+      Becoming.Diagonal.Moves Eq σ →
+        ∀ {x : S} {k : Nat},
+          (Becoming.Law.run T x).state k = σ x → Becoming.Branching.Returns (Becoming.Law.process T) x

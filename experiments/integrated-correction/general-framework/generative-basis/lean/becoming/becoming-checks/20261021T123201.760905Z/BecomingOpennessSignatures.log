@@ -1,0 +1,287 @@
+@Becoming.Web.StandingCensus.coming_of_ceasing : ∀ {F C : Type} {W : Becoming.Web F C} {stand : Nat → List C},
+  W.StandingCensus stand →
+    (∀ (N : Nat), ∃ t c, N ≤ t ∧ W.CeasesToStand t c) → ∀ (N : Nat), ∃ t c, N ≤ t ∧ W.ComesToStand t c
+@Becoming.Web.StandingCensus.coming_iff_ceasing : ∀ {F C : Type} {W : Becoming.Web F C} {stand : Nat → List C},
+  W.StandingCensus stand →
+    ∀ {T B : Nat},
+      (∀ (t : Nat), T ≤ t → (stand t).length ≤ B) →
+        ((∀ (N : Nat), ∃ t c, N ≤ t ∧ W.ComesToStand t c) ↔ ∀ (N : Nat), ∃ t c, N ≤ t ∧ W.CeasesToStand t c)
+@Becoming.Web.StandingCensus.over_stretch_on : ∀ {F C : Type} {W : Becoming.Web F C} {stand : Nat → List C} {S n : Nat},
+  (∀ (s : Nat), S ≤ s → s ≤ S + n → Becoming.Distinct (stand s) ∧ ∀ (c : C), 0 < W.level s c ↔ c ∈ stand s) →
+    ((stand (S + n)).length +
+        Becoming.total (Becoming.steps S n) fun t =>
+          Becoming.total (stand t) fun c => Becoming.mark (W.CeasesToStand t c)) =
+      (stand S).length +
+        Becoming.total (Becoming.steps S n) fun t =>
+          Becoming.total (stand (t + 1)) fun c => Becoming.mark (W.ComesToStand t c)
+@Becoming.Web.StandingCensus.over_stretch : ∀ {F C : Type} {W : Becoming.Web F C} {stand : Nat → List C},
+  W.StandingCensus stand →
+    ∀ (S n : Nat),
+      ((stand (S + n)).length +
+          Becoming.total (Becoming.steps S n) fun t =>
+            Becoming.total (stand t) fun c => Becoming.mark (W.CeasesToStand t c)) =
+        (stand S).length +
+          Becoming.total (Becoming.steps S n) fun t =>
+            Becoming.total (stand (t + 1)) fun c => Becoming.mark (W.ComesToStand t c)
+@Becoming.Flow.Enclosed.aroundStanding : ∀ {F C : Type} {L : Becoming.Flow F C} [DecidableEq C] {t : Nat},
+  L.Enclosed t → ∀ (stand : Nat → List C), L.AroundStanding stand t
+@Becoming.Flow.Enclosed.aroundStanding_not_not : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat},
+  L.Enclosed t → ∀ (stand : Nat → List C), ¬¬L.AroundStanding stand t
+@Becoming.Flow.fall_lowers_on : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {t : Nat}, L.DissipatesOn ds t → ∀ {c : C}, c ∈ ds → W.Falls t c → W.stock ds (t + 1) < W.stock ds t
+@Becoming.Flow.AroundStanding.runsDownClosed : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {stand : Nat → List C},
+  L.Balances W → L.Dissipative → W.StandingCensus stand → ∀ {t : Nat}, L.AroundStanding stand t → L.RunsDownClosed W t
+@Becoming.Flow.standing_runs_down : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {stand : Nat → List C},
+  L.Balances W →
+    L.Dissipative →
+      W.StandingCensus stand →
+        ∀ {t : Nat},
+          L.AroundStanding stand t → ∃ es, W.stock (stand (t + 1)) (t + 1) + L.takers es t ≤ W.stock (stand t) t
+@Becoming.Flow.standing_never_rises : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {stand : Nat → List C},
+  L.Balances W →
+    L.Dissipative →
+      W.StandingCensus stand →
+        ∀ {t : Nat}, L.AroundStanding stand t → W.stock (stand (t + 1)) (t + 1) ≤ W.stock (stand t) t
+@Becoming.Flow.change_lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {stand : Nat → List C},
+  L.Balances W →
+    L.Dissipative →
+      W.StandingCensus stand →
+        ∀ {t : Nat},
+          L.AroundStanding stand t →
+            ∀ {c : C}, W.Rises t c ∨ W.Falls t c → W.stock (stand (t + 1)) (t + 1) < W.stock (stand t) t
+@Becoming.Flow.change_not_recurring_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {stand : Nat → List C},
+  W.StandingCensus stand →
+    ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → ¬¬L.RunsDown W t) → ¬∀ (N : Nat), ∃ t c, N ≤ t ∧ (W.Rises t c ∨ W.Falls t c)
+@Becoming.Flow.change_stops_unrefuted : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {stand : Nat → List C},
+  W.StandingCensus stand →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → ¬¬L.RunsDown W t) → ¬∀ (M : Nat), T ≤ M → ¬¬∃ t c, M ≤ t ∧ (W.Rises t c ∨ W.Falls t c)
+@Becoming.Flow.change_stops_unrefuted_around : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {stand : Nat → List C},
+  L.Balances W →
+    L.Dissipative →
+      W.StandingCensus stand →
+        ∀ {T : Nat},
+          (∀ (t : Nat), T ≤ t → ¬¬L.AroundStanding stand t) →
+            ¬∀ (M : Nat), T ≤ M → ¬¬∃ t c, M ≤ t ∧ (W.Rises t c ∨ W.Falls t c)
+@Becoming.Flow.exchange_lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {stand : Nat → List C},
+  L.Balances W →
+    L.Dissipative →
+      W.StandingCensus stand →
+        ∀ {t : Nat},
+          L.AroundStanding stand t →
+            ∀ {f : F} {c : C},
+              f ∈ L.present t →
+                0 < L.take t f c ∨ 0 < L.give t f c → W.stock (stand (t + 1)) (t + 1) < W.stock (stand t) t
+@Becoming.Flow.exchange_not_recurring_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {stand : Nat → List C},
+  W.StandingCensus stand → ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → ¬¬L.RunsDownClosed W t) → ¬L.ExchangeRecurs
+@Becoming.Flow.exchange_not_recurring_around : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {stand : Nat → List C},
+  L.Balances W →
+    L.Dissipative →
+      W.StandingCensus stand → ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → ¬¬L.AroundStanding stand t) → ¬L.ExchangeRecurs
+@Becoming.World.arising_of_ceasing : ∀ {w : Becoming.World}
+  [(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)], w.Counted → w.CeasingRecurs → w.ArisingRecurs
+@Becoming.World.CountedWithin.arising_iff_ceasing : ∀ {w : Becoming.World}
+  [(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)] {B : Nat},
+  w.CountedWithin B → (w.ArisingRecurs ↔ w.CeasingRecurs)
+@Becoming.World.CountedBy.arising_iff_ceasing : ∀ {w : Becoming.World}
+  [(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)] {B : Nat → Nat} {K : Nat},
+  w.CountedBy B → (∀ (N : Nat), ∃ t, N ≤ t ∧ B t ≤ K) → (w.ArisingRecurs ↔ w.CeasingRecurs)
+@Becoming.World.Finite.census_bounded : ∀ {w : Becoming.World},
+  w.Finite → ∃ B, ∀ (alive : Nat → List w.Relatum), w.web.Census alive → ∀ (t : Nat), (alive t).length ≤ B
+@Becoming.World.Finite.countedWithin : ∀ {w : Becoming.World}
+  [(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)], w.Finite → ∃ B, w.CountedWithin B
+@Becoming.Accretion.mem_alive : ∀ {t : Nat} {x : Nat ⊕ Unit},
+  x ∈ Becoming.Accretion.alive t ↔ Becoming.World.accretion.web.active t x
+Becoming.Accretion.alive_distinct : ∀ (t : Nat), Becoming.Distinct (Becoming.Accretion.alive t)
+Becoming.Accretion.census : Becoming.World.accretion.web.Census Becoming.Accretion.alive
+Becoming.World.census_one_way : (Becoming.World.accretion.Counted ∧
+    Becoming.World.accretion.ArisingRecurs ∧ ¬Becoming.World.accretion.CeasingRecurs) ∧
+  Becoming.World.attrition.CeasingRecurs ∧ ¬Becoming.World.attrition.ArisingRecurs ∧ ¬Becoming.World.attrition.Counted
+Becoming.World.accretion_unbounded : ∀ (B : Nat), ¬Becoming.World.accretion.CountedWithin B
+Becoming.Procession.census : Becoming.Procession.web.Census fun t => [t]
+Becoming.World.procession_world : Becoming.World.procession.CountedWithin 1 ∧
+  Becoming.World.procession.ArisingRecurs ∧ Becoming.World.procession.CeasingRecurs ∧ ¬Becoming.World.procession.Finite
+Becoming.Slow.length : ∀ (n : Nat), (Becoming.Cycle.present n).length = n
+Becoming.Slow.census : ∀ (B : Nat → Nat), (Becoming.Slow.web B).Census fun t => Becoming.Cycle.present (B t)
+@Becoming.Slow.grows_between : ∀ {B : Nat → Nat}, (∀ (t : Nat), B t ≤ B (t + 1)) → ∀ {s t : Nat}, s ≤ t → B s ≤ B t
+@Becoming.World.slow_world : ∀ {B : Nat → Nat},
+  (∀ (t : Nat), B t ≤ B (t + 1)) →
+    (∀ (n : Nat), ∃ t, n < B t) →
+      (Becoming.World.slow B).CountedBy B ∧
+        (Becoming.World.slow B).ArisingRecurs ∧
+          ∀ (t : Nat) (x : (Becoming.World.slow B).Relatum), ¬(Becoming.World.slow B).web.Ceases t x
+@Becoming.World.arising_not_recurring_from : ∀ {w : Becoming.World} {stand : Nat → List w.Relatum},
+  w.web.StandingCensus stand →
+    w.ArisingEmbodied → ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → ¬¬w.flow.RunsDown w.web t) → ¬w.ArisingRecurs
+@Becoming.World.arising_stops_unrefuted_from : ∀ {w : Becoming.World} {stand : Nat → List w.Relatum},
+  w.web.StandingCensus stand →
+    w.ArisingEmbodied →
+      ∀ {T : Nat},
+        (∀ (t : Nat), T ≤ t → ¬¬w.flow.RunsDown w.web t) → ¬∀ (M : Nat), T ≤ M → ¬¬∃ t x, M ≤ t ∧ w.web.Arises t x
+@Becoming.World.arising_stops_unrefuted : ∀ {w : Becoming.World} {stand : Nat → List w.Relatum},
+  w.web.StandingCensus stand →
+    w.ArisingEmbodied →
+      w.Balanced →
+        w.Dissipative →
+          ∀ {T : Nat},
+            (∀ (t : Nat), T ≤ t → w.flow.AroundStanding stand t) →
+              ¬∀ (M : Nat), T ≤ M → ¬¬∃ t x, M ≤ t ∧ w.web.Arises t x
+@Becoming.World.comes_to_rest_unrefuted_from : ∀ {w : Becoming.World} {stand : Nat → List w.Relatum} {T : Nat},
+  (∀ (t : Nat), T ≤ t → ∃ L, Becoming.Covers (fun x s => w.web.active s x) L t) →
+    w.web.StandingCensus stand →
+      w.ArisingEmbodied → (∀ (t : Nat), T ≤ t → ¬¬w.flow.RunsDown w.web t) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.comes_to_rest_unrefuted : ∀ {w : Becoming.World},
+  w.Counted →
+    ∀ {stand : Nat → List w.Relatum},
+      w.web.StandingCensus stand →
+        w.ArisingEmbodied →
+          w.Balanced →
+            w.Dissipative → ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → w.flow.AroundStanding stand t) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.Finite.standing : ∀ {w : Becoming.World},
+  w.Finite → ∃ stand, w.web.StandingCensus stand ∧ ∀ (t : Nat), w.flow.AroundStanding stand t
+Becoming.World.rest_needs_census : (Becoming.World.attrition.web.StandingCensus fun x => []) ∧
+  Becoming.World.attrition.ArisingEmbodied ∧
+    Becoming.World.attrition.Balanced ∧
+      Becoming.World.attrition.Dissipative ∧
+        (∀ (t : Nat), Becoming.World.attrition.flow.AroundStanding (fun x => []) t) ∧
+          Becoming.World.attrition.CeasingRecurs ∧ ¬Becoming.World.attrition.Counted
+@Becoming.World.standingCensus : ∀ {w : Becoming.World} {alive : Nat → List w.Relatum},
+  w.web.Census alive → w.Embodied → w.web.StandingCensus alive
+@Becoming.World.rises_of_arises : ∀ {w : Becoming.World},
+  w.Embodied → ∀ {t : Nat} {x : w.Relatum}, w.web.Arises t x → w.web.Rises t x
+@Becoming.World.falls_of_ceases : ∀ {w : Becoming.World},
+  w.Embodied → ∀ {t : Nat} {x : w.Relatum}, w.web.Ceases t x → w.web.Falls t x
+@Becoming.World.rests_unrefuted_around : ∀ {w : Becoming.World} {alive : Nat → List w.Relatum},
+  w.web.Census alive →
+    w.Embodied →
+      w.Balanced →
+        w.Dissipative → ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → w.flow.AroundStanding alive t) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.rests_unrefuted_enclosed : ∀ {w : Becoming.World},
+  w.Counted →
+    w.Embodied →
+      w.Balanced → w.Dissipative → ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → w.flow.Enclosed t) → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.arising_opens : ∀ {w : Becoming.World},
+  w.Counted →
+    w.Embodied → w.Balanced → w.Dissipative → w.ArisingRecurs → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → w.flow.Enclosed t
+@Becoming.gather_self : ∀ {α : Type} {l : Nat → List α} {a : α} {s : Nat}, a ∈ l s → a ∈ Becoming.gather l s
+@Becoming.mem_gather : ∀ {α : Type} {l : Nat → List α} {a : α} {s : Nat},
+  a ∈ l s → ∀ {n : Nat}, s ≤ n → a ∈ Becoming.gather l n
+@Becoming.comes_after : ∀ {p : Nat → Prop} [(t : Nat) → Decidable (p t)] {N : Nat},
+  ¬p N → ∀ {T : Nat}, N ≤ T → p T → ∃ t, N ≤ t ∧ Becoming.ComesToBe p t
+@Becoming.comes_after_unrefuted : ∀ {p : Nat → Prop} {N : Nat},
+  ¬p N → ∀ {T : Nat}, N ≤ T → p T → ¬¬∃ t, N ≤ t ∧ Becoming.ComesToBe p t
+@Becoming.Listed.few_of_quiet : ∀ {α : Type} {p : α → Nat → Prop} [(a : α) → (t : Nat) → Decidable (p a t)]
+  {l : Nat → List α},
+  Becoming.Listed p l →
+    (¬∀ (N : Nat), ∃ t a, N ≤ t ∧ Becoming.ComesToBe (p a) t) → ¬∀ (L : List α), ∃ t a, p a t ∧ ¬a ∈ L
+@Becoming.Listed.few_of_stop_unrefuted : ∀ {α : Type} {p : α → Nat → Prop} {l : Nat → List α},
+  Becoming.Listed p l →
+    (¬∀ (N : Nat), ¬¬∃ t a, N ≤ t ∧ Becoming.ComesToBe (p a) t) → ¬∀ (L : List α), ∃ t a, p a t ∧ ¬a ∈ L
+Becoming.Few.distinct_pick : ∀ (b : Bool) (t : Nat) {l : List Nat},
+  Becoming.Distinct l → Becoming.Distinct (Becoming.Few.pick b t l)
+Becoming.Few.distinct_found : ∀ (s : Nat → Bool) (t : Nat), Becoming.Distinct (Becoming.Few.found s t)
+Becoming.Few.mem_pick : ∀ (s : Nat → Bool) (t a : Nat) (b : Bool),
+  (Becoming.clear s t && s t) = b →
+    (Becoming.Few.passed s a t ↔ a ∈ Becoming.Few.found s t) →
+      (Becoming.Few.passed s a (t + 1) ↔ a ∈ Becoming.Few.pick b t (Becoming.Few.found s t))
+Becoming.Few.mem_found : ∀ (s : Nat → Bool) (t a : Nat), Becoming.Few.passed s a t ↔ a ∈ Becoming.Few.found s t
+Becoming.Few.listed : ∀ (s : Nat → Bool), Becoming.Listed (Becoming.Few.passed s) (Becoming.Few.found s)
+Becoming.Few.comes_at : ∀ (s : Nat → Bool) {a t : Nat}, Becoming.ComesToBe (Becoming.Few.passed s a) t → a = t
+Becoming.Few.coming_not_recurring : ∀ (s : Nat → Bool),
+  ¬∀ (N : Nat), ∃ t a, N ≤ t ∧ Becoming.ComesToBe (Becoming.Few.passed s a) t
+Becoming.Listed.lpo_of_few : (∀ (p : Nat → Nat → Prop) (l : Nat → List Nat) (a : (a t : Nat) → Decidable (p a t)),
+    Becoming.Listed p l →
+      (¬∀ (N : Nat), ∃ t a, N ≤ t ∧ Becoming.ComesToBe (p a) t) → ∃ L, ∀ (t a : Nat), p a t → a ∈ L) →
+  Becoming.LPO
+@Becoming.World.rest_few : ∀ {w : Becoming.World},
+  w.Counted →
+    ∀ {stand : Nat → List w.Relatum},
+      w.web.StandingCensus stand →
+        w.ArisingEmbodied →
+          w.Balanced →
+            w.Dissipative →
+              ∀ {T : Nat},
+                (∀ (t : Nat), T ≤ t → ¬¬w.flow.AroundStanding stand t) →
+                  (¬∀ (L : List w.Relatum), ∃ t x, w.web.active t x ∧ ¬x ∈ L) ∧
+                    ¬∀ (L : List w.Relatum), ∃ t x, 0 < w.web.level t x ∧ ¬x ∈ L
+@Becoming.World.exchange_not_recurring : ∀ {w : Becoming.World} {stand : Nat → List w.Relatum},
+  w.web.StandingCensus stand →
+    w.Balanced →
+      w.Dissipative → ∀ {T : Nat}, (∀ (t : Nat), T ≤ t → ¬¬w.flow.AroundStanding stand t) → ¬w.flow.ExchangeRecurs
+Becoming.Exposed.outside : ∀ (cs : List Becoming.Exposed.Relatum),
+  ¬Becoming.Exposed.Relatum.ground (Becoming.beyond (List.map Becoming.Exposed.index cs)) ∈ cs
+Becoming.Exposed.open_at : ∀ (t : Nat), ¬Becoming.Exposed.flow.Enclosed t
+Becoming.Exposed.stands_iff : ∀ (b : Bool) (t : Nat), 0 < Becoming.Shuttle.stands b t ↔ b = Becoming.Shuttle.holder t
+Becoming.Exposed.census : Becoming.Exposed.web.Census fun t =>
+  [Becoming.Exposed.Relatum.side (Becoming.Shuttle.holder t)]
+Becoming.Exposed.holder_one : ∀ (t : Nat), Becoming.Shuttle.stands (Becoming.Shuttle.holder t) t = 1
+Becoming.Holding.open_at : ∀ (t : Nat), ¬Becoming.Holding.flow.Enclosed t
+Becoming.Holding.census : Becoming.Holding.web.Census fun x => [Becoming.Exposed.Relatum.side true]
+Becoming.World.exposed_world : Becoming.World.exposed.Premised ∧
+  Becoming.World.exposed.ArisingRecurs ∧ ∀ (t : Nat), ¬Becoming.World.exposed.flow.Enclosed t
+Becoming.World.exposed_standing : (Becoming.World.exposed.web.StandingCensus fun t =>
+    [Becoming.Exposed.Relatum.side (Becoming.Shuttle.holder t)]) ∧
+  (∀ (t : Nat), Becoming.World.exposed.web.stock [Becoming.Exposed.Relatum.side (Becoming.Shuttle.holder t)] t = 1) ∧
+    (∀ (t : Nat), Becoming.World.exposed.web.Falls t (Becoming.Exposed.Relatum.side (Becoming.Shuttle.holder t))) ∧
+      ¬Becoming.World.exposed.Finite
+Becoming.World.openness_contingent : (Becoming.World.exposed.Premised ∧
+    (∀ (t : Nat), ¬Becoming.World.exposed.flow.Enclosed t) ∧ Becoming.World.exposed.ArisingRecurs) ∧
+  Becoming.World.mutualism.Premised ∧
+    (∀ (t : Nat), Becoming.World.mutualism.flow.Enclosed t) ∧ ¬Becoming.World.mutualism.ArisingRecurs
+Becoming.World.holding_world : Becoming.World.holding.Premised ∧
+  (∀ (t : Nat), ¬Becoming.World.holding.flow.Enclosed t) ∧
+    ¬Becoming.World.holding.ArisingRecurs ∧ ¬Becoming.World.holding.CeasingRecurs ∧ ¬Becoming.World.holding.Finite
+Becoming.World.hatch_rests_unrefuted : Becoming.World.hatch.web.Arises 0 Becoming.World.Hatch.Relatum.child ∧
+  Becoming.World.hatch.web.Ceases 0 Becoming.World.Hatch.Relatum.parent ∧ ¬¬∃ N, Becoming.World.hatch.RestsFrom N
+Becoming.Throughput.fuel_stands : ∀ (n : Nat), 0 < Becoming.Throughput.web.level 0 (Becoming.Throughput.Relatum.fuel n)
+Becoming.Throughput.census : Becoming.Throughput.web.Census fun t =>
+  [Becoming.Throughput.Relatum.side (Becoming.Shuttle.holder t)]
+@Becoming.Throughput.unlisted : ∀ {holds : Becoming.Throughput.Relatum → Prop} (l : List Becoming.Throughput.Relatum),
+  (∀ (x : Becoming.Throughput.Relatum), holds x ↔ x ∈ l) →
+    (∀ (n : Nat), holds (Becoming.Throughput.Relatum.fuel n)) → False
+Becoming.World.rest_needs_standing : (Becoming.World.throughput.Counted ∧
+    Becoming.World.throughput.ArisingEmbodied ∧
+      Becoming.World.throughput.Balanced ∧
+        Becoming.World.throughput.Dissipative ∧
+          (∀ (t : Nat),
+              Becoming.World.throughput.flow.Around
+                [Becoming.Throughput.Relatum.side true, Becoming.Throughput.Relatum.side false] t) ∧
+            Becoming.World.throughput.ArisingRecurs ∧
+              ∀ (stand : Nat → List Becoming.World.throughput.Relatum),
+                ¬Becoming.World.throughput.web.StandingCensus stand) ∧
+  (∀ (t : Nat), Becoming.World.embodiedThroughput.flow.Enclosed t) ∧
+    Becoming.World.embodiedThroughput.Embodied ∧
+      Becoming.World.embodiedThroughput.Balanced ∧
+        Becoming.World.embodiedThroughput.Dissipative ∧
+          Becoming.World.embodiedThroughput.ArisingRecurs ∧ ¬Becoming.World.embodiedThroughput.Counted
+Becoming.World.exchange_needs : ((Becoming.World.exposed.web.StandingCensus fun t =>
+      [Becoming.Exposed.Relatum.side (Becoming.Shuttle.holder t)]) ∧
+    Becoming.World.exposed.Balanced ∧
+      Becoming.World.exposed.Dissipative ∧
+        (∀ (t : Nat),
+            ¬Becoming.World.exposed.flow.AroundStanding
+                (fun t => [Becoming.Exposed.Relatum.side (Becoming.Shuttle.holder t)]) t) ∧
+          Becoming.World.exposed.flow.ExchangeRecurs) ∧
+  ((Becoming.Cycle.web.StandingCensus fun x => [()]) ∧
+      Becoming.Cycle.flow.Balances Becoming.Cycle.web ∧
+        ¬Becoming.Cycle.flow.Dissipative ∧
+          (∀ (t : Nat), Becoming.Cycle.flow.AroundStanding (fun x => [()]) t) ∧ Becoming.Cycle.flow.ExchangeRecurs) ∧
+    ((Becoming.World.leaking.web.StandingCensus fun t => [Becoming.Shuttle.holder t]) ∧
+        ¬Becoming.World.leaking.Balanced ∧
+          Becoming.World.leaking.Dissipative ∧
+            (∀ (t : Nat), Becoming.World.leaking.flow.AroundStanding (fun t => [Becoming.Shuttle.holder t]) t) ∧
+              Becoming.World.leaking.flow.ExchangeRecurs) ∧
+      (∀ (stand : Nat → List Becoming.World.throughput.Relatum), ¬Becoming.World.throughput.web.StandingCensus stand) ∧
+        Becoming.World.throughput.Balanced ∧
+          Becoming.World.throughput.Dissipative ∧
+            (∀ (t : Nat), Becoming.World.throughput.flow.AroundStanding (fun x => []) t) ∧
+              Becoming.World.throughput.flow.ExchangeRecurs

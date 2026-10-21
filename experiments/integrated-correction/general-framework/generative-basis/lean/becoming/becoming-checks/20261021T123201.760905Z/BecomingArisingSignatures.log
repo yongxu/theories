@@ -1,0 +1,90 @@
+@Becoming.Web.rises_or_still : ∀ {F C : Type} (W : Becoming.Web F C) (t : Nat) (cs : List C),
+  (∃ c, c ∈ cs ∧ W.Rises t c) ∨ W.Still cs t
+@Becoming.Web.depletes_iff : ∀ {F C : Type} (W : Becoming.Web F C) (cs : List C) (event : Nat → Prop),
+  W.Depletes cs event ↔ ∀ (t : Nat), event t → ∃ c, c ∈ cs ∧ (W.Rises t c ∨ W.Falls t c)
+@Becoming.Web.stock_le : ∀ {F C : Type} (W : Becoming.Web F C) {t : Nat} (cs : List C),
+  W.Still cs t → W.stock cs (t + 1) ≤ W.stock cs t
+@Becoming.Web.stock_lt : ∀ {F C : Type} (W : Becoming.Web F C) {t : Nat} (cs : List C),
+  W.Still cs t → (∃ c, c ∈ cs ∧ W.Falls t c) → W.stock cs (t + 1) < W.stock cs t
+@Becoming.Web.depletion_not_recurring : ∀ {F C : Type} (W : Becoming.Web F C) (cs : List C) (T : Nat)
+  (event : Nat → Prop), (∀ (t : Nat), T ≤ t → W.Still cs t) → W.Depletes cs event → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ event t
+@Becoming.Web.Unceasing.rises : ∀ {F C : Type} (W : Becoming.Web F C) {cs : List C},
+  (W.Depletes cs fun t => ∃ f, W.Arises t f) → W.Unceasing → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → W.Still cs t
+@Becoming.Web.Unceasing.activeRenewer_recurs : ∀ {F C : Type} (W : Becoming.Web F C) {renews : Nat → F → C → Prop}
+  {cs : List C},
+  W.RenewedBy renews →
+    (W.Depletes cs fun t => ∃ f, W.Arises t f) →
+      W.Unceasing → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → ∀ (f : F), ¬W.ActiveRenewer renews cs t f
+@Becoming.Web.substitution_defers : ∀ {F C : Type} (W : Becoming.Web F C) (cs : List C) (f : F) (T : Nat),
+  (∀ (t : Nat), T ≤ t → W.Still cs t) → (W.Depletes cs fun t => W.active t f) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.active t f
+@Becoming.Web.dissipation_arising_not_recurring : ∀ {F C : Type} (W : Becoming.Web F C) (q : Nat → Nat),
+  (∀ (t : Nat), q (t + 1) ≤ q t) → (∀ (t : Nat) (f : F), W.Arises t f → q (t + 1) < q t) → ¬W.Unceasing
+Becoming.Tide.tide_even : ∀ (n : Nat), Becoming.Tide.tide (2 * n) = 0
+Becoming.Tide.tide_odd : ∀ (n : Nat), Becoming.Tide.tide (2 * n + 1) = 1
+Becoming.Tide.unrelated_depletion : Becoming.Tide.web.Dependent ∧
+  Becoming.Tide.web.RenewedBy Becoming.Tide.renews ∧
+    (Becoming.Tide.web.Depletes [()] fun t => ∃ f, Becoming.Tide.web.Arises t f) ∧
+      Becoming.Tide.web.Unceasing ∧
+        (∀ (t : Nat),
+            ¬Becoming.Tide.web.requires t Becoming.Tide.Formation.flicker () ∧
+              ¬Becoming.Tide.web.draws t Becoming.Tide.Formation.flicker ()) ∧
+          ∀ (T : Nat),
+            ¬∀ (t : Nat),
+                T ≤ t → ∀ (f : Becoming.Tide.Formation), ¬Becoming.Tide.web.ActiveRenewer Becoming.Tide.renews [()] t f
+Becoming.Tide.renewal_without_arising : Becoming.Tide.still.RenewedBy Becoming.Tide.renews ∧
+  (∀ (T : Nat), ∃ t, T ≤ t ∧ Becoming.Tide.still.Rises t ()) ∧
+    (∀ (T : Nat), ∃ t f, T ≤ t ∧ Becoming.Tide.still.ActiveRenewer Becoming.Tide.renews [()] t f) ∧
+      ∀ (t : Nat) (f : Becoming.Tide.Formation), ¬Becoming.Tide.still.Arises t f
+Becoming.Growth.left_succ_le : ∀ (t : Nat), Becoming.Growth.left (t + 1) ≤ Becoming.Growth.left t
+Becoming.Growth.left_late : ∀ (t : Nat), 3 ≤ t → Becoming.Growth.left t = 0
+Becoming.Growth.ceases : Becoming.Growth.web.Dependent ∧
+  Becoming.Growth.web.Arises 0 0 ∧
+    Becoming.Growth.web.Arises 1 1 ∧
+      Becoming.Growth.web.ConsumingIn 0 ∧
+        (∀ (t : Nat), ¬Becoming.Growth.web.Rises t ()) ∧ ¬Becoming.Growth.web.Unceasing
+Becoming.Relay.reserve_succ_le : ∀ (t : Nat) (c : Becoming.Relay.Source),
+  Becoming.Relay.reserve (t + 1) c ≤ Becoming.Relay.reserve t c
+Becoming.Relay.defers : Becoming.Relay.web.Dependent ∧
+  Becoming.Relay.web.active 0 () ∧
+    Becoming.Relay.web.active 1 () ∧
+      Becoming.Relay.web.Dissolves 0 () Becoming.Relay.Source.first ∧
+        Becoming.Relay.web.Forms 0 () Becoming.Relay.Source.second ∧
+          Becoming.Relay.web.ConsumingIn () ∧
+            (∀ (t : Nat), 2 ≤ t → ¬Becoming.Relay.web.active t ()) ∧
+              ¬∀ (N : Nat), ∃ t, N ≤ t ∧ Becoming.Relay.web.active t ()
+Becoming.Recycle.total_one : ∀ (t : Nat),
+  Becoming.Recycle.web.stock [Becoming.Recycle.Pool.a, Becoming.Recycle.Pool.b] t = 1
+Becoming.Recycle.atA_even : ∀ (n : Nat), Becoming.Recycle.atA (2 * n) = 1
+Becoming.Recycle.atA_odd : ∀ (n : Nat), Becoming.Recycle.atA (2 * n + 1) = 0
+Becoming.Recycle.passed : ∀ (t : Nat),
+  Becoming.Recycle.atB t < Becoming.Recycle.atB (t + 1) → 1 ≤ Becoming.Recycle.atA t
+Becoming.Recycle.closed_unceasing : Becoming.Recycle.web.Dependent ∧
+  Becoming.Recycle.web.RenewedBy Becoming.Recycle.renews ∧
+    (Becoming.Recycle.web.Depletes [Becoming.Recycle.Pool.a, Becoming.Recycle.Pool.b] fun t =>
+        ∃ f, Becoming.Recycle.web.Arises t f) ∧
+      Becoming.Recycle.web.Unceasing ∧
+        (∀ (t : Nat), Becoming.Recycle.web.stock [Becoming.Recycle.Pool.a, Becoming.Recycle.Pool.b] t = 1) ∧
+          ∀ (T : Nat),
+            ¬∀ (t : Nat),
+                T ≤ t →
+                  ∀ (f : Becoming.Recycle.Formation),
+                    ¬Becoming.Recycle.web.ActiveRenewer Becoming.Recycle.renews
+                        [Becoming.Recycle.Pool.a, Becoming.Recycle.Pool.b] t f
+Becoming.Oscillation.charge_even : ∀ (n : Nat), Becoming.Oscillation.charge (2 * n) = 2
+Becoming.Oscillation.charge_odd : ∀ (n : Nat), Becoming.Oscillation.charge (2 * n + 1) = 1
+Becoming.Oscillation.back : ∀ (t : Nat),
+  2 ≤ Becoming.Oscillation.charge (t + 1) ∨ 2 ≤ Becoming.Oscillation.charge (t + 2)
+Becoming.Oscillation.arises_on_rise : ∀ (t : Nat) (f : Becoming.Oscillation.Formation),
+  Becoming.Oscillation.web.Arises t f → Becoming.Oscillation.web.Rises t ()
+Becoming.Oscillation.unceasing : Becoming.Oscillation.web.Dependent ∧
+  Becoming.Oscillation.web.RenewedBy Becoming.Oscillation.renews ∧
+    (Becoming.Oscillation.web.Depletes [()] fun t => ∃ f, Becoming.Oscillation.web.Arises t f) ∧
+      Becoming.Oscillation.web.Unceasing ∧
+        ∀ (T : Nat),
+          ¬∀ (t : Nat),
+              T ≤ t →
+                ∀ (f : Becoming.Oscillation.Formation),
+                  ¬Becoming.Oscillation.web.ActiveRenewer Becoming.Oscillation.renews [()] t f
+Becoming.Oscillation.readings : (∀ (n : Nat),
+    Becoming.Web.UnderminingAt (2 * n) Becoming.Oscillation.Formation.oscillator) ∧
+  Becoming.Oscillation.web.RenewingInWithin 2 Becoming.Oscillation.Formation.oscillator

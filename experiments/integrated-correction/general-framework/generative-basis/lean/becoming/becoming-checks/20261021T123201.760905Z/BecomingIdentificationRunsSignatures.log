@@ -1,0 +1,157 @@
+@Becoming.Law.kernel_bisimulation : ∀ {S : Type u_1} {R : Type u_2} {K : Type u_3} {next : S → S} {o : S → R}
+  {π : S → K},
+  (∀ (s s' : S), π s = π s' → o s = o s') →
+    Becoming.GoAlike (Becoming.Law.process next) π →
+      Becoming.Bisimulation (Becoming.Law.frameBy next o) (Becoming.Law.frameBy next o) fun s s' => π s = π s'
+@Becoming.Law.sameFuture_of_law : ∀ {S : Type u_1} {R : Type u_2} {K : Type u_3} {next : S → S} {o : S → R} {π : S → K},
+  (∀ (s s' : S), π s = π s' → o s = o s') →
+    Becoming.GoAlike (Becoming.Law.process next) π → ∀ {s s' : S}, π s = π s' → Becoming.Law.SameFuture next o s s'
+@Becoming.Law.identifiesAlike_of_law : ∀ {S : Type u_1} {R : Type u_2} {K : Type u_3} {next : S → S} {o : S → R}
+  {π : S → K},
+  (∀ (s s' : S), π s = π s' → o s = o s') →
+    Becoming.GoAlike (Becoming.Law.process next) π →
+      (∀ (s s' : S), Becoming.Law.SameFuture next o s s' → π s = π s') →
+        Becoming.IdentifiesAlike (Becoming.Law.frameBy next o) π
+@Becoming.Law.const_identifiesAlike_iff : ∀ {S : Type u_1} {R : Type u_2} {K : Type u_3} {next : S → S} {o : S → R}
+  (k : K),
+  (Becoming.IdentifiesAlike (Becoming.Law.frameBy next o) fun x => k) ↔
+    ∀ (s s' : S), Becoming.Law.SameFuture next o s s'
+@Becoming.Law.now_identifiesAlike_iff : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R},
+  Becoming.IdentifiesAlike (Becoming.Law.frameBy next o) o ↔
+    ∀ (s s' : S), o s = o s' → Becoming.Law.SameFuture next o s s'
+@Becoming.Law.whole_identifiesAlike : ∀ {S : Type u_1} (next : S → S),
+  Becoming.IdentifiesAlike (Becoming.Law.frameBy next id) id
+@Becoming.Law.part_identifiesAlike_iff : ∀ {X : Type u_1} {C : Type u_2} {next : X × C → X × C},
+  Becoming.IdentifiesAlike (Becoming.Law.frameBy next Prod.fst) Prod.fst ↔
+    ∀ (x : X) (c c' : C), Becoming.Law.SameFuture next Prod.fst (x, c) (x, c')
+@Becoming.Law.sameFuture_of_goAlike : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R},
+  Becoming.GoAlike (Becoming.Law.process next) o → ∀ (s s' : S), o s = o s' → Becoming.Law.SameFuture next o s s'
+@Becoming.Law.now_identifiesAlike_iff_goAlike : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R},
+  Becoming.IdentifiesAlike (Becoming.Law.frameBy next o) o ↔ Becoming.GoAlike (Becoming.Law.process next) o
+@Becoming.Law.part_identifiesAlike_iff_step : ∀ {X : Type u_1} {C : Type u_2} {next : X × C → X × C},
+  Becoming.IdentifiesAlike (Becoming.Law.frameBy next Prod.fst) Prod.fst ↔
+    ∀ (x : X) (c c' : C), (next (x, c)).fst = (next (x, c')).fst
+@Becoming.Law.adaptive_identifiesAlike_iff : ∀ {X : Type u_1} {C : Type u_2} (F : C → X → X) (G : C → X → C),
+  Becoming.IdentifiesAlike (Becoming.Law.frameBy (fun s => (F s.snd s.fst, G s.snd s.fst)) Prod.fst) Prod.fst ↔
+    ∀ (x : X) (c c' : C), F c x = F c' x
+Becoming.Motion.move_adaptive : Becoming.Law.process Becoming.Motion.move =
+  Becoming.adaptive (fun g x x_1 => x + g) fun g x => g
+Becoming.Motion.pair_identifiesAlike : Becoming.IdentifiesAlike (Becoming.Law.frameBy Becoming.Motion.move Prod.fst)
+  fun s => s
+Becoming.Motion.standing_alone : ¬Becoming.GoAlike (Becoming.Law.process Becoming.Motion.move) Prod.fst
+Becoming.Motion.neither_alone : ¬Becoming.IdentifiesAlike (Becoming.Law.frameBy Becoming.Motion.move Prod.fst)
+      Prod.fst ∧
+  ¬Becoming.IdentifiesAlike (Becoming.Law.frameBy Becoming.Motion.move Prod.fst) Prod.snd
+Becoming.Motion.still_identifiesAlike : Becoming.IdentifiesAlike (Becoming.Law.frameBy Becoming.Motion.still Prod.fst)
+  Prod.fst
+@Becoming.alike_moments_iff : ∀ {O : Type u_1} {o : Nat → O} {t t' : Nat},
+  Becoming.Alike (Becoming.Law.frameBy Nat.succ o) (Becoming.Law.frameBy Nat.succ o) t t' ↔ Becoming.SameAhead o t t'
+@Becoming.Law.name_identifiesAlike : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    Becoming.IdentifiesAlike (Becoming.Law.frameBy next o) (Becoming.Law.name next o (l.length + l.length - 1))
+@Becoming.Law.name_carries : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {l : List S},
+  (∀ (s : S), s ∈ l) →
+    ∃ Q,
+      Becoming.Determined Q ∧
+        Becoming.FactorsThrough (Becoming.Law.process next) (Becoming.Law.name next o (l.length + l.length - 1)) Q
+@Becoming.IdentificationRuns.sameAhead_congr : ∀ {O : Type u_1} {o o' : Nat → O},
+  (∀ (n : Nat), o n = o' n) → ∀ {t t' : Nat}, Becoming.SameAhead o t t' → Becoming.SameAhead o' t t'
+@Becoming.IdentificationRuns.statesBelow_congr : ∀ {O : Type u_1} {o o' : Nat → O},
+  (∀ (n : Nat), o n = o' n) → ∀ {N : Nat}, Becoming.StatesBelow o N → Becoming.StatesBelow o' N
+@Becoming.IdentificationRuns.prefix_fixes : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {reg : S → R} {r r' : Becoming.Run P} {N N' : Nat},
+  Becoming.StatesBelow (Becoming.Parting.course reg r) N →
+    Becoming.StatesBelow (Becoming.Parting.course reg r') N' →
+      (∀ (n : Nat), n < N + N' - 1 → reg (r.state n) = reg (r'.state n)) →
+        ∀ (n : Nat), reg (r.state n) = reg (r'.state n)
+@Becoming.IdentificationRuns.prefix_short : ∀ {O : Type u_1} {x y : O},
+  x ≠ y →
+    ∀ (T : Nat),
+      ∃ q q',
+        Becoming.StatesBelow (Becoming.Parting.course id q) 1 ∧
+          Becoming.StatesBelow (Becoming.Parting.course id q') (T + 1) ∧ Becoming.Parting.PartAt id q q' T
+@Becoming.IdentificationRuns.withBound_earliest : ∀ {O : Type u_1} {x y : O},
+  x ≠ y →
+    ∀ (pred : List O → Option O) (M : Nat),
+      ¬∀ (q : Becoming.Run (Becoming.Parting.free O)),
+          Becoming.StatesBelow (Becoming.Parting.course id q) (M + 2) →
+            Becoming.Learning.Accords pred (Becoming.Parting.course id q) ∧
+              ∃ w, pred (Becoming.Learning.prefixOf (Becoming.Parting.course id q) (M + M + 2)) = some w
+@Becoming.IdentificationRuns.rest_without_bound_missed : ∀ {O : Type u_1} {x y : O},
+  x ≠ y →
+    ∀ (pred : List O → Option O),
+      ¬((∀ (q : Becoming.Run (Becoming.Parting.free O)),
+            Becoming.StatesBelow (Becoming.Parting.course id q) 1 → Becoming.Parting.RightAt pred id q 1) ∧
+          ∀ (q : Becoming.Run (Becoming.Parting.free O)),
+            Becoming.StatesBelow (Becoming.Parting.course id q) 2 →
+              Becoming.Learning.Accords pred (Becoming.Parting.course id q))
+Becoming.IdentificationRuns.byElimination_rest_cubic : ∀ (m : Nat) {T : Nat},
+  (∀ (q : Becoming.Run (Becoming.Parting.free Bool)),
+      Becoming.StatesBelow (Becoming.Parting.course id q) (2 * m + 3) →
+        ∀ (t : Nat),
+          T ≤ t → Becoming.Parting.RightAt (Becoming.Learning.byElimination Becoming.Learning.lassos) id q t) →
+    (2 * m + 3) * ((m + 1) * (m + 2)) < T
+@Becoming.IdentificationRuns.answer_exceeds_bound : ∀ {O : Type u_1} [inst : DecidableEq O] {other : O → O},
+  (∀ (v : O), other v ≠ v) →
+    ∀ (x : O) (N : Nat)
+      (r :
+        Becoming.Run
+          (Becoming.Law.process (Becoming.Learning.answerStep (Becoming.Identification.withBound N) other x))),
+      r.state 0 = [] →
+        ¬Becoming.StatesBelow
+            (Becoming.Parting.course (Becoming.LearningRuns.answerReg (Becoming.Identification.withBound N) other x) r)
+            N
+@Becoming.IdentificationRuns.sameAhead_iff_alike : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} (reg : S → R)
+  (r : Becoming.Run (Becoming.Law.process next)) {t t' : Nat},
+  Becoming.SameAhead (Becoming.Parting.course reg r) t t' ↔
+    Becoming.Alike (Becoming.Law.frameBy next reg) (Becoming.Law.frameBy next reg) (r.state t) (r.state t')
+@Becoming.IdentificationRuns.returns_states : ∀ {S : Type u_1} {R : Type u_2} {next : S → S}
+  (r : Becoming.Run (Becoming.Law.process next)),
+  Becoming.Law.Returns next (r.state 0) →
+    ∀ (reg : S → R), ∃ i j, i < j ∧ Becoming.SameAhead (Becoming.Parting.course reg r) i j
+@Becoming.IdentificationRuns.classes_unrefuted_runs : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {reg : S → R}
+  {l : List S},
+  (∀ (s : S), s ∈ l → next s ∈ l) →
+    ∀ {r r' : Becoming.Run (Becoming.Law.process next)},
+      r.state 0 ∈ l →
+        r'.state 0 ∈ l →
+          (∀ (n : Nat), n < l.length - 1 → reg (r.state n) = reg (r'.state n)) →
+            ∀ (n : Nat), ¬¬reg (r.state n) = reg (r'.state n)
+@Becoming.IdentificationRuns.classes_exact_runs : ∀ {R : Type u_1} {x y : R},
+  x ≠ y →
+    ∀ (M : Nat),
+      ∃ next reg l,
+        l.length = M + 2 ∧
+          (∀ (p : Nat), p ∈ l → next p ∈ l) ∧
+            0 ∈ l ∧ 1 ∈ l ∧ Becoming.Parting.PartAt reg (Becoming.Law.run next 0) (Becoming.Law.run next 1) M
+Becoming.IdentificationRuns.negation_course : ∀ (r : Becoming.Run (Becoming.Law.process not)),
+  r.state 0 = true → ∀ (n : Nat), Becoming.Parting.course id r n = Becoming.Negation.course n
+Becoming.IdentificationRuns.negation_two_states : ∀ (r : Becoming.Run (Becoming.Law.process not)),
+  r.state 0 = true →
+    ¬Becoming.SameAhead (Becoming.Parting.course id r) 0 1 ∧
+      Becoming.SameAhead (Becoming.Parting.course id r) 0 2 ∧
+        ∀ (t : Nat),
+          Becoming.SameAhead (Becoming.Parting.course id r) t 0 ∨ Becoming.SameAhead (Becoming.Parting.course id r) t 1
+Becoming.IdentificationRuns.negation_each_through_other : ∀ (r : Becoming.Run (Becoming.Law.process not)),
+  r.state 0 = true →
+    ∀ (t : Nat),
+      (Becoming.SameAhead (Becoming.Parting.course id r) t 0 →
+          r.state t = true ∧ Becoming.SameAhead (Becoming.Parting.course id r) (t + 1) 1) ∧
+        (Becoming.SameAhead (Becoming.Parting.course id r) t 1 →
+          r.state t = false ∧ Becoming.SameAhead (Becoming.Parting.course id r) (t + 1) 0)
+Becoming.IdentificationRuns.negation_derived : ∀ (r : Becoming.Run (Becoming.Law.process not)),
+  r.state 0 = true → ∀ (t : Nat), 3 ≤ t → Becoming.Parting.RightAt (Becoming.Identification.withBound 2) id r t
+@Becoming.IdentificationRuns.separated_congr : ∀ {A : Type u_1} {B : Type u_2} {whole whole' : A × B → Prop},
+  (∀ (p : A × B), whole p ↔ whole' p) → ∀ {p : A × B}, Becoming.Separated whole p → Becoming.Separated whole' p
+Becoming.IdentificationRuns.copy_separation_admits_extra : Becoming.Separated
+    (Becoming.Courses.reachedFrom (fun p => (p.fst, p.fst)) (fun x => True) 1) (true, false) ∧
+  ¬Becoming.Courses.reachedFrom (fun p => (p.fst, p.fst)) (fun x => True) 1 (true, false)
+Becoming.IdentificationRuns.parity_fixed : ∀ (p : Bool × Bool × Bool),
+  Becoming.EvenThree p → Becoming.IdentificationRuns.parity p = p
+Becoming.IdentificationRuns.parity_reached_iff : ∀ (p : Bool × Bool × Bool),
+  Becoming.Courses.reachedFrom Becoming.IdentificationRuns.parity (fun x => True) 1 p ↔ Becoming.EvenThree p
+Becoming.IdentificationRuns.parity_whole_not_in_pairs : (∀ (x y : Bool),
+    ∃ z, Becoming.Courses.reachedFrom Becoming.IdentificationRuns.parity (fun x => True) 1 (x, y, z)) ∧
+  (∀ (y z : Bool), ∃ x, Becoming.Courses.reachedFrom Becoming.IdentificationRuns.parity (fun x => True) 1 (x, y, z)) ∧
+    (∀ (x z : Bool), ∃ y, Becoming.Courses.reachedFrom Becoming.IdentificationRuns.parity (fun x => True) 1 (x, y, z)) ∧
+      ¬Becoming.Courses.reachedFrom Becoming.IdentificationRuns.parity (fun x => True) 1 (true, false, false)

@@ -1,0 +1,257 @@
+@Becoming.Flow.not_inward_of_fed : ∀ {F C : Type} {L : Becoming.Flow F C} {ds : List C} {t : Nat},
+  L.FedFromBeyond ds t → ¬L.Inward ds t
+@Becoming.Flow.inward_of_not_fed : ∀ {F C : Type} {L : Becoming.Flow F C} [DecidableEq C] {ds : List C} {t : Nat},
+  ¬L.FedFromBeyond ds t → L.Inward ds t
+@Becoming.Flow.inward_iff_not_fed : ∀ {F C : Type} {L : Becoming.Flow F C} [DecidableEq C] {ds : List C} {t : Nat},
+  L.Inward ds t ↔ ¬L.FedFromBeyond ds t
+@Becoming.Flow.fed_of_not_inward : ∀ {F C : Type} {L : Becoming.Flow F C} [DecidableEq C] {ds : List C} {N : Nat},
+  (¬∀ (t : Nat), N ≤ t → L.Inward ds t) → ¬∀ (t : Nat), N ≤ t → ¬L.FedFromBeyond ds t
+@Becoming.Flow.fed_from_beyond_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} [DecidableEq C]
+  {ds : List C},
+  Becoming.Distinct ds →
+    ∀ {T₀ : Nat},
+      (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+        (∀ (t : Nat), T₀ ≤ t → L.BalancesOn W ds t) →
+          (∀ (t : Nat), T₀ ≤ t → ∀ (es : List C), Becoming.Distinct es → L.ClosedAt es t → L.DissipatesOn es t) →
+            (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers ds t) → ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → ¬L.FedFromBeyond ds t
+@Becoming.Flow.rising_fed_from_beyond_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  [DecidableEq C] {ds : List C},
+  Becoming.Distinct ds →
+    ∀ {T₀ : Nat},
+      (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+        (∀ (t : Nat), T₀ ≤ t → L.BalancesOn W ds t) →
+          (∀ (t : Nat), T₀ ≤ t → ∀ (es : List C), Becoming.Distinct es → L.ClosedAt es t → L.DissipatesOn es t) →
+            (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ ds ∧ W.Rises t c) →
+              ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → ¬L.FedFromBeyond ds t
+@Becoming.Flow.fed_from_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} [DecidableEq C],
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C},
+        Becoming.Distinct ds →
+          ∀ {T₀ : Nat},
+            (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+              (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers ds t) → ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → ¬L.FedFromBeyond ds t
+@Becoming.Flow.rising_fed_from_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} [DecidableEq C],
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C},
+        Becoming.Distinct ds →
+          ∀ {T₀ : Nat},
+            (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+              (∀ (N : Nat), ∃ t c, N ≤ t ∧ c ∈ ds ∧ W.Rises t c) →
+                ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → ¬L.FedFromBeyond ds t
+@Becoming.Flow.joint_keeps_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {c : C},
+  L.BalancesOn W [c] t → L.WithinJoint t c → W.level t c ≤ W.level (t + 1) c
+@Becoming.Flow.joint_keeps : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ {t : Nat} {c : C}, L.WithinJoint t c → W.level t c ≤ W.level (t + 1) c
+@Becoming.Flow.family_excess_lowers_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {ds : List C}, L.BalancesOn W ds t → L.replenishment ds t < L.uptake ds t → W.stock ds (t + 1) + 1 ≤ W.stock ds t
+@Becoming.Flow.excess_lowers_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {c : C},
+  L.BalancesOn W [c] t → L.given t c < L.taken t c → W.level (t + 1) c + 1 ≤ W.level t c
+@Becoming.Flow.excess_lowers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ {t : Nat} {c : C}, L.given t c < L.taken t c → W.level (t + 1) c + 1 ≤ W.level t c
+@Becoming.Flow.family_excess_bounded_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {T : Nat} (n : Nat),
+  (∀ (k : Nat), k < n → L.BalancesOn W ds (T + k)) →
+    (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) → W.stock ds (T + n) + n ≤ W.stock ds T
+@Becoming.Flow.family_excess_bounded : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {ds : List C} {T : Nat} (n : Nat),
+      (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) → W.stock ds (T + n) + n ≤ W.stock ds T
+@Becoming.Flow.excess_bounded_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {T : Nat}
+  (n : Nat),
+  (∀ (k : Nat), k < n → L.BalancesOn W [c] (T + k)) →
+    (∀ (k : Nat), k < n → L.given (T + k) c < L.taken (T + k) c) → W.level (T + n) c + n ≤ W.level T c
+@Becoming.Flow.excess_bounded : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {c : C} {T : Nat} (n : Nat),
+      (∀ (k : Nat), k < n → L.given (T + k) c < L.taken (T + k) c) → W.level (T + n) c + n ≤ W.level T c
+@Becoming.Flow.net_give_raises_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {c : C},
+  L.BalancesOn W [c] t → L.taken t c < L.given t c → W.level t c + 1 ≤ W.level (t + 1) c
+@Becoming.Flow.net_give_bounded_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {T : Nat}
+  (n : Nat),
+  (∀ (k : Nat), k < n → L.BalancesOn W [c] (T + k)) →
+    (∀ (k : Nat), k < n → W.level T c ≤ W.level (T + k) c → L.taken (T + k) c < L.given (T + k) c) →
+      W.level T c + n ≤ W.level (T + n) c
+@Becoming.Flow.restores_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {m T : Nat},
+  (∀ (k : Nat), k < m - W.level T c → L.BalancesOn W [c] (T + k)) →
+    (∀ (k : Nat), k < m - W.level T c → W.level T c ≤ W.level (T + k) c → L.taken (T + k) c < L.given (T + k) c) →
+      m ≤ W.level (T + (m - W.level T c)) c
+@Becoming.Flow.restores : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {c : C} {m T : Nat},
+      (∀ (k : Nat), k < m - W.level T c → W.level T c ≤ W.level (T + k) c → L.taken (T + k) c < L.given (T + k) c) →
+        m ≤ W.level (T + (m - W.level T c)) c
+@Becoming.Flow.of_single : ∀ {C : Type} {P : C → Prop} {c : C}, P c → ∀ (d : C), d ∈ [c] → P d
+@Becoming.Flow.gate_single : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t m : Nat} {f : F} {c : C},
+  (0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c) →
+    ∀ (d : C), d ∈ [c] → 0 < L.give t f d → ∃ e, e ∈ [c] ∧ W.requires t f e ∧ m ≤ W.need t f e
+@Becoming.Flow.family_stays_below_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {m T : Nat},
+  W.stock ds T < m →
+    ∀ (n : Nat),
+      (∀ (k : Nat), k < n → L.BalancesOn W ds (T + k)) →
+        (∀ (k : Nat) (f : F),
+            k < n →
+              f ∈ L.present (T + k) →
+                ∀ (d : C),
+                  d ∈ ds → 0 < L.give (T + k) f d → ∃ e, e ∈ ds ∧ W.requires (T + k) f e ∧ m ≤ W.need (T + k) f e) →
+          (∀ (k : Nat), k < n → ∀ (d : C), d ∈ ds → L.GiversSupported W (T + k) d) → W.stock ds (T + n) < m
+@Becoming.Flow.stays_below_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {m T : Nat},
+  W.level T c < m →
+    ∀ (n : Nat),
+      (∀ (k : Nat), k < n → L.BalancesOn W [c] (T + k)) →
+        (∀ (k : Nat) (f : F),
+            k < n → f ∈ L.present (T + k) → 0 < L.give (T + k) f c → W.requires (T + k) f c ∧ m ≤ W.need (T + k) f c) →
+          (∀ (k : Nat), k < n → L.GiversSupported W (T + k) c) → W.level (T + n) c < m
+@Becoming.Flow.stays_below : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (f : F), f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c) →
+            ∀ {T : Nat}, W.level T c < m → ∀ (n : Nat), W.level (T + n) c < m
+@Becoming.Flow.family_ends_below_at : ∀ {F C : Type} {W : Becoming.Web F C} {ds : List C} {m t : Nat} {g : F} {e : C},
+  (W.active t g → W.Supported t g) → W.stock ds t < m → e ∈ ds → W.requires t g e → m ≤ W.need t g e → ¬W.active t g
+@Becoming.Flow.ends_below_at : ∀ {F C : Type} {W : Becoming.Web F C} {c : C} {m t : Nat} {g : F},
+  (W.active t g → W.Supported t g) → W.level t c < m → W.requires t g c → m ≤ W.need t g c → ¬W.active t g
+@Becoming.Flow.ends_below : ∀ {F C : Type} {W : Becoming.Web F C},
+  W.Dependent →
+    ∀ {c : C} {m T : Nat},
+      (∀ (n : Nat), W.level (T + n) c < m) →
+        ∀ (n : Nat) (g : F), W.requires (T + n) g c → m ≤ W.need (T + n) g c → ¬W.active (T + n) g
+@Becoming.Flow.family_excess_ends_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {m T n k : Nat} {g : F} {e : C},
+  (∀ (j : Nat), j < n + k → L.BalancesOn W ds (T + j)) →
+    (∀ (j : Nat) (f : F),
+        j < n + k →
+          f ∈ L.present (T + j) →
+            ∀ (d : C),
+              d ∈ ds → 0 < L.give (T + j) f d → ∃ e, e ∈ ds ∧ W.requires (T + j) f e ∧ m ≤ W.need (T + j) f e) →
+      (∀ (j : Nat), j < n + k → ∀ (d : C), d ∈ ds → L.GiversSupported W (T + j) d) →
+        (∀ (j : Nat), j < n → L.replenishment ds (T + j) < L.uptake ds (T + j)) →
+          W.stock ds T < n + m →
+            (W.active (T + n + k) g → W.Supported (T + n + k) g) →
+              e ∈ ds → W.requires (T + n + k) g e → m ≤ W.need (T + n + k) g e → ¬W.active (T + n + k) g
+@Becoming.Flow.joint_excess_ends_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {m T n k : Nat} {g : F},
+  (∀ (j : Nat), j < n + k → L.BalancesOn W [c] (T + j)) →
+    (∀ (j : Nat) (f : F),
+        j < n + k → f ∈ L.present (T + j) → 0 < L.give (T + j) f c → W.requires (T + j) f c ∧ m ≤ W.need (T + j) f c) →
+      (∀ (j : Nat), j < n + k → L.GiversSupported W (T + j) c) →
+        (∀ (j : Nat), j < n → L.given (T + j) c < L.taken (T + j) c) →
+          W.level T c < n + m →
+            (W.active (T + n + k) g → W.Supported (T + n + k) g) →
+              W.requires (T + n + k) g c → m ≤ W.need (T + n + k) g c → ¬W.active (T + n + k) g
+@Becoming.Flow.joint_excess_ends : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (f : F), f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c) →
+            ∀ {T n : Nat},
+              (∀ (k : Nat), k < n → L.given (T + k) c < L.taken (T + k) c) →
+                W.level T c < n + m →
+                  ∀ (k : Nat) (g : F), W.requires (T + n + k) g c → m ≤ W.need (T + n + k) g c → ¬W.active (T + n + k) g
+@Becoming.Flow.family_excess_ends : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {ds : List C} {m : Nat},
+          (∀ (t : Nat) (f : F),
+              f ∈ L.present t →
+                ∀ (d : C), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+            ∀ {T n : Nat},
+              (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) →
+                W.stock ds T < n + m →
+                  ∀ (k : Nat) (g : F) (e : C),
+                    e ∈ ds → W.requires (T + n + k) g e → m ≤ W.need (T + n + k) g e → ¬W.active (T + n + k) g
+@Becoming.Web.embodiedArising_fed_from_beyond : ∀ {X : Type} {W : Becoming.Web X X} {L : Becoming.Flow X X}
+  [DecidableEq X],
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List X},
+        Becoming.Distinct ds →
+          ∀ {T₀ : Nat},
+            (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+              (∀ (N : Nat), ∃ t x, N ≤ t ∧ x ∈ ds ∧ W.Embodied x ∧ W.Arises t x) →
+                ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → ¬L.FedFromBeyond ds t
+Becoming.Lone.fed : ∀ (t : Nat), Becoming.Lone.flow.FedFromBeyond [Becoming.Frontier.Condition.pool] t
+@Becoming.Lone.each_fuel_once : ∀ {n t : Nat} {d : Becoming.Frontier.Condition},
+  Becoming.Lone.flow.Conveys t (Becoming.Frontier.Condition.fuel n) d → n = t
+Becoming.Lone.fed_not_recurring : Becoming.Lone.flow.Balances Becoming.Lone.web ∧
+  Becoming.Lone.flow.Dissipative ∧
+    (∀ (t : Nat), Becoming.Lone.flow.FedFromBeyond [Becoming.Frontier.Condition.pool] t) ∧
+      ∀ (n t : Nat),
+        n < t →
+          ∀ (d : Becoming.Frontier.Condition), ¬Becoming.Lone.flow.Conveys t (Becoming.Frontier.Condition.fuel n) d
+Becoming.Pair.own_not_joint : ∀ (t : Nat), Becoming.Pair.flow.WithinOwn t () ∧ ¬Becoming.Pair.flow.WithinJoint t ()
+Becoming.Pair.no_web : ¬∃ W, Becoming.Pair.flow.Balances W
+Becoming.Exceeding.balances : Becoming.Exceeding.flow.Balances Becoming.Exceeding.web
+Becoming.Exceeding.live_of_present : ∀ (t : Nat) (f : Becoming.Exceeding.Member),
+  f ∈ Becoming.Exceeding.present t → Becoming.Exceeding.live t
+Becoming.Exceeding.acting : Becoming.Exceeding.flow.Acting Becoming.Exceeding.web
+Becoming.Exceeding.dependent : Becoming.Exceeding.web.Dependent
+Becoming.Exceeding.gated : ∀ (t : Nat) (f : Becoming.Exceeding.Member),
+  f ∈ Becoming.Exceeding.flow.present t →
+    0 < Becoming.Exceeding.flow.give t f () →
+      Becoming.Exceeding.web.requires t f () ∧ 1 ≤ Becoming.Exceeding.web.need t f ()
+Becoming.Exceeding.own_not_joint : ∀ (t : Nat),
+  t < 2 → Becoming.Exceeding.flow.WithinOwn t () ∧ ¬Becoming.Exceeding.flow.WithinJoint t ()
+Becoming.Exceeding.all_end : ∀ (n : Nat) (f : Becoming.Exceeding.Member), ¬Becoming.Exceeding.web.active (2 + n) f
+Becoming.Coupled.balances : Becoming.Coupled.flow.Balances Becoming.Coupled.web
+Becoming.Coupled.acting : Becoming.Coupled.flow.Acting Becoming.Coupled.web
+Becoming.Coupled.dependent : Becoming.Coupled.web.Dependent
+Becoming.Coupled.alone_within : ∀ (t : Nat),
+  t < 2 → Becoming.Coupled.flow.WithinJoint t Becoming.Coupled.Condition.patch
+Becoming.Coupled.alone_ungated : ¬∀ (t : Nat) (f : Becoming.Coupled.Formation),
+    f ∈ Becoming.Coupled.flow.present t →
+      0 < Becoming.Coupled.flow.give t f Becoming.Coupled.Condition.patch →
+        Becoming.Coupled.web.requires t f Becoming.Coupled.Condition.patch ∧
+          1 ≤ Becoming.Coupled.web.need t f Becoming.Coupled.Condition.patch
+Becoming.Coupled.gated : ∀ (t : Nat) (f : Becoming.Coupled.Formation),
+  f ∈ Becoming.Coupled.flow.present t →
+    ∀ (d : Becoming.Coupled.Condition),
+      d ∈ Becoming.Coupled.pair →
+        0 < Becoming.Coupled.flow.give t f d →
+          ∃ e, e ∈ Becoming.Coupled.pair ∧ Becoming.Coupled.web.requires t f e ∧ 1 ≤ Becoming.Coupled.web.need t f e
+Becoming.Coupled.excess : ∀ (k : Nat),
+  k < 3 →
+    Becoming.Coupled.flow.replenishment Becoming.Coupled.pair (0 + k) <
+      Becoming.Coupled.flow.uptake Becoming.Coupled.pair (0 + k)
+Becoming.Coupled.all_end : ∀ (k : Nat) (f : Becoming.Coupled.Formation), ¬Becoming.Coupled.web.active (3 + k) f
+Becoming.Alone.balances : Becoming.Alone.flow.Balances Becoming.Alone.web
+Becoming.Alone.dependent : Becoming.Alone.web.Dependent
+Becoming.Alone.all_continue : Becoming.Alone.flow.Balances Becoming.Alone.web ∧
+  Becoming.Alone.web.Dependent ∧
+    (∀ (t : Nat), Becoming.Alone.flow.WithinJoint t ()) ∧
+      ∀ (t : Nat),
+        Becoming.Alone.web.active t Becoming.Witnesses.Member.renewer ∧
+          Becoming.Alone.web.active t Becoming.Witnesses.Member.first
+Becoming.Downstream.balances : Becoming.Downstream.flow.Balances Becoming.Downstream.web
+Becoming.Downstream.dependent : Becoming.Downstream.web.Dependent
+Becoming.Downstream.one_way : Becoming.Downstream.flow.Balances Becoming.Downstream.web ∧
+  Becoming.Downstream.web.Dependent ∧
+    (∀ (t : Nat) (c : Becoming.Downstream.Condition),
+        Becoming.Downstream.web.requires t Becoming.Downstream.Formation.self c →
+          c = Becoming.Downstream.Condition.ground) ∧
+      (∀ (t : Nat),
+          Becoming.Downstream.web.active t Becoming.Downstream.Formation.self ∧
+            Becoming.Downstream.web.Supported t Becoming.Downstream.Formation.self) ∧
+        ∀ (n : Nat), ¬Becoming.Downstream.web.active (n + 4) Becoming.Downstream.Formation.down
+Becoming.Mortal.balances : Becoming.Mortal.flow.Balances Becoming.Mortal.web
+Becoming.Mortal.dependent : Becoming.Mortal.web.Dependent
+Becoming.Mortal.after_its_end : Becoming.Mortal.flow.Balances Becoming.Mortal.web ∧
+  Becoming.Mortal.web.Dependent ∧
+    (∀ (t : Nat),
+        Becoming.Mortal.web.active t Becoming.Mortal.Member.mortal →
+          Becoming.Mortal.web.Supported t Becoming.Mortal.Member.mortal) ∧
+      ¬Becoming.Mortal.web.active 2 Becoming.Mortal.Member.mortal ∧
+        Becoming.Mortal.web.active 2 Becoming.Mortal.Member.successor ∧
+          ¬Becoming.Mortal.web.active 2 Becoming.Mortal.Member.renewer ∧
+            ∀ (n : Nat) (f : Becoming.Mortal.Member), ¬Becoming.Mortal.web.active (n + 3) f
+Becoming.Mortal.without_continues : Becoming.Mortal.without.Balances Becoming.Mortal.kept ∧
+  Becoming.Mortal.kept.Dependent ∧
+    ∀ (t : Nat),
+      Becoming.Mortal.kept.active t Becoming.Mortal.Member.renewer ∧
+        Becoming.Mortal.kept.active t Becoming.Mortal.Member.successor

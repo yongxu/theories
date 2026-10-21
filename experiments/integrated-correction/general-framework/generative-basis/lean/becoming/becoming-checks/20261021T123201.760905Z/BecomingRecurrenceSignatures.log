@@ -1,0 +1,171 @@
+@Becoming.le_succ_cases : ∀ {n K : Nat}, n ≤ K + 1 → n ≤ K ∨ n = K + 1
+@Becoming.gap_of_lt : ∀ {i j : Nat}, i < j → ∃ d, j = i + (d + 1)
+@Becoming.mem_cons_split : ∀ {S : Type u_1} {x a : S} {l : List S}, x ∈ a :: l → x = a ∨ x ∈ l
+Becoming.skipAt_ne : ∀ (m n : Nat), Becoming.skipAt m n ≠ m
+Becoming.skipAt_le : ∀ (m n : Nat), Becoming.skipAt m n ≤ n + 1
+Becoming.skipAt_lt : ∀ (m : Nat) {i j : Nat}, i < j → Becoming.skipAt m i < Becoming.skipAt m j
+@Becoming.split_at_head : ∀ {S : Type u_1} {g : Nat → S} {a : S} {l : List S} (K : Nat),
+  (∀ (n : Nat), n ≤ K → g n = a ∨ g n ∈ l) →
+    (∃ i j, i < j ∧ j ≤ K ∧ g i = g j) ∨
+      (∀ (n : Nat), n ≤ K → g n ∈ l) ∨ ∃ m, m ≤ K ∧ g m = a ∧ ∀ (n : Nat), n ≤ K → n ≠ m → g n ∈ l
+@Becoming.revisits_within : ∀ {S : Type u_1} (l : List S) (g : Nat → S),
+  (∀ (n : Nat), n ≤ l.length → g n ∈ l) → ∃ i j, i < j ∧ j ≤ l.length ∧ g i = g j
+@Becoming.revisits_of_held : ∀ {S : Type u_1} {g : Nat → S} {l : List S}, (∀ (n : Nat), g n ∈ l) → Becoming.Revisits g
+@Becoming.revisits_from : ∀ {S : Type u_1} {g : Nat → S} {l : List S},
+  (∀ (n : Nat), g n ∈ l) → ∀ (T : Nat), ∃ i j, T ≤ i ∧ i < j ∧ g i = g j
+@Becoming.unheld_of_new : ∀ {S : Type u_1} {g : Nat → S},
+  (∀ (i j : Nat), i < j → g i ≠ g j) → ∀ (l : List S), ¬∀ (n : Nat), n ≤ l.length → g n ∈ l
+@Becoming.unlisted_of_new : ∀ {S : Type u_1} {g : Nat → S},
+  (∀ (i j : Nat), i < j → g i ≠ g j) → ¬∃ l, ∀ (n : Nat), g n ∈ l
+@Becoming.le_sumOver : ∀ {S : Type u_1} (q : S → Nat) {s : S} {l : List S}, s ∈ l → q s ≤ Becoming.sumOver q l
+@Becoming.never_falls_over : ∀ {S : Type u_1} {q : S → Nat} {g : Nat → S},
+  (∀ (n : Nat), q (g n) ≤ q (g (n + 1))) → ∀ (T k : Nat), q (g T) ≤ q (g (T + k))
+@Becoming.Marks.mono : ∀ {S : Type u_1} {q : S → Nat} {g : Nat → S},
+  Becoming.Marks q g → ∀ (T k : Nat), q (g T) ≤ q (g (T + k))
+@Becoming.Marks.change_not_recurring : ∀ {S : Type u_1} {q : S → Nat} {g : Nat → S},
+  Becoming.Marks q g → ∀ {l : List S}, (∀ (n : Nat), g n ∈ l) → ¬∀ (T : Nat), ∃ k, T ≤ k ∧ g (k + 1) ≠ g k
+@Becoming.not_marks : ∀ {S : Type u_1} {g : Nat → S} {l : List S},
+  (∀ (n : Nat), g n ∈ l) → (∀ (T : Nat), ∃ k, T ≤ k ∧ g (k + 1) ≠ g k) → ∀ (q : S → Nat), ¬Becoming.Marks q g
+@Becoming.Law.orbit_add : ∀ {S : Type u_1} (next : S → S) (s : S) (m n : Nat),
+  Becoming.Law.orbit next s (m + n) = Becoming.Law.orbit next (Becoming.Law.orbit next s m) n
+@Becoming.Law.orbit_shift : ∀ {S : Type u_1} (next : S → S) (s : S) (n : Nat),
+  Becoming.Law.orbit next s (n + 1) = Becoming.Law.orbit next (next s) n
+@Becoming.Law.orbit_mul : ∀ {S : Type u_1} {next : S → S} {s : S} {p : Nat},
+  Becoming.Law.orbit next s p = s → ∀ (k : Nat), Becoming.Law.orbit next s (p * k) = s
+Becoming.Branching.units_length : ∀ (n : Nat), (List.replicate n ()).length = n
+@Becoming.Branching.law_trace_of : ∀ {S : Type u_1} {next : S → S} (as : List Unit) (x t : S),
+  Becoming.Law.orbit next x as.length = t → Generative.Trace (Becoming.Law.process next) x as t
+@Becoming.Branching.law_trace_iff : ∀ {S : Type u_1} {next : S → S} {x t : S} {as : List Unit},
+  Generative.Trace (Becoming.Law.process next) x as t ↔ Becoming.Law.orbit next x as.length = t
+@Becoming.Branching.law_reach_iff : ∀ {S : Type u_1} {next : S → S} {x t : S},
+  Becoming.Reach (Becoming.Law.process next) x t ↔ ∃ n, Becoming.Law.orbit next x n = t
+@Becoming.Law.run_state : ∀ {S : Type u_1} (next : S → S) (s : S),
+  (Becoming.Law.run next s).state = Becoming.Law.orbit next s
+@Becoming.Branching.Merges.not_lossless : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.Merges P → ¬Becoming.Branching.Lossless P
+@Becoming.Branching.Reachable.earlier : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {n : Nat} {s : S},
+  Becoming.Branching.Reachable P (n + 1) s → Becoming.Branching.Reachable P n s
+@Becoming.Branching.lost_stays : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {n : Nat} {s : S},
+  ¬Becoming.Branching.Reachable P n s → ∀ (k : Nat), ¬Becoming.Branching.Reachable P (n + k) s
+@Becoming.Branching.trace_last : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {x s : S} {as : List A},
+  Generative.Trace P x as s → x = s ∨ ∃ y a, Becoming.Reach P x y ∧ P.step y a s
+@Becoming.Branching.Returns.pred : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns P s → ∃ x a, P.step x a s ∧ Becoming.Branching.Returns P x
+@Becoming.Branching.Returns.reachable_from : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns P s →
+    ∀ (n : Nat), ∃ x as, as.length = n ∧ Generative.Trace P x as s ∧ Becoming.Branching.Returns P x
+@Becoming.Branching.Returns.reachable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  Becoming.Branching.Returns P s → ∀ (n : Nat), Becoming.Branching.Reachable P n s
+@Becoming.Branching.Lossless.cancel : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.Lossless P →
+    ∀ (r : Becoming.Run P) (i d : Nat), r.state i = r.state (i + d) → r.state 0 = r.state d
+@Becoming.Branching.Lossless.comes_back : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.Lossless P →
+    ∀ (r : Becoming.Run P) {l : List S}, (∀ (n : Nat), r.state n ∈ l) → ∃ d, 0 < d ∧ r.state d = r.state 0
+@Becoming.Branching.Lossless.recurs : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.Lossless P →
+    ∀ (r : Becoming.Run P) {l : List S},
+      (∀ (n : Nat), r.state n ∈ l) → ∀ (i : Nat), ∃ d, 0 < d ∧ r.state (i + d) = r.state i
+@Becoming.Branching.Lossless.returns : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.Lossless P →
+    ∀ {all : List S}, (∀ (s : S), s ∈ all) → ∀ (r : Becoming.Run P), Becoming.Branching.Returns P (r.state 0)
+@Becoming.Branching.Lossless.no_rise : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.Lossless P →
+    ∀ (r : Becoming.Run P) {l : List S},
+      (∀ (n : Nat), r.state n ∈ l) →
+        ∀ {q : S → Nat},
+          (∀ (n : Nat), q (r.state n) ≤ q (r.state (n + 1))) → ∀ (n : Nat), q (r.state (n + 1)) = q (r.state n)
+@Becoming.Branching.rise_not_lossless : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  (r : Becoming.Run P) {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) →
+    ∀ {q : S → Nat},
+      (∀ (n : Nat), q (r.state n) ≤ q (r.state (n + 1))) →
+        ∀ {n : Nat}, q (r.state n) < q (r.state (n + 1)) → ¬Becoming.Branching.Lossless P
+@Becoming.Branching.Lossless.unlisted : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Branching.Lossless P →
+    ∀ (r : Becoming.Run P), ¬Becoming.Branching.Returns P (r.state 0) → ¬∃ all, ∀ (s : S), s ∈ all
+@Becoming.Law.lossless_iff : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Law.Lossless next ↔ ∀ (x y : S), next x = next y → x = y
+@Becoming.Law.merges_iff : ∀ {S : Type u_1} {next : S → S}, Becoming.Law.Merges next ↔ ∃ x y, x ≠ y ∧ next x = next y
+@Becoming.Law.reachable_iff : ∀ {S : Type u_1} {next : S → S} {n : Nat} {s : S},
+  Becoming.Law.Reachable next n s ↔ ∃ x, Becoming.Law.orbit next x n = s
+@Becoming.Law.keeps_iff : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Law.KeepsPossibilities next ↔ ∀ (n : Nat) (s : S), ∃ x, Becoming.Law.orbit next x n = s
+@Becoming.Law.returns_iff : ∀ {S : Type u_1} {next : S → S} {s : S},
+  Becoming.Law.Returns next s ↔ ∃ p, 0 < p ∧ Becoming.Law.orbit next s p = s
+@Becoming.Law.lost_stays : ∀ {S : Type u_1} {next : S → S} {n : Nat} {s : S},
+  ¬Becoming.Law.Reachable next n s → ∀ (k : Nat), ¬Becoming.Law.Reachable next (n + k) s
+@Becoming.Law.merged_stays : ∀ {S : Type u_1} {next : S → S} {x y : S},
+  next x = next y → ∀ (n : Nat), Becoming.Law.orbit next x (n + 1) = Becoming.Law.orbit next y (n + 1)
+@Becoming.Law.Lossless.cancel : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Law.Lossless next → ∀ {x y : S} (n : Nat), Becoming.Law.orbit next x n = Becoming.Law.orbit next y n → x = y
+@Becoming.Law.lossless_of_returns : ∀ {S : Type u_1} {next : S → S},
+  (∀ (s : S), Becoming.Law.Returns next s) → Becoming.Law.Lossless next
+@Becoming.Law.Returns.undo : ∀ {S : Type u_1} {next : S → S} {s : S},
+  Becoming.Law.Returns next s → ∃ k, Becoming.Law.orbit next (next s) k = s
+@Becoming.Law.Lossless.returns : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Law.Lossless next → ∀ {all : List S}, (∀ (s : S), s ∈ all) → ∀ (s : S), Becoming.Law.Returns next s
+@Becoming.Law.returns_of_reachable : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (s : S), s ∈ all) → ∀ {s : S}, Becoming.Law.Reachable next all.length s → Becoming.Law.Returns next s
+@Becoming.Law.Lossless.no_rise : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Law.Lossless next →
+    ∀ {all : List S},
+      (∀ (s : S), s ∈ all) →
+        ∀ {q : S → Nat} {s : S},
+          (∀ (n : Nat), q (Becoming.Law.orbit next s n) ≤ q (Becoming.Law.orbit next s (n + 1))) →
+            ∀ (n : Nat), q (Becoming.Law.orbit next s n) = q s
+@Becoming.Law.rise_not_lossless : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (s : S), s ∈ all) →
+    ∀ {q : S → Nat} {s : S},
+      (∀ (n : Nat), q (Becoming.Law.orbit next s n) ≤ q (Becoming.Law.orbit next s (n + 1))) →
+        ∀ {n : Nat},
+          q (Becoming.Law.orbit next s n) < q (Becoming.Law.orbit next s (n + 1)) → ¬Becoming.Law.Lossless next
+@Becoming.Law.lossless_iff_returns : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (s : S), s ∈ all) → (Becoming.Law.Lossless next ↔ ∀ (s : S), Becoming.Law.Returns next s)
+@Becoming.Law.returns_iff_keeps : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (s : S), s ∈ all) → ((∀ (s : S), Becoming.Law.Returns next s) ↔ Becoming.Law.KeepsPossibilities next)
+@Becoming.Law.lossless_of_reachable : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (s : S), s ∈ all) → (∀ (s : S), Becoming.Law.Reachable next all.length s) → Becoming.Law.Lossless next
+@Becoming.Law.Merges.loses : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Law.Merges next →
+    ∀ {all : List S}, (∀ (s : S), s ∈ all) → ¬∀ (s : S), Becoming.Law.Reachable next all.length s
+@Becoming.Law.Lossless.unlisted : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Law.Lossless next → ∀ {s : S}, ¬Becoming.Law.Returns next s → ¬∃ all, ∀ (x : S), x ∈ all
+Becoming.Law.succ_orbit : ∀ (s n : Nat), Becoming.Law.orbit Nat.succ s n = s + n
+Becoming.Law.succ_open : Becoming.Law.Lossless Nat.succ ∧
+  (∀ (s : Nat), ¬Becoming.Law.Returns Nat.succ s) ∧
+    ¬Becoming.Law.Reachable Nat.succ 1 0 ∧
+      ∀ (s n : Nat), Becoming.Law.orbit Nat.succ s n < Becoming.Law.orbit Nat.succ s (n + 1)
+Becoming.Law.pred_orbit : ∀ (n t : Nat), Becoming.Law.orbit Nat.pred (t + n) n = t
+Becoming.Law.pred_open : Becoming.Law.Merges Nat.pred ∧ Becoming.Law.KeepsPossibilities Nat.pred
+@Becoming.Law.withHistory_lossless : ∀ {S : Type u_1} (next : S → S),
+  Becoming.Law.Lossless (Becoming.Law.withHistory next)
+@Becoming.Law.past_length : ∀ {S : Type u_1} (next : S → S) (h : S × List S) (n : Nat),
+  (Becoming.Law.orbit (Becoming.Law.withHistory next) h n).snd.length = h.snd.length + n
+@Becoming.Law.present_orbit : ∀ {S : Type u_1} (next : S → S) (h : S × List S) (n : Nat),
+  (Becoming.Law.orbit (Becoming.Law.withHistory next) h n).fst = Becoming.Law.orbit next h.fst n
+@Becoming.Law.withHistory_new : ∀ {S : Type u_1} (next : S → S) (h : S × List S) {i j : Nat},
+  i < j →
+    Becoming.Law.orbit (Becoming.Law.withHistory next) h i ≠ Becoming.Law.orbit (Becoming.Law.withHistory next) h j
+@Becoming.Law.withHistory_never_returns : ∀ {S : Type u_1} (next : S → S) (h : S × List S),
+  ¬Becoming.Law.Returns (Becoming.Law.withHistory next) h
+@Becoming.Law.withHistory_loses_beginning : ∀ {S : Type u_1} (next : S → S) (s : S) (n : Nat),
+  ¬Becoming.Law.Reachable (Becoming.Law.withHistory next) (n + 1) (s, [])
+@Becoming.Law.withHistory_unlisted : ∀ {S : Type u_1} (next : S → S) (h : S × List S),
+  ¬∃ l, ∀ (n : Nat), Becoming.Law.orbit (Becoming.Law.withHistory next) h n ∈ l
+@Becoming.Law.present_forgets : ∀ {S : Type u_1} (next : S → S) {s : S} {l : List S},
+  (∀ (n : Nat), Becoming.Law.orbit next s n ∈ l) →
+    ∀ (T : Nat),
+      ∃ i j,
+        T ≤ i ∧
+          i < j ∧
+            (Becoming.Law.orbit (Becoming.Law.withHistory next) (s, []) i).fst =
+                (Becoming.Law.orbit (Becoming.Law.withHistory next) (s, []) j).fst ∧
+              Becoming.Law.orbit (Becoming.Law.withHistory next) (s, []) i ≠
+                Becoming.Law.orbit (Becoming.Law.withHistory next) (s, []) j
+@Becoming.Law.return_keeps_history : ∀ {S : Type u_1} {next : S → S} {s : S} {p : Nat},
+  0 < p →
+    Becoming.Law.orbit next s p = s →
+      ∀ (past : List S),
+        (Becoming.Law.orbit (Becoming.Law.withHistory next) (s, past) p).fst = s ∧
+          Becoming.Law.orbit (Becoming.Law.withHistory next) (s, past) p ≠ (s, past)

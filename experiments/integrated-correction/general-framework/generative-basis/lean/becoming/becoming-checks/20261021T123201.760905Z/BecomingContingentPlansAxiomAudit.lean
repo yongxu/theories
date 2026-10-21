@@ -1,0 +1,27 @@
+import Becoming.ContingentPlans
+#print axioms Becoming.ContingentPlans.Plan
+#print axioms Becoming.ContingentPlans.branch
+#print axioms Becoming.ContingentPlans.Interface
+#print axioms Becoming.ContingentPlans.run
+#print axioms Becoming.ContingentPlans.passes
+#print axioms Becoming.ContingentPlans.valid
+#print axioms Becoming.ContingentPlans.choose
+#print axioms Becoming.ContingentPlans.repertoire
+#print axioms Becoming.ContingentPlans.mem_repertoire
+#print axioms Becoming.ContingentPlans.run_none
+#print axioms Becoming.ContingentPlans.run_some
+#print axioms Becoming.ContingentPlans.process
+#print axioms Becoming.ContingentPlans.moves
+#print axioms Becoming.ContingentPlans.Completes
+#print axioms Becoming.ContingentPlans.run_iff_trace
+#print axioms Becoming.ContingentPlans.passes_iff_completes
+#print axioms Becoming.ContingentPlans.valid_iff
+#print axioms Becoming.ContingentPlans.valid_iff_passes
+#print axioms Becoming.ContingentPlans.chosen_sound
+#print axioms Becoming.ContingentPlans.empty_belief_none
+#print axioms Becoming.ContingentPlans.selected_executes
+#print axioms Becoming.ContingentPlans.selected_iff_completes
+#print axioms Becoming.ContingentPlans.none_selected_iff
+#print axioms Becoming.ContingentPlans.selected_completes
+#print axioms Becoming.ContingentPlans.branch_congr
+#print axioms Becoming.ContingentPlans.branch_incompatible

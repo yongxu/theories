@@ -1,0 +1,29 @@
+@Becoming.ChanceFloors.mass_dirac_pos_iff : ∀ {Ω : Type} [inst : DecidableEq Ω] (domain : List Ω) (h : Ω)
+  (event : Ω → Bool), 0 < Becoming.mass domain (Becoming.dirac h) event ↔ h ∈ domain ∧ event h = true
+@Becoming.ChanceFloors.fulfillment_gives_chance_floor : ∀ {Ω : Type} (domain : List Ω) (weight : Ω → Nat)
+  (demand oldWorks newWorks : Ω → Bool),
+  0 < Becoming.ChanceFloors.total domain weight →
+    Becoming.ChanceFloors.Fulfilled domain demand oldWorks newWorks →
+      0 < Becoming.ChanceFloors.total domain weight ∧
+        Becoming.mass domain weight (Becoming.ChanceFloors.target demand oldWorks) ≤
+            Becoming.mass domain weight newWorks ∧
+          Becoming.mass domain weight newWorks ≤ Becoming.ChanceFloors.total domain weight
+@Becoming.ChanceFloors.repair_covers_target_and_candidate : ∀ {Ω : Type} (domain : List Ω)
+  (demand oldWorks candidate : Ω → Bool),
+  Becoming.ChanceFloors.Fulfilled domain demand oldWorks (Becoming.ChanceFloors.repair demand oldWorks candidate) ∧
+    Becoming.IncludedOn domain candidate (Becoming.ChanceFloors.repair demand oldWorks candidate)
+@Becoming.ChanceFloors.repair_adds_new_protection : ∀ {Ω : Type} (domain : List Ω) (weight : Ω → Nat)
+  (demand oldWorks candidate : Ω → Bool) (h : Ω),
+  h ∈ domain →
+    0 < weight h →
+      Becoming.ChanceFloors.target demand oldWorks h = false →
+        candidate h = true →
+          Becoming.mass domain weight (Becoming.ChanceFloors.target demand oldWorks) <
+            Becoming.mass domain weight (Becoming.ChanceFloors.repair demand oldWorks candidate)
+Becoming.ChanceFloors.positive_chance_can_miss_due_protection : (Becoming.ChanceFloors.total [false, true] fun x => 1) =
+    2 ∧
+  Becoming.mass [false, true] (fun x => 1) (Becoming.ChanceFloors.target (fun x => true) not) = 1 ∧
+    (Becoming.mass [false, true] (fun x => 1) fun h => h) = 1 ∧
+      (¬Becoming.ChanceFloors.Fulfilled [false, true] (fun x => true) not fun h => h) ∧
+        Becoming.ChanceFloors.target (fun x => true) not false = true ∧
+          (fun h => h) false = false ∧ 0 < (fun x => 1) false

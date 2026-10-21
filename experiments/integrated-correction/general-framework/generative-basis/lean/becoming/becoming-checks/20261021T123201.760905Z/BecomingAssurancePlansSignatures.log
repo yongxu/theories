@@ -1,0 +1,110 @@
+@Becoming.AssurancePlans.Trace.determined_end : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ {s t r : S} {plan : List A}, Generative.Trace P s plan t → Generative.Trace P s plan r → t = r
+@Becoming.AssurancePlans.every_end_of_some_end : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ {s : S} {plan : List A} {goal : S → Prop},
+      (∃ t, Generative.Trace P s plan t ∧ goal t) → ∀ (t : S), Generative.Trace P s plan t → goal t
+Becoming.AssurancePlans.Open.some_not_every : (∃ t,
+    Generative.Trace Becoming.AssurancePlans.Open.process false [()] t ∧ t = true) ∧
+  ¬∀ (t : Bool), Generative.Trace Becoming.AssurancePlans.Open.process false [()] t → t = true
+Becoming.AssurancePlans.Shut.no_trace : ¬Generative.Feasible Becoming.AssurancePlans.Shut.process false [()]
+Becoming.AssurancePlans.Shut.every_end_vacuous : ∀ (t : Bool),
+  Generative.Trace Becoming.AssurancePlans.Shut.process false [()] t → False
+Becoming.AssurancePlans.Shut.no_end : ¬∃ t, Generative.Trace Becoming.AssurancePlans.Shut.process false [()] t ∧ True
+@Becoming.AssurancePlans.completes_congr : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {safe : S → A → S → Prop} {goal goal' : S → Prop},
+  (∀ (s : S), goal s ↔ goal' s) →
+    ∀ (plan : List A) (s : S),
+      Generative.InquirySufficiency.Completes P safe goal s plan ↔
+        Generative.InquirySufficiency.Completes P safe goal' s plan
+@Becoming.AssurancePlans.completes_itinerary : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {respond : S → A}
+  {K : S → Prop},
+  (∀ (x : S), K x → K (f x (respond x))) →
+    ∀ (k : Nat) (s : S),
+      K s →
+        Generative.InquirySufficiency.Completes (Becoming.Assurance.ofMap f) Becoming.Assurance.free K s
+          (Becoming.AssurancePlans.itinerary f respond k s)
+Becoming.AssurancePlans.Regulation.opposite_moves : Generative.InquirySufficiency.Completes
+    Becoming.AssurancePlans.Regulation.process Becoming.Assurance.free Becoming.AssurancePlans.Regulation.Band 1
+    [Becoming.AssurancePlans.Regulation.Move.add] ∧
+  ¬Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Regulation.process Becoming.Assurance.free
+        Becoming.AssurancePlans.Regulation.Band 1 [Becoming.AssurancePlans.Regulation.Move.remove] ∧
+    Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Regulation.process Becoming.Assurance.free
+        Becoming.AssurancePlans.Regulation.Band 2 [Becoming.AssurancePlans.Regulation.Move.remove] ∧
+      ¬Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Regulation.process Becoming.Assurance.free
+          Becoming.AssurancePlans.Regulation.Band 2 [Becoming.AssurancePlans.Regulation.Move.add]
+@Becoming.AssurancePlans.Regulation.no_merged_move : ∀ {O : Type u_1} (reading : Nat → O),
+  reading 1 = reading 2 →
+    ∀ (choose : O → Becoming.AssurancePlans.Regulation.Move),
+      ¬(Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Regulation.process Becoming.Assurance.free
+            Becoming.AssurancePlans.Regulation.Band 1 [choose (reading 1)] ∧
+          Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Regulation.process Becoming.Assurance.free
+            Becoming.AssurancePlans.Regulation.Band 2 [choose (reading 2)])
+Becoming.AssurancePlans.Regulation.respond_keeps : ∀ (n : Nat),
+  Becoming.AssurancePlans.Regulation.Band n →
+    Becoming.AssurancePlans.Regulation.Band
+      (Becoming.AssurancePlans.Regulation.update n (Becoming.AssurancePlans.Regulation.respond n))
+Becoming.AssurancePlans.Regulation.kept_along : ∀ (k n : Nat),
+  Becoming.AssurancePlans.Regulation.Band n →
+    Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Regulation.process Becoming.Assurance.free
+      Becoming.AssurancePlans.Regulation.Band n
+      (Becoming.AssurancePlans.itinerary Becoming.AssurancePlans.Regulation.update
+        Becoming.AssurancePlans.Regulation.respond k n)
+Becoming.AssurancePlans.Regulation.next_move_changes : Becoming.AssurancePlans.Regulation.process.step 1
+    Becoming.AssurancePlans.Regulation.Move.add 2 ∧
+  Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Regulation.process Becoming.Assurance.free
+      Becoming.AssurancePlans.Regulation.Band 1 [Becoming.AssurancePlans.Regulation.Move.add] ∧
+    ¬Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Regulation.process Becoming.Assurance.free
+          Becoming.AssurancePlans.Regulation.Band 1
+          [Becoming.AssurancePlans.Regulation.Move.add, Becoming.AssurancePlans.Regulation.Move.add] ∧
+      Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Regulation.process Becoming.Assurance.free
+        Becoming.AssurancePlans.Regulation.Band 1
+        [Becoming.AssurancePlans.Regulation.Move.add, Becoming.AssurancePlans.Regulation.Move.remove]
+Becoming.AssurancePlans.Routes.cases3 : ∀ (m : Fin 3),
+  m = Becoming.AssurancePlans.Routes.zero ∨
+    m = Becoming.AssurancePlans.Routes.one ∨ m = Becoming.AssurancePlans.Routes.two
+Becoming.AssurancePlans.Routes.completes_iff : ∀ (m a : Becoming.AssurancePlans.Routes.Mode),
+  Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Routes.process Becoming.Assurance.free
+      Becoming.AssurancePlans.Routes.Reached (m, false) [a] ↔
+    a ≠ m
+Becoming.AssurancePlans.Routes.left_adequate : Becoming.AssurancePlans.Routes.Adequate
+  Becoming.AssurancePlans.Routes.leftReading Becoming.AssurancePlans.Routes.leftRespond
+Becoming.AssurancePlans.Routes.right_adequate : Becoming.AssurancePlans.Routes.Adequate
+  Becoming.AssurancePlans.Routes.rightReading Becoming.AssurancePlans.Routes.rightRespond
+Becoming.AssurancePlans.Routes.adequate_merges_outcomes : Becoming.AssurancePlans.Routes.Adequate
+    Becoming.AssurancePlans.Routes.leftReading Becoming.AssurancePlans.Routes.leftRespond ∧
+  Becoming.AssurancePlans.Routes.leftReading Becoming.AssurancePlans.Routes.one =
+      Becoming.AssurancePlans.Routes.leftReading Becoming.AssurancePlans.Routes.two ∧
+    ¬Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Routes.process Becoming.Assurance.free
+          Becoming.AssurancePlans.Routes.Reached (Becoming.AssurancePlans.Routes.one, false)
+          [Becoming.AssurancePlans.Routes.one] ∧
+      Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Routes.process Becoming.Assurance.free
+        Becoming.AssurancePlans.Routes.Reached (Becoming.AssurancePlans.Routes.two, false)
+        [Becoming.AssurancePlans.Routes.one]
+Becoming.AssurancePlans.Routes.pairwise_common : ∀ (m n : Becoming.AssurancePlans.Routes.Mode),
+  ∃ a,
+    Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Routes.process Becoming.Assurance.free
+        Becoming.AssurancePlans.Routes.Reached (m, false) [a] ∧
+      Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Routes.process Becoming.Assurance.free
+        Becoming.AssurancePlans.Routes.Reached (n, false) [a]
+Becoming.AssurancePlans.Routes.no_common : ¬∃ a,
+    ∀ (m : Fin 3),
+      Generative.InquirySufficiency.Completes Becoming.AssurancePlans.Routes.process Becoming.Assurance.free
+        Becoming.AssurancePlans.Routes.Reached (m, false) [a]
+@Becoming.AssurancePlans.Routes.common_coarsening_constant : ∀ {O : Type u_1}
+  (q : Becoming.AssurancePlans.Routes.Mode → O) (fromLeft fromRight : Bool → O),
+  (∀ (m : Becoming.AssurancePlans.Routes.Mode), q m = fromLeft (Becoming.AssurancePlans.Routes.leftReading m)) →
+    (∀ (m : Becoming.AssurancePlans.Routes.Mode), q m = fromRight (Becoming.AssurancePlans.Routes.rightReading m)) →
+      ∀ (m : Becoming.AssurancePlans.Routes.Mode), q m = q Becoming.AssurancePlans.Routes.zero
+@Becoming.AssurancePlans.Routes.common_coarsening_inadequate : ∀ {O : Type u_1}
+  (q : Becoming.AssurancePlans.Routes.Mode → O) (fromLeft fromRight : Bool → O),
+  (∀ (m : Becoming.AssurancePlans.Routes.Mode), q m = fromLeft (Becoming.AssurancePlans.Routes.leftReading m)) →
+    (∀ (m : Becoming.AssurancePlans.Routes.Mode), q m = fromRight (Becoming.AssurancePlans.Routes.rightReading m)) →
+      ∀ (respond : O → Fin 3), ¬Becoming.AssurancePlans.Routes.Adequate q respond
+@Becoming.AssurancePlans.Routes.no_coarsest_adequate : ∀ {O : Type u_1},
+  ¬∃ q,
+      (∃ respond, Becoming.AssurancePlans.Routes.Adequate q respond) ∧
+        ∀ (p : Becoming.AssurancePlans.Routes.Mode → Bool),
+          (∃ respond, Becoming.AssurancePlans.Routes.Adequate p respond) →
+            ∃ forget, ∀ (m : Becoming.AssurancePlans.Routes.Mode), q m = forget (p m)

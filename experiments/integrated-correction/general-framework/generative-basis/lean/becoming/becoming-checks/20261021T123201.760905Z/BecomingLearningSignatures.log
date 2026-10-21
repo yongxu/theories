@@ -1,0 +1,289 @@
+@Becoming.Learning.prefix_length : ∀ {O : Type u_1} (o : Nat → O) (t : Nat), (Becoming.Learning.prefixOf o t).length = t
+@Becoming.Learning.prefix_congr : ∀ {O : Type u_1} {o o' : Nat → O} {t : Nat},
+  (∀ (n : Nat), n < t → o n = o' n) → Becoming.Learning.prefixOf o t = Becoming.Learning.prefixOf o' t
+@Becoming.Learning.back_prefix : ∀ {O : Type u_1} (o : Nat → O) (u k : Nat),
+  Becoming.Copying.nth (Becoming.Learning.prefixOf o (u + k + 1)) k = some (o u)
+@Becoming.Learning.back_made : ∀ {O : Type u_1} (o : Nat → O) {k t : Nat},
+  k < t → ∃ v, Becoming.Copying.nth (Becoming.Learning.prefixOf o t) k = some v
+@Becoming.Learning.eq_of_not_missed : ∀ {O : Type u_1} [DecidableEq O] {w v : O},
+  ¬Becoming.Learning.Misses (some w) v → w = v
+@Becoming.Learning.not_missed_self : ∀ {O : Type u_1} {v : O}, ¬Becoming.Learning.Misses (some v) v
+@Becoming.Learning.holdFrom_before : ∀ {O : Type u_1} (o : Nat → O) {t : Nat} (x : O) {n : Nat},
+  n < t → Becoming.Learning.holdFrom o t x n = o n
+@Becoming.Learning.holdFrom_after : ∀ {O : Type u_1} (o : Nat → O) {t : Nat} (x : O) {n : Nat},
+  t ≤ n → Becoming.Learning.holdFrom o t x n = x
+@Becoming.Learning.no_prefix_fixes_next : ∀ {O : Type u_1} (pred : List O → Option O) (o : Nat → O) (t : Nat) {x y : O},
+  x ≠ y →
+    ∀ {w : O},
+      pred (Becoming.Learning.prefixOf o t) = some w →
+        Becoming.Learning.prefixOf (Becoming.Learning.holdFrom o t x) t = Becoming.Learning.prefixOf o t ∧
+          Becoming.Learning.prefixOf (Becoming.Learning.holdFrom o t y) t = Becoming.Learning.prefixOf o t ∧
+            Becoming.Learning.holdFrom o t x t = x ∧
+              Becoming.Learning.holdFrom o t y t = y ∧
+                ¬(¬Becoming.Learning.MissesAt pred (Becoming.Learning.holdFrom o t x) t ∧
+                    ¬Becoming.Learning.MissesAt pred (Becoming.Learning.holdFrom o t y) t)
+@Becoming.Learning.claim_missed_on_one : ∀ {O : Type u_1} [DecidableEq O] (pred : List O → Option O) (o : Nat → O)
+  (t : Nat) {x y : O},
+  x ≠ y →
+    ∀ {w : O},
+      pred (Becoming.Learning.prefixOf o t) = some w →
+        Becoming.Learning.MissesAt pred (Becoming.Learning.holdFrom o t x) t ∨
+          Becoming.Learning.MissesAt pred (Becoming.Learning.holdFrom o t y) t
+@Becoming.Learning.prefix_diagonal : ∀ {O : Type u_1} (pred : List O → Option O) (other : O → O) (x : O) (t : Nat),
+  Becoming.Learning.prefixOf (Becoming.Learning.diagonal pred other x) t =
+    Becoming.Law.orbit (Becoming.Learning.answerStep pred other x) [] t
+@Becoming.Learning.diagonal_misses : ∀ {O : Type u_1} (pred : List O → Option O) {other : O → O},
+  (∀ (v : O), other v ≠ v) →
+    ∀ (x : O) {t : Nat} {w : O},
+      pred (Becoming.Learning.prefixOf (Becoming.Learning.diagonal pred other x) t) = some w →
+        Becoming.Learning.MissesAt pred (Becoming.Learning.diagonal pred other x) t
+@Becoming.Learning.diagonal_unrested : ∀ {O : Type u_1} (pred : List O → Option O) {other : O → O},
+  (∀ (v : O), other v ≠ v) →
+    ∀ (x : O),
+      ¬∃ T,
+          ∀ (t : Nat),
+            T ≤ t →
+              pred (Becoming.Learning.prefixOf (Becoming.Learning.diagonal pred other x) t) =
+                some (Becoming.Learning.diagonal pred other x t)
+@Becoming.Learning.answer_orbit_length : ∀ {O : Type u_1} (pred : List O → Option O) (other : O → O) (x : O) (t : Nat),
+  (Becoming.Law.orbit (Becoming.Learning.answerStep pred other x) [] t).length = t
+@Becoming.Learning.diagonal_open : ∀ {O : Type u_1} (pred : List O → Option O) (other : O → O) (x : O),
+  ¬∃ l, ∀ (n : Nat), Becoming.Law.orbit (Becoming.Learning.answerStep pred other x) [] n ∈ l
+@Becoming.Learning.swapTo_moves : ∀ {O : Type u_1} [inst : DecidableEq O] {x y : O},
+  x ≠ y → ∀ (v : O), Becoming.Learning.swapTo x y v ≠ v
+@Becoming.Learning.index_missed : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O} {o : Nat → O}
+  {t : Nat},
+  Becoming.Learning.MissesAt (Becoming.Learning.byElimination H) o t →
+    Becoming.Learning.index H o (t + 1) = Becoming.Learning.index H o t + 1
+@Becoming.Learning.index_kept : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O} {o : Nat → O}
+  {t : Nat},
+  ¬Becoming.Learning.MissesAt (Becoming.Learning.byElimination H) o t →
+    Becoming.Learning.index H o (t + 1) = Becoming.Learning.index H o t
+@Becoming.Learning.index_succ_le : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O} {o : Nat → O}
+  (t : Nat), Becoming.Learning.index H o (t + 1) ≤ Becoming.Learning.index H o t + 1
+@Becoming.Learning.index_le_succ : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O} {o : Nat → O}
+  (t : Nat), Becoming.Learning.index H o t ≤ Becoming.Learning.index H o (t + 1)
+@Becoming.Learning.index_mono : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O} {o : Nat → O}
+  (t d : Nat), Becoming.Learning.index H o t ≤ Becoming.Learning.index H o (t + d)
+@Becoming.Learning.index_mono_le : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O} {o : Nat → O}
+  {T t : Nat}, T ≤ t → Becoming.Learning.index H o T ≤ Becoming.Learning.index H o t
+@Becoming.Learning.index_le_of_accords : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O}
+  {o : Nat → O} {j : Nat}, Becoming.Learning.Accords (H j) o → ∀ (t : Nat), Becoming.Learning.index H o t ≤ j
+@Becoming.Learning.missed_before : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O} {o : Nat → O}
+  (t k : Nat),
+  k < Becoming.Learning.index H o t →
+    ∃ s, s < t ∧ Becoming.Learning.index H o s = k ∧ Becoming.Learning.MissesAt (H k) o s
+@Becoming.Learning.index_unbounded : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O}
+  {o : Nat → O},
+  (∀ (T : Nat), ∃ t, T ≤ t ∧ Becoming.Learning.MissesAt (Becoming.Learning.byElimination H) o t) →
+    ∀ (m : Nat), ∃ T, m ≤ Becoming.Learning.index H o T
+@Becoming.Learning.misses_not_recurring : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O}
+  {o : Nat → O} {j : Nat},
+  Becoming.Learning.Accords (H j) o →
+    ¬∀ (T : Nat), ∃ t, T ≤ t ∧ Becoming.Learning.MissesAt (Becoming.Learning.byElimination H) o t
+@Becoming.Learning.byElimination_through_prefix : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O}
+  {o o' : Nat → O} {t : Nat},
+  Becoming.Learning.prefixOf o t = Becoming.Learning.prefixOf o' t →
+    Becoming.Learning.index H o t = Becoming.Learning.index H o' t ∧
+      Becoming.Learning.byElimination H (Becoming.Learning.prefixOf o t) =
+        Becoming.Learning.byElimination H (Becoming.Learning.prefixOf o' t)
+@Becoming.Learning.stable_unrefuted : ∀ {f : Nat → Nat},
+  (∀ (t : Nat), f t ≤ f (t + 1)) → ∀ {K : Nat}, (∀ (t : Nat), f t ≤ K) → ¬¬∃ T, ∀ (t : Nat), T ≤ t → f t = f T
+@Becoming.Learning.lasso_of_held : ∀ {O : Type u_1} {S : Type u_2} {next : S → S} {s : S} {l : List S},
+  (∀ (n : Nat), Becoming.Law.orbit next s n ∈ l) →
+    ∀ (reg : S → O),
+      ∃ i q, i + q + 1 ≤ l.length ∧ Becoming.Learning.Lasso (fun n => reg (Becoming.Law.orbit next s n)) i q
+@Becoming.Learning.lasso_positions : ∀ {O : Type u_1} {o : Nat → O} {i q : Nat},
+  Becoming.Learning.Lasso o i q →
+    ∀ (n : Nat),
+      Becoming.Law.orbit (Becoming.Learning.lassoNext i q) 0 n ≤ i + q ∧
+        ∀ (k : Nat), o (Becoming.Law.orbit (Becoming.Learning.lassoNext i q) 0 n + k) = o (n + k)
+@Becoming.Learning.lasso_realized : ∀ {O : Type u_1} {o : Nat → O} {i q : Nat},
+  Becoming.Learning.Lasso o i q →
+    (∀ (n : Nat), Becoming.Law.orbit (Becoming.Learning.lassoNext i q) 0 n ∈ Becoming.downFrom (i + q)) ∧
+      ∀ (n : Nat), o (Becoming.Law.orbit (Becoming.Learning.lassoNext i q) 0 n) = o n
+@Becoming.Learning.holdFrom_lasso : ∀ {O : Type u_1} (o : Nat → O) (t : Nat) (x : O),
+  Becoming.Learning.Lasso (Becoming.Learning.holdFrom o t x) t 0
+@Becoming.Learning.no_prefix_fixes_next_finite : ∀ {O : Type u_1} (pred : List O → Option O) (o : Nat → O) (t : Nat)
+  {x y : O},
+  x ≠ y →
+    ∀ {w : O},
+      pred (Becoming.Learning.prefixOf o t) = some w →
+        Becoming.Learning.Lasso (Becoming.Learning.holdFrom o t x) t 0 ∧
+          Becoming.Learning.Lasso (Becoming.Learning.holdFrom o t y) t 0 ∧
+            Becoming.Learning.prefixOf (Becoming.Learning.holdFrom o t x) t = Becoming.Learning.prefixOf o t ∧
+              Becoming.Learning.prefixOf (Becoming.Learning.holdFrom o t y) t = Becoming.Learning.prefixOf o t ∧
+                ¬(¬Becoming.Learning.MissesAt pred (Becoming.Learning.holdFrom o t x) t ∧
+                    ¬Becoming.Learning.MissesAt pred (Becoming.Learning.holdFrom o t y) t)
+@Becoming.Learning.lasso_claims : ∀ {O : Type u_1} {o : Nat → O} {h : Nat × Nat} {t : Nat},
+  h.fst + h.snd + 1 ≤ t →
+    Becoming.Learning.lasso h (Becoming.Learning.prefixOf o t) =
+      Becoming.Copying.nth (Becoming.Learning.prefixOf o t) h.snd
+@Becoming.Learning.lasso_silent : ∀ {O : Type u_1} {o : Nat → O} {h : Nat × Nat} {t : Nat},
+  t < h.fst + h.snd + 1 → Becoming.Learning.lasso h (Becoming.Learning.prefixOf o t) = none
+@Becoming.Learning.lasso_accords : ∀ {O : Type u_1} {o : Nat → O} {i q : Nat},
+  Becoming.Learning.Lasso o i q → Becoming.Learning.Accords (Becoming.Learning.lasso (i, q)) o
+Becoming.Learning.pairAt_walk : ∀ (j : Nat) {k i q : Nat},
+  Becoming.Learning.pairAt k = (i + j, q) → Becoming.Learning.pairAt (k + j) = (i, q + j)
+Becoming.Learning.pairAt_tri : ∀ (m : Nat), Becoming.Learning.pairAt (Becoming.Learning.tri m) = (m, 0)
+Becoming.Learning.pairAt_place : ∀ (i q : Nat), Becoming.Learning.pairAt (Becoming.Learning.tri (i + q) + q) = (i, q)
+Becoming.Learning.diag_next : ∀ (h : Nat × Nat),
+  Becoming.Learning.diag h ≤ Becoming.Learning.diag (Becoming.Learning.nextPair h)
+Becoming.Learning.diag_mono : ∀ (k d : Nat),
+  Becoming.Learning.diag (Becoming.Learning.pairAt k) ≤ Becoming.Learning.diag (Becoming.Learning.pairAt (k + d))
+@Becoming.Learning.diag_le : ∀ {k k' : Nat},
+  k ≤ k' → Becoming.Learning.diag (Becoming.Learning.pairAt k) ≤ Becoming.Learning.diag (Becoming.Learning.pairAt k')
+Becoming.Learning.tri_mono : ∀ (m d : Nat), Becoming.Learning.tri m ≤ Becoming.Learning.tri (m + d)
+Becoming.Learning.place_lt : ∀ (i q : Nat), Becoming.Learning.tri (i + q) + q < Becoming.Learning.tri (i + q + 1)
+@Becoming.Learning.lasso_byElimination_bounded : ∀ {O : Type u_1} [inst : DecidableEq O] {o : Nat → O} {i q : Nat},
+  Becoming.Learning.Lasso o i q →
+    (∀ (t : Nat), Becoming.Learning.index Becoming.Learning.lassos o t ≤ Becoming.Learning.tri (i + q) + q) ∧
+      (∀ (t : Nat),
+          i + q + 1 ≤ t →
+            ∃ v, Becoming.Learning.byElimination Becoming.Learning.lassos (Becoming.Learning.prefixOf o t) = some v) ∧
+        ¬∀ (T : Nat),
+            ∃ t, T ≤ t ∧ Becoming.Learning.MissesAt (Becoming.Learning.byElimination Becoming.Learning.lassos) o t
+@Becoming.Learning.rest_unrefuted : ∀ {O : Type u_1} [inst : DecidableEq O] {o : Nat → O} {i q : Nat},
+  Becoming.Learning.Lasso o i q →
+    ¬¬∃ T,
+          ∀ (t : Nat),
+            T ≤ t →
+              Becoming.Learning.byElimination Becoming.Learning.lassos (Becoming.Learning.prefixOf o t) = some (o t)
+@Becoming.Learning.lasso_of_rest : ∀ {O : Type u_1} [inst : DecidableEq O] {o : Nat → O} {T : Nat},
+  (∀ (t : Nat),
+      T ≤ t → Becoming.Learning.byElimination Becoming.Learning.lassos (Becoming.Learning.prefixOf o t) = some (o t)) →
+    ∃ i q, Becoming.Learning.Lasso o i q
+@Becoming.Learning.held_byElimination_bounded : ∀ {O : Type u_1} [inst : DecidableEq O] {S : Type u_2} {next : S → S}
+  {s : S} {l : List S},
+  (∀ (n : Nat), Becoming.Law.orbit next s n ∈ l) →
+    ∀ (reg : S → O),
+      (∀ (t : Nat),
+          Becoming.Learning.index Becoming.Learning.lassos (fun n => reg (Becoming.Law.orbit next s n)) t <
+            Becoming.Learning.tri l.length) ∧
+        (∀ (t : Nat),
+            l.length ≤ t →
+              ∃ v,
+                Becoming.Learning.byElimination Becoming.Learning.lassos
+                    (Becoming.Learning.prefixOf (fun n => reg (Becoming.Law.orbit next s n)) t) =
+                  some v) ∧
+          ¬∀ (T : Nat),
+              ∃ t,
+                T ≤ t ∧
+                  Becoming.Learning.MissesAt (Becoming.Learning.byElimination Becoming.Learning.lassos)
+                    (fun n => reg (Becoming.Law.orbit next s n)) t
+@Becoming.Learning.held_rest_unrefuted : ∀ {O : Type u_1} [inst : DecidableEq O] {S : Type u_2} {next : S → S} {s : S}
+  {l : List S},
+  (∀ (n : Nat), Becoming.Law.orbit next s n ∈ l) →
+    ∀ (reg : S → O),
+      ¬¬∃ T,
+            ∀ (t : Nat),
+              T ≤ t →
+                Becoming.Learning.byElimination Becoming.Learning.lassos
+                    (Becoming.Learning.prefixOf (fun n => reg (Becoming.Law.orbit next s n)) t) =
+                  some (reg (Becoming.Law.orbit next s t))
+@Becoming.Learning.diagonal_not_lasso : ∀ {O : Type u_1} [inst : DecidableEq O] {other : O → O},
+  (∀ (v : O), other v ≠ v) →
+    ∀ (x : O) {i q : Nat},
+      ¬Becoming.Learning.Lasso
+          (Becoming.Learning.diagonal (Becoming.Learning.byElimination Becoming.Learning.lassos) other x) i q
+@Becoming.Learning.merged_bound : ∀ {O : Type u_1} [inst : DecidableEq O] {o : Nat → O}
+  (G : Nat → Nat → List O → Option O) {c j : Nat},
+  Becoming.Learning.Accords (G c j) o →
+    ∀ (t : Nat), Becoming.Learning.index (Becoming.Learning.merged G) o t ≤ Becoming.Learning.tri (c + j) + j
+@Becoming.Learning.merged_unrested : ∀ {O : Type u_1} [inst : DecidableEq O] (G : Nat → Nat → List O → Option O)
+  {other : O → O},
+  (∀ (v : O), other v ≠ v) →
+    ∀ (x : O),
+      ¬∃ T,
+          ∀ (t : Nat),
+            T ≤ t →
+              Becoming.Learning.byElimination (Becoming.Learning.merged G)
+                  (Becoming.Learning.prefixOf
+                    (Becoming.Learning.diagonal (Becoming.Learning.byElimination (Becoming.Learning.merged G)) other x)
+                    t) =
+                some
+                  (Becoming.Learning.diagonal (Becoming.Learning.byElimination (Becoming.Learning.merged G)) other x t)
+@Becoming.Learning.lumped_determines : ∀ {I : Type u_1} {V : Type u_2} {K : Type u_3} {π : I → K} {D : I → Prop}
+  {x : I}, (∃ d, D d ∧ π d = π x) → Becoming.Learning.Determines (Becoming.Learning.Lumped π) D x
+@Becoming.Learning.determines_lumped_iff : ∀ {I : Type u_1} {V : Type u_2} {K : Type u_3} [DecidableEq K] {π : I → K}
+  {data : List I} {x : I} {y z : V},
+  y ≠ z → (Becoming.Learning.Determines (Becoming.Learning.Lumped π) (fun x => x ∈ data) x ↔ ∃ d, d ∈ data ∧ π d = π x)
+@Becoming.Learning.lumped_right_iff : ∀ {I : Type u_1} {V : Type u_2} {K : Type u_3} {π : I → K} {D : I → Prop}
+  {f g : I → V} {x d : I},
+  Becoming.Learning.Lumped π g → (∀ (i : I), D i → g i = f i) → D d → π d = π x → (g x = f x ↔ f d = f x)
+@Becoming.Learning.lumped_world_right : ∀ {I : Type u_1} {V : Type u_2} {K : Type u_3} {π : I → K} {D : I → Prop}
+  {f g : I → V} {x d : I},
+  Becoming.Learning.Lumped π f →
+    Becoming.Learning.Lumped π g → (∀ (i : I), D i → g i = f i) → D d → π d = π x → g x = f x
+@Becoming.Learning.free_determines_iff : ∀ {I : Type u_1} {V : Type u_2} {C : (I → V) → Prop} {D : I → Prop} {x : I},
+  Becoming.Learning.Free C D x → (Becoming.Learning.Determines C D x ↔ ∀ (g g' : I → V), C g → C g' → g x = g' x)
+@Becoming.Learning.every_free : ∀ {I : Type u_1} {V : Type u_2} [DecidableEq I] {D : I → Prop} {x : I},
+  ¬D x → Becoming.Learning.Free (fun x => True) D x
+@Becoming.Learning.every_determines_nothing : ∀ {I : Type u_1} {V : Type u_2} [DecidableEq I] {D : I → Prop} {x : I},
+  ¬D x → ∀ {y z : V}, y ≠ z → ¬Becoming.Learning.Determines (fun x => True) D x
+@Becoming.Learning.Training.web_selectsThrough_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {f : F}
+  {t : Nat} {select : (Nat → C → Nat) → Prop},
+  W.SelectsThrough obs f t select ↔
+    Becoming.Learning.Training.Through (fun l l' => W.AlikeThroughUpTo obs f l l' t) select
+@Becoming.Learning.Training.loss_through : ∀ {I : Type u_1} {V : Type u_2} {D : I → Prop} {L : Type u_3}
+  (loss : (I → V) → L),
+  (∀ (g g' : I → V), Becoming.Learning.Training.AgreeOn D g g' → loss g = loss g') →
+    ∀ (choose : L → Prop),
+      Becoming.Learning.Training.Through (Becoming.Learning.Training.AgreeOn D) fun g => choose (loss g)
+@Becoming.Learning.Training.unselected_beyond_data : ∀ {I : Type u_1} {V : Type u_2} {C : (I → V) → Prop} {D : I → Prop}
+  {x : I} {select : (I → V) → Prop},
+  Becoming.Learning.Training.Through (Becoming.Learning.Training.AgreeOn D) select →
+    Becoming.Learning.Free C D x →
+      ∀ {g g' : I → V},
+        C g → C g' → select g → ∃ h, C h ∧ select h ∧ Becoming.Learning.Training.AgreeOn D h g ∧ h x = g' x
+@Becoming.Learning.Training.fit_right_iff : ∀ {I : Type u_1} {V : Type u_2} {C : (I → V) → Prop} {D : I → Prop} {x : I},
+  (∀ (f g : I → V), C f → C g → Becoming.Learning.Training.AgreeOn D g f → g x = f x) ↔
+    Becoming.Learning.Determines C D x
+@Becoming.Learning.selects_through_lumping : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K]
+  {select : (K → V) → K → Prop},
+  Becoming.Relabel.Equivariant select →
+    ∀ (r : K → V), Becoming.Learning.Training.Through (fun i i' => r i = r i') (select r)
+@Becoming.Learning.values_lumped : ∀ {K : Type u_1} {V : Type u_2} {W : Type u_3} [inst : DecidableEq K]
+  {value : (K → V) → K → W},
+  Becoming.Relabel.EquivariantValue value → ∀ (r : K → V), Becoming.Learning.Lumped r (value r)
+@Becoming.Learning.selects_right_through : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K]
+  {select : (K → V) → K → Prop},
+  Becoming.Relabel.Equivariant select →
+    ∀ {r : K → V} {p : K → Prop},
+      (∀ (i : K), select r i ↔ p i) → Becoming.Learning.Training.Through (fun i i' => r i = r i') p
+@Becoming.Learning.selects_not_right_of_parted : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K]
+  {select : (K → V) → K → Prop},
+  Becoming.Relabel.Equivariant select →
+    ∀ {r : K → V} {p : K → Prop} {j k : K}, r j = r k → p j → ¬p k → ¬∀ (i : K), select r i ↔ p i
+@Becoming.Learning.selects_right_of_reads : ∀ {K : Type u_1} {V : Type u_2} [inst : DecidableEq K] {r : K → V}
+  {p : K → Prop} (q : V → Prop),
+  (∀ (i : K), p i ↔ q (r i)) → (Becoming.Relabel.Equivariant fun r' i => q (r' i)) ∧ ∀ (i : K), q (r i) ↔ p i
+@Becoming.Learning.values_right_lumped : ∀ {K : Type u_1} {V : Type u_2} {W : Type u_3} [inst : DecidableEq K]
+  {value : (K → V) → K → W},
+  Becoming.Relabel.EquivariantValue value →
+    ∀ {r : K → V} {f : K → W}, (∀ (i : K), value r i = f i) → Becoming.Learning.Lumped r f
+@Becoming.Learning.values_not_right_of_parted : ∀ {K : Type u_1} {V : Type u_2} {W : Type u_3} [inst : DecidableEq K]
+  {value : (K → V) → K → W},
+  Becoming.Relabel.EquivariantValue value →
+    ∀ {r : K → V} {f : K → W} {j k : K}, r j = r k → f j ≠ f k → ¬∀ (i : K), value r i = f i
+@Becoming.Learning.values_right_of_reads : ∀ {K : Type u_1} {V : Type u_2} {W : Type u_3} [inst : DecidableEq K]
+  {r : K → V} {f : K → W} (h : V → W),
+  (∀ (i : K), f i = h (r i)) → (Becoming.Relabel.EquivariantValue fun r' i => h (r' i)) ∧ ∀ (i : K), h (r i) = f i
+Becoming.Learning.Shift.determines : Becoming.Learning.Determines
+  (Becoming.Learning.Lumped Becoming.Learning.Shift.content) (fun x => x ∈ Becoming.Learning.Shift.data) (true, true)
+Becoming.Learning.Shift.every_nothing : ¬Becoming.Learning.Determines (fun x => True)
+    (fun x => x ∈ Becoming.Learning.Shift.data) (true, true)
+Becoming.Learning.Shift.right_same : Becoming.Learning.Shift.content (true, true) =
+  Becoming.Learning.Shift.same (true, true)
+Becoming.Learning.Shift.wrong_both : (Becoming.Learning.Lumped Becoming.Learning.Shift.content fun x => false) ∧
+  (∀ (i : Bool × Bool), i ∈ Becoming.Learning.Shift.data → (fun x => false) i = Becoming.Learning.Shift.both i) ∧
+    (fun x => false) (true, true) ≠ Becoming.Learning.Shift.both (true, true)
+Becoming.Learning.Alternate.repeats : Becoming.Learning.Lasso Becoming.Learning.Alternate.course 0 1
+Becoming.Learning.Alternate.index_three : Becoming.Learning.index Becoming.Learning.lassos
+    Becoming.Learning.Alternate.course 3 =
+  2
+Becoming.Learning.Alternate.rests : ∀ (t : Nat),
+  3 ≤ t →
+    Becoming.Learning.byElimination Becoming.Learning.lassos
+        (Becoming.Learning.prefixOf Becoming.Learning.Alternate.course t) =
+      some (Becoming.Learning.Alternate.course t)

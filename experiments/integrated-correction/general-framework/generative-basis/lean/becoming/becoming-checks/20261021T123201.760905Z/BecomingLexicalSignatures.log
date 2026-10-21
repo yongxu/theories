@@ -1,0 +1,148 @@
+@Becoming.Lexical.Included.refl : ∀ {I : Type} (a : I → Prop), Becoming.Lexical.Included a a
+@Becoming.Lexical.Included.trans : ∀ {I : Type} {a b c : I → Prop},
+  Becoming.Lexical.Included a b → Becoming.Lexical.Included b c → Becoming.Lexical.Included a c
+@Becoming.Lexical.StrictIncluded.irrefl : ∀ {I : Type} (a : I → Prop), ¬Becoming.Lexical.StrictIncluded a a
+@Becoming.Lexical.StrictIncluded.trans : ∀ {I : Type} {a b c : I → Prop},
+  Becoming.Lexical.StrictIncluded a b → Becoming.Lexical.StrictIncluded b c → Becoming.Lexical.StrictIncluded a c
+@Becoming.Lexical.StrictIncluded.of_witness : ∀ {I : Type} {a b : I → Prop},
+  Becoming.Lexical.Included a b → ∀ (i : I), b i → ¬a i → Becoming.Lexical.StrictIncluded a b
+@Becoming.Lexical.Above.irrefl : ∀ {H C G : Type} {basic : H → C → Prop} {gain : H → G → Prop} (a : H),
+  ¬Becoming.Lexical.Above basic gain a a
+@Becoming.Lexical.Above.trans : ∀ {H C G : Type} {basic : H → C → Prop} {gain : H → G → Prop} {a b c : H},
+  Becoming.Lexical.Above basic gain a b → Becoming.Lexical.Above basic gain b c → Becoming.Lexical.Above basic gain a c
+@Becoming.Lexical.Above.anchor : ∀ {H C G : Type} {basic : H → C → Prop} {gain : H → G → Prop} {a b : H},
+  Becoming.Lexical.Included (basic b) (basic a) →
+    ∀ (c : C), basic a c → ¬basic b c → Becoming.Lexical.Above basic gain a b
+@Becoming.Lexical.Above.no_trade : ∀ {H C G : Type} {basic : H → C → Prop} {gain : H → G → Prop} {a b : H} (c : C),
+  basic b c → ¬basic a c → ¬Becoming.Lexical.Above basic gain a b
+@Becoming.Lexical.Above.not_of_included : ∀ {H C G : Type} {basic : H → C → Prop} {gain : H → G → Prop} {a b : H},
+  Becoming.Lexical.Included (basic a) (basic b) →
+    Becoming.Lexical.Included (gain a) (gain b) → ¬Becoming.Lexical.Above basic gain a b
+@Becoming.Lexical.Above.decided : ∀ {H C G : Type} {basic : H → C → Prop} {gain : H → G → Prop} {a b : H},
+  Becoming.Decided (Becoming.Lexical.Included (basic b) (basic a)) →
+    Becoming.Decided (Becoming.Lexical.Included (basic a) (basic b)) →
+      Becoming.Decided (Becoming.Lexical.Included (gain b) (gain a)) →
+        Becoming.Decided (Becoming.Lexical.Included (gain a) (gain b)) →
+          Becoming.Decided (Becoming.Lexical.Above basic gain a b)
+@Becoming.Lexical.BasicPriority.above : ∀ {H C G : Type} {basic : H → C → Prop} {gain : H → G → Prop},
+  Becoming.Lexical.BasicPriority basic gain (Becoming.Lexical.Above basic gain)
+@Becoming.Lexical.BasicPriority.irrefl : ∀ {H C G : Type} {basic : H → C → Prop} {gain : H → G → Prop}
+  {better : H → H → Prop}, Becoming.Lexical.BasicPriority basic gain better → ∀ (a : H), ¬better a a
+@Becoming.Lexical.BasicPriority.trans : ∀ {H C G : Type} {basic : H → C → Prop} {gain : H → G → Prop}
+  {better : H → H → Prop},
+  Becoming.Lexical.BasicPriority basic gain better → ∀ {a b c : H}, better a b → better b c → better a c
+@Becoming.Lexical.BasicPriority.anchor : ∀ {H C G : Type} {basic : H → C → Prop} {gain : H → G → Prop}
+  {better : H → H → Prop},
+  Becoming.Lexical.BasicPriority basic gain better →
+    ∀ {a b : H}, Becoming.Lexical.Included (basic b) (basic a) → ∀ (c : C), basic a c → ¬basic b c → better a b
+@Becoming.Lexical.BasicPriority.no_trade : ∀ {H C G : Type} {basic : H → C → Prop} {gain : H → G → Prop}
+  {better : H → H → Prop},
+  Becoming.Lexical.BasicPriority basic gain better → ∀ {a b : H} (c : C), basic b c → ¬basic a c → ¬better a b
+@Becoming.Lexical.strict_iff : ∀ {p p' q q' : Prop}, (p ↔ p') → (q ↔ q') → (p ∧ ¬q ↔ p' ∧ ¬q')
+@Becoming.Lexical.included_adjoin_iff : ∀ {H I J : Type} (old : H → I → Prop) (fresh : H → J → Prop) (a b : H),
+  Becoming.Lexical.Included (Becoming.Lexical.adjoin old fresh a) (Becoming.Lexical.adjoin old fresh b) ↔
+    Becoming.Lexical.Included (old a) (old b) ∧ Becoming.Lexical.Included (fresh a) (fresh b)
+@Becoming.Lexical.strictIncluded_adjoin_iff : ∀ {H I J : Type} (old : H → I → Prop) (fresh : H → J → Prop) (a b : H),
+  Becoming.Lexical.StrictIncluded (old a) (old b) →
+    (Becoming.Lexical.StrictIncluded (Becoming.Lexical.adjoin old fresh a) (Becoming.Lexical.adjoin old fresh b) ↔
+      Becoming.Lexical.Included (fresh a) (fresh b))
+@Becoming.Lexical.strictIncluded_adjoin_of_fresh : ∀ {H I J : Type} (old : H → I → Prop) (fresh : H → J → Prop)
+  (a b : H),
+  Becoming.Lexical.Included (old a) (old b) →
+    Becoming.Lexical.StrictIncluded (fresh a) (fresh b) →
+      Becoming.Lexical.StrictIncluded (Becoming.Lexical.adjoin old fresh a) (Becoming.Lexical.adjoin old fresh b)
+@Becoming.Lexical.adjoin_crossed : ∀ {H I J : Type} (old : H → I → Prop) (fresh : H → J → Prop) (a b : H),
+  Becoming.Lexical.StrictIncluded (old a) (old b) →
+    Becoming.Lexical.StrictIncluded (fresh b) (fresh a) →
+      ¬Becoming.Lexical.Included (Becoming.Lexical.adjoin old fresh a) (Becoming.Lexical.adjoin old fresh b) ∧
+        ¬Becoming.Lexical.Included (Becoming.Lexical.adjoin old fresh b) (Becoming.Lexical.adjoin old fresh a)
+@Becoming.Lexical.Above.adjoin_fresh_gain : ∀ {H C G N : Type} (p : H → C → Prop) (g : H → G → Prop) (f : H → N → Prop)
+  (a b : H),
+  Becoming.Lexical.Included (p a) (p b) →
+    Becoming.Lexical.Included (p b) (p a) →
+      Becoming.Lexical.Included (g a) (g b) →
+        Becoming.Lexical.Included (g b) (g a) →
+          Becoming.Lexical.StrictIncluded (f b) (f a) →
+            ¬Becoming.Lexical.Above p g a b ∧
+              ¬Becoming.Lexical.Above p g b a ∧ Becoming.Lexical.Above p (Becoming.Lexical.adjoin g f) a b
+@Becoming.Lexical.Above.adjoin_gain_iff : ∀ {H C G N : Type} (p : H → C → Prop) (g : H → G → Prop) (f : H → N → Prop)
+  (a b : H),
+  Becoming.Lexical.Included (p a) (p b) →
+    Becoming.Lexical.Included (p b) (p a) →
+      Becoming.Lexical.StrictIncluded (g b) (g a) →
+        (Becoming.Lexical.Above p (Becoming.Lexical.adjoin g f) a b ↔ Becoming.Lexical.Included (f b) (f a))
+@Becoming.Lexical.Above.adjoin_basic_reverses : ∀ {H C G N R : Type} (p : H → C → Prop) (g : H → G → Prop)
+  (fb : H → N → Prop) (fg : H → R → Prop) (a b : H),
+  Becoming.Lexical.Included (p a) (p b) →
+    Becoming.Lexical.Included (p b) (p a) →
+      Becoming.Lexical.StrictIncluded (g b) (g a) →
+        Becoming.Lexical.StrictIncluded (fb a) (fb b) →
+          Becoming.Lexical.Above p g a b ∧
+            Becoming.Lexical.Above (Becoming.Lexical.adjoin p fb) (Becoming.Lexical.adjoin g fg) b a
+@Becoming.Lexical.classified_all_retains : ∀ {H C G N : Type} {p : H → C → Prop} {g : H → G → Prop} {f : H → N → Prop}
+  {a b : H}, Becoming.Lexical.classified p g f (fun x => True) a b → Becoming.Lexical.Included (f b) (f a)
+@Becoming.Lexical.classified_none_above : ∀ {H C G N : Type} {p : H → C → Prop} {g : H → G → Prop} {f : H → N → Prop}
+  {a b : H},
+  Becoming.Lexical.classified p g f (fun x => False) a b → Becoming.Lexical.Above p (Becoming.Lexical.adjoin g f) a b
+@Becoming.Lexical.classified_none_iff : ∀ {H C G N : Type} {p : H → C → Prop} {g : H → G → Prop} {f : H → N → Prop}
+  {a b : H},
+  Becoming.Lexical.classified p g f (fun x => False) a b ↔ Becoming.Lexical.Above p (Becoming.Lexical.adjoin g f) a b
+@Becoming.Lexical.classified_of_basic : ∀ {H C G N : Type} {p : H → C → Prop} {g : H → G → Prop} {f : H → N → Prop}
+  {a b : H},
+  Becoming.Lexical.StrictIncluded (p b) (p a) →
+    Becoming.Lexical.Included (f b) (f a) → ∀ (q : N → Prop), Becoming.Lexical.classified p g f q a b
+@Becoming.Lexical.classified_of_decided : ∀ {H C G N : Type} {p : H → C → Prop} {g : H → G → Prop} {f : H → N → Prop}
+  {a b : H},
+  Becoming.Lexical.Included (f b) (f a) →
+    Becoming.Lexical.Above p (Becoming.Lexical.adjoin g f) a b →
+      ∀ (q : N → Prop),
+        (∀ (n : N), Becoming.Decided (f b n)) →
+          Becoming.Decided (∀ (n : N), f a n → q n → f b n) → Becoming.Lexical.classified p g f q a b
+@Becoming.Lexical.classified_robust_iff_of_decided : ∀ {H C G N : Type} {p : H → C → Prop} {g : H → G → Prop}
+  {f : H → N → Prop} {a b : H},
+  (∀ (n : N), Becoming.Decided (f b n)) →
+    (∀ (q : N → Prop), Becoming.Decided (∀ (n : N), f a n → q n → f b n)) →
+      ((∀ (q : N → Prop), Becoming.Lexical.classified p g f q a b) ↔
+        Becoming.Lexical.Included (f b) (f a) ∧ Becoming.Lexical.Above p (Becoming.Lexical.adjoin g f) a b)
+@Becoming.Lexical.classified_robust_iff_of_em : ∀ {H C G N : Type} {p : H → C → Prop} {g : H → G → Prop}
+  {f : H → N → Prop} {a b : H},
+  (∀ (r : Prop), Becoming.Decided r) →
+    ((∀ (q : N → Prop), Becoming.Lexical.classified p g f q a b) ↔
+      Becoming.Lexical.Included (f b) (f a) ∧ Becoming.Lexical.Above p (Becoming.Lexical.adjoin g f) a b)
+@Becoming.Lexical.classified_extremes_iff_of_decided : ∀ {H C G N : Type} {p : H → C → Prop} {g : H → G → Prop}
+  {f : H → N → Prop} {a b : H},
+  (∀ (n : N), Becoming.Decided (f b n)) →
+    (∀ (q : N → Prop), Becoming.Decided (∀ (n : N), f a n → q n → f b n)) →
+      ((∀ (q : N → Prop), Becoming.Lexical.classified p g f q a b) ↔
+        Becoming.Lexical.classified p g f (fun x => False) a b ∧ Becoming.Lexical.classified p g f (fun x => True) a b)
+@Becoming.Lexical.classified_of_fresh : ∀ {H C G N : Type} {p : H → C → Prop} {g : H → G → Prop} {f : H → N → Prop}
+  {a b : H},
+  Becoming.Lexical.Included (p b) (p a) →
+    Becoming.Lexical.Included (p a) (p b) →
+      Becoming.Lexical.Included (g b) (g a) →
+        Becoming.Lexical.StrictIncluded (f b) (f a) →
+          ∀ (q : N → Prop),
+            (∀ (n : N), Becoming.Decided (f b n)) →
+              Becoming.Decided (∀ (n : N), f a n → q n → f b n) → Becoming.Lexical.classified p g f q a b
+Becoming.Lexical.classified_robust_iff_iff_em : (∀ (H C G N : Type) (p : H → C → Prop) (g : H → G → Prop)
+    (f : H → N → Prop) (a b : H),
+    (∀ (q : N → Prop), Becoming.Lexical.classified p g f q a b) ↔
+      Becoming.Lexical.Included (f b) (f a) ∧ Becoming.Lexical.Above p (Becoming.Lexical.adjoin g f) a b) ↔
+  ∀ (R : Prop), Becoming.Decided R
+Becoming.Lexical.Repair.above : Becoming.Lexical.Above Becoming.Lexical.Repair.basis Becoming.Lexical.Repair.event true
+  false
+Becoming.Lexical.Repair.loss_retained : Becoming.Lexical.Repair.event false () ∧ ¬Becoming.Lexical.Repair.event true ()
+Becoming.Lexical.Crossed.incomparable : ¬Becoming.Lexical.Above Becoming.Lexical.Crossed.protectedOne
+      Becoming.Lexical.Crossed.noGain true false ∧
+  ¬Becoming.Lexical.Above Becoming.Lexical.Crossed.protectedOne Becoming.Lexical.Crossed.noGain false true
+Becoming.Lexical.Ceiling.above : ∀ (limit amount : Nat),
+  Becoming.Lexical.Above (Becoming.Lexical.Ceiling.within limit) Becoming.Lexical.Ceiling.optional (0, 0)
+    (limit + 1, amount)
+Becoming.Lexical.Reorganizing.classification_matters : Becoming.Lexical.Reorganizing.oldOccasion false () ∧
+  ¬Becoming.Lexical.Reorganizing.oldOccasion true () ∧
+    ¬Becoming.Lexical.classified Becoming.Lexical.Reorganizing.oldBasic Becoming.Lexical.Reorganizing.oldOccasion
+          Becoming.Lexical.Reorganizing.newContent (fun x => False) true false ∧
+      ¬Becoming.Lexical.classified Becoming.Lexical.Reorganizing.oldBasic Becoming.Lexical.Reorganizing.oldOccasion
+            Becoming.Lexical.Reorganizing.newContent (fun x => False) false true ∧
+        Becoming.Lexical.classified Becoming.Lexical.Reorganizing.oldBasic Becoming.Lexical.Reorganizing.oldOccasion
+          Becoming.Lexical.Reorganizing.newContent (fun x => True) true false

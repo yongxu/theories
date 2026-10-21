@@ -1,0 +1,11 @@
+import Becoming.BranchingCorrespondence
+#check @Becoming.SameBranchingTests.refl
+#check @Becoming.SameBranchingTests.symm
+#check @Becoming.SameBranchingTests.trans
+#check @Becoming.SameBranchingTests.inverse_functional
+#check @Becoming.SameBranchingTests.bisimulation_of_em
+#check @Becoming.alike_of_equal_codes_of_em
+#check @Becoming.SameBranchingTests.total_of_reachable_of_em
+#check @Becoming.SameBranchingTests.correspondence_of_em
+#check @Becoming.SameBranchingTests.step_iff_of_em
+#check @Becoming.Bisimulation.agrees

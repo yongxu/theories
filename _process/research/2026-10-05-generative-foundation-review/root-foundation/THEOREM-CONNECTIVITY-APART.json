@@ -2206,6 +2206,11 @@
    "module": "Becoming.Weightings",
    "category": "general-structure",
    "reason": "lexical priority, the basic items first, ranks every widening higher: a law of any finite listing of items and any marking of basic items, with no world; with Weighting.widens_iff_every_of_class it places lexical priority within the classes whose shared order is widening"
+  },
+  "Becoming.withinClosureOf_iff": {
+   "module": "Becoming.Frame",
+   "category": "general-structure",
+   "reason": "A group's closure is the union of its members' closures, by definition (Iff.rfl): a law of every relation on any type, kept by name because records, chapters and frozen predictions cite it. The base reads it through the pooled coupling closure (Flow.WithinPoolCoupling), whose laws use the definition directly."
   }
  },
  "instances": {

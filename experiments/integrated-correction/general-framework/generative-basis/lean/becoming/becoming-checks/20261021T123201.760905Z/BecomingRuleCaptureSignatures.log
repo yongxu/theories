@@ -1,0 +1,344 @@
+@Becoming.Pace.paced_shift : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+  (c : S × R) (a k : Nat),
+  Becoming.Pace.paced f h reads c (a + k) =
+    Becoming.Pace.paced f h (fun u => reads (a + u)) (Becoming.Pace.paced f h reads c a) k
+@Becoming.Pace.paced_fast_succ : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+  (c : S × R) (t : Nat),
+  (Becoming.Pace.paced f h reads c (t + 1)).fst =
+    f (Becoming.Pace.paced f h reads c t).fst (Becoming.Pace.paced f h reads c t).snd
+@Becoming.RuleCapture.ReadsShare.reverse : ∀ {S : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder S}
+  {M : Becoming.Ideals.Preorder R} {h : S → R → R},
+  Becoming.RuleCapture.ReadsShare P M h →
+    Becoming.RuleCapture.ReadsShare (Becoming.RuleCapture.reverse P) (Becoming.RuleCapture.reverse M) h
+@Becoming.RuleCapture.turn_locked : ∀ {S : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder S}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {f : S → R → S} {h : S → R → R},
+  Becoming.RuleCapture.Raises P favours f →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        ∀ (b : Bool) (p : S × R),
+          Becoming.RuleCapture.Locked M favours h p →
+            Becoming.RuleCapture.Locked M favours h (Becoming.Pace.turn f h b p) ∧
+              P.le p.fst (Becoming.Pace.turn f h b p).fst ∧ M.le p.snd (Becoming.Pace.turn f h b p).snd
+@Becoming.RuleCapture.locked_stays : ∀ {S : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder S}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours f →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        ∀ {c : S × R} {t : Nat},
+          Becoming.RuleCapture.Locked M favours h (Becoming.Pace.paced f h reads c t) →
+            ∀ (k : Nat), Becoming.RuleCapture.Locked M favours h (Becoming.Pace.paced f h reads c (t + k))
+@Becoming.RuleCapture.locked_rises : ∀ {S : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder S}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours f →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        ∀ {c : S × R} {t : Nat},
+          Becoming.RuleCapture.Locked M favours h (Becoming.Pace.paced f h reads c t) →
+            ∀ (k : Nat),
+              P.le (Becoming.Pace.paced f h reads c (t + k)).fst (Becoming.Pace.paced f h reads c (t + k + 1)).fst ∧
+                M.le (Becoming.Pace.paced f h reads c (t + k)).snd (Becoming.Pace.paced f h reads c (t + k + 1)).snd
+@Becoming.RuleCapture.locked_not_below : ∀ {S : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder S}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours f →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        ∀ {c : S × R} {t : Nat},
+          Becoming.RuleCapture.Locked M favours h (Becoming.Pace.paced f h reads c t) →
+            ∀ (k : Nat),
+              P.le (Becoming.Pace.paced f h reads c t).fst (Becoming.Pace.paced f h reads c (t + k)).fst ∧
+                M.le (Becoming.Pace.paced f h reads c t).snd (Becoming.Pace.paced f h reads c (t + k)).snd
+@Becoming.RuleCapture.perturbation_invariant : ∀ {S : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder S}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours f →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        ∀ {x : S} {g g' : R},
+          Becoming.RuleCapture.Locked M favours h (x, g) →
+            favours g' →
+              ∀ (t : Nat),
+                favours (Becoming.Pace.paced f h reads (x, g') t).snd ∧
+                  P.le x (Becoming.Pace.paced f h reads (x, g') t).fst ∧
+                    M.le g
+                      (h (Becoming.Pace.paced f h reads (x, g') t).fst (Becoming.Pace.paced f h reads (x, g') t).snd)
+@Becoming.RuleCapture.perturbation_absorbed : ∀ {S : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder S}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours f →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ {g g' : R}, M.le g g' → favours g → favours g') →
+        ∀ {x : S} {g g' : R},
+          Becoming.RuleCapture.Locked M favours h (x, g) →
+            favours g' →
+              ∀ {r : Nat},
+                reads r = true →
+                  M.le g (Becoming.Pace.paced f h reads (x, g') (r + 1)).snd ∧
+                    Becoming.RuleCapture.Locked M favours h (Becoming.Pace.paced f h reads (x, g') (r + 1))
+@Becoming.RuleCapture.favours_after_reading : ∀ {S : Type u_1} {R : Type u_2} {favours : R → Prop} {f : S → R → S}
+  {h : S → R → R} {reads : Nat → Bool},
+  (∀ (x : S) (g : R), favours (h x g)) →
+    ∀ {c : S × R} {r : Nat}, reads r = true → ∀ (k : Nat), favours (Becoming.Pace.paced f h reads c (r + 1 + k)).snd
+@Becoming.RuleCapture.uniform_locks : ∀ {S : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder S}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours f →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ (x : S) (g : R), favours (h x g)) →
+        ∀ {c : S × R} {r r' : Nat},
+          reads r = true →
+            reads r' = true →
+              r < r' → Becoming.RuleCapture.Locked M favours h (Becoming.Pace.paced f h reads c (r' + 1))
+@Becoming.RuleCapture.favours_throughout : ∀ {S : Type u_1} {R : Type u_2} {favours : R → Prop} {f : S → R → S}
+  {h : S → R → R} {reads : Nat → Bool},
+  (∀ (x : S) (g : R), favours (h x g)) →
+    ∀ {c : S × R}, favours c.snd → ∀ (t : Nat), favours (Becoming.Pace.paced f h reads c t).snd
+@Becoming.RuleCapture.favouring_locks : ∀ {S : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder S}
+  {M : Becoming.Ideals.Preorder R} {favours : R → Prop} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  Becoming.RuleCapture.Raises P favours f →
+    Becoming.RuleCapture.ReadsShare P M h →
+      (∀ (x : S) (g : R), favours (h x g)) →
+        ∀ {c : S × R},
+          favours c.snd →
+            (∀ (t : Nat), P.le (Becoming.Pace.paced f h reads c t).fst (Becoming.Pace.paced f h reads c (t + 1)).fst) ∧
+              ∀ (r : Nat),
+                reads r = true → Becoming.RuleCapture.Locked M favours h (Becoming.Pace.paced f h reads c (r + 1))
+@Becoming.RuleCapture.order_kept : ∀ {S : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder S}
+  {M : Becoming.Ideals.Preorder R} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  (∀ (x y : S) (g g' : R), P.le x y → M.le g g' → P.le (f x g) (f y g')) →
+    Becoming.RuleCapture.ReadsShare P M h →
+      ∀ {c c' : S × R},
+        P.le c.fst c'.fst →
+          M.le c.snd c'.snd →
+            ∀ (t : Nat),
+              P.le (Becoming.Pace.paced f h reads c t).fst (Becoming.Pace.paced f h reads c' t).fst ∧
+                M.le (Becoming.Pace.paced f h reads c t).snd (Becoming.Pace.paced f h reads c' t).snd
+@Becoming.RuleCapture.perturbation_keeps_below : ∀ {S : Type u_1} {R : Type u_2} {P : Becoming.Ideals.Preorder S}
+  {M : Becoming.Ideals.Preorder R} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  (∀ (x y : S) (g g' : R), P.le x y → M.le g g' → P.le (f x g) (f y g')) →
+    Becoming.RuleCapture.ReadsShare P M h →
+      ∀ {c : S × R} {a : Nat} {g' : R},
+        M.le g' (Becoming.Pace.paced f h reads c a).snd →
+          ∀ (k : Nat),
+            P.le (Becoming.Pace.paced f h (fun u => reads (a + u)) ((Becoming.Pace.paced f h reads c a).fst, g') k).fst
+                (Becoming.Pace.paced f h reads c (a + k)).fst ∧
+              M.le
+                (Becoming.Pace.paced f h (fun u => reads (a + u)) ((Becoming.Pace.paced f h reads c a).fst, g') k).snd
+                (Becoming.Pace.paced f h reads c (a + k)).snd
+Becoming.RuleCapture.CarrierCounts.raises : Becoming.RuleCapture.Raises Becoming.RuleCapture.CarrierCounts.order
+  Becoming.RuleCapture.CarrierCounts.favours Becoming.RuleCapture.CarrierCounts.select
+@Becoming.RuleCapture.CarrierCounts.rises_strictly : ∀ {x g : Becoming.RuleCapture.CarrierCounts},
+  0 < x.carrier → g.other < g.carrier → x.carrier * (x.select g).other < (x.select g).carrier * x.other
+Becoming.RuleCapture.CarrierCounts.lowers : Becoming.RuleCapture.Raises
+  (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order) Becoming.RuleCapture.CarrierCounts.disfavours
+  Becoming.RuleCapture.CarrierCounts.select
+@Becoming.RuleCapture.CarrierCounts.upper : ∀ {g g' : Becoming.RuleCapture.CarrierCounts},
+  Becoming.RuleCapture.CarrierCounts.order.le g g' → g.favours → g'.favours
+@Becoming.RuleCapture.CarrierCounts.lower : ∀ {g g' : Becoming.RuleCapture.CarrierCounts},
+  (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order).le g g' → g.disfavours → g'.disfavours
+@Becoming.RuleCapture.CarrierCounts.select_mono : ∀ {x y g g' : Becoming.RuleCapture.CarrierCounts},
+  Becoming.RuleCapture.CarrierCounts.order.le x y →
+    Becoming.RuleCapture.CarrierCounts.order.le g g' →
+      Becoming.RuleCapture.CarrierCounts.order.le (x.select g) (y.select g')
+@Becoming.RuleCapture.CarrierCounts.share_not_lower_counts : ∀ {α : Type} {kids : α → List α} {ms es : List α}
+  {a b : Nat},
+  (∀ (p : α), p ∈ ms → a ≤ (kids p).length) →
+    (∀ (p : α), p ∈ es → (kids p).length ≤ b) →
+      b ≤ a →
+        ∀ (present : 0 < es.length) (present' : 0 < Becoming.offspringCount es kids),
+          Becoming.RuleCapture.CarrierCounts.order.le { carrier := ms.length, other := es.length, other_pos := present }
+            { carrier := Becoming.offspringCount ms kids, other := Becoming.offspringCount es kids,
+              other_pos := present' }
+@Becoming.RuleCapture.CarrierCounts.rises_strictly_along : ∀
+  {hR : Becoming.RuleCapture.CarrierCounts → Becoming.RuleCapture.CarrierCounts → Becoming.RuleCapture.CarrierCounts}
+  {reads : Nat → Bool} (c : Becoming.RuleCapture.CarrierCounts × Becoming.RuleCapture.CarrierCounts) (t : Nat),
+  0 < (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c t).fst.carrier →
+    (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c t).snd.other <
+        (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c t).snd.carrier →
+      (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c t).fst.carrier *
+          (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c (t + 1)).fst.other <
+        (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c (t + 1)).fst.carrier *
+          (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c t).fst.other
+@Becoming.RuleCapture.CarrierCounts.perturbation_keeps_below_counts : ∀
+  {hR : Becoming.RuleCapture.CarrierCounts → Becoming.RuleCapture.CarrierCounts → Becoming.RuleCapture.CarrierCounts},
+  Becoming.RuleCapture.ReadsShare Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.order hR →
+    ∀ {reads : Nat → Bool} {c : Becoming.RuleCapture.CarrierCounts × Becoming.RuleCapture.CarrierCounts} {a : Nat}
+      {g' : Becoming.RuleCapture.CarrierCounts},
+      Becoming.RuleCapture.CarrierCounts.order.le g'
+          (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c a).snd →
+        ∀ (k : Nat),
+          Becoming.RuleCapture.CarrierCounts.order.le
+              (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR (fun u => reads (a + u))
+                  ((Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c a).fst, g') k).fst
+              (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c (a + k)).fst ∧
+            Becoming.RuleCapture.CarrierCounts.order.le
+              (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR (fun u => reads (a + u))
+                  ((Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c a).fst, g') k).snd
+              (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR reads c (a + k)).snd
+Becoming.RuleCapture.CarrierCounts.proportional_reads : Becoming.RuleCapture.ReadsShare
+  Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.order
+  Becoming.RuleCapture.CarrierCounts.proportional
+@Becoming.RuleCapture.CarrierCounts.threshold_above : ∀ {hi lo x g : Becoming.RuleCapture.CarrierCounts},
+  x.favours → hi.threshold lo x g = hi
+@Becoming.RuleCapture.CarrierCounts.threshold_below : ∀ {hi lo x g : Becoming.RuleCapture.CarrierCounts},
+  ¬x.favours → hi.threshold lo x g = lo
+@Becoming.RuleCapture.CarrierCounts.threshold_reads : ∀ {hi lo : Becoming.RuleCapture.CarrierCounts},
+  Becoming.RuleCapture.CarrierCounts.order.le lo hi →
+    Becoming.RuleCapture.ReadsShare Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.order
+      (hi.threshold lo)
+@Becoming.RuleCapture.CarrierCounts.threshold_favours : ∀ {hi lo : Becoming.RuleCapture.CarrierCounts},
+  hi.favours → lo.favours → ∀ (x g : Becoming.RuleCapture.CarrierCounts), (hi.threshold lo x g).favours
+@Becoming.RuleCapture.CarrierCounts.margin_favours : ∀ {a m : Nat} {pos : 0 < a},
+  (Becoming.RuleCapture.CarrierCounts.margin a m pos).favours
+@Becoming.RuleCapture.CarrierCounts.margin_le : ∀ {a m m' : Nat} {pos : 0 < a},
+  m ≤ m' →
+    Becoming.RuleCapture.CarrierCounts.order.le (Becoming.RuleCapture.CarrierCounts.margin a m pos)
+      (Becoming.RuleCapture.CarrierCounts.margin a m' pos)
+@Becoming.RuleCapture.CarrierCounts.byMargin_reads : ∀ {a : Nat} {pos : 0 < a}
+  {φ : Becoming.RuleCapture.CarrierCounts → Nat},
+  (∀ (x y : Becoming.RuleCapture.CarrierCounts), Becoming.RuleCapture.CarrierCounts.order.le x y → φ x ≤ φ y) →
+    Becoming.RuleCapture.ReadsShare Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.order
+      (Becoming.RuleCapture.CarrierCounts.byMargin a pos φ)
+@Becoming.RuleCapture.CarrierCounts.margin_course : ∀ {a : Nat} {pos : 0 < a}
+  {φ : Becoming.RuleCapture.CarrierCounts → Nat},
+  (∀ (x y : Becoming.RuleCapture.CarrierCounts), Becoming.RuleCapture.CarrierCounts.order.le x y → φ x ≤ φ y) →
+    ∀ (x : Becoming.RuleCapture.CarrierCounts) (m : Nat) (reads : Nat → Bool),
+      (∀ (t : Nat),
+          Becoming.RuleCapture.CarrierCounts.order.le
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                (Becoming.RuleCapture.CarrierCounts.byMargin a pos φ) reads
+                (x, Becoming.RuleCapture.CarrierCounts.margin a m pos) t).fst
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                (Becoming.RuleCapture.CarrierCounts.byMargin a pos φ) reads
+                (x, Becoming.RuleCapture.CarrierCounts.margin a m pos) (t + 1)).fst) ∧
+        ∀ (r : Nat),
+          reads r = true →
+            ∀ (k : Nat),
+              Becoming.RuleCapture.CarrierCounts.order.le
+                (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                    (Becoming.RuleCapture.CarrierCounts.byMargin a pos φ) reads
+                    (x, Becoming.RuleCapture.CarrierCounts.margin a m pos) (r + 1 + k)).snd
+                (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                    (Becoming.RuleCapture.CarrierCounts.byMargin a pos φ) reads
+                    (x, Becoming.RuleCapture.CarrierCounts.margin a m pos) (r + 1 + k + 1)).snd
+@Becoming.RuleCapture.CarrierCounts.proportional_locks : ∀ {x g : Becoming.RuleCapture.CarrierCounts},
+  g.favours →
+    Becoming.RuleCapture.CarrierCounts.order.le g x →
+      ∀ (reads : Nat → Bool) (t : Nat),
+        Becoming.RuleCapture.CarrierCounts.order.le
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                Becoming.RuleCapture.CarrierCounts.proportional reads (x, g) t).fst
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                Becoming.RuleCapture.CarrierCounts.proportional reads (x, g) (t + 1)).fst ∧
+          Becoming.RuleCapture.CarrierCounts.order.le
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                Becoming.RuleCapture.CarrierCounts.proportional reads (x, g) t).snd
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                Becoming.RuleCapture.CarrierCounts.proportional reads (x, g) (t + 1)).snd
+@Becoming.RuleCapture.CarrierCounts.proportional_locks_down : ∀ {x g : Becoming.RuleCapture.CarrierCounts},
+  g.disfavours →
+    Becoming.RuleCapture.CarrierCounts.order.le x g →
+      ∀ (reads : Nat → Bool) (t : Nat),
+        Becoming.RuleCapture.CarrierCounts.order.le
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                Becoming.RuleCapture.CarrierCounts.proportional reads (x, g) (t + 1)).fst
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                Becoming.RuleCapture.CarrierCounts.proportional reads (x, g) t).fst ∧
+          Becoming.RuleCapture.CarrierCounts.order.le
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                Becoming.RuleCapture.CarrierCounts.proportional reads (x, g) (t + 1)).snd
+            (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select
+                Becoming.RuleCapture.CarrierCounts.proportional reads (x, g) t).snd
+Becoming.RuleCapture.CarrierCounts.lo_le_hi : Becoming.RuleCapture.CarrierCounts.order.le
+  Becoming.RuleCapture.CarrierCounts.lo Becoming.RuleCapture.CarrierCounts.hi
+Becoming.RuleCapture.CarrierCounts.hi_not_le_lo : ¬Becoming.RuleCapture.CarrierCounts.order.le
+    Becoming.RuleCapture.CarrierCounts.hi Becoming.RuleCapture.CarrierCounts.lo
+Becoming.RuleCapture.CarrierCounts.hi_not_le_twoToOne : ¬Becoming.RuleCapture.CarrierCounts.order.le
+    Becoming.RuleCapture.CarrierCounts.hi Becoming.RuleCapture.CarrierCounts.twoToOne
+Becoming.RuleCapture.CarrierCounts.twoToOne_le_hi : Becoming.RuleCapture.CarrierCounts.order.le
+  Becoming.RuleCapture.CarrierCounts.twoToOne Becoming.RuleCapture.CarrierCounts.hi
+@Becoming.RuleCapture.CarrierCounts.always_step : ∀
+  {hR : Becoming.RuleCapture.CarrierCounts → Becoming.RuleCapture.CarrierCounts → Becoming.RuleCapture.CarrierCounts}
+  (c : Becoming.RuleCapture.CarrierCounts × Becoming.RuleCapture.CarrierCounts) (t : Nat),
+  (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR (fun x => true) c (t + 1)).fst.carrier =
+      (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR (fun x => true) c t).fst.carrier *
+        (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR (fun x => true) c t).snd.carrier ∧
+    (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR (fun x => true) c (t + 1)).fst.other =
+        (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR (fun x => true) c t).fst.other *
+          (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR (fun x => true) c t).snd.other ∧
+      (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR (fun x => true) c (t + 1)).snd =
+        hR (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR (fun x => true) c t).fst
+          (Becoming.Pace.paced Becoming.RuleCapture.CarrierCounts.select hR (fun x => true) c t).snd
+Becoming.RuleCapture.Alternating.course_step : ∀ (t : Nat),
+  (Becoming.RuleCapture.Alternating.course (t + 1)).fst.carrier =
+      (Becoming.RuleCapture.Alternating.course t).fst.carrier *
+        (Becoming.RuleCapture.Alternating.course t).snd.carrier ∧
+    (Becoming.RuleCapture.Alternating.course (t + 1)).fst.other =
+        (Becoming.RuleCapture.Alternating.course t).fst.other * (Becoming.RuleCapture.Alternating.course t).snd.other ∧
+      (Becoming.RuleCapture.Alternating.course (t + 1)).snd =
+        Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo
+          (Becoming.RuleCapture.Alternating.course t).fst (Becoming.RuleCapture.Alternating.course t).snd
+Becoming.RuleCapture.Alternating.before_locked : Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+  Becoming.RuleCapture.CarrierCounts.favours
+  (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+  (Becoming.RuleCapture.CarrierCounts.twoToOne, Becoming.RuleCapture.CarrierCounts.hi)
+@Becoming.RuleCapture.Alternating.lt_four : ∀ {o : Nat}, 0 < o → o < o * 4
+@Becoming.RuleCapture.Alternating.from_even : ∀ {k : Nat},
+  (Becoming.RuleCapture.Alternating.course (2 * k)).fst.carrier =
+        (Becoming.RuleCapture.Alternating.course (2 * k)).fst.other * 2 ∧
+      (Becoming.RuleCapture.Alternating.course (2 * k)).snd = Becoming.RuleCapture.CarrierCounts.lo →
+    (Becoming.RuleCapture.Alternating.course (2 * k)).fst.favours ∧
+      (Becoming.RuleCapture.Alternating.course (2 * k + 1)).fst.carrier =
+          (Becoming.RuleCapture.Alternating.course (2 * k)).fst.other * 2 ∧
+        (Becoming.RuleCapture.Alternating.course (2 * k + 1)).fst.other =
+            (Becoming.RuleCapture.Alternating.course (2 * k)).fst.other * 4 ∧
+          (Becoming.RuleCapture.Alternating.course (2 * k + 1)).snd = Becoming.RuleCapture.CarrierCounts.hi ∧
+            ¬(Becoming.RuleCapture.Alternating.course (2 * k + 1)).fst.favours
+Becoming.RuleCapture.Alternating.even : ∀ (k : Nat),
+  (Becoming.RuleCapture.Alternating.course (2 * k)).fst.carrier =
+      (Becoming.RuleCapture.Alternating.course (2 * k)).fst.other * 2 ∧
+    (Becoming.RuleCapture.Alternating.course (2 * k)).snd = Becoming.RuleCapture.CarrierCounts.lo
+Becoming.RuleCapture.Alternating.odd : ∀ (k : Nat),
+  (Becoming.RuleCapture.Alternating.course (2 * k + 1)).fst.other =
+      (Becoming.RuleCapture.Alternating.course (2 * k + 1)).fst.carrier * 2 ∧
+    (Becoming.RuleCapture.Alternating.course (2 * k + 1)).snd = Becoming.RuleCapture.CarrierCounts.hi
+Becoming.RuleCapture.Alternating.alternates : ∀ (k : Nat),
+  ¬Becoming.RuleCapture.CarrierCounts.order.le (Becoming.RuleCapture.Alternating.course (2 * k)).fst
+        (Becoming.RuleCapture.Alternating.course (2 * k + 1)).fst ∧
+    ¬Becoming.RuleCapture.CarrierCounts.order.le (Becoming.RuleCapture.Alternating.course (2 * k + 1)).snd
+        (Becoming.RuleCapture.Alternating.course (2 * k + 2)).snd
+Becoming.RuleCapture.Alternating.never_locked : ∀ (k : Nat),
+  (¬Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+          (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+          (Becoming.RuleCapture.Alternating.course (2 * k)) ∧
+      ¬Becoming.RuleCapture.Locked (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order)
+          Becoming.RuleCapture.CarrierCounts.disfavours
+          (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+          (Becoming.RuleCapture.Alternating.course (2 * k))) ∧
+    ¬Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+          (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+          (Becoming.RuleCapture.Alternating.course (2 * k + 1)) ∧
+      ¬Becoming.RuleCapture.Locked (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order)
+          Becoming.RuleCapture.CarrierCounts.disfavours
+          (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+          (Becoming.RuleCapture.Alternating.course (2 * k + 1))
+Becoming.RuleCapture.Reversed.locked_down : Becoming.RuleCapture.Locked
+  (Becoming.RuleCapture.reverse Becoming.RuleCapture.CarrierCounts.order) Becoming.RuleCapture.CarrierCounts.disfavours
+  (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+  (Becoming.RuleCapture.Reversed.course 1)
+Becoming.RuleCapture.Reversed.not_absorbed : Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+    Becoming.RuleCapture.CarrierCounts.favours
+    (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.lo)
+    (Becoming.RuleCapture.CarrierCounts.twoToOne, Becoming.RuleCapture.CarrierCounts.hi) ∧
+  (∀ (k : Nat),
+      Becoming.RuleCapture.CarrierCounts.order.le (Becoming.RuleCapture.Reversed.course (1 + k + 1)).fst
+          (Becoming.RuleCapture.Reversed.course (1 + k)).fst ∧
+        Becoming.RuleCapture.CarrierCounts.order.le (Becoming.RuleCapture.Reversed.course (1 + k + 1)).snd
+          (Becoming.RuleCapture.Reversed.course (1 + k)).snd) ∧
+    ¬Becoming.RuleCapture.CarrierCounts.order.le Becoming.RuleCapture.CarrierCounts.hi
+        (Becoming.RuleCapture.Reversed.course 2).snd
+Becoming.RuleCapture.Second.second_exact : ¬Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order
+      Becoming.RuleCapture.CarrierCounts.favours
+      (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.twoToOne)
+      (Becoming.RuleCapture.Second.course 1) ∧
+  ¬Becoming.RuleCapture.CarrierCounts.order.le (Becoming.RuleCapture.Second.course 1).snd
+        (Becoming.RuleCapture.Second.course 2).snd ∧
+    Becoming.RuleCapture.Locked Becoming.RuleCapture.CarrierCounts.order Becoming.RuleCapture.CarrierCounts.favours
+      (Becoming.RuleCapture.CarrierCounts.hi.threshold Becoming.RuleCapture.CarrierCounts.twoToOne)
+      (Becoming.RuleCapture.Second.course 2)

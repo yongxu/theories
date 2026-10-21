@@ -1,0 +1,234 @@
+@Becoming.Copying.add_le_iff : ∀ {a b n : Nat}, a + b ≤ n ↔ a ≤ n ∧ b ≤ n - a
+@Becoming.Copying.ite_cases : ∀ {β : Sort u_1} {c : Prop} [inst : Decidable c] {a b : β} (P : β → Prop),
+  (c → P a) → (¬c → P b) → P (if c then a else b)
+@Becoming.Copying.append_cancel : ∀ {β : Type u_1} (l : List β) {a b : List β}, l ++ a = l ++ b → a = b
+@Becoming.Copying.ne_append_cons : ∀ {β : Type u_1} (l : List β) (x : β) (xs : List β), l ≠ l ++ x :: xs
+@Becoming.Copying.nth_setAt_self : ∀ {β : Type u_1} (b : List β) (i : Nat) {old : β} (x : β),
+  Becoming.Copying.nth b i = some old → Becoming.Copying.nth (Becoming.Copying.setAt b i x) i = some x
+@Becoming.Copying.extends_along : ∀ {β : Type u_1} {S : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {out : S → List β},
+  Becoming.Copying.Extends P out →
+    ∀ {s t : S} {plan : List A}, Generative.Trace P s plan t → ∃ tail, out t = out s ++ tail
+@Becoming.Copying.extends_along_iff : ∀ {β : Type u_1} {S : Type u_2} {A : Type u_3} {P : Generative.Process S A}
+  {out : S → List β},
+  (∀ (s : S) (plan : List A) (t : S), Generative.Trace P s plan t → ∃ tail, out t = out s ++ tail) ↔
+    Becoming.Copying.Extends P out
+@Becoming.Copying.countOf_self : ∀ {α : Type u_1} [inst : DecidableEq α] (a : α) (xs : List α),
+  Becoming.Copying.countOf a (a :: xs) = Becoming.Copying.countOf a xs + 1
+@Becoming.Copying.countOf_other : ∀ {α : Type u_1} [inst : DecidableEq α] {a x : α},
+  x ≠ a → ∀ (xs : List α), Becoming.Copying.countOf a (x :: xs) = Becoming.Copying.countOf a xs
+@Becoming.Copying.countOf_append : ∀ {α : Type u_1} [inst : DecidableEq α] (a : α) (l m : List α),
+  Becoming.Copying.countOf a (l ++ m) = Becoming.Copying.countOf a l + Becoming.Copying.countOf a m
+@Becoming.Copying.countOf_remove_self : ∀ {α : Type u_1} [inst : DecidableEq α] (a : α) (pool : List α),
+  0 < Becoming.Copying.countOf a pool →
+    Becoming.Copying.countOf a (Becoming.Copying.remove a pool) + 1 = Becoming.Copying.countOf a pool
+@Becoming.Copying.countOf_remove_other : ∀ {α : Type u_1} [inst : DecidableEq α] {a b : α},
+  a ≠ b →
+    ∀ (pool : List α), Becoming.Copying.countOf b (Becoming.Copying.remove a pool) = Becoming.Copying.countOf b pool
+@Becoming.Copying.supplies_nil : ∀ {α : Type u_1} [inst : DecidableEq α] (pool : List α),
+  Becoming.Copying.Supplies [] pool
+@Becoming.Copying.pos_of_supplies : ∀ {α : Type u_1} [inst : DecidableEq α] {x : α} {xs pool : List α},
+  Becoming.Copying.Supplies (x :: xs) pool → 0 < Becoming.Copying.countOf x pool
+@Becoming.Copying.supplies_cons_iff : ∀ {α : Type u_1} [inst : DecidableEq α] {x : α} {xs pool : List α},
+  Becoming.Copying.Supplies (x :: xs) pool ↔
+    0 < Becoming.Copying.countOf x pool ∧ Becoming.Copying.Supplies xs (Becoming.Copying.remove x pool)
+@Becoming.Copying.tick_cons : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (prev : Option α)
+  (x : α) (xs built pool : List α) (free used : Nat),
+  Becoming.Copying.tick draw
+      { previous := prev, pending := x :: xs, built := built, pool := pool, free := free, used := used } =
+    if 0 < Becoming.Copying.countOf x pool ∧ draw prev x ≤ free then
+      { previous := some x, pending := xs, built := built ++ [x], pool := Becoming.Copying.remove x pool,
+        free := free - draw prev x, used := used + draw prev x }
+    else { previous := prev, pending := x :: xs, built := built, pool := pool, free := free, used := used }
+@Becoming.Copying.steps_fixed : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  {s : Becoming.Copying.Scan α}, Becoming.Copying.tick draw s = s → ∀ (n : Nat), Becoming.Copying.steps draw n s = s
+@Becoming.Copying.copies : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (prev : Option α)
+  (built word pool : List α) (free used : Nat),
+  Becoming.Copying.Supplies word pool →
+    Becoming.Copying.use draw prev word ≤ free →
+      Becoming.Copying.steps draw word.length
+          { previous := prev, pending := word, built := built, pool := pool, free := free, used := used } =
+        { previous := Becoming.Copying.lastOr prev word, pending := [], built := built ++ word,
+          pool := Becoming.Copying.removeAll word pool, free := free - Becoming.Copying.use draw prev word,
+          used := used + Becoming.Copying.use draw prev word }
+@Becoming.Copying.supplied_of_completes : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (prev : Option α) (built word pool : List α) (free used : Nat),
+  (Becoming.Copying.steps draw word.length
+          { previous := prev, pending := word, built := built, pool := pool, free := free, used := used }).pending =
+      [] →
+    Becoming.Copying.Supplies word pool ∧ Becoming.Copying.use draw prev word ≤ free
+@Becoming.Copying.completes_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (prev : Option α)
+  (built word pool : List α) (free used : Nat),
+  (Becoming.Copying.steps draw word.length
+          { previous := prev, pending := word, built := built, pool := pool, free := free, used := used }).pending =
+      [] ↔
+    Becoming.Copying.Supplies word pool ∧ Becoming.Copying.use draw prev word ≤ free
+@Becoming.Copying.built_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (prev : Option α)
+  (built word pool : List α) (free used : Nat),
+  (Becoming.Copying.steps draw word.length
+          { previous := prev, pending := word, built := built, pool := pool, free := free, used := used }).built =
+      built ++ word ↔
+    Becoming.Copying.Supplies word pool ∧ Becoming.Copying.use draw prev word ≤ free
+@Becoming.Copying.releases_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (r : Nat)
+  (prev : Option α) (built word pool : List α) (free used : Nat),
+  (Becoming.Copying.steps draw word.length
+            { previous := prev, pending := word, built := built, pool := pool, free := free, used := used }).pending =
+        [] ∧
+      r ≤
+        (Becoming.Copying.steps draw word.length
+            { previous := prev, pending := word, built := built, pool := pool, free := free, used := used }).free ↔
+    Becoming.Copying.Supplies word pool ∧ Becoming.Copying.use draw prev word + r ≤ free
+@Becoming.Copying.countOf_removeAll : ∀ {α : Type u_1} [inst : DecidableEq α] (word pool : List α),
+  Becoming.Copying.Supplies word pool →
+    ∀ (a : α),
+      Becoming.Copying.countOf a (Becoming.Copying.removeAll word pool) + Becoming.Copying.countOf a word =
+        Becoming.Copying.countOf a pool
+@Becoming.Copying.nil_iff_countOf_zero : ∀ {α : Type u_1} [inst : DecidableEq α] (l : List α),
+  l = [] ↔ ∀ (a : α), Becoming.Copying.countOf a l = 0
+@Becoming.Copying.empties_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (prev : Option α)
+  (built word pool : List α) (free used : Nat),
+  (Becoming.Copying.steps draw word.length
+            { previous := prev, pending := word, built := built, pool := pool, free := free, used := used }).pending =
+        [] ∧
+      (Becoming.Copying.steps draw word.length
+            { previous := prev, pending := word, built := built, pool := pool, free := free, used := used }).pool =
+        [] ↔
+    (∀ (a : α), Becoming.Copying.countOf a word = Becoming.Copying.countOf a pool) ∧
+      Becoming.Copying.use draw prev word ≤ free
+@Becoming.Copying.supplies_append_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (w v pool : List α),
+  Becoming.Copying.Supplies (w ++ v) pool ↔
+    Becoming.Copying.Supplies w pool ∧ Becoming.Copying.Supplies v (Becoming.Copying.removeAll w pool)
+@Becoming.Copying.released_iff : ∀ {α : Type u_1} (r : Nat) (t : Becoming.Copying.Scan α),
+  Becoming.Copying.released r t = true ↔ t.pending = [] ∧ r ≤ t.free
+@Becoming.Copying.batch_all_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (r : Nat)
+  (words : List (List α)) (pool : List α) (free used : Nat),
+  Becoming.Copying.Every (Becoming.Copying.batch draw r words pool free used).fst ↔
+    Becoming.Copying.Supplies (Becoming.Copying.joinAll words) pool ∧
+      Becoming.Copying.totalOf (fun w => Becoming.Copying.use draw none w + r) words ≤ free
+@Becoming.Copying.countOf_joinAll_swap : ∀ {α : Type u_1} [inst : DecidableEq α] (a : α) (u v : List α)
+  (post pre : List (List α)),
+  Becoming.Copying.countOf a (Becoming.Copying.joinAll (pre ++ u :: v :: post)) =
+    Becoming.Copying.countOf a (Becoming.Copying.joinAll (pre ++ v :: u :: post))
+@Becoming.Copying.totalOf_swap : ∀ {α : Type u_1} (f : List α → Nat) (u v : List α) (post pre : List (List α)),
+  Becoming.Copying.totalOf f (pre ++ u :: v :: post) = Becoming.Copying.totalOf f (pre ++ v :: u :: post)
+@Becoming.Copying.batch_all_swap : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (r : Nat)
+  (pre post : List (List α)) (u v pool : List α) (free used : Nat),
+  Becoming.Copying.Every (Becoming.Copying.batch draw r (pre ++ u :: v :: post) pool free used).fst ↔
+    Becoming.Copying.Every (Becoming.Copying.batch draw r (pre ++ v :: u :: post) pool free used).fst
+@Becoming.Copying.countOf_joinAll_replicate : ∀ {α : Type u_1} [inst : DecidableEq α] (a : α) (w : List α) (n : Nat),
+  Becoming.Copying.countOf a (Becoming.Copying.joinAll (List.replicate n w)) = n * Becoming.Copying.countOf a w
+@Becoming.Copying.totalOf_replicate : ∀ {α : Type u_1} (f : List α → Nat) (w : List α) (n : Nat),
+  Becoming.Copying.totalOf f (List.replicate n w) = n * f w
+@Becoming.Copying.lineage_all_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat) (r : Nat)
+  (word pool : List α) (free used n : Nat),
+  Becoming.Copying.Every (Becoming.Copying.batch draw r (List.replicate n word) pool free used).fst ↔
+    (∀ (a : α), n * Becoming.Copying.countOf a word ≤ Becoming.Copying.countOf a pool) ∧
+      n * (Becoming.Copying.use draw none word + r) ≤ free
+@Becoming.Copying.use_pair : ∀ {α : Type u_1} [inst : DecidableEq α] (first same differ : Nat) (x : α) (l : List α),
+  Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) (some x) l +
+      same * Becoming.Copying.unlikeFrom x l =
+    same * l.length + differ * Becoming.Copying.unlikeFrom x l
+@Becoming.Copying.use_word : ∀ {α : Type u_1} [inst : DecidableEq α] (first same differ : Nat) (x : α) (l : List α),
+  Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) none (x :: l) +
+      same * Becoming.Copying.unlikeFrom x l =
+    first + same * l.length + differ * Becoming.Copying.unlikeFrom x l
+@Becoming.Copying.midpoint_arith : ∀ {A B C F e u U1 U2 U3 : Nat},
+  A + e * U1 = F + u * U1 → B + e * U3 = F + u * U3 → C + e * U2 = F + u * U2 → U1 + U3 = 2 * U2 → A + B = 2 * C
+@Becoming.Copying.use_midpoint : ∀ {α : Type u_1} [inst : DecidableEq α] (first same differ : Nat) {x y z : α}
+  {l m k : List α},
+  l.length = m.length →
+    k.length = m.length →
+      Becoming.Copying.unlikeFrom x l + Becoming.Copying.unlikeFrom z k = 2 * Becoming.Copying.unlikeFrom y m →
+        Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) none (x :: l) +
+            Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) none (z :: k) =
+          2 * Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) none (y :: m)
+@Becoming.Copying.use_lt_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (first same differ : Nat) {x y : α}
+  {l m : List α},
+  l.length = m.length →
+    ∀ {d : Nat},
+      Becoming.Copying.unlikeFrom y m = Becoming.Copying.unlikeFrom x l + d →
+        0 < d →
+          (Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) none (y :: m) <
+              Becoming.Copying.use (Becoming.Copying.pairDraw first same differ) none (x :: l) ↔
+            differ < same)
+@Becoming.Copying.readSteps_fixed : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (read : Nat → Option α) {s : Becoming.Copying.Scan α},
+  Becoming.Copying.readTick draw read s = s → ∀ (n : Nat), Becoming.Copying.readSteps draw read n s = s
+@Becoming.Copying.readStep_extends : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (s : Becoming.Copying.Scan α) (o : Option α), ∃ tail, (Becoming.Copying.readStep draw s o).built = s.built ++ tail
+@Becoming.Copying.readSteps_extends : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (read : Nat → Option α) (n : Nat) (s : Becoming.Copying.Scan α),
+  ∃ tail, (Becoming.Copying.readSteps draw read n s).built = s.built ++ tail
+@Becoming.Copying.reading_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (draw : Option α → α → Nat)
+  (read : Nat → Option α) (word pending : List α) (prev : Option α) (built pool : List α) (free used : Nat),
+  pending.length = word.length →
+    ((Becoming.Copying.readSteps draw read word.length
+            { previous := prev, pending := pending, built := built, pool := pool, free := free, used := used }).built =
+        built ++ word ↔
+      Becoming.Copying.Reads read built.length word ∧
+        Becoming.Copying.Supplies word pool ∧ Becoming.Copying.use draw prev word ≤ free)
+@Becoming.Copying.defects_self : ∀ {α : Type u_1} [inst : DecidableEq α] (t : List α), Becoming.Copying.defects t t = 0
+@Becoming.Copying.defects_fix : ∀ {α : Type u_1} [inst : DecidableEq α] (t b : List α) (i : Nat) {x old : α},
+  Becoming.Copying.nth t i = some x →
+    Becoming.Copying.nth b i = some old →
+      old ≠ x → Becoming.Copying.defects t (Becoming.Copying.setAt b i x) + 1 = Becoming.Copying.defects t b
+@Becoming.Copying.defects_break : ∀ {α : Type u_1} [inst : DecidableEq α] (t b : List α) (i : Nat) {x y : α},
+  Becoming.Copying.nth t i = some y →
+    Becoming.Copying.nth b i = some y →
+      x ≠ y → Becoming.Copying.defects t (Becoming.Copying.setAt b i x) = Becoming.Copying.defects t b + 1
+@Becoming.Copying.defects_beyond : ∀ {α : Type u_1} [inst : DecidableEq α] (t b : List α) (i : Nat) (x : α),
+  Becoming.Copying.nth t i = none →
+    Becoming.Copying.defects t (Becoming.Copying.setAt b i x) = Becoming.Copying.defects t b
+@Becoming.Copying.exchange_le : ∀ {α : Type u_1} [inst : DecidableEq α] (t : List α) (ce i : Nat) (x : α)
+  (s : Becoming.Copying.Scan α),
+  (∀ (y : α), Becoming.Copying.nth t i = some y → x = y) →
+    Becoming.Copying.defects t (Becoming.Copying.exchange ce i x s).built ≤ Becoming.Copying.defects t s.built
+@Becoming.Copying.inspect_le : ∀ {α : Type u_1} [inst : DecidableEq α] {t : List α} {ref : Nat → Option α} {i : Nat},
+  Becoming.Copying.FaithfulAt ref t i →
+    ∀ (ci ce : Nat) (s : Becoming.Copying.Scan α),
+      Becoming.Copying.defects t (Becoming.Copying.inspect ci ce ref i s).built ≤ Becoming.Copying.defects t s.built
+@Becoming.Copying.inspect_le_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (ci ce : Nat) (t : List α)
+  (ref : Nat → Option α) (i : Nat),
+  (∀ (s : Becoming.Copying.Scan α),
+      Becoming.Copying.defects t (Becoming.Copying.inspect ci ce ref i s).built ≤ Becoming.Copying.defects t s.built) ↔
+    Becoming.Copying.FaithfulAt ref t i
+@Becoming.Copying.scan_le : ∀ {α : Type u_1} [inst : DecidableEq α] {t : List α} {ref : Nat → Option α} (ci ce : Nat)
+  (sites : List Nat) (s : Becoming.Copying.Scan α),
+  (∀ (i : Nat), i ∈ sites → Becoming.Copying.FaithfulAt ref t i) →
+    Becoming.Copying.defects t (Becoming.Copying.scanSites ci ce ref sites s).built ≤ Becoming.Copying.defects t s.built
+@Becoming.Copying.inspect_matches_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (ci ce : Nat) {ref : Nat → Option α}
+  {i : Nat} {x old : α} (s : Becoming.Copying.Scan α),
+  ref i = some x →
+    Becoming.Copying.nth s.built i = some old →
+      old ≠ x →
+        (Becoming.Copying.nth (Becoming.Copying.inspect ci ce ref i s).built i = some x ↔
+          ci + ce ≤ s.free ∧ 0 < Becoming.Copying.countOf x s.pool)
+@Becoming.Copying.defects_zero_iff : ∀ {α : Type u_1} [inst : DecidableEq α] (t b : List α),
+  b.length = t.length → (Becoming.Copying.defects t b = 0 ↔ b = t)
+@Becoming.Copying.countOf_setAt : ∀ {α : Type u_1} [inst : DecidableEq α] (a : α) (b : List α) (i : Nat) {old : α}
+  (x : α),
+  Becoming.Copying.nth b i = some old →
+    Becoming.Copying.countOf a (Becoming.Copying.setAt b i x) + Becoming.Copying.countOf a [old] =
+      Becoming.Copying.countOf a b + Becoming.Copying.countOf a [x]
+@Becoming.Copying.countOf_remove : ∀ {α : Type u_1} [inst : DecidableEq α] (a x : α) (pool : List α),
+  0 < Becoming.Copying.countOf x pool →
+    Becoming.Copying.countOf a (Becoming.Copying.remove x pool) + Becoming.Copying.countOf a [x] =
+      Becoming.Copying.countOf a pool
+@Becoming.Copying.exchange_keeps_counts : ∀ {α : Type u_1} [inst : DecidableEq α] (ce i : Nat) (x : α)
+  (s : Becoming.Copying.Scan α) (a : α),
+  Becoming.Copying.countOf a ((Becoming.Copying.exchange ce i x s).built ++ (Becoming.Copying.exchange ce i x s).pool) =
+    Becoming.Copying.countOf a (s.built ++ s.pool)
+@Becoming.Copying.inspect_keeps_counts : ∀ {α : Type u_1} [inst : DecidableEq α] (ci ce : Nat) (ref : Nat → Option α)
+  (i : Nat) (s : Becoming.Copying.Scan α) (a : α),
+  Becoming.Copying.countOf a
+      ((Becoming.Copying.inspect ci ce ref i s).built ++ (Becoming.Copying.inspect ci ce ref i s).pool) =
+    Becoming.Copying.countOf a (s.built ++ s.pool)
+Becoming.Copying.two_mul_pow : ∀ (k n : Nat), 2 * k * 2 ^ n = k * 2 ^ (n + 1)
+Becoming.Copying.required_add : ∀ (n k : Nat), Becoming.Copying.required n k + k = k * 2 ^ n
+Becoming.Copying.doubling_iff : ∀ (d n k m : Nat) (t : Nat × Nat),
+  Generative.Trace (Becoming.Copying.doubling d) (k, m) (Becoming.Copying.rounds n) t ↔
+    d * Becoming.Copying.required n k ≤ m ∧ t = (k * 2 ^ n, m - d * Becoming.Copying.required n k)
+Becoming.Copying.doubling_runs : ∀ (d n k m : Nat),
+  d * Becoming.Copying.required n k ≤ m →
+    Generative.Trace (Becoming.Copying.doubling d) (k, m) (Becoming.Copying.rounds n)
+      (k * 2 ^ n, m - d * Becoming.Copying.required n k)

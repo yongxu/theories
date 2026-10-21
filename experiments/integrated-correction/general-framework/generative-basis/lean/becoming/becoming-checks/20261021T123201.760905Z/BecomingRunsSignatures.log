@@ -1,0 +1,43 @@
+Becoming.World.run_history : ∀ (w : Becoming.World), w.run.state = w.history.state ∧ w.run.act = w.history.act
+Becoming.World.run_world : ∀ (w : Becoming.World), w.run.world = w
+@Becoming.Run.world_webAt : ∀ {R : Type} {P : Generative.Process (Becoming.WebAt R) (Becoming.Exchange R)}
+  (r : Becoming.Run P) (t : Nat), r.world.webAt t = r.state t
+@Becoming.Run.world_move : ∀ {R : Type} {P : Generative.Process (Becoming.WebAt R) (Becoming.Exchange R)}
+  (r : Becoming.Run P) (t : Nat), r.world.move t = r.act t
+@Becoming.Run.world_run : ∀ {R : Type} {P : Generative.Process (Becoming.WebAt R) (Becoming.Exchange R)}
+  (r : Becoming.Run P) (t : Nat), r.world.run.state t = r.state t ∧ r.world.run.act t = r.act t
+Becoming.World.web_along : ∀ (w : Becoming.World), (Becoming.WebAt.dependence w.Relatum).along w.run = w.web
+Becoming.World.balanced_iff_run : ∀ (w : Becoming.World),
+  w.Balanced ↔ ∀ (t : Nat), (Becoming.exchangeAt w.Relatum).step (w.webAt t) (w.move t) (w.webAt (t + 1))
+Becoming.World.balanced_iff_law : ∀ (w : Becoming.World),
+  w.Balanced ↔
+    ∀ (x : Becoming.WebAt w.Relatum) (m : Becoming.Exchange w.Relatum) (y : Becoming.WebAt w.Relatum),
+      w.law.step x m y → (Becoming.exchangeAt w.Relatum).step x m y
+Becoming.World.balanced_iff_exists_run : ∀ (w : Becoming.World),
+  w.Balanced ↔ ∃ r, ∀ (t : Nat), r.state t = w.webAt t ∧ r.act t = w.move t
+Becoming.World.balancedRun_level : ∀ (w : Becoming.World) (balanced : w.Balanced) (t : Nat),
+  ((w.balancedRun balanced).state t).level = (w.exchangeRun balanced).state t
+Becoming.World.restRun_web : ∀ (w : Becoming.World) (t : Nat) (g d : w.Relatum),
+  (w.restRun.state t).level (some d) = w.web.level t d ∧
+    ((w.restRun.state t).requires (some g) (some d) ↔ w.web.requires t g d) ∧
+      (w.restRun.state t).need (some g) (some d) = w.web.need t g d
+Becoming.World.balancedRun_world : ∀ (w : Becoming.World) (balanced : w.Balanced),
+  (w.balancedRun balanced).world = w ∧
+    ∀ {R : Type} (r : Becoming.Run (Becoming.exchangeAt R)) (t : Nat),
+      (r.world.balancedRun ⋯).state t = r.state t ∧ (r.world.balancedRun ⋯).act t = r.act t
+@Becoming.ExchangeLaw.courseWorld_level : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat} {W : Becoming.Web F C} (t : Nat) (c : C),
+  (law.courseWorld present start W).web.level t (Sum.inr c) = law.levels present start t c
+@Becoming.ExchangeLaw.courseRun_state : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat} {W : Becoming.Web F C} (na : law.Nonanticipating) (feasible : law.Feasible present start) (t : Nat)
+  (c : C), ((Becoming.ExchangeLaw.courseRun na feasible).state t).level (Sum.inr c) = law.levels present start t c
+@Becoming.ExchangeLaw.process_runs : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat} (r : Becoming.Run (law.process present)),
+  r.state 0 = (0, fun x => start) → ∀ (n : Nat), r.state n = (n, law.history present start n)
+@Becoming.ExchangeLaw.courseWorld_process : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {start : C → Nat} {W : Becoming.Web F C} (r : Becoming.Run (law.process present)),
+  r.state 0 = (0, fun x => start) →
+    ∀ (t : Nat) (c : C), (law.courseWorld present start W).web.level t (Sum.inr c) = (r.state t).snd t c
+@Becoming.carriedRun_level : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} (t : Nat) (c : C),
+  ((Becoming.carriedRun cs part σ k present δ).state t).level (Sum.inr c) = Becoming.carried cs part σ k present δ t c

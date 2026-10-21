@@ -1,0 +1,197 @@
+@Becoming.Presentations.equal_codes_same_answers : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3}
+  {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C},
+  Becoming.Presentations.Exact answers p →
+    ∀ {m n : M}, p.encode m = p.encode n → Becoming.Presentations.SameAnswers answers m n
+@Becoming.Presentations.reduced_exact_kernel : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3} {answers : M → Q → Prop}
+  {p : Becoming.Presentations.Presentation M Q C},
+  Becoming.Presentations.Exact answers p →
+    Becoming.Presentations.Reduced answers p →
+      ∀ (m n : M), p.encode m = p.encode n ↔ Becoming.Presentations.SameAnswers answers m n
+@Becoming.Presentations.reduced_presentations_same_kernel : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3}
+  {D : Type u_4} {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C}
+  {r : Becoming.Presentations.Presentation M Q D},
+  Becoming.Presentations.Exact answers p →
+    Becoming.Presentations.Reduced answers p →
+      Becoming.Presentations.Exact answers r →
+        Becoming.Presentations.Reduced answers r → ∀ (m n : M), p.encode m = p.encode n ↔ r.encode m = r.encode n
+@Becoming.Presentations.matches_total_on_used : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3} {D : Type u_4}
+  (p : Becoming.Presentations.Presentation M Q C) (r : Becoming.Presentations.Presentation M Q D) {c : C},
+  Becoming.Presentations.Used p c → ∃ d, Becoming.Presentations.Used r d ∧ Becoming.Presentations.Matches p r c d
+@Becoming.Presentations.matches_functional : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3} {D : Type u_4}
+  {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C}
+  {r : Becoming.Presentations.Presentation M Q D},
+  Becoming.Presentations.Exact answers p →
+    Becoming.Presentations.Reduced answers r →
+      ∀ {c : C} {d e : D}, Becoming.Presentations.Matches p r c d → Becoming.Presentations.Matches p r c e → d = e
+@Becoming.Presentations.matches_inverse_functional : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3} {D : Type u_4}
+  {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C}
+  {r : Becoming.Presentations.Presentation M Q D},
+  Becoming.Presentations.Exact answers r →
+    Becoming.Presentations.Reduced answers p →
+      ∀ {c e : C} {d : D}, Becoming.Presentations.Matches p r c d → Becoming.Presentations.Matches p r e d → c = e
+@Becoming.Presentations.matches_iff_equal_answers : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3} {D : Type u_4}
+  {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C}
+  {r : Becoming.Presentations.Presentation M Q D},
+  Becoming.Presentations.Exact answers p →
+    Becoming.Presentations.Exact answers r →
+      Becoming.Presentations.Reduced answers r →
+        ∀ (c : C) (d : D),
+          Becoming.Presentations.Matches p r c d ↔
+            Becoming.Presentations.Used p c ∧ Becoming.Presentations.Used r d ∧ ∀ (q : Q), p.read c q ↔ r.read d q
+@Becoming.Presentations.unique_matching : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3} {D : Type u_4}
+  (p : Becoming.Presentations.Presentation M Q C) (r : Becoming.Presentations.Presentation M Q D) (R : C → D → Prop),
+  (∀ (m : M), R (p.encode m) (r.encode m)) →
+    (∀ (c : C) (d e : D), R c d → R c e → d = e) →
+      ∀ {c : C} {d : D}, Becoming.Presentations.Used p c → (R c d ↔ Becoming.Presentations.Matches p r c d)
+@Becoming.Presentations.relative_unique_correspondence : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3} {D : Type u_4}
+  {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C}
+  {r : Becoming.Presentations.Presentation M Q D},
+  Becoming.Presentations.Exact answers p →
+    Becoming.Presentations.Reduced answers p →
+      Becoming.Presentations.Exact answers r →
+        Becoming.Presentations.Reduced answers r →
+          (∀ (c : C),
+              Becoming.Presentations.Used p c →
+                ∃ d,
+                  Becoming.Presentations.Matches p r c d ∧ ∀ (e : D), Becoming.Presentations.Matches p r c e → e = d) ∧
+            ∀ (d : D),
+              Becoming.Presentations.Used r d →
+                ∃ c, Becoming.Presentations.Matches p r c d ∧ ∀ (e : C), Becoming.Presentations.Matches p r e d → e = c
+@Becoming.Presentations.canonical_exact : ∀ {M : Type u_1} {Q : Type u_2} (answers : M → Q → Prop),
+  Becoming.Presentations.Exact answers (Becoming.Presentations.canonical answers)
+@Becoming.Presentations.canonical_reduced : ∀ {M : Type u_1} {Q : Type u_2},
+  Becoming.Presentations.PredicateExt Q →
+    ∀ (answers : M → Q → Prop), Becoming.Presentations.Reduced answers (Becoming.Presentations.canonical answers)
+@Becoming.Presentations.canonical_factor_answers : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3}
+  {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C},
+  Becoming.Presentations.Exact answers p →
+    (∀ (c : C),
+        Becoming.Presentations.Used p c →
+          ∃ d,
+            Becoming.Presentations.Used (Becoming.Presentations.canonical answers) d ∧
+              Becoming.Presentations.Matches p (Becoming.Presentations.canonical answers) c d ∧
+                ∀ (e : Q → Prop),
+                  Becoming.Presentations.Matches p (Becoming.Presentations.canonical answers) c e →
+                    ∀ (q : Q), e q ↔ d q) ∧
+      ∀ (d : Q → Prop),
+        Becoming.Presentations.Used (Becoming.Presentations.canonical answers) d →
+          ∃ c,
+            Becoming.Presentations.Used p c ∧
+              Becoming.Presentations.Matches p (Becoming.Presentations.canonical answers) c d
+@Becoming.Presentations.canonical_factor : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3},
+  Becoming.Presentations.PredicateExt Q →
+    ∀ {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C},
+      Becoming.Presentations.Exact answers p →
+        (∀ (c : C),
+            Becoming.Presentations.Used p c →
+              ∃ d,
+                Becoming.Presentations.Used (Becoming.Presentations.canonical answers) d ∧
+                  Becoming.Presentations.Matches p (Becoming.Presentations.canonical answers) c d ∧
+                    ∀ (e : Q → Prop),
+                      Becoming.Presentations.Matches p (Becoming.Presentations.canonical answers) c e → e = d) ∧
+          ∀ (d : Q → Prop),
+            Becoming.Presentations.Used (Becoming.Presentations.canonical answers) d →
+              ∃ c,
+                Becoming.Presentations.Used p c ∧
+                  Becoming.Presentations.Matches p (Becoming.Presentations.canonical answers) c d
+Becoming.Presentations.short_exact : Becoming.Presentations.Exact Becoming.Presentations.firstAnswers
+  Becoming.Presentations.short
+Becoming.Presentations.full_exact : Becoming.Presentations.Exact Becoming.Presentations.firstAnswers
+  Becoming.Presentations.full
+Becoming.Presentations.short_reduced : Becoming.Presentations.Reduced Becoming.Presentations.firstAnswers
+  Becoming.Presentations.short
+Becoming.Presentations.full_not_reduced : ¬Becoming.Presentations.Reduced Becoming.Presentations.firstAnswers
+    Becoming.Presentations.full
+Becoming.Presentations.first_summary_cannot_answer_both : ¬∃ read,
+    Becoming.Presentations.Exact Becoming.Presentations.bothAnswers { encode := Prod.fst, read := read }
+@Becoming.Presentations.lift_contains : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3}
+  (p : Becoming.Presentations.Presentation M Q C) (J : M → M → M → Prop) {a b c : M},
+  J a b c → Becoming.jointImage J p.encode (p.encode a) (p.encode b) (p.encode c)
+@Becoming.Presentations.saturation_gives_exact_lift : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3}
+  {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C} {J : M → M → M → Prop},
+  Becoming.Presentations.Exact answers p →
+    Becoming.Presentations.Saturated answers J → Becoming.Presentations.RelExact p J (Becoming.jointImage J p.encode)
+@Becoming.Presentations.exact_relation_forces_saturation : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3}
+  {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C} {J : M → M → M → Prop}
+  {K : C → C → C → Prop},
+  Becoming.Presentations.Reduced answers p →
+    Becoming.Presentations.RelExact p J K → Becoming.Presentations.Saturated answers J
+@Becoming.Presentations.relation_descends_iff_saturated : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3}
+  {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C} {J : M → M → M → Prop},
+  Becoming.Presentations.Exact answers p →
+    Becoming.Presentations.Reduced answers p →
+      ((∃ K, Becoming.Presentations.RelExact p J K) ↔ Becoming.Presentations.Saturated answers J)
+@Becoming.Presentations.lift_exact_iff_saturated : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3}
+  {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C} {J : M → M → M → Prop},
+  Becoming.Presentations.Exact answers p →
+    Becoming.Presentations.Reduced answers p →
+      (Becoming.Presentations.RelExact p J (Becoming.jointImage J p.encode) ↔
+        Becoming.Presentations.Saturated answers J)
+@Becoming.Presentations.relational_reading_unique_on_used : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3}
+  {p : Becoming.Presentations.Presentation M Q C} {J : M → M → M → Prop} {K L : C → C → C → Prop},
+  Becoming.Presentations.RelExact p J K →
+    Becoming.Presentations.RelExact p J L →
+      ∀ {x y z : C},
+        Becoming.Presentations.Used p x →
+          Becoming.Presentations.Used p y → Becoming.Presentations.Used p z → (K x y z ↔ L x y z)
+@Becoming.Presentations.separating_relation_blocks_descent : ∀ {M : Type u_1} {Q : Type u_2} {C : Type u_3}
+  {answers : M → Q → Prop} {p : Becoming.Presentations.Presentation M Q C} {J : M → M → M → Prop},
+  Becoming.Presentations.Reduced answers p →
+    ∀ {a a' b b' c c' : M},
+      Becoming.Presentations.SameAnswers answers a a' →
+        Becoming.Presentations.SameAnswers answers b b' →
+          Becoming.Presentations.SameAnswers answers c c' →
+            J a b c → ¬J a' b' c' → ¬∃ K, Becoming.Presentations.RelExact p J K
+@Becoming.Presentations.all_predicates_separate : ∀ {M : Type u_1} (a b : M),
+  Becoming.Presentations.SameAnswers Becoming.Presentations.AllPredicates a b ↔ a = b
+@Becoming.Presentations.all_predicates_force_injective : ∀ {M : Type u_1} {C : Type u_2}
+  {p : Becoming.Presentations.Presentation M (M → Prop) C},
+  Becoming.Presentations.Exact Becoming.Presentations.AllPredicates p → ∀ (a b : M), p.encode a = p.encode b → a = b
+@Becoming.Presentations.all_predicates_every_relation : ∀ {M : Type u_1} (J : M → M → M → Prop),
+  Becoming.Presentations.Saturated Becoming.Presentations.AllPredicates J
+@Becoming.Presentations.all_predicates_relation_recoverable : ∀ {M : Type u_1} {C : Type u_2}
+  {p : Becoming.Presentations.Presentation M (M → Prop) C},
+  Becoming.Presentations.Exact Becoming.Presentations.AllPredicates p →
+    ∀ (J : M → M → M → Prop), Becoming.Presentations.RelExact p J (Becoming.jointImage J p.encode)
+@Becoming.Presentations.all_predicates_automatically_reduced : ∀ {M : Type u_1} {C : Type u_2}
+  (p : Becoming.Presentations.Presentation M (M → Prop) C),
+  Becoming.Presentations.Reduced Becoming.Presentations.AllPredicates p
+@Becoming.Presentations.all_predicates_unique_correspondence : ∀ {M : Type u_1} {C : Type u_2} {D : Type u_3}
+  {p : Becoming.Presentations.Presentation M (M → Prop) C} {r : Becoming.Presentations.Presentation M (M → Prop) D},
+  Becoming.Presentations.Exact Becoming.Presentations.AllPredicates p →
+    Becoming.Presentations.Exact Becoming.Presentations.AllPredicates r →
+      (∀ (c : C),
+          Becoming.Presentations.Used p c →
+            ∃ d, Becoming.Presentations.Matches p r c d ∧ ∀ (e : D), Becoming.Presentations.Matches p r c e → e = d) ∧
+        ∀ (d : D),
+          Becoming.Presentations.Used r d →
+            ∃ c, Becoming.Presentations.Matches p r c d ∧ ∀ (e : C), Becoming.Presentations.Matches p r e d → e = c
+@Becoming.Presentations.Tests.alike_one_code : ∀ {S : Type u_1} {A : Type u_2} {C' : Type u_3} {K : Type u_4}
+  {F : Becoming.Frame S A C'} {p : Becoming.Presentations.Presentation S (Becoming.BranchingTest A C') K},
+  Becoming.Presentations.Reduced (Becoming.BranchingTest.Holds F) p →
+    ∀ {s s' : S}, Becoming.Alike F F s s' → p.encode s = p.encode s'
+@Becoming.Presentations.Tests.aligned_iff : ∀ {S : Type u_1} {A : Type u_2} {C' : Type u_3} {K : Type u_4}
+  {K' : Type u_1} {F : Becoming.Frame S A C'}
+  {p : Becoming.Presentations.Presentation S (Becoming.BranchingTest A C') K}
+  {q : Becoming.Presentations.Presentation S (Becoming.BranchingTest A C') K'},
+  Becoming.Presentations.Exact (Becoming.BranchingTest.Holds F) p →
+    Becoming.Presentations.Exact (Becoming.BranchingTest.Holds F) q →
+      Becoming.Presentations.Reduced (Becoming.BranchingTest.Holds F) q →
+        ∀ (B : K → K' → Prop),
+          (∀ (s : S), B (p.encode s) (q.encode s)) →
+            (∀ (k : K) (k' k'' : K'), B k k' → B k k'' → k' = k'') →
+              ∀ {k : K} {k' : K'},
+                Becoming.Presentations.Used p k →
+                  (B k k' ↔
+                    Becoming.Presentations.Used p k ∧
+                      Becoming.Presentations.Used q k' ∧ ∀ (φ : Becoming.BranchingTest A C'), p.read k φ ↔ q.read k' φ)
+@Becoming.PresentationFrames.canonical_exact : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3}
+  (F : Becoming.Frame S A C),
+  Becoming.Presentations.Exact (Becoming.BranchingTest.Holds F)
+    (Becoming.Presentations.canonical (Becoming.BranchingTest.Holds F))
+@Becoming.PresentationFrames.canonical_kernel : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3},
+  Becoming.Presentations.PredicateExt (Becoming.BranchingTest A C) →
+    ∀ (F : Becoming.Frame S A C) (s s' : S),
+      (Becoming.Presentations.canonical (Becoming.BranchingTest.Holds F)).encode s =
+          (Becoming.Presentations.canonical (Becoming.BranchingTest.Holds F)).encode s' ↔
+        Becoming.SameBranchingTests F F s s'

@@ -1,0 +1,200 @@
+@Becoming.RelativePosition.total_split : ∀ {P : Type} (q : P → Nat) (pre : List P) (p : P) (post : List P),
+  Becoming.total (pre ++ p :: post) q = q p + Becoming.total (pre ++ post) q
+@Becoming.RelativePosition.positions_balance : ∀ {P : Type} (ps : List P) (a : P → Nat),
+  (Becoming.total ps fun p => ps.length * a p) = Becoming.total ps fun x => Becoming.total ps a
+@Becoming.RelativePosition.change_balances : ∀ {P : Type} (ps : List P) (a b : P → Nat),
+  Becoming.total ps (Becoming.RelativePosition.riseCount ps a b) =
+    Becoming.total ps (Becoming.RelativePosition.fallCount ps a b)
+@Becoming.RelativePosition.change_opposed : ∀ {P : Type} (pre : List P) (p : P) (post : List P) (a b : P → Nat),
+  Becoming.RelativePosition.riseCount (pre ++ p :: post) a b p +
+      Becoming.total (pre ++ post) (Becoming.RelativePosition.riseCount (pre ++ p :: post) a b) =
+    Becoming.RelativePosition.fallCount (pre ++ p :: post) a b p +
+      Becoming.total (pre ++ post) (Becoming.RelativePosition.fallCount (pre ++ p :: post) a b)
+@Becoming.RelativePosition.rest_falls_of_rises : ∀ {P : Type} {pre post : List P} {p : P} {a b : P → Nat},
+  Becoming.RelativePosition.fallCount (pre ++ p :: post) a b p <
+      Becoming.RelativePosition.riseCount (pre ++ p :: post) a b p →
+    Becoming.total (pre ++ post) (Becoming.RelativePosition.riseCount (pre ++ p :: post) a b) <
+      Becoming.total (pre ++ post) (Becoming.RelativePosition.fallCount (pre ++ p :: post) a b)
+@Becoming.RelativePosition.total_lt_of_mem : ∀ {P : Type} {f g : P → Nat} {p : P} {ps : List P},
+  p ∈ ps → f p < g p → (∀ (q : P), q ∈ ps → f q ≤ g q) → Becoming.total ps f < Becoming.total ps g
+@Becoming.RelativePosition.not_all_rise : ∀ {P : Type} {ps : List P} {p : P},
+  p ∈ ps →
+    ∀ (a b : P → Nat),
+      ¬∀ (q : P), q ∈ ps → Becoming.RelativePosition.fallCount ps a b q < Becoming.RelativePosition.riseCount ps a b q
+@Becoming.RelativePosition.below_somewhere_or_not : ∀ {P : Type} (f g : P → Nat) (ps : List P),
+  (∃ q, q ∈ ps ∧ g q < f q) ∨ ∀ (q : P), q ∈ ps → f q ≤ g q
+@Becoming.RelativePosition.rise_needs_fall : ∀ {P : Type} {ps : List P} {p : P},
+  p ∈ ps →
+    ∀ {a b : P → Nat},
+      Becoming.RelativePosition.fallCount ps a b p < Becoming.RelativePosition.riseCount ps a b p →
+        ∃ q, q ∈ ps ∧ Becoming.RelativePosition.riseCount ps a b q < Becoming.RelativePosition.fallCount ps a b q
+@Becoming.RelativePosition.greatest_not_behind : ∀ {P : Type} {ps : List P} {a : P → Nat} {g : P},
+  Becoming.RelativePosition.Greatest ps a g → Becoming.total ps a ≤ ps.length * a g
+@Becoming.RelativePosition.greatest_exists : ∀ {P : Type} (a : P → Nat) (p : P) (ps : List P),
+  ∃ g, g ∈ p :: ps ∧ Becoming.RelativePosition.Greatest (p :: ps) a g
+@Becoming.Flow.drawn_positions : ∀ {F C : Type} (L : Becoming.Flow F C) (c : C) (s t : Nat) (p : F) (ps : List F),
+  ((Becoming.total (p :: ps) fun q => (p :: ps).length * L.drawn c t q) =
+      Becoming.total (p :: ps) fun x => Becoming.total (p :: ps) (L.drawn c t)) ∧
+    Becoming.total (p :: ps) (Becoming.RelativePosition.riseCount (p :: ps) (L.drawn c s) (L.drawn c t)) =
+        Becoming.total (p :: ps) (Becoming.RelativePosition.fallCount (p :: ps) (L.drawn c s) (L.drawn c t)) ∧
+      (∀ (q : F),
+          q ∈ p :: ps →
+            Becoming.RelativePosition.fallCount (p :: ps) (L.drawn c s) (L.drawn c t) q <
+                Becoming.RelativePosition.riseCount (p :: ps) (L.drawn c s) (L.drawn c t) q →
+              ∃ r,
+                r ∈ p :: ps ∧
+                  Becoming.RelativePosition.riseCount (p :: ps) (L.drawn c s) (L.drawn c t) r <
+                    Becoming.RelativePosition.fallCount (p :: ps) (L.drawn c s) (L.drawn c t) r) ∧
+        (¬∀ (q : F),
+              q ∈ p :: ps →
+                Becoming.RelativePosition.fallCount (p :: ps) (L.drawn c s) (L.drawn c t) q <
+                  Becoming.RelativePosition.riseCount (p :: ps) (L.drawn c s) (L.drawn c t) q) ∧
+          ∃ g,
+            g ∈ p :: ps ∧
+              Becoming.RelativePosition.Greatest (p :: ps) (L.drawn c t) g ∧
+                Becoming.total (p :: ps) (L.drawn c t) ≤ (p :: ps).length * L.drawn c t g
+@Becoming.Flow.excess_leaves_below : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {m T n : Nat},
+  (∀ (k : Nat), k < n → L.BalancesOn W [c] (T + k)) →
+    (∀ (k : Nat), k < n → L.given (T + k) c < L.taken (T + k) c) → W.level T c < n + m → W.level (T + n) c < m
+@Becoming.Flow.ends_at_race_end : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {T n : Nat}
+  {g : F},
+  (∀ (k : Nat), k < n → L.BalancesOn W [c] (T + k)) →
+    (∀ (k : Nat), k < n → L.given (T + k) c < L.taken (T + k) c) →
+      W.level T c < n + W.need (T + n) g c →
+        W.requires (T + n) g c → (W.active (T + n) g → W.Supported (T + n) g) → ¬W.active (T + n) g
+@Becoming.Flow.race_ends_greatest : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (f : F), f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c) →
+            ∀ {T n : Nat},
+              (∀ (k : Nat), k < n → L.given (T + k) c < L.taken (T + k) c) →
+                W.level T c < n + m →
+                  ∀ (ps : List F) (pos : Nat → F → Nat),
+                    Becoming.total ps (Becoming.RelativePosition.riseCount ps (pos T) (pos (T + n))) =
+                        Becoming.total ps (Becoming.RelativePosition.fallCount ps (pos T) (pos (T + n))) ∧
+                      W.level (T + n) c + n ≤ W.level T c ∧
+                        (∀ (k : Nat), W.level (T + n + k) c < m) ∧
+                          ∀ (k : Nat) (g : F),
+                            g ∈ ps →
+                              Becoming.RelativePosition.Greatest ps (pos (T + n + k)) g →
+                                W.requires (T + n + k) g c → m ≤ W.need (T + n + k) g c → ¬W.active (T + n + k) g
+@Becoming.Flow.greatest_end_for_good : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (f : F), f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c) →
+            ∀ {T n : Nat},
+              (∀ (k : Nat), k < n → L.given (T + k) c < L.taken (T + k) c) →
+                W.level T c < n + m →
+                  ∀ (p : F) (ps : List F) (pos : Nat → F → Nat),
+                    (∀ (k : Nat) (g : F), g ∈ p :: ps → W.requires (T + n + k) g c ∧ m ≤ W.need (T + n + k) g c) →
+                      ∀ (k : Nat),
+                        (∃ g, g ∈ p :: ps ∧ Becoming.RelativePosition.Greatest (p :: ps) (pos (T + n + k)) g) ∧
+                          ∀ (g : F),
+                            g ∈ p :: ps →
+                              Becoming.RelativePosition.Greatest (p :: ps) (pos (T + n + k)) g → ¬W.active (T + n + k) g
+Becoming.DrawingMore.grow_and_fall : (∀ (q : Bool),
+    Becoming.DrawingMore.flow.drawn () 1 q < Becoming.DrawingMore.flow.drawn () 2 q) ∧
+  Becoming.RelativePosition.riseCount [false, true] (Becoming.DrawingMore.flow.drawn () 1)
+        (Becoming.DrawingMore.flow.drawn () 2) false <
+      Becoming.RelativePosition.fallCount [false, true] (Becoming.DrawingMore.flow.drawn () 1)
+        (Becoming.DrawingMore.flow.drawn () 2) false ∧
+    Becoming.RelativePosition.fallCount [false, true] (Becoming.DrawingMore.flow.drawn () 1)
+        (Becoming.DrawingMore.flow.drawn () 2) true <
+      Becoming.RelativePosition.riseCount [false, true] (Becoming.DrawingMore.flow.drawn () 1)
+        (Becoming.DrawingMore.flow.drawn () 2) true
+Becoming.Race.balances : Becoming.Race.flow.Balances Becoming.Race.web
+Becoming.Race.live_of_present : ∀ (t : Nat) (f : Becoming.Race.Member),
+  f ∈ Becoming.Race.present t → Becoming.Race.live t
+Becoming.Race.acting : Becoming.Race.flow.Acting Becoming.Race.web
+Becoming.Race.dependent : Becoming.Race.web.Dependent
+Becoming.Race.gated : ∀ (t : Nat) (f : Becoming.Race.Member),
+  f ∈ Becoming.Race.flow.present t →
+    0 < Becoming.Race.flow.give t f () → Becoming.Race.web.requires t f () ∧ 1 ≤ Becoming.Race.web.need t f ()
+Becoming.Race.drawn_renewer : ∀ (t : Nat), Becoming.Race.flow.drawn () t Becoming.Witnesses.Member.renewer = 0
+Becoming.Race.drawn_second_le : ∀ (t : Nat),
+  Becoming.Race.flow.drawn () t Becoming.Witnesses.Member.second ≤
+    Becoming.Race.flow.drawn () t Becoming.Witnesses.Member.first
+Becoming.Race.first_greatest : ∀ (t : Nat),
+  Becoming.RelativePosition.Greatest
+    [Becoming.Witnesses.Member.renewer, Becoming.Witnesses.Member.first, Becoming.Witnesses.Member.second]
+    (Becoming.Race.flow.drawn () t) Becoming.Witnesses.Member.first
+Becoming.Race.excess : ∀ (k : Nat), k < 2 → Becoming.Race.flow.given (0 + k) () < Becoming.Race.flow.taken (0 + k) ()
+Becoming.Race.first_rises : Becoming.RelativePosition.fallCount Becoming.Race.all (Becoming.Race.flow.drawn () 0)
+    (Becoming.Race.flow.drawn () 2) Becoming.Witnesses.Member.first <
+  Becoming.RelativePosition.riseCount Becoming.Race.all (Becoming.Race.flow.drawn () 0) (Becoming.Race.flow.drawn () 2)
+    Becoming.Witnesses.Member.first
+Becoming.Race.greatest_ends : (∀ (t : Nat),
+    t < 2 → Becoming.Race.flow.WithinOwn t () ∧ ¬Becoming.Race.flow.WithinJoint t ()) ∧
+  (∀ (t : Nat),
+      Becoming.RelativePosition.Greatest Becoming.Race.all (Becoming.Race.flow.drawn () t)
+        Becoming.Witnesses.Member.first) ∧
+    Becoming.RelativePosition.fallCount Becoming.Race.all (Becoming.Race.flow.drawn () 0)
+          (Becoming.Race.flow.drawn () 2) Becoming.Witnesses.Member.first <
+        Becoming.RelativePosition.riseCount Becoming.Race.all (Becoming.Race.flow.drawn () 0)
+          (Becoming.Race.flow.drawn () 2) Becoming.Witnesses.Member.first ∧
+      Becoming.total [Becoming.Witnesses.Member.renewer, Becoming.Witnesses.Member.second]
+            (Becoming.RelativePosition.riseCount Becoming.Race.all (Becoming.Race.flow.drawn () 0)
+              (Becoming.Race.flow.drawn () 2)) <
+          Becoming.total [Becoming.Witnesses.Member.renewer, Becoming.Witnesses.Member.second]
+            (Becoming.RelativePosition.fallCount Becoming.Race.all (Becoming.Race.flow.drawn () 0)
+              (Becoming.Race.flow.drawn () 2)) ∧
+        (∀ (k : Nat), ¬Becoming.Race.web.active (0 + 2 + k) Becoming.Witnesses.Member.first) ∧
+          ∀ (k : Nat) (f : Becoming.Race.Member), ¬Becoming.Race.web.active (0 + 2 + k) f
+Becoming.Restored.balances : Becoming.Restored.flow.Balances Becoming.Restored.web
+Becoming.Restored.acting : Becoming.Restored.flow.Acting Becoming.Restored.web
+Becoming.Restored.dependent : Becoming.Restored.web.Dependent
+Becoming.Restored.drawn_renewer : ∀ (t : Nat), Becoming.Restored.flow.drawn () t Becoming.Restored.Member.renewer = 0
+Becoming.Restored.returns : Becoming.Restored.flow.Balances Becoming.Restored.web ∧
+  Becoming.Restored.flow.Acting Becoming.Restored.web ∧
+    Becoming.Restored.web.Dependent ∧
+      Becoming.Restored.flow.given 0 () < Becoming.Restored.flow.taken 0 () ∧
+        (∀ (t : Nat),
+            Becoming.RelativePosition.Greatest [Becoming.Restored.Member.renewer, Becoming.Restored.Member.part]
+              (Becoming.Restored.flow.drawn () t) Becoming.Restored.Member.part) ∧
+          ¬Becoming.Restored.web.active 1 Becoming.Restored.Member.part ∧
+            (0 < Becoming.Restored.flow.give 1 Becoming.Restored.Member.renewer () ∧
+                ¬Becoming.Restored.web.requires 1 Becoming.Restored.Member.renewer ()) ∧
+              ∀ (k : Nat), Becoming.Restored.web.active (k + 2) Becoming.Restored.Member.part
+Becoming.Clearing.acting : Becoming.Clearing.flow.Acting Becoming.Clearing.web
+Becoming.Clearing.habitat_ungiven : ∀ (t : Nat) (f : Becoming.Clearing.Formation),
+  f ∈ Becoming.Clearing.flow.present t → ¬0 < Becoming.Clearing.flow.give t f Becoming.Clearing.Place.habitat
+Becoming.Clearing.drawn_source : ∀ (t : Nat),
+  Becoming.Clearing.flow.drawn Becoming.Clearing.Place.habitat t Becoming.Clearing.Formation.source = 0
+Becoming.Clearing.drawn_dweller : ∀ (t : Nat),
+  Becoming.Clearing.flow.drawn Becoming.Clearing.Place.habitat t Becoming.Clearing.Formation.dweller = 0
+Becoming.Clearing.greatest_continues : (∀ (k : Nat),
+    k < 2 →
+      Becoming.Clearing.flow.given (0 + k) Becoming.Clearing.Place.habitat <
+        Becoming.Clearing.flow.taken (0 + k) Becoming.Clearing.Place.habitat) ∧
+  Becoming.Clearing.web.level 0 Becoming.Clearing.Place.habitat < 2 + 1 ∧
+    (∀ (t : Nat) (f : Becoming.Clearing.Formation),
+        f ∈ Becoming.Clearing.flow.present t → ¬0 < Becoming.Clearing.flow.give t f Becoming.Clearing.Place.habitat) ∧
+      (∀ (t : Nat),
+          Becoming.RelativePosition.Greatest
+            [Becoming.Clearing.Formation.source, Becoming.Clearing.Formation.clearer,
+              Becoming.Clearing.Formation.dweller]
+            (Becoming.Clearing.flow.drawn Becoming.Clearing.Place.habitat t) Becoming.Clearing.Formation.clearer) ∧
+        (∀ (t : Nat),
+            ¬Becoming.Clearing.web.requires t Becoming.Clearing.Formation.clearer Becoming.Clearing.Place.habitat) ∧
+          (∀ (t : Nat),
+              Becoming.Clearing.web.active t Becoming.Clearing.Formation.clearer ∧
+                Becoming.Clearing.web.Supported t Becoming.Clearing.Formation.clearer) ∧
+            ∀ (k : Nat), ¬Becoming.Clearing.web.active (0 + 2 + k) Becoming.Clearing.Formation.dweller
+@Becoming.Clearing.loss_needs_significance : ∀ {Pos : Type} {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    (∀ (sig : Pos → Nat → Becoming.Clearing.Formation → Prop),
+        Becoming.Unrestricted sig →
+          ∀ (p : Pos),
+            Becoming.Clearing.web.Adds sig p l Becoming.Clearing.web.level ∧
+              ¬Becoming.Clearing.web.Retains sig p Becoming.Clearing.web.level l) ∧
+      (∀ (p : Pos),
+          Becoming.Clearing.web.Retains (fun x x_1 x_2 => False) p Becoming.Clearing.web.level l ∧
+            ¬Becoming.Clearing.web.Adds (fun x x_1 x_2 => False) p l Becoming.Clearing.web.level) ∧
+        ∀ (t : Nat),
+          Becoming.Clearing.web.active t Becoming.Clearing.Formation.clearer ∧
+            Becoming.Clearing.web.Supported t Becoming.Clearing.Formation.clearer

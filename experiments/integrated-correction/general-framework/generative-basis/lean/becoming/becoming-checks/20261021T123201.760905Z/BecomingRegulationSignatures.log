@@ -1,0 +1,437 @@
+@Becoming.Regulation.gap_of_le : ∀ {x m : Nat}, m ≤ x → Becoming.gap x m = x - m
+@Becoming.Regulation.gap_of_ge : ∀ {x m : Nat}, x ≤ m → Becoming.gap x m = m - x
+@Becoming.Regulation.Between.at_level : ∀ {m y : Nat}, Becoming.Regulation.Between m m y → y = m
+@Becoming.Regulation.Between.stays : ∀ {m x y : Nat}, Becoming.Regulation.Between m x y → x = m → y = m
+@Becoming.Regulation.Between.trans : ∀ {m x y z : Nat},
+  Becoming.Regulation.Between m x y → Becoming.Regulation.Between m y z → Becoming.Regulation.Between m x z
+Becoming.Regulation.Between.refl : ∀ (m x : Nat), Becoming.Regulation.Between m x x
+@Becoming.Regulation.within_iff_between : ∀ {x y k g m : Nat},
+  y + k = x + g → (k ≤ g + (x - m) ∧ g ≤ k + (m - x) ↔ Becoming.Regulation.Between m x y)
+@Becoming.Regulation.Between.gap_le : ∀ {m x y : Nat},
+  Becoming.Regulation.Between m x y → Becoming.gap y m ≤ Becoming.gap x m
+@Becoming.Regulation.sub_succ_le_of_lt : ∀ {m y x : Nat}, m ≤ y → y < x → y - m + 1 ≤ x - m
+@Becoming.Regulation.sub_succ_le_of_gt : ∀ {m y x : Nat}, y ≤ m → x < y → m - y + 1 ≤ m - x
+@Becoming.Regulation.Between.gap_falls : ∀ {m x y : Nat},
+  Becoming.Regulation.Between m x y →
+    (m < x → y < x) → (x < m → x < y) → x ≠ m → Becoming.gap y m + 1 ≤ Becoming.gap x m
+@Becoming.Flow.withinGap_iff_between : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m t : Nat}
+  {c : C},
+  L.BalancesOn W [c] t → (L.WithinGap W m t c ↔ Becoming.Regulation.Between m (W.level t c) (W.level (t + 1) c))
+@Becoming.Flow.gap_le_of_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m t : Nat} {c : C},
+  L.BalancesOn W [c] t → L.WithinGap W m t c → Becoming.gap (W.level (t + 1) c) m ≤ Becoming.gap (W.level t c) m
+@Becoming.Flow.gap_falls : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m t : Nat} {c : C},
+  L.BalancesOn W [c] t →
+    L.WithinGap W m t c →
+      L.Opposes W m t c → W.level t c ≠ m → Becoming.gap (W.level (t + 1) c) m + 1 ≤ Becoming.gap (W.level t c) m
+@Becoming.Flow.regulates_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m T : Nat} {c : C}
+  (n : Nat),
+  (∀ (k : Nat), k < n → L.BalancesOn W [c] (T + k)) →
+    (∀ (k : Nat), k < n → L.WithinGap W m (T + k) c) →
+      (∀ (k : Nat), k < n → L.Opposes W m (T + k) c) →
+        Becoming.gap (W.level (T + n) c) m ≤ Becoming.gap (W.level T c) m - n
+@Becoming.Flow.settles_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m T : Nat} {c : C},
+  (∀ (k : Nat), L.BalancesOn W [c] (T + k)) →
+    (∀ (k : Nat), L.WithinGap W m (T + k) c) →
+      (∀ (k : Nat), L.Opposes W m (T + k) c) → ∀ (j : Nat), W.level (T + Becoming.gap (W.level T c) m + j) c = m
+@Becoming.Flow.settles_from : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m T : Nat} {c : C},
+  (∀ (k : Nat), L.BalancesOn W [c] (T + k)) →
+    (∀ (k : Nat), L.WithinGap W m (T + k) c) →
+      (∀ (k : Nat), L.Opposes W m (T + k) c) → ∀ {t : Nat}, T + Becoming.gap (W.level T c) m ≤ t → W.level t c = m
+@Becoming.Flow.stays_between_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m T : Nat} {c : C}
+  (n : Nat),
+  (∀ (k : Nat), k < n → L.BalancesOn W [c] (T + k)) →
+    (∀ (k : Nat), k < n → L.WithinGap W m (T + k) c) → Becoming.Regulation.Between m (W.level T c) (W.level (T + n) c)
+@Becoming.Flow.regulates : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {m T : Nat} {c : C} (n : Nat),
+      (∀ (k : Nat), k < n → L.WithinGap W m (T + k) c) →
+        (∀ (k : Nat), k < n → L.Opposes W m (T + k) c) →
+          Becoming.gap (W.level (T + n) c) m ≤ Becoming.gap (W.level T c) m - n
+@Becoming.Flow.settles : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {m T : Nat} {c : C},
+      (∀ (k : Nat), L.WithinGap W m (T + k) c) →
+        (∀ (k : Nat), L.Opposes W m (T + k) c) → ∀ {t : Nat}, T + Becoming.gap (W.level T c) m ≤ t → W.level t c = m
+@Becoming.Flow.restores_exactly : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {m T : Nat} {c : C},
+      W.level T c ≤ m →
+        (∀ (k : Nat), L.WithinGap W m (T + k) c) →
+          (∀ (k : Nat), L.Opposes W m (T + k) c) → ∀ {t : Nat}, T + (m - W.level T c) ≤ t → W.level t c = m
+@Becoming.Flow.withinGap_iff_of_above : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m t : Nat}
+  {c : C}, L.BalancesOn W [c] t → L.Opposes W m t c → m < W.level t c → (L.WithinGap W m t c ↔ m ≤ W.level (t + 1) c)
+@Becoming.Flow.withinGap_iff_of_below : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m t : Nat}
+  {c : C}, L.BalancesOn W [c] t → L.Opposes W m t c → W.level t c < m → (L.WithinGap W m t c ↔ W.level (t + 1) c ≤ m)
+@Becoming.Flow.withinGap_iff_of_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m t : Nat} {c : C},
+  L.BalancesOn W [c] t → W.level t c = m → (L.WithinGap W m t c ↔ W.level (t + 1) c = m)
+@Becoming.Flow.crosses_of_above : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m t : Nat} {c : C},
+  L.BalancesOn W [c] t → L.Opposes W m t c → m < W.level t c → ¬L.WithinGap W m t c → W.level (t + 1) c < m
+@Becoming.Flow.crosses_of_below : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {m t : Nat} {c : C},
+  L.BalancesOn W [c] t → L.Opposes W m t c → W.level t c < m → ¬L.WithinGap W m t c → m < W.level (t + 1) c
+Becoming.Regulation.Overshooting.taken_eq : ∀ (t : Nat),
+  Becoming.Regulation.Overshooting.flow.taken t () =
+    Becoming.Regulation.Overshooting.amount (Becoming.Regulation.Overshooting.high t)
+Becoming.Regulation.Overshooting.given_eq : ∀ (t : Nat),
+  Becoming.Regulation.Overshooting.flow.given t () =
+    Becoming.Regulation.Overshooting.back (Becoming.Regulation.Overshooting.high t)
+Becoming.Regulation.Overshooting.balances : Becoming.Regulation.Overshooting.flow.Balances
+  Becoming.Regulation.Overshooting.web
+Becoming.Regulation.Overshooting.opposes : ∀ (t : Nat),
+  Becoming.Regulation.Overshooting.flow.Opposes Becoming.Regulation.Overshooting.web 1 t ()
+Becoming.Regulation.Overshooting.beyond : ∀ (t : Nat),
+  ¬Becoming.Regulation.Overshooting.flow.WithinGap Becoming.Regulation.Overshooting.web 1 t ()
+Becoming.Regulation.Overshooting.high_even : ∀ (n : Nat),
+  Becoming.Regulation.Overshooting.high (2 * n) = true ∧ Becoming.Regulation.Overshooting.high (2 * n + 1) = false
+Becoming.Regulation.Overshooting.oscillates : ∀ (n : Nat),
+  1 < Becoming.Regulation.Overshooting.web.level (2 * n) () ∧
+    Becoming.Regulation.Overshooting.web.level (2 * n + 1) () < 1
+Becoming.Regulation.Overshooting.never_at : ∀ (t : Nat), Becoming.Regulation.Overshooting.web.level t () ≠ 1
+Becoming.Regulation.OneSided.balances : Becoming.Regulation.OneSided.flow.Balances Becoming.Regulation.OneSided.web
+Becoming.Regulation.OneSided.within : ∀ (t : Nat),
+  Becoming.Regulation.OneSided.flow.WithinGap Becoming.Regulation.OneSided.web 1 t ()
+Becoming.Regulation.OneSided.opposes_below : ∀ (t : Nat),
+  Becoming.Regulation.OneSided.web.level t () < 1 →
+    Becoming.Regulation.OneSided.flow.taken t () < Becoming.Regulation.OneSided.flow.given t ()
+Becoming.Regulation.OneSided.restores_premise : ∀ (T k : Nat),
+  k < 1 - Becoming.Regulation.OneSided.web.level T () →
+    Becoming.Regulation.OneSided.web.level T () ≤ Becoming.Regulation.OneSided.web.level (T + k) () →
+      Becoming.Regulation.OneSided.flow.taken (T + k) () < Becoming.Regulation.OneSided.flow.given (T + k) ()
+Becoming.Regulation.OneSided.not_opposes : ∀ (t : Nat),
+  ¬Becoming.Regulation.OneSided.flow.Opposes Becoming.Regulation.OneSided.web 1 t ()
+Becoming.Regulation.OneSided.above : ∀ (t : Nat), 1 < Becoming.Regulation.OneSided.web.level t ()
+@Becoming.Regulation.total_steps_congr : ∀ {p q : Nat → Nat} {T n : Nat},
+  (∀ (s : Nat), T ≤ s → s < T + n → p s = q s) →
+    Becoming.total (Becoming.steps T n) p = Becoming.total (Becoming.steps T n) q
+@Becoming.Regulation.total_steps_le : ∀ {p : Nat → Nat} {k T n : Nat},
+  (∀ (s : Nat), T ≤ s → s < T + n → p s ≤ k) → Becoming.total (Becoming.steps T n) p ≤ n * k
+Becoming.Regulation.total_steps_const : ∀ (k T n : Nat), (Becoming.total (Becoming.steps T n) fun x => k) = n * k
+@Becoming.Regulation.gap_le_of_add_eq : ∀ {x z p q : Nat}, x + p = z + q → Becoming.gap x z ≤ Becoming.gap p q
+@Becoming.Regulation.sub_eq_of_add_eq : ∀ {x y p q : Nat}, y + q = x + p → x - y = q - p
+@Becoming.Regulation.ReadsLate.alike : ∀ {ℓ : Nat} {ρ : Becoming.Regulation.Rule},
+  Becoming.Regulation.ReadsLate ℓ ρ →
+    ∀ {δ δ' : Becoming.Regulation.Record} {T : Nat},
+      (∀ (s : Nat), s < T → δ s = δ' s) → ∀ {t : Nat}, t ≤ T + ℓ → ρ δ t = ρ δ' t
+@Becoming.Flow.accumulates_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {T : Nat}
+  (N : Nat),
+  (∀ (k : Nat), k < N → L.BalancesOn W [c] (T + k)) →
+    (W.level (T + N) c + Becoming.total (Becoming.steps T N) fun s => L.taken s c) =
+      W.level T c + Becoming.total (Becoming.steps T N) fun s => L.given s c
+@Becoming.Regulation.cross_cancel : ∀ {x y z r₁ r₂ d₁ d₂ e₁ e₂ : Nat},
+  x + (r₂ + d₂) = z + (r₁ + d₁) → y + (r₂ + e₂) = z + (r₁ + e₁) → x + (d₂ + e₁) = y + (d₁ + e₂)
+@Becoming.Regulation.levels_alike : ∀ {F C F' C' : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F' C'} {W' : Becoming.Web F' C'} {ℓ : Nat} {ρ : Becoming.Regulation.Rule},
+  Becoming.Regulation.ReadsLate ℓ ρ →
+    ∀ {c : C} {c' : C'} {δ δ' : Becoming.Regulation.Record},
+      L.FollowsRule c ρ δ →
+        L'.FollowsRule c' ρ δ' →
+          ∀ {T : Nat},
+            (∀ (t : Nat), t < T → L.BalancesOn W [c] t) →
+              (∀ (t : Nat), t < T → L'.BalancesOn W' [c'] t) →
+                W.level 0 c = W'.level 0 c' →
+                  (∀ (s : Nat), s < T → δ s = δ' s) → ∀ (t : Nat), t ≤ T → W.level t c = W'.level t c'
+@Becoming.Regulation.late_spread : ∀ {F C F' C' : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F' C'} {W' : Becoming.Web F' C'} {ℓ : Nat} {ρ : Becoming.Regulation.Rule},
+  Becoming.Regulation.ReadsLate ℓ ρ →
+    ∀ {c : C} {c' : C'} {δ δ' : Becoming.Regulation.Record},
+      L.FollowsRule c ρ δ →
+        L'.FollowsRule c' ρ δ' →
+          ∀ {T : Nat},
+            (∀ (t : Nat), t < T + (ℓ + 1) → L.BalancesOn W [c] t) →
+              (∀ (t : Nat), t < T + (ℓ + 1) → L'.BalancesOn W' [c'] t) →
+                W.level 0 c = W'.level 0 c' →
+                  (∀ (s : Nat), s < T → δ s = δ' s) →
+                    (W.level (T + (ℓ + 1)) c +
+                        Becoming.total (Becoming.steps T (ℓ + 1)) fun s => (δ s).snd + (δ' s).fst) =
+                      W'.level (T + (ℓ + 1)) c' +
+                        Becoming.total (Becoming.steps T (ℓ + 1)) fun s => (δ s).fst + (δ' s).snd
+@Becoming.Regulation.late_band : ∀ {F C F' C' : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F' C'} {W' : Becoming.Web F' C'} {ℓ d a b : Nat} {ρ : Becoming.Regulation.Rule},
+  Becoming.Regulation.ReadsLate ℓ ρ →
+    ∀ {c : C} {c' : C'} {δ δ' : Becoming.Regulation.Record},
+      L.FollowsRule c ρ δ →
+        L'.FollowsRule c' ρ δ' →
+          ∀ {T : Nat},
+            (∀ (t : Nat), t < T + (ℓ + 1) → L.BalancesOn W [c] t) →
+              (∀ (t : Nat), t < T + (ℓ + 1) → L'.BalancesOn W' [c'] t) →
+                W.level 0 c = W'.level 0 c' →
+                  (∀ (s : Nat), s < T → δ s = δ' s) →
+                    (∀ (s : Nat), T ≤ s → s < T + (ℓ + 1) → δ s = (d, 0)) →
+                      (∀ (s : Nat), T ≤ s → s < T + (ℓ + 1) → δ' s = (0, d)) →
+                        a ≤ W'.level (T + (ℓ + 1)) c' → W.level (T + (ℓ + 1)) c ≤ b → a + (ℓ + 1) * (d + d) ≤ b
+Becoming.Regulation.courseFlow_follows : ∀ (ρ : Becoming.Regulation.Rule) (δ : Becoming.Regulation.Record),
+  (Becoming.Regulation.courseFlow ρ δ).FollowsRule () ρ δ
+@Becoming.Regulation.course_balances : ∀ {ρ : Becoming.Regulation.Rule} {δ : Becoming.Regulation.Record} {x₀ t : Nat},
+  (ρ δ t).snd + (δ t).snd ≤ Becoming.Regulation.course ρ δ x₀ t + ((ρ δ t).fst + (δ t).fst) →
+    (Becoming.Regulation.courseFlow ρ δ).BalancesOn (Becoming.Regulation.courseWeb ρ δ x₀) [()] t
+@Becoming.Regulation.course_balances_of_pos : ∀ {ρ : Becoming.Regulation.Rule} {δ : Becoming.Regulation.Record}
+  {x₀ t : Nat},
+  0 < Becoming.Regulation.course ρ δ x₀ (t + 1) →
+    (Becoming.Regulation.courseFlow ρ δ).BalancesOn (Becoming.Regulation.courseWeb ρ δ x₀) [()] t
+@Becoming.Regulation.no_narrower_band : ∀ {ℓ d a b : Nat} {ρ : Becoming.Regulation.Rule},
+  Becoming.Regulation.ReadsLate ℓ ρ →
+    ∀ (x₀ : Nat),
+      0 < a →
+        (∀ (δ : Becoming.Regulation.Record),
+            Becoming.Regulation.NetWithin d δ →
+              ∀ (t : Nat), a ≤ Becoming.Regulation.course ρ δ x₀ t ∧ Becoming.Regulation.course ρ δ x₀ t ≤ b) →
+          a + (ℓ + 1) * (d + d) ≤ b
+Becoming.Regulation.reversal_evens : ∀ (e : Nat × Nat),
+  (Becoming.Regulation.reversal e).fst + e.fst = (Becoming.Regulation.reversal e).snd + e.snd
+@Becoming.Regulation.lateReturn_early : ∀ {ℓ t : Nat} (δ : Becoming.Regulation.Record),
+  t ≤ ℓ → Becoming.Regulation.lateReturn ℓ δ t = (0, 0)
+Becoming.Regulation.lateReturn_late : ∀ (ℓ n : Nat) (δ : Becoming.Regulation.Record),
+  Becoming.Regulation.lateReturn ℓ δ (n + (ℓ + 1)) = Becoming.Regulation.reversal (δ n)
+Becoming.Regulation.lateReturn_readsLate : ∀ (ℓ : Nat),
+  Becoming.Regulation.ReadsLate ℓ (Becoming.Regulation.lateReturn ℓ)
+@Becoming.Regulation.reversal_of_levels : ∀ {x y r₁ r₂ : Nat} {e : Nat × Nat},
+  y + (r₂ + e.snd) = x + (r₁ + e.fst) → Becoming.Regulation.reversal e = (x + r₁ - (y + r₂), y + r₂ - (x + r₁))
+@Becoming.Regulation.lateReturn_reads_levels : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ℓ : Nat}
+  {δ : Becoming.Regulation.Record} {c : C},
+  L.FollowsRule c (Becoming.Regulation.lateReturn ℓ) δ →
+    ∀ {s : Nat},
+      L.BalancesOn W [c] s →
+        Becoming.Regulation.lateReturn ℓ δ (s + (ℓ + 1)) =
+          (W.level s c + (Becoming.Regulation.lateReturn ℓ δ s).fst -
+              (W.level (s + 1) c + (Becoming.Regulation.lateReturn ℓ δ s).snd),
+            W.level (s + 1) c + (Becoming.Regulation.lateReturn ℓ δ s).snd -
+              (W.level s c + (Becoming.Regulation.lateReturn ℓ δ s).fst))
+@Becoming.Regulation.window_step : ∀ {X Y Z A₁ A₂ a₁ a₂ r₁ r₂ e f : Nat},
+  X + (a₂ + A₂) = Z + (a₁ + A₁) → Y + (r₂ + f) = X + (r₁ + e) → r₁ + a₁ = r₂ + a₂ → Y + (A₂ + f) = Z + (A₁ + e)
+@Becoming.Regulation.lateReturn_early_sum : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ℓ : Nat}
+  {δ : Becoming.Regulation.Record} {c : C},
+  L.FollowsRule c (Becoming.Regulation.lateReturn ℓ) δ →
+    ∀ {t : Nat},
+      t ≤ ℓ + 1 →
+        (∀ (k : Nat), k < t → L.BalancesOn W [c] k) →
+          (W.level t c + Becoming.total (Becoming.steps 0 t) fun s => (δ s).snd) =
+            W.level 0 c + Becoming.total (Becoming.steps 0 t) fun s => (δ s).fst
+@Becoming.Regulation.lateReturn_window : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ℓ : Nat}
+  {δ : Becoming.Regulation.Record} {c : C},
+  L.FollowsRule c (Becoming.Regulation.lateReturn ℓ) δ →
+    ∀ (n : Nat),
+      (∀ (k : Nat), k < n + (ℓ + 1) → L.BalancesOn W [c] k) →
+        (W.level (n + (ℓ + 1)) c + Becoming.total (Becoming.steps n (ℓ + 1)) fun s => (δ s).snd) =
+          W.level 0 c + Becoming.total (Becoming.steps n (ℓ + 1)) fun s => (δ s).fst
+@Becoming.Regulation.lateReturn_keeps : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ℓ d : Nat}
+  {δ : Becoming.Regulation.Record} {c : C},
+  L.FollowsRule c (Becoming.Regulation.lateReturn ℓ) δ →
+    Becoming.Regulation.NetWithin d δ →
+      (∀ (k : Nat), L.BalancesOn W [c] k) → ∀ (t : Nat), Becoming.gap (W.level t c) (W.level 0 c) ≤ (ℓ + 1) * d
+@Becoming.Regulation.lateReturn_course_balances : ∀ {ℓ d x₀ : Nat} {δ : Becoming.Regulation.Record},
+  Becoming.Regulation.NetWithin d δ →
+    (ℓ + 1) * d ≤ x₀ →
+      ∀ (t : Nat),
+        (Becoming.Regulation.courseFlow (Becoming.Regulation.lateReturn ℓ) δ).BalancesOn
+          (Becoming.Regulation.courseWeb (Becoming.Regulation.lateReturn ℓ) δ x₀) [()] t
+@Becoming.Regulation.lateReturn_band : ∀ {ℓ d x₀ : Nat},
+  (ℓ + 1) * d ≤ x₀ →
+    Becoming.Regulation.ReadsLate ℓ (Becoming.Regulation.lateReturn ℓ) ∧
+      ∀ (δ : Becoming.Regulation.Record),
+        Becoming.Regulation.NetWithin d δ →
+          ∀ (t : Nat),
+            x₀ ≤ Becoming.Regulation.course (Becoming.Regulation.lateReturn ℓ) δ x₀ t + (ℓ + 1) * d ∧
+              Becoming.Regulation.course (Becoming.Regulation.lateReturn ℓ) δ x₀ t ≤ x₀ + (ℓ + 1) * d
+@Becoming.Regulation.relay_below : ∀ {a b M r : Nat}, a ≤ b → r < a → Becoming.Regulation.relay a b M r = (M, 0)
+@Becoming.Regulation.relay_above : ∀ {a b M r : Nat}, a ≤ b → b < r → Becoming.Regulation.relay a b M r = (0, M)
+@Becoming.Regulation.relay_inside : ∀ {a b M r : Nat}, a ≤ r → r ≤ b → Becoming.Regulation.relay a b M r = (0, 0)
+@Becoming.Regulation.relay_step : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      ∀ (t : Nat),
+        W.level (t + ℓ + 1) c + (Becoming.Regulation.relay a b M (W.level t c)).snd =
+          W.level (t + ℓ) c + (Becoming.Regulation.relay a b M (W.level t c)).fst
+@Becoming.Regulation.step_below : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b → ∀ {t : Nat}, W.level t c < a → W.level (t + ℓ + 1) c = W.level (t + ℓ) c + M
+@Becoming.Regulation.step_above : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b → ∀ {t : Nat}, b < W.level t c → W.level (t + ℓ + 1) c + M = W.level (t + ℓ) c
+@Becoming.Regulation.step_inside : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      ∀ {t : Nat}, a ≤ W.level t c → W.level t c ≤ b → W.level (t + ℓ + 1) c = W.level (t + ℓ) c
+@Becoming.Regulation.push_ramp : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {ρ n : Nat},
+          (∀ (i : Nat), i < n → W.level (ρ + i) c < a) →
+            ∀ (i : Nat), i ≤ n → W.level (ρ + ℓ + i) c = W.level (ρ + ℓ) c + i * M
+@Becoming.Regulation.pull_ramp : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {ρ n : Nat},
+          (∀ (i : Nat), i < n → b < W.level (ρ + i) c) →
+            ∀ (i : Nat), i ≤ n → W.level (ρ + ℓ + i) c + i * M = W.level (ρ + ℓ) c
+@Becoming.Regulation.rest_ramp : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      ∀ {ρ n : Nat},
+        (∀ (i : Nat), i < n → a ≤ W.level (ρ + i) c ∧ W.level (ρ + i) c ≤ b) →
+          ∀ (i : Nat), i ≤ n → W.level (ρ + ℓ + i) c = W.level (ρ + ℓ) c
+@Becoming.Regulation.overshoot : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {σ : Nat}, (∀ (i : Nat), i < ℓ → W.level (σ + i) c < a) → W.level (σ + ℓ + ℓ) c = W.level (σ + ℓ) c + ℓ * M
+@Becoming.Regulation.undershoot : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {σ : Nat}, (∀ (i : Nat), i < ℓ → b < W.level (σ + i) c) → W.level (σ + ℓ + ℓ) c + ℓ * M = W.level (σ + ℓ) c
+@Becoming.Regulation.first_or_nowhere : ∀ {P : Nat → Prop} [DecidablePred P] (n : Nat),
+  (∀ (i : Nat), i < n → ¬P i) ∨ ∃ r, r < n ∧ P r ∧ ∀ (i : Nat), i < r → ¬P i
+@Becoming.Regulation.first_index : ∀ {P : Nat → Prop} [DecidablePred P] {n : Nat},
+  P n → ∃ r, r ≤ n ∧ P r ∧ ∀ (i : Nat), i < r → ¬P i
+@Becoming.Regulation.held_rise : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {x₀ k : Nat},
+          (∀ (i : Nat), i ≤ ℓ → W.level i c = x₀) →
+            x₀ < a → (∀ (i : Nat), i < k → x₀ + i * M < a) → ∀ (i : Nat), i ≤ ℓ + k → W.level (ℓ + i) c = x₀ + i * M
+@Becoming.Regulation.held_settles : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {x₀ k : Nat},
+          (∀ (i : Nat), i ≤ ℓ → W.level i c = x₀) →
+            x₀ < a →
+              (∀ (i : Nat), i < k → x₀ + i * M < a) →
+                a ≤ x₀ + k * M → x₀ + (ℓ + k) * M ≤ b → ∀ (j : Nat), W.level (ℓ + (ℓ + k) + j) c = x₀ + (ℓ + k) * M
+@Becoming.Regulation.held_leaves : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {x₀ k : Nat},
+          (∀ (i : Nat), i ≤ ℓ → W.level i c = x₀) →
+            x₀ < a → (∀ (i : Nat), i < k → x₀ + i * M < a) → b < x₀ + (ℓ + k) * M → b < W.level (ℓ + (ℓ + k)) c
+Becoming.Regulation.le_succ_mul : ∀ (k M : Nat), M ≤ (k + 1) * M
+@Becoming.Regulation.rise_run : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {ρ k : Nat},
+          (∀ (i : Nat), i < ℓ → W.level (ρ + i) c < a) →
+            (∀ (j : Nat), j < k → W.level (ρ + ℓ) c + j * M < a) →
+              (∀ (i : Nat), i < ℓ + k → W.level (ρ + i) c < a) ∧
+                ∀ (i : Nat), i ≤ ℓ + k → W.level (ρ + ℓ + i) c = W.level (ρ + ℓ) c + i * M
+@Becoming.Regulation.fall_run : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C} {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {ρ k : Nat},
+          (∀ (i : Nat), i < ℓ → b < W.level (ρ + i) c) →
+            (∀ (j : Nat), j < k → b + j * M < W.level (ρ + ℓ) c) →
+              (∀ (i : Nat), i < ℓ + k → b < W.level (ρ + i) c) ∧
+                ∀ (i : Nat), i ≤ ℓ + k → W.level (ρ + ℓ + i) c + i * M = W.level (ρ + ℓ) c
+@Becoming.Regulation.upCrossing_next : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {σ : Nat}, W.UpCrossing c ℓ a b M σ → b < W.level (σ + ℓ + ℓ) c ∧ ∃ σ', σ < σ' ∧ W.DownCrossing c ℓ a b M σ'
+@Becoming.Regulation.downCrossing_next : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {σ : Nat}, W.DownCrossing c ℓ a b M σ → W.level (σ + ℓ + ℓ) c < a ∧ ∃ σ', σ < σ' ∧ W.UpCrossing c ℓ a b M σ'
+@Becoming.Regulation.upCrossing_later : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b → ∀ {σ : Nat}, W.UpCrossing c ℓ a b M σ → ∀ (n : Nat), ∃ σ', σ + n ≤ σ' ∧ W.UpCrossing c ℓ a b M σ'
+@Becoming.Regulation.crossing_oscillates : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {σ : Nat},
+          W.UpCrossing c ℓ a b M σ → ∀ (N : Nat), (∃ t, N ≤ t ∧ b < W.level t c) ∧ ∃ t, N ≤ t ∧ W.level t c < a
+@Becoming.Regulation.held_crosses : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {x₀ k : Nat},
+          (∀ (i : Nat), i ≤ ℓ → W.level i c = x₀) →
+            x₀ < a →
+              (∀ (i : Nat), i < k → x₀ + i * M < a) → a ≤ x₀ + k * M → b < x₀ + (ℓ + k) * M → W.UpCrossing c ℓ a b M k
+@Becoming.Regulation.held_oscillates : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        ∀ {x₀ : Nat},
+          (∀ (i : Nat), i ≤ ℓ → W.level i c = x₀) →
+            x₀ + 1 = a →
+              b + 2 ≤ a + (ℓ + 1) * M → ∀ (N : Nat), (∃ t, N ≤ t ∧ b < W.level t c) ∧ ∃ t, N ≤ t ∧ W.level t c < a
+@Becoming.Regulation.held_below_settles : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {ℓ a b M : Nat},
+  L.RelaysLate W c ℓ a b M →
+    (∀ (t : Nat), L.BalancesOn W [c] t) →
+      a ≤ b →
+        0 < M →
+          ∀ {x₀ : Nat},
+            (∀ (i : Nat), i ≤ ℓ → W.level i c = x₀) →
+              x₀ < a → a + (ℓ + 1) * M ≤ b + 1 → ∃ T, ∀ (j : Nat), a ≤ W.level (T + j) c ∧ W.level (T + j) c ≤ b
+Becoming.Regulation.relayWindow_shift : ∀ (ℓ a b M x₀ t j i : Nat),
+  i + j ≤ ℓ →
+    Becoming.Law.orbit (Becoming.Regulation.relayWindow ℓ a b M) (fun x => x₀) (t + j) i =
+      Becoming.Law.orbit (Becoming.Regulation.relayWindow ℓ a b M) (fun x => x₀) t (i + j)
+Becoming.Regulation.relayLevel_held : ∀ (ℓ a b M x₀ : Nat) {t : Nat},
+  t ≤ ℓ → Becoming.Regulation.relayLevel ℓ a b M x₀ t = x₀
+Becoming.Regulation.relayLevel_step : ∀ (ℓ a b M x₀ t : Nat),
+  Becoming.Regulation.relayLevel ℓ a b M x₀ (t + ℓ + 1) =
+    Becoming.Regulation.relayLevel ℓ a b M x₀ (t + ℓ) +
+        (Becoming.Regulation.relay a b M (Becoming.Regulation.relayLevel ℓ a b M x₀ t)).fst -
+      (Becoming.Regulation.relay a b M (Becoming.Regulation.relayLevel ℓ a b M x₀ t)).snd
+Becoming.Regulation.relay_take_le : ∀ (a b M r : Nat), (Becoming.Regulation.relay a b M r).snd ≤ M
+@Becoming.Regulation.relay_take_of_le : ∀ {a b M r : Nat}, r ≤ b → (Becoming.Regulation.relay a b M r).snd = 0
+Becoming.Regulation.le_sub_add : ∀ (n q : Nat), n ≤ n - q + q
+Becoming.Regulation.relayLevel_drop : ∀ (ℓ a b M x₀ s : Nat),
+  Becoming.Regulation.relayLevel ℓ a b M x₀ s ≤ Becoming.Regulation.relayLevel ℓ a b M x₀ (s + 1) + M
+Becoming.Regulation.relayLevel_drops : ∀ (ℓ a b M x₀ t i : Nat),
+  Becoming.Regulation.relayLevel ℓ a b M x₀ t ≤ Becoming.Regulation.relayLevel ℓ a b M x₀ (t + i) + i * M
+@Becoming.Regulation.relay_room : ∀ {ℓ a b M : Nat},
+  (ℓ + 1) * M ≤ b + 1 →
+    ∀ (x₀ t : Nat),
+      (Becoming.Regulation.relay a b M (Becoming.Regulation.relayLevel ℓ a b M x₀ t)).snd ≤
+        Becoming.Regulation.relayLevel ℓ a b M x₀ (t + ℓ) +
+          (Becoming.Regulation.relay a b M (Becoming.Regulation.relayLevel ℓ a b M x₀ t)).fst
+Becoming.Regulation.relayFlow_late : ∀ (ℓ a b M x₀ t : Nat),
+  (Becoming.Regulation.relayFlow ℓ a b M x₀).given (t + ℓ) () =
+      (Becoming.Regulation.relay a b M (Becoming.Regulation.relayLevel ℓ a b M x₀ t)).fst ∧
+    (Becoming.Regulation.relayFlow ℓ a b M x₀).taken (t + ℓ) () =
+      (Becoming.Regulation.relay a b M (Becoming.Regulation.relayLevel ℓ a b M x₀ t)).snd
+@Becoming.Regulation.relay_balances : ∀ {ℓ a b M : Nat},
+  (ℓ + 1) * M ≤ b + 1 →
+    ∀ (x₀ s : Nat),
+      (Becoming.Regulation.relayFlow ℓ a b M x₀).BalancesOn (Becoming.Regulation.relayWeb ℓ a b M x₀) [()] s
+@Becoming.Regulation.relay_runs : ∀ {ℓ a b M : Nat},
+  (ℓ + 1) * M ≤ b + 1 →
+    ∀ (x₀ : Nat),
+      (Becoming.Regulation.relayFlow ℓ a b M x₀).RelaysLate (Becoming.Regulation.relayWeb ℓ a b M x₀) () ℓ a b M ∧
+        (∀ (t : Nat),
+            (Becoming.Regulation.relayFlow ℓ a b M x₀).BalancesOn (Becoming.Regulation.relayWeb ℓ a b M x₀) [()] t) ∧
+          ∀ (i : Nat), i ≤ ℓ → (Becoming.Regulation.relayWeb ℓ a b M x₀).level i () = x₀
+@Becoming.Regulation.relay_threshold : ∀ {ℓ a b M : Nat},
+  a ≤ b →
+    0 < a →
+      0 < M →
+        (ℓ + 1) * M ≤ b + 1 →
+          ((∀ (x₀ : Nat),
+              x₀ < a →
+                ∀ {F' C' : Type} (L' : Becoming.Flow F' C') (W' : Becoming.Web F' C') (c' : C'),
+                  L'.RelaysLate W' c' ℓ a b M →
+                    (∀ (t : Nat), L'.BalancesOn W' [c'] t) →
+                      (∀ (i : Nat), i ≤ ℓ → W'.level i c' = x₀) →
+                        ∃ T, ∀ (j : Nat), a ≤ W'.level (T + j) c' ∧ W'.level (T + j) c' ≤ b) ↔
+            a + (ℓ + 1) * M ≤ b + 1)

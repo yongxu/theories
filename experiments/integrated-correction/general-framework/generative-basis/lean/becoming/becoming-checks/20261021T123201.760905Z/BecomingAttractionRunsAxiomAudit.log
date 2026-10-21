@@ -1,0 +1,15 @@
+'Becoming.AttractionRuns.returning_invariant' does not depend on any axioms
+'Becoming.AttractionRuns.drawnInto_returning' does not depend on any axioms
+'Becoming.AttractionRuns.drawn_iff_lost' does not depend on any axioms
+'Becoming.AttractionRuns.drawn_not_keeps' does not depend on any axioms
+'Becoming.AttractionRuns.lossless_iff_none_drawn' does not depend on any axioms
+'Becoming.AttractionRuns.merges_draws' does not depend on any axioms
+'Becoming.AttractionRuns.succ_drawn_lossless' does not depend on any axioms
+'Becoming.AttractionRuns.pred_drawn_keeps' does not depend on any axioms
+'Becoming.AttractionRuns.ratchet_merges' does not depend on any axioms
+'Becoming.AttractionRuns.ratchet_false_never_returns' does not depend on any axioms
+'Becoming.AttractionRuns.ratchet_false_lost' does not depend on any axioms
+'Becoming.AttractionRuns.ratchet_true_not_drawn' does not depend on any axioms
+'Becoming.AttractionRuns.captured_rule_invariant' does not depend on any axioms
+'Becoming.AttractionRuns.captured_state_drawn' does not depend on any axioms
+'Becoming.AttractionRuns.captured_rule_drawn' does not depend on any axioms

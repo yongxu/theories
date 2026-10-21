@@ -1,0 +1,17 @@
+import Becoming.Significance
+#check @Becoming.bounded_rival
+#check @Becoming.Web.retains_iff_includes
+#check @Becoming.Web.adds_iff_exceeds
+#check @Becoming.Web.retains_agree
+#check @Becoming.Web.widens_iff_retains_adds
+#check @Becoming.Web.keeps_iff_retains
+#check @Becoming.Web.mixed_iff_adds
+#check @Becoming.Web.Retains.within
+#check @Becoming.Web.UnderminingOn.not_retains_unrestricted
+#check @Becoming.Valuation.premises_of_unrestricted
+#check @Becoming.Web.significant_of_unrestricted
+#check @Becoming.Web.significance_undetermined
+#check @Becoming.Clearing.clearer_loses_dweller
+#check @Becoming.Transfer.unordered
+#check @Becoming.Restoring.Inflow.retains_adds
+#check @Becoming.Preemption.not_undermining_yet_loses

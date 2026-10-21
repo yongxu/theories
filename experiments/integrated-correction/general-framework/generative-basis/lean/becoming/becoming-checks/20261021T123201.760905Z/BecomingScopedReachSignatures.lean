@@ -1,0 +1,16 @@
+import Becoming.ScopedReach
+#check @Becoming.ScopedReach.only_reach
+#check @Becoming.ScopedReach.invariant_iff_only
+#check @Becoming.ScopedReach.glued_iff_local
+#check @Becoming.ScopedReach.glued_invariant
+#check @Becoming.ScopedReach.glued_on_reach
+#check @Becoming.ScopedReach.within_keeps
+#check @Becoming.ScopedReach.fromSeed_within_iff
+#check @Becoming.ScopedReach.invariant_on_within_reach
+#check @Becoming.ScopedReach.domain_covers
+#check @Becoming.ScopedReach.alternating_inside
+#check @Becoming.ScopedReach.alternating_steps
+#check @Becoming.ScopedReach.first_scope_stays_inside
+#check @Becoming.ScopedReach.second_scope_stays_at_seed
+#check @Becoming.ScopedReach.alternating_beyond_scopes
+#check @Becoming.ScopedReach.halted_coverage_insufficient

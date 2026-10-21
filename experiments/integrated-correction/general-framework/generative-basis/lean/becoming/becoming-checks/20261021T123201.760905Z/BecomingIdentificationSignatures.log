@@ -1,0 +1,349 @@
+Becoming.Identification.residue : ∀ (p n : Nat), ∃ r k, r ≤ p ∧ n = r + (p + 1) * k
+@Becoming.Identification.periodic_whole : ∀ {O : Type u_1} {x : Nat → O} {p : Nat},
+  (∀ (n : Nat), x (n + (p + 1)) = x n) → ∀ (r k : Nat), x (r + (p + 1) * k) = x r
+@Becoming.Identification.period_extends : ∀ {O : Type u_1} {x : Nat → O} {p Q : Nat},
+  (∀ (n : Nat), x (n + (p + 1)) = x n) → (∀ (n : Nat), n < p → x (n + Q) = x n) → ∀ (n : Nat), x (n + Q) = x n
+@Becoming.Identification.lassos_agree : ∀ {O : Type u_1} {o o' : Nat → O} {i q i' q' : Nat},
+  Becoming.Learning.Lasso o i q →
+    Becoming.Learning.Lasso o' i' q' → (∀ (n : Nat), n < i + q + 1 + (i' + q') → o n = o' n) → ∀ (n : Nat), o n = o' n
+@Becoming.Identification.below_upto : ∀ {P : Nat → Prop},
+  (∀ (m : Nat), (∀ (n : Nat), n < m → P n) → P m) → ∀ (m n : Nat), n < m → P n
+@Becoming.Identification.below_all : ∀ {P : Nat → Prop},
+  (∀ (m : Nat), (∀ (n : Nat), n < m → P n) → P m) → ∀ (n : Nat), P n
+@Becoming.Identification.lassoPos_early : ∀ {i q : Nat} (n : Nat),
+  n ≤ i + q → Becoming.Law.orbit (Becoming.Learning.lassoNext i q) 0 n = n
+@Becoming.Identification.lassoPos_period : ∀ {i q : Nat} (d : Nat),
+  Becoming.Law.orbit (Becoming.Learning.lassoNext i q) 0 (i + d + (q + 1)) =
+    Becoming.Law.orbit (Becoming.Learning.lassoNext i q) 0 (i + d)
+@Becoming.Identification.statesBelow_mono : ∀ {O : Type u_1} {o : Nat → O} {L N : Nat},
+  Becoming.StatesBelow o L → L ≤ N → Becoming.StatesBelow o N
+@Becoming.Identification.statesBelow_iff_lasso : ∀ {O : Type u_1} {o : Nat → O} {N : Nat},
+  Becoming.StatesBelow o N ↔ ∃ i q, i + q + 1 ≤ N ∧ Becoming.Learning.Lasso o i q
+@Becoming.Identification.statesBelow_pos : ∀ {O : Type u_1} {o : Nat → O} {N : Nat}, Becoming.StatesBelow o N → 0 < N
+@Becoming.Identification.le_twice_less_one : ∀ {N : Nat}, 0 < N → N ≤ N + N - 1
+@Becoming.Identification.bounded_agree : ∀ {O : Type u_1} {o o' : Nat → O} {N N' : Nat},
+  Becoming.StatesBelow o N →
+    Becoming.StatesBelow o' N' → (∀ (n : Nat), n < N + N' - 1 → o n = o' n) → ∀ (n : Nat), o n = o' n
+@Becoming.Identification.prefix_eq_iff : ∀ {O : Type u_1} {o o' : Nat → O} {T : Nat},
+  Becoming.Learning.prefixOf o T = Becoming.Learning.prefixOf o' T ↔ ∀ (n : Nat), n < T → o n = o' n
+@Becoming.Identification.prefix_fixes : ∀ {O : Type u_1} {o o' : Nat → O} {N N' : Nat},
+  Becoming.StatesBelow o N →
+    Becoming.StatesBelow o' N' →
+      Becoming.Learning.prefixOf o (N + N' - 1) = Becoming.Learning.prefixOf o' (N + N' - 1) → ∀ (n : Nat), o n = o' n
+@Becoming.Identification.prefix_short : ∀ {O : Type u_1} {x y : O},
+  x ≠ y →
+    ∀ (T : Nat),
+      ∃ o o',
+        Becoming.StatesBelow o 1 ∧
+          Becoming.StatesBelow o' (T + 1) ∧
+            Becoming.Learning.prefixOf o T = Becoming.Learning.prefixOf o' T ∧ o T ≠ o' T
+@Becoming.Identification.prefix_short_twice : ∀ {O : Type u_1} {x y : O},
+  x ≠ y →
+    ∀ (M : Nat),
+      ∃ o o',
+        Becoming.StatesBelow o (M + 2) ∧
+          Becoming.StatesBelow o' (M + 2) ∧
+            Becoming.Learning.prefixOf o (M + M + 2) = Becoming.Learning.prefixOf o' (M + M + 2) ∧
+              o (M + M + 2) ≠ o' (M + M + 2)
+@Becoming.Identification.bounded_agree_exact : ∀ {O : Type u_1} {x y : O},
+  x ≠ y →
+    ∀ (M M' : Nat),
+      ∃ o o',
+        Becoming.StatesBelow o (M + 1) ∧
+          Becoming.StatesBelow o' (M' + 1) ∧
+            Becoming.Learning.prefixOf o (M + M') = Becoming.Learning.prefixOf o' (M + M') ∧ o (M + M') ≠ o' (M + M')
+@Becoming.Identification.statesBelow_shift : ∀ {O : Type u_1} {o : Nat → O} {N : Nat},
+  Becoming.StatesBelow o N → ∀ (t : Nat), Becoming.StatesBelow (fun n => o (t + n)) N
+@Becoming.Identification.sameAhead_iff_below : ∀ {O : Type u_1} {o : Nat → O} {N : Nat},
+  Becoming.StatesBelow o N →
+    ∀ {t t' : Nat}, Becoming.SameAhead o t t' ↔ ∀ (n : Nat), n < N + N - 1 → o (t + n) = o (t' + n)
+@Becoming.Identification.lasso_of_fits : ∀ {O : Type u_1} {o : Nat → O} {N i q : Nat},
+  Becoming.StatesBelow o N →
+    i + q + 1 ≤ N →
+      (∀ (u : Nat), i ≤ u → u + (q + 1) < N + N - 1 → o (u + (q + 1)) = o u) → Becoming.Learning.Lasso o i q
+@Becoming.Identification.fits_of_no_miss : ∀ {O : Type u_1} [DecidableEq O] {o : Nat → O} {i q T : Nat},
+  (∀ (t : Nat), t < T → ¬Becoming.Learning.MissesAt (Becoming.Learning.lasso (i, q)) o t) →
+    ∀ (u : Nat), i ≤ u → u + (q + 1) < T → o (u + (q + 1)) = o u
+@Becoming.Identification.bounded_induction : ∀ {O : Type u_1} [DecidableEq O] {o : Nat → O} {N i q : Nat},
+  Becoming.StatesBelow o N →
+    i + q + 1 ≤ N →
+      (∀ (t : Nat), t < N + N - 1 → ¬Becoming.Learning.MissesAt (Becoming.Learning.lasso (i, q)) o t) →
+        Becoming.Learning.Accords (Becoming.Learning.lasso (i, q)) o
+@Becoming.Identification.bounded_hypothesis : ∀ {O : Type u_1} {o : Nat → O} {N : Nat},
+  Becoming.StatesBelow o N → ∃ i q, i + q + 1 ≤ N ∧ Becoming.Learning.Accords (Becoming.Learning.lasso (i, q)) o
+@Becoming.Identification.borneOut_prefix_iff : ∀ {O : Type u_1} {pred : List O → Option O} {o : Nat → O} {T : Nat},
+  Becoming.Identification.BorneOut pred (Becoming.Learning.prefixOf o T) ↔
+    ∀ (t : Nat), t < T → ¬Becoming.Learning.MissesAt pred o t
+@Becoming.Identification.mem_column : ∀ {i q Q : Nat}, q < Q → (i, q) ∈ Becoming.Identification.column i Q
+@Becoming.Identification.mem_grid : ∀ {i q Q : Nat},
+  q < Q → ∀ {I : Nat}, i < I → (i, q) ∈ Becoming.Identification.grid Q I
+@Becoming.Identification.firstFit_sound : ∀ {α : Type} {p : α → Prop} {dec : (a : α) → Decidable (p a)} {l : List α}
+  {a : α}, Becoming.Identification.firstFit p dec l = some a → p a
+@Becoming.Identification.firstFit_found : ∀ {α : Type} {p : α → Prop} {dec : (a : α) → Decidable (p a)} {l : List α}
+  {a : α}, a ∈ l → p a → ∃ b, Becoming.Identification.firstFit p dec l = some b
+@Becoming.Identification.withBound_exact : ∀ {O : Type u_1} [inst : DecidableEq O] {o : Nat → O} {N t : Nat},
+  Becoming.StatesBelow o N →
+    N + N - 1 ≤ t → Becoming.Identification.withBound N (Becoming.Learning.prefixOf o t) = some (o t)
+@Becoming.Identification.withBound_accords : ∀ {O : Type u_1} [inst : DecidableEq O] {o : Nat → O} {N : Nat},
+  Becoming.StatesBelow o N → Becoming.Learning.Accords (Becoming.Identification.withBound N) o
+@Becoming.Identification.withBound_earliest : ∀ {O : Type u_1} {x y : O},
+  x ≠ y →
+    ∀ (pred : List O → Option O) (M : Nat),
+      ¬∀ (o : Nat → O),
+          Becoming.StatesBelow o (M + 2) →
+            Becoming.Learning.Accords pred o ∧ ∃ w, pred (Becoming.Learning.prefixOf o (M + M + 2)) = some w
+Becoming.Identification.negation_derived : ∀ (t : Nat),
+  3 ≤ t →
+    Becoming.Identification.withBound 2 (Becoming.Learning.prefixOf Becoming.Negation.course t) =
+      some (Becoming.Negation.course t)
+@Becoming.Identification.answer_exceeds_bound : ∀ {O : Type u_1} [inst : DecidableEq O] {other : O → O},
+  (∀ (v : O), other v ≠ v) →
+    ∀ (x : O) (N : Nat),
+      ¬Becoming.StatesBelow (Becoming.Learning.diagonal (Becoming.Identification.withBound N) other x) N
+@Becoming.Identification.no_miss_persists : ∀ {O : Type u_1} [DecidableEq O] {o : Nat → O} {N a b s : Nat},
+  Becoming.StatesBelow o N →
+    a + b + 1 ≤ N →
+      a ≤ s →
+        (∀ (t : Nat), s ≤ t → t < s + (N + N - 1) → ¬Becoming.Learning.MissesAt (Becoming.Learning.lasso (a, b)) o t) →
+          ∀ (t : Nat), s ≤ t → ¬Becoming.Learning.MissesAt (Becoming.Learning.lasso (a, b)) o t
+@Becoming.Identification.byElimination_rests : ∀ {O : Type u_1} [inst : DecidableEq O] {o : Nat → O} {N : Nat},
+  Becoming.StatesBelow o N →
+    ∀ (t : Nat),
+      N + (N + N - 1) * Becoming.Learning.tri N ≤ t →
+        Becoming.Learning.byElimination Becoming.Learning.lassos (Becoming.Learning.prefixOf o t) = some (o t)
+@Becoming.Identification.rests_of_lasso : ∀ {O : Type u_1} [inst : DecidableEq O] {o : Nat → O} {i q : Nat},
+  Becoming.Learning.Lasso o i q →
+    ∃ T,
+      ∀ (t : Nat),
+        T ≤ t → Becoming.Learning.byElimination Becoming.Learning.lassos (Becoming.Learning.prefixOf o t) = some (o t)
+@Becoming.Identification.held_byElimination_rests : ∀ {O : Type u_1} [inst : DecidableEq O] {S : Type u_2}
+  {next : S → S} {s : S} {l : List S},
+  (∀ (n : Nat), Becoming.Law.orbit next s n ∈ l) →
+    ∀ (reg : S → O) (t : Nat),
+      l.length + (l.length + l.length - 1) * Becoming.Learning.tri l.length ≤ t →
+        Becoming.Learning.byElimination Becoming.Learning.lassos
+            (Becoming.Learning.prefixOf (fun n => reg (Becoming.Law.orbit next s n)) t) =
+          some (reg (Becoming.Law.orbit next s t))
+@Becoming.Identification.leastFit_sound : ∀ {O : Type u_1} [inst : DecidableEq O] {l : List O} {m : Nat}
+  {h : Nat × Nat}, Becoming.Identification.leastFit l m = some h → Becoming.Identification.Fits m l h
+@Becoming.Identification.leastFit_within : ∀ {O : Type u_1} [inst : DecidableEq O] {l : List O} {N : Nat}
+  {h₀ : Nat × Nat},
+  Becoming.Identification.Fits N l h₀ →
+    ∀ {m : Nat}, N ≤ m → ∃ h, Becoming.Identification.leastFit l m = some h ∧ h.fst + h.snd + 1 ≤ N
+@Becoming.Identification.leastBound_exact : ∀ {O : Type u_1} [inst : DecidableEq O] {o : Nat → O} {N t : Nat},
+  Becoming.StatesBelow o N →
+    N + N - 1 ≤ t → Becoming.Identification.leastBound (Becoming.Learning.prefixOf o t) = some (o t)
+@Becoming.Identification.rest_earliest : ∀ {O : Type u_1} {x y : O},
+  x ≠ y →
+    ∀ (pred : List O → Option O) (M : Nat),
+      ¬∀ (o : Nat → O),
+          Becoming.StatesBelow o (M + 2) → pred (Becoming.Learning.prefixOf o (M + M + 2)) = some (o (M + M + 2))
+@Becoming.Identification.rest_without_bound_missed : ∀ {O : Type u_1} {x y : O},
+  x ≠ y →
+    ∀ (pred : List O → Option O),
+      ¬((∀ (o : Nat → O), Becoming.StatesBelow o 1 → pred (Becoming.Learning.prefixOf o 1) = some (o 1)) ∧
+          ∀ (o : Nat → O), Becoming.StatesBelow o 2 → Becoming.Learning.Accords pred o)
+Becoming.Identification.course_two : ∀ (a : Nat), Becoming.Negation.course (a + 2) = Becoming.Negation.course a
+Becoming.Identification.course_even : ∀ (a e : Nat), Becoming.Negation.course (a + 2 * e) = Becoming.Negation.course a
+Becoming.Identification.course_double : ∀ (e : Nat), Becoming.Negation.course (2 * e) = true
+Becoming.Identification.course_odd : ∀ (e : Nat), Becoming.Negation.course (2 * e + 1) = false
+Becoming.Identification.cyclePos_block : ∀ (n j : Nat) {x : Nat},
+  x ≤ n → Becoming.Identification.cyclePos n ((n + 1) * j + x) = x
+Becoming.Identification.oddCycle_block : ∀ (n j : Nat) {x : Nat},
+  x ≤ n → Becoming.Identification.oddCycle n ((n + 1) * j + x) = Becoming.Negation.course x
+Becoming.Identification.oddCycle_lasso : ∀ (n : Nat), Becoming.Learning.Lasso (Becoming.Identification.oddCycle n) 0 n
+Becoming.Identification.oddCycle_below : ∀ (n : Nat), Becoming.StatesBelow (Becoming.Identification.oddCycle n) (n + 1)
+@Becoming.Identification.lasso_back : ∀ {O : Type u_1} {o : Nat → O} {i q u : Nat},
+  i ≤ u → Becoming.Learning.lasso (i, q) (Becoming.Learning.prefixOf o (u + q + 1)) = some (o u)
+@Becoming.Identification.run_kept : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O} {o : Nat → O}
+  {s k : Nat},
+  Becoming.Learning.index H o s = k →
+    ∀ (w : Nat),
+      (∀ (d : Nat), d < w → ¬Becoming.Learning.Misses (H k (Becoming.Learning.prefixOf o (s + d))) (o (s + d))) →
+        Becoming.Learning.index H o (s + w) = k
+@Becoming.Identification.moved_on : ∀ {O : Type u_1} [inst : DecidableEq O] {H : Nat → List O → Option O} {o : Nat → O}
+  {t k : Nat},
+  Becoming.Learning.index H o t = k →
+    Becoming.Learning.Misses (H k (Becoming.Learning.prefixOf o t)) (o t) →
+      Becoming.Learning.MissesAt (Becoming.Learning.byElimination H) o t ∧ Becoming.Learning.index H o (t + 1) = k + 1
+@Becoming.Identification.missed_of : ∀ {v w : Bool} {c : Option Bool}, c = some v → v ≠ w → Becoming.Learning.Misses c w
+@Becoming.Identification.not_missed_of : ∀ {v w : Bool} {c : Option Bool},
+  c = some v → v = w → ¬Becoming.Learning.Misses c w
+Becoming.Identification.four_assoc : ∀ (a x q : Nat), a + x + q + 1 = a + (x + q + 1)
+Becoming.Identification.shift_run : ∀ (a x q d : Nat), a + x + q + 1 + d = a + (x + d) + q + 1
+@Becoming.Identification.even_shift_runs : ∀ {n e g j s₀ w i k : Nat},
+  2 * e + 2 + (2 * g + 1) = n + 1 →
+    s₀ + w = 2 * g + 1 →
+      i ≤ (n + 1) * j + s₀ →
+        Becoming.Learning.pairAt k = (i, 2 * e + 1) →
+          Becoming.Learning.index Becoming.Learning.lassos (Becoming.Identification.oddCycle n)
+                ((n + 1) * j + s₀ + (2 * e + 1) + 1) =
+              k →
+            Becoming.Learning.MissesAt (Becoming.Learning.byElimination Becoming.Learning.lassos)
+                (Becoming.Identification.oddCycle n) ((n + 1) * (j + 1)) ∧
+              Becoming.Learning.index Becoming.Learning.lassos (Becoming.Identification.oddCycle n)
+                  ((n + 1) * (j + 1) + 1) =
+                k + 1
+@Becoming.Identification.odd_shift_runs : ∀ {n e h j a w i k : Nat},
+  2 * e + 1 + 2 * (h + 1) = n + 1 →
+    a + w = 2 * e + 1 →
+      i + 2 * e ≤ n →
+        Becoming.Learning.pairAt k = (i, 2 * e) →
+          Becoming.Learning.index Becoming.Learning.lassos (Becoming.Identification.oddCycle n)
+                ((n + 1) * (j + 1) + a) =
+              k →
+            Becoming.Learning.MissesAt (Becoming.Learning.byElimination Becoming.Learning.lassos)
+                (Becoming.Identification.oddCycle n) ((n + 1) * (j + 1) + (2 * e + 1)) ∧
+              Becoming.Learning.index Becoming.Learning.lassos (Becoming.Identification.oddCycle n)
+                  ((n + 1) * (j + 1) + (2 * e + 1) + 1) =
+                k + 1
+@Becoming.Identification.unit_shift_missed : ∀ {n j x i k : Nat},
+  x + 1 ≤ n →
+    i ≤ (n + 1) * j + x →
+      Becoming.Learning.pairAt k = (i, 0) →
+        Becoming.Learning.index Becoming.Learning.lassos (Becoming.Identification.oddCycle n) ((n + 1) * j + x + 1) =
+            k →
+          Becoming.Learning.MissesAt (Becoming.Learning.byElimination Becoming.Learning.lassos)
+              (Becoming.Identification.oddCycle n) ((n + 1) * j + x + 1) ∧
+            Becoming.Learning.index Becoming.Learning.lassos (Becoming.Identification.oddCycle n)
+                ((n + 1) * j + x + 1 + 1) =
+              k + 1
+@Becoming.Identification.turn_fit : ∀ {e M : Nat}, e < M → ∃ g, 2 * e + 2 + (2 * g + 1) = 2 * M + 1
+@Becoming.Identification.turn_room : ∀ {e g M : Nat}, 2 * e + 2 + (2 * g + 1) = 2 * M + 1 → 2 * e + 2 ≤ 2 * M
+@Becoming.Identification.turn_pair : ∀ {M e i j : Nat},
+  e < M →
+    i + 1 + 2 * e ≤ 2 * M →
+      Becoming.Identification.turnHeld (2 * M) (j + 1) = (i + 1, 2 * e) →
+        Becoming.Learning.MissesAt (Becoming.Learning.byElimination Becoming.Learning.lassos)
+            (Becoming.Identification.oddCycle (2 * M)) ((2 * M + 1) * (j + 1 + 1)) ∧
+          Becoming.Identification.turnHeld (2 * M) (j + 1 + 1) = Becoming.Learning.nextPair (i, 2 * e + 1)
+@Becoming.Identification.turn_end : ∀ {M e j : Nat},
+  e < M →
+    Becoming.Identification.turnHeld (2 * M) (j + 1) = (0, 2 * e) →
+      Becoming.Learning.MissesAt (Becoming.Learning.byElimination Becoming.Learning.lassos)
+          (Becoming.Identification.oddCycle (2 * M)) ((2 * M + 1) * (j + 1 + 1)) ∧
+        Becoming.Identification.turnHeld (2 * M) (j + 1 + 1) = Becoming.Learning.nextPair (2 * e, 1)
+@Becoming.Identification.turn_walk : ∀ {M : Nat} (f e j i : Nat),
+  e + f ≤ M →
+    i + 2 * f + 2 * e ≤ 2 * M →
+      Becoming.Identification.turnHeld (2 * M) (j + 1) = (i + 2 * f, 2 * e) →
+        Becoming.Identification.turnHeld (2 * M) (j + 1 + f) = (i, 2 * (e + f))
+@Becoming.Identification.turn_double : ∀ {M c j : Nat},
+  c + 2 ≤ M →
+    Becoming.Identification.turnHeld (2 * M) (j + 1) = (2 * (c + 1), 0) →
+      Becoming.Identification.turnHeld (2 * M) (j + (c + 1) + 1 + c + 1 + 1) = (2 * (c + 2), 0)
+Becoming.Identification.start_turn : ∀ (m : Nat), Becoming.Identification.turnHeld (2 * (m + 1)) 1 = (2, 0)
+Becoming.Identification.turn_diagonals : ∀ (m c : Nat),
+  c + 1 ≤ m + 1 → Becoming.Identification.turnHeld (2 * (m + 1)) ((c + 1) * (c + 1)) = (2 * (c + 1), 0)
+Becoming.Identification.byElimination_missed_late : ∀ (m : Nat),
+  Becoming.Learning.MissesAt (Becoming.Learning.byElimination Becoming.Learning.lassos)
+    (Becoming.Identification.oddCycle (2 * (m + 1))) ((2 * (m + 1) + 1) * ((m + 1) * (m + 1) + (m + 1)))
+Becoming.Identification.byElimination_rest_cubic : ∀ (m : Nat) {T : Nat},
+  (∀ (o : Nat → Bool),
+      Becoming.StatesBelow o (2 * m + 3) →
+        ∀ (t : Nat),
+          T ≤ t →
+            Becoming.Learning.byElimination Becoming.Learning.lassos (Becoming.Learning.prefixOf o t) = some (o t)) →
+    (2 * m + 3) * ((m + 1) * (m + 2)) < T
+@Becoming.Law.orbit_held : ∀ {S : Type u_1} {next : S → S} {l : List S},
+  (∀ (s : S), s ∈ l → next s ∈ l) → ∀ {s : S}, s ∈ l → ∀ (n : Nat), Becoming.Law.orbit next s n ∈ l
+@Becoming.Law.statesBelow_held : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {l : List S},
+  (∀ (s : S), s ∈ l → next s ∈ l) →
+    ∀ {s : S}, s ∈ l → ∀ (o : S → R), Becoming.StatesBelow (fun n => o (Becoming.Law.orbit next s n)) l.length
+@Becoming.Law.sameFuture_iff_below : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {l : List S},
+  (∀ (s : S), s ∈ l → next s ∈ l) →
+    ∀ {s s' : S},
+      s ∈ l →
+        s' ∈ l →
+          (Becoming.Law.SameFuture next o s s' ↔
+            ∀ (n : Nat),
+              n < l.length + l.length - 1 → o (Becoming.Law.orbit next s n) = o (Becoming.Law.orbit next s' n))
+@Becoming.Law.agreeTo_iff : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {k : Nat} {s s' : S},
+  Becoming.Law.AgreeTo next o k s s' ↔
+    ∀ (n : Nat), n ≤ k → o (Becoming.Law.orbit next s n) = o (Becoming.Law.orbit next s' n)
+@Becoming.Law.AgreeTo.self : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} (k : Nat) (s : S),
+  Becoming.Law.AgreeTo next o k s s
+@Becoming.Law.AgreeTo.symm : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {k : Nat} {s s' : S},
+  Becoming.Law.AgreeTo next o k s s' → Becoming.Law.AgreeTo next o k s' s
+@Becoming.Law.AgreeTo.trans : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {k : Nat} {s s' s'' : S},
+  Becoming.Law.AgreeTo next o k s s' → Becoming.Law.AgreeTo next o k s' s'' → Becoming.Law.AgreeTo next o k s s''
+@Becoming.Law.AgreeTo.of_succ : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {k : Nat} {s s' : S},
+  Becoming.Law.AgreeTo next o (k + 1) s s' → Becoming.Law.AgreeTo next o k s s'
+@Becoming.Law.agreeTo_refining : ∀ {S : Type u_1} {R : Type u_2} (next : S → S) (o : S → R),
+  Becoming.Refining (Becoming.Law.AgreeTo next o)
+@Becoming.Law.AgreeTo.decided : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {l : List S},
+  (∀ (s : S), s ∈ l → next s ∈ l) →
+    (∀ (s s' : S), s ∈ l → s' ∈ l → Becoming.Decided (o s = o s')) →
+      ∀ (k : Nat) (s s' : S), s ∈ l → s' ∈ l → Becoming.Decided (Becoming.Law.AgreeTo next o k s s')
+@Becoming.Law.AgreeTo.steady_on : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {l : List S},
+  (∀ (s : S), s ∈ l → next s ∈ l) →
+    ∀ {k : Nat},
+      Becoming.SteadyAt (Becoming.Law.AgreeTo next o) l k →
+        ∀ (j : Nat) {s s' : S},
+          s ∈ l → s' ∈ l → Becoming.Law.AgreeTo next o k s s' → Becoming.Law.AgreeTo next o (k + j) s s'
+@Becoming.Law.sameFuture_iff_classes : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {l : List S},
+  (∀ (s : S), s ∈ l → next s ∈ l) →
+    (∀ (s s' : S), s ∈ l → s' ∈ l → Becoming.Decided (o s = o s')) →
+      ∀ {s s' : S},
+        s ∈ l →
+          s' ∈ l →
+            (Becoming.Law.SameFuture next o s s' ↔
+              ∀ (n : Nat), n < l.length - 1 → o (Becoming.Law.orbit next s n) = o (Becoming.Law.orbit next s' n))
+@Becoming.Law.sameFuture_classes_unrefuted : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {l : List S},
+  (∀ (s : S), s ∈ l → next s ∈ l) →
+    ∀ {s s' : S},
+      s ∈ l →
+        s' ∈ l →
+          (∀ (n : Nat), n < l.length - 1 → o (Becoming.Law.orbit next s n) = o (Becoming.Law.orbit next s' n)) →
+            ∀ (n : Nat), ¬¬o (Becoming.Law.orbit next s n) = o (Becoming.Law.orbit next s' n)
+Becoming.Law.upto_length : ∀ (m : Nat), (Becoming.downFrom m).length = m + 1
+@Becoming.Law.sameFuture_classes_exact : ∀ {R : Type u_1} {x y : R},
+  x ≠ y →
+    ∀ (M : Nat),
+      ∃ next o l,
+        l.length = M + 2 ∧
+          (∀ (p : Nat), p ∈ l → next p ∈ l) ∧
+            0 ∈ l ∧
+              1 ∈ l ∧
+                (∀ (n : Nat), n < M → o (Becoming.Law.orbit next 0 n) = o (Becoming.Law.orbit next 1 n)) ∧
+                  o (Becoming.Law.orbit next 0 M) ≠ o (Becoming.Law.orbit next 1 M)
+@Becoming.Law.memberAt_mem : ∀ {S : Type u_1} (d : S) {l : List S} {i : Nat},
+  i < l.length → Becoming.Law.memberAt d l i ∈ l
+@Becoming.Law.position_of_mem : ∀ {S : Type u_1} (d : S) {l : List S} {x : S},
+  x ∈ l → ∃ i, i < l.length ∧ Becoming.Law.memberAt d l i = x
+@Becoming.Law.choose_below : ∀ {P : Nat → Nat → Prop} (m : Nat),
+  (∀ (i : Nat), i < m → ∃ k, P i k) → ∃ f, ∀ (i : Nat), i < m → P i (f i)
+@Becoming.Law.orbit_memberAt : ∀ {S : Type u_1} {next : S → S} {l : List S} {d : S} {f : Nat → Nat},
+  (∀ (i : Nat), i < l.length → f i < l.length ∧ next (Becoming.Law.memberAt d l i) = Becoming.Law.memberAt d l (f i)) →
+    ∀ {i : Nat},
+      i < l.length →
+        ∀ (n : Nat),
+          Becoming.Law.orbit f i n < l.length ∧
+            Becoming.Law.orbit next (Becoming.Law.memberAt d l i) n =
+              Becoming.Law.memberAt d l (Becoming.Law.orbit f i n)
+@Becoming.Law.merge_sound : ∀ {R : Type u_1} {v : Nat → R} {g : Nat → Nat} {a b : Nat},
+  Becoming.Law.SoundFor v g → v a = v b → Becoming.Law.SoundFor v (Becoming.Law.merge g a b)
+@Becoming.Law.merge_keeps : ∀ {g : Nat → Nat} {a b x y : Nat},
+  g x = g y → Becoming.Law.merge g a b x = Becoming.Law.merge g a b y
+Becoming.Law.merge_joins : ∀ (g : Nat → Nat) (a b : Nat), Becoming.Law.merge g a b a = Becoming.Law.merge g a b b
+@Becoming.Law.joinOrbits_sound : ∀ {R : Type u_1} {v : Nat → R} {f : Nat → Nat} {p p' : Nat} (k : Nat),
+  (∀ (n : Nat), n < k → v (Becoming.Law.orbit f p n) = v (Becoming.Law.orbit f p' n)) →
+    Becoming.Law.SoundFor v (Becoming.Law.joinOrbits f p p' k)
+@Becoming.Law.joinOrbits_joins : ∀ {f : Nat → Nat} {p p' : Nat} (k n : Nat),
+  n < k →
+    Becoming.Law.joinOrbits f p p' k (Becoming.Law.orbit f p n) =
+      Becoming.Law.joinOrbits f p p' k (Becoming.Law.orbit f p' n)
+@Becoming.Law.lt_of_le_pred : ∀ {N i j : Nat}, j < N → i ≤ N - 1 → i < N
+@Becoming.Law.sameFuture_iff_within : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {o : S → R} {l : List S},
+  (∀ (s : S), s ∈ l → next s ∈ l) →
+    ∀ {s s' : S},
+      s ∈ l →
+        s' ∈ l →
+          (Becoming.Law.SameFuture next o s s' ↔
+            ∀ (n : Nat), n < l.length - 1 → o (Becoming.Law.orbit next s n) = o (Becoming.Law.orbit next s' n))
+@Becoming.Identification.sameAhead_iff_classes : ∀ {O : Type u_1} {o : Nat → O} {N : Nat},
+  Becoming.StatesBelow o N →
+    (∀ (n m : Nat), Becoming.Decided (o n = o m)) →
+      ∀ {t t' : Nat}, Becoming.SameAhead o t t' ↔ ∀ (n : Nat), n < N - 1 → o (t + n) = o (t' + n)
+@Becoming.Identification.sameAhead_iff_within : ∀ {O : Type u_1} {o : Nat → O} {N : Nat},
+  Becoming.StatesBelow o N → ∀ {t t' : Nat}, Becoming.SameAhead o t t' ↔ ∀ (n : Nat), n < N - 1 → o (t + n) = o (t' + n)

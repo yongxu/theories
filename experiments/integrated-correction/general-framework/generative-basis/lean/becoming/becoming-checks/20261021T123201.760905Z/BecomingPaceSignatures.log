@@ -1,0 +1,163 @@
+@Becoming.Law.Reachable.back : ∀ {S : Type u_1} {next : S → S} {n : Nat} {s : S} (k : Nat),
+  Becoming.Law.Reachable next (n + k) s → Becoming.Law.Reachable next n s
+@Becoming.Pace.paced_count : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+  (c : S × R) (t : Nat), ((Becoming.Law.run (Becoming.Pace.step f h reads) (c.fst, c.snd, 0)).state t).snd.snd = t
+@Becoming.Pace.paced_run : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+  (c : S × R) (t : Nat),
+  (Becoming.Law.run (Becoming.Pace.step f h reads) (c.fst, c.snd, 0)).state t =
+    ((Becoming.Pace.paced f h reads c t).fst, (Becoming.Pace.paced f h reads c t).snd, t)
+@Becoming.Pace.paced_zero : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+  (c : S × R), Becoming.Pace.paced f h reads c 0 = c
+@Becoming.Pace.paced_succ : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+  (c : S × R) (t : Nat),
+  Becoming.Pace.paced f h reads c (t + 1) = Becoming.Pace.turn f h (reads t) (Becoming.Pace.paced f h reads c t)
+@Becoming.Pace.rule_kept : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  (∀ (t : Nat), reads t = false) → ∀ (c : S × R) (t : Nat), (Becoming.Pace.paced f h reads c t).snd = c.snd
+@Becoming.Pace.never_reads_course : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R}
+  {reads : Nat → Bool},
+  (∀ (t : Nat), reads t = false) →
+    ∀ (c : S × R) (t : Nat),
+      Becoming.Pace.paced f h reads c t = (Becoming.Law.orbit (fun y => f y c.snd) c.fst t, c.snd)
+@Becoming.Pace.rule_unreached : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  (∀ (t : Nat), reads t = false) →
+    ∀ (x x' : S) (g : R) (t : Nat),
+      (Becoming.Pace.paced f h reads (x, g) t).snd = (Becoming.Pace.paced f h reads (x', g) t).snd
+@Becoming.Pace.never_reads_lost : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  (∀ (t : Nat), reads t = false) →
+    ∀ {g : R} {n : Nat} {s : S},
+      ¬Becoming.Law.Reachable (fun y => f y g) n s →
+        ∀ (k : Nat) (x : S), (Becoming.Pace.paced f h reads (x, g) (n + k)).fst ≠ s
+@Becoming.Pace.never_reads_merged : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R}
+  {reads : Nat → Bool},
+  (∀ (t : Nat), reads t = false) →
+    ∀ {g : R} {x x' : S},
+      f x g = f x' g →
+        ∀ (t : Nat), Becoming.Pace.paced f h reads (x, g) (t + 1) = Becoming.Pace.paced f h reads (x', g) (t + 1)
+@Becoming.Pace.never_reads_loses : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  (∀ (t : Nat), reads t = false) →
+    ∀ {g : R},
+      (Becoming.Law.Merges fun y => f y g) →
+        ∀ {all : List S},
+          (∀ (s : S), s ∈ all) →
+            ∀ (k : Nat), ¬∀ (s : S), ∃ x, (Becoming.Pace.paced f h reads (x, g) (all.length + k)).fst = s
+@Becoming.Pace.turn_byRule : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R},
+  (∀ (x x' : S) (g : R), f x g = f x' g) →
+    (∀ (x x' : S) (g : R), h x g = h x' g) →
+      ∀ (b : Bool) (x x' : S) (g : R), Becoming.Pace.turn f h b (x, g) = Becoming.Pace.turn f h b (x', g)
+@Becoming.Pace.byRule_reabsorbed : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool},
+  (∀ (x x' : S) (g : R), f x g = f x' g) →
+    (∀ (x x' : S) (g : R), h x g = h x' g) →
+      ∀ (x x' : S) (g : R) (n : Nat),
+        (Becoming.Law.run (Becoming.Pace.step f h reads) (x, g, 0)).state (n + 1) =
+          (Becoming.Law.run (Becoming.Pace.step f h reads) (x', g, 0)).state (n + 1)
+@Becoming.Pace.rule_until_reading : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+  {r : Nat},
+  (∀ (u : Nat), u < r → reads u = false) →
+    ∀ (c : S × R) (t : Nat), t ≤ r → (Becoming.Pace.paced f h reads c t).snd = c.snd
+@Becoming.Pace.rule_alike_until_reading : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R}
+  {reads : Nat → Bool} {r : Nat},
+  (∀ (u : Nat), u < r → reads u = false) →
+    ∀ (x x' : S) (g : R) {t : Nat},
+      t ≤ r → (Becoming.Pace.paced f h reads (x, g) t).snd = (Becoming.Pace.paced f h reads (x', g) t).snd
+@Becoming.Pace.rule_at_reading : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+  {r : Nat},
+  reads r = true →
+    ∀ (c : S × R),
+      (Becoming.Pace.paced f h reads c (r + 1)).snd =
+        h (Becoming.Pace.paced f h reads c r).fst (Becoming.Pace.paced f h reads c r).snd
+Becoming.Pace.Copying.rule_parts : (Becoming.Pace.paced Becoming.Pace.Copying.fast Becoming.Pace.Copying.slow
+        (fun x => true) (true, false) 0).snd =
+    (Becoming.Pace.paced Becoming.Pace.Copying.fast Becoming.Pace.Copying.slow (fun x => true) (false, false) 0).snd ∧
+  (Becoming.Pace.paced Becoming.Pace.Copying.fast Becoming.Pace.Copying.slow (fun x => true) (true, false) 1).snd ≠
+    (Becoming.Pace.paced Becoming.Pace.Copying.fast Becoming.Pace.Copying.slow (fun x => true) (false, false) 1).snd
+Becoming.Switching.fixed_loses : ∀ (k : Nat) (x : Bool),
+  (Becoming.Law.run (fun x => Becoming.Switching.fast x true) x).state (1 + k) ≠ false ∧
+    (Becoming.Law.run (fun x => Becoming.Switching.fast x false) x).state (1 + k) ≠ true
+Becoming.Switching.back_at_four : ∀ (k : Nat),
+  Becoming.Pace.paced Becoming.Switching.fast Becoming.Switching.slow (fun x => true) (true, true) (4 * k) =
+    (true, true)
+Becoming.Switching.changing_regains : ∀ (k : Nat),
+  (Becoming.Pace.paced Becoming.Switching.fast Becoming.Switching.slow (fun x => true) (true, true) (4 * k)).fst =
+      true ∧
+    (Becoming.Pace.paced Becoming.Switching.fast Becoming.Switching.slow (fun x => true) (true, true) (4 * k + 2)).fst =
+      false
+@Becoming.Pace.paced_stretch : ∀ {S : Type u_1} {R : Type u_2} {f : S → R → S} {h : S → R → R} {reads : Nat → Bool}
+  {c : S × R} {a k : Nat},
+  (∀ (j : Nat), j < k → reads (a + j) = false) →
+    ∀ (j : Nat),
+      j ≤ k →
+        Becoming.Pace.paced f h reads c (a + j) =
+          (Becoming.Law.orbit (fun y => f y (Becoming.Pace.paced f h reads c a).snd)
+              (Becoming.Pace.paced f h reads c a).fst j,
+            (Becoming.Pace.paced f h reads c a).snd)
+@Becoming.Pace.paced_held : ∀ {S : Type u_1} {R : Type u_2} {O : Type u_3} {f : S → R → S} {h : S → R → R}
+  {reads : Nat → Bool},
+  (∀ (t : Nat), reads t = false) →
+    ∀ (o : S → O) (c : S × R) (t : Nat),
+      o (Becoming.Pace.paced f h reads c t).fst = Becoming.Pace.heldCourse f c.snd o c.fst t
+@Becoming.Pace.held_statesBelow : ∀ {S : Type u_1} {R : Type u_2} {O : Type u_3} {f : S → R → S} {g : R} {x : S}
+  {l : List S},
+  (∀ (t : Nat), (Becoming.Law.run (fun y => f y g) x).state t ∈ l) →
+    ∀ (o : S → O), Becoming.StatesBelow (Becoming.Pace.heldCourse f g o x) l.length
+@Becoming.Pace.lasso_statesBelow : ∀ {O : Type u_1} (g : Nat × Nat) (o : Nat → O),
+  Becoming.StatesBelow (Becoming.Pace.heldCourse Becoming.Pace.lassoStep g o 0) (g.fst + g.snd + 1)
+@Becoming.Pace.held_realizes : ∀ {O : Type u_1} {o : Nat → O} {N : Nat},
+  Becoming.StatesBelow o N →
+    ∃ g, g.fst + g.snd + 1 ≤ N ∧ ∀ (t : Nat), Becoming.Pace.heldCourse Becoming.Pace.lassoStep g o 0 t = o t
+@Becoming.Pace.dissolving : ∀ {O : Type u_1} {x y : O},
+  x ≠ y →
+    ∀ (M : Nat),
+      Becoming.StatesBelow
+          (Becoming.Pace.heldCourse Becoming.Pace.lassoStep (0, M + 1) (fun p => if p = M + 1 then y else x) 0)
+          (M + 2) ∧
+        Becoming.StatesBelow
+            (Becoming.Pace.heldCourse Becoming.Pace.lassoStep (1, M) (fun p => if p = M + 1 then y else x) 0) (M + 2) ∧
+          (∀ (n : Nat),
+              n < M + M + 2 →
+                Becoming.Pace.heldCourse Becoming.Pace.lassoStep (0, M + 1) (fun p => if p = M + 1 then y else x) 0 n =
+                  Becoming.Pace.heldCourse Becoming.Pace.lassoStep (1, M) (fun p => if p = M + 1 then y else x) 0 n) ∧
+            Becoming.Pace.heldCourse Becoming.Pace.lassoStep (0, M + 1) (fun p => if p = M + 1 then y else x) 0
+                (M + M + 2) ≠
+              Becoming.Pace.heldCourse Becoming.Pace.lassoStep (1, M) (fun p => if p = M + 1 then y else x) 0
+                (M + M + 2)
+@Becoming.Pace.held_fixed : ∀ {S : Type u_1} {R : Type u_2} {O : Type u_3} {f : S → R → S} {S' : Type u_4}
+  {R' : Type u_5} {f' : S' → R' → S'} {g : R} {g' : R'} {o : S → O} {o' : S' → O} {x : S} {x' : S'} {N N' : Nat},
+  Becoming.StatesBelow (Becoming.Pace.heldCourse f g o x) N →
+    Becoming.StatesBelow (Becoming.Pace.heldCourse f' g' o' x') N' →
+      (∀ (n : Nat), n < N + N' - 1 → Becoming.Pace.heldCourse f g o x n = Becoming.Pace.heldCourse f' g' o' x' n) →
+        ∀ (n : Nat), Becoming.Pace.heldCourse f g o x n = Becoming.Pace.heldCourse f' g' o' x' n
+@Becoming.Pace.stretch_fixed : ∀ {S : Type u_1} {R : Type u_2} {O : Type u_3} {f : S → R → S} {h : S → R → R}
+  {reads : Nat → Bool} {S' : Type u_4} {R' : Type u_5} {f' : S' → R' → S'} {h' : S' → R' → R'} {reads' : Nat → Bool}
+  {c : S × R} {c' : S' × R'} {a a' k N N' : Nat} {o : S → O} {o' : S' → O},
+  (∀ (j : Nat), j < k → reads (a + j) = false) →
+    (∀ (j : Nat), j < k → reads' (a' + j) = false) →
+      Becoming.StatesBelow
+          (Becoming.Pace.heldCourse f (Becoming.Pace.paced f h reads c a).snd o (Becoming.Pace.paced f h reads c a).fst)
+          N →
+        Becoming.StatesBelow
+            (Becoming.Pace.heldCourse f' (Becoming.Pace.paced f' h' reads' c' a').snd o'
+              (Becoming.Pace.paced f' h' reads' c' a').fst)
+            N' →
+          N + N' - 1 ≤ k →
+            (∀ (j : Nat),
+                j < N + N' - 1 →
+                  o (Becoming.Pace.paced f h reads c (a + j)).fst =
+                    o' (Becoming.Pace.paced f' h' reads' c' (a' + j)).fst) →
+              ∀ (j : Nat),
+                j ≤ k →
+                  o (Becoming.Pace.paced f h reads c (a + j)).fst =
+                    o' (Becoming.Pace.paced f' h' reads' c' (a' + j)).fst
+@Becoming.Pace.pace_law : ∀ {O : Type u_1} {x y : O},
+  x ≠ y → ∀ (N L : Nat), Becoming.Pace.StretchFixes O N L ↔ N + N - 1 ≤ L
+@Becoming.Pace.whole_fixed : ∀ {S : Type u_1} {next next' : S → S} {s s' : S} {N : Nat},
+  Becoming.StatesBelow (Becoming.Law.run next s).state N →
+    (∀ (n : Nat), n < N + 1 → (Becoming.Law.run next s).state n = (Becoming.Law.run next' s').state n) →
+      ∀ (n : Nat), (Becoming.Law.run next s).state n = (Becoming.Law.run next' s').state n
+Becoming.Pace.whole_fixed_exact : ∀ (M : Nat),
+  Becoming.StatesBelow (Becoming.Law.run (fun p => Becoming.Pace.lassoStep p (M, 0)) 0).state (M + 1) ∧
+    (∀ (n : Nat),
+        n < M + 1 →
+          (Becoming.Law.run (fun p => Becoming.Pace.lassoStep p (M, 0)) 0).state n =
+            (Becoming.Law.run (fun p => Becoming.Pace.lassoStep p (M + 1, 0)) 0).state n) ∧
+      (Becoming.Law.run (fun p => Becoming.Pace.lassoStep p (M, 0)) 0).state (M + 1) ≠
+        (Becoming.Law.run (fun p => Becoming.Pace.lassoStep p (M + 1, 0)) 0).state (M + 1)

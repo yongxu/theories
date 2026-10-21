@@ -1,0 +1,414 @@
+@Becoming.WitnessRefinement.witnessed_iff : ∀ {bad : List Becoming.FaultEnvelopes.Domain} {answer : Bool}
+  {reports : Becoming.WitnessRefinement.Reports} {d : Becoming.FaultEnvelopes.Domain},
+  Becoming.WitnessRefinement.witnessed bad answer reports d = true ↔
+    ¬d ∈ bad → reports d = none ∨ reports d = some answer
+Becoming.WitnessRefinement.explains_iff : ∀ (roster bad : List Becoming.FaultEnvelopes.Domain) (answer : Bool)
+  (reports : Becoming.WitnessRefinement.Reports),
+  Becoming.WitnessRefinement.explains roster bad answer reports = true ↔
+    ∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → ¬d ∈ bad → reports d = none ∨ reports d = some answer
+Becoming.WitnessRefinement.compatible_iff : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : Becoming.FaultEnvelopes.Envelope) (answer : Bool) (reports : Becoming.WitnessRefinement.Reports),
+  Becoming.WitnessRefinement.compatible roster faults answer reports = true ↔
+    ∃ bad,
+      bad ∈ faults ∧
+        ∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → ¬d ∈ bad → reports d = none ∨ reports d = some answer
+@Becoming.WitnessRefinement.refine_keeps_actual : ∀ {H : Type} (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : H → Becoming.FaultEnvelopes.Envelope) (answer : H → Bool) (models : List H) (actual : H),
+  actual ∈ models →
+    ∀ (bad : List Becoming.FaultEnvelopes.Domain),
+      bad ∈ faults actual →
+        ∀ (reports : Becoming.WitnessRefinement.Reports),
+          (∀ (d : Becoming.FaultEnvelopes.Domain),
+              d ∈ roster → ¬d ∈ bad → reports d = none ∨ reports d = some (answer actual)) →
+            actual ∈ Becoming.WitnessRefinement.refine roster faults answer models reports
+@Becoming.WitnessRefinement.refine_subset : ∀ {H : Type} (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : H → Becoming.FaultEnvelopes.Envelope) (answer : H → Bool) (models : List H)
+  (reports : Becoming.WitnessRefinement.Reports) (h : H),
+  h ∈ Becoming.WitnessRefinement.refine roster faults answer models reports → h ∈ models
+Becoming.WitnessRefinement.silence_keeps_models : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : Becoming.FaultEnvelopes.Envelope) (answer : Bool),
+  (Becoming.WitnessRefinement.compatible roster faults answer fun x => none) = !List.isEmpty faults
+Becoming.WitnessRefinement.common_survivor_same_answer : ∀ (roster a b : List Becoming.FaultEnvelopes.Domain)
+  (x y : Bool) (reports : Becoming.WitnessRefinement.Reports),
+  Becoming.WitnessRefinement.explains roster a x reports = true →
+    Becoming.WitnessRefinement.explains roster b y reports = true →
+      (∃ d, d ∈ roster ∧ ¬d ∈ a ∧ ¬d ∈ b ∧ reports d ≠ none) → x = y
+Becoming.WitnessRefinement.cross_separation_excludes : ∀ (roster : List Becoming.FaultEnvelopes.Domain)
+  (fa fb : Becoming.FaultEnvelopes.Envelope),
+  Becoming.WitnessRefinement.CrossSeparated roster fa fb →
+    ∀ (x y : Bool),
+      x ≠ y →
+        ∀ (reports : Becoming.WitnessRefinement.Reports),
+          (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → reports d ≠ none) →
+            Becoming.WitnessRefinement.compatible roster fa x reports = true →
+              Becoming.WitnessRefinement.compatible roster fb y reports = false
+Becoming.WitnessRefinement.responsive_survivors_exclude : ∀ (roster bad : List Becoming.FaultEnvelopes.Domain)
+  (alternatives : Becoming.FaultEnvelopes.Envelope) (x y : Bool),
+  x ≠ y →
+    ∀ (reports : Becoming.WitnessRefinement.Reports),
+      (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → ¬d ∈ bad → reports d = some x) →
+        (∀ (b : List Becoming.FaultEnvelopes.Domain), b ∈ alternatives → ∃ d, d ∈ roster ∧ ¬d ∈ bad ∧ ¬d ∈ b) →
+          Becoming.WitnessRefinement.compatible roster alternatives y reports = false
+Becoming.WitnessRefinement.covering_faults_same_transcript : ∀ (roster a b : List Becoming.FaultEnvelopes.Domain)
+  (x y : Bool),
+  (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → d ∈ a ∨ d ∈ b) →
+    Becoming.WitnessRefinement.explains roster a x (Becoming.WitnessRefinement.ambiguousReports a x y) = true ∧
+      Becoming.WitnessRefinement.explains roster b y (Becoming.WitnessRefinement.ambiguousReports a x y) = true ∧
+        ∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → Becoming.WitnessRefinement.ambiguousReports a x y d ≠ none
+@Becoming.WitnessRefinement.present_iff : ∀ {o : Option Bool} {x : Bool},
+  o ≠ none → (o = none ∨ o = some x ↔ o.getD false = x)
+@Becoming.WitnessRefinement.explains_complete_iff : ∀ {roster bad : List Becoming.FaultEnvelopes.Domain} {x : Bool}
+  {reports : Becoming.WitnessRefinement.Reports},
+  (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → reports d ≠ none) →
+    (Becoming.WitnessRefinement.explains roster bad x reports = true ↔
+      Becoming.Readout.Explains roster bad x fun d => (reports d).getD false)
+@Becoming.WitnessRefinement.compatible_complete_iff : ∀ {roster : List Becoming.FaultEnvelopes.Domain}
+  {faults : Becoming.FaultEnvelopes.Envelope} {x : Bool} {reports : Becoming.WitnessRefinement.Reports},
+  (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → reports d ≠ none) →
+    (Becoming.WitnessRefinement.compatible roster faults x reports = true ↔
+      ∃ bad, bad ∈ faults ∧ Becoming.Readout.Explains roster bad x fun d => (reports d).getD false)
+Becoming.WitnessRefinement.complete_diagnosability_iff_cross_separation : ∀
+  (roster : List Becoming.FaultEnvelopes.Domain) (fa fb : Becoming.FaultEnvelopes.Envelope) (x y : Bool),
+  x ≠ y →
+    ((∀ (reports : Becoming.WitnessRefinement.Reports),
+        (∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster → reports d ≠ none) →
+          Becoming.WitnessRefinement.compatible roster fa x reports = true →
+            Becoming.WitnessRefinement.compatible roster fb y reports = false) ↔
+      Becoming.WitnessRefinement.CrossSeparated roster fa fb)
+@Becoming.WitnessRefinement.refined_pool_sound : ∀ {H : Type} (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : H → Becoming.FaultEnvelopes.Envelope) (answer : H → Bool)
+  (describe : H → Becoming.Reconfiguration.Arrangement) (models : List H) (actual : H),
+  actual ∈ models →
+    ∀ (bad : List Becoming.FaultEnvelopes.Domain),
+      bad ∈ faults actual →
+        ∀ (reports : Becoming.WitnessRefinement.Reports),
+          (∀ (d : Becoming.FaultEnvelopes.Domain),
+              d ∈ roster → ¬d ∈ bad → reports d = none ∨ reports d = some (answer actual)) →
+            ∀ (roots : List Nat),
+              Becoming.Reconfiguration.Covered (describe actual) roots →
+                ∀ (supports : Becoming.FaultEnvelopes.Domain → Bool) (P : Prop),
+                  (∀ (d : Becoming.FaultEnvelopes.Domain),
+                      d ∈ (describe actual).roster →
+                        Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                          supports d = true → P) →
+                    Becoming.FaultEnvelopes.certificate (describe actual).roster
+                          (Becoming.PooledEnvelopes.pooled describe
+                            (Becoming.WitnessRefinement.refine roster faults answer models reports))
+                          supports =
+                        true →
+                      P
+@Becoming.WitnessRefinement.refined_completes : ∀ {H : Type} (roster : List Becoming.FaultEnvelopes.Domain)
+  (faults : H → Becoming.FaultEnvelopes.Envelope) (answer : H → Bool)
+  (describe : H → Becoming.Reconfiguration.Arrangement) (models : List H) (actual : H),
+  actual ∈ models →
+    ∀ (bad : List Becoming.FaultEnvelopes.Domain),
+      bad ∈ faults actual →
+        ∀ (reports : Becoming.WitnessRefinement.Reports),
+          (∀ (d : Becoming.FaultEnvelopes.Domain),
+              d ∈ roster → ¬d ∈ bad → reports d = none ∨ reports d = some (answer actual)) →
+            ∀ (roots : List Nat),
+              Becoming.Reconfiguration.Covered (describe actual) roots →
+                Becoming.FaultEnvelopes.separated (describe actual).roster
+                    (Becoming.PooledEnvelopes.pooled describe
+                      (Becoming.WitnessRefinement.refine roster faults answer models reports)) →
+                  ∀ (w : Becoming.Transactions.Installation) (p : Becoming.Transactions.Request)
+                    (reads : Becoming.Transactions.Readings) (approvals : Becoming.Transactions.Approvals),
+                    Becoming.Transactions.fresh w p = true →
+                      (∀ (d : Becoming.FaultEnvelopes.Domain),
+                          d ∈ (describe actual).roster →
+                            Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                              reads d = some (Becoming.Transactions.expected p)) →
+                        (∀ (d : Becoming.FaultEnvelopes.Domain),
+                            d ∈ (describe actual).roster →
+                              Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                                approvals d = some p) →
+                          (∀ (d : Becoming.FaultEnvelopes.Domain),
+                              d ∈ (describe actual).roster →
+                                Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                                  ∀ (o : Becoming.Transactions.Observation),
+                                    reads d = some o → o = Becoming.Transactions.observed w p.address) →
+                            (∀ (d : Becoming.FaultEnvelopes.Domain),
+                                d ∈ (describe actual).roster →
+                                  Becoming.Reconfiguration.fails ((describe actual).vulnerability d) roots = false →
+                                    approvals d = some p → Becoming.Transactions.withinScope w p = true) →
+                              Becoming.Transactions.load (describe actual).roster p + 3 ≤ w.state.reserve →
+                                w.state.time + Becoming.Transactions.load (describe actual).roster p + 3 ≤
+                                    w.state.deadline →
+                                  (Becoming.Transactions.guardedExecute (describe actual).roster
+                                          (Becoming.PooledEnvelopes.pooled describe
+                                            (Becoming.WitnessRefinement.refine roster faults answer models reports))
+                                          (Becoming.PooledEnvelopes.pooled describe
+                                            (Becoming.WitnessRefinement.refine roster faults answer models reports))
+                                          w p reads approvals).succeeded =
+                                      true ∧
+                                    (Becoming.Transactions.guardedExecute (describe actual).roster
+                                                (Becoming.PooledEnvelopes.pooled describe
+                                                  (Becoming.WitnessRefinement.refine roster faults answer models
+                                                    reports))
+                                                (Becoming.PooledEnvelopes.pooled describe
+                                                  (Becoming.WitnessRefinement.refine roster faults answer models
+                                                    reports))
+                                                w p reads approvals).installation.state.completed =
+                                        true ∧
+                                      Becoming.Transactions.withinScope w p = true
+Becoming.WitnessRefinement.conflicting_models_self_certify : (Becoming.FaultEnvelopes.certificate
+      Becoming.FaultEnvelopes.roster4 (Becoming.WitnessRefinement.auditFaults false Becoming.PooledEnvelopes.Model.left)
+      fun d => decide (Becoming.WitnessRefinement.splitReports d = some true)) =
+    true ∧
+  (Becoming.FaultEnvelopes.certificate Becoming.FaultEnvelopes.roster4
+        (Becoming.WitnessRefinement.auditFaults false Becoming.PooledEnvelopes.Model.right) fun d =>
+        decide (Becoming.WitnessRefinement.splitReports d = some false)) =
+      true ∧
+    Becoming.WitnessRefinement.posterior false Becoming.PooledEnvelopes.hypotheses
+        Becoming.WitnessRefinement.splitReports =
+      Becoming.PooledEnvelopes.hypotheses
+Becoming.WitnessRefinement.four_witnesses_inseparable : Becoming.WitnessRefinement.explains
+      Becoming.FaultEnvelopes.roster4 [0, 1] true Becoming.WitnessRefinement.splitReports =
+    true ∧
+  Becoming.WitnessRefinement.explains Becoming.FaultEnvelopes.roster4 [2, 3] false
+      Becoming.WitnessRefinement.splitReports =
+    true
+Becoming.WitnessRefinement.fifth_witness_resolves : Becoming.WitnessRefinement.posterior true
+      Becoming.PooledEnvelopes.hypotheses Becoming.WitnessRefinement.splitReports =
+    [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped] ∧
+  Becoming.PooledEnvelopes.poolReady
+      (Becoming.PooledEnvelopes.pooled Becoming.PooledEnvelopes.describe
+        (Becoming.WitnessRefinement.posterior true Becoming.PooledEnvelopes.hypotheses
+          Becoming.WitnessRefinement.splitReports)) =
+    true
+Becoming.WitnessRefinement.absent_fifth_keeps_uncertainty : (Becoming.WitnessRefinement.posterior true
+    Becoming.PooledEnvelopes.hypotheses fun d => if d = 4 then none else Becoming.WitnessRefinement.splitReports d) =
+  Becoming.PooledEnvelopes.hypotheses
+Becoming.WitnessRefinement.fifth_witness_fallible : Becoming.WitnessRefinement.posterior true
+    Becoming.PooledEnvelopes.hypotheses Becoming.WitnessRefinement.falseFifth =
+  [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped]
+Becoming.WitnessRefinement.duplicated_fifth_no_repair : Becoming.WitnessRefinement.refine [0, 1, 2, 3, 4]
+    Becoming.WitnessRefinement.dependentFaults Becoming.PooledEnvelopes.diagnostic Becoming.PooledEnvelopes.hypotheses
+    Becoming.WitnessRefinement.splitReports =
+  Becoming.PooledEnvelopes.hypotheses
+Becoming.WitnessRefinement.inspection_keeps_actual : ∀ (extended : Bool) (reports : Becoming.WitnessRefinement.Reports)
+  (s : Becoming.PooledEnvelopes.Situation) (out : Becoming.WitnessRefinement.Audited),
+  s.actual ∈ s.candidates →
+    ∀ (bad : List Becoming.FaultEnvelopes.Domain),
+      bad ∈ Becoming.WitnessRefinement.auditFaults extended s.actual →
+        (∀ (d : Becoming.FaultEnvelopes.Domain),
+            d ∈ Becoming.WitnessRefinement.auditRoster extended →
+              ¬d ∈ bad → reports d = none ∨ reports d = some (Becoming.PooledEnvelopes.diagnostic s.actual)) →
+          Becoming.WitnessRefinement.inspect extended reports s = some out →
+            out.situation.actual = s.actual ∧
+              out.situation.actual ∈ out.situation.candidates ∧
+                out.transcript = List.map (fun d => (d, reports d)) (Becoming.WitnessRefinement.auditRoster extended)
+Becoming.WitnessRefinement.inspection_then_shutdown : (Becoming.WitnessRefinement.outcome true
+        Becoming.WitnessRefinement.splitReports
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16 16)).candidates =
+    [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped] ∧
+  Becoming.PooledEnvelopes.achieved
+        (Becoming.WitnessRefinement.outcome true Becoming.WitnessRefinement.splitReports
+          (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16 16)) =
+      true ∧
+    (Becoming.WitnessRefinement.outcome true Becoming.WitnessRefinement.splitReports
+                (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16
+                  16)).installation.state.drawn =
+        16 ∧
+      (Becoming.WitnessRefinement.outcome true Becoming.WitnessRefinement.splitReports
+                  (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16
+                    16)).installation.state.reserve =
+          0 ∧
+        (Becoming.WitnessRefinement.outcome true Becoming.WitnessRefinement.splitReports
+                (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16
+                  16)).installation.serial =
+          1
+Becoming.WitnessRefinement.inadequate_witnesses_uncertified : (Becoming.WitnessRefinement.outcome false
+        Becoming.WitnessRefinement.splitReports
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16 16)).candidates =
+    Becoming.PooledEnvelopes.hypotheses ∧
+  Becoming.PooledEnvelopes.achieved
+        (Becoming.WitnessRefinement.outcome false Becoming.WitnessRefinement.splitReports
+          (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16 16)) =
+      false ∧
+    (Becoming.WitnessRefinement.outcome false Becoming.WitnessRefinement.splitReports
+              (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16
+                16)).installation.state.drawn =
+      12
+Becoming.WitnessRefinement.diagnosis_needs_response_reserve : (Becoming.WitnessRefinement.outcome true
+        Becoming.WitnessRefinement.splitReports
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 15 15)).candidates =
+    [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped] ∧
+  Becoming.PooledEnvelopes.achieved
+        (Becoming.WitnessRefinement.outcome true Becoming.WitnessRefinement.splitReports
+          (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 15 15)) =
+      false ∧
+    (Becoming.WitnessRefinement.outcome true Becoming.WitnessRefinement.splitReports
+                (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 15
+                  15)).installation.state.drawn =
+        13 ∧
+      (Becoming.WitnessRefinement.outcome true Becoming.WitnessRefinement.splitReports
+                (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 15
+                  15)).installation.state.reserve =
+        2
+Becoming.WitnessRefinement.denied_no_run : ∀ (extended : Bool) (reports : Becoming.WitnessRefinement.Reports)
+  (s : Becoming.PooledEnvelopes.Situation),
+  s.queryOpen = false → Becoming.WitnessRefinement.run extended reports s = none
+Becoming.WitnessRefinement.uncovered_correlation_deletes_actual : Becoming.Reconfiguration.induced
+      (Becoming.WitnessRefinement.auditArrangement true Becoming.PooledEnvelopes.Model.right) [2, 4] =
+    [2, 3, 4] ∧
+  (Becoming.WitnessRefinement.posterior true Becoming.PooledEnvelopes.hypotheses fun d => some (decide (2 ≤ d))) =
+    [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped]
+@Becoming.WitnessRefinement.inspect_some : ∀ {extended : Bool} {reports : Becoming.WitnessRefinement.Reports}
+  {s : Becoming.PooledEnvelopes.Situation} {c : Becoming.WitnessRefinement.Audited},
+  Becoming.WitnessRefinement.inspect extended reports s = some c →
+    c.situation.actual = s.actual ∧
+      c.situation.candidates = Becoming.WitnessRefinement.posterior extended s.candidates reports
+@Becoming.WitnessRefinement.step_candidates : ∀ {extended : Bool} {reports : Becoming.WitnessRefinement.Reports}
+  {s t : Becoming.PooledEnvelopes.Situation},
+  (Becoming.WitnessRefinement.audit extended).step s (some reports) t →
+    t.candidates = Becoming.WitnessRefinement.posterior extended s.candidates reports
+@Becoming.WitnessRefinement.step_narrows : ∀ {extended : Bool} {s t : Becoming.PooledEnvelopes.Situation}
+  {m : Option Becoming.WitnessRefinement.Reports},
+  (Becoming.WitnessRefinement.audit extended).step s m t →
+    ∀ (h : Becoming.PooledEnvelopes.Model), h ∈ t.candidates → h ∈ s.candidates
+@Becoming.WitnessRefinement.candidates_narrow : ∀ {extended : Bool}
+  (r : Becoming.Run (Becoming.WitnessRefinement.audit extended)) (n : Nat) (h : Becoming.PooledEnvelopes.Model),
+  h ∈ (r.state (n + 1)).candidates → h ∈ (r.state n).candidates
+@Becoming.WitnessRefinement.step_keeps_actual : ∀ {extended : Bool} {reports : Becoming.WitnessRefinement.Reports}
+  {s t : Becoming.PooledEnvelopes.Situation},
+  (Becoming.WitnessRefinement.audit extended).step s (some reports) t →
+    s.actual ∈ s.candidates →
+      ∀ (bad : List Becoming.FaultEnvelopes.Domain),
+        bad ∈ Becoming.WitnessRefinement.auditFaults extended s.actual →
+          (∀ (d : Becoming.FaultEnvelopes.Domain),
+              d ∈ Becoming.WitnessRefinement.auditRoster extended →
+                ¬d ∈ bad → reports d = none ∨ reports d = some (Becoming.PooledEnvelopes.diagnostic s.actual)) →
+            t.actual = s.actual ∧ t.actual ∈ t.candidates
+@Becoming.WitnessRefinement.step_pool_sound : ∀ {extended : Bool} {reports : Becoming.WitnessRefinement.Reports}
+  {s t : Becoming.PooledEnvelopes.Situation},
+  (Becoming.WitnessRefinement.audit extended).step s (some reports) t →
+    ∀ (desc : Becoming.PooledEnvelopes.Model → Becoming.Reconfiguration.Arrangement),
+      s.actual ∈ s.candidates →
+        ∀ (bad : List Becoming.FaultEnvelopes.Domain),
+          bad ∈ Becoming.WitnessRefinement.auditFaults extended s.actual →
+            (∀ (d : Becoming.FaultEnvelopes.Domain),
+                d ∈ Becoming.WitnessRefinement.auditRoster extended →
+                  ¬d ∈ bad → reports d = none ∨ reports d = some (Becoming.PooledEnvelopes.diagnostic s.actual)) →
+              ∀ (roots : List Nat),
+                Becoming.Reconfiguration.Covered (desc s.actual) roots →
+                  ∀ (supports : Becoming.FaultEnvelopes.Domain → Bool) (P : Prop),
+                    (∀ (d : Becoming.FaultEnvelopes.Domain),
+                        d ∈ (desc s.actual).roster →
+                          Becoming.Reconfiguration.fails ((desc s.actual).vulnerability d) roots = false →
+                            supports d = true → P) →
+                      Becoming.FaultEnvelopes.certificate (desc s.actual).roster
+                            (Becoming.PooledEnvelopes.pooled desc t.candidates) supports =
+                          true →
+                        P
+@Becoming.WitnessRefinement.step_then_completes : ∀ {extended : Bool} {reports : Becoming.WitnessRefinement.Reports}
+  {s t : Becoming.PooledEnvelopes.Situation},
+  (Becoming.WitnessRefinement.audit extended).step s (some reports) t →
+    ∀ (desc : Becoming.PooledEnvelopes.Model → Becoming.Reconfiguration.Arrangement),
+      s.actual ∈ s.candidates →
+        ∀ (bad : List Becoming.FaultEnvelopes.Domain),
+          bad ∈ Becoming.WitnessRefinement.auditFaults extended s.actual →
+            (∀ (d : Becoming.FaultEnvelopes.Domain),
+                d ∈ Becoming.WitnessRefinement.auditRoster extended →
+                  ¬d ∈ bad → reports d = none ∨ reports d = some (Becoming.PooledEnvelopes.diagnostic s.actual)) →
+              ∀ (roots : List Nat),
+                Becoming.Reconfiguration.Covered (desc s.actual) roots →
+                  Becoming.FaultEnvelopes.separated (desc s.actual).roster
+                      (Becoming.PooledEnvelopes.pooled desc t.candidates) →
+                    ∀ (w : Becoming.Transactions.Installation) (p : Becoming.Transactions.Request)
+                      (reads : Becoming.Transactions.Readings) (approvals : Becoming.Transactions.Approvals),
+                      Becoming.Transactions.fresh w p = true →
+                        (∀ (d : Becoming.FaultEnvelopes.Domain),
+                            d ∈ (desc s.actual).roster →
+                              Becoming.Reconfiguration.fails ((desc s.actual).vulnerability d) roots = false →
+                                reads d = some (Becoming.Transactions.expected p)) →
+                          (∀ (d : Becoming.FaultEnvelopes.Domain),
+                              d ∈ (desc s.actual).roster →
+                                Becoming.Reconfiguration.fails ((desc s.actual).vulnerability d) roots = false →
+                                  approvals d = some p) →
+                            (∀ (d : Becoming.FaultEnvelopes.Domain),
+                                d ∈ (desc s.actual).roster →
+                                  Becoming.Reconfiguration.fails ((desc s.actual).vulnerability d) roots = false →
+                                    ∀ (o : Becoming.Transactions.Observation),
+                                      reads d = some o → o = Becoming.Transactions.observed w p.address) →
+                              (∀ (d : Becoming.FaultEnvelopes.Domain),
+                                  d ∈ (desc s.actual).roster →
+                                    Becoming.Reconfiguration.fails ((desc s.actual).vulnerability d) roots = false →
+                                      approvals d = some p → Becoming.Transactions.withinScope w p = true) →
+                                Becoming.Transactions.load (desc s.actual).roster p + 3 ≤ w.state.reserve →
+                                  w.state.time + Becoming.Transactions.load (desc s.actual).roster p + 3 ≤
+                                      w.state.deadline →
+                                    (Becoming.Transactions.guardedExecute (desc s.actual).roster
+                                            (Becoming.PooledEnvelopes.pooled desc t.candidates)
+                                            (Becoming.PooledEnvelopes.pooled desc t.candidates) w p reads
+                                            approvals).succeeded =
+                                        true ∧
+                                      (Becoming.Transactions.guardedExecute (desc s.actual).roster
+                                                  (Becoming.PooledEnvelopes.pooled desc t.candidates)
+                                                  (Becoming.PooledEnvelopes.pooled desc t.candidates) w p reads
+                                                  approvals).installation.state.completed =
+                                          true ∧
+                                        Becoming.Transactions.withinScope w p = true
+@Becoming.WitnessRefinement.run_inspected : ∀ {extended : Bool} {reports : Becoming.WitnessRefinement.Reports}
+  {s : Becoming.PooledEnvelopes.Situation} {c : Becoming.WitnessRefinement.Audited},
+  Becoming.WitnessRefinement.inspect extended reports s = some c →
+    Becoming.WitnessRefinement.run extended reports s =
+      Option.map (fun result => { situation := result, transcript := c.transcript })
+        (Becoming.PooledEnvelopes.respond c.situation ())
+@Becoming.WitnessRefinement.run_uninspected : ∀ {extended : Bool} {reports : Becoming.WitnessRefinement.Reports}
+  {s : Becoming.PooledEnvelopes.Situation},
+  Becoming.WitnessRefinement.inspect extended reports s = none →
+    Becoming.WitnessRefinement.run extended reports s = none
+@Becoming.WitnessRefinement.denied_no_trace : ∀ {extended : Bool} {reports : Becoming.WitnessRefinement.Reports}
+  {s : Becoming.PooledEnvelopes.Situation},
+  s.queryOpen = false →
+    ¬∃ t u,
+        (Becoming.WitnessRefinement.audit extended).step s (some reports) t ∧
+          (Becoming.WitnessRefinement.audit extended).step t none u
+@Becoming.WitnessRefinement.trace_iff_run : ∀ {extended : Bool} {reports : Becoming.WitnessRefinement.Reports}
+  {s u : Becoming.PooledEnvelopes.Situation},
+  Generative.Trace (Becoming.WitnessRefinement.audit extended) s [some reports, none] u ↔
+    Option.map Becoming.WitnessRefinement.Audited.situation (Becoming.WitnessRefinement.run extended reports s) = some u
+@Becoming.WitnessRefinement.outcome_of_trace : ∀ {extended : Bool} {reports : Becoming.WitnessRefinement.Reports}
+  {s u : Becoming.PooledEnvelopes.Situation},
+  Generative.Trace (Becoming.WitnessRefinement.audit extended) s [some reports, none] u →
+    Becoming.WitnessRefinement.outcome extended reports s = u
+@Becoming.WitnessRefinement.trace_of_outcome_ne : ∀ {extended : Bool} {reports : Becoming.WitnessRefinement.Reports}
+  {s : Becoming.PooledEnvelopes.Situation},
+  Becoming.WitnessRefinement.outcome extended reports s ≠ s →
+    Generative.Trace (Becoming.WitnessRefinement.audit extended) s [some reports, none]
+      (Becoming.WitnessRefinement.outcome extended reports s)
+Becoming.WitnessRefinement.extended_trace_completes : Generative.Trace (Becoming.WitnessRefinement.audit true)
+    (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16 16)
+    [some Becoming.WitnessRefinement.splitReports, none]
+    (Becoming.WitnessRefinement.outcome true Becoming.WitnessRefinement.splitReports
+      (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16 16)) ∧
+  ∀ (u : Becoming.PooledEnvelopes.Situation),
+    Generative.Trace (Becoming.WitnessRefinement.audit true)
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16 16)
+        [some Becoming.WitnessRefinement.splitReports, none] u →
+      u.candidates = [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped] ∧
+        Becoming.PooledEnvelopes.achieved u = true ∧
+          u.installation.state.drawn = 16 ∧ u.installation.state.reserve = 0 ∧ u.installation.serial = 1
+Becoming.WitnessRefinement.four_witness_trace_uncertified : Generative.Trace (Becoming.WitnessRefinement.audit false)
+    (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16 16)
+    [some Becoming.WitnessRefinement.splitReports, none]
+    (Becoming.WitnessRefinement.outcome false Becoming.WitnessRefinement.splitReports
+      (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16 16)) ∧
+  ∀ (u : Becoming.PooledEnvelopes.Situation),
+    Generative.Trace (Becoming.WitnessRefinement.audit false)
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 16 16)
+        [some Becoming.WitnessRefinement.splitReports, none] u →
+      u.candidates = Becoming.PooledEnvelopes.hypotheses ∧
+        Becoming.PooledEnvelopes.achieved u = false ∧ u.installation.state.drawn = 12
+Becoming.WitnessRefinement.extended_trace_short_of_reserve : Generative.Trace (Becoming.WitnessRefinement.audit true)
+    (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 15 15)
+    [some Becoming.WitnessRefinement.splitReports, none]
+    (Becoming.WitnessRefinement.outcome true Becoming.WitnessRefinement.splitReports
+      (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 15 15)) ∧
+  ∀ (u : Becoming.PooledEnvelopes.Situation),
+    Generative.Trace (Becoming.WitnessRefinement.audit true)
+        (Becoming.PooledEnvelopes.initialSituation Becoming.PooledEnvelopes.Model.left [0] 15 15)
+        [some Becoming.WitnessRefinement.splitReports, none] u →
+      u.candidates = [Becoming.PooledEnvelopes.Model.left, Becoming.PooledEnvelopes.Model.swapped] ∧
+        Becoming.PooledEnvelopes.achieved u = false ∧ u.installation.state.drawn = 13 ∧ u.installation.state.reserve = 2

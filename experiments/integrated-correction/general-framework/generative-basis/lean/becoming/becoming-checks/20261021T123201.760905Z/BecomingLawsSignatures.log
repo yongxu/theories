@@ -1,0 +1,7 @@
+@Becoming.Assurance.ofMap_determined : ∀ {S : Type u_1} {A : Type u_2} (f : S → A → S),
+  Becoming.Determined (Becoming.Assurance.ofMap f)
+@Becoming.Assurance.ofPartial_determined : ∀ {S : Type u_1} {A : Type u_2} (f : S → A → Option S),
+  Becoming.Determined (Becoming.Assurance.ofPartial f)
+@Becoming.Assurance.trace_ofPartial_iff : ∀ {S : Type u_1} {A : Type u_2} (f : S → A → Option S) {s t : S}
+  {plan : List A},
+  Generative.Trace (Becoming.Assurance.ofPartial f) s plan t ↔ Becoming.Assurance.runPartial f s plan = some t

@@ -1,0 +1,85 @@
+@Becoming.Law.absorbing_ahead : ∀ {S : Type u_1} (next : S → S) (s : S),
+  Becoming.Law.Absorbing next (Becoming.Law.Ahead next s)
+@Becoming.Law.Absorbing.orbit : ∀ {S : Type u_1} {next : S → S} {R : S → Prop},
+  Becoming.Law.Absorbing next R →
+    ∀ {s : S} {n : Nat}, R (Becoming.Law.orbit next s n) → ∀ (k : Nat), R (Becoming.Law.orbit next s (n + k))
+@Becoming.Law.returns_iff_ahead : ∀ {S : Type u_1} {next : S → S} {s : S},
+  Becoming.Law.Returns next s ↔ Becoming.Law.Ahead next s s
+@Becoming.Law.DrawnInto.never_back : ∀ {S : Type u_1} {next : S → S} {R : S → Prop},
+  Becoming.Law.Absorbing next R →
+    ∀ {s : S}, ¬R s → ∀ {n : Nat}, R (Becoming.Law.orbit next s n) → ∀ (k : Nat), Becoming.Law.orbit next s (n + k) ≠ s
+@Becoming.Law.Drawn.not_returns : ∀ {S : Type u_1} {next : S → S} {s : S},
+  Becoming.Law.Drawn next s → ¬Becoming.Law.Returns next s
+@Becoming.Law.drawnInto_ahead : ∀ {S : Type u_1} {next : S → S} {s : S},
+  ¬Becoming.Law.Returns next s → Becoming.Law.DrawnInto next (Becoming.Law.Ahead next s) s
+@Becoming.Law.drawn_iff_not_returns : ∀ {S : Type u_1} {next : S → S} {s : S},
+  Becoming.Law.Drawn next s ↔ ¬Becoming.Law.Returns next s
+@Becoming.Law.reachable_absorbing : ∀ {S : Type u_1} (next : S → S) (n : Nat),
+  Becoming.Law.Absorbing next (Becoming.Law.Reachable next n)
+@Becoming.Law.reachable_orbit : ∀ {S : Type u_1} (next : S → S) (s : S) (n : Nat),
+  Becoming.Law.Reachable next n (Becoming.Law.orbit next s n)
+@Becoming.Law.lost_drawn : ∀ {S : Type u_1} {next : S → S} {n : Nat} {s : S},
+  ¬Becoming.Law.Reachable next n s → Becoming.Law.DrawnInto next (Becoming.Law.Reachable next n) s
+@Becoming.Law.drawn_of_lost : ∀ {S : Type u_1} {next : S → S} {n : Nat} {s : S},
+  ¬Becoming.Law.Reachable next n s → Becoming.Law.Drawn next s
+@Becoming.Law.returning_absorbing : ∀ {S : Type u_1} (next : S → S),
+  Becoming.Law.Absorbing next (Becoming.Law.Returns next)
+Becoming.Law.periods_meet : ∀ (a b : Nat), a + (a + 1) * b = b + (b + 1) * a
+@Becoming.Law.Merges.not_both_return : ∀ {S : Type u_1} {next : S → S} {x y : S},
+  x ≠ y → next x = next y → ¬(Becoming.Law.Returns next x ∧ Becoming.Law.Returns next y)
+@Becoming.Law.merge_draws : ∀ {S : Type u_1} {next : S → S} {x y : S},
+  x ≠ y → next x = next y → ¬(¬Becoming.Law.Drawn next x ∧ ¬Becoming.Law.Drawn next y)
+@Becoming.Law.Merges.draws : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Law.Merges next → ¬¬∃ s, Becoming.Law.Drawn next s
+@Becoming.Law.none_drawn_merges_nothing : ∀ {S : Type u_1} {next : S → S},
+  (∀ (s : S), ¬Becoming.Law.Drawn next s) → ∀ (x y : S), next x = next y → ¬x ≠ y
+@Becoming.Law.none_drawn_lossless : ∀ {S : Type u_1} [DecidableEq S] {next : S → S},
+  (∀ (s : S), ¬Becoming.Law.Drawn next s) → Becoming.Law.Lossless next
+@Becoming.Law.Drawn.not_lossless : ∀ {S : Type u_1} {next : S → S} {s : S},
+  Becoming.Law.Drawn next s → ∀ {all : List S}, (∀ (x : S), x ∈ all) → ¬Becoming.Law.Lossless next
+@Becoming.Law.Lossless.not_drawn : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Law.Lossless next → ∀ {all : List S}, (∀ (x : S), x ∈ all) → ∀ (s : S), ¬Becoming.Law.Drawn next s
+@Becoming.Law.Drawn.not_keeps : ∀ {S : Type u_1} {next : S → S} {s : S},
+  Becoming.Law.Drawn next s → ∀ {all : List S}, (∀ (x : S), x ∈ all) → ¬Becoming.Law.KeepsPossibilities next
+@Becoming.Law.lossless_iff_none_drawn : ∀ {S : Type u_1} [DecidableEq S] {next : S → S} {all : List S},
+  (∀ (x : S), x ∈ all) → (Becoming.Law.Lossless next ↔ ∀ (s : S), ¬Becoming.Law.Drawn next s)
+@Becoming.Law.returns_iff_always_reachable : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (x : S), x ∈ all) → ∀ {s : S}, Becoming.Law.Returns next s ↔ ∀ (n : Nat), Becoming.Law.Reachable next n s
+@Becoming.Law.drawn_iff_lost : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (x : S), x ∈ all) → ∀ {s : S}, Becoming.Law.Drawn next s ↔ ¬∀ (n : Nat), Becoming.Law.Reachable next n s
+@Becoming.Law.enters_returning : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (x : S), x ∈ all) → ∀ (s : S), ∃ n, Becoming.Law.Returns next (Becoming.Law.orbit next s n)
+@Becoming.Law.drawnInto_returning : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (x : S), x ∈ all) →
+    ∀ {s : S}, ¬Becoming.Law.Returns next s → Becoming.Law.DrawnInto next (Becoming.Law.Returns next) s
+Becoming.Law.succ_drawn_lossless : Becoming.Law.Drawn Nat.succ 0 ∧ Becoming.Law.Lossless Nat.succ
+Becoming.Law.pred_orbit_zero : ∀ (k : Nat), Becoming.Law.orbit Nat.pred 0 k = 0
+Becoming.Law.pred_drawn_keeps : Becoming.Law.Drawn Nat.pred 1 ∧ Becoming.Law.KeepsPossibilities Nat.pred
+@Becoming.Law.absorbing_iff_invariant : ∀ {S : Type u_1} {next : S → S} {R : S → Prop},
+  Becoming.Law.Absorbing next R ↔ Becoming.Invariant (Becoming.Law.process next) R
+@Becoming.invariant_iff_every_move : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {R : S → Prop},
+  Becoming.Invariant P R ↔ ∀ (a : A), Becoming.AbsorbingUnder P R a
+@Becoming.Invariant.locks_out : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {R : S → Prop},
+  Becoming.Invariant P R → ∀ {t s : S}, R t → ¬R s → ¬Becoming.Reach P t s
+@Becoming.Run.locked_in : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {R : S → Prop},
+  Becoming.Invariant P R → ∀ {n m : Nat}, R (r.state n) → ¬R (r.state m) → ∀ (k : Nat), r.state (n + k) ≠ r.state m
+@Becoming.Run.stays : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P) {R : S → Prop}
+  {n : Nat},
+  (∀ (k : Nat), Becoming.AbsorbingUnder P R (r.act (n + k))) → R (r.state n) → ∀ (k : Nat), R (r.state (n + k))
+@Becoming.Run.leaving_needs : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  {R : S → Prop} {n : Nat}, R (r.state n) → ¬R (r.state (n + 1)) → ¬Becoming.AbsorbingUnder P R (r.act n)
+Becoming.Ratchet.merges : Becoming.Law.Merges Becoming.Ratchet.next
+Becoming.Ratchet.absorbing : Becoming.Law.Absorbing Becoming.Ratchet.next Becoming.Ratchet.atTrue
+Becoming.Ratchet.false_drawn : Becoming.Law.DrawnInto Becoming.Ratchet.next Becoming.Ratchet.atTrue false
+Becoming.Ratchet.false_never_returns : ¬Becoming.Law.Returns Becoming.Ratchet.next false
+Becoming.Ratchet.true_returns : Becoming.Law.Returns Becoming.Ratchet.next true
+Becoming.Ratchet.true_not_drawn : ¬Becoming.Law.Drawn Becoming.Ratchet.next true
+Becoming.Ratchet.false_lost : ¬Becoming.Law.Reachable Becoming.Ratchet.next 1 false
+Becoming.Exit.keeps : Becoming.AbsorbingUnder Becoming.Exit.process Becoming.Exit.atTrue false
+Becoming.Exit.leaves : ¬Becoming.AbsorbingUnder Becoming.Exit.process Becoming.Exit.atTrue true
+Becoming.Exit.not_invariant : ¬Becoming.Invariant Becoming.Exit.process Becoming.Exit.atTrue
+Becoming.Exit.locked_in : ∀ (n k : Nat), Becoming.Exit.atTrue (Becoming.Exit.staying.state (n + k))
+Becoming.Exit.leaving_takes : Becoming.Exit.atTrue (Becoming.Exit.leaving.state 0) ∧
+  ¬Becoming.Exit.atTrue (Becoming.Exit.leaving.state 1) ∧
+    ¬Becoming.AbsorbingUnder Becoming.Exit.process Becoming.Exit.atTrue (Becoming.Exit.leaving.act 0)

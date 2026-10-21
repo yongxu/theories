@@ -1,0 +1,42 @@
+@Becoming.ExchangeLaw.act_not_taken : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {part : F → Bool} (r : Becoming.Run (Becoming.inputs (law.stepBy present part))) {t : Nat} {x : Nat × (Nat → C → Nat)}
+  {a : F → C → Nat × Nat},
+  ¬r.Takes t x (a, ()) →
+    (¬∃ w, r.Fixes t x (a, ()) w) ∧
+      (Becoming.inputs (law.stepBy present part)).step x (a, ()) (law.stepBy present part x a ())
+@Becoming.ExchangeLaw.world_exchange_iff : ∀ {R : Type} {law : Becoming.ExchangeLaw R R},
+  law.Nonanticipating →
+    ∀ (present : Nat → List R) (start : R → Nat) (W : Becoming.Web R R),
+      (∀ (t : Nat),
+          (Becoming.exchange R).step (law.levels present start t) ((law.world present start W).move t)
+            (law.levels present start (t + 1))) ↔
+        law.Feasible present start
+@Becoming.Run.beyond_shown_iff : ∀ {S A : Type} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ (r : Becoming.Run P) {s : S} {a : A},
+      (∃ t, P.step s a t ∧ ¬(Becoming.Shown r.state r.act).step s a t) ↔
+        (∃ t, P.step s a t) ∧ ¬∃ n, r.state n = s ∧ r.act n = a
+@Becoming.ExchangeLaw.counterfactual_beyond_shown : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {present : Nat → List F} {part : F → Bool} (r : Becoming.Run (Becoming.inputs (law.stepBy present part)))
+  (x : Nat × (Nat → C → Nat)) (a : F → C → Nat × Nat),
+  Becoming.Consistent r.state r.act ∧
+    ((∃ t,
+        (Becoming.inputs (law.stepBy present part)).step x (a, ()) t ∧
+          ¬(Becoming.Shown r.state r.act).step x (a, ()) t) ↔
+      ¬∃ n, r.state n = x ∧ r.act n = (a, ()))
+@Becoming.ExchangeLaw.closedBy_course : ∀ {F C : Type} {law act : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {part : F → Bool} {start : C → Nat}
+  (r : Becoming.Run (Becoming.closedBy (Becoming.inputs (law.stepBy present part)) act.policy)),
+  r.state 0 = ((0, fun x => start), act.policy (0, fun x => start)) →
+    ∀ (n : Nat), (r.state n).fst = (n, (law.withAct part act).history present start n)
+@Becoming.CounterfactualRuns.inputs_run_state : ∀ {X : Type u_1} {U : Type u_2} {E : Type u_3} {F : X → U → E → X}
+  (r : Becoming.Run (Becoming.inputs F)) (n : Nat),
+  r.state n = Becoming.trajectory F (r.state 0) (fun k => (r.act k).fst) (fun k => (r.act k).snd) n
+@Becoming.CounterfactualRuns.course_runs : ∀ {F C : Type} (law : Becoming.ExchangeLaw F C) (present : Nat → List F)
+  (part : F → Bool) {start : C → Nat} (r : Becoming.Run (Becoming.inputs (law.stepBy present part))),
+  r.state 0 = (0, fun x => start) →
+    ∀ (n : Nat),
+      r.state n = (n, (law.withAct part (Becoming.ExchangeLaw.ofMoves fun k => (r.act k).fst)).history present start n)
+@Becoming.CounterfactualRuns.courseWorld_level_zero : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C}
+  {present : Nat → List F} {start : C → Nat} {W : Becoming.Web F C} (c : C),
+  (law.courseWorld present start W).web.level 0 (Sum.inr c) = start c

@@ -1,0 +1,12 @@
+import Becoming.LabelledRoles
+#check @Becoming.Web.active_along
+#check @Becoming.Web.coextinct
+#check @Becoming.Predation.fox_ends
+#check @Becoming.Sequences.recurs_iff
+#check @Becoming.sees_narrow
+#check @Becoming.Web.class_judge_iff
+#check @Becoming.Web.class_judge_later
+#check @Becoming.Web.class_judge_widen
+#check @Becoming.Flow.class_judge_beyond
+#check @Becoming.Renewable.finite_reading_withholds_renewal
+#check @Becoming.Renewable.no_exact_finite_reading

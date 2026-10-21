@@ -19,8 +19,8 @@
    "Becoming.GoAlikeUnder"
   ]
  },
- "central_declarations": 125,
- "resting_on_no_master_law": 73,
+ "central_declarations": 126,
+ "resting_on_no_master_law": 74,
  "none": [
   "Becoming.Web.Unceasing.rises",
   "Becoming.onLoop_of_closing",
@@ -33,6 +33,7 @@
   "Becoming.RegimeMargin.Adjusted.comes_to_rest",
   "Becoming.RegimeMargin.Adjusted.falls_iff_below",
   "Becoming.RegimeMargin.Drawn.run_shape",
+  "Becoming.RegimeMargin.Coupled.threshold_falls",
   "Becoming.Web.course_lost_iff",
   "Becoming.Web.frontier_broken",
   "Becoming.Web.frontier_breaks_below",
@@ -96,7 +97,7 @@
   "Becoming.Web.Next.frontier_ends_drawn_first",
   "Becoming.ExchangeLaw.response_not_fixed_by_coupling"
  ],
- "defined_notions_in_central_statements": 313,
+ "defined_notions_in_central_statements": 316,
  "rows": [
   {
    "row": "generation",
@@ -249,6 +250,10 @@
     },
     {
      "declaration": "Becoming.RegimeMargin.Drawn.run_shape",
+     "laws": []
+    },
+    {
+     "declaration": "Becoming.RegimeMargin.Coupled.threshold_falls",
      "laws": []
     },
     {

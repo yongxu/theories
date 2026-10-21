@@ -1,0 +1,102 @@
+@Becoming.Derivation.holds_nil : ∀ {S : Type u_1} (s : S), Becoming.Derivation.Holds [] s
+@Becoming.Derivation.Derives.sound : ∀ {S : Type u_1} {Index : Type u_2} {basis : Index → S → Prop}
+  {context : List (S → Prop)} {p : S → Prop},
+  Becoming.Derivation.Derives basis context p →
+    ∀ (s : S), (∀ (i : Index), basis i s) → Becoming.Derivation.Holds context s → p s
+@Becoming.Derivation.closed_throughout : ∀ {S : Type u_1} {Index : Type u_2} {basis : Index → S → Prop} {D : S → Prop},
+  (∀ (i : Index), Becoming.Derivation.Throughout D (basis i)) →
+    ∀ (p : S → Prop), Becoming.Derivation.Derives basis [] p → Becoming.Derivation.Throughout D p
+@Becoming.Derivation.relative_throughout : ∀ {S : Type u_1} {Index : Type u_2} {basis : Index → S → Prop}
+  {D : S → Prop},
+  (∀ (i : Index), Becoming.Derivation.Throughout D (basis i)) →
+    ∀ {context : List (S → Prop)} {p : S → Prop},
+      Becoming.Derivation.Derives basis context p →
+        Becoming.Derivation.Throughout D fun s => Becoming.Derivation.Holds context s → p s
+@Becoming.Derivation.closure_throughout_iff : ∀ {S : Type u_1} {Index : Type u_2} {basis : Index → S → Prop}
+  {D : S → Prop},
+  (∀ (p : S → Prop), Becoming.Derivation.Derives basis [] p → Becoming.Derivation.Throughout D p) ↔
+    ∀ (i : Index), Becoming.Derivation.Throughout D (basis i)
+@Becoming.Derivation.discharged_throughout : ∀ {S : Type u_1} {Index : Type u_2} {basis : Index → S → Prop}
+  {D : S → Prop},
+  (∀ (i : Index), Becoming.Derivation.Throughout D (basis i)) →
+    ∀ {context : List (S → Prop)} {p : S → Prop},
+      (∀ (q : S → Prop), q ∈ context → Becoming.Derivation.Throughout D q) →
+        Becoming.Derivation.Derives basis context p → Becoming.Derivation.Throughout D p
+@Becoming.Derivation.no_countermodel : ∀ {S : Type u_1} {Index : Type u_2} {basis : Index → S → Prop} {D : S → Prop},
+  (∀ (i : Index), Becoming.Derivation.Throughout D (basis i)) →
+    ∀ {p : S → Prop}, Becoming.Derivation.Derives basis [] p → ¬∃ s, D s ∧ ¬p s
+@Becoming.Derivation.countermodel_excludes : ∀ {S : Type u_1} {Index : Type u_2} {basis : Index → S → Prop}
+  {D : S → Prop},
+  (∀ (i : Index), Becoming.Derivation.Throughout D (basis i)) →
+    ∀ {p : S → Prop}, (∃ s, D s ∧ ¬p s) → ¬Becoming.Derivation.Derives basis [] p
+@Becoming.Derivation.lemma_throughout : ∀ {S : Type u_1} {Index : Type u_2} {basis : Index → S → Prop} {D : S → Prop},
+  (∀ (i : Index), Becoming.Derivation.Throughout D (basis i)) →
+    ∀ {lemma : S → Prop},
+      Becoming.Derivation.Derives basis [] lemma →
+        ∀ (p : S → Prop),
+          Becoming.Derivation.Derives (Becoming.Derivation.withLemma basis lemma) [] p →
+            Becoming.Derivation.Throughout D p
+@Becoming.Derivation.conjunction_derives : ∀ {S : Type u_1} {Index : Type u_2} (basis : Index → S → Prop)
+  (indices : List Index), Becoming.Derivation.Derives basis [] (Becoming.Derivation.conjunction basis indices)
+@Becoming.Derivation.conjunction_iff : ∀ {S : Type u_1} {Index : Type u_2} (basis : Index → S → Prop) (s : S)
+  (indices : List Index), Becoming.Derivation.conjunction basis indices s ↔ ∀ (i : Index), i ∈ indices → basis i s
+@Becoming.Derivation.conjunction_iff_basis : ∀ {S : Type u_1} {Index : Type u_2} (basis : Index → S → Prop)
+  {indices : List Index},
+  (∀ (i : Index), i ∈ indices) → ∀ (s : S), Becoming.Derivation.conjunction basis indices s ↔ ∀ (i : Index), basis i s
+@Becoming.Derivation.basis_iff_relative : ∀ {S : Type u_1} {Index : Type u_2} (basis : Index → S → Prop) (s : S),
+  (∀ (i : Index), basis i s) ↔
+    ∀ (context : List (S → Prop)) (p : S → Prop),
+      Becoming.Derivation.Derives basis context p → Becoming.Derivation.Holds context s → p s
+@Becoming.Derivation.common_basis_iff_common_closure : ∀ {S : Type u_1} {Index : Type u_2} (basis : Index → S → Prop)
+  (admissible : S → Prop),
+  (∃ s, admissible s ∧ ∀ (i : Index), basis i s) ↔
+    ∃ s, admissible s ∧ ∀ (p : S → Prop), Becoming.Derivation.Derives basis [] p → p s
+@Becoming.Derivation.pointwise_iff_common : ∀ {S : Type u_1} {Index : Type u_2} (basis : Index → S → Prop)
+  {indices : List Index},
+  (∀ (i : Index), i ∈ indices) →
+    ∀ (admissible : S → Prop),
+      (∀ (p : S → Prop), Becoming.Derivation.Derives basis [] p → ∃ s, admissible s ∧ p s) ↔
+        ∃ s, admissible s ∧ ∀ (p : S → Prop), Becoming.Derivation.Derives basis [] p → p s
+@Becoming.Derivation.pointwise_common_relative : ∀ {S : Type u_1} {Index : Type u_2} (basis : Index → S → Prop)
+  {indices : List Index},
+  (∀ (i : Index), i ∈ indices) →
+    ∀ (admissible : S → Prop),
+      (∀ (p : S → Prop), Becoming.Derivation.Derives basis [] p → ∃ s, admissible s ∧ p s) →
+        ∃ s,
+          admissible s ∧
+            ∀ (context : List (S → Prop)) (p : S → Prop),
+              Becoming.Derivation.Derives basis context p → Becoming.Derivation.Holds context s → p s
+Becoming.Derivation.rows_each_met : ∀ (b : Bool), ∃ w, Becoming.Derivation.rows b w
+Becoming.Derivation.rows_not_together : ¬∃ w, ∀ (b : Bool), Becoming.Derivation.rows b w
+Becoming.Derivation.rows_not_pointwise : ¬∀ (p : Bool → Prop),
+    Becoming.Derivation.Derives Becoming.Derivation.rows [] p → ∃ w, True ∧ p w
+Becoming.Derivation.claim_under_itself : Becoming.Derivation.Derives Becoming.Derivation.trivialBasis
+  [Becoming.Derivation.isTrue] Becoming.Derivation.isTrue
+Becoming.Derivation.claim_not_throughout : ¬Becoming.Derivation.Throughout (fun x => True) Becoming.Derivation.isTrue
+Becoming.Derivation.claim_not_closed : ¬Becoming.Derivation.Derives Becoming.Derivation.trivialBasis []
+    Becoming.Derivation.isTrue
+Becoming.Derivation.claim_implies_itself : Becoming.Derivation.Derives Becoming.Derivation.trivialBasis [] fun w =>
+  Becoming.Derivation.isTrue w → Becoming.Derivation.isTrue w
+@Becoming.Derivation.Scope.goal_closure : ∀ {S A R : Type} {k : Nat} {P : Generative.Process S A}
+  {sense : S → A → S → Fin k} {response : R → List A} {B : S → Prop}
+  {policy : Generative.InquirySufficiency.Policy A R k} {safe : S → A → S → Prop} {goal : S → Prop},
+  Generative.InquirySufficiency.Sound P safe goal sense response policy B →
+    ∀ (q : S → Prop),
+      Becoming.Derivation.Derives (fun x => goal) [] q →
+        Becoming.Derivation.Throughout (Becoming.Scope P sense response B policy) q
+@Becoming.Derivation.Scope.common_iff : ∀ {S A R Index : Type} {k : Nat} {P : Generative.Process S A}
+  {sense : S → A → S → Fin k} {response : R → List A} {B : S → Prop}
+  {policy : Generative.InquirySufficiency.Policy A R k} {basis : Index → S → Prop} {indices : List Index},
+  (∀ (i : Index), i ∈ indices) →
+    ((∀ (q : S → Prop),
+        Becoming.Derivation.Derives basis [] q → ∃ t, Becoming.Scope P sense response B policy t ∧ q t) ↔
+      ∃ t, Becoming.Scope P sense response B policy t ∧ ∀ (q : S → Prop), Becoming.Derivation.Derives basis [] q → q t)
+@Becoming.Derivation.Scope.common_relative : ∀ {S A R Index : Type} {k : Nat} {P : Generative.Process S A}
+  {sense : S → A → S → Fin k} {response : R → List A} {B : S → Prop}
+  {policy : Generative.InquirySufficiency.Policy A R k} {basis : Index → S → Prop} {indices : List Index},
+  (∀ (i : Index), i ∈ indices) →
+    (∀ (q : S → Prop), Becoming.Derivation.Derives basis [] q → ∃ t, Becoming.Scope P sense response B policy t ∧ q t) →
+      ∃ t,
+        Becoming.Scope P sense response B policy t ∧
+          ∀ (context : List (S → Prop)) (q : S → Prop),
+            Becoming.Derivation.Derives basis context q → Becoming.Derivation.Holds context t → q t

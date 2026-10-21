@@ -1,0 +1,238 @@
+@Becoming.Tolerance.AllBut.mono_set : ∀ {α : Type u_1} {s s' : α → Prop},
+  (∀ (b : α), s b → s' b) → ∀ {f : Nat} {l : List α}, Becoming.Tolerance.AllBut s f l → Becoming.Tolerance.AllBut s' f l
+@Becoming.Tolerance.AllBut.mono_count : ∀ {α : Type u_1} {s : α → Prop} {f g : Nat} {l : List α},
+  f ≤ g → Becoming.Tolerance.AllBut s f l → Becoming.Tolerance.AllBut s g l
+@Becoming.Tolerance.AllBut.of_length : ∀ {α : Type u_1} {s : α → Prop} (l : List α),
+  Becoming.Tolerance.AllBut s l.length l
+@Becoming.Tolerance.AllBut.of_length_le : ∀ {α : Type u_1} {s : α → Prop} {f : Nat} {l : List α},
+  l.length ≤ f → Becoming.Tolerance.AllBut s f l
+@Becoming.Tolerance.AllBut.zero_all : ∀ {α : Type u_1} {s : α → Prop} {l : List α},
+  Becoming.Tolerance.AllBut s 0 l → ∀ (b : α), b ∈ l → s b
+@Becoming.Tolerance.AllBut.zero_iff : ∀ {α : Type u_1} {s : α → Prop} {l : List α},
+  Becoming.Tolerance.AllBut s 0 l ↔ ∀ (b : α), b ∈ l → s b
+@Becoming.Tolerance.AllBut.found : ∀ {α : Type u_1} {s : α → Prop} {f : Nat} {l : List α},
+  Becoming.Tolerance.AllBut s f l → (∃ b, b ∈ l ∧ s b) ∨ l.length ≤ f
+@Becoming.Tolerance.AllBut.withheld_iff : ∀ {α : Type u_1} {f : Nat} {l : List α},
+  Becoming.Tolerance.AllBut (fun x => False) f l ↔ l.length ≤ f
+@Becoming.Tolerance.tolerating_zero : ∀ {α : Type u_1} (ups : α → List α) (s : α → Prop) (n : Nat) (a : α),
+  (Becoming.Law.run (Becoming.Tolerance.tolerating (fun x => 0) ups) s).state n a ↔
+    (Becoming.Law.run (Becoming.Withholding.answers (Becoming.Tolerance.Listed ups)) s).state n a
+@Becoming.Tolerance.KeepsInclusion.course : ∀ {α : Type u_1} {next : (α → Prop) → α → Prop},
+  Becoming.Tolerance.KeepsInclusion next →
+    ∀ {s s' : α → Prop},
+      (∀ (a : α), s a → s' a) →
+        ∀ (n : Nat) (a : α), (Becoming.Law.run next s).state n a → (Becoming.Law.run next s').state n a
+@Becoming.Tolerance.worst_start : ∀ {α : Type u_1} {next : (α → Prop) → α → Prop},
+  Becoming.Tolerance.KeepsInclusion next →
+    ∀ (n : Nat) (a : α),
+      (∀ (s : α → Prop), (Becoming.Law.run next s).state n a) ↔
+        (Becoming.Law.run next Becoming.Tolerance.allWithheld).state n a
+@Becoming.Tolerance.rises_from_withheld : ∀ {α : Type u_1} {next : (α → Prop) → α → Prop},
+  Becoming.Tolerance.KeepsInclusion next →
+    ∀ (n : Nat) (a : α),
+      (Becoming.Law.run next Becoming.Tolerance.allWithheld).state n a →
+        (Becoming.Law.run next Becoming.Tolerance.allWithheld).state (n + 1) a
+@Becoming.Tolerance.rises_le : ∀ {α : Type u_1} {next : (α → Prop) → α → Prop},
+  Becoming.Tolerance.KeepsInclusion next →
+    ∀ {n : Nat} {a : α},
+      (Becoming.Law.run next Becoming.Tolerance.allWithheld).state n a →
+        ∀ (d : Nat), (Becoming.Law.run next Becoming.Tolerance.allWithheld).state (n + d) a
+@Becoming.Tolerance.restored_stays : ∀ {α : Type u_1} {next : (α → Prop) → α → Prop},
+  Becoming.Tolerance.KeepsInclusion next →
+    ∀ {n : Nat} {a : α},
+      (∀ (s : α → Prop), (Becoming.Law.run next s).state n a) →
+        ∀ (m : Nat), n ≤ m → ∀ (s : α → Prop), (Becoming.Law.run next s).state m a
+@Becoming.Tolerance.withheld_kept : ∀ {α : Type u_1} {next : (α → Prop) → α → Prop},
+  Becoming.Tolerance.KeepsInclusion next →
+    (∀ (a : α), ¬next Becoming.Tolerance.allWithheld a) →
+      ∀ (n : Nat) (a : α), ¬(Becoming.Law.run next Becoming.Tolerance.allWithheld).state n a
+@Becoming.Tolerance.waitsAll_keeps : ∀ {α : Type u_1} (up : α → α → Prop),
+  Becoming.Tolerance.KeepsInclusion (Becoming.Withholding.waitsAll up)
+@Becoming.Tolerance.answers_keeps : ∀ {α : Type u_1} (up : α → α → Prop),
+  Becoming.Tolerance.KeepsInclusion (Becoming.Withholding.answers up)
+@Becoming.Tolerance.givesFirst_keeps : ∀ {α : Type u_1} (src : α → Prop) (up : α → α → Prop),
+  Becoming.Tolerance.KeepsInclusion (Becoming.Withholding.givesFirst src up)
+@Becoming.Tolerance.tolerating_keeps : ∀ {α : Type u_1} (tol : α → Nat) (ups : α → List α),
+  Becoming.Tolerance.KeepsInclusion (Becoming.Tolerance.tolerating tol ups)
+@Becoming.Tolerance.gives_needs_sparing : ∀ {α : Type u_1} {tol : α → Nat} {ups : α → List α} (n : Nat) (a : α),
+  (Becoming.Law.run (Becoming.Tolerance.tolerating tol ups) Becoming.Tolerance.allWithheld).state n a →
+    ∃ b, (ups b).length ≤ tol b
+@Becoming.Tolerance.sparing_gives : ∀ {α : Type u_1} {tol : α → Nat} {ups : α → List α} {a : α},
+  (ups a).length ≤ tol a →
+    ∀ (s : α → Prop) (n : Nat), (Becoming.Law.run (Becoming.Tolerance.tolerating tol ups) s).state (n + 1) a
+@Becoming.Tolerance.total_stays : ∀ {α : Type u_1} {tol : α → Nat} {ups : α → List α} {s : α → Prop},
+  (∀ (a : α), ¬(ups a).length ≤ tol a) →
+    ∀ {m : Nat},
+      (∀ (a : α), ¬(Becoming.Law.run (Becoming.Tolerance.tolerating tol ups) s).state m a) →
+        ∀ (k : Nat) (a : α), ¬(Becoming.Law.run (Becoming.Tolerance.tolerating tol ups) s).state (m + k) a
+@Becoming.Tolerance.kept_set : ∀ {α : Type u_1} {tol : α → Nat} {ups : α → List α} {G s : α → Prop},
+  (∀ (a : α), G a → s a) →
+    (∀ (a : α), G a → Becoming.Tolerance.AllBut G (tol a) (ups a)) →
+      ∀ (n : Nat) (a : α), G a → (Becoming.Law.run (Becoming.Tolerance.tolerating tol ups) s).state n a
+@Becoming.Tolerance.thin_absorbed : ∀ {α : Type u_1} {tol : α → Nat} {ups : α → List α} {W s : α → Prop},
+  (∀ (a : α), ¬W a → s a) →
+    (∀ (a : α), Becoming.Tolerance.AllBut (fun b => ¬W b) (tol a) (ups a)) →
+      ∀ (n : Nat) (a : α), (Becoming.Law.run (Becoming.Tolerance.tolerating tol ups) s).state (n + 1) a
+@Becoming.Tolerance.Clear.last_of_eq : ∀ {α : Type u_1} {src : α → Prop} {up : α → α → Prop} {n : Nat} {b a : α},
+  Becoming.Tolerance.Clear src up n b a →
+    ∀ (k : Nat), n = k + 1 → ∃ c, Becoming.Tolerance.Clear src up k b c ∧ up c a ∧ ¬src a
+@Becoming.Tolerance.Clear.last : ∀ {α : Type u_1} {src : α → Prop} {up : α → α → Prop} {k : Nat} {b a : α},
+  Becoming.Tolerance.Clear src up (k + 1) b a → ∃ c, Becoming.Tolerance.Clear src up k b c ∧ up c a ∧ ¬src a
+@Becoming.Tolerance.Clear.chain : ∀ {α : Type u_1} {src : α → Prop} {up : α → α → Prop} {k : Nat} {b a : α},
+  Becoming.Tolerance.Clear src up k b a → Becoming.Withholding.Chain up k b a
+@Becoming.Tolerance.Clear.append : ∀ {α : Type u_1} {src : α → Prop} {up : α → α → Prop} {i : Nat} {x y : α},
+  Becoming.Tolerance.Clear src up i x y →
+    ∀ {j : Nat} {z : α}, Becoming.Tolerance.Clear src up j y z → Becoming.Tolerance.Clear src up (i + j) x z
+@Becoming.Tolerance.Clear.iterate : ∀ {α : Type u_1} {src : α → Prop} {up : α → α → Prop} {p : Nat} {b : α},
+  Becoming.Tolerance.Clear src up p b b → ∀ (k : Nat), Becoming.Tolerance.Clear src up (p * k) b b
+@Becoming.Tolerance.clear_withholds : ∀ {α : Type u_1} {src : α → Prop} {up : α → α → Prop} {n : Nat} {b a : α},
+  Becoming.Tolerance.Clear src up n b a →
+    ¬(Becoming.Law.run (Becoming.Withholding.givesFirst src up) Becoming.Tolerance.allWithheld).state n a
+@Becoming.Tolerance.gives_of_no_clear : ∀ {α : Type u_1} {src : α → Prop} {up : α → α → Prop},
+  (∀ (a : α), src a ∨ ¬src a) →
+    ∀ (n : Nat) (a : α),
+      (∀ (b : α), ¬Becoming.Tolerance.Clear src up n b a) →
+        (Becoming.Law.run (Becoming.Withholding.givesFirst src up) Becoming.Tolerance.allWithheld).state n a
+@Becoming.Tolerance.restores_iff : ∀ {α : Type u_1} {src : α → Prop} {up : α → α → Prop},
+  (∀ (a : α), src a ∨ ¬src a) →
+    ∀ (n : Nat) (a : α),
+      (∀ (s : α → Prop), (Becoming.Law.run (Becoming.Withholding.givesFirst src up) s).state n a) ↔
+        ∀ (b : α), ¬Becoming.Tolerance.Clear src up n b a
+@Becoming.Tolerance.restores_from : ∀ {α : Type u_1} {src : α → Prop} {up : α → α → Prop},
+  (∀ (a : α), src a ∨ ¬src a) →
+    ∀ {L : Nat},
+      (∀ (b a : α), ¬Becoming.Tolerance.Clear src up L b a) →
+        ∀ (n : Nat),
+          L ≤ n → ∀ (s : α → Prop) (a : α), (Becoming.Law.run (Becoming.Withholding.givesFirst src up) s).state n a
+@Becoming.Tolerance.answers_restores_iff : ∀ {α : Type u_1} {up : α → α → Prop} (n : Nat) (a : α),
+  (∀ (s : α → Prop), (Becoming.Law.run (Becoming.Withholding.answers up) s).state n a) ↔
+    ∀ (b : α), ¬Becoming.Withholding.Chain up n b a
+@Becoming.Tolerance.givesFirst_restores_of_answers : ∀ {α : Type u_1} {src : α → Prop} {up : α → α → Prop},
+  (∀ (a : α), src a ∨ ¬src a) →
+    ∀ {n : Nat} {a : α},
+      (∀ (s : α → Prop), (Becoming.Law.run (Becoming.Withholding.answers up) s).state n a) →
+        ∀ (s : α → Prop), (Becoming.Law.run (Becoming.Withholding.givesFirst src up) s).state n a
+@Becoming.Tolerance.waitsAll_never_restores : ∀ {α : Type u_1} {up : α → α → Prop} (n : Nat) (a : α),
+  ¬∀ (s : α → Prop), (Becoming.Law.run (Becoming.Withholding.waitsAll up) s).state n a
+@Becoming.Tolerance.clear_loop_withholds : ∀ {α : Type u_1} {src : α → Prop} {up : α → α → Prop} {p : Nat} {b : α},
+  Becoming.Tolerance.Clear src up (p + 1) b b →
+    ∀ (n : Nat), ¬(Becoming.Law.run (Becoming.Withholding.givesFirst src up) Becoming.Tolerance.allWithheld).state n b
+Becoming.Tolerance.Ring.no_clear_three : ∀ (b a : Becoming.Withholding.Ring),
+  ¬Becoming.Tolerance.Clear Becoming.Withholding.Ring.isFirst Becoming.Withholding.Ring.Waits 3 b a
+Becoming.Tolerance.Ring.isFirst_decided : ∀ (a : Becoming.Withholding.Ring), a.isFirst ∨ ¬a.isFirst
+Becoming.Tolerance.Ring.restores_from_three : ∀ (n : Nat),
+  3 ≤ n →
+    ∀ (s : Becoming.Withholding.Ring → Prop) (a : Becoming.Withholding.Ring),
+      (Becoming.Law.run
+            (Becoming.Withholding.givesFirst Becoming.Withholding.Ring.isFirst Becoming.Withholding.Ring.Waits) s).state
+        n a
+@Becoming.Tolerance.certified_kept : ∀ {roster : Becoming.FaultEnvelopes.Domain → List Becoming.FaultEnvelopes.Domain}
+  {faults : Becoming.FaultEnvelopes.Domain → Becoming.FaultEnvelopes.Envelope}
+  {G : Becoming.FaultEnvelopes.Domain → Prop} {s : Becoming.FaultEnvelopes.Domain → Bool},
+  (∀ (a : Becoming.FaultEnvelopes.Domain), G a → s a = true) →
+    (∀ (a : Becoming.FaultEnvelopes.Domain), G a → Becoming.FaultEnvelopes.separated (roster a) (faults a)) →
+      (∀ (a : Becoming.FaultEnvelopes.Domain),
+          G a → ∃ bad, bad ∈ faults a ∧ ∀ (d : Becoming.FaultEnvelopes.Domain), d ∈ roster a → d ∈ bad ∨ G d) →
+        ∀ (n : Nat) (a : Becoming.FaultEnvelopes.Domain),
+          G a → (Becoming.Law.run (Becoming.Tolerance.certified roster faults) s).state n a = true
+@Becoming.Tolerance.certified_available_iff : ∀
+  {roster : Becoming.FaultEnvelopes.Domain → List Becoming.FaultEnvelopes.Domain}
+  {faults : Becoming.FaultEnvelopes.Domain → Becoming.FaultEnvelopes.Envelope} (a : Becoming.FaultEnvelopes.Domain),
+  (∀ (actual : List Becoming.FaultEnvelopes.Domain),
+      actual ∈ faults a →
+        (Becoming.Law.run (Becoming.Tolerance.certified roster faults) fun d => !actual.contains d).state 1 a = true) ↔
+    Becoming.FaultEnvelopes.separated (roster a) (faults a)
+Becoming.Tolerance.certified_blocked : ∀ (a : Becoming.FaultEnvelopes.Domain),
+  (Becoming.Law.run
+          (Becoming.Tolerance.certified (fun x => Becoming.FaultEnvelopes.roster3) fun x =>
+            Becoming.FaultEnvelopes.correlated3)
+          fun d => d == 2).state
+      1 a =
+    false
+@Becoming.Tolerance.countTrue_add_not : ∀ {α : Type u_1} (p : α → Bool) (l : List α),
+  Becoming.Tolerance.countTrue p l + Becoming.Tolerance.countTrue (fun b => !p b) l = l.length
+@Becoming.Tolerance.allBut_iff_count : ∀ {α : Type u_1} (p : α → Bool) (f : Nat) (l : List α),
+  Becoming.Tolerance.AllBut (fun b => p b = true) f l ↔ Becoming.Tolerance.countTrue (fun b => !p b) l ≤ f
+@Becoming.Tolerance.allBut_sub_iff : ∀ {α : Type u_1} (p : α → Bool) {k : Nat} {l : List α},
+  k ≤ l.length →
+    (Becoming.Tolerance.AllBut (fun b => p b = true) (l.length - k) l ↔ k ≤ Becoming.Tolerance.countTrue p l)
+@Becoming.Tolerance.KeepsInclusion.course_iff : ∀ {α : Type u_1} {next : (α → Prop) → α → Prop},
+  Becoming.Tolerance.KeepsInclusion next →
+    ∀ {s s' : α → Prop},
+      (∀ (a : α), s a ↔ s' a) →
+        ∀ (n : Nat) (a : α), (Becoming.Law.run next s).state n a ↔ (Becoming.Law.run next s').state n a
+@Becoming.Tolerance.web_tolerating : ∀ {β : Type} (W : Becoming.Web β β) (ups : β → List β) (k : β → Nat),
+  (∀ (t : Nat) (a c : β), W.requires t a c ↔ c = a) →
+    (∀ (t : Nat) (a : β), W.need t a a = k a) →
+      (∀ (t : Nat) (a : β),
+          W.level (t + 1) a = Becoming.Tolerance.countTrue (fun b => (k b).ble (W.level t b)) (ups a)) →
+        (∀ (a : β), k a ≤ (ups a).length) →
+          ∀ (n : Nat) (a : β),
+            W.Supported n a ↔
+              (Becoming.Law.run (Becoming.Tolerance.tolerating (fun a => (ups a).length - k a) ups)
+                    (W.Supported 0)).state
+                n a
+@Becoming.Tolerance.web_activity_tolerating : ∀ {β : Type} (W : Becoming.Web β β) (ups : β → List β) (k : β → Nat),
+  (∀ (t : Nat) (a c : β), W.requires t a c ↔ c = a) →
+    (∀ (t : Nat) (a : β), W.need t a a = k a) →
+      (∀ (t : Nat) (a : β),
+          W.level (t + 1) a = Becoming.Tolerance.countTrue (fun b => (k b).ble (W.level t b)) (ups a)) →
+        (∀ (a : β), k a ≤ (ups a).length) →
+          (∀ (t : Nat) (a : β), W.active t a ↔ W.Supported t a) →
+            ∀ (n : Nat) (a : β),
+              W.active n a ↔
+                (Becoming.Law.run (Becoming.Tolerance.tolerating (fun a => (ups a).length - k a) ups)
+                      (W.active 0)).state
+                  n a
+@Becoming.Tolerance.web_answers : ∀ {β : Type} (W : Becoming.Web β β) (ups : β → List β) (k : β → Nat),
+  (∀ (t : Nat) (a c : β), W.requires t a c ↔ c = a) →
+    (∀ (t : Nat) (a : β), W.need t a a = k a) →
+      (∀ (t : Nat) (a : β),
+          W.level (t + 1) a = Becoming.Tolerance.countTrue (fun b => (k b).ble (W.level t b)) (ups a)) →
+        (∀ (a : β), k a = (ups a).length) →
+          ∀ (n : Nat) (a : β),
+            W.Supported n a ↔
+              (Becoming.Law.run (Becoming.Withholding.answers (Becoming.Tolerance.Listed ups)) (W.Supported 0)).state n
+                a
+@Becoming.Tolerance.giftWeb_tolerating : ∀ {β : Type} (ups : β → List β) (k start : β → Nat),
+  (∀ (a : β), k a ≤ (ups a).length) →
+    ∀ (n : Nat) (a : β),
+      (Becoming.Tolerance.giftWeb ups k start).active n a ↔
+        (Becoming.Law.run (Becoming.Tolerance.tolerating (fun a => (ups a).length - k a) ups)
+              ((Becoming.Tolerance.giftWeb ups k start).active 0)).state
+          n a
+@Becoming.Tolerance.Triad.step_first : ∀ {s : Becoming.Tolerance.Triad → Prop},
+  Becoming.Tolerance.tolerating Becoming.Tolerance.Triad.tol0 Becoming.Tolerance.Triad.ups s
+      Becoming.Tolerance.Triad.first →
+    s Becoming.Tolerance.Triad.second ∧ s Becoming.Tolerance.Triad.third
+@Becoming.Tolerance.Triad.step_second : ∀ {s : Becoming.Tolerance.Triad → Prop},
+  Becoming.Tolerance.tolerating Becoming.Tolerance.Triad.tol0 Becoming.Tolerance.Triad.ups s
+      Becoming.Tolerance.Triad.second →
+    s Becoming.Tolerance.Triad.first ∧ s Becoming.Tolerance.Triad.third
+@Becoming.Tolerance.Triad.step_third : ∀ {s : Becoming.Tolerance.Triad → Prop},
+  Becoming.Tolerance.tolerating Becoming.Tolerance.Triad.tol0 Becoming.Tolerance.Triad.ups s
+      Becoming.Tolerance.Triad.third →
+    s Becoming.Tolerance.Triad.first ∧ s Becoming.Tolerance.Triad.second
+Becoming.Tolerance.Triad.tol1_spares_none : ∀ (a : Becoming.Tolerance.Triad), ¬a.ups.length ≤ a.tol1
+Becoming.Tolerance.Triad.tol0_spares_none : ∀ (a : Becoming.Tolerance.Triad), ¬a.ups.length ≤ a.tol0
+Becoming.Tolerance.Triad.total_at_two : ∀ (a : Becoming.Tolerance.Triad),
+  ¬(Becoming.Law.run (Becoming.Tolerance.tolerating Becoming.Tolerance.Triad.tol0 Becoming.Tolerance.Triad.ups)
+          Becoming.Tolerance.Triad.oneWithheld).state
+      2 a
+Becoming.Tolerance.Triad.spreads : (∀ (n : Nat),
+    2 ≤ n →
+      ∀ (a : Becoming.Tolerance.Triad),
+        ¬(Becoming.Law.run (Becoming.Tolerance.tolerating Becoming.Tolerance.Triad.tol0 Becoming.Tolerance.Triad.ups)
+                Becoming.Tolerance.Triad.oneWithheld).state
+            n a) ∧
+  (Becoming.Law.run (Becoming.Tolerance.tolerating Becoming.Tolerance.Triad.tol0 Becoming.Tolerance.Triad.ups)
+        Becoming.Tolerance.Triad.oneWithheld).state
+    1 Becoming.Tolerance.Triad.first
+Becoming.Tolerance.Triad.absorbed : ∀ (n : Nat) (a : Becoming.Tolerance.Triad),
+  (Becoming.Law.run (Becoming.Tolerance.tolerating Becoming.Tolerance.Triad.tol1 Becoming.Tolerance.Triad.ups)
+        Becoming.Tolerance.Triad.oneWithheld).state
+    (n + 1) a
+Becoming.Tolerance.Triad.total_kept : ∀ (n : Nat) (a : Becoming.Tolerance.Triad),
+  ¬(Becoming.Law.run (Becoming.Tolerance.tolerating Becoming.Tolerance.Triad.tol1 Becoming.Tolerance.Triad.ups)
+          Becoming.Tolerance.allWithheld).state
+      n a

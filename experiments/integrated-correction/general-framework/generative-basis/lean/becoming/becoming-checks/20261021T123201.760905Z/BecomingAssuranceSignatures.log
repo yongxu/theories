@@ -1,0 +1,51 @@
+@Becoming.Assurance.runs_of_completes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {safe : S → A → S → Prop} {goal : S → Prop} {s : S} {plan : List A},
+  Generative.InquirySufficiency.Completes P safe goal s plan →
+    (∃ t, Generative.Trace P s plan t) ∧
+      ∀ (t : S), Generative.Trace P s plan t → Generative.InquirySufficiency.SafeTrace P safe s plan t ∧ goal t
+@Becoming.Assurance.safeTrace_head : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {safe : S → A → S → Prop} {s t : S} {a : A} {rest : List A},
+  Generative.InquirySufficiency.SafeTrace P safe s (a :: rest) t →
+    ∃ m, P.step s a m ∧ safe s a m ∧ Generative.InquirySufficiency.SafeTrace P safe m rest t
+@Becoming.Assurance.completes_of_runs : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ {safe : S → A → S → Prop} {goal : S → Prop} {s : S} {plan : List A},
+      (∃ t, Generative.Trace P s plan t) →
+        (∀ (t : S), Generative.Trace P s plan t → Generative.InquirySufficiency.SafeTrace P safe s plan t ∧ goal t) →
+          Generative.InquirySufficiency.Completes P safe goal s plan
+@Becoming.Assurance.completes_iff_of_determined : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ {safe : S → A → S → Prop} {goal : S → Prop} {s : S} {plan : List A},
+      Generative.InquirySufficiency.Completes P safe goal s plan ↔
+        (∃ t, Generative.Trace P s plan t) ∧
+          ∀ (t : S), Generative.Trace P s plan t → Generative.InquirySufficiency.SafeTrace P safe s plan t ∧ goal t
+@Becoming.Assurance.safeTrace_free : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s t : S}
+  {plan : List A},
+  Generative.Trace P s plan t → Generative.InquirySufficiency.SafeTrace P Becoming.Assurance.free s plan t
+@Becoming.Assurance.completes_iff_runs : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Determined P →
+    ∀ {goal : S → Prop} {s : S} {plan : List A},
+      Generative.InquirySufficiency.Completes P Becoming.Assurance.free goal s plan ↔
+        (∃ t, Generative.Trace P s plan t) ∧ ∀ (t : S), Generative.Trace P s plan t → goal t
+Becoming.Assurance.Branch.two_ne_zero : 2 ≠ 0
+Becoming.Assurance.Branch.two_ne_one : 2 ≠ 1
+Becoming.Assurance.Branch.one_ne_zero : 1 ≠ 0
+Becoming.Assurance.Branch.stuck : ∀ (t : Nat), ¬Becoming.Assurance.Branch.process.step 2 () t
+Becoming.Assurance.Branch.ends_three : ∀ (t : Nat),
+  Generative.Trace Becoming.Assurance.Branch.process 0 [(), ()] t → t = 3
+Becoming.Assurance.Branch.runs_not_completes : ((∃ t, Generative.Trace Becoming.Assurance.Branch.process 0 [(), ()] t) ∧
+    ∀ (t : Nat), Generative.Trace Becoming.Assurance.Branch.process 0 [(), ()] t → t = 3) ∧
+  ¬Generative.InquirySufficiency.Completes Becoming.Assurance.Branch.process Becoming.Assurance.free (fun t => t = 3) 0
+      [(), ()]
+Becoming.Assurance.Branch.not_determined : ¬Becoming.Determined Becoming.Assurance.Branch.process
+@Becoming.Assurance.completes_ofMap_iff : ∀ {S : Type u_1} {A : Type u_2} (f : S → A → S) {goal : S → Prop} (s : S)
+  (plan : List A),
+  Generative.InquirySufficiency.Completes (Becoming.Assurance.ofMap f) Becoming.Assurance.free goal s plan ↔
+    goal (List.foldl f s plan)
+@Becoming.Assurance.completes_ofMap_single : ∀ {S : Type u_1} {A : Type u_2} (f : S → A → S) {goal : S → Prop} (s : S)
+  (a : A),
+  Generative.InquirySufficiency.Completes (Becoming.Assurance.ofMap f) Becoming.Assurance.free goal s [a] ↔ goal (f s a)
+@Becoming.Assurance.completes_ofPartial_iff : ∀ {S : Type u_1} {A : Type u_2} (f : S → A → Option S) {goal : S → Prop}
+  {s : S} {plan : List A},
+  Generative.InquirySufficiency.Completes (Becoming.Assurance.ofPartial f) Becoming.Assurance.free goal s plan ↔
+    ∃ t, Becoming.Assurance.runPartial f s plan = some t ∧ goal t

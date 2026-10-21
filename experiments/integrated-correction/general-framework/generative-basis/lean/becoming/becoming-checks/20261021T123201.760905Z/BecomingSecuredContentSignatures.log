@@ -1,0 +1,216 @@
+Becoming.SecuredContent.one_sub_succ : ∀ (n : Nat), 1 - (n + 1) = 0
+Becoming.SecuredContent.pos_succ : ∀ (n : Nat), 0 < Int.ofNat (n + 1)
+Becoming.SecuredContent.not_pos_negSucc : ∀ (n : Nat), ¬0 < Int.negSucc n
+Becoming.SecuredContent.pos_or_pos : ∀ (a b : Int), 0 < a + b → 0 < a ∨ 0 < b
+@Becoming.SecuredContent.positive_integral_has_positive_occurrence : ∀ {R : Type} (domain : List R)
+  (contribution : R → Int),
+  0 < Becoming.SecuredContent.finiteIntegral domain contribution → ∃ r, r ∈ domain ∧ 0 < contribution r
+@Becoming.SecuredContent.contingent_newContent : ∀ {H A Q : Type} (F : Becoming.Frame H A Q) (living : Q → Prop)
+  (admitted : H → Prop) (before relevance : H → Q → Prop),
+  Becoming.LivingSignificance F living relevance →
+    (∀ (h : H), admitted h → ∃ q, living q ∧ F.realized h q ∧ ¬before h q) →
+      ∀ (h : H), admitted h → ∃ q, relevance h q ∧ ¬before h q
+@Becoming.SecuredContent.certified_integral_reason : ∀ {H A Q R : Type} (F : Becoming.Frame H A Q) (living : Q → Prop)
+  (admitted : H → Prop) (before relevance : H → Q → Prop) (reason : H → Prop),
+  Becoming.LivingSignificance F living relevance →
+    (∀ (h : H) (q : Q), relevance h q → reason h) →
+      ∀ (domain : List R) (contribution : H → R → Int) (meaning : R → Q),
+        (∀ (h : H),
+            admitted h →
+              ∀ (r : R),
+                r ∈ domain →
+                  0 < contribution h r → living (meaning r) ∧ F.realized h (meaning r) ∧ ¬before h (meaning r)) →
+          (∀ (h : H), admitted h → 0 < Becoming.SecuredContent.finiteIntegral domain (contribution h)) →
+            ∀ (h : H), admitted h → (∃ q, relevance h q ∧ ¬before h q) ∧ reason h
+@Becoming.SecuredContent.certified_reason_on_scope : ∀ {H A C R O : Type} {k : Nat} (F : Becoming.Frame H A C)
+  (living : C → Prop) {sense : H → A → H → Fin k} {response : R → List A} {B : H → Prop}
+  {policy : Generative.InquirySufficiency.Policy A R k} (before relevance : H → C → Prop) (reason : H → Prop),
+  Becoming.LivingSignificance F living relevance →
+    (∀ (t : H) (c : C), relevance t c → reason t) →
+      ∀ (domain : List O) (contribution : H → O → Int) (meaning : O → C),
+        (∀ (t : H),
+            Becoming.Scope F.P sense response B policy t →
+              ∀ (o : O),
+                o ∈ domain →
+                  0 < contribution t o → living (meaning o) ∧ F.realized t (meaning o) ∧ ¬before t (meaning o)) →
+          (∀ (t : H),
+              Becoming.Scope F.P sense response B policy t →
+                0 < Becoming.SecuredContent.finiteIntegral domain (contribution t)) →
+            ∀ (t : H), Becoming.Scope F.P sense response B policy t → (∃ c, relevance t c ∧ ¬before t c) ∧ reason t
+@Becoming.SecuredContent.contingent_newContent_of_unrestricted : ∀ {H A Q F' Pos : Type} (F : Becoming.Frame H A Q)
+  (living : Q → Prop) (admitted : H → Prop) (before : H → Q → Prop) {sig : Pos → Nat → F' → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (formation : Q → F') (step : Q → Nat),
+      (∀ (h : H), admitted h → ∃ q, living q ∧ F.realized h q ∧ ¬before h q) →
+        ∀ (h : H), admitted h → ∃ q, F.relevance living sig formation step h q ∧ ¬before h q
+@Becoming.SecuredContent.every_situated_position_has_reason : ∀ {H A Q Pos R : Type} (F : Becoming.Frame H A Q)
+  (living : Q → Prop) (access : Pos → R → Prop) (admitted : R → H → Prop) (before relevance : H → Q → Prop)
+  (Reason : Pos → R → Prop),
+  Becoming.LivingSignificance F living relevance →
+    Becoming.PositionedArticulation access admitted before relevance Reason →
+      ∀ (r : R),
+        (∀ (h : H), admitted r h → ∃ q, living q ∧ F.realized h q ∧ ¬before h q) → ∀ (p : Pos), access p r → Reason p r
+@Becoming.SecuredContent.every_situated_position_has_reason_of_unrestricted : ∀ {H A Q Pos R F' : Type}
+  (F : Becoming.Frame H A Q) (living : Q → Prop) (access : Pos → R → Prop) (admitted : R → H → Prop)
+  (before : H → Q → Prop) {sig : Pos → Nat → F' → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (formation : Q → F') (step : Q → Nat) (Reason : Pos → R → Prop),
+      Becoming.PositionedArticulation access admitted before (F.relevance living sig formation step) Reason →
+        ∀ (r : R),
+          (∀ (h : H), admitted r h → ∃ q, living q ∧ F.realized h q ∧ ¬before h q) →
+            ∀ (p : Pos), access p r → Reason p r
+@Becoming.SecuredContent.route_reason_is_least : ∀ {H Q Pos R : Type} (access : Pos → R → Prop)
+  (admitted : R → H → Prop) (before relevance : H → Q → Prop),
+  Becoming.PositionedArticulation access admitted before relevance
+      (Becoming.SecuredContent.RouteReason access admitted before relevance) ∧
+    ∀ (Reason : Pos → R → Prop),
+      Becoming.PositionedArticulation access admitted before relevance Reason →
+        ∀ (p : Pos) (r : R), Becoming.SecuredContent.RouteReason access admitted before relevance p r → Reason p r
+@Becoming.SecuredContent.route_reason_depends_only_on_access : ∀ {H Q Pos R : Type} (access : Pos → R → Prop)
+  (admitted : R → H → Prop) (before relevance : H → Q → Prop) (p p' : Pos),
+  (∀ (r : R), access p r ↔ access p' r) →
+    ∀ (r : R),
+      Becoming.SecuredContent.RouteReason access admitted before relevance p r ↔
+        Becoming.SecuredContent.RouteReason access admitted before relevance p' r
+Becoming.SecuredContent.same_response_without_fixed_form : ∀ (m : Becoming.SecuredContent.FormationModel),
+  0 < Becoming.SecuredContent.magnitude m →
+    (∀ (branch : Bool),
+        ∃ q,
+          Becoming.SecuredContent.fresh q ∧
+            (Becoming.SecuredContent.futureFrame (Becoming.SecuredContent.respond Becoming.SecuredContent.initial)
+                    m).realized
+                branch q ∧
+              ¬Becoming.SecuredContent.prior branch q) ∧
+      ¬∃ q,
+          Becoming.SecuredContent.fresh q ∧
+            ∀ (branch : Bool),
+              (Becoming.SecuredContent.futureFrame (Becoming.SecuredContent.respond Becoming.SecuredContent.initial)
+                    m).realized
+                branch q
+Becoming.SecuredContent.positive_occurrence_correspondence : ∀ (m : Becoming.SecuredContent.FormationModel)
+  (branch : Bool) (r : Becoming.SecuredContent.Occurrence),
+  r ∈ Becoming.SecuredContent.positiveDomain →
+    0 <
+        Becoming.SecuredContent.contribution (Becoming.SecuredContent.respond Becoming.SecuredContent.initial) m branch
+          r →
+      Becoming.SecuredContent.fresh (Becoming.SecuredContent.occurrenceMeaning r) ∧
+        (Becoming.SecuredContent.futureFrame (Becoming.SecuredContent.respond Becoming.SecuredContent.initial)
+                m).realized
+            branch (Becoming.SecuredContent.occurrenceMeaning r) ∧
+          ¬Becoming.SecuredContent.prior branch (Becoming.SecuredContent.occurrenceMeaning r)
+Becoming.SecuredContent.positiveDomain_nodup : Becoming.SecuredContent.positiveDomain.Nodup
+Becoming.SecuredContent.fullDomain_nodup : Becoming.SecuredContent.fullDomain.Nodup
+Becoming.SecuredContent.positive_integral_and_adverse_full_change : ∀ (m : Becoming.SecuredContent.FormationModel),
+  0 < Becoming.SecuredContent.magnitude m →
+    ∀ (branch : Bool),
+      Becoming.SecuredContent.positiveDomain.Nodup ∧
+        Becoming.SecuredContent.fullDomain.Nodup ∧
+          0 <
+              Becoming.SecuredContent.finiteIntegral Becoming.SecuredContent.positiveDomain
+                (Becoming.SecuredContent.contribution (Becoming.SecuredContent.respond Becoming.SecuredContent.initial)
+                  m branch) ∧
+            Becoming.SecuredContent.finiteIntegral Becoming.SecuredContent.fullDomain
+                  (Becoming.SecuredContent.contribution
+                    (Becoming.SecuredContent.respond Becoming.SecuredContent.initial) m branch) =
+                -1 ∧
+              Becoming.SecuredContent.finiteIntegral Becoming.SecuredContent.fullDomain
+                  (Becoming.SecuredContent.contribution Becoming.SecuredContent.initial m branch) =
+                0
+Becoming.SecuredContent.response_preserves_joint_openness : ∀ (m : Becoming.SecuredContent.FormationModel),
+  (Becoming.PreservesBundles (Becoming.SecuredContent.futureFrame Becoming.SecuredContent.initial m) (fun x => True)
+      (Becoming.SecuredContent.futureFrame (Becoming.SecuredContent.respond Becoming.SecuredContent.initial) m) fun x =>
+      True) ∧
+    (Becoming.SecuredContent.respond Becoming.SecuredContent.initial).queryOpen = true
+Becoming.SecuredContent.live_one : Becoming.SecuredContent.live Becoming.SecuredContent.FormationModel.one
+Becoming.SecuredContent.live_two : Becoming.SecuredContent.live Becoming.SecuredContent.FormationModel.two
+Becoming.SecuredContent.barren_not_live : ¬Becoming.SecuredContent.live Becoming.SecuredContent.FormationModel.barren
+Becoming.SecuredContent.live_productive : ∀ (m : Becoming.SecuredContent.FormationModel),
+  Becoming.SecuredContent.live m → 0 < Becoming.SecuredContent.magnitude m
+Becoming.SecuredContent.acquired_evidence_secures_content_and_leaves_both_opennesses : Becoming.SecuredContent.live
+    Becoming.SecuredContent.FormationModel.one ∧
+  Becoming.SecuredContent.live Becoming.SecuredContent.FormationModel.two ∧
+    ¬Becoming.SecuredContent.live Becoming.SecuredContent.FormationModel.barren ∧
+      Becoming.Narrowing.learn Becoming.SecuredContent.repertoire Becoming.SecuredContent.firstEvidence =
+          [Becoming.SecuredContent.rule Becoming.SecuredContent.FormationModel.one,
+            Becoming.SecuredContent.rule Becoming.SecuredContent.FormationModel.two] ∧
+        Becoming.Narrowing.answer
+              (Becoming.Narrowing.learn Becoming.SecuredContent.repertoire Becoming.SecuredContent.firstEvidence)
+              false =
+            none ∧
+          (∀ (m : Becoming.SecuredContent.FormationModel),
+              Becoming.SecuredContent.live m →
+                ∀ (branch : Bool),
+                  0 <
+                    Becoming.SecuredContent.finiteIntegral Becoming.SecuredContent.positiveDomain
+                      (Becoming.SecuredContent.contribution
+                        (Becoming.SecuredContent.respond Becoming.SecuredContent.initial) m branch)) ∧
+            (∀ (m : Becoming.SecuredContent.FormationModel),
+                Becoming.SecuredContent.live m →
+                  ∀ (branch : Bool),
+                    Becoming.SecuredContent.finiteIntegral Becoming.SecuredContent.positiveDomain
+                        (Becoming.SecuredContent.contribution Becoming.SecuredContent.initial m branch) =
+                      0) ∧
+              Becoming.Narrowing.revise
+                    (Becoming.Narrowing.learn Becoming.SecuredContent.repertoire Becoming.SecuredContent.firstEvidence)
+                    (false, true) =
+                  [Becoming.SecuredContent.rule Becoming.SecuredContent.FormationModel.one] ∧
+                Becoming.Narrowing.revise
+                      (Becoming.Narrowing.learn Becoming.SecuredContent.repertoire
+                        Becoming.SecuredContent.firstEvidence)
+                      (false, false) =
+                    [Becoming.SecuredContent.rule Becoming.SecuredContent.FormationModel.two] ∧
+                  Becoming.Narrowing.answer
+                        (Becoming.Narrowing.revise
+                          (Becoming.Narrowing.learn Becoming.SecuredContent.repertoire
+                            Becoming.SecuredContent.firstEvidence)
+                          (true, false))
+                        true =
+                      none ∧
+                    Becoming.Narrowing.learn Becoming.SecuredContent.repertoire
+                        (Becoming.Narrowing.acquire
+                          (Becoming.SecuredContent.rule Becoming.SecuredContent.FormationModel.barren) 1 [true]) =
+                      [Becoming.SecuredContent.rule Becoming.SecuredContent.FormationModel.barren]
+Becoming.SecuredContent.wider_scope_can_require_certificate_retraction : (∀
+    (m : Becoming.SecuredContent.FormationModel),
+    Becoming.SecuredContent.live m →
+      Becoming.SecuredContent.live m ∨ m = Becoming.SecuredContent.FormationModel.barren) ∧
+  ¬∀ (m : Becoming.SecuredContent.FormationModel),
+      Becoming.SecuredContent.live m ∨ m = Becoming.SecuredContent.FormationModel.barren →
+        ∀ (branch : Bool),
+          0 <
+            Becoming.SecuredContent.finiteIntegral Becoming.SecuredContent.positiveDomain
+              (Becoming.SecuredContent.contribution (Becoming.SecuredContent.respond Becoming.SecuredContent.initial) m
+                branch)
+Becoming.SecuredContent.livingSignificance_holds : Becoming.LivingSignificance Becoming.SecuredContent.wholeFrame
+  Becoming.SecuredContent.fresh Becoming.SecuredContent.livingSignificanceRelevant
+Becoming.SecuredContent.respond_formation : ∀ (h : Becoming.SecuredContent.Continuation),
+  Becoming.SecuredContent.admittedAfter Becoming.SecuredContent.Act.respond h →
+    ∃ q,
+      Becoming.SecuredContent.fresh q ∧
+        Becoming.SecuredContent.wholeFrame.realized h q ∧ ¬Becoming.SecuredContent.priorIn h q
+Becoming.SecuredContent.nonendorsing_position_with_access_has_reason : Becoming.SecuredContent.RouteReason
+  Becoming.SecuredContent.access Becoming.SecuredContent.admittedAfter Becoming.SecuredContent.priorIn
+  Becoming.SecuredContent.livingSignificanceRelevant Becoming.SecuredContent.nonEndorsingArtificial
+  Becoming.SecuredContent.Act.respond
+Becoming.SecuredContent.endorsement_without_access_gets_no_route_reason : ¬Becoming.SecuredContent.RouteReason
+    Becoming.SecuredContent.access Becoming.SecuredContent.admittedAfter Becoming.SecuredContent.priorIn
+    Becoming.SecuredContent.livingSignificanceRelevant Becoming.SecuredContent.endorsingHumanWithoutAccess
+    Becoming.SecuredContent.Act.respond
+Becoming.SecuredContent.endorsement_independence_is_supplied_by_articulation : Becoming.LivingSignificance
+    Becoming.SecuredContent.wholeFrame Becoming.SecuredContent.fresh
+    Becoming.SecuredContent.livingSignificanceRelevant ∧
+  (∀ (h : Becoming.SecuredContent.Continuation),
+      Becoming.SecuredContent.admittedAfter Becoming.SecuredContent.Act.respond h →
+        ∃ q,
+          Becoming.SecuredContent.fresh q ∧
+            Becoming.SecuredContent.wholeFrame.realized h q ∧ ¬Becoming.SecuredContent.priorIn h q) ∧
+    ∃ Reason,
+      (∀ (p : Becoming.SecuredContent.Position) (a : Becoming.SecuredContent.Act),
+          Becoming.SecuredContent.access p a →
+            p.endorses = true →
+              Becoming.SecuresNewContent Becoming.SecuredContent.admittedAfter Becoming.SecuredContent.priorIn
+                  Becoming.SecuredContent.livingSignificanceRelevant a →
+                Reason p a) ∧
+        Becoming.SecuredContent.access Becoming.SecuredContent.nonEndorsingArtificial
+            Becoming.SecuredContent.Act.respond ∧
+          ¬Reason Becoming.SecuredContent.nonEndorsingArtificial Becoming.SecuredContent.Act.respond

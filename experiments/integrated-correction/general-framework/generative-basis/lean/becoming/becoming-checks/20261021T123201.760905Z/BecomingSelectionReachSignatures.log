@@ -1,0 +1,89 @@
+@Becoming.exists_outside_of_total_lt : ∀ {α : Type} [DecidableEq α] {q : α → Nat} {l m : List α},
+  Becoming.Distinct l → Becoming.total m q < Becoming.total l q → ∃ a, a ∈ l ∧ ¬a ∈ m ∧ 0 < q a
+@Becoming.Flow.Balances.gives_more_of_rise : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {t : Nat},
+  L.Balances W →
+    W.stock ds t < W.stock ds (t + 1) →
+      ∃ f, f ∈ L.present t ∧ Becoming.total ds (L.take t f) < Becoming.total ds (L.give t f)
+@Becoming.Flow.Balances.rise_draws_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds es : List C} {t : Nat},
+  L.Balances W →
+    Becoming.Distinct ds →
+      (∀ (c : C), c ∈ ds → c ∈ es) →
+        L.GainlessOn es t →
+          W.stock ds t < W.stock ds (t + 1) →
+            ∃ f,
+              f ∈ L.present t ∧
+                Becoming.total ds (L.take t f) < Becoming.total ds (L.give t f) ∧
+                  Becoming.total ds (L.take t f) < Becoming.total es (L.take t f)
+@Becoming.Flow.Balances.rise_paid_from_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds es : List C} {t : Nat},
+  L.Balances W →
+    Becoming.Distinct ds →
+      (∀ (c : C), c ∈ ds → c ∈ es) →
+        L.GainlessOn es t →
+          W.stock ds (t + 1) ≤
+            W.stock ds t +
+              Becoming.total (L.present t) fun f => Becoming.total es (L.take t f) - Becoming.total ds (L.take t f)
+@Becoming.Flow.Balances.rise_takes_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {ds es : List C} {t : Nat} [DecidableEq C],
+  L.Balances W →
+    Becoming.Distinct ds →
+      Becoming.Distinct es →
+        (∀ (c : C), c ∈ ds → c ∈ es) →
+          L.GainlessOn es t →
+            W.stock ds t < W.stock ds (t + 1) →
+              ∃ f c,
+                f ∈ L.present t ∧
+                  Becoming.total ds (L.take t f) < Becoming.total ds (L.give t f) ∧ c ∈ es ∧ ¬c ∈ ds ∧ 0 < L.take t f c
+@Becoming.Flow.Gainless.rise_takes_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds : List C}
+  {t : Nat} [DecidableEq C],
+  L.Balances W →
+    L.Gainless →
+      Becoming.Distinct ds →
+        L.Around ds t →
+          W.stock ds t < W.stock ds (t + 1) →
+            ∃ f c,
+              f ∈ L.present t ∧
+                Becoming.total ds (L.take t f) < Becoming.total ds (L.give t f) ∧ ¬c ∈ ds ∧ 0 < L.take t f c
+@Becoming.Flow.favours_reaching_beyond : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {ds es : List C}
+  {t : Nat} [DecidableEq C] {obs : F → C → Prop} {members : F → Prop} {select : (Nat → C → Nat) → Prop},
+  L.Balances W →
+    Becoming.Distinct ds →
+      Becoming.Distinct es →
+        (∀ (c : C), c ∈ ds → c ∈ es) →
+          L.GainlessOn es t →
+            (∀ (h : F) (c : C), members h → W.CoupledInto obs h c → c ∈ ds) →
+              (select W.level → W.stock ds t < W.stock ds (t + 1)) →
+                select W.level →
+                  ∃ f c,
+                    f ∈ L.present t ∧
+                      Becoming.total ds (L.take t f) < Becoming.total ds (L.give t f) ∧
+                        0 < L.take t f c ∧ ∀ (h : F), members h → ¬W.CoupledInto obs h c
+@Becoming.Web.raises_selectsThrough : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {g : F} {ds : List C}
+  {t : Nat},
+  (∀ (c : C), c ∈ ds → obs g c) →
+    W.SelectsThrough obs g (t + 1) fun l => Becoming.total ds (l t) < Becoming.total ds (l (t + 1))
+Becoming.Diversion.places_distinct : Becoming.Distinct [Becoming.Diversion.Place.source, Becoming.Diversion.Place.store]
+Becoming.Diversion.diverting_gainless : Becoming.Diversion.diverting.GainlessOn
+  [Becoming.Diversion.Place.source, Becoming.Diversion.Place.store] 0
+Becoming.Diversion.taker_listed : ∀ (h : Becoming.Diversion.Formation) (c : Becoming.Diversion.Place),
+  h = Becoming.Diversion.Formation.taker →
+    (Becoming.Diversion.web Becoming.Diversion.divertedLevel).CoupledInto Becoming.Diversion.gauge h c →
+      c ∈ [Becoming.Diversion.Place.store]
+Becoming.Diversion.draws_beyond : ((Becoming.Diversion.web Becoming.Diversion.divertedLevel).SelectsThrough
+    Becoming.Diversion.gauge Becoming.Diversion.Formation.taker 1 fun l =>
+    Becoming.total [Becoming.Diversion.Place.store] (l 0) < Becoming.total [Becoming.Diversion.Place.store] (l 1)) ∧
+  ∃ f c,
+    f ∈ Becoming.Diversion.diverting.present 0 ∧
+      Becoming.total [Becoming.Diversion.Place.store] (Becoming.Diversion.diverting.take 0 f) <
+          Becoming.total [Becoming.Diversion.Place.store] (Becoming.Diversion.diverting.give 0 f) ∧
+        0 < Becoming.Diversion.diverting.take 0 f c ∧
+          ¬(Becoming.Diversion.web Becoming.Diversion.divertedLevel).CoupledInto Becoming.Diversion.gauge
+              Becoming.Diversion.Formation.taker c
+Becoming.Diversion.supplying_raises_untaken : Becoming.Diversion.supplying.Balances
+    (Becoming.Diversion.web Becoming.Diversion.suppliedLevel) ∧
+  (Becoming.Diversion.web Becoming.Diversion.suppliedLevel).stock [Becoming.Diversion.Place.store] 0 <
+      (Becoming.Diversion.web Becoming.Diversion.suppliedLevel).stock [Becoming.Diversion.Place.store] 1 ∧
+    ∀ (t : Nat) (f : Becoming.Diversion.Formation) (c : Becoming.Diversion.Place),
+      Becoming.Diversion.supplying.take t f c = 0

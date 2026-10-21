@@ -1,0 +1,65 @@
+@Becoming.Gated.kept_along : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {gate : A → Bool} {q : S → R},
+  Becoming.Gated.KeptBy P gate q →
+    ∀ {s t : S} {plan : List A}, Generative.Trace P s plan t → (∀ (a : A), a ∈ plan → gate a = false) → q t = q s
+@Becoming.Gated.kept_along_iff : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {gate : A → Bool} {q : S → R},
+  (∀ (s : S) (plan : List A) (t : S),
+      Generative.Trace P s plan t → (∀ (a : A), a ∈ plan → gate a = false) → q t = q s) ↔
+    Becoming.Gated.KeptBy P gate q
+@Becoming.Gated.change_passes_gate : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {gate : A → Bool} {q : S → R},
+  Becoming.Gated.KeptBy P gate q →
+    ∀ {s t : S} {plan : List A}, Generative.Trace P s plan t → q t ≠ q s → ∃ a, a ∈ plan ∧ gate a = true
+@Becoming.Gated.change_located : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} [DecidableEq R]
+  {P : Generative.Process S A} {gate : A → Bool} {q : S → R},
+  Becoming.Gated.KeptBy P gate q →
+    ∀ {s t : S} {plan : List A},
+      Generative.Trace P s plan t →
+        q t ≠ q s →
+          ∃ pre a post m m',
+            plan = pre ++ a :: post ∧
+              Generative.Trace P s pre m ∧
+                q m = q s ∧ P.step m a m' ∧ gate a = true ∧ q m' ≠ q m ∧ Generative.Trace P m' post t
+@Becoming.Gated.keptBy_iff_preserved : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {gate : A → Bool} {q : S → R},
+  Becoming.Gated.KeptBy P gate q ↔ ∀ (c : R), Becoming.Gated.PreservedBy P gate fun s => q s = c
+@Becoming.Gated.keptBy_iff_reflected : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {gate : A → Bool} {q : S → R},
+  Becoming.Gated.KeptBy P gate q ↔ ∀ (c : R), Becoming.Gated.ReflectedBy P gate fun s => q s = c
+@Becoming.Gated.preserved_along : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {gate : A → Bool}
+  {p : S → Prop},
+  Becoming.Gated.PreservedBy P gate p →
+    ∀ {s t : S} {plan : List A}, Generative.Trace P s plan t → (∀ (a : A), a ∈ plan → gate a = false) → p s → p t
+@Becoming.Gated.preserved_along_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {gate : A → Bool}
+  {p : S → Prop},
+  (∀ (s : S) (plan : List A) (t : S),
+      Generative.Trace P s plan t → (∀ (a : A), a ∈ plan → gate a = false) → p s → p t) ↔
+    Becoming.Gated.PreservedBy P gate p
+@Becoming.Gated.reflected_along : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {gate : A → Bool}
+  {p : S → Prop},
+  Becoming.Gated.ReflectedBy P gate p →
+    ∀ {s t : S} {plan : List A}, Generative.Trace P s plan t → (∀ (a : A), a ∈ plan → gate a = false) → p t → p s
+@Becoming.Gated.leaving_passes_gate : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {gate : A → Bool}
+  {p : S → Prop},
+  Becoming.Gated.PreservedBy P gate p →
+    ∀ {s t : S} {plan : List A}, Generative.Trace P s plan t → p s → ¬p t → ∃ a, a ∈ plan ∧ gate a = true
+@Becoming.Gated.origin : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {gate : A → Bool} {p : S → Prop},
+  Becoming.Gated.ReflectedBy P gate p →
+    ∀ {s t : S} {plan : List A},
+      Generative.Trace P s plan t →
+        p t →
+          p s ∨
+            ∃ pre a post m m',
+              plan = pre ++ a :: post ∧
+                Generative.Trace P s pre m ∧ P.step m a m' ∧ gate a = true ∧ p m' ∧ Generative.Trace P m' post t
+@Becoming.Gated.origin_of_decides : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {gate : A → Prop},
+  (∀ (a : A), gate a ∨ ¬gate a) →
+    ∀ {p : S → Prop},
+      (∀ (s : S) (a : A) (t : S), P.step s a t → ¬gate a → p t → p s) →
+        ∀ {s t : S} {plan : List A}, Generative.Trace P s plan t → p t → p s ∨ ∃ a, a ∈ plan ∧ gate a
+Becoming.Gated.origin_of_propositions_iff : (∀ (S A : Type) (P : Generative.Process S A) (gate : A → Prop)
+    (p : S → Prop),
+    (∀ (s : S) (a : A) (t : S), P.step s a t → ¬gate a → p t → p s) →
+      ∀ (s : S) (plan : List A) (t : S), Generative.Trace P s plan t → p t → p s ∨ ∃ a, a ∈ plan ∧ gate a) ↔
+  ∀ (Q : Prop), ¬¬Q → Q

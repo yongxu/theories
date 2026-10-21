@@ -1,0 +1,250 @@
+@Becoming.ReferencePlanTraces.step_iff : ∀ {s t : Becoming.ReferencePlan.State} {a : Becoming.ReferencePlan.Act},
+  Becoming.ReferencePlan.P.step s a t ↔
+    Becoming.ReferencePlan.use a ≤ s.fuel ∧
+      ∃ u,
+        Becoming.ReferencePlan.operate s a = some u ∧
+          t =
+            { channel := u.channel, method := u.method, mismatch := u.mismatch, pending := u.pending, fresh := u.fresh,
+              installed := u.installed, building := u.building, fuel := s.fuel - Becoming.ReferencePlan.use a,
+              used := s.used + Becoming.ReferencePlan.use a, response := u.response }
+@Becoming.ReferencePlanTraces.enabled_iff : ∀ {s : Becoming.ReferencePlan.State} {a : Becoming.ReferencePlan.Act},
+  Generative.Enabled Becoming.ReferencePlan.P s a ↔
+    Becoming.ReferencePlan.use a ≤ s.fuel ∧ ∃ u, Becoming.ReferencePlan.operate s a = some u
+@Becoming.ReferencePlanTraces.run_iff : ∀ {s t : Becoming.ReferencePlan.State} {as : List Becoming.ReferencePlan.Act},
+  Becoming.ReferencePlan.run s as = some t ↔ Generative.Trace Becoming.ReferencePlan.P s as t
+@Becoming.ReferencePlanTraces.trace_unique : ∀ {s t u : Becoming.ReferencePlan.State}
+  {as : List Becoming.ReferencePlan.Act},
+  Generative.Trace Becoming.ReferencePlan.P s as t → Generative.Trace Becoming.ReferencePlan.P s as u → t = u
+@Becoming.ReferencePlanTraces.trace_iff_of_run : ∀ {s t₀ t : Becoming.ReferencePlan.State}
+  {as : List Becoming.ReferencePlan.Act},
+  Becoming.ReferencePlan.run s as = some t₀ → (Generative.Trace Becoming.ReferencePlan.P s as t ↔ t = t₀)
+@Becoming.ReferencePlanTraces.step_iff_of_execute : ∀ {s t₀ t : Becoming.ReferencePlan.State}
+  {a : Becoming.ReferencePlan.Act},
+  Becoming.ReferencePlan.execute s a = some t₀ → (Becoming.ReferencePlan.P.step s a t ↔ t = t₀)
+@Becoming.ReferencePlanTraces.map_some : ∀ {α β : Type} {o : Option α} {f : α → β} {v : β},
+  Option.map f o = some v → ∃ x, o = some x ∧ f x = v
+@Becoming.ReferencePlanTraces.step_reads : ∀ {β : Type} {s t : Becoming.ReferencePlan.State}
+  {a : Becoming.ReferencePlan.Act} {f : Becoming.ReferencePlan.State → β} {v : β},
+  (∀ (u : Becoming.ReferencePlan.State),
+      f
+          { channel := u.channel, method := u.method, mismatch := u.mismatch, pending := u.pending, fresh := u.fresh,
+            installed := u.installed, building := u.building, fuel := s.fuel - Becoming.ReferencePlan.use a,
+            used := s.used + Becoming.ReferencePlan.use a, response := u.response } =
+        f u) →
+    Option.map f (Becoming.ReferencePlan.operate s a) = some v → Becoming.ReferencePlan.P.step s a t → f t = v
+@Becoming.ReferencePlanTraces.repair_of_trace : ∀ {s t : Becoming.ReferencePlan.State}
+  {as : List Becoming.ReferencePlan.Act},
+  Generative.Trace Becoming.ReferencePlanTraces.chosen s as t → Becoming.ReferencePlan.repair as.length s = some t
+@Becoming.ReferencePlanTraces.trace_of_repair : ∀ {n : Nat} {s t : Becoming.ReferencePlan.State},
+  Becoming.ReferencePlan.repair n s = some t →
+    ∃ as, as.length = n ∧ Generative.Trace Becoming.ReferencePlanTraces.chosen s as t
+@Becoming.ReferencePlanTraces.repair_iff : ∀ {n : Nat} {s t : Becoming.ReferencePlan.State},
+  Becoming.ReferencePlan.repair n s = some t ↔
+    ∃ as, as.length = n ∧ Generative.Trace Becoming.ReferencePlanTraces.chosen s as t
+@Becoming.ReferencePlanTraces.repairs_iff_of_repair : ∀ {n : Nat} {s t₀ t : Becoming.ReferencePlan.State},
+  Becoming.ReferencePlan.repair n s = some t₀ →
+    ((∃ as, as.length = n ∧ Generative.Trace Becoming.ReferencePlanTraces.chosen s as t) ↔ t = t₀)
+@Becoming.ReferencePlanTraces.no_repair_of : ∀ {n : Nat} {s : Becoming.ReferencePlan.State},
+  Becoming.ReferencePlan.repair n s = none →
+    ¬∃ as t, as.length = n ∧ Generative.Trace Becoming.ReferencePlanTraces.chosen s as t
+@Becoming.ReferencePlanTraces.revise_binds_plan : ∀ {s t : Becoming.ReferencePlan.State} {i : Nat},
+  s.mismatch = some i →
+    Becoming.ReferencePlan.P.step s Becoming.ReferencePlan.Act.revise t →
+      (t.method, t.pending, t.installed) = (i :: s.method, i :: s.method, s.installed)
+@Becoming.ReferencePlanTraces.revise_step : ∀ {s t : Becoming.ReferencePlan.State},
+  Becoming.ReferencePlan.P.step s Becoming.ReferencePlan.Act.revise t →
+    ∃ i, s.mismatch = some i ∧ t.method = i :: s.method
+@Becoming.ReferencePlanTraces.revise_registers : ∀ {s t : Becoming.ReferencePlan.State} {i : Nat},
+  s.mismatch = some i →
+    Becoming.ReferencePlan.P.step s Becoming.ReferencePlan.Act.revise t →
+      Becoming.Learning.Training.Through (Becoming.ReferencePlan.AgreeOn t.method) fun x => x i = true
+@Becoming.ReferencePlanTraces.revise_keeps_selections : ∀ {s t : Becoming.ReferencePlan.State},
+  Becoming.ReferencePlan.P.step s Becoming.ReferencePlan.Act.revise t →
+    ∀ (select : (Nat → Bool) → Prop),
+      Becoming.Learning.Training.Through (Becoming.ReferencePlan.AgreeOn s.method) select →
+        Becoming.Learning.Training.Through (Becoming.ReferencePlan.AgreeOn t.method) select
+@Becoming.ReferencePlanTraces.revise_keeps : ∀ {s t : Becoming.ReferencePlan.State},
+  Becoming.ReferencePlan.P.step s Becoming.ReferencePlan.Act.revise t →
+    Becoming.Registration.Keeps Becoming.ReferencePlan.AgreeOn s.method t.method
+@Becoming.ReferencePlanTraces.revise_gains_contact : ∀ {s t : Becoming.ReferencePlan.State} {i : Nat},
+  s.mismatch = some i →
+    ¬i ∈ s.method →
+      Becoming.ReferencePlan.P.step s Becoming.ReferencePlan.Act.revise t →
+        (Becoming.Learning.Training.Through (Becoming.ReferencePlan.AgreeOn t.method) fun x => x i = true) ∧
+          ¬Becoming.Learning.Training.Through (Becoming.ReferencePlan.AgreeOn s.method) fun x => x i = true
+@Becoming.ReferencePlanTraces.probe_binds : ∀ {s t : Becoming.ReferencePlan.State} {i : Nat} {tail : List Nat},
+  s.building = true →
+    s.pending = i :: tail →
+      Becoming.ReferencePlan.P.step s Becoming.ReferencePlan.Act.probe t →
+        (t.pending, t.fresh) = (tail, { address := i, low := s.channel i false, high := s.channel i true } :: s.fresh)
+@Becoming.ReferencePlanTraces.install_binds : ∀ {s t : Becoming.ReferencePlan.State},
+  s.building = true →
+    s.pending = [] →
+      Becoming.ReferencePlan.valid s.fresh = true →
+        Becoming.ReferencePlan.P.step s Becoming.ReferencePlan.Act.install t →
+          (t.installed, t.building) = (s.fresh, false)
+@Becoming.ReferencePlanTraces.frozen_plan : ∀ {s t : Becoming.ReferencePlan.State},
+  Becoming.ReferencePlan.P.step s Becoming.ReferencePlan.Act.frozen t →
+    t.pending = Becoming.ReferencePlan.frozenRule s.method s.mismatch
+Becoming.ReferencePlanTraces.frozen_leaves_unregistered : ∀ (s : Becoming.ReferencePlan.State),
+  ∃ i,
+    ∀ (t : Becoming.ReferencePlan.State),
+      Becoming.ReferencePlan.P.step
+          { channel := s.channel, method := s.method, mismatch := some i, pending := s.pending, fresh := s.fresh,
+            installed := s.installed, building := s.building, fuel := s.fuel, used := s.used, response := s.response }
+          Becoming.ReferencePlan.Act.frozen t →
+        ¬Becoming.Learning.Training.Through (Becoming.ReferencePlan.AgreeOn t.pending) fun x => x i = true
+@Becoming.ReferencePlanTraces.perform_response : ∀ {s t : Becoming.ReferencePlan.State} {i : Nat} {target : Bool},
+  Becoming.ReferencePlan.P.step s (Becoming.ReferencePlan.Act.perform i target) t →
+    t.response = s.channel i (Becoming.ReferencePlan.flip (Becoming.ReferencePlan.keyAt s.installed i) target)
+@Becoming.ReferencePlanTraces.perform_enabled : ∀ {s : Becoming.ReferencePlan.State} {i : Nat} {target : Bool},
+  s.building = false →
+    1 ≤ s.fuel → Generative.Enabled Becoming.ReferencePlan.P s (Becoming.ReferencePlan.Act.perform i target)
+@Becoming.ReferencePlanTraces.checked_drives : ∀ {s : Becoming.ReferencePlan.State} {i : Nat},
+  Becoming.ReferencePlan.keyAt s.installed i = s.channel i false →
+    s.building = false →
+      1 ≤ s.fuel →
+        ((∀ (target : Bool) (t : Becoming.ReferencePlan.State),
+            Becoming.ReferencePlan.P.step s (Becoming.ReferencePlan.Act.perform i target) t → t.response = target) ↔
+          s.channel i false ≠ s.channel i true)
+@Becoming.ReferencePlanTraces.drift_step : ∀ {s t : Becoming.ReferencePlan.State},
+  Becoming.ReferencePlan.P.step s Becoming.ReferencePlan.Act.drift t →
+    (t.channel = fun i b => !s.channel i b) ∧ t.installed = s.installed
+@Becoming.ReferencePlanTraces.drift_misses : ∀ {s t u : Becoming.ReferencePlan.State} {i : Nat},
+  Becoming.ReferencePlan.keyAt s.installed i = s.channel i false →
+    s.channel i false ≠ s.channel i true →
+      Becoming.ReferencePlan.P.step s Becoming.ReferencePlan.Act.drift t →
+        ∀ (target : Bool),
+          Becoming.ReferencePlan.P.step t (Becoming.ReferencePlan.Act.perform i target) u → u.response ≠ target
+Becoming.ReferencePlanTraces.actualWord_rounds : Becoming.ReferencePlan.actualWord =
+  Becoming.ReferencePlanTraces.firstRound ++ Becoming.ReferencePlanTraces.secondRound ++
+    Becoming.ReferencePlanTraces.lastUses
+@Becoming.ReferencePlanTraces.history_rounds : ∀ {t : Becoming.ReferencePlan.State},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.initial Becoming.ReferencePlan.actualWord t ↔
+    ∃ m₁ m₂,
+      Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.initial Becoming.ReferencePlanTraces.firstRound
+          m₁ ∧
+        Generative.Trace Becoming.ReferencePlan.P m₁ Becoming.ReferencePlanTraces.secondRound m₂ ∧
+          Generative.Trace Becoming.ReferencePlan.P m₂ Becoming.ReferencePlanTraces.lastUses t
+@Becoming.ReferencePlanTraces.firstRound_trace : ∀ {t : Becoming.ReferencePlan.State},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.initial Becoming.ReferencePlanTraces.firstRound t ↔
+    t = Becoming.ReferencePlan.repairedFirst
+@Becoming.ReferencePlanTraces.secondRound_trace : ∀ {t : Becoming.ReferencePlan.State},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.repairedFirst
+      Becoming.ReferencePlanTraces.secondRound t ↔
+    t = Becoming.ReferencePlan.repairedSecond
+@Becoming.ReferencePlanTraces.first_mismatch_step : ∀ {t : Becoming.ReferencePlan.State},
+  Becoming.ReferencePlan.P.step Becoming.ReferencePlan.initial (Becoming.ReferencePlan.Act.perform 0 true) t ↔
+    t = Becoming.ReferencePlan.failedFirst
+@Becoming.ReferencePlanTraces.first_repair : ∀ {t : Becoming.ReferencePlan.State},
+  (∃ as, as.length = 3 ∧ Generative.Trace Becoming.ReferencePlanTraces.chosen Becoming.ReferencePlan.failedFirst as t) ↔
+    t = Becoming.ReferencePlan.repairedFirst
+@Becoming.ReferencePlanTraces.second_repair : ∀ {t : Becoming.ReferencePlan.State},
+  (∃ as,
+      as.length = 4 ∧ Generative.Trace Becoming.ReferencePlanTraces.chosen Becoming.ReferencePlan.failedSecond as t) ↔
+    t = Becoming.ReferencePlan.repairedSecond
+@Becoming.ReferencePlanTraces.second_mismatch_trace : ∀ {t : Becoming.ReferencePlan.State},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.repairedFirst
+      [Becoming.ReferencePlan.Act.perform 0 true, Becoming.ReferencePlan.Act.perform 1 true] t ↔
+    t = Becoming.ReferencePlan.failedSecond
+@Becoming.ReferencePlanTraces.finished_trace : ∀ {t : Becoming.ReferencePlan.State},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.repairedSecond
+      [Becoming.ReferencePlan.Act.perform 1 true, Becoming.ReferencePlan.Act.perform 0 true] t ↔
+    t = Becoming.ReferencePlan.finished
+Becoming.ReferencePlanTraces.first_use_meets : ∃ t,
+  Becoming.ReferencePlan.P.step Becoming.ReferencePlan.repairedFirst (Becoming.ReferencePlan.Act.perform 0 true) t ∧
+    t.response = true
+Becoming.ReferencePlanTraces.second_use_meets : ∃ t,
+  Becoming.ReferencePlan.P.step Becoming.ReferencePlan.repairedSecond (Becoming.ReferencePlan.Act.perform 1 true) t ∧
+    t.response = true
+@Becoming.ReferencePlanTraces.rounds_change_method : ∀ {t₁ t₂ : Becoming.ReferencePlan.State},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.initial Becoming.ReferencePlanTraces.firstRound t₁ →
+    Generative.Trace Becoming.ReferencePlan.P t₁ Becoming.ReferencePlanTraces.secondRound t₂ →
+      Becoming.ReferencePlan.initial.method = [] ∧ t₁.method = [0] ∧ t₂.method = [1, 0]
+@Becoming.ReferencePlanTraces.first_round_installs_contact : ∀ {t : Becoming.ReferencePlan.State},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.initial Becoming.ReferencePlanTraces.firstRound t →
+    Becoming.ReferencePlan.keyAt Becoming.ReferencePlan.initial.installed 0 = false ∧
+      Becoming.ReferencePlan.keyAt t.installed 0 = true ∧ ¬0 ∈ Becoming.ReferencePlan.initial.method ∧ 0 ∈ t.method
+@Becoming.ReferencePlanTraces.first_round_registers : ∀ {t : Becoming.ReferencePlan.State},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.initial Becoming.ReferencePlanTraces.firstRound t →
+    (Becoming.Learning.Training.Through (Becoming.ReferencePlan.alikeOnInstalled t) fun x => x 0 = true) ∧
+      ¬Becoming.Learning.Training.Through (Becoming.ReferencePlan.alikeOnInstalled Becoming.ReferencePlan.initial)
+          fun x => x 0 = true
+@Becoming.ReferencePlanTraces.second_round_registers : ∀ {t : Becoming.ReferencePlan.State},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.repairedFirst
+      Becoming.ReferencePlanTraces.secondRound t →
+    (Becoming.Learning.Training.Through (Becoming.ReferencePlan.alikeOnInstalled t) fun x => x 1 = true) ∧
+      ¬Becoming.Learning.Training.Through (Becoming.ReferencePlan.alikeOnInstalled Becoming.ReferencePlan.repairedFirst)
+          fun x => x 1 = true
+@Becoming.ReferencePlanTraces.first_round_meets : ∀ {t u : Becoming.ReferencePlan.State} {target : Bool},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.initial Becoming.ReferencePlanTraces.firstRound t →
+    Becoming.ReferencePlan.P.step t (Becoming.ReferencePlan.Act.perform 0 target) u → u.response = target
+@Becoming.ReferencePlanTraces.second_round_meets : ∀ {t u : Becoming.ReferencePlan.State} {target : Bool},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.repairedFirst
+      Becoming.ReferencePlanTraces.secondRound t →
+    (Becoming.ReferencePlan.P.step t (Becoming.ReferencePlan.Act.perform 0 target) u → u.response = target) ∧
+      (Becoming.ReferencePlan.P.step t (Becoming.ReferencePlan.Act.perform 1 target) u → u.response = target)
+@Becoming.ReferencePlanTraces.history_uses_fuel : ∀ {t : Becoming.ReferencePlan.State},
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.initial Becoming.ReferencePlan.actualWord t →
+    t.fuel = 15 ∧ t.used = 15
+Becoming.ReferencePlanTraces.frozen_control_fails : ∃ t,
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.failedFirst
+      [Becoming.ReferencePlan.Act.frozen, Becoming.ReferencePlan.Act.install, Becoming.ReferencePlan.Act.perform 0 true]
+      t ∧
+    t.response = false ∧ t.installed = []
+Becoming.ReferencePlanTraces.frozen_second_control_fails : ∃ t,
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.failedSecond
+      [Becoming.ReferencePlan.Act.frozen, Becoming.ReferencePlan.Act.probe, Becoming.ReferencePlan.Act.install,
+        Becoming.ReferencePlan.Act.perform 1 true]
+      t ∧
+    t.response = false ∧
+      Becoming.ReferencePlan.keyAt t.installed 0 = true ∧ Becoming.ReferencePlan.keyAt t.installed 1 = false
+Becoming.ReferencePlanTraces.drift_control_fails : ∃ t,
+  Generative.Trace Becoming.ReferencePlan.P Becoming.ReferencePlan.repairedFirst
+      [Becoming.ReferencePlan.Act.drift, Becoming.ReferencePlan.Act.perform 0 true] t ∧
+    (t.response, t.mismatch, t.fuel, t.used) = (false, some 0, 23, 7)
+@Becoming.ReferencePlanTraces.erased_no_repair : ∀ {t : Becoming.ReferencePlan.State},
+  Becoming.ReferencePlan.P.step Becoming.ReferencePlan.failedFirst Becoming.ReferencePlan.Act.erase t →
+    ¬∃ a u, Becoming.ReferencePlanTraces.chosen.step t a u
+Becoming.ReferencePlanTraces.small_support_no_repair : ¬∃ as t,
+    as.length = 3 ∧
+      Generative.Trace Becoming.ReferencePlanTraces.chosen
+        (have __src := Becoming.ReferencePlan.failedFirst;
+        { channel := __src.channel, method := __src.method, mismatch := __src.mismatch, pending := __src.pending,
+          fresh := __src.fresh, installed := __src.installed, building := __src.building, fuel := 3, used := __src.used,
+          response := __src.response })
+        as t
+Becoming.ReferencePlanTraces.small_support_uses_fuel : ∃ t,
+  (∃ as,
+      as.length = 2 ∧
+        Generative.Trace Becoming.ReferencePlanTraces.chosen
+          (have __src := Becoming.ReferencePlan.failedFirst;
+          { channel := __src.channel, method := __src.method, mismatch := __src.mismatch, pending := __src.pending,
+            fresh := __src.fresh, installed := __src.installed, building := __src.building, fuel := 3,
+            used := __src.used, response := __src.response })
+          as t) ∧
+    (t.fuel, t.used, t.installed) = (0, 4, [])
+Becoming.ReferencePlanTraces.constant_channel_no_repair : ¬∃ as t,
+    as.length = 3 ∧
+      Generative.Trace Becoming.ReferencePlanTraces.chosen
+        (have __src := Becoming.ReferencePlan.failedFirst;
+        { channel := fun x x_1 => false, method := __src.method, mismatch := __src.mismatch, pending := __src.pending,
+          fresh := __src.fresh, installed := __src.installed, building := __src.building, fuel := __src.fuel,
+          used := __src.used, response := __src.response })
+        as t
+Becoming.ReferencePlanTraces.constant_channel_uses_fuel : ∃ t,
+  (∃ as,
+      as.length = 2 ∧
+        Generative.Trace Becoming.ReferencePlanTraces.chosen
+          (have __src := Becoming.ReferencePlan.failedFirst;
+          { channel := fun x x_1 => false, method := __src.method, mismatch := __src.mismatch, pending := __src.pending,
+            fresh := __src.fresh, installed := __src.installed, building := __src.building, fuel := __src.fuel,
+            used := __src.used, response := __src.response })
+          as t) ∧
+    (t.fuel, t.used, Becoming.ReferencePlan.valid t.fresh, t.installed) = (26, 4, false, [])
+Becoming.ReferencePlanTraces.exhausted_not_enabled : ¬Generative.Enabled Becoming.ReferencePlan.P
+    (have __src := Becoming.ReferencePlan.repairedFirst;
+    { channel := __src.channel, method := __src.method, mismatch := __src.mismatch, pending := __src.pending,
+      fresh := __src.fresh, installed := __src.installed, building := __src.building, fuel := 0, used := __src.used,
+      response := __src.response })
+    (Becoming.ReferencePlan.Act.perform 0 true)

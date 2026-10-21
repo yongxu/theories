@@ -1,0 +1,157 @@
+@Becoming.Limit.true_ne_false' : ∀ {b : Bool}, b = true → b = false → False
+@Becoming.Limit.converges_unique : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m : Becoming.Limit.Method P} {r : Becoming.Run P} {b c : Bool},
+  Becoming.Limit.Converges m r b → Becoming.Limit.Converges m r c → b = c
+@Becoming.Limit.not_recurs_of_no : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m : Becoming.Limit.Method P} {r : Becoming.Run P}, Becoming.Limit.Converges m r false → ¬Becoming.Limit.YesRecurs m r
+@Becoming.Limit.Verifies.outside_of_no : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m : Becoming.Limit.Method P} {K : Becoming.Run P → Prop},
+  Becoming.Limit.Verifies m K → ∀ {r : Becoming.Run P}, Becoming.Limit.Converges m r false → ¬K r
+@Becoming.Limit.Refutes.outside_of_no : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m : Becoming.Limit.Method P} {K : Becoming.Run P → Prop},
+  Becoming.Limit.Refutes m K → ∀ {r : Becoming.Run P}, Becoming.Limit.Converges m r false → ¬K r
+@Becoming.Limit.verifies_iff_union : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m : Becoming.Limit.Method P} {K : Becoming.Run P → Prop},
+  Becoming.Limit.Verifies m K → ∀ (r : Becoming.Run P), K r ↔ ∃ n, Becoming.Limit.YesFrom m n r
+@Becoming.Limit.yesFrom_closed : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m : Becoming.Limit.Method P},
+  Becoming.Limit.ByRecord m →
+    ∀ {n : Nat} {r : Becoming.Run P}, Becoming.Adheres (Becoming.Limit.YesFrom m n) r → Becoming.Limit.YesFrom m n r
+@Becoming.Limit.refutes_iff_meet : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m : Becoming.Limit.Method P} {K : Becoming.Run P → Prop},
+  Becoming.Limit.Refutes m K → ∀ (r : Becoming.Run P), K r ↔ ∀ (n : Nat), Becoming.Limit.YesAfter m n r
+@Becoming.Limit.yesAfter_verifiable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m : Becoming.Limit.Method P},
+  Becoming.Limit.ByRecord m → ∀ (n : Nat), Becoming.Verifiable (Becoming.Limit.YesAfter m n)
+Becoming.Limit.clear_of_below : ∀ (s : Nat → Bool) {k : Nat},
+  (∀ (j : Nat), j < k → s j = false) → Becoming.clear s k = true
+@Becoming.Limit.and_congr2 : ∀ {a a' b b' : Bool}, a = a' → b = b' → (a && b) = (a' && b')
+@Becoming.Limit.clear_congr : ∀ {s s' : Nat → Bool} {k : Nat},
+  (∀ (j : Nat), j < k → s j = s' j) → Becoming.clear s k = Becoming.clear s' k
+@Becoming.Limit.clear_false_of_true : ∀ {s : Nat → Bool} {j k : Nat}, s j = true → j < k → Becoming.clear s k = false
+@Becoming.Limit.true_of_not_clear : ∀ {s : Nat → Bool} {k : Nat}, Becoming.clear s k = false → ∃ j, s j = true
+@Becoming.Limit.eq_true_of_not_false : ∀ {b : Bool}, (!b) = false → b = true
+@Becoming.Limit.noneFailed_byRecord : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {fails : Nat → Becoming.Run P → Bool},
+  Becoming.ByPrefixes fails → Becoming.Limit.ByRecord (Becoming.Limit.noneFailed fails)
+@Becoming.Limit.noneFailed_verifies : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {fails : Nat → Becoming.Run P → Bool},
+  Becoming.Limit.Verifies (Becoming.Limit.noneFailed fails) (Becoming.Passes fails)
+@Becoming.Limit.noneFailed_refutes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {fails : Nat → Becoming.Run P → Bool},
+  Becoming.Limit.Refutes (Becoming.Limit.noneFailed fails) (Becoming.Passes fails)
+@Becoming.Limit.someSucceeded_byRecord : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {succeeds : Nat → Becoming.Run P → Bool},
+  Becoming.ByPrefixes succeeds → Becoming.Limit.ByRecord (Becoming.Limit.someSucceeded succeeds)
+@Becoming.Limit.someSucceeded_of : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {succeeds : Nat → Becoming.Run P → Bool} {r : Becoming.Run P} {j k : Nat},
+  succeeds j r = true → j < k → Becoming.Limit.someSucceeded succeeds k r = true
+@Becoming.Limit.succeeds_of_some : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {succeeds : Nat → Becoming.Run P → Bool} {r : Becoming.Run P} {k : Nat},
+  Becoming.Limit.someSucceeded succeeds k r = true → Becoming.Limit.Succeeds succeeds r
+@Becoming.Limit.someSucceeded_verifies : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {succeeds : Nat → Becoming.Run P → Bool},
+  Becoming.Limit.Verifies (Becoming.Limit.someSucceeded succeeds) (Becoming.Limit.Succeeds succeeds)
+@Becoming.Limit.someSucceeded_refutes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {succeeds : Nat → Becoming.Run P → Bool},
+  Becoming.Limit.Refutes (Becoming.Limit.someSucceeded succeeds) (Becoming.Limit.Succeeds succeeds)
+@Becoming.Limit.both_byRecord : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m m' : Becoming.Limit.Method P},
+  Becoming.Limit.ByRecord m → Becoming.Limit.ByRecord m' → Becoming.Limit.ByRecord (Becoming.Limit.both m m')
+@Becoming.Limit.both_verifies : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m m' : Becoming.Limit.Method P} {K K' : Becoming.Run P → Prop},
+  Becoming.Limit.Verifies m K →
+    Becoming.Limit.Verifies m' K' → Becoming.Limit.Verifies (Becoming.Limit.both m m') fun r => K r ∧ K' r
+@Becoming.Limit.or_left' : ∀ {a b : Bool}, a = true → (a || b) = true
+@Becoming.Limit.or_right' : ∀ {a b : Bool}, b = true → (a || b) = true
+@Becoming.Limit.mark_cleared : ∀ {p : Bool × Bool} {a b : Bool},
+  Becoming.Limit.joint p a b = true → (Becoming.Limit.mark p a b).fst = false ∧ (Becoming.Limit.mark p a b).snd = false
+@Becoming.Limit.mark_carried : ∀ {p : Bool × Bool} {a b : Bool},
+  Becoming.Limit.joint p a b = false →
+    (Becoming.Limit.mark p a b).fst = (p.fst || a) ∧ (Becoming.Limit.mark p a b).snd = (p.snd || b)
+@Becoming.Limit.pending_byRecord : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m m' : Becoming.Limit.Method P},
+  Becoming.Limit.ByRecord m →
+    Becoming.Limit.ByRecord m' →
+      ∀ (k : Nat) (r r' : Becoming.Run P),
+        Becoming.Run.AgreeUpTo k r r' → Becoming.Limit.pending m m' k r = Becoming.Limit.pending m m' k r'
+@Becoming.Limit.jointly_byRecord : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m m' : Becoming.Limit.Method P},
+  Becoming.Limit.ByRecord m → Becoming.Limit.ByRecord m' → Becoming.Limit.ByRecord (Becoming.Limit.jointly m m')
+@Becoming.Limit.mark_origin : ∀ {p g : Nat → Bool} {c : Nat},
+  (∀ (k : Nat), p (k + 1) = true → (p k || g k) = true) →
+    p c = false → ∀ (d : Nat), (p (c + d) || g (c + d)) = true → ∃ j, c ≤ j ∧ g j = true
+@Becoming.Limit.mark_kept : ∀ {p g J : Nat → Bool} {a : Nat},
+  (∀ (k : Nat), J k = false → p (k + 1) = (p k || g k)) →
+    g a = true → ∀ (d : Nat), (∀ (k : Nat), a ≤ k → k < a + d → J k = false) → (p (a + d) || g (a + d)) = true
+@Becoming.Limit.jointly_refutes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {m m' : Becoming.Limit.Method P} {K K' : Becoming.Run P → Prop},
+  Becoming.Limit.Refutes m K →
+    Becoming.Limit.Refutes m' K' → Becoming.Limit.Refutes (Becoming.Limit.jointly m m') fun r => K r ∧ K' r
+@Becoming.Limit.identifies_iff_tracks : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {V : Type u_3}
+  {g : Nat → Becoming.Run P → V} {H : Becoming.Run P → V},
+  Becoming.Limit.Identifies g H ↔ Becoming.Limit.Tracks g fun x r => H r
+@Becoming.Limit.Tracks.agree : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {V : Type u_3}
+  {g h h' : Nat → Becoming.Run P → V},
+  Becoming.Limit.Tracks g h →
+    Becoming.Limit.Tracks g h' → ∀ (r : Becoming.Run P), ∃ n, ∀ (k : Nat), n ≤ k → h k r = h' k r
+@Becoming.Limit.says_byRecord : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {V : Type u_3}
+  [inst : DecidableEq V] {g : Nat → Becoming.Run P → V},
+  (∀ (k : Nat) (r r' : Becoming.Run P), Becoming.Run.AgreeUpTo k r r' → g k r = g k r') →
+    ∀ (v : V), Becoming.Limit.ByRecord (Becoming.Limit.says g v)
+@Becoming.Limit.identifies_verifies : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {V : Type u_3}
+  [inst : DecidableEq V] {g : Nat → Becoming.Run P → V} {H : Becoming.Run P → V},
+  Becoming.Limit.Identifies g H → ∀ (v : V), Becoming.Limit.Verifies (Becoming.Limit.says g v) fun r => H r = v
+@Becoming.Limit.identifies_refutes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {V : Type u_3}
+  [inst : DecidableEq V] {g : Nat → Becoming.Run P → V} {H : Becoming.Run P → V},
+  Becoming.Limit.Identifies g H → ∀ (v : V), Becoming.Limit.Refutes (Becoming.Limit.says g v) fun r => H r = v
+@Becoming.Limit.still_byRecord : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} [inst : DecidableEq S],
+  Becoming.Limit.ByRecord Becoming.Limit.still
+@Becoming.Limit.still_verifies : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} [inst : DecidableEq S],
+  Becoming.Limit.Verifies Becoming.Limit.still Becoming.Enough.Settles
+Becoming.Limit.stage_eq : ∀ (next : Nat → (Nat → Bool) → Bool) (k t : Nat),
+  t < k → Becoming.Limit.stage next k t = Becoming.Limit.built next t
+Becoming.Limit.built_eq : ∀ (next : Nat → (Nat → Bool) → Bool) (k : Nat),
+  Becoming.Limit.built next k = next k (Becoming.Limit.stage next k)
+Becoming.Limit.Sequences.lastMove_byRecord : Becoming.Limit.ByRecord Becoming.Limit.Sequences.lastMove
+Becoming.Limit.Sequences.lastMove_refutes : Becoming.Limit.Refutes Becoming.Limit.Sequences.lastMove
+  Becoming.Sequences.Recurs
+Becoming.Limit.Sequences.notLastMove_byRecord : Becoming.Limit.ByRecord Becoming.Limit.Sequences.notLastMove
+Becoming.Limit.Sequences.notLastMove_verifies : Becoming.Limit.Verifies Becoming.Limit.Sequences.notLastMove
+  Becoming.Limit.Sequences.EventuallyFalse
+@Becoming.Limit.Sequences.not_recurs_of_eventuallyFalse : ∀ {r : Becoming.Run (Becoming.Sequences.process Bool)},
+  Becoming.Limit.Sequences.EventuallyFalse r → ¬Becoming.Sequences.Recurs r
+@Becoming.Limit.Sequences.against_act : ∀ {m : Becoming.Limit.Method (Becoming.Sequences.process Bool)},
+  Becoming.Limit.ByRecord m →
+    ∀ (k : Nat), (Becoming.Limit.Sequences.against m).act k = !m k (Becoming.Limit.Sequences.against m)
+Becoming.Limit.Sequences.recurs_not_verified : Becoming.Markov →
+  ∀ {m : Becoming.Limit.Method (Becoming.Sequences.process Bool)},
+    Becoming.Limit.ByRecord m → ¬Becoming.Limit.Verifies m Becoming.Sequences.Recurs
+Becoming.Limit.Sequences.eventuallyFalse_lpo : (∀ (r : Becoming.Run (Becoming.Sequences.process Bool)),
+    ¬Becoming.Sequences.Recurs r → Becoming.Limit.Sequences.EventuallyFalse r) →
+  Becoming.LPO
+Becoming.Limit.Sequences.or_not_self : ∀ (b : Bool), (b || !b) = true
+Becoming.Limit.Sequences.either_recurs_lpo : (∀ (m m' : Becoming.Limit.Method (Becoming.Sequences.process Bool))
+    (r : Becoming.Run (Becoming.Sequences.process Bool)),
+    Becoming.Limit.YesRecurs (fun k r => m k r || m' k r) r →
+      Becoming.Limit.YesRecurs m r ∨ Becoming.Limit.YesRecurs m' r) →
+  Becoming.LPO
+Becoming.Limit.Free.after_agree : ∀ (x : Nat → Bool) (h : Nat) (f : Bool → Bool) (t : Nat),
+  t ≤ h → Becoming.Limit.Free.after x h f t = x t
+Becoming.Limit.Free.after_step : ∀ (x : Nat → Bool) {h : Nat} (f : Bool → Bool) {n : Nat},
+  h ≤ n → Becoming.Limit.Free.after x h f (n + 1) = f (Becoming.Limit.Free.after x h f n)
+Becoming.Limit.Free.agree_after : ∀ (r : Becoming.Run Becoming.Enough.Free.process) (h : Nat) (f : Bool → Bool),
+  Becoming.Run.AgreeUpTo h r (Becoming.Limit.Free.run (Becoming.Limit.Free.after r.state h f))
+Becoming.Limit.Free.settles_dense : Becoming.Dense Becoming.Enough.Settles
+Becoming.Limit.Free.unsettled_dense : Becoming.Dense fun r => ¬Becoming.Enough.Settles r
+Becoming.Limit.Free.settles_not_verifiable : ¬Becoming.Verifiable Becoming.Enough.Settles
+Becoming.Limit.Free.settles_not_refutable : ¬Becoming.Refutable Becoming.Enough.Settles
+Becoming.Limit.Free.settles_verified : Becoming.Limit.Verifies Becoming.Limit.still Becoming.Enough.Settles
+@Becoming.Limit.Free.against_state : ∀ {m : Becoming.Limit.Method Becoming.Enough.Free.process},
+  Becoming.Limit.ByRecord m →
+    ∀ (k : Nat),
+      (Becoming.Limit.Free.against m).state (k + 1) =
+        Becoming.Limit.Free.toggle ((Becoming.Limit.Free.against m).state k) (m k (Becoming.Limit.Free.against m))
+Becoming.Limit.Free.settles_not_refuted : Becoming.Markov →
+  ∀ {m : Becoming.Limit.Method Becoming.Enough.Free.process},
+    Becoming.Limit.ByRecord m → ¬Becoming.Limit.Refutes m Becoming.Enough.Settles

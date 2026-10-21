@@ -1,0 +1,61 @@
+@Becoming.Run.window_trace : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P)
+  (k n : Nat), Generative.Trace P (r.state n) (r.window n k) (r.state (n + k))
+@Becoming.WithinClosure.refl : ∀ {X : Type u_1} {rel : X → X → Prop} (f : X), Becoming.WithinClosure rel f f
+@Becoming.WithinClosure.trans : ∀ {X : Type u_1} {rel : X → X → Prop} {f g h : X},
+  Becoming.WithinClosure rel f g → Becoming.WithinClosure rel g h → Becoming.WithinClosure rel f h
+@Becoming.WithinClosure.of_rel : ∀ {X : Type u_1} {rel : X → X → Prop} {f g : X},
+  rel f g → Becoming.WithinClosure rel f g
+@Becoming.WithinClosure.mono : ∀ {X : Type u_1} {rel rel' : X → X → Prop},
+  (∀ (g h : X), rel g h → rel' g h) → ∀ {f g : X}, Becoming.WithinClosure rel f g → Becoming.WithinClosure rel' f g
+@Becoming.WithinClosure.symm : ∀ {X : Type u_1} {rel : X → X → Prop},
+  (∀ (g h : X), rel g h → rel h g) → ∀ {f g : X}, Becoming.WithinClosure rel f g → Becoming.WithinClosure rel g f
+@Becoming.WithinClosure.not_rel : ∀ {X : Type u_1} {rel : X → X → Prop} {f g h : X},
+  Becoming.WithinClosure rel f g → ¬Becoming.WithinClosure rel f h → ¬rel g h
+@Becoming.closedUnder_withinClosure : ∀ {X : Type u_1} {rel : X → X → Prop} (f : X),
+  Becoming.ClosedUnder rel (Becoming.WithinClosure rel f)
+@Becoming.closure_iff_certified : ∀ {X : Type u_1} {rel : X → X → Prop} {region : X → Prop} {f : X},
+  (∀ (g : X), region g ↔ Becoming.WithinClosure rel f g) ↔
+    region f ∧ Becoming.ClosedUnder rel region ∧ ∀ (g : X), region g → Becoming.WithinClosure rel f g
+@Becoming.not_within_of_closed : ∀ {X : Type u_1} {rel : X → X → Prop} {region : X → Prop} {f g : X},
+  Becoming.ClosedUnder rel region → region f → ¬region g → ¬Becoming.WithinClosure rel f g
+@Becoming.withinClosureOf_iff : ∀ {X : Type u_1} {rel : X → X → Prop} {group : X → Prop} {g : X},
+  Becoming.WithinClosureOf rel group g ↔ ∃ f, group f ∧ Becoming.WithinClosure rel f g
+@Becoming.WithinClosureOf.of_member : ∀ {X : Type u_1} {rel : X → X → Prop} {group : X → Prop} {f g : X},
+  group f → Becoming.WithinClosure rel f g → Becoming.WithinClosureOf rel group g
+@Becoming.WithinClosureOf.least : ∀ {X : Type u_1} {rel : X → X → Prop} {group : X → Prop} {g : X},
+  Becoming.WithinClosureOf rel group g →
+    ∀ (region : X → Prop), Becoming.ClosedUnder rel region → (∀ (f : X), group f → region f) → region g
+@Becoming.closedUnder_withinClosureOf : ∀ {X : Type u_1} {rel : X → X → Prop} {group : X → Prop},
+  Becoming.ClosedUnder rel (Becoming.WithinClosureOf rel group)
+@Becoming.withinClosureOf_single : ∀ {X : Type u_1} {rel : X → X → Prop} {f g : X},
+  Becoming.WithinClosureOf rel (fun x => x = f) g ↔ Becoming.WithinClosure rel f g
+@Becoming.Reach.refl : ∀ {S : Type u_1} {A : Type u_2} (P : Generative.Process S A) (s : S), Becoming.Reach P s s
+@Becoming.Reach.of_step : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s t : S} {a : A},
+  P.step s a t → Becoming.Reach P s t
+@Becoming.Reach.trans : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s m t : S},
+  Becoming.Reach P s m → Becoming.Reach P m t → Becoming.Reach P s t
+@Becoming.Reach.map : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_1} {P : Generative.Process S A}
+  {Q : Generative.Process S' A} {f : S → S'},
+  (∀ (s : S) (a : A) (t : S), P.step s a t → Q.step (f s) a (f t)) →
+    ∀ {s t : S}, Becoming.Reach P s t → Becoming.Reach Q (f s) (f t)
+@Becoming.Reach.lift : ∀ {S : Type u_1} {A : Type u_2} {S' : Type u_1} {P : Generative.Process S A}
+  {Q : Generative.Process S' A} {q : S → S'},
+  (∀ (s : S) (a : A) (r : S'), Q.step (q s) a r → ∃ t, P.step s a t ∧ q t = r) →
+    ∀ {s : S} {r : S'}, Becoming.Reach Q (q s) r → ∃ t, Becoming.Reach P s t ∧ q t = r
+@Becoming.withinClosure_of_trace : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S} {as : List A}
+  {t : S}, Generative.Trace P s as t → Becoming.WithinClosure (Becoming.Steps P) s t
+@Becoming.reach_iff_withinClosure : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s t : S},
+  Becoming.Reach P s t ↔ Becoming.WithinClosure (Becoming.Steps P) s t
+@Becoming.Run.reach : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} (r : Becoming.Run P) (n k : Nat),
+  Becoming.Reach P (r.state n) (r.state (n + k))
+@Becoming.Invariant.trace : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {I : S → Prop},
+  Becoming.Invariant P I → ∀ {s t : S} {as : List A}, Generative.Trace P s as t → I s → I t
+@Becoming.invariant_iff_closedUnder : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {I : S → Prop},
+  Becoming.Invariant P I ↔ Becoming.ClosedUnder (Becoming.Steps P) I
+@Becoming.Invariant.reach : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {I : S → Prop},
+  Becoming.Invariant P I → ∀ {s t : S}, Becoming.Reach P s t → I s → I t
+@Becoming.Invariant.run : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {I : S → Prop},
+  Becoming.Invariant P I → ∀ (r : Becoming.Run P), I (r.state 0) → ∀ (n : Nat), I (r.state n)
+@Becoming.Novel.mono : ∀ {S : Type u_1} {A : Type u_2} {C : Type u_3} {F : Becoming.Frame S A C}
+  {reading reading' : C → Prop} {before : S → C → Prop} {t : S},
+  (∀ (c : C), reading c → reading' c) → Becoming.Novel F reading before t → Becoming.Novel F reading' before t
