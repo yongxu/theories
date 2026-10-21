@@ -2566,6 +2566,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   count times the band with one step, and each condition's point of no return, given the
   other levels, is a least level that does not rise as any other rises; the pair's rest and
   thresholds are these laws read for two.
+  Beyond a band a bound on the run takes its place: a run within B comes back within the count
+  of lists of levels within B and repeats, so whether a condition ends is decided by a finite
+  check, with no band and no order of states, and under mutual support each point of no return
+  is exact and falls as others rise wherever the run from the top level considered stays
+  within B.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of
