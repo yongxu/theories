@@ -2559,6 +2559,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   The laws of order, ending and dependence hold of a web of any number of conditions, the pair its
   case: along every chain of dependence, with positive draws, the end of one ends everything
   downstream of it, and a dependence cycle ends together.
+  Stated condition by condition, rest needs no equality of functions, so for finitely many
+  conditions within a band under mutual support a run comes to rest within the conditions'
+  count times the band with one step, and each condition's point of no return, given the
+  other levels, is a least level that does not rise as any other rises; the pair's rest and
+  thresholds are these laws read for two.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of

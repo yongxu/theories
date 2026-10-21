@@ -109,10 +109,10 @@ the regime's and not the level's alone.
   a draw). Where each one's giving rises with what is left of each, mutual support, the coupled step
   keeps the order of states (`Coupled.step_mono`), so a condition that ends, nothing from some step
   on, from a state ends from every state at or below it in both levels (`Coupled.ends_of_below`).
-  Within a band, mutual support gives within each draw (`Coupled.within_draw`), so what the draws
-  leave of each never rises along a run (`Coupled.left_falls`), and the run is still once that
-  repeats (`Coupled.still_of_left`); in whole numbers it is still from some step at most `2 hi + 1`
-  (`Coupled.comes_to_rest`). So for each level of its partner up to `hi` the first condition has a
+  Within a band, mutual support gives within each draw (`Coupled.Indexed.within_draw`), so what the
+  draws leave of each never rises along a run (`Coupled.Indexed.left_falls`), and the run is still once
+  that repeats (`Coupled.Indexed.still_of_left`); in whole numbers it is still from some step at most
+  `2 hi + 1` (`Coupled.comes_to_rest`), the web's law read for the pair (`Coupled.rests_by`). So for each level of its partner up to `hi` the first condition has a
   least level, `Coupled.threshold`, below which exactly it ends (`Coupled.ends_iff_below`): nothing at
   the rest below it, something from it on (`Coupled.fates`). The threshold does not rise as the
   partner's level rises (`Coupled.threshold_falls`): a condition's point of no return is a falling
@@ -152,7 +152,21 @@ the regime's and not the level's alone.
   one, the third depends on the second and the second on the first, the third not on the first, and
   the first's end ends the third (`Coupled.Indexed.Chain.cascades`). The positive draws cannot be
   dropped: with no draw on the second, the first still ends, yet the second never drains and the third
-  holds at two for ever (`Coupled.Indexed.Chain.stopped`).
+  holds at two for ever (`Coupled.Indexed.Chain.stopped`). Stated condition by condition, rest needs no
+  equality of functions: mutual support makes each condition's giving respect what is left condition
+  by condition (`Coupled.Indexed.respects`, `Coupled.Indexed.step_alike`, `Coupled.Indexed.run_alike`).
+  So for finitely many conditions, listed by a list covering them, within a band up to `hi`
+  (`Coupled.Indexed.Band`) each condition gives within its draw (`Coupled.Indexed.within_draw`), what
+  the draws leave of each never rises (`Coupled.Indexed.left_falls`), the run is still once that
+  repeats (`Coupled.Indexed.still_of_left`), and it is still from some step at most the conditions'
+  count times `hi` with one (`Coupled.Indexed.rests_by`, `Coupled.Indexed.comes_to_rest`). Whether a
+  condition ends is decided there (`Coupled.Indexed.ends_iff`). Each condition has, given the other
+  levels, a least level below which exactly it ends (`Coupled.Indexed.threshold`,
+  `Coupled.Indexed.ends_iff_below`), every state has its fate by it (`Coupled.Indexed.fates`), and the
+  threshold does not rise as any other level rises (`Coupled.Indexed.threshold_falls`): a condition's
+  point of no return is a falling function of everything that stands with it. The pair's rest and
+  points of no return are these laws read for the two conditions (`Coupled.band_web`,
+  `Coupled.pair_still`, `Coupled.threshold_pair`).
 * **The need is the regime's.** Where giving stops below a need `m` (`Gated g m`), every level at
   which giving meets a positive draw lies at or above the need (`root_above_need`), so the point of
   no return lies at least the draw above the need, and more than the draw above it exactly where
@@ -2247,17 +2261,6 @@ theorem pair_rises {g₁ g₂ : V → V → V} (rises₁ : D.Rises g₁) (rises�
   | true => fun _ _ le => rises₁ _ _ _ _ (le true) (le false)
   | false => fun _ _ le => rises₂ _ _ _ _ (le true) (le false)
 
-/-- The coupled step reads a state only through what the draws leave of it. -/
-theorem step_of_left {g₁ g₂ : V → V → V} {H₁ H₂ : V} {p q : V × V}
-    (same : left D H₁ H₂ p = left D H₁ H₂ q) : step D g₁ g₂ H₁ H₂ p = step D g₁ g₂ H₁ H₂ q := by
-  have same₁ : D.sub p.1 H₁ = D.sub q.1 H₁ := congrArg Prod.fst same
-  have same₂ : D.sub p.2 H₂ = D.sub q.2 H₂ := congrArg Prod.snd same
-  show (D.add (D.sub p.1 H₁) (g₁ (D.sub p.1 H₁) (D.sub p.2 H₂)),
-      D.add (D.sub p.2 H₂) (g₂ (D.sub p.1 H₁) (D.sub p.2 H₂))) =
-    (D.add (D.sub q.1 H₁) (g₁ (D.sub q.1 H₁) (D.sub q.2 H₂)),
-      D.add (D.sub q.2 H₂) (g₂ (D.sub q.1 H₁) (D.sub q.2 H₂)))
-  rw [same₁, same₂]
-
 /-- **Under mutual support the coupled step keeps the order of states.** Where each condition's
 giving rises with what is left of each, a state at or below another in both levels stays so after a
 step: the web's law for the pair. -/
@@ -2319,18 +2322,6 @@ theorem given_within {H hi a : V} (top : D.le (D.add (D.sub hi H) a) hi) : D.le 
       (Amounts.le_of_eq ((D.add_comm (D.sub hi H) H).trans (D.add_sub high)).symm)))
     (fun low => D.le_trans (by rw [D.sub_zero low, D.zero_add] at top; exact top) low)
 
-/-- **In a band, mutual support gives within each draw.** Where each condition's giving rises with what
-is left of each and the coupled step keeps a band up to `hi`, at every state in the band each
-condition gives at most its draw. -/
-theorem within_draw {g₁ g₂ : V → V → V} {H₁ H₂ hi : V} (rises₁ : D.Rises g₁) (rises₂ : D.Rises g₂)
-    (band : Band D g₁ g₂ H₁ H₂ hi) {x y : V} (high : D.le x hi) (high' : D.le y hi) :
-    D.le (g₁ (D.sub x H₁) (D.sub y H₂)) H₁ ∧ D.le (g₂ (D.sub x H₁) (D.sub y H₂)) H₂ :=
-  have top := band hi hi (D.le_refl hi) (D.le_refl hi)
-  have left₁ := Drawn.sub_mono H₁ high
-  have left₂ := Drawn.sub_mono H₂ high'
-  ⟨D.le_trans (rises₁ _ _ _ _ left₁ left₂) (given_within top.1),
-   D.le_trans (rises₂ _ _ _ _ left₁ left₂) (given_within top.2)⟩
-
 /-- Where a condition gives within its draw, what the draw leaves of it does not rise over a step. -/
 theorem left_le {H e a : V} (within : D.le a H) : D.le (D.sub (D.add e a) H) e :=
   (D.total H (D.add e a)).elim
@@ -2338,67 +2329,349 @@ theorem left_le {H e a : V} (within : D.le a H) : D.le (D.sub (D.add e a) H) e :
       (D.le_trans (Amounts.add_le_add_left e within) (Amounts.le_of_eq (D.add_comm e H)))))
     (fun low => by rw [D.sub_zero low]; exact D.zero_le e)
 
+
+/-! ### Coupled webs in whole numbers: rest and points of no return
+
+Stated condition by condition, a web's rest needs no equality of functions: under mutual support each
+condition's giving respects what is left condition by condition, so states alike at every condition
+step alike. For finitely many conditions, listed by a list covering them, a run within a band comes
+to rest, each condition's ending is decided at one step, and each condition's point of no return,
+given the other levels, is a least level that does not rise as any other rises. -/
+
+namespace Indexed
+
+variable {ι : Type} {G : ι → (ι → Nat) → Nat} {H : ι → Nat}
+
+/-- The coupled step of a web keeps every state with every level within `hi` within `hi`. -/
+def Band (G : ι → (ι → Nat) → Nat) (H : ι → Nat) (hi : Nat) : Prop :=
+  ∀ x : ι → Nat, (∀ i, x i ≤ hi) → ∀ i, step Drawn.whole G H x i ≤ hi
+
+/-- **Mutual support respects what is left condition by condition.** A giving that rises with what is
+left of each condition gives alike from what is left alike at every condition. -/
+theorem respects {g : (ι → Nat) → Nat} (rises : Rises Drawn.whole g) {e e' : ι → Nat}
+    (same : ∀ j, e j = e' j) : g e = g e' :=
+  Nat.le_antisymm (rises e e' fun j => Nat.le_of_eq (same j))
+    (rises e' e fun j => Nat.le_of_eq (same j).symm)
+
+/-- Under mutual support, states whose draws leave alike at every condition step alike. -/
+theorem step_alike (rises : ∀ i, Rises Drawn.whole (G i)) {x y : ι → Nat}
+    (same : ∀ j, x j - H j = y j - H j) (i : ι) :
+    step Drawn.whole G H x i = step Drawn.whole G H y i :=
+  show x i - H i + G i (left Drawn.whole H x) = y i - H i + G i (left Drawn.whole H y) from
+    congr (congrArg (· + ·) (same i)) (respects (rises i) same)
+
+/-- Under mutual support, runs from states alike at every condition stay alike at every condition. -/
+theorem run_alike (rises : ∀ i, Rises Drawn.whole (G i)) {x y : ι → Nat} (same : ∀ j, x j = y j) :
+    ∀ n i, (Law.run (step Drawn.whole G H) x).state n i = (Law.run (step Drawn.whole G H) y).state n i
+  | 0 => same
+  | n + 1 => step_alike rises fun j => congrArg (· - H j) (run_alike rises same n j)
+
+/-- Under mutual support, a condition ends from one of two states alike at every condition exactly
+where it ends from the other. -/
+theorem ends_alike (rises : ∀ i, Rises Drawn.whole (G i)) {x y : ι → Nat} (same : ∀ j, x j = y j)
+    (i : ι) : Ends Drawn.whole G H (fun w => w i) x ↔ Ends Drawn.whole G H (fun w => w i) y :=
+  ⟨fun ⟨N, gone⟩ => ⟨N, fun k => (run_alike rises same (N + k) i).symm.trans (gone k)⟩,
+   fun ⟨N, gone⟩ => ⟨N, fun k => (run_alike rises same (N + k) i).trans (gone k)⟩⟩
+
+/-- The run from the state after one step is the run, one step on. -/
+theorem run_shift (f : (ι → Nat) → (ι → Nat)) (s : ι → Nat) :
+    ∀ m, (Law.run f (f s)).state m = (Law.run f s).state (m + 1)
+  | 0 => rfl
+  | m + 1 => congrArg f (run_shift f s m)
+
+/-- **In a band, mutual support gives within each draw.** Where each condition's giving rises with
+what is left of each and the step keeps a band up to `hi`, at every state in the band each condition
+gives at most its draw. -/
+theorem within_draw (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat} (band : Band G H hi)
+    {x : ι → Nat} (high : ∀ i, x i ≤ hi) (i : ι) : G i (left Drawn.whole H x) ≤ H i :=
+  Nat.le_trans (rises i _ _ fun j => Nat.sub_le_sub_right (high j) (H j))
+    (given_within (D := Drawn.whole) (band (fun _ => hi) (fun _ => Nat.le_refl hi) i))
+
 /-- A run from a state within a band stays within it. -/
-theorem run_within {g₁ g₂ : V → V → V} {H₁ H₂ hi : V} (band : Band D g₁ g₂ H₁ H₂ hi) {s : V × V}
-    (high : D.le s.1 hi) (high' : D.le s.2 hi) :
-    ∀ n, D.le ((Law.run (step D g₁ g₂ H₁ H₂) s).state n).1 hi ∧
-      D.le ((Law.run (step D g₁ g₂ H₁ H₂) s).state n).2 hi
-  | 0 => ⟨high, high'⟩
-  | n + 1 => band _ _ (run_within band high high' n).1 (run_within band high high' n).2
+theorem run_within {hi : Nat} (band : Band G H hi) {s : ι → Nat} (high : ∀ i, s i ≤ hi) :
+    ∀ n i, (Law.run (step Drawn.whole G H) s).state n i ≤ hi
+  | 0 => high
+  | n + 1 => band _ (run_within band high n)
 
 /-- **In a band under mutual support, what is left of each condition never rises along a run.** -/
-theorem left_falls {g₁ g₂ : V → V → V} {H₁ H₂ hi : V} (rises₁ : D.Rises g₁) (rises₂ : D.Rises g₂)
-    (band : Band D g₁ g₂ H₁ H₂ hi) {s : V × V} (high : D.le s.1 hi) (high' : D.le s.2 hi) (n : Nat) :
-    D.Below (left D H₁ H₂ ((Law.run (step D g₁ g₂ H₁ H₂) s).state (n + 1)))
-      (left D H₁ H₂ ((Law.run (step D g₁ g₂ H₁ H₂) s).state n)) :=
-  have within := within_draw rises₁ rises₂ band (run_within band high high' n).1
-    (run_within band high high' n).2
-  ⟨left_le within.1, left_le within.2⟩
+theorem left_falls (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat} (band : Band G H hi)
+    {s : ι → Nat} (high : ∀ i, s i ≤ hi) (n : Nat) (i : ι) :
+    (Law.run (step Drawn.whole G H) s).state (n + 1) i - H i ≤
+      (Law.run (step Drawn.whole G H) s).state n i - H i :=
+  left_le (D := Drawn.whole) (within_draw rises band (run_within band high n) i)
 
-/-- **A run is still once what is left of both repeats.** Where a step of the run leaves what the draws
-leave of each level as it was, the run is still from the next step on. -/
-theorem still_of_left {g₁ g₂ : V → V → V} {H₁ H₂ : V} {s : V × V} {n : Nat}
-    (same : left D H₁ H₂ ((Law.run (step D g₁ g₂ H₁ H₂) s).state (n + 1)) =
-      left D H₁ H₂ ((Law.run (step D g₁ g₂ H₁ H₂) s).state n)) :
-    LastChange.StillFrom (Law.run (step D g₁ g₂ H₁ H₂) s) (n + 1) := fun k => by
-  have fixed : step D g₁ g₂ H₁ H₂ (Law.orbit (step D g₁ g₂ H₁ H₂) s (n + 1)) =
-      Law.orbit (step D g₁ g₂ H₁ H₂) s (n + 1) := step_of_left same
-  have stays : Law.orbit (step D g₁ g₂ H₁ H₂) (Law.orbit (step D g₁ g₂ H₁ H₂) s (n + 1)) k =
-      Law.orbit (step D g₁ g₂ H₁ H₂) s (n + 1) :=
-    (congrArg (Law.orbit (step D g₁ g₂ H₁ H₂) (Law.orbit (step D g₁ g₂ H₁ H₂) s (n + 1)))
-      (Nat.one_mul k)).symm.trans
-      (Law.orbit_mul (next := step D g₁ g₂ H₁ H₂) (s := Law.orbit (step D g₁ g₂ H₁ H₂) s (n + 1))
-        (p := 1) fixed k)
-  show step D g₁ g₂ H₁ H₂ (Law.orbit (step D g₁ g₂ H₁ H₂) s (n + 1 + k)) =
-    Law.orbit (step D g₁ g₂ H₁ H₂) s (n + 1 + k)
-  rw [Law.orbit_add _ s (n + 1) k, stays]
-  exact fixed
+/-- **A run is still once what is left of every condition repeats.** Under mutual support, where a
+step of the run leaves what the draws leave of each condition as it was, the run is still, condition
+by condition, from the next step on. -/
+theorem still_of_left (rises : ∀ i, Rises Drawn.whole (G i)) {s : ι → Nat} {n : Nat}
+    (same : ∀ j, (Law.run (step Drawn.whole G H) s).state (n + 1) j - H j =
+      (Law.run (step Drawn.whole G H) s).state n j - H j) :
+    ∀ k i, (Law.run (step Drawn.whole G H) s).state (n + 1 + k) i =
+      (Law.run (step Drawn.whole G H) s).state (n + 1) i
+  | 0, _ => rfl
+  | k + 1, i => step_alike rises
+      (fun j => (congrArg (· - H j) (still_of_left rises same k j)).trans (same j)) i
+
+/-- What the draws leave of the listed conditions, added. -/
+def leftOver (H : ι → Nat) (x : ι → Nat) : List ι → Nat
+  | [] => 0
+  | i :: cs => (x i - H i) + leftOver H x cs
+
+/-- What is left of every listed condition at most another's adds to at most the other's. -/
+theorem leftOver_le {x y : ι → Nat} (below : ∀ i, x i - H i ≤ y i - H i) :
+    ∀ cs, leftOver H x cs ≤ leftOver H y cs
+  | [] => Nat.le_refl 0
+  | i :: cs => Nat.add_le_add (below i) (leftOver_le below cs)
+
+/-- At most, and short at a listed condition, adds to less. -/
+theorem leftOver_lt {x y : ι → Nat} (below : ∀ i, x i - H i ≤ y i - H i) {j : ι}
+    (apart : x j - H j ≠ y j - H j) : ∀ cs, j ∈ cs → leftOver H x cs < leftOver H y cs
+  | _ :: cs, .head _ => Nat.add_lt_add_of_lt_of_le
+      (match Nat.lt_or_ge (x j - H j) (y j - H j) with
+        | .inl lt => lt
+        | .inr ge => absurd (Nat.le_antisymm (below j) ge) apart) (leftOver_le below cs)
+  | i :: cs, .tail _ mem => Nat.add_lt_add_of_le_of_lt (below i) (leftOver_lt below apart cs mem)
+
+/-- Within a band, what is left of the listed conditions adds to at most their count times `hi`. -/
+theorem leftOver_bound {x : ι → Nat} {hi : Nat} (high : ∀ i, x i ≤ hi) :
+    ∀ cs : List ι, leftOver H x cs ≤ cs.length * hi
+  | [] => Nat.zero_le _
+  | i :: cs => Nat.le_trans
+      (Nat.add_le_add (Nat.le_trans (Nat.sub_le (x i) (H i)) (high i)) (leftOver_bound high cs))
+      (Nat.le_of_eq ((Nat.add_comm _ _).trans (Nat.succ_mul cs.length hi).symm))
+
+/-- Whether what the draws leave of every listed condition is alike in two states. -/
+def alikeOn (H : ι → Nat) (x y : ι → Nat) : List ι → Bool
+  | [] => true
+  | i :: cs => if x i - H i = y i - H i then alikeOn H x y cs else false
+
+theorem alikeOn_true {x y : ι → Nat} :
+    ∀ {cs : List ι}, alikeOn H x y cs = true → ∀ i, i ∈ cs → x i - H i = y i - H i
+  | [], _, _, mem => nomatch mem
+  | j :: cs, all, i, mem =>
+    if h : x j - H j = y j - H j then
+      have rest : alikeOn H x y cs = true := (if_pos h).symm.trans all
+      match i, mem with
+      | _, .head _ => h
+      | i, .tail _ m => alikeOn_true rest i m
+    else Bool.noConfusion ((if_neg h).symm.trans all)
+
+theorem alikeOn_false {x y : ι → Nat} :
+    ∀ {cs : List ι}, alikeOn H x y cs = false → ∃ i, i ∈ cs ∧ x i - H i ≠ y i - H i
+  | [], differs => Bool.noConfusion differs
+  | j :: _, differs =>
+    if h : x j - H j = y j - H j then
+      match alikeOn_false ((if_pos h).symm.trans differs) with
+      | ⟨i, mem, apart⟩ => ⟨i, .tail _ mem, apart⟩
+    else ⟨j, .head _, h⟩
+
+/-- Within a band under mutual support, the run of a web of the listed conditions is still, condition
+by condition, from some step at most one more than what the draws leave of them, added. -/
+theorem rests_by (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat} (band : Band G H hi)
+    {cs : List ι} (covers : ∀ i, i ∈ cs) :
+    ∀ (d : Nat) (s : ι → Nat), (∀ i, s i ≤ hi) → leftOver H s cs ≤ d →
+      ∃ N, N ≤ d + 1 ∧ ∀ k i, (Law.run (step Drawn.whole G H) s).state (N + k) i =
+        (Law.run (step Drawn.whole G H) s).state N i
+  | 0, s, high, fuel =>
+    match h : alikeOn H (step Drawn.whole G H s) s cs with
+    | true => ⟨1, Nat.le_refl 1, still_of_left (n := 0) rises fun j => alikeOn_true h j (covers j)⟩
+    | false => match alikeOn_false h with
+      | ⟨_, mem, apart⟩ => absurd (Nat.lt_of_lt_of_le
+          (leftOver_lt (left_falls rises band high 0) apart cs mem) fuel) (Nat.not_lt_zero _)
+  | d + 1, s, high, fuel =>
+    match h : alikeOn H (step Drawn.whole G H s) s cs with
+    | true => ⟨1, Nat.succ_le_succ (Nat.zero_le _),
+        still_of_left (n := 0) rises fun j => alikeOn_true h j (covers j)⟩
+    | false => match alikeOn_false h with
+      | ⟨_, mem, apart⟩ =>
+        match rests_by rises band covers d (step Drawn.whole G H s) (band s high)
+          (Nat.le_of_lt_succ (Nat.lt_of_lt_of_le
+            (leftOver_lt (left_falls rises band high 0) apart cs mem) fuel)) with
+        | ⟨N, le, still⟩ => ⟨N + 1, Nat.succ_le_succ le, fun k i =>
+            (congrArg (fun m => (Law.run (step Drawn.whole G H) s).state m i)
+              (Nat.add_right_comm N 1 k)).trans
+            ((congrArg (· i) (run_shift (step Drawn.whole G H) s (N + k))).symm.trans
+              ((still k i).trans (congrArg (· i) (run_shift (step Drawn.whole G H) s N))))⟩
+
+/-- **Under mutual support within a band, a web's run comes to rest.** In whole numbers, where each
+condition's giving rises with what is left of each and the step keeps a band up to `hi`, the run from
+a state in the band is still, condition by condition, from some step at most the listed conditions'
+count times `hi` with one. -/
+theorem comes_to_rest (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat} (band : Band G H hi)
+    {cs : List ι} (covers : ∀ i, i ∈ cs) {s : ι → Nat} (high : ∀ i, s i ≤ hi) :
+    ∃ N, N ≤ cs.length * hi + 1 ∧ ∀ k i, (Law.run (step Drawn.whole G H) s).state (N + k) i =
+      (Law.run (step Drawn.whole G H) s).state N i :=
+  rests_by rises band covers (cs.length * hi) s high (leftOver_bound high cs)
+
+/-- Within a band under mutual support, whether a condition ends is decided at step
+`cs.length * hi + 1`. -/
+theorem ends_iff (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat} (band : Band G H hi)
+    {cs : List ι} (covers : ∀ i, i ∈ cs) {s : ι → Nat} (high : ∀ i, s i ≤ hi) (i : ι) :
+    Ends Drawn.whole G H (fun x => x i) s ↔
+      (Law.run (step Drawn.whole G H) s).state (cs.length * hi + 1) i = 0 :=
+  match comes_to_rest rises band covers high with
+  | ⟨N, le, still⟩ =>
+    have atK : (Law.run (step Drawn.whole G H) s).state (cs.length * hi + 1) i =
+        (Law.run (step Drawn.whole G H) s).state N i :=
+      (congrArg (fun n => (Law.run (step Drawn.whole G H) s).state n i)
+        (Becoming.add_sub_of_le le).symm).trans (still _ i)
+    ⟨fun ⟨M, gone⟩ => atK.trans ((still M i).symm.trans
+        ((congrArg (fun n => (Law.run (step Drawn.whole G H) s).state n i) (Nat.add_comm N M)).trans
+          (gone N))),
+     fun zero => ⟨cs.length * hi + 1, fun k =>
+       ((congrArg (fun n => (Law.run (step Drawn.whole G H) s).state n i)
+         ((congrArg (· + k) (Becoming.add_sub_of_le le).symm).trans
+           (Nat.add_assoc N (cs.length * hi + 1 - N) k))).trans
+         ((still _ i).trans atK.symm)).trans zero⟩⟩
+
+/-- A state with condition `i`'s level set to `a`, every other as in `y`. -/
+def setAt [DecidableEq ι] (y : ι → Nat) (i : ι) (a : Nat) : ι → Nat :=
+  fun j => if j = i then a else y j
+
+/-- Setting one level lower, the others alike, is at or below. -/
+theorem setAt_below [DecidableEq ι] {y y' : ι → Nat} {i : ι} {a b : Nat} (le : a ≤ b)
+    (others : ∀ j, y j ≤ y' j) : Below Drawn.whole (setAt y i a) (setAt y' i b) := fun j =>
+  if h : j = i then by
+    show (if j = i then a else y j) ≤ (if j = i then b else y' j)
+    rw [if_pos h, if_pos h]
+    exact le
+  else by
+    show (if j = i then a else y j) ≤ (if j = i then b else y' j)
+    rw [if_neg h, if_neg h]
+    exact others j
+
+/-- Within a band, setting a level within it keeps the state within it. -/
+theorem setAt_within [DecidableEq ι] {y : ι → Nat} {i : ι} {a hi : Nat} (high : a ≤ hi)
+    (highs : ∀ j, y j ≤ hi) (j : ι) : setAt y i a j ≤ hi :=
+  if h : j = i then by
+    show (if j = i then a else y j) ≤ hi
+    rw [if_pos h]
+    exact high
+  else by
+    show (if j = i then a else y j) ≤ hi
+    rw [if_neg h]
+    exact highs j
+
+/-- Whether condition `i`, from level `a` with the others as in `y`, is nothing at step `K`. -/
+def ending [DecidableEq ι] (G : ι → (ι → Nat) → Nat) (H : ι → Nat) (K : Nat) (y : ι → Nat)
+    (i : ι) (a : Nat) : Bool :=
+  decide ((Law.run (step Drawn.whole G H) (setAt y i a)).state K i = 0)
+
+/-- **Condition `i`'s point of no return, the others as in `y`.** The least level up to `hi + 1`
+from which condition `i` is not nothing at step `cs.length * hi + 1`. -/
+def threshold [DecidableEq ι] (G : ι → (ι → Nat) → Nat) (H : ι → Nat) (cs : List ι) (hi : Nat)
+    (y : ι → Nat) (i : ι) : Nat :=
+  leading (ending G H (cs.length * hi + 1) y i) (hi + 1)
+
+/-- **The point of no return is exact.** Within a band under mutual support, condition `i` ends from
+a level up to `hi`, the others as in `y` within the band, exactly where its level is below its
+threshold. -/
+theorem ends_iff_below [DecidableEq ι] (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat}
+    (band : Band G H hi) {cs : List ι} (covers : ∀ i, i ∈ cs) {y : ι → Nat} {i : ι} {a : Nat}
+    (high : a ≤ hi) (highs : ∀ j, y j ≤ hi) :
+    Ends Drawn.whole G H (fun x => x i) (setAt y i a) ↔ a < threshold G H cs hi y i :=
+  ⟨fun ends => (Nat.lt_or_ge a (threshold G H cs hi y i)).elim id fun ge =>
+      have short : threshold G H cs hi y i < hi + 1 := Nat.lt_of_le_of_lt ge (Nat.lt_succ_of_le high)
+      have notEnds : ¬ Ends Drawn.whole G H (fun x => x i) (setAt y i (threshold G H cs hi y i)) :=
+        fun e => absurd ((ends_iff rises band covers
+          (setAt_within (Nat.le_of_lt_succ short) highs) i).1 e)
+          (of_decide_eq_false (leading_false (ending G H (cs.length * hi + 1) y i) (hi + 1) short))
+      absurd (ends_of_below rises (fun _ _ b => b i) (setAt_below ge fun j => Nat.le_refl (y j)) ends)
+        notEnds,
+   fun lt => (ends_iff rises band covers (setAt_within high highs) i).2
+      (of_decide_eq_true (leading_true (ending G H (cs.length * hi + 1) y i) (hi + 1) a lt))⟩
+
+/-- **The point of no return does not rise as any other level rises.** Within a band under mutual
+support, others' levels at or above `y`'s, within the band, give condition `i` a threshold no
+higher. -/
+theorem threshold_falls [DecidableEq ι] (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat}
+    (band : Band G H hi) {cs : List ι} (covers : ∀ i, i ∈ cs) {y y' : ι → Nat} {i : ι}
+    (le : ∀ j, y j ≤ y' j) (highs' : ∀ j, y' j ≤ hi) :
+    threshold G H cs hi y' i ≤ threshold G H cs hi y i :=
+  (Nat.lt_or_ge (threshold G H cs hi y i) (threshold G H cs hi y' i)).elim
+    (fun lt =>
+      have high : threshold G H cs hi y i ≤ hi :=
+        Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lt (leading_le _ _))
+      have highs : ∀ j, y j ≤ hi := fun j => Nat.le_trans (le j) (highs' j)
+      have ends := ends_of_below rises (fun _ _ b => b i)
+        (setAt_below (Nat.le_refl (threshold G H cs hi y i)) le)
+        ((ends_iff_below rises band covers high highs').2 lt)
+      absurd ((ends_iff_below rises band covers high highs).1 ends) (Nat.lt_irrefl _))
+    id
+
+/-- **Every state in the band has its fate by the threshold.** Within a band under mutual support,
+the run from condition `i` at a level up to `hi`, the others as in `y` within the band, is still from
+some step at most `cs.length * hi + 1`, where condition `i` is nothing if its level is below its
+threshold and something if not. -/
+theorem fates [DecidableEq ι] (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat} (band : Band G H hi)
+    {cs : List ι} (covers : ∀ i, i ∈ cs) {y : ι → Nat} {i : ι} {a : Nat} (high : a ≤ hi)
+    (highs : ∀ j, y j ≤ hi) :
+    ∃ N, N ≤ cs.length * hi + 1 ∧
+      (∀ k j, (Law.run (step Drawn.whole G H) (setAt y i a)).state (N + k) j =
+        (Law.run (step Drawn.whole G H) (setAt y i a)).state N j) ∧
+      (a < threshold G H cs hi y i → (Law.run (step Drawn.whole G H) (setAt y i a)).state N i = 0) ∧
+      (threshold G H cs hi y i ≤ a → 0 < (Law.run (step Drawn.whole G H) (setAt y i a)).state N i) :=
+  match comes_to_rest rises band covers (setAt_within high highs) with
+  | ⟨N, le, still⟩ =>
+    have gone_iff : Ends Drawn.whole G H (fun x => x i) (setAt y i a) ↔
+        (Law.run (step Drawn.whole G H) (setAt y i a)).state N i = 0 :=
+      ⟨fun ⟨M, gone⟩ => (still M i).symm.trans
+          ((congrArg (fun n => (Law.run (step Drawn.whole G H) (setAt y i a)).state n i)
+            (Nat.add_comm N M)).trans (gone N)),
+       fun zero => ⟨N, fun k => (still k i).trans zero⟩⟩
+    ⟨N, le, still, fun lt => gone_iff.1 ((ends_iff_below rises band covers high highs).2 lt),
+     fun ge => Nat.pos_of_ne_zero fun zero => Nat.lt_irrefl _
+       (Nat.lt_of_lt_of_le ((ends_iff_below rises band covers high highs).1 (gone_iff.2 zero)) ge)⟩
+
+end Indexed
 
 /-! ### Coupled conditions in whole numbers -/
 
+/-- Each of the two conditions is listed. -/
+theorem covers_pair : ∀ b : Bool, b ∈ [true, false]
+  | true => .head _
+  | false => .tail _ (.head _)
+
+/-- The two conditions counted, times `hi`, are `hi` twice. -/
+theorem pair_count (hi : Nat) : [true, false].length * hi = hi + hi :=
+  (Nat.succ_mul 1 hi).trans (congrArg (· + hi) (Nat.one_mul hi))
+
+/-- The pair's band is the band of the pair read as a web. -/
+theorem band_web {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi : Nat} (band : Band Drawn.whole g₁ g₂ H₁ H₂ hi) :
+    Indexed.Band (pairGiving g₁ g₂) (pairDraw H₁ H₂) hi := fun w high b =>
+  match b with
+  | true => (band (w true) (w false) (high true) (high false)).1
+  | false => (band (w true) (w false) (high true) (high false)).2
+
+/-- Both levels of a pair within a band, read as a web's. -/
+theorem pair_within {s : Nat × Nat} {hi : Nat} (high : s.1 ≤ hi) (high' : s.2 ≤ hi) :
+    ∀ b, ofPair s b ≤ hi
+  | true => high
+  | false => high'
+
+/-- **A pair is still where its web is.** Where the run of the pair read as a web is still at both
+conditions from step `N`, the pair's run is still from `N`. -/
+theorem pair_still {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ : Nat} {s : Nat × Nat} {N : Nat}
+    (still : ∀ k b, (Law.run (Indexed.step Drawn.whole (pairGiving g₁ g₂) (pairDraw H₁ H₂))
+        (ofPair s)).state (N + k) b =
+      (Law.run (Indexed.step Drawn.whole (pairGiving g₁ g₂) (pairDraw H₁ H₂)) (ofPair s)).state N b) :
+    LastChange.StillFrom (Law.run (step Drawn.whole g₁ g₂ H₁ H₂) s) N := fun k =>
+  Prod.ext
+    ((pair_run (D := Drawn.whole) g₁ g₂ H₁ H₂ s (N + k + 1)).1.symm.trans ((still (k + 1) true).trans
+      ((still k true).symm.trans (pair_run (D := Drawn.whole) g₁ g₂ H₁ H₂ s (N + k)).1)))
+    ((pair_run (D := Drawn.whole) g₁ g₂ H₁ H₂ s (N + k + 1)).2.symm.trans ((still (k + 1) false).trans
+      ((still k false).symm.trans (pair_run (D := Drawn.whole) g₁ g₂ H₁ H₂ s (N + k)).2)))
+
 /-- Within a band under mutual support, the run from a state is still from some step at most one more
-than what the draws leave of both, added. -/
+than what the draws leave of both, added: the web's law for the pair. -/
 theorem rests_by {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi : Nat} (rises₁ : Drawn.whole.Rises g₁)
     (rises₂ : Drawn.whole.Rises g₂) (band : Band Drawn.whole g₁ g₂ H₁ H₂ hi) :
     ∀ (d : Nat) (s : Nat × Nat), s.1 ≤ hi → s.2 ≤ hi → (s.1 - H₁) + (s.2 - H₂) ≤ d →
-      ∃ N, N ≤ d + 1 ∧ LastChange.StillFrom (Law.run (step Drawn.whole g₁ g₂ H₁ H₂) s) N
-  | 0, s, high, high', fuel =>
-    have falls := left_falls rises₁ rises₂ band (s := s) high high' 0
-    ⟨1, Nat.le_refl 1, still_of_left (n := 0) (Decidable.byContradiction fun moved =>
-      absurd (Nat.lt_of_lt_of_le (Adjusted.sum_lt_of_below
-        (p := left Drawn.whole H₁ H₂ (step Drawn.whole g₁ g₂ H₁ H₂ s)) (q := left Drawn.whole H₁ H₂ s)
-        falls fun e => moved e.symm) fuel) (Nat.not_lt_zero _))⟩
-  | d + 1, s, high, high', fuel =>
-    have falls := left_falls rises₁ rises₂ band (s := s) high high' 0
-    if same : left Drawn.whole H₁ H₂ (step Drawn.whole g₁ g₂ H₁ H₂ s) = left Drawn.whole H₁ H₂ s then
-      ⟨1, Nat.succ_le_succ (Nat.zero_le _), still_of_left (n := 0) same⟩
-    else
-      have inner := band s.1 s.2 high high'
-      have ⟨N, le, still⟩ := rests_by rises₁ rises₂ band d (step Drawn.whole g₁ g₂ H₁ H₂ s) inner.1 inner.2
-        (Nat.le_of_lt_succ (Nat.lt_of_lt_of_le
-          (Adjusted.sum_lt_of_below (p := left Drawn.whole H₁ H₂ (step Drawn.whole g₁ g₂ H₁ H₂ s))
-            (q := left Drawn.whole H₁ H₂ s) falls fun e => same e.symm) fuel))
-      ⟨N + 1, Nat.succ_le_succ le, LastChange.still_succ still⟩
+      ∃ N, N ≤ d + 1 ∧ LastChange.StillFrom (Law.run (step Drawn.whole g₁ g₂ H₁ H₂) s) N :=
+  fun d s high high' fuel =>
+    match Indexed.rests_by (pair_rises rises₁ rises₂) (band_web band) covers_pair d (ofPair s)
+        (pair_within high high') fuel with
+    | ⟨N, le, still⟩ => ⟨N, le, pair_still still⟩
 
 /-- **Under mutual support within a band, a run comes to rest.** In whole numbers, where each
 condition's giving rises with what is left of each and the coupled step keeps a band up to `hi`, the run
@@ -2410,26 +2683,25 @@ theorem comes_to_rest {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi : Nat} (ri
   rests_by rises₁ rises₂ band (hi + hi) (x, y) high high'
     (Nat.add_le_add (Nat.le_trans (Nat.sub_le x H₁) high) (Nat.le_trans (Nat.sub_le y H₂) high'))
 
+/-- The first condition of the web read off a pair at step `2 hi + 1` is the pair's. -/
+theorem pair_at {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi : Nat} (s : Nat × Nat) :
+    (Law.run (Indexed.step Drawn.whole (pairGiving g₁ g₂) (pairDraw H₁ H₂)) (ofPair s)).state
+        ([true, false].length * hi + 1) true =
+      ((Law.run (step Drawn.whole g₁ g₂ H₁ H₂) s).state (hi + hi + 1)).1 :=
+  (congrArg (fun n => (Law.run (Indexed.step Drawn.whole (pairGiving g₁ g₂) (pairDraw H₁ H₂))
+      (ofPair s)).state (n + 1) true) (pair_count hi)).trans
+    (pair_run (D := Drawn.whole) g₁ g₂ H₁ H₂ s (hi + hi + 1)).1
+
 /-- Within a band under mutual support, whether the first condition ends is decided at step
-`2 hi + 1`. -/
+`2 hi + 1`: the web's law for the pair. -/
 theorem ends_iff {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi x y : Nat} (rises₁ : Drawn.whole.Rises g₁)
     (rises₂ : Drawn.whole.Rises g₂) (band : Band Drawn.whole g₁ g₂ H₁ H₂ hi) (high : x ≤ hi)
     (high' : y ≤ hi) :
     Ends Drawn.whole g₁ g₂ H₁ H₂ Prod.fst (x, y) ↔
       ((Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state (hi + hi + 1)).1 = 0 :=
-  have ⟨N, le, still⟩ := comes_to_rest rises₁ rises₂ band high high'
-  have atK : (Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state (hi + hi + 1) =
-      (Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state N :=
-    (congrArg (fun n => (Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state n)
-      (Becoming.add_sub_of_le le).symm).trans (LastChange.still_stays still _)
-  ⟨fun ⟨M, gone⟩ => (congrArg Prod.fst (atK.trans ((LastChange.still_stays still M).symm.trans
-      (congrArg (fun n => (Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state n)
-        (Nat.add_comm N M))))).trans (gone N),
-   fun zero => ⟨hi + hi + 1, fun k =>
-    (congrArg Prod.fst ((congrArg (fun n => (Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state n)
-      ((congrArg (· + k) (Becoming.add_sub_of_le le).symm).trans
-        (Nat.add_assoc N (hi + hi + 1 - N) k))).trans
-      ((LastChange.still_stays still _).trans atK.symm))).trans zero⟩⟩
+  (ends_pair (D := Drawn.whole)).trans ((Indexed.ends_iff (pair_rises rises₁ rises₂) (band_web band)
+    covers_pair (pair_within (s := (x, y)) high high') true).trans
+    ⟨fun zero => (pair_at (x, y)).symm.trans zero, fun zero => (pair_at (x, y)).trans zero⟩)
 
 /-- Whether the first condition, from level `x` with its partner at `y`, is nothing at step `2 hi + 1`. -/
 def ending (g₁ g₂ : Nat → Nat → Nat) (H₁ H₂ hi y x : Nat) : Bool :=
@@ -2440,41 +2712,58 @@ def ending (g₁ g₂ : Nat → Nat → Nat) (H₁ H₂ hi y x : Nat) : Bool :=
 def threshold (g₁ g₂ : Nat → Nat → Nat) (H₁ H₂ hi y : Nat) : Nat :=
   leading (ending g₁ g₂ H₁ H₂ hi y) (hi + 1)
 
+/-- Leading runs of `true` agree for readings that agree. -/
+theorem leading_congr {b b' : Nat → Bool} (same : ∀ x, b x = b' x) : ∀ k, leading b k = leading b' k
+  | 0 => rfl
+  | k + 1 => by
+    show (if leading b k = k ∧ b k = true then k + 1 else leading b k) =
+      (if leading b' k = k ∧ b' k = true then k + 1 else leading b' k)
+    rw [leading_congr same k, same k]
+
+/-- The pair from `x` with its partner at `y` is the web's state with the first level set to `x`. -/
+theorem setAt_pair (x y : Nat) : ∀ j, Indexed.setAt (ofPair (0, y)) true x j = ofPair (x, y) j
+  | true => if_pos rfl
+  | false => if_neg Bool.noConfusion
+
+/-- **The pair's point of no return is the web's**, the second condition at `y`. -/
+theorem threshold_pair {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi y : Nat} (rises₁ : Drawn.whole.Rises g₁)
+    (rises₂ : Drawn.whole.Rises g₂) :
+    threshold g₁ g₂ H₁ H₂ hi y =
+      Indexed.threshold (pairGiving g₁ g₂) (pairDraw H₁ H₂) [true, false] hi (ofPair (0, y)) true :=
+  leading_congr (fun x => congrArg (fun z => decide (z = 0))
+    ((pair_at (x, y)).symm.trans (Indexed.run_alike (pair_rises rises₁ rises₂) (setAt_pair x y)
+      ([true, false].length * hi + 1) true).symm)) (hi + 1)
+
 /-- **The point of no return is exact.** Within a band under mutual support, the first condition ends
 from a level and a partner's level up to `hi` exactly where its level is below the threshold for its
-partner's level. -/
+partner's level: the web's law for the pair. -/
 theorem ends_iff_below {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi x y : Nat} (rises₁ : Drawn.whole.Rises g₁)
     (rises₂ : Drawn.whole.Rises g₂) (band : Band Drawn.whole g₁ g₂ H₁ H₂ hi) (high : x ≤ hi)
     (high' : y ≤ hi) :
-    Ends Drawn.whole g₁ g₂ H₁ H₂ Prod.fst (x, y) ↔ x < threshold g₁ g₂ H₁ H₂ hi y :=
-  ⟨fun ends => (Nat.lt_or_ge x (threshold g₁ g₂ H₁ H₂ hi y)).elim id fun ge =>
-      have short : threshold g₁ g₂ H₁ H₂ hi y < hi + 1 := Nat.lt_of_le_of_lt ge (Nat.lt_succ_of_le high)
-      have notEnds : ¬ Ends Drawn.whole g₁ g₂ H₁ H₂ Prod.fst (threshold g₁ g₂ H₁ H₂ hi y, y) := fun e =>
-        absurd ((ends_iff rises₁ rises₂ band (Nat.le_of_lt_succ short) high').1 e)
-          (of_decide_eq_false (leading_false (ending g₁ g₂ H₁ H₂ hi y) (hi + 1) short))
-      absurd (ends_of_below (part := Prod.fst) (p := (threshold g₁ g₂ H₁ H₂ hi y, y)) (q := (x, y))
-        rises₁ rises₂ (fun _ _ b => b.1) ⟨ge, Nat.le_refl y⟩ ends) notEnds,
-   fun lt => (ends_iff rises₁ rises₂ band high high').2
-      (of_decide_eq_true (leading_true (ending g₁ g₂ H₁ H₂ hi y) (hi + 1) x lt))⟩
+    Ends Drawn.whole g₁ g₂ H₁ H₂ Prod.fst (x, y) ↔ x < threshold g₁ g₂ H₁ H₂ hi y := by
+  rw [threshold_pair rises₁ rises₂]
+  exact (ends_pair (D := Drawn.whole)).trans
+    ((Indexed.ends_alike (pair_rises rises₁ rises₂) (setAt_pair x y) true).symm.trans
+      (Indexed.ends_iff_below (pair_rises rises₁ rises₂) (band_web band) covers_pair high
+        (pair_within (s := (0, y)) (Nat.zero_le hi) high')))
 
 /-- **The point of no return falls as the partner rises.** Within a band under mutual support, a
-larger partner's level up to `hi` gives the first condition a threshold no higher. -/
+larger partner's level up to `hi` gives the first condition a threshold no higher: the web's law for
+the pair. -/
 theorem threshold_falls {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi y y' : Nat} (rises₁ : Drawn.whole.Rises g₁)
     (rises₂ : Drawn.whole.Rises g₂) (band : Band Drawn.whole g₁ g₂ H₁ H₂ hi) (le : y ≤ y')
-    (high' : y' ≤ hi) : threshold g₁ g₂ H₁ H₂ hi y' ≤ threshold g₁ g₂ H₁ H₂ hi y :=
-  (Nat.lt_or_ge (threshold g₁ g₂ H₁ H₂ hi y) (threshold g₁ g₂ H₁ H₂ hi y')).elim
-    (fun lt =>
-      have high : threshold g₁ g₂ H₁ H₂ hi y ≤ hi :=
-        Nat.le_of_lt_succ (Nat.lt_of_lt_of_le lt (leading_le _ _))
-      have ends := ends_of_below (part := Prod.fst) (p := (threshold g₁ g₂ H₁ H₂ hi y, y))
-        (q := (threshold g₁ g₂ H₁ H₂ hi y, y')) rises₁ rises₂ (fun _ _ b => b.1) ⟨Nat.le_refl _, le⟩
-        ((ends_iff_below rises₁ rises₂ band high high').2 lt)
-      absurd ((ends_iff_below rises₁ rises₂ band high (Nat.le_trans le high')).1 ends) (Nat.lt_irrefl _))
-    id
+    (high' : y' ≤ hi) : threshold g₁ g₂ H₁ H₂ hi y' ≤ threshold g₁ g₂ H₁ H₂ hi y := by
+  rw [threshold_pair rises₁ rises₂, threshold_pair rises₁ rises₂]
+  exact Indexed.threshold_falls (pair_rises rises₁ rises₂) (band_web band) covers_pair
+    (fun b => match b with
+      | true => Nat.le_refl 0
+      | false => le)
+    (pair_within (s := (0, y')) (Nat.zero_le hi) high')
 
 /-- **Every state in the band has its fate by the threshold.** Within a band under mutual support, the
 run from a level and a partner's level up to `hi` is still from some step at most `2 hi + 1`, where
-the first condition is nothing if its level is below the threshold and something if not. -/
+the first condition is nothing if its level is below the threshold and something if not: the web's
+law for the pair. -/
 theorem fates {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi x y : Nat} (rises₁ : Drawn.whole.Rises g₁)
     (rises₂ : Drawn.whole.Rises g₂) (band : Band Drawn.whole g₁ g₂ H₁ H₂ hi) (high : x ≤ hi)
     (high' : y ≤ hi) :
@@ -2483,17 +2772,20 @@ theorem fates {g₁ g₂ : Nat → Nat → Nat} {H₁ H₂ hi x y : Nat} (rises�
         ((Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state N).1 = 0) ∧
       (threshold g₁ g₂ H₁ H₂ hi y ≤ x →
         0 < ((Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state N).1) :=
-  have ⟨N, le, still⟩ := comes_to_rest rises₁ rises₂ band high high'
-  have gone_iff : Ends Drawn.whole g₁ g₂ H₁ H₂ Prod.fst (x, y) ↔
-      ((Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state N).1 = 0 :=
-    ⟨fun ⟨M, gone⟩ => (congrArg Prod.fst ((LastChange.still_stays still M).symm.trans
-        (congrArg (fun n => (Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state n)
-          (Nat.add_comm N M)))).trans (gone N),
-     fun zero => ⟨N, fun k => (congrArg Prod.fst (LastChange.still_stays still k)).trans zero⟩⟩
-  ⟨N, le, still, fun lt => gone_iff.1 ((ends_iff_below rises₁ rises₂ band high high').2 lt),
-   fun ge => Nat.pos_of_ne_zero fun zero =>
-    Nat.lt_irrefl _ (Nat.lt_of_lt_of_le ((ends_iff_below rises₁ rises₂ band high high').1
-      (gone_iff.2 zero)) ge)⟩
+  have rises := pair_rises (D := Drawn.whole) rises₁ rises₂
+  have alike := Indexed.run_alike (H := pairDraw H₁ H₂) rises (setAt_pair x y)
+  match Indexed.fates rises (band_web band) covers_pair high
+      (pair_within (s := (0, y)) (Nat.zero_le hi) high') with
+  | ⟨N, le, still, below, above⟩ =>
+    have toPair : (Law.run (Indexed.step Drawn.whole (pairGiving g₁ g₂) (pairDraw H₁ H₂))
+        (Indexed.setAt (ofPair (0, y)) true x)).state N true =
+        ((Law.run (step Drawn.whole g₁ g₂ H₁ H₂) (x, y)).state N).1 :=
+      (alike N true).trans (pair_run (D := Drawn.whole) g₁ g₂ H₁ H₂ (x, y) N).1
+    ⟨N, Nat.le_trans le (Nat.le_of_eq (congrArg (· + 1) (pair_count hi))),
+     pair_still fun k b => (alike (N + k) b).symm.trans ((still k b).trans (alike N b)),
+     fun lt => toPair.symm.trans (below (Eq.subst (motive := fun z => x < z) (threshold_pair rises₁ rises₂) lt)),
+     fun ge => Nat.lt_of_lt_of_le (above (Eq.subst (motive := fun z => z ≤ x) (threshold_pair rises₁ rises₂) ge))
+       (Nat.le_of_eq toPair)⟩
 
 /-- **A dependent condition ends after its partner.** In whole numbers, where the second condition
 gives nothing wherever nothing is left of the first and the first stays within its draw from step `N`
