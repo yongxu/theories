@@ -940,3 +940,21 @@ Evidence: the prior forms from memory, not reread; Lean in the record's receipt
 Boundary: AI check, one session; the optimum where no reference course is open, ending later than the first step, an order valuing what is left at the horizon, steps met again after a fall, rebuilding from below and several optimizers ranking courses not stated; SG5 not re-derived as the case of weights one; the witness's law and capacity chosen
 Integration: chapter §3.4, §7.1, T3's standing, §8.1 item 10 and the relation-to-known-results row 6
 ```
+
+<a id="rebuilding-check"></a>
+## A check: rebuilding from below (21 October 2026, SG9)
+
+An AI check (one session, 21 October), made while the Lean was written, of what SG5 ([horizon check](#horizon-check)) and SG8 ([weighted check](#weighted-check)) left open: the optimum where the level of greatest gain is out of one step's reach. **Verdict: the mathematics is known. With a linear objective, the optimal path from a stock below its optimal level is the most rapid approach path: nothing harvested until the level is reached, then held. The spine's form: every optimum of every order rising with the weighted draw rebuilds, under any weighting whose gain rises with the level, the reference being any course gaining the most against every open course, so that the earlier holding laws are its case; the restoration of what depends on the base is a law of the dependence web; and the witness shows the strict premise needed. That far-sight repairs damage to its own base only where its weighting falls slower than the base renews, and only up to the level its order favours, is the form's own step.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| The most rapid approach path: with a linear objective, approach the optimal stock as fast as possible, then hold it | Spence and Starrett, "Most Rapid Approach Paths in Accumulation Problems", International Economic Review 16 (1975); Clark, *Mathematical Bioeconomics* (1976) (from memory) | The course rising as fast as what is given allows is an optimum where the weighted gain rises up to `y` and is greatest there (`Optimum.rebuilding_frontier`); every optimum follows it while below `y`, drawing nothing (`Optimum.frontier_rebuilds`), and holds `y` after where `y` gains the most strictly (`Optimum.frontier_rebuilt`) |
+
+```text
+Result(s): new record optima-rebuild-a-depleted-base (SG9, new laws of Becoming.Optimum)
+Delta: a course gaining the most against every open course is an optimum and every optimum gains what it does (SG8's laws the case); below a level y out of one step's reach, where the next level rises with the level, nothing open rises faster than the course rising as fast as what is given allows; where the weighted gain rises up to y and is greatest there it is an optimum; where it rises strictly every optimum follows it while below y, drawing nothing, restoring what that level meets; where y gains the most strictly every optimum holds y after
+Supplied premises / correspondence: courses open from a start at most y; the next level rising with the level below y; the weighted gain rising up to y and greatest there; capacities covering y with its renewal; natural weights; discrete steps. Correspondence: Spence and Starrett 1975; Clark 1976
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; an overcompensating renewal, a gain with several peaks, an order valuing what is left at the horizon, steps met again after a fall and several optimizers ranking courses not stated; the witness's law and capacity chosen
+Integration: chapter §3.4, §7.1, §8.1 item 10 and the relation-to-known-results row 6
+```

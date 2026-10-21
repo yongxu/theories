@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-318 registered results: 298 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 796 curated edges join 271 results to the results they draw on.
+319 registered results: 299 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 799 curated edges join 272 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -163,6 +163,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [one-step-missing-laws][] ← <a id="one-step-missing-laws--laws-of-one-step-complete"></a>[laws-of-one-step-complete][]
 - [only-the-order-of-change-shows][] ← <a id="only-the-order-of-change-shows--laws-at-coarser-steps"></a>[laws-at-coarser-steps][]
 - [open-form-realization-under-revision][] ← <a id="open-form-realization-under-revision--positive-ground-open-futures"></a>[positive-ground-open-futures][] · <a id="open-form-realization-under-revision--continuation-condition-yields-living-significance"></a>[continuation-condition-yields-living-significance][]
+- [optima-rebuild-a-depleted-base][] ← <a id="optima-rebuild-a-depleted-base--a-weighting-faster-than-renewal-ends-the-base"></a>[a-weighting-faster-than-renewal-ends-the-base][] · <a id="optima-rebuild-a-depleted-base--horizon-optima-hold-the-greatest-renewal"></a>[horizon-optima-hold-the-greatest-renewal][] · <a id="optima-rebuild-a-depleted-base--what-an-optimum-does-beyond-what-couples-in"></a>[what-an-optimum-does-beyond-what-couples-in][]
 - [order-of-exchanges-is-the-invariant][] ← <a id="order-of-exchanges-is-the-invariant--exchanges-commute-unless-joined"></a>[exchanges-commute-unless-joined][]
 - [orders-as-a-sum-over-histories][] ← <a id="orders-as-a-sum-over-histories--losses-of-the-sum-over-histories"></a>[losses-of-the-sum-over-histories][] · <a id="orders-as-a-sum-over-histories--how-a-carried-difference-grows"></a>[how-a-carried-difference-grows][]
 - [organizational-formation-from-generative-comparison][] ← <a id="organizational-formation-from-generative-comparison--practical-judgment-under-living-significance"></a>[practical-judgment-under-living-significance][] · <a id="organizational-formation-from-generative-comparison--alignment-direction-under-widening"></a>[alignment-direction-under-widening][] *(interpretive)*
@@ -452,6 +453,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [one-step-missing-laws]: theories/becoming/results/records/one-step-missing-laws.md
 [only-the-order-of-change-shows]: theories/becoming/results/records/only-the-order-of-change-shows.md
 [open-form-realization-under-revision]: theories/becoming/results/records/open-form-realization-under-revision.md
+[optima-rebuild-a-depleted-base]: theories/becoming/results/records/optima-rebuild-a-depleted-base.md
 [order-of-exchanges-is-the-invariant]: theories/becoming/results/records/order-of-exchanges-is-the-invariant.md
 [orders-as-a-sum-over-histories]: theories/becoming/results/records/orders-as-a-sum-over-histories.md
 [organizational-formation-from-generative-comparison]: theories/becoming/results/records/organizational-formation-from-generative-comparison.md

@@ -69,6 +69,9 @@ Discounting (Ramsey 1928; Koopmans 1960); at a constant rate δ a level's weight
   - Preserved conditions: An order rising with the weighted draw across the horizon. [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
 - related, not a proved adapter: [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md). Far-sight keeps the optimizer's own base; here only where the weighting falls slower than the base renews.
 - related, not a proved adapter: [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md). A coupling a step keeps a dependence at every horizon; here what a weighting does to the optimizer's own base.
+- related, not a proved adapter: [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md). Rebuilding from below: where the weighting falls slower than the base renews, every optimum rebuilds a base below a level out of one step's reach.
+
+**Used by:** [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -86,6 +89,7 @@ Discounting (Ramsey 1928; Koopmans 1960); at a constant rate δ a level's weight
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T070401.903190Z/verification.json) | — |
 
 Aliases: `a weighting falling faster than renewal ends the base`, `an order weighting later draws less`, `discounting ends the base`, `the modified golden rule on the spine`, `权重下降快于更新时终结基础`, `Becoming.Optimum.frontier_gains_weighted`, `Becoming.Optimum.frontier_exhausts`, `Becoming.Web.frontier_exhausts`
 
@@ -93,6 +97,7 @@ Aliases: `a weighting falling faster than renewal ends the base`, `an order weig
 ### History
 
 - 21 October 2026: added (SG8), an order weighting later draws less: every optimum gains at each step what a course of greatest weighted gain does; where the weighting falls faster than every positive level renews every optimum ends its own base at the first step; where a level within reach renews faster none does; at the tie both are optima in the witness; study section 295.
+- 21 October 2026, SG9: weighted_frontier and frontier_gains_weighted are now the case of frontier_of_gainsMost and frontier_gains_of_most, a course gaining the most against every open course (record optima-rebuild-a-depleted-base, study section 296); this record's laws and their statements are unchanged.
 
 </details>
 

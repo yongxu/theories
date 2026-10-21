@@ -236,6 +236,13 @@
         "en": "A coupling a step keeps a dependence at every horizon; here what a weighting does to the optimizer's own base.",
         "zh": "每步的耦合在每个视野都保持依存；此处为权重对优化者自身基础的作用。"
       }
+    },
+    {
+      "id": "optima-rebuild-a-depleted-base",
+      "detail": {
+        "en": "Rebuilding from below: where the weighting falls slower than the base renews, every optimum rebuilds a base below a level out of one step's reach.",
+        "zh": "自下重建：权重下降慢于基础更新时，每个最优重建低于一步不可及水平的基础。"
+      }
     }
   ],
   "references": [
@@ -289,7 +296,7 @@
         "Becoming.Web.frontier_exhausts",
         "Becoming.Web.frontier_leaves"
       ],
-      "sha256": "814499c86249cfcf6e0ab73cc2b8439fbb3c51f849b982e8f9c818f7859d6ebd"
+      "sha256": "148dd31aca08bfd836e241f865d61ac7842ada8619ad64b9bfc878f8d0098b52"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -363,13 +370,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "73d42588f90a47ef67a8bc0dd7d2bee27fca88a9338c88ea0291e059cc4c63c0"
+      "sha256": "73df6bcb827f7fa6c4deffce457daac3a174359ae3c8a32e2f3280b264ad8e75"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T070401.903190Z/verification.json",
+      "role": "receipt",
+      "sha256": "5c584c2668b3ce2204014e6072bb285109fd5164fd48256617f911068c42c968",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T063915.104780Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T070401.903190Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -421,6 +434,10 @@
     {
       "en": "21 October 2026: added (SG8), an order weighting later draws less: every optimum gains at each step what a course of greatest weighted gain does; where the weighting falls faster than every positive level renews every optimum ends its own base at the first step; where a level within reach renews faster none does; at the tie both are optima in the witness; study section 295.",
       "zh": "2026年10月21日：新增（SG8），后来的汲取权重更小之序：每个最优每步的增益等于最大加权增益进程的增益；权重下降快于每个正水平的更新时，每个最优在第一步终结自己的基础；可及的某水平更新更快时没有最优这样做；见证中相持处两者都是最优；研究第 295 节。"
+    },
+    {
+      "en": "21 October 2026, SG9: weighted_frontier and frontier_gains_weighted are now the case of frontier_of_gainsMost and frontier_gains_of_most, a course gaining the most against every open course (record optima-rebuild-a-depleted-base, study section 296); this record's laws and their statements are unchanged.",
+      "zh": "2026年10月21日，SG9：weighted_frontier 与 frontier_gains_weighted 现为 frontier_of_gainsMost 与 frontier_gains_of_most（对每个开放进程增益最大的进程）的情形（记录 optima-rebuild-a-depleted-base，研究第 296 节）；本记录的定律及其陈述不变。"
     }
   ]
 }
