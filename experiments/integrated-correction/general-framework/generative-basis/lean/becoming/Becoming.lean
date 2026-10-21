@@ -1483,6 +1483,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   at every step ends the base at once; where they draw more, so does every optimum of an
   order with positive weights rising at no step. Witness: from two, the doubling source is
   rebuilt alone and ended with others drawing first, under the same weights.
+  With two drawers in turn, each ranking what it draws over the steps that remain, the
+  others' rule is derived: at every profile that is a mutual best response at every step
+  from every level, both leave nothing at every step, so the base stands from the first step
+  at what stands at nothing, and drawing everything is such a profile. Witness: under a gate,
+  alone an optimum may keep the dweller; in turn every perfect profile breaks it at once.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
