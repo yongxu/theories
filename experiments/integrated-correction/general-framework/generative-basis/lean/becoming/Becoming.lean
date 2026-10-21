@@ -1130,7 +1130,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   stepwise reading rank sharing above winning by consumption and, in the two-part
   family, restraint above overdraw; for an overdrawing formation with an event that
   leaves every need met, only the whole-run reading ranks its absence above its
-  occurrence.
+  occurrence. Under easing the stepwise reading withdraws exactly the events the easing
+  course undermines, so its law of easing adds that premise; a course whose levels never
+  fall undermines nothing.
 * `Becoming.ActiveReading` (L1): the reading of every active event beside the whole-run reading
   (no premise): the whole-run reading withholds a consumer's events, and living significance on it
   credits exactly the active events of non-consuming formations (`livingSignificance_wholeRun_iff`); under the
@@ -1368,7 +1370,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   drawer's slack is shared by every drawer; restraint by the excess, by any drawers, keeps it.
   Over a run, taking no more and giving no less eases the course, so under the whole-run reading
   restraint extends overdraw for any number of drawers exactly when it includes an event the other
-  withholds (`Ranking.restraint_extends_iff`); `TwoDrawers` is the instance.
+  withholds (`Ranking.restraint_extends_iff`), and under the stepwise reading too where the
+  restrained flow takes from no condition more than it gives (`Ranking.restraint_extends_iff_stepwise`);
+  `TwoDrawers` is the instance.
 * `Becoming.Optimum` (L1): what optimizing through couplings does beyond them. Over any set of
   outcomes, every order rising with the levels of what couples in, whatever it does beyond, has
   its optima at the least level beyond, condition by condition, exactly where every outcome

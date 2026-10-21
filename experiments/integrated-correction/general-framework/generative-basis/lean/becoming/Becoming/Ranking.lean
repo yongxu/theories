@@ -28,7 +28,12 @@ Results:
   activity needs support to one that asks no more, holds every condition at least as high
   and draws on nothing more, and where activity follows support, no event the whole-run
   reading includes is withdrawn, so the second extends the first exactly when it includes
-  an event the first withholds. The stepwise reading has no such law (`ThirdParty.stepwise_not_monotone`).
+  an event the first withholds. Under the stepwise reading easing withdraws exactly the events the
+  easing course undermines (`stepwise_kept_iff`), so the second extends the first exactly when it
+  undermines no event the first includes and includes one the first withholds
+  (`stepwise_extends_iff_of_eases`); a course in which no condition's level falls undermines nothing
+  (`not_undermining_of_rising`), so there the stepwise law is the whole-run one
+  (`stepwise_extends_iff_of_rising`). Easing alone does not suffice (`ThirdParty.stepwise_not_monotone`).
 * The course without a formation extends the course with it only if the reading
   withholds every event of that formation. This holds for every reading that includes
   only active events.
@@ -53,8 +58,10 @@ Results:
 * When the restrained course does not meet every need, the restraint comparison can be
   lost under the stepwise reading: when a third formation shares the condition, a
   restrained formation's later draw can undermine the third formation's once-met
-  dependence, and neither course extends the other (`ThirdParty`). Under the whole-run
-  reading restraint still extends overdraw there, by the law of easing.
+  dependence, and neither course extends the other (`ThirdParty`): the restrained course
+  undermines an event the overdrawing one includes, the premise the stepwise law of easing adds
+  (`ThirdParty.undermines_included`). Under the whole-run reading restraint still extends overdraw
+  there, by the law of easing.
 
 So under the stepwise reading C alone still ranks sharing above winning by consumption,
 and restraint that meets every need above overdraw. For a formation with an event
@@ -177,6 +184,14 @@ def Eases (U V : Web F C) : Prop :=
   (∀ t f c, V.requires t f c → U.requires t f c) ∧ (∀ t f c, V.need t f c ≤ U.need t f c) ∧
     (∀ t c, U.level t c ≤ V.level t c) ∧ ∀ t f c, V.draws t f c → U.draws t f c
 
+/-- **Easing keeps activity.** From a course where activity needs support to one where activity
+follows support and that eases it, a formation active in the first at a step is active in the
+second there: the first's support there is the second's. -/
+theorem active_of_eases {U V : Web F C} (dependent : U.Dependent) (gated : ActiveWhereSupported V)
+    (eases : Eases U V) {t : Nat} {f : F} (active : U.active t f) : V.active t f :=
+  gated t f fun c depends => Nat.le_trans (eases.2.1 t f c)
+    (Nat.le_trans (dependent t f active c (eases.1 t f c depends)) (eases.2.2.1 t c))
+
 /-- Easing never withdraws an event the whole-run reading includes: from a course where
 activity needs support to one where activity follows support and that eases it, every event
 the whole-run reading includes stays included. -/
@@ -184,16 +199,15 @@ theorem wholeRun_mono {U : W → Web F C} {w w' : W} (dependent : (U w).Dependen
     (gated : ActiveWhereSupported (U w')) (eases : Eases (U w) (U w')) {e : F × Nat} :
     wholeRun U w e → wholeRun U w' e
   | ⟨active, notConsuming⟩ =>
-    ⟨gated e.2 e.1 fun c depends => Nat.le_trans (eases.2.1 e.2 e.1 c)
-        (Nat.le_trans (dependent e.2 e.1 active c (eases.1 e.2 e.1 c depends))
-          (eases.2.2.1 e.2 c)),
+    ⟨active_of_eases dependent gated eases active,
      fun ⟨s, c, drawn, g, T, depends, lost⟩ => notConsuming ⟨s, c, eases.2.2.2 s e.1 c drawn, g, T,
        eases.1 T g c depends, fun t later => Nat.lt_of_le_of_lt (eases.2.2.1 t c)
          (Nat.lt_of_lt_of_le (lost t later) (eases.2.1 T g c))⟩⟩
 
 /-- The whole-run law of easing: under its conditions the easing course extends the other
-exactly when it includes some event the other withholds. The stepwise reading has no such
-law (`ThirdParty.stepwise_not_monotone`). -/
+exactly when it includes some event the other withholds. Under the stepwise reading the law
+needs a further premise, that the easing course undermine no event the other includes
+(`stepwise_extends_iff_of_eases`, `ThirdParty.stepwise_not_monotone`). -/
 theorem wholeRun_extends_iff_of_eases {U : W → Web F C} {w w' : W}
     (dependent : (U w).Dependent) (gated : ActiveWhereSupported (U w'))
     (eases : Eases (U w) (U w')) :
@@ -201,6 +215,55 @@ theorem wholeRun_extends_iff_of_eases {U : W → Web F C} {w w' : W}
   ⟨fun ⟨_, e, _, included, withheld⟩ => ⟨e, included, withheld⟩,
    fun ⟨e, included, withheld⟩ =>
     ⟨fun _ c => wholeRun_mono dependent gated eases c, e, trivial, included, withheld⟩⟩
+
+/-- **Under easing the stepwise reading withdraws exactly what the easing course undermines.** From
+a course where activity needs support to one where activity follows support and that eases it, an
+event the stepwise reading includes in the first stays included in the second exactly where the
+second does not undermine there. -/
+theorem stepwise_kept_iff {U : W → Web F C} {w w' : W} (dependent : (U w).Dependent)
+    (gated : ActiveWhereSupported (U w')) (eases : Eases (U w) (U w')) {e : F × Nat}
+    (included : stepwise U w e) : stepwise U w' e ↔ ¬ (U w').UnderminingAt e.2 e.1 :=
+  ⟨fun kept => kept.2, fun keeps => ⟨active_of_eases dependent gated eases included.1, keeps⟩⟩
+
+/-- **The stepwise law of easing.** Under the conditions of the whole-run law, the easing course
+extends the other under the stepwise reading exactly when it undermines no event the other
+includes and includes some event the other withholds. -/
+theorem stepwise_extends_iff_of_eases {U : W → Web F C} {w w' : W} (dependent : (U w).Dependent)
+    (gated : ActiveWhereSupported (U w')) (eases : Eases (U w) (U w')) :
+    ExtendsUnder (stepwise U) w w' ↔
+      (∀ e, stepwise U w e → ¬ (U w').UnderminingAt e.2 e.1) ∧
+        ∃ e, stepwise U w' e ∧ ¬ stepwise U w e :=
+  ⟨fun ⟨covers, e, _, included, withheld⟩ => ⟨fun e c => (covers e c).2, e, included, withheld⟩,
+   fun ⟨keeps, e, included, withheld⟩ =>
+    ⟨fun e c => (stepwise_kept_iff dependent gated eases c).2 (keeps e c), e, trivial, included,
+      withheld⟩⟩
+
+/-- A condition's level that falls at no step is at least as high at every later step. -/
+theorem level_never_falls {V : Web F C} {c : C} (rises : ∀ t, V.level t c ≤ V.level (t + 1) c)
+    (s : Nat) : ∀ k, V.level s c ≤ V.level (s + k) c
+  | 0 => Nat.le_refl _
+  | k + 1 => Nat.le_trans (level_never_falls rises s k) (rises (s + k))
+
+/-- **A course in which no condition's level falls undermines nothing.** An undermining relation needs
+a condition to fall, after a draw, below a need of a dependence it met while the dependence held,
+and a level that never falls stays at or above every need it once met. -/
+theorem not_undermining_of_rising {V : Web F C} (rises : ∀ t c, V.level t c ≤ V.level (t + 1) c)
+    (t : Nat) (f : F) : ¬ V.UnderminingAt t f := fun ⟨c, _, _, _, ⟨s, before, _, met, above⟩, _⟩ =>
+  Nat.lt_irrefl _ (Nat.lt_of_lt_of_le above (Nat.le_trans met
+    (Nat.le_trans (level_never_falls (rises · c) s (t + 1 - s))
+      (Nat.le_of_eq (congrArg (V.level · c) (Becoming.add_sub_of_le (Nat.le_succ_of_le before)))))))
+
+/-- **Easing that lets nothing fall, under the stepwise reading.** Under the conditions of the
+whole-run law, where no condition's level falls at any step of the easing course, it extends the other
+under the stepwise reading exactly when it includes some event the other withholds, as under the
+whole-run reading. -/
+theorem stepwise_extends_iff_of_rising {U : W → Web F C} {w w' : W} (dependent : (U w).Dependent)
+    (gated : ActiveWhereSupported (U w')) (eases : Eases (U w) (U w'))
+    (rises : ∀ t c, (U w').level t c ≤ (U w').level (t + 1) c) :
+    ExtendsUnder (stepwise U) w w' ↔ ∃ e, stepwise U w' e ∧ ¬ stepwise U w e :=
+  ⟨fun ext => ((stepwise_extends_iff_of_eases dependent gated eases).1 ext).2,
+   fun witness => (stepwise_extends_iff_of_eases dependent gated eases).2
+     ⟨fun e _ => not_undermining_of_rising rises e.2 e.1, witness⟩⟩
 
 /-! ## The course without the focal formation -/
 
@@ -712,10 +775,12 @@ theorem over_le_stops : ∀ t, overLevel t ≤ stopsLevel t
   | 5 => by decide
   | _ + 6 => Nat.zero_le _
 
-/-- The stepwise reading has no law of easing: the restrained course eases the overdrawing
+/-- Easing alone gives the stepwise reading no law: the restrained course eases the overdrawing
 one, activity needs support in both and follows support in the restrained one, yet the
-stepwise reading includes the focal event at step 3 only in the overdrawing course. The
-whole-run reading ranks restraint higher, as `wholeRun_extends_iff_of_eases` gives. -/
+stepwise reading includes the focal event at step 3 only in the overdrawing course, which the
+restrained course undermines there (`undermines_included`), the premise
+`stepwise_extends_iff_of_eases` adds. The whole-run reading ranks restraint higher, as
+`wholeRun_extends_iff_of_eases` gives. -/
 theorem stepwise_not_monotone :
     (courses .overdraws).Dependent ∧ ActiveWhereSupported (courses .stops) ∧
     Eases (courses .overdraws) (courses .stops) ∧
@@ -733,6 +798,21 @@ theorem stepwise_not_monotone :
      (dependent overLevel) gated eases).mpr
      ⟨(.sustaining, 6), ⟨stops_supports 6, fun ⟨_, _, drawn, _⟩ => drawn⟩,
       fun ⟨active, _⟩ => Nat.not_succ_le_zero 0 active⟩⟩
+
+/-- **Where the stepwise law's premise fails.** The restrained course undermines at step 3 the
+focal event the overdrawing course includes: the third formation, met at seven only in the
+restrained course, falls below its need after the focal draw. -/
+theorem undermines_included :
+    stepwise courses .overdraws (.focal, 3) ∧ (courses .stops).UnderminingAt 3 .focal ∧
+    ¬ ExtendsUnder (stepwise courses) .overdraws .stops :=
+  ⟨focal_three.1,
+   ⟨(), trivial, .third, trivial, ⟨3, Nat.le_refl 3, fun _ _ _ => trivial, Nat.le_refl 7, Nat.le_refl _⟩,
+    Nat.lt_succ_self 6⟩,
+   fun ext => ((stepwise_extends_iff_of_eases (U := courses) (w := .overdraws) (w' := .stops)
+     stepwise_not_monotone.1 stepwise_not_monotone.2.1 stepwise_not_monotone.2.2.1).1 ext).1
+       (.focal, 3) focal_three.1
+       ⟨(), trivial, .third, trivial, ⟨3, Nat.le_refl 3, fun _ _ _ => trivial, Nat.le_refl 7, Nat.le_refl _⟩,
+        Nat.lt_succ_self 6⟩⟩
 
 end ThirdParty
 

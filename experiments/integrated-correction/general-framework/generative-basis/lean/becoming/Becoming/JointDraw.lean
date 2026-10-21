@@ -45,7 +45,10 @@ restraint comparison over any number of drawers under the whole-run reading.
   the restrained course extends the overdrawing one exactly when it includes some event the
   other withholds, so that every comparison satisfying C ranks it higher
   (`Ranking.restraint_extends_iff`, `Ranking.restraint_ranks_over_drawers`). No count of
-  formations enters. The stepwise reading has no such law (`Ranking.ThirdParty.stepwise_not_monotone`).
+  formations enters. Under the stepwise reading the same holds where moreover the restrained flow
+  takes from no condition more than it gives, so that no level falls in the restrained course
+  (`Ranking.restraint_extends_iff_stepwise`, `Ranking.restraint_ranks_stepwise`); taking no more alone
+  does not suffice (`Ranking.ThirdParty.stepwise_not_monotone`).
 * **Witness.** `TwoDrawers`: two formations each take one unit from a condition standing at two,
   on which a third depends at one; each take is within the slack, the joint draw breaks the third
   formation's dependence and it ends (`TwoDrawers.broken`, `TwoDrawers.shared`), and with one
@@ -57,9 +60,10 @@ restraint comparison over any number of drawers under the whole-run reading.
 the joint draw does, and it breaks the highest needs first, whoever takes. Restraint keeps a
 dependence by the excess, whoever restrains; over a run, taking no more and giving no less keeps
 every level at least as high, and under the whole-run reading this ranks restraint above overdraw
-for any number of drawers. That this ranking needs the whole-run reading, and not the stepwise
-one, is `Ranking.ThirdParty`: a higher level kept can be undermined later, an event the stepwise
-reading counts against the restrained course.
+for any number of drawers. Under the stepwise reading it needs more, that the restrained course let
+no level fall: `Ranking.ThirdParty` shows a higher level kept can be undermined later, an event the
+stepwise reading counts against the restrained course, and a course whose levels never fall
+undermines nothing.
 
 What is not derived: how much each formation takes or gives (the flows are supplied); that the
 restrained course takes no more at every step (a hypothesis, not a law of the formations); which
@@ -219,6 +223,41 @@ theorem restraint_ranks_over_drawers (balances : L.Balances (U w)) (balances' : 
     {Better : X → X → Prop} (ranks : ComparisonUnder (wholeRun U) Better) : Better w w' :=
   ranks _ _ ((restraint_extends_iff balances balances' start restrained renewing asks needs
     drawsLess dependent gated).mpr ⟨e, included, withheld⟩)
+
+/-- **Restraint over any number of drawers, under the stepwise reading.** Under the premises of the
+whole-run comparison, where moreover the restrained course's flow takes from no condition more than
+it gives at any step, so that no level falls there, the restrained course extends the other under the
+stepwise reading exactly when it includes some event the other withholds. -/
+theorem restraint_extends_iff_stepwise (balances : L.Balances (U w)) (balances' : L'.Balances (U w'))
+    (start : ∀ c, (U w).level 0 c ≤ (U w').level 0 c)
+    (restrained : ∀ t c, L'.taken t c ≤ L.taken t c)
+    (renewing : ∀ t c, L.given t c ≤ L'.given t c)
+    (asks : ∀ t f c, (U w').requires t f c → (U w).requires t f c)
+    (needs : ∀ t f c, (U w').need t f c ≤ (U w).need t f c)
+    (drawsLess : ∀ t f c, (U w').draws t f c → (U w).draws t f c)
+    (dependent : (U w).Dependent) (gated : ActiveWhereSupported (U w'))
+    (within : ∀ t c, L'.taken t c ≤ L'.given t c) :
+    ExtendsUnder (stepwise U) w w' ↔ ∃ e, stepwise U w' e ∧ ¬ stepwise U w e :=
+  stepwise_extends_iff_of_rising dependent gated
+    (balances.eases_of_restrained balances' start restrained renewing asks needs drawsLess)
+    fun t c => Naturals.le_of_add_le_add_right (Nat.le_trans (Nat.add_le_add_left (within t c) _)
+      (Nat.le_of_eq (balances' t c).symm))
+
+/-- Every comparison satisfying C under the stepwise reading then ranks the restrained course higher,
+for any number of drawers, as soon as it includes one event the other withholds. -/
+theorem restraint_ranks_stepwise (balances : L.Balances (U w)) (balances' : L'.Balances (U w'))
+    (start : ∀ c, (U w).level 0 c ≤ (U w').level 0 c)
+    (restrained : ∀ t c, L'.taken t c ≤ L.taken t c)
+    (renewing : ∀ t c, L.given t c ≤ L'.given t c)
+    (asks : ∀ t f c, (U w').requires t f c → (U w).requires t f c)
+    (needs : ∀ t f c, (U w').need t f c ≤ (U w).need t f c)
+    (drawsLess : ∀ t f c, (U w').draws t f c → (U w).draws t f c)
+    (dependent : (U w).Dependent) (gated : ActiveWhereSupported (U w'))
+    (within : ∀ t c, L'.taken t c ≤ L'.given t c)
+    {e : F × Nat} (included : stepwise U w' e) (withheld : ¬ stepwise U w e)
+    {Better : X → X → Prop} (ranks : ComparisonUnder (stepwise U) Better) : Better w w' :=
+  ranks _ _ ((restraint_extends_iff_stepwise balances balances' start restrained renewing asks needs
+    drawsLess dependent gated within).mpr ⟨e, included, withheld⟩)
 
 end Ranking
 
