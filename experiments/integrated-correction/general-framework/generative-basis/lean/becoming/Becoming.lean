@@ -1408,6 +1408,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   lies above every level of greatest renewal the amount grows with the horizon and outweighs
   every coupling short of it. Witness: under the logistic law, keeping the dweller through
   n + 2 steps forgoes n + 3.
+  A course met at a need through j steps draws, with r for each of them, at most the start
+  with r a step and q for each of them: each met step forgoes at least r - q. So a coupling
+  of c for each step the need stays met keeps it at every horizon where r <= q + c and c
+  exceeds the end the keeping course reaches; where c with the end the capacity reaches is
+  below the need every optimum breaks it within the horizon, and where also r < q + c at the
+  last step alone; where q + c < r a long horizon outweighs it. Optima exist in every case.
+  Witness: under the logistic law three a step keeps the dweller at every horizon, two a
+  step to the last step, at most one a step breaks it.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
