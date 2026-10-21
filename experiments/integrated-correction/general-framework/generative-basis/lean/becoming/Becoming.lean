@@ -2001,7 +2001,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   of whole numbers (`add_right_cancel`, `Naturals.sub_sub`, `mul_assoc_nat`), what `all`, `any`,
   `contains`, `filter`, `find?`, `bind` and `map` test (`ListTests.all_true_iff`,
   `ListTests.find_none_iff`), and membership in joined and mapped lists (`mem_append_cases`,
-  `preimage_of_mem_map`), proved by recursion where the prelude uses `propext`.
+  `preimage_of_mem_map`), proved by recursion where the prelude uses `propext`; and the one balance
+  over a stretch, a count balanced at each step being balanced over it (`balance_over_stretch_on`),
+  from which the stretch balances of flows, amounts, courses and censuses are derived.
 * `Becoming.Ideals` (L1): a history read off its finite stretches, as an ideal of their order
   (no premise; it imports nothing). A refutable reading holds, up to double negation, where a
   point adheres, and what adheres is closed. A class of ideals is closed exactly where it is the

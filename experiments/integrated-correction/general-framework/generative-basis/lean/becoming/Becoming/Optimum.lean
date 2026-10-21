@@ -2044,15 +2044,11 @@ def drawnAt (x g : Nat → Nat) (t : Nat) : Nat := x t + g t - x (t + 1)
 given, across `n` steps what stands after with everything drawn is the starting level with
 everything given (sums of `Amounts.whole`). -/
 theorem level_add_drawn_of_within (within : ∀ t, x (t + 1) ≤ x t + g t) :
-    ∀ n, x n + Amounts.whole.sum (drawnAt x g) 0 n = x 0 + Amounts.whole.sum g 0 n
-  | 0 => rfl
-  | n + 1 => by
-    show x (n + 1) + (Amounts.whole.sum (drawnAt x g) 0 n + drawnAt x g (0 + n)) =
-      x 0 + (Amounts.whole.sum g 0 n + g (0 + n))
-    rw [Nat.zero_add]
-    have back : x (n + 1) + drawnAt x g n = x n + g n := Naturals.add_sub_of_le (within n)
-    rw [Nat.add_left_comm, back, ← Nat.add_assoc, Nat.add_comm (Amounts.whole.sum _ 0 n) (x n),
-      level_add_drawn_of_within within n, Nat.add_assoc]
+    ∀ n, x n + Amounts.whole.sum (drawnAt x g) 0 n = x 0 + Amounts.whole.sum g 0 n :=
+  fun n => (Amounts.whole_sum (drawnAt x g) n 0).symm ▸ (Amounts.whole_sum g n 0).symm ▸
+    Eq.subst (motive := fun k => x k + total (steps 0 n) (drawnAt x g) = x 0 + total (steps 0 n) g)
+      (Nat.zero_add n)
+      (balance_over_stretch (fun t => Naturals.add_sub_of_le (within t)) 0 n)
 
 /-- **What stands and what was drawn** along a course whose steps take `d`: the case of
 `level_add_drawn_of_within`. -/

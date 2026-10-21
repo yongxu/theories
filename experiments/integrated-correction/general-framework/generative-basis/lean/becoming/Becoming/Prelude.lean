@@ -17,6 +17,11 @@ or a law: the module imports only Init, and every module of the core reaches it 
   (`mem_append_cases`, `mem_cons_cases`, `mem_append_of_left`, `mem_append_of_right`,
   `mem_middle`), the length and members of a mapped list (`length_map`, `preimage_of_mem_map`,
   `map_comp_eq`, `map_eq_of`, `map_eq_singleton`), and equal truth values (`bool_eq_of_iff`).
+* **Balance over a stretch.** A count balanced across each step of a stretch, what it gains
+  against what it loses, is balanced over the stretch (`balance_over_stretch_on`,
+  `balance_over_stretch`), and the same with an inequality at each step (`le_over_stretch`,
+  `ge_over_stretch`): the one stretch balance, of which a flow's levels, an amount's rises and falls,
+  a course and what it draws, and a census's counts are cases (board item EC2).
 
 Each statement here was proved in the modules that used it, often more than once; R31 (20 October
 2026) states each once (the table and the copies it replaced are in the R31 kit,
@@ -764,6 +769,78 @@ theorem between_of_mem_steps : ∀ {T N j : Nat}, j ∈ steps T N → T ≤ j �
     | .inr mem => match between_of_mem_steps mem with
       | ⟨le, lt⟩ => ⟨Nat.le_of_succ_le le,
           Nat.lt_of_lt_of_le lt (Nat.le_of_eq (Nat.add_right_comm T 1 N))⟩
+
+/-! ## Balance over a stretch
+
+A count balanced across each step, what it gains against what it loses, is balanced over any
+stretch. This is the one stretch balance of the spine: the levels of a flow (`Flow.accumulates_on`,
+`Regulation.accumulates_at`), an amount's rises and falls (`Change.over_stretch`), a course and what
+it draws (`Optimum.level_add_drawn_of_within`) and the counts of a census are its cases. Moved
+unchanged, with their names, from `Becoming.Change` and `Becoming.Population` (board item EC2,
+21 October 2026). -/
+
+/-- A count balanced across each step of a stretch, what it gains against what it loses, is
+balanced over the stretch: at the end with everything lost, it is the count at the start with
+everything gained. Nothing is asked of the steps outside the stretch. -/
+theorem balance_over_stretch_on {q x y : Nat → Nat} :
+    ∀ S n, (∀ t, S ≤ t → t < S + n → q (t + 1) + x t = q t + y t) →
+      q (S + n) + total (steps S n) x = q S + total (steps S n) y
+  | _, 0, _ => rfl
+  | S, n + 1, across => calc
+      q (S + (n + 1)) + (x S + total (steps (S + 1) n) x)
+          = x S + (q (S + 1 + n) + total (steps (S + 1) n) x) :=
+        (congrArg (· + _) (congrArg q (Nat.add_right_comm S 1 n).symm)).trans
+          (Nat.add_left_comm _ _ _)
+      _ = x S + (q (S + 1) + total (steps (S + 1) n) y) :=
+        congrArg (x S + ·) (balance_over_stretch_on (S + 1) n fun t from_ below =>
+          across t (Nat.le_of_succ_le from_)
+            (Nat.lt_of_lt_of_le below (Nat.le_of_eq (Nat.add_right_comm S 1 n))))
+      _ = (q (S + 1) + x S) + total (steps (S + 1) n) y :=
+        (Nat.add_left_comm _ _ _).trans (Nat.add_assoc _ _ _).symm
+      _ = (q S + y S) + total (steps (S + 1) n) y :=
+        congrArg (· + _) (across S (Nat.le_refl S) (Nat.lt_add_of_pos_right (Nat.succ_pos n)))
+      _ = q S + (y S + total (steps (S + 1) n) y) := Nat.add_assoc _ _ _
+
+/-- A count balanced across each step, what it gains against what it loses, is balanced
+over any stretch: at the end with everything lost, it is the count at the start with
+everything gained. -/
+theorem balance_over_stretch {q x y : Nat → Nat} (across : ∀ t, q (t + 1) + x t = q t + y t)
+    (S : Nat) : ∀ n, q (S + n) + total (steps S n) x = q S + total (steps S n) y :=
+  fun n => balance_over_stretch_on S n fun t _ _ => across t
+
+/-- A count that, at each step, ends with what it loses at most where it started with what
+it gains does so over any stretch. -/
+theorem le_over_stretch {q x y : Nat → Nat} (across : ∀ t, q (t + 1) + x t ≤ q t + y t)
+    (S : Nat) : ∀ n, q (S + n) + total (steps S n) x ≤ q S + total (steps S n) y
+  | 0 => Nat.le_refl _
+  | n + 1 => calc
+      q (S + (n + 1)) + (x S + total (steps (S + 1) n) x)
+          = x S + (q (S + 1 + n) + total (steps (S + 1) n) x) :=
+        (congrArg (· + _) (congrArg q (Nat.add_right_comm S 1 n).symm)).trans
+          (Nat.add_left_comm _ _ _)
+      _ ≤ x S + (q (S + 1) + total (steps (S + 1) n) y) :=
+        Nat.add_le_add_left (le_over_stretch across (S + 1) n) (x S)
+      _ = (q (S + 1) + x S) + total (steps (S + 1) n) y :=
+        (Nat.add_left_comm _ _ _).trans (Nat.add_assoc _ _ _).symm
+      _ ≤ (q S + y S) + total (steps (S + 1) n) y := Nat.add_le_add_right (across S) _
+      _ = q S + (y S + total (steps (S + 1) n) y) := Nat.add_assoc _ _ _
+
+/-- A count that, at each step, starts with what it gains at most where it ends with what
+it loses does so over any stretch. -/
+theorem ge_over_stretch {q x y : Nat → Nat} (across : ∀ t, q t + y t ≤ q (t + 1) + x t)
+    (S : Nat) : ∀ n, q S + total (steps S n) y ≤ q (S + n) + total (steps S n) x
+  | 0 => Nat.le_refl _
+  | n + 1 => calc
+      q S + (y S + total (steps (S + 1) n) y)
+          = (q S + y S) + total (steps (S + 1) n) y := (Nat.add_assoc _ _ _).symm
+      _ ≤ (q (S + 1) + x S) + total (steps (S + 1) n) y := Nat.add_le_add_right (across S) _
+      _ = x S + (q (S + 1) + total (steps (S + 1) n) y) :=
+        (Nat.add_assoc _ _ _).trans (Nat.add_left_comm _ _ _)
+      _ ≤ x S + (q (S + 1 + n) + total (steps (S + 1) n) x) :=
+        Nat.add_le_add_left (ge_over_stretch across (S + 1) n) (x S)
+      _ = q (S + (n + 1)) + (x S + total (steps (S + 1) n) x) :=
+        (Nat.add_left_comm _ _ _).trans
+          (congrArg (· + _) (congrArg q (Nat.add_right_comm S 1 n)))
 
 namespace RouteTraces
 

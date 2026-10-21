@@ -350,47 +350,6 @@ theorem total_le_mark {P : Prop} [Decidable P] {q : α → Prop} [∀ a, Decidab
         (total_le_mark distinct (fun b b' mem mem' => once b b' (.tail a mem) (.tail a mem'))
           fun b mem => makes b (.tail a mem))
 
-/-- A count balanced across each step, what it gains against what it loses, is balanced
-over any stretch: at the end with everything lost, it is the count at the start with
-everything gained. -/
-theorem balance_over_stretch {q x y : Nat → Nat} (across : ∀ t, q (t + 1) + x t = q t + y t)
-    (S : Nat) : ∀ n, q (S + n) + total (steps S n) x = q S + total (steps S n) y :=
-  fun n => balance_over_stretch_on S n fun t _ _ => across t
-
-/-- A count that, at each step, ends with what it loses at most where it started with what
-it gains does so over any stretch. -/
-theorem le_over_stretch {q x y : Nat → Nat} (across : ∀ t, q (t + 1) + x t ≤ q t + y t)
-    (S : Nat) : ∀ n, q (S + n) + total (steps S n) x ≤ q S + total (steps S n) y
-  | 0 => Nat.le_refl _
-  | n + 1 => calc
-      q (S + (n + 1)) + (x S + total (steps (S + 1) n) x)
-          = x S + (q (S + 1 + n) + total (steps (S + 1) n) x) :=
-        (congrArg (· + _) (congrArg q (Nat.add_right_comm S 1 n).symm)).trans
-          (Nat.add_left_comm _ _ _)
-      _ ≤ x S + (q (S + 1) + total (steps (S + 1) n) y) :=
-        Nat.add_le_add_left (le_over_stretch across (S + 1) n) (x S)
-      _ = (q (S + 1) + x S) + total (steps (S + 1) n) y :=
-        (Nat.add_left_comm _ _ _).trans (Nat.add_assoc _ _ _).symm
-      _ ≤ (q S + y S) + total (steps (S + 1) n) y := Nat.add_le_add_right (across S) _
-      _ = q S + (y S + total (steps (S + 1) n) y) := Nat.add_assoc _ _ _
-
-/-- A count that, at each step, starts with what it gains at most where it ends with what
-it loses does so over any stretch. -/
-theorem ge_over_stretch {q x y : Nat → Nat} (across : ∀ t, q t + y t ≤ q (t + 1) + x t)
-    (S : Nat) : ∀ n, q S + total (steps S n) y ≤ q (S + n) + total (steps S n) x
-  | 0 => Nat.le_refl _
-  | n + 1 => calc
-      q S + (y S + total (steps (S + 1) n) y)
-          = (q S + y S) + total (steps (S + 1) n) y := (Nat.add_assoc _ _ _).symm
-      _ ≤ (q (S + 1) + x S) + total (steps (S + 1) n) y := Nat.add_le_add_right (across S) _
-      _ = x S + (q (S + 1) + total (steps (S + 1) n) y) :=
-        (Nat.add_assoc _ _ _).trans (Nat.add_left_comm _ _ _)
-      _ ≤ x S + (q (S + 1 + n) + total (steps (S + 1) n) x) :=
-        Nat.add_le_add_left (ge_over_stretch across (S + 1) n) (x S)
-      _ = q (S + (n + 1)) + (x S + total (steps (S + 1) n) x) :=
-        (Nat.add_left_comm _ _ _).trans
-          (congrArg (· + _) (congrArg q (Nat.add_right_comm S 1 n)))
-
 /-- Where a count, at each step, ends with what it loses at most where it started with what
 it gains, losses at arbitrarily late steps need gains at arbitrarily late steps: losses
 recurring accumulate past the count at the start, and only gains make up the
