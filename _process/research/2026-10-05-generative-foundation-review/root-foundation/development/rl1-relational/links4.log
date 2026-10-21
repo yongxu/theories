@@ -1,0 +1,33 @@
+{
+  "files_checked": 1276,
+  "links_checked": 73725,
+  "broken": 2,
+  "broken_by_kind": {
+    "missing-anchor": 2
+  },
+  "broken_by_role": {
+    "live": 2
+  },
+  "by_directory": {
+    "theories/becoming/chapters": 2
+  },
+  "list": [
+    {
+      "file": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "line": 57,
+      "target": "../results/completion/COMPLETION.md#master-laws",
+      "kind": "missing-anchor",
+      "role": "live"
+    },
+    {
+      "file": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.zh.md",
+      "line": 58,
+      "target": "../results/completion/COMPLETION.md#master-laws",
+      "kind": "missing-anchor",
+      "role": "live"
+    }
+  ],
+  "not_in_repository": [],
+  "scope": "Relative links and #anchors in live and generated Markdown (paths.py roles); history, evidence, sources and scratch are frozen and not checked. Paths must match tracked or untracked files exactly. Targets inside a submodule or excluded by .gitignore are listed under not_in_repository, not counted."
+}
+make: *** [research-links] Error 1

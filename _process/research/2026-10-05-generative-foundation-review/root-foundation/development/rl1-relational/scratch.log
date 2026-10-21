@@ -1,0 +1,31 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rl1/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rl1-relational/tree",
+  "modules": 53,
+  "ran": [
+    "Becoming.Ranking",
+    "Becoming.Relevance",
+    "Becoming.JointDraw",
+    "BecomingRankingAxiomAudit",
+    "BecomingRelevanceAxiomAudit",
+    "BecomingJointDrawAxiomAudit"
+  ],
+  "reused": 50,
+  "unclean": [],
+  "audits": {
+    "Becoming.Ranking": {
+      "theorems": 49,
+      "declarations": 73,
+      "with_axioms": {}
+    },
+    "Becoming.Relevance": {
+      "theorems": 34,
+      "declarations": 42,
+      "with_axioms": {}
+    },
+    "Becoming.JointDraw": {
+      "theorems": 25,
+      "declarations": 31,
+      "with_axioms": {}
+    }
+  }
+}
