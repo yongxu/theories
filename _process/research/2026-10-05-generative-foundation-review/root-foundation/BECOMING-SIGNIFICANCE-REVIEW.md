@@ -1177,3 +1177,17 @@ Evidence: Lean in the record's receipt
 Boundary: AI check, one session; the flow premise is sufficient, not necessary; the relation-level reading and the form of L stay open
 Integration: chapter §6 and §8.1 item 11, the record table
 ```
+
+<a id="relation-check"></a>
+## A check: the relation-level reading's law of easing (21 October 2026, RL1)
+
+An AI check (one session, 21 October), made while the Lean was written. It asks what the relation-level reading ranks under easing, beside the whole-run and stepwise readings. **Verdict: the three readings have exact laws of easing, each adding one condition. The whole-run law needs only easing and the gating of activity; the stepwise law adds that the easing course undermine no event the other includes; the relation-level law adds that it also keep taking part in every relation the other includes. So restraint that lets no level fall and draws less rather than nothing ranks above overdraw for any number of drawers under all three readings, and abstention is ranked so only under the first two.**
+
+```text
+Result(s): new record relation-level-law-of-easing (RL1, new laws of Becoming.Ranking, Becoming.Relevance and Becoming.JointDraw)
+Delta: the relation-level reading on courses, the living of Web.relations; its exact law of easing (participation kept and no undermining of included relations); its whole-run form; restraint over any number of drawers under it; the two-part family unranked
+Supplied premises / correspondence: the readings of living, easing, the gating of activity, balanced flows; the theory's own comparison laws
+Evidence: Lean in the record's receipt
+Boundary: AI check, one session; the participation premise is sufficient for the restraint theorem, the exact condition relation by relation; the form of L and J1 step by step stay open
+Integration: chapter §6 and §8.1 item 11, the record table
+```

@@ -14076,3 +14076,51 @@ Output → input: chapter §6 (the ranking bullet) and §8.1 item 11 (EN, ZH), t
 **Self-review.** The first plan sought a flow-level premise equivalent to "undermines no included event"; none is simpler than that statement, so the exact law states it, and the flow corollary takes the natural sufficient premise, takes within what it gives, which is what "sustainable" means for a course. It is not necessary: a course whose levels fall below needs nobody met undermines nothing either. `active_of_eases` was factored out so that the whole-run and stepwise laws read one lemma (board rule 9). The constructors of the readings are unchanged; `ThirdParty`'s other theorems keep their statements, with `stepwise_not_monotone`'s docstring now naming the premise. The connectivity check was planned before the checker ran: every new law is stated on webs or flows, the base. Limits: the relation-level reading, the form of L, and J1's step-by-step yield stay open.
 
 **The run.** Core 285 modules and 12,163 theorems, instances 7 and 567, applications 6 and 179; 39 Lean steps ran, 1,165 reused. 9 declarations added to Becoming.Ranking and Becoming.JointDraw, 9 of them theorems, none removed, all with empty axiom reports. Connectivity: 647 of 12,909 apart, unchanged; no new apart root, every new law stated on a run or read by one that is, the witnesses on the run; register check passes.
+
+## 316. The relation-level reading's law of easing, and restraint under it (RL1)
+
+```text
+Result(s): new record relation-level-law-of-easing (new laws of Becoming.Ranking, Becoming.Relevance and
+       Becoming.JointDraw); reuses stepwise-law-of-easing (active_of_eases, not_undermining_of_rising, restraint under
+       the stepwise reading), ranking-under-readings (the readings, Eases, the two-part family, overdraw_consuming),
+       Web.relations (Becoming.Metaethics).
+Delta: the relation-level reading was recorded as including the focal formation's first relation but not formalized
+       on courses. Ranking.relational reads it there (a claim is a formation's relation to a condition at a step,
+       included when the formation is active, takes part in the condition and the relation does not undermine), the
+       living of Web.relations (Ranking.relational_iff). Under easing a relation it includes stays included exactly
+       where the easing course still takes part and does not undermine there (Ranking.relational_kept_iff), so the law
+       of easing is exact (Ranking.relational_extends_iff_of_eases); where no level falls and the easing course takes
+       part wherever the other does, it is the whole-run form (Ranking.relational_extends_iff_of_rising). In the
+       two-part family the reading includes the focal formation's relation where the stepwise reading includes its
+       event, so absence and occurrence are unranked (Ranking.relational_unranked). Restraint over any number of
+       drawers under it, where the restrained flow takes within what it gives and takes part wherever the other does
+       (Ranking.restraint_extends_iff_relational, in Becoming.JointDraw).
+Premises / correspondence: the readings of living; easing; the gating of activity; for restraint, balanced flows,
+       the restrained flow taking no more, giving no less, taking within what it gives, and taking part in every
+       condition wherever the other does. The readings are the theory's own.
+Evidence: core receipt 20261021T141520.308357Z (passed).
+Boundary: the participation premise is needed: under the relation-level reading a course that stops drawing on a
+       condition loses its relations to it, so restraint by abstaining is not ranked by this law; the form of L and J1
+       step by step stay open.
+Output → input: chapter §6 (the ranking bullet) and §8.1 item 11 (EN, ZH), the record table; Ranking's and
+       JointDraw's headers; record ranking-under-readings (its relation-level boundary and next step); significance
+       review, relation check.
+```
+
+**The question.** Three readings of living rank courses: the whole-run reading (events of formations that consume nothing), the stepwise reading (events that undermine nothing), and the relation-level reading (a formation's relation to a condition at a step that does not undermine), the `living` of `Web.relations`. The first two have exact laws of easing (R52; ST1, [study §315](#315-the-stepwise-law-of-easing-and-restraint-over-any-number-of-drawers-under-the-stepwise-reading-st1)). The third was recorded as including the focal formation's first relation but not formalized on courses, and §8.1 item 11 left its comparison open.
+
+**What was built** (new laws of `Becoming.Ranking`, `Becoming.Relevance` and `Becoming.JointDraw`, pure core, every axiom report empty).
+
+- *The reading on courses* (`Ranking.relational`). A claim is a triple of formation, condition and step; it is included when the formation is active there, takes part in the condition (requires or draws on it, `Web.Participates`) and the relation does not undermine (`Web.UnderminingOn`). It is the `living` of `Web.relations` by definition (`Ranking.relational_iff`).
+- *Its law of easing.* Under easing a relation the reading includes in the first course stays included in the second exactly where the second still takes part in the condition and does not undermine there (`Ranking.relational_kept_iff`): activity is kept by `Ranking.active_of_eases`, so only leaving the relation or undermining it withdraws it. Hence the second extends the first under the relation-level reading exactly when it takes part in, and does not undermine, every relation the first includes, and includes one the first withholds (`Ranking.relational_extends_iff_of_eases`).
+- *The whole-run form.* Where no condition's level falls in the easing course (so nothing is undermined, `Ranking.not_undermining_of_rising`) and it takes part wherever the other does, it extends the other exactly when it includes a relation the other withholds (`Ranking.relational_extends_iff_of_rising`).
+- *The two-part family* (`Ranking.relational_unranked`). Under the premises of `Ranking.stepwise_unranked`, the focal formation draws, so where the stepwise reading includes its event the relation-level reading includes its relation, which the course without it lacks; and the course with it lacks the sustaining formation's relations after the loss. Absence and occurrence are unranked, as under the stepwise reading.
+- *Restraint over any number of drawers* (`Ranking.restraint_extends_iff_relational`). Under the stepwise restraint theorem's premises (ST1), where the restrained course also takes part in every condition wherever the other does, drawing less rather than nothing, it extends the overdrawing course under the relation-level reading exactly when it includes a relation the other withholds.
+
+**Against the prior form** ([significance review, relation check](BECOMING-SIGNIFICANCE-REVIEW.md#relation-check)). The comparison laws are the theory's own; the prior forms are the whole-run and stepwise laws of easing. The relation-level law adds one condition beyond the stepwise one: participation. A relation is a claim only while it is held, so easing that ends a relation, by ceasing to draw on or depend on a condition, withdraws the claim even where nothing is undermined.
+
+*Reading* [AI reading, D45]. Read relation by relation, restraint ranks above overdraw where the restrained formation still holds its relations, drawing less rather than walking away. Abstention is not counted as restraint by this reading: it ends the relation, and with it what the relation was. Which reading the comparison should use belongs, as before, to the choice of the reading of 生生.
+
+**Self-review.** The reading was defined on courses as the conjunction `Web.relations` already uses, so its identity with that `living` is `Iff.rfl`; no second definition of relations was added. The participation premise is stated as participation kept (`(U w).Participates → (U w').Participates`), which under easing (asks no more, draws on nothing more) means the restrained course asks or draws wherever the other does; it is sufficient, and the exact law states the condition relation by relation. The two-part instance reuses `overdraw_consuming` and `absent_sustains`, and the focal formation's participation comes from the overdraw premise (it draws). The connectivity check was planned before the checker ran: the new laws are stated on webs and flows. Limits: the form of L and J1 step by step.
+
+**The run.** Core 285 modules and 12,169 theorems, instances 7 and 567, applications 6 and 179; 33 Lean steps ran, 1,171 reused. 7 declarations added to Becoming.Ranking, Becoming.Relevance and Becoming.JointDraw, 6 of them theorems, none removed, all with empty axiom reports. Connectivity: 647 of 12,915 apart, unchanged; no new apart root, every new law stated on a run or read by one that is, the witnesses on the run; register check passes.

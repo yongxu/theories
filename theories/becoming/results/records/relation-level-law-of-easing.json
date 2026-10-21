@@ -1,0 +1,246 @@
+{
+  "schema_version": 2,
+  "id": "relation-level-law-of-easing",
+  "title": {
+    "en": "The relation-level reading's law of easing, and restraint under it",
+    "zh": "关系层读法的缓和之律及其下的节制"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T16:22:12+00:00",
+  "statement": {
+    "en": "Read relation by relation, easing withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that lets no level fall and keeps taking part ranks above overdraw for any number of drawers under the relation-level reading too.",
+    "zh": "逐个关系读时，缓和所撤回的恰是缓和之进程不再参与或所侵蚀的关系；不让任何水平下降且仍参与的节制，在关系层读法下也对任意多个汲取者排在过度汲取之上。"
+  },
+  "laws": [
+    {
+      "en": "The relation-level reading on courses: a claim is a formation's relation to a condition at a step, included when the formation is active, takes part in the condition and the relation does not undermine; it is the living of Web.relations.",
+      "zh": "进程上的关系层读法：一个断言是一个形成在某步对一个条件的关系，在形成活动、参与该条件且该关系不侵蚀时被记入；它即 Web.relations 的 living。",
+      "declarations": [
+        "Becoming.Ranking.relational",
+        "Becoming.Ranking.relational_iff"
+      ]
+    },
+    {
+      "en": "The relation-level law of easing: under easing a relation the reading includes in the first course stays included in the second exactly where the second still takes part and does not undermine there, so the second extends the first exactly when it takes part in and does not undermine every relation the first includes and includes one it withholds.",
+      "zh": "关系层的缓和之律：在缓和下，读法在前者记入的关系，恰在后者仍参与且不在那里侵蚀之处在后者仍被记入；所以后者扩展前者，恰当它参与且不侵蚀前者记入的每个关系，并记入前者扣下的某个关系。",
+      "declarations": [
+        "Becoming.Ranking.relational_kept_iff",
+        "Becoming.Ranking.relational_extends_iff_of_eases"
+      ]
+    },
+    {
+      "en": "Where no level falls in the easing course and it takes part wherever the other does, it extends the other under the relation-level reading exactly when it includes a relation the other withholds.",
+      "zh": "在缓和之进程中无水平下降且它在另一进程参与之处皆参与时，它在关系层读法下扩展另一进程，恰当它记入另一进程扣下的某个关系。",
+      "declarations": [
+        "Becoming.Ranking.relational_extends_iff_of_rising"
+      ]
+    },
+    {
+      "en": "In the two-part family the relation-level reading includes the focal formation's relation where the stepwise reading includes its event, so absence and occurrence are unranked, as under the stepwise reading.",
+      "zh": "在二元族中，关系层读法在逐步读法记入焦点形成之事件处记入其关系，所以不在场与在场不被排序，如同逐步读法。",
+      "declarations": [
+        "Becoming.Ranking.relational_unranked"
+      ]
+    },
+    {
+      "en": "Restraint over any number of drawers under the relation-level reading: under the stepwise restraint theorem's premises, where the restrained course also takes part in every condition wherever the other does, it extends the other exactly when it includes a relation the other withholds.",
+      "zh": "关系层读法下对任意多个汲取者的节制：在逐步节制定理的前提下，若节制的进程在另一进程参与之处皆参与，它扩展另一进程，恰当它记入另一进程扣下的某个关系。",
+      "declarations": [
+        "Becoming.Ranking.restraint_extends_iff_relational"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The readings of living (relation-level: a formation's relation to a condition, active, taking part and not undermining); each law's own premises as hypotheses: the gating of activity, easing; for restraint, balanced flows, the restrained flow taking no more, giving no less and within what it gives, and taking part wherever the other does.",
+      "zh": "不加公理。生命的读法（关系层：一个形成对一个条件的关系，活动、参与且不侵蚀）；各律自身的前提为假设：活动的门控、缓和；节制需平衡之流，节制之流所取不多、所给不少且不超过所给，并在另一进程参与之处皆参与。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That participation kept is needed beyond each relation the other includes: the exact law asks it relation by relation.",
+      "zh": "在另一进程记入的各关系之外需保持参与：确切之律逐个关系要求。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Restraint by abstaining: a course that stops drawing on and depending on a condition loses its relations to it, so this law does not rank it.",
+      "zh": "以弃绝为节制：停止汲取且停止依赖某条件的进程失去对它的关系，故本律不对它排序。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which reading of living to use; the form of L under the condition; J1 step by step.",
+      "zh": "应采用哪种生命读法；条件之下 L 的形式；逐步的 J1。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T141520.308357Z): the 7 declarations Becoming.Ranking, Becoming.Relevance and Becoming.JointDraw gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 316; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T141520.308357Z）：Becoming.Ranking、Becoming.Relevance 与 Becoming.JointDraw 新增的 7 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 316 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "A witness that participation kept cannot be dropped in the restraint theorem; the form of L under the condition; J1 step by step; an independent review.",
+    "zh": "表明节制定理中保持参与不可去掉的见证；条件之下 L 的形式；逐步的 J1；独立审查。"
+  },
+  "correspondence": {
+    "en": "The comparison laws are the theory's own. The three readings of living now each have an exact law of easing: the whole-run law needs easing and the gating of activity; the stepwise law adds that the easing course undermine no included event; the relation-level law adds that it keep taking part in every included relation.",
+    "zh": "比较之律是本理论自己的。三种生命读法现在各有确切的缓和之律：整段之律需缓和与活动的门控；逐步之律加上缓和之进程不侵蚀被记入的事件；关系层之律再加上它对每个被记入的关系仍参与。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+  "aliases": [
+    "the relation-level law of easing",
+    "restraint under the relation-level reading",
+    "关系层的缓和之律",
+    "Becoming.Ranking.relational_extends_iff_of_eases",
+    "Becoming.Ranking.restraint_extends_iff_relational"
+  ],
+  "dependencies": [
+    {
+      "id": "stepwise-law-of-easing",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Easing keeps activity, a course whose levels never fall undermines nothing, and the stepwise restraint theorem are reused.",
+        "zh": "沿用缓和保持活动、水平从不下降的进程不侵蚀任何事件，以及逐步节制定理。"
+      },
+      "interface": {
+        "output": {
+          "en": "active_of_eases, not_undermining_of_rising, restraint_extends_iff_stepwise.",
+          "zh": "active_of_eases、not_undermining_of_rising、restraint_extends_iff_stepwise。"
+        },
+        "input": {
+          "en": "The relation-level law of easing and restraint under it.",
+          "zh": "关系层的缓和之律及其下的节制。"
+        },
+        "conditions": {
+          "en": "Easing; the gating of activity; participation kept for the restraint theorem.",
+          "zh": "缓和；活动的门控；节制定理需保持参与。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean"
+      }
+    },
+    {
+      "id": "ranking-under-readings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The readings, easing and the two-part family are reused; the relation-level reading it left unformalized on courses is stated.",
+        "zh": "沿用读法、缓和与二元族；陈述了它在进程上未形式化的关系层读法。"
+      },
+      "interface": {
+        "output": {
+          "en": "stepwise, Eases, ExtendsUnder, stepwise_unranked, absent_sustains.",
+          "zh": "stepwise、Eases、ExtendsUnder、stepwise_unranked、absent_sustains。"
+        },
+        "input": {
+          "en": "The relation-level reading on courses and its comparisons.",
+          "zh": "进程上的关系层读法及其比较。"
+        },
+        "conditions": {
+          "en": "The two-part family for the unranked instance.",
+          "zh": "不排序之实例需二元族。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Ranking.ActiveWhereSupported",
+        "Becoming.Ranking.Eases",
+        "Becoming.Ranking.ExtendsUnder",
+        "Becoming.Ranking.absent_sustains",
+        "Becoming.Ranking.active_of_eases",
+        "Becoming.Ranking.not_undermining_of_rising",
+        "Becoming.Ranking.relational",
+        "Becoming.Ranking.relational_extends_iff_of_eases",
+        "Becoming.Ranking.relational_extends_iff_of_rising",
+        "Becoming.Ranking.relational_kept_iff",
+        "Becoming.Ranking.relational_unranked",
+        "Becoming.Ranking.stepwise",
+        "Becoming.Ranking.stepwise_unranked"
+      ],
+      "sha256": "46ba3df510844a6b6183edec334803659e41235d9f99bea064ddac5880a43f8d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Ranking.relational_iff",
+        "Becoming.Ranking.stepwise_iff"
+      ],
+      "sha256": "e18ba1c238856a73be60ca86b178d6c1699d8be601f09b16391ddb81529bc946"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Flow.Balances.eases_of_restrained",
+        "Becoming.Ranking.restraint_extends_iff_relational",
+        "Becoming.Ranking.restraint_extends_iff_stepwise"
+      ],
+      "sha256": "fd7194800707392d07bd889b10da56a1d65bf1359aec2595a9dc05c7bb6b7d7c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
+      "role": "receipt",
+      "sha256": "14abd1a84b98d3f519c76825b996cbaa902efe22e8948f4963ce691dd910a55e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "e0c706164f3110203303710b3b2026bdc66c380dcda083abcf34666af39428d7"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "457d4a4a4b40e09a8ff126e0b104391e53bdca3fe04a0da4375d2a43de1048c5"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "86d90fe862c6c31692a8a91739fb08a0e76627c1d077e13025b9d049afaaee93"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Ranking",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Relevance",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.JointDraw",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (RL1), the relation-level reading on courses, its exact law of easing, its whole-run form, restraint over any number of drawers under it and the two-part family unranked; study section 316.",
+      "zh": "2026年10月21日：新增（RL1），进程上的关系层读法、其确切的缓和之律、其整段形式、其下对任意多个汲取者的节制，以及二元族不排序；研究第 316 节。"
+    }
+  ]
+}

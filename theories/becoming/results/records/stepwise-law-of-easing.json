@@ -67,8 +67,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "The relation-level reading; the form of L under the condition; whether J1 yields \"better without malignant growth\" step by step.",
-      "zh": "关系层读法；条件之下 L 的形式；J1 能否在逐步读法下给出“没有恶性增殖更好”。",
+      "en": "The form of L under the condition; whether J1 yields \"better without malignant growth\" step by step.",
+      "zh": "条件之下 L 的形式；J1 能否在逐步读法下给出“没有恶性增殖更好”。",
       "kind": "scope"
     },
     {
@@ -99,8 +99,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T135044.825185Z）：Becoming.Ranking 与 Becoming.JointDraw 新增的 9 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 315 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A flow-level premise exactly equivalent to undermining no included event; the relation-level reading; the form of L under the condition; J1 step by step; an independent review.",
-    "zh": "与不侵蚀被记入事件恰好等价的流层前提；关系层读法；条件之下 L 的形式；逐步的 J1；独立审查。"
+    "en": "A flow-level premise exactly equivalent to undermining no included event; the form of L under the condition; J1 step by step; an independent review.",
+    "zh": "与不侵蚀被记入事件恰好等价的流层前提；条件之下 L 的形式；逐步的 J1；独立审查。"
   },
   "correspondence": {
     "en": "The comparison laws are the theory's own: comparison principle C read through a frame whose realized claims are the events a reading includes, with the whole-run and stepwise readings of living. This record turns the stepwise reading's failure under easing (ThirdParty) into an exact law: what the stepwise valuation counts against a gentler course is exactly the undermining that course itself commits.",
@@ -140,7 +140,15 @@
       }
     }
   ],
-  "related": [],
+  "related": [
+    {
+      "id": "relation-level-law-of-easing",
+      "detail": {
+        "en": "The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part ranks above overdraw under it too.",
+        "zh": "进程上的关系层读法：在缓和下它所撤回的恰是缓和之进程不再参与或所侵蚀的关系；仍参与的节制在它之下也排在过度汲取之上。"
+      }
+    }
+  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
@@ -164,7 +172,7 @@
         "Becoming.Ranking.wholeRun_extends_iff_of_eases",
         "Becoming.Ranking.wholeRun_mono"
       ],
-      "sha256": "0411503725c9765fdd30a3eeb2c7c51bd20d5633989807c1ec101ca06db37ae2"
+      "sha256": "46ba3df510844a6b6183edec334803659e41235d9f99bea064ddac5880a43f8d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
@@ -175,7 +183,7 @@
         "Becoming.Ranking.restraint_extends_iff_stepwise",
         "Becoming.Ranking.restraint_ranks_stepwise"
       ],
-      "sha256": "c393d9c9ab81a730c8a92d8b244742be51d8ee83518114c03f384c5231a517ac"
+      "sha256": "fd7194800707392d07bd889b10da56a1d65bf1359aec2595a9dc05c7bb6b7d7c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json",
@@ -195,20 +203,26 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "7a69a3d4733ba4ba87655e4df4269a3f11ecf68b06a83cf3b949e69504839fc8"
+      "sha256": "86d90fe862c6c31692a8a91739fb08a0e76627c1d077e13025b9d049afaaee93"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
+      "role": "receipt",
+      "sha256": "14abd1a84b98d3f519c76825b996cbaa902efe22e8948f4963ce691dd910a55e",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Ranking",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.JointDraw",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -218,6 +232,10 @@
     {
       "en": "21 October 2026: added (ST1), the stepwise law of easing: under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing; restraint over any number of drawers under the stepwise reading where the restrained flow takes within what it gives; study section 315.",
       "zh": "2026年10月21日：新增（ST1），逐步的缓和之律：在缓和下逐步读法所撤回的恰是缓和之进程所侵蚀的事件；水平从不下降的进程不侵蚀任何事件；节制之流所取不超过所给之处，逐步读法下对任意多个汲取者的节制；研究第 315 节。"
+    },
+    {
+      "en": "21 October 2026, RL1: the relation-level reading is formalized on courses with its exact law of easing and restraint under it (record relation-level-law-of-easing, study section 316); what this record does not show and its next step say so. Its laws are unchanged.",
+      "zh": "2026年10月21日，RL1：关系层读法在进程上形式化，带确切的缓和之律及其下的节制（记录 relation-level-law-of-easing，研究第 316 节）；本记录所不表明者与其下一步如此说明。其规律不变。"
     }
   ]
 }

@@ -103,6 +103,7 @@ Reading G0's 'generation' relationally follows Ren's G0, whose object is 生生 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json) | — |
 
 Aliases: `RenewalComparison.g0_relational`, `RenewalComparison.overdraw_relational_extension`, `RenewalComparison.overdraw_broad_incomparable`, `RenewalComparison.overdraw_comparison_ranks`, `RenewalComparison.broad_comparison_admits_overdraw`, `RenewalComparison.malignant_comparison`, `RenewalComparison.contest_comparison`, `Becoming.SupportGated.overdraw_extension (retired module)`, `Becoming.SupportGated.contest_extensions (retired module)`
 

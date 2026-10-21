@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-329 registered results: 309 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 825 curated edges join 282 results to the results they draw on.
+330 registered results: 310 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 827 curated edges join 283 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -199,6 +199,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [regime-in-any-amounts][] ← <a id="regime-in-any-amounts--where-a-run-of-a-regime-comes-to-rest"></a>[where-a-run-of-a-regime-comes-to-rest][] · <a id="regime-in-any-amounts--threshold-in-the-state-plane"></a>[threshold-in-the-state-plane][]
 - [regime-point-under-adjusting-giving][] ← <a id="regime-point-under-adjusting-giving--margin-of-a-regime"></a>[margin-of-a-regime][]
 - [relata-counted-up-to-indiscernibility][] ← <a id="relata-counted-up-to-indiscernibility--listing-once-is-decided-identity"></a>[listing-once-is-decided-identity][]
+- [relation-level-law-of-easing][] ← <a id="relation-level-law-of-easing--stepwise-law-of-easing"></a>[stepwise-law-of-easing][] · <a id="relation-level-law-of-easing--ranking-under-readings"></a>[ranking-under-readings][]
 - [relational-reading-comparison][] ← <a id="relational-reading-comparison--relational-renewal-classification"></a>[relational-renewal-classification][]
 - [relative-position-is-zero-sum][] ← <a id="relative-position-is-zero-sum--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="relative-position-is-zero-sum--derived-extent-limits"></a>[derived-extent-limits][] · <a id="relative-position-is-zero-sum--whole-first-and-bounded-centers"></a>[whole-first-and-bounded-centers][]
 - [represented-boundary-against-dependence][] ← <a id="represented-boundary-against-dependence--becoming-stepwise-reading"></a>[becoming-stepwise-reading][] · <a id="represented-boundary-against-dependence--derived-extent-limits"></a>[derived-extent-limits][] · <a id="represented-boundary-against-dependence--support-from-the-supported"></a>[support-from-the-supported][]
@@ -502,6 +503,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [regime-in-any-amounts]: theories/becoming/results/records/regime-in-any-amounts.md
 [regime-point-under-adjusting-giving]: theories/becoming/results/records/regime-point-under-adjusting-giving.md
 [relata-counted-up-to-indiscernibility]: theories/becoming/results/records/relata-counted-up-to-indiscernibility.md
+[relation-level-law-of-easing]: theories/becoming/results/records/relation-level-law-of-easing.md
 [relational-generative-comparison]: theories/becoming/results/records/relational-generative-comparison.md
 [relational-reading-comparison]: theories/becoming/results/records/relational-reading-comparison.md
 [relational-renewal-classification]: theories/becoming/results/records/relational-renewal-classification.md

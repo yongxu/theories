@@ -45,7 +45,7 @@
 ## Does not show
 
 - The comparisons of absence with presence and sharing with winning are proved in the support-gated family (two parts: the focal and the sustaining formation), as instances of the laws of comparison and easing. Restraint is proved for any number of drawers under the whole-run reading (Becoming.JointDraw); under the stepwise reading where it takes within what it gives (record stepwise-law-of-easing).
-- The relation-level reading also includes the focal formation's first relation but is not formalized separately.
+- The relation-level reading beyond easing and restraint: record relation-level-law-of-easing states those.
 - Yields no responsibility, duty or feasibility.
 - Chooses no reading.
 - The possibility reading counts what can form, not what does, so it leaves a presence adding no possibility unranked. Witness: `Becoming.Ranking.possible_tie`.
@@ -67,7 +67,7 @@ Canonical source: [Ranking.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-The same comparison under the relation-level reading; whether the priority of basic conditions yields “better without malignant growth” stepwise.
+Whether the priority of basic conditions yields “better without malignant growth” stepwise.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -106,8 +106,9 @@ The two rankings part ways under the stepwise reading. If G0 and C share the ste
 - related, not a proved adapter: [becoming-finite-horizon](becoming-finite-horizon.md). Withholding an overdrawing formation's events before the loss needs to know how the run continues; that result shows that readings fixed by a finite prefix cannot in general.
 - related, not a proved adapter: [practical-judgment-under-living-significance](practical-judgment-under-living-significance.md). Beyond C, J1's priority of basic conditions is one stronger comparison that might yield “better without malignant growth”; this connection is not formalized here.
 - related, not a proved adapter: [stepwise-law-of-easing](stepwise-law-of-easing.md). The stepwise law of easing, exact: easing withdraws exactly the events the easing course undermines; restraint that takes within what it gives ranks above overdraw for any number of drawers under the stepwise reading.
+- related, not a proved adapter: [relation-level-law-of-easing](relation-level-law-of-easing.md). The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part ranks above overdraw under it too.
 
-**Used by:** [stepwise-law-of-easing](stepwise-law-of-easing.md) · [wisdom-root](wisdom-root.md) (interpretive)
+**Used by:** [relation-level-law-of-easing](relation-level-law-of-easing.md) · [stepwise-law-of-easing](stepwise-law-of-easing.md) · [wisdom-root](wisdom-root.md) (interpretive)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -150,6 +151,7 @@ The two rankings part ways under the stepwise reading. If G0 and C share the ste
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T160406.697383Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T135044.825185Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json) | — |
 
 Aliases: `Becoming.Ranking.withheld_of_extends`, `Becoming.Ranking.whole_run_extends`, `Becoming.Ranking.whole_run_ranks`, `Becoming.Ranking.included_before_loss`, `Becoming.Ranking.stepwise_unranked`, `Becoming.Ranking.admits_occurrence`, `Becoming.Ranking.readings_rank_differently`, `Becoming.Ranking.malignant_ranking`, `Becoming.Ranking.winning_ranking`, `Becoming.Ranking.stepwise_contest`, `Becoming.Ranking.wholeRun_iff (retired module)`, `Becoming.Ranking.undisturbed_eq (retired module)`, `Becoming.Ranking.stops_included`, `Becoming.Ranking.restraint_ranks`, `Becoming.Ranking.malignant_restraint`, `Becoming.Ranking.Immediate.focal_withheld`, `Becoming.Ranking.Immediate.stepwise_ranks_absence`, `Becoming.Ranking.ThirdParty.focal_three`, `Becoming.Ranking.ThirdParty.restraint_unranked_stepwise`, `Becoming.Ranking.possible`, `Becoming.Ranking.possibleFirst`, `Becoming.Ranking.Pause.courses`, `Becoming.Web.Includes.of_le`, `Becoming.Web.not_added_of_le`, `Becoming.Ranking.possible_of_active`, `Becoming.Ranking.absent_admits_all`, `Becoming.Ranking.possible_extends`, `Becoming.Ranking.possible_ranks`, `Becoming.Ranking.possible_course_iff`, `Becoming.Ranking.possible_extends_iff`, `Becoming.Ranking.malignant_possible`, `Becoming.Ranking.possible_contest`, `Becoming.Ranking.possible_restraint`, `Becoming.Ranking.ThirdParty.possible_extends`, `Becoming.Ranking.possible_tie`, `Becoming.Ranking.readings_rank_presence`, `Becoming.Ranking.sharing_presence`, `Becoming.Ranking.possibleFirst_order`, `Becoming.Ranking.possibleFirst_overdraw`, `Becoming.Ranking.possibleFirst_presence`, `Becoming.Ranking.Pause.pause_ranked_below`, `Becoming.Ranking.renewed_extends_iff`, `Becoming.Ranking.renewed_active_extends_iff`, `Becoming.Ranking.extendsUnder_iff_of_exact`, `Becoming.Ranking.wholeRun_extends_iff_of_eases`, `Becoming.Ranking.ThirdParty.renewal_needed`, `Becoming.Ranking.ThirdParty.stepwise_not_monotone`
 
@@ -176,6 +178,7 @@ Aliases: `Becoming.Ranking.withheld_of_extends`, `Becoming.Ranking.whole_run_ext
 - 20 October 2026, R37 (lens B of the twentieth review): the proof bindings to the Lean files R37 changed rebound to its core receipt; 2 aliases naming declarations of modules no longer in the run, which only the earlier receipt this record was bound to elaborated, marked as R35 (E8) did: Becoming.Ranking.wholeRun_iff (retired module); Becoming.Ranking.undisturbed_eq (retired module). The claim is unchanged.
 - 20 October 2026: R52 proved restraint for any number of drawers under the whole-run reading (Becoming.JointDraw), section 8.1 item 11.
 - 21 October 2026, ST1: the stepwise law of easing is stated exactly and restraint over any number of drawers under the stepwise reading where the restrained flow takes within what it gives (record stepwise-law-of-easing, study section 315); the law that said the stepwise reading has no law of easing now says easing alone gives none; what this record does not show and its next step say so.
+- 21 October 2026, RL1: the relation-level reading is formalized on courses with its exact law of easing and restraint under it (record relation-level-law-of-easing, study section 316); what this record does not show and its next step say so. Its laws are unchanged.
 - 5 rebinding entries (2026-10-09 to 2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](ranking-under-readings.json).
 
 <a id="earlier-text--早期文本"></a>
