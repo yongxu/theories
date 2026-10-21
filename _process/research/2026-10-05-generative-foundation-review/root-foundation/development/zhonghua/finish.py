@@ -16,6 +16,7 @@ import book as B
 
 ROOT = os.path.abspath(os.path.join(HERE, *(['..'] * 6)))
 OUT = os.path.join(ROOT, 'theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md')
+ROUNDS = ['work/round2-edits.json', 'work/round3-edits.json']
 DECL = re.compile(r'`(Becoming\.[^`]+)`')
 QUOTE = re.compile(r'「([^」]{2,})」〔([A-Za-z0-9\-]+)〕')
 
@@ -67,7 +68,7 @@ def main():
                     failed.append({'id': e['id'], 'count': n, 'find': e['find'][:60], 'why': e['why'][:80]})
         for e in [x for x in (load(os.path.join(HERE, 'work/integrator-edits.json')) or []) if x['id'] in by]:
             t = by[e['id']]
-            if t['body'].count(e['find']) == 1:
+            if t['body'].count(e['find']) == 1 or (e.get('all') and t['body'].count(e['find']) > 1):
                 t['body'] = t['body'].replace(e['find'], e['replace'])
             else:
                 failed.append({'id': e['id'], 'why': 'integrator edit not applied: ' + e['why'], 'find': e['find'][:60]})
@@ -90,9 +91,35 @@ def main():
     ids = {t['id'] for p in b['parts'] for t in p['tiao']} | set(b['redirect'])
     head = open(os.path.join(HERE, 'work/xu.md'), encoding='utf-8').read()
     b['head'] = B.REF.sub(lambda m: '⟦%s⟧' % m.group(1) if m.group(1) in ids else m.group(1), head)
+    # review rounds after the rewrite: exact edits by 條 id, KEY:INTRO, KEY:DUIZHAO or HEAD, in file order
+    parts = {p['key']: p for p in b['parts']}
+    tiao = {t['id']: t for p in b['parts'] for t in p['tiao']}
+    for f in ROUNDS:
+        rep = report.setdefault(os.path.basename(f), {'applied': 0, 'failed': []})
+        for e in load(os.path.join(HERE, f)) or []:
+            i = e['id']
+            if i == 'HEAD':
+                tgt, field = b, 'head'
+            elif ':' in i and i.split(':')[0] in parts:
+                tgt, field = parts[i.split(':')[0]], {'INTRO': 'intro', 'DUIZHAO': 'duizhao'}.get(i.split(':')[1], 'intro')
+            elif i in tiao:
+                tgt, field = tiao[i], 'body'
+            else:
+                rep['failed'].append({'id': i, 'why': 'no such place', 'find': e['find'][:60]})
+                continue
+            if tgt[field].count(e['find']) == 1:
+                tgt[field] = tgt[field].replace(e['find'], e['replace'])
+                rep['applied'] += 1
+            elif tgt[field].count(e['replace']) and e['replace']:
+                rep['applied'] += 1  # already in place
+            else:
+                rep['failed'].append({'id': i, 'count': tgt[field].count(e['find']), 'find': e['find'][:60], 'why': e['why'][:120]})
     b['tail'] = open(os.path.join(HERE, 'work/appendices.md'), encoding='utf-8').read()
     json.dump(report, open(os.path.join(HERE, 'work/finish-report.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     for k, v in report.items():
+        if 'applied' in v:
+            print(k, 'applied %d, failed %d' % (v['applied'], len(v['failed'])))
+            continue
         print(k, 'missing' if v.get('missing') else 'edits %d, failed %d, 條 losing content %d%s' % (
             v['edits'], len(v['failed']), len(v['lost']), ', ids differ' if v.get('ids') else ''))
     if '--report' in sys.argv:

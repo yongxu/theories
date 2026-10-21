@@ -1,0 +1,152 @@
+{
+ "findings": [
+  {
+   "id": "二·八",
+   "problem": "二·八 小故与大故. The 經 says 「容为待者运之小故」. By the 經's own definition, 小故 has two halves: 无之必不然 (without support, no activity) and 有之不必然 (support does not guarantee activity). The 證 anchors only 无之必不然 (`Becoming.Web.Dependent`). The 證 marks the other half 未决: 「见容而不运之构造之例中“见容”一项尚无具名之证」. The 說 says the same thing in so many words: 「尚无具名之证，所以不写入經（未决）」. No named Lean witness of support without activity exists (`Hibernation.readings` gives ¬active but not Supported). So the 經 still asserts the unproved half.",
+   "find": "若有待，容为待者运之小故：不容则不运。",
+   "replace": "若有待，不容则不运：容于待者之运，无之必不然；有之不必然（见容而不运之例）尚无具名之证，未决。",
+   "severity": "error"
+  },
+  {
+   "id": "一·十一",
+   "problem": "一·十六 其余 is missing a local condition. 「计其余，凡宇皆衡，唯运者与之，唯运者取，且唯取于其所资」 holds only because `World.withRest` reads activity and drawing off the exchange (`Flow.readOff`: active = 在场而有取与, draws = 有取). That is why `readOff_acting` and `readOff_taking` are true by construction. With the world's own 运 and 资, the claim is false for any world in which an inactive relatum gives. The 經 never says that 运 and 资 are re-read. A reader takes 唯运者与之 as a fact about every world.",
+   "find": "计其余，凡宇皆衡，唯运者与之，唯运者取，且唯取于其所资。",
+   "replace": "计其余，而运读作在场而有取与、资读作有取，则凡宇皆衡，唯运者与之，唯运者取，且唯取于其所资。",
+   "severity": "error"
+  },
+  {
+   "id": "NEW-13",
+   "problem": "Added 條 十四·五 相待之速 does not match its 證. The first sentence of the 經 is general: 「第 t 步之可致不过 D 乘 1＋M 之 t 次方」, for every 所待 and every step. The only cited bound, `Becoming.exponential_around`, gives this only at a loop's condition, at steps T+(m+1)R, and only under the loop hypothesis. The general law is `Becoming.carried_le_pow_always` (MutualDependence.lean:283). The 說 cites it, but the 證 leaves it out.",
+   "find": "**證**　`Becoming.exponential_around`",
+   "replace": "**證**　`Becoming.carried_le_pow_always`、`Becoming.exponential_around`",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "C10:INTRO",
+   "problem": "篇十一 opening, on alignment. It says 「对齐之向在此诸律之上以二设为条件（⟦十六·十三⟧）」. 「二设」 is the book's name for the two ethical premises (凡续皆有顾, 以广为愈). But 十六·十三 动之向 is conditioned on 无以小害大 (J2, a practical commitment, `FrontierFrames.Priority`). Its 說 says explicitly 「凡续皆有顾在此不用…伦理之次序仍只在以广为愈，取舍之序在无以小害大诸承诺」. So the opening misstates which premise the direction rests on.",
+   "find": "对齐之向在此诸律之上以二设为条件（⟦十六·十七⟧）。",
+   "replace": "对齐之向（⟦十六·十七⟧）在此诸律之上，其取舍以无以小害大（实践之承诺）为设；称其所向为愈，仍只在以广为愈，其所顾由凡续皆有顾定。",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "C14:INTRO",
+   "problem": "篇十五 opening, standings. It calls 衡 a 「条件」 for 十五·五, 十五·十八 and 十五·十九. 凡·十六 and 凡·十七 separate local conditions, which leave a law 无设而然, from 宇之设, which make it 有设而然, and they list 衡 among 宇之设. The opening also lists 「对任何顾成立」 as if it were a fifth standing. 十五·十九 additionally takes a supplied law of exchange read through couplings. 篇十一 treats that as a 设.",
+   "find": "本篇诸律或无设而然，或对任何顾成立（其中⟦十五·四⟧、⟦十五·十五⟧与⟦NEW-16⟧以衡为条件），或以凡续皆有顾为设而有设而然；",
+   "replace": "本篇诸律或无设而然（对任何顾成立者多在其中），或以宇之设衡为若而有设而然（⟦十五·四⟧、⟦十五·十五⟧与⟦NEW-16⟧，后者又以所给之缘感而读之取与之法为设），或以凡续皆有顾为设而有设而然；",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "C03:INTRO",
+   "problem": "篇三 opening lists 「有列」 among the local conditions. 凡·十六 說 separates 「所然者有列」 (a local condition) from 「运者有列」 (`World.Counted`, one of the 宇之八设, ⟦十三·五⟧), and says a law that takes the latter as 若 is 有设而然. 三·四, 三·六, 三·十六 and 三·十七 all take 「每步运者有列」 as 若. So the opening misreports their standing.",
+   "find": "局部条件（有穷、有列、定然否、有界……）与所名之宇之设（衡、耗……）",
+   "replace": "局部条件（有穷、所然者有列、定然否、有界……）与所名之宇之设（衡、耗、运者有列……）",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "HEAD",
+   "problem": "Preface vs 论纲 opening. The 论纲 opening defines four grades: 已证、验而未排、猜想、论题. The preface names them 已证、有支持、猜想、论题 in three places; this is the first. 「有支持」 appears nowhere in 论纲. It also blurs the defined meaning: a frozen test passed, which is not a proof.",
+   "find": "论纲之辞不在此四种之内，其地位（已证、有支持、猜想、论题）见论纲篇首。",
+   "replace": "论纲之辞不在此四种之内，其地位（已证、验而未排、猜想、论题）见论纲篇首。",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "HEAD",
+   "problem": "Preface, 篇目: the second place where 「有支持」 is used for the 论纲 grade that the 论纲 opening calls 验而未排.",
+   "find": "各写其地位（已证、有支持、猜想、论题）、所排与不然者",
+   "replace": "各写其地位（已证、验而未排、猜想、论题）、所排与不然者",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "HEAD",
+   "problem": "Preface, 限度: the third place where 「有支持」 is used. It also says the grade is written 「于說中」. The 论纲 opening says each 經 opens with its grade in brackets (經首括注), and the 說's 「地位」 paragraph says which part is proved.",
+   "find": "其地位另分四等（已证、有支持、猜想、论题），每条于說中写明",
+   "replace": "其地位另分四等（已证、验而未排、猜想、论题），每条于經首括注、于說之「地位」一段写明",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·五",
+   "problem": "纲·五 grades its reduction 「归约有设而然」. The 论纲 opening says 已证 is written 有设而然 or 无设而然 according to the 若 and 设 it names, and 凡·十六 says local conditions written as 若 leave a law 无设而然. `Weighting.widens_iff_every_positive` has no hypotheses at all. `Web.widens_iff_every_weighting` assumes only listed items and decided admission, which are local conditions, not one of the 设 that 凡·十七 lists. The same theorems carry 六·十八, which is 无设而然 under 篇六's own standing.",
+   "find": "（归约有设而然；经验之辞为猜想，VD1 败）",
+   "replace": "（归约无设而然，所列之事与容定然否以若写入；经验之辞为猜想，VD1 败）",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·五",
+   "problem": "纲·五 說, 地位 paragraph: it calls 「所列之事与可定之容」 a 设 and the reduction 有设而然. Under 凡·十六 and 凡·十七 these are local conditions written as 若, so the reduction is 无设而然 (same issue as the 經).",
+   "find": "地位：归约已证（规范章地位表作有设而然，其设为所列之事与可定之容；容为二值）",
+   "replace": "地位：归约已证，无设而然：所列之事与容定然否是以若写入之局部条件，不是设（规范章地位表作有设而然，所指即此二者；容为二值）",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·九",
+   "problem": "纲·九 說, 其二: 「归约有设而然」, as in 纲·五. `Weighting.widens_iff_every_positive` (the theorem the 證 cites) has no premise, so the reduction is 无设而然.",
+   "find": "地位：归约有设而然；预测是猜想",
+   "replace": "地位：归约无设而然（所列之事与容定然否以若写入）；预测是猜想",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·九",
+   "problem": "纲·九 說, 其四: 「莫上之者之律有设而然」. `Optimum.Rising.mono`, `least_of_room` and `Web.optimum_broken_iff` take only local conditions (随族而上, 可汲, 族外之待足), so they are 无设而然. Only `Flow.keeping_optimum_takes_slack`, which assumes `L.Balances W` (衡), is 有设而然.",
+   "find": "地位：莫上之者之律有设而然；跨域为猜想",
+   "replace": "地位：莫上之者之律无设而然（可汲以若写入），恰取余地之律以衡为设而有设而然；跨域为猜想",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·三",
+   "problem": "纲·三 經 grade 「律有设而然」. Most of the 經's law content is 无设而然: lowering to the least outcome where there is 可汲 (`least_iff`, `least_of_room`), and breaking every 族外 dependence that some option breaks (`optimum_broken_iff`). Their hypotheses (Rising, Room, MetOn) are local conditions. Only the 「恰取族外之余地」 sentence (`keeping_optimum_takes_slack`, which assumes 衡) is 有设而然.",
+   "find": "（律有设而然；为跨域之一律是猜想）",
+   "replace": "（律无设而然，其恰取余地一句以衡为设而有设而然；为跨域之一律是猜想）",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·三",
+   "problem": "纲·三 說, 地位: it calls 可汲 and 族外之待足 设 (「其设为可汲；言绝者又设…」). None of the kinds of 设 that 凡·十七 lists covers either one. They are hypotheses written as 若. Only 有待 (for 亡) and 衡 (for 恰取余地) are 宇之设.",
+   "find": "莫上之者之律于任何可选者之集已证（有设而然，其设为可汲；言绝者又设族外每一所待之待于其需而足，言亡者设有待，言恰取余地者设衡且族与族外合而与不过取）",
+   "replace": "莫上之者之律于任何可选者之集已证（无设而然，可汲以若写入；言绝者又以族外每一所待之待于其需而足为若；言亡者以宇之设有待、言恰取余地者以宇之设衡为若，此二者有设而然，族与族外合而与不过取以若写入）",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·二",
+   "problem": "纲·二 說 says the proved part is 「有设而然，其设为自然数之量与各律所名者」. Natural-number amounts are a modelling choice (拟之所定, 凡·二), not a 设. `RegimeMargin.Adjusted.rests_iff`, `comes_to_rest`, `falls_iff_below` and `threshold_falls` assume only local conditions (Rises, RestsAtDraw, Band). By 凡·十六 and the 论纲 opening, the proved part is 无设而然 within the model. `Drawn.converges` is periphery and carries its own axiom report.",
+   "find": "已证之部分（有设而然，其设为自然数之量与各律所名者）",
+   "replace": "已证之部分（于拟中无设而然：自然数之量是拟之所定，各律之条件以若写入）",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "纲·一",
+   "problem": "纲·一 經 is graded 「有设而然之律」, but this sentence states more than was proved. The 說 itself gives the proved form of `Flow.fed_from_beyond`: under 衡、耗, a family with distinct members and decided identity of conditions, 「自某步起其族每步皆无自外来」 cannot hold. That is a double negation; 四·九 states it exactly. The 經's positive 「则其族自外来」 also drops the local condition 所待之同异定然否.",
+   "find": "凡有取于一有穷之族而不已，其族自某步起每步被围，则其族自外来。",
+   "replace": "凡有取于一有穷之族而不已，其族自某步起每步被围，所待之同异定然否，则「其族自某步起每步皆无自外来」不能立。",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "凡·十九",
+   "problem": "凡·十九 defines 讀（AI） as carrying its decision number, and its 說 says 「全书 AI 读法之标记一律如此」. At least thirteen 條 use a bare 「讀（AI）：」 with no decision number (rendered numbers): 一·五、二·十一、三·十三 (in its 證, where the 經 of 化 itself is called a reading)、三·十四、四·九、四·二十一、四·二十四、八·一、八·十五 (twice)、八·十六、九·二十五、十一·十五、十三·十六. Fix either way: give each its D number from the decision record, or relabel the unnumbered ones as plain AI remarks and narrow the 凡·十九 說 sentence to match.",
+   "find": "",
+   "replace": "",
+   "severity": "inconsistency"
+  },
+  {
+   "id": "九·一",
+   "problem": "识 (九·三) is defined as 「一待者自身之后程，随其感所作之类而定」. Like 明 and 无明 (十一·二十五, 十一·十八), this definition is an adopted reading (D45). The 篇九 opening says so: 「讀（AI，D26、D45）：识、理、明是一个结构」. But unlike 明, 无明 and 生生, the 經 carries no 讀 marker, and the 證 lists only definitions. It reads as a checked law.",
+   "find": "**經**　识，一待者自身之后程，随其感所作之类而定也。",
+   "replace": "**經**　讀（AI，D45）：识，一待者自身之后程，随其感所作之类而定也。",
+   "severity": "style"
+  },
+  {
+   "id": "五·十三",
+   "problem": "五·二十四 初不定终 states a fact about one constructed example as if it held of every 变. The 經 opens 「有一变…」 but then says 「故凡读定于前 h 步之往而含凡恒之行者，必含一竭之行」. `Renewable.finite_reading_includes_consumption` holds only for that constructed process, and in a 变 with no 竭 run the universal form is false.",
+   "find": "故凡读定于前 h 步之往而含凡恒之行者，必含一竭之行",
+   "replace": "故于此变，凡读定于前 h 步之往而含凡恒之行者，必含一竭之行",
+   "severity": "style"
+  },
+  {
+   "id": "NEW-12",
+   "problem": "Added 條 十三·五 八设互不相出 leaves unclear what 「宇有形」 is about. `World.withRest_embodied_iff` is about the world with the rest counted: `w.withRest.Embodied ↔ w.Balanced ∧ …`. Read on its own, 「宇有形，恰当宇自衡…」 says something different about the world's own premise 有形.",
+   "find": "宇有形，恰当宇自衡而每物恰于其积为正之步取与",
+   "replace": "计其余之宇有形，恰当原宇自衡而每物恰于其积为正之步取与",
+   "severity": "style"
+  }
+ ],
+ "summary": "Round 2, standing and premises. I read BRIEF-ZH, STYLE-ZH, every 篇首 and every 經 in jing-all.md. The working tree was mid-rebase and missing the work files, so I read everything from commit 0686ecdfb (book-2.json, outline, jing-all, global-*.json, Lean sources), copied to /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/r2std/. I compared all 393 條 with their 證 (Lean statements extracted per 條 into part files there), and checked the 17 added 條 one theorem at a time.\n\nWhat holds:\n- The first round's standing fixes are in place: 十六·三 no longer asserts C; 生生, 明 and 无明 carry 讀; 凡·十七 now restricts 伦理之序 to 以广为愈.\n- The continuation condition is only ever stated (十五·二十一 「此设也，本论陈之而不断之」), and every 經 that uses it is conditional, an iff or a witness.\n- C ranks only where 以广为愈 or a named practical commitment is assumed. The ethics passages name both premises, mostly in the 說.\n- Nearly every 經 keeps its Lean local conditions and iff directions exactly. 15 of the 17 added 條 are exact (NEW-1 to NEW-11, NEW-14 to NEW-17); NEW-13 and NEW-12 have findings below.\n\nWhat is still wrong:\n1. **Two errors where a 經 states more than is proved.**\n   - 二·八: 容为运之小故 includes the unproved half 有之不必然; the 證 and 說 mark it 未决.\n   - 一·十六 其余: 「计其余…唯运者与之，唯运者取」 is true only because the rest-counted world reads 运 and 资 off the exchange. The 經 does not say so.\n2. **Added 條 NEW-13 (十四·五):** the general bound D(1+M)^t is carried by `Becoming.carried_le_pow_always`, which the 說 cites but the 證 omits.\n3. **Openings that misstate standing:**\n   - 篇十一 says the alignment direction rests on 「二设」, but 十六·十三 rests on 无以小害大 and its 說 says 凡续皆有顾 is not used there.\n   - 篇十五 calls 衡 a 条件 rather than a 设.\n   - 篇三 lists 有列 as a local condition, though 运者有列 is one of the 宇之八设.\n4. **论纲 grades:**\n   - The preface names the grades 已证、有支持…; the 论纲 opening defines 已证、验而未排、猜想、论题.\n   - 纲·二, 纲·三, 纲·五 and 纲·九 call laws 有设而然 whose only hypotheses are local conditions (listed items, decided admission, 可汲, natural-number amounts), contrary to 凡·十六 and the 论纲 opening's own rule. 纲·五's reduction has no hypothesis at all.\n   - 纲·一 states fed-from-beyond positively; only the double-negation form is proved.\n5. **Unnumbered 讀:** about thirteen 條 use 讀（AI） without a decision number, against 凡·十九's 「一律如此」.\n6. **Style:** 识 is an unmarked reading; 五·二十四 states a fact about one example as a law of every 变; NEW-12's 「宇有形」 is ambiguous between the world and the world with the rest counted.\n\nNo file was edited."
+}

@@ -16,5 +16,25 @@
   "find": "才使于域每状皆得之读可能（⟦九·十九⟧）。",
   "replace": "才使于域每状皆得之读可能（⟦九·十九⟧）。又（相合，xici-yan-bu-jin-yi）：「书不尽言，言不尽意。」〔DS02〕（《易传·系辞上》，先秦至秦汉，年代有争议）：书与言并了意所分开者，就没有经由它们之精确读；读族本身又不尽。",
   "why": "改写时删去；相合之例"
+ },
+ {
+  "id": "四·十二",
+  "find": "`Becoming.HalvingPass.never_rests`",
+  "replace": "`Becoming.Pass.endless_keeps_from_rest`，以 `Becoming.Halving.stock` 为其降者",
+  "why": "LC3 (main, 21 October) put HalvingPass below the general Pass (rule 9); its laws are Pass.endless_keeps_from_rest and Pass.levels_unlisted at Halving.stock"
+ },
+ {
+  "id": "四·十九",
+  "find": "`Becoming.HalvingPass.never_rests`",
+  "replace": "`Becoming.Pass.endless_keeps_from_rest`",
+  "why": "LC3 (main, 21 October) put HalvingPass below the general Pass (rule 9); its laws are Pass.endless_keeps_from_rest and Pass.levels_unlisted at Halving.stock",
+  "all": true
+ },
+ {
+  "id": "四·十九",
+  "find": "`Becoming.HalvingPass.levels_unlisted`",
+  "replace": "`Becoming.Pass.levels_unlisted`",
+  "why": "LC3 (main, 21 October) put HalvingPass below the general Pass (rule 9); its laws are Pass.endless_keeps_from_rest and Pass.levels_unlisted at Halving.stock",
+  "all": true
  }
 ]
