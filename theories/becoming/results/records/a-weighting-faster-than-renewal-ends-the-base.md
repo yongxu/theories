@@ -28,7 +28,7 @@
 ## Does not show
 
 - The optimum where no course whose level gains the most at each step is open; whether an optimum ends the base after the first step where some level renews faster at the first steps.
-- An order valuing what is left at the horizon at a worth whose most left is not regrown in one step; steps met again after a fall; rebuilding from below; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one.
+- An order valuing what is left at the horizon at a worth whose most left is not regrown in one step; rebuilding from below; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one.
 - That a weighting ought to be flatter or a base kept: no evaluation enters; the laws say which optima a weighting leaves.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -73,6 +73,7 @@ Discounting (Ramsey 1928; Koopmans 1960); at a constant rate δ a level's weight
 - related, not a proved adapter: [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md). Over every law of what stands: these laws hold over any law of what a level gives at a step; with others drawing first, every optimum of a falling weighting ends the base at once.
 - related, not a proved adapter: [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md). With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.
 - related, not a proved adapter: [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md). At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.
+- related, not a proved adapter: [steps-met-again-after-a-fall](steps-met-again-after-a-fall.md). Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start.
 
 **Used by:** [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md) · [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md)
 
@@ -98,6 +99,7 @@ Discounting (Ramsey 1928; Koopmans 1960); at a constant rate δ a level's weight
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json) | — |
 
 Aliases: `a weighting falling faster than renewal ends the base`, `an order weighting later draws less`, `discounting ends the base`, `the modified golden rule on the spine`, `权重下降快于更新时终结基础`, `Becoming.Optimum.frontier_gains_weighted`, `Becoming.Optimum.frontier_exhausts`, `Becoming.Web.frontier_exhausts`
 
@@ -109,6 +111,7 @@ Aliases: `a weighting falling faster than renewal ends the base`, `an order weig
 - 21 October 2026, SG10: this record's laws hold over every law of what stands (Optimum.Next, Web.Next; record others-drawing-first-end-the-base, study section 298), the level with its renewal the case. Those still read in the renewal form keep their statements, each proof now one line; the renewal forms no law reads any more were removed, and this record cites their general forms (12 law citations moved, the proof references with them).
 - 22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.
 - 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
+- 22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.
 
 </details>
 

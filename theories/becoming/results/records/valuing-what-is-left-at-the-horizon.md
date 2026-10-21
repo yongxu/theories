@@ -27,7 +27,7 @@
 - An order valuing what is left at a worth whose most left is not regrown in one step.
 - That valuing what is left keeps what depends on the levels passed through: a dependence above every level of greatest renewal is still broken at the first step.
 - Which optimum is taken: the last step's draw is left free, keeping and draining both optima.
-- Several optimizers ranking courses; steps met again after a fall.
+- Several optimizers ranking courses.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -66,6 +66,7 @@ A terminal or salvage value in a finite-horizon problem: the payoff counts the s
 - related, not a proved adapter: [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md). Its open item, an order valuing what is left at the horizon, is answered here for a one-for-one value.
 - related, not a proved adapter: [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md). Its open item, an order valuing what is left at the horizon, is answered here for a one-for-one value.
 - related, not a proved adapter: [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md). At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.
+- related, not a proved adapter: [steps-met-again-after-a-fall](steps-met-again-after-a-fall.md). Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start.
 
 **Used by:** [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md)
 
@@ -80,6 +81,7 @@ A terminal or salvage value in a finite-horizon problem: the payoff counts the s
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json) | — |
 
 Aliases: `valuing what is left at the horizon`, `a terminal value at the worth of the draw`, `对视野末所留的计值`, `Becoming.Optimum.frontier_holds_left`, `Becoming.Optimum.frontier_left_iff`
 
@@ -88,6 +90,7 @@ Aliases: `valuing what is left at the horizon`, `a terminal value at the worth o
 
 - 22 October 2026: added (SG11), valuing what is left at the horizon: with what is left valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken; study section 321.
 - 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
+- 22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.
 
 </details>
 

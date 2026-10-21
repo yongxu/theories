@@ -71,7 +71,7 @@ The exact penalty: a penalty beyond the value of a constraint makes the constrai
 - related, not a proved adapter: [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md). With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.
 - related, not a proved adapter: [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md). At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.
 
-**Used by:** [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md) · [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md) · [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md)
+**Used by:** [a-step-coupling-keeps-at-every-horizon](a-step-coupling-keeps-at-every-horizon.md) · [steps-met-again-after-a-fall](steps-met-again-after-a-fall.md) · [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md) · [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -98,6 +98,7 @@ The exact penalty: a penalty beyond the value of a constraint makes the constrai
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json) | — |
 
 Aliases: `keeping forgoes the renewal at the need`, `what keeping a dependence forgoes over a horizon`, `the coupling needed to keep a dependence`, `far-sight outweighs a fixed coupling`, `保持依存放弃其所需处的更新`, `Becoming.Optimum.frontier_breaks_below`, `Becoming.Optimum.frontier_keeps_above`, `Becoming.Web.frontier_breaks_long`
 

@@ -1,0 +1,270 @@
+{
+  "schema_version": 2,
+  "id": "steps-met-again-after-a-fall",
+  "title": {
+    "en": "Steps met again after a fall",
+    "zh": "跌落后再被满足的步"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T18:32:45+00:00",
+  "statement": {
+    "en": "Counted at every step met, wherever, a coupling a step keeps a need under every optimum exactly where r + e < q + c + m and e < c, strictly above the count from the start: a fall met again loses the coupling only at the steps below.",
+    "zh": "按每个被满足的步计数（不论位置）时，每步的耦合恰在 r + e < q + c + m 且 e < c 时使每个最优保持所需，严格高于自起点计数的门槛：跌落后再被满足只在其下各步失去耦合。"
+  },
+  "laws": [
+    {
+      "en": "The steps among the first n at which a Boolean reading holds, counted: at most every step, all where it holds throughout, fewer where it fails at some step, and the steps before j number j.",
+      "zh": "前 n 步中某个布尔读数成立的步数：至多每一步，处处成立时为全部，某步不成立时更少；j 之前的步恰为 j 个。",
+      "declarations": [
+        "Becoming.Optimum.countUpTo",
+        "Becoming.Optimum.counted_le_one",
+        "Becoming.Optimum.countUpTo_le",
+        "Becoming.Optimum.countUpTo_all",
+        "Becoming.Optimum.countUpTo_lt",
+        "Becoming.Optimum.countUpTo_below"
+      ]
+    },
+    {
+      "en": "Where what is given at each counted step is at most q, r for each counted step is at most everything given falls short of r, with q for each counted step, wherever they lie (the count from the start its case); so what a course draws with what it leaves and r for each step met is at most the start with what is given there, r a step after and q for each step met.",
+      "zh": "每个被计的步所给至多为 q 时，每个被计的步的 r 至多是所给不足 r 之和再加每个被计的步的 q，不论其位置（自起点计数是其情形）；故进程所抽取加所留再加每个被满足的步的 r，至多是起始加所给、此后每步 r 再加每个被满足的步的 q。",
+      "declarations": [
+        "Becoming.Optimum.counted_step",
+        "Becoming.Optimum.shortfall_count_ge",
+        "Becoming.Optimum.metCount",
+        "Becoming.Optimum.metCount_of_met",
+        "Becoming.Optimum.met_count_drawn_le"
+      ]
+    },
+    {
+      "en": "A course below the need at some step, counted at every step met, is worth at most the keeping course ending at e, less d, where r ≤ q + c, r + e + d ≤ q + c + m and e + d ≤ c: a fall met again loses the coupling only at the steps below.",
+      "zh": "某步低于所需的进程，按每个被满足的步计数，价值至多是终于 e 的保持进程减 d，条件为 r ≤ q + c、r + e + d ≤ q + c + m 与 e + d ≤ c：跌落后再被满足只在其下各步失去耦合。",
+      "declarations": [
+        "Becoming.Optimum.le_of_met_count",
+        "Becoming.Optimum.mul_le_of_rate",
+        "Becoming.Optimum.met_key_end",
+        "Becoming.Optimum.met_key_drop",
+        "Becoming.Optimum.falls_met_le"
+      ]
+    },
+    {
+      "en": "Every optimum of every order rising with a worth adding at least c a step to a keeping course and at most c for each step met, wherever, keeps the need through the horizon where r + e < q + c + m and e < c; the keeping course ending at m is an optimum where r ≤ q + c and m ≤ c.",
+      "zh": "随一个价值升高之每个序的每个最优（对保持的进程每步至少加 c，对每个被满足的步不论位置至多加 c），在 r + e < q + c + m 且 e < c 时在视野内保持所需；在 r ≤ q + c 且 m ≤ c 时终于 m 的保持进程是最优。",
+      "declarations": [
+        "Becoming.Optimum.frontier_keeps_met",
+        "Becoming.Optimum.continued_met_frontier"
+      ]
+    },
+    {
+      "en": "On a web, under those conditions, every such optimum meets the dependence at every step through the horizon.",
+      "zh": "在网上，在这些条件下，每个这样的最优在视野内每步都满足依存。",
+      "declarations": [
+        "Becoming.Web.frontier_met_kept"
+      ]
+    },
+    {
+      "en": "Witness: under a burst renewing four at one, from the dweller's need two with capacity three, a coupling of four a step keeps the dweller under every optimum counting from the start, while counting every step met the course falling once and met again is an optimum beside the keeping course; five a step keeps it under every optimum.",
+      "zh": "见证：在一处更新四的爆发之下，自居者所需二出发、容量为三，每步四在自起点计数时使每个最优保持居者，而按每个被满足的步计数时跌落一次再被满足的进程与保持进程同为最优；每步五则使每个最优保持它。",
+      "declarations": [
+        "Becoming.Optimum.Holding.burst",
+        "Becoming.Optimum.Holding.burst_le",
+        "Becoming.Optimum.Holding.burst_above",
+        "Becoming.Optimum.Holding.fallOnce",
+        "Becoming.Optimum.Holding.fallOnce_open",
+        "Becoming.Optimum.Holding.fallOnce_drawn",
+        "Becoming.Optimum.Holding.fallOnce_met",
+        "Becoming.Optimum.Holding.metDraw",
+        "Becoming.Optimum.Holding.metDraw_of_keeps",
+        "Becoming.Optimum.Holding.burst_met"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. A renewal law R of the level, at most r at every level, at most q at or above a need m and q at some y with y ≤ s + R s; a start meeting m; a capacity covering what the first step draws down to y and y with q down to some e between m and y; a horizon of at least two steps; a worth adding at least c a step to a keeping course and at most c for each step met, wherever; natural amounts, discrete steps.",
+      "zh": "不加公理。水平的更新之律 R，各水平至多 r，所需 m 及以上至多 q，在某个 y ≤ s + R s 处为 q；起点满足 m；容量足以承担第一步降到 y 的抽取与 y 加 q 降到 m 与 y 之间某个 e；视野至少两步；一个价值对保持的进程每步至少加 c，对每个被满足的步不论位置至多加 c；自然数量，离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "A weighting of the steps met, or a coupling depending on how long the need stays met.",
+      "zh": "对被满足之步的加权，或依赖所需被满足多久的耦合。",
+      "kind": "scope"
+    },
+    {
+      "en": "That every optimum keeps the need at r + e = q + c + m: there a fall met again can tie (the witness).",
+      "zh": "在 r + e = q + c + m 时每个最优保持所需：那里跌落后再被满足可以相持（见证）。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Several optimizers ranking courses.",
+      "zh": "多个对过程排序的优化者。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T182853.888304Z): the 29 declarations Becoming.Optimum gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 323; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T182853.888304Z）：Becoming.Optimum 新增的 29 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 323 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "A weighting of the steps met; several optimizers ranking courses at a mutual best response; an independent review.",
+    "zh": "对被满足之步的加权；多个对过程排序的优化者的相互最优回应；独立审查。"
+  },
+  "correspondence": {
+    "en": "A reward for each step a constraint holds, with no memory of a breach, as in constrained Markov decision processes (Altman 1999); against a breach forfeiting what follows, the threshold rises by the gain a step below and the end left above the need.",
+    "zh": "约束成立的每一步给予回报而不记违约，如约束马尔可夫决策过程（Altman 1999）；相对于违约即丧失其后各步者，门槛升高了其下每步之所得与终了高于所需之量。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "steps met again after a fall",
+    "a coupling for every step met",
+    "跌落后再被满足的步",
+    "Becoming.Optimum.frontier_keeps_met",
+    "Becoming.Optimum.shortfall_count_ge"
+  ],
+  "dependencies": [
+    {
+      "id": "a-step-coupling-keeps-at-every-horizon",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Its shortfall law for the steps from the start is now the case of the law over any counted steps; its threshold is the contrast.",
+        "zh": "其自起点各步的不足之律现为任意被计之步之律的情形；其门槛为对照。"
+      },
+      "interface": {
+        "output": {
+          "en": "shortfall_ge, stepwiseDraw, frontier_keeps_stepwise.",
+          "zh": "shortfall_ge、stepwiseDraw、frontier_keeps_stepwise。"
+        },
+        "input": {
+          "en": "The coupling counted at every step met.",
+          "zh": "按每个被满足的步计数的耦合。"
+        },
+        "conditions": {
+          "en": "A start meeting the need.",
+          "zh": "起点满足所需。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    },
+    {
+      "id": "keeping-forgoes-the-renewal-at-the-need",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "SG6's keeping courses, continued courses and their optimum among keeping courses are reused.",
+        "zh": "沿用 SG6 的保持进程、延续进程及其在保持进程中的最优。"
+      },
+      "interface": {
+        "output": {
+          "en": "Keeps, keeps_or_falls, continued, continued_keeping_frontier, holdingTo_most.",
+          "zh": "Keeps、keeps_or_falls、continued、continued_keeping_frontier、holdingTo_most。"
+        },
+        "input": {
+          "en": "The keeping course as the comparison.",
+          "zh": "以保持进程为比较。"
+        },
+        "conditions": {
+          "en": "At most q given at or above the need.",
+          "zh": "所需及以上至多给出 q。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.Holding.burst",
+        "Becoming.Optimum.Holding.burst_above",
+        "Becoming.Optimum.Holding.burst_le",
+        "Becoming.Optimum.Holding.burst_met",
+        "Becoming.Optimum.Holding.fallOnce",
+        "Becoming.Optimum.Holding.fallOnce_drawn",
+        "Becoming.Optimum.Holding.fallOnce_met",
+        "Becoming.Optimum.Holding.fallOnce_open",
+        "Becoming.Optimum.Holding.metDraw",
+        "Becoming.Optimum.Holding.metDraw_of_keeps",
+        "Becoming.Optimum.Holding.onSource",
+        "Becoming.Optimum.Holding.stepwiseDraw",
+        "Becoming.Optimum.Keeps",
+        "Becoming.Optimum.continued",
+        "Becoming.Optimum.continued_keeping_frontier",
+        "Becoming.Optimum.continued_met_frontier",
+        "Becoming.Optimum.continued_open",
+        "Becoming.Optimum.countUpTo",
+        "Becoming.Optimum.countUpTo_all",
+        "Becoming.Optimum.countUpTo_below",
+        "Becoming.Optimum.countUpTo_le",
+        "Becoming.Optimum.countUpTo_lt",
+        "Becoming.Optimum.counted_le_one",
+        "Becoming.Optimum.counted_step",
+        "Becoming.Optimum.falls_met_le",
+        "Becoming.Optimum.frontier_keeps_met",
+        "Becoming.Optimum.frontier_keeps_stepwise",
+        "Becoming.Optimum.holdingTo_most",
+        "Becoming.Optimum.holdingTo_steps",
+        "Becoming.Optimum.keeps_or_falls",
+        "Becoming.Optimum.le_of_met_count",
+        "Becoming.Optimum.metCount",
+        "Becoming.Optimum.metCount_of_met",
+        "Becoming.Optimum.met_count_drawn_le",
+        "Becoming.Optimum.met_drawn_le",
+        "Becoming.Optimum.met_key_drop",
+        "Becoming.Optimum.met_key_end",
+        "Becoming.Optimum.mul_le_of_rate",
+        "Becoming.Optimum.shortfall_count_ge",
+        "Becoming.Optimum.shortfall_ge",
+        "Becoming.Web.frontier_keeps_stepwise",
+        "Becoming.Web.frontier_met_kept"
+      ],
+      "sha256": "d98370b00ccec5e6dfa0fb71121207e932986fd932d720cbe4aebacd3854b90c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5086799820515cf847aa0d2805f59a1af988c67ff29e568d36d4aa9aeed3838"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "f21e29d0f85e441cab4089e092c57c0440d700b4936c6b952e1e12b630b1b082"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "1aa14fab6e3f0eb3123b74033d5c46ec1098d69e14b88bcd47c42f856987c5c0"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "0c2400e88fdd1df6afeb63c3a82532fd8f54561cfd1504074157cecf2ee4c49f"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (SG13), steps met again after a fall: counted at every step met, a coupling a step keeps the need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start; study section 323.",
+      "zh": "2026年10月22日：新增（SG13），跌落后再被满足的步：按每个被满足的步计数时，每步的耦合在 r + e < q + c + m 且 e < c 时使每个最优保持所需，严格高于自起点计数的门槛；研究第 323 节。"
+    }
+  ]
+}

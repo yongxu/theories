@@ -27,7 +27,7 @@
 
 - A worth on what is left where the most a course can leave is not regrown in one step from a level of greatest renewal.
 - That any terminal value keeps what depends on the levels passed through: a dependence above every level of greatest renewal is broken at the first step at every worth.
-- Several optimizers ranking courses; steps met again after a fall.
+- Several optimizers ranking courses.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -62,6 +62,7 @@ The turnpike: a finite-horizon optimum stays on the path of greatest yield and d
   - Input: The coupling law at any worth.
   - Preserved conditions: At most q given at or above the need. [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
 - related, not a proved adapter: [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md). Its holding steps are generalized below (holdingTo_steps_of); at worth nothing its optima drain at the end.
+- related, not a proved adapter: [steps-met-again-after-a-fall](steps-met-again-after-a-fall.md). Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -73,6 +74,7 @@ The turnpike: a finite-horizon optimum stays on the path of greatest yield and d
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json) | — |
 
 Aliases: `valuing what is left at any worth`, `a terminal value above the worth of the draw`, `以任一价值对所留计值`, `Becoming.Optimum.frontier_holds_valued`, `Becoming.Web.frontier_rebuilt_valued`
 
@@ -80,6 +82,7 @@ Aliases: `valuing what is left at any worth`, `a terminal value above the worth 
 ### History
 
 - 22 October 2026: added (SG12), valuing what is left at any worth: above one, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value; study section 322.
+- 22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.
 
 </details>
 

@@ -109,8 +109,8 @@
       "kind": "scope"
     },
     {
-      "en": "An order valuing what is left at the horizon at a worth whose most left is not regrown in one step; steps met again after a fall; rebuilding from below; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one.",
-      "zh": "以最多所留不能一步再生的价值对视野末所留赋值之序；跌落后再被满足的步；自下重建；多个对过程排序的优化者；把 SG5 的律作为权重皆为一的情形重新导出。",
+      "en": "An order valuing what is left at the horizon at a worth whose most left is not regrown in one step; rebuilding from below; several optimizers ranking courses; SG5's laws re-derived as the case of every weight one.",
+      "zh": "以最多所留不能一步再生的价值对视野末所留赋值之序；自下重建；多个对过程排序的优化者；把 SG5 的律作为权重皆为一的情形重新导出。",
       "kind": "scope"
     },
     {
@@ -264,6 +264,13 @@
         "en": "At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.",
         "zh": "对所留以大于一的任一价值计值时，每个最优都保持在最大更新的水平，只在最后一步再生；对保持的耦合如无此值时一样被胜过。"
       }
+    },
+    {
+      "id": "steps-met-again-after-a-fall",
+      "detail": {
+        "en": "Counted at every step met, wherever, a coupling a step keeps a need under every optimum where r + e < q + c + m and e < c, strictly above the count from the start.",
+        "zh": "按每个被满足的步计数（不论位置）时，每步的耦合在 r + e < q + c + m 且 e < c 时使每个最优保持所需，严格高于自起点计数的门槛。"
+      }
     }
   ],
   "references": [
@@ -317,7 +324,7 @@
         "Becoming.Web.frontier_exhausts",
         "Becoming.Web.frontier_leaves"
       ],
-      "sha256": "0c23ec4c60623524dfe484d7b606afa0e0bc2dc0fb17a482529b5e0697ad6745"
+      "sha256": "d98370b00ccec5e6dfa0fb71121207e932986fd932d720cbe4aebacd3854b90c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -391,7 +398,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "abd17d04482f6a8a26ee338809172a6f2f30a9cf2fef4b734cb12b1b84634a80"
+      "sha256": "0c2400e88fdd1df6afeb63c3a82532fd8f54561cfd1504074157cecf2ee4c49f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T070401.903190Z/verification.json",
@@ -428,12 +435,18 @@
       "role": "receipt",
       "sha256": "dd2d37696d0ee54ba3252cfa3c534aa67987ea38ec82bea6f08a64f7d5af2dde",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json",
+      "role": "receipt",
+      "sha256": "a5086799820515cf847aa0d2805f59a1af988c67ff29e568d36d4aa9aeed3838",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -501,6 +514,10 @@
     {
       "en": "22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.",
       "zh": "2026年10月22日，SG12：最多所留能一步再生时，对所留以一比一之外的价值计值已回答（记录 valuing-what-is-left-at-any-worth，研究第 322 节）；开放项改为其余情形。其规律不变。"
+    },
+    {
+      "en": "22 October 2026, SG13: steps met again after a fall are answered (record steps-met-again-after-a-fall, study section 323); its open item says so. Its laws are unchanged.",
+      "zh": "2026年10月22日，SG13：跌落后再被满足的步已回答（记录 steps-met-again-after-a-fall，研究第 323 节）；其开放项如此说明。其规律不变。"
     }
   ]
 }
