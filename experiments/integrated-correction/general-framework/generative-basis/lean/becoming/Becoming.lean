@@ -1454,6 +1454,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   last step alone; where q + c < r a long horizon outweighs it. Optima exist in every case.
   Witness: under the logistic law three a step keeps the dweller at every horizon, two a
   step to the last step, at most one a step breaks it.
+  Counted at every step met, wherever, each met step still forgoes at least r - q, but a
+  fall met again loses the coupling only at the steps below: every optimum keeps the need
+  where r + e < q + c + m and e < c, strictly above the count from the start. Witness: under
+  a burst renewing four at one, a coupling of four a step keeps the dweller counted from the
+  start, while counting every step met a course falling once and met again is an optimum.
   With the draw of the step from t weighted by w t, any weighting, what a course could draw
   at a step with what it drew before changes by what the level it leaves gains, w (t + 1)
   on it with its renewal against w t on it held; against an open course leaving nothing
