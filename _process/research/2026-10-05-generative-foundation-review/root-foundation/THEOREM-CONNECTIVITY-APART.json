@@ -2201,6 +2201,11 @@
    "module": "Becoming.Optimum",
    "category": "model-witness",
    "reason": "Two outcomes, the source kept or spilled with the store empty in both: under the store's order keeping is an optimum and is not at the least level beyond; a fact about one constructed set of outcomes showing that Optimum.least_of_room needs room."
+  },
+  "Becoming.Weighting.increasing_lexical": {
+   "module": "Becoming.Weightings",
+   "category": "general-structure",
+   "reason": "lexical priority, the basic items first, ranks every widening higher: a law of any finite listing of items and any marking of basic items, with no world; with Weighting.widens_iff_every_of_class it places lexical priority within the classes whose shared order is widening"
   }
  },
  "instances": {
