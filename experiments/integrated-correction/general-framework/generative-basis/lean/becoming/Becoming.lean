@@ -2461,6 +2461,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   condition ends below the point of no return and holds at or above it, and the point is exact
   on the state. With the recent giving on the other side, giving moving one unit a step toward
   the regime's crosses the point both ways.
+  Where giving rises with what is left, a run of the regime's step moves one way only, and within
+  a band up to a top it is still from some step at most the top. Where the adjustment rises with
+  what is left and with the recent giving, a run whose first step lowers neither its level nor
+  its recent giving, with the recent giving meeting the draw and within a band, comes to rest
+  with its recent giving at the draw and its level at a point the regime's step leaves as it is,
+  and a run whose first step raises neither comes to rest, where nothing gives from nothing, at
+  nothing or at such a point, each within a number of steps its start and band fix. A giving that
+  falls as what is left rises, a run with no band, and a constant giving resting short of the
+  draw show that each premise is needed.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of
@@ -2605,6 +2614,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   that every run with no reachable change that can be undone settles, for every process of
   decidable configurations in a world a list holds, is exactly that principle. With it, assured
   enough is every reachable stay meeting the target and no reachable change undoable.
+  A law's run is fixed by its law, so whether it changes at a step is decided: where a quantity
+  never falls along it, rises at every change and stays at most `d` above where it started, the
+  run is still from some step at most `d`, with no omniscience.
 * `Becoming.LimitVerification` (L1): what a method comes to say in the limit (no premise beyond
   Markov's principle and decidable configurations, where stated). A method guesses yes or no at
   each horizon from the record so far; it verifies a reading in the limit where it converges to
