@@ -1,0 +1,2842 @@
+{
+ "scope": "metadata only: names, species, areas and model types of the test sources against the RAM Legacy stocks MQ3-MQ5 read; no value of either source was read",
+ "rule": "python3 -I match_mq7.py SMART SAG XLSX    writes results/mq7/matching.json",
+ "ICES SAG": {
+  "ane.27.8": {
+   "decision": "read",
+   "ram": "ANCHOBAYB",
+   "assessment_key": 21265,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Anchovy (Engraulis encrasicolus) in Subarea 8 (Bay of Biscay) "
+  },
+  "ane.27.9a": {
+   "decision": "superseded",
+   "why": "split in 2024; ane.27.9aS assesses its southern part",
+   "assessment_key": 18230,
+   "assessment_year": 2023,
+   "model_type": "AL",
+   "model": "GADGET",
+   "description": "Anchovy (Engraulis encrasicolus) in Division 9.a (Atlantic Iberian waters)"
+  },
+  "ane.27.9aS": {
+   "decision": "unread",
+   "ram": "ANCHIXa (unread there)",
+   "assessment_key": 21266,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Anchovy (Engraulis encrasicolus) in the southern part of Division 9.a (Gulf of Cadiz and southern coast of Portugal)"
+  },
+  "anf.27.3a46": {
+   "decision": "unread",
+   "ram": "ANGLSPPIIIa-IV-VI (unread there)",
+   "assessment_key": 21004,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Anglerfish (Lophius budegassa, Lophius piscatorius) in subareas 4 and 6 and in Division 3.a (North Sea, Rockall and West of Scotland, Skagerrak, Kattegat)"
+  },
+  "ank.27.78abd": {
+   "decision": "unread",
+   "ram": "ANGLVII-VIIIabd (unread there)",
+   "assessment_key": 19513,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Black-bellied anglerfish (Lophius budegassa) in Subarea 7 and in divisions 8.a, 8.b, and 8.d (Celtic Seas, Bay of Biscay)"
+  },
+  "ank.27.8c9a": {
+   "decision": "unread",
+   "ram": "ANGLVIIIc-IXa (unread there)",
+   "assessment_key": 20975,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Black-bellied anglerfish (Lophius budegassa) in divisions 8.c and 9.a (Cantabrian Sea, Atlantic Iberian waters)"
+  },
+  "aru.27.123a4": {
+   "decision": "unread",
+   "ram": "GSSMELTI-II-IIIa-IV (unread there)",
+   "assessment_key": 18965,
+   "assessment_year": 2024,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Greater silver smelt (Argentina silus) in subareas 1, 2, and 4 and in Division 3.a (Northeast Arctic, North Sea, Skagerrak, Kattegat)"
+  },
+  "aru.27.5a14": {
+   "decision": "read",
+   "ram": "GSSMELTVa-XIV",
+   "assessment_key": 19829,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Greater silver smelt (Argentina silus) in Subarea 14 and in Division 5.a (East Greenland and Iceland grounds)"
+  },
+  "aru.27.5b6a": {
+   "decision": "read",
+   "ram": "GSSMELTVb-VIa",
+   "assessment_key": 19688,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Greater silver smelt (Argentina silus) in divisions 5.b and 6.a (Faroes grounds and west of Scotland)"
+  },
+  "bli.27.5b67": {
+   "decision": "read",
+   "ram": "BLINGVb-VI-VII",
+   "assessment_key": 17134,
+   "assessment_year": 2022,
+   "model_type": "A",
+   "model": "MYCC",
+   "description": "Blue ling (Molva dypterygia) in subareas 6 and 7 and in Division 5.b (Celtic Seas and Faroes grounds)"
+  },
+  "bli.27.5b6712": {
+   "decision": "read",
+   "ram": "BLINGVb-VI-VII",
+   "assessment_key": 19026,
+   "assessment_year": 2024,
+   "model_type": "A",
+   "model": "MYCC",
+   "description": "Blue ling (Molva dypterigia) in subareas 6, 7, and 12 and in Division 5.b (Celtic Seas, western Hatton Bank, and Faroes grounds)"
+  },
+  "bll.27.3a47de": {
+   "decision": "unread",
+   "ram": "BRILLIIIa-IV-VIIde (unread there)",
+   "assessment_key": 19463,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Brill (Scophthalmus rhombus) in Subarea 4 and in divisions 3.a, 7.d, and 7.e (North Sea, Skagerrak, Kattegat, English Channel)"
+  },
+  "boc.27.6-8": {
+   "decision": "unread",
+   "ram": "BOARVI-VIII (unread there)",
+   "assessment_key": 21117,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Boarfish (Capros aper) in subareas 6\u20138 (Celtic Seas, English Channel, Bay of Biscay)"
+  },
+  "bss.27.4bc7ad-h": {
+   "decision": "read",
+   "ram": "EBASSIVbc-VII",
+   "assessment_key": 20911,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Seabass (Dicentrarchus labrax) in divisions 4.b, 4.c, 7.a, and 7.d\u2013h (central and southern North Sea, Irish Sea, English Channel, Bristol Channel, Celtic Sea)"
+  },
+  "bss.27.8ab": {
+   "decision": "read",
+   "ram": "EBASSVIIIab",
+   "assessment_key": 20993,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Seabass (Dicentrarchus labrax) in divisions 8.a and 8.b (northern and central Bay of Biscay)"
+  },
+  "bwq.27.2425": {
+   "decision": "unread",
+   "ram": "EFLOUN2425 (unread there)",
+   "assessment_key": 13363,
+   "assessment_year": 2020,
+   "model_type": "B",
+   "model": "Other",
+   "description": "Flounder (Platichthys spp) in subdivisions 24 and 25 (west of Bornholm and southwestern central Baltic)"
+  },
+  "bwq.27.2628": {
+   "decision": "superseded",
+   "why": "reassessed as bzq.27.2628 (2024)",
+   "assessment_key": 13689,
+   "assessment_year": 2020,
+   "model_type": "B",
+   "model": "Other",
+   "description": "Flounder (Platichthys spp) in subdivisions 26 and 28 (east of Gotland and Gulf of Gdansk)"
+  },
+  "bzq.27.2628": {
+   "decision": "unread",
+   "ram": "EFLOUN26-28 (unread there)",
+   "assessment_key": 18588,
+   "assessment_year": 2024,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Flounder (Platichthys spp) in subdivisions 26 and 28 (east of Gotland and Gulf of Gdansk)"
+  },
+  "caa.27.5a": {
+   "decision": "unread",
+   "ram": null,
+   "assessment_key": 20904,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Atlantic wolffish (Anarhichas lupus)  in Division 5.a (Iceland grounds)"
+  },
+  "cap.27.2a514": {
+   "decision": "read",
+   "ram": "CAPEIIa-V-XIV",
+   "assessment_key": 19896,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "Other",
+   "description": "Capelin (Mallotus villosus) in subareas 5 and 14 and in Division 2.a west of 05\u00b000\u2019W (Iceland and Faroes grounds, East Greenland, Jan Mayen area)"
+  },
+  "cod.21.1": {
+   "decision": "superseded",
+   "why": "split into cod.21.1a-c and the inshore stock of 1d-f",
+   "assessment_key": 17385,
+   "assessment_year": 2022,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in NAFO Subarea 1, inshore (West Greenland cod)"
+  },
+  "cod.21.1.osc": {
+   "decision": "unread",
+   "ram": null,
+   "note": "West Greenland offshore; COD1F-XIV, read, is ICES 14 and NAFO 1F (East and South Greenland)",
+   "assessment_key": 19562,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in NAFO Subarea 1 (West Greenland offshore spawning cod)"
+  },
+  "cod.21.1a-c": {
+   "decision": "unread",
+   "ram": null,
+   "assessment_key": 17946,
+   "assessment_year": 2023,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in NAFO Subarea 1a-c (Northwest Greenland inshore spawning cod)"
+  },
+  "cod.2127.1f14": {
+   "decision": "read",
+   "ram": "COD1F-XIV",
+   "assessment_key": 17348,
+   "assessment_year": 2022,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in ICES Subarea 14 and NAFO Division 1.F (East Greenland, South Greenland)"
+  },
+  "cod.27.1-2": {
+   "decision": "read",
+   "ram": "CODNEAR",
+   "assessment_key": 16825,
+   "assessment_year": 2021,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in subareas 1 and 2 (Northeast Arctic)"
+  },
+  "cod.27.1-2.coastN": {
+   "decision": "unread",
+   "ram": "CODNEARNCW (unread there)",
+   "assessment_key": 20955,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in subareas 1 and 2, north of 67\u00b0N (Norwegian Sea and Barents Sea), northern Norwegian coastal cod "
+  },
+  "cod.27.1-2coast": {
+   "decision": "superseded",
+   "why": "split in 2021 into cod.27.1-2.coastN and cod.27.2.coastS",
+   "assessment_key": 13720,
+   "assessment_year": 2020,
+   "model_type": "A",
+   "model": "XSA",
+   "description": "Cod (Gadus morhua) in subareas 1 and 2 (Norwegian coastal waters cod)"
+  },
+  "cod.27.2.coastS": {
+   "decision": "unread",
+   "ram": "CODNEARNCW (unread there)",
+   "assessment_key": 19395,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Cod (Gadus morhua) in Subarea 2 between 62\u00b0N and 67\u00b0N (Norwegian Sea), southern Norwegian coastal cod "
+  },
+  "cod.27.21": {
+   "decision": "read",
+   "ram": "CODKAT",
+   "assessment_key": 19106,
+   "assessment_year": 2024,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in Subdivision 21 (Kattegat)"
+  },
+  "cod.27.22-24": {
+   "decision": "read",
+   "ram": "CODBA2224",
+   "assessment_key": 20947,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in subdivisions 22\u201324, western Baltic stock (western Baltic Sea)"
+  },
+  "cod.27.24-32": {
+   "decision": "read",
+   "ram": "CODBA2532",
+   "assessment_key": 18863,
+   "assessment_year": 2024,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Cod (Gadus morhua) in subdivisions 24\u201332, eastern Baltic stock (eastern Baltic Sea)"
+  },
+  "cod.27.46a7d20": {
+   "decision": "read",
+   "ram": "CODIIIaW-IV-VIId",
+   "assessment_key": 19639,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "Other",
+   "description": "Cod (Gadus morhua) in Subarea 4, in divisions 6.a and 7.d, and in Subdivision 20 (North Sea, West of Scotland, eastern English Channel, Skagerrak)"
+  },
+  "cod.27.47d20": {
+   "decision": "read",
+   "ram": "CODIIIaW-IV-VIId",
+   "assessment_key": 17652,
+   "assessment_year": 2022,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in Subarea 4, Division 7.d, and Subdivision 20 (North Sea, eastern English Channel, Skagerrak)"
+  },
+  "cod.27.5a": {
+   "decision": "read",
+   "ram": "CODICE",
+   "assessment_key": 20930,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SCA",
+   "description": "Cod (Gadus morhua) in Division 5.a (Iceland grounds)"
+  },
+  "cod.27.5b1": {
+   "decision": "read",
+   "ram": "CODFAPL",
+   "assessment_key": 21240,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in Subdivision 5.b.1 (Faroe Plateau)"
+  },
+  "cod.27.6a": {
+   "decision": "read",
+   "ram": "CODVIa",
+   "assessment_key": 17399,
+   "assessment_year": 2022,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in Division 6.a (West of Scotland)"
+  },
+  "cod.27.7a": {
+   "decision": "read",
+   "ram": "CODIS",
+   "assessment_key": 21001,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SS3",
+   "description": "Cod (Gadus morhua) in Division 7.a (Irish Sea)"
+  },
+  "cod.27.7e-k": {
+   "decision": "read",
+   "ram": "CODVIIek",
+   "assessment_key": 21016,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Cod (Gadus morhua) in divisions 7.e\u2013k (western English Channel and southern Celtic Seas)"
+  },
+  "dab.27.22-32": {
+   "decision": "unread",
+   "ram": "DAB2232 (unread there)",
+   "assessment_key": 19880,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Dab (Limanda limanda) in subdivisions 22\u201332 (Baltic Sea)"
+  },
+  "dgs.27.nea": {
+   "decision": "read",
+   "ram": "SPURDNEATL",
+   "assessment_key": 19120,
+   "assessment_year": 2024,
+   "model_type": "AL",
+   "model": "Other",
+   "description": "Spurdog (Squalus acanthias) in subareas 1\u201310, 12, and 14 (Northeast Atlantic and adjacent waters)"
+  },
+  "ele.2737.nea": {
+   "decision": "out of scope",
+   "why": "catadromous and semelparous: what is left after the catch is not carried into the level",
+   "assessment_key": 21231,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "None",
+   "description": "European eel (Anguilla anguilla) throughout its natural range"
+  },
+  "fle.27.2223": {
+   "decision": "unread",
+   "ram": "EFLOUN2223 (unread there)",
+   "assessment_key": 18901,
+   "assessment_year": 2024,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Flounder (Platichthys flesus) in subdivisions 22 and 23 (Belt Seas and the Sound)"
+  },
+  "fle.27.2425": {
+   "decision": "superseded",
+   "why": "relabelled bwq.27.2425 (2020)",
+   "assessment_key": 10395,
+   "assessment_year": 2019,
+   "model_type": "Other",
+   "model": "Other",
+   "description": "Flounder (Platichthys flesus) in subdivisions 24 and 25 (west of Bornholm and southwestern central Baltic)"
+  },
+  "ghl.27.1-2": {
+   "decision": "read",
+   "ram": "GHALNEAR",
+   "assessment_key": 14599,
+   "assessment_year": 2021,
+   "model_type": "AL",
+   "model": "GADGET",
+   "description": "Greenland halibut (Reinhardtius hippoglossoides) in subareas 1 and 2 (Northeast Arctic)"
+  },
+  "ghl.27.561214": {
+   "decision": "unread",
+   "ram": "GHALV-VI-XII-XIV (unread there)",
+   "assessment_key": 19603,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "GADGET",
+   "description": "Greenland halibut (Reinhardtius hippoglossoides) in subareas 5, 6, 12, and 14 (Iceland and Faroes grounds, West of Scotland, North of Azores, East of Greenland)"
+  },
+  "had.27.1-2": {
+   "decision": "read",
+   "ram": "HADNEAR",
+   "assessment_key": 16816,
+   "assessment_year": 2021,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Haddock (Melanogrammus aeglefinus) in subareas 1 and 2 (Northeast Arctic)"
+  },
+  "had.27.46a20": {
+   "decision": "read",
+   "ram": "HADNS-IIIa-VIa",
+   "assessment_key": 19508,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Haddock (Melanogrammus aeglefinus) in Subarea 4, in Division 6.a, and in Subdivision 20  (North Sea, West of Scotland, Skagerrak)"
+  },
+  "had.27.5a": {
+   "decision": "read",
+   "ram": "HADICE",
+   "assessment_key": 20939,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Haddock (Melanogrammus aeglefinus) in Division 5.a (Iceland grounds)"
+  },
+  "had.27.5b": {
+   "decision": "read",
+   "ram": "HADFAPL",
+   "assessment_key": 21239,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Haddock (Melanogrammus aeglefinus) in Division 5.b (Faroes grounds)"
+  },
+  "had.27.6b": {
+   "decision": "read",
+   "ram": "HADROCK",
+   "assessment_key": 20961,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Haddock (Melanogrammus aeglefinus) in Division 6.b (Rockall)"
+  },
+  "had.27.7b-k": {
+   "decision": "read",
+   "ram": "HADVIIb-k",
+   "assessment_key": 20984,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Haddock (Melanogrammus aeglefinus) in divisions 7.b\u2013k (southern Celtic Seas and English Channel)"
+  },
+  "her.27.1-24a514a": {
+   "decision": "read",
+   "ram": "HERRNORSS",
+   "assessment_key": 21106,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Herring (Clupea harengus) in subareas 1, 2, and 5 and in divisions 4.a and 14.a; Norwegian spring spawners (the Northeast Atlantic and Arctic Ocean)"
+  },
+  "her.27.20-24": {
+   "decision": "read",
+   "ram": "HERR2224IIIa",
+   "assessment_key": 19357,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Herring (Clupea harengus) in subdivisions 20\u201324; spring spawners (Skagerrak, Kattegat, western Baltic)"
+  },
+  "her.27.25-2932": {
+   "decision": "read",
+   "ram": "HERR2529-32",
+   "assessment_key": 19714,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SS3",
+   "description": "Herring (Clupea harengus) in subdivisions 25\u201329 and 32, excluding the Gulf of Riga (central Baltic Sea)"
+  },
+  "her.27.28": {
+   "decision": "read",
+   "ram": "HERRRIGA",
+   "assessment_key": 20931,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Herring (Clupea harengus) in Subdivision 28.1 (Gulf of Riga)"
+  },
+  "her.27.3031": {
+   "decision": "read",
+   "ram": "HERR30-31",
+   "assessment_key": 19428,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Herring (Clupea harengus) in subdivisions 30 and 31 (Gulf of Bothnia)"
+  },
+  "her.27.3a47d": {
+   "decision": "read",
+   "ram": "HERRNS-IIIa-VIId",
+   "assessment_key": 19373,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Herring (Clupea harengus) in Subarea 4 and in divisions 3.a and 7.d; autumn spawners (North Sea, Skagerrak, Kattegat, eastern English Channel)"
+  },
+  "her.27.5a": {
+   "decision": "read",
+   "ram": "HERRIsum",
+   "assessment_key": 19539,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Herring (Clupea harengus) in Division 5.a; summer spawners (Iceland grounds)"
+  },
+  "her.27.6a7bc": {
+   "decision": "read",
+   "ram": "HERRVIaVIIbc",
+   "assessment_key": 14099,
+   "assessment_year": 2021,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Herring (Clupea harengus) in divisions 6.a and 7.b-c (West of Scotland, West of Ireland)"
+  },
+  "her.27.6aN": {
+   "decision": "read",
+   "ram": "HERRVIaVIIbc",
+   "assessment_key": 19370,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "None",
+   "description": "Herring (Clupea harengus) in Division 6.a North (North of 56\u00b000\u2019N and East of 07\u00b000\u2019W); autumn spawners (West of Scotland)"
+  },
+  "her.27.6aS7bc": {
+   "decision": "read",
+   "ram": "HERRVIaVIIbc",
+   "assessment_key": 19342,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "None",
+   "description": "Herring (Clupea harengus) in divisions 6.a South (south of 56\u00b000\u2019N and west of 07\u00b000\u2019W), 7.b, and 7.c (northwest and west of Ireland)"
+  },
+  "her.27.irls": {
+   "decision": "read",
+   "ram": "HERRSIRS",
+   "assessment_key": 19403,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "ASAP",
+   "description": "Herring (Clupea harengus) in divisions 7.a (south of 52\u00b030\u2019N), 7.g, 7.h, 7.j, and 7.k (Irish Sea, Celtic Sea, and southwest of Ireland)"
+  },
+  "her.27.nirs": {
+   "decision": "read",
+   "ram": "HERRNIRS",
+   "assessment_key": 19783,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Herring (Clupea harengus) in Division 7.a North of 52\u00b030\u2019N (Irish Sea)"
+  },
+  "hke.27.3a46-8abd": {
+   "decision": "read",
+   "ram": "HAKENRTN",
+   "assessment_key": 19777,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Hake (Merluccius merluccius) in subareas 4, 6, and 7 and in divisions 3.a, 8.a, 8.b, and 8.d; Northern stock (Greater North Sea, Celtic Seas, northern Bay of Biscay)"
+  },
+  "hke.27.8c9a": {
+   "decision": "read",
+   "ram": "HAKESOTH",
+   "assessment_key": 19496,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Hake (Merluccius merluccius) in divisions 8.c and 9.a; Southern stock (Cantabrian Sea and  Atlantic Iberian waters)"
+  },
+  "hom.27.2a3a4a5b6a7a-ce-k8": {
+   "decision": "read",
+   "ram": "HMACKIIa-IVa-Vb-VIa-VII-VIII",
+   "assessment_key": 21144,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SS3",
+   "description": "Horse mackerel (Trachurus trachurus) in Subarea 8 and divisions 2.a, 3.a, 4.a, 5.b, 6.a, 7.a\u2013c, and 7.e\u2013k (Northeast Atlantic and adjacent waters)"
+  },
+  "hom.27.2a4a5b6a7a-ce-k8": {
+   "decision": "read",
+   "ram": "HMACKIIa-IVa-Vb-VIa-VII-VIII",
+   "assessment_key": 18368,
+   "assessment_year": 2023,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Horse mackerel (Trachurus trachurus) in Subarea 8 and in divisions 2.a, 4.a, 5.b, 6.a, 7.a\u2013c, and 7.e\u2013k (Northeast Atlantic)"
+  },
+  "hom.27.4bc7d": {
+   "decision": "unread",
+   "ram": "HMACKIIIa-IVbc-VIId (unread there)",
+   "assessment_key": 21136,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Horse mackerel (Trachurus trachurus) in divisions 4.b, 4.c, and 7.d (southern and central North Sea, eastern English Channel)"
+  },
+  "hom.27.9a": {
+   "decision": "read",
+   "ram": "HMACKIXa",
+   "assessment_key": 20986,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SS3",
+   "description": "Horse mackerel (Trachurus trachurus) in Division 9.a (Atlantic Iberian waters)"
+  },
+  "ldb.27.8c9a": {
+   "decision": "read",
+   "ram": "FMEG8c9a",
+   "assessment_key": 19524,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "Other",
+   "description": "Four-spot megrim (Lepidorhombus boscii) in divisions 8.c and 9.a (southern Bay of Biscay and Atlantic Iberian waters East)"
+  },
+  "lem.27.3a47d": {
+   "decision": "unread",
+   "ram": "LSOLEIIIa-IV-VIId (unread there)",
+   "assessment_key": 20934,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "Other",
+   "description": "Lemon sole (Microstomus kitt) in Subarea 4 and in divisions 3.a and 7.d (North Sea, Skagerrak, Kattegat, eastern English Channel)"
+  },
+  "lez.27.4a6a": {
+   "decision": "unread",
+   "ram": "MEGSPPIVa-VIa (unread there)",
+   "assessment_key": 19856,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "Other",
+   "description": "Megrim (Lepidorhombus spp.) in divisions 4.a and 6.a (northern North Sea, West of Scotland)"
+  },
+  "lez.27.6b": {
+   "decision": "read",
+   "ram": "MEGSPPVIb",
+   "assessment_key": 21206,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Megrim (Lepidorhombus spp.) in Division 6.b (Rockall)"
+  },
+  "lin.27.3a4a6-91214": {
+   "decision": "unread",
+   "ram": "LINGNEATL (unread there)",
+   "assessment_key": 12911,
+   "assessment_year": 2019,
+   "model_type": "Other",
+   "model": "Other",
+   "description": "Ling (Molva molva) in subareas 6-9, 12, and 14, and divisions 3.a and 4.a (Northeast Atlantic and Arctic Ocean)"
+  },
+  "lin.27.5a": {
+   "decision": "read",
+   "ram": "LINGVa",
+   "assessment_key": 19540,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Ling (Molva molva) in Division 5.a (Iceland grounds)"
+  },
+  "lin.27.5b": {
+   "decision": "read",
+   "ram": "LINGVb",
+   "assessment_key": 19695,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Ling (Molva molva) in Division 5.b (Faroes grounds)"
+  },
+  "mac.27.nea": {
+   "decision": "read",
+   "ram": "MACKNEICES",
+   "assessment_key": 21166,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Mackerel (Scomber scombrus) in subareas 1-8 and 14 and in divisions 9.a, 12.a, and 12.b (Northeast Atlantic and adjacent waters)"
+  },
+  "meg.27.7b-k8abd": {
+   "decision": "read",
+   "ram": "MEGVII-VIIIabd",
+   "assessment_key": 21222,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "Other",
+   "description": "Megrim (Lepidorhombus whiffiagonis) in divisions 7.b\u2013k, 8.a, 8.b, and 8.d (west and southwest of Ireland, Bay of Biscay)"
+  },
+  "meg.27.8c9a": {
+   "decision": "read",
+   "ram": "MEG8c9a",
+   "assessment_key": 19673,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "Other",
+   "description": "Megrim (Lepidorhombus whiffiagonis) in divisions 8.c and 9.a (Cantabrian Sea and Atlantic Iberian waters)"
+  },
+  "mon.27.78abd": {
+   "decision": "read",
+   "ram": "WANGLVII-VIIIabd",
+   "assessment_key": 19506,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "White anglerfish (Lophius piscatorius) in Subarea 7 and in divisions 8.a, 8.b, and 8.d (Celtic Seas, Bay of Biscay)"
+  },
+  "mon.27.8c9a": {
+   "decision": "read",
+   "ram": "WANGLVIIIc-IXa",
+   "assessment_key": 20979,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "White anglerfish (Lophius piscatorius) in divisions 8.c and 9.a (Cantabrian Sea and Atlantic Iberian waters)"
+  },
+  "nep.fu.10": {
+   "decision": "unread",
+   "ram": "NEPHFU10 (unread there)",
+   "assessment_key": 19268,
+   "assessment_year": 2024,
+   "model_type": "AL",
+   "model": "Other",
+   "description": "Norway lobster (Nephrops norvegicus) in Division 4.a, Functional Unit 10 (northern North Sea, Noup)"
+  },
+  "nep.fu.15": {
+   "decision": "unread",
+   "ram": "NEPHFU15 (unread there)",
+   "assessment_key": 21237,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "Other",
+   "description": "Norway lobster (Nephrops norvegicus) in Division 7.a, Functional Unit 15 (Irish Sea, West)"
+  },
+  "nep.fu.16": {
+   "decision": "read",
+   "ram": "NEPHFU16",
+   "assessment_key": 21197,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "None",
+   "description": "Norway lobster (Nephrops norvegicus) in divisions 7.b, 7.c, 7.j, and 7.k, Functional Unit 16 (west and southwest of Ireland, Porcupine Bank)"
+  },
+  "nep.fu.17": {
+   "decision": "read",
+   "ram": "NEPHFU17",
+   "assessment_key": 21193,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "None",
+   "description": "Norway lobster (Nephrops norvegicus) in Division 7.b, Functional Unit 17 (west of Ireland, Aran grounds)"
+  },
+  "nep.fu.19": {
+   "decision": "unread",
+   "ram": "NEPHFU19 (unread there)",
+   "assessment_key": 21196,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "None",
+   "description": "Norway lobster (Nephrops norvegicus) in divisions 7.a, 7.g, and 7.j, Functional Unit 19 (Irish Sea, Celtic Sea, eastern part of southwest of Ireland)"
+  },
+  "nep.fu.2021": {
+   "decision": "unread",
+   "ram": "NEPHFU2021 (unread there)",
+   "assessment_key": 21188,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "None",
+   "description": "Norway lobster (Nephrops norvegicus) in divisions 7.g and 7.h, Functional Units 20 and 21 (Celtic Sea)"
+  },
+  "nep.fu.22": {
+   "decision": "unread",
+   "ram": "NEPHFU22 (unread there)",
+   "assessment_key": 21198,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "None",
+   "description": "Norway lobster (Nephrops norvegicus) in divisions 7.f and 7.g, Functional Unit 22 (Celtic Sea, Bristol Channel)"
+  },
+  "nep.fu.2324": {
+   "decision": "unread",
+   "ram": "NEPHVIIIab (unread there)",
+   "assessment_key": 21235,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "Other",
+   "description": "Norway lobster (Nephrops norvegicus) in divisions 8.a and 8.b, functional units 23 and 24 (northern and central Bay of Biscay)"
+  },
+  "nep.fu.25": {
+   "decision": "unread",
+   "ram": "NEPHFU25 (unread there)",
+   "assessment_key": 19845,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Norway lobster (Nephrops norvegicus) in Division 8.c, Functional Unit 25 (southern Bay of Biscay, northern Galicia)"
+  },
+  "nep.fu.2627": {
+   "decision": "unread",
+   "ram": "NEPHFU2627 (unread there)",
+   "assessment_key": 19587,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Norway lobster (Nephrops norvegicus) in Division 9.a, functional units 26 and 27 (Atlantic Iberian waters East, western Galicia, northern Portugal)"
+  },
+  "nep.fu.3-4": {
+   "decision": "unread",
+   "ram": "NEPHFU3-4 (unread there)",
+   "assessment_key": 21138,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "Other",
+   "description": "Norway lobster (Nephrops norvegicus) in Division 3.a, functional units 3 and 4 (Skagerrak, Kattegat)"
+  },
+  "nep.fu.32": {
+   "decision": "unread",
+   "ram": "NEPHFU32 (unread there)",
+   "assessment_key": 21234,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Norway lobster (Nephrops norvegicus) in Division 4.a, Functional Unit 32 (northern North Sea, Norway Deep)"
+  },
+  "nep.fu.34": {
+   "decision": "unread",
+   "ram": "NEPHFU34 (unread there)",
+   "assessment_key": 19202,
+   "assessment_year": 2024,
+   "model_type": "AL",
+   "model": "Other",
+   "description": "Norway lobster (Nephrops norvegicus) in Division 4.b, Functional Unit 34 (central North Sea, Devil\u2019s Hole)"
+  },
+  "nep.fu.7": {
+   "decision": "read",
+   "ram": "NEPHFU7",
+   "assessment_key": 21159,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "Other",
+   "description": "Norway lobster (Nephrops norvegicus) in Division 4.a, Functional Unit 7 (northern North Sea, Fladen Ground)"
+  },
+  "nep.fu.8": {
+   "decision": "unread",
+   "ram": "NEPHFU8 (unread there)",
+   "assessment_key": 21177,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "Other",
+   "description": "Norway lobster (Nephrops norvegicus) in Division 4.b, Functional Unit 8 (central North Sea, Firth of Forth)"
+  },
+  "nep.fu.9": {
+   "decision": "unread",
+   "ram": "NEPHFU9 (unread there)",
+   "assessment_key": 21176,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "Other",
+   "description": "Norway lobster (Nephrops norvegicus) in Division 4.a, Functional Unit 9 (central North Sea, Moray Firth)"
+  },
+  "nop.27.3a4": {
+   "decision": "read",
+   "ram": "NPOUTIIIa-IV",
+   "assessment_key": 21230,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "Other",
+   "description": "Norway pout (Trisopterus esmarkii) in Subarea 4 and in Division 3.a (North Sea, Skagerrak, Kattegat)"
+  },
+  "pil.27.7": {
+   "decision": "unread",
+   "ram": "SARDVII (unread there)",
+   "assessment_key": 21264,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "None",
+   "description": "Sardine (Sardina pilchardus) in Subarea 7 (Southern Celtic Seas, English Channel) "
+  },
+  "pil.27.8abd": {
+   "decision": "read",
+   "ram": "SARDVIIIabd",
+   "assessment_key": 21258,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Sardine (Sardina pilchardus) in divisions 8.a, 8.b, and 8.d (Bay of Biscay)"
+  },
+  "pil.27.8c9a": {
+   "decision": "read",
+   "ram": "SARDPVIIIc-IXa",
+   "assessment_key": 21259,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Sardine (Sardina pilchardus) in divisions 8.c and 9.a (Cantabrian Sea, Atlantic Iberian waters)"
+  },
+  "ple.27.21-23": {
+   "decision": "read",
+   "ram": "PLAIC2123",
+   "assessment_key": 18631,
+   "assessment_year": 2024,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Plaice (Pleuronectes platessa) in subdivisions 21\u201323 (Kattegat, Belt Seas, the Sound)"
+  },
+  "ple.27.21-32": {
+   "decision": "read",
+   "ram": "PLAIC2123",
+   "assessment_key": 20948,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Plaice (Pleuronectes platessa) in subdivisions 21-32 (Baltic Sea)"
+  },
+  "ple.27.24-32": {
+   "decision": "unread",
+   "ram": "PLAIC2432 (unread there)",
+   "assessment_key": 18898,
+   "assessment_year": 2024,
+   "model_type": "Other",
+   "model": "SPiCT",
+   "description": "Plaice (Pleuronectes platessa) in subdivisions 24\u201332 (Baltic Sea, excluding the Sound and Belt Seas)"
+  },
+  "ple.27.420": {
+   "decision": "read",
+   "ram": "PLAICNS",
+   "assessment_key": 19875,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Plaice (Pleuronectes platessa) in Subarea 4 (North Sea) and in Subdivision 20 (Skagerrak)"
+  },
+  "ple.27.5a": {
+   "decision": "unread",
+   "ram": null,
+   "assessment_key": 20905,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Plaice (Pleuronectes platessa) in Division 5.a (Iceland grounds)"
+  },
+  "ple.27.7a": {
+   "decision": "read",
+   "ram": "PLAICIS",
+   "assessment_key": 19851,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Plaice (Pleuronectes platessa) in Division 7.a (Irish Sea)"
+  },
+  "ple.27.7d": {
+   "decision": "read",
+   "ram": "PLAIC7d",
+   "assessment_key": 20978,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Plaice (Pleuronectes platessa) in Division 7.d (eastern English Channel)"
+  },
+  "pok.27.1-2": {
+   "decision": "read",
+   "ram": "POLLNEAR",
+   "assessment_key": 19388,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Saithe (Pollachius virens) in subareas 1 and 2 (Northeast Arctic)"
+  },
+  "pok.27.3a46": {
+   "decision": "read",
+   "ram": "POLLNS-VI-IIIa",
+   "assessment_key": 19578,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Saithe (Pollachius virens) in subareas 4 and 6 and in Division 3.a (North Sea, Rockall and West of Scotland, Skagerrak, Kattegat)"
+  },
+  "pok.27.5a": {
+   "decision": "read",
+   "ram": "POLLIEG",
+   "assessment_key": 20958,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Saithe (Pollachius virens) in Division 5.a (Iceland grounds)"
+  },
+  "pok.27.5b": {
+   "decision": "read",
+   "ram": "POLLFAPL",
+   "assessment_key": 21241,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Saithe (Pollachius virens) in Division 5.b (Faroes grounds)"
+  },
+  "pol.27.67": {
+   "decision": "unread",
+   "ram": null,
+   "assessment_key": 20987,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Pollack (Pollachius pollachius) in subareas 6 and 7 (Celtic Seas, English Channel)"
+  },
+  "pol.27.89a": {
+   "decision": "unread",
+   "ram": "EPOLLVIII-IXa (unread there)",
+   "assessment_key": 19891,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "Other",
+   "description": "Pollack (Pollachius pollachius) in Subarea 8 and in Division 9.a (Bay of Biscay, Atlantic Iberian waters)"
+  },
+  "por.27.nea": {
+   "decision": "unread",
+   "ram": "PORSHARNEATL (unread there)",
+   "assessment_key": 19283,
+   "assessment_year": 2024,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Porbeagle (Lamna nasus) in subareas 1\u201310, 12, and 14 (Northeast Atlantic and adjacent waters)"
+  },
+  "pra.27.1-2": {
+   "decision": "unread",
+   "ram": "PANDALI-II (unread there)",
+   "assessment_key": 16899,
+   "assessment_year": 2021,
+   "model_type": "B",
+   "model": "Other",
+   "description": "Northern shrimp (Pandalus borealis) in subareas 1 and 2 (Northeast Arctic)"
+  },
+  "pra.27.3a4a": {
+   "decision": "read",
+   "ram": "PANDALIIIaW-IVaE",
+   "assessment_key": 20960,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "SS3",
+   "description": "Northern shrimp (Pandalus borealis) in divisions 3.a and 4.a East (Skagerrak, Kattegat, northern North Sea in the Norwegian Deep)"
+  },
+  "reb.2127.dp": {
+   "decision": "unread",
+   "ram": "REDDEEPDP-1-2-V-XII-XIV (unread there)",
+   "assessment_key": 19189,
+   "assessment_year": 2024,
+   "model_type": "AL",
+   "model": "GADGET",
+   "description": "Beaked redfish (Sebastes mentella) in ICES subareas 5, 12, and 14 (Iceland and Faroe grounds, North of Azores, East of Greenland) and in NAFO subareas 1 and 2 (deep pelagic stock > 500 m)"
+  },
+  "reb.27.1-2": {
+   "decision": "read",
+   "ram": "REDDEEPI-II",
+   "assessment_key": 13698,
+   "assessment_year": 2020,
+   "model_type": "A",
+   "model": "SCA",
+   "description": "Beaked redfish (Sebastes mentella) in subareas 1 and 2 (Northeast Arctic)"
+  },
+  "reb.27.5a14": {
+   "decision": "unread",
+   "ram": "REDDEEPVa-XIV (unread there)",
+   "assessment_key": 19553,
+   "assessment_year": 2025,
+   "model_type": "AL",
+   "model": "GADGET",
+   "description": "Beaked redfish  (Sebastes mentella) in Subarea 14 and in Division 5.a; Icelandic slope stock (East of Greenland, Iceland grounds)"
+  },
+  "reg.27.1-2": {
+   "decision": "read",
+   "ram": "GOLDREDNEAR",
+   "assessment_key": 18578,
+   "assessment_year": 2024,
+   "model_type": "AL",
+   "model": "GADGET",
+   "description": "Golden redfish (Sebastes norvegicus) in subareas 1 and 2 (Northeast Arctic)"
+  },
+  "reg.27.561214": {
+   "decision": "read",
+   "ram": "GOLDREDV-VI-XII-XIV",
+   "assessment_key": 19558,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Golden redfish (Sebastes norvegicus) in subareas 5, 6, 12, and 14 (Iceland and Faroes grounds, West of Scotland, North of Azores, East of Greenland)"
+  },
+  "rjc.27.3a47d": {
+   "decision": "unread",
+   "ram": "TBSKAIIIa-IV-VIId (unread there)",
+   "assessment_key": 21096,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Thornback ray (Raja clavata) in Subarea 4 and in divisions 3.a and 7.d (North Sea, Skagerrak, Kattegat, and eastern English Channel)"
+  },
+  "rjc.27.8abd": {
+   "decision": "unread",
+   "ram": "TBSKAVIII (unread there)",
+   "assessment_key": 19105,
+   "assessment_year": 2024,
+   "model_type": "B",
+   "model": "SPM",
+   "description": "Thornback ray (Raja clavata) in divisions 8.a, 8.b, and 8.d (Bay of Biscay)"
+  },
+  "rjc.27.8c": {
+   "decision": "unread",
+   "ram": "TBSKAVIII (unread there)",
+   "assessment_key": 19112,
+   "assessment_year": 2024,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Thornback ray (Raja clavata) in Division 8.c (Cantabrian Sea)"
+  },
+  "rjc.27.9a": {
+   "decision": "unread",
+   "ram": "TBSKAIXa (unread there)",
+   "assessment_key": 19125,
+   "assessment_year": 2024,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Thornback ray (Raja clavata) in Division 9.a (Atlantic Iberian waters)"
+  },
+  "rjh.27.4bc7d": {
+   "decision": "unread",
+   "ram": "BLRAYIVc-VIId (unread there)",
+   "assessment_key": 21097,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Blonde ray (Raja brachyura) in divisions 4.b, 4.c and 7.d (central and southern North Sea and eastern English Channel)"
+  },
+  "rjm.27.3a47d": {
+   "decision": "unread",
+   "ram": "SPRAYIIIa-IV-VIId (unread there)",
+   "assessment_key": 21087,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Spotted ray (Raja montagui) in Subarea 4 and in divisions 3.a and 7.d (North Sea, Skagerrak, Kattegat, eastern English Channel)"
+  },
+  "rjn.27.678abd": {
+   "decision": "unread",
+   "ram": "CKRAYVI-VII (unread there)",
+   "assessment_key": 19118,
+   "assessment_year": 2024,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Cuckoo ray (Leucoraja naevus) in subareas 6 and 7 and in divisions 8.a, 8.b, and 8.d (West of Scotland, southern Celtic Seas, western English Channel, Bay of Biscay)"
+  },
+  "rjn.27.9a": {
+   "decision": "unread",
+   "ram": "CKRAYIXa (unread there)",
+   "assessment_key": 19111,
+   "assessment_year": 2024,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Cuckoo ray (Leucoraja naevus) in Division 9.a (Atlantic Iberian waters)"
+  },
+  "rju.27.7de": {
+   "decision": "unread",
+   "ram": "URAYVIIde (unread there)",
+   "assessment_key": 19173,
+   "assessment_year": 2024,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Undulate ray (Raja undulata) in divisions 7.d and 7.e (English Channel)"
+  },
+  "sal.27.22-31": {
+   "decision": "out of scope",
+   "why": "anadromous and semelparous in effect: what is left after the catch is not carried into the level",
+   "assessment_key": 13726,
+   "assessment_year": 2020,
+   "model_type": "Other",
+   "model": "Other",
+   "description": "Salmon (Salmo salar) in subdivisions 22\u201331 (Baltic Sea, excluding the Gulf of Finland)"
+  },
+  "san.27.6a": {
+   "decision": "unread",
+   "ram": "SEELVIa (unread there)",
+   "assessment_key": 18508,
+   "assessment_year": 2024,
+   "model_type": "Other",
+   "model": "None",
+   "description": "Sandeel (Ammodytes spp.) in Division 6.a (West of Scotland)"
+  },
+  "san.sa.1r": {
+   "decision": "read",
+   "ram": "SEELNSSA1",
+   "assessment_key": 19329,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SMS",
+   "description": "Sandeel (Ammodytes spp.) in divisions 4.b and 4.c, Sandeel Area 1r (central and southern North Sea, Dogger Bank)"
+  },
+  "san.sa.2r": {
+   "decision": "read",
+   "ram": "SEELNSSA2",
+   "assessment_key": 19330,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SMS",
+   "description": "Sandeel (Ammodytes spp.) in divisions 4.b and 4.c and in Subdivision 20, Sandeel Area 2r (Skagerrak, central and southern North Sea)"
+  },
+  "san.sa.3r": {
+   "decision": "read",
+   "ram": "SEELNSSA3",
+   "assessment_key": 19331,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SMS",
+   "description": "Sandeel (Ammodytes spp.) in divisions 4.a and 4.b and in Subdivision 20, Sandeel Area 3r (Skagerrak, northern and central North Sea)"
+  },
+  "san.sa.4": {
+   "decision": "read",
+   "ram": "SEELNSSA4",
+   "assessment_key": 19335,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SMS",
+   "description": "Sandeel (Ammodytes spp.) in divisions 4.a and 4.b, Sandeel Area 4 (northern and central North Sea)"
+  },
+  "sbr.27.10": {
+   "decision": "unread",
+   "ram": "RBRMX (unread there)",
+   "assessment_key": 19724,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Blackspot seabream (Pagellus bogaraveo) in Subarea 10 (Azores grounds)"
+  },
+  "sol.27.20-24": {
+   "decision": "read",
+   "ram": "SOLEIIIa-2224",
+   "assessment_key": 20973,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Sole (Solea solea) in subdivisions 20\u201324 (Skagerrak, Kattegat, western Baltic Sea)"
+  },
+  "sol.27.4": {
+   "decision": "read",
+   "ram": "SOLENS",
+   "assessment_key": 21217,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SS3",
+   "description": "Sole (Solea solea) in Subarea 4 (North Sea)"
+  },
+  "sol.27.7a": {
+   "decision": "read",
+   "ram": "SOLEIS",
+   "assessment_key": 19863,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Sole (Solea solea) in Division 7.a (Irish Sea)"
+  },
+  "sol.27.7d": {
+   "decision": "read",
+   "ram": "SOLEVIId",
+   "assessment_key": 19522,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Sole (Solea solea) in Division 7.d (eastern English Channel) "
+  },
+  "sol.27.7e": {
+   "decision": "read",
+   "ram": "SOLEVIIe",
+   "assessment_key": 19818,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "XSA",
+   "description": "Sole (Solea solea) in Division 7.e (western English Channel)"
+  },
+  "sol.27.7fg": {
+   "decision": "read",
+   "ram": "SOLECS",
+   "assessment_key": 19868,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Sole (Solea solea) in divisions 7.f and 7.g (Bristol Channel, Celtic Sea)"
+  },
+  "sol.27.8ab": {
+   "decision": "read",
+   "ram": "SOLEVIIIab",
+   "assessment_key": 19773,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Sole (Solea solea) in divisions 8.a and 8.b (northern and central Bay of Biscay)"
+  },
+  "spr.27.22-32": {
+   "decision": "read",
+   "ram": "SPRAT22-32",
+   "assessment_key": 20915,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Sprat (Sprattus sprattus) in subdivisions 22\u201332 (Baltic Sea)"
+  },
+  "spr.27.3a4": {
+   "decision": "read",
+   "ram": "SPRATIIIa-IV",
+   "assessment_key": 19355,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SMS",
+   "description": "Sprat (Sprattus sprattus) in Division 3.a and Subarea 4 (Skagerrak, Kattegat, North Sea)"
+  },
+  "spr.27.4": {
+   "decision": "read",
+   "ram": "SPRATIIIa-IV",
+   "assessment_key": 9305,
+   "assessment_year": 2018,
+   "model_type": "A",
+   "model": "SMS",
+   "description": "Sprat (Sprattus sprattus) in Subarea 4 (North Sea)"
+  },
+  "spr.27.7de": {
+   "decision": "read",
+   "ram": "SPRATVIIde",
+   "assessment_key": 19374,
+   "assessment_year": 2025,
+   "model_type": "Other",
+   "model": "None",
+   "description": "Sprat (Sprattus sprattus) in divisions 7.d and 7.e (English Channel)"
+  },
+  "trs.27.22-32": {
+   "decision": "out of scope",
+   "why": "anadromous: the level is a run, not a carried stock",
+   "assessment_key": 12866,
+   "assessment_year": 2019,
+   "model_type": "Other",
+   "model": "Other",
+   "description": "Sea trout (Salmo trutta) in subdivisions 22\u201332 (Baltic Sea)"
+  },
+  "tur.27.22-32": {
+   "decision": "unread",
+   "ram": "TUR2232 (unread there)",
+   "assessment_key": 18606,
+   "assessment_year": 2024,
+   "model_type": "Other",
+   "model": "None",
+   "description": "Turbot (Scophthalmus maximus) in subdivisions 22\u201332 (Baltic Sea)"
+  },
+  "tur.27.3a": {
+   "decision": "unread",
+   "ram": "TURIIIa (unread there)",
+   "assessment_key": 21220,
+   "assessment_year": 2025,
+   "model_type": "B",
+   "model": "SPiCT",
+   "description": "Turbot (Scophthalmus maximus) in Division 3.a (Skagerrak, Kattegat)"
+  },
+  "tur.27.4": {
+   "decision": "read",
+   "ram": "TURIV",
+   "assessment_key": 19572,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Turbot (Scophthalmus maximus) in Subarea 4 (North Sea)"
+  },
+  "usk.27.5a14": {
+   "decision": "read",
+   "ram": "CUSKVa-XIV",
+   "assessment_key": 20903,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Tusk (Brosme brosme) in Subarea 14 and in Division 5.a (East Greenland, Iceland grounds)"
+  },
+  "whb.27.1-91214": {
+   "decision": "read",
+   "ram": "BWHITNEA",
+   "assessment_key": 21223,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Blue whiting (Micromesistius poutassou) in subareas 1\u20139, 12, and 14 (Northeast Atlantic and adjacent waters)"
+  },
+  "whg.27.47d": {
+   "decision": "read",
+   "ram": "WHITNS-VIId",
+   "assessment_key": 19484,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Whiting (Merlangius merlangus) in Subarea 4 and in Division 7.d (North Sea, eastern English Channel)"
+  },
+  "whg.27.6a": {
+   "decision": "read",
+   "ram": "WHITVIa",
+   "assessment_key": 20988,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Whiting (Merlangius merlangus) in Division 6.a (West of Scotland)"
+  },
+  "whg.27.7a": {
+   "decision": "read",
+   "ram": "WHITVIIa",
+   "assessment_key": 20997,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Whiting (Merlangius merlangus) in Division 7.a (Irish Sea)"
+  },
+  "whg.27.7b-ce-k": {
+   "decision": "read",
+   "ram": "WHITVIIbce-k",
+   "assessment_key": 20985,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Whiting (Merlangius merlangus) in divisions 7.b, 7.c, and 7.e\u2013k (southern Celtic Seas, eastern English Channel)"
+  },
+  "whg.27.89a": {
+   "decision": "unread",
+   "ram": "WHITVIII-IXa (unread there)",
+   "assessment_key": 25823,
+   "assessment_year": 2025,
+   "model_type": "DLS",
+   "model": "rfb",
+   "description": "Whiting (Merlangius merlangus) in Subarea 8 and in Division 9.a (Bay of Biscay, Atlantic Iberian waters)"
+  },
+  "wit.27.3a47d": {
+   "decision": "read",
+   "ram": "WITFLOUNIIIa-IV-VIId",
+   "assessment_key": 19498,
+   "assessment_year": 2025,
+   "model_type": "A",
+   "model": "SAM",
+   "description": "Witch (Glyptocephalus cynoglossus) in Subarea 4 and in divisions 3.a and 7.d (North Sea, Skagerrak, Kattegat, eastern English Channel)"
+  }
+ },
+ "Stock SMART": {
+  "10002": {
+   "stock_name": "Kamchatka flounder - Bering Sea / Aleutian Islands",
+   "scientific_name": "Reinhardtius evermanni",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "KMFLOUNBSAI"
+  },
+  "10003": {
+   "stock_name": "Arrowtooth flounder - Bering Sea / Aleutian Islands",
+   "scientific_name": "Reinhardtius stomias",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "ARFLOUNDBSAI"
+  },
+  "10004": {
+   "stock_name": "Arrowtooth flounder - Gulf of Alaska",
+   "scientific_name": "Reinhardtius stomias",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "ARFLOUNDGA"
+  },
+  "10005": {
+   "stock_name": "Arrowtooth flounder - Pacific Coast",
+   "scientific_name": "Reinhardtius stomias",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "ARFLOUNDPCOAST"
+  },
+  "10011": {
+   "stock_name": "Petrale sole - Pacific Coast",
+   "scientific_name": "Eopsetta jordani",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "PSOLEPCOAST"
+  },
+  "10014": {
+   "stock_name": "Witch flounder - Northwestern Atlantic Coast",
+   "scientific_name": "Glyptocephalus cynoglossus",
+   "readings": [
+    "SSB",
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "WITFLOUN5Y"
+  },
+  "10015": {
+   "stock_name": "Flathead sole - Bering Sea / Aleutian Islands",
+   "scientific_name": "Hippoglossoides elassodon",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "FLSOLEBSAI"
+  },
+  "10016": {
+   "stock_name": "Flathead sole - Gulf of Alaska",
+   "scientific_name": "Hippoglossoides elassodon",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "FLSOLEGA"
+  },
+  "10019": {
+   "stock_name": "American plaice - Gulf of Maine / Georges Bank",
+   "scientific_name": "Hippoglossoides platessoides",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "AMPL5YZ"
+  },
+  "10021": {
+   "stock_name": "Dover sole - Gulf of Alaska",
+   "scientific_name": "Microstomus pacificus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "DSOLEGA"
+  },
+  "10022": {
+   "stock_name": "Dover sole - Pacific Coast",
+   "scientific_name": "Microstomus pacificus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "DSOLEPCOAST"
+  },
+  "10025": {
+   "stock_name": "Starry flounder - Pacific Coast",
+   "scientific_name": "Platichthys stellatus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "STFLOUNSPCOAST"
+  },
+  "10026": {
+   "stock_name": "Alaska plaice - Bering Sea / Aleutian Islands",
+   "scientific_name": "Pleuronectes quadrituberculatus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "ALPLAICBSAI"
+  },
+  "10029": {
+   "stock_name": "Winter flounder - Georges Bank",
+   "scientific_name": "Pseudopleuronectes americanus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "WINFLOUN5Z"
+  },
+  "10030": {
+   "stock_name": "Winter flounder - Southern New England / Mid-Atlantic",
+   "scientific_name": "Pseudopleuronectes americanus",
+   "readings": [
+    "SSB",
+    "survey"
+   ],
+   "decision": "read",
+   "ram": "WINFLOUNSNEMATL"
+  },
+  "10031": {
+   "stock_name": "Yellowfin sole - Bering Sea / Aleutian Islands",
+   "scientific_name": "Limanda aspera",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "YSOLEBSAI"
+  },
+  "10033": {
+   "stock_name": "Yellowtail flounder - Georges Bank",
+   "scientific_name": "Limanda ferruginea",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "YELLGB"
+  },
+  "10034": {
+   "stock_name": "Yellowtail flounder - Southern New England / Mid-Atlantic",
+   "scientific_name": "Limanda ferruginea",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "YELLSNEMATL"
+  },
+  "10040": {
+   "stock_name": "Rock sole - Gulf of Alaska",
+   "scientific_name": "Lepidopsetta bilineata",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "RSOLEGA"
+  },
+  "10046": {
+   "stock_name": "English sole - Pacific Coast",
+   "scientific_name": "Parophrys vetulus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "ESOLEPCOAST"
+  },
+  "10054": {
+   "stock_name": "Greenland halibut - Bering Sea / Aleutian Islands",
+   "scientific_name": "Reinhardtius hippoglossoides",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "GHALBSAI"
+  },
+  "10056": {
+   "stock_name": "Atlantic halibut - Northwestern Atlantic Coast",
+   "scientific_name": "Hippoglossus hippoglossus",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "ATHAL5YZ"
+  },
+  "10058": {
+   "stock_name": "Rex sole - Gulf of Alaska",
+   "scientific_name": "Glyptocephalus zachirus",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "REXSOLEGA"
+  },
+  "10079": {
+   "stock_name": "Brown shrimp - Gulf of Mexico",
+   "scientific_name": "Farfantepenaeus aztecus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "BRNSHRIMPGM"
+  },
+  "10081": {
+   "stock_name": "Pink shrimp - Gulf of Mexico",
+   "scientific_name": "Farfantepenaeus duorarum",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "PINKSHRIMPGM"
+  },
+  "10083": {
+   "stock_name": "White shrimp - Gulf of Mexico",
+   "scientific_name": "Litopenaeus setiferus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "WSHRIMPGM"
+  },
+  "10164": {
+   "stock_name": "Atlantic mackerel - Gulf of Maine / Cape Hatteras",
+   "scientific_name": "Scomber scombrus",
+   "readings": [
+    "SSB",
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "MACK5YCHATT"
+  },
+  "10165": {
+   "stock_name": "Bluefin tuna - Western Atlantic",
+   "scientific_name": "Thunnus thynnus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "ATBTUNAWATL"
+  },
+  "10166": {
+   "stock_name": "Yellowfin tuna - Atlantic",
+   "scientific_name": "Thunnus albacares",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "YFINATL"
+  },
+  "10169": {
+   "stock_name": "Bigeye tuna - Atlantic",
+   "scientific_name": "Thunnus obesus",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "BIGEYEATL"
+  },
+  "10173": {
+   "stock_name": "Spanish mackerel - Gulf of Mexico",
+   "scientific_name": "Scomberomorus maculatus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "SPANMACKGM"
+  },
+  "10187": {
+   "stock_name": "Butterfish - Gulf of Maine / Cape Hatteras",
+   "scientific_name": "Peprilus triacanthus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "BUTTERGOMCHATT"
+  },
+  "10191": {
+   "stock_name": "Summer flounder - Mid-Atlantic Coast",
+   "scientific_name": "Paralichthys dentatus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "SFLOUNMATLC"
+  },
+  "10192": {
+   "stock_name": "Windowpane - Gulf of Maine / Georges Bank",
+   "scientific_name": "Scophthalmus aquosus",
+   "readings": [
+    "survey"
+   ],
+   "decision": "unread",
+   "ram": "WINDOWGOMGB (unread there)"
+  },
+  "10207": {
+   "stock_name": "Greater amberjack - Gulf of Mexico",
+   "scientific_name": "Seriola dumerili",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "GRAMBERGM"
+  },
+  "10286": {
+   "stock_name": "Scup - Atlantic Coast",
+   "scientific_name": "Stenotomus chrysops",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "SCUPNWATLC"
+  },
+  "10299": {
+   "stock_name": "Cabezon - California",
+   "scientific_name": "Scorpaenichthys marmoratus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CABEZSCAL"
+  },
+  "10310": {
+   "stock_name": "Black sea bass - Southern Atlantic Coast",
+   "scientific_name": "Centropristis striata",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "BSBASSSATL"
+  },
+  "10311": {
+   "stock_name": "Black sea bass - Mid-Atlantic Coast",
+   "scientific_name": "Centropristis striata",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "BSBASSMATLC"
+  },
+  "10332": {
+   "stock_name": "Red grouper - Southern Atlantic Coast",
+   "scientific_name": "Epinephelus morio",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "RGROUPSATL"
+  },
+  "10348": {
+   "stock_name": "Gag - Gulf of Mexico",
+   "scientific_name": "Mycteroperca microlepis",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "GAGGM"
+  },
+  "10349": {
+   "stock_name": "Gag - Southern Atlantic Coast",
+   "scientific_name": "Mycteroperca microlepis",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "GAGSATLC"
+  },
+  "10381": {
+   "stock_name": "Blueline tilefish - Southern Atlantic Coast",
+   "scientific_name": "Caulolatilus microps",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "BLTILESATLC"
+  },
+  "10384": {
+   "stock_name": "Tilefish - Southern Atlantic Coast",
+   "scientific_name": "Lopholatilus chamaeleonticeps",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "TILESATLC"
+  },
+  "10385": {
+   "stock_name": "Tilefish - Mid-Atlantic Coast",
+   "scientific_name": "Lopholatilus chamaeleonticeps",
+   "readings": [
+    "SSB",
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "TILEMATLC"
+  },
+  "10388": {
+   "stock_name": "Bluefish - Atlantic Coast",
+   "scientific_name": "Pomatomus saltatrix",
+   "readings": [
+    "SSB",
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "BLUEFISHATLC"
+  },
+  "10390": {
+   "stock_name": "Cobia - Gulf of Mexico",
+   "scientific_name": "Rachycentron canadum",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "COBGM"
+  },
+  "10395": {
+   "stock_name": "Chilipepper - Southern Pacific Coast",
+   "scientific_name": "Sebastes goodei",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CHILISPCOAST"
+  },
+  "10398": {
+   "stock_name": "Shortbelly rockfish - Pacific Coast",
+   "scientific_name": "Sebastes jordani",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "SBELLYROCKPCOAST"
+  },
+  "10402": {
+   "stock_name": "Black rockfish - Northern Pacific Coast",
+   "scientific_name": "Sebastes melanops",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "BLACKROCKWASH, BLACKROCKORECOAST (the 2007 coast-wide stock holds their fish)"
+  },
+  "10404": {
+   "stock_name": "Blackgill rockfish - Southern California",
+   "scientific_name": "Sebastes melanostomus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "BGROCKPCOAST"
+  },
+  "10415": {
+   "stock_name": "Canary rockfish - Pacific Coast",
+   "scientific_name": "Sebastes pinniger",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CROCKPCOAST"
+  },
+  "10416": {
+   "stock_name": "Northern rockfish - Bering Sea / Aleutian Islands",
+   "scientific_name": "Sebastes polyspinis",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "NROCKBSAI"
+  },
+  "10417": {
+   "stock_name": "Northern rockfish - Western / Central Gulf of Alaska",
+   "scientific_name": "Sebastes polyspinis",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "NROCKGA"
+  },
+  "10425": {
+   "stock_name": "Yelloweye rockfish - Gulf of Alaska",
+   "scientific_name": "Sebastes ruberrimus",
+   "readings": [
+    "TB",
+    "survey"
+   ],
+   "decision": "read",
+   "ram": "YEYEROCKGA"
+  },
+  "10426": {
+   "stock_name": "Yelloweye rockfish - Pacific Coast",
+   "scientific_name": "Sebastes ruberrimus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "YEYEROCKPCOAST"
+  },
+  "10443": {
+   "stock_name": "Cowcod - Southern California",
+   "scientific_name": "Sebastes levis",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "COWCODSCAL"
+  },
+  "10455": {
+   "stock_name": "Acadian redfish - Gulf of Maine / Georges Bank",
+   "scientific_name": "Sebastes fasciatus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "ACADREDGOMGB"
+  },
+  "10457": {
+   "stock_name": "Shortspine thornyhead - Gulf of Alaska",
+   "scientific_name": "Sebastolobus alascanus",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "SSTHORNHGA"
+  },
+  "10458": {
+   "stock_name": "Shortspine thornyhead - Pacific Coast",
+   "scientific_name": "Sebastolobus alascanus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "SSTHORNHPCOAST"
+  },
+  "10460": {
+   "stock_name": "Longspine thornyhead - Pacific Coast",
+   "scientific_name": "Sebastolobus altivelis",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "LSTHORNHPCOAST"
+  },
+  "10461": {
+   "stock_name": "California scorpionfish - Southern California",
+   "scientific_name": "Scorpaena guttata",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CALSCORPSCAL"
+  },
+  "10462": {
+   "stock_name": "Kelp greenling - Oregon",
+   "scientific_name": "Hexagrammos decagrammus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "KELPGREENLINGORECOAST"
+  },
+  "10466": {
+   "stock_name": "Sablefish - Pacific Coast",
+   "scientific_name": "Anoplopoma fimbria",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "SABLEFPCOAST"
+  },
+  "10500": {
+   "stock_name": "Goosefish - Gulf of Maine / Northern Georges Bank",
+   "scientific_name": "Lophius americanus",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "MONKGOMNGB"
+  },
+  "10501": {
+   "stock_name": "Goosefish - Southern Georges Bank / Mid-Atlantic",
+   "scientific_name": "Lophius americanus",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "MONKSGBMATL"
+  },
+  "10506": {
+   "stock_name": "Pacific cod - Gulf of Alaska",
+   "scientific_name": "Gadus macrocephalus",
+   "readings": [
+    "SSB",
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "PCODGA"
+  },
+  "10508": {
+   "stock_name": "Atlantic cod - Gulf of Maine",
+   "scientific_name": "Gadus morhua",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CODGOM"
+  },
+  "10509": {
+   "stock_name": "Atlantic cod - Georges Bank",
+   "scientific_name": "Gadus morhua",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CODGB"
+  },
+  "10510": {
+   "stock_name": "Walleye pollock - Eastern Bering Sea",
+   "scientific_name": "Gadus chalcogrammus",
+   "readings": [
+    "SSB",
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "WPOLLEBS"
+  },
+  "10511": {
+   "stock_name": "Walleye pollock - Aleutian Islands",
+   "scientific_name": "Gadus chalcogrammus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "WPOLLAI"
+  },
+  "10512": {
+   "stock_name": "Walleye pollock - Bogoslof",
+   "scientific_name": "Gadus chalcogrammus",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "WPOLLBOGO"
+  },
+  "10513": {
+   "stock_name": "Walleye pollock - Western / Central / West Yakutat Gulf of Alaska",
+   "scientific_name": "Gadus chalcogrammus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "WPOLLGA"
+  },
+  "10515": {
+   "stock_name": "Pollock - Gulf of Maine / Georges Bank",
+   "scientific_name": "Pollachius virens",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "POLL5YZ"
+  },
+  "10516": {
+   "stock_name": "Red hake - Gulf of Maine / Northern Georges Bank",
+   "scientific_name": "Urophycis chuss",
+   "readings": [
+    "TB",
+    "survey"
+   ],
+   "decision": "unread",
+   "ram": "RHAKEGOMNGB (unread there)"
+  },
+  "10517": {
+   "stock_name": "Red hake - Southern Georges Bank / Mid-Atlantic",
+   "scientific_name": "Urophycis chuss",
+   "readings": [
+    "survey"
+   ],
+   "decision": "unread",
+   "ram": "RHAKESGBMATL (unread there)"
+  },
+  "10518": {
+   "stock_name": "White hake - Gulf of Maine / Georges Bank",
+   "scientific_name": "Urophycis tenuis",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "WHAKEGBGOM"
+  },
+  "10519": {
+   "stock_name": "Haddock - Gulf of Maine",
+   "scientific_name": "Melanogrammus aeglefinus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "HAD5Y"
+  },
+  "10520": {
+   "stock_name": "Haddock - Georges Bank",
+   "scientific_name": "Melanogrammus aeglefinus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "HADGB"
+  },
+  "10523": {
+   "stock_name": "Pacific hake - Pacific Coast",
+   "scientific_name": "Merluccius productus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "PHAKEPCOAST"
+  },
+  "10545": {
+   "stock_name": "Pacific ocean perch - Pacific Coast",
+   "scientific_name": "Sebastes alutus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "POPERCHPCOAST"
+  },
+  "10547": {
+   "stock_name": "Aurora rockfish - Pacific Coast",
+   "scientific_name": "Sebastes aurora",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "AUROCKPCOAST"
+  },
+  "10554": {
+   "stock_name": "Shortraker rockfish - Gulf of Alaska",
+   "scientific_name": "Sebastes borealis",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "SRAKEROCKGA"
+  },
+  "10559": {
+   "stock_name": "Dusky rockfish - Gulf of Alaska",
+   "scientific_name": "Sebastes variabilis",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "DUSROCKGA"
+  },
+  "10568": {
+   "stock_name": "Widow rockfish - Pacific Coast",
+   "scientific_name": "Sebastes entomelas",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "WROCKPCOAST"
+  },
+  "10572": {
+   "stock_name": "Atlantic herring - Northwestern Atlantic Coast",
+   "scientific_name": "Clupea harengus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "HERRNWATLC"
+  },
+  "10731": {
+   "stock_name": "Longnose skate - Pacific Coast",
+   "scientific_name": "Raja rhina",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "LNOSESKAPCOAST"
+  },
+  "10736": {
+   "stock_name": "Alaska skate - Bering Sea / Aleutian Islands",
+   "scientific_name": "Bathyraja parmifera",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "ALSKABSAI"
+  },
+  "10786": {
+   "stock_name": "Sea scallop - Northwestern Atlantic Coast",
+   "scientific_name": "Placopecten magellanicus",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "SCALL5ZMAB"
+  },
+  "10792": {
+   "stock_name": "Longfin inshore squid - Georges Bank / Cape Hatteras",
+   "scientific_name": "Loligo pealeii",
+   "readings": [
+    "survey"
+   ],
+   "decision": "read",
+   "ram": "LISQUIDATLC"
+  },
+  "10809": {
+   "stock_name": "Red king crab - Bristol Bay",
+   "scientific_name": "Paralithodes camtschaticus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "RKCRABBB"
+  },
+  "10810": {
+   "stock_name": "Red king crab - Norton Sound",
+   "scientific_name": "Paralithodes camtschaticus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "RKCRABNS"
+  },
+  "10811": {
+   "stock_name": "Red king crab - Pribilof Islands",
+   "scientific_name": "Paralithodes camtschaticus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "RKCRABPI"
+  },
+  "10813": {
+   "stock_name": "Blue king crab - Pribilof Islands",
+   "scientific_name": "Paralithodes platypus",
+   "readings": [
+    "SSB",
+    "survey"
+   ],
+   "decision": "read",
+   "ram": "BKINGCRABPI"
+  },
+  "10814": {
+   "stock_name": "Blue king crab - Saint Matthew Island",
+   "scientific_name": "Paralithodes platypus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "BKINGCRABSMI"
+  },
+  "10820": {
+   "stock_name": "Snow crab - Bering Sea",
+   "scientific_name": "Chionoecetes opilio",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "SNOWCRABBS"
+  },
+  "10821": {
+   "stock_name": "Southern Tanner crab - Bering Sea",
+   "scientific_name": "Chionoecetes bairdi",
+   "readings": [
+    "survey"
+   ],
+   "decision": "read",
+   "ram": "TANNERCRABBSAI"
+  },
+  "10836": {
+   "stock_name": "Northern rock sole - Gulf of Alaska",
+   "scientific_name": "Lepidopsetta polyxystra",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "NRSOLEGA"
+  },
+  "10950": {
+   "stock_name": "Albacore - North Atlantic",
+   "scientific_name": "Thunnus alalunga",
+   "readings": [
+    "SSB",
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "ALBANATL"
+  },
+  "10953": {
+   "stock_name": "Swordfish - North Atlantic",
+   "scientific_name": "Xiphias gladius",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "SWORDNATL"
+  },
+  "10955": {
+   "stock_name": "White marlin - Atlantic",
+   "scientific_name": "Kajikia albida",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "WMARLINATL"
+  },
+  "10956": {
+   "stock_name": "Sablefish - Eastern Bering Sea / Aleutian Islands / Gulf of Alaska",
+   "scientific_name": "Anoplopoma fimbria",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "SABLEFEBSAIGA"
+  },
+  "11050": {
+   "stock_name": "Northern rock sole - Bering Sea / Aleutian Islands",
+   "scientific_name": "Lepidopsetta polyxystra",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "NRSOLEEBSAI"
+  },
+  "11055": {
+   "stock_name": "Pacific ocean perch - Bering Sea / Aleutian Islands",
+   "scientific_name": "Sebastes alutus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "PERCHEBSAI"
+  },
+  "11056": {
+   "stock_name": "Pacific ocean perch - Gulf of Alaska",
+   "scientific_name": "Sebastes alutus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "POPERCHGA"
+  },
+  "11302": {
+   "stock_name": "Black rockfish - Southern Pacific Coast",
+   "scientific_name": "Sebastes melanops",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "BLACKROCKORECOAST, BLACKROCKCAL (the 2007 coast-wide stock holds their fish)"
+  },
+  "11342": {
+   "stock_name": "Mutton snapper - Southern Atlantic Coast / Gulf of Mexico",
+   "scientific_name": "Lutjanus analis",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "MUTSNAPSATLCGM"
+  },
+  "11382": {
+   "stock_name": "Bering Sea / Aleutian Islands Blackspotted and Rougheye Rockfish Complex",
+   "scientific_name": null,
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "REYEROCKBSAI"
+  },
+  "11443": {
+   "stock_name": "Gulf of Alaska Blackspotted and Rougheye Rockfish Complex",
+   "scientific_name": null,
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "REYEROCKGA"
+  },
+  "11448": {
+   "stock_name": "Gulf of Alaska Sculpin Complex",
+   "scientific_name": null,
+   "readings": [
+    "survey"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "11450": {
+   "stock_name": "Gulf of Alaska Shark Complex",
+   "scientific_name": null,
+   "readings": [
+    "TB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "11562": {
+   "stock_name": "Atlantic wolffish - Gulf of Maine / Georges Bank",
+   "scientific_name": "Anarhichas lupus",
+   "readings": [
+    "SSB",
+    "survey"
+   ],
+   "decision": "read",
+   "ram": "AWOLF5YZ"
+  },
+  "11643": {
+   "stock_name": "Swordfish - Eastern Pacific",
+   "scientific_name": "Xiphias gladius",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "SWORDEPAC"
+  },
+  "11662": {
+   "stock_name": "Atka mackerel - Bering Sea / Aleutian Islands",
+   "scientific_name": "Pleurogrammus monopterygius",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "ATKABSAI"
+  },
+  "11687": {
+   "stock_name": "Pacific bluefin tuna - Pacific",
+   "scientific_name": "Thunnus orientalis",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "PACBTUNA"
+  },
+  "11692": {
+   "stock_name": "Striped marlin - Western and Central Pacific",
+   "scientific_name": "Kajikia audax",
+   "readings": [
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "STMARLINWCNPAC"
+  },
+  "11695": {
+   "stock_name": "American Samoa Bottomfish Multi-species Complex",
+   "scientific_name": null,
+   "readings": [
+    "TB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "11696": {
+   "stock_name": "Guam Bottomfish Multi-species Complex",
+   "scientific_name": null,
+   "readings": [
+    "TB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "11803": {
+   "stock_name": "Gulf of Alaska Other Shallow Water Flatfish Complex",
+   "scientific_name": null,
+   "readings": [
+    "survey"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "11827": {
+   "stock_name": "Main Hawaiian Islands Deep 7 Bottomfish Multi-species Complex",
+   "scientific_name": null,
+   "readings": [
+    "TB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "11997": {
+   "stock_name": "Flame snapper - American Samoa",
+   "scientific_name": "Etelis coruscans",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "11998": {
+   "stock_name": "Rusty jobfish - American Samoa",
+   "scientific_name": "Aphareus rutilans",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "11999": {
+   "stock_name": "Green jobfish - American Samoa",
+   "scientific_name": "Aprion virescens",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "unread",
+   "ram": null,
+   "note": "GJOBMHI, read, is Hawaii"
+  },
+  "12003": {
+   "stock_name": "Golden eye jobfish - American Samoa",
+   "scientific_name": "Pristipomoides flavipinnis",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "12005": {
+   "stock_name": "Oblique-banded snapper - American Samoa",
+   "scientific_name": "Pristipomoides zonatus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "12007": {
+   "stock_name": "Black jack - American Samoa",
+   "scientific_name": "Caranx lugubris",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "12011": {
+   "stock_name": "Yellow-edged lyretail - American Samoa",
+   "scientific_name": "Variola louti",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "12013": {
+   "stock_name": "Spotcheek emperor - American Samoa",
+   "scientific_name": "Lethrinus rubrioperculatus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "12149": {
+   "stock_name": "Cobia - Southern Atlantic Coast",
+   "scientific_name": "Rachycentron canadum",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "COBSATLC"
+  },
+  "12193": {
+   "stock_name": "Cabezon - Oregon",
+   "scientific_name": "Scorpaenichthys marmoratus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CABEZORECOAST"
+  },
+  "12194": {
+   "stock_name": "Lingcod - Northern Pacific Coast",
+   "scientific_name": "Ophiodon elongatus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "LINGCODNPCOAST"
+  },
+  "12195": {
+   "stock_name": "Lingcod - Southern Pacific Coast",
+   "scientific_name": "Ophiodon elongatus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "LINGCODSPCOAST"
+  },
+  "12215": {
+   "stock_name": "Common bluestripe snapper - American Samoa",
+   "scientific_name": "Lutjanus kasmira",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "unread",
+   "ram": null
+  },
+  "12745": {
+   "stock_name": "Pacific cod - Aleutian Islands",
+   "scientific_name": "Gadus macrocephalus",
+   "readings": [
+    "SSB",
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "PCODAI"
+  },
+  "12746": {
+   "stock_name": "Pacific cod - Bering Sea",
+   "scientific_name": "Gadus macrocephalus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "PCODBS"
+  },
+  "12805": {
+   "stock_name": "Atlantic cod - Eastern Georges Bank",
+   "scientific_name": "Gadus morhua",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CODGB"
+  },
+  "12806": {
+   "stock_name": "Haddock - Eastern Georges Bank",
+   "scientific_name": "Melanogrammus aeglefinus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "HADGB"
+  },
+  "12809": {
+   "stock_name": "Hogfish - Florida Keys / East Florida",
+   "scientific_name": "Lachnolaimus maximus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "unread",
+   "ram": "HOGFISHSEFL (deprecated) (unread there)"
+  },
+  "14407": {
+   "stock_name": "Black rockfish - Oregon",
+   "scientific_name": "Sebastes melanops",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "BLACKROCKORECOAST"
+  },
+  "14408": {
+   "stock_name": "Black rockfish - California",
+   "scientific_name": "Sebastes melanops",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "BLACKROCKCAL"
+  },
+  "14409": {
+   "stock_name": "Black rockfish - Washington",
+   "scientific_name": "Sebastes melanops",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "BLACKROCKWASH"
+  },
+  "14516": {
+   "stock_name": "Pacific Coast Blackspotted and Rougheye Rockfish Complex",
+   "scientific_name": null,
+   "readings": [
+    "SSB"
+   ],
+   "decision": "unread",
+   "ram": null,
+   "note": "REYEROCKBSAI and REYEROCKGA, read, are Alaska"
+  },
+  "14841": {
+   "stock_name": "Golden king crab - Western Aleutian Islands",
+   "scientific_name": "Lithodes aequispinus",
+   "readings": [
+    "SSB",
+    "TB"
+   ],
+   "decision": "read",
+   "ram": "GKCRABAIWS"
+  },
+  "14842": {
+   "stock_name": "Golden king crab - Eastern Aleutian Islands",
+   "scientific_name": "Lithodes aequispinus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "GKCRABAIES"
+  },
+  "15050": {
+   "stock_name": "Cabezon - Northern California",
+   "scientific_name": "Scorpaenichthys marmoratus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CABEZNCAL"
+  },
+  "15051": {
+   "stock_name": "Cabezon - Southern California",
+   "scientific_name": "Scorpaenichthys marmoratus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CABEZSCAL"
+  },
+  "15395": {
+   "stock_name": "Aleutian Islands Blackspotted and Rougheye rockfish Complex",
+   "scientific_name": null,
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "REYEROCKBSAI"
+  },
+  "15411": {
+   "stock_name": "Rex sole - Western / Central Gulf of Alaska",
+   "scientific_name": "Glyptocephalus zachirus",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "REXSOLEGA"
+  },
+  "15414": {
+   "stock_name": "Rock sole - Central Gulf of Alaska",
+   "scientific_name": "Lepidopsetta bilineata",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "RSOLEGA"
+  },
+  "15415": {
+   "stock_name": "Rock sole - Western Gulf of Alaska",
+   "scientific_name": "Lepidopsetta bilineata",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "RSOLEGA"
+  },
+  "17280": {
+   "stock_name": "Atlantic cod - Western Gulf of Maine",
+   "scientific_name": "Gadus morhua",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CODGOM (the 2024 stock structure re-partitions its fish)"
+  },
+  "17282": {
+   "stock_name": "Atlantic cod - Southern New England",
+   "scientific_name": "Gadus morhua",
+   "readings": [
+    "SSB"
+   ],
+   "decision": "read",
+   "ram": "CODGB, CODGOM (the 2024 stock structure re-partitions their fish)"
+  }
+ }
+}

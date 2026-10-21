@@ -1,0 +1,299 @@
+{
+ "downloaded": "2026-10-21, approved by Ren in chat the same day",
+ "files": {
+  "Stock SMART (raw.githubusercontent.com/NOAA-EDAB/stocksmart/main/data/, data file last changed in commit 959ae760, 2026-09-29; pull of 2026-10-17)": {
+   "stock_assessment_data.rda": {
+    "bytes": 857831,
+    "md5": "eedc109a5dfdffa64fb9b4c4870e2c2f"
+   },
+   "stock_assessment_summary.rda": {
+    "bytes": 186478,
+    "md5": "bfe693c0a092806986a16819ab1ca53e"
+   }
+  },
+  "ICES SAG (sag.ices.dk/SAG_API/api/StockList?year=Y and SummaryTable?assessmentKey=K)": {
+   "StockList-2015.json": {
+    "bytes": 90303,
+    "md5": "9e32bda0a4ec6c5f3346a35f9cde748c"
+   },
+   "StockList-2016.json": {
+    "bytes": 89383,
+    "md5": "15dcbda8c87ed22929e093155e2d6df9"
+   },
+   "StockList-2017.json": {
+    "bytes": 96076,
+    "md5": "58206a614cf3a17ff1bc88b21e2d49f5"
+   },
+   "StockList-2018.json": {
+    "bytes": 94056,
+    "md5": "ed7ba2e23e7988679008b6ed9ab95521"
+   },
+   "StockList-2019.json": {
+    "bytes": 106818,
+    "md5": "e2399316344bae810c43dcbf2e5580a4"
+   },
+   "StockList-2020.json": {
+    "bytes": 96218,
+    "md5": "ef30c43db30f7797dd90457ee35bc496"
+   },
+   "StockList-2021.json": {
+    "bytes": 97826,
+    "md5": "1ee282fdfcd9a2443a06b44e5584849f"
+   },
+   "StockList-2022.json": {
+    "bytes": 101063,
+    "md5": "f71ef267aaf879fde26ce43086c535a1"
+   },
+   "StockList-2023.json": {
+    "bytes": 101156,
+    "md5": "5037ee199344f65ea53a2a82dd7715f0"
+   },
+   "StockList-2024.json": {
+    "bytes": 104683,
+    "md5": "a7f77f7f7b02b86792a45584621b78fd"
+   },
+   "StockList-2025.json": {
+    "bytes": 90819,
+    "md5": "93eca3a41f52786c1e604c0d108ca09a"
+   },
+   "SummaryTable-12911.json": {
+    "bytes": 20793,
+    "md5": "44330bbb368a2f32bf1e2062ab9d4fc9"
+   },
+   "SummaryTable-13363.json": {
+    "bytes": 30757,
+    "md5": "4c0d916ea80e6a51b988c3eb6c487258"
+   },
+   "SummaryTable-16899.json": {
+    "bytes": 33971,
+    "md5": "b3f9bcbf0b1a44e0c898d35dd89d99a4"
+   },
+   "SummaryTable-17946.json": {
+    "bytes": 16636,
+    "md5": "c25bab2599504722a531740b17ec3398"
+   },
+   "SummaryTable-18508.json": {
+    "bytes": 34956,
+    "md5": "51593ed64c963ecf096b8142e405cd29"
+   },
+   "SummaryTable-18588.json": {
+    "bytes": 48342,
+    "md5": "00622de472ffd99ccaf4a2ab7197b450"
+   },
+   "SummaryTable-18606.json": {
+    "bytes": 35041,
+    "md5": "cf91934326f23fd82aac50f79a9c706b"
+   },
+   "SummaryTable-18898.json": {
+    "bytes": 15841,
+    "md5": "3a3a8278dc48a26fa9da86a90d76758d"
+   },
+   "SummaryTable-18901.json": {
+    "bytes": 33929,
+    "md5": "eaa1dc7900eb86434c361551b2700f44"
+   },
+   "SummaryTable-18965.json": {
+    "bytes": 27649,
+    "md5": "060cff2c0dd77d023f24d85a3e452f56"
+   },
+   "SummaryTable-19105.json": {
+    "bytes": 11326,
+    "md5": "eef929ce62df321212a851f8ec9daebe"
+   },
+   "SummaryTable-19111.json": {
+    "bytes": 16296,
+    "md5": "e407abd93d01446702975def0e4aa710"
+   },
+   "SummaryTable-19112.json": {
+    "bytes": 22594,
+    "md5": "a1d74e78a3e9cc40bb63bef6058e7994"
+   },
+   "SummaryTable-19118.json": {
+    "bytes": 13901,
+    "md5": "52f9d83fdd815b47caec09205695db9a"
+   },
+   "SummaryTable-19125.json": {
+    "bytes": 23196,
+    "md5": "0fc2745d7823b4e4b6102e8f29ac92ef"
+   },
+   "SummaryTable-19173.json": {
+    "bytes": 23214,
+    "md5": "74678426cbd25b41674c01724ea29367"
+   },
+   "SummaryTable-19189.json": {
+    "bytes": 26543,
+    "md5": "155a36fb4c541a43b0e39ccf37092dac"
+   },
+   "SummaryTable-19202.json": {
+    "bytes": 15136,
+    "md5": "51b5eff8a3b07f341c26e83edf838b17"
+   },
+   "SummaryTable-19268.json": {
+    "bytes": 20667,
+    "md5": "ddf06ccb59fb27f41d5e0b790f2a874d"
+   },
+   "SummaryTable-19283.json": {
+    "bytes": 62690,
+    "md5": "8c9e48fc9c849fabda18c75ba117c37f"
+   },
+   "SummaryTable-19395.json": {
+    "bytes": 31426,
+    "md5": "f3e70b5fbc7d1911110a729271293d3b"
+   },
+   "SummaryTable-19463.json": {
+    "bytes": 48957,
+    "md5": "63ca3795123061085000414fadd30fbb"
+   },
+   "SummaryTable-19513.json": {
+    "bytes": 27286,
+    "md5": "1128c80a1478b5eff0f05a14eaaffe5e"
+   },
+   "SummaryTable-19553.json": {
+    "bytes": 33974,
+    "md5": "d3f8302f7c0eea13d71927bbbf07119d"
+   },
+   "SummaryTable-19562.json": {
+    "bytes": 17951,
+    "md5": "273b369e6c1780585c72ef361dd2edd0"
+   },
+   "SummaryTable-19587.json": {
+    "bytes": 33371,
+    "md5": "12713012b24cbbb252a55bc0f9a41394"
+   },
+   "SummaryTable-19603.json": {
+    "bytes": 27757,
+    "md5": "84e36d3004bf0251bb4beabf7911753e"
+   },
+   "SummaryTable-19724.json": {
+    "bytes": 39683,
+    "md5": "14cca34332e052a15c81916c691339b3"
+   },
+   "SummaryTable-19845.json": {
+    "bytes": 33369,
+    "md5": "07003b6f77bbd2420239d60f35ea6cfa"
+   },
+   "SummaryTable-19856.json": {
+    "bytes": 27143,
+    "md5": "19c641ea5e504f0bb60002c13892b8e1"
+   },
+   "SummaryTable-19880.json": {
+    "bytes": 36506,
+    "md5": "3713924ee980dae16c8dff0b524f7dbb"
+   },
+   "SummaryTable-19891.json": {
+    "bytes": 30066,
+    "md5": "8cb6d98abd06a09361a6e7ebdd4cc1ea"
+   },
+   "SummaryTable-20904.json": {
+    "bytes": 31728,
+    "md5": "9d66b1c3d85fa1a64ddb3e22b4a57f7b"
+   },
+   "SummaryTable-20905.json": {
+    "bytes": 30995,
+    "md5": "ebdd9c73c385b06b0a4489e7f7d4ed26"
+   },
+   "SummaryTable-20934.json": {
+    "bytes": 48933,
+    "md5": "3fdb12f684b7ec832f73baa68eb3c70b"
+   },
+   "SummaryTable-20955.json": {
+    "bytes": 22225,
+    "md5": "dd16ea0b84c5b0d541c2d06c49319387"
+   },
+   "SummaryTable-20975.json": {
+    "bytes": 24960,
+    "md5": "97a1f42a30b8f5654605821d0d892aad"
+   },
+   "SummaryTable-20987.json": {
+    "bytes": 50697,
+    "md5": "1ea7c3c8ab77c502f6b202e9f3eb1ac8"
+   },
+   "SummaryTable-21004.json": {
+    "bytes": 51592,
+    "md5": "2e1dd9ce57b9a2c30b38da7b252b34ed"
+   },
+   "SummaryTable-21087.json": {
+    "bytes": 24628,
+    "md5": "e73a00c968872a2bd6f007895bf86147"
+   },
+   "SummaryTable-21096.json": {
+    "bytes": 24668,
+    "md5": "e1bc3f31c3f557f63fc0e7ea687a89d9"
+   },
+   "SummaryTable-21097.json": {
+    "bytes": 19570,
+    "md5": "0fcbab1dddbb93a620a10a9c62e85e0c"
+   },
+   "SummaryTable-21117.json": {
+    "bytes": 21008,
+    "md5": "c9a6e01affe95becd070fa3c3ffeb59e"
+   },
+   "SummaryTable-21136.json": {
+    "bytes": 16958,
+    "md5": "b6173c2c630a964857006f1553d582c0"
+   },
+   "SummaryTable-21138.json": {
+    "bytes": 42845,
+    "md5": "2f19979ace58d02330a90509c40ebd34"
+   },
+   "SummaryTable-21176.json": {
+    "bytes": 21998,
+    "md5": "59465306860dec24f3bcd928163dd672"
+   },
+   "SummaryTable-21177.json": {
+    "bytes": 22054,
+    "md5": "ec53a81817d578077f3188aa0a94061c"
+   },
+   "SummaryTable-21188.json": {
+    "bytes": 29541,
+    "md5": "86e0e205261e5fedeab623cb70fdd3d7"
+   },
+   "SummaryTable-21196.json": {
+    "bytes": 29541,
+    "md5": "d683e0772439c1c4956add01ebaf2d61"
+   },
+   "SummaryTable-21198.json": {
+    "bytes": 29630,
+    "md5": "9e9cc821da31c0d42f252daf14ea369f"
+   },
+   "SummaryTable-21220.json": {
+    "bytes": 42443,
+    "md5": "b8211da52987ad141521766306176bd2"
+   },
+   "SummaryTable-21234.json": {
+    "bytes": 21882,
+    "md5": "901ace48c2cb5657e99c91b4d406a089"
+   },
+   "SummaryTable-21235.json": {
+    "bytes": 26006,
+    "md5": "5c970e6d702dde7840f5c70f4ad145c8"
+   },
+   "SummaryTable-21237.json": {
+    "bytes": 40080,
+    "md5": "949c66da55374504bc7e63d10c8730f6"
+   },
+   "SummaryTable-21264.json": {
+    "bytes": 16406,
+    "md5": "70e8e9b408a81e1d5dd74e356ba1c272"
+   },
+   "SummaryTable-21266.json": {
+    "bytes": 25382,
+    "md5": "e7fd8daa01589349e1bd29e5e77a747d"
+   },
+   "SummaryTable-25823.json": {
+    "bytes": 20672,
+    "md5": "ca5f74cce24778a0fb96b73fa79a695a"
+   }
+  }
+ },
+ "totals": {
+  "Stock SMART (raw.githubusercontent.com/NOAA-EDAB/stocksmart/main/data/, data file last changed in commit 959ae760, 2026-09-29; pull of 2026-10-17)": {
+   "files": 2,
+   "bytes": 1044309
+  },
+  "ICES SAG (sag.ices.dk/SAG_API/api/StockList?year=Y and SummaryTable?assessmentKey=K)": {
+   "files": 68,
+   "bytes": 2725810
+  }
+ }
+}

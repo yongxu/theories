@@ -1,0 +1,2994 @@
+{
+ "runs": {
+  "level | TB | seed 20261021": {
+   "timing_read": {
+    "0.0": 414,
+    "0.5": 11,
+    "1.0": 3
+   },
+   "stocks": 428,
+   "episodes": 3704,
+   "below_low": 687,
+   "below_low_stocks": 293,
+   "C1": {
+    "difference": -0.08438818565400844,
+    "lower_95": -0.20356234096692108,
+    "episodes": {
+     "True": 48,
+     "False": 26
+    },
+    "stocks_compared": 21,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.10666666666666667,
+    "lower_95": -0.32967032967032966,
+    "episodes": {
+     "True": 14,
+     "False": 13
+    },
+    "stocks_compared": 11,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 173,
+    "meets_level_fell": 4
+   },
+   "falls_short_meets": [
+    0.9770290964777948,
+    0.8235294117647058
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.15158273302227898,
+    "lower_95": -0.11049878572762936,
+    "episodes": {
+     "True": 647,
+     "False": 34
+    },
+    "stocks_compared": 293,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.8633828996282527,
+    "lower_95": 0.7640808865531818,
+    "episodes": {
+     "True": 50,
+     "False": 84
+    },
+    "stocks_compared": 32,
+    "verdict": "passed"
+   }
+  },
+  "level | TB | seed 20261121": {
+   "timing_read": {
+    "0.0": 403,
+    "0.5": 12
+   },
+   "stocks": 415,
+   "episodes": 3554,
+   "below_low": 620,
+   "below_low_stocks": 274,
+   "C1": {
+    "difference": -0.06493506493506494,
+    "lower_95": -0.1396276595744681,
+    "episodes": {
+     "True": 25,
+     "False": 13
+    },
+    "stocks_compared": 11,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.28571428571428575,
+    "lower_95": -0.5,
+    "episodes": {
+     "True": 3,
+     "False": 2
+    },
+    "stocks_compared": 2,
+    "verdict": "not testable"
+   },
+   "C2_discordant": {
+    "short_level_rose": 155,
+    "meets_level_fell": 1
+   },
+   "falls_short_meets": [
+    0.976897689768977,
+    0.6428571428571429
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.32247337221070904,
+    "lower_95": -0.07814761215629522,
+    "episodes": {
+     "True": 604,
+     "False": 14
+    },
+    "stocks_compared": 273,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.8135354483868804,
+    "lower_95": 0.6723868954758191,
+    "episodes": {
+     "True": 41,
+     "False": 48
+    },
+    "stocks_compared": 24,
+    "verdict": "passed"
+   }
+  },
+  "level | TB | seed 20261221": {
+   "timing_read": {
+    "0.0": 405,
+    "0.5": 11,
+    "1.0": 4
+   },
+   "stocks": 420,
+   "episodes": 3523,
+   "below_low": 716,
+   "below_low_stocks": 290,
+   "C1": {
+    "difference": -0.07045342812842721,
+    "lower_95": -0.17007286298205082,
+    "episodes": {
+     "True": 60,
+     "False": 35
+    },
+    "stocks_compared": 23,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": 0.031484257871064465,
+    "lower_95": -0.18064516129032257,
+    "episodes": {
+     "True": 20,
+     "False": 18
+    },
+    "stocks_compared": 12,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 176,
+    "meets_level_fell": 6
+   },
+   "falls_short_meets": [
+    0.9791666666666666,
+    0.7727272727272727
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.20278517610390936,
+    "lower_95": -0.10486969162080777,
+    "episodes": {
+     "True": 672,
+     "False": 44
+    },
+    "stocks_compared": 290,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.8397603024884314,
+    "lower_95": 0.7396548835650864,
+    "episodes": {
+     "True": 64,
+     "False": 86
+    },
+    "stocks_compared": 35,
+    "verdict": "passed"
+   }
+  },
+  "level | TB | seed 20261321": {
+   "timing_read": {
+    "0.0": 421,
+    "0.5": 18,
+    "1.0": 1
+   },
+   "stocks": 440,
+   "episodes": 3719,
+   "below_low": 727,
+   "below_low_stocks": 296,
+   "C1": {
+    "difference": 0.0051948051948051965,
+    "lower_95": -0.0922803904170364,
+    "episodes": {
+     "True": 58,
+     "False": 33
+    },
+    "stocks_compared": 27,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": 0.04464285714285715,
+    "lower_95": -0.14736842105263157,
+    "episodes": {
+     "True": 25,
+     "False": 17
+    },
+    "stocks_compared": 16,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 174,
+    "meets_level_fell": 7
+   },
+   "falls_short_meets": [
+    0.9839650145772595,
+    0.8780487804878049
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.0999182878190081,
+    "lower_95": -0.044455734789787885,
+    "episodes": {
+     "True": 681,
+     "False": 41
+    },
+    "stocks_compared": 296,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.9344120071140415,
+    "lower_95": 0.8649460545800718,
+    "episodes": {
+     "True": 52,
+     "False": 90
+    },
+    "stocks_compared": 36,
+    "verdict": "passed"
+   }
+  },
+  "level | SSB | seed 20261021": {
+   "timing_read": {
+    "0.0": 414,
+    "0.5": 13,
+    "1.0": 1
+   },
+   "stocks": 428,
+   "episodes": 3685,
+   "below_low": 680,
+   "below_low_stocks": 286,
+   "C1": {
+    "difference": -0.08028673835125448,
+    "lower_95": -0.19774011299435026,
+    "episodes": {
+     "True": 52,
+     "False": 28
+    },
+    "stocks_compared": 22,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.1038961038961039,
+    "lower_95": -0.32727272727272727,
+    "episodes": {
+     "True": 15,
+     "False": 13
+    },
+    "stocks_compared": 11,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 172,
+    "meets_level_fell": 4
+   },
+   "falls_short_meets": [
+    0.9799382716049383,
+    0.875
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.10470342041700217,
+    "lower_95": -0.13839671564390668,
+    "episodes": {
+     "True": 640,
+     "False": 32
+    },
+    "stocks_compared": 285,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.9280059839182198,
+    "lower_95": 0.8541710697140786,
+    "episodes": {
+     "True": 60,
+     "False": 82
+    },
+    "stocks_compared": 33,
+    "verdict": "passed"
+   }
+  },
+  "level | SSB | seed 20261121": {
+   "timing_read": {
+    "0.0": 405,
+    "0.5": 10
+   },
+   "stocks": 415,
+   "episodes": 3531,
+   "below_low": 609,
+   "below_low_stocks": 256,
+   "C1": {
+    "difference": -0.15145631067961168,
+    "lower_95": -0.2967914438502674,
+    "episodes": {
+     "True": 31,
+     "False": 13
+    },
+    "stocks_compared": 12,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.28571428571428575,
+    "lower_95": -0.5,
+    "episodes": {
+     "True": 3,
+     "False": 2
+    },
+    "stocks_compared": 2,
+    "verdict": "not testable"
+   },
+   "C2_discordant": {
+    "short_level_rose": 148,
+    "meets_level_fell": 1
+   },
+   "falls_short_meets": [
+    0.972972972972973,
+    0.8235294117647058
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.1364072062329491,
+    "lower_95": -0.12903225806451613,
+    "episodes": {
+     "True": 588,
+     "False": 17
+    },
+    "stocks_compared": 253,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.9007710358699293,
+    "lower_95": 0.8121890547263682,
+    "episodes": {
+     "True": 63,
+     "False": 64
+    },
+    "stocks_compared": 36,
+    "verdict": "passed"
+   }
+  },
+  "level | SSB | seed 20261221": {
+   "timing_read": {
+    "0.0": 409,
+    "0.5": 11
+   },
+   "stocks": 420,
+   "episodes": 3506,
+   "below_low": 705,
+   "below_low_stocks": 285,
+   "C1": {
+    "difference": -0.05116019010343865,
+    "lower_95": -0.15650406504065043,
+    "episodes": {
+     "True": 59,
+     "False": 33
+    },
+    "stocks_compared": 22,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": 0.0,
+    "lower_95": -0.18823529411764708,
+    "episodes": {
+     "True": 24,
+     "False": 19
+    },
+    "stocks_compared": 13,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 175,
+    "meets_level_fell": 6
+   },
+   "falls_short_meets": [
+    0.9760119940029985,
+    0.8157894736842105
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.16077621058305627,
+    "lower_95": -0.07692307692307693,
+    "episodes": {
+     "True": 664,
+     "False": 38
+    },
+    "stocks_compared": 284,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.8634385602596252,
+    "lower_95": 0.7801062573789846,
+    "episodes": {
+     "True": 91,
+     "False": 81
+    },
+    "stocks_compared": 40,
+    "verdict": "passed"
+   }
+  },
+  "level | SSB | seed 20261321": {
+   "timing_read": {
+    "0.0": 429,
+    "0.5": 10,
+    "1.0": 1
+   },
+   "stocks": 440,
+   "episodes": 3698,
+   "below_low": 728,
+   "below_low_stocks": 295,
+   "C1": {
+    "difference": 0.054313099041533544,
+    "lower_95": -0.07568438003220611,
+    "episodes": {
+     "True": 61,
+     "False": 37
+    },
+    "stocks_compared": 29,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": 0.02857142857142857,
+    "lower_95": -0.2,
+    "episodes": {
+     "True": 23,
+     "False": 17
+    },
+    "stocks_compared": 15,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 180,
+    "meets_level_fell": 6
+   },
+   "falls_short_meets": [
+    0.9838945827232797,
+    0.7777777777777778
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.2057276857119152,
+    "lower_95": -0.002388344877000229,
+    "episodes": {
+     "True": 678,
+     "False": 45
+    },
+    "stocks_compared": 295,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.8722054050111238,
+    "lower_95": 0.777588476728878,
+    "episodes": {
+     "True": 67,
+     "False": 98
+    },
+    "stocks_compared": 41,
+    "verdict": "passed"
+   }
+  },
+  "level-law | TB | seed 20261021": {
+   "timing_read": {
+    "0.0": 352,
+    "0.5": 39,
+    "1.0": 9
+   },
+   "stocks": 400,
+   "episodes": 5379,
+   "below_low": 338,
+   "below_low_stocks": 67,
+   "C1": {
+    "difference": -0.014449658224842366,
+    "lower_95": -0.10303929954131506,
+    "episodes": {
+     "True": 98,
+     "False": 52
+    },
+    "stocks_compared": 24,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.021946393236193563,
+    "lower_95": -0.16366158113730928,
+    "episodes": {
+     "True": 42,
+     "False": 32
+    },
+    "stocks_compared": 15,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 23,
+    "meets_level_fell": 12
+   },
+   "falls_short_meets": [
+    0.9403508771929825,
+    0.7924528301886793
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.12978233747384224,
+    "lower_95": -0.03766124288166123,
+    "episodes": {
+     "True": 285,
+     "False": 53
+    },
+    "stocks_compared": 67,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.739851435454728,
+    "lower_95": 0.5818181818181818,
+    "episodes": {
+     "True": 44,
+     "False": 47
+    },
+    "stocks_compared": 18,
+    "verdict": "passed"
+   }
+  },
+  "level-law | TB | seed 20261121": {
+   "timing_read": {
+    "0.0": 364,
+    "0.5": 27,
+    "1.0": 9
+   },
+   "stocks": 400,
+   "episodes": 5024,
+   "below_low": 349,
+   "below_low_stocks": 60,
+   "C1": {
+    "difference": 0.04226307920231032,
+    "lower_95": -0.028215140445899983,
+    "episodes": {
+     "True": 117,
+     "False": 40
+    },
+    "stocks_compared": 21,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": 0.11778417660770601,
+    "lower_95": -0.05097777034932308,
+    "episodes": {
+     "True": 30,
+     "False": 19
+    },
+    "stocks_compared": 10,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 24,
+    "meets_level_fell": 6
+   },
+   "falls_short_meets": [
+    0.9546925566343042,
+    0.8
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.13748249374018592,
+    "lower_95": -0.03880402058078596,
+    "episodes": {
+     "True": 308,
+     "False": 40
+    },
+    "stocks_compared": 60,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.645312414882606,
+    "lower_95": 0.49099443292217015,
+    "episodes": {
+     "True": 49,
+     "False": 54
+    },
+    "stocks_compared": 13,
+    "verdict": "passed"
+   }
+  },
+  "level-law | TB | seed 20261221": {
+   "timing_read": {
+    "0.0": 355,
+    "0.5": 37,
+    "1.0": 8
+   },
+   "stocks": 400,
+   "episodes": 5075,
+   "below_low": 331,
+   "below_low_stocks": 61,
+   "C1": {
+    "difference": -0.1396892492115648,
+    "lower_95": -0.2488764606012184,
+    "episodes": {
+     "True": 95,
+     "False": 36
+    },
+    "stocks_compared": 24,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.2842827004219409,
+    "lower_95": -0.4428274428274429,
+    "episodes": {
+     "True": 40,
+     "False": 13
+    },
+    "stocks_compared": 10,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 9,
+    "meets_level_fell": 11
+   },
+   "falls_short_meets": [
+    0.9084745762711864,
+    0.8333333333333334
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.053345692489551816,
+    "lower_95": -0.15217366269361432,
+    "episodes": {
+     "True": 295,
+     "False": 36
+    },
+    "stocks_compared": 61,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.6285132382892056,
+    "lower_95": 0.47720364741641336,
+    "episodes": {
+     "True": 32,
+     "False": 28
+    },
+    "stocks_compared": 9,
+    "verdict": "passed"
+   }
+  },
+  "level-law | TB | seed 20261321": {
+   "timing_read": {
+    "0.0": 356,
+    "0.5": 35,
+    "1.0": 9
+   },
+   "stocks": 400,
+   "episodes": 4759,
+   "below_low": 236,
+   "below_low_stocks": 53,
+   "C1": {
+    "difference": -0.10408474811490956,
+    "lower_95": -0.23497505740755403,
+    "episodes": {
+     "True": 56,
+     "False": 28
+    },
+    "stocks_compared": 13,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.04507042253521127,
+    "lower_95": -0.12213740458015267,
+    "episodes": {
+     "True": 23,
+     "False": 9
+    },
+    "stocks_compared": 7,
+    "verdict": "not testable"
+   },
+   "C2_discordant": {
+    "short_level_rose": 10,
+    "meets_level_fell": 6
+   },
+   "falls_short_meets": [
+    0.9371980676328503,
+    0.8275862068965517
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.10631001371742117,
+    "lower_95": -0.14781491002570693,
+    "episodes": {
+     "True": 205,
+     "False": 29
+    },
+    "stocks_compared": 53,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.6154273029966705,
+    "lower_95": 0.3139013452914798,
+    "episodes": {
+     "True": 30,
+     "False": 17
+    },
+    "stocks_compared": 7,
+    "verdict": "passed"
+   }
+  },
+  "level-law | SSB | seed 20261021": {
+   "timing_read": {
+    "0.0": 360,
+    "0.5": 33,
+    "1.0": 6
+   },
+   "stocks": 399,
+   "episodes": 5286,
+   "below_low": 362,
+   "below_low_stocks": 71,
+   "C1": {
+    "difference": -0.021385519483295222,
+    "lower_95": -0.11769645179268064,
+    "episodes": {
+     "True": 124,
+     "False": 60
+    },
+    "stocks_compared": 30,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.0916629314208875,
+    "lower_95": -0.2127093858016485,
+    "episodes": {
+     "True": 65,
+     "False": 42
+    },
+    "stocks_compared": 20,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 33,
+    "meets_level_fell": 20
+   },
+   "falls_short_meets": [
+    0.88,
+    0.6774193548387096
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.18616609410545393,
+    "lower_95": -0.028454341606742452,
+    "episodes": {
+     "True": 296,
+     "False": 62
+    },
+    "stocks_compared": 69,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.7094388133498146,
+    "lower_95": 0.5974623432514653,
+    "episodes": {
+     "True": 56,
+     "False": 45
+    },
+    "stocks_compared": 18,
+    "verdict": "passed"
+   }
+  },
+  "level-law | SSB | seed 20261121": {
+   "timing_read": {
+    "0.0": 363,
+    "0.5": 26,
+    "1.0": 11
+   },
+   "stocks": 400,
+   "episodes": 4980,
+   "below_low": 389,
+   "below_low_stocks": 65,
+   "C1": {
+    "difference": 0.062002708929221,
+    "lower_95": -0.048893966715762516,
+    "episodes": {
+     "True": 138,
+     "False": 60
+    },
+    "stocks_compared": 28,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": 0.14992053681794104,
+    "lower_95": 0.0,
+    "episodes": {
+     "True": 55,
+     "False": 29
+    },
+    "stocks_compared": 17,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 28,
+    "meets_level_fell": 15
+   },
+   "falls_short_meets": [
+    0.9331306990881459,
+    0.7333333333333333
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.1853237720386046,
+    "lower_95": -0.05225578528682115,
+    "episodes": {
+     "True": 328,
+     "False": 60
+    },
+    "stocks_compared": 65,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.7147503889124592,
+    "lower_95": 0.5324675324675325,
+    "episodes": {
+     "True": 47,
+     "False": 39
+    },
+    "stocks_compared": 9,
+    "verdict": "passed"
+   }
+  },
+  "level-law | SSB | seed 20261221": {
+   "timing_read": {
+    "0.0": 368,
+    "0.5": 28,
+    "1.0": 4
+   },
+   "stocks": 400,
+   "episodes": 5031,
+   "below_low": 379,
+   "below_low_stocks": 61,
+   "C1": {
+    "difference": -0.09926312702574164,
+    "lower_95": -0.1916456513334539,
+    "episodes": {
+     "True": 136,
+     "False": 52
+    },
+    "stocks_compared": 32,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.17245286906356244,
+    "lower_95": -0.3496932515337423,
+    "episodes": {
+     "True": 63,
+     "False": 25
+    },
+    "stocks_compared": 17,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 14,
+    "meets_level_fell": 24
+   },
+   "falls_short_meets": [
+    0.8913043478260869,
+    0.7894736842105263
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.09801529994926039,
+    "lower_95": -0.14975149999689766,
+    "episodes": {
+     "True": 320,
+     "False": 57
+    },
+    "stocks_compared": 61,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.7310039559499625,
+    "lower_95": 0.5773067331670823,
+    "episodes": {
+     "True": 50,
+     "False": 38
+    },
+    "stocks_compared": 12,
+    "verdict": "passed"
+   }
+  },
+  "level-law | SSB | seed 20261321": {
+   "timing_read": {
+    "0.0": 370,
+    "0.5": 21,
+    "1.0": 7
+   },
+   "stocks": 398,
+   "episodes": 4717,
+   "below_low": 274,
+   "below_low_stocks": 57,
+   "C1": {
+    "difference": 0.024591139360411022,
+    "lower_95": -0.06415411864792869,
+    "episodes": {
+     "True": 91,
+     "False": 43
+    },
+    "stocks_compared": 21,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": 0.06082234290147401,
+    "lower_95": -0.02673669133444736,
+    "episodes": {
+     "True": 45,
+     "False": 22
+    },
+    "stocks_compared": 13,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 13,
+    "meets_level_fell": 21
+   },
+   "falls_short_meets": [
+    0.9321266968325792,
+    0.7169811320754716
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.2155095300350925,
+    "lower_95": -0.10137102686554893,
+    "episodes": {
+     "True": 221,
+     "False": 53
+    },
+    "stocks_compared": 57,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.45709753207895737,
+    "lower_95": 0.21302162988857332,
+    "episodes": {
+     "True": 33,
+     "False": 26
+    },
+    "stocks_compared": 10,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-law | TB | seed 20261021": {
+   "timing_read": {
+    "0.0": 289,
+    "0.5": 11
+   },
+   "stocks": 300,
+   "episodes": 6565,
+   "below_low": 1026,
+   "below_low_stocks": 99,
+   "C1": {
+    "difference": 0.16921424241558222,
+    "lower_95": 0.10451184753612558,
+    "episodes": {
+     "True": 530,
+     "False": 324
+    },
+    "stocks_compared": 77,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.1718210494944717,
+    "lower_95": 0.10278577839821498,
+    "episodes": {
+     "True": 401,
+     "False": 257
+    },
+    "stocks_compared": 76,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 131,
+    "meets_level_fell": 139
+   },
+   "falls_short_meets": [
+    0.7363770250368189,
+    0.47262247838616717
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.26440434831156623,
+    "lower_95": 0.10151104580107008,
+    "episodes": {
+     "True": 679,
+     "False": 347
+    },
+    "stocks_compared": 99,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.009686883091311884,
+    "lower_95": -0.11361116581491927,
+    "episodes": {
+     "True": 137,
+     "False": 99
+    },
+    "stocks_compared": 27,
+    "verdict": "failed"
+   }
+  },
+  "adjusting-law | TB | seed 20261121": {
+   "timing_read": {
+    "0.0": 291,
+    "0.5": 9
+   },
+   "stocks": 300,
+   "episodes": 6554,
+   "below_low": 908,
+   "below_low_stocks": 93,
+   "C1": {
+    "difference": 0.16165122830655754,
+    "lower_95": 0.09715285860288066,
+    "episodes": {
+     "True": 448,
+     "False": 300
+    },
+    "stocks_compared": 67,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.13481300347177622,
+    "lower_95": 0.0695235864664405,
+    "episodes": {
+     "True": 344,
+     "False": 254
+    },
+    "stocks_compared": 65,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 110,
+    "meets_level_fell": 140
+   },
+   "falls_short_meets": [
+    0.7689713322091062,
+    0.5301587301587302
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.23671801865772352,
+    "lower_95": 0.11460286833270787,
+    "episodes": {
+     "True": 593,
+     "False": 315
+    },
+    "stocks_compared": 93,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.18447639235437474,
+    "lower_95": 0.06108787119089407,
+    "episodes": {
+     "True": 144,
+     "False": 132
+    },
+    "stocks_compared": 28,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-law | TB | seed 20261221": {
+   "timing_read": {
+    "0.0": 292,
+    "0.5": 8
+   },
+   "stocks": 300,
+   "episodes": 6561,
+   "below_low": 1104,
+   "below_low_stocks": 112,
+   "C1": {
+    "difference": 0.14250073348386805,
+    "lower_95": 0.07965491819371592,
+    "episodes": {
+     "True": 553,
+     "False": 361
+    },
+    "stocks_compared": 86,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.1187371493038875,
+    "lower_95": 0.04798485135540502,
+    "episodes": {
+     "True": 398,
+     "False": 267
+    },
+    "stocks_compared": 76,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 139,
+    "meets_level_fell": 153
+   },
+   "falls_short_meets": [
+    0.7328671328671329,
+    0.5089974293059126
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.2284999211356436,
+    "lower_95": 0.08984519354126463,
+    "episodes": {
+     "True": 715,
+     "False": 389
+    },
+    "stocks_compared": 112,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.20788939842069806,
+    "lower_95": 0.10313085201212714,
+    "episodes": {
+     "True": 126,
+     "False": 111
+    },
+    "stocks_compared": 25,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-law | TB | seed 20261321": {
+   "timing_read": {
+    "0.0": 289,
+    "0.5": 11
+   },
+   "stocks": 300,
+   "episodes": 6557,
+   "below_low": 876,
+   "below_low_stocks": 90,
+   "C1": {
+    "difference": 0.14779417079729107,
+    "lower_95": 0.060941552163492674,
+    "episodes": {
+     "True": 406,
+     "False": 266
+    },
+    "stocks_compared": 66,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.17208235270599034,
+    "lower_95": 0.08683889948885569,
+    "episodes": {
+     "True": 315,
+     "False": 217
+    },
+    "stocks_compared": 62,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 130,
+    "meets_level_fell": 122
+   },
+   "falls_short_meets": [
+    0.7647058823529411,
+    0.5373665480427047
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.22748507605938845,
+    "lower_95": 0.06943255165470477,
+    "episodes": {
+     "True": 595,
+     "False": 281
+    },
+    "stocks_compared": 90,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.31269509227097336,
+    "lower_95": 0.1713414905541516,
+    "episodes": {
+     "True": 126,
+     "False": 97
+    },
+    "stocks_compared": 25,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-law | SSB | seed 20261021": {
+   "timing_read": {
+    "0.0": 289,
+    "0.5": 11
+   },
+   "stocks": 300,
+   "episodes": 6543,
+   "below_low": 921,
+   "below_low_stocks": 93,
+   "C1": {
+    "difference": 0.19733069015424803,
+    "lower_95": 0.12571294410924214,
+    "episodes": {
+     "True": 474,
+     "False": 289
+    },
+    "stocks_compared": 68,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.21568242095699555,
+    "lower_95": 0.13539857819244155,
+    "episodes": {
+     "True": 298,
+     "False": 199
+    },
+    "stocks_compared": 57,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 90,
+    "meets_level_fell": 85
+   },
+   "falls_short_meets": [
+    0.7463651050080775,
+    0.4470198675496689
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.29925640867921105,
+    "lower_95": 0.13349629654839257,
+    "episodes": {
+     "True": 619,
+     "False": 302
+    },
+    "stocks_compared": 93,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.12401952096279048,
+    "lower_95": -0.019658750713196445,
+    "episodes": {
+     "True": 99,
+     "False": 90
+    },
+    "stocks_compared": 24,
+    "verdict": "failed"
+   }
+  },
+  "adjusting-law | SSB | seed 20261121": {
+   "timing_read": {
+    "0.0": 286,
+    "0.5": 13,
+    "1.0": 1
+   },
+   "stocks": 300,
+   "episodes": 6554,
+   "below_low": 836,
+   "below_low_stocks": 88,
+   "C1": {
+    "difference": 0.13687536169376338,
+    "lower_95": 0.07415469250345316,
+    "episodes": {
+     "True": 434,
+     "False": 261
+    },
+    "stocks_compared": 59,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.1489228301405367,
+    "lower_95": 0.06835883617337739,
+    "episodes": {
+     "True": 264,
+     "False": 177
+    },
+    "stocks_compared": 50,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 74,
+    "meets_level_fell": 83
+   },
+   "falls_short_meets": [
+    0.7584369449378331,
+    0.5201465201465202
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.23226372262074998,
+    "lower_95": 0.08174996567162858,
+    "episodes": {
+     "True": 563,
+     "False": 273
+    },
+    "stocks_compared": 88,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.126951012265134,
+    "lower_95": -0.019059327130576297,
+    "episodes": {
+     "True": 116,
+     "False": 154
+    },
+    "stocks_compared": 29,
+    "verdict": "failed"
+   }
+  },
+  "adjusting-law | SSB | seed 20261221": {
+   "timing_read": {
+    "0.0": 287,
+    "0.5": 12,
+    "1.0": 1
+   },
+   "stocks": 300,
+   "episodes": 6473,
+   "below_low": 1012,
+   "below_low_stocks": 100,
+   "C1": {
+    "difference": 0.08747729901371208,
+    "lower_95": 0.02407311634187078,
+    "episodes": {
+     "True": 502,
+     "False": 354
+    },
+    "stocks_compared": 80,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.10449508695245258,
+    "lower_95": 0.028459410235377524,
+    "episodes": {
+     "True": 318,
+     "False": 251
+    },
+    "stocks_compared": 65,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 96,
+    "meets_level_fell": 104
+   },
+   "falls_short_meets": [
+    0.7242472266244057,
+    0.5249343832020997
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.20098190876017083,
+    "lower_95": 0.04418674011319766,
+    "episodes": {
+     "True": 631,
+     "False": 381
+    },
+    "stocks_compared": 100,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.18911670250513438,
+    "lower_95": 0.06886686843372732,
+    "episodes": {
+     "True": 135,
+     "False": 151
+    },
+    "stocks_compared": 31,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-law | SSB | seed 20261321": {
+   "timing_read": {
+    "0.0": 289,
+    "0.5": 9,
+    "1.0": 2
+   },
+   "stocks": 300,
+   "episodes": 6535,
+   "below_low": 730,
+   "below_low_stocks": 79,
+   "C1": {
+    "difference": 0.14592561234289342,
+    "lower_95": 0.06913061334426866,
+    "episodes": {
+     "True": 366,
+     "False": 216
+    },
+    "stocks_compared": 56,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.20417169438373298,
+    "lower_95": 0.10274558581817517,
+    "episodes": {
+     "True": 224,
+     "False": 143
+    },
+    "stocks_compared": 46,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 78,
+    "meets_level_fell": 67
+   },
+   "falls_short_meets": [
+    0.7550200803212851,
+    0.5
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.25674774641562337,
+    "lower_95": 0.08044534869449986,
+    "episodes": {
+     "True": 498,
+     "False": 232
+    },
+    "stocks_compared": 79,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.32306564839761703,
+    "lower_95": 0.20006168793615298,
+    "episodes": {
+     "True": 96,
+     "False": 85
+    },
+    "stocks_compared": 20,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-reset | TB | seed 20261021": {
+   "timing_read": {
+    "0.0": 201
+   },
+   "stocks": 201,
+   "episodes": 2396,
+   "below_low": 473,
+   "below_low_stocks": 154,
+   "C1": {
+    "difference": 0.36615384615384616,
+    "lower_95": 0.18879855465221318,
+    "episodes": {
+     "True": 42,
+     "False": 32
+    },
+    "stocks_compared": 17,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.29565217391304344,
+    "lower_95": 0.043859649122807,
+    "episodes": {
+     "True": 27,
+     "False": 18
+    },
+    "stocks_compared": 11,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 70,
+    "meets_level_fell": 23
+   },
+   "falls_short_meets": [
+    0.9449760765550239,
+    0.2727272727272727
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.6722513165916251,
+    "lower_95": 0.43237510723779804,
+    "episodes": {
+     "True": 418,
+     "False": 55
+    },
+    "stocks_compared": 154,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.2889761256208941,
+    "lower_95": 0.16594977912113462,
+    "episodes": {
+     "True": 73,
+     "False": 75
+    },
+    "stocks_compared": 29,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-reset | TB | seed 20261121": {
+   "timing_read": {
+    "0.0": 189
+   },
+   "stocks": 189,
+   "episodes": 2188,
+   "below_low": 493,
+   "below_low_stocks": 140,
+   "C1": {
+    "difference": 0.5737519970318995,
+    "lower_95": 0.4414806289457204,
+    "episodes": {
+     "True": 79,
+     "False": 54
+    },
+    "stocks_compared": 23,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.5674358141046474,
+    "lower_95": 0.4138915318744053,
+    "episodes": {
+     "True": 44,
+     "False": 25
+    },
+    "stocks_compared": 18,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 78,
+    "meets_level_fell": 26
+   },
+   "falls_short_meets": [
+    0.9373493975903614,
+    0.21794871794871795
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.7156453822404876,
+    "lower_95": 0.4497728428937848,
+    "episodes": {
+     "True": 415,
+     "False": 78
+    },
+    "stocks_compared": 140,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.19073954716510383,
+    "lower_95": 0.10658025727615218,
+    "episodes": {
+     "True": 114,
+     "False": 80
+    },
+    "stocks_compared": 42,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-reset | TB | seed 20261221": {
+   "timing_read": {
+    "0.0": 196,
+    "0.5": 1
+   },
+   "stocks": 197,
+   "episodes": 2463,
+   "below_low": 526,
+   "below_low_stocks": 147,
+   "C1": {
+    "difference": 0.3152069297401347,
+    "lower_95": 0.1788500678426051,
+    "episodes": {
+     "True": 90,
+     "False": 55
+    },
+    "stocks_compared": 25,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.4188034188034189,
+    "lower_95": 0.2654028436018957,
+    "episodes": {
+     "True": 45,
+     "False": 35
+    },
+    "stocks_compared": 20,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 77,
+    "meets_level_fell": 25
+   },
+   "falls_short_meets": [
+    0.9309576837416481,
+    0.3246753246753247
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.6064115199299168,
+    "lower_95": 0.3026545651329099,
+    "episodes": {
+     "True": 449,
+     "False": 77
+    },
+    "stocks_compared": 147,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.30904532611723506,
+    "lower_95": 0.18217776594530866,
+    "episodes": {
+     "True": 77,
+     "False": 68
+    },
+    "stocks_compared": 30,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-reset | TB | seed 20261321": {
+   "timing_read": {
+    "0.0": 179,
+    "0.5": 1
+   },
+   "stocks": 180,
+   "episodes": 2246,
+   "below_low": 442,
+   "below_low_stocks": 141,
+   "C1": {
+    "difference": 0.09722691917483939,
+    "lower_95": -0.17339312406576976,
+    "episodes": {
+     "True": 35,
+     "False": 29
+    },
+    "stocks_compared": 15,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": 0.29885057471264365,
+    "lower_95": -0.047058823529411764,
+    "episodes": {
+     "True": 16,
+     "False": 17
+    },
+    "stocks_compared": 10,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 58,
+    "meets_level_fell": 21
+   },
+   "falls_short_meets": [
+    0.9540816326530612,
+    0.36
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.5922994269340974,
+    "lower_95": 0.11862327729273396,
+    "episodes": {
+     "True": 392,
+     "False": 50
+    },
+    "stocks_compared": 141,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.40509347577260585,
+    "lower_95": 0.27443864821955094,
+    "episodes": {
+     "True": 71,
+     "False": 53
+    },
+    "stocks_compared": 28,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-reset | SSB | seed 20261021": {
+   "timing_read": {
+    "0.0": 201
+   },
+   "stocks": 201,
+   "episodes": 2396,
+   "below_low": 362,
+   "below_low_stocks": 127,
+   "C1": {
+    "difference": 0.27468230694037155,
+    "lower_95": 0.04074074074074076,
+    "episodes": {
+     "True": 22,
+     "False": 14
+    },
+    "stocks_compared": 9,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.2607758620689656,
+    "lower_95": 0.009756097560975622,
+    "episodes": {
+     "True": 17,
+     "False": 11
+    },
+    "stocks_compared": 8,
+    "verdict": "not testable"
+   },
+   "C2_discordant": {
+    "short_level_rose": 44,
+    "meets_level_fell": 14
+   },
+   "falls_short_meets": [
+    0.9512195121951219,
+    0.17647058823529413
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.7734874569601574,
+    "lower_95": 0.4498779991866612,
+    "episodes": {
+     "True": 328,
+     "False": 34
+    },
+    "stocks_compared": 127,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.24098867147270855,
+    "lower_95": 0.11527093596059115,
+    "episodes": {
+     "True": 61,
+     "False": 70
+    },
+    "stocks_compared": 25,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-reset | SSB | seed 20261121": {
+   "timing_read": {
+    "0.0": 189
+   },
+   "stocks": 189,
+   "episodes": 2188,
+   "below_low": 398,
+   "below_low_stocks": 122,
+   "C1": {
+    "difference": 0.5725811098945426,
+    "lower_95": 0.4613762193514369,
+    "episodes": {
+     "True": 66,
+     "False": 47
+    },
+    "stocks_compared": 20,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.7204610951008644,
+    "lower_95": 0.6255707762557078,
+    "episodes": {
+     "True": 36,
+     "False": 22
+    },
+    "stocks_compared": 13,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 57,
+    "meets_level_fell": 17
+   },
+   "falls_short_meets": [
+    0.9309309309309309,
+    0.2153846153846154
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.7152631988181323,
+    "lower_95": 0.4917440315841813,
+    "episodes": {
+     "True": 333,
+     "False": 65
+    },
+    "stocks_compared": 122,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.19548074588142064,
+    "lower_95": 0.0907715582450832,
+    "episodes": {
+     "True": 93,
+     "False": 60
+    },
+    "stocks_compared": 31,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-reset | SSB | seed 20261221": {
+   "timing_read": {
+    "0.0": 195,
+    "0.5": 2
+   },
+   "stocks": 197,
+   "episodes": 2463,
+   "below_low": 419,
+   "below_low_stocks": 129,
+   "C1": {
+    "difference": 0.24086021505376348,
+    "lower_95": 0.08568884932116624,
+    "episodes": {
+     "True": 58,
+     "False": 45
+    },
+    "stocks_compared": 23,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.4499999999999999,
+    "lower_95": 0.2071005917159763,
+    "episodes": {
+     "True": 24,
+     "False": 21
+    },
+    "stocks_compared": 15,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 43,
+    "meets_level_fell": 19
+   },
+   "falls_short_meets": [
+    0.9209039548022598,
+    0.3076923076923077
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.6118479221927497,
+    "lower_95": 0.3002727617342319,
+    "episodes": {
+     "True": 348,
+     "False": 65
+    },
+    "stocks_compared": 129,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.35582532601235417,
+    "lower_95": 0.2419131877246337,
+    "episodes": {
+     "True": 70,
+     "False": 68
+    },
+    "stocks_compared": 28,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-reset | SSB | seed 20261321": {
+   "timing_read": {
+    "0.0": 179,
+    "0.5": 1
+   },
+   "stocks": 180,
+   "episodes": 2246,
+   "below_low": 340,
+   "below_low_stocks": 120,
+   "C1": {
+    "difference": 0.17835909631391197,
+    "lower_95": 0.00881057268722467,
+    "episodes": {
+     "True": 28,
+     "False": 20
+    },
+    "stocks_compared": 10,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.29508196721311475,
+    "lower_95": 0.0,
+    "episodes": {
+     "True": 13,
+     "False": 11
+    },
+    "stocks_compared": 8,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 39,
+    "meets_level_fell": 14
+   },
+   "falls_short_meets": [
+    0.9506578947368421,
+    0.3611111111111111
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.598152055758041,
+    "lower_95": 0.07612095933263818,
+    "episodes": {
+     "True": 302,
+     "False": 36
+    },
+    "stocks_compared": 120,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.3573506760225911,
+    "lower_95": 0.2064816726136062,
+    "episodes": {
+     "True": 65,
+     "False": 50
+    },
+    "stocks_compared": 25,
+    "verdict": "passed"
+   }
+  },
+  "mq5-state | TB | seed 20261021": {
+   "timing_read": {
+    "0.0": 288,
+    "0.5": 12
+   },
+   "stocks": 300,
+   "episodes": 6563,
+   "below_low": 806,
+   "below_low_stocks": 77,
+   "C1": {
+    "difference": -0.018994795505121627,
+    "lower_95": -0.06554390007333218,
+    "episodes": {
+     "True": 440,
+     "False": 243
+    },
+    "stocks_compared": 62,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.04365548150886909,
+    "lower_95": -0.09788751168242196,
+    "episodes": {
+     "True": 339,
+     "False": 196
+    },
+    "stocks_compared": 57,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 78,
+    "meets_level_fell": 139
+   },
+   "falls_short_meets": [
+    0.8209764918625678,
+    0.7786561264822134
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.05081189640361666,
+    "lower_95": -0.057339748473702094,
+    "episodes": {
+     "True": 553,
+     "False": 253
+    },
+    "stocks_compared": 77,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.14334635206002774,
+    "lower_95": -0.0157238285215342,
+    "episodes": {
+     "True": 121,
+     "False": 77
+    },
+    "stocks_compared": 21,
+    "verdict": "failed"
+   }
+  },
+  "mq5-state | SSB | seed 20261021": {
+   "timing_read": {
+    "0.0": 266,
+    "0.5": 22,
+    "1.0": 12
+   },
+   "stocks": 300,
+   "episodes": 6235,
+   "below_low": 564,
+   "below_low_stocks": 66,
+   "C1": {
+    "difference": 0.0033011440100326576,
+    "lower_95": -0.07589557907667434,
+    "episodes": {
+     "True": 288,
+     "False": 144
+    },
+    "stocks_compared": 38,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": 0.00968251391123378,
+    "lower_95": -0.08947553885006164,
+    "episodes": {
+     "True": 93,
+     "False": 55
+    },
+    "stocks_compared": 22,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 23,
+    "meets_level_fell": 28
+   },
+   "falls_short_meets": [
+    0.8199513381995134,
+    0.6666666666666666
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.15305898277601268,
+    "lower_95": -0.06588446010021377,
+    "episodes": {
+     "True": 411,
+     "False": 153
+    },
+    "stocks_compared": 66,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.22130648972410072,
+    "lower_95": 0.07988443564982768,
+    "episodes": {
+     "True": 94,
+     "False": 76
+    },
+    "stocks_compared": 20,
+    "verdict": "passed"
+   }
+  },
+  "relaxing | TB | seed 20261021": {
+   "timing_read": {
+    "0.0": 142,
+    "0.5": 3
+   },
+   "stocks": 145,
+   "episodes": 1294,
+   "below_low": 326,
+   "below_low_stocks": 100,
+   "C1": {
+    "difference": 0.5498412698412698,
+    "lower_95": 0.15789473684210528,
+    "episodes": {
+     "True": 27,
+     "False": 17
+    },
+    "stocks_compared": 8,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.6349206349206349,
+    "lower_95": 0.14285714285714288,
+    "episodes": {
+     "True": 15,
+     "False": 11
+    },
+    "stocks_compared": 6,
+    "verdict": "not testable"
+   },
+   "C2_discordant": {
+    "short_level_rose": 71,
+    "meets_level_fell": 4
+   },
+   "falls_short_meets": [
+    0.9803921568627451,
+    0.35
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.5780326801640517,
+    "lower_95": 0.0,
+    "episodes": {
+     "True": 306,
+     "False": 20
+    },
+    "stocks_compared": 100,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.5020396680264454,
+    "lower_95": 0.2608695652173913,
+    "episodes": {
+     "True": 21,
+     "False": 39
+    },
+    "stocks_compared": 11,
+    "verdict": "passed"
+   }
+  },
+  "relaxing | SSB | seed 20261021": {
+   "timing_read": {
+    "0.0": 144,
+    "0.5": 1
+   },
+   "stocks": 145,
+   "episodes": 1291,
+   "below_low": 324,
+   "below_low_stocks": 99,
+   "C1": {
+    "difference": 0.48656178302195996,
+    "lower_95": 0.0,
+    "episodes": {
+     "True": 25,
+     "False": 18
+    },
+    "stocks_compared": 8,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": 0.5925925925925927,
+    "lower_95": 0.0,
+    "episodes": {
+     "True": 13,
+     "False": 9
+    },
+    "stocks_compared": 5,
+    "verdict": "not testable"
+   },
+   "C2_discordant": {
+    "short_level_rose": 70,
+    "meets_level_fell": 4
+   },
+   "falls_short_meets": [
+    0.9801980198019802,
+    0.38095238095238093
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.5489615597319895,
+    "lower_95": 0.0,
+    "episodes": {
+     "True": 303,
+     "False": 21
+    },
+    "stocks_compared": 99,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": 0.5500392978779146,
+    "lower_95": 0.32728451069345427,
+    "episodes": {
+     "True": 25,
+     "False": 40
+    },
+    "stocks_compared": 12,
+    "verdict": "passed"
+   }
+  },
+  "trend | TB | seed 20261021": {
+   "timing_read": {
+    "0.0": 271,
+    "0.5": 25,
+    "1.0": 4
+   },
+   "stocks": 300,
+   "episodes": 4201,
+   "below_low": 957,
+   "below_low_stocks": 210,
+   "C1": {
+    "difference": -0.013486088393640936,
+    "lower_95": -0.08686729064372943,
+    "episodes": {
+     "True": 350,
+     "False": 301
+    },
+    "stocks_compared": 115,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.1719927469931629,
+    "lower_95": -0.24638136205218364,
+    "episodes": {
+     "True": 157,
+     "False": 177
+    },
+    "stocks_compared": 74,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 159,
+    "meets_level_fell": 38
+   },
+   "falls_short_meets": [
+    0.4262295081967213,
+    0.34068627450980393
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.08792400032883314,
+    "lower_95": -0.07371146358600039,
+    "episodes": {
+     "True": 549,
+     "False": 408
+    },
+    "stocks_compared": 210,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": -0.1529118236966216,
+    "lower_95": -0.21568621917736178,
+    "episodes": {
+     "True": 586,
+     "False": 605
+    },
+    "stocks_compared": 170,
+    "verdict": "failed"
+   }
+  },
+  "trend | TB | seed 20261121": {
+   "timing_read": {
+    "0.0": 267,
+    "0.5": 31,
+    "1.0": 2
+   },
+   "stocks": 300,
+   "episodes": 4145,
+   "below_low": 889,
+   "below_low_stocks": 206,
+   "C1": {
+    "difference": -0.08637365031346217,
+    "lower_95": -0.14112625785086916,
+    "episodes": {
+     "True": 313,
+     "False": 301
+    },
+    "stocks_compared": 111,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.16924659486658328,
+    "lower_95": -0.24483420359709024,
+    "episodes": {
+     "True": 142,
+     "False": 173
+    },
+    "stocks_compared": 74,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 143,
+    "meets_level_fell": 33
+   },
+   "falls_short_meets": [
+    0.4048582995951417,
+    0.36455696202531646
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.05023882705584136,
+    "lower_95": -0.10345311858535035,
+    "episodes": {
+     "True": 494,
+     "False": 395
+    },
+    "stocks_compared": 206,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": -0.17412770706957803,
+    "lower_95": -0.24266278727912327,
+    "episodes": {
+     "True": 544,
+     "False": 622
+    },
+    "stocks_compared": 161,
+    "verdict": "failed"
+   }
+  },
+  "trend | SSB | seed 20261021": {
+   "timing_read": {
+    "0.0": 283,
+    "0.5": 5,
+    "1.0": 12
+   },
+   "stocks": 300,
+   "episodes": 2274,
+   "below_low": 259,
+   "below_low_stocks": 57,
+   "C1": {
+    "difference": -0.07271207689093188,
+    "lower_95": -0.22349435382685073,
+    "episodes": {
+     "True": 80,
+     "False": 89
+    },
+    "stocks_compared": 34,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.1865203761755486,
+    "lower_95": -0.3781512605042016,
+    "episodes": {
+     "True": 18,
+     "False": 32
+    },
+    "stocks_compared": 14,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 22,
+    "meets_level_fell": 4
+   },
+   "falls_short_meets": [
+    0.4108527131782946,
+    0.3076923076923077
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.09906786221132755,
+    "lower_95": -0.1591107343306267,
+    "episodes": {
+     "True": 129,
+     "False": 130
+    },
+    "stocks_compared": 57,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": -0.2452235976879694,
+    "lower_95": -0.35766784829194004,
+    "episodes": {
+     "True": 187,
+     "False": 213
+    },
+    "stocks_compared": 49,
+    "verdict": "failed"
+   }
+  },
+  "trend | SSB | seed 20261121": {
+   "timing_read": {
+    "0.0": 289,
+    "0.5": 4,
+    "1.0": 7
+   },
+   "stocks": 300,
+   "episodes": 2367,
+   "below_low": 309,
+   "below_low_stocks": 72,
+   "C1": {
+    "difference": 0.010648641854745485,
+    "lower_95": -0.10085054678007291,
+    "episodes": {
+     "True": 109,
+     "False": 100
+    },
+    "stocks_compared": 38,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": -0.019024970273483946,
+    "lower_95": -0.11030478955007257,
+    "episodes": {
+     "True": 32,
+     "False": 34
+    },
+    "stocks_compared": 17,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 31,
+    "meets_level_fell": 16
+   },
+   "falls_short_meets": [
+    0.4785276073619632,
+    0.3424657534246575
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.13981820622963073,
+    "lower_95": -0.0707936181674891,
+    "episodes": {
+     "True": 163,
+     "False": 146
+    },
+    "stocks_compared": 72,
+    "verdict": "failed"
+   },
+   "C3_reported": {
+    "difference": -0.08256713665395218,
+    "lower_95": -0.18302163635093277,
+    "episodes": {
+     "True": 209,
+     "False": 212
+    },
+    "stocks_compared": 57,
+    "verdict": "failed"
+   }
+  },
+  "age | TB | seed 20261021": {
+   "timing_read": {
+    "0.0": 291,
+    "0.5": 6,
+    "1.0": 3
+   },
+   "stocks": 300,
+   "episodes": 5821,
+   "below_low": 1941,
+   "below_low_stocks": 183,
+   "C1": {
+    "difference": 0.1752523427898584,
+    "lower_95": 0.1152891132919961,
+    "episodes": {
+     "True": 860,
+     "False": 536
+    },
+    "stocks_compared": 134,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.13058587876581376,
+    "lower_95": 0.060197249612833605,
+    "episodes": {
+     "True": 547,
+     "False": 314
+    },
+    "stocks_compared": 101,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 149,
+    "meets_level_fell": 136
+   },
+   "falls_short_meets": [
+    0.8178264268960125,
+    0.38368580060422963
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.4356454569065582,
+    "lower_95": 0.16504477293884723,
+    "episodes": {
+     "True": 1279,
+     "False": 662
+    },
+    "stocks_compared": 183,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.2746641874209321,
+    "lower_95": 0.1880416831521408,
+    "episodes": {
+     "True": 175,
+     "False": 181
+    },
+    "stocks_compared": 46,
+    "verdict": "passed"
+   }
+  },
+  "age | SSB | seed 20261021": {
+   "timing_read": {
+    "0.0": 293,
+    "0.5": 4
+   },
+   "stocks": 297,
+   "episodes": 5603,
+   "below_low": 2115,
+   "below_low_stocks": 167,
+   "C1": {
+    "difference": 0.09398884558542331,
+    "lower_95": 0.05166966735513062,
+    "episodes": {
+     "True": 927,
+     "False": 818
+    },
+    "stocks_compared": 139,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.006334743449453272,
+    "lower_95": -0.043873413115228306,
+    "episodes": {
+     "True": 603,
+     "False": 532
+    },
+    "stocks_compared": 114,
+    "verdict": "failed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 200,
+    "meets_level_fell": 275
+   },
+   "falls_short_meets": [
+    0.6873362445414847,
+    0.44536082474226807
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.23532691163306535,
+    "lower_95": 0.07597041544492317,
+    "episodes": {
+     "True": 1145,
+     "False": 970
+    },
+    "stocks_compared": 167,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.06674921313867835,
+    "lower_95": -0.04342158687533415,
+    "episodes": {
+     "True": 221,
+     "False": 151
+    },
+    "stocks_compared": 44,
+    "verdict": "failed"
+   }
+  },
+  "adjusting-law, mistimed f = 0.5 | TB | timing read": {
+   "timing_read": {
+    "0.0": 85,
+    "0.5": 204,
+    "1.0": 11
+   },
+   "stocks": 300,
+   "episodes": 6565,
+   "below_low": 1137,
+   "below_low_stocks": 106,
+   "C1": {
+    "difference": 0.13422476242038422,
+    "lower_95": 0.07109318617406514,
+    "episodes": {
+     "True": 529,
+     "False": 383
+    },
+    "stocks_compared": 84,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.13567513965633124,
+    "lower_95": 0.06537527801810404,
+    "episodes": {
+     "True": 420,
+     "False": 311
+    },
+    "stocks_compared": 82,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 141,
+    "meets_level_fell": 205
+   },
+   "falls_short_meets": [
+    0.729312762973352,
+    0.5330188679245284
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.20262804330146736,
+    "lower_95": 0.06636216061756235,
+    "episodes": {
+     "True": 713,
+     "False": 424
+    },
+    "stocks_compared": 106,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.004044544234634858,
+    "lower_95": -0.10633889865770645,
+    "episodes": {
+     "True": 152,
+     "False": 117
+    },
+    "stocks_compared": 33,
+    "verdict": "failed"
+   }
+  },
+  "adjusting-law, mistimed f = 0.5 | TB | read at f = 0": {
+   "timing_read": {
+    "0.0": 300
+   },
+   "stocks": 300,
+   "episodes": 6565,
+   "below_low": 1278,
+   "below_low_stocks": 112,
+   "C1": {
+    "difference": 0.13464769323403625,
+    "lower_95": 0.07898914715896416,
+    "episodes": {
+     "True": 562,
+     "False": 479
+    },
+    "stocks_compared": 90,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.11617608674548113,
+    "lower_95": 0.05798587747285267,
+    "episodes": {
+     "True": 446,
+     "False": 370
+    },
+    "stocks_compared": 86,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 131,
+    "meets_level_fell": 282
+   },
+   "falls_short_meets": [
+    0.7159841479524438,
+    0.5623800383877159
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.15962551371902992,
+    "lower_95": 0.07442120280037232,
+    "episodes": {
+     "True": 757,
+     "False": 521
+    },
+    "stocks_compared": 112,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.06394650349167262,
+    "lower_95": -0.0449465469454485,
+    "episodes": {
+     "True": 155,
+     "False": 90
+    },
+    "stocks_compared": 30,
+    "verdict": "failed"
+   }
+  },
+  "adjusting-law, mistimed f = 0.5 | SSB | timing read": {
+   "timing_read": {
+    "0.0": 48,
+    "0.5": 157,
+    "1.0": 95
+   },
+   "stocks": 300,
+   "episodes": 6477,
+   "below_low": 957,
+   "below_low_stocks": 88,
+   "C1": {
+    "difference": 0.17502300660540496,
+    "lower_95": 0.11609695146694698,
+    "episodes": {
+     "True": 534,
+     "False": 304
+    },
+    "stocks_compared": 72,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.185753417691892,
+    "lower_95": 0.10880655326343115,
+    "episodes": {
+     "True": 304,
+     "False": 159
+    },
+    "stocks_compared": 56,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 76,
+    "meets_level_fell": 85
+   },
+   "falls_short_meets": [
+    0.7316692667706708,
+    0.47151898734177217
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.26023023747473495,
+    "lower_95": 0.11859757716482863,
+    "episodes": {
+     "True": 641,
+     "False": 316
+    },
+    "stocks_compared": 88,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.20936966731779272,
+    "lower_95": 0.0589455463603396,
+    "episodes": {
+     "True": 87,
+     "False": 87
+    },
+    "stocks_compared": 23,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-law, mistimed f = 0.5 | SSB | read at f = 0": {
+   "timing_read": {
+    "0.0": 300
+   },
+   "stocks": 300,
+   "episodes": 5997,
+   "below_low": 870,
+   "below_low_stocks": 78,
+   "C1": {
+    "difference": 0.1312414810118166,
+    "lower_95": 0.06693303657067547,
+    "episodes": {
+     "True": 466,
+     "False": 263
+    },
+    "stocks_compared": 60,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.14703722821361448,
+    "lower_95": 0.047506803876456206,
+    "episodes": {
+     "True": 253,
+     "False": 112
+    },
+    "stocks_compared": 43,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 32,
+    "meets_level_fell": 55
+   },
+   "falls_short_meets": [
+    0.7320819112627986,
+    0.4471830985915493
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.2829579068749453,
+    "lower_95": 0.09880101553501294,
+    "episodes": {
+     "True": 586,
+     "False": 284
+    },
+    "stocks_compared": 78,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.17977454703946383,
+    "lower_95": 0.007901624205381725,
+    "episodes": {
+     "True": 98,
+     "False": 69
+    },
+    "stocks_compared": 23,
+    "verdict": "passed"
+   }
+  },
+  "adjusting-law, mistimed f = 1.0 | TB | timing read": {
+   "timing_read": {
+    "0.5": 85,
+    "1.0": 215
+   },
+   "stocks": 300,
+   "episodes": 6565,
+   "below_low": 1139,
+   "below_low_stocks": 106,
+   "C1": {
+    "difference": 0.13492452182149817,
+    "lower_95": 0.0716422459377413,
+    "episodes": {
+     "True": 523,
+     "False": 382
+    },
+    "stocks_compared": 84,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.13609235926931582,
+    "lower_95": 0.06560746801793138,
+    "episodes": {
+     "True": 415,
+     "False": 310
+    },
+    "stocks_compared": 82,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 139,
+    "meets_level_fell": 205
+   },
+   "falls_short_meets": [
+    0.7304469273743017,
+    0.5319148936170213
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.20475397236984055,
+    "lower_95": 0.06659313104311908,
+    "episodes": {
+     "True": 716,
+     "False": 423
+    },
+    "stocks_compared": 106,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.004044544234634858,
+    "lower_95": -0.10633889865770645,
+    "episodes": {
+     "True": 152,
+     "False": 117
+    },
+    "stocks_compared": 33,
+    "verdict": "failed"
+   }
+  },
+  "adjusting-law, mistimed f = 1.0 | TB | read at f = 0": {
+   "timing_read": {
+    "0.0": 225
+   },
+   "stocks": 225,
+   "episodes": 4859,
+   "below_low": 589,
+   "below_low_stocks": 69,
+   "C1": {
+    "difference": 0.20698167173156387,
+    "lower_95": 0.14929636964312595,
+    "episodes": {
+     "True": 276,
+     "False": 178
+    },
+    "stocks_compared": 52,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.18938266840136203,
+    "lower_95": 0.12523756238787945,
+    "episodes": {
+     "True": 188,
+     "False": 118
+    },
+    "stocks_compared": 45,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 57,
+    "meets_level_fell": 80
+   },
+   "falls_short_meets": [
+    0.7025641025641025,
+    0.4271356783919598
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.27529660399695705,
+    "lower_95": 0.13334819132964568,
+    "episodes": {
+     "True": 390,
+     "False": 199
+    },
+    "stocks_compared": 69,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.14248974343273527,
+    "lower_95": -0.00013344008540165065,
+    "episodes": {
+     "True": 74,
+     "False": 64
+    },
+    "stocks_compared": 17,
+    "verdict": "failed"
+   }
+  },
+  "adjusting-law, mistimed f = 1.0 | SSB | timing read": {
+   "timing_read": {
+    "0.0": 2,
+    "0.5": 3,
+    "1.0": 295
+   },
+   "stocks": 300,
+   "episodes": 6521,
+   "below_low": 1065,
+   "below_low_stocks": 99,
+   "C1": {
+    "difference": 0.16815228855977638,
+    "lower_95": 0.10215623231779475,
+    "episodes": {
+     "True": 557,
+     "False": 328
+    },
+    "stocks_compared": 79,
+    "verdict": "passed"
+   },
+   "C2": {
+    "difference": 0.19716923710076026,
+    "lower_95": 0.12114345248076616,
+    "episodes": {
+     "True": 363,
+     "False": 206
+    },
+    "stocks_compared": 68,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 104,
+    "meets_level_fell": 128
+   },
+   "falls_short_meets": [
+    0.7244318181818182,
+    0.46537396121883656
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.2592452117433149,
+    "lower_95": 0.10614560023124474,
+    "episodes": {
+     "True": 704,
+     "False": 361
+    },
+    "stocks_compared": 99,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": 0.035906191106547414,
+    "lower_95": -0.09171649696187593,
+    "episodes": {
+     "True": 150,
+     "False": 113
+    },
+    "stocks_compared": 31,
+    "verdict": "failed"
+   }
+  },
+  "adjusting-law, mistimed f = 1.0 | SSB | read at f = 0": {
+   "timing_read": {
+    "0.0": 300
+   },
+   "stocks": 300,
+   "episodes": 3039,
+   "below_low": 598,
+   "below_low_stocks": 42,
+   "C1": {
+    "difference": 0.06797431823939513,
+    "lower_95": -0.005997097753703637,
+    "episodes": {
+     "True": 304,
+     "False": 206
+    },
+    "stocks_compared": 35,
+    "verdict": "failed"
+   },
+   "C2": {
+    "difference": 0.145564185664897,
+    "lower_95": 0.012022724744203081,
+    "episodes": {
+     "True": 116,
+     "False": 53
+    },
+    "stocks_compared": 21,
+    "verdict": "passed"
+   },
+   "C2_discordant": {
+    "short_level_rose": 14,
+    "meets_level_fell": 21
+   },
+   "falls_short_meets": [
+    0.6569148936170213,
+    0.4864864864864865
+   ],
+   "C1_pooled_level_strata": {
+    "difference": 0.1756465532791534,
+    "lower_95": 0.004686809482477576,
+    "episodes": {
+     "True": 376,
+     "False": 222
+    },
+    "stocks_compared": 42,
+    "verdict": "passed"
+   },
+   "C3_reported": {
+    "difference": -0.009650815932619761,
+    "lower_95": -0.4032258064516129,
+    "episodes": {
+     "True": 26,
+     "False": 20
+    },
+    "stocks_compared": 8,
+    "verdict": "failed"
+   }
+  }
+ },
+ "pass_rates": {
+  "level | TB": {
+   "C1 failed": 4,
+   "C2 failed": 3,
+   "C2 not testable": 1
+  },
+  "level | SSB": {
+   "C1 failed": 4,
+   "C2 failed": 3,
+   "C2 not testable": 1
+  },
+  "level-law | TB": {
+   "C1 failed": 4,
+   "C2 failed": 3,
+   "C2 not testable": 1
+  },
+  "level-law | SSB": {
+   "C1 failed": 4,
+   "C2 failed": 4
+  },
+  "adjusting-law | TB": {
+   "C1 passed": 4,
+   "C2 passed": 4
+  },
+  "adjusting-law | SSB": {
+   "C1 passed": 4,
+   "C2 passed": 4
+  },
+  "adjusting-reset | TB": {
+   "C1 failed": 1,
+   "C1 passed": 3,
+   "C2 failed": 1,
+   "C2 passed": 3
+  },
+  "adjusting-reset | SSB": {
+   "C1 passed": 4,
+   "C2 failed": 1,
+   "C2 not testable": 1,
+   "C2 passed": 2
+  },
+  "mq5-state | TB": {
+   "C1 failed": 1,
+   "C2 failed": 1
+  },
+  "mq5-state | SSB": {
+   "C1 failed": 1,
+   "C2 failed": 1
+  },
+  "relaxing | TB": {
+   "C1 passed": 1,
+   "C2 not testable": 1
+  },
+  "relaxing | SSB": {
+   "C1 failed": 1,
+   "C2 not testable": 1
+  },
+  "trend | TB": {
+   "C1 failed": 2,
+   "C2 failed": 2
+  },
+  "trend | SSB": {
+   "C1 failed": 2,
+   "C2 failed": 2
+  },
+  "age | TB": {
+   "C1 passed": 1,
+   "C2 passed": 1
+  },
+  "age | SSB": {
+   "C1 passed": 1,
+   "C2 failed": 1
+  }
+ }
+}
