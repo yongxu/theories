@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-324 registered results: 304 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 812 curated edges join 277 results to the results they draw on.
+325 registered results: 305 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 817 curated edges join 278 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -68,6 +68,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [counting-standing-and-dependence][] ← <a id="counting-standing-and-dependence--whole-law-of-counting"></a>[whole-law-of-counting][] · <a id="counting-standing-and-dependence--counting-under-enclosure"></a>[counting-under-enclosure][] · <a id="counting-standing-and-dependence--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="counting-standing-and-dependence--map-of-premises"></a>[map-of-premises][] · <a id="counting-standing-and-dependence--laws-of-one-step"></a>[laws-of-one-step][]
 - [counting-under-enclosure][] ← <a id="counting-under-enclosure--whole-law-of-counting"></a>[whole-law-of-counting][] · <a id="counting-under-enclosure--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="counting-under-enclosure--map-of-premises"></a>[map-of-premises][] · <a id="counting-under-enclosure--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="counting-under-enclosure--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="counting-under-enclosure--laws-of-one-step"></a>[laws-of-one-step][]
 - [counts-exist-where-decided][] ← <a id="counts-exist-where-decided--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][]
+- [coupled-regimes][] ← <a id="coupled-regimes--margin-of-a-regime"></a>[margin-of-a-regime][] · <a id="coupled-regimes--regime-in-any-amounts"></a>[regime-in-any-amounts][] · <a id="coupled-regimes--threshold-in-the-state-plane"></a>[threshold-in-the-state-plane][] · <a id="coupled-regimes--where-a-run-of-a-regime-comes-to-rest"></a>[where-a-run-of-a-regime-comes-to-rest][] · <a id="coupled-regimes--the-last-change-of-a-run"></a>[the-last-change-of-a-run][]
 - [derived-extent-limits][] ← <a id="derived-extent-limits--continuing-self-fed-from-beyond"></a>[continuing-self-fed-from-beyond][] · <a id="derived-extent-limits--own-count-misses-joint-excess"></a>[own-count-misses-joint-excess][] · <a id="derived-extent-limits--living-significance-on-held-lives"></a>[living-significance-on-held-lives][] · <a id="derived-extent-limits--becoming-stepwise-reading"></a>[becoming-stepwise-reading][]
 - [derived-history-law-exactness][] ← <a id="derived-history-law-exactness--finite-trace-transport"></a>[finite-trace-transport][]
 - [determinacy-up-to-likeness][] ← <a id="determinacy-up-to-likeness--configurations-alike-by-relation"></a>[configurations-alike-by-relation][] · <a id="determinacy-up-to-likeness--experiment-needs-return"></a>[experiment-needs-return][] · <a id="determinacy-up-to-likeness--projection-carrying-a-law"></a>[projection-carrying-a-law][] · <a id="determinacy-up-to-likeness--joint-difference-making"></a>[joint-difference-making][]
@@ -351,6 +352,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [counting-standing-and-dependence]: theories/becoming/results/records/counting-standing-and-dependence.md
 [counting-under-enclosure]: theories/becoming/results/records/counting-under-enclosure.md
 [counts-exist-where-decided]: theories/becoming/results/records/counts-exist-where-decided.md
+[coupled-regimes]: theories/becoming/results/records/coupled-regimes.md
 [derivation-soundness]: theories/becoming/results/records/derivation-soundness.md
 [derived-extent-limits]: theories/becoming/results/records/derived-extent-limits.md
 [derived-history-law-exactness]: theories/becoming/results/records/derived-history-law-exactness.md

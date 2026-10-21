@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 287 | 12,053 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 287 | 12,097 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 746 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |

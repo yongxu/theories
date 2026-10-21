@@ -48,7 +48,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; each series' timing read from its assessment before a balance is read off it; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; coupled conditions; an independent review.
+Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; each series' timing read from its assessment before a balance is read off it; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; webs of conditions; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -64,8 +64,9 @@ Harvesting theory: depensation and critical depensation, the fold of the harvest
 - related, not a proved adapter: [four-cases-of-a-part](four-cases-of-a-part.md). The margin law compares levels with the rest's exchanges held as they were; this record reads the margin with the condition's own giving responding to its level, where measurement can test it.
 - related, not a proved adapter: [own-count-misses-joint-excess](own-count-misses-joint-excess.md). Own draws within what is given can jointly exceed it; Peaked shows two draws each held alone that together end the condition, with giving read off the level.
 - related, not a proved adapter: [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md). Giving that adjusts: these laws on ending and holding hold over any law of what is left and of the recent giving, and every rest at or above the draw is the regime's where the adjustment rests where the regime does.
+- related, not a proved adapter: [coupled-regimes](coupled-regimes.md). Two conditions each giving from what is left of both: under mutual support within a band a condition's point of no return is a least level that does not rise as its partner rises; a dependent ends after its partner; the regime is the uncoupled case.
 
-**Used by:** [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md)
+**Used by:** [coupled-regimes](coupled-regimes.md) · [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -82,6 +83,7 @@ Harvesting theory: depensation and critical depensation, the fold of the harvest
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json) | — |
 
 Aliases: `margin of a regime`, `一个体制的余量`, `point of no return under a standing draw`, `the need is the regime's`, `harms super-additive`, `Becoming.RegimeMargin.ends_iff_below`, `Becoming.RegimeMargin.beyond_draw_iff`, `Becoming.RegimeMargin.harms_superadditive`
 
@@ -94,6 +96,7 @@ Aliases: `margin of a regime`, `一个体制的余量`, `point of no return unde
 - 21 October 2026: MQ5 (study section 280), a frozen field test on 69 assessed stocks with spawning biomass no analysis had read, of a state with a lag (giving also reading last year's escapement, equivalently moving toward the draw) and of the draw read as a law of the stock: the lag is part of the state, with it nothing more is needed in the median stock, and it accounts for persistence's ten-year win, though damping alone does as well; the draw's response to the stock is not detected once the catch's reversion to its own level is held, and the draw's law does not account for that win; the scope and the next step are revised.
 - 21 October 2026: why MQ5's D1 and D2 failed, asked after the run (post hoc, study section 280): half the test stocks are New Zealand's, whose series report the level after part of the year's catch, which turns D1's same-year form negative; outside them the catch follows the stock as in development. D2's gap belonged to the giving, which the draw's law corrected only by damping. The scope item on the draw and the next step are revised.
 - 21 October 2026, RM2: this record's laws on ending and holding hold over every adjustment of giving (RegimeMargin.Adjusted; record regime-point-under-adjusting-giving, study section 299), the regime's step the case. They keep their statements, each proof now one line; the regime forms of lemmas no law reads any more were removed, and this record cites their general forms (4 law citations moved, the proof references with them).
+- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 303); its next delta now says what stays open. Its laws are unchanged.
 
 </details>
 

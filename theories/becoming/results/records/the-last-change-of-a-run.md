@@ -59,7 +59,7 @@ The record when-the-runs-of-a-process-settle left "Whether the limited principle
 - related, not a proved adapter: [what-a-method-comes-to-say-in-the-limit](what-a-method-comes-to-say-in-the-limit.md). Settling, decided outright here exactly under the limited principle of omniscience, is verified in the limit with decidable configurations and refuted in the limit by no method under Markov's principle.
 - related, not a proved adapter: [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md). For a law's run, a quantity marking its changes and bounded along it decides settling with no omniscience.
 
-**Used by:** [threshold-in-the-state-plane](threshold-in-the-state-plane.md) · [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md)
+**Used by:** [coupled-regimes](coupled-regimes.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md) · [where-a-run-of-a-regime-comes-to-rest](where-a-run-of-a-regime-comes-to-rest.md)
 
 **Law family:** Settling (lead: [when-the-runs-of-a-process-settle](when-the-runs-of-a-process-settle.md)). Whether a run settles is whether it is decided that it changes again. The members calibrate settling three ways, and the three differ: that no run keeps changing does not give settling, already LPO for two configurations (the lead); in a world a list holds, settling wherever no reachable change can be undone is exactly LPO (the-last-change-of-a-run); every schedule settling is exactly Σ⁰₂ excluded middle (how-often-couplings-act). Members: [when-the-runs-of-a-process-settle](when-the-runs-of-a-process-settle.md) · [how-often-couplings-act](how-often-couplings-act.md).
 

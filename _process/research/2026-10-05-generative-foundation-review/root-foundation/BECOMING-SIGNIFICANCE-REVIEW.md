@@ -1064,3 +1064,24 @@ Evidence: the prior forms from memory, not reread; Lean in the record's receipts
 Boundary: AI check, one session; discrete steps remain; the regime case H + y and a computed threshold over the reals are not stated; coupled conditions and a further lag are not stated
 Integration: chapter §2.3, thesis T2's standing, the record table
 ```
+
+<a id="coupled-check"></a>
+## A check: coupled regimes (21 October 2026, RM6)
+
+An AI check (one session, 21 October), made while the Lean was written. It asks what is known of two conditions each giving from what is left of both, and what the spine's form adds. **Verdict: the structure is known. Mutual support makes the coupled step cooperative, so it keeps the order of states and the states that go extinct are down-closed. In obligate mutualism the boundary between extinction and persistence is a curve along which each needs less as the other has more, and the loss of a partner brings coextinction of its dependents. Competition keeps a different order, and planar cooperative maps without regularity conditions can cycle. The spine states these exactly under the draw: the threshold for each partner's level decided by a finite search within a band, the drain of a dependent counted, the uncoupled case the regime itself, and a witness for each premise that cannot be dropped.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Cooperative (monotone) systems keep the order of states; the extinction set is down-closed and the boundary unordered | Smith, *Monotone Dynamical Systems* (1995); Hirsch and Smith 2005 (from memory) | `RegimeMargin.Coupled.step_mono`, `Coupled.ends_of_below`; in whole numbers within a band, `Coupled.ends_iff_below` and `Coupled.threshold_falls` |
+| Obligate mutualism: a threshold curve separating extinction from persistence, each partner needing less as the other has more | Dean, "A simple model of mutualism", *American Naturalist* 121 (1983) (from memory) | `Coupled.threshold_falls`; `Coupled.MutualActivation.saves` shows the fall can be strict |
+| Coextinction: dependents lost with their partner | Koh et al., "Species coextinctions and the biodiversity crisis", *Science* 305 (2004) (from memory) | `Coupled.ends_after`, `Coupled.ends_of_partner`, `Coupled.ends_together`, with the count of steps |
+| Planar competitive maps keep the order with one coordinate reversed; planar cooperative maps are eventually monotone only under regularity conditions | Smith 1998 (from memory) | `Coupled.MutualInhibition.breaks_order` (the product order fails under inhibition); `Coupled.Relay.cycles` (a cooperative coupled step, not one-to-one, whose bounded run cycles) |
+
+```text
+Result(s): new record coupled-regimes (RM6, new laws of Becoming.RegimeMargin)
+Delta: under mutual support the coupled step keeps the order of states and ending is down-closed; within a band in whole numbers a run rests and each condition's point of no return is a least level falling as its partner rises; a dependent drains by its draw once its partner has nothing left; inhibition breaks the order, and beyond a band mutual support can sustain a cycle
+Supplied premises / correspondence: discrete steps; two conditions; draws taken first; each giving a law of what is left of both; mutual support, a band, dependence, as each law states. Correspondence: Smith 1995, 1998; Hirsch and Smith 2005; Dean 1983; Koh et al. 2004
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; thresholds beyond a band, more than two conditions, coupled conditions with a recent giving, the reals and continuous time are not stated; whether measured conditions are coupled by mutual support is untested
+Integration: chapter §2.3, theses T1's and T2's standing, the record table
+```

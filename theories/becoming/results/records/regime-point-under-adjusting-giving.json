@@ -103,8 +103,8 @@
       "kind": "scope"
     },
     {
-      "en": "The threshold in the plane for adjustments that do not rise in both arguments: record threshold-in-the-state-plane states it, a falling curve, for those that do within a band; a state with a further lag; coupled conditions.",
-      "zh": "不在两个变元上皆升的调整在平面上的阈值：记录 threshold-in-the-state-plane 对带内皆升者陈述它是一条下降曲线；带再一个滞后的状态；相互耦合的条件。",
+      "en": "The threshold in the plane for adjustments that do not rise in both arguments: record threshold-in-the-state-plane states it, a falling curve, for those that do within a band; a state with a further lag; coupled adjusted conditions.",
+      "zh": "不在两个变元上皆升的调整在平面上的阈值：记录 threshold-in-the-state-plane 对带内皆升者陈述它是一条下降曲线；带再一个滞后的状态；调整所给的相互耦合条件。",
       "kind": "scope"
     },
     {
@@ -261,7 +261,7 @@
         "Becoming.RegimeMargin.stays_ended",
         "Becoming.RegimeMargin.step"
       ],
-      "sha256": "ec2fe17cdf7f46c009efc2beb311572fb79b7359f379c4cc8e2da40232537524"
+      "sha256": "328b909264c9f19c3dc73b2bb7203b0060cc3742a9f7f2161d111a4508a157fc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -291,12 +291,12 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "4fddc5805679dce79d3e7ca2f379d3dc3d24425b23f85df8d659425ed30b5051"
+      "sha256": "9911971f8550ac36217decc892eff12a3a6ae571ecf350b0a62a28719633f0dc"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "c8275a2320396005c6c74d20b600c76c9d2f3b7f0b7fd9874e90950d8f1ce376"
+      "sha256": "e3f860ae36956a9037993de70a019ca0ebe8aecf250b9cd87da8cbce7c3e9da7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
@@ -315,12 +315,18 @@
       "role": "receipt",
       "sha256": "5b160c8fb2340f395f48858527bc3dfbbe64abf79e30059592a45e6658f8d9e4",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json",
+      "role": "receipt",
+      "sha256": "e8bdfd2b1e1307a75766e5ba3865be107dcfa95f6c8164a74c2543ae9258292b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -345,6 +351,10 @@
     {
       "en": "21 October 2026, RM4: the threshold in the plane of level and recent giving, left open here, is stated for adjustments rising in both arguments within a band (record threshold-in-the-state-plane, study section 301); what this record does not show and its next delta now say so. Its laws are unchanged.",
       "zh": "2026年10月21日，RM4：此处留下的水平与近来所给之平面上的阈值，对带内在两个变元上皆升的调整已陈述（记录 threshold-in-the-state-plane，研究第 301 节）；本记录所不表明者与其下一步现已如此说明。其规律不变。"
+    },
+    {
+      "en": "21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 303); what this record does not show now says what stays open. Its laws are unchanged.",
+      "zh": "2026年10月21日，RM6：此处留下的相互耦合条件，对体制之步下的两个条件已陈述（记录 coupled-regimes，研究第 303 节）；本记录所不表明者现已说明仍开放者。其规律不变。"
     }
   ]
 }

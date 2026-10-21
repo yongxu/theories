@@ -164,8 +164,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T135509.239302Z）：Becoming.RegimeMargin 的 49 项声明（36 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 270 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; each series' timing read from its assessment before a balance is read off it; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; coupled conditions; an independent review.",
-    "zh": "区分滞后的三种读法（年龄结构、汲取与所给的另一种次序、补偿），借助调查序列与观测模型或按年龄结构的读法；在从序列读出平衡之前，先从其评估读出每条序列的时间约定；按种群或按体制的滞后权重；与 Flow.Balances 相接；阿基米德量上的折叠；相互耦合的条件；独立审查。"
+    "en": "Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; each series' timing read from its assessment before a balance is read off it; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; webs of conditions; an independent review.",
+    "zh": "区分滞后的三种读法（年龄结构、汲取与所给的另一种次序、补偿），借助调查序列与观测模型或按年龄结构的读法；在从序列读出平衡之前，先从其评估读出每条序列的时间约定；按种群或按体制的滞后权重；与 Flow.Balances 相接；阿基米德量上的折叠；条件之网；独立审查。"
   },
   "correspondence": {
     "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read, then a state with a lag and the draw read as a law of the stock on spawning-stock series no analysis had read; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS), and delay-difference models carry the lag from recruitment (Deriso 1980).",
@@ -203,6 +203,13 @@
       "detail": {
         "en": "Giving that adjusts: these laws on ending and holding hold over any law of what is left and of the recent giving, and every rest at or above the draw is the regime's where the adjustment rests where the regime does.",
         "zh": "所给调整：这些关于终结与维持的规律对所剩与近来所给之任一律成立；调整在体制处静于汲取时，汲取及其上的每个静止都是体制的。"
+      }
+    },
+    {
+      "id": "coupled-regimes",
+      "detail": {
+        "en": "Two conditions each giving from what is left of both: under mutual support within a band a condition's point of no return is a least level that does not rise as its partner rises; a dependent ends after its partner; the regime is the uncoupled case.",
+        "zh": "两个条件各从两者所余中给出：带内相互支持下，一个条件的不归点是不随伙伴上升而升的最小水平；依赖者在其伙伴之后终结；体制即未耦合情形。"
       }
     }
   ],
@@ -258,7 +265,7 @@
         "Becoming.RegimeMargin.step_ge",
         "Becoming.RegimeMargin.Adjusted.step_holds"
       ],
-      "sha256": "ec2fe17cdf7f46c009efc2beb311572fb79b7359f379c4cc8e2da40232537524"
+      "sha256": "328b909264c9f19c3dc73b2bb7203b0060cc3742a9f7f2161d111a4508a157fc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -278,12 +285,12 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "4fddc5805679dce79d3e7ca2f379d3dc3d24425b23f85df8d659425ed30b5051"
+      "sha256": "9911971f8550ac36217decc892eff12a3a6ae571ecf350b0a62a28719633f0dc"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "c8275a2320396005c6c74d20b600c76c9d2f3b7f0b7fd9874e90950d8f1ce376"
+      "sha256": "e3f860ae36956a9037993de70a019ca0ebe8aecf250b9cd87da8cbce7c3e9da7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T084948.266489Z/verification.json",
@@ -308,12 +315,18 @@
       "role": "receipt",
       "sha256": "5b160c8fb2340f395f48858527bc3dfbbe64abf79e30059592a45e6658f8d9e4",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json",
+      "role": "receipt",
+      "sha256": "e8bdfd2b1e1307a75766e5ba3865be107dcfa95f6c8164a74c2543ae9258292b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -343,6 +356,10 @@
     {
       "en": "21 October 2026, RM2: this record's laws on ending and holding hold over every adjustment of giving (RegimeMargin.Adjusted; record regime-point-under-adjusting-giving, study section 299), the regime's step the case. They keep their statements, each proof now one line; the regime forms of lemmas no law reads any more were removed, and this record cites their general forms (4 law citations moved, the proof references with them).",
       "zh": "2026年10月21日，RM2：本记录关于终结与维持的规律对每个所给调整成立（RegimeMargin.Adjusted；记录 regime-point-under-adjusting-giving，研究第 299 节），体制之步是其情形。陈述不变，每个证明现为一行；不再被任何规律读取的体制形式已移除，本记录改引其一般形式（规律中移动 4 处引用，证明引用随之）。"
+    },
+    {
+      "en": "21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 303); its next delta now says what stays open. Its laws are unchanged.",
+      "zh": "2026年10月21日，RM6：此处留下的相互耦合条件，对体制之步下的两个条件已陈述（记录 coupled-regimes，研究第 303 节）；其下一步现已说明仍开放者。其规律不变。"
     }
   ]
 }

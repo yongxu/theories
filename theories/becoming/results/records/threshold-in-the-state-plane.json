@@ -90,8 +90,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "The threshold beyond the band, where the search stops at hi + 1; a state with a further lag; coupled conditions.",
-      "zh": "带外的阈值（搜索止于 hi + 1）；带再一个滞后的状态；相互耦合的条件。",
+      "en": "The threshold beyond the band, where the search stops at hi + 1; a state with a further lag; coupled conditions with a recent giving (record coupled-regimes states two under the regime's step).",
+      "zh": "带外的阈值（搜索止于 hi + 1）；带再一个滞后的状态；带近来所给的相互耦合条件（记录 coupled-regimes 陈述体制之步下的两个）。",
       "kind": "scope"
     }
   ],
@@ -117,8 +117,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T095626.485439Z）：Becoming.LastChange 与 Becoming.RegimeMargin 新增的 21 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 301 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A computed threshold over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; whether measured adjustments rise in both over their bands; a state with a further lag; coupled conditions; an independent review.",
-    "zh": "实数上计算出的阈值；在未经任何分析读过的存量上冻结检验：近来所给不足捕捞的点下片段是否更常下降；所测的调整在其带上是否于两者皆升；带再一个滞后的状态；相互耦合的条件；独立审查。"
+    "en": "A computed threshold over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; whether measured adjustments rise in both over their bands; a state with a further lag; coupled conditions with a recent giving, or more than two; an independent review.",
+    "zh": "实数上计算出的阈值；在未经任何分析读过的存量上冻结检验：近来所给不足捕捞的点下片段是否更常下降；所测的调整在其带上是否于两者皆升；带再一个滞后的状态；带近来所给或多于两个的相互耦合条件；独立审查。"
   },
   "correspondence": {
     "en": "For order-preserving maps the boundary between basins of attraction is unordered, so in the plane it is a curve along which one coordinate falls as the other rises (Hirsch and Smith 2005); a point of no return as a level: depensation and the fold of the harvested equilibrium (Clark 1976; May 1977). On the spine, constructive and exact in its premises: the basins are resting below the draw and resting at the regime's point, decided at a fixed step, and the curve is the least level a finite search finds, with no omniscience; its regime case is the point H + y. Rising giving is shown needed by a witness.",
@@ -228,7 +228,15 @@
       }
     }
   ],
-  "related": [],
+  "related": [
+    {
+      "id": "coupled-regimes",
+      "detail": {
+        "en": "Two conditions each giving from what is left of both: under mutual support within a band a condition's point of no return is a least level that does not rise as its partner rises; a dependent ends after its partner; the regime is the uncoupled case.",
+        "zh": "两个条件各从两者所余中给出：带内相互支持下，一个条件的不归点是不随伙伴上升而升的最小水平；依赖者在其伙伴之后终结；体制即未耦合情形。"
+      }
+    }
+  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
@@ -270,7 +278,7 @@
         "Becoming.RegimeMargin.step",
         "Becoming.RegimeMargin.threshold_regime"
       ],
-      "sha256": "ec2fe17cdf7f46c009efc2beb311572fb79b7359f379c4cc8e2da40232537524"
+      "sha256": "328b909264c9f19c3dc73b2bb7203b0060cc3742a9f7f2161d111a4508a157fc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
@@ -328,19 +336,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "c8275a2320396005c6c74d20b600c76c9d2f3b7f0b7fd9874e90950d8f1ce376"
+      "sha256": "e3f860ae36956a9037993de70a019ca0ebe8aecf250b9cd87da8cbce7c3e9da7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
       "role": "receipt",
       "sha256": "5b160c8fb2340f395f48858527bc3dfbbe64abf79e30059592a45e6658f8d9e4",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json",
+      "role": "receipt",
+      "sha256": "e8bdfd2b1e1307a75766e5ba3865be107dcfa95f6c8164a74c2543ae9258292b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -382,6 +396,10 @@
     {
       "en": "21 October 2026, RM5: over the reals every run of a rising adjustment within a band converges and the fates below the draw are down-closed and fewer as the recent giving rises (record regime-in-any-amounts, study section 302); what this record does not show and its next delta now say so. Its laws are unchanged.",
       "zh": "2026年10月21日，RM5：在实数上，带内上升调整的每个运行都收敛，汲取之下的命运向下封闭且随近来所给上升而减少（记录 regime-in-any-amounts，研究第 302 节）；本记录所不表明者与其下一步现已如此说明。其规律不变。"
+    },
+    {
+      "en": "21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 303); what this record does not show and its next delta now say what stays open. Its laws are unchanged.",
+      "zh": "2026年10月21日，RM6：此处留下的相互耦合条件，对体制之步下的两个条件已陈述（记录 coupled-regimes，研究第 303 节）；本记录所不表明者与其下一步现已说明仍开放者。其规律不变。"
     }
   ]
 }

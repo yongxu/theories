@@ -29,7 +29,7 @@
 
 - That a run converges, in the core: convergence of a bounded monotone sequence is an omniscience principle, so the core states the shape of a run and the periphery the convergence over the reals.
 - The threshold over the reals as a computed level, or the regime's case H + y there: the fates are stated as down-closed and falling with the recent giving.
-- Continuous time; a state with a further lag; coupled conditions; that measured adjustments rise in both over their band.
+- Continuous time; a state with a further lag; coupled conditions with a recent giving (record coupled-regimes states two under the regime's step); that measured adjustments rise in both over their band.
 - **Counterexample:** Drawn.Relaxation.never_rests: giving moving halfway toward a draw of one rises in both and keeps a band, and its run from nothing converges and is still from no step, so over the reals a run need not come to rest. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean)
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -44,7 +44,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions; whether measured adjustments rise in both over their bands; an independent review.
+A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions with a recent giving, or more than two; whether measured adjustments rise in both over their bands; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -66,6 +66,8 @@ Orbits of planar cooperative (order-preserving) maps are eventually componentwis
   - Preserved conditions: The adjustment rising in both; a band. [RegimeReals.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean)
 - related, not a proved adapter: [regime-point-under-adjusting-giving](regime-point-under-adjusting-giving.md). The rest law: at or above the draw every rest is the regime's, here in any amounts.
 
+**Used by:** [coupled-regimes](coupled-regimes.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -84,6 +86,7 @@ Orbits of planar cooperative (order-preserving) maps are eventually componentwis
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T105805.152152Z/verification.json) | — |
 
 Aliases: `the regime in any amounts`, `the shape of a run of the adjusted step`, `runs of the regime over the reals`, `任何量中的体制`, `Becoming.RegimeMargin.Drawn.run_shape`, `Becoming.RegimeMargin.Drawn.converges`, `Becoming.RegimeMargin.Drawn.Relaxation.never_rests`
 
@@ -91,6 +94,7 @@ Aliases: `the regime in any amounts`, `the shape of a run of the adjusted step`,
 ### History
 
 - 21 October 2026: added (RM5), the regime in any amounts, and its runs over the reals: the order, the shape of a run and its rests in any linearly ordered amounts with a draw; over the non-negative reals every run of a rising adjustment within a band converges, to a rest where the adjustment is continuous, with fates down-closed, and need not rest; study section 302.
+- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 303); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
 
 </details>
 
