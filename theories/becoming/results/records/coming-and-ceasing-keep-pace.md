@@ -122,6 +122,7 @@ Ren's proposal: counting the whole space, generative and degenerative, the theor
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `Becoming.ComesToBe`, `Becoming.CeasesToBe`, `Becoming.Web.Ceases`, `Becoming.Web.CeasesToStand`, `Becoming.Web.change_readings`, `Becoming.over_stretch`, `Becoming.family_over_stretch`, `Becoming.rising_recurs`, `Becoming.falling_recurs`, `Becoming.held_over_stretch`, `Becoming.keep_pace`, `Becoming.coming_recurs_iff`, `Becoming.Web.arising_recurs_iff`, `Becoming.Web.standing_recurs_iff`, `Becoming.Web.unceasing_iff`, `Becoming.Web.falls_need_rises`, `Becoming.Web.supported_of`
 

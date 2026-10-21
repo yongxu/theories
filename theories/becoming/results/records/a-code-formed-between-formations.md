@@ -96,6 +96,7 @@ RO's chapter on the Chinese sources found the spine lacking a law of a code form
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `a code formed between formations`, `shared codes`, `约定俗成`, `在形成之间形成的编码`, `agreement needs a broken symmetry`, `Becoming.SharedCodes.kept_iff`, `Becoming.SharedCodes.run_agrees_every_start_iff`, `Becoming.SharedCodes.never_agrees_of_both`, `Becoming.SharedCodes.run_from_imposition`, `Becoming.SharedCodes.written_rests`, `Becoming.SharedCodes.Path.never_agree`
 

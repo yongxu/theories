@@ -92,6 +92,7 @@ Readings verified in the limit are the Σ⁰₂ classes and those refuted in the
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T235844.485705Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `what a method comes to say in the limit`, `方法在极限中所能说出者`, `verification in the limit`, `refutation in the limit`, `Becoming.Limit.still_verifies`, `Becoming.Limit.Free.settles_not_refuted`, `Becoming.Limit.Sequences.recurs_not_verified`
 

@@ -107,6 +107,15 @@
         "Becoming.Divided.selfAscribed_not_invariant",
         "Becoming.Divided.withinSome_both"
       ]
+    },
+    {
+      "en": "On valuations, relational neutrality is closedness of each standpoint's significance under the formed relations' steps; what the two neutralities force from a valued living claim is exactly what it reaches through formed relations among living claims, and every living claim is forced exactly where the formed relations connect the living claims: the scope is the closure, as on boundaries (forced_iff_within).",
+      "zh": "在赋值上，关系中立即各立场的意义对所成关系之步封闭；两种中立由一个有意义的存活主张所迫出者，恰是经存活主张间所成关系所及者；恰在所成关系连通诸存活主张之处，每个存活主张都被迫出：范围即闭包，与边界上相同（forced_iff_within）。",
+      "declarations": [
+        "Becoming.Valuation.transmits_iff_closed",
+        "Becoming.Valuation.forced_iff_reach",
+        "Becoming.Valuation.forced_whole_iff_connected"
+      ]
     }
   ],
   "hypotheses": [
@@ -179,7 +188,10 @@
     "the de se question",
     "de se and de dicto presupposition",
     "Becoming.selfAscribed_iff_withinSome",
-    "Becoming.forced_iff_within_some"
+    "Becoming.forced_iff_within_some",
+    "Becoming.Valuation.transmits_iff_closed",
+    "Becoming.Valuation.forced_iff_reach",
+    "Becoming.Valuation.forced_whole_iff_connected"
   ],
   "dependencies": [
     {
@@ -246,6 +258,16 @@
     }
   ],
   "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "role": "proof",
+      "sha256": "3bd4a208c5c0da12a3e24093fe3c67738185a97e979dd0fc09142c714fa1299c",
+      "declarations": [
+        "Becoming.Valuation.transmits_iff_closed",
+        "Becoming.Valuation.forced_iff_reach",
+        "Becoming.Valuation.forced_whole_iff_connected"
+      ]
+    },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
       "role": "proof",
@@ -404,6 +426,12 @@
       "role": "receipt",
       "sha256": "67b039a811c584e6830e9534e064ca22c400d553ded709a4942f7eb48aea2dfc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "role": "receipt",
+      "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -411,6 +439,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ValuationFrames.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.ValuationFrames",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -423,6 +458,10 @@
     {
       "en": "20 October 2026 (IV2): four laws added, the de se and de dicto readings of the presupposition and where they part, and the web reading of what the step forces (Web.admitsWithin_forced_iff, which puts forced_iff_center on the base); the first non-implication restated in the exact form of the de se question; rebound to receipt 20261020T120729.506720Z; readings D60; study section 260.",
       "zh": "2026年10月20日（IV2）：新增四条规律，即预设的从己与从言读法及其分开之处，以及那一步所迫使者在依存网上的读法（Web.admitsWithin_forced_iff，使 forced_iff_center 落在基底上）；第一条“不表明”改述为从己问题的确切形式；改绑到回执 20261020T120729.506720Z；读法 D60；研究第 260 节。"
+    },
+    {
+      "en": "21 October 2026, EC4 (study section 313): a law added, the valuations' reading of the scope (Valuation.transmits_iff_closed, Valuation.forced_iff_reach, Valuation.forced_whole_iff_connected in Becoming.ValuationFrames): what the two neutralities force is the closure of a valued living claim, the same law as forced_iff_within on boundaries. Readings D61. The record's earlier laws are unchanged.",
+      "zh": "2026年10月21日，EC4（研究第 313 节）：新增一律，即赋值上的范围读法（Becoming.ValuationFrames 中的 Valuation.transmits_iff_closed、Valuation.forced_iff_reach、Valuation.forced_whole_iff_connected）：两种中立所迫出者是一个有意义的存活主张的闭包，与边界上的 forced_iff_within 为同一律。读法 D61。本记录先前各律不变。"
     }
   ]
 }

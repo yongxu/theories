@@ -111,6 +111,7 @@ Ren, 12 October 2026, comparing the theory with quantum dynamics and "Fermi's di
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T073902.295130Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 
 Aliases: `how a carried difference grows`, `所携带的差别怎样增长`, `general theory of loops`, `回路的一般理论`, `loop of couplings`, `耦合的回路`, `expansion by order`, `按阶展开`, `accuracy of a cut`, `截断的精度`, `self-loop`, `自环`, `strength around a loop`, `绕回路的强度`, `runaway around a loop`, `绕回路的失控`, `polynomial exactly where no loop`, `恰在没有回路处为多项式`
 

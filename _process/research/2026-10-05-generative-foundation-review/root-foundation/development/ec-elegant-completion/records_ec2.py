@@ -15,6 +15,7 @@ RECEIPT = f'{PKG}/becoming-checks/{core_id}/verification.json'
 core = json.loads((ROOT / RECEIPT).read_text())
 assert core['status'] == 'passed'
 assert re.search(rf'^## {N}\. One stretch balance in the prelude \(EC2\)$', (ROOT / STUDY).read_text(), re.M)
+assert re.search(rf'^## {N + 1}\. The ethics\' scope as the one closure \(EC4\)$', (ROOT / STUDY).read_text(), re.M)
 elab = {m['module']: {d['name'] for d in m['declarations']} for m in core['modules']}
 MOVED = {'Becoming.balance_over_stretch_on': 'Change', 'Becoming.balance_over_stretch': 'Population',
          'Becoming.le_over_stretch': 'Population', 'Becoming.ge_over_stretch': 'Population'}
