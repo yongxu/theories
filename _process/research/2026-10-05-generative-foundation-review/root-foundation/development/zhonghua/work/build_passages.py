@@ -8,7 +8,13 @@ cov = json.load(open(KIT + '/coverage.json'))['verdicts']
 mods = {m['module'] for m in json.load(open(receipt))['modules']}
 # integrator fixes, each with its reason
 FIXES = {'C11': [{'do': 'parallel', 'record_id': 'LAO2-C36-R03', 'entry': 'lao-36-jiang-yu-xi-zhi',
-                  'why': '同章「将欲……必固……」四式之一（将欲废之，必固兴之），结构与本条相同；检查者以 R08 替换了它，R08 归 C10'}]}
+                  'why': '同章「将欲……必固……」四式之一（将欲废之，必固兴之），结构与本条相同；检查者以 R08 替换了它，R08 归 C10'},
+                 {'do': 'set', 'entry': 'lao-76-rou-ruo-sheng-zhi-tu', 'field': 'kind', 'value': 'scope',
+                  'why': 'C05 的同名条目经第二位检查者改为定域（自全面扣留起，给予须有一个形成的容差不少于其所等待者之数，Tolerance.gives_needs_sparing），同一段同一结构不能在两簇判为两类'},
+                 {'do': 'text', 'entry': 'lao-76-rou-ruo-sheng-zhi-tu', 'field': 'reading',
+                  'find': '种类沿用 RO lao-76-rou-ruo-sheng-zhi-tu；',
+                  'repl': '结构沿用 RO lao-76-rou-ruo-sheng-zhi-tu，类别改为定域：「柔弱者生之徒」的全称形式恰在扣留是局部而非全面之处成立；',
+                  'why': '随上条改为定域，读法中「种类沿用 RO」一句随之改正'}]}
 out, report = {'clusters': {}}, collections.OrderedDict()
 import re
 ALL_IDS = {}
@@ -34,6 +40,14 @@ for i in range(1, 18):
         ent[e['id']] = dict(e, checked='corrected')
     for p in ck['passed']:
         if p in ent: ent[p]['checked'] = 'passed'
+    # second check (21 October): the entries the reviser kept unchanged, which the first checker did not read
+    if os.path.exists('%s/check2-%s.json' % (A, c)):
+        ck2 = json.load(open('%s/check2-%s.json' % (A, c)))
+        for d in ck2['drops']: dropped[d['id']] = {'id': d['id'], 'why': d['why'], 'now': 'dropped by the second checker'}
+        for e in ck2['corrections']:
+            ent[e['id']] = dict(e, checked='corrected')
+        for p in ck2['passed']:
+            if p in ent: ent[p]['checked'] = 'passed'
     dropped_recs = {}
     for d in dropped:
         old = ent.pop(d, None) or next((e for e in rv['revised'] + m['entries'] if e['id'] == d), None)
@@ -64,6 +78,14 @@ for i in range(1, 18):
         if ch['now'] == 'parallel': par[rid] = {'record_id': rid, 'same_as_entry': ch.get('same_as_entry', ''), 'note': ch['why']}
         elif ch['now'] == 'rejected': rej[rid] = {'record_id': rid, 'why': ch['why']}
     for fx in FIXES.get(c, []):
+        if fx['do'] == 'set':
+            ent[fx['entry']][fx['field']] = fx['value']
+            ent[fx['entry']].setdefault('integrator', []).append(fx['why'])
+        if fx['do'] == 'text':
+            e = ent[fx['entry']]
+            assert e[fx['field']].count(fx['find']) == 1, fx
+            e[fx['field']] = e[fx['field']].replace(fx['find'], fx['repl'])
+            e.setdefault('integrator', []).append(fx['why'])
         if fx['do'] == 'parallel':
             par[fx['record_id']] = {'record_id': fx['record_id'], 'same_as_entry': fx['entry'], 'note': fx['why'], 'by': 'integrator'}
     in_entries = {r for e in ent.values() for r in e['record_ids']}

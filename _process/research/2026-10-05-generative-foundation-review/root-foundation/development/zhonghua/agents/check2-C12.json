@@ -1,0 +1,50 @@
+{
+ "cluster": "C12",
+ "corrections": [
+  {
+   "id": "yi-xici-yan-hui-bu-fu-xing",
+   "status": "revised",
+   "record_ids": [
+    "WP-XCX-C04-S12-R01"
+   ],
+   "source_id": "DS03",
+   "layer": "先秦至秦汉·传（系辞下；成书年代有争议，战国中晚期至汉初诸说并存；「子曰」之归属亦有争议）",
+   "fragments": [
+    "有不善，未尝不知；知之，未尝复行也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.byElimination",
+    "Becoming.Learning.index_missed",
+    "Becoming.Learning.index_le_succ",
+    "Becoming.Learning.missed_before",
+    "Becoming.Learning.index_le_of_accords",
+    "Becoming.Learning.misses_not_recurring",
+    "Becoming.Learning.diagonal_misses",
+    "Becoming.Learning.diagonal_unrested"
+   ],
+   "records": [
+    "learning-by-refutation"
+   ],
+   "reading": "AI读法：此段之次序（有不善则知之，知之则此后不再为之）读作过则改（排除法外推，Learning.byElimination）之构造：候选依次排列，当前候选从往（前段）所提之值与该步所来之值不符（Misses）时，恰移向下一候选（index_missed；这是 indexOn 之定义在不符一支的展开，依构造而成，不是另一条律）；指标从不后退（index_le_succ），凡被弃之候选皆曾在往中某步不符（missed_before）：所弃者都是知其不符者，弃后不再为当前候选。这是此构造对一切候选列与一切历程的直接性质，以值可分辨（DecidableEq）为条件，不是关于实际形成的律：一个形成是否以过则改而学、其候选为何、其值是否可分辨，脊柱不导出（记录之界）。文中「未尝不知」对应的就是这一条件：不符之被知在脊柱是所设，不是所证；构造中不符之后一步即移，文本未言何时而知（《脉络》节点亦明言不加立即性）。所不再为者是曾不符之候选，不是所提之值：其后的候选仍可提出同一值而再不符。文本未说而脊柱说者有二。其一，若有某候选与此历程相符（Accords：于每一出值之步皆无不符），指标决不越过它（index_le_of_accords），不符不在任意晚之步再出（misses_not_recurring；这是“不符反复出现”之否定，不是“自某步起无不符”）；有无这样的候选，不由过则改给出。其二，若有一映射移动每一值（值可分辨且至少有二时即有之），对每一知来（外推）都有其不测（对角序列），其上所提之每一值皆不符（diagonal_misses），自任何步起都不是步步出值而相符（diagonal_unrested）：故「未尝复行」不保证终于相符。「不善」只读作不符；善与不善之评价不入，不符本身不含评价、不排序，若要说何者为愈，只在以广为愈（设，不断言）。颜回之人格赞述、「其殆庶几乎」与所引「不远复，无祇悔，元吉」之吉断不映射。过则改之名证于《孟子》「古之君子，过则改之」；此条是易传之一例，其成书年代有争议，不据之称先秦。",
+   "names_used": [
+    "过则改",
+    "符",
+    "往",
+    "知来",
+    "不测",
+    "以广为愈",
+    "设"
+   ],
+   "gap": "",
+   "locator": "系辞下·冻结第4章（九章分法）·「子曰：颜氏之子」段",
+   "relational": "改在所遇之不符上逐步而成：每一不符弃一候选，所弃者不再为当前候选",
+   "ro_passage": "",
+   "tradition": "共享经典（易传）",
+   "work": "系辞下"
+  }
+ ],
+ "drops": [],
+ "passed": [],
+ "notes": "The fragment matches DS03 exactly (simplified frozen text). All declarations resolve, and the record learning-by-refutation exists. I kept the kind as agreement: the text's sequence (knowing a miss → never taking it up again) has the same relation, condition and direction as the construction of byElimination plus the checked lemmas index_le_succ and missed_before. But that structure is the construction and its immediate properties, so the reading now says so. Changes: (1) Names: the reading used 相合/不合 for Accords/Misses, but the table's name is 符 (相符/不符); 相合 names the RO kind agreement and 合 names merge, so I changed these to 相符/不符. \"终得其正\" used 正 (table name for HexagramPlaces inPhase), and the relational field's \"改正\" carries the \"correct\" sense; both are rewritten. \"過則改\" in prose is now in simplified form, and I avoid 复, 行, 已 and 止 (table names for return, run, ceasing and rest) outside quotations. (2) index_missed is the definition of indexOn unfolded (if_pos), not a separate law; this is now stated. (3) \"只在某候选相合之处……不再出\" read as a converse that the Lean does not prove (and that is false in general: a candidate that holds the index from some step on may have missed earlier). It is rewritten as the hypothesis \"若有某候选相符\". (4) diagonal_misses needs a map that moves every value; that condition was omitted and is now stated. The claim that the elimination never comes to rest is diagonal_unrested, which is now added. (5) Left over, now stated: \"未尝不知\" corresponds to a condition the spine supplies, not derives (values told apart). Whether a formation learns by elimination is not derived (the record's boundary). The text does not say when the miss is known (the 脉络 node explicitly adds no immediacy). What is not retaken is the candidate, not the value. 不善's evaluation is not mapped, and any ordering belongs in 以广为愈 alone. (6) \"此条是其先秦之例\" contradicted the disputed dating; the name's witness is 孟子 (verified in RU2-S-MZ), and this entry is now called an example from the 易传 whose dating is disputed. (7) The layer field now puts period first and records the dispute; the locator now follows the 脉络's (frozen chapter 4). I added missed_before and diagonal_unrested. No file was edited."
+}

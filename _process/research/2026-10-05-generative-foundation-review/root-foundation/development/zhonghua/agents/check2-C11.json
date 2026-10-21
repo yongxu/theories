@@ -1,0 +1,250 @@
+{
+ "cluster": "C11",
+ "corrections": [
+  {
+   "id": "xici-chuyan-qianli",
+   "status": "revised",
+   "record_ids": [
+    "WP-XCS-C08-S04-R01",
+    "WP-XCS-C08-S04-R02",
+    "WP-XCS-C08-S04-R04",
+    "WP-XCS-C08-S04-R05"
+   ],
+   "source_id": "DS02",
+   "layer": "传·先秦至汉初（《易传·系辞上》；成书年代有争议）",
+   "layer_checked": "已核：系辞属易传，成书战国至汉初，年代有争议；冻结文本为通行本系统转录",
+   "fragments": [
+    "君子居其室，出其言善，则千里之外应之",
+    "居其室，出其言不善，则千里之外违之",
+    "况其迩者乎",
+    "言出乎身加乎民；行发乎迩见乎远"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.most_difference_arrives",
+    "Becoming.carried_attained",
+    "Becoming.carried_pos_iff",
+    "Becoming.Conveyed",
+    "Becoming.levels_alike_of_not_conveyed",
+    "Becoming.apart_only_downstream",
+    "Becoming.gap",
+    "Becoming.Propagation.Chain.first",
+    "Becoming.Propagation.Chain.keeps_arriving"
+   ],
+   "records": [
+    "how-much-difference-arrives",
+    "observation-is-a-route",
+    "two-act-worlds-carry-the-difference"
+   ],
+   "reading": "AI读法：「行发乎迩见乎远」是本簇「可致」之构。脊柱：每个条件只列一次、律只读已然、两流皆衡，部分之差至多 σ、起点之差至多 δ、各应倍至多 k 时，某条件某步之差至多为 a，恰当该处之可致至多为 a（most_difference_arrives）；携带律之历程恰达可致（carried_attained）；可致为正，恰沿起点之差、部分之差与正应倍构成的时间路线（Conveyed、carried_pos_iff）。定域：差只沿这样的路线到达，路线不及之处两流水平相同（levels_alike_of_not_conveyed），不在下游者不被分开（apart_only_downstream）；所以「千里之外应之」只在有路线处可能，可致只是上界，远处是否应、应多少由远处之律定。两处不承：（一）差是无向之量（Becoming.gap 之定义：各自超出对方者之和），脊柱量的是有多少差到达，不分「应」与「违」，也没有一条律使远处之回应随言之善否而定；「善则应、不善则违」是文本所加之条件。（二）「况其迩者乎」以近者更甚：Propagation.Chain 的构造见证中，一单位只给一次于近处之条件，近处一直持有 1（Chain.first），经二倍之应倍传到远处者在第 t+1 步为 2t（Chain.keeps_arriving），远者多于近者，且无环送回而无界；一例足以说明「近者更甚」不是每个世界之律。「君子」「民」与「枢机」之中心义不采纳为结构。",
+   "names_used": [
+    "可致",
+    "应倍"
+   ],
+   "gap": "",
+   "locator": "系辞上·冻结第8章·编者论证段4（原文起““鸣鹤在阴，其子和之。我”）",
+   "relational": "言行出于近处，经由回应到达远处，远处或应或违；文本以近者更甚。",
+   "ro_passage": "",
+   "tradition": "易传",
+   "work": "《周易·系辞上》"
+  },
+  {
+   "id": "cy-xiaoguo-jiaowang-guozheng",
+   "status": "revised",
+   "record_ids": [
+    "CY130-H62-R01"
+   ],
+   "source_id": "YD-CY4",
+   "layer": "注·宋明（北宋程颐《伊川易传》小过卦辞注）",
+   "layer_checked": "已核：北宋程颐注；冻结为四库本维基文库转录，有缺字讹字，所引段不依赖缺字处",
+   "fragments": [
+    "若矯枉而過正過所以就正也",
+    "事有時而當然有待過而後能亨者",
+    "不失時宜之謂正",
+    "所過者小事也事之大者豈可過也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Flow.stays_between_at",
+    "Becoming.Flow.settles",
+    "Becoming.Flow.crosses_of_above",
+    "Becoming.Flow.crosses_of_below",
+    "Becoming.Regulation.Overshooting.oscillates",
+    "Becoming.Regulation.Overshooting.never_at"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：程颐以「若矯枉而過正過所以就正也」说小过之亨，是本簇「过正」的出处之一。脊柱（平衡之下，交换与偏离相反）：交换在与 m 之距以内，恰当下一水平落在 m 与当前水平之间（Flow.withinGap_iff_between，中节）；界内不越过 m（Flow.stays_between_at）；自某步起每步都在界内且相反，则距用尽时定于 m（Flow.settles，起步可取任一步）；越出其距则越过 m（Flow.crosses_of_above、crosses_of_below，过正）。由此定域：（一）就正不须过：能在界内相反者不越过而定于 m，脊柱没有一条律说须先过而后正，过只在相反之交换越出其距时发生；（二）过后能就正，恰在过后每步都回到界内且相反之时（Flow.settles 以过后一步为起步）；（三）每步越界者永不就正：下一水平若为 m，则交换必在界内（withinGap_iff_between 的一步推论，AI 所推，未单列为定理，见缺口）；Regulation.Overshooting 是其构造见证，两侧相反而每步越界，在 m 两侧往复而永不到 m（oscillates、never_at）。所以「過所以就正」不是一般之法，只在过后复归中节处成立。程颐另加两条限定：「不失時宜之謂正」以时宜定正，「所過者小事也事之大者豈可過也」以事之大小限过；脊柱中过能否就正只由此后之交换是否在界内定，时宜与事之大小无对应之律，这两条不承，也不能说与律一致。卦象爻位层（阴居尊位、阳失位）不采纳。",
+   "names_used": [
+    "过正",
+    "中节"
+   ],
+   "gap": "脊柱未单列：平衡之下，若自某步起每步交换都越出与 m 之距，则此后水平永不为 m。这是 Flow.withinGap_iff_between 的一步推论（下一水平为 m 时 Regulation.Between m x m 恒成立，故交换在界内），AI 手推，未经 Lean。最近：Becoming.Flow.withinGap_iff_between、Becoming.Regulation.Between、Becoming.Regulation.Overshooting.never_at。",
+   "locator": "伊川易传·卷4·第62卦·卦首总论及卦辞注",
+   "relational": "矫枉越过正点，越过是为了回到正；有些事须过而后能亨；正以时宜定，过限于小事。",
+   "ro_passage": "",
+   "tradition": "易传注（程颐）",
+   "work": "《伊川易传》卷四·小过"
+  },
+  {
+   "id": "lao-36-78-rou-sheng-gang",
+   "status": "revised",
+   "record_ids": [
+    "LAO2-C36-R06",
+    "LL-R010"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）；所引苏辙注属宋明层",
+   "layer_checked": "已核：经文据王弼本系统去注转录；苏辙《老子解》为北宋注层，不回填为经义",
+   "fragments": [
+    "将欲夺之，必固与之",
+    "柔弱胜刚强",
+    "天下莫柔弱于水，而攻坚强者，莫之能胜",
+    "弱之胜强，柔之胜刚，天下莫不知莫能行"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Tolerance.thin_absorbed",
+    "Becoming.Tolerance.kept_set",
+    "Becoming.Tolerance.total_stays",
+    "Becoming.Tolerance.Triad.spreads",
+    "Becoming.Tolerance.Triad.absorbed",
+    "Becoming.Tolerance.Triad.total_kept"
+   ],
+   "records": [
+    "thresholds-of-waiting",
+    "restoring-giving-from-the-worst-start"
+   ],
+   "reading": "AI读法：两章以「胜」立言：第三十六章在「将欲夺之，必固与之」之后说「柔弱胜刚强」，第七十八章以水「攻坚强者，莫之能胜」说「弱之胜强，柔之胜刚」。这是一者压过另一者之比，属四种非关系层中的〈争胜与等级〉，理论不断言；而且文本所比，脊柱只在一个构造见证中给出：故为相分。可承之构不在「胜」：若把柔读为不求备（容忍至少为一）、把刚读为容忍为零（AI 读法，同 RO 第七十六章条），脊柱比较的是同一等待结构下的两条律，不是一者胜过另一者。一般之律：起点在某集之外皆给、每个形成在集内所等待者不超过其容忍时，自第一步起处处皆给（thin_absorbed）；起点皆给、每个成员在集外所等待者不超过其容忍的集合，每步都给（kept_set）；没有一个形成能宽免其所等待之全部时，全面扣留一旦出现便一直如此（total_stays）。〈容忍大者处处给予不少于容忍小者〉只在 Triad 一个构造见证中有：三者互等、一处扣留，容忍 0 自第二步起处处扣留，容忍 1 自第一步起处处皆给（Triad.spreads、Triad.absorbed）；容忍 1 也不恢复全面扣留（Triad.total_kept）。一般的跨律单调未经 Lean，见缺口。注层：苏辙说「吾以不校坐待其弊此所謂勝也」，仍以他者之弊为胜，属同一层；他随即说「聖人豈有意為此以勝物哉」，只去谋胜之意，不去胜之结局。脊柱中容忍所做的是吸收局部扣留、使给予延续，不排胜负。",
+   "names_used": [
+    "不求备"
+   ],
+   "gap": "脊柱缺：容忍的跨律单调——对同一等待结构 ups 与同一起点 s，若 tol ≤ tol'（逐点），则在每一步 (Law.run (Tolerance.tolerating tol ups) s).state n 蕴含 (Law.run (Tolerance.tolerating tol' ups) s).state n。这是一个短推论（AI 手算，未经 Lean）：对步数归纳，用 tolerating_keeps 把前一步的包含推进一步，再用 AllBut.mono_count 从 tol 换到 tol'。缺的是这条陈述本身；有了它，〈容忍逐点更大者处处给予不少于容忍小者〉才对每个等待结构成立，而不只在 Triad 一例中。最近：Becoming.Tolerance.AllBut.mono_count、Becoming.Tolerance.tolerating_keeps、Becoming.Tolerance.KeepsInclusion.course、Becoming.Tolerance.Triad.absorbed。",
+   "locator": "《老子》第36章「将欲夺之，必固与之……柔弱胜刚强」；第78章「天下莫柔弱于水……弱之胜强，柔之胜刚」",
+   "relational": "柔弱者胜过刚强者；水攻坚强莫之能胜；天下皆知而莫能行。",
+   "ro_passage": "",
+   "tradition": "道家（老子）",
+   "work": "《老子》第三十六章、第七十八章"
+  },
+  {
+   "id": "lao-29-qu-shen-qu-tai",
+   "status": "revised",
+   "record_ids": [
+    "LAO2-C29-R05"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "经·先秦（《老子》，传世王弼本系统经文；郭店、帛书异文另注）；所引河上公、苏辙注分属汉魏与宋明注层",
+   "layer_checked": "已核：经文据王弼本系统去注转录（苏辙本作「或載或隳」）；河上公章句年代有争议（旧题西汉，多认为东汉至魏晋），注义不回填为经义",
+   "fragments": [
+    "天下神器，不可为也，为者败之，执者失之",
+    "故物或行或随，或歔或吹。或强或羸，或挫或隳。是以圣人去甚，去奢，去泰"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.excess_lowers",
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Flow.stays_between_at",
+    "Becoming.Flow.crosses_of_above",
+    "Becoming.Flow.restores",
+    "Becoming.Regulation.OneSided.above"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading",
+    "own-count-misses-joint-excess"
+   ],
+   "reading": "AI读法：经文先说「天下神器，不可为也，为者败之，执者失之」，再说物或行或随、或强或羸、或挫或隳，皆向两侧走，圣人只「去甚，去奢，去泰」：不驱物归于一点，只去其过。脊柱：取多于给之一步使水平至少降一（Flow.excess_lowers）；所取以其超出 m 之距为界，恰当下一水平落在 m 与当前之间（Flow.withinGap_iff_between），界内不越过 m（Flow.stays_between_at），越界则越过（Flow.crosses_of_above，过正）。去甚只去其过而不越过，可读为（AI）中节之取。定域：所去只在上侧（甚、奢、泰皆是过多），对下侧之羸、隳无回应，是一偏，不是两侧之调节（中和）。下侧回到 m 须另有给多于取之交换（Flow.restores）；经文把两侧往复交给物自身，苏辙说「皆物之自然而勢之不免者也」，所以去甚只在下侧自有复原处才与之合为两侧。脊柱对一偏只有镜像之构造见证：Regulation.OneSided 是空流，下侧复原之前提每步成立而水平一直在 m 之上（OneSided.above）；只对上侧回应之镜像与有交换的单侧之律未单列，见缺口。注层：河上公以「甚谓贪淫声色。奢谓服饰饮食。泰谓宫室台榭。」，把去甚读为去除治者自身过多之取（自身取多于给则水平下降，Flow.excess_lowers），又说「去此三者，处中和，行无为，则天下自化」，补成两侧；苏辙读为「順以待之」「使不至于過而傷物」。圣人之中心义不采纳为结构名。",
+   "names_used": [
+    "中节",
+    "过正",
+    "一偏",
+    "中和"
+   ],
+   "gap": "脊柱未单列：有交换的单侧之律——平衡之下，交换在水平高于 m 时取多于给、在 m 之下不给多于取，则水平在 m 之下时不回到 m。现有 Regulation.OneSided 是空流且为镜像（只满足下侧复原之前提而一直在 m 之上）。最近：Becoming.Regulation.OneSided.above、Becoming.Flow.restores、Becoming.Flow.excess_lowers、Becoming.Flow.stays_between_at。",
+   "locator": "《老子》第29章；起句“将欲取天下而为之”，所论在“故物或行或随，或歔或吹。或强或羸”以下",
+   "relational": "天下不可强为；物各向两侧行；圣人去其过甚、过奢、过泰。",
+   "ro_passage": "",
+   "tradition": "道家（老子）",
+   "work": "《老子》第二十九章"
+  },
+  {
+   "id": "lunyu-jin-zhi-tui-zhi",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-11-21-R01",
+    "RU1-LY-11-21-R02"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "经·先秦（《论语·先进》；春秋末至战国言论传统，经战国秦汉编定）",
+   "layer_checked": "已核：脉络记为春秋末至战国言论传统，战国秦汉编定，不视每句为孔子逐字记录",
+   "fragments": [
+    "求也退，故進之；由也兼人，故退之。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.Opposes",
+    "Becoming.Regulation.relay",
+    "Becoming.Regulation.push_ramp",
+    "Becoming.Regulation.pull_ramp",
+    "Becoming.Flow.crosses_of_above",
+    "Becoming.Regulation.Overshooting.never_at",
+    "Becoming.Flow.gap_falls",
+    "Becoming.Flow.settles"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：同一问「聞斯行諸」，对冉求答「聞斯行之」，对子路答「有父兄在」；孔子说「求也退，故進之；由也兼人，故退之」：回应读被回应者此时之水平，在下者进之，在上者退之。其构是两侧都与偏离相反之回应（Flow.Opposes，是定义），亦即抑举（Regulation.relay，是定义：读数低于下界则给、高于上界则取、带内不动；迟 ℓ 步读时，读数在下驱动推、在上驱动拉，push_ramp、pull_ramp）。文本以进退求其中，脊柱则说相反本身不足以就中：相反之交换越出与 m 之距则越过 m（Flow.crosses_of_above，过正），每步越界之构造见证两侧相反而永不到 m（Regulation.Overshooting.never_at）；只有在中节之内且相反时，距每步至少降一，用尽即定于 m（Flow.gap_falls、Flow.settles）。所以「进之」「退之」使之归中，恰当所进所退不越过其距；进之过多，退者也会越过而成兼人。相反之回应只是律的前提，不是律本身，故为定域而非相合。这一回应是读者与被读者此时之关系，不是对一切人的固定规则。",
+   "names_used": [
+    "抑举",
+    "过正",
+    "中节"
+   ],
+   "gap": "",
+   "locator": "《论语》先進第十一·原页十一之二一",
+   "relational": "冉求退缩，所以使之进；子路胜人，所以使之退。",
+   "ro_passage": "",
+   "tradition": "儒家（论语）",
+   "work": "《论语·先进》"
+  },
+  {
+   "id": "zhuangzi-lunbian-bu-xu-bu-ji",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C13-R-08"
+   ],
+   "source_id": "ZH1-S13",
+   "layer": "论·先秦至秦汉（《庄子·天道》，外篇；成书年代有争议）",
+   "layer_checked": "已核：天道属外篇，脉络记为战国至秦汉文献层，不断为庄周亲作",
+   "fragments": [
+    "斲輪，徐則甘而不固，疾則苦而不入，不徐不疾，得之於手而應於心"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.Opposes",
+    "Becoming.Regulation.ReadsLate",
+    "Becoming.Regulation.no_narrower_band",
+    "Becoming.Regulation.lateReturn_band"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading"
+   ],
+   "reading": "AI读法：斫轮，徐则松而不固，疾则紧而不入，两侧都失败，合者在「不徐不疾」之间。可读为（AI）：疾徐是须保持在一带之内的量，偏慢则加快、偏快则放慢，是两侧都与偏离相反之回应（Flow.Opposes）。脊柱给出这一带能窄到何处：规则晚 ℓ 步读（Regulation.ReadsLate），所受扰动每步至多 d、带之下界为正时，没有一条这样的规则能对每一扰动都把水平保持在宽不足 2(ℓ+1)d 之带内（no_narrower_band），晚返恰保此宽（lateReturn_band）。所以「不徐不疾」可保之窄恰由读之迟与扰动之大定：带越窄，越不容识不早。定域：轮扁以之为手之所得，不说其界；脊柱给的是其可保之界。「得之於手而應於心」读为读与回应在一手之内、几乎无迟，是 AI 读法，文本未言迟速。「口不能言」「臣不能以喻臣之子」是调节在耦合之中而不在可传之辞，属传授与识之另一簇，此处不展开。",
+   "names_used": [
+    "识不早"
+   ],
+   "gap": "",
+   "locator": "庄子·天道；起语：臣也以臣之事觀之。斲輪，徐則甘而不固，疾則苦而不",
+   "relational": "斫轮徐则不固，疾则不入，不徐不疾，得于手而应于心。",
+   "ro_passage": "",
+   "tradition": "庄子",
+   "work": "《庄子·天道》"
+  }
+ ],
+ "drops": [],
+ "passed": [
+  "simafa-shang-bu-yu-shi"
+ ],
+ "notes": "七条第三读。所有片段均以 ctq.py text 逐字核过（含新增片段：况其迩者乎〔DS02〕、不失時宜之謂正／所過者小事也事之大者豈可過也〔YD-CY4〕、将欲夺之，必固与之／天下莫柔弱于水，而攻坚强者，莫之能胜／天下神器，不可为也，为者败之，执者失之〔YD-LAO-BASE〕）；读法中引的苏辙（LC-SZ-ALL）、河上公（LC-HS-UP）、论语（聞斯行諸、聞斯行之、有父兄在）、庄子（口不能言、臣不能以喻臣之子）原文也都核过。所有声明经 resolve.py 与 grep 确认，所有记录存在。改动要点：\n1. xici：所用名「所致」不在名表（已改为「可致」，名表第308行注明「原拟所致」）；原读法说应/违「由律决定而不由言善不善决定」，超出 Lean：gap 是无向量，脊柱根本不量应违，改为「善则应不善则违」是文本所加之条件、不承；新增「况其迩者乎」，Propagation.Chain 见证中远处（2t）多于近处（1），说明「近者更甚」不是一般之律。\n2. cy：Flow.settles 要求自起步起每步都在界内且相反，原文漏写；「与此一致」把程颐的时宜读成「此后是否在界内」，是 AI 附会，改为时宜与事之大小两条限定无对应之律、不承；补「就正不须过」（stays_between_at + settles）；「每步越界永不到 m」是 withinGap_iff_between 的一步推论而非单列定理，已标明并记入缺口。\n3. lao-36-78：原为 scope，但读法自己承认只在 Triad 一个见证中有、且「胜」属争胜层，「见证之内的定域」不是定域，改为 divergence；kept_set 被误述为「容忍之外等待者构成的集合」（实为每个成员在集外所等待者不超过其容忍），已改；Triad.total_kept 是见证，补一般之律 total_stays；删去「容忍的意义在于……」这一夹带评价的句子。\n4. lao-29：Regulation.OneSided 是空流见证且是镜像（只满足下侧复原前提、水平一直在上），原读法当作「去甚只对上侧」之证，已改标为镜像见证并记缺口（与名表「一偏」注一致）；「去甚在本簇是中节」降为 AI 读法；补经文语境「天下神器，不可为也」（不驱物归一点）与 Flow.restores（下侧须另有复原），并区分河上公（治者自身之取）与苏辙（顺物而防其过）两种注读。\n5. lunyu：用了已弃之名「宽猛相济」（names-dropped：不在冻结文本且是治者之词），改用「抑举」；相合所对的是 Flow.Opposes 与 Regulation.relay 两个定义，律（gap_falls、settles）另需中节之条件，且 Overshooting 见证两侧相反而永不到 m，故改为 scope；删去无据的「并行（止观、刚柔、苏辙浊静安动）同一结构」。\n6. zhuangzi：Flow.withinGap_iff_between 被误用为「合者在两界之间」（该律说的是交换不越过 m，不是两侧失败之间的带），已删；「得之於手而應於心」=几乎无迟是 AI 附会，已标明；文本未陈迟读带宽之构，改为 scope（不徐不疾可保之窄由 2(ℓ+1)d 定，lateReturn_band 达到）；names_used 删去未按其义使用的「中节」。\n7. simafa：通过。迟读与带宽之律（ReadsLate、late_spread、late_band、no_narrower_band、lateReturn_band）所述与 Lean 相符，方向与文本相同，治者单一中心层已标出不采纳（与 RO zuo-zhao20-kuan-meng 的处理一致）。可留意：no_narrower_band 另需带之下界为正；冻结文本同段有「周以賞罰，德衰也」，文本自己把赏罚之治列在「不賞不罰」之下。\n全部为只读检查，未改任何文件。"
+}

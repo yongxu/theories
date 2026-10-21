@@ -1,0 +1,261 @@
+{
+ "cluster": "C07",
+ "corrections": [
+  {
+   "id": "tuan-kui",
+   "status": "revised",
+   "record_ids": [
+    "TP-H38-T-R06"
+   ],
+   "source_id": "YD-JP38",
+   "layer": "先秦／传（《彖传》；易传成书年代有争议，一般定于战国时期，或说晚至秦汉之际）",
+   "layer_checked": "",
+   "fragments": [
+    "萬物睽，而其事類也；"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Law.Commutes.apart",
+    "Becoming.Law.Commutes.pairs_goAlike",
+    "Becoming.Law.Commutes.breaks",
+    "Becoming.Learning.goAlike_iff_lumped",
+    "Becoming.Hexagram.waxWane_complement",
+    "Becoming.Hexagram.waxWane_apart",
+    "Becoming.Hexagram.pairs_goAlike",
+    "Becoming.Hexagram.pairOf",
+    "Becoming.Hexagram.wane_breaks"
+   ],
+   "records": [
+    "what-a-commuting-law-keeps-apart",
+    "hexagrams-on-the-spine",
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：「萬物睽，而其事類也」读为：相异者在构形上相分，在律所行之事上却同类。脊柱的一般律：一个映射使每一构形都与其像相异，律与这个映射交换（律与对称交换）时，从一构形出发和从其像出发的两个行程在任何一步都不合一（Law.Commutes.apart）；这个映射又是互换时，律跨每一对（构形与其像）随类而同（Law.Commutes.pairs_goAlike，经 Learning.goAlike_iff_lumped）：构形上睽，事上类。易的模型是它的一个实例（一个构造出来的模型，不是另一条一般律）：消长环与互补交换（Hexagram.waxWane_complement），互补的两卦永不被合一（Hexagram.waxWane_apart），互补之对是消长环随之而同的类（Hexagram.pairs_goAlike、pairOf）；同一段「天地睽，而其事同也」中的乾坤正是这样一对。定域：彖传以「万物」立普遍之形，脊柱只在律与区分它们的对称交换之处给出「睽而事类」；律若把对称所分开者合一，它就破了这个对称（Law.Commutes.breaks），易的模型中使每一卦都入坤之律就是这样（Hexagram.wane_breaks）。反向（睽而且事类，则律必与对称交换）Lean 没有证明，所以这里只给出充分条件。",
+   "names_used": [
+    "类",
+    "随类而同"
+   ],
+   "gap": "彖传的「万物」不立条件；脊柱给出的条件（律与对称交换）只是充分条件，反向未证。RO 的 tuan-kui 把三句合在一起判为相合（天地一句的乾坤正是易的模型中的互补之对）；本条只取万物一句，它的普遍之形改判定域。「睽之時用大矣哉」不在脊柱上。",
+   "locator": "第38卦睽·彖传",
+   "relational": "相异者在一个类下相关而不合并",
+   "ro_passage": "tuan-kui",
+   "tradition": "共享经典",
+   "work": "《周易·彖传》"
+  },
+  {
+   "id": "xiaoqu-you-yi-tong",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-XQ-same"
+   ],
+   "source_id": "MI1-S-XQ",
+   "layer": "先秦／论（《墨子·小取》，墨辩六篇之一，战国后期墨家；六篇的作者与编纂层未作同一断定；小取不属于经上、经下）",
+   "layer_checked": "",
+   "fragments": [
+    "夫物有以同而不率遂同。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.Hexagram.yang_not_lumped",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.alike_iff_sameTests"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "hexagrams-on-the-spine",
+    "selection-through-a-model-of-the-options",
+    "tests-fix-likeness-where-determined"
+   ],
+   "reading": "AI读法：「夫物有以同而不率遂同」：在一处相同（在一个读法下同值，即同类）不就是全同。脊柱：d 与 x 在一个归并下同类，经这个类把 d 的值移到 x 上，移得对恰在世界于 d 与 x 取同一值之处（Learning.lumped_right_iff）。同类而不全同的见证在易的模型中（一个构造出来的模型中的见证，足以立「不率遂同」的「不必」）：泰与否阳爻都是三，消长环使其一变为四、一变为二（Hexagram.yang_not_lumped）。择经一个象而行时，象若把要紧者所分开的二者归为一类，就没有经它的择能恰好选出要紧者（Learning.selects_not_right_of_parted）。全同（同，互模拟）：两边的过程都确定（每一动作的后继在同之下确定）时，同恰是一切测验的结果都相同（alike_iff_sameTests）。",
+   "names_used": [
+    "同",
+    "类",
+    "象",
+    "择"
+   ],
+   "gap": "小取以此说明辟、侔、援、推之辞「行而異，轉而危」；论辩的规矩不在脊柱上。",
+   "locator": "小取·冻结正文段13",
+   "relational": "部分之同与全同之别",
+   "ro_passage": "",
+   "tradition": "名辩",
+   "work": "《墨子·小取》"
+  },
+  {
+   "id": "xiaoqu-qi-ran-suo-yi-ran",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-XQ-reason"
+   ],
+   "source_id": "MI1-S-XQ",
+   "layer": "先秦／论（《墨子·小取》，墨辩六篇之一，战国后期墨家；六篇的作者与编纂层未作同一断定）",
+   "layer_checked": "",
+   "fragments": [
+    "其然也，有所以然也；其然也同，其所以然不必同。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Run.not_fixes_of_untaken",
+    "Becoming.Confound.misattributes",
+    "Becoming.Confound.confounded",
+    "Becoming.Confound.varied_refutes"
+   ],
+   "records": [
+    "experiment-needs-return"
+   ],
+   "reading": "AI读法：「其然也同，其所以然不必同」：同一个结果（然）可以经由不同的故（所以然）而来。脊柱的一般律：在确定的过程中，记录里未曾取过的动作，记录不定其结果（Run.not_fixes_of_untaken，须有两个相异的构形）：有两个确定的过程都容许这份记录，而在那个动作处不同。这就是然同而所以然不定。混淆是一个构造出来的模型中的见证（Confound，不是一般律；但一个见证足以立「不必」）：经结果来读时，不起作用的动作被记作定出了不同的结果（Confound.misattributes）；动作与隐藏位同步时，记录在每一步都容许「动作决定结果」这个错误的模型（Confound.confounded）；在隐藏位已经变了的地方再取同一个动作，经结果所读的各步就不被任何确定的过程容许（Confound.varied_refutes）。这个模型不说只有这样才能排除。结果之同是在结果这个读法下同类，不是同（互模拟）。",
+   "names_used": [
+    "同",
+    "类"
+   ],
+   "gap": "RO 同条兼取「以說出故」，并引 apart_only_downstream；本条的片段不含这一句，所以不引。",
+   "locator": "小取·冻结正文段13",
+   "relational": "然与所以然：结果与其故之关系",
+   "ro_passage": "mobian-qi-ran-suo-yi-ran",
+   "tradition": "名辩",
+   "work": "《墨子·小取》"
+  },
+  {
+   "id": "lunyu-ju-yi-yu",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-07-08-R03"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦／经（《论语·述而》；春秋末至战国的言论传统，在战国至秦汉的传承中编定，传世本不视为孔子逐字之语）",
+   "layer_checked": "",
+   "fragments": [
+    "擧一隅，不以三隅反，則不復也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Learning.determines_lumped_iff",
+    "Becoming.Learning.every_determines_nothing",
+    "Becoming.Learning.lumped_right_iff"
+   ],
+   "records": [
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：「擧一隅，不以三隅反」：由所举的一隅推出其余三隅。脊柱：在随类而同者之内，有限的数据恰在未试者与某一已观察者同类之处定出它的值（Learning.determines_lumped_iff，须有两个相异的值）——这个读法把四隅放在「隅」这一个类下；没有任何类（任何函数都可以）时，数据不定出任何未试的值（every_determines_nothing）；经类推出的值对，恰在世界于已观察者与未试者取同一值之处（lumped_right_iff）。",
+   "names_used": [
+    "推类",
+    "类",
+    "随类而同"
+   ],
+   "gap": "「則不復也」是施教者的规矩（学者不能推，就不再举），不在脊柱上；四隅同类、世界跨此类一致，是这个读法的前提，不是定理。",
+   "locator": "《论语》述而第七",
+   "relational": "一隅与三隅经类相关",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "《论语·述而》"
+  },
+  {
+   "id": "xici-chu-lei-er-zhang",
+   "status": "revised",
+   "record_ids": [
+    "WP-XCS-C09-S04-R03"
+   ],
+   "source_id": "DS02",
+   "layer": "先秦／传（《系辞上》；易传成书年代有争议，多定于战国中后期，或说晚至秦汉之际）",
+   "layer_checked": "",
+   "fragments": [
+    "引而伸之，触类而长之，天下之能事毕矣。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.determines_lumped_iff",
+    "Becoming.Learning.every_determines_nothing",
+    "Becoming.Learning.lumped_right_iff"
+   ],
+   "records": [
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：此句上承「四营而成易，十有八变而成卦，八卦而小成」，说由八卦依类推广；这里只取由类推广的结构。脊柱：在随类而同者之内，数据恰在未试者与某一已观察者同类之处定出它的值（Learning.determines_lumped_iff，须有两个值）；未试者不与任何已观察者同类，数据就不定它的值（同一条律的另一向）；没有任何类时，数据不定出任何未试的值（every_determines_nothing）；经类推出的值对，恰在世界跨这个类取同一值之处（lumped_right_iff）。定域：「天下之能事毕矣」的普遍之形，恰在每一事都与某一已观察者同类、并且世界跨这个类取同一值之处成立。",
+   "names_used": [
+    "推类",
+    "类",
+    "随类而同"
+   ],
+   "gap": "原文的语境是筮法成卦；把「触类而长之」读作经归并而推广，是 AI 的结构读法。",
+   "locator": "系辞上·冻结第9章·编者论证段4",
+   "relational": "由类引伸",
+   "ro_passage": "",
+   "tradition": "共享经典",
+   "work": "《周易·系辞上》"
+  },
+  {
+   "id": "suzhe-20-yi-zhi",
+   "status": "revised",
+   "record_ids": [
+    "LC2-SZ-C20-R01"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "layer": "宋明／注（北宋，苏辙《老子解》第二十章注，11—12世纪）",
+   "layer_checked": "",
+   "fragments": [
+    "増所未聞積之未巳而無以一之則以圜害方以直害曲其中紛然不勝其憂矣"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.every_determines_nothing",
+    "Becoming.Learning.every_free",
+    "Becoming.Learning.determines_lumped_iff",
+    "Becoming.Learning.lumped_right_iff"
+   ],
+   "records": [
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：苏辙说，积累所未闻而「無以一之」，就会「以圜害方以直害曲」，其中纷然。这里把「一之」读作一个归并（类），把「以圜害方」读作：把一事上的所得移到另一事上，而世界在这两事之间并不一致。脊柱：没有任何类（任何函数都可以）时，数据不定出任何未试的值（Learning.every_determines_nothing），并且每一个值在未试之处都与数据相容（every_free）——这就是「纷然」的结构；有了类，数据恰在未试者与某一已观察者同类之处定出它的值（推类，determines_lumped_iff，须有两个值）；推出的值对，恰在世界跨这个类取同一值之处（lumped_right_iff）。定域：要推出任何未试的值，「一之」是必需的，却不保证不相害——世界跨之并不一致的类，正是把圆上的所得加到方上；所以「一之」能免于相害，恰在世界跨所一之类取同一值之处。",
+   "names_used": [
+    "类",
+    "推类"
+   ],
+   "gap": "苏辙在同章以「以道為主」作为一之者，又说「萬物同出于性」：以道为主是单一中心一层，以性为万物所同出是固定本性一层，这两层都不带入；理论中没有哪一个类能保证一切推移都对。",
+   "locator": "苏辙《老子解》第20章",
+   "relational": "所积之闻须经一类才能推；推之对还须世界跨此类一致",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "苏辙《老子解》"
+  },
+  {
+   "id": "suzhe-22-xun-li",
+   "status": "revised",
+   "record_ids": [
+    "LC2-SZ-C22-R01"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "layer": "宋明／注（北宋，苏辙《老子解》第二十二章注，11—12世纪）",
+   "layer_checked": "",
+   "fragments": [
+    "直而非理則非直也循理雖枉而天下之至直也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Learning.selects_right_of_reads",
+    "Becoming.Learning.goAlike_iff_lumped"
+   ],
+   "records": [
+    "selection-through-a-model-of-the-options",
+    "generalization-through-lumping"
+   ],
+   "reading": "AI读法：苏辙同章注说「聖人動必循理理之所在或直或曲要于通而已」；此句说，不循理的直不是直，循理的曲才是至直。这里把苏辙的理读作择所经之象（对诸选项的映射；象给同一项的选项归为一类）。脊柱：经象之择若恰好选出要紧者（p），p 在象所归为一类者上必然一致（Learning.selects_right_through，这只是必要的一向）；象若把 p 所分开的二者归为一类，就没有经它的择能恰好选出 p（selects_not_right_of_parted）——这是「直而非理則非直也」的结构：以表面的直为象，归并了要紧的区分，择就不能对。p 能由象读出时，经象来读的择恰好选出 p（selects_right_of_reads），这是充分的一向——「循理雖枉而天下之至直也」在这个条件下成立。理论中的理是承载变化之律的归并（goAlike_iff_lumped）；苏辙的理作为择所经之象时，择对不对不由「循理」本身保证，只在要紧者跨象之类一致之处才可能对，在要紧者由象读出之处必定能对。要紧者是给定的条件；这几条律只说择是否恰中要紧者，不给出「至」的排序（排序只在以广为愈）。",
+   "names_used": [
+    "理",
+    "象",
+    "择",
+    "类"
+   ],
+   "gap": "必要一向与充分一向分别由两个定理给出；「跨象一致」与「由象读出」相等，是一个简单的构造性步骤，Lean 中没有把它写成一个定理。苏辙「要于通」中的「通」不在此条。",
+   "locator": "苏辙《老子解》第22章",
+   "relational": "行之曲直依理而定",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "苏辙《老子解》"
+  }
+ ],
+ "drops": [],
+ "passed": [],
+ "notes": "七条片段都用 ctq.py text 核过，都在正确的来源中逐字命中；所有声明都经 resolve.py 和 grep 确认存在；所引记录都在 theories/becoming/results/records/ 下。七条都改了，没有一条能原样通过。共同的一处：layer 原先都是「类型／时代」，按格式改为时代在前（先秦／宋明……），并写明成书年代的争议。各条的改动：(1) tuan-kui：读法把 waxWane 叫作「消息之律」，违反名表（消息是普查平衡之名，waxWane 应写作「消长环」）；又把易模型的定理（Hexagram.*）当作一般律来用。现改引一般律 Law.Commutes.apart、Law.Commutes.pairs_goAlike、Law.Commutes.breaks，并注明 Hexagram.* 只是一个构造模型中的实例。kind 从相合改为定域：本条只取「万物」一句，它的普遍之形只在律与对称交换处成立（只是充分条件，反向未证），律合一则破对称（wane_breaks）。这与 RO 的判断不同，RO 把三句合判，其中天地＝乾坤正是模型中的互补对，交整合者裁定。(2) xiaoqu-you-yi-tong：alike_iff_sameTests 须两边过程都确定，原读法漏了这个条件；补上 yang_not_lumped，作为「不必」的见证（一个模型）；selects_not_right_of_parted 原先缺了它所在的记录 selection-through-a-model-of-the-options。(3) xiaoqu-qi-ran-suo-yi-ran：Confound.* 都是一个构造模型中的定理，原读法写成了一般律，又用「才」字声称只有变动动作才能排除，Lean 没有证明这一点；现以一般律 Run.not_fixes_of_untaken 为主。apart_only_downstream 只属于 RO 所引的「以說出故」，本条片段没有这一句，所以删去，连同记录 observation-is-a-route。(4) lunyu-ju-yi-yu：补上「在随类而同者之内」和「须有两个值」两个条件；「則不復」是施教的规矩，写入 gap。(5) 小取两条原标「经」，但小取属于墨辩中的论，不属于经上、经下，改为「论」。(6) xici-chu-lei-er-zhang：「无观察输入与之同类处，数据不固定任何值」原先误归给 every_determines_nothing；它其实是 determines_lumped_iff 的另一向，现已改正。(7) suzhe-20-yi-zhi：原读法把原文转述成「以圆为方」，原文是「以圜害方」，改了动词；又加入了原文没有的「不能推」。kind 改为定域：一之是必需的，但不保证不相害，相害可以正出于世界跨之不一致的类。同章的「以道為主」（单一中心）和「萬物同出于性」（固定本性）都已核过原文，写入 gap，不带入。(8) suzhe-22-xun-li：selects_right_through 只给必要的一向，原读法说「恰在」是夸大；现补上 selects_right_of_reads，作为充分的一向。原读法又把理用作择所经的映射，而名表中这个概念是「象」，理是承载变化之律的归并；现分开写。并注明这几条律不排序，排序只在以广为愈。七条都不涉及延续条件。仍待整合者裁定的是 tuan-kui 与 RO 判断的不同。"
+}

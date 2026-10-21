@@ -1,0 +1,304 @@
+{
+ "cluster": "C17",
+ "corrections": [
+  {
+   "id": "tuan-weiji-gangrou-ying",
+   "status": "revised",
+   "record_ids": [
+    "HX-R049"
+   ],
+   "source_id": "YD-HX01",
+   "layer": "先秦／传（彖传；易传成书年代有争议，部分或下及秦汉）",
+   "fragments": [
+    "雖不當位，剛柔應也。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Hexagram.weiJi_out_of_phase",
+    "Becoming.Hexagram.weiJi_opposed",
+    "Becoming.Hexagram.opposed_iff_phase",
+    "Becoming.Hexagram.out_of_phase_opposed"
+   ],
+   "records": [
+    "place-relations-in-context"
+   ],
+   "reading": "AI读法：未济六线皆不正（weiJi_out_of_phase，在未济一卦上逐线验算），三个高度都相应（weiJi_opposed）。「雖」把两者读作彼此相背：虽不当位，仍相应。脊柱给出二者的确切关系：同一高度的两位奇偶相反，所以一高度相应，恰在其两线同正或同不正之时（opposed_iff_phase，对每一卦、每一高度成立）；所以六线皆不正，必然各高度皆相应（out_of_phase_opposed）。定域：「雖」所示的转折在律中是蕴涵；不当位与相应不是彼此独立的两件事。同 Y1:weiji-ying。",
+   "names_used": [
+    "相应",
+    "当位",
+    "正",
+    "位"
+   ],
+   "work": "《彖·未济》",
+   "tradition": "易（共享经典）",
+   "locator": "未济彖",
+   "relational": "相应由同一高度两线各自与其位之奇偶的关系推出。",
+   "ro_passage": "",
+   "gap": ""
+  },
+  {
+   "id": "tuan-jiji-zhengwei",
+   "status": "revised",
+   "record_ids": [
+    "HX-R050"
+   ],
+   "source_id": "YD-HX01",
+   "layer": "先秦／传（彖传；易传成书年代有争议，部分或下及秦汉）",
+   "fragments": [
+    "剛柔正而位當也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.inPhase",
+    "Becoming.Hexagram.jiJi_inPhase",
+    "Becoming.Hexagram.inPhase_all_iff",
+    "Becoming.Hexagram.atSites",
+    "Becoming.Hexagram.phases_glue_iff"
+   ],
+   "records": [
+    "place-relations-in-context"
+   ],
+   "reading": "AI读法：既济六线皆正（jiJi_inPhase，在既济一卦上逐线验算），且六十四卦中只有既济如此（inPhase_all_iff）。逐位读出的「正」拼成全卦的一个读法，恰在既济与未济（phases_glue_iff）：既济六位皆正，未济六位皆不正，都是各位所示相同。《彖》以「剛柔正而位當」说全卦，正是拼成之一。相合只在这一位之关系；《彖》以此释「利貞」，「利貞」之断不在律中。同 Y1:zhengwei。",
+   "names_used": [
+    "正"
+   ],
+   "work": "《彖·既济》",
+   "tradition": "易（共享经典）",
+   "locator": "既济彖",
+   "relational": "全卦之正由六位各自的线对位之关系拼成。",
+   "ro_passage": "",
+   "gap": ""
+  },
+  {
+   "id": "tuan-dangwei-yijie",
+   "status": "revised",
+   "record_ids": [
+    "HX-R038"
+   ],
+   "source_id": "YD-HX01",
+   "layer": "先秦／传（彖传；易传成书年代有争议，部分或下及秦汉）",
+   "fragments": [
+    "當位以節，中正以通。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.tuanPlaceStatements",
+    "Becoming.Hexagram.tuanPlaceStatements_agree",
+    "Becoming.Hexagram.holdsPlace",
+    "Becoming.Hexagram.inPhase",
+    "Becoming.Hexagram.middle"
+   ],
+   "records": [
+    "fixed-places-and-sole-lines",
+    "place-relations-in-context"
+   ],
+   "reading": "AI读法：节彖之当位指九五：阳线居五位，五为奇位，所以当位；五又是上体之中位，所以中正。HexagramSites 列《彖》言一线之位者九句（tuanPlaceStatements，节九五 (60, p5, true) 在列），Lean 逐句核对：每一句都在两端之间，且无论按六位奇偶（inPhase）还是按初上无位（holdsPlace）读，都与该线是否当位相合（tuanPlaceStatements_agree）；九句是否已尽，由章之检查脚本在所存六十四页中找出，不由 Lean 证。九五居中由中位之定义（middle）读出。相合只在九五当位、居中这一位之关系。「以節」「以通」把节与通读成由当位、中正而得：没有一条律把线之当位或中正连到节或通，这是《彖》之断，不在律中（与 Y1:jian-dangwei 之「貞吉」同）；此处之「通」也不是名表之通（运行继续）。",
+   "names_used": [
+    "当位",
+    "正",
+    "中位"
+   ],
+   "work": "《彖·节》",
+   "tradition": "易（共享经典）",
+   "locator": "节彖",
+   "relational": "当位是线之值与其位之奇偶相合的关系；中正是此关系再加居中位。",
+   "ro_passage": "",
+   "gap": ""
+  },
+  {
+   "id": "tuan-dayou-zunwei",
+   "status": "revised",
+   "record_ids": [
+    "TP-H14-T-R01"
+   ],
+   "source_id": "YD-JP14",
+   "layer": "先秦／传（彖传；易传成书年代有争议，部分或下及秦汉）",
+   "fragments": [
+    "大有，柔得尊位，大中而上下應之，曰大有。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Hexagram.daYou_fifth",
+    "Becoming.Hexagram.daYou_answered",
+    "Becoming.Hexagram.middle",
+    "Becoming.Hexagram.inPhase",
+    "Becoming.Hexagram.sole"
+   ],
+   "records": [
+    "fixed-places-and-sole-lines",
+    "place-relations-in-context"
+   ],
+   "reading": "AI读法：结构部分在大有一卦上逐线验算（是一卦之事实，不是一般之律）：六五为阴线，居中位而不正，三个高度中只有中高度相应（daYou_fifth）；六五是独异之线，其余五线都与之相异（daYou_answered），即「上下應之」。相分在「尊位」：五位被读作尊位，把位读成等级。脊柱的位只有高度、两半与奇偶，不带贵贱（HexagramPlaces、HexagramSites 皆明言位之等级不在模块中）；「尊位」属 RO 所说的争胜与等级一层。所以本条记为相分（与 Y1:dayou-zunwei 一致）；独异之线的一般之律见 tuan-bi-shangxia-ying（answeredStatements_sole、sole_unique）。",
+   "names_used": [
+    "中位",
+    "独异",
+    "相应",
+    "正"
+   ],
+   "work": "《彖·大有》",
+   "tradition": "易（共享经典）",
+   "locator": "大有彖",
+   "relational": "居中而独异，是关系；称之为尊位，则加上了等级。",
+   "ro_passage": "",
+   "gap": ""
+  },
+  {
+   "id": "shuogua-shuwang-zhilai",
+   "status": "revised",
+   "record_ids": [
+    "WP-SG-C03-S02-R01"
+   ],
+   "source_id": "YD-OW-SG",
+   "layer": "先秦／传（说卦；易传成书年代有争议，说卦或下及秦汉，旧有河内女子得说卦之说）",
+   "fragments": [
+    "數往者順，知來者逆"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.no_prefix_fixes_next",
+    "Becoming.Learning.diagonal_misses",
+    "Becoming.Learning.determines_lumped_iff",
+    "Becoming.Learning.lumped_right_iff"
+   ],
+   "records": [
+    "learning-by-refutation",
+    "generalization-through-lumping",
+    "wisdom-root-without-axiom"
+   ],
+   "reading": "AI读法：说卦分两个方向：数往是顺着已有之往（历程之前段）读回，知来是逆着向尚未有者推。脊柱给出知来成立的确切范围。往不定下一值：对每一历程与每一步，有两条历程与之同一前段而在该步取不同之值，从前段提出之值不能在两者上都对（Learning.no_prefix_fixes_next）；只要每个值都可被换成另一值，任何外推都有一条历程（其对角历程），在其上它所提出的每一值都落空（Learning.diagonal_misses）。在随类而同的函数之中，有限所见定出新处之值，恰在某一所见与新处同类之时（Learning.determines_lumped_iff，值至少有两个）；这样推出之值为是，恰在世界在该所见处与新处取同一值之时（Learning.lumped_right_iff）。定域：知来只在所用归并把新处与所见归为一类、且世界在这一类上确实同一之处成立，它不是数往的延长。下文「是故易逆數也」若读作易能知来，脊柱不给在每一历程上都知来的方法。",
+   "names_used": [
+    "数往",
+    "知来",
+    "往",
+    "类",
+    "随类而同"
+   ],
+   "work": "《说卦》",
+   "tradition": "易（共享经典）",
+   "locator": "说卦第三章",
+   "relational": "往是已有的前段；来不由前段定，只在归并合于世界之处由所见定。",
+   "ro_passage": "",
+   "gap": ""
+  },
+  {
+   "id": "shuogua-yi-suo",
+   "status": "revised",
+   "record_ids": [
+    "WP-SG-C10-S03-R01",
+    "WP-SG-C10-S04-R01",
+    "WP-SG-C10-S05-R01",
+    "WP-SG-C10-S06-R01",
+    "WP-SG-C10-S07-R01",
+    "WP-SG-C10-S08-R01"
+   ],
+   "source_id": "YD-OW-SG",
+   "layer": "先秦／传（说卦；易传成书年代有争议，说卦或下及秦汉，旧有河内女子得说卦之说）",
+   "fragments": [
+    "震一索而得男，故謂之長男；",
+    "巽一索而得女，故謂之長女；",
+    "坎再索而得男，故謂之中男；",
+    "離再索而得女，故謂之中女；",
+    "艮三索而得男，故謂之少男；",
+    "兌三索而得女，故謂之少女。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.sole",
+    "Becoming.Hexagram.sole_iff_flip",
+    "Becoming.Hexagram.sole_flip",
+    "Becoming.Hexagram.flip",
+    "Becoming.Hexagram.flip_complement"
+   ],
+   "records": [
+    "fixed-places-and-sole-lines",
+    "what-a-commuting-law-keeps-apart",
+    "hexagrams-on-the-spine"
+   ],
+   "reading": "AI读法：沿用 RO：一索、再索、三索是从坤或乾在下、中、上一个高度变一线（震坎艮从坤，巽离兑从乾）；所得之卦，其独异之线就在所变之高度，长、中、少只是这三个高度之名。脊柱在六线层面证此结构：一线为独异之线，恰在其构形是从六线皆同（乾或坤）在该位变一线而得之处（Hexagram.sole_iff_flip）；如此一变必生独异之线（Hexagram.sole_flip）。同一索之二卦互补（震巽、坎离、艮兑），因变一线与取互补可交换（Hexagram.flip_complement）。说卦所言是三画卦，脊柱没有三画卦之型，三线上的同一陈述未单独证（见 gap）。C17 只记：索之次第是独异之线所在的位（高度）；男女与家族之名不带入。",
+   "names_used": [
+    "位",
+    "独异"
+   ],
+   "work": "《说卦》",
+   "tradition": "易（共享经典）",
+   "locator": "说卦第十章",
+   "relational": "索是从乾坤变一线之高度，所得之卦的独异之线即在此高度。",
+   "ro_passage": "shuogua-yi-suo",
+   "gap": "三画卦层面：三线构形中一线独异，恰在其为三线皆同者（乾或坤）在该高度变一线而得之时。最近：Becoming.Hexagram.sole_iff_flip（六线）、Becoming.Hexagram.flip_complement。"
+  },
+  {
+   "id": "daxue-zhi-suo-xianhou",
+   "status": "revised",
+   "record_ids": [
+    "RU1-DX-01-R17"
+   ],
+   "source_id": "RU1-S-DX",
+   "layer": "先秦至秦汉／《礼记》传世篇（大学成篇年代有争议，旧说出曾子及其门人，今多置战国至秦汉之际）",
+   "fragments": [
+    "物有本末，事有終始，知所先後，則近道矣。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Interleavings.LocalLaw.unique_iff",
+    "Becoming.Interleavings.LocalLaw.schedule_iff",
+    "Becoming.Interleavings.LocalLaw.run_of_courses",
+    "Becoming.Interleavings.LocalLaw.act_comm"
+   ],
+   "records": [
+    "the-step-index-from-own-courses"
+   ],
+   "reading": "AI读法：「知所先後」：知道何者在先、何者在后。Interleavings 给出步序在何处由关系定出：互不共享关系项的两次交换，先后对换而所达构形相同（act_comm）；所以使每一关系项之各自历程相同的两种交错，从同一起点达到同一构形（run_of_courses）；关系项已列出时，各自历程唯一定出交错，恰在每次交换都触及某一关系项、且每两次交换相同或共享关系项之时（unique_iff）；给定各自历程，一种交错存在，恰在调度于其交换总数之步内完成之时（schedule_iff，关系项已列出、交换可分辨）。定域：「事有終始」之先后，作为关系之事实，只在步与步共享关系项之处被定出；不共享之处，先后是表示所作的选择，不改变任何构形，没有可知的先后。「物有本末」与下文「欲治其國者，先齊其家」一类的次第是另一种序：成一事须先有另一事，不是交换的交错，不由 Interleavings 读出，本条不判。",
+   "names_used": [
+    "先后",
+    "交错"
+   ],
+   "work": "《礼记·大学》",
+   "tradition": "儒",
+   "locator": "大学首章",
+   "relational": "先后是步与步之间的次序，只在共享关系项处由关系固定；本末之序不在此读。",
+   "ro_passage": "",
+   "gap": ""
+  },
+  {
+   "id": "laozi-sz-bu-shishi",
+   "status": "revised",
+   "record_ids": [
+    "LC2-SZ-C10-R05"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "layer": "宋明／注（北宋苏辙《老子解》第十章注）",
+   "fragments": [
+    "言其先後常與天命會耳不然先者必蚤後者必莫皆失之矣故所謂能為雌者亦不失時而已"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.TimedResponse.answer_alike_before",
+    "Becoming.TimedResponse.different_answers_require_reached",
+    "Becoming.TimedResponse.ReachedBy",
+    "Becoming.Branching.juncture_iff",
+    "Becoming.Branching.losing_not_returns",
+    "Becoming.Branching.loss_passes_juncture",
+    "Becoming.Branching.no_juncture_of_keeps"
+   ],
+   "records": [
+    "timely-response-necessity",
+    "every-loss-passes-a-juncture"
+   ],
+   "reading": "AI读法：苏辙以易「先天而天弗違」「後天而奉天時」解「能為雌」：上文「聖人循理而知天命則待唱而後和」，是待所应者至而后答；本句说有一段可答之步，早于它、晚于它都失。脊柱给出两端各自的律，各带条件，两端合为一个窗口的定理尚缺。早的一端：在 TimedResponse 的前提下（两条历程起点水平相同、每步在场之形成相同且皆衡，来源以外者凡其耦合所读相同则取与相同），读者之答若只经其耦合读出，则来源至期未及读者（至期所及不成立）时，两条历程中其答相同（answer_alike_before）；至期所及可判定时，答有不同则必已至期所及（different_answers_require_reached）。晚的一端在机：机是既有护闭之一步（其后所护者仍可再得）、又有失之一步（其后不可再得）的构形（juncture_iff，定义）；只取失之步的过程不回到所护者（losing_not_returns）；可回之构形每一次失去，途中必经一机（loss_passes_juncture，结论为双重否定）。定域：「先者必蚤」之失只在所需之答随来源而异之处成立（同一答于两者皆可时，早答不失）；「後者必莫」之失只在途中有机之处成立（过程处处能回到所护者时途中无机，no_juncture_of_keeps，晚答不失）。两端合一见 G9（laozi-sz-weizhi-yuweiyou 之 gap）。「天命」在此与所引「天時」并举，读作所遇之时机，不取意志之义；若读作有意志之命，则是不采之字表「天」「命」所记的意志层，属相分，不在本条。",
+   "names_used": [
+    "机",
+    "至期所及",
+    "护闭"
+   ],
+   "work": "苏辙《老子解》第十章",
+   "tradition": "道",
+   "locator": "老子解·第十章",
+   "relational": "可答之步在至期所及之后、机之前：至期未及之答不随来源而异，过机而取失之步者不回。",
+   "ro_passage": "",
+   "gap": "G9（见 laozi-sz-weizhi-yuweiyou）：把 TimedResponse 之至期所及与 Junctures 之机连成一条定理。"
+  }
+ ],
+ "drops": [],
+ "passed": [],
+ "notes": "我检查了全部 8 条。8 条片段都用 ctq.py text 对过冻结文本，逐字无误，出处也对。修正中新引的原文都已核过，包括说卦第十章其余四句、「利貞」、「是故易逆數也」、「欲治其國者，先齊其家」、「聖人循理而知天命則待唱而後和」、「先天而天弗違」、「後天而奉天時」。所引声明（含新增的 sole_iff_flip、sole_flip、determines_lumped_iff、lumped_right_iff、loss_passes_juncture、no_juncture_of_keeps、TimedResponse.ReachedBy）都用 resolve.py 解析到自身，也在 zhonghua 工作树的 Becoming/*.lean 中以全名找到，我读过它们的前提和文档注释。所引记录都在 results/records 中。\n\n8 条都改了，因为（5）要求分层先写时代，而 8 条原来都把层类写在前（如「传／先秦至秦汉」）。现在改为「先秦／传（…）」「宋明／注（…）」，与已修订的兄弟条目一致。下面是实质改动。\n- tuan-weiji：「相反相成」把「雖」的让步说错了，让步是说两者相背；「两个好处」带进了评价；读法里单用「应」指爻之相应，违反名表（单用「应」只作回应，爻之关系作「相應」）。\n- tuan-jiji：HX-R050 的关系是以「正而位当」释「利貞」，现补一句：「利貞」之断不在律中。\n- tuan-dangwei：原读法把整句判为相合，可 Lean 只核对九五当位。「以節」「以通」把节、通读成当位、中正的结果，这在律中没有，现照 Y1 jian-dangwei 的先例写明是剩余。「中正以通」原来没有讲到。tuanWhole_* 与节卦无关，已删去。九句是否已尽由检查脚本找出，Lean 不证这一点。此处的「通」也不是名表的通。\n- tuan-dayou：说明 daYou_fifth、daYou_answered 是对大有一卦的验算，不是一般之律；names_used 补「正」。\n- shuogua-shuwang：「逆着记录」误读了逆。goAlike_iff_lumped 不证「知来须靠归类模型」，换成 determines_lumped_iff 与 lumped_right_iff，这两条恰好给出知来成立的范围。Run.AgreeUpTo 只是定义，与 Learning 中的历程不是同一对象，已删去。names_used 原有「以往知来」，名表里没有这个名，现改为知来、往、类、随类而同。「配置」「进程」改用名表的构形、历程。diagonal_misses 要求每个值都可被换成另一值，现已写出。\n- shuogua-yi-suo：原来只有震、兑两句片段，记录却列了六个，现补齐六句。原读法引 flip、changes 说三画卦。实际上 Hexagram 只有六线，RO 本来就说三线上的陈述脊柱没有。现改引 sole_iff_flip、sole_flip（独异之线恰在乾坤一变之处，在所变之位），并补上 gap。\n- daxue：unique_iff 漏了「每次交换都触及某一关系项」和「关系项已列出」两个条件。原读法说八条目次第「属单一中心一层」，但它在片段之外，未经论证，Interleavings 也读不出。本末与「欲……先……」是成一事须先有另一事之序，现改为不判。前一位核查者认可「单一中心」之说，我不同意。\n- laozi-sz-bu-shishi：names_used 与 relational 把「时」用作窗口，名表的时是情境，前一位核查者对别条也提过同一问题。juncture_iff 是 Iff.rfl，原文未说明。定域没有写出成立的条件，现补：早答之失要求所需之答随来源而异，晚答之失要求途中有机（no_juncture_of_keeps）。TimedResponse 的前提已写明。不采之字表把天命诸条记为意志层的相分，所以「天命」之读现在先给出论据（与「天時」并举），并说明意志之读属相分。gap 填 G9。成闭在名表中锚于锁定（DrawnInto、locked_in），不锚于 Junctures.losing，所以读法不用这个名，只写「失之一步」。\n\n没有删除的条目。8 条都不涉延续条件与排序。还有两点交整合者：一是 shuogua-yi-suo 可补三画卦层面的定理；二是 Junctures 的文档注释把成闭读作 losing，名表的成闭则锚于锁定，两者不一致。"
+}

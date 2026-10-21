@@ -1,0 +1,58 @@
+{
+ "cluster": "C13",
+ "corrections": [
+  {
+   "id": "mengzi-tui-en",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0007"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·战国中期（孟子与齐宣王问答）·原典（《孟子·梁惠王上》）；成书无重大年代争议；文本据维基文库简体转录，非校勘本",
+   "layer_checked": "先秦；无重大年代争议",
+   "fragments": [
+    "故推恩足以保四海，不推恩无以保妻子。",
+    "古之人所以大过人者，无他焉，善推其所为而已矣。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.beyond_gives_nothing",
+    "Becoming.Flow.Balances.consumption_ends_with_feeders",
+    "Becoming.Overshoot.ends_through_feeder",
+    "Becoming.Redundant.either_suffices",
+    "Becoming.Clearing.levels",
+    "Becoming.Clearing.closure_supported",
+    "Becoming.Flow.withinInfluence_of_withinFeeding",
+    "Becoming.Flow.withinSystem_of_withinInfluence",
+    "Becoming.Viability.kernel_and_iff",
+    "Becoming.Viability.kernel_allOf_iff",
+    "Becoming.Viability.ChoicePoint.each_not_joint",
+    "Becoming.Renewable.kept_part_not_renewal"
+   ],
+   "records": [
+    "feeding-closure",
+    "consumption-ends-with-feeders",
+    "levels-of-closure",
+    "conditions-kept-together"
+   ],
+   "reading": "AI读法：本条只对其中依存与保持之结构。孟子此言是劝王之应当之论；脊柱于此不推出应当（consumption-ends-with-feeders 之不推出项），何者之终计入由凡续皆有顾（陈述而不断言）定范围，排序只在以广为愈。脊柱没有「恩」之模型：把恩所及读作所及者所需之条件得到给予，是本读法之设定。（一）「不推恩无以保妻子」有确切范围。一般律：资域之外者在某步在场时，不在该步向资域成员当时所需之条件给予（Flow.beyond_gives_nothing）；在平衡、只有活跃者给予、活动需要支持之下，一个形成自 T 起在其活跃之每步需要并取用某条件，而自 T 起供给其延续者都不被支持，则它自 T 起之连续活跃至多为该条件在 T 之水平那么多步（Flow.Balances.consumption_ends_with_feeders）。见证（各是一个构造模型，不是一般律）：一个跨步保住自身支持之形成，其取用破坏了供给者之依存，供给者自第 1 步起不被支持，它自第 1 步起至多再活跃一步，自第 2 步起无一被支持（Overshoot.ends_through_feeder）；两个供给者有冗余时，任一在，消耗者每步活跃且被支持（Redundant.either_suffices）；Clearing 中栖居者在清除者之群域之内、扰域之外，清除者资域内者每步被支持、清除者每步活跃，而栖居者自第 2 步起不被支持（Clearing.levels，Clearing.closure_supported）。资域在扰域之内，扰域在群域之内（Flow.withinInfluence_of_withinFeeding，Flow.withinSystem_of_withinInfluence），包含都可以严格。所以此句成立之处是：恩所未及者在妻子之资域内，且妻子之供给者都失去支持；其终结至多迟至所取条件之水平所容之步数。恩所未及者在群域内而在资域外，或供给有冗余处，不推仍可保妻子。（二）「推恩足以保四海」是充分性断言。读「保四海」为诸部分之守卫同时保持（得兼）：在每条进程下，诸守卫同时保持恰当每一个都在每条进程下保持（Viability.kernel_and_iff，Viability.kernel_allOf_iff，一般律）；沿某条进程则不然，两个守卫各自可保持而联合不可保持（Viability.ChoicePoint.each_not_joint，见证）；一个部分之活动在每条进程下保持，也既不决定更新，也不决定运行对他者做什么（Renewable.kept_part_not_renewal，见证）。所以此句只在所及每一部分之守卫都在每条进程下保持处成立；由恩之所及推出所及者得保，脊柱无此律。对本簇：读妻子与四海为同在一个群域之内，保妻子所依者只是其资域；由近及远之推及，在上述前提下于资域之内是保近之条件，于资域之外不是；四海之同时保持另需得兼之条件。「推」以己度人之结构归推类，见 C14 ru-mengzi-tui-en，本条不论。",
+   "names_used": [
+    "资域",
+    "扰域",
+    "群域",
+    "得兼",
+    "凡续皆有顾",
+    "以广为愈"
+   ],
+   "gap": "脊柱没有「恩」之模型，也没有「所及即得保」之律；以恩所及读作所及者所需条件得到给予是 AI 设定。「王请度之」之应当不由依存结构推出。",
+   "locator": "孟子·梁惠王上 第7章",
+   "relational": "是：保近依其资域，保远需诸部分各自之条件；「大过人」是对人之评比，本条不取；非关系层：无",
+   "ro_passage": "ru-mengzi-tui-en",
+   "tradition": "儒",
+   "work": "孟子"
+  }
+ ],
+ "drops": [],
+ "passed": [],
+ "notes": "mengzi-tui-en revised. Checks: both fragments exact in RU2-S-MZ (梁惠王上·7, unit RU2-U-MZ01-07); every declaration resolves with an empty rename path and was read in the Lean (Interdependence, Feeding, Feedback, JointKeeping, Selection); all four records exist. Faults found in the kept text: (1) Overshoot.ends_through_feeder and Renewable.kept_part_not_renewal are witnesses in one constructed model each, cited as if laws (the RO chapter row even labels the passage 一般律); now marked as witnesses. (2) Web.SelectsThrough.widen states only that a selection through couplings stays so under more coupling (obs ⊆ obs'); the reading called it 「选择之扩大」, which misstates it, and the name table places 推 under 推类 (Learning, generalization through lumping), which the checked C14 entry ru-mengzi-tui-en already carries. Removed here, with a pointer to C14. (3) Flow.beyond_gives_nothing was listed but unused; now used. (4) 「这一半成立」 overclaimed. consumption_ends_with_feeders needs balance, Acting, Dependent, requiring and taking at every active step, and every feeder from T unsupported, and it bounds the end by the level. Redundant.either_suffices (redundant feeders) and Clearing.levels/closure_supported (beyond the feeding closure but within the system) show where not extending still keeps the near; both added. (5) The cluster sentence 「群之保持需要所依之闭包被及，由近及远之推及是必要方向」 is proved by nothing and brings in a direction or ordering outside 以广为愈. 「与大学本末同一结构」 is an identity nobody checked. Both removed. (6) The sufficiency half now gets an exact scope from conditions-kept-together: Viability.kernel_and_iff and kernel_allOf_iff (general laws; kernel_and_iff is the table anchor of 得兼) and ChoicePoint.each_not_joint (counterexample witness). (7) Record consumption-ends-with-feeders added, since it is the law's own record; levels-of-closure is now actually used (群域, 扰域, 资域 inclusions). (8) The layer now puts the period first, with the edition note (Wikisource simplified transcription). (9) The normative force is marked as not derived; the continuation condition (凡续皆有顾) is stated, not asserted; ordering is placed in 以广为愈 alone. Kind kept as scope, consistent with RO and the checked C14 entry. Note for the integrator: RU2-R0007 is placed in both C13 (this entry) and C14 (ru-mengzi-tui-en); the two readings now do not overlap (C13 covers dependence and joint keeping, C14 covers 推类)."
+}

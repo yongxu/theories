@@ -1,0 +1,426 @@
+{
+ "cluster": "C02",
+ "corrections": [
+  {
+   "id": "xugua-qiong-bi-guai",
+   "status": "revised",
+   "record_ids": [
+    "WP-XG-C02-S08-R03",
+    "WP-XG-C02-S09-R03"
+   ],
+   "source_id": "YD-OW-XG",
+   "layer": "先秦·传·序卦（战国末至汉初，年代有争议）",
+   "fragments": [
+    "家道窮必乖，故受之以睽 ；睽者乖也。",
+    "乖必有難，故受之以蹇 ；蹇者難也。"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Web.Broken",
+    "Becoming.Crossing.loss_does_not_decide",
+    "Becoming.Hexagram.order_paired"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "hexagrams-on-the-spine"
+   ],
+   "reading": "AI读法：「家道窮必乖」「乖必有難」说一个依存走到尽处之后，下一构形必为乖，乖之后必有难。把「家道窮」读作一个依存之断（绝，Web.Broken：该步起点满足，跨一步后不满足）是AI之读；序卦之「窮」（终尽）不是名表之「穷」（降到阈下之断点）。脊柱中断裂不决定此后之去向：在一个构造的过程中，从同一配置出发的三次运行在第一步断裂同一依存（按步首之读），此后分别终止、转化、恢复，去向由构成断裂的那一步动作选定（Crossing.loss_does_not_decide；这是一个模型中的见证，不是普遍律）。一个反例足以否定「由断裂必至某一构形」这一普遍形式，所以经文的「必」与脊柱相分：乖只是诸去向之一，不由断裂而定。卦序另论：睽是家人之覆，二者是一对（Hexagram.order_paired，见 RO xugua-within-pairs）；睽→蹇在两对之间，构形上没有已检之关系（RO xugua-between-pairs，相分）。以卦序串联的「故受之以」推理不取。",
+   "names_used": [
+    "绝"
+   ],
+   "layer_checked": "冲突之结构（非四个非关系层之一）：断言由断裂必至某一构形；脊柱之见证否定其普遍性",
+   "tradition": "易",
+   "work": "序卦",
+   "locator": "序卦下篇 家人、睽、蹇",
+   "relational": "家道穷→乖→难",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "lao-42-chong-qi-yi-wei-he",
+   "status": "revised",
+   "record_ids": [
+    "LL-R005",
+    "LL-R006",
+    "LL-R007"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "先秦·经·《老子》（战国；成书年代有争议；郭店简本无此章，马王堆帛书甲本作「中氣以為和」；传世王弼本系统）",
+   "fragments": [
+    "万物负阴而抱阳，冲气以为和"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.withinGap_iff_between",
+    "Becoming.Flow.stays_between_at",
+    "Becoming.Flow.settles",
+    "Becoming.Regulation.Overshooting.never_at",
+    "Becoming.Flow.restores",
+    "Becoming.Flow.excess_lowers",
+    "Becoming.LoopReturn.closing_needs_less",
+    "Becoming.LoopReturn.closes_within"
+   ],
+   "records": [
+    "two-sided-regulation-and-late-reading",
+    "supported-renewal-recovery",
+    "own-count-misses-joint-excess",
+    "whether-a-loop-closes-a-difference"
+   ],
+   "reading": "AI读法：沿用RO定域之判。「冲气以为和」读作中和：两种相反的作用经由中介保持一个水平。脊柱给出它成立的确切范围。在衡之下，一步的联合交换偏离均等不超过水平与 m 之差，恰是下一水平落在 m 与当前水平之间（Flow.withinGap_iff_between：中节，界恰为无过冲）；步步如此，水平永不越过 m（Flow.stays_between_at）；再加上交换步步与偏离相反，水平自 T 起经其与 m 之差那么多步后定于 m（Flow.settles）。越界则过正：在一个构造的模型中，交换步步相反而越界，水平来回摆动，永不到 m（Regulation.Overshooting.never_at，见证）。一偏只得单向之部分：步步净给则水平在定步内回到 m 以上（Flow.restores），共取过与每步至少降一（Flow.excess_lowers）；回路闭合一个正差须有不校之一环，即交回少于所受（LoopReturn.closing_needs_less），每个正差都交回较少者，从差 d 起至多 d 轮闭合（LoopReturn.closes_within）。定域：「和」不随负阴抱阳而必至，只在两侧有界且相反之处成立。「万物负阴而抱阳」若作万物普遍由阴阳二气构成，入本原层，脊柱不取；「气」不采为名。RO 原列的两条回路律已于R22改为今名，内容不变。",
+   "names_used": [
+    "衡",
+    "中和",
+    "中节",
+    "过正",
+    "一偏",
+    "共取过与",
+    "不校"
+   ],
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第四十二章",
+   "relational": "万物—阴阳：负而抱，冲气以为和",
+   "gap": "",
+   "ro_passage": "lao-42-chong-qi-yi-wei-he"
+  },
+  {
+   "id": "lao-67-ci-gu-neng-yong",
+   "status": "revised",
+   "record_ids": [
+    "LL-R032",
+    "LL-R035",
+    "LL-R036"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "先秦·经·《老子》（战国；成书年代有争议；郭店简本无此章；马王堆帛书乙本三句俱在而作「則死矣」，帛书甲本无「舍俭且广」一句而作「則必死矣」；传世王弼本系统）",
+   "fragments": [
+    "慈故能勇，",
+    "今舍慈且勇，舍俭且广，舍后且先，死矣！"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.consumed_ends_when_fixed",
+    "Becoming.Web.consumed_continues_transformed",
+    "Becoming.Web.Carries",
+    "Becoming.Web.Carries.consumed_lasts",
+    "Becoming.Crossing.loss_does_not_decide"
+   ],
+   "records": [
+    "becoming-dependence-dynamics",
+    "reserve-defers-ending"
+   ],
+   "reading": "AI读法：「慈故能勇」「俭故能广」读作勇以慈为所待、广以俭为所待、先以后为所待；这些依存是经文自己的断言，脊柱不证（俭与广另见 lao-67-jian-gu-neng-guang：律不给出俭为广之必要条件）。「故能」之由所待致能（充分方向）脊柱不给：有待只是活动蕴含受支撑，不由支撑导出活动。「舍慈且勇……死矣」说去其所待而仍取其依者则终止。脊柱给出它成立的确切范围：在有待之下，经一个无回程的损失而依存不变者，此后每步都不活动（Web.consumed_ends_when_fixed）；有蓄者（Web.Carries，表示前提），终止被推迟而不被逃脱，此后不在任意晚之步活动（Web.Carries.consumed_lasts）。反之，在有待之下失所待而仍活动者，必已减弱或消解其依存（Web.consumed_continues_transformed）；一个构造的过程见证同一断裂之后终止、转化、恢复都可出现（Crossing.loss_does_not_decide，见证，不是普遍律）。定域：「死矣」恰在依存不变、所待不复之处成立，依存转化或所待复回处不成立。又，依存不变而有待，则「舍慈且勇」本身不能有：勇随慈之失即不活动；经文所警的越出所待之活动，在脊柱中是蓄所承载者，其终推迟而必至。三宝的德目内容不取，只取舍所待而存依者之结构。",
+   "names_used": [
+    "待",
+    "所待",
+    "有待",
+    "蓄"
+   ],
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第六十七章",
+   "relational": "勇—慈、广—俭、先—后：舍其所待则死",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "lao-36-yu-yuan",
+   "status": "revised",
+   "record_ids": [
+    "LAO2-C36-R07"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "先秦·经·《老子》（战国；成书年代有争议；郭店简本无此章，马王堆帛书乙本作「魚不可說於淵」；传世王弼本系统）",
+   "fragments": [
+    "鱼不可脱于渊，"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.LivesOn",
+    "Becoming.Web.Dependent",
+    "Becoming.Web.consumed_ends_when_fixed_at"
+   ],
+   "records": [
+    "living-on-and-descent",
+    "support-from-the-supported",
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：鱼以渊为生，读作食（Web.LivesOn：资于渊，且以正需依之；这是定义，不是律）。「不可脱」读作：只在受支撑时活动者，若对所待之依存如前、所需不降，而所待之水平低于先前之需，则它在该步不活动（Web.consumed_ends_when_fixed_at，有待在一步上的逆否）。脱于渊在脊柱中只能表为鱼所待之条件（鱼所在之水）的水平降到所需之下，这是表示之选择；渊本身并不终止，所以不引所依之有形者本身不活动时之律（俱亡）。鱼依于渊是经文之断言，脊柱只证若依存如此则如何。相合。同章「将欲歙之，必固张之」与「国之利器不可以示人」见 RO lao-36-jiang-yu-xi-zhi（相分）；鱼渊在章中是利器不可示人之比况，本条只取鱼渊之依存，比况之用不取。",
+   "names_used": [
+    "食",
+    "资",
+    "正需",
+    "待",
+    "所待",
+    "有待",
+    "俱亡"
+   ],
+   "tradition": "道",
+   "work": "老子",
+   "locator": "第三十六章",
+   "relational": "鱼—渊：不可脱",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "ru-lunyu-zheng-ming",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-13-03-R01",
+    "RU1-LY-13-03-R02",
+    "RU1-LY-13-03-R03",
+    "RU1-LY-13-03-R04",
+    "RU1-LY-13-03-R05"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦·经·《论语》（春秋末至战国编成）",
+   "fragments": [
+    "名不正，則言不順；言不順，則事不成",
+    "刑罰不中，則民無所措手足"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.carries_law_iff",
+    "Becoming.IdentifiesAlike.carries",
+    "Becoming.Twins.naming_not_identifiesAlike",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Web.rename_tenure"
+   ],
+   "records": [
+    "projection-carrying-a-law",
+    "process-and-frame-as-readings",
+    "configurations-alike-by-relation",
+    "selection-through-a-model-of-the-options",
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：沿用RO定域之判。前两环有脊柱对应：一个投影恰在经它相同的构形同样变化之处承载一条确定之律（carries_law_iff），名承载律时言才「順」；描述有意义（正名）而框架在相同之下确定时，它承载律（IdentifiesAlike.carries）；把在一切关系中都相同的两个后继分开的命名没有意义（Twins.naming_not_identifiesAlike，一个构造模型中的见证）；名把应分者归并时，经由它的任何等变选择都不能恰选所需（Learning.selects_not_right_of_parted），这是「事不成」之构。改名保持由关系定义的读数（Web.rename_tenure，四个等价都是定义上的同一，Iff.rfl，不是另一条律）：名无固宜，「正」不是找回本来正确之名，而是名与它所归并者之变化相合。定域：「則」链只在名是否承载律这一环有律；礼乐、刑罚、民无所措手足诸环是经文断言的连锁，脊柱不证。「不正」「不順」「不中」是不合，不是不活动，所以此链不读作俱亡（原条所增两条共灭之律已去）。经文中正名兼指名分，由为政者正之，是单一中心与等级之层，脊柱不取（相分之面）。",
+   "names_used": [
+    "名",
+    "正名",
+    "名无固宜",
+    "俱亡"
+   ],
+   "layer_checked": "意志或单一中心、争胜与等级：正名兼指名分，由为政者正之（相分之面）",
+   "tradition": "儒",
+   "work": "论语·子路",
+   "locator": "子路第三章",
+   "relational": "名→言→事→礼乐→刑罚→民：不正则不顺……",
+   "gap": "",
+   "ro_passage": "ru-lunyu-zheng-ming"
+  },
+  {
+   "id": "lunyu-min-wu-xin-bu-li",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-12-07-R01"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦·经·《论语》（春秋末至战国编成）",
+   "fragments": [
+    "足食，足兵，民信之矣。",
+    "民無信不立"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Supported",
+    "Becoming.Web.consumed_ends_when_fixed_at",
+    "Becoming.Web.consumed_continues_transformed"
+   ],
+   "records": [
+    "support-from-the-supported",
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：「足食，足兵，民信之矣」列政之三个所待：食、兵、信（子贡问「於斯三者何先」，可见是并列三者，不是由足食足兵致信）。受支撑（容）是对每个所需的合取，每一所需被满足为足（Web.Supported）。「民無信不立」说信是立之所待，缺之则不立（小故）。已检之律：只在受支撑时活动者，若对某条件之依存如前、所需不降，而该条件低于先前之需，则它在该步不活动（Web.consumed_ends_when_fixed_at，有待在一步上的逆否）。立依于信是经文之断言，脊柱只证若依存如此则如何。「去兵」「去食」之后仍立，在有待之下意味着立对兵、食本无依存，或其依存已减弱或消解（Web.consumed_continues_transformed）。所需之大小不给去取之先后：在容之下，任何一个所需未被满足都使之不立，不论各需多大；原条以诸所需之轻重表去兵、去食之次序，是误读。何者先去是一种比较，脊柱不给；凡排序只在以广为愈（设，不断言）。相合限于「民無信不立」之必要方向；「足」在此是单个所需被满足，不是容。",
+   "names_used": [
+    "足",
+    "容",
+    "所待",
+    "小故",
+    "有待",
+    "以广为愈"
+   ],
+   "tradition": "儒",
+   "work": "论语·颜渊",
+   "locator": "颜渊第七章",
+   "relational": "政—食、兵、信：民无信不立",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zhonglun-yin-yuan-jia-ming",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-M29",
+    "FO1-R-M31"
+   ],
+   "source_id": "FO1-S-MMK",
+   "layer": "魏晋南北朝·论·龙树偈、青目释，鸠摩罗什译（后秦；印度原本）",
+   "fragments": [
+    "眾因緣生法，我說即是無，亦為是假名，亦是中道義。",
+    "眾緣具足和合而物生，是物屬眾因緣故無自性，無自性故空"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.identifiesAlike_iff",
+    "Becoming.Web.reidentify_dependent",
+    "Becoming.Web.rename_unceasing"
+   ],
+   "records": [
+    "configurations-alike-by-relation",
+    "identity-across-steps"
+   ],
+   "reading": "AI读法：沿用RO相合之判，限于其关系核心。「是物屬眾因緣故無自性」：脊柱中构形之同由它怎样相关而定（互模拟）；一个描述有意义（正名），恰在它所等同者关系一致、且它等同一切关系一致者（identifiesAlike_iff）。认同是对关系的描述，不是离开关系的自性；这是一条关于描述的律，不是说每一关系项都已被其关系辨认。「亦為是假名」：两套命名之间逐步给出的改认保持有待（Web.reidentify_dependent），一一改名保持不息（Web.rename_unceasing）：所实者是依存，名可换。「眾緣具足和合而物生」之由具足致生（充分方向）脊柱不给：有待只是活动蕴含受支撑，不由支撑导出生起；此句只取「屬眾因緣」之依存。「空」只读作无自性，不读作无；偈中之「無」，青目释以「我說即是空」承之。空作解脱目标、中道立为名，不取。RO 为本条片段之外的偈句所引之律已去。",
+   "names_used": [
+    "正名",
+    "改认",
+    "有待",
+    "不息"
+   ],
+   "tradition": "佛",
+   "work": "中论·观四谛品（青目释）",
+   "locator": "观四谛品第二十四",
+   "relational": "法—众因缘：属众因缘故无自性",
+   "gap": "",
+   "ro_passage": "zhonglun-yin-yuan-jia-ming"
+  },
+  {
+   "id": "shengman-sui-duan",
+   "status": "revised",
+   "record_ids": [
+    "FO2-SM-R008",
+    "FO2-SM-R009",
+    "FO2-SM-R011"
+   ],
+   "source_id": "FO2-SM",
+   "layer": "魏晋南北朝·经（刘宋 求那跋陀罗译；印度原本）",
+   "fragments": [
+    "此四種住地，生一切起煩惱。",
+    "亦令四種煩惱久住。",
+    "若無明住地斷者，過恒沙等如來菩提智所應斷法，皆亦隨斷。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Embodied",
+    "Becoming.Web.coextinct",
+    "Becoming.Web.active_along",
+    "Becoming.Web.Carries.coextinct_lasts"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "reserve-defers-ending",
+    "support-from-the-supported"
+   ],
+   "reading": "AI读法：「此四種住地，生一切起煩惱」「亦令四種煩惱久住」说所依者使依之者生起、久住；「若無明住地斷者……皆亦隨斷」说所依者断，依之者随断。后者有已检之律：在有待之下，于形成与条件为同一关系项两种角色的读法中，一个关系项在某步不活动，则凡以正需、经有形关系项之依存链达到它的形成，在该步都不活动（俱亡，Web.coextinct）；活动沿这样的链传递（Web.active_along）。有蓄者其终推迟而不被逃脱：所依之有形者自 T 起不活动、依之者自 T 起以正需依之，则依之者不在任意晚之步活动（Web.Carries.coextinct_lasts）。定域：「隨斷」恰在依存不变、所依者有形、以正需相依之处成立，有蓄则推迟而至；「生」与「令四種煩惱久住」之由所依者致依之者生起与持续（充分方向），脊柱不给：有待只是活动蕴含受支撑，不由支撑导出生起或活动。「一切皆依無明住地生」是经文之断言，脊柱只证若依存如此则如何。「斷」作为修行之目标的价值方向不取；无明住地之「無明」不是名表之无明。",
+   "names_used": [
+    "待",
+    "有待",
+    "有形",
+    "正需",
+    "俱亡",
+    "蓄"
+   ],
+   "tradition": "佛",
+   "work": "胜鬘经",
+   "locator": "一乘章",
+   "relational": "无明住地—四住地—起烦恼：生、久住；断则随断",
+   "gap": "",
+   "ro_passage": ""
+  },
+  {
+   "id": "zaahan-ci-you-gu-bi-you",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-SA-D00",
+    "FO1-R-SA-D01",
+    "FO1-R-SA-D02",
+    "FO1-R-SA-D03",
+    "FO1-R-SA-D04",
+    "FO1-R-SA-D05",
+    "FO1-R-SA-D06",
+    "FO1-R-SA-D07",
+    "FO1-R-SA-D08",
+    "FO1-R-SA-D09",
+    "FO1-R-SA035"
+   ],
+   "source_id": "FO1-S-SA",
+   "layer": "魏晋南北朝·经·汉译阿含（刘宋 求那跋陀罗译；说一切有部原本）",
+   "fragments": [
+    "謂此有故彼有，此起故彼起",
+    "此無故彼無，此滅故彼滅",
+    "若比丘無明離欲而生明，彼無明滅則行滅，乃至純大苦聚滅"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Embodied",
+    "Becoming.Web.coextinct",
+    "Becoming.Web.Carries.coextinct_lasts"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "reserve-defers-ending",
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：沿用RO之结构读法，改判定域。「此無故彼無，此滅故彼滅」是依存之必要方向（小故）：在有待之下，彼以正需依于有形之此，此在某步不活动则彼在该步不活动，沿依存链亦然（俱亡，Web.coextinct）；有蓄者其终推迟而不被逃脱（Web.Carries.coextinct_lasts）。十二支读作一条依存链：「無明滅則行滅，乃至純大苦聚滅」是链首不活动则链所达者皆不活动。各支相依是经文之断言，脊柱只证若依存如此则如何。定域：「此有故彼有，此起故彼起」若读作由此之有导出彼之有（充分方向），脊柱不给：有待只是活动蕴含受支撑，不由所依之有导出依者之有；此句只在彼已活动处读作彼之有须此之有。RO 判为相合，把「此有故彼有」读作依存中的共起；此处按其字面之充分方向改判定域，与本簇「三事和合生觸」一条（定域）一致。RO 为「如實正觀世間集」一句所引之律，因该句不在本条片段内，已去；原条所引「每一已满足之依存或持或绝」不读「此有故彼有」，亦去。十二支之定链与还灭作为解脱目标不取。",
+   "names_used": [
+    "待",
+    "小故",
+    "有待",
+    "正需",
+    "有形",
+    "俱亡",
+    "蓄"
+   ],
+   "tradition": "佛",
+   "work": "杂阿含经",
+   "locator": "杂阿含经第297经（大空法經）、第298经（法說義說）等；「此無故彼無，此滅故彼滅」見第262、335、358经",
+   "relational": "此—彼：此有故彼有，此灭故彼灭；无明→行→识→……→生",
+   "gap": "",
+   "ro_passage": "zaahan-ci-you-gu-bi-you"
+  },
+  {
+   "id": "zaahan-yi-xiang",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-SA028"
+   ],
+   "source_id": "FO1-S-SA",
+   "layer": "魏晋南北朝·经·汉译阿含（刘宋 求那跋陀罗译；说一切有部原本）",
+   "fragments": [
+    "非緣眼愛生眼受，但緣眼受生眼愛"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Dependent",
+    "Becoming.Web.Embodied",
+    "Becoming.Web.Embodied.active_of_bearing",
+    "Becoming.Downstream.one_way"
+   ],
+   "records": [
+    "life-as-condition-of-life",
+    "support-from-the-supported",
+    "derived-extent-limits"
+   ],
+   "reading": "AI读法：「但緣眼受生眼愛」读作爱以受为所待；「非緣眼愛生眼受」说此依存不反向。脊柱中依存是从待者指向所待的关系，不必对称。已检之律给出方向：在有待之下，一个形成以正需依于一个有形之关系项，则此形成只在该关系项活动时活动（Web.Embodied.active_of_bearing）；律只由依者之活动推到所依者之活动，不反推，除非所依者也以正需依于依者。依存可以单向，有一个构造模型中的见证（Downstream.one_way，见证，不是普遍律）：自身只依其地，每步受支撑而活动；以它所给为生的下游在它停给之后终止，而自身不依下游。相合：经文所给之方向即依存之方向。受、爱以正需相依、受为有形，是表示之选择；「生」之由受致爱生起（充分方向）脊柱不给。断爱作为解脱目标不取。",
+   "names_used": [
+    "待者",
+    "所待",
+    "有待",
+    "正需",
+    "有形"
+   ],
+   "tradition": "佛",
+   "work": "杂阿含经",
+   "locator": "杂阿含经第453经（种种界诸经）",
+   "relational": "眼受—眼爱：缘受生爱，非缘爱生受",
+   "gap": "",
+   "ro_passage": ""
+  }
+ ],
+ "drops": [],
+ "passed": [],
+ "notes": "核验范围：10 条全部核过。20 个片段都用 ctq.py text 核过，都在所注之源中逐字命中（「謂此有故彼有，此起故彼起」在杂阿含有 10 处，「此無故彼無，此滅故彼滅」有 3 处，分属第262、335、358经；冻结本的经号标在每经之前，故「若比丘無明離欲而生明……」在第297经，不在第298经）。原列 30 个声明和新增的 9 个都用 resolve.py 解析到自身（未改名），并在 Becoming/*.lean 中按全名读过陈述与前提；所列记录都存在，每个声明都出现在所列记录之一中。读法中的引文（包括层次中帛书的异文）都核过。10 条全改，没有删除，没有通过。\n\n一、所有 10 条的层次都没有把时期放在最前。已按本簇已有的写法改为「先秦·…」「魏晋南北朝·…」。老子三章：郭店简本都没有（V130-LAO-GD 中无此三章之句）。帛书甲本四十二章作「中氣以為和」；帛书乙本三十六章作「魚不可說於淵」；六十七章帛书乙本三句俱在，作「則死矣」，帛书甲本无「舍俭且广」一句，作「則必死矣」。\n\n二、改了类型的四条。\n(1) xugua-qiong-bi-guai：由定域改为相分。原读法自己说序卦之「必」在脊柱中不成立，又没有给出成立的条件，所以不是定域。Crossing.loss_does_not_decide 是一个模型中的见证，已注明。名表之「穷」明载序卦之穷不入，读法已说明。\n(2) lao-67：由相合改为定域。「舍慈且勇」预设勇在失慈之后仍然活动；在有待之下，依存不变则勇本身不能活动，所以原读法「依者不能维持」与经文的情形对不上。「死矣」恰在依存不变、所待不复之处成立：零储备时由 consumed_ends_when_fixed 给出，有储备时由 Carries.consumed_lasts 给出；依存转化或支撑复回时不成立（consumed_continues_transformed，Crossing 的见证）。「故能」是充分方向，脊柱不给。原列的 coextinct 读法没有用到，已去。\n(3) shengman-sui-duan：由相合改为定域。「生」「令…久住」是生起与维持的充分方向，脉络 FO2-SM-R008 自己也记为 conditional_arising。只有「隨斷」有律（coextinct），而且要有待、有形、正需三个条件；有储备时推迟（Carries.coextinct_lasts）。\n(4) zaahan-ci-you-gu-bi-you：由相合改为定域，与本簇首轮复核对「三事和合生觸」的判法一致：「此有故彼有」字面上是充分方向。这一条改了 RO 原来的类型，请整合者在 RO 对照中加一个注。原列的 change_readings、arising_recurs_iff 对应的是 RO 的「如實正觀世間集」，那句不在本条片段内；kept_or_broken 被读成「维持」，与它的陈述不合。这三个都已去掉，coming-and-ceasing-keep-pace 也一并去掉。\n\n三、声明用错或读过头的。\nlao-36：Embodied.active_of_bearing 和 coextinct 讲的是所依者本身不活动，「脱于渊」讲的是鱼离开所依之物，而渊仍在，所以改用 consumed_ends_when_fixed_at，并注明 LivesOn 只是定义。\nru-lunyu-zheng-ming：修订者新增了 coextinct 和 active_along，但「不正」「不順」「不中」说的是不合，不是不活动，两者已去。Web.rename_tenure 是四个 Iff.rfl，Twins.naming_not_identifiesAlike 是见证，都已注明。\nlunyu-min-wu-xin-bu-li：原读法说去兵、去食的次序是「诸条件之需的轻重，脊柱表示为不同的 need」，这是误读。在容之下，任何一个所需未被满足都使之不立，各需的大小不给出先后。去而仍立，对应的是 consumed_continues_transformed。排序只能落在以广为愈。另外，「足」是单个所需被满足，不是支撑（容）。\nzhonglun：原读法写「任何关系项都由其关系而被辨认」，超出了 identifiesAlike_iff，后者只是一条关于描述何时有意义的律。片段之外的 Whole.needs_arising 和 change_readings 已去；「眾緣具足和合而物生」的充分方向已注明不取。\nzaahan-yi-xiang：原来只有一个定义（Web.Dependent）和一个见证（Downstream.one_way）。现在补上方向之律 Web.Embodied.active_of_bearing，并写明其前提（有待、有形、正需）；one_way 注明是见证。\n\n四、记录与出处。\nlao-42 补了 LL-R007（冲气以为和之边），zhonglun 补了 FO1-R-M31（偈之边）。zaahan-yi-xiang 的出处改为第453经；zaahan-ci-you 的出处改为第297、298经等。\n\n五、给整合者。\n本簇反复出现同一个问题：经文说所依者生出或维持依之者（生、令久住、此有故彼有、故能、具足和合而生），而脊柱只有一向的蕴含（有待：活动蕴含受支撑）。宜在对照章里一处写明：凡充分方向，都是定域或不取。consumed_ends_when_fixed_at 是有待在一步上的逆否，不是有待之外另一事实（becoming-dependence-dynamics 的 hypotheses 已这样说）。用它判相合的各条，所对应的都是有待这个前提的实例，依存本身是经文自己的断言。"
+}

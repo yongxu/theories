@@ -1,0 +1,298 @@
+{
+ "cluster": "C06",
+ "corrections": [
+  {
+   "id": "zhuxi-gu-zi-xin-wei-hou-shi-zhi-duan",
+   "status": "revised",
+   "record_ids": [
+    "ZX130-H18-R01"
+   ],
+   "source_id": "YD-ZX1",
+   "layer": "注·宋明（南宋朱熹）",
+   "layer_checked": "朱熹《周易本义》卷一蛊卦卦辞注，南宋注疏层，非经文；四库本维基转录。",
+   "fragments": [
+    "前事過中而將壊則可自新為後事之端而不使至于大壊"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Branching.loss_passes_juncture",
+    "Becoming.Branching.keeping_greatest",
+    "Becoming.Branching.keeping_removes_at_juncture",
+    "Becoming.Branching.no_juncture_of_keeps",
+    "Becoming.Branching.lpo_of_junctures_found"
+   ],
+   "records": [
+    "every-loss-passes-a-juncture"
+   ],
+   "reading": "AI读法：朱熹说前事过中而将坏，则可自新为后事之端，不使至于大坏；同一注前文说“蠱壊之極亂當復治”。若把事之始看作一个能复的组态，把“大坏”看作此后这个始不能再得之处，脊柱给出此句成立的确切范围。凡能复的组态，从它出发、到达一个不能再得它之处的每一条历程，不不经过一个机，并在机上取其丧失之步（Branching.loss_passes_juncture，双重否定形式）；凡保持该组态的子过程，自它起只取护闭之步，所以护闭是其中最大者（Branching.keeping_greatest）；护闭在自身历程上去掉的恰是机上的丧失步（Branching.keeping_removes_at_juncture）。“将坏则可自新”的结构，就是机上尚有一步使此始仍可再得。范围有二。其一，若“大坏”之后仍可复治（朱熹自己说蛊为坏之极而当复治），这一过程就保持该组态，其历程上没有机（Branching.no_juncture_of_keeps）；这些律不度量坏之深浅，也不说早一步自新胜于晚一步。其二，于每一过程找到每一丧失之机，可推出有限全知原则（Branching.lpo_of_junctures_found）：经文把“过中而将坏”当作可以辨认的时刻，脊柱只在能否再得已被判定之处给出它。这些律不带价值：保持哪一组态、保持它是否助益生生，都不在律中；若称自新更好，只能出于以广为愈（设，不断言），且须先表明它使所容变广。“自新”的修养义不被携带。",
+   "names_used": [
+    "复",
+    "机",
+    "护闭",
+    "生生",
+    "以广为愈",
+    "所容",
+    "广"
+   ],
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "共享经典·程朱易学",
+   "work": "周易本义",
+   "locator": "卷一·蛊卦卦辞注",
+   "relational": "前事与后事：于将坏之处自新，不使至于大坏。"
+  },
+  {
+   "id": "laozi-08-shan-li-wan-wu-er-bu-zheng",
+   "status": "revised",
+   "record_ids": [
+    "LE-R015",
+    "LE-R016"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "经·先秦（老子第八章；郭店无此章，最早见马王堆帛书甲、乙本，为汉初抄本；成书层有争议）",
+   "layer_checked": "郭店甲乙丙无第八章；帛书甲作“善利萬物而有靜”，乙作“善利萬物而有爭”（V130-LAO-MA/MB 已核）。",
+   "fragments": [
+    "上善若水",
+    "水善利万物而不争"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.level_kept",
+    "Becoming.Flow.supported_of_within",
+    "Becoming.Flow.continuing_excludes",
+    "Becoming.Flow.alongside_not_all",
+    "Becoming.Flow.excess_of_takesAll",
+    "Becoming.Flow.Balances.closes_nothing"
+   ],
+   "records": [
+    "what-taking-all-excludes",
+    "four-cases-of-a-part"
+   ],
+   "reading": "AI读法：沿用RO，把“利万物而不争”读作共同条件上的与与取。在所与之内共同取用，水平从不低于起点（Flow.level_kept）；若诸形成只待于该条件，且所需不超过起点水平，共同历程使每一形成每步都被容（Flow.supported_of_within）。另一面，全取者旁若有他取者，共同所取即超出所与（Flow.excess_of_takesAll）。在衡、只有活跃者给予、活动须被容、给予该条件者皆以至少某所需待于它的流中，旁边若有每步全取而持续的形成，他者不能自任一步起连续取用多于当时水平的步数（Flow.continuing_excludes）；能在每步都取的他者旁持续的形成，也不能连续全取那么多步（Flow.alongside_not_all）。本簇补一句：每步在每一条件上所与不少于所取的部分什么也不阖，有它之水平包含无它之水平（Flow.Balances.closes_nothing），所以利物而不争不使所容变狭。“上善”是排序之辞，这些律不给出：排序只出于以广为愈（设，不断言），而不阖只是不变狭，还不是变广，“上”更不由此出。异文：帛书甲作“善利萬物而有靜”，乙作“善利萬物而有爭”，乙本此句反说有争，读法随异文而变（RO已注）。",
+   "names_used": [
+    "与",
+    "取",
+    "待",
+    "容",
+    "衡",
+    "阖",
+    "所容",
+    "狭",
+    "广",
+    "以广为愈"
+   ],
+   "gap": "",
+   "ro_passage": "lao-08-shan-li-wan-wu-er-bu-zheng",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "《道德经》八章",
+   "relational": "水与万物：利之而不争。"
+  },
+  {
+   "id": "laozi-38-shi-dao-er-hou-de",
+   "status": "revised",
+   "record_ids": [
+    "LE-R054",
+    "LE-R066",
+    "LE-R067",
+    "LE-R068"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "经·先秦（老子第三十八章；郭店无此章，最早见马王堆帛书甲、乙本；成书层有争议）",
+   "layer_checked": "郭店无第三十八章；帛书甲、乙本均有此序列（乙作“故失道而后德失德而句仁失仁而句義”）。",
+   "fragments": [
+    "故失道而后德，失德而后仁，失仁而后义，失义而后礼"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Refining.grow",
+    "Becoming.Law.merged_stays",
+    "Becoming.Flow.new_from_rest_or_open",
+    "Becoming.Web.Whole.needs_new",
+    "Becoming.Law.lost_stays"
+   ],
+   "records": [
+    "identification-where-bounded",
+    "recurrence-without-premise",
+    "where-novelty-gain-comes-from",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：沿用RO。本章把道、德、仁、义、礼排成一条单向的丧失之梯，与理论相分之处在“起点完满、分化即丧失”：以道为先于分化的完满起点，属本原一层。脊柱中丧失是合并：在一律之下，某步已不可达的组态此后不再可达（Law.lost_stays），已合并的组态此后不再分开（Law.merged_stays）。但分化本身不是丧失：严格细分增加一类（Refining.grow）；在与不过取之下，每步皆新的族，在任意晚处由族外得到净给予，或其界不闭（Flow.new_from_rest_or_open）；部分各有终的整体若持续，就不能从某步起再无任一给定列表之外的部分生起（Web.Whole.needs_new）。在本簇：成生与绝生不相交，不能从“后出”推出“绝生”；是否绝生，只看有它之所容是否比无它变狭。本章作为“名目化的规范是关系变薄的迹象”的观察可以保留，作为普遍的退化史则是理论不断言的。帛书乙同有此序列（RO已注）。",
+   "names_used": [
+    "与不过取",
+    "成生",
+    "绝生",
+    "所容",
+    "狭"
+   ],
+   "gap": "",
+   "ro_passage": "lao-38-shi-dao-er-hou-de",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "《道德经》三十八章",
+   "relational": "道、德、仁、义、礼的先后：失而后有。"
+  },
+  {
+   "id": "laozi-64-fu-wan-wu-zhi-zi-ran",
+   "status": "revised",
+   "record_ids": [
+    "LL-R015"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "经·先秦（老子第六十四章；郭店甲、丙本皆有此二句）",
+   "layer_checked": "郭店甲有“圣人亡为古（故）亡败；亡执古（故）亡○（失）”与“辅万物之自然而弗能为”，丙有同二句（作“弗敢为”）；先秦层有出土本支持。",
+   "fragments": [
+    "以辅万物之自然，而不敢为",
+    "是以圣人无为故无败，无执故无失"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.Balances.closes_nothing",
+    "Becoming.Branching.loss_passes_juncture",
+    "Becoming.Branching.keeping_greatest",
+    "Becoming.Branching.keeping_removes_at_juncture",
+    "Becoming.Branching.lpo_of_junctures_found"
+   ],
+   "records": [
+    "four-cases-of-a-part",
+    "every-loss-passes-a-juncture"
+   ],
+   "reading": "AI读法：本章两句各有其范围，都不是无条件的。其一，“以辅万物之自然，而不敢为”：把辅读作每步在每一条件上所与不少于所取，这样的部分什么也不阖，有它之水平包含无它之水平（Flow.Balances.closes_nothing）；所以“无为故无败”在“不净取则不使所容变狭”这一义上有律，此义之外律不给出。其二，“无执故无失”若读作不失一个能复的组态：从它出发、到达一个不能再得它之处的每一条历程，不不经过一个机，并在机上取其丧失之步（Branching.loss_passes_juncture，双重否定形式）；凡保持它的子过程，自它起只取护闭之步，护闭是最大者（Branching.keeping_greatest），所去掉的恰是机上的丧失步（Branching.keeping_removes_at_juncture）。所以无失恰在历程于所经每一机上都取保持之步；律不说“不为”就是取这一步，任其自行的历程若在机上取丧失之步，不为也失，同章“为之于未有”所指正在此处。于每一过程找到每一丧失之机，可推出有限全知原则（Branching.lpo_of_junctures_found）：机上易于干预，难在发现（RO已注）。这些律不带价值，“败”“失”之为不好不由律出，排序只出于以广为愈（设，不断言）。",
+   "names_used": [
+    "与",
+    "取",
+    "阖",
+    "所容",
+    "狭",
+    "复",
+    "机",
+    "护闭",
+    "以广为愈"
+   ],
+   "gap": "",
+   "ro_passage": "lao-64-wei-zhi-yu-wei-you",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "《道德经》六十四章",
+   "relational": "辅与为：辅其自然而不强为。"
+  },
+  {
+   "id": "laozi-50-sheng-sheng-zhi-hou",
+   "status": "revised",
+   "record_ids": [
+    "LAO2-C50-R04"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "经·先秦（老子第五十章；郭店无此章，最早见马王堆帛书甲、乙本，其句无“之厚”；成书层有争议）",
+   "layer_checked": "郭店无第五十章；帛书甲作“夫何故也以亓生﹦也”，乙作“何故也以亓生﹦”（﹦为重文），皆无“之厚”（V130-LAO-MA/MB 已核）。",
+   "fragments": [
+    "人之生，动之死地，亦十有三。夫何故？以其生生之厚"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.joint_excess_ends",
+    "Becoming.Flow.excess_bounded",
+    "Becoming.Flow.level_kept",
+    "Becoming.Flow.supported_of_within"
+   ],
+   "records": [
+    "own-count-misses-joint-excess",
+    "what-taking-all-excludes"
+   ],
+   "reading": "AI读法：本章的“生生”是动宾，指厚养其身，与系辞“生生之谓易”的生生不同义，不借理论之名“生生”。传世本的结构是：养身过厚，反而动之死地。脊柱给出这一结构成立的确切范围：在衡之流中，只有活跃者给予，活动须被容，且凡给予该条件者都以至少m之所需待于它；从低于n+m的水平起，连续n步所取多于所与，则此后凡以至少m之所需待于该条件者都不活跃，取者若以此所需待于它也在内（Flow.joint_excess_ends）；所取多于所与的每一步使水平至少降一（Flow.excess_bounded）。所以“以其生生之厚”而“动之死地”，恰在“厚”是超出所与之取、取者自身以足够的所需待于所取之条件、且给予只出于待于它者之处成立；取者不待于该条件或所需较低时可以延续，有自外来的给予时此律推不出其终。异文：帛书甲作“以亓生﹦也”，乙作“以亓生﹦”，皆无“之厚”。依帛书本，致死之由是“生生”（求养其身）本身；而脊柱中在所与之内的共同取用不降水平，只待于此条件且所需不超过起点水平的形成每步被容（Flow.level_kept、Flow.supported_of_within），致终的是超出所与之取，不是求养本身，此处与理论相分。“十有三”的计数不被携带。",
+   "names_used": [
+    "衡",
+    "容",
+    "待",
+    "取",
+    "与",
+    "自外来"
+   ],
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "道",
+   "work": "老子",
+   "locator": "《老子》第50章",
+   "relational": "养身之厚与死地：以其生生之厚而动之死地。"
+  },
+  {
+   "id": "zhongyong-zan-tiandi-zhi-hua-yu",
+   "status": "revised",
+   "record_ids": [
+    "RU1-ZY-30-R04"
+   ],
+   "source_id": "RU1-S-ZY",
+   "layer": "传·先秦至秦汉（中庸，层次有争议）",
+   "layer_checked": "《礼记·中庸》，传统系于子思，成篇与层次有争议，不据题署确指一时一人。",
+   "fragments": [
+    "能盡物之性，則可以贊天地之化育"
+   ],
+   "kind": "divergence",
+   "declarations": [
+    "Becoming.Flow.Balances.widens_iff_within_margin",
+    "Becoming.Restoring.Inflow.widens"
+   ],
+   "records": [
+    "four-cases-of-a-part"
+   ],
+   "reading": "AI读法：本段以“能盡物之性”为“可以贊天地之化育”的条件，前面接“唯天下至誠，為能盡其性”。这个条件预设物各有所受之性（同篇首句“天命之謂性”），属固定本性一层，与理论相分；以至诚为首的修养链也不被携带。相分只在条件上：赞化育的结构脊柱可以说，而它的条件全在关系之中。在衡之下，一部分使所容变广，恰当两条同时成立：对无它之水平所容的每一形成，它的净取都守在该形成的余地之内；并且在某一步，使一个无它时不被容的形成落入余地之内（Flow.Balances.widens_iff_within_margin）。从外给予而使所容变广，是一个构造模型中的见证，不是一般律（Restoring.Inflow.widens）。所以赞化育在此只是成生的部分，其条件是净取与余地，不是尽性。若称赞化育更好，只能出于以广为愈（设，不断言）。",
+   "names_used": [
+    "衡",
+    "所容",
+    "广",
+    "容",
+    "余地",
+    "成生",
+    "以广为愈"
+   ],
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "儒",
+   "work": "中庸",
+   "locator": "《礼记·中庸》编者连续论证段30",
+   "relational": "尽物之性与赞天地之化育：以尽性为参赞之条件。"
+  },
+  {
+   "id": "mojing-pian-qu-mo-jia-shao",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "MI1-S-JX",
+   "layer": "经·先秦（墨经·经下，战国后期）",
+   "layer_checked": "墨经六篇通常归入战国后期墨家，作者与编纂层未作同一断定；经说下“偏，俱一無變”见MI1-S-SX。",
+   "fragments": [
+    "偏去莫加少，說在故"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Flow.respondsThroughCoupling_withhold",
+    "Becoming.Flow.RespondsThroughCoupling",
+    "Becoming.Flow.exchange_alike_beyond_response",
+    "Becoming.Flow.not_differs_beyond_response",
+    "Becoming.Loop.returns",
+    "Becoming.Flow.Balances.withheld"
+   ],
+   "records": [
+    "comparison-where-the-rest-responds",
+    "closing-needs-net-draw"
+   ],
+   "reading": "AI读法：经下“偏去莫加少，說在故”，经说下“偏，俱一無變”，诸家训释有分歧，置信低。读法一：去其一体，部分之外者不增不减，因为它们如故。脊柱给出此读的确切范围。部分之外的交换固定时，偏去之流按构造在部分之外与原流交换相同（Flow.respondsThroughCoupling_withhold；这是偏去之比较的构造，不是关于世界的律）。若部分之外者只随其所感而变（Flow.RespondsThroughCoupling，是设定的前提，不是推出的），两流同起、在场者相同、在所感的条件上衡，则在部分回应所及之外的每一形成，两流中交换相同，差别到不了它（Flow.exchange_alike_beyond_response、Flow.not_differs_beyond_response）；在所及之内，律不断言莫加少，一个构造模型中差别经他者的回应回到部分自身（Loop.returns）。读法二：把“俱一無變”读作合计不变：在衡之下，每一条件上，有此部分之水平加其累计所取，等于无此部分之水平加其累计所与（Flow.Balances.withheld），偏去造成的差恰是此部分自身的取与，此外无所加少。两读都把“莫加少”定在一定条件之下，不是普遍事实。",
+   "names_used": [
+    "偏去",
+    "体",
+    "感",
+    "衡",
+    "取",
+    "与"
+   ],
+   "gap": "",
+   "ro_passage": "",
+   "tradition": "名辩·墨经",
+   "work": "墨子·經下",
+   "locator": "經下（经说下见MI1-S-SX）",
+   "relational": "偏去与部分之外者：其外是否如故。"
+  }
+ ],
+ "drops": [],
+ "passed": [],
+ "notes": "第三读，七条全部修订，无一可原样通过，无删除。所有残句均用 ctq.py text 在指定来源中核对过（皆为 exact）。新加的引文也都核过：YD-ZX1「蠱壊之極亂當復治」；RU1-S-ZY「天命之謂性」「唯天下至誠，為能盡其性」；YD-LAO-BASE「为之于未有」；MI1-S-SX「偏，俱一無變」；V130-LAO-MA「善利萬物而有靜」「夫何故也以亓生﹦也」；V130-LAO-MB「善利萬物而有爭」「何故也以亓生﹦」。所引声明都经 resolve.py 解析，并在 Becoming/*.lean 中读过其前提与文档，所在记录也确认存在。\n\n各条改动的理由：\n(1) 朱熹蛊注：由 agreement 改为 scope。同一注说「蠱壊之極亂當復治」，可见「大坏」不必是不可再得之失。机之律只在「大坏＝此始不可再得」处成立；可复治处 no_juncture_of_keeps 说历程上无机。另有两点：发现机可推出 LPO；这些律不度量坏之深浅，也不带价值。原读把古词直接等同于律名（「将坏即关节点」「自新即护闭」），names_used 列了「机」而正文未用，均已改。\n(2) 老子八章：残句「上善若水」是排序之辞，原读没有处理。现在写明排序只出于以广为愈，且不阖还不是变广。supported_of_within 原读漏了「所需不超过起点水平」这一前提，已补。层次加注郭店无此章、最早见帛书。\n(3) 老子三十八章：names_used 列了「绝生」，正文却写现代词「生成／退化」，已改为名表之名（成生／绝生）。Web.Whole.needs_new 改按其否定式陈述。层次加注郭店无此章。\n(4) 老子六十四章：loss_passes_juncture 原读漏了双重否定。lpo_of_junctures_found 只证了单向（找到机则可推出 LPO），原读说「等于」，过了，已改。juncture_iff 是 Iff.rfl，只是定义，已去掉。Closing.Onset.amount_before 与 carried_le_polynomial_before 属于 RO 的「未兆」残句，本条残句里没有，已去掉，how-loops-form 记录也一并去掉。「这不是无所作为」超出 Lean 所证，已改为可证的说法。「机」改为正文实际使用。\n(5) 老子五十章：由 agreement 改为 scope。原引 excess_bounded 只说水平下降，推不出取者自身之终；more_exhausted 与 more_never_rests 与死地无关。现改引 Flow.joint_excess_ends：取者以足够所需依存于该条件时也在内。范围是：更新只出于依存者，且取者依存于所取条件。帛书甲乙皆作「以亓生﹦」，无「之厚」；依帛书本，致死之由是求生本身，脊柱给出的是不降水平（level_kept、supported_of_within），这一层是相分。names_used 去掉「生生」，因为名表明言不带五十章之义。\n(6) 中庸「赞化育」：由 scope 改为 divergence。脉络关系 R04 的前项是「尽物之性」，本篇首句是「天命之謂性」，属固定本性一层，原读自己也说不携带。脊柱只为后项（一部分使所容变广）给出关系性条件，因此这是条件上的相分，不是对经文全称式的定域。原读说 Restoring.Inflow.widens「是其例」，现明确为一个构造模型中的见证，不是一般律。\n(7) 墨经「偏去莫加少」：respondsThroughCoupling_withhold 是按偏去之流的构造成立的，不是关于世界的律，原读没有说明。RespondsThroughCoupling 是设定的前提，推不出「偏去会改变其余」，原读这句说过了。现补上真正承载的禁域律：exchange_alike_beyond_response、not_differs_beyond_response，回应所及之外交换相同；所及之内只有 Loop.returns 这个见证。原读用「其余」指部分之外者，但名表的「其余」是 World.withRest，且「其余从不施动」，所以是误用；又用「耦合」而不用名表之「感」，均已改。Balances.withheld 原已列出而未用，现作为第二种读法（俱一无变＝合计不变）。\n\n需要整合者留意的一点：RelationalRenewal.Law.dependent_overdraw_ends_itself 与 independent_overdraw_persists 恰好给出老子五十章的边界：依存者自终，不依存者可续。它们在 receipt 中属 foundation 模块，axiom report 为空，但源文件不在 Becoming/*.lean，按本步的 grep 规则未引用。如要改引，可指向记录 relational-renewal-classification。"
+}

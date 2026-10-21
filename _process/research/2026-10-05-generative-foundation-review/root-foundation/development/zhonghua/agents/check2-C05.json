@@ -1,0 +1,316 @@
+{
+ "cluster": "C05",
+ "corrections": [
+  {
+   "id": "yi-tai-wuwang-bufu",
+   "status": "revised",
+   "record_ids": [
+    "JF-R033"
+   ],
+   "source_id": "YD-JP11",
+   "layer": "经·先秦（西周，具体年代有争议）；小象·先秦至秦汉（年代有争议）",
+   "layer_checked": "经文与小象两层分列；经之西周断代与小象年代均有争议，已注明",
+   "fragments": [
+    "无平不陂，无往不復",
+    "无往不復，天地際也"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Law.lossless_iff_returns",
+    "Becoming.Hexagram.every_returns_iff",
+    "Becoming.Hexagram.waxWane_returns",
+    "Becoming.Hexagram.wane_merges",
+    "Becoming.Hexagram.wane_not_returns",
+    "Becoming.Law.drawn_iff_not_returns",
+    "Becoming.Law.succ_open"
+   ],
+   "records": [
+    "recurrence-without-premise",
+    "hexagrams-on-the-spine",
+    "attraction-is-not-returning"
+   ],
+   "reading": "AI读法：与 Y1 wuwang-bufu 同（定域）。「无往不復」作普遍断言，脊柱给它确切范围：有限构形之内，一律之下每一构形皆复，恰当此律不同归（Law.lossless_iff_returns）；卦上对每一律皆如此（Hexagram.every_returns_iff），消长环不同归，故每一卦皆复（Hexagram.waxWane_returns）。有限构形之内律有同归，则并非每一构形皆复；任一律下，被吸入某个闭恰是不复（Law.drawn_iff_not_returns，无前提）。卦上的例是只消之律（每步诸爻上移一位、只有柔爻自下进入的一条构造之律）：它同归（Hexagram.wane_merges），坤以外每一卦被吸入坤而不复（Hexagram.wane_not_returns）。在开放的世界，不同归不足以使之复：数下去之律不同归，而无一数复，一步之后再不能得其始（Law.succ_open，一个构造之例）。所以「无往不復」不是普遍律：在有限构形之内恰当不同归时成立；在开放的世界中不同归不保证它。同句「无平不陂」与小象「天地際也」不在此读中。",
+   "gap": "",
+   "locator": "周易·泰·九三及小象",
+   "names_used": [
+    "复",
+    "同归",
+    "入",
+    "闭"
+   ],
+   "relational": "往而复是每个构形与一条在有限之中不同歸之律的关系。",
+   "ro_passage": "",
+   "tradition": "易",
+   "work": "周易·泰"
+  },
+  {
+   "id": "yi-jing-zhou-xiu-jing",
+   "status": "revised",
+   "record_ids": [
+    "TP-H48-X4-R01"
+   ],
+   "source_id": "YD-JP48",
+   "layer": "小象·先秦至秦汉（年代有争议）",
+   "fragments": [
+    "井甃无咎，修井也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Flow.restores",
+    "Becoming.Flow.restores_at",
+    "Becoming.SupportGated.repair_restores"
+   ],
+   "records": [
+    "supported-renewal-recovery",
+    "becoming-dependence-dynamics"
+   ],
+   "reading": "AI读法：甃，修治井壁（所用材料不由本句限定），小象释为修井。脊柱的恢复律：在一个条件处，自某步之水平起，于所差之步数（所需减起点水平）的每一步都平衡，并在水平不低于起点之步上共同净给予（所与多于所取），则所差之步数后水平至少达所需（Flow.restores_at；流处处平衡时为 Flow.restores）；在支持门控的族中，焦点形成在起点活跃、并在所差之步数上每步贡献多于汲取，条件便回到维持之需（SupportGated.repair_restores，Flow.restores 之实例）。所以修井读作：所与多于所取、使条件之水平升至足其所需的给予；律不要求条件此前曾足，「修」所含的旧井曾可食，是文中之事，不在律中。修井不是换一口新井。「无咎」的评价不在律中。",
+   "gap": "",
+   "locator": "周易·井·六四小象",
+   "names_used": [
+    "足",
+    "与"
+   ],
+   "relational": "修治是一个给予者与一个条件的关系：所给多于所取，直到条件再满足所需。",
+   "ro_passage": "",
+   "tradition": "易",
+   "work": "周易·井"
+  },
+  {
+   "id": "yi-shuogua-gen-zhong-shi",
+   "status": "revised",
+   "record_ids": [
+    "OW-R016"
+   ],
+   "source_id": "YD-OW-SG",
+   "layer": "传（说卦）·先秦至秦汉（年代有争议）",
+   "fragments": [
+    "艮，東北之卦也，萬物之所成，終而所成始也",
+    "終萬物、始萬物者，莫盛乎艮"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Web.Whole.needs_new",
+    "Becoming.Web.begins_within",
+    "Becoming.Web.ByPassing.passes_within",
+    "Becoming.Hexagram.allBroken_absorbing",
+    "Becoming.Hexagram.wane_never_back"
+   ],
+   "records": [
+    "whole-persists-through-generation",
+    "a-pattern-lasts-through-passing",
+    "hexagrams-on-the-spine"
+   ],
+   "reading": "AI读法：终处即始处。脊柱给它成立之处：由各自有终、每步可列出的部分构成而自某步起每步活跃的整体，任一有限部分之列以外，不会自某步起再无部分生起（Web.Whole.needs_new，否定式：整体只经由新部分持续）；样式自某步起每步在场而承载者各自短暂（无一承载者在相隔 d 步的两步都承载它），则没有 d 个相继步全无承载者开始（Web.begins_within，否定式，不需传递前提）；在传递前提下，每 d 个相继步内确有承载者把它传过一步（Web.ByPassing.passes_within）——一部分之终与另一部分之始相接。这不是普遍的：卦上只消之律（一条构造之律）下坤是闭（Hexagram.allBroken_absorbing），坤以外的卦被吸入坤后自第六步起不复（Hexagram.wane_never_back），终而无始。说卦把终始配于一卦一方位（艮、东北），是方位与时序之配，不在律中。",
+   "gap": "",
+   "locator": "说卦·第五、六章",
+   "names_used": [
+    "久",
+    "复",
+    "闭",
+    "入"
+   ],
+   "relational": "终与始经由整体之部分相关：一部分之终接另一部分之始。",
+   "ro_passage": "",
+   "tradition": "易",
+   "work": "说卦"
+  },
+  {
+   "id": "yi-zagua-bo-lan-fu-fan",
+   "status": "revised",
+   "record_ids": [
+    "OW-R041",
+    "WP-ZG-C01-S12-R02"
+   ],
+   "source_id": "YD-OW-ZG",
+   "layer": "传（杂卦）·先秦至秦汉（年代有争议）",
+   "fragments": [
+    "剝 爛也，復 反也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Hexagram.Paired",
+    "Becoming.Hexagram.order_paired",
+    "Becoming.Hexagram.both_fixed_iff",
+    "Becoming.Hexagram.reverse",
+    "Becoming.Hexagram.complement",
+    "Becoming.Hexagram.zagua_partners",
+    "Becoming.Hexagram.partner_partner",
+    "Becoming.Hexagram.bo_fu"
+   ],
+   "records": [
+    "hexagrams-on-the-spine",
+    "hexagram-world-laws",
+    "hexagram-arrangements-and-laws"
+   ],
+   "reading": "AI读法：沿用 RO zagua-pairs（相合），只取剥复一对。以下皆是在六十四卦模型上逐一计算核定的事实，不是一般之律：杂卦对举的剥与复是受传卦序的同一对（Hexagram.order_paired；杂卦前五十六名二十八对皆为一卦与其伴，Hexagram.zagua_partners）；成对之义是翻转，翻转不变时为全变（Hexagram.reverse、Hexagram.complement、Hexagram.Paired）；剥复只是翻转而非全变，不在翻转与全变相同的四对之内（Hexagram.both_fixed_iff）；伴之伴即其自身（Hexagram.partner_partner）。「復 反也」之反在律上有两处：环上直读之移（诸爻上移一位，上爻不变而入下）一步即自剥至复，与翻转所得相同；消长环下剥一步至坤，再一步至复（Hexagram.bo_fu）。「剝 爛也」之爛（自然朽坏）在律中无对应；此处剥只作卦名，不取名表之剥（侵蚀：一个形成之汲取使条件降到某依存曾满足之需以下）。对举不是因果。RO zagua-pairs 的其余声明（mem_order、zagua_every、zagua_last_eight、zagua_not_commutes 等）说的是杂卦全列之次序，与剥复一对无关，此处不列。",
+   "gap": "",
+   "locator": "杂卦",
+   "names_used": [],
+   "relational": "剝与復作为一对之两员并举，以翻转相关。",
+   "ro_passage": "zagua-pairs",
+   "tradition": "易",
+   "work": "杂卦"
+  },
+  {
+   "id": "yi-xugua-weiji-zhong",
+   "status": "revised",
+   "record_ids": [
+    "OW-R038",
+    "WP-XG-C02-S34-R01"
+   ],
+   "source_id": "YD-OW-XG",
+   "layer": "传（序卦）·先秦至秦汉（年代有争议）",
+   "fragments": [
+    "物不可窮也，故受之以未濟；終焉"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Law.withHistory_unlisted",
+    "Becoming.Hexagram.kept_history_unlisted",
+    "Becoming.Onward.run_iff_continues",
+    "Becoming.Hexagram.allBroken_absorbing",
+    "Becoming.World.arising_opens",
+    "Becoming.Hexagram.both_fixed_iff"
+   ],
+   "records": [
+    "recurrence-without-premise",
+    "hexagrams-on-the-spine",
+    "continued-change-needs-openness",
+    "where-a-run-goes-on",
+    "hexagram-world-laws"
+   ],
+   "reading": "AI读法：Y1 weiji 作相合；此处改作定域，因为「物不可窮」是普遍断言，而脊柱只在两处给它确切范围。其一，带着历史（藏往）的展开，对任一律都不为任何清单所含（Law.withHistory_unlisted；卦上消长环 Hexagram.kept_history_unlisted）：这无前提，但它说的是历史不复，当下之构形停息时也成立。其二，就当下之构形言，不穷不是普遍的：有限构形之内，从某构形起有运行（通），恰当从那里有一条与清单等长的历程（Onward.run_iff_continues）；律可以有闭，卦上只消之律（一条构造之律）下坤即是（Hexagram.allBroken_absorbing）；在有普查、有形、平衡且耗散的世界中，生起无尽与自某步起每步都被围住不相容，即须开放（World.arising_opens；必要条件，不是充分条件）。所以「物不可窮」在藏往上无条件成立，在构形之生起上只在开放之下才可能成立。既济未济一对既是翻转又是全变（Hexagram.both_fixed_iff，在六十四卦上逐一核定）。序卦以未济「終焉」是编排之断言，不在律中。",
+   "gap": "",
+   "locator": "序卦·下篇·终篇",
+   "names_used": [
+    "藏往",
+    "通",
+    "闭",
+    "开"
+   ],
+   "relational": "序卦把卦序之终放在未濟：所排之序有终，而它所说的物不以此为终。",
+   "ro_passage": "",
+   "tradition": "易",
+   "work": "序卦"
+  },
+  {
+   "id": "lao-76-rou-ruo-sheng-zhi-tu",
+   "status": "revised",
+   "record_ids": [
+    "LL-R045"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "经·先秦（《老子》第七十六章，战国；成书年代有争议，郭店简无此章，最早见于马王堆帛书甲乙本；所引为传世王弼本系统）",
+   "layer_checked": "补成书年代之争与本章最早见证",
+   "fragments": [
+    "人之生也柔弱，其死也坚强",
+    "故坚强者死之徒，柔弱者生之徒"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Tolerance.tolerating_zero",
+    "Becoming.Tolerance.kept_set",
+    "Becoming.Tolerance.thin_absorbed",
+    "Becoming.Withholding.withholding_absorbs",
+    "Becoming.Tolerance.Triad.spreads",
+    "Becoming.Tolerance.Triad.absorbed",
+    "Becoming.Tolerance.gives_needs_sparing",
+    "Becoming.Tolerance.total_stays",
+    "Becoming.Tolerance.Triad.total_kept"
+   ],
+   "records": [
+    "thresholds-of-waiting",
+    "restoring-giving-from-the-worst-start",
+    "giving-that-waits-on-giving"
+   ],
+   "reading": "AI读法：沿用 RO lao-76-rou-ruo-sheng-zhi-tu 之读，改作定域。柔弱读作容差（不求备：所等待者中至多若干缺而仍然给予，容差至少为一），坚强读作容差为零：容差为零之律与无记忆的等待之给（不念旧恶之律）每步同轨（Tolerance.tolerating_zero）。容差之律下，起始时给予、每个成员在集外所等待者不超过其容差的集合，每步都给予（Tolerance.kept_set）；集合外起始皆给予、每个形成在集内所等待者不超过其容差，则自第一步起处处给予（Tolerance.thin_absorbed）：容差之内的扣留一步消散。有记忆而等待全部者（念旧恶之律），一处扣留若全族皆在其 d 步等待之内，自第 d 步起终结全族的给予（Withholding.withholding_absorbs）。在三者互等的构造之例中，容差为零（无记忆）时一处扣留自第二步起扩散到全部（Tolerance.Triad.spreads），容差为一时一步消散（Tolerance.Triad.absorbed）；跨容差的一般比较律尚无，容差较大者给予不少，只在此例中见（RO 所记缺口）。界限同样确切：自全面扣留起，任何形成之给予都须有一个形成的容差不少于其所等待者之数（Tolerance.gives_needs_sparing）；无此者，全面扣留永续（Tolerance.total_stays；三者之例中容差为一亦然，Tolerance.Triad.total_kept）。所以「柔弱者生之徒」作普遍断言，在扣留落在容差之内时成立，在全面扣留而无一形成全容时不成立。首句生柔死坚是对身体的观察，此读只取其结构。",
+   "gap": "",
+   "locator": "老子第七十六章",
+   "names_used": [
+    "不求备",
+    "不念旧恶",
+    "念旧恶"
+   ],
+   "relational": "柔与刚是一个形成与其所等待者的关系：所等待者有多少可以缺而它仍给予。",
+   "ro_passage": "lao-76-rou-ruo-sheng-zhi-tu",
+   "tradition": "道",
+   "work": "老子"
+  },
+  {
+   "id": "zhuangzi-huo-chuan",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-U03"
+   ],
+   "source_id": "ZH1-S03",
+   "layer": "论·先秦（《庄子·养生主》，内篇，战国；传世本承郭象整理之三十三篇，内篇一般视为较早之层，不逐篇断为庄周亲作）",
+   "layer_checked": "《庄子》属诸子，标论；据 ZH1-S03 之时层说明补年代之限",
+   "fragments": [
+    "指窮於爲薪，火傳也，不知其盡也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.begins_within",
+    "Becoming.Web.ByPassing.passes_within",
+    "Becoming.Web.ByPassing.ends_within",
+    "Becoming.Web.Whole.needs_new"
+   ],
+   "records": [
+    "a-pattern-lasts-through-passing",
+    "whole-persists-through-generation"
+   ],
+   "reading": "AI读法：薪尽而火传，读作样式（火）经由各自终止的承载者（薪）而延续，即名表之火传。样式自某步起每步在场而承载者各自短暂（无一承载者在相隔 d 步的两步都承载它），则没有 d 个相继步全无承载者开始（Web.begins_within，否定式，不需传递前提）；在传递前提下（每个承载者或前一步已承载，或从前一步的承载者处得到它），每 d 个相继步内确有承载者把它传过一步（Web.ByPassing.passes_within）；由各自有终、每步可列出的部分构成而持续的整体，任一有限部分之列以外，不会自某步起再无部分生起（Web.Whole.needs_new）。「不知其盡」是有条件的：传递一停，样式在一个跨度内结束（Web.ByPassing.ends_within）；文中「火傳也」正说出这个条件，故作相合。所以火之久不是薪之久，正是久的理论读法。RO hs-06-16-bu-si 把河上公注的个体不死读作相分，此处没有个体不死的断言。慧远以薪火喻神传异形（IN1-R-H11；其设难者以火木同灭质疑神不灭，IN1-R-H10），是 C03 之条：在那里火被读为传于异形而不灭之神，与此处经由传递之样式不同。",
+   "gap": "",
+   "locator": "庄子·养生主·末章",
+   "names_used": [
+    "火传",
+    "久"
+   ],
+   "relational": "火是由一个承载者传给另一个承载者的样式；它经由传递而久，不靠任何承载者之久。",
+   "ro_passage": "",
+   "tradition": "庄",
+   "work": "庄子"
+  },
+  {
+   "id": "yi-daguo-ku-yang-sheng-hua",
+   "status": "revised",
+   "record_ids": [
+    "TP-H28-X5-R01"
+   ],
+   "source_id": "YD-JP28",
+   "layer": "小象·先秦至秦汉（年代有争议）",
+   "fragments": [
+    "枯楊生華，何可久也"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Web.Carries.arising_not_recurring",
+    "Becoming.Web.lasts_on",
+    "Becoming.Web.depletion_not_recurring",
+    "Becoming.Flow.uptake_needs_replenishment"
+   ],
+   "records": [
+    "reserve-defers-ending",
+    "unceasing-generation-needs-renewal",
+    "generation-is-replenishment"
+   ],
+   "reading": "AI读法：枯杨生华，读作无支持、只靠储备（蓄）之形成上的生起：根已枯，不再得补充。无支持而靠储备者不在任意晚之步再生起（Web.Carries.arising_not_recurring：储备推迟终结而不逃脱它）；被储备承载而无支持的一段内，活跃次数至多如其起始储备（Web.lasts_on）；自某步起其中无一条件上升的有限族，只被有限多个事件所损（Web.depletion_not_recurring，C04 之损）；在平衡之流中，持续之摄取需持续之补充（Flow.uptake_needs_replenishment）。所以「何可久」读作：其活跃有界，其生起不在任意晚之步复现；花是储备之支用，不是恒（更新）。爻辞「无咎无譽」与小象「老婦士夫，亦可醜也」之评价不在律中。",
+   "gap": "",
+   "locator": "周易·大過·九五小象",
+   "names_used": [
+    "久",
+    "蓄",
+    "损",
+    "恒"
+   ],
+   "relational": "枯杨生华是对一个背后没有回补之储备的支用。",
+   "ro_passage": "",
+   "tradition": "易",
+   "work": "周易·大過"
+  }
+ ],
+ "drops": [],
+ "passed": [],
+ "notes": "第三读，8 条全部修订，无一可原样通过，无删条。所有片段都用 ctq.py text 核过，在所标来源中逐字存在（序卦一条只有空白不同）。所有声明用 resolve.py 解析，并在 Lean 中找到同名全称，读过其前提与文档。所有记录都存在。\n\n逐条主要问题：\n(1) yi-tai-wuwang-bufu：\n- 「消息之律」借用了名表「消息」（普查平衡）之名。名表注明 waxWane 写作「消长环」，已改。\n- 「恰是有限且不同歸之律的定理」说过了头。lossless_iff_returns 只在有限构形之内给出等价；在开放世界里，皆复也可以成立，不同归又不足以保证皆复。已按此改写。\n- wane_not_returns 与 succ_open 各是一条构造之律或构造之例上的事实，现已注明；补 wane_merges。\n- 「无平不陂」未作对应，已注明。经文的西周断代也有争议，已补注。\n(2) yi-jing-zhou-xiu-jing：名表「終足」行明说「复足」已弃用，因为 Restored 不要求此前曾满足，原条却仍用「复足」。已改用「足」「与」，并说明律不要求条件此前曾足。「甃＝以砖」与脉络 limits 所说「材料不由本句限定」相违，已改。repair_restores 的前提「焦点形成在起点活跃」也已补上。\n(3) yi-shuogua-gen-zhong-shi：\n- allBroken_absorbing 与 wane_never_back 在 hexagrams-on-the-spine 中，不在原列的 hexagram-world-laws 中，记录已改。\n- 「终」不是名表之名，已从 names_used 删去。\n- begins_within 所证只是否定式（没有 d 步全无开始），并且不需传递前提；原读法写成「每 d 步内有承载者开始」，已改。needs_new 补上「可列出」这一前提。\n(4) yi-zagua-bo-lan-fu-fan：\n- 「消息之律」改为「消长环」。\n- 读法明言此处剝不取侵蚀之义，names_used 却列了「剥」，与「名各指其所名」相违，现在 names_used 为空。\n- 所引 order_paired、zagua_partners、bo_fu 等都是在六十四卦模型上计算（rfl/decide）所得的事实，不是一般之律，现已注明。\n- 补 bo_fu 另一半：环上直读之移，一步自剥至复。\n(5) yi-xugua-weiji-zhong：\n- 种类由相合改为定域。「物」不可穷是普遍断言。withHistory_unlisted 只说带历史之展开不为清单所含，当下之构形停息时也成立。arising_opens 只给出开放这一必要条件。律也可以有闭（卦上只消之律下的坤）。\n- run_iff_continues 在 where-a-run-goes-on 中，both_fixed_iff 在 hexagram-world-laws 中，两份记录原先都漏列，已补。\n- relational 一栏误借「列」（普查），已改写。\n(6) lao-76-rou-ruo-sheng-zhi-tu：\n- 原读法说「容忍为零者在有记忆时……在三者之例中自第二步起扩散」，错了。Triad.spreads 是 tol0 的容差之律，即无记忆的 answers（名表：不念旧恶）；有记忆的是 waitsAll（念旧恶）。\n- Triad.total_kept 只是三者构造例中的一个见证，原读法却当作一般界限「容忍不恢复全面扣留」。一般之律是 gives_needs_sparing 与 total_stays：只要有一个形成的容差不少于其所等待者之数，就能从全面扣留中恢复。已补这两条声明。\n- kept_set 原写「只在其容忍之外等待」，意思不通，已按 Lean 改写。\n- 名用「不求备」（容差≥1）、「不念旧恶」（容差为零之律）与「念旧恶」，与名表一致。\n- 跨容差的一般比较律仍没有（Lean 中无 course_mono），已注明。\n- 种类改为定域：普遍形式只在扣留落在容差之内时成立。层补上成书年代之争，以及郭店简无此章、最早见于帛书。\n(7) zhuangzi-huo-chuan：\n- IN1-R-H10 是设难者以火木同灭质疑神不灭的论证，原读法当作慧远之说，已改。\n- begins_within 的否定式和不需传递前提两点，同上已改。\n- 补名表之名「火传」，此段正是该名的出处。\n- 层由「经」改为「论」，并依 ZH1-S03 的时层说明补上年代之限。\n(8) yi-daguo-ku-yang-sheng-hua：原读法写「枯杨生华＝…」「何可久＝不能复现」，以等号把古文与结构等同，违反 brief，已改为「读作」。补 uptake_needs_replenishment 的平衡前提。「何可久」改读为活跃有界且生起不复现。\n\n给整合者：\n- agents/check-C05.json 中第一位检查者修订的条目（如 yi-fu-qiri-laifu）也写「消息之律」，与名表「消息」行之注（waxWane 写作「消长环」）冲突，宜统一清理。\n- 本簇所引卦上事实都是在模型上计算所得，在經、說中宜标作卦之模型事实，不作一般律。\n- 本簇不涉延续之条件或以广为愈；读法中没有排序，也没有把评价写进律里。"
+}

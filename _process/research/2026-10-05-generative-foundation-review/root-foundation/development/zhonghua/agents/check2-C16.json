@@ -1,0 +1,141 @@
+{
+ "cluster": "C16",
+ "corrections": [
+  {
+   "id": "mobian-bu-zhi-qi-shu",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-SX-total"
+   ],
+   "source_id": "MI1-S-SX",
+   "layer": "经说（墨经·经说下），先秦（通常归战国后期墨家；墨辩六篇作者与编纂层未有定论；据传世转录本）",
+   "layer_checked": "《脉络》era：通常归入战国后期墨家文献，六篇作者与编纂层未作同一断定；层为《經說》释经层",
+   "fragments": [
+    "不，不智其數，惡智愛民之盡之也？或者遺乎其問也。盡問人，則盡愛其所問。若不智其數，而智愛之盡之也無難。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Derivation.Throughout",
+    "Becoming.Derivation.closed_throughout",
+    "Becoming.Counts.listing",
+    "Becoming.counts_iff_decided",
+    "Becoming.indicates_iff_decided"
+   ],
+   "records": [
+    "derivation-soundness",
+    "counts-exist-where-decided"
+   ],
+   "reading": "AI读法：难者问：不知民之数，怎知爱已尽及其民，或许有问时遗漏者；答者说：尽问其人，则尽爱其所问，不知其数而知爱之尽，并不难。这里分开两种知。其一是全称：主张在一个所给之域上处处成立（Derivation.Throughout，是定义）；此处之域是「所问」，由答者给出，不由计数得出。脊柱之律 closed_throughout 说：凡由在该域处处成立之基、不加局部前提而说出的主张，在该域处处成立；它对任何域都成立，不要求列出其域，也不要求其有穷。其二是数：数只对一个列表而有，是所计者之列表之长（Counts.listing），且恰在列表每一员定然否之处存在（counts_iff_decided；一员之形为 indicates_iff_decided）。所以知「尽」不待知「数」。全称与数之分，在脊柱是两个定义之分；律所加的是：全称之说不用列表，数则既要列表，又要每员定然否。剩余：答者之尽只及所问，所问是否已及一切民，此段不定；爱之内容脊柱不涉。",
+   "names_used": [
+    "说",
+    "定然否",
+    "数"
+   ],
+   "locator": "墨子/經說下",
+   "relational": "尽是爱与所问之每一者的关系，其域（所问）由答者给出；数是对一个列表之员的计量；二者分开",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經說下》",
+   "gap": "所问是否已及一切民，此段不定；全称与数之分在脊柱是定义之分，律只说全称之说不用列表、数要列表且每员定然否"
+  },
+  {
+   "id": "mobian-xiaoqu-zhou-huo",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-XQ-alllove",
+    "MI1-R-XQ-notride",
+    "MI1-R-XQ-somewhite"
+   ],
+   "source_id": "MI1-S-XQ",
+   "layer": "论（墨辩·小取），先秦（通常归战国后期墨家；墨辩六篇作者与编纂层未有定论；据传世转录本）",
+   "layer_checked": "《脉络》era：通常归入战国后期墨家文献，六篇作者与编纂层未作同一断定；层为墨辩传世正文",
+   "fragments": [
+    "愛人，待周愛人，而後爲愛人。不愛人，不待周不愛人，不失周愛，因爲不愛人矣。乘馬，不待周乘馬，然後爲乘馬也。有乘於馬，因爲乘馬矣。逮至不乘馬，待周不乘馬，而後爲不乘馬。此一周而一不周者也。",
+    "馬或白者，二馬而或白也，非一馬而或白。",
+    "或也者，不盡也。"
+   ],
+   "kind": "agreement",
+   "declarations": [
+    "Becoming.Derivation.Throughout",
+    "Becoming.Derivation.countermodel_excludes",
+    "Becoming.Derivation.no_countermodel",
+    "Becoming.Decided.exists_not_in",
+    "Becoming.Derivation.claim_not_throughout"
+   ],
+   "records": [
+    "derivation-soundness",
+    "tests-fix-likeness-where-determined"
+   ],
+   "reading": "AI读法：小取逐一标出每个谓词要求的量：「爱人」须周（每一人皆爱，全称）；「不爱人」不须周不爱，失周爱就是不爱人（「不失周愛」一句常校作「失周爱」，此处不据它立论）；「乘马」不须周，有一马被乘就是（存在）；「不乘马」须周不乘（无一马被乘）。否定把周与不周对换。脊柱有全称与不然者这一对之律，二者都以「基在该域处处成立」为条件：域中有一不然者（使主张不成立之状，即构形），则凡在该域处处成立之基，都不能不加局部前提而说出该主张（countermodel_excludes）；由这样的基不加前提而说出的主张，在该域中没有不然者（no_countermodel），由周到无一不然，与「待周不乘馬，而後爲不乘馬」同向。有一不然者即失周，构造上总成立；由失周反推有一不然者，构造上不一般成立，脊柱在所及者列为一表、每员定然否之处给出（Decided.exists_not_in）。「马或白」须在多者中说：「或也者，不盡也」，有白者而不尽白，一马不可言。脊柱于此只有一个构造模型中的见证，不是普遍之律：在只有两个构形的 Bool 上，主张 isTrue 不在整个域上成立（claim_not_throughout），而它在 true 处成立由定义直接得到。剩余：哪个谓词须周、哪个不须，是小取对谓词的分析，脊柱无此律，只把主张之量当作所给。",
+   "names_used": [
+    "说",
+    "不然者",
+    "定然否"
+   ],
+   "locator": "墨子/小取",
+   "relational": "周与不周是一个行动与它所及诸对象的关系：爱及每一人，乘及某一马；或在多者中说",
+   "ro_passage": "",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·小取》",
+   "gap": "谓词各要求何量（爱须周、乘不须周），脊柱无律；或白只有一个构造模型中的见证"
+  },
+  {
+   "id": "yinming-san-xiang",
+   "status": "revised",
+   "record_ids": [
+    "FO1-R-NY01",
+    "FO1-R-NY02",
+    "FO1-R-NY03",
+    "FO1-R-NY04",
+    "FO1-R-NY05",
+    "FO1-R-NY06",
+    "FO1-R-NY14"
+   ],
+   "source_id": "FO1-S-NY",
+   "layer": "论（因明入正理论）·隋唐（玄奘贞观二十一年即647年汉译）；印度原作约六世纪，汉传作商羯罗主造，藏传归陈那，作者有异说",
+   "layer_checked": "《脉络》era：印度论理传统；唐玄奘汉译（CBETA T32n1630）",
+   "fragments": [
+    "此中宗等多言，名為能立。",
+    "因有三相。何等為三？謂遍是宗法性、同品定有性、異品遍無性。",
+    "同法者，若於是處顯因同品決定有性，謂「若所作見，彼無常，譬如瓶等」。",
+    "異法者，若於是處說所立無，因遍非有，",
+    "言不共者，如說「聲常，所聞性故」，常無常品皆離此因，常無常外餘非有故，是猶豫因。",
+    "由彼為因，於所比義有正智生，了知有火或無常等，是名比量。"
+   ],
+   "kind": "scope",
+   "declarations": [
+    "Becoming.Learning.Lumped",
+    "Becoming.Learning.determines_lumped_iff",
+    "Becoming.Learning.lumped_right_iff",
+    "Becoming.Derivation.Derives.sound",
+    "Becoming.Derivation.basis_iff_relative",
+    "Becoming.Derivation.no_countermodel",
+    "Becoming.Derivation.countermodel_excludes",
+    "Becoming.Decided.of_not_not"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "derivation-soundness",
+    "counts-exist-where-decided"
+   ],
+   "reading": "AI读法：因明以宗、因、喻多言为能立（FO1-R-NY01），因须三相俱足（NY02）：遍是宗法性（宗之有法有此因），同品定有性（有所立法之例中，有有此因者），异品遍无性（无所立法之例都无此因）。同品、异品只取宗外之例：文中不共不定「聲常，所聞性故」，所闻性在常、无常二品中都没有，声却有之，可见声不计入二品。此因第一相、第三相俱足，文判为「猶豫因」。所以第一相与第三相合起来，在宗上不定任何值。只有把异法喻读作连宗在内的全称，第一相与它才在构造上得出所立在宗上不可非；所立定然否之处，由此即得所立（Decided.of_not_not）。三相所作的是推类：把有此因之例归为一类（其余各自为类；类，Learning.Lumped，随类而同）。在随类而同的诸值之中，宗外所见诸例之值定宗上之值，恰当有一所见之例与宗同类（determines_lumped_iff；条件：值至少有二，所见之例为一列表，类之同异已定）。在第一相之下，这就是宗外有一例有此因，第二相正给出它；不共之因没有这样的例，所见之值在宗上就不定，正是文中所判之「猶豫」。所定之值在宗上为是，恰当世界在宗与那一同类所见之例上取同一值（lumped_right_iff）；三相都在宗外检验，不给出这一点。同法喻「若所作見，彼無常」作全称时，是一条说的基：以它为基、以宗法为局部前提说出所立，凡基与前提成立之处，所立都成立（Derives.sound）；一个构形满足一切由基所说者（在其所满足的前提下），恰当它满足基（basis_iff_relative），所以宗上之所立恰待喻体在宗上成立。异法喻「若於是處說所立無，因遍非有」，在构造逻辑中等价于：其所及之例中，没有有因而无所立的不然者，这是 no_countermodel 结论之式（以有因者为域）；有一个这样的不然者，则凡在有因之域处处成立之基，都不能不加前提说出所立（countermodel_excludes）。故「由彼為因，於所比義有正智生」（NY14）作为全称，恰在宗与同类所见之例实取同值之处成立，是定域。剩余：宗须立敌共许（极成）是对辩之条件，不取。",
+   "names_used": [
+    "说",
+    "不然者",
+    "不可非",
+    "定然否",
+    "类",
+    "推类"
+   ],
+   "locator": "因明入正理论",
+   "relational": "因、宗、喻是论题、理由与诸实例之间的关系；同品、异品取宗外之例，比量经推类把宗外所见之值推及于宗",
+   "ro_passage": "",
+   "tradition": "佛教（因明）",
+   "work": "《因明入正理论》",
+   "gap": "三相在宗外检验，不给出宗与同类之例实取同值；《脉络》无不共不定之关系条目（仅有共不定 FO1-R-NY09）"
+  }
+ ],
+ "drops": [],
+ "passed": [],
+ "notes": "I revised all three entries. Every original fragment matches its frozen text exactly. Every added quotation was also checked with ctq.py text: 或也者，不盡也。, the 同法喻 sentence, and the 不共不定 sentence. Every declaration resolves with resolve.py, its Lean was read in Derivation.lean, Decidedness.lean, Learning.lean or Branching.lean, and each record cited exists.\n\n(1) mobian-bu-zhi-qi-shu\n- The reading said closed_throughout gives a universal 由无前提的推导即得 (from a derivation with no premise). It left out the theorem's hypothesis that the basis holds throughout the domain.\n- It presented the split between 全称 (universal) and 数 (count) as a law. In the spine that split is a split between two definitions, Throughout and Counts.\n- It located what 数 needs only in decidedness. 墨者's 其数 is the number of the people, which in the spine needs a list (Counts.listing); decidedness of each member is a further condition (counts_iff_decided).\n- The fix states the domain 所问 as supplied by the answerer and states what the law adds. Kind stays agreement.\n- Dropped the record counting-where-the-counts-exist, which is about Becoming.Counting. Added Counts.listing. names_used listed 定然否 but the reading never used it; it does now.\n\n(2) mobian-xiaoqu-zhou-huo\n- Removed PossiblyDrawnInto and NecessarilyDrawnInto, and with them the record necessarily-drawn-is-not-returning. They quantify over the courses of a process, not over the objects of an action, so they match the text only in quantifier shape. They are also bare definitions.\n- The claim that the spine never infers a 不然者 from 非全称 was wrong: Decided.exists_not_in gives exactly that where the domain is listed and each member decided. Added it.\n- claim_not_throughout is now labelled as a witness in one constructed model (Bool), not a general law.\n- countermodel_excludes and no_countermodel are now stated with their basis-throughout condition.\n- Which predicate requires 周 is marked as left over, since the spine has no law on it. Removed 入 from names_used. Kind stays agreement.\n\n(3) yinming-san-xiang: kind changed from agreement to scope\n- The text's own 不共不定 (「聲常，所聞性故」…「是猶豫因」) satisfies the first and third marks and is still judged inconclusive. That shows 同品 and 异品 range only over instances other than the subject (宗外). So the reading's claim 由第一相与第三相…所立在宗上不可非 holds only if 异法喻 is read as a universal that includes the subject.\n- Calling 同品定有 merely a debate requirement contradicts the text, where lacking it makes 犹豫因 (and NY02 makes the three marks a joint requirement). Its exact role is the condition in Learning.determines_lumped_iff: within assignments that go alike across the reason's lumping, the observed values fix the subject's value exactly where some observed instance is lumped with it. 不共 is the case where none is.\n- Learning.lumped_right_iff gives the range of 正智: the carried value is right exactly where the world takes one value at the subject and that observed instance. The marks, all checked outside the subject, do not supply this. That is why the kind is now scope.\n- Added Derivation.basis_iff_relative for the deductive route through the 喻体. Added the 同法喻 and 不共 fragments and the record generalization-through-lumping. Added 类 and 推类 to names_used. The 脉络 has no relation entry for 不共不定 (only 共不定, FO1-R-NY09); this is noted in gap.\n\nLayers: added the 墨辩 caveat that the six chapters' authorship and compilation layers are unsettled. For 因明 added Xuanzang's translation in 647 and the attribution dispute: 商羯罗主 in the Chinese tradition, 陈那 in the Tibetan.\n\nNone of the three readings touches the continuation condition or ordering."
+}
