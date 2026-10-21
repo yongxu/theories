@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T13:33:42+00:00",
+  "reviewed_at_utc": "2026-10-21T12:45:50+00:00",
   "statement": {
     "en": "In Archimedean amounts a closed amount approaches rest with no least loss: few steps lose at least any ε above nothing. Rest needs a least loss at each change counted: halving approaches rest and never reaches it. Whole numbers are the instance with ε one; a loss needs a law that merges.",
     "zh": "在阿基米德的量中，封闭的量无需最小损失即趋近停息：至少损失任一大于无的 ε 的步只有有限个。停息需要每次被计的变化有最小损失：减半趋近停息而达不到。整数是 ε 为一的实例；损失需要有所合并的规律。"
@@ -369,6 +369,13 @@
         "en": "The rest theorem of worlds over any amounts, read finitely.",
         "zh": "任何量上世界的停息定理，有限地读取。"
       }
+    },
+    {
+      "id": "rest-exactly-where-falls-stop",
+      "detail": {
+        "en": "Rest over any amounts, exactly where the total stops falling.",
+        "zh": "任何量上的停息，恰在总量停止下降之处。"
+      }
     }
   ],
   "references": [
@@ -430,7 +437,7 @@
         "Becoming.Halving.takes_within_one",
         "Becoming.Halving.takes_halve"
       ],
-      "sha256": "fbd8477b11994153d7acb2d0d875c9167f0c7950c7cb5cdfc0107035c861b9fc"
+      "sha256": "15207336ebcbd438d39c4301862599bfc9dbc49b79880cc76cc8fd8cb595f035"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -593,13 +600,13 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
       "declarations": [],
-      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
+      "sha256": "3241a8dac70e5caa379484b5cd223d36ee7ae495c3119594bbf76f7c0ba90624"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
       "declarations": [],
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
+      "sha256": "a61c21e4dfeb49d21dab0250b99966a6ea7f63cf07ab2b31fd28e12f6de9f875"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T160413.543456Z/verification.json",
@@ -658,12 +665,17 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
       "role": "receipt",
       "sha256": "8854e4c1a91979fbe1e87781e6c36ed8dad448d481b7c97b8bde443463df978a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
+      "role": "receipt",
+      "sha256": "fb5bb84d275aea291dd7c8c795027c4bb224eef26ab4ecdf66c14183439c0857"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -767,6 +779,10 @@
     {
       "en": "20 October 2026, LC2: the next step this record named, the rest theorem over any amounts with a finite reading as the premise, is stated (record rest-theorem-in-any-amounts); Becoming.LeastLoss changed only in the finite-reading law, generalized below; this record's declarations and statements unchanged; the proof binding re-pointed to receipt 20261020T133130.717227Z after reading the change; study section 267.",
       "zh": "2026年10月20日，LC2：本记录所列的下一步，以有限读取为前提的任何量上的停息定理，已陈述（记录 rest-theorem-in-any-amounts）；Becoming.LeastLoss 只在有限读取的规律上改动，向下推广；本记录的声明与陈述不变；阅读改动后证明绑定改指回执 20261020T133130.717227Z；研究第 267 节。"
+    },
+    {
+      "en": "21 October 2026, LC3: Becoming.LeastLoss gains the one premise both rest routes give (Amounts.FallsStop) and the amounts with no endless fall, which a least fall in Archimedean amounts gives, the dyadic and layered amounts showing each premise needed for every amount, not only for one stock (record rest-exactly-where-falls-stop); this record's declarations and statements unchanged; the proof binding re-pointed to receipt 20261021T124304.830826Z after reading the change; study section 308.",
+      "zh": "2026年10月21日，LC3：Becoming.LeastLoss 增加两条停息途径共同给出的唯一前提（Amounts.FallsStop），以及没有无尽下降的量，阿基米德量中的最小下降给出它，二进量与分层量表明每个前提对每个量都需要，而不只是对一个存量（记录 rest-exactly-where-falls-stop）；本记录的声明与陈述不变；阅读改动后证明绑定改指回执 20261021T124304.830826Z；研究第 308 节。"
     }
   ],
   "text_versions": [

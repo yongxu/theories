@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-325 registered results: 305 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 817 curated edges join 278 results to the results they draw on.
+326 registered results: 306 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 819 curated edges join 279 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -205,6 +205,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [reserved-shutdown-during-recovery][] ← <a id="reserved-shutdown-during-recovery--recoverable-mediated-change"></a>[recoverable-mediated-change][]
 - [residual-continuation-correspondence][] ← <a id="residual-continuation-correspondence--guarded-program-question-recovery"></a>[guarded-program-question-recovery][] · <a id="residual-continuation-correspondence--branching-tests-bisimulation"></a>[branching-tests-bisimulation][] · <a id="residual-continuation-correspondence--finite-trace-transport"></a>[finite-trace-transport][]
 - [rest-at-every-resolution][] ← <a id="rest-at-every-resolution--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="rest-at-every-resolution--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="rest-at-every-resolution--reserve-defers-ending"></a>[reserve-defers-ending][]
+- [rest-exactly-where-falls-stop][] ← <a id="rest-exactly-where-falls-stop--rest-theorem-in-any-amounts"></a>[rest-theorem-in-any-amounts][] · <a id="rest-exactly-where-falls-stop--least-loss-rest"></a>[least-loss-rest][]
 - [rest-from-a-finite-reading][] ← <a id="rest-from-a-finite-reading--least-loss-rest"></a>[least-loss-rest][] · <a id="rest-from-a-finite-reading--recurrence-without-premise"></a>[recurrence-without-premise][]
 - [rest-theorem-in-any-amounts][] ← <a id="rest-theorem-in-any-amounts--rest-from-a-finite-reading"></a>[rest-from-a-finite-reading][] · <a id="rest-theorem-in-any-amounts--least-loss-rest"></a>[least-loss-rest][]
 - [rest-with-refinement-counted][] ← <a id="rest-with-refinement-counted--continued-change-needs-openness"></a>[continued-change-needs-openness][] · <a id="rest-with-refinement-counted--rest-at-every-resolution"></a>[rest-at-every-resolution][]
@@ -507,6 +508,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [reserved-shutdown-during-recovery]: theories/becoming/results/records/reserved-shutdown-during-recovery.md
 [residual-continuation-correspondence]: theories/becoming/results/records/residual-continuation-correspondence.md
 [rest-at-every-resolution]: theories/becoming/results/records/rest-at-every-resolution.md
+[rest-exactly-where-falls-stop]: theories/becoming/results/records/rest-exactly-where-falls-stop.md
 [rest-from-a-finite-reading]: theories/becoming/results/records/rest-from-a-finite-reading.md
 [rest-theorem-in-any-amounts]: theories/becoming/results/records/rest-theorem-in-any-amounts.md
 [rest-with-refinement-counted]: theories/becoming/results/records/rest-with-refinement-counted.md

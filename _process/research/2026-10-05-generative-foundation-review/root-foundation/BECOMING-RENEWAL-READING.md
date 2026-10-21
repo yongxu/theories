@@ -13639,3 +13639,93 @@ Board item EC, its first step ([Ren, 21 October 2026](../../../../sources/15-cod
 - The records citing the two theorems beside the definition (levels-of-closure, feeding-closure) cite the definitions instead.
 
 **The run.** Core 284 modules and 12,034 theorems, instances 7 and 567, applications 6 and 179; 1082 Lean steps ran, 118 reused. 38 declarations of Becoming.Frame, 28 of them theorems, all with empty axiom reports. Connectivity: 657 of 12,780 apart, 1 of the module's 28; register check passes.
+
+## 308. One rest theorem over any amounts, exactly where the total stops falling (LC3)
+
+```text
+Result(s): the premise both rest routes give, named once: an amount's strict falls stop, as far as can be
+       refuted (Amounts.FallsStop). A family balanced and dissipated on stops changing exactly where its total
+       stops falling (World.InAmounts.change_stops_iff, an equivalence); the rest theorem over any amounts takes
+       that one premise, covered by one family (InAmounts.rests_unrefuted_of_stops) and enclosed with a census
+       (InAmounts.rests_unrefuted_enclosed_of_stops); LC2's read forms are its corollaries
+       (InAmounts.stops_of_reading). Amounts: no endless fall (Amounts.NoEndlessFall) follows from a least fall
+       (every strict fall by at least ε above nothing, Amounts.FallsAtLeast) in Archimedean amounts
+       (Amounts.noEndlessFall_of_fallsAtLeast), whole numbers the instance (Amounts.whole_noEndlessFall); dyadic
+       amounts are Archimedean with no least fall (Halving.no_least_fall) and layered amounts have a least fall
+       (Layered.fallsAtLeast) and are not Archimedean, and both fall without end (Halving.endless,
+       Layered.endless). In such amounts every world with a census, embodied, balanced, dissipative and
+       enclosed from some step on rests (InAmounts.rests_unrefuted_enclosed_of_noEndlessFall); whole-number
+       worlds are the instance with the premises of World.rests_unrefuted_enclosed and World.rests_unrefuted and
+       nothing more (World.rests_unrefuted_enclosed_whole, World.rests_unrefuted_whole). The converse: along any
+       amount falling strictly at every step, in any amounts, a standing passing between two relata meets every
+       other premise and never rests (Pass.endless_keeps_from_rest), its levels held by no list
+       (Pass.levels_unlisted). So rest over every world in given amounts (Amounts.WorldsRest) lies between no
+       endless fall and none at every step (Amounts.worldsRest_of_noEndlessFall,
+       Amounts.not_endlessFall_of_worldsRest), and dyadic and layered amounts each carry a world that never rests
+       (Halving.worlds_need_not_rest, Layered.worlds_need_not_rest). Record rest-exactly-where-falls-stop.
+Delta: section 8.1 item 6 as one statement. LC1 and LC2 left two sufficient premises, a least loss and a finite
+       reading, each proved apart; both are now cases of one premise, which is exactly a family's rest, and the
+       amounts that give it to every world are located: a least fall with the Archimedean property, each of the
+       two needed, and an endless fall in any amounts keeps a world from rest.
+Premises: any Amounts; balance one way, dissipation read as "whatever gives back all it takes takes nothing",
+       embodiment, and a census with enclosure from T on, or one family covering activity, as in LC2; the one
+       premise of rest, that the total's strict falls stop. For the amounts: a least fall ε above nothing and the
+       Archimedean property. The converse needs only an amount falling strictly at every step.
+Evidence: core receipt 20261021T124304.830826Z (passed; Becoming.InAmounts 76 theorems in 101 declarations,
+       Becoming.LeastLoss 63 theorems, every axiom report empty; core 284 modules and 12,067 theorems, instances 7 and 567, applications 6 and 179; 11 Lean steps ran, 1,189 reused); the connectivity rerun
+       (647 of 12,813 apart, 0 of the module's 76; no new apart root); render, check, links and tests.
+Boundary: discrete steps, Prop-valued activity. Rest over every world is not shown equivalent to no endless fall:
+       from a non-rising amount whose falls recur, only as far as can be refuted, an amount falling at every
+       step is not built without choosing the steps at which it falls (dependent choice, and deciding the
+       falls); classically the three conditions coincide. The whole-number rest theorems in Space and Openness
+       keep their own proofs (below this module, which reads World); the instance shows their premises are
+       exactly what the law over any amounts needs in whole numbers. Known mathematics restated (check below).
+Output → input: the rest family's whole-number premise is one property of the amounts, no endless fall, and no
+       longer two premises read off the world; a later law over any amounts can take it as given.
+```
+
+The kit is [`development/lc3-falls-stop/`](development/lc3-falls-stop/). It holds the two modules' sources (`tree/`), the edit scripts that made them (`edit_leastloss.py`, `edit_inamounts.py`, `tail_inamounts.lean`, `edit_docs.py`), their join to the package (`integrate.py`), this landing's text (`land_text.py`, `study_lc3.txt`), the records (`make_record.py`), the board edits (`board_commit.py`, `claim.py`), and the scratch, checker and connectivity logs.
+
+**Is this known?** Checked adversarially for novelty on 21 October 2026, from encyclopaedia pages and lecture notes. Nothing here is new mathematics, and it is claimed as known results restated on the spine.
+
+- That every strictly descending chain stops is the well-foundedness of the strict order. With dependent choice, well-foundedness is the absence of an infinite descending chain ([Wikipedia, "Well-founded relation"](https://en.wikipedia.org/wiki/Well-founded_relation)). Constructively, well-foundedness gives no infinite descent but not conversely ([nLab, "well-founded relation"](https://ncatlab.org/nlab/show/well+founded+relation)). The gap between `Amounts.NoEndlessFall` and `¬ Amounts.EndlessFall` is of this kind.
+- Termination by a potential with values in a well-founded set is Floyd's (1967) method, with Turing (1949) before it ([Dijkstra, EWD673](https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD673.html)). Its semantic completeness, that a terminating program has such a ranking, is the classical form of `Amounts.not_endlessFall_of_worldsRest` read the other way.
+- A least positive element in an Archimedean ordered group is the discrete case of Hölder's (1901) theorem: Archimedean ordered groups embed in the reals ([Wikipedia, "Archimedean group"](https://en.wikipedia.org/wiki/Archimedean_group)), and the discrete subgroups of the reals are `xℤ`. `Amounts.noEndlessFall_of_fallsAtLeast` needs only the two premises, not the embedding.
+- The layered amounts are the lexicographic order, the standard non-Archimedean example.
+
+What is the spine's own is where these land:
+- the whole-number premise of the rest family is one property of the amounts;
+- a family's rest is exactly its total's;
+- the converse holds in any amounts, with no decision of equality.
+
+- **One premise.** `Amounts.FallsStop s T` states that it is not the case that after every step from `T` on a later strict fall of `s` stays unrefuted.
+  - Both rest laws conclude it. The least-loss law takes as its steps those at which the amount falls (`Amounts.rests_unrefuted`). The finite-reading law now states its conclusion in this form, with the statement unchanged (`Amounts.rests_unrefuted_of_finite_reading`).
+  - `Amounts.fallsStop_congr` carries it across amounts that agree from `T` on.
+- **A family's rest is one amount's.** `InAmounts.change_stops_iff` runs both ways.
+  - One way needs neither balance nor dissipation. Across a strict fall of the total some member's level falls, as far as can be refuted. This is `Amounts.not_not_totalOf_le`: members each not refuted to be within another's total, as far as can be refuted, within the other's total.
+  - The other way is the law of one step (`change_lowers`).
+  - So no premise on the amounts is hidden in the family's rest: the rest is exactly the descent of its total.
+- **The rest theorem with one premise.**
+  - `InAmounts.rests_unrefuted_of_stops` is the covering form.
+  - `InAmounts.rests_unrefuted_enclosed_of_stops` is the enclosed form. It is proved through `Enclosed.around_census` (the enclosing family widened as far as can be refuted, balanced and dissipated on), `census_still` and `census_falls`. The latter two are LC2's two inner steps, now laws.
+  - LC2's theorems keep their statements and become corollaries. `stops_of_reading` gives the premise from a finite reading, and `rests_unrefuted_enclosed` gives it from `Amounts.rests_unrefuted_of_finite_reading` and `census_still`.
+- **The amounts.** `Amounts.noEndlessFall_of_fallsAtLeast` applies the least-loss law to an amount's own strict falls, with the Archimedean property giving the bound by least falls.
+  - `Amounts.whole_fallsAtLeast`: every strict fall of a whole number is by at least one.
+  - `Halving.no_least_fall`: in dyadic amounts the halving stock's strict falls are its losses, since `Halving.falls_back` is the other half of the equation. No amount above nothing is within every loss.
+  - `Layered.fallsAtLeast`: in layered amounts, where the coarse layers are each within the other a strict fall is a strict fall of the fine layer, so by at least one.
+- **Whole numbers, exactly.** `World.rests_unrefuted_enclosed_whole` and `World.rests_unrefuted_whole` take the premises of `World.rests_unrefuted_enclosed` (Openness) and `World.rests_unrefuted` (Space) and nothing more. LC2's `World.rests_unrefuted_enclosed_read` and `World.rests_unrefuted_listed` also asked for a reading; they go, superseded by these.
+  - Board rule 9 would have the whole-number laws derived from the general one and their direct proofs removed. The general law reads `World` and sits above `Space` and `Openness`, so that would mean restating the base's records over amounts (the cost LC2 weighed: 260 dependents).
+  - The instance is kept instead as the correspondence check that the reading is faithful: the whole-number premises are exactly the general law's premises in whole numbers.
+- **The converse.** `Pass` generalizes LC2's `HalvingPass` below it (rule 9): any amounts, any amount `d` falling strictly at every step. Its world does not depend on the amounts at all.
+  - `Pass.dissipative` holds for every family without repetition closed across a step, not only the pair. Closedness forces the holder and the other into the family, and `Amounts.totalOf_single` totals an amount that is nothing away from one member. So the enclosed form's global dissipation premise is met.
+  - `HalvingPass` goes, and its two laws are `Pass.endless_keeps_from_rest` and `Pass.levels_unlisted` at `Halving.stock`.
+- **Rest over every world.** `Amounts.WorldsRest M` quantifies over every world in `M` meeting the enclosed form's premises.
+  - `worldsRest_of_noEndlessFall` and `not_endlessFall_of_worldsRest` place it between no endless fall and none at every step.
+  - `Halving.worlds_need_not_rest` and `Layered.worlds_need_not_rest` show that neither premise of the least fall alone suffices.
+
+**Self-review.** The equivalence `change_stops_iff` is the claim of substance: it says the premise is not stronger than a family's rest. The classification is an honest boundary rather than an equivalence, because the converse is proved only for an amount falling at every step. Building one from recurring falls needs choice, and the record says so. The names are structural: falls stop, endless fall, falls at least, pass. `FallsAtLeast` is in the `Amounts` namespace, apart from `Stock`'s process-level `FallsBy`.
+
+Not done:
+- the other laws of flows, webs and worlds over any amounts;
+- a least loss in energy;
+- a constructive equivalence of rest over every world with an amounts property.
