@@ -1,0 +1,252 @@
+{
+ "pian": "篇一　大化（C01）",
+ "edits": [
+  {
+   "find": "对每个如此表示之宇成立。延续之条件",
+   "replace": "对每个如此表示者（变、系辞、宇）成立。延续之条件",
+   "why": "本篇诸律多言变与系辞，非皆言宇"
+  },
+  {
+   "find": "它的表示是每步一个待网之状（`Becoming.WebAt`：每物之水平、是否活动、所待、所需之量、所资）",
+   "replace": "它的表示是每步一个待网之状（待网：依存网，`Becoming.Web`；新组合，待＋网。`Becoming.WebAt`：每物之水平、是否活动、所待、所需之量、所资）",
+   "why": "新名待网首见于此，组成须在首见处说"
+  },
+  {
+   "find": "它不是先于关系的实体，物之名也不携带任何关系（一·十五）。讀（AI，D23）：形式",
+   "replace": "它不是先于关系的实体。讀（AI，D23）：物之名不携带任何关系（一·十五）；形式",
+   "why": "名不携带关系是D23之读，不是律，须标讀"
+  },
+  {
+   "find": "它是一个待网之状（待网：依存网，`Becoming.Web`，新组合，待＋网，持水平、活动、所需、需要量与所资）",
+   "replace": "它是一个待网之状（`Becoming.Web`：持水平、活动、所需、需要量与所资）",
+   "why": "新名之组成已移至首见处（一·一）"
+  },
+  {
+   "find": "状为构形，实为跨步所认之同一；以处所分实，只在处所即关系之处成立。",
+   "replace": "状为构形，实为跨步所认之同一；同篇「状同而为异所者，虽可合，谓之二实」〔RU2-S-XZ22〕以处所分实，只在处所即关系之处成立。",
+   "why": "定域所据之句未引，读者看不到以所分实之文；已核原文"
+  },
+  {
+   "find": "凡跨一步之变化，皆一所然之成或毁：读于活动为作、已，读于待为结、解，读于水平之正为聚、散；一变化而三读。",
+   "replace": "作与已、结与解、聚与散，皆一所然跨一步之成与毁：读于活动、读于待、读于水平之正，一变化而三读，由定义而然。",
+   "why": "change_readings 只以 Iff.rfl 说三对是成毁之读，未证凡跨步之变化皆成毁；全称过强"
+  },
+  {
+   "find": "跨一步只有一种变化：某一所然开始成立（成）或不再成立（毁）；",
+   "replace": "这三对跨一步之变化是同一种变化：某一所然开始成立（成）或不再成立（毁）；",
+   "why": "同上，去未证之全称"
+  },
+  {
+   "find": "同章「继之者善也，成之者性也」〔DS02〕则相分",
+   "replace": "系辞上第五章「继之者善也，成之者性也」〔DS02〕则相分",
+   "why": "刚柔相推在第二章，继之者善在第五章，非同章"
+  },
+  {
+   "find": "读入之后，律在每一移处恰把次动留开（`Becoming.withMove_open`）",
+   "replace": "读入之后，入状之变在每一移处把次动留开（`Becoming.withMove_open`）",
+   "why": "withMove P 是变不必是法；Lean 为单向，无恰；律非名表之名"
+  },
+  {
+   "find": "外来之动所供给的，正是律所留开者。每个行都可读作整体中一体之历程",
+   "replace": "外来之动所供给的，正是法所留开者。每个行都可读作兼（整体，whole）中一体（部分，part）之历程",
+   "why": "名表以法名律、以兼名整体；兼首见须附注"
+  },
+  {
+   "find": "没有在整体之外的发动者，这一层相合",
+   "replace": "没有在兼之外的发动者，这一层相合",
+   "why": "整体之名为兼"
+  },
+  {
+   "find": "所以律从展开读出，不立于展开之上：先于历史而给出的律，比自然之法多出的只是未采之动，记录定不下它们（一·八）。讀（AI，D23、D32）：律与历史是一展开的两种读法",
+   "replace": "所以法从展开读出，不立于展开之上：先于历史而给出的变，比自然之法多出的只是历史未经之移，记录定不下它们（一·八）。讀（AI，D23、D32）：法与历史是一展开的两种读法",
+   "why": "律非名表之名；shown_le_iff 对任何变成立，多出者是未经之移（状—动—状），不只是动"
+  },
+  {
+   "find": "依之而行则得其然，律与所然相互确定",
+   "replace": "依之而行则得其然，法与所然相互确定",
+   "why": "名表以法名律"
+  },
+  {
+   "find": "所以律不是任何一个状，却由历史确定到它所显的每一移。",
+   "replace": "所以法不是任何一个状，却由历史确定到它所显的每一移。",
+   "why": "名表以法名律"
+  },
+  {
+   "find": "从功效读出不可见者，与律由历史确定相合",
+   "replace": "从功效读出不可见者，与法由历史确定相合",
+   "why": "名表以法名律"
+  },
+  {
+   "find": "所以历史把律定到死路为止。对应不是同一：历史回到旧状时，它所显之法许一段它未走过的行（`Becoming.Splice.spliced`）；",
+   "replace": "所以历史把变定到死路为止。对应不是同一：历史回到旧状时，它所显之法可许一段它未走过的行（`Becoming.Splice.spliced`，一个构造的例子：回到起点一次而后永去他处之历史）；",
+   "why": "same_histories_iff 言变；Splice.spliced 只是一例，全称为假（0,1,0,1…周而复始之历史所显之法只许其自身）"
+  },
+  {
+   "find": "代价是这样的行永不复返（`Becoming.Law.withHistory_never_returns`，复之篇）。讀（AI，D32）：律从所在之处作答",
+   "replace": "代价是这样的行永不重回旧状（`Becoming.keepHistory_new`；于确定之法之轨，见 `Becoming.Law.withHistory_never_returns`，复之篇）。讀（AI，D32）：法从所在之处作答",
+   "why": "withHistory_never_returns 言函数之法之轨，keepHistory 之行不重回由 keepHistory_new 证；律改法"
+  },
+  {
+   "find": "由此前段所推之下一值至少错其一",
+   "replace": "由此前段所推之下一值不能于两列皆中",
+   "why": "no_prefix_fixes_next 只证不能两皆中；至少错其一须值可判定（claim_missed_on_one）"
+  },
+  {
+   "find": "`Becoming.Run.keepHistory_shown`、`Becoming.Law.withHistory_never_returns`、`Becoming.Learning.no_prefix_fixes_next`；记录 [histories-fix-law-up-to-dead-ends](../results/records/histories-fix-law-up-to-dead-ends.md)、[process-and-frame-as-readings](../results/records/process-and-frame-as-readings.md)。",
+   "replace": "`Becoming.Run.keepHistory_shown`、`Becoming.keepHistory_new`、`Becoming.Law.withHistory_never_returns`、`Becoming.Learning.no_prefix_fixes_next`；记录 [histories-fix-law-up-to-dead-ends](../results/records/histories-fix-law-up-to-dead-ends.md)、[process-and-frame-as-readings](../results/records/process-and-frame-as-readings.md)、[learning-by-refutation](../results/records/learning-by-refutation.md)。",
+   "why": "补承载不重回之声明；no_prefix_fixes_next 之记录在 learning-by-refutation"
+  },
+  {
+   "find": "「道外无事事外无道」〔RU2-S-S18〕：律不在运行之外，运行也不在律之外。",
+   "replace": "「道外无事事外无道」〔RU2-S-S18〕（宋明，陆九渊语录）：法不在运行之外，运行也不在法之外。",
+   "why": "律改法；后起之文须标层次，免读者以为先秦"
+  },
+  {
+   "find": "（相合，fazang-yin-men-liu-yi）：同一法时而为因、时而为果。",
+   "replace": "（相合，fazang-yin-men-liu-yi；隋唐，法藏）：同一者时而为因、时而为果（文中「法」是佛典之法，不是本编之法）。",
+   "why": "引文外以法字作佛典义，与名表之法相撞；标层次"
+  },
+  {
+   "find": "四项合为 `Becoming.World.unity`。于是原来作为前提的衡，成了一体之状态：其余是否闲置。",
+   "replace": "`Becoming.World.unity` 合陈后两项，并说计其余则每宇是取与之法之一行、其水平即宇之水平。讀（AI，D23）：原来作为前提的衡，成了一体之状态：其余是否闲置。",
+   "why": "unity 之四项不是前文所列四项；衡为一体之状态是D23之读，须标讀"
+  },
+  {
+   "find": "诸宇（空间，space；新组合，诸＋宇）兼成生与绝生",
+   "replace": "诸宇（空间，space；新组合，诸＋宇）含成生与绝生",
+   "why": "兼是整体之名，不作动词"
+  },
+  {
+   "find": "讀（AI，D2、D43）：律属于整体，前提属于部分。",
+   "replace": "讀（AI，D2）：无设之律属于诸宇之全，设只属其所划之一体。",
+   "why": "D43无此读；整体、部分非名表之名，且此处之全是诸宇"
+  },
+  {
+   "find": "变是把状分为律所定者与律所留开者的读法",
+   "replace": "变是把状分为法所定者与法所留开者的读法",
+   "why": "名表以法名律"
+  },
+  {
+   "find": "不由此导出：每个变都是某宇之律",
+   "replace": "不由此导出：每个变都是某宇之法",
+   "why": "名表以法名律（World.law）"
+  },
+  {
+   "find": "凡兼分为二体，各记其所可而分述之",
+   "replace": "凡兼分为两体，各记其所可而分述之",
+   "why": "二体在名表是卦之两半（Hexagram.halves），一名一义"
+  },
+  {
+   "find": "三体可相关，而其任二体皆无所关。",
+   "replace": "三体可相关，而其任两体皆无所关。",
+   "why": "同上，避二体之名"
+  },
+  {
+   "find": "二体之为一对，是由关系：它们能一同是什么，或怎样一同走下去。分述二体，只记每体自己能是什么，恰在整体呈“任相配”之形——一体之任一所可与他体之任一所可都能相配——时给回整体",
+   "replace": "两体之为一对，是由关系：它们能一同是什么，或怎样一同走下去。分述两体，只记每体自己能是什么，恰在兼呈“任相配”之形——一体之任一所可与他体之任一所可都能相配——时给回兼",
+   "why": "避二体之名；整体之名为兼"
+  },
+  {
+   "find": "三位奇偶是诸对给不回的整体：任两位可取任意值，三位不可（`Becoming.whole_not_in_pairs`，例子），所以三是整体持有一种任何部分都不持有之关系的最少之数。",
+   "replace": "三位奇偶是诸对给不回的兼：任两位可取任意值，三位不可（`Becoming.whole_not_in_pairs`，例子）。",
+   "why": "例子只证三足以如此，不证最少；最少之说是D33之读，移入讀"
+  },
+  {
+   "find": "讀（AI，D33）：二以关系为对，诸成员从对中读出；对是最小的分，不是最小的关系。",
+   "replace": "讀（AI，D33）：二以关系为对，诸成员从对中读出；对是最小的分，不是最小的关系；三是兼持有一种任何体都不持有之关系的最少之数（例子只示三足以如此）。",
+   "why": "最少之数是读，不由例子导出"
+  },
+  {
+   "find": "若诸语境之所可各只系其所含之辞，无一不依语境之读合乎诸语境之所可",
+   "replace": "若每辞有一语境含之，诸语境之所可各只系其所含之辞，无一不依语境之读合乎诸语境之所可",
+   "why": "no_free_frame 亦以 home、covers 为前提，经未写"
+  },
+  {
+   "find": "量子测量所示属于此类。",
+   "replace": "量子测量所示亦属此类：九辞之方阵，无一赋值合乎六线（`Becoming.Square.noGlobal`、`Becoming.Square.no_context_free_values`）。",
+   "why": "原句无证；Specker 三盒不是量子之例，量子之证在方阵"
+  },
+  {
+   "find": "交错恰在每两个取与共触一物处被历程定下",
+   "replace": "交错恰在每取与皆触一物、且每两个取与或同一或共触一物处被历程定下",
+   "why": "unique_iff 之条件（Connected）有两半，说漏一半"
+  },
+  {
+   "find": "则随交错而异（`Becoming.Interleavings.Pair.apart_differs`）",
+   "replace": "则可随交错而异（`Becoming.Interleavings.Pair.apart_differs`，一个构造的例子）",
+   "why": "apart_differs 是一例，不是全称"
+  },
+  {
+   "find": "在一段之内，互换相邻而不相连之取与所能达到的重编号",
+   "replace": "在一段之内，足迹含其取与时，互换相邻而不相连之取与所能达到的重编号",
+   "why": "sorts_iff 以 Footprinted.Contains 为条件"
+  },
+  {
+   "find": "[only-the-order-of-change-shows](../results/records/only-the-order-of-change-shows.md)",
+   "replace": "[order-of-exchanges-is-the-invariant](../results/records/order-of-exchanges-is-the-invariant.md)",
+   "why": "only-the-order-of-change-shows 记的是插删闲步（Stuttering），不载 sorts_iff；sorts_iff 在 order-of-exchanges-is-the-invariant"
+  },
+  {
+   "find": "「道，行之而成；物，謂之而然」〔ZH1-S02〕——相合：律从运行读出",
+   "replace": "「道，行之而成」〔ZH1-S02〕——相合：法从运行读出",
+   "why": "条目只经行相合，謂之而然不携带；律改法"
+  },
+  {
+   "find": "——相合：律与所然相互确定；",
+   "replace": "——相合：法与所然相互确定；",
+   "why": "名表以法名律"
+  },
+  {
+   "find": "历史与律不是同一种东西；历史定律至于死路",
+   "replace": "历史与法不是同一种东西；历史定变至于死路",
+   "why": "律改法；same_histories_iff 言变"
+  },
+  {
+   "find": "律不先于行，整体靠部分不息之作而久，不独立不改",
+   "replace": "法不先于行；所列诸体皆亡者，兼唯靠诸体不息之作而久（`Becoming.Web.Whole.needs_arising`），不独立不改",
+   "why": "needs_arising 有条件（诸体皆亡、所列）；名用法、兼、体"
+  },
+  {
+   "find": "形式中“分”只是动作归属的一种读法",
+   "replace": "形式中动属于何体只是一种读法（`Becoming.partForms_iff`），不是先在的两个职分（本编之「分」只名足迹）",
+   "why": "分在名表只名足迹，不作动之所属"
+  },
+  {
+   "find": "迹不是所以迹，历史与律不是同一种东西，这一层相合",
+   "replace": "迹不是所以迹，历史与法不是同一种东西，这一层相合",
+   "why": "名表以法名律"
+  },
+  {
+   "find": "（`Becoming.Choosing.not_alike`，一个构造的例子）",
+   "replace": "（`Becoming.Choosing.sameTests`、`Becoming.Choosing.not_alike`，一个构造的例子：二者自起点过同样之验而不同）",
+   "why": "定不下同须二者过同验且不同，not_alike 只载后半"
+  },
+  {
+   "find": "不是按同去认（`Becoming.Twins.naming_not_identifiesAlike`）",
+   "replace": "不是按同去认（`Becoming.Twins.naming_not_identifiesAlike`，一个构造的例子）",
+   "why": "是例子，不是全称之律"
+  },
+  {
+   "find": "对照（相合，fazang-yuan-cheng-yi）：",
+   "replace": "对照（相合，fazang-yuan-cheng-yi；隋唐，法藏）：",
+   "why": "后起之文标层次"
+  },
+  {
+   "find": "相分（jin-shizi-jin-xing-bu-bian）：",
+   "replace": "相分（jin-shizi-jin-xing-bu-bian；隋唐，法藏《金师子章》）：",
+   "why": "后起之文标层次"
+  },
+  {
+   "find": "对照（相合，zhangzai-liang-bu-li-yi-bu-ke-jian）：",
+   "replace": "对照（相合，zhangzai-liang-bu-li-yi-bu-ke-jian；宋明，张载《正蒙》）：",
+   "why": "后起之文标层次"
+  },
+  {
+   "find": "又（相合，jin-shizi-yin-xian）：",
+   "replace": "又（相合，jin-shizi-yin-xian；隋唐，法藏《金师子章》）：",
+   "why": "后起之文标层次"
+  }
+ ],
+ "verdict": "sound after edits",
+ "notes": "已核内容（只读，未改任何文件）：\n- 證：所引约 101 个声明，用 work/resolve.py 对照现行核心收据逐一核过，都以原全名存在；所引 21 个记录链接都存在。编辑中新加的 `Becoming.keepHistory_new`、`Becoming.Choosing.sameTests`、`Becoming.Square.noGlobal`、`Becoming.Square.no_context_free_values`、`Becoming.Web.Whole.needs_arising`、`Becoming.partForms_iff` 也都已解析通过。\n- 引文：40 处「…」〔ID〕都用 ctq.py text 核过，全部逐字相同；只有 DS01 王弼注「在方而法方，在圆而法圆」冻结文本中多一个空格，属规则允许的空白差。新加的「状同而为异所者，虽可合，谓之二实」〔RU2-S-XZ22〕也已核过。\n- 关系种类：25 个条目 id 与 work/passages/C01.json（工作树中已修改的版本）逐一对过，相合、定域、相分都与条目一致，没有把相分写成相合的。但 work/symbols-not-adopted.tsv 仍把天运「夫迹」记为相合，条目判为定域；草稿随条目，tsv 须由整合者统一。\n- 经与证逐条对照 Lean 原文核过，主要问题已在 edits 中修正：\n  - 一·四经的全称没有证据；\n  - 一·八：Splice.spliced 被写成全称，而全称为假（0,1,0,1… 周而复始之历史所显之法只许其自身）；withHistory_never_returns 引错对象；no_prefix_fixes_next 说得过强；\n  - 一·十六“三是最少之数”冒作导出；\n  - 一·十七 no_free_frame 漏写覆盖条件，量子一句没有证；\n  - 一·十八漏了 unique_iff 与 sorts_iff 的条件，所附记录错了；\n  - “同章”有误；\n  - “律”多处用来代替名表的“法”，“整体／部分”代替“兼／体”，“二体”与名表卦之两半相撞，“分”与名表足迹相撞，引文外的“法”取了佛典义。\n\n未改、交整合者：\n1. 「移」在经中作术语用（状—动—状之一步），名表没有。一·二经「动，步间之所移」与「移」的这一用法相混；说里写作「步间之移的标记」，经可改为「动，步间之移之所标也」一类。\n2. 一·三、一·十八的说里以「步序」代替名表的「先后」。\n3. 一·十一经「其余，兼中宇所不含者」说出了其余是什么，而 Readings.lean 明言「其余是什么」不由此导出（它的取与只是差）。建议说里加一句「其余为何，不由此导出」。\n4. 新名首见没有说组成的：交错（一·十八），系辞（一·一说已用，一·十三才解释），其余（一·九说已用，一·十一才解释）。\n5. 「Specker」是拉丁字母人名，可改中文译名或括注。\n6. 先秦而年代有争议、或真伪有争议的文本没有标：庄子外篇天运（ZH1-S14），杂篇天下所述惠施（MI1-S-HS），公孙龙子名实论，序卦，系辞。已为宋明、隋唐诸引补标层次。\n7. 一·八证共 11 个声明，超出体例的三到八个；可删 `Becoming.Law.withHistory_never_returns`，或把 Splice、DeadEnd 并作例子。\n8. 一·六「颁律者」可作「颁法者」；一·一「以之名整体之展开」可作「以之名展开之全」。\n9. 一·十经「凡分待者、所待为二类之待网……读之而成一宇」：World.ofRoles 另需一流，经没有写。\n10. 篇首对延续之条件与以广为愈的陈述合规：二设并举，前者陈述而不断言、只定范围，排序唯在后者。本篇不用二者，无隐含之顾或排序。"
+}

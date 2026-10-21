@@ -17,7 +17,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[5]
 OUT = ROOT / 'theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md'
 ORDER = ['C16', 'C01', 'C02', 'C03', 'C04', 'C05', 'C06', 'C07', 'C17', 'C08', 'C09', 'C10', 'C11', 'C12', 'C13',
-         'C14', 'C15']
+         'C14', 'C15', 'TH']
 
 
 def load(name):

@@ -1,2541 +1,2541 @@
 {
-"cluster": "C15",
-"entries": [
-{
-"id": "mojing-daqu-quan",
-"status": "revised",
-"record_ids": [],
-"source_id": "MI1-S-DQ",
-"layer": "先秦·论（战国后期墨家，《墨子·大取》，墨辩六篇之一）",
-"fragments": [
-"於所體之中而權輕重，之謂權。權非爲是也，亦非爲非也。權正也。",
-"於事爲之中而權輕重，之謂求。求爲之非也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Requirement.Frontier",
-"Becoming.Lexical.BasicPriority",
-"Becoming.Lexical.BasicPriority.frontier_iff",
-"Becoming.FrontierFrames.Options",
-"Becoming.Profiles.both_respect",
-"Becoming.Profiles.different_selections"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"classification-robust-generative-comparison"
-],
-"reading": "AI读法：大取分两种称量：在“所體之中”称量轻重叫权，在“事爲之中”称量轻重叫求，并说“求爲之非也”。“所體”按经上“體，分於兼也”读作整体（兼）中的一部分（体），即所涉的具体处境，所以权是在一个给定的处境之内，按所给的比较定其中各项的轻重。相合在此：权不产生是非（“權非爲是也，亦非爲非也”），实践判断也不从一个是非标准推出，而是在可接纳者之中取所给比较的前沿（Requirement.Frontier，定义：可接纳而不被任何可接纳者胜过者）；在帧上，一个构形处的可接纳者是一步所达的构形（FrontierFrames.Options，定义），选择就是这些选项的前沿；J1/J2 作为条件时（Lexical.BasicPriority，条件，核心不断言），这一前沿恰是两层词典序的前沿（Lexical.BasicPriority.frontier_iff）。比较本身不由权给出：在一个构造的两维情形中，两个都尊重每个生成扩展的评分各自融贯地选出不同选项（见证：Profiles.both_respect、Profiles.different_selections），同一处境中的轻重随所给的比较而不同。大取以“所體”与“事爲”分开权与求，脊柱没有对应的分别：选项无论是所处处境中的还是要做的事中的，取舍都是同一个前沿，所以求不另立对应，“求爲之非也”的评断不取。此句在脉络中只有节点 MI1-N-DQ-quan，没有关系记录。",
-"names_used": [
-"权",
-"体",
-"兼"
-],
-"locator": "墨子/大取·冻结正文段1—8",
-"relational": "权是在所处的部分处境之内按所给比较称量各项，不是对孤立对象作是非判定",
-"tradition": "墨家（名辩）",
-"work": "《墨子·大取》",
-"checked": "corrected"
-},
-{
-"id": "xunzi-zhengming-wu-sang-er-you-de",
-"status": "revised",
-"record_ids": [],
-"source_id": "RU2-S-XZ22",
-"layer": "先秦·论（战国末，《荀子·正名》）",
-"fragments": [
-"易者，以一易一，人曰：无得亦无丧也，以一易两，人曰：无丧而有得也。以两易一，人曰：无得而有丧也。",
-"以两易一，人莫之为，明其数也。",
-"从道而出，犹以一易两也，奚丧！离道而内自择，是犹以两易一也，奚得！其累百年之欲，易一时之嫌，然且为之，不明其数也。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Extension",
-"Becoming.Comparison",
-"Becoming.Web.paths_comparison_widens",
-"Becoming.Web.Retains",
-"Becoming.Web.Adds",
-"Becoming.Web.widens_iff_retains_adds",
-"Becoming.Web.retains_iff_includes",
-"Becoming.Web.Keeps",
-"Becoming.Frame.strictLossMatch_iff_length_of_alike",
-"Becoming.Web.mixed_iff_adds",
-"Becoming.Transfer.unordered"
-],
-"records": [
-"comparison-by-widening",
-"significance-retained-within-margin",
-"finite-aggregation-within-restorable-basic-losses"
-],
-"reading": "AI读法：荀子按数目把交换分为三类：“以一易一”无得亦无丧，“以一易两”无丧而有得，“以两易一”无得而有丧，并说“以两易一，人莫之为，明其数也”。定域在交出与所得属同一可互换的类之处：把同类可换之物读作按类计数的主张（有几个；这是 AI 的读法，不是 Lean 的结果），三类恰是相赅、扩展与反向扩展，数目多少就是包含与否。扩展是保留前者的每一主张并实现一个前者没有的活的主张（Extension，定义）；以广为愈（称扩大为更好，C，唯一排序的前提；Comparison，定义）只把扩展排在上面，在水平路径上即广（Web.paths_comparison_widens，依定义）；在延续条件下（§6.4，条件，不断言），广恰是无丧且有得（Web.widens_iff_retains_adds；Web.Retains、Web.Adds 为定义），“无丧而有得”正是这两个合取；在同一条件下无丧恰是包含（Web.retains_iff_includes），所以两方互相无丧（“无得亦无丧”）恰是相赅（Web.Keeps，定义：互相包含）。在同一内容类之内按数目也恰合：严格损失匹配恰当较好者失去的列出主张更少（Frame.strictLossMatch_iff_length_of_alike）。越出这一范围，交出与所得内容不同，两方各有所长：在延续条件下各增加对方所缺的有意义者（Web.mixed_iff_adds），以广为愈不排它们，在一个构造的流中两方都不保留对方，排序需要另给的度量（见证：Transfer.unordered）。荀子把不同类的交换也化为数目（“其累百年之欲，易一时之嫌，然且为之，不明其数也”），又以“从道而出……奚丧”把“道”设为保证无丧的固定标准，这两层与交易账目的框架都不取。此段没有本簇候选记录。",
-"names_used": [
-"无丧",
-"有得",
-"以广为愈",
-"广",
-"相赅",
-"各有所长"
-],
-"locator": "荀子/正名篇",
-"relational": "比较是两个构形之间的包含关系：保留对方所有且多一个；同类可换时数目即包含",
-"tradition": "儒家",
-"work": "《荀子·正名》",
-"checked": "corrected"
-},
-{
-"id": "xunzi-zhengming-cong-suo-ke",
-"status": "revised",
-"record_ids": [],
-"source_id": "RU2-S-XZ22",
-"layer": "先秦·论（战国末，《荀子·正名》）",
-"fragments": [
-"欲不待可得，而求者从所可。",
-"欲不待可得，所受乎天也；求者从所可，所受乎心也。",
-"故治乱在于心之所可，亡于情之所欲。",
-"计者取所多，谋者从所可。"
-],
-"kind": "divergence",
-"layer_checked": "意志或单一中心",
-"declarations": [
-"Becoming.Law.more_never_rests",
-"Becoming.Law.rests_iff",
-"Becoming.FrontierFrames.Options",
-"Becoming.FrontierFrames.nothing_required",
-"Becoming.Requirement.Frontier",
-"Becoming.FrontierFrames.choice_exists_iff_weakly"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"seeking-boundary"
-],
-"reading": "AI读法：荀子分欲、可得、所可三者：“欲不待可得”，欲不以能否得到为前提；“求者从所可”，求依所认可者而动；又说“治乱在于心之所可，亡于情之所欲”，把治乱系于这一认可是否“中理”。前两者有确切对应。目标可以是任何条件，包括不能在静止处满足的：以比现在更多为目标的寻求是无明，这一目标在任何律下都不在静止的步满足（Law.more_never_rests）；确定之律下，轨道自某步起静止且目标被满足，恰当它到达律不改变而满足目标的构形（Law.rests_iff）。可得是一步所能达到者（FrontierFrames.Options，定义），没有可能移动之处无所要求（FrontierFrames.nothing_required）；选择是在可得之中取所给比较的前沿（Requirement.Frontier，定义），每一步都有被选者恰需要弱排中（FrontierFrames.choice_exists_iff_weakly），比较未决时可以没有已知被选的移动。相分在第三者：荀子让一个认可的中心（“心”之所可，以“中理”为准）为一切取舍定准，并说治乱“亡于情之所欲”；理论中比较是陈述出来、可以修订的承诺，没有一个中心为一切选择定准，这属于意志或单一中心这一非关系层。“计者取所多”是计数最大化，以广为愈不加总，也不取。脉络 RU2-R0136、RU2-R0137 分属 C14、C10，此处只作出处。",
-"names_used": [
-"无明",
-"以广为愈"
-],
-"locator": "荀子/正名篇",
-"relational": "欲（目标）与可得（可行之选项）是两种关系；以一个认可的中心定准则不是关系的",
-"tradition": "儒家",
-"work": "《荀子·正名》",
-"checked": "passed"
-},
-{
-"id": "xunzi-wangzhi-bu-jue-qi-zhang",
-"status": "revised",
-"record_ids": [],
-"source_id": "RU2-S-XZ09",
-"layer": "先秦·论（战国末，《荀子·王制》）",
-"fragments": [
-"草木荣华滋硕之时，则斧斤不入山林，不夭其生，不绝其长也。",
-"鼋鼍鱼鳖鳅鳣孕别之时，罔罟毒药不入泽，不夭其生，不绝其长也。",
-"斩伐养长不失其时，故山林不童，而百姓有馀材也。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Web.RenewingAt",
-"Becoming.Web.UnderminingAt",
-"Becoming.Preemption.within_renewal_yet_loses",
-"Becoming.Preemption.not_undermining_yet_loses",
-"Becoming.Web.Renewed",
-"Becoming.Flow.Balances.includes_of_renewed"
-],
-"records": [
-"significance-retained-within-margin",
-"the-run-classes-and-widening",
-"renewing-consuming-formation"
-],
-"reading": "AI读法：王制在“荣华滋硕之时”“孕别之时”禁斧斤网罟，理由分两层：“不夭其生”是不损已在生长者，“不绝其长”是不关闭以后的生长；又说“斩伐养长不失其时，故山林不童”。理论把这两层分得确切。一步的分类只看已形成的依赖：一次汲取在其步属于更新（Web.RenewingAt，定义：其步活动，且该步保持它所参与的每个条件上的每个依赖）、不属于剥（Web.UnderminingAt，定义），说的都只是已形成的依赖；在一个构造的流中，汲取者在第一步的汲取在更新之内、也不剥，因为还没有依赖于该条件的形成要它保持，可是有它的水平不包含没有它的水平，它关闭了一个能形成者（见证：Preemption.within_renewal_yet_loses）；在延续条件下（§6.4，条件，不断言）它从每个立场失去一个有意义的延续（见证：Preemption.not_undermining_yet_loses）。这正是先取：只有“绝其长”而没有“夭其生”。反过来，在平衡、只有活动者拿取且只从其所汲取者拿取的流中，一个部分所汲取的每个条件若在整个运行上被更新（恒；Web.Renewed，定义：每个依赖它的形成在每一步都被保持），有它的水平就包含没有它的水平，它保住能形成者（Flow.Balances.includes_of_renewed）。定域：“不失其时，故山林不童”在按时的取都落在整个运行上被更新的条件上时成立，这是充分条件，不是恰当的条件；只看取的那一步不夭其生，不足以表明不绝其长。王制所禁之时两种失都有，原文给出两者之分，不给出先取之例；谁定时、按何节律归于“圣王之制”，理论不给出。此段没有本簇候选记录。",
-"names_used": [
-"恒",
-"剥",
-"先取"
-],
-"locator": "荀子/王制篇（RU2-U-XZ09）",
-"relational": "失分两层：损已成的依赖（夭其生），关闭未成的能形成者（绝其长）",
-"tradition": "儒家",
-"work": "《荀子·王制》",
-"checked": "corrected"
-},
-{
-"id": "xunzi-zhengming-cui",
-"status": "revised",
-"record_ids": [
-"RU2-R0141"
-],
-"source_id": "RU2-S-XZ22",
-"layer": "先秦·论（战国末，《荀子·正名》）",
-"fragments": [
-"凡人之取也，所欲未尝粹而来也；其去也，所恶未尝粹而往也。故人无动而不可以不与权俱。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Web.Mixed",
-"Becoming.Web.mixed_iff_adds",
-"Becoming.Comparison",
-"Becoming.Transfer.unordered",
-"Becoming.Profiles.both_respect",
-"Becoming.Profiles.different_selections"
-],
-"records": [
-"significance-retained-within-margin",
-"comparison-by-widening",
-"classification-robust-generative-comparison"
-],
-"reading": "AI读法：荀子说所取者从来不是纯然所欲而来，所去者不是纯然所恶而往，所以每一动都须“与权俱”。“未尝粹”即所取与所舍各有所长：两条水平路径各在某一步容许对方不容许的形成（Web.Mixed，定义），在延续条件下（§6.4，条件，不断言）恰是各增加对方所缺的有意义者（Web.mixed_iff_adds）。以广为愈（Comparison，定义）只把扩展排在上面，各有所长的两方都不是对方的扩展，它不排它们；在一个构造的流中两方都不保留对方，排序需要另给的度量（见证：Transfer.unordered）。另给的比较也不止一种：在一个构造的两维情形中，两个都尊重每个生成扩展的评分各自融贯地选出不同选项（见证：Profiles.both_respect、Profiles.different_selections）。所以“不可以不与权俱”与此相合：凡所取未尝粹之处，以广为愈不定取舍，权须另给判断的承诺（J1/J2）或度量。相分在荀子随后给出的衡器：“道者，古今之正权也”，以一个古今不变的标准为一切相杂者定序，见 xunzi-zhengming-zheng-quan。“粹”与提升规则 L 的关系见名条的问题。",
-"names_used": [
-"各有所长",
-"以广为愈",
-"权"
-],
-"locator": "荀子/正名篇",
-"relational": "所取与所去都是利害相杂的关系整体，没有纯然的一面",
-"tradition": "儒家",
-"work": "《荀子·正名》",
-"checked": "passed"
-},
-{
-"id": "xunzi-bugou-jian-quan",
-"status": "revised",
-"record_ids": [
-"RU2-R0251"
-],
-"source_id": "RU2-S-XZ03",
-"layer": "先秦·论（战国末，《荀子·不苟》）；杨倞注为隋唐（唐）",
-"fragments": [
-"欲惡取舍之權：",
-"見其可欲也，則必前後慮其可惡也者；見其可利也，則必前後慮其可害也者；而兼權之，孰計之，",
-"然後定其欲惡取舍。",
-"如是，則常不失陷矣。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.Above",
-"Becoming.Lexical.BasicPriority",
-"Becoming.FrontierFrames.Priority"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"classification-robust-generative-comparison"
-],
-"reading": "AI读法：荀子要求见可欲时“前後慮其可惡”，见可利时“前後慮其可害”，“兼權之，孰計之”，然后定取舍；反面是“凡人之患，偏傷之也”，只见一边。这给出兼权（J1）的完全比较一半：比较一个选项时，把它所实现与所失去的一并列入。理论把 J1/J2 写作条件（Lexical.BasicPriority，条件，核心不断言；帧上为 FrontierFrames.Priority，定义）：比较读两层的全部所持，先看基本主张、再看增益（Lexical.Above，定义），任何一层都不只看所得。J1 的另一半（被选者所失去的仍记为损失）此处没有：“孰計之”，杨倞注“孰，甚也，猶成孰也”，是充分计虑，不说所舍者此后仍记为损失；若把它读作可欲与可恶合算成一个净数，便与保留损失相反，那一读不取。保留的一半见大取“害之中取小，不得已也”（mojing-daqu-hai-zhong-qu-xiao）与老子“和大怨，必有馀怨”（lao-79-he-da-yuan）。欲恶作为一己的好恶不取。“常不失陷”把兼权说成不失的保证，理论只给比较，不保证结果。杨倞注“權，所以平輕重者”（唐）保留了称量的本义。",
-"names_used": [
-"兼权",
-"权"
-],
-"locator": "荀子/不苟篇",
-"relational": "每一可欲与其可恶、每一可利与其可害作为一个关系整体被称量",
-"tradition": "儒家",
-"work": "《荀子·不苟》",
-"checked": "corrected"
-},
-{
-"id": "mencius-sao-ni-quan",
-"status": "revised",
-"record_ids": [
-"RU2-R0041"
-],
-"source_id": "RU2-S-MZ",
-"layer": "先秦·论（战国中期，《孟子·离娄上》第17章）",
-"fragments": [
-"嫂溺不援，是豺狼也。男女授受不亲，礼也。嫂溺援之以手者，权也。",
-"天下溺，援之以道；嫂溺，援之以手。子欲手援天下乎？"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.BasicPriority",
-"Becoming.Lexical.Above.anchor",
-"Becoming.Lexical.Above.no_trade",
-"Becoming.Lexical.Reorganizing.classification_matters",
-"Becoming.Requirement.Required.defeated"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"classification-robust-generative-comparison"
-],
-"reading": "AI读法：嫂溺之时，“授受不亲”的常规与一个人的生存相冲突，孟子称援之以手为权。J1/J2 作为条件时（Lexical.BasicPriority，条件，核心不断言），一个选项保留另一选项的全部基本主张、又保留一个它所缺的基本主张，就在其上，不论增益（Lexical.Above.anchor）；失去一个对方所持的基本主张的选项，不论多少增益都不在其上（Lexical.Above.no_trade）。把生存读作基本主张、把常规所护者读作较低一层，援手便在上。这里的权是常规与基本主张冲突时按无以小害大（J2）的分类定序，不是规则之外的例外许可；在处境中越过常规的权义孟子已有，本名只取称量的结构。分类是给出的：在一个构造的改组情形中，同一新内容分为增益则两选项不可比，分为基本则有序（见证：Lexical.Reorganizing.classification_matters）；孟子此处的分类（生命在“礼”之上）是给出的，不是推出的。“子欲手援天下乎”区分两种援：一个可接纳的选项不执行某任务，就击败这一任务的要求（Requirement.Required.defeated）；“援之以道”是援天下的一个可接纳选项，它不以手援，所以以手援天下不被要求。“豺狼”的贬称与“礼”作为固定规范不取。",
-"names_used": [
-"权",
-"无以小害大"
-],
-"locator": "《孟子·离娄上》第17章",
-"relational": "常规与生存条件在同一处境中冲突，判断在两者的关系中做出",
-"tradition": "儒家",
-"work": "《孟子》",
-"checked": "passed"
-},
-{
-"id": "mencius-zhi-zhong-wu-quan",
-"status": "revised",
-"record_ids": [
-"RU2-R0073"
-],
-"source_id": "RU2-S-MZ",
-"layer": "先秦·论（战国中期，《孟子·尽心上》第26章）",
-"fragments": [
-"执中无权，犹执一也。所恶执一者，为其贼道也，举一而废百也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Learning.selects_through_lumping",
-"Becoming.Learning.selects_right_through",
-"Becoming.Learning.selects_not_right_of_parted",
-"Becoming.Profiles.different_selections"
-],
-"records": [
-"selection-through-a-model-of-the-options",
-"generalization-through-lumping",
-"classification-robust-generative-comparison"
-],
-"reading": "AI读法：孟子说执中而无权与执一相同，其害在“举一而废百”。理论中，通过一个映射的选择就是通过其归并（类）的选择：被归并的选项被同样选择（Learning.selects_through_lumping）；它只在要紧之处跨归并一致时才对（Learning.selects_right_through）；要紧之处若在被归并的两者之间不同，任何通过该映射的选择都分不开它们，需要更细的映射（Learning.selects_not_right_of_parted）。“执一”（包括执一个固定的“中”）是用一个粗的映射看一切处境，把处境的不同归并，于是“举一而废百”；权是按处境把它们分开。“中”也不是一个固定点：比较未定之处，在一个构造的两维情形中两个融贯的评分各选不同（见证：Profiles.different_selections）。孟子以“贼道”为判，“道”作为固定标准不取。",
-"names_used": [
-"权",
-"类"
-],
-"locator": "《孟子·尽心上》第26章",
-"relational": "判断随处境的不同而分开，不以一个固定点统摄",
-"tradition": "儒家",
-"work": "《孟子》",
-"checked": "passed"
-},
-{
-"id": "mencius-bu-chuai-qi-ben",
-"status": "revised",
-"record_ids": [
-"RU2-R0062"
-],
-"source_id": "RU2-S-MZ",
-"layer": "先秦·论（战国中期，《孟子·告子下》第1章）",
-"fragments": [
-"不揣其本，而齐其末，方寸之木可使高于岑楼。",
-"金重于羽者，岂谓一钩金与一舆羽之谓哉？取食之重者与礼之轻者而比之，奚翅食重？"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Frame.strictLossMatch_iff_length_of_alike",
-"Becoming.Lexical.Above",
-"Becoming.Lexical.Above.no_trade",
-"Becoming.Lexical.Reorganizing.classification_matters"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"classification-robust-generative-comparison",
-"finite-aggregation-within-restorable-basic-losses"
-],
-"reading": "AI读法：孟子反驳“礼与食孰重”的问法：不量基点而只比末端，方寸之木可高于岑楼；说“金重于羽”，不是拿一钩金对一车羽；拿“食之重者”与“礼之轻者”相比，当然食重。结构有两层。其一，比较只在其余相若之处，才把差别归于所比的一项：孟子要求同一层级、相当分量地比（相若，对照；此为类比，不立声明）。其二，金羽之喻承认按数量可以反转（一车羽可重于一钩金），孟子以此拒绝不按相当分量的比较。理论只在同一内容类之内许可这种计数：严格损失匹配恰当较好者失去的列出主张更少（Frame.strictLossMatch_iff_length_of_alike），这接近同类积小（FR，承诺）的计数；跨层时，J1/J2 作为条件，比较先看基本层（Lexical.Above，定义），失去一个对方所持的基本主张的选项不论多少增益都不在其上（Lexical.Above.no_trade），数量不能反转层级，这与按单位之重的标量比较相分。分类本身是给出的：在一个构造的改组情形中，同一新内容分为增益或基本，序就不同（见证：Lexical.Reorganizing.classification_matters）。定域：孟子的“轻重”在同一类之内与计数相合，跨层时须由无以小害大补足；孟子不说分类从何而来，理论也只把它作为给定。",
-"names_used": [
-"相若",
-"同类积小",
-"无以小害大"
-],
-"locator": "《孟子·告子下》第1章",
-"relational": "轻重只在同一基点、相当分量的关系中可比；跨层不由数量反转",
-"tradition": "儒家",
-"work": "《孟子》",
-"checked": "passed"
-},
-{
-"id": "mencius-she-sheng-qu-yi",
-"status": "revised",
-"record_ids": [
-"RU2-R0058"
-],
-"source_id": "RU2-S-MZ",
-"layer": "先秦·论（战国中期，《孟子·告子上》第10章）",
-"fragments": [
-"生，亦我所欲也；义，亦我所欲也。二者不可得兼，舍生而取义者也。"
-],
-"kind": "divergence",
-"layer_checked": "固定本性或价值",
-"declarations": [
-"Becoming.Viability.ChoicePoint.each_not_joint",
-"Becoming.Lexical.Crossed.incomparable",
-"Becoming.Lexical.Reorganizing.classification_matters",
-"Becoming.ScoreRepresentation.livingSignificance_leaves_ordering_open",
-"Becoming.Web.mixed_iff_adds"
-],
-"records": [
-"conditions-kept-together",
-"classification-robust-generative-comparison",
-"protection-priority-excludes-uniform-aggregation"
-],
-"reading": "AI读法：前半与理论相合：“二者不可得兼”是各自可保持、一起不可保持；在一个构造的分岔中，每个条件都可沿某条进程保持，两者一起不可（见证：Viability.ChoicePoint.each_not_joint），这是不得兼。相分在后半：孟子断言“义”在生之上，并以“所欲有甚于生者，所恶有甚于死者”作为普遍的序。理论中，在一个构造的情形中，各持一个对方所缺的受保护主张的两个选项不可比，即使增益相等（见证：Lexical.Crossed.incomparable）；哪一个读作基本，序随之而定（见证：Lexical.Reorganizing.classification_matters）；在一个构造的保护对增益情形中，生命意义（活皆有顾）既与词典序相容，也与把增益排在保护之上的标量序相容（见证：ScoreRepresentation.livingSignificance_leaves_ordering_open）；两方各有所长时，在延续条件下（§6.4，条件，不断言）各增加对方所缺（Web.mixed_iff_adds），以广为愈不排它们。所以“不可得兼”处的取舍需要另给的承诺，理论不承认“义”作为固定价值在一切处境中高于生，这属于固定本性或价值这一非关系层。嫂溺一条（mencius-sao-ni-quan）是他人之生对常规，此条是己之生对“义”，承受者不同，二者的差别见 mojing-daqu-sha-ji 的缺口。",
-"names_used": [
-"得兼",
-"活皆有顾",
-"各有所长",
-"以广为愈"
-],
-"locator": "《孟子·告子上》第10章",
-"relational": "生与“义”不可同时保持是关系的；“义”恒在生上是固定价值层",
-"tradition": "儒家",
-"work": "《孟子》",
-"checked": "passed"
-},
-{
-"id": "mencius-bu-wei-fei-bu-neng",
-"status": "revised",
-"record_ids": [
-"RU2-R0006"
-],
-"source_id": "RU2-S-MZ",
-"layer": "先秦·论（战国中期，《孟子·梁惠王上》第7章）",
-"fragments": [
-"今恩足以及禽兽，而功不至于百姓者，独何与？",
-"故王之不王，不为也，非不能也。",
-"挟太山以超北海，语人曰：‘我不能。’是诚不能也。为长者折枝，语人曰：‘我不能。’是不为也，非不能也。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Requirement.Assigned.capable",
-"Becoming.Requirement.Required",
-"Becoming.Requirement.residual_of_unfulfilled"
-],
-"records": [
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：孟子以“恩足以及禽兽”为据，说齐宣王有能力推恩于百姓，于是区分“不为”与“不能”：挟太山超北海是“诚不能”，为长者折枝而说不能是“不为”。量力而任（J3）中能力是界，不是据：在每个可接纳计划的分派都可行的条件下，被分派者可行（Requirement.Assigned.capable；可行写在可接纳性里，此律只是把这一前提读出），所以“诚不能”者不被分派；但能做并不使一件事成为要求，任务被要求需有可接纳的计划且每个都执行它（Requirement.Required，定义）。使“保民”到期的是王在关系中的承担（不取位阶）；到期、能而未做、又未解除者才有余责（Requirement.residual_of_unfulfilled，依定义：到期、未做、未解除即为余责）。定域：能则当为作为全称不成立，只在一个承担使任务到期之处成立。孟子以已显的能力作为可行的证据，这是对具体处境的认定，理论不替它作；“王”之位不取。",
-"names_used": [
-"量力而任"
-],
-"locator": "《孟子·梁惠王上》第7章",
-"relational": "责任以承担为据、以能力为界：不能在界外，能而不为在界内",
-"tradition": "儒家",
-"work": "《孟子》",
-"checked": "passed"
-},
-{
-"id": "mencius-su-yi",
-"status": "revised",
-"record_ids": [
-"RU2-R0032"
-],
-"source_id": "RU2-S-MZ",
-"layer": "先秦·论（战国中期，《孟子·滕文公下》第8章）",
-"fragments": [
-"如知其非义，斯速已矣，何待来年？"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Frame.strictLossMatch_iff_length_of_alike",
-"Becoming.Frame.SufficientMatching"
-],
-"records": [
-"finite-aggregation-within-restorable-basic-losses"
-],
-"reading": "AI读法：孟子用“月攘一鸡”的比喻：知其“非义”，就该立即停止，不以逐步减少为继续的理由。在同一内容类之内，严格损失匹配恰当较好者失去的列出主张更少（Frame.strictLossMatch_iff_length_of_alike）。这一计数要把两方的失去都列出：只列被攘者的失去，立即停止失去的更少；若攘者所得也作为主张列入，立即停止所失（攘者少得的鸡）与延到来年所失（被攘者失去的鸡）同类同数，严格匹配不在任何一边。所以“速已”不由同类计数给出，而由孟子所给的“非义”给出：它把所攘之得不计为应保留的主张。把严格匹配当作优先的充分根据又是一个承诺，不是定理（Frame.SufficientMatching，定义：在所给范围内，严格匹配足以给出所给比较下的严格优先）；同类积小（FR）把这一承诺限在可恢复的基本损失之内，攘鸡不在其内。定域：“何待来年”在所攘之得不计入比较之处成立；判定“非义”的标准由孟子给出，理论不设。",
-"names_used": [
-"同类积小"
-],
-"locator": "《孟子·滕文公下》第8章",
-"relational": "延续一个损害的每一步都多一个同类的失去；计数是否偏向停止，看攘者之得是否计入",
-"tradition": "儒家",
-"work": "《孟子》",
-"checked": "corrected"
-},
-{
-"id": "mencius-tu-shan-tu-fa",
-"status": "revised",
-"record_ids": [
-"RU2-R0033"
-],
-"source_id": "RU2-S-MZ",
-"layer": "先秦·论（战国中期，《孟子·离娄上》第1章）",
-"fragments": [
-"徒善不足以为政，徒法不能以自行。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Stock.feasible_iff_covered",
-"Becoming.Revising.covered_not_enacted",
-"Becoming.Countdown.completes_iff",
-"Becoming.Countdown.not_done_before"
-],
-"records": [
-"pending-task-context-applicability",
-"recoverable-mediated-change"
-],
-"reading": "AI读法：孟子说只有善意不足以为政，只有法不能自己施行。这是不行不至（§7.6）所说的结构：接受一个改变的倾向，不意味着改变能到达系统并完成；这里引的存量与计数之律属 §4.6。存量过程的一个进程可执行，恰当它被覆盖（Stock.feasible_iff_covered）；覆盖不等于实施：在一个构造的修订情形中，存量覆盖一个修订，连接过程却阻断它，修订不发生（见证：Revising.covered_not_enacted）；计数的工作在 work+1 个节拍内完成，恰当燃料覆盖它们（Countdown.completes_iff），在待办与完成互斥时，此前没有完成（Countdown.not_done_before）。“徒善”对应只有倾向，“徒法”对应只有规则或覆盖，二者都缺被覆盖、被连接的执行序列。孟子以“先王之道”补足，那是另一层规范，不取。",
-"names_used": [
-"不行不至"
-],
-"locator": "《孟子·离娄上》第1章",
-"relational": "规则与其执行之间隔着一个须被覆盖、被连接的序列",
-"tradition": "儒家",
-"work": "《孟子》",
-"checked": "passed"
-},
-{
-"id": "xunzi-xiushen-bu-xing-bu-zhi",
-"status": "revised",
-"record_ids": [
-"RU2-R0247"
-],
-"source_id": "RU2-S-XZ02",
-"layer": "先秦·论（战国末，《荀子·修身》）",
-"fragments": [
-"道雖邇，不行不至；事雖小，不爲不成。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Countdown.completes_iff",
-"Becoming.Countdown.pending_before",
-"Becoming.Countdown.not_done_before",
-"Becoming.Countdown.Advances.completes",
-"Becoming.Stock.covered_iff_prefix"
-],
-"records": [
-"versioned-request-completion",
-"recoverable-mediated-change",
-"pending-task-context-applicability"
-],
-"reading": "AI读法：路近，不走就不到；事小，不做就不成。理论中，无燃料约束的计数工作恰在 work+1 个节拍完成（Countdown.Advances.completes），每一个至多 work 个节拍的运行都使任务悬而未决，工作只减去已走的节拍（Countdown.pending_before），在待办与完成互斥时此前没有任何节拍完成（Countdown.not_done_before）；有燃料约束时，完成恰当燃料覆盖这些节拍（Countdown.completes_iff）；存量覆盖一个进程，恰当在每一步，存量与此前的补充覆盖到此为止的全部汲取（Stock.covered_iff_prefix）。所以“不行不至”在理论中是确切的：距离再小，到达也要一步一步被覆盖地走完。这是不行不至（§7.6）的名所出；这里引的计数与存量之律属 §4.6。“道”在此是路，不作本根讲。",
-"names_used": [
-"不行不至"
-],
-"locator": "荀子/修身篇",
-"relational": "到达是起点与终点之间每一步的关系，不由距离之近省去",
-"tradition": "儒家",
-"work": "《荀子·修身》",
-"checked": "passed"
-},
-{
-"id": "mojing-shi-ling-wei",
-"status": "revised",
-"record_ids": [
-"MI1-R-SS-command"
-],
-"source_id": "MI1-S-SS",
-"layer": "先秦·经说（战国后期墨家，《墨子·经说上》）",
-"fragments": [
-"使，令謂，謂也，不必成濕。故也，必待所爲之成也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Countdown.completes_iff",
-"Becoming.Countdown.stalls_beyond",
-"Becoming.Countdown.Reserved",
-"Becoming.Countdown.exits",
-"Becoming.Countdown.Slow.misses"
-],
-"records": [
-"reserved-shutdown-during-recovery",
-"recoverable-mediated-change"
-],
-"reading": "AI读法：经上“使，謂、故。”，经说上释为：令谓之使只是说出，“不必成”；故之使“必待所爲之成”。这正是不行不至（§7.6）：一个请求被发出，不意味着它被执行，要求的改变须是一个可执行的序列。理论中，计数的工作在 work+1 个节拍内完成，恰当燃料覆盖它们（Countdown.completes_iff），燃料不足时每个长于燃料的运行都停滞（Countdown.stalls_beyond）：这是“令謂”之“不必成”。“故”以所为之成为准，即 Countdown.completes_iff 中的完成，不以发出为准。墨经只分令谓与故，不说怎样保证成；理论另给一个保证的条件，这是补充，不是“故”的对应：在保留出口的前提下（Countdown.Reserved，定义：从有效构形起，每个被接纳的动作都继续、保持有效，并且或者到达出口、或者使余量减一；出口之后保持在出口），每个被接纳而长于余量的进程都在出口处有效结束（Countdown.exits）；这个界恰好达到，在一个构造的倒计时中，与余量一样长的进程可以错过出口（见证：Countdown.Slow.misses）。所以“令謂”与“成”之间隔着一个须被覆盖的执行序列。“濕”字断句有异说（或把它属下句读，以濕为“故”之例），不据以立论。此条是不行不至之名的主证。",
-"names_used": [
-"不行不至"
-],
-"locator": "經說上·冻结正文段71—73",
-"relational": "命令与结果之间是一个执行的关系，不是同一件事",
-"tradition": "墨家（名辩）",
-"work": "《墨子·經說上》",
-"checked": "corrected"
-},
-{
-"id": "mojing-sun-er-bu-hai",
-"status": "revised",
-"record_ids": [
-"MI1-R-SX-surplus"
-],
-"source_id": "MI1-S-SX",
-"layer": "先秦·经说（战国后期墨家，《墨子·经下》《经说下》）",
-"fragments": [
-"損，飽者去餘，適足不害，能害飽。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Flow.Balances.supported_iff_within_margin",
-"Becoming.Flow.Balances.retains_iff_within_margin",
-"Becoming.Flow.Balances.loses_iff_beyond_margin"
-],
-"records": [
-"significance-retained-within-margin",
-"closing-needs-net-draw"
-],
-"reading": "AI读法：经下“損而不害。說在餘”，经说下释为：饱者去其余，恰足而不害，越过则能害饱。损（下降）在余地之内即无丧。理论给出这一边界的确切形式：在平衡的流中，时刻 t 一个形成被支持，恰当在它所需的每个条件上，它的需要加上该部分迄今所取，至多是没有该部分时的水平加上该部分迄今所给，即该部分的净汲取在余地之内（Flow.Balances.supported_iff_within_margin）；从立场 p，有该部分的水平保留没有它时的有意义者，恰当对每个有意义、没有它时被容许的延续，净汲取始终在余地之内（Flow.Balances.retains_iff_within_margin），失去一个有意义的延续恰在净汲取超出余地之处（Flow.Balances.loses_iff_beyond_margin）。“去餘”是在余地之内取，“適足”是边界，“能害”是越界。墨经只说一人之饱，理论说一个部分对形成所需的每个条件，范围更宽；“飽”作为目标是给定的。“能害飽”的读法有异说，此处取越过则害的通读。",
-"names_used": [
-"损",
-"余地",
-"无丧"
-],
-"locator": "經說下·冻结正文段42—50",
-"relational": "损与不害的分界在需要与所立水平之间的余地",
-"tradition": "墨家（名辩）",
-"work": "《墨子·經下》《經說下》",
-"checked": "passed"
-},
-{
-"id": "mojing-daqu-hai-zhong-qu-xiao",
-"status": "revised",
-"record_ids": [
-"MI1-R-DQ-tradeoff",
-"MI1-R-DQ-coercion"
-],
-"source_id": "MI1-S-DQ",
-"layer": "先秦·论（战国后期墨家，《墨子·大取》）",
-"fragments": [
-"斷指以存腕，利之中取大，害之中取小也。害之中取小，子非取害也，取利也。",
-"其所取者，人之所執也。遇盜人，而斷指以免身，利也；其遇盜人，害也。",
-"利之中取大，非不得已也；害之中取小，不得已也。所未有而取焉，是利之中取大也；於所既有而棄焉，是害之中取小也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Extension",
-"Becoming.Comparison",
-"Becoming.Frame.strictLossMatch_of_extension",
-"Becoming.Requirement.Frontier.excluded",
-"Becoming.Frame.ReadsAt",
-"Becoming.Frame.ReadsAt.loss_retained",
-"Becoming.Web.Adds"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"comparison-by-widening",
-"finite-aggregation-within-restorable-basic-losses"
-],
-"reading": "AI读法：大取分开两种取：“利之中取大”是“所未有而取焉”，在未有者中多取一个，“非不得已”；“害之中取小”是“於所既有而棄焉”，在既有者中舍去较少的，“不得已”。断指存腕要对两个参照分别读。相对于断腕，断指保留断腕所保留的每一主张、又实现一个对方没有的（腕），是扩展（Extension，定义），以广为愈（Comparison，定义）把它排在上面，扩展也是严格损失匹配（Frame.strictLossMatch_of_extension），被胜过的断腕不在前沿上（Requirement.Frontier.excluded）：这是“取利也”。相对于遇盗之前，断指仍是失：在按事件之时读主张的帧上（Frame.ReadsAt，定义，这是一个前提），在其时错过的主张以后任何一步都不再实现，不论那时的支持如何（Frame.ReadsAt.loss_retained）：这是“其遇盜人，害也”，兼权所要保留的损失。“不得已”标出的是后一个参照。所以“子非取害也，取利也”在前一个参照下相合；若读作指的损失被所得抵消，理论不取，失去的仍记为损失。“利之中取大”是有得：增加一个对方没有的（Web.Adds，定义）。加害者与承受者之分见 mojing-daqu-sha-ji 的缺口。",
-"names_used": [
-"以广为愈",
-"有得",
-"兼权"
-],
-"locator": "大取·冻结正文段1—8",
-"relational": "取大利是在未有者中增加，取小害是在既有者中少失；同一取舍相对于两个参照分别是扩展与损失",
-"tradition": "墨家（名辩）",
-"work": "《墨子·大取》",
-"checked": "passed"
-},
-{
-"id": "mojing-daqu-sha-ji",
-"status": "revised",
-"record_ids": [
-"MI1-R-DQ-sacrifice"
-],
-"source_id": "MI1-S-DQ",
-"layer": "先秦·论（战国后期墨家，《墨子·大取》）",
-"fragments": [
-"殺一人以存天下，非殺一人以利天下也。殺己以存天下，是殺己以利天下。"
-],
-"kind": "divergence",
-"layer_checked": "非四层：施加与自承之分（行为的归属与描述），核心比较缺此结构",
-"declarations": [
-"Becoming.BoundaryInvariant",
-"Becoming.Lexical.Crossed.incomparable",
-"Becoming.Dependence.MakesDifference",
-"Becoming.Requirement.Assigned.unique_required",
-"Becoming.Requirement.residual_of_unfulfilled"
-],
-"records": [
-"joint-difference-making",
-"practical-judgment-under-living-significance",
-"continuation-condition-decomposition"
-],
-"reading": "AI读法：大取断言一个不对称：“殺一人以存天下，非殺一人以利天下也。殺己以存天下，是殺己以利天下。”同一结果，只因被杀者是他人还是自己，行为的描述不同；结果相同而比较分不出高下时，大取自己说“無擇”（mojing-daqu-wu-ze）。大取又说“愛人不外己，己在所愛之中”：己与人同在所爱的范围之内，所以不对称不来自范围，而来自动作关系：谁的动作加于谁。理论在范围上与“愛人不外己”同向：不易乎畛（不变的一步，BoundaryInvariant，定义）要求预设不随边界怎样划而改变，己与他者的失去同样计入；它只定范围，不排序。核心比较只看构形实现与失去哪些主张：在一个构造的情形中，各持一个对方所缺的受保护主张者不可比（见证：Lexical.Crossed.incomparable）。理论能说谁的部分造成差别（有力；Dependence.MakesDifference，定义）、谁是每个可接纳计划中唯一的应答者因而被要求（Requirement.Assigned.unique_required）、一项任务何时留下余责（Requirement.residual_of_unfulfilled，依定义）；承诺层也已分开施加的基本剥夺与实际同意（J2、J3 的条件），但核心比较中没有失去由承受者自己承担与失去由他者的动作加于承受者之分。所以大取的不对称，理论既不推出也不否定；它断言了一个理论尚缺的结构，这是相分，不是相合。荀子“可殺而不可使……”（RU2-R0273）同一结构，列为平行；“愛人不外己”的记录 MI1-R-DQ-self 在 C14，此处只引其文。",
-"names_used": [
-"不易乎畛",
-"有力"
-],
-"locator": "大取·冻结正文段1—8",
-"relational": "同一失去，因承受者与动因者是否同一而描述不同",
-"tradition": "墨家（名辩）",
-"work": "《墨子·大取》",
-"gap": "脊柱缺：承诺层已有“施加的基本剥夺”与“实际同意”之分（J2、J3 与同类积小的条件），核心比较中没有。缺的是：在选项上加入承受者（谁失去）与动因者（谁的部分造成失去）两种关系，并陈述在 Lexical.BasicPriority 之下，施加之损与自承之损在其他方面相同时如何比较；或者证明只看构形所实现的主张，写不出这一不对称。最近的声明：Becoming.Dependence.MakesDifference、Becoming.Requirement.Assigned.unique_required、Becoming.Lexical.Crossed.incomparable、Becoming.Requirement.residual_of_unfulfilled、Becoming.BoundaryInvariant。",
-"checked": "passed"
-},
-{
-"id": "mozi-fei-ming",
-"status": "revised",
-"record_ids": [
-"MO1-C35-R007"
-],
-"source_id": "MO1-S-C35",
-"layer": "先秦·论（战国，《墨子·非命上》第35篇）",
-"fragments": [
-"命富則富，命貧則貧；命衆則衆，命寡則寡；命治則治，命亂則亂；命壽則壽，命夭則夭。命，雖強勁，何益哉？",
-"不知曰：「我罷不肖，從事不疾。」必曰：「我命固且貧。」"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Dependence.MakesDifference",
-"Becoming.Dependence.makesDifference_iff",
-"Becoming.Dependence.determined_dichotomy",
-"Becoming.Dependence.Overdetermined.no_difference",
-"Becoming.Shock.move_decides"
-],
-"records": [
-"joint-difference-making",
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：非命上引执有命者之言：“命富則富，命貧則貧……命，雖強勁，何益哉？”并说失败者不说“我罷不肖，從事不疾”，而说“我命固且貧”，以“命”免责。理论的若无检验给出确切范围。一步打破一个依赖，撤去某部分时同一移动仍可取而依赖保持，该部分就造成差别（有力；Dependence.MakesDifference，定义），恰当同一移动不再打破依赖（Dependence.makesDifference_iff，任何过程，无须确定性）；移动决定步时，要么该部分造成差别，要么同一移动仍打破依赖（Dependence.determined_dichotomy）；损失被多重决定时，没有单个部分造成差别（Dependence.Overdetermined.no_difference）；在一个构造的情形中，从同一构形，平常移动下唯一汲取者的部分造成差别，冲击之下损失被多重决定，无人造成（见证：Shock.move_decides）。造成差别只确定差别归于哪一部分；余责另需任务因承担而到期（见 mozi-feiru-dai-yu-fen-zhi）。定域：墨子说“命”无可推诿，在“從事不疾”者的部分造成差别处成立；在多重决定处，归于任一部分都不对，这是“命”一词所掩盖、而理论能分开的情形。墨子在《天志》中另立一个决定者，不取（RO mozi-tianzhi）。非命下“吾命固將失之”（MO1-C37-R003）同构，改列平行。",
-"names_used": [
-"有力"
-],
-"locator": "《墨子·非命上》第35篇·冻结页正文段1、段6",
-"relational": "失败归于造成差别的部分；多重决定处无单一归属",
-"tradition": "墨家",
-"work": "《墨子·非命上》",
-"checked": "passed"
-},
-{
-"id": "mozi-du-zhi-bu-yan",
-"status": "revised",
-"record_ids": [
-"MO1-C39-R007"
-],
-"source_id": "MO1-S-C39",
-"layer": "先秦·论（战国，《墨子·非儒下》第39篇）",
-"fragments": [
-"若將有大寇亂，盜賊將作，若機辟將發也，他人不知，己獨知之，雖其君親皆在，不問不言，是夫大亂之賊也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Requirement.Assigned.unique_required",
-"Becoming.FrontierWorlds.sole_giver_required",
-"Becoming.Requirement.residual_of_unfulfilled"
-],
-"records": [
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：墨子批评“擊之則鳴，弗擊不鳴”：将有大乱，他人不知，唯己独知，不问就不说，便是乱之贼。必须有人说出，这是量力而任（J3）中紧急能力的承诺所给的覆盖前提（严重伤害可防止、不付出相当的伤害、又没有及时的替代时，在及时、有效、有界的能力之内协助或求援）；律只说在此前提下唯一能给出者被要求：每个可接纳计划都有应答者、且应答者只能是 a 时，a 被要求（Requirement.Assigned.unique_required）；在一个世界中，凡形成在某步需要某条件，每个这样的步都有参与者给予它，且给予者只能是 a，则 a 在每个这样的步都给予，作为要求（FrontierWorlds.sole_giver_required）。“己獨知之”使说出者成为唯一能给出这一信息的部分，于是要求落在他身上；到期而未做、未解除，留下余责（Requirement.residual_of_unfulfilled，依定义）。“機辟將發”是陷阱之喻，与已采纳的名机字面相同、结构不同，不立对应。“君親皆在”的位阶语境不取。",
-"names_used": [
-"量力而任"
-],
-"locator": "《墨子·非儒下》第39篇·段8",
-"relational": "唯一能给出者被要求给出：要求随关系中谁能给而定",
-"tradition": "墨家",
-"work": "《墨子·非儒下》",
-"checked": "passed"
-},
-{
-"id": "mozi-fei-ren-bi-you-yi-yi",
-"status": "revised",
-"record_ids": [
-"MO1-C16-R002"
-],
-"source_id": "MO1-S-C16",
-"layer": "先秦·论（战国，《墨子·兼爱下》第16篇）",
-"fragments": [
-"子墨子曰：非人者，必有以易之。若非人而無以易之，譬之猶以水救火也，其說將必無可焉。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Requirement.Frontier",
-"Becoming.Requirement.Frontier.excluded",
-"Becoming.Requirement.required_of_bettered",
-"Becoming.FrontierFrames.nothing_required"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"organizational-formation-from-generative-comparison"
-],
-"reading": "AI读法：墨子说：否定别人者，必须有东西替换它；否定而无可替换，其说不可。理论中，判断不是否定单个选项，而是在可接纳的选项中取前沿（Requirement.Frontier，定义）：被某个可接纳选项胜过者不在前沿上（Requirement.Frontier.excluded），而每个缺某任务的可接纳选项都被胜过时，这一任务被前沿要求（Requirement.required_of_bettered：菜单非空且列出，比较非自反、传递、弱可判定，任务可判定；这是充分条件）。所以“非之”只在有一个胜过它的可接纳替代时才有效；没有这样的替代时，被否定者仍在前沿上；没有可能的移动之处无所要求（FrontierFrames.nothing_required）。墨子以“兼以易別”为替代，“兼”是否胜过“別”，由所给的比较决定，此处不判。“以水救火”一句文字或有讹误，依冻结文本照录。",
-"names_used": [],
-"locator": "《墨子·兼愛下》第16篇·段2",
-"relational": "否定一个选项须相对于一个可接纳的替代",
-"tradition": "墨家",
-"work": "《墨子·兼愛下》",
-"checked": "corrected"
-},
-{
-"id": "mozi-feigong-qi-suo-bu-zu",
-"status": "revised",
-"record_ids": [
-"MO1-C18-R001",
-"MO1-C18-R002"
-],
-"source_id": "MO1-S-C18",
-"layer": "先秦·论（战国，《墨子·非攻中》第18篇）",
-"fragments": [
-"計其所得，反不如所喪者之多。",
-"然則土地者，所有餘也；王民者，所不足也。今盡王民之死，嚴下上之患，以爭虛城，則是棄所不足，而重所有餘也。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.BasicPriority",
-"Becoming.Lexical.Above.no_trade",
-"Becoming.ScoreRepresentation.every_nat_score_outranks",
-"Becoming.ScoreRepresentation.no_nat_score_represents",
-"Becoming.Frame.strictLossMatch_iff_counts"
-],
-"records": [
-"protection-priority-excludes-uniform-aggregation",
-"finite-aggregation-within-restorable-basic-losses"
-],
-"reading": "AI读法：墨子在此有两个论证。其一，“計其所得，反不如所喪者之多”：把得丧计数相比。其二，土地有余而人民不足，以民死争空城，是“棄所不足，而重所有餘”：把基本的（民之生存）拿去换有余的（土地）。第二个与无以小害大（J2）相合：J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张的选项，不论增益多少都不在其上（Lexical.Above.no_trade）。第一个的范围须限定：在一个构造的保护对增益情形中，每个满足以广为愈的自然数评分都把某个数量的增益排在保护之上（见证：ScoreRepresentation.every_nat_score_outranks），没有满足它的自然数评分表示词典序（见证：ScoreRepresentation.no_nat_score_represents）；所以只计得丧之数的评分，在这样的情形中会以足够多的增益换基本主张。同类积小（FR，承诺）所用的计数只在内容类分明时有确切意义：内容按类读出、两方的失去各列一次时，严格损失匹配恰当逐类较好者失去的不多于较差者、总数更少（Frame.strictLossMatch_iff_counts）。定域：墨子的计数论证在得与丧同类时成立，跨类时须由第二个论证（不以基本换有余）补足。墨子之“利”作为可加总的单位，见 RO mojing-li-suo-de-er-xi 的相分。",
-"names_used": [
-"无以小害大",
-"以广为愈",
-"同类积小"
-],
-"locator": "《墨子·非攻中》第18篇·段2",
-"relational": "所不足（生存）与所有余（土地）分属两层，不可互换",
-"tradition": "墨家",
-"work": "《墨子·非攻中》",
-"checked": "passed"
-},
-{
-"id": "mozi-jieyong-jia-yong",
-"status": "revised",
-"record_ids": [
-"MO1-C20-R002"
-],
-"source_id": "MO1-S-C20",
-"layer": "先秦·论（战国，《墨子·节用上》第20篇）",
-"fragments": [
-"不加者，去之。",
-"凡其為此物也，無不加用而為者，是故用財不費，民德不勞，其興利多矣。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Extension",
-"Becoming.Comparison",
-"Becoming.Web.Adds",
-"Becoming.Web.Keeps",
-"Becoming.Ranking.possible_extends",
-"Becoming.Ranking.possible_ranks"
-],
-"records": [
-"comparison-by-widening",
-"ranking-under-readings"
-],
-"reading": "AI读法：节用上逐项说明器物所为，以是否“加用”判取舍：凡所为都须增加用处，“不加者，去之”。理论中，以广为愈（Comparison，定义）只在后者保留前者的每一主张并实现一个前者没有的活的主张时排序（Extension，定义）；有得即容纳一个对方不容纳的有意义的延续（Web.Adds，定义）。所以“不加”本身不给出“去之”：不增加者若也不失去，两方相赅（Web.Keeps，定义：互相包含），以广为愈不排去留。定域在“用財”：在一族给定数量的定律中，所论的形成若自某步起汲取超出更新与贡献之和，没有它的历程在可能读法下扩展有它的历程（Ranking.possible_extends），每个在这一读法下满足以广为愈的比较都把没有它的历程排得更高（Ranking.possible_ranks）。“不加者，去之”在所去者的存在使汲取超出更新之处成立，墨子“用財不費，民德不勞”所指正是这一处。墨子的“用”由他列举，理论不定哪些是“用”。",
-"names_used": [
-"以广为愈",
-"有得",
-"相赅"
-],
-"locator": "《墨子·節用上》第20篇·段2",
-"relational": "取舍按是否在既有之上增加，以及其存在是否使汲取超出更新而定",
-"tradition": "墨家",
-"work": "《墨子·節用上》",
-"checked": "passed"
-},
-{
-"id": "mozi-jieyong-zu-er-zhi",
-"status": "revised",
-"record_ids": [
-"MO1-C21-R001",
-"MO1-C21-R002",
-"MO1-C21-R003",
-"MO1-C21-R004",
-"MO1-C21-R005",
-"MO1-C21-R006"
-],
-"source_id": "MO1-S-C21",
-"layer": "先秦·论（战国，《墨子·节用中》第21篇）",
-"fragments": [
-"使各從事其所能。",
-"凡足以奉給民用諸，加費不加民利則止。",
-"足以充虛繼氣，強股肱，使耳目聰明，則止。",
-"加費不加於民利者，聖王弗為。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Law.fixed_rests",
-"Becoming.Law.rests_iff",
-"Becoming.Enough.possibly_rests_iff",
-"Becoming.Web.Adds",
-"Becoming.Lexical.Ceiling.above"
-],
-"records": [
-"seeking-boundary",
-"the-boundary-of-enough-under-undetermined-laws",
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：节用中给出一个统一的法：饮食、衣服、舟车、葬埋、宫室，凡足以供民用就止，“加費不加民利則止”；并令百工“各從事其所能”。足而止有确切对应：目标在律不改变的构形被满足，轨道就停在那里并一直满足（Law.fixed_rests）；在确定之律下，轨道自某步起静止且目标被满足，恰当它到达这样的构形（Law.rests_iff）；不确定之律下，某次运行可能静止且目标被满足，恰当某个可达构形有停留的一步并满足目标（Enough.possibly_rests_iff）。“加費不加民利”是没有有得（Web.Adds，定义）的耗费，以广为愈不把它排在上面。在一个给定上限的构造中，上限读作基本主张时，守在其内在任何越出它的增益之上（见证：Lexical.Ceiling.above；上限是给出的，生命意义不给出数值界）。墨子列举的“足”的标准由他给出；“聖王弗為”的权威层不取；“各從事其所能”是量力而任的能力之界，此处不展开。",
-"names_used": [
-"足而止",
-"有得",
-"以广为愈",
-"量力而任"
-],
-"locator": "《墨子·節用中》第21篇·段2—7",
-"relational": "止的条件是再加不再增加：目标与所立水平之间的关系",
-"tradition": "墨家",
-"work": "《墨子·節用中》",
-"checked": "passed"
-},
-{
-"id": "mozi-jiezang-li-bu-zu-ran-hou-yi",
-"status": "revised",
-"record_ids": [
-"MO1-C25-R001"
-],
-"source_id": "MO1-S-C25",
-"layer": "先秦·论（战国，《墨子·节葬下》第25篇）",
-"fragments": [
-"當其於此也，亦有力不足、財不贍、智不智然後已矣，無敢舍餘力，隱謀遺利，而不為親為之者矣。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Requirement.Assigned.capable",
-"Becoming.FrontierWorlds.giver_active",
-"Becoming.FrontierWorlds.sole_giver_active",
-"Becoming.Web.Dependent",
-"Becoming.Stock.exhausted_within"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"renewing-consuming-formation"
-],
-"reading": "AI读法：节葬下以孝子为亲谋利作比：“力不足、財不贍、智不智然後已矣”，不敢舍余力、隐谋、遗利。这与量力而任（J3）的一半相合：在每个可接纳计划的分派都可行的条件下，力所不及者不被分派（Requirement.Assigned.capable；可行写在可接纳性里），力尽之处便“已”。定域在另一半：“無敢舍餘力”若要求给予者一直给到力尽，在只有活动的形成给予的前提下，给予者在给予时是活动的（FrontierWorlds.giver_active），唯一的给予者在其给予被要求的每一步都须活动（FrontierWorlds.sole_giver_active）；在活动需要支持的前提下（Web.Dependent，定义），给予者失去其所需的支持就不再活动；把所给读作出自给予者自身所持、无补充的存量（读法），一个每次汲取都使水平下降、凡为正就有汲取的存量，在与其所持相同的步数内耗尽（Stock.exhausted_within）。这是几条结果与两个前提的组合，不是一条律：在这些前提下，把给予者耗尽会使以后被要求的给予不可能，所以不舍余力在保持给予者能继续活动的范围内成立，越过这一点就失去以后的要求所依赖的给予者。孝子之喻的亲子位分不取。",
-"names_used": [
-"量力而任"
-],
-"locator": "《墨子·節葬下》第25篇·段1",
-"relational": "给予以给予者的持续活动为条件",
-"tradition": "墨家",
-"work": "《墨子·節葬下》",
-"checked": "corrected"
-},
-{
-"id": "mozi-feiyue",
-"status": "revised",
-"record_ids": [
-"MO1-C32-R001",
-"MO1-C32-R002",
-"MO1-C32-R003",
-"MO1-C32-R004"
-],
-"source_id": "MO1-S-C32",
-"layer": "先秦·论（战国，《墨子·非乐上》第32篇）",
-"fragments": [
-"非以大鍾、鳴鼓、琴瑟、竽笙之聲以為不樂也",
-"雖身知其安也，口知其甘也，目知其美也，耳知其樂也，然上考之不中聖王之事，下度之不中萬民之利。",
-"以此虧奪民衣食之財，仁者弗為也。",
-"然則樂器反中民之利亦若此，即我弗敢非也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.BasicPriority",
-"Becoming.Lexical.Above.no_trade",
-"Becoming.Lexical.Above.anchor",
-"Becoming.Lexical.Above.not_of_included",
-"Becoming.Lexical.Reorganizing.classification_matters",
-"Becoming.ScoreRepresentation.comparison_does_not_yield_priority",
-"Becoming.ScoreRepresentation.bounded_score_represents"
-],
-"records": [
-"protection-priority-excludes-uniform-aggregation",
-"classification-robust-generative-comparison",
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：非乐上先承认乐之为乐（身安、口甘、目美、耳乐），再以“虧奪民衣食之財”判为非；又说若乐器能像舟车一样“反中民之利”，就不非之。这是无以小害大（J2）的结构：J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张的选项不论增益都不在其上（Lexical.Above.no_trade），保留对方全部基本主张又保留一个它所缺的基本主张者在其上（Lexical.Above.anchor）；一个两层所持都被对方包含的选项不在对方之上（Lexical.Above.not_of_included）：乐若不损衣食，去乐并不在有乐之上。“反中民之利亦若此，即我弗敢非”正是：乐若不损基本，或本身被分类为基本的一部分，序就改变（见证：Lexical.Reorganizing.classification_matters，一个构造的改组情形）。以广为愈本身不给出这一优先：在一个构造的保护对增益情形中，一个满足它的标量序把增益排在保护之上，词典序则不（见证：ScoreRepresentation.comparison_does_not_yield_priority）；一个有界的评分满足它而从不如此（见证：ScoreRepresentation.bounded_score_represents）。墨子以“聖王之事”为上考，这一层不取；“利”的单位问题见 RO mojing-li-suo-de-er-xi。",
-"names_used": [
-"无以小害大",
-"以广为愈"
-],
-"locator": "《墨子·非樂上》第32篇·段1—5",
-"relational": "乐（增益）与衣食（基本）之间的层次，以是否损及基本为界",
-"tradition": "墨家",
-"work": "《墨子·非樂上》",
-"checked": "passed"
-},
-{
-"id": "mozi-shangxian-shi-zhi-cheng",
-"status": "revised",
-"record_ids": [
-"MO1-C09-R004"
-],
-"source_id": "MO1-S-C09",
-"layer": "先秦·论（战国，《墨子·尚贤中》第9篇）",
-"fragments": [
-"旣曰若法，未知所以行之術，則事猶若未成。",
-"夫豈為賢臣賜哉？欲其事之成也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Stock.feasible_iff_covered",
-"Becoming.Stock.covered_iff_prefix",
-"Becoming.Countdown.completes_iff",
-"Becoming.Countdown.stalls_beyond",
-"Becoming.Revising.covered_not_enacted"
-],
-"records": [
-"pending-task-context-applicability",
-"recoverable-mediated-change"
-],
-"reading": "AI读法：尚贤中说：已经有了法，不知道施行它的方法，事仍然未成；爵禄与断令并授，不是赏赐贤者，是要事情成。这是不行不至（§7.6）所说的结构；这里引的存量与计数之律属 §4.6。一个存量进程可执行恰当它被覆盖（Stock.feasible_iff_covered），覆盖要求在每一步，存量与此前的补充覆盖到此为止的全部汲取（Stock.covered_iff_prefix）；燃料覆盖计数的节拍才完成（Countdown.completes_iff），燃料不足则长于燃料的运行都停滞（Countdown.stalls_beyond）；在一个构造的修订情形中，存量覆盖了而连接被阻断，修订仍不发生（见证：Revising.covered_not_enacted）。“三本”（爵、禄、令）读作使执行可能的条件，相合；尚贤把执行者的选择交给一个上位者，这一层不取。",
-"names_used": [
-"不行不至"
-],
-"locator": "《墨子·尚賢中》第9篇·段3",
-"relational": "法与其成之间是执行条件的关系",
-"tradition": "墨家",
-"work": "《墨子·尚賢中》",
-"checked": "passed"
-},
-{
-"id": "lao-12-wei-fu-bu-wei-mu",
-"status": "revised",
-"record_ids": [
-"LAO2-C12-R06"
-],
-"source_id": "YD-LAO-BASE",
-"layer": "先秦·经（《老子》第12章，王弼本传世）",
-"fragments": [
-"是以圣人为腹不为目，故去彼取此。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.BasicPriority",
-"Becoming.Lexical.Above.anchor",
-"Becoming.Lexical.Above.no_trade",
-"Becoming.Lexical.Above.not_of_included",
-"Becoming.ScoreRepresentation.comparison_does_not_yield_priority"
-],
-"records": [
-"protection-priority-excludes-uniform-aggregation",
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：第十二章先列“五色令人目盲”等，再归结为“为腹不为目，故去彼取此”。这是无以小害大（J2）的读法。J1/J2 作为条件时（Lexical.BasicPriority），保留对方全部基本主张又保留一个它所缺的基本主张者在其上，不论增益（Lexical.Above.anchor），失去一个对方所持的基本主张者不论增益都不在其上（Lexical.Above.no_trade）：腹（维持）读作基本，目（感官之所得）读作增益，于是取腹。定域：经文说“去彼”，即舍弃感官之所得；理论只在感官的追求损及基本条件时才把它排在下面；两层都保留时，一个两层所持都被对方包含的选项不在对方之上（Lexical.Above.not_of_included），只去增益而不增基本者，并不在兼有二者者之上。所以“去彼取此”在追求损及基本处成立，作为普遍的舍弃不成立。以广为愈本身不给出这一优先：在一个构造的保护对增益情形中，一个满足它的标量序把增益排在保护之上（见证：ScoreRepresentation.comparison_does_not_yield_priority）。",
-"names_used": [
-"无以小害大",
-"以广为愈"
-],
-"locator": "《老子》第12章",
-"relational": "维持（腹）与感官之得（目）分两层，后者只在损及前者时被舍",
-"tradition": "道家",
-"work": "《老子》",
-"checked": "passed"
-},
-{
-"id": "lao-46-zhi-zu-zhi-zu",
-"status": "revised",
-"record_ids": [
-"LAO2-C46-R03",
-"LAO2-C46-R04",
-"LAO2-C46-R05"
-],
-"source_id": "YD-LAO-BASE",
-"layer": "先秦·经（《老子》第46章，王弼本传世；帛书甲本异文）",
-"fragments": [
-"祸莫大于不知足；",
-"咎莫大于欲得。",
-"故知足之足，常足矣。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Law.more_never_rests",
-"Becoming.more_not_at_rest",
-"Becoming.Flow.more_exhausted",
-"Becoming.Law.fixed_rests",
-"Becoming.Law.rests_iff"
-],
-"records": [
-"seeking-boundary",
-"the-boundary-of-enough-under-undetermined-laws"
-],
-"reading": "AI读法：第四十六章：“祸莫大于不知足；咎莫大于欲得。故知足之足，常足矣。”“欲得”不止的寻求是无明：以比现在更多为目标，在任何律下都不在静止的步满足（Law.more_never_rests），只能由变化满足（more_not_at_rest）。定域在“祸”：在所立被列出、自某步起每步都衰减之处，没有条件能在任意晚的步上升（Flow.more_exhausted）；在这一前提下，比现在更多的寻求不是以够而止，而是以耗尽而终。“知足之足，常足”只在满足目标的构形为律所不改变之处成立：目标在这样的构形被满足，轨道就在那里一直满足（Law.fixed_rests），确定之律下静止且满足恰在到达这样的构形时（Law.rests_iff），这是足而止。经文“祸莫大”是最大值断言，理论不排这一序。帛书甲本此句作“恆足矣”（V130-LAO-MA，前五字残）；恒在他处名更新，此处“恆足”只是静止处一直满足，二者须分。RO lao-44-zhi-zu-zhi-zhi 映射同一结构。",
-"names_used": [
-"无明",
-"足而止",
-"恒"
-],
-"locator": "《老子》第46章",
-"relational": "足是目标与轨道的关系：目标在静止处可满足才有足",
-"tradition": "道家",
-"work": "《老子》",
-"checked": "passed"
-},
-{
-"id": "suzhe-lao33-chang-xie-bu-zu",
-"status": "revised",
-"record_ids": [
-"LC2-SZ-C33-R03"
-],
-"source_id": "LC-SZ-ALL",
-"layer": "宋明·注（北宋，苏辙《老子解》第33章注）",
-"fragments": [
-"知足者所遇而足則未甞不富矣雖有天下而常挾不足之心以處之則是終身不能富也"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Law.more_never_rests",
-"Becoming.more_not_at_rest",
-"Becoming.more_needs_open",
-"Becoming.Law.fixed_rests"
-],
-"records": [
-"seeking-boundary"
-],
-"reading": "AI读法：苏辙注第三十三章“知足者富”：知足者所遇而足，未尝不富；有天下而常挟不足之心，终身不能富。结构是目标的形式决定能否静止：“不足之心”是无明，其目标是比现在更多，在任何律下都不在静止处被满足（Law.more_never_rests、more_not_at_rest），每步都满足需要开放的世界（more_needs_open），所以“有天下”也不足；“所遇而足”是目标在当下的构形就被满足，律不改变它则一直满足（Law.fixed_rests），这是足而止。定域：苏辙把足放在“心”上，并把“所遇而足”作为普遍的处世之方；理论不说该采用哪个目标，在所遇不足以维持基本条件之处，“所遇而足”会掩盖一个真实的缺失。",
-"names_used": [
-"无明",
-"足而止"
-],
-"locator": "苏辙《老子解》知人者智章第33注",
-"relational": "富不富取决于目标的形式，不取决于所有之多",
-"tradition": "道家（宋人注）",
-"work": "苏辙《老子解》",
-"checked": "passed"
-},
-{
-"id": "suzhe-lao44-qi-de-sang",
-"status": "revised",
-"record_ids": [
-"LC2-SZ-C44-R02"
-],
-"source_id": "LC-SZ-ALL",
-"layer": "宋明·注（北宋，苏辙《老子解》第44章注）",
-"fragments": [
-"惟齊有無均得喪而後無病也"
-],
-"kind": "divergence",
-"layer_checked": "本原（以一个无差别的根据取消得丧之分）",
-"declarations": [
-"Becoming.Web.widens_iff_retains_adds",
-"Becoming.Web.Retains",
-"Becoming.Law.lost_stays",
-"Becoming.Lexical.Repair.loss_retained",
-"Becoming.Law.rests_iff"
-],
-"records": [
-"comparison-by-widening",
-"significance-retained-within-margin",
-"recurrence-without-premise"
-],
-"reading": "AI读法：苏辙注第四十四章“得與亡孰病”：唯有齐同有无、均平得丧，然后无病。这与理论相分：理论的比较正是区分得丧，无丧与有得是比较的两个合取，在延续条件下（§6.4，条件，不断言）恰是广（Web.widens_iff_retains_adds；Web.Retains，定义）；失去的可能保持失去（Law.lost_stays）；在一个构造的修复情形中，被选者所未实现的事件作为损失保留（见证：Lexical.Repair.loss_retained）。把得丧齐同，等于取消比较。苏辙的目的是止于求，与足而止所说的静止相近（Law.rests_iff：确定之律下静止且目标被满足恰在到达律不改变而满足目标的构形时），但他的方法是取消区分，把差别消解于一个无差别的根据之上，属于本原（先在根据）这一非关系层；理论在不取消区分的情况下给出静止的条件。",
-"names_used": [
-"无丧",
-"有得",
-"广",
-"足而止"
-],
-"locator": "苏辙《老子解》名與身章第44注",
-"relational": "齐得丧把关系中的差别取消，理论保留差别",
-"tradition": "道家（宋人注）",
-"work": "苏辙《老子解》",
-"checked": "passed"
-},
-{
-"id": "lao-19-jue-sheng-qi-zhi",
-"status": "revised",
-"record_ids": [
-"LE-R029"
-],
-"source_id": "YD-LAO-BASE",
-"layer": "先秦·经（《老子》第19章，王弼本传世；郭店本异文）",
-"fragments": [
-"绝圣弃智，民利百倍；",
-"此三者以为文不足，故令有所属﹕见素抱朴，少私寡欲。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Flow.Balances.admits_of_net_draw",
-"Becoming.Flow.Balances.supported_of_net_give",
-"Becoming.Flow.Balances.withheld",
-"Becoming.Web.supported_iff_admits"
-],
-"records": [
-"closing-needs-net-draw",
-"feedback-and-reach"
-],
-"reading": "AI读法：沿用 RO 的映射（scope）：绝某而民得某这一句式在脊柱上有确切条件：撤去一个部分后，凡 f 被支持之处，其余水平仍容许 f，恰当该部分在 f 所需的每个条件上拿取不少于给予（Flow.Balances.admits_of_net_draw）；净给予者从不使被容许者失去支持（Flow.Balances.supported_of_net_give）；部分造成的差别由其累计的拿取与给予给出（Flow.Balances.withheld）；被支持即被容许（Web.supported_iff_admits，依定义）。所以撤去一个部分是辟还是阖，取决于它在所需条件上是净汲取还是净给予：一个部分只经由净汲取阖能形成者，只经由净给予辟之。本簇加读“此三者以为文不足，故令有所属﹕见素抱朴，少私寡欲”：经文把三“绝”作为“文”之不足，归于素朴寡欲；这在所绝者净汲取民之所需时成立；所绝者若净给予，有它时它从不使被容许者失去支持，绝之则失其所辟。郭店本无“绝圣”“绝仁弃义”（RO 已注）。“少私寡欲”作为普遍的修身规范，不取。",
-"names_used": [
-"阖",
-"辟"
-],
-"locator": "《道德经》十九章",
-"relational": "撤去一个部分的后果取决于它在所需条件上的净取与净给",
-"ro_passage": "lao-19-jue-sheng-qi-zhi",
-"tradition": "道家",
-"work": "《老子》",
-"checked": "passed"
-},
-{
-"id": "lao-79-he-da-yuan",
-"status": "revised",
-"record_ids": [
-"LAO2-C79-R02"
-],
-"source_id": "YD-LAO-BASE",
-"layer": "先秦·经（《老子》第79章，王弼本传世）",
-"fragments": [
-"和大怨，必有馀怨，安可以为善？"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Law.lost_stays",
-"Becoming.Law.merged_stays",
-"Becoming.Law.drawn_iff_not_returns",
-"Becoming.Frame.ReadsAt.loss_retained",
-"Becoming.MatchedCourses.recovery_retains_loss"
-],
-"records": [
-"recurrence-without-premise",
-"finite-aggregation-within-restorable-basic-losses",
-"attraction-is-not-returning"
-],
-"reading": "AI读法：沿用 RO 的映射（agreement）：失去的可能保持失去（Law.lost_stays），被合并者保持合并（Law.merged_stays），每个确定之律恰吸入不返回者（Law.drawn_iff_not_returns）。本簇从比较的角度读“安可以为善”：在按事件之时读主张的帧上（这是一个前提），在其时错过的主张以后任何一步都不再实现，不论那时的支持如何（Frame.ReadsAt.loss_retained）；在一个构造的匹配进程中，支持恢复之后已失的主张仍失（见证：MatchedCourses.recovery_retains_loss）。和解之后的状态不包含损失发生之前的状态，所以和解不是一个无丧的扩展，以广为愈不把它排在未结怨之时的状态之上；这正是兼权（J1）的损失保留：被选的和解所未恢复者仍作为损失计入，此条是兼权保留一半的主证。经文由此转向“执左契，而不责于人”（事前），理论也只说已失者不返回，不说新的形成不能出现。",
-"names_used": [
-"兼权",
-"无丧",
-"以广为愈"
-],
-"locator": "《老子》第79章",
-"relational": "和解在损失之后，不能把关系还原到损失之前",
-"ro_passage": "lao-79-he-da-yuan",
-"tradition": "道家",
-"work": "《老子》",
-"checked": "passed"
-},
-{
-"id": "daxiang-sun-cheng-fen-zhi-yu",
-"status": "revised",
-"record_ids": [
-"HX-R017"
-],
-"source_id": "YD-HX02",
-"layer": "先秦或秦汉·传（《大象传》·损，易传成书时代有争议）",
-"fragments": [
-"山下有澤，損；君子以懲忿窒欲。"
-],
-"kind": "divergence",
-"layer_checked": "非四层：以取象类比代替律的承载（其他结构）",
-"declarations": [
-"Becoming.Learning.goAlike_iff_lumped",
-"Becoming.Learning.Lumped",
-"Becoming.Law.rests_iff",
-"Becoming.Law.more_never_rests"
-],
-"records": [
-"generalization-through-lumping",
-"seeking-boundary"
-],
-"reading": "AI读法：沿用 RO 的映射（divergence）：大象的推理形式是取象而法之，是类比，不是导出；一个确定之律在映射下通行，恰当下一构形经映射读出后在映射所归并（类）者之间相同（Learning.goAlike_iff_lumped；Learning.Lumped，定义），而“山下有澤”到“懲忿窒欲”之间没有给出这样的归并。本簇所关心的是“窒欲”：若读作足而止，与 Law.rests_iff 相近（确定之律下，静止且目标被满足恰在到达律不改变而满足目标的构形时）；但大象把它作为普遍的修身命令，不说哪种欲在何处止，也不区分比现在更多的目标（无明，在任何律下都不在静止的步满足，Law.more_never_rests）与可被满足的目标。益象“見善則遷，有過則改”（HX-R018）列为平行。",
-"names_used": [
-"足而止",
-"类",
-"无明"
-],
-"locator": "大象传·損卦",
-"relational": "象与德目之间是约定的类比，不是关系的承载",
-"ro_passage": "daxiang-junzi-yi",
-"tradition": "易传",
-"work": "《周易·大象传》",
-"checked": "passed"
-},
-{
-"id": "xunzi-lilun-li-zhi-suo-qi",
-"status": "revised",
-"record_ids": [
-"RU2-R0101"
-],
-"source_id": "RU2-S-XZ19",
-"layer": "先秦·论（战国末，《荀子·礼论》）",
-"fragments": [
-"人生而有欲，欲而不得，则不能无求。",
-"求而无度量分界，则不能不争；争则乱，乱则穷。",
-"使欲必不穷于物，物必不屈于欲。两者相持而长，是礼之所起也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Flow.joint_excess_ends",
-"Becoming.Flow.joint_excess_ends_at",
-"Becoming.Flow.level_kept",
-"Becoming.Exceeding.own_not_joint",
-"Becoming.Web.embodiedArising_needs_replenishment",
-"Becoming.Law.rests_iff"
-],
-"records": [
-"own-count-misses-joint-excess",
-"what-taking-all-excludes",
-"generation-is-replenishment",
-"seeking-boundary"
-],
-"reading": "AI读法：沿用 RO 的映射（agreement）：在更新依赖于被更新者时（门控更新），合取超出所给的每一步都使水平下降，降到需要之下便终结依赖它的形成（Flow.joint_excess_ends、Flow.joint_excess_ends_at），在一个构造的情形中，各自不超取并不防止合取超取（见证：Exceeding.own_not_joint）；“两者相持而长”对应每步联合拿取都在所给之内时水平不降（Flow.level_kept）与生成携带补充（Web.embodiedArising_needs_replenishment）；无度量分界之求成为争（在共享条件处的竞逐）。本簇加读第一句“欲而不得，则不能无求”：这是对寻求的描述（寻求者在目标未满足时继续动），Seeking 一组律不推出它；在这一描述之下，确定之律下，求能静止且得，恰当到达律不改变而满足目标的构形（Law.rests_iff），这是足而止；“度量分界”是给出的界，使求在所给之内止。荀子把定界归于先王，理论只说界是延续的条件，不说谁来定。",
-"names_used": [
-"足而止",
-"争"
-],
-"locator": "荀子/礼論篇",
-"relational": "欲与物相持：求的界在所给的水平",
-"ro_passage": "ru-xunzi-li-qi-yu-fen",
-"tradition": "儒家",
-"work": "《荀子·礼论》",
-"checked": "corrected"
-},
-{
-"id": "zhoudunyi-shi-tian-hu-ren-ye",
-"status": "revised",
-"record_ids": [
-"RU2-R0164"
-],
-"source_id": "RU2-S-S01",
-"layer": "宋明·论（北宋，周敦颐《通书·势第二十七》）",
-"fragments": [
-"力而不竞，天也。不识不力，人也。天乎？人也，何尤！"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Requirement.Assigned.capable",
-"Becoming.Requirement.residual_of_unfulfilled",
-"Becoming.Dependence.MakesDifference",
-"Becoming.Web.break_not_bounded"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"joint-difference-making",
-"runaway-distance-uncoupled"
-],
-"reading": "AI读法：RO 的 ru-zhoudunyi-shi 映射同章“极重不可反……识不早，力不易也”（agreement），并注明“天乎？人也”的归属未处理；此条处理的正是这一句，所以种类与声明不同。周敦颐区分两种失败：尽力而不能胜，是“天”；不识、不尽力，是“人”。理论按量力而任给出分界：在每个可接纳计划的分派都可行的条件下，力所不及者不被分派（Requirement.Assigned.capable；可行写在可接纳性里）；在可行之内，到期而未做、未解除者有余责（Requirement.residual_of_unfulfilled，依定义）；一个部分是否造成差别，由若无检验定（有力；Dependence.MakesDifference，定义）。定域在“不识”：一个所依存的存量若不经水平感入（感，耦合）一个形成，在断点之前，没有任何感入它的东西界定离断点还有多远（Web.break_not_bounded），这是未兆；在那里把识读作不在可行之内（读法），按上一前提它不被分派，“不识”不留余责。只在断点的远近已由某个感接进来之处，识才在可行之内，不识才可能是余责。周敦颐把一切“不识”归于人，理论只在那样的地方同意。“天”在此只作超出可行读，不作意志之“天”。",
-"names_used": [
-"量力而任",
-"有力",
-"感",
-"未兆"
-],
-"locator": "《通书·势第二十七》",
-"relational": "失败的归属取决于可行之界与感所及之界",
-"tradition": "儒家（宋）",
-"work": "周敦颐《通书》",
-"checked": "corrected"
-},
-{
-"id": "sui-xi-xiaozi-fu-jian-yu",
-"status": "revised",
-"record_ids": [
-"TP-H17-X2-R01",
-"TP-H17-X3-R01",
-"JF-R046",
-"JF-R047"
-],
-"source_id": "YD-JP17",
-"layer": "先秦·经（随卦六二、六三爻辞，通常系于西周晚期，有争议）；传（小象传，先秦至秦汉，成书时代有争议）",
-"fragments": [
-"六二：係小子，失丈夫。",
-"六三：係丈夫，失小子。",
-"系小子，弗兼與也。",
-"系丈夫，志舍下也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Viability.ChoicePoint.each_not_joint",
-"Becoming.Viability.kernel_and_iff"
-],
-"records": [
-"conditions-kept-together"
-],
-"reading": "AI读法：随卦六二“係小子，失丈夫”，六三“係丈夫，失小子”；小象释为“弗兼與也”“志舍下也”。结构是：每一个系属单独可保持，两者不能同时保持，系此则失彼，即不得兼。在一个构造的分岔中，每个条件都可沿某条进程保持，两者一起不可（见证：Viability.ChoicePoint.each_not_joint）；而对每条进程都不离开的守护，共同守护恰是各自守护（Viability.kernel_and_iff）。随卦所示是前一种：联合不可保持。经与传都不说该系哪一个，只说取舍有所失，这与兼权（J1）的损失保留相合。“小子”“丈夫”的人伦位分不取。",
-"names_used": [
-"得兼",
-"兼权"
-],
-"locator": "第17卦隨·经文六二、六三；小象·第2、3位",
-"relational": "两个系属在同一处境中不可兼得",
-"tradition": "易（经与传）",
-"work": "《周易》隨卦",
-"checked": "passed"
-},
-{
-"id": "wangbi-qian-li-yi",
-"status": "revised",
-"record_ids": [
-"YCM130-Q-Z-Q13b-R01"
-],
-"source_id": "YWH-Q",
-"layer": "魏晋南北朝·注（魏，王弼注乾，载《周易正义》）",
-"fragments": [
-"夫進物之速者，義不若利，存物之終者，利不及義。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Web.mixed_iff_adds",
-"Becoming.Profiles.both_respect",
-"Becoming.Profiles.opposite",
-"Becoming.StrictTransport.cutoffs_disagree"
-],
-"records": [
-"significance-retained-within-margin",
-"comparison-by-widening",
-"classification-robust-generative-comparison"
-],
-"reading": "AI读法：王弼注乾：“夫進物之速者，義不若利，存物之終者，利不及義。”就使物迅速前进而言，“義”不如“利”；就保存物到终了而言，“利”不及“義”。两种排序相互颠倒，各相对于一个给出的着眼点。理论中，两方各有所长时，在延续条件下（§6.4，条件，不断言）各增加对方所缺（Web.mixed_iff_adds），以广为愈不排它们；另给的比较可以相反：在一个构造的两维情形中，两个评分都尊重每个生成扩展（见证：Profiles.both_respect），却在一项实现替换另一项时给出相反的序（见证：Profiles.opposite）。旁证：在修复与完成的路线上，两个各自传递的截断规则对同一对选项给出相反的严格序（见证：StrictTransport.cutoffs_disagree），那里不是“義”“利”，只取序随所给规则而反转。所以序随所给的着眼点反转，与王弼的“速”“終”相合。理论不说哪个着眼点对：“存物之終”若读作保持延续，与延续条件同向，但延续条件只定范围，排序不由它推出。",
-"names_used": [
-"各有所长",
-"以广为愈"
-],
-"locator": "周易正義/01乾·王弼层·Q13b",
-"relational": "两项的轻重相对于所着眼的时域而反转",
-"tradition": "易（王弼注）",
-"work": "王弼《周易注》",
-"checked": "passed"
-},
-{
-"id": "chengyi-jing-wei-ji-yong",
-"status": "revised",
-"record_ids": [
-"CY130-H48-R01"
-],
-"source_id": "YD-CY4",
-"layer": "宋明·注（北宋，程颐《伊川易传》井卦）",
-"fragments": [
-"井以濟用為功幾至而未及用亦與未下繘於井同也",
-"掘井九仞而不及泉猶為棄井有濟物之用而未及物猶无有也"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Countdown.pending_before",
-"Becoming.Countdown.not_done_before",
-"Becoming.Countdown.completes_iff"
-],
-"records": [
-"versioned-request-completion",
-"recoverable-mediated-change"
-],
-"reading": "AI读法：程颐释井卦“汔至亦未繘井”：井以济用为功，几乎到了而未及用，与未下绳于井相同；掘井九仞不及泉，犹为弃井。结构是：未完成的任务在完成之前不产生完成的效果，这是不行不至。每个至多 work 个节拍的运行都使任务悬而未决，工作只减去已走的节拍（Countdown.pending_before），在待办与完成互斥时此前没有完成（Countdown.not_done_before），完成恰当燃料覆盖全部节拍（Countdown.completes_iff）。定域：程颐说“幾至”与“未下”相同，就完成与否而言成立；但悬而未决的任务所剩的工作是 work 减去已走的节拍，几至者剩下的更少，与未开始者不同；“猶无有”只对已济物这一结果成立，对过程的状态不成立。",
-"names_used": [
-"不行不至"
-],
-"locator": "伊川易传·卷4·第48卦井",
-"relational": "效用只在执行完成时成立；过程的状态则随已走的步而变",
-"tradition": "易（程颐）",
-"work": "程颐《伊川易传》",
-"checked": "passed"
-},
-{
-"id": "chengyi-ge-li-yu-zheng-dao",
-"status": "revised",
-"record_ids": [
-"CY130-H49-R01"
-],
-"source_id": "YD-CY4",
-"layer": "宋明·注（北宋，程颐《伊川易传》革卦）",
-"fragments": [
-"革之而利於正道則可久而得去故之義无變動之悔乃悔亡也革而无甚益猶可悔也况反害乎古人所以重改作也"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Comparison",
-"Becoming.Web.widens_iff_retains_adds",
-"Becoming.Web.Retains",
-"Becoming.Web.Adds",
-"Becoming.Web.mixed_iff_adds",
-"Becoming.Transfer.unordered"
-],
-"records": [
-"comparison-by-widening",
-"significance-retained-within-margin"
-],
-"reading": "AI读法：程颐释革卦：革而“利於正道”，则可久而无变动之悔；革而无甚益，犹可悔，何况反害，所以古人重改作。结构是：改变只在有所增益时值得，有损则更不可。理论中，以广为愈（Comparison，定义）只把扩展排在上面，在延续条件下（§6.4，条件，不断言）即无丧且有得（Web.widens_iff_retains_adds；Web.Retains、Web.Adds，定义）；“无甚益”是无丧而无得，不被排在原状之上；“反害”是有丧；有增益又有所失的改作，两方各有所长，在延续条件下各增加对方所缺（Web.mixed_iff_adds），以广为愈不排它们，在一个构造的流中排序需要另给的度量（见证：Transfer.unordered）。定域：程颐用“正道”作为改变的标准，并把“重改作”作为一般的审慎；理论不设固定标准，在各有所长之处也不说“不改”更好（不改同样可以失去），只说以广为愈不排序。",
-"names_used": [
-"以广为愈",
-"无丧",
-"有得",
-"各有所长"
-],
-"locator": "伊川易传·卷4·第49卦革",
-"relational": "改变与原状的比较按无丧与有得",
-"tradition": "易（程颐）",
-"work": "程颐《伊川易传》",
-"checked": "passed"
-},
-{
-"id": "chengyi-sun-fu-sun-yi-zhi",
-"status": "revised",
-"record_ids": [
-"CY-R013"
-],
-"source_id": "YD-CY3",
-"layer": "宋明·注（北宋，程颐《伊川易传》损卦九二）",
-"fragments": [
-"不自損其剛貞則能益其上乃益之也若失其剛貞而用柔説適足以損之而已非損己而益上也"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.FrontierWorlds.giver_active",
-"Becoming.FrontierWorlds.sole_giver_active",
-"Becoming.Web.Dependent",
-"Becoming.Requirement.Assigned.capable"
-],
-"records": [
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：程颐释损九二“弗損益之”：不自损其“剛貞”，才能益其上；若失其“剛貞”而以柔悦顺上，只是损之而已，不是“損己而益上”。只取前半的结构：给予者须保持自身能给予的条件，自损而失去这些条件就不再能给予。在只有活动的形成给予的前提下，给予者在给予时是活动的（FrontierWorlds.giver_active），唯一的给予者在其给予被要求的每一步都须活动（FrontierWorlds.sole_giver_active）；在活动需要支持的前提下（Web.Dependent，定义），失去所需支持的给予者不再活动，也就不再给予；在每个可接纳计划的分派都可行的条件下，被分派者可行（Requirement.Assigned.capable）。这一对应是类比：程颐的“損”是失其“剛貞”，不是给予者的活动条件被耗尽。后半以顺从代替给予而损受者，理论在此没有对应的律，不取。定域：“損己而益上”只在不损及给予者能继续给予的条件时成立，这是量力而任的一面。朱熹“不變其所守乃所以益上”（ZX-R007）同构，列为平行。“剛貞”这一品目与“上”的位阶不取。",
-"names_used": [
-"量力而任"
-],
-"locator": "伊川易传·卷三·损九二注",
-"relational": "给予以给予者自身的持续为条件",
-"tradition": "易（程颐）",
-"work": "程颐《伊川易传》",
-"checked": "corrected"
-},
-{
-"id": "daxue-zhi-yu-zhi-shan",
-"status": "revised",
-"record_ids": [
-"RU1-DX-01-R03"
-],
-"source_id": "RU1-S-DX",
-"layer": "先秦或秦汉·原典正文（《礼记·大学》，成篇时代有争议）",
-"fragments": [
-"大學之道，在明明德，在親民，在止於至善。知止而後有定",
-"子曰：「於止，知其所止。可以人而不如鳥乎？」",
-"為人君，止於仁；為人臣，止於敬；為人子，止於孝；為人父，止於慈；與國人交，止於信。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Law.fixed_rests",
-"Becoming.Law.rests_iff"
-],
-"records": [
-"seeking-boundary"
-],
-"reading": "AI读法：大学以“止於至善”为纲领之一，“知止而後有定”；并自释“所止”：“於止，知其所止”，“為人君，止於仁；為人臣，止於敬……與國人交，止於信”。按大学自己的解释，止是在各自的关系位置上一个可满足的目标，这与足而止相合：目标在律不改变的构形被满足，轨道在那里静止并一直满足（Law.fixed_rests），确定之律下静止且目标被满足恰在到达这样的构形时（Law.rests_iff）。定域：所止依位而定，位由所给的名分给出，君臣父子的等级层不取；“仁”“敬”“孝”“慈”“信”作为目标的内容由大学给出，理论不定。“明德”作为固定本性的一层不取。RO 的 ru-daxue-ben-mo 只映射本末次第，不含此句，故不设 ro_passage。",
-"names_used": [
-"足而止"
-],
-"locator": "《礼记·大学》编者连续论证段1、段3",
-"relational": "止是目标与关系位置的关系：各位置有其可满足的所止",
-"tradition": "儒家",
-"work": "《礼记·大学》",
-"checked": "passed"
-},
-{
-"id": "daxue-xie-ju",
-"status": "revised",
-"record_ids": [
-"RU1-DX-15-R01",
-"RU1-DX-15-R02",
-"RU1-DX-15-R03",
-"RU1-DX-15-R04",
-"RU1-DX-15-R05",
-"RU1-DX-15-R06"
-],
-"source_id": "RU1-S-DX",
-"layer": "先秦或秦汉·原典正文（《礼记·大学》，成篇时代有争议）",
-"fragments": [
-"所惡於上，毋以使下；所惡於下，毋以事上；所惡於前，毋以先後；所惡於後，毋以從前；所惡於右，毋以交於左；所惡於左，毋以交於右。此之謂絜矩之道。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.BoundaryInvariant",
-"Becoming.unrestricted_iff_presupposed_along",
-"Becoming.Relabel.valued_alike_iff",
-"Becoming.Learning.selects_right_through",
-"Becoming.Learning.selects_not_right_of_parted"
-],
-"records": [
-"continuation-condition-decomposition",
-"presupposition-scopes",
-"selection-through-a-model-of-the-options"
-],
-"reading": "AI读法：“絜矩之道”：所恶于上者不以使下，所恶于下者不以事上，前后左右同此。结构是把一个判断在关系的各个位置上交换，要求它不变，这是无方（立场中立与立场不变）的结构。理论中相近而不同的一步是不易乎畛：关于一个自我的预设，在边界划在一个可接纳区域时成立、划在每个其他区域时也成立，才是不变的（BoundaryInvariant，定义）；整体可接纳时，延续条件恰是每个立场上次真且对边界不变的预设（unrestricted_iff_presupposed_along；延续条件只作条件，不断言）。絜矩所换的是位置，不易乎畛所换的是边界；不变的一步只定范围（谁的延续计入），不排序，排序只在以广为愈。两个选项被经过一个映射的每个评价同样评价，恰当映射把它们打成平手（Relabel.valued_alike_iff）；通过映射的选择只在要紧之处跨归并（类）一致时才对（Learning.selects_right_through），否则需要更细的映射（Learning.selects_not_right_of_parted）。定域：絜矩在“所惡”相同、位置可交换处成立；当上下前后的处境真有不同的要紧之处（例如能力不同），把它们归并为同一位置的选择就不对。上下的等级不取，只取位置的交换。此条与 C14（延续条件与不变的一步）跨簇，留在本簇。",
-"names_used": [
-"无方",
-"不易乎畛",
-"以广为愈",
-"类"
-],
-"locator": "《礼记·大学》编者连续论证段15",
-"relational": "判断在关系的各位置之间交换而不变",
-"tradition": "儒家",
-"work": "《礼记·大学》",
-"checked": "passed"
-},
-{
-"id": "lunyu-qu-bing-qu-shi",
-"status": "revised",
-"record_ids": [
-"RU1-LY-12-07-R02",
-"RU1-LY-12-07-R03"
-],
-"source_id": "RU1-S-LY",
-"layer": "先秦·原典正文（《论语·颜渊》）",
-"fragments": [
-"子貢曰：「必不得已而去，於斯三者何先？」曰：「去兵。」子貢曰：「必不得已而去，於斯二者何先？」曰：「去食。自古皆有死，民無信不立。」"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Viability.ChoicePoint.each_not_joint",
-"Becoming.Lexical.Above.anchor",
-"Becoming.FrontierFrames.Priority.kept_required",
-"Becoming.Lexical.Crossed.incomparable",
-"Becoming.Lexical.Reorganizing.classification_matters"
-],
-"records": [
-"conditions-kept-together",
-"classification-robust-generative-comparison",
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：子贡问足食、足兵、民信三者不得已而去，孔子先去兵，再去食，以“民無信不立”守“信”。结构是不能共同保持时按层取舍，即按无以小害大（J2）：在一个构造的分岔中，各自可保持、共同不可（见证：Viability.ChoicePoint.each_not_joint），即不得兼；J1/J2 作为条件时，保留对方全部基本主张又保留一个它所缺的基本主张者在其上（Lexical.Above.anchor），在帧上，一个实现了任一选项所实现的每个基本主张的选项，其所实现的基本主张为选择所要求（FrontierFrames.Priority.kept_required：选项列出、比较弱可判定、该主张可判定）。定域：理论不给出食与“信”谁是基本：在一个构造的情形中，各持一个受保护主张而互缺的两个选项不可比（见证：Lexical.Crossed.incomparable），分类一变序就变（见证：Lexical.Reorganizing.classification_matters）。孔子把“信”（读作共同活动得以持续的关系条件）排在食之上，是一个给出的分类；去食终止生存这一基本条件，二者都在基本层时，这一取舍不由词典序给出。“自古皆有死”以死之必然降低生存的层级，这一步不取。",
-"names_used": [
-"得兼",
-"无以小害大"
-],
-"locator": "《论语》顏淵第十二·十二之七",
-"relational": "三者不能共保时，取舍依层次；层次本身是给出的",
-"tradition": "儒家",
-"work": "《论语》",
-"checked": "passed"
-},
-{
-"id": "lunyu-you-he-jia-yan",
-"status": "revised",
-"record_ids": [
-"RU1-LY-13-09-R01",
-"RU1-LY-13-09-R02"
-],
-"source_id": "RU1-S-LY",
-"layer": "先秦·原典正文（《论语·子路》）",
-"fragments": [
-"冉有曰：「既庶矣，又何加焉？」曰：「富之。」曰：「既富矣，又何加焉？」曰：「教之。」"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Comparison",
-"Becoming.Web.Retains",
-"Becoming.Web.Adds",
-"Becoming.Web.widens_iff_retains_adds",
-"Becoming.Lexical.Above"
-],
-"records": [
-"comparison-by-widening",
-"significance-retained-within-margin"
-],
-"reading": "AI读法：庶、富、教，每一步都问“又何加焉”：在已有之上再加。结构是保留已成者而增加一个新的，即扩展：以广为愈（Comparison，定义）把保留每一主张并实现一个新的活的主张者排在上面；在延续条件下（§6.4，条件，不断言）即无丧且有得，恰是广（Web.widens_iff_retains_adds；Web.Retains、Web.Adds，定义）。若富之后基本主张不变，加教是增益的严格增加，J1/J2 作为条件时即在其上（Lexical.Above，定义的第二支：基本两层互相包含，增益严格包含）。把庶、富读作基本、教读作增益，是 AI 的分类，文本不说。孔子没有说“教”可以以“富”为代价，“既富矣”保留了前一步，所以相合。“教”的内容不在此判定。",
-"names_used": [
-"以广为愈",
-"无丧",
-"有得",
-"广"
-],
-"locator": "《论语》子路第十三·十三之九",
-"relational": "每一步在保留前一步之上增加",
-"tradition": "儒家",
-"work": "《论语》",
-"checked": "passed"
-},
-{
-"id": "lunyu-xiu-ji-an-bai-xing",
-"status": "revised",
-"record_ids": [
-"RU1-LY-14-45-R04"
-],
-"source_id": "RU1-S-LY",
-"layer": "先秦·原典正文（《论语·宪问》）",
-"fragments": [
-"曰：「脩己以安百姓。脩己以安百姓，堯舜其猶病諸！」"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Requirement.Collective.required",
-"Becoming.Requirement.Collective.no_common_plan"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"classification-robust-generative-comparison"
-],
-"reading": "AI读法：孔子说“脩己以安百姓”，连尧舜都难以做到。理论补出一个原因（这是理论的补充，文本不说）：安百姓是集体的任务。在一个构造的两选项情形中，一个集体任务可以被要求而没有任何个体任务被要求（见证：Requirement.Collective.required）；每个世界可以有一个计划而没有对所有世界共同的计划（见证：Requirement.Collective.no_common_plan）。所以“安百姓”不必作为对一个修己者的要求，“堯舜其猶病諸”说一人修己不足以尽之。定域：文本把安百姓列为修己的极致；理论只在把它读作集体关系的任务时，说它不落在一人身上，与量力而任相合。尧舜作为圣王典范不取。",
-"names_used": [
-"量力而任"
-],
-"locator": "《论语》憲問第十四·十四之四五",
-"relational": "安百姓是集体关系的任务，不是一个人的",
-"tradition": "儒家",
-"work": "《论语》",
-"checked": "passed"
-},
-{
-"id": "zhuangzi-qiushui-ming-yu-quan",
-"status": "revised",
-"record_ids": [
-"ZH1-C17-R-12",
-"ZH1-C17-R-13",
-"ZH1-C17-R-14"
-],
-"source_id": "ZH1-S17",
-"layer": "先秦或秦汉·论（《庄子·秋水》，外篇，时代有争议）",
-"fragments": [
-"知道者必達於理，達於理者必明於權，明於權者不以物害己。",
-"非謂其薄之也，言察乎安危，寧於禍福，謹於去就，莫之能害也。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Learning.goAlike_iff_lumped",
-"Becoming.Learning.selects_right_through",
-"Becoming.Learning.selects_not_right_of_parted",
-"Becoming.Web.break_not_bounded"
-],
-"records": [
-"generalization-through-lumping",
-"selection-through-a-model-of-the-options",
-"runaway-distance-uncoupled"
-],
-"reading": "AI读法：秋水：“知道者必達於理，達於理者必明於權，明於權者不以物害己。”“至德者”免害，不是因为亲近危险而不伤，而是察安危、宁祸福、谨去就。理论中理是结构与变化之律的模型：一个确定之律在映射下通行，恰当下一构形经映射读出后在映射所归并者之间相同（Learning.goAlike_iff_lumped）；通过映射的选择只在要紧之处跨归并一致时才对（Learning.selects_right_through），否则需要更细的映射（Learning.selects_not_right_of_parted）。所以“達於理者必明於權”读作：权要有一个承载律的模型。定域在“必”与“莫之能害”：有模型不保证免害。一个所依存的存量若不经水平感入（感，耦合）一个形成，在断点之前，没有任何感入它的东西界定离断点还有多远（Web.break_not_bounded），这是未兆：这样的危险在被感接进来之前无可察。“察乎安危……莫之能害”在可察之处成立，作为普遍保证不成立。“道”作为本根不取。",
-"names_used": [
-"权",
-"理",
-"感",
-"未兆"
-],
-"locator": "庄子·秋水",
-"relational": "称量以模型为前提；免害以感所及为界",
-"tradition": "庄学",
-"work": "《庄子·秋水》",
-"checked": "corrected"
-},
-{
-"id": "zhuangzi-zhibeiyou-wu-mian-suo-bu-mian",
-"status": "revised",
-"record_ids": [
-"ZH1-C22-R-09"
-],
-"source_id": "ZH1-S22",
-"layer": "先秦或秦汉·论（《庄子·知北游》，外篇，时代有争议）",
-"fragments": [
-"夫知遇而不知所不遇，知能能而不能所不能，无知无能者，固人之所不免也。夫務免乎人之所不免者，豈不亦悲哉！"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Requirement.Required.defeated",
-"Becoming.Enough.possibly_rests_iff"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"the-boundary-of-enough-under-undetermined-laws"
-],
-"reading": "AI读法：知北游：人知所遇而不知所不遇，能其所能而不能所不能，无知无能是人所不免的；务求免于所不免，岂不可悲。理论中，一个可接纳的选项不执行某任务，就击败这一任务的要求（Requirement.Required.defeated）：免于无知无能是没有一个可接纳选项执行的任务，任何一个可接纳选项都击败它，它不被要求。目标能否在静止处被满足也有确切条件：不确定之律下，某次运行能静止且目标被满足，恰当某个可达构形有停留的一步并满足目标（Enough.possibly_rests_iff）；以不可达的目标为求，求不会止，这是足而止的反面。相合在有界：要求以可接纳者为界，目标以可达为界，这是量力而任的能力之界。庄子把“不免”读作人之为人的限度，并引向“悲”，这一情感评价不取；理论也不说某一界是固定的，可达者随形成而变。",
-"names_used": [
-"量力而任",
-"足而止"
-],
-"locator": "庄子·知北遊",
-"relational": "要求与目标都以可达为界",
-"tradition": "庄学",
-"work": "《庄子·知北游》",
-"checked": "passed"
-},
-{
-"id": "zhuangzi-tianxia-tian-xia-bu-kan",
-"status": "revised",
-"record_ids": [
-"ZH1-C33-R-06"
-],
-"source_id": "ZH1-S33",
-"layer": "先秦或秦汉·论（《庄子·天下》，杂篇，战国末至秦汉，时代有争议）",
-"fragments": [
-"天下不堪，墨子雖獨（能）任，奈天下何？離於天下，其去王也，遠矣。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Requirement.Assigned.capable",
-"Becoming.Requirement.Required.defeated",
-"Becoming.Stock.exhausted_within"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"renewing-consuming-formation"
-],
-"reading": "AI读法：天下篇评墨家：天下不堪，墨子虽独能任，奈天下何。结构是：一个要求若只有极少数能承担，它就不是对所有人的要求。把墨家的主张读作一个对全体的计划：在每个可接纳计划的分派都可行的条件下，不堪者不被分派（Requirement.Assigned.capable；可行写在可接纳性里），所以墨家的主张作为对天下人的要求，不在可接纳的计划之中；若另有不行墨家主张的可接纳计划，这一要求即被击败（Requirement.Required.defeated）。持续的汲取也不能持久：一个每次汲取都使水平下降、凡为正就有汲取的存量，在与其所持相同的步数内耗尽（Stock.exhausted_within）。相合在量力而任的有界责任。天下篇以“其去王也，遠矣”为评，“王”作为标准不取；墨子本人的承担是自承，属 mojing-daqu-sha-ji 的缺口。",
-"names_used": [
-"量力而任"
-],
-"locator": "庄子·天下",
-"relational": "要求的普遍性以被要求者的能力为界",
-"tradition": "庄学",
-"work": "《庄子·天下》",
-"checked": "passed"
-},
-{
-"id": "sunzi-dixing-zhan-dao",
-"status": "revised",
-"record_ids": [
-"BI1-SZ-R-47",
-"BI1-SZ-R-48"
-],
-"source_id": "BI1-S-SZ",
-"layer": "先秦·传世正文（《孙子·地形》，春秋末至战国，成书有争议；“经”是后起的称呼）",
-"fragments": [
-"故戰道必勝，主曰無戰，必戰可也；戰道不勝，主曰必戰，無戰可也。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.FrontierFrames.Options",
-"Becoming.Requirement.Frontier",
-"Becoming.Requirement.Frontier.excluded",
-"Becoming.Requirement.required_of_bettered"
-],
-"records": [
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：孙子说：“戰道必勝，主曰無戰，必戰可也；戰道不勝，主曰必戰，無戰可也。”“可”是许可；可行与否的判断在“戰道”，命令不改变它。结构是：选择在可行的选项之中（FrontierFrames.Options，定义），在所给比较的前沿上（Requirement.Frontier，定义）；被某个可接纳选项胜过者不在前沿上（Requirement.Frontier.excluded），每个缺某任务的可接纳选项都被胜过时，这一任务被前沿要求（Requirement.required_of_bettered：菜单非空且列出，比较非自反、传递、弱可判定，任务可判定；这是充分条件）。所以只要命令不改变可接纳的菜单，主之令就不使一个被胜过的选项成为要求。定域与相张：J4（正当可行的选择）的正当一半要求被授权的计划，授权可以改变菜单；孙子以“戰道”越过主之令，这一层与 J4 相分；孙子的比较标准是胜（见 RO sunzi-bu-zhan-er-qu-ren 的方向相分），这里只取命令不能使被胜过者成为要求。“進不求名，退不避罪，唯民是保”（BI1-SZ-R-49）列为平行。",
-"names_used": [],
-"locator": "孙子·地形第十",
-"relational": "可行性与命令的关系：命令不越过可行",
-"tradition": "兵家",
-"work": "《孙子兵法》",
-"checked": "corrected"
-},
-{
-"id": "simafa-yi-zhan-qu-zhan",
-"status": "revised",
-"record_ids": [
-"BI1-SM-R-03"
-],
-"source_id": "BI1-S-SM",
-"layer": "先秦·传世正文（《司马法·仁本》，战国，传世本有争议）",
-"fragments": [
-"是故殺人安人，殺之可也。攻其國，愛其民，攻之可也。以戰去戰，雖戰可也。"
-],
-"kind": "divergence",
-"layer_checked": "非四层：以目的抵消手段之损（与损失保留相冲突的结构），语境为争胜",
-"declarations": [
-"Becoming.Law.lost_stays",
-"Becoming.Lexical.Above.no_trade",
-"Becoming.Lexical.Crossed.incomparable",
-"Becoming.Frame.SufficientMatching",
-"Becoming.Frame.not_strictLossMatch_of_base_lost"
-],
-"records": [
-"recurrence-without-premise",
-"finite-aggregation-within-restorable-basic-losses",
-"protection-priority-excludes-uniform-aggregation"
-],
-"reading": "AI读法：司马法以目的许可手段：杀人以安人，可以杀；攻其国而爱其民，可以攻；以战止战，虽战可也。理论与此相分。失去的可能在每一律下保持失去（Law.lost_stays），一人之死读作这样一个失去（读法）；按无以小害大，J1/J2 作为条件时，失去一个对方所持的基本主张的选项不论增益都不在其上（Lexical.Above.no_trade），在一个构造的情形中，各持对方所缺的受保护主张的两个选项不可比（见证：Lexical.Crossed.incomparable），所以杀一以安众不由词典序给出；以同类损失的计数为充分根据是一个承诺（Frame.SufficientMatching，定义），同类积小把它限在可恢复的基本损失之内；而在每个主张都依赖一个共同支持、主张有限列出时，失去共同支持的构形在匹配上不比任何构形严格更好（Frame.not_strictLossMatch_of_base_lost），战争读作危及共同支持的处境（读法）。司马法的“可”是以一个目的（安人、去战）抵消手段的损失，这是理论不承认的抵消：损失保留，兼权所要求的正是这一点。“入罪人之地……”的约束见 simafa-ru-zui-ren-zhi-di。",
-"names_used": [
-"兼权",
-"同类积小",
-"无以小害大"
-],
-"locator": "司马法·仁本",
-"relational": "以目的抵消手段之损，取消了损失的保留",
-"tradition": "兵家",
-"work": "《司马法》",
-"checked": "corrected"
-},
-{
-"id": "simafa-ru-zui-ren-zhi-di",
-"status": "revised",
-"record_ids": [
-"BI1-SM-R-06"
-],
-"source_id": "BI1-S-SM",
-"layer": "先秦·传世正文（《司马法·仁本》，战国，传世本有争议）",
-"fragments": [
-"入罪人之地，無暴神祇，無行田獵，無毀土功，無燔牆屋，無伐林木，無取六畜、禾黍、器械。見其老幼，奉歸勿傷。雖遇壯者，不校勿敵。敵若傷之，醫藥歸之。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.BasicPriority",
-"Becoming.Lexical.Above.no_trade",
-"Becoming.Lexical.Above.anchor",
-"Becoming.Flow.Balances.loses_iff_beyond_margin"
-],
-"records": [
-"protection-priority-excludes-uniform-aggregation",
-"significance-retained-within-margin"
-],
-"reading": "AI读法：司马法给征伐加上保护：不毁土功、墙屋、林木，不取六畜禾黍器械，不伤老幼，伤者医药归之。J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张的选项不论增益都不在其上（Lexical.Above.no_trade），保留对方全部基本主张又保留一个它所缺的基本主张者在其上（Lexical.Above.anchor）：这些禁令所护的正是生计与再生的条件（林木、六畜、禾黍、土功），这是无以小害大。从立场 p（意义作为所给），一个部分恰在其对某形成所需条件的净汲取超出余地之处失去一个有意义的延续（Flow.Balances.loses_iff_beyond_margin），“無取”把汲取限在余地之内。定域：这些约束在征伐之内成立；征伐本身的许可（以战去战）理论不承认（见 simafa-yi-zhan-qu-zhan）。吴子“示民無殘心”（BI1-WZ-R-22）列为平行，其目的在争取民心，属争位语境，只取结构。“罪人”的罪责分类不取。",
-"names_used": [
-"无以小害大",
-"余地"
-],
-"locator": "司马法·仁本",
-"relational": "保护生计与再生的条件，即使在冲突之中",
-"tradition": "兵家",
-"work": "《司马法》",
-"checked": "passed"
-},
-{
-"id": "sunzi-mougong-quan-wei-shang",
-"status": "revised",
-"record_ids": [
-"BI1-SZ-R-10",
-"BI1-SZ-R-11",
-"BI1-SZ-R-12",
-"BI1-SZ-R-13",
-"BI1-SZ-R-14"
-],
-"source_id": "BI1-S-SZ",
-"layer": "先秦·传世正文（《孙子·谋攻》，春秋末至战国，成书有争议；“经”是后起的称呼）",
-"fragments": [
-"全國為上，破國次之",
-"是故百戰百勝，非善之善者也；不戰而屈人之兵，善之善者也。",
-"故上兵伐謀，其次伐交，其次伐兵，其下攻城。攻城之法，為不得已。"
-],
-"kind": "divergence",
-"layer_checked": "争胜与等级",
-"declarations": [
-"Becoming.RelativePosition.change_opposed",
-"Becoming.RelativePosition.rise_needs_fall",
-"Becoming.RelativePosition.not_all_rise",
-"Becoming.aboveAll_unique",
-"Becoming.Law.aboveAll_never_rests",
-"Becoming.Flow.race_ends_greatest"
-],
-"records": [
-"relative-position-is-zero-sum",
-"seeking-boundary",
-"where-a-rising-take-ends"
-],
-"reading": "AI读法：沿用 RO 的映射（divergence）：“全國為上”保全对方整体，在减少毁坏上与延续同向；但目标是“屈人”，即相对位置（称）：一方位置之变是其余变化之和的反面（RelativePosition.change_opposed），一方上升需要另一方下降（RelativePosition.rise_needs_fall），没有变化提升每一方（RelativePosition.not_all_rise）；高于一切他者在一个构形至多一方满足（aboveAll_unique），两个求高于一切者永不同时静止（Law.aboveAll_never_rests）；在平衡与联合过量之下，在共享条件处的竞逐（争）随条件耗尽而结束最大的部分（Flow.race_ends_greatest）。本簇加读伐谋、伐交、伐兵、攻城的排序：它是争位框架内按毁坏多少的排序，形式上与按损失排序相近，但比较的目的是胜，不是无丧与有得；“攻城之法，為不得已”标出被保留的损失。方向的相分，不是对“全國”的否定。",
-"names_used": [
-"称",
-"争"
-],
-"locator": "孙子·謀攻第三",
-"relational": "以相对位置为目标，在其中减少毁坏",
-"ro_passage": "sunzi-bu-zhan-er-qu-ren",
-"tradition": "兵家",
-"work": "《孙子兵法》",
-"checked": "passed"
-},
-{
-"id": "sunzi-huogong-bu-ke-fu-sheng",
-"status": "revised",
-"record_ids": [
-"BI1-SZ-R-56"
-],
-"source_id": "BI1-S-SZ",
-"layer": "先秦·传世正文（《孙子·火攻》，春秋末至战国，成书有争议；“经”是后起的称呼）",
-"fragments": [
-"主不可以怒而興師，將不可以慍而致戰。合於利而動，不合於利而止。",
-"怒可以復喜，慍可以復悅，亡國不可以復存，死者不可以復生。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Law.lost_stays",
-"Becoming.Law.Merges.loses",
-"Becoming.Law.lossless_iff_returns",
-"Becoming.Branching.loss_passes_juncture",
-"Becoming.Branching.juncture_iff",
-"Becoming.Settling.settles_no_undoable"
-],
-"records": [
-"recurrence-without-premise",
-"every-loss-passes-a-juncture",
-"when-the-runs-of-a-process-settle"
-],
-"reading": "AI读法：沿用 RO 的映射（agreement）：失去的可能保持失去（Law.lost_stays）；有限构形中合并永久失去一个可能（Law.Merges.loses），无损恰是能复（Law.lossless_iff_returns）；一个能返回的构形的每次失去，在双重否定的意义上都经过一个机（关节，保持与失去都还有一步之处；Branching.loss_passes_juncture，Branching.juncture_iff 依定义）；凡从某构形起每条运行都终于静止之处，从它可达的改变没有一个能被撤销（Settling.settles_no_undoable）。本簇读其取舍的一面：怒喜可复，亡国死者不可复，所以不可因可复者（一时之怒）而招致不可复者。在比较中，可复的损失与不可复的损失不在同一层，这与把不可恢复者列入基本层的无以小害大（J2）读法相合，也说明同类积小（FR）只在可恢复的损失之内，不越过不可复者。“合於利而動，不合於利而止”是求胜之术，律本身不含利害权衡，不取。",
-"names_used": [
-"复",
-"机",
-"无以小害大",
-"同类积小"
-],
-"locator": "孙子·火攻第十二",
-"relational": "可复与不可复的失去分属两层",
-"ro_passage": "sunzi-huogong-bu-ke-fu",
-"tradition": "兵家",
-"work": "《孙子兵法》",
-"checked": "corrected"
-},
-{
-"id": "zhixu-zhi-li-fei-shi",
-"status": "revised",
-"record_ids": [
-"FO2-YJ-R007"
-],
-"source_id": "FO2-YJ",
-"layer": "清·疏（明末清初，蕅益智旭《佛说阿弥陀经要解》）",
-"fragments": [
-"今設不從事於取捨，但尚不取不捨，即是執理廢事，既廢於事，理亦非圓。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.FrontierFrames.Options",
-"Becoming.Requirement.Frontier",
-"Becoming.FrontierFrames.choice_exists_iff_weakly"
-],
-"records": [
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：智旭说：若不从事于取舍，只崇尚不取不舍，就是执理废事；既废于事，理也不圆。智旭的“理”是理事之理，属先在根据（本原）的一层，不是已采纳的理（结构与变化之律的建模）；智旭在同一传统内以“理亦非圓”限定它，理事圆融的那一层不取。与理论相合的只有一点：“不取不捨”不是取舍之外的一个位置，而是取舍中的一个选项。理论中，在每一构形，选择的范围是一步所达的选项（FrontierFrames.Options，定义），“不取不捨”若可行，就是其中之一，与其他选项一样在所给比较的前沿上被比较（Requirement.Frontier，定义）；每一步都有被选者恰需要弱排中（FrontierFrames.choice_exists_iff_weakly），比较未决时可以没有已知被选者，但不说可以不在选项之中。定域：废事则不圆，在不取不舍本是可行选项之一时成立。净土愿生的目标不取。",
-"names_used": [],
-"locator": "FO2-YJ／0364c23／要解正文",
-"relational": "不取舍也是一个与其他选项相比较的选项",
-"tradition": "佛（净土）",
-"work": "智旭《佛说阿弥陀经要解》",
-"checked": "passed"
-},
-{
-"id": "jinshizi-li-zhu-qu-she",
-"status": "revised",
-"record_ids": [
-"FO2-KS-P-R034"
-],
-"source_id": "FO2-KS-P",
-"layer": "隋唐·论（唐，法藏《华严金师子章》章文）",
-"fragments": [
-"一切有為諸法更不待壞，本來寂滅。離諸取捨，即於此路流入薩婆若海，故名為道也。"
-],
-"kind": "divergence",
-"layer_checked": "本原（以本来寂灭取消差别与取舍）",
-"declarations": [
-"Becoming.Law.lost_stays",
-"Becoming.Web.widens_iff_retains_adds",
-"Becoming.FrontierFrames.Options",
-"Becoming.FrontierFrames.nothing_required"
-],
-"records": [
-"recurrence-without-premise",
-"comparison-by-widening",
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：金师子章：一切有为法不待坏而本来寂灭，离诸取舍，即流入萨婆若海，名为“道”。这与理论相分。理论中取舍是实在的：失去的可能保持失去（Law.lost_stays），比较区分无丧与有得（在延续条件下 Web.widens_iff_retains_adds），只有在没有可能移动之处才无所要求（FrontierFrames.nothing_required），否则选择在一步所达的选项之中（FrontierFrames.Options，定义）。“本來寂滅”把差别读作不真，从而“離諸取捨”；理论读出差别与损失都是真实的关系，不经一个无差别的根据取消，这属于本原（先在根据）这一非关系层。智旭“執理廢事”（FO2-YJ-R007）是同一传统内部对这一方向的限定，见 zhixu-zhi-li-fei-shi。",
-"names_used": [
-"无丧",
-"有得"
-],
-"locator": "FO2-KS-P／0670b15／第九、成菩提",
-"relational": "以本来寂灭取消取舍，差别不再作为关系被保留",
-"tradition": "佛（华严）",
-"work": "法藏《华严金师子章》",
-"checked": "passed"
-},
-{
-"id": "xunzi-lilun-song-si-you-yi",
-"status": "revised",
-"record_ids": [
-"RU2-R0110",
-"RU2-R0111"
-],
-"source_id": "RU2-S-XZ19",
-"layer": "先秦·论（战国末，《荀子·礼论》）",
-"fragments": [
-"三年之丧，二十五月而毕，哀痛未尽，思慕未忘，然而礼以是断之者，岂不以送死有已，复生有节也哉！",
-"其立哭泣、哀戚也，不至于隘慑伤生，是礼之中流也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.Repair.above",
-"Becoming.Lexical.Repair.loss_retained",
-"Becoming.Lexical.Above.anchor",
-"Becoming.Law.lost_stays",
-"Becoming.Frame.ReadsAt",
-"Becoming.Frame.ReadsAt.loss_retained"
-],
-"records": [
-"classification-robust-generative-comparison",
-"recurrence-without-premise",
-"finite-aggregation-within-restorable-basic-losses"
-],
-"reading": "AI读法：《礼论》说三年之丧二十五月而毕，哀痛未尽、思慕未忘，以此断之，因为“送死有已，复生有节”；哭泣哀戚不至于伤生。结构是两层：恢复生者的基本条件在哀悼的延续之上，但哀悼所对的失去不被取消。在一个构造的修复情形中，恢复基本条件者在庆典之上，而庆典所实现的事件修复不实现，损失被保留（见证：Lexical.Repair.above、Lexical.Repair.loss_retained；见证的名字是修复与庆典，此处只取结构：恢复基本在上、所舍者仍是损失）；J1/J2 作为条件时，保留对方全部基本主张又保留一个它所缺的基本主张者在其上（Lexical.Above.anchor）；失去的可能保持失去（Law.lost_stays）；在按事件之时读主张的帧上（Frame.ReadsAt，定义，这是一个前提），恢复的支持不使已错过的主张重新实现（Frame.ReadsAt.loss_retained）。所以“断之”不是说所哀者不再重要，而是生者的“复生”在上（无以小害大），失去仍保留（兼权）。墨子“不失死生之利”（MO1-C25-R011）同构，列为平行。二十五月的期限由“礼”给出，理论不给数值。",
-"names_used": [
-"无以小害大",
-"兼权"
-],
-"locator": "荀子/礼論篇",
-"relational": "生者的复生与对死者的哀悼分两层，后者的失去保留",
-"tradition": "儒家",
-"work": "《荀子·礼论》",
-"checked": "passed"
-},
-{
-"id": "mencius-fu-jin-yi-shi",
-"status": "new",
-"record_ids": [],
-"source_id": "RU2-S-MZ",
-"layer": "先秦·论（战国中期，《孟子·梁惠王上》第3章）",
-"fragments": [
-"数罟不入洿池，鱼鳖不可胜食也；斧斤以时入山林，材木不可胜用也。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Web.Renewed",
-"Becoming.Flow.Balances.includes_of_renewed",
-"Becoming.Preemption.within_renewal_yet_loses"
-],
-"records": [
-"the-run-classes-and-widening",
-"significance-retained-within-margin"
-],
-"reading": "AI读法：孟子说密网不入池，鱼鳖吃不完；斧斤按时入山林，材木用不尽。结构是：取若落在能更新的条件上，就取之不尽。理论给出确切的条件：在平衡、只有活动者拿取且只从其所汲取者拿取的流中，一个部分所汲取的每个条件若在整个运行上被更新（恒；Web.Renewed，定义：每个依赖它的形成在每一步都被保持），有它的水平就包含没有它的水平，它保住能形成者（Flow.Balances.includes_of_renewed）。定域：“以时”说的是取的时机，按时而取不等于所取的条件在整个运行上被更新；在一个构造的流中，一次在其步属于更新、也不剥的汲取，仍然关闭了一个能形成者（见证：Preemption.within_renewal_yet_loses），这是先取。所以“不可胜用”在按时的取都落在被更新的条件上时成立（充分条件），作为以时则不尽的普遍形式不成立。“王道之始”的评价不取。脉络 RU2-R0003 在 C04，此处只作出处。",
-"names_used": [
-"恒",
-"剥",
-"先取"
-],
-"locator": "《孟子·梁惠王上》第3章",
-"relational": "取与所取条件的更新之间的关系决定取能否不尽",
-"tradition": "儒家",
-"work": "《孟子》",
-"checked": "corrected"
-},
-{
-"id": "xunzi-zhengming-zheng-quan",
-"status": "new",
-"record_ids": [],
-"source_id": "RU2-S-XZ22",
-"layer": "先秦·论（战国末，《荀子·正名》）",
-"fragments": [
-"衡不正，则重县于仰，而人以为轻；轻县于俛，而人以为重；此人所以惑于轻重也。",
-"权不正，则祸托于欲，而人以为福；福托于恶，而人以为祸；此亦人所以惑于祸福也。",
-"道者，古今之正权也；离道而内自择，则不知祸福之所托。"
-],
-"kind": "divergence",
-"layer_checked": "固定本性或价值",
-"declarations": [
-"Becoming.Profiles.different_selections",
-"Becoming.ScoreRepresentation.livingSignificance_leaves_ordering_open",
-"Becoming.Lexical.Crossed.incomparable"
-],
-"records": [
-"classification-robust-generative-comparison",
-"protection-priority-excludes-uniform-aggregation"
-],
-"reading": "AI读法：荀子把权比作秤：衡不正，重者悬在高处而人以为轻，轻者悬在低处而人以为重；权不正，祸寄于所欲而人以为福；所以“道者，古今之正权也”，离开它而“内自择”，就不知祸福所寄。前一半说轻重的结论依赖于所用的衡器，这与理论相同：以广为愈之外的排序都是另给的承诺，在一个构造的两维情形中，两个都尊重每个生成扩展的评分各自融贯地选出不同选项（见证：Profiles.different_selections）。相分在后一半：荀子断言有一个古今不变的正权，为一切轻重定准。理论中没有这样一根秤：在一个构造的保护对增益情形中，生命意义（活皆有顾）既与两层词典序相容，也与把增益排在保护之上的标量序相容（见证：ScoreRepresentation.livingSignificance_leaves_ordering_open）；在一个构造的情形中，各持一个对方所缺的受保护主张的两个选项不可比，即使增益相等（见证：Lexical.Crossed.incomparable）。所以比较的承诺陈述出来、可以修订，不由一个固定标准给出；“正权”属于固定本性或价值这一非关系层。秤所含的单一标量全序，也不是理论之权的结构。",
-"names_used": [
-"权",
-"以广为愈",
-"活皆有顾"
-],
-"locator": "荀子/正名篇",
-"relational": "轻重相对于所用的比较；以一个古今不变的衡器定准则不是关系的",
-"tradition": "儒家",
-"work": "《荀子·正名》",
-"checked": "passed"
-},
-{
-"id": "sunzi-junzheng-wei-li-wei-wei",
-"status": "new",
-"record_ids": [
-"BI1-SZ-R-33"
-],
-"source_id": "BI1-S-SZ",
-"layer": "先秦·传世正文（《孙子·军争》，春秋末至战国，成书有争议；“经”是后起的称呼）",
-"fragments": [
-"故軍爭為利，軍爭為危。舉軍而爭利，則不及；委軍而爭利，則輜重捐。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.LiftBetter",
-"Becoming.comparison_lifts",
-"Becoming.LiftModel.some_outcome_does_not_lift"
-],
-"records": [
-"becoming-spine-instances"
-],
-"reading": "AI读法：孙子说“軍爭為利，軍爭為危”：同一回应（争利）的结果有利也有危；“舉軍而爭利，則不及；委軍而爭利，則輜重捐”：两种争法各有所得、各有所失。结构是：一个回应的结果有好有坏时，不能按结果把它整体排在另一回应之上或之下。提升规则 L（LiftBetter，定义：一个回应的每个结果都优于另一个回应的每个结果，才把它排在上面）正是如此：以广为愈可以这样提升，被提升的扩展是一个保守的提升比较（comparison_lifts）；在一个构造的模型中，一个结果更好、一个结果更坏的回应，L 在两个方向都不比较（见证：LiftModel.some_outcome_does_not_lift）。所以“為利”“為危”并举，正标出 L 不定取舍之处，那里须另给判断的承诺。孙子由此转向“知迂直之計”，以胜为比较的标准，这一层不取（见 sunzi-mougong-quan-wei-shang 的相分）。",
-"names_used": [
-"以广为愈"
-],
-"locator": "孙子·軍爭第七",
-"relational": "同一回应的诸结果有利有危，回应之间的比较以结果的全体为准",
-"tradition": "兵家",
-"work": "《孙子兵法》",
-"checked": "passed"
-},
-{
-"id": "mojing-daqu-wu-ze",
-"status": "new",
-"record_ids": [],
-"source_id": "MI1-S-DQ",
-"layer": "先秦·论（战国后期墨家，《墨子·大取》）",
-"fragments": [
-"斷指與斷腕，利於天下相若，無擇也。死生利若，一無擇也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.Above.not_of_included",
-"Becoming.Requirement.Frontier",
-"Becoming.Requirement.Required.defeated"
-],
-"records": [
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：大取说：断指与断腕，若对天下之利相若，就无所择；死与生利若，也一无所择。结构是：比较分不出高下之处，取舍不由比较给出。J1/J2 作为条件时，一个选项若两层所持都被另一选项包含，它就不在另一选项之上（Lexical.Above.not_of_included）；两者两层所持相同，则谁也不在谁之上，在只有这两项的菜单上两者都在前沿上（Requirement.Frontier，定义：可接纳而不被胜过者）。前沿上有一个可接纳的选项不执行某任务，就击败这一任务的要求（Requirement.Required.defeated）：以断指为任务，前沿上的断腕一项不执行它，反之亦然，所以两者都不被要求。“無擇”正是此处无所要求，不是说两者无别。“利於天下”作为单一的度量由大取给出，理论不设。此句没有脉络记录。",
-"names_used": [],
-"locator": "大取·冻结正文段1—8",
-"relational": "两个选项相对于所给比较相若时，取舍不由比较定出",
-"tradition": "墨家（名辩）",
-"work": "《墨子·大取》",
-"checked": "corrected"
-},
-{
-"id": "mozi-feiru-dai-yu-fen-zhi",
-"status": "new",
-"record_ids": [
-"MO1-C39-R003"
-],
-"source_id": "MO1-S-C39",
-"layer": "先秦·论（战国，《墨子·非儒下》第39篇）",
-"fragments": [
-"有強執有命以說議曰：「壽夭貧富，安危治亂，固有天命，不可損益。窮達賞罰，幸否有極，人之知力，不能為焉。」羣吏信之，則怠於分職；庶人信之，則怠於從事。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Requirement.residual_of_unfulfilled",
-"Becoming.Dependence.makesDifference_iff",
-"Becoming.Dependence.Overdetermined.no_difference"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"joint-difference-making"
-],
-"reading": "AI读法：非儒下记执有命者之说：寿夭贫富、安危治乱“固有天命，不可損益”，“人之知力，不能為焉”；墨子说群吏信之则“怠於分職”，庶人信之则“怠於從事”。“分職”是一项在关系中的承担，它使任务到期；到期、未做、又未解除，就有余责（Requirement.residual_of_unfulfilled，依定义）。余责不以造成差别为条件：有分职而怠者，不论结果是否由他造成，都留下余责，墨子对“怠於分職”的批评在此成立。另一问是乱是否归于怠者：信“命”而怠作为一个部分是否造成差别（有力），由若无检验决定：撤去它时同一移动可取、依赖仍在且被满足，它造成差别恰当同一移动不再打破依赖（Dependence.makesDifference_iff）；损失被多重决定时，没有单个部分造成差别（Dependence.Overdetermined.no_difference），乱就不能归于任一怠者。定域：“人之知力，不能為焉”作为全称不成立；在一个部分造成差别之处，结果可以归于它；在多重决定处，结果不归于任一部分，余责仍随承担而在。“有命”被归于儒者，是墨家论辩中的说法，不作为儒家的自述。",
-"names_used": [
-"有力"
-],
-"locator": "《墨子·非儒下》第39篇·冻结页正文段3",
-"relational": "余责以承担（分职）为据；结果的归属以造成差别为界，二者分开",
-"tradition": "墨家",
-"work": "《墨子·非儒下》",
-"checked": "corrected"
-},
-{
-"id": "mencius-xing-yi-bu-yi",
-"status": "new",
-"record_ids": [],
-"source_id": "RU2-S-MZ",
-"layer": "先秦·论（战国中期，《孟子·公孙丑上》第2章）",
-"fragments": [
-"行一不义、杀一不辜而得天下，皆不为也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.BasicPriority",
-"Becoming.FrontierFrames.Priority",
-"Becoming.Lexical.Above.no_trade"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"protection-priority-excludes-uniform-aggregation"
-],
-"reading": "AI读法：孟子说伯夷、伊尹与孔子相同之处：“行一不义、杀一不辜而得天下，皆不为也。”结构是：再大的增益也不换一个加于人的基本损失。J1/J2 作为条件时（Lexical.BasicPriority；帧上 FrontierFrames.Priority；条件，核心不断言），失去一个对方所持的基本主张的选项，不论多少增益都不在其上（Lexical.Above.no_trade）：“杀一不辜”失去一人的生存，“得天下”是增益，于是得天下的选项不在不杀者之上。这正是无以小害大（J2）的原文义：可选的增益不许可施加的基本剥夺；“一”与“天下”标出的是不论多少。“行一不义”的“义”层由孟子给出，不取；“一不辜”标出的是施加于他人，与自承之损的区别见 mojing-daqu-sha-ji 的缺口。荀子王霸“行一不义，杀一无罪，而得天下，仁者不为也”同构。此句没有脉络记录。",
-"names_used": [
-"无以小害大"
-],
-"locator": "《孟子·公孙丑上》第2章",
-"relational": "加于他人的基本损失不由任何增益换取",
-"tradition": "儒家",
-"work": "《孟子》",
-"checked": "passed"
-},
-{
-"id": "zhuangzi-rangwang-bu-yi-sheng",
-"status": "new",
-"record_ids": [],
-"source_id": "ZH1-S28",
-"layer": "先秦或秦汉·论（《庄子·让王》，杂篇，时代有争议）",
-"fragments": [
-"夫天下，至重也，而不以害其生，又況他物乎？",
-"故天下，大器也，而不以易生，此有道者之所以異乎俗者也。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.BasicPriority",
-"Becoming.Lexical.Above.no_trade"
-],
-"records": [
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：让王说：天下至重，而不以之害其生，何况他物；天下是大器，而不以之换生。结构是不以增益（天下）换基本（生）：J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张的选项，不论多少增益都不在其上（Lexical.Above.no_trade），分类也合：生读作基本主张，天下读作增益。定域：让王所护的是自己的生，承受者是自己；无以小害大讲的是施加的基本剥夺，自承之舍不在其中，这一不对称见 mojing-daqu-sha-ji 的缺口；让王把不以天下换生作为普遍的处世之方，理论只在生与天下分属两层时同意。“有道者之所以異乎俗”的评价与“唯无以天下爲者，可以託天下”的推论不取。此段没有脉络记录。",
-"names_used": [
-"无以小害大"
-],
-"locator": "庄子·讓王",
-"relational": "生与天下分属两层，不以后者换前者",
-"tradition": "庄学",
-"work": "《庄子·让王》",
-"checked": "passed"
-},
-{
-"id": "hanfei-xianxue-bu-yi-jing-yi-mao",
-"status": "new",
-"record_ids": [],
-"source_id": "FA1-S-H50",
-"layer": "先秦·论（战国末，《韩非子·显学》）",
-"fragments": [
-"今有人於此，義不入危城，不處軍旅，不以天下大利易其脛一毛，世主必從而禮之，貴其智而高其行，以爲輕物重生之士也。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.Above.no_trade",
-"Becoming.Lexical.Reorganizing.classification_matters",
-"Becoming.Lexical.Crossed.incomparable",
-"Becoming.BoundaryInvariant"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"classification-robust-generative-comparison",
-"continuation-condition-decomposition"
-],
-"reading": "AI读法：显学记一种人：“義不入危城，不處軍旅，不以天下大利易其脛一毛”，世主以为“輕物重生之士”。结构是不以增益换自己的基本，与无以小害大同形：J1/J2 作为条件时，失去一个对方所持的基本主张者不论多少增益都不在其上（Lexical.Above.no_trade）。定域在分类：把自己的“一毛”读作基本、把“天下大利”读作增益，序才如此；分类是给出的，在一个构造的改组情形中，分类一变序就变（见证：Lexical.Reorganizing.classification_matters）；“天下大利”若含他人的基本条件，两选项各持一个对方所缺的受保护主张，在一个构造的情形中不可比（见证：Lexical.Crossed.incomparable），不以之换，不由词典序给出。这一分类以自身为中心，与不易乎畛相背：不变的一步要求预设不随边界怎样划而改变（BoundaryInvariant，定义），他者的失去与己的失去同样计入。韩非引此是为批评世主所养非所用（脉络 FA1-H50-R006 在 C10），这一层不取。",
-"names_used": [
-"无以小害大",
-"不易乎畛"
-],
-"locator": "《韩非子·顯學》转录第4段",
-"relational": "不变的分类若以自身为中心，他者的基本条件被排在增益一边",
-"tradition": "法家",
-"work": "《韩非子·显学》",
-"checked": "passed"
-},
-{
-"id": "wuxing-bu-yi-xiao-dao-hai-da-dao",
-"status": "new",
-"record_ids": [],
-"source_id": "V130-LAO-GD",
-"layer": "先秦·经（郭店楚简《五行》经文，战国中期，墓葬约公元前300年）；说只见于马王堆帛书本（秦汉之际至汉初抄写，成文时代有争议），此转录把二者合排，未据图版校勘",
-"fragments": [
-"不34以小道害大道，简也。",
-"“不果不简”，简也者，不以小害大，不以轻害重。",
-"“不以小道害大道，简也”，简也者，不以小爱害大爱，不以小义害大义也。见其生也，不食其死也，祭亲执诛，简也。"
-],
-"kind": "divergence",
-"layer_checked": "固定本性或价值",
-"declarations": [
-"Becoming.Lexical.BasicPriority",
-"Becoming.Lexical.Above.no_trade",
-"Becoming.Lexical.Reorganizing.classification_matters"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"classification-robust-generative-comparison"
-],
-"reading": "AI读法：《五行》经20：“不34以小道害大道，简也”（34 为转录所存简号）；说13释“简”为“不以小害大，不以轻害重”，说20释为“不以小爱害大爱，不以小义害大义也”，并以“祭亲执诛”为例。这是“不以小害大”较早的见证。形式与无以小害大（J2）相合：J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张者不论多少增益都不在其上（Lexical.Above.no_trade）。相分在分类：《五行》把何者为大定为固定的“大道”“大义”，以“大义”压过对亲人的爱而“执诛”，即把一个加于人的基本剥夺放在“大”的一边；理论中分类是给出、可修订的承诺，在一个构造的改组情形中分类一变序就变（见证：Lexical.Reorganizing.classification_matters），而无以小害大的原文义是可选的增益不许可施加的基本剥夺。所以《五行》的“大”属于固定本性或价值这一非关系层。此句没有脉络记录。",
-"names_used": [
-"无以小害大"
-],
-"locator": "郭店楚墓竹簡·五行·经20、说13、说20",
-"relational": "小大之分若定为固定的“大道”“大义”，层次就不是由关系给出的",
-"tradition": "儒家（思孟一系，有争议）",
-"work": "《五行》",
-"checked": "passed"
-},
-{
-"id": "mencius-wu-yi-xiao-hai-da",
-"status": "new",
-"record_ids": [],
-"source_id": "RU2-S-MZ",
-"layer": "先秦·论（战国中期，《孟子·告子上》第14章）",
-"fragments": [
-"体有贵贱，有小大。无以小害大，无以贱害贵。养其小者为小人，养其大者为大人。",
-"养其一指，而失其肩背而不知也，则为狼疾人也。",
-"饮食之人，无有失也，则口腹岂适为尺寸之肤哉？"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Lexical.BasicPriority",
-"Becoming.Lexical.Above.no_trade",
-"Becoming.Lexical.Above.not_of_included"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"protection-priority-excludes-uniform-aggregation"
-],
-"reading": "AI读法：孟子说身体之分有贵贱小大，“无以小害大，无以贱害贵”；养一指而失肩背不自知，是“狼疾人”；又说“饮食之人，无有失也，则口腹岂适为尺寸之肤哉”。这是无以小害大之名的出处，结构有两半。其一，不以小者损大者：J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张者不论多少增益都不在其上（Lexical.Above.no_trade）；肩背读作基本、一指读作增益，养一指而失肩背者不在不失者之上。其二，不失大者时养小不受禁止：一个选项若两层所持都被另一选项包含，就不在其上（Lexical.Above.not_of_included），所以只去增益而不增基本者，并不在兼有二者者之上；“无有失也”正是养小而不失大的条件。定域：孟子把小大之分读作固定的贵贱（同篇下章以“心”为大体、耳目为小体），这一层不取，理论只取给出的两层分类；“小大”在此是层，不是量，与同类积小（同一类内计数）的“小”不同。此章没有本簇候选记录。",
-"names_used": [
-"无以小害大",
-"同类积小"
-],
-"locator": "《孟子·告子上》第14章",
-"relational": "小与大是两层的关系：不以小损大，不失大时可养小",
-"tradition": "儒家",
-"work": "《孟子》",
-"checked": "passed"
-},
-{
-"id": "lunyu-li-bu-zu-zhong-dao-er-fei",
-"status": "new",
-"record_ids": [
-"RU1-LY-06-10-R01",
-"RU1-LY-06-10-R02"
-],
-"source_id": "RU1-S-LY",
-"layer": "先秦·原典正文（《论语·雍也》）",
-"fragments": [
-"冉求曰：「非不說子之道，力不足也。」子曰：「力不足者，中道而廢；今女畫。」"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Requirement.Assigned.capable",
-"Becoming.Requirement.residual_of_unfulfilled"
-],
-"records": [
-"practical-judgment-under-living-significance"
-],
-"reading": "AI读法：冉求说不是不喜欢孔子的“道”，是力不足；孔子说力不足者走到中途才废止，你现在是自己画了界。这是量力而任（J3）的两侧。真的力不足，在力所及之处止，不在要求之内：在每个可接纳计划的分派都可行的条件下，被分派者可行（Requirement.Assigned.capable；可行写在可接纳性里），力所不及者不被分派。“今女畫”是能而先自止：力的界不是自画的界。若把冉求所“說”之道读作他已承担的任务（读法），在力尚可及之处，这一任务到期、未做、未解除，就留下余责（Requirement.residual_of_unfulfilled，依定义：到期、未做、未解除）。相合在：能力是界，不是不为的理由。“中道而廢”只有在实际走到力尽时才可知，孔子以此判冉求，是对具体处境的认定，理论不替它作。",
-"names_used": [
-"量力而任"
-],
-"locator": "《论语》雍也第六·原页六之十",
-"relational": "能力之界与自画之界不同：前者在实际所及之处，后者先于所及",
-"tradition": "儒家",
-"work": "《论语》",
-"checked": "corrected"
-},
-{
-"id": "mojing-ren-sun-ji",
-"status": "new",
-"record_ids": [],
-"source_id": "MI1-S-JS",
-"layer": "先秦·经（战国后期墨家，《墨子·经上》）",
-"fragments": [
-"任，士損己而益所爲也。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.FrontierWorlds.giver_active",
-"Becoming.FrontierWorlds.sole_giver_active",
-"Becoming.Web.Dependent",
-"Becoming.Stock.exhausted_within"
-],
-"records": [
-"practical-judgment-under-living-significance",
-"renewing-consuming-formation"
-],
-"reading": "AI读法：经上：“任，士損己而益所爲也。”任是士减损自己以增益所为之事。量力而任之名也用“任”字，这里须分开：墨经的任不计己损，没有界。理论中，在只有活动的形成给予的前提下，给予者在给予时是活动的（FrontierWorlds.giver_active），唯一的给予者在其给予被要求的每一步都须活动（FrontierWorlds.sole_giver_active）；在活动需要支持的前提下（Web.Dependent，定义），给予者失去其所需的支持就不再活动；把所给读作出自给予者自身所持、无补充的存量（读法），一个每次汲取都使水平下降、凡为正就有汲取的存量，在与其所持相同的步数内耗尽（Stock.exhausted_within）。这是几条结果与两个前提的组合，不是一条律：在这些前提下，“損己”在给予者能继续活动的范围内成立，越过这一点就失去以后的给予所依赖的给予者；“任”作为无界的自损不成立。定域：损己是自承的给予，不是施加的剥夺，承诺层不禁止它，只说它有界；节点 MI1-N-JS-012 没有关系记录。",
-"names_used": [
-"量力而任"
-],
-"locator": "《墨子·經上》·任条",
-"relational": "给予者的自损与其继续给予的条件之间的关系",
-"tradition": "墨家（名辩）",
-"work": "《墨子·經上》",
-"checked": "corrected"
-},
-{
-"id": "mojing-yi-suo-yi-zhi-suo-yu",
-"status": "new",
-"record_ids": [],
-"source_id": "MI1-S-SS",
-"layer": "先秦·经说（战国后期墨家，《墨子·经说上》）",
-"fragments": [
-"是猶食脯也，騷之利害，未知也，欲而騷，是不以所疑止所欲也。廧外之利害未可知也，趨之而得刀，則弗趨也，是以所疑止所欲也。",
-"所爲與所不爲，與相疑也，非謀也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.LiftBetter",
-"Becoming.comparison_lifts",
-"Becoming.LiftModel.some_outcome_does_not_lift"
-],
-"records": [
-"becoming-spine-instances"
-],
-"reading": "AI读法：经上“爲，窮知而𠐴於欲也”，经说上举两例：吃脯而其利害未知，想吃就吃，是“不以所疑止所欲”；墙外利害未可知，即使去了能得钱刀也不去，是“以所疑止所欲”；又说“所爲與所不爲，與相疑也，非謀也”。结构是：结果未知时，做与不做都在疑中，取舍不由谋算的比较定出。提升规则 L（LiftBetter，定义：一个回应的每个结果都优于另一个回应的每个结果，才把它排在上面）正是如此：以广为愈可以这样提升（comparison_lifts）；在一个构造的模型中，一个结果更好、一个结果更坏的回应，L 在两个方向都不比较（见证：LiftModel.some_outcome_does_not_lift）。所以“非謀也”与 L 相合：结果不全胜之处，比较不定取舍。墨经说此时由欲决定（“窮知而𠐴於欲”），或以疑止欲，这是对行动的描述；理论只说那里需要另给的承诺（例如以疑止欲），不由 L 给出。此段没有脉络记录（阅读单位 MI1-U-SS-71）。",
-"names_used": [
-"以广为愈"
-],
-"locator": "經說上·阅读单位 MI1-U-SS-71",
-"relational": "结果未知时，做与不做之间的比较不由结果给出",
-"tradition": "墨家（名辩）",
-"work": "《墨子·經說上》",
-"checked": "passed"
-},
-{
-"id": "xunzi-xinge-ke-yi-er-bu-neng",
-"status": "new",
-"record_ids": [],
-"source_id": "RU2-S-XZ23",
-"layer": "先秦·论（战国末，《荀子·性恶》）",
-"fragments": [
-"故涂之人可以为禹则然，涂之人能为禹则未必然也。虽不能为禹，无害可以为禹。足可以遍行天下，然而未尝有遍行天下者也。"
-],
-"kind": "agreement",
-"layer_checked": "",
-"declarations": [
-"Becoming.Enough.assured_iff",
-"Becoming.Enough.Free.stays_meet_not_assured",
-"Becoming.Enough.law_possibly_iff_assured"
-],
-"records": [
-"the-boundary-of-enough-under-undetermined-laws"
-],
-"reading": "AI读法：荀子分“可以”与“能”：“涂之人可以为禹则然，涂之人能为禹则未必然也”；“足可以遍行天下，然而未尝有遍行天下者也”。结构是：有一条到达的进程，不等于实际的进程到达。理论在不确定之律下分开可能之足与保证之足：从 s 起的每条运行都静止且目标被满足，恰当每个从 s 可达、有停留之步的构形都满足目标，并且从 s 起的每条运行都终于静止，后一半不提目标（Enough.assured_iff）；在一个构造的两状态过程中，每个构形都能停留并满足目标，某条运行静止于目标，交替的运行却不静止，所以并非每条运行都静止（见证：Enough.Free.stays_meet_not_assured）。只在确定之律下，可能与保证才是一回事（Enough.law_possibly_iff_assured）。“能”指实际做到，实际的运行只是诸运行之一；可能而不保证时，它未必到达，这正是“可以”而“未必然”，是足而止在不确定之律下分出的两种。荀子以此说“性恶”而可学，那一层不取；脉络 RU2-R0147 在 C16，此处只作出处。",
-"names_used": [
-"足而止"
-],
-"locator": "荀子/性惡篇",
-"relational": "可以（有一条到达的进程）与能（实际的进程到达，不被保证）之分",
-"tradition": "儒家",
-"work": "《荀子·性恶》",
-"checked": "corrected"
-},
-{
-"id": "xunzi-zhengming-jin-jin-jie-qiu",
-"status": "new",
-"record_ids": [],
-"source_id": "RU2-S-XZ22",
-"layer": "先秦·论（战国末，《荀子·正名》）",
-"fragments": [
-"欲虽不可尽，可以近尽也。欲虽不可去，求可节也。所欲虽不可尽，求者犹近尽；欲虽不可去，所求不得，虑者欲节求也。"
-],
-"kind": "scope",
-"layer_checked": "",
-"declarations": [
-"Becoming.Law.more_never_rests",
-"Becoming.Law.rests_iff"
-],
-"records": [
-"seeking-boundary"
-],
-"reading": "AI读法：荀子说欲不可尽而可以近尽，欲不可去而求可以节；所求不得，思虑者便节制其求。前半有确切对应：以比现在更多为目标的寻求是无明，这一目标在任何律下都不在静止的步满足（Law.more_never_rests）；确定之律下，求能静止且得，恰当到达律不改变而满足目标的构形（Law.rests_iff），这是足而止。定域在“节求”：理论陈述的是给定目标下能否静止，不推出目标如何形成或修订，也不推出寻求者会去追求它；“虑者欲节求”是荀子对修订目标的描述，理论不由律给出。“近尽”（可以接近而不尽）此处不立律。荀子以“道者、进则近尽，退则节求，天下莫之若也”为标准，“道”作为固定标准不取。此段没有脉络记录。",
-"names_used": [
-"无明",
-"足而止"
-],
-"locator": "荀子/正名篇",
-"relational": "目标的形式决定能否静止；目标的修订是另一种关系",
-"tradition": "儒家",
-"work": "《荀子·正名》",
-"checked": "passed"
-}
-],
-"notes": "【结果】72 条：57 条原条目全部修订，15 条新增，0 条删除，kept 为空。按类：相合 31、定域 31、相分 10。时代：先秦 56，先秦或秦汉 7（大学、庄子外杂篇、大象传），宋明 6，魏晋南北朝、隋唐、清各 1。所有 123 个片段都用 ctq.py text 逐条核为精确命中；读法中的引文也都在冻结文本中找到（跨源引文为经上、经下、大取、非命下、帛书甲本、荀子王霸、吴子、智旭、朱熹、节葬下）。所有声明与记录都用 work/resolve.py 解析为当前名，旧记录 id 已全部换掉：practical-judgment-g0-j→practical-judgment-under-living-significance，runaway-distance-unregistered→runaway-distance-uncoupled，axiom-decomposition→continuation-condition-decomposition。最后一遍扫查又改了五处措辞，使未采之字只出现在引号里：mencius-she-sheng-qu-yi 与 wuxing 的 relational 中的“义”“大道”“大义”加引号；zhuangzi-rangwang 的“易前者”改为“换前者”；hanfei 的“不易的分类”改为“不变的分类”；chengyi-ge 读法中的“正道”改为引文“利於正道”。空的 gap 与 ro_passage 字段省去。\n\n【为什么两校都保留的九条也修订】mencius-zhi-zhong-wu-quan、mencius-tu-shan-tu-fa、xunzi-xiushen-bu-xing-bu-zhi、mozi-shangxian-shi-zhi-cheng、suzhe-lao44-qi-de-sang、lao-79-he-da-yuan、daxiang-sun-cheng-fen-zhi-yu、chengyi-jing-wei-ji-yong、chengyi-ge-li-yu-zheng-dao 都有至少一处要改：layer 一律改为时代在前；names_used 改为名表简体（“无丧／有得”“无丧而有得”“不復足”“相軋”“為天下先”都不是表中名）；在一个构造模型中的声明标为见证（Profiles、Revising.covered_not_enacted、MatchedCourses、Lexical.Repair、Transfer.unordered）；两条相分补 layer_checked；Stock 与 Countdown 之律注为 §4.6，§7.6 只说结构；not_done_before 补上“待办与完成互斥”的前提。daxiang 去掉读法未用的 Hexagram.yang_not_goAlike、Captured.rule_perturbation_changes 与记录 target-capture。\n\n【全簇统一的改法】(1) Required.impossible 只说空菜单无所要求，原有八条条目用它来说“不能者无所要求”，都改为 Requirement.Assigned.capable 的前提读法（可行写在可接纳性里，此律只是把前提读出）或 Requirement.Required.defeated（一个不执行任务的可接纳选项击败要求）；FrontierFrames.nothing_required 只在“没有可能移动”处保留。(2) 每个构造模型中的结果都写成“在一个构造的……情形中（见证：…）”，定义写“定义”，Web.paths_comparison_widens、residual_of_unfulfilled、juncture_iff、supported_iff_admits 写“依定义”。(3) 排序只在以广为愈（C）；延续条件写作“§6.4，条件，不断言”，只定范围；不变的一步只定范围不排序。(4) 不用“登记”；“識”不作名用。(5) 读法中凡提到未采之字（道、心、义、命、天、礼、信等）都放在出自冻结文本的引号里；以“本原、固定本性或价值、意志或单一中心、争胜与等级”称四层。\n\n【两校修法中我没有照做的】(1) mojing-daqu-hai-zhong-qu-xiao：训诂校验建议改为定域，或在相合中写出相分。我按结构校验分两个参照写：相对于断腕是扩展（Extension、strictLossMatch_of_extension），相对于遇盗之前是保留的损失（Frame.ReadsAt.loss_retained，带前提），两处都有检验过的律，所以保留相合；“取利也”若读作抵消，已写明不取。(2) mojing-daqu-sha-ji：训诂校验请复核为缺口而非相分。我保留相分：大取断言了一个不对称，核心比较没有承受者与动因者之分，这是文本所断言而理论所无的结构；layer_checked 写明不属四层，缺口照结构校验重写，并加入“愛人不外己”与不易乎畛（范围同向，不对称来自动作关系）。(3) 结构校验建议墨经“任，士損己而益所爲也”立相分条目；我立为定域（mojing-ren-sun-ji）：脊柱给出损己成立的确切范围（给予者须保持活动，存量在所持步数内耗尽），损己是自承的给予，承诺层不禁止，只是有界，没有四层之一，也不与理论冲突。(4) daxue-xie-ju：结构校验建议移交 C14；我留在本簇并标为跨簇，因为它的记录是本簇的主候选，且读法的重心是位置交换（无方）与不易乎畛之别，以及通过映射的选择。(5) xunzi-wangzhi-bu-jue-qi-zhang：结构校验许其保留相合，训诂校验改为定域；我取定域，并补入同篇“斩伐养长不失其时，故山林不童”，这是可被脊柱定域的普遍形式（按时取不等于所取条件被更新）。(6) mozi-du-zhi-bu-yan 不保留“机”：機辟是陷阱之喻，不加 Branching.juncture_iff。(7) mencius-bu-chuai-qi-ben：结构校验建议用 Confound.misattributes 作相若之锚；相若在名表中无锚，那条见证说的是另一件事，所以只写“相若，对照；此为类比，不立声明”。(8) lao-46：去掉 Lexical.Ceiling.above（读法不需要）；帛书异文注前五字残。\n\n【新增条目】先秦为主：mencius-fu-jin-yi-shi（定域，先取）、xunzi-zhengming-zheng-quan（相分，固定价值：正权）、sunzi-junzheng-wei-li-wei-wei（相合，L）、mojing-daqu-wu-ze（相合，比较相若处无所要求）、mozi-feiru-dai-yu-fen-zhi（定域，承担使余责到期）、mencius-xing-yi-bu-yi（相合，J2 原文义）、zhuangzi-rangwang-bu-yi-sheng（定域，自承之舍）、hanfei-xianxue-bu-yi-jing-yi-mao（定域，以自身为中心的分类）、wuxing-bu-yi-xiao-dao-hai-da-dao（相分，固定价值；经为郭店战国中期，说只见马王堆本，转录合排）、mencius-wu-yi-xiao-hai-da（定域，名的出处与“无有失也”）、lunyu-li-bu-zu-zhong-dao-er-fei（相合，J3）、mojing-ren-sun-ji（定域）、mojing-yi-suo-yi-zhi-suo-yu（相合，L）、xunzi-xinge-ke-yi-er-bu-neng（相合，可能之足与保证之足）、xunzi-zhengming-jin-jin-jie-qiu（定域，无明与目标修订不由律给出）。除论语雍也两条记录外，新条目都没有可收的本簇记录：RU2-R0003 在 C04，RU2-R0147 在 C16，FA1-H50-R006 在 C10，MI1-R-DQ-self、RU2-R0136 在 C14，RU2-R0137 在 C10，只作出处。\n\n【没有立条的缺项与理由】周易井卦辞（YD-JG48）：记录 JL-R043、JL-R046 已在 C02、C05、C11 的结果中使用，不在本簇候选；其“无喪无得”是常而不竭之义，写入无喪名条的 course 提议。孙子谋攻“知可以戰與不可以戰者勝”：争胜语境，Options 只是定义，只作 J4 名的候选证写入名条。荀子劝学“不積小流”：属 C04 的积小以高大。大学“財恆足矣”：流量义，属覆盖与存量一族，写入足而止名条。商君书画策“黃帝之世，不麛不卵”：在画策中是说“事不同，皆王者，時異也”的历史分期，同段紧接“以戰去戰，雖戰可也”，文本不论保住能形成者，不立先取条目。墨子公输“殺所不足而爭所有餘”：与非攻中同构，MO1-C50-R003 维持拒收（其断言在“不可謂智”）。孟子告子下“弗为耳”：结构已由梁惠王上“挟太山……是不为也，非不能也”给出。荀子王霸“行一不义，杀一无罪”：作为 mencius-xing-yi-bu-yi 的同构引文，不另立。经上“爲，窮知而𠐴於欲也”：并入 mojing-yi-suo-yi-zhi-suo-yu 的读法（源文不同，不作片段）。§7.6 的保证到达与风险界：本簇没有先秦文本的结构承载，写入不行不至名条。批评者的运行类（更新／消耗）命名属 C05；“绝其长”已从名降为条目。\n\n【四层的相分覆盖】本原：suzhe-lao44（齐得丧）、jinshizi（本来寂灭离取舍），另 zhixu 定域中注明理事之理属本原。固定本性或价值：mencius-she-sheng-qu-yi（义恒在生上）、xunzi-zhengming-zheng-quan（古今之正权）、wuxing（以大义执诛）。意志或单一中心：xunzi-zhengming-cong-suo-ke（心之所可中理）。争胜与等级：sunzi-mougong（屈人、相对位置）。不属四层的相分三条：mojing-daqu-sha-ji（施加与自承之分，核心比较所缺）、daxiang-sun（取象类比代替律的承载）、simafa-yi-zhan-qu-zhan（以目的抵消手段之损）。定域条目中另有若干处写明不取的等级与位分（大学所止、孝子之喻、王与保民）。\n\n【平行的位置变化】见 candidate_changes：非命下改平行；非儒下与孙子军争立为条目；论语雍也两条（triage 为“-”）立为条目，请整合者确认；xunzi-zhengming-cong-suo-ke 改为相分后，其平行中只承载“在可行之中进退”的三条改挂 sunzi-dixing-zhan-dao，中庸“吾從周”拒收；FO2-XZG-R011（小止观以“如法”判可否）仍挂 cong-suo-ke，因为它正属以一个固定标准判可否的一面。其余 56 条平行与 18 条拒收不变。\n\n【仍开放】(1) J4 与 L 的名、J2 是否改名、可能之足与保证之足的名，交整合者在名表中定。(2) mojing-daqu-sha-ji 的缺口：施加之损与自承之损在核心比较中的写法。(3) 论语雍也两条记录的归属。(4) 墨经“濕”字断句、《五行》转录未据图版校勘、帛书甲本残字，都不据以立论。(5) 本簇读法以当前 zhonghua 工作树的收据为解析基线；批评者指出该分支落后于 main，若 main 上有改名，须再用 resolve 核一次。",
-"check_notes": "我查了全部 72 条（改 21 条，51 条通过，没有丢弃的）。\n\n核对结果：\n- 片段：124 个，全部用冻结文本逐字核对，每个都精确命中所标的来源（不需要忽略空白）。\n- 读法里另引的原文：约 75 处，也都核对过，全部精确。唯一一处出自别的来源：朱熹「不變其所守乃所以益上」在 YD-ZX2，不在 YD-CY3。读法把它标为朱熹（ZX-R007），所以没有问题。\n- 声明与记录：全部 137 个 Lean 名都在当前收据中，没有改名，也都在 worktree 的 Lean 文件中找到（BasicPriority.frontier_iff 用 _root_ 前缀声明）。全部结果记录都能解析。所有脉络关系 id 都存在。所谓「在他簇」「无关系记录」的说法也都核过，属实（RU2-R0136 在 C14、RU2-R0137 在 C10、RU2-R0003 在 C04、FA1-H50-R006 在 C10、RU2-R0147 在 C16、MI1-R-DQ-self 在 C14）。\n\n修正的要点：\n1. mojing-daqu-quan：原读法把权对应到 Requirement.Frontier，又说理论在移动上的选择（FrontierFrames.Options）对应「求」不对应「权」。但帧上的选择恰是 Frontier (Options F s) better，两者是同一个前沿，自相矛盾。已改为：脊柱没有权／求之分，求不另立对应。这也与名条「權」的提议（移动上的选择另说）冲突，请整合者统一。\n2. mencius-su-yi：从 agreement 改为 scope。严格损失匹配要列出两方的失去。若攘者所得也列为主张，停止与延续所失同类同数，计数不偏向任何一方。所以「速已」由孟子所给的「非义」给出，不由计数给出。\n3. mojing-shi-ling-wei：保留出口（Countdown.Reserved、exits）是停止协议的保证条件，不是「故」。「故」只是以完成为准（completes_iff）。保证完成改写为理论的补充。\n4. mozi-feiru：原读法把余责与造成差别混在一起。按定义，余责只要到期、未做、未解除，不以造成差别为条件。多重决定时，结果不归于怠者，但余责仍在。\n5. mozi-jiezang、mojing-ren-sun-ji、chengyi-sun：由「给予者在活动」加「存量耗尽」推出「以后不能给予」，缺了一个前提：活动需要支持（Web.Dependent）。还要把所给读作给予者自身无补充的存量。现在写明这是几条结果加两个前提的组合，不是一条律，并补入 Web.Dependent。\n6. zhoudunyi、qiushui：Web.break_not_bounded 的前提是该存量不经水平感入，原读法略去了。已补上，并用名表的感、未兆。\n7. 其余几处措辞：\n   - xunzi-wangzhi：Web.RenewingAt 是一步的分类，原标「恒」与名表冲突。名表的恒是运行之类（RenewingIn），现在恒只给整个运行上的 Web.Renewed。「恰在」改为充分条件。\n   - xunzi-wangzhi、mencius-fu-jin：「只从所依者拿取」改为「只从其所汲取者拿取」（Flow.Taking 原文）。\n   - mozi-fei-ren、sunzi-dixing：required_of_bettered 是充分条件，不是必要条件。sunzi-dixing 另注明授权可以改变菜单。\n   - xunzi-zhengming-wu-sang：「按类计数的主张」标为读法；「无得亦无丧＝相赅」补上条件下的 Web.retains_iff_includes。\n   - xunzi-bugou：杨倞注「孰，甚也，猶成孰也」，原读法说「孰計之」带净算之义，没有依据，已改。\n   - sunzi-huogong：loss_passes_juncture 只对能返回的构形成立，且在双重否定的意义上，已补上。\n   - xunzi-lilun-li：补「确定之律下」和门控更新。\n   - simafa-yi-zhan：死作为「失去的可能」标为读法。\n   - lunyu-li-bu-zu：「說之道＝已承担的任务」标为读法。\n   - mojing-daqu-wu-ze：补「在只有这两项的菜单上」。\n   - xunzi-xinge：「能」是实际做到，不是「每条进程都到达」。\n\n交整合者：\n- 各条读法里普遍用「耦合」而不用名表的「感」。用「增益」指 J1/J2 的增益层，名表没有这个名，而名表的「益」锚在 Gain 模块。用「余责」，而记录中文作「余欠」。三处都需要统一。\n- 名表「恆」可以把 Web.Renewed 加入锚。\n- 名条「無喪」说 JL-R043「在他簇」，但它只在 triage-1 里，不在任何簇的映射中。\n- sui-xi-xiaozi 的 source_id 是 YD-JP17，而 JF-R046、JF-R047 的证据在 YD-JG17。两个来源都含这些片段，不算错误。"
+ "cluster": "C15",
+ "entries": [
+  {
+   "id": "mojing-daqu-quan",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "MI1-S-DQ",
+   "layer": "先秦·论（战国后期墨家，《墨子·大取》，墨辩六篇之一）",
+   "fragments": [
+    "於所體之中而權輕重，之謂權。權非爲是也，亦非爲非也。權正也。",
+    "於事爲之中而權輕重，之謂求。求爲之非也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Requirement.Frontier",
+    "Becoming.Lexical.BasicPriority",
+    "Becoming.Lexical.BasicPriority.frontier_iff",
+    "Becoming.FrontierFrames.Options",
+    "Becoming.Profiles.both_respect",
+    "Becoming.Profiles.different_selections"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "classification-robust-generative-comparison"
+   ],
+   "reading": "AI读法：大取分两种称量：在“所體之中”称量轻重叫权，在“事爲之中”称量轻重叫求，并说“求爲之非也”。“所體”按经上“體，分於兼也”读作整体（兼）中的一部分（体），即所涉的具体处境，所以权是在一个给定的处境之内，按所给的比较定其中各项的轻重。相合在此：权不产生是非（“權非爲是也，亦非爲非也”），实践判断也不从一个是非标准推出，而是在可接纳者之中取所给比较的前沿（Requirement.Frontier，定义：可接纳而不被任何可接纳者胜过者）；在帧上，一个构形处的可接纳者是一步所达的构形（FrontierFrames.Options，定义），选择就是这些选项的前沿；J1/J2 作为条件时（Lexical.BasicPriority，条件，核心不断言），这一前沿恰是两层词典序的前沿（Lexical.BasicPriority.frontier_iff）。比较本身不由权给出：在一个构造的两维情形中，两个都尊重每个生成扩展的评分各自融贯地选出不同选项（见证：Profiles.both_respect、Profiles.different_selections），同一处境中的轻重随所给的比较而不同。大取以“所體”与“事爲”分开权与求，脊柱没有对应的分别：选项无论是所处处境中的还是要做的事中的，取舍都是同一个前沿，所以求不另立对应，“求爲之非也”的评断不取。此句在脉络中只有节点 MI1-N-DQ-quan，没有关系记录。",
+   "names_used": [
+    "权",
+    "体",
+    "兼"
+   ],
+   "locator": "墨子/大取·冻结正文段1—8",
+   "relational": "权是在所处的部分处境之内按所给比较称量各项，不是对孤立对象作是非判定",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·大取》",
+   "checked": "corrected"
+  },
+  {
+   "id": "xunzi-zhengming-wu-sang-er-you-de",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》）",
+   "fragments": [
+    "易者，以一易一，人曰：无得亦无丧也，以一易两，人曰：无丧而有得也。以两易一，人曰：无得而有丧也。",
+    "以两易一，人莫之为，明其数也。",
+    "从道而出，犹以一易两也，奚丧！离道而内自择，是犹以两易一也，奚得！其累百年之欲，易一时之嫌，然且为之，不明其数也。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Extension",
+    "Becoming.Comparison",
+    "Becoming.Web.paths_comparison_widens",
+    "Becoming.Web.Retains",
+    "Becoming.Web.Adds",
+    "Becoming.Web.widens_iff_retains_adds",
+    "Becoming.Web.retains_iff_includes",
+    "Becoming.Web.Keeps",
+    "Becoming.Frame.strictLossMatch_iff_length_of_alike",
+    "Becoming.Web.mixed_iff_adds",
+    "Becoming.Transfer.unordered"
+   ],
+   "records": [
+    "comparison-by-widening",
+    "significance-retained-within-margin",
+    "finite-aggregation-within-restorable-basic-losses"
+   ],
+   "reading": "AI读法：荀子按数目把交换分为三类：“以一易一”无得亦无丧，“以一易两”无丧而有得，“以两易一”无得而有丧，并说“以两易一，人莫之为，明其数也”。定域在交出与所得属同一可互换的类之处：把同类可换之物读作按类计数的主张（有几个；这是 AI 的读法，不是 Lean 的结果），三类恰是相赅、扩展与反向扩展，数目多少就是包含与否。扩展是保留前者的每一主张并实现一个前者没有的活的主张（Extension，定义）；以广为愈（称扩大为更好，C，唯一排序的前提；Comparison，定义）只把扩展排在上面，在水平路径上即广（Web.paths_comparison_widens，依定义）；在延续条件下（§6.4，条件，不断言），广恰是无丧且有得（Web.widens_iff_retains_adds；Web.Retains、Web.Adds 为定义），“无丧而有得”正是这两个合取；在同一条件下无丧恰是包含（Web.retains_iff_includes），所以两方互相无丧（“无得亦无丧”）恰是相赅（Web.Keeps，定义：互相包含）。在同一内容类之内按数目也恰合：严格损失匹配恰当较好者失去的列出主张更少（Frame.strictLossMatch_iff_length_of_alike）。越出这一范围，交出与所得内容不同，两方各有所长：在延续条件下各增加对方所缺的有意义者（Web.mixed_iff_adds），以广为愈不排它们，在一个构造的流中两方都不保留对方，排序需要另给的度量（见证：Transfer.unordered）。荀子把不同类的交换也化为数目（“其累百年之欲，易一时之嫌，然且为之，不明其数也”），又以“从道而出……奚丧”把“道”设为保证无丧的固定标准，这两层与交易账目的框架都不取。此段没有本簇候选记录。",
+   "names_used": [
+    "无丧",
+    "有得",
+    "以广为愈",
+    "广",
+    "相赅",
+    "各有所长"
+   ],
+   "locator": "荀子/正名篇",
+   "relational": "比较是两个构形之间的包含关系：保留对方所有且多一个；同类可换时数目即包含",
+   "tradition": "儒家",
+   "work": "《荀子·正名》",
+   "checked": "corrected"
+  },
+  {
+   "id": "xunzi-zhengming-cong-suo-ke",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》）",
+   "fragments": [
+    "欲不待可得，而求者从所可。",
+    "欲不待可得，所受乎天也；求者从所可，所受乎心也。",
+    "故治乱在于心之所可，亡于情之所欲。",
+    "计者取所多，谋者从所可。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "意志或单一中心",
+   "declarations": [
+    "Becoming.Law.more_never_rests",
+    "Becoming.Law.rests_iff",
+    "Becoming.FrontierFrames.Options",
+    "Becoming.FrontierFrames.nothing_required",
+    "Becoming.Requirement.Frontier",
+    "Becoming.FrontierFrames.choice_exists_iff_weakly"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "seeking-boundary"
+   ],
+   "reading": "AI读法：荀子分欲、可得、所可三者：“欲不待可得”，欲不以能否得到为前提；“求者从所可”，求依所认可者而动；又说“治乱在于心之所可，亡于情之所欲”，把治乱系于这一认可是否“中理”。前两者有确切对应。目标可以是任何条件，包括不能在静止处满足的：以比现在更多为目标的寻求是无明，这一目标在任何律下都不在静止的步满足（Law.more_never_rests）；确定之律下，轨道自某步起静止且目标被满足，恰当它到达律不改变而满足目标的构形（Law.rests_iff）。可得是一步所能达到者（FrontierFrames.Options，定义），没有可能移动之处无所要求（FrontierFrames.nothing_required）；选择是在可得之中取所给比较的前沿（Requirement.Frontier，定义），每一步都有被选者恰需要弱排中（FrontierFrames.choice_exists_iff_weakly），比较未决时可以没有已知被选的移动。相分在第三者：荀子让一个认可的中心（“心”之所可，以“中理”为准）为一切取舍定准，并说治乱“亡于情之所欲”；理论中比较是陈述出来、可以修订的承诺，没有一个中心为一切选择定准，这属于意志或单一中心这一非关系层。“计者取所多”是计数最大化，以广为愈不加总，也不取。脉络 RU2-R0136、RU2-R0137 分属 C14、C10，此处只作出处。",
+   "names_used": [
+    "无明",
+    "以广为愈"
+   ],
+   "locator": "荀子/正名篇",
+   "relational": "欲（目标）与可得（可行之选项）是两种关系；以一个认可的中心定准则不是关系的",
+   "tradition": "儒家",
+   "work": "《荀子·正名》",
+   "checked": "passed"
+  },
+  {
+   "id": "xunzi-wangzhi-bu-jue-qi-zhang",
+   "status": "revised",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ09",
+   "layer": "先秦·论（战国末，《荀子·王制》）",
+   "fragments": [
+    "草木荣华滋硕之时，则斧斤不入山林，不夭其生，不绝其长也。",
+    "鼋鼍鱼鳖鳅鳣孕别之时，罔罟毒药不入泽，不夭其生，不绝其长也。",
+    "斩伐养长不失其时，故山林不童，而百姓有馀材也。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Web.RenewingAt",
+    "Becoming.Web.UnderminingAt",
+    "Becoming.Preemption.within_renewal_yet_loses",
+    "Becoming.Preemption.not_undermining_yet_loses",
+    "Becoming.Web.Renewed",
+    "Becoming.Flow.Balances.includes_of_renewed"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "the-run-classes-and-widening",
+    "renewing-consuming-formation"
+   ],
+   "reading": "AI读法：王制在“荣华滋硕之时”“孕别之时”禁斧斤网罟，理由分两层：“不夭其生”是不损已在生长者，“不绝其长”是不关闭以后的生长；又说“斩伐养长不失其时，故山林不童”。理论把这两层分得确切。一步的分类只看已形成的依赖：一次汲取在其步属于更新（Web.RenewingAt，定义：其步活动，且该步保持它所参与的每个条件上的每个依赖）、不属于剥（Web.UnderminingAt，定义），说的都只是已形成的依赖；在一个构造的流中，汲取者在第一步的汲取在更新之内、也不剥，因为还没有依赖于该条件的形成要它保持，可是有它的水平不包含没有它的水平，它关闭了一个能形成者（见证：Preemption.within_renewal_yet_loses）；在延续条件下（§6.4，条件，不断言）它从每个立场失去一个有意义的延续（见证：Preemption.not_undermining_yet_loses）。这正是先取：只有“绝其长”而没有“夭其生”。反过来，在平衡、只有活动者拿取且只从其所汲取者拿取的流中，一个部分所汲取的每个条件若在整个运行上被更新（恒；Web.Renewed，定义：每个依赖它的形成在每一步都被保持），有它的水平就包含没有它的水平，它保住能形成者（Flow.Balances.includes_of_renewed）。定域：“不失其时，故山林不童”在按时的取都落在整个运行上被更新的条件上时成立，这是充分条件，不是恰当的条件；只看取的那一步不夭其生，不足以表明不绝其长。王制所禁之时两种失都有，原文给出两者之分，不给出先取之例；谁定时、按何节律归于“圣王之制”，理论不给出。此段没有本簇候选记录。",
+   "names_used": [
+    "恒",
+    "剥",
+    "先取"
+   ],
+   "locator": "荀子/王制篇（RU2-U-XZ09）",
+   "relational": "失分两层：损已成的依赖（夭其生），关闭未成的能形成者（绝其长）",
+   "tradition": "儒家",
+   "work": "《荀子·王制》",
+   "checked": "corrected"
+  },
+  {
+   "id": "xunzi-zhengming-cui",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0141"
+   ],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》）",
+   "fragments": [
+    "凡人之取也，所欲未尝粹而来也；其去也，所恶未尝粹而往也。故人无动而不可以不与权俱。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Web.Mixed",
+    "Becoming.Web.mixed_iff_adds",
+    "Becoming.Comparison",
+    "Becoming.Transfer.unordered",
+    "Becoming.Profiles.both_respect",
+    "Becoming.Profiles.different_selections"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "comparison-by-widening",
+    "classification-robust-generative-comparison"
+   ],
+   "reading": "AI读法：荀子说所取者从来不是纯然所欲而来，所去者不是纯然所恶而往，所以每一动都须“与权俱”。“未尝粹”即所取与所舍各有所长：两条水平路径各在某一步容许对方不容许的形成（Web.Mixed，定义），在延续条件下（§6.4，条件，不断言）恰是各增加对方所缺的有意义者（Web.mixed_iff_adds）。以广为愈（Comparison，定义）只把扩展排在上面，各有所长的两方都不是对方的扩展，它不排它们；在一个构造的流中两方都不保留对方，排序需要另给的度量（见证：Transfer.unordered）。另给的比较也不止一种：在一个构造的两维情形中，两个都尊重每个生成扩展的评分各自融贯地选出不同选项（见证：Profiles.both_respect、Profiles.different_selections）。所以“不可以不与权俱”与此相合：凡所取未尝粹之处，以广为愈不定取舍，权须另给判断的承诺（J1/J2）或度量。相分在荀子随后给出的衡器：“道者，古今之正权也”，以一个古今不变的标准为一切相杂者定序，见 xunzi-zhengming-zheng-quan。“粹”与提升规则 L 的关系见名条的问题。",
+   "names_used": [
+    "各有所长",
+    "以广为愈",
+    "权"
+   ],
+   "locator": "荀子/正名篇",
+   "relational": "所取与所去都是利害相杂的关系整体，没有纯然的一面",
+   "tradition": "儒家",
+   "work": "《荀子·正名》",
+   "checked": "passed"
+  },
+  {
+   "id": "xunzi-bugou-jian-quan",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0251"
+   ],
+   "source_id": "RU2-S-XZ03",
+   "layer": "先秦·论（战国末，《荀子·不苟》）；杨倞注为隋唐（唐）",
+   "fragments": [
+    "欲惡取舍之權：",
+    "見其可欲也，則必前後慮其可惡也者；見其可利也，則必前後慮其可害也者；而兼權之，孰計之，",
+    "然後定其欲惡取舍。",
+    "如是，則常不失陷矣。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.Above",
+    "Becoming.Lexical.BasicPriority",
+    "Becoming.FrontierFrames.Priority"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "classification-robust-generative-comparison"
+   ],
+   "reading": "AI读法：荀子要求见可欲时“前後慮其可惡”，见可利时“前後慮其可害”，“兼權之，孰計之”，然后定取舍；反面是“凡人之患，偏傷之也”，只见一边。这给出兼权（J1）的完全比较一半：比较一个选项时，把它所实现与所失去的一并列入。理论把 J1/J2 写作条件（Lexical.BasicPriority，条件，核心不断言；帧上为 FrontierFrames.Priority，定义）：比较读两层的全部所持，先看基本主张、再看增益（Lexical.Above，定义），任何一层都不只看所得。J1 的另一半（被选者所失去的仍记为损失）此处没有：“孰計之”，杨倞注“孰，甚也，猶成孰也”，是充分计虑，不说所舍者此后仍记为损失；若把它读作可欲与可恶合算成一个净数，便与保留损失相反，那一读不取。保留的一半见大取“害之中取小，不得已也”（mojing-daqu-hai-zhong-qu-xiao）与老子“和大怨，必有馀怨”（lao-79-he-da-yuan）。欲恶作为一己的好恶不取。“常不失陷”把兼权说成不失的保证，理论只给比较，不保证结果。杨倞注“權，所以平輕重者”（唐）保留了称量的本义。",
+   "names_used": [
+    "兼权",
+    "权"
+   ],
+   "locator": "荀子/不苟篇",
+   "relational": "每一可欲与其可恶、每一可利与其可害作为一个关系整体被称量",
+   "tradition": "儒家",
+   "work": "《荀子·不苟》",
+   "checked": "corrected"
+  },
+  {
+   "id": "mencius-sao-ni-quan",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0041"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·论（战国中期，《孟子·离娄上》第17章）",
+   "fragments": [
+    "嫂溺不援，是豺狼也。男女授受不亲，礼也。嫂溺援之以手者，权也。",
+    "天下溺，援之以道；嫂溺，援之以手。子欲手援天下乎？"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.BasicPriority",
+    "Becoming.Lexical.Above.anchor",
+    "Becoming.Lexical.Above.no_trade",
+    "Becoming.Lexical.Reorganizing.classification_matters",
+    "Becoming.Requirement.Required.defeated"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "classification-robust-generative-comparison"
+   ],
+   "reading": "AI读法：嫂溺之时，“授受不亲”的常规与一个人的生存相冲突，孟子称援之以手为权。J1/J2 作为条件时（Lexical.BasicPriority，条件，核心不断言），一个选项保留另一选项的全部基本主张、又保留一个它所缺的基本主张，就在其上，不论增益（Lexical.Above.anchor）；失去一个对方所持的基本主张的选项，不论多少增益都不在其上（Lexical.Above.no_trade）。把生存读作基本主张、把常规所护者读作较低一层，援手便在上。这里的权是常规与基本主张冲突时按无以小害大（J2）的分类定序，不是规则之外的例外许可；在处境中越过常规的权义孟子已有，本名只取称量的结构。分类是给出的：在一个构造的改组情形中，同一新内容分为增益则两选项不可比，分为基本则有序（见证：Lexical.Reorganizing.classification_matters）；孟子此处的分类（生命在“礼”之上）是给出的，不是推出的。“子欲手援天下乎”区分两种援：一个可接纳的选项不执行某任务，就击败这一任务的要求（Requirement.Required.defeated）；“援之以道”是援天下的一个可接纳选项，它不以手援，所以以手援天下不被要求。“豺狼”的贬称与“礼”作为固定规范不取。",
+   "names_used": [
+    "权",
+    "无以小害大"
+   ],
+   "locator": "《孟子·离娄上》第17章",
+   "relational": "常规与生存条件在同一处境中冲突，判断在两者的关系中做出",
+   "tradition": "儒家",
+   "work": "《孟子》",
+   "checked": "passed"
+  },
+  {
+   "id": "mencius-zhi-zhong-wu-quan",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0073"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·论（战国中期，《孟子·尽心上》第26章）",
+   "fragments": [
+    "执中无权，犹执一也。所恶执一者，为其贼道也，举一而废百也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Learning.selects_through_lumping",
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Profiles.different_selections"
+   ],
+   "records": [
+    "selection-through-a-model-of-the-options",
+    "generalization-through-lumping",
+    "classification-robust-generative-comparison"
+   ],
+   "reading": "AI读法：孟子说执中而无权与执一相同，其害在“举一而废百”。理论中，通过一个映射的选择就是通过其归并（类）的选择：被归并的选项被同样选择（Learning.selects_through_lumping）；它只在要紧之处跨归并一致时才对（Learning.selects_right_through）；要紧之处若在被归并的两者之间不同，任何通过该映射的选择都分不开它们，需要更细的映射（Learning.selects_not_right_of_parted）。“执一”（包括执一个固定的“中”）是用一个粗的映射看一切处境，把处境的不同归并，于是“举一而废百”；权是按处境把它们分开。“中”也不是一个固定点：比较未定之处，在一个构造的两维情形中两个融贯的评分各选不同（见证：Profiles.different_selections）。孟子以“贼道”为判，“道”作为固定标准不取。",
+   "names_used": [
+    "权",
+    "类"
+   ],
+   "locator": "《孟子·尽心上》第26章",
+   "relational": "判断随处境的不同而分开，不以一个固定点统摄",
+   "tradition": "儒家",
+   "work": "《孟子》",
+   "checked": "passed"
+  },
+  {
+   "id": "mencius-bu-chuai-qi-ben",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0062"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·论（战国中期，《孟子·告子下》第1章）",
+   "fragments": [
+    "不揣其本，而齐其末，方寸之木可使高于岑楼。",
+    "金重于羽者，岂谓一钩金与一舆羽之谓哉？取食之重者与礼之轻者而比之，奚翅食重？"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Frame.strictLossMatch_iff_length_of_alike",
+    "Becoming.Lexical.Above",
+    "Becoming.Lexical.Above.no_trade",
+    "Becoming.Lexical.Reorganizing.classification_matters"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "classification-robust-generative-comparison",
+    "finite-aggregation-within-restorable-basic-losses"
+   ],
+   "reading": "AI读法：孟子反驳“礼与食孰重”的问法：不量基点而只比末端，方寸之木可高于岑楼；说“金重于羽”，不是拿一钩金对一车羽；拿“食之重者”与“礼之轻者”相比，当然食重。结构有两层。其一，比较只在其余相若之处，才把差别归于所比的一项：孟子要求同一层级、相当分量地比（相若，对照；此为类比，不立声明）。其二，金羽之喻承认按数量可以反转（一车羽可重于一钩金），孟子以此拒绝不按相当分量的比较。理论只在同一内容类之内许可这种计数：严格损失匹配恰当较好者失去的列出主张更少（Frame.strictLossMatch_iff_length_of_alike），这接近同类积小（FR，承诺）的计数；跨层时，J1/J2 作为条件，比较先看基本层（Lexical.Above，定义），失去一个对方所持的基本主张的选项不论多少增益都不在其上（Lexical.Above.no_trade），数量不能反转层级，这与按单位之重的标量比较相分。分类本身是给出的：在一个构造的改组情形中，同一新内容分为增益或基本，序就不同（见证：Lexical.Reorganizing.classification_matters）。定域：孟子的“轻重”在同一类之内与计数相合，跨层时须由无以小害大补足；孟子不说分类从何而来，理论也只把它作为给定。",
+   "names_used": [
+    "相若",
+    "同类积小",
+    "无以小害大"
+   ],
+   "locator": "《孟子·告子下》第1章",
+   "relational": "轻重只在同一基点、相当分量的关系中可比；跨层不由数量反转",
+   "tradition": "儒家",
+   "work": "《孟子》",
+   "checked": "passed"
+  },
+  {
+   "id": "mencius-she-sheng-qu-yi",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0058"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·论（战国中期，《孟子·告子上》第10章）",
+   "fragments": [
+    "生，亦我所欲也；义，亦我所欲也。二者不可得兼，舍生而取义者也。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "固定本性或价值",
+   "declarations": [
+    "Becoming.Viability.ChoicePoint.each_not_joint",
+    "Becoming.Lexical.Crossed.incomparable",
+    "Becoming.Lexical.Reorganizing.classification_matters",
+    "Becoming.ScoreRepresentation.livingSignificance_leaves_ordering_open",
+    "Becoming.Web.mixed_iff_adds"
+   ],
+   "records": [
+    "conditions-kept-together",
+    "classification-robust-generative-comparison",
+    "protection-priority-excludes-uniform-aggregation"
+   ],
+   "reading": "AI读法：前半与理论相合：“二者不可得兼”是各自可保持、一起不可保持；在一个构造的分岔中，每个条件都可沿某条进程保持，两者一起不可（见证：Viability.ChoicePoint.each_not_joint），这是不得兼。相分在后半：孟子断言“义”在生之上，并以“所欲有甚于生者，所恶有甚于死者”作为普遍的序。理论中，在一个构造的情形中，各持一个对方所缺的受保护主张的两个选项不可比，即使增益相等（见证：Lexical.Crossed.incomparable）；哪一个读作基本，序随之而定（见证：Lexical.Reorganizing.classification_matters）；在一个构造的保护对增益情形中，生命意义（活皆有顾）既与词典序相容，也与把增益排在保护之上的标量序相容（见证：ScoreRepresentation.livingSignificance_leaves_ordering_open）；两方各有所长时，在延续条件下（§6.4，条件，不断言）各增加对方所缺（Web.mixed_iff_adds），以广为愈不排它们。所以“不可得兼”处的取舍需要另给的承诺，理论不承认“义”作为固定价值在一切处境中高于生，这属于固定本性或价值这一非关系层。嫂溺一条（mencius-sao-ni-quan）是他人之生对常规，此条是己之生对“义”，承受者不同，二者的差别见 mojing-daqu-sha-ji 的缺口。",
+   "names_used": [
+    "得兼",
+    "活皆有顾",
+    "各有所长",
+    "以广为愈"
+   ],
+   "locator": "《孟子·告子上》第10章",
+   "relational": "生与“义”不可同时保持是关系的；“义”恒在生上是固定价值层",
+   "tradition": "儒家",
+   "work": "《孟子》",
+   "checked": "passed"
+  },
+  {
+   "id": "mencius-bu-wei-fei-bu-neng",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0006"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·论（战国中期，《孟子·梁惠王上》第7章）",
+   "fragments": [
+    "今恩足以及禽兽，而功不至于百姓者，独何与？",
+    "故王之不王，不为也，非不能也。",
+    "挟太山以超北海，语人曰：‘我不能。’是诚不能也。为长者折枝，语人曰：‘我不能。’是不为也，非不能也。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Requirement.Assigned.capable",
+    "Becoming.Requirement.Required",
+    "Becoming.Requirement.residual_of_unfulfilled"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：孟子以“恩足以及禽兽”为据，说齐宣王有能力推恩于百姓，于是区分“不为”与“不能”：挟太山超北海是“诚不能”，为长者折枝而说不能是“不为”。量力而任（J3）中能力是界，不是据：在每个可接纳计划的分派都可行的条件下，被分派者可行（Requirement.Assigned.capable；可行写在可接纳性里，此律只是把这一前提读出），所以“诚不能”者不被分派；但能做并不使一件事成为要求，任务被要求需有可接纳的计划且每个都执行它（Requirement.Required，定义）。使“保民”到期的是王在关系中的承担（不取位阶）；到期、能而未做、又未解除者才有余责（Requirement.residual_of_unfulfilled，依定义：到期、未做、未解除即为余责）。定域：能则当为作为全称不成立，只在一个承担使任务到期之处成立。孟子以已显的能力作为可行的证据，这是对具体处境的认定，理论不替它作；“王”之位不取。",
+   "names_used": [
+    "量力而任"
+   ],
+   "locator": "《孟子·梁惠王上》第7章",
+   "relational": "责任以承担为据、以能力为界：不能在界外，能而不为在界内",
+   "tradition": "儒家",
+   "work": "《孟子》",
+   "checked": "passed"
+  },
+  {
+   "id": "mencius-su-yi",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0032"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·论（战国中期，《孟子·滕文公下》第8章）",
+   "fragments": [
+    "如知其非义，斯速已矣，何待来年？"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Frame.strictLossMatch_iff_length_of_alike",
+    "Becoming.Frame.SufficientMatching"
+   ],
+   "records": [
+    "finite-aggregation-within-restorable-basic-losses"
+   ],
+   "reading": "AI读法：孟子用“月攘一鸡”的比喻：知其“非义”，就该立即停止，不以逐步减少为继续的理由。在同一内容类之内，严格损失匹配恰当较好者失去的列出主张更少（Frame.strictLossMatch_iff_length_of_alike）。这一计数要把两方的失去都列出：只列被攘者的失去，立即停止失去的更少；若攘者所得也作为主张列入，立即停止所失（攘者少得的鸡）与延到来年所失（被攘者失去的鸡）同类同数，严格匹配不在任何一边。所以“速已”不由同类计数给出，而由孟子所给的“非义”给出：它把所攘之得不计为应保留的主张。把严格匹配当作优先的充分根据又是一个承诺，不是定理（Frame.SufficientMatching，定义：在所给范围内，严格匹配足以给出所给比较下的严格优先）；同类积小（FR）把这一承诺限在可恢复的基本损失之内，攘鸡不在其内。定域：“何待来年”在所攘之得不计入比较之处成立；判定“非义”的标准由孟子给出，理论不设。",
+   "names_used": [
+    "同类积小"
+   ],
+   "locator": "《孟子·滕文公下》第8章",
+   "relational": "延续一个损害的每一步都多一个同类的失去；计数是否偏向停止，看攘者之得是否计入",
+   "tradition": "儒家",
+   "work": "《孟子》",
+   "checked": "corrected"
+  },
+  {
+   "id": "mencius-tu-shan-tu-fa",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0033"
+   ],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·论（战国中期，《孟子·离娄上》第1章）",
+   "fragments": [
+    "徒善不足以为政，徒法不能以自行。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Stock.feasible_iff_covered",
+    "Becoming.Revising.covered_not_enacted",
+    "Becoming.Countdown.completes_iff",
+    "Becoming.Countdown.not_done_before"
+   ],
+   "records": [
+    "pending-task-context-applicability",
+    "recoverable-mediated-change"
+   ],
+   "reading": "AI读法：孟子说只有善意不足以为政，只有法不能自己施行。这是不行不至（§7.6）所说的结构：接受一个改变的倾向，不意味着改变能到达系统并完成；这里引的存量与计数之律属 §4.6。存量过程的一个进程可执行，恰当它被覆盖（Stock.feasible_iff_covered）；覆盖不等于实施：在一个构造的修订情形中，存量覆盖一个修订，连接过程却阻断它，修订不发生（见证：Revising.covered_not_enacted）；计数的工作在 work+1 个节拍内完成，恰当燃料覆盖它们（Countdown.completes_iff），在待办与完成互斥时，此前没有完成（Countdown.not_done_before）。“徒善”对应只有倾向，“徒法”对应只有规则或覆盖，二者都缺被覆盖、被连接的执行序列。孟子以“先王之道”补足，那是另一层规范，不取。",
+   "names_used": [
+    "不行不至"
+   ],
+   "locator": "《孟子·离娄上》第1章",
+   "relational": "规则与其执行之间隔着一个须被覆盖、被连接的序列",
+   "tradition": "儒家",
+   "work": "《孟子》",
+   "checked": "passed"
+  },
+  {
+   "id": "xunzi-xiushen-bu-xing-bu-zhi",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0247"
+   ],
+   "source_id": "RU2-S-XZ02",
+   "layer": "先秦·论（战国末，《荀子·修身》）",
+   "fragments": [
+    "道雖邇，不行不至；事雖小，不爲不成。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Countdown.completes_iff",
+    "Becoming.Countdown.pending_before",
+    "Becoming.Countdown.not_done_before",
+    "Becoming.Countdown.Advances.completes",
+    "Becoming.Stock.covered_iff_prefix"
+   ],
+   "records": [
+    "versioned-request-completion",
+    "recoverable-mediated-change",
+    "pending-task-context-applicability"
+   ],
+   "reading": "AI读法：路近，不走就不到；事小，不做就不成。理论中，无燃料约束的计数工作恰在 work+1 个节拍完成（Countdown.Advances.completes），每一个至多 work 个节拍的运行都使任务悬而未决，工作只减去已走的节拍（Countdown.pending_before），在待办与完成互斥时此前没有任何节拍完成（Countdown.not_done_before）；有燃料约束时，完成恰当燃料覆盖这些节拍（Countdown.completes_iff）；存量覆盖一个进程，恰当在每一步，存量与此前的补充覆盖到此为止的全部汲取（Stock.covered_iff_prefix）。所以“不行不至”在理论中是确切的：距离再小，到达也要一步一步被覆盖地走完。这是不行不至（§7.6）的名所出；这里引的计数与存量之律属 §4.6。“道”在此是路，不作本根讲。",
+   "names_used": [
+    "不行不至"
+   ],
+   "locator": "荀子/修身篇",
+   "relational": "到达是起点与终点之间每一步的关系，不由距离之近省去",
+   "tradition": "儒家",
+   "work": "《荀子·修身》",
+   "checked": "passed"
+  },
+  {
+   "id": "mojing-shi-ling-wei",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-SS-command"
+   ],
+   "source_id": "MI1-S-SS",
+   "layer": "先秦·经说（战国后期墨家，《墨子·经说上》）",
+   "fragments": [
+    "使，令謂，謂也，不必成濕。故也，必待所爲之成也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Countdown.completes_iff",
+    "Becoming.Countdown.stalls_beyond",
+    "Becoming.Countdown.Reserved",
+    "Becoming.Countdown.exits",
+    "Becoming.Countdown.Slow.misses"
+   ],
+   "records": [
+    "reserved-shutdown-during-recovery",
+    "recoverable-mediated-change"
+   ],
+   "reading": "AI读法：经上“使，謂、故。”，经说上释为：令谓之使只是说出，“不必成”；故之使“必待所爲之成”。这正是不行不至（§7.6）：一个请求被发出，不意味着它被执行，要求的改变须是一个可执行的序列。理论中，计数的工作在 work+1 个节拍内完成，恰当燃料覆盖它们（Countdown.completes_iff），燃料不足时每个长于燃料的运行都停滞（Countdown.stalls_beyond）：这是“令謂”之“不必成”。“故”以所为之成为准，即 Countdown.completes_iff 中的完成，不以发出为准。墨经只分令谓与故，不说怎样保证成；理论另给一个保证的条件，这是补充，不是“故”的对应：在保留出口的前提下（Countdown.Reserved，定义：从有效构形起，每个被接纳的动作都继续、保持有效，并且或者到达出口、或者使余量减一；出口之后保持在出口），每个被接纳而长于余量的进程都在出口处有效结束（Countdown.exits）；这个界恰好达到，在一个构造的倒计时中，与余量一样长的进程可以错过出口（见证：Countdown.Slow.misses）。所以“令謂”与“成”之间隔着一个须被覆盖的执行序列。“濕”字断句有异说（或把它属下句读，以濕为“故”之例），不据以立论。此条是不行不至之名的主证。",
+   "names_used": [
+    "不行不至"
+   ],
+   "locator": "經說上·冻结正文段71—73",
+   "relational": "命令与结果之间是一个执行的关系，不是同一件事",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經說上》",
+   "checked": "corrected"
+  },
+  {
+   "id": "mojing-sun-er-bu-hai",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-SX-surplus"
+   ],
+   "source_id": "MI1-S-SX",
+   "layer": "先秦·经说（战国后期墨家，《墨子·经下》《经说下》）",
+   "fragments": [
+    "損，飽者去餘，適足不害，能害飽。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Flow.Balances.supported_iff_within_margin",
+    "Becoming.Flow.Balances.retains_iff_within_margin",
+    "Becoming.Flow.Balances.loses_iff_beyond_margin"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "closing-needs-net-draw"
+   ],
+   "reading": "AI读法：经下“損而不害。說在餘”，经说下释为：饱者去其余，恰足而不害，越过则能害饱。损（下降）在余地之内即无丧。理论给出这一边界的确切形式：在平衡的流中，时刻 t 一个形成被支持，恰当在它所需的每个条件上，它的需要加上该部分迄今所取，至多是没有该部分时的水平加上该部分迄今所给，即该部分的净汲取在余地之内（Flow.Balances.supported_iff_within_margin）；从立场 p，有该部分的水平保留没有它时的有意义者，恰当对每个有意义、没有它时被容许的延续，净汲取始终在余地之内（Flow.Balances.retains_iff_within_margin），失去一个有意义的延续恰在净汲取超出余地之处（Flow.Balances.loses_iff_beyond_margin）。“去餘”是在余地之内取，“適足”是边界，“能害”是越界。墨经只说一人之饱，理论说一个部分对形成所需的每个条件，范围更宽；“飽”作为目标是给定的。“能害飽”的读法有异说，此处取越过则害的通读。",
+   "names_used": [
+    "损",
+    "余地",
+    "无丧"
+   ],
+   "locator": "經說下·冻结正文段42—50",
+   "relational": "损与不害的分界在需要与所立水平之间的余地",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經下》《經說下》",
+   "checked": "passed"
+  },
+  {
+   "id": "mojing-daqu-hai-zhong-qu-xiao",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-DQ-tradeoff",
+    "MI1-R-DQ-coercion"
+   ],
+   "source_id": "MI1-S-DQ",
+   "layer": "先秦·论（战国后期墨家，《墨子·大取》）",
+   "fragments": [
+    "斷指以存腕，利之中取大，害之中取小也。害之中取小，子非取害也，取利也。",
+    "其所取者，人之所執也。遇盜人，而斷指以免身，利也；其遇盜人，害也。",
+    "利之中取大，非不得已也；害之中取小，不得已也。所未有而取焉，是利之中取大也；於所既有而棄焉，是害之中取小也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Extension",
+    "Becoming.Comparison",
+    "Becoming.Frame.strictLossMatch_of_extension",
+    "Becoming.Requirement.Frontier.excluded",
+    "Becoming.Frame.ReadsAt",
+    "Becoming.Frame.ReadsAt.loss_retained",
+    "Becoming.Web.Adds"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "comparison-by-widening",
+    "finite-aggregation-within-restorable-basic-losses"
+   ],
+   "reading": "AI读法：大取分开两种取：“利之中取大”是“所未有而取焉”，在未有者中多取一个，“非不得已”；“害之中取小”是“於所既有而棄焉”，在既有者中舍去较少的，“不得已”。断指存腕要对两个参照分别读。相对于断腕，断指保留断腕所保留的每一主张、又实现一个对方没有的（腕），是扩展（Extension，定义），以广为愈（Comparison，定义）把它排在上面，扩展也是严格损失匹配（Frame.strictLossMatch_of_extension），被胜过的断腕不在前沿上（Requirement.Frontier.excluded）：这是“取利也”。相对于遇盗之前，断指仍是失：在按事件之时读主张的帧上（Frame.ReadsAt，定义，这是一个前提），在其时错过的主张以后任何一步都不再实现，不论那时的支持如何（Frame.ReadsAt.loss_retained）：这是“其遇盜人，害也”，兼权所要保留的损失。“不得已”标出的是后一个参照。所以“子非取害也，取利也”在前一个参照下相合；若读作指的损失被所得抵消，理论不取，失去的仍记为损失。“利之中取大”是有得：增加一个对方没有的（Web.Adds，定义）。加害者与承受者之分见 mojing-daqu-sha-ji 的缺口。",
+   "names_used": [
+    "以广为愈",
+    "有得",
+    "兼权"
+   ],
+   "locator": "大取·冻结正文段1—8",
+   "relational": "取大利是在未有者中增加，取小害是在既有者中少失；同一取舍相对于两个参照分别是扩展与损失",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·大取》",
+   "checked": "passed"
+  },
+  {
+   "id": "mojing-daqu-sha-ji",
+   "status": "revised",
+   "record_ids": [
+    "MI1-R-DQ-sacrifice"
+   ],
+   "source_id": "MI1-S-DQ",
+   "layer": "先秦·论（战国后期墨家，《墨子·大取》）",
+   "fragments": [
+    "殺一人以存天下，非殺一人以利天下也。殺己以存天下，是殺己以利天下。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "非四层：施加与自承之分（行为的归属与描述），核心比较缺此结构",
+   "declarations": [
+    "Becoming.BoundaryInvariant",
+    "Becoming.Lexical.Crossed.incomparable",
+    "Becoming.Dependence.MakesDifference",
+    "Becoming.Requirement.Assigned.unique_required",
+    "Becoming.Requirement.residual_of_unfulfilled"
+   ],
+   "records": [
+    "joint-difference-making",
+    "practical-judgment-under-living-significance",
+    "continuation-condition-decomposition"
+   ],
+   "reading": "AI读法：大取断言一个不对称：“殺一人以存天下，非殺一人以利天下也。殺己以存天下，是殺己以利天下。”同一结果，只因被杀者是他人还是自己，行为的描述不同；结果相同而比较分不出高下时，大取自己说“無擇”（mojing-daqu-wu-ze）。大取又说“愛人不外己，己在所愛之中”：己与人同在所爱的范围之内，所以不对称不来自范围，而来自动作关系：谁的动作加于谁。理论在范围上与“愛人不外己”同向：不易乎畛（不变的一步，BoundaryInvariant，定义）要求预设不随边界怎样划而改变，己与他者的失去同样计入；它只定范围，不排序。核心比较只看构形实现与失去哪些主张：在一个构造的情形中，各持一个对方所缺的受保护主张者不可比（见证：Lexical.Crossed.incomparable）。理论能说谁的部分造成差别（有力；Dependence.MakesDifference，定义）、谁是每个可接纳计划中唯一的应答者因而被要求（Requirement.Assigned.unique_required）、一项任务何时留下余责（Requirement.residual_of_unfulfilled，依定义）；承诺层也已分开施加的基本剥夺与实际同意（J2、J3 的条件），但核心比较中没有失去由承受者自己承担与失去由他者的动作加于承受者之分。所以大取的不对称，理论既不推出也不否定；它断言了一个理论尚缺的结构，这是相分，不是相合。荀子“可殺而不可使……”（RU2-R0273）同一结构，列为平行；“愛人不外己”的记录 MI1-R-DQ-self 在 C14，此处只引其文。",
+   "names_used": [
+    "不易乎畛",
+    "有力"
+   ],
+   "locator": "大取·冻结正文段1—8",
+   "relational": "同一失去，因承受者与动因者是否同一而描述不同",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·大取》",
+   "gap": "脊柱缺：承诺层已有“施加的基本剥夺”与“实际同意”之分（J2、J3 与同类积小的条件），核心比较中没有。缺的是：在选项上加入承受者（谁失去）与动因者（谁的部分造成失去）两种关系，并陈述在 Lexical.BasicPriority 之下，施加之损与自承之损在其他方面相同时如何比较；或者证明只看构形所实现的主张，写不出这一不对称。最近的声明：Becoming.Dependence.MakesDifference、Becoming.Requirement.Assigned.unique_required、Becoming.Lexical.Crossed.incomparable、Becoming.Requirement.residual_of_unfulfilled、Becoming.BoundaryInvariant。",
+   "checked": "passed"
+  },
+  {
+   "id": "mozi-fei-ming",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C35-R007"
+   ],
+   "source_id": "MO1-S-C35",
+   "layer": "先秦·论（战国，《墨子·非命上》第35篇）",
+   "fragments": [
+    "命富則富，命貧則貧；命衆則衆，命寡則寡；命治則治，命亂則亂；命壽則壽，命夭則夭。命，雖強勁，何益哉？",
+    "不知曰：「我罷不肖，從事不疾。」必曰：「我命固且貧。」"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Dependence.MakesDifference",
+    "Becoming.Dependence.makesDifference_iff",
+    "Becoming.Dependence.determined_dichotomy",
+    "Becoming.Dependence.Overdetermined.no_difference",
+    "Becoming.Shock.move_decides"
+   ],
+   "records": [
+    "joint-difference-making",
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：非命上引执有命者之言：“命富則富，命貧則貧……命，雖強勁，何益哉？”并说失败者不说“我罷不肖，從事不疾”，而说“我命固且貧”，以“命”免责。理论的若无检验给出确切范围。一步打破一个依赖，撤去某部分时同一移动仍可取而依赖保持，该部分就造成差别（有力；Dependence.MakesDifference，定义），恰当同一移动不再打破依赖（Dependence.makesDifference_iff，任何过程，无须确定性）；移动决定步时，要么该部分造成差别，要么同一移动仍打破依赖（Dependence.determined_dichotomy）；损失被多重决定时，没有单个部分造成差别（Dependence.Overdetermined.no_difference）；在一个构造的情形中，从同一构形，平常移动下唯一汲取者的部分造成差别，冲击之下损失被多重决定，无人造成（见证：Shock.move_decides）。造成差别只确定差别归于哪一部分；余责另需任务因承担而到期（见 mozi-feiru-dai-yu-fen-zhi）。定域：墨子说“命”无可推诿，在“從事不疾”者的部分造成差别处成立；在多重决定处，归于任一部分都不对，这是“命”一词所掩盖、而理论能分开的情形。墨子在《天志》中另立一个决定者，不取（RO mozi-tianzhi）。非命下“吾命固將失之”（MO1-C37-R003）同构，改列平行。",
+   "names_used": [
+    "有力"
+   ],
+   "locator": "《墨子·非命上》第35篇·冻结页正文段1、段6",
+   "relational": "失败归于造成差别的部分；多重决定处无单一归属",
+   "tradition": "墨家",
+   "work": "《墨子·非命上》",
+   "checked": "passed"
+  },
+  {
+   "id": "mozi-du-zhi-bu-yan",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C39-R007"
+   ],
+   "source_id": "MO1-S-C39",
+   "layer": "先秦·论（战国，《墨子·非儒下》第39篇）",
+   "fragments": [
+    "若將有大寇亂，盜賊將作，若機辟將發也，他人不知，己獨知之，雖其君親皆在，不問不言，是夫大亂之賊也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Requirement.Assigned.unique_required",
+    "Becoming.FrontierWorlds.sole_giver_required",
+    "Becoming.Requirement.residual_of_unfulfilled"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：墨子批评“擊之則鳴，弗擊不鳴”：将有大乱，他人不知，唯己独知，不问就不说，便是乱之贼。必须有人说出，这是量力而任（J3）中紧急能力的承诺所给的覆盖前提（严重伤害可防止、不付出相当的伤害、又没有及时的替代时，在及时、有效、有界的能力之内协助或求援）；律只说在此前提下唯一能给出者被要求：每个可接纳计划都有应答者、且应答者只能是 a 时，a 被要求（Requirement.Assigned.unique_required）；在一个世界中，凡形成在某步需要某条件，每个这样的步都有参与者给予它，且给予者只能是 a，则 a 在每个这样的步都给予，作为要求（FrontierWorlds.sole_giver_required）。“己獨知之”使说出者成为唯一能给出这一信息的部分，于是要求落在他身上；到期而未做、未解除，留下余责（Requirement.residual_of_unfulfilled，依定义）。“機辟將發”是陷阱之喻，与已采纳的名机字面相同、结构不同，不立对应。“君親皆在”的位阶语境不取。",
+   "names_used": [
+    "量力而任"
+   ],
+   "locator": "《墨子·非儒下》第39篇·段8",
+   "relational": "唯一能给出者被要求给出：要求随关系中谁能给而定",
+   "tradition": "墨家",
+   "work": "《墨子·非儒下》",
+   "checked": "passed"
+  },
+  {
+   "id": "mozi-fei-ren-bi-you-yi-yi",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C16-R002"
+   ],
+   "source_id": "MO1-S-C16",
+   "layer": "先秦·论（战国，《墨子·兼爱下》第16篇）",
+   "fragments": [
+    "子墨子曰：非人者，必有以易之。若非人而無以易之，譬之猶以水救火也，其說將必無可焉。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Requirement.Frontier",
+    "Becoming.Requirement.Frontier.excluded",
+    "Becoming.Requirement.required_of_bettered",
+    "Becoming.FrontierFrames.nothing_required"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "organizational-formation-from-generative-comparison"
+   ],
+   "reading": "AI读法：墨子说：否定别人者，必须有东西替换它；否定而无可替换，其说不可。理论中，判断不是否定单个选项，而是在可接纳的选项中取前沿（Requirement.Frontier，定义）：被某个可接纳选项胜过者不在前沿上（Requirement.Frontier.excluded），而每个缺某任务的可接纳选项都被胜过时，这一任务被前沿要求（Requirement.required_of_bettered：菜单非空且列出，比较非自反、传递、弱可判定，任务可判定；这是充分条件）。所以“非之”只在有一个胜过它的可接纳替代时才有效；没有这样的替代时，被否定者仍在前沿上；没有可能的移动之处无所要求（FrontierFrames.nothing_required）。墨子以“兼以易別”为替代，“兼”是否胜过“別”，由所给的比较决定，此处不判。“以水救火”一句文字或有讹误，依冻结文本照录。",
+   "names_used": [],
+   "locator": "《墨子·兼愛下》第16篇·段2",
+   "relational": "否定一个选项须相对于一个可接纳的替代",
+   "tradition": "墨家",
+   "work": "《墨子·兼愛下》",
+   "checked": "corrected"
+  },
+  {
+   "id": "mozi-feigong-qi-suo-bu-zu",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C18-R001",
+    "MO1-C18-R002"
+   ],
+   "source_id": "MO1-S-C18",
+   "layer": "先秦·论（战国，《墨子·非攻中》第18篇）",
+   "fragments": [
+    "計其所得，反不如所喪者之多。",
+    "然則土地者，所有餘也；王民者，所不足也。今盡王民之死，嚴下上之患，以爭虛城，則是棄所不足，而重所有餘也。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.BasicPriority",
+    "Becoming.Lexical.Above.no_trade",
+    "Becoming.ScoreRepresentation.every_nat_score_outranks",
+    "Becoming.ScoreRepresentation.no_nat_score_represents",
+    "Becoming.Frame.strictLossMatch_iff_counts"
+   ],
+   "records": [
+    "protection-priority-excludes-uniform-aggregation",
+    "finite-aggregation-within-restorable-basic-losses"
+   ],
+   "reading": "AI读法：墨子在此有两个论证。其一，“計其所得，反不如所喪者之多”：把得丧计数相比。其二，土地有余而人民不足，以民死争空城，是“棄所不足，而重所有餘”：把基本的（民之生存）拿去换有余的（土地）。第二个与无以小害大（J2）相合：J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张的选项，不论增益多少都不在其上（Lexical.Above.no_trade）。第一个的范围须限定：在一个构造的保护对增益情形中，每个满足以广为愈的自然数评分都把某个数量的增益排在保护之上（见证：ScoreRepresentation.every_nat_score_outranks），没有满足它的自然数评分表示词典序（见证：ScoreRepresentation.no_nat_score_represents）；所以只计得丧之数的评分，在这样的情形中会以足够多的增益换基本主张。同类积小（FR，承诺）所用的计数只在内容类分明时有确切意义：内容按类读出、两方的失去各列一次时，严格损失匹配恰当逐类较好者失去的不多于较差者、总数更少（Frame.strictLossMatch_iff_counts）。定域：墨子的计数论证在得与丧同类时成立，跨类时须由第二个论证（不以基本换有余）补足。墨子之“利”作为可加总的单位，见 RO mojing-li-suo-de-er-xi 的相分。",
+   "names_used": [
+    "无以小害大",
+    "以广为愈",
+    "同类积小"
+   ],
+   "locator": "《墨子·非攻中》第18篇·段2",
+   "relational": "所不足（生存）与所有余（土地）分属两层，不可互换",
+   "tradition": "墨家",
+   "work": "《墨子·非攻中》",
+   "checked": "passed"
+  },
+  {
+   "id": "mozi-jieyong-jia-yong",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C20-R002"
+   ],
+   "source_id": "MO1-S-C20",
+   "layer": "先秦·论（战国，《墨子·节用上》第20篇）",
+   "fragments": [
+    "不加者，去之。",
+    "凡其為此物也，無不加用而為者，是故用財不費，民德不勞，其興利多矣。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Extension",
+    "Becoming.Comparison",
+    "Becoming.Web.Adds",
+    "Becoming.Web.Keeps",
+    "Becoming.Ranking.possible_extends",
+    "Becoming.Ranking.possible_ranks"
+   ],
+   "records": [
+    "comparison-by-widening",
+    "ranking-under-readings"
+   ],
+   "reading": "AI读法：节用上逐项说明器物所为，以是否“加用”判取舍：凡所为都须增加用处，“不加者，去之”。理论中，以广为愈（Comparison，定义）只在后者保留前者的每一主张并实现一个前者没有的活的主张时排序（Extension，定义）；有得即容纳一个对方不容纳的有意义的延续（Web.Adds，定义）。所以“不加”本身不给出“去之”：不增加者若也不失去，两方相赅（Web.Keeps，定义：互相包含），以广为愈不排去留。定域在“用財”：在一族给定数量的定律中，所论的形成若自某步起汲取超出更新与贡献之和，没有它的历程在可能读法下扩展有它的历程（Ranking.possible_extends），每个在这一读法下满足以广为愈的比较都把没有它的历程排得更高（Ranking.possible_ranks）。“不加者，去之”在所去者的存在使汲取超出更新之处成立，墨子“用財不費，民德不勞”所指正是这一处。墨子的“用”由他列举，理论不定哪些是“用”。",
+   "names_used": [
+    "以广为愈",
+    "有得",
+    "相赅"
+   ],
+   "locator": "《墨子·節用上》第20篇·段2",
+   "relational": "取舍按是否在既有之上增加，以及其存在是否使汲取超出更新而定",
+   "tradition": "墨家",
+   "work": "《墨子·節用上》",
+   "checked": "passed"
+  },
+  {
+   "id": "mozi-jieyong-zu-er-zhi",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C21-R001",
+    "MO1-C21-R002",
+    "MO1-C21-R003",
+    "MO1-C21-R004",
+    "MO1-C21-R005",
+    "MO1-C21-R006"
+   ],
+   "source_id": "MO1-S-C21",
+   "layer": "先秦·论（战国，《墨子·节用中》第21篇）",
+   "fragments": [
+    "使各從事其所能。",
+    "凡足以奉給民用諸，加費不加民利則止。",
+    "足以充虛繼氣，強股肱，使耳目聰明，則止。",
+    "加費不加於民利者，聖王弗為。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Law.fixed_rests",
+    "Becoming.Law.rests_iff",
+    "Becoming.Enough.possibly_rests_iff",
+    "Becoming.Web.Adds",
+    "Becoming.Lexical.Ceiling.above"
+   ],
+   "records": [
+    "seeking-boundary",
+    "the-boundary-of-enough-under-undetermined-laws",
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：节用中给出一个统一的法：饮食、衣服、舟车、葬埋、宫室，凡足以供民用就止，“加費不加民利則止”；并令百工“各從事其所能”。足而止有确切对应：目标在律不改变的构形被满足，轨道就停在那里并一直满足（Law.fixed_rests）；在确定之律下，轨道自某步起静止且目标被满足，恰当它到达这样的构形（Law.rests_iff）；不确定之律下，某次运行可能静止且目标被满足，恰当某个可达构形有停留的一步并满足目标（Enough.possibly_rests_iff）。“加費不加民利”是没有有得（Web.Adds，定义）的耗费，以广为愈不把它排在上面。在一个给定上限的构造中，上限读作基本主张时，守在其内在任何越出它的增益之上（见证：Lexical.Ceiling.above；上限是给出的，生命意义不给出数值界）。墨子列举的“足”的标准由他给出；“聖王弗為”的权威层不取；“各從事其所能”是量力而任的能力之界，此处不展开。",
+   "names_used": [
+    "足而止",
+    "有得",
+    "以广为愈",
+    "量力而任"
+   ],
+   "locator": "《墨子·節用中》第21篇·段2—7",
+   "relational": "止的条件是再加不再增加：目标与所立水平之间的关系",
+   "tradition": "墨家",
+   "work": "《墨子·節用中》",
+   "checked": "passed"
+  },
+  {
+   "id": "mozi-jiezang-li-bu-zu-ran-hou-yi",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C25-R001"
+   ],
+   "source_id": "MO1-S-C25",
+   "layer": "先秦·论（战国，《墨子·节葬下》第25篇）",
+   "fragments": [
+    "當其於此也，亦有力不足、財不贍、智不智然後已矣，無敢舍餘力，隱謀遺利，而不為親為之者矣。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Requirement.Assigned.capable",
+    "Becoming.FrontierWorlds.giver_active",
+    "Becoming.FrontierWorlds.sole_giver_active",
+    "Becoming.Web.Dependent",
+    "Becoming.Stock.exhausted_within"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "renewing-consuming-formation"
+   ],
+   "reading": "AI读法：节葬下以孝子为亲谋利作比：“力不足、財不贍、智不智然後已矣”，不敢舍余力、隐谋、遗利。这与量力而任（J3）的一半相合：在每个可接纳计划的分派都可行的条件下，力所不及者不被分派（Requirement.Assigned.capable；可行写在可接纳性里），力尽之处便“已”。定域在另一半：“無敢舍餘力”若要求给予者一直给到力尽，在只有活动的形成给予的前提下，给予者在给予时是活动的（FrontierWorlds.giver_active），唯一的给予者在其给予被要求的每一步都须活动（FrontierWorlds.sole_giver_active）；在活动需要支持的前提下（Web.Dependent，定义），给予者失去其所需的支持就不再活动；把所给读作出自给予者自身所持、无补充的存量（读法），一个每次汲取都使水平下降、凡为正就有汲取的存量，在与其所持相同的步数内耗尽（Stock.exhausted_within）。这是几条结果与两个前提的组合，不是一条律：在这些前提下，把给予者耗尽会使以后被要求的给予不可能，所以不舍余力在保持给予者能继续活动的范围内成立，越过这一点就失去以后的要求所依赖的给予者。孝子之喻的亲子位分不取。",
+   "names_used": [
+    "量力而任"
+   ],
+   "locator": "《墨子·節葬下》第25篇·段1",
+   "relational": "给予以给予者的持续活动为条件",
+   "tradition": "墨家",
+   "work": "《墨子·節葬下》",
+   "checked": "corrected"
+  },
+  {
+   "id": "mozi-feiyue",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C32-R001",
+    "MO1-C32-R002",
+    "MO1-C32-R003",
+    "MO1-C32-R004"
+   ],
+   "source_id": "MO1-S-C32",
+   "layer": "先秦·论（战国，《墨子·非乐上》第32篇）",
+   "fragments": [
+    "非以大鍾、鳴鼓、琴瑟、竽笙之聲以為不樂也",
+    "雖身知其安也，口知其甘也，目知其美也，耳知其樂也，然上考之不中聖王之事，下度之不中萬民之利。",
+    "以此虧奪民衣食之財，仁者弗為也。",
+    "然則樂器反中民之利亦若此，即我弗敢非也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.BasicPriority",
+    "Becoming.Lexical.Above.no_trade",
+    "Becoming.Lexical.Above.anchor",
+    "Becoming.Lexical.Above.not_of_included",
+    "Becoming.Lexical.Reorganizing.classification_matters",
+    "Becoming.ScoreRepresentation.comparison_does_not_yield_priority",
+    "Becoming.ScoreRepresentation.bounded_score_represents"
+   ],
+   "records": [
+    "protection-priority-excludes-uniform-aggregation",
+    "classification-robust-generative-comparison",
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：非乐上先承认乐之为乐（身安、口甘、目美、耳乐），再以“虧奪民衣食之財”判为非；又说若乐器能像舟车一样“反中民之利”，就不非之。这是无以小害大（J2）的结构：J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张的选项不论增益都不在其上（Lexical.Above.no_trade），保留对方全部基本主张又保留一个它所缺的基本主张者在其上（Lexical.Above.anchor）；一个两层所持都被对方包含的选项不在对方之上（Lexical.Above.not_of_included）：乐若不损衣食，去乐并不在有乐之上。“反中民之利亦若此，即我弗敢非”正是：乐若不损基本，或本身被分类为基本的一部分，序就改变（见证：Lexical.Reorganizing.classification_matters，一个构造的改组情形）。以广为愈本身不给出这一优先：在一个构造的保护对增益情形中，一个满足它的标量序把增益排在保护之上，词典序则不（见证：ScoreRepresentation.comparison_does_not_yield_priority）；一个有界的评分满足它而从不如此（见证：ScoreRepresentation.bounded_score_represents）。墨子以“聖王之事”为上考，这一层不取；“利”的单位问题见 RO mojing-li-suo-de-er-xi。",
+   "names_used": [
+    "无以小害大",
+    "以广为愈"
+   ],
+   "locator": "《墨子·非樂上》第32篇·段1—5",
+   "relational": "乐（增益）与衣食（基本）之间的层次，以是否损及基本为界",
+   "tradition": "墨家",
+   "work": "《墨子·非樂上》",
+   "checked": "passed"
+  },
+  {
+   "id": "mozi-shangxian-shi-zhi-cheng",
+   "status": "revised",
+   "record_ids": [
+    "MO1-C09-R004"
+   ],
+   "source_id": "MO1-S-C09",
+   "layer": "先秦·论（战国，《墨子·尚贤中》第9篇）",
+   "fragments": [
+    "旣曰若法，未知所以行之術，則事猶若未成。",
+    "夫豈為賢臣賜哉？欲其事之成也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Stock.feasible_iff_covered",
+    "Becoming.Stock.covered_iff_prefix",
+    "Becoming.Countdown.completes_iff",
+    "Becoming.Countdown.stalls_beyond",
+    "Becoming.Revising.covered_not_enacted"
+   ],
+   "records": [
+    "pending-task-context-applicability",
+    "recoverable-mediated-change"
+   ],
+   "reading": "AI读法：尚贤中说：已经有了法，不知道施行它的方法，事仍然未成；爵禄与断令并授，不是赏赐贤者，是要事情成。这是不行不至（§7.6）所说的结构；这里引的存量与计数之律属 §4.6。一个存量进程可执行恰当它被覆盖（Stock.feasible_iff_covered），覆盖要求在每一步，存量与此前的补充覆盖到此为止的全部汲取（Stock.covered_iff_prefix）；燃料覆盖计数的节拍才完成（Countdown.completes_iff），燃料不足则长于燃料的运行都停滞（Countdown.stalls_beyond）；在一个构造的修订情形中，存量覆盖了而连接被阻断，修订仍不发生（见证：Revising.covered_not_enacted）。“三本”（爵、禄、令）读作使执行可能的条件，相合；尚贤把执行者的选择交给一个上位者，这一层不取。",
+   "names_used": [
+    "不行不至"
+   ],
+   "locator": "《墨子·尚賢中》第9篇·段3",
+   "relational": "法与其成之间是执行条件的关系",
+   "tradition": "墨家",
+   "work": "《墨子·尚賢中》",
+   "checked": "passed"
+  },
+  {
+   "id": "lao-12-wei-fu-bu-wei-mu",
+   "status": "revised",
+   "record_ids": [
+    "LAO2-C12-R06"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "先秦·经（《老子》第12章，王弼本传世）",
+   "fragments": [
+    "是以圣人为腹不为目，故去彼取此。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.BasicPriority",
+    "Becoming.Lexical.Above.anchor",
+    "Becoming.Lexical.Above.no_trade",
+    "Becoming.Lexical.Above.not_of_included",
+    "Becoming.ScoreRepresentation.comparison_does_not_yield_priority"
+   ],
+   "records": [
+    "protection-priority-excludes-uniform-aggregation",
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：第十二章先列“五色令人目盲”等，再归结为“为腹不为目，故去彼取此”。这是无以小害大（J2）的读法。J1/J2 作为条件时（Lexical.BasicPriority），保留对方全部基本主张又保留一个它所缺的基本主张者在其上，不论增益（Lexical.Above.anchor），失去一个对方所持的基本主张者不论增益都不在其上（Lexical.Above.no_trade）：腹（维持）读作基本，目（感官之所得）读作增益，于是取腹。定域：经文说“去彼”，即舍弃感官之所得；理论只在感官的追求损及基本条件时才把它排在下面；两层都保留时，一个两层所持都被对方包含的选项不在对方之上（Lexical.Above.not_of_included），只去增益而不增基本者，并不在兼有二者者之上。所以“去彼取此”在追求损及基本处成立，作为普遍的舍弃不成立。以广为愈本身不给出这一优先：在一个构造的保护对增益情形中，一个满足它的标量序把增益排在保护之上（见证：ScoreRepresentation.comparison_does_not_yield_priority）。",
+   "names_used": [
+    "无以小害大",
+    "以广为愈"
+   ],
+   "locator": "《老子》第12章",
+   "relational": "维持（腹）与感官之得（目）分两层，后者只在损及前者时被舍",
+   "tradition": "道家",
+   "work": "《老子》",
+   "checked": "passed"
+  },
+  {
+   "id": "lao-46-zhi-zu-zhi-zu",
+   "status": "revised",
+   "record_ids": [
+    "LAO2-C46-R03",
+    "LAO2-C46-R04",
+    "LAO2-C46-R05"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "先秦·经（《老子》第46章，王弼本传世；帛书甲本异文）",
+   "fragments": [
+    "祸莫大于不知足；",
+    "咎莫大于欲得。",
+    "故知足之足，常足矣。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Law.more_never_rests",
+    "Becoming.more_not_at_rest",
+    "Becoming.Flow.more_exhausted",
+    "Becoming.Law.fixed_rests",
+    "Becoming.Law.rests_iff"
+   ],
+   "records": [
+    "seeking-boundary",
+    "the-boundary-of-enough-under-undetermined-laws"
+   ],
+   "reading": "AI读法：第四十六章：“祸莫大于不知足；咎莫大于欲得。故知足之足，常足矣。”“欲得”不止的寻求是无明：以比现在更多为目标，在任何律下都不在静止的步满足（Law.more_never_rests），只能由变化满足（more_not_at_rest）。定域在“祸”：在所立被列出、自某步起每步都衰减之处，没有条件能在任意晚的步上升（Flow.more_exhausted）；在这一前提下，比现在更多的寻求不是以够而止，而是以耗尽而终。“知足之足，常足”只在满足目标的构形为律所不改变之处成立：目标在这样的构形被满足，轨道就在那里一直满足（Law.fixed_rests），确定之律下静止且满足恰在到达这样的构形时（Law.rests_iff），这是足而止。经文“祸莫大”是最大值断言，理论不排这一序。帛书甲本此句作“恆足矣”（V130-LAO-MA，前五字残）；恒在他处名更新，此处“恆足”只是静止处一直满足，二者须分。RO lao-44-zhi-zu-zhi-zhi 映射同一结构。",
+   "names_used": [
+    "无明",
+    "足而止",
+    "恒"
+   ],
+   "locator": "《老子》第46章",
+   "relational": "足是目标与轨道的关系：目标在静止处可满足才有足",
+   "tradition": "道家",
+   "work": "《老子》",
+   "checked": "passed"
+  },
+  {
+   "id": "suzhe-lao33-chang-xie-bu-zu",
+   "status": "revised",
+   "record_ids": [
+    "LC2-SZ-C33-R03"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "layer": "宋明·注（北宋，苏辙《老子解》第33章注）",
+   "fragments": [
+    "知足者所遇而足則未甞不富矣雖有天下而常挾不足之心以處之則是終身不能富也"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Law.more_never_rests",
+    "Becoming.more_not_at_rest",
+    "Becoming.more_needs_open",
+    "Becoming.Law.fixed_rests"
+   ],
+   "records": [
+    "seeking-boundary"
+   ],
+   "reading": "AI读法：苏辙注第三十三章“知足者富”：知足者所遇而足，未尝不富；有天下而常挟不足之心，终身不能富。结构是目标的形式决定能否静止：“不足之心”是无明，其目标是比现在更多，在任何律下都不在静止处被满足（Law.more_never_rests、more_not_at_rest），每步都满足需要开放的世界（more_needs_open），所以“有天下”也不足；“所遇而足”是目标在当下的构形就被满足，律不改变它则一直满足（Law.fixed_rests），这是足而止。定域：苏辙把足放在“心”上，并把“所遇而足”作为普遍的处世之方；理论不说该采用哪个目标，在所遇不足以维持基本条件之处，“所遇而足”会掩盖一个真实的缺失。",
+   "names_used": [
+    "无明",
+    "足而止"
+   ],
+   "locator": "苏辙《老子解》知人者智章第33注",
+   "relational": "富不富取决于目标的形式，不取决于所有之多",
+   "tradition": "道家（宋人注）",
+   "work": "苏辙《老子解》",
+   "checked": "passed"
+  },
+  {
+   "id": "suzhe-lao44-qi-de-sang",
+   "status": "revised",
+   "record_ids": [
+    "LC2-SZ-C44-R02"
+   ],
+   "source_id": "LC-SZ-ALL",
+   "layer": "宋明·注（北宋，苏辙《老子解》第44章注）",
+   "fragments": [
+    "惟齊有無均得喪而後無病也"
+   ],
+   "kind": "divergence",
+   "layer_checked": "本原（以一个无差别的根据取消得丧之分）",
+   "declarations": [
+    "Becoming.Web.widens_iff_retains_adds",
+    "Becoming.Web.Retains",
+    "Becoming.Law.lost_stays",
+    "Becoming.Lexical.Repair.loss_retained",
+    "Becoming.Law.rests_iff"
+   ],
+   "records": [
+    "comparison-by-widening",
+    "significance-retained-within-margin",
+    "recurrence-without-premise"
+   ],
+   "reading": "AI读法：苏辙注第四十四章“得與亡孰病”：唯有齐同有无、均平得丧，然后无病。这与理论相分：理论的比较正是区分得丧，无丧与有得是比较的两个合取，在延续条件下（§6.4，条件，不断言）恰是广（Web.widens_iff_retains_adds；Web.Retains，定义）；失去的可能保持失去（Law.lost_stays）；在一个构造的修复情形中，被选者所未实现的事件作为损失保留（见证：Lexical.Repair.loss_retained）。把得丧齐同，等于取消比较。苏辙的目的是止于求，与足而止所说的静止相近（Law.rests_iff：确定之律下静止且目标被满足恰在到达律不改变而满足目标的构形时），但他的方法是取消区分，把差别消解于一个无差别的根据之上，属于本原（先在根据）这一非关系层；理论在不取消区分的情况下给出静止的条件。",
+   "names_used": [
+    "无丧",
+    "有得",
+    "广",
+    "足而止"
+   ],
+   "locator": "苏辙《老子解》名與身章第44注",
+   "relational": "齐得丧把关系中的差别取消，理论保留差别",
+   "tradition": "道家（宋人注）",
+   "work": "苏辙《老子解》",
+   "checked": "passed"
+  },
+  {
+   "id": "lao-19-jue-sheng-qi-zhi",
+   "status": "revised",
+   "record_ids": [
+    "LE-R029"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "先秦·经（《老子》第19章，王弼本传世；郭店本异文）",
+   "fragments": [
+    "绝圣弃智，民利百倍；",
+    "此三者以为文不足，故令有所属﹕见素抱朴，少私寡欲。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Flow.Balances.admits_of_net_draw",
+    "Becoming.Flow.Balances.supported_of_net_give",
+    "Becoming.Flow.Balances.withheld",
+    "Becoming.Web.supported_iff_admits"
+   ],
+   "records": [
+    "closing-needs-net-draw",
+    "feedback-and-reach"
+   ],
+   "reading": "AI读法：沿用 RO 的映射（scope）：绝某而民得某这一句式在脊柱上有确切条件：撤去一个部分后，凡 f 被支持之处，其余水平仍容许 f，恰当该部分在 f 所需的每个条件上拿取不少于给予（Flow.Balances.admits_of_net_draw）；净给予者从不使被容许者失去支持（Flow.Balances.supported_of_net_give）；部分造成的差别由其累计的拿取与给予给出（Flow.Balances.withheld）；被支持即被容许（Web.supported_iff_admits，依定义）。所以撤去一个部分是辟还是阖，取决于它在所需条件上是净汲取还是净给予：一个部分只经由净汲取阖能形成者，只经由净给予辟之。本簇加读“此三者以为文不足，故令有所属﹕见素抱朴，少私寡欲”：经文把三“绝”作为“文”之不足，归于素朴寡欲；这在所绝者净汲取民之所需时成立；所绝者若净给予，有它时它从不使被容许者失去支持，绝之则失其所辟。郭店本无“绝圣”“绝仁弃义”（RO 已注）。“少私寡欲”作为普遍的修身规范，不取。",
+   "names_used": [
+    "阖",
+    "辟"
+   ],
+   "locator": "《道德经》十九章",
+   "relational": "撤去一个部分的后果取决于它在所需条件上的净取与净给",
+   "ro_passage": "lao-19-jue-sheng-qi-zhi",
+   "tradition": "道家",
+   "work": "《老子》",
+   "checked": "passed"
+  },
+  {
+   "id": "lao-79-he-da-yuan",
+   "status": "revised",
+   "record_ids": [
+    "LAO2-C79-R02"
+   ],
+   "source_id": "YD-LAO-BASE",
+   "layer": "先秦·经（《老子》第79章，王弼本传世）",
+   "fragments": [
+    "和大怨，必有馀怨，安可以为善？"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Law.lost_stays",
+    "Becoming.Law.merged_stays",
+    "Becoming.Law.drawn_iff_not_returns",
+    "Becoming.Frame.ReadsAt.loss_retained",
+    "Becoming.MatchedCourses.recovery_retains_loss"
+   ],
+   "records": [
+    "recurrence-without-premise",
+    "finite-aggregation-within-restorable-basic-losses",
+    "attraction-is-not-returning"
+   ],
+   "reading": "AI读法：沿用 RO 的映射（agreement）：失去的可能保持失去（Law.lost_stays），被合并者保持合并（Law.merged_stays），每个确定之律恰吸入不返回者（Law.drawn_iff_not_returns）。本簇从比较的角度读“安可以为善”：在按事件之时读主张的帧上（这是一个前提），在其时错过的主张以后任何一步都不再实现，不论那时的支持如何（Frame.ReadsAt.loss_retained）；在一个构造的匹配进程中，支持恢复之后已失的主张仍失（见证：MatchedCourses.recovery_retains_loss）。和解之后的状态不包含损失发生之前的状态，所以和解不是一个无丧的扩展，以广为愈不把它排在未结怨之时的状态之上；这正是兼权（J1）的损失保留：被选的和解所未恢复者仍作为损失计入，此条是兼权保留一半的主证。经文由此转向“执左契，而不责于人”（事前），理论也只说已失者不返回，不说新的形成不能出现。",
+   "names_used": [
+    "兼权",
+    "无丧",
+    "以广为愈"
+   ],
+   "locator": "《老子》第79章",
+   "relational": "和解在损失之后，不能把关系还原到损失之前",
+   "ro_passage": "lao-79-he-da-yuan",
+   "tradition": "道家",
+   "work": "《老子》",
+   "checked": "passed"
+  },
+  {
+   "id": "daxiang-sun-cheng-fen-zhi-yu",
+   "status": "revised",
+   "record_ids": [
+    "HX-R017"
+   ],
+   "source_id": "YD-HX02",
+   "layer": "先秦或秦汉·传（《大象传》·损，易传成书时代有争议）",
+   "fragments": [
+    "山下有澤，損；君子以懲忿窒欲。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "非四层：以取象类比代替律的承载（其他结构）",
+   "declarations": [
+    "Becoming.Learning.goAlike_iff_lumped",
+    "Becoming.Learning.Lumped",
+    "Becoming.Law.rests_iff",
+    "Becoming.Law.more_never_rests"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "seeking-boundary"
+   ],
+   "reading": "AI读法：沿用 RO 的映射（divergence）：大象的推理形式是取象而法之，是类比，不是导出；一个确定之律在映射下通行，恰当下一构形经映射读出后在映射所归并（类）者之间相同（Learning.goAlike_iff_lumped；Learning.Lumped，定义），而“山下有澤”到“懲忿窒欲”之间没有给出这样的归并。本簇所关心的是“窒欲”：若读作足而止，与 Law.rests_iff 相近（确定之律下，静止且目标被满足恰在到达律不改变而满足目标的构形时）；但大象把它作为普遍的修身命令，不说哪种欲在何处止，也不区分比现在更多的目标（无明，在任何律下都不在静止的步满足，Law.more_never_rests）与可被满足的目标。益象“見善則遷，有過則改”（HX-R018）列为平行。",
+   "names_used": [
+    "足而止",
+    "类",
+    "无明"
+   ],
+   "locator": "大象传·損卦",
+   "relational": "象与德目之间是约定的类比，不是关系的承载",
+   "ro_passage": "daxiang-junzi-yi",
+   "tradition": "易传",
+   "work": "《周易·大象传》",
+   "checked": "passed"
+  },
+  {
+   "id": "xunzi-lilun-li-zhi-suo-qi",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0101"
+   ],
+   "source_id": "RU2-S-XZ19",
+   "layer": "先秦·论（战国末，《荀子·礼论》）",
+   "fragments": [
+    "人生而有欲，欲而不得，则不能无求。",
+    "求而无度量分界，则不能不争；争则乱，乱则穷。",
+    "使欲必不穷于物，物必不屈于欲。两者相持而长，是礼之所起也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Flow.joint_excess_ends",
+    "Becoming.Flow.joint_excess_ends_at",
+    "Becoming.Flow.level_kept",
+    "Becoming.Exceeding.own_not_joint",
+    "Becoming.Web.embodiedArising_needs_replenishment",
+    "Becoming.Law.rests_iff"
+   ],
+   "records": [
+    "own-count-misses-joint-excess",
+    "what-taking-all-excludes",
+    "generation-is-replenishment",
+    "seeking-boundary"
+   ],
+   "reading": "AI读法：沿用 RO 的映射（agreement）：在更新依赖于被更新者时（门控更新），合取超出所给的每一步都使水平下降，降到需要之下便终结依赖它的形成（Flow.joint_excess_ends、Flow.joint_excess_ends_at），在一个构造的情形中，各自不超取并不防止合取超取（见证：Exceeding.own_not_joint）；“两者相持而长”对应每步联合拿取都在所给之内时水平不降（Flow.level_kept）与生成携带补充（Web.embodiedArising_needs_replenishment）；无度量分界之求成为争（在共享条件处的竞逐）。本簇加读第一句“欲而不得，则不能无求”：这是对寻求的描述（寻求者在目标未满足时继续动），Seeking 一组律不推出它；在这一描述之下，确定之律下，求能静止且得，恰当到达律不改变而满足目标的构形（Law.rests_iff），这是足而止；“度量分界”是给出的界，使求在所给之内止。荀子把定界归于先王，理论只说界是延续的条件，不说谁来定。",
+   "names_used": [
+    "足而止",
+    "争"
+   ],
+   "locator": "荀子/礼論篇",
+   "relational": "欲与物相持：求的界在所给的水平",
+   "ro_passage": "ru-xunzi-li-qi-yu-fen",
+   "tradition": "儒家",
+   "work": "《荀子·礼论》",
+   "checked": "corrected"
+  },
+  {
+   "id": "zhoudunyi-shi-tian-hu-ren-ye",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0164"
+   ],
+   "source_id": "RU2-S-S01",
+   "layer": "宋明·论（北宋，周敦颐《通书·势第二十七》）",
+   "fragments": [
+    "力而不竞，天也。不识不力，人也。天乎？人也，何尤！"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Requirement.Assigned.capable",
+    "Becoming.Requirement.residual_of_unfulfilled",
+    "Becoming.Dependence.MakesDifference",
+    "Becoming.Web.break_not_bounded"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "joint-difference-making",
+    "runaway-distance-uncoupled"
+   ],
+   "reading": "AI读法：RO 的 ru-zhoudunyi-shi 映射同章“极重不可反……识不早，力不易也”（agreement），并注明“天乎？人也”的归属未处理；此条处理的正是这一句，所以种类与声明不同。周敦颐区分两种失败：尽力而不能胜，是“天”；不识、不尽力，是“人”。理论按量力而任给出分界：在每个可接纳计划的分派都可行的条件下，力所不及者不被分派（Requirement.Assigned.capable；可行写在可接纳性里）；在可行之内，到期而未做、未解除者有余责（Requirement.residual_of_unfulfilled，依定义）；一个部分是否造成差别，由若无检验定（有力；Dependence.MakesDifference，定义）。定域在“不识”：一个所依存的存量若不经水平感入（感，耦合）一个形成，在断点之前，没有任何感入它的东西界定离断点还有多远（Web.break_not_bounded），这是未兆；在那里把识读作不在可行之内（读法），按上一前提它不被分派，“不识”不留余责。只在断点的远近已由某个感接进来之处，识才在可行之内，不识才可能是余责。周敦颐把一切“不识”归于人，理论只在那样的地方同意。“天”在此只作超出可行读，不作意志之“天”。",
+   "names_used": [
+    "量力而任",
+    "有力",
+    "感",
+    "未兆"
+   ],
+   "locator": "《通书·势第二十七》",
+   "relational": "失败的归属取决于可行之界与感所及之界",
+   "tradition": "儒家（宋）",
+   "work": "周敦颐《通书》",
+   "checked": "corrected"
+  },
+  {
+   "id": "sui-xi-xiaozi-fu-jian-yu",
+   "status": "revised",
+   "record_ids": [
+    "TP-H17-X2-R01",
+    "TP-H17-X3-R01",
+    "JF-R046",
+    "JF-R047"
+   ],
+   "source_id": "YD-JP17",
+   "layer": "先秦·经（随卦六二、六三爻辞，通常系于西周晚期，有争议）；传（小象传，先秦至秦汉，成书时代有争议）",
+   "fragments": [
+    "六二：係小子，失丈夫。",
+    "六三：係丈夫，失小子。",
+    "系小子，弗兼與也。",
+    "系丈夫，志舍下也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Viability.ChoicePoint.each_not_joint",
+    "Becoming.Viability.kernel_and_iff"
+   ],
+   "records": [
+    "conditions-kept-together"
+   ],
+   "reading": "AI读法：随卦六二“係小子，失丈夫”，六三“係丈夫，失小子”；小象释为“弗兼與也”“志舍下也”。结构是：每一个系属单独可保持，两者不能同时保持，系此则失彼，即不得兼。在一个构造的分岔中，每个条件都可沿某条进程保持，两者一起不可（见证：Viability.ChoicePoint.each_not_joint）；而对每条进程都不离开的守护，共同守护恰是各自守护（Viability.kernel_and_iff）。随卦所示是前一种：联合不可保持。经与传都不说该系哪一个，只说取舍有所失，这与兼权（J1）的损失保留相合。“小子”“丈夫”的人伦位分不取。",
+   "names_used": [
+    "得兼",
+    "兼权"
+   ],
+   "locator": "第17卦隨·经文六二、六三；小象·第2、3位",
+   "relational": "两个系属在同一处境中不可兼得",
+   "tradition": "易（经与传）",
+   "work": "《周易》隨卦",
+   "checked": "passed"
+  },
+  {
+   "id": "wangbi-qian-li-yi",
+   "status": "revised",
+   "record_ids": [
+    "YCM130-Q-Z-Q13b-R01"
+   ],
+   "source_id": "YWH-Q",
+   "layer": "魏晋南北朝·注（魏，王弼注乾，载《周易正义》）",
+   "fragments": [
+    "夫進物之速者，義不若利，存物之終者，利不及義。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Web.mixed_iff_adds",
+    "Becoming.Profiles.both_respect",
+    "Becoming.Profiles.opposite",
+    "Becoming.StrictTransport.cutoffs_disagree"
+   ],
+   "records": [
+    "significance-retained-within-margin",
+    "comparison-by-widening",
+    "classification-robust-generative-comparison"
+   ],
+   "reading": "AI读法：王弼注乾：“夫進物之速者，義不若利，存物之終者，利不及義。”就使物迅速前进而言，“義”不如“利”；就保存物到终了而言，“利”不及“義”。两种排序相互颠倒，各相对于一个给出的着眼点。理论中，两方各有所长时，在延续条件下（§6.4，条件，不断言）各增加对方所缺（Web.mixed_iff_adds），以广为愈不排它们；另给的比较可以相反：在一个构造的两维情形中，两个评分都尊重每个生成扩展（见证：Profiles.both_respect），却在一项实现替换另一项时给出相反的序（见证：Profiles.opposite）。旁证：在修复与完成的路线上，两个各自传递的截断规则对同一对选项给出相反的严格序（见证：StrictTransport.cutoffs_disagree），那里不是“義”“利”，只取序随所给规则而反转。所以序随所给的着眼点反转，与王弼的“速”“終”相合。理论不说哪个着眼点对：“存物之終”若读作保持延续，与延续条件同向，但延续条件只定范围，排序不由它推出。",
+   "names_used": [
+    "各有所长",
+    "以广为愈"
+   ],
+   "locator": "周易正義/01乾·王弼层·Q13b",
+   "relational": "两项的轻重相对于所着眼的时域而反转",
+   "tradition": "易（王弼注）",
+   "work": "王弼《周易注》",
+   "checked": "passed"
+  },
+  {
+   "id": "chengyi-jing-wei-ji-yong",
+   "status": "revised",
+   "record_ids": [
+    "CY130-H48-R01"
+   ],
+   "source_id": "YD-CY4",
+   "layer": "宋明·注（北宋，程颐《伊川易传》井卦）",
+   "fragments": [
+    "井以濟用為功幾至而未及用亦與未下繘於井同也",
+    "掘井九仞而不及泉猶為棄井有濟物之用而未及物猶无有也"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Countdown.pending_before",
+    "Becoming.Countdown.not_done_before",
+    "Becoming.Countdown.completes_iff"
+   ],
+   "records": [
+    "versioned-request-completion",
+    "recoverable-mediated-change"
+   ],
+   "reading": "AI读法：程颐释井卦“汔至亦未繘井”：井以济用为功，几乎到了而未及用，与未下绳于井相同；掘井九仞不及泉，犹为弃井。结构是：未完成的任务在完成之前不产生完成的效果，这是不行不至。每个至多 work 个节拍的运行都使任务悬而未决，工作只减去已走的节拍（Countdown.pending_before），在待办与完成互斥时此前没有完成（Countdown.not_done_before），完成恰当燃料覆盖全部节拍（Countdown.completes_iff）。定域：程颐说“幾至”与“未下”相同，就完成与否而言成立；但悬而未决的任务所剩的工作是 work 减去已走的节拍，几至者剩下的更少，与未开始者不同；“猶无有”只对已济物这一结果成立，对过程的状态不成立。",
+   "names_used": [
+    "不行不至"
+   ],
+   "locator": "伊川易传·卷4·第48卦井",
+   "relational": "效用只在执行完成时成立；过程的状态则随已走的步而变",
+   "tradition": "易（程颐）",
+   "work": "程颐《伊川易传》",
+   "checked": "passed"
+  },
+  {
+   "id": "chengyi-ge-li-yu-zheng-dao",
+   "status": "revised",
+   "record_ids": [
+    "CY130-H49-R01"
+   ],
+   "source_id": "YD-CY4",
+   "layer": "宋明·注（北宋，程颐《伊川易传》革卦）",
+   "fragments": [
+    "革之而利於正道則可久而得去故之義无變動之悔乃悔亡也革而无甚益猶可悔也况反害乎古人所以重改作也"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Comparison",
+    "Becoming.Web.widens_iff_retains_adds",
+    "Becoming.Web.Retains",
+    "Becoming.Web.Adds",
+    "Becoming.Web.mixed_iff_adds",
+    "Becoming.Transfer.unordered"
+   ],
+   "records": [
+    "comparison-by-widening",
+    "significance-retained-within-margin"
+   ],
+   "reading": "AI读法：程颐释革卦：革而“利於正道”，则可久而无变动之悔；革而无甚益，犹可悔，何况反害，所以古人重改作。结构是：改变只在有所增益时值得，有损则更不可。理论中，以广为愈（Comparison，定义）只把扩展排在上面，在延续条件下（§6.4，条件，不断言）即无丧且有得（Web.widens_iff_retains_adds；Web.Retains、Web.Adds，定义）；“无甚益”是无丧而无得，不被排在原状之上；“反害”是有丧；有增益又有所失的改作，两方各有所长，在延续条件下各增加对方所缺（Web.mixed_iff_adds），以广为愈不排它们，在一个构造的流中排序需要另给的度量（见证：Transfer.unordered）。定域：程颐用“正道”作为改变的标准，并把“重改作”作为一般的审慎；理论不设固定标准，在各有所长之处也不说“不改”更好（不改同样可以失去），只说以广为愈不排序。",
+   "names_used": [
+    "以广为愈",
+    "无丧",
+    "有得",
+    "各有所长"
+   ],
+   "locator": "伊川易传·卷4·第49卦革",
+   "relational": "改变与原状的比较按无丧与有得",
+   "tradition": "易（程颐）",
+   "work": "程颐《伊川易传》",
+   "checked": "passed"
+  },
+  {
+   "id": "chengyi-sun-fu-sun-yi-zhi",
+   "status": "revised",
+   "record_ids": [
+    "CY-R013"
+   ],
+   "source_id": "YD-CY3",
+   "layer": "宋明·注（北宋，程颐《伊川易传》损卦九二）",
+   "fragments": [
+    "不自損其剛貞則能益其上乃益之也若失其剛貞而用柔説適足以損之而已非損己而益上也"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.FrontierWorlds.giver_active",
+    "Becoming.FrontierWorlds.sole_giver_active",
+    "Becoming.Web.Dependent",
+    "Becoming.Requirement.Assigned.capable"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：程颐释损九二“弗損益之”：不自损其“剛貞”，才能益其上；若失其“剛貞”而以柔悦顺上，只是损之而已，不是“損己而益上”。只取前半的结构：给予者须保持自身能给予的条件，自损而失去这些条件就不再能给予。在只有活动的形成给予的前提下，给予者在给予时是活动的（FrontierWorlds.giver_active），唯一的给予者在其给予被要求的每一步都须活动（FrontierWorlds.sole_giver_active）；在活动需要支持的前提下（Web.Dependent，定义），失去所需支持的给予者不再活动，也就不再给予；在每个可接纳计划的分派都可行的条件下，被分派者可行（Requirement.Assigned.capable）。这一对应是类比：程颐的“損”是失其“剛貞”，不是给予者的活动条件被耗尽。后半以顺从代替给予而损受者，理论在此没有对应的律，不取。定域：“損己而益上”只在不损及给予者能继续给予的条件时成立，这是量力而任的一面。朱熹“不變其所守乃所以益上”（ZX-R007）同构，列为平行。“剛貞”这一品目与“上”的位阶不取。",
+   "names_used": [
+    "量力而任"
+   ],
+   "locator": "伊川易传·卷三·损九二注",
+   "relational": "给予以给予者自身的持续为条件",
+   "tradition": "易（程颐）",
+   "work": "程颐《伊川易传》",
+   "checked": "corrected"
+  },
+  {
+   "id": "daxue-zhi-yu-zhi-shan",
+   "status": "revised",
+   "record_ids": [
+    "RU1-DX-01-R03"
+   ],
+   "source_id": "RU1-S-DX",
+   "layer": "先秦或秦汉·原典正文（《礼记·大学》，成篇时代有争议）",
+   "fragments": [
+    "大學之道，在明明德，在親民，在止於至善。知止而後有定",
+    "子曰：「於止，知其所止。可以人而不如鳥乎？」",
+    "為人君，止於仁；為人臣，止於敬；為人子，止於孝；為人父，止於慈；與國人交，止於信。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Law.fixed_rests",
+    "Becoming.Law.rests_iff"
+   ],
+   "records": [
+    "seeking-boundary"
+   ],
+   "reading": "AI读法：大学以“止於至善”为纲领之一，“知止而後有定”；并自释“所止”：“於止，知其所止”，“為人君，止於仁；為人臣，止於敬……與國人交，止於信”。按大学自己的解释，止是在各自的关系位置上一个可满足的目标，这与足而止相合：目标在律不改变的构形被满足，轨道在那里静止并一直满足（Law.fixed_rests），确定之律下静止且目标被满足恰在到达这样的构形时（Law.rests_iff）。定域：所止依位而定，位由所给的名分给出，君臣父子的等级层不取；“仁”“敬”“孝”“慈”“信”作为目标的内容由大学给出，理论不定。“明德”作为固定本性的一层不取。RO 的 ru-daxue-ben-mo 只映射本末次第，不含此句，故不设 ro_passage。",
+   "names_used": [
+    "足而止"
+   ],
+   "locator": "《礼记·大学》编者连续论证段1、段3",
+   "relational": "止是目标与关系位置的关系：各位置有其可满足的所止",
+   "tradition": "儒家",
+   "work": "《礼记·大学》",
+   "checked": "passed"
+  },
+  {
+   "id": "daxue-xie-ju",
+   "status": "revised",
+   "record_ids": [
+    "RU1-DX-15-R01",
+    "RU1-DX-15-R02",
+    "RU1-DX-15-R03",
+    "RU1-DX-15-R04",
+    "RU1-DX-15-R05",
+    "RU1-DX-15-R06"
+   ],
+   "source_id": "RU1-S-DX",
+   "layer": "先秦或秦汉·原典正文（《礼记·大学》，成篇时代有争议）",
+   "fragments": [
+    "所惡於上，毋以使下；所惡於下，毋以事上；所惡於前，毋以先後；所惡於後，毋以從前；所惡於右，毋以交於左；所惡於左，毋以交於右。此之謂絜矩之道。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.BoundaryInvariant",
+    "Becoming.unrestricted_iff_presupposed_along",
+    "Becoming.Relabel.valued_alike_iff",
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.selects_not_right_of_parted"
+   ],
+   "records": [
+    "continuation-condition-decomposition",
+    "presupposition-scopes",
+    "selection-through-a-model-of-the-options"
+   ],
+   "reading": "AI读法：“絜矩之道”：所恶于上者不以使下，所恶于下者不以事上，前后左右同此。结构是把一个判断在关系的各个位置上交换，要求它不变，这是无方（立场中立与立场不变）的结构。理论中相近而不同的一步是不易乎畛：关于一个自我的预设，在边界划在一个可接纳区域时成立、划在每个其他区域时也成立，才是不变的（BoundaryInvariant，定义）；整体可接纳时，延续条件恰是每个立场上次真且对边界不变的预设（unrestricted_iff_presupposed_along；延续条件只作条件，不断言）。絜矩所换的是位置，不易乎畛所换的是边界；不变的一步只定范围（谁的延续计入），不排序，排序只在以广为愈。两个选项被经过一个映射的每个评价同样评价，恰当映射把它们打成平手（Relabel.valued_alike_iff）；通过映射的选择只在要紧之处跨归并（类）一致时才对（Learning.selects_right_through），否则需要更细的映射（Learning.selects_not_right_of_parted）。定域：絜矩在“所惡”相同、位置可交换处成立；当上下前后的处境真有不同的要紧之处（例如能力不同），把它们归并为同一位置的选择就不对。上下的等级不取，只取位置的交换。此条与 C14（延续条件与不变的一步）跨簇，留在本簇。",
+   "names_used": [
+    "无方",
+    "不易乎畛",
+    "以广为愈",
+    "类"
+   ],
+   "locator": "《礼记·大学》编者连续论证段15",
+   "relational": "判断在关系的各位置之间交换而不变",
+   "tradition": "儒家",
+   "work": "《礼记·大学》",
+   "checked": "passed"
+  },
+  {
+   "id": "lunyu-qu-bing-qu-shi",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-12-07-R02",
+    "RU1-LY-12-07-R03"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦·原典正文（《论语·颜渊》）",
+   "fragments": [
+    "子貢曰：「必不得已而去，於斯三者何先？」曰：「去兵。」子貢曰：「必不得已而去，於斯二者何先？」曰：「去食。自古皆有死，民無信不立。」"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Viability.ChoicePoint.each_not_joint",
+    "Becoming.Lexical.Above.anchor",
+    "Becoming.FrontierFrames.Priority.kept_required",
+    "Becoming.Lexical.Crossed.incomparable",
+    "Becoming.Lexical.Reorganizing.classification_matters"
+   ],
+   "records": [
+    "conditions-kept-together",
+    "classification-robust-generative-comparison",
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：子贡问足食、足兵、民信三者不得已而去，孔子先去兵，再去食，以“民無信不立”守“信”。结构是不能共同保持时按层取舍，即按无以小害大（J2）：在一个构造的分岔中，各自可保持、共同不可（见证：Viability.ChoicePoint.each_not_joint），即不得兼；J1/J2 作为条件时，保留对方全部基本主张又保留一个它所缺的基本主张者在其上（Lexical.Above.anchor），在帧上，一个实现了任一选项所实现的每个基本主张的选项，其所实现的基本主张为选择所要求（FrontierFrames.Priority.kept_required：选项列出、比较弱可判定、该主张可判定）。定域：理论不给出食与“信”谁是基本：在一个构造的情形中，各持一个受保护主张而互缺的两个选项不可比（见证：Lexical.Crossed.incomparable），分类一变序就变（见证：Lexical.Reorganizing.classification_matters）。孔子把“信”（读作共同活动得以持续的关系条件）排在食之上，是一个给出的分类；去食终止生存这一基本条件，二者都在基本层时，这一取舍不由词典序给出。“自古皆有死”以死之必然降低生存的层级，这一步不取。",
+   "names_used": [
+    "得兼",
+    "无以小害大"
+   ],
+   "locator": "《论语》顏淵第十二·十二之七",
+   "relational": "三者不能共保时，取舍依层次；层次本身是给出的",
+   "tradition": "儒家",
+   "work": "《论语》",
+   "checked": "passed"
+  },
+  {
+   "id": "lunyu-you-he-jia-yan",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-13-09-R01",
+    "RU1-LY-13-09-R02"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦·原典正文（《论语·子路》）",
+   "fragments": [
+    "冉有曰：「既庶矣，又何加焉？」曰：「富之。」曰：「既富矣，又何加焉？」曰：「教之。」"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Comparison",
+    "Becoming.Web.Retains",
+    "Becoming.Web.Adds",
+    "Becoming.Web.widens_iff_retains_adds",
+    "Becoming.Lexical.Above"
+   ],
+   "records": [
+    "comparison-by-widening",
+    "significance-retained-within-margin"
+   ],
+   "reading": "AI读法：庶、富、教，每一步都问“又何加焉”：在已有之上再加。结构是保留已成者而增加一个新的，即扩展：以广为愈（Comparison，定义）把保留每一主张并实现一个新的活的主张者排在上面；在延续条件下（§6.4，条件，不断言）即无丧且有得，恰是广（Web.widens_iff_retains_adds；Web.Retains、Web.Adds，定义）。若富之后基本主张不变，加教是增益的严格增加，J1/J2 作为条件时即在其上（Lexical.Above，定义的第二支：基本两层互相包含，增益严格包含）。把庶、富读作基本、教读作增益，是 AI 的分类，文本不说。孔子没有说“教”可以以“富”为代价，“既富矣”保留了前一步，所以相合。“教”的内容不在此判定。",
+   "names_used": [
+    "以广为愈",
+    "无丧",
+    "有得",
+    "广"
+   ],
+   "locator": "《论语》子路第十三·十三之九",
+   "relational": "每一步在保留前一步之上增加",
+   "tradition": "儒家",
+   "work": "《论语》",
+   "checked": "passed"
+  },
+  {
+   "id": "lunyu-xiu-ji-an-bai-xing",
+   "status": "revised",
+   "record_ids": [
+    "RU1-LY-14-45-R04"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦·原典正文（《论语·宪问》）",
+   "fragments": [
+    "曰：「脩己以安百姓。脩己以安百姓，堯舜其猶病諸！」"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Requirement.Collective.required",
+    "Becoming.Requirement.Collective.no_common_plan"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "classification-robust-generative-comparison"
+   ],
+   "reading": "AI读法：孔子说“脩己以安百姓”，连尧舜都难以做到。理论补出一个原因（这是理论的补充，文本不说）：安百姓是集体的任务。在一个构造的两选项情形中，一个集体任务可以被要求而没有任何个体任务被要求（见证：Requirement.Collective.required）；每个世界可以有一个计划而没有对所有世界共同的计划（见证：Requirement.Collective.no_common_plan）。所以“安百姓”不必作为对一个修己者的要求，“堯舜其猶病諸”说一人修己不足以尽之。定域：文本把安百姓列为修己的极致；理论只在把它读作集体关系的任务时，说它不落在一人身上，与量力而任相合。尧舜作为圣王典范不取。",
+   "names_used": [
+    "量力而任"
+   ],
+   "locator": "《论语》憲問第十四·十四之四五",
+   "relational": "安百姓是集体关系的任务，不是一个人的",
+   "tradition": "儒家",
+   "work": "《论语》",
+   "checked": "passed"
+  },
+  {
+   "id": "zhuangzi-qiushui-ming-yu-quan",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C17-R-12",
+    "ZH1-C17-R-13",
+    "ZH1-C17-R-14"
+   ],
+   "source_id": "ZH1-S17",
+   "layer": "先秦或秦汉·论（《庄子·秋水》，外篇，时代有争议）",
+   "fragments": [
+    "知道者必達於理，達於理者必明於權，明於權者不以物害己。",
+    "非謂其薄之也，言察乎安危，寧於禍福，謹於去就，莫之能害也。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Learning.goAlike_iff_lumped",
+    "Becoming.Learning.selects_right_through",
+    "Becoming.Learning.selects_not_right_of_parted",
+    "Becoming.Web.break_not_bounded"
+   ],
+   "records": [
+    "generalization-through-lumping",
+    "selection-through-a-model-of-the-options",
+    "runaway-distance-uncoupled"
+   ],
+   "reading": "AI读法：秋水：“知道者必達於理，達於理者必明於權，明於權者不以物害己。”“至德者”免害，不是因为亲近危险而不伤，而是察安危、宁祸福、谨去就。理论中理是结构与变化之律的模型：一个确定之律在映射下通行，恰当下一构形经映射读出后在映射所归并者之间相同（Learning.goAlike_iff_lumped）；通过映射的选择只在要紧之处跨归并一致时才对（Learning.selects_right_through），否则需要更细的映射（Learning.selects_not_right_of_parted）。所以“達於理者必明於權”读作：权要有一个承载律的模型。定域在“必”与“莫之能害”：有模型不保证免害。一个所依存的存量若不经水平感入（感，耦合）一个形成，在断点之前，没有任何感入它的东西界定离断点还有多远（Web.break_not_bounded），这是未兆：这样的危险在被感接进来之前无可察。“察乎安危……莫之能害”在可察之处成立，作为普遍保证不成立。“道”作为本根不取。",
+   "names_used": [
+    "权",
+    "理",
+    "感",
+    "未兆"
+   ],
+   "locator": "庄子·秋水",
+   "relational": "称量以模型为前提；免害以感所及为界",
+   "tradition": "庄学",
+   "work": "《庄子·秋水》",
+   "checked": "corrected"
+  },
+  {
+   "id": "zhuangzi-zhibeiyou-wu-mian-suo-bu-mian",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C22-R-09"
+   ],
+   "source_id": "ZH1-S22",
+   "layer": "先秦或秦汉·论（《庄子·知北游》，外篇，时代有争议）",
+   "fragments": [
+    "夫知遇而不知所不遇，知能能而不能所不能，无知无能者，固人之所不免也。夫務免乎人之所不免者，豈不亦悲哉！"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Requirement.Required.defeated",
+    "Becoming.Enough.possibly_rests_iff"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "the-boundary-of-enough-under-undetermined-laws"
+   ],
+   "reading": "AI读法：知北游：人知所遇而不知所不遇，能其所能而不能所不能，无知无能是人所不免的；务求免于所不免，岂不可悲。理论中，一个可接纳的选项不执行某任务，就击败这一任务的要求（Requirement.Required.defeated）：免于无知无能是没有一个可接纳选项执行的任务，任何一个可接纳选项都击败它，它不被要求。目标能否在静止处被满足也有确切条件：不确定之律下，某次运行能静止且目标被满足，恰当某个可达构形有停留的一步并满足目标（Enough.possibly_rests_iff）；以不可达的目标为求，求不会止，这是足而止的反面。相合在有界：要求以可接纳者为界，目标以可达为界，这是量力而任的能力之界。庄子把“不免”读作人之为人的限度，并引向“悲”，这一情感评价不取；理论也不说某一界是固定的，可达者随形成而变。",
+   "names_used": [
+    "量力而任",
+    "足而止"
+   ],
+   "locator": "庄子·知北遊",
+   "relational": "要求与目标都以可达为界",
+   "tradition": "庄学",
+   "work": "《庄子·知北游》",
+   "checked": "passed"
+  },
+  {
+   "id": "zhuangzi-tianxia-tian-xia-bu-kan",
+   "status": "revised",
+   "record_ids": [
+    "ZH1-C33-R-06"
+   ],
+   "source_id": "ZH1-S33",
+   "layer": "先秦或秦汉·论（《庄子·天下》，杂篇，战国末至秦汉，时代有争议）",
+   "fragments": [
+    "天下不堪，墨子雖獨（能）任，奈天下何？離於天下，其去王也，遠矣。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Requirement.Assigned.capable",
+    "Becoming.Requirement.Required.defeated",
+    "Becoming.Stock.exhausted_within"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "renewing-consuming-formation"
+   ],
+   "reading": "AI读法：天下篇评墨家：天下不堪，墨子虽独能任，奈天下何。结构是：一个要求若只有极少数能承担，它就不是对所有人的要求。把墨家的主张读作一个对全体的计划：在每个可接纳计划的分派都可行的条件下，不堪者不被分派（Requirement.Assigned.capable；可行写在可接纳性里），所以墨家的主张作为对天下人的要求，不在可接纳的计划之中；若另有不行墨家主张的可接纳计划，这一要求即被击败（Requirement.Required.defeated）。持续的汲取也不能持久：一个每次汲取都使水平下降、凡为正就有汲取的存量，在与其所持相同的步数内耗尽（Stock.exhausted_within）。相合在量力而任的有界责任。天下篇以“其去王也，遠矣”为评，“王”作为标准不取；墨子本人的承担是自承，属 mojing-daqu-sha-ji 的缺口。",
+   "names_used": [
+    "量力而任"
+   ],
+   "locator": "庄子·天下",
+   "relational": "要求的普遍性以被要求者的能力为界",
+   "tradition": "庄学",
+   "work": "《庄子·天下》",
+   "checked": "passed"
+  },
+  {
+   "id": "sunzi-dixing-zhan-dao",
+   "status": "revised",
+   "record_ids": [
+    "BI1-SZ-R-47",
+    "BI1-SZ-R-48"
+   ],
+   "source_id": "BI1-S-SZ",
+   "layer": "先秦·传世正文（《孙子·地形》，春秋末至战国，成书有争议；“经”是后起的称呼）",
+   "fragments": [
+    "故戰道必勝，主曰無戰，必戰可也；戰道不勝，主曰必戰，無戰可也。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.FrontierFrames.Options",
+    "Becoming.Requirement.Frontier",
+    "Becoming.Requirement.Frontier.excluded",
+    "Becoming.Requirement.required_of_bettered"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：孙子说：“戰道必勝，主曰無戰，必戰可也；戰道不勝，主曰必戰，無戰可也。”“可”是许可；可行与否的判断在“戰道”，命令不改变它。结构是：选择在可行的选项之中（FrontierFrames.Options，定义），在所给比较的前沿上（Requirement.Frontier，定义）；被某个可接纳选项胜过者不在前沿上（Requirement.Frontier.excluded），每个缺某任务的可接纳选项都被胜过时，这一任务被前沿要求（Requirement.required_of_bettered：菜单非空且列出，比较非自反、传递、弱可判定，任务可判定；这是充分条件）。所以只要命令不改变可接纳的菜单，主之令就不使一个被胜过的选项成为要求。定域与相张：J4（正当可行的选择）的正当一半要求被授权的计划，授权可以改变菜单；孙子以“戰道”越过主之令，这一层与 J4 相分；孙子的比较标准是胜（见 RO sunzi-bu-zhan-er-qu-ren 的方向相分），这里只取命令不能使被胜过者成为要求。“進不求名，退不避罪，唯民是保”（BI1-SZ-R-49）列为平行。",
+   "names_used": [],
+   "locator": "孙子·地形第十",
+   "relational": "可行性与命令的关系：命令不越过可行",
+   "tradition": "兵家",
+   "work": "《孙子兵法》",
+   "checked": "corrected"
+  },
+  {
+   "id": "simafa-yi-zhan-qu-zhan",
+   "status": "revised",
+   "record_ids": [
+    "BI1-SM-R-03"
+   ],
+   "source_id": "BI1-S-SM",
+   "layer": "先秦·传世正文（《司马法·仁本》，战国，传世本有争议）",
+   "fragments": [
+    "是故殺人安人，殺之可也。攻其國，愛其民，攻之可也。以戰去戰，雖戰可也。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "非四层：以目的抵消手段之损（与损失保留相冲突的结构），语境为争胜",
+   "declarations": [
+    "Becoming.Law.lost_stays",
+    "Becoming.Lexical.Above.no_trade",
+    "Becoming.Lexical.Crossed.incomparable",
+    "Becoming.Frame.SufficientMatching",
+    "Becoming.Frame.not_strictLossMatch_of_base_lost"
+   ],
+   "records": [
+    "recurrence-without-premise",
+    "finite-aggregation-within-restorable-basic-losses",
+    "protection-priority-excludes-uniform-aggregation"
+   ],
+   "reading": "AI读法：司马法以目的许可手段：杀人以安人，可以杀；攻其国而爱其民，可以攻；以战止战，虽战可也。理论与此相分。失去的可能在每一律下保持失去（Law.lost_stays），一人之死读作这样一个失去（读法）；按无以小害大，J1/J2 作为条件时，失去一个对方所持的基本主张的选项不论增益都不在其上（Lexical.Above.no_trade），在一个构造的情形中，各持对方所缺的受保护主张的两个选项不可比（见证：Lexical.Crossed.incomparable），所以杀一以安众不由词典序给出；以同类损失的计数为充分根据是一个承诺（Frame.SufficientMatching，定义），同类积小把它限在可恢复的基本损失之内；而在每个主张都依赖一个共同支持、主张有限列出时，失去共同支持的构形在匹配上不比任何构形严格更好（Frame.not_strictLossMatch_of_base_lost），战争读作危及共同支持的处境（读法）。司马法的“可”是以一个目的（安人、去战）抵消手段的损失，这是理论不承认的抵消：损失保留，兼权所要求的正是这一点。“入罪人之地……”的约束见 simafa-ru-zui-ren-zhi-di。",
+   "names_used": [
+    "兼权",
+    "同类积小",
+    "无以小害大"
+   ],
+   "locator": "司马法·仁本",
+   "relational": "以目的抵消手段之损，取消了损失的保留",
+   "tradition": "兵家",
+   "work": "《司马法》",
+   "checked": "corrected"
+  },
+  {
+   "id": "simafa-ru-zui-ren-zhi-di",
+   "status": "revised",
+   "record_ids": [
+    "BI1-SM-R-06"
+   ],
+   "source_id": "BI1-S-SM",
+   "layer": "先秦·传世正文（《司马法·仁本》，战国，传世本有争议）",
+   "fragments": [
+    "入罪人之地，無暴神祇，無行田獵，無毀土功，無燔牆屋，無伐林木，無取六畜、禾黍、器械。見其老幼，奉歸勿傷。雖遇壯者，不校勿敵。敵若傷之，醫藥歸之。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.BasicPriority",
+    "Becoming.Lexical.Above.no_trade",
+    "Becoming.Lexical.Above.anchor",
+    "Becoming.Flow.Balances.loses_iff_beyond_margin"
+   ],
+   "records": [
+    "protection-priority-excludes-uniform-aggregation",
+    "significance-retained-within-margin"
+   ],
+   "reading": "AI读法：司马法给征伐加上保护：不毁土功、墙屋、林木，不取六畜禾黍器械，不伤老幼，伤者医药归之。J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张的选项不论增益都不在其上（Lexical.Above.no_trade），保留对方全部基本主张又保留一个它所缺的基本主张者在其上（Lexical.Above.anchor）：这些禁令所护的正是生计与再生的条件（林木、六畜、禾黍、土功），这是无以小害大。从立场 p（意义作为所给），一个部分恰在其对某形成所需条件的净汲取超出余地之处失去一个有意义的延续（Flow.Balances.loses_iff_beyond_margin），“無取”把汲取限在余地之内。定域：这些约束在征伐之内成立；征伐本身的许可（以战去战）理论不承认（见 simafa-yi-zhan-qu-zhan）。吴子“示民無殘心”（BI1-WZ-R-22）列为平行，其目的在争取民心，属争位语境，只取结构。“罪人”的罪责分类不取。",
+   "names_used": [
+    "无以小害大",
+    "余地"
+   ],
+   "locator": "司马法·仁本",
+   "relational": "保护生计与再生的条件，即使在冲突之中",
+   "tradition": "兵家",
+   "work": "《司马法》",
+   "checked": "passed"
+  },
+  {
+   "id": "sunzi-mougong-quan-wei-shang",
+   "status": "revised",
+   "record_ids": [
+    "BI1-SZ-R-10",
+    "BI1-SZ-R-11",
+    "BI1-SZ-R-12",
+    "BI1-SZ-R-13",
+    "BI1-SZ-R-14"
+   ],
+   "source_id": "BI1-S-SZ",
+   "layer": "先秦·传世正文（《孙子·谋攻》，春秋末至战国，成书有争议；“经”是后起的称呼）",
+   "fragments": [
+    "全國為上，破國次之",
+    "是故百戰百勝，非善之善者也；不戰而屈人之兵，善之善者也。",
+    "故上兵伐謀，其次伐交，其次伐兵，其下攻城。攻城之法，為不得已。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "争胜与等级",
+   "declarations": [
+    "Becoming.RelativePosition.change_opposed",
+    "Becoming.RelativePosition.rise_needs_fall",
+    "Becoming.RelativePosition.not_all_rise",
+    "Becoming.aboveAll_unique",
+    "Becoming.Law.aboveAll_never_rests",
+    "Becoming.Flow.race_ends_greatest"
+   ],
+   "records": [
+    "relative-position-is-zero-sum",
+    "seeking-boundary",
+    "where-a-rising-take-ends"
+   ],
+   "reading": "AI读法：沿用 RO 的映射（divergence）：“全國為上”保全对方整体，在减少毁坏上与延续同向；但目标是“屈人”，即相对位置（称）：一方位置之变是其余变化之和的反面（RelativePosition.change_opposed），一方上升需要另一方下降（RelativePosition.rise_needs_fall），没有变化提升每一方（RelativePosition.not_all_rise）；高于一切他者在一个构形至多一方满足（aboveAll_unique），两个求高于一切者永不同时静止（Law.aboveAll_never_rests）；在平衡与联合过量之下，在共享条件处的竞逐（争）随条件耗尽而结束最大的部分（Flow.race_ends_greatest）。本簇加读伐谋、伐交、伐兵、攻城的排序：它是争位框架内按毁坏多少的排序，形式上与按损失排序相近，但比较的目的是胜，不是无丧与有得；“攻城之法，為不得已”标出被保留的损失。方向的相分，不是对“全國”的否定。",
+   "names_used": [
+    "称",
+    "争"
+   ],
+   "locator": "孙子·謀攻第三",
+   "relational": "以相对位置为目标，在其中减少毁坏",
+   "ro_passage": "sunzi-bu-zhan-er-qu-ren",
+   "tradition": "兵家",
+   "work": "《孙子兵法》",
+   "checked": "passed"
+  },
+  {
+   "id": "sunzi-huogong-bu-ke-fu-sheng",
+   "status": "revised",
+   "record_ids": [
+    "BI1-SZ-R-56"
+   ],
+   "source_id": "BI1-S-SZ",
+   "layer": "先秦·传世正文（《孙子·火攻》，春秋末至战国，成书有争议；“经”是后起的称呼）",
+   "fragments": [
+    "主不可以怒而興師，將不可以慍而致戰。合於利而動，不合於利而止。",
+    "怒可以復喜，慍可以復悅，亡國不可以復存，死者不可以復生。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Law.lost_stays",
+    "Becoming.Law.Merges.loses",
+    "Becoming.Law.lossless_iff_returns",
+    "Becoming.Branching.loss_passes_juncture",
+    "Becoming.Branching.juncture_iff",
+    "Becoming.Settling.settles_no_undoable"
+   ],
+   "records": [
+    "recurrence-without-premise",
+    "every-loss-passes-a-juncture",
+    "when-the-runs-of-a-process-settle"
+   ],
+   "reading": "AI读法：沿用 RO 的映射（agreement）：失去的可能保持失去（Law.lost_stays）；有限构形中合并永久失去一个可能（Law.Merges.loses），无损恰是能复（Law.lossless_iff_returns）；一个能返回的构形的每次失去，在双重否定的意义上都经过一个机（关节，保持与失去都还有一步之处；Branching.loss_passes_juncture，Branching.juncture_iff 依定义）；凡从某构形起每条运行都终于静止之处，从它可达的改变没有一个能被撤销（Settling.settles_no_undoable）。本簇读其取舍的一面：怒喜可复，亡国死者不可复，所以不可因可复者（一时之怒）而招致不可复者。在比较中，可复的损失与不可复的损失不在同一层，这与把不可恢复者列入基本层的无以小害大（J2）读法相合，也说明同类积小（FR）只在可恢复的损失之内，不越过不可复者。“合於利而動，不合於利而止”是求胜之术，律本身不含利害权衡，不取。",
+   "names_used": [
+    "复",
+    "机",
+    "无以小害大",
+    "同类积小"
+   ],
+   "locator": "孙子·火攻第十二",
+   "relational": "可复与不可复的失去分属两层",
+   "ro_passage": "sunzi-huogong-bu-ke-fu",
+   "tradition": "兵家",
+   "work": "《孙子兵法》",
+   "checked": "corrected"
+  },
+  {
+   "id": "zhixu-zhi-li-fei-shi",
+   "status": "revised",
+   "record_ids": [
+    "FO2-YJ-R007"
+   ],
+   "source_id": "FO2-YJ",
+   "layer": "清·疏（明末清初，蕅益智旭《佛说阿弥陀经要解》）",
+   "fragments": [
+    "今設不從事於取捨，但尚不取不捨，即是執理廢事，既廢於事，理亦非圓。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.FrontierFrames.Options",
+    "Becoming.Requirement.Frontier",
+    "Becoming.FrontierFrames.choice_exists_iff_weakly"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：智旭说：若不从事于取舍，只崇尚不取不舍，就是执理废事；既废于事，理也不圆。智旭的“理”是理事之理，属先在根据（本原）的一层，不是已采纳的理（结构与变化之律的建模）；智旭在同一传统内以“理亦非圓”限定它，理事圆融的那一层不取。与理论相合的只有一点：“不取不捨”不是取舍之外的一个位置，而是取舍中的一个选项。理论中，在每一构形，选择的范围是一步所达的选项（FrontierFrames.Options，定义），“不取不捨”若可行，就是其中之一，与其他选项一样在所给比较的前沿上被比较（Requirement.Frontier，定义）；每一步都有被选者恰需要弱排中（FrontierFrames.choice_exists_iff_weakly），比较未决时可以没有已知被选者，但不说可以不在选项之中。定域：废事则不圆，在不取不舍本是可行选项之一时成立。净土愿生的目标不取。",
+   "names_used": [],
+   "locator": "FO2-YJ／0364c23／要解正文",
+   "relational": "不取舍也是一个与其他选项相比较的选项",
+   "tradition": "佛（净土）",
+   "work": "智旭《佛说阿弥陀经要解》",
+   "checked": "passed"
+  },
+  {
+   "id": "jinshizi-li-zhu-qu-she",
+   "status": "revised",
+   "record_ids": [
+    "FO2-KS-P-R034"
+   ],
+   "source_id": "FO2-KS-P",
+   "layer": "隋唐·论（唐，法藏《华严金师子章》章文）",
+   "fragments": [
+    "一切有為諸法更不待壞，本來寂滅。離諸取捨，即於此路流入薩婆若海，故名為道也。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "本原（以本来寂灭取消差别与取舍）",
+   "declarations": [
+    "Becoming.Law.lost_stays",
+    "Becoming.Web.widens_iff_retains_adds",
+    "Becoming.FrontierFrames.Options",
+    "Becoming.FrontierFrames.nothing_required"
+   ],
+   "records": [
+    "recurrence-without-premise",
+    "comparison-by-widening",
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：金师子章：一切有为法不待坏而本来寂灭，离诸取舍，即流入萨婆若海，名为“道”。这与理论相分。理论中取舍是实在的：失去的可能保持失去（Law.lost_stays），比较区分无丧与有得（在延续条件下 Web.widens_iff_retains_adds），只有在没有可能移动之处才无所要求（FrontierFrames.nothing_required），否则选择在一步所达的选项之中（FrontierFrames.Options，定义）。“本來寂滅”把差别读作不真，从而“離諸取捨”；理论读出差别与损失都是真实的关系，不经一个无差别的根据取消，这属于本原（先在根据）这一非关系层。智旭“執理廢事”（FO2-YJ-R007）是同一传统内部对这一方向的限定，见 zhixu-zhi-li-fei-shi。",
+   "names_used": [
+    "无丧",
+    "有得"
+   ],
+   "locator": "FO2-KS-P／0670b15／第九、成菩提",
+   "relational": "以本来寂灭取消取舍，差别不再作为关系被保留",
+   "tradition": "佛（华严）",
+   "work": "法藏《华严金师子章》",
+   "checked": "passed"
+  },
+  {
+   "id": "xunzi-lilun-song-si-you-yi",
+   "status": "revised",
+   "record_ids": [
+    "RU2-R0110",
+    "RU2-R0111"
+   ],
+   "source_id": "RU2-S-XZ19",
+   "layer": "先秦·论（战国末，《荀子·礼论》）",
+   "fragments": [
+    "三年之丧，二十五月而毕，哀痛未尽，思慕未忘，然而礼以是断之者，岂不以送死有已，复生有节也哉！",
+    "其立哭泣、哀戚也，不至于隘慑伤生，是礼之中流也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.Repair.above",
+    "Becoming.Lexical.Repair.loss_retained",
+    "Becoming.Lexical.Above.anchor",
+    "Becoming.Law.lost_stays",
+    "Becoming.Frame.ReadsAt",
+    "Becoming.Frame.ReadsAt.loss_retained"
+   ],
+   "records": [
+    "classification-robust-generative-comparison",
+    "recurrence-without-premise",
+    "finite-aggregation-within-restorable-basic-losses"
+   ],
+   "reading": "AI读法：《礼论》说三年之丧二十五月而毕，哀痛未尽、思慕未忘，以此断之，因为“送死有已，复生有节”；哭泣哀戚不至于伤生。结构是两层：恢复生者的基本条件在哀悼的延续之上，但哀悼所对的失去不被取消。在一个构造的修复情形中，恢复基本条件者在庆典之上，而庆典所实现的事件修复不实现，损失被保留（见证：Lexical.Repair.above、Lexical.Repair.loss_retained；见证的名字是修复与庆典，此处只取结构：恢复基本在上、所舍者仍是损失）；J1/J2 作为条件时，保留对方全部基本主张又保留一个它所缺的基本主张者在其上（Lexical.Above.anchor）；失去的可能保持失去（Law.lost_stays）；在按事件之时读主张的帧上（Frame.ReadsAt，定义，这是一个前提），恢复的支持不使已错过的主张重新实现（Frame.ReadsAt.loss_retained）。所以“断之”不是说所哀者不再重要，而是生者的“复生”在上（无以小害大），失去仍保留（兼权）。墨子“不失死生之利”（MO1-C25-R011）同构，列为平行。二十五月的期限由“礼”给出，理论不给数值。",
+   "names_used": [
+    "无以小害大",
+    "兼权"
+   ],
+   "locator": "荀子/礼論篇",
+   "relational": "生者的复生与对死者的哀悼分两层，后者的失去保留",
+   "tradition": "儒家",
+   "work": "《荀子·礼论》",
+   "checked": "passed"
+  },
+  {
+   "id": "mencius-fu-jin-yi-shi",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·论（战国中期，《孟子·梁惠王上》第3章）",
+   "fragments": [
+    "数罟不入洿池，鱼鳖不可胜食也；斧斤以时入山林，材木不可胜用也。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Web.Renewed",
+    "Becoming.Flow.Balances.includes_of_renewed",
+    "Becoming.Preemption.within_renewal_yet_loses"
+   ],
+   "records": [
+    "the-run-classes-and-widening",
+    "significance-retained-within-margin"
+   ],
+   "reading": "AI读法：孟子说密网不入池，鱼鳖吃不完；斧斤按时入山林，材木用不尽。结构是：取若落在能更新的条件上，就取之不尽。理论给出确切的条件：在平衡、只有活动者拿取且只从其所汲取者拿取的流中，一个部分所汲取的每个条件若在整个运行上被更新（恒；Web.Renewed，定义：每个依赖它的形成在每一步都被保持），有它的水平就包含没有它的水平，它保住能形成者（Flow.Balances.includes_of_renewed）。定域：“以时”说的是取的时机，按时而取不等于所取的条件在整个运行上被更新；在一个构造的流中，一次在其步属于更新、也不剥的汲取，仍然关闭了一个能形成者（见证：Preemption.within_renewal_yet_loses），这是先取。所以“不可胜用”在按时的取都落在被更新的条件上时成立（充分条件），作为以时则不尽的普遍形式不成立。“王道之始”的评价不取。脉络 RU2-R0003 在 C04，此处只作出处。",
+   "names_used": [
+    "恒",
+    "剥",
+    "先取"
+   ],
+   "locator": "《孟子·梁惠王上》第3章",
+   "relational": "取与所取条件的更新之间的关系决定取能否不尽",
+   "tradition": "儒家",
+   "work": "《孟子》",
+   "checked": "corrected"
+  },
+  {
+   "id": "xunzi-zhengming-zheng-quan",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》）",
+   "fragments": [
+    "衡不正，则重县于仰，而人以为轻；轻县于俛，而人以为重；此人所以惑于轻重也。",
+    "权不正，则祸托于欲，而人以为福；福托于恶，而人以为祸；此亦人所以惑于祸福也。",
+    "道者，古今之正权也；离道而内自择，则不知祸福之所托。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "固定本性或价值",
+   "declarations": [
+    "Becoming.Profiles.different_selections",
+    "Becoming.ScoreRepresentation.livingSignificance_leaves_ordering_open",
+    "Becoming.Lexical.Crossed.incomparable"
+   ],
+   "records": [
+    "classification-robust-generative-comparison",
+    "protection-priority-excludes-uniform-aggregation"
+   ],
+   "reading": "AI读法：荀子把权比作秤：衡不正，重者悬在高处而人以为轻，轻者悬在低处而人以为重；权不正，祸寄于所欲而人以为福；所以“道者，古今之正权也”，离开它而“内自择”，就不知祸福所寄。前一半说轻重的结论依赖于所用的衡器，这与理论相同：以广为愈之外的排序都是另给的承诺，在一个构造的两维情形中，两个都尊重每个生成扩展的评分各自融贯地选出不同选项（见证：Profiles.different_selections）。相分在后一半：荀子断言有一个古今不变的正权，为一切轻重定准。理论中没有这样一根秤：在一个构造的保护对增益情形中，生命意义（活皆有顾）既与两层词典序相容，也与把增益排在保护之上的标量序相容（见证：ScoreRepresentation.livingSignificance_leaves_ordering_open）；在一个构造的情形中，各持一个对方所缺的受保护主张的两个选项不可比，即使增益相等（见证：Lexical.Crossed.incomparable）。所以比较的承诺陈述出来、可以修订，不由一个固定标准给出；“正权”属于固定本性或价值这一非关系层。秤所含的单一标量全序，也不是理论之权的结构。",
+   "names_used": [
+    "权",
+    "以广为愈",
+    "活皆有顾"
+   ],
+   "locator": "荀子/正名篇",
+   "relational": "轻重相对于所用的比较；以一个古今不变的衡器定准则不是关系的",
+   "tradition": "儒家",
+   "work": "《荀子·正名》",
+   "checked": "passed"
+  },
+  {
+   "id": "sunzi-junzheng-wei-li-wei-wei",
+   "status": "new",
+   "record_ids": [
+    "BI1-SZ-R-33"
+   ],
+   "source_id": "BI1-S-SZ",
+   "layer": "先秦·传世正文（《孙子·军争》，春秋末至战国，成书有争议；“经”是后起的称呼）",
+   "fragments": [
+    "故軍爭為利，軍爭為危。舉軍而爭利，則不及；委軍而爭利，則輜重捐。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.LiftBetter",
+    "Becoming.comparison_lifts",
+    "Becoming.LiftModel.some_outcome_does_not_lift"
+   ],
+   "records": [
+    "becoming-spine-instances"
+   ],
+   "reading": "AI读法：孙子说“軍爭為利，軍爭為危”：同一回应（争利）的结果有利也有危；“舉軍而爭利，則不及；委軍而爭利，則輜重捐”：两种争法各有所得、各有所失。结构是：一个回应的结果有好有坏时，不能按结果把它整体排在另一回应之上或之下。提升规则 L（LiftBetter，定义：一个回应的每个结果都优于另一个回应的每个结果，才把它排在上面）正是如此：以广为愈可以这样提升，被提升的扩展是一个保守的提升比较（comparison_lifts）；在一个构造的模型中，一个结果更好、一个结果更坏的回应，L 在两个方向都不比较（见证：LiftModel.some_outcome_does_not_lift）。所以“為利”“為危”并举，正标出 L 不定取舍之处，那里须另给判断的承诺。孙子由此转向“知迂直之計”，以胜为比较的标准，这一层不取（见 sunzi-mougong-quan-wei-shang 的相分）。",
+   "names_used": [
+    "以广为愈"
+   ],
+   "locator": "孙子·軍爭第七",
+   "relational": "同一回应的诸结果有利有危，回应之间的比较以结果的全体为准",
+   "tradition": "兵家",
+   "work": "《孙子兵法》",
+   "checked": "passed"
+  },
+  {
+   "id": "mojing-daqu-wu-ze",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "MI1-S-DQ",
+   "layer": "先秦·论（战国后期墨家，《墨子·大取》）",
+   "fragments": [
+    "斷指與斷腕，利於天下相若，無擇也。死生利若，一無擇也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.Above.not_of_included",
+    "Becoming.Requirement.Frontier",
+    "Becoming.Requirement.Required.defeated"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：大取说：断指与断腕，若对天下之利相若，就无所择；死与生利若，也一无所择。结构是：比较分不出高下之处，取舍不由比较给出。J1/J2 作为条件时，一个选项若两层所持都被另一选项包含，它就不在另一选项之上（Lexical.Above.not_of_included）；两者两层所持相同，则谁也不在谁之上，在只有这两项的菜单上两者都在前沿上（Requirement.Frontier，定义：可接纳而不被胜过者）。前沿上有一个可接纳的选项不执行某任务，就击败这一任务的要求（Requirement.Required.defeated）：以断指为任务，前沿上的断腕一项不执行它，反之亦然，所以两者都不被要求。“無擇”正是此处无所要求，不是说两者无别。“利於天下”作为单一的度量由大取给出，理论不设。此句没有脉络记录。",
+   "names_used": [],
+   "locator": "大取·冻结正文段1—8",
+   "relational": "两个选项相对于所给比较相若时，取舍不由比较定出",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·大取》",
+   "checked": "corrected"
+  },
+  {
+   "id": "mozi-feiru-dai-yu-fen-zhi",
+   "status": "new",
+   "record_ids": [
+    "MO1-C39-R003"
+   ],
+   "source_id": "MO1-S-C39",
+   "layer": "先秦·论（战国，《墨子·非儒下》第39篇）",
+   "fragments": [
+    "有強執有命以說議曰：「壽夭貧富，安危治亂，固有天命，不可損益。窮達賞罰，幸否有極，人之知力，不能為焉。」羣吏信之，則怠於分職；庶人信之，則怠於從事。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Requirement.residual_of_unfulfilled",
+    "Becoming.Dependence.makesDifference_iff",
+    "Becoming.Dependence.Overdetermined.no_difference"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "joint-difference-making"
+   ],
+   "reading": "AI读法：非儒下记执有命者之说：寿夭贫富、安危治乱“固有天命，不可損益”，“人之知力，不能為焉”；墨子说群吏信之则“怠於分職”，庶人信之则“怠於從事”。“分職”是一项在关系中的承担，它使任务到期；到期、未做、又未解除，就有余责（Requirement.residual_of_unfulfilled，依定义）。余责不以造成差别为条件：有分职而怠者，不论结果是否由他造成，都留下余责，墨子对“怠於分職”的批评在此成立。另一问是乱是否归于怠者：信“命”而怠作为一个部分是否造成差别（有力），由若无检验决定：撤去它时同一移动可取、依赖仍在且被满足，它造成差别恰当同一移动不再打破依赖（Dependence.makesDifference_iff）；损失被多重决定时，没有单个部分造成差别（Dependence.Overdetermined.no_difference），乱就不能归于任一怠者。定域：“人之知力，不能為焉”作为全称不成立；在一个部分造成差别之处，结果可以归于它；在多重决定处，结果不归于任一部分，余责仍随承担而在。“有命”被归于儒者，是墨家论辩中的说法，不作为儒家的自述。",
+   "names_used": [
+    "有力"
+   ],
+   "locator": "《墨子·非儒下》第39篇·冻结页正文段3",
+   "relational": "余责以承担（分职）为据；结果的归属以造成差别为界，二者分开",
+   "tradition": "墨家",
+   "work": "《墨子·非儒下》",
+   "checked": "corrected"
+  },
+  {
+   "id": "mencius-xing-yi-bu-yi",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·论（战国中期，《孟子·公孙丑上》第2章）",
+   "fragments": [
+    "行一不义、杀一不辜而得天下，皆不为也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.BasicPriority",
+    "Becoming.FrontierFrames.Priority",
+    "Becoming.Lexical.Above.no_trade"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "protection-priority-excludes-uniform-aggregation"
+   ],
+   "reading": "AI读法：孟子说伯夷、伊尹与孔子相同之处：“行一不义、杀一不辜而得天下，皆不为也。”结构是：再大的增益也不换一个加于人的基本损失。J1/J2 作为条件时（Lexical.BasicPriority；帧上 FrontierFrames.Priority；条件，核心不断言），失去一个对方所持的基本主张的选项，不论多少增益都不在其上（Lexical.Above.no_trade）：“杀一不辜”失去一人的生存，“得天下”是增益，于是得天下的选项不在不杀者之上。这正是无以小害大（J2）的原文义：可选的增益不许可施加的基本剥夺；“一”与“天下”标出的是不论多少。“行一不义”的“义”层由孟子给出，不取；“一不辜”标出的是施加于他人，与自承之损的区别见 mojing-daqu-sha-ji 的缺口。荀子王霸“行一不义，杀一无罪，而得天下，仁者不为也”同构。此句没有脉络记录。",
+   "names_used": [
+    "无以小害大"
+   ],
+   "locator": "《孟子·公孙丑上》第2章",
+   "relational": "加于他人的基本损失不由任何增益换取",
+   "tradition": "儒家",
+   "work": "《孟子》",
+   "checked": "passed"
+  },
+  {
+   "id": "zhuangzi-rangwang-bu-yi-sheng",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "ZH1-S28",
+   "layer": "先秦或秦汉·论（《庄子·让王》，杂篇，时代有争议）",
+   "fragments": [
+    "夫天下，至重也，而不以害其生，又況他物乎？",
+    "故天下，大器也，而不以易生，此有道者之所以異乎俗者也。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.BasicPriority",
+    "Becoming.Lexical.Above.no_trade"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：让王说：天下至重，而不以之害其生，何况他物；天下是大器，而不以之换生。结构是不以增益（天下）换基本（生）：J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张的选项，不论多少增益都不在其上（Lexical.Above.no_trade），分类也合：生读作基本主张，天下读作增益。定域：让王所护的是自己的生，承受者是自己；无以小害大讲的是施加的基本剥夺，自承之舍不在其中，这一不对称见 mojing-daqu-sha-ji 的缺口；让王把不以天下换生作为普遍的处世之方，理论只在生与天下分属两层时同意。“有道者之所以異乎俗”的评价与“唯无以天下爲者，可以託天下”的推论不取。此段没有脉络记录。",
+   "names_used": [
+    "无以小害大"
+   ],
+   "locator": "庄子·讓王",
+   "relational": "生与天下分属两层，不以后者换前者",
+   "tradition": "庄学",
+   "work": "《庄子·让王》",
+   "checked": "passed"
+  },
+  {
+   "id": "hanfei-xianxue-bu-yi-jing-yi-mao",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "FA1-S-H50",
+   "layer": "先秦·论（战国末，《韩非子·显学》）",
+   "fragments": [
+    "今有人於此，義不入危城，不處軍旅，不以天下大利易其脛一毛，世主必從而禮之，貴其智而高其行，以爲輕物重生之士也。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.Above.no_trade",
+    "Becoming.Lexical.Reorganizing.classification_matters",
+    "Becoming.Lexical.Crossed.incomparable",
+    "Becoming.BoundaryInvariant"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "classification-robust-generative-comparison",
+    "continuation-condition-decomposition"
+   ],
+   "reading": "AI读法：显学记一种人：“義不入危城，不處軍旅，不以天下大利易其脛一毛”，世主以为“輕物重生之士”。结构是不以增益换自己的基本，与无以小害大同形：J1/J2 作为条件时，失去一个对方所持的基本主张者不论多少增益都不在其上（Lexical.Above.no_trade）。定域在分类：把自己的“一毛”读作基本、把“天下大利”读作增益，序才如此；分类是给出的，在一个构造的改组情形中，分类一变序就变（见证：Lexical.Reorganizing.classification_matters）；“天下大利”若含他人的基本条件，两选项各持一个对方所缺的受保护主张，在一个构造的情形中不可比（见证：Lexical.Crossed.incomparable），不以之换，不由词典序给出。这一分类以自身为中心，与不易乎畛相背：不变的一步要求预设不随边界怎样划而改变（BoundaryInvariant，定义），他者的失去与己的失去同样计入。韩非引此是为批评世主所养非所用（脉络 FA1-H50-R006 在 C10），这一层不取。",
+   "names_used": [
+    "无以小害大",
+    "不易乎畛"
+   ],
+   "locator": "《韩非子·顯學》转录第4段",
+   "relational": "不变的分类若以自身为中心，他者的基本条件被排在增益一边",
+   "tradition": "法家",
+   "work": "《韩非子·显学》",
+   "checked": "passed"
+  },
+  {
+   "id": "wuxing-bu-yi-xiao-dao-hai-da-dao",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "V130-LAO-GD",
+   "layer": "先秦·经（郭店楚简《五行》经文，战国中期，墓葬约公元前300年）；说只见于马王堆帛书本（秦汉之际至汉初抄写，成文时代有争议），此转录把二者合排，未据图版校勘",
+   "fragments": [
+    "不34以小道害大道，简也。",
+    "“不果不简”，简也者，不以小害大，不以轻害重。",
+    "“不以小道害大道，简也”，简也者，不以小爱害大爱，不以小义害大义也。见其生也，不食其死也，祭亲执诛，简也。"
+   ],
+   "kind": "divergence",
+   "layer_checked": "固定本性或价值",
+   "declarations": [
+    "Becoming.Lexical.BasicPriority",
+    "Becoming.Lexical.Above.no_trade",
+    "Becoming.Lexical.Reorganizing.classification_matters"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "classification-robust-generative-comparison"
+   ],
+   "reading": "AI读法：《五行》经20：“不34以小道害大道，简也”（34 为转录所存简号）；说13释“简”为“不以小害大，不以轻害重”，说20释为“不以小爱害大爱，不以小义害大义也”，并以“祭亲执诛”为例。这是“不以小害大”较早的见证。形式与无以小害大（J2）相合：J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张者不论多少增益都不在其上（Lexical.Above.no_trade）。相分在分类：《五行》把何者为大定为固定的“大道”“大义”，以“大义”压过对亲人的爱而“执诛”，即把一个加于人的基本剥夺放在“大”的一边；理论中分类是给出、可修订的承诺，在一个构造的改组情形中分类一变序就变（见证：Lexical.Reorganizing.classification_matters），而无以小害大的原文义是可选的增益不许可施加的基本剥夺。所以《五行》的“大”属于固定本性或价值这一非关系层。此句没有脉络记录。",
+   "names_used": [
+    "无以小害大"
+   ],
+   "locator": "郭店楚墓竹簡·五行·经20、说13、说20",
+   "relational": "小大之分若定为固定的“大道”“大义”，层次就不是由关系给出的",
+   "tradition": "儒家（思孟一系，有争议）",
+   "work": "《五行》",
+   "checked": "passed"
+  },
+  {
+   "id": "mencius-wu-yi-xiao-hai-da",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "RU2-S-MZ",
+   "layer": "先秦·论（战国中期，《孟子·告子上》第14章）",
+   "fragments": [
+    "体有贵贱，有小大。无以小害大，无以贱害贵。养其小者为小人，养其大者为大人。",
+    "养其一指，而失其肩背而不知也，则为狼疾人也。",
+    "饮食之人，无有失也，则口腹岂适为尺寸之肤哉？"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Lexical.BasicPriority",
+    "Becoming.Lexical.Above.no_trade",
+    "Becoming.Lexical.Above.not_of_included"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "protection-priority-excludes-uniform-aggregation"
+   ],
+   "reading": "AI读法：孟子说身体之分有贵贱小大，“无以小害大，无以贱害贵”；养一指而失肩背不自知，是“狼疾人”；又说“饮食之人，无有失也，则口腹岂适为尺寸之肤哉”。这是无以小害大之名的出处，结构有两半。其一，不以小者损大者：J1/J2 作为条件时（Lexical.BasicPriority），失去一个对方所持的基本主张者不论多少增益都不在其上（Lexical.Above.no_trade）；肩背读作基本、一指读作增益，养一指而失肩背者不在不失者之上。其二，不失大者时养小不受禁止：一个选项若两层所持都被另一选项包含，就不在其上（Lexical.Above.not_of_included），所以只去增益而不增基本者，并不在兼有二者者之上；“无有失也”正是养小而不失大的条件。定域：孟子把小大之分读作固定的贵贱（同篇下章以“心”为大体、耳目为小体），这一层不取，理论只取给出的两层分类；“小大”在此是层，不是量，与同类积小（同一类内计数）的“小”不同。此章没有本簇候选记录。",
+   "names_used": [
+    "无以小害大",
+    "同类积小"
+   ],
+   "locator": "《孟子·告子上》第14章",
+   "relational": "小与大是两层的关系：不以小损大，不失大时可养小",
+   "tradition": "儒家",
+   "work": "《孟子》",
+   "checked": "passed"
+  },
+  {
+   "id": "lunyu-li-bu-zu-zhong-dao-er-fei",
+   "status": "new",
+   "record_ids": [
+    "RU1-LY-06-10-R01",
+    "RU1-LY-06-10-R02"
+   ],
+   "source_id": "RU1-S-LY",
+   "layer": "先秦·原典正文（《论语·雍也》）",
+   "fragments": [
+    "冉求曰：「非不說子之道，力不足也。」子曰：「力不足者，中道而廢；今女畫。」"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Requirement.Assigned.capable",
+    "Becoming.Requirement.residual_of_unfulfilled"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance"
+   ],
+   "reading": "AI读法：冉求说不是不喜欢孔子的“道”，是力不足；孔子说力不足者走到中途才废止，你现在是自己画了界。这是量力而任（J3）的两侧。真的力不足，在力所及之处止，不在要求之内：在每个可接纳计划的分派都可行的条件下，被分派者可行（Requirement.Assigned.capable；可行写在可接纳性里），力所不及者不被分派。“今女畫”是能而先自止：力的界不是自画的界。若把冉求所“說”之道读作他已承担的任务（读法），在力尚可及之处，这一任务到期、未做、未解除，就留下余责（Requirement.residual_of_unfulfilled，依定义：到期、未做、未解除）。相合在：能力是界，不是不为的理由。“中道而廢”只有在实际走到力尽时才可知，孔子以此判冉求，是对具体处境的认定，理论不替它作。",
+   "names_used": [
+    "量力而任"
+   ],
+   "locator": "《论语》雍也第六·原页六之十",
+   "relational": "能力之界与自画之界不同：前者在实际所及之处，后者先于所及",
+   "tradition": "儒家",
+   "work": "《论语》",
+   "checked": "corrected"
+  },
+  {
+   "id": "mojing-ren-sun-ji",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "MI1-S-JS",
+   "layer": "先秦·经（战国后期墨家，《墨子·经上》）",
+   "fragments": [
+    "任，士損己而益所爲也。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.FrontierWorlds.giver_active",
+    "Becoming.FrontierWorlds.sole_giver_active",
+    "Becoming.Web.Dependent",
+    "Becoming.Stock.exhausted_within"
+   ],
+   "records": [
+    "practical-judgment-under-living-significance",
+    "renewing-consuming-formation"
+   ],
+   "reading": "AI读法：经上：“任，士損己而益所爲也。”任是士减损自己以增益所为之事。量力而任之名也用“任”字，这里须分开：墨经的任不计己损，没有界。理论中，在只有活动的形成给予的前提下，给予者在给予时是活动的（FrontierWorlds.giver_active），唯一的给予者在其给予被要求的每一步都须活动（FrontierWorlds.sole_giver_active）；在活动需要支持的前提下（Web.Dependent，定义），给予者失去其所需的支持就不再活动；把所给读作出自给予者自身所持、无补充的存量（读法），一个每次汲取都使水平下降、凡为正就有汲取的存量，在与其所持相同的步数内耗尽（Stock.exhausted_within）。这是几条结果与两个前提的组合，不是一条律：在这些前提下，“損己”在给予者能继续活动的范围内成立，越过这一点就失去以后的给予所依赖的给予者；“任”作为无界的自损不成立。定域：损己是自承的给予，不是施加的剥夺，承诺层不禁止它，只说它有界；节点 MI1-N-JS-012 没有关系记录。",
+   "names_used": [
+    "量力而任"
+   ],
+   "locator": "《墨子·經上》·任条",
+   "relational": "给予者的自损与其继续给予的条件之间的关系",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經上》",
+   "checked": "corrected"
+  },
+  {
+   "id": "mojing-yi-suo-yi-zhi-suo-yu",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "MI1-S-SS",
+   "layer": "先秦·经说（战国后期墨家，《墨子·经说上》）",
+   "fragments": [
+    "是猶食脯也，騷之利害，未知也，欲而騷，是不以所疑止所欲也。廧外之利害未可知也，趨之而得刀，則弗趨也，是以所疑止所欲也。",
+    "所爲與所不爲，與相疑也，非謀也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.LiftBetter",
+    "Becoming.comparison_lifts",
+    "Becoming.LiftModel.some_outcome_does_not_lift"
+   ],
+   "records": [
+    "becoming-spine-instances"
+   ],
+   "reading": "AI读法：经上“爲，窮知而𠐴於欲也”，经说上举两例：吃脯而其利害未知，想吃就吃，是“不以所疑止所欲”；墙外利害未可知，即使去了能得钱刀也不去，是“以所疑止所欲”；又说“所爲與所不爲，與相疑也，非謀也”。结构是：结果未知时，做与不做都在疑中，取舍不由谋算的比较定出。提升规则 L（LiftBetter，定义：一个回应的每个结果都优于另一个回应的每个结果，才把它排在上面）正是如此：以广为愈可以这样提升（comparison_lifts）；在一个构造的模型中，一个结果更好、一个结果更坏的回应，L 在两个方向都不比较（见证：LiftModel.some_outcome_does_not_lift）。所以“非謀也”与 L 相合：结果不全胜之处，比较不定取舍。墨经说此时由欲决定（“窮知而𠐴於欲”），或以疑止欲，这是对行动的描述；理论只说那里需要另给的承诺（例如以疑止欲），不由 L 给出。此段没有脉络记录（阅读单位 MI1-U-SS-71）。",
+   "names_used": [
+    "以广为愈"
+   ],
+   "locator": "經說上·阅读单位 MI1-U-SS-71",
+   "relational": "结果未知时，做与不做之间的比较不由结果给出",
+   "tradition": "墨家（名辩）",
+   "work": "《墨子·經說上》",
+   "checked": "passed"
+  },
+  {
+   "id": "xunzi-xinge-ke-yi-er-bu-neng",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ23",
+   "layer": "先秦·论（战国末，《荀子·性恶》）",
+   "fragments": [
+    "故涂之人可以为禹则然，涂之人能为禹则未必然也。虽不能为禹，无害可以为禹。足可以遍行天下，然而未尝有遍行天下者也。"
+   ],
+   "kind": "agreement",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Enough.assured_iff",
+    "Becoming.Enough.Free.stays_meet_not_assured",
+    "Becoming.Enough.law_possibly_iff_assured"
+   ],
+   "records": [
+    "the-boundary-of-enough-under-undetermined-laws"
+   ],
+   "reading": "AI读法：荀子分“可以”与“能”：“涂之人可以为禹则然，涂之人能为禹则未必然也”；“足可以遍行天下，然而未尝有遍行天下者也”。结构是：有一条到达的进程，不等于实际的进程到达。理论在不确定之律下分开可能之足与保证之足：从 s 起的每条运行都静止且目标被满足，恰当每个从 s 可达、有停留之步的构形都满足目标，并且从 s 起的每条运行都终于静止，后一半不提目标（Enough.assured_iff）；在一个构造的两状态过程中，每个构形都能停留并满足目标，某条运行静止于目标，交替的运行却不静止，所以并非每条运行都静止（见证：Enough.Free.stays_meet_not_assured）。只在确定之律下，可能与保证才是一回事（Enough.law_possibly_iff_assured）。“能”指实际做到，实际的运行只是诸运行之一；可能而不保证时，它未必到达，这正是“可以”而“未必然”，是足而止在不确定之律下分出的两种。荀子以此说“性恶”而可学，那一层不取；脉络 RU2-R0147 在 C16，此处只作出处。",
+   "names_used": [
+    "足而止"
+   ],
+   "locator": "荀子/性惡篇",
+   "relational": "可以（有一条到达的进程）与能（实际的进程到达，不被保证）之分",
+   "tradition": "儒家",
+   "work": "《荀子·性恶》",
+   "checked": "corrected"
+  },
+  {
+   "id": "xunzi-zhengming-jin-jin-jie-qiu",
+   "status": "new",
+   "record_ids": [],
+   "source_id": "RU2-S-XZ22",
+   "layer": "先秦·论（战国末，《荀子·正名》）",
+   "fragments": [
+    "欲虽不可尽，可以近尽也。欲虽不可去，求可节也。所欲虽不可尽，求者犹近尽；欲虽不可去，所求不得，虑者欲节求也。"
+   ],
+   "kind": "scope",
+   "layer_checked": "",
+   "declarations": [
+    "Becoming.Law.more_never_rests",
+    "Becoming.Law.rests_iff"
+   ],
+   "records": [
+    "seeking-boundary"
+   ],
+   "reading": "AI读法：荀子说欲不可尽而可以近尽，欲不可去而求可以节；所求不得，思虑者便节制其求。前半有确切对应：以比现在更多为目标的寻求是无明，这一目标在任何律下都不在静止的步满足（Law.more_never_rests）；确定之律下，求能静止且得，恰当到达律不改变而满足目标的构形（Law.rests_iff），这是足而止。定域在“节求”：理论陈述的是给定目标下能否静止，不推出目标如何形成或修订，也不推出寻求者会去追求它；“虑者欲节求”是荀子对修订目标的描述，理论不由律给出。“近尽”（可以接近而不尽）此处不立律。荀子以“道者、进则近尽，退则节求，天下莫之若也”为标准，“道”作为固定标准不取。此段没有脉络记录。",
+   "names_used": [
+    "无明",
+    "足而止"
+   ],
+   "locator": "荀子/正名篇",
+   "relational": "目标的形式决定能否静止；目标的修订是另一种关系",
+   "tradition": "儒家",
+   "work": "《荀子·正名》",
+   "checked": "passed"
+  }
+ ],
+ "notes": "【结果】72 条：57 条原条目全部修订，15 条新增，0 条删除，kept 为空。按类：相合 31、定域 31、相分 10。时代：先秦 56，先秦或秦汉 7（大学、庄子外杂篇、大象传），宋明 6，魏晋南北朝、隋唐、清各 1。所有 123 个片段都用 ctq.py text 逐条核为精确命中；读法中的引文也都在冻结文本中找到（跨源引文为经上、经下、大取、非命下、帛书甲本、荀子王霸、吴子、智旭、朱熹、节葬下）。所有声明与记录都用 work/resolve.py 解析为当前名，旧记录 id 已全部换掉：practical-judgment-g0-j→practical-judgment-under-living-significance，runaway-distance-unregistered→runaway-distance-uncoupled，axiom-decomposition→continuation-condition-decomposition。最后一遍扫查又改了五处措辞，使未采之字只出现在引号里：mencius-she-sheng-qu-yi 与 wuxing 的 relational 中的“义”“大道”“大义”加引号；zhuangzi-rangwang 的“易前者”改为“换前者”；hanfei 的“不易的分类”改为“不变的分类”；chengyi-ge 读法中的“正道”改为引文“利於正道”。空的 gap 与 ro_passage 字段省去。\n\n【为什么两校都保留的九条也修订】mencius-zhi-zhong-wu-quan、mencius-tu-shan-tu-fa、xunzi-xiushen-bu-xing-bu-zhi、mozi-shangxian-shi-zhi-cheng、suzhe-lao44-qi-de-sang、lao-79-he-da-yuan、daxiang-sun-cheng-fen-zhi-yu、chengyi-jing-wei-ji-yong、chengyi-ge-li-yu-zheng-dao 都有至少一处要改：layer 一律改为时代在前；names_used 改为名表简体（“无丧／有得”“无丧而有得”“不復足”“相軋”“為天下先”都不是表中名）；在一个构造模型中的声明标为见证（Profiles、Revising.covered_not_enacted、MatchedCourses、Lexical.Repair、Transfer.unordered）；两条相分补 layer_checked；Stock 与 Countdown 之律注为 §4.6，§7.6 只说结构；not_done_before 补上“待办与完成互斥”的前提。daxiang 去掉读法未用的 Hexagram.yang_not_goAlike、Captured.rule_perturbation_changes 与记录 target-capture。\n\n【全簇统一的改法】(1) Required.impossible 只说空菜单无所要求，原有八条条目用它来说“不能者无所要求”，都改为 Requirement.Assigned.capable 的前提读法（可行写在可接纳性里，此律只是把前提读出）或 Requirement.Required.defeated（一个不执行任务的可接纳选项击败要求）；FrontierFrames.nothing_required 只在“没有可能移动”处保留。(2) 每个构造模型中的结果都写成“在一个构造的……情形中（见证：…）”，定义写“定义”，Web.paths_comparison_widens、residual_of_unfulfilled、juncture_iff、supported_iff_admits 写“依定义”。(3) 排序只在以广为愈（C）；延续条件写作“§6.4，条件，不断言”，只定范围；不变的一步只定范围不排序。(4) 不用“登记”；“識”不作名用。(5) 读法中凡提到未采之字（道、心、义、命、天、礼、信等）都放在出自冻结文本的引号里；以“本原、固定本性或价值、意志或单一中心、争胜与等级”称四层。\n\n【两校修法中我没有照做的】(1) mojing-daqu-hai-zhong-qu-xiao：训诂校验建议改为定域，或在相合中写出相分。我按结构校验分两个参照写：相对于断腕是扩展（Extension、strictLossMatch_of_extension），相对于遇盗之前是保留的损失（Frame.ReadsAt.loss_retained，带前提），两处都有检验过的律，所以保留相合；“取利也”若读作抵消，已写明不取。(2) mojing-daqu-sha-ji：训诂校验请复核为缺口而非相分。我保留相分：大取断言了一个不对称，核心比较没有承受者与动因者之分，这是文本所断言而理论所无的结构；layer_checked 写明不属四层，缺口照结构校验重写，并加入“愛人不外己”与不易乎畛（范围同向，不对称来自动作关系）。(3) 结构校验建议墨经“任，士損己而益所爲也”立相分条目；我立为定域（mojing-ren-sun-ji）：脊柱给出损己成立的确切范围（给予者须保持活动，存量在所持步数内耗尽），损己是自承的给予，承诺层不禁止，只是有界，没有四层之一，也不与理论冲突。(4) daxue-xie-ju：结构校验建议移交 C14；我留在本簇并标为跨簇，因为它的记录是本簇的主候选，且读法的重心是位置交换（无方）与不易乎畛之别，以及通过映射的选择。(5) xunzi-wangzhi-bu-jue-qi-zhang：结构校验许其保留相合，训诂校验改为定域；我取定域，并补入同篇“斩伐养长不失其时，故山林不童”，这是可被脊柱定域的普遍形式（按时取不等于所取条件被更新）。(6) mozi-du-zhi-bu-yan 不保留“机”：機辟是陷阱之喻，不加 Branching.juncture_iff。(7) mencius-bu-chuai-qi-ben：结构校验建议用 Confound.misattributes 作相若之锚；相若在名表中无锚，那条见证说的是另一件事，所以只写“相若，对照；此为类比，不立声明”。(8) lao-46：去掉 Lexical.Ceiling.above（读法不需要）；帛书异文注前五字残。\n\n【新增条目】先秦为主：mencius-fu-jin-yi-shi（定域，先取）、xunzi-zhengming-zheng-quan（相分，固定价值：正权）、sunzi-junzheng-wei-li-wei-wei（相合，L）、mojing-daqu-wu-ze（相合，比较相若处无所要求）、mozi-feiru-dai-yu-fen-zhi（定域，承担使余责到期）、mencius-xing-yi-bu-yi（相合，J2 原文义）、zhuangzi-rangwang-bu-yi-sheng（定域，自承之舍）、hanfei-xianxue-bu-yi-jing-yi-mao（定域，以自身为中心的分类）、wuxing-bu-yi-xiao-dao-hai-da-dao（相分，固定价值；经为郭店战国中期，说只见马王堆本，转录合排）、mencius-wu-yi-xiao-hai-da（定域，名的出处与“无有失也”）、lunyu-li-bu-zu-zhong-dao-er-fei（相合，J3）、mojing-ren-sun-ji（定域）、mojing-yi-suo-yi-zhi-suo-yu（相合，L）、xunzi-xinge-ke-yi-er-bu-neng（相合，可能之足与保证之足）、xunzi-zhengming-jin-jin-jie-qiu（定域，无明与目标修订不由律给出）。除论语雍也两条记录外，新条目都没有可收的本簇记录：RU2-R0003 在 C04，RU2-R0147 在 C16，FA1-H50-R006 在 C10，MI1-R-DQ-self、RU2-R0136 在 C14，RU2-R0137 在 C10，只作出处。\n\n【没有立条的缺项与理由】周易井卦辞（YD-JG48）：记录 JL-R043、JL-R046 已在 C02、C05、C11 的结果中使用，不在本簇候选；其“无喪无得”是常而不竭之义，写入无喪名条的 course 提议。孙子谋攻“知可以戰與不可以戰者勝”：争胜语境，Options 只是定义，只作 J4 名的候选证写入名条。荀子劝学“不積小流”：属 C04 的积小以高大。大学“財恆足矣”：流量义，属覆盖与存量一族，写入足而止名条。商君书画策“黃帝之世，不麛不卵”：在画策中是说“事不同，皆王者，時異也”的历史分期，同段紧接“以戰去戰，雖戰可也”，文本不论保住能形成者，不立先取条目。墨子公输“殺所不足而爭所有餘”：与非攻中同构，MO1-C50-R003 维持拒收（其断言在“不可謂智”）。孟子告子下“弗为耳”：结构已由梁惠王上“挟太山……是不为也，非不能也”给出。荀子王霸“行一不义，杀一无罪”：作为 mencius-xing-yi-bu-yi 的同构引文，不另立。经上“爲，窮知而𠐴於欲也”：并入 mojing-yi-suo-yi-zhi-suo-yu 的读法（源文不同，不作片段）。§7.6 的保证到达与风险界：本簇没有先秦文本的结构承载，写入不行不至名条。批评者的运行类（更新／消耗）命名属 C05；“绝其长”已从名降为条目。\n\n【四层的相分覆盖】本原：suzhe-lao44（齐得丧）、jinshizi（本来寂灭离取舍），另 zhixu 定域中注明理事之理属本原。固定本性或价值：mencius-she-sheng-qu-yi（义恒在生上）、xunzi-zhengming-zheng-quan（古今之正权）、wuxing（以大义执诛）。意志或单一中心：xunzi-zhengming-cong-suo-ke（心之所可中理）。争胜与等级：sunzi-mougong（屈人、相对位置）。不属四层的相分三条：mojing-daqu-sha-ji（施加与自承之分，核心比较所缺）、daxiang-sun（取象类比代替律的承载）、simafa-yi-zhan-qu-zhan（以目的抵消手段之损）。定域条目中另有若干处写明不取的等级与位分（大学所止、孝子之喻、王与保民）。\n\n【平行的位置变化】见 candidate_changes：非命下改平行；非儒下与孙子军争立为条目；论语雍也两条（triage 为“-”）立为条目，请整合者确认；xunzi-zhengming-cong-suo-ke 改为相分后，其平行中只承载“在可行之中进退”的三条改挂 sunzi-dixing-zhan-dao，中庸“吾從周”拒收；FO2-XZG-R011（小止观以“如法”判可否）仍挂 cong-suo-ke，因为它正属以一个固定标准判可否的一面。其余 56 条平行与 18 条拒收不变。\n\n【仍开放】(1) J4 与 L 的名、J2 是否改名、可能之足与保证之足的名，交整合者在名表中定。(2) mojing-daqu-sha-ji 的缺口：施加之损与自承之损在核心比较中的写法。(3) 论语雍也两条记录的归属。(4) 墨经“濕”字断句、《五行》转录未据图版校勘、帛书甲本残字，都不据以立论。(5) 本簇读法以当前 zhonghua 工作树的收据为解析基线；批评者指出该分支落后于 main，若 main 上有改名，须再用 resolve 核一次。",
+ "check_notes": "我查了全部 72 条（改 21 条，51 条通过，没有丢弃的）。\n\n核对结果：\n- 片段：124 个，全部用冻结文本逐字核对，每个都精确命中所标的来源（不需要忽略空白）。\n- 读法里另引的原文：约 75 处，也都核对过，全部精确。唯一一处出自别的来源：朱熹「不變其所守乃所以益上」在 YD-ZX2，不在 YD-CY3。读法把它标为朱熹（ZX-R007），所以没有问题。\n- 声明与记录：全部 137 个 Lean 名都在当前收据中，没有改名，也都在 worktree 的 Lean 文件中找到（BasicPriority.frontier_iff 用 _root_ 前缀声明）。全部结果记录都能解析。所有脉络关系 id 都存在。所谓「在他簇」「无关系记录」的说法也都核过，属实（RU2-R0136 在 C14、RU2-R0137 在 C10、RU2-R0003 在 C04、FA1-H50-R006 在 C10、RU2-R0147 在 C16、MI1-R-DQ-self 在 C14）。\n\n修正的要点：\n1. mojing-daqu-quan：原读法把权对应到 Requirement.Frontier，又说理论在移动上的选择（FrontierFrames.Options）对应「求」不对应「权」。但帧上的选择恰是 Frontier (Options F s) better，两者是同一个前沿，自相矛盾。已改为：脊柱没有权／求之分，求不另立对应。这也与名条「權」的提议（移动上的选择另说）冲突，请整合者统一。\n2. mencius-su-yi：从 agreement 改为 scope。严格损失匹配要列出两方的失去。若攘者所得也列为主张，停止与延续所失同类同数，计数不偏向任何一方。所以「速已」由孟子所给的「非义」给出，不由计数给出。\n3. mojing-shi-ling-wei：保留出口（Countdown.Reserved、exits）是停止协议的保证条件，不是「故」。「故」只是以完成为准（completes_iff）。保证完成改写为理论的补充。\n4. mozi-feiru：原读法把余责与造成差别混在一起。按定义，余责只要到期、未做、未解除，不以造成差别为条件。多重决定时，结果不归于怠者，但余责仍在。\n5. mozi-jiezang、mojing-ren-sun-ji、chengyi-sun：由「给予者在活动」加「存量耗尽」推出「以后不能给予」，缺了一个前提：活动需要支持（Web.Dependent）。还要把所给读作给予者自身无补充的存量。现在写明这是几条结果加两个前提的组合，不是一条律，并补入 Web.Dependent。\n6. zhoudunyi、qiushui：Web.break_not_bounded 的前提是该存量不经水平感入，原读法略去了。已补上，并用名表的感、未兆。\n7. 其余几处措辞：\n   - xunzi-wangzhi：Web.RenewingAt 是一步的分类，原标「恒」与名表冲突。名表的恒是运行之类（RenewingIn），现在恒只给整个运行上的 Web.Renewed。「恰在」改为充分条件。\n   - xunzi-wangzhi、mencius-fu-jin：「只从所依者拿取」改为「只从其所汲取者拿取」（Flow.Taking 原文）。\n   - mozi-fei-ren、sunzi-dixing：required_of_bettered 是充分条件，不是必要条件。sunzi-dixing 另注明授权可以改变菜单。\n   - xunzi-zhengming-wu-sang：「按类计数的主张」标为读法；「无得亦无丧＝相赅」补上条件下的 Web.retains_iff_includes。\n   - xunzi-bugou：杨倞注「孰，甚也，猶成孰也」，原读法说「孰計之」带净算之义，没有依据，已改。\n   - sunzi-huogong：loss_passes_juncture 只对能返回的构形成立，且在双重否定的意义上，已补上。\n   - xunzi-lilun-li：补「确定之律下」和门控更新。\n   - simafa-yi-zhan：死作为「失去的可能」标为读法。\n   - lunyu-li-bu-zu：「說之道＝已承担的任务」标为读法。\n   - mojing-daqu-wu-ze：补「在只有这两项的菜单上」。\n   - xunzi-xinge：「能」是实际做到，不是「每条进程都到达」。\n\n交整合者：\n- 各条读法里普遍用「耦合」而不用名表的「感」。用「增益」指 J1/J2 的增益层，名表没有这个名，而名表的「益」锚在 Gain 模块。用「余责」，而记录中文作「余欠」。三处都需要统一。\n- 名表「恆」可以把 Web.Renewed 加入锚。\n- 名条「無喪」说 JL-R043「在他簇」，但它只在 triage-1 里，不在任何簇的映射中。\n- sui-xi-xiaozi 的 source_id 是 YD-JP17，而 JF-R046、JF-R047 的证据在 YD-JG17。两个来源都含这些片段，不算错误。"
 }

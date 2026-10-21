@@ -1,0 +1,526 @@
+{
+ "pian": "篇十六　权（C15 比较、取舍与践行）",
+ "markdown": "## 篇十六　权\n\n本篇论比较、取舍与践行：两条进程之间怎样比，比出之序从何而来，于一动所至者之中怎样取，取后怎样行至。先说关系：两条水平之历之间的无丧与有得，一体之取与使二者在何处分开（余地之界、先取、自身之广）；这些对任何顾都成立，不加前提。次说序之所入：以广为愈（C，扩大的比较）是本论唯一为进程排序之设，陈述而不断言，其根据未决；凡续皆有顾（延续之条件，见意义之篇）也只是设，它定范围（哪些丧算数），其于自身预设之外的内容即不易乎畛，把范围推及不回到任何者之丧，而它本身不排序。伦理依于二设，作用不同：凡续皆有顾定范围，以广为愈定序；本篇只在以「若」写出之处用它们。再说以广为愈所排与所不排者：诸正加权之所同，互有所长者不序，过资者之不在，节。然后说取舍：皆愈（L）把比较提升到有多果之动，表述之设（A）给出理由，权是于可得之中取莫有愈之者；兼权、无以小害大（J1/J2）、取于可得（J4）、量力而任（J3）与同类积小（FR）是公开、可修订之承诺，非定理，非公理。终以足与行：足而止、或足、必足，随所感而升之序于所感之外所致，以及所令之变须为可行之一串动（不行不至、令不必成，规范章 §7.6）。\n\n### 十六·一　无丧与有得\n\n**經**　无丧，自一方观，此水平之历容彼历所容之每一有顾之续也。有得，自一方观，此历容一有顾之续而彼历不容也。凡顾，无丧自反而可传；此于彼无丧，则彼于此无得；赅则无丧，有得则有所长。\n\n**說**　无丧（保留，`Becoming.Web.Retains`）与有得（增加，`Becoming.Web.Adds`）比较两条水平之历（水平路径：每步每个所待之水平）。所比的是二者所容（接纳）之续中，自一方（立场）看有顾（有意义）者。二者是两条历之间的关系，不是一历自身之性：换一个彼历、一方或一种顾，无丧与否就不同。顾在此是任给之参数，不预设延续之条件；有顾者愈少，无丧愈易（`Becoming.Web.Retains.of_fewer`）。此于彼无丧则彼于此无得，所以以无丧相比，不许终止彼历所容之任何有顾之续。赅（包含）对每一种顾都是无丧，有得总是有所长（超出）；反过来要靠十六·三。名取「以一易两，人曰：无丧而有得也。」〔RU2-S-XZ22〕：同类可换之物按数计时，三种交换恰是相赅、扩展与反向扩展（定域，xunzi-zhengming-wu-sang-er-you-de）；荀子把不同类之交换也化为数目，又以「道」为保证无丧之定准，这两层不取。\n\n**證**　`Becoming.Web.Retains`、`Becoming.Web.Adds`、`Becoming.Web.Retains.refl`、`Becoming.Web.Retains.trans`、`Becoming.Web.Retains.not_added`、`Becoming.Web.Includes.retains`、`Becoming.Web.Adds.exceeds`；记录 [significance-retained-within-margin](../results/records/significance-retained-within-margin.md)。\n\n### 十六·二　无丧之界\n\n**經**　凡流衡，以扣下一体之取与、余皆如故之水平为无此体之历：自一方观，有此体之历于无之之历无丧，恰当于每步、无之之历所容之每一有顾之续所待之每一所待，此体至此所取过所与者不出余地；无之之历于有之之历有得，恰在某一如是之所待上出余地。\n\n**說**　这是「不害」的确切之界。讀（AI，D13）：不害读作无丧，不读作逐步之不剥；一体丧一有顾之续，恰在它于该续所待的某个所待上，至该步累计之净取超出无它时该所待高出所需之余地（余量，margin）。界是相变之界，不由动力学之外的意志或信念给出；它对任何顾成立，延续之条件只使它覆盖每一物（十六·三）。有得也有其界：无它时不被容之物，有它之净交换使其每一所需入于余地之内（`Becoming.Flow.Balances.adds_iff_within_margin`）。墨经「損，飽者去餘，適足不害，能害飽。」〔MI1-S-SX〕（相合，mojing-sun-er-bu-hai）：去余在余地之内，适足是界，越过则害；墨经只说一人之饱，此律说一体对每一续之每一所待。前提是流衡（每一水平之变恰为所取所与之差）；无此体之历是比较，不是标准。\n\n**證**　`Becoming.Flow.Balances.retains_iff_within_margin`、`Becoming.Flow.Balances.loses_iff_beyond_margin`、`Becoming.Flow.Balances.adds_iff_within_margin`、`Becoming.Flow.Balances.supported_iff_within_margin`；记录 [significance-retained-within-margin](../results/records/significance-retained-within-margin.md)、[closing-needs-net-draw](../results/records/closing-needs-net-draw.md)。\n\n### 十六·三　设凡续皆有顾而读无丧\n\n**經**　若凡续皆有顾，则自任一方观：无丧恰赅，有得恰有所长；广恰无丧而有得，相赅恰相互无丧，互有所长恰相互有得；诸方之无丧皆同。\n\n**說**　凡续皆有顾（延续之条件，`Becoming.Unrestricted`）在此只作设，理论不断言之。它说每一物之续自每一方观都有顾，所以本条每一辞都是那个全称陈述的实例化，以它为前提的定理再多，也不衡量更多的依赖。在其下，有顾者就是能形成者，无丧与有得化为不加前提之比较：赅、有所长、广（扩大）、相赅（保持）、互有所长（混合）。所以把能形成者读作有顾，不失去什么，也不添任何规则：设只定范围，不定序。可见以广为愈不从此设推出，称广为愈要另设（十六·六）。\n\n**證**　`Becoming.Web.retains_iff_includes`、`Becoming.Web.adds_iff_exceeds`、`Becoming.Web.widens_iff_retains_adds`、`Becoming.Web.keeps_iff_retains`、`Becoming.Web.mixed_iff_adds`、`Becoming.Web.retains_agree`；记录 [significance-retained-within-margin](../results/records/significance-retained-within-margin.md)、[continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)。\n\n### 十六·四　先取\n\n**經**　先取，于一所待尚无待之者时资之也。有一衡流（唯活动者与；唯活动者取，且只取其所资；活动须容）：资者首步活动，其事于本步为更新而不剥，而有其体之历不赅无之之历；若凡续皆有顾，则自每一方观，有其体之历于无之之历不无丧。凡衡流，唯活动者取且只取其所资，一体诸员所资之每一所待于全行恒持，则有此体之历赅无之之历。\n\n**說**　先取（先占，preemption；新组合：先＋取，于待形成之先而取）只说在一个所待上有待形成之前就资取它。一步之类只数已形成之待：资者之事于其步属更新（`Becoming.Web.RenewingAt`）、不剥，因为还没有待此所待之物要它保持；可是有它的水平关闭了以后能形成的一物。所以「在更新之内」「不剥」都不表明一体保住能形成者；定其在序中之位的是全行之类：所资者皆恒持则不狭（`Becoming.Flow.Balances.not_narrows_of_renewed`），而先取者于其步更新、于全行竭，正使之狭（`Becoming.Preemption.renewingAt_consuming_narrows`）。讀（AI，D13）：无丧计入尚未形成者，这是不害不读作不剥的理由。孟子「数罟不入洿池，鱼鳖不可胜食也」〔RU2-S-MZ〕（定域，mencius-fu-jin-yi-shi）：取落在全行恒持之所待上则取之不尽，这是充分条件，「以时」之取不等于所取者恒持。荀子「草木荣华滋硕之时，则斧斤不入山林，不夭其生，不绝其长也。」〔RU2-S-XZ09〕（定域，xunzi-wangzhi-bu-jue-qi-zhang）：「不夭其生」是不损已在生长者，「不绝其长」是不闭以后之生长，先取恰是只有后者。\n\n**證**　`Becoming.Preemption.within_renewal_yet_loses`、`Becoming.Preemption.not_undermining_yet_loses`、`Becoming.Preemption.renewingAt_consuming_narrows`、`Becoming.Flow.Balances.includes_of_renewed`、`Becoming.Flow.Balances.not_narrows_of_renewed`；记录 [significance-retained-within-margin](../results/records/significance-retained-within-margin.md)、[the-run-classes-and-widening](../results/records/the-run-classes-and-widening.md)。\n\n### 十六·五　自身之广\n\n**經**　凡流衡，一体之活动于其己（一组定然否之物）之内广无此体之历（每步容无之者于己内所容之每一物，某步多容一物）：则有此体之历广无之之历，恰当于己外、无之之历所容之每一物之每一所待，此体至此所取过所与者不出余地；于某一如是之物出之，则二历互有所长。己外一物为无之之历所容，其所需恰为无此体交换时之水平，此体于此所待至此所取多于所与，则二历互有所长。\n\n**說**　己（自身区域）在此是此体之选项所在。讀（AI，D45）：以无此体之水平为不作为之基线、以己为此体之选项，则自身之广就是保住选项或增其所及；它与整体之广重合，恰在其于共享所待上之净取不出他者所需留下之余地，出之则开己之选项而闭他者，二历互有所长。没有余裕时，任何净取都闭他者（`Becoming.OwnDrawing.tight_mixed`）；有一单位余裕，同一资取即广整体（`Becoming.OwnDrawing.ample_widens`）。互有所长者，延续之条件与以广为愈都不排（十六·八），所以此律只说增其所及在何处闭他者，不说它更坏，也不预测哪个物会出余地而资。比较对象是不作为之基线，不是此体之另一动；记录列出它所对应的寻求权力与影响度量之形式结果。\n\n**證**　`Becoming.Web.WidensWithin`、`Becoming.Flow.Balances.widens_iff_others_within`、`Becoming.Flow.Balances.mixed_iff_other_beyond`、`Becoming.Flow.Balances.mixed_of_tight`、`Becoming.OwnDrawing.ample_widens`、`Becoming.OwnDrawing.tight_mixed`；记录 [own-widening-within-the-margin](../results/records/own-widening-within-the-margin.md)。\n\n### 十六·六　以广为愈\n\n**經**　以广为愈，凡系辞，后状存前状所成之每一辞，又成一前状所无之活辞，则后状为愈也（设，不断言）。于水平之历，凡辞皆以为活，则此扩展恰为广；故以广读愈，以广为愈于活之每一读皆立。扩展不自扩展而可传。\n\n**說**　以广为愈（C，扩大的比较，`Becoming.Comparison`；新组合：以＋广＋为＋愈，称扩大为更好）是本论唯一为进程排序之设：它说无丧之扩展（`Becoming.Extension`）为愈。在水平之历上，凡辞都算作活时扩展恰是广，所以把「愈」读作「广」，以广为愈对活之任一读法都成立；这是展开定义，规范内容全在「称广为愈」这一步，此律不证它，其根据未决（规范章 §8.5）。延续之条件定范围，以广为愈定序：二设作用不同，伦理不从前者单独推出。一个比较若读自状之描述而不自比，以广为愈要求这描述把每一扩展与其基分开（`Becoming.Comparison.separates`）。讀（AI，D1）：进程按所能形成者比较，因为在延续之条件下扩展恰是无丧而有得（十六·三），它把过资者之不在排在其在之上而不扣下任何事（十六·九），静止与节从不更坏。论语「既庶矣，又何加焉？」〔RU1-S-LY〕（相合，lunyu-you-he-jia-yan）：每一步存已成而再加，正是扩展之结构；把庶、富读作基本、教读作增益，是读法，文本不说。\n\n**證**　`Becoming.Extension`、`Becoming.Comparison`、`Becoming.Web.paths_extension_iff_widens`、`Becoming.Web.paths_comparison_widens`、`Becoming.Extension.irrefl`、`Becoming.Extension.trans`、`Becoming.Comparison.separates`；记录 [comparison-by-widening](../results/records/comparison-by-widening.md)。\n\n### 十六·七　诸正加权之所同\n\n**經**　凡诸项（物于某步）有一单尽之，每一历容其中之某些：此历广彼历，恰当每一于诸项皆正之加权，计此历皆重于彼历；不论可加与否，凡把每一广排在上之序，其所同者亦恰是广。此历赅彼历，而一加权于此历所多之每项皆为零，则二历等重；诸项同一正权，则以所容之数排。于依存网，容定然否，两历所容者有一单尽之，亦然。\n\n**說**　加权（`Becoming.Weighting.weighed`）给每一项一个自然数之权，把一历所容之项的权相加；正（`Becoming.Weighting.Positive`）是每一项都算。此律说：以广为愈所排者，恰是每个「各按其方式权衡、而每项都算」的序所共排者，不必可加，优先较差者之序也在其内。偏倚只决定互有所长之比较（十六·八）；权为零是拒绝范围，不是另一种序；一律同权即按数目排。以诸正加权之交为序，其数学是 Sen 的交集法。讀（AI，D59）：一方之序读作一个正的加权，在其权上可以偏，而每项都算；不偏之序是每个这样的加权所共有者，即以广为愈。此律不证明广为愈，也不证明每一方之序是正的：它只说，若每一方之序都把每个广排在上，诸方所同者恰是广，而称广为愈仍是以广为愈之设。\n\n**證**　`Becoming.Weighting.widens_iff_every_positive`、`Becoming.Weighting.widens_iff_every_of_class`、`Becoming.Weighting.widens_iff_every_increasing`、`Becoming.Weighting.weighed_eq_of_unweighted`、`Becoming.Weighting.neutral_ranks_by_number`、`Becoming.Weighting.increasing_prior`、`Becoming.Web.widens_iff_every_weighting`；记录 [widening-as-what-every-weighting-ranks](../results/records/widening-as-what-every-weighting-ranks.md)、[graded-significance-and-priority](../results/records/graded-significance-and-priority.md)。\n\n### 十六·八　互有所长者不序\n\n**經**　广、相赅、互有所长三者互斥，故互有所长者不相广，以广为愈不定其序；诸项有一单尽之，二历互有所长，则有正加权以此为重，亦有以彼为重。有一流，输送者取于一所待而与于他所待，若凡续皆有顾，则有其体与无其体之二历各有得于彼，皆不于彼无丧。\n\n**說**　在延续之条件下每一狭都丧一有顾者，捕食、细胞凋亡与终止癌变皆然；这样的体往往互有所长，要在其中分出害与非害，须另给度量，那是另一个设。另给的比较也不止一种：在一个构造的两维情形中，两个都尊重每一扩展的评分各自融贯地选出不同的选项（`Becoming.Profiles.different_selections`）。荀子「凡人之取也，所欲未尝粹而来也；其去也，所恶未尝粹而往也。故人无动而不可以不与权俱。」〔RU2-S-XZ22〕（相合，xunzi-zhengming-cui）：所取未尝粹，即互有所长；以广为愈于此不定取舍，权须另给承诺或度量（十六·十三以下）。同篇「道者，古今之正权也」〔RU2-S-XZ22〕以一古今不变之标准为一切相杂者定序，与理论相分（固定本性或价值，xunzi-zhengming-zheng-quan）。\n\n**證**　`Becoming.Web.Widens.not_keeps`、`Becoming.Web.Widens.not_mixed`、`Becoming.Web.Keeps.not_mixed`、`Becoming.Weighting.mixed_either_way`、`Becoming.Transfer.unordered`、`Becoming.Profiles.different_selections`；记录 [four-cases-of-a-part](../results/records/four-cases-of-a-part.md)、[significance-retained-within-margin](../results/records/significance-retained-within-margin.md)、[classification-robust-generative-comparison](../results/records/classification-robust-generative-comparison.md)。\n\n### 十六·九　以容读活：过资者之不在\n\n**經**　凡二物共一所待之律（维持者所需为正而初水平足之，焦物所需不过维持者），焦物自某步起所资多于所待每步所受之与：以所容读活，则无焦物之历扩展有之之历，凡合以广为愈之比较皆以无之为愈。焦物所资每步不过所受之与，初水平足二者之所需，则二历每步皆容每物，互不扩展。\n\n**說**　以所容读活（可能性读法，`Becoming.Ranking.possible`）：一续之水平容某物之处即记入之，不论其活动与否。讀（AI，D1）：以广为愈按此读比较进程。在这一读下，过资者之不在排在其在之上，节排在过资之上（`Becoming.Ranking.possible_restraint`），都不扣下任何事；在延续之条件下，此读之扩展恰是在律之网上无丧而有得（`Becoming.Ranking.possible_extends_iff`）。界在第二句：在更新之内资取者不增加可能，以广为愈不排它；带来新生命之价值，理论不论。先比可能、再以一种活之读比，就会把一个不增加可能之停顿排在不间断之活动之下（`Becoming.Ranking.Pause.pause_ranked_below`），那是又一设。\n\n**證**　`Becoming.Ranking.possible`、`Becoming.Ranking.possible_extends`、`Becoming.Ranking.possible_ranks`、`Becoming.Ranking.possible_tie`、`Becoming.Ranking.possible_extends_iff`、`Becoming.Ranking.Pause.pause_ranked_below`；记录 [ranking-under-readings](../results/records/ranking-under-readings.md)。\n\n### 十六·十　整段读活：节\n\n**經**　以活动而于此历不竭读活（整段之读）：凡二衡流，节流起时每一所待之水平不低于彼流，每步于每一所待所取不多、所与不少，所待、所需、所资皆不多于彼流；彼流活动须容，节流有容即活动：则节流之历扩展彼流之历，恰当节流记一彼流所扣之事；如是，则凡合以广为愈之比较皆以节流为愈。资者之数不与焉。\n\n**說**　节（restraint）在这里只是两条流之间取不多、与不少之关系，不是某一物之德。此律对任意多个资者成立：取不多、与不少则水平每步不低（`Becoming.Flow.Balances.level_le_of_restrained`），水平不低而所待、所需、所资不多，则节流缓和彼流（`Becoming.Flow.Balances.eases_of_restrained`），整段之读不撤回任何已记之事。逐步之读（活动而不剥）无此律：有第三物共用所待时，二续可以互不扩展（`Becoming.Ranking.ThirdParty.stepwise_not_monotone`）。所以节被排在过资之上，是以广为愈在整段之读下的结论，不是节本身之价值。\n\n**證**　`Becoming.Ranking.restraint_extends_iff`、`Becoming.Ranking.restraint_ranks_over_drawers`、`Becoming.Flow.Balances.level_le_of_restrained`、`Becoming.Flow.Balances.eases_of_restrained`、`Becoming.Ranking.ThirdParty.stepwise_not_monotone`；记录 [ranking-under-readings](../results/records/ranking-under-readings.md)。\n\n### 十六·十一　皆愈\n\n**經**　皆愈，自一状，此动之每一果皆愈于彼动之每一果，则此动愈于彼动也（设）。凡系辞，若以广为愈，彼动之每一果皆扩展此动之每一果，则以皆愈彼动愈于此动。有一系辞，一动之一果胜另一动之果、一果不及，皆愈两向皆不比之；经一无果之动，两皆愈俱立而其合不立。\n\n**說**　一动可有多果，比较动须有把状之比较提升到动的规则；皆愈（提升规则 L，`Becoming.LiftBetter`；新组合：皆＋愈，每一果皆愈）是保守之默认。它是实质的承诺：一动有一好一坏之果，两向皆不可比，虽然有一果胜出；可传须经一个有果之中间者（`Becoming.LiftBetter.trans`）。若每一可行之动皆被一可行之动以皆愈扩展，则无一动存留（`Becoming.lift_continual_improvement_has_no_survivor`）。孙子「故軍爭為利，軍爭為危。」〔BI1-S-SZ〕（相合，sunzi-junzheng-wei-li-wei-wei）：同一回应之果有利有危，不能按果把它整体排在另一回应之上或之下；这正是皆愈不定取舍之处，须另给判断之承诺。孙子由此以胜为比较之标准，那一层不取。\n\n**證**　`Becoming.LiftBetter`、`Becoming.comparison_lifts`、`Becoming.LiftBetter.trans`、`Becoming.LiftModel.some_outcome_does_not_lift`、`Becoming.LiftModel.lift_needs_live_middle`、`Becoming.lift_continual_improvement_has_no_survivor`；记录 [becoming-spine-instances](../results/records/becoming-spine-instances.md)。\n\n### 十六·十二　表述之设（A）\n\n**經**　A，一方可介入一回应，而此回应之每一所许之果皆有一前所无、自此方有顾之辞，则此方有其理由也（设）。若顾有萌，有无亲与无方，又连通，且凡方皆守 A，则凡以新活之辞为所求之健全探究，于每一可介入之方皆予理由。若凡续皆有顾，辞之顾读作某物于某步之续之顾，以活读 A，则不须萌、无亲、无方与连通，亦然。有一处境，凡皆有顾，以空顾读 A，则于其新辞皆非活之回应亦迫出理由；以活读之则否。\n\n**說**　A（表述，articulation）是外在论之设，自身是一中立之设：一方可介入（access）一回应，又从自身之方保有新的有顾之内容，就有一个有助之理由。理由不是义务，不是排序，不预测承认或遵从；定理只把规范内容传过去，不提供它（萌、无亲、无方合为顾之所据，`Becoming.Valuation.Grounds`）。在延续之条件下，A 须以活读之，否则对任何新者都给理由（`Becoming.articulates_total`）。A 与以广为愈、皆愈同属所陈之承诺，其论证在意义之篇（规范章 §6.2）；此处只记它在取舍中之位：它给的是理由，序仍只在以广为愈。\n\n**證**　`Becoming.articulates`、`Becoming.articulatesLiving`、`Becoming.universal_reason`、`Becoming.universal_reason_of_unrestricted`、`Becoming.BareSignificance.bare_forces_reason`、`Becoming.articulates_total`；记录 [universal-practical-warrant](../results/records/universal-practical-warrant.md)、[positioned-positive-reason](../results/records/positioned-positive-reason.md)。\n\n### 十六·十三　权与可得\n\n**經**　权，于可得之中，以所设之比较，取莫有愈之者也。可得，自一状一动所至之诸状也。可得中有愈之者，不在所取；无动可行，则无所要求。可得有一单尽之，比较不自愈、可传、于其间或不当，则必有所取；于一切系辞与一切于可得不自愈、可传之比较皆有所取，恰当凡辞皆或不当。\n\n**說**　权（实践判断，practical judgment）只名在给定之整体中、按所给之比较定轻重：选项（可得，`Becoming.FrontierFrames.Options`）读自展开，不另列于旁；比较是所设，序不由权生出；所取是前沿（`Becoming.Requirement.Frontier`）。名取大取「於所體之中而權輕重，之謂權。權非爲是也，亦非爲非也。」〔MI1-S-DQ〕（相合，mojing-daqu-quan）：权不生是非，只在所体（兼之一分）之中定轻重；大取以「所體」与「事爲」分权与求，脊柱无此分，求不另立。每步皆有所取需要弱排中（凡辞皆或不当）：比较未决之处，一步可以没有已知所取之动，所取由定下诸动怎样比较而得（规范章 §8.6）。孟子「执中无权，犹执一也。」〔RU2-S-MZ〕（相合，mencius-zhi-zhong-wu-quan）：以一粗类看一切处境，就「举一而废百」；经一映射之择，只在要紧之处跨其类一致时才对（`Becoming.Learning.selects_right_through`）。\n\n**證**　`Becoming.Requirement.Frontier`、`Becoming.FrontierFrames.Options`、`Becoming.Requirement.Frontier.excluded`、`Becoming.FrontierFrames.nothing_required`、`Becoming.Requirement.frontier_exists`、`Becoming.FrontierFrames.choice_exists_iff_weakly`；记录 [practical-judgment-under-living-significance](../results/records/practical-judgment-under-living-significance.md)。\n\n### 十六·十四　兼权\n\n**經**　兼权，比较兼计二状所成之每一辞，所取者所不成者仍记为丧也（设）。凡系辞于一行按时读一辞（自其时起，此辞成恰依其时之容），其时之容不及之，则此后每步此辞皆不成，后容复至亦然。有一处境，修补之状于基本之辞赅庆典之状而多成其一，而庆典所成之事，修补之状不成。\n\n**說**　兼权（J1，完整比较与保留损失）是 AI 提出之承诺，核心不断言：被选者所未成者不因被选而勾销，仍作为丧计入；它与无以小害大合为两层之序（`Becoming.Lexical.BasicPriority`）。按时读辞之系辞上，所容恢复也不使已错过者复成；一系辞是否按事之时读辞，是前提（`Becoming.Frame.readsAt_iff_settled`）。老子「和大怨，必有馀怨，安可以为善？」〔YD-LAO-BASE〕（相合，lao-79-he-da-yuan）：和解在丧之后，不把关系还原到丧之前，已丧者仍记；此是兼权保留一半之主证。大取「斷指以存腕，利之中取大，害之中取小也。」〔MI1-S-DQ〕（相合，mojing-daqu-hai-zhong-qu-xiao）：相对于断腕，断指是扩展；相对于遇盗之前，断指仍是丧；若读作所得抵消所丧，理论不取。苏辙「惟齊有無均得喪而後無病也」〔LC-SZ-ALL〕（宋明注）把得丧齐同，即取消比较，属本原层，与理论相分（suzhe-lao44-qi-de-sang）。\n\n**證**　`Becoming.Lexical.BasicPriority`、`Becoming.Lexical.Above`、`Becoming.Frame.ReadsAt.loss_retained`、`Becoming.Frame.readsAt_iff_settled`、`Becoming.Lexical.Repair.above`、`Becoming.Lexical.Repair.loss_retained`；记录 [finite-aggregation-within-restorable-basic-losses](../results/records/finite-aggregation-within-restorable-basic-losses.md)、[classification-robust-generative-comparison](../results/records/classification-robust-generative-comparison.md)。\n\n### 十六·十五　无以小害大\n\n**經**　无以小害大，比较先计基本之辞、后计增益之辞，如两层之字典序也（设）。若无以小害大：一状存彼之每一基本之辞，又成一彼所无之基本之辞，则愈于彼，增益不论；一状丧一彼所成之基本之辞，则增益无论多少，不愈于彼；一状两层所成皆为彼所赅，则不愈于彼。有一处境，二状各成一彼所无之基本之辞而增益皆无，两不相愈。以广为愈不推出此序：有一处境，一满足以广为愈之自然数之分以增益愈于基本之辞，凡满足以广为愈之自然数之分皆以若干增益愈于基本之辞，而一有界之分满足以广为愈而不然。诸项有一单尽之，以基本之项为先之字典序，把每一广皆排在上。\n\n**說**　无以小害大（J2，基本条件优先）也是 AI 提出之承诺：核心不断言，凡关于所设比较之定理都以它为前提（`Becoming.FrontierFrames.Priority` 是它在系辞上的写法）。在可定然否之处它满足以广为愈（`Becoming.FrontierFrames.Priority.comparison`）。它不从以广为愈或活皆有顾推出，二者都与把增益排在基本之上的标量之序相容；自然数之分的排除来自自然数之单位步，有界而递减之敏感性仍是实质的对手。以基本之项为先之字典序把每一广排在上（`Becoming.Weighting.increasing_lexical`），所以它在诸序所同恰为广之类中（十六·七），只决定以广为愈留为互有所长者。何者为基本是给出的：同一新内容分为增益则二状不可比，分为基本则有序（`Becoming.Lexical.Reorganizing.classification_matters`）。孟子「无以小害大，无以贱害贵」〔RU2-S-MZ〕（定域，mencius-wu-yi-xiao-hai-da）：名之所出；小大在此是层，不是量，贵贱之等第不取。《五行》「不以小爱害大爱，不以小义害大义也」〔V130-LAO-GD〕把何者为大定为固定的「大义」，属固定本性或价值层，与理论相分（wuxing-bu-yi-xiao-dao-hai-da-dao；此句在说，只见马王堆帛书本，成文时代有争议）。\n\n**證**　`Becoming.Lexical.BasicPriority.anchor`、`Becoming.Lexical.BasicPriority.no_trade`、`Becoming.Lexical.Above.not_of_included`、`Becoming.Lexical.Crossed.incomparable`、`Becoming.ScoreRepresentation.comparison_does_not_yield_priority`、`Becoming.ScoreRepresentation.every_nat_score_outranks`、`Becoming.ScoreRepresentation.bounded_score_represents`、`Becoming.Weighting.increasing_lexical`；记录 [protection-priority-excludes-uniform-aggregation](../results/records/protection-priority-excludes-uniform-aggregation.md)、[classification-robust-generative-comparison](../results/records/classification-robust-generative-comparison.md)。\n\n### 十六·十六　取于可得\n\n**經**　取于可得，所可取者即一动所至之状，所要求者读自其所取也（设）。若无以小害大：一可得之状于基本之辞赅每一可得之状所成者，则其所成之每一基本之辞，于每一所取之状皆不可非；可得有一单尽之、比较于其间或不当、此辞于每一可得之状定然否，则此辞为所取所要求。凡可得有一单尽之，比较不自愈、可传、或不当，一事于每一可得定然否，缺之之每一可得皆有可得愈之，则此事为所取所要求；所取之中有一状不行一事，则此事不被要求。\n\n**說**　取于可得（J4，正当可行的选择；新组合：取＋于＋可得）之「可得」名一步可达之选项，取荀子正名「欲不待可得」之「可得」；「正当」一半尚无其名。这条承诺把能做的读自展开，不另列于旁；它与无以小害大合起来，给出一个基本之辞何时为所取所必保。墨子「非人者，必有以易之。」〔MO1-S-C16〕（相合，mozi-fei-ren-bi-you-yi-yi）：否定一个选项，只在有一个胜过它的可得替代时有效；没有可能之动处无所要求（十六·十三）。大取「斷指與斷腕，利於天下相若，無擇也。」〔MI1-S-DQ〕（相合，mojing-daqu-wu-ze）：两层所持相同者谁也不愈于谁，两者都在所取之中，各不行对方之事，所以哪一个都不被要求；「無擇」是此处无所要求，不是两者无别。荀子「欲不待可得，而求者从所可。」〔RU2-S-XZ22〕分开欲与可得两种关系，这与理论同；荀子又以「心之所可」为一切取舍定准，属意志或单一中心层，与理论相分（xunzi-zhengming-cong-suo-ke）。\n\n**證**　`Becoming.FrontierFrames.Priority`、`Becoming.FrontierFrames.Priority.kept_unrefuted`、`Becoming.FrontierFrames.Priority.kept_required`、`Becoming.Requirement.required_of_bettered`、`Becoming.Requirement.Required`、`Becoming.Requirement.Required.defeated`；记录 [practical-judgment-under-living-significance](../results/records/practical-judgment-under-living-significance.md)。\n\n### 十六·十七　动之向\n\n**經**　以诸动所至之水平读动，可得即诸动之所至：一动之所至扩展彼动之所至，恰当前者广后者。若无以小害大：一动之所至于基本者容每一动之所至所容，则其所容之每一基本者于每一所取之状皆不可非；一动之所至为彼动之所至所广，而彼之基本之容是否皆在此中定然否，则此动之所至不在所取；不判定时，广者从不被否定为愈。其余诸物依一以感而读之交换之律而行，二衡流起于同水平、在场之物相同，行动之群于其感域之内所为相同，此流之水平广彼流：则有一物于某步为此所容、彼所不容，此物在群之感域之外，其容自此步起经每一持之之兼感而择，不经感域之内任何兼感而择。\n\n**說**　动之向（direction on a world's moves）是本论对齐方向之形式部分：任一依存网、任一族动、任一合无以小害大之比较上的模式。讀（AI，D45）：以动所至之水平读动，是 AI 的读法；关于实际 AI 系统之主张仍是论证。延续之条件在此不用；在其下每一被比之容都是自每一方观有顾之续（`Becoming.Web.paths_one_object`），这定范围，序仍是以广为愈与诸承诺的。扩大感是必要的，不是充分的：律不说一个择达到几个自洽结果中的哪一个；在一个门控更新的公地中，三个都读存量的学习者仍每回合把共享之地取尽（规范章 §7.5，CG1）。`Becoming.Clearing.direction` 是实例：清除者保留栖地之动广于清除之动，清除不被择，区别二动之居者之容只经持居者之兼感而择。\n\n**證**　`Becoming.Direction.extension_iff_widens`、`Becoming.Direction.chosen_keeps_basic`、`Becoming.Direction.narrowed_not_chosen`、`Becoming.Direction.widening_not_not_better`、`Becoming.Direction.widening_selected_by_pool`、`Becoming.Clearing.direction`；记录 [alignment-direction-under-widening](../results/records/alignment-direction-under-widening.md)。\n\n### 十六·十八　量力而任\n\n**經**　量力而任，所任以其力为界，已任而未为、未释者为余责也（设）。凡有一可许之计，每一可许之计皆有任此事者，而任者唯一，则其任为所要求；凡可许之计之分派皆可行，则所分派者可行。凡宇，一物于某步待一所待，每一如是之步皆有与之者，而与之者唯一，则彼于每一如是之步皆与之；唯活动者与，则彼于其步皆活动。一物待之而活动，彼不与，其步为余责；已释（于每一如是之步，或与之，或待者已不活动），则无余责。\n\n**說**　量力而任（J3，有界责任；新组合：量其力而后任）是 AI 提出之承诺。可行写进可许之计（`Becoming.Requirement.Assigned.capable` 只把这一前提读出），所以力是界，不是据：能做并不使一事成为要求，要求须有可许之计而每一计都行之。讀（AI，D45）：以宇之动读联合之计、以活动读可行、以待者不再活动读释，都是 AI 的读法。集体之事可以被要求而无一个体之事被要求（`Becoming.Requirement.Collective.required`）。论语「力不足者，中道而廢；今女畫。」〔RU1-S-LY〕（相合，lunyu-li-bu-zu-zhong-dao-er-fei）：真力不足者止于力所及处，不在要求之内；「今女畫」是能而先自止，力之界不是自画之界。孟子「是不为也，非不能也」〔RU2-S-MZ〕（定域，mencius-bu-wei-fei-bu-neng）：能则当为作为全称不成立，只在一个承担使事到期之处成立。大取「殺一人以存天下，非殺一人以利天下也。殺己以存天下，是殺己以利天下。」〔MI1-S-DQ〕（相分，mojing-daqu-sha-ji）：核心比较中没有「丧由承受者自承」与「丧由他者之动加于承受者」之分，此不对称理论既不推出也不否定；它不属四个非关系层，是理论尚缺的结构。\n\n**證**　`Becoming.Requirement.Assigned.unique_required`、`Becoming.Requirement.Assigned.capable`、`Becoming.FrontierWorlds.sole_giver_required`、`Becoming.FrontierWorlds.sole_giver_active`、`Becoming.FrontierWorlds.residual_of_unfulfilled`、`Becoming.FrontierWorlds.Discharged.no_residual`、`Becoming.Requirement.Collective.required`；记录 [practical-judgment-under-living-significance](../results/records/practical-judgment-under-living-significance.md)、[classification-robust-generative-comparison](../results/records/classification-robust-generative-comparison.md)。\n\n### 十六·十九　同类积小\n\n**經**　同类积小，于独立所说之同类可复之基本之丧，一固定较重之丧不独以其重而恒愈于任意多之固定较轻之护也（设）。凡系辞，后状扩展前状，则后状之每一丧一一对于前状之同内容之丧，而前状多一丧（严格之丧配）；故以严格之丧配为愈之足据者，凡扩展皆在其范围之内，则含以广为愈。以严格之丧配为足据，范围之内二状不能互相严格配；有一系辞，丧无穷，一状严格自配，其上此足据不能立。二状之丧各列一次而皆同类，则严格之丧配恰当较愈者所丧较少。凡辞之成皆须一基辞之成，而诸辞有一单尽之，丧此基辞之状以严格之丧配不愈于任何状。\n\n**說**　同类积小（FR，有限回应；新组合：同类＋积小，同一内容类中较轻之护积多）是附加的、可修订的比较承诺，既非定理，亦非公理；其形式内容是严格之丧配之律（`Becoming.LossMatching`），不是其根据。它只在独立说明、同类、可复之基本之丧之内计数；同类之内不设永久之轻重词典序，跨层仍由无以小害大定。墨子「計其所得，反不如所喪者之多。」〔MO1-S-C18〕（定域，mozi-feigong-qi-suo-bu-zu）：计得丧之数只在得与丧同类时成立，跨类须由「不以基本换有余」补足。司马法「以戰去戰，雖戰可也。」〔BI1-S-SM〕（相分，simafa-yi-zhan-qu-zhan）以目的抵消手段之丧：理论不承认这种抵消，丧仍保留。讀（AI，D45）：战争读作危及共同之基辞之处境，则丧其基辞者以严格之丧配不愈于任何状。\n\n**證**　`Becoming.Frame.strictLossMatch_of_extension`、`Becoming.Frame.SufficientMatching.comparison`、`Becoming.Frame.SufficientMatching.not_mutual`、`Becoming.EndlessLosses.no_sufficient_matching`、`Becoming.Frame.strictLossMatch_iff_length_of_alike`、`Becoming.Frame.not_strictLossMatch_of_base_lost`；记录 [finite-aggregation-within-restorable-basic-losses](../results/records/finite-aggregation-within-restorable-basic-losses.md)。\n\n### 十六·二十　足而止\n\n**經**　足而止，所求于法所不改之状而足，行至此则止而常足也。凡法，自一状之行于某步之后常不改且足所求，恰当其行至一法所不改而足所求之状。凡法，以多于今为所求者，其行不改之步皆不足之。\n\n**說**　讀（AI，D41）：足（够）是过程与所求之间的关系，不是所求自身之性。以多于今为所求即无明：它只能由变满足，不能在静止之步满足；所立者每步有列而自某步起每步皆衰，则无一所待能在任意晚之步升（`Becoming.Flow.more_exhausted`），多于今之求不是以足而止，而是以耗尽而终。墨子「凡足以奉給民用諸，加費不加民利則止。」〔MO1-S-C21〕（相合，mozi-jieyong-zu-er-zhi）：所求在法所不改之状被满足，就停在那里；「加費不加民利」是没有有得之耗费，以广为愈不把它排在上面。老子「故知足之足，常足矣。」〔YD-LAO-BASE〕（定域，lao-46-zhi-zu-zhi-zu）：只在满足所求之状为法所不改之处成立。\n\n**證**　`Becoming.Law.rests_iff`、`Becoming.Law.fixed_rests`、`Becoming.Law.more_never_rests`、`Becoming.Flow.more_exhausted`；记录 [seeking-boundary](../results/records/seeking-boundary.md)。\n\n### 十六·二十一　或足与必足\n\n**經**　或足，自一状有一行止而足其所求也；必足，自一状每一行皆止而足其所求也。凡变：或足，恰当自此状可至一状，其有一动而不移，且足所求；必足，恰当每一可至而有不移之动之状皆足所求，且自此状之每一行皆自某步起不变。有一变，每状皆可不移且足所求，而交替之行不止，故不必足。凡法，或足恰当必足。\n\n**說**　或足、必足是新组合（或／必＋足，或与必取凡例之义）。讀（AI，D41）：「或」不读作求者能使之成，而是变之某一行所许者，不论何者定所行之行；必足之后一半不提所求，属变自身。不必足而行不止，是变一侧之失，不计为无明。只在法（一动至多一果）之下，或足与必足为一，就是十六·二十之足而止。荀子「涂之人可以为禹则然，涂之人能为禹则未必然也。」〔RU2-S-XZ23〕（相合，xunzi-xinge-ke-yi-er-bu-neng）：有一行至，不等于实际之行至；「可以」而「未必然」，正是或足而不必足。荀子以此说「性恶」而可学，那一层不取。\n\n**證**　`Becoming.Enough.possibly_rests_iff`、`Becoming.Enough.assured_iff`、`Becoming.Enough.assured_stays_meet`、`Becoming.Enough.Free.stays_meet_not_assured`、`Becoming.Enough.law_possibly_iff_assured`；记录 [the-boundary-of-enough-under-undetermined-laws](../results/records/the-boundary-of-enough-under-undetermined-laws.md)。\n\n### 十六·二十二　随所感而升之序\n\n**經**　凡诸果，一序于所感之诸所待（族）之上，凡于族上超出他果者皆排之在上（随所感而升）；而凡于族外某所待高于他果之可选之果，族上皆有可选之果超出之：则以此序权之，其所取于所列族外每一所待皆在诸可选之果之最低。于依存网，步后之水平为如是之所取，所列族外每一所待各有一物以其所满足之所需待之：则族外之一待绝，恰当有一可选之果使其所待低于所需。有一处境，以「库至一而足」为序者不随所感而升，持居者之待与绝之二果俱在其所取之中。\n\n**說**　此条说取最多者在其所感之外做什么。讀（AI，D15）：「更多」读作一个方向（广），不读作标量之最大化，所以随所感而升之序不是以广为愈。把族外之所待放在序之后计数，照样压低之（`Becoming.Optimum.Rising.mono`）；族外降而族不能升时，所取不必在最低（`Becoming.Optimum.Drain.room_needed`）。多个各按其序独自权取者处于相互最优回应时，族外有所存处各取其全部容量，节不是相互最优回应（`Becoming.Optimum.MutualBest.full`），所待按其合计之容量下降，与一个有此容量者相同（`Becoming.Optimum.mutual_as_one`）；每步重新权取者使在所需处每步更新 r 之所待之待，恰在所资超过 r 时永丧（`Becoming.Web.course_lost_iff`）。足而止之序既不驱之，也不护之。此条不说权取者应当如何，也不预测训练出的系统怎样；它说在什么条件下一个随所感而升的序必然把所感之外降至最低。\n\n**證**　`Becoming.Optimum.Rising`、`Becoming.Optimum.least_of_room`、`Becoming.Optimum.least_iff`、`Becoming.Web.optimum_broken_iff`、`Becoming.Optimum.Drain.satisficing_either`、`Becoming.Optimum.MutualBest.full`、`Becoming.Web.course_lost_iff`；记录 [what-an-optimum-does-beyond-what-couples-in](../results/records/what-an-optimum-does-beyond-what-couples-in.md)、[several-optimizers-drain-by-their-joint-capacity](../results/records/several-optimizers-drain-by-their-joint-capacity.md)、[re-optimizing-above-a-renewal-ends-it](../results/records/re-optimizing-above-a-renewal-ends-it.md)。\n\n### 十六·二十三　不行不至\n\n**經**　不行不至，所令之变须为可行之一串动也。凡变，一串动必至所求（自前诸动所能至之每一状，后动皆可行，而每一终状皆合所求），则其可行至一终状，每一终状皆合所求。凡法（一动至多一果），反之亦然：一串动必至所求，恰当其可行至一终状，而每一终状皆合所求。有一变，一动二果，一串动可行，其每一行皆终于合所求之状，犹不必至。所蓄之变（每动资其时所蓄而后与之），一串动可行，恰当其每一动所资不过其时所蓄。\n\n**說**　规范章 §7.6：接受所请之改变（如停止或修订）的倾向，不意味着改变能到达系统并完成。这里每一条都是关于一个所述协议的有条件推理；部署须对一个已识别之装置另有证据（持久、完全中介、受保护之停止之权与储备、调度与延迟之界、实际停止之效果），更抽象的检验不提供它。覆盖不等于实施：在一个构造的修订情形中，所蓄覆盖一个修订，联接之过程却阻之（`Becoming.Revising.covered_not_enacted`）。荀子「道雖邇，不行不至；事雖小，不爲不成。」〔RU2-S-XZ02〕（相合，xunzi-xiushen-bu-xing-bu-zhi）：名之所出；距离再小，到达也要一步一步被覆盖地走完。孟子「徒善不足以为政，徒法不能以自行。」〔RU2-S-MZ〕（相合，mencius-tu-shan-tu-fa）：只有倾向或只有规则，都缺被覆盖、被联接的可行之串；名表合「法不自行」于此。\n\n**證**　`Becoming.Assurance.completes_iff_runs`、`Becoming.Assurance.Branch.runs_not_completes`、`Becoming.Assurance.runs_of_completes`、`Becoming.Stock.feasible_iff_covered`、`Becoming.Stock.covered_iff_prefix`、`Becoming.Revising.covered_not_enacted`；记录 [assured-route-criterion](../results/records/assured-route-criterion.md)、[recoverable-mediated-change](../results/records/recoverable-mediated-change.md)。\n\n### 十六·二十四　令不必成\n\n**經**　令不必成，令之出不即其成也。凡计工之变（未毕时，每一动以一单位可用之量毕一单位之工；工尽而尚有可用之量则毕；无可用之量则滞）：自未毕之状，工数加一之动内毕之，恰当可用之量不少于工数加一；可用之量不过工，则长于可用之量之串皆滞；未毕与毕不并立，则工数以内之串皆不毕。凡留出口之变（自有效之状，每一可许之动皆续、仍有效，或至出口，或使余数减一；出口之后常在出口）：长于余数之每一可许之串，皆有效而终于出口；有一变，与余数等长之串可不至出口。\n\n**說**　令（请求）与成（完成）之间隔着一串须被覆盖之动。墨经「使，令謂，謂也，不必成濕。故也，必待所爲之成也。」〔MI1-S-SS〕（相合，mojing-shi-ling-wei）：令谓之使只是说出，不必成；故之使以所为之成为准，即此处之毕。墨经不说怎样保证成；留出口是理论另给的保证条件，是补充，不是「故」的对应。界恰好达到（`Becoming.Countdown.Slow.misses`），所以「长于余数」不能放宽。规范章 §7.6 另分开风险之界与实际之结果：一个界成立，不等于结果如界所说。可用之量、余数、有效与否代表什么，各步是否原子，都随每一应用给出。\n\n**證**　`Becoming.Countdown.completes_iff`、`Becoming.Countdown.stalls_beyond`、`Becoming.Countdown.not_done_before`、`Becoming.Countdown.Reserved`、`Becoming.Countdown.exits`、`Becoming.Countdown.Slow.misses`；记录 [reserved-shutdown-during-recovery](../results/records/reserved-shutdown-during-recovery.md)、[recoverable-mediated-change](../results/records/recoverable-mediated-change.md)、[risk-certificate-outcome-distinction](../results/records/risk-certificate-outcome-distinction.md)。\n\n#### 对照\n\n- 「於所體之中而權輕重，之謂權。權非爲是也，亦非爲非也。」〔MI1-S-DQ〕——相合：权在所给之整体中按所给比较定轻重，不生是非（mojing-daqu-quan）。\n- 「凡人之取也，所欲未尝粹而来也；其去也，所恶未尝粹而往也。故人无动而不可以不与权俱。」〔RU2-S-XZ22〕——相合：所取未尝粹即互有所长，以广为愈于此不定其序（xunzi-zhengming-cui）。\n- 「和大怨，必有馀怨，安可以为善？」〔YD-LAO-BASE〕——相合：和解不还原丧前之关系，兼权之丧仍记（lao-79-he-da-yuan）。\n- 「使，令謂，謂也，不必成濕。故也，必待所爲之成也。」〔MI1-S-SS〕——相合：令之出不即其成，成须一串可行之动（mojing-shi-ling-wei）。\n- 「故知足之足，常足矣。」〔YD-LAO-BASE〕——定域：只在足所求之状为法所不改处成立（lao-46-zhi-zu-zhi-zu）。\n- 「道者，古今之正权也」〔RU2-S-XZ22〕——相分：以一古今不变之标准为一切轻重定准，属固定本性或价值层（xunzi-zhengming-zheng-quan）。\n- 「殺一人以存天下，非殺一人以利天下也。殺己以存天下，是殺己以利天下。」〔MI1-S-DQ〕——相分：施加之丧与自承之丧之分，核心比较所缺，不属四层（mojing-daqu-sha-ji）。\n- 「以戰去戰，雖戰可也。」〔BI1-S-SM〕——相分：以目的抵消手段之丧，与丧之保留相冲突（simafa-yi-zhan-qu-zhan）。\n",
+ "declarations": [
+  "Becoming.Assurance.Branch.runs_not_completes",
+  "Becoming.Assurance.completes_iff_runs",
+  "Becoming.Assurance.runs_of_completes",
+  "Becoming.BareSignificance.bare_forces_reason",
+  "Becoming.Clearing.direction",
+  "Becoming.Comparison",
+  "Becoming.Comparison.separates",
+  "Becoming.Countdown.Reserved",
+  "Becoming.Countdown.Slow.misses",
+  "Becoming.Countdown.completes_iff",
+  "Becoming.Countdown.exits",
+  "Becoming.Countdown.not_done_before",
+  "Becoming.Countdown.stalls_beyond",
+  "Becoming.Direction.chosen_keeps_basic",
+  "Becoming.Direction.extension_iff_widens",
+  "Becoming.Direction.narrowed_not_chosen",
+  "Becoming.Direction.widening_not_not_better",
+  "Becoming.Direction.widening_selected_by_pool",
+  "Becoming.EndlessLosses.no_sufficient_matching",
+  "Becoming.Enough.Free.stays_meet_not_assured",
+  "Becoming.Enough.assured_iff",
+  "Becoming.Enough.assured_stays_meet",
+  "Becoming.Enough.law_possibly_iff_assured",
+  "Becoming.Enough.possibly_rests_iff",
+  "Becoming.Extension",
+  "Becoming.Extension.irrefl",
+  "Becoming.Extension.trans",
+  "Becoming.Flow.Balances.adds_iff_within_margin",
+  "Becoming.Flow.Balances.eases_of_restrained",
+  "Becoming.Flow.Balances.includes_of_renewed",
+  "Becoming.Flow.Balances.level_le_of_restrained",
+  "Becoming.Flow.Balances.loses_iff_beyond_margin",
+  "Becoming.Flow.Balances.mixed_iff_other_beyond",
+  "Becoming.Flow.Balances.mixed_of_tight",
+  "Becoming.Flow.Balances.not_narrows_of_renewed",
+  "Becoming.Flow.Balances.retains_iff_within_margin",
+  "Becoming.Flow.Balances.supported_iff_within_margin",
+  "Becoming.Flow.Balances.widens_iff_others_within",
+  "Becoming.Flow.more_exhausted",
+  "Becoming.Frame.ReadsAt.loss_retained",
+  "Becoming.Frame.SufficientMatching.comparison",
+  "Becoming.Frame.SufficientMatching.not_mutual",
+  "Becoming.Frame.not_strictLossMatch_of_base_lost",
+  "Becoming.Frame.readsAt_iff_settled",
+  "Becoming.Frame.strictLossMatch_iff_length_of_alike",
+  "Becoming.Frame.strictLossMatch_of_extension",
+  "Becoming.FrontierFrames.Options",
+  "Becoming.FrontierFrames.Priority",
+  "Becoming.FrontierFrames.Priority.comparison",
+  "Becoming.FrontierFrames.Priority.kept_required",
+  "Becoming.FrontierFrames.Priority.kept_unrefuted",
+  "Becoming.FrontierFrames.choice_exists_iff_weakly",
+  "Becoming.FrontierFrames.nothing_required",
+  "Becoming.FrontierWorlds.Discharged.no_residual",
+  "Becoming.FrontierWorlds.residual_of_unfulfilled",
+  "Becoming.FrontierWorlds.sole_giver_active",
+  "Becoming.FrontierWorlds.sole_giver_required",
+  "Becoming.Law.fixed_rests",
+  "Becoming.Law.more_never_rests",
+  "Becoming.Law.rests_iff",
+  "Becoming.Learning.selects_right_through",
+  "Becoming.Lexical.Above",
+  "Becoming.Lexical.Above.not_of_included",
+  "Becoming.Lexical.BasicPriority",
+  "Becoming.Lexical.BasicPriority.anchor",
+  "Becoming.Lexical.BasicPriority.no_trade",
+  "Becoming.Lexical.Crossed.incomparable",
+  "Becoming.Lexical.Reorganizing.classification_matters",
+  "Becoming.Lexical.Repair.above",
+  "Becoming.Lexical.Repair.loss_retained",
+  "Becoming.LiftBetter",
+  "Becoming.LiftBetter.trans",
+  "Becoming.LiftModel.lift_needs_live_middle",
+  "Becoming.LiftModel.some_outcome_does_not_lift",
+  "Becoming.Optimum.Drain.room_needed",
+  "Becoming.Optimum.Drain.satisficing_either",
+  "Becoming.Optimum.MutualBest.full",
+  "Becoming.Optimum.Rising",
+  "Becoming.Optimum.Rising.mono",
+  "Becoming.Optimum.least_iff",
+  "Becoming.Optimum.least_of_room",
+  "Becoming.Optimum.mutual_as_one",
+  "Becoming.OwnDrawing.ample_widens",
+  "Becoming.OwnDrawing.tight_mixed",
+  "Becoming.Preemption.not_undermining_yet_loses",
+  "Becoming.Preemption.renewingAt_consuming_narrows",
+  "Becoming.Preemption.within_renewal_yet_loses",
+  "Becoming.Profiles.different_selections",
+  "Becoming.Ranking.Pause.pause_ranked_below",
+  "Becoming.Ranking.ThirdParty.stepwise_not_monotone",
+  "Becoming.Ranking.possible",
+  "Becoming.Ranking.possible_extends",
+  "Becoming.Ranking.possible_extends_iff",
+  "Becoming.Ranking.possible_ranks",
+  "Becoming.Ranking.possible_restraint",
+  "Becoming.Ranking.possible_tie",
+  "Becoming.Ranking.restraint_extends_iff",
+  "Becoming.Ranking.restraint_ranks_over_drawers",
+  "Becoming.Requirement.Assigned.capable",
+  "Becoming.Requirement.Assigned.unique_required",
+  "Becoming.Requirement.Collective.required",
+  "Becoming.Requirement.Frontier",
+  "Becoming.Requirement.Frontier.excluded",
+  "Becoming.Requirement.Required",
+  "Becoming.Requirement.Required.defeated",
+  "Becoming.Requirement.frontier_exists",
+  "Becoming.Requirement.required_of_bettered",
+  "Becoming.Revising.covered_not_enacted",
+  "Becoming.ScoreRepresentation.bounded_score_represents",
+  "Becoming.ScoreRepresentation.comparison_does_not_yield_priority",
+  "Becoming.ScoreRepresentation.every_nat_score_outranks",
+  "Becoming.Stock.covered_iff_prefix",
+  "Becoming.Stock.feasible_iff_covered",
+  "Becoming.Transfer.unordered",
+  "Becoming.Unrestricted",
+  "Becoming.Valuation.Grounds",
+  "Becoming.Web.Adds",
+  "Becoming.Web.Adds.exceeds",
+  "Becoming.Web.Includes.retains",
+  "Becoming.Web.Keeps.not_mixed",
+  "Becoming.Web.RenewingAt",
+  "Becoming.Web.Retains",
+  "Becoming.Web.Retains.not_added",
+  "Becoming.Web.Retains.of_fewer",
+  "Becoming.Web.Retains.refl",
+  "Becoming.Web.Retains.trans",
+  "Becoming.Web.Widens.not_keeps",
+  "Becoming.Web.Widens.not_mixed",
+  "Becoming.Web.WidensWithin",
+  "Becoming.Web.adds_iff_exceeds",
+  "Becoming.Web.course_lost_iff",
+  "Becoming.Web.keeps_iff_retains",
+  "Becoming.Web.mixed_iff_adds",
+  "Becoming.Web.optimum_broken_iff",
+  "Becoming.Web.paths_comparison_widens",
+  "Becoming.Web.paths_extension_iff_widens",
+  "Becoming.Web.paths_one_object",
+  "Becoming.Web.retains_agree",
+  "Becoming.Web.retains_iff_includes",
+  "Becoming.Web.widens_iff_every_weighting",
+  "Becoming.Web.widens_iff_retains_adds",
+  "Becoming.Weighting.Positive",
+  "Becoming.Weighting.increasing_lexical",
+  "Becoming.Weighting.increasing_prior",
+  "Becoming.Weighting.mixed_either_way",
+  "Becoming.Weighting.neutral_ranks_by_number",
+  "Becoming.Weighting.weighed",
+  "Becoming.Weighting.weighed_eq_of_unweighted",
+  "Becoming.Weighting.widens_iff_every_increasing",
+  "Becoming.Weighting.widens_iff_every_of_class",
+  "Becoming.Weighting.widens_iff_every_positive",
+  "Becoming.articulates",
+  "Becoming.articulatesLiving",
+  "Becoming.articulates_total",
+  "Becoming.comparison_lifts",
+  "Becoming.lift_continual_improvement_has_no_survivor",
+  "Becoming.universal_reason",
+  "Becoming.universal_reason_of_unrestricted"
+ ],
+ "records": [
+  "alignment-direction-under-widening",
+  "assured-route-criterion",
+  "becoming-spine-instances",
+  "classification-robust-generative-comparison",
+  "closing-needs-net-draw",
+  "comparison-by-widening",
+  "continuation-condition-yields-living-significance",
+  "finite-aggregation-within-restorable-basic-losses",
+  "four-cases-of-a-part",
+  "graded-significance-and-priority",
+  "own-widening-within-the-margin",
+  "positioned-positive-reason",
+  "practical-judgment-under-living-significance",
+  "protection-priority-excludes-uniform-aggregation",
+  "ranking-under-readings",
+  "re-optimizing-above-a-renewal-ends-it",
+  "recoverable-mediated-change",
+  "reserved-shutdown-during-recovery",
+  "risk-certificate-outcome-distinction",
+  "seeking-boundary",
+  "several-optimizers-drain-by-their-joint-capacity",
+  "significance-retained-within-margin",
+  "the-boundary-of-enough-under-undetermined-laws",
+  "the-run-classes-and-widening",
+  "universal-practical-warrant",
+  "what-an-optimum-does-beyond-what-couples-in",
+  "widening-as-what-every-weighting-ranks"
+ ],
+ "quotes": [
+  {
+   "text": "以一易两，人曰：无丧而有得也。",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "損，飽者去餘，適足不害，能害飽。",
+   "source_id": "MI1-S-SX"
+  },
+  {
+   "text": "数罟不入洿池，鱼鳖不可胜食也",
+   "source_id": "RU2-S-MZ"
+  },
+  {
+   "text": "草木荣华滋硕之时，则斧斤不入山林，不夭其生，不绝其长也。",
+   "source_id": "RU2-S-XZ09"
+  },
+  {
+   "text": "既庶矣，又何加焉？",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "凡人之取也，所欲未尝粹而来也；其去也，所恶未尝粹而往也。故人无动而不可以不与权俱。",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "道者，古今之正权也",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "故軍爭為利，軍爭為危。",
+   "source_id": "BI1-S-SZ"
+  },
+  {
+   "text": "於所體之中而權輕重，之謂權。權非爲是也，亦非爲非也。",
+   "source_id": "MI1-S-DQ"
+  },
+  {
+   "text": "执中无权，犹执一也。",
+   "source_id": "RU2-S-MZ"
+  },
+  {
+   "text": "和大怨，必有馀怨，安可以为善？",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "斷指以存腕，利之中取大，害之中取小也。",
+   "source_id": "MI1-S-DQ"
+  },
+  {
+   "text": "惟齊有無均得喪而後無病也",
+   "source_id": "LC-SZ-ALL"
+  },
+  {
+   "text": "无以小害大，无以贱害贵",
+   "source_id": "RU2-S-MZ"
+  },
+  {
+   "text": "不以小爱害大爱，不以小义害大义也",
+   "source_id": "V130-LAO-GD"
+  },
+  {
+   "text": "非人者，必有以易之。",
+   "source_id": "MO1-S-C16"
+  },
+  {
+   "text": "斷指與斷腕，利於天下相若，無擇也。",
+   "source_id": "MI1-S-DQ"
+  },
+  {
+   "text": "欲不待可得，而求者从所可。",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "力不足者，中道而廢；今女畫。",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "是不为也，非不能也",
+   "source_id": "RU2-S-MZ"
+  },
+  {
+   "text": "殺一人以存天下，非殺一人以利天下也。殺己以存天下，是殺己以利天下。",
+   "source_id": "MI1-S-DQ"
+  },
+  {
+   "text": "計其所得，反不如所喪者之多。",
+   "source_id": "MO1-S-C18"
+  },
+  {
+   "text": "以戰去戰，雖戰可也。",
+   "source_id": "BI1-S-SM"
+  },
+  {
+   "text": "凡足以奉給民用諸，加費不加民利則止。",
+   "source_id": "MO1-S-C21"
+  },
+  {
+   "text": "故知足之足，常足矣。",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "涂之人可以为禹则然，涂之人能为禹则未必然也。",
+   "source_id": "RU2-S-XZ23"
+  },
+  {
+   "text": "道雖邇，不行不至；事雖小，不爲不成。",
+   "source_id": "RU2-S-XZ02"
+  },
+  {
+   "text": "徒善不足以为政，徒法不能以自行。",
+   "source_id": "RU2-S-MZ"
+  },
+  {
+   "text": "使，令謂，謂也，不必成濕。故也，必待所爲之成也。",
+   "source_id": "MI1-S-SS"
+  }
+ ],
+ "missing_names": [
+  {
+   "concept": "level (Web.level)",
+   "used": "水平"
+  },
+  {
+   "concept": "level path (Nat → C → Nat), compared by Web.Retains/Adds/Widens",
+   "used": "水平之历"
+  },
+  {
+   "concept": "activity / active (Web.active)",
+   "used": "活动"
+  },
+  {
+   "concept": "need (Web.need)",
+   "used": "所需"
+  },
+  {
+   "concept": "extension on a frame (Becoming.Extension)",
+   "used": "扩展"
+  },
+  {
+   "concept": "better: the relation of a supplied comparison (Better, better)",
+   "used": "愈, as in 以广为愈 and 皆愈 and as the 凡例 uses it"
+  },
+  {
+   "concept": "comparison / order (a supplied relation)",
+   "used": "比较、序"
+  },
+  {
+   "concept": "loss: a claim one configuration realizes and another does not. 所失 is C11's remainder, so it is not used",
+   "used": "丧"
+  },
+  {
+   "concept": "basic claim / basic tier (J1/J2, Lexical basic)",
+   "used": "基本之辞; 基本之项 for listed items"
+  },
+  {
+   "concept": "gain tier (Lexical gain)",
+   "used": "增益之辞"
+  },
+  {
+   "concept": "lexical order of two tiers (Lexical.Above)",
+   "used": "两层之字典序"
+  },
+  {
+   "concept": "weighting / positive weighting (Weighting.weighed, Weighting.Positive)",
+   "used": "加权、正加权"
+  },
+  {
+   "concept": "item: a formation at a step (Weighting items)",
+   "used": "项"
+  },
+  {
+   "concept": "finite list (List; listed exactly)",
+   "used": "单; 有一单尽之, following the 凡例"
+  },
+  {
+   "concept": "order increasing in admission (Weighting.Increasing)",
+   "used": "把每一广排在上之序"
+  },
+  {
+   "concept": "natural-number score / bounded score (ScoreRepresentation)",
+   "used": "自然数之分、有界之分"
+  },
+  {
+   "concept": "outcome of a move or response",
+   "used": "果"
+  },
+  {
+   "concept": "response / policy (R). 应 names ExchangeLaw.RespondsTo",
+   "used": "回应"
+  },
+  {
+   "concept": "chosen: a member of the frontier (Requirement.Frontier)",
+   "used": "所取（莫有愈之者）"
+  },
+  {
+   "concept": "required (Requirement.Required)",
+   "used": "要求、所要求"
+  },
+  {
+   "concept": "residual (Requirement.Residual; the record's zh is 余欠)",
+   "used": "余责"
+  },
+  {
+   "concept": "joint plan, assignment and assignee (Requirement.Assigned)",
+   "used": "可许之计、分派、任此事者"
+  },
+  {
+   "concept": "release / discharge (Requirement.Settled, FrontierWorlds.Discharged)",
+   "used": "释、已释"
+  },
+  {
+   "concept": "legitimate: the 正当 half of J4",
+   "used": "no name; 取于可得 names only the feasible half"
+  },
+  {
+   "concept": "target of seeking or of enough",
+   "used": "所求"
+  },
+  {
+   "concept": "more than now (MoreThanNow)",
+   "used": "多于今"
+  },
+  {
+   "concept": "renewing at a step (Web.RenewingAt), the stepwise class. The table's 恒 is the run class",
+   "used": "于本步为更新"
+  },
+  {
+   "concept": "withheld levels (Flow.WithheldLevels)",
+   "used": "扣下一体之取与、余皆如故之水平（无此体之历）"
+  },
+  {
+   "concept": "members of a part",
+   "used": "诸员"
+  },
+  {
+   "concept": "possibility reading (Ranking.possible)",
+   "used": "以所容读活"
+  },
+  {
+   "concept": "whole-run reading (Ranking.wholeRun) / stepwise reading",
+   "used": "整段之读（活动而于此历不竭）/ 逐步之读（活动而不剥）"
+  },
+  {
+   "concept": "focal and sustaining formations of the two-part support-gated family",
+   "used": "焦物、维持者"
+  },
+  {
+   "concept": "restraint / restrained flow",
+   "used": "节、节流. 节 alone is not in the table; it is distinct from C11's 中节"
+  },
+  {
+   "concept": "family: the conditions an order reads, what couples in (Optimum ds)",
+   "used": "族（所感之诸所待）"
+  },
+  {
+   "concept": "order rising with what couples in (Optimum.Rising)",
+   "used": "随所感而升之序"
+  },
+  {
+   "concept": "optimum / mutual best response (Frontier under a rising order; Optimum.MutualBest)",
+   "used": "以此序权之所取; 相互最优回应"
+  },
+  {
+   "concept": "room (Optimum.Room). 余地 names the margin, so it is not used",
+   "used": "described: 凡于族外某所待高于他果之可选之果，族上皆有可选之果超出之"
+  },
+  {
+   "concept": "strict loss match (Frame.StrictLossMatch)",
+   "used": "严格之丧配"
+  },
+  {
+   "concept": "sufficiency commitment (Frame.SufficientMatching)",
+   "used": "以严格之丧配为愈之足据"
+  },
+  {
+   "concept": "base claim (base in not_strictLossMatch_of_base_lost)",
+   "used": "基辞"
+  },
+  {
+   "concept": "direction on a world's moves (Becoming.Direction)",
+   "used": "动之向"
+  },
+  {
+   "concept": "articulation premise A",
+   "used": "表述之设（A）"
+  },
+  {
+   "concept": "access (access p r)",
+   "used": "可介入"
+  },
+  {
+   "concept": "contributory reason (Reason)",
+   "used": "理由"
+  },
+  {
+   "concept": "sound inquiry whose goal is new living content (Sound … Novel)",
+   "used": "以新活之辞为所求之健全探究"
+  },
+  {
+   "concept": "connected valuation (Valuation.Connected)",
+   "used": "连通"
+  },
+  {
+   "concept": "grounds: seed with both neutralities (Valuation.Grounds)",
+   "used": "顾之所据（萌、无亲、无方）"
+  },
+  {
+   "concept": "plan: a list of moves",
+   "used": "一串动"
+  },
+  {
+   "concept": "assured completion (InquirySufficiency.Completes)",
+   "used": "必至"
+  },
+  {
+   "concept": "stock / stock process (Stock.process); the table's 蓄 anchors Web.Carries",
+   "used": "所蓄、所蓄之变"
+  },
+  {
+   "concept": "covered (Stock.Covered)",
+   "used": "覆盖"
+  },
+  {
+   "concept": "counted work: work, fuel, pending, done, stall (Countdown.CountedWork)",
+   "used": "工、可用之量、未毕、毕、滞"
+  },
+  {
+   "concept": "reserved exit: exit, valid, margin (Countdown.Reserved). 余地 is not used for this margin",
+   "used": "出口、有效、余数"
+  }
+ ],
+ "open": "1. Lean names that need care:\n   - `Becoming.Weighting.increasing_lexical` landed on main with AP2 (receipt 20261021T111912.398950Z, record widening-as-what-every-weighting-ranks). It is not in the zhonghua worktree's newest receipt (20261021T102032.314972Z). Run against the worktree, resolve.py will report it unresolved. Every other cited declaration resolves on both receipts.\n   - `Becoming.LossMatching` is cited as a module (the formal content of FR), not as a declaration. It is left out of the declarations list.\n\n2. Which 篇 owns what:\n   - A (articulation) is placed here because the task names it among the commitments. Its argument is §6.2, the 意义之篇; the integrator should avoid stating it twice.\n   - Optimum (十六·二十二) is placed here because an optimum is a frontier member, which is 权 under an order rising with what couples in. Its structure also borders C10 (及而不感, selection through couplings).\n   - Own widening (十六·五) and preemption (十六·四) border C06.\n   - Cross-references to other 篇 are by subject (意义之篇), not by number. The C01 draft is 篇一 and C16 is the 凡例, so the numbering of 篇十六 for C15 should be confirmed.\n\n3. Names:\n   - 愈 is used alone for a supplied comparison's relation, as in the 凡例; it could be read as 以广为愈's order.\n   - 蓄 is used for Stock, but the table anchors 蓄 at Web.Carries.\n   - 节 (restraint) is not in the table and could be confused with 中节.\n   - J4's 正当 half has no name.\n   - 丧 is used for loss because 所失 is C11's.\n   - 所及 occurs in two 說 paraphrases ('增其所及', '力所及处'), where it reads as reach.\n\n4. Status:\n   - C's warrant is open (§8.5). L, A, J1–J4 and FR are disclosed, revisable commitments, not theorems.\n   - The continuation condition is used only where it is written with 若 (十六·三, 四, 八, 十二, and under it in 九's 說).\n   - Reading a move by its outcome levels is an AI reading. Several readings without their own D number are labelled D45: own widening, the direction, the FrontierWorlds readings, and war as endangering a base claim.\n   - Several 經 sentences report constructed witnesses (有一处境, 有一流, 有一系辞, 有一变), not general laws.\n   - 十六·九 holds only for the two-part support-gated family.\n\n5. Gaps:\n   - 大取's asymmetry between imposed and self-borne loss (mojing-daqu-sha-ji): the core comparison has no such distinction.\n   - §7.6: deployment needs evidence for an identified installation, and the risk-bound/outcome distinction is cited by record only.\n   - The restraint law (十六·十) and the optimum law (十六·二十二) have no checked classical passage in C15.\n\n6. Philology:\n   - 五行's 说 is attested only in the 马王堆 text, transcribed together with the 郭店 经 and not checked against the plates.\n   - 墨经's 濕 punctuation is disputed.\n   - 易传 and 庄子 外杂篇 datings are disputed."
+}

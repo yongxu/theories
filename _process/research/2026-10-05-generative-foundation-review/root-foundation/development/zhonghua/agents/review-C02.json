@@ -1,0 +1,162 @@
+{
+ "pian": "篇二　待（C02）",
+ "edits": [
+  {
+   "find": "失而终不足之后待者或亡、或改其待，",
+   "replace": "失而终不足之后，犹活动之待者必已减或解其待，其待如故者此后不活动，",
+   "why": "篇首：律不给「或亡或改待」之析取，只给二条蕴含（二·七）"
+  },
+  {
+   "find": "资，待者于一步取于一所待之关系也",
+   "replace": "资，待者于一步用一所待之关系也",
+   "why": "取是流之名（Flow.take），以取定资使二·五「只取其所资」成循环"
+  },
+  {
+   "find": "容、有待、恒、竭皆如故（`Becoming.Web.roles`、`Becoming.Web.roles_dependent`）",
+   "replace": "容、有待、恒、竭皆如故（`Becoming.Web.roles`、`Becoming.Web.roles_supported`、`Becoming.Web.roles_dependent`、`Becoming.Web.roles_renewingIn`、`Becoming.Web.roles_consumingIn`）",
+   "why": "roles_dependent 只证有待；容、恒、竭各有其律"
+  },
+  {
+   "find": "`Becoming.Web.roles_dependent`、`Becoming.SourceSeed.source_gives`；记录",
+   "replace": "`Becoming.Web.roles_supported`、`Becoming.Web.roles_dependent`、`Becoming.Web.roles_renewingIn`、`Becoming.Web.roles_consumingIn`、`Becoming.SourceSeed.source_gives`；记录",
+   "why": "證补上承载容、恒、竭如故的声明"
+  },
+  {
+   "find": "「足食，足兵，民信之矣。」〔RU1-S-LY〕又「民無信不立」〔RU1-S-LY〕：立依于几个所待，缺信则不立，正是容之为合取；去兵、去食之先后是诸所需之轻重，脊柱只表为不同之所需，不给先后之理由。",
+   "replace": "「足食，足兵，民信之矣。」〔RU1-S-LY〕列食、兵、信三个所待，此「足」是单个所需之足，不是容；「民無信不立」〔RU1-S-LY〕：信是立之所待，缺之则不立，即小故（二·八），相合限于此必要方向。去兵、去食之后犹立，在有待之下读作立于兵、食本无待，或其待已减或解（二·七）；何者先去是一种比较，脊柱不给，所需之大小也不定先后。",
+   "why": "原文重复了核对条目已纠正的误读（以所需轻重表去取次序）；去兵、去食之后犹立，「缺一则不立」不成立"
+  },
+  {
+   "find": "文本所否者正是充分，不是支撑。",
+   "replace": "文本所否者正是充分，不是容。",
+   "why": "用名表之名「容」，不用现代词"
+  },
+  {
+   "find": "同一所待上所需高者先绝，",
+   "replace": "同一所待同一步，所需不低者亦绝，",
+   "why": "of_need_le 是同一步之律，没有先后"
+  },
+  {
+   "find": "（`Becoming.TwoDrawers.broken`、`Becoming.TwoDrawers.restrained_kept`）",
+   "replace": "（`Becoming.TwoDrawers.broken`、`Becoming.TwoDrawers.shared`、`Becoming.TwoDrawers.restrained_kept`）",
+   "why": "「各取皆不过其超出之数」由 TwoDrawers.shared 证"
+  },
+  {
+   "find": "又若一族于某步无一见容",
+   "replace": "又同此三前提，若一族于某步无一见容",
+   "why": "unsupported_stays 需衡、唯活动者与之、有待；「又若」没说明前提沿用"
+  },
+  {
+   "find": "它排除缓冲、储备、滞后与休眠，放宽之即蓄（二·九）",
+   "replace": "它排除缓冲、储备与滞后（不活动之休眠不在所排之内：二·八之冬眠者即在有待之下），放宽之即蓄（二·九）",
+   "why": "Lean 只排缓冲、储备、滞后；Hibernation.readings 在有待下休眠，原文与二·八自相矛盾"
+  },
+  {
+   "find": "自第二步起其待恒持。",
+   "replace": "自第二步起其待步步皆持。",
+   "why": "恒持是名表之名（Web.Renewed，每步皆持），此处只自第二步起"
+  },
+  {
+   "find": "亡、改待、复三种去向既不穷尽，也不互斥：复说的是所待",
+   "replace": "亡、改待、终足三种去向既不穷尽，也不互斥：终足说的是所待",
+   "why": "复名构形之返回（Branching.Returns）；所待再被满足名终足"
+  },
+  {
+   "find": "家道窮必乖」〔YD-OW-XG〕（定域，xugua-qiong-bi-guai）",
+   "replace": "家道窮必乖」〔YD-OW-XG〕（相分，xugua-qiong-bi-guai）",
+   "why": "核对条目为相分：序卦之「必」与脊柱相反，不是定域"
+  },
+  {
+   "find": "所依之有形者亡后以正需依之者（`Becoming.Web.Carries.coextinct_lasts`），失而终不足而其待如故者，",
+   "replace": "所待之有形者亡后以正需待之者（`Becoming.Web.Carries.coextinct_lasts`），失而终不足而其待如故者（`Becoming.Web.Carries.consumed_lasts`），",
+   "why": "依不是名表之名（待）；后半句之律原未引"
+  },
+  {
+   "find": "若凡这样的待者都给出",
+   "replace": "若凡从未见容、有蓄、活动步步定然否之待者都给出",
+   "why": "写出 lpo_of_ending 的前提"
+  },
+  {
+   "find": "正是所依已终而凭蓄之延迟。",
+   "replace": "孔疏以根与枝两向相待；枝干已枯，根株以正需待之而凭蓄，其亡延迟而不免。",
+   "why": "引文中先枯的是枝干（生于根株），「所依已终」方向不明；依核对条目的两向读法"
+  },
+  {
+   "find": "`Becoming.Web.Embodied.ends_when_consumed` 说以不过一之需竭一有形者则其亡。",
+   "replace": "`Becoming.Web.Embodied.ends_when_consumed` 说一待对有形者之所需不过一，而其水平自此恒低于此需，则此有形者此后不活动；此律不要求资，故不是竭。",
+   "why": "竭（ConsumingIn）须资，此律没有资之前提"
+  },
+  {
+   "find": "待者亡，律不说其所待亦亡：",
+   "replace": "待者亡，律不说其所待或与之者亦亡：",
+   "why": "Downstream 中继续活动的是与者，不是 down 之所待"
+  },
+  {
+   "find": "所需为零或所待不有形之处，一物之终不由此律传到依者。",
+   "replace": "所需为零或所待不有形之处，一物之不活动不由此律传到待者。",
+   "why": "依、终不是名表之名；coextinct 只是逐步之不活动"
+  },
+  {
+   "find": "正是俱亡之界，所依若不在这样的链上，其灭不由此律传到依者。",
+   "replace": "正是俱亡之界，所待若不在这样的链上，其灭不由此律传到待者。",
+   "why": "一概念一名：待"
+  },
+  {
+   "find": "一个所依之灭不传到另一个所依；",
+   "replace": "一个所待之灭不传到另一个所待；",
+   "why": "一概念一名：待"
+  },
+  {
+   "find": "有形而自持者于一步已之，则凡于此步资之者",
+   "replace": "有形而自持者于一步已，则凡于此步资之者",
+   "why": "「已之」带使动义，与說「这是同时，不是使之」相反"
+  },
+  {
+   "find": "所以加入一个人人以零需待之、无人资之的所待",
+   "replace": "所以加入一个诸物皆以零需待之、无物资之的所待",
+   "why": "人不采为名；关系项不以人相称"
+  },
+  {
+   "find": "近读作同参与一所待，相得读作经交相连，害读作剥；剥皆交，但近而不相得与剥可以并存，脊柱不证其必然，",
+   "replace": "近读作同参与一所待，相得读作经活之事以交相连，害读作剥；剥之事皆交而不是活之事，二待者经一所待之用相连，当唯一之用是剥时不相连，同参与则两种情形皆相关（`Becoming.Shared.connection_by_living_use`，一构造见证）；近而不相得与剥可以并存，脊柱不证其必然，",
+   "why": "原读「相得＝经交相连」与「剥皆交」相冲（害之则必相得）；核对条目据 connection_by_living_use 只计活之事"
+  },
+  {
+   "find": "`Becoming.Flow.mutuallyDependent_iff_reach` 说：凡一物所能扰者，皆可隔层回扰之。",
+   "replace": "`Becoming.Flow.mutuallyDependent_iff_reach` 说：相待恰当每一物之及域皆兼，即每一物皆可隔层及于每一物。",
+   "why": "原释说的是对称性，不是此律，也推不出相待"
+  },
+  {
+   "find": "所以相待不是相利。",
+   "replace": "所以相待不是交相资。",
+   "why": "利不采为名（见交相利条）"
+  },
+  {
+   "find": "讀（AI，D39）：\"高度纠缠之系统\"读作相待；在相待之下，以每一中心之扰域为界之顾（别）",
+   "replace": "讀（AI，D39）：所谓纠缠之系统读作相待；在相待之下，以每一我（中心）之扰域为界之顾（别）",
+   "why": "引号内是 Ren 用语的译文，不能当引语；中心在名表作「我」"
+  },
+  {
+   "find": "凡多重决定，即偏去任一物之分同一动犹绝之，则无一物有力。",
+   "replace": "凡一动绝一待，偏去任一物之分同一动犹绝之，则无一物有力。",
+   "why": "經只用名表之名；「多重决定」是现代词，名表又用它注合致而无独致，异义相撞"
+  },
+  {
+   "find": "需至少二物，其律见群之篇（`Becoming.Dependence.differenceOnlyTogether_iff`）",
+   "replace": "需至少二物（`Becoming.Dependence.DifferenceOnlyTogether.two_le_length`），其律见群之篇（`Becoming.Dependence.differenceOnlyTogether_iff`）",
+   "why": "「至少二物」由 two_le_length 证，不是 differenceOnlyTogether_iff"
+  },
+  {
+   "find": "但书之结构可对照「微管仲，吾其被髮左衽矣」〔RU1-S-LY〕。",
+   "replace": "但书之结构可对照「微管仲，吾其被髮左衽矣」〔RU1-S-LY〕（定域：但书之形相同；其反事实之断言脊柱不证）。",
+   "why": "对照须标明种类"
+  },
+  {
+   "find": "- 「足食，足兵，民信之矣。」〔RU1-S-LY〕——相合：立依于诸所待，缺一则不立，即容之为合取（lunyu-min-wu-xin-bu-li）。",
+   "replace": "- 「民無信不立」〔RU1-S-LY〕——相合：信是立之所待，缺之则不立，限于此必要方向；去兵、去食之后犹立（lunyu-min-wu-xin-bu-li）。",
+   "why": "「缺一则不立」与原文去兵、去食后犹立相反；核对条目只限于必要方向"
+  }
+ ],
+ "verdict": "sound after edits",
+ "notes": "篇二只要改 31 处就能用，不需重写。31 处的 find 我都核过：在草稿中各恰好出现一次，依次套用到副本后全部生效。\n\n**核过、无误的部分**\n- **声明**：草稿引的 112 个 Lean 声明，`resolve.py` 全部解析到当前全名；edits 新引的 7 个（`roles_supported`、`roles_renewingIn`、`roles_consumingIn`、`TwoDrawers.shared`、`Carries.consumed_lasts`、`DifferenceOnlyTogether.two_le_length`、`Shared.connection_by_living_use`）也都解析，并读过其陈述。\n- **记录**：17 个记录链接都在 `theories/becoming/results/records/`。\n- **引文**：41 处引文用 `ctq.py text` 逐字核过，全部精确；edits 没有引入新引文。\n- **經的条件**：逐条对照 Lean 的前提与 docstring 后，除 edits 所改之处，其余都写出了局部条件（衡、唯活动者与之、只取其所资、有待、有形、正需、自然数之量、活动步步定然否），没有更强的全称。\n- **延续之条件与排序**：凡续皆有顾只在二·十五作为结论之形出现，未被断言；排序只指向以广为愈；没有写伦理「推出」自延续之条件。\n- **种类**：其余 28 个条目的种类都与 `work/passages/C02.json` 一致。\n\n**改动中最要紧的几处**\n- **种类错标**：序卦「家道窮必乖」原标定域，核对条目为相分。\n- **复述已纠正的误读**：论语条用「诸所需之轻重」解释去兵、去食的先后，正是核对条目已纠正的误读；而且原文去兵、去食之后仍立，所以对照表里的「缺一则不立」也不成立。\n- **与二·八矛盾**：二·六说有待排除「休眠」。Lean 只排除缓冲、储备与滞后，二·八的冬眠见证恰是在有待之下。\n- **释义错误**：`mutuallyDependent_iff_reach` 原释为对称性，不是这条律。\n- **自相矛盾的读法**：系辞「近而不相得」把相得读作经交相连，又说剥皆交，等于害之则必相得。\n- **用错了名**：以「取」定义资；「恒持」（Web.Renewed）用来指「自第二步起皆持」；「复」用来指所待再被满足（应作终足）；「竭」用在没有资的律上；「依」被当作待的第二个名。\n\n**交整合者（名表层面的问题，edits 无法修）**\n1. **「事」（event）不在名表**：二·十三的經与說都用它。按规则不能另造名，需整合者定名，或改写为「一物于一步」。\n2. **「恒」作副词，与名相撞**：全篇约 18 处「恒」作副词（恒不活动、恒低于、恒无一见容……），而名表里恒是运行之类（Web.RenewingIn），恒持另有所指。我只改了与名「恒持」直接相撞的一处；其余建议在全书统一换成不是名的副词（如「永」或「此后皆」）。\n3. **「多重决定」异义相撞**：名表 C13 给合致而无独致（DifferenceOnlyTogether）的注是「多重决定」，而全书（本篇二·十七的說）用「多重决定」指 Overdetermined。两者不同，名表的注应改。\n4. **我暂留未改的两处**\n   - 「蓄延其亡而不免之」：律只给「不能活动于任意晚之步」，指出终止之步需要 LPO（`lpo_of_ending`）；但记录 reserve-defers-ending 的第 6 条就是这样措辞，且說已写明界限，故保留。\n   - 二·十的「讀（AI）」没有决定编号。\n\n改后副本（未动任何仓库文件）：/private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/rev-c02/draft-edited.md；edits 全文：/private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/rev-c02/edits.json。"
+}

@@ -1,0 +1,157 @@
+{
+ "pian": "篇十四　群与分（C13）",
+ "edits": [
+  {
+   "find": "凡每一待者或待一所待、或与之取与，则凡待者皆在凡待者之群域。",
+   "replace": "有一所待，凡待者或待之、或与之取与，则凡待者皆在凡待者之群域。",
+   "why": "system_whole_of_common needs one common condition c; the draft's wording also reads as each depending on any condition"
+  },
+  {
+   "find": "（衡、有待、门于 m、不重出、互为最优……）",
+   "replace": "（衡、有待、与之者依其所与之所待而所需不下于 m、不重出、互为最优……）",
+   "why": "门 is not a name in the table; use the plain condition"
+  },
+  {
+   "find": "与之者若自身依此所待（门于 m），它们随之停止",
+   "replace": "与之者若自身依此所待而所需不下于 m，它们随之停止",
+   "why": "remove the unadopted coinage 门"
+  },
+  {
+   "find": "门不可省：与之者不待此所待，则终止不持久（十四·十一）。",
+   "replace": "与之者依此所待这一条件不可省：与之者不待此所待，则终止不持久（十四·十一）。",
+   "why": "remove the unadopted coinage 门"
+  },
+  {
+   "find": "与它的位置无关，也不需门（`Flow.ends_at_race_end`）；门于 m 之下，争中诸称",
+   "replace": "与它的位置无关，也不需与之者依此所待（`Flow.ends_at_race_end`）；与之者依此所待而所需不下于 m 时，争中诸称",
+   "why": "remove the unadopted coinage 门"
+  },
+  {
+   "find": "每一条件都需要：与之者不待此所待",
+   "replace": "与之者依此所待、称之最者依此所待，二条件各需要：与之者不待此所待",
+   "why": "only these two hypotheses have witnesses (Restored, Clearing); balance and the rest are not shown needed"
+  },
+  {
+   "find": "同章以「視人之國若視其國」〔MO1-S-C15〕立兼，是不变之一步，只定范围而不排序，兼若作为排序，还要以广为愈",
+   "replace": "同章以「視人之國若視其國」〔MO1-S-C15〕立墨子之兼（兼爱之兼，不是名表中整体之兼），其结构是不易乎畛（不变的一步），只定范围而不排序；以之排序，还要以广为愈",
+   "why": "兼 in the table names the whole; the step of invariance is named 不易乎畛"
+  },
+  {
+   "find": "交相（彼此）＋资（汲取）",
+   "replace": "交相（彼此）＋资（汲取；交相资即彼此资于对方之所与，不是各取于对方所依之所待）",
+   "why": "as written, 'drawing on each other' is the Drawing case, which is mutually dependent and not fed"
+  },
+  {
+   "find": "相待不是互利，也不推出谁给谁。",
+   "replace": "相待不是交相资（十四·三），也不推出谁给谁。",
+   "why": "利 is not adopted (value sense); the structural contrast is 交相资"
+  },
+  {
+   "find": "一物不活动，依存之链所及的待者都随之不活动（`Web.coextinct`）",
+   "replace": "一物于一步不活动，凡经有形者之依存链及于它的待者，于此步都不活动（`Web.coextinct`）",
+   "why": "coextinct is at one step, along chains through embodied relata"
+  },
+  {
+   "find": "levels-of-closure.md)、[mutual-dependence-and-its-pace](../results/records/mutual-dependence-and-its-pace.md)。",
+   "replace": "levels-of-closure.md)、[mutual-dependence-and-its-pace](../results/records/mutual-dependence-and-its-pace.md)、[life-as-condition-of-life](../results/records/life-as-condition-of-life.md)。",
+   "why": "Web.coextinct is carried by the record life-as-condition-of-life, which the 證 lacked"
+  },
+  {
+   "find": "讀（AI，D39）：“高度纠缠之系统”读作相待，处处共享为其弱读，交相资为其强读。",
+   "replace": "讀（AI，D39）：说一个系统高度纠缠，读作相待（不是量子纠缠），处处共享为其弱读，交相资为其强读。",
+   "why": "do not present an English phrase, translated, as a quotation"
+  },
+  {
+   "find": "讀（AI，D48）：“他人将欺我，故我先欺”之螺旋，即有记忆之扣留，它吸收一切与。",
+   "replace": "讀（AI，D48）：以为他人将欺己、故先欺人之螺旋，即有记忆之扣留，它吸收一切与。",
+   "why": "do not present a translated English phrase as a quotation"
+  },
+  {
+   "find": "生人之间的合作是跨越比任何相识更长之链的等待之与",
+   "replace": "互不相识者之间的合作是跨越比任何相识更长之链的等待之与",
+   "why": "生 is the name for generation; 生人 is ambiguous"
+  },
+  {
+   "find": "中间没有渐闭（`LoopReturn.whole_factors`）",
+   "replace": "中间没有渐闭（`LoopReturn.whole_factors`、`LoopReturn.nothing_between`）",
+   "why": "the claim of no gradual closing is nothing_between, not whole_factors"
+  },
+  {
+   "find": "：名是一者在他者读法中的位置，名之高即他者之低",
+   "replace": "：此名指名声，不是命名之名；它是一者在他者读法中的位置，一者名高即他者名低",
+   "why": "名 in the table names a name (墨经); 庄子's 名 here is reputation"
+  },
+  {
+   "find": "关系之读在两种情形下都计它为耗用者，二读都推不出责任",
+   "replace": "关系之读在两种情形下都计它为耗用者；单去之验与关系之读，都推不出责任",
+   "why": "'二读' was unclear; the record says neither the but-for test nor the relational reading yields responsibility"
+  },
+  {
+   "find": "所需高者先绝（`Web.Broken.of_need_le`）",
+   "replace": "所需高者先于所需低者而绝（同一步之内按所需之高低，不是时序）（`Web.Broken.of_need_le`）",
+   "why": "the law is a same-step threshold comparison, not a temporal order"
+  },
+  {
+   "find": "（`Ranking.restraint_ranks_over_drawers`，有取不多、与不少、所需与所资不增诸条件）",
+   "replace": "（`Ranking.restraint_ranks_over_drawers`，有始之水平不低、取不多、与不少、所待所需所资不增、过取之行有待而节取之行受支撑则活动诸条件）",
+   "why": "the list left out the hypotheses start, asks, Dependent and ActiveWhereSupported"
+  },
+  {
+   "find": "其后所立恰为前之水平加族外他者所与、减其所取、减诸优化者于此之合计容量，不足则为零",
+   "replace": "其后所立恰为前之水平加诸优化者以外之待者所与、减其所取、减诸优化者于此之合计容量，不足则为零",
+   "why": "restGiven/restTaken are formations outside the optimizers, not 'outside the family' (族 is a family of conditions)"
+  },
+  {
+   "find": "族外他者每步所与不过 r，他者所取加诸优化者于此之合计容量每步过 r",
+   "replace": "诸优化者以外之待者每步所与不过 r，其所取加诸优化者于此之合计容量每步过 r",
+   "why": "same conflation of conditions with formations"
+  },
+  {
+   "find": "所取过更新恰失其待，在更新之内则持（`Optimum.course_beyond`、`Web.course_lost_iff`）",
+   "replace": "所取过更新恰失其待，在更新之内则不失（`Optimum.course_beyond`、`Web.course_lost_iff`，另有更新与所取每步一定诸条件）",
+   "why": "course_lost_iff gives not lost, not kept, and it has fixed-renewal and fixed-draw hypotheses"
+  },
+  {
+   "find": "〔RU2-S-XZ19〕与此相合者只在两处",
+   "replace": "〔RU2-S-XZ19〕在此只于两处成立",
+   "why": "goes with the kind change below"
+  },
+  {
+   "find": "定界归于先王亦不携带（相合，xunzi-lilun-li-qi-yu-fen）",
+   "replace": "定界归于先王亦不携带（定域，xunzi-lilun-li-qi-yu-fen：「不能不争」之必然，律只给可过）",
+   "why": "the passage's necessity is corrected to possibility and its main step needs the missing bridge, which makes it a scope; reconcile the passage map"
+  },
+  {
+   "find": "是先秦最直接的由分到不争之辞，前后两半各有律，桥未证",
+   "replace": "是由分到不争之辞，前后两半各有律，桥未证",
+   "why": "unverifiable superlative; padding"
+  },
+  {
+   "find": "每一己外无之亦容之待者、其每一所待",
+   "replace": "每一无之所容之己外待者、其每一所待",
+   "why": "'亦' wrongly implies admission by both level paths; the Lean admits by the levels without the part only"
+  },
+  {
+   "find": "所守（守护，guard）是一状上的条件",
+   "replace": "所守（守护，guard；名表未有其名，此处暂写，交整合者）是一状上的条件",
+   "why": "所守 is used as a name in the 經 but is not in the table"
+  },
+  {
+   "find": "读作无人能胜过他则是胜负之主张，不取（相合，laozi-22-fu-wei-bu-zheng）",
+   "replace": "读作无人能胜过他则是胜负之主张，不取（定域，laozi-22-fu-wei-bu-zheng）",
+   "why": "it holds in one sense and the other is excluded, which is a scope by definition; reconcile the passage map"
+  },
+  {
+   "find": "——相合：争之结构来源是共取过与，不是所好（hanfei-wudu-ren-zhong-cai-gua）",
+   "replace": "——相合：以多少立论，与共取过与同构；律不需一个固定之所好（hanfei-wudu-ren-zhong-cai-gua）",
+   "why": "the law does not deny preferences; it only does not need them (十四·九 says this)"
+  },
+  {
+   "find": "——相分：以不相连为安；未连之待者只及于自身，兼感选不出其外者，群不以断绝群与群之关系而安（laozi-80-xiao-guo-gua-min）",
+   "replace": "——相分：以不相连为理想；未连之待者只及于自身，兼感选不出其外者；此理想所保者是复与止，不是生生之继续生成（laozi-80-xiao-guo-gua-min）",
+   "why": "'群不以…而安' is an unproved value claim; replaced by the entry's structural reading"
+  }
+ ],
+ "verdict": "sound after edits",
+ "notes": "The 篇 is sound after the 30 edits; nothing needs redrafting. Some edits change a passage's kind, so the passage map has to be updated with them.\n\n**Checks that passed**\n- Every backticked Lean name resolves to a current declaration (python3 -I work/resolve.py on all 230; none renamed or unresolved).\n- All 21 record links exist under theories/becoming/results/records/.\n- All 47 「…」〔ID〕 quotations are exact in the frozen texts (ctq.py text).\n- Before the edits, the kinds match /Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/work/passages/C13.json.\n- I read each 經 against its Lean source: Continuation, Exclusion, MutualDependence, Feedback, BoundedSignificance, Retaining, Withholding, LoopReturn, RelativePosition, Joint, JointDraw, Optimum, JointPlans, Composition, OwnWidening, JointKeeping, SelectionPool, Selection, Seeking. The hypotheses are written correctly, except where an edit says otherwise.\n\n**Substantive faults the edits fix**\n- 十四·一 經 lost the single common condition that `system_whole_of_common` needs.\n- In 十四·十四 and 十四·十五, 「族外他者」 confuses the optimizer's family of conditions with the formations other than the optimizers. In the Lean these are restGiven and restTaken.\n- 门 and 所守 are coinages that are not in the name table.\n- 「不变之一步」 should be 不易乎畛. 立兼 uses Mozi's 兼 against the table's 兼, which names the whole.\n- The gloss 交相+资(汲取) describes the Drawing counterexample, not mutual feeding.\n- Two translated English phrases are presented in quotation marks as if they were quotations.\n- The 对照 line for 老子八十章 asserts a value (安) that no law gives.\n- Two kinds are changed:\n  - xunzi-lilun-li-qi-yu-fen is a scope, not an agreement: 「不能不争」 asserts necessity, the law gives only possibility, and the step from boundaries to no contention needs the missing bridge.\n  - laozi-22-fu-wei-bu-zheng is a scope: it holds in one sense and the other is excluded.\n\n**Left for the integrator, no edit**\n1. laozi-79-he-da-yuan (十四·八) is labelled an agreement, but the draft itself says 「馀怨」 as a remaining difference is not given; in this 篇 the agreement rests only on closing not being lossless. It is borderline, and probably a scope.\n2. 十四·十八 has 「讀（AI，未编号）」. The module's reading has no decision number, so it needs one, or a note that none exists.\n3. In 十四·十 and 十四·十一, 族 means a family of parts (formations); in 十四·十四 and 十四·十五 it means an optimizer's family of conditions. One 篇 uses two senses.\n4. 处处共享 (`SharesThroughout`) is a gloss, not a name in the table. 优化者, 容量, 互为最优 and 序随族而升 are already flagged in 十四·十四.\n5. 未決 appears in traditional form in 十四·十七; 讀 is the prescribed label, but 未决 is simplified in the name table.\n6. 十四·十 經 「诸体之称合计为零」 is a signed reading; the Lean states that, in naturals, the total of the ahead counts equals the total of the behind counts. 說 explains this, so I left it.\n7. Do not paste the 篇首's 「本篇只在十四·四与十四·十一以条件句用到它」 elsewhere without its qualifier: 十四·十八 also names the condition, though not as a conditional."
+}

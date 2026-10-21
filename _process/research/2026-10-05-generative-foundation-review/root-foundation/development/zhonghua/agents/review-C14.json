@@ -1,0 +1,262 @@
+{
+ "pian": "篇十五　顾（C14）",
+ "edits": [
+  {
+   "find": "证待网之动不定顾，",
+   "replace": "证所表示之动不蕴含活皆有顾，",
+   "why": "篇首与十五·三之说相违：该律只证不蕴含，说明言它不是“展开不定顾”之据"
+  },
+  {
+   "find": "，其文各作对照。",
+   "replace": "；「仁」「无己」之文在本篇作对照。",
+   "why": "本篇无「无弃」之对照，原句不实"
+  },
+  {
+   "find": "定范围（谁之所失被计入）",
+   "replace": "定范围（谁之所丧被计入）",
+   "why": "「所失」是名表 Remainder 之名（截断所未计入之量），不可借作损失"
+  },
+  {
+   "find": "### 十五·三　待网不定顾",
+   "replace": "### 十五·三　待网之动不蕴含活皆有顾",
+   "why": "题与说相违：该律只评两个常值之顾，证不蕴含，不证不定"
+  },
+  {
+   "find": "有此体而丧一有顾之续，恰当其中某一物于某一所待出于余地；",
+   "replace": "有此体而丧一有顾之续，恰当其中某一物，此体之净取非于其每一所待皆不出余地；",
+   "why": "Lean 为 ¬∀c（非每一所待皆在余地内），不是 ∃c；无经典逻辑不能互换"
+  },
+  {
+   "find": "“不损”读作无丧",
+   "replace": "“不害”读作无丧",
+   "why": "「损」是名表下降（depletion）之名，不可借作“不害”"
+  },
+  {
+   "find": "方，评所自出之位也。",
+   "replace": "方，评所自出者也。",
+   "why": "「位」是名表爻位（HexagramPlaces）之名"
+  },
+  {
+   "find": "诸活之读都只读“不损”",
+   "replace": "诸活之读都只读“不害”",
+   "why": "「损」是名表下降之名"
+  },
+  {
+   "find": "；据对应条目之层注，帛书乙本作“自愛而不自貴也”）",
+   "replace": "，传世王弼本系统；帛书本异文冻结文本未收，不引）",
+   "why": "帛书乙本之句不在冻结文本中，未经核对，且“据对应条目之层注”是工作说明"
+  },
+  {
+   "find": "一方之升须另一方之降",
+   "replace": "一物之升须另一物之降",
+   "why": "「方」是立场之名；称之升降是诸物之间的"
+  },
+  {
+   "find": "畛内皆然，一规则唯于一已成之界内皆然也。",
+   "replace": "畛内皆然，一规则于一已成之界内皆然也。",
+   "why": "Within 只是界内皆然，不含“唯”；尽者亦畛内皆然（Neutral.within），“唯”与下句相违"
+  },
+  {
+   "find": "对延续之顾，同一形式是立场不变（`StandpointInvariant`）",
+   "replace": "对延续之顾，同一形式亦曰无方（立场不变，`StandpointInvariant`）",
+   "why": "用名表之名「无方」，现行词只在括号中"
+  },
+  {
+   "find": "每一对手都把同一规则收在一个已形成的界内：只在自身之己内传，或只在自身之方上成立（十五·十一）。",
+   "replace": "十五·十一之两个反模型把同一规则收在一个已形成的界内：只在评价者之己内传，或只在其自身之方上成立；说每一对手皆如此，是一种读法，不是定理（十五·十一）。",
+   "why": "原句是关于一切对手的全称，Lean 只有两个反模型；十五·十一自己也说这是读法"
+  },
+  {
+   "find": "对照（相合，zhuangzi-qiushui-wu-fang）：「兼懷萬物，其孰承翼？是謂无方。」〔ZH1-S17〕（先秦至秦汉，《庄子》外篇·秋水）：对一切而不偏助任何一方。",
+   "replace": "对照（定域，zhuangzi-qiushui-wu-fang）：「兼懷萬物，其孰承翼？是謂无方。」〔ZH1-S17〕（先秦至秦汉，《庄子》外篇·秋水，成篇年代有争议）：兼怀万物而不偏助一物，是自一处（以道观之）对一切之顾而不分厚薄；理论之无方是诸方所顾皆同，原文未及诸方。名取其字，结构须另加跨方之一步。",
+   "why": "原句之相合落在同字「方」上（不偏助一方≠诸方所顾相同）；结构是一方对一切之顾"
+  },
+  {
+   "find": "之「端」即一处之萌",
+   "replace": "之「端」，其结构对应一处之萌",
+   "why": "不把古名等同于理论之名"
+  },
+  {
+   "find": "讀（AI，D11）：所取的补全是自顾加无方，因为凡续皆有顾所给的正是它（十五·十七）。",
+   "replace": "讀（AI，D11）：所取的补全是自顾加无方：凡续皆有顾给出它（十五·十七），而自顾加无亲之补全另须连通，多一设。",
+   "why": "凡续皆有顾两种无偏皆给（premises_of_unrestricted），原理由不能分开二者；D11 之理由是无亲须连通"
+  },
+  {
+   "find": "杀身是被计入之所失",
+   "replace": "杀身是被计入之所丧",
+   "why": "「所失」是 Remainder 之名"
+  },
+  {
+   "find": "清除者兼顾喂养其资源之源",
+   "replace": "清除者亦顾喂养其资源之源",
+   "why": "「兼」是整体之名，不可作“兼顾”"
+  },
+  {
+   "find": "（见证），每物之顾止于其沿依存之区域，无清除者",
+   "replace": "（见证），每物之顾止于其沿待之区域，无清除者",
+   "why": "經只用名表之名：依存名「待」"
+  },
+  {
+   "find": "又（相合，zhuangzi-tong-yu-ji-wei-shi）「同於己，爲是之；異於己，爲非之。」〔ZH1-S27〕（先秦至秦汉，《庄子》杂篇·寓言，成篇年代有争议）是以自身为界之评价。",
+   "replace": "又（定域，zhuangzi-tong-yu-ji-wei-shi）「同於己，爲是之；異於己，爲非之。」〔ZH1-S27〕（先秦至秦汉，《庄子》杂篇·寓言，成篇年代有争议）：以己为准判言之是非，与别同在以自身为界；但所据是同异（相似），所判是言之是非，不是沿关系之区域内之顾。",
+   "why": "相合只落在同字「己」上：寓言判的是言之是非、按相似，别是沿关系之区域内之顾"
+  },
+  {
+   "find": "二顾于每步于此体先前所及之每物皆相合：",
+   "replace": "二顾于每步、于此体先前所及之每物，一有顾则另一亦有顾，反之亦然：",
+   "why": "「相合」是对照三种之名，不可借作二顾一致"
+  },
+  {
+   "find": "读此条件之辞",
+   "replace": "读此条件之文句",
+   "why": "「辞」是名表主张（claim）之名"
+  },
+  {
+   "find": "则凡顾式，凡某物于某步之续自一方有顾者，其辞自此方亦有顾：",
+   "replace": "则凡顾式，其每辞读作某物于某步之续，此续自一方有顾者其辞自此方亦有顾：",
+   "why": "写出 premises_of_unrestricted 之设：每辞读作某物于某步之续（formation、step、reads）"
+  },
+  {
+   "find": "一无所失",
+   "replace": "一无所遗",
+   "why": "「所失」是 Remainder 之名"
+  },
+  {
+   "find": "一汲取者在任何依存形成之前取一所待之一单位",
+   "replace": "一物先取（先占，preemption；新组合：先＋取）：在无一物待此所待之时取其一单位",
+   "why": "名表以「先取」名 preemption；依存名「待」"
+  },
+  {
+   "find": "上条《大取》所说之不以时为界",
+   "replace": "十五·十六所引《大取》之不以时为界",
+   "why": "上条（十五·十九）引的是《荀子》；《大取》在十五·十六"
+  },
+  {
+   "find": "这样的体是互有所长的。",
+   "replace": "这类体若又使他物得续，就是互有所长的；不是每一狭皆然（`Clearing` 之体只狭）。",
+   "why": "原句把每一狭都说成互有所长，Clearing 之体只狭而不互有所长"
+  },
+  {
+   "find": "谁之所失被计入——不是次序",
+   "replace": "谁之所丧被计入——不是次序",
+   "why": "「所失」是 Remainder 之名"
+  },
+  {
+   "find": "那些所失不回到任何者之续的顾",
+   "replace": "那些所丧不回到任何者之续的顾",
+   "why": "「所失」是 Remainder 之名"
+  },
+  {
+   "find": "沿空关系是一方之自善",
+   "replace": "沿空关系是一方只顾自身之续",
+   "why": "「善」带正价，顾不带正负"
+  },
+  {
+   "find": "，加上超赋值之记账：",
+   "replace": "，其余只是“于某一畛立”与“凡畛皆立”之分：",
+   "why": "「记账」是金融词，「超赋值」是未译之现代术语"
+  },
+  {
+   "find": "它把范围推及所失不回到任何者",
+   "replace": "它把范围推及所丧不回到任何者",
+   "why": "「所失」是 Remainder 之名"
+  },
+  {
+   "find": "相等，各即条件；二者缺一则可分开（`boundaryInvariant_iff_standpointInvariant`、`unrestricted_of_standpointInvariant`）。",
+   "replace": "相等，各即条件（`boundaryInvariant_iff_standpointInvariant`、`unrestricted_of_standpointInvariant`）；每方之畛内之顾不皆立时，二者可分开（`OneCounts.forms_apart`，见证：无方成立，而一方之畛内之顾不易乎畛不然）。",
+   "why": "“二者缺一则可分开”原无证；Lean 之见证只缺畛内之顾一种（OneCounts.forms_apart）"
+  },
+  {
+   "find": "`Becoming.Clearing.without_standpoint_invariance`；记录",
+   "replace": "`Becoming.Clearing.without_standpoint_invariance`、`Becoming.OneCounts.forms_apart`；记录",
+   "why": "说所引之见证入證"
+  },
+  {
+   "find": "### 十五·二十六　诸设各不可少；预设之序",
+   "replace": "### 十五·二十六　诸设各不可少；畛内之顾之序",
+   "why": "「预设」是现行词，名表作畛内之顾"
+  },
+  {
+   "find": "每方之预设于某一畛立，清除者之预设不易乎畛不然",
+   "replace": "每方之畛内之顾于某一畛立，清除者之畛内之顾不易乎畛不然",
+   "why": "經只用名表之名"
+  },
+  {
+   "find": "则以资域为界之别使每方之预设立且不易乎畛",
+   "replace": "则以资域为界之别使每方之畛内之顾于此畛立且不易乎畛",
+   "why": "經只用名表之名"
+  },
+  {
+   "find": "一方之预设：于兼立",
+   "replace": "一方之畛内之顾：于兼立",
+   "why": "經只用名表之名"
+  },
+  {
+   "find": "群域〔新组合：群＋域，系统闭包〕、及域、扰域、资域依次",
+   "replace": "群域〔新组合：群＋域，系统闭包〕之下及域与扰域并列，扰域之下资域",
+   "why": "presupposition_order 不排及域与扰域之先后，“依次”多说"
+  },
+  {
+   "find": "讀（AI，D14、D43）",
+   "replace": "讀（AI，D14、D21、D43）",
+   "why": "预设诸读之序（兼、及域、自身）是 D21(3) 之读"
+  },
+  {
+   "find": "一续于一切使一方之预设于其闭包立之顾皆有顾",
+   "replace": "一续于一切使一方之畛内之顾于其闭包立之顾皆有顾",
+   "why": "經只用名表之名"
+  },
+  {
+   "find": "计入谁之所失",
+   "replace": "计入谁之所丧",
+   "why": "「所失」是 Remainder 之名"
+  },
+  {
+   "find": "：每方之预设于其闭包立；",
+   "replace": "：每方之畛内之顾于其闭包立；",
+   "why": "經只用名表之名"
+  },
+  {
+   "find": "立场不变恰是持一共同之辞",
+   "replace": "无方（于延续之顾）恰是持一共同之辞",
+   "why": "用名表之名「无方」"
+  },
+  {
+   "find": "（Lewis）",
+   "replace": "（刘易斯）",
+   "why": "全文中文"
+  },
+  {
+   "find": "只在每项同一正权之下，加权才按所容之数目排",
+   "replace": "每项同一正权之下，加权按所容之数目排",
+   "why": "neutral_ranks_by_number 只证此向，“只在……才”多说"
+  },
+  {
+   "find": "理论中嵌套存在，顾却不分等级：只把顾限于较近之层，无丧只会更易成立（`Web.Retains.of_fewer`：有顾者越少，无丧越多），不会生出按层分级之序。",
+   "replace": "理论中嵌套存在，有无之顾却不分等级；等差可写成随方而易之级（亲以各自之我为准），它只决定互有所长之较（`Partial.ranks_differ`），“多少不随方易”是另一设，理论不断言；只把有无之顾限于较近之层，无丧只会更易成立（`Web.Retains.of_fewer`：有顾者越少，无丧越多）。",
+   "why": "本条自己表示分级之顾，原句“不会生出按层分级之序”与之相违；相分在把等差立为定序"
+  },
+  {
+   "find": "`Becoming.Partial.ranks_differ`",
+   "replace": "`Becoming.Partial.standing`、`Becoming.Partial.not_gradeInvariant`、`Becoming.Partial.ranks_differ`",
+   "why": "經之“计入不随方易而级随方易”由此二律证，ranks_differ 只证排序相反"
+  },
+  {
+   "find": "凡续皆有顾定范围：谁之所失被计入；它超出自身之预设之内容，即不易乎畛，把范围推及所失不回到任何者",
+   "replace": "凡续皆有顾定范围：谁之所丧被计入；它超出自身之畛内之顾之内容，即不易乎畛，把范围推及所丧不回到任何者",
+   "why": "「所失」是 Remainder 之名；预设名畛内之顾"
+  },
+  {
+   "find": "修养之境去己即去掉预设；理论取不易乎畛，保留己之预设",
+   "replace": "修养之境去己即去掉畛内之顾；理论取不易乎畛，保留己之畛内之顾",
+   "why": "用名表之名"
+  },
+  {
+   "find": "待网之动不定顾（mengzi-wo-gu-you-zhi）",
+   "replace": "待网之动不蕴含活皆有顾（mengzi-wo-gu-you-zhi）",
+   "why": "与十五·三一致：只证不蕴含"
+  }
+ ],
+ "verdict": "sound after edits",
+ "notes": "I checked the draft mechanically and by reading. The draft file is /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c14p/pian15.md. My working copy and the edited result are in /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c14adv/: draft.md, after.md, edits.json and edits.py.\n\n**Checks that passed**\n- All 51 edits apply in order, and each \"find\" occurs exactly once at the time it is applied.\n- All 140 cited declarations resolve under their full names with resolve.py. So do the four I add: Partial.standing, Partial.not_gradeInvariant and OneCounts.forms_apart (all three now in 證), and Preemption.not_undermining_yet_loses (cited only in 說).\n- All 26 record links exist.\n- All 31 「…」〔ID〕 quotations are exact with ctq.py text.\n- Kinds match the passage entries, except the two I change below.\n\n**Substantive fixes**\n- 十五·三 and 篇首 said 待网不定顾, which contradicts the 說 and chapter §5: the law shows only that the dynamics do not entail living significance.\n- 十五·四 經: the Lean form of loss is ¬∀c, so the 經 should not say \"某一所待出于余地\" (∃c).\n- 十五·九 經: \"唯\" overstates Within, since a Neutral rule is also Within. The 說 turned two counter-models into a claim about every rival.\n- 十五·十二 讀 D11: the given reason fails, because the condition gives both neutralities. D11's real reason is that 无亲 needs 连通.\n- 十五·二十 說: the cross-reference to 上条《大取》 was wrong. Preemption is now named 先取.\n- 十五·二十一 說: not every narrowing is mixed; Clearing's part only narrows.\n- 十五·二十五 說: \"二者缺一则可分开\" had no proof. The witness covers only the case without each standpoint's presupposition (OneCounts.forms_apart).\n- 十五·二十六 說: presupposition_order does not order 及域 against 扰域. The order-of-readings 讀 is D21(3).\n- 十五·二十九: the 經's claim that standing is invariant while grades vary needs Partial.standing and Partial.not_gradeInvariant. neutral_ranks_by_number proves only one direction. The 孟子 contrast denied that graded significance can be represented, inside the very 條 that represents it.\n- 15.8: the 帛书乙本 variant is not in the frozen texts (V130-LAO-MA has no 自愛).\n\n**Name collisions fixed**\n- 所失 (the Remainder name) was used for losses; now 所丧.\n- 位 (hexagram place), 兼顾, 相合 (as \"agree\"), 辞 (as \"wording\"), 一方 (as \"a party\"), 不损 (损 is depletion).\n- 自善 carried positive value; 超赋值之记账 was a financial word plus an untranslated term.\n- 预设 in 經 is now 畛内之顾.\n\n**Kind changes to carry into work/passages/C14.json**\n- zhuangzi-qiushui-wu-fang: agreement → scope. The match rested on the shared character 方; the passage is one standpoint's universal regard.\n- zhuangzi-tong-yu-ji-wei-shi: agreement → scope. The match rested on the shared 己; the passage judges 是非 of speech by likeness.\n\n**Left for the integrator (a mechanical sweep, not done as edits)**\n- 說 still uses 预设 about 25 times for 畛内之顾. Replace them all except the gloss at 十五·二十三.\n- 說 uses 不变 for 不易乎畛, 依存 for 待, and 条件 for 凡续皆有顾. The last collides with 条件, the modern word for 所待.\n- Words with no name in the table appear, including in 經: 闭包, 连通, 相关 (relevance), 活动, 喂养, 净取, 水平, 所需, 见证, 栖居者/清除者.\n- 凡续皆有顾 is used from 篇首 and 十五·三 on, but its composition is first explained at 十五·十六.\n- After my edits 十五·二十九's 證 lists ten declarations, above the 3–8 guideline. Web.Retains.of_fewer and Weighting.neutral_ranks_by_number could go, since the 說 cites both inline."
+}

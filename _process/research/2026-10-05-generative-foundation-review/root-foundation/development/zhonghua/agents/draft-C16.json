@@ -1,0 +1,345 @@
+{
+ "pian": "凡例",
+ "markdown": "## 凡例　设、证、读与推理之标记\n\n本例在篇一之前，定全书共用的体例：一辞以何种地位立（无设而然、有设而然、设、读，四者之外为未决），十个虚词各取哪一种结构（若、则、故、必、或、皆、莫、莫不、不、未），古典之文与脊柱之律以哪三种关系对照（相合、定域、相分），全书守什么方法（以明），以及后篇要用的逻辑校准（定然否、不可非、不可非则然、或不当、辞皆定然否、无穷可尽、无穷可定其皆否、非皆否则有是）。次第依关系而行：先讲一辞与所论诸状的关系（不、未、必、或、定然否、皆、莫），再讲辞与辞的关系（说、若、则、故、不然者、据、有之必然），然后讲由此分出的地位与校准，最后讲与古典的对照。理论不断言任何公理：每一证在写入其中的局部条件下，对每个如此所拟之宇成立；凡续皆有顾只陈而不断，它定所顾之范围，自身不排序；排序只在以广为愈。本例所定的虚词分工是本编使用者之间的约定，受历史诸义约束，不是对古义的复原。\n\n### 凡·一　以明\n\n**經**　以明，立一分别而并言其所据之关系、所及与所遗也。以明为求，不为证。\n\n**說**　以明（非二方法，the nondual method）是全书一切分别所守的方法要求：从一个关系的展开起，先讲关系怎样形成、持续、改变，再讲施与受、知与所知、评价、能力与责任怎样在其中分化；每立一个分别（施与受、作与所待、事实与评价），同时讲出它的关系之据、所及的范围与所略去者，不让任何名或形式变量带进一个独立的本体。它是方法要求，不是定理：不设 Lean 锚，也不证明一元之本体或伦理之必然。名出齐物论「欲是其所非而非其所是，則莫若以明」〔ZH1-S02〕：是与非各随其所出之处，以明是看见每一判定从何处作出（相合，zhuang-qiwu-yi-ming）。此段之结构在脊柱上有对应之律：每一辞至少在一个语境之中时，诸语境所显者恰在其相交处一致时拼合为一个不依语境的判定（并行不悖，`Becoming.Contextual.glues_iff_agree`；两行，`Becoming.Contextual.fitsFree_iff`），在相矛盾的奇偶语境系统中则没有这样的判定（`Becoming.ParitySystem.contradicts_noGlobal`）；但以明之名不以这些律为锚。同段「是以聖人不由，而照之于天」〔ZH1-S02〕以一视点为准，此处不携带（定域）。下条之拟，是以明落在表示上的第一步。\n\n**證**　方法要求，无 Lean 锚（名表 C16）；方法见[非二方法](NONDUAL-METHOD.md)。所对应之结构：`Becoming.Contextual.glues_iff_agree`、`Becoming.Contextual.fitsFree_iff`、`Becoming.ParitySystem.contradicts_noGlobal`；记录 [claims-shown-in-context](../results/records/claims-shown-in-context.md)。\n\n### 凡·二　拟\n\n**經**　拟，言所用之观，并其表示之所定也。\n\n**說**　拟（表示，representation）是一个说明所用的观（变、系辞、宇）连同它在表示上的选择：步是离散的、全体共用一个步序；水平、所需、取与是自然数；活动是命题；一个宇只有一种关系项，待者与所待是同一关系项的两种角色；所需以阈给出。理论真正的假定多在这里，而不在逻辑：核心的公理之报为空，只表明没有用逻辑公理，不表明这些选择对某一实际展开成立（凡·十五）。一条律若依赖其中一项（如自然数之量所给的最小损失），律旁须写明。所拟者略去的关系，不是对更完整之说明的反驳：在更弱的表示里随意改动谓词所得的「反例」，不在所论之状中（凡·十二）。名出「拟之而后言」〔DS02〕（名之出处，不作对照）；拟与象（模型）、读（读法）分开。\n\n**證**　定义（约定，名表 C16）；表示之所定见规范章 §0 A 组。其观：`Generative.Process`、`Becoming.Frame`、`Becoming.World`；记录 [laws-of-one-step](../results/records/laws-of-one-step.md)。\n\n### 凡·三　不与未\n\n**經**　不，然之则无以然也；未，至此所读者，其然与其不然皆不排也。凡待网，所待之同异可定，于任一待者、任一以水平之感、任一水平之历，至某步，谓一所待有一步水平为零者，与谓其此后每步水平皆在零上者，验皆不排。\n\n**說**　不与未是两种结构：早期 Lean 曾把二者合并，本编分开。「不 X」是 X 被否定：由 X 可得矛盾；在一状上，就是辞于此状不然。「未 X」只讲到此为止：所读者既不使 X 立，也不排除 X，它不断言不 X。脊柱给出未的典型：辞只经感（耦合，coupling）进来的差别被排除（验），一个有尽的往之后，「所待有一步为零」与「此后常在零上」两个辞都不被排除（`Becoming.Web.tail_unexcluded`）；同样，对任一由往出值的预测，有两个历程同其往而于下一步取不同之值，它不能于二者皆不失（`Becoming.Learning.no_prefix_fixes_next`）。所以未是关系的：相对于所读之往与所感，不是辞自身的性质。论语「未知，焉得仁？」〔RU1-S-LY〕在「不知」一读下，不由所见推出其「仁」，也不断言其不「仁」，只是不由此定（相合，lunyu-bu-zhi-qi-ren；「知」作「智」一读下此对应不立）。未决（凡·二十）是未施于理论自身之问。讀（AI，D54）：单字之结构分工是本编的约定。\n\n**證**　`Becoming.Web.tail_unexcluded`、`Becoming.Learning.no_prefix_fixes_next`、`Becoming.Web.Excludes`；记录 [testing-within-couplings](../results/records/testing-within-couplings.md)、[learning-by-refutation](../results/records/learning-by-refutation.md)。\n\n### 凡·四　必与或\n\n**經**　必，所开之每一支皆然也；或，所开之支有一然，而示其为何支也。凡变，一状必入一组状，又有一行自此状始，则或入之。有一变，其一状或入一组状而非必入，且此状复。\n\n**說**　必与或所及的是「所开者」：一个变从一状留开的诸行，或一辞所留开的诸支（如「然或不然」的两支）。或是构造的：讲「或」就要给出是哪一支，所以「然或不然」（凡·五）不是无设而然，而它的不可非是（凡·六）。一状在一组状之外，自之始的每一行都进入，为必入；有一程进入，为或入（名「入」之组合）。必入在有一行时给出或入（`Becoming.Branching.NecessarilyDrawnInto.possibly`）；反之不然：一个构造的二值之变中，false 有一程进入 {true}，停在 false 的那一行永不进入，而 false 可复得（`Becoming.Branching.OneWay.possibly_not_necessarily`，构造之例）。荀子「涂之人可以为禹则然，涂之人能为禹则未必然也」〔RU2-S-XZ23〕分开可以为与能为，正是或入而非必入之形；一次实际之行未进入，不反驳有一程进入（相合，xunzi-ke-yi-wei-yu；「性恶」之论不在此对应中）。必与皆（凡·八）都讲每一个：必所及是所开的诸支，皆所及是所论的诸员；所开者被列为一族时二者内容相同，本编仍分写，以标出所及是开放的还是给定的。讀（AI，D54）。\n\n**證**　`Becoming.Branching.PossiblyDrawnInto`、`Becoming.Branching.NecessarilyDrawnInto`、`Becoming.Branching.NecessarilyDrawnInto.possibly`、`Becoming.Branching.OneWay.possibly_not_necessarily`；记录 [necessarily-drawn-is-not-returning](../results/records/necessarily-drawn-is-not-returning.md)。\n\n### 凡·五　定然否\n\n**經**　定然否，然或不然也。凡一辞，有一数，其然为一、其不然为零，恰当其定然否；凡一单之员，有数计其所然者，恰当每员定然否。\n\n**說**　核心的逻辑不对每一辞设定然否（`Becoming.Decided`）；定然否是局部的，只在用到它的地方以若写入。它的所需是关系的：一个数要指示一辞，恰需此辞定然否（`Becoming.indicates_iff_decided`）；一单之员的数要存在，恰需每员定然否（`Becoming.counts_iff_decided`）。所以然否之定，是精确之数在所计之处所要的，不是展开的预设；数之间的普查之律（终点所然者加其间所毁者，等于起点所然者加其间所成者）不需它（`Becoming.Counts.over_stretch`）。定然否在否定下保持（`Becoming.Decided.not`）。名出荀子「未可定然否也」〔RU2-S-XZ21〕：思虑不清时不对然否作定，这与脊柱不对每一辞设定然否相容（相合，xunzi-wei-ke-ding-ran-fou；用字不证明构造之意，同篇立单一中心之语不携带）。讀（AI，D30）：然否之定是计数在所计之处所需，不是展开之所设。\n\n**證**　`Becoming.Decided`、`Becoming.indicates_iff_decided`、`Becoming.counts_iff_decided`、`Becoming.Counts.over_stretch`、`Becoming.Decided.not`；记录 [counts-exist-where-decided](../results/records/counts-exist-where-decided.md)。\n\n### 凡·六　不可非\n\n**經**　不可非，非之不能立也。凡辞，其定然否不可非。\n\n**說**　不可非是双重否定（¬¬p）：p 不然之说不能立。它弱于然：构造之读下，由不可非回到然，要别的条件（凡·七）。每一辞之定然否都不可非，无设而然（`Becoming.not_not_decided`）：「然或不然」两支皆不立，这一主张总不能立。墨经「謂辯無勝，必不當。說在辯」〔MI1-S-JX〕：讲所争两辞都不当，即 ¬p 且 ¬¬p，此说必不当，正是所争者之定然否不可非（相合，mojing-wei-bian-wu-sheng）；它只判「无胜」不当，不讲必有一方当，后者要定然否本身（凡·二二）。脊柱许多律只到不可非：在活动与所立者皆有列、作有形、衡而耗、自某步起每步围住所立者之宇中，自某步起止，不可非（`Becoming.World.comes_to_rest_unrefuted`）；说出那一步，则要无穷可尽（凡·二三）。名出墨经「其理不可非」〔MI1-S-SX〕（名之出处）。\n\n**證**　`Becoming.not_not_decided`、`Becoming.World.comes_to_rest_unrefuted`；记录 [counts-exist-where-decided](../results/records/counts-exist-where-decided.md)、[recurrence-without-decidedness](../results/records/recurrence-without-decidedness.md)。\n\n### 凡·七　不可非则然\n\n**經**　不可非则然，于一辞，其不可非即然也。定然否之辞，不可非则然；数之相等，不可非则然。\n\n**說**　不可非则然（稳定，¬¬q → q）是一辞的性质，不是对一切辞的设。定然否之辞皆有此性（`Becoming.Decided.of_not_not`）；自然数之等式亦然，因为数之等可定（`Becoming.nat_eq_of_not_not`）。普查之律因此不需每步定然否：中途分情形只得各步定然否之不可非（凡·六），所得是数之等式，而等式不可非则然（`Becoming.Counts.over_stretch` 之证用的就是这一步）。否定式之辞也都不可非则然（由 ¬¬¬q 得 ¬q；纯逻辑，脊柱未单列为定理）。墨经答「無窮不害兼」〔MI1-S-JX〕之难，分「人若不盈无窮，則人有窮也，盡有窮無難」〔MI1-S-SX〕与盈无穷两种情形，结论「无难」是否定式，所以不需盈否定然否也立（相合，mobian-wu-qiong-ying-fou；此为理论对论证形式之读，不归于墨经之自觉；「盡有窮無難」一句文有校改之争，不据其字）。对一切辞要求不可非则然，就是双重否定消去，那是设，不是律（规范章 §8.6）。\n\n**證**　`Becoming.Decided.of_not_not`、`Becoming.nat_eq_of_not_not`、`Becoming.Counts.over_stretch`；记录 [counts-exist-where-decided](../results/records/counts-exist-where-decided.md)、[sensitivity-is-the-least-coupling](../results/records/sensitivity-is-the-least-coupling.md)。\n\n### 凡·八　皆、莫与莫不\n\n**經**　皆，所论之员每一然也；莫，所论之员无一然也；莫不，所论之员无一不然也。凡一单之员，每员之然不可非，则其皆然不可非。\n\n**說**　莫不是莫与不的组合（¬∃¬），其结构可从字面复原。皆然推出莫不然；由莫不然回到皆然，每一员须定然否（逐员用 `Becoming.Decided.of_not_not`），所以构造之读下莫不弱于皆。一个域上的皆然即 `Becoming.Derivation.Throughout`；对一单所列之员，诸员之不可非合为全体之不可非（`Becoming.not_not_all`）。墨经「盡，莫不然也」〔MI1-S-JS〕以莫不然释尽，与脊柱无不然者之式相合（相合，mojing-bi-jin，见凡·十二）；名表以尽名中立（`Becoming.Neutral`，每一员皆然），其出处之莫不然在构造上弱于皆然，这一强弱之分属于理论，不归于墨经。韩非「物莫能陷也」〔FA1-S-H40〕是莫，「吾矛之利，物無不陷也」〔FA1-S-H40〕是莫不：二者各自可满足，在同一处境中无一状同时满足（相合，hanfei-mao-dun-bu-liang-li）；脊柱有同形的构造之例：二值上两辞各可满足（`Becoming.Derivation.rows_each_met`），而莫有一状同满足之（`Becoming.Derivation.rows_not_together`）。\n\n**證**　`Becoming.not_not_all`、`Becoming.Decided.of_not_not`、`Becoming.Derivation.Throughout`、`Becoming.Neutral`、`Becoming.Derivation.rows_each_met`、`Becoming.Derivation.rows_not_together`；记录 [laws-of-one-step](../results/records/laws-of-one-step.md)、[finite-basis-common-interpretation](../results/records/finite-basis-common-interpretation.md)。\n\n### 凡·九　说\n\n**經**　说，自据与若推出辞之有尽之树也。凡说之所出，于据与若皆然之状然。\n\n**說**　说（推导，derivation）以这些步推出辞：则之引入与消去，合取之立与取，对每一自然数之辞取其一例；其据（基底中的辞）与若（局部前提）是不同的构造子，所以推导中不抹去任何前提（`Becoming.Derivation.Derives`）。说之可靠：所出之辞，在据与若都然之状上然（`Becoming.Derivation.Derives.sound`）。据、所论之状与容许之状都是给出的，推导的定义不装进任何辞，也不出现说者是谁：推导是辞与辞的关系。墨辩「以名舉實，以辭抒意，以說出故」〔MI1-S-XQ〕：说的作用是把辞之「故」（据）显出（相合，mobian-xiaoqu-yi-shuo-chu-gu；物之所以然一半不在此条）。名出「說，所以明也」〔MI1-S-JS〕。\n\n**證**　`Becoming.Derivation.Derives`、`Becoming.Derivation.Derives.sound`；记录 [derivation-soundness](../results/records/derivation-soundness.md)。\n\n### 凡·十　若\n\n**經**　若，置一条件于辞中，辞于条件然处然也。凡说，据于所论之状皆然，则若下所出之辞，于所论之状中其若然者皆然；若亦于所论之状皆然，则所出之辞于其状皆然。\n\n**說**　若写出一辞的局部条件：有穷、围住、有列、定然否之类，都以若写入律中，律只在这些条件然处成立（`Becoming.Derivation.relative_throughout`），条件处处然时即可去掉（`Becoming.Derivation.discharged_throughout`）。若是辞中的位置，设是一辞的地位（凡·十七）：「若」之后所写的若是一个设（凡续皆有顾、以广为愈、宇之诸设、辞皆定然否之类），这条律就是有设而然；若之后只是局部条件，律仍是无设而然（凡·十六）。所以经中的延续之条件以「若」起，而不被断言。在 Lean 中，若与设都是定理的假设，二者之分不在逻辑，在地位。讀（AI，D54）。\n\n**證**　`Becoming.Derivation.relative_throughout`、`Becoming.Derivation.discharged_throughout`、`Becoming.Derivation.Derives`；记录 [derivation-soundness](../results/records/derivation-soundness.md)。\n\n### 凡·十一　则与故\n\n**經**　则，前者然处后者然，而不言前者然也；故，前者然，而后者由之出也。有说：一辞以己为若而出，去其若，所得之则辞无设而出，而此辞自身不能无设而出。\n\n**說**　早期 Lean 曾把「故」与「则」合并，本编分开：「p 则 q」只讲 p → q，不断言 p；「p，故 q」断言 p，并以 p 为 q 之据。推导中，去掉一个若，所得是一个则辞（则之引入）；一个则辞与其前件同出，才得其后件（则之消去，所出者在据然之处然，`Becoming.Derivation.Derives.sound`）。二值之状上有一个构造之例：主张 w = true 以自身为若而出（`Becoming.Derivation.claim_under_itself`），去若后「w = true 则 w = true」无设而出（`Becoming.Derivation.claim_implies_itself`），而 w = true 自身无设推不出（`Becoming.Derivation.claim_not_closed`）。所以经中写「故」，只在前件本身是证、或是同一条经所立者之处。大取「夫辭以故生，以理長，以類行者也」〔MI1-S-DQ〕讲辞由其据而生，不出其据之辞不可立（相合，mobian-daqu-ci-yi-gu-sheng；其「理」指论辞之条理，不是名表之理）。讀（AI，D54）。\n\n**證**　`Becoming.Derivation.claim_under_itself`、`Becoming.Derivation.claim_implies_itself`、`Becoming.Derivation.claim_not_closed`、`Becoming.Derivation.Derives`、`Becoming.Derivation.Derives.sound`；记录 [derivation-soundness](../results/records/derivation-soundness.md)。\n\n### 凡·十二　不然者\n\n**經**　不然者，所论之状中，辞于其处不然者也。凡说，据于所论之状皆然，则无设而出之辞，所论之状莫不然；所论之状有一不然者，则其辞不能无设而出。\n\n**說**　不然者（反例与反模型）须在所论之状中（`Becoming.Derivation.countermodel_excludes` 之前提中的 D s）：所论之外的「反例」不反驳。一个不然者就排除一个全称：墨经「一然者一不然者，必不必也」〔MI1-S-SS〕，又「止，彼舉然者以爲此其然也，則舉不然者而問之」〔MI1-S-SS〕（相合，mojing-bi-zhi；此「止」是推之止，与名表之止所指不同）。方向是不对称的：举一个然者不足以立全称，举一个所论之中的不然者就足以排除它。因明以似能破名于无过之能立妄指其过者，与此同构：对一个由然之据无设而出的辞，所论之中莫有不然者（`Becoming.Derivation.no_countermodel`），所指之过只是似破（相合，yinming-neng-po）。这也是方法中的一条：在更弱的表示里随意改动谓词所得之「反例」，不在所论之状中，不反驳更完整的说明（凡·二）。二值之例：w = true 于 false 处不然，所以不能无设而出（`Becoming.Derivation.claim_not_closed`）。\n\n**證**　`Becoming.Derivation.countermodel_excludes`、`Becoming.Derivation.no_countermodel`、`Becoming.Derivation.claim_not_closed`；记录 [derivation-soundness](../results/records/derivation-soundness.md)、[learning-by-refutation](../results/records/learning-by-refutation.md)。\n\n### 凡·十三　所出与据\n\n**經**　凡说，无设而出之辞于所论之状皆然，恰当其据于所论之状皆然。据于所论之状皆然，则无设而出之辞入于据，新据无设所出者仍于其状皆然。\n\n**說**　说不为其据作保：所出者处处然，恰是据处处然，不多一分（`Becoming.Derivation.closure_throughout_iff`）；一个不然之据，推得再有条理也立不起来。推出之辞加入据，所出者仍然（`Becoming.Derivation.lemma_throughout`），辞依其据增长而不离其据。荀子评诸子「其持之有故，其言之成理」〔RU2-S-XZ06〕而仍不立，依今读（「有故」为有其据），正是有据、有条理不足以使其学立，据本身须然（相合，xunzi-chi-zhi-you-gu；杨倞注读为援引古人，此读不取；荀子判其不立所用之准是先王与礼义，不在此对应中）。成唯识论立证自证分以证自证分，二者互证而「無無窮過」〔FO1-S-CY〕：证成闭合在「识」自身之内；脊柱与此相分：系统内诸分之互证不使其据然，以自身之状为辞的系辞也不能实现关于其状的每一种辞（`Becoming.Frame.self_incomplete`）（相分，weishi-zheng-zi-zheng；引号中之「识」是唯识之识，与名表之识所指不同）。\n\n**證**　`Becoming.Derivation.closure_throughout_iff`、`Becoming.Derivation.lemma_throughout`、`Becoming.Frame.self_incomplete`；记录 [derivation-soundness](../results/records/derivation-soundness.md)、[readings-within-what-they-read](../results/records/readings-within-what-they-read.md)。\n\n### 凡·十四　有之必然\n\n**經**　有之必然，有此则彼然也。凡待网，一待者于一步之容，恰为其每一所需皆足。若每步所然者有列，每步之后皆有毁，则每步之后皆有成；其逆不然：有一宇，活动有列而不息，而非每步之后皆有已。\n\n**說**　有之必然是充分条件，名取墨经大故定义之前一半「大故，有之必然，無之必不然」〔MI1-S-SS〕；小故「有之不必然，無之必不然」〔MI1-S-SS〕是必要条件。脊柱上有一处按定义的确切实例：一个待者于一步之容，恰是其每一所需皆足（`Becoming.Web.Supported`；即此刻水平之所容，`Becoming.Web.supported_iff_admits`），每一足是容之小故，合起来是容之大故。对活动则不然：有待（`Becoming.Web.Dependent`，宇之一设）只给「活动则有容」一个方向，诸所需之足合起来不是活动之大故；在有待之下，沿依存之链，所依者不活动，依之者俱亡（`Becoming.Web.coextinct`）。所以「無之必不然」在有待之下有确切对应，「有之必然」只对容本身立，对活动须定域（定域，mojing-gu-xiao-da）。有之必然是单向的：有列之处，毁之复现推出成之复现（`Becoming.Listed.coming_of_ceasing`），其逆由一个构造之宇否定（`Becoming.World.census_one_way`；作与已即活动之成与毁）。论语「有德者必有言，有言者不必有德」〔RU1-S-LY〕在「A 必 B，B 不必 A」这一单向之式上与此同形（相合，lunyu-bi-you-bu-bi-you；只是关系标记之相合，脊柱没有关于「德」与言之律）。\n\n**證**　`Becoming.Web.Supported`、`Becoming.Web.supported_iff_admits`、`Becoming.Web.Dependent`、`Becoming.Web.coextinct`、`Becoming.Listed.coming_of_ceasing`、`Becoming.World.census_one_way`；记录 [ceasing-needs-arising](../results/records/ceasing-needs-arising.md)、[life-as-condition-of-life](../results/records/life-as-condition-of-life.md)。\n\n### 凡·十五　证\n\n**經**　证，辞之经检查者与其检查也。凡核心之证，其检查之报无一逻辑公理。\n\n**說**　本编每一证都经 Lean 4 检查，写出确切的前提与对应；手证、元数据与有限的数值不代替它。核心只引入 Lean 的 `Init`，每一个源声明的公理之报为空：不用 `propext`、`Quot.sound`、`Classical.choice`；构造性只要求不用选择公理，所以核心比构造性更严，它为何在要「＝」之处陈「↔」，见 `Becoming.PropositionIdentity`。检查器 `check_becoming.py` 每次运行都执行这两条。公理之报只关乎逻辑：它不表明拟之所定（离散之步、自然数之量、命题之活动）对某一实际展开成立，真正的假定在那里（凡·二）。核心暂不能以空报证明之律，在外围以其公理证明，其记录写明，直到核心之证到来；外围之证各有其收据。证不是读：读是对所证之内容的解释（凡·十九）。\n\n**證**　检查器 `check_becoming.py`（规范章 §0 A 组、§9）；`Becoming.PropositionIdentity`；记录 [proposition-identity](../results/records/proposition-identity.md)。\n\n### 凡·十六　无设而然\n\n**經**　无设而然，于每一如此所拟之宇然，其所需之局部条件以若写入，而不以一设为若也。\n\n**說**　无设而然（不加前提的定理）对每一个如此所拟的宇成立，不加关于展开的前提；它所需的局部条件（有穷、围住、有列、定然否）以若写在它之内，拟之所定见凡·二。例如：每一辞之定然否不可非（`Becoming.not_not_decided`）；说之所出于据与若皆然之处然（`Becoming.Derivation.Derives.sound`）；数之间的普查之律不需定然否（`Becoming.Counts.over_stretch`）。这样的律除拟所排除者外不排除任何展开，是关系在一个展开中怎样形成、持续、改变的最一般之律。论语「知之為知之，不知為不知，是知也」〔RU1-S-LY〕如实标出所知与所不知，其对应者正是这里的地位标记；而脊柱在知与不知之间多出一层：有些辞只到不可非（定域，lunyu-zhi-zhi-wei-zhi-zhi；此章之动机不取）。\n\n**證**　`Becoming.not_not_decided`、`Becoming.Derivation.Derives.sound`、`Becoming.Counts.over_stretch`；记录 [laws-of-one-step](../results/records/laws-of-one-step.md)、[counts-exist-where-decided](../results/records/counts-exist-where-decided.md)。\n\n### 凡·十七　设\n\n**經**　设，陈而不断者也；于证中为定义或若，不为公理。凡续皆有顾，设也，定所顾之范围，而不排序；以广为愈，设也。凡言排序，只引以广为愈。\n\n**說**　设有数类：宇之诸设（有待、衡、耗、有形、有列等八项），对应之设，伦理之设，实践之设，以及作为具名条件的逻辑原则（辞皆定然否、无穷可尽之类，凡·二一至二五）；每一设在 Lean 中都是定义或假设，从不是公理。凡续皆有顾（延续之条件，`Becoming.Unrestricted`）是尽（`Becoming.Neutral`）施于顾：于每一方、每一步、每一待者，其延续皆有顾。它给顾，不给正面的价值；它本身不排序：其下混合之部分各有对方所无之有顾者，二者都不保留对方（`Becoming.Transfer.unordered`，构造之例）。它定范围，即谁的损失算数；它超出畛内之顾的内容是不易乎畛（`Becoming.BoundaryInvariant`），把范围推及不回到任何者的损失，也不排序。排序只在把扩大称为更好，即以广为愈（`Becoming.Comparison`）：扩大是一个次序，不需前提；它更好，是以广为愈。所以伦理依于两个设、两种作用：凡续皆有顾定范围，以广为愈定次序，二者之根据都是未决（凡·二十）。墨辩「假者，今不然也」〔MI1-S-XQ〕之假作为对当下之断言按定义不当，作为设放进推导则既不被断言为真、也不被断言为假（定域，mobian-jia）；所以本编以「设」而不以「假」名陈而不断者。\n\n**證**　`Becoming.Unrestricted`、`Becoming.Neutral`、`Becoming.Transfer.unordered`、`Becoming.BoundaryInvariant`、`Becoming.Comparison`、`Becoming.Web.paths_comparison_widens`；记录 [continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)、[comparison-by-widening](../results/records/comparison-by-widening.md)。\n\n### 凡·十八　有设而然\n\n**經**　有设而然，于其所名之设然处然也。若凡续皆有顾，则于每一系辞、活之每一读，以皆顾之活为相关，活皆有顾。\n\n**說**　有设而然（在所述前提下的定理）只在它所名的设然处成立；经以「若」起而名其设。上例是延续之条件下的实例化：凡续皆有顾讲顾于每一方、每一步、每一待者皆然，取它为若的定理只是用这一全称陈述，计数这样的定理，量不出更多的依赖（`Becoming.livingSignificance_of_unrestricted`）；活皆有顾因此是一个条件，不是公理。宇之诸设下的律亦是有设而然：凡·六所引之止不可非，在有列、衡、耗诸设之下成立（`Becoming.World.comes_to_rest_unrefuted`）。墨子兼爱下「設以為二士」〔MO1-S-C16〕，并以「我以為當其於此也」〔MO1-S-C16〕把结论限于所设之处境，这一形式与有设而然相合；而其中对每一选择者如何选择的全称是另加之前提，不由所设推出，其全称须定域（定域，mozi-she-er-shi；兼与别何者更好，理论不由此论证取得）。\n\n**證**　`Becoming.livingSignificance_of_unrestricted`、`Becoming.LivingSignificance`、`Becoming.Unrestricted`、`Becoming.World.comes_to_rest_unrefuted`、`Becoming.Derivation.relative_throughout`；记录 [continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)。\n\n### 凡·十九　读\n\n**經**　读，于所证之内容所取之解，与其论并取，标其决定之号者也。读不改一证，更善之论改之。\n\n**說**　读在名表中是带地位的解释（C08）；作为地位，它是对所证内容的解释，连同其论证采用，标为「讀（AI，Dn）」，Dn 是它在决定记录中的号。读不改变任何证，更好的论证修订它。没有一种读等待某人认可，连理论用语中出自来源者的读也一样：来源之文是一词何义的证据，一种读之立与改，看它在全书一个说明中的位置（D45）。读须标出，正因为它与证同处一页而地位不同：一个相合是脊柱上有同构之律，不是原文如其所言为真（凡·二六）。\n\n**證**　无 Lean 锚（名表 C08、C16）；[决定记录](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md) D45；规范章前言「四种地位」。\n\n### 凡·二十　未决\n\n**經**　未决，非证、非设、非读，而写出其所缺者也。\n\n**說**　四者都不是的，是未决（开放的）：理论不断言它，也不以读掩盖它，而写出缺什么、什么会改变它（规范章 §8）。例如凡续皆有顾与以广为愈之根据都是未决；本篇诸逻辑校准之间也有未证之步（凡·二四）。未决之「未」取凡·三的结构：既未立，也未被排除。名出程颐「疑者未決之辭」〔YD-CY〕（名之出处）。论语「多聞闕疑，愼言其餘」〔RU1-S-LY〕把疑处标为未决，只断言没有疑问的部分（定域，lunyu-zhi-zhi-wei-zhi-zhi：脊柱在知与不知之间多一层不可非）。\n\n**證**　无 Lean 锚；规范章 §8；记录 [the-last-change-of-a-run](../results/records/the-last-change-of-a-run.md)（其所不示者之例）。\n\n### 凡·二一　或不当\n\n**經**　或不当，不然或不可非也。定然否之辞，或不当。辞皆或不当，恰当：凡非空之选项单，其上之愈不自愈而可传，则单中有一员，莫愈之者。\n\n**說**　或不当（弱已定）是对相矛盾的一对辞讲的：p 不然，或「p 不然」不立。定然否者或不当（`Becoming.Decided.weakly`）。对一切辞要求或不当，是弱排中律，属设：它恰等价于每一非空的列出选项单，在其上不自愈而可传的关系之下，都有一个莫愈之者（`Becoming.exists_undominated_iff_weakly`）。这一校准讲的是展开中的选择：一步之中，若一个动是否愈于另一个尚未决，这一步可以不留下任何确知被择之动；它是实践诸承诺最初证明时唯一的古典之步（规范章 §8.6）。墨辩「不俱當，必或不當」〔MI1-S-SS〕：所争为同一彼之是与非，「不俱当」构造上无前提成立，由此到「必或不当」正是或不当；所争者定然否之处这一步成立，作为对一切辞的全称则须定域（定域，mobian-bian-bu-ju-dang；末句「不若，若犬」两读并存）。\n\n**證**　`Becoming.WeaklyDecided`、`Becoming.Decided.weakly`、`Becoming.exists_undominated_iff_weakly`；记录 [practical-judgment-under-living-significance](../results/records/practical-judgment-under-living-significance.md)、[counts-exist-where-decided](../results/records/counts-exist-where-decided.md)。\n\n### 凡·二二　辞皆定然否\n\n**經**　辞皆定然否，每一辞然或不然也，设也。「凡有穷之宇，不息恰当每步之后皆有已」，恰当辞皆定然否。若有穷之宇之活动自某步起定然否，则不息恰当每步之后皆有已。\n\n**說**　辞皆定然否是排中律，核心不设它。对每一有穷之宇，若不设活动定然否，「不息恰当已之复现」这一律恰等价于排中律（`Becoming.World.law_iff_em`）；其见证在一步上放进一个任意之辞，所以这一校准是「活动为命题」这一拟之所定的引理，不是关于展开的结果（规范章 §8.6）。活动自某步起定然否时，同一律以若成立，无设而然（`Becoming.World.arising_iff_ceasing_decided`）。同样，对每一选项单与每一性质，「每一莫愈之者皆有此性，恰当每一缺此性者皆有一员愈之」恰是排中律（`Becoming.undominated_has_iff_em`）。墨辩「辯也者，或謂之是，或謂之非，當者勝也」〔MI1-S-SX〕预设所争二辞中实有一当，即所争者定然否；脊柱只给出「无一方当」不能立（凡·六），「必有一方当」作为对一切辞的全称就是这里的设（定域，mobian-dang-zhe-sheng；胜负由辞与所争之彼的关系定，不由言者之力）。\n\n**證**　`Becoming.World.law_iff_em`、`Becoming.World.arising_iff_ceasing_decided`、`Becoming.undominated_has_iff_em`、`Becoming.Decided`；记录 [recurrence-without-decidedness](../results/records/recurrence-without-decidedness.md)、[counts-exist-where-decided](../results/records/counts-exist-where-decided.md)。\n\n### 凡·二三　无穷可尽\n\n**經**　无穷可尽，凡步步标然否之序，或有一步然，或步步不然也，设也。无穷可尽，恰当：凡变，诸状同异可定而皆在一单，自一状可达之状无一变至他状而可复其前状者，则自此状始之行，必自某步起不再变。若诸状同异可定，一行之状皆在一单，其行无一变落于首尾同状之段中，则其自某步起不再变，不可非。\n\n**說**　无穷可尽（LPO）是有限全知原则：对每一个无穷的然否之序，或找到一处然，或知处处不然；它没有构造之证，核心不设它。这一需要讲的是展开：一行之停，恰是每一步都定得它此后是否再变（`Becoming.LastChange.settles_iff_decided`）；对一切有穷之变要求每一这样的行都停，恰等价于无穷可尽（`Becoming.LastChange.lpo_iff_settles`）；不设它，只得其停不可非（`Becoming.LastChange.not_not_settles`）。同理，在满足宇之八设、活动可判定的有穷之宇中说出一步，此后无作，就给出无穷可尽（`Becoming.World.lpo_of_finite_ends`），所以核心只陈较弱之形：止，不可非（凡·六）。对每一行定其上所读之然否是否有一处然，也恰是无穷可尽（`Becoming.TailRuns.lpo_iff_runs`）。名出墨经「無窮不害兼」〔MI1-S-JX〕（出处作对照）；其经说「南者有窮則可盡，無窮則不可盡」〔MI1-S-SX〕之答者不判定盈否而分情形论证，结论为否定式，不需无穷可尽（相合，mobian-wu-qiong-ying-fou，见凡·七）。\n\n**證**　`Becoming.LPO`、`Becoming.LastChange.lpo_iff_settles`、`Becoming.LastChange.not_not_settles`、`Becoming.LastChange.settles_iff_decided`、`Becoming.World.lpo_of_finite_ends`、`Becoming.TailRuns.lpo_iff_runs`；记录 [the-last-change-of-a-run](../results/records/the-last-change-of-a-run.md)。\n\n### 凡·二四　无穷可定其皆否\n\n**經**　无穷可定其皆否，凡步步标然否之序，或步步不然，或非步步不然也，设也。无穷可尽，则无穷可定其皆否。无穷可定其皆否，恰当：凡变之行，其上逐步所读之然否，或步步不然，或非步步不然。\n\n**說**　无穷可定其皆否（WLPO）是弱有限全知原则，由无穷可尽给出（`Becoming.WLPO.of_lpo`），也没有构造之证。它在展开中的意义：对每一行，定其上所读者是否永不出现（`Becoming.TailRuns.wlpo_iff_runs`）。条件以自然数编号时，察（最小耦合）之反例，恰在有一规则定每一然否之序是否步步不然之处存在，即作为规则的无穷可定其皆否（`Becoming.not_through_sensitive_iff_rule`；规则给出此设，`Becoming.WLPO.of_rule`）；所以核心只对每一历程读有穷多条件之律陈察。讀（AI，D43）：一个不依任何部分的整体，恰在能定每一无穷的然否记录是否处处为否之处给出。未决：命题形式的无穷可定其皆否是否给出规则，弱规则是否给出无穷可尽。\n\n**證**　`Becoming.WLPO`、`Becoming.WLPO.of_lpo`、`Becoming.TailRuns.wlpo_iff_runs`、`Becoming.not_through_sensitive_iff_rule`、`Becoming.WLPO.of_rule`；记录 [what-a-law-of-the-whole-and-no-part-takes](../results/records/what-a-law-of-the-whole-and-no-part-takes.md)、[sensitivity-is-the-least-coupling](../results/records/sensitivity-is-the-least-coupling.md)。\n\n### 凡·二五　非皆否则有是\n\n**經**　非皆否则有是，凡步步标然否之序，非步步不然，则有一步然也，设也。非皆否则有是，恰当：凡变，于其行逐步标其失否，每步之标由至此步之往而定，则凡非步步不失之行，有一步，与之同往至此步之行皆非步步不失。\n\n**說**　非皆否则有是（Markov 原则）：一个不是处处为否的然否之序，有一处为是；它没有构造之证，核心不设它。它在展开中的意义：对每一个变，「步步不失」之读可被有尽之往否证——不在其中的每一行，都在某一有尽之步被它的往排除——恰在此原则之下（`Becoming.refutable_passes_iff_markov`）；见证是二值之序，以否证之步为界去寻其是。一般之可否证之读只到不可非：一行的每一有尽之段都是此读中某一行之段，则此行在此读中，不可非（`Becoming.Refutable.not_not`）。不设非皆否则有是，由「非步步不失」得不出有一步之失；在有尽之步显出其失，是这一设所给。\n\n**證**　`Becoming.Markov`、`Becoming.refutable_passes_iff_markov`、`Becoming.Refutable`、`Becoming.Passes`、`Becoming.ByPrefixes`、`Becoming.Refutable.not_not`；记录 [what-a-finite-history-refutes](../results/records/what-a-finite-history-refutes.md)。\n\n### 凡·二六　相合\n\n**經**　相合，一段古文所言之结构，脊柱有所证之律与之同其关系、条件与方向也。\n\n**說**　相合是结构的，不是字面的：共用一字不算相合，须同一关系、同一条件、同一方向。相合不是印证：律之成立不靠原文，原文之义也不由律穷尽；它讲的是脊柱上有一条结构相同的律，不是讲这段话如其所言为真，许多相合只在读法写明的条件下成立。所以不写「理论证明了古人之说」，也不写「古人早已知道某律」。一个单字之义项，只在每一相关记录都提供它时立住（`Becoming.CrossSituational.stands_iff`），所以本编之名是使用者之间的约定，受历史诸义约束，不是对古义的复原。名出墨经「名實耦，合也」〔MI1-S-SS〕（名之出处）。讀（AI，D47、D54）。\n\n**證**　约定，无单一之锚；三种关系见 D47、D54 与[中国思想之章 §4](CHINESE-SOURCES-AND-BECOMING.md#4-三种关系)；`Becoming.CrossSituational.stands_iff`；记录 [chinese-sources-on-the-spine](../results/records/chinese-sources-on-the-spine.md)。\n\n### 凡·二七　定域\n\n**經**　定域，脊柱给出一段古文成立之确切范围，而改其全称之形也。\n\n**說**　定域不是部分相合，而是一个更正：古文以全称讲出的结构，脊柱只在某些条件下证得，定域写出那些条件，并改其全称之形。本篇之例：「必或不当」只在所争者定然否之处成立（凡·二一）；「当者胜」预设所争者定然否（凡·二二）。老子「善者不辩，辩者不善」〔YD-LAO-BASE〕以全称之不断言二者不相容；而举一个辩而不善者只排除「辩者必善」，要断言「辩者不善」，须所论之中莫有辩而善者，此章未给其律或逐一之查，所以就所能举之据只到不必；苏辙解此章已把全称之不读作不必（定域，lao-81-shan-zhe-bu-bian）。荀子「以疑决疑，决必不当」〔RU2-S-XZ21〕：以未立之据裁定疑问，脊柱只给「未被证成」，所推出者仍可能恰好然，所以「必不当」须改为「不由此而当」（定域，xunzi-yi-yi-jue-yi）。讀（AI，D47、D54）。\n\n**證**　`Becoming.Derivation.countermodel_excludes`、`Becoming.Derivation.no_countermodel`、`Becoming.Derivation.closure_throughout_iff`、`Becoming.Derivation.relative_throughout`；记录 [chinese-sources-on-the-spine](../results/records/chinese-sources-on-the-spine.md)、[derivation-soundness](../results/records/derivation-soundness.md)。\n\n### 凡·二八　相分\n\n**經**　相分，古文所断言者理论不断言，或与理论之结构相冲突也。\n\n**說**　相分不被硬读为相合。它多落在四种非关系之层：先在的根据，先定的性或价值，意志或单一中心，争胜与等级；同一传统内部常已有回应，理论的位置由脊柱之律给出。韩非子问辩「言無二貴，法不兩適」〔FA1-S-H41〕以一中心之令为一切言的量度：而一个不依语境的判定，恰在诸语境相交处一致时才存在（`Becoming.Contextual.glues_iff_agree`），以一令覆盖不使之一致；令作为据，其所出只在令然处然，令之贵不是令之然（`Becoming.Derivation.closure_throughout_iff`）（相分，hanfei-wen-bian-yan-wu-er-gui）。荀子正名「故明君知其分而不与辨也」〔RU2-S-XZ22〕，又以「夫民易一以道，而不可与共故」〔RU2-S-XZ22〕，以埶与刑代替辨说：推导是辞与辞的关系，其定义中不出现谁持有埶；外加一码于众，各人恰失去己码所分而外加之码所合者（制名，`Becoming.SharedCodes.run_from_imposition`）（相分，xunzi-bu-ke-yu-gong-gu；同篇另有约定俗成一途）。成唯识论之证自证分见凡·十三（相分，weishi-zheng-zi-zheng）。唯识所谓「相分」（所缘之相）与此同字而所指不同。讀（AI，D47、D54）。\n\n**證**　`Becoming.Contextual.glues_iff_agree`、`Becoming.Derivation.closure_throughout_iff`、`Becoming.SharedCodes.run_from_imposition`、`Becoming.Frame.self_incomplete`；记录 [chinese-sources-on-the-spine](../results/records/chinese-sources-on-the-spine.md)、[claims-shown-in-context](../results/records/claims-shown-in-context.md)、[a-code-formed-between-formations](../results/records/a-code-formed-between-formations.md)。\n\n#### 对照\n\n- 「欲是其所非而非其所是，則莫若以明」〔ZH1-S02〕——相合：是非各随其所出之处，与诸语境恰在相交处一致时方有不依语境之判同构；以明本身是方法要求，「照之于天」之视点不携带（zhuang-qiwu-yi-ming）。\n- 「盡，莫不然也」〔MI1-S-JS〕——相合：莫不然即无一不然者，是无设而出之辞所论之状莫不然之式；构造之读下弱于皆然（mojing-bi-jin）。\n- 「謂辯無勝，必不當。說在辯」〔MI1-S-JX〕——相合：「两辞俱不当」不能立，即所争者之定然否不可非，无设而然（mojing-wei-bian-wu-sheng）。\n- 「不俱當，必或不當」〔MI1-S-SS〕——定域：所争者定然否之处此步成立；对一切辞之全称是弱排中律，属设（mobian-bian-bu-ju-dang）。\n- 「知之為知之，不知為不知，是知也」〔RU1-S-LY〕——定域：对应地位之标记，而脊柱于知与不知之间多出不可非一层（lunyu-zhi-zhi-wei-zhi-zhi）。\n- 「有德者必有言，有言者不必有德」〔RU1-S-LY〕——相合：只在「A 必 B，B 不必 A」之单向式上，同于普查之律之单向（lunyu-bi-you-bu-bi-you）。\n- 「此若無者，誰證第三？」〔FO1-S-CY〕——相分：证成闭合于「识」之内；所出处处然恰当据然，互证不使其据然（weishi-zheng-zi-zheng）。\n- 「言無二貴，法不兩適」〔FA1-S-H41〕——相分：一中心之令为一切言之量度；不依语境之判只在诸语境相交处一致时存在（hanfei-wen-bian-yan-wu-er-gui）。\n",
+ "declarations": [
+  "Becoming.Contextual.glues_iff_agree",
+  "Becoming.Contextual.fitsFree_iff",
+  "Becoming.ParitySystem.contradicts_noGlobal",
+  "Generative.Process",
+  "Becoming.Frame",
+  "Becoming.World",
+  "Becoming.Web.tail_unexcluded",
+  "Becoming.Learning.no_prefix_fixes_next",
+  "Becoming.Web.Excludes",
+  "Becoming.Branching.PossiblyDrawnInto",
+  "Becoming.Branching.NecessarilyDrawnInto",
+  "Becoming.Branching.NecessarilyDrawnInto.possibly",
+  "Becoming.Branching.OneWay.possibly_not_necessarily",
+  "Becoming.Decided",
+  "Becoming.indicates_iff_decided",
+  "Becoming.counts_iff_decided",
+  "Becoming.Counts.over_stretch",
+  "Becoming.Decided.not",
+  "Becoming.not_not_decided",
+  "Becoming.World.comes_to_rest_unrefuted",
+  "Becoming.Decided.of_not_not",
+  "Becoming.nat_eq_of_not_not",
+  "Becoming.not_not_all",
+  "Becoming.Derivation.Throughout",
+  "Becoming.Neutral",
+  "Becoming.Derivation.rows_each_met",
+  "Becoming.Derivation.rows_not_together",
+  "Becoming.Derivation.Derives",
+  "Becoming.Derivation.Derives.sound",
+  "Becoming.Derivation.relative_throughout",
+  "Becoming.Derivation.discharged_throughout",
+  "Becoming.Derivation.claim_under_itself",
+  "Becoming.Derivation.claim_implies_itself",
+  "Becoming.Derivation.claim_not_closed",
+  "Becoming.Derivation.countermodel_excludes",
+  "Becoming.Derivation.no_countermodel",
+  "Becoming.Derivation.closure_throughout_iff",
+  "Becoming.Derivation.lemma_throughout",
+  "Becoming.Frame.self_incomplete",
+  "Becoming.Web.Supported",
+  "Becoming.Web.supported_iff_admits",
+  "Becoming.Web.Dependent",
+  "Becoming.Web.coextinct",
+  "Becoming.Listed.coming_of_ceasing",
+  "Becoming.World.census_one_way",
+  "Becoming.PropositionIdentity",
+  "Becoming.Unrestricted",
+  "Becoming.Transfer.unordered",
+  "Becoming.BoundaryInvariant",
+  "Becoming.Comparison",
+  "Becoming.Web.paths_comparison_widens",
+  "Becoming.livingSignificance_of_unrestricted",
+  "Becoming.LivingSignificance",
+  "Becoming.WeaklyDecided",
+  "Becoming.Decided.weakly",
+  "Becoming.exists_undominated_iff_weakly",
+  "Becoming.World.law_iff_em",
+  "Becoming.World.arising_iff_ceasing_decided",
+  "Becoming.undominated_has_iff_em",
+  "Becoming.LPO",
+  "Becoming.LastChange.lpo_iff_settles",
+  "Becoming.LastChange.not_not_settles",
+  "Becoming.LastChange.settles_iff_decided",
+  "Becoming.World.lpo_of_finite_ends",
+  "Becoming.TailRuns.lpo_iff_runs",
+  "Becoming.WLPO",
+  "Becoming.WLPO.of_lpo",
+  "Becoming.TailRuns.wlpo_iff_runs",
+  "Becoming.not_through_sensitive_iff_rule",
+  "Becoming.WLPO.of_rule",
+  "Becoming.Markov",
+  "Becoming.refutable_passes_iff_markov",
+  "Becoming.Refutable",
+  "Becoming.Passes",
+  "Becoming.ByPrefixes",
+  "Becoming.Refutable.not_not",
+  "Becoming.CrossSituational.stands_iff",
+  "Becoming.SharedCodes.run_from_imposition"
+ ],
+ "records": [
+  "claims-shown-in-context",
+  "laws-of-one-step",
+  "testing-within-couplings",
+  "learning-by-refutation",
+  "necessarily-drawn-is-not-returning",
+  "counts-exist-where-decided",
+  "recurrence-without-decidedness",
+  "sensitivity-is-the-least-coupling",
+  "finite-basis-common-interpretation",
+  "derivation-soundness",
+  "readings-within-what-they-read",
+  "ceasing-needs-arising",
+  "life-as-condition-of-life",
+  "proposition-identity",
+  "continuation-condition-yields-living-significance",
+  "comparison-by-widening",
+  "the-last-change-of-a-run",
+  "practical-judgment-under-living-significance",
+  "what-a-law-of-the-whole-and-no-part-takes",
+  "what-a-finite-history-refutes",
+  "chinese-sources-on-the-spine",
+  "a-code-formed-between-formations"
+ ],
+ "quotes": [
+  {
+   "text": "欲是其所非而非其所是，則莫若以明",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "是以聖人不由，而照之于天",
+   "source_id": "ZH1-S02"
+  },
+  {
+   "text": "拟之而后言",
+   "source_id": "DS02"
+  },
+  {
+   "text": "未知，焉得仁？",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "涂之人可以为禹则然，涂之人能为禹则未必然也",
+   "source_id": "RU2-S-XZ23"
+  },
+  {
+   "text": "未可定然否也",
+   "source_id": "RU2-S-XZ21"
+  },
+  {
+   "text": "謂辯無勝，必不當。說在辯",
+   "source_id": "MI1-S-JX"
+  },
+  {
+   "text": "其理不可非",
+   "source_id": "MI1-S-SX"
+  },
+  {
+   "text": "無窮不害兼",
+   "source_id": "MI1-S-JX"
+  },
+  {
+   "text": "人若不盈无窮，則人有窮也，盡有窮無難",
+   "source_id": "MI1-S-SX"
+  },
+  {
+   "text": "盡，莫不然也",
+   "source_id": "MI1-S-JS"
+  },
+  {
+   "text": "物莫能陷也",
+   "source_id": "FA1-S-H40"
+  },
+  {
+   "text": "吾矛之利，物無不陷也",
+   "source_id": "FA1-S-H40"
+  },
+  {
+   "text": "以名舉實，以辭抒意，以說出故",
+   "source_id": "MI1-S-XQ"
+  },
+  {
+   "text": "說，所以明也",
+   "source_id": "MI1-S-JS"
+  },
+  {
+   "text": "夫辭以故生，以理長，以類行者也",
+   "source_id": "MI1-S-DQ"
+  },
+  {
+   "text": "一然者一不然者，必不必也",
+   "source_id": "MI1-S-SS"
+  },
+  {
+   "text": "止，彼舉然者以爲此其然也，則舉不然者而問之",
+   "source_id": "MI1-S-SS"
+  },
+  {
+   "text": "其持之有故，其言之成理",
+   "source_id": "RU2-S-XZ06"
+  },
+  {
+   "text": "無無窮過",
+   "source_id": "FO1-S-CY"
+  },
+  {
+   "text": "大故，有之必然，無之必不然",
+   "source_id": "MI1-S-SS"
+  },
+  {
+   "text": "有之不必然，無之必不然",
+   "source_id": "MI1-S-SS"
+  },
+  {
+   "text": "有德者必有言，有言者不必有德",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "知之為知之，不知為不知，是知也",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "假者，今不然也",
+   "source_id": "MI1-S-XQ"
+  },
+  {
+   "text": "設以為二士",
+   "source_id": "MO1-S-C16"
+  },
+  {
+   "text": "我以為當其於此也",
+   "source_id": "MO1-S-C16"
+  },
+  {
+   "text": "疑者未決之辭",
+   "source_id": "YD-CY"
+  },
+  {
+   "text": "多聞闕疑，愼言其餘",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "不俱當，必或不當",
+   "source_id": "MI1-S-SS"
+  },
+  {
+   "text": "辯也者，或謂之是，或謂之非，當者勝也",
+   "source_id": "MI1-S-SX"
+  },
+  {
+   "text": "南者有窮則可盡，無窮則不可盡",
+   "source_id": "MI1-S-SX"
+  },
+  {
+   "text": "名實耦，合也",
+   "source_id": "MI1-S-SS"
+  },
+  {
+   "text": "善者不辩，辩者不善",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "以疑决疑，决必不当",
+   "source_id": "RU2-S-XZ21"
+  },
+  {
+   "text": "言無二貴，法不兩適",
+   "source_id": "FA1-S-H41"
+  },
+  {
+   "text": "故明君知其分而不与辨也",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "夫民易一以道，而不可与共故",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "此若無者，誰證第三？",
+   "source_id": "FO1-S-CY"
+  }
+ ],
+ "missing_names": [
+  {
+   "concept": "deductive closure (推导闭包; what a basis derives with no premise)",
+   "used": "说之所出／无设而出之辞"
+  },
+  {
+   "concept": "basis of a derivation (Derivation basis)",
+   "used": "据"
+  },
+  {
+   "concept": "domain of configurations D / members of a list (the range a claim is asserted over)",
+   "used": "所论之状／所论之员"
+  },
+  {
+   "concept": "finite (of a world, a menu, a list of states); the table reserves 穷 for the break (ExchangeLaw.ReadsBelow)",
+   "used": "有穷 (conflicts with 穷 = break; the integrator should decide); 有尽 for finite stretches and trees"
+  },
+  {
+   "concept": "list (List, listed members)",
+   "used": "单"
+  },
+  {
+   "concept": "level (Web.level)",
+   "used": "水平"
+  },
+  {
+   "concept": "active / activity (Web.active)",
+   "used": "活动"
+  },
+  {
+   "concept": "region, a set of states (the target of DrawnInto)",
+   "used": "一组状"
+  },
+  {
+   "concept": "Boolean sequence (Nat → Bool)",
+   "used": "步步标然否之序"
+  },
+  {
+   "concept": "settles (Enough.Settles: the state no longer changes from some step on); distinct from 止 (World.RestsFrom)",
+   "used": "自某步起不再变"
+  },
+  {
+   "concept": "axiom / axiom report",
+   "used": "公理／公理之报"
+  },
+  {
+   "concept": "a dominating (better-than) relation on a menu, and an undominated member (exists_undominated_iff_weakly); 愈 risks being read as the 愈 of 以广为愈",
+   "used": "愈／莫愈之者 (愈 here is any irreflexive transitive relation, not the order of 以广为愈)"
+  },
+  {
+   "concept": "decidable equality of states / conditions (DecidableEq)",
+   "used": "同异可定"
+  },
+  {
+   "concept": "a change within a loop (Settling.ChangesInLoop)",
+   "used": "变落于首尾同状之段中"
+  },
+  {
+   "concept": "standing (positive level) and the census of standing conditions (StandingCensus)",
+   "used": "所立者"
+  },
+  {
+   "concept": "coupling by level (the supplied relation obs : F → C → Prop beside the web)",
+   "used": "以水平之感"
+  },
+  {
+   "concept": "adheres (Horizon.Adheres: every finite stretch of the run is a stretch of a run inside the reading)",
+   "used": "一行的每一有尽之段都是此读中某一行之段 (described, not named)"
+  },
+  {
+   "concept": "representation choices (the modelling commitments of block A)",
+   "used": "拟 (the table's C16 name; its 所定 written out in 凡·二)"
+  },
+  {
+   "concept": "conjunction 而 and the law's range 凡 as relation markers",
+   "used": "used as in the STYLE templates; not given a structure of their own in this 篇 (the marker list fixes only 则 若 必 或 皆 莫 莫不 不 未 故)"
+  }
+ ],
+ "open": "1. The marker conventions (D54): the single characters' structures (则 vs 故, 不 vs 未, 必 vs 皆, 莫不 as ¬∃¬) are stipulations among the theory's users. They have not been tested on held-out samples (HANZI §5, criterion 4). The boundary between 必 (the branches left open) and 皆 (the members given) is a reading: when the branches are listed as a family, the two say the same thing.\n2. Labels and standings:\n   - The readings attached to the C16 passages carry no D number of their own; this 篇 labels them 讀（AI，D47／D54） and similar.\n   - The chapter's \"the condition\" standing and the table's wider 设 (premises, named logical principles) need reconciling by the integrator.\n   - 以明 has no Lean anchor. It is a method requirement. The laws cited beside it (glues_iff_agree, fitsFree_iff, contradicts_noGlobal) are correspondences, not its proof.\n3. Names: 有穷 (finite) clashes with 穷 = break. 愈 is used for any dominating relation in 凡·二一 and could be confused with 以广为愈.\n4. Calibration steps still open:\n   - Whether WLPO as a proposition gives WLPO as a rule (the sensitivity counterexample needs the rule).\n   - Whether the weak rule gives LPO.\n   - Double-negation stability of negative claims is pure logic, not a separate spine theorem.\n   - The not-not form of 止 (comes_to_rest_unrefuted) is the core's statement; naming the step needs LPO (lpo_of_finite_ends).\n5. Philology left open in the passages: 大取 has misplaced slips (错简); the variant readings of 寓諸庸 were not checked; the 中论 四信 reading; the punctuation of 彼不可兩不可; the emendation dispute over 「盡有窮無難」; the two readings of 「不若，若犬」 at the end of the 辯 passage.\n6. The 仁 reading of 「未知，焉得仁？」 holds only on the 知 = 'know' reading.\n7. The warrant of 凡续皆有顾 and of 以广为愈 stays open; this 篇 states both as 设 and asserts neither."
+}

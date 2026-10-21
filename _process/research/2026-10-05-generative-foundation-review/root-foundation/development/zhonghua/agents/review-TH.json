@@ -1,0 +1,122 @@
+{
+ "pian": "论纲",
+ "edits": [
+  {
+   "find": "论纲之措辞，以及何者收紧、何者放弃，都是 AI 的，论证见研究第 284 节",
+   "replace": "论纲及其措辞，以及何者收紧、何者放弃，都是 AI 的，论证在本篇与[研究第 284 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#284-theses-and-conjectures-the-theorys-strongest-claims-with-their-standing-th1)",
+   "why": "The section says the theses themselves, not only their wording, are the AI's, argued in the section and in study §284. It also links the study; the draft gave neither."
+  },
+  {
+   "find": "地位：于拟中有设而然（自然数之量，离散之步）。",
+   "replace": "地位：于拟（自然数之量，离散之步）中有设而然，其设各律所名。",
+   "why": "As written, the parenthesis reads as if the premises were natural-number amounts and discrete steps. Those describe the model. The premises are what each law names: balance, only active formations giving, 有待, dissipation (status-table rows for own-count-misses-joint-excess, continuing-self-fed-from-beyond and the others)."
+  },
+  {
+   "find": "于所需处之与不及所取时，涸之界不高于所需加所取。",
+   "replace": "每步同取下，于所需处之与不及所取时，涸之界不高于所需加所取。",
+   "why": "T1 Forbids: 'a point of no return under a standing draw at or below need plus draw'. The draft dropped 'under a standing draw', and RegimeMargin.beyond_draw_iff holds only under a standing draw."
+  },
+  {
+   "find": "（不归之点，point of no return）",
+   "replace": "（不可回返之点，point of no return）",
+   "why": "STYLE §二 says a first-occurrence gloss gives the current Chinese edition's word. THE-THEORY-OF-BECOMING.zh.md uses 不可回返之点; 不归之点 appears nowhere."
+  },
+  {
+   "find": "本论所有之二法，为此状之两端",
+   "replace": "本论之二读，为此状之两端",
+   "why": "The section says 'the theory's two readings are this state's ends' (zh.md: 理论的两种读法). 法 is the table's name for law, and one end is WithheldLevels read as a forecast, so these are readings (读)."
+  },
+  {
+   "find": "二法之前者是",
+   "replace": "二读之前者是",
+   "why": "Same correction as in the 經: the two ends are readings, not laws."
+  },
+  {
+   "find": "每一静止都是与之法的",
+   "replace": "每一静都是与之法的",
+   "why": "The table anchors 静 at Law.rests_iff (a configuration the law does not change) and keeps it apart from 止 (停息). The compound 静止 merges the two names."
+  },
+  {
+   "find": "收敛于一止",
+   "replace": "收敛于一静",
+   "why": "The limit is a rest of the law (a fixed configuration), which the table names 静, not 止."
+  },
+  {
+   "find": "本条读作与之法经近与进入〔讀（AI，D45）〕，未验。",
+   "replace": "讀（AI，D45）：此为与之法经近与进入；此读未验。",
+   "why": "〔〕 is reserved for source ids after 「原文」. The edition writes reading labels inline as 讀（AI，Dn）：, as in 篇一 and 篇十六."
+  },
+  {
+   "find": "所以本条读此点为按状、不单按水平分命运〔讀（AI，D45）〕；",
+   "replace": "所以讀（AI，D45）：此点按状、不单按水平分命运；",
+   "why": "Same as the previous edit: the reading label is written inline, not in the 〔〕 source-id brackets."
+  },
+  {
+   "find": "缘感而择（奖励、训练、市价、传择皆是）",
+   "replace": "缘感而择（奖励、训练、市价、自然选择皆是）",
+   "why": "The name table says 传择's 择 is selection by support or its absence, 'not 缘感而择'. Calling 传择 a case of 缘感而择 contradicts the table. The section's example is natural selection (Price's selection term), so the domain word is used, as with 奖励 and 市价."
+  },
+  {
+   "find": "传择是经世系之演化，在此即 Price 之选择项所表之自然选择。",
+   "replace": "自然选择在此指 Price 之选择项所表之择；名表之传择（经世系之演化）是经支持之有无而择，它与此处之缘感而择是否为一，是纲·九其一之猜想，不是已证之律。",
+   "why": "This keeps the table's distinction. It also states that natural selection being one selection through couplings is the conjecture of the first unification ('one law across domains conjectured'), not a proved law."
+  },
+  {
+   "find": "奖励、训练、传择（Price 之选择项）、市价与投票",
+   "replace": "奖励、训练、自然选择（Price 之选择项）、市价与投票",
+   "why": "Same naming conflict with 传择's table note. The unification's claim is that natural selection is one selection through couplings, and that claim is the conjecture."
+  },
+  {
+   "find": "于其外之每一所待，凡降之而感入者得升之处，皆降之至可得者所留之最低水平",
+   "replace": "于其外之每一所待，恰于降之而感入者得升之处，降之至可得者所留之最低水平",
+   "why": "T3: 'exactly where lowering it leaves room' (Optimum.least_iff is an iff; Drain.room_needed shows no drive without room). The draft's 凡…皆 gives only one direction."
+  },
+  {
+   "find": "使所待止于所需",
+   "replace": "使所待留于其所需",
+   "why": "止 is the table's name for coming to rest (World.RestsFrom). Here the condition is left standing at its need ('leaving the condition at its need'), which is a level, not a run coming to rest."
+  },
+  {
+   "find": "所以「所降落于共单位之处」一句",
+   "replace": "所以「所降落于其外与所奖者共单位之处」一句",
+   "why": "A quotation of the 經 should be exact, and the 經 reads 所降落于其外与所奖者共单位之处."
+  },
+  {
+   "find": "「视其近于最优之度」是所选之形",
+   "replace": "「视其近于所奖之最优之度」是所选之形",
+   "why": "Exact quotation of the 經 (视其近于所奖之最优之度)."
+  },
+  {
+   "find": "三者缺一，皆不足。",
+   "replace": "三者独有其一，皆不足。",
+   "why": "T4: 'No one of them alone suffices.' 三者缺一，皆不足 means each of the three is necessary, which is a stronger claim than the section makes."
+  },
+  {
+   "find": "凡以水平感入此待者者",
+   "replace": "凡感入此待者者",
+   "why": "T6: 'nothing it observes bounds how near the break is'. Web.break_not_bounded concludes AlikeThrough over all of g's couplings, threshold ones included. Limiting the claim to level couplings understates the law and the claim, and conflicts with the 說 (感入者无一界其远近)."
+  },
+  {
+   "find": "不以所见之积而弃。",
+   "replace": "不独以所见之积而弃。",
+   "why": "T7: 'never on accumulated evidence alone'. Without 独 the 經 reads as never dropped because of evidence, which is stronger than the section: evidence together with a reading that changes the rule does drop it."
+  },
+  {
+   "find": "（「从不只因所见之积」）",
+   "replace": "（「不独以所见之积而弃」）",
+   "why": "The 說 now quotes the 經's own wording exactly, after the edit above."
+  },
+  {
+   "find": "。这些皆无设而然；它们显示",
+   "replace": "。它们显示",
+   "why": "This standing is not in the section and is not exact. The five premises 'by construction of a reading of one exchange' rest on Becoming.Reading (record premises-read-off-the-exchange: theorem under stated premises, a supplied law of exchange). Only the other records are without premise."
+  },
+  {
+   "find": "可替代被定价投入之未定价条件被取尽，其他不被",
+   "replace": "可替代被定价投入之未定价条件被取而降，其他不降",
+   "why": "The section says 'drawn down'. 取尽 (taken to exhaustion) overstates the prediction."
+  }
+ ],
+ "verdict": "sound after edits",
+ "notes": "I checked the draft against the section in the worktree chapter, THE-THEORY-OF-BECOMING.md lines 1134–1231. The scratch copy /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/zh/lungang.md matches the draft. Every edit's find string occurs exactly once in it.\n\nMechanical checks, all passed:\n- Every backticked declaration resolves on the current core receipt (resolve.py). The modules ClosedCapture, ExchangePremises, RegimeMargin and RuleCapture are cited as modules.\n- The periphery Becoming.RegimeMargin.Drawn.converges is not on the core receipt but exists: /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean:88, also in its signature check.\n- All 35 record links exist under theories/becoming/results/records/, and every study, experiment and source link target exists.\n- The draft has no 「原文」〔ID〕 quotation, so ctq.py had nothing to verify. The only 〔〕 are two reading labels, fixed by the edits.\n- Outside quotation marks the prose uses no traditional characters except 經 說 證 讀, as STYLE prescribes.\n\nLean checks of what the draft adds beyond the English, all correct:\n- fed_from_beyond is proved in the form ¬∀t≥N,¬FedFromBeyond, with a finite family enclosed from some step on.\n- Gated renewal is glossed correctly (凡与之者皆以至少此所需待之), and so are WithinOwn and WithinJoint, the definition of Optimum.Rising, and the glosses of break_not_bounded, policy_uses_after_failure, the four ClosedCapture theorems, ownClosure_standpointInvariant_iff, unselected_beyond_pool and Direction.widening_selected_by_pool.\n- Law.lossless_iff_returns needs finitely many states, which the draft writes in.\n- Law.loss_needs_merge proves that a loss needs a merge. The English table glosses it the other way round ('a merge loses a possibility for good'). The draft follows the Lean (一损需一同归), which is right; I left it, but the English gloss is worth a note to whoever owns that table.\n\nStanding labels match the chapter's status table:\n- closed-capture, capture-through-the-rule, and recurrence-without-premise, least-loss-rest and merge-of-a-part-kept-by-the-rest are without premise.\n- The regime records are under stated premises, with whole-number amounts listed as a premise.\n- widening-as-what-every-weighting-ranks is under premises (finite listing; admission decided).\n\nSeveral sentences the section does not contain come from study §284, which the section names as its argument. They are accurate and all hedge rather than inflate, so I kept them:\n- T3 'the proportion is a choice of form'.\n- T4 'sharpened per IN1… main risk' and '败于共计，不败于范围'.\n- T7 'strongest and least tested'.\n- T8 '可错之处… act constraints §8.9'.\n\nNot edited, for the integrator:\n\n(1) Main has moved past the worktree. As of main d73165bdc the section differs:\n- T1 adds RM6 coupled regimes.\n- T2 adds the humped giving on the data and the coupling caveat.\n- T3 adds the CG3 own-sampling failures, which count neither way.\n- T5 is retitled 'who counts everything at stake'. The locus prediction is withdrawn as refuted for VD1's valuers, and the bound stays conjectured with frozen rules A1, A2 and R1 failed.\n- T8 and unification row 2 are reworded to match.\nThe draft follows the worktree. If the edition lands on main, 纲·一, 二, 三, 五, 八 and 九 need these changes.\n\n(2) Terms do not match 篇四 (scratch c04pv/applied.md):\n- point of no return: 不返之点 there, 涸之界 here\n- recent giving: 前与 there, 近与 here\n- standing draw: 常取 there, 每步同取 here\n- regime: 体制 there, 与之法 here. 与之法 also sits one character from 取与之法, the law of exchange in 篇一 and 篇四.\n- optimum: 最优 there and in 篇十六, 莫上之者 here\n- room: 可降之处 there, 可升之处 here\nNone of these is in the name table, so the integrator should fix one set.\n\n(3) Format against STYLE:\n- 纲·三 and 纲·九 list far more than three to eight declarations in 證. This follows the English standing.\n- There is no #### 对照. The 论纲 has no cluster, so this may be intended."
+}

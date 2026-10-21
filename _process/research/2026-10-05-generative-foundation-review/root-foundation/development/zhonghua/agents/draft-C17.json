@@ -1,0 +1,479 @@
+{
+ "pian": "篇八　时与位",
+ "markdown": "## 篇八　时与位\n\n本篇论变化之先后、涯、时、通、变通、所及与机，以及一状之中分化出的位与一族之中的称。起点仍是一个关系的展开（大化）：先说诸取与的先后怎样从诸物自身之历程读出，共同之步序在何处由关系导出、在何处只是表示的承诺，无物参与之步为何不改一步之律；次说行在何处得以延续（通），有穷之往为何定不下其后（涯）；次说一步之所以取（时）：以时为动则其变为法，权重是时之数；次说两层之行中规则怎样读其所处而变（变通），来源怎样在时限之前及于读者（至期所及），以及机前之护闭。然后说位：易以刚柔为爻值，位之奇偶、正、中位、相应、比、承、乘都是逐其所在而读的语境之读；王弼的初上无位（位分、当位）与独异之爻是第二种读；末以称（一体之量对全族而读）说相对之位。篇一已用诸物自身之历程说共同之步索引，本篇专论先后与交错本身；机之定义在篇七，时稽与与时转在篇十一，称之定义在篇十四。本篇诸律皆无设而然：每条只在写入其中的局部条件下，对每个如此表示之宇成立。延续之条件（凡续皆有顾）在意义之篇中陈述而不断言，它只定范围，本身不排序；排序只在以广为愈。本篇诸律不用二者；位不带尊卑，正与当位不带吉凶（八·二十六）。\n\n### 八·一　先后与交错\n\n**經**　先后，诸取与之次也。交错，合诸物自身之历程为一次也：每物于其中所经之取与，其次皆如其自身之历程。\n\n**說**　先后（步序）问的是：共同之步序中有多少是从关系读出的。设取与局部而作（`Becoming.Interleavings.LocalLaw`）：每一取与触及若干物，不触之物所立如故，所触之物如何改只依所触诸物之所立而定。一物自身之历程（`Becoming.Interleavings.LocalLaw.ownCourse`）是触及它的诸取与，依次排列；一串取与使每物自身之历程皆为所给者，就是这些历程的一个交错（`Becoming.Interleavings.LocalLaw.Interleaves`）；二取与不共触一物，谓之不相连（`Becoming.Interleavings.LocalLaw.Apart`）。交错是新组合：交（相互）＋错（更迭），只名“诸自身历程合为一次”这一构；「四時之錯行」〔RU1-S-ZY〕之错行是更迭，不借为此名。名“先后”取「行脩以久，說在先後」〔MI1-S-JX〕，經說下释为「遠近，脩也；先後，久也」〔MI1-S-SX〕：远近与先后从同一行者之行程读出（相合，mojing-xianhou-jiu；战国后期墨家）。墨经只有一个行者，诸历程之交错是脊柱补出的结构；經上「久，彌異時也」〔MI1-S-JS〕一层不由这些定理承载。讀（AI，D43）：共同之步序是诸物自身历程之读，不是其根。\n\n**證**　`Becoming.Interleavings.LocalLaw`、`Becoming.Interleavings.LocalLaw.ownCourse`、`Becoming.Interleavings.LocalLaw.Interleaves`、`Becoming.Interleavings.LocalLaw.Apart`；记录 [the-step-index-from-own-courses](../results/records/the-step-index-from-own-courses.md)。\n\n### 八·二　不相连者先后可易\n\n**經**　凡取与局部而作：二取与不共触一物，则先后相易而所至之状同。诸物有一表尽之，则二串取与使每物自身之历程皆同者，自同一状至同一状，每物于其自身每一取与之后之所立亦同；故同一诸历程之二交错，所终之状同。\n\n**說**　这是先后要紧之处的界：不共触一物的两步，谁先谁后不改任何物之所至（`Becoming.Interleavings.LocalLaw.act_comm`，不须列物）；所以一串取与所至之状只依每物自身的历程（`Becoming.Interleavings.LocalLaw.run_of_courses`），每物在其自身诸步之后所立的次第也只依此（`Becoming.Interleavings.LocalLaw.standings_of_courses`），交错之选不改诸状所读的任何东西（`Becoming.Interleavings.LocalLaw.trace_of_interleavings`）。共触一物的两步，其先后记在所共触之物的自身历程中，不能任意相易。对照：「物有本末，事有終始，知所先後，則近道矣」〔RU1-S-DX〕（定域，daxue-zhi-suo-xianhou；大学成篇年代有争议）：先后只在步与步共触一物之处才可能要紧；《大学》此后所立的固定本末之次，把一种次序立为普遍，属单一中心一层，不由此推出。孙子「卒未親附而罰之，則不服」〔BI1-S-SZ〕说的是共触一物（将与卒）的两步，两步都要，亲附在先（定域，sunzi-qinfu-fa）；脊柱尚无一个具体见证，给出共触一物的两步以两种次序至于不同之状。\n\n**證**　`Becoming.Interleavings.LocalLaw.act_comm`、`Becoming.Interleavings.LocalLaw.run_of_courses`、`Becoming.Interleavings.LocalLaw.standings_of_courses`、`Becoming.Interleavings.LocalLaw.trace_of_interleavings`；记录 [the-step-index-from-own-courses](../results/records/the-step-index-from-own-courses.md)。\n\n### 八·三　历程何时定其交错\n\n**經**　凡取与局部而作，诸物有一表尽之：诸物自身之历程定其交错，恰当每一取与皆触一物，且每二取与或同一、或共触一物。取与之同异定然否，则予每物以一历程，有交错合之，恰当以诸历程取与之总数为步之调度得成。\n\n**說**　在这两个条件之下（`Becoming.Interleavings.LocalLaw.Connected`），共同之步序由关系导出；条件之外，诸物之历程只定一族交错，择其一是表示所作的承诺（`Becoming.Interleavings.LocalLaw.unique_iff`）。不触任何物的取与，任何交错都无从对应它：只含它的一串与空串给每物相同的历程，而前者有一步、后者没有（`Becoming.Interleavings.Pair.idle_unmatched`），所以须“每一取与皆触一物”。交错之有无可以构造地判定：调度至总数而成即有，不成即无（`Becoming.Interleavings.LocalLaw.schedule_iff`）。对照：「因物故有時，離物何有時？」〔FO1-S-MMK〕（定域，zhonglun-guanshi；颂为龙树，约二至三世纪，姚秦鸠摩罗什译）：时之先后依物而有，与此相合；但只在取与局部而作之设下，先后才由诸物之历程完全读出。中观以关系与展开本身亦无自性，这一层不由这些定理承载；脊柱以一个关系的展开为起点，对其有无自性不作断言。讀（AI，D43）：在这两个条件之外，择哪一交错是诸状所不读的选择。\n\n**證**　`Becoming.Interleavings.LocalLaw.unique_iff`、`Becoming.Interleavings.LocalLaw.Connected`、`Becoming.Interleavings.LocalLaw.schedule_iff`、`Becoming.Interleavings.Pair.idle_unmatched`；记录 [the-step-index-from-own-courses](../results/records/the-step-index-from-own-courses.md)。\n\n### 八·四　交错所成之宇\n\n**經**　凡取与局部而作，所立以自然数计，诸物之同异定然否，诸物有一表尽之：一交错所成之宇，表中每物只列一次，则步步皆衡；二不相连之取与相邻而易其先后，二宇之水平唯于其间一步或异。同一诸历程之二交错所成之二宇：一物之水平有某性，于此宇有一步有之，恰当于彼宇有一步有之；于此宇步步有之，恰当于彼宇步步有之。又有一步之重编号，使只读一步之取与所触诸物之关系，于此宇此步与彼宇所编之步同然；每一取与皆触一物，则此重编号于其长之内为诸步之一一重编号，可逆。读其所不触诸物之关系，则可随交错而异。\n\n**說**　由局部之法与一串取与，可构成脊柱的一个宇（`Becoming.Interleavings.LocalLaw.world`）：每步的取与使所触诸物各取其降、各与其升，所以步步衡（衡：水平的每次变化恰是所取与所与；`Becoming.Interleavings.LocalLaw.world_balances`）；相邻而不相连的两步相易，只改其间一步（`Becoming.Interleavings.LocalLaw.world_swap`）。凡经一物自身诸步所读者，各交错皆同（`Becoming.Interleavings.LocalLaw.world_reads_alike`）；只读一步所触诸物的关系，不论读几物，经重编号皆同（`Becoming.Interleavings.LocalLaw.world_renumber_reads`、`Becoming.Interleavings.LocalLaw.renumber_reindexes`）。反例：二物不被任何取与相连，以两种次序交错，一宇某步甲之水平低于乙，另一宇无一步如此（`Becoming.Interleavings.Pair.apart_differs`）。讀（AI，D43）：交错之选移动的是水平落在步序何处，不改一物经过哪些水平、以何先后；它所加的，只是不被任何取与相连的诸物在同一步并立。未示：无尽之历程，连续之时，以及是否每一变化都有局部之法。\n\n**證**　`Becoming.Interleavings.LocalLaw.world_balances`、`Becoming.Interleavings.LocalLaw.world_swap`、`Becoming.Interleavings.LocalLaw.world_reads_alike`、`Becoming.Interleavings.LocalLaw.world_renumber_reads`、`Becoming.Interleavings.LocalLaw.renumber_reindexes`、`Becoming.Interleavings.Pair.apart_differs`；记录 [the-world-an-interleaving-builds](../results/records/the-world-an-interleaving-builds.md)。\n\n### 八·五　显者唯变化之先后\n\n**經**　凡于宇之步间插入无物参与之步而读之（每步每物只计一次）：衡、耗、唯活动者与、唯活动者取、有待、有形、传，皆恰当原宇有之而有之；任一段之所取、所与、一量之升降及其升降之步数，皆如所读之段；作、已与水平之变之复现，亦恰当原宇有之而有之。宇于诸此等步无物参与、亦无所变，且每一所读之步给出其移步，则去此等步之宇，衡、耗、唯活动者与、唯活动者取、有待、有形、传，皆恰当原宇有之而有之；任一段之所取、所与、一族总水平之升降及其步数亦同。然每步所计者随读之单位而异：此等步任意晚皆有，则无流多而无已；有流多而无已，每步读二次则否；有宇以一蓄而载，每步读二次则不蓄二不能载。足迹给定而含诸取与，于有穷之一段，易相邻而不相连之取与所能至之重编号，恰为保持相连取与之先后者。\n\n**說**　无物参与之步（空步）是步索引中不带变化的一步。插入或去掉它，一步之律、段上的总量与计数都不改，插入亦不改复现（`Becoming.World.stutter_premises_iff`、`Becoming.stutter_total`、`Becoming.World.stutter_arisingRecurs_iff`、`Becoming.World.stutter_change_recurs_iff`、`Becoming.World.withoutIdle_premises`、`Becoming.World.withoutIdle_transmits`、`Becoming.World.withoutIdle_totals`）；与较粗之读（合数步为一步）不同，这里不须任何关于活动怎样维持的条件。改变的只是每步所计者：多而无已是每步之率，蓄能载多久是按步计的（`Becoming.Flow.sample_not_more`、`Becoming.Expansion.more_step_relative`、`Becoming.Lapse.reserve_step_relative`）。再加上有穷段上的重编号之律（`Becoming.Footprinted.sorts_iff`），步序中显出来的只有变化的先后。讀（AI，D30）：对一步之律、段上之总与复现而言，步之索引除变化之先后外不带任何东西，空步不造成差别；每步所计者相对于读之单位。对照：「化而裁之谓之变」〔DS02〕若读作合细步为粗步（定域，xici-hua-er-cai；注疏以裁为相裁节，截取之读是 AI 借字面义）：衡在每物只列一次时跨粗步合成（`Becoming.Flow.BalancesOn.sample`），反向不合成（`Becoming.Cancelling.coarse_not_fine`），所以裁保留一些律、失去另一些；插入空步则无所失。名表以此句为“变”（过程）之出处，二读并存。\n\n**證**　`Becoming.World.stutter_premises_iff`、`Becoming.stutter_total`、`Becoming.World.stutter_change_recurs_iff`、`Becoming.World.withoutIdle_premises`、`Becoming.World.withoutIdle_totals`、`Becoming.Flow.sample_not_more`、`Becoming.Lapse.reserve_step_relative`、`Becoming.Footprinted.sorts_iff`；记录 [only-the-order-of-change-shows](../results/records/only-the-order-of-change-shows.md)、[order-of-exchanges-is-the-invariant](../results/records/order-of-exchanges-is-the-invariant.md)。\n\n### 八·六　通\n\n**經**　通，自一状有行也：自此状起，步步有移，无穷而行。\n\n**說**　通（名表所名：可，行之延续）只取「推而行之谓之通」〔DS02〕一构：一个运行（行）从这一状开始。它不是“凡变皆通”，也不说通向何处更好；同章「往来不穷谓之通」〔DS02〕另作条目。行是一个变之无穷实行（篇一），所以“有行”须每一步都有可许之移，而一步一步地取移本身是一种选择，脊柱不设它（八·七）。讀（AI，D49）：开之四相中的“可”就是通；读作复的“转”不加前提即给出可。\n\n**證**　`Becoming.Onward.run_iff_continues`、`Becoming.Lasting.Continues`；记录 [where-a-run-goes-on](../results/records/where-a-run-goes-on.md)。\n\n### 八·七　通之所在\n\n**經**　凡自一状有途至一复之状，则此状通。诸状有一表尽之，则一状通，恰当自此状有一历程，其步数如表之长；恰当自此状有途至一复之状。\n\n**說**　有穷之状中，凡无尽而行者都是经由复而行的：历程本身显出它在何处复，行就在那里绕行（`Becoming.Onward.run_of_returning`、`Becoming.Onward.run_iff_continues`、`Becoming.Onward.run_iff_returning`），证中不用判定，也不用选择。讀（AI，D43）：无尽而行是从展开读出的，不是择出的。诸状无界时则不然：要求凡一族中每员皆有一步至族中之员者，自每员皆有行，对一切变而言恰是依赖选择之原则（`Becoming.Onward.runs_iff_dependentChoice`），它作为命题陈述，不设。这与篇五之复相接：复不待前提即给出通；与下条相对：通只说有行，不说有穷之往能定其行。\n\n**證**　`Becoming.Onward.run_of_returning`、`Becoming.Onward.run_iff_continues`、`Becoming.Onward.run_iff_returning`、`Becoming.Onward.runs_iff_dependentChoice`；记录 [where-a-run-goes-on](../results/records/where-a-run-goes-on.md)。\n\n### 八·八　涯\n\n**經**　涯，有穷之界也：二行至涯而同，谓其状至涯皆同，其动至涯前皆同。\n\n**說**　涯（视界，`Becoming.Run.AgreeUpTo`）只是一个有穷之步；二行在其前的往（记录、历程之前段）全同。名取「吾生也有涯，而知也无涯。以有涯隨无涯，殆已」〔ZH1-S03〕（相合，zhuangzi-youya；庄子内篇，各篇层次有争议）：有涯是有穷之往，无涯是不止于任何往的展开，以有穷之往追随不止之展开而不能尽，正是下条可证之结构。庄子以一生为涯，此处之涯是任一读的有穷之往，不限于一生；“殆”是评价，不带入。\n\n**證**　`Becoming.Run.AgreeUpTo`；记录 [becoming-finite-horizon](../results/records/becoming-finite-horizon.md)。\n\n### 八·九　涯不定其后\n\n**經**　凡一历程、一步、二相异之值：有二历程，其往至此步皆与之同，于此步一取此值、一取彼值；自此往所推之值，不能于二者皆不失。凡知来，若有一移使每值皆异，则于其不测之历程，凡所推之值皆失。凡读之族守其所已言而次言其所失，所失之移使每值皆不同，而同对称、传递，则无有穷之储能持其每步之所失。\n\n**說**　第一句对任何历程成立，不设历程的任何性质（`Becoming.Learning.no_prefix_fixes_next`）；第二句对一切知来成立，不论它经过什么候选、怎样修正（`Becoming.Learning.diagonal_misses`），且没有一个知来在其不测之历程上从某步起止于正确（`Becoming.Learning.diagonal_unrested`）；第三句说补全所失的展开，不被任何有穷之储所持（`Becoming.Diagonal.Unfolds.unheld`），与保留历史之行永不复同类。初不定终（篇五）是一例：对每一涯，二行至涯而同，其后一行恒、一行竭（`Becoming.Renewable.prefix_does_not_decide`）。界：涯不定其后，并非什么都不能定；历程之状数有界时，足够长的往即定其历程（篇九）。对照：「不可为典要，唯变所适」〔DS03〕（相合，xici-biandong-buju）：没有一个往定得下次一值，读须随其所在而定指标（八·十九）。\n\n**證**　`Becoming.Learning.no_prefix_fixes_next`、`Becoming.Learning.diagonal_misses`、`Becoming.Learning.diagonal_unrested`、`Becoming.Diagonal.Unfolds.unheld`、`Becoming.Renewable.prefix_does_not_decide`；记录 [learning-by-refutation](../results/records/learning-by-refutation.md)、[readings-within-what-they-read](../results/records/readings-within-what-they-read.md)、[becoming-finite-horizon](../results/records/becoming-finite-horizon.md)。\n\n### 八·十　时\n\n**經**　时，一步所以取者之一也：自一状以一动至一状，其步之重为几，则其时有几，每时各定其所至。\n\n**說**　时（情境，situation）把一步的权重读作这一步被取的方式之数：自状 s 以动 a 至状 m 之步重 k，则有 k 个时，各记为 (a, m, i)，i 小于 k（`Becoming.Situations.finerLaw`）；忘去时，就回到原来的历程（`Becoming.Situations.coarse`）。名取「夫遇不遇者，時也；賢不肖者，材也」〔RU2-S-XZ28〕（定域，xunzi-yuzuo-yu-shi；荀子宥坐，战国晚期，宥坐以下诸篇层次有争议）：遇与不遇属于时，所能不单定去向，与一步之去向由动与时合定同构；贤不肖之评价不带入，哪一时实际发生也不由此定。王弼「夫卦者，時也」〔YWH-LG〕之时是状，不是此名之时（见八·十九）。\n\n**證**　`Becoming.Situations.finerLaw`、`Becoming.Situations.coarse`、`Becoming.Situations.finer`；记录 [weights-count-situations](../results/records/weights-count-situations.md)。\n\n### 八·十一　权重即时之数\n\n**經**　凡步之重为自然数：以时为动，其变为法；此法取一步，恰当此步之重为正。诸动、诸状各列为表，则于 n 步诸细历程上求任一读之和，等于于诸历程上各以其重计之而求和。二值而每步各有 p 时、q 时，则 n 步之细历程凡 (p+q)^n；一历程之重，即取此历程之细历程之数；以 a、b 为一历程中二值之数，(q·a − p·b)² 不小于 d 之细历程，其数乘以 d，不过 n·p·q·(p+q)^n。\n\n**說**　以时为动其变为法（`Becoming.Situations.finerLaw_determined`、`Becoming.Situations.finerLaw_step_iff`），这是构造所致，因为每一时自带其所至之状；有内容的是计数：自然数之权重恰是时之数（`Becoming.Situations.sum_finer`、`Becoming.Situations.situations_of_course`），大数之律计的是时（`Becoming.Situations.situations_count`、`Becoming.Situations.situations_typical`），所以大多数时给出接近权重之比的频率（大率，篇九）。讀（AI，D43）：律说每一时所遵者，时使实际之变成立，一个概率是某类时之数；哪一时实际发生不是计数，脊柱不定之。界：权重须是自然数或其对（带符号者是两类时之数）；实数或复数之幅不在其内。对照：「二子事親，或遇孰，或遇凶，其親也相若，非彼其行益也」〔MI1-S-DQ〕（相合，daqu-yushu-yuxiong；墨子大取，战国后期）：同一所行在不同时中至于不同；“其亲也相若”是评价，脊柱不给评价之定理。「节遇谓之命」〔RU2-S-XZ22〕（相合，xunzi-jieyu-ming）：命读作一步之时的分量，不带意志或预定。\n\n**證**　`Becoming.Situations.finerLaw_determined`、`Becoming.Situations.finerLaw_step_iff`、`Becoming.Situations.sum_finer`、`Becoming.Situations.situations_count`、`Becoming.Situations.situations_of_course`、`Becoming.Situations.situations_typical`；记录 [weights-count-situations](../results/records/weights-count-situations.md)。\n\n### 八·十二　变通\n\n**經**　变通，规则读其所处之状而变也：二层之行，快层每步依其时之规则而移，规则唯于时稽之步读快层之状而改，余步如故。\n\n**說**　二层之行（`Becoming.Pace.paced`）：快层之状 x 依规则 g 而移，x(t+1) = f(x(t), g(t))；规则只在时稽之步（读取步，篇十一）依快层之状改，g(t+1) = h(x(t), g(t))，其余各步 g(t+1) = g(t)；它是一个法之行，不是展开之外的第二种东西。变通只名“规则经读其所处之状而变”这一构；规则改变之速名与时转（篇十一）。名取「变通者，趣时者也」〔DS03〕（定域，xici-biantong-qushi）：趣时之变只在规则读其所处之状处有效，不读而变者不算趣时，不是凡变皆通。\n\n**證**　`Becoming.Pace.paced`、`Becoming.Pace.rule_at_reading`；记录 [how-fast-a-rule-may-change](../results/records/how-fast-a-rule-may-change.md)。\n\n### 八·十三　规则唯于时稽得快层之异\n\n**經**　凡二层之行：r 步之前无时稽之步，则至 r 步（含）为止，自同一规则起之二行，不论快层之状，其规则步步皆同；时稽之步之次，规则依其时快层之状与规则而定。规则终不时稽，则步步如初，快层所遇皆不及于规则；其规则之法于第 n 步不能至之快层之状，自第 n 步起永不复为自此规则起之行之快层之状；快层之状有一表尽之而其法有同归，则自表长之步起，快层之状不能每一皆有自此规则起之行至之。\n\n**說**　快层之异只在时稽之步及于规则（`Becoming.Pace.rule_alike_until_reading`、`Becoming.Pace.rule_at_reading`；后者与 `Becoming.Pace.rule_kept` 都是随读之行之定义展开所得）。终不时稽的规则是僵的：快层之所失不复得（`Becoming.Pace.never_reads_lost`），其法有同归则失其状（`Becoming.Pace.never_reads_loses`）。例（只证存在）：两种固定规则各自第一步起失一状，读快层而变的规则于任意晚之步复得二者（`Becoming.Switching.fixed_loses`、`Becoming.Switching.changing_regains`）：复得须规则之变。规则之持须多久才定其所生之历程，是与时转之律（`Becoming.Pace.pace_law`，篇十一）。对照：「水因地而制行，兵因敵而制勝」〔BI1-S-SZ〕（定域，sunzi-wu-chengshi）：复得只在规则读所处之状处成立；同章“无成势”之势是阵势，不是名表之势；取胜属争胜一层，不带入。「臣聞法古無過，循禮無邪」〔FA1-S-SV1〕（相分，shangjun-fagu-wuguo；商君书更法中被驳之言）：把一个固定之法立为不依所处而无过，属固定本性或价值一层；不时稽之规则所失不复得，固定规则可以有所失（例），与之冲突。\n\n**證**　`Becoming.Pace.rule_alike_until_reading`、`Becoming.Pace.rule_at_reading`、`Becoming.Pace.rule_kept`、`Becoming.Pace.rule_unreached`、`Becoming.Pace.never_reads_lost`、`Becoming.Pace.never_reads_loses`、`Becoming.Switching.fixed_loses`、`Becoming.Switching.changing_regains`；记录 [how-fast-a-rule-may-change](../results/records/how-fast-a-rule-may-change.md)。\n\n### 八·十四　至期所及\n\n**經**　至期所及，至期为止，自源而起之一可能之途，循取与之先后与已成之感，及于感入读者之物也。\n\n**說**　二历程只在所声明之源（某些步上的某些物）上可以不同（`Becoming.TimedResponse.ReachedBy`）。途（`Becoming.TimedResponse.Spread`）有三种延伸：已及之物保持其所及；源在某步触一物，则次步及之；已及之物感入某一待者，此后此待者触一物，则次步及之。所以途守取与之先后与已成之感（感：耦合，篇十一；`Becoming.TimedResponse.CoupledIntoAt` 只计此步之所需与经水平之感，不计将来之所需）。一步之回应至早影响次步之水平；离散之步不带物理时长；途是可能之途，不断言实际影响。至期所及是新组合：至期（到时限为止）＋所及（所到达）。源之前无所及（`Becoming.TimedResponse.not_reached_before_source`），期愈后所及不减（`Becoming.TimedResponse.reachedBy_mono`）。名取「能使敵人前後不相及」〔BI1-S-SZ〕（定域，sunzi-qianhou-bu-xiangji）：使敌人诸部分之间的到达被切断；此处之前後是军之前后，不是步序。\n\n**證**　`Becoming.TimedResponse.ReachedBy`、`Becoming.TimedResponse.Spread`、`Becoming.TimedResponse.CoupledIntoAt`、`Becoming.TimedResponse.not_reached_before_source`、`Becoming.TimedResponse.reachedBy_mono`；记录 [timely-response-necessity](../results/records/timely-response-necessity.md)。\n\n### 八·十五　未及则答同\n\n**經**　凡二历程：起点诸水平皆同；期前步步皆衡，在者皆同；源之外，期前每一取与，若感入其取与者之物至其时皆同，则所取所与皆同；答唯经读者至期之感而读。则凡物于期内一步未为途所及，其于此步之水平皆同；源至期未及于读者，则感入读者之物，其水平至期皆同，二答亦同。故二答异，则不可谓未及；及否定然否，则已及。\n\n**說**　这是及时回应的必要之界（`Becoming.TimedResponse.levels_alike_before`、`Becoming.TimedResponse.coupling_alike_before`、`Becoming.TimedResponse.answer_alike_before`）；构造地只得双重否定（`Becoming.TimedResponse.different_answers_not_unreached`），及否定然否时才得已及（`Becoming.TimedResponse.different_answers_require_reached`）。及是必要，不是充分。例：只看结构之所及会高估，第一步还不能分辨，第二步才能（`Becoming.TimedResponse.Delayed.answers_before_and_after`）；已及之信号可以不被用（`Becoming.TimedResponse.Delayed.constant_read_ignores`）。界：不涉起点不同之证据、随时而变之读之接口与连续时长。对照：「言未及之而言，謂之躁；言及之而不言，謂之隱」〔RU1-S-LY〕（相合，lunyu-yan-jizhi）：未及而答，答不能依于未及者；及而不言，例足以证及不必被用；躁、隐是评价，不带入。\n\n**證**　`Becoming.TimedResponse.levels_alike_before`、`Becoming.TimedResponse.coupling_alike_before`、`Becoming.TimedResponse.answer_alike_before`、`Becoming.TimedResponse.different_answers_not_unreached`、`Becoming.TimedResponse.different_answers_require_reached`、`Becoming.TimedResponse.Delayed.answers_before_and_after`、`Becoming.TimedResponse.Delayed.constant_read_ignores`；记录 [timely-response-necessity](../results/records/timely-response-necessity.md)。\n\n### 八·十六　机前之护闭\n\n**經**　凡变与其一状：取其后此状仍可复得之步，为护闭；凡子变能护此状者，自此状起所取之步皆护闭之步，故护闭为护此状之最大子变。变能护此状，则自此状所至皆非机；一状多途，不必成机。此状若复，则自此状至不可复得之每一途，不可谓不经一机。\n\n**說**　机（关节）是护闭与成闭皆有一步之处（`Becoming.Branching.juncture_iff`，由定义；机之定义与找到机即判定可达之律在篇七）。护闭（`Becoming.Branching.keeping`）是护此状的最大子变（`Becoming.Branching.keeping_greatest`）；变本身护此状，则其途中无机（`Becoming.Branching.no_juncture_of_keeps`）；例：一状有无数之步而无机（`Becoming.Branching.Many.no_juncture`）。此状若复，失去它的每一途不可谓不经一机（`Becoming.Branching.loss_passes_juncture`，结论为双重否定）。讀（AI，D52）：机是关节；护闭与成闭是在机处的同一操作，不带评价。未決：回应须在机之前到达（至期所及与机放进同一个模型）尚未证明。对照：「疾戰則存，不疾戰則亡者，為死地」〔BI1-S-SZ〕（相合，sunzi-sidi）：死地就是护闭之步与成闭之步并在之处。「九四：歸妹愆期，遲歸有時」〔YD-JG54〕（定域，jing-guimei-chiqi；卦爻辞，西周至春秋，年代有争议）：迟而无失只在途中无机之处成立。\n\n**證**　`Becoming.Branching.keeping`、`Becoming.Branching.keeping_greatest`、`Becoming.Branching.no_juncture_of_keeps`、`Becoming.Branching.Many.no_juncture`、`Becoming.Branching.loss_passes_juncture`、`Becoming.Branching.juncture_iff`；记录 [every-loss-passes-a-juncture](../results/records/every-loss-passes-a-juncture.md)。\n\n### 八·十七　刚柔、位、二体\n\n**經**　刚柔，爻之二值也：刚，不断之爻；柔，断之爻。卦，六爻自下而上，凡六十四。位，爻之所处也，自初至上凡六。二体，卦之两半也：下体自初至三，上体自四至上；每位为一体之一高，高有下、中、上。\n\n**說**　卦是脊柱上的一个宇，其值逐爻判定（`Becoming.Hexagram`、`Becoming.Hexagram.line`）；其上有二变：一爻之变（`Becoming.Hexagram.flip`）与消长环（`Becoming.Hexagram.waxWane`：每爻上一位，上爻出而以反值入初）。消长环下每卦皆复，六十四卦上任一法每卦皆复恰当其无同归，这是篇五之律在此载体上的实例（`Becoming.Hexagram.every_returns_iff`）。刚柔取代阴阳作爻值之名（阴阳作二气则入本原层，不采）；名取「刚柔相推而生变化」〔DS02〕。位只是高与体之积（`Becoming.Hexagram.place`），不带尊卑。二体取王弼「或有遺爻而舉二體者，卦體不由乎爻也」〔YWH-LM〕（定域，lueli-yi-er-ti；魏晋）：可数之界只是独异之爻之界（八·二十五），王弼在其余诸卦多以中爻为主，不都举二体。二体之间一爻相易（卦变），是二体之间交换之律的一步，所成之宇衡（`Becoming.Hexagram.across_exchange`、`Becoming.Hexagram.exchangeWorld_balances`）；「損剛益柔有時，損益盈虛，與時偕行」〔YD-HX01〕（定域，tuan-sun-yi-yushi）之“時”只读作步，不是名表之时。\n\n**證**　`Becoming.Hexagram`、`Becoming.Hexagram.line`、`Becoming.Hexagram.Place`、`Becoming.Hexagram.Height`、`Becoming.Hexagram.Half`、`Becoming.Hexagram.place`、`Becoming.Hexagram.halves`、`Becoming.Hexagram.waxWane`；记录 [hexagrams-on-the-spine](../results/records/hexagrams-on-the-spine.md)、[place-relations-in-context](../results/records/place-relations-in-context.md)。\n\n### 八·十八　正、中位、相应、比、承、乘\n\n**經**　位之奇偶：初、三、五为奇，二、四、上为偶。正，爻值合其位之奇偶也：刚居奇位，柔居偶位。中位，二与五也，二体之中高。相应，二体同高之二爻异值也。比，相邻二爻异值也；下柔上刚为承，下刚上柔为乘。\n\n**說**　这些都是两值之关系：位之奇偶每过一缝即相间（`Becoming.Hexagram.odd_above`）；相应是二爻相异（`Becoming.Hexagram.answers`）读于一高，比是它读于一缝（`Becoming.Hexagram.opposed_answers`、`Becoming.Hexagram.alternates_answers`），相异是对称的（`Becoming.Hexagram.answers_symm`）。对照：「分陰分陽，迭用柔剛，故易六位而成章」〔YD-OW-SG〕（相合，shuogua-dieyong-gangrou；易传成书年代有争议）：分阴分阳说的是位之奇偶，迭用柔刚说的是爻之刚柔，二者是两种关系，正是二者之合。比、承、乘是约定：比只名相邻而异，不带亲附；「近不必比，遠不必乖」〔YWH-LZ〕（相合，lueli-tongbian-yingbi）：爻之关系不由距离定；王弼之比是亲比，名表之比只是其必要条件。单用“应”只作回应（篇十一），爻之关系一律作相应。这些关系都不带尊卑、不带吉凶：「列贵贱者存乎位」〔DS02〕（相分，xici-guijian-wei）把位读作贵贱之列，属争胜与等级一层；所表示的动力连意义都不定（`Becoming.Web.significance_undetermined`），更不定等级。\n\n**證**　`Becoming.Hexagram.odd`、`Becoming.Hexagram.odd_above`、`Becoming.Hexagram.inPhase`、`Becoming.Hexagram.middle`、`Becoming.Hexagram.opposed`、`Becoming.Hexagram.alternates`、`Becoming.Hexagram.rises`、`Becoming.Hexagram.falls`；记录 [place-relations-in-context](../results/records/place-relations-in-context.md)。\n\n### 八·十九　位之关系皆语境之读\n\n**經**　凡位之关系，逐其所在（位、高、缝）而读，皆语境之读：诸处所示并行不悖而为全卦之一读，恰当每处所示皆同。以二体为二语境，各示其三高之爻：二体并行不悖，恰当无一高相应；泰有高相应，故于任一变，无不依语境之系辞能容诸高之所示，带指标之系辞则容之。诸位之正并行不悖，恰在既济、未济；诸高之相应，恰在三高皆应或皆不应；诸缝之比，恰在乾、坤、既济、未济。\n\n**說**　一关系逐其所在而读，是同一辞（状）在诸语境中之所示（`Becoming.Hexagram.atSites`）；并行不悖（拼合，篇七）恰在每处所示相同（`Becoming.Hexagram.atSites_glues_iff`）。二体作两个语境时，相应之处同一高之爻是两个辞，各在一体（`Becoming.Hexagram.halves_glues_iff`）；所以没有一个不带语境的系辞（框架，篇一）能容之，带指标者则能（`Becoming.Hexagram.halves_no_free_frame`、`Becoming.Hexagram.halves_indexed`，经 `Becoming.Contextual.fitsFree_iff`）。这是两行（篇一）在卦上的实例。对照：「六爻相杂，唯其时物也」〔DS03〕（相合，xici-liuyao-xiangza）：爻义随其所在而定，不先有一个脱离其位的爻义。「夫卦者，時也」〔YWH-LG〕（相合，lueli-gua-shi-yao-bian；王弼）：卦是诸位之读同时实现的那一状，指标是位；王弼此处之时是状，与名表之时（八·十）结构不同。「剛柔正而位當也」〔YD-HX01〕（相合，tuan-jiji-zhengwei）：六爻皆正恰在既济（`Becoming.Hexagram.inPhase_all_iff`）。\n\n**證**　`Becoming.Hexagram.atSites_glues_iff`、`Becoming.Hexagram.halves_glues_iff`、`Becoming.Hexagram.halves_no_free_frame`、`Becoming.Hexagram.halves_indexed`、`Becoming.Hexagram.phases_glue_iff`、`Becoming.Hexagram.oppositions_glue_iff`、`Becoming.Hexagram.seams_glue_iff`；记录 [place-relations-in-context](../results/records/place-relations-in-context.md)、[claims-shown-in-context](../results/records/claims-shown-in-context.md)。\n\n### 八·二十　相应由正而定\n\n**經**　凡卦：一高之二爻相应，恰当二爻同正或同不正；六爻皆不正，则三高皆应。自下而上，承之数加初爻之刚，等于乘之数加上爻之刚（刚计一，柔计零）。变其每爻，则每位之正皆反，每高之相应、每缝之比皆如故，承乘互易；上下倒之，则正皆反于对位，相应守于对高，承乘互易于对缝。消长环与变每爻，先后可易；故自一卦与自其每爻皆变之卦起之二消长环之行，无一步同卦。\n\n**說**　一高之二位奇偶相反，所以相应由正而定（`Becoming.Hexagram.opposed_iff_phase`、`Becoming.Hexagram.out_of_phase_opposed`）；承乘之数只差两端（`Becoming.Hexagram.rises_falls_ends`）。变每爻（即“错”）与上下倒（即“综”）对诸关系的作用见 `Becoming.Hexagram.inPhase_complement`、`Becoming.Hexagram.opposed_complement`、`Becoming.Hexagram.alternates_complement`、`Becoming.Hexagram.rises_complement`、`Becoming.Hexagram.inPhase_reverse`、`Becoming.Hexagram.opposed_reverse`、`Becoming.Hexagram.rises_reverse`。末句是“与一对称先后可易之法，不合此对称所分开者”（篇七）的实例：变每爻使每卦皆变（`Becoming.Hexagram.complement_moves`），消长环与之先后可易（`Becoming.Hexagram.waxWane_complement`），故二行永不相会（`Becoming.Hexagram.waxWane_apart`）；只许柔爻入初之法把一切吸入坤，正是破此对称之法（`Becoming.Hexagram.wane_breaks`）。对照：「雖不當位，剛柔應也」〔YD-HX01〕（定域，tuan-weiji-gangrou-ying）：“虽”示转折，而六爻皆不正则三高皆应是必然，应与当位不是两个独立之善。「天地定位，山澤通氣，雷風相薄，水火不相射」〔YD-OW-SG〕（相合，shuogua-tiandi-dingwei）：四对正是三画之互补，相叠则三高皆应；此处“定位”是八卦相对之方位，不是名表之位。\n\n**證**　`Becoming.Hexagram.opposed_iff_phase`、`Becoming.Hexagram.out_of_phase_opposed`、`Becoming.Hexagram.rises_falls_ends`、`Becoming.Hexagram.inPhase_complement`、`Becoming.Hexagram.opposed_complement`、`Becoming.Hexagram.rises_complement`、`Becoming.Hexagram.inPhase_reverse`、`Becoming.Hexagram.waxWane_apart`；记录 [place-relations-in-context](../results/records/place-relations-in-context.md)、[what-a-commuting-law-keeps-apart](../results/records/what-a-commuting-law-keeps-apart.md)。\n\n### 八·二十一　位在消长环中\n\n**經**　消长环每一步，爻各上一位；每爻上一位，其正必反，故正之数步步易其奇偶。次步之三高相应，随此步之三高相应而同；次步之正之数，则不随此步之正之数而同。\n\n**說**　一爻之所示依其每步所居之位而变（`Becoming.Hexagram.inPhase_waxWane_above`、`Becoming.Hexagram.phaseCount_parity`）；自乾起十二步，正之数为 3、2、3、2、3、2、3、4、3、4、3、4（`Becoming.Hexagram.phase_qian_orbit`）。三高之相应是消长环随类而同之类（`Becoming.Hexagram.opposition_lumped`、`Becoming.Hexagram.opposition_goAlike`），正之数不是：乾、坤各有三爻正，次步一为二、一为四（`Becoming.Hexagram.phaseCount_not_lumped`）。所以消长环可经相应归类而读，不可经正之数。对照：「大明終始，六位時成」〔YD-HX01〕（定域，tuan-liuwei-shicheng）：爻之正否依每步所居之位而成；其余之读不由此承载。\n\n**證**　`Becoming.Hexagram.inPhase_waxWane_above`、`Becoming.Hexagram.phaseCount_parity`、`Becoming.Hexagram.phase_qian_orbit`、`Becoming.Hexagram.opposition_lumped`、`Becoming.Hexagram.opposition_goAlike`、`Becoming.Hexagram.phaseCount_not_lumped`；记录 [place-relations-in-context](../results/records/place-relations-in-context.md)。\n\n### 八·二十二　位分与当位\n\n**經**　位分，唯二至五有定之奇偶也：初、上无之。当位，爻正于有位分之位也。\n\n**說**　这是王弼读位的第二种关系，与六位皆有奇偶之正并列（`Becoming.Hexagram.betweenEnds`、`Becoming.Hexagram.fixedPhase`、`Becoming.Hexagram.fixedPhase_end`）；当位恰是位分显示为正（`Becoming.Hexagram.holdsPlace_iff`），比正为窄（`Becoming.Hexagram.holdsPlace_inPhase`）。名取王弼「去初上而論位分」〔YWH-LB〕，不带由尊卑推位之义；「初上者，是事之終始，無陰陽定位也」〔YWH-LB〕（相合，lueli-chushang-wu-dingwei；魏晋）：其外延与此相合。讀（AI，D53）：初上无位是与正并列的第二种关系，经文言位之处以它读。\n\n**證**　`Becoming.Hexagram.betweenEnds`、`Becoming.Hexagram.fixedPhase`、`Becoming.Hexagram.fixedPhase_end`、`Becoming.Hexagram.holdsPlace`、`Becoming.Hexagram.holdsPlace_iff`、`Becoming.Hexagram.holdsPlace_inPhase`；记录 [fixed-places-and-sole-lines](../results/records/fixed-places-and-sole-lines.md)。\n\n### 八·二十三　初上无位\n\n**經**　二爻于一位异值，则无论此位何奇偶，必有一爻正。需之上爻柔，乾之上爻刚，而传皆谓之不在其位；故上位无一奇偶能合二言。所列小象言位之句（需上六不在列）皆在二至五；以位分读之，所列者与需上六、乾上九二言皆成立。二至五之正并行不悖，恰当其四爻皆当位或皆不当位，凡八卦。变初爻或上爻，二至五之正皆如故，而其高之相应、其缝之比皆反。消长环一步之后，二之正由初爻定，而初无位分；故次步二至五之正，不随此步二至五之正而同。\n\n**說**　这是王弼辩位之论证写成文本诸言之律（`Becoming.Hexagram.one_in_phase_of_parity`、`Becoming.Hexagram.top_no_parity`、`Becoming.Hexagram.placeStatements_between`、`Becoming.Hexagram.placeStatements_hold`）。四爻皆当位者为既济、蹇、渐、家人，皆不当位者为未济、归妹、解、睽（`Becoming.Hexagram.between_glues_iff`、`Becoming.Hexagram.allHold_iff`、`Becoming.Hexagram.noneHold_iff`）。变端爻之律说：初四、三上之相应与两端之比是爻之关系，不是位之关系（`Becoming.Hexagram.ends_not_told`）；末句即卦不可无六爻（`Becoming.Hexagram.fixedPhase_waxWane_enters`、`Becoming.Hexagram.betweenPhases_not_lumped`）。对照：「雖不當位，未大失也」〔YD-JP05〕（相合，xiaoxiang-xu-shangliu）：需上六柔居上而正（`Becoming.Hexagram.xu_top_inPhase`），以位分读之则不当位；相合以王弼之读为条件，程颐另读作上下之义，D53 亦不主张王弼之读即小象作者之意。「位有尊卑，爻有陰陽」〔YWH-LB〕（相分，lueli-bianwei-zunbei）：外延与位分相合，而王弼以尊卑为奇偶之位的根据，属争胜与等级一层；脊柱之奇偶只是位之次的关系。\n\n**證**　`Becoming.Hexagram.one_in_phase_of_parity`、`Becoming.Hexagram.top_no_parity`、`Becoming.Hexagram.placeStatements_between`、`Becoming.Hexagram.placeStatements_hold`、`Becoming.Hexagram.between_glues_iff`、`Becoming.Hexagram.ends_not_told`、`Becoming.Hexagram.fixedPhase_waxWane_enters`、`Becoming.Hexagram.betweenPhases_not_lumped`；记录 [fixed-places-and-sole-lines](../results/records/fixed-places-and-sole-lines.md)。\n\n### 八·二十四　独异\n\n**經**　独异，一爻与其余五爻皆异值也。\n\n**說**　独异是新组合：独（唯一）＋异（异值），取代“上下应”之名：它是二爻相异（八·十八）在此爻与其余每一爻之间都成立（`Becoming.Hexagram.sole`、`Becoming.Hexagram.sole_answered`），超出同一高之相应。独异不依位与正：独异之爻在每一位上都可正可不正（`Becoming.Hexagram.sole_any_phase`）。讀（AI，D53）：王弼之“主”只读作这一关系。\n\n**證**　`Becoming.Hexagram.sole`、`Becoming.Hexagram.sole_answered`、`Becoming.Hexagram.answers`、`Becoming.Hexagram.sole_any_phase`；记录 [fixed-places-and-sole-lines](../results/records/fixed-places-and-sole-lines.md)。\n\n### 八·二十五　独异之律\n\n**經**　一爻独异，恰当卦中与之同值者唯此一爻，即卦有一刚爻或五刚爻；一卦独异之爻至多其一；一爻独异，恰当变此爻则六爻皆同，凡十二卦。卦有独异之爻，消长环一步之后则无；独异之爻居上者，次步出而六爻皆同，再次步独异之爻自初入。\n\n**說**　计数与唯一（`Becoming.Hexagram.sole_count`、`Becoming.Hexagram.soleAny_count`、`Becoming.Hexagram.sole_unique`、`Becoming.Hexagram.sole_iff_flip`）；在消长环中独异不延续一步，自上出、自初入（`Becoming.Hexagram.sole_waxWane_none`、`Becoming.Hexagram.sole_top_passes`；以此读「初上者，始終之象也」〔YWH-LG〕是 AI 组合，不是王弼之义，王弼不用消息卦）。彖言“上下应”之比、小畜、大有，各有其所指之独异之爻（`Becoming.Hexagram.answeredStatements_sole`）。对照：「一卦五陽而一陰，則一陰為之主矣」〔YWH-LM〕（相合，lueli-yiyao-weizhu），条件是“主”只读作独异；同段以至少之地为主的贵贱一层不带入。「剛柔相乘，可立主以定也」〔YWH-LM〕（相分，lueli-lizhu-dingyi）：立一主以定一卦之义、以至寡治众，属意志或单一中心一层。大有彖以五为尊位，亦相分（tuan-dayou-zunwei）。\n\n**證**　`Becoming.Hexagram.sole_count`、`Becoming.Hexagram.soleAny_count`、`Becoming.Hexagram.sole_unique`、`Becoming.Hexagram.sole_iff_flip`、`Becoming.Hexagram.sole_waxWane_none`、`Becoming.Hexagram.sole_top_passes`、`Becoming.Hexagram.answeredStatements_sole`；记录 [fixed-places-and-sole-lines](../results/records/fixed-places-and-sole-lines.md)。\n\n### 八·二十六　象彖之言位\n\n**經**　所列小象明言位之句，需上六不在列，皆合其爻之正；所列言中正之句，艮六五不在列，皆中位之爻而正；所列言柔乘刚之句，皆其爻下之缝为乘。所列彖言刚中而应之卦，皆中位有刚爻而中高相应。\n\n**說**　Lean 对所列每一句在其卦上检查（`Becoming.Hexagram.placeStatements_agree`、`Becoming.Hexagram.centreStatements_agree`、`Becoming.Hexagram.fallStatements_agree`、`Becoming.Hexagram.middleOppositionStatements_agree`）；所列是否尽经文之言，由易章之检查脚本对照所存页面，不由 Lean。不在列者照实写出：需上六正而传谓之不当位（`Becoming.Hexagram.xu_top_inPhase`），以位分读之则成立（八·二十三）；艮六五居中而不正（`Becoming.Hexagram.gen_fifth_out_of_phase`）。对照：「艮其輔，以中正也」〔YD-JP52〕（相分，xiaoxiang-gen-liuwu）：按名表之正，这是一个反例；相分可能来自字义（小象之正多有贞正之义），不强作相合。「六二之難，乘剛也」〔YD-JP03〕（相合，xiaoxiang-chenggang）：乘这一关系本身不带吉凶，同一乘之关系，复六二被许为休（wangbi-fu-liuer）。「文不当，故吉凶生焉」〔DS03〕（相分，xici-wen-budang）：把吉凶直接读自当否，是把固定的价值放在关系上；所表示的动力不定意义（`Becoming.Web.significance_undetermined`）。意义之范围若要给出，只经延续之条件（设，陈述而不断言），排序只在以广为愈，二者都不由当否给出。\n\n**證**　`Becoming.Hexagram.placeStatements_agree`、`Becoming.Hexagram.centreStatements_agree`、`Becoming.Hexagram.fallStatements_agree`、`Becoming.Hexagram.middleOppositionStatements_agree`、`Becoming.Hexagram.xu_top_inPhase`、`Becoming.Hexagram.gen_fifth_out_of_phase`；记录 [place-relations-in-context](../results/records/place-relations-in-context.md)。\n\n### 八·二十七　称之进退相抵\n\n**經**　凡有穷之族，诸体之量自此而彼，称之变以进数、退数二计：一体之进数加其余诸体进数之和，等于其退数加其余诸体退数之和；全族进数之和等于退数之和；无一变使每体之称皆进；一体之称进，必有他体之称退。\n\n**說**　称（相对位置，篇十四）是一体之量计以族中体数之倍，对全族之和而读；全族之领先数与落后数相等（`Becoming.RelativePosition.positions_balance`）。这些计数之律对量的任何读、任何改变都成立（`Becoming.RelativePosition.change_balances`、`Becoming.RelativePosition.change_opposed`、`Becoming.RelativePosition.not_all_rise`、`Becoming.RelativePosition.rise_needs_fall`）；每体之所资皆增时，一体之称仍可退（`Becoming.DrawingMore.grow_and_fall`）；读于流上，不须流的任何前提（`Becoming.Flow.drawn_positions`）。称给出位置，不给出延续：竞取一个所待（有与之者补之）时，最大者同样终止，其终止由其所待定，不由位置定（`Becoming.Flow.ends_at_race_end`、`Becoming.Flow.race_ends_greatest`，篇十四）。对照：「地生度，度生量，量生數，數生稱，稱生勝」〔BI1-S-SZ〕（定域，sunzi-shu-sheng-cheng）：孙子之稱是两量相权，两方之族时与此同向；“胜”只在指相对位置时成立，读作延续之保障则不成立；取胜属争胜一层，不带入。「故資必不勝而勢不兩存」〔FA1-S-H11〕（定域，hanfei-gufen-shi）：勢不兩存是称之一进一退；此处之勢是位势，不是名表之势。\n\n**證**　`Becoming.RelativePosition.positions_balance`、`Becoming.RelativePosition.change_balances`、`Becoming.RelativePosition.change_opposed`、`Becoming.RelativePosition.not_all_rise`、`Becoming.RelativePosition.rise_needs_fall`；记录 [relative-position-is-zero-sum](../results/records/relative-position-is-zero-sum.md)。\n\n#### 对照\n\n- 「行脩以久，說在先後」〔MI1-S-JX〕——相合：先后从行者之行程读出；诸历程之交错是脊柱补出的结构（mojing-xianhou-jiu）。\n- 「夫遇不遇者，時也；賢不肖者，材也」〔RU2-S-XZ28〕——定域：一步之去向由动与时合定，所能不单定去向；哪一时实际发生不由律定（xunzi-yuzuo-yu-shi）。\n- 「吾生也有涯，而知也无涯」〔ZH1-S03〕——相合：有穷之往不定其后，补全所失的展开不被有穷之储所持（zhuangzi-youya）。\n- 「变通者，趣时者也」〔DS03〕——定域：规则只在时稽之步得快层之异，趣时之变只在规则读其所处之处有效（xici-biantong-qushi）。\n- 「言未及之而言，謂之躁；言及之而不言，謂之隱」〔RU1-S-LY〕——相合：答之异须至期所及；及而不用亦有之（lunyu-yan-jizhi）。\n- 「初上者，是事之終始，無陰陽定位也」〔YWH-LB〕——相合：位分唯在二至五，以之读则彖、小象言位之句皆成立（lueli-chushang-wu-dingwei）。\n- 「列贵贱者存乎位」〔DS02〕——相分：位只有奇偶、高、体与居中，不带贵贱；等级是加在位上的一层（xici-guijian-wei）。\n- 「臣聞法古無過，循禮無邪」〔FA1-S-SV1〕——相分：不读所处之规则所失不复得，固定之法不能立为无过（shangjun-fagu-wuguo）。\n",
+ "declarations": [
+  "Becoming.Branching.Many.no_juncture",
+  "Becoming.Branching.juncture_iff",
+  "Becoming.Branching.keeping",
+  "Becoming.Branching.keeping_greatest",
+  "Becoming.Branching.loss_passes_juncture",
+  "Becoming.Branching.no_juncture_of_keeps",
+  "Becoming.Cancelling.coarse_not_fine",
+  "Becoming.Contextual.fitsFree_iff",
+  "Becoming.Diagonal.Unfolds.unheld",
+  "Becoming.DrawingMore.grow_and_fall",
+  "Becoming.Expansion.more_step_relative",
+  "Becoming.Flow.BalancesOn.sample",
+  "Becoming.Flow.drawn_positions",
+  "Becoming.Flow.ends_at_race_end",
+  "Becoming.Flow.race_ends_greatest",
+  "Becoming.Flow.sample_not_more",
+  "Becoming.Footprinted.sorts_iff",
+  "Becoming.Hexagram",
+  "Becoming.Hexagram.Half",
+  "Becoming.Hexagram.Height",
+  "Becoming.Hexagram.Place",
+  "Becoming.Hexagram.across_exchange",
+  "Becoming.Hexagram.allHold_iff",
+  "Becoming.Hexagram.alternates",
+  "Becoming.Hexagram.alternates_answers",
+  "Becoming.Hexagram.alternates_complement",
+  "Becoming.Hexagram.answeredStatements_sole",
+  "Becoming.Hexagram.answers",
+  "Becoming.Hexagram.answers_symm",
+  "Becoming.Hexagram.atSites",
+  "Becoming.Hexagram.atSites_glues_iff",
+  "Becoming.Hexagram.betweenEnds",
+  "Becoming.Hexagram.betweenPhases_not_lumped",
+  "Becoming.Hexagram.between_glues_iff",
+  "Becoming.Hexagram.centreStatements_agree",
+  "Becoming.Hexagram.complement_moves",
+  "Becoming.Hexagram.ends_not_told",
+  "Becoming.Hexagram.every_returns_iff",
+  "Becoming.Hexagram.exchangeWorld_balances",
+  "Becoming.Hexagram.fallStatements_agree",
+  "Becoming.Hexagram.falls",
+  "Becoming.Hexagram.fixedPhase",
+  "Becoming.Hexagram.fixedPhase_end",
+  "Becoming.Hexagram.fixedPhase_waxWane_enters",
+  "Becoming.Hexagram.flip",
+  "Becoming.Hexagram.gen_fifth_out_of_phase",
+  "Becoming.Hexagram.halves",
+  "Becoming.Hexagram.halves_glues_iff",
+  "Becoming.Hexagram.halves_indexed",
+  "Becoming.Hexagram.halves_no_free_frame",
+  "Becoming.Hexagram.holdsPlace",
+  "Becoming.Hexagram.holdsPlace_iff",
+  "Becoming.Hexagram.holdsPlace_inPhase",
+  "Becoming.Hexagram.inPhase",
+  "Becoming.Hexagram.inPhase_all_iff",
+  "Becoming.Hexagram.inPhase_complement",
+  "Becoming.Hexagram.inPhase_reverse",
+  "Becoming.Hexagram.inPhase_waxWane_above",
+  "Becoming.Hexagram.line",
+  "Becoming.Hexagram.middle",
+  "Becoming.Hexagram.middleOppositionStatements_agree",
+  "Becoming.Hexagram.noneHold_iff",
+  "Becoming.Hexagram.odd",
+  "Becoming.Hexagram.odd_above",
+  "Becoming.Hexagram.one_in_phase_of_parity",
+  "Becoming.Hexagram.opposed",
+  "Becoming.Hexagram.opposed_answers",
+  "Becoming.Hexagram.opposed_complement",
+  "Becoming.Hexagram.opposed_iff_phase",
+  "Becoming.Hexagram.opposed_reverse",
+  "Becoming.Hexagram.opposition_goAlike",
+  "Becoming.Hexagram.opposition_lumped",
+  "Becoming.Hexagram.oppositions_glue_iff",
+  "Becoming.Hexagram.out_of_phase_opposed",
+  "Becoming.Hexagram.phaseCount_not_lumped",
+  "Becoming.Hexagram.phaseCount_parity",
+  "Becoming.Hexagram.phase_qian_orbit",
+  "Becoming.Hexagram.phases_glue_iff",
+  "Becoming.Hexagram.place",
+  "Becoming.Hexagram.placeStatements_agree",
+  "Becoming.Hexagram.placeStatements_between",
+  "Becoming.Hexagram.placeStatements_hold",
+  "Becoming.Hexagram.rises",
+  "Becoming.Hexagram.rises_complement",
+  "Becoming.Hexagram.rises_falls_ends",
+  "Becoming.Hexagram.rises_reverse",
+  "Becoming.Hexagram.seams_glue_iff",
+  "Becoming.Hexagram.sole",
+  "Becoming.Hexagram.soleAny_count",
+  "Becoming.Hexagram.sole_answered",
+  "Becoming.Hexagram.sole_any_phase",
+  "Becoming.Hexagram.sole_count",
+  "Becoming.Hexagram.sole_iff_flip",
+  "Becoming.Hexagram.sole_top_passes",
+  "Becoming.Hexagram.sole_unique",
+  "Becoming.Hexagram.sole_waxWane_none",
+  "Becoming.Hexagram.top_no_parity",
+  "Becoming.Hexagram.wane_breaks",
+  "Becoming.Hexagram.waxWane",
+  "Becoming.Hexagram.waxWane_apart",
+  "Becoming.Hexagram.waxWane_complement",
+  "Becoming.Hexagram.xu_top_inPhase",
+  "Becoming.Interleavings.LocalLaw",
+  "Becoming.Interleavings.LocalLaw.Apart",
+  "Becoming.Interleavings.LocalLaw.Connected",
+  "Becoming.Interleavings.LocalLaw.Interleaves",
+  "Becoming.Interleavings.LocalLaw.act_comm",
+  "Becoming.Interleavings.LocalLaw.ownCourse",
+  "Becoming.Interleavings.LocalLaw.renumber_reindexes",
+  "Becoming.Interleavings.LocalLaw.run_of_courses",
+  "Becoming.Interleavings.LocalLaw.schedule_iff",
+  "Becoming.Interleavings.LocalLaw.standings_of_courses",
+  "Becoming.Interleavings.LocalLaw.trace_of_interleavings",
+  "Becoming.Interleavings.LocalLaw.unique_iff",
+  "Becoming.Interleavings.LocalLaw.world",
+  "Becoming.Interleavings.LocalLaw.world_balances",
+  "Becoming.Interleavings.LocalLaw.world_reads_alike",
+  "Becoming.Interleavings.LocalLaw.world_renumber_reads",
+  "Becoming.Interleavings.LocalLaw.world_swap",
+  "Becoming.Interleavings.Pair.apart_differs",
+  "Becoming.Interleavings.Pair.idle_unmatched",
+  "Becoming.Lapse.reserve_step_relative",
+  "Becoming.Lasting.Continues",
+  "Becoming.Learning.diagonal_misses",
+  "Becoming.Learning.diagonal_unrested",
+  "Becoming.Learning.no_prefix_fixes_next",
+  "Becoming.Onward.run_iff_continues",
+  "Becoming.Onward.run_iff_returning",
+  "Becoming.Onward.run_of_returning",
+  "Becoming.Onward.runs_iff_dependentChoice",
+  "Becoming.Pace.never_reads_loses",
+  "Becoming.Pace.never_reads_lost",
+  "Becoming.Pace.pace_law",
+  "Becoming.Pace.paced",
+  "Becoming.Pace.rule_alike_until_reading",
+  "Becoming.Pace.rule_at_reading",
+  "Becoming.Pace.rule_kept",
+  "Becoming.Pace.rule_unreached",
+  "Becoming.RelativePosition.change_balances",
+  "Becoming.RelativePosition.change_opposed",
+  "Becoming.RelativePosition.not_all_rise",
+  "Becoming.RelativePosition.positions_balance",
+  "Becoming.RelativePosition.rise_needs_fall",
+  "Becoming.Renewable.prefix_does_not_decide",
+  "Becoming.Run.AgreeUpTo",
+  "Becoming.Situations.coarse",
+  "Becoming.Situations.finer",
+  "Becoming.Situations.finerLaw",
+  "Becoming.Situations.finerLaw_determined",
+  "Becoming.Situations.finerLaw_step_iff",
+  "Becoming.Situations.situations_count",
+  "Becoming.Situations.situations_of_course",
+  "Becoming.Situations.situations_typical",
+  "Becoming.Situations.sum_finer",
+  "Becoming.Switching.changing_regains",
+  "Becoming.Switching.fixed_loses",
+  "Becoming.TimedResponse.CoupledIntoAt",
+  "Becoming.TimedResponse.Delayed.answers_before_and_after",
+  "Becoming.TimedResponse.Delayed.constant_read_ignores",
+  "Becoming.TimedResponse.ReachedBy",
+  "Becoming.TimedResponse.Spread",
+  "Becoming.TimedResponse.answer_alike_before",
+  "Becoming.TimedResponse.coupling_alike_before",
+  "Becoming.TimedResponse.different_answers_not_unreached",
+  "Becoming.TimedResponse.different_answers_require_reached",
+  "Becoming.TimedResponse.levels_alike_before",
+  "Becoming.TimedResponse.not_reached_before_source",
+  "Becoming.TimedResponse.reachedBy_mono",
+  "Becoming.Web.significance_undetermined",
+  "Becoming.World.stutter_arisingRecurs_iff",
+  "Becoming.World.stutter_change_recurs_iff",
+  "Becoming.World.stutter_premises_iff",
+  "Becoming.World.withoutIdle_premises",
+  "Becoming.World.withoutIdle_totals",
+  "Becoming.World.withoutIdle_transmits",
+  "Becoming.stutter_total"
+ ],
+ "records": [
+  "becoming-finite-horizon",
+  "claims-shown-in-context",
+  "every-loss-passes-a-juncture",
+  "fixed-places-and-sole-lines",
+  "hexagrams-on-the-spine",
+  "how-fast-a-rule-may-change",
+  "learning-by-refutation",
+  "only-the-order-of-change-shows",
+  "order-of-exchanges-is-the-invariant",
+  "place-relations-in-context",
+  "readings-within-what-they-read",
+  "relative-position-is-zero-sum",
+  "the-step-index-from-own-courses",
+  "the-world-an-interleaving-builds",
+  "timely-response-necessity",
+  "weights-count-situations",
+  "what-a-commuting-law-keeps-apart",
+  "where-a-run-goes-on"
+ ],
+ "quotes": [
+  {
+   "text": "一卦五陽而一陰，則一陰為之主矣",
+   "source_id": "YWH-LM"
+  },
+  {
+   "text": "不可为典要，唯变所适",
+   "source_id": "DS03"
+  },
+  {
+   "text": "久，彌異時也",
+   "source_id": "MI1-S-JS"
+  },
+  {
+   "text": "九四：歸妹愆期，遲歸有時",
+   "source_id": "YD-JG54"
+  },
+  {
+   "text": "二子事親，或遇孰，或遇凶，其親也相若，非彼其行益也",
+   "source_id": "MI1-S-DQ"
+  },
+  {
+   "text": "位有尊卑，爻有陰陽",
+   "source_id": "YWH-LB"
+  },
+  {
+   "text": "六二之難，乘剛也",
+   "source_id": "YD-JP03"
+  },
+  {
+   "text": "六爻相杂，唯其时物也",
+   "source_id": "DS03"
+  },
+  {
+   "text": "分陰分陽，迭用柔剛，故易六位而成章",
+   "source_id": "YD-OW-SG"
+  },
+  {
+   "text": "列贵贱者存乎位",
+   "source_id": "DS02"
+  },
+  {
+   "text": "刚柔相推而生变化",
+   "source_id": "DS02"
+  },
+  {
+   "text": "初上者，始終之象也",
+   "source_id": "YWH-LG"
+  },
+  {
+   "text": "初上者，是事之終始，無陰陽定位也",
+   "source_id": "YWH-LB"
+  },
+  {
+   "text": "剛柔正而位當也",
+   "source_id": "YD-HX01"
+  },
+  {
+   "text": "剛柔相乘，可立主以定也",
+   "source_id": "YWH-LM"
+  },
+  {
+   "text": "化而裁之谓之变",
+   "source_id": "DS02"
+  },
+  {
+   "text": "卒未親附而罰之，則不服",
+   "source_id": "BI1-S-SZ"
+  },
+  {
+   "text": "去初上而論位分",
+   "source_id": "YWH-LB"
+  },
+  {
+   "text": "变通者，趣时者也",
+   "source_id": "DS03"
+  },
+  {
+   "text": "吾生也有涯，而知也无涯",
+   "source_id": "ZH1-S03"
+  },
+  {
+   "text": "吾生也有涯，而知也无涯。以有涯隨无涯，殆已",
+   "source_id": "ZH1-S03"
+  },
+  {
+   "text": "四時之錯行",
+   "source_id": "RU1-S-ZY"
+  },
+  {
+   "text": "因物故有時，離物何有時？",
+   "source_id": "FO1-S-MMK"
+  },
+  {
+   "text": "地生度，度生量，量生數，數生稱，稱生勝",
+   "source_id": "BI1-S-SZ"
+  },
+  {
+   "text": "大明終始，六位時成",
+   "source_id": "YD-HX01"
+  },
+  {
+   "text": "天地定位，山澤通氣，雷風相薄，水火不相射",
+   "source_id": "YD-OW-SG"
+  },
+  {
+   "text": "夫卦者，時也",
+   "source_id": "YWH-LG"
+  },
+  {
+   "text": "夫遇不遇者，時也；賢不肖者，材也",
+   "source_id": "RU2-S-XZ28"
+  },
+  {
+   "text": "往来不穷谓之通",
+   "source_id": "DS02"
+  },
+  {
+   "text": "或有遺爻而舉二體者，卦體不由乎爻也",
+   "source_id": "YWH-LM"
+  },
+  {
+   "text": "推而行之谓之通",
+   "source_id": "DS02"
+  },
+  {
+   "text": "損剛益柔有時，損益盈虛，與時偕行",
+   "source_id": "YD-HX01"
+  },
+  {
+   "text": "故資必不勝而勢不兩存",
+   "source_id": "FA1-S-H11"
+  },
+  {
+   "text": "文不当，故吉凶生焉",
+   "source_id": "DS03"
+  },
+  {
+   "text": "水因地而制行，兵因敵而制勝",
+   "source_id": "BI1-S-SZ"
+  },
+  {
+   "text": "物有本末，事有終始，知所先後，則近道矣",
+   "source_id": "RU1-S-DX"
+  },
+  {
+   "text": "疾戰則存，不疾戰則亡者，為死地",
+   "source_id": "BI1-S-SZ"
+  },
+  {
+   "text": "能使敵人前後不相及",
+   "source_id": "BI1-S-SZ"
+  },
+  {
+   "text": "臣聞法古無過，循禮無邪",
+   "source_id": "FA1-S-SV1"
+  },
+  {
+   "text": "艮其輔，以中正也",
+   "source_id": "YD-JP52"
+  },
+  {
+   "text": "节遇谓之命",
+   "source_id": "RU2-S-XZ22"
+  },
+  {
+   "text": "行脩以久，說在先後",
+   "source_id": "MI1-S-JX"
+  },
+  {
+   "text": "言未及之而言，謂之躁；言及之而不言，謂之隱",
+   "source_id": "RU1-S-LY"
+  },
+  {
+   "text": "近不必比，遠不必乖",
+   "source_id": "YWH-LZ"
+  },
+  {
+   "text": "遠近，脩也；先後，久也",
+   "source_id": "MI1-S-SX"
+  },
+  {
+   "text": "雖不當位，剛柔應也",
+   "source_id": "YD-HX01"
+  },
+  {
+   "text": "雖不當位，未大失也",
+   "source_id": "YD-JP05"
+  }
+ ],
+ "missing_names": [
+  {
+   "concept": "hexagram and line, the carrier of the 易 line (Hexagram, Hexagram.line)",
+   "used": "卦、爻（易之载体，名表无行；刚柔为爻值之名）"
+  },
+  {
+   "concept": "height of a trigram (Hexagram.Height)",
+   "used": "高（下、中、上）"
+  },
+  {
+   "concept": "seam between two adjacent places (Hexagram.Seam)",
+   "used": "缝"
+  },
+  {
+   "concept": "complement, every line changed (Hexagram.complement, 錯)",
+   "used": "变其每爻（即“错”；錯不立为名，见 names-dropped 錯行）"
+  },
+  {
+   "concept": "turning over (Hexagram.reverse, 綜) and the mirrored place, height, seam",
+   "used": "上下倒之（即“综”）；对位、对高、对缝"
+  },
+  {
+   "concept": "law of waxing and waning on hexagrams (Hexagram.waxWane)",
+   "used": "消长环（名表「消息」条注所给写法，未立行）"
+  },
+  {
+   "concept": "a relatum's own course (Interleavings.LocalLaw.ownCourse); a course in general (finite sequence of steps, Lasting.Continues)",
+   "used": "自身之历程；历程"
+  },
+  {
+   "concept": "exchanges acting locally (LocalLaw), touches, apart (share no relatum)",
+   "used": "取与局部而作；触；不共触一物／不相连"
+  },
+  {
+   "concept": "standing / level of a relatum",
+   "used": "所立（任意值之状态）；水平（自然数之量）"
+  },
+  {
+   "concept": "idle step, stuttering, removing idle steps (Stutter, World.withoutIdle)",
+   "used": "无物参与之步（空步）；插入／去掉此等步"
+  },
+  {
+   "concept": "footprint and renumbering of steps (Footprinted, Reindexes)",
+   "used": "足迹；重编号（名表「分」只名专属足迹，不借）"
+  },
+  {
+   "concept": "activity, active relata",
+   "used": "活动、活动者"
+  },
+  {
+   "concept": "weight of a step; finer course (Situations.finer)",
+   "used": "重（权重）；细历程"
+  },
+  {
+   "concept": "rule, fast level and two-level course of Pace (Pace.paced)",
+   "used": "规则；快层；二层之行"
+  },
+  {
+   "concept": "source, route, reader and answer of a timed response (TimedResponse source, Spread, g, read)",
+   "used": "源；途；读者；答"
+  },
+  {
+   "concept": "deadline D of TimedResponse",
+   "used": "期（取自至期所及；名表之期为回程之上界，此处同为上界而所界不同，交整合者）"
+  },
+  {
+   "concept": "sub-process (SubProcess)",
+   "used": "子变"
+  },
+  {
+   "concept": "dependent choice (Onward.DependentChoice)",
+   "used": "依赖选择之原则"
+  },
+  {
+   "concept": "rise and fall counts of relative position (riseCount, fallCount); family of parts; amount",
+   "used": "进数、退数（称之进、退）；族；量"
+  },
+  {
+   "concept": "context and indexed frame (Contextual, Contextual.indexed)",
+   "used": "语境；带指标之系辞"
+  },
+  {
+   "concept": "probability read as a count of situations (D43)",
+   "used": "概率"
+  }
+ ],
+ "open": "一、未证：G9（回应须在机之前到达：同一变、同一状、到达可判定时的窗口）未证，八·十六标为未決；xici-daishi-erdong、wenyan-jishi、tuan-gen-shizhi、zhuangzi-hezhe-zhi-fu、laozi-sz-bu-shishi 依之，未入本篇。共触一物的两步以两种次序至于不同之状，脊柱尚无具体见证（sunzi-qinfu-fa 之缺口，八·二说明）。三才之带（初二、三四、五上）未在 HexagramPlaces 定义（shuogua-sancai-liuhua）。Situations 与 Confound 之间无一般定理，误归只有所构之例（daqu-yushu-yuxiong），故八·十一不引 Confound。\n二、名与锚：名表把「当位」锚在 HexagramPlaces（其文档注以 inPhase 为 正／當位，六位皆有奇偶）；本篇依 D53 与对应条目把当位定为 Becoming.Hexagram.holdsPlace（王弼第二种关系，二至五），在第一种关系下当位与正重合；请整合者定锚或改定义。「期」在名表为回程之上界，本篇在至期所及之内用作时限。王弼「卦者，時也」与彖「與時偕行」之時，结构上是状与步，不是名表之时（情境），已在說中分开。卦、爻、高、缝、错、综、规则、快层等无名，见 missing_names。\n三、与他篇重叠，请整合者定其所在：篇一草稿一·十八已述 run_of_courses、unique_iff、world_reads_alike、apart_differs、sorts_iff，本篇八·一至八·五以先后、交错二名为主重述并补 act_comm、schedule_iff、world_balances、world_swap、world_renumber_reads 与空步之律；八·十六（机之律）与篇七重叠，只取与时相关之护闭、无机、多途不成机；八·二十七（称）与篇十四重叠；与时转之律（pace_law）留在篇十一，只在八·十三引及；八·二十之“相易之法所分开者”是篇七之律在卦上的实例。\n四、10 月 20 日后新增模块：本篇收 Stuttering 与 IdleRemoval（八·五）、HexagramCommuting（八·二十：complement_moves、waxWane_apart、wane_breaks）。Optimum 的“视界”（SG5–SG7：在一段步上排序之最优）是排序之窗而非涯（有穷之往），结构属择优与取舍，未收；若要以涯兼名之，须另定名。RegimeMargin、JointDraw、DrawnBeyond、InAmounts、Amounts、Growth、OwnWidening、Weightings、Direction、ContinuedClasses、Retaining、BoundedSignificance、Clearing、ClosedCapture、Drift、Reproduction、SelectionLevels、SelectionTerm、GroupEnding、PropositionIdentity、ListingRefutations、CensusTable、Witnesses、Extension、Laws 无本簇之结构；ListTests、Order、Naturals 在此工作树中不是模块文件（ListTests、Naturals 是 Laws 一类通用引理之命名空间）。\n五、易线未尽：HexagramLaws（互卦之法与其吸引域，即名表之势）与 HexagramSequences（卦序只是一表之行、杂卦、八站）只在八·十七引卦变一步（across_exchange、exchangeWorld_balances），其余留篇七或易章；小象、彖言位之句所列是否尽经文，由易章检查脚本对照所存页面，不由 Lean（八·二十六已说明）。\n六、体例：八·五、八·二十、八·二十六之說超过八句，审者可删；延续之条件只作为设出现（八·二十六与篇首），排序只在以广为愈。"
+}

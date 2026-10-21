@@ -1,0 +1,272 @@
+{
+ "pian": "篇八　时与位",
+ "edits": [
+  {
+   "find": "本篇论变化之先后、涯、时、通、变通、所及与机",
+   "replace": "本篇论变化之先后、涯、时、通、变通、至期所及与机",
+   "why": "「所及」是名表另一名（部分所及），此处指至期所及"
+  },
+  {
+   "find": "延续之条件（凡续皆有顾）在意义之篇中陈述而不断言",
+   "replace": "延续之条件（凡续皆有顾）在篇十五中陈述而不断言",
+   "why": "「意义」是名表「顾」之概念，不用现代词代名；指明篇次"
+  },
+  {
+   "find": "设取与局部而作（`Becoming.Interleavings.LocalLaw`）",
+   "replace": "若取与局部而作（`Becoming.Interleavings.LocalLaw`）",
+   "why": "名表：一条律的局部假设以「若」写出，不叫「设」"
+  },
+  {
+   "find": "交错是新组合：交（相互）＋错（更迭），只名“诸自身历程合为一次”这一构；「四時之錯行」〔RU1-S-ZY〕之错行是更迭，不借为此名。",
+   "replace": "交错是新组合（约定），取常语“交错”（交叉错综）之义，只名“诸自身历程合为一次”这一构；其中之交不是名表之交（交互，只有一义）。「四時之錯行」〔RU1-S-ZY〕之错行是一个历程之内的更迭，不借为此名。",
+   "why": "原说以「交」为「相互」，与名表「交只有一义」相撞；又说错为更迭，却说更迭之错行不借，自相抵"
+  },
+  {
+   "find": "先后只在步与步共触一物之处才可能要紧；《大学》此后所立的固定本末之次，把一种次序立为普遍，属单一中心一层，不由此推出。",
+   "replace": "先后只在步与步共触一物之处才可能要紧；「物有本末」〔RU1-S-DX〕与下文「欲治其國者，先齊其家」〔RU1-S-DX〕一类的次第是另一种序（成一事须先有另一事），不是取与之交错，不由这些定理读出，此处不判。",
+   "why": "条目 daxue-zhi-suo-xianhou 明言本末之序「本条不判」；草稿另加单一中心层之判，无据"
+  },
+  {
+   "find": "姚秦鸠摩罗什译）：时之先后依物而有，与此相合；但只在取与局部而作之设下，先后才由诸物之历程完全读出。",
+   "replace": "姚秦鸠摩罗什译）：此处之時是先后之时，不是名表之时（八·十）；先后依物而有，与此相合；但只在取与局部而作之处，先后才由诸物之历程完全读出。",
+   "why": "「时」在本篇是名表之名（情境），不能另指时间先后；「设」只名陈述而不断言者"
+  },
+  {
+   "find": "条件之外，诸物之历程只定一族交错，择其一是表示所作的承诺",
+   "replace": "条件之外，诸物之历程只定一族交错，取其一是表示所作的承诺",
+   "why": "「择」是名表之名（关于水平历史之主张），不借作取一交错"
+  },
+  {
+   "find": "讀（AI，D43）：在这两个条件之外，择哪一交错是诸状所不读的选择。",
+   "replace": "讀（AI，D43）：在这两个条件之外，取哪一交错是诸状所不读的选取。",
+   "why": "「择」是名表之名，不借作表示之选取"
+  },
+  {
+   "find": "未示：无尽之历程，连续之时，以及是否每一变化都有局部之法。",
+   "replace": "未示：无尽之历程；读其所不改之物的取与（读与改分为二迹）；离散之步以外的连续；以及是否每一变化都有局部之法。",
+   "why": "「时」是名表之名；记录所列之未示含读改分迹"
+  },
+  {
+   "find": "**經**　凡于宇之步间插入无物参与之步而读之（每步每物只计一次）：",
+   "replace": "**經**　凡于宇之步间插入无物参与之步而读之（诸物之同异定然否，每步每物只计一次）：",
+   "why": "stutter_premises_iff 需 DecidableEq Relatum"
+  },
+  {
+   "find": "有宇以一蓄而载，每步读二次则不蓄二不能载。",
+   "replace": "有待网以一蓄而载，每步读二次则不蓄二不能载。",
+   "why": "Lapse.web 是待网（Web），不是宇（World）"
+  },
+  {
+   "find": "易相邻而不相连之取与所能至之重编号，恰为保持相连取与之先后者。",
+   "replace": "易相邻而不相连（Reordering 之相连：共触一物，或一所触之物待另一所触者）之取与所能至之重编号，恰为保持相连取与之先后者。",
+   "why": "sorts_iff 之 Joined 比八·一之「共触一物」宽，须说明"
+  },
+  {
+   "find": "插入亦不改复现（`Becoming.World.stutter_premises_iff`",
+   "replace": "插入亦不改作、已与水平之变之复现（`Becoming.World.stutter_ceasingRecurs_iff`、`Becoming.World.stutter_premises_iff`",
+   "why": "經言「已」之复现，原无证"
+  },
+  {
+   "find": "插入空步则无所失。",
+   "replace": "插入空步则无一律失去。",
+   "why": "「所失」是名表之名（Remainder），不借作一般之失"
+  },
+  {
+   "find": "`Becoming.stutter_total`、`Becoming.World.stutter_change_recurs_iff`、`Becoming.World.withoutIdle_premises`、`Becoming.World.withoutIdle_totals`、`Becoming.Flow.sample_not_more`、`Becoming.Lapse.reserve_step_relative`",
+   "replace": "`Becoming.stutter_total`、`Becoming.World.stutter_arisingRecurs_iff`、`Becoming.World.stutter_ceasingRecurs_iff`、`Becoming.World.stutter_change_recurs_iff`、`Becoming.World.withoutIdle_premises`、`Becoming.World.withoutIdle_totals`、`Becoming.Flow.sample_not_more`、`Becoming.Expansion.more_step_relative`、`Becoming.Lapse.reserve_step_relative`",
+   "why": "經所言作、已之复现与「每步读二次则否」须有证"
+  },
+  {
+   "find": "而一步一步地取移本身是一种选择，脊柱不设它（八·七）。",
+   "replace": "而一步一步地取移本身是一种选取，核心不以之为前提（八·七）。",
+   "why": "「设」名陈述而不断言者，「择／选择」为名表另一名"
+  },
+  {
+   "find": "**經**　凡自一状有途至一复之状，则此状通。",
+   "replace": "**經**　凡自一状可至一复之状，则此状通。",
+   "why": "「途」在八·十四定为至期所及之途（Spread），此处是可至（Reach）"
+  },
+  {
+   "find": "恰当自此状有途至一复之状。",
+   "replace": "恰当自此状可至一复之状。",
+   "why": "同上，免「途」二义"
+  },
+  {
+   "find": "证中不用判定，也不用选择。讀（AI，D43）：无尽而行是从展开读出的，不是择出的。",
+   "replace": "证中不用定然否，也不用选取之原则。讀（AI，D43）：无尽而行是从展开读出的，不是逐步选取而得的。",
+   "why": "「择」是名表之名（关于水平历史之主张）；判定名「定然否」"
+  },
+  {
+   "find": "它作为命题陈述，不设。",
+   "replace": "它作为命题陈述而不断言。",
+   "why": "名表「设」即陈述而不断言者，「不设」与之相反"
+  },
+  {
+   "find": "此处之涯是任一读的有穷之往，不限于一生",
+   "replace": "此处之涯是任一读之往的有穷之界，不限于一生",
+   "why": "經定涯为界（一步），说中又称涯为往，前后不一"
+  },
+  {
+   "find": "自此往所推之值，不能于二者皆不失。凡知来，若有一移使每值皆异，则于其不测之历程，凡所推之值皆失。凡读之族守其所已言而次言其所失，所失之移使每值皆不同，而同对称、传递，则无有穷之储能持其每步之所失。",
+   "replace": "自此往所推之值，于二者不能皆符。凡知来，若有一移使每值皆异于其像，则于其不测之历程，凡所推之值皆不符。凡读之族守其所已言而次言其所未言，所用之移使每值皆异于其像，而同对称、传递，则无有穷之储能持其每步之所未言。",
+   "why": "Misses 名表作「不符」；「所失」是名表 Remainder 之名；所补者是 gap（无一员所言）"
+  },
+  {
+   "find": "第三句说补全所失的展开，不被任何有穷之储所持（`Becoming.Diagonal.Unfolds.unheld`），与保留历史之行永不复同类。",
+   "replace": "第三句说补全其所未言的展开，不被任何有穷之储所持（`Becoming.Diagonal.Unfolds.unheld`），与藏往之行永不复同类。",
+   "why": "「所失」为名表另一名；带着历史名表作「藏往」"
+  },
+  {
+   "find": "快层每步依其时之规则而移",
+   "replace": "快层每步依此步之规则而移",
+   "why": "「时」是名表之名（情境），經中不作时间"
+  },
+  {
+   "find": "时稽之步之次，规则依其时快层之状与规则而定。",
+   "replace": "时稽之步之次，规则依此步快层之状与规则而定。",
+   "why": "「时」是名表之名"
+  },
+  {
+   "find": "终不时稽的规则是僵的：快层之所失不复得（`Becoming.Pace.never_reads_lost`）",
+   "replace": "终不时稽的规则是僵的：其法所不能至之快层之状永不复至（`Becoming.Pace.never_reads_lost`）",
+   "why": "「所失」是名表 Remainder 之名"
+  },
+  {
+   "find": "不时稽之规则所失不复得，固定规则可以有所失（例），与之冲突。",
+   "replace": "不时稽之规则，其法所不能至之状永不复至；固定规则可以失状（例），与之冲突。",
+   "why": "「所失」是名表之名"
+  },
+  {
+   "find": "若感入其取与者之物至其时皆同",
+   "replace": "若感入其取与者之物至此步皆同",
+   "why": "「时」是名表之名"
+  },
+  {
+   "find": "界：不涉起点不同之证据、随时而变之读之接口与连续时长。",
+   "replace": "界：不涉起点不同之证据、随步而变之读之接口、连续之物理时长与共同之非零残差。",
+   "why": "「时」是名表之名；记录之界另有共同非零残差"
+  },
+  {
+   "find": "一状多途，不必成机。此状若复，则自此状至不可复得之每一途，不可谓不经一机。",
+   "replace": "一状多步，不必成机。此状若复，则自此状至不可复得此状之处的每一历程，不可谓不经一机。",
+   "why": "「途」在八·十四定为 Spread，不另指步与历程"
+  },
+  {
+   "find": "则其途中无机（`Becoming.Branching.no_juncture_of_keeps`）",
+   "replace": "则其所至无机（`Becoming.Branching.no_juncture_of_keeps`）",
+   "why": "同上"
+  },
+  {
+   "find": "此状若复，失去它的每一途不可谓不经一机",
+   "replace": "此状若复，失去它的每一历程不可谓不经一机",
+   "why": "同上"
+  },
+  {
+   "find": "迟而无失只在途中无机之处成立。",
+   "replace": "迟而无失只在所经无机之处成立。",
+   "why": "同上"
+  },
+  {
+   "find": "卦是脊柱上的一个宇，其值逐爻判定",
+   "replace": "六十四卦是脊柱上一个宇的诸状，每卦之值逐爻判定",
+   "why": "模块以诸卦为一宇之状；一卦是状，不是宇"
+  },
+  {
+   "find": "所表示的动力连意义都不定（`Becoming.Web.significance_undetermined`），更不定等级。",
+   "replace": "所表示的动力连顾都不定（`Becoming.Web.significance_undetermined`），更不定等级。",
+   "why": "名表以「顾」名意义"
+  },
+  {
+   "find": "诸高之相应，恰在三高皆应或皆不应；",
+   "replace": "诸高之相应，恰在三高皆相应或皆不相应；",
+   "why": "单用「应」只作回应，爻之关系作相应（草稿自言）"
+  },
+  {
+   "find": "卦是诸位之读同时实现的那一状",
+   "replace": "卦是诸位之读一并实现的那一状",
+   "why": "同句辨「时」之二义，免用「同时」"
+  },
+  {
+   "find": "六爻皆不正，则三高皆应。自下而上",
+   "replace": "六爻皆不正，则三高皆相应。自下而上",
+   "why": "单用「应」只作回应"
+  },
+  {
+   "find": "而六爻皆不正则三高皆应是必然，应与当位不是两个独立之善。",
+   "replace": "而六爻皆不正则三高皆相应是必然，相应与正不是彼此独立的两件事。",
+   "why": "「善」是隐含之价值；「应」单用；經所言是正，不是当位"
+  },
+  {
+   "find": "相叠则三高皆应；",
+   "replace": "相叠则三高皆相应；",
+   "why": "单用「应」只作回应"
+  },
+  {
+   "find": "**經**　消长环每一步，爻各上一位；每爻上一位，其正必反，故正之数步步易其奇偶。",
+   "replace": "**經**　消长环每一步，下五爻各上一位，上爻出而以反值入初；上一位之爻其正必反，入初之爻其正如故，故正之数步步易其奇偶。",
+   "why": "上爻不上一位，入初后其正不变（inPhase_waxWane_bottom）；原經「爻各上一位，其正必反」不实"
+  },
+  {
+   "find": "一爻之所示依其每步所居之位而变（`Becoming.Hexagram.inPhase_waxWane_above`、`Becoming.Hexagram.phaseCount_parity`）",
+   "replace": "一爻之所示依其每步所居之位而变（`Becoming.Hexagram.inPhase_waxWane_above`；入初之爻其正如故，`Becoming.Hexagram.inPhase_waxWane_bottom`；`Becoming.Hexagram.phaseCount_parity`）",
+   "why": "补上爻入初之证"
+  },
+  {
+   "find": "爻之正否依每步所居之位而成；其余之读不由此承载。",
+   "replace": "爻之正否依每步所居之位而成；定域：只在消长环中如此，消长环即十二消息卦，是汉代象数之构，不是《彖》原有；其余之读不由此承载。",
+   "why": "条目 tuan-liuwei-shicheng 之定域与层次未写"
+  },
+  {
+   "find": "末句即卦不可无六爻（`Becoming.Hexagram.fixedPhase_waxWane_enters`、`Becoming.Hexagram.betweenPhases_not_lumped`）。",
+   "replace": "末句（`Becoming.Hexagram.fixedPhase_waxWane_enters`、`Becoming.Hexagram.betweenPhases_not_lumped`）可对照王弼「然事不可無終始，卦不可無六爻」〔YWH-LB〕（相合只在初上无定奇偶一层，lueli-zhongshi-zhidi；以消长环读两端是 AI 组合，王弼不用消息卦）。",
+   "why": "王弼原句未加引号与出处即作等同；条目言以消长环读之是 AI 组合"
+  },
+  {
+   "find": "需之上爻柔，乾之上爻刚，而传皆谓之不在其位；",
+   "replace": "需之上爻柔，乾之上爻刚，而需之小象谓之不当位，乾之文言谓之无位；",
+   "why": "二言出处不同（小象、文言），且「传」为名表之名（传递），經中不作文献泛称"
+  },
+  {
+   "find": "**經**　一爻独异，恰当卦中与之同值者唯此一爻，即卦有一刚爻或五刚爻；",
+   "replace": "**經**　一爻独异，恰当卦中与之同值者唯此一爻：此爻刚而卦唯一刚爻，或此爻柔而卦有五刚爻；卦有独异之爻，恰当卦有一刚爻或五刚爻；",
+   "why": "sole_count 是对一爻之条件，soleAny_count 才是「一刚或五刚」，原句混二者"
+  },
+  {
+   "find": "所列彖言刚中而应之卦，皆中位有刚爻而中高相应。",
+   "replace": "所列彖言“刚中而应”之卦，皆中位有刚爻而中高相应。",
+   "why": "「应」单用只作回应，此为彖之语，加引号"
+  },
+  {
+   "find": "所表示的动力不定意义（`Becoming.Web.significance_undetermined`）。意义之范围若要给出，只经延续之条件（设，陈述而不断言）",
+   "replace": "所表示的动力不定顾（`Becoming.Web.significance_undetermined`）。顾之范围若要给出，只经延续之条件（凡续皆有顾，设，陈述而不断言）",
+   "why": "名表以「顾」名意义；条件用其名"
+  },
+  {
+   "find": "称给出位置，不给出延续：竞取一个所待（有与之者补之）时，最大者同样终止，其终止由其所待定，不由位置定",
+   "replace": "称给出位置，不给出延续：众体争于一个所待，数步共取过与，而与之者亦待此所待、其与受其水平所限，则在所列条件下（衡、唯活动者与、有待），最大者同样终止，其终止由其所待定，不由位置定",
+   "why": "原「有与之者补之」漏了与之受限（gated）之条件，无此条件则最大者复得（Restored）；争为名表之名"
+  },
+  {
+   "find": "勢不兩存是称之一进一退；此处之勢是位势，不是名表之势。",
+   "replace": "一进一退是称之计数，对量之任何读都成立；“不两存”（一方锁定）则只在择之规则读其所择者之份额而偏向所择者之处成立（劫）（`Becoming.RuleCapture.favouring_locks`，篇十一），交替之例中不锁定（`Becoming.RuleCapture.Alternating.never_locked`），这是定域之所在；此处之勢是位势，不是名表之势。",
+   "why": "原文只写普遍成立之计数，未写定域之界（条目 hanfei-gufen-shi）"
+  },
+  {
+   "find": "——相合：有穷之往不定其后，补全所失的展开不被有穷之储所持（zhuangzi-youya）。",
+   "replace": "——相合：有穷之往不定其后，补全其所未言的展开不被有穷之储所持（zhuangzi-youya）。",
+   "why": "「所失」为名表之名"
+  },
+  {
+   "find": "——相合：位分唯在二至五，以之读则彖、小象言位之句皆成立（lueli-chushang-wu-dingwei）。",
+   "replace": "——相合：位分唯在二至五，以之读则所列小象言位之句与乾上九文言之“无位”皆成立（lueli-chushang-wu-dingwei）。",
+   "why": "placeStatements_hold 只含小象与乾文言，不含彖"
+  },
+  {
+   "find": "——相分：不读所处之规则所失不复得，固定之法不能立为无过（shangjun-fagu-wuguo）。",
+   "replace": "——相分：不读所处之规则，其法所不能至者永不复至，固定之法可以失状，不能立为无过（shangjun-fagu-wuguo）。",
+   "why": "「所失」为名表之名"
+  }
+ ],
+ "verdict": "sound after edits",
+ "notes": "What I checked:\n- All 176 cited declarations resolve under their full names with work/resolve.py. All 18 record links exist.\n- All 47 quotations are exact in the frozen texts (ctq.py text).\n- Every kind matches its entry in work/passages/C17.json.\n- 篇 cross-references are right under the assembler's order (C17 = 篇八, C10 = 篇十一, C13 = 篇十四, C14 = 篇十五).\n- The continuation condition is stated and not asserted. Ordering is placed in 以广为愈 alone.\n- No dualist start found.\n- All 53 edits were tested in order on a copy of the draft. Each find occurs exactly once at the point it is applied. The edited text is at /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/zh/c17review/after.md.\n- Declarations added by the edits all resolve: World.stutter_arisingRecurs_iff, World.stutter_ceasingRecurs_iff, Expansion.more_step_relative, Hexagram.inPhase_waxWane_bottom, RuleCapture.favouring_locks, RuleCapture.Alternating.never_locked.\n- Quotations added by the edits are verified: 「欲治其國者，先齊其家」 and 「物有本末」 in RU1-S-DX; 「然事不可無終始，卦不可無六爻」 in YWH-LB.\n\nSubstantive faults fixed by the edits:\n1. 八·二十一 經 was false. The top line does not rise a place; it passes out and enters at the bottom with its value turned, and its 正 is kept (inPhase_waxWane_bottom). The parity law still holds because five lines turn.\n2. 八·二 說 added a judgment the checked entry declined. The entry for 大学's 本末 order says \"本条不判\"; the draft placed it in the single-center layer.\n3. 八·二十七 說 left out the gated-renewal condition of race_ends_greatest. Without it the greatest part is restored (Restored.returns). The 韩非 定域 also gave no scope; the edit adds where lock-in holds.\n4. 八·二十五 經 merged sole_count (a condition on one line) with soleAny_count (one or five unbroken lines).\n5. Name collisions:\n   - 时 used as \"time\" (其时, 至其时, 时之先后, 连续之时, 随时).\n   - 所失 (the name for Remainder) used for misses and gaps; 失 used for Misses, which the table names 不符.\n   - Bare 应 (皆应) where the draft's own rule requires 相应.\n   - 意义 written in place of 顾.\n   - 设 used for a local hypothesis, and \"不设\" used for something stated without being asserted.\n   - 择 used for choosing an interleaving and for the choice principle.\n   - 途 used for both Reach and Spread.\n   - 保留历史 written in place of 藏往.\n   - 卦 called a 宇 when it is one 状.\n   - 有宇 written for a 待网.\n   - 竞取 written in place of 争.\n6. A value word (之善) in 八·二十. The final 对照 line said 彖 as well as 小象; placeStatements_hold covers only the 小象 and 乾's 文言.\n7. 八·五 經 claimed recurrence of 已 and the halving result without proofs; it also lacked the decided-equality condition. Its 證 now has ten declarations, above the style's limit of eight, because this 條 bundles three laws. Splitting it would be cleaner.\n\nLeft for the integrator (not edited):\n- 评价 is used in its everyday sense (\"是评价，不带入\") in several 說 passages. The table's concept \"valuation\" is named 顾式; consider \"评断\".\n- Bare 所及 still stands for ReachedBy in 八·十四 說 (\"源之前无所及\", \"期愈后所及不减\") and 八·十五 說 (\"结构之所及\"). The table's 所及 is the reach of a part in one step.\n- The first sentence of 八·十四 說 cites ReachedBy for the two-course setting. That setting is the module's, not the definition's.\n- Several passages carry no period: 孙子 (four times), 系辞, 论语, 商君书, 韩非, and 荀子正名. The source records date them; adding layers would help.\n- 八·六 and 八·八 each have fewer than three declarations in 證.\n- The layer name 争胜与等级 shares 争 with the table's name for a race at a shared condition. This is an edition-wide convention.\n- The conjunction \"…时\" (\"when\") in 說 is kept. It is readable, but it sits beside 时 as a name."
+}

@@ -1,0 +1,5103 @@
+[
+ {
+  "key": "nat",
+  "concepts": [
+   "history (any sequence of configurations and moves, g : Nat → S, m : Nat → A)",
+   "determination: a step-indexed proposition p : Nat → Prop, the subject of ComesToBe/CeasesToBe",
+   "level path (l : Nat → C → Nat) of Web.Includes / Web.Exceeds",
+   "level path (Nat → C → Nat), the object widening compares",
+   "schedule of steps at which couplings act (on : Nat → Bool; strengthsFrom N)",
+   "amount / reading of members (a : α → Nat)",
+   "level path (l : Nat → C → Nat)",
+   "level path (Nat → C → Nat), compared by Web.Retains/Adds/Widens"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "历史",
+    "count": 28
+   },
+   {
+    "pian": "C03",
+    "used": "所然（随篇一·四之用法）",
+    "count": 19
+   },
+   {
+    "pian": "C05",
+    "used": "水平之路",
+    "count": 2
+   },
+   {
+    "pian": "C06",
+    "used": "水平之路（二路、他路）",
+    "count": 7
+   },
+   {
+    "pian": "C11",
+    "used": "日程",
+    "count": 12
+   },
+   {
+    "pian": "C12",
+    "used": "量；读数",
+    "count": 72
+   },
+   {
+    "pian": "C14",
+    "used": "水平之路；路",
+    "count": 7
+   },
+   {
+    "pian": "C15",
+    "used": "水平之历",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "a",
+  "concepts": [
+   "a part's net draw / net give / net exchange against the levels without it",
+   "a list holding every configuration (finitely many configurations); 列 is the census name, so not used",
+   "a cycle of an attractor (the turns of 既濟 and 未濟)",
+   "a record bears on a form; offers a meaning",
+   "a part's cumulative net draw",
+   "articulation premise A",
+   "a dominating (better-than) relation on a menu, and an undominated member (exists_undominated_iff_weakly); 愈 risks being read as the 愈 of 以广为愈",
+   "representation choices (the modelling commitments of block A)",
+   "a dependent 'with no seat'; the community's goal",
+   "a scope that carries to unnamed dependents and domains"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "净取（所累取减所累与）、净与、取与",
+    "count": 18
+   },
+   {
+    "pian": "C07",
+    "used": "有一表尽诸状",
+    "count": 4
+   },
+   {
+    "pian": "C07",
+    "used": "轮转",
+    "count": 3
+   },
+   {
+    "pian": "C09",
+    "used": "及此名；予",
+    "count": 6
+   },
+   {
+    "pian": "C14",
+    "used": "累计之净取（此体至此所取减所与）",
+    "count": 1
+   },
+   {
+    "pian": "C15",
+    "used": "表述之设（A）",
+    "count": 2
+   },
+   {
+    "pian": "C16",
+    "used": "愈／莫愈之者 (愈 here is any irreflexive transitive relation, not the order of 以广为愈)",
+    "count": 0
+   },
+   {
+    "pian": "C16",
+    "used": "拟 (the table's C16 name; its 所定 written out in 凡·二)",
+    "count": 14
+   },
+   {
+    "pian": "TH",
+    "used": "不在其群中之待者; 群之目标",
+    "count": 1
+   },
+   {
+    "pian": "TH",
+    "used": "行于",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "web.active",
+  "concepts": [
+   "activity: a formation active at a step (Web.active)",
+   "activity (Web.active)",
+   "active / activity (Web.active)",
+   "active / activity (Web.active)",
+   "active (Web.active)",
+   "activity / active (Web.active)",
+   "active / activity (Web.active)"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "活动（现代词；pian01 亦用）",
+    "count": 40
+   },
+   {
+    "pian": "C06",
+    "used": "活动（平语）",
+    "count": 30
+   },
+   {
+    "pian": "C12",
+    "used": "活动",
+    "count": 20
+   },
+   {
+    "pian": "C13",
+    "used": "活动；不活动",
+    "count": 17
+   },
+   {
+    "pian": "C14",
+    "used": "活动",
+    "count": 6
+   },
+   {
+    "pian": "C15",
+    "used": "活动",
+    "count": 18
+   },
+   {
+    "pian": "C16",
+    "used": "活动",
+    "count": 15
+   }
+  ]
+ },
+ {
+  "key": "the",
+  "concepts": [
+   "the rest theorem (停息定理)",
+   "the hexagram laws: nuclear law, law letting only a broken line enter (wane), complement (錯)",
+   "the tolerating law for any tol, including 0 (不求备 names only tol ≥ 1)",
+   "the selection term proper (concordance less discordance with offspring number as weight)",
+   "the count of configurations within a stock (configurationsWithin)",
+   "the empty relation / the total relation",
+   "the refuting observation ('refuted by')"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "止之律",
+    "count": 6
+   },
+   {
+    "pian": "C07",
+    "used": "互卦之法（名表势之注已用）、只入柔爻之法、六爻皆变者；waxWane 依名表注写作消长环之法",
+    "count": 4
+   },
+   {
+    "pian": "C11",
+    "used": "缺不过 tol 犹给之法",
+    "count": 3
+   },
+   {
+    "pian": "C12",
+    "used": "选择项",
+    "count": 18
+   },
+   {
+    "pian": "C12",
+    "used": "T 时存量之内其状之数",
+    "count": 58
+   },
+   {
+    "pian": "C14",
+    "used": "空关系／全关系",
+    "count": 0
+   },
+   {
+    "pian": "TH",
+    "used": "不然者 (the table's name for counterexample, extended to a field observation)",
+    "count": 11
+   }
+  ]
+ },
+ {
+  "key": "web.level",
+  "concepts": [
+   "level of a condition (Web.level)",
+   "level of a condition (Web.level)",
+   "level of a condition (Web.level)",
+   "level (Web.level)",
+   "level (Web.level)",
+   "level (Web.level)"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "水平",
+    "count": 21
+   },
+   {
+    "pian": "C12",
+    "used": "水平",
+    "count": 12
+   },
+   {
+    "pian": "C13",
+    "used": "水平",
+    "count": 27
+   },
+   {
+    "pian": "C15",
+    "used": "水平",
+    "count": 23
+   },
+   {
+    "pian": "C16",
+    "used": "水平",
+    "count": 6
+   },
+   {
+    "pian": "TH",
+    "used": "水平",
+    "count": 43
+   }
+  ]
+ },
+ {
+  "key": "list",
+  "concepts": [
+   "family of conditions (a finite list of conditions, cs : List C)",
+   "a list of configurations, not a census (l : List S in the finite-reading laws)",
+   "表（list：l : List S，一表尽其状；名表之列专名普查）",
+   "list (List) and a member of a listed family (a parent in price)",
+   "finite list (List; listed exactly)",
+   "list (List, listed members)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "族（有穷多所待之一表）；“不重复”另写",
+    "count": 141
+   },
+   {
+    "pian": "C04",
+    "used": "表（一有穷之表）",
+    "count": 21
+   },
+   {
+    "pian": "C08",
+    "used": "表（依篇一、篇八「有一表尽之」）",
+    "count": 37
+   },
+   {
+    "pian": "C12",
+    "used": "单；员",
+    "count": 17
+   },
+   {
+    "pian": "C15",
+    "used": "单; 有一单尽之, following the 凡例",
+    "count": 14
+   },
+   {
+    "pian": "C16",
+    "used": "单",
+    "count": 20
+   }
+  ]
+ },
+ {
+  "key": "optimum.rising",
+  "concepts": [
+   "an order rising with a family; optimum; re-optimizing course (Optimum.Rising, Frontier, Optimum.Reoptimizes)",
+   "an order rising with a family (Optimum.Rising); one outcome exceeding another on a family (Optimum.Exceeds)",
+   "order rising with a family (Optimum.Rising); the family ds and the conditions beyond it (rest)",
+   "order rising with what couples in (Optimum.Rising)",
+   "order rising with what couples in (Optimum.Rising)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "取其序之最优者；序“凡一果于其族之每一所待不少于另一果、于其一所待多之，皆以之为愈”；逐步重取最优之程",
+    "count": 2
+   },
+   {
+    "pian": "C10",
+    "used": "随族而升之序；于族胜之",
+    "count": 3
+   },
+   {
+    "pian": "C13",
+    "used": "序随其族而升；族；族外",
+    "count": 1
+   },
+   {
+    "pian": "C15",
+    "used": "随所感而升之序",
+    "count": 3
+   },
+   {
+    "pian": "TH",
+    "used": "随感入者之升而上之序",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "flow.withheldlevels",
+  "concepts": [
+   "levels without the part, the rest's exchange fixed (Flow.WithheldLevels)",
+   "levels without a part's exchange (Flow.WithheldLevels), the inaction baseline",
+   "levels without the part (Flow.WithheldLevels)",
+   "withheld levels (Flow.WithheldLevels)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "体之取与去而余者如故之水平（无体之水平）",
+    "count": 2
+   },
+   {
+    "pian": "C13",
+    "used": "无之之水平；有之之水平",
+    "count": 3
+   },
+   {
+    "pian": "C14",
+    "used": "无之之水平（此体不取不与，余者照旧取与，自原初之水平起）",
+    "count": 5
+   },
+   {
+    "pian": "C15",
+    "used": "扣下一体之取与、余皆如故之水平（无此体之历）",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "s",
+  "concepts": [
+   "rule component of a configuration S × R (Law.perturbation_reabsorbed, rule_absorbing, Captured)",
+   "region: a set of configurations (S → Prop), what Invariant and Law.Absorbing are said of",
+   "映射（map／projection：π : S → K、reg；名表之象只名 Relabel 之模型映射）",
+   "feature read through a map (f : S → V)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "规则",
+    "count": 13
+   },
+   {
+    "pian": "C07",
+    "used": "区（诸状之一部分）",
+    "count": 44
+   },
+   {
+    "pian": "C08",
+    "used": "映射（平语，依篇八之用）",
+    "count": 57
+   },
+   {
+    "pian": "C09",
+    "used": "特征（「征」已名验证，不借）",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "web.need",
+  "concepts": [
+   "need of a dependence (Web.need)",
+   "need of a dependence (Web.need)",
+   "need (Web.need)",
+   "need (Web.need)"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "所需",
+    "count": 21
+   },
+   {
+    "pian": "C13",
+    "used": "所需",
+    "count": 23
+   },
+   {
+    "pian": "C15",
+    "used": "所需",
+    "count": 12
+   },
+   {
+    "pian": "TH",
+    "used": "所需",
+    "count": 56
+   }
+  ]
+ },
+ {
+  "key": "d",
+  "concepts": [
+   "data / observed inputs of a lumping (D, data list)",
+   "domain of configurations D / members of a list (the range a claim is asserted over)",
+   "deadline D of TimedResponse"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "所见者",
+    "count": 10
+   },
+   {
+    "pian": "C16",
+    "used": "所论之状／所论之员",
+    "count": 0
+   },
+   {
+    "pian": "C17",
+    "used": "期（取自至期所及；名表之期为回程之上界，此处同为上界而所界不同，交整合者）",
+    "count": 19
+   }
+  ]
+ },
+ {
+  "key": "distinct",
+  "concepts": [
+   "family without repetition (Distinct) and finite list",
+   "a family listed without repetition (Distinct)",
+   "list without repetition (Distinct); 列 is reserved for the census"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "无重之族、有穷之表",
+    "count": 0
+   },
+   {
+    "pian": "C12",
+    "used": "族之单无重",
+    "count": 1
+   },
+   {
+    "pian": "C13",
+    "used": "不重出",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "f",
+  "concepts": [
+   "event: a formation at a step (F × Nat)",
+   "region (F → Prop)",
+   "coupling by level (the supplied relation obs : F → C → Prop beside the web)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "事（一待者于一步）",
+    "count": 10
+   },
+   {
+    "pian": "C14",
+    "used": "区域",
+    "count": 26
+   },
+   {
+    "pian": "C16",
+    "used": "以水平之感",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "h",
+  "concepts": [
+   "standing draw of a regime (H in RegimeMargin)",
+   "point of no return (H + y)",
+   "what is left after the draw (x − H)",
+   "standing draw H of RegimeMargin",
+   "point of no return H+y of a regime",
+   "what is left after the draw (x − H); the table keeps 余 for 其余、余地 only",
+   "point of no return (H + y)",
+   "standing draw (the same draw H at every step)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "常取",
+    "count": 17
+   },
+   {
+    "pian": "C04",
+    "used": "不返之点",
+    "count": 6
+   },
+   {
+    "pian": "C04",
+    "used": "所剩（不用“所余”，免与其余、余地相混）",
+    "count": 6
+   },
+   {
+    "pian": "C11",
+    "used": "常取",
+    "count": 16
+   },
+   {
+    "pian": "C11",
+    "used": "不可回返之点",
+    "count": 4
+   },
+   {
+    "pian": "C11",
+    "used": "所剩",
+    "count": 11
+   },
+   {
+    "pian": "TH",
+    "used": "涸之界 (from the table's 涸: a stock falls to zero)",
+    "count": 7
+   },
+   {
+    "pian": "TH",
+    "used": "每步同取",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "optimum.mutualbest",
+  "concepts": [
+   "mutual best response of several optimizers (Optimum.MutualBest)",
+   "mutual best response (Optimum.MutualBest)",
+   "mutual best response (Optimum.MutualBest)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "相互为最优之应",
+    "count": 2
+   },
+   {
+    "pian": "C10",
+    "used": "相为最优",
+    "count": 4
+   },
+   {
+    "pian": "C13",
+    "used": "互为最优",
+    "count": 9
+   }
+  ]
+ },
+ {
+  "key": "optimum.room",
+  "concepts": [
+   "room beyond (Optimum.Room)",
+   "room (Optimum.Room). 余地 names the margin, so it is not used",
+   "room (Optimum.Room)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "可腾挪",
+    "count": 3
+   },
+   {
+    "pian": "C15",
+    "used": "described: 凡于族外某所待高于他果之可选之果，族上皆有可选之果超出之",
+    "count": 0
+   },
+   {
+    "pian": "TH",
+    "used": "可升之处 / 降之而感入者得升之处 (余地 stays the name for margin)",
+    "count": 14
+   }
+  ]
+ },
+ {
+  "key": "requirement.frontier",
+  "concepts": [
+   "optimum (a member of Requirement.Frontier: eligible, nothing eligible ranked above it)",
+   "chosen: a member of the frontier (Requirement.Frontier)",
+   "optimum (Requirement.Frontier: eligible, none ranked above it)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "最优",
+    "count": 27
+   },
+   {
+    "pian": "C15",
+    "used": "所取（莫有愈之者）",
+    "count": 29
+   },
+   {
+    "pian": "TH",
+    "used": "莫上之者 (可得者中). I avoided 莫愈之者 (凡·二一) because 愈 is reserved for 以广为愈.",
+    "count": 11
+   }
+  ]
+ },
+ {
+  "key": "standing",
+  "concepts": [
+   "standing as a condition at a step (0 < level), as distinct from coming to stand (聚)",
+   "standing / level of a relatum",
+   "standing 'supported' (frozen tests passed)",
+   "standing 'conjectured'",
+   "standing 'thesis' (philosophical claim, argued, warrant open)",
+   "standing 'proved' inside the theses layer"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "立、立为所待、水平为正",
+    "count": 0
+   },
+   {
+    "pian": "C17",
+    "used": "所立（任意值之状态）；水平（自然数之量）",
+    "count": 6
+   },
+   {
+    "pian": "TH",
+    "used": "有支持, glossed 验之而未排. I rejected 征: the table gives it to Becoming.Verification (a finite stretch verifies a reading), and a passed frozen test verifies nothing. 中庸「無徵不信」〔RU1-S-ZY〕 was checked with ctq and is the same layer of meaning.",
+    "count": 0
+   },
+   {
+    "pian": "TH",
+    "used": "猜想. I rejected 億: 论语「億則屢中」〔RU1-S-LY〕 (checked) is guessing in a trading context, and simplified 亿 collides with the numeral. 未决 is broader (open) and is kept for 'warrant open'.",
+    "count": 0
+   },
+   {
+    "pian": "TH",
+    "used": "论题 (有论，其据未决)",
+    "count": 12
+   },
+   {
+    "pian": "TH",
+    "used": "已证, labelled 有设而然 or 无设而然 according to the canonical standing table",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "web.stock",
+  "concepts": [
+   "stock of a family of conditions (Web.stock)",
+   "stock of a family (Web.stock)",
+   "stock of a family of conditions (Web.stock)"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "一族所待之水平合计",
+    "count": 1
+   },
+   {
+    "pian": "C06",
+    "used": "存量",
+    "count": 5
+   },
+   {
+    "pian": "C12",
+    "used": "存量（族之存量）",
+    "count": 21
+   }
+  ]
+ },
+ {
+  "key": "weighting",
+  "concepts": [
+   "weighting of later draws (w t)",
+   "weighting; positive weighting; weighted count over listed items",
+   "item: a formation at a step (Weighting items)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "各步之重（不用权重，权是实践判断之名）",
+    "count": 1
+   },
+   {
+    "pian": "C14",
+    "used": "加权；计及每项之加权；加权计数；所列之项",
+    "count": 7
+   },
+   {
+    "pian": "C15",
+    "used": "项",
+    "count": 21
+   }
+  ]
+ },
+ {
+  "key": "what",
+  "concepts": [
+   "what a name refers to, the referent (墨经之「實」)",
+   "what matters (a given predicate p)",
+   "what couples in by level (obs), i.e. observations"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "所谓者（在宇中是物或状，在码中是义项）；「实」只在引文中出现",
+    "count": 7
+   },
+   {
+    "pian": "C12",
+    "used": "所要者",
+    "count": 4
+   },
+   {
+    "pian": "TH",
+    "used": "以水平感入者. I avoided 观, which the table gives to view.",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "witness",
+  "concepts": [
+   "witness / construction (a model showing a law exact or a converse false)",
+   "witness in one constructed world",
+   "witness model; roles in the witnesses (clearer, dweller, source, drawer, conveyor, giver)"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "构造之例",
+    "count": 10
+   },
+   {
+    "pian": "C06",
+    "used": "一个构造之宇中（确有其例）",
+    "count": 4
+   },
+   {
+    "pian": "C14",
+    "used": "见证、构造之见证；清除者、栖居者、源、汲取者、输送者、给与者",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "aboveall",
+  "concepts": [
+   "the target above all others (AboveAll): the table gives only the traditional form 為天下先",
+   "seeker (the index set of AboveAll)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "为天下先（简体）",
+    "count": 4
+   },
+   {
+    "pian": "C13",
+    "used": "寻求者",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "activity",
+  "concepts": [
+   "activity / active",
+   "activity, active relata"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "活动",
+    "count": 23
+   },
+   {
+    "pian": "C17",
+    "used": "活动、活动者",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "becoming.upstream",
+  "concepts": [
+   "下游（downstream：自一所待经已成之读之路所及者，Becoming.Upstream）",
+   "upstream / downstream along chains of couplings (Becoming.Upstream)"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "下游（平语）",
+    "count": 10
+   },
+   {
+    "pian": "C11",
+    "used": "上游／下游",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "capacity",
+  "concepts": [
+   "capacity to form (renewal capacity, richness of relations), the component of 生生 widening does not read",
+   "capacity (cap)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "生成之力（更新之能、关系之丰富）",
+    "count": 1
+   },
+   {
+    "pian": "TH",
+    "used": "所能取",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "closedcapture",
+  "concepts": [
+   "what lies beyond the share, the loss (ClosedCapture, Accrues)",
+   "loss accruing beyond the share (ClosedCapture)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "份额之外者（不用所失：所失名 Remainder）",
+    "count": 8
+   },
+   {
+    "pian": "TH",
+    "used": "损",
+    "count": 18
+   }
+  ]
+ },
+ {
+  "key": "contextual",
+  "concepts": [
+   "context (Contextual)",
+   "context and indexed frame (Contextual, Contextual.indexed)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "语境",
+    "count": 30
+   },
+   {
+    "pian": "C17",
+    "used": "语境；带指标之系辞",
+    "count": 8
+   }
+  ]
+ },
+ {
+  "key": "dependence.overdetermined",
+  "concepts": [
+   "overdetermined loss (Dependence.Overdetermined)",
+   "overdetermined loss (Dependence.Overdetermined)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "多重决定",
+    "count": 3
+   },
+   {
+    "pian": "C13",
+    "used": "单去任一体其绝依旧",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "determined",
+  "concepts": [
+   "Determined (a determined process)",
+   "move determines the step (Determined)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "确定（法之所说），written 法为确定之变",
+    "count": 13
+   },
+   {
+    "pian": "C13",
+    "used": "动定其步",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "enough.settles",
+  "concepts": [
+   "a run settles / is still from a step (Enough.Settles, LastChange.StillFrom)",
+   "settles (Enough.Settles: the state no longer changes from some step on); distinct from 止 (World.RestsFrom)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "其行不改；自某步起静",
+    "count": 1
+   },
+   {
+    "pian": "C16",
+    "used": "自某步起不再变",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "exchangelaw.readsbelow",
+  "concepts": [
+   "threshold θ (ExchangeLaw.ReadsBelow; Adjusted.threshold)",
+   "finite (of a world, a menu, a list of states); the table reserves 穷 for the break (ExchangeLaw.ReadsBelow)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "阈",
+    "count": 25
+   },
+   {
+    "pian": "C16",
+    "used": "有穷 (conflicts with 穷 = break; the integrator should decide); 有尽 for finite stretches and trees",
+    "count": 8
+   }
+  ]
+ },
+ {
+  "key": "flow.acting",
+  "concepts": [
+   "only active formations give (Flow.Acting); only active formations take, and only from what they draw on (Flow.Taking)",
+   "only active formations give (Flow.Acting)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "唯活动者与之；唯活动者取、只取其所资",
+    "count": 3
+   },
+   {
+    "pian": "C12",
+    "used": "唯活动者与",
+    "count": 9
+   }
+  ]
+ },
+ {
+  "key": "flow.capacity",
+  "concepts": [
+   "capacity (cap; Flow.capacity) and joint capacity",
+   "capacity of an optimizer at a condition (cap) and joint capacity (Flow.capacity)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "限；合限",
+    "count": 13
+   },
+   {
+    "pian": "C13",
+    "used": "容量；合计容量",
+    "count": 14
+   }
+  ]
+ },
+ {
+  "key": "flow.sharesthroughout",
+  "concepts": [
+   "sharing conditions throughout (Flow.SharesThroughout)",
+   "sharing conditions throughout (Flow.SharesThroughout)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "群域皆兼（由已有之名组成）",
+    "count": 3
+   },
+   {
+    "pian": "C13",
+    "used": "凡待者皆在凡待者之群域（說中称处处共享）",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "interleavings.locallaw.owncourse",
+  "concepts": [
+   "own course (Interleavings.LocalLaw.ownCourse)",
+   "a relatum's own course (Interleavings.LocalLaw.ownCourse); a course in general (finite sequence of steps, Lasting.Continues)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "自身历程",
+    "count": 5
+   },
+   {
+    "pian": "C17",
+    "used": "自身之历程；历程",
+    "count": 8
+   }
+  ]
+ },
+ {
+  "key": "morethannow",
+  "concepts": [
+   "a take more than now (MoreThanNow)",
+   "more than now (MoreThanNow)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "取每步多于其前",
+    "count": 1
+   },
+   {
+    "pian": "C15",
+    "used": "多于今",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "optimum",
+  "concepts": [
+   "capacity of a part at a condition (Optimum cap)",
+   "family: the conditions an order reads, what couples in (Optimum ds)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "所能取者／所能取之量",
+    "count": 0
+   },
+   {
+    "pian": "C15",
+    "used": "族（所感之诸所待）",
+    "count": 12
+   }
+  ]
+ },
+ {
+  "key": "price",
+  "concepts": [
+   "exact transmission in Price's sense (SelectionTerm.Exact: each offspring carries its parent's amount); 传 is reserved for Flow.TransmitsWithin",
+   "natural selection (Price's selection term)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "无损益",
+    "count": 14
+   },
+   {
+    "pian": "TH",
+    "used": "传择 (the table's evolution through descent)",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "r",
+  "concepts": [
+   "rule (the slow level R in Pace, Capture, RuleCapture, ClosedCapture)",
+   "response / policy (R). 应 names ExchangeLaw.RespondsTo"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "规则（名表各定义亦用此今语；单字“则”与连词相混，不用）",
+    "count": 68
+   },
+   {
+    "pian": "C15",
+    "used": "回应",
+    "count": 9
+   }
+  ]
+ },
+ {
+  "key": "ranking",
+  "concepts": [
+   "whole-run reading (wholeRun, in Ranking)",
+   "whole-run reading versus stepwise reading of living (Ranking)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "整程之读",
+    "count": 1
+   },
+   {
+    "pian": "C13",
+    "used": "全行之读；步步之读",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "recent",
+  "concepts": [
+   "recent giving (the second component of the adjusted state)",
+   "recent giving / lag (T2's state variables)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "前与",
+    "count": 5
+   },
+   {
+    "pian": "TH",
+    "used": "近与 / 滞",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "renewable",
+  "concepts": [
+   "focal and sustaining formations of the Renewable and support-gated witnesses; the drawers read jointly (together)",
+   "renewable condition"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "焦点之物、维持之物、合资者",
+    "count": 0
+   },
+   {
+    "pian": "TH",
+    "used": "有与之所待",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "rulecapture",
+  "concepts": [
+   "favours (RuleCapture favours)",
+   "share selected (RuleCapture)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "偏向",
+    "count": 14
+   },
+   {
+    "pian": "TH",
+    "used": "份",
+    "count": 18
+   }
+  ]
+ },
+ {
+  "key": "stutter",
+  "concepts": [
+   "idle step / stuttering (Stutter, World.sample)",
+   "idle step, stuttering, removing idle steps (Stutter, World.withoutIdle)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "空步、无所为之步",
+    "count": 0
+   },
+   {
+    "pian": "C17",
+    "used": "无物参与之步（空步）；插入／去掉此等步",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "subprocess",
+  "concepts": [
+   "sub-process (SubProcess)",
+   "sub-process (SubProcess)"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "子变",
+    "count": 2
+   },
+   {
+    "pian": "C17",
+    "used": "子变",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "valuation.connected",
+  "concepts": [
+   "connected (Valuation.Connected)",
+   "connected valuation (Valuation.Connected)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "连通",
+    "count": 13
+   },
+   {
+    "pian": "C15",
+    "used": "连通",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "valuation.grounds",
+  "concepts": [
+   "grounds of the evaluation (Valuation.Grounds: seed with both neutralities)",
+   "grounds: seed with both neutralities (Valuation.Grounds)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "评价之所据（萌与两种无偏）",
+    "count": 1
+   },
+   {
+    "pian": "C15",
+    "used": "顾之所据（萌、无亲、无方）",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "web.alikethrough",
+  "concepts": [
+   "经感无别（alike through couplings：Web.AlikeThrough／AlikeThroughUpTo；名表之同锚 Alike，别为有界之顾）",
+   "alike through a formation's couplings (Web.AlikeThrough, AlikeThroughUpTo, AlikeThroughAll)"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "经其感无异／有异",
+    "count": 0
+   },
+   {
+    "pian": "C10",
+    "used": "缘感无别",
+    "count": 9
+   }
+  ]
+ },
+ {
+  "key": "web.depletes",
+  "concepts": [
+   "an event depletes a family (Web.Depletes: at each event step where no member rises, one falls)",
+   "depletes a finite family (Web.Depletes); 耗 is reserved for dissipation"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "作损其族（族无升之步作则族有降）；借 C04 之「损」",
+    "count": 1
+   },
+   {
+    "pian": "C05",
+    "used": "损（取名表「损」之下降义）",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "key": "web.renewingalong",
+  "concepts": [
+   "renewing / consuming along a continuation (Web.RenewingAlong, Web.ConsumingAlong)",
+   "renewing / consuming / undermining along a continuation (Web.RenewingAlong, Web.ConsumingAlong, Web.UnderminingAlong; chain Web.Continuing)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "沿相续而恒／沿相续而竭",
+    "count": 0
+   },
+   {
+    "pian": "C05",
+    "used": "沿续而恒、沿续而竭、沿续之剥（以续、恒、竭、剥组合）",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "web.renewingat",
+  "concepts": [
+   "an event within renewal at a step (Web.RenewingAt, stepwise)",
+   "renewing at a step (Web.RenewingAt), the stepwise class. The table's 恒 is the run class"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "一步在恒之内",
+    "count": 3
+   },
+   {
+    "pian": "C15",
+    "used": "于本步为更新",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "web.slack",
+  "concepts": [
+   "slack of the dependences beyond (Web.slack)",
+   "slack of the dependences beyond (Web.slack)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "族外诸所待高出诸需之和；“高出所需之量”",
+    "count": 1
+   },
+   {
+    "pian": "C10",
+    "used": "族外诸待余地之和（说中亦称宽余）",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "web.standingcensus",
+  "concepts": [
+   "census of what stands (Web.StandingCensus)",
+   "what stands (a condition with positive level); census of what stands (Web.StandingCensus)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "水平为正者之列",
+    "count": 1
+   },
+   {
+    "pian": "C04",
+    "used": "所立者（水平为正者）；所立者有列（用名表之“列”）",
+    "count": 25
+   }
+  ]
+ },
+ {
+  "key": "withholding",
+  "concepts": [
+   "waits on (up b a in Withholding and Tolerance), chain of waits",
+   "withholding (not giving at a step)",
+   "withholding a part's share in the but-for test (withhold, withholdAll)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "所等待者／等待之链",
+    "count": 0
+   },
+   {
+    "pian": "C13",
+    "used": "扣留；不与",
+    "count": 7
+   },
+   {
+    "pian": "C13",
+    "used": "去其分；单去／并去",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "world.conserves",
+  "concepts": [
+   "the continuation a world's relations induce (World.Conserves)",
+   "continuation a balanced world's relations induce (World.Conserves)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "守恒之续",
+    "count": 2
+   },
+   {
+    "pian": "C09",
+    "used": "守恒之续（与名表「与如其取」之守恒 Flow.ConservingOn 不同）",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "key": "access",
+  "concepts": [
+   "access (access p r)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "可介入",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "accumulated",
+  "concepts": [
+   "accumulated evidence"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "所见之积. I avoided 验 (testing) and 征 (verification).",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "acting",
+  "concepts": [
+   "Acting and Taking premises (only active relata give; only active relata take and only what they draw on)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "只有活动者与；只有活动者取且只取其所资",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "adjusted.band",
+  "concepts": [
+   "band [a, b] / band up to hi (Adjusted.Band)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "带",
+    "count": 22
+   }
+  ]
+ },
+ {
+  "key": "admissible",
+  "concepts": [
+   "admissible boundary / drawing of a self"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "可取之畛；可取之划法；划法",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "ai",
+  "concepts": [
+   "intelligences (persons, AI systems)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "诸智能",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "alike",
+  "concepts": [
+   "a configuration not alike across a step (¬ Alike), used to compose 化"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "状变（篇一之状与 C07 之同的否定）",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "amount",
+  "concepts": [
+   "amount reading (draws no more than is renewed at the step)"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "以量读、以“每步所资不过所与”为读",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "axiom",
+  "concepts": [
+   "axiom / axiom report"
+  ],
+  "uses": [
+   {
+    "pian": "C16",
+    "used": "公理／公理之报",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "band",
+  "concepts": [
+   "band (hi) of a regime"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "界 hi",
+    "count": 29
+   }
+  ]
+ },
+ {
+  "key": "base",
+  "concepts": [
+   "base claim (base in not_strictLossMatch_of_base_lost)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "基辞",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "becoming.adheres",
+  "concepts": [
+   "附（adheres：Becoming.Adheres，闭包）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "附",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "becoming.amounts",
+  "concepts": [
+   "amounts in general (Becoming.Amounts)；whole-number amounts"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "量；整数之量",
+    "count": 152
+   }
+  ]
+ },
+ {
+  "key": "becoming.coupled",
+  "concepts": [
+   "chain of couplings (Becoming.Coupled)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "感之链／链",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "becoming.deadend",
+  "concepts": [
+   "dead end / live steps (Becoming.DeadEnd, Becoming.live)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "死路；有行所经之移",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "key": "becoming.direction",
+  "concepts": [
+   "direction on a world's moves (Becoming.Direction)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "动之向",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "becoming.extension",
+  "concepts": [
+   "extension on a frame (Becoming.Extension)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "扩展",
+    "count": 22
+   }
+  ]
+ },
+ {
+  "key": "becoming.gap",
+  "concepts": [
+   "gap between two levels (Becoming.gap)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "差",
+    "count": 91
+   }
+  ]
+ },
+ {
+  "key": "becoming.labels",
+  "concepts": [
+   "label; table of labelled names (Becoming.Labels)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "标签；标签表（不用「名表」，免与本编名表相撞）",
+    "count": 12
+   }
+  ]
+ },
+ {
+  "key": "becoming.mark",
+  "concepts": [
+   "counting a determination as zero or one (Becoming.mark)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "只计零或一",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "becoming.optimum",
+  "concepts": [
+   "optimizer (a formation choosing an optimum of its own order, Becoming.Optimum)"
+  ],
+  "uses": [
+   {
+    "pian": "C13",
+    "used": "优化者",
+    "count": 24
+   }
+  ]
+ },
+ {
+  "key": "becoming.refutable",
+  "concepts": [
+   "可驳（refutable：Becoming.Refutable）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "可驳",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "becoming.remainder",
+  "concepts": [
+   "余部（remainder of a reading：Becoming.Remainder；名表「余只在复词中」，所失另名截断之余）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "余部",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "becoming.tally",
+  "concepts": [
+   "tally (Becoming.Tally: n t = k + c t, n (t+1) = k + a t)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "计账",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "key": "becoming.weighting",
+  "concepts": [
+   "weighting, positive weighting, zero weight (Becoming.Weighting)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "加权、正权、零权",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "becoming.withholding",
+  "concepts": [
+   "the waiting relation of Becoming.Withholding (up b a: a's giving waits on b's) and a chain of waits (Withholding.Chain)"
+  ],
+  "uses": [
+   {
+    "pian": "C13",
+    "used": "等待；所等待之待者；k 层等待之链",
+    "count": 18
+   }
+  ]
+ },
+ {
+  "key": "better",
+  "concepts": [
+   "better: the relation of a supplied comparison (Better, better)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "愈, as in 以广为愈 and 皆愈 and as the 凡例 uses it",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "boolean",
+  "concepts": [
+   "Boolean sequence (Nat → Bool)"
+  ],
+  "uses": [
+   {
+    "pian": "C16",
+    "used": "步步标然否之序",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "bud",
+  "concepts": [
+   "a formation read as budding from one already admitted (Bud)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "芽出",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "c",
+  "concepts": [
+   "outcome (the levels after a step, C → Nat)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "步后水平",
+    "count": 6
+   }
+  ]
+ },
+ {
+  "key": "closing",
+  "concepts": [
+   "loop formed by closing at a step (Closing, forms_by_closing) as distinct from 成环 of the name table"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "成环（沿用 C11 之名）",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "codeacquisition",
+  "concepts": [
+   "probe; atom; join and doubling of expressions (CodeAcquisition)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "探测；原子；合与倍；式族",
+    "count": 11
+   }
+  ]
+ },
+ {
+  "key": "commonresponse",
+  "concepts": [
+   "可许之应、共应（admissible response, common response：judgeProcess、CommonResponse）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "可许之应、共应",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "comparison",
+  "concepts": [
+   "comparison / order (a supplied relation)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "比较、序",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "conjunction",
+  "concepts": [
+   "conjunction 而 and the law's range 凡 as relation markers"
+  ],
+  "uses": [
+   {
+    "pian": "C16",
+    "used": "used as in the STYLE templates; not given a structure of their own in this 篇 (the marker list fixes only 则 若 必 或 皆 莫 莫不 不 未 故)",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "conjunctive",
+  "concepts": [
+   "conjunctive or graded whole (华严总相、墨经损、苏辙车)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "减损之兼（合取或分级之兼），无锚，记为缺口",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "consistent",
+  "concepts": [
+   "Consistent (a history never takes one move at one configuration to two outcomes)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "一致",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "constantfree",
+  "concepts": [
+   "constant-free terms of the three-valued system (ConstantFree), sentence"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "所言皆不含已定之真伪；辞",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "content",
+  "concepts": [
+   "content held de se / de dicto (selfAscribed / shared)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "就己而持／就辞而持",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "context",
+  "concepts": [
+   "context (of claims shown in context)"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "语境",
+    "count": 29
+   }
+  ]
+ },
+ {
+  "key": "context-free",
+  "concepts": [
+   "context-free frame"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "不依语境之系辞",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "countdown.countedwork",
+  "concepts": [
+   "counted work: work, fuel, pending, done, stall (Countdown.CountedWork)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "工、可用之量、未毕、毕、滞",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "countdown.reserved",
+  "concepts": [
+   "reserved exit: exit, valid, margin (Countdown.Reserved). 余地 is not used for this margin"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "出口、有效、余数",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "counterfactual",
+  "concepts": [
+   "counterfactual"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "反事实",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "covering",
+  "concepts": [
+   "covering (every formation within some center's closure)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "覆盖：凡物皆在某我之闭包内",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "crosssituational",
+  "concepts": [
+   "record of an occasion that bears on a form and offers meanings (CrossSituational records)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "记录（名表「往」锚 Learning.prefixOf，未借用）",
+    "count": 65
+   }
+  ]
+ },
+ {
+  "key": "decidableeq",
+  "concepts": [
+   "decidable equality of states / conditions (DecidableEq)"
+  ],
+  "uses": [
+   {
+    "pian": "C16",
+    "used": "同异可定",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "deductive",
+  "concepts": [
+   "deductive closure (推导闭包; what a basis derives with no premise)"
+  ],
+  "uses": [
+   {
+    "pian": "C16",
+    "used": "说之所出／无设而出之辞",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "dependence.active",
+  "concepts": [
+   "activity of a formation (Dependence.active)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "活动（现代汉语；不用「活」，活名 living）",
+    "count": 74
+   }
+  ]
+ },
+ {
+  "key": "dependence.level",
+  "concepts": [
+   "level of a condition (Dependence.level)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "水平（现代汉语，与篇一同）",
+    "count": 36
+   }
+  ]
+ },
+ {
+  "key": "dependence.need",
+  "concepts": [
+   "need, the amount a dependence requires (Dependence.need)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "所需（所需之量）",
+    "count": 41
+   }
+  ]
+ },
+ {
+  "key": "derivation",
+  "concepts": [
+   "basis of a derivation (Derivation basis)"
+  ],
+  "uses": [
+   {
+    "pian": "C16",
+    "used": "据",
+    "count": 44
+   }
+  ]
+ },
+ {
+  "key": "determination",
+  "concepts": [
+   "determination / distinction / the good"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "所定 / 分别 / 善",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "determinedat",
+  "concepts": [
+   "determined up to likeness (DeterminedAt)"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "同中确定（与篇一·十五同）",
+    "count": 8
+   }
+  ]
+ },
+ {
+  "key": "diagonal",
+  "concepts": [
+   "family of readings indexed by what it reads (Diagonal)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "读族",
+    "count": 6
+   }
+  ]
+ },
+ {
+  "key": "diagonal.moves",
+  "concepts": [
+   "a map moving every configuration (Diagonal.Moves Eq σ), and map/projection in general"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "映射移每一状；映射",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "drain:",
+  "concepts": [
+   "drain: driving a condition to its least level"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "降. 竭 is the table's Web.ConsumingIn.",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "drawing",
+  "concepts": [
+   "drawing beyond renewal (overdraw)"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "过与（资过所与）",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "drawninto",
+  "concepts": [
+   "region, a set of states (the target of DrawnInto)"
+  ],
+  "uses": [
+   {
+    "pian": "C16",
+    "used": "一组状",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "drift",
+  "concepts": [
+   "drift, sampling, fixation, history of sampled generations (Drift)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "漂变；抽样；固定；史",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "early-warning",
+  "concepts": [
+   "early-warning statistics, variance, autocorrelation, critical slowing down, bifurcation, fold, transcritical point"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "plain modern: 预警、方差、自相关、临界之慢、分岔、折、跨临界之点",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "eligible",
+  "concepts": [
+   "eligible outcomes"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "可得者 (from 取于可得's 可得)",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "key": "event",
+  "concepts": [
+   "event (a formation at a step)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "事件",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "exchange",
+  "concepts": [
+   "exchange law (level change = taken minus given)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "取与之法",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "exchangelaw.nonanticipating",
+  "concepts": [
+   "law of what has stood (ExchangeLaw.Nonanticipating)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "唯读已立者之法",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "exchangelaw.standing",
+  "concepts": [
+   "standing law (ExchangeLaw.standing: the law while the stock stands at its threshold)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "常立之法",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "exchangelaw.through",
+  "concepts": [
+   "a law of exchange reading through coupling (ExchangeLaw.Through)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "取与之法经感而读",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "excludeswithin",
+  "concepts": [
+   "a model as the set of admitted histories in ExcludesWithin (Flow.excludes_tail_within, Stationary.model_error)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "象（表中之象锚 Relabel 之映射；此处借作所许历史之集，请整合者定）",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "family:",
+  "concepts": [
+   "family: a list of conditions read together (cs, ds)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "族",
+    "count": 40
+   }
+  ]
+ },
+ {
+  "key": "finite",
+  "concepts": [
+   "finite (of an order, a number of steps); the table reserves 穷 for the break"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "有尽（从凡例之约定）",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "finitely",
+  "concepts": [
+   "finitely many configurations: a list holding every configuration (every : ∀ s, s ∈ all), and its length"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "有一表尽其状；表长",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "fixed",
+  "concepts": [
+   "fixed point (of revision)"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "不动点",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "flow.balances.kept_of_restrained",
+  "concepts": [
+   "restraint (a course taking less, Flow.Balances.kept_of_restrained)"
+  ],
+  "uses": [
+   {
+    "pian": "C13",
+    "used": "节取",
+    "count": 8
+   }
+  ]
+ },
+ {
+  "key": "flow.closedat",
+  "concepts": [
+   "counted world with the rest as residual is not open (Flow.ClosedAt negated); 开 is reserved for arising_opens"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "不封",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "flow.exchanges",
+  "concepts": [
+   "exchanges with a condition (Flow.Exchanges); takes part in a condition (Flow.TakesPart)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "相取与；预",
+    "count": 10
+   }
+  ]
+ },
+ {
+  "key": "flow.family_excess_ends",
+  "concepts": [
+   "the coupled gate / a family of conditions read as one (Flow.family_excess_ends)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "凡在场而与 c 者皆以至少 m 之所需待 c；合读为一之族",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "flow.inward",
+  "concepts": [
+   "inward across a step (Flow.Inward: whatever gives to the family takes only from it)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "不汲（一步不汲）；汲定义为“非不汲”",
+    "count": 6
+   }
+  ]
+ },
+ {
+  "key": "flow.lost",
+  "concepts": [
+   "what a family loses across a step (Flow.lost: uptake beyond replenishment)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "取过于与之量（不用名表之“所失”，它名 Remainder）",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "flow.opposes",
+  "concepts": [
+   "two-sided opposition of the joint exchange (Flow.Opposes) as a part of 中和"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "相反／两侧皆反其离",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "flow.policythrough",
+  "concepts": [
+   "policy through the couplings (Flow.PolicyThrough)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "经其感之策",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "flow.present",
+  "concepts": [
+   "takes part in a step (Flow.present)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "在场",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "flow.taken",
+  "concepts": [
+   "total taken from / given to a condition at a step (Flow.taken / Flow.given)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "诸取之和／诸与之和",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "flow.transmitsfromsome",
+  "concepts": [
+   "transmission from some giver (Flow.TransmitsFromSome)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "自某所出之传",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "flow.withinown",
+  "concepts": [
+   "joint draw; one's own draw within renewal (Flow.WithinOwn)"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "共取 (from 共取过与); 各取不过与. 出入相掩 is used for Flow.WithinJoint, as in the table.",
+    "count": 16
+   }
+  ]
+ },
+ {
+  "key": "focal",
+  "concepts": [
+   "focal and sustaining formations of the two-part support-gated family"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "焦物、维持者",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "footprinted",
+  "concepts": [
+   "footprint and renumbering of steps (Footprinted, Reindexes)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "足迹；重编号（名表「分」只名专属足迹，不借）",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "footprinted.sorts_iff",
+  "concepts": [
+   "renumbering (permutation reached by adjacent swaps, Footprinted.sorts_iff)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "重编号",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "formula",
+  "concepts": [
+   "interderivability-respecting reading built from relations (Formula), byName reading"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "以关系所构之读；按名之读",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "frame.realized",
+  "concepts": [
+   "realized at a configuration (Frame.realized)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "一状所实现",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "frame.strictlossmatch",
+  "concepts": [
+   "strict loss match (Frame.StrictLossMatch)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "严格之丧配",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "key": "frame.sufficientmatching",
+  "concepts": [
+   "sufficiency commitment (Frame.SufficientMatching)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "以严格之丧配为愈之足据",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "frontier",
+  "concepts": [
+   "optimum / mutual best response (Frontier under a rising order; Optimum.MutualBest)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "以此序权之所取; 相互最优回应",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "goalike",
+  "concepts": [
+   "go alike under a reading (GoAlike / GoAlikeUnder): configurations with one reading value go by one move to configurations with one reading value"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "同移（在七·十二經中界定）",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "key": "graded",
+  "concepts": [
+   "graded significance; grade; standing; status"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "分级之顾；级；计入（级为正）；计入多少",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "group",
+  "concepts": [
+   "group / pool as a predicate on formations, and its members"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "一组；诸员（群名 collective，结构更多，不借）",
+    "count": 12
+   }
+  ]
+ },
+ {
+  "key": "harm",
+  "concepts": [
+   "harm / not harm (D13, 不损) apart from the name 损 (depletion)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "以无丧名不损之结构，平语写“害”；D13 之题“不损”只在引号中出现",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "hexagram",
+  "concepts": [
+   "hexagram and line, the carrier of the 易 line (Hexagram, Hexagram.line)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "卦、爻（易之载体，名表无行；刚柔为爻值之名）",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "hexagram.complement",
+  "concepts": [
+   "complement, every line changed (Hexagram.complement, 錯)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "变其每爻（即“错”；錯不立为名，见 names-dropped 錯行）",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "hexagram.height",
+  "concepts": [
+   "height of a trigram (Hexagram.Height)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "高（下、中、上）",
+    "count": 29
+   }
+  ]
+ },
+ {
+  "key": "hexagram.reverse",
+  "concepts": [
+   "turning over (Hexagram.reverse, 綜) and the mirrored place, height, seam"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "上下倒之（即“综”）；对位、对高、对缝",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "hexagram.seam",
+  "concepts": [
+   "seam between two adjacent places (Hexagram.Seam)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "缝",
+    "count": 8
+   }
+  ]
+ },
+ {
+  "key": "hexagram.waxwane",
+  "concepts": [
+   "law of waxing and waning on hexagrams (Hexagram.waxWane)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "消长环（名表「消息」条注所给写法，未立行）",
+    "count": 12
+   }
+  ]
+ },
+ {
+  "key": "horizon",
+  "concepts": [
+   "horizon of an order ranking whole courses (the steps counted), and the far-sighted order"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "所计诸步；远见之序（不用涯，涯锚 Diagonal/Learning 之视界）",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "horizon.adheres",
+  "concepts": [
+   "adheres (Horizon.Adheres: every finite stretch of the run is a stretch of a run inside the reading)"
+  ],
+  "uses": [
+   {
+    "pian": "C16",
+    "used": "一行的每一有尽之段都是此读中某一行之段 (described, not named)",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "ideals.open",
+  "concepts": [
+   "开类（open class：Ideals.Open；名表之开专名开放）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "开类（只在說中，注明与名表之「开」无涉；經中不用）",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "inaction",
+  "concepts": [
+   "inaction baseline (levels without the part's exchange)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "不作为之基线",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "inquirysufficiency.completes",
+  "concepts": [
+   "assured completion (InquirySufficiency.Completes)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "必至",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "interleavings.locallaw.interleaves",
+  "concepts": [
+   "interleaving (Interleavings.LocalLaw.Interleaves)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "交错",
+    "count": 8
+   }
+  ]
+ },
+ {
+  "key": "joint",
+  "concepts": [
+   "joint exchange at a condition (all takes and gives at c in one step)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "c 上诸取与之合",
+    "count": 624
+   }
+  ]
+ },
+ {
+  "key": "jointdraw",
+  "concepts": [
+   "restraint by drawers (JointDraw, kept_of_restrained)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "节制",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "jointplan.draws",
+  "concepts": [
+   "leaf and root of a joint plan; what the leaves draw on (JointPlan.draws)"
+  ],
+  "uses": [
+   {
+    "pian": "C13",
+    "used": "叶；根；诸叶之所资",
+    "count": 10
+   }
+  ]
+ },
+ {
+  "key": "jointplan.realizes_image_iff",
+  "concepts": [
+   "a description identifying configurations (π in JointPlan.realizes_image_iff; MatchesParts)"
+  ],
+  "uses": [
+   {
+    "pian": "C13",
+    "used": "类（以名表之类即归并之读代之；所同之状）",
+    "count": 6
+   }
+  ]
+ },
+ {
+  "key": "keepsexchange",
+  "concepts": [
+   "symmetry, exchange of formations, renaming of forms (KeepsExchange, KeepsRenaming)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "对称；互换；改名",
+    "count": 9
+   }
+  ]
+ },
+ {
+  "key": "kept",
+  "concepts": [
+   "kept history (keepHistory / withHistory)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "把自身历史记入状中的行",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "lastchange.stillfrom",
+  "concepts": [
+   "a run still from some step (LastChange.StillFrom), distinct from 止 (World.RestsFrom)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "自某步起不再变（从凡例之约定）",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "law.ahead",
+  "concepts": [
+   "what lies ahead of a configuration from its next step (Law.Ahead)"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "前方（自次步以往其行之所至）",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "law.commutes",
+  "concepts": [
+   "commuting law (Law.Commutes: T (σ x) = σ (T x)); the 中文版 writes 交换之律, which collides with the law of exchange; 并行不悖 is not borrowed for it"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "与映射可换序之法（平语）",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "law.lossless",
+  "concepts": [
+   "lossless law (Law.Lossless)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "无损",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "law.reachable",
+  "concepts": [
+   "reachable n steps on (Law.Reachable / Branching.Reachable)"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "可得",
+    "count": 10
+   }
+  ]
+ },
+ {
+  "key": "law.withhistory",
+  "concepts": [
+   "the present of a kept history (first component of Law.withHistory)"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "今",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "lean",
+  "concepts": [
+   "proposition of the proof language (Lean Prop), interderivable, and propext"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "命题；可互推；可互推之命题即为一（propext）",
+    "count": 14
+   }
+  ]
+ },
+ {
+  "key": "learning.misses",
+  "concepts": [
+   "失（miss：Learning.Misses）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "失（九·二十一界定）",
+    "count": 37
+   }
+  ]
+ },
+ {
+  "key": "learning.prefixof",
+  "concepts": [
+   "prefix / predictor (Learning.prefixOf, pred)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "有限之前段；由此前段所推之下一值",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "legitimate:",
+  "concepts": [
+   "legitimate: the 正当 half of J4"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "no name; 取于可得 names only the feasible half",
+    "count": 39
+   }
+  ]
+ },
+ {
+  "key": "level",
+  "concepts": [
+   "level (amount a relatum holds)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "水平",
+    "count": 21
+   }
+  ]
+ },
+ {
+  "key": "lexical",
+  "concepts": [
+   "basic claim / basic tier (J1/J2, Lexical basic)",
+   "gain tier (Lexical gain)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "基本之辞; 基本之项 for listed items",
+    "count": 11
+   },
+   {
+    "pian": "C15",
+    "used": "增益之辞",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "lexical.above",
+  "concepts": [
+   "lexical order of two tiers (Lexical.Above)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "两层之字典序",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "limit.method",
+  "concepts": [
+   "术（method in the limit：Limit.Method；名表之法专名律）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "术",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "limit.verifies",
+  "concepts": [
+   "于极征（verifies in the limit：Limit.Verifies）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "于极征",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "livingsignificance",
+  "concepts": [
+   "relevance (parameter of LivingSignificance)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "相关（依名表「皆顾之活」之注与现行中文版）",
+    "count": 10
+   }
+  ]
+ },
+ {
+  "key": "locallaw",
+  "concepts": [
+   "exchanges acting locally (LocalLaw), touches, apart (share no relatum)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "取与局部而作；触；不共触一物／不相连",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "locked",
+  "concepts": [
+   "Locked (RuleCapture.Locked: rule favours and is not above what the reading gives)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "锁定（不用成闭：成闭锚 Law.DrawnInto.never_back，结构不同）",
+    "count": 22
+   }
+  ]
+ },
+ {
+  "key": "loopreturn",
+  "concepts": [
+   "link of a loop and a turn of the return map (LoopReturn)"
+  ],
+  "uses": [
+   {
+    "pian": "C13",
+    "used": "环节；回合",
+    "count": 11
+   }
+  ]
+ },
+ {
+  "key": "loopreturn.returnmap",
+  "concepts": [
+   "link of a loop (an element of the list passed to LoopReturn.returnMap)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "节",
+    "count": 62
+   }
+  ]
+ },
+ {
+  "key": "loopreturn.scaling",
+  "concepts": [
+   "factor of a link or of a turn (LoopReturn.scaling), as against coupling strength (应倍)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "倍率",
+    "count": 10
+   }
+  ]
+ },
+ {
+  "key": "loss:",
+  "concepts": [
+   "loss: a claim one configuration realizes and another does not. 所失 is C11's remainder, so it is not used"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "丧",
+    "count": 73
+   }
+  ]
+ },
+ {
+  "key": "m",
+  "concepts": [
+   "sense / meaning that a form names (M in SharedCodes, CrossSituational)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "义项（「义」不采为名；可考虑墨经「所謂」）",
+    "count": 70
+   }
+  ]
+ },
+ {
+  "key": "marks",
+  "concepts": [
+   "a quantity marking a run's changes (Marks: never falls, rises at each change)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "平语：一量于行中不降、状改则升",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "mean",
+  "concepts": [
+   "mean of a generation compared by cross-multiplying"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "均、均值（以交乘相比）",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "members",
+  "concepts": [
+   "members of a part"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "诸员",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "metabove",
+  "concepts": [
+   "tenure of a dependence (MetAbove)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "依存之期（只在說中）",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "metric",
+  "concepts": [
+   "metric / measure"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "度",
+    "count": 19
+   }
+  ]
+ },
+ {
+  "key": "model",
+  "concepts": [
+   "evaluator; present-aim evaluator (Model witnesses)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "评价者；只顾当下之目的者",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "mutualism.apart",
+  "concepts": [
+   "two relata each the other's only condition (the shape of Mutualism.apart)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "互为所待",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "need",
+  "concepts": [
+   "need (amount required)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "所需、所需之量",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "offspring",
+  "concepts": [
+   "offspring, a relatum descending from g (the table writes 出于 g 者)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "出者（出于 g 者之省）；出者之数 for offspring number",
+    "count": 104
+   }
+  ]
+ },
+ {
+  "key": "one",
+  "concepts": [
+   "one turn around a loop (one application of the return map)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "周",
+    "count": 24
+   }
+  ]
+ },
+ {
+  "key": "onward.dependentchoice",
+  "concepts": [
+   "dependent choice (Onward.DependentChoice)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "依赖选择之原则",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "order",
+  "concepts": [
+   "order of responses in the expansion of the carried amount (carriedWithin j)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "阶（j 阶）",
+    "count": 23
+   }
+  ]
+ },
+ {
+  "key": "outcome",
+  "concepts": [
+   "outcome of a move or response"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "果",
+    "count": 33
+   }
+  ]
+ },
+ {
+  "key": "pace",
+  "concepts": [
+   "rule, fast level and two-level course of Pace (Pace.paced)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "规则；快层；二层之行",
+    "count": 31
+   }
+  ]
+ },
+ {
+  "key": "pace.paced",
+  "concepts": [
+   "fast level / two-level course (Pace.paced)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "快层；两层之程",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "partialreadout",
+  "concepts": [
+   "sound / exact partial reading; section of a map over a domain (PartialReadout)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "可靠之读；精确之读；截面（「截」已名切口，只在复词中）",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "partialreadout.sectionwithin",
+  "concepts": [
+   "选取（section of a map over a domain：PartialReadout.SectionWithin；名表之截专名切口）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "映射之每一值皆给出域中之一状者",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "partialreadout.soundwithin",
+  "concepts": [
+   "可靠／确切之读（sound / exact readout：PartialReadout.SoundWithin／ExactWithin）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "可靠之读、确切之读",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "parting.rightat",
+  "concepts": [
+   "得（right at a step：出一值而即所来之值，Parting.RightAt、Learnable.Predicts 之单步）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "得（九·二十一界定；避「中」）",
+    "count": 36
+   }
+  ]
+ },
+ {
+  "key": "partswithin",
+  "concepts": [
+   "footprint of a configuration (PartsWithin, PartsApart, Supports)"
+  ],
+  "uses": [
+   {
+    "pian": "C13",
+    "used": "足迹；为其体之足迹所支",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "plan:",
+  "concepts": [
+   "plan: a list of moves"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "一串动",
+    "count": 6
+   }
+  ]
+ },
+ {
+  "key": "planning",
+  "concepts": [
+   "planning horizon of an optimizer"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "视野. 涯 is the table's horizon of knowing (no prefix fixes the next), a different structure.",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "polynomial",
+  "concepts": [
+   "polynomial bound in the steps"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "多项式",
+    "count": 11
+   }
+  ]
+ },
+ {
+  "key": "positive",
+  "concepts": [
+   "positive weighting / negative valuation"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "正重之计 / 负重. 权 is avoided because the table gives it to practical judgment.",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "premise.binds",
+  "concepts": [
+   "a premise binds in a world (Premise.Binds)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "有所约",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "probability",
+  "concepts": [
+   "probability read as a count of situations (D43)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "概率",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "propositionidentity.byname",
+  "concepts": [
+   "interderivability of propositions (↔); the identity reading by name (PropositionIdentity.byName)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "互推；以名读",
+    "count": 12
+   }
+  ]
+ },
+ {
+  "key": "ranking.possible",
+  "concepts": [
+   "possibility reading (Ranking.possible)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "以所容读活",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "ranking.wholerun",
+  "concepts": [
+   "whole-run reading (Ranking.wholeRun) / stepwise reading"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "整段之读（活动而于此历不竭）/ 逐步之读（活动而不剥）",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "rate",
+  "concepts": [
+   "rate of return measured by early warnings"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "扰而复归之速 (uses 复归)",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "reach",
+  "concepts": [
+   "reach (Reach P s t), course/trace (Trace)"
+  ],
+  "uses": [
+   {
+    "pian": "C07",
+    "used": "能至；一串动",
+    "count": 8
+   }
+  ]
+ },
+ {
+  "key": "reading",
+  "concepts": [
+   "reading written back into the records later generations read"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "写回之读",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "reason",
+  "concepts": [
+   "contributory reason (Reason)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "理由",
+    "count": 9
+   }
+  ]
+ },
+ {
+  "key": "rectangular",
+  "concepts": [
+   "Rectangular (every part-possibility pairs with every other)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "任相配",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "recurs",
+  "concepts": [
+   "recurs at arbitrarily late steps (Recurs, Unceasing pattern)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "无尽复现（随篇一）",
+    "count": 24
+   }
+  ]
+ },
+ {
+  "key": "regime",
+  "concepts": [
+   "regime (in margin of a regime)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "体制（只在说中作释语）",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "regimemargin",
+  "concepts": [
+   "regime: giving read off the level (RegimeMargin's g)"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "与之法 (体制 on first use)",
+    "count": 15
+   }
+  ]
+ },
+ {
+  "key": "regimemargin.adjusted",
+  "concepts": [
+   "recent giving (second component of the RegimeMargin.Adjusted state)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "近来所与",
+    "count": 10
+   }
+  ]
+ },
+ {
+  "key": "regulation.latereturn",
+  "concepts": [
+   "late return (Regulation.lateReturn)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "迟返（迟返之规则）",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "regulation.rule",
+  "concepts": [
+   "rule read from the rest's record (Regulation.Rule)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "规则",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "key": "reidentify.rename",
+  "concepts": [
+   "renaming: a re-identification that is the same at every step (Reidentify.rename)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "改名（在改认之條中定义，名表无单独一行）",
+    "count": 19
+   }
+  ]
+ },
+ {
+  "key": "relabel",
+  "concepts": [
+   "alternatives of a selection through a map (Relabel)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "备择",
+    "count": 8
+   }
+  ]
+ },
+ {
+  "key": "relabel.equivariant",
+  "concepts": [
+   "a selection factoring through the map (Relabel.Equivariant)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "择经象（换二备择之项则换其所择）",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "relativeposition.greatest",
+  "concepts": [
+   "greatest part of a family (RelativePosition.Greatest)"
+  ],
+  "uses": [
+   {
+    "pian": "C13",
+    "used": "称之最者",
+    "count": 6
+   }
+  ]
+ },
+ {
+  "key": "renewal",
+  "concepts": [
+   "renewal gated at m (whatever gives to the condition depends on it at a need of at least m)"
+  ],
+  "uses": [
+   {
+    "pian": "C13",
+    "used": "凡与此所待者皆待之而所需不下于 m；门于 m",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "repertoire",
+  "concepts": [
+   "repertoire of meanings; candidates"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "义项表；候选",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "requirement.assigned",
+  "concepts": [
+   "joint plan, assignment and assignee (Requirement.Assigned)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "可许之计、分派、任此事者",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "requirement.required",
+  "concepts": [
+   "required (Requirement.Required)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "要求、所要求",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "requirement.residual",
+  "concepts": [
+   "residual (Requirement.Residual; the record's zh is 余欠)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "余责",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "requirement.settled",
+  "concepts": [
+   "release / discharge (Requirement.Settled, FrontierWorlds.Discharged)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "释、已释",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "responselearning",
+  "concepts": [
+   "teacher, receiver, program, lesson, query, parts (ResponseLearning)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "教者；受者；程序；课；所问；部件",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "key": "restraint",
+  "concepts": [
+   "restraint / restrained flow"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "节、节流. 节 alone is not in the table; it is distinct from C11's 中节",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "retrodiction.record",
+  "concepts": [
+   "有日之录（dated control：Retrodiction.Record）、包（packet）、源（source）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "有日之录、包、源（平语；避「往」之历程义）",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "return",
+  "concepts": [
+   "return grades (title of becoming-return-grades); 回程 is the modern word for 终足"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "足之等",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "revisiting:",
+  "concepts": [
+   "revisiting: a sequence at one configuration at two steps (revisits_from, withHistory_new)"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "重访",
+    "count": 10
+   }
+  ]
+ },
+ {
+  "key": "reward",
+  "concepts": [
+   "reward / training"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "奖励、所奖 / 训练、所训 (plain)",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "rise",
+  "concepts": [
+   "rise and fall counts of relative position (riseCount, fallCount); family of parts; amount"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "进数、退数（称之进、退）；族；量",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "route",
+  "concepts": [
+   "route (b): significance bounded by closures, with no condition"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "不加条件之路；“路线 (b)”",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "rule",
+  "concepts": [
+   "rule of adoption that reads two codes (adopt)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "取舍之规",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "run.takes",
+  "concepts": [
+   "施动（a run takes a move：Run.Takes；避行／取之名）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "施（一动）",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "run.window",
+  "concepts": [
+   "finite window of a run (Run.window, Trace)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "有限之段，该变所许的一串移 (迹 is a symbol not adopted)",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "sametests",
+  "concepts": [
+   "test / SameTests (claims realizable after a sequence of moves)"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "历一串动之后所能成之辞 (avoiding 验, which names Web.Excludes)",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "scope",
+  "concepts": [
+   "scope of the ethics (whose losses count) / installing it"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "范围、所顾之中 / 立",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "scorerepresentation",
+  "concepts": [
+   "natural-number score / bounded score (ScoreRepresentation)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "自然数之分、有界之分",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "seeking",
+  "concepts": [
+   "seeking; target; a target met at a state"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "求；的；满（足只名一个所需被满足）",
+    "count": 19
+   }
+  ]
+ },
+ {
+  "key": "selectiongap",
+  "concepts": [
+   "a part's act (its exchange, a law of the part in SelectionGap, SelectionPool, PoolResponse)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "动（表锚 withMove：律所留开者，在宇中即诸物之取与）；行只名运行",
+    "count": 42
+   }
+  ]
+ },
+ {
+  "key": "selectionlevels",
+  "concepts": [
+   "group, within-group, among-group (SelectionLevels)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "组；组内；组间",
+    "count": 69
+   }
+  ]
+ },
+ {
+  "key": "selectionlevels.lineage",
+  "concepts": [
+   "lineage of a group (SelectionLevels.lineage); 所出 names descent, so 世系 could not be reused"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "系",
+    "count": 30
+   }
+  ]
+ },
+ {
+  "key": "selectionpool",
+  "concepts": [
+   "history of levels selected through couplings (l, l' in SelectionPool)"
+  ],
+  "uses": [
+   {
+    "pian": "C13",
+    "used": "历",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "selectionterm.concord",
+  "concepts": [
+   "concordance / discordance over ordered pairs (SelectionTerm.concord / discord)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "一致／不一致",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "selectionterm.generations",
+  "concepts": [
+   "listed generations (SelectionTerm.Generations)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "世代",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "settling.changesinloop",
+  "concepts": [
+   "a change within a loop (Settling.ChangesInLoop)"
+  ],
+  "uses": [
+   {
+    "pian": "C16",
+    "used": "变落于首尾同状之段中",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "share",
+  "concepts": [
+   "share (of carriers among descendants / the fast configuration read by a rule)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "份额",
+    "count": 49
+   }
+  ]
+ },
+ {
+  "key": "sharedcodes",
+  "concepts": [
+   "code: a map from senses to forms that each formation holds (SharedCodes, I → M → F)",
+   "centre (every formation takes one formation's form) in SharedCodes"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "码（名表只在「共享码」「外加码」之释义中用此字）",
+    "count": 73
+   },
+   {
+    "pian": "C09",
+    "used": "中心（名表「我」是评价之中心，不借）",
+    "count": 13
+   }
+  ]
+ },
+ {
+  "key": "sharedcodes.hearby",
+  "concepts": [
+   "hearing: a hearer takes the form a speaker gives a sense (SharedCodes.hearBy)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "听",
+    "count": 42
+   }
+  ]
+ },
+ {
+  "key": "sharedcodes.nextcohort",
+  "concepts": [
+   "generation / cohort of readers; history of records (SharedCodes.nextCohort)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "代；史",
+    "count": 17
+   }
+  ]
+ },
+ {
+  "key": "sharedcodes.origin",
+  "concepts": [
+   "origin of a form along an order of hearing (SharedCodes.origin)"
+  ],
+  "uses": [
+   {
+    "pian": "C09",
+    "used": "源头（「所出」是世系，不借）",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "situations.finer",
+  "concepts": [
+   "weight of a step; finer course (Situations.finer)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "重（权重）；细历程",
+    "count": 20
+   }
+  ]
+ },
+ {
+  "key": "slack",
+  "concepts": [
+   "slack (sum of level minus need beyond)"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "其外之余地",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "sound",
+  "concepts": [
+   "sound inquiry whose goal is new living content (Sound … Novel)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "以新活之辞为所求之健全探究",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "splice",
+  "concepts": [
+   "splice"
+  ],
+  "uses": [
+   {
+    "pian": "C01",
+    "used": "相接（拼接）",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "standingcensus",
+  "concepts": [
+   "standing (positive level) and the census of standing conditions (StandingCensus)"
+  ],
+  "uses": [
+   {
+    "pian": "C16",
+    "used": "所立者",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "start",
+  "concepts": [
+   "start configuration of a run"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "起处",
+    "count": 26
+   }
+  ]
+ },
+ {
+  "key": "stepwise",
+  "concepts": [
+   "stepwise / whole-run / relation-level readings of living"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "逐步之读／整轮之读／关系之读",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "stock",
+  "concepts": [
+   "stock (存量)"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "存量 (plain)",
+    "count": 34
+   }
+  ]
+ },
+ {
+  "key": "stock.covered",
+  "concepts": [
+   "covered (Stock.Covered)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "覆盖",
+    "count": 6
+   }
+  ]
+ },
+ {
+  "key": "stock.process",
+  "concepts": [
+   "stock / stock process (Stock.process); the table's 蓄 anchors Web.Carries"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "所蓄、所蓄之变",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "strength",
+  "concepts": [
+   "strength = content; what a claim forbids"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "强度; 所排 / 排除 (排 as in 凡·三 and in 验 = Web.Excludes)",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "subtrue",
+  "concepts": [
+   "sub-true (SubTrue)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "于某一畛立",
+    "count": 12
+   }
+  ]
+ },
+ {
+  "key": "supertrue",
+  "concepts": [
+   "super-true (SuperTrue)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "凡畛皆立",
+    "count": 6
+   }
+  ]
+ },
+ {
+  "key": "target",
+  "concepts": [
+   "target of seeking or of enough"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "所求",
+    "count": 23
+   }
+  ]
+ },
+ {
+  "key": "timedresponse",
+  "concepts": [
+   "source, route, reader and answer of a timed response (TimedResponse source, Spread, g, read)"
+  ],
+  "uses": [
+   {
+    "pian": "C17",
+    "used": "源；途；读者；答",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "key": "tolerance.allwithheld",
+  "concepts": [
+   "withholding; total withholding (Tolerance.allWithheld)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "不给；全不给",
+    "count": 24
+   }
+  ]
+ },
+ {
+  "key": "tolerance.keepsinclusion",
+  "concepts": [
+   "a law keeping inclusion (Tolerance.KeepsInclusion)"
+  ],
+  "uses": [
+   {
+    "pian": "C11",
+    "used": "守包含之法",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "training.loss_through",
+  "concepts": [
+   "损失函数（loss：Training.loss_through；名表之损专名下降）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "由数据上之值所算之量（经）；损失函数（說）",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "typicality",
+  "concepts": [
+   "自然数之权重（natural weights p、q：Typicality；名表之权专名实践判断）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "重",
+    "count": 20
+   }
+  ]
+ },
+ {
+  "key": "uniform",
+  "concepts": [
+   "uniform share of the weighted total (born × total ÷ members)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "均分",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "union",
+  "concepts": [
+   "union of the centers' closures (withinSome)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "诸我闭包之并",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "valence",
+  "concepts": [
+   "valence"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "正负；正价",
+    "count": 6
+   }
+  ]
+ },
+ {
+  "key": "valuation.related",
+  "concepts": [
+   "formed relation between claims (Valuation.related)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "已成之关系（为与名表及中文版以「相关」名 relevance 分开）",
+    "count": 12
+   }
+  ]
+ },
+ {
+  "key": "valuer",
+  "concepts": [
+   "valuer"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "评价者",
+    "count": 16
+   }
+  ]
+ },
+ {
+  "key": "verdict",
+  "concepts": [
+   "verdict"
+  ],
+  "uses": [
+   {
+    "pian": "TH",
+    "used": "判",
+    "count": 14
+   }
+  ]
+ },
+ {
+  "key": "viability.kernel",
+  "concepts": [
+   "guard (a predicate on configurations) in Viability.Kernel / Keepable"
+  ],
+  "uses": [
+   {
+    "pian": "C13",
+    "used": "所守；无一行离之（Kernel）；有行保之（Keepable）",
+    "count": 6
+   }
+  ]
+ },
+ {
+  "key": "w",
+  "concepts": [
+   "level of a condition; stock of a family (W.level, W.stock)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "水平；存量（族诸所待水平之和）",
+    "count": 62
+   }
+  ]
+ },
+ {
+  "key": "web.activerenewer",
+  "concepts": [
+   "active renewer and every rise made by one (Web.ActiveRenewer, Web.RenewedBy)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "活动之与之者；借 C04「与之者」（其锚是 Flow.renewers，不全同）",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "web.admitswithin",
+  "concepts": [
+   "region: a decided family of formations taken as a parameter of a comparison (Web.AdmitsWithin, LosesBeyond)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "区（区域）；全与区",
+    "count": 24
+   }
+  ]
+ },
+ {
+  "key": "web.bearing",
+  "concepts": [
+   "chain of dependence at positive need on embodied relata (Web.bearing)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "以正需待有形者之链",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "web.breakingon",
+  "concepts": [
+   "breaking event: drawing at a step that breaks a dependence on the condition (Web.BreakingOn)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "资于一绝之步",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "web.brief",
+  "concepts": [
+   "brief for d (Web.Brief: never active at two steps d apart), for parts and for carriers"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "无活动于相隔 d 步之二步者；载者无载于相隔 d 步之二步者",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "web.bypassing",
+  "concepts": [
+   "pattern and its carriers under the passing premise (Web.ByPassing, carrying)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "样式、载者；火传之设",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "web.carrying",
+  "concepts": [
+   "pattern carried in a web, and its carrier (Web.carrying, Web.Present)"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "样式、载者",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "web.ceasesfrom",
+  "concepts": [
+   "ceasing under a continuation (Web.CeasesFrom)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "无续而已",
+    "count": 9
+   }
+  ]
+ },
+ {
+  "key": "web.covered",
+  "concepts": [
+   "cover (Web.Covered: some part active at each step from T on)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "平语：每步有体活动",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "web.decays",
+  "concepts": [
+   "a reserve that decays while unsupported (Web.Decays)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "蓄自减",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "web.drawingdepends",
+  "concepts": [
+   "drawing is depending (Web.DrawingDepends) and the reading of drawing (Flow.DependsOnDrawn)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "“汲即待”；汲之读",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "web.excludeswithin",
+  "concepts": [
+   "模型作为所许之历史类（admitted class of histories：Web.ExcludesWithin 之 admitted）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "所许之历史类（经）；模型（說）",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "web.grow",
+  "concepts": [
+   "grown world (Web.grow, Web.Growth, Web.attach)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "长成之宇（增新待者与新所待而旧所需不改）",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "web.idle",
+  "concepts": [
+   "idle condition: nothing draws on it or no positive-need dependence on it (Web.Idle)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "闲置之所待",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "web.participates",
+  "concepts": [
+   "participates: depends on or draws on (Web.Participates)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "或待或资",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "web.passesat",
+  "concepts": [
+   "passing the pattern across one step (Web.PassesAt); bare 传 is reserved by the table for Flow.TransmitsWithin"
+  ],
+  "uses": [
+   {
+    "pian": "C05",
+    "used": "递",
+    "count": 15
+   }
+  ]
+ },
+ {
+  "key": "web.persisting",
+  "concepts": [
+   "reading activity through what holds (Web.persisting h)"
+  ],
+  "uses": [
+   {
+    "pian": "C03",
+    "used": "以存读活动",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "web.readscouplings",
+  "concepts": [
+   "reading another's couplings (Web.ReadsCouplings)"
+  ],
+  "uses": [
+   {
+    "pian": "C10",
+    "used": "读他者之感",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "web.relabel",
+  "concepts": [
+   "relabelling the condition side of a one-kind web (Web.relabel)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "互易所待之标名",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "web.unloosened",
+  "concepts": [
+   "requirements do not loosen across a step (Web.Unloosened)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "所需不松",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "web.valuation",
+  "concepts": [
+   "co-participation as a valuation relation (Web.valuation related)"
+  ],
+  "uses": [
+   {
+    "pian": "C02",
+    "used": "共同参与",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "web.widensacross",
+  "concepts": [
+   "widening across a stretch along a continuation (Web.WidensAcross, IncludesAcross, ExceedsAcross)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "跨段而广（跨段之赅、跨段之有所长）",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "web.widensalong",
+  "concepts": [
+   "widening along a reading of one world's formations in another's (Web.WidensAlong)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "沿读而赅／沿读而有所长／沿读而广（沿读之广）",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "web.widenswithin",
+  "concepts": [
+   "own widening: widening within a part's own decided region (Web.WidensWithin own)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "己内之广（借篇十四之己，此处指一体之选项所成之区）",
+    "count": 5
+   }
+  ]
+ },
+ {
+  "key": "weight",
+  "concepts": [
+   "weight (w)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "权",
+    "count": 36
+   }
+  ]
+ },
+ {
+  "key": "weighting.increasing",
+  "concepts": [
+   "order increasing in admission (Weighting.Increasing)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "把每一广排在上之序",
+    "count": 1
+   }
+  ]
+ },
+ {
+  "key": "weighting.weighed",
+  "concepts": [
+   "weighting / positive weighting (Weighting.weighed, Weighting.Positive)"
+  ],
+  "uses": [
+   {
+    "pian": "C15",
+    "used": "加权、正加权",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "withinclosure",
+  "concepts": [
+   "closure under a relation (WithinClosure rel f)"
+  ],
+  "uses": [
+   {
+    "pian": "C14",
+    "used": "闭包；沿此关系之闭包",
+    "count": 39
+   }
+  ]
+ },
+ {
+  "key": "witnessrefinement.crossseparated",
+  "concepts": [
+   "见证、失实集、失实之包络、相离（witness, fault set, fault envelope, cross-separated：WitnessRefinement.CrossSeparated）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "见证、失实集、包络、相离（平语；避「交」）",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "witnessrefinementruns.certificate",
+  "concepts": [
+   "凭（certificate：WitnessRefinementRuns.certificate）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "凭",
+    "count": 4
+   }
+  ]
+ },
+ {
+  "key": "world.arising_opens",
+  "concepts": [
+   "openness as a defined predicate (the spine has none; it is the conclusion of World.arising_opens)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "开，定义为“不能自某步起每步有封”",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "world.premise",
+  "concepts": [
+   "premise of the map of premises (World.Premise)"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "前提（七前提）",
+    "count": 17
+   }
+  ]
+ },
+ {
+  "key": "world.premised",
+  "concepts": [
+   "the eight world premises (World.Premised)"
+  ],
+  "uses": [
+   {
+    "pian": "C04",
+    "used": "八设（说中列出：有待、衡、唯活动者与、唯活动者取且只取其所资、耗、有形、活动者有列、所传有界）",
+    "count": 3
+   }
+  ]
+ },
+ {
+  "key": "x",
+  "concepts": [
+   "event of a relatum (X × Nat) in a valuation"
+  ],
+  "uses": [
+   {
+    "pian": "C12",
+    "used": "事；活事",
+    "count": 7
+   }
+  ]
+ },
+ {
+  "key": "特征",
+  "concepts": [
+   "特征（feature：val、f）、数据（data）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "特征、数据（平语）",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "生生不息",
+  "concepts": [
+   "生生不息 as one name (D5 sets no single anchor)"
+  ],
+  "uses": [
+   {
+    "pian": "C06",
+    "used": "生生不息（生生＋不息），在說中说明其组成",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "策",
+  "concepts": [
+   "策（policy）、所信（belief）、所求（goal）、可靠（sound）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "策、所信、所求、可靠（平语）",
+    "count": 0
+   }
+  ]
+ },
+ {
+  "key": "见证无阙之录",
+  "concepts": [
+   "见证无阙之录（complete transcript）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "见证无阙之录（以名表之阙组成）",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "读已立者",
+  "concepts": [
+   "读已立者（nonanticipating / reads what has stood）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "读已立者",
+    "count": 2
+   }
+  ]
+ },
+ {
+  "key": "辨认",
+  "concepts": [
+   "辨认（identification：有界之前段定历程；于极之辨认）"
+  ],
+  "uses": [
+   {
+    "pian": "C08",
+    "used": "辨认（平语；九·二十五题作「有界则往定其行」）",
+    "count": 6
+   }
+  ]
+ }
+]

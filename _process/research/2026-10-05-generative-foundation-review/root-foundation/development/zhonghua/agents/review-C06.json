@@ -1,0 +1,217 @@
+{
+ "pian": "C06 篇六　生生",
+ "edits": [
+  {
+   "find": "去一体之取与而其余如故（偏去）",
+   "replace": "去一体之取与而体外如故（偏去）",
+   "why": "其余是名表专名（整体之其余），此处指体外之交换，一名二义"
+  },
+  {
+   "find": "次说所容之开从何而来：支持唯从被支持者之与而得",
+   "replace": "次说支持从何而得：唯从被支持者之与而得",
+   "why": "开是名表之名（越过每个有穷之族的交换），不借为“得支持”"
+  },
+  {
+   "find": "全与区、己内之广与他者之余地、诸权所共之序",
+   "replace": "全与区、己内之广与他者之余地、诸定重所共之序",
+   "why": "权已是 C15 之名（实践判断），名表明言“正权”不入"
+  },
+  {
+   "find": "庄子以“一曲之士”贬之",
+   "replace": "天下篇以“一曲之士”贬之",
+   "why": "天下属杂篇，作者与层次有争议"
+  },
+  {
+   "find": "以广为较好只在以广为愈（篇十五）",
+   "replace": "以广为较好只在以广为愈（C，新组合，以＋广＋为愈：以扩大为更好，设；篇十五）",
+   "why": "新名在說中首次出现须说明其组成"
+  },
+  {
+   "find": "偏去，一体之待者不取不与，而其余之取与如故也。",
+   "replace": "偏去，一体之待者不取不与，而体外之取与如故也。",
+   "why": "其余是专名；Flow.withhold 说的是体外之交换"
+  },
+  {
+   "find": "只去掉它的取与，其余的交换不变，所以比较是“若无此体之取与，而其余照旧”的但书比较",
+   "replace": "只去掉它的取与，体外的交换不变，所以比较是“若无此体之取与，而体外照旧”的但书比较",
+   "why": "同上，避免其余一名二义"
+  },
+  {
+   "find": "其余照旧是比较的前提，不是关于其余的事实",
+   "replace": "体外照旧是比较的前提，不是关于体外者的事实",
+   "why": "同上"
+  },
+  {
+   "find": "其余若随体之有无而改其取与，比较须另计其回应，只在体之回应所及之内决定",
+   "replace": "体外者若随体之有无而改其取与，比较须另计其回应：若体外者只随其所感而变（设），差别到不了体之回应所及之外，所及之内律不断言",
+   "why": "其余是专名；原句“只在所及之内决定”含混，依 mojing-pian-qu-mo-jia-shao 之读与其前提写准"
+  },
+  {
+   "find": "读作去一偏而其余不增不减",
+   "replace": "读作去一偏而体外不增不减",
+   "why": "其余是专名"
+  },
+  {
+   "find": "则任何有穷之表以外的部分在任意晚之步作，它恰经新部分而久（`Becoming.Web.Whole.needs_new`）",
+   "replace": "则不能自某步起再无任一有穷之表以外的部分作（结论为双重否定），它只经新部分之作而久（`Becoming.Web.Whole.needs_new`）",
+   "why": "Lean 结论是 ¬∀，不是正面存在；且只是必要条件，“恰经”过强"
+  },
+  {
+   "find": "**證**　`Becoming.Web.Widens`、`Becoming.Web.Widens.not_reverse`、`Becoming.Restoring.Inflow.widens`、`Becoming.Clearing.narrows`、`Becoming.Transfer.mixed`、`Becoming.Flow.Balances.changes_nothing`；讀（AI，D2）",
+   "replace": "**證**　`Becoming.Web.Widens`、`Becoming.Web.Widens.not_reverse`、`Becoming.Web.Widens.not_keeps`、`Becoming.Web.Widens.not_mixed`、`Becoming.Web.Keeps.not_mixed`、`Becoming.Restoring.Inflow.widens`、`Becoming.Clearing.narrows`、`Becoming.Transfer.mixed`；讀（AI，D2）",
+   "why": "經之“四者不相兼”须有其证；changes_nothing 已在六·七证中"
+  },
+  {
+   "find": "成闭是入于律所不离之区而不复返（篇七）",
+   "replace": "成闭是入于法所不离之区而不复返（篇七）",
+   "why": "Law 之名是法；律在本篇指已证之律"
+  },
+  {
+   "find": "讀（AI，D13）：“不损”读作无丧",
+   "replace": "讀（AI，D13）：早期所说“不损”（其损非名表之损，名表之损名下降）读作无丧",
+   "why": "损是名表之名（下降），引语中之损另义，须分开"
+  },
+  {
+   "find": "「能盡物之性，則可以贊天地之化育」〔RU1-S-ZY〕（定域，zhongyong-zan-tiandi-zhi-hua-yu）：赞化育在此只是成生之体，其确切条件即本条；“尽物之性”预设物有先定之性，不入。",
+   "replace": "「能盡物之性，則可以贊天地之化育」〔RU1-S-ZY〕（相分，zhongyong-zan-tiandi-zhi-hua-yu）：经文以尽物之性为赞化育之条件，预设物各有所受之性，属固定本性一层，相分在此条件；赞化育之结构脊柱可说，即成生之体，其条件全在关系之中，即本条之净取与余地。",
+   "why": "已核条目为相分（divergence），草稿写作定域"
+  },
+  {
+   "find": "讀（AI，D35）：无自外来之与时，所容之开唯由被支持者之与；这是生生",
+   "replace": "讀（AI，D35）：无自外来之与时，待者之得支持唯由被支持者之与；这是生生",
+   "why": "开是名表之名，不借；律说的是得支持"
+  },
+  {
+   "find": "所以日新须开",
+   "replace": "所以日新之状不可尽列",
+   "why": "unheld/unlisted_of_new 说状不为表所尽，不是越族之交换（开）；开须与不过取，见六·十一"
+  },
+  {
+   "find": "：新须有益。",
+   "replace": "：日新须有益。",
+   "why": "名表之名是日新，不用单字新"
+  },
+  {
+   "find": "名出此句，孔疏「日日增新」〔YWH-H5〕之“增”恰是新之所需；评为“盛德”属评价，不入。",
+   "replace": "名出此句；孔疏「日日增新」〔YWH-H5〕（隋唐·疏）以增与新并举，所增是德之盛，与“日新须有益”只是字面相近，不立为相合；评为“盛德”属评价，不入。",
+   "why": "以共用之字“增”立相合，违反结构而非字面之则；补注疏层"
+  },
+  {
+   "find": "一无重之族自某步起日新，则凡含之之无重族",
+   "replace": "一族自某步起日新，则凡含之而成员各异之族",
+   "why": "new_beyond_every 不要求原族无重；且“重”将用于定重，避免同字异义"
+  },
+  {
+   "find": "其所待尽在一无重之表",
+   "replace": "其所待尽在一成员各异之表",
+   "why": "同上，避免重字异义"
+  },
+  {
+   "find": "凡含它的无重之族亦然",
+   "replace": "凡含它而成员各异之族亦然",
+   "why": "同上"
+  },
+  {
+   "find": "闭合之环总量恒为一而作不息",
+   "replace": "封而循环之族总量恒为一而作不息",
+   "why": "闭合是名表阖之释语；Recycle 之“closed”是封"
+  },
+  {
+   "find": "讀（AI，D5）：生生不息（生生＋不息）是生生在兼上继续，且仍有更多能形成，不是现成之形的复制，也不是数量的无尽增加；只复者有不息而无生生不息，",
+   "replace": "讀（AI，D5）：早期文本之“生生不息”（名表不立为名）读作生生在兼上继续，且仍有更多能形成，不是现成之形的复制，也不是数量的无尽增加；只复者有不息而无此，",
+   "why": "名旗已决“名表不立生生不息为名”，不得作新组合之名"
+  },
+  {
+   "find": "必经那一步起作用的一个感而闭合",
+   "replace": "必经那一步起作用的一个感而成",
+   "why": "闭合是阖之释语；成环另有名"
+  },
+  {
+   "find": "所待皆在表中时，环形成之前所携之量至多为步数之多项式（`Becoming.carried_le_polynomial_before`），形成之后则倍增，",
+   "replace": "其上游无已成之环、所待皆在表中、起始之差与流入之强皆有界时，至该步所携之量至多为步数之多项式（`Becoming.carried_le_polynomial_before`）；阈之构造中，环成之后则倍增，",
+   "why": "补 Lean 之局部条件；倍增只在构造中，不是一般之律"
+  },
+  {
+   "find": "**經**　复归，扰其状而为规则所持者吸回也。凡次状唯依规则而不依其余之状，则同规则之二状，自次步起其行同。",
+   "replace": "**經**　复归，规则不改而只扰状之他分，为规则所持者吸回也。凡次状唯依规则、不依状之他分，则规则同之二状，自次步起其行同。",
+   "why": "状是名表之构形（含规则），扰及规则者不复归（rule_perturbation_drawn）；其余是专名"
+  },
+  {
+   "find": "（律所不离之区，`Becoming.Law.rule_absorbing`）",
+   "replace": "（法所不离之区，`Becoming.Law.rule_absorbing`）",
+   "why": "Law 之名是法"
+  },
+  {
+   "find": "一个构造之中，扰其状者被吸入规则所持之状而不复返",
+   "replace": "一个构造之中，只扰状之他分者被吸入规则所持之状而不复返",
+   "why": "与經之改一致"
+  },
+  {
+   "find": "这正说明顾只经比较进入，从不经定义进入：一个闭合是助",
+   "replace": "这正说明价值只经比较进入（排序更须以广为愈），从不经定义进入：一个闭是助",
+   "why": "顾是意义而非价值判语；闭合是阖之释语，此处所论是闭"
+  },
+  {
+   "find": "名取「夫物芸芸，各复归其根」〔DS01〕：老子十六章言各返其根，未言扰动，作对照；",
+   "replace": "名取「夫物芸芸，各复归其根」〔DS01〕（定域，lao-16-guan-fu-gui-gen）：老子十六章言各返其根，未言扰动；次状唯依规则、扰只及状之他分时之复归，是其成立之域；",
+   "why": "对照须标种类；已核条目为定域"
+  },
+  {
+   "find": "无自外来之与时，所容之开唯由被支持者之与（六·九）",
+   "replace": "无自外来之与时，待者之得支持唯由被支持者之与（六·九）",
+   "why": "开是名表之名，不借"
+  },
+  {
+   "find": "生生不是新：新须有益（六·十）",
+   "replace": "生生不即日新：日新须有益（六·十）",
+   "why": "名表之名是日新"
+  },
+  {
+   "find": "而无体之水平于其后一步，以不小之需容此待者",
+   "replace": "而无体之水平于其后某步，以不小之需容此待者",
+   "why": "narrows_of_consumed 之 t 是任一后步，非次步"
+  },
+  {
+   "find": "恒是相赅，不是广：恒者之体不必成生",
+   "replace": "恒只保其体不狭（有体赅无体），不即是广：恒者之体不必成生",
+   "why": "includes_of_renewed 只给赅（不狭），恒者之体亦可广，说成相赅为误"
+  },
+  {
+   "find": "自一步至后一步，沿一相续",
+   "replace": "自一步至其后某步，沿一相续",
+   "why": "WidensAcross 之 T、U 任取，非相邻二步"
+  },
+  {
+   "find": "“唯不绝生者能久”对一体不成立，而兼无处推卸其失",
+   "replace": "所以一体可以久而阖其所资之外者；兼之外无物，其失无处落在比较之外",
+   "why": "引号内之语无出处；“推卸”是社会词"
+  },
+  {
+   "find": "己（自身区域）在此是一体自己之待者所成之已定之区，即其选项",
+   "replace": "己（自身区域）在此是一个已定的待者之区，读作一体之选项（讀（AI）；律不要求它由体之成员组成）",
+   "why": "OwnWidening 之 own 是任一已定之区，构造中是体之选项而非其成员"
+  },
+  {
+   "find": "这与关于最优策略趋于保留选项、以不作为为基线之影响度量的形式结果同构（记录载其出处）",
+   "replace": "这与关于最优策略趋于保留选项、以不作为为基线之影响度量的形式结果相应，只在保留选项读作所容、以不作为为基线一层；回报、期望与最优值不入（记录载其出处）",
+   "why": "记录言其不示 POWER 等，“同构”过强"
+  },
+  {
+   "find": "### 六·二十　广为诸权之所共",
+   "replace": "### 六·二十　广为诸定重之所共",
+   "why": "权已是 C15 之名，名旗决“权不另取”；定重为暂名，交整合者定"
+  },
+  {
+   "find": "**經**　于一有穷之表：一路广他路，恰当凡于表中每项皆有正权者，皆重此路过他路。互有所长者，有正权重此，亦有正权重彼。此路赅他路而所多唯零权之项，则二路权等。一律同权，以所容之数为序。凡一类之序，含诸正权之序而皆于每广而升者，可加与否，一路广他路恰当此类之每序皆排之更高。",
+   "replace": "**經**　于一有穷之表，二路所容者皆在表中，容皆定然否：一路广他路，恰当凡每项之重皆正之定重，皆重此路过他路。互有所长者，有每项皆正之定重重此，亦有重彼者。此路赅他路而所多之项其重皆零，则二路之重等。每项同重，以所容之数为序。凡一类之序，含诸正定重之序而皆于每广而升者，可加与否，一路广他路恰当此类之每序皆排之更高。",
+   "why": "补 widens_iff_every_weighting 之局部条件（所容在表、容定然否）；去权名"
+  },
+  {
+   "find": "**說**　加权（weighting）给表中每项（一步与一待者）一个自然数之权，一路之重是其所容之项的权之和；于每项皆为正者名正权（`Becoming.Weighting.Positive`）。广恰是凡正权都排得更高者（`Becoming.Weighting.widens_iff_every_positive`；在待网上，所容皆在表中、容皆定然否时，即 `Becoming.Web.widens_iff_every_weighting`），对凡在每一广上都升的一类序也是如此，可加与否，优先较差者亦在其中（`Becoming.Weighting.widens_iff_every_of_class`、`Becoming.Weighting.increasing_prior`）：广是诸序之所共，其数学即 Sen 之交集法。偏倚恰只决定互有所长之比较，且两向皆可（`Becoming.Weighting.mixed_either_way`）；给某项零权，就是不把它算入范围（`Becoming.Weighting.weighed_eq_of_unweighted`）；同权即按数目排（`Becoming.Weighting.neutral_ranks_by_number`）。",
+   "replace": "**說**　定重（加权，weighting；新组合，定＋重：给表中每项定一重；名待整合者定，名表之权另名实践判断，不借）给表中每项（一步与一待者）一个自然数之重，一路之重是其所容之项的重之和；每项之重皆正者名正定重（`Becoming.Weighting.Positive`）。广恰是凡正定重都排得更高者（`Becoming.Weighting.widens_iff_every_positive`；在待网上，所容皆在表中、容皆定然否时，即 `Becoming.Web.widens_iff_every_weighting`），对凡在每一广上都升的一类序也是如此，可加与否，优先于续之所容较少者之序亦在其中（`Becoming.Weighting.widens_iff_every_of_class`、`Becoming.Weighting.increasing_prior`）：广是诸序之所共，与森之交集法相应（记录载其出处）。互有所长之比较，两向皆有正定重定之（`Becoming.Weighting.mixed_either_way`）；此路所多之项其重皆零，二路之重等（`Becoming.Weighting.weighed_eq_of_unweighted`）；每项同重即按数目排（`Becoming.Weighting.neutral_ranks_by_number`）。讀（AI，记录 widening-as-what-every-weighting-ranks）：以一正定重为一方之序，则偏倚所能定者恰是互有所长之比较，给某项零重即不把它算入范围。",
+   "why": "去权名；“偏倚恰只决定”“零权就是不算入范围”是 AI 读法须标讀；“其数学即”过强；去拉丁字；“较差者”改为结构说法"
+  }
+ ],
+ "verdict": "sound after edits",
+ "notes": "Checks done: all 132 cited declarations resolve under their full names (work/resolve.py), all 21 record links exist, and all 32 quotations are exact in the frozen texts (ctq.py text). I read each 經 against its Lean statement and hypotheses in Admission, Regions, Retaining, OwnWidening, Weightings, Growth, ContinuedClasses, Gain, Recurrence, Wholes, Closing, SeekingRuns/Branching and Significance. Most 經 are exact. The two premises are named with their roles, the continuation condition is stated and not asserted, and ordering is placed only in C.\n\nDefects corrected by the edits:\n(1) Kind error: zhongyong-zan-tiandi-zhi-hua-yu is 相分 in the checked passages but the draft wrote 定域.\n(2) Overclaims against the Lean:\n- Whole.needs_new is a double negation and only a necessary condition; the draft stated it positively with 恰经.\n- 恒是相赅: includes_of_renewed gives only inclusion (不狭); a renewing part can still widen.\n- The polynomial bound was stated without its local conditions (no loop upstream, bounded start and inflow), and the doubling exists only in the threshold construction.\n- 后一步 in 六·十五 and 六·十七, where the Lean allows any later step.\n- 同构 with power-seeking results; the record says these are not formalized.\n- 其数学即 Sen.\n- The weighting 經 lacked the listed/decided conditions of widens_iff_every_weighting.\n- Two AI readings were presented as fact (partiality decides exactly the mixed comparisons; zero weight is a denial of scope).\n(3) Name collisions:\n- 其余 (the reserved rest relatum) used for 体外 in the opening paragraph, 六·四 and 六·十三.\n- 开 used for 所容之开 and in 日新须开.\n- 闭合 (the gloss of 阖) used for a closed cycle, for loop closing and for 闭.\n- 律 used where the name for Law is 法.\n- 顾 used for value judgments.\n- 状 used for the state component; perturbing the rule is not reabsorbed.\n- 权 for weighting: 权 is C15's name (practical judgment), and the name flags say 正权 and the scale's total order are not carried and 权 is not to be taken again.\n- 生生不息 introduced as a 新组合, though the name flags record that the table does not adopt it.\n(4) A shared-word agreement: 孔疏 增 taken as 益.\n(5) Unsourced quotation marks and a social word in 六·十八 (“唯不绝生者能久”, 推卸).\n(6) 六·十三 cited 老子十六章 without a kind.\n\nFor the integrator: 定重, 正定重, 零重 and 同重 are provisional. The table has no name for weighting, so the integrator should choose one; I replaced 无重 with 成员各异 so that 重 is not used in two senses. Other coinages not in the table, which I flag but did not rename: 沿读而赅/广, 跨段而广, 区, 全, 水平之路. Also 证 sections omit some cited witnesses (OwnDrawing.ample_widens, Restoring.Idle/Carried/Spontaneous); this is acceptable.\n\nOptional, not edited: 「水善利万物而不争」 is read on the transmitted text; the passage entry records that 帛书乙 has 「有爭」, which a note could mention.\n\nFiles: draft copy /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c06-review/draft.md (every find above occurs exactly once in it). Names table /Users/ren/theories/.claude/worktrees/zhonghua/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zhonghua/NAMES-ZH.md; name flags …/zhonghua/work/name-flags.txt (lines 133–134 and 348)."
+}

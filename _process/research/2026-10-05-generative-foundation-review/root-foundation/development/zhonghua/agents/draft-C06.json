@@ -1,0 +1,370 @@
+{
+ "pian": "篇六　生生",
+ "markdown": "## 篇六　生生\n\n本篇论生成与退化之向。起点仍是一展开中的关系：一步之诸水平容哪些待者（容、所容），二水平之路怎样相较（赅、有所长、广、狭、相赅、互有所长），去一体之取与而其余如故（偏去），于是一体之于所容或成生、或绝生、或相赅、或互有所长；其界是体之净取与余地（阖须净取，闢须净与）。次说所容之开从何而来：支持唯从被支持者之与而得，日新须益，益自其余或越族界而来；次说升至阈而成新感（盈科）、扰而复归；然后立生生之名：生而所生又生，其向以广较之。次说恒、竭与作怎样连于广狭，广于新类、沿读、跨段之所记与所不记；然后说分化：全与区、己内之广与他者之余地、诸权所共之序；终以延续之条件下之读。除末条外，本篇诸律皆无设而然（不加前提的定理），只在写入其中的局部条件（衡、唯活动者取与、所需不松、有穷之表、定然否……）下，对每个如此表示之宇成立；量为自然数、步为离散是表示的承诺，诸律依之处随条说明。凡续皆有顾（延续之条件）只在末条作为设出现，不断言；它定范围而不排序；排序唯在以广为愈（以扩大为更好，设）。本篇承篇二之待与足、篇四之流与衡、篇五之恒与竭；闭与成闭在篇七，感与明在篇十，顾与延续之条件在篇十四，以广为愈与取舍在篇十五。\n\n### 六·一　容与所容\n\n**經**　容，诸水平于一步，足一待者之每所待也：凡其所待，所需不过其水平。待者被支持，即立着之水平容之。凡水平于每所待不低于他水平，则容他水平之所容。所容，一步诸水平所容之待者也。\n\n**說**　容（容纳／支持，admits / supported）是水平与所需之间的关系：一方是诸所待之水平，一方是待者在这一步对每个所待的需要量；它不属于任何一方。被支持（`Becoming.Web.Supported`）不是另一种性质，就是立着的水平容之（`Becoming.Web.supported_iff_admits`，由 `Iff.rfl`，即由定义）；水平不低者容低者之所容（`Becoming.Web.Admits.mono`）。所容（生成的空间，the generative space）是约定：此刻诸水平所容者之全体，活动与否、已形成与否都算，所以休眠者与尚未形成者也在其中（讀（AI，D3、D22））。被容不等于活动：有待（`Becoming.Web.Dependent`）只说活动之处必被支持，不说被支持者必活动。对照（相合，定义层，xunzi-ke-yi-wei-yu）：「然则可以为，未必能也；虽不能，无害可以为」〔RU2-S-XZ23〕：可（被容）与能（活动）之分与此同构，这是定义上的一致，不是一条定理；“性恶”之论与圣王之标准不取。名取「窮，或有前不容尺也」〔MI1-S-JS〕（定域，mojing-qiong-bu-rong-chi）：只取其关系形式，能容者是水平，所需是尺；墨经空间有界之义不入，包容之品行义亦不入。\n\n**證**　`Becoming.Web.Admits`、`Becoming.Web.Supported`、`Becoming.Web.supported_iff_admits`、`Becoming.Web.Admits.mono`、`Becoming.Web.Dependent`；讀（AI，D22）；记录 [support-from-the-supported](../results/records/support-from-the-supported.md)、[closing-needs-net-draw](../results/records/closing-needs-net-draw.md)。\n\n### 六·二　赅与有所长\n\n**經**　赅，一水平之路于每步容他路之所容也。有所长，一路于某步容一他路所不容者也。凡路自赅；甲赅乙、乙赅丙，则甲赅丙；赅他路者，不为他路所长。\n\n**說**　水平之路（level path）是每步每所待一个水平；二路只以所容相较：赅（包含，`Becoming.Web.Includes`）是每步之所容不少于对方，有所长（超出，`Becoming.Web.Exceeds`）是某步多容一个对方所不容的待者。赅自反、可传（`Becoming.Web.Includes.refl`、`Becoming.Web.Includes.trans`），赅对方者不为对方所长（`Becoming.Web.Includes.not_exceeded`）。这里较的是容哪些，不是容多少个：二路所容之数相同，仍可彼此有所长。“长”不带优劣，只说在某步容对方所不容者。名取「皆有所長，時有所用。雖然，不該不徧」〔ZH1-S33〕（相合，zhuangzi-tianxia-jie-you-suo-chang）：“有所长”即本条之名；“赅”取其“該”（冻结语料只作“該”），不赅即不包含全体；庄子以“一曲之士”贬之，此评价不入。\n\n**證**　`Becoming.Web.Includes`、`Becoming.Web.Exceeds`、`Becoming.Web.Includes.refl`、`Becoming.Web.Includes.trans`、`Becoming.Web.Includes.not_exceeded`；记录 [comparison-by-widening](../results/records/comparison-by-widening.md)、[four-cases-of-a-part](../results/records/four-cases-of-a-part.md)。\n\n### 六·三　广、狭、相赅、互有所长\n\n**經**　广，赅而有所长也；狭，为他路所广也；相赅，互赅也；互有所长，彼此各有所长也。广不可逆而可传；广非相赅，广非互有所长，相赅非互有所长。\n\n**說**　广（扩大，`Becoming.Web.Widens`）是一个不加前提的序：不可逆，可传（`Becoming.Web.Widens.not_reverse`、`Becoming.Web.Widens.trans`）；相赅（保持，`Becoming.Web.Keeps`）与互有所长（混合，`Becoming.Web.Mixed`）皆对称（`Becoming.Web.Keeps.symm`、`Becoming.Web.Mixed.symm`）。三者两两不相兼，证明不用排中律（`Becoming.Web.Widens.not_keeps`、`Becoming.Web.Widens.not_mixed`、`Becoming.Web.Keeps.not_mixed`）；至于任二路必居广、狭、相赅、互有所长之一，那一步要用辞皆定然否，Lean 中不立此辞。互有所长是新组合（互＋有所长）：二路各在某步容对方所不容者，不能以赅定序，定序须另立度量，那是须另行陈述之设（六·二十）。广只名扩大之序，不带“更好”；以广为较好只在以广为愈（篇十五）。对照（定域，mojing-yi-lei-bu-bi）：「異類不吡，說在量」〔MI1-S-JX〕：墨经之不可比在量纲之异，互有所长是同一赅序上的不可比；二者只在“比较须有共同之量”一层相合，给出量即另加一设。\n\n**證**　`Becoming.Web.Widens`、`Becoming.Web.Keeps`、`Becoming.Web.Mixed`、`Becoming.Web.Widens.not_reverse`、`Becoming.Web.Widens.trans`、`Becoming.Web.Widens.not_keeps`、`Becoming.Web.Widens.not_mixed`、`Becoming.Web.Keeps.not_mixed`；记录 [four-cases-of-a-part](../results/records/four-cases-of-a-part.md)、[comparison-by-widening](../results/records/comparison-by-widening.md)。\n\n### 六·四　偏去\n\n**經**　偏去，一体之待者不取不与，而其余之取与如故也。无体之水平，自同一始、依偏去之流而衡者也；有之则唯一。凡衡，每步每所待：有体之水平加体之所累取，等无体之水平加体之所累与。\n\n**說**　体（部分，part）是一个已定的待者之族，可以是一个待者，也可以是一组待者；偏去（扣留，`Becoming.Flow.withhold`）只去掉它的取与，其余的交换不变，所以比较是“若无此体之取与，而其余照旧”的但书比较。无体之水平（`Becoming.Flow.WithheldLevels`）是从同一起点、按偏去之后的流逐步定出的水平，存在则唯一（`Becoming.Flow.WithheldLevels.unique`）；在衡（平衡）之处，二者之差恰是体之累计取与（`Becoming.Flow.Balances.withheld`）。没有水平之路能使偏去之流衡之处，就没有可较者。其余照旧是比较的前提，不是关于其余的事实：偏去之流在体外与原流交换相同（`Becoming.Flow.respondsThroughCoupling_withhold`）；其余若随体之有无而改其取与，比较须另计其回应，只在体之回应所及之内决定。名取「損，偏去也」〔MI1-S-JS〕（定域，mojing-sun-pian-qu）：去其体而以存者对照兼；墨经断存者为损，这里无体之水平可以广于有体者，也可以狭于之，“损”之方向不入。「偏去莫加少，說在故」〔MI1-S-JX〕（定域，mojing-pian-qu-mo-jia-shao；训释有分歧，置信低）：读作去一偏而其余不增不减，那正是此比较的前提，不是普遍之事。\n\n**證**　`Becoming.Flow.withhold`、`Becoming.Flow.WithheldLevels`、`Becoming.Flow.WithheldLevels.unique`、`Becoming.Flow.Balances.withheld`、`Becoming.Flow.respondsThroughCoupling_withhold`；记录 [closing-needs-net-draw](../results/records/closing-needs-net-draw.md)、[comparison-where-the-rest-responds](../results/records/comparison-where-the-rest-responds.md)。\n\n### 六·五　成生与绝生\n\n**經**　生，生成也，与退化相对。成生，有一体之水平广无之者也；绝生，无之者广有之者也。体之于所容，成生、绝生、相赅、互有所长，四者不相兼。\n\n**說**　成生（生成的，generative）与绝生（退化的，degenerative）是新组合（成＋生、绝＋生），沿用早期文本之词：一体之向只在其有无二水平之路的比较中定，不看它是否新出、是否活动。四者不相兼由六·三直接得出；一个构造之宇中，自外与者成生（`Becoming.Restoring.Inflow.widens`），清除者绝生（`Becoming.Clearing.narrows`），输送者互有所长（`Becoming.Transfer.mixed`）；而凡衡，每步与如其取之体皆相赅（`Becoming.Flow.Balances.changes_nothing`）。讀（AI，D2）：成生、相赅、绝生读生成的、中性的、退化的；互有所长不是中性，而是须有度量之处；生成与退化在同一展开中而不重叠，所以“生”从不指任何新的组织。绝生不含永久：一体所阖者之后或可复得，不可再得者名成闭（篇七）；单说“生”只指生成，生起另名“作”（篇三）。对照（相分，laozi-38-shi-dao-er-hou-de）：「故失道而后德，失德而后仁，失仁而后义，失义而后礼」〔YD-LAO-BASE〕把后出者排成单向的丧失之梯，起点完满、分化即丧失。这里退化只由所容之比较而定，不能从“后出”推出“退化”；而一个从某步起持续活动之兼，其部分之活动皆终、活动之部分有清单，则任何有穷之表以外的部分在任意晚之步作，它恰经新部分而久（`Becoming.Web.Whole.needs_new`）。\n\n**證**　`Becoming.Web.Widens`、`Becoming.Web.Widens.not_reverse`、`Becoming.Restoring.Inflow.widens`、`Becoming.Clearing.narrows`、`Becoming.Transfer.mixed`、`Becoming.Flow.Balances.changes_nothing`；讀（AI，D2）；记录 [four-cases-of-a-part](../results/records/four-cases-of-a-part.md)。\n\n### 六·六　余地\n\n**經**　余地，无体之水平足一需而所余之量也。凡衡，一待者于一步被支持，恰当于其每所待，所需加体之所累取，不过无体之水平加体之所累与：体之净取守余地之内。衡只须在此待者之所待、在此步之前。\n\n**說**　余地（余量，margin）属于一个关系：无体时一所待之水平与一待者在其上之需；它不属于体，也不属于待者。体之净取（所累取减所累与）守在余地之内，此待者就仍被支持（`Becoming.Flow.Balances.supported_iff_within_margin`）；只在该待者之所待、在此步之前要求衡，同一界就成立（`Becoming.Flow.supported_iff_within_margin_at`），二者都由六·四之差一步推出（`Becoming.Flow.Balances.withheld`）。余字只在复词中用：其余、余地、所失各不相借。名取「以无厚入有間，恢恢乎其於遊刃必有餘地矣」〔ZH1-S03〕（相合，zhuangzi-you-ren-bi-you-yu-di；AI 读法）：刃是待者，节间是它所处之水平，刃之厚是其所需；以无厚入有间即所需远小于水平而余地宽，所以十九年而刃之所需始终被满足；被保全的是刃，牛之形成则全被解开。「当其无，有车之用」〔YD-LAO-BASE〕（定域，laozi-11-dang-qi-wu-you-che-zhi-yong）：用在实物所留之处，与余地属于关系相合；但经文之无是被结构围成的中空，余地是数量之差，不是一个区域，“无”作本体亦不入。\n\n**證**　`Becoming.Flow.Balances.supported_iff_within_margin`、`Becoming.Flow.supported_iff_within_margin_at`、`Becoming.Flow.Balances.withheld`；记录 [closing-needs-net-draw](../results/records/closing-needs-net-draw.md)。\n\n### 六·七　阖与闢\n\n**經**　阖，无体容之而有体不支持之也；闢，有体支持之而无体不容之也。凡衡：体至一步，于一待者之每所待累与不少于累取，则此待者无体容之，有体即支持之，故阖须净取；累取不少于累与，则此待者有体支持之，无体即容之，故闢须净与；体每步于每所待与不少于取，则有体赅无体，无所阖；与不多于取，则无体赅有体，无所闢；与如其取，则相赅。\n\n**說**　阖（关闭，closing）与闢（打开，opening）是一体在一步上的反事实作用：有它与无它，某待者之被支持与否不同。阖须在其所待上有净取（`Becoming.Flow.Balances.supported_of_net_give`），由六·六，更须越过余地；闢须净与（`Becoming.Flow.Balances.admits_of_net_draw`）；逐步与不少于取者什么也不阖，与不多于取者什么也不闢，与如其取者什么也不改（`Becoming.Flow.Balances.closes_nothing`、`Becoming.Flow.Balances.opens_nothing`、`Becoming.Flow.Balances.changes_nothing`）。这些证明都是构造的；若要在一待者不被支持时指出是哪一所待被越过，则须用辞皆定然否。阖不是成闭：阖是一步上某待者不被支持，成闭是入于律所不离之区而不复返（篇七），阖者之后可以复得。讀（AI，D35）：阖须净取、闢须净与之形式化为本论所采。名取「一阖一辟谓之变」〔DS02〕（相合，xici-yi-he-yi-pi）：经文所说是时间上的交替，在此对应另一层，即所需不收紧时失支持只因某所待下降、所需不松时得支持只因某所待上升（`Becoming.Web.LosesSupport.falls`、`Becoming.Web.GainsSupport.rises`）；名表之阖、闢只取反事实一层，正文保留“闢”字形，以免与“辟”（譬）相撞。「水善利万物而不争」〔YD-LAO-BASE〕（相合，laozi-08-shan-li-wan-wu-er-bu-zheng）：与不少于取者无所阖，所以利物而不使所容变狭。\n\n**證**　`Becoming.Flow.Balances.supported_of_net_give`、`Becoming.Flow.Balances.admits_of_net_draw`、`Becoming.Flow.Balances.closes_nothing`、`Becoming.Flow.Balances.opens_nothing`、`Becoming.Flow.Balances.changes_nothing`、`Becoming.Web.LosesSupport.falls`、`Becoming.Web.GainsSupport.rises`；讀（AI，D35）；记录 [closing-needs-net-draw](../results/records/closing-needs-net-draw.md)、[four-cases-of-a-part](../results/records/four-cases-of-a-part.md)。\n\n### 六·八　广之界与失之界\n\n**經**　凡衡，有体之水平广无体者，恰当：凡无体所容者，体之净取皆守余地之内；且于某步，有一无体所不容者，体之取与使之入余地之内。于任一顾、任一方：有体之路于无体之路无丧，恰当凡有顾而为无体所容者，体之净取皆守余地之内；无体之路于有体之路有得，恰在一有顾而为无体所容者，体之净取越其余地之处。\n\n**說**　这是所容之界（`Becoming.Flow.Balances.widens_iff_within_margin`）：成生恰是净取处处守在余地之内，且其取与至少在一处把一个原不被容者带入余地之内；衡只须在每个待者之所待、在其步之前（`Becoming.Flow.widens_iff_within_margin_at`）。同一界对任何顾（意义，significance）、从任何方（立场，standpoint）都成立，不用延续之条件：无丧（保留，retains）恰在余地之内，失一有顾之续恰在越过余地之处（`Becoming.Flow.Balances.retains_iff_within_margin`、`Becoming.Flow.Balances.loses_iff_beyond_margin`），有得（增加，adds）恰在取与带入之处（`Becoming.Flow.Balances.adds_iff_within_margin`）。讀（AI，D13）：“不损”读作无丧，其界即余地，是关系自身的相变之界，不是展开之外的意志或信念。对照（定域，tai-daxiang-cai-cheng-fu-xiang）：「后以財成天地之道，輔相天地之宜」〔YD-JP11〕：若读“財”（裁）为使某些不再被容、“輔”为使另一些得以形成（AI读法，依程颐注），则有体与无体各有所长，是互有所长而非广，唯净取处处守在余地之内而有所带入时才是成生；大象所取之治理规范不入。「能盡物之性，則可以贊天地之化育」〔RU1-S-ZY〕（定域，zhongyong-zan-tiandi-zhi-hua-yu）：赞化育在此只是成生之体，其确切条件即本条；“尽物之性”预设物有先定之性，不入。\n\n**證**　`Becoming.Flow.Balances.widens_iff_within_margin`、`Becoming.Flow.widens_iff_within_margin_at`、`Becoming.Flow.Balances.retains_iff_within_margin`、`Becoming.Flow.Balances.loses_iff_beyond_margin`、`Becoming.Flow.Balances.adds_iff_within_margin`；讀（AI，D13）；记录 [significance-retained-within-margin](../results/records/significance-retained-within-margin.md)、[four-cases-of-a-part](../results/records/four-cases-of-a-part.md)。\n\n### 六·九　容之所从来\n\n**經**　凡衡、唯活动者与、活动皆被支持之处：一所待升，必有一在而被支持者与之；一待者跨一步所需不松而得支持，则非其所待皆无被支持者与之；一族于某步无一被支持，其所需自此不松，且凡与族者之所待者皆族者，则此后无一被支持。\n\n**說**　支持只从被支持者得来（`Becoming.Flow.rise_given_by_supported`、`Becoming.Flow.gains_from_supported`）：后来得支持者，其支持来自参与其中、此刻已被支持的与之者；第二句是双重否定之式（“非皆无”），在可判定处读作“有”。没有族外之与，终局吸收（`Becoming.Flow.unsupported_stays`）；每个前提都不可少，一个构造之宇中各有其例：所需松解（`Becoming.Restoring.Adapting.restores`）、族外有与（`Becoming.Restoring.Inflow.restores`）、与者不活动、活动之与者不被支持、升而无与者，各使支持再来。在跨步之层，所需不松时得支持只因某所待上升，所需不收紧时失支持只因某所待下降（`Becoming.Web.GainsSupport.rises`、`Becoming.Web.LosesSupport.falls`）。讀（AI，D35）：无自外来之与时，所容之开唯由被支持者之与；这是生生（六·十四）“所成者保、补、递、创后生之所待与生者”的一面。对照（相合，zhonglun-kong-yi-yi-qie-fa-de-cheng）：「以有空義故，一切法得成；若無空義者，一切則不成」〔FO1-S-MMK〕：只取空之关系核心，成与不成都由所待之变给出，不待任何所待者在这两条律下无从得失；空作解脱之目标、真如之体不入。「泉涸，魚相與處於陸，相呴以濕，相濡以沫，不如相忘於江湖」〔ZH1-S06〕（定域，zhuangzi-xiang-ru-yi-mo）：相濡以沫是族内之与，不能使支持再来，与终局吸收同构；“不如”是评价，只在以广为愈之下、且设江湖之水平广于涸泉时成立。\n\n**證**　`Becoming.Flow.rise_given_by_supported`、`Becoming.Flow.gains_from_supported`、`Becoming.Flow.unsupported_stays`、`Becoming.Restoring.Adapting.restores`、`Becoming.Restoring.Inflow.restores`、`Becoming.Web.GainsSupport.rises`、`Becoming.Web.LosesSupport.falls`；讀（AI，D35）；记录 [support-from-the-supported](../results/records/support-from-the-supported.md)。\n\n### 六·十　日新与益\n\n**經**　日新，自某步起每状异于其先之每状也；益，一族之存量跨一步而升也。凡日新之序，无有穷之表尽其状；藏往之行，日新。凡一族自某步起日新，则于任意晚之步有益，其存量过任一界。凡益，计入其余，必有益之者。\n\n**說**　日新（新，novelty）只名“从某步起不再回到先前之状”，不带“自新”之德性义，也不带“凡新皆善”：作本身不定广狭（六·十五）。日新之序不为任何有穷之表所尽（`Becoming.unheld_of_new`、`Becoming.unlisted_of_new`），所以日新须开；藏往（带着历史）之行永不回到先前之状（`Becoming.Law.withHistory_new`）。益（增益，gain）只指一族之存量跨一步上升；一族日新，就在任意晚之步上升，存量超过每一界（`Becoming.Web.rises_late_of_new`、`Becoming.Web.unbounded_of_new`）：新须有益。这两条不另加前提，但依于量为自然数、状由一有穷之族的诸水平组成，这是表示的承诺。每一益都有所自：计入其余（整体之其余读作一个关系项），必有一关系项与此族多于所取（`Becoming.Flow.rise_netGiver`，无前提）；这个益之者是流中某一关系项或其余，律不指定一源。对照（定域，xici-ri-xin-sheng-de）：「日新之谓盛德」〔DS02〕：名出此句，孔疏「日日增新」〔YWH-H5〕之“增”恰是新之所需；评为“盛德”属评价，不入。\n\n**證**　`Becoming.unheld_of_new`、`Becoming.unlisted_of_new`、`Becoming.Law.withHistory_new`、`Becoming.Web.rises_late_of_new`、`Becoming.Web.unbounded_of_new`、`Becoming.Flow.rise_netGiver`；记录 [where-novelty-gain-comes-from](../results/records/where-novelty-gain-comes-from.md)、[returning-novelty-forgetting-on-levels](../results/records/returning-novelty-forgetting-on-levels.md)、[recurrence-without-premise](../results/records/recurrence-without-premise.md)。\n\n### 六·十一　新之所从来\n\n**經**　凡与不过取：一无重之族自某步起日新，则凡含之之无重族，于任意晚之步，或其余净与之，或不封。凡兼，其所待尽在一无重之表，与不过取，其余自某步起不净与之：则任意晚处皆有二步之状同，不日新。\n\n**說**　与不过取（无中不生，第一定律，gainless）是新组合的固定短语：所与不多于所取。在它之下，日新之族之益在任意晚之步来自其余，或来自越过族界的交换（`Becoming.Flow.new_from_rest_or_open`），凡含它的无重之族亦然（`Becoming.Flow.new_beyond_every`）：没有有穷之族能封住不尽的日新。讀（AI，D7）：开（越过每个有穷之族的交换）与益（净流入）分开，继续变化须开，日新须益。所待尽在表中之兼，其余不净与之，则状必重现（`Becoming.Flow.whole_recurs_of_rest_idle`、`Becoming.Flow.whole_not_new_of_rest_idle`）：有界之兼中的不息是复，不是日新；一个构造之宇中，闭合之环总量恒为一而作不息（`Becoming.Recycle.closed_unceasing`），有不息而无生生。讀（AI，D5）：生生不息（生生＋不息）是生生在兼上继续，且仍有更多能形成，不是现成之形的复制，也不是数量的无尽增加；只复者有不息而无生生不息，一体由外得与（如地之受日）则在流入持续之时可有之。这里的复依于量为自然数；以实数之量，有界之兼不必精确重现，何者取而代之未决。对照（定域，xugua-wei-ji-zhong-yan）：「物不可窮也，故受之以未濟」〔YD-OW-XG〕：此“窮”是终尽，不是名表之穷；展开不终于完成，在开的世界成立，在有界之中只成立为复，不成立为日新。\n\n**證**　`Becoming.Flow.new_from_rest_or_open`、`Becoming.Flow.new_beyond_every`、`Becoming.Flow.whole_recurs_of_rest_idle`、`Becoming.Flow.whole_not_new_of_rest_idle`、`Becoming.Recycle.closed_unceasing`；讀（AI，D5、D7）；记录 [where-novelty-gain-comes-from](../results/records/where-novelty-gain-comes-from.md)、[unceasing-generation-needs-renewal](../results/records/unceasing-generation-needs-renewal.md)。\n\n### 六·十二　盈科\n\n**經**　盈科，升至一阈而后成一新之感也。凡一取与跨一步始应其所与之所待之水平，即成一环。一构造之中：水平每步升一，至阈而取与始应之；环于至阈之步成，前此不成；其后水平加一，每步倍之；至阈之前，凡阈不早于此者，所经之水平皆同。\n\n**說**　盈科（rising threshold）取「盈科而后进」〔RU2-S-MZ〕之复词：水满坎而后前进；此处约定为一所待之水平升至阈、而后一个新的感（耦合）形成。一般之律是成环（`Becoming.responds_to_own_level`、`Becoming.forms_by_closing`）：一环于某步形成，必经那一步起作用的一个感而闭合。阈之构造见 `Becoming.Closing.Threshold.forms`、`Becoming.Closing.Threshold.not_formed`、`Becoming.Closing.Threshold.level_after`、`Becoming.Closing.Threshold.unforeseen`；所待皆在表中时，环形成之前所携之量至多为步数之多项式（`Becoming.carried_le_polynomial_before`），形成之后则倍增，而阈在何处，此前之历程不显，这与未兆（篇十一）相连。讀（AI，记录 how-loops-form）：哪些环、何时形成，是从展开读出的，不先于展开而立。对照（定域，mengzi-si-duan-kuo-chong）：「凡有四端于我者，知皆扩而充之矣，若火之始然，泉之始达」〔RU2-S-MZ〕：扩充读作回路在阈处形成、所携之差随之增长；扩充是一条历程内的增长，不是二水平之路的比较，所以不取“扩充”为广之名，“足以保四海”之全称不入。\n\n**證**　`Becoming.responds_to_own_level`、`Becoming.forms_by_closing`、`Becoming.Closing.Threshold.forms`、`Becoming.Closing.Threshold.not_formed`、`Becoming.Closing.Threshold.level_after`、`Becoming.Closing.Threshold.unforeseen`、`Becoming.carried_le_polynomial_before`；记录 [how-loops-form](../results/records/how-loops-form.md)。\n\n### 六·十三　复归\n\n**經**　复归，扰其状而为规则所持者吸回也。凡次状唯依规则而不依其余之状，则同规则之二状，自次步起其行同。规则自持者，具一规则之诸状，为法所不离之区。\n\n**說**　复归（扰而复归，perturbation reabsorbed）只名“只扰状态者被吸回”（`Becoming.Law.perturbation_reabsorbed`，即以规则为投影的 `Becoming.Law.reabsorbed` 之实例）；规则自持时，具某规则之诸状是闭（律所不离之区，`Becoming.Law.rule_absorbing`）。一个构造之中，扰其状者被吸入规则所持之状而不复返，扰其规则者则被吸入新规则所持之状（`Becoming.Captured.state_perturbation_drawn`、`Becoming.Captured.rule_perturbation_drawn`）：持久之变须及于规则。早期文本以“稳”名其可贵的一面、以“元闭”名其冻结的一面，二者在脊柱上是同一结构而判语相反；这正说明顾只经比较进入，从不经定义进入：一个闭合是助、是富、还是伤于生生，由六·八之比较定，不由其类型定（讀（AI，D49））。名取「夫物芸芸，各复归其根」〔DS01〕：老子十六章言各返其根，未言扰动，作对照；回到先在之本或未分之初之义不入。对照（定域，zhuangzi-ying-ning）：「攖寧也者，攖而後成者也」〔ZH1-S06〕：扰后复成作为全称不成立，脊柱只给其成立之域即本条；同段“无不毁”一面不为复归所覆盖。\n\n**證**　`Becoming.Law.perturbation_reabsorbed`、`Becoming.Law.reabsorbed`、`Becoming.Law.rule_absorbing`、`Becoming.Captured.state_perturbation_drawn`、`Becoming.Captured.rule_perturbation_drawn`；讀（AI，D49）；记录 [target-capture](../results/records/target-capture.md)、[necessarily-drawn-is-not-returning](../results/records/necessarily-drawn-is-not-returning.md)。\n\n### 六·十四　生生\n\n**經**　生生，生而所生又生也：所成者保、补、递、创后生之所待与生者；其向以广较之。\n\n**說**　生生（整体中的生及其继续生成）是约定之名（讀（AI，D1）），不是一个谓词，也不是“活”：其结构由诸律分担。无自外来之与时，所容之开唯由被支持者之与（六·九）；作耗减一有穷之族、而每一升皆由更新该所待者所为时，不息使更新之活动不会自某步起再无（`Becoming.Web.Unceasing.activeRenewer_recurs`，结论为双重否定）；一个从某步起持续活动之兼，其部分之活动皆终、活动之部分有清单，则只经部分之不断作而久（`Becoming.Web.Whole.needs_arising`）；恒者不竭（`Becoming.Web.renewing_not_consuming`）。其向以广较（`Becoming.Web.Widens`）：广只比较所容这一面，生成之力（更新之能、关系之丰富）尚不是度量（未决）。生生不是新：新须有益（六·十），有界之兼之不息是复（六·十一），作本身不定广狭（六·十五）。生成与退化不重叠；以此词名之，较系辞之相续义多出方向。对照（定域，xici-sheng-sheng-zhi-wei-yi）：「生生之谓易」〔DS02〕：名出此句，其史义是相续不绝；易也包括退化，所以此句在本论中只就生成一面成立。程颐对举大过二爻（相合，yichuan-daguo-gen-ti-yu-hua）：「枯楊下生根稊則能復生」〔YD-CY2〕，而「枯楊不生根而生華旋復枯矣安能久乎」〔YD-CY2〕：所分在能否再生其所待，不在新出与否；凡衡、唯活动者与、活动须被支持，一待者每一活动步皆须并取某所待，而其续之供给者皆不被支持，则其连续活动之步数不过该所待起始之水平（`Becoming.Flow.Balances.consumption_ends_with_feeders`），即“旋复枯”。\n\n**證**　`Becoming.Web.Widens`、`Becoming.Flow.gains_from_supported`、`Becoming.Web.Unceasing.activeRenewer_recurs`、`Becoming.Web.Whole.needs_arising`、`Becoming.Web.renewing_not_consuming`、`Becoming.Flow.Balances.consumption_ends_with_feeders`；讀（AI，D1、D5）；记录 [comparison-by-widening](../results/records/comparison-by-widening.md)、[support-from-the-supported](../results/records/support-from-the-supported.md)、[unceasing-generation-needs-renewal](../results/records/unceasing-generation-needs-renewal.md)、[whole-persists-through-generation](../results/records/whole-persists-through-generation.md)、[consumption-ends-with-feeders](../results/records/consumption-ends-with-feeders.md)。\n\n### 六·十五　恒、竭、作与广\n\n**經**　凡衡，唯活动者取，且唯取其所资：一体所资之所待皆恒持，则有体赅无体，不狭。凡衡，体每步于每所待与不多于取；一待者于某步之一所需，此后其所待之水平永不及，而无体之水平于其后一步，以不小之需容此待者：则狭。凡衡、唯活动者取且唯取其所资、唯活动者与：体无一始而活动、无一作者，则相赅。\n\n**說**　恒（更新，renewing）与竭（消耗，consuming）是一个待者在整段运行上的类，广狭是一体在所容之序上之所居，二者由律相连，不由定义相同（`Becoming.Flow.Balances.includes_of_renewed`、`Becoming.Flow.Balances.not_narrows_of_renewed`、`Becoming.Flow.Balances.narrows_of_consumed`）；恒持（新组合，恒＋持）指每个依存每步皆持。每个前提都是界：先取者在其步属更新之内而整段为竭，其体却狭（`Becoming.Preemption.renewingAt_consuming_narrows`），所以一步之类不定；一体可整段为竭而不取，所容相赅（`Becoming.Untaken.consuming_keeps`），所以竭本身不狭。恒是相赅，不是广：恒者之体不必成生（讀（AI，D2））。体之于序始于其成员活动之处：无一始而活动、无一作者，什么也不改（`Becoming.Flow.Balances.keeps_of_not_arising`）；而作本身不定广狭，同样前提下作者可狭可广，各有构造之例（`Becoming.ArisingDrawer.arises_narrows`、`Becoming.ArisingGiver.arises_widens`）。对照（定域，hanfei-jielao-min-zhi-sheng-sheng）：「凡民之生生，而生者固動，動盡則損也」〔CV1-S-JL〕：此“生生”为营生（动宾），与系辞异义；不得补给之取确使存量下降，但恒者每步被支持（`Becoming.Web.renewing_keeps_support`），所以“生尽”只在更新不继之处才可能。\n\n**證**　`Becoming.Flow.Balances.includes_of_renewed`、`Becoming.Flow.Balances.not_narrows_of_renewed`、`Becoming.Flow.Balances.narrows_of_consumed`、`Becoming.Flow.Balances.keeps_of_not_arising`、`Becoming.Preemption.renewingAt_consuming_narrows`、`Becoming.Untaken.consuming_keeps`、`Becoming.ArisingDrawer.arises_narrows`、`Becoming.ArisingGiver.arises_widens`；讀（AI，D2）；记录 [the-run-classes-and-widening](../results/records/the-run-classes-and-widening.md)。\n\n### 六·十六　沿读之广\n\n**經**　以一读读此宇之待者于彼宇：凡此路所容者，读之皆为彼路所容，曰沿读而赅；彼路容一非此路所容者之读者，曰沿读而有所长；二者皆然，曰沿读而广。读为自身，沿读而广即广。凡宇增新待者与新所待，而旧待者之所需不改、旧水平如故：则沿旧之入而广，恰当某步容一新待者；而于旧待者，不广不狭。\n\n**說**　广（`Becoming.Web.Widens`）只比较一个既定之类的待者在既定之阈上之所容：一条历程若带来此类之外的待者或所需，在这个度量上什么也不广，而生生（创后生之所待与生者）可以多于广所能记（六·十四）。沿读之广（`Becoming.Web.WidensAlong`）以一个读法把此宇之待者读入彼宇再较；读为自身时恰是广（`Becoming.Web.widensAlong_id_iff`）。长成之宇（增新待者与新所待而旧所需不改）沿旧之入广旧宇，恰当旧之容保持，且或旧待者得容、或新待者被容（`Becoming.Web.grow_widensAlong_iff`）；旧水平如故者只在新待者被容时广（`Becoming.Web.grow_widensAlong_iff_new`），而在旧待者上不广不狭（`Becoming.Web.grow_widens_unregistered`）：这正是广在旧类上所不记者。以一个新所待附一个新待者，广恰在某步新所待之水平足其需之处（`Becoming.Web.attach_widensAlong_iff`）。二宇之间，读法是给出的；在一个展开之内，它由相续读出（六·十七）。\n\n**證**　`Becoming.Web.WidensAlong`、`Becoming.Web.widensAlong_id_iff`、`Becoming.Web.grow_widensAlong_iff`、`Becoming.Web.grow_widensAlong_iff_new`、`Becoming.Web.grow_widens_unregistered`、`Becoming.Web.attach_widensAlong_iff`；记录 [widening-along-a-reading](../results/records/widening-along-a-reading.md)。\n\n### 六·十七　跨段之广\n\n**經**　自一步至后一步，沿一相续：凡前步所容者，皆续至后步所容之一者；且后步所容有一者，凡前步续至之者，前步皆不容：曰跨段而广。各续其自身，则跨段之赅与有所长即以名之赅与有所长；凡改认而携此相续者，不改跨段之广；相续之链愈多，有所长愈难。\n\n**說**　在一个展开之内，此步之待者读于后步之待者，不须外给之读法：读法就是相续（延续关系，`Becoming.Web.WidensAcross`）。各待者续其自身时，跨段之赅与有所长恰是以名之赅与有所长（`Becoming.Web.includesAcross_itself_iff`、`Becoming.Web.exceedsAcross_itself_iff`）；凡携带相续的改认都不改跨段之广（`Becoming.Web.widensAcross_reidentify`），所以它属于相续而不属于名；相续之链接愈多，有所长愈难（`Becoming.Web.ExceedsAcross.anti`）。一个构造之中，以名读则此段广，而把后起之待者读作从先已被容者芽出，则一无所加（`Becoming.Bud.readings`）：一段是否广，从相续读出：芽出之读把新起者算作旧者之续，所以同一段可因所取之相续而或广或否；哪一相续为展开所给，见篇三、篇五之续与改认。\n\n**證**　`Becoming.Web.WidensAcross`、`Becoming.Web.includesAcross_itself_iff`、`Becoming.Web.exceedsAcross_itself_iff`、`Becoming.Web.widensAcross_reidentify`、`Becoming.Web.ExceedsAcross.anti`、`Becoming.Bud.readings`；记录 [widening-along-a-reading](../results/records/widening-along-a-reading.md)。\n\n### 六·十八　全与区\n\n**經**　一路赅他路，恰当每步于每区，皆容他路于其区之所容。凡于一区内赅者，于其内之每区亦赅；区外有一他路所容而此路不容者，则于其内每区之外亦有之；全之外无此。\n\n**說**　全先于区（`Becoming.Web.includes_iff_within_every`）：全之较就是同时在每一区内之较；一区之较须先给出那一区，全之较不取任何界为入。区内赅者在其子区内亦赅（`Becoming.Web.AdmitsWithin.narrow`），区外之不容在子区之外亦然（`Becoming.Web.LosesBeyond.narrow`），全之外无物（`Becoming.Web.not_losesBeyond_whole`）。区（region）在此是陈述的参数，不在展开之外：中心及其界都是展开中的待者与关系。一个构造之宇中，清除者每步活动且被支持，在其自身与其所资之源内无所阖，而在其外阖了居者（`Becoming.Clearing.loses_beyond`）：“唯不绝生者能久”对一体不成立，而兼无处推卸其失。早期文本所称“局部开，整体闭”即此结构之一例：一个构造之中，各自所取皆在一步所与之内，合取仍越之（`Becoming.Pair.own_not_joint`）。对照（定域，tongren-yu-zong-lin-dao）：「同人于宗，吝道也」〔YD-JP13〕：吝不是宗本身之过，而是把同限于宗、只在宗内相较时，宗外之失落在比较之外；经文不说宗族之关系有害，这一限定保留。\n\n**證**　`Becoming.Web.includes_iff_within_every`、`Becoming.Web.AdmitsWithin.narrow`、`Becoming.Web.LosesBeyond.narrow`、`Becoming.Web.not_losesBeyond_whole`、`Becoming.Clearing.loses_beyond`；记录 [loss-beyond-a-region](../results/records/loss-beyond-a-region.md)。\n\n### 六·十九　己内之广\n\n**經**　凡衡，一体之活动于己内广（于己之待者，有体赅无体，且某步有所长）：则有体广无体，恰当凡己外为无体所容者，体之净取皆守余地之内；互有所长，恰当于一己外为无体所容者越之。己外一待者为无体所容，其一所需恰等无体之水平，体于此所待至此有净取：则互有所长。体于己外为无体所容者之所待皆无净取：则广。\n\n**說**　己（自身区域）在此是一体自己之待者所成之已定之区，即其选项（篇十四之己是同一区之构，用于顾）；己内之广（`Becoming.Web.WidensWithin`）在全上必有所长，所以从不相赅、从不狭。它是兼之广，恰在他者之所需留下的余地之内（`Becoming.Flow.Balances.widens_iff_others_within`），越出则互有所长（`Becoming.Flow.Balances.mixed_iff_other_beyond`）；无余地时，对被需要之所待的任何净取都使之互有所长（`Becoming.Flow.Balances.mixed_of_tight`），于他者所需一无净取则广（`Becoming.Flow.Balances.widens_of_untaken_beyond`）。一个构造之中，有一单位余地时己内之广即兼之广，无余地时即互有所长（`Becoming.OwnDrawing.ample_widens`、`Becoming.OwnDrawing.tight_mixed`）；只读己内、两向皆读的度量，即使兼广也记下变化（`Becoming.Flow.Balances.widens_yet_own_changed`），界在他者之需的余地，那度量不读。讀（AI，记录 own-widening-within-the-margin）：以无体之水平为不作为之基线，以己内之广为保留选项、增其所及；这与关于最优策略趋于保留选项、以不作为为基线之影响度量的形式结果同构（记录载其出处）。互有所长不排序：这些律说增其所及在何处阖他者之所能形成，不说它更坏。对照（相分，sunzi-sheng-di-er-yi-qiang）：「車雜而乘之，卒善而養之，是謂勝敵而益強」〔BI1-S-SZ〕以胜负之等次计己之增强，敌之所减落在所计之外；这里己之所增是否兼之广，看他者所需之余地，而称（相对位置）之升必有他方之降（`Becoming.RelativePosition.rise_needs_fall`），一个构造之中每方都取得更多，一方之称仍降（`Becoming.DrawingMore.grow_and_fall`）。\n\n**證**　`Becoming.Web.WidensWithin`、`Becoming.Flow.Balances.widens_iff_others_within`、`Becoming.Flow.Balances.mixed_iff_other_beyond`、`Becoming.Flow.Balances.mixed_of_tight`、`Becoming.Flow.Balances.widens_of_untaken_beyond`、`Becoming.Flow.Balances.widens_yet_own_changed`、`Becoming.OwnDrawing.tight_mixed`；记录 [own-widening-within-the-margin](../results/records/own-widening-within-the-margin.md)。\n\n### 六·二十　广为诸权之所共\n\n**經**　于一有穷之表：一路广他路，恰当凡于表中每项皆有正权者，皆重此路过他路。互有所长者，有正权重此，亦有正权重彼。此路赅他路而所多唯零权之项，则二路权等。一律同权，以所容之数为序。凡一类之序，含诸正权之序而皆于每广而升者，可加与否，一路广他路恰当此类之每序皆排之更高。\n\n**說**　加权（weighting）给表中每项（一步与一待者）一个自然数之权，一路之重是其所容之项的权之和；于每项皆为正者名正权（`Becoming.Weighting.Positive`）。广恰是凡正权都排得更高者（`Becoming.Weighting.widens_iff_every_positive`；在待网上，所容皆在表中、容皆定然否时，即 `Becoming.Web.widens_iff_every_weighting`），对凡在每一广上都升的一类序也是如此，可加与否，优先较差者亦在其中（`Becoming.Weighting.widens_iff_every_of_class`、`Becoming.Weighting.increasing_prior`）：广是诸序之所共，其数学即 Sen 之交集法。偏倚恰只决定互有所长之比较，且两向皆可（`Becoming.Weighting.mixed_either_way`）；给某项零权，就是不把它算入范围（`Becoming.Weighting.weighed_eq_of_unweighted`）；同权即按数目排（`Becoming.Weighting.neutral_ranks_by_number`）。广从不把有所阖之路排在无所阖之路之上（`Becoming.Web.not_widens_of_closes`）。这些都不用顾，不用条件：它们说广是一切在所容上递增之序所共者，所以以广为愈所要求的不多于这些序的一致；以广为较好仍是设（篇十五）。\n\n**證**　`Becoming.Weighting.widens_iff_every_positive`、`Becoming.Web.widens_iff_every_weighting`、`Becoming.Weighting.widens_iff_every_of_class`、`Becoming.Weighting.mixed_either_way`、`Becoming.Weighting.weighed_eq_of_unweighted`、`Becoming.Weighting.neutral_ranks_by_number`、`Becoming.Web.not_widens_of_closes`；记录 [widening-as-what-every-weighting-ranks](../results/records/widening-as-what-every-weighting-ranks.md)。\n\n### 六·二十一　若凡续皆有顾\n\n**經**　若凡续皆有顾（设，不断言），则于每方：赅即无丧，有所长即有得；广恰无丧而有得，相赅恰两无丧，互有所长恰两有得。\n\n**說**　凡续皆有顾（延续之条件，`Becoming.Unrestricted`；新组合，凡＋续＋皆有顾）是篇十四所陈述而不断言的全称条件：从每方，凡物之续于每步皆有顾；以它为前提的定理都是这一全称之实例。在它之下，无丧（`Becoming.Web.Retains`）即赅、有得（`Becoming.Web.Adds`）即有所长，从每方皆然（`Becoming.Web.retains_iff_includes`、`Becoming.Web.adds_iff_exceeds`），于是所容读作顾而无所遗，条件不添任何规则（`Becoming.Web.widens_iff_retains_adds`、`Becoming.Web.keeps_iff_retains`、`Becoming.Web.mixed_iff_adds`）。它给顾，不给正面之价；它定范围（谁之失算在内），其内容超出畛内之顾（自身之预设）者，即不易乎畛之一步，把范围推及不回到任何者之失；条件本身不排序：互有所长者，彼此皆非于对方无丧，一个构造之中二者都不保留对方（`Becoming.Transfer.unordered`），捕食、凋亡与除癌皆属此类，分别其中何者为害、何者非害须另立度量。排序唯在以广为愈（C，新组合，以＋广＋为愈：以扩大为更好，设）：在水平之路上 C 成立，只因“更好”读作广，证明是定义之展开（`Becoming.Web.paths_comparison_widens`），C 的规范内容在于把广称为更好，此定理不示之。动力学本身不定顾（`Becoming.Web.significance_undetermined`），所以条件与 C 的根据都未决。对照（定域，xici-tiandi-da-de-yue-sheng）：「天地之大德曰生」〔DS03〕：以生为大德是一项比较承诺的表述，相当于 C，不是定理，也不把意志或固有之价归于任何一方。（相分，huiyuan-hua-jin-yin-yuan-yong-xi）「天地雖以生生為大。而未能令生者不化」〔IN1-S03〕：慧远以作之止为所求，方向与此相反；动力学不驳倒它，它是另一个评价之起点。\n\n**證**　`Becoming.Unrestricted`、`Becoming.Web.retains_iff_includes`、`Becoming.Web.adds_iff_exceeds`、`Becoming.Web.widens_iff_retains_adds`、`Becoming.Web.keeps_iff_retains`、`Becoming.Web.mixed_iff_adds`、`Becoming.Transfer.unordered`、`Becoming.Web.paths_comparison_widens`；记录 [continuation-condition-decomposition](../results/records/continuation-condition-decomposition.md)、[comparison-by-widening](../results/records/comparison-by-widening.md)、[four-cases-of-a-part](../results/records/four-cases-of-a-part.md)。\n\n#### 对照\n\n- 「生生之谓易」〔DS02〕——定域：名出此句，史义为相续不绝；本论之生生多出方向（以广较），且只就生成一面成立（xici-sheng-sheng-zhi-wei-yi）。\n- 「一阖一辟谓之变」〔DS02〕——相合：所需不收紧时失支持只因所待下降，不松时得支持只因所待上升；名表之阖、闢取反事实一层（xici-yi-he-yi-pi）。\n- 「以无厚入有間，恢恢乎其於遊刃必有餘地矣」〔ZH1-S03〕——相合：净取守在余地之内，待者仍被支持（zhuangzi-you-ren-bi-you-yu-di）。\n- 「皆有所長，時有所用。雖然，不該不徧」〔ZH1-S33〕——相合：彼此各有所长是互有所长，须有度量方可排序；不赅即不包含全体（zhuangzi-tianxia-jie-you-suo-chang）。\n- 「枯楊不生根而生華旋復枯矣安能久乎」〔YD-CY2〕——相合：其续之供给者皆不被支持者，其作有界而终；新出不即是生（yichuan-daguo-gen-ti-yu-hua）。\n- 「殺生者不死，生生者不生」〔ZH1-S06〕——相分：外于生死、自身不生之源属本原层；与之者在其与之之步自身被支持，在关系之内（`Becoming.Flow.gains_from_supported`；zhuangzi-sheng-sheng-zhe-bu-sheng）。\n- 「自然已足，益之则忧」〔DS01〕——相分：每物有一已足之定分，属固定本性之层；所需随关系而结、解，可松解而支持再来（`Becoming.Restoring.Adapting.restores`；wangbi-20-zi-ran-yi-zu-yi-zhi-ze-you）。\n- 「天地雖以生生為大。而未能令生者不化」〔IN1-S03〕——相分：以作之止为所求，方向相反；动力学不定顾，所以它是另一评价之起点，不被驳倒（huiyuan-hua-jin-yin-yuan-yong-xi）。\n",
+ "declarations": [
+  "Becoming.Web.Supported",
+  "Becoming.Web.supported_iff_admits",
+  "Becoming.Web.Admits.mono",
+  "Becoming.Web.Dependent",
+  "Becoming.Web.Admits",
+  "Becoming.Web.Includes",
+  "Becoming.Web.Exceeds",
+  "Becoming.Web.Includes.refl",
+  "Becoming.Web.Includes.trans",
+  "Becoming.Web.Includes.not_exceeded",
+  "Becoming.Web.Widens",
+  "Becoming.Web.Widens.not_reverse",
+  "Becoming.Web.Widens.trans",
+  "Becoming.Web.Keeps",
+  "Becoming.Web.Mixed",
+  "Becoming.Web.Keeps.symm",
+  "Becoming.Web.Mixed.symm",
+  "Becoming.Web.Widens.not_keeps",
+  "Becoming.Web.Widens.not_mixed",
+  "Becoming.Web.Keeps.not_mixed",
+  "Becoming.Flow.withhold",
+  "Becoming.Flow.WithheldLevels",
+  "Becoming.Flow.WithheldLevels.unique",
+  "Becoming.Flow.Balances.withheld",
+  "Becoming.Flow.respondsThroughCoupling_withhold",
+  "Becoming.Restoring.Inflow.widens",
+  "Becoming.Clearing.narrows",
+  "Becoming.Transfer.mixed",
+  "Becoming.Flow.Balances.changes_nothing",
+  "Becoming.Web.Whole.needs_new",
+  "Becoming.Flow.Balances.supported_iff_within_margin",
+  "Becoming.Flow.supported_iff_within_margin_at",
+  "Becoming.Flow.Balances.supported_of_net_give",
+  "Becoming.Flow.Balances.admits_of_net_draw",
+  "Becoming.Flow.Balances.closes_nothing",
+  "Becoming.Flow.Balances.opens_nothing",
+  "Becoming.Web.LosesSupport.falls",
+  "Becoming.Web.GainsSupport.rises",
+  "Becoming.Flow.Balances.widens_iff_within_margin",
+  "Becoming.Flow.widens_iff_within_margin_at",
+  "Becoming.Flow.Balances.retains_iff_within_margin",
+  "Becoming.Flow.Balances.loses_iff_beyond_margin",
+  "Becoming.Flow.Balances.adds_iff_within_margin",
+  "Becoming.Flow.rise_given_by_supported",
+  "Becoming.Flow.gains_from_supported",
+  "Becoming.Flow.unsupported_stays",
+  "Becoming.Restoring.Adapting.restores",
+  "Becoming.Restoring.Inflow.restores",
+  "Becoming.unheld_of_new",
+  "Becoming.unlisted_of_new",
+  "Becoming.Law.withHistory_new",
+  "Becoming.Web.rises_late_of_new",
+  "Becoming.Web.unbounded_of_new",
+  "Becoming.Flow.rise_netGiver",
+  "Becoming.Flow.new_from_rest_or_open",
+  "Becoming.Flow.new_beyond_every",
+  "Becoming.Flow.whole_recurs_of_rest_idle",
+  "Becoming.Flow.whole_not_new_of_rest_idle",
+  "Becoming.Recycle.closed_unceasing",
+  "Becoming.responds_to_own_level",
+  "Becoming.forms_by_closing",
+  "Becoming.Closing.Threshold.forms",
+  "Becoming.Closing.Threshold.not_formed",
+  "Becoming.Closing.Threshold.level_after",
+  "Becoming.Closing.Threshold.unforeseen",
+  "Becoming.carried_le_polynomial_before",
+  "Becoming.Law.perturbation_reabsorbed",
+  "Becoming.Law.reabsorbed",
+  "Becoming.Law.rule_absorbing",
+  "Becoming.Captured.state_perturbation_drawn",
+  "Becoming.Captured.rule_perturbation_drawn",
+  "Becoming.Web.Unceasing.activeRenewer_recurs",
+  "Becoming.Web.Whole.needs_arising",
+  "Becoming.Web.renewing_not_consuming",
+  "Becoming.Flow.Balances.consumption_ends_with_feeders",
+  "Becoming.Flow.Balances.includes_of_renewed",
+  "Becoming.Flow.Balances.not_narrows_of_renewed",
+  "Becoming.Flow.Balances.narrows_of_consumed",
+  "Becoming.Preemption.renewingAt_consuming_narrows",
+  "Becoming.Untaken.consuming_keeps",
+  "Becoming.Flow.Balances.keeps_of_not_arising",
+  "Becoming.ArisingDrawer.arises_narrows",
+  "Becoming.ArisingGiver.arises_widens",
+  "Becoming.Web.renewing_keeps_support",
+  "Becoming.Web.WidensAlong",
+  "Becoming.Web.widensAlong_id_iff",
+  "Becoming.Web.grow_widensAlong_iff",
+  "Becoming.Web.grow_widensAlong_iff_new",
+  "Becoming.Web.grow_widens_unregistered",
+  "Becoming.Web.attach_widensAlong_iff",
+  "Becoming.Web.WidensAcross",
+  "Becoming.Web.includesAcross_itself_iff",
+  "Becoming.Web.exceedsAcross_itself_iff",
+  "Becoming.Web.widensAcross_reidentify",
+  "Becoming.Web.ExceedsAcross.anti",
+  "Becoming.Bud.readings",
+  "Becoming.Web.includes_iff_within_every",
+  "Becoming.Web.AdmitsWithin.narrow",
+  "Becoming.Web.LosesBeyond.narrow",
+  "Becoming.Web.not_losesBeyond_whole",
+  "Becoming.Clearing.loses_beyond",
+  "Becoming.Pair.own_not_joint",
+  "Becoming.Web.WidensWithin",
+  "Becoming.Flow.Balances.widens_iff_others_within",
+  "Becoming.Flow.Balances.mixed_iff_other_beyond",
+  "Becoming.Flow.Balances.mixed_of_tight",
+  "Becoming.Flow.Balances.widens_of_untaken_beyond",
+  "Becoming.OwnDrawing.ample_widens",
+  "Becoming.OwnDrawing.tight_mixed",
+  "Becoming.Flow.Balances.widens_yet_own_changed",
+  "Becoming.RelativePosition.rise_needs_fall",
+  "Becoming.DrawingMore.grow_and_fall",
+  "Becoming.Weighting.Positive",
+  "Becoming.Weighting.widens_iff_every_positive",
+  "Becoming.Web.widens_iff_every_weighting",
+  "Becoming.Weighting.widens_iff_every_of_class",
+  "Becoming.Weighting.increasing_prior",
+  "Becoming.Weighting.mixed_either_way",
+  "Becoming.Weighting.weighed_eq_of_unweighted",
+  "Becoming.Weighting.neutral_ranks_by_number",
+  "Becoming.Web.not_widens_of_closes",
+  "Becoming.Unrestricted",
+  "Becoming.Web.Retains",
+  "Becoming.Web.Adds",
+  "Becoming.Web.retains_iff_includes",
+  "Becoming.Web.adds_iff_exceeds",
+  "Becoming.Web.widens_iff_retains_adds",
+  "Becoming.Web.keeps_iff_retains",
+  "Becoming.Web.mixed_iff_adds",
+  "Becoming.Transfer.unordered",
+  "Becoming.Web.paths_comparison_widens",
+  "Becoming.Web.significance_undetermined"
+ ],
+ "records": [
+  "support-from-the-supported",
+  "closing-needs-net-draw",
+  "comparison-by-widening",
+  "four-cases-of-a-part",
+  "comparison-where-the-rest-responds",
+  "significance-retained-within-margin",
+  "where-novelty-gain-comes-from",
+  "returning-novelty-forgetting-on-levels",
+  "recurrence-without-premise",
+  "unceasing-generation-needs-renewal",
+  "how-loops-form",
+  "target-capture",
+  "necessarily-drawn-is-not-returning",
+  "whole-persists-through-generation",
+  "consumption-ends-with-feeders",
+  "the-run-classes-and-widening",
+  "widening-along-a-reading",
+  "loss-beyond-a-region",
+  "own-widening-within-the-margin",
+  "widening-as-what-every-weighting-ranks",
+  "continuation-condition-decomposition"
+ ],
+ "quotes": [
+  {
+   "text": "然则可以为，未必能也；虽不能，无害可以为",
+   "source_id": "RU2-S-XZ23"
+  },
+  {
+   "text": "窮，或有前不容尺也",
+   "source_id": "MI1-S-JS"
+  },
+  {
+   "text": "皆有所長，時有所用。雖然，不該不徧",
+   "source_id": "ZH1-S33"
+  },
+  {
+   "text": "異類不吡，說在量",
+   "source_id": "MI1-S-JX"
+  },
+  {
+   "text": "損，偏去也",
+   "source_id": "MI1-S-JS"
+  },
+  {
+   "text": "偏去莫加少，說在故",
+   "source_id": "MI1-S-JX"
+  },
+  {
+   "text": "故失道而后德，失德而后仁，失仁而后义，失义而后礼",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "以无厚入有間，恢恢乎其於遊刃必有餘地矣",
+   "source_id": "ZH1-S03"
+  },
+  {
+   "text": "当其无，有车之用",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "一阖一辟谓之变",
+   "source_id": "DS02"
+  },
+  {
+   "text": "水善利万物而不争",
+   "source_id": "YD-LAO-BASE"
+  },
+  {
+   "text": "后以財成天地之道，輔相天地之宜",
+   "source_id": "YD-JP11"
+  },
+  {
+   "text": "能盡物之性，則可以贊天地之化育",
+   "source_id": "RU1-S-ZY"
+  },
+  {
+   "text": "以有空義故，一切法得成；若無空義者，一切則不成",
+   "source_id": "FO1-S-MMK"
+  },
+  {
+   "text": "泉涸，魚相與處於陸，相呴以濕，相濡以沫，不如相忘於江湖",
+   "source_id": "ZH1-S06"
+  },
+  {
+   "text": "日新之谓盛德",
+   "source_id": "DS02"
+  },
+  {
+   "text": "日日增新",
+   "source_id": "YWH-H5"
+  },
+  {
+   "text": "物不可窮也，故受之以未濟",
+   "source_id": "YD-OW-XG"
+  },
+  {
+   "text": "盈科而后进",
+   "source_id": "RU2-S-MZ"
+  },
+  {
+   "text": "凡有四端于我者，知皆扩而充之矣，若火之始然，泉之始达",
+   "source_id": "RU2-S-MZ"
+  },
+  {
+   "text": "夫物芸芸，各复归其根",
+   "source_id": "DS01"
+  },
+  {
+   "text": "攖寧也者，攖而後成者也",
+   "source_id": "ZH1-S06"
+  },
+  {
+   "text": "生生之谓易",
+   "source_id": "DS02"
+  },
+  {
+   "text": "枯楊下生根稊則能復生",
+   "source_id": "YD-CY2"
+  },
+  {
+   "text": "枯楊不生根而生華旋復枯矣安能久乎",
+   "source_id": "YD-CY2"
+  },
+  {
+   "text": "凡民之生生，而生者固動，動盡則損也",
+   "source_id": "CV1-S-JL"
+  },
+  {
+   "text": "同人于宗，吝道也",
+   "source_id": "YD-JP13"
+  },
+  {
+   "text": "車雜而乘之，卒善而養之，是謂勝敵而益強",
+   "source_id": "BI1-S-SZ"
+  },
+  {
+   "text": "天地之大德曰生",
+   "source_id": "DS03"
+  },
+  {
+   "text": "天地雖以生生為大。而未能令生者不化",
+   "source_id": "IN1-S03"
+  },
+  {
+   "text": "殺生者不死，生生者不生",
+   "source_id": "ZH1-S06"
+  },
+  {
+   "text": "自然已足，益之则忧",
+   "source_id": "DS01"
+  }
+ ],
+ "missing_names": [
+  {
+   "concept": "level path (Nat → C → Nat), the object widening compares",
+   "used": "水平之路（二路、他路）"
+  },
+  {
+   "concept": "region: a decided family of formations taken as a parameter of a comparison (Web.AdmitsWithin, LosesBeyond)",
+   "used": "区（区域）；全与区"
+  },
+  {
+   "concept": "weighting, positive weighting, zero weight (Becoming.Weighting)",
+   "used": "加权、正权、零权"
+  },
+  {
+   "concept": "rule component of a configuration S × R (Law.perturbation_reabsorbed, rule_absorbing, Captured)",
+   "used": "规则"
+  },
+  {
+   "concept": "widening along a reading of one world's formations in another's (Web.WidensAlong)",
+   "used": "沿读而赅／沿读而有所长／沿读而广（沿读之广）"
+  },
+  {
+   "concept": "grown world (Web.grow, Web.Growth, Web.attach)",
+   "used": "长成之宇（增新待者与新所待而旧所需不改）"
+  },
+  {
+   "concept": "widening across a stretch along a continuation (Web.WidensAcross, IncludesAcross, ExceedsAcross)",
+   "used": "跨段而广（跨段之赅、跨段之有所长）"
+  },
+  {
+   "concept": "a formation read as budding from one already admitted (Bud)",
+   "used": "芽出"
+  },
+  {
+   "concept": "own widening: widening within a part's own decided region (Web.WidensWithin own)",
+   "used": "己内之广（借篇十四之己，此处指一体之选项所成之区）"
+  },
+  {
+   "concept": "stock of a family (Web.stock)",
+   "used": "存量"
+  },
+  {
+   "concept": "a part's net draw / net give / net exchange against the levels without it",
+   "used": "净取（所累取减所累与）、净与、取与"
+  },
+  {
+   "concept": "witness in one constructed world",
+   "used": "一个构造之宇中（确有其例）"
+  },
+  {
+   "concept": "inaction baseline (levels without the part's exchange)",
+   "used": "不作为之基线"
+  },
+  {
+   "concept": "capacity to form (renewal capacity, richness of relations), the component of 生生 widening does not read",
+   "used": "生成之力（更新之能、关系之丰富）"
+  },
+  {
+   "concept": "family without repetition (Distinct) and finite list",
+   "used": "无重之族、有穷之表"
+  },
+  {
+   "concept": "activity (Web.active)",
+   "used": "活动（平语）"
+  },
+  {
+   "concept": "生生不息 as one name (D5 sets no single anchor)",
+   "used": "生生不息（生生＋不息），在說中说明其组成"
+  },
+  {
+   "concept": "harm / not harm (D13, 不损) apart from the name 损 (depletion)",
+   "used": "以无丧名不损之结构，平语写“害”；D13 之题“不损”只在引号中出现"
+  },
+  {
+   "concept": "loop formed by closing at a step (Closing, forms_by_closing) as distinct from 成环 of the name table",
+   "used": "成环（沿用 C11 之名）"
+  }
+ ],
+ "open": "一、互有所长之排序须另立度量（G2），是设而非待证之律；捕食、凋亡、除癌等互有所长者何者为害未定。二、生生之“生成之力”（更新之能、关系之丰富）尚无度量，Web.Widens 只比较既定之类的所容；新类之生成只在给出读法（WidensAlong、长成之宇）或沿相续（WidensAcross）时可较，一个展开之内新类如何一般地进入比较未决；“生成生成”作为一条律尚缺（G1：支持之传递反复出现亦不即是生生）。三、四种情形（广、狭、相赅、互有所长）之穷尽要用辞皆定然否，Lean 只证其不相兼。四、有界之兼必复、日新须益诸律依于量为自然数；以实数之量何者取代精确重现未决。五、盈科只有一个阈之构造（Closing.Threshold）与一般之成环律，阈处形成感之一般律在篇十一。六、六·十二（how-loops-form）与六·十九（own-widening-within-the-margin）之读法只有记录、无决定编号；本篇所引《中华思想脉络》诸条之 AI 读法亦待整合者编入决定登记。七、“己”在名表属篇十四（顾之自身区域），此处借以名一体之选项所成之区，须整合者确认一名二用是否可接受；阖、闢之经文定义（反事实之不被支持／被支持）是本篇所立，Lean 无同名之谓词。八、21 日前新入之模块中，RegimeMargin（一制度之余地与不返之点）、InAmounts/Amounts 归篇四或篇十一，DrawnBeyond、Optimum、ClosedCapture 归篇十，JointDraw 归篇十三，BoundedSignificance 归篇十四，Direction（世界之动上的方向）归篇十五，ContinuedClasses 除 WidensAcross 外归篇五，其余所列模块非本簇之结构，本篇未收。九、C06 对应表中未入本篇之条目（feng、daguo-ku-yang-sheng-ti、shuogua、xici-qiong-ze-bian、xici-kun-xi-pi、kongshu、zhuxi-pi、zhuxi-gu-zi-xin、heshang-05/34/51、laozi-02/18/27/31/50/51/52/64、suzhe-18/55、wangbi-39/49、daxue、zhongyong-zhi-zhong-he/cheng-ji/bing-yu、daizhen、xunzi-yu-min、zhuangzi-hun-dun、zhuangzi-pian-mu、hanfei-xindu、hanzhu-qu-cheng、mozi-suo、mozi-gua-ren）留在完整对应表中。十、延续之条件与以广为愈之根据皆未决；本篇只陈述，不断言。"
+}

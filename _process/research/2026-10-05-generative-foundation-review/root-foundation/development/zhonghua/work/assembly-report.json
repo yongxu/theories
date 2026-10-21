@@ -1,0 +1,2009 @@
+{
+ "C16": {
+  "source": "draft",
+  "edits": 66,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "deductive closure (推导闭包; what a basis derives with no premise)",
+    "used": "说之所出／无设而出之辞"
+   },
+   {
+    "concept": "basis of a derivation (Derivation basis)",
+    "used": "据"
+   },
+   {
+    "concept": "domain of configurations D / members of a list (the range a claim is asserted over)",
+    "used": "所论之状／所论之员"
+   },
+   {
+    "concept": "finite (of a world, a menu, a list of states); the table reserves 穷 for the break (ExchangeLaw.ReadsBelow)",
+    "used": "有穷 (conflicts with 穷 = break; the integrator should decide); 有尽 for finite stretches and trees"
+   },
+   {
+    "concept": "list (List, listed members)",
+    "used": "单"
+   },
+   {
+    "concept": "level (Web.level)",
+    "used": "水平"
+   },
+   {
+    "concept": "active / activity (Web.active)",
+    "used": "活动"
+   },
+   {
+    "concept": "region, a set of states (the target of DrawnInto)",
+    "used": "一组状"
+   },
+   {
+    "concept": "Boolean sequence (Nat → Bool)",
+    "used": "步步标然否之序"
+   },
+   {
+    "concept": "settles (Enough.Settles: the state no longer changes from some step on); distinct from 止 (World.RestsFrom)",
+    "used": "自某步起不再变"
+   },
+   {
+    "concept": "axiom / axiom report",
+    "used": "公理／公理之报"
+   },
+   {
+    "concept": "a dominating (better-than) relation on a menu, and an undominated member (exists_undominated_iff_weakly); 愈 risks being read as the 愈 of 以广为愈",
+    "used": "愈／莫愈之者 (愈 here is any irreflexive transitive relation, not the order of 以广为愈)"
+   },
+   {
+    "concept": "decidable equality of states / conditions (DecidableEq)",
+    "used": "同异可定"
+   },
+   {
+    "concept": "a change within a loop (Settling.ChangesInLoop)",
+    "used": "变落于首尾同状之段中"
+   },
+   {
+    "concept": "standing (positive level) and the census of standing conditions (StandingCensus)",
+    "used": "所立者"
+   },
+   {
+    "concept": "coupling by level (the supplied relation obs : F → C → Prop beside the web)",
+    "used": "以水平之感"
+   },
+   {
+    "concept": "adheres (Horizon.Adheres: every finite stretch of the run is a stretch of a run inside the reading)",
+    "used": "一行的每一有尽之段都是此读中某一行之段 (described, not named)"
+   },
+   {
+    "concept": "representation choices (the modelling commitments of block A)",
+    "used": "拟 (the table's C16 name; its 所定 written out in 凡·二)"
+   },
+   {
+    "concept": "conjunction 而 and the law's range 凡 as relation markers",
+    "used": "used as in the STYLE templates; not given a structure of their own in this 篇 (the marker list fixes only 则 若 必 或 皆 莫 莫不 不 未 故)"
+   }
+  ],
+  "open": "1. The marker conventions (D54): the single characters' structures (则 vs 故, 不 vs 未, 必 vs 皆, 莫不 as ¬∃¬) are stipulations among the theory's users. They have not been tested on held-out samples (HANZI §5, criterion 4). The boundary between 必 (the branches left open) and 皆 (the members given) is a reading: when the branches are listed as a family, the two say the same thing.\n2. Labels and standings:\n   - The readings attached to the C16 passages carry no D number of their own; this 篇 labels them 讀（AI，D47／D54） and similar.\n   - The chapter's \"the condition\" standing and the table's wider 设 (premises, named logical principles) need reconciling by the integrator.\n   - 以明 has no Lean anchor. It is a method requirement. The laws cited beside it (glues_iff_agree, fitsFree_iff, contradicts_noGlobal) are correspondences, not its proof.\n3. Names: 有穷 (finite) clashes with 穷 = break. 愈 is used for any dominating relation in 凡·二一 and could be confused with 以广为愈.\n4. Calibration steps still open:\n   - Whether WLPO as a proposition gives WLPO as a rule (the sensitivity counterexample needs the rule).\n   - Whether the weak rule gives LPO.\n   - Double-negation stability of negative claims is pure logic, not a separate spine theorem.\n   - The not-not form of 止 (comes_to_rest_unrefuted) is the core's statement; naming the step needs LPO (lpo_of_finite_ends).\n5. Philology left open in the passages: 大取 has misplaced slips (错简); the variant readings of 寓諸庸 were not checked; the 中论 四信 reading; the punctuation of 彼不可兩不可; the emendation dispute over 「盡有窮無難」; the two readings of 「不若，若犬」 at the end of the 辯 passage.\n6. The 仁 reading of 「未知，焉得仁？」 holds only on the 知 = 'know' reading.\n7. The warrant of 凡续皆有顾 and of 以广为愈 stays open; this 篇 states both as 设 and asserts neither."
+ },
+ "C01": {
+  "source": "draft",
+  "edits": 49,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "level (amount a relatum holds)",
+    "used": "水平"
+   },
+   {
+    "concept": "activity / active",
+    "used": "活动"
+   },
+   {
+    "concept": "need (amount required)",
+    "used": "所需、所需之量"
+   },
+   {
+    "concept": "history (any sequence of configurations and moves, g : Nat → S, m : Nat → A)",
+    "used": "历史"
+   },
+   {
+    "concept": "Determined (a determined process)",
+    "used": "确定（法之所说），written 法为确定之变"
+   },
+   {
+    "concept": "Consistent (a history never takes one move at one configuration to two outcomes)",
+    "used": "一致"
+   },
+   {
+    "concept": "splice",
+    "used": "相接（拼接）"
+   },
+   {
+    "concept": "dead end / live steps (Becoming.DeadEnd, Becoming.live)",
+    "used": "死路；有行所经之移"
+   },
+   {
+    "concept": "context (Contextual)",
+    "used": "语境"
+   },
+   {
+    "concept": "context-free frame",
+    "used": "不依语境之系辞"
+   },
+   {
+    "concept": "exchange law (level change = taken minus given)",
+    "used": "取与之法"
+   },
+   {
+    "concept": "own course (Interleavings.LocalLaw.ownCourse)",
+    "used": "自身历程"
+   },
+   {
+    "concept": "interleaving (Interleavings.LocalLaw.Interleaves)",
+    "used": "交错"
+   },
+   {
+    "concept": "renumbering (permutation reached by adjacent swaps, Footprinted.sorts_iff)",
+    "used": "重编号"
+   },
+   {
+    "concept": "Rectangular (every part-possibility pairs with every other)",
+    "used": "任相配"
+   },
+   {
+    "concept": "Acting and Taking premises (only active relata give; only active relata take and only what they draw on)",
+    "used": "只有活动者与；只有活动者取且只取其所资"
+   },
+   {
+    "concept": "test / SameTests (claims realizable after a sequence of moves)",
+    "used": "历一串动之后所能成之辞 (avoiding 验, which names Web.Excludes)"
+   },
+   {
+    "concept": "finite window of a run (Run.window, Trace)",
+    "used": "有限之段，该变所许的一串移 (迹 is a symbol not adopted)"
+   },
+   {
+    "concept": "kept history (keepHistory / withHistory)",
+    "used": "把自身历史记入状中的行"
+   },
+   {
+    "concept": "prefix / predictor (Learning.prefixOf, pred)",
+    "used": "有限之前段；由此前段所推之下一值"
+   }
+  ],
+  "open": "1. 大化 has no Lean object. Its 經 is a stipulation that the formal views (Process, Frame, World, Contextual) read one unfolding (D23, D43); no theorem states that unity. Whether the whole is deductively necessary is open (chapter §8.1).\n\n2. 其余 has two senses in the name table: World.withRest here, and the rest of the whole in move formation (Run.withClock_restForms). The table note 「其余从不施动」 holds only in the withRest sense, as the cell (一·十一) says.\n\n3. 自然之法 contains 法 but names the shown process (Becoming.Shown). That process is a 法 (Determined) only where the history is Consistent (一·七), so the name reads more strongly than its object outside that case.\n\n4. Three anchors are not contentful theorems.\n   - 法 is anchored on `Law`, which is a namespace; here 法 is cited through Becoming.Determined.\n   - 两行 is anchored on Contextual.world, a definition; its contentful laws are fitsFree_iff and glues_iff_agree. glues_iff_agree also anchors 并行不悖, so the two names share one law.\n   - World.run_world, Run.world_webAt and Web.change_readings hold by rfl or Iff.rfl. They are identifications by definition, not substantive laws.\n\n5. The step index (一·十八) is derived only for local exchanges, with relata listed by a finite table, and only for finite stretches. Not represented: courses without end, continuous time, and runs without beginning or end (the BiRun reading of 「无始无終」). Whether every becoming has a local law is open (chapter §8.5).\n\n6. Several cited results are constructed examples, not laws over every world: Mutualism.apart / apart_relabelled, Choosing.not_alike, Twins.naming_not_identifiesAlike, separation_admits_extra, whole_not_in_pairs, Motion.neither_alone, Specker.noGlobal and Run.withClock_restForms. The text marks each as 例子 or 构造.\n\n7. The name source of 宇 (「宇，彌異所也」) is filed among C17's entries, not C01's. It is cited here for the name only.\n\n8. The 相分 against 「继之者善也」 rests on Web.significance_undetermined, which shows only that dependence structure alone fixes no valuation.\n   - The continuation condition is stated in its 篇, not asserted. It fixes scope and orders nothing; any ordering lies in C (以广为愈) alone.\n   - This 篇 uses neither, and no ethical claim is made here.\n\n9. 讀（AI，D2、D43） in 一·十二 cites D2 together with D43. If D2 has since been revised, the citation should be re-pointed.\n\n10. The step index by natural numbers, the discrete steps, natural-number amounts and Prop-valued activity are modelling commitments. The empty axiom report does not cover them."
+ },
+ "C02": {
+  "source": "draft",
+  "edits": 31,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "level of a condition (Dependence.level)",
+    "used": "水平（现代汉语，与篇一同）"
+   },
+   {
+    "concept": "activity of a formation (Dependence.active)",
+    "used": "活动（现代汉语；不用「活」，活名 living）"
+   },
+   {
+    "concept": "need, the amount a dependence requires (Dependence.need)",
+    "used": "所需（所需之量）"
+   },
+   {
+    "concept": "event: a formation at a step (F × Nat)",
+    "used": "事（一待者于一步）"
+   },
+   {
+    "concept": "participates: depends on or draws on (Web.Participates)",
+    "used": "或待或资"
+   },
+   {
+    "concept": "breaking event: drawing at a step that breaks a dependence on the condition (Web.BreakingOn)",
+    "used": "资于一绝之步"
+   },
+   {
+    "concept": "a reserve that decays while unsupported (Web.Decays)",
+    "used": "蓄自减"
+   },
+   {
+    "concept": "overdetermined loss (Dependence.Overdetermined)",
+    "used": "多重决定"
+   },
+   {
+    "concept": "requirements do not loosen across a step (Web.Unloosened)",
+    "used": "所需不松"
+   },
+   {
+    "concept": "two relata each the other's only condition (the shape of Mutualism.apart)",
+    "used": "互为所待"
+   },
+   {
+    "concept": "sharing conditions throughout (Flow.SharesThroughout)",
+    "used": "群域皆兼（由已有之名组成）"
+   },
+   {
+    "concept": "idle condition: nothing draws on it or no positive-need dependence on it (Web.Idle)",
+    "used": "闲置之所待"
+   },
+   {
+    "concept": "total taken from / given to a condition at a step (Flow.taken / Flow.given)",
+    "used": "诸取之和／诸与之和"
+   },
+   {
+    "concept": "only active formations give (Flow.Acting); only active formations take, and only from what they draw on (Flow.Taking)",
+    "used": "唯活动者与之；唯活动者取、只取其所资"
+   },
+   {
+    "concept": "restraint by drawers (JointDraw, kept_of_restrained)",
+    "used": "节制"
+   },
+   {
+    "concept": "chain of dependence at positive need on embodied relata (Web.bearing)",
+    "used": "以正需待有形者之链"
+   },
+   {
+    "concept": "co-participation as a valuation relation (Web.valuation related)",
+    "used": "共同参与"
+   },
+   {
+    "concept": "relabelling the condition side of a one-kind web (Web.relabel)",
+    "used": "互易所待之标名"
+   },
+   {
+    "concept": "standing as a condition at a step (0 < level), as distinct from coming to stand (聚)",
+    "used": "立、立为所待、水平为正"
+   }
+  ],
+  "open": "一、大故于脊柱暂无锚：二·八只能说容是活动之小故；\"容而不活动\"的见证（Hibernation）中\"第一步见容\"由 Hibernation.web 之定义算出，readings 未列此合取项，尚无具名引理。二、二物皆有形且互以正需相待时同步同活动、同步俱亡，是把 Web.active_along 两向各用一次的两行推论，未立为具名定理；其形状（Mutualism.apart，互为所待）在名表中无名。三、容是 C06 之名，本篇二·二因诸律皆用之而先给其定义；二·六\"容只自见容者来\"（support-from-the-supported 诸律）亦说容，归本篇还是篇六，由整合者定。四、资在經中借\"取\"立义（取于一所待之关系，只记有无），因 draws 无更早之名。五、交不排步之先后、不问资是否改变水平：有序且看效果之读法在 Becoming.Correspondence 中明言未决。六、共取而绝（JointDraw）只入其绝与持之律；节制在 C 下之排序（Ranking.restraint_ranks_over_drawers）留比较之篇；DrawnBeyond 之\"升超其外之余则其外一待绝\"（Flow.Balances.breaks_beyond）属流与选择之篇，本篇未立条。21 日前新增诸模块中，只有 JointDraw 的结构属本簇；Optimum、RegimeMargin、DrawnBeyond、InAmounts／Amounts、Growth、OwnWidening、Weightings、Direction 等归他篇。七、篇间引用以\"生灭之篇、流之篇、恒竭之篇、比较之篇、群之篇、意义之篇、推理之篇\"称之，未用篇号，待整合者统一。八、各条古典引文之层次与年代（先秦、汉译等）未在篇中逐一标出（§六之格式无此栏），见对应表。九、二·十一中 Downstream.one_way 只示\"以一物之所与为生者亡而此物犹活动\"，它说明俱亡律只给一向，不是\"待者亡不传于所待\"的一般定理。"
+ },
+ "C03": {
+  "source": "draft",
+  "edits": 76,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "determination: a step-indexed proposition p : Nat → Prop, the subject of ComesToBe/CeasesToBe",
+    "used": "所然（随篇一·四之用法）"
+   },
+   {
+    "concept": "ceasing under a continuation (Web.CeasesFrom)",
+    "used": "无续而已"
+   },
+   {
+    "concept": "tally (Becoming.Tally: n t = k + c t, n (t+1) = k + a t)",
+    "used": "计账"
+   },
+   {
+    "concept": "counting a determination as zero or one (Becoming.mark)",
+    "used": "只计零或一"
+   },
+   {
+    "concept": "brief for d (Web.Brief: never active at two steps d apart), for parts and for carriers",
+    "used": "无活动于相隔 d 步之二步者；载者无载于相隔 d 步之二步者"
+   },
+   {
+    "concept": "cover (Web.Covered: some part active at each step from T on)",
+    "used": "平语：每步有体活动"
+   },
+   {
+    "concept": "the continuation a world's relations induce (World.Conserves)",
+    "used": "守恒之续"
+   },
+   {
+    "concept": "an event depletes a family (Web.Depletes: at each event step where no member rises, one falls)",
+    "used": "作损其族（族无升之步作则族有降）；借 C04 之「损」"
+   },
+   {
+    "concept": "active renewer and every rise made by one (Web.ActiveRenewer, Web.RenewedBy)",
+    "used": "活动之与之者；借 C04「与之者」（其锚是 Flow.renewers，不全同）"
+   },
+   {
+    "concept": "census of what stands (Web.StandingCensus)",
+    "used": "水平为正者之列"
+   },
+   {
+    "concept": "renewing / consuming along a continuation (Web.RenewingAlong, Web.ConsumingAlong)",
+    "used": "沿相续而恒／沿相续而竭"
+   },
+   {
+    "concept": "reading activity through what holds (Web.persisting h)",
+    "used": "以存读活动"
+   },
+   {
+    "concept": "pattern and its carriers under the passing premise (Web.ByPassing, carrying)",
+    "used": "样式、载者；火传之设"
+   },
+   {
+    "concept": "idle step / stuttering (Stutter, World.sample)",
+    "used": "空步、无所为之步"
+   },
+   {
+    "concept": "a run settles / is still from a step (Enough.Settles, LastChange.StillFrom)",
+    "used": "其行不改；自某步起静"
+   },
+   {
+    "concept": "a quantity marking a run's changes (Marks: never falls, rises at each change)",
+    "used": "平语：一量于行中不降、状改则升"
+   },
+   {
+    "concept": "recurs at arbitrarily late steps (Recurs, Unceasing pattern)",
+    "used": "无尽复现（随篇一）"
+   },
+   {
+    "concept": "a configuration not alike across a step (¬ Alike), used to compose 化",
+    "used": "状变（篇一之状与 C07 之同的否定）"
+   },
+   {
+    "concept": "conjunctive or graded whole (华严总相、墨经损、苏辙车)",
+    "used": "减损之兼（合取或分级之兼），无锚，记为缺口"
+   }
+  ],
+  "open": "一、未落地之引理与缺口：成毁对偶（CeasesToBe p → ComesToBe ¬p，正向两行、逆向须定然否）不在核心，三·一以「未決」标出；合取或分级之兼（华严总相、墨经「謂其存者損」、苏辙车）脊柱只有析取之 Web.Whole，三·二十三记为缺口；唯识「不可說有能生用」（不变者无使他者作之效）未找到对应定理，本篇未收；中庸「继志」不在「继」名之内。二、名之张力，交整合者：名表以「不息」锚 Web.Unceasing（作之复现），D5／D45 则读「生生不息」之不息为补充（恒）之复现；本篇两义并陈（三·九），未改名表。「已」之出处墨经「已，成、亡」兼成与亡，本篇只作成毁之旁证。「亡」名 Web.Ends，核查者曾建议「永終」；本篇从名表。「继」名表锚 Succession 模块（Successive.relay，所资由相继之源与之），而离大象「繼明」之结构是 Lineage.one_way（合名），本篇把后者放在无间（三·十六）之对照中。「消息」之出处剥彖所说是 Hexagram.waxWane（消长环），以消息名普查之衡是约定。「化」无单一 Lean 声明，是「状变（非同）＋续」之组合，Lean 中未单列「续而状不同」之律。「静」只对法之轨（Law.rests_iff、LastChange）陈述；宇中「自某步起状不变」与「止」（无作无已）之间的蕴含未有定理，本篇只说二者不同，不说一者蕴含另一者。三、新模块之取舍：自 20 日以来的模块中，本篇收 ContinuedClasses（沿续之恒与竭、World.continues_as_alike）、InAmounts（任何之量中之止）、Stuttering（空步不改作已之复现），并收 LastChange 与 RegimeMargin.Adjusted.comes_to_rest 于静；CensusTable 只取其 FamilyCounts.tally，World.table_holds 等普查表之律未写；IdleRemoval（去空步不改计数）、ListingRefutations（否证之律不待列一次，只引 not_of_listsOnce）未单列；Optimum、JointDraw、DrawnBeyond、Growth、OwnWidening、Weightings、Direction、Retaining、BoundedSignificance、Clearing、ClosedCapture、Drift、Reproduction、SelectionLevels、SelectionTerm、GroupEnding、PropositionIdentity、HexagramCommuting 等之结构属他簇，不入本篇。四、未证或只作读法者：停息之律各设之必要性只引记录（leaking、attrition、throughput 诸例未逐一列出全名）；混合普查之充分条件未证；继之诸源本身由流而作未证；火传之设是所给之读法，不是推出。五、条数：本篇 24 条，少数條之證超过八个声明（三·六、三·十七、三·十九各九个），因經中每一断言都须有證。"
+ },
+ "C04": {
+  "source": "draft",
+  "edits": 59,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "family of conditions (a finite list of conditions, cs : List C)",
+    "used": "族（有穷多所待之一表）；“不重复”另写"
+   },
+   {
+    "concept": "level of a condition; stock of a family (W.level, W.stock)",
+    "used": "水平；存量（族诸所待水平之和）"
+   },
+   {
+    "concept": "what stands (a condition with positive level); census of what stands (Web.StandingCensus)",
+    "used": "所立者（水平为正者）；所立者有列（用名表之“列”）"
+   },
+   {
+    "concept": "a list of configurations, not a census (l : List S in the finite-reading laws)",
+    "used": "表（一有穷之表）"
+   },
+   {
+    "concept": "inward across a step (Flow.Inward: whatever gives to the family takes only from it)",
+    "used": "不汲（一步不汲）；汲定义为“非不汲”"
+   },
+   {
+    "concept": "what a family loses across a step (Flow.lost: uptake beyond replenishment)",
+    "used": "取过于与之量（不用名表之“所失”，它名 Remainder）"
+   },
+   {
+    "concept": "amounts in general (Becoming.Amounts)；whole-number amounts",
+    "used": "量；整数之量"
+   },
+   {
+    "concept": "slack of the dependences beyond (Web.slack)",
+    "used": "族外诸所待高出诸需之和；“高出所需之量”"
+   },
+   {
+    "concept": "standing draw of a regime (H in RegimeMargin)",
+    "used": "常取"
+   },
+   {
+    "concept": "regime (in margin of a regime)",
+    "used": "体制（只在说中作释语）"
+   },
+   {
+    "concept": "point of no return (H + y)",
+    "used": "不返之点"
+   },
+   {
+    "concept": "what is left after the draw (x − H)",
+    "used": "所剩（不用“所余”，免与其余、余地相混）"
+   },
+   {
+    "concept": "recent giving (the second component of the adjusted state)",
+    "used": "前与"
+   },
+   {
+    "concept": "band (hi) of a regime",
+    "used": "界 hi"
+   },
+   {
+    "concept": "capacity of a part at a condition (Optimum cap)",
+    "used": "所能取者／所能取之量"
+   },
+   {
+    "concept": "an order rising with a family; optimum; re-optimizing course (Optimum.Rising, Frontier, Optimum.Reoptimizes)",
+    "used": "取其序之最优者；序“凡一果于其族之每一所待不少于另一果、于其一所待多之，皆以之为愈”；逐步重取最优之程"
+   },
+   {
+    "concept": "mutual best response of several optimizers (Optimum.MutualBest)",
+    "used": "相互为最优之应"
+   },
+   {
+    "concept": "a take more than now (MoreThanNow)",
+    "used": "取每步多于其前"
+   },
+   {
+    "concept": "whole-run reading (wholeRun, in Ranking)",
+    "used": "整程之读"
+   },
+   {
+    "concept": "the eight world premises (World.Premised)",
+    "used": "八设（说中列出：有待、衡、唯活动者与、唯活动者取且只取其所资、耗、有形、活动者有列、所传有界）"
+   },
+   {
+    "concept": "openness as a defined predicate (the spine has none; it is the conclusion of World.arising_opens)",
+    "used": "开，定义为“不能自某步起每步有封”"
+   },
+   {
+    "concept": "the rest theorem (停息定理)",
+    "used": "止之律"
+   }
+  ],
+  "open": "一、损：名表“损”无锚；本篇依正文索引之 depletion 锚于 `Becoming.Web.Depletes`（一事之步族无升则有降）与 `Becoming.Flow.Balances.depletes`，与益（Gain，篇六）之“一族存量上升”并非严格对偶，整合者须定。二、止之律（`Becoming.World.comes_to_rest_unrefuted`）也是篇三“止”之锚；本篇因其诸设（端、衡、耗、围）皆属本簇而陈述它，全书宜只陈述一次，另一处引用。三、`Becoming.EntropyProduction.gainless_of_secondLaw`、`Becoming.EntropyProduction.dissipative_of_irreversible` 属外围（physics/EntropyProduction.lean，用 Mathlib），不在核心之收据中，resolve.py 报 NONE；文中标为“外围”。四、JointDraw、DrawnBeyond、RegimeMargin、Optimum 诸模块之读法是模块文档中的 AI 读法，没有决定编号，文中只标“讀（AI）”。五、`Becoming.Clearing.center_not_derived` 关于评价之中心，用来标江海条之单一中心一层（沿 RO 惯例），须与篇十四之“我”对齐。六、名表只给繁体“趨而不至”，本篇写简体“趋而不至”。七、积小以高大读作阿基米德之量是 AI 强读（本编之约定），无决定编号。八、对应表留下的缺口未补：墨经「能害飽」所需之带上界之容及其对偶定理；输送之程数与失之链式陈述（sunzi-yuan-shu）；最小一处之平均之界（sunzi-wu-suo-bu-bei，属篇十三）。九、RO 的 lao-42 条（“损之而益恰在所损者是净汲取者之处”）应改为必要不充分，交整合者。十、Optimum 之序与感之关系（族读作所感者）只在说中点出，其律在篇十；Optimum 中关于视界、加权、重建诸律（`Optimum.most_iff`、`Optimum.frontier_*`、`Optimum.Next.*`）未入本篇，宜入篇十或篇十五。十一、“于任意晚之步皆有”在经中作“每一步之后皆有一步如此”之约定，读者须依篇首之说读之。"
+ },
+ "C05": {
+  "source": "draft",
+  "edits": 51,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "activity: a formation active at a step (Web.active)",
+    "used": "活动（现代词；pian01 亦用）"
+   },
+   {
+    "concept": "level of a condition (Web.level)",
+    "used": "水平"
+   },
+   {
+    "concept": "need of a dependence (Web.need)",
+    "used": "所需"
+   },
+   {
+    "concept": "finitely many configurations: a list holding every configuration (every : ∀ s, s ∈ all), and its length",
+    "used": "有一表尽其状；表长"
+   },
+   {
+    "concept": "reachable n steps on (Law.Reachable / Branching.Reachable)",
+    "used": "可得"
+   },
+   {
+    "concept": "the present of a kept history (first component of Law.withHistory)",
+    "used": "今"
+   },
+   {
+    "concept": "revisiting: a sequence at one configuration at two steps (revisits_from, withHistory_new)",
+    "used": "重访"
+   },
+   {
+    "concept": "stock of a family of conditions (Web.stock)",
+    "used": "一族所待之水平合计"
+   },
+   {
+    "concept": "pattern carried in a web, and its carrier (Web.carrying, Web.Present)",
+    "used": "样式、载者"
+   },
+   {
+    "concept": "passing the pattern across one step (Web.PassesAt); bare 传 is reserved by the table for Flow.TransmitsWithin",
+    "used": "递"
+   },
+   {
+    "concept": "an event within renewal at a step (Web.RenewingAt, stepwise)",
+    "used": "一步在恒之内"
+   },
+   {
+    "concept": "renewing / consuming / undermining along a continuation (Web.RenewingAlong, Web.ConsumingAlong, Web.UnderminingAlong; chain Web.Continuing)",
+    "used": "沿续而恒、沿续而竭、沿续之剥（以续、恒、竭、剥组合）"
+   },
+   {
+    "concept": "level path (l : Nat → C → Nat) of Web.Includes / Web.Exceeds",
+    "used": "水平之路"
+   },
+   {
+    "concept": "depletes a finite family (Web.Depletes); 耗 is reserved for dissipation",
+    "used": "损（取名表「损」之下降义）"
+   },
+   {
+    "concept": "return grades (title of becoming-return-grades); 回程 is the modern word for 终足",
+    "used": "足之等"
+   },
+   {
+    "concept": "focal and sustaining formations of the Renewable and support-gated witnesses; the drawers read jointly (together)",
+    "used": "焦点之物、维持之物、合资者"
+   },
+   {
+    "concept": "amount reading (draws no more than is renewed at the step)",
+    "used": "以量读、以“每步所资不过所与”为读"
+   },
+   {
+    "concept": "witness / construction (a model showing a law exact or a converse false)",
+    "used": "构造之例"
+   },
+   {
+    "concept": "drawing beyond renewal (overdraw)",
+    "used": "过与（资过所与）"
+   }
+  ],
+  "open": "何事未定，何处说不精：（1）久之逆律未证。「每个所作之体持续到下一体作之时，则兼久」尚无 Lean，所以中庸「不息則久」、司马法「迭戰則久」只能判定域（Gaps.gaps 表明只有作不够）。孟子「一日暴之，十日寒之」所需的「只问一段之律」也未证：一段有界之休眠，且休眠中蓄不回升，并以 Web.Arises 写出终局。（2）初不定终（Renewable.prefix_does_not_decide）只在一个构造之变中证（另有反馈之族 Feedback）；对每个变的一般形式属知与验之篇（Stretches、Sequences），本篇未把二者接成一条律。（3）剥床自下而上之次第没有律。井「无喪无得」没有两面之律：只在取恰等于给之处水平不变（Flow.level_kept），本篇未收。（4）新模块中有几处结构与本篇相邻而未收，因为它们的结构属他篇：RegimeMargin 的无回之点（终不足在常驻之资下的确切阈，以及运行于何处止）属余地／止；Optimum 之 SG4–SG10（优化者重建被耗之基，速度如其恒；远见不等于对齐）属感与择；JointDraw 只在五·十二 說 中以 Flow.Balances.broken_shared 引一句；Retaining 之 Web.UnderminingOn.not_retains（剥失有意义者）属意义之篇。整合者可决定 RegimeMargin 的无回之点是否作为「竭」之一条移入本篇。（5）名：活动、水平、所需、今、样式、载者、递、一步在恒之内、沿续而恒／竭、水平之路无表中之名，暂以平语写（见 missing_names）；「递」是为避开名表之「传」（Flow.TransmitsWithin）而用。名表「静」行写「一时成立者（D45）」，本篇依 D49 以静为法所不改之状，二者须由整合者统一（C04 LE-R023 以止读「归根曰静」亦须对齐）。Y1 以之卦之律（MarkedLines.run_rests）读「通则久」，那是静，不是本篇之久，待整合者统一。（6）本篇不用延续之条件与以广为愈；剥与广之接（Web.Includes.not_undermining）只到「赅则无剥」，「以广为愈」之下的排序在比较之篇。（7）结构之对应中有两处只是对应而非定理：荀子「竭其源」经存量耗尽之律（Stock）与 Web.Consumed 相应；頻復之两读是结构类比（经文所复者是复者自身之历程）。"
+ },
+ "C06": {
+  "source": "draft",
+  "edits": 42,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "level path (Nat → C → Nat), the object widening compares",
+    "used": "水平之路（二路、他路）"
+   },
+   {
+    "concept": "region: a decided family of formations taken as a parameter of a comparison (Web.AdmitsWithin, LosesBeyond)",
+    "used": "区（区域）；全与区"
+   },
+   {
+    "concept": "weighting, positive weighting, zero weight (Becoming.Weighting)",
+    "used": "加权、正权、零权"
+   },
+   {
+    "concept": "rule component of a configuration S × R (Law.perturbation_reabsorbed, rule_absorbing, Captured)",
+    "used": "规则"
+   },
+   {
+    "concept": "widening along a reading of one world's formations in another's (Web.WidensAlong)",
+    "used": "沿读而赅／沿读而有所长／沿读而广（沿读之广）"
+   },
+   {
+    "concept": "grown world (Web.grow, Web.Growth, Web.attach)",
+    "used": "长成之宇（增新待者与新所待而旧所需不改）"
+   },
+   {
+    "concept": "widening across a stretch along a continuation (Web.WidensAcross, IncludesAcross, ExceedsAcross)",
+    "used": "跨段而广（跨段之赅、跨段之有所长）"
+   },
+   {
+    "concept": "a formation read as budding from one already admitted (Bud)",
+    "used": "芽出"
+   },
+   {
+    "concept": "own widening: widening within a part's own decided region (Web.WidensWithin own)",
+    "used": "己内之广（借篇十四之己，此处指一体之选项所成之区）"
+   },
+   {
+    "concept": "stock of a family (Web.stock)",
+    "used": "存量"
+   },
+   {
+    "concept": "a part's net draw / net give / net exchange against the levels without it",
+    "used": "净取（所累取减所累与）、净与、取与"
+   },
+   {
+    "concept": "witness in one constructed world",
+    "used": "一个构造之宇中（确有其例）"
+   },
+   {
+    "concept": "inaction baseline (levels without the part's exchange)",
+    "used": "不作为之基线"
+   },
+   {
+    "concept": "capacity to form (renewal capacity, richness of relations), the component of 生生 widening does not read",
+    "used": "生成之力（更新之能、关系之丰富）"
+   },
+   {
+    "concept": "family without repetition (Distinct) and finite list",
+    "used": "无重之族、有穷之表"
+   },
+   {
+    "concept": "activity (Web.active)",
+    "used": "活动（平语）"
+   },
+   {
+    "concept": "生生不息 as one name (D5 sets no single anchor)",
+    "used": "生生不息（生生＋不息），在說中说明其组成"
+   },
+   {
+    "concept": "harm / not harm (D13, 不损) apart from the name 损 (depletion)",
+    "used": "以无丧名不损之结构，平语写“害”；D13 之题“不损”只在引号中出现"
+   },
+   {
+    "concept": "loop formed by closing at a step (Closing, forms_by_closing) as distinct from 成环 of the name table",
+    "used": "成环（沿用 C11 之名）"
+   }
+  ],
+  "open": "一、互有所长之排序须另立度量（G2），是设而非待证之律；捕食、凋亡、除癌等互有所长者何者为害未定。二、生生之“生成之力”（更新之能、关系之丰富）尚无度量，Web.Widens 只比较既定之类的所容；新类之生成只在给出读法（WidensAlong、长成之宇）或沿相续（WidensAcross）时可较，一个展开之内新类如何一般地进入比较未决；“生成生成”作为一条律尚缺（G1：支持之传递反复出现亦不即是生生）。三、四种情形（广、狭、相赅、互有所长）之穷尽要用辞皆定然否，Lean 只证其不相兼。四、有界之兼必复、日新须益诸律依于量为自然数；以实数之量何者取代精确重现未决。五、盈科只有一个阈之构造（Closing.Threshold）与一般之成环律，阈处形成感之一般律在篇十一。六、六·十二（how-loops-form）与六·十九（own-widening-within-the-margin）之读法只有记录、无决定编号；本篇所引《中华思想脉络》诸条之 AI 读法亦待整合者编入决定登记。七、“己”在名表属篇十四（顾之自身区域），此处借以名一体之选项所成之区，须整合者确认一名二用是否可接受；阖、闢之经文定义（反事实之不被支持／被支持）是本篇所立，Lean 无同名之谓词。八、21 日前新入之模块中，RegimeMargin（一制度之余地与不返之点）、InAmounts/Amounts 归篇四或篇十一，DrawnBeyond、Optimum、ClosedCapture 归篇十，JointDraw 归篇十三，BoundedSignificance 归篇十四，Direction（世界之动上的方向）归篇十五，ContinuedClasses 除 WidensAcross 外归篇五，其余所列模块非本簇之结构，本篇未收。九、C06 对应表中未入本篇之条目（feng、daguo-ku-yang-sheng-ti、shuogua、xici-qiong-ze-bian、xici-kun-xi-pi、kongshu、zhuxi-pi、zhuxi-gu-zi-xin、heshang-05/34/51、laozi-02/18/27/31/50/51/52/64、suzhe-18/55、wangbi-39/49、daxue、zhongyong-zhi-zhong-he/cheng-ji/bing-yu、daizhen、xunzi-yu-min、zhuangzi-hun-dun、zhuangzi-pian-mu、hanfei-xindu、hanzhu-qu-cheng、mozi-suo、mozi-gua-ren）留在完整对应表中。十、延续之条件与以广为愈之根据皆未决；本篇只陈述，不断言。"
+ },
+ "C07": {
+  "source": "draft",
+  "edits": 32,
+  "failed": [
+   {
+    "find": "「井：改邑不改井，無喪無得，往來井井。」〔YD-JG48〕",
+    "count": 0,
+    "why": "冻结文本作「无喪无得」，引文不符；后两句本条未解，只引所用之句"
+   }
+  ],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "region: a set of configurations (S → Prop), what Invariant and Law.Absorbing are said of",
+    "used": "区（诸状之一部分）"
+   },
+   {
+    "concept": "go alike under a reading (GoAlike / GoAlikeUnder): configurations with one reading value go by one move to configurations with one reading value",
+    "used": "同移（在七·十二經中界定）"
+   },
+   {
+    "concept": "determined up to likeness (DeterminedAt)",
+    "used": "同中确定（与篇一·十五同）"
+   },
+   {
+    "concept": "commuting law (Law.Commutes: T (σ x) = σ (T x)); the 中文版 writes 交换之律, which collides with the law of exchange; 并行不悖 is not borrowed for it",
+    "used": "与映射可换序之法（平语）"
+   },
+   {
+    "concept": "a map moving every configuration (Diagonal.Moves Eq σ), and map/projection in general",
+    "used": "映射移每一状；映射"
+   },
+   {
+    "concept": "context (of claims shown in context)",
+    "used": "语境"
+   },
+   {
+    "concept": "proposition of the proof language (Lean Prop), interderivable, and propext",
+    "used": "命题；可互推；可互推之命题即为一（propext）"
+   },
+   {
+    "concept": "a list holding every configuration (finitely many configurations); 列 is the census name, so not used",
+    "used": "有一表尽诸状"
+   },
+   {
+    "concept": "what lies ahead of a configuration from its next step (Law.Ahead)",
+    "used": "前方（自次步以往其行之所至）"
+   },
+   {
+    "concept": "reach (Reach P s t), course/trace (Trace)",
+    "used": "能至；一串动"
+   },
+   {
+    "concept": "sub-process (SubProcess)",
+    "used": "子变"
+   },
+   {
+    "concept": "data / observed inputs of a lumping (D, data list)",
+    "used": "所见者"
+   },
+   {
+    "concept": "fixed point (of revision)",
+    "used": "不动点"
+   },
+   {
+    "concept": "a cycle of an attractor (the turns of 既濟 and 未濟)",
+    "used": "轮转"
+   },
+   {
+    "concept": "the hexagram laws: nuclear law, law letting only a broken line enter (wane), complement (錯)",
+    "used": "互卦之法（名表势之注已用）、只入柔爻之法、六爻皆变者；waxWane 依名表注写作消长环之法"
+   },
+   {
+    "concept": "constant-free terms of the three-valued system (ConstantFree), sentence",
+    "used": "所言皆不含已定之真伪；辞"
+   },
+   {
+    "concept": "interderivability-respecting reading built from relations (Formula), byName reading",
+    "used": "以关系所构之读；按名之读"
+   }
+  ],
+  "open": "一、势：一般之势分划（有穷构形下每状属哪一回环之势、诸势成划分）脊柱只在互卦之法上有证（Hexagram.qian_basin、kun_basin、cycle_basin、basin_counts），一般只有 Law.drawnInto_returning（入整个复者之域）；势之深浅、入之难易、机距所至之步数，皆无度量；Law.enters_returning 只断言存在，不给步数之界（证明中 revisits_within 已有 m 步之界，陈述未给）。二、机：机前保住之步所费更少（《喻老》「其安易持」一类）之比较未导出；数种可能同时之轮廓未形式化；每一失去之机只以双重否定陈述，一般需 LPO（只证 lpo_of_junctures_found 一向）。三、闭、成闭、护闭、机不带评价：保住哪一状、是否较好只经以广为愈（其根据未決），本篇不用延续之条件与 C。四、并行不悖之名在名表注中明言不借给 Law.Commutes，故七·十五以平语书之，此概念尚无名。五、未定：只论有穷多辞；最小以外之不动点、多少辞留于未定未导出。六、新模块之归属：PropositionIdentity（七·十四）、HexagramCommuting（七·十五）、Laws 之 GoAlike／GoAlikeUnder 与 carries_law_alike_iff（七·十二）收入本篇；Optimum、RegimeMargin、JointDraw、DrawnBeyond、InAmounts、Amounts、Growth、OwnWidening、Weightings、Direction、ContinuedClasses、Retaining、BoundedSignificance、Clearing、ClosedCapture、Drift、Reproduction、SelectionLevels、SelectionTerm、GroupEnding、ListingRefutations、CensusTable、Witnesses、Stuttering、IdleRemoval、Extension 判为他簇之结构（流与停息、调节、群、比较、意义、演化、普查、步序），未收；Order、Naturals、ListTests 已于 R31 移入 history，非现行模块。七、引文层次：《系辞》《彖》《序卦》《说卦》《中庸》《田子方》之成书有争议，已逐条注明；郭店《成之闻之》为公开转录、未据图版校勘。八、七·十 引 D32 之读「凡须相等之定理，读作依于所感入者」系把 D32 之 registered 按 D45 改读为感入，整合者可核。"
+ },
+ "C17": {
+  "source": "draft",
+  "edits": 53,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "hexagram and line, the carrier of the 易 line (Hexagram, Hexagram.line)",
+    "used": "卦、爻（易之载体，名表无行；刚柔为爻值之名）"
+   },
+   {
+    "concept": "height of a trigram (Hexagram.Height)",
+    "used": "高（下、中、上）"
+   },
+   {
+    "concept": "seam between two adjacent places (Hexagram.Seam)",
+    "used": "缝"
+   },
+   {
+    "concept": "complement, every line changed (Hexagram.complement, 錯)",
+    "used": "变其每爻（即“错”；錯不立为名，见 names-dropped 錯行）"
+   },
+   {
+    "concept": "turning over (Hexagram.reverse, 綜) and the mirrored place, height, seam",
+    "used": "上下倒之（即“综”）；对位、对高、对缝"
+   },
+   {
+    "concept": "law of waxing and waning on hexagrams (Hexagram.waxWane)",
+    "used": "消长环（名表「消息」条注所给写法，未立行）"
+   },
+   {
+    "concept": "a relatum's own course (Interleavings.LocalLaw.ownCourse); a course in general (finite sequence of steps, Lasting.Continues)",
+    "used": "自身之历程；历程"
+   },
+   {
+    "concept": "exchanges acting locally (LocalLaw), touches, apart (share no relatum)",
+    "used": "取与局部而作；触；不共触一物／不相连"
+   },
+   {
+    "concept": "standing / level of a relatum",
+    "used": "所立（任意值之状态）；水平（自然数之量）"
+   },
+   {
+    "concept": "idle step, stuttering, removing idle steps (Stutter, World.withoutIdle)",
+    "used": "无物参与之步（空步）；插入／去掉此等步"
+   },
+   {
+    "concept": "footprint and renumbering of steps (Footprinted, Reindexes)",
+    "used": "足迹；重编号（名表「分」只名专属足迹，不借）"
+   },
+   {
+    "concept": "activity, active relata",
+    "used": "活动、活动者"
+   },
+   {
+    "concept": "weight of a step; finer course (Situations.finer)",
+    "used": "重（权重）；细历程"
+   },
+   {
+    "concept": "rule, fast level and two-level course of Pace (Pace.paced)",
+    "used": "规则；快层；二层之行"
+   },
+   {
+    "concept": "source, route, reader and answer of a timed response (TimedResponse source, Spread, g, read)",
+    "used": "源；途；读者；答"
+   },
+   {
+    "concept": "deadline D of TimedResponse",
+    "used": "期（取自至期所及；名表之期为回程之上界，此处同为上界而所界不同，交整合者）"
+   },
+   {
+    "concept": "sub-process (SubProcess)",
+    "used": "子变"
+   },
+   {
+    "concept": "dependent choice (Onward.DependentChoice)",
+    "used": "依赖选择之原则"
+   },
+   {
+    "concept": "rise and fall counts of relative position (riseCount, fallCount); family of parts; amount",
+    "used": "进数、退数（称之进、退）；族；量"
+   },
+   {
+    "concept": "context and indexed frame (Contextual, Contextual.indexed)",
+    "used": "语境；带指标之系辞"
+   },
+   {
+    "concept": "probability read as a count of situations (D43)",
+    "used": "概率"
+   }
+  ],
+  "open": "一、未证：G9（回应须在机之前到达：同一变、同一状、到达可判定时的窗口）未证，八·十六标为未決；xici-daishi-erdong、wenyan-jishi、tuan-gen-shizhi、zhuangzi-hezhe-zhi-fu、laozi-sz-bu-shishi 依之，未入本篇。共触一物的两步以两种次序至于不同之状，脊柱尚无具体见证（sunzi-qinfu-fa 之缺口，八·二说明）。三才之带（初二、三四、五上）未在 HexagramPlaces 定义（shuogua-sancai-liuhua）。Situations 与 Confound 之间无一般定理，误归只有所构之例（daqu-yushu-yuxiong），故八·十一不引 Confound。\n二、名与锚：名表把「当位」锚在 HexagramPlaces（其文档注以 inPhase 为 正／當位，六位皆有奇偶）；本篇依 D53 与对应条目把当位定为 Becoming.Hexagram.holdsPlace（王弼第二种关系，二至五），在第一种关系下当位与正重合；请整合者定锚或改定义。「期」在名表为回程之上界，本篇在至期所及之内用作时限。王弼「卦者，時也」与彖「與時偕行」之時，结构上是状与步，不是名表之时（情境），已在說中分开。卦、爻、高、缝、错、综、规则、快层等无名，见 missing_names。\n三、与他篇重叠，请整合者定其所在：篇一草稿一·十八已述 run_of_courses、unique_iff、world_reads_alike、apart_differs、sorts_iff，本篇八·一至八·五以先后、交错二名为主重述并补 act_comm、schedule_iff、world_balances、world_swap、world_renumber_reads 与空步之律；八·十六（机之律）与篇七重叠，只取与时相关之护闭、无机、多途不成机；八·二十七（称）与篇十四重叠；与时转之律（pace_law）留在篇十一，只在八·十三引及；八·二十之“相易之法所分开者”是篇七之律在卦上的实例。\n四、10 月 20 日后新增模块：本篇收 Stuttering 与 IdleRemoval（八·五）、HexagramCommuting（八·二十：complement_moves、waxWane_apart、wane_breaks）。Optimum 的“视界”（SG5–SG7：在一段步上排序之最优）是排序之窗而非涯（有穷之往），结构属择优与取舍，未收；若要以涯兼名之，须另定名。RegimeMargin、JointDraw、DrawnBeyond、InAmounts、Amounts、Growth、OwnWidening、Weightings、Direction、ContinuedClasses、Retaining、BoundedSignificance、Clearing、ClosedCapture、Drift、Reproduction、SelectionLevels、SelectionTerm、GroupEnding、PropositionIdentity、ListingRefutations、CensusTable、Witnesses、Extension、Laws 无本簇之结构；ListTests、Order、Naturals 在此工作树中不是模块文件（ListTests、Naturals 是 Laws 一类通用引理之命名空间）。\n五、易线未尽：HexagramLaws（互卦之法与其吸引域，即名表之势）与 HexagramSequences（卦序只是一表之行、杂卦、八站）只在八·十七引卦变一步（across_exchange、exchangeWorld_balances），其余留篇七或易章；小象、彖言位之句所列是否尽经文，由易章检查脚本对照所存页面，不由 Lean（八·二十六已说明）。\n六、体例：八·五、八·二十、八·二十六之說超过八句，审者可删；延续之条件只作为设出现（八·二十六与篇首），排序只在以广为愈。"
+ },
+ "C08": {
+  "source": "draft",
+  "edits": 47,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "下游（downstream：自一所待经已成之读之路所及者，Becoming.Upstream）",
+    "used": "下游（平语）"
+   },
+   {
+    "concept": "辨认（identification：有界之前段定历程；于极之辨认）",
+    "used": "辨认（平语；九·二十五题作「有界则往定其行」）"
+   },
+   {
+    "concept": "映射（map／projection：π : S → K、reg；名表之象只名 Relabel 之模型映射）",
+    "used": "映射（平语，依篇八之用）"
+   },
+   {
+    "concept": "表（list：l : List S，一表尽其状；名表之列专名普查）",
+    "used": "表（依篇一、篇八「有一表尽之」）"
+   },
+   {
+    "concept": "经感无别（alike through couplings：Web.AlikeThrough／AlikeThroughUpTo；名表之同锚 Alike，别为有界之顾）",
+    "used": "经其感无异／有异"
+   },
+   {
+    "concept": "得（right at a step：出一值而即所来之值，Parting.RightAt、Learnable.Predicts 之单步）",
+    "used": "得（九·二十一界定；避「中」）"
+   },
+   {
+    "concept": "失（miss：Learning.Misses）",
+    "used": "失（九·二十一界定）"
+   },
+   {
+    "concept": "有日之录（dated control：Retrodiction.Record）、包（packet）、源（source）",
+    "used": "有日之录、包、源（平语；避「往」之历程义）"
+   },
+   {
+    "concept": "余部（remainder of a reading：Becoming.Remainder；名表「余只在复词中」，所失另名截断之余）",
+    "used": "余部"
+   },
+   {
+    "concept": "附（adheres：Becoming.Adheres，闭包）",
+    "used": "附"
+   },
+   {
+    "concept": "可驳（refutable：Becoming.Refutable）",
+    "used": "可驳"
+   },
+   {
+    "concept": "术（method in the limit：Limit.Method；名表之法专名律）",
+    "used": "术"
+   },
+   {
+    "concept": "于极征（verifies in the limit：Limit.Verifies）",
+    "used": "于极征"
+   },
+   {
+    "concept": "见证、失实集、失实之包络、相离（witness, fault set, fault envelope, cross-separated：WitnessRefinement.CrossSeparated）",
+    "used": "见证、失实集、包络、相离（平语；避「交」）"
+   },
+   {
+    "concept": "凭（certificate：WitnessRefinementRuns.certificate）",
+    "used": "凭"
+   },
+   {
+    "concept": "见证无阙之录（complete transcript）",
+    "used": "见证无阙之录（以名表之阙组成）"
+   },
+   {
+    "concept": "策（policy）、所信（belief）、所求（goal）、可靠（sound）",
+    "used": "策、所信、所求、可靠（平语）"
+   },
+   {
+    "concept": "可许之应、共应（admissible response, common response：judgeProcess、CommonResponse）",
+    "used": "可许之应、共应"
+   },
+   {
+    "concept": "模型作为所许之历史类（admitted class of histories：Web.ExcludesWithin 之 admitted）",
+    "used": "所许之历史类（经）；模型（說）"
+   },
+   {
+    "concept": "特征（feature：val、f）、数据（data）",
+    "used": "特征、数据（平语）"
+   },
+   {
+    "concept": "可靠／确切之读（sound / exact readout：PartialReadout.SoundWithin／ExactWithin）",
+    "used": "可靠之读、确切之读"
+   },
+   {
+    "concept": "自然数之权重（natural weights p、q：Typicality；名表之权专名实践判断）",
+    "used": "重"
+   },
+   {
+    "concept": "损失函数（loss：Training.loss_through；名表之损专名下降）",
+    "used": "由数据上之值所算之量（经）；损失函数（說）"
+   },
+   {
+    "concept": "施动（a run takes a move：Run.Takes；避行／取之名）",
+    "used": "施（一动）"
+   },
+   {
+    "concept": "选取（section of a map over a domain：PartialReadout.SectionWithin；名表之截专名切口）",
+    "used": "映射之每一值皆给出域中之一状者"
+   },
+   {
+    "concept": "读已立者（nonanticipating / reads what has stood）",
+    "used": "读已立者"
+   },
+   {
+    "concept": "开类（open class：Ideals.Open；名表之开专名开放）",
+    "used": "开类（只在說中，注明与名表之「开」无涉；經中不用）"
+   }
+  ],
+  "open": "一、自 20 日以来新入主线之模块，只有 Clearing 中检验之见证（tested_by_dweller、pooled；R31 自 Continuation 移来）属本篇之结构，已收入九·九；Witnesses 只是定义；PropositionIdentity（以 ↔ 归并每一读，propext 之所失）属推理与证明（凡例／C16）；Optimum、RegimeMargin、JointDraw、DrawnBeyond、InAmounts、Growth、OwnWidening、Weightings、Direction 等属选择、比较与意义诸篇，不收。二、参验之一般律未证（G1）：一见证之报是另一之函数、失实集重合时加入它不增分辨；脊柱只有名单完全重复（doubled_roster_same）与共因之构造之例，hanfei-bu-shi-xiang-yu、hanfei-shi-ren-yun-yi、zongmi-san-liang、zhongyong-ben-zhu-shen 诸条因此只能定域。三、PartialReadout 诸律（阙）已在核心证明而无结果记录，九·十九之證只列声明。四、闻见之律只给一向（下游之外无差）；下游之内是否都有差未证。察是最小感只以不可非之形成立；所待无穷时反例给无穷可定其皆否，构造地给不出。五、过则改之常得，不给步时只有不可非之形（Learning），以表长为界之步在 Identification；往不示其步。六、名之存疑：墨经知三源之闻只指传受，名表闻见含长为零之路（亲），二者范围不同，已在九·四说明；「大率」名表无出处，此处以杨倞注（唐，注层）为书证；「读」之首义（带地位之读法）无 Lean 锚，是名之约定。七、并行修订：工作中 work/passages/C08.json 被并行更新（xici-shu-bu-jin-yan 由相合改定域，另有 wuzi-mei-bian-jie-xi、mozi-gu-chang、hanfei-shi-zhi-guan-zhi 改定域，shangjun-gu-xi 改相分）；本篇按更新后之种类写，未引后四条。八、九·十七之读法出自章 §3.2，无决定编号，标「讀（AI）」。九、相分只立于本原、意志与其他结构（前知、完备之自证）三层；争胜与等级之层在孙子诸条中只作不携带之余项，未立相分条，承 C08 修订总述之开放处。十、篇号依 assemble.py 之 ORDER 推定（C08 篇九，C10 篇十一，C11 篇十二，C14 篇十五，C15 篇十六）；若次序改，篇间互引须随之改。"
+ },
+ "C09": {
+  "source": "draft",
+  "edits": 49,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "code: a map from senses to forms that each formation holds (SharedCodes, I → M → F)",
+    "used": "码（名表只在「共享码」「外加码」之释义中用此字）"
+   },
+   {
+    "concept": "sense / meaning that a form names (M in SharedCodes, CrossSituational)",
+    "used": "义项（「义」不采为名；可考虑墨经「所謂」）"
+   },
+   {
+    "concept": "what a name refers to, the referent (墨经之「實」)",
+    "used": "所谓者（在宇中是物或状，在码中是义项）；「实」只在引文中出现"
+   },
+   {
+    "concept": "renaming: a re-identification that is the same at every step (Reidentify.rename)",
+    "used": "改名（在改认之條中定义，名表无单独一行）"
+   },
+   {
+    "concept": "hearing: a hearer takes the form a speaker gives a sense (SharedCodes.hearBy)",
+    "used": "听"
+   },
+   {
+    "concept": "rule of adoption that reads two codes (adopt)",
+    "used": "取舍之规"
+   },
+   {
+    "concept": "record of an occasion that bears on a form and offers meanings (CrossSituational records)",
+    "used": "记录（名表「往」锚 Learning.prefixOf，未借用）"
+   },
+   {
+    "concept": "a record bears on a form; offers a meaning",
+    "used": "及此名；予"
+   },
+   {
+    "concept": "repertoire of meanings; candidates",
+    "used": "义项表；候选"
+   },
+   {
+    "concept": "origin of a form along an order of hearing (SharedCodes.origin)",
+    "used": "源头（「所出」是世系，不借）"
+   },
+   {
+    "concept": "centre (every formation takes one formation's form) in SharedCodes",
+    "used": "中心（名表「我」是评价之中心，不借）"
+   },
+   {
+    "concept": "symmetry, exchange of formations, renaming of forms (KeepsExchange, KeepsRenaming)",
+    "used": "对称；互换；改名"
+   },
+   {
+    "concept": "feature read through a map (f : S → V)",
+    "used": "特征（「征」已名验证，不借）"
+   },
+   {
+    "concept": "sound / exact partial reading; section of a map over a domain (PartialReadout)",
+    "used": "可靠之读；精确之读；截面（「截」已名切口，只在复词中）"
+   },
+   {
+    "concept": "probe; atom; join and doubling of expressions (CodeAcquisition)",
+    "used": "探测；原子；合与倍；式族"
+   },
+   {
+    "concept": "label; table of labelled names (Becoming.Labels)",
+    "used": "标签；标签表（不用「名表」，免与本编名表相撞）"
+   },
+   {
+    "concept": "continuation a balanced world's relations induce (World.Conserves)",
+    "used": "守恒之续（与名表「与如其取」之守恒 Flow.ConservingOn 不同）"
+   },
+   {
+    "concept": "interderivability of propositions (↔); the identity reading by name (PropositionIdentity.byName)",
+    "used": "互推；以名读"
+   },
+   {
+    "concept": "family of readings indexed by what it reads (Diagonal)",
+    "used": "读族"
+   },
+   {
+    "concept": "generation / cohort of readers; history of records (SharedCodes.nextCohort)",
+    "used": "代；史"
+   },
+   {
+    "concept": "reading written back into the records later generations read",
+    "used": "写回之读"
+   },
+   {
+    "concept": "tenure of a dependence (MetAbove)",
+    "used": "依存之期（只在說中）"
+   }
+  ],
+  "open": "一、名表未给名者：码、义项、所谓者（实）、听、记录、候选、源头、中心、特征、截面、探测、标签、守恒之续、互推、读族、代、写回，均以平语暂写，见 missing_names；「改名」只在改认之條内定义。二、本篇对「名」取一义：读予所读者之值，统摄脊柱中四处之名（待网之名类、描述 π、码之形、Law.name 之有穷前段）；此统一是本篇之约定，须整合者确认，尤其 Labels 中「名」是经映射之未来前段，与改认之「名」（物之标号）层次不同。三、与他篇相叠者：正名之关系判据（identifiesAlike_iff、IdentifiesAlike.carries）已在大化之篇，本篇只加唯一、以状自名、最粗载法之分与达名；对角诸律（Diagonal）与时位之篇之「涯」同锚；PropositionIdentity 在证明语言之层，或归推理之篇；ContinuedClasses 之裂律、合律或归持续之篇。整合者定其归属。四、未推出而本篇只能标为界者：一义项持多形之码（「单与兼无所相避则共」之一读）、读多于二码之规（多数规则，韩非「言之爲物也以多信」）、整码之采纳、造新名之一步（「有作于新名」）、诸听序之概率与成同所需之时、指向律在有穷集上之步界；「當者勝」只在辞已定然否之处成立，何方相当无律给出；由信息或组织之关系导出之续未決。五、CodeAcquisition 与 PartialReadout 尚无结果记录，十·十三、十·十四之證只有声明。六、本篇新写之读法（以名读辞之「名无固宜之对面」、知名之用丽对应、拜下改上读作失辨）标「讀（AI，待编号）」，需整合者给决定编号。七、名表之「状」与「状同而为异所」之「状」（形貌）不同义，已在十·五注明；名表本身之注或须补此一句。八、实际之约定、文字是否以听之方式形成，共享、外加、写回之码支持还是损害生生，诸律不言；排序只在以广为愈，延续之条件只定范围。"
+ },
+ "C10": {
+  "source": "draft",
+  "edits": 46,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "optimum (a member of Requirement.Frontier: eligible, nothing eligible ranked above it)",
+    "used": "最优"
+   },
+   {
+    "concept": "an order rising with a family (Optimum.Rising); one outcome exceeding another on a family (Optimum.Exceeds)",
+    "used": "随族而升之序；于族胜之"
+   },
+   {
+    "concept": "room beyond (Optimum.Room)",
+    "used": "可腾挪"
+   },
+   {
+    "concept": "outcome (the levels after a step, C → Nat)",
+    "used": "步后水平"
+   },
+   {
+    "concept": "slack of the dependences beyond (Web.slack)",
+    "used": "族外诸待余地之和（说中亦称宽余）"
+   },
+   {
+    "concept": "capacity (cap; Flow.capacity) and joint capacity",
+    "used": "限；合限"
+   },
+   {
+    "concept": "mutual best response (Optimum.MutualBest)",
+    "used": "相为最优"
+   },
+   {
+    "concept": "horizon of an order ranking whole courses (the steps counted), and the far-sighted order",
+    "used": "所计诸步；远见之序（不用涯，涯锚 Diagonal/Learning 之视界）"
+   },
+   {
+    "concept": "weighting of later draws (w t)",
+    "used": "各步之重（不用权重，权是实践判断之名）"
+   },
+   {
+    "concept": "share (of carriers among descendants / the fast configuration read by a rule)",
+    "used": "份额"
+   },
+   {
+    "concept": "favours (RuleCapture favours)",
+    "used": "偏向"
+   },
+   {
+    "concept": "Locked (RuleCapture.Locked: rule favours and is not above what the reading gives)",
+    "used": "锁定（不用成闭：成闭锚 Law.DrawnInto.never_back，结构不同）"
+   },
+   {
+    "concept": "rule (the slow level R in Pace, Capture, RuleCapture, ClosedCapture)",
+    "used": "规则（名表各定义亦用此今语；单字“则”与连词相混，不用）"
+   },
+   {
+    "concept": "fast level / two-level course (Pace.paced)",
+    "used": "快层；两层之程"
+   },
+   {
+    "concept": "what lies beyond the share, the loss (ClosedCapture, Accrues)",
+    "used": "份额之外者（不用所失：所失名 Remainder）"
+   },
+   {
+    "concept": "group / pool as a predicate on formations, and its members",
+    "used": "一组；诸员（群名 collective，结构更多，不借）"
+   },
+   {
+    "concept": "alike through a formation's couplings (Web.AlikeThrough, AlikeThroughUpTo, AlikeThroughAll)",
+    "used": "缘感无别"
+   },
+   {
+    "concept": "levels without the part, the rest's exchange fixed (Flow.WithheldLevels)",
+    "used": "体之取与去而余者如故之水平（无体之水平）"
+   },
+   {
+    "concept": "a law of exchange reading through coupling (ExchangeLaw.Through)",
+    "used": "取与之法经感而读"
+   },
+   {
+    "concept": "exchanges with a condition (Flow.Exchanges); takes part in a condition (Flow.TakesPart)",
+    "used": "相取与；预"
+   },
+   {
+    "concept": "seeking; target; a target met at a state",
+    "used": "求；的；满（足只名一个所需被满足）"
+   },
+   {
+    "concept": "a model as the set of admitted histories in ExcludesWithin (Flow.excludes_tail_within, Stationary.model_error)",
+    "used": "象（表中之象锚 Relabel 之映射；此处借作所许历史之集，请整合者定）"
+   },
+   {
+    "concept": "a part's act (its exchange, a law of the part in SelectionGap, SelectionPool, PoolResponse)",
+    "used": "动（表锚 withMove：律所留开者，在宇中即诸物之取与）；行只名运行"
+   },
+   {
+    "concept": "reading another's couplings (Web.ReadsCouplings)",
+    "used": "读他者之感"
+   },
+   {
+    "concept": "intelligences (persons, AI systems)",
+    "used": "诸智能"
+   },
+   {
+    "concept": "counterfactual",
+    "used": "反事实"
+   },
+   {
+    "concept": "the target above all others (AboveAll): the table gives only the traditional form 為天下先",
+    "used": "为天下先（简体）"
+   }
+  ],
+  "open": "一、本篇不立条者：§7.2「Gaining reach」之 OwnWidening（Flow.Balances.widens_iff_others_within 等，部分自身区域之广恰在他者余地之内）结构属广、余地、互有所长，留生成之篇；Direction（§7.5 对齐之向，以广为愈与 J1/J2 之下）留比较之篇，本篇只收其兼感之部 Direction.widening_selected_by_pool；JointDraw（合取按需而绝、断属无一取者）留群之篇；RegimeMargin、InAmounts/Amounts 留流与余地之篇；Weightings、BoundedSignificance、Retaining、Clearing 之意义诸律、Drift、Reproduction、SelectionLevels、SelectionTerm、GroupEnding 等不在本簇结构内。§7.6（所请求之改变须是可执行之序列，不行不至）在比较与践行之篇。\n二、脊柱尚无之律（缺口，对应条目所载）：G1 按份额加权之兼感之律（wuzi-qun-chen-mo-ji、hanfei-san-shou）；G2 时稽与兼感合成之律（「兼听而时稽之」）；G3 兼感作读、含被压低者时规则不锁定之条件（hanfei-er-bing）；故“池须到达规则怎样读”只是方向，不是定理。\n三、以水平之感是否由待导出，本篇未述；章中称在交换之步已定（OB1），留待之篇。\n四、名之待定：为天下先表中只有繁体；象被借作所许历史之集；动用作体之所为；规则、份额、锁定、最优、可腾挪等今语暂代（见 missing_names）。\n五、十一·十三之 least_iff 右边带双重否定（不可非其被胜），經照写；十一·七之覆亦用双重否定。CG1 之「合用必要而不充分」是实测，不是律，说中已标。\n六、說中“見证”诸条（Clearing、Trophic、Diversion、DrawnBeyond.Dweller、TwoTakers、Switching、Captured、RuleCapture.Reversed、ClosedCapture.Beyond、Loop、Stationary）皆一个构造之例，不作一般之律。"
+ },
+ "C11": {
+  "source": "draft",
+  "edits": 34,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "gap between two levels (Becoming.gap)",
+    "used": "差"
+   },
+   {
+    "concept": "link of a loop (an element of the list passed to LoopReturn.returnMap)",
+    "used": "节"
+   },
+   {
+    "concept": "one turn around a loop (one application of the return map)",
+    "used": "周"
+   },
+   {
+    "concept": "factor of a link or of a turn (LoopReturn.scaling), as against coupling strength (应倍)",
+    "used": "倍率"
+   },
+   {
+    "concept": "order of responses in the expansion of the carried amount (carriedWithin j)",
+    "used": "阶（j 阶）"
+   },
+   {
+    "concept": "chain of couplings (Becoming.Coupled)",
+    "used": "感之链／链"
+   },
+   {
+    "concept": "upstream / downstream along chains of couplings (Becoming.Upstream)",
+    "used": "上游／下游"
+   },
+   {
+    "concept": "polynomial bound in the steps",
+    "used": "多项式"
+   },
+   {
+    "concept": "schedule of steps at which couplings act (on : Nat → Bool; strengthsFrom N)",
+    "used": "日程"
+   },
+   {
+    "concept": "threshold θ (ExchangeLaw.ReadsBelow; Adjusted.threshold)",
+    "used": "阈"
+   },
+   {
+    "concept": "standing law (ExchangeLaw.standing: the law while the stock stands at its threshold)",
+    "used": "常立之法"
+   },
+   {
+    "concept": "standing draw H of RegimeMargin",
+    "used": "常取"
+   },
+   {
+    "concept": "point of no return H+y of a regime",
+    "used": "不可回返之点"
+   },
+   {
+    "concept": "recent giving (second component of the RegimeMargin.Adjusted state)",
+    "used": "近来所与"
+   },
+   {
+    "concept": "what is left after the draw (x − H); the table keeps 余 for 其余、余地 only",
+    "used": "所剩"
+   },
+   {
+    "concept": "band [a, b] / band up to hi (Adjusted.Band)",
+    "used": "带"
+   },
+   {
+    "concept": "rule read from the rest's record (Regulation.Rule)",
+    "used": "规则"
+   },
+   {
+    "concept": "late return (Regulation.lateReturn)",
+    "used": "迟返（迟返之规则）"
+   },
+   {
+    "concept": "waits on (up b a in Withholding and Tolerance), chain of waits",
+    "used": "所等待者／等待之链"
+   },
+   {
+    "concept": "withholding; total withholding (Tolerance.allWithheld)",
+    "used": "不给；全不给"
+   },
+   {
+    "concept": "the tolerating law for any tol, including 0 (不求备 names only tol ≥ 1)",
+    "used": "缺不过 tol 犹给之法"
+   },
+   {
+    "concept": "a law keeping inclusion (Tolerance.KeepsInclusion)",
+    "used": "守包含之法"
+   },
+   {
+    "concept": "policy through the couplings (Flow.PolicyThrough)",
+    "used": "经其感之策"
+   },
+   {
+    "concept": "lossless law (Law.Lossless)",
+    "used": "无损"
+   },
+   {
+    "concept": "start configuration of a run",
+    "used": "起处"
+   },
+   {
+    "concept": "law of what has stood (ExchangeLaw.Nonanticipating)",
+    "used": "唯读已立者之法"
+   },
+   {
+    "concept": "a run still from some step (LastChange.StillFrom), distinct from 止 (World.RestsFrom)",
+    "used": "自某步起不再变（从凡例之约定）"
+   },
+   {
+    "concept": "finite (of an order, a number of steps); the table reserves 穷 for the break",
+    "used": "有尽（从凡例之约定）"
+   },
+   {
+    "concept": "two-sided opposition of the joint exchange (Flow.Opposes) as a part of 中和",
+    "used": "相反／两侧皆反其离"
+   },
+   {
+    "concept": "joint exchange at a condition (all takes and gives at c in one step)",
+    "used": "c 上诸取与之合"
+   }
+  ],
+  "open": "一、锚之约定：名表中「还」无锚，本篇以 Becoming.LoopReturn.RespondsByReturn（二历程于一所待之差每步为前差之报）为其锚，并以 responds_iff、gap_course 为其律，此是 AI 约定，待整合者确认；「应倍」名表无锚，本篇锚于 ExchangeLaw.RespondsWithin；「体」用于 Propagation 等模块中给定其所为之 part（F → Bool），名表之体锚于 Web.Whole，所名相合而锚不同。二、21 日以前所列新模块之取舍：RegimeMargin 之不可回返之点、平面之阈与运行之止入本篇（十二·十三、十二·十四），其 Drawn 之任意有序之量之形入说；周边模块 RegimeReals（实数上之收敛，用 Mathlib）未引。Optimum 之再优化历程（r<k 则失、保持所舍 (r−q)n+m 等）、DrawnBeyond（越过余量而绝，WithinSlack）、JointDraw（联合之取按所需而绝）虽有阈之形，其结构属择与取（篇十一、篇四）与群（篇十四），留给各该篇；Growth、OwnWidening、Weightings、Direction、ContinuedClasses、Retaining、BoundedSignificance、Clearing、ClosedCapture、Drift、Reproduction、SelectionLevels、SelectionTerm、GroupEnding、PropositionIdentity、ListingRefutations、CensusTable、Witnesses、HexagramCommuting、Stuttering、IdleRemoval、Extension、Laws 不是本簇之结构（ListTests、Order、Naturals 在此工作树中未见为模块文件）。三、仍开放（皆 AI 所陈，未经 Lean）：有取与的一侧之律（一偏只有空流之例）；局部之律何时使联合取与两侧相反而整体自定（lao-57「自正」）；饱和之律（lao-72）；介入与截断所失之关系（lao-79 余怨能否化解）；体反复与差（σ≠0）时可致与作用次数之律（lao-60「数挠」）；容差之跨法单调（tol 大者处处所给不少，lao-36-78）；一次先给只沿环循环（answers_circulates 之对偶）；继电之摆幅之界。四、名之注：critic 说荀子天论「万物为道一偏」不在冻结文本，实则在 RU2-S-XZ17（简体），其义为一部分，与本篇所取苏辙「一偏」之只守一侧义不同；「不已」名表引中庸，二程语（近思录）是更近之宋儒用例；「余地」在十二·十三用于常取之下水平高出不可回返之点之距，名表之余地锚于 Flow.Balances.supported_iff_within_margin，二者相关而非同一，待整合者定；十二·二十与篇十四（念旧恶、不念旧恶）有重叠，整合者可移。五、讀之编号：环之读法标 D43、D45（依规范章 §2.6 读法之标），以伤还伤之环标 D48，失控标 D26；古典对应之读法是本 ZH 工作之 AI 读法，未另立编号。六、篇号依 work/xu.md 之篇目推定（篇一法、篇四流衡、篇五同归、篇六盈科与余地、篇七入与机、篇九察与验、篇十一感与应、篇十四念旧恶、篇十五延续之条件、凡例无穷可尽），若篇目有变须随之改。七、本篇诸律都在离散步与自然数之量的建模选择之下（RegimeMargin.Drawn 除外），读法所承以此为限；「說」多超出八句，整合者可删繁。"
+ },
+ "C12": {
+  "source": "draft",
+  "edits": 54,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "stock of a family of conditions (Web.stock)",
+    "used": "存量（族之存量）"
+   },
+   {
+    "concept": "level of a condition (Web.level)",
+    "used": "水平"
+   },
+   {
+    "concept": "family: a list of conditions read together (cs, ds)",
+    "used": "族"
+   },
+   {
+    "concept": "takes part in a step (Flow.present)",
+    "used": "在场"
+   },
+   {
+    "concept": "active / activity (Web.active)",
+    "used": "活动"
+   },
+   {
+    "concept": "only active formations give (Flow.Acting)",
+    "used": "唯活动者与"
+   },
+   {
+    "concept": "offspring, a relatum descending from g (the table writes 出于 g 者)",
+    "used": "出者（出于 g 者之省）；出者之数 for offspring number"
+   },
+   {
+    "concept": "list (List) and a member of a listed family (a parent in price)",
+    "used": "单；员"
+   },
+   {
+    "concept": "amount / reading of members (a : α → Nat)",
+    "used": "量；读数"
+   },
+   {
+    "concept": "weight (w)",
+    "used": "权"
+   },
+   {
+    "concept": "concordance / discordance over ordered pairs (SelectionTerm.concord / discord)",
+    "used": "一致／不一致"
+   },
+   {
+    "concept": "the selection term proper (concordance less discordance with offspring number as weight)",
+    "used": "选择项"
+   },
+   {
+    "concept": "uniform share of the weighted total (born × total ÷ members)",
+    "used": "均分"
+   },
+   {
+    "concept": "mean of a generation compared by cross-multiplying",
+    "used": "均、均值（以交乘相比）"
+   },
+   {
+    "concept": "listed generations (SelectionTerm.Generations)",
+    "used": "世代"
+   },
+   {
+    "concept": "exact transmission in Price's sense (SelectionTerm.Exact: each offspring carries its parent's amount); 传 is reserved for Flow.TransmitsWithin",
+    "used": "无损益"
+   },
+   {
+    "concept": "group, within-group, among-group (SelectionLevels)",
+    "used": "组；组内；组间"
+   },
+   {
+    "concept": "lineage of a group (SelectionLevels.lineage); 所出 names descent, so 世系 could not be reused",
+    "used": "系"
+   },
+   {
+    "concept": "drift, sampling, fixation, history of sampled generations (Drift)",
+    "used": "漂变；抽样；固定；史"
+   },
+   {
+    "concept": "alternatives of a selection through a map (Relabel)",
+    "used": "备择"
+   },
+   {
+    "concept": "what matters (a given predicate p)",
+    "used": "所要者"
+   },
+   {
+    "concept": "a selection factoring through the map (Relabel.Equivariant)",
+    "used": "择经象（换二备择之项则换其所择）"
+   },
+   {
+    "concept": "teacher, receiver, program, lesson, query, parts (ResponseLearning)",
+    "used": "教者；受者；程序；课；所问；部件"
+   },
+   {
+    "concept": "premise of the map of premises (World.Premise)",
+    "used": "前提（七前提）"
+   },
+   {
+    "concept": "a premise binds in a world (Premise.Binds)",
+    "used": "有所约"
+   },
+   {
+    "concept": "transmission from some giver (Flow.TransmitsFromSome)",
+    "used": "自某所出之传"
+   },
+   {
+    "concept": "drawing is depending (Web.DrawingDepends) and the reading of drawing (Flow.DependsOnDrawn)",
+    "used": "“汲即待”；汲之读"
+   },
+   {
+    "concept": "the coupled gate / a family of conditions read as one (Flow.family_excess_ends)",
+    "used": "凡在场而与 c 者皆以至少 m 之所需待 c；合读为一之族"
+   },
+   {
+    "concept": "event of a relatum (X × Nat) in a valuation",
+    "used": "事；活事"
+   },
+   {
+    "concept": "the count of configurations within a stock (configurationsWithin)",
+    "used": "T 时存量之内其状之数"
+   },
+   {
+    "concept": "a family listed without repetition (Distinct)",
+    "used": "族之单无重"
+   },
+   {
+    "concept": "counted world with the rest as residual is not open (Flow.ClosedAt negated); 开 is reserved for arising_opens",
+    "used": "不封"
+   }
+  ],
+  "open": "1. Gaps the passages raise, still unstated on the spine: (a) a multi-step bound of transmission along a lineage (need ≤ start + n·δ; lunyu-yin-sun-yi); (b) the necessary half of a law of forming, stated with drawing and dependence, chapter §8.1 item 9 (weishi-shiqi-wu-yin); (c) a target carried down a lineage, as a predicate on Flow/Web under Flow.DescendsAt (zhongyong-shan-ji-ren-zhi-zhi); (d) b-fold copying generalizing Copying.doubling_iff (wuzi-yi-ren-xue-zhan); (e) Fisher's identity with the regression ratio, and several carried amounts at once; (f) mixed groups and migration between lineages, so the among-group share as a function of assortment (Hamilton 1975); (g) the time to fixation, selection or mutation inside the draw, more than two kinds.\n\n2. Names: the table names none of the evolution-line notions landed since 20 October (selection term, concordance, generations, group, lineage, drift, exact transmission). This 篇 writes them in plain modern Chinese; see missing_names. 出者 (short for 出于 g 者) and 单 (list, following the 凡例 draft) need the integrator's confirmation. 择 is used in three places: 传择, selection through a map (象), and plain 选出 for selection by support, as the C12 check notes direct. The integrator may prefer a classical name for 选择项.\n\n3. Readings: the classical readings carry no D number of their own and are labelled 讀（AI，D54）. The three readings of 论语 2.23 (C08, C10 and this 篇) still need unifying. This 篇 uses it for 因／损益, with 可知 scoped by Learning.determines_lumped_iff. Two readings of 论语 17.3 are not given their own entries here: 程颐's and 戴震's, which come close to an exact scope.\n\n4. Status: ResponseLearning (取法) is an application module, outside the core by direction and held to the core's conditions, with no result record. 十三·二十一 cites declarations only. Most ResponseLearning laws are witnesses inside one construction.\n\n5. Exactness limits:\n   - The 經 of 十三·十五 summarizes levels_sized as 同式之分 without its full scaling factors.\n   - 十三·二十二 uses Unrestricted only as the stated, not asserted, condition. The relational neutrality in descent_reaches and ancestry_reaches (无亲) is an antecedent.\n   - Every name was resolved against the worktree's newest core receipt. Main is 23 commits ahead of this worktree, so the integrator should resolve once more on main.\n   - No new module after 21 October (for example ReadingSchedule) was checked for this cluster.\n\n6. Placement: of the modules added since 20 October, only SelectionTerm, Reproduction, SelectionLevels, GroupEnding and Drift have this cluster's structure, and all are placed here. Optimum, RegimeMargin, JointDraw, DrawnBeyond, InAmounts, Growth/OwnWidening, Weightings and the rest belong to other 篇."
+ },
+ "C13": {
+  "source": "draft",
+  "edits": 30,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "level of a condition (Web.level)",
+    "used": "水平"
+   },
+   {
+    "concept": "active / activity (Web.active)",
+    "used": "活动；不活动"
+   },
+   {
+    "concept": "need of a dependence (Web.need)",
+    "used": "所需"
+   },
+   {
+    "concept": "the waiting relation of Becoming.Withholding (up b a: a's giving waits on b's) and a chain of waits (Withholding.Chain)",
+    "used": "等待；所等待之待者；k 层等待之链"
+   },
+   {
+    "concept": "withholding (not giving at a step)",
+    "used": "扣留；不与"
+   },
+   {
+    "concept": "sharing conditions throughout (Flow.SharesThroughout)",
+    "used": "凡待者皆在凡待者之群域（說中称处处共享）"
+   },
+   {
+    "concept": "renewal gated at m (whatever gives to the condition depends on it at a need of at least m)",
+    "used": "凡与此所待者皆待之而所需不下于 m；门于 m"
+   },
+   {
+    "concept": "greatest part of a family (RelativePosition.Greatest)",
+    "used": "称之最者"
+   },
+   {
+    "concept": "withholding a part's share in the but-for test (withhold, withholdAll)",
+    "used": "去其分；单去／并去"
+   },
+   {
+    "concept": "overdetermined loss (Dependence.Overdetermined)",
+    "used": "单去任一体其绝依旧"
+   },
+   {
+    "concept": "move determines the step (Determined)",
+    "used": "动定其步"
+   },
+   {
+    "concept": "optimizer (a formation choosing an optimum of its own order, Becoming.Optimum)",
+    "used": "优化者"
+   },
+   {
+    "concept": "capacity of an optimizer at a condition (cap) and joint capacity (Flow.capacity)",
+    "used": "容量；合计容量"
+   },
+   {
+    "concept": "mutual best response (Optimum.MutualBest)",
+    "used": "互为最优"
+   },
+   {
+    "concept": "order rising with a family (Optimum.Rising); the family ds and the conditions beyond it (rest)",
+    "used": "序随其族而升；族；族外"
+   },
+   {
+    "concept": "list without repetition (Distinct); 列 is reserved for the census",
+    "used": "不重出"
+   },
+   {
+    "concept": "footprint of a configuration (PartsWithin, PartsApart, Supports)",
+    "used": "足迹；为其体之足迹所支"
+   },
+   {
+    "concept": "leaf and root of a joint plan; what the leaves draw on (JointPlan.draws)",
+    "used": "叶；根；诸叶之所资"
+   },
+   {
+    "concept": "a description identifying configurations (π in JointPlan.realizes_image_iff; MatchesParts)",
+    "used": "类（以名表之类即归并之读代之；所同之状）"
+   },
+   {
+    "concept": "guard (a predicate on configurations) in Viability.Kernel / Keepable",
+    "used": "所守；无一行离之（Kernel）；有行保之（Keepable）"
+   },
+   {
+    "concept": "history of levels selected through couplings (l, l' in SelectionPool)",
+    "used": "历"
+   },
+   {
+    "concept": "link of a loop and a turn of the return map (LoopReturn)",
+    "used": "环节；回合"
+   },
+   {
+    "concept": "levels without a part's exchange (Flow.WithheldLevels), the inaction baseline",
+    "used": "无之之水平；有之之水平"
+   },
+   {
+    "concept": "whole-run reading versus stepwise reading of living (Ranking)",
+    "used": "全行之读；步步之读"
+   },
+   {
+    "concept": "seeker (the index set of AboveAll)",
+    "used": "寻求者"
+   },
+   {
+    "concept": "restraint (a course taking less, Flow.Balances.kept_of_restrained)",
+    "used": "节取"
+   }
+  ],
+  "open": "一、由分到不争之桥未证：一个实现之分数（JointPlan.supports_of_realizes，足迹不交）与某一所待上的出入相掩（Flow.WithinJoint）之间没有定理，荀子「明分使群」、礼论「度量分界」、韩非「使人不同功」三条只能各取前后两半；十四·十七写作未決。二、互为最优一般是否存在、诸优化者怎样到达它，脊柱未证；实际受训系统近于最优而排空族外，是论题 T3，不是律。三、十四·十三之共取之绝（Flow.Balances.broken_shared）与十四·十二之合致而无独致（Dependence.DifferenceOnlyTogether）结构相近，我没有找到把二者连起来的定理，只写「可与对看」，整合者可查是否已有或应立。四、名表此行作「為天下先」（繁体，无简体括注），正文按名用简体之例写作「为天下先」，请整合者定。五、十四·十八己之广（OwnWidening）之读无决定编号，标为「讀（AI，未编号）」；十四·四（以群域为界之别合于凡续皆有顾）与意义之篇（C14）相邻，十四·十八与生成之篇（广、互有所长，C06）相邻，归属由整合者定。六、篇号：任务定为篇十四，而 C01 之稿为篇一，篇间互引一律写篇名（意义之篇、耦合与选择之篇），不写篇号。七、本篇未收而结构相近者：§4.1 联合消耗（consumption_relates）、§4.2 回路之指数步速（exponential_around、half_stands，属回路之篇）、Tolerance 诸律（不求备、有以待之，属 C11）、与时转、火传、约定俗成、劫与劫及其读（各在其篇），以及 WE1 整体之汲取过更新而终（Web.Whole.family_excess_ends），整合者可决定是否补入十四·九之說。八、对照条目与他簇重复者（lunyu-bu-nian-jiu-e 与 C11 先施、laozi-79、laozi-22 与 C10 无明等）由整合者定主条目。九、经中「等待」「扣留」「足迹」「所守」「优化者」「容量」等为现代语暂写，见 missing_names。"
+ },
+ "C14": {
+  "source": "draft",
+  "edits": 51,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "active (Web.active)",
+    "used": "活动"
+   },
+   {
+    "concept": "level path (l : Nat → C → Nat)",
+    "used": "水平之路；路"
+   },
+   {
+    "concept": "levels without the part (Flow.WithheldLevels)",
+    "used": "无之之水平（此体不取不与，余者照旧取与，自原初之水平起）"
+   },
+   {
+    "concept": "a part's cumulative net draw",
+    "used": "累计之净取（此体至此所取减所与）"
+   },
+   {
+    "concept": "formed relation between claims (Valuation.related)",
+    "used": "已成之关系（为与名表及中文版以「相关」名 relevance 分开）"
+   },
+   {
+    "concept": "relevance (parameter of LivingSignificance)",
+    "used": "相关（依名表「皆顾之活」之注与现行中文版）"
+   },
+   {
+    "concept": "connected (Valuation.Connected)",
+    "used": "连通"
+   },
+   {
+    "concept": "closure under a relation (WithinClosure rel f)",
+    "used": "闭包；沿此关系之闭包"
+   },
+   {
+    "concept": "region (F → Prop)",
+    "used": "区域"
+   },
+   {
+    "concept": "sub-true (SubTrue)",
+    "used": "于某一畛立"
+   },
+   {
+    "concept": "super-true (SuperTrue)",
+    "used": "凡畛皆立"
+   },
+   {
+    "concept": "admissible boundary / drawing of a self",
+    "used": "可取之畛；可取之划法；划法"
+   },
+   {
+    "concept": "covering (every formation within some center's closure)",
+    "used": "覆盖：凡物皆在某我之闭包内"
+   },
+   {
+    "concept": "the empty relation / the total relation",
+    "used": "空关系／全关系"
+   },
+   {
+    "concept": "content held de se / de dicto (selfAscribed / shared)",
+    "used": "就己而持／就辞而持"
+   },
+   {
+    "concept": "union of the centers' closures (withinSome)",
+    "used": "诸我闭包之并"
+   },
+   {
+    "concept": "graded significance; grade; standing; status",
+    "used": "分级之顾；级；计入（级为正）；计入多少"
+   },
+   {
+    "concept": "weighting; positive weighting; weighted count over listed items",
+    "used": "加权；计及每项之加权；加权计数；所列之项"
+   },
+   {
+    "concept": "realized at a configuration (Frame.realized)",
+    "used": "一状所实现"
+   },
+   {
+    "concept": "valence",
+    "used": "正负；正价"
+   },
+   {
+    "concept": "stepwise / whole-run / relation-level readings of living",
+    "used": "逐步之读／整轮之读／关系之读"
+   },
+   {
+    "concept": "event (a formation at a step)",
+    "used": "事件"
+   },
+   {
+    "concept": "grounds of the evaluation (Valuation.Grounds: seed with both neutralities)",
+    "used": "评价之所据（萌与两种无偏）"
+   },
+   {
+    "concept": "evaluator; present-aim evaluator (Model witnesses)",
+    "used": "评价者；只顾当下之目的者"
+   },
+   {
+    "concept": "witness model; roles in the witnesses (clearer, dweller, source, drawer, conveyor, giver)",
+    "used": "见证、构造之见证；清除者、栖居者、源、汲取者、输送者、给与者"
+   },
+   {
+    "concept": "route (b): significance bounded by closures, with no condition",
+    "used": "不加条件之路；“路线 (b)”"
+   }
+  ],
+  "open": "一、名表锚。名表 C14 中十一个名没有 Lean 锚，本篇所用之锚请整合者核定后补入名表：顾 → `sig`（是参数，不是声明，经 `Becoming.Valuation` 的字段与 `Becoming.Unrestricted` 的参数引出）；方 → `Valuation` 的方之型 `Pos`；我 → `center : Pos → F`（是参数，没有自己的声明，经 `Becoming.atCenters` 引出）；己 → `Valuation.own`；萌 → `Becoming.Valuation.Seed`；自顾 → `Becoming.Valuation.SelfSignificance`；无亲 → `Becoming.Neutral` 施于 `Becoming.Valuation.transmits`；无方 → `Becoming.Neutral` 施于 `Becoming.Valuation.shares`，又名 `Becoming.StandpointInvariant`，一名覆盖两个 Lean 概念，名表已如此规定；别 → `Becoming.bounded`；畛 → `Becoming.Boundary`；皆顾之活 → `Becoming.Frame.relevance`；皆在己 → `Becoming.Valuation.Held`。活：在 `Valuation` 中只是参数，本篇以逐步之读 `Becoming.Web.valuation`（活动而不剥）定义它，整轮之读与关系之读另说。\n\n二、术语。名表与现行中文版都以「相关」名 relevance。为免混淆，本篇把 `Valuation.related`（已形成的关系）写作“已成之关系”，此处须统一一名。无丧、有得、以广为愈属 C15，按篇序它们先在本篇出现，所以首次出现时作了解释。十五·一 与篇六（所容、广、余地）有交叠：§6.1 无设的生成空间在本篇只简述其序与互斥，余地之界留给篇六；只有对任何顾成立的无丧、有得之界放在十五·四。\n\n三、见证。下列各条依赖单一构造模型，都标了“见证”，不当作一般之律：十五·十一（`Model`）、十五·十三、十四、二十二、二十五、二十六、二十七（`Clearing`）、十五·二十（`Preemption`）、十五·二十一（`Transfer`、`Restoring.Inflow`）、十五·二十九（`Partial`）。`Clearing`、`Model`、`Preemption`、`Transfer` 在正文中以命名空间引用；`Pos`、`center`、`own`、`sig` 是变量或字段，不是声明。\n\n四、理论中未决者。凡续皆有顾与不易乎畛的根据未决（D21、D45）。覆盖须另作为一设（D59）。就己之问未决：自身之预设是否就一个沿某特权关系划定的己而持（D60）。“多少不随方易”是另一个设，理论不断言。以时为界的对手规则，脊柱尚无定理（对应条目 daqu-ai-shang-shi-hou-shi 已指出此缺口）。每一体必居广、狭、相赅、互有所长四者之一，需要经典逻辑，Lean 未陈述。非加性之序、超出“不闭合”的义务约束，以及带来新生命的价值，都没有建模或处理。\n\n五、取舍。21 日之前新增诸模块，只纳入结构属于本簇者：Weightings 的跨方之一步、就己与就辞、计入与多少、零权即否认范围；BoundedSignificance；Clearing；Retaining 中对任何顾成立的余地之律；Direction 中的 `Web.unrestricted_iff_grounds_beyond`；Extension 中的 `LivingSignificance`。Weightings 中“广即每一正加权所共排者”只在十五·三十作衔接，属篇十六。以下各模块的结构属于其他簇，本篇没有纳入：Optimum、RegimeMargin、JointDraw、DrawnBeyond、InAmounts／Amounts、Growth、OwnWidening（自身之广在他者余地之内；它不用顾）、ContinuedClasses、Drift、Reproduction、SelectionLevels、SelectionTerm、GroupEnding、ClosedCapture、PropositionIdentity、ListingRefutations、CensusTable、Witnesses、HexagramCommuting、Stuttering、IdleRemoval、Laws。工作树中找不到 ListTests、Order、Naturals 三个模块文件。论题 T5（伦理之序为每一评价者所共有）已在 VD1 之后重述，归篇十六。\n\n六、引文。《老子》七十二章帛书乙本异文“自愛而不自貴也”不在冻结文本中，只按对应条目的层注提及，没有作为引文。其余 32 段引文都已用 ctq.py text 逐字核过。"
+ },
+ "C15": {
+  "source": "draft",
+  "edits": 43,
+  "failed": [
+   {
+    "find": "名取「以一易兩，人曰：无丧而有得也。」〔RU2-S-XZ22〕：同类可换之物按数计时",
+    "count": 0,
+    "why": "The frozen text reads 两, not 兩, so the quotation was inexact. The name table gives 无丧 no source, so 名取 claimed one the table does not adopt. Reading the exchange as counted claims is the entry's AI reading and needed its label."
+   },
+   {
+    "find": "xunzi-xiusheng-bu-xing-bu-zhi",
+    "count": 0,
+    "why": "The entry id is misspelled. The passage map has xunzi-xiushen-bu-xing-bu-zhi (agreement, RU2-S-XZ02)."
+   }
+  ],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "level (Web.level)",
+    "used": "水平"
+   },
+   {
+    "concept": "level path (Nat → C → Nat), compared by Web.Retains/Adds/Widens",
+    "used": "水平之历"
+   },
+   {
+    "concept": "activity / active (Web.active)",
+    "used": "活动"
+   },
+   {
+    "concept": "need (Web.need)",
+    "used": "所需"
+   },
+   {
+    "concept": "extension on a frame (Becoming.Extension)",
+    "used": "扩展"
+   },
+   {
+    "concept": "better: the relation of a supplied comparison (Better, better)",
+    "used": "愈, as in 以广为愈 and 皆愈 and as the 凡例 uses it"
+   },
+   {
+    "concept": "comparison / order (a supplied relation)",
+    "used": "比较、序"
+   },
+   {
+    "concept": "loss: a claim one configuration realizes and another does not. 所失 is C11's remainder, so it is not used",
+    "used": "丧"
+   },
+   {
+    "concept": "basic claim / basic tier (J1/J2, Lexical basic)",
+    "used": "基本之辞; 基本之项 for listed items"
+   },
+   {
+    "concept": "gain tier (Lexical gain)",
+    "used": "增益之辞"
+   },
+   {
+    "concept": "lexical order of two tiers (Lexical.Above)",
+    "used": "两层之字典序"
+   },
+   {
+    "concept": "weighting / positive weighting (Weighting.weighed, Weighting.Positive)",
+    "used": "加权、正加权"
+   },
+   {
+    "concept": "item: a formation at a step (Weighting items)",
+    "used": "项"
+   },
+   {
+    "concept": "finite list (List; listed exactly)",
+    "used": "单; 有一单尽之, following the 凡例"
+   },
+   {
+    "concept": "order increasing in admission (Weighting.Increasing)",
+    "used": "把每一广排在上之序"
+   },
+   {
+    "concept": "natural-number score / bounded score (ScoreRepresentation)",
+    "used": "自然数之分、有界之分"
+   },
+   {
+    "concept": "outcome of a move or response",
+    "used": "果"
+   },
+   {
+    "concept": "response / policy (R). 应 names ExchangeLaw.RespondsTo",
+    "used": "回应"
+   },
+   {
+    "concept": "chosen: a member of the frontier (Requirement.Frontier)",
+    "used": "所取（莫有愈之者）"
+   },
+   {
+    "concept": "required (Requirement.Required)",
+    "used": "要求、所要求"
+   },
+   {
+    "concept": "residual (Requirement.Residual; the record's zh is 余欠)",
+    "used": "余责"
+   },
+   {
+    "concept": "joint plan, assignment and assignee (Requirement.Assigned)",
+    "used": "可许之计、分派、任此事者"
+   },
+   {
+    "concept": "release / discharge (Requirement.Settled, FrontierWorlds.Discharged)",
+    "used": "释、已释"
+   },
+   {
+    "concept": "legitimate: the 正当 half of J4",
+    "used": "no name; 取于可得 names only the feasible half"
+   },
+   {
+    "concept": "target of seeking or of enough",
+    "used": "所求"
+   },
+   {
+    "concept": "more than now (MoreThanNow)",
+    "used": "多于今"
+   },
+   {
+    "concept": "renewing at a step (Web.RenewingAt), the stepwise class. The table's 恒 is the run class",
+    "used": "于本步为更新"
+   },
+   {
+    "concept": "withheld levels (Flow.WithheldLevels)",
+    "used": "扣下一体之取与、余皆如故之水平（无此体之历）"
+   },
+   {
+    "concept": "members of a part",
+    "used": "诸员"
+   },
+   {
+    "concept": "possibility reading (Ranking.possible)",
+    "used": "以所容读活"
+   },
+   {
+    "concept": "whole-run reading (Ranking.wholeRun) / stepwise reading",
+    "used": "整段之读（活动而于此历不竭）/ 逐步之读（活动而不剥）"
+   },
+   {
+    "concept": "focal and sustaining formations of the two-part support-gated family",
+    "used": "焦物、维持者"
+   },
+   {
+    "concept": "restraint / restrained flow",
+    "used": "节、节流. 节 alone is not in the table; it is distinct from C11's 中节"
+   },
+   {
+    "concept": "family: the conditions an order reads, what couples in (Optimum ds)",
+    "used": "族（所感之诸所待）"
+   },
+   {
+    "concept": "order rising with what couples in (Optimum.Rising)",
+    "used": "随所感而升之序"
+   },
+   {
+    "concept": "optimum / mutual best response (Frontier under a rising order; Optimum.MutualBest)",
+    "used": "以此序权之所取; 相互最优回应"
+   },
+   {
+    "concept": "room (Optimum.Room). 余地 names the margin, so it is not used",
+    "used": "described: 凡于族外某所待高于他果之可选之果，族上皆有可选之果超出之"
+   },
+   {
+    "concept": "strict loss match (Frame.StrictLossMatch)",
+    "used": "严格之丧配"
+   },
+   {
+    "concept": "sufficiency commitment (Frame.SufficientMatching)",
+    "used": "以严格之丧配为愈之足据"
+   },
+   {
+    "concept": "base claim (base in not_strictLossMatch_of_base_lost)",
+    "used": "基辞"
+   },
+   {
+    "concept": "direction on a world's moves (Becoming.Direction)",
+    "used": "动之向"
+   },
+   {
+    "concept": "articulation premise A",
+    "used": "表述之设（A）"
+   },
+   {
+    "concept": "access (access p r)",
+    "used": "可介入"
+   },
+   {
+    "concept": "contributory reason (Reason)",
+    "used": "理由"
+   },
+   {
+    "concept": "sound inquiry whose goal is new living content (Sound … Novel)",
+    "used": "以新活之辞为所求之健全探究"
+   },
+   {
+    "concept": "connected valuation (Valuation.Connected)",
+    "used": "连通"
+   },
+   {
+    "concept": "grounds: seed with both neutralities (Valuation.Grounds)",
+    "used": "顾之所据（萌、无亲、无方）"
+   },
+   {
+    "concept": "plan: a list of moves",
+    "used": "一串动"
+   },
+   {
+    "concept": "assured completion (InquirySufficiency.Completes)",
+    "used": "必至"
+   },
+   {
+    "concept": "stock / stock process (Stock.process); the table's 蓄 anchors Web.Carries",
+    "used": "所蓄、所蓄之变"
+   },
+   {
+    "concept": "covered (Stock.Covered)",
+    "used": "覆盖"
+   },
+   {
+    "concept": "counted work: work, fuel, pending, done, stall (Countdown.CountedWork)",
+    "used": "工、可用之量、未毕、毕、滞"
+   },
+   {
+    "concept": "reserved exit: exit, valid, margin (Countdown.Reserved). 余地 is not used for this margin",
+    "used": "出口、有效、余数"
+   }
+  ],
+  "open": "1. Lean names that need care:\n   - `Becoming.Weighting.increasing_lexical` landed on main with AP2 (receipt 20261021T111912.398950Z, record widening-as-what-every-weighting-ranks). It is not in the zhonghua worktree's newest receipt (20261021T102032.314972Z). Run against the worktree, resolve.py will report it unresolved. Every other cited declaration resolves on both receipts.\n   - `Becoming.LossMatching` is cited as a module (the formal content of FR), not as a declaration. It is left out of the declarations list.\n\n2. Which 篇 owns what:\n   - A (articulation) is placed here because the task names it among the commitments. Its argument is §6.2, the 意义之篇; the integrator should avoid stating it twice.\n   - Optimum (十六·二十二) is placed here because an optimum is a frontier member, which is 权 under an order rising with what couples in. Its structure also borders C10 (及而不感, selection through couplings).\n   - Own widening (十六·五) and preemption (十六·四) border C06.\n   - Cross-references to other 篇 are by subject (意义之篇), not by number. The C01 draft is 篇一 and C16 is the 凡例, so the numbering of 篇十六 for C15 should be confirmed.\n\n3. Names:\n   - 愈 is used alone for a supplied comparison's relation, as in the 凡例; it could be read as 以广为愈's order.\n   - 蓄 is used for Stock, but the table anchors 蓄 at Web.Carries.\n   - 节 (restraint) is not in the table and could be confused with 中节.\n   - J4's 正当 half has no name.\n   - 丧 is used for loss because 所失 is C11's.\n   - 所及 occurs in two 說 paraphrases ('增其所及', '力所及处'), where it reads as reach.\n\n4. Status:\n   - C's warrant is open (§8.5). L, A, J1–J4 and FR are disclosed, revisable commitments, not theorems.\n   - The continuation condition is used only where it is written with 若 (十六·三, 四, 八, 十二, and under it in 九's 說).\n   - Reading a move by its outcome levels is an AI reading. Several readings without their own D number are labelled D45: own widening, the direction, the FrontierWorlds readings, and war as endangering a base claim.\n   - Several 經 sentences report constructed witnesses (有一处境, 有一流, 有一系辞, 有一变), not general laws.\n   - 十六·九 holds only for the two-part support-gated family.\n\n5. Gaps:\n   - 大取's asymmetry between imposed and self-borne loss (mojing-daqu-sha-ji): the core comparison has no such distinction.\n   - §7.6: deployment needs evidence for an identified installation, and the risk-bound/outcome distinction is cited by record only.\n   - The restraint law (十六·十) and the optimum law (十六·二十二) have no checked classical passage in C15.\n\n6. Philology:\n   - 五行's 说 is attested only in the 马王堆 text, transcribed together with the 郭店 经 and not checked against the plates.\n   - 墨经's 濕 punctuation is disputed.\n   - 易传 and 庄子 外杂篇 datings are disputed."
+ },
+ "TH": {
+  "source": "draft",
+  "edits": 23,
+  "failed": [],
+  "verdict": "sound after edits",
+  "missing_names": [
+   {
+    "concept": "standing 'supported' (frozen tests passed)",
+    "used": "有支持, glossed 验之而未排. I rejected 征: the table gives it to Becoming.Verification (a finite stretch verifies a reading), and a passed frozen test verifies nothing. 中庸「無徵不信」〔RU1-S-ZY〕 was checked with ctq and is the same layer of meaning."
+   },
+   {
+    "concept": "standing 'conjectured'",
+    "used": "猜想. I rejected 億: 论语「億則屢中」〔RU1-S-LY〕 (checked) is guessing in a trading context, and simplified 亿 collides with the numeral. 未决 is broader (open) and is kept for 'warrant open'."
+   },
+   {
+    "concept": "standing 'thesis' (philosophical claim, argued, warrant open)",
+    "used": "论题 (有论，其据未决)"
+   },
+   {
+    "concept": "standing 'proved' inside the theses layer",
+    "used": "已证, labelled 有设而然 or 无设而然 according to the canonical standing table"
+   },
+   {
+    "concept": "strength = content; what a claim forbids",
+    "used": "强度; 所排 / 排除 (排 as in 凡·三 and in 验 = Web.Excludes)"
+   },
+   {
+    "concept": "the refuting observation ('refuted by')",
+    "used": "不然者 (the table's name for counterexample, extended to a field observation)"
+   },
+   {
+    "concept": "need (Web.need)",
+    "used": "所需"
+   },
+   {
+    "concept": "level (Web.level)",
+    "used": "水平"
+   },
+   {
+    "concept": "regime: giving read off the level (RegimeMargin's g)",
+    "used": "与之法 (体制 on first use)"
+   },
+   {
+    "concept": "point of no return (H + y)",
+    "used": "涸之界 (from the table's 涸: a stock falls to zero)"
+   },
+   {
+    "concept": "standing draw (the same draw H at every step)",
+    "used": "每步同取"
+   },
+   {
+    "concept": "recent giving / lag (T2's state variables)",
+    "used": "近与 / 滞"
+   },
+   {
+    "concept": "renewable condition",
+    "used": "有与之所待"
+   },
+   {
+    "concept": "joint draw; one's own draw within renewal (Flow.WithinOwn)",
+    "used": "共取 (from 共取过与); 各取不过与. 出入相掩 is used for Flow.WithinJoint, as in the table."
+   },
+   {
+    "concept": "optimum (Requirement.Frontier: eligible, none ranked above it)",
+    "used": "莫上之者 (可得者中). I avoided 莫愈之者 (凡·二一) because 愈 is reserved for 以广为愈."
+   },
+   {
+    "concept": "eligible outcomes",
+    "used": "可得者 (from 取于可得's 可得)"
+   },
+   {
+    "concept": "order rising with what couples in (Optimum.Rising)",
+    "used": "随感入者之升而上之序"
+   },
+   {
+    "concept": "room (Optimum.Room)",
+    "used": "可升之处 / 降之而感入者得升之处 (余地 stays the name for margin)"
+   },
+   {
+    "concept": "slack (sum of level minus need beyond)",
+    "used": "其外之余地"
+   },
+   {
+    "concept": "capacity (cap)",
+    "used": "所能取"
+   },
+   {
+    "concept": "reward / training",
+    "used": "奖励、所奖 / 训练、所训 (plain)"
+   },
+   {
+    "concept": "planning horizon of an optimizer",
+    "used": "视野. 涯 is the table's horizon of knowing (no prefix fixes the next), a different structure."
+   },
+   {
+    "concept": "scope of the ethics (whose losses count) / installing it",
+    "used": "范围、所顾之中 / 立"
+   },
+   {
+    "concept": "a dependent 'with no seat'; the community's goal",
+    "used": "不在其群中之待者; 群之目标"
+   },
+   {
+    "concept": "valuer",
+    "used": "评价者"
+   },
+   {
+    "concept": "positive weighting / negative valuation",
+    "used": "正重之计 / 负重. 权 is avoided because the table gives it to practical judgment."
+   },
+   {
+    "concept": "verdict",
+    "used": "判"
+   },
+   {
+    "concept": "early-warning statistics, variance, autocorrelation, critical slowing down, bifurcation, fold, transcritical point",
+    "used": "plain modern: 预警、方差、自相关、临界之慢、分岔、折、跨临界之点"
+   },
+   {
+    "concept": "rate of return measured by early warnings",
+    "used": "扰而复归之速 (uses 复归)"
+   },
+   {
+    "concept": "what couples in by level (obs), i.e. observations",
+    "used": "以水平感入者. I avoided 观, which the table gives to view."
+   },
+   {
+    "concept": "stock (存量)",
+    "used": "存量 (plain)"
+   },
+   {
+    "concept": "share selected (RuleCapture)",
+    "used": "份"
+   },
+   {
+    "concept": "metric / measure",
+    "used": "度"
+   },
+   {
+    "concept": "loss accruing beyond the share (ClosedCapture)",
+    "used": "损"
+   },
+   {
+    "concept": "accumulated evidence",
+    "used": "所见之积. I avoided 验 (testing) and 征 (verification)."
+   },
+   {
+    "concept": "drain: driving a condition to its least level",
+    "used": "降. 竭 is the table's Web.ConsumingIn."
+   },
+   {
+    "concept": "natural selection (Price's selection term)",
+    "used": "传择 (the table's evolution through descent)"
+   },
+   {
+    "concept": "determination / distinction / the good",
+    "used": "所定 / 分别 / 善"
+   },
+   {
+    "concept": "a scope that carries to unnamed dependents and domains",
+    "used": "行于"
+   }
+  ],
+  "open": "1. I found no classical word that fits the standings 'supported', 'conjectured' or 'thesis', so they are written in plain modern Chinese (有支持, 猜想, 论题); the integrator should decide whether to keep these. Because this layer is set apart from the theorems, I did not borrow 征 or 未决 for it.\n2. This 篇 departs from STYLE-ZH in two ways that the integrator should acknowledge in the 凡例 or 序.\n   - Its 經 states each thesis at full strength, not only checked laws (§一 says 經 states only checked laws). Which part is proved is given under 地位 in the 說.\n   - Its 說 is far longer than 3–8 sentences. It is split into labelled paragraphs (所排, 不然者, 地位, 至今之验) because the task requires all of them.\n   - The 序 draft (work/xu.md, 限度) still says the 论纲 is not in the book.\n3. There is no 对照. I found no classical passage that is structurally exact to any thesis. I considered 韩非子显学「無參驗而必之者，愚也；弗能必而據之者，誣也」〔FA1-S-H50〕 (verified) for the standing principle and rejected it. It is a method precept with no checked law behind it, and its second half diverges: the theory does state and use conjectures, with their standing.\n4. The canonical standing table lists widening-as-what-every-weighting-ranks and graded-significance-and-priority as 'theorem under stated premises', with finite listing and decided admission as the premises. The chapter's own four-kinds definition, and the 中华本's 凡·十六, count listing and decidedness as local hypotheses of a theorem without premise. I wrote 「规范章地位表作有设而然」 for T5. Reconcile this.\n5. New compositions that need adoption or replacement: 与之法, 涸之界, 莫上之者, 可得者, 可升之处, 近与, 滞, 有与之所待, 正重之计, 每步同取, 视野, 份, 度.\n   - 莫上之者 should be reconciled with the 凡例's 莫愈之者.\n   - 出入相掩 is used for Flow.WithinJoint as the table assigns it.\n6. Modules cited as modules, not declarations: Becoming.RegimeMargin, Becoming.ClosedCapture, Becoming.RuleCapture, Becoming.ExchangePremises.\n   - Becoming.RegimeMargin.Drawn.converges is periphery (Mathlib). It is defined in experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean and has its own regime-reals receipt. resolve.py, which reads only the core receipt, does not find it.\n7. Things carried over from the canonical section without rereading:\n   - The literature, from AI knowledge, as the canonical section says.\n   - The VD1 prompt phrases, translated as in the canonical Chinese edition, not from the prompts' original wording.\n   - The numbers and verdicts, copied from the canonical section (EN and ZH). I did not recheck them against the experiment results.\n8. What stays open is the same as in the source section:\n   - T2 outside fisheries.\n   - T3 on actual trained systems: whether the drain lies where room lies is unmeasured, and the proportionality to nearness to the optimum is a chosen form.\n   - T4 transfer.\n   - T5 with valuer signs measured apart from the ranking, and human valuers.\n   - T6 beyond EW2's low power.\n   - T7: no frozen test yet.\n   - T8: the internal-relations thesis and the warrant of both premises.\n   - The dropped stronger direction hypothesis."
+ }
+}

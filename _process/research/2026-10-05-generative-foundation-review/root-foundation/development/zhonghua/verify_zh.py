@@ -9,11 +9,13 @@ Everything is checked against repository copies only:
      parallel or a rejection); every id an entry cites exists in the model (a judgment, a reading unit, a sense
      or a chapter of the Laozi); every fragment is in its source's frozen
      text, character for character (whitespace may differ); every declaration is in the audited list of the
-     newest core receipt (or is a module of it); every result record exists;
+     newest core receipt (or is a module of it), or of a periphery receipt (Mathlib, axioms reported; listed
+     apart); every result record exists;
   4. names: one name per concept, no two names alike once simplified, every anchor current, every quotation in
      the frozen text it names;
   5. the chapters, when present: every 「…」〔ID〕 quotation is in source ID's frozen text, every `Becoming.…`
-     declaration is current, every record link exists, and the generated tables equal what the data gives.
+     declaration is current, every record link exists, every 对照 line names entries of the map with the kind the
+     map gives them, and the generated tables equal what the data gives.
 """
 import argparse, csv, glob, hashlib, json, os, re, sys
 from pathlib import Path
@@ -81,9 +83,23 @@ def main():
     modules = {m['module'] for m in rec['modules']} | {d.rsplit('.', 1)[0] for d in decls}
     records = {p.stem for p in RECORDS.glob('*.json')}
 
+    # periphery declarations (Mathlib; axioms reported) from the periphery receipts, accepted and counted apart
+    periphery = set()
+    for f in PKG.parent.glob('*/*verification.json'):
+        try:
+            for m in json.loads(f.read_text()).get('modules', []):
+                if m.get('layer') == 'periphery':
+                    periphery |= {d['name'] for d in m.get('declarations', [])}
+        except (ValueError, AttributeError):
+            pass
+    used_periphery = set()
+
     def decl_ok(n):
         n = n.strip('`')
         full = n if n.startswith('Becoming.') or n in decls else 'Becoming.' + n
+        if full in periphery and full not in decls:
+            used_periphery.add(full)
+            return True
         return full in decls or full in modules
 
     P = json.loads((HERE / 'passages.json').read_text(encoding='utf-8'))['clusters']
@@ -145,7 +161,7 @@ def main():
         fail.append('names: a name appears twice')
 
     # 5. chapters
-    n_q = n_d = n_l = 0
+    n_q = n_d = n_l = n_dz = 0
     for ch in [args.chapter, MAP_CHAPTER]:
         if not ch.exists():
             continue
@@ -162,6 +178,39 @@ def main():
             n_l += 1
             if m.group(1) not in records:
                 fail.append('%s: record link %s' % (ch.name, m.group(1)))
+        # 对照 lines: each names entries of the map, and the kind it states is the kind the map gives them
+        PIAN_C = {'凡例': 'C16', '篇一': 'C01', '篇二': 'C02', '篇三': 'C03', '篇四': 'C04', '篇五': 'C05', '篇六': 'C06',
+                  '篇七': 'C07', '篇八': 'C17', '篇九': 'C08', '篇十': 'C09', '篇十一': 'C10', '篇十二': 'C11',
+                  '篇十三': 'C12', '篇十四': 'C13', '篇十五': 'C14', '篇十六': 'C15'}
+        KIND_ZH = {'相合': 'agreement', '定域': 'scope', '相分': 'divergence'}
+        kinds_of = {}
+        for cc, d in P.items():
+            for e in d['entries']:
+                kinds_of.setdefault(e['id'], {})[cc] = e['kind']
+        cur, in_dz = None, False
+        for line in t.split('\n'):
+            h = re.match(r'^## (\S+?)(?:\u3000|\s|$)', line)
+            if h:
+                cur, in_dz = PIAN_C.get(h.group(1)), False
+            if line.startswith('#### 对照'):
+                in_dz = True
+                continue
+            if line.startswith('#'):
+                in_dz = False
+            if not (in_dz and line.startswith('- ')):
+                continue
+            n_dz += 1
+            k = re.search(r'——\s*(相合|定域|相分)', line)
+            ids = [x for x in re.findall(r'[（(]([a-z0-9:]+(?:-[a-z0-9]+)+)[）)]', line)]
+            if not k or not ids:
+                fail.append('%s: 对照 line without a kind or an entry id: %s' % (ch.name, line[:40]))
+                continue
+            for i in ids:
+                ks = kinds_of.get(i)
+                if not ks:
+                    fail.append('%s: 对照 entry %s not in the map' % (ch.name, i))
+                elif KIND_ZH[k.group(1)] != ks.get(cur, next(iter(ks.values()))) and KIND_ZH[k.group(1)] not in ks.values():
+                    fail.append('%s: 对照 entry %s is %s in the map, the line says %s' % (ch.name, i, '/'.join(ks.values()), k.group(1)))
         for m in re.finditer(r'<!-- ZH-TABLE:(\w+) -->\n(.*?)<!-- /ZH-TABLE -->', t, re.S):
             want = TABLES[m.group(1)](P, rows, verdicts)
             if m.group(2).strip() != want.strip():
@@ -177,9 +226,11 @@ def main():
         for k, n in v.items():
             tot[k] = tot.get(k, 0) + n
     print('%s: %d files bound; %d judgments, %d flagged; %d entries (%s), %d fragments; %d names; '
-          'chapters: %d quotations, %d declarations, %d record links; receipt %s'
+          'chapters: %d quotations, %d declarations, %d record links, %d 对照 lines; receipt %s; periphery declarations: %d'
           % ('FAILED' if fail else 'ok', len(prov['files']), len(rel_ids), sum(1 for v in verdicts.values() if v['c'] != '-'),
-             n_entries, ', '.join('%s %d' % kv for kv in sorted(tot.items())), n_frag, len(rows), n_q, n_d, n_l, receipt.parent.name))
+             n_entries, ', '.join('%s %d' % kv for kv in sorted(tot.items())), n_frag, len(rows), n_q, n_d, n_l, n_dz, receipt.parent.name, len(used_periphery)))
+    for x in sorted(used_periphery):
+        print('  periphery:', x)
     sys.exit(1 if fail else 0)
 
 

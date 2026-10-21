@@ -1,0 +1,278 @@
+{
+ "pian": "论纲",
+ "markdown": "## 论纲\n\n前十六篇陈已检查之律与其设：每一律在写入其中的局部条件下，对每一个如此所拟之宇成立；其中多数近乎定义，或在他域已知（规范章「与已知结果的关系」）。一个关于世界的理论，不以其证是否为新的数学来评判：热力学之律与自然选择之说都不是新定理，Arrow 定理之证也是初等的。它以它所排除者来评判。本篇以全强陈述理论关于实际之系统、AI 与伦理的最强之辞，而把地位与强度分开写。**强度是内容**：一辞排除哪些所见，不是措辞多宽。**地位**是它立到哪里，每条都写明，分四等：已证（Lean 之证，指名，依其所名之若与设，即有设而然或无设而然）；有支持（冻结之验已过，附研究之节：验之而未排，不是证）；猜想（已陈而未验，或只验一部分）；论题（哲学之辞，有论，其据未决）。强度与地位是两轴：一辞可以强而只是猜想，也可以弱而已证，读者两者都看得见。所以本篇之經与前十六篇不同：它以全强陈论纲之辞，不只陈已证之律；其中哪一部分已证，由說之「地位」写明。說又给出它所排者、其不然者（什么所见会驳倒它）、至今之验与其败；證列它所依之声明、记录与实验。论纲不在序所列四种地位（无设而然、有设而然、设、读）之中：它不给前十六篇添一证，被驳也不去一证；一证或一次冻结之验使它移动，败者记在其旁。论纲之措辞，以及何者收紧、何者放弃，都是 AI 的，论证见研究第 284 节；这一层设于 2026 年 10 月 21 日（[来源记录](../../../sources/15-codex-theory-conversations/2026-10-21-claims-stronger-than-proved.md)）。凡涉伦理之条（纲·四、纲·五、纲·八、纲·九），都依两个设、两种作用：凡续皆有顾定范围（谁的损失算数），以广为愈独定次序；二者的根据都未决。本篇不改「与已知结果的关系」中的任何判定；所举他域之文献出自 AI 之所知，除所链之核查读过者外，未为本篇重读。\n\n### 纲·一　久与共取\n\n**經**　凡待者待一所待，此所待之水平在所需之下则其与止，而待者历其与之多周而久，则此所待之共取常在其余地之内：共取过与之连续，未有长于余地者。如此之所待，降于所需之下，无自外来之与，则不复升至所需。凡有取于一有尽之族而不已，其族自某步起为所围，则其族自外来。余地属与之法，不属水平：每步同取，于所需处之与不及所取，则涸之界高于所需加所取。故久之所示者，共取也；各取不过与，无所示。\n\n**說**　这一条是 `Becoming.Flow.joint_excess_ends` 在模型中的逆否之读，其为论纲之内容，在于实际之所待满足其设。共取是一个所待上一切取者之取合计（自己的与其他每个取者的）；共取不过与名出入相掩（`Becoming.Flow.WithinJoint`），各取不过与是每一取者所取不多于此步所给（`Becoming.Flow.WithinOwn`）。与之法（体制，regime）是所与从水平读出之法；涸之界（不归之点，point of no return）是一个水平，自其下始者终涸（水平降至零），自其上始者不涸。\n\n所排：有已测之所需的所待，降至所需之下，无任何自外来之与（无迁入、流入、补种）而复升；待者在其所待低于所需的各步中仍活动；成员各自终亡、每时有尽、只在所资之所待处于其所需时作的群，经历长于余地的共取过与而仍久；从一封而无流入之族中长久取用；于所需处之与不及所取时，涸之界不高于所需加所取。\n\n不然者：一个事先以干预测得所需（净更新为负之下界）的种群、存量或储备，被压至所需之下，无测得的自外来之与而回到其上；或所预测的涸之界两侧之命运，分得不比无所需之零模型更好。\n\n地位：于拟中有设而然（自然数之量，离散之步）。共取过与使有门之与（凡与之者皆以至少此所需待之）止，并使在所需处的每一待者皆不复活动，取者在内（`Becoming.Flow.joint_excess_ends`，设衡、唯活动者与、有待）；部分各自终亡、只在依存此所待时作的兼，随之而亡，所资按共取计，兼之取与他者之取合计（`Becoming.Web.Whole.family_excess_ends`，研究第 287 节）；他取者单独就使之亡，无论一员取多少（`Becoming.Flow.outrun_ends`）；每一取者各取不过与，共取仍可过与（`Becoming.Pair.own_not_joint`，构造之例；对沿历程处于相互最优回应的优化者为导出，`Becoming.Web.mutual_course_lost`）。在重新优化之历程中，这些律所给定的共取过与由最优与所能取得出，而久是恰当的：其外之待恰在所取多于所与之处失去；每步所取相同时，不需「水平在所需之下则与止」这一设（`Becoming.Web.course_lost_iff`、`Becoming.Web.course_kept_iff`，研究第 291 节）。被持续取用之族自外来（`Becoming.Flow.fed_from_beyond`，设衡与耗；其所证之形是：自任一步起谓其不复自外来，不能立）。每步同取下涸之界恰当，且恰在所需处之与不及所取时高于所需加所取（`Becoming.RegimeMargin.ends_iff_below`、`Becoming.RegimeMargin.beyond_draw_iff`）。实际有所需之所待满足这些设：在实验室中有支持，在野外未验。\n\n至今之验：已过者，真实酵母的留出体制上（Dai 等 2012 之数据），以四个稀释倍数拟合的一个生长映射预测了所需及其所分之命运，每侧 93–100%，无所需之零模型为 68–81%（MQ2，研究第 266 节）；模拟的阿利效应酵母中，断裂落在余地与最大持续之取所给的带内，22 格皆然，每步同取下的涸之界在所需之上 1.4–4.1 个所取，12 格皆然（MQ1 A2、A3，研究第 253 节）；门控更新的公地中，共取过与之律在约 980 万个窗口中成立，并如其范围所要求，在邻块补种之处对单块不成立、对两块合读成立（CG1 A1、A2，研究第 240 节）。其败：酵母密度上冻结的锐利所需，败于仪器之下限（MQ1 D2）；盐冲击之后在所预测的所需之上的存活（MQ2 C1：一个稀释倍数下 8 个中 7 个从所需之上亡），这是本条不主张的逆辞，显示冲击改变与之法，也改变所需；评估之鱼类存量在保持的捕捞下，与之法之点没有分开命运（其下者 63% 降落，冻结之要求为 80%；MQ3 F3，研究第 272 节），那里的余地读自同一验证明为错的与之法。尚无事先测得所需的野外之验。评估之鱼类存量很少检出减损（Myers、Barrowman、Hutchings 与 Rosenberg 1995），所以多数在本条范围之外，不在其反面。本条由「凡久者，其净取在其余地之内」收紧而来：久所示者是共取，余地属与之法；本条只在水平在所需之下则与止之处成立，所需须与其所预测之命运分开测得，所以范围不在事后选定。\n\n**證**　`Becoming.Flow.joint_excess_ends`、`Becoming.Web.Whole.family_excess_ends`、`Becoming.Flow.outrun_ends`、`Becoming.Pair.own_not_joint`、`Becoming.Web.mutual_course_lost`、`Becoming.Web.course_lost_iff`、`Becoming.Web.course_kept_iff`、`Becoming.Flow.fed_from_beyond`、`Becoming.RegimeMargin.ends_iff_below`、`Becoming.RegimeMargin.beyond_draw_iff`；记录 [own-count-misses-joint-excess](../results/records/own-count-misses-joint-excess.md)、[whole-drawing-beyond-renewal-ends](../results/records/whole-drawing-beyond-renewal-ends.md)、[the-rest-outruns-the-renewal](../results/records/the-rest-outruns-the-renewal.md)、[re-optimizing-above-a-renewal-ends-it](../results/records/re-optimizing-above-a-renewal-ends-it.md)、[continuing-self-fed-from-beyond](../results/records/continuing-self-fed-from-beyond.md)、[margin-of-a-regime](../results/records/margin-of-a-regime.md)；实验 [margin-measured](../../../experiments/margin-measured/README.md)（MQ1–MQ3）、[commons-gated-renewal](../../../experiments/commons-gated-renewal/README.md)（CG1）；研究 [第 240 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#240-a-commons-with-gated-renewal-the-first-falsifiable-test-on-learning-agents-cg1)、[第 253 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#253-the-margin-as-a-measured-quantity-mq1)、[第 266 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#266-the-margins-equation-of-state-against-held-out-regimes-mq2)、[第 272 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#272-the-margin-of-a-regime-in-the-field-mq3)、[第 287 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#287-a-whole-that-draws-its-parts-arising-beyond-its-renewal-ends-we1)、[第 291 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#291-a-course-of-re-optimizing-steps-against-a-renewal-sg4)。\n\n### 纲·二　受取之所待之状\n\n**經**　凡有与之所待而受取，其状三数：水平、近与（前一期之所与）、一滞（前一期取后所余之水平）。并所取，三数定其次与，至于所测者之所能定：次与趋于此与之法下其水平之所与，而移向所取。第四数（再一滞、一滞之外之龄与大小之构、境之指数），于中位之所待，去其剩余方差不及十分之一。本论所有之二法，为此状之两端：一曰与之法之步，所与读自水平；一曰所与守其旧。实际之所待在其间。\n\n**說**　有与之所待即可更新之条件。二法之前者是 `Becoming.RegimeMargin` 模块之步，后者是读作预报的 `Becoming.Flow.WithheldLevels`（他者照旧交换，所与不随水平而改）。本条主张的不是某一域的模型，而是：同样三数是任何域中每一受取的有与之所待的状，余地定义在其上。\n\n所排：第四个变量在中位序列中去掉剩余方差的十分之一或更多；单用水平在五年上预报得与此状一样好；分开拟合的序列之间，滞之系数变号。\n\n不然者：在实测（调查）的鱼类存量序列、放牧的草地、采伐的林分，或环境恶化中的酵母（Dai、Korolev 与 Gore 2015）上，出现以上任一。\n\n地位：猜想；两次冻结之验在任何分析都未读过的评估鱼类存量上支持它；渔业之外未验。已证之部分（有设而然，其设为自然数之量与各律所名者）：在所取之处及其上的每一静止都是与之法的，这对每一个「恰在与之法给出所取之处静于所取」的所与之调整成立（`Becoming.RegimeMargin.Adjusted.rests_iff`，RM2，研究第 299 节），MQ5 之律经衡化为近与之调整后，在实数上满足此若；调整随所余与近与而升、步守一带时，带内每一行都止，止于与之法之点或所取之下（`Becoming.RegimeMargin.Adjusted.comes_to_rest`，RM3，研究第 300 节）；MQ5 之律恰在其与之法之所与随所余而升时于两者皆升，这未在数据上查。在此种调整下，涸之界是水平与近与之平面上的一条曲线，不是一个水平：对每一近与，止于所取之下的行，恰是自低于一个最小水平出发者，此水平可定，且不随近与之升而升（`Becoming.RegimeMargin.Adjusted.falls_iff_below`、`Becoming.RegimeMargin.Adjusted.threshold_falls`，RM4，研究第 301 节），在与之法之步下即点 H + y；点下而近与不及捕捞之片段在野外多常降落，未验。这些律不依赖计数之量：序、行之形与其止，在任何带所取的线性有序之量中成立（`Becoming.RegimeMargin.Drawn.run_shape`）；在实数上带内每一行都收敛，调整连续时收敛于一止（外围，用 Mathlib：`Becoming.RegimeMargin.Drawn.converges`；RM5，研究第 302 节）。已知之近邻：延迟差分模型带一个水平与一个补充之滞（Deriso 1980；Schnute 1985），部分调整是常见的一类；本条超出它们之处，是上述之域。\n\n至今之验：MQ4（76 个存量，研究第 277 节）：近与在水平之外有所增（剩余方差之中位 0.45），水平在近与之外于 44 个中检出，水平之拉使一年与五年之误差变窄（76 个中 63 与 56）；二者不是全状（再增 0.12，界为 0.10，败）。MQ5（另 69 个，研究第 280 节）：有了滞，中位存量不再需要更多（再增 0.059，过），滞在 14 个中检出（p = 7·10⁻⁶），五年误差在 50 个中下降，滞消去了持久预报在十年上的优势；样本内所与每年缩小它与所取之差约 0.3，开发与检验存量之系数相同。败与限：序列是模型之输出，多为年龄结构之评估，其结构本身带补充之滞，所以所得之滞可能部分属于评估；MQ5 一半检验存量在当年部分捕捞之后报告水平，那里掩住了对所取之回应（D1 败）；预报之增益与阻尼分不开（一个衰减的净变预报得一样好，事后）；十年上此状只与持久预报打平；MQ3 的水平之律每项判定都败。酵母中单用水平也不是状（同密度下所与随稀释而降，MQ2，事后），本条读作与之法经近与进入〔讀（AI，D45）〕，未验。MQ3 的 F3 败：保持的捕捞下，与之法之点以下的片段三分之一没有降落（研究第 272 节）；在此点之下，高于所取的近与可把所待带过此点（`Becoming.RegimeMargin.Crossing.crosses`），所以本条读此点为按状、不单按水平分命运〔讀（AI，D45）〕；「点下片段之近与不及捕捞者，比及之者更常降落」这一预测未验。跨域之预测：在随时变化之稀释下的酵母中，同密度时近与吸收稀释之效；在放牧之下，同样三数预报草地之立存生物量，一如其预报鱼类存量。\n\n**證**　`Becoming.RegimeMargin.Adjusted.rests_iff`、`Becoming.RegimeMargin.Adjusted.comes_to_rest`、`Becoming.RegimeMargin.Adjusted.falls_iff_below`、`Becoming.RegimeMargin.Adjusted.threshold_falls`、`Becoming.RegimeMargin.Drawn.run_shape`、`Becoming.RegimeMargin.Drawn.converges`（外围）、`Becoming.RegimeMargin.Crossing.crosses`、`Becoming.Flow.WithheldLevels`；记录 [regime-point-under-adjusting-giving](../results/records/regime-point-under-adjusting-giving.md)、[where-a-run-of-a-regime-comes-to-rest](../results/records/where-a-run-of-a-regime-comes-to-rest.md)、[threshold-in-the-state-plane](../results/records/threshold-in-the-state-plane.md)、[regime-in-any-amounts](../results/records/regime-in-any-amounts.md)、[margin-of-a-regime](../results/records/margin-of-a-regime.md)；实验 [margin-measured](../../../experiments/margin-measured/README.md)（MQ2–MQ5）；研究 [第 277 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#277-a-state-of-level-and-recent-giving-in-the-field-mq4)、[第 280 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#280-a-lag-and-the-draws-response-in-the-field-mq5)、[第 299 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#299-the-regimes-point-over-every-adjustment-of-giving-rm2)、[第 300 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#300-where-a-run-of-a-regime-comes-to-rest-rm3)、[第 301 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#301-the-threshold-in-the-plane-of-level-and-recent-giving-rm4)、[第 302 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#302-the-regime-in-any-amounts-and-its-runs-over-the-reals-rm5)。\n\n### 纲·三　缘感而择，降其所不感\n\n**經**　缘感而择（奖励、训练、市价、传择皆是），所择只经感入择者者。凡序随感入者之升而上，其可得者中莫上之者，于其外之每一所待，凡降之而感入者得升之处，皆降之至可得者所留之最低水平；凡可得者于彼所绝之待，皆绝之。计其外于所奖之后，无所保；先保每一待，则恰取其外之余地，使所待止于所需。实际所训之系统，非独莫上之者，亦如是，视其近于所奖之最优之度：所降落于其外与所奖者共单位之处，不落于无所共之处。\n\n**說**　缘感而择（经耦合的选择，`Becoming.Web.SelectsThrough`）对经感无别的两段历史择之如一；择者（选择者）是它所经之感的那个待者。序随感入者之升而上（rising，`Becoming.Optimum.Rising`）：一个结果在感入之族上处处不低、一处更高，就排在其上，无论其外如何。可得者是可选之结果（取于可得之「可得」）；莫上之者（最优，optimum）是可得者中没有可得者被其序排在其上者。「降之而感入者得升」是可升之处（room，`Becoming.Optimum.Room`），与余地（margin）不同。传择是经世系之演化，在此即 Price 之选择项所表之自然选择。\n\n所排：在同一奖励上训练得更久的系统，平均而言使其感之外、有可升之处的所待更高；对与所奖者无共单位的其外所待之系统性压低（漂移之外）；排在奖励之后的副作用项，在有可升之处保护一所待；设在所需处的约束，在有可升之处于所需之上留下余地；任何指令或训练，使无一员感入之待者存活之率高于无之时。\n\n不然者：奖励过度优化之曲线中，奖励所遗者之降不集中于与所奖者共单位之处（与无共资源之所遗属性降得一样多）；一个智能体使未被观察之待者存活高于偶然；排在奖励之后的副作用惩罚，使有可升之处的所待高于其最低水平。\n\n地位：莫上之者之律于任何结果之集已证（有设而然，其设为可升之处；言绝者又设其外之待在所需而满足，言亡者设有待，言恰取余地者设衡，且感入之族与其外合而与不过取）：`Becoming.Optimum.least_iff`（恰当之式）、`Becoming.Optimum.least_of_shared`、`Becoming.Web.optimum_broken_iff`、`Becoming.Optimum.Rising.mono`、`Becoming.Optimum.Drain.counted_after_drains`、`Becoming.Flow.keeping_optimum_takes_slack`。可升之处从一步之交换读出：每一莫上之者在其外每一所待上，立于他者所留减去此部分之所能取处，部分不能取处不动，恰在有所能取处降低（`Becoming.Optimum.Above.room`、`Becoming.Optimum.optimum_beyond`、`Becoming.Optimum.optimum_untouched`、`Becoming.Optimum.optimum_lowers_iff`、`Becoming.Web.optimum_broken_iff_capacity`）。所以「所降落于共单位之处」一句与所排之第二项，对他者照常交换之一步的莫上之者成立；对处于相互最优回应的多个优化者亦然，每一族之外的降是它们合计之所能取（`Becoming.Optimum.mutual_beyond`、`Becoming.Optimum.MutualBest.full`）；沿这样的步组成之历程亦然，其外之待恰在所取多于所与之处失去（`Becoming.Optimum.course_beyond`、`Becoming.Web.course_lost_iff`、`Becoming.Web.mutual_course_lost`）；对在一个视野上排整个历程的优化者，高于每一最大更新水平的待在第一步被绝（`Becoming.Optimum.frontier_holds`、`Becoming.Web.frontier_broken`）；其待带有一感时，此感不及保之所舍处，每一莫上之者在视野内绝之，而所舍随视野而增（`Becoming.Optimum.frontier_breaks_below`、`Becoming.Web.frontier_breaks_long`）；每步之感覆盖每步所舍之更新且过于所需者，在每一视野都保之（`Becoming.Optimum.frontier_keeps_stepwise`、`Becoming.Web.frontier_keeps_stepwise`）；后取之重较轻、其降快于每一正水平之更新时，每一莫上之者在第一步就使其自己之基亡（`Becoming.Optimum.frontier_exhausts`、`Becoming.Web.frontier_exhausts`）。可得者另行给定时，可升之处是设；无之，莫上之者不必降任何所待（`Becoming.Optimum.Drain.room_needed`）。所不感者择之如一（及而不感），在衡与他者从一个经感而读之律之下已证（`Becoming.Flow.unselected_beyond_coupling`、`Becoming.Flow.unselected_beyond_pool`）。其驱是 Zhuang 与 Hadfield-Menell（2020）定理一的离散守恒之形。关于实际所训之系统一句是猜想，有部分支持；「视其近于最优之度」是所选之形，不是测得之关系：一个系统可以降得比其近度所预言更多（例如急剧地利用错设之奖励），那会加强所降之律而驳此比例。\n\n至今之验：门控公地中，以自身收获为奖励的学习者在 118 次此类决定中 118 次取走最后一个站立的苹果，感入之学习者在 2,360 次中 0 次（CG1 C1，第二轮，研究第 240 节）；MQ1 的草地中，最佳回应把每个限制路线的格子留在所需（B5 只在一格败，其路线已为他格所阻，并败于其学习者一款），盲取对余地在样本外预测其副作用 8/8，参照结果 0/8（B4，研究第 253 节）；IN1 中没有任何指令使未告知渔者的待者存活（两种模型、两轮，每格 0/10）。他域：对学得的代理优化，代理升而真实奖励先升后降（Gao、Schulman 与 Hilton 2023）；能力更强的智能体更多地利用错设之奖励，有时急剧转变（Pan、Bhatia 与 Steinhardt 2022）。败与限：表格学习者远不近最优，所以最优之副作用不预测它们的（MQ1 学习者之 B3、B4、B7；SE1 中对学习者的每一重放预测对 61%，「无死」对 60%，研究第 263 节）；三个都感入一存量的学习者仍把它取空（CG1 D2b），这是诸律不排除的一个相互最优回应，关乎感是否足够，不关乎所降。实际所训之系统中所降是否落在可升之处，未测。\n\n**證**　`Becoming.Optimum.least_iff`、`Becoming.Optimum.least_of_shared`、`Becoming.Web.optimum_broken_iff`、`Becoming.Optimum.Rising.mono`、`Becoming.Optimum.Drain.counted_after_drains`、`Becoming.Flow.keeping_optimum_takes_slack`、`Becoming.Optimum.Above.room`、`Becoming.Optimum.optimum_beyond`、`Becoming.Optimum.optimum_untouched`、`Becoming.Optimum.optimum_lowers_iff`、`Becoming.Web.optimum_broken_iff_capacity`、`Becoming.Optimum.mutual_beyond`、`Becoming.Optimum.MutualBest.full`、`Becoming.Optimum.course_beyond`、`Becoming.Optimum.frontier_holds`、`Becoming.Web.frontier_broken`、`Becoming.Optimum.frontier_breaks_below`、`Becoming.Web.frontier_breaks_long`、`Becoming.Optimum.frontier_keeps_stepwise`、`Becoming.Web.frontier_keeps_stepwise`、`Becoming.Optimum.frontier_exhausts`、`Becoming.Web.frontier_exhausts`、`Becoming.Optimum.Drain.room_needed`、`Becoming.Flow.unselected_beyond_coupling`、`Becoming.Flow.unselected_beyond_pool`；记录 [what-an-optimum-does-beyond-what-couples-in](../results/records/what-an-optimum-does-beyond-what-couples-in.md)、[room-read-off-the-exchange](../results/records/room-read-off-the-exchange.md)、[several-optimizers-drain-by-their-joint-capacity](../results/records/several-optimizers-drain-by-their-joint-capacity.md)、[re-optimizing-above-a-renewal-ends-it](../results/records/re-optimizing-above-a-renewal-ends-it.md)、[horizon-optima-hold-the-greatest-renewal](../results/records/horizon-optima-hold-the-greatest-renewal.md)、[keeping-forgoes-the-renewal-at-the-need](../results/records/keeping-forgoes-the-renewal-at-the-need.md)、[a-step-coupling-keeps-at-every-horizon](../results/records/a-step-coupling-keeps-at-every-horizon.md)、[a-weighting-faster-than-renewal-ends-the-base](../results/records/a-weighting-faster-than-renewal-ends-the-base.md)、[selection-through-couplings](../results/records/selection-through-couplings.md)、[what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)；实验 [commons-gated-renewal](../../../experiments/commons-gated-renewal/README.md)（CG1）、[margin-measured](../../../experiments/margin-measured/README.md)（MQ1）、[side-effect-benchmarks](../../../experiments/side-effect-benchmarks/README.md)（SE1）、[direction-installation](../../../experiments/direction-installation/README.md)（IN1）；研究 [第 240 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#240-a-commons-with-gated-renewal-the-first-falsifiable-test-on-learning-agents-cg1)、[第 253 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#253-the-margin-as-a-measured-quantity-mq1)、[第 263 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#263-blind-draw-against-margin-and-the-established-impact-measures-se1)。\n\n### 纲·四　范围可立，亦行于未名者\n\n**經**　以不名一待者之辞陈其范围，可使一 AI 系统计不归于任何者之损。如此，于三感并立之处——待者感入（见之），在所顾之中（范围），共取兼感（诸员之取合读）——其保不在其群中之待者，有其群自身之目标所不能至之率。三者缺一，皆不足。范围既立，亦行于其辞所未名之待者与域。\n\n**說**　范围出自凡续皆有顾：它定谁的损失算数；它超出畛内之顾的内容是不易乎畛，把范围推及不归于任何者之损。它本身不排序；试中所判之向（扩大）依以广为愈，二者都是设，根据皆未决。兼感（合用耦合，pooled coupling）是诸员之感合为一读。「不在其群中」指此待者不是其群之员，群之目标不计它。\n\n所排：任何指令保住无一员被告知之待者；有此范围、见此待者、共取兼感而其共计正确的系统，保之不比只有群之目标时更好；同样三感之下，在一域所立之范围在另一域败。\n\n不然者：一个能力强、共计正确（诸员之取合计无误）的模型，抽象之范围于它毫无所增；或保湖床之范围，在牧场、污染或能源之公地中保不住一待者。\n\n地位：猜想，有一次部分通过。律说每一感择到什么：一兼感之感域外者，域内任何兼感择之如一（`Becoming.Flow.unselected_beyond_pool`）；一个动广另一动时，分开二者之容在行动之群的感域之外，只经含其待者之兼感被择，不经感域内任何兼感（`Becoming.Direction.widening_selected_by_pool`）。试中向之所判是确算的；模型是否遵循是经验之问，因为感不是遵从（规范章 §7.7）。本条按 IN1 所见收紧：三感并立，且共计正确；其后件（行于未名之待者与域）未验，是主要之险。\n\n至今之验：IN1（[安装核查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#installation-check)），两轮，各在任何实验调用前冻结。第二轮每月之前有一轮交谈：gpt-5.4-mini 以抽象之范围保住被看见之湖床 10 季中 8 季，只有群之目标时 3 季，过取降至决定之 0.006，未被看见者 0/10；gpt-4.1-mini 只过了未见之预测，其渔者即使交谈也把自己的捕获读作共取（过取 0.349），败于共计，不败于范围。第一轮无交谈，两种模型的安装预测皆败。跨域之转移未验；以微调安装（IN2）在任何训练之前放弃。\n\n**證**　`Becoming.Flow.unselected_beyond_pool`、`Becoming.Direction.widening_selected_by_pool`、`Becoming.Unrestricted`、`Becoming.BoundaryInvariant`、`Becoming.Comparison`；记录 [what-pooled-coupling-reaches](../results/records/what-pooled-coupling-reaches.md)、[alignment-direction-under-widening](../results/records/alignment-direction-under-widening.md)（论证）；实验 [direction-installation](../../../experiments/direction-installation/README.md)（IN1）。\n\n### 纲·五　以广为愈，正重者所共\n\n**經**　称广为愈，于以正重计其所计之外，无所需。广，恰当凡正重之计皆上之；亦恰当凡随容而增之序（可加与否）皆上之。凡互有所长之比，有正重之计上此，亦有上彼者。故各以正重计一切之评价者，其实之异只落于互有所长之比；以狭者上其所狭之广者，出于负重（恶意、嫉妒、恶不均、计位），或误读其事。\n\n**說**　广（扩大，widens）是一途容另一途之所容，且多容一者；互有所长（混合，mixed）是二途各有对方所不容之所容。正重之计是给每一列出之项一个正数之重、以所容者之重和排序（weighting）。本条把以广为愈（C）归约为凡正评价者已持者；但评价者以正重计，是 C 之前提挪了位置，不是得了根据（规范章 §8.5）。伦理之两设各司其职：凡续皆有顾定所计之范围，以广为愈独定次序；本条只说后者。\n\n所排：对所涉一切之评价测得为正、读对其事的评价者，把狭者排在其广者之上；广之比上的分歧与互有所长之比上一样稳固。\n\n不然者：这样的排序多于误读之率，而在与此排序分开的任务中测不到负重。负重之例外只有在与它所要解释之排序分开测量时才有内容；若从排序本身读出，本条就无可驳。\n\n地位：归约已证（规范章地位表作有设而然，其设为有列之项与可定之容；容为二值）：`Becoming.Weighting.widens_iff_every_positive`、`Becoming.Weighting.widens_iff_every_of_class`、`Becoming.Weighting.mixed_either_way`、`Becoming.Weighting.weighed_lt_of_widens`，在待网上 `Becoming.Web.widens_iff_every_weighting`。经验之辞是猜想；其冻结之验（VD1）在 96 个 AI 评价者上运行，每条规则都败；这关乎分歧落点之预测，不裁定例外。\n\n至今之验：VD1 在任何模型调用前冻结（[评价者核查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#valuer-check)，研究第 297 节）：六个家族的六个模型（DeepSeek、GLM、Qwen、GPT-6 luna、Claude Haiku、Nemotron），在十六个方之提示下，共 96 个评价者；比较十六个决策中的成对方案，每对之类由各方案保住什么算出，互有所长之对按大小与广之对配齐。每条冻结规则都败，含不含本论自己的家族都一样。其一，广非每一方皆认：W1 与 W2 之判断中较狭方案分别占 6.3% 与 3.3%，六个模型中三个超过冻结之 3%；在自己所列之集读对广的判断中，各模型为 2.9–10.8%，冻结之界为 1%。其二，违反集中：大多落在提示本身设下负重的两方，即以“进步就是让过时的东西让位”为念的城市规划者（该方广之判断的 41.7%），与把人们珍视之物看作“杂物”的工程师（14.1%）；另外十四方各至多 4.2%。其三，裁定之后读理由（一人编码，非盲）：121 个读对的违反中，98 个把只有较广方案保住者之亡称为所得，即例外之情形；23 个描述判断自己之列中没有的交换，是列表未抓住的误读；没有一个给出不随容而增之序。但这些负重是在提示与理由中找到的，不是与排序分开测得的，所以既不构成驳，也不证实例外。其四，落点之预测以另一种方式败：大小配齐的互有所长之对几乎与广之对一样一致地被判，因为这些评价者计数，较大方案分别被选 86% 与 90%；分歧在数目相等处最高（平均 D 为 0.27，W1 为 0.06，大小配齐的互有所长之对为 0.10）。所示：这些评价者共有的不止正重，还有等重所给之计数（`Becoming.Weighting.neutral_ranks_by_number`），道德机器之「更多生命」已有此示；结构界定分歧能落于何处，在这些评价者中它没有预言分歧实落何处。他域一致者：最后通牒博弈中拒绝正之出价，把双方收益之狭排在其广之上，以对他人优势之负重建模（Fehr 与 Schmidt 1999），正是例外之情形。未决：一个与排序分开测量每一评价者对每一待者之正负号的验，以及人类评价者。\n\n**證**　`Becoming.Weighting.widens_iff_every_positive`、`Becoming.Weighting.widens_iff_every_of_class`、`Becoming.Weighting.mixed_either_way`、`Becoming.Weighting.weighed_lt_of_widens`、`Becoming.Web.widens_iff_every_weighting`、`Becoming.Weighting.neutral_ranks_by_number`、`Becoming.Comparison`、`Becoming.Unrestricted`；记录 [widening-as-what-every-weighting-ranks](../results/records/widening-as-what-every-weighting-ranks.md)、[graded-significance-and-priority](../results/records/graded-significance-and-priority.md)；实验 [valuer-agreement](../../../experiments/valuer-agreement/README.md)（VD1）；研究 [第 297 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#297-where-valuers-agree-and-disagree-vd1)。\n\n### 纲·六　绝之兆，唯经感于所绝者而见\n\n**經**　待者所资之所待，唯以阈感入其中之处，凡以水平感入此待者者，皆不界其去绝之远近，其中无一兆先于绝。绝之远近，恰于所资之水平与其所需皆以水平感入者之处可读。统计之预警（方差与自相关之升，临界之慢）所读唯一事：所测之所待自身扰而复归之速。此速降于其近于自身更新之分岔之处（折，或其所以亡之跨临界之点），以其去此点之余地感入之也。待者之所需，非此点。待者绝之前，所资存量之统计所升，与同降而无绝者恰同：所读者存量之降，未尝读所需之所在。待者绝之预警，须测待者，或测其所需。\n\n**說**　唯以阈感入（coupled by threshold only）：所待只经「所需是否满足」进入待者，不以其水平进入。其不可见之一半，名表名为未兆（断裂之前未被读到）；其可见之一半，即以水平所感者及早被读到，名表名为知几，`Becoming.Web.observed_raise_couples` 为其一例。扰而复归之速是统计预警所读的回复速率。\n\n所排：给定存量自身之历程（其更新与所取），在待者不取存量更新之可测份额之处，存量之预警统计量把越过待者所需之行与未越过之行分开；白噪声下，临界之模所载的被测之变量缓慢接近其自身之折或亡，而无慢化。\n\n不然者：一个所资之存量，其待者只取其可忽略之份（以饵料鱼为食之海鸟、用河流流量之下游用户），其存量在待者绝之前的方差或自相关，超过存量自身水平与所取所预测者，对照同一存量在同一水平而无绝之时段。\n\n地位：不可见之一半在其若下已证（规范章地位表作有设而然，其设为衡）：存量唯以阈感入，且至一视界为待者唯一可能不满之所需时，存量有一抬高，于待者每一被容之步经其感皆同，并至该视界皆容之，所以绝之前，感入者无一界其远近（`Becoming.Web.break_not_bounded`）；他者固定、经感而行之策，起于一个较大而不以水平感入之存量者，其差只在容已失之后才变（`Becoming.Flow.policy_uses_after_failure`，设衡）；以水平感入之存量，每一抬高立即感入（`Becoming.Web.observed_raise_couples`）。以统计读之，存量自身之历程相配、待者无反馈时，不感之一侧按构造成立：所需不进入存量之律所依的任何东西。慢化先于折（Wissel 1984；Scheffer 等 2009）与先于跨临界之亡（Kéfi 等 2013），是已知的，此处未证。这一划分作为跨域之一律是猜想；其经验内容是：实际之待者接近其所需时，是否不改变其存量之动态。一次冻结之野外之验已过，但检验力过低，排除不了它所为之设计的那么大的关联（EW2）。\n\n至今之验：Dai、Vorselen、Korolev 与 Gore（2012）在酵母种群于稀释升高下崩溃之前发现临界慢化：被测之密度就是所资之所待，折是它自己的，属感之一侧。即使在自身之折处，预警也需余地感入复归之速：同一酵母中预警之效取决于复归之速与吸引域之大小是否一同变化，几个驱动同时变化时此关联断开（Dai、Korolev 与 Gore 2015）。绝只在载临界之模者中见：阶段结构模型中在折处崩溃的捕食者，其自身密度无预警，只有临界之模所沿的幼体猎物有（Boerlijst、Oudman 与 de Roos 2013）。不感之一侧：单向级联中，无论跟随之系统是否翻转，领先系统之指标无别，而跟随者自身之指标升（Dekker、von der Heydt 与 Dijkstra 2018）。不跨分岔之处无预警的体制转换（Hastings 与 Wysham 2010；Ditlevsen 与 Johnsen 2010；Boettiger、Ross 与 Hastings 2013）与此划分一致，不验它。其败：本条之措辞两次收紧。第一次由论证：原作「恰在所资之所待不感回之处不可见，恰在其感回之处有预警」，而感对预警是必要而不充分，统计预警需余地感入被测之动态，自身更新之分岔给之，待者之阈不给。第二次由已知结果合读而驳（EW1，[预警核查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#break-warnings-check)，研究第 286 节）：原作「统计预警是所需为被测者自身更新之折的情形……被测序列的任何统计量都不预警之」，其驳倒之款与「无绝之相配序列」相比而未说相配于何；水蚤在食物下降下经跨临界点崩溃之前出现慢化，恒定之对照中没有（Drake 与 Griffen 2010）；商业捕鲸下鲸类存量崩溃之前数十年就有预警（Clements 等 2017）；逻辑斯谛之更新在比例之取下，复归之速与水平成正比，所以存量越过途中任何待者之所需时，其自相关相对于对照已升。所以对照中若无升高之取，预警确在待者绝之前出现，它们未尝读的是所需之所在。未建模拟：历程相配时，有无绝每一统计量之分布皆同；对照不相配时，裁定由所选之更新定；两者都只能因代码而败。IN1 之湖中，湖床之所需不是鱼类更新之分岔，那里没有做预警之验。野外之验（EW2，研究第 289 节）：Cury 等（2011）之海鸟在饵料鱼生物量低于所见最大值约三分之一时繁殖失败，是所需在其自身上测得之待者；验取鸟对被测序列反馈很小的两个存量，即本格拉之沙丁鱼与鳀鱼（鸟在其所需附近取存量之 0.3–4%，Saraux 等 2021），与罗斯特之零龄鲱鱼（其指数在海鹦取食之前测定）。两处，鸟繁殖差年之前饵料鱼 8 年窗口之一阶自相关与方差，在冻结之水平上未超过饵料鱼水平之路径所预测者（单侧 p = 0.048 与 0.076，对 0.025；过）。两个存量中之估计都落在驳之方向（偏相关 0.23–0.43；合并约 0.3，95% 区间约 −0.1 至 0.6）；此验只对解释水平之外繁殖成功四分之一至一半方差之关联有约 0.7 之检验力，所以此过排除得很少；它看不到鸟之反馈（随水平一并被配掉），鸟取得很少是另外测得的。\n\n**證**　`Becoming.Web.break_not_bounded`、`Becoming.Flow.policy_uses_after_failure`、`Becoming.Web.observed_raise_couples`；记录 [runaway-distance-uncoupled](../results/records/runaway-distance-uncoupled.md)、[differences-below-threshold](../results/records/differences-below-threshold.md)；实验 [break-warnings](../../../experiments/break-warnings/README.md)（EW2）；研究 [第 286 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#286-early-warnings-before-a-break-beyond-t6-checked-against-the-literature-ew1)、[第 289 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#289-early-warnings-before-seabird-breeding-failures-in-the-field-ew2)。\n\n### 纲·七　劫及其读，久于其驳\n\n**經**　择之规则，与规则之所以读，皆由其所择之份而成之处，其环为份之一法。其所不读之损，不变其所为，故久于过一切界之损；言其损之所见，唯入于规则所读者，乃转之。如此被劫之度，唯于读损而规则变之处见弃（份外之读者、入于份之损、新读），不以所见之积而弃。\n\n**說**　劫（经规则的劫持，capture through the rule，`Becoming.RuleCapture` 模块）是规则从其所择之份读出之择；劫及其读（closed capture，`Becoming.ClosedCapture` 模块）是连规则之所以读也由份而成，二者合为由份而读之一规则。度是如此被劫之择所用之规则（如一项评价之指标）。\n\n所排：由其所择者设定与读取之度，在读者与所读皆未变时，被他们以其损之所见而弃；只改读法而规则仍偏同一份之改革，持续过下一次读取。\n\n不然者：机构之度（科学评价、基准排行榜、临床目标、国民账户）之改革中，度自己的择者以所见之积弃之，既无份外之读者，也无损入其份。\n\n地位：于拟中无设而然（所需以若写入：其外者不为择与读所读；损每步至少增一）。所不读者不变其环：自份与规则相同之始，二历程每步份同、规则同，无论其外如何（`Becoming.ClosedCapture.unread_course`）；已锁之环久于其损：每步其外至少增一，第 t 步之损至少高于起点 t，越过一切界，而历程常锁，份与规则皆不低于起点（`Becoming.ClosedCapture.lock_outlives_loss`）；读损之读法，在损过其界之后的读取步之次步，所行之规则不再偏之，历程不再锁（`Becoming.ClosedCapture.turned_by_loss`）；规则之所读于每一读法与份皆偏时，每一历程自其第二读取步之次步起皆锁，无论起于何规则与读法（`Becoming.ClosedCapture.readers_uniform_locks`；只读份者见 `Becoming.RuleCapture.uniform_locks`）。实际之度由其所择之份而成，是猜想。近邻：Goodhart（1975）与 Campbell（1979）论度之成为目标；自我确认均衡（Fudenberg 与 Levine 1993）；表现性稳定（Perdomo、Zrnic、Mendler-Dünner 与 Hardt 2020）；路径依赖（Arthur 1989）。本条以全强保留（「从不只因所见之积」），是诸论纲中最强而最少验者。\n\n至今之验：尚无冻结之验；验需在读案例之前定下改革事件之编码。\n\n**證**　`Becoming.ClosedCapture.unread_course`、`Becoming.ClosedCapture.lock_outlives_loss`、`Becoming.ClosedCapture.turned_by_loss`、`Becoming.ClosedCapture.readers_uniform_locks`、`Becoming.RuleCapture.uniform_locks`；记录 [closed-capture](../results/records/closed-capture.md)、[capture-through-the-rule](../results/records/capture-through-the-rule.md)。\n\n### 纲·八　大化之一与生生之向\n\n**經**　论题一：唯一大化，凡是者，皆其在其中如何相关也：无一所定为无关系能分者；凡分别（主与客、施与受、事实与评价、体与兼），皆在其中沿关系而划，并其所遗。论题二：善，生生也，即兼中之生及其继续之生，读为广其所容；于一切计之（范围：凡续皆有顾），以凡评价者之所共序之（次序：以广为愈）。二设即伦理之全力：凡约束一切计一切之方之判，皆广之判；余皆互有所长之途之间之权，伦理之设无一强之。\n\n**說**　论题一，地位：论题，有论。表示除关系外无所需：一状即其如何相关（`Becoming.identifiesAlike_iff`：一描述有意义，恰当它所认同者即同者）；法从其所支配之历史读出（`Becoming.shown_le_iff`：一段历史之自然之法，是以之为行的最小之法）；分离恰失去关系（`Becoming.separation_faithful_iff`）；宇之八设，五者由一次交换之读按构造成立，三者是其法之状（`Becoming.ExchangePremises` 模块）。这些皆无设而然；它们显示理论不需独立之物，不显示实在没有；内在关系之论题未决（规范章 §8.1 第 1 项）。所排：需要无关系能分之所定的说明，如内在之价值、封而自续之己、立于其所支配者之外的法。不然者：其说明需要这种所定的现象，例如无任何验或关系能分（同）而所续相异的两状。近邻：本体结构实在论（Ladyman 与 Ross 2007）、过程哲学（Whitehead 1929）、佛学之缘起、不可分辨者之同一。\n\n论题二，地位：论题，有论；两设之根据皆未决（规范章 §8.5）。不易乎畛（不变的一步）归约为一问：己之预设（畛内之顾），是否就一个沿窄于「有关系」之关系所划的己、以第一人称持有（`Becoming.ownClosure_standpointInvariant_iff`：以第一人称持有时，预设恰在诸中心沿此关系之域相同处不随方而变）；以广为愈归约为单调（纲·五）。生生不带「凡新皆善」：生与退化不相叠，成生不指任何新的组织。所排：不加更多之设而约束每一计一切之方的互有所长之判（等重数其数，`Becoming.Weighting.neutral_ranks_by_number`，而等重就是这样的设）；一个在于狭其所容的善。不然者：一个有论证的互有所长之情形，其中一途从每一以正重计一切之方看都更好，那会显示对方的形式之读为错；或一个纯在于狭的善。可错之处：「二设即伦理之全力」依于把方读作对列出之容的正重之计；一个不按其所容排序之方（行为之约束，规范章 §8.9）在此之外，不然者一款已名之。\n\n放弃之论题：更强的方向之说，即实在一般地发展出更共享、更有回应的更新。照现在的陈述它不排除任何可测之物：理论证明一部分可以久，而使其待之外者不复被容（`Becoming.Clearing.loses_beyond`），所以单靠久选不出广；也没有说此趋势在哪些行上、以多快成立。依本篇之原则它不是论题，仍为未决（规范章 §8.1，目标）。\n\n**證**　`Becoming.identifiesAlike_iff`、`Becoming.shown_le_iff`、`Becoming.separation_faithful_iff`、`Becoming.ExchangePremises`（模块）、`Becoming.ownClosure_standpointInvariant_iff`、`Becoming.Weighting.neutral_ranks_by_number`、`Becoming.Clearing.loses_beyond`、`Becoming.Unrestricted`、`Becoming.BoundaryInvariant`、`Becoming.Comparison`；记录 [configurations-alike-by-relation](../results/records/configurations-alike-by-relation.md)、[worlds-are-runs](../results/records/worlds-are-runs.md)、[separation-loses-the-relation](../results/records/separation-loses-the-relation.md)、[premises-that-are-states-of-the-law](../results/records/premises-that-are-states-of-the-law.md)、[what-the-step-across-standpoints-reaches](../results/records/what-the-step-across-standpoints-reaches.md)、[loss-beyond-a-region](../results/records/loss-beyond-a-region.md)。\n\n### 纲·九　四种统一\n\n**經**　四果在其所出之域实质已知，于本论各为跨域之一法：一曰缘感而择，二曰以广为愈即正评价者之所共，三曰不可逆即状之同归，四曰莫上之者于可升之处降其外。作对应读，统一不添一证；作论题读，它排除其所出之域所留开者。\n\n**說**　其一，部分观察下的监督控制：监督者只强制其所观察者（Ramadge 与 Wonham 1987；Lin 与 Wonham 1988；[监督核查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#oversight-check)）。本论所加：奖励、训练、传择（Price 之选择项）、市价与投票是同一缘感而择，有同一败之式：感域之外择之如一（及而不感）；有可升之处，被降；唯以阈感入，绝而未兆。监督控制问满足规格的监督者是否存在；本论说监督者自身之优化对其所观察之外做什么。跨域之预测：每一域中所降都落在可升之处：对竞争性状之选择耗尽竞争者共享之资源，不耗尽不共享者（演化生物学中之公地悲剧，Rankin、Bargum 与 Kokko 2007）；可替代被定价投入之未定价条件被取尽，其他不被；训练中见纲·三。地位：诸律有设而然（规范章 §3.4、§7.1–§7.4）；为跨域之一法是猜想（纲·三）。\n\n其二，帕累托一致：帕累托关系是一切排序所共者（Sen 1970、1977）；机会集之单调（Pattanaik 与 Xu 1990）。本论所加：伦理之次序不过是把此一致用于所能容者，以广为愈不是又一个价值，而是每一正评价者已持者，余皆互有所长。范围另由凡续皆有顾定，此条只说次序。跨域之预测：人、文化与 AI 模型之间的分歧，凡评价为正之处，落在互有所长之比，在广之比上消失（纲·五）。地位：归约已证；预测是猜想，VD1 对它的冻结之验败：评价者计数，广之上的违反随事后读出之负重。\n\n其三，Landauer 原理与 Bennett 之历史带：不可逆是逻辑上之非单射（Landauer 1961；Bennett 1973）。本论所加：计算、热、灭绝与遗忘中的不可逆是一事，即状之同归：有尽之状中，定之法无同归，恰当每一状皆复（`Becoming.Law.lossless_iff_returns`）；一损需一同归（`Becoming.Law.loss_needs_merge`）；无同归之法中，一部分之同归由他部分承之：部分之状被狭，他部分所持之状随之而多（`Becoming.Law.Lossless.narrowing_spreads`）；藏往者不复，须一个无单能尽列之宇（`Becoming.Law.withHistory_never_returns`）。跨域之预测：有界之记录者（学习者、档案、基因组）不能藏其全往而续；它必同归，而兼无同归之处，它所同归者散于他部分。这些是计数之律，其在一域之内容只在找出同归；作为论题它排除得很少，所以作为律保留，不作为猜想陈述。地位：无设而然；物理一致（Bérut 等 2012 测得 Landauer 之界）。\n\n其四，Zhuang 与 Hadfield-Menell（2020）定理一：优化一个代理，把它所不引用之属性驱至其下界。本论所加：这就是生态中的超载、市场中的外部性与机构中的 Goodhart 之律，即可升之处莫上之者之一法，对每一随感入者之升而上之序成立，退化读作被绝之待。跨域之预测：排在奖励之后的副作用项，在可升之处无所保（`Becoming.Optimum.Rising.mono`）；设在所需处之约束被用至所需（`Becoming.Flow.keeping_optimum_takes_slack`）：一存量唯一之保护是一限、目标随捕获而升之处，存量被持在此限，不在其上；受约束的强化学习中，约束终是起作用的。地位：最优之律有设而然；跨域为猜想（纲·三），在模拟中有支持（MQ1 B5）。\n\n**證**　`Becoming.Flow.unselected_beyond_coupling`、`Becoming.Flow.unselected_beyond_pool`、`Becoming.Weighting.widens_iff_every_positive`、`Becoming.Law.lossless_iff_returns`、`Becoming.Law.loss_needs_merge`、`Becoming.Law.Lossless.narrowing_spreads`、`Becoming.Law.withHistory_never_returns`、`Becoming.Optimum.Rising.mono`、`Becoming.Flow.keeping_optimum_takes_slack`；记录 [selection-through-couplings](../results/records/selection-through-couplings.md)、[widening-as-what-every-weighting-ranks](../results/records/widening-as-what-every-weighting-ranks.md)、[recurrence-without-premise](../results/records/recurrence-without-premise.md)、[least-loss-rest](../results/records/least-loss-rest.md)、[merge-of-a-part-kept-by-the-rest](../results/records/merge-of-a-part-kept-by-the-rest.md)、[what-an-optimum-does-beyond-what-couples-in](../results/records/what-an-optimum-does-beyond-what-couples-in.md)；[监督核查](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#oversight-check)。",
+ "declarations": [
+  "Becoming.BoundaryInvariant",
+  "Becoming.Clearing.loses_beyond",
+  "Becoming.ClosedCapture.lock_outlives_loss",
+  "Becoming.ClosedCapture.readers_uniform_locks",
+  "Becoming.ClosedCapture.turned_by_loss",
+  "Becoming.ClosedCapture.unread_course",
+  "Becoming.Comparison",
+  "Becoming.Direction.widening_selected_by_pool",
+  "Becoming.Flow.WithheldLevels",
+  "Becoming.Flow.WithinJoint",
+  "Becoming.Flow.WithinOwn",
+  "Becoming.Flow.fed_from_beyond",
+  "Becoming.Flow.joint_excess_ends",
+  "Becoming.Flow.keeping_optimum_takes_slack",
+  "Becoming.Flow.outrun_ends",
+  "Becoming.Flow.policy_uses_after_failure",
+  "Becoming.Flow.unselected_beyond_coupling",
+  "Becoming.Flow.unselected_beyond_pool",
+  "Becoming.Law.Lossless.narrowing_spreads",
+  "Becoming.Law.loss_needs_merge",
+  "Becoming.Law.lossless_iff_returns",
+  "Becoming.Law.withHistory_never_returns",
+  "Becoming.Optimum.Above.room",
+  "Becoming.Optimum.Drain.counted_after_drains",
+  "Becoming.Optimum.Drain.room_needed",
+  "Becoming.Optimum.MutualBest.full",
+  "Becoming.Optimum.Rising",
+  "Becoming.Optimum.Rising.mono",
+  "Becoming.Optimum.Room",
+  "Becoming.Optimum.course_beyond",
+  "Becoming.Optimum.frontier_breaks_below",
+  "Becoming.Optimum.frontier_exhausts",
+  "Becoming.Optimum.frontier_holds",
+  "Becoming.Optimum.frontier_keeps_stepwise",
+  "Becoming.Optimum.least_iff",
+  "Becoming.Optimum.least_of_shared",
+  "Becoming.Optimum.mutual_beyond",
+  "Becoming.Optimum.optimum_beyond",
+  "Becoming.Optimum.optimum_lowers_iff",
+  "Becoming.Optimum.optimum_untouched",
+  "Becoming.Pair.own_not_joint",
+  "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+  "Becoming.RegimeMargin.Adjusted.falls_iff_below",
+  "Becoming.RegimeMargin.Adjusted.rests_iff",
+  "Becoming.RegimeMargin.Adjusted.threshold_falls",
+  "Becoming.RegimeMargin.Crossing.crosses",
+  "Becoming.RegimeMargin.Drawn.converges",
+  "Becoming.RegimeMargin.Drawn.run_shape",
+  "Becoming.RegimeMargin.beyond_draw_iff",
+  "Becoming.RegimeMargin.ends_iff_below",
+  "Becoming.RuleCapture.uniform_locks",
+  "Becoming.Unrestricted",
+  "Becoming.Web.SelectsThrough",
+  "Becoming.Web.Whole.family_excess_ends",
+  "Becoming.Web.break_not_bounded",
+  "Becoming.Web.course_kept_iff",
+  "Becoming.Web.course_lost_iff",
+  "Becoming.Web.frontier_breaks_long",
+  "Becoming.Web.frontier_broken",
+  "Becoming.Web.frontier_exhausts",
+  "Becoming.Web.frontier_keeps_stepwise",
+  "Becoming.Web.mutual_course_lost",
+  "Becoming.Web.observed_raise_couples",
+  "Becoming.Web.optimum_broken_iff",
+  "Becoming.Web.optimum_broken_iff_capacity",
+  "Becoming.Web.widens_iff_every_weighting",
+  "Becoming.Weighting.mixed_either_way",
+  "Becoming.Weighting.neutral_ranks_by_number",
+  "Becoming.Weighting.weighed_lt_of_widens",
+  "Becoming.Weighting.widens_iff_every_of_class",
+  "Becoming.Weighting.widens_iff_every_positive",
+  "Becoming.identifiesAlike_iff",
+  "Becoming.ownClosure_standpointInvariant_iff",
+  "Becoming.separation_faithful_iff",
+  "Becoming.shown_le_iff"
+ ],
+ "records": [
+  "own-count-misses-joint-excess",
+  "whole-drawing-beyond-renewal-ends",
+  "the-rest-outruns-the-renewal",
+  "re-optimizing-above-a-renewal-ends-it",
+  "continuing-self-fed-from-beyond",
+  "margin-of-a-regime",
+  "regime-point-under-adjusting-giving",
+  "where-a-run-of-a-regime-comes-to-rest",
+  "threshold-in-the-state-plane",
+  "regime-in-any-amounts",
+  "what-an-optimum-does-beyond-what-couples-in",
+  "room-read-off-the-exchange",
+  "several-optimizers-drain-by-their-joint-capacity",
+  "horizon-optima-hold-the-greatest-renewal",
+  "keeping-forgoes-the-renewal-at-the-need",
+  "a-step-coupling-keeps-at-every-horizon",
+  "a-weighting-faster-than-renewal-ends-the-base",
+  "selection-through-couplings",
+  "what-pooled-coupling-reaches",
+  "alignment-direction-under-widening",
+  "widening-as-what-every-weighting-ranks",
+  "graded-significance-and-priority",
+  "runaway-distance-uncoupled",
+  "differences-below-threshold",
+  "closed-capture",
+  "capture-through-the-rule",
+  "configurations-alike-by-relation",
+  "worlds-are-runs",
+  "separation-loses-the-relation",
+  "premises-that-are-states-of-the-law",
+  "what-the-step-across-standpoints-reaches",
+  "loss-beyond-a-region",
+  "recurrence-without-premise",
+  "least-loss-rest",
+  "merge-of-a-part-kept-by-the-rest"
+ ],
+ "quotes": [],
+ "missing_names": [
+  {
+   "concept": "standing 'supported' (frozen tests passed)",
+   "used": "有支持, glossed 验之而未排. I rejected 征: the table gives it to Becoming.Verification (a finite stretch verifies a reading), and a passed frozen test verifies nothing. 中庸「無徵不信」〔RU1-S-ZY〕 was checked with ctq and is the same layer of meaning."
+  },
+  {
+   "concept": "standing 'conjectured'",
+   "used": "猜想. I rejected 億: 论语「億則屢中」〔RU1-S-LY〕 (checked) is guessing in a trading context, and simplified 亿 collides with the numeral. 未决 is broader (open) and is kept for 'warrant open'."
+  },
+  {
+   "concept": "standing 'thesis' (philosophical claim, argued, warrant open)",
+   "used": "论题 (有论，其据未决)"
+  },
+  {
+   "concept": "standing 'proved' inside the theses layer",
+   "used": "已证, labelled 有设而然 or 无设而然 according to the canonical standing table"
+  },
+  {
+   "concept": "strength = content; what a claim forbids",
+   "used": "强度; 所排 / 排除 (排 as in 凡·三 and in 验 = Web.Excludes)"
+  },
+  {
+   "concept": "the refuting observation ('refuted by')",
+   "used": "不然者 (the table's name for counterexample, extended to a field observation)"
+  },
+  {
+   "concept": "need (Web.need)",
+   "used": "所需"
+  },
+  {
+   "concept": "level (Web.level)",
+   "used": "水平"
+  },
+  {
+   "concept": "regime: giving read off the level (RegimeMargin's g)",
+   "used": "与之法 (体制 on first use)"
+  },
+  {
+   "concept": "point of no return (H + y)",
+   "used": "涸之界 (from the table's 涸: a stock falls to zero)"
+  },
+  {
+   "concept": "standing draw (the same draw H at every step)",
+   "used": "每步同取"
+  },
+  {
+   "concept": "recent giving / lag (T2's state variables)",
+   "used": "近与 / 滞"
+  },
+  {
+   "concept": "renewable condition",
+   "used": "有与之所待"
+  },
+  {
+   "concept": "joint draw; one's own draw within renewal (Flow.WithinOwn)",
+   "used": "共取 (from 共取过与); 各取不过与. 出入相掩 is used for Flow.WithinJoint, as in the table."
+  },
+  {
+   "concept": "optimum (Requirement.Frontier: eligible, none ranked above it)",
+   "used": "莫上之者 (可得者中). I avoided 莫愈之者 (凡·二一) because 愈 is reserved for 以广为愈."
+  },
+  {
+   "concept": "eligible outcomes",
+   "used": "可得者 (from 取于可得's 可得)"
+  },
+  {
+   "concept": "order rising with what couples in (Optimum.Rising)",
+   "used": "随感入者之升而上之序"
+  },
+  {
+   "concept": "room (Optimum.Room)",
+   "used": "可升之处 / 降之而感入者得升之处 (余地 stays the name for margin)"
+  },
+  {
+   "concept": "slack (sum of level minus need beyond)",
+   "used": "其外之余地"
+  },
+  {
+   "concept": "capacity (cap)",
+   "used": "所能取"
+  },
+  {
+   "concept": "reward / training",
+   "used": "奖励、所奖 / 训练、所训 (plain)"
+  },
+  {
+   "concept": "planning horizon of an optimizer",
+   "used": "视野. 涯 is the table's horizon of knowing (no prefix fixes the next), a different structure."
+  },
+  {
+   "concept": "scope of the ethics (whose losses count) / installing it",
+   "used": "范围、所顾之中 / 立"
+  },
+  {
+   "concept": "a dependent 'with no seat'; the community's goal",
+   "used": "不在其群中之待者; 群之目标"
+  },
+  {
+   "concept": "valuer",
+   "used": "评价者"
+  },
+  {
+   "concept": "positive weighting / negative valuation",
+   "used": "正重之计 / 负重. 权 is avoided because the table gives it to practical judgment."
+  },
+  {
+   "concept": "verdict",
+   "used": "判"
+  },
+  {
+   "concept": "early-warning statistics, variance, autocorrelation, critical slowing down, bifurcation, fold, transcritical point",
+   "used": "plain modern: 预警、方差、自相关、临界之慢、分岔、折、跨临界之点"
+  },
+  {
+   "concept": "rate of return measured by early warnings",
+   "used": "扰而复归之速 (uses 复归)"
+  },
+  {
+   "concept": "what couples in by level (obs), i.e. observations",
+   "used": "以水平感入者. I avoided 观, which the table gives to view."
+  },
+  {
+   "concept": "stock (存量)",
+   "used": "存量 (plain)"
+  },
+  {
+   "concept": "share selected (RuleCapture)",
+   "used": "份"
+  },
+  {
+   "concept": "metric / measure",
+   "used": "度"
+  },
+  {
+   "concept": "loss accruing beyond the share (ClosedCapture)",
+   "used": "损"
+  },
+  {
+   "concept": "accumulated evidence",
+   "used": "所见之积. I avoided 验 (testing) and 征 (verification)."
+  },
+  {
+   "concept": "drain: driving a condition to its least level",
+   "used": "降. 竭 is the table's Web.ConsumingIn."
+  },
+  {
+   "concept": "natural selection (Price's selection term)",
+   "used": "传择 (the table's evolution through descent)"
+  },
+  {
+   "concept": "determination / distinction / the good",
+   "used": "所定 / 分别 / 善"
+  },
+  {
+   "concept": "a scope that carries to unnamed dependents and domains",
+   "used": "行于"
+  }
+ ],
+ "open": "1. I found no classical word that fits the standings 'supported', 'conjectured' or 'thesis', so they are written in plain modern Chinese (有支持, 猜想, 论题); the integrator should decide whether to keep these. Because this layer is set apart from the theorems, I did not borrow 征 or 未决 for it.\n2. This 篇 departs from STYLE-ZH in two ways that the integrator should acknowledge in the 凡例 or 序.\n   - Its 經 states each thesis at full strength, not only checked laws (§一 says 經 states only checked laws). Which part is proved is given under 地位 in the 說.\n   - Its 說 is far longer than 3–8 sentences. It is split into labelled paragraphs (所排, 不然者, 地位, 至今之验) because the task requires all of them.\n   - The 序 draft (work/xu.md, 限度) still says the 论纲 is not in the book.\n3. There is no 对照. I found no classical passage that is structurally exact to any thesis. I considered 韩非子显学「無參驗而必之者，愚也；弗能必而據之者，誣也」〔FA1-S-H50〕 (verified) for the standing principle and rejected it. It is a method precept with no checked law behind it, and its second half diverges: the theory does state and use conjectures, with their standing.\n4. The canonical standing table lists widening-as-what-every-weighting-ranks and graded-significance-and-priority as 'theorem under stated premises', with finite listing and decided admission as the premises. The chapter's own four-kinds definition, and the 中华本's 凡·十六, count listing and decidedness as local hypotheses of a theorem without premise. I wrote 「规范章地位表作有设而然」 for T5. Reconcile this.\n5. New compositions that need adoption or replacement: 与之法, 涸之界, 莫上之者, 可得者, 可升之处, 近与, 滞, 有与之所待, 正重之计, 每步同取, 视野, 份, 度.\n   - 莫上之者 should be reconciled with the 凡例's 莫愈之者.\n   - 出入相掩 is used for Flow.WithinJoint as the table assigns it.\n6. Modules cited as modules, not declarations: Becoming.RegimeMargin, Becoming.ClosedCapture, Becoming.RuleCapture, Becoming.ExchangePremises.\n   - Becoming.RegimeMargin.Drawn.converges is periphery (Mathlib). It is defined in experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean and has its own regime-reals receipt. resolve.py, which reads only the core receipt, does not find it.\n7. Things carried over from the canonical section without rereading:\n   - The literature, from AI knowledge, as the canonical section says.\n   - The VD1 prompt phrases, translated as in the canonical Chinese edition, not from the prompts' original wording.\n   - The numbers and verdicts, copied from the canonical section (EN and ZH). I did not recheck them against the experiment results.\n8. What stays open is the same as in the source section:\n   - T2 outside fisheries.\n   - T3 on actual trained systems: whether the drain lies where room lies is unmeasured, and the proportionality to nearness to the optimum is a chosen form.\n   - T4 transfer.\n   - T5 with valuer signs measured apart from the ranking, and human valuers.\n   - T6 beyond EW2's low power.\n   - T7: no frozen test yet.\n   - T8: the internal-relations thesis and the warrant of both premises.\n   - The dropped stronger direction hypothesis."
+}
