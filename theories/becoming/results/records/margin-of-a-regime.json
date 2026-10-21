@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-21T11:33:06+00:00",
+  "reviewed_at_utc": "2026-10-21T13:50:25+00:00",
   "statement": {
     "en": "With giving read off the level under a standing draw, the condition holds exactly from a least level up, which lies more than the draw above the need where giving there falls short of it, rises with the draw, and harms of joint draws are super-additive up to one unit.",
     "zh": "在常设汲取下所给读自水平时，不可回返点是确切的；在需求处所给不足汲取时高出需求不止一份汲取；随汲取升高；联合汲取的损害在一单位之内超可加。"
@@ -118,8 +118,8 @@
       "kind": "scope"
     },
     {
-      "en": "That the frozen-rest margin over the net draw is a time to break in the field: it ranks the risk, but a third of those it put within five years fell, and giving, which the frozen rest holds, moves toward the draw.",
-      "zh": "冻结其余的余量除以净汲取在野外就是破断时间：它对风险排序正确，但被判为五年内者只有三分之一如此，而冻结其余所持的所给向汲取移动。",
+      "en": "That a margin times a break: in the field the frozen-rest margin ranks the risk, but a third of those it put within five years fell; yeast driven past its fold broke three and at least six days before the curve from constant regimes said.",
+      "zh": "余量能为破断定时：野外冻结其余的余量能排序风险，但被判为五年内者只有三分之一如此；被推过折叠的酵母比恒定体制所得曲线所说早三天和至少六天破断。",
       "kind": "scope"
     },
     {
@@ -169,12 +169,12 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T135509.239302Z）：Becoming.RegimeMargin 的 49 项声明（36 项定理）公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 270 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; each series' timing read from its assessment before a balance is read off it; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; an independent review.",
-    "zh": "区分滞后的三种读法（年龄结构、汲取与所给的另一种次序、补偿），借助调查序列与观测模型或按年龄结构的读法；在从序列读出平衡之前，先从其评估读出每条序列的时间约定；按种群或按体制的滞后权重；与 Flow.Balances 相接；阿基米德量上的折叠；独立审查。"
+    "en": "The fold measured next to it under a worsening regime, to tell a misfit near the fold from an effect of the regime's history; separating the lag's three readings with survey series or an age-structured reading; each series' timing read first; the join to Flow.Balances; the fold over Archimedean amounts; an independent review.",
+    "zh": "在恶化体制下紧邻折叠测量折叠，以分辨折叠附近的拟合偏差与体制历史的效应；以调查序列或年龄结构读法分开滞后的三种读法；先读各序列的时点；与 Flow.Balances 相接；阿基米德量上的折叠；独立审查。"
   },
   "correspondence": {
-    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read, then a state with a lag and the draw read as a law of the stock on spawning-stock series no analysis had read; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS), and delay-difference models carry the lag from recruitment (Deriso 1980).",
-    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合损害的超可加即凹的增函数更新之逆的凸性。每条规律都在模拟的 Allee 酵母与网格世界中测量过，这一步又以冻结的预测在 Dai 等的真实酵母与 RAM Legacy 种群评估数据库 v4.66 上检验过，再在无人读过的已评估种群上检验了以这一步与冻结其余为两端的、由水平与近期所给构成的状态，又在无人读过的产卵种群序列上检验了带滞后的状态与读作种群规律的汲取；已评估种群中生产力的体制转换是已知的（Vert-pre 等 2013，PNAS），延迟差分模型显式带有来自补充的滞后（Deriso 1980）。"
+    "en": "Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read, then a state with a lag and the draw read as a law of the stock on spawning-stock series no analysis had read, then its time to break on yeast driven past its fold (Dai, Korolev and Gore 2015); in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS), and delay-difference models carry the lag from recruitment (Deriso 1980).",
+    "zh": "收获理论：减损性与临界减损性，被收获平衡的折叠（Clark《数学生物经济学》1976；May，Nature 1977）；收获下的 Allee 效应（Courchamp、Berec 与 Gascoigne 2008）；灾变性转变（Scheffer 等 2001）。联合损害的超可加即凹的增函数更新之逆的凸性。每条规律都在模拟的 Allee 酵母与网格世界中测量过，这一步又以冻结的预测在 Dai 等的真实酵母与 RAM Legacy 种群评估数据库 v4.66 上检验过，再在无人读过的已评估种群上检验了以这一步与冻结其余为两端的、由水平与近期所给构成的状态，又在无人读过的产卵种群序列上检验了带滞后的状态与读作种群规律的汲取，再在被推过折叠的酵母上检验了其破断时间（Dai、Korolev 与 Gore 2015）；已评估种群中生产力的体制转换是已知的（Vert-pre 等 2013，PNAS），延迟差分模型显式带有来自补充的滞后（Deriso 1980）。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
   "aliases": [
@@ -290,7 +290,7 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "00c46eb87aee5ea371eef7aea7818b0ed7c6b54f229eef2cea0efe22c38cbfba"
+      "sha256": "6ca6aa3b156484ab44661bb6d0143bbde06c5b6814276bba7fb1d8686a743dd1"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
@@ -385,6 +385,10 @@
     {
       "en": "21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.",
       "zh": "2026年10月21日，RM7：多于两个的耦合条件已作为体制之步下的网陈述（记录 coupled-webs，研究第 311 节）；其下一步不再列出。其规律不变。"
+    },
+    {
+      "en": "21 October 2026: MQ6 (study section 314), a frozen test on yeast driven past its fold: the level is the state at a constant draw and carries across experiments, and the regime margin forecasts the level away from the break, but the breaks came early; the scope and the next step are revised.",
+      "zh": "2026年10月21日：MQ6（研究第 314 节），在被推过折叠的酵母上的冻结检验：恒定汲取下水平即状态，且跨实验相符，体制的余量在远离破断处预测水平，但破断来得早；范围与下一步据此修订。"
     }
   ]
 }

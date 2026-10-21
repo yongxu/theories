@@ -29,7 +29,7 @@
 - How giving depends on the draw, or that giving is read off the level within a regime: both are premises, measured in yeast, not theorems.
 - That the regime's point predicts a field system: in assessed fish stocks giving persists beyond what the level gives, and the frozen rest forecasts better than the regime margin.
 - That level and recent giving are the whole state in the field: last year's escapement adds to them. With it, nothing more is needed in the median assessed stock, but whether that lag is an age structure, the other order of draw and giving, or compensation is not separated, and its forecast gain cannot be told from damping.
-- That the frozen-rest margin over the net draw is a time to break in the field: it ranks the risk, but a third of those it put within five years fell, and giving, which the frozen rest holds, moves toward the draw.
+- That a margin times a break: in the field the frozen-rest margin ranks the risk, but a third of those it put within five years fell; yeast driven past its fold broke three and at least six days before the curve from constant regimes said.
 - That the draw's response explains why the level staying put wins at ten years in the field: the catch follows the stock where the series report the level before the year's catch, but knowing the catches closes little of the held draw's gap, and once giving moves toward the draw, how the draw is read makes no difference.
 - That the regime's order laws reach the field's state over its whole band: the measured adjustment rises in the recent giving, but in what is left only below the level law's peak, where the point of no return lies.
 - Super-additivity for every concave giving law: the hypothesis is subadditivity above the need, and the whole numbers lose one unit.
@@ -49,14 +49,14 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Separating the lag's three readings (an age structure, the other order of draw and giving, compensation), with survey series and an observation model or an age-structured reading; each series' timing read from its assessment before a balance is read off it; a lag weight per stock or per regime; the join to Flow.Balances; the fold over Archimedean amounts; an independent review.
+The fold measured next to it under a worsening regime, to tell a misfit near the fold from an effect of the regime's history; separating the lag's three readings with survey series or an age-structured reading; each series' timing read first; the join to Flow.Balances; the fold over Archimedean amounts; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read, then a state with a lag and the draw read as a law of the stock on spawning-stock series no analysis had read; in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS), and delay-difference models carry the lag from recruitment (Deriso 1980).
+Harvesting theory: depensation and critical depensation, the fold of the harvested equilibrium (Clark, Mathematical Bioeconomics, 1976; May, Nature 1977); Allee effects under harvest (Courchamp, Berec and Gascoigne 2008); catastrophic shifts (Scheffer et al. 2001). Super-additive joint harm is the convexity of the inverse of a concave, increasing renewal. Each law was measured in a simulated Allee yeast and a gridworld, and the step on Dai et al.'s real yeast and on the RAM Legacy Stock Assessment Database v4.66 with frozen predictions, then a state of level and recent giving, whose ends are this step and the frozen rest, on assessed stocks no analysis had read, then a state with a lag and the draw read as a law of the stock on spawning-stock series no analysis had read, then its time to break on yeast driven past its fold (Dai, Korolev and Gore 2015); in assessed stocks productivity regime shifts are known (Vert-pre et al. 2013, PNAS), and delay-difference models carry the lag from recruitment (Deriso 1980).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -102,7 +102,8 @@ Aliases: `margin of a regime`, `一个体制的余量`, `point of no return unde
 - 21 October 2026: the premise of the regime's order laws measured post hoc on MQ5's stocks (study section 280): the field's giving, read as an adjustment, rises in the recent giving in 65 of 69 stocks and in what is left only below the level law's peak, so those laws reach the field's state on the low side, where the point of no return lies; a scope item added.
 - 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); its next delta now says what stays open. Its laws are unchanged.
 - 21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.
+- 21 October 2026: MQ6 (study section 314), a frozen test on yeast driven past its fold: the level is the state at a constant draw and carries across experiments, and the regime margin forecasts the level away from the break, but the breaks came early; the scope and the next step are revised.
 
 </details>
 
-Documentary review UTC: `2026-10-21T11:33:06+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-21T13:50:25+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

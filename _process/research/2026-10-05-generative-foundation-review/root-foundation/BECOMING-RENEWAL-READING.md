@@ -13950,3 +13950,76 @@ Board item EC, its fourth step, landed with EC2 in one checker run (study §312)
 **Boundary.** No ethical premise is added or removed. The laws state what the two neutralities force, and the neutralities stay premises (§6.4). Connectivity is a property of the represented relations, not a warrant.
 
 **Output → input.** EC5 states the theory as its master laws: closure, balance, finite runs, lumping, and the order of widening with its two premises. The ethics' scope enters as closure, the ethics' order as order.
+
+## 314. The margin's time to break past the fold, in the lab (MQ6)
+
+```text
+Result(s): none new about the unfolding; a frozen test of the margin's time to break where the draw is set from
+       outside, on yeast populations driven past their fold (Dai, Korolev and Gore 2015, Dryad
+       doi:10.5061/dryad.k30v3, CC0; download approved by Ren in chat, 21 October 2026). Rules, code, layout, the
+       dilution map and dry runs were committed and landed before any value was read (freeze 6a579be22); the
+       sucrose map fitted on the odd sucrose levels was landed before the even levels were read (f9480aa82), and
+       the all-level map before any deteriorating population was read (d1d9b1ac9); salvage refs
+       refs/salvage/mq6-freeze, -freeze-2, -freeze-3. Every verdict kept: 3 of 10 passed.
+Delta: MQ2's test D (the time to break past the fold) was not testable on the 2012 data, and in the field (MQ4,
+       MQ5) the frozen-rest time to break ranks risk without timing it, because the draw and the giving respond.
+       Here the dilution rose 10% a day (DF 500 to 2,527, 2% sucrose) or the sucrose fell 20% a day (5% to 0.05%,
+       DF 500). The regime's step read in yeast: n_{d+1} = G_{s_d}(n_d / DF_d), what is left n_d / DF_d, the giving
+       G(x) - x. The regime margin (RM) iterates a renewal curve measured in constant regimes under the known
+       schedule; the frozen rest (FR) holds the last giving and applies the known draw; persistence and the last
+       ratio continued are baselines. The dilution map is MQ2's draw-dependent class fitted on all eight DFs of the
+       2012 data (fold DF 1,930); the sucrose map, two-phase with power laws of sucrose in the low-density rate and
+       the carrying capacity, is fitted on the 2015 sucrose bifurcation at DF 500.
+Premises / bridges: Table S1's schedules, read as the condition of each day's transfer; the floor 0.01 (10^3
+       cells/ul); the authors' position-based subsets of 20 populations as primary; the smooth classes; the
+       2012 map carried to the 2015 experiment (C1 tests this at DF 500).
+Verdicts: A1 failed (at 0.6, 0.4 and 0.2% sucrose, 21-26% of populations starting below a third of the odd-level
+       fit's need "survive" on the frozen fate reading, against 10% allowed); A2 failed (the held-out need within
+       a factor 1.5 of the need read from fates at 0.6% and 0.4%, ratios 0.86 and 0.72, but 0.58 at 0.2%);
+       T1a-DF failed (the regime margin beats the frozen rest, persistence and trend at three days, median |log
+       error| 0.25 against at best 0.32, but trend beats it at five, 0.68 against 0.75); T1b-DF failed (near the
+       break, trend 0.26 against 0.77 at one day); T2-DF failed (every population's free fall began on day 15-17,
+       DF 1,427-1,726; the map's fold is first passed on day 19 and it predicts no onset by day 20: agreement 0 of
+       20); T1a-SUC passed (0.11 and 0.20 at three and five days, against at best 0.19 and 0.60); T1b-SUC failed
+       (trend 0.17 against 0.24 at one day); T2-SUC failed (all 20 began on day 20, the map said day 23); C1 passed
+       (the constant group's median level 1.54 against the 2012 map's 1.66, 8% apart); L passed (the map's
+       one-day residuals at DF 500, demeaned per population, lag-1 autocorrelation -0.14 over 300 pairs).
+Post hoc (not verdicts; posthoc_mq6.py): A1 read by the floor (MQ2's reading) or by direction with day 6 above
+       twice the floor separates 97-100% on each side at all three levels, so A1's failure is the frozen fate
+       reading counting noise at the instrument's floor as survival; A2's ratios are the same under every
+       reading. Giving against the map by day: in the dilution run -0.06 to -0.19 (log) through day 13, close to
+       the constant group's -0.02 to -0.16, then -0.19, -0.38, -0.94 on days 13-15; in the sucrose run near zero
+       through day 14, then negative from day 15 (0.34%) to -0.87 on day 20. The onsets imply folds near DF
+       1,240 (a low-density rate falling with the draw at beta 2.25 against the map's 0.27) and 0.18% sucrose,
+       against the maps' 1,930 and 0.12% and the paper's constant-regime estimates near 1,600 and 0.12%. With the
+       map's carrying capacity scaled to the constant group's level, the dilution run's errors fall below the
+       frozen rest's at one, three and five days; the late losses remain. Under the reading shifted by one day
+       (reported), the sucrose run's onsets agree (day 22 against 20).
+Evidence: experiments/margin-measured (PREDICTIONS-2026-10-21-MQ6.md, mq6.py, posthoc_mq6.py, results/mq6:
+       layout.json, development.json, dry-runs.json, fit-odd.json, fit-all.json, VERDICTS-mq6-a.json,
+       VERDICTS-mq6.json, posthoc-mq6.json, run.out; README findings 2-4 and ledger); data Dryad k30v3 (the six
+       files' md5 matched Dryad's), downloaded by Ren in a browser because Dryad's file links sit behind a bot
+       check; the paper (MIT DSpace copy) approved and downloaded the same way; the 2012 data (Zenodo 5003142)
+       already held; standard library, CPU, a few minutes in all.
+Boundary: the paper's figures and tipping days were read before the freeze, so the timing verdicts were partly
+       anticipated (the freeze said T2-DF and T1b-DF were expected to fail); the dilution map comes from another
+       experiment; the sucrose map extrapolates below 0.16%; the dry runs had no instrument floor, which is why
+       the fate reading's flaw passed them; all_SUC.txt (48 x 21) does not match the 24-day protocol and is not
+       used; early-warning indicators, the paper's subject, are not tested. Closest prior results (from memory,
+       not checked, except the paper): delayed passage through a saddle-node and its ghost (Strogatz 1994);
+       extinction in deteriorating environments (Drake and Griffen 2010, Nature); Dai et al. 2012 (Science) and
+       2015 (PNAS) for the fold and critical slowing down.
+Output -> input: where the draw is set from outside, the theory's premises hold in the lab: the level is the state
+       at a constant draw (L), the regime's level carries across experiments (C1), and the regime margin
+       forecasts the level away from the break better than the frozen rest (T1a-SUC; T1a-DF at three days). It
+       does not time the break: driven past the fold, the populations broke three and at least six days before
+       the renewal curve measured in constant regimes said, because that curve places the fold too late. The
+       margin is least well measured where the break is decided, and the error points toward a late warning.
+       Two causes are left: the smooth class understating the need next to the fold (A2 shows it in constant
+       sucrose regimes), or a worsening regime lowering giving below what the same condition gives in a constant
+       one. The margin-of-a-regime record, chapter section 8.7, theses T1 and T2 and the margin README now say
+       so. Open: a renewal curve measured next to the fold, and a constant regime held at the deteriorating run's
+       last condition before the break, to separate the two causes; fate rules that read the instrument's floor.
+```
+
+**Self-review.** The freeze carried stakes and most of its rules failed. Two failures were anticipated in the freeze from the paper's figures (T2-DF, T1b-DF); the sucrose run's were not, and they came from a map fitted on the same experiment, so the early break is not only a matter of carrying a curve from 2012 to 2015. One failure is mine: the dry runs showed the floor reading of fates biased low and I replaced it by a direction reading, which on real readings counts the instrument's noise at the floor as survival. The post hoc reading shows the need separating fates by the floor, but the verdict stays failed. What the test adds to the field results is a contrast: where the draw is set from outside and the level is the state, the regime margin does forecast the level, and the frozen rest does not; what it does not do, in the lab as in the field, is time the break, and here the reason is the measurement of the fold rather than a responding rest.
