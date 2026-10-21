@@ -1283,3 +1283,22 @@ Evidence: the prior forms from memory, not reread; Lean in the record's receipt
 Boundary: AI check, one session; capacities, more drawers and drawing at once are not stated; the first moves first at every step
 Integration: chapter §3.4, §7.1, §8.1 item 10 and the relation-to-known-results row 6
 ```
+
+<a id="web-rest-check"></a>
+## A check: rest and points of no return on coupled webs (22 October 2026, RM8)
+
+An AI check (one session, 22 October), made while the Lean was written, of what RM7 ([web check](#web-check)) left open: whether rest and points of no return hold for webs of more than two coupled conditions. **Verdict: the mathematics is known in its kind. A monotone map on a finite ordered set reaches a fixed point from a state it does not raise within the set's height, and monotone systems keep the order of solutions, which is the comparison principle behind a threshold falling as the others rise. The spine's form is exact in whole numbers for any finite web within a band. It gives the step bound and the threshold's exactness, and it reads the order on a web as the fates of conditions. That rest needs no equality of functions where giving is monotone is the form's own small step.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Iterating a monotone map from a post-fixed point reaches a fixed point within the height of a finite lattice | Kleene; Tarski (1955) (from memory) | `Coupled.Indexed.rests_by`, `Coupled.Indexed.comes_to_rest`: what is left falls strictly at each change and is bounded by the conditions' count times `hi` |
+| Monotone dynamical systems and their comparison principle | Hirsch (1985); Smith, *Monotone Dynamical Systems* (1995) (from memory) | `Coupled.Indexed.step_mono` (RM7), `Coupled.Indexed.threshold_falls`: a condition's point of no return does not rise as any other level rises |
+
+```text
+Result(s): new record rest-on-coupled-webs (RM8, new laws of Becoming.RegimeMargin)
+Delta: for finitely many coupled conditions within a band under mutual support, stated condition by condition, a run comes to rest within the count times hi with one step, whether a condition ends is decided there, and each condition's point of no return, given the others, is exact and does not rise as any other rises; the pair's laws derived from these
+Supplied premises / correspondence: whole numbers; finitely many conditions; mutual support; a band; discrete steps. Correspondence: Kleene/Tarski iteration; monotone dynamical systems
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; infinitely many conditions and thresholds beyond a band not stated
+Integration: chapter's coupled-web paragraph, thesis T1's sentence and record table
+```

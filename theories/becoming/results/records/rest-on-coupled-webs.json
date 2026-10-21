@@ -1,0 +1,290 @@
+{
+  "schema_version": 2,
+  "id": "rest-on-coupled-webs",
+  "title": {
+    "en": "Rest and points of no return on coupled webs",
+    "zh": "耦合之网的静止与不可回返点"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T19:24:24+00:00",
+  "statement": {
+    "en": "For finitely many coupled conditions within a band under mutual support, a run comes to rest, and each condition's point of no return, given the others, is exact and does not rise as any other level rises.",
+    "zh": "对带内相互支持下有限多个耦合条件，运行静止，每个条件在其他给定时的不可回返点是精确的，且不随任何其他水平上升而上升。"
+  },
+  "laws": [
+    {
+      "en": "Under mutual support a giving respects what is left condition by condition, by antisymmetry, so states the draws leave alike at every condition step alike, their runs stay alike, a condition ends from one exactly where from the other, and the run from the state after a step is the run one step on: no equality of functions is assumed.",
+      "zh": "相互支持下，所给按反对称逐条件地尊重所余，故汲取所余在每个条件上相同的状态步也相同，其运行保持相同，一个条件从一个状态终结恰当它从另一个终结；自一步之后的状态出发的运行即运行之后一步：不假设函数相等。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.respects",
+        "Becoming.RegimeMargin.Coupled.Indexed.step_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_shift"
+      ]
+    },
+    {
+      "en": "Within a band the step keeps, each condition gives within its draw at every state in the band, a run stays in the band, what the draws leave of each never rises along it, and the run is still condition by condition once that repeats.",
+      "zh": "在步保持的带内，每个条件在带内每个状态的所给不超过其汲取，运行留在带内，汲取所余沿运行从不上升，重复时运行逐条件静止。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.Band",
+        "Becoming.RegimeMargin.Coupled.Indexed.within_draw",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.left_falls",
+        "Becoming.RegimeMargin.Coupled.Indexed.still_of_left"
+      ]
+    },
+    {
+      "en": "For finitely many conditions listed by a covering list, what is left of them, added, falls strictly at every step that changes it and is at most the count times hi; so a run from the band is still from some step at most the count times hi with one, and whether a condition ends is decided at that step.",
+      "zh": "对由覆盖列表列出的有限多个条件，其所余之和在每个改变它的步严格下降，且至多为条件数乘 hi；故自带内出发的运行至多自条件数乘 hi 再加一步起静止，一个条件是否终结在该步判定。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.leftOver",
+        "Becoming.RegimeMargin.Coupled.Indexed.leftOver_le",
+        "Becoming.RegimeMargin.Coupled.Indexed.leftOver_lt",
+        "Becoming.RegimeMargin.Coupled.Indexed.leftOver_bound",
+        "Becoming.RegimeMargin.Coupled.Indexed.alikeOn",
+        "Becoming.RegimeMargin.Coupled.Indexed.alikeOn_true",
+        "Becoming.RegimeMargin.Coupled.Indexed.alikeOn_false",
+        "Becoming.RegimeMargin.Coupled.Indexed.rests_by",
+        "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_iff"
+      ]
+    },
+    {
+      "en": "Each condition's point of no return, the others' levels given, is a least level up to hi + 1 below which exactly it ends; every state has its fate by it; and it does not rise as any other level rises.",
+      "zh": "每个条件在其他水平给定时的不可回返点，是至多 hi + 1 的最小水平，恰在其下它终结；每个状态按它得其命运；它不随任何其他水平上升而上升。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.setAt",
+        "Becoming.RegimeMargin.Coupled.Indexed.setAt_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.setAt_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.ending",
+        "Becoming.RegimeMargin.Coupled.Indexed.threshold",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
+        "Becoming.RegimeMargin.Coupled.Indexed.fates"
+      ]
+    },
+    {
+      "en": "The pair's rest and points of no return are these laws read for two: the pair's band is the web's, the pair is still where its web is, and its threshold is the web's with the partner at its level.",
+      "zh": "一对的静止与不可回返点是这些律对两个条件的读法：一对的带是网的带，网静止处一对静止，其阈值是伙伴处于其水平时网的阈值。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.covers_pair",
+        "Becoming.RegimeMargin.Coupled.pair_count",
+        "Becoming.RegimeMargin.Coupled.band_web",
+        "Becoming.RegimeMargin.Coupled.pair_within",
+        "Becoming.RegimeMargin.Coupled.pair_still",
+        "Becoming.RegimeMargin.Coupled.pair_at",
+        "Becoming.RegimeMargin.Coupled.leading_congr",
+        "Becoming.RegimeMargin.Coupled.setAt_pair",
+        "Becoming.RegimeMargin.Coupled.threshold_pair"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Whole numbers; finitely many conditions listed by a list covering them; draws taken first, as much as there is; each giving a law of what is left of all, rising with each (mutual support); a band up to hi the step keeps; states compared condition by condition; discrete steps.",
+      "zh": "不加公理。整数；由覆盖列表列出的有限多个条件；汲取先取，有多少取多少；各所给是所有所余之律，且随每个上升（相互支持）；步保持至多 hi 的带；状态逐条件比较；离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Infinitely many conditions: the decision whether a step changes what is left runs over the covering list.",
+      "zh": "无穷多个条件：判定一步是否改变所余要遍历覆盖列表。",
+      "kind": "scope"
+    },
+    {
+      "en": "Thresholds beyond a band; webs with a recent giving; amounts beyond whole numbers.",
+      "zh": "带外的阈值；带近来所给的网；整数之外的量。",
+      "kind": "scope"
+    },
+    {
+      "en": "That measured webs meet mutual support and a band: how far a field web's thresholds fall is untested.",
+      "zh": "所测的网满足相互支持与带：野外之网的阈值下降多远未经检验。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T191937.039634Z): the 37 declarations Becoming.RegimeMargin gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 325; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T191937.039634Z）：Becoming.RegimeMargin 新增的 37 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 325 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Thresholds beyond a band, with a bound on the run in its place; webs with a recent giving; a field web whose couplings are measured; an independent review.",
+    "zh": "带外的阈值，以运行之界代替带；带近来所给的网；耦合经测量的野外之网；独立审查。"
+  },
+  "correspondence": {
+    "en": "A monotone map on a finite ordered set iterated from a state it does not raise reaches a fixed point within the set's height (Kleene; Tarski 1955); monotone systems keep the order of solutions, the comparison principle (Hirsch 1985; Smith 1995).",
+    "zh": "有限有序集上的单调映射自其不升高的状态迭代，在集合高度之内达到不动点（Kleene；Tarski 1955）；单调系统保持解之序，即比较原理（Hirsch 1985；Smith 1995）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+  "aliases": [
+    "rest and points of no return on coupled webs",
+    "coupled webs come to rest",
+    "耦合之网的静止",
+    "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest",
+    "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls"
+  ],
+  "dependencies": [
+    {
+      "id": "coupled-webs",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The web's step, its order and its ending are reused; the rest and thresholds its open item names are stated.",
+        "zh": "沿用网之步、其序与其终结；陈述了其开放项所列的静止与阈值。"
+      },
+      "interface": {
+        "output": {
+          "en": "step, step_mono, ends_of_below, pair_run, ends_pair.",
+          "zh": "step、step_mono、ends_of_below、pair_run、ends_pair。"
+        },
+        "input": {
+          "en": "Rest and points of no return on webs.",
+          "zh": "网上的静止与不可回返点。"
+        },
+        "conditions": {
+          "en": "Finitely many conditions; a band.",
+          "zh": "有限多个条件；带。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+      }
+    },
+    {
+      "id": "coupled-regimes",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The pair's rest and thresholds are derived from the web's; its pair-only helpers are removed.",
+        "zh": "一对的静止与阈值由网的导出；其只对一对的辅助引理被移除。"
+      },
+      "interface": {
+        "output": {
+          "en": "Band, given_within, left_le, rests_by, threshold.",
+          "zh": "Band、given_within、left_le、rests_by、threshold。"
+        },
+        "input": {
+          "en": "The pair read as the web indexed by Bool.",
+          "zh": "一对读作以 Bool 为指标的网。"
+        },
+        "conditions": {
+          "en": "Mutual support; a band.",
+          "zh": "相互支持；带。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Band",
+        "Becoming.RegimeMargin.Coupled.Indexed.Band",
+        "Becoming.RegimeMargin.Coupled.Indexed.Below",
+        "Becoming.RegimeMargin.Coupled.Indexed.Ends",
+        "Becoming.RegimeMargin.Coupled.Indexed.Rises",
+        "Becoming.RegimeMargin.Coupled.Indexed.alikeOn",
+        "Becoming.RegimeMargin.Coupled.Indexed.alikeOn_false",
+        "Becoming.RegimeMargin.Coupled.Indexed.alikeOn_true",
+        "Becoming.RegimeMargin.Coupled.Indexed.comes_to_rest",
+        "Becoming.RegimeMargin.Coupled.Indexed.ending",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_iff",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_of_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.fates",
+        "Becoming.RegimeMargin.Coupled.Indexed.leftOver",
+        "Becoming.RegimeMargin.Coupled.Indexed.leftOver_bound",
+        "Becoming.RegimeMargin.Coupled.Indexed.leftOver_le",
+        "Becoming.RegimeMargin.Coupled.Indexed.leftOver_lt",
+        "Becoming.RegimeMargin.Coupled.Indexed.left_falls",
+        "Becoming.RegimeMargin.Coupled.Indexed.respects",
+        "Becoming.RegimeMargin.Coupled.Indexed.rests_by",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_shift",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.setAt",
+        "Becoming.RegimeMargin.Coupled.Indexed.setAt_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.setAt_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.step",
+        "Becoming.RegimeMargin.Coupled.Indexed.step_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.step_mono",
+        "Becoming.RegimeMargin.Coupled.Indexed.still_of_left",
+        "Becoming.RegimeMargin.Coupled.Indexed.threshold",
+        "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls",
+        "Becoming.RegimeMargin.Coupled.Indexed.within_draw",
+        "Becoming.RegimeMargin.Coupled.band_web",
+        "Becoming.RegimeMargin.Coupled.comes_to_rest",
+        "Becoming.RegimeMargin.Coupled.covers_pair",
+        "Becoming.RegimeMargin.Coupled.ending",
+        "Becoming.RegimeMargin.Coupled.ends_iff",
+        "Becoming.RegimeMargin.Coupled.ends_iff_below",
+        "Becoming.RegimeMargin.Coupled.ends_pair",
+        "Becoming.RegimeMargin.Coupled.fates",
+        "Becoming.RegimeMargin.Coupled.given_within",
+        "Becoming.RegimeMargin.Coupled.leading_congr",
+        "Becoming.RegimeMargin.Coupled.left_le",
+        "Becoming.RegimeMargin.Coupled.pair_at",
+        "Becoming.RegimeMargin.Coupled.pair_count",
+        "Becoming.RegimeMargin.Coupled.pair_rises",
+        "Becoming.RegimeMargin.Coupled.pair_run",
+        "Becoming.RegimeMargin.Coupled.pair_still",
+        "Becoming.RegimeMargin.Coupled.pair_within",
+        "Becoming.RegimeMargin.Coupled.rests_by",
+        "Becoming.RegimeMargin.Coupled.setAt_pair",
+        "Becoming.RegimeMargin.Coupled.threshold",
+        "Becoming.RegimeMargin.Coupled.threshold_falls",
+        "Becoming.RegimeMargin.Coupled.threshold_pair",
+        "Becoming.RegimeMargin.leading",
+        "Becoming.RegimeMargin.leading_false",
+        "Becoming.RegimeMargin.leading_true"
+      ],
+      "sha256": "c0321c9da4b47a770b2ac12ecc54cfe2e9cb296d94c16bb5f2034dd9c64d5aae"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json",
+      "role": "receipt",
+      "sha256": "1cbcd80102dad159cb6b52dee2da91d200250186b8fcb7e34b8bf376b6a800b8"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "a106d271be24645da99dc16a6a5d227acef673fe4a300b37962a5280831fb00e"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "6e336a94e10bf8a012f3bac7bea416b3660004bf4fd86cd849eebea7d85dd6b0"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "480291be99ce492a9f329d350ccaa420ae932c30b490b03655aa84eea9fe853a"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (RM8), rest and points of no return on coupled webs of finitely many conditions, stated condition by condition; the pair's laws derived from them; study section 325.",
+      "zh": "2026年10月22日：新增（RM8），有限多个条件的耦合之网的静止与不可回返点，逐条件陈述；一对的律由其导出；研究第 325 节。"
+    }
+  ]
+}

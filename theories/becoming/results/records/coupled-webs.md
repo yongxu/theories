@@ -25,7 +25,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Rest and thresholds of webs: a web's state is a function of the conditions, and a still run would need equality of functions, an extensionality the pure core does not assume; the pair's are stated.
+- Rest and thresholds of webs of infinitely many conditions: for finitely many, listed, they are stated (record rest-on-coupled-webs).
 - Partial dependence, where giving falls without stopping; the time of a cascade along a chain beyond each link's; webs with a recent giving; the reals and continuous time.
 - That measured webs have total dependence or positive draws on their chains: the cascade is proved under these premises; how far it reaches in a field web is untested.
 - **Counterexample:** Coupled.Indexed.Chain.stopped: with no draw on the middle of a chain the first still ends, yet the third, downstream of it, holds at two for ever: positive draws on dependents cannot be dropped. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
@@ -42,7 +42,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Rest and thresholds of webs (stated on finitely many conditions read as a list); partial dependence with a rate; the time of a cascade along a chain; webs with a recent giving; a field web whose dependences are measured; an independent review.
+partial dependence with a rate; the time of a cascade along a chain; webs with a recent giving; a field web whose dependences are measured; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -63,6 +63,9 @@ Cooperative (monotone) systems keep the order of states in any dimension, and th
   - Input: The web's step and its order under mutual support in any amounts with a draw.
   - Preserved conditions: Linearly ordered amounts with a truncated difference. [RegimeMargin.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 - related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). That record reads a family of coupled conditions as one and ends it by joint excess; here each condition of a web keeps its own giving law of what is left of all, and the end of one reaches what depends on it, link by link.
+- related, not a proved adapter: [rest-on-coupled-webs](rest-on-coupled-webs.md). For finitely many conditions within a band, a web's run comes to rest and each condition's point of no return does not rise as any other level rises.
+
+**Used by:** [rest-on-coupled-webs](rest-on-coupled-webs.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -79,6 +82,7 @@ Cooperative (monotone) systems keep the order of states in any dimension, and th
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json) | — |
 
 Aliases: `coupled webs`, `the cascade of ends`, `coextinction along a chain of dependence`, `耦合之网`, `Becoming.RegimeMargin.Coupled.Indexed.ends_downstream`, `Becoming.RegimeMargin.Coupled.Indexed.step_mono`
 
@@ -86,6 +90,7 @@ Aliases: `coupled webs`, `the cascade of ends`, `coextinction along a chain of d
 ### History
 
 - 21 October 2026: added (RM7), coupled webs: any number of conditions each giving from what is left of all; under mutual support the order of states is kept and ending is down-closed; along every chain of total dependence, with positive draws, the end of one ends everything downstream, a dependence cycle ending together; the pair is the web's case and RM6's laws are read off the web's; study section 311.
+- 22 October 2026, RM8: the rest and thresholds of webs are stated for finitely many conditions (record rest-on-coupled-webs, study section 325); its open item says so. Its laws are unchanged.
 
 </details>
 

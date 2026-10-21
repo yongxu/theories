@@ -15,13 +15,13 @@
   },
   "laws": [
     {
-      "en": "Two conditions under draws taken first, as much as there is, each giving a law of what is left of both, in any amounts with a draw; the step reads a state only through what the draws leave. Exchanging the two exchanges the levels at every step, and a condition whose giving reads only what is left of itself runs as the regime.",
-      "zh": "两个条件各在汲取之下（汲取先取，有多少取多少），各所给是两者所余之律，在任何带汲取的量中；步只经由汲取所余读取状态。交换两者则每步交换水平；所给只读自身所余的条件按体制运行。",
+      "en": "Two conditions under draws taken first, as much as there is, each giving a law of what is left of both, in any amounts with a draw; under mutual support, states the draws leave alike step alike. Exchanging the two exchanges the levels at every step, and a condition whose giving reads only what is left of itself runs as the regime.",
+      "zh": "两个条件各在汲取之下（汲取先取，有多少取多少），各所给是两者所余之律，在任何带汲取的量中；相互支持下，汲取所余相同的状态步也相同。交换两者则每步交换水平；所给只读自身所余的条件按体制运行。",
       "declarations": [
         "Becoming.RegimeMargin.Coupled.left",
         "Becoming.RegimeMargin.Coupled.step",
         "Becoming.RegimeMargin.Coupled.Ends",
-        "Becoming.RegimeMargin.Coupled.step_of_left",
+        "Becoming.RegimeMargin.Coupled.Indexed.step_alike",
         "Becoming.RegimeMargin.Coupled.run_swap",
         "Becoming.RegimeMargin.Coupled.ends_swap",
         "Becoming.RegimeMargin.Coupled.first_regime"
@@ -42,11 +42,11 @@
       "declarations": [
         "Becoming.RegimeMargin.Coupled.Band",
         "Becoming.RegimeMargin.Coupled.given_within",
-        "Becoming.RegimeMargin.Coupled.within_draw",
+        "Becoming.RegimeMargin.Coupled.Indexed.within_draw",
         "Becoming.RegimeMargin.Coupled.left_le",
-        "Becoming.RegimeMargin.Coupled.run_within",
-        "Becoming.RegimeMargin.Coupled.left_falls",
-        "Becoming.RegimeMargin.Coupled.still_of_left",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.left_falls",
+        "Becoming.RegimeMargin.Coupled.Indexed.still_of_left",
         "Becoming.RegimeMargin.Coupled.rests_by",
         "Becoming.RegimeMargin.Coupled.comes_to_rest",
         "Becoming.RegimeMargin.Coupled.stays",
@@ -183,8 +183,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T105805.152152Z）：Becoming.RegimeMargin 新增的 55 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 306 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Thresholds beyond a band, with a bound on the run in its place; rest and thresholds of webs; coupled conditions with a recent giving; over the reals; a frozen field test of whether a partner's level adds to T2's state for coupled conditions; an independent review.",
-    "zh": "带外的阈值，以运行之界代替带；网的静止与阈值；带近来所给的耦合条件；实数上；冻结的野外检验：对耦合条件，伙伴的水平是否加入 T2 的状态；独立审查。"
+    "en": "Thresholds beyond a band, with a bound on the run in its place; coupled conditions with a recent giving; over the reals; a frozen field test of whether a partner's level adds to T2's state for coupled conditions; an independent review.",
+    "zh": "带外的阈值，以运行之界代替带；带近来所给的耦合条件；实数上；冻结的野外检验：对耦合条件，伙伴的水平是否加入 T2 的状态；独立审查。"
   },
   "correspondence": {
     "en": "Cooperative (monotone) dynamical systems keep the order of states and their extinction sets are down-closed (Smith 1995; Hirsch and Smith 2005); in obligate mutualism a threshold curve separates extinction from persistence, each partner needing less as the other has more (Dean 1983), and dependents are lost with their partner (coextinction, Koh et al. 2004); competitive maps keep the order with one coordinate reversed, and planar cooperative maps are eventually monotone only under regularity conditions (Smith 1998). On the spine, constructive and exact in its premises: the threshold for each partner's level is the least level a finite search finds within a band, the dependent's drain is counted, and the uncoupled case is the regime itself; mutual support and the band are each shown needed by a witness.",
@@ -332,6 +332,13 @@
         "en": "The pair is the web indexed by Bool: its laws of order, ending, draining, ending after and ending together are read off the web's, whose cascade along chains of dependence the pair cannot show.",
         "zh": "一对即以 Bool 为指标的网：其序、终结、流尽、在后终结与同终之律由网的律读出，网沿依赖之链的级联是一对所不能显示的。"
       }
+    },
+    {
+      "id": "rest-on-coupled-webs",
+      "detail": {
+        "en": "The pair's rest and points of no return are the web's laws read for two.",
+        "zh": "一对的静止与不可回返点是网之律对两个条件的读法。"
+      }
     }
   ],
   "references": [
@@ -345,6 +352,11 @@
         "Becoming.RegimeMargin.Alternation.keeps",
         "Becoming.RegimeMargin.Coupled.Band",
         "Becoming.RegimeMargin.Coupled.Ends",
+        "Becoming.RegimeMargin.Coupled.Indexed.left_falls",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.step_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.still_of_left",
+        "Becoming.RegimeMargin.Coupled.Indexed.within_draw",
         "Becoming.RegimeMargin.Coupled.MutualActivation.band",
         "Becoming.RegimeMargin.Coupled.MutualActivation.giving",
         "Becoming.RegimeMargin.Coupled.MutualActivation.giving_le",
@@ -383,21 +395,16 @@
         "Becoming.RegimeMargin.Coupled.first_regime",
         "Becoming.RegimeMargin.Coupled.given_within",
         "Becoming.RegimeMargin.Coupled.left",
-        "Becoming.RegimeMargin.Coupled.left_falls",
         "Becoming.RegimeMargin.Coupled.left_le",
         "Becoming.RegimeMargin.Coupled.rests_by",
         "Becoming.RegimeMargin.Coupled.run_below",
         "Becoming.RegimeMargin.Coupled.run_swap",
-        "Becoming.RegimeMargin.Coupled.run_within",
         "Becoming.RegimeMargin.Coupled.stays",
         "Becoming.RegimeMargin.Coupled.stays_from",
         "Becoming.RegimeMargin.Coupled.step",
         "Becoming.RegimeMargin.Coupled.step_mono",
-        "Becoming.RegimeMargin.Coupled.step_of_left",
-        "Becoming.RegimeMargin.Coupled.still_of_left",
         "Becoming.RegimeMargin.Coupled.threshold",
         "Becoming.RegimeMargin.Coupled.threshold_falls",
-        "Becoming.RegimeMargin.Coupled.within_draw",
         "Becoming.RegimeMargin.Drawn",
         "Becoming.RegimeMargin.Drawn.Below",
         "Becoming.RegimeMargin.Drawn.Rises",
@@ -410,7 +417,7 @@
         "Becoming.RegimeMargin.leading_true",
         "Becoming.RegimeMargin.step"
       ],
-      "sha256": "e7c7a7138cc1e20b42cd00002d392cd6d17b65188f5a524d613095425d6793d4"
+      "sha256": "c0321c9da4b47a770b2ac12ecc54cfe2e9cb296d94c16bb5f2034dd9c64d5aae"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
@@ -480,7 +487,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "10d789904696ca160f7be5a587f9fbf2d56395df5c95c1e666e79b6c8de02560"
+      "sha256": "480291be99ce492a9f329d350ccaa420ae932c30b490b03655aa84eea9fe853a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json",
@@ -499,12 +506,18 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json",
+      "role": "receipt",
+      "sha256": "1cbcd80102dad159cb6b52dee2da91d200250186b8fcb7e34b8bf376b6a800b8",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -553,6 +566,10 @@
     {
       "en": "21 October 2026, RM7: more than two coupled conditions are stated as a web (record coupled-webs, study section 311); this record's laws of order, ending, draining, ending after and ending together keep their statements and are now proved from the web's; what it does not show and its next delta say so.",
       "zh": "2026年10月21日，RM7：多于两个的耦合条件已作为网陈述（记录 coupled-webs，研究第 311 节）；本记录的序、终结、流尽、在后终结与同终之律陈述不变，现由网的律证明；本记录所不表明者与其下一步已如此说明。"
+    },
+    {
+      "en": "22 October 2026, RM8: the pair's rest and thresholds derived from the web's (record rest-on-coupled-webs, study section 325); within_draw, run_within, left_falls and still_of_left now cited in their web form, step_of_left as Coupled.Indexed.step_alike under mutual support; the statements of its laws are unchanged.",
+      "zh": "2026年10月22日，RM8：一对的静止与阈值由网的导出（记录 rest-on-coupled-webs，研究第 325 节）；within_draw、run_within、left_falls 与 still_of_left 今以其网的形式引用，step_of_left 以相互支持下的 Coupled.Indexed.step_alike 引用；其律的陈述不变。"
     }
   ]
 }

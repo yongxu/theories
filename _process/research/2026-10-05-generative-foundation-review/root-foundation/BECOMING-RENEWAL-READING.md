@@ -14544,3 +14544,50 @@ Output → input: chapter §3.4, §7.1, the relation-to-known-results row 6 and 
 **Self-review.** Premises were checked for necessity. The first build assumed that nothing stands at nothing; it is not needed. In the first drawer's comparison the continuation is the same whatever it leaves, since the second leaves nothing of anything, so both leave nothing whatever stands at nothing, and the base stands at that. A lemma about the first drawer's draw under the draw-everything profile was dropped, since no law read it. The web law takes what stands at nothing below the need in place of its absence. The model's choices are stated: the first moves first at every step, no capacity limits a draw, and ranking is by the plain sum, the hardest case for exhaustion since no discounting pushes toward it. Limits: capacities, more drawers, drawing at once.
 
 **The run.** Core 285 modules and 12,238 theorems, instances 7 and 567, applications 6 and 179; 13 Lean steps ran, 1,191 reused. 15 declarations added to Becoming.Optimum, 9 of them theorems, none removed, all with empty axiom reports. Connectivity: 647 of 12,984 apart, unchanged; no new apart root, every new law stated on the web or read by a law that is, the witness on the flow; register check passes.
+
+## 325. Rest and points of no return on coupled webs (RM8)
+
+```text
+Result(s): new record rest-on-coupled-webs (new laws of Becoming.RegimeMargin); reuses coupled-webs (the web's step,
+       its order, Ends, ends_of_below, the pair as the web indexed by Bool) and coupled-regimes (the pair's band, rest
+       and thresholds, now derived from the web's).
+Delta: RM7 left the rest and thresholds of webs open, since a still run of function-valued states seemed to need
+       equality of functions. Stated condition by condition it does not: under mutual support each condition's giving
+       respects what is left condition by condition (Coupled.Indexed.respects), so states alike at every condition step
+       alike (step_alike, run_alike, ends_alike). For finitely many conditions, listed by a list covering them, within
+       a band up to hi (Band): each gives within its draw (within_draw), what the draws leave never rises (left_falls),
+       the run is still once that repeats (still_of_left), and it is still from some step at most the count times hi
+       with one (rests_by, comes_to_rest); whether a condition ends is decided there (ends_iff); each condition's point
+       of no return, given the other levels, is a least level up to hi + 1, exact (threshold, ends_iff_below), every
+       state having its fate by it (fates), and it does not rise as any other level rises (threshold_falls). RM6's
+       pair laws (rests_by, ends_iff, ends_iff_below, threshold_falls, fates) are derived from these (band_web,
+       pair_still, threshold_pair), and the pair-only helpers they superseded are removed.
+Premises / correspondence: whole numbers; finitely many conditions listed by a covering list; draws taken first;
+       giving a law of what is left of all, rising with each (mutual support); a band up to hi the step keeps;
+       discrete steps. Correspondence: monotone dynamical systems and their comparison principle; Kleene iteration of a
+       monotone map from a post-fixed point.
+Evidence: core receipt 20261021T191937.039634Z (passed).
+Boundary: infinitely many conditions, thresholds beyond a band, webs with a recent giving, and amounts beyond whole
+       numbers are not covered.
+Output → input: chapter (the coupled-web paragraph, thesis T1's sentence, the record table; EN, ZH); RegimeMargin's
+       header; records coupled-webs (its open item) and coupled-regimes (its law citations re-pointed); significance
+       review, web-rest check.
+```
+
+**The question.** RM6 proved, for two coupled conditions in whole numbers within a band under mutual support, that every run comes to rest within `2 hi + 1` steps and that each condition's point of no return is a least level, exact, that falls as its partner rises ([§306](#306-coupled-regimes-a-margin-that-is-not-its-own-rm6)). RM7 extended order, ending and dependence to webs of any number of conditions, but left rest and thresholds pair-only: a web's state is a function of the conditions, and a still run would need equality of functions ([§311](#311-coupled-webs-support-across-a-web-and-the-cascade-of-ends-rm7)).
+
+**What was built** (new laws of `Becoming.RegimeMargin`, pure core, every axiom report empty).
+
+- *Alike condition by condition* (`Coupled.Indexed.respects`, `Coupled.Indexed.step_alike`, `Coupled.Indexed.run_alike`, `Coupled.Indexed.ends_alike`, `Coupled.Indexed.run_shift`). A giving that rises with what is left of each condition gives alike from states alike at every condition, by antisymmetry, so no extensionality is assumed. States alike at every condition step alike, their runs stay alike, and a condition ends from one exactly where it ends from the other.
+- *Within a band* (`Coupled.Indexed.Band`, `Coupled.Indexed.within_draw`, `Coupled.Indexed.run_within`, `Coupled.Indexed.left_falls`, `Coupled.Indexed.still_of_left`). Where the step keeps a band up to `hi`, each condition gives within its draw at every state in the band, what the draws leave of each never rises along a run, and the run is still, condition by condition, once that repeats.
+- *Rest* (`Coupled.Indexed.leftOver`, `Coupled.Indexed.leftOver_le`, `Coupled.Indexed.leftOver_lt`, `Coupled.Indexed.leftOver_bound`, `Coupled.Indexed.alikeOn`, `Coupled.Indexed.alikeOn_true`, `Coupled.Indexed.alikeOn_false`, `Coupled.Indexed.rests_by`, `Coupled.Indexed.comes_to_rest`, `Coupled.Indexed.ends_iff`). For finitely many conditions listed by a list covering them, what is left of them, added, falls strictly at every step that changes it and is at most the count times `hi`. So the run is still from some step at most the count times `hi` with one, and whether a condition ends is decided at that step.
+- *Points of no return* (`Coupled.Indexed.setAt`, `Coupled.Indexed.setAt_below`, `Coupled.Indexed.setAt_within`, `Coupled.Indexed.ending`, `Coupled.Indexed.threshold`, `Coupled.Indexed.ends_iff_below`, `Coupled.Indexed.threshold_falls`, `Coupled.Indexed.fates`). Each condition, the others' levels given, has a least level up to `hi + 1` below which exactly it ends. Every state has its fate by it, and the threshold does not rise as any other level rises.
+- *The pair, read off the web* (`Coupled.covers_pair`, `Coupled.pair_count`, `Coupled.band_web`, `Coupled.pair_within`, `Coupled.pair_still`, `Coupled.pair_at`, `Coupled.leading_congr`, `Coupled.setAt_pair`, `Coupled.threshold_pair`). The pair's band is the web's, the pair is still where its web is, and its threshold is the web's with the partner at its level. RM6's `rests_by`, `ends_iff`, `ends_iff_below`, `threshold_falls` and `fates` are now derived from the web laws, with statements unchanged. The pair-only `within_draw`, `run_within`, `left_falls`, `still_of_left` and `step_of_left` are removed (rule 9), their content now the web's.
+
+**Against the prior form** ([significance review, web-rest check](BECOMING-SIGNIFICANCE-REVIEW.md#web-rest-check)). A monotone map on a finite ordered set, iterated from a state it does not raise, falls to a fixed point within the set's height. Monotone systems keep the order of their solutions, and a threshold falling as the others rise is that comparison principle. The spine's form is exact in whole numbers for any finite web, with the step bound and the threshold's exactness, and reads the order on the web as the fates of dependent conditions.
+
+*Reading* [AI reading, D45]. A condition's point of no return is not its own: it is a falling function of everything that stands with it, at any number of conditions, so raising any other condition can only lower it. The margin of a condition in a web is a quantity of the whole web's state.
+
+**Self-review.** The obstacle RM7 named was apparent, not real: stating rest condition by condition avoids equality of functions, and monotone giving respects pointwise equality by antisymmetry. The decision of whether a step changes what is left is made over the covering list, so it needs finitely many conditions, and the law states that. Every premise is used: mutual support for the order and for respecting what is left, the band for giving within draws, the covering list for the bound and the decision. The pair's laws were re-derived rather than kept beside the web's, and five pair-only helpers no law reads any more were removed. RM6's record cited them, so its citations are re-pointed to the web laws. Limits: finitely many conditions; within a band.
+
+**The run.** Core 285 modules and 12,264 theorems, instances 7 and 567, applications 6 and 179; 9 Lean steps ran, 1,195 reused. 37 declarations added to Becoming.RegimeMargin, 31 of them theorems; 5 removed (5 theorems), all with empty axiom reports; the pair's `rests_by`, `ends_iff`, `ends_iff_below`, `threshold_falls` and `fates` now read the web's laws, statements unchanged. Connectivity: 647 of 13,010 apart, unchanged; no new apart root, every new law stated on the web or read by a law that is, the pair's laws derived from the web's and the pair-only helpers no law reads removed; register check passes.

@@ -85,8 +85,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Rest and thresholds of webs: a web's state is a function of the conditions, and a still run would need equality of functions, an extensionality the pure core does not assume; the pair's are stated.",
-      "zh": "网的静止与阈值：网的状态是条件的函数，静止的运行需要函数相等，纯核心不假设这种外延性；一对的已陈述。",
+      "en": "Rest and thresholds of webs of infinitely many conditions: for finitely many, listed, they are stated (record rest-on-coupled-webs).",
+      "zh": "无穷多个条件之网的静止与阈值：有限多个（列出）的已陈述（记录 rest-on-coupled-webs）。",
       "kind": "scope"
     },
     {
@@ -122,8 +122,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T132557.057625Z）：Becoming.RegimeMargin 新增的 26 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 311 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Rest and thresholds of webs (stated on finitely many conditions read as a list); partial dependence with a rate; the time of a cascade along a chain; webs with a recent giving; a field web whose dependences are measured; an independent review.",
-    "zh": "网的静止与阈值（以列表读出的有限多个条件上陈述）；带比率的部分依赖；链上级联的时间；带近来所给的网；依赖经测量的野外之网；独立审查。"
+    "en": "partial dependence with a rate; the time of a cascade along a chain; webs with a recent giving; a field web whose dependences are measured; an independent review.",
+    "zh": "带比率的部分依赖；链上级联的时间；带近来所给的网；依赖经测量的野外之网；独立审查。"
   },
   "correspondence": {
     "en": "Cooperative (monotone) systems keep the order of states in any dimension, and their extinction sets are down-closed (Smith 1995; Hirsch and Smith 2005); secondary extinctions cascade through food webs, their reach set by the web's structure (Pimm 1980; Dunne, Williams and Martinez 2002); coextinction of dependents (Koh et al. 2004). On the spine, constructive and exact in its premises: the cascade along any chain of total dependence follows from one link's law, each link's steps counted, a dependence cycle ends together, and positive draws on dependents are shown needed by a witness; the pair is the web's case.",
@@ -193,6 +193,13 @@
         "en": "That record reads a family of coupled conditions as one and ends it by joint excess; here each condition of a web keeps its own giving law of what is left of all, and the end of one reaches what depends on it, link by link.",
         "zh": "该记录把一族耦合条件读作一个，以联合超出终结之；此处网的每个条件各保有以所有所余为变元的所给之律，一个的终结逐环及于依赖它者。"
       }
+    },
+    {
+      "id": "rest-on-coupled-webs",
+      "detail": {
+        "en": "For finitely many conditions within a band, a web's run comes to rest and each condition's point of no return does not rise as any other level rises.",
+        "zh": "对带内有限多个条件，网的运行静止，每个条件的不可回返点不随任何其他水平上升而上升。"
+      }
     }
   ],
   "references": [
@@ -239,7 +246,7 @@
         "Becoming.RegimeMargin.Drawn.sub_mono",
         "Becoming.RegimeMargin.Drawn.whole"
       ],
-      "sha256": "e7c7a7138cc1e20b42cd00002d392cd6d17b65188f5a524d613095425d6793d4"
+      "sha256": "c0321c9da4b47a770b2ac12ecc54cfe2e9cb296d94c16bb5f2034dd9c64d5aae"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -295,19 +302,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "10d789904696ca160f7be5a587f9fbf2d56395df5c95c1e666e79b6c8de02560"
+      "sha256": "480291be99ce492a9f329d350ccaa420ae932c30b490b03655aa84eea9fe853a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json",
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json",
+      "role": "receipt",
+      "sha256": "1cbcd80102dad159cb6b52dee2da91d200250186b8fcb7e34b8bf376b6a800b8",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -345,6 +358,10 @@
     {
       "en": "21 October 2026: added (RM7), coupled webs: any number of conditions each giving from what is left of all; under mutual support the order of states is kept and ending is down-closed; along every chain of total dependence, with positive draws, the end of one ends everything downstream, a dependence cycle ending together; the pair is the web's case and RM6's laws are read off the web's; study section 311.",
       "zh": "2026年10月21日：新增（RM7），耦合之网：任意多个条件各从所有所余中给出；相互支持下状态之序得保持，终结向下封闭；沿每条完全依赖之链，汲取为正时，一个的终结终结其下游的一切，依赖之环同终；一对是网的情形，RM6 之律由网的律读出；研究第 311 节。"
+    },
+    {
+      "en": "22 October 2026, RM8: the rest and thresholds of webs are stated for finitely many conditions (record rest-on-coupled-webs, study section 325); its open item says so. Its laws are unchanged.",
+      "zh": "2026年10月22日，RM8：有限多个条件之网的静止与阈值已陈述（记录 rest-on-coupled-webs，研究第 325 节）；其开放项如此说明。其规律不变。"
     }
   ]
 }
