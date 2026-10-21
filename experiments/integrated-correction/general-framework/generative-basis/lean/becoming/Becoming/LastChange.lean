@@ -36,6 +36,8 @@ step from not changing for ever to settling.
   which is decided. Where a quantity never falls along a law's run, rises at every change, and
   stays at most `d` above where it started, the run is still from some step at most `d`
   (`LastChange.still_within`), with no omniscience: each change uses up at least one of the `d`.
+  A run still from a step stays at its configuration there, so a run has at most one rest
+  (`LastChange.still_stays`, `LastChange.still_same`).
 
 So in a finite world the process decides whether its runs keep changing, and bounds how often they
 change; where a run has stopped is decided only by deciding, from each step, whether it will change
@@ -279,6 +281,17 @@ theorem not_not_rests [DecidableEq S] {l : List S} (world : ∀ x, x ∈ l) {s :
     ∀ r : Run P, r.state 0 = s → ¬ ¬ Enough.Rests target r :=
   fun _ start unrest => not_not_settles (fun _ => world _) (noLoop_of_no_undoable noUndo start)
     fun settles => unrest (rests_of_settles meet start settles)
+
+/-- A run still from step `T` stays at its configuration at `T`. -/
+theorem still_stays {r : Run P} {T : Nat} (still : StillFrom r T) : ∀ k, r.state (T + k) = r.state T
+  | 0 => rfl
+  | k + 1 => (still k).trans (still_stays still k)
+
+/-- A run still from two steps is at one configuration at both: a run has at most one rest. -/
+theorem still_same {r : Run P} {T T' : Nat} (still : StillFrom r T) (still' : StillFrom r T') :
+    r.state T = r.state T' :=
+  (still_stays still T').symm.trans
+    ((congrArg r.state (Nat.add_comm T T')).trans (still_stays still' T))
 
 end AnyProcess
 

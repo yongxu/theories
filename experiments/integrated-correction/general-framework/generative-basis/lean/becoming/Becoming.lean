@@ -2470,6 +2470,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   leaves as it is, or below the draw with level and recent giving equal. A giving that falls as
   what is left rises, and a run with no band, show both premises are needed; a constant giving
   resting short of the draw shows the rest below it.
+  Where the adjustment rises in both and keeps a band, a state at or below one whose run rests
+  below the draw rests below it too, decided at a fixed step, so for each recent giving a least
+  level separates the runs that rest below the draw from those that rest at the regime's point,
+  exactly, and it does not rise as the recent giving rises: the point of no return is a falling
+  curve in the plane of level and recent giving, the regime's point of no return at every recent
+  giving under the regime's step. A giving that falls from one level to the next shows that
+  rising giving is needed.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of
@@ -2617,6 +2624,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   A law's run is fixed by its law, so whether it changes at a step is decided: where a quantity
   never falls along it, rises at every change and stays at most `d` above where it started, the
   run is still from some step at most `d`, with no omniscience.
+  A run still from two steps is at one configuration at both: a run has at most one rest.
 * `Becoming.LimitVerification` (L1): what a method comes to say in the limit (no premise beyond
   Markov's principle and decidable configurations, where stated). A method guesses yes or no at
   each horizon from the record so far; it verifies a reading in the limit where it converges to
