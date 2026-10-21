@@ -1,0 +1,13 @@
+{
+ "records": 1,
+ "apply": true,
+ "by_record": {
+  "widening-along-a-reading": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

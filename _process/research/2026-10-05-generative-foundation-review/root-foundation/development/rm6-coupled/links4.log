@@ -1,0 +1,35 @@
+{
+  "files_checked": 1268,
+  "links_checked": 73046,
+  "broken": 2,
+  "broken_by_kind": {
+    "missing-anchor": 1,
+    "missing-path": 1
+  },
+  "broken_by_role": {
+    "live": 2
+  },
+  "by_directory": {
+    "_process": 1,
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation": 1
+  },
+  "list": [
+    {
+      "file": "_process/BECOMING-WORKBOARD.md",
+      "line": 37,
+      "target": "../sources/15-codex-theory-conversations/2026-10-21-aim-elegant-completion.md",
+      "kind": "missing-path",
+      "role": "live"
+    },
+    {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "line": 13482,
+      "target": "BECOMING-SIGNIFICANCE-REVIEW.md#coupled-check",
+      "kind": "missing-anchor",
+      "role": "live"
+    }
+  ],
+  "not_in_repository": [],
+  "scope": "Relative links and #anchors in live and generated Markdown (paths.py roles); history, evidence, sources and scratch are frozen and not checked. Paths must match tracked or untracked files exactly. Targets inside a submodule or excluded by .gitignore are listed under not_in_repository, not counted."
+}
+make: *** [research-links] Error 1

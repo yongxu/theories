@@ -1,0 +1,31 @@
+{
+ "records": 4,
+ "apply": true,
+ "by_record": {
+  "margin-of-a-regime": {
+   "paths": [
+    "experiments/margin-measured/README.md"
+   ],
+   "rebound": []
+  },
+  "regime-point-under-adjusting-giving": {
+   "paths": [
+    "experiments/margin-measured/README.md"
+   ],
+   "rebound": []
+  },
+  "where-a-run-of-a-regime-comes-to-rest": {
+   "paths": [
+    "experiments/margin-measured/README.md"
+   ],
+   "rebound": []
+  },
+  "widening-along-a-reading": {
+   "paths": [
+    "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}
