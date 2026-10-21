@@ -85,8 +85,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Convergence over the reals: in whole numbers each change moves an amount by at least one, so a run rests in finitely many steps; over the reals the corresponding statement is convergence, not stated.",
-      "zh": "实数上的收敛：在整数中每次变化至少移动一个单位，故运行在有限步内静止；在实数上相应的陈述是收敛，未被陈述。",
+      "en": "Rest in finitely many steps over the reals: in whole numbers each change moves an amount by at least one; over the reals a run converges and need not rest (record regime-in-any-amounts).",
+      "zh": "实数上有限步内的静止：在整数中每次变化至少移动一个单位；在实数上运行收敛而不必静止（记录 regime-in-any-amounts）。",
       "kind": "scope"
     },
     {
@@ -122,8 +122,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T093053.215253Z）：Becoming.LastChange 与 Becoming.RegimeMargin 新增的 32 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 300 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Convergence over the reals; whether measured giving laws rise over their bands; the least bound; a state with a further lag; coupled conditions; an independent review.",
-    "zh": "实数上的收敛；所测的所给之律在其带上是否上升；最小的界；带再一个滞后的状态；相互耦合的条件；独立审查。"
+    "en": "Whether measured giving laws rise over their bands; the least bound; a state with a further lag; coupled conditions; an independent review.",
+    "zh": "所测的所给之律在其带上是否上升；最小的界；带再一个滞后的状态；相互耦合的条件；独立审查。"
   },
   "correspondence": {
     "en": "Compensatory renewal settles and overcompensating renewal cycles (Beverton and Holt 1957; May 1976); orbits of planar cooperative maps are eventually componentwise monotone under regularity conditions (Smith 1998; Hirsch and Smith 2005); deciding where a bounded monotone sequence stops is an omniscience principle (Bridges and Richman 1987). On the spine, constructive and exact in its premises: a law's run still for one step is still for ever, so a bounded mark decides its rest; the adjusted step need not be one to one, and its own structure, moving the level by the new giving less the draw, bounds the steps before its run moves one way only. Rising giving and the band are each shown needed by a witness.",
@@ -239,7 +239,7 @@
         "Becoming.RegimeMargin.step",
         "Becoming.RegimeMargin.step_mono"
       ],
-      "sha256": "51411ed73a2046bf6ba65aef85c106dac8d56b79b04b0b4006172f362c5ab40a"
+      "sha256": "ec2fe17cdf7f46c009efc2beb311572fb79b7359f379c4cc8e2da40232537524"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
@@ -306,24 +306,30 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "b4384b424c06709d287898ea0960af09fe2ad523abb95d3d4d16798a201cdf66"
+      "sha256": "4fddc5805679dce79d3e7ca2f379d3dc3d24425b23f85df8d659425ed30b5051"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "3520d57ffea92a1c63ff1d31a434edeb1f1817b93e0d27ccce52b2e4fbf10258"
+      "sha256": "c8275a2320396005c6c74d20b600c76c9d2f3b7f0b7fd9874e90950d8f1ce376"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json",
       "role": "receipt",
       "sha256": "bc7209f5dcb5231dcee077425f7145c335386fad7636ad83c4b8f69a233c1844",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b160c8fb2340f395f48858527bc3dfbbe64abf79e30059592a45e6658f8d9e4",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -368,6 +374,10 @@
     {
       "en": "21 October 2026: added (RM3), where a run of a regime comes to rest: a law's run with a bounded mark rests within the bound, decided; every run of an adjustment rising in both arguments within a band rests within 3 hi + 3 steps, at the regime's point or below the draw; study section 300.",
       "zh": "2026年10月21日：新增（RM3），一个体制的运行静于何处：有有界标记的定律运行在界内静止，可判定；带内在两个变元上皆升的调整的每个运行至多 3 hi + 3 步后静止，静于体制之点或汲取之下；研究第 300 节。"
+    },
+    {
+      "en": "21 October 2026, RM5: convergence over the reals, left open here, is stated for rising adjustments within a band, with a witness that a run need not rest (record regime-in-any-amounts, study section 302); what this record does not show and its next delta now say so. Its laws are unchanged.",
+      "zh": "2026年10月21日，RM5：此处留下的实数上的收敛，对带内上升的调整已陈述，并有运行不必静止的见证（记录 regime-in-any-amounts，研究第 302 节）；本记录所不表明者与其下一步现已如此说明。其规律不变。"
     }
   ]
 }

@@ -790,6 +790,7 @@
 | [所给调整下的体制之点](../results/records/regime-point-under-adjusting-giving.md) | 有所述前提的定理 | 整数量；状态为水平与一个近来所给；所给是所剩与近来所给之律；静止之律需调整恰在体制给出汲取处静于汲取；命运之律需近来所给在水平一侧、调整把所给保持在近来所给与体制所给所在的一侧；各律自身的前提 | §2.3、T2 |
 | [一个体制的运行静于何处](../results/records/where-a-run-of-a-regime-comes-to-rest.md) | 有所述前提的定理 | 整数量；状态为水平与一个近来所给；定律的运行需一个标记其变化且沿之有界的量；体制需所给随所剩而升且有带；调整的运行需调整随所剩与近来所给而升且有步所保持的带 | §2.3、T2 |
 | [水平与近来所给之平面上的阈值](../results/records/threshold-in-the-state-plane.md) | 有所述前提的定理 | 整数量；状态为水平与一个近来所给；调整随所剩与近来所给而升；步所保持的带；体制情形需所给在 `y` 之下不及汲取、自 `y` 满足汲取、自无给无且带达到此点 | §2.3、T2 |
+| [任何量中的体制](../results/records/regime-in-any-amounts.md) | 有所述前提的定理 | 带截断差的线性有序量；状态为水平与一个近来所给；序需调整于两个变元上皆升；带；在实数上（外围，Mathlib）极限为静止需连续 | §2.3、T2 |
 | [余量之内的自身扩大](../results/records/own-widening-within-the-margin.md) | 有所述前提的定理 | 平衡；部分及其自身区域可判定 | §7.2 |
 | [区域之外的损失](../results/records/loss-beyond-a-region.md) | 不加前提的定理 | — | §6.1 |
 | [开放形态下的规则修订与实际生成](../results/records/open-form-realization-under-revision.md) | 定理，条件在其假设中 | 生命意义、条件（一个实例） | §6.1 |
@@ -878,7 +879,7 @@
 
 *主张。* 处于汲取下的可更新条件，其状态是三个数：水平、最近的给予、一个滞后（前一期汲取后剩下的水平）。连同汲取，它们在任何测得之物所能及的范围内决定下一步的给予；给予向该体制下水平所给者松弛，并向汲取移动。第四个变量（再一个滞后、一个滞后之外的年龄或大小结构、环境指数）在中位的条件中去不掉剩余方差的十分之一。理论的两种读法是这一状态的两端：体制之步（给予读自水平）与冻结的其余（给予保持原样）。
 
-- *地位。* 猜想；两次冻结的检验在未经任何分析读过的评估鱼类存量上支持它；渔业之外未检验。已知的近邻：延迟差分模型带一个水平与一个补充滞后（Deriso 1980；Schnute 1985）。汲取及其上的每个静止状态都是体制的：这在整数中对在体制给出汲取处静于汲取的每个所给调整都已证明（`RegimeMargin.Adjusted.rests_iff`，RM2，[研究第 299 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#299-the-regimes-point-over-every-adjustment-of-giving-rm2)），MQ5 之律经平衡化为近来所给的调整后在实数上满足此前提；调整随所剩与近来所给而升时，带内的每个运行都会静止，静于体制之点或汲取之下（`RegimeMargin.Adjusted.comes_to_rest`，RM3，[研究第 300 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#300-where-a-run-of-a-regime-comes-to-rest-rm3)）；MQ5 之律恰在其体制所给随所剩而升时于两者皆升，这未在数据上检查；此种调整下不归点是水平与近来所给之平面上的一条曲线而非一个水平：对每个近来所给，静于汲取之下的运行恰是自低于一个最小水平出发者，可判定，该水平不随近来所给上升而升（`RegimeMargin.Adjusted.falls_iff_below`、`RegimeMargin.Adjusted.threshold_falls`，RM4，[研究第 301 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#301-the-threshold-in-the-plane-of-level-and-recent-giving-rm4)），在体制之步下即点 `H + y`；野外点下片段中近来所给不足捕捞者多常下降未经检验。本论题超出它们之处：同样三个数是任何领域中每个处于汲取下的可更新条件的状态，理论的余量定义在其上。
+- *地位。* 猜想；两次冻结的检验在未经任何分析读过的评估鱼类存量上支持它；渔业之外未检验。已知的近邻：延迟差分模型带一个水平与一个补充滞后（Deriso 1980；Schnute 1985）。汲取及其上的每个静止状态都是体制的：这在整数中对在体制给出汲取处静于汲取的每个所给调整都已证明（`RegimeMargin.Adjusted.rests_iff`，RM2，[研究第 299 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#299-the-regimes-point-over-every-adjustment-of-giving-rm2)），MQ5 之律经平衡化为近来所给的调整后在实数上满足此前提；调整随所剩与近来所给而升时，带内的每个运行都会静止，静于体制之点或汲取之下（`RegimeMargin.Adjusted.comes_to_rest`，RM3，[研究第 300 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#300-where-a-run-of-a-regime-comes-to-rest-rm3)）；MQ5 之律恰在其体制所给随所剩而升时于两者皆升，这未在数据上检查；此种调整下不归点是水平与近来所给之平面上的一条曲线而非一个水平：对每个近来所给，静于汲取之下的运行恰是自低于一个最小水平出发者，可判定，该水平不随近来所给上升而升（`RegimeMargin.Adjusted.falls_iff_below`、`RegimeMargin.Adjusted.threshold_falls`，RM4，[研究第 301 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#301-the-threshold-in-the-plane-of-level-and-recent-giving-rm4)），在体制之步下即点 `H + y`；野外点下片段中近来所给不足捕捞者多常下降未经检验；这些规律不依赖于计数的量：序、运行的形状及其静止在任何带汲取的线性有序量中成立，在实数上带内每个运行都收敛，调整连续时收敛于一个静止（`RegimeMargin.Drawn.run_shape`、外围中的 `Drawn.converges`，RM5，[研究第 302 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#302-the-regime-in-any-amounts-and-its-runs-over-the-reals-rm5)）。本论题超出它们之处：同样三个数是任何领域中每个处于汲取下的可更新条件的状态，理论的余量定义在其上。
 - *禁止。* 第四个变量在中位序列中去掉剩余方差的十分之一或更多；单用水平在五年上预报得与状态一样好；分开拟合的序列间滞后系数变号。
 - *驳倒它的观察。* 在实测（调查）的鱼类序列、放牧的草地、采伐的林分或恶化环境中的酵母（Dai、Korolev 与 Gore 2015）上出现上述任一。
 - *至今的证据。* MQ4（76 个存量，[研究 §277](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#277-a-state-of-level-and-recent-giving-in-the-field-mq4)）：最近的给予在水平之外有增益（剩余方差中位 0.45），水平在 44 个中被检出；两者不是全部状态（再加 0.12，界 0.10，失败）。MQ5（另 69 个，[研究 §280](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#280-a-lag-and-the-draws-response-in-the-field-mq5)）：有了滞后，中位存量不再需要更多（0.059，通过），滞后在 14 个中被检出，五年误差在 50 个中下降；样本内给予每年缩小它与汲取之差约 0.3，开发与检验存量系数相同。失败与限度：序列是模型输出，多为年龄结构评估，其结构本身带补充滞后；MQ5 一半检验存量在当年部分捕捞之后报告水平（D1 失败）；预报增益与阻尼分不开；十年上状态只与持久性打平。酵母中单用水平也不是状态（MQ2，事后），本论题把这读作体制经最近的给予进入〔AI 读法，D45〕，未检验。MQ3 的检验 F3 未通过：在保持的捕捞下，体制之点以下的片段有三分之一没有下降（[研究第 272 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#272-the-margin-of-a-regime-in-the-field-mq3)）。在此点之下，高于汲取的近来所给可把条件带过此点（`RegimeMargin.Crossing.crosses`），故本论题把此点读作按状态而非单按水平区分命运〔AI 读法，D45〕；近来所给不足捕捞的点下片段比满足者更常下降这一预测未经检验。
@@ -1023,17 +1024,17 @@
 
 **核心为何不用 `propext`，外围为何可以用**（[`Becoming.PropositionIdentity`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PropositionIdentity.lean)，不用公理；[记录](../results/records/proposition-identity.md)）。从关系的起点，一个命题经其推导关系被读：什么推出它，它推出什么；`propext`（`(a ↔ b) → a = b`）说命题不外乎这些关系。模块确切陈述：作为命题的 `propext` 恰在命题的每个读法都按可互推归并之处成立（`Learning.Lumped`，经一个互推的两端读；`extensional_iff_lumped`），也恰在按名读命题的读法（恒等）如此之处（`byName_lumped_iff`）；由关系构成的读法（原子、联结词、对任何类型的量词）本已尊重可互推，给出 `↔` 而非 `=`（`Formula.eval_congr`）。这一等同不丢失见证：`a ↔ b` 的任两个见证相等（`iff_witness_unique`），而 `Bool` 有两个不同的自逆映射（`two_equivalences`），所以沿等价等同类型会丢失是哪一个。所以 `propext` 是对结果的确切归并。它不保留的是进程：沿命题之间任一等式、以常值动机输运保值（`transport_const`），但沿 `propext` 输运的值不再归约：`#reduce` 停在输运处，`rfl` 与 `decide` 都证不出它可证的值；这是 Lean 4.29.1 内核的观察，随记录保存，不是定理。核心的运行、计数与见证以计算检查（对它们用 `rfl` 与 `decide`），所以核心在结果需要命题之间的 `=` 之处陈述 `↔`，保持空的公理报告；外围的结果关乎结果并各有回执，可以把 `propext` 当作它所是的确切归并来用。命题的每个读法都是关系的，这就是 `propext` 本身：在此它是假设（`Extensional`），从不是结论。
 
-**当前回执**是运行 [`20261021T095626.485439Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 301 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#301-the-threshold-in-the-plane-of-level-and-recent-giving-rm4)）。
+**当前回执**是运行 [`20261021T102032.314972Z`](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json)（[当前指针](../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-verification.json)），以 Lean 4.29.1 检查（[研究第 302 节](../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#302-the-regime-in-any-amounts-and-its-runs-over-the-reals-rm5)）。
 
 | 项 | 数 |
 |---|---:|
-| 核心模块（含根 `Becoming`） | 284 个模块，11,962 条定理 |
+| 核心模块（含根 `Becoming`） | 284 个模块，11,979 条定理 |
 | 实例模块 | 7 个模块，567 条定理 |
 | 应用模块 | 6 个模块，179 条定理 |
 | 根基模块 | 3 个模块，74 条定理 |
-| 闭包（核心、环与根基） | 300 个模块，12,782 条定理 |
-| 审计的脊柱声明 | 17,440 |
-| 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 198 条 |
+| 闭包（核心、环与根基） | 300 个模块，12,799 条定理 |
+| 审计的脊柱声明 | 17,465 |
+| 在 `propext` 上的生成的 `injEq` 引理 | 闭包中 199 条 |
 | 被取代的外围模块（不在运行中，字节保留） | 75 |
 
 <a id="complete-episode-comparison-anchors"></a>

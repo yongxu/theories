@@ -80,8 +80,8 @@
   ],
   "does_not_show": [
     {
-      "en": "The threshold over the reals: in whole numbers within a band the fates are decided at a fixed step; over the reals a run converges, and neither the convergence nor the curve is stated.",
-      "zh": "实数上的阈值：在整数中、带内，命运在固定步可判定；在实数上运行收敛，收敛与曲线皆未陈述。",
+      "en": "The threshold over the reals as a computed level: there a run converges, and record regime-in-any-amounts states the fates as down-closed and falling with the recent giving, not the level.",
+      "zh": "实数上作为计算出的水平的阈值：在实数上运行收敛，记录 regime-in-any-amounts 把命运陈述为向下封闭且随近来所给而降，而非水平。",
       "kind": "scope"
     },
     {
@@ -117,8 +117,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T095626.485439Z）：Becoming.LastChange 与 Becoming.RegimeMargin 新增的 21 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 301 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "The curve and convergence over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; whether measured adjustments rise in both over their bands; a state with a further lag; coupled conditions; an independent review.",
-    "zh": "实数上的曲线与收敛；在未经任何分析读过的存量上冻结检验：近来所给不足捕捞的点下片段是否更常下降；所测的调整在其带上是否于两者皆升；带再一个滞后的状态；相互耦合的条件；独立审查。"
+    "en": "A computed threshold over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; whether measured adjustments rise in both over their bands; a state with a further lag; coupled conditions; an independent review.",
+    "zh": "实数上计算出的阈值；在未经任何分析读过的存量上冻结检验：近来所给不足捕捞的点下片段是否更常下降；所测的调整在其带上是否于两者皆升；带再一个滞后的状态；相互耦合的条件；独立审查。"
   },
   "correspondence": {
     "en": "For order-preserving maps the boundary between basins of attraction is unordered, so in the plane it is a curve along which one coordinate falls as the other rises (Hirsch and Smith 2005); a point of no return as a level: depensation and the fold of the harvested equilibrium (Clark 1976; May 1977). On the spine, constructive and exact in its premises: the basins are resting below the draw and resting at the regime's point, decided at a fixed step, and the curve is the least level a finite search finds, with no omniscience; its regime case is the point H + y. Rising giving is shown needed by a witness.",
@@ -270,7 +270,7 @@
         "Becoming.RegimeMargin.step",
         "Becoming.RegimeMargin.threshold_regime"
       ],
-      "sha256": "51411ed73a2046bf6ba65aef85c106dac8d56b79b04b0b4006172f362c5ab40a"
+      "sha256": "ec2fe17cdf7f46c009efc2beb311572fb79b7359f379c4cc8e2da40232537524"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
@@ -328,13 +328,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "3520d57ffea92a1c63ff1d31a434edeb1f1817b93e0d27ccce52b2e4fbf10258"
+      "sha256": "c8275a2320396005c6c74d20b600c76c9d2f3b7f0b7fd9874e90950d8f1ce376"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b160c8fb2340f395f48858527bc3dfbbe64abf79e30059592a45e6658f8d9e4",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -372,6 +378,10 @@
     {
       "en": "21 October 2026: added (RM4), the threshold in the plane of level and recent giving: under an adjustment rising in both arguments within a band, the runs resting below the draw are exactly those from levels below a least level for each recent giving, decided at step 3 hi + 3, and that level does not rise as the recent giving rises; under the regime's step it is H + y; study section 301.",
       "zh": "2026年10月21日：新增（RM4），水平与近来所给之平面上的阈值：带内于两个变元上皆升的调整下，静于汲取之下的运行恰是自低于每个近来所给之最小水平出发者，在第 3 hi + 3 步可判定，该水平不随近来所给上升而升；在体制之步下为 H + y；研究第 301 节。"
+    },
+    {
+      "en": "21 October 2026, RM5: over the reals every run of a rising adjustment within a band converges and the fates below the draw are down-closed and fewer as the recent giving rises (record regime-in-any-amounts, study section 302); what this record does not show and its next delta now say so. Its laws are unchanged.",
+      "zh": "2026年10月21日，RM5：在实数上，带内上升调整的每个运行都收敛，汲取之下的命运向下封闭且随近来所给上升而减少（记录 regime-in-any-amounts，研究第 302 节）；本记录所不表明者与其下一步现已如此说明。其规律不变。"
     }
   ]
 }

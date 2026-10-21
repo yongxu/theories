@@ -25,7 +25,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- The threshold over the reals: in whole numbers within a band the fates are decided at a fixed step; over the reals a run converges, and neither the convergence nor the curve is stated.
+- The threshold over the reals as a computed level: there a run converges, and record regime-in-any-amounts states the fates as down-closed and falling with the recent giving, not the level.
 - That measured adjustments rise in both arguments over their band, or how often below-point episodes with recent giving short of the catch fall in the field: the curve's direction is proved under the premises, its field frequency untested.
 - The threshold beyond the band, where the search stops at hi + 1; a state with a further lag; coupled conditions.
 - **Counterexample:** Notch.no_threshold: giving that does not rise with what is left keeps a band, yet the run from four rests below the draw and the run from three, below it, does not, so no least level separates them. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
@@ -42,7 +42,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-The curve and convergence over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; whether measured adjustments rise in both over their bands; a state with a further lag; coupled conditions; an independent review.
+A computed threshold over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; whether measured adjustments rise in both over their bands; a state with a further lag; coupled conditions; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -71,6 +71,8 @@ For order-preserving maps the boundary between basins of attraction is unordered
   - Input: A run has at most one rest, so a rest found at a fixed step is the run's rest.
   - Preserved conditions: A run of any process. [LastChange.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean)
 
+**Used by:** [regime-in-any-amounts](regime-in-any-amounts.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
@@ -85,6 +87,7 @@ For order-preserving maps the boundary between basins of attraction is unordered
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json) | — |
 
 Aliases: `the threshold in the plane of level and recent giving`, `the point of no return as a falling curve`, `a run has at most one rest`, `水平与近来所给之平面上的阈值`, `Becoming.RegimeMargin.Adjusted.falls_iff_below`, `Becoming.RegimeMargin.Adjusted.threshold_falls`, `Becoming.RegimeMargin.threshold_regime`
 
@@ -92,6 +95,7 @@ Aliases: `the threshold in the plane of level and recent giving`, `the point of 
 ### History
 
 - 21 October 2026: added (RM4), the threshold in the plane of level and recent giving: under an adjustment rising in both arguments within a band, the runs resting below the draw are exactly those from levels below a least level for each recent giving, decided at step 3 hi + 3, and that level does not rise as the recent giving rises; under the regime's step it is H + y; study section 301.
+- 21 October 2026, RM5: over the reals every run of a rising adjustment within a band converges and the fates below the draw are down-closed and fewer as the recent giving rises (record regime-in-any-amounts, study section 302); what this record does not show and its next delta now say so. Its laws are unchanged.
 
 </details>
 

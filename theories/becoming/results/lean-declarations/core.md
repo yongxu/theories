@@ -5594,3 +5594,39 @@ Definitions and types:
 
 </details>
 
+<a id="module-89709f49ef41"></a>
+
+<details>
+<summary>RegimeReals.lean — 17 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean) · [Theory](../../chapters/THE-THEORY-OF-BECOMING.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/README.md)
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean`
+
+Imports: `Mathlib.Topology.Instances.NNReal.Lemmas`, `Mathlib.Topology.Order.MonotoneConvergence`, `Mathlib.Analysis.SpecificLimits.Basic`, `Becoming.RegimeMargin`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.RegimeMargin.Drawn.reals_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L62) | 62 |
+| [Becoming.RegimeMargin.Drawn.tendsto_of_rising](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L66) | 66 |
+| [Becoming.RegimeMargin.Drawn.tendsto_of_falling](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L75) | 75 |
+| [Becoming.RegimeMargin.Drawn.converges](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L88) | 88 |
+| [Becoming.RegimeMargin.Drawn.limit_rest](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L143) | 143 |
+| [Becoming.RegimeMargin.Drawn.limit_fates](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L160) | 160 |
+| [Becoming.RegimeMargin.Drawn.limits_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L169) | 169 |
+| [Becoming.RegimeMargin.Drawn.falls_of_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L184) | 184 |
+| [Becoming.RegimeMargin.Drawn.falls_given](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L193) | 193 |
+| [Becoming.RegimeMargin.Drawn.Relaxation.rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L202) | 202 |
+| [Becoming.RegimeMargin.Drawn.Relaxation.step_low](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L209) | 209 |
+| [Becoming.RegimeMargin.Drawn.Relaxation.band](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L213) | 213 |
+| [Becoming.RegimeMargin.Drawn.Relaxation.course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L222) | 222 |
+| [Becoming.RegimeMargin.Drawn.Relaxation.never_rests](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L243) | 243 |
+
+Definitions and types:
+
+- `def` [Becoming.RegimeMargin.Drawn.reals](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L44) (L44)
+- `def` [Becoming.RegimeMargin.Drawn.Falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L180) (L180)
+- `def` [Becoming.RegimeMargin.Drawn.Relaxation.giving](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean#L200) (L200)
+
+</details>
+

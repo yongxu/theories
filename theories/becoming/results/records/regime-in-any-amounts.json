@@ -1,0 +1,425 @@
+{
+  "schema_version": 2,
+  "id": "regime-in-any-amounts",
+  "title": {
+    "en": "The regime in any amounts, and its runs over the reals",
+    "zh": "任何量中的体制，及其在实数上的运行"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T10:30:54+00:00",
+  "statement": {
+    "en": "The regime's order, the shape of its runs and its rests hold in any linearly ordered amounts with a draw; over the reals every run of a rising adjustment within a band converges, to a rest where the adjustment is continuous, and need not come to rest.",
+    "zh": "体制之序、其运行的形状及其静止在任何带汲取的线性有序量中成立；在实数上，带内上升调整的每个运行都收敛，调整连续时收敛于一个静止，且不必到达静止。"
+  },
+  "laws": [
+    {
+      "en": "Amounts with a draw are the core's amounts linearly ordered, with what is left once a draw is taken, as much as there is; the adjusted step reads in them, what is left rises with the level, and in whole numbers the step, its rising adjustments and its order are the adjusted step's.",
+      "zh": "带汲取的量是核心之量加线性序，以及取走一份汲取（有多少取多少）之后的所剩；调整之步在其中可读，所剩随水平而升；在整数中，此步、其上升的调整与其序即调整之步者。",
+      "declarations": [
+        "Becoming.RegimeMargin.Drawn.step",
+        "Becoming.RegimeMargin.Drawn.add_cancel",
+        "Becoming.RegimeMargin.Drawn.sub_mono",
+        "Becoming.RegimeMargin.Drawn.whole",
+        "Becoming.RegimeMargin.Drawn.whole_run",
+        "Becoming.RegimeMargin.Drawn"
+      ]
+    },
+    {
+      "en": "Where the adjustment rises with what is left and with the recent giving, the step keeps the order of states, so a run that raises or lowers both the level and the recent giving at one step does so at every later step.",
+      "zh": "调整随所剩与近来所给而升时，步保持状态之序，故在某一步使水平与近来所给同升（同降）的运行，此后每步皆如此。",
+      "declarations": [
+        "Becoming.RegimeMargin.Drawn.Rises",
+        "Becoming.RegimeMargin.Drawn.Below",
+        "Becoming.RegimeMargin.Drawn.step_mono",
+        "Becoming.RegimeMargin.Drawn.rising_on",
+        "Becoming.RegimeMargin.Drawn.falling_on"
+      ]
+    },
+    {
+      "en": "From the first step on, a step that neither raises nor lowers both climbs (the level up strictly, the recent giving down strictly toward the draw from above) or sinks (the mirror, from below), whatever the adjustment, and the next such step is of the same kind.",
+      "zh": "自首步起，既不同升也不同降的一步攀升（水平严格升、近来所给自上方严格降向汲取）或下沉（自下方的镜像），无论调整为何；下一个这样的步同类。",
+      "declarations": [
+        "Becoming.RegimeMargin.Drawn.Climbs",
+        "Becoming.RegimeMargin.Drawn.Sinks",
+        "Becoming.RegimeMargin.Drawn.given_le_level",
+        "Becoming.RegimeMargin.Drawn.level_up_iff",
+        "Becoming.RegimeMargin.Drawn.level_down_iff",
+        "Becoming.RegimeMargin.Drawn.level_of_low",
+        "Becoming.RegimeMargin.Drawn.climbs_or_sinks",
+        "Becoming.RegimeMargin.Drawn.climbs_next",
+        "Becoming.RegimeMargin.Drawn.sinks_next",
+        "Becoming.RegimeMargin.Drawn.run_shape"
+      ]
+    },
+    {
+      "en": "A run from a state within a band the step keeps stays within it, and a run is still from a step exactly where its state there is the regime's point or a state within the draw with level and recent giving equal.",
+      "zh": "自步所保持之带内状态出发的运行留在带内；运行恰在其状态为体制之点、或为汲取之内且水平与近来所给相等的状态处，自该步起静止。",
+      "declarations": [
+        "Becoming.RegimeMargin.Drawn.Band",
+        "Becoming.RegimeMargin.Drawn.run_within",
+        "Becoming.RegimeMargin.Drawn.rest_iff",
+        "Becoming.RegimeMargin.Drawn.still_iff"
+      ]
+    },
+    {
+      "en": "Over the non-negative reals, amounts with a draw, every run of a rising adjustment from a state within a band converges: its level and recent giving are each monotone from some step on and bounded.",
+      "zh": "在非负实数（带汲取的量）上，上升调整自带内状态出发的每个运行都收敛：其水平与近来所给自某步起各自单调且有界。",
+      "declarations": [
+        "Becoming.RegimeMargin.Drawn.reals",
+        "Becoming.RegimeMargin.Drawn.reals_step",
+        "Becoming.RegimeMargin.Drawn.tendsto_of_rising",
+        "Becoming.RegimeMargin.Drawn.tendsto_of_falling",
+        "Becoming.RegimeMargin.Drawn.converges"
+      ]
+    },
+    {
+      "en": "Where the adjustment is continuous, the limit is a rest: the regime's point, or within the draw with level and recent giving equal.",
+      "zh": "调整连续时，极限是一个静止：体制之点，或汲取之内水平与近来所给相等者。",
+      "declarations": [
+        "Becoming.RegimeMargin.Drawn.limit_rest",
+        "Becoming.RegimeMargin.Drawn.limit_fates"
+      ]
+    },
+    {
+      "en": "Limits keep the order of the states run from, so a state at or below one whose run converges below the draw converges below it too, and at one level a larger recent giving never turns a fall into a hold.",
+      "zh": "极限保持出发状态之序，故处于或低于一个其运行收敛于汲取之下的状态者亦收敛于汲取之下；在同一水平，较大的近来所给从不使下降变为持守。",
+      "declarations": [
+        "Becoming.RegimeMargin.Drawn.limits_below",
+        "Becoming.RegimeMargin.Drawn.Falls",
+        "Becoming.RegimeMargin.Drawn.falls_of_below",
+        "Becoming.RegimeMargin.Drawn.falls_given"
+      ]
+    },
+    {
+      "en": "Witness: giving moving halfway from the recent giving to a draw of one rises in both and keeps a band up to one, and the run from nothing converges and is still from no step.",
+      "zh": "见证：自近来所给向汲取一移动一半的所给于两者皆升且保持至一的带，自无出发的运行收敛，却无一步起静止。",
+      "declarations": [
+        "Becoming.RegimeMargin.Drawn.Relaxation.giving",
+        "Becoming.RegimeMargin.Drawn.Relaxation.rises",
+        "Becoming.RegimeMargin.Drawn.Relaxation.step_low",
+        "Becoming.RegimeMargin.Drawn.Relaxation.band",
+        "Becoming.RegimeMargin.Drawn.Relaxation.course",
+        "Becoming.RegimeMargin.Drawn.Relaxation.never_rests"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom in the core; the periphery's laws use Lean's standard axioms through Mathlib. Discrete steps; one condition; the draw taken first, as much as there is; the state the level and one recent giving; amounts linearly ordered with a truncated difference; each law's own premises as hypotheses: the adjustment rising in both arguments for the order, a band, continuity for the limit a rest.",
+      "zh": "核心不加公理；外围之律经 Mathlib 用 Lean 的标准公理。离散步；一个条件；汲取先取，有多少取多少；状态是水平与一个近来所给；量线性有序且有截断差；各律自身的前提为假设：序需调整于两个变元上皆升，带，极限为静止需连续。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That a run converges, in the core: convergence of a bounded monotone sequence is an omniscience principle, so the core states the shape of a run and the periphery the convergence over the reals.",
+      "zh": "在核心中运行收敛：有界单调序列的收敛是一个全知原理，故核心陈述运行的形状，外围陈述实数上的收敛。",
+      "kind": "scope"
+    },
+    {
+      "en": "The threshold over the reals as a computed level, or the regime's case H + y there: the fates are stated as down-closed and falling with the recent giving.",
+      "zh": "实数上作为计算出的水平的阈值，或其中体制情形 H + y：命运被陈述为向下封闭且随近来所给而降。",
+      "kind": "scope"
+    },
+    {
+      "en": "Continuous time; a state with a further lag; coupled conditions; that measured adjustments rise in both over their band.",
+      "zh": "连续时间；带再一个滞后的状态；相互耦合的条件；所测的调整在其带上于两者皆升。",
+      "kind": "scope"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean",
+      "detail": {
+        "en": "Drawn.Relaxation.never_rests: giving moving halfway toward a draw of one rises in both and keeps a band, and its run from nothing converges and is still from no step, so over the reals a run need not come to rest.",
+        "zh": "Drawn.Relaxation.never_rests：向汲取一移动一半的所给于两者皆升且保持带，其自无出发的运行收敛却无一步起静止，故在实数上运行不必到达静止。"
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked: the core's 25 new declarations of Becoming.RegimeMargin by the consolidated Lean 4.29.1 checker (receipt 20261021T102032.314972Z), with empty axiom reports; the periphery module RegimeReals's 17 declarations by its own checker with Lean 4.30.0-rc2 and the pinned Mathlib (receipt 20261021T102713.696033Z), each on Lean's standard axioms only, its core modules matching passed receipts. Built and reviewed in one session, with no separate reviewer; author review in study section 302; not independently reviewed by a person.",
+    "zh": "机器检查：核心 Becoming.RegimeMargin 新增的 25 项声明由 Lean 4.29.1 合并检查器实查（回执 20261021T102032.314972Z），公理报告为空；外围模块 RegimeReals 的 17 项声明由其自身检查器以 Lean 4.30.0-rc2 与固定的 Mathlib 实查（回执 20261021T102713.696033Z），只用 Lean 标准公理，核心模块与已通过回执相符。一个会话中构建并审查，无另设审查者；作者审查见研究第 302 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "A computed threshold and the regime's case H + y over the reals; continuous time; a state with a further lag; coupled conditions; whether measured adjustments rise in both over their bands; an independent review.",
+    "zh": "实数上计算出的阈值与体制情形 H + y；连续时间；带再一个滞后的状态；相互耦合的条件；所测的调整在其带上是否于两者皆升；独立审查。"
+  },
+  "correspondence": {
+    "en": "Orbits of planar cooperative (order-preserving) maps are eventually componentwise monotone under regularity conditions, so bounded orbits converge (Smith 1998; Hirsch and Smith 2005); convergence of a bounded monotone sequence is not constructive (Bridges and Richman 1987); partial adjustment and delay-difference models of renewal (Deriso 1980; Schnute 1985). On the spine the shape needs no regularity condition: the level moves by the new giving less the draw, so every step neither up nor down moves the recent giving toward the draw, whatever the adjustment; the core states it constructively in any amounts, the periphery the convergence over the reals.",
+    "zh": "平面合作（保序）映射的轨道在正则条件下终将逐分量单调，故有界轨道收敛（Smith 1998；Hirsch 与 Smith 2005）；有界单调序列的收敛不是构造性的（Bridges 与 Richman 1987）；更新的部分调整与延迟差分模型（Deriso 1980；Schnute 1985）。在脊柱上形状无需正则条件：水平按新所给减汲取而动，故每个既不同升也不同降的步使近来所给移向汲取，无论调整为何；核心在任何量中构造性地陈述它，外围陈述实数上的收敛。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+  "aliases": [
+    "the regime in any amounts",
+    "the shape of a run of the adjusted step",
+    "runs of the regime over the reals",
+    "任何量中的体制",
+    "Becoming.RegimeMargin.Drawn.run_shape",
+    "Becoming.RegimeMargin.Drawn.converges",
+    "Becoming.RegimeMargin.Drawn.Relaxation.never_rests"
+  ],
+  "dependencies": [
+    {
+      "id": "where-a-run-of-a-regime-comes-to-rest",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The adjusted step and its rising adjustments are read in any amounts; whole numbers are an instance, where every run within a band comes to rest.",
+        "zh": "调整之步及其上升的调整在任何量中可读；整数是其实例，其中带内每个运行都静止。"
+      },
+      "interface": {
+        "output": {
+          "en": "Adjusted.step, Rises, Below and comes_to_rest.",
+          "zh": "Adjusted.step、Rises、Below 与 comes_to_rest。"
+        },
+        "input": {
+          "en": "The order, the shape of a run and its rests in any amounts; convergence over the reals.",
+          "zh": "任何量中的序、运行的形状及其静止；实数上的收敛。"
+        },
+        "conditions": {
+          "en": "Amounts linearly ordered with a truncated difference.",
+          "zh": "量线性有序且有截断差。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+      }
+    },
+    {
+      "id": "threshold-in-the-state-plane",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Down-closed fates falling with the recent giving hold over the reals, with convergence in place of a rest decided at a fixed step.",
+        "zh": "向下封闭且随近来所给而降的命运在实数上成立，以收敛代替在固定步可判定的静止。"
+      },
+      "interface": {
+        "output": {
+          "en": "The fates below the draw down-closed, falling with the recent giving.",
+          "zh": "汲取之下的命运向下封闭，随近来所给而降。"
+        },
+        "input": {
+          "en": "The same order of fates over the reals.",
+          "zh": "实数上相同的命运之序。"
+        },
+        "conditions": {
+          "en": "The adjustment rising in both; a band.",
+          "zh": "调整于两者皆升；带。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "regime-point-under-adjusting-giving",
+      "detail": {
+        "en": "The rest law: at or above the draw every rest is the regime's, here in any amounts.",
+        "zh": "静止之律：汲取及其上的每个静止都是体制的，此处在任何量中。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RegimeMargin.Adjusted.Below",
+        "Becoming.RegimeMargin.Adjusted.Rises",
+        "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+        "Becoming.RegimeMargin.Adjusted.rest_iff",
+        "Becoming.RegimeMargin.Adjusted.step",
+        "Becoming.RegimeMargin.Drawn",
+        "Becoming.RegimeMargin.Drawn.Band",
+        "Becoming.RegimeMargin.Drawn.Below",
+        "Becoming.RegimeMargin.Drawn.Climbs",
+        "Becoming.RegimeMargin.Drawn.Rises",
+        "Becoming.RegimeMargin.Drawn.Sinks",
+        "Becoming.RegimeMargin.Drawn.add_cancel",
+        "Becoming.RegimeMargin.Drawn.climbs_next",
+        "Becoming.RegimeMargin.Drawn.climbs_or_sinks",
+        "Becoming.RegimeMargin.Drawn.falling_on",
+        "Becoming.RegimeMargin.Drawn.given_le_level",
+        "Becoming.RegimeMargin.Drawn.level_down_iff",
+        "Becoming.RegimeMargin.Drawn.level_of_low",
+        "Becoming.RegimeMargin.Drawn.level_up_iff",
+        "Becoming.RegimeMargin.Drawn.rest_iff",
+        "Becoming.RegimeMargin.Drawn.rising_on",
+        "Becoming.RegimeMargin.Drawn.run_shape",
+        "Becoming.RegimeMargin.Drawn.run_within",
+        "Becoming.RegimeMargin.Drawn.sinks_next",
+        "Becoming.RegimeMargin.Drawn.step",
+        "Becoming.RegimeMargin.Drawn.step_mono",
+        "Becoming.RegimeMargin.Drawn.still_iff",
+        "Becoming.RegimeMargin.Drawn.sub_mono",
+        "Becoming.RegimeMargin.Drawn.whole",
+        "Becoming.RegimeMargin.Drawn.whole_run"
+      ],
+      "sha256": "ec2fe17cdf7f46c009efc2beb311572fb79b7359f379c4cc8e2da40232537524"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RegimeMargin.Drawn.reals",
+        "Becoming.RegimeMargin.Drawn.reals_step",
+        "Becoming.RegimeMargin.Drawn.tendsto_of_rising",
+        "Becoming.RegimeMargin.Drawn.tendsto_of_falling",
+        "Becoming.RegimeMargin.Drawn.converges",
+        "Becoming.RegimeMargin.Drawn.limit_rest",
+        "Becoming.RegimeMargin.Drawn.limit_fates",
+        "Becoming.RegimeMargin.Drawn.limits_below",
+        "Becoming.RegimeMargin.Drawn.Falls",
+        "Becoming.RegimeMargin.Drawn.falls_of_below",
+        "Becoming.RegimeMargin.Drawn.falls_given",
+        "Becoming.RegimeMargin.Drawn.Relaxation.giving",
+        "Becoming.RegimeMargin.Drawn.Relaxation.rises",
+        "Becoming.RegimeMargin.Drawn.Relaxation.step_low",
+        "Becoming.RegimeMargin.Drawn.Relaxation.band",
+        "Becoming.RegimeMargin.Drawn.Relaxation.course",
+        "Becoming.RegimeMargin.Drawn.Relaxation.never_rests"
+      ],
+      "sha256": "521a9885263580e5ee78d49a1e76d0f7d5c102cd66dbe6a7564a86e09cf19683"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Amounts",
+        "Becoming.Amounts.add_le_add_left",
+        "Becoming.Amounts.le_add_left",
+        "Becoming.Amounts.le_of_eq",
+        "Becoming.Amounts.whole"
+      ],
+      "sha256": "dd51aa6f8eaafe4731e5a64462eb176d5c3e19392a162e25095f58bf4fe2b9f7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Law.orbit",
+        "Becoming.Law.orbit_add",
+        "Becoming.Law.orbit_mul",
+        "Becoming.Law.run"
+      ],
+      "sha256": "78c79cc4e644639a898d1615bcf77134e2d84bdfd7b720bced7acd8a41db2d9b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Lasting.orbit_mono"
+      ],
+      "sha256": "ead33dc198328da7040d9c39b0a9c3ab27778d268af34ccdeea4500541eba3c9"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.LastChange.StillFrom"
+      ],
+      "sha256": "5785a039e1347f9b98022bd061ac741597e191a5a956378bc48e8dc08ffa9885"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.add_sub_of_le",
+        "Becoming.sub_eq_zero_of_le"
+      ],
+      "sha256": "806e95fad20b5a22ad532429698511ec066b63e9160a1018f1b7a736e6724176"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b160c8fb2340f395f48858527bc3dfbbe64abf79e30059592a45e6658f8d9e4"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261021T102713.696033Z/verification.json",
+      "role": "receipt",
+      "sha256": "3feb7a1dbb4b402b021f4ecf286a920304c4ca3df456f737edfa727b4ef23fa2"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/check_regime_reals.py",
+      "role": "integration",
+      "sha256": "e29846ef2a1b230e1d7368bd68da22f3ea2d61081ea45e12690fadc4d95b6931"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "d8d8f46d53b923a5a40cce5810f0f8396d292d709dda416d6fa9fdf6e9d3243d"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "1566d04d3dbed615812ef98c7b55c2ff1b47e26a69a762af4f08dee77e79592d"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "c8275a2320396005c6c74d20b600c76c9d2f3b7f0b7fd9874e90950d8f1ce376"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Amounts",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Recurrence",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Lasting",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LastChange",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Prelude",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/RegimeReals.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/regime/regime-reals-checks/20261021T102713.696033Z/verification.json",
+      "sha256_pointer": "/source_sha256/RegimeReals",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (RM5), the regime in any amounts, and its runs over the reals: the order, the shape of a run and its rests in any linearly ordered amounts with a draw; over the non-negative reals every run of a rising adjustment within a band converges, to a rest where the adjustment is continuous, with fates down-closed, and need not rest; study section 302.",
+      "zh": "2026年10月21日：新增（RM5），任何量中的体制及其在实数上的运行：任何带汲取的线性有序量中的序、运行的形状及其静止；在非负实数上，带内上升调整的每个运行都收敛，调整连续时收敛于一个静止，命运向下封闭，且不必到达静止；研究第 302 节。"
+    }
+  ]
+}

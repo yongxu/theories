@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 287 | 12,036 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 287 | 12,053 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 13 | 746 |
 | [Normative grounding and generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -22,7 +22,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 | [Abstraction, applicability and constitution](lean-declarations/abstraction.md) | 45 | 981 |
 | [Concern and shared activity](lean-declarations/concern.md) | 15 | 246 |
 | [Organizational formation through revisable evaluation](lean-declarations/shared.md) | 66 | 1,480 |
-| [Generative core and relational structure](lean-declarations/core.md) | 137 | 1,907 |
+| [Generative core and relational structure](lean-declarations/core.md) | 138 | 1,921 |
 | [Other formal studies](lean-declarations/other.md) | 29 | 873 |
 
 <a id="按名称查找--find-by-name"></a>
@@ -709,6 +709,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RegimeAttraction.lean](lean-declarations/other.md#module-c03ef19c4e99) | Other formal studies |
 | [RegimeBoundary.lean](lean-declarations/other.md#module-e0e2fb3f4028) | Other formal studies |
 | [RegimeMargin.lean](lean-declarations/becoming-core.md#module-77e7b36ae401) | Becoming pure core |
+| [RegimeReals.lean](lean-declarations/core.md#module-89709f49ef41) | Generative core and relational structure |
 | [RegimeTransition.lean](lean-declarations/other.md#module-f1a05f3cb9c1) | Other formal studies |
 | [Regions.lean](lean-declarations/becoming-core.md#module-e8b556b938af) | Becoming pure core |
 | [Regrouping.lean](lean-declarations/becoming-core.md#module-f74de29583d3) | Becoming pure core |

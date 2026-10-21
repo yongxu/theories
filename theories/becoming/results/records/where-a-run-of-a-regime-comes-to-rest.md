@@ -24,7 +24,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Convergence over the reals: in whole numbers each change moves an amount by at least one, so a run rests in finitely many steps; over the reals the corresponding statement is convergence, not stated.
+- Rest in finitely many steps over the reals: in whole numbers each change moves an amount by at least one; over the reals a run converges and need not rest (record regime-in-any-amounts).
 - That measured giving rises over its band: MQ5's law rises in both arguments exactly where its regime's giving rises with what is left, which is not checked on the data.
 - That 3 hi + 3 is the least bound; a state with a further lag; coupled conditions.
 - **Counterexample:** Alternation.alternates: giving that falls as what is left rises keeps a band, yet its run alternates for ever; Crossing.rises_without_rest: with no band a rising run climbs at every step; Adjusted.rests_short: a rest below the draw where something is given from nothing. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
@@ -41,7 +41,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-Convergence over the reals; whether measured giving laws rise over their bands; the least bound; a state with a further lag; coupled conditions; an independent review.
+Whether measured giving laws rise over their bands; the least bound; a state with a further lag; coupled conditions; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -63,7 +63,7 @@ Compensatory renewal settles and overcompensating renewal cycles (Beverton and H
   - Preserved conditions: Decidable configurations; a deterministic law. [LastChange.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LastChange.lean)
 - related, not a proved adapter: [margin-of-a-regime](margin-of-a-regime.md). The regime's step: with giving rising with what is left, every run within a band comes to rest within hi steps.
 
-**Used by:** [threshold-in-the-state-plane](threshold-in-the-state-plane.md)
+**Used by:** [regime-in-any-amounts](regime-in-any-amounts.md) · [threshold-in-the-state-plane](threshold-in-the-state-plane.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -82,6 +82,7 @@ Compensatory renewal settles and overcompensating renewal cycles (Beverton and H
 | integration | [README.md](../../../../experiments/margin-measured/README.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T102032.314972Z/verification.json) | — |
 
 Aliases: `where a run of a regime comes to rest`, `every run of a rising adjustment comes to rest`, `a law's run with a bounded mark`, `一个体制的运行静于何处`, `Becoming.RegimeMargin.Adjusted.comes_to_rest`, `Becoming.RegimeMargin.rests_within`, `Becoming.LastChange.still_within`
 
@@ -89,6 +90,7 @@ Aliases: `where a run of a regime comes to rest`, `every run of a rising adjustm
 ### History
 
 - 21 October 2026: added (RM3), where a run of a regime comes to rest: a law's run with a bounded mark rests within the bound, decided; every run of an adjustment rising in both arguments within a band rests within 3 hi + 3 steps, at the regime's point or below the draw; study section 300.
+- 21 October 2026, RM5: convergence over the reals, left open here, is stated for rising adjustments within a band, with a witness that a run need not rest (record regime-in-any-amounts, study section 302); what this record does not show and its next delta now say so. Its laws are unchanged.
 
 </details>
 

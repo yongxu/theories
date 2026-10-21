@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-323 registered results: 303 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 810 curated edges join 276 results to the results they draw on.
+324 registered results: 304 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 812 curated edges join 277 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -193,6 +193,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [recurrence-without-decidedness][] ← <a id="recurrence-without-decidedness--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="recurrence-without-decidedness--space-and-its-parts"></a>[space-and-its-parts][]
 - [recurrent-chain-assembly][] ← <a id="recurrent-chain-assembly--material-preparation-output"></a>[material-preparation-output][] · <a id="recurrent-chain-assembly--growth-constrained-fragmentation"></a>[growth-constrained-fragmentation][]
 - [recurring-reference-revision][] ← <a id="recurring-reference-revision--consequence-revised-reference-plan"></a>[consequence-revised-reference-plan][] · <a id="recurring-reference-revision--process-and-frame-as-readings"></a>[process-and-frame-as-readings][]
+- [regime-in-any-amounts][] ← <a id="regime-in-any-amounts--where-a-run-of-a-regime-comes-to-rest"></a>[where-a-run-of-a-regime-comes-to-rest][] · <a id="regime-in-any-amounts--threshold-in-the-state-plane"></a>[threshold-in-the-state-plane][]
 - [regime-point-under-adjusting-giving][] ← <a id="regime-point-under-adjusting-giving--margin-of-a-regime"></a>[margin-of-a-regime][]
 - [relata-counted-up-to-indiscernibility][] ← <a id="relata-counted-up-to-indiscernibility--listing-once-is-decided-identity"></a>[listing-once-is-decided-identity][]
 - [relational-reading-comparison][] ← <a id="relational-reading-comparison--relational-renewal-classification"></a>[relational-renewal-classification][]
@@ -490,6 +491,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [recurrence-without-premise]: theories/becoming/results/records/recurrence-without-premise.md
 [recurrent-chain-assembly]: theories/becoming/results/records/recurrent-chain-assembly.md
 [recurring-reference-revision]: theories/becoming/results/records/recurring-reference-revision.md
+[regime-in-any-amounts]: theories/becoming/results/records/regime-in-any-amounts.md
 [regime-point-under-adjusting-giving]: theories/becoming/results/records/regime-point-under-adjusting-giving.md
 [relata-counted-up-to-indiscernibility]: theories/becoming/results/records/relata-counted-up-to-indiscernibility.md
 [relational-generative-comparison]: theories/becoming/results/records/relational-generative-comparison.md
