@@ -76,5 +76,5 @@ Files:
 - [`vd2_judge.py`](vd2_judge.py): the misread judges, their calibration on VD1's coded violations ([`results/vd2/calibration/calibration.json`](results/vd2/calibration/calibration.json)), and their run on the violations.
 - [`vd2_analyze.py`](vd2_analyze.py): the measures and the frozen verdict rules, written to `results/vd2/verdicts.json`.
 
-**State.** Frozen. No VD2 presentation has been sent to any model. The run waits on the spend approval: the estimate, $6.5–7.5, is above VD1's $5.90.
+**State.** Frozen (`f8e7992e1`) before any experimental call. Ren approved a cap of $9, recorded as a [run note](PREDICTIONS-2026-10-21-VD2.md#run-notes). Standpoint 0 is running; the rest follows if the projection from its reported costs stays within $9.
 

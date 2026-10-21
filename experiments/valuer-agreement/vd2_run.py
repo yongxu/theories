@@ -28,11 +28,11 @@ from vd2_frames import all_items
 HERE = Path(__file__).parent
 OUT = HERE / "results" / "vd2"
 
-# VD1's six valuers, client settings unchanged (run.CONFIG); the budget is VD1's scale until Ren
-# approves more (PREDICTIONS-2026-10-21-VD2.md, "Spend").
+# VD1's six valuers, client settings unchanged (run.CONFIG). The budget was VD1's scale ($6) at the
+# freeze; Ren approved $9 (PREDICTIONS-2026-10-21-VD2.md, "Run notes").
 CONFIG = {
     "provider": "openrouter",
-    "budget_usd": 6.0,
+    "budget_usd": 9.0,
     "models": dict(VD1_CONFIG["models"]),
 }
 ROW_KEYS = ("key", "task", "frame", "frame_index", "domain", "standpoint", "formation", "kind", "elicitation",

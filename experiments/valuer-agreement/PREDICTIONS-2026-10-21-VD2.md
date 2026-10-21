@@ -142,3 +142,16 @@ So the rules separate an account in which violations come from measured signs fr
 - *What the judges are.* They are models. Their misread calls make the forbidden cell smaller, so X1 and X1s are also reported without them.
 - *Scope.* Continuation only (kept or ended); English; one-formation widenings only.
 - *A pass* supports T5's exception as a description of these valuers. It does not warrant C (chapter §8.5).
+
+## Run notes
+
+**21 October 2026, after the freeze and before any call beyond standpoint 0: Ren's spend approval.** The options went to Ren through the session that started this one:
+- (a) a cap of $9 with both elicitations;
+- (b) a trim to $6 or less, with one elicitation and a replicate on four standpoints.
+
+Ren chose (a), relayed the same day: "extra token is ok as long as we have the budge". The key had about $44 of its $50 limit left after VD1, and the account had about $24 of credit.
+
+So the budget is $9: `vd2_run.CONFIG["budget_usd"]` is 9.0 from this note on, and the guard stops every model there. The staged rule is unchanged except for the cap. After standpoint 0 the projection is read from reported costs alone. If it passes $9, the run stops and Ren is asked before any further call.
+
+Standpoint 0 had already started under the $6 guard after the freeze landed (`f8e7992e1`). Nothing else in the design, the rules or the prompts changes.
+
