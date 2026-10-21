@@ -14076,3 +14076,88 @@ Output → input: chapter §6 (the ranking bullet) and §8.1 item 11 (EN, ZH), t
 **Self-review.** The first plan sought a flow-level premise equivalent to "undermines no included event"; none is simpler than that statement, so the exact law states it, and the flow corollary takes the natural sufficient premise, takes within what it gives, which is what "sustainable" means for a course. It is not necessary: a course whose levels fall below needs nobody met undermines nothing either. `active_of_eases` was factored out so that the whole-run and stepwise laws read one lemma (board rule 9). The constructors of the readings are unchanged; `ThirdParty`'s other theorems keep their statements, with `stepwise_not_monotone`'s docstring now naming the premise. The connectivity check was planned before the checker ran: every new law is stated on webs or flows, the base. Limits: the relation-level reading, the form of L, and J1's step-by-step yield stay open.
 
 **The run.** Core 285 modules and 12,163 theorems, instances 7 and 567, applications 6 and 179; 39 Lean steps ran, 1,165 reused. 9 declarations added to Becoming.Ranking and Becoming.JointDraw, 9 of them theorems, none removed, all with empty axiom reports. Connectivity: 647 of 12,909 apart, unchanged; no new apart root, every new law stated on a run or read by one that is, the witnesses on the run; register check passes.
+
+## 316. Fates on either side of the curve in the plane, in the field (MQ7)
+
+```text
+Result(s): none new about the unfolding; a frozen field test, on assessed stocks no analysis had read, of
+       the one prediction of thesis T2 and of records threshold-in-the-state-plane and
+       regime-point-under-adjusting-giving still untested: below the regime's point, episodes whose recent
+       giving falls short of the catch fall more often than those whose recent giving meets it
+       (RegimeMargin.Adjusted.falls_iff_below, Adjusted.threshold_falls, Crossing.crosses); rules, code, the
+       matching to the stocks already read, the presence-only layout, development and dry runs committed and
+       landed on main before any test value was read (freeze f561a0218, kept as refs/salvage/mq7-freeze);
+       every verdict kept. C1 failed; C2 not testable.
+Delta: MQ3's F3 (section 272) found that the regime's point did not separate fates under a held catch (63% of
+       the below-point episodes fell). RM4 (section 301) proved that under an adjustment rising in both
+       arguments the point of no return is a falling curve in the plane of level and recent giving. MQ5's
+       post hoc work (section 280) found the field's adjustment rising in both only below the level law's
+       peak. MQ7 reads episodes as F3 did (the catch held over three years, below the point by 1.25), on the
+       low side of the peak only, and compares the share falling where the recent giving SP_{t0-1} falls
+       short of the draw H = kappa C with where it meets it, within a stock and a bin of the deficit g(E_t0)/H
+       (C1), and within the same sign of the level's last change as well (C2: by the balance, r - H = x_t0 -
+       x_{t0-1} + kappa (C_{t0-1} - C), so at the same trend the classes differ through the catch's change at
+       the origin). Each series' timing is read before a balance is read off it: the share f in {0, 0.5, 1}
+       of the year's draw taken before the level is reported, profiled with kappa.
+Design, before any test value (mq7.py dry, dev_mq7.py): pooled over stocks in MQ3's strata of the level, the
+       regime's step itself gave C1 a difference of 0.22 (TB reading) and 0.33 (SSB): within a coarse band the
+       recent giving still tracks the level, and it reveals a misfitted level law. Within a stock and a bin of
+       the deficit it does not: in the TB reading the null passed C1 in 0 of 16 runs and the hypothesis (the
+       field's in-sample rate, 0.67 r + 0.29 H + 0.04 g(e)) in 15 of 16. In the SSB reading with kappa fitted as
+       MQ5 fitted it (the state with the lag) the null passed in 3 of 8; with kappa and the timing fitted by
+       MQ4's state, in 0 of 16, the hypothesis in 14 of 16. MQ5's frozen state (giving 0.55 a year toward the
+       draw) fails C1: the prediction needs giving that persists. The verdicts were planned on the TB reading;
+       the presence-only layout found no unread primary stock with total biomass, so they moved to the SSB
+       reading with MQ4's state, before any value was read.
+Data: NOAA Stock SMART (the NOAA-EDAB stocksmart package's two .rda files, 1.04 MB, pull of 2026-10-17; public
+       domain) and ICES Stock Assessment Graphs (68 JSON files, 2.73 MB; CC BY 4.0), downloaded with Ren's
+       approval in chat of 21 October 2026, read with the standard library (rda_read.py). Matched by hand, on
+       names, species, areas and model types, to the RAM stocks MQ3-MQ5 read (match_mq7.py): of 161 modelled
+       ICES stocks 57 are unread, of 152 Stock SMART stocks with a level and a catch in weight 20; catches of
+       one gear or fleet are not read. Eligible primary stocks: 21, all in spawning biomass (ICES 10: southern
+       anchovy, three anglerfish, boarfish, Iceland wolffish, northern coastal cod, Greenland halibut, Celtic
+       Sea pollack, Icelandic slope redfish; Stock SMART 11: nine American Samoa bottomfish from one 2023
+       framework, Florida Keys hogfish, the Pacific Coast rougheye complex).
+Verdicts (primary, SSB reading, 21 stocks): C1 failed: 75 below-point episodes on the low side in 7 stocks, 62
+       of them in strata with both classes, from 5 stocks; the short episodes fall 0.388 more often than the
+       meeting ones (pooled shares 0.74 and 0.28), but the one-sided 95% stock-bootstrap lower bound is 0.000,
+       not above zero. C2 not testable: 14 discordant episodes, 4 stocks compared (5 needed). With every series
+       read at f = 0: C1 0.364 (lower bound -0.087), failed. Reported: the first draft's pooled form 0.462
+       (0.084); the share falling by r/H, 0.94, 0.59, 0.41 and 0.16 from below 0.8 to above 1.25; the frozen
+       rest's call right in 73%, momentum's in 68%; no below-point episode crossed the point by year three in
+       either class; the TB, survey and other groups had no compared episode.
+Development (RAM stocks already read; not a test): C1 0.351 in the SSB reading of MQ5's 69 primary stocks (297
+       compared episodes from 21 stocks), 0.298 of MQ3-MQ4's 143, 0.295 in the TB reading of 191; all passed,
+       and C2 with them.
+Post hoc (not verdicts; posthoc_mq7.py, results/mq7/posthoc-mq7.json): 5.45% of the 2,000 resamples are at or
+       below zero and 0.5% exactly zero, so the bound misses by a hair. Within the compared stocks the
+       difference is +0.66 (anglerfish in 3.a, 4 and 6, 27 episodes), +0.22 (pollack in 6 and 7, 20), +0.67
+       (Pacific Coast rougheye complex, 8), 0.00 (northern coastal cod, 4) and -0.30 (Greenland halibut in 5,
+       6, 12 and 14, 11). Origins were lost mostly to catches not held (12-19 of 21 in each American Samoa
+       stock), to a fitted share of the catch on the spawning stock of 0 (five stocks, so no draw on the
+       level), and to episodes above the point (wolffish, redfish, boarfish); reading those five at kappa = 1
+       gives 0.341 (lower bound -0.135, 6 stocks compared).
+Evidence: experiments/margin-measured (PREDICTIONS-2026-10-21-MQ7.md, mq7.py, match_mq7.py, dev_mq7.py,
+       rda_read.py, posthoc_mq7.py; results/mq7: matching.json, layout.json, data-files.json,
+       development.json, dry-runs.json, design-checks.json, VERDICTS-mq7.json, posthoc-mq7.json and the .out
+       logs; README ledger MQ7); standard library, CPU, seconds for the test and minutes for the dry runs.
+Boundary: 21 stocks, of which 5 gave compared episodes, so the test has little power; nine of the 21 share one
+       data-limited assessment framework; spawning biomass with a fitted share of the catch, weakly identified
+       (five stocks at 0); the timing read from each series' own balance, since neither source states it (it
+       misreads about a fifth of the RAM series of known timing); assessment output, not measurement; three
+       years, short of the eventual rest the theorem orders; the matching to the stocks already read is a
+       judgement on metadata, recorded stock by stock in matching.json. Closest prior results (from memory, not
+       checked against the texts): the unstable point under a constant catch (Beddington and May 1977; Clark
+       1976); delay-difference models carry the lag (Deriso 1980; Schnute 1985); productivity regime shifts
+       move a fitted level law's point (Vert-pre et al. 2013).
+Output -> input: the prediction is not established in the field. On the only stocks with a level in tonnes
+       that no analysis had read, its direction is the predicted one and large, but the frozen bound was not
+       met, because nearly all the evidence comes from three stocks. On the RAM stocks already read, the same
+       comparison holds at 0.30-0.35 across many stocks, which is development, not a test. The records
+       threshold-in-the-state-plane and regime-point-under-adjusting-giving, thesis T2 (EN, ZH) and the margin
+       README's ledger now say so. Open: the same frozen test on more stocks no analysis has read (assessment
+       updates after RAM v4.66 for stocks RAM lacks, survey series with a catchability, other domains); a share
+       of the catch on the spawning stock measured rather than fitted.
+```
+
+**Self-review.** The prediction as first drafted would have passed on any data whose giving persists, and the dry runs showed it also passing under the regime's step, which the prediction is meant to rule out. In a coarse band of the level, recent giving tracks the level and reveals a misfitted level law. Comparing within a stock and a bin of the deficit removes both, and the null then fails, but most episodes no longer count. On 21 stocks that cost the test its power: the difference came out at 0.39, in the predicted direction, and the lower bound at exactly zero. The verdict is the frozen one: failed. The post hoc share of resamples at or below zero (5.45%) shows how close it came, and changes nothing. The verdict reading changed twice before any value was read. TB was chosen for the dry runs, then SSB with MQ4's state once the layout showed no unread stock with total biomass. Both changes and the checks behind them are committed (`dev_mq7.py`). One scratch claim was wrong: that finer bins let the null pass. It came from a binning bug and is recorded as such. Two design rules were set on seeing a source's metadata: catches of one gear or fleet are not read, and SAG stocks without a model type are left out. Each removed stocks before any value was read. The RAM Legacy database had already given nearly every assessed stock with a level in tonnes to MQ3–MQ5. The 21 new ones are what is left, and they are small, data-limited and few. The honest reading is that the field frequency of fates on either side of the curve is still not measured, and that measuring it needs more stocks rather than another rule.

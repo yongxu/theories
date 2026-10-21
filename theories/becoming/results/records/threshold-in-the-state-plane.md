@@ -26,7 +26,7 @@
 ## Does not show
 
 - The threshold over the reals as a computed level: there a run converges, and record regime-in-any-amounts states the fates as down-closed and falling with the recent giving, not the level.
-- That measured adjustments rise in both arguments over their band, or how often below-point episodes with recent giving short of the catch fall in the field: the curve's direction is proved under the premises, its field frequency untested.
+- That measured adjustments rise in both arguments over their band, or how often below-point episodes with recent giving short of the catch fall in the field: the curve's direction is proved under the premises. Its field frequency was tested once, on the 21 stocks with a level in tonnes that no analysis had read (MQ7): the episodes short of the catch fell 0.39 more often than those meeting it, in the same stock at the same deficit, but from 5 stocks, and the frozen bound was not met (failed), so the frequency is not established.
 - The threshold beyond the band, where the search stops at hi + 1; a state with a further lag; coupled conditions with a recent giving (record coupled-regimes states two under the regime's step).
 - **Counterexample:** Notch.no_threshold: giving that does not rise with what is left keeps a band, yet the run from four rests below the draw and the run from three, below it, does not, so no least level separates them. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
 
@@ -42,7 +42,7 @@ Canonical source: [RegimeMargin.lean](../../../../experiments/integrated-correct
 <a id="next--下一步"></a>
 ## Next
 
-A computed threshold over the reals; a frozen test, on stocks no analysis has read, of whether below-point episodes with recent giving short of the catch fall more often; the order of fates above the level law's peak, where measured giving falls as the level rises; a state with a further lag; coupled conditions with a recent giving; an independent review.
+A computed threshold over the reals; that frozen test on more stocks no analysis has read, which MQ7's 21 (5 of them compared) did not settle; the order of fates above the level law's peak, where measured giving falls as the level rises; a state with a further lag; coupled conditions with a recent giving; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -104,7 +104,8 @@ Aliases: `the threshold in the plane of level and recent giving`, `the point of 
 - 21 October 2026: whether measured adjustments rise in both over their bands is answered post hoc on MQ5's stocks (study section 280): the field's giving rises in the recent giving in 65 of 69 stocks, and in what is left only below each stock's level-law peak (a median 41% of its observed escapements); the next step now names the order above the peak. Its laws are unchanged.
 - 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
 - 21 October 2026, RM7: more than two coupled conditions are stated as a web under the regime's step (record coupled-webs, study section 311); its next delta no longer lists them. Its laws are unchanged.
+- 21 October 2026, MQ7: the field frequency of fates on either side of the curve was put to a frozen test on the 21 primary stocks in NOAA Stock SMART and ICES Stock Assessment Graphs that no analysis had read (study section 316): below the regime's point, on the low side, episodes short of the catch fell 0.39 more often than those meeting it, in the same stock at the same deficit, from 5 stocks, with a lower bound of 0.00 (C1 failed; C2 not testable). What this record does not show and its next delta now say so. Its laws are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-21T11:33:06+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-21T16:22:45+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

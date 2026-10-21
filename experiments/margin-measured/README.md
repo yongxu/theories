@@ -1,11 +1,11 @@
 # The margin as a measured quantity
 
-AI-written, 20–21 October 2026. Board items MQ1–MQ6; this account is MC1's, with MQ6 added. Study sections [253](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#253-the-margin-as-a-measured-quantity-mq1), [266](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#266-the-margins-equation-of-state-against-held-out-regimes-mq2), [272](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#272-the-margin-of-a-regime-in-the-field-mq3), [277](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#277-a-state-of-level-and-recent-giving-in-the-field-mq4) [280](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#280-a-lag-and-the-draws-response-in-the-field-mq5) and [314](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#314-the-margins-time-to-break-past-the-fold-in-the-lab-mq6). The claims these tests bear on are the chapter's theses [T1](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#t1-persistence-certifies-the-joint-draw) and [T2](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#t2-the-state-of-a-renewable-condition-under-a-draw). The five reports as first written are kept in [history](history/README-2026-10-21-five-reports.md).
+AI-written, 20–21 October 2026. Board items MQ1–MQ7; this account is MC1's, with MQ6 and MQ7 added. Study sections [253](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#253-the-margin-as-a-measured-quantity-mq1), [266](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#266-the-margins-equation-of-state-against-held-out-regimes-mq2), [272](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#272-the-margin-of-a-regime-in-the-field-mq3), [277](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#277-a-state-of-level-and-recent-giving-in-the-field-mq4) [280](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#280-a-lag-and-the-draws-response-in-the-field-mq5) , [314](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#314-the-margins-time-to-break-past-the-fold-in-the-lab-mq6) and [316](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#316-fates-on-either-side-of-the-curve-in-the-plane-in-the-field-mq7). The claims these tests bear on are the chapter's theses [T1](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#t1-persistence-certifies-the-joint-draw) and [T2](../../theories/becoming/chapters/THE-THEORY-OF-BECOMING.md#t2-the-state-of-a-renewable-condition-under-a-draw). The five reports as first written are kept in [history](history/README-2026-10-21-five-reports.md).
 
-Thermodynamics became more than formal when temperature and heat became measured state quantities whose laws could fail. These tests ask the same of the theory's **margin**: a renewable condition's level above its **need** (the level below which renewal stops), less the draws on it. Six tests ran on three systems:
+Thermodynamics became more than formal when temperature and heat became measured state quantities whose laws could fail. These tests ask the same of the theory's **margin**: a renewable condition's level above its **need** (the level below which renewal stops), less the draws on it. Seven tests ran on three systems:
 - MQ1: a simulated Allee yeast and a side-effect gridworld;
 - MQ1, MQ2 and MQ6: real yeast under serial dilution, at constant regimes (Dai et al. 2012) and driven past its fold (Dai, Korolev and Gore 2015);
-- MQ3–MQ5: assessed fish stocks (RAM Legacy database).
+- MQ3–MQ5 and MQ7: assessed fish stocks (RAM Legacy database; for MQ7, the stocks no analysis had read in NOAA Stock SMART and ICES Stock Assessment Graphs).
 
 Every test's predictions and rules were committed before the run, or before any held-out value was read. Every verdict is kept, failures included.
 
@@ -15,7 +15,7 @@ In the laboratory the margin is a measurable state quantity of a **regime** (the
 - **In the laboratory, it predicts thresholds, and the level is the state.** Measured by intervention, the margin bounds the time to break. A renewal curve fitted on some regimes predicts the need, and the fates the need separates, in regimes it never saw. At a constant draw the level is the whole state, and the regime's level carries from one experiment to another within 8%.
 - **Driven past the fold, the break comes early.** In yeast whose dilution rose or whose sucrose fell day by day, the populations broke three and at least six days before the renewal curve measured in constant regimes said. The fold that sets the break lies before where constant regimes put it. So the margin is least well measured where the break is decided, and the error points toward a late warning.
 - **In managed fish stocks, it ranks the risk of a break but does not time it.** The giving does not follow the level alone, and the draw does not stay fixed.
-- **The state is wider than the level.** It is the level, the recent giving and one lag. The theory's two readings, giving read off the level and giving held as it was, are the two ends of one law, and the stocks lie near the second.
+- **The state is wider than the level.** It is the level, the recent giving and one lag. The theory's two readings, giving read off the level and giving held as it was, are the two ends of one law, and the stocks lie near the second. Below the regime's point, whether the recent giving meets the catch separates three-year fates in the stocks already read. On the 21 stocks no analysis had read, the difference had the predicted sign but did not reach the frozen bound (MQ7).
 - **Harms on a shared condition do not add, though the draws do.**
 - **Blind draw predicts side effects for an exact optimizer only.** It predicts which cells an exact optimizer spends to its need, and fails for learners that fall short of the optimum.
 
@@ -77,6 +77,10 @@ History added nothing to the break-day distribution, and the same test detected 
   - it does not rise in what is left over the whole band: the one-step fit has no slope there (median −0.01), and each stock's fitted level law is humped, rising over a median 41% of its observed escapements and over the whole band in only 4 of 69.
 
   So the order laws reach the field's state on the low side of its level law, below the peak, where the point of no return lies. Rests at or above the draw are the regime's on either side, since that law needs no rising.
+- **The curve's fates in the field** (MQ7, on stocks no analysis had read). Below the regime's point, on the low side, episodes are compared within a stock and a bin of the level law's deficit g(E)/H. Pooled over stocks, the regime's step itself passes the comparison in the dry runs.
+  - On the RAM stocks already read (development), the episodes whose recent giving falls short of the catch fall 0.30–0.35 more often than those meeting it.
+  - On the 21 unread primary stocks, all in spawning biomass, the difference is 0.39 (pooled shares 0.74 against 0.28), but from only 5 stocks, and the lower bound is 0.00: C1 failed. The test of the same split at the same trend of the level (C2) was not testable.
+  - Post hoc, the difference is positive within three of the five stocks, and 5.45% of bootstrap resamples fall at or below zero. So the field frequency of fates on either side of the curve is still not measured.
 
 ### 4. Time to break: bounded in the model, early past the fold in the lab, ranked but not timed in the field
 
@@ -219,6 +223,13 @@ Classes in MQ1:
 | C1 the regime's level carries across experiments within 15% | **passed** (8%) |
 | L the level is the state at a constant dilution (residuals carry < 0.3) | **passed** (−0.14) |
 
+**MQ7, fates on either side of the curve in the field** (21 unread primary stocks in NOAA Stock SMART and ICES SAG, spawning biomass; frozen and landed at `f561a0218` before any test value was read): 0 of 1 passed, 1 not testable.
+
+| Prediction | Verdict |
+|---|---|
+| C1 below the point, on the low side, episodes short of the catch fall more often than those meeting it, in the same stock and bin of the deficit | **failed** (0.388, lower bound 0.000; 62 episodes from 5 stocks) |
+| C2 the same at the same trend of the level | **not testable** (4 stocks compared) |
+
 The other groups in the field tests (production-model controls, assessments of unknown method), the per-group numbers and every post-hoc analysis are in the [five reports](history/README-2026-10-21-five-reports.md) and in `results/`. None of them changes a verdict.
 
 ## Corrections and disclosures
@@ -246,6 +257,13 @@ The other groups in the field tests (production-model controls, assessments of u
   - The paper was read before the freeze, its figures and tipping days included, so the timing verdicts were partly anticipated, and the freeze says so.
   - The paper's PDF differs in md5 from the copy DSpace lists. The data matched Dryad's md5.
   - `all_SUC.txt` (48 × 21) does not match the 24-day sucrose protocol, so it is not used.
+- **MQ7.**
+  - Changed after development, the dry runs or the presence-only layout, before any value was read:
+    - the comparison moved from MQ3's strata of the level, pooled over stocks, to a stock and a bin of the deficit, because the regime's step passed the pooled form;
+    - the verdict reading moved from total biomass to spawning biomass with κ and the timing fitted by MQ4's state, because no unread primary stock carried total biomass and MQ5's fit of κ let the null pass;
+    - catches of one gear or fleet are not read.
+  - Reading an .rda file parses all its values in memory; none of Stock SMART's was printed, kept or used before the freeze.
+  - A scratch check that suggested finer bins let the null pass had capped the bins; the committed check shows they do not.
 - **Hashes.** Every freeze's original commit is kept under `refs/salvage/mq*`; the rebased commits on main are in `results/FROZEN-AT` and the reports.
 
 ## Limits
@@ -267,8 +285,9 @@ The other groups in the field tests (production-model controls, assessments of u
   - Origins overlap within a stock.
   - φ, λ and ε were each chosen once on development stocks; the test stocks prefer λ = 0.35 and ε = 0.37 where 0.55 and 0.7 were frozen.
   - The spawning-stock share κ is weakly identified.
-  - Series timing differs by assessment.
-  - Survey series are not used.
+  - Series timing differs by assessment. MQ7 reads it from each series' own balance, since neither of its sources states it, and misreads about a fifth of the RAM series of known timing.
+  - Survey series are reported only (MQ7: five, with no compared episode).
+  - MQ7's test had 21 stocks, of which 5 gave compared episodes. Nine share one data-limited assessment framework (American Samoa), and five were fitted κ = 0, so they had no draw on the level.
 
 ## Open
 
@@ -278,6 +297,7 @@ The other groups in the field tests (production-model controls, assessments of u
 - Fates read long enough after a shock to settle near the need.
 - A learner that reaches the best response, to test B3–B7's bridge rather than its failure.
 - A partner's level as a fourth variable in the state of coupled stocks (RM6); none of the stocks here was read with a partner.
+- The fates on either side of the curve on more stocks no analysis has read (MQ7 had 21, of which 5 compared). Candidates are stocks that RAM v4.66 lacks in later assessment releases, and survey series with a catchability. A share of the catch on the spawning stock measured rather than fitted would also add power.
 
 ## Files and reproduction
 
@@ -289,11 +309,13 @@ The other groups in the field tests (production-model controls, assessments of u
 | MQ4 | [PREDICTIONS-2026-10-20-MQ4.md](PREDICTIONS-2026-10-20-MQ4.md) | [mq4.py](mq4.py), [dev_mq4.py](dev_mq4.py), [posthoc_mq4.py](posthoc_mq4.py) | `results/mq4/` |
 | MQ5 | [PREDICTIONS-2026-10-21-MQ5.md](PREDICTIONS-2026-10-21-MQ5.md) | [mq5.py](mq5.py), [dev_mq5.py](dev_mq5.py), [posthoc_mq5.py](posthoc_mq5.py) | `results/mq5/` |
 | MQ6 | [PREDICTIONS-2026-10-21-MQ6.md](PREDICTIONS-2026-10-21-MQ6.md) | [mq6.py](mq6.py), [posthoc_mq6.py](posthoc_mq6.py) | `results/mq6/` |
+| MQ7 | [PREDICTIONS-2026-10-21-MQ7.md](PREDICTIONS-2026-10-21-MQ7.md) | [mq7.py](mq7.py), [match_mq7.py](match_mq7.py), [dev_mq7.py](dev_mq7.py), [rda_read.py](rda_read.py), [posthoc_mq7.py](posthoc_mq7.py) | `results/mq7/` |
 
 Everything uses Python 3.11 and the standard library, on CPU; MQ1's gridworld learners take about 13 minutes over 12 cores. The data are not committed:
 - **Yeast:** Dai et al. 2012, Zenodo record 5003142, CC0; the bifurcation archive's md5 is `3891af7573f1afa105d9bc1ce9f03f1b`.
 - **Fish stocks:** RAM Legacy v4.66, Zenodo record 14043031, CC-BY-4.0; md5 `ed6d7cd3f7da1fdcbc60015c3d65014b`.
 - **Yeast past the fold:** Dai, Korolev and Gore 2015, Dryad doi:10.5061/dryad.k30v3, CC0. `data_deterioration.zip` md5 `f739beab74af2f981d410c10277ec364`, `data_SUCbifurcation.zip` `d9f631a7dfcef91267ecf7d8500d7131`. Dryad's file links need a browser.
+- **Fish stocks no analysis had read (MQ7):** NOAA Stock SMART through the NOAA-EDAB `stocksmart` package (`data/stock_assessment_data.rda` md5 `eedc109a5dfdffa64fb9b4c4870e2c2f`, `data/stock_assessment_summary.rda` `bfe693c0a092806986a16819ab1ca53e`; public domain), and ICES Stock Assessment Graphs (`sag.ices.dk/SAG_API`, `StockList?year=2015`–`2025` and `SummaryTable?assessmentKey=K` for the keys in `results/mq7/matching.json`; CC BY 4.0). Every file's md5 is in `results/mq7/data-files.json`.
 
 Extract each archive outside the repository, in its own directory, and read it with `python3 -I`.
 
@@ -317,4 +339,8 @@ python3 -I mq3.py test "$RAM" && python3 -I mq4.py dev "$RAM" && python3 -I mq4.
 python3 -I mq6.py dev /path/to/bifurcation && python3 -I mq6.py fit-odd "$DAI15" && python3 -I mq6.py test-a "$DAI15" && python3 -I mq6.py test "$DAI15"
 ```
 
-Here `DAI15` holds the three 2015 archives extracted into `deterioration/`, `SUCbifurcation/` and `SUCindicator/`, and `RAM` is the path to `RAMLDB v4.66/Excel/RAMLDB v4.66 (assessment data only).xlsx`.
+```bash
+python3 -I match_mq7.py "$SMART" "$SAG" "$RAM" && python3 -I mq7.py dev "$RAM" && python3 -I mq7.py dry && python3 -I dev_mq7.py && python3 -I dev_mq7.py ssb && python3 -I mq7.py layout "$SMART" "$SAG" && python3 -I mq7.py test "$SMART" "$SAG" && python3 -I posthoc_mq7.py "$SMART" "$SAG"
+```
+
+Here `SMART` and `SAG` are the directories holding MQ7's downloads, `DAI15` holds the three 2015 archives extracted into `deterioration/`, `SUCbifurcation/` and `SUCindicator/`, and `RAM` is the path to `RAMLDB v4.66/Excel/RAMLDB v4.66 (assessment data only).xlsx`.
