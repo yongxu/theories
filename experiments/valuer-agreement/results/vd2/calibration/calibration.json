@@ -1,0 +1,34 @@
+{
+ "deepseek/deepseek-v4.1-flash-1017": {
+  "n": 121,
+  "kappa": 0.7921854873336196,
+  "agreement": 0.9338842975206612,
+  "coded_inconsistent_called_inconsistent": 20,
+  "coded_consistent_called_inconsistent": 5,
+  "cost": 0.023499334999999993
+ },
+ "google/gemini-3.1-flash-lite": {
+  "n": 121,
+  "kappa": 0.585774058577406,
+  "agreement": 0.8512396694214877,
+  "coded_inconsistent_called_inconsistent": 19,
+  "coded_consistent_called_inconsistent": 14,
+  "cost": 0.04488575000000001
+ },
+ "google/gemini-3.8-flash": {
+  "n": 121,
+  "kappa": 0.872174096767378,
+  "agreement": 0.9586776859504132,
+  "coded_inconsistent_called_inconsistent": 22,
+  "coded_consistent_called_inconsistent": 4,
+  "cost": 0.11114549999999998
+ },
+ "openai/gpt-6-luna": {
+  "n": 121,
+  "kappa": 0.71245247148289,
+  "agreement": 0.9173553719008265,
+  "coded_inconsistent_called_inconsistent": 16,
+  "coded_consistent_called_inconsistent": 3,
+  "cost": 0.012930499999999998
+ }
+}

@@ -1,4 +1,6 @@
-# Where valuers agree and disagree (VD1)
+# Where valuers agree and disagree (VD1), and the sign measured apart (VD2)
+
+VD1 tested where valuers agree and disagree; VD2, [below](#vd2-the-sign-measured-apart-from-the-ranking), tests T5's exception, which VD1 left untested.
 
 Board item VD1, 21 October 2026. AI-written (a Claude Code session). Predictions, verdict rules and code frozen before any experimental model call: [PREDICTIONS-2026-10-21.md](PREDICTIONS-2026-10-21.md). The valuers were changed before any call, first to Claude models ([first addendum](PREDICTIONS-ADDENDUM-2026-10-21.md), superseded, never run) then to six model families through OpenRouter ([second addendum](PREDICTIONS-ADDENDUM-2-2026-10-21.md)), and after standpoint 0, on cost, to Qwen and Mistral in place of Meta and StepFun, with Nemotron replacing Mistral, which its shared upstream pool would not serve ([third addendum](PREDICTIONS-ADDENDUM-3-2026-10-21.md)). Prior art: [significance review, valuer check](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#valuer-check).
 
@@ -60,3 +62,19 @@ Five valuers (DeepSeek, GLM, Qwen, OpenAI, NVIDIA) are families other than the o
 ## State
 
 Complete. Frozen (`c56f3f8d2`), amended before any call and after standpoint 0 on cost (three addenda). The run ended complete on 21 October, and every frozen rule failed (above). No record is made, since no prediction passed. The outcome is carried in thesis T5's standing in the chapter, in the significance review's valuer check, and in the root-foundation study.
+
+## VD2: the sign measured apart from the ranking
+
+Board item VD2, 21 October 2026. AI-written (a Claude Code session). Predictions, verdict rules, judges and code frozen before any experimental model call: [PREDICTIONS-2026-10-21-VD2.md](PREDICTIONS-2026-10-21-VD2.md). Prior art: [significance review, sign check](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md#sign-check).
+
+VD1's widening violations concentrated under two standpoints whose prompts make an ending a gain. Read after the verdicts, that was T5's exception, but thesis T5 gives the exception content only where the negative valuation is measured apart from the ranking. VD2 measures it apart. Each of VD1's 96 valuers says, twice, whether each of the 96 formations' ending is a loss, nothing or a gain to it, with no plan shown. Then it ranks one-formation widenings, in which each formation is the added one once. The prediction: a right-read violation occurs only where the valuer's own sign on the added formation is not positive, or where the case is misread, judged from the lists and, by two frozen judges, from the reason. Standpoints 10 and 15 are named in advance as the negative ones.
+
+Files:
+- [`vd2_frames.py`](vd2_frames.py): the sign task, the widenings and their counterbalancing; the structure in [`results/vd2/structure.json`](results/vd2/structure.json).
+- [`vd2_client.py`](vd2_client.py): VD1's OpenRouter client with each task's schema, and the scripted valuers and judges of the dry runs.
+- [`vd2_run.py`](vd2_run.py): the runs, written to `results/vd2/runs/<model>.jsonl`, with VD1's budget guard and the staged projection.
+- [`vd2_judge.py`](vd2_judge.py): the misread judges, their calibration on VD1's coded violations ([`results/vd2/calibration/calibration.json`](results/vd2/calibration/calibration.json)), and their run on the violations.
+- [`vd2_analyze.py`](vd2_analyze.py): the measures and the frozen verdict rules, written to `results/vd2/verdicts.json`.
+
+**State.** Frozen. No VD2 presentation has been sent to any model. The run waits on the spend approval: the estimate, $6.5–7.5, is above VD1's $5.90.
+
