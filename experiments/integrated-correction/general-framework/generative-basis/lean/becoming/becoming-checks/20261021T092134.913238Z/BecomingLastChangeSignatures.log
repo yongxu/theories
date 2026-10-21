@@ -1,0 +1,92 @@
+@Becoming.LastChange.settles_of_still : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {r : Becoming.Run P} {T : Nat}, Becoming.LastChange.StillFrom r T → Becoming.Enough.Settles r
+@Becoming.LastChange.Changes.add : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {r : Becoming.Run P}
+  {f : Nat → Nat} {m k : Nat},
+  Becoming.LastChange.Changes r f m →
+    f m < k → r.state (k + 1) ≠ r.state k → Becoming.LastChange.Changes r (Becoming.Settling.extend f m k) (m + 1)
+@Becoming.LastChange.atChanges_le : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {r : Becoming.Run P}
+  {f : Nat → Nat} {m n : Nat}, n ≤ m → Becoming.LastChange.atChanges r f m n = r.state (f n)
+@Becoming.LastChange.atChanges_gt : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {r : Becoming.Run P}
+  {f : Nat → Nat} {m n : Nat}, ¬n ≤ m → Becoming.LastChange.atChanges r f m n = r.state (f m + 1)
+@Becoming.LastChange.changes_lt : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {r : Becoming.Run P}
+  {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) →
+    ¬Becoming.Settling.ChangesInLoop r →
+      ∀ {f : Nat → Nat} {m : Nat}, Becoming.LastChange.Changes r f m → m + 1 < l.length
+@Becoming.LastChange.settles_or_changes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {r : Becoming.Run P},
+  (∀ (T : Nat), Becoming.LastChange.ChangesAgain r T ∨ Becoming.LastChange.StillFrom r T) →
+    ∀ (m : Nat), Becoming.Enough.Settles r ∨ ∃ f, Becoming.LastChange.Changes r f m
+@Becoming.LastChange.settles_of_decided : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {r : Becoming.Run P} {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) →
+    ¬Becoming.Settling.ChangesInLoop r →
+      (∀ (T : Nat), Becoming.LastChange.ChangesAgain r T ∨ Becoming.LastChange.StillFrom r T) →
+        Becoming.Enough.Settles r
+@Becoming.LastChange.decided_within : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} [DecidableEq S]
+  (r : Becoming.Run P) (T n : Nat),
+  (∃ k, k < n ∧ r.state (T + k + 1) ≠ r.state (T + k)) ∨ ∀ (k : Nat), k < n → r.state (T + k + 1) = r.state (T + k)
+@Becoming.LastChange.settles_iff_decided : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} [DecidableEq S]
+  {r : Becoming.Run P} {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) →
+    ¬Becoming.Settling.ChangesInLoop r →
+      (Becoming.Enough.Settles r ↔
+        ∀ (T : Nat), Becoming.LastChange.ChangesAgain r T ∨ Becoming.LastChange.StillFrom r T)
+@Becoming.LastChange.not_not_decided : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} [DecidableEq S]
+  (r : Becoming.Run P) (T : Nat), ¬¬(Becoming.LastChange.ChangesAgain r T ∨ Becoming.LastChange.StillFrom r T)
+@Becoming.LastChange.not_not_settles_or_changes : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  [DecidableEq S] (r : Becoming.Run P) (m : Nat), ¬¬(Becoming.Enough.Settles r ∨ ∃ f, Becoming.LastChange.Changes r f m)
+@Becoming.LastChange.not_not_settles : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} [DecidableEq S]
+  {r : Becoming.Run P} {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) → ¬Becoming.Settling.ChangesInLoop r → ¬¬Becoming.Enough.Settles r
+@Becoming.LastChange.decided_of_lpo : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} [DecidableEq S],
+  Becoming.LPO →
+    ∀ (r : Becoming.Run P) (T : Nat), Becoming.LastChange.ChangesAgain r T ∨ Becoming.LastChange.StillFrom r T
+@Becoming.LastChange.settles_of_lpo : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} [DecidableEq S],
+  Becoming.LPO →
+    ∀ {r : Becoming.Run P} {l : List S},
+      (∀ (n : Nat), r.state n ∈ l) → ¬Becoming.Settling.ChangesInLoop r → Becoming.Enough.Settles r
+@Becoming.LastChange.noLoop_of_no_undoable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S},
+  (¬∃ x a y, Becoming.Reach P s x ∧ P.step x a y ∧ y ≠ x ∧ Becoming.Reach P y x) →
+    ∀ {r : Becoming.Run P}, r.state 0 = s → ¬Becoming.Settling.ChangesInLoop r
+@Becoming.LastChange.settles_of_no_undoable : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  [DecidableEq S],
+  Becoming.LPO →
+    ∀ {l : List S},
+      (∀ (x : S), x ∈ l) →
+        ∀ {s : S},
+          (¬∃ x a y, Becoming.Reach P s x ∧ P.step x a y ∧ y ≠ x ∧ Becoming.Reach P y x) →
+            ∀ (r : Becoming.Run P), r.state 0 = s → Becoming.Enough.Settles r
+@Becoming.LastChange.rests_of_settles : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {target : S → Prop},
+  (∀ (u : S), Becoming.Reach P s u → Becoming.Enough.Stays P u → target u) →
+    ∀ {r : Becoming.Run P}, r.state 0 = s → Becoming.Enough.Settles r → Becoming.Enough.Rests target r
+@Becoming.LastChange.assured_iff_of_lpo : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} [DecidableEq S],
+  Becoming.LPO →
+    ∀ {l : List S},
+      (∀ (x : S), x ∈ l) →
+        ∀ {s : S} {target : S → Prop},
+          (∀ (r : Becoming.Run P), r.state 0 = s → Becoming.Enough.Rests target r) ↔
+            (∀ (u : S), Becoming.Reach P s u → Becoming.Enough.Stays P u → target u) ∧
+              ¬∃ x a y, Becoming.Reach P s x ∧ P.step x a y ∧ y ≠ x ∧ Becoming.Reach P y x
+@Becoming.LastChange.not_not_rests : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} [DecidableEq S]
+  {l : List S},
+  (∀ (x : S), x ∈ l) →
+    ∀ {s : S} {target : S → Prop},
+      (∀ (u : S), Becoming.Reach P s u → Becoming.Enough.Stays P u → target u) →
+        (¬∃ x a y, Becoming.Reach P s x ∧ P.step x a y ∧ y ≠ x ∧ Becoming.Reach P y x) →
+          ∀ (r : Becoming.Run P), r.state 0 = s → ¬¬Becoming.Enough.Rests target r
+Becoming.LastChange.lpo_iff_settles : Becoming.LPO ↔
+  ∀ (S : Type) [DecidableEq S] (l : List S),
+    (∀ (x : S), x ∈ l) →
+      ∀ (A : Type) (P : Generative.Process S A) (s : S),
+        (¬∃ x a y, Becoming.Reach P s x ∧ P.step x a y ∧ y ≠ x ∧ Becoming.Reach P y x) →
+          ∀ (r : Becoming.Run P), r.state 0 = s → Becoming.Enough.Settles r
+@Becoming.LastChange.still_of_fixed : ∀ {S : Type u_1} {next : S → S} {s : S},
+  next s = s → Becoming.LastChange.StillFrom (Becoming.Law.run next s) 0
+@Becoming.LastChange.still_within : ∀ {S : Type u_1} {next : S → S} [DecidableEq S] {q : S → Nat} {B : Nat} (d : Nat)
+  (s : S),
+  B ≤ d + q s →
+    Becoming.Marks q (Becoming.Law.orbit next s) →
+      (∀ (n : Nat), q (Becoming.Law.orbit next s n) ≤ B) →
+        ∃ N, N ≤ d ∧ Becoming.LastChange.StillFrom (Becoming.Law.run next s) N

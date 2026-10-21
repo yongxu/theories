@@ -1,0 +1,351 @@
+Becoming.RegimeMargin.step_ge : ∀ (g : Nat → Nat) (H x : Nat), x ≤ Becoming.RegimeMargin.step g H x + H
+Becoming.RegimeMargin.Adjusted.orbit_regime : ∀ (g : Nat → Nat) (H : Nat) (p : Nat × Nat) (n : Nat),
+  (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step (fun e x => g e) H) p n).fst =
+    Becoming.Law.orbit (Becoming.RegimeMargin.step g H) p.fst n
+Becoming.RegimeMargin.Adjusted.regime_staysShort : ∀ (g : Nat → Nat) (H : Nat),
+  Becoming.RegimeMargin.Adjusted.StaysShort (fun e x => g e) g H
+Becoming.RegimeMargin.Adjusted.regime_staysMet : ∀ (g : Nat → Nat) (H : Nat),
+  Becoming.RegimeMargin.Adjusted.StaysMet (fun e x => g e) g H
+@Becoming.RegimeMargin.Adjusted.regime_fromNothing : ∀ {g : Nat → Nat},
+  Becoming.RegimeMargin.FromNothing g → Becoming.RegimeMargin.Adjusted.FromNothing fun e x => g e
+@Becoming.RegimeMargin.Adjusted.regime_keeps : ∀ {g : Nat → Nat} {H hi : Nat},
+  Becoming.RegimeMargin.Keeps g H hi → Becoming.RegimeMargin.Adjusted.Keeps (fun e x => g e) H hi
+@Becoming.RegimeMargin.Adjusted.Between.staysShort : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat},
+  Becoming.RegimeMargin.Adjusted.Between A g → ∀ (H : Nat), Becoming.RegimeMargin.Adjusted.StaysShort A g H
+@Becoming.RegimeMargin.Adjusted.Between.staysMet : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat},
+  Becoming.RegimeMargin.Adjusted.Between A g → ∀ (H : Nat), Becoming.RegimeMargin.Adjusted.StaysMet A g H
+@Becoming.RegimeMargin.Adjusted.Between.restsAtDraw : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat},
+  Becoming.RegimeMargin.Adjusted.Between A g →
+    Becoming.RegimeMargin.Adjusted.Settles A g → ∀ (H : Nat), Becoming.RegimeMargin.Adjusted.RestsAtDraw A g H
+Becoming.RegimeMargin.Adjusted.frozen_between : ∀ (g : Nat → Nat),
+  Becoming.RegimeMargin.Adjusted.Between (fun x r => r) g
+@Becoming.RegimeMargin.Adjusted.frozen_rests : ∀ {H x : Nat},
+  H ≤ x → Becoming.RegimeMargin.Adjusted.step (fun x r => r) H (x, H) = (x, H)
+@Becoming.RegimeMargin.Adjusted.rest_iff : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H x r : Nat},
+  Becoming.RegimeMargin.Adjusted.RestsAtDraw A g H →
+    H ≤ x → (Becoming.RegimeMargin.Adjusted.step A H (x, r) = (x, r) ↔ r = H ∧ Becoming.RegimeMargin.step g H x = x)
+@Becoming.RegimeMargin.Adjusted.rests_iff : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H x r : Nat},
+  Becoming.RegimeMargin.Adjusted.RestsAtDraw A g H →
+    H ≤ x →
+      ((∀ (n : Nat), (Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state n = (x, r)) ↔
+        r = H ∧ ∀ (n : Nat), (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state n = x)
+@Becoming.RegimeMargin.Adjusted.Between.rests_iff : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H x r : Nat},
+  Becoming.RegimeMargin.Adjusted.Between A g →
+    Becoming.RegimeMargin.Adjusted.Settles A g →
+      H ≤ x →
+        ((∀ (n : Nat), (Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state n = (x, r)) ↔
+          r = H ∧ ∀ (n : Nat), (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state n = x)
+@Becoming.RegimeMargin.Adjusted.draw_pos : ∀ {g : Nat → Nat} {H y x : Nat},
+  Becoming.RegimeMargin.Short g H y → x < H + y → 0 < H
+@Becoming.RegimeMargin.Adjusted.left_falls : ∀ {d a H : Nat}, a < H → d + a - H ≤ d - 1
+@Becoming.RegimeMargin.Adjusted.left_below : ∀ {H y x : Nat}, 0 < y → x < H + y → x - H < y
+@Becoming.RegimeMargin.Adjusted.step_below : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat},
+  Becoming.RegimeMargin.Short g H y →
+    Becoming.RegimeMargin.Adjusted.StaysShort A g H →
+      Becoming.RegimeMargin.Adjusted.FromNothing A →
+        x < H + y →
+          r < H →
+            (Becoming.RegimeMargin.Adjusted.step A H (x, r)).fst < H + y ∧
+              (Becoming.RegimeMargin.Adjusted.step A H (x, r)).snd < H ∧
+                (0 < x → (Becoming.RegimeMargin.Adjusted.step A H (x, r)).fst < x)
+@Becoming.RegimeMargin.Adjusted.from_zero : ∀ {A : Nat → Nat → Nat} (H : Nat),
+  Becoming.RegimeMargin.Adjusted.FromNothing A →
+    ∀ {p : Nat × Nat},
+      p.fst = 0 → ∀ (k : Nat), (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step A H) p k).fst = 0
+@Becoming.RegimeMargin.Adjusted.orbit_bound : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat},
+  Becoming.RegimeMargin.Short g H y →
+    Becoming.RegimeMargin.Adjusted.StaysShort A g H →
+      Becoming.RegimeMargin.Adjusted.FromNothing A →
+        x < H + y →
+          r < H →
+            ∀ (n : Nat),
+              (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step A H) (x, r) n).fst < H + y ∧
+                (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step A H) (x, r) n).snd < H ∧
+                  (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step A H) (x, r) n).fst ≤ x - n
+@Becoming.RegimeMargin.Adjusted.ends_below : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat},
+  Becoming.RegimeMargin.Short g H y →
+    Becoming.RegimeMargin.Adjusted.StaysShort A g H →
+      Becoming.RegimeMargin.Adjusted.FromNothing A →
+        x < H + y → r < H → ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state x).fst = 0
+@Becoming.RegimeMargin.Adjusted.stays_ended : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat},
+  Becoming.RegimeMargin.Short g H y →
+    Becoming.RegimeMargin.Adjusted.StaysShort A g H →
+      Becoming.RegimeMargin.Adjusted.FromNothing A →
+        x < H + y →
+          r < H →
+            ∀ (k : Nat), ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state (x + k)).fst = 0
+@Becoming.RegimeMargin.Adjusted.left_bound : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat},
+  Becoming.RegimeMargin.Short g H y →
+    Becoming.RegimeMargin.Adjusted.StaysShort A g H →
+      0 < y →
+        x < H + y →
+          r < H →
+            ∀ (n : Nat),
+              (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step A H) (x, r) n).fst < H + y ∧
+                (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step A H) (x, r) n).snd < H ∧
+                  (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step A H) (x, r) n).fst - H ≤ x - H - n
+@Becoming.RegimeMargin.Adjusted.taken_whole : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat},
+  Becoming.RegimeMargin.Short g H y →
+    Becoming.RegimeMargin.Adjusted.StaysShort A g H →
+      0 < y →
+        x < H + y →
+          r < H →
+            ∀ (n : Nat),
+              x - H ≤ n → ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state n).fst ≤ H
+@Becoming.RegimeMargin.Adjusted.step_holds : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H y hi x r : Nat},
+  Becoming.RegimeMargin.Meets g H y hi →
+    Becoming.RegimeMargin.Adjusted.StaysMet A g H →
+      H + y ≤ x →
+        x ≤ hi →
+          H ≤ r →
+            x ≤ (Becoming.RegimeMargin.Adjusted.step A H (x, r)).fst ∧
+              H ≤ (Becoming.RegimeMargin.Adjusted.step A H (x, r)).snd
+@Becoming.RegimeMargin.Adjusted.holds : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H y hi x r : Nat},
+  Becoming.RegimeMargin.Meets g H y hi →
+    Becoming.RegimeMargin.Adjusted.StaysMet A g H →
+      Becoming.RegimeMargin.Adjusted.Keeps A H hi →
+        H + y ≤ x →
+          x ≤ hi →
+            H ≤ r →
+              ∀ (n : Nat),
+                x ≤ ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state n).fst ∧
+                  ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state n).fst ≤ hi ∧
+                    H ≤ ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state n).snd
+@Becoming.RegimeMargin.Adjusted.holds_from : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H y x r : Nat},
+  (∀ (z : Nat), y ≤ z → H ≤ g z) →
+    Becoming.RegimeMargin.Adjusted.StaysMet A g H →
+      H + y ≤ x →
+        H ≤ r →
+          ∀ (n : Nat),
+            x ≤ ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state n).fst ∧
+              H ≤ ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state n).snd
+@Becoming.RegimeMargin.Adjusted.ends_iff_below : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H y hi x r : Nat},
+  0 < H + y →
+    Becoming.RegimeMargin.Short g H y →
+      Becoming.RegimeMargin.Adjusted.StaysShort A g H →
+        Becoming.RegimeMargin.Adjusted.FromNothing A →
+          Becoming.RegimeMargin.Meets g H y hi →
+            Becoming.RegimeMargin.Adjusted.StaysMet A g H →
+              Becoming.RegimeMargin.Adjusted.Keeps A H hi →
+                x ≤ hi →
+                  (r < H ↔ x < H + y) →
+                    ((∃ n, ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state n).fst = 0) ↔
+                      x < H + y)
+@Becoming.RegimeMargin.Adjusted.Between.ends_iff_below : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H y hi x r : Nat},
+  Becoming.RegimeMargin.Adjusted.Between A g →
+    0 < H + y →
+      Becoming.RegimeMargin.Short g H y →
+        Becoming.RegimeMargin.Adjusted.FromNothing A →
+          Becoming.RegimeMargin.Meets g H y hi →
+            Becoming.RegimeMargin.Adjusted.Keeps A H hi →
+              x ≤ hi →
+                (r < H ↔ x < H + y) →
+                  ((∃ n, ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state n).fst = 0) ↔
+                    x < H + y)
+@Becoming.RegimeMargin.ends_below : ∀ {g : Nat → Nat} {H y x : Nat},
+  Becoming.RegimeMargin.Short g H y →
+    Becoming.RegimeMargin.FromNothing g → x < H + y → (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state x = 0
+@Becoming.RegimeMargin.stays_ended : ∀ {g : Nat → Nat} {H y x : Nat},
+  Becoming.RegimeMargin.Short g H y →
+    Becoming.RegimeMargin.FromNothing g →
+      x < H + y → ∀ (k : Nat), (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state (x + k) = 0
+@Becoming.RegimeMargin.ends_beyond_giving : ∀ {g : Nat → Nat} {H : Nat},
+  (∀ (z : Nat), g z < H) →
+    Becoming.RegimeMargin.FromNothing g → ∀ (x : Nat), (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state x = 0
+@Becoming.RegimeMargin.holds : ∀ {g : Nat → Nat} {H y hi x : Nat},
+  Becoming.RegimeMargin.Meets g H y hi →
+    Becoming.RegimeMargin.Keeps g H hi →
+      H + y ≤ x →
+        x ≤ hi →
+          ∀ (n : Nat),
+            x ≤ (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state n ∧
+              (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state n ≤ hi
+@Becoming.RegimeMargin.ends_iff_below : ∀ {g : Nat → Nat} {H y hi x : Nat},
+  0 < H + y →
+    Becoming.RegimeMargin.Short g H y →
+      Becoming.RegimeMargin.FromNothing g →
+        Becoming.RegimeMargin.Meets g H y hi →
+          Becoming.RegimeMargin.Keeps g H hi →
+            x ≤ hi → ((∃ n, (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state n = 0) ↔ x < H + y)
+@Becoming.RegimeMargin.root_above_need : ∀ {g : Nat → Nat} {m H y : Nat},
+  Becoming.RegimeMargin.Gated g m → 0 < H → H ≤ g y → m ≤ y
+@Becoming.RegimeMargin.beyond_draw_iff : ∀ {g : Nat → Nat} {m H y : Nat},
+  Becoming.RegimeMargin.Gated g m → 0 < H → Becoming.RegimeMargin.Root g H y → (m < y ↔ g m < H)
+@Becoming.RegimeMargin.root_mono : ∀ {g g' : Nat → Nat} {H H' y y' : Nat},
+  Becoming.RegimeMargin.Root g H y →
+    Becoming.RegimeMargin.Root g' H' y' → H ≤ H' → Becoming.RegimeMargin.Lowered g' g → y ≤ y'
+@Becoming.RegimeMargin.rises_by_draw : ∀ {g g' : Nat → Nat} {H H' y y' : Nat},
+  Becoming.RegimeMargin.Root g H y →
+    Becoming.RegimeMargin.Root g' H' y' → H ≤ H' → Becoming.RegimeMargin.Lowered g' g → H + y + (H' - H) ≤ H' + y'
+@Becoming.RegimeMargin.lowered_raises : ∀ {g g' : Nat → Nat} {H y y' : Nat},
+  Becoming.RegimeMargin.Root g H y → Becoming.RegimeMargin.Root g' H y' → Becoming.RegimeMargin.Lowered g' g → y ≤ y'
+@Becoming.RegimeMargin.lowered_raises_strictly : ∀ {g g' : Nat → Nat} {H y y' : Nat},
+  Becoming.RegimeMargin.Root g H y →
+    Becoming.RegimeMargin.Root g' H y' → Becoming.RegimeMargin.Lowered g' g → (y < y' ↔ g' y < H)
+@Becoming.RegimeMargin.harms_superadditive : ∀ {g₁ g₂ g : Nat → Nat} {m H₁ H₂ a b c : Nat},
+  Becoming.RegimeMargin.SubadditiveAbove g m →
+    Becoming.RegimeMargin.Lowered g g₁ →
+      Becoming.RegimeMargin.Lowered g g₂ →
+        Becoming.RegimeMargin.Root g₁ H₁ (m + a) →
+          Becoming.RegimeMargin.Root g₂ H₂ (m + b) → Becoming.RegimeMargin.Root g (H₁ + H₂) (m + c) → a + b ≤ c + 1
+Becoming.RegimeMargin.orbit_ge : ∀ (g : Nat → Nat) (H x n : Nat),
+  x ≤ (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state n + H * n
+Becoming.RegimeMargin.not_before : ∀ (g : Nat → Nat) {H x b n : Nat},
+  b + H * n ≤ x → b ≤ (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state n
+@Becoming.RegimeMargin.step_falls_by : ∀ {g : Nat → Nat} {H Y x : Nat},
+  Becoming.RegimeMargin.AtMost g Y → Y ≤ H → H ≤ x → Becoming.RegimeMargin.step g H x + (H - Y) ≤ x
+@Becoming.RegimeMargin.falls_or_bound : ∀ {g : Nat → Nat} {H Y b x : Nat},
+  Becoming.RegimeMargin.AtMost g Y →
+    Y ≤ H →
+      H ≤ b →
+        ∀ (n : Nat),
+          (∃ k, k ≤ n ∧ (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state k < b) ∨
+            (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state n + (H - Y) * n ≤ x ∧
+              b ≤ (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state n
+@Becoming.RegimeMargin.falls_within : ∀ {g : Nat → Nat} {H Y b x n : Nat},
+  Becoming.RegimeMargin.AtMost g Y →
+    Y ≤ H → H ≤ b → x < b + (H - Y) * n → ∃ k, k ≤ n ∧ (Becoming.Law.run (Becoming.RegimeMargin.step g H) x).state k < b
+@Becoming.RegimeMargin.below_spec : ∀ {f : Nat → Bool} {n : Nat},
+  Becoming.RegimeMargin.below f n = true → ∀ (z : Nat), z < n → f z = true
+@Becoming.RegimeMargin.short_of_below : ∀ {g : Nat → Nat} {H y : Nat},
+  Becoming.RegimeMargin.below (fun z => decide (g z < H)) y = true → Becoming.RegimeMargin.Short g H y
+@Becoming.RegimeMargin.meets_of_below : ∀ {g : Nat → Nat} {H y hi : Nat},
+  Becoming.RegimeMargin.below (fun z => !(decide (y ≤ z) && decide (z + H ≤ hi)) || decide (H ≤ g z)) (hi + 1) = true →
+    Becoming.RegimeMargin.Meets g H y hi
+@Becoming.RegimeMargin.keeps_of_below : ∀ {g : Nat → Nat} {H hi : Nat},
+  Becoming.RegimeMargin.below (fun x => decide (Becoming.RegimeMargin.step g H x ≤ hi)) (hi + 1) = true →
+    Becoming.RegimeMargin.Keeps g H hi
+Becoming.RegimeMargin.Concave.roots : Becoming.RegimeMargin.Root Becoming.RegimeMargin.Concave.giving 4 2 ∧
+  Becoming.RegimeMargin.Root Becoming.RegimeMargin.Concave.giving 8 6
+Becoming.RegimeMargin.Peaked.fromNothing : Becoming.RegimeMargin.FromNothing Becoming.RegimeMargin.Peaked.giving
+Becoming.RegimeMargin.Peaked.min_le_left' : ∀ (a b : Nat), min a b ≤ a
+Becoming.RegimeMargin.Peaked.min_le_right' : ∀ (a b : Nat), min a b ≤ b
+Becoming.RegimeMargin.Peaked.atMost : Becoming.RegimeMargin.AtMost Becoming.RegimeMargin.Peaked.giving 4
+@Becoming.RegimeMargin.Peaked.each_holds : ∀ {x : Nat},
+  6 ≤ x →
+    x ≤ 8 →
+      ∀ (n : Nat), x ≤ (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.RegimeMargin.Peaked.giving 3) x).state n
+Becoming.RegimeMargin.Peaked.together_ends : ∀ (x : Nat),
+  (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.RegimeMargin.Peaked.giving (3 + 3)) x).state x = 0
+Becoming.RegimeMargin.Crossing.fromNothing : Becoming.RegimeMargin.FromNothing Becoming.RegimeMargin.Crossing.giving
+Becoming.RegimeMargin.Crossing.root : Becoming.RegimeMargin.Root Becoming.RegimeMargin.Crossing.giving 3 2
+Becoming.RegimeMargin.Crossing.meets_from : ∀ (z : Nat), 2 ≤ z → 3 ≤ Becoming.RegimeMargin.Crossing.giving z
+Becoming.RegimeMargin.Crossing.toward_between : Becoming.RegimeMargin.Adjusted.Between
+  Becoming.RegimeMargin.Crossing.toward Becoming.RegimeMargin.Crossing.giving
+Becoming.RegimeMargin.Crossing.toward_settles : Becoming.RegimeMargin.Adjusted.Settles
+  Becoming.RegimeMargin.Crossing.toward Becoming.RegimeMargin.Crossing.giving
+Becoming.RegimeMargin.Crossing.crosses : Becoming.RegimeMargin.Root Becoming.RegimeMargin.Crossing.giving 3 2 ∧
+  Becoming.RegimeMargin.Adjusted.Between Becoming.RegimeMargin.Crossing.toward Becoming.RegimeMargin.Crossing.giving ∧
+    Becoming.RegimeMargin.Adjusted.Settles Becoming.RegimeMargin.Crossing.toward Becoming.RegimeMargin.Crossing.giving ∧
+      (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.RegimeMargin.Crossing.giving 3) 4).state 4 = 0 ∧
+        (∀ (n : Nat),
+            5 ≤ (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.RegimeMargin.Crossing.giving 3) 5).state n) ∧
+          (∀ (n : Nat),
+              7 ≤
+                ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step Becoming.RegimeMargin.Crossing.toward 3)
+                        (4, 6)).state
+                    (n + 2)).fst) ∧
+            ∀ (n : Nat),
+              ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step Becoming.RegimeMargin.Crossing.toward 3)
+                        (5, 0)).state
+                    (n + 2)).fst =
+                0
+Becoming.RegimeMargin.Crossing.frozen_stays : Becoming.RegimeMargin.Adjusted.Between (fun x r => r)
+    Becoming.RegimeMargin.Crossing.giving ∧
+  (∀ (n : Nat), (Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step (fun x r => r) 3) (4, 3)).state n = (4, 3)) ∧
+    (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.RegimeMargin.Crossing.giving 3) 4).state 4 = 0
+@Becoming.RegimeMargin.step_mono : ∀ {g : Nat → Nat},
+  (∀ (a b : Nat), a ≤ b → g a ≤ g b) →
+    ∀ (H : Nat) {a b : Nat}, a ≤ b → Becoming.RegimeMargin.step g H a ≤ Becoming.RegimeMargin.step g H b
+@Becoming.RegimeMargin.rests_within : ∀ {g : Nat → Nat} {H hi x : Nat},
+  (∀ (a b : Nat), a ≤ b → g a ≤ g b) →
+    Becoming.RegimeMargin.Keeps g H hi →
+      x ≤ hi → ∃ N, N ≤ hi ∧ Becoming.LastChange.StillFrom (Becoming.Law.run (Becoming.RegimeMargin.step g H) x) N
+@Becoming.RegimeMargin.Adjusted.step_mono : ∀ {A : Nat → Nat → Nat},
+  Becoming.RegimeMargin.Adjusted.Rises A →
+    ∀ (H : Nat) {p q : Nat × Nat},
+      Becoming.RegimeMargin.Adjusted.Below p q →
+        Becoming.RegimeMargin.Adjusted.Below (Becoming.RegimeMargin.Adjusted.step A H p)
+          (Becoming.RegimeMargin.Adjusted.step A H q)
+@Becoming.RegimeMargin.Adjusted.sum_lt_of_below : ∀ {p q : Nat × Nat},
+  Becoming.RegimeMargin.Adjusted.Below p q → q ≠ p → p.fst + p.snd < q.fst + q.snd
+@Becoming.RegimeMargin.Adjusted.run_rises : ∀ {A : Nat → Nat → Nat},
+  Becoming.RegimeMargin.Adjusted.Rises A →
+    ∀ {H : Nat} {p : Nat × Nat},
+      Becoming.RegimeMargin.Adjusted.Below p (Becoming.RegimeMargin.Adjusted.step A H p) →
+        ∀ (n : Nat),
+          Becoming.RegimeMargin.Adjusted.Below (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step A H) p n)
+            (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step A H) p (n + 1))
+@Becoming.RegimeMargin.Adjusted.run_falls : ∀ {A : Nat → Nat → Nat},
+  Becoming.RegimeMargin.Adjusted.Rises A →
+    ∀ {H : Nat} {p : Nat × Nat},
+      Becoming.RegimeMargin.Adjusted.Below (Becoming.RegimeMargin.Adjusted.step A H p) p →
+        ∀ (n : Nat),
+          Becoming.RegimeMargin.Adjusted.Below (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step A H) p (n + 1))
+            (Becoming.Law.orbit (Becoming.RegimeMargin.Adjusted.step A H) p n)
+@Becoming.RegimeMargin.Adjusted.rises_to_rest : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H hi x r : Nat},
+  Becoming.RegimeMargin.Adjusted.Rises A →
+    Becoming.RegimeMargin.Adjusted.RestsAtDraw A g H →
+      Becoming.RegimeMargin.Adjusted.Keeps A H hi →
+        x ≤ hi →
+          H ≤ r →
+            Becoming.RegimeMargin.Adjusted.Below (x, r) (Becoming.RegimeMargin.Adjusted.step A H (x, r)) →
+              ∃ N,
+                N ≤ hi + hi - (x + r) ∧
+                  Becoming.LastChange.StillFrom (Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)) N ∧
+                    ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state N).snd = H ∧
+                      x ≤ ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state N).fst ∧
+                        Becoming.RegimeMargin.step g H
+                            ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state N).fst =
+                          ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state N).fst
+@Becoming.RegimeMargin.Adjusted.falls_to_rest : ∀ {A : Nat → Nat → Nat} {g : Nat → Nat} {H x r : Nat},
+  Becoming.RegimeMargin.Adjusted.Rises A →
+    Becoming.RegimeMargin.Adjusted.RestsAtDraw A g H →
+      Becoming.RegimeMargin.Adjusted.FromNothing A →
+        Becoming.RegimeMargin.Adjusted.Below (Becoming.RegimeMargin.Adjusted.step A H (x, r)) (x, r) →
+          ∃ N,
+            N ≤ x + r ∧
+              Becoming.LastChange.StillFrom (Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)) N ∧
+                ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state N = (0, 0) ∨
+                  ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state N).snd = H ∧
+                    H ≤ ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state N).fst ∧
+                      Becoming.RegimeMargin.step g H
+                          ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state N).fst =
+                        ((Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step A H) (x, r)).state N).fst)
+Becoming.RegimeMargin.Adjusted.rests_short : (Becoming.RegimeMargin.Adjusted.Rises fun x x_1 => 1) ∧
+  Becoming.RegimeMargin.Adjusted.RestsAtDraw (fun x x_1 => 1) (fun x => 1) 2 ∧
+    Becoming.RegimeMargin.Adjusted.Below (Becoming.RegimeMargin.Adjusted.step (fun x x_1 => 1) 2 (1, 1)) (1, 1) ∧
+      ∀ (n : Nat), (Becoming.Law.run (Becoming.RegimeMargin.Adjusted.step (fun x x_1 => 1) 2) (1, 1)).state n = (1, 1)
+Becoming.RegimeMargin.Crossing.giving_rises : ∀ (a b : Nat),
+  a ≤ b → Becoming.RegimeMargin.Crossing.giving a ≤ Becoming.RegimeMargin.Crossing.giving b
+Becoming.RegimeMargin.Crossing.climbs : ∀ (n : Nat),
+  Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.RegimeMargin.Crossing.giving 3) 5 n = n + 5
+Becoming.RegimeMargin.Crossing.rises_without_rest : (Becoming.RegimeMargin.Adjusted.Rises fun e x =>
+    Becoming.RegimeMargin.Crossing.giving e) ∧
+  Becoming.RegimeMargin.Adjusted.Below (5, 3)
+      (Becoming.RegimeMargin.Adjusted.step (fun e x => Becoming.RegimeMargin.Crossing.giving e) 3 (5, 3)) ∧
+    (∀ (n : Nat),
+        (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.RegimeMargin.Crossing.giving 3) 5).state n = n + 5) ∧
+      ∀ (N : Nat),
+        ¬Becoming.LastChange.StillFrom
+            (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.RegimeMargin.Crossing.giving 3) 5) N
+Becoming.RegimeMargin.Alternation.keeps : Becoming.RegimeMargin.Keeps Becoming.RegimeMargin.Alternation.giving 1 2
+Becoming.RegimeMargin.Alternation.returns : ∀ (k : Nat),
+  Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.RegimeMargin.Alternation.giving 1) 1 (k + k) = 1
+Becoming.RegimeMargin.Alternation.alternates : (¬∀ (a b : Nat),
+      a ≤ b → Becoming.RegimeMargin.Alternation.giving a ≤ Becoming.RegimeMargin.Alternation.giving b) ∧
+  Becoming.RegimeMargin.Keeps Becoming.RegimeMargin.Alternation.giving 1 2 ∧
+    Becoming.RegimeMargin.Adjusted.RestsAtDraw (fun e x => Becoming.RegimeMargin.Alternation.giving e)
+        Becoming.RegimeMargin.Alternation.giving 1 ∧
+      Becoming.RegimeMargin.Adjusted.Keeps (fun e x => Becoming.RegimeMargin.Alternation.giving e) 1 2 ∧
+        Becoming.RegimeMargin.Adjusted.Below (1, 2)
+            (Becoming.RegimeMargin.Adjusted.step (fun e x => Becoming.RegimeMargin.Alternation.giving e) 1 (1, 2)) ∧
+          (∀ (N : Nat),
+              ¬Becoming.LastChange.StillFrom
+                  (Becoming.Law.run (Becoming.RegimeMargin.step Becoming.RegimeMargin.Alternation.giving 1) 1) N) ∧
+            ∀ (N : Nat),
+              ¬Becoming.LastChange.StillFrom
+                  (Becoming.Law.run
+                    (Becoming.RegimeMargin.Adjusted.step (fun e x => Becoming.RegimeMargin.Alternation.giving e) 1)
+                    (1, 2))
+                  N
