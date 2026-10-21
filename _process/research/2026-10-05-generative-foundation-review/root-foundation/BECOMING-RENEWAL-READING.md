@@ -14591,3 +14591,45 @@ Output → input: chapter (the coupled-web paragraph, thesis T1's sentence, the 
 **Self-review.** The obstacle RM7 named was apparent, not real: stating rest condition by condition avoids equality of functions, and monotone giving respects pointwise equality by antisymmetry. The decision of whether a step changes what is left is made over the covering list, so it needs finitely many conditions, and the law states that. Every premise is used: mutual support for the order and for respecting what is left, the band for giving within draws, the covering list for the bound and the decision. The pair's laws were re-derived rather than kept beside the web's, and five pair-only helpers no law reads any more were removed. RM6's record cited them, so its citations are re-pointed to the web laws. Limits: finitely many conditions; within a band.
 
 **The run.** Core 285 modules and 12,264 theorems, instances 7 and 567, applications 6 and 179; 9 Lean steps ran, 1,195 reused. 37 declarations added to Becoming.RegimeMargin, 31 of them theorems; 5 removed (5 theorems), all with empty axiom reports; the pair's `rests_by`, `ends_iff`, `ends_iff_below`, `threshold_falls` and `fates` now read the web's laws, statements unchanged. Connectivity: 647 of 13,010 apart, unchanged; no new apart root, every new law stated on the web or read by a law that is, the pair's laws derived from the web's and the pair-only helpers no law reads removed; register check passes.
+
+## 326. How drawers in turn come to a mutual best response (SG16)
+
+```text
+Result(s): new record revision-comes-to-drawing-everything (new laws of Becoming.Optimum); reuses
+       drawers-in-turn-draw-everything (the profile, its draws over the steps that remain, perfect profiles,
+       perfect_of_zero, zero_of_le_sub).
+Delta: SG14 showed that every perfect profile of two drawers in turn draws everything; how drawers come to a perfect
+       profile was open. A profile revises another where each new rule, at every step from every level, is a best
+       response to the old profile (Optimum.InTurn.Revises); the first amount drawing the most always gives one
+       (bestUpTo, revise_revises). Along every sequence of revisions over a horizon of N steps, from any profile, both
+       leave nothing at every step of the last k from round 2 k on (revisions_end); so from round 2 N on the profile is
+       drawing everything, perfect by SG14, and the base stands from the first step at what stands at nothing
+       (revised_draw_all, levels_of_zero, of which perfect_levels is now the case); on a web a dependence above what
+       stands at nothing is broken at the first step (Web.revised_broken).
+Premises / correspondence: SG14's model (any law G of what stands; two drawers in turn; no capacity limit; plain sums;
+       rules reading the step and the level); revision simultaneous, each against the old profile; natural amounts,
+       discrete steps. Correspondence: best-response dynamics and learning in games (Fudenberg and Levine 1998).
+Evidence: core receipt 20261021T213117.130056Z (passed).
+Boundary: drawers whose capacities limit a draw, more than two or drawing at once, and revision that is not a best
+       response (noisy or partial learning) are not covered.
+Output → input: chapter §3.4, §7.1, §8.1 item 10 (EN, ZH), the record table; Optimum's header; record
+       drawers-in-turn-draw-everything (its open item); significance review, revision check.
+```
+
+**The question.** SG14 showed that the open-access outcome is the only perfect profile of two drawers in turn, each ranking courses ([§324](#324-drawers-in-turn-each-ranking-courses-sg14)). A perfect profile is an equilibrium; whether drawers that adjust their rules come to it, and from where, was open. A restraining profile, both leaving everything, keeps the base, and might persist.
+
+**What was built** (new laws of `Becoming.Optimum`, pure core, every axiom report empty).
+
+- *Revision* (`Optimum.InTurn.Revises`). A new profile revises an old one where each new rule leaves at most what it is given and, at every step from every level, is a best response to the old profile: the second's to what follows under the old rules, the first's to the old second at the step and what follows.
+- *Revision always exists* (`Optimum.InTurn.bestUpTo`, `Optimum.InTurn.bestUpTo_le`, `Optimum.InTurn.bestUpTo_max`, `Optimum.InTurn.reviseFirst`, `Optimum.InTurn.reviseSecond`, `Optimum.InTurn.revise_revises`, `Optimum.InTurn.revised`). The first of finitely many amounts that draws the most is a best response, found by search, so the sequence of revisions from any profile exists (`revised`) and the law does not hold vacuously.
+- *Revising from the horizon back* (`Optimum.InTurn.secondDrawn_of_zero`, `Optimum.InTurn.revisions_end`). Where the old profile leaves nothing at every later step, the second draws nothing later whatever it leaves, so its revision leaves nothing; where also the old second leaves nothing at the step, the first's continuation is the same whatever it leaves, so its revision leaves nothing. Each step back takes two rounds: from round `2 k` on both leave nothing at every step of the last `k`.
+- *Drawing everything reached* (`Optimum.InTurn.levels_of_zero`, `Optimum.InTurn.revised_draw_all`). From round `2 N` on both leave nothing at every step before the horizon, the profile SG14 proved perfect, and the base stands from the first step at what stands at nothing. `perfect_levels` now reads `levels_of_zero` (rule 9).
+- *On a web, and the witness* (`Web.revised_broken`, `Optimum.Holding.gated_restraint_keeps`, `Optimum.Holding.gated_revised`). A dependence above what stands at nothing is broken at the first step from round `2 N` on. Under the gate, two drawers who both start by leaving everything keep the dweller; revised from round `2 (n + 2)` on they break it.
+
+**Against the prior form** ([significance review, revision check](BECOMING-SIGNIFICANCE-REVIEW.md#revision-check)). Best-response dynamics in finite games of perfect information reaches the backward-induction outcome; the spine's form gives the exact round bound, twice the horizon, from every profile, over any law of what stands, and on the web as dependences broken.
+
+*Reading* [AI reading, D45]. Restraint is not a resting point for drawers who each adjust to the other: starting from mutual restraint, which keeps the base and what depends on it, revising toward best responses unravels it from the horizon back, two rounds a step. Neither far-sight (SG14) nor adjustment (here) keeps a commons that either alone may keep; what keeps it lies outside each drawer's order.
+
+**Self-review.** Every premise is used: revision must be a best response at every step from every level, since the induction reads the second's rule at levels the first may leave. The bound is the induction's; that it is tight in general is not claimed. The search for a best response makes the law non-vacuous constructively. A lemma whose statement is about rules, not runs, would be apart, so the web law and the witness read `revised_draw_all`. Limits: SG14's model; simultaneous revision.
+
+**The run.** Core 285 modules and 12,274 theorems, instances 7 and 567, applications 6 and 179; 13 Lean steps ran, 1,191 reused. 15 declarations added to Becoming.Optimum, 10 of them theorems, none removed, all with empty axiom reports; `perfect_levels` now reads `levels_of_zero`, its statement unchanged. Connectivity: 647 of 13,020 apart, unchanged; no new apart root, every new law stated on the web or read by a law that is, the witness on the flow; register check passes.

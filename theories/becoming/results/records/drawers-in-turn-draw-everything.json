@@ -73,8 +73,8 @@
       "kind": "scope"
     },
     {
-      "en": "How drawers come to a mutual best response; rules reading more than the step and the level.",
-      "zh": "抽取者如何达到相互最优回应；读取多于步与水平的规则。",
+      "en": "How drawers come to a mutual best response other than by best-response revision (revision-comes-to-drawing-everything); rules reading more than the step and the level.",
+      "zh": "抽取者以最优回应修订之外的方式如何达到相互最优回应（revision-comes-to-drawing-everything）；读取多于步与水平的规则。",
       "kind": "scope"
     },
     {
@@ -97,8 +97,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T184941.328469Z）：Becoming.Optimum 新增的 15 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 324 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Capacities limiting a draw; more than two drawers or drawing at once; how drawers come to a mutual best response; an independent review.",
-    "zh": "容量限制抽取；多于两个抽取者或同时抽取；抽取者如何达到相互最优回应；独立审查。"
+    "en": "Capacities limiting a draw; more than two drawers or drawing at once; noisy or partial revision; an independent review.",
+    "zh": "容量限制抽取；多于两个抽取者或同时抽取；有噪声或部分的修订；独立审查。"
   },
   "correspondence": {
     "en": "The dynamic commons with linear payoffs (Levhari and Mirman 1980): with no limit on a draw the subgame-perfect outcome is immediate exhaustion, here for every perfect profile of drawers in turn, by backward induction (Kuhn 1953; Selten 1965).",
@@ -167,6 +167,13 @@
         "en": "At one step several optimizers at a mutual best response drain by their joint capacity; here over courses.",
         "zh": "在一步中处于相互最优回应的多个优化者以合计容量抽干；此处在过程上。"
       }
+    },
+    {
+      "id": "revision-comes-to-drawing-everything",
+      "detail": {
+        "en": "Revising toward best responses, from any profile, drawers in turn come to drawing everything within 2N rounds.",
+        "zh": "向最优回应修订，自任一组合出发，轮流的抽取者在 2N 轮之内达到全部抽取。"
+      }
     }
   ],
   "references": [
@@ -197,7 +204,7 @@
         "Becoming.Optimum.byDrawn",
         "Becoming.Web.perfect_broken"
       ],
-      "sha256": "52aa34b05946e465f5af5803238304ee7749c198c350a2ff9f91cb9ed6755f1f"
+      "sha256": "7f4b54c8c00bd717638629701e8ff67a502690bcba38f1dc4cdbeff01d3d9deb"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json",
@@ -217,13 +224,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "328a3b9bdc41a0427c38b346b02fd50ef66527f6cefa62221e3b82dc33df4eb5"
+      "sha256": "f1cfd4c102d716474c2f082886bfa41c11fc981890646964b856ce6c07367ba7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json",
+      "role": "receipt",
+      "sha256": "dc32210cb9097648288ee1bb87b274883428747de6279faafd9d154d352d043f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -233,6 +246,10 @@
     {
       "en": "22 October 2026: added (SG14), drawers in turn, each ranking courses: every perfect profile draws everything, the base standing from the first step at what stands at nothing; study section 324.",
       "zh": "2026年10月22日：新增（SG14），轮流的抽取者各自按过程排序：每个完美组合都全部抽取，自第一步起基础立于零处所立者；研究第 324 节。"
+    },
+    {
+      "en": "22 October 2026, SG16: how drawers come to a mutual best response is answered for best-response revision (record revision-comes-to-drawing-everything, study section 326). Its laws are unchanged.",
+      "zh": "2026年10月22日，SG16：抽取者如何达到相互最优回应已就最优回应修订回答（记录 revision-comes-to-drawing-everything，研究第 326 节）。其规律不变。"
     }
   ]
 }

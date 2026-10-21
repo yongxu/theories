@@ -5,7 +5,7 @@
 
 [Home](README.md) · [Start here](MAP.md) · [Results](RESULTS.md) · [Scopes](GOALS.md) · [Connections](DEPENDENCIES.md) · [Open questions](OPEN-QUESTIONS.md) · [Contribute](_process/RESULT-WORKFLOW.md)
 
-336 registered results: 316 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 839 curated edges join 289 results to the results they draw on.
+337 registered results: 317 with a recorded Lean receipt (`recorded-checked`), 13 reviewed at their stated scope (`reviewed-scoped`) and 4 open targets (`open`). 840 curated edges join 290 results to the results they draw on.
 
 Each line names a result, then, after ←, the results it draws on. A plain edge is `formal-reuse`: the consumer's proof uses the producer's theorem; *interpretive* and *application* edges are marked. Each edge has a stable anchor `consumer--producer`. The edge's detail, the producer's output, the consumer's input, the retained conditions and the connection evidence are on the consumer's record page, whose "Used by" line lists the reverse edges. Curated edges retain their exact interpretation; file imports can be explored with `make research-find QUERY=GenerativeCore`, and an import is not itself a proof of scientific composition.
 
@@ -220,6 +220,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 - [retrospective-source-binding][] ← <a id="retrospective-source-binding--acquired-binding-compositional-use"></a>[acquired-binding-compositional-use][] · <a id="retrospective-source-binding--encounter-control-and-retention"></a>[encounter-control-and-retention][] *(interpretive)*
 - [returning-novelty-forgetting-on-levels][] ← <a id="returning-novelty-forgetting-on-levels--entropy-history-and-record"></a>[entropy-history-and-record][] · <a id="returning-novelty-forgetting-on-levels--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="returning-novelty-forgetting-on-levels--imbalance-as-relatum"></a>[imbalance-as-relatum][]
 - [returning-where-the-course-branches][] ← <a id="returning-where-the-course-branches--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="returning-where-the-course-branches--process-and-frame-as-readings"></a>[process-and-frame-as-readings][]
+- [revision-comes-to-drawing-everything][] ← <a id="revision-comes-to-drawing-everything--drawers-in-turn-draw-everything"></a>[drawers-in-turn-draw-everything][]
 - [revision-with-an-undecided-value][] ← <a id="revision-with-an-undecided-value--recurrence-without-premise"></a>[recurrence-without-premise][] · <a id="revision-with-an-undecided-value--readings-within-what-they-read"></a>[readings-within-what-they-read][]
 - [rising-and-falling-in-one-exchange][] ← <a id="rising-and-falling-in-one-exchange--no-finite-part-bears-taking"></a>[no-finite-part-bears-taking][] · <a id="rising-and-falling-in-one-exchange--coming-and-ceasing-keep-pace"></a>[coming-and-ceasing-keep-pace][] · <a id="rising-and-falling-in-one-exchange--generation-is-replenishment"></a>[generation-is-replenishment][] · <a id="rising-and-falling-in-one-exchange--unceasing-generation-needs-renewal"></a>[unceasing-generation-needs-renewal][] · <a id="rising-and-falling-in-one-exchange--more-needs-renewers"></a>[more-needs-renewers][] · <a id="rising-and-falling-in-one-exchange--laws-of-one-step"></a>[laws-of-one-step][]
 - [risk-certificate-outcome-distinction][] ← <a id="risk-certificate-outcome-distinction--assured-route-criterion"></a>[assured-route-criterion][]
@@ -533,6 +534,7 @@ Each line names a result, then, after ←, the results it draws on. A plain edge
 [retrospective-source-binding]: theories/becoming/results/records/retrospective-source-binding.md
 [returning-novelty-forgetting-on-levels]: theories/becoming/results/records/returning-novelty-forgetting-on-levels.md
 [returning-where-the-course-branches]: theories/becoming/results/records/returning-where-the-course-branches.md
+[revision-comes-to-drawing-everything]: theories/becoming/results/records/revision-comes-to-drawing-everything.md
 [revision-with-an-undecided-value]: theories/becoming/results/records/revision-with-an-undecided-value.md
 [rising-and-falling-in-one-exchange]: theories/becoming/results/records/rising-and-falling-in-one-exchange.md
 [risk-certificate-outcome-distinction]: theories/becoming/results/records/risk-certificate-outcome-distinction.md

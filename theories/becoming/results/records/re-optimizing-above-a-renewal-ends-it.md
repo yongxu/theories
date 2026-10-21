@@ -110,6 +110,7 @@ Open-access depletion (Gordon 1954) and its dynamics with critical depensation (
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json) | — |
 
 Aliases: `re-optimizing above a renewal ends it`, `a course of re-optimizing steps`, `open access over a renewing condition`, `the gate decides the draw`, `在更新之上重新优化将其终结`, `Becoming.Optimum.Reoptimizes`, `Becoming.Optimum.course_beyond`, `Becoming.Web.course_lost_iff`
 

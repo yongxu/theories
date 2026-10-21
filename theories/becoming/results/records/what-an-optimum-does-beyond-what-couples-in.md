@@ -97,6 +97,7 @@ Zhuang and Hadfield-Menell (NeurIPS 2020), Theorem 1: optimizing a proxy that re
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json) | — |
 
 Aliases: `what an optimum does beyond what couples in`, `the drive to the least level`, `optimizing a proxy`, `最优对耦合入者之外做什么`, `Becoming.Optimum.least_iff`, `Becoming.Web.optimum_broken_iff`, `Becoming.Flow.keeping_optimum_takes_slack`
 

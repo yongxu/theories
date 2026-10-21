@@ -76,6 +76,7 @@ The turnpike: a finite-horizon optimum stays on the path of greatest yield and d
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json) | — |
 
 Aliases: `valuing what is left at any worth`, `a terminal value above the worth of the draw`, `以任一价值对所留计值`, `Becoming.Optimum.frontier_holds_valued`, `Becoming.Web.frontier_rebuilt_valued`
 

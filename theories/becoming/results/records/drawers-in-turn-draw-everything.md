@@ -25,7 +25,7 @@
 ## Does not show
 
 - Drawers whose capacities limit a draw, more than two drawers, or drawing at once with a rule of sharing.
-- How drawers come to a mutual best response; rules reading more than the step and the level.
+- How drawers come to a mutual best response other than by best-response revision (revision-comes-to-drawing-everything); rules reading more than the step and the level.
 - That the drain is a harm or restraint better: no evaluation enters; the laws say what perfect profiles do.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -40,7 +40,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-Capacities limiting a draw; more than two drawers or drawing at once; how drawers come to a mutual best response; an independent review.
+Capacities limiting a draw; more than two drawers or drawing at once; noisy or partial revision; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -61,6 +61,9 @@ The dynamic commons with linear payoffs (Levhari and Mirman 1980): with no limit
   - Input: The witness in turn.
   - Preserved conditions: The gate from the dweller's need. [Optimum.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean)
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). At one step several optimizers at a mutual best response drain by their joint capacity; here over courses.
+- related, not a proved adapter: [revision-comes-to-drawing-everything](revision-comes-to-drawing-everything.md). Revising toward best responses, from any profile, drawers in turn come to drawing everything within 2N rounds.
+
+**Used by:** [revision-comes-to-drawing-everything](revision-comes-to-drawing-everything.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -72,6 +75,7 @@ The dynamic commons with linear payoffs (Levhari and Mirman 1980): with no limit
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json) | — |
 
 Aliases: `drawers in turn draw everything`, `the others' rule derived`, `轮流的抽取者全部抽取`, `Becoming.Optimum.InTurn.perfect_ends`, `Becoming.Web.perfect_broken`
 
@@ -79,6 +83,7 @@ Aliases: `drawers in turn draw everything`, `the others' rule derived`, `轮流�
 ### History
 
 - 22 October 2026: added (SG14), drawers in turn, each ranking courses: every perfect profile draws everything, the base standing from the first step at what stands at nothing; study section 324.
+- 22 October 2026, SG16: how drawers come to a mutual best response is answered for best-response revision (record revision-comes-to-drawing-everything, study section 326). Its laws are unchanged.
 
 </details>
 

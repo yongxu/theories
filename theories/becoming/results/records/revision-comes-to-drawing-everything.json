@@ -1,0 +1,203 @@
+{
+  "schema_version": 2,
+  "id": "revision-comes-to-drawing-everything",
+  "title": {
+    "en": "Revision comes to drawing everything",
+    "zh": "修订达到全部抽取"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T21:36:01+00:00",
+  "statement": {
+    "en": "Drawers in turn revising toward best responses, from any profile, both leave nothing at every step from round 2N on: they come to the perfect profile within twice the horizon, mutual restraint included.",
+    "zh": "轮流的抽取者向最优回应修订，自任一组合出发，自第 2N 轮起两者每步不留：在视野的两倍之内达到完美组合，相互克制亦然。"
+  },
+  "laws": [
+    {
+      "en": "A profile revises another where each new rule, at every step from every level, is a best response to the old profile; the first of finitely many amounts drawing the most always gives one, so revisions exist from any profile.",
+      "zh": "一个组合修订另一个，若每条新规则在每步、从每个水平都是对旧组合的最优回应；有限多个量中抽取最多的第一个总给出一个，故修订自任一组合都存在。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.Revises",
+        "Becoming.Optimum.InTurn.bestUpTo",
+        "Becoming.Optimum.InTurn.bestUpTo_le",
+        "Becoming.Optimum.InTurn.bestUpTo_max",
+        "Becoming.Optimum.InTurn.reviseFirst",
+        "Becoming.Optimum.InTurn.reviseSecond",
+        "Becoming.Optimum.InTurn.revise_revises",
+        "Becoming.Optimum.InTurn.revised"
+      ]
+    },
+    {
+      "en": "Along every sequence of revisions over N steps, from any profile, both leave nothing at every step of the last k from round 2 k on; so from round 2 N on the profile draws everything and the base stands from the first step at what stands at nothing.",
+      "zh": "沿 N 步上的每个修订序列，自任一组合出发，自第 2 k 轮起两者在最后 k 步每步不留；故自第 2 N 轮起组合全部抽取，自第一步起基础立于零处所立者。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.levels_of_zero",
+        "Becoming.Optimum.InTurn.secondDrawn_of_zero",
+        "Becoming.Optimum.InTurn.revisions_end",
+        "Becoming.Optimum.InTurn.revised_draw_all"
+      ]
+    },
+    {
+      "en": "On a web, from round 2 N on, a dependence above what stands at nothing, met at the start, is broken at the first step.",
+      "zh": "在网上，自第 2 N 轮起，起始时被满足、高于零处所立者的依存在第一步被打破。",
+      "declarations": [
+        "Becoming.Web.revised_broken"
+      ]
+    },
+    {
+      "en": "Witness: under the gate, two drawers who both start by leaving everything keep the dweller; revised from round 2 (n + 2) on they break it.",
+      "zh": "见证：门控下，两个开始都留下一切的抽取者保持居者；自第 2 (n + 2) 轮起修订后它们打破它。",
+      "declarations": [
+        "Becoming.Optimum.Holding.gated_restraint_keeps",
+        "Becoming.Optimum.Holding.gated_revised"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. SG14's model: any law G of what stands; two drawers in turn, no capacity limit; plain sums over the steps that remain; rules reading the step and the level; revision simultaneous, each new rule a best response against the old profile at every step from every level; natural amounts, discrete steps.",
+      "zh": "不加公理。SG14 的模型：任一所立之律 G；两个轮流的抽取者，无容量限制；其后各步之和；规则读取步与水平；修订同时进行，每条新规则在每步、从每个水平都是对旧组合的最优回应；自然数量，离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Revision that is not a best response: noisy, partial or local learning.",
+      "zh": "非最优回应的修订：有噪声、部分或局部的学习。",
+      "kind": "scope"
+    },
+    {
+      "en": "Drawers whose capacities limit a draw, more than two, or drawing at once.",
+      "zh": "受容量限制、多于两个或同时抽取的抽取者。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the bound 2N is tight in general: it is the induction's.",
+      "zh": "界 2N 一般是紧的：它是归纳给出的界。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T213117.130056Z): the 15 declarations Becoming.Optimum gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 326; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T213117.130056Z）：Becoming.Optimum 新增的 15 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 326 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Noisy or partial revision; capacities limiting a draw; more drawers; an independent review.",
+    "zh": "有噪声或部分的修订；容量限制抽取；更多抽取者；独立审查。"
+  },
+  "correspondence": {
+    "en": "Best-response dynamics settles on the backward-induction outcome in finite games of perfect information (Fudenberg and Levine 1998); cooperation unravels from the last period (Selten 1978).",
+    "zh": "在有限完美信息博弈中，最优回应动态落在逆向归纳的结果上（Fudenberg 与 Levine 1998）；合作自最后一期瓦解（Selten 1978）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "revision comes to drawing everything",
+    "how drawers come to a mutual best response",
+    "修订达到全部抽取",
+    "Becoming.Optimum.InTurn.revised_draw_all",
+    "Becoming.Optimum.InTurn.revisions_end"
+  ],
+  "dependencies": [
+    {
+      "id": "drawers-in-turn-draw-everything",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The profile, its draws, perfect profiles and drawing everything are reused; its open item is answered.",
+        "zh": "沿用组合、其所抽取、完美组合与全部抽取；回答其开放项。"
+      },
+      "interface": {
+        "output": {
+          "en": "Perfect, perfect_of_zero, zero_of_le_sub.",
+          "zh": "Perfect、perfect_of_zero、zero_of_le_sub。"
+        },
+        "input": {
+          "en": "How drawers come to the perfect profile.",
+          "zh": "抽取者如何达到完美组合。"
+        },
+        "conditions": {
+          "en": "Best-response revision.",
+          "zh": "最优回应修订。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.Holding.gate",
+        "Becoming.Optimum.Holding.gated_restraint_keeps",
+        "Becoming.Optimum.Holding.gated_revised",
+        "Becoming.Optimum.InTurn.BestAt",
+        "Becoming.Optimum.InTurn.Perfect",
+        "Becoming.Optimum.InTurn.Revises",
+        "Becoming.Optimum.InTurn.bestUpTo",
+        "Becoming.Optimum.InTurn.bestUpTo_le",
+        "Becoming.Optimum.InTurn.bestUpTo_max",
+        "Becoming.Optimum.InTurn.firstDrawn",
+        "Becoming.Optimum.InTurn.levels",
+        "Becoming.Optimum.InTurn.levels_of_zero",
+        "Becoming.Optimum.InTurn.perfect_levels",
+        "Becoming.Optimum.InTurn.perfect_of_zero",
+        "Becoming.Optimum.InTurn.reviseFirst",
+        "Becoming.Optimum.InTurn.reviseSecond",
+        "Becoming.Optimum.InTurn.revise_revises",
+        "Becoming.Optimum.InTurn.revised",
+        "Becoming.Optimum.InTurn.revised_draw_all",
+        "Becoming.Optimum.InTurn.revisions_end",
+        "Becoming.Optimum.InTurn.secondDrawn",
+        "Becoming.Optimum.InTurn.secondDrawn_of_zero",
+        "Becoming.Optimum.InTurn.zero_of_le_sub",
+        "Becoming.Web.revised_broken"
+      ],
+      "sha256": "7f4b54c8c00bd717638629701e8ff67a502690bcba38f1dc4cdbeff01d3d9deb"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json",
+      "role": "receipt",
+      "sha256": "dc32210cb9097648288ee1bb87b274883428747de6279faafd9d154d352d043f"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "8ad082d03b3f3fb2d06747fa135b8b0a5511638e2386112748c9dc9016159892"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "c6007ba0617aa893ddef2b52e8b40c3fc2a457f40ae05ffd376af93b08ffaa8c"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "f1cfd4c102d716474c2f082886bfa41c11fc981890646964b856ce6c07367ba7"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (SG16), revision toward best responses comes to drawing everything within 2N rounds; study section 326.",
+      "zh": "2026年10月22日：新增（SG16），向最优回应的修订在 2N 轮之内达到全部抽取；研究第 326 节。"
+    }
+  ]
+}
