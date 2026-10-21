@@ -1,0 +1,18 @@
+<a id="revision-check"></a>
+## A check: how drawers in turn come to a mutual best response (22 October 2026, SG16)
+
+An AI check (one session, 22 October), made while the Lean was written, of what SG14 ([in-turn check](#in-turn-check)) left open: whether drawers who adjust their rules come to the perfect profile. **Verdict: the mathematics is known in its kind: in finite games of perfect information, best-response dynamics settles on the backward-induction outcome, step by step from the end. The spine's form gives the exact bound of two rounds a step, from every profile, with a constructive best response, and reads it on the web as dependences broken; that mutual restraint unravels under it is the reading.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Best-response dynamics and learning in games; convergence to backward induction in finite perfect-information games | Fudenberg and Levine, *The Theory of Learning in Games* (1998) (from memory) | `Optimum.InTurn.revisions_end`, `Optimum.InTurn.revised_draw_all`: from round `2 N` on, from every profile, both draw everything |
+| Unravelling of cooperation from the last period in finite repeated games | Selten (1978), the chain-store paradox; finitely repeated prisoner's dilemma (from memory) | `Optimum.Holding.gated_revised`: mutual restraint keeping the dweller unravels under revision |
+
+```text
+Result(s): new record revision-comes-to-drawing-everything (SG16, new laws of Becoming.Optimum)
+Delta: drawers in turn revising toward best responses, from any profile, both leave nothing at every step from round 2N on; a revision always exists
+Supplied premises / correspondence: SG14's model; simultaneous best-response revision; natural amounts; discrete steps. Correspondence: Fudenberg and Levine 1998; Selten 1978
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; capacities, more drawers, drawing at once, partial or noisy revision not stated
+Integration: chapter §3.4, §7.1 and §8.1 item 10
+```
