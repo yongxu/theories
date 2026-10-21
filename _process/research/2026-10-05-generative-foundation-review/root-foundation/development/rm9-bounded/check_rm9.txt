@@ -1,0 +1,19 @@
+<a id="bounded-check"></a>
+## A check: thresholds beyond a band (22 October 2026, RM9)
+
+An AI check (one session, 22 October), made while the Lean was written, of what RM8 ([web-rest check](#web-rest-check)) left open: thresholds on coupled webs beyond a band. **Verdict: the mathematics is known in its kind. A deterministic map on a finite set is eventually periodic within the set's size, and properties of finite-state runs are decided by bounded checks. The spine's form states this constructively on a web read condition by condition, with no equality of functions, and applies it to the margin: where the run from the top level stays bounded, each condition's point of no return is exact and falls as the others rise, beyond any band.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| Eventual periodicity of a map on a finite set: preperiod and period within its size | pigeonhole; Floyd's cycle detection (Knuth, *TAOCP* vol. 2, from memory) | `Coupled.Indexed.returns_within`, `Coupled.Indexed.repeats`: a run within `B` comes back within `(B + 1)^n` steps and repeats |
+| Bounded model checking: properties of finite-state systems decided by runs of bounded length | Biere, Cimatti, Clarke and Zhu (1999) (from memory) | `Coupled.Indexed.ends_iff_within`: whether a condition ends is decided by a window of length `L + 1` from step `L` |
+| Comparison principle of monotone systems | Hirsch (1985); Smith (1995) (from memory) | `Coupled.Indexed.threshold_falls_within`: beyond a band, the threshold still does not rise as others rise |
+
+```text
+Result(s): new record thresholds-beyond-a-band (RM9, new laws of Becoming.RegimeMargin)
+Delta: beyond a band, a run of a finite web within a bound comes back and repeats, so whether a condition ends is decided by a finite check where giving reads condition by condition; under mutual support each point of no return is exact and does not rise as others rise wherever the run from the top level stays bounded; Relay, with no band, has its threshold fall from three to two
+Supplied premises / correspondence: whole numbers; finitely many conditions; pointwise reading; a bound on the run; for the threshold mutual support. Correspondence: eventual periodicity; bounded model checking; monotone systems
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; runs without bound, webs with a recent giving and amounts beyond whole numbers not stated
+Integration: chapter's coupled-web paragraph, thesis T1's sentence and record table
+```

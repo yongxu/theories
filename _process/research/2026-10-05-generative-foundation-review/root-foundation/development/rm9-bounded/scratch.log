@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rm9/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rm9-bounded/tree",
+  "modules": 62,
+  "ran": [
+    "Becoming.RegimeMargin",
+    "BecomingRegimeMarginAxiomAudit"
+  ],
+  "reused": 61,
+  "unclean": [],
+  "audits": {
+    "Becoming.RegimeMargin": {
+      "theorems": 222,
+      "declarations": 301,
+      "with_axioms": {}
+    }
+  }
+}

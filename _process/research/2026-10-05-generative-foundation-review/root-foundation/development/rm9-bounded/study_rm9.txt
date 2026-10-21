@@ -1,0 +1,50 @@
+## {N}. Thresholds beyond a band: a bound on the run in its place (RM9)
+
+```text
+Result(s): new record thresholds-beyond-a-band (new laws of Becoming.RegimeMargin); reuses rest-on-coupled-webs (the
+       web's step, setAt, the threshold's search by leading, the alike laws now stated for pointwise reading) and
+       coupled-webs (the web's order, Ends, ends_of_below, run_below).
+Delta: RM8 decided ending and stated thresholds only within a band, where mutual support makes each giving at most its
+       draw and runs rest; beyond a band runs need not rest (Relay.cycles). A bound on the run takes the band's place.
+       A run within B has its levels among the (B + 1)^n lists of levels within B, n the conditions' count
+       (levelLists, levelLists_length, levels_mem), so by pigeonhole it comes back to a state within that many steps
+       (returns_within) and repeats from there wherever each giving reads what is left condition by condition
+       (Pointwise, repeats). So, with no band and no order of states, a condition ends exactly where it is nothing at
+       every step from L = (B + 1)^n to 2 L, and where it ends it is nothing from L on (ends_iff_within). Under mutual
+       support, wherever the run from a condition's top level considered stays within B, its point of no return given
+       the others is exact (thresholdWithin, ends_iff_below_within) and does not rise as any other level rises
+       (threshold_falls_within). Rule 9: the alike laws (step_alike, run_alike, ends_alike) now take pointwise
+       reading, of which mutual support is the case (pointwise_of_rises). Witness: Relay keeps no band from three up,
+       yet from two with its partner at three its run stays within three; its first condition's threshold is three
+       with the partner at two and two with the partner at three (Relay.threshold_beyond_band).
+Premises / correspondence: whole numbers; finitely many conditions listed by a covering list; draws taken first; each
+       giving a law of what is left of all, read condition by condition (for the decision), rising with each (for the
+       threshold); a bound on the run from the top level considered; discrete steps. Correspondence: eventual
+       periodicity of a deterministic map on a finite set (pigeonhole); decidability of reachability properties of
+       finite-state systems by bounded checks.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: runs that grow without bound (there ending is not decided here), infinitely many conditions, webs with a
+       recent giving, and amounts beyond whole numbers are not covered; the decision's step count, exponential in the
+       conditions' count, is not claimed tight.
+Output → input: chapter (the coupled-web paragraph, thesis T1's sentence, the record table; EN, ZH); RegimeMargin's
+       header; record rest-on-coupled-webs (its open item); significance review, bounded check.
+```
+
+**The question.** RM8 made each condition's point of no return on a finite web exact, and showed it falls as any other level rises, within a band ([§325](#325-rest-and-points-of-no-return-on-coupled-webs-rm8)). The band is a strong premise: under mutual support it bounds every giving by its draw, so no level above its draw rises. Growth beyond a band is where `Relay`'s cycle lives, and RM6 named what deciding ending there would need: a bound on the run in place of the band ([§306](#306-coupled-regimes-a-margin-that-is-not-its-own-rm6)).
+
+**What was built** (new laws of `Becoming.RegimeMargin`, pure core, every axiom report empty).
+
+- *Reading condition by condition* (`Coupled.Indexed.Pointwise`, `Coupled.Indexed.pointwise_of_rises`). A giving reads what is left condition by condition where what is left alike at every condition gives alike; mutual support does so by antisymmetry. The alike laws `step_alike`, `run_alike` and `ends_alike` now take this premise (rule 9), and their callers pass mutual support's case.
+- *Counting the states within a bound* (`Coupled.Indexed.levels`, `Coupled.Indexed.levels_alike`, `Coupled.Indexed.withFirst`, `Coupled.Indexed.withFirstUpTo`, `Coupled.Indexed.levelLists`, `Coupled.Indexed.withFirst_length`, `Coupled.Indexed.withFirstUpTo_length`, `Coupled.Indexed.levelLists_length`, `Coupled.Indexed.mem_withFirst`, `Coupled.Indexed.mem_withFirstUpTo`, `Coupled.Indexed.levels_mem`). A state is read through the list of its listed levels; the lists of `n` levels within `B` are listed, `(B + 1)^n` of them, and every state within `B` has its levels among them. Two states with the same levels are alike at every condition, so no equality of functions is needed.
+- *Coming back and repeating* (`Coupled.Indexed.StaysWithin`, `Coupled.Indexed.within_below`, `Coupled.Indexed.returns_within`, `Coupled.Indexed.repeats`, `Coupled.Indexed.repeats_mul`, `Coupled.Indexed.zero_from_window`). A run within `B` is, at some step at most `(B + 1)^n`, as it was at an earlier step (pigeonhole, `revisits_within`, with no decidability). Where each giving reads condition by condition, it then repeats with that period. Under mutual support every run below a run within `B` stays within it.
+- *Ending decided* (`Coupled.Indexed.ends_iff_within`, `Coupled.Indexed.below_of`, `Coupled.Indexed.endingWithin`, `Coupled.Indexed.ending_iff`). A condition ends exactly where it is nothing at every step from `L` to `2 L`, `L = (B + 1)^n`, a window that holds a whole period; and where it ends it is nothing from `L` on. The check is a finite test, with no band, no order of states and no omniscience.
+- *Points of no return beyond a band* (`Coupled.Indexed.thresholdWithin`, `Coupled.Indexed.ends_iff_below_within`, `Coupled.Indexed.threshold_falls_within`). Under mutual support, where the run from condition `i` at its top level `hi`, the others as given, stays within `B`, every run from a lower level does, and the least level up to `hi + 1` from which the check fails is exact: `i` ends from a level up to `hi` exactly below it. Others' levels lower give a threshold no lower, the bound read at the higher.
+- *The witness* (`Coupled.Relay.ends_set`, `Coupled.Relay.threshold_beyond_band`). `Relay` keeps no band at any `hi` from three up, since from `hi` at both the first rises to `hi + 1`. Yet the run from two with its partner at three moves between two and three and three and two, within three. With levels up to two and the bound three, the first condition's threshold is three with its partner at two, from every level of which it ends, and two with its partner at three, where it ends from nothing and one and holds from two.
+
+**Against the prior form** ([significance review, bounded check](BECOMING-SIGNIFICANCE-REVIEW.md#bounded-check)). A deterministic map on a finite set is eventually periodic, with preperiod and period within the set's size, and properties of finite-state runs are decided by bounded checks. That is standard. The spine's form states it constructively on a web read condition by condition, with no equality of functions, and puts it to work on the margin: beyond a band, a bound on the run alone makes each condition's point of no return exact and falling as others rise.
+
+*Reading* [AI reading, D45]. A web need not settle for a condition's point of no return to be its own fact: where the whole stays bounded, cycling or not, whether a condition survives is decided within the web's count of states, and the more the others hold, the less it needs. What the bound leaves out is growth without bound, where survival is not decided in finite time here.
+
+**Self-review.** Every premise is used. Pointwise reading makes a return of levels a return of the run; finitely many listed conditions make the states finite; the bound makes them few. Mutual support is needed only for the threshold, through the order of runs (`within_below`, `ends_of_below`): the decision holds for inhibition webs as well, where they stay bounded. The bound is required only of the run from the top level, since under mutual support every lower run stays below it. The window `L` to `2 L` is generous; a tighter test would need the period itself, which the pigeonhole gives only within `L`. Where a band and a bound both hold, `thresholdWithin` and RM8's `threshold` are both exact, so they agree; that agreement is argued here, not stated as a law. The band's form is kept for its linear step bound and its rest. Limits: bounded runs; finitely many conditions; whole numbers.
+
+**The run.** {CORE_LINE}. {DECLS} declarations added to Becoming.RegimeMargin, {THEOREMS} of them theorems, none removed, all with empty axiom reports; `step_alike`, `run_alike` and `ends_alike` now take pointwise reading. Connectivity: {APART}.
