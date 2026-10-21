@@ -1,0 +1,18 @@
+<a id="recent-check"></a>
+## A check: webs with a recent giving (22 October 2026, RM10)
+
+An AI check (one session, 22 October), made while the Lean was written, of what RM8 and RM9 ([bounded check](#bounded-check)) left open: coupled webs whose giving reads what each condition gave last. **Verdict: the mathematics is known in its kind. Augmenting a state with its last output gives a system memory, and the augmented system keeps the order where the output rises with the state and the past; history-dependent response is hysteresis. The spine's form states the comparison and the finite decision once, for any law read condition by condition, so the web with memory is an instance; its witness shows a point of no return lowered by what was given.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| State augmentation for systems with delay or memory; monotone systems with delay | Smith, *Monotone Dynamical Systems* (1995), chapter 5 (from memory) | `Coupled.Indexed.Recent.keepsBelow`: the web with a recent giving keeps the order under mutual support |
+| Hysteresis: a response depending on its history | Mayergoyz (2003); Scheffer et al. (2001) on alternative states (from memory) | `Coupled.Indexed.Recent.Momentum.threshold_falls_with_recent`: what was given last lowers the threshold |
+
+```text
+Result(s): new record webs-with-a-recent-giving (RM10, new laws of Becoming.RegimeMargin)
+Delta: RM9's bounded laws stated once for any law read condition by condition; the web with a recent giving keeps the order under mutual support, so its bounded runs have ending decided and exact thresholds falling as any level or recent giving rises; the plain web and the adjusted regime its cases; a momentum witness
+Supplied premises / correspondence: whole numbers; finitely many conditions; reading condition by condition; for the threshold the order; a bound on the run. Correspondence: state augmentation, monotone systems with delay, hysteresis
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; rest within a band for webs with a recent giving not stated
+Integration: chapter's coupled-web paragraph, thesis T1's sentence and record table
+```

@@ -1,0 +1,47 @@
+## {N}. Webs with a recent giving (RM10)
+
+```text
+Result(s): new record webs-with-a-recent-giving (new laws of Becoming.RegimeMargin); reuses thresholds-beyond-a-band
+       (its bounded laws, now stated for any law read condition by condition), rest-on-coupled-webs (setAt, the
+       web's alike laws) and the adjusted regime of RM3 (Adjusted.step).
+Delta: RM9 decided ending and stated exact thresholds for the web's step beyond a band. Rule 9: those laws are now
+       stated once for any law f of states that reads them condition by condition (ReadsPointwise, run_alike_of,
+       the web's step one case by pointwise_step, run_alike derived), with ending under a law (EndsUnder), and the
+       threshold laws for any law keeping the order of states (KeepsBelow), which so reads them by antisymmetry
+       (reads_of_keepsBelow); the web's step keeps the order under mutual support (step_keepsBelow). Then the web with
+       a recent giving (Recent.step): each condition's state its level and what it gave last, its giving a law of
+       what is left of all and what each gave. Under mutual support it keeps the order (Recent.keepsBelow), so its
+       bounded runs have ending decided by a finite check and each threshold, given the other levels and every recent
+       giving, exact and not rising as any of them rises. Where giving reads nothing of what was given, its levels run
+       as the plain web's (Recent.plain); one condition is the adjusted regime (Recent.adjusted). Witness: a giving
+       ramping with what was given, one where nothing was given last and two where something was, under a draw of
+       two, has its threshold fall from four to three as its last giving rises from nothing to one
+       (Recent.Momentum.threshold_falls_with_recent).
+Premises / correspondence: whole numbers; finitely many conditions listed by a covering list; draws taken first; each
+       giving a law of what is left of all and what each gave last, read condition by condition (for the decision),
+       rising with each (for the threshold); a bound on the run from the top level considered; discrete steps.
+       Correspondence: delay and memory in monotone systems (state augmented by the last output); hysteresis.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: rest within a band for webs with a recent giving (RM3's measure for one condition is not lifted to webs),
+       giving reading more than the last step, runs without bound, and amounts beyond whole numbers are not covered.
+Output → input: chapter (the coupled-web paragraph, thesis T1's sentence, the record table; EN, ZH); RegimeMargin's
+       header; records thresholds-beyond-a-band and rest-on-coupled-webs (their open items); significance review,
+       recent check.
+```
+
+**The question.** RM3 and RM4 gave one condition a recent giving: what it gives is a law of what is left and of what it gave last, so a condition can rest below its draw or rise past it according to its history ([§300](#300-where-a-run-of-a-regime-comes-to-rest-rm3)). RM6 to RM9 coupled conditions into webs but with the regime's step, giving read off what is left alone. Both records name the web with a recent giving as open. In a relation-first account the question is whether a condition's history, what it gave, enters its point of no return the way its partners' levels do.
+
+**What was built** (new laws of `Becoming.RegimeMargin`, pure core, every axiom report empty).
+
+- *Any law read condition by condition* (`Coupled.Indexed.ReadsPointwise`, `Coupled.Indexed.run_alike_of`, `Coupled.Indexed.pointwise_step`, `Coupled.Indexed.EndsUnder`, `Coupled.Indexed.KeepsBelow`, `Coupled.Indexed.step_keepsBelow`, `Coupled.Indexed.reads_of_keepsBelow`, `Coupled.Indexed.run_below_of`, `Coupled.Indexed.endsUnder_of_below`, `Coupled.Indexed.stays_at`). RM9's laws used the web's step only through two facts: that it reads states condition by condition, and, for the threshold, that it keeps their order. They are now stated for any law with those properties (`StaysWithin`, `returns_within`, `repeats`, `ends_iff_within`, `endingWithin`, `thresholdWithin`, `ending_iff`, `ends_iff_below_within`, `threshold_falls_within`), and the web's `run_alike` is derived from `run_alike_of` (rule 9). A law keeping the order reads states condition by condition, by antisymmetry, so the threshold laws need only the order. A run reaching a state its law leaves as it is stays there.
+- *The web with a recent giving* (`Coupled.Indexed.Recent.step`, `Coupled.Indexed.Recent.Rises`, `Coupled.Indexed.Recent.keepsBelow`, `Coupled.Indexed.Recent.both`, `Coupled.Indexed.Recent.mem_both`, `Coupled.Indexed.Recent.covers_both`). The state holds each condition's level and what it gave last; each draw takes first; each condition gives a law of what is left of every condition and of what each gave last; its next level is what is left of it with what it gives, which is its next recent giving. Under mutual support, giving rising with what is left and with what was given, the step keeps the order of states, so the bounded laws hold, with every recent giving among the others' levels. A list covering the conditions gives one covering their parts.
+- *Its cases* (`Coupled.Indexed.Recent.plain`, `Coupled.Indexed.Recent.ofAdjusted`, `Coupled.Indexed.Recent.adjusted`). Where giving reads nothing of what was given, each level runs as the plain web's from the same levels. One condition with its giving `A` of what is left and what it gave is RM3's adjusted regime, level and recent giving at every step.
+- *The witness* (`Coupled.Indexed.Recent.Momentum.gives`, `giving`, `gives_rises`, `rises`, `at_`, `ramp`, `set_at`, `ends_from`, `holds_from`, `threshold_falls_with_recent`). One condition under a draw of two gives nothing where nothing is left, one where something is and nothing was given last, and two where something was. From four having given one, it rises to four and stays, within four. Having given nothing it ends from three and holds from four, so its threshold, levels up to four, is four; having given one it ends from two and holds from three, so its threshold is three.
+
+**Against the prior form** ([significance review, recent check](BECOMING-SIGNIFICANCE-REVIEW.md#recent-check)). Augmenting a state with its last output is the standard way to give a dynamical system memory, and a monotone system so augmented stays monotone where the output rises with the state and the past. Hysteresis, a response depending on history, is the general name for what the witness shows. The spine's form states the comparison and the finite decision once for every law read condition by condition, so the web with memory needs no proof of its own beyond its order.
+
+*Reading* [AI reading, D45]. A condition's history is part of its relations: what it gave last stands with it the way its partners' levels do. A condition that has been giving needs less to hold than the same condition, at the same level, that has not; a margin read off the level alone misses this, as it misses the partners.
+
+**Self-review.** Every premise is used: reading condition by condition for the decision, the order for the threshold, the covering list for the finite states, the bound for their number. The generalization removed nothing; RM9's laws keep their names and their web forms are instances. Rest within a band, which RM3 proved for one condition through a measure of unordered steps, is not lifted to webs: the bounded decision covers a band (a band bounds every run from it) but gives the exponential step count, not a rest. The witness is one condition; a web of several with recent giving is the same law at another index. Limits: whole numbers; giving reading the last step only; bounded runs.
+
+**The run.** {CORE_LINE}. {DECLS} declarations added to Becoming.RegimeMargin, {THEOREMS} of them theorems, none removed, all with empty axiom reports; RM9's bounded laws now take a law read condition by condition, the web's step an instance, and `run_alike` reads `run_alike_of`. Connectivity: {APART}.
