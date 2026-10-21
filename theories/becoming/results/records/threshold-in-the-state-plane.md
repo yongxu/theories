@@ -94,6 +94,7 @@ For order-preserving maps the boundary between basins of attraction is unordered
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json) | — |
 
 Aliases: `the threshold in the plane of level and recent giving`, `the point of no return as a falling curve`, `a run has at most one rest`, `水平与近来所给之平面上的阈值`, `Becoming.RegimeMargin.Adjusted.falls_iff_below`, `Becoming.RegimeMargin.Adjusted.threshold_falls`, `Becoming.RegimeMargin.threshold_regime`
 

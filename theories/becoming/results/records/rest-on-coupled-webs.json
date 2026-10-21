@@ -95,8 +95,8 @@
       "kind": "scope"
     },
     {
-      "en": "Thresholds beyond a band; webs with a recent giving; amounts beyond whole numbers.",
-      "zh": "带外的阈值；带近来所给的网；整数之外的量。",
+      "en": "Webs with a recent giving; amounts beyond whole numbers. Thresholds beyond a band, a bound on the run in its place, are stated (record thresholds-beyond-a-band).",
+      "zh": "带近来所给的网；整数之外的量。带外的阈值（以运行之界代替带）已陈述（记录 thresholds-beyond-a-band）。",
       "kind": "scope"
     },
     {
@@ -119,8 +119,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T191937.039634Z）：Becoming.RegimeMargin 新增的 37 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 325 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Thresholds beyond a band, with a bound on the run in its place; webs with a recent giving; a field web whose couplings are measured; an independent review.",
-    "zh": "带外的阈值，以运行之界代替带；带近来所给的网；耦合经测量的野外之网；独立审查。"
+    "en": "Webs with a recent giving; a field web whose couplings are measured; an independent review.",
+    "zh": "带近来所给的网；耦合经测量的野外之网；独立审查。"
   },
   "correspondence": {
     "en": "A monotone map on a finite ordered set iterated from a state it does not raise reaches a fixed point within the set's height (Kleene; Tarski 1955); monotone systems keep the order of solutions, the comparison principle (Hirsch 1985; Smith 1995).",
@@ -182,7 +182,15 @@
       }
     }
   ],
-  "related": [],
+  "related": [
+    {
+      "id": "thresholds-beyond-a-band",
+      "detail": {
+        "en": "Beyond a band, a bound on the run decides ending by a finite check, and each threshold is exact and falls as others rise.",
+        "zh": "在带之外，运行之界以有限检查判定终结，每个阈值是精确的且随其他上升而下降。"
+      }
+    }
+  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
@@ -249,7 +257,7 @@
         "Becoming.RegimeMargin.leading_false",
         "Becoming.RegimeMargin.leading_true"
       ],
-      "sha256": "c0321c9da4b47a770b2ac12ecc54cfe2e9cb296d94c16bb5f2034dd9c64d5aae"
+      "sha256": "303c6912b883a7bb4cbcd574157ca172883997e90039306391f610f51bc8e0be"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json",
@@ -269,13 +277,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "480291be99ce492a9f329d350ccaa420ae932c30b490b03655aa84eea9fe853a"
+      "sha256": "78ebcea696f73e5fd046c46d84b9d165f6c38a1e63ba8ffb7258f947a13c2ac7"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json",
+      "role": "receipt",
+      "sha256": "c9b4aacffe091890c71a56b15d54de6cc71fe1891fc2d4619a91e403a92597be",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -285,6 +299,10 @@
     {
       "en": "22 October 2026: added (RM8), rest and points of no return on coupled webs of finitely many conditions, stated condition by condition; the pair's laws derived from them; study section 325.",
       "zh": "2026年10月22日：新增（RM8），有限多个条件的耦合之网的静止与不可回返点，逐条件陈述；一对的律由其导出；研究第 325 节。"
+    },
+    {
+      "en": "22 October 2026, RM9: thresholds beyond a band are stated with a bound on the run in its place (record thresholds-beyond-a-band, study section 327); step_alike, run_alike and ends_alike now take pointwise reading, of which mutual support is the case. The statements of its laws are unchanged.",
+      "zh": "2026年10月22日，RM9：以运行之界代替带陈述了带外的阈值（记录 thresholds-beyond-a-band，研究第 327 节）；step_alike、run_alike 与 ends_alike 今以逐条件读取为前提，相互支持是其情形。其律的陈述不变。"
     }
   ]
 }

@@ -88,6 +88,7 @@ Harvesting theory: depensation and critical depensation, the fold of the harvest
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T121942.438529Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T132557.057625Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json) | — |
 
 Aliases: `margin of a regime`, `一个体制的余量`, `point of no return under a standing draw`, `the need is the regime's`, `harms super-additive`, `Becoming.RegimeMargin.ends_iff_below`, `Becoming.RegimeMargin.beyond_draw_iff`, `Becoming.RegimeMargin.harms_superadditive`
 

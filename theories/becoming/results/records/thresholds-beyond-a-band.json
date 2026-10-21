@@ -1,0 +1,283 @@
+{
+  "schema_version": 2,
+  "id": "thresholds-beyond-a-band",
+  "title": {
+    "en": "Thresholds beyond a band",
+    "zh": "带外的阈值"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T21:56:06+00:00",
+  "statement": {
+    "en": "Beyond a band, a bound on the run decides by a finite check whether a condition of a finite web ends, and under mutual support each point of no return is exact and at most what it was as any other level rises.",
+    "zh": "在带之外，运行之界以有限检查判定有限之网的条件是否终结；相互支持下，每个不可回返点是精确的，且在任何其他水平上升时至多为原值。"
+  },
+  "laws": [
+    {
+      "en": "A giving reads what is left condition by condition where what is left alike at every condition gives alike; mutual support does so, and the laws that states alike step, run and end alike take this premise.",
+      "zh": "所余在每个条件上相同则所给相同时，所给逐条件读取所余；相互支持如此，状态相同则步、运行与终结相同的律以此为前提。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.Pointwise",
+        "Becoming.RegimeMargin.Coupled.Indexed.pointwise_of_rises"
+      ]
+    },
+    {
+      "en": "A state is read through the list of its listed levels; the (B + 1)^n lists of n levels within B are listed, every state within B has its levels among them, and two states with the same levels are alike at every condition.",
+      "zh": "状态经其所列水平的列表读取；n 个至多 B 的水平的 (B + 1)^n 个列表被列出，至多 B 的每个状态的水平在其中，水平相同的两个状态在每个条件上相同。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.levels",
+        "Becoming.RegimeMargin.Coupled.Indexed.levels_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.withFirst",
+        "Becoming.RegimeMargin.Coupled.Indexed.withFirstUpTo",
+        "Becoming.RegimeMargin.Coupled.Indexed.levelLists",
+        "Becoming.RegimeMargin.Coupled.Indexed.withFirst_length",
+        "Becoming.RegimeMargin.Coupled.Indexed.withFirstUpTo_length",
+        "Becoming.RegimeMargin.Coupled.Indexed.levelLists_length",
+        "Becoming.RegimeMargin.Coupled.Indexed.mem_withFirst",
+        "Becoming.RegimeMargin.Coupled.Indexed.mem_withFirstUpTo",
+        "Becoming.RegimeMargin.Coupled.Indexed.levels_mem"
+      ]
+    },
+    {
+      "en": "A run that stays within B comes back, at some step at most (B + 1)^n, to the state of an earlier step, and where giving reads condition by condition it repeats from there; under mutual support every run below one within B stays within it.",
+      "zh": "保持在 B 之内的运行，在至多 (B + 1)^n 的某步回到较早一步的状态；所给逐条件读取时由此重复；相互支持下，在 B 之内的运行之下的每个运行都保持在其内。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.StaysWithin",
+        "Becoming.RegimeMargin.Coupled.Indexed.within_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.returns_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.repeats",
+        "Becoming.RegimeMargin.Coupled.Indexed.repeats_mul",
+        "Becoming.RegimeMargin.Coupled.Indexed.zero_from_window"
+      ]
+    },
+    {
+      "en": "Where giving reads condition by condition and the run stays within B, a condition ends exactly where it is nothing at every step from L = (B + 1)^n to 2 L, and where it ends it is nothing from L on: a finite check, with no band and no order of states.",
+      "zh": "所给逐条件读取且运行保持在 B 之内时，条件恰在其于 L = (B + 1)^n 到 2 L 的每一步为零时终结，终结则自 L 起为零：有限检查，不需带，不需状态之序。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.below_of",
+        "Becoming.RegimeMargin.Coupled.Indexed.endingWithin",
+        "Becoming.RegimeMargin.Coupled.Indexed.ending_iff"
+      ]
+    },
+    {
+      "en": "Under mutual support, where the run from a condition's top level hi, the others given, stays within B, its point of no return up to hi + 1 is exact, and others' levels lower give a threshold no lower: beyond any band.",
+      "zh": "相互支持下，条件自其顶水平 hi（其他给定）的运行保持在 B 之内时，其至多 hi + 1 的不可回返点是精确的，其他水平更低则阈值不更低：在任何带之外。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.thresholdWithin",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within"
+      ]
+    },
+    {
+      "en": "Relay keeps no band from three up, yet from two with its partner at three its run stays within three; its first condition's threshold is three with the partner at two and two with the partner at three.",
+      "zh": "Relay 自三起不保持任何带，但自二、伙伴在三的运行保持在三之内；其第一条件的阈值，伙伴在二时为三，伙伴在三时为二。",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Relay.ends_set",
+        "Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Whole numbers; finitely many conditions listed by a list covering them; draws taken first, as much as there is; each giving a law of what is left of all, read condition by condition (for the decision) and rising with each (mutual support, for the threshold); the run from the top level considered within a bound B; discrete steps.",
+      "zh": "不加公理。整数；由覆盖列表列出的有限多个条件；汲取先取，有多少取多少；各所给是所有所余之律，逐条件读取（用于判定），且随每个上升（相互支持，用于阈值）；自所考虑顶水平的运行在界 B 之内；离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Runs that grow without bound: there whether a condition ends is not decided here.",
+      "zh": "无界增长的运行：在那里条件是否终结此处不判定。",
+      "kind": "scope"
+    },
+    {
+      "en": "That the decision's step count, (B + 1) to the conditions' count, is tight; webs with a recent giving; amounts beyond whole numbers.",
+      "zh": "判定的步数 (B + 1) 的条件数次方是紧的；带近来所给的网；整数之外的量。",
+      "kind": "scope"
+    },
+    {
+      "en": "That measured webs stay within a bound or meet mutual support.",
+      "zh": "所测的网保持在一个界之内或满足相互支持。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T215226.263303Z): the 28 declarations Becoming.RegimeMargin gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 327; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T215226.263303Z）：Becoming.RegimeMargin 新增的 28 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 327 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Webs with a recent giving; a field web whose couplings are measured; an independent review.",
+    "zh": "带近来所给的网；耦合经测量的野外之网；独立审查。"
+  },
+  "correspondence": {
+    "en": "A deterministic map on a finite set is eventually periodic within its size (pigeonhole); finite-state properties are decided by bounded checks (bounded model checking, Biere et al. 1999); the comparison principle of monotone systems (Hirsch 1985; Smith 1995).",
+    "zh": "有限集上的确定映射在其大小之内终归周期（鸽巢）；有限状态的性质由有界检查判定（有界模型检验，Biere 等 1999）；单调系统的比较原理（Hirsch 1985；Smith 1995）。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+  "aliases": [
+    "thresholds beyond a band",
+    "a bound on the run in place of the band",
+    "带外的阈值",
+    "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within",
+    "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within"
+  ],
+  "dependencies": [
+    {
+      "id": "rest-on-coupled-webs",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The web's alike laws, setAt and the threshold's search are reused; the thresholds beyond a band its open item names are stated.",
+        "zh": "沿用网的相同律、setAt 与阈值的搜索；陈述了其开放项所列的带外阈值。"
+      },
+      "interface": {
+        "output": {
+          "en": "step_alike, run_alike, ends_alike, setAt, setAt_below, leading.",
+          "zh": "step_alike、run_alike、ends_alike、setAt、setAt_below、leading。"
+        },
+        "input": {
+          "en": "Ending and thresholds where a run is bounded but no band holds.",
+          "zh": "运行有界而无带时的终结与阈值。"
+        },
+        "conditions": {
+          "en": "Finitely many conditions; a bound on the run.",
+          "zh": "有限多个条件；运行之界。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+      }
+    },
+    {
+      "id": "coupled-webs",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The web's order and ending are reused for the threshold.",
+        "zh": "阈值沿用网之序与终结。"
+      },
+      "interface": {
+        "output": {
+          "en": "run_below, ends_of_below, Ends.",
+          "zh": "run_below、ends_of_below、Ends。"
+        },
+        "input": {
+          "en": "Down-closure of ending under mutual support.",
+          "zh": "相互支持下终结的向下封闭。"
+        },
+        "conditions": {
+          "en": "Mutual support.",
+          "zh": "相互支持。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.RegimeMargin.Coupled.Indexed.Band",
+        "Becoming.RegimeMargin.Coupled.Indexed.Below",
+        "Becoming.RegimeMargin.Coupled.Indexed.Ends",
+        "Becoming.RegimeMargin.Coupled.Indexed.Pointwise",
+        "Becoming.RegimeMargin.Coupled.Indexed.Rises",
+        "Becoming.RegimeMargin.Coupled.Indexed.StaysWithin",
+        "Becoming.RegimeMargin.Coupled.Indexed.below_of",
+        "Becoming.RegimeMargin.Coupled.Indexed.endingWithin",
+        "Becoming.RegimeMargin.Coupled.Indexed.ending_iff",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_iff_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.ends_of_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.levelLists",
+        "Becoming.RegimeMargin.Coupled.Indexed.levelLists_length",
+        "Becoming.RegimeMargin.Coupled.Indexed.levels",
+        "Becoming.RegimeMargin.Coupled.Indexed.levels_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.levels_mem",
+        "Becoming.RegimeMargin.Coupled.Indexed.mem_withFirst",
+        "Becoming.RegimeMargin.Coupled.Indexed.mem_withFirstUpTo",
+        "Becoming.RegimeMargin.Coupled.Indexed.pointwise_of_rises",
+        "Becoming.RegimeMargin.Coupled.Indexed.repeats",
+        "Becoming.RegimeMargin.Coupled.Indexed.repeats_mul",
+        "Becoming.RegimeMargin.Coupled.Indexed.respects",
+        "Becoming.RegimeMargin.Coupled.Indexed.returns_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.run_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.setAt",
+        "Becoming.RegimeMargin.Coupled.Indexed.setAt_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.step",
+        "Becoming.RegimeMargin.Coupled.Indexed.step_alike",
+        "Becoming.RegimeMargin.Coupled.Indexed.threshold",
+        "Becoming.RegimeMargin.Coupled.Indexed.thresholdWithin",
+        "Becoming.RegimeMargin.Coupled.Indexed.threshold_falls_within",
+        "Becoming.RegimeMargin.Coupled.Indexed.withFirst",
+        "Becoming.RegimeMargin.Coupled.Indexed.withFirstUpTo",
+        "Becoming.RegimeMargin.Coupled.Indexed.withFirstUpTo_length",
+        "Becoming.RegimeMargin.Coupled.Indexed.withFirst_length",
+        "Becoming.RegimeMargin.Coupled.Indexed.within_below",
+        "Becoming.RegimeMargin.Coupled.Indexed.zero_from_window",
+        "Becoming.RegimeMargin.Coupled.Relay.between",
+        "Becoming.RegimeMargin.Coupled.Relay.cycles",
+        "Becoming.RegimeMargin.Coupled.Relay.ends_set",
+        "Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band",
+        "Becoming.RegimeMargin.Coupled.covers_pair",
+        "Becoming.RegimeMargin.Coupled.ends_pair",
+        "Becoming.RegimeMargin.Coupled.pair_rises",
+        "Becoming.RegimeMargin.Coupled.pair_run",
+        "Becoming.RegimeMargin.Coupled.setAt_pair",
+        "Becoming.RegimeMargin.below",
+        "Becoming.RegimeMargin.below_spec",
+        "Becoming.RegimeMargin.leading",
+        "Becoming.RegimeMargin.leading_false",
+        "Becoming.RegimeMargin.leading_le",
+        "Becoming.RegimeMargin.leading_true"
+      ],
+      "sha256": "303c6912b883a7bb4cbcd574157ca172883997e90039306391f610f51bc8e0be"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json",
+      "role": "receipt",
+      "sha256": "c9b4aacffe091890c71a56b15d54de6cc71fe1891fc2d4619a91e403a92597be"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "fce3fcd5c3442e698ff3786bd3a8562aefea33737af0e148ec53fea1587e92ce"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "dbb2ef85700551b739bf59cc59a8628934877fdd4698267859af8ddbbc9f4a75"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "78ebcea696f73e5fd046c46d84b9d165f6c38a1e63ba8ffb7258f947a13c2ac7"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (RM9), thresholds on coupled webs beyond a band, a bound on the run in its place; the web's alike laws stated for pointwise reading; study section 327.",
+      "zh": "2026年10月22日：新增（RM9），带外的耦合之网阈值，以运行之界代替带；网的相同律以逐条件读取陈述；研究第 327 节。"
+    }
+  ]
+}

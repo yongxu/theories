@@ -261,7 +261,7 @@
         "Becoming.RegimeMargin.stays_ended",
         "Becoming.RegimeMargin.step"
       ],
-      "sha256": "c0321c9da4b47a770b2ac12ecc54cfe2e9cb296d94c16bb5f2034dd9c64d5aae"
+      "sha256": "303c6912b883a7bb4cbcd574157ca172883997e90039306391f610f51bc8e0be"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -296,7 +296,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "480291be99ce492a9f329d350ccaa420ae932c30b490b03655aa84eea9fe853a"
+      "sha256": "78ebcea696f73e5fd046c46d84b9d165f6c38a1e63ba8ffb7258f947a13c2ac7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T093053.215253Z/verification.json",
@@ -339,12 +339,18 @@
       "role": "receipt",
       "sha256": "1cbcd80102dad159cb6b52dee2da91d200250186b8fcb7e34b8bf376b6a800b8",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json",
+      "role": "receipt",
+      "sha256": "c9b4aacffe091890c71a56b15d54de6cc71fe1891fc2d4619a91e403a92597be",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.RegimeMargin",
       "success_pointer": "/status",
       "success_value": "passed"

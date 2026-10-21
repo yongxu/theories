@@ -65,7 +65,7 @@ Cooperative (monotone) systems keep the order of states in any dimension, and th
 - related, not a proved adapter: [groups-whose-conditions-are-coupled](groups-whose-conditions-are-coupled.md). That record reads a family of coupled conditions as one and ends it by joint excess; here each condition of a web keeps its own giving law of what is left of all, and the end of one reaches what depends on it, link by link.
 - related, not a proved adapter: [rest-on-coupled-webs](rest-on-coupled-webs.md). For finitely many conditions within a band, a web's run comes to rest and each condition's point of no return does not rise as any other level rises.
 
-**Used by:** [rest-on-coupled-webs](rest-on-coupled-webs.md)
+**Used by:** [rest-on-coupled-webs](rest-on-coupled-webs.md) · [thresholds-beyond-a-band](thresholds-beyond-a-band.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -83,6 +83,7 @@ Cooperative (monotone) systems keep the order of states in any dimension, and th
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T191937.039634Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T215226.263303Z/verification.json) | — |
 
 Aliases: `coupled webs`, `the cascade of ends`, `coextinction along a chain of dependence`, `耦合之网`, `Becoming.RegimeMargin.Coupled.Indexed.ends_downstream`, `Becoming.RegimeMargin.Coupled.Indexed.step_mono`
 
