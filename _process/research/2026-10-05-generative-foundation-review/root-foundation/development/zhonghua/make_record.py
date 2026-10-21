@@ -48,6 +48,8 @@ cov = json.loads((HERE / 'coverage.json').read_text())['verdicts']
 flagged = sum(v['c'] != '-' for v in cov.values())
 names = sum(1 for _ in open(HERE / 'work/names-decisions.tsv', encoding='utf-8')) - 1
 notad = sum(1 for _ in open(HERE / 'work/symbols-not-adopted.tsv', encoding='utf-8')) - 1
+unq = sum(1 for r in json.loads((HERE / 'work/names-checked.json').read_text()) if r['式'] in ('古', '复')
+          and not [f for q in r['quotes'] for f in q['found']])
 decls = len({x for e in entries for x in e['declarations']})
 records = sorted({r for e in entries for r in e['records']})
 files = len(json.loads((ROOT / PROVENANCE).read_text())['files'])
@@ -99,8 +101,8 @@ record = {
                '其后世文本多为本原与心性之争而选。',
          'kind': 'non-implication'},
         {'en': ('That the classical names recover what the texts meant, or that names without a recorded witness were '
-                'in pre-Qin use: 94 classical words in the table carry no checked quotation.'),
-         'zh': '古典之名复原了文本之意，或未录出处之名在先秦已有用例：名表中 94 个古名与复名没有经核对的引文。',
+                'in pre-Qin use: %d classical words in the table carry no checked quotation.' % unq),
+         'zh': '古典之名复原了文本之意，或未录出处之名在先秦已有用例：名表中 %d 个古名与复名没有经核对的引文。' % unq,
          'kind': 'scope'},
         {'en': ('That a divergence of standing (a text asserting what the theory gives only under the continuation '
                 'condition) shows the text wrong; the theory asserts no ethical axiom.'),

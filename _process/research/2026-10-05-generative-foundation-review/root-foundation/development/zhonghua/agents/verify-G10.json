@@ -1,0 +1,125 @@
+{
+ "decisions": [
+  {
+   "key": "becoming.optimum",
+   "concept": "optimizer: a formation taking, within its capacity, an optimum of its own order among the outcomes open to it alone (Becoming.Optimum.MutualBest)",
+   "decision": "existing",
+   "name": "擇上者",
+   "plain": "",
+   "anchor": "Becoming.Optimum.MutualBest；Becoming.Optimum.MutualBest.full；Becoming.Optimum.mutual_beyond；Becoming.Optimum.mutual_as_one；Becoming.Flow.Outcome",
+   "quote": "—",
+   "form": "新",
+   "cluster": "C10",
+   "note": "核验：MutualBest 读过：每一 optimizer h 于在场时 ActsWithin (alone h) cap，且 o 在 Frontier (Outcome (alone h) …) (better h) 之中，序 better h 为其自有，正是核心 becoming.optimum 之概念。此键与核心同键，以核心之 name 决定为准，本行只记 C13 之改写，不另立名。照核心直换：优化者→择上者（实数二十六处，经中十四处；原注二十四处不确）；互为最优→相为莫上；容量→取限，合计容量→诸择上者合为一体之取限（Flow.capacity）；为其序之最优→其序之莫上之者；其独能致之诸结果→其可得之诸果（果，核心，Flow.Outcome 即 alone h 可得之果）。序随其族而升属 optimum.rising，另组定。优字在经说中不再出现。新增之疑（未改名，交整合者）：本篇十四·二十一同时有为天下先（AboveAll，「在其余每一寻求者之上」）与苏辙「相上之心」〔LC-SZ-ALL〕，相上即争居他者之上；核心之「相为莫上」与「相上」只差一字，择上者亦可被读作「择居上者」。十四·十四之说初见必须写明：上只是其自身之序中诸果之位，不是一者在他者之上；若整合者以为不足，可改 MutualBest 之写法为「各取其莫上」，以免与相上相混。"
+  },
+  {
+   "key": "becoming.withholding",
+   "concept": "waits on: a formation's giving waits on another's (up b a in Becoming.Withholding; ups in Becoming.Tolerance), and a chain of k waits (Withholding.Chain, Withholding.Within)",
+   "decision": "name",
+   "name": "俟",
+   "plain": "",
+   "anchor": "Becoming.Withholding.waitsAll；Becoming.Withholding.answers；Becoming.Withholding.Chain；Becoming.Withholding.Within；Becoming.Withholding.withholding_spreads；Becoming.Withholding.waitsAll_more_waiting；Becoming.Tolerance.tolerating；Becoming.Tolerance.web_answers",
+   "quote": "君命召，不俟駕行矣@RU1-S-LY",
+   "form": "古",
+   "cluster": "C13",
+   "note": "所取之义：一待者之与俟他者之与（Lean：up b a 读作 the giving of a waits on that of b，写「a 俟 b」；a 之所俟者即诸 b，Tolerance 之 ups a 为其族）。有记之俟（念旧恶，waitsAll）、无记之俟（不念旧恶，answers）、容缺而与（tolerating）都以此关系为参数。乡党「君命召，不俟駕行矣」（已核，先秦，论语传世层）：其行不俟驾，即一者之动是否等候他者之动，正是此关系之有无。所不带：中庸「居易以俟命」〔RU1-S-ZY〕、孟子「修身以俟之」「以俟命而已矣」〔RU2-S-MZ〕之俟命（命不采）、俟圣人、俟时之修养义；君命之召与此无涉。今计算之等待图同构，只作对照。不取等待（待已名依存）、候、须、随、从，理由同原注。改动一：k 层之链不再以层计：层在本篇已名同在、相待、交相资三层与「单一中心之层」，篇十二稿又写「d 次等待」，二篇不一；改以俟自身计数（约定）：Chain up k b a 写「由 b 经 k 俟而至 a」，Within up d b a 写「a 在 b 之 d 俟之内」，无长 L 之链写「无经 L 俟而相至者」，环写「经 p 俟复至于己」；不写链、层、次，也不写「k 步之俟」（步名时步，俟数与步数只在定理中相合）。原注所引老子「九層之臺」在冻结文本中作「九层之台」〔YD-LAO-BASE〕，原写法不合，今既不用层，删去。改动二：补锚 Tolerance.web_answers：于待网上，「俟所有」恰是每一待者以其所俟之数为需而待其自身之所待；故俟不是待，只经此定理与待、需相连，说中应明言。存疑：俟与待、需、须古训同为等候（尔雅以竢训待），读者易视为同义，说初见须写明分工：待名依存，需名其阈，俟名诸与之间之等候。改动三：篇十二（十二·二十，经中已用等待，二十三处）在书中先于篇十四，名初见之说应在十二·二十，cluster 依名表念旧恶之例仍记 C13。与 key withholding 之第一概念合并为一名；扣留（不与）与去其分（单去、并去）是他概念。"
+  },
+  {
+   "key": "jointplan.draws",
+   "concept": "leaf of a joint plan (the leaf constructor of Becoming.JointPlan); with the root and what the leaves draw on (JointPlan.draws)",
+   "decision": "name",
+   "name": "葉",
+   "plain": "",
+   "anchor": "Becoming.JointPlan；Becoming.JointPlan.Realizes；Becoming.JointPlan.draws；Becoming.JointPlan.within_of_realizes；Becoming.JointPlan.supports_of_realizes",
+   "quote": "左右拊其本，而葉徧揺矣@FA1-S-H35",
+   "form": "古",
+   "cluster": "C13",
+   "note": "所取之义：分数（JointPlan，有尽之嵌套：leaf q 或 pair left right）之末端；一状实现分数时，叶于所持之体读之（Realizes）。外储说右下「揺木者一一攝其葉，則勞而不徧；左右拊其本，而葉徧揺矣」（已核，战国末）：叶是一分枝之诸末端。所不带：同段「聖人治吏不治民」〔FA1-S-H35〕之以本统叶（单一中心）、枝叶之次要义、中叶之世代义。根不立名：实现一分数之状即其根，写「实现此分数之状」。改动：JointPlan.draws 不写「诸叶之所资」。名表之资名待网之汲取（Web 之 draws : R → R → Prop，待者资于所待），JointPlan.draws 只是诸叶所带之族依次相接（leaf xs ↦ xs，pair ↦ draws p ++ draws q），R 为任意之物，无一定理把它与待网之资相连；以资名之则资一名二义，并暗示诸叶汲取。今定一写法：「诸叶之族，依次相接」（族，核心 list）；supports_of_realizes 写「诸叶之族依次相接，其员各异，皆在此状之所履之内」。Lean 英文以 draw on 读之，说中可注为读（AI）。原注「依次合之」亦改：合名形成之并合，同组 realizes_image_iff 之注已明言不以合写读之相接。附带（他键）：分数之定义「叶之有尽二分嵌套」之分与名表之分（专属所履）同字异义，宜写「叶之有尽成对嵌套」；经中「恰持实现其两侧之二体」以持名 J（s holds l and r together），而名表之持名 Web.Kept（维持），一字二义，此三元关系 names-to-decide 未列，交整合者。计数：叶十处（经六）、根四处（经一）、所资五处（经一）。"
+  },
+  {
+   "key": "jointplan.realizes_image_iff",
+   "concept": "a description identifying configurations: π : S → K in JointPlan.realizes_image_iff, LiftsFromEach, MatchesParts (the relation 'same image under π')",
+   "decision": "existing",
+   "name": "類",
+   "plain": "",
+   "anchor": "Becoming.JointPlan.realizes_image_iff；Becoming.LiftsFromEach；Becoming.MatchesParts；Becoming.jointImage；Becoming.Learning.Lumped",
+   "quote": "以類取，以類予@MI1-S-XQ",
+   "form": "古",
+   "cluster": "C07",
+   "note": "核验：π : S → K 把诸状读入 K，π 值同者为一类，与 Learning.Lumped 之 π : I → K 同构，用名表之类（归并：读法及其所分之类），不另立名。MatchesParts J J (π s = π s') 是一般之配部关系以「同类」为参数，列为锚合宜。改动：原注所拟经文「一类之诸状所持之体，亦配于一类之诸状」不合 MatchesParts 之内容，改为：「凡以类读状：同类之二状，一状所持之二体，他状亦持与之各同类之二体（MatchesParts）；叶经类而读，与于状而读者无异（correct）：则一分数于一状之类实现，恰当于此状实现。」以「以类读状」写 π 本身，免一句之中类先名读法、后名其类而两义相叠。jointImage 写「类上之持」，持名 J 之问题见 jointplan.draws 之注。不写「所同之状」：同名 Alike（互模拟），π 所并之状未必 Alike。不用象（象名择所经之模型 r : K → V）。代 C13 之类、所同之状（类六处，经四处；所同之状二处，经二处）。"
+  },
+  {
+   "key": "loopreturn",
+   "concept": "link of a loop: one map Nat → Nat in the list whose composition is LoopReturn.returnMap; the turn (one application of the return map) noted, decided under key one",
+   "decision": "existing",
+   "name": "應",
+   "plain": "",
+   "anchor": "Becoming.LoopReturn.returnMap；Becoming.LoopReturn.closing_needs_less；Becoming.LoopReturn.never_closes_of_no_less；Becoming.LoopReturn.cut_closes；Becoming.LoopReturn.gap_course",
+   "quote": "—",
+   "form": "古",
+   "cluster": "C10",
+   "note": "核验：一节只是一个映射 Nat → Nat，returnMap 依次复合；名表报之注已定「单环节之回应用应」，故写「环之一应」、首应、次应、末应，不另立名。补锚 LoopReturn.gap_course：二程之取与以一映射回应其差（RespondsByReturn）时，其差恰为此映射之行，可见一节就是一应，应名回应与此相合。经：「不校，环之一应交回少于所受也」「必有一应于某差不校」（closing_needs_less 正是此存在）「每应交回皆不少于所受」。不取节，理由同原注；key loopreturn.returnmap（C11 写节，六十二处）是同一概念，须与此合议。回合（turn）不在此名：LoopReturn 文档第74–75行明言计周不计步（the count is of turns, not of steps），其名由 key one 定；改正计数：C13 之回合共五处，经中三处（十四·八经文三见），原注「二处」不确；未定之前写「报 n 次」。不用回合（交战之词）。供 key one 参考：小取「一周而一不周」〔MI1-S-XQ〕、秋水「宋人圍之數匝」〔ZH1-S17〕均已核（后者外篇，年代有争议）。"
+  },
+  {
+   "key": "partswithin",
+   "concept": "footprint of a configuration: the things it treads on, footprint : S → R → Prop in PartsWithin, PartsApart, Supports (and Footprinted in Reordering)",
+   "decision": "name",
+   "name": "所履",
+   "plain": "",
+   "anchor": "Becoming.PartsWithin；Becoming.PartsApart；Becoming.Supports；Becoming.JointPlan.supports_of_realizes；Becoming.ListFootprints.support；Becoming.Footprinted",
+   "quote": "足之所履@ZH1-S03",
+   "form": "复",
+   "cluster": "C13",
+   "note": "所取之义：一状所踏之诸物（footprint s a）；其内容是所给之表示，不由律导出。名表之分即：体之所履各在其兼之所履之内（PartsWithin），同兼之二体所履无所共（PartsApart）；Supports（xs.Nodup 且每员在所履之内）写「其员各异，皆在此状之所履之内」，不另立名，不写「所支」。养生主「手之所觸，肩之所倚，足之所履，膝之所踦」（已核，内篇）：一身诸分各有其所踏之处；荣辱「危足無所履」〔RU2-S-XZ04〕同义（已核）。所不带：大略「禮者，人之所履也」〔RU2-S-XZ27〕之礼义、孟子万章下引诗「君子所履，小人所视」〔RU2-S-MZ〕之尊卑（原注作「所視」，冻结文本为「所视」，已改）、系辞下「履，德之基也」〔DS03〕之德行义、履行践履之修养义；天运「迹，履之所出」〔ZH1-S14〕之履是鞋，与此动词之履不同。不取足迹（足名满足）、迹、所触、所占、所资。改动：明言所资不可代所履：C13 稿说「凡体所资皆在其兼之内，同兼之二体不共资一物」把所履与资（Web 之汲取）混同，应写「体之所履皆在其兼之所履之内，同兼之二体所履无所共」；「二体足迹不交」改「所履无所共」（交名交互）。C13 之足迹十三处（经五处）改所履。Footprinted（一步之交换所触之物，key footprinted，C01、C17）与此同为 footprint，宜同用所履（「一步之所履」），由该键定。"
+  },
+  {
+   "key": "relativeposition.greatest",
+   "concept": "greatest part of a family under some amounts: no member's amount exceeds its own (Becoming.RelativePosition.Greatest)",
+   "decision": "plain",
+   "name": "",
+   "plain": "量莫过之者",
+   "anchor": "Becoming.RelativePosition.Greatest；Becoming.RelativePosition.greatest_exists；Becoming.Flow.race_ends_greatest；Becoming.Flow.greatest_end_for_good",
+   "quote": "—",
+   "form": "—",
+   "cluster": "C13",
+   "note": "核验：Greatest ps a g := ∀ q ∈ ps, a q ≤ a g；可有数者其量相等；定义不含 g ∈ ps，诸定理另设，故写「族中量莫过之者」。race_ends_greatest 之 pos : Nat → F → Nat 为任意之量之读，且其证明不用 g 之最大（直接由 joint_excess_ends 得之）：「称不能护」恰是此意。全由名表、凡例之字组成（莫取凡例之义，量为一般之量，过为常语，与取过与之过同），不立名；经与说一律写「量莫过之者」，说初见注：族中无一体之量过之者，可不止一个。不写「称之最者」（七处，经一处）：Lean 以量定之，非以称；同族同时称随量升，二者同指，但称之零和律与此无涉。不取最；不写莫上之者（Requirement.Frontier 之可得者之莫上，无连接定理，且同篇十四·十四以莫上之者名择上者之果）。本行未改决定。"
+  },
+  {
+   "key": "renewal",
+   "concept": "renewal gated at m: every present formation giving positively to the condition depends on it at a need of at least m (hypothesis gated of Flow.joint_excess_ends; no Lean name)",
+   "decision": "plain",
+   "name": "",
+   "plain": "与之者皆待之而需不下于 m",
+   "anchor": "Becoming.Flow.joint_excess_ends；Becoming.Flow.joint_excess_ends_at；Becoming.Flow.race_ends_greatest；Becoming.Flow.family_excess_ends",
+   "quote": "—",
+   "form": "—",
+   "cluster": "C13",
+   "note": "核验：gated : ∀ t f, f ∈ present t → 0 < give t f c → requires t f c ∧ m ≤ need t f c。名表之与之者锚 Flow.renewers（在场且所与为正者之数，count 计正），恰是此前提所限之全体，故「与之者皆待之而需不下于 m」逐字合于 gated（之指此所待；需，核心 web.need）。改动：原注给经、说两种写法，违「定一写法」之规；今经说一律写「与之者皆待之而需不下于 m」，经中由上文定之所指（如「于一所待，……」）；其每步之范围（joint_excess_ends 为凡步，_at 诸式为 T 至 T＋n＋k 之前诸步）随所论之律写明。族之形（Flow.family_excess_ends，C12）同式：「族之与之者皆待族中某所待而需不下于 m」（与之者本锚 Flow.renewers cs，即与族者）。不立门、门于 m。所需改需。"
+  },
+  {
+   "key": "selectionpool",
+   "concept": "history of levels up to a step selected through couplings (l, l' : Nat → C → Nat in Becoming.Web.SelectsThroughAll, separates_all_iff, pool_adds)",
+   "decision": "existing",
+   "name": "歷",
+   "plain": "",
+   "anchor": "Becoming.Web.SelectsThroughAll；Becoming.Web.separates_all_iff；Becoming.Web.pool_adds；Becoming.Web.AlikeThroughAll；Becoming.Shown",
+   "quote": "历年多@RU2-S-MZ",
+   "form": "古",
+   "cluster": "C01",
+   "note": "核验：SelectsThroughAll 之 select : (Nat → C → Nat) → Prop，l、l' 为积之历，经诸员之感读至第 t 步（AlikeThroughUpTo）；核心 nat 已定积之历是历之一种，用历，不另立名；「历年多」已核（冻结孟子为简体，历、曆在此并为一形，取经过义）。C13 经中「二历」四处不改。本键未改。附带（他键）：C13 经「一员至第 t 步以二历为同」之同，Lean 为 AlikeThroughUpTo（经此员之感无别），不是名表之同（Alike，互模拟），应依 key web.alikethrough 之决定改写。"
+  },
+  {
+   "key": "viability.kernel",
+   "concept": "guard: a predicate on configurations, guard : S → Prop, of which Viability.Kernel (no course leaves it) and Viability.Keepable (some run stays in it) are said",
+   "decision": "existing",
+   "name": "域",
+   "plain": "",
+   "anchor": "Becoming.Viability.Kernel；Becoming.Viability.Keepable；Becoming.Viability.kernel_and_iff；Becoming.Viability.Keepable.each；Becoming.Viability.Certificate；Becoming.Invariant",
+   "quote": "域中有四大@YD-LAO-BASE",
+   "form": "古",
+   "cluster": "C07",
+   "note": "核验：Kernel P guard s := ∀ t, Reach P s t → guard t；Keepable：∃ 行 r，r.state 0 = s 且每步在 guard 内；guard 只是一组状，正是核心之域（常与闭所说者），用域，不立所守。经：Kernel 写「自此状无一行离此域」，Keepable 写「自此状有一行不离此域」，二域同时写「二域皆含之状」（不写合、交）。得兼（kernel_and_iff）之条件即诸域。改动：Certificate（within 且 Invariant P K）原写「此域内每步不离之常域」：「每步不离」与常（Invariant）重复，「常域」又像资域、扰域一族之闭包名（可被读作自一状可至之诸状），今改写「此域内为常之域」；kernel_iff_certificate 写「自此状无一行离此域，恰当有一为常之域在此域内而含此状」。代 C13 之所守、无一行离之、有行保之（所守六处，经二处）；C07「所守之区」若指常所说之域亦改域；C16、C09、C10 之「所守」是常语（持守方法、等级），不是此概念，不在此改。"
+  }
+ ],
+ "notes": "核验方法：十个键之锚全部以 resolve.py 解析到当前主干（另补 Becoming.Tolerance.web_answers、Becoming.LoopReturn.gap_course、Becoming.Flow.Outcome，均可解析），并读过 Optimum.lean（MutualBest、full、mutual_beyond、mutual_as_one）、Withholding.lean 与 Tolerance.lean（up、Chain、Within、tolerating、web_answers）、JointPlans.lean 与 Composition.lean（JointPlan、Realizes、draws、PartsWithin、PartsApart、Supports、jointImage、LiftsFromEach、realizes_image_iff）、LoopReturn.lean、RelativePosition.lean 与 Continuation.lean（Greatest、race_ends_greatest、joint_excess_ends、family_excess_ends）、SelectionPool.lean 与 Testing.lean、Viability.lean 与 JointKeeping.lean。引文以 ctq.py text 逐条核过：君命召，不俟駕行矣〔RU1-S-LY〕、左右拊其本，而葉徧揺矣〔FA1-S-H35〕、以類取，以類予〔MI1-S-XQ〕、足之所履〔ZH1-S03〕、历年多〔RU2-S-MZ〕、域中有四大〔YD-LAO-BASE〕均准确；注中两处不合已改：「九層之臺」冻结文本作「九层之台」（今已不用），「君子所履，小人所視」冻结文本作「所视」〔RU2-S-MZ〕。新名俟、叶、所履不在不采之字表，简体与名表 326 名、核心诸名及本组他名皆不相同。\n实质改动：(1) 俟之链改以「k 俟」计，不用层（本篇层已有他义，篇十二又作次）；补 web_answers，说明俟经定理与待、需相连而不等于待；篇十二先用此名。(2) JointPlan.draws 不用资：资名待网之汲取，二者无定理相连，改写「诸叶之族，依次相接」；「依次合之」之合亦去。(3) 类之经文拟句改正为合于 MatchesParts 之写法。(4) 回合之计数改为五处、经中三处。(5) renewal 定为唯一写法「与之者皆待之而需不下于 m」（与之者即 Flow.renewers）。(6) 为常之域取代「每步不离之常域」。(7) 择上者之实数为二十六处。\n交整合者（他键、本组之外）：J（s 持 l、r）在 C13 经中写持，与名表持（Web.Kept）同字异义，且 names-to-decide 未列；分数定义「二分嵌套」之分与名表之分相撞，宜写「成对嵌套」；C13「以二历为同」之同应依 web.alikethrough 定；核心「相为莫上」与同篇苏辙「相上」、为天下先相邻易混，说中须写明上只是其自身之序中之位。未编辑任何文件。"
+}

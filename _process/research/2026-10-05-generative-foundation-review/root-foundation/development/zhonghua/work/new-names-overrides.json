@@ -1,0 +1,16 @@
+{
+ "eligible": {
+  "decision": "plain",
+  "name": "",
+  "plain": "可选者",
+  "form": "—",
+  "note": "取舍中开放之选项（Requirement.Frontier 之 eligible；FrontierFrames.Options；Flow.Outcome 为其一例）。不立名：可得已名「经某一串动可以得到」（Branching.Reachable），二者不同；莫上之者在可选者中立。"
+ },
+ "becoming.withholding": {
+  "decision": "existing",
+  "name": "俟"
+ },
+ "requirement.frontier": {
+  "note": "新组合：莫（凡例之义：所论之员无一然）＋上之＋者：可选者中，依所给之序，无一可选者上之。可有多个，互不相较，不是唯一之极。上只名所给之序中之位，经中所给之序一律写「上」（甲上乙，C10 稿已如此），不带尊卑、优劣。Requirement.Frontier 对任意所给之关系成立（better）：伦理中其序为以广为愈，Optimum 中为一择上者自己之序。愈只留给以广为愈与皆愈：凡例二一之「莫愈之者」（三处）改莫上之者；伦理中序为以广为愈时写「以广为愈之莫上之者」。不取最优、优化（名表禁优作更好）；不取 C15「所取」（取已名流中之取用）；不取莫尚者（P2：论语「無以尙之」〔RU1-S-LY〕在仁之语境，尚有尚贤、尚同之评价义，今人少用）；不取「莫上」（P1：作名词不顺，「莫上者」近于佛教之无上）。代 C10 最优（二十余处）、C15 所取、TH 莫上之者。"
+ }
+}

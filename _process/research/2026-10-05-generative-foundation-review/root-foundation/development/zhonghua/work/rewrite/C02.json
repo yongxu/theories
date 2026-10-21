@@ -1,0 +1,121 @@
+{
+ "part": {
+  "key": "C02",
+  "heading": "篇二　待",
+  "intro": "本篇论待：大化之中，一待者于一步需一所待至某量，并或资之。篇一说待者与所待是一物之二角；本篇说二角之间最基本的关系怎样形成、维持与改变，再说其中分化出的诸相关。先说待网所记，与足、容、正需；次说待之结与解、持与绝，及在衡之下一待之绝恰由诸取与诸与之和所定，不归于任何一取；然后说有待（活动则见容）这一前提：在它之下容只自见容者来，失而终不足之后，犹活动之待者必已减或解其待，其待如故者此后不活动，容为活动之小故而非大故，蓄推迟亡而不免之。再说一物兼二角时所显者：有形、俱亡、自持；继说诸物经所待而相关者：交、食、相待、截；终以有力：一待之绝，何物之分造成差别。本篇诸律都是写入局部条件（衡、有待、有形、正需、唯活动者与之等）的定理，或一构造之见证，不加公理。延续之条件（凡续皆有顾）在本篇只作为一个结论之形出现一次（⟦二·十五⟧），不被断言；排序唯在以广为愈，本篇不用。后接生灭之篇（作、已、聚、散）、流之篇（取、与、衡、耗）与恒竭之篇。",
+  "tiao": [
+   {
+    "id": "二·二",
+    "title": "足、容与正需",
+    "body": "**經**　足，所需不过所待之水平也。待者于一步，凡其所待皆足，是谓水平容之。正需，所需为正之待也。凡待者于甲步见容；于乙步，其每一所待皆甲步所已待，所需不过甲步，所待之水平不低于甲步，则于乙步亦见容。\n\n**說**　足（满足）只说单个所需。容（支持，support，`Becoming.Web.Supported`；以任一组水平言之为 `Becoming.Web.Admits`，二者由定义同一，`Becoming.Web.supported_iff_admits`，不是另一条律）是该步每一所待之足的合取，缺其一即不容。正需（`Becoming.Web.Bearing`，新组合，正＋需）是所需为正之待：所需为零之待在任何水平都足，所待不能使之落空，所以凡要说所待能使待者失其容之处，都须正需（交、食、俱亡皆用之）。`Becoming.Web.supported_of` 说容之变只经待与水平：所待不新增、所需不增、水平不降，容即保持；同一步之内，水平无一低者，所容不减（`Becoming.Web.Admits.mono`）。足与容都不说活动：容而不活动是可能的（⟦二·八⟧）。对照（相合，lunyu-min-wu-xin-bu-li）：「足食，足兵，民信之矣。」〔RU1-S-LY〕列食、兵、信三个所待，此「足」是单个所需之足，不是容；「民無信不立」〔RU1-S-LY〕：信是立之所待，缺之则不立，即小故（⟦二·八⟧），相合限于此必要方向。去兵、去食之后犹立，在有待之下读作立于兵、食本无待，或其待已减或解（⟦二·七⟧）；何者先去是一种比较，脊柱不给，所需之大小也不定先后。又「且夫水之積也不厚，則負大舟也无力。」〔ZH1-S01〕（相合，zhuang-xiaoyao-ji-hou-fu-da）：承载是被承者之所需与所积之水平的比较，不是承者独有之力；此「无力」是足之否，不是有力（⟦二·十七⟧）之否。\n\n**證**　`Becoming.Web.Supported`、`Becoming.Web.Admits`、`Becoming.Web.supported_iff_admits`、`Becoming.Web.Bearing`、`Becoming.Web.supported_of`、`Becoming.Web.Admits.mono`；记录 [support-from-the-supported](../results/records/support-from-the-supported.md)、[closing-needs-net-draw](../results/records/closing-needs-net-draw.md)、[condition-correspondence-discipline](../results/records/condition-correspondence-discipline.md)。"
+   },
+   {
+    "id": "二·三",
+    "title": "结与解",
+    "body": "**經**　结，一待跨一步而有也：步首无，步后有。解，一待跨一步而无也：步首有，步后无。凡一待于某步无、于其后某步有，则其间有一步结之，不可非；于某步有、于其后某步无，则其间有一步解之，不可非。\n\n**說**　结（依存之形成，forms，`Becoming.Web.Forms`）与解（消解，dissolves，`Becoming.Web.Dissolves`）都是定义，只说一待之有无，不说所需之增减。律是对任何逐步之辞都成立的两条（`Becoming.arises_at_a_step`、`Becoming.ceases_at_a_step`），取辞为\"此待者待此所待\"即得。\"不可非\"（双重否定，新组合）在此是精确的：Lean 证的是\"其间无一步结之\"为假，不借排中律指出是哪一步。结解与作已、聚散是同一跨步之变化的三种读法：作已是活动之成毁，结解是待之成毁，聚散是水平之正之成毁（`Becoming.Web.change_readings`，由定义，生灭之篇）。对照（定域，zhuang-dazongshi-jie-jie）：「而不能自解者，物有結之。」〔ZH1-S06〕：系缚在关系之中，不在一方之内，这是相合之部分；以解为当得、以结为累的价值方向不取。\n\n**證**　`Becoming.Web.Forms`、`Becoming.Web.Dissolves`、`Becoming.arises_at_a_step`、`Becoming.ceases_at_a_step`、`Becoming.Web.change_readings`；记录 [becoming-dependence-dynamics](../results/records/becoming-dependence-dynamics.md)、[coming-and-ceasing-keep-pace](../results/records/coming-and-ceasing-keep-pace.md)。"
+   },
+   {
+    "id": "二·四",
+    "title": "持与绝",
+    "body": "**經**　持，一待步首足，跨步后仍足步首之所需也。绝，一待步首在而足，跨步后所待之水平低于步首之所需也。凡一待于一步在而足，跨此步或持或绝，必居其一而不兼。\n\n**說**　持（维持，kept，`Becoming.Web.Kept`）与绝（断裂，broken，`Becoming.Web.Broken`）都以步首之所需计：一步之内待若先变而后水平降，绝在其先抑或由之，一步不能分，读法把降落计在步首之待上。`Becoming.Web.kept_or_broken` 与 `Becoming.Web.kept_not_broken` 说二者恰分一步；所需与水平是自然数，可比，所以不用排中律。绝不是终不足：绝后所待可以复足（⟦二·七⟧之见证），绝而此后永不再足才名绝而终不足（`Becoming.Web.Lost`，新组合，绝＋终不足，恒竭之篇）；终不足（`Becoming.Web.Consumed`）之定义不要求此待曾足，所以从未足过之待可以终不足而不经绝。名\"持\"取「相持而长」〔RU2-S-XZ19〕。对照（相合，mozi-feigong-liang-shi-jue）：「糧食輟絕而不繼」〔MO1-S-C18〕：「輟絕」是绝，「不繼」是其后不复足，合为绝而终不足；死者之数脊柱不给，非攻之论旨不取。\n\n**證**　`Becoming.Web.Kept`、`Becoming.Web.Broken`、`Becoming.Web.kept_or_broken`、`Becoming.Web.kept_not_broken`、`Becoming.Web.Lost`、`Becoming.Web.Consumed`；记录 [becoming-dependence-dynamics](../results/records/becoming-dependence-dynamics.md)。"
+   },
+   {
+    "id": "二·五",
+    "title": "共取而绝",
+    "body": "**經**　若衡，一待于一步在而足，则跨此步绝之，恰当水平与诸与之和不及所需与诸取之和；跨步后足步首之所需，恰当所需与诸取之和不过水平与诸与之和。同一所待同一步，一待绝，则凡在而足、所需不低于彼者亦绝。若衡，且唯活动者取、只取其所资，则凡绝，皆有一活动之物资其所待而于此步取之。若衡，一待绝，而此步流中每物所取与所需之和皆不过水平与诸与之和，则每物所取皆少于诸取之和。\n\n**說**　衡（平衡，`Becoming.Flow.Balances`）是：跨步后之水平加诸取，等于步首之水平加诸与（流之篇）。在其下，绝之者是共取，不是其中任何一取（`Becoming.Flow.Balances.broken_iff`、`Becoming.Flow.Balances.kept_iff`）；同一所待同一步，所需不低者亦绝，不论谁取，也不论取者自身是否待之（`Becoming.Web.Broken.of_need_le`）。绝总落在一个活动之物资之、取之之处（`Becoming.Flow.Balances.broken_drawn`）；若每物自己所取都不过水平与诸与之和超出所需之数，而待仍绝，则绝不属任何一物之取（`Becoming.Flow.Balances.broken_shared`）。见证：所待之水平为二，二物各取一，第三物以需一待之，各取皆不过其超出之数，共取绝第三物之待，第三物于下一步不活动；其一节制，其待即持（`Becoming.TwoDrawers.broken`、`Becoming.TwoDrawers.shared`、`Becoming.TwoDrawers.restrained_kept`）。一般地，以超出之量节制，不论何物节制，其待即持（`Becoming.Flow.Balances.kept_of_restrained`）；节制何以为愈，只在以广为愈（新组合，扩大为更好之设）之下论之（比较之篇），本条不排序。对照（相合，yuandao-shi-zhe-zhong）：「農之家一，而食粟之家六」〔IN1-S06〕：一家所与，诸家各取或皆在所与之内，合之则过；排佛老之论旨与民之分类不取。\n\n**證**　`Becoming.Flow.Balances.broken_iff`、`Becoming.Flow.Balances.kept_iff`、`Becoming.Web.Broken.of_need_le`、`Becoming.Flow.Balances.broken_drawn`、`Becoming.Flow.Balances.broken_shared`、`Becoming.Flow.Balances.kept_of_restrained`、`Becoming.TwoDrawers.broken`、`Becoming.TwoDrawers.restrained_kept`；记录 [what-a-rise-draws-from-beyond](../results/records/what-a-rise-draws-from-beyond.md)。"
+   },
+   {
+    "id": "二·六",
+    "title": "有待",
+    "body": "**經**　有待，凡待者活动之步皆见容也：律之局部前提，不断言。若衡、唯活动者与之、有待，则凡一所待跨步而升，皆有一见容之物于此步与之。又同此三前提，若一族于某步无一见容，自此每步族中之物所需不松，且凡与族中之物之所待者皆族中之物，则其后族中恒无一见容。\n\n**說**　有待（活动则受支撑，`Becoming.Web.Dependent`；在宇中为 `Becoming.World.Dependent`）是许多律所写入的前提，不是公理；它排除缓冲、储备与滞后（不活动之休眠不在所排之内：⟦二·八⟧之冬眠者即在有待之下），放宽之即蓄（⟦二·九⟧）。名取「吾有待而然者邪」〔ZH1-S02〕，有待只名此前提。在其下，升（`Becoming.Web.Rises`）只由见容者与之（`Becoming.Flow.rise_given_by_supported`）：容只自见容者来。所以一族若无外来之与、所需不松（`Becoming.Web.Unloosened`：步首每一待步后仍在，所需不降），一旦全族不容便恒不容（`Becoming.Flow.unsupported_stays`）；对兼言之，一旦无一见容，此后无一见容、无一活动（`Becoming.Flow.nothing_supported_stays`）：其终吸收。每一前提皆有其界：所需松（一待解去）、外有与者、与者不活动、与者不见容、升无所与，五个见证中皆有不容者复容（记录 support-from-the-supported）。对照（相合，xugua-yang）：「不養則不可動」〔YD-OW-XG〕：有待之形；以之解卦序者不取。「天之所助者，顺也。」〔DS02〕则相分（xici-tian-zhu-shun）：它以天为流外之施助者，并以吉无不利为保证，属意志或单一中心之层；脊柱中升只由流中见容之物所与，也不给任何保证。\n\n**證**　`Becoming.Web.Dependent`、`Becoming.World.Dependent`、`Becoming.Flow.rise_given_by_supported`、`Becoming.Web.Unloosened`、`Becoming.Flow.unsupported_stays`、`Becoming.Flow.nothing_supported_stays`；记录 [support-from-the-supported](../results/records/support-from-the-supported.md)。"
+   },
+   {
+    "id": "六·九",
+    "title": "容之所从来",
+    "body": "**經**　凡衡、唯活动者与、活动皆被支持之处：一所待升，必有一在而被支持者与之；一待者跨一步所需不松而得支持，则非其所待皆无被支持者与之；一族于某步无一被支持，其所需自此不松，且凡与族者之所待者皆族者，则此后无一被支持。\n\n**說**　支持只从被支持者得来（`Becoming.Flow.rise_given_by_supported`、`Becoming.Flow.gains_from_supported`）：后来得支持者，其支持来自参与其中、此刻已被支持的与之者；第二句是双重否定之式（“非皆无”），在可判定处读作“有”。没有族外之与，终局吸收（`Becoming.Flow.unsupported_stays`）；每个前提都不可少，一个构造之宇中各有其例：所需松解（`Becoming.Restoring.Adapting.restores`）、族外有与（`Becoming.Restoring.Inflow.restores`）、与者不活动、活动之与者不被支持、升而无与者，各使支持再来。在跨步之层，所需不松时得支持只因某所待上升，所需不收紧时失支持只因某所待下降（`Becoming.Web.GainsSupport.rises`、`Becoming.Web.LosesSupport.falls`）。讀（AI，D35）：无自外来之与时，待者之得支持唯由被支持者之与；这是生生（⟦六·十四⟧）“所成者保、补、递、创后生之所待与生者”的一面。对照（相合，zhonglun-kong-yi-yi-qie-fa-de-cheng）：「以有空義故，一切法得成；若無空義者，一切則不成」〔FO1-S-MMK〕：只取空之关系核心，成与不成都由所待之变给出，不待任何所待者在这两条律下无从得失；空作解脱之目标、真如之体不入。「泉涸，魚相與處於陸，相呴以濕，相濡以沫，不如相忘於江湖」〔ZH1-S06〕（定域，zhuangzi-xiang-ru-yi-mo）：相濡以沫是族内之与，不能使支持再来，与终局吸收同构；“不如”是评价，只在以广为愈之下、且设江湖之水平广于涸泉时成立。\n\n**證**　`Becoming.Flow.rise_given_by_supported`、`Becoming.Flow.gains_from_supported`、`Becoming.Flow.unsupported_stays`、`Becoming.Restoring.Adapting.restores`、`Becoming.Restoring.Inflow.restores`、`Becoming.Web.GainsSupport.rises`、`Becoming.Web.LosesSupport.falls`；讀（AI，D35）；记录 [support-from-the-supported](../results/records/support-from-the-supported.md)。"
+   },
+   {
+    "id": "二·七",
+    "title": "失之后",
+    "body": "**經**　若有待，一待跨步后所待之水平低于步首之所需，而此待步后犹在、所需不降，则待者步后不活动；步首活动者，于此步已。若有待，一所待自某步后恒低于彼时一待之所需，则其后犹活动之待者，不得既犹待此所待、所需又不低于彼时；其待自彼时后犹在、所需不低于彼时者，此后恒不活动。绝不定其后：有一变，自同一状三行同绝一待，一行待者此后恒不活动，一行解此待、结他待而恒活动，一行所待复足，自第二步起其待步步皆持。\n\n**說**　前两条都是有待之逆否：`Becoming.Web.Dependent.inactive_below` 与 `Becoming.Web.Dependent.ceases_below` 读一步，`Becoming.Web.consumed_continues_transformed` 与 `Becoming.Web.consumed_ends_when_fixed` 读失而终不足之后。所以失后犹活动者，只有减需或解待一途；律不说此途必可得。亡、改待、终足三种去向既不穷尽，也不互斥：终足说的是所待，亡与改待说的是待者；一物改待抑或一物亡而另一物结，取决于待者之同一由何认定（`Becoming.Crossing.loss_does_not_decide`，一构造见证，其中造成绝之动选定去向）。对照（定域，mengzi-heng-chan）：「若民，则无恒产，因无恒心。」〔RU2-S-MZ〕：恒心以恒产为所待，产不恒则其待如故者不能每步活动；「惟士为能」〔RU2-S-MZ〕在此有其位置，即失而犹续者已减或解其待；财产与名分之义只作语境。又「家道窮必乖」〔YD-OW-XG〕（相分，xugua-qiong-bi-guai）：序卦之「必」在脊柱中不成立，乖只是绝后诸去向之一。\n\n**證**　`Becoming.Web.Dependent.inactive_below`、`Becoming.Web.Dependent.ceases_below`、`Becoming.Web.consumed_continues_transformed`、`Becoming.Web.consumed_ends_when_fixed`、`Becoming.Crossing.loss_does_not_decide`；记录 [becoming-dependence-dynamics](../results/records/becoming-dependence-dynamics.md)、[space-and-its-parts](../results/records/space-and-its-parts.md)。"
+   },
+   {
+    "id": "二·八",
+    "title": "小故与大故",
+    "body": "**經**　小故，有之不必然，无之必不然也。大故，有之必然，无之必不然也。若有待，容为待者活动之小故：不容则不活动；容而不活动者，有其见证。\n\n**說**　名取墨辩「小故，有之不必然，無之必不然」〔MI1-S-SS〕与「大故，有之必然，無之必不然」〔MI1-S-SS〕。有待（`Becoming.Web.Dependent`）只是一向之蕴含，活动则容；由容推不出活动。见证：第一步冬眠者不活动，而以需一待其穴，穴之水平为一，故见容；`Becoming.Hibernation.readings` 给出有待与\"第一步不活动\"，\"第一步见容\"则由 `Becoming.Hibernation.web` 之定义算得，尚未立为具名引理。所以在表示中容不是活动之大故；脊柱中大故暂无锚（未决），有之必然（充分条件）见推理之篇。对照（定域，zaahan-san-shi-he-he）：「緣眼及色眼識生，三事和合生觸」〔FO1-S-SA〕：三者缺一则触不生，这一必要方向与容之合取、与有待相合，即小故；「和合生觸」还断言三者具则触生，那是大故，脊柱不给。又「而養形果不足以存生」〔ZH1-S19〕（相合，zhuang-dasheng-yang-xing-bu-zu）：文本所否者正是充分，不是容。\n\n**證**　`Becoming.Web.Dependent`、`Becoming.Web.Supported`、`Becoming.Hibernation.readings`、`Becoming.Hibernation.web`；大故于脊柱暂无锚（未决）；记录 [identity-across-steps](../results/records/identity-across-steps.md)、[support-from-the-supported](../results/records/support-from-the-supported.md)。"
+   },
+   {
+    "id": "三·十",
+    "title": "亡",
+    "body": "**經**　亡，待者自某步起永不活动也。有穷诸待者各亡，则自一步起皆不活动。凡待者以蓄承其活动，自某步起不容：其作不无尽复现；蓄不过 k，则此后任一段中其活动不过 k 次（活动定然否）；蓄随步而衰，则自不容之步加其蓄之数起，永不活动。\n\n**說**　亡（终止，ends，`Becoming.Web.Ends`）是终而不复，与已（一步之止，可再作）不同。有穷诸亡者同时尽（`Becoming.Web.Ends.all`）。蓄（储备，篇二）只延亡而不免：自某步起不容（不被支持）之后，作不复现（`Becoming.Web.Carries.arising_not_recurring`），活动之次数不过蓄量（`Becoming.Web.Carries.lasts_within`），蓄衰则过其蓄量之步数后不再活动（`Becoming.Web.Carries.ends_within`）。亡不是律：可以作无尽而无一已（⟦三·六⟧），也可有一体永不亡，以之为体之兼每步活动而无一作（`Becoming.Immortal.immortal`，构造）；后者之体不待任何所待，是模型所给，不是律。名取「死而不亡者寿」〔YD-LAO-BASE〕之亡，只指终而不复。对照（定域，jingang-you-wei-fa）：「一切有為法，如夢、幻、泡、影，如露亦如電」〔FO1-S-DIAMOND〕：“有为无常”只在有穷族之复现上成立（活动定然否），对每一待者不成立。相分（hs-06-16-bu-si）：「人能养神则不死也」〔LC-HS-UP〕把不亡当作个体凭养神即可得、不待所待之容的持存；在有待（活动则受容）或以蓄承其活动之处，持存以容为条件，蓄只延亡。\n\n**證**　`Becoming.Web.Ends`、`Becoming.Web.Ends.all`、`Becoming.Web.Carries.arising_not_recurring`、`Becoming.Web.Carries.lasts_within`、`Becoming.Web.Carries.ends_within`、`Becoming.Immortal.immortal`；记录 [reserve-defers-ending](../results/records/reserve-defers-ending.md)、[whole-persists-through-generation](../results/records/whole-persists-through-generation.md)。"
+   },
+   {
+    "id": "二·九",
+    "title": "蓄",
+    "body": "**經**　蓄，待者不见容之步其量不增、活动则减者也。有待，恰当零为蓄。凡有蓄，待者自一步起恒不见容，则不能活动于任意晚之步；其活动步步定然否者，自此步起任一段中活动之次数，不多于此步之蓄：蓄延其亡而不免之。若衡，所持之所待于持者不见容之步无与之者，于持者不见容而活动之步见取，则其水平为持者之蓄。\n\n**說**　蓄（储备，reserve，`Becoming.Web.Carries`）是有待之放宽：有待恰是零蓄（`Becoming.Web.carries_zero`），所以放宽有待不是许\"不依待而活动\"，而是一个正的蓄。蓄可以是所持之一所待，如狐燃其脂（`Becoming.Flow.carries_of_held`）。所待之有形者亡后以正需待之者（`Becoming.Web.Carries.coextinct_lasts`），失而终不足而其待如故者（`Becoming.Web.Carries.consumed_lasts`），都只是延迟之俱亡、延迟之亡。蓄若在不容之步为正即减（蓄自减，如种子之活力，`Becoming.Web.Decays`），俱亡沿任意长之链逐环有界（`Becoming.Web.Carries.chain_ends`）。蓄不自减时，若凡从未见容、有蓄、活动步步定然否之待者都给出\"一步此后不复活动\"，则无穷可尽（LPO，新组合）成立（`Becoming.Web.lpo_of_ending`）：要知其何时终止，等于判定一行此后是否还会再动，所以律只给\"不能活动于任意晚之步\"。对照（相合，xugua-wu-xu-ran-hou-ke-yang）：「物畜然後可養」〔YD-OW-XG〕：先有所蓄，然后可取以养；文本未说蓄只延迟而不免。又「僅有微生，將死不久」〔YWH-H12〕（相合，kongshu-genzhu）：孔疏以根与枝两向相待；枝干已枯，根株以正需待之而凭蓄，其亡延迟而不免。\n\n**證**　`Becoming.Web.Carries`、`Becoming.Web.carries_zero`、`Becoming.Web.Carries.active_not_recurring`、`Becoming.Web.Carries.lasts`、`Becoming.Flow.carries_of_held`、`Becoming.Web.Carries.coextinct_lasts`、`Becoming.Web.Carries.chain_ends`、`Becoming.Web.lpo_of_ending`；记录 [reserve-defers-ending](../results/records/reserve-defers-ending.md)。"
+   },
+   {
+    "id": "二·十",
+    "title": "有形",
+    "body": "**經**　有形，物之活动恰当其水平为正也。若有待，待者活动之步以正需待一有形者，则此有形者亦活动。有形者之水平自某步后恒低于一待彼时之所需，而此所需不过一，则有形者此后不活动。读为二类之待网，凡曾活动之待者皆非有形。\n\n**說**　有形（体现，embodied，`Becoming.Web.Embodied`；新组合，有＋形，只取\"活动恰在水平为正之处\"，不带形体之义）是一类之读中的一种读法：一物于他物之为所待，就是它自身之活动；在宇中凡物皆有形是一个可写入律中的前提（`Becoming.World.Embodied`）。`Becoming.Web.Embodied.active_of_bearing` 是俱亡（⟦二·十一⟧）之一环；`Becoming.Web.Embodied.ends_when_consumed` 说一待对有形者之所需不过一，而其水平自此恒低于此需，则此有形者此后不活动；此律不要求资，故不是竭。读为二类之待网，待者不作所待，故活动者皆非有形（`Becoming.Web.roles_not_embodied`）：有形只在一物兼二角时有义。何物有形是表示之选择：遗骸在活动止后犹立，水为所待而不活动；有形者之作则须他物之与，若衡且唯活动者与之，有形者跨步而作，必有另一活动之物于此步与之（`Becoming.Web.Embodied.arises_given`，生灭之篇）。对照（相合，zhuang-xiaoyao-you-suo-dai）：「此雖免乎行，猶有所待者也。」〔ZH1-S01〕：风若读作有形之所待，以正需待之者风止则行止；读作\"换了所待而非无所待\"是讀（AI）。又「是出則存，是入則亡」〔ZH1-S21〕（定域，zhuang-tianzifang-you-dai）：「是入則亡」与之相合；「是出則存」是充分方向，脊柱不给（⟦二·八⟧）。\n\n**證**　`Becoming.Web.Embodied`、`Becoming.World.Embodied`、`Becoming.Web.Embodied.active_of_bearing`、`Becoming.Web.Embodied.ends_when_consumed`、`Becoming.Web.roles_not_embodied`、`Becoming.Web.Embodied.arises_given`；记录 [life-as-condition-of-life](../results/records/life-as-condition-of-life.md)、[generation-is-replenishment](../results/records/generation-is-replenishment.md)。"
+   },
+   {
+    "id": "二·十一",
+    "title": "俱亡",
+    "body": "**經**　若有待，于一步，活动沿以正需待有形者之链而传：链上一物活动，则凡其沿链所及者皆活动。故链所及之一物于此步不活动，则凡沿链及之者于此步皆不活动，是谓俱亡。\n\n**說**　俱亡（共灭，coextinction，`Becoming.Web.coextinct`；新组合，俱＋亡，不承先秦\"都失去\"之义）是 `Becoming.Web.active_along` 之逆否；链（`Becoming.Web.bearing`）之每一环是\"以正需待一有形者\"，有待、正需、有形缺一则链断，所需为零或所待不有形之处，一物之不活动不由此律传到待者。律只给一向，所待不活动则待者不活动；待者亡，律不说其所待或与之者亦亡：见证 `Becoming.Downstream.one_way` 中，自身只待其地，每步活动且见容，而以自身所与为生之物在自身停与之后亡。依存也可两向，二物互为所待（`Becoming.Mutualism.apart`）；二者皆有形而互以正需相待，则把 active_along 两向各用一次即得同步同活动、同步俱亡，这是两行推论，尚未立为具名定理。有蓄时俱亡滞后而不免（⟦二·九⟧）。名取「虢朝亡而虞夕從之矣」〔FA1-S-H10〕（相合，hanfei-shiguo-fu-yi-che）：其前「輔依車，車亦依輔」〔FA1-S-H10〕是两向之待，朝亡而夕从是有蓄之滞后；谋略与国势之争不取。对照（相合，weishi-bian-xing-sui-mie）：「遍行滅時，法定隨滅；非遍行滅，法或猶在」〔FO1-S-CY〕：正是俱亡之界，所待若不在这样的链上，其灭不由此律传到待者。又「唯風滅故動相隨滅，非是水滅」〔FO2-QX〕（定域，qixin-feng-shui-sui-mie）：一个所待之灭不传到另一个所待；以水为不灭之心体者不取。\n\n**證**　`Becoming.Web.bearing`、`Becoming.Web.active_along`、`Becoming.Web.coextinct`、`Becoming.Downstream.one_way`、`Becoming.Mutualism.apart`、`Becoming.Web.Carries.coextinct_lasts`；记录 [life-as-condition-of-life](../results/records/life-as-condition-of-life.md)、[derived-extent-limits](../results/records/derived-extent-limits.md)、[reserve-defers-ending](../results/records/reserve-defers-ending.md)。"
+   },
+   {
+    "id": "二·十二",
+    "title": "自持",
+    "body": "**經**　自持，物于活动之步以正需待其自身之水平也。若有待，自持者活动之步其水平为正；又有形，则其自待之足恰当其活动。若有待，有形而自持者于一步已，则凡于此步资之者，皆资于一绝之步。有一待网焉，二物互为所待而皆不自持，互易其所待之标名则皆自持，而有待如故：何物自持，随标名而定。\n\n**說**　自持（承担自身，self-bearing，`Becoming.Web.SelfBearing`；新组合，自＋持，取代\"自待\"）也是一类之读中的读法。`Becoming.Web.SelfBearing.stands` 说自持者活动时立为所待；`Becoming.Web.SelfBearing.met_iff` 说若又有形，其自待之足除活动之外不记任何东西。`Becoming.Web.Embodied.ending_breaks` 说：于有形而自持者已之步资之者，都在一绝之步资之，不论何者使之已，也不论是否另有物待之；这是同时，不是\"使之\"，说资者使之亡需一反事实之关系，此处未述。讀（AI，D6）：这是逐步读法之判，对每一资者都一样，不评价资者。`Becoming.Mutualism.apart_relabelled` 说哪个所待是哪个物，有待看不见，所以自持不是独立之性。对照（相合，zhuang-renjianshi-yi-neng-ku-sheng）：「實熟則剝則辱」〔ZH1-S04〕：取实者资于果木，果木以正需待其自身，二者交（⟦二·十三⟧）；果木若于此步已，资之者即资于其自待之绝；脊柱不证取实者是其已之因，以无用为用之处世术不取。又「誠者自成也」〔RU1-S-ZY〕（定域，ru-zhongyong-cheng-zi-cheng）：可证之部分是自持；读作自我生成，则与有形者之作须他物之与（⟦二·十⟧）不合，故名取自持而不取自成。\n\n**證**　`Becoming.Web.SelfBearing`、`Becoming.Web.SelfBearing.stands`、`Becoming.Web.SelfBearing.met_iff`、`Becoming.Web.Embodied.ending_breaks`、`Becoming.Mutualism.apart_relabelled`；记录 [life-as-condition-of-life](../results/records/life-as-condition-of-life.md)。"
+   },
+   {
+    "id": "二·十三",
+    "title": "交",
+    "body": "**經**　交，二事经一所待相关：其一资之，其一以正需待之，不论其步也。交两向而同；交者皆或待或资于其所待。所待若无物资之，或无物以正需待之，则不成交。凡于一步剥一所待者，与一以正需待之者于此步之事交。凡资于一自持者，与其每一活动之事交。\n\n**說**　事是一待者于一步（event）；交（交互，interaction，`Becoming.Web.Interacts`）是对应纪律所收窄之相关：一个所待只在有物资之、有物以正需待之处，才把二事相关；闲置之所待（`Becoming.Web.Idle`）不成交，所以加入一个诸物皆以零需待之、无物资之的所待，不再白白连通全体。剥（侵蚀，undermining，`Becoming.Web.UnderminingOn`，恒竭之篇）都是交（`Becoming.Web.UnderminingOn.interacts`）：剥必资于所待，而所待有一以正需待之者。一物兼二角时，资于自持者即与其活动之事交，无须第三个所待（`Becoming.Web.SelfBearing.interacts`）。交之界有三：不排步之先后，第五步之资与只在第零步之待亦交（`Becoming.Later.drawing_connects_earlier`）；不问资是否改变水平（`Becoming.Pinned.drawing_interacts`）；读为一类之物时不使二所待相关（⟦二·十六⟧）。二物互为所待而皆不自持，交不连通之（`Becoming.Mutualism.apart_not_interacting`），食则连通之（⟦二·十四⟧）。名取「相與交食乎地而交樂乎天」〔ZH1-S23〕。对照（定域，xici-jin-er-bu-xiang-de）：「近而不相得，则凶或害之」〔DS03〕：近读作同参与一所待，相得读作经活之事以交相连，害读作剥；剥之事皆交而不是活之事，二待者经一所待之用相连，当唯一之用是剥时不相连，同参与则两种情形皆相关（`Becoming.Shared.connection_by_living_use`，一构造见证）；近而不相得与剥可以并存，脊柱不证其必然，凶、悔吝之占断不取。\n\n**證**　`Becoming.Web.Interacts`、`Becoming.Web.Interacts.symm`、`Becoming.Web.Interacts.participates`、`Becoming.Web.Idle.not_interacts`、`Becoming.Web.UnderminingOn.interacts`、`Becoming.Web.SelfBearing.interacts`、`Becoming.Mutualism.apart_not_interacting`；记录 [condition-correspondence-discipline](../results/records/condition-correspondence-discipline.md)、[life-as-condition-of-life](../results/records/life-as-condition-of-life.md)。"
+   },
+   {
+    "id": "二·十四",
+    "title": "食",
+    "body": "**經**　食，待者于一步资一物而以正需待之也。若有待，活动之待者，其所食者于此步水平为正；所食者又有形，则于此步亦活动。\n\n**說**　食（以之为生，living on，`Becoming.Web.LivesOn`）只在一类之读中有义：所食者是物，不是另一类之所待。食不白得（`Becoming.Web.LivesOn.stands`、`Becoming.Web.LivesOn.active`）；但所食者不必有形、不必活动，一待者可食一个眠而立者（`Becoming.Drowsy.drowsy`）。食比交多出的是\"哪个所待是哪个物\"之认定：二物各只以对方为所待，交与共同参与都不连通之，食则连通之（`Becoming.Mutualism.apart_sustenance_connected`）；互易其所待之标名，交与共同参与之连通如故，食之连通失去（`Becoming.Mutualism.relabel_sustenance`）。对照（相合，lao-36-yu-yuan）：「鱼不可脱于渊」〔YD-LAO-BASE〕：鱼以渊为食，离之则不得容。又「至哉坤元，萬物資生，乃順承天。」〔YD-HX01〕（定域，yi-tuan-qiankun-zi）：资生读作食；「順承天」把所资者收为统属之元，属单一中心之层，脊柱无对应律；名\"资\"亦取于此。\n\n**證**　`Becoming.Web.LivesOn`、`Becoming.Web.LivesOn.stands`、`Becoming.Web.LivesOn.active`、`Becoming.Drowsy.drowsy`、`Becoming.Mutualism.apart_sustenance_connected`、`Becoming.Mutualism.relabel_sustenance`；记录 [living-on-and-descent](../results/records/living-on-and-descent.md)。"
+   }
+  ],
+  "duizhao": "#### 对照\n\n- 「吾有待而然者邪？吾所待，又有待而然者邪？」〔ZH1-S02〕——定域：所待又有待，链上一物兼二角；脊柱不断言凡所待皆又有待（zhuang-qiwu-wangliang-dai）。\n- 「民無信不立」〔RU1-S-LY〕——相合：信是立之所待，缺之则不立，限于此必要方向；去兵、去食之后犹立（lunyu-min-wu-xin-bu-li）。\n- 「糧食輟絕而不繼」〔MO1-S-C18〕——相合：一待绝，此后不复足（mozi-feigong-liang-shi-jue）。\n- 「緣眼及色眼識生，三事和合生觸」〔FO1-S-SA〕——定域：必要方向即小故；「和合生觸」之充分方向脊柱不给（zaahan-san-shi-he-he）。\n- 「遍行滅時，法定隨滅；非遍行滅，法或猶在」〔FO1-S-CY〕——相合：俱亡只沿以正需待有形者之链（weishi-bian-xing-sui-mie）。\n- 「離居不相待則窮」〔RU2-S-XZ10〕——相合：他者不在扰域之内，相待不成，所需只得自给（xunzi-fuguo-bu-xiang-dai）。\n- 「天之所助者，顺也。」〔DS02〕——相分：流外之施助者与吉无不利之保证属意志或单一中心之层（xici-tian-zhu-shun）。\n- 「此一乘義，因果同體，成一緣起，得此即得彼，由彼此相即故。」〔FO2-FQ〕——相分：同体相即消去依存之方向与步（huayan-yin-guo-tong-ti）。"
+ },
+ "edits": [
+  {
+   "target": "C02",
+   "instruction": "篇二篇首改为：「本篇论待：大化之中，一待者于一步需一所待至某量，并或资之（待、资与待网见二·一）。篇一说待者与所待是一物之二角；本篇说二角之间最基本的关系怎样形成、维持与改变。先说足、容、正需；次说待之结与解、持与绝，及在衡之下一待之绝恰由诸取与诸与之和所定，不归于任何一取；然后说有待（活动则见容）这一设，及所需读作必然之应时它怎样由取与读出；在它之下见容只自见容者来，失而终不足之后，犹活动之待者必已减或解其待，其待如故者此后不活动，容为活动之小故而非大故；待者之亡，蓄推迟亡而不免之。再说一物兼二角时所显者：有形、俱亡、自持；终以诸物经所待而相关者：交与食。相待在群之篇，截在流之篇，有力在群之篇。本篇诸律都是定理：局部条件（正需等）写入其中；以宇之设（衡、有待、有形、唯活动者与之等）为若者有设而然；构造之见证只为见证，不加公理。本篇不用延续之条件与以广为愈。后接作、已与续之篇，流与衡之篇，复、闭与恒之篇。」（S5、S1、C2）"
+  },
+  {
+   "target": "二·五",
+   "instruction": "經末加四·二十二、十四·十三之独有句，取十四·十三之确切之形（`Becoming.Flow.Balances.kept_of_restrained` 之若）：「另一衡之流，此步此所待之水平不低于前流，诸取之和少于前流至少 e，诸与之和不少于前流，而一所需加前流诸取之和不过前流之水平加诸与之和加 e，则此所需于后流跨步之后足。」（四·二十二之「共取至少少其所过」不确，不用。）證并入四·二十二、十四·十三之声明（`Becoming.TwoDrawers.shared`、`Becoming.TwoDrawers.restrained_kept`、`Becoming.Flow.Balances.level_le_of_restrained`、`Becoming.Ranking.restraint_ranks_over_drawers` 等未列者）与记录 ranking-under-readings。說注：诸取之和即共取（四·二十）。"
+  },
+  {
+   "target": "二·六",
+   "instruction": "經改为「有待，凡待者活动之步皆见容也：宇之一设，陈而不断。取与读为一关系（一步可许多种取与）：所需读作必然之应（其所待之水平低于所需之每一历史下，无所许之取与使之取与），则其每一行皆有待；读作可能之应，则有例，行不有待。取与之法每步只许一种取与，二读于其所生之程皆即其法之所需。」（删其律，留六·九，已移于其后，C37；「律之局部前提」「三前提」之称改，S5、C2；不用「开放」，开只名四·十三之开；「则否」改「有例」，因 `free_unsupported` 是一见证。）證：留 `Becoming.Web.Dependent`；加 `Becoming.ExchangeRelation.readWeb_dependent`、`Becoming.ExchangeRelation.free_unsupported`、`Becoming.ExchangeLaw.relation_readWeb_requires`、`Becoming.ExchangeLaw.relation_readWeb_may`；說注计其余则前四设由读而然（`Becoming.ExchangeRelation.reading_glue`、`Becoming.ExchangeLaw.readWorld_glue`，见一·十一、NEW-12）；记录加 [requirement-over-open-exchanges](../results/records/requirement-over-open-exchanges.md)、[premises-read-off-the-exchange](../results/records/premises-read-off-the-exchange.md)。`Becoming.Flow.rise_given_by_supported`、`Becoming.Flow.unsupported_stays` 归六·九。"
+  },
+  {
+   "target": "六·九",
+   "instruction": "（已移至二·六之后）經改为「凡衡、唯活动者与、有待：一所待之水平跨步而高，必有一见容者于此步与之；一待者跨一步所需不松而见容，则非其所待皆无见容者与之；一族于某步无一见容，其所需自此不松，且凡与族者之所待者皆族者，则此后无一见容。」（被支持→见容，C35；「升」定于三·四，在篇二不先用，改「水平跨步而高」；并二·六原律。）證加 `Becoming.Flow.rise_given_by_supported`、`Becoming.Flow.unsupported_stays`（自二·六）。"
+  },
+  {
+   "target": "二·七",
+   "instruction": "經中「恒低于」「恒不活动」改为「永低于」「永不活动」（恒只名更新，C89）；「步首活动者，于此步已」改为「步首活动者，于此步已（已见三·二）」（已定于篇三，C90 之指向）。證并入五·十六之声明（`Becoming.Web.consumed_ends_when_fixed`、`Becoming.Web.consumed_continues_transformed` 等未列者）。"
+  },
+  {
+   "target": "三·十",
+   "instruction": "（已移至二·八之后）經改为「亡，待者自某步起永不活动也。有穷诸待者各亡，则自一步起皆不活动。」其蓄之律移二·九（C38；「其作不无尽复现」「蓄不过 k……」二句为二·九「不能活动于任意晚之步」「活动之次数不多于此步之蓄」所含）。說注：以蓄承活动者何时亡，见二·九。證之 `Becoming.Web.Carries.arising_not_recurring`、`Becoming.Web.Carries.lasts_within`、`Becoming.Web.Carries.ends_within` 归二·九。"
+  },
+  {
+   "target": "二·九",
+   "instruction": "經末加自三·十移来之独有句：「蓄若于不容之步为正即减，则自不容之步加其蓄之数起，永不活动。」（不用「蓄随步而衰」：衰只名四·九之族衡且耗而总量降，此处是 `Becoming.Web.Decays` 之蓄自减。）「恒不见容」改「永不见容」。證并入三·十、五·十六之蓄之声明（`Becoming.Web.Carries.ends_within`、`Becoming.Web.Carries.arising_not_recurring`、`Becoming.Web.Carries.lasts_within`、`Becoming.Web.Carries.consumed_lasts`、`Becoming.Web.lasts_on`、`Becoming.Web.Decays`）。"
+  },
+  {
+   "target": "二·十三",
+   "instruction": "經删「凡于一步剥一所待者，与一以正需待之者于此步之事交。」（剥定于五·十四，此句移五·十四之經末，O7）。證之相应声明随之移五·十四。"
+  }
+ ],
+ "added": [],
+ "duizhao_issues": []
+}

@@ -1,302 +1,131 @@
 {
- "pian": "篇四「流与衡」（C04）",
  "edits": [
   {
-   "find": "以及每步取其序之最优者怎样使族外之所待被取尽（序与感之关系在篇十）",
-   "replace": "以及每步取其序之最优者怎样使族外之待绝而终不足（序与感之关系在篇十）",
-   "why": "Lean 给 Web.Lost（绝而终不足），不给取尽"
+   "id": "四·六",
+   "find": "则步后之总积加族于此步共取过与之量，等于步前之总积；与如其取，则共取过与之量为零。",
+   "replace": "则步后之总积加族于此步所被取过其所被与之量，等于步前之总积；与如其取，则此量为零。",
+   "why": "經在⟦四·二十⟧定义共取过与之前就用了这个名（大纲中四·二十在后）。按 Flow.lost＝excess(uptake, replenishment)，改为平语，律的内容不变。"
   },
   {
-   "find": "绝依所需而不属任一取者",
-   "replace": "绝依所需，各取皆在“水平加共与高出所需之量”之内时不属任一取者",
-   "why": "broken_shared 有 within 前提"
+   "id": "四·六",
+   "find": "而其状不复（复见⟦五·一⟧），则其有变之步不过其总积分于诸员之方式之数；自某步起每步与不过取，而其状屡变，则其状之复不可非。",
+   "replace": "而自此步起其状一经有变，即不再同于此步以来先前任一步之状，则其有变之步不过其总积分于诸员之方式之数；自某步起每步与不过取，而其状屡变，则“其状有变之后再同于此步以来先前某步之状”不可非。",
+   "why": "复定义在⟦五·一⟧，在后，计划所加的指向不能免去經对后出之名的使用。Web.Revisits cs T 是：有 T≤s≤v<u，v 步有变而 u 步之状等于 s 步之状。changes_within_conserving 的设是 ¬Revisits，unending_change_revisits 的结论是 ¬¬Revisits，这里逐项写成平语。"
   },
   {
-   "find": "止需端或有穷之读，无端则趋而不至",
-   "replace": "止需端或有穷之读，无端则可趋而不至",
-   "why": "无端只是可以不至，且趋需积小以高大"
+   "id": "四·六",
+   "find": "族于一步共取过与之量（`Becoming.Flow.lost`：族所被取者过其所被与者之量，不过则为零）",
+   "replace": "族于一步所被取过其所被与之量（`Becoming.Flow.lost`，不过则为零；以⟦四·二十⟧之名，即族之共取过与之量）",
+   "why": "與經的平语一致；说中保留与后出之名的对应，并给出指向。"
   },
   {
-   "find": "而以广为愈在本篇亦只作设（四·二十二）",
-   "replace": "而以广为愈在本篇亦只作设（四·二十二、四·二十三）",
-   "why": "四·二十三亦用之"
+   "id": "四·六",
+   "find": "状不复（自此步起，族之状变而后不回到其先之状）",
+   "replace": "状自此步起变后不回到其先之状（即不复，复见⟦五·一⟧）",
+   "why": "經已改为平语，说中在这里点明它就是复，并指向⟦五·一⟧。"
   },
   {
-   "find": "待网持每步之水平、活动、所需、所资，流持步间之取与",
-   "replace": "待网记每步之水平、活动、所需、所资，流记步间之取与",
-   "why": "持是名（维持），不作记录义"
+   "id": "四·二十三",
+   "find": "多于族步前之总积加族外之余地，则族外必有一待绝。",
+   "replace": "多于族步前之总积加族外每一所待之积过其所足之需之量之和，则族外必有一待绝。",
+   "why": "余地定义在⟦六·六⟧，在后，經不能先用。breaks_beyond 的 exceeds 用的是 Web.slack dep rest t＝Σ(level c − need (dep c) c)，即族外各所待之积超过所足之需之量的和，这里照此直写。"
   },
   {
-   "find": "句中“止”“已”是常义，不作名用",
-   "replace": "句中“止”“已”是一般之义，不作名用",
-   "why": "常是名（不变量）"
+   "id": "四·二十三",
+   "find": "升与此量合计过族外之余地（族外诸所待之积过其所名之待之需之和）",
+   "replace": "升与此量合计过族外之余地（族外诸所待之积过其所名之待之需之和；余地见⟦六·六⟧）",
+   "why": "經改为平语以后，说中引入余地之名时补上指向。"
   },
   {
-   "find": "有形之物（有形，新组合：有＋形，活动恰在水平为正之处，篇二）只因另一活动之物与之而作",
-   "replace": "有形之物（有形，新组合：有＋形，活动恰在水平为正之处，篇二）作时，必有另一活动之物与之",
-   "why": "Lean 只给必要条件，不给因"
+   "id": "四·二十四",
+   "find": "一物之取 n 步每步多于今而 n 多于 B",
+   "replace": "一物之所取连 n 步皆次步多于本步，而 n 多于 B",
+   "why": "多于今的經中定义在⟦十六·二十⟧（编号十一·十七），在本篇之后。takesAll_of_more 的设是 ∀ i<n, MoreThanNow id (take · f c) (T+i)，即 take(T+i) < take(T+i+1)，改为名表对多于今的说明之平语。说中仍以「新组合」首次说明多于今。"
   },
   {
-   "find": "讀（AI，D4）：有形之物读作生，所以生之作经由他物之与。",
-   "replace": "讀（AI，D4）：有形之物读作生之一种（生不限于有形），所以有形之生，其作经由他物之与。",
-   "why": "D4：生不限于有形"
+   "id": "四·七",
+   "find": "耗，凡于一步封之员各异之族，在场之每物与族不过其自族所取，有取则少于所取也。",
+   "replace": "耗，凡于一步封之员各异之族，在场之每物与族不过其自族所取，有取则少于所取也；任一族于一步如此（不问其封与员之异同），谓族于一步耗。",
+   "why": "原定义只立了全局之耗（Flow.Dissipative）。本條及四·八、四·九、四·十九、四·二十三中的「族于一步耗」是 DissipatesOn cs t，它不要求封，也不要求员各异，runs_down 与 falls_of_taking 只用它。不补这一句，读者会以为这些律要求族封。"
   },
   {
-   "find": "它真正的条件是每取有一个最小之量（`Becoming.Amounts.replenishment_unbounded`）",
-   "replace": "在积小以高大之量中，它真正的条件是每取有一个最小之量（`Becoming.Amounts.replenishment_unbounded`，结论是与不在最小之取之任何倍数之内）",
-   "why": "该律另需 Archimedean，结论之形不同"
+   "id": "四·十二",
+   "find": "二物之族衡而耗，运者皆在其中",
+   "replace": "二物之族无自增而耗（无自增，⟦四·十九⟧），运者皆在其中",
+   "why": "HalvingPass 在二进分数之量中，只有 InAmounts.BalancesOn（≤，即四·十九之无自增），没有自然数之衡（Flow.Balances 的等式）。写「衡」与四·十九的分名相冲突。"
   },
   {
-   "find": "与之者多、取者少，则存量常在，相合在计数之结构；生财之财政义不取。",
-   "replace": "相合有二层：所存常足，在于出入相掩则水平不降（四·二十）；与之者、取者之数只在必要之向上相合：取者多而无已而每物与有定量，则与之者之数无终界。计数本身不保存量；生财之财政义不取。",
-   "why": "计数不定存量；不在共用之词上称相合"
+   "id": "十二·十四",
+   "find": "凡所与读所留与前所与而定（其法 A）",
+   "replace": "凡所与读所留与前所与而定（记之为 A）",
+   "why": "法是名表之名，指确定之变（律）。名表常与条明言，所与之函数不称「与之法」，只有其步才是法。A : Nat → Nat → Nat 是所与之函数，不是法。"
   },
   {
-   "find": "物理之一读（外围，用 Mathlib）",
-   "replace": "物理之一读（外围，用实数与测度）",
-   "why": "只用中文"
+   "id": "十二·十四",
+   "find": "于是平面上之阈是一条不随前所与之升而升之线",
+   "replace": "平面上之阈则只须 A 随二者而升、守其域（不须后一条件）：它是一条不随前所与之升而升之线",
+   "why": "falls_iff_below 与 threshold_falls 只设 Rises A 与 Band，不用 RestsAtDraw。「于是」会让人以为阈之律依赖前一句的条件与 comes_to_rest；經写得对，说应与之一致。"
   },
   {
-   "find": "损（下降，depletion，`Becoming.Web.Depletes`）",
-   "replace": "损（有限家族之消耗，depletion，`Becoming.Web.Depletes`）",
-   "why": "现行中文版之下降指衰（running down）"
+   "id": "四·二十六",
+   "find": "取可加，害不可加：",
+   "replace": "常取可加，涸界多于需之量则不止于相加：",
+   "why": "害不是名表之名，带评价义（STYLE：不写价值判断）。harms_superadditive 的内容是 a+b ≤ c+1，即并取之下涸界多于需之量，不少于各取所致者之和减一，这里照此直写。"
   },
   {
-   "find": "`Becoming.Brood.rise_without_fall`；记录 [rising-and-falling-in-one-exchange](../results/records/rising-and-falling-in-one-exchange.md)、[laws-of-one-step](../results/records/laws-of-one-step.md)。",
-   "replace": "`Becoming.Brood.rise_without_fall`；记录 [rising-and-falling-in-one-exchange](../results/records/rising-and-falling-in-one-exchange.md)、[unceasing-generation-needs-renewal](../results/records/unceasing-generation-needs-renewal.md)。",
-   "why": "laws-of-one-step 不含本条任一声明"
+   "id": "四·二十七",
+   "find": "所与兼读所留与前所与",
+   "replace": "所与并读所留与前所与",
+   "why": "兼是名表之名（整体，Web.Whole）。这里只是「同时读二者」，用兼会撞名。"
   },
   {
-   "find": "`Becoming.Web.StandingCensus`；记录 [continued-change-needs-openness]",
-   "replace": "`Becoming.Web.StandingCensus`；记录 [seeking-boundary](../results/records/seeking-boundary.md)、[continued-change-needs-openness]",
-   "why": "more_exhausted 之记录"
+   "id": "四·二十七",
+   "find": "如过补偿之更新循环（梅，1976）",
+   "replace": "如过补偿下种群数之循环（梅，1976）",
+   "why": "更新是名表恒之今语释义（Web.RenewingIn），平语表已不用「可更新」。这里所说的是过补偿下种群数的往复，与恒无关。"
   },
   {
-   "find": "讀（AI，D12）：输是一种已成之关系，与交、食、所出并列；它使族之边界成为已成而实在者，而不是关系中的一刀。",
-   "replace": "讀（AI，D12）：输是一种所结之关系（结，篇二），与交、食、所出并列；它使延续之族之边界是结成而实在的，而不是关系中的一刀。",
-   "why": "已、成是名；D12 说延续之族"
+   "id": "四·二十一",
+   "find": "一个集体可以靠取尽他者而被保住",
+   "replace": "一兼可以靠取尽他者而被保住",
+   "why": "集体是社会语汇，不是名表之名。上句所论正是兼（Web.Whole.family_excess_ends），用兼前后一致。"
   },
   {
-   "find": "它依赖自然数之量：以实数为量，每次之降可以几何地缩小，律便不成立。",
-   "replace": "它依赖自然数之量：以稠密之量（如二进分数），每次之降可以几何地缩小，律便不成立（四·十九之见证 `Becoming.HalvingPass.never_rests`：二物之族每步被围而交换不停）。",
-   "why": "给出形式见证"
+   "id": "四·二十一",
+   "find": "一部分诸物之共取过所与，无论部外一员取多少，凡以此需待之者皆终",
+   "replace": "一部分诸物之共取自某步起 n 步过所与而始之积少于 n＋m，则无论部外一员取多少，凡以此需待之者皆终",
+   "why": "outrun_ends 要求 n 步之 outruns，且 start: level T c < n + m。原文略去这两个条件，读来像只要一步共取过与，凡待之者便终。"
   },
   {
-   "find": "讀（AI，D48）：靠自外来而延续",
-   "replace": "讀（AI）：靠自外来而延续",
-   "why": "D48 不含此读；出于记录作者之读"
+   "id": "四·四",
+   "find": "相合有二层：每步皆足，在于共取不过所与则积不降",
+   "replace": "相合有二层：“恒足”在于共取不过所与则积不降",
+   "why": "足是名表之名，指一个需被积所足。「每步皆足」没有所足之需，名义不合。这里所对应的是经文之恒足与 joint_keeps（积不降）。"
   },
   {
-   "find": "唯一不在账内者是其余",
-   "replace": "唯一与而不在账内者是其余",
-   "why": "合于条目读法"
+   "id": "四·四",
+   "find": "计数本身不保量",
+   "replace": "只计与之者、取者之数，不保积不降",
+   "why": "「不保量」义不明。原意是：数目上的相合不保总积，照此写明。"
   },
   {
-   "find": "作不息与“自某步起每步有封”不相容。",
-   "replace": "作不息与“自某步起每步有封”不能并存。",
-   "why": "容是名（容纳）"
+   "id": "四·四",
+   "find": "与之者在无穷多步上为零",
+   "replace": "与之者之数在无穷多步上为零",
+   "why": "Pulse.pulsed 之结论是 renewers [()] t = 0（与之者之数）以及 replenishment = 0。与之者不是一个量。"
   },
   {
-   "find": "所需之列与有形不能省：只有作者有形时，一宇可以每步被围而作不息，而所立者不可列（`Becoming.World.rest_needs_standing`）。",
-   "replace": "所需之列与有形不能省（`Becoming.World.rest_needs_standing`）：只有作者有形时，一宇活动者有列、衡、耗，每步被围而作不息（其所立者不可列）；诸物皆有形而活动者不可列时，一宇亦每步有封、衡、耗而作不息。",
-   "why": "原句只说一半，所立者之列非本律所需"
+   "id": "四·十一",
+   "find": "而是所取与所补相当（⟦四·二十五⟧）",
+   "replace": "而是所补不少于所取（⟦四·二十五⟧）",
+   "why": "所指的 repeat_covered_iff 的条件是 total w draw ≤ total w replenish（所补覆盖所取），不是二者相等。"
   },
   {
-   "find": "不停之变需开，新需益。",
-   "replace": "不停之变需开，日新需益。",
-   "why": "新之名为日新"
-  },
-  {
-   "find": "所以止属于把状归并而且耗之描述，一个不使状同归的有穷之宇是复而不止（篇五）。",
-   "replace": "所以端所供之止，属于使状同归之律（把状归并之描述）；有穷多状上不使状同归之律，其行复而不止（篇五）。",
-   "why": "Lean 说律，不说宇"
-  },
-  {
-   "find": "与止（篇三）分开：止是自某步起无作无已，趋而不至是任何大于零之降终于不再一再出现，而降永不停。",
-   "replace": "与止（篇三）分开：止在宇是自某步起无作无已，在量是自某步起不再严降；趋而不至是任何大于零之降终于不再一再出现，而降永不停。",
-   "why": "本条之止是量之止，与定义不合"
-  },
-  {
-   "find": "诸设有其见证：",
-   "replace": "诸条件不可省，各有见证：",
-   "why": "局部假设不叫设"
-  },
-  {
-   "find": "致止者不是宇之有穷，而是每步所立者、活动者有穷而且被围（`Becoming.World.rest_few`）。",
-   "replace": "止之律所需者是每步所立者、活动者有列而且被围，不是宇之有穷；而凡合其诸条件之宇，曾活动者、曾立者皆不能无界（`Becoming.World.rest_few`）：它比有穷之宇多出的，只是从不立、从不活动之物。",
-   "why": "rest_few 之结论被误述"
-  },
-  {
-   "find": "第二句说，要对每个这样之宇指出“自此步起无作”，恰需无穷可尽",
-   "replace": "第二句说，要对每个合八设、活动定然否之有穷宇指出“自此步起无作”，需无穷可尽",
-   "why": "Lean 只证一向，且限有穷宇"
-  },
-  {
-   "find": "`Becoming.World.lpo_of_finite_ends`；记录 [continued-change-needs-openness]",
-   "replace": "`Becoming.World.lpo_of_finite_ends`；记录 [recurrence-without-decidedness](../results/records/recurrence-without-decidedness.md)、[continued-change-needs-openness]",
-   "why": "lpo_of_finite_ends 之记录"
-  },
-  {
-   "find": "衡只要求一个方向（不生出量）",
-   "replace": "衡只要求一个方向（不凭空多出量）",
-   "why": "生只指生成"
-  },
-  {
-   "find": "共取过与之每步，水平至少降一；",
-   "replace": "凡衡，共取过与之每步，水平至少降一；",
-   "why": "excess_lowers 需衡"
-  },
-  {
-   "find": "所以它不能久于原有之量（`Becoming.Flow.excess_bounded`）",
-   "replace": "所以它连续之步数不能多于原有之量（`Becoming.Flow.excess_bounded`）",
-   "why": "久是名"
-  },
-  {
-   "find": "则此后恒少于 m",
-   "replace": "则此后每步皆少于 m",
-   "why": "恒是名（更新），不入經"
-  },
-  {
-   "find": "则自此水平恒少于 m",
-   "replace": "则 n 步之后水平每步皆少于 m",
-   "why": "恒是名；结论自 T＋n 起"
-  },
-  {
-   "find": "兼亦如此：诸体各终，",
-   "replace": "兼亦如此：诸体各亡，活动之体有列，",
-   "why": "Web.Ends 名亡；补 listed 前提"
-  },
-  {
-   "find": "他流于此步之水平不低，共取至少少其所过，共与不少，则此需于步后仍足。",
-   "replace": "另一衡之流，于此步之水平不低，共取至少少其所过，共与不少，则此需于其步后仍足。",
-   "why": "kept_of_restrained 需他流衡"
-  },
-  {
-   "find": "在整程之读下，凡合以广为愈之比较，只要节制之程含一件另一程所无之事",
-   "replace": "在整程之读下，二程皆衡，节制之程始之水平不低、每步取不多、与不少，其所待、所需、所资皆不多于另一程，另一程有待而节制之程只在被容处活动，则凡合以广为愈之比较，只要节制之程含一件另一程所无之事",
-   "why": "补 Lean 之局部条件"
-  },
-  {
-   "find": "讀（AI）：数物同取之时，没有一物独断其待",
-   "replace": "讀（AI）：数物同取而各取皆在“水平加共与高出所需之量”之内时，没有一物独断其待",
-   "why": "无此条件则不成立"
-  },
-  {
-   "find": "`Becoming.Ranking.restraint_ranks_over_drawers`；记录",
-   "replace": "`Becoming.Ranking.restraint_ranks_over_drawers`；记录 [ranking-under-readings](../results/records/ranking-under-readings.md)、",
-   "why": "补二声明之记录"
-  },
-  {
-   "find": "族之存量升过段首二者之合，则段中必有一步合非与不过取。",
-   "replace": "族之存量升过段首二者之合，则不能段中每步合皆与不过取。",
-   "why": "Lean 为 ¬∀，不是 ∃"
-  },
-  {
-   "find": "族外诸所待各有一物以其所足之需待之，于一步合与不过取",
-   "replace": "凡衡，族外诸所待各有一物以其所足之需待之，于一步合与不过取",
-   "why": "breaks_beyond 需衡"
-  },
-  {
-   "find": "奖励此升之择看不见所绝之待，那是篇十（及而不感）之事。",
-   "replace": "偏向此升之择看不见所绝之待，那是篇十（及而不感，新组合：及＋而不＋感：所及而不在感域之中者）之事。",
-   "why": "奖励非结构词；新名首见须说组成"
-  },
-  {
-   "find": "这些是关于方向与来源之律，不含评价。判之为“不然”需要两个设：",
-   "replace": "这些是关于方向与来源之律，不含评价。「不然」只说人之道异于天之道；要判其当否，需要两个设：",
-   "why": "不然是对照，不是判语"
-  },
-  {
-   "find": "判其“不然”须设凡续皆有顾与以广为愈",
-   "replace": "判其当否须设凡续皆有顾与以广为愈",
-   "why": "同上"
-  },
-  {
-   "find": "取过所与则不能久（`Becoming.Flow.beyond_given_bounded`）",
-   "replace": "取过所与之取不能连续 L＋1 步（`Becoming.Flow.beyond_given_bounded`）",
-   "why": "久是名；给确切之界"
-  },
-  {
-   "find": "二取之害超可加，差一单位之内（`Becoming.RegimeMargin.harms_superadditive`）",
-   "replace": "所需以上之与次可加、合取下之与不多于各取下之与时，合取 H₁＋H₂ 下所与满足取之最小水平高出所需之量，不少于各取单独时所高出之和减一（`Becoming.RegimeMargin.harms_superadditive`）",
-   "why": "害带评价；补局部条件"
-  },
-  {
-   "find": "而“是否还会变”每步可判，不需无穷可尽",
-   "replace": "而状之同异定然否时，“是否还会变”每步可判，不需无穷可尽",
-   "why": "still_within 需 DecidableEq"
-  },
-  {
-   "find": "g 随所剩而升，常取之一步保持水平之序",
-   "replace": "g 随所剩而不降，常取之一步保持水平之序",
-   "why": "Lean 为单调不降"
-  },
-  {
-   "find": "此水平不随前与之升而升（`Becoming.RegimeMargin.Adjusted.falls_iff_below`）",
-   "replace": "此水平不随前与之升而升（`Becoming.RegimeMargin.Adjusted.falls_iff_below`、`Becoming.RegimeMargin.Adjusted.threshold_falls`）",
-   "why": "下降之线由 threshold_falls 证"
-  },
-  {
-   "find": "`Becoming.RegimeMargin.threshold_regime`、`Becoming.RegimeMargin.Alternation.alternates`",
-   "replace": "`Becoming.RegimeMargin.Adjusted.threshold_falls`、`Becoming.RegimeMargin.threshold_regime`、`Becoming.RegimeMargin.Alternation.alternates`",
-   "why": "證补其声明"
-  },
-  {
-   "find": "### 四·二十八　每步取最优者竭其族外",
-   "replace": "### 四·二十八　每步取最优者与族外之绝",
-   "why": "竭（ConsumingIn）未证；所证是 Lost"
-  },
-  {
-   "find": "其序皆以之为愈，不问族外",
-   "replace": "其序皆以之为上，不问族外",
-   "why": "愈留给以广为愈"
-  },
-  {
-   "find": "数体各以其序独取其最优而每步相互为最优之应",
-   "replace": "数体各以其序取其最优，每步各于他体所为之下皆为最优",
-   "why": "应是名（回应）"
-  },
-  {
-   "find": "这一序只是“于其族多者为愈”，不问族外",
-   "replace": "这一序是取者自身之序，不是以广为愈之排序，只是“于其族多者为上”，不问族外",
-   "why": "防与 C 混同"
-  },
-  {
-   "find": "数体相互为最优之应时",
-   "replace": "数体每步各于他体所为之下皆为最优时",
-   "why": "应是名"
-  },
-  {
-   "find": "若读族为此体所感者（感域，篇十），则最优之取竭其所感之外，凡那里给它可降之处。讀（AI）：竭不是因为取者恶",
-   "replace": "若读族为此体所感者（感域，新组合：感＋域，耦合之闭包，篇十），则最优之取使其所感之外有待绝而终不足，凡那里给它可降之处。讀（AI）：此绝不是因为取者恶",
-   "why": "竭未证；新名首见"
-  },
-  {
-   "find": "为何所择者看不见它",
-   "replace": "为何择者看不见它",
-   "why": "所择者是被择者"
-  },
-  {
-   "find": "二步后皆不活动（`Becoming.Exceeding.all_end`）",
-   "replace": "二步后皆不活动（`Becoming.Exceeding.own_not_joint`、`Becoming.Exceeding.all_end`）",
-   "why": "各取在所与之内由 own_not_joint 证"
-  },
-  {
-   "find": "`Becoming.Flow.stays_below`、`Becoming.Flow.ends_below`、`Becoming.Flow.joint_excess_ends`、`Becoming.Flow.family_excess_ends`、`Becoming.Exceeding.all_end`",
-   "replace": "`Becoming.Flow.stays_below`、`Becoming.Flow.ends_below`、`Becoming.Flow.joint_excess_ends`、`Becoming.Flow.family_excess_ends`、`Becoming.Exceeding.own_not_joint`、`Becoming.Exceeding.all_end`",
-   "why": "證补其声明"
-  },
-  {
-   "find": "二取各自之下所待可守，合之则自每一水平终（`Becoming.RegimeMargin.Peaked.together_ends`）",
-   "replace": "二取各自之下所待可守（`Becoming.RegimeMargin.Peaked.each_holds`），合之则自每一水平终（`Becoming.RegimeMargin.Peaked.together_ends`）",
-   "why": "前半无证"
-  },
-  {
-   "find": "`Becoming.RegimeMargin.harms_superadditive`、`Becoming.RegimeMargin.Peaked.together_ends`；",
-   "replace": "`Becoming.RegimeMargin.harms_superadditive`、`Becoming.RegimeMargin.Peaked.each_holds`、`Becoming.RegimeMargin.Peaked.together_ends`；",
-   "why": "證补其声明"
+   "id": "四·二十三",
+   "find": "就是族外有待者所足之积",
+   "replace": "就是族外诸待者所足之积",
+   "why": "有待是名表之名，指 Web.Dependent 之设（运则见容）。「有待者」会被读作满足此设之物，这里只是说待族外所待之待者。"
   }
  ],
- "verdict": "sound after edits",
- "notes": "I checked the whole draft. These checks passed:\n- **Find strings:** all 59 occur exactly once in the draft. They apply cleanly in order, and the result is at /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/zh/c04pv/applied.md.\n- **Quotations:** all 38 match the frozen texts exactly (ctq.py text).\n- **Kinds:** every 对照 kind matches work/passages/C04.json.\n- **Declarations:** all 187 cited declarations exist under their full names. 185 resolve against the core receipt. The 2 EntropyProduction ones are in the periphery, in physics/EntropyProduction.lean.\n- **Records:** all 36 record links exist.\n- **Readings:** D4, D7, D12, D15, D29, D30, D44 and D46 match DELEGATED-CHOICES. D48 fits the reading in 四·二十一 but not the one in 四·十二, which the edits fix.\n- **Order and condition:** the continuation condition is only ever supposed, never asserted. Order appears only under 以广为愈.\n\nLeft for the integrator, with no edit:\n1. **常取, 不返之点 and 体制 are not in the name table.** 常 is already the name for an invariant, so 常取 collides with it. 体制 is institutional vocabulary. The modern zh chapter uses 常设汲取, 不可回返点 and 体制的余量. These need a decision on names.\n2. **终 or 亡.** For \"inactive from then on\" the draft writes 终, as in the title of 四·二十一 and in 自致其终 and 它终 in 四·二十四. Web.Ends is named 亡. The edits fix only 诸体各终.\n3. **八设.** The table says a law's local hypotheses are not called 设. The eight premises form a named bundle, so this is defensible, but it should be decided once.\n4. **Missing dates.** The 老子 passages (chapters 15, 66, 75, 77) and the 杂卦 passage give no period.\n5. **A loose link in 四·二十五.** The note (repeat_covered_iff；恒，篇五) ties a repeatable stock course to 恒 (Web.RenewingIn), and that link is loose.\n6. **Uses of 容 left alone.** The compounds 容许 and 相容 remain elsewhere, for example 律容许 in the 对照 of 四·十三.\n\nOne judgment call: the edit to the Daxue 对照 in 四·四 moves the stock-keeping agreement onto 出入相掩. Counting givers and takers alone does not determine the stock."
+ "notes": "一、所做的检查。\n- 用 /Users/ren/theories/.claude/worktrees/zhonghua/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/*.lean 逐條核了經與證（假设、iff 方向、构造之例或律）。所引 176 个核心声明，全名都在工作树里。三个外围声明在 lean/physics/EntropyProduction.lean。\n- 39 处引文都用 ctq.py text 核过，逐字相合。\n- 对照与说中的条目 id 都在 passages.json，种类相合。\n- 所有 ⟦id⟧ 都在 book-1-outline.txt 中，指向的内容也对。\n- 所有记录链接都存在。\n- 全文是中文，D 编号与 id 除外。\n- 计划各项都已施行。只有「常取→每步同取」一处与名表冲突：名表常取条明言不取每步同取，并以涸界代不返之点。改写者依名表处理，这样做是对的。\n\n二、经与 Lean 不合之处，主要是經用了大纲中在后才定义的名。\n- 四·六：共取过与（定义在⟦四·二十⟧）、复（定义在⟦五·一⟧）。\n- 四·二十三：余地（定义在⟦六·六⟧）。\n- 四·二十四：多于今（经中定义在⟦十六·二十⟧，编号十一·十七）。\n- 以上都改为与 Lean 逐项相合的平语，说中保留名与指向。四·六 的复，计划原要求加指向「复见五·一」；但带指向仍是經用后出之名，所以改为平语，供整合者裁定。\n- 四·七：經只定义了全局之耗，而多条律用的是「族于一步耗」（DissipatesOn，不要求封与员各异），已补一句。\n- 其余各條的經与证相合。\n\n三、未改、请整合者知悉。\n- 1．名表缺「无自增」（锚 `Becoming.World.InAmounts.Balanced`，一族一步者为 `InAmounts.BalancesOn`）。改写者已标出，现在 NAMES-ZH.md 仍无此行。\n- 2．`Becoming.HalvingPass.never_rests` 与 `levels_unlisted` 在 main 上已泛化为 `Becoming.Pass.*`（据改写者注）。重定基时，四·十二、四·十九要改指。\n- 3．六个條的标题与大纲不同：四·四、四·十、四·十二、四·十六、四·二十六、四·二十七（如「屡取需与」「屡变需开」「常取之下的涸界」等）。改写者依名表改名，理由成立。但大纲自称载有将用之题，二者需统一。\n- 4．四·二十一 經次句「n 步之后积每步皆少于 m」：joint_excess_ends 的结论本身不含此句，它由 excess_bounded（证在⟦四·二十⟧）加 stays_below 得出。可成立，但证分在两條。\n- 5．四·十七 經第三句中二进分数之量积小以高大，见 `Halving.never_rests`（在四·十五 之证）。四·十七 之证未列。\n- 6．说中释义有撞名：四·八「损（族之消耗」与名表竭之释义「消耗」相撞；四·九「衰（下降」与损之释义「下降」相撞。都只在括注中，未改。\n- 7．四·十五 經「m 个端相加不在其于此步之值之内」中的「此步」指上文「某步」，读法唯一，但可写得更明。\n\n四、未改动任何文件。"
 }

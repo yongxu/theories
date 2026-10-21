@@ -1,0 +1,149 @@
+{
+ "decisions": [
+  {
+   "key": "optimum.mutualbest",
+   "concept": "mutual best response of several optimizers (Becoming.Optimum.MutualBest)",
+   "decision": "name",
+   "name": "相爲莫上",
+   "plain": "",
+   "anchor": "Becoming.Optimum.MutualBest；Becoming.Optimum.MutualBest.full；Becoming.Optimum.mutual_beyond；Becoming.Optimum.mutual_as_one；Becoming.Optimum.mutual_course_beyond；Becoming.Web.mutual_course_lost；Becoming.Optimum.TwoTakers.restrained_not_mutual",
+   "quote": "—",
+   "form": "新",
+   "cluster": "C13",
+   "note": "新组合：相＋为＋莫上（莫上之者之略；莫取凡例之义，在复词中，不单立为名）。所取之义：跨一步，每一在场之择上者于其取限之内取与（ActsWithin），所留之积在它独自可得之诸果中（他者取与如其实）为其自身之序之莫上之者（MutualBest 之 Frontier 一支）；所论是此步之果，写「此步相为莫上」。相只说「各于他者所为之下」，不带相与之亲和义；也不可读作诸择上者之间互不相上（彼此不分高下）——经中定义须明写「各于他者所为之下」，以免此读。此写法由核心 becoming.optimum（擇上者）之注所定，此处只立为名。相连之律：族外有积处，每一择上者尽其取限而取、无所与（MutualBest.full），故克制不是相为莫上（TwoTakers.restrained_not_mutual 为其构造之例）；族外之积恰为步前之积加诸择上者以外所与、减其所取、再减诸择上者之取限，不足则为零（mutual_beyond），恰如诸择上者合为一体、以此体之取限（Flow.capacity：一体之取限即其在场诸员取限之和）依任一随某族而升之序取莫上之者所留（mutual_as_one）；沿程，若他者每步所与不过 r，而他者所取加诸择上者之取限每步过 r，一待者以正需待之而始足，则绝而终不足（Web.mutual_course_lost）。不取「互为最优」「相为最优」「相互为最优之应」（含禁字优）；不取「均衡」（衡已名 Flow.Balances）。须改写：C13 经「诸优化者皆然，谓之互为最优」改「诸择上者皆然，谓之相为莫上」（共九处），C10「相为最优」（四处），C04 经「每步各于他体所为之下皆为最优」改「每步相为莫上」（二处）；同句「优化者」改择上者，「合计容量」「合限」改「诸择上者之取限」。改动：原注「以合计之取限」「合取限过所与」二语改去：核心 flow.capacity 已定不另立合限、共取限，且名表共取过与之注明言「合取」在逻辑中是 ∧；mutual_course_lost 之条件是「他者所取加诸择上者之取限过他者所与之界」，不是「合取限过所与」，今照 Lean 写全；「诸者之取限」改「诸择上者之取限」。"
+  },
+  {
+   "key": "morethannow",
+   "concept": "more than now: a quantity read from the configuration rises across the step, read as a target (Becoming.MoreThanNow)",
+   "decision": "name",
+   "name": "多於今",
+   "plain": "",
+   "anchor": "Becoming.MoreThanNow；Becoming.more_not_at_rest；Becoming.Law.more_never_rests；Becoming.more_new；Becoming.more_needs_open；Becoming.Flow.takesAll_of_more；Becoming.Flow.seeking_ends",
+   "quote": "—",
+   "form": "新",
+   "cluster": "C10",
+   "note": "新组合：多＋于＋今：所读之量（q，读自状）次步多于本步（MoreThanNow q g n：q (g n) < q (g (n+1))），今只指本步，不带今古之史义。作所求读，是「多于今」之的：只由变而满（more_not_at_rest），行于法所不改之步皆不满（Law.more_never_rests）；每步皆满则所历之状两两相异（more_new），无一族能尽之（more_needs_open；族名有穷之列，列仍名普查，不写「无一列」）；一物之取每步多于今而所与有界 B，历 B＋1 步之后若仍在场即全取（Flow.takesAll_of_more）；衡之下，一物运时其取每步多于今、所与有界、其运止而不复，则自某步起不运（Flow.seeking_ends，不须设需或待）。与为天下先（AboveAll）并为无明所锁之二的，名式相配。须分开：多而无已是 Flow.More（取者之数无终界），另一概念；C10 经十一·十六「或每步多于前（多而无已）」与十一·十七「多而无已于每步皆满，……无一列能尽之」误以多而无已名此，改「多于今」「无一族能尽之」。C03 三·十八「后多于前」（Becoming.forced_iff_more，二列之长相较）是比较之常语，不是此名，不改。不同于升（Web.Rises 只名一所待之积之升）与益（一族总积之升）：多于今名任一所读之量且作的读。不取「日益」（益已名 Gain）、「愈多」（愈专留以广为愈）、「不知足」（带评价，足已名需不过积）。多在不采之字表中只是不单立为名，名表已有多而无已之例。须改写：C04 经「一物之取每步多于其前」改「一物之取每步多于今」；C15 经「以多于今为所求者」照用；C05 说「每步皆多于今之序」照用。改动：seeking_ends 原作「以取求之者自致其终」，「自致」带施动之读且漏其条件（衡、所与有界、止而不复运），今照 Lean 写全；增 C03「后多于前」之分；十一·十七同句之「无一列」依核心 list 决定改「无一族」。"
+  },
+  {
+   "key": "optimum",
+   "concept": "Optimum's family ds (the conditions an order reads, read as what couples in) and capacity cap",
+   "decision": "existing",
+   "name": "族",
+   "plain": "",
+   "anchor": "Becoming.Optimum.Rising；Becoming.Optimum.optimum_beyond；Becoming.Optimum.MutualBest；Becoming.Flow.capacity",
+   "quote": "每至於族，吾見其難爲@ZH1-S03",
+   "form": "古",
+   "cluster": "C16",
+   "note": "本键二义皆已有名。其一 ds：Lean 中只是一族所待（List C），序随之而升（Optimum.Rising：凡于此族每一所待不低、于一所待更高之果，序皆排其上）；rest 是另列之一族（the conditions beyond, listed apart），二者不相交（apart）、合而无重（cdistinct）。故用核心所立之族，经写「其族」「其序所读之族」；rest 写「族外」，但须知族外只名所列之 rest，不是族之补集：律只说 c ∈ rest 之所待，经中凡言族外须带「所列」与「不相交」之条件（C13 稿已如此）。模块文档读 ds 为「所感者」（what couples in），那是读法：律对任一族成立；说中可写「读作其所感者（讀，AI）」，不把所感写进名（C15「族（所感之诸所待）」十二处改「族」，括注移入说）。其二 cap：核心 flow.capacity 已定为取限，其注明言代「optimum 键之 cap」；C04「所能取者／所能取之量」改「取限」。此决定只把 ds 映入族，不改 cap 之决定。改动：增「族外只名所列之 rest」一条，免经中族外读作补集而多于 Lean 所证。"
+  },
+  {
+   "key": "ranking",
+   "concept": "whole-run reading versus stepwise reading of living (Becoming.Ranking.wholeRun, Becoming.Ranking.stepwise)",
+   "decision": "plain",
+   "name": "",
+   "plain": "全程之读／逐步之读",
+   "anchor": "Becoming.Ranking.wholeRun；Becoming.Ranking.stepwise；Becoming.Ranking.stepwise_iff；Becoming.Ranking.wholeRun_extends_iff_of_eases；Becoming.Ranking.ThirdParty.stepwise_not_monotone；Becoming.Ranking.restraint_ranks_over_drawers；Becoming.Renewable.readings_differ",
+   "quote": "—",
+   "form": "—",
+   "cluster": "C15",
+   "note": "经中不出（jing_hits 0），只在说中，故不立名，定一写法。全程之读：一事为活，恰当其待者于此步运而于此程不竭（wholeRun：active ∧ ¬ConsumingIn；竭须看全程：其所资之某所待终不足，Web.Consumed）；逐步之读：恰当其于此步运而不剥（stepwise：active ∧ ¬UnderminingAt），即 Web.valuation 之活（stepwise_iff）。二读只在活上不同，两向皆可（Renewable.readings_differ）；全程之读有缓和之律（wholeRun_extends_iff_of_eases），逐步之读无（ThirdParty.stepwise_not_monotone）。读用名表之读（读法）。不取「整段之读」（现行中文版作「整段读法」）：本书以段名有穷之一段步，而竭是全程之事；也不写「于此历」（历已名任一序列）。不取「全行之读」、「步步之读」。逐步今语亦有「渐次」义，此处只取「每事只看其本步」，首见括注即可。首见可括注现行中文版之「整段读法」「逐步读法」与 Lean 名。另键 ranking.wholerun 是同一概念，须并为一决定。改动：「竭……某待永不复足」改「其所资之某所待终不足（Web.Consumed）」：Consumed 不要求此待先曾足，「复足」多出一义；终不足是名表已有之名。"
+  },
+  {
+   "key": "web.slack",
+   "concept": "slack of the dependences beyond: what each condition stands above the need on it, summed over a family (Becoming.Web.slack)",
+   "decision": "existing",
+   "name": "餘地",
+   "plain": "",
+   "anchor": "Becoming.Web.slack；Becoming.Web.MetOn.stock_eq；Becoming.Flow.Balances.breaks_beyond；Becoming.DrawnBeyond.WithinSlack.within_slack；Becoming.Flow.Balances.supported_iff_within_margin",
+   "quote": "恢恢乎其於遊刃必有餘地矣@ZH1-S03",
+   "form": "复",
+   "cluster": "C06",
+   "note": "Web.slack＝所列诸所待（rest）每一之积减其上所名之待者（dep c）之需，相加（level − need 之和，截于零）。名表之余地（Flow.Balances.supported_iff_within_margin：无体之积所以足需之余量）与此同构：皆是积过需之量；故不另立名，Web.slack 写「族外诸待之余地之和」。须写明所论之积：名表原例是无体之积（WithheldLevels）之余地，此处是实积之余地，经中各写其积，不混。律：族外诸所待各为其所名之待者所待、其需皆足（MetOn）时，此诸所待之总积等于诸需之和加余地之和（MetOn.stock_eq）；衡，族与族外合为之全体于此步与不过取，而族之总积之升与全体一步共取过与之量合过此和，则族外有一待绝（breaks_beyond）；界确切：WithinSlack 中升恰等于此和而无绝（WithinSlack.within_slack）。须改写：C04 经「族外诸所待高出诸需之和」「高出所需之量」改「族外诸待之余地之和」「余地」（经二处）；C10「宽余」改余地。另键 slack（TH「其外之余地」）是同一概念，须并为一决定。Countdown.Reserved 之 margin（余数）是另一概念，不在此名。改动：原注「升加所过超出此和」意不明，照 breaks_beyond 写全其条件与所加之量（全体一步之 Flow.lost）；「需皆足时，族之总积……」之族改为「此诸所待」，因 MetOn.stock_eq 说的是族外所列诸所待，不是择者之族；增「须写明所论之积」一条。"
+  },
+  {
+   "key": "band",
+   "concept": "band up to hi of a regime: the levels (and recent givings) up to hi that the step keeps within hi (RegimeMargin.Keeps, RegimeMargin.Adjusted.Band)",
+   "decision": "plain",
+   "name": "",
+   "plain": "不过 hi 之域",
+   "anchor": "Becoming.RegimeMargin.Keeps；Becoming.RegimeMargin.Adjusted.Band；Becoming.RegimeMargin.Adjusted.in_band；Becoming.RegimeMargin.rests_within；Becoming.RegimeMargin.Adjusted.comes_to_rest；Becoming.Invariant",
+   "quote": "—",
+   "form": "—",
+   "cluster": "C04",
+   "note": "hi 只是一个数，所名者是积不过 hi 之状所成之域（Adjusted 中为积与前所与皆不过 hi 之状）；Keeps：一步不使不过 hi 之积出于 hi；Adjusted.Band：一步使积与前所与皆不过 hi 之状其积仍不过 hi，in_band 证自此域起之行恒在其中（步后前所与不过积，given_le_level）。结构上即此域于此步之法为常（Invariant 之一例，讀，AI；Lean 未以 Invariant 陈述，证引 Keeps、Band）。经只用名表与核心之名改写，故不立名：「一步不使不过 hi 之积出于 hi」；四·二十七经「于不过 hi 之某步起不变」改「自不过 hi 之某步起不再改」，「其行可于此界内永不止」改「其行可恒在不过 hi 之域内，而不自任何步起不再改」（RegimeMargin.Alternation.alternates：∀ N, ¬StillFrom）。不写单字「界」：本书以界泛名一切上下界；不取「带」：本书说中带多作动词，且 Adjusted 之域是平面之一方块。另键 adjusted.band（C11 稿作「带」）是同一概念，须并为一决定；C11 中 Regulation 之带是否同一概念，由该键核定。改动：原注所拟改写「永不止」用了止，而核心 enough.settles 已定止名 World.RestsFrom（无作无已），行之不再变名「不再改」，今改；同条「起不变」依核心改「起不再改」。"
+  },
+  {
+   "key": "becoming.amounts",
+   "concept": "amounts: an addition with an order it keeps and cancels, nothing below zero, not necessarily whole (Becoming.Amounts); whole-number amounts (Amounts.whole)",
+   "decision": "name",
+   "name": "量",
+   "plain": "",
+   "anchor": "Becoming.Amounts；Becoming.Amounts.whole；Becoming.Amounts.whole_archimedean；Becoming.Amounts.Archimedean；Becoming.Amounts.rests；Becoming.World.InAmounts",
+   "quote": "異類不吡，說在量@MI1-S-JX",
+   "form": "古",
+   "cluster": "C04",
+   "note": "所取之义：一类可加、可比之多少（Amounts：加法结合、交换、以零为单位；序为预序，为加法所保且可消去；零不大于任一量；不要求是整数，两量之间可有第三量）。积是一所待一步之量，总积是一族之量之和；端（Amounts.rests）与积小以高大（Amounts.Archimedean）是量之性。墨子经下「異類不吡，說在量」（战国后期；吡读作比，依校释），经说下「異，木與夜孰長？智與粟孰多？」：异类不可相比，其故在量——多少之比只在同一量之内（讀，AI），正是 Amounts 之序只施于其所施之一类（Amounts A 依类型 A 而立）；秋水「夫物，量无窮」〔ZH1-S17〕（外篇，年代有争议）以量为物之多少。所不带：经说下同条「爵、親、行、賈，四者孰貴」之贵贱之比；度量衡之器；器量、度量之胸襟义；量能授官之评价；因明之量（现量、比量）与佛典「无量」之修辞；动词量不立为名，量力而任中之量是动词，固定之名不改读。核心 web.stock 之注已以量为一般之量，此决定与之相合；数（计数）、端（最小损失）各自另名。须改写：整数之例写「自然数之量」（Amounts.whole 施于 Nat），不写「整数之量」（今语整数含负数，而量无小于零者）；名表端之注「二者只在整数之量中重合」同改「自然数之量」。改动：原注称「C04 经中四十八处之量皆读此名」，核之，经中约半数在「存量」「总量」之中，依 web.stock、w 改为总积或积，不留量字；余者（所取之量、端之量、任意之量等）读此名；序之性补「预序」，「无小于零者」改「零不大于任一量」（zero_le，预序下更确）；增名表端之注之改写。"
+  },
+  {
+   "key": "flow.inward",
+   "concept": "inward across a step: whatever gives to the family takes only from it (Becoming.Flow.Inward); its negation is drawing in",
+   "decision": "existing",
+   "name": "汲",
+   "plain": "",
+   "anchor": "Becoming.Flow.Inward；Becoming.Flow.taking_draws_in；Becoming.Flow.inward_iff_not_fed；Becoming.Flow.FedFromBeyond",
+   "quote": "夫山居而谷汲者@FA1-S-H49",
+   "form": "古",
+   "cluster": "C04",
+   "note": "名表之汲（汲入，锚 Flow.taking_draws_in）即一步之非 Inward：taking_draws_in 之结论正是「不能自某步起每步皆不汲」（¬∀t≥N, Inward）。故 Flow.Inward 写「不汲」（一步不汲：凡于族有所与之在场者皆只取于族内），汲定义为「非不汲」（稿已如此），不另立名；不汲是否定之写法，不是新名。五蠹「山居而谷汲」：自所居之外取水（战国末），只取汲入之构，同段之馈遗、买庸不带。注意构造之别：「非不汲」弱于「有与族者取于族外」，经中守「非不汲」之形；自外来（FedFromBeyond）则汲（not_inward_of_fed），反之只在所待之同异定然否处成立（inward_iff_not_fed），经中照写其若。改动：原注「自外来则汲恒成立」删「恒」：恒已名 Web.RenewingIn，作副词易混，且 not_inward_of_fed 只说一步。"
+  },
+  {
+   "key": "flow.lost",
+   "concept": "what a family loses across a step: uptake beyond replenishment, zero when none (Becoming.Flow.lost)",
+   "decision": "existing",
+   "name": "共取過與",
+   "plain": "",
+   "anchor": "Becoming.Flow.lost；Becoming.Flow.Balances.stock_lost；Becoming.Flow.ConservingOn.lost_zero；Becoming.Flow.dissipated；Becoming.Flow.excess_bounded",
+   "quote": "—",
+   "form": "新",
+   "cluster": "C04",
+   "note": "Flow.lost＝族一步之取（uptake：诸在场者自族所取之和）超过其与（replenishment：诸在场者与族之和）之量（excess，不过则为零）。写「族于一步共取过与之量」。取名表之共取过与（Flow.excess_bounded：诸在场者一步于一所待共取过与），因 Flow.lost 所计正是诸在场者之共取与共与：单一所待之族 [c] 上，共取过与恰当 Flow.lost 为正，二者同构。不用无共之「取过与之量」：核心 netdraw 立取过与为一体累计之严格之辞（偏去一体所容而有之不容者，必于一所需之所待取过与），而 Flow.lost 不问哪一体、只一步、是诸在场者之合，无共则与一体之累计相混；核心 netdraw 注「可写『取过与之量』」只是许可，此处取更确之写法，不改取过与之名。律：衡而族于此步与不过取（GainlessOn），步后总积加共取过与之量等于步前总积（Balances.stock_lost）；与如其取则为零（ConservingOn.lost_zero）；自 T 起 N 步者写「N 步共取过与之量之和」（Flow.dissipated）。不用所失（名 Remainder）、损（名下降）、耗（名条件 Dissipative）。须改写：C04 经「取过于与之量」（四处）改「共取过与之量」，并带「族于一步」之范围；web.slack 之 breaks_beyond 所加之量同此写。改动：由 取過與 改映 共取過與（理由如上）；stock_lost 补其所需之衡；「历 N 步」改「自 T 起 N 步」，免与核心之名历（任一序列）相混。"
+  },
+  {
+   "key": "w",
+   "concept": "level of a condition and stock of a family on a web W (Web.level, Becoming.Web.stock)",
+   "decision": "existing",
+   "name": "積",
+   "plain": "",
+   "anchor": "Becoming.Dependence；Becoming.Web.stock；Becoming.Web.Supported；Becoming.Flow.Balances.over",
+   "quote": "水之積也不厚，則負大舟也无力@ZH1-S01",
+   "form": "古",
+   "cluster": "C02",
+   "note": "W 只是待网之变元名：W.level 即核心之积（web.level），W.stock 即核心之总积（web.stock，一族诸所待之积之和），二者皆已定，不另立名。须改写：C04 稿「水平」改积，「存量（族诸所待水平之和）」与「总量」改总积（经中三十二处）；一所待之存量（RegimeMargin 之水平、涸之存量）就是其积，写积；以任意之量读者（World.InAmounts）亦写积，积之量可不为自然数。本键之 existing 名取积，总积之映入已由 web.stock 决定。核过：引文逐字合于 ZH1-S01（逍遥游，内篇）。无改动，只补「总量」亦改总积（C04 经中二处，如「族之总量降」）。"
+  },
+  {
+   "key": "world.arising_opens",
+   "concept": "openness: not enclosed at every step from any step on, the conclusion of Becoming.World.arising_opens",
+   "decision": "existing",
+   "name": "開",
+   "plain": "",
+   "anchor": "Becoming.World.arising_opens；Becoming.World.holding_world；Becoming.Flow.Enclosed",
+   "quote": "—",
+   "form": "古",
+   "cluster": "C04",
+   "note": "名表之开已锚 World.arising_opens，只对应早先「开」之「未」一相。脊柱无单独之开之谓词，开就是该律结论之形：于每一 T，¬∀t≥T, Enclosed t（Enclosed：此步有一无重之族封，故「有封」＝有一族封）。经写「开，不能自某步起每步有封也」，正合；不可写成「于任意晚之步皆无封」，构造上那比结论强。开之为必要有其条件：在运者有列、有形、衡、耗之宇中，作不息则开（arising_opens）；不充分：具八设而无一步有封之宇，作与已皆不一再出现（holding_world）。另键 flow.closedat（「不封」）名一步之不封，与开分开；Seeking.more_needs_open 之 open 不借此名（名表开之注）。改动：原注「开是作不息之必要而非充分」未带条件，今补 arising_opens 之四个若与 holding_world 之八设，免读成无条件之必要。"
+  },
+  {
+   "key": "world.premised",
+   "concept": "a world meeting the eight world premises: Dependent, Balanced, Acting, Taking, Dissipative, Embodied, Counted, Transmitting (Becoming.World.Premised)",
+   "decision": "existing",
+   "name": "設",
+   "plain": "",
+   "anchor": "Becoming.World.Premised；Becoming.World.premises；Becoming.World.MeetsAllBut；Becoming.World.holding_world；Becoming.World.lpo_of_finite_ends；Becoming.World.Counted；Becoming.World.Transmitting",
+   "quote": "—",
+   "form": "古",
+   "cluster": "C04",
+   "note": "八者是宇之设（英文章 §0 C 块 the World premises），名表之设（陈而不断言者）恰名之，不另立名；World.Premised 写「具八设」，说中写「宇之八设」。八者各有其写：有待（Dependent）、衡（Balanced）、唯运者与（Acting）、唯运者取且所取唯其所资（Taking）、耗（Dissipative）、有形（Embodied）、运者有列（Counted）、所传有界（Transmitting）。经首见列全，次写「此八设」：四·十三「宇具八设而开，作不必不息」；四·十八「凡具八设、运定然否之有穷宇，若皆能指其自何步起无作，则无穷可尽」。「合八设」之合改「具」（合是名表之名）。地位：取其中某设为若之律是有设而然（章 §Preface「theorem under stated premises：holds where the premises it names hold (a World premise of §0, block C …)」，§1.3「each premise of §0, block C, carves a proper part of the space」）；C 块与 B 块（有穷、围、列、定然否等局部条件）分开，后者以若写入而律仍为无设而然。故凡例凡·十七「宇之诸设（……八项）」、凡·十六「若之后……宇之诸设……这条律就是有设而然」、凡·十八「宇之诸设下的律亦是有设而然」皆正确，不改（只把其中「活动」依核心改「运」）。另键 world.premise（C12「具传以外之七前提」「其余七前提」）同此，改「传以外之七设」「其余七设」。改动：原决定为 plain「宇之八条件」，理由是开放与停息定理为无设而然、称设则地位错——此据与章之定义相反：arising_opens 以有列、有形、衡、耗为若，皆 C 块之设，依章之定义为有设而然；章末表中「Openness and the rest theorem」一行作「theorem without premise」，是 assemble.py 以英文正则读 Lean 名而漏读之故（该记录之若以小写英文写 balance、dissipation，且 WORLD 表无 census、Acting、Taking 之正则），不是章之判定。原拟改凡·十七、凡·十八会把错引入凡例，今撤回；名表设之注「一条律的局部假设以『若』写出，不叫设」所说是 B 块之局部条件，不及 C 块。「条件」二字今语又作所待之括注，用「八条件」亦易混，此为另一不取之由。"
+  }
+ ],
+ "notes": "我核对了 G4 的全部 12 个决定，没有改动任何文件。引文都用 ctq.py text 逐字核过：ZH1-S03 两条、MI1-S-JX、FA1-S-H49、ZH1-S01，另核了经说下「木與夜孰長」〔MI1-S-SX〕和秋水「夫物，量无窮」〔ZH1-S17〕。每个锚都用 resolve.py 核过，都是现行声明，没有经过改名；涉及的 Lean 定义和定理我都读了原文。三个新名（相爲莫上、多於今、量）在简体下彼此不同，也不与名表或核心中任何名相同，都不在不采之字表里；以下改动都已写进各条 note 的「改动」一段。\n\n**实质性更正**\n1. world.premised：从 plain「宇之八条件」改为 existing 設（写「具八设」「宇之八设」）。原注说开放与停息定理是无设而然，这与章的定义相反：Preface 第 19 行和 §1.3 把 §0 C 块的宇之设列为「under stated premises」。arising_opens 的若（有列、有形、衡、耗）都是 C 块之设。所以凡例凡·十六至十八的「宇之诸设……有设而然」是对的，原注要改凡例的建议必须撤回。\n   - 附带发现，交整合者：章末表中 continued-change-needs-openness 一行标为「theorem without premise」，原因是 assemble.py 用正则在英文的若中找 Lean 名，这条记录的若写的是小写的 balance、dissipation，于是漏读；而且 WORLD 表里根本没有 census、Acting、Taking 的正则。这一列因此会少报 C 块之设。\n2. flow.lost：从 取過與 改映 共取過與（写「族于一步共取过与之量」）。Flow.lost 计的是诸在场者合起来的取与，在单一所待上，它为正恰当共取过与成立；不带「共」就会与核心 netdraw 一体累计之取过与相混。另补上 stock_lost 所需的衡。\n3. band：原注拟的经文改写里有「永不止」，但核心已把止定为 World.RestsFrom，现改为「不自任何步起不再改」；「起不变」也改为「起不再改」。\n\n**措辞与范围修正**\n- optimum.mutualbest：删去「合取限」（核心已定不另立合限；「合取」在逻辑中又是 ∧），按 Lean 写全 mutual_course_lost 的条件，并提醒经中须明写「各于他者所为之下」。\n- morethannow：照 Lean 写全 seeking_ends 的条件；指出 C03「后多于前」是二列之长相较，不是此名；十一·十七「无一列」改「无一族」。\n- optimum：「族外」只名另列的 rest，不是族的补集。\n- ranking：竭改写为「其所资之某所待终不足」（Web.Consumed），原「永不复足」多出「先曾足」之义。\n- web.slack：按 breaks_beyond 写全条件；MetOn.stock_eq 说的是族外所列诸所待，不是择者之族；经中须写明是哪一种积（无体之积或实积）。\n- becoming.amounts：「四十八处」的说法不准。约半数「量」在「存量」「总量」之中，按 web.stock 和 w 改为总积或积；名表「端」之注里的「整数之量」也应改为「自然数之量」。\n- flow.inward：删去「恒」（恒已名 Web.RenewingIn）。\n- world.arising_opens：开为必要须带 arising_opens 的四个若。\n- w：只补一句，「总量」也改总积。"
+}

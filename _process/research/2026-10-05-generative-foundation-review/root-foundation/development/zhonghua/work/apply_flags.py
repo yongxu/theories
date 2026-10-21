@@ -290,3 +290,18 @@ with open(F, 'w', encoding='utf-8') as fh:
 with open(H + '/names-dropped.tsv', 'w', encoding='utf-8') as fh:
     d = csv.DictWriter(fh, fieldnames=['名', '篇', '所名', '理由'], delimiter='\t', lineterminator='\n'); d.writeheader(); d.writerows(dropped)
 print('fourth pass:', len(by), 'names;', len(dropped), 'dropped')
+# fifth pass (21 October): the names the drafts of the 中华本 needed, from the naming pass (merge_new_names.py)
+import json as _json, re
+_nn = H + '/new-names.json'
+if os.path.exists(_nn):
+    nn = _json.load(open(_nn, encoding='utf-8'))
+    assert not nn['conflicts'], nn['conflicts']
+    for d in nn['added']:
+        _m = re.search(r'(?:所取之义|新组合)[：:]([^。；]*)', d['note'])
+        what = _m.group(1).strip() if _m else ''
+        by[d['name']] = {'名': d['name'], '篇': d['cluster'] or 'C16', '所名': ('%s（%s）' % (what[:60], d['concept'][:60])) if what else d['concept'][:80],
+                         '锚': d['anchor'] or '—', '引': d['quote'] if d['quote'] not in ('', '—') else '—',
+                         '式': d['form'] if d['form'] in ('古', '复', '新') else '新', '注': d['note']}
+    with open(F, 'w', encoding='utf-8') as fh:
+        w = csv.DictWriter(fh, fieldnames=FIELDS, delimiter='\t', lineterminator='\n'); w.writeheader(); w.writerows(by.values())
+    print('fifth pass:', len(nn['added']), 'names added;', len(by), 'names')

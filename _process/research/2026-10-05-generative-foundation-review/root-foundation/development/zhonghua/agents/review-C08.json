@@ -1,242 +1,179 @@
 {
- "pian": "篇九「识与知」（C08）",
  "edits": [
   {
-   "find": "对每一个如此表示之宇成立",
-   "replace": "对每一个如此表示者（变、行、历史或宇）成立",
-   "why": "本篇诸律多说变、行、水平历史与读族，不只是宇"
+   "id": "INTRO",
+   "find": "致其所需之足否",
+   "replace": "致其需之足否",
+   "why": "名表「需」条：需是待之阈量，稿中「所需」改「需」或「其需」（所需读如所需之物，与所待相混）。"
   },
   {
-   "find": "感之外者，它的历程不随之而异（篇十一之及而不感）",
-   "replace": "感之外之差，至此步不入凡缘其感之择（及而不感：新组合，所及而不在感中者，名见篇十一）",
-   "why": "selects_alike_iff 只证经感无异者凡缘感而择皆同，不证其后程不随感外之差而异；及而不感是新名，首见于此，须说组成"
+   "id": "INTRO",
+   "find": "附与驳、征、参验与阙",
+   "replace": "附与驳、征与征于极、参验与阙",
+   "why": "篇首列本篇诸條，漏⟦九·十七⟧征于极。"
   },
   {
-   "find": "只要支持未分",
-   "replace": "只要前者每步皆容此待者",
-   "why": "subthreshold_alike 的条件是前一网至此每步皆容此待者，不是“支持未分”"
+   "id": "十一·一",
+   "find": "待者于某步需此所待",
+   "replace": "待者于某步待此所待",
+   "why": "Web.DependsOn 是 requires（关系），名表以待名之；需只名阈量（Dependence.need）。"
   },
   {
-   "find": "篇十一之及而不感、篇十二之未兆都由此出",
-   "replace": "篇十一之及而不感、篇十二之未兆都与此相连",
-   "why": "及而不感出自感域之律，未兆（break_not_bounded）另有其证，都不是由此一律导出"
+   "id": "九·一",
+   "find": "感入一待者者有二：所需之足否",
+   "replace": "感入一待者者有二：需之足否",
+   "why": "名表「需」条：「所需」改「需」。"
   },
   {
-   "find": "讀（AI，D43）：经阈是依存之感，经水平是观察之感，二者同在感之中；观察不是依存之外的第二种关系（九·四）。",
-   "replace": "讀（AI，D45）：经阈是依存之感，经水平是观察之感，二者同在感之中；在此义下，观察不是依存之外的第二种关系。若说观察可由依存导出，就超出了九·四之律，D43 把它存为猜想，不作读法。",
-   "why": "D43 明言“观察不是依存之外的第二种关系”超出 apart_only_downstream，只存为猜想；“二者同是感”之义由 where-a-level-couples 立，归 D45"
+   "id": "七·九",
+   "find": "唯以阈感入者只传所需足否",
+   "replace": "唯以阈感入者只传需足否",
+   "why": "名表「需」条：「所需」改「需」。"
   },
   {
-   "find": "`Becoming.Web.AlikeThroughUpTo.of_obs`；记录 [testing-within-couplings](../results/records/testing-within-couplings.md)、[where-a-level-couples]",
-   "replace": "`Becoming.Web.AlikeThroughUpTo.of_obs`、`Becoming.Flow.subthreshold_alike`；记录 [testing-within-couplings](../results/records/testing-within-couplings.md)、[differences-below-threshold](../results/records/differences-below-threshold.md)、[where-a-level-couples]",
-   "why": "說中阈下之差一句要有证与记录"
+   "id": "八·十四",
+   "find": "源之所能及，逐步而增：",
+   "replace": "源之所能及，唯由下三者而成：",
+   "why": "TimedResponse.Spread 是归纳定义（hold、input、response 三条所生之最小者）；「逐步而增」既不说只此三者，又读如单调之律（单调只是 hold 一条）。"
   },
   {
-   "find": "凡一表之族，有只读映射之值而于每一员皆出其特征者",
-   "replace": "凡一表之族（值有一所给者），有只读映射之值而于每一员皆出其特征者",
-   "why": "judges_iff_lumpedOn 带参数 d : V（族中无所列者处所答之值），是局部条件"
+   "id": "八·十四",
+   "find": "此待者于此后某步触一物",
+   "replace": "此待者于其步或此后某步触一物",
+   "why": "Spread.response 之条件是 s ≤ t：触可在既及之同一步。"
   },
   {
-   "find": "九·十九之阙与九·二十之读族不尽都由此出",
-   "replace": "九·十九之阙由此出（九·二十之读族不尽另由对角而出，不由类之所失）",
-   "why": "Diagonal.gap_unsaid 是对角之律，不由归并之所失导出"
+   "id": "八·十四",
+   "find": "只计此步之所需与以积之感，不计将来之所需",
+   "replace": "只计此步之需与以积之感，不计将来之需",
+   "why": "名表「需」条：「所需」改「需」。"
   },
   {
-   "find": "〔ZH1-S13〕（先秦，庄子天道）",
-   "replace": "〔ZH1-S13〕（先秦至秦汉，庄子天道，外篇成书年代有争议）",
-   "why": "天道属外篇，年代有争议，应与本篇他处庄子外杂篇之标法一致"
+   "id": "九·五",
+   "find": "自前者至所记者之路成，经二者与此待者之环亦成；",
+   "replace": "自前者至所记者之路成；",
+   "why": "环之名定于⟦十二·二⟧（篇十二），經不得先用后條所定之名；Measure.loop_at 已在說中写出（环亦成），經删之不失所证。"
   },
   {
-   "find": "`Becoming.Learning.Lumped`；记录 [risk-certificate-outcome-distinction](../results/records/risk-certificate-outcome-distinction.md)。",
-   "replace": "`Becoming.Learning.Lumped`；记录 [risk-certificate-outcome-distinction](../results/records/risk-certificate-outcome-distinction.md)、[where-a-move-is-formed](../results/records/where-a-move-is-formed.md)。",
-   "why": "reading_single_iff 由 where-a-move-is-formed 承载，原记录只承载 judges_iff_lumpedOn 与 no_judge_of_merged"
+   "id": "九·六",
+   "find": "则此法缘其所察而读；凡此法所缘而读之感，于体外每待者所察之每一所待，其在感中，不可非。",
+   "replace": "则于体外每一待者，二历至某步每步容否皆同、其所察之所待之积皆同者，此法于此步给之取与皆同；凡一以积感入之关系，以之代所察而前句仍然者，于体外每一待者所察之每一所待，其感入此待者，不可非。",
+   "why": "「缘…而读」（ExchangeLaw.Through）定于篇十一（⟦十一·二⟧），九·六之經先用之。依 Counterfactual.lean 之 Through（体外每一待者，AlikeThroughUpTo 则 GivesAlike；AlikeThrough 含容否与以积感入者之积）与 least_coupling（凡 Through W obs part 之 obs，于体外所察者 ¬¬CoupledInto obs h c）写出，不借后名。"
   },
   {
-   "find": "一待者自第 T 步起把一存量之水平加入一记录",
-   "replace": "一待者自 T 步起把一存量之水平加入一记录",
-   "why": "本篇“第三步”“第五步”是序数（首步编号为 0），T 是步之编号，写“第 T 步”会差一步"
+   "id": "九·六",
+   "find": "有一唯读既立者之取与之法，二历于其所察之所待至某步皆同而其取与于此步仍异，恰当有一规则，于凡逐步之然否皆判其是否步步不然；有此规则，则无穷可定其皆否。",
+   "replace": "有一唯读既立者之取与之法与一待者，二历于此待者所察之所待至某步皆同，而此法给此待者之取与于此步仍异，恰当有一象，于凡逐步之然否皆定其是否步步不然；有此象，则无穷可定其皆否。",
+   "why": "名表「规」条明言不用「规则」（规名两层之程之慢层）；not_through_sensitive_iff_rule 之右边是 Nonempty (∀ s : Nat → Bool, Decidable (∀ n, s n = false))，即一给出判定之函，依全书写象。又 Sensitive 是一待者 h 之取与对 c 敏感，「其所察」须指明此待者。"
   },
   {
-   "find": "火致其差而自身不被读",
-   "replace": "火传其差而自身不见（不是知者）",
-   "why": "「火不見」是说火自身不见物、不是知者；而路中之中介恰为后一环所读，写成“不被读”既误读原文，也与路之结构相反"
+   "id": "九·六",
+   "find": "这一需要恰是无穷可定其皆否之规则形（`Becoming.not_through_sensitive_iff_rule`；规则给出此设，`Becoming.WLPO.of_rule`）",
+   "replace": "这一需要恰是：有一象定每一逐步之然否是否步步不然（`Becoming.not_through_sensitive_iff_rule`；此象给出此设，`Becoming.WLPO.of_rule`）",
+   "why": "同上：不用「规则」。"
   },
   {
-   "find": "也。凡法于每步、每待者、每历史所读之所待皆在一表之中",
-   "replace": "也。所待之同异定然否，凡法于每步、每待者、每历史所读之所待皆在一表之中",
-   "why": "through_sensitive 与 least_coupling 在带 [DecidableEq C] 之节中，这是局部条件"
+   "id": "九·六",
+   "find": "恰在有一规则能判每一逐步之然否是否步步不然之处有之；由辞之形之无穷可定其皆否导出此规则，须从关系选出一象，核心不设此步；此弱规则是否给出无穷可尽，未决。",
+   "replace": "恰在有一象能定每一逐步之然否是否步步不然之处有之；由辞之形之无穷可定其皆否导出此象，须从关系选出之，核心不设此步；此象是否给出无穷可尽，未决。",
+   "why": "同上：不用「规则」。"
   },
   {
-   "find": "多少是应倍（耦合强度，篇十二）",
-   "replace": "多少是应倍（耦合强度；新组合：应＋倍，名见篇十二）",
-   "why": "应倍是新名，在全书中首见于此，须说组成"
+   "id": "九·六",
+   "find": "若可判定每一积之序是否自某所待起皆为零",
+   "replace": "若所待以自然数编号，而凡诸所待之积皆可判定其是否自某所待起皆为零",
+   "why": "序是名表之名（所给之排序关系）；lpo_of_vanish_decided 之 α : Nat → Nat 是以自然数编号之诸所待之积（tailLaw_no_least_coupling 在 Web Unit Nat 上），不是一序。"
   },
   {
-   "find": "讀（AI，D37、D45）：感入一待者者（识之所经），就是它的取与所察者。",
-   "replace": "讀（AI，D37、D45）：察是法所经之最小感（读有穷者，以不可非之形），不是识；识是经此感而定之后程。感入一待者者可多于其取与所察者。",
-   "why": "D37 经 D45 修订：察是最小感，不是识；原句把感与察等同，强于 least_coupling 所证"
+   "id": "NEW-8",
+   "find": "皆含附之之行，恰当不可非则然。",
+   "replace": "皆含附之之行，恰当凡辞皆不可非则然。",
+   "why": "refutable_holds_iff 之右边是 ∀ φ, ¬¬φ → φ（双重否定消去）；名表与⟦凡·七⟧之「不可非则然」是一辞之性，对一切辞要求之才是此设。"
   },
   {
-   "find": "（`Becoming.Web.Excludes.not_of_alike` 与九·一之推前）",
-   "replace": "（`Becoming.Web.Excludes.not_meets`）；君以之课臣、赏罚之用不在律中",
-   "why": "事后迁就之言为所然所如，不见去由 not_meets 承载，九·一之推前与此无关；八经同段之赏罚属单一中心之层，应标出不取"
+   "id": "NEW-8",
+   "find": "于唯一状唯一动之变，以一逐步之然否截其历，所截之历之诸段皆在此然否首然之步之前：于凡逐步之然否，所截之历或有最晚之段，或有过凡涯之段，恰当无穷可尽。",
+   "replace": "于唯一状唯一动之变，凡逐步之然否，取诸段皆在其首然之步之前之历：于凡逐步之然否，此历或有最晚之段，或凡涯之外皆有其段，恰当无穷可尽。",
+   "why": "GoesOn I 是 ∀ h, ∃ e ∈ I, h < e.2（凡涯之外皆有一段），「有过凡涯之段」是 ∃∀，有穷之段无一能过凡涯，量词序倒；又截是名表之名（Flow.Cut，切口），此处是另一概念，不借。"
   },
   {
-   "find": "有例：所许之类不许所然，则所然所如之辞于首步见去",
-   "replace": "有例：所许之类不许所然，所然所如之一辞于首步见去",
-   "why": "model_error 只构造一个辞（存量终至于零），不是凡所然所如之辞"
+   "id": "NEW-8",
+   "find": "恰是不可非则然（",
+   "replace": "恰是凡辞皆不可非则然（",
+   "why": "同經：refutable_holds_iff 是对一切辞之双重否定消去。"
   },
   {
-   "find": "于衡之流之水平历史类内，一所待经水平感入一待者",
-   "replace": "于衡之流之水平历史类内，所然在此类中，一所待经水平感入一待者",
-   "why": "excludes_tail_within 要所然之历史是此流之衡之历史（history），經漏了这个条件"
+   "id": "NEW-8",
+   "find": "截之历：判一历有最晚之段否",
+   "replace": "首然之前之历：判一历有最晚之段否",
+   "why": "与經同改，不借截（Flow.Cut）之名。"
   },
   {
-   "find": "是同一条律在水平历史上之形",
-   "replace": "是同一结构在水平历史上之形",
-   "why": "tail_unexcluded 与 no_prefix_fixes_next 是两条律，前者不由后者证出"
+   "id": "NEW-8",
+   "find": "且其中诸历之族，凡二员皆有族中一员延伸之者，其合亦在其中",
+   "replace": "且其中若干历，凡二者皆有其中一历延伸之者，其合亦在其中",
+   "why": "族是名表之名（有穷之列，List）；ScottClosed.unions 之 D 是任一定向之类，可无穷，借族则混二概念（平语「以所读为索引之诸读」条同此理）。"
   },
   {
-   "find": "模型合于所然时，它越过视界",
-   "replace": "所许之类许所然时，它越过涯",
-   "why": "视界之名是涯；条件是所许之类含所然；“模型”在名表中另属象（映射），这里避免混用"
+   "id": "NEW-8",
+   "find": "⟦九·十六⟧（征）给可验之一半",
+   "replace": "⟦九·十六⟧（征）给可征之一半",
+   "why": "验名检验（Web.Excludes），征名验证（Verifiable）；此言征之一半。"
   },
   {
-   "find": "兼感（合用耦合，篇十一）",
-   "replace": "兼感（合用耦合；新组合：兼＋感，诸待者之感合而用之，名见篇十一）",
-   "why": "兼感是新名，在全书中首见于本篇，须说组成"
+   "id": "NEW-8",
+   "find": "有穷者即段，无穷者即行（`Becoming.Run.stretches`）",
+   "replace": "有最晚之段之历即一段，一行读作其所经诸段所成之历（`Becoming.Run.stretches`）",
+   "why": "每一历或为一段或为一行之历，要定其有无最晚之段并于每涯之外选得一段（Stretches.classification 以此为设），而定之恰是本條下文之无穷可尽；原句无条件说出此分。"
   },
   {
-   "find": "讀（AI，D45）：一条律用于其所至之外，就是一个误之模型（九·八）。",
-   "replace": "讀（AI，D45）：每条律之所至须守得确切；用于其所至之外，可靠不保，所许之类可以不许所然（九·八）。",
-   "why": "Scope.secures 只说所至之内；所至之外是不保，不是必误"
+   "id": "九·二十",
+   "find": "：则每步缺其自身之缺，后步必说前步所未说者；所用之象移每一值，比较诸值之关系对称而可传，则无有穷多之读",
+   "replace": "：所用之象移每一值，则每步缺其自身之缺，后步必说前步所未说者；比较诸值之关系又对称而可传，则无有穷多之读",
+   "why": "Unfolds.incomplete 与 Unfolds.never_returns 都要 moves（象移每一值）；原句把此条件只系于末一律。"
   },
   {
-   "find": "读前一包之内容：凡族内给出每录之所答之历史",
-   "replace": "读前一包之内容：所答与内容之同异定然否，凡族内给出每录之所答之历史",
-   "why": "reading_right_iff 带 [DecidableEq O] 与 [DecidableEq V]"
+   "id": "九·二十",
+   "find": "：称说加入所称说者，又生新缺。",
+   "replace": "：称说加入所称说者，又生新缺。相分（qixin-li-yan-shuo）：《大乘起信论》（南北朝晚期，题马鸣造、真谛译，作者有争议）言「離言說相、離名字相、離心緣相，畢竟平等、無有變異、不可破壞」〔FO2-QX〕：离名言与诸读之不尽有似，而立名言之外不变之真如，是本原与固定本性两层；律中诸读之所缺随展开而新，不立不变之底。",
+   "why": "十·八删而其内容归九·二十（大纲之 redirect），十·八原有之相分（起信论，qixin-li-yan-shuo，passages.json 定为 divergence）未带过来，本篇遂失一真正之相分；引文已以 ctq.py text 核为逐字相合。"
   },
   {
-   "find": "「吾非與之並世同時，親聞其聲，見其色也」〔MO1-S-C16〕",
-   "replace": "「吾非與之並世同時，親聞其聲，見其色也。以其所書於竹帛，鏤於金石，琢於槃盂，傳遺後世子孫者知之」〔MO1-S-C16〕",
-   "why": "“知古是沿录之路回读”要靠下句才成立；延长后的引文已用 ctq 核对，字字相同"
+   "id": "九·二十二",
+   "find": "展开随模型所并者而同",
+   "replace": "展开随类而同",
+   "why": "模型一词全篇已改为所许之历或类；此处所指是推类之条件（特征随类而同，⟦七·十三⟧），以名表之名写。"
   },
   {
-   "find": "与名表之「开」无涉",
-   "replace": "与篇四之开无涉",
-   "why": "正文不应援引内部名表；开之名在篇四"
+   "id": "九·二十五",
+   "find": "涯短于所需之往者",
+   "replace": "涯短于定其周期之往者",
+   "why": "名表「需」条：不用「所需」；此处所指是定周期所要之往之长（N＋N′－1）。"
   },
   {
-   "find": "恰需非皆否则有是",
-   "replace": "须有非皆否则有是",
-   "why": "verifiable_compl_refutable_markov 只证一向（此律推出 Markov），没有证“恰当”"
+   "id": "九·二十七",
+   "find": "于一族尽其状（N 员）之宇，一特征经一类可知，恰当有一族，不过 N 员，员各一名（N－1 个类值之串）与其所带之值，以之为据之知来于每状之轨皆自某步起每步皆得。",
+   "replace": "",
+   "why": "learnable_iff_table 是⟦十·十五⟧（名与标签）之經之律，一律只在一处；且此句用名，名定于篇十（⟦十·一⟧），經不得先用。原稿此律只在說中，說仍引之并指向⟦十·十五⟧。"
   },
   {
-   "find": "若非皆否则有是，则凡由往所定之术，皆不能于极驳之。",
-   "replace": "于二状而凡移皆许之变，若非皆否则有是，则凡由往所定之术，皆不能于极驳之。",
-   "why": "Limit.Free.settles_not_refuted 只对 Enough.Free.process 这一变成立，不是凡变"
+   "id": "九·二十七",
+   "find": "以至多 N 员之族为据之知来即可（`Becoming.Learnable.learnable_iff_table`）",
+   "replace": "以至多 N 员之族为据之知来即可（`Becoming.Learnable.learnable_iff_table`，其律见⟦十·十五⟧）",
+   "why": "經删此律后，說指其所在之條。"
   },
   {
-   "find": "有三层：无有穷之段征之或驳之；一术于极征之（`Becoming.Limit.still_verifies`）；若非皆否则有是，无由往所定之术于极驳之",
-   "replace": "有三层：于二状而凡移皆许之变，无有穷之段征之或驳之（`Becoming.Limit.Free.settles_not_verifiable`、`Becoming.Limit.Free.settles_not_refutable`）；状之同异定然否，一术于极征之（`Becoming.Limit.still_verifies`）；于同一变，若非皆否则有是，无由往所定之术于极驳之",
-   "why": "第一、三层只在自由二状之变上证出；第一层原无证"
+   "id": "九·四",
+   "find": "（新组合：下＋游，以水流之向为感之链之向；`Becoming.Upstream`",
+   "replace": "（新组合：下＋游，以水流之向为感之链之向；链之一节，谓某步体外一在场之待者与后一所待之取与读前一所待之积；`Becoming.Upstream`",
+   "why": "感在⟦十一·一⟧是所待入于待者，而上游、下游之链在所待与所待之间；Loops.Couples d c 是：某步一在场、在体外之待者与 c 之取与，以正之应倍读 d 之积。不说一节是什么，「感之链」无从读。"
   },
   {
-   "find": "不随视界而改",
-   "replace": "不随涯而改",
-   "why": "视界之名是涯"
-  },
-  {
-   "find": "`Becoming.Limit.Free.settles_not_refuted`、`Becoming.Limit.identifies_iff_tracks`；记录 [what-a-method-comes-to-say-in-the-limit](../results/records/what-a-method-comes-to-say-in-the-limit.md)。",
-   "replace": "`Becoming.Limit.Free.settles_not_refuted`、`Becoming.Limit.Free.settles_not_verifiable`、`Becoming.Limit.Free.settles_not_refutable`、`Becoming.Limit.identifies_iff_tracks`；记录 [what-a-method-comes-to-say-in-the-limit](../results/records/what-a-method-comes-to-say-in-the-limit.md)、[learning-through-a-map-is-tracking-in-the-limit](../results/records/learning-through-a-map-is-tracking-in-the-limit.md)。",
-   "why": "說中新增之证；identifies_iff_tracks 由后一记录承载"
-  },
-  {
-   "find": "（未決，G1）",
-   "replace": "（未决；见[《中华思想脉络》与变化论](CIVILIZATION-THOUGHT-AND-BECOMING.md#八古典文字提出的缺口)所列缺口第 6 条）",
-   "why": "名用简体；G1 是工作内部编号，读者无处可查"
-  },
-  {
-   "find": "映射之每一值皆给出域中之一状者",
-   "replace": "有一所给之选取，于映射在域中所取之每一值，给出域中取此值之一状者",
-   "why": "SectionWithin 只对映射在域中所取之值给出状，并且是所给的；原句说“每一值”，太强"
-  },
-  {
-   "find": "有一个所给之选取（每一映射值给出域中一状）",
-   "replace": "有一个所给之选取（映射在域中所取之每一值，给出域中取此值之一状）",
-   "why": "同上"
-  },
-  {
-   "find": "（未決：此诸律已在核心证明，记录待补）",
-   "replace": "（未决：此诸律已在核心证明，记录待补）",
-   "why": "名用简体（未决）"
-  },
-  {
-   "find": "所出者或阙，或得。",
-   "replace": "值之同异定然否，则所出者或阙，或得。",
-   "why": "Accords 是 ¬MissesAt；值之同异不定然否时，出值而不失只是不可非其得，不是得"
-  },
-  {
-   "find": "韩非「四徵者符」之",
-   "replace": "韩非「四徵者符」〔FA1-S-H48〕（先秦，韩非子八经，战国末）之",
-   "why": "古典引文须带来源编号；已用 ctq 核对，字字相同"
-  },
-  {
-   "find": "是同一律在水平历史上之形",
-   "replace": "是同一结构在水平历史上之形",
-   "why": "两条律各自证出，不是同一条律"
-  },
-  {
-   "find": "凡过则改自某步起每步皆得者",
-   "replace": "凡于终而复始之候选上过则改，自某步起每步皆得者",
-   "why": "lasso_of_rest 只说 byElimination lassos，不说任意候选上的过则改"
-  },
-  {
-   "find": "不给界而用最小界之知来",
-   "replace": "值之同异定然否，不给界而用最小界之知来",
-   "why": "leastBound_exact 带 [DecidableEq O]"
-  },
-  {
-   "find": "皆于第 M＋M＋2 步得",
-   "replace": "皆于 M＋M＋2 步得",
-   "why": "本篇“第三步”是序数（编号为 2）；这里是编号，写“第”会差一步"
-  },
-  {
-   "find": "即第 N＋N－2 步",
-   "replace": "即 N＋N－2 步",
-   "why": "同上"
-  },
-  {
-   "find": "讀（AI，D34）：在有界之时，往所定是一个它已定之来之有穷之读；界不由“处境”读出，须是所给。",
-   "replace": "讀（AI，D34）：有界者，往所定是一个它已定之来之有穷之读；界不是时（情境）之义，而是一时之有穷之往定其所读之全部之条件，须是所给。",
-   "why": "情境之名是时；D34 说界不是“situational”之义，而是有穷之往定其所读者之条件；“有界之时”又会和时之名相混"
-  },
-  {
-   "find": "识与习是同一种择",
-   "replace": "缘感而择与习是同一种择（经一类之择）；识是经此类而定之后程",
-   "why": "识不是择；名表注明识与缘感而择同据其归并，所名不同"
-  },
-  {
-   "find": "泛化之对，在于展开随网络结构所加之类而同",
-   "replace": "泛化之对，恰在此类于数据之外定其值之处（`Becoming.Learning.Training.fit_right_iff`）",
-   "why": "前句说类是训练所能达者，不只网络结构；fit_right_iff 说的是类定其值"
-  },
-  {
-   "find": "是一个可观察之条件，不是一个程序",
-   "replace": "是律、映射与特征之间之一条件，不是一个程序",
-   "why": "learnable_iff 的右边说的是经映射同来诸状之特征，不是待者可观察者"
-  },
-  {
-   "find": "动与状皆有表尽之、步之可否定然否之变",
-   "replace": "动与状皆有表尽之、步之可否定然否、映射之值同异定然否之变",
-   "why": "world_right_iff 在带 [DecidableEq R] 之节中"
-  },
-  {
-   "find": "一个机率是一类时之数",
-   "replace": "一个概率是一类时之数",
-   "why": "机是关节之名（篇八），不能借作或然之率"
+   "id": "NEW-7",
+   "find": "此历程存在，恰在可行之处（`Becoming.ExchangeLaw.course_balances_iff`）：取过其积与所与之历程不是历程。",
+   "replace": "所生之流于其所生之积上衡，恰在可行之处（`Becoming.ExchangeLaw.course_balances_iff`）：一步所取过其积与所与者，所生之流不衡。",
+   "why": "course_balances_iff 说的是法所生之流于所生之积上衡恰当 Feasible，不是「历程存在」；「不是历程」无此律。"
   }
  ],
- "verdict": "sound after edits",
- "notes": "已核对的部分：\n- 162 个不同的 `Becoming.*` 名都用 resolve.py 对 receipt 20261021T102032 解析到原名，没有改名。所引的 28 个记录都在 theories/becoming/results/records/。\n- 52 段「…」〔ID〕引文都用 ctq.py text 核对，字字相同。\n- 各篇编号核对无误：篇四＝C04 开，篇五＝C05 复与藏往，篇七＝C07，篇八＝C17，篇十至篇十六依序。延续之条件只陈述、不断言，排序只在以广为愈，篇首都写对了。\n\n本篇事实错误集中在三处：\n1. 九·二的讀把“观察不是依存之外的第二种关系”标为 D43。D43 与 observation-is-a-route 记录明言这句话超出定理，只存为猜想；它成立的意义（经阈与经水平同是感）属 D45。\n2. 九·六的讀把感与察等同。D37 经 D45 修订后说的是：察是最小感，不是识。\n3. 九·十七之經把只在自由二状之变上证出的律写成凡变皆然。\n\n另有几条經漏了 Lean 的局部条件，都已在 edits 中补上：\n- DecidableEq：九·六、九·十五、九·二十一、九·二十五、九·二十八。\n- 九·三的所给之值 d。\n- 九·八：所然在此类中。\n- 九·十九的选取。\n- 九·二十四只说终而复始之候选。\n\nedits 之外，留给整合者决定（不在本篇擅定）：\n(a) 本篇用了不少名表没有的词：读族、共应、可许、所信、策、问、录、包、源、段、附、余部、驳、可驳、术、见证、失实、包络、凭、可靠、确切、征于极、下游、存量、映射、特征。其中读族、共应、余部、可靠、确切、见证、失实、包络、凭、术是这一簇的理论概念，应入名表或另定名。“录”（Retrodiction 之有日之录）与名表之“往”（历程之前段）是两个概念，要分清。\n(b) “模型”在名表中是象（映射本身）的释义。本篇九·八、九·十一、九·十三、九·十四也用它指所许之历史类。我只改了“模型合于所然”一句，其余请统一：所许之类，或在首见处说明象。\n(c) 九·二十五用“验”名 SameTests（Histories 中框架之测试），名表中验的锚是 Web.Excludes。二者是否同一概念，需要整合者定。\n(d) 「故导之以理，养之以清」〔RU2-S-XZ21〕所在的解蔽段以心为槃水，名表已把心列为单一中心之层。此条作定域可以保留，但可以考虑注一句“心为形君之义不取”。\n(e) 九·十八原引 G1，对应《中华思想脉络》与变化论 §八之第 6 条“相通的见证”。我已改成指向该节，锚的形式是 #八古典文字提出的缺口，生成后请核对。"
+ "notes": "我审了篇九全部 37 條。没有改任何文件。上面 29 处修改（edits）已在一份副本上试过：每处 find 在其條（或篇首）中恰出现一次。改后用起草者的检查器重跑，全部通过：\n- 214 个声明都能在当前核心收据上解析；\n- 73 处引文与冻结文本逐字相合（含新加的起信论一句）；\n- 每个 ⟦id⟧ 都在 book-1-outline.txt 中；\n- 正文与对照中的条目 id 及其所标种类都与 passages.json 一致。\n副本与工具在 /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c08adv/（edits.json、out2.json、sd.py、check2.py）。\n\n**經与 Lean 核对：**\n每條之經都已对照其證中的声明（假设、iff 方向、构造之例还是律）。下面四处与 Lean 不合，已改：\n- NEW-8 的「有过凡涯之段」把 GoesOn 的量词次序写反了。\n- NEW-8 的「恰当不可非则然」应为对一切辞的双重否定消去。\n- 八·十四：Spread 是归纳定义，且 response 条许 s ≤ t（同步亦可）。\n- 九·二十：Unfolds.incomplete 与 never_returns 都要「象移每一值」，原句只把它系在末一律上。\nNEW-7 說中对 course_balances_iff 的转述，以及 NEW-8 說中「有穷者即段，无穷者即行」（这一分要定然否，Stretches.classification 以之为设），也已改正。其余各經与 Lean 相合。\n\n**后用之名：**\n- 九·六 用了「缘…而读」，其名定于⟦十一·二⟧：已按 Through 的定义把它写出。若整合者想保留此名，须把它的定义移到九·六之前。\n- 九·五 用了「环」（定于⟦十二·二⟧）：已从經中删去，说中仍保留。\n- 九·二十七 用了「名」（定于⟦十·一⟧）：所在之句同时与⟦十·十五⟧之經重复 learnable_iff_table，已删去，说中改为指向⟦十·十五⟧。\n\n**名之改正：**\n- 「规则」：名表「规」条禁用，已改为象。\n- 「所需」：依「需」条改为需。\n- 十一·一 說「需此所待」：关系应写待。\n- 「截」：名表之截是 Flow.Cut，此处是另一概念，已改。\n- 「诸历之族」：族是有穷之列，已改。\n- 「可验之一半」：应作可征。\n- 九·六 說「积之序」：序是名表中的排序关系，已改。\n- 九·二十二 說「模型」：已改为类。\n\n**对计划的执行：**\nC08 的 22 条指示都已执行。起草者偏离计划之处（对／共对、习之择、九·九之验、明之「及于容所不标者」）都有名表或平语作依据，我同意保留。\n\n**新发现的缺失：**\n十·八 已删，其内容归入九·二十，但十·八 原有的起信论相分（qixin-li-yan-shuo）没有带过来，已补入九·二十 說。\n\n**以下我未改，留给整合者定：**\n1. 九·二十 以「说」名 Diagonal.Says，与名表「说」（推导，⟦凡·九⟧）相撞。不过平语第 96 行已把「诸读无说之者」定为固定写法，所以未改。若要改，可用「含」。\n2. NEW-8 的「历之闭类」：这里的历指段序上的理想，包括有穷者，比名表之「历」（以步为索引的序列）宽。「闭类」「开类」又借了类（名表中是归并）和开（名表中是开放）二字，只靠括注区分。\n3. 九·二十三 的「候选之次序」与名表之序（所给之排序关系）相撞。\n4. NEW-7、九·二十六 以「入」指函之入，与名表之入（被吸入）同字。不过名表「所见」条自身也写「已见之入」。\n5. 有三條的题与 book-1-outline 不一致：九·三 读出特征（大纲作读）、九·十一 知之所至（大纲作所至）、九·二十六 习（大纲作推类与习）。计划要求改题，须同步更新大纲。\n6. 九·二十六 的对照「類不悖，雖久同理」〔RU2-S-XZ05〕讲的是推类，现在推类之律在⟦七·十三⟧，此对照宜移去那里。\n7. 九·十七 的「讀（AI）」没有决定号，原稿如此。\n8. 九·十九 仍无结果记录（未决）。\n9. 名表的特征／状值两行并存，所至一行仍须改名为知之所至；反事实、稠密尚未入表。\n10. 十一·一 說把荀子之「性」改写成「先定之本然」，不如原句「归“性”」确切。"
 }

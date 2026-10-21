@@ -1,222 +1,125 @@
 {
- "pian": "篇十六　权（C15）",
  "edits": [
   {
-   "find": "名取「以一易兩，人曰：无丧而有得也。」〔RU2-S-XZ22〕：同类可换之物按数计时",
-   "replace": "荀子正名「以一易两，人曰：无丧而有得也。」〔RU2-S-XZ22〕：把同类可换之物读作按数所计之辞（AI 之读）时",
-   "why": "The frozen text reads 两, not 兩, so the quotation was inexact. The name table gives 无丧 no source, so 名取 claimed one the table does not adopt. Reading the exchange as counted claims is the entry's AI reading and needed its label."
+   "id": "十六·二十一",
+   "find": "凡法，或足恰当必足。",
+   "replace": "凡每状唯一动、其果恰一之法，或足恰当必足。",
+   "why": "Becoming.Enough.law_possibly_iff_assured holds only for Law.process next: each state has one move (Unit) with exactly one outcome. In this book 法 is defined in ⟦一·六⟧ as 一状一动所至不过一状 (Becoming.Determined), which allows several moves per state and dead ends, and there the law fails. Counterexamples: a two-move process with one move that stays and one that alternates (或足 but not 必足); a state with no move (必足 holds vacuously, 或足 does not). The 經 must state the restriction."
   },
   {
-   "find": "有顾者愈少，无丧愈易（`Becoming.Web.Retains.of_fewer`）",
-   "replace": "于较多之顾无丧，则于较少之顾亦无丧（`Becoming.Web.Retains.of_fewer`）",
-   "why": "In this 篇 愈 is the word for better under C, so 愈…愈 here is ambiguous. The replacement states the exact law."
+   "id": "十六·二十一",
+   "find": "在法（一动至多一果）之下，或足与必足为一",
+   "replace": "在每状唯一动、其果恰一之法下，或足与必足为一",
+   "why": "The gloss 一动至多一果 describes Determined, under which 或足 and 必足 differ (several moves, or partial steps). The law needs a single total move per state (Law.process). This keeps the 說 in line with the corrected 經."
   },
   {
-   "find": "无之之历于有之之历有得，恰在某一如是之所待上出余地。",
-   "replace": "无之之历于有之之历有得，恰当有一如是之续，非其每一所待皆不出余地。",
-   "why": "The Lean right-hand side is ¬∀c (not every condition stays within the margin), not ∃c beyond it. As an iff, the ∃ form is constructively stronger than what is proved."
+   "id": "十六·二十一",
+   "find": "且自此状之每一行皆不再改。",
+   "replace": "且自此状之每一行皆自某步起不再改。",
+   "why": "assured_iff's second conjunct is Settles: from some step on, the run does not change. The name table gives 不再改 a scope: 自T起 = StillFrom, 自某步起 = Settles. A bare 不再改 drops the 自某步起, and the 經's own definitions above it state it."
   },
   {
-   "find": "定其在序中之位的是全行之类",
-   "replace": "定其于能形成者是赅是狭的，是全行之类",
-   "why": "The run class decides inclusion or narrowing, not a rank. 序 is reserved for ordering by 以广为愈."
+   "id": "十六·十四",
+   "find": "而庆典之状所然之一事，修补之状不然。",
+   "replace": "而庆典之状所然之一辞，修补之状不然。",
+   "why": "Lexical.Repair.loss_retained concerns a claim, event false (). In the name table 事 is a formation at a step (F × Nat), so 事 here would name the wrong concept. The thing lost is a claim (辞) realized by the celebration state."
   },
   {
-   "find": "没有余裕时，任何净取都闭他者（`Becoming.OwnDrawing.tight_mixed`）",
-   "replace": "己外一物之所需恰等于无此体交换时之水平而无余裕时，此体于该所待之任何净取都闭他者（`Becoming.Flow.Balances.mixed_of_tight`；见证 `Becoming.OwnDrawing.tight_mixed`）",
-   "why": "The law needs the zero margin on the condition a formation outside the region requires. tight_mixed is only the witness; the law is mixed_of_tight."
+   "id": "十六·十四",
+   "find": "所容复至也不使已错过者复然",
+   "replace": "容复至也不使已错过者复然",
+   "why": "所容 is the table's name for the generative space. What returns here is the support predicate at a step: the 經 writes it as 后容复至 (ReadsAt.loss_retained: whatever support holds later). This makes the 說 agree with the 經."
   },
   {
-   "find": "记录列出它所对应的寻求权力与影响度量之形式结果",
-   "replace": "记录列出它所对应之形式结果（文献中关于求增所及与影响之度量者）",
-   "why": "权力 collides with the name 权 and is social vocabulary."
+   "id": "十六·十四",
+   "find": "它恰当此辞之然自其时起不再变",
+   "replace": "它恰当此辞之然否自其时起皆如其时",
+   "why": "变 is the table's name for process, and the table's 不再改 note says to replace 不再变. readsAt_iff_settled says exactly that from τ on, realized(t) ↔ realized(τ): the claim's holding or failing at every later step equals its value at τ."
   },
   {
-   "find": "静止与节从不更坏",
-   "replace": "使水平处处不低之静止与节，从不被无丧而有得排在下（`Becoming.Web.not_added_of_le`）",
-   "why": "Web.not_added_of_le holds only for a path whose levels are nowhere lower, and only against retaining and adding. It does not hold against every comparison, so the unqualified claim was too strong."
+   "id": "十六·十六",
+   "find": "各不为对方之事，所以哪一个都不是有莫上之者而皆为之者",
+   "replace": "各不为对方之所为，所以二者之所为皆非有莫上之者而皆为之",
+   "why": "The task is named 所为 (plain wording of Required), and 事 is the table's name for a formation at a step. The old clause also made the two options themselves the subject of 有莫上之者而皆为之, but Required.defeated is about the tasks: each frontier option lacks the other's task, so neither task is required."
   },
   {
-   "find": "于依存网，容定然否，两历所容者有一单尽之，亦然。",
-   "replace": "于依存网，容定然否，两历所容者有一单尽之，则此历广彼历，恰当每一正之加权计此历皆重于彼历。",
-   "why": "Web.widens_iff_every_weighting proves only the positive-weighting statement. 亦然 also covered the class, tie and equal-weight claims, which are not proved on webs."
+   "id": "十六·二十三",
+   "find": "则其可行至一终状，其每一行皆安，每一终状皆合所求。",
+   "replace": "则其可行至一终状，其所经之每一后状皆安，每一终状皆合所求。",
+   "why": "runs_of_completes concludes that a finite Trace exists and that every trace is a SafeTrace whose endpoint meets the goal. 行 is the table's name for an infinite Run, not a finite trace of a plan. 每一后状皆安 matches the parenthetical definition of 必至 just before."
   },
   {
-   "find": "其数学是 Sen 的交集法",
-   "replace": "其数学是阿马蒂亚·森之交集法",
-   "why": "The text must be Chinese only."
+   "id": "十六·二十四",
+   "find": "）：多于所减之数之每一可许之一族动",
+   "replace": "）：自有效之状，多于所减之数之每一可许之一族动",
+   "why": "Countdown.exits requires valid s, a valid starting configuration. The parenthetical only describes the moves, so without 自有效之状 the 經 claims the conclusion from any configuration."
   },
   {
-   "find": "凡二物共一所待之律（维持者所需为正而初水平足之，焦物所需不过维持者）",
-   "replace": "凡二物共一所待、维持者有容则每步与之、焦物有容则资之亦与之之律（维持者所需为正而初水平足之，焦物所需不过维持者）",
-   "why": "possible_extends and possible_tie hold for the support-gated renewal family. They do not hold for every law in which two formations share a condition."
+   "id": "十六·二十四",
+   "find": "则多于可用之量之步皆不可行",
+   "replace": "则长于可用之量之一族动皆不可行",
+   "why": "stalls_beyond says every course of more ticks than the fuel stalls (ticks n s = none for n > fuel). The fixed plain wording (countdown.countedwork) writes 长于可用之量之一族动皆不可行. 多于可用之量之步 can be read as single steps past the fuel, not as courses."
   },
   {
-   "find": "所待、所需、所资皆不多于彼流",
-   "replace": "待、所需、所资皆不多于彼流",
-   "why": "The hypothesis is about dependences (Web.requires, named 待). 所待 names the condition."
+   "id": "十六·二十四",
+   "find": "则不过工数之步皆不毕",
+   "replace": "则工数以内之一族动皆不毕",
+   "why": "not_done_before is about every course of k ≤ work ticks. This uses the plain wording's fixed form (工数以内之一族动皆不毕), parallel to the edit above."
   },
   {
-   "find": "有第三物共用所待时，二续可以互不扩展（`Becoming.Ranking.ThirdParty.stepwise_not_monotone`）",
-   "replace": "节流缓和彼流，逐步之读却记一事于彼流而不记于节流（`Becoming.Ranking.ThirdParty.stepwise_not_monotone`）；有第三物共用所待时，二续于逐步之读下互不扩展（`Becoming.Ranking.ThirdParty.restraint_unranked_stepwise`）",
-   "why": "stepwise_not_monotone shows only that the stepwise reading has no easing law. That neither course extends the other is restraint_unranked_stepwise."
+   "id": "十六·十三",
+   "find": "每一可选者之族、每一不自上而可传之序与每一性质皆有",
+   "replace": "每一可选者之族、每一序与每一性质皆有",
+   "why": "Becoming.undominated_has_iff_em quantifies over every relation better, with no irreflexivity or transitivity. Restricting it to irreflexive transitive orders states something other than the cited theorem: the restricted left side is weaker, and its implying EM is not what the statement gives."
   },
   {
-   "find": "`Becoming.Ranking.ThirdParty.stepwise_not_monotone`；记录",
-   "replace": "`Becoming.Ranking.ThirdParty.stepwise_not_monotone`、`Becoming.Ranking.ThirdParty.restraint_unranked_stepwise`；记录",
-   "why": "The 證 must list the declaration that now carries the claim in 說."
+   "id": "十六·十三",
+   "find": "此序与此性于族上皆定然否时则然（`Becoming.undominated_has_iff`）",
+   "replace": "此序与此性于族上皆定然否时，每一莫上之者皆有此性，恰当每一缺此性者皆有一员上之（`Becoming.undominated_has_iff`）",
+   "why": "undominated_has_iff is an iff, and it needs both the relation and the property decided on the menu. 则然 states only the one direction, which already holds with the property alone decided (undominated_has). The converse, the theorem's content, was lost."
   },
   {
-   "find": "若每一可行之动皆被一可行之动以皆愈扩展，则无一动存留",
-   "replace": "若每一可行之动皆有一可行之动，其每一果皆扩展前者之每一果，则无一动存留",
-   "why": "The hypothesis is LiftExtension (every outcome extends every outcome), not 皆愈 under a supplied better."
+   "id": "十六·十三",
+   "find": "可选者有一非空之族尽之，序于其间不自上、可传、两两或不当，则有莫上之者。",
+   "replace": "可选者有一非空之族尽之，序不自上、可传，于其间两两或不当，则有莫上之者。",
+   "why": "Requirement.frontier_exists assumes irreflexivity and transitivity everywhere (∀ a, ¬better a a; transitive for all); only weak decidedness is restricted to eligible options. Putting 于其间 over all three conditions claims the theorem from weaker hypotheses than the cited Lean states. The new form matches the parallel 經 in ⟦十六·十六⟧ (序不自上、可传、或不当)."
   },
   {
-   "find": "以空顾读 A",
-   "replace": "以不论活否之顾读 A",
-   "why": "空 is a symbol the table does not adopt. The Lean reads A with bare significance, that is, not restricted to living content."
+   "id": "十六·十二",
+   "find": "凡方皆守以活读之 A，恰当凡可介而得新活之辞之回应皆有由。",
+   "replace": "凡方皆守以活读之 A，恰当凡可介、其每一所许之果皆有一前所不然之活辞之回应皆有由。",
+   "why": "articulates_total's second part is SecuresNewContent admitted before (living): every admitted outcome has a living claim that failed before. 得新活之辞 does not say 'every admitted outcome', and it does not match the first part's exact form."
   },
   {
-   "find": "可得有一单尽之，比较不自愈、可传、于其间或不当，则必有所取",
-   "replace": "可得不空而有一单尽之，比较不自愈、可传、于其间或不当，则必有所取",
-   "why": "frontier_exists needs a nonempty listed menu (x :: rest). An empty menu has no frontier."
+   "id": "十六·十二",
+   "find": "凡皆有顾：凡方皆守不论活否之 A",
+   "replace": "凡辞自凡方皆有顾：凡方皆守不论活否之 A",
+   "why": "The hypothesis of articulates_total is ∀ p c, V.sig p c: every claim has significance from every standpoint. 凡皆有顾 does not say over what it ranges, and next to 凡续皆有顾 and 活皆有顾 it is easily misread as one of them."
   },
   {
-   "find": "于一切系辞与一切于可得不自愈、可传之比较皆有所取，恰当凡辞皆或不当",
-   "replace": "可得不空而有单可尽之者，于一切如是之系辞与一切于可得不自愈、可传之比较皆有所取，恰当凡辞皆或不当",
-   "why": "choice_exists_iff_weakly ranges only over frames whose options are listed and nonempty."
+   "id": "十六·十二",
+   "find": "有一处境，凡皆有顾，以不论活否之顾读 A",
+   "replace": "有一处境，凡辞自凡方皆有顾，以不论活否之顾读 A",
+   "why": "BareSignificance.bare_forces_reason has the same hypothesis (∀ p c, valuation.sig p c). This uses the same exact wording as the previous edit."
   },
   {
-   "find": "就「举一而废百」；",
-   "replace": "就「举一而废百」〔RU2-S-MZ〕；",
-   "why": "Every quotation needs its source id. Checked: exact in RU2-S-MZ."
+   "id": "十六·十五",
+   "find": "二者都与以若干活辞上于基辞之度相容",
+   "replace": "二者都与以失基辞而有活辞之状上于存基辞之状之度相容",
+   "why": "The 度 entry in the name table says 以若干活辞上于基辞 must be rewritten as an order between states. livingSignificance_leaves_ordering_open compares the state that loses the protected claim and has a gain with the state that keeps it (weighted 0 0 < weighted 0 1). The 經 of this 條 already words it this way."
   },
   {
-   "find": "修补之状于基本之辞赅庆典之状而多成其一，而庆典所成之事",
-   "replace": "修补之状于基本之辞赅庆典之状而多成其一，以两层之字典序在其上，而庆典所成之事",
-   "why": "Repair.above says repair is ranked above. Without it, the witness does not show a loss retained by the chosen state."
+   "id": "十六·十七",
+   "find": "不定然否时，彼上此，不可非也。",
+   "replace": "不须定然否，彼上此，不可非也。",
+   "why": "Direction.widening_not_not_better has no decidedness hypothesis: ¬¬better holds whether or not the inclusion is decided. 不定然否时 reads as a case condition, as if the claim applied only where the inclusion is undecided."
   },
   {
-   "find": "而一有界之分满足以广为愈而不然。诸项有一单尽之，以基本之项为先之字典序，把每一广皆排在上。",
-   "replace": "而一有界之分满足以广为愈而不然。",
-   "why": "No such theorem exists: Becoming.Weighting.increasing_lexical is not in the receipt. The records list the lexical order only as related, not as a proved adapter."
-  },
-  {
-   "find": "以基本之项为先之字典序把每一广排在上（`Becoming.Weighting.increasing_lexical`），所以它在诸序所同恰为广之类中（十六·七），只决定以广为愈留为互有所长者。",
-   "replace": "它是否属于十六·七中把每一广排在上之诸序，未证（记录只列为相关）。",
-   "why": "The cited declaration does not exist. 只决定…互有所长者 is also false on frames: J2 ranks a state that adds a non-living basic claim, which is neither an extension nor mixed."
-  },
-  {
-   "find": "`Becoming.ScoreRepresentation.bounded_score_represents`、`Becoming.Weighting.increasing_lexical`",
-   "replace": "`Becoming.ScoreRepresentation.bounded_score_represents`、`Becoming.FrontierFrames.Priority.comparison`",
-   "why": "This replaces a nonexistent declaration with the one 說 actually uses (Priority satisfies C where decided)."
-  },
-  {
-   "find": "核心不断言，凡关于所设比较之定理都以它为前提",
-   "replace": "核心不断言，用它之定理都以它为前提",
-   "why": "Overclaim: frontier_exists, required_of_bettered and others compare by a supplied better without J2."
-  },
-  {
-   "find": "此句在说，只见马王堆帛书本，成文时代有争议",
-   "replace": "此句在说，只见马王堆帛书本，秦汉之际至汉初抄写，成文时代有争议；所据转录与郭店经文合排，未据图版校勘",
-   "why": "The id V130-LAO-GD names the Guodian transcription. The entry's layer says the 说 is Mawangdui-only and that the transcription merges the two."
-  },
-  {
-   "find": "取荀子正名「欲不待可得」之「可得」",
-   "replace": "取荀子正名「欲不待可得」〔RU2-S-XZ22〕之「可得」",
-   "why": "Every quotation needs its source id. Checked: exact."
-  },
-  {
-   "find": "凡可得有一单尽之，比较不自愈、可传、或不当",
-   "replace": "凡可得不空而有一单尽之，比较不自愈、可传、或不当",
-   "why": "required_of_bettered needs a nonempty listed menu. On an empty menu nothing is required."
-  },
-  {
-   "find": "在一个门控更新的公地中，三个都读存量的学习者仍每回合把共享之地取尽（规范章 §7.5，CG1）",
-   "replace": "在一个实测中（门控更新之共用所待，规范章 §7.5，CG1），三个皆以存量为评之学习者仍于每一回合把共用之所待取尽；此为测得，非定理",
-   "why": "公地 is social vocabulary. CG1 is a measured result, not a law, and its status must be stated."
-  },
-  {
-   "find": "清除者保留栖地之动广于清除之动，清除不被择，区别二动之居者之容只经持居者之兼感而择。",
-   "replace": "清除者保留栖地之动广于清除之动；若无以小害大而无基本之容，清除之所至不在所取；区别二动之居者之容，经每一持居者之兼感而择，不经清除者感域之内任何兼感而择。",
-   "why": "择 is the name for selection, not for being chosen. The J1/J2-with-no-basic-admission premise was missing. 只 overclaims: the Lean says every pool holding the dweller selects it, and no pool within the clearer's coupling closure does."
-  },
-  {
-   "find": "集体之事可以被要求而无一个体之事被要求（`Becoming.Requirement.Collective.required`）",
-   "replace": "有一处境，或此或彼之事被要求，而单此之事、单彼之事皆不被要求（`Becoming.Requirement.Collective.required`）",
-   "why": "集体 and 个体 are social words. The witness's exact content is a disjunctive task that is required while neither disjunct is."
-  },
-  {
-   "find": "一固定较重之丧不独以其重而恒愈于任意多之固定较轻之护也（设）",
-   "replace": "免一固定较重之丧，不独以其重而恒先于任意多之固定较轻之护也（设）",
-   "why": "As written it says a loss is better (愈) than protections, which reverses FR's sense. FR concerns the priority of avoiding the graver loss, and 愈 is C's word."
-  },
-  {
-   "find": "二状之丧各列一次而皆同类，则严格之丧配恰当较愈者所丧较少",
-   "replace": "二状之丧各列一次而皆同类，则此状于彼状有严格之丧配，恰当此状所丧少于彼状",
-   "why": "较愈者 was circular and misused 愈. The law is strictLossMatch b w ↔ length lb < length lw."
-  },
-  {
-   "find": "讀（AI，D41）：足（够）是过程与所求之间的关系",
-   "replace": "讀（AI，D41）：够（足而止之足）是过程与所求之间的关系",
-   "why": "In the name table, 足 alone names only a single need met by a level. 够 belongs to 足而止."
-  },
-  {
-   "find": "只在法（一动至多一果）之下，或足与必足为一",
-   "replace": "在法（一动至多一果）之下，或足与必足为一",
-   "why": "The Lean proves the coincidence under a law. It does not prove that it holds only there."
-  },
-  {
-   "find": "此条说取最多者在其所感之外做什么",
-   "replace": "此条说随所感而求最多者在其所感之外做什么",
-   "why": "取 is the table name for uptake. The subject is an optimizer by a rising order."
-  },
-  {
-   "find": "每步重新权取者使在所需处每步更新 r 之所待之待，恰在所资超过 r 时永丧（`Becoming.Web.course_lost_iff`）",
-   "replace": "每步重新权取者，于族外一所待（水平在所需以上时其余每步恰与 r），其上之待恰在其余所取与权取者之容量每步合计超过 r 时永丧（`Becoming.Web.course_lost_iff`）",
-   "why": "The law's k is what the rest takes plus the part's capacity, not 所资. 更新 is not a table name."
-  },
-  {
-   "find": "受保护之停止之权与储备",
-   "replace": "受保护之停止令源与储备",
-   "why": "权 is this 篇's name for practical judgment. A stop authority is not 权."
-  },
-  {
-   "find": "xunzi-xiusheng-bu-xing-bu-zhi",
-   "replace": "xunzi-xiushen-bu-xing-bu-zhi",
-   "why": "The entry id is misspelled. The passage map has xunzi-xiushen-bu-xing-bu-zhi (agreement, RU2-S-XZ02)."
-  },
-  {
-   "find": "[positioned-positive-reason](../results/records/positioned-positive-reason.md)。",
-   "replace": "[positioned-positive-reason](../results/records/positioned-positive-reason.md)、[continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)。",
-   "why": "Neither cited record binds articulatesLiving, universal_reason_of_unrestricted, bare_forces_reason or articulates_total. This record binds all four."
-  },
-  {
-   "find": "`Becoming.Profiles.different_selections`；记录 [four-cases-of-a-part]",
-   "replace": "`Becoming.Profiles.different_selections`；记录 [widening-as-what-every-weighting-ranks](../results/records/widening-as-what-every-weighting-ranks.md)、[four-cases-of-a-part]",
-   "why": "Weighting.mixed_either_way is bound by this record, not by the ones cited."
-  },
-  {
-   "find": "`Becoming.Requirement.Required.defeated`；记录 [practical-judgment-under-living-significance](../results/records/practical-judgment-under-living-significance.md)。",
-   "replace": "`Becoming.Requirement.Required.defeated`；记录 [practical-judgment-under-living-significance](../results/records/practical-judgment-under-living-significance.md)、[classification-robust-generative-comparison](../results/records/classification-robust-generative-comparison.md)。",
-   "why": "required_of_bettered and Required.defeated are bound by this record, not by the one cited."
-  },
-  {
-   "find": "[assured-route-criterion](../results/records/assured-route-criterion.md)、",
-   "replace": "[assured-route-criterion](../results/records/assured-route-criterion.md)、[pending-task-context-applicability](../results/records/pending-task-context-applicability.md)、[selection-under-registration-revision](../results/records/selection-under-registration-revision.md)、",
-   "why": "Stock.feasible_iff_covered and Revising.covered_not_enacted are bound by these records, not by the ones cited."
-  },
-  {
-   "find": "；记录 [comparison-by-widening](../results/records/comparison-by-widening.md)。",
-   "replace": "；记录 [comparison-by-widening](../results/records/comparison-by-widening.md)、[classification-robust-generative-comparison](../results/records/classification-robust-generative-comparison.md)、[relational-generative-comparison](../results/records/relational-generative-comparison.md)。",
-   "why": "Extension.irrefl, Extension.trans and Comparison.separates are bound by these records, not by comparison-by-widening."
-  },
-  {
-   "find": "；记录 [becoming-spine-instances](../results/records/becoming-spine-instances.md)。",
-   "replace": "；记录 [becoming-spine-instances](../results/records/becoming-spine-instances.md)、[metaethical-core-characterization](../results/records/metaethical-core-characterization.md)。",
-   "why": "LiftBetter.trans is bound by this record."
+   "id": "十六·五",
+   "find": "以胜负之位次计己之增强",
+   "replace": "以胜负之等次计己之增强",
+   "why": "位 is a name in the table: a hexagram place (HexagramPlaces). In the same sentence 称 is relative position. 位次 brings 位 in for contest rank; the earlier draft's 等次 has no such clash."
   }
  ],
- "verdict": "sound after edits",
- "notes": "I checked every 經 against the Lean. Files read: Retaining, Significance, Admission, OwnWidening, Extension, Weightings, Regions, Relevance, Ranking, JointDraw, Lifting, Metaethics, ValuationFrames, Frontier, FrontierFrames, Lexical, ScoreRepresentation, LossMatching, Direction, FrontierWorlds, Seeking, Enough, Optimum, Assurance, Stock and Countdown, all under /Users/ren/theories/.claude/worktrees/zhonghua/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/.\n\n**Declarations.** All cited declarations resolve on receipt 20261021T102032.314972Z, with two exceptions:\n- `Becoming.Weighting.increasing_lexical` does not exist. The claim it carried (that a basic-first lexical order is among the orders that rank every widening above) is unproved; widening-as-what-every-weighting-ranks lists it only as \"related, not a proved adapter\". The edits remove it from 經, 說 and 證.\n- `Becoming.LossMatching` is a module/namespace, not a declaration. It appears only in 說; the chapter's FR row cites it the same way.\n\nAll 27 record links exist.\n\n**Content corrections, beyond the edits' one-line reasons:**\n- 十六·十三 and 十六·十六 need a nonempty listed menu for a choice to exist (Lean: `x :: rest`).\n- 十六·十's 說 cited `stepwise_not_monotone` for mutual non-extension. That is `Becoming.Ranking.ThirdParty.restraint_unranked_stepwise`.\n- 十六·六's 「静止与节从不更坏」 overclaimed; it holds only by retaining and adding (`Web.not_added_of_le`).\n- 十六·十九's FR wording said a loss is 愈 than protections, reversing its sense.\n- 十六·十七's Clearing instance omitted the J1/J2-with-no-basic-admission premise and overclaimed with 只.\n- 十六·二's iff turned ¬∀ into ∃.\n\n**Quotations.** All 31 quotations were checked with ctq.py. All are exact except 「以一易兩…」, where the frozen text has 两; it is fixed. Every kind (相合/定域/相分) matches its passage entry. Two passage ids are wrong: one has a typo (`xunzi-xiusheng` → `xunzi-xiushen`), and in 十六·一, 无丧 is wrongly presented as taking its name from Xunzi. Two quotes inside 說 lacked their 〔ID〕 and now have it.\n\n**Continuation condition and order.** The condition always appears under 若 and is never asserted. Order is placed in C alone, and the opening states both premises and their roles.\n\n**Name problems for the integrator** (not edited, since the table has no name for these):\n- **所取 has two senses.** In 十六·十三/十四/十六/十七/二十二 it means the frontier, the chosen alternatives. In 十六·二/五/十 it means uptake, the table's 取. The table needs a name for `Requirement.Frontier` (for example 莫愈者), applied across the 篇.\n- **加权/正权 use 权.** 加权/正权/同一正权 put 权 to work as weight. That collides with the title name 权, whose note excludes the scale's weight. Weighting needs a name; 正 for `Positive` also collides with the C17 name 正.\n- **自然数之分 uses 分.** 分 is the C13 name for exclusive footprints.\n- **更新 is not a table name.** 十六·四 經 uses 更新 for `Web.RenewingAt`; the table's 恒 names only the run class.\n- **Other concepts with no table name:**\n  - 扩展 (`Extension`)\n  - 节 / 节流 (restraint)\n  - 过资\n  - 焦物 / 维持者\n  - 以所容读活, 整段之读, 逐步之读 (the readings)\n  - 表述 (A)\n  - 连通 (`Connected`)\n  - 理由\n  - 前沿\n  - 可许之计, 任, 余责, 释\n  - 严格之丧配\n  - 自身之广 (`WidensWithin`)\n  - 动之向 (Direction)\n  - 随所感而升 (`Rising`), 族, 库\n  - 计工, 工, 可用之量, 余数, 出口, 有效 (Countdown)\n  - 所蓄 for `Stock` (蓄 is anchored at `Web.Carries`)\n  - 字典序\n- 可许之计 cannot take 分数: 分数 is anchored at `JointPlans`, a different structure.\n\n**Smaller points left unedited:** 十六·二 uses 流衡 and 十六·四/五/十 use 衡流 (both readable). 十六·十's 說 mentions 德 only in negation."
+ "notes": "I edited no file. I found 20 problems in the rewritten 篇十六; the fixes are in the edits list. Each find string occurs exactly once in its 條 of /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c15_part.json. My spot checks show that file matches the PART text, but I did not compare the two in full.\n\nWhat I checked and found clean:\n- **Declarations.** All 121 backticked declarations resolve, unrenamed, through work/resolve.py on the latest receipt. I read each 經 against its Lean statement: hypotheses, direction of each iff, which way 无丧 and 有得 run, and witness versus law.\n- **Quotations.** All 34 distinct 「…」〔ID〕 pairs are exact under ctq.py text.\n- **Passage ids.** Every passage id exists in work/passages, and the 相合/定域/相分 kind given for each matches the passage entry. The corrected id wuxing-bu-yi-xiao-dao-hai-da-dao is right: the quoted 说20 fragment is in it.\n- **Cross-references.** Every ⟦id⟧ is in book-1-outline and points to the right content: ⟦十六·一⟧, ⟦十五·四⟧, ⟦十五·十六⟧, ⟦六·二十⟧, ⟦六·十五⟧, ⟦六·三⟧, ⟦十五·二十⟧, ⟦十五·二十一⟧, ⟦十六·八⟧, ⟦十六·九⟧, ⟦十六·十三⟧, ⟦十一·二十七⟧, ⟦十六·二十⟧.\n- **Instructions in C15.json.** All are carried out, with these deviations that the name table or plain-wordings correctly override:\n  - 积之历 instead of 路 (C86)\n  - 轻重 instead of 定重 (C14)\n  - 然 instead of 实现 (C5)\n  - 族 instead of 表 (C87)\n  - 度 instead of 计分 (C13)\n- **Name order.** No 經 depends on a name or law defined only in a later 條. 基 and 丧配 are first explained in the 說 of the same 條.\n\nThe most serious problem is in 十六·二十一. The 經 says 凡法，或足恰当必足, and the 說 glosses 法 as 一动至多一果. But Enough.law_possibly_iff_assured is proved only for Law.process next: one move per state, with exactly one outcome. The book defines 法 in ⟦一·六⟧ through Becoming.Determined, which allows several moves per state and dead ends, and there the claim is false. The 經 now states the restriction.\n\nThe other edits fix:\n- Names used for the wrong concept: 事, 所容, 不再变, 行 used for a finite trace, 位次.\n- Scope or precision gaps against the Lean:\n  - undominated_has_iff_em quantifies over every relation.\n  - undominated_has_iff is an iff.\n  - frontier_exists assumes irreflexivity and transitivity everywhere.\n  - articulates_total's living case needs every admitted outcome to have a new living claim.\n  - Countdown.exits needs a valid start.\n  - assured_iff needs 自某步起.\n  - widening_not_not_better needs no decidedness.\n\nFor the integrator, these need a decision and are not edits:\n1. **全行之读 vs 全程之读.** Plain-wordings has two conflicting rows. ranking.wholerun (verify-G11) fixes 全行之读. ranking (verify-G4) fixes 全程之读 and explicitly rejects 全行之读. One decision is needed. The new title 全行读活：俭 for ⟦十六·十⟧ also departs from the outline title 整段读活：节.\n2. **所资 for an amount.** The draft uses 所资 for an amount drawn in ⟦十六·九⟧ (RenewalFlow draw) and ⟦十六·二十三⟧ (Stock draw). The table calls 资 关系名, and the plain wording uses 所资 for the condition drawn on. I left it, because 所取 would tie the sentence to Flow.take, and in the RenewalFlow model that is a truncated difference, not the draw.\n3. **What 法 names.** The book uses 法 for two things. ⟦一·六⟧ defines it as Determined, but the table anchors it at Law, and ⟦十一·十七⟧ 足而止 applies it to Law next. Determined and Law.process differ, so this needs a book-wide decision.\n4. **證 too long.** ⟦十六·五⟧ and ⟦十六·十三⟧ each list 9 declarations, one over STYLE's 3–8, as the instructions required. Flow.WithheldLevels in ⟦十六·五⟧ is a definition and could go.\n5. **Outline title of ⟦六·二十⟧.** It still says 定重, but the table's name is 轻重.\n6. **Minor wording left unchanged.**\n   - ⟦十六·十二⟧ 說 calls A 一中立之设. 中立 is the gloss of the table names 尽, 无亲 and 无方, and the English chapter calls A an externalist premise.\n   - ⟦十六·六⟧ 說 has 静止, which combines the names 静 and 止.\n   - ⟦十六·二十三⟧ 說 has 储备, the gloss of 蓄.\n   None of these touches a 經."
 }

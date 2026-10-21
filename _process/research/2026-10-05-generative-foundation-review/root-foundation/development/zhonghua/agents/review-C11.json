@@ -1,177 +1,113 @@
 {
- "pian": "篇十二　环（C11）",
  "edits": [
   {
-   "find": "感怎样闭一链而成环",
-   "replace": "感怎样接一链之首尾而成环",
-   "why": "「闭」是名表之名（吸收区域），本篇又用护闭／成闭；接链成环是成环，不是闭"
+   "id": "十二·二",
+   "find": "自每一起始之差，有一阶于每步在 c 无所失，恰当",
+   "replace": "自每一起始之差，有一阶于每步在 c 皆等于可致，恰当",
+   "why": "Order: this 經 uses 所失, which is defined only in the 經 of ⟦十二·五⟧, a later 條. The new wording says exactly what Remainder.finite_order_iff_no_loop states: carriedWithin j t c = carried t c."
   },
   {
-   "find": "环在某步因一感闭链而成",
-   "replace": "环在某步因一感接链之首尾而成",
-   "why": "同上：闭名作他用"
+   "id": "十二·二",
+   "find": "所以 j 阶至第 j 步皆无所失",
+   "replace": "所以 j 阶至第 j 步皆等于可致（无所失；所失之名见⟦十二·五⟧）",
+   "why": "The 說 also uses 无所失 before ⟦十二·五⟧ defines 所失, so its first use gets a pointer to the definition. The claim itself is carriedWithin_exact."
   },
   {
-   "find": "应倍小于一时此倍不成立。",
-   "replace": "以实数之量计，应倍小于一时此倍不必成立，脊柱未及。",
-   "why": "Lean 无实数应倍之律；D43 与记录只说「不必」"
+   "id": "十二·一",
+   "find": "一单位只给一次于第一个所待",
+   "replace": "一单位只与一次于第一个所待",
+   "why": "Name: giving in an exchange is 与 (取与). plain-wordings asks for 给 to become 与, and the writer's own notes say 与 is used throughout."
   },
   {
-   "find": "可致为正，恰当有一时间之路，由起时之差",
-   "replace": "可致为正，恰当有一依步之路，由起时之差",
-   "why": "「时」是名表之名（情境）；「时间」是今语"
+   "id": "十二·一",
+   "find": "每步以应倍二转给第二个所待",
+   "replace": "每步以应倍二转与第二个所待",
+   "why": "Same fix, 给 to 与, for the giving step in Propagation.Chain.relay."
   },
   {
-   "find": "差只沿时间之路到达",
-   "replace": "差只沿依步之路到达",
-   "why": "同上"
+   "id": "十二·八",
+   "find": "应倍是一环节对所读之积每单位所给者",
+   "replace": "应倍是一取与对所读之积每单位所给者",
+   "why": "Wrong concept: 应倍 (RespondsWithin) is the strength of an exchange (取与) on a level it reads. A 环节 is a map in the return-map list, and the next clause contrasts the two. The name table says 应倍 is the 倍 an 应 gives per unit of the level it reads."
   },
   {
-   "find": "**經**　成环，一步之感闭一链而环始有也。",
-   "replace": "**經**　成环，一步之感接一链之首尾而环始有也。",
-   "why": "闭名作他用；onLoop_succ_iff 是接链首尾"
+   "id": "十二·八",
+   "find": "报处处小于所受，是充分条件",
+   "replace": "报于零为零、于每一正差皆小于之，是充分条件",
+   "why": "Exactness: closes_within needs f 0 = 0 and f x < x for positive x. A map on Nat cannot be below what it receives at 0, so '处处小于' misstates the condition."
   },
   {
-   "find": "**說**　至 T 步所成之环，是只留 T 步之前作用之感",
-   "replace": "**說**　成环（新组合，成＋环：环至某步始有）。至 T 步所成之环，是只留 T 步之前作用之感",
-   "why": "新组合之名第一次出现须说其组成"
+   "id": "十二·九",
+   "find": "诸倍相乘为零，则首匝之后差为零；",
+   "replace": "诸倍相乘为零，则自首匝起差每匝皆为零；",
+   "why": "whole_factors gives state (n+1) = 0 for every n, that is at every turn from the first on. '首匝之后差为零' can be read as a claim about the first turn only."
   },
   {
-   "find": "必经一个在 T 步作用而闭一链之感",
-   "replace": "必经一个在 T 步作用而接一链首尾之感",
-   "why": "闭名作他用"
+   "id": "十二·十",
+   "find": "名“还”之回馈义始见于注层（河上公、苏辙）；",
+   "replace": "名“还”之回馈义始见于注层：北宋苏辙注「必還報之」〔LC-SZ-ALL〕；王弼注读作还反无为，河上公注读作举事自责，都不是经他者而回；",
+   "why": "Fact: the checked passage lao-30-qi-shi-hao-huan finds that, of the three commentaries, only 苏辙 reads 好还 as a return through others. 河上公 reads it as 举事好还自责 and 王弼 as 还反无为. All three verified with ctq text: LC-SZ-ALL '必還報之', LC-HS-UP '其举事好还自责', DS01 '有道者务欲还反无为'. The quotation added is exact."
   },
   {
-   "find": "此后水平加一每步倍之（`Becoming.Closing.Threshold.forms`、`Becoming.Closing.Threshold.level_after`，构造之例",
-   "replace": "此后水平加一每步倍之（`Becoming.Closing.Threshold.not_formed`、`Becoming.Closing.Threshold.forms`、`Becoming.Closing.Threshold.level_after`，构造之例",
-   "why": "「不先成」须 not_formed 为证"
+   "id": "十二·十一",
+   "find": "若法又唯读已立者：于 c 至此每步皆不下于阈之步",
+   "replace": "若法又唯读已立者，所标者唯 c：于 c 至此每步皆不下于阈之步",
+   "why": "Hypothesis: Nonanticipating.standing_alike already needs `only` (no stock but c is marked), so the condition on the mark has to come before the first clause. '以标独标 c' was also hard to parse."
   },
   {
-   "find": "对每一日程，它不过十二·二之界，自环恰失此界",
-   "replace": "体起后不复与差、起时之差不过 D、每步入每一所待之应倍之和不过 M 时，不论日程，它不过一个只由 M、D、阶与步数所定之界，自环恰失此界",
-   "why": "十二·二无此界（指向落空）；responses_le_missBound 之前提漏写"
+   "id": "十二·十一",
+   "find": "；以标独标 c，未穷之法于 c 之应倍为零",
+   "replace": "；未穷之法于 c 之应倍为零",
+   "why": "The mark condition now stands at the head of the sentence, so it covers standing_alike, standing_unread and standing_no_loop together."
   },
   {
-   "find": "又自 e 经时间之链复至 e",
-   "replace": "又自 e 经依步之链复至 e",
-   "why": "「时」是情境之名"
+   "id": "十二·十一",
+   "find": "而阈不低于它们于 c 之需",
+   "replace": "而阈不少于它们于 c 之需",
+   "why": "Name rule: 高/低 used as a comparison becomes 多/少 (the writer applies this elsewhere). This is θ s ≥ need in Through.readsBelow."
   },
   {
-   "find": "一自环为多项式所界，恰当二之作用步数次方为多项式所界，不论其正应倍为何",
-   "replace": "一自环自正差起为多项式所界，恰当二之作用步数次方为多项式所界，不论其正应倍为何",
-   "why": "polynomial_iff 须起差为正（pos : 1 ≤ D）"
+   "id": "十二·十二",
+   "find": "凡 g 之取与经其感，他者于 g 所感之所待之取与二流皆同",
+   "replace": "凡诸待者之同异定然否，g 之取与经其感，他者于 g 所感之所待之取与二流皆同",
+   "why": "Local condition: policy_uses_after_failure assumes [DecidableEq F]. The first law of this 經 states its [DecidableEq C] as 诸所待之同异定然否, so this law states its own condition the same way."
   },
   {
-   "find": "每一日程是否皆自某步而定，理论不能对展开断言或否认",
-   "replace": "每一日程是否皆自某步而定，不是理论对展开所断言或否认之事",
-   "why": "Lean 只说核心不断言；「不能」是未证之元定理，记录亦只说不断言不否认"
+   "id": "十二·十二",
+   "find": "若 g 所感之一所待其差有改，则其前有一步原网不容 g。",
+   "replace": "若 g 所感之一所待其差至某步有改，则非此前每步原网皆容 g。",
+   "why": "Exactness: the Lean conclusion is ¬ ∀ s < t, W.Supported s g. The core assumes no excluded middle, and 'there is an earlier step where g is unsupported' is the stronger existential, which Lean does not prove."
   },
   {
-   "find": "倍率是一周使差乘以几何（`Becoming.LoopReturn.scaling`）",
-   "replace": "倍率是一节使所受之差乘以几何（`Becoming.LoopReturn.scaling`），一周所乘是诸节倍率之积（`Becoming.LoopReturn.factor`）",
-   "why": "scaling 是逐节之倍；十二·九「倍率之积」即用此义，前后须一致"
+   "id": "十二·十二",
+   "find": "用之者，此前原网非每步皆容 g（",
+   "replace": "用之者，此前原网非每步皆容 g（",
+   "why": "(no-op guard; see next)"
   },
   {
-   "find": "1 加应倍之积只是一周之严格下界，不是其倍率（`Becoming.LoopReturn.Ring.bound_strict`）",
-   "replace": "1 加应倍之积只是一周之严格下界，不是一周之所乘（`Becoming.LoopReturn.Ring.bound_strict`；其下界之一般形为 `Becoming.LoopReturn.carried_around_course`）",
-   "why": "倍率改为逐节义后须改；补一般之律"
+   "id": "十二·十二",
+   "find": "用之者，其前已失其容（",
+   "replace": "用之者，此前原网非每步皆容 g（",
+   "why": "The 說 restated the same law existentially ('已失其容'). It now matches the ¬∀ form of policy_uses_after_failure."
   },
   {
-   "find": "这与十二·七每返倍之相平行而计周不计步，二者之间尚无实例定理。",
-   "replace": "这与十二·七每返倍之相平行而计周不计步；二者在一自环上相合（`Becoming.LoopReturn.selfLoop_carried`，一周一步），在数所待之环上报只是可致之下界（`Becoming.LoopReturn.carried_around_course`）。",
-   "why": "「尚无实例定理」不实：selfLoop_carried 与 carried_around_course 即连二者"
+   "id": "十二·十七",
+   "find": "`Becoming.Regulation.OneSided.within`、`Becoming.Regulation.OneSided.not_opposes`",
+   "replace": "`Becoming.Regulation.OneSided.within`、`Becoming.Regulation.OneSided.restores_premise`、`Becoming.Regulation.OneSided.not_opposes`",
+   "why": "The 經 asserts that the witness 守升至 m 之律之前提, and that is proved only by OneSided.restores_premise, which was cited in the 說 but missing from 證. 證 now has eight declarations."
   },
   {
-   "find": "“溢”至于倍增，是 AI 读法。",
-   "replace": "读“溢”为所交多于所受，是 AI 读法；“溢”不言倍增，所以只得不闭，不得滋。",
-   "why": "原句所防之倍增读法正文未用；改为实际所作之读"
+   "id": "十二·十七",
+   "find": "每步越界者永不就正。又",
+   "replace": "每步越界者永不就正（构造之例 `Becoming.Regulation.Overshooting.never_at`；一般之形是 `Becoming.Flow.withinGap_iff_between` 之一步推论，脊柱未单列）。又",
+   "why": "Claim status: the passage cy-xiaoguo-jiaowang-guozheng records the general form ('beyond the gap at every step, never at m') as an AI hand inference not in Lean. Only the Overshooting witness is checked, so the 說 must not state the general form as a law."
   },
   {
-   "find": "所以照数相报，差如故；加倍相报，滋；",
-   "replace": "所以诸节照数而交，差如故；加倍而交，滋；",
-   "why": "名表：报只名环返映射，单节之回应用应，报答义不入"
-  },
-  {
-   "find": "它闭环，条件是其后诸节不于无怨处自生怨",
-   "replace": "它使怨之差闭，条件是其后诸节不于无怨处自生怨",
-   "why": "「闭环」今语读作成环，义正相反"
-  },
-  {
-   "find": "常立之法于 c 之应倍为零，无环经 c，c 之下游唯 c。",
-   "replace": "常立之法于 c 之应倍为零，限于所读之感无环经 c，c 之下游唯 c。",
-   "why": "standing_no_loop 只对 restrictReads 之应倍言无环；原经强于所证"
-  },
-  {
-   "find": "于任一期 u，若至 u 每步",
-   "replace": "于任一步 u，若至 u 每步",
-   "why": "「期」是名表之名（回程之期），此处是界步 u"
-  },
-  {
-   "find": "g 所感之诸所待二流皆衡，起时 g 所感者后者不低",
-   "replace": "二流同其物，g 所感之诸所待二流皆衡，起时 g 所感者后者不低",
-   "why": "policy_uses_after_failure 有 present 之前提，经漏写"
-  },
-  {
-   "find": "则任何抬高立即使二网经 g 之感不同",
-   "replace": "则任何正之抬高立即使二网经 g 之感不同",
-   "why": "observed_raise_couples 须 0 < d"
-  },
-  {
-   "find": "观之处穷常可预见，那是前提所排除之情形",
-   "replace": "观之处，穷往往可以先见，那是前提所排除之情形，脊柱未有其律",
-   "why": "无律证穷「常」可预见；记录只引文献言「往往」"
-  },
-  {
-   "find": "避免滋而不舍所有者，须使 c 以水平感入，或有其模型（理），或经另一 c 感入之物（验，篇九）。讀（AI，D26）：",
-   "replace": "讀（AI，D26）：避免滋而不舍所有者，须使 c 以水平感入，或有其模型（理），或经 c 以水平感入之另一物；",
-   "why": "此句是 D26 之读法，不是律，须在讀标之内；「另一物之感」不是验（Web.Excludes）"
-  },
-  {
-   "find": "（`Becoming.RegimeMargin.Peaked.together_ends`，构造之例）",
-   "replace": "（`Becoming.RegimeMargin.Peaked.each_holds`、`Becoming.RegimeMargin.Peaked.together_ends`，构造之例）",
-   "why": "「每一取下各自有不涸之水平」须 each_holds 为证"
-  },
-  {
-   "find": "一步使所剩与近来所与皆不过 hi 者之水平不过 hi",
-   "replace": "一步使水平与近来所与皆不过 hi 者之次水平不过 hi",
-   "why": "Adjusted.Band 之前提是水平 x ≤ hi，不是所剩"
-  },
-  {
-   "find": "过后能就正，恰在过后每步复归中节而相反之时",
-   "replace": "过后若每步复归中节而相反，则能就正（`Becoming.Flow.settles`）",
-   "why": "「恰在」是等价，脊柱只有充分之律"
-  },
-  {
-   "find": "**說**　识不早（迟读，`Becoming.Regulation.ReadsLate`）：",
-   "replace": "**說**　识不早（迟读，`Becoming.Regulation.ReadsLate`；新组合，取周敦颐之语：此“识”只是读入水平，不是名表之识，“不早”即迟 ℓ 步）：",
-   "why": "名表标「新」，须说组成；识是已采之名，须防混义"
-  },
-  {
-   "find": "相反本身不足以就中，所进所退不越其距方归中，进之过多，退者亦越过。",
-   "replace": "相反本身不足以至 m，所进所退不越其距方归于 m（中节，十二·十六）；进之过多则越过 m，退之过多亦然（过正，十二·十七）。",
-   "why": "中不单立（不采之字表）；原末句文义不通"
-  },
-  {
-   "find": "所以等待之给在环上有两种失败",
-   "replace": "所以等待之给在环上有两种形",
-   "why": "「失败」以给为愈，暗含价值；诸律不排序"
-  },
-  {
-   "find": "《老子》第三十六、七十八章）",
-   "replace": "《老子》第三十六章，七十八章同义）",
-   "why": "所引「柔弱胜刚强」只见第三十六章；第七十八章作「弱之胜强，柔之胜刚」"
-  },
-  {
-   "find": "先施与报分开：复原不依赖对方回报之计算。",
-   "replace": "先施不以对方之应为条件：复原不依赖对方是否回应之计算。",
-   "why": "报是环返映射之名，报答义不入"
-  },
-  {
-   "find": "墨子以“然后人报我”为理由，是报之论证",
-   "replace": "墨子以“然后人报我”为理由，是以对方回应为据之论证",
-   "why": "同上：报名不带报答义"
+   "id": "十二·五",
+   "find": "长 j＋1 之诸路之和",
+   "replace": "长 j+1 之诸路之和",
+   "why": "Typography: everywhere else in the part, including the same 經 ('经 j+1 次应'), the half-width + is used."
   }
  ],
- "verdict": "sound after edits",
- "notes": "Draft file used for matching: /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/p12/pian12.md. It matches the draft in this task, and each \"find\" string occurs exactly once in it.\n\n**Checks done**\n- All 181 cited declarations resolve against the current receipt (work/resolve.py).\n- All 18 record links exist.\n- All 40 「…」〔ID〕 quotations are exact in the frozen texts (ctq.py).\n- Dating statements agree with the C11 passages file, except the 老子 36/78 attribution, which is fixed in the edits.\n- Every kind matches the checked map.\n- The continuation condition is stated and not asserted, with its two roles named in 篇首: it fixes scope, and 以广为愈 alone orders.\n- I read every 經 against its Lean hypotheses. Most are exact. The wrong ones are fixed in the edits:\n  - 十二·十一: loops are absent only for the strengths restricted to what is read.\n  - 十二·十四: Band bounds the level, not 所剩.\n  - 十二·十二: 期 misused for the horizon u, and the `present` premise was missing.\n  - 十二·五: a dangling reference to a bound in 十二·二 that does not exist.\n  - 十二·八: two false claims. 倍率 was defined per turn but used per link in 十二·九, and \"尚无实例定理\" is untrue (selfLoop_carried and carried_around_course connect the two).\n  - 十二·七: overclaims \"理论不能断言或否认\".\n  - 十二·十二: overclaims \"穷常可预见\".\n  - 十二·十七 對照: overclaims \"恰在\".\n  - 十二·十八 and 十二·三: 识不早 and 成环 are marked 新 in the name table but their composition was not explained.\n\n**Left for the integrator (not edited)**\n1. The draft uses 闭 for \"a loop brings the difference to zero\" (闭差, 渐闭, 闭只能经…, 环闭或如故). In the name table, 闭 is Ren's term for an absorbing region, and this 篇 also uses 护闭／成闭. Reading the zero difference as an absorbing state is defensible, but a separate name, or 「差归零」, would be cleaner. I changed only the uses where 闭 meant closing a chain into a loop, and 「闭环」.\n2. Concepts carried in 經 that have no table name:\n   - 阶 (order)\n   - 日程 (schedule)\n   - 上游/下游\n   - 倍率 (a link's factor)\n   - 常取 (the standing draw H)\n   - 所剩\n   - 近来所与\n   - 迟返 (lateReturn)\n   - 策 (policy)\n   - 相反 (Flow.Opposes; 反 is not adopted, so this is a compound in plain use)\n   - 依步之路／链 (my replacement for 时间之路)\n3. 常 is the table's name for an invariant, but 常取 and 常立之法 use it as \"standing\". Adverbial 常 (\"always\") is pervasive and probably acceptable.\n4. Some 對照 readings are labelled \"（讀，AI）\" with no D number (79, 63, 十二·十's 约定), not 讀（AI，Dn）.\n5. The lao-60 entry is marked 定域, but the draft itself says the spine lacks the law it needs (part giving repeatedly, σ≠0). The checked map lists this gap.\n6. The weishi entry is 相合 although its 因果同时 is not a stepwise structure. The 說 notes the difference.\n7. 十二·六 說's \"这些都是对每一具此应倍之法与其每二衡流之差的陈述\" is slightly wide. carried_le_polynomial_from carries over to gaps only through gap_le_carried, which needs every condition listed."
+ "notes": "I edited no file. Apply the edits in order. The 十二·十二 entry with find '用之者，此前原网非每步皆容 g（' is a mistaken no-op: its find text is not in the current body. Drop it, or apply it after the entry that follows it, where it then finds and replaces its own text.\n\nWhat was checked:\n- Every 條's 經 against its Lean statement in /Users/ren/theories/.claude/worktrees/zhonghua/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/*.lean: hypotheses, direction of iff, witness or law.\n- All 140 cited names resolve, including Becoming.gap_polynomial_iff_no_loop (Loops.lean:1561). Becoming.Closing.Threshold and Becoming.Regulation are namespaces.\n- All 40 quotations are exact under ctq.py text. The one added in 十二·十 (「必還報之」〔LC-SZ-ALL〕) is also exact.\n- Every ⟦id⟧ resolves in book-1-outline.txt to the intended content (⟦九·四⟧ 闻见 holds 下游; ⟦四·二十六⟧ / ⟦十二·十四⟧ hold 涸界 and 平面之阈).\n- Every 对照 entry's id and kind match passages.json C11/C06. Every record link exists.\n- All C11.json instructions are carried out. The writer's deviations are justified by NAMES-ZH:\n  - 每匝 instead of 每步 for the course of the return map.\n  - 未穷之法 instead of 立时之法.\n  - 域之宽 instead of 带.\n  - 涸界 / 常取 instead of 不返之点 / 每步同取.\n- Only Chinese outside code and ids.\n\nSubstantive findings, all fixed by the edits:\n1. Order: the 經 of 十二·二 used 所失 before ⟦十二·五⟧ defines it.\n2. 十二·八 說 called 应倍 a property of a 环节, which conflates the two concepts the sentence was distinguishing.\n3. 十二·十 說 attributed the feedback reading of 好还 to 河上公. The checked passage lao-30 says only 苏辙 has it; 河上公 reads 自责. The name table's 还 note repeats this error ('回馈义始见于注层（河上公、苏辙）') and should be corrected by the integrator.\n4. Exactness:\n   - 十二·十二: policy_uses_after_failure proves ¬∀, not ∃; and its DecidableEq F was not stated.\n   - 十二·十一: the mark condition was placed after the first clause that needs it.\n   - 十二·九: 'P=0' closes at every turn from the first, not only at the first.\n   - 十二·八: the closes_within condition was misstated.\n5. 十二·十七: the 證 lacked restores_premise, and the 說 stated an unproved general law.\n\nLeft for the integrator, not edited:\n- The outline title of ⟦十二·九⟧ is still '整数倍率与截'. The part and intro now use '整数之倍与截', which follows the NAMES-ZH 倍 row.\n- plain-wordings row 163 (loopreturn link → '环之一应') conflicts with NAMES-ZH 环节/匝. The part follows NAMES-ZH, so that row should be retired.\n- '唯读已立者' (this part) vs '只读已往' (C10) for Nonanticipating: one wording should be chosen.\n- Unnamed concepts kept as plain wording, which the writer also flagged: 自环, 依步之路/链, 携带之法, 相反 (Flow.Opposes), 升至 m 之律 (Flow.restores), 返 (RoundTrip), 所标之步, 在场者.\n- The intro's '⟦十四·六⟧' (念旧恶) is a reading of the instruction '十四·六、十四·七之后'. It fits, since 念旧恶 is the waiting-with-memory form, but the instruction's own target was only ⟦十四·七⟧ and ⟦十二·二十一⟧–⟦十二·二十三⟧.\n- 物 and 待者 are both used for formations outside the part (体外之物 / 体外每一待者). This is true but uneven, and the integrator may want to unify it."
 }

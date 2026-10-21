@@ -1,0 +1,65 @@
+{
+ "part": {
+  "key": "C07",
+  "heading": "篇七　类与理",
+  "intro": "本篇论法之所守、所引与所读。法（律，law，`Becoming.Determined`）已见篇一：一状一动所至不过一状之变，从它所支配之历史读出，历史定之至于死路（⟦一·六⟧至⟦一·八⟧）。本篇先问一个展开在法下怎样持存、怎样收窄：变之每步皆守之区为常，法所不出之区为闭；在区外而行至其中为入，有状自外入之之闭为所归，自外入之之诸状为其势；入而不复为成闭；变有分歧，入分为或入与必入；一步犹可复得、一步不可复得之处为机，复者之每一失去皆经之（不可非），机处守之为护闭、失之为成闭；所待之水平当步即为所读者，为知几。次问诸读怎样在其中分化：同在法下即经所示之映射未来皆同，法只是同中确定在诸状有名处之特例；类是一读所分，随类而同是一函数于每类一值；理是承载法之类；推类以类推及未见者；命题之同一也是一类；法与映射可换序，则不并映射所分者；诸语境所示并行不悖，恰在相交处一致，奇偶之系中不能并行者恰是矛盾；修正所未定者为未定。本篇诸条皆无设而然（不加前提的定理）：每条只在写入其中的局部条件（有一表尽诸状、定然否、复、映射移每一状……）下，对每个如此表示之宇成立。闭、成闭、护闭、机都只名结构，不带善恶：保住哪一状、保住它是支持还是损害生生，不在这些法中。延续之条件（凡续皆有顾）在篇十五陈述而不断言，只定范围；排序唯在以广为愈（以扩大为较好，篇十六）。本篇不用二者。前接篇五之复与同归、篇六之复归，后接篇八之时与位、篇九之识与知。",
+  "tiao": [
+   {
+    "id": "七·十一",
+    "title": "类与随类而同",
+    "body": "**經**　类，一读所分也：读值同者为一类。随类而同，一函数于每一类取一值也。凡函数经一读随类而同，经每一至少分其所分之读亦随类而同。经不分任何者之读（达名），随类而同者恰处处同值。\n\n**說**　类（归并，lumping）不是所读者之外的一种东西，是一个读所作之分。随类而同（`Becoming.Learning.Lumped`；新组合：随＋类＋而同）说一函数不分此读所不分者：读得愈细，经它而成者不减（`Becoming.lumped_of_finer`）；达名之读什么都不分，经它只成处处同之物（`Becoming.lumped_const_iff`），所以「萬物皆一」〔ZH1-S05〕是达名之读，不是取消差别。类同不是同（⟦七·十⟧）：在一读下同值，不就一切测验相同。对照（相合，zhuangzi-de-chong-fu-tong-yi）：「自其異者視之，肝膽楚、越也。自其同者視之，萬物皆一也。」〔ZH1-S05〕（先秦，《庄子》内篇）：一与多随所取之读而定。又（相合，xiaoqu-you-yi-tong）：「夫物有以同而不率遂同。」〔MI1-S-XQ〕（先秦，《墨子·小取》）：有一处类同，不就全同。哪一类承载法，见下条。\n\n**證**　`Becoming.Learning.Lumped`、`Becoming.lumped_of_finer`、`Becoming.lumped_const_iff`；记录 [generalization-through-lumping](../results/records/generalization-through-lumping.md)、[where-a-move-is-formed](../results/records/where-a-move-is-formed.md)。"
+   },
+   {
+    "id": "七·十二",
+    "title": "理",
+    "body": "**經**　理，类之承载法者也：读值同之二状，以同一动所至者读值亦同，谓之同移。凡变与读，有一法于读值上、而变之每步经此读皆为其所许，恰当读值同者同移；变经此读之像为法，亦恰当此。凡法，读值同者同移，恰当次状之读值随读之类而同。法以一映射示之，一读所并者所示皆同、此读承载法、且凡经映射未来皆同者此读皆并之，则此读为正名。\n\n**說**　理（对结构与变化之法的建模，`Becoming.GoAlike`）由两个已检之部分合成（“同移”是 `Becoming.GoAlike` 之平语，名表无此名，交整合者）：一读所分之类（⟦七·十一⟧），与变化跨此类同样（同移）。对确定之法，二者是一个条件（`Becoming.Learning.goAlike_iff_lumped`）：构之模与变之模为一类。一般之变上，有法承载于读值，恰在读值同者同移（`Becoming.carries_law_iff`），对每一变与每一读成立，承载者是变经此读之像（`Becoming.image_determined_iff`）；同中确定者，以一个只连成同辞之读值的等价代相等，亦然（`Becoming.carries_law_alike_iff`）。凡理皆类，类不皆理：消长环之法下，以一卦与其六爻皆变者为一对之类承载法（`Becoming.Hexagram.pairs_goAlike`），以刚爻之数为类不承载（泰、否各三刚爻，次步一成四、一成二，`Becoming.Hexagram.yang_not_goAlike`），其奇偶承载（`Becoming.Hexagram.yangOdd_goAlike`），而互卦之法下奇偶不承载（`Becoming.Hexagram.nuclear_yangOdd_not_goAlike`）：承载与否在所行之法，不在类本身。讀（AI，D26）：理是所行之变化跨之同样之类；物皆齐一之设不是前提，是用到之处写出之局部条件（随类而同）。对照（定域，jielao-li-fen）：「凡理者，方圓、短長、麤靡、堅脆之分也」〔CV1-S-JL〕（先秦，《韩非子·解老》）：理是分，这一半相合；一分何时承载变化之法，原句未说。又（相合，zhuangzi-pao-ding）：「依乎天理，批大郤，導大窾，因其固然」〔ZH1-S03〕（先秦，《庄子》内篇）：刀随所行之结构所分之类而行，经一读之择要对，只在要紧者跨其类同样之处（`Becoming.Learning.selects_right_through`）。相分（chengyi-xing-ji-li）：「性即理也。天下之理，原其所自，未有不善。」〔RU2-S-S06〕（宋明，程颐语，经《近思录》辑录）：把理立为先定且善之所禀；本编之理随所行之变化而修改，评价另有二设，凡续皆有顾定范围，以广为愈定次序，都不放在理之源处。\n\n**證**　`Becoming.GoAlike`、`Becoming.Learning.goAlike_iff_lumped`、`Becoming.carries_law_iff`、`Becoming.image_determined_iff`、`Becoming.Law.identifiesAlike_of_law`、`Becoming.carries_law_alike_iff`、`Becoming.Hexagram.pairs_goAlike`、`Becoming.Hexagram.yang_not_goAlike`；记录 [projection-carrying-a-law](../results/records/projection-carrying-a-law.md)、[generalization-through-lumping](../results/records/generalization-through-lumping.md)、[the-split-that-makes-sense](../results/records/the-split-that-makes-sense.md)、[hexagram-arrangements-and-laws](../results/records/hexagram-arrangements-and-laws.md)。"
+   },
+   {
+    "id": "七·十三",
+    "title": "推类",
+    "body": "**經**　推类，以所见者之值予与之同类而未见者也。凡随一读之类而同之函数，值有二，所见者在一表中，读值之相等定然否，则所见者之值定一未见者 x 之值，恰当有所见者与 x 同类。于一切函数，输入之相等定然否、值有二，则所见者不定任何未见者之值。凡 g 随一读之类而同，于所见者与 f 合，则于与所见之 d 同类之 x，g 得 f 之值，恰当 f 于 d 与 x 同值。\n\n**說**　推类（经由归并而推广，`Becoming.Learning.determines_lumped_iff`）把推广之所及恰好放在类上：类定所推者之范围，无类则所见者不定任何未见之值（`Becoming.Learning.every_determines_nothing`）；f 本身是否跨类同样，定所推者之对错（`Becoming.Learning.lumped_right_iff`）。所许之诸函数在所见者之外自由时（所见处之值与 x 处之值可任意相配），所见者于 x 只定诸函数所共有者（`Becoming.Learning.free_determines_iff`）；训练所得在所见者之外对，恰当所见者在彼处已定所许诸函数之值（`Becoming.Learning.Training.fit_right_iff`）：对经训练而得之函数，所许者是训练所能及者，由构造、起点与更新之动态定，不由损失定。一读合并了要紧者所分开者，经它之择没有能恰对的（`Becoming.Learning.selects_not_right_of_parted`），分开它须更细之读。讀（AI，D26）：归纳化为法，不被担保。对照（相合，mojing-tui-lei-zhi-nan）：「推類之難，說在之大小。」〔MI1-S-JX〕（先秦，《墨子·经下》）：类取得愈大，所能推及者愈多，须 f 于其中同样之处也愈多。又（相合，mengzi-sao-ni）：「天下溺，援之以道；嫂溺，援之以手。子欲手援天下乎？」〔RU2-S-MZ〕（先秦，《孟子·离娄上》）：二者在“溺”之类下同，在所援之手段上异，合并此分之推不对；「援之以道」〔RU2-S-MZ〕之“道”不带。又（相合，xunzi-yi-lei-ju）：「其有法者以法行，无法者以类举」〔RU2-S-XZ09〕（先秦，《荀子·王制》）：此“法”是成法，不是本编之法；只取无成例处依类推举之结构。\n\n**證**　`Becoming.Learning.determines_lumped_iff`、`Becoming.Learning.every_determines_nothing`、`Becoming.Learning.lumped_right_iff`、`Becoming.Learning.free_determines_iff`、`Becoming.Learning.Training.fit_right_iff`、`Becoming.Learning.selects_not_right_of_parted`；记录 [generalization-through-lumping](../results/records/generalization-through-lumping.md)、[selection-through-a-model-of-the-options](../results/records/selection-through-a-model-of-the-options.md)。"
+   },
+   {
+    "id": "七·十四",
+    "title": "命题之同一",
+    "body": "**經**　命题之读，于凡可互推之二命题皆取同一值，谓之随可互推而同。凡命题至命题之读皆随可互推而同，恰当可互推之命题即为一；按名之读随可互推而同，亦恰当此。以关系所构之读，不待此而守可互推：所得为可互推，不为一。\n\n**說**　从关系之起点，一命题由其推导之关系读出：何者推出它，它推出何者。Lean 之 `propext` 说命题不过是这些关系，即可互推者即一；本编之核心不用它，凡核心声明之公理报告皆空。本条恰述其义：它是类（⟦七·十一⟧）在证明之语言上之一例，命题之每一读都随可互推之类而同（`Becoming.PropositionIdentity.extensional_iff_lumped`、`Becoming.PropositionIdentity.lumped_iff`），而唯一须它之读是按名之读（`Becoming.PropositionIdentity.byName_lumped_iff`）；由原子、真与伪、且、或、则、凡、有所构之读，不待公理而守可互推（`Becoming.PropositionIdentity.Formula.read_congr`），所得为 ↔，不是 =。此等同不失见证：a ↔ b 之任二见证相等（`Becoming.PropositionIdentity.iff_witness_unique`），在类型之间则会失（`Becoming.PropositionIdentity.two_equivalences`）。它所失者是计算之进行：沿任一命题等式输运一值，值之类型不依此命题，则值不变（`Becoming.PropositionIdentity.transport_const`），而沿 `propext` 之输运不归约，是一次内核观察（Lean 4.29.1），不是定理。所以凡须命题相等之处，核心陈述 ↔。命题之每一读都是关系的，这就是 `propext` 本身，在此只作假设，未证。\n\n**證**　`Becoming.PropositionIdentity.Extensional`、`Becoming.PropositionIdentity.lumped_iff`、`Becoming.PropositionIdentity.extensional_iff_lumped`、`Becoming.PropositionIdentity.byName_lumped_iff`、`Becoming.PropositionIdentity.Formula.read_congr`、`Becoming.PropositionIdentity.iff_witness_unique`、`Becoming.PropositionIdentity.transport_const`；记录 [proposition-identity](../results/records/proposition-identity.md)。"
+   },
+   {
+    "id": "七·十五",
+    "title": "与映射可换序之法",
+    "body": "**經**　法与一映射可换序，于每状先映而后进一步，与先进一步而后映同也。映射移每一状，则法与之可换序者，自一状与自其像之二行，于同一步永不同在一状；亦不于任何一步使凡行皆至一状；故使二者于某步同在一状之法，必不与此映射可换序。法与映射可换序，则自映射不移之状起之行，每步之状映射皆不移；一名并一状与其像而不并他者，且状与其像同名，则法经此名同移。\n\n**說**　这条说一个对称所携之差别（`Becoming.Law.Commutes`）：法守此对称，就永不抹去对称所分者（`Becoming.Law.Commutes.apart`）；要抹去它，法须破对称（`Becoming.Law.Commutes.breaks`）；与移每一状之映射可换序者，没有一个在某步把每状都送到同一状（`Becoming.Law.Commutes.not_drawn_to_one`）。对称所不移者也保持（`Becoming.Law.Commutes.keeps_fixed`）：所携者有同有异，都不是价值。映射与自身可换序，所以移每一值之映射，其行永不停（`Becoming.Law.Commutes.self_apart`），即对角之修正永不止。与理相接（⟦七·十二⟧）：法于对称之对同移（`Becoming.Law.Commutes.pairs_lumped`、`Becoming.Law.Commutes.pairs_goAlike`）。卦之例：消长环之法与六爻皆变可换序，一卦与其六爻皆变者于同步永不同在（`Becoming.Hexagram.waxWane_apart`），六步至其对、十二步复（`Becoming.Hexagram.waxWane_halfway`）；只入柔爻之法使每卦六步至坤，所以破此对称（`Becoming.Hexagram.wane_breaks`）。讀（AI，D52）：守对称之法永不并对称所分者。名表无此名，暂以平语书之（与映射可换序之法，commuting law）。对照（定域，tuan-kui）：「萬物睽，而其事類也」〔YD-JP38〕（先秦至秦汉，《彖传》，有争议）：一卦与其六爻皆变者相睽而永不被并，其对是承载法之类；彖传以「万物」立普遍之形，脊柱只在法与区分诸状之映射可换序处给出睽而事类，且只是充分条件，反向未证。\n\n**證**　`Becoming.Law.Commutes`、`Becoming.Law.Commutes.apart`、`Becoming.Law.Commutes.breaks`、`Becoming.Law.Commutes.not_drawn_to_one`、`Becoming.Law.Commutes.keeps_fixed`、`Becoming.Law.Commutes.pairs_goAlike`、`Becoming.Hexagram.waxWane_apart`、`Becoming.Hexagram.wane_breaks`；记录 [what-a-commuting-law-keeps-apart](../results/records/what-a-commuting-law-keeps-apart.md)。"
+   },
+   {
+    "id": "七·十八",
+    "title": "未定",
+    "body": "**經**　未定，真伪之外第三值，于所知在真伪之下，修正所未定者也。凡 N 辞，各言一以非、且、或合诸辞与真伪而成之式，只相言，自皆未定修正，至第 N 步而止，止于最小之不动点；首辞言真、后辞各非其前之 N+1 辞，第 N 步未止。诸辞所言皆不含已定之真伪，则修正每步皆未定。N 辞只相言而二值修正无不动点，则三值修正之每一不动点皆留一辞未定：自非之辞，二值永不止，三值止于未定。\n\n**說**　未定（`Becoming.Undecided.Value`）不是真伪之外的第三种真，是修正尚未定、或永不定者。修正只增所定（`Becoming.Undecided.eval_mono`），只相言之 N 辞至第 N 步而止（`Becoming.Undecided.settles`），止于最小不动点（`Becoming.Undecided.least_fixed`），此界确切（`Becoming.Undecided.chain_exact`）；无已定之真伪可依者，止于全未定（`Becoming.Undecided.stays_undecided`）：修正所定，只及已定之真伪所及。二值中对角之缺口，在三值中现为未定（`Becoming.Undecided.undecided_of_moves`）：自非之辞二值永动，三值止于未定（`Becoming.Undecided.liar_both_sides`）；三值之否定不移每一值，故⟦七·十五⟧之“移每一值之映射其行永不停”在此不适用。讀（AI，D52）：未定是修正所未定者，不是第三种真。界：只论有穷多辞；最小以外之不动点、有多少辞留于未定，未导出。对照（定域，dazongshi-te-wei-ding）：「夫知有所待而後當，其所待者，特未定也。」〔ZH1-S06〕（先秦，《庄子》内篇）：知之当否依于其所依者，而所依者本身未定；结构上近于未定之值：有已定之辞可依者，修正在其所及处终定，无所依者止而仍未定。原文之「所待」是知所依者，不是本编所名之所待。\n\n**證**　`Becoming.Undecided.Value`、`Becoming.Undecided.settles`、`Becoming.Undecided.least_fixed`、`Becoming.Undecided.chain_exact`、`Becoming.Undecided.stays_undecided`、`Becoming.Undecided.undecided_of_moves`、`Becoming.Undecided.liar_both_sides`；记录 [revision-with-an-undecided-value](../results/records/revision-with-an-undecided-value.md)。"
+   }
+  ],
+  "duizhao": "#### 对照\n\n- 「行小變而不失其大常也」〔ZH1-S21〕——相合：小变在区内，所守之区是常（⟦七·一⟧；zhuangzi-tianzifang-da-chang）。\n- 「归根曰静，是谓复命。复命曰常」〔YD-LAO-BASE〕——定域：复者为闭，法之闭即常；「各复归其根」〔YD-LAO-BASE〕之普遍形式只在有穷处成立，诸状无穷则可有行永不至复者（⟦七·二⟧、⟦七·四⟧；laozi-16-55-zhi-chang）。\n- 「如轉圓石於千仞之山者，勢也」〔BI1-S-SZ〕——相合：一组状之行皆入同一区，即势；势之深浅未有度量（⟦七·三⟧；sunzi-bing-shi）。\n- 「在腸胃，火齊之所及也；在骨髓，司命之所屬，無柰何也。」〔FA1-S-H21〕——定域：肠胃之处一步犹可复、再一步不可复，是机；机前之所费未导出（⟦七·七⟧；hanfei-yulao-bian-que）。\n- 「推類之難，說在之大小。」〔MI1-S-JX〕——相合：推类之所及与对错都在类之大小（⟦七·十三⟧；mojing-tui-lei-zhi-nan）。\n- 「凡理者，方圓、短長、麤靡、堅脆之分也」〔CV1-S-JL〕——定域：理是分，这一半相合；分须变化跨之同样才承载法（⟦七·十二⟧；jielao-li-fen）。\n- 「天降大常，以理人伦。」〔V130-LAO-GD〕——相分：郭店楚简《成之闻之》（先秦，战国中期抄本；公开转录，未据图版校勘）立常为先给之规范与等第（固定本性或价值，兼争胜与等级），本编之常是一变之步所守之区，从所行读出，不带善恶（⟦七·一⟧；guodian-tian-jiang-da-chang）。\n- 「性即理也。天下之理，原其所自，未有不善。」〔RU2-S-S06〕——相分：理立为先定且善之所禀；本编之理随所行之变化而修改，评价另有二设（⟦七·十二⟧；chengyi-xing-ji-li）。"
+ },
+ "edits": [
+  {
+   "target": "C07",
+   "instruction": "篇七篇首改为：「本篇论诸读怎样在一展开之法下分化。同（互模拟）与正名已见篇一（七·十、一·十五），常、门、闭、所归、机与护闭见篇五。本篇先说类：一读所分，随类而同是一函数于每类一值；理是承载法之类；推类以类推及未见者；辞之同一也是一类；法与映射可换序，则不并映射所分者；修正所未定者为未定。本篇诸条皆无设而然（不加前提的定理）：每条只在写入其中的局部条件（有一表尽诸状、定然否、映射移每一状……）下，对每个如此表示之宇成立。延续之条件（凡续皆有顾，十五·十六）陈述而不断言，只定范围；诸程孰愈唯在以广为愈（十六·六）。本篇不用二者。前接篇六，后接篇八之时与位、篇九之感、识与知。」"
+  },
+  {
+   "target": "七·十二",
+   "instruction": "經删末句「法以一映射示之，一读所并者所示皆同、此读承载法、且凡经映射未来皆同者此读皆并之，则此读为正名。」（即十·六末句，留十·六，C34、O29）。證之 `Becoming.Law.identifiesAlike_of_law` 归十·六。"
+  },
+  {
+   "target": "七·十四",
+   "instruction": "题改「辞之同一」。經中「命题」改「辞」，「可互推」改「互推」（C66）；首加自十·九移来之句：「凡辞由原子以真、伪、且、或、则、凡、有构成者，二读予每原子互推之辞，则所得之辞互推，无设。」證并入十·九之声明（`Becoming.PropositionIdentity.Formula.eval_congr`、`Becoming.PropositionIdentity.lumped_of_byName` 未列者）；propext 之名只在說中。"
+  }
+ ],
+ "added": [],
+ "duizhao_issues": [
+  "- 「行小變而不失其大常也」〔ZH1-S21〕——相合：小变在区内，所守之区是常（⟦七·一⟧；zhuangzi-tianzifang-da-chang）。",
+  "- 「归根曰静，是谓复命。复命曰常」〔YD-LAO-BASE〕——定域：复者为闭，法之闭即常；「各复归其根」〔YD-LAO-BASE〕之普遍形式只在有穷处成立，诸状无穷则可有行永不至复者（⟦七·二⟧、⟦七·四⟧；laozi-16-55-zhi-chang）。",
+  "- 「如轉圓石於千仞之山者，勢也」〔BI1-S-SZ〕——相合：一组状之行皆入同一区，即势；势之深浅未有度量（⟦七·三⟧；sunzi-bing-shi）。",
+  "- 「在腸胃，火齊之所及也；在骨髓，司命之所屬，無柰何也。」〔FA1-S-H21〕——定域：肠胃之处一步犹可复、再一步不可复，是机；机前之所费未导出（⟦七·七⟧；hanfei-yulao-bian-que）。",
+  "- 「推類之難，說在之大小。」〔MI1-S-JX〕——相合：推类之所及与对错都在类之大小（⟦七·十三⟧；mojing-tui-lei-zhi-nan）。",
+  "- 「凡理者，方圓、短長、麤靡、堅脆之分也」〔CV1-S-JL〕——定域：理是分，这一半相合；分须变化跨之同样才承载法（⟦七·十二⟧；jielao-li-fen）。",
+  "- 「天降大常，以理人伦。」〔V130-LAO-GD〕——相分：郭店楚简《成之闻之》（先秦，战国中期抄本；公开转录，未据图版校勘）立常为先给之规范与等第（固定本性或价值，兼争胜与等级），本编之常是一变之步所守之区，从所行读出，不带善恶（⟦七·一⟧；guodian-tian-jiang-da-chang）。",
+  "- 「性即理也。天下之理，原其所自，未有不善。」〔RU2-S-S06〕——相分：理立为先定且善之所禀；本编之理随所行之变化而修改，评价另有二设（⟦七·十二⟧；chengyi-xing-ji-li）。"
+ ]
+}

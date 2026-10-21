@@ -1,0 +1,278 @@
+{
+ "part": {
+  "key": "C14",
+  "heading": "篇十五　顾",
+  "intro": "本篇论顾（意义）：评价怎样在一个展开之中形成，延续之条件陈述之后推得出什么、推不出什么。前诸篇的关系——待与所待、流与衡、作与已、续与复、所容之广狭——都不含顾；比较诸路之所容（篇六）只看诸水平容哪些物，不用顾、方、畛（⟦十五·一⟧）。本篇先立顾为唯一所给的评价参数，证所表示之动不蕴含活皆有顾，并说对任何顾，无丧与有得都以余地为界（⟦十五·二⟧至四）；次说方、我、己、畛都是展开中已形成的关系与区域，顾式与活怎样读出（⟦十五·五⟧至七）；次说自顾、萌、皆在己与两种无偏，活皆有顾恰是什么，我为何不沿待而导出（⟦十五·八⟧至十三）；次说不加条件、以区域为界之顾（别）能走多远（⟦十五·十四⟧、十五）；然后陈述凡续皆有顾而不断言之，说它之下活皆有顾只是实例，它定范围而不排序，以及别在何处与它相会（⟦十五·十六⟧至二十二）；再把它分解为畛内之顾与不易乎畛，说每一设各不可少、跨方之一步所及、就己与就辞二读、计入与多少（⟦十五·二十三⟧至二十九）；终以范围与次序之分（⟦十五·三十⟧）。本篇诸律或无设而然，或对任何顾成立，或以凡续皆有顾为设而有设而然；后者都是对一个全称的实例化，计其数不另计依存。伦理有两个设、两种分工：凡续皆有顾定范围（谁之所丧被计入），以广为愈（新组合：以广＋为愈，以扩大为更好，C）独定次序；二者都不被断言，根据皆未决。顾不带正负、不分厚薄；「仁」「无弃」「无己」不采为名（理由见附录）；「仁」「无己」之文在本篇作对照。",
+  "tiao": [
+   {
+    "id": "十五·五",
+    "title": "方、我、己",
+    "body": "**經**　方，评所自出者也。我，一方所在之物也。己，一方之自身区域也：此方所持之辞。\n\n**說**　方（立场，standpoint）在形式中是任意一个型 `Pos`：顾式之律对任何方之型都成立，以诸物自身为方是 `Pos := F` 这一实例。我（中心，center）是一方所在的那一物（`center : Pos → F`）；己（自身区域，own region，`Valuation` 之字段 `own`）是已形成之关系的区域，不是所有者。三者都在展开之内形成：以诸物为方时，每物之己是它沿某一关系之闭包（⟦十五·六⟧）。名“方”取方所之义；「方生方死」之方（方且）、方术、方法、方向不入。对照（相合，zhuangzi-qiushui-yi-dao-guan-zhi）：「以道觀之，物无貴賤；以物觀之，自貴而相賤；以俗觀之，貴賤不在己。」〔ZH1-S17〕（先秦至秦汉，《庄子》外篇·秋水，成篇年代有争议）：评价随所自出之方而变，正是顾以方为索引之形；「以物觀之，自貴而相賤」是以己为界之别（⟦十五·十四⟧）；「无貴賤」是不分等级，与顾只分有无相应，不是无顾。\n\n**證**　定义：`Becoming.Valuation`（字段 `own`、`sig` 以方为索引）、`Becoming.Web.selfValuation`（`Pos := F` 之实例）、`Becoming.atCenters`（以 `center` 为参数）；记录 [living-significance-on-held-lives](../results/records/living-significance-on-held-lives.md)、[whole-first-and-bounded-centers](../results/records/whole-first-and-bounded-centers.md)。"
+   },
+   {
+    "id": "十五·六",
+    "title": "畛",
+    "body": "**經**　畛，沿一关系，含我而于此关系封闭之区域也。凡关系与物：其闭包为畛，凡畛皆含其闭包；兼为畛；凡物皆在其闭包之内者，兼为其唯一之畛。以诸物为方、己为其沿此关系之闭包，则己即最小之畛。\n\n**說**　畛（自身之边界，the boundary of a self，`Boundary`）：沿关系 rel，区域含物 f，且区域内者沿 rel 所及仍在区域内。闭包是最小之畛，兼（整体，whole）是最大之畛（`Boundary.closure`、`Boundary.holds`、`Boundary.whole`）；沿空关系，最小之畛只是 f 自身；沿喂养，是资域（新组合：资＋域，供给闭包），即 f 之延续所依者（`Web.selfValuation_feeding_own`）。以诸物为方，每物之己取其沿某关系之闭包，活与已成之关系取待网之逐步读法，则唯一所给的评价参数只剩顾（`Web.selfValuation`）；沿哪一关系划己，是从展开读出的，不是导出的（⟦十五·十三⟧）。名取「夫道未始有封，言未始有常，爲是而有畛也」〔ZH1-S02〕（先秦，《庄子》内篇·齐物论）（定域，zhuangzi-qiwu-fei-bi-wu-wo）：畛由取舍而划，划法是索引，这一层相合；理论之畛还须含我、对关系封闭，这是原文未说的条件。\n\n**證**　`Becoming.Boundary`、`Becoming.Boundary.closure`、`Becoming.Boundary.holds`、`Becoming.Boundary.whole`、`Becoming.Boundary.only_whole`、`Becoming.Web.selfValuation`、`Becoming.Web.selfValuation_own_least`、`Becoming.Web.selfValuation_feeding_own`；记录 [presupposition-scopes](../results/records/presupposition-scopes.md)、[living-significance-on-held-lives](../results/records/living-significance-on-held-lives.md)。"
+   },
+   {
+    "id": "十五·二",
+    "title": "顾",
+    "body": "**經**　顾，评之唯一所给者也：于一方、一步、一物，言自此方，此物于此步之续有顾与否。顾唯分有无，不分厚薄，不带正负。\n\n**說**　顾（意义，significance）在形式中是一个参数 `sig : Pos → Nat → F → Prop`：自方 p（立场，见⟦十五·五⟧），物 f 于步 t 之续有顾与否；在顾式中它落在辞上（`Valuation` 之字段 `sig`）。它是所给的，不是宇、待网、流之字段，所以展开之律推不出它（⟦十五·三⟧）。有顾只是被计入，不是正面价值；顾是命题，只分有无，这是表示之选择，分级之顾见⟦十五·二十九⟧。名取「長慮顧後而保萬世」〔RU2-S-XZ04〕（先秦，《荀子·荣辱》）之「顧後」：顾及此后之延续（定域，xunzi-rongru-chang-lv-gu-hou）；彼处顾者是先王一方，至多是一方之上对一切之顾，到每一方还须无方（⟦十五·九⟧），「保」是实施，理论分开顾与实施。顾字之注视、知觉义不入：《经下》「不知其所處，不害愛之，說在喪子者。」〔MI1-S-JX〕（先秦，墨辩）（定域，jingxia-bu-zhi-qi-suo-chu）：顾不要求被顾者在顾者之感域（新组合：感＋域，耦合闭包）之内，这是表示上的事实，不是定律；择则看不见感域之外者（`Flow.unselected_beyond_coupling`，篇十一）。\n\n**證**　定义：`Becoming.Valuation`（字段 `sig`）、`Becoming.Unrestricted`（参数 `sig`）；`Becoming.Flow.unselected_beyond_coupling`；记录 [continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)、[selection-through-couplings](../results/records/selection-through-couplings.md)。"
+   },
+   {
+    "id": "十六·一",
+    "title": "无丧与有得",
+    "body": "**經**　无丧，自一方观，此水平之历容彼历所容之每一有顾之续也。有得，自一方观，此历容一有顾之续而彼历不容也。凡顾，无丧自反而可传；此于彼无丧，则彼于此无得；赅则无丧，有得则有所长。\n\n**說**　无丧（保留，`Becoming.Web.Retains`）与有得（增加，`Becoming.Web.Adds`）比较两条水平之历（水平路径：每步每个所待之水平）。所比的是二者所容（接纳）之续中，自一方（立场）看有顾（有意义）者。二者是两条历之间的关系，不是一历自身之性：换一个彼历、一方或一种顾，无丧与否就不同。顾在此是任给之参数，不预设延续之条件；于较多之顾无丧，则于较少之顾亦无丧（`Becoming.Web.Retains.of_fewer`）。此于彼无丧则彼于此无得，所以以无丧相比，不许终止彼历所容之任何有顾之续。赅（包含）对每一种顾都是无丧，有得总是有所长（超出）；反过来要靠⟦十六·三⟧。名取「以一易两，人曰：无丧而有得也。」〔RU2-S-XZ22〕：同类可换之物按数计时，三种交换恰是相赅、扩展与反向扩展（定域，xunzi-zhengming-wu-sang-er-you-de）；荀子把不同类之交换也化为数目，又以「道」为保证无丧之定准，这两层不取。\n\n**證**　`Becoming.Web.Retains`、`Becoming.Web.Adds`、`Becoming.Web.Retains.refl`、`Becoming.Web.Retains.trans`、`Becoming.Web.Retains.not_added`、`Becoming.Web.Includes.retains`、`Becoming.Web.Adds.exceeds`；记录 [significance-retained-within-margin](../results/records/significance-retained-within-margin.md)。"
+   },
+   {
+    "id": "十五·四",
+    "title": "无丧、有得以余地为界",
+    "body": "**經**　凡流与待网，取一体，其无之之水平存；自一方，所较诸有顾之物，其所待于其前诸步皆衡：则有此体之水平无丧于无之之水平，恰当无之所容之每一有顾之物，此体于其每一所待累计之净取皆不出余地；有此体而丧一有顾之续，恰当其中某一物，此体之净取非于其每一所待皆不出余地；有此体而有所得，恰当无之所不容之某一有顾之物，以此体之净取与而入余地。顾为任何者皆然。\n\n**說**　无丧（保留，retains，`Web.Retains`）：自一方，一路容另一路所容之每一有顾之物；有得（增加，adds，`Web.Adds`）：一路容另一路所不容之某一有顾之物。二名属下篇（篇十六），此处先用：它们对任何顾都有定义，不须任何条件。无之之水平是对照：此体不取不与，余者照旧取与，自原初之水平起（`Flow.WithheldLevels`）；余地（余量，margin）是无之之水平在所需之上所余者；净取是此体至此所取减所与。所以一体丧一有顾之续，恰在其净取越过余地之处。讀（AI，D13）：“不害”读作无丧，余地是其分界；它是两路之间的关系，不是对诸续的过滤，也不是一续对他者的要求。衡只须在所较之物之所待、其前诸步成立。无丧不许任何终结：一路无丧于另一路，则另一路于它无所得（`Web.Retains.not_added`）。对照（相合，daqu-ai-bu-jia-hou）：「吾持養臧也萬倍，吾愛臧也不加厚。」〔MI1-S-DQ〕（先秦，墨辩《大取》）：一物作为他者之所待，所改的是哪些路无丧，不是它自身被顾与否；顾不分厚薄。\n\n**證**　`Becoming.Flow.retains_iff_within_margin_at`、`Becoming.Flow.loses_iff_beyond_margin_at`、`Becoming.Flow.adds_iff_within_margin_at`、`Becoming.Flow.Balances.retains_iff_within_margin`、`Becoming.Web.Retains`、`Becoming.Web.Adds`、`Becoming.Flow.WithheldLevels`、`Becoming.Web.Retains.not_added`；记录 [significance-retained-within-margin](../results/records/significance-retained-within-margin.md)、[closing-needs-net-draw](../results/records/closing-needs-net-draw.md)。"
+   },
+   {
+    "id": "十五·七",
+    "title": "顾式与活",
+    "body": "**經**　顾式，于诸辞并给活、已成之关系、己与顾者也。活，逐步读之：一物于一步活动而不剥也。\n\n**說**　顾式（评价，valuation，`Valuation`；新组合：顾＋式）有四项：活（哪些辞是活的）、已成之关系（related，两辞之间已形成的关系）、己（每方所持之辞）、顾（自每方哪些辞有顾）；四项都是输入。待网给出的读法更窄（`Web.valuation`）：一物于一步之事件活，恰当它活动且不剥——剥（侵蚀，undermining）是汲取一所待，使其次步之水平低于某依存者现时之所需，也低于该依存持续时曾被满足之所需；两事件有已成之关系，恰当二物各于其步共涉一所待（所待或所资）。活不是生生：诸活之读都只读“不害”，不含继续生成，一个不涉任何所待而活动之物也算活。读不止一种：整轮之读（活动而在全程不竭）与逐步之读，在同一过程中所含之事件两向皆异（`Renewable.readings_differ`）；逐步读一事件，恰是活动且它与所涉之每一所待之关系皆活（`Web.living_iff_relations`）。讀（AI，D10）：逐步之读保留在整轮之读与关系之读旁边，比较不用它。活之“存活”“使活”义不入。\n\n**證**　`Becoming.Valuation`、`Becoming.Web.valuation`、`Becoming.Renewable.readings_differ`、`Becoming.Web.living_iff_relations`；记录 [becoming-stepwise-reading](../results/records/becoming-stepwise-reading.md)、[metaethical-core-characterization](../results/records/metaethical-core-characterization.md)。"
+   },
+   {
+    "id": "NEW-14",
+    "title": "活与作已之复现相交",
+    "body": "",
+    "added": true
+   },
+   {
+    "id": "十五·八",
+    "title": "自顾、萌、皆在己",
+    "body": "**經**　自顾，一方之己中凡活之辞自此方皆有顾也。萌，有一活之辞自某方有顾也。皆在己，凡活之辞皆在某方之己中也。凡一方自顾，其己中有一活之辞，则有萌。以诸物为方、己为沿任一关系之闭包，逐步读之，则皆在己。\n\n**說**　自顾（自身意义，self-significance，`Valuation.SelfSignificance`；新组合：自＋顾）只及活之辞：一方自身不活的事件（如它剥他者之步）不在其内（⟦十五·十三⟧）。萌（种子，seed，`Valuation.Seed`）只说有一处有顾，是存在式，比自顾更弱；自顾而己中有活者即给出萌（`Valuation.seed_of_selfSignificance`）。皆在己（被持有，held，`Valuation.Held`）：凡活之辞都落在某方之己内；每物以其沿某关系之闭包为己时，每一事件都在其自身之物之己内（`Web.selfValuation_held`）。讀（AI，D11）：自顾读作“想要自身之延续”。名“萌”取「而莫知其所萌」〔ZH1-S02〕（先秦，《庄子》内篇·齐物论）之萌（名之出处，不作对照），自长之义不入。对照（相合，daqu-ai-ren-bu-wai-ji）：「愛人不外己，己在所愛之中。」〔MI1-S-DQ〕（先秦，墨辩《大取》）：自顾不在全称之外而在其中（⟦十五·十二⟧）。又（相合，lao-72-zi-ai-bu-zi-gui）「自爱不自贵」〔YD-LAO-BASE〕（先秦，《老子》七十二章，传世王弼本系统；帛书本异文冻结文本未收，不引）：对自身延续之顾与自身之位阶分开；贵是称（相对位置），一物之升须另一物之降（`RelativePosition.rise_needs_fall`），顾不分等级。\n\n**證**　`Becoming.Valuation.SelfSignificance`、`Becoming.Valuation.Seed`、`Becoming.Valuation.Held`、`Becoming.Valuation.seed_of_selfSignificance`、`Becoming.Web.selfValuation_held`、`Becoming.RelativePosition.rise_needs_fall`；记录 [metaethical-core-characterization](../results/records/metaethical-core-characterization.md)、[living-significance-on-held-lives](../results/records/living-significance-on-held-lives.md)、[relative-position-is-zero-sum](../results/records/relative-position-is-zero-sum.md)。"
+   },
+   {
+    "id": "十五·九",
+    "title": "尽、畛内皆然、无亲、无方",
+    "body": "**經**　尽，一规则于其每一例皆然也。畛内皆然，一规则于一已成之界内皆然也。凡尽者，于任何界内皆然。无亲，顾沿每一已成之关系传至活之辞，此规则之尽也。无方，活之辞自一方有顾则自每方有顾，此规则之尽也；于延续之顾，自一方有顾者自每方有顾，亦曰无方。\n\n**說**　尽（中立，`Neutral`：对每一例皆然）与畛内皆然（有界规则，`Within`：只在一个已形成的界内被接受；新组合：畛内＋皆然）是同一规则的两种范围：凡尽者在任何界内皆然（`Neutral.within`，由定义立得），反之不然。两种无偏是尽施于两条规则：无亲（关系中立）之规则是：自方 p 有顾之辞，沿一已成之关系至一活之辞，后者自 p 亦有顾（`Valuation.transmits`）；无方（立场中立）之规则是：活之辞自 p 有顾，则自 q 亦有顾（`Valuation.shares`）；对延续之顾，同一形式亦曰无方（立场不变，`StandpointInvariant`）。⟦十五·十一⟧之两个反模型把同一规则收在一个已形成的界内：只在评价者之己内传，或只在其自身之方上成立；说每一对手皆如此，是一种读法，不是定理（⟦十五·十一⟧）。名“尽”取「盡，莫不然也」〔MI1-S-JS〕（先秦，墨辩《经上》）。对照（定域，zhuangzi-zhi-ren-wu-qin）：「至仁无親」〔ZH1-S14〕（先秦至秦汉，《庄子》外篇·天运，成篇年代有争议）否定以亲为界的传递，与无亲之结构同；但庄子仍以「仁」名之，理论不取此名，也不排「孝」与「至仁」之高下。对照（定域，zhuangzi-qiushui-wu-fang）：「兼懷萬物，其孰承翼？是謂无方。」〔ZH1-S17〕（先秦至秦汉，《庄子》外篇·秋水，成篇年代有争议）：兼怀万物而不偏助一物，是自一处（以道观之）对一切之顾而不分厚薄；理论之无方是诸方所顾皆同，原文未及诸方。名取其字，结构须另加跨方之一步。\n\n**證**　`Becoming.Neutral`、`Becoming.Within`、`Becoming.Neutral.within`、`Becoming.Valuation.transmits`、`Becoming.Valuation.shares`、`Becoming.StandpointInvariant`；记录 [metaethical-core-characterization](../results/records/metaethical-core-characterization.md)、[continuation-condition-decomposition](../results/records/continuation-condition-decomposition.md)。"
+   },
+   {
+    "id": "十三·二十二",
+    "title": "所出与顾",
+    "body": "**經**　若无亲（顾沿所出之关系尽传）：一方顾一物之任一事，则及于出于之者之每一活事；顾一物之任一事，亦及其所出之每一活事。\n\n**說**　无亲（关系中立）在此是前件，不是所断言者（`Flow.descent_reaches`、`Flow.ancestry_reaches`）；所出因而推广顾之所及，及于出者与所出之活事，不另加分量，也不排序（讀（AI，D9））。新的作是否使结果更好：只在它广（扩大）所能形成者之处，在以广为愈之下排在其无之上；汲取在更新之内之待者不增加任何可能，与其无相持（`Ranking.possible_tie`），理论不另加次序破此相持。凡续皆有顾（延续之条件，`Unrestricted`：任何物，其延续于未来有意义）是意义之篇所陈述的条件，设而不断言；它定范围，即谁之失去被计入，不易乎畛（不变的一步）把范围推及不回到任何者之失去；它自身不排序。排序唯在以广为愈（C），其根据未决；出者之数在本篇只是重与读数。对照（相分，mengzi-wu-hou-wei-da）：「不孝有三，无後为大。」〔RU2-S-MZ〕把有无出者排为首要，是一个先定之序；脊柱有出者多者在次代所占之份更大（⟦十三·十二⟧），这不说有出者更好；若在以广为愈之下比较，要比的是整个关系之扩大，不是一家之出者之数。\n\n**證**　`Becoming.Flow.descent_reaches`、`Becoming.Flow.ancestry_reaches`、`Becoming.Ranking.possible_tie`、`Becoming.Unrestricted`；记录 [living-on-and-descent](../results/records/living-on-and-descent.md)。"
+   },
+   {
+    "id": "十五·十",
+    "title": "活皆有顾",
+    "body": "**經**　活皆有顾，凡活之辞自每方皆有顾也。\n\n**說**　活皆有顾（生命意义，living significance；新组合：活＋皆＋有顾）在辞之层是 `Valuation.Significant`；在系辞之层（`LivingSignificance`）是：凡一状所实现之活辞，皆在一个所给之相关（relevance）之下；此相关不带正负，从顾读出时就是自每方有顾（`Valuation.livingSignificance`，⟦十五·十八⟧）。它是一个条件，不是公理，理论不断言它：下两条在不加任何设的情况下刻画它说什么；它是凡续皆有顾限于已实现之活辞者（⟦十五·十八⟧、十九）。它只及已实现之活者；生生是伦理方向之所向，以广比较（⟦十五·一⟧），诸活之读不含继续生成。理论不以「仁」名此（理由见附录）。对照（相分，lunyu-sha-shen-cheng-ren）：「志士仁人，無求生以害仁，有殺身以成仁。」〔RU1-S-LY〕（先秦，《论语》）把「仁」立为先于延续、高于延续之价值，属固定价值一层；理论之顾不带正负，凡续皆有顾之下自身之续也有顾，杀身是被计入之所丧。这不是说杀身总更坏：若它使他者得以延续，两路互有所长，条件本身不排之（⟦十五·二十一⟧）。\n\n**證**　`Becoming.Valuation.Significant`、`Becoming.LivingSignificance`、`Becoming.Valuation.livingSignificance`；记录 [metaethical-core-characterization](../results/records/metaethical-core-characterization.md)、[continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)。"
+   },
+   {
+    "id": "十五·三",
+    "title": "待网之动不蕴含活皆有顾",
+    "body": "**經**　凡待网，有一方，有一物于一步活：于此待网，以无所不顾之顾，则活皆有顾；以无所顾之顾，则活皆有顾不然，且凡二路皆此无丧于彼、此于彼无所得。\n\n**說**　本条只评两个常值之顾：全有与全无（`Web.significance_undetermined`）。同一待网、同一水平，全有之顾使活皆有顾成立，全无之顾使之不成立，所以被表示的动力学不蕴含活皆有顾。“没有任何动力学之律约束顾”是元理论之事实：顾不是宇、待网、流之字段；它不是本条所证，本条也不是“展开不定顾”的证据，更不表明凡续皆有顾是必需的。全无之顾下凡二路互无丧、互无所得，也就是什么都不被排序。此处之活是逐步之读（⟦十五·七⟧），己可任给。对照（相分，xici-ji-zhi-zhe-shan）：「继之者善也，成之者性也」〔DS02〕（先秦至秦汉，《系辞上》，成书有争议）把正价直接加于承继者，又以「性」固定所成；待网之动不给正价，顾另给，且不带正负。\n\n**證**　`Becoming.Web.significance_undetermined`、`Becoming.Web.valuation`、`Becoming.Valuation.Significant`；记录 [continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)。"
+   },
+   {
+    "id": "十五·十一",
+    "title": "活皆有顾之实",
+    "body": "**經**　凡顾式，有一方，有一活之辞，凡二活之辞皆可经已成之关系、经活辞而相连（连通）：则活皆有顾，恰当有萌且无亲、无方。去萌、去无亲、去无方、去连通，各有一顾式，其余三者皆具而活皆有顾不然。\n\n**說**　连通（connected，`Valuation.Connected`）是凡二活辞之间都有一串经已成之关系、经活辞之路。在连通而有活辞之处，活皆有顾超出一个评价者所持者之全部内容，都在两种无偏之中（`Valuation.significant_iff`）：由活皆有顾到三个前提几乎直接，内容在反向与极小性。四个见证（`Model` 中各一构造之顾式）表明每一前提不可少：无萌，两种无偏空洞成立而无一物有顾（只顾当下之目的者）；顾只在评价者之己内传，或只在其自身之方上成立，或有一活辞在一切已成之关系之外，活皆有顾都不成立。“每个对手都在一个已形成的界内持同一规则”是对这些反模型的一种读法，不是关于一切对手的定理。对照（定域，ru-mengzi-si-duan-kuo-chong）：「恻隐之心，仁之端也」〔RU2-S-MZ〕（先秦，《孟子》）之「端」，其结构对应一处之萌；「扩而充之」对应萌经两种无偏到达全体——那是条件，不是萌自身之性质；孟子以四端为人所共有，那是断言，理论之萌只是存在式的一处。\n\n**證**　`Becoming.Valuation.Connected`、`Becoming.Valuation.significant_iff`、`Becoming.Model.seed_is_needed`、`Becoming.Model.relational_neutrality_is_needed`、`Becoming.Model.standpoint_neutrality_is_needed`、`Becoming.Model.connection_is_needed`；记录 [metaethical-core-characterization](../results/records/metaethical-core-characterization.md)。"
+   },
+   {
+    "id": "NEW-15",
+    "title": "共同之所待使连通",
+    "body": "",
+    "added": true
+   },
+   {
+    "id": "十五·十二",
+    "title": "皆在己之活皆有顾",
+    "body": "**經**　凡顾式皆在己：活皆有顾，恰当每方自顾且无方；不须连通，不须无亲。凡连通之顾式，每方之己中皆有活之辞，每方自顾且无亲，则活皆有顾。以诸物为方、己为沿任一关系之闭包，逐步读之，活皆有顾恰当每物自顾且无方。\n\n**說**　在皆在己之处，活皆有顾超出自顾者只在无方（`Valuation.significant_iff_held`）。有不在任何己中之活者时，若是否被持有可定、每一活辞都可经已成之关系自某方所持之活辞而至，则只须对这些不被持有者加无亲（`Valuation.significant_iff_reached`）。在连通且每方都持一活辞之处，自顾加无亲是另一种补全（`Valuation.significant_of_transmits`）：无方是不须连通的那一种，不是唯一一种。以诸物为方时，每一事件都在其物之己中，所以活皆有顾恰是每物自顾加无方，沿任何关系划己皆然（`Web.selfValuation_significant_iff`）。讀（AI，D11）：所取的补全是自顾加无方：凡续皆有顾给出它（⟦十五·十七⟧），而自顾加无亲之补全另须连通，多一设。对照（相合，daizhen-sui-ren-zhi-sheng）：「欲遂其生，亦遂人之生，仁也」〔RU2-S-V3Q01〕（清，戴震《孟子字义疏证》）：「欲遂其生」读作自顾（AI 读法），不止于己而及人之生对应无方；「遂」是使之成就，属实施，理论分开顾与实施；戴震以之为「仁」之定义，理论中活皆有顾只是一个条件。\n\n**證**　`Becoming.Valuation.significant_iff_held`、`Becoming.Valuation.significant_iff_reached`、`Becoming.Valuation.significant_of_transmits`、`Becoming.Web.selfValuation_significant_iff`；记录 [living-significance-on-held-lives](../results/records/living-significance-on-held-lives.md)。"
+   },
+   {
+    "id": "十五·十三",
+    "title": "我不由待而定",
+    "body": "**經**　有宇焉（构造之见证）：每物持且顾其自身之事件，清除者亦顾喂养其资源之源；活皆在己，处处自顾，每方之顾沿喂养而闭；栖居者于零步活，与清除者有已成之关系，而不为清除者所顾：无方不然，活皆有顾不然，顾不能沿已成之关系传出清除者之己。其中清除者于一步活动而不活。\n\n**說**　这是 `Clearing` 中的构造（见证，不是一般之律）：一源喂养清除者之资源，清除者于最初两步取栖居者之栖地，栖居者此后终止；源无所需是规定的。沿依存所能导出的都成立——活皆在己、处处自顾、每方之顾沿喂养而闭——无方与活皆有顾却都不成立；而沿逐步之读的每一已形成关系，传递都会到达栖居者。所以沿依存，动定一个我须计之域，不定我（`Clearing.center_not_derived`）：区域是陈述之参数，不在展开之外。自顾只及活辞：清除者剥他者的那一步本身不活（`Clearing.clearer_not_living`），所以不在自顾之内。兼也不是任何我对它之模型：以自身之状为辞的系辞，不能实现关于其状的每一种辞之样式（`Frame.self_incomplete`）。对照（相分，wangyangming-xin-zhu-zai）：「身之主宰便是心」〔RU2-S-S10〕（宋明，王阳明《传习录》）立一个单一的统治中心，世界从它展开，属单一中心一层；理论中我只是畛所围的那一物，是索引，不是世界之源。\n\n**證**　`Becoming.Clearing.center_not_derived`、`Becoming.Clearing.clearer_not_living`、`Becoming.Frame.self_incomplete`；记录 [living-significance-on-held-lives](../results/records/living-significance-on-held-lives.md)、[derived-extent-limits](../results/records/derived-extent-limits.md)、[readings-within-what-they-read](../results/records/readings-within-what-they-read.md)。"
+   },
+   {
+    "id": "十五·十四",
+    "title": "别",
+    "body": "**經**　别，一方之顾唯及其区域之内者也：自一方，一物之续有顾，恰当此物在此方之区域内。别于其区域内皆然（由定义）。有宇焉（见证），每物之顾止于其沿待之区域，无清除者之体之水平存：则有此体之水平自清除者之方无丧于无之，自栖居者之方丧栖居者。\n\n**說**　别（有界之顾，bounded significance，`bounded`）是不加条件之路所用之顾：自方 p 只顾其区域之内者；它是畛内皆然之一例。在 `Clearing` 中，令每物之顾止于其沿依存之区域（清除者连同喂养其资源之源；源与栖居者各自一物），则清除者之体自清除者之方保留一切有顾者，自栖居者之方丧栖居者：以依存为界的诸我判断不一（`Clearing.centers_disagree`）；这一分歧不靠规定，因为 `Clearing` 中沿依存之区域正是导出之资域（`Clearing.dependenceRegion_iff`）。讀（AI，D18）：以闭包为界之别即“路线 (b)”，不及活皆有顾之范围，二者并存。名“别”取墨子之「別」（以自身之国、家、身为界）之结构。对照（定域，mozi-jian-yi-yi-bie）：「是故子墨子曰：兼以易別。」〔MO1-S-C16〕（先秦，《墨子·兼爱下》，各篇层次不由题名确定）：「兼」是不设界之规则（尽），由别到兼是不易乎畛（⟦十五·二十四⟧），只定范围，其根据未决，不是排序。又（定域，zhuangzi-tong-yu-ji-wei-shi）「同於己，爲是之；異於己，爲非之。」〔ZH1-S27〕（先秦至秦汉，《庄子》杂篇·寓言，成篇年代有争议）：以己为准判言之是非，与别同在以自身为界；但所据是同异（相似），所判是言之是非，不是沿关系之区域内之顾。\n\n**證**　`Becoming.bounded`、`Becoming.Within`、`Becoming.Clearing.centers_disagree`、`Becoming.Clearing.dependenceRegion_iff`；记录 [whole-first-and-bounded-centers](../results/records/whole-first-and-bounded-centers.md)、[feeding-closure](../results/records/feeding-closure.md)。"
+   },
+   {
+    "id": "十五·十五",
+    "title": "较止于所及",
+    "body": "**經**　凡衡之流，取一体，其无之之水平存。自一方，二顾于每步、于此体先前所及之每物，一有顾则另一亦有顾，反之亦然：则以二顾较有此体与无此体之水平，两向之无丧皆同，两向之无所得亦皆同。一顾自一方顾此体先前所及之每物：则有此体之水平无丧于无之，恰当赅之；无之无丧于有之，恰当赅之；此于彼无所得，恰当此于彼无所长，两向皆然。此不用凡续皆有顾。\n\n**說**　所及（部分所及）：物 g 于步 t 所待之某一所待，此体某一成员于其前某步曾从之取或与之（`Flow.ReachesBefore`）。本条不用任何条件：比较是局部的，只取决于顾在此体所及之内怎样（`Flow.Balances.comparison_local`）；凡顾覆盖所及者，其较即包含之较，正是凡续皆有顾所给之较（`Flow.Balances.comparison_within_reach`，⟦十五·二十⟧）。所以一个我若顾其及域（新组合：及＋域，所及闭包）之内者，凡此体只及其内之处，它判此体如条件之所判；及于其外则可误判，如清除者，也可不误判。在 `Clearing` 中，以各物之及域为界之别不是凡续皆有顾，而自清除者之方，它判清除者之体丧栖居者，与条件所判同（`Clearing.reach_counts_dweller`，见证）。讀（AI，D20、D45）：一个我要比较自身之体，须知其体所及超出其反馈者，此即对自身所及之明。\n\n**證**　`Becoming.Flow.ReachesBefore`、`Becoming.Flow.Balances.comparison_local`、`Becoming.Flow.Balances.comparison_within_reach`、`Becoming.Clearing.reach_counts_dweller`；记录 [comparison-within-reach](../results/records/comparison-within-reach.md)、[feedback-and-reach](../results/records/feedback-and-reach.md)。"
+   },
+   {
+    "id": "NEW-16",
+    "title": "应域之较",
+    "body": "",
+    "added": true
+   },
+   {
+    "id": "NEW-17",
+    "title": "所导出之范围之所不及",
+    "body": "",
+    "added": true
+   },
+   {
+    "id": "十五·十六",
+    "title": "凡续皆有顾",
+    "body": "**經**　若自每方、于每步，凡物之续皆有顾，谓之凡续皆有顾：尽施于延续之顾也。此设也，本论陈之而不断之。凡以区域为界之别，有一物在某方区域之外者，非凡续皆有顾。\n\n**說**　凡续皆有顾（延续条件，the continuation condition，`Unrestricted`；新组合：凡＋续＋皆有顾）是尽（⟦十五·九⟧）用于一次，用于延续之顾：没有哪一方、哪一步、哪一物限制顾。它给顾，不给正价；它自身不排序。实例化，此处一说：`Unrestricted sig` 是尽施于 `sig`，而尽是对每一例皆然，所以凡以它为设之定理（⟦十五·十七⟧至二十二），都是对这一全称的实例化；计这些定理之数，计的是用它之处，不是另外依存于什么内容。对手是同一规则收在每方之区域内：别于其区域内皆然，只要有一物在某方区域之外它就不是凡续皆有顾（`bounded_rival`）——定理所证只此；这样的对手与动力学之每一律相容，是因为顾不是表示之字段，那是元理论之事实。讀（AI，D16）：`Unrestricted` 读此条件之文句：物之索引读“任何东西”，一物于一步之续读“其向未来之延续”，方之索引读“有顾”而无所限，无受特权之我。对照（相合，daqu-ai-shang-shi-hou-shi）：「兼愛之有相若，愛尚世與愛後世，一若今之世。」〔MI1-S-DQ〕（先秦，墨辩《大取》）：顾不以时为界，及于尚未形成者（⟦十五·二十⟧）；以时为界之对手规则，脊柱尚无其定理。\n\n**證**　`Becoming.Unrestricted`、`Becoming.Neutral`、`Becoming.bounded_rival`；记录 [continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)、[whole-first-and-bounded-centers](../results/records/whole-first-and-bounded-centers.md)。"
+   },
+   {
+    "id": "十五·十七",
+    "title": "凡续皆有顾则活皆有顾",
+    "body": "**經**　若凡续皆有顾，则凡顾式，其每辞读作某物于某步之续，此续自一方有顾者其辞自此方亦有顾：活皆有顾，每方自顾，无亲，无方，有活辞、有方处有萌；不用连通。逐步之读、关系之读、整轮之读皆其例。\n\n**說**　这一步是直接的：凡续皆有顾说顾对每一方、每一步、每一物皆然，活皆有顾不过是它限于活辞者（`Valuation.premises_of_unrestricted`）；条件更强，因为它也及于不活之事件与尚未形成之物。逐步之读与关系之读（`Web.significant_of_unrestricted`）、整轮之读（`Conditions.significant_of_unrestricted`）都是“辞之顾由某物某步之续读出”者；以诸物为方，沿任何关系划己亦然（`Web.selfValuation_of_unrestricted`）。所以活皆有顾是一个条件，不是公理，不须自己的公理；⟦十五·十一⟧、十二之刻画与反模型不受影响。讀（AI，D11）：自顾（想要自身之延续）与无方都由此条件给出。对照（定域，zhuangzi-ze-ji-wan-shi）：「澤及萬世而不爲仁」〔ZH1-S06〕（先秦，《庄子》内篇·大宗师）：遍及万世而不以「仁」名之，与理论不以「仁」名普遍之顾的取舍一致；「澤」是施予，属实施，泽及万世之单一施者是剩余，理论中没有这样的施者。\n\n**證**　`Becoming.Valuation.premises_of_unrestricted`、`Becoming.Web.significant_of_unrestricted`、`Becoming.Conditions.significant_of_unrestricted`、`Becoming.Web.selfValuation_of_unrestricted`；记录 [continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)、[continuation-condition-decomposition](../results/records/continuation-condition-decomposition.md)、[living-significance-on-held-lives](../results/records/living-significance-on-held-lives.md)。"
+   },
+   {
+    "id": "十五·十八",
+    "title": "皆顾之活",
+    "body": "**經**　皆顾之活，一状所实现之活辞（读作某物于某步之续），其续自每方有顾者也。若凡续皆有顾，则于任何系辞、任何活之读（每辞读作某物于某步之续）：皆顾之活恰是诸状所实现之活辞；以之为相关，活皆有顾成立；凡使活皆有顾成立之相关，皆含皆顾之活。\n\n**說**　皆顾之活（从意义读出的正面相关，positive relevance，`Frame.relevance`；新组合：皆顾＋之活）把系辞之层的相关由顾读出：一辞是某物于某步之续，它活、已实现、且其续自每方有顾；其内容须是已实现者。条件之下它恰是已实现之活内容，且是使活皆有顾成立之最小相关（`relevance_least`），活皆有顾在每一系辞、每一种活之读上成立（`livingSignificance_of_unrestricted`）；于是凡以“某个正面相关满足活皆有顾”为设之定理，都可用它，活皆有顾之每一用处都被解除。不用条件时，以此相关读之，活皆有顾恰是“凡已实现之活辞之续自每方有顾”（`livingSignificance_relevance_iff`）：即条件限于已实现之活内容。\n\n**證**　`Becoming.Frame.relevance`、`Becoming.relevance_least`、`Becoming.livingSignificance_of_unrestricted`、`Becoming.livingSignificance_relevance_iff`；记录 [continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)。"
+   },
+   {
+    "id": "十五·十九",
+    "title": "凡续皆有顾即活皆有顾之及于凡物",
+    "body": "**經**　凡系辞，其辞为一物于一步，每辞于某状实现：凡续皆有顾，恰当以凡辞为活、以自每方有顾为相关之活皆有顾。凡待网之水平之路皆然。凡待网，其逐步之顾式连通，有一方，有一事件活，每一事件活否可定：凡续皆有顾，恰当有萌、无亲、无方，且凡不活者之续自每方有顾。\n\n**說**　前一半（`unrestricted_iff_livingSignificance`；于待网之水平之路不须另设，`Web.unrestricted_iff_paths_livingSignificance`）说：条件就是活皆有顾把范围从活者推及一切，并把“正面”弱化为“有顾”。后一半（`Web.unrestricted_iff_grounds_beyond`）把条件分为两份：评价之所据（萌与两种无偏，⟦十五·十一⟧）与对不活者之顾；正向不须连通与可定，反向用连通把所据带到每一活者，用可定把其余分开。对照（相分，xunzi-wangzhi-zui-wei-tianxia-gui）：「人有气、有生、有知，亦且有义，故最为天下贵也。」〔RU2-S-XZ09〕（先秦，《荀子·王制》）按所具之项排出位阶，以贵为顶，属争胜与等级一层；条件对任何物给顾，不只及于活者，更不只及于人，顾不分贵贱；贵是称，按计数零和（`RelativePosition.positions_balance`）。\n\n**證**　`Becoming.unrestricted_iff_livingSignificance`、`Becoming.Web.unrestricted_iff_paths_livingSignificance`、`Becoming.Web.unrestricted_iff_grounds_beyond`、`Becoming.RelativePosition.positions_balance`；记录 [continuation-condition-yields-living-significance](../results/records/continuation-condition-yields-living-significance.md)、[alignment-direction-under-widening](../results/records/alignment-direction-under-widening.md)、[relative-position-is-zero-sum](../results/records/relative-position-is-zero-sum.md)。"
+   },
+   {
+    "id": "十五·二十",
+    "title": "凡续皆有顾则无丧即赅",
+    "body": "**經**　若凡续皆有顾，则自任一方：一路无丧于另一路，恰当赅之；有得，恰当有所长；诸方所判皆同。广恰是无丧且有得，相赅恰是两向无丧，互有所长恰是两向有得。自一方于兼无丧者，于任何区域之别亦无丧。\n\n**說**　于是所容之较（⟦十五·一⟧）读作顾之较，一无所遗，条件不加任何规则（`Web.retains_iff_includes`、`Web.adds_iff_exceeds`、`Web.retains_agree`）。余地之界（⟦十五·四⟧）对任何顾成立，条件只使它及于每一物。兼先：在兼中无丧者在每一区域内无丧（`Web.Retains.within`），兼之判决定每一较窄之判，反之不然。尚未形成者也被计入：在 `Preemption` 之构造中，一物先取（先占，preemption；新组合：先＋取）：在无一物待此所待之时取其一单位，其事件逐步读之是活而不剥的，其体却使一物此后不得支持；条件之下它自每方丧一有顾之续（`Preemption.not_undermining_yet_loses`，见证）。剥是丧之征：一剥之事件，凡依存于其所待者跨此步仍待之且所需不减，对照之路于次步容每一这样的依存者，则现行之水平自每方不能无丧于此对照之路（`Web.UnderminingOn.not_retains_unrestricted`）。⟦十五·十六⟧所引《大取》之不以时为界，在此有一个确切的见证。\n\n**證**　`Becoming.Web.retains_iff_includes`、`Becoming.Web.adds_iff_exceeds`、`Becoming.Web.retains_agree`、`Becoming.Web.widens_iff_retains_adds`、`Becoming.Web.keeps_iff_retains`、`Becoming.Web.mixed_iff_adds`、`Becoming.Web.Retains.within`、`Becoming.Web.UnderminingOn.not_retains_unrestricted`；记录 [significance-retained-within-margin](../results/records/significance-retained-within-margin.md)、[whole-first-and-bounded-centers](../results/records/whole-first-and-bounded-centers.md)。"
+   },
+   {
+    "id": "十五·二十一",
+    "title": "凡续皆有顾定范围而不排序",
+    "body": "**經**　若凡续皆有顾，则互有所长之二路，各于彼有得，皆不无丧于彼；凡为另一路所广之路，皆丧另一路所容之一有顾之续。无丧之较不许任何终结。\n\n**說**　条件之下顾处处相同，所以每一狭都丧一有顾之续，捕食、凋亡与终止一个癌都一样；这类体若又使他物得续，就是互有所长的；不是每一狭皆然（`Clearing` 之体只狭）。在 `Transfer` 之构造中，一输送者之体使两路各有对方所缺（`Transfer.unordered`，见证），要分辨何者为害须另加度量。没有任何终结被许可：一路无丧于另一路，则另一路于它无所得（`Web.Retains.not_added`，此条不须条件）；给与者之体既无丧又有得（`Restoring.Inflow.retains_adds`，见证）。所以条件定的是范围——谁之所丧被计入——不是次序：它自身不排任何互有所长之较；水平之路上以广为愈成立，是因为把“更好”读作广，不是因为条件（篇十六）。对照（定域，lao-05-tian-di-bu-ren）：「天地不仁，以万物为刍狗」〔YD-LAO-BASE〕（先秦，《老子》五章；郭店甲本无此二句，始见帛书本）：展开不被假定为善，无偏亲、无伦理谓词，这一层与理论一致；同章「圣人不仁，以百姓为刍狗」〔YD-LAO-BASE〕若读作实践立场，则与活皆有顾相分。\n\n**證**　`Becoming.Web.mixed_iff_adds`、`Becoming.Web.adds_iff_exceeds`、`Becoming.Web.Retains.not_added`、`Becoming.Transfer.unordered`、`Becoming.Restoring.Inflow.retains_adds`；记录 [significance-retained-within-margin](../results/records/significance-retained-within-margin.md)、[ranking-under-readings](../results/records/ranking-under-readings.md)。"
+   },
+   {
+    "id": "十五·二十二",
+    "title": "别与凡续皆有顾相会",
+    "body": "**經**　以兼为区域之别，即凡续皆有顾。若凡续皆有顾，以诸物为方，一物之资域即兼，则自此物之方，凡二路，以资域为界之别判其无丧与否，与以凡续皆有顾之顾判之全同。凡流之物皆相待，则以各我之扰域为界之别，即凡续皆有顾。有宇焉（见证），无清除者之体之水平存：自清除者之方，有此体之水平于资域之别下无丧；凡续皆有顾之下，自每方皆不无丧。\n\n**說**　不加条件之路走到哪里：一延续所依者是其资域，资域之外者对资域内成员所待之所待无所与（`Flow.beyond_gives_nothing`）；所以此路及于自身及其所依，及于兼只在兼是一个资域之处——在那里它之所判就是条件之所判（`Flow.within_closure_iff_retains`）。以兼为界之别就是条件（`bounded_whole`）；物物相待处，以扰域（新组合：扰＋域，影响闭包）为界之别也是条件（`Flow.MutuallyDependent.unrestricted`）。在 `Clearing` 中二判分开：自清除者之方，其体于资域内无丧，条件之下却自每方丧栖居者，自栖居者之资域亦丧之（`Clearing.within_closure_yet_loses`）；而无此体之水平容每一物，清除者每步皆被支持，所以扣下此体并不终止任何物（`Clearing.clearer_loses_dweller`）。条件比此路多出的，正是对那些所丧不回到任何者之续的顾：栖居者之终不经喂养回到清除者。讀（AI，D17）：资域读“它实际所依者”。\n\n**證**　`Becoming.bounded_whole`、`Becoming.Flow.within_closure_iff_retains`、`Becoming.Flow.MutuallyDependent.unrestricted`、`Becoming.Flow.beyond_gives_nothing`、`Becoming.Clearing.within_closure_yet_loses`、`Becoming.Clearing.clearer_loses_dweller`；记录 [closure-verdict-meets-continuation-condition](../results/records/closure-verdict-meets-continuation-condition.md)、[feeding-closure](../results/records/feeding-closure.md)、[mutual-dependence-and-its-pace](../results/records/mutual-dependence-and-its-pace.md)。"
+   },
+   {
+    "id": "十五·二十三",
+    "title": "畛内之顾",
+    "body": "**經**　畛内之顾，自一方，凡在其畛内者于每步之续皆有顾也。沿一关系：畛内之顾于某一畛立，恰当凡在我之闭包内者之续皆有顾；沿空关系，恰当我自身之续每步有顾；沿全关系，恰当自此方凡物之续皆有顾。凡畛皆立之，亦恰当自此方凡物之续皆有顾。\n\n**說**　畛内之顾（预设，the presupposition，`SignificantWithin`；新组合：畛内＋之顾）是：自方 p，画一畛，畛内每一物之续都有顾。“于某一畛立”（`SubTrue`）是有某一可取之划法使它成立；“凡畛皆立”（`SuperTrue`）是凡可取之划法都使它成立。二者是同一预设之二域：“凡无论怎样划都在己内者皆有顾”恰是于某一畛立；“无论怎样划，畛内皆有顾”恰是此方上的凡续皆有顾（`presupposition_scopes`）。无论怎样划都在己内者，恰是闭包（`superTrue_member_iff`）；以各我之闭包为界之别，是使每方之预设于某一畛立之最小之顾（`bounded_closure_least`）：此即不加条件之路（⟦十五·二十二⟧）。沿空关系是一方只顾自身之续，沿全关系是此方上之条件（`subTrue_empty_iff`、`subTrue_total_iff`）。对照（定域，mengzi-yang-mo-wei-wo-jian-ai）：「杨子取‘为我’，拔一毛而利天下，不为也。」〔RU2-S-MZ〕（先秦，《孟子》）：把「为我」读作顾止于我自身（AI 读法），即沿空关系之预设；原文说的是不为利天下而损己，属实施；孟子以君父之位裁断杨墨，那是位阶，理论不带。\n\n**證**　`Becoming.SignificantWithin`、`Becoming.SubTrue`、`Becoming.SuperTrue`、`Becoming.subTrue_significantWithin_iff`、`Becoming.subTrue_empty_iff`、`Becoming.subTrue_total_iff`、`Becoming.presupposition_scopes`；记录 [presupposition-scopes](../results/records/presupposition-scopes.md)。"
+   },
+   {
+    "id": "十五·二十四",
+    "title": "不易乎畛",
+    "body": "**經**　不易乎畛，畛内之顾于一畛立，则于凡畛皆立也。沿任一关系：凡续皆有顾，恰当每方之畛内之顾于某一畛立且不易乎畛。兼可为畛者：不易乎畛，恰当：畛内之顾于某一畛立，则自此方凡物之续皆有顾；畛内之顾于某一畛立者，不易乎畛恰当自此方凡物之续皆有顾；不易乎畛而有一物之续自此方无顾，则畛内之顾无一畛立之。\n\n**說**　不易乎畛（不变的一步，the step of invariance，`BoundaryInvariant`；新组合，仿「不易乎世」〔DS10〕（先秦至秦汉，《文言》，成书有争议）：不随畛之划法而易）。条件分解得恰：它就是自身之预设（于某一畛立）加上这一步（`unrestricted_iff_presupposed_along`）；凡畛皆立即不易之于某一畛立（`superTrue_iff`）。逻辑上，条件蕴含预设，所以条件即“预设，且由预设至条件”，其余只是“于某一畛立”与“凡畛皆立”之分：分解定位那一可争之步，不推出它以外的任何东西，也不降低条件之内容。这一步是条件超出自身之预设之全部内容（`boundaryInvariant_iff_all`）：它把范围推及所丧不回到任何者，不排任何序。它两向皆行（`not_subTrue_of_invariant`）：持此步而有一续无顾者，连自身之预设也不能于任何畛立。讀（AI，D21、D45）：此步是根据之问，其根据未决；否认它，就是只相对于某一划法或某一方持预设，或放弃预设。对照（相分，zhuangzi-zhi-ren-wu-ji）：「至人无己」〔ZH1-S01〕（先秦，《庄子》内篇·逍遥游）是主体修养所成之境：去己；理论中去己即去掉预设本身（⟦十五·二十六⟧），所取的是不易乎畛——保留己之预设，只让它不随畛之划法而改变——所以不以「无己」名此步。\n\n**證**　`Becoming.BoundaryInvariant`、`Becoming.unrestricted_iff_presupposed_along`、`Becoming.superTrue_iff`、`Becoming.boundaryInvariant_iff_conditional`、`Becoming.boundaryInvariant_iff_all`、`Becoming.not_subTrue_of_invariant`；记录 [continuation-condition-decomposition](../results/records/continuation-condition-decomposition.md)、[presupposition-scopes](../results/records/presupposition-scopes.md)。"
+   },
+   {
+    "id": "十五·二十五",
+    "title": "不易乎畛与无方",
+    "body": "**經**　沿一关系，凡物皆在某我之闭包内，每方之畛内之顾皆于某一畛立：则每方不易乎畛，恰当于延续之顾无方；无方，则凡续皆有顾。\n\n**說**　“凡物皆在某我之闭包内”（覆盖）与“每方之预设于某一畛立”都给出时，这一步之两形——跨畛不易与跨方不易（无方之规则）——相等，各即条件（`boundaryInvariant_iff_standpointInvariant`、`unrestricted_of_standpointInvariant`）；每方之畛内之顾不皆立时，二者可分开（`OneCounts.forms_apart`，见证：无方成立，而一方之畛内之顾不易乎畛不然）。在 `Clearing` 中，以各物之资域为界之别使每方之预设立，每物在其自身之闭包内，而顾随方而易：栖居者之续自其自身之方有顾，自清除者之方无（`Clearing.without_standpoint_invariance`，见证）。对照（定域，mozi-jianai-zhong-shi-ren-ruo-ji）：「視人之國若視其國，視人之家若視其家，視人之身若視其身。」〔MO1-S-C15〕（先秦，《墨子·兼爱中》，各篇层次不由题名确定）是跨畛不易之形；《兼爱中》没有给出覆盖与各方之预设，「兼」之根据在此仍未决，它定范围，不排序。\n\n**證**　`Becoming.boundaryInvariant_iff_standpointInvariant`、`Becoming.unrestricted_of_standpointInvariant`、`Becoming.StandpointInvariant`、`Becoming.Clearing.without_standpoint_invariance`、`Becoming.OneCounts.forms_apart`；记录 [continuation-condition-decomposition](../results/records/continuation-condition-decomposition.md)。"
+   },
+   {
+    "id": "十五·二十六",
+    "title": "诸设各不可少；畛内之顾之序",
+    "body": "**經**　有宇焉（见证），沿喂养划畛：以无所顾之顾，每方不易乎畛而凡续皆有顾不然；以资域为界之别，每方之畛内之顾于某一畛立，清除者之畛内之顾不易乎畛不然，凡续皆有顾不然；若每方唯以其资域为可取之畛，则以资域为界之别使每方之畛内之顾于此畛立且不易乎畛，栖居者不在清除者任一可取之畛内，凡续皆有顾犹不然。一方之畛内之顾：于兼立，则于群域立；于群域立，则于及域、扰域立；于扰域立，则于资域立；于任一闭包立，则于我自身立。\n\n**說**　三个见证（皆在 `Clearing` 中）各去一设：去掉预设本身，不变空洞成立而条件不立（`Clearing.without_presupposition`）；去掉不变，预设于资域立而清除者之预设推不到栖居者（`Clearing.without_invariance`）；把每一己之畛固定为资域，不变与预设都立，栖居者却在清除者任何可取之畛之外（`Clearing.with_fixed_boundary`）：所以把每一封闭之区域都算作可取之划法，是实质之选择。预设之诸读有序：沿越大之关系说得越多（`Flow.presupposition_order`；群域〔新组合：群＋域，系统闭包〕之下及域与扰域并列，扰域之下资域）；于衡之流，于及域立之预设，不用不变、不用凡畛皆立，已对凡成员都在其我之及域内之体，作出与条件相同之较（`Flow.Balances.presupposed_reach_comparison`），而于群域立是更强之前提。讀（AI，D14、D21、D43）：“兼，其次所在之系统，再次自身”之序是判断完整之序，不是对生命所为之描述；它是预设之诸读之序：凡畛皆立；于及域立；于自身立。对照（相合，zhuangzi-shendao-qu-ji）：「是故愼到棄知去己，而緣不得已」〔ZH1-S33〕（先秦至秦汉，《庄子》杂篇·天下，成篇年代有争议），被豪桀讥为「非生人之行，而至死人之理」〔ZH1-S33〕：去己即去掉预设，所余是无一物有顾之展开。\n\n**證**　`Becoming.Clearing.without_presupposition`、`Becoming.Clearing.without_invariance`、`Becoming.Clearing.with_fixed_boundary`、`Becoming.Flow.presupposition_order`、`Becoming.Flow.Balances.presupposed_reach_comparison`；记录 [continuation-condition-decomposition](../results/records/continuation-condition-decomposition.md)、[presupposition-scopes](../results/records/presupposition-scopes.md)、[levels-of-closure](../results/records/levels-of-closure.md)。"
+   },
+   {
+    "id": "十五·二十七",
+    "title": "跨方之一步所及",
+    "body": "**經**　凡顾，每方之我之续自此方每步有顾，且于延续之顾无方：则凡我之续自每方有顾。一续于一切如是之顾皆有顾，恰当其物为某方之我。诸我之续之顾为凡续皆有顾，恰当凡物皆为某方之我（有一方者）。沿一关系，一续于一切使一方之畛内之顾于其闭包立之顾皆有顾，恰当其物在此闭包内。\n\n**說**　跨方之一步与跨畛之一步不同：前者只从每方关于自身之续的预设出发，用无方，所迫者恰是诸方之我（`atCenters_least`、`forced_iff_center`），只在凡物皆为我处才是条件（`unrestricted_atCenters_iff`）；后者跨同一己之诸划法，不需要他方（`boundaryInvariant_iff_all`）。一方自身之预设所迫者恰是其闭包（`forced_iff_within`）。在 `Clearing` 中，若唯清除者为一方之我，则其体于诸我之顾下无丧，条件之下却丧栖居者（`Clearing.centers_retain_yet_loses`）：较窄之范围与条件恰在一个不为任何我之物处分开；诸我之顾下无丧，即每步容另一路所容之每一我（`Web.retains_atCenters_iff`）。讀（AI，D59）：“想要其延续者”读作诸方之我，即自身之预设成立者；那么“任何东西”须另一设：凡物皆为我，或在某我之闭包内（覆盖），其中沿喂养之覆盖是可辩护的一份；“任何东西”不是空设，它决定以广为愈计入谁之所丧。对照（定域，ru-mengzi-tui-en）：「老吾老，以及人之老；幼吾幼，以及人之幼」〔RU2-S-MZ〕（先秦，《孟子》）：由己之所顾推及他人，及于与己相似之我，不及于一切物；推是推类（篇七），其范围由相似定，是实现顾的一种方法，不是无亲。\n\n**證**　`Becoming.atCenters`、`Becoming.atCenters_least`、`Becoming.forced_iff_center`、`Becoming.unrestricted_atCenters_iff`、`Becoming.forced_iff_within`、`Becoming.boundaryInvariant_iff_all`、`Becoming.Clearing.centers_retain_yet_loses`、`Becoming.Web.retains_atCenters_iff`；记录 [what-the-step-across-standpoints-reaches](../results/records/what-the-step-across-standpoints-reaches.md)。"
+   },
+   {
+    "id": "十五·二十八",
+    "title": "就己而持与就辞而持",
+    "body": "**經**　于延续之顾无方，恰当自每方所持者为同一辞。就己而持“我之闭包内者有顾”：每方之畛内之顾于其闭包立；无方恰当诸我之闭包皆同；为凡续皆有顾，恰当诸我之闭包皆为兼。就辞而持：跨方之一步所迫者，恰是诸我闭包之并。二读所予之顾全同，恰当凡在一我闭包内者在每我闭包内。\n\n**說**　就己而持（de se）之内容是一我之性质，每方以之说其自身之我（`selfAscribed`）；就辞而持（de dicto）之内容是一辞，自每方相同（`shared`）。无方（于延续之顾）恰是持一共同之辞（`standpointInvariant_iff_shared`）。就己而持，预设给每我其自身之闭包（`ownClosure_presupposed`、`ownClosure_standpointInvariant_iff`、`ownClosure_unrestricted_iff`）；就辞而持，跨方之一步迫出诸闭包之并（`forced_iff_within_some`；沿空关系即⟦十五·二十七⟧之所迫）；二者恰在诸我之闭包一致处相同（`selfAscribed_iff_withinSome`）。沿一个使每我之闭包皆为兼之关系（如连通之展开中之“凡有所关”），就己之读不须这一步即是条件（`ownClosure_unrestricted_of_whole`）：所以就己之问只在与一条较窄之关系同时出现时才有力。讀（AI，D60）：就己读作自归属之性质（刘易斯），就辞读作命题；未决之问是：自身之预设是否就一个沿某特权关系（窄于“凡有所关”）而划之己而持。\n\n**證**　`Becoming.standpointInvariant_iff_shared`、`Becoming.ownClosure_presupposed`、`Becoming.ownClosure_standpointInvariant_iff`、`Becoming.ownClosure_unrestricted_iff`、`Becoming.forced_iff_within_some`、`Becoming.selfAscribed_iff_withinSome`、`Becoming.ownClosure_unrestricted_of_whole`；记录 [what-the-step-across-standpoints-reaches](../results/records/what-the-step-across-standpoints-reaches.md)、[graded-significance-and-priority](../results/records/graded-significance-and-priority.md)。"
+   },
+   {
+    "id": "十五·二十九",
+    "title": "计入与多少",
+    "body": "**經**　分级之顾，自每方予每项一自然数之级者也；计入，级为正也。级不随方易，则计入不随方易，且于所列之项，以级为权之计数自每方排序皆同。有例焉（见证）：计入不随方易而级随方易，二方于一互有所长之较相反排之。一路赅另一路，而其多容之项权皆零，则二路之加权计数相同。\n\n**說**　顾只分有无（⟦十五·二⟧）；若给分级之顾，其正否是“计入与否”，级是“计入多少”。不变的一步用于有无之顾，只使计入不随方易，计入多少留给各方（`Weighting.standingInvariant_of_gradeInvariant`、`Weighting.ranks_alike_of_gradeInvariant`；`Partial.ranks_differ`：二方各予自身之物二、他物一，计入不变而二方相反排序）。权为零即否认范围：一路广另一路而所多容者之权皆零，此广不被排（`Weighting.weighed_eq_of_unweighted`）。讀（AI，D60）：级之正读作计入，级读作多少；“多少不随方易”是另一个设，理论不断言；每项同一正权之下，加权按所容之数目排（`Weighting.neutral_ranks_by_number`）。对照（相分，ru-mengzi-qinqin-renmin-aiwu）：「亲亲而仁民，仁民而爱物。」〔RU2-S-MZ〕（先秦，《孟子》）把闭包之嵌套读成顾之等差；理论中嵌套存在，有无之顾却不分等级；等差可写成随方而易之级（亲以各自之我为准），它只决定互有所长之较（`Partial.ranks_differ`），“多少不随方易”是另一设，理论不断言；只把有无之顾限于较近之层，无丧只会更易成立（`Web.Retains.of_fewer`：有顾者越少，无丧越多）。\n\n**證**　`Becoming.Weighting.GradeInvariant`、`Becoming.Weighting.StandingInvariant`、`Becoming.Weighting.standingInvariant_of_gradeInvariant`、`Becoming.Weighting.ranks_alike_of_gradeInvariant`、`Becoming.Partial.standing`、`Becoming.Partial.not_gradeInvariant`、`Becoming.Partial.ranks_differ`、`Becoming.Weighting.weighed_eq_of_unweighted`、`Becoming.Weighting.neutral_ranks_by_number`、`Becoming.Web.Retains.of_fewer`；记录 [graded-significance-and-priority](../results/records/graded-significance-and-priority.md)、[widening-as-what-every-weighting-ranks](../results/records/widening-as-what-every-weighting-ranks.md)、[whole-first-and-bounded-centers](../results/records/whole-first-and-bounded-centers.md)。"
+   },
+   {
+    "id": "十五·三十",
+    "title": "范围与次序",
+    "body": "**經**　于所列之项，一路广另一路，恰当凡计及每项之加权皆排前者于后者之上；互有所长之二路，有计及每项之加权排此于彼上，亦有排彼于此上。于待网之水平之路：凡续皆有顾，恰当以每一被容之物于其步为辞、凡辞皆活之活皆有顾；若凡续皆有顾，则一路广另一路，恰当自每方无丧于彼且有得于彼。\n\n**說**　伦理有两个设、两种分工。凡续皆有顾定范围：谁之所丧被计入；它超出自身之畛内之顾之内容，即不易乎畛，把范围推及所丧不回到任何者（⟦十五·二十二⟧、二十四），而它不排任何序（⟦十五·二十一⟧）。以广为愈独定次序：说广者更好，是排序诸路之唯一前提，属下篇（篇十六）。次序之形与范围相仿：凡计及每一项之加权所共排者，恰是广（`Weighting.widens_iff_every_positive`；于待网，二路所容者已列且容否可定处，`Web.widens_iff_every_weighting`）；偏私只能决定互有所长之较，两向皆可（`Weighting.mixed_either_way`）；权为零即否认范围（⟦十五·二十九⟧）。讀（AI，D59）：一方之序读作计及一切之加权，偏于各物所予之权而计及一切；无偏之序读作一切这样之加权所共有者，即以广为愈。二设都不被断言，不约束拒绝它们之方，根据皆未决；规范之根据、承认、动机、遵从与实际之保存，是不同之辞。条件之下，水平之路上条件、顾与以广为愈读同一对象——容（`Web.paths_one_object`）：广即自每方无丧且有得，所以把广称为更好，是以广为愈之事，不是条件之事。\n\n**證**　`Becoming.Weighting.widens_iff_every_positive`、`Becoming.Weighting.mixed_either_way`、`Becoming.Web.widens_iff_every_weighting`、`Becoming.Web.paths_one_object`；记录 [widening-as-what-every-weighting-ranks](../results/records/widening-as-what-every-weighting-ranks.md)、[comparison-by-widening](../results/records/comparison-by-widening.md)。"
+   }
+  ],
+  "duizhao": "#### 对照\n\n- 「長慮顧後而保萬世」〔RU2-S-XZ04〕——定域：顾及此后之延续是顾之结构；顾者是先王一方，「保」是实施（xunzi-rongru-chang-lv-gu-hou）。\n- 「以道觀之，物无貴賤；以物觀之，自貴而相賤；以俗觀之，貴賤不在己。」〔ZH1-S17〕——相合：评价随所自出之方而变；以物观之即以己为界之别，其诸我判断不一（zhuangzi-qiushui-yi-dao-guan-zhi）。\n- 「愛人不外己，己在所愛之中。」〔MI1-S-DQ〕——相合：皆在己处活皆有顾恰是每方自顾加无方，自顾在全称之中（daqu-ai-ren-bu-wai-ji）。\n- 「兼愛之有相若，愛尚世與愛後世，一若今之世。」〔MI1-S-DQ〕——相合：顾不以时为界，尚未形成者亦计入（daqu-ai-shang-shi-hou-shi）。\n- 「是故子墨子曰：兼以易別。」〔MO1-S-C16〕——定域：由别到尽是不易乎畛，定范围而根据未决，不排序（mozi-jian-yi-yi-bie）。\n- 「志士仁人，無求生以害仁，有殺身以成仁。」〔RU1-S-LY〕——相分：立一先于延续、高于延续之价值；理论之顾不带正负，条件不排序（lunyu-sha-shen-cheng-ren）。\n- 「仁义礼智，非由外铄我也，我固有之也」〔RU2-S-MZ〕——相分：固有之性属固定本性一层；理论之萌只是存在式之一处，待网之动不蕴含活皆有顾（mengzi-wo-gu-you-zhi）。\n- 「至人无己」〔ZH1-S01〕——相分：修养之境去己即去掉畛内之顾；理论取不易乎畛，保留己之畛内之顾（zhuangzi-zhi-ren-wu-ji）。"
+ },
+ "edits": [
+  {
+   "target": "C14",
+   "instruction": "篇十五篇首改为：「本篇论顾（意义）：评价怎样在一个展开之中形成，延续之条件陈述之后推得出什么、推不出什么。前诸篇的关系——待与所待、流与衡、作与已、续与复、所容之广狭——都不含顾；比较诸路之所容（篇六）只看诸水平容哪些物，不用顾、方、畛（六·三）。本篇先说方、我、己、畛都是展开中已形成的关系与区域（十五·五、十五·六）；次立顾为唯一所给的评价参数，与无丧、有得，说对任何顾，无丧与有得都以余地为界（十五·二、十六·一、十五·四）；次说顾式与活，活与作已之复现相交（十五·七、NEW-14）；次说自顾、萌、皆在己与两种无偏，所出怎样推广顾之所及，活皆有顾恰是什么，所表示之动不蕴含活皆有顾，共同之所待使连通，我为何不沿待而导出（十五·八至十五·十三）；次说不加条件、以区域为界之顾（别）能走多远：较止于所及，应域之较，所导出之范围之所不及（十五·十四、十五·十五、NEW-16、NEW-17）；然后陈述凡续皆有顾而不断言之，说它之下活皆有顾只是实例，它定范围而不排序，以及别在何处与它相会（十五·十六至十五·二十二）；再把它分解为畛内之顾与不易乎畛，说每一设各不可少、跨方之一步所及、就己与就辞二读、计入与多少（十五·二十三至十五·二十九）；终以范围与次序之分（十五·三十）。本篇诸律或无设而然，或对任何顾成立（其中十五·四、十五·十五与应域之较以衡为设），或以凡续皆有顾为设而有设而然；后者都是对一个全称的实例化，计其数不另计依存。伦理有两个设、两种分工：凡续皆有顾定范围（谁之所丧被计入），以广为愈（以扩大为更好，C）独定次序；二者都不被断言，根据皆未决。顾不带正负；分级之顾见十五·二十九；「仁」「无弃」「无己」不采为名（理由见附录）；「仁」「无己」之文在本篇作对照。」（O6、O15、S1）"
+  },
+  {
+   "target": "十五·六",
+   "instruction": "經「沿一关系，含我而于此关系封闭之区域也」改为「沿一关系，含我，而沿此关系不出其外之区域也」（封只名四·五之族不与外取与，闭只名法所不出之区；义不变）。"
+  },
+  {
+   "target": "十五·二",
+   "instruction": "經「顾唯分有无，不分厚薄，不带正负。」改为「顾唯分有无，不带正负；分级之顾另见十五·二十九。」（C21）"
+  },
+  {
+   "target": "十六·一",
+   "instruction": "（已移至十五·二之后）經中「水平之历」「彼历」「此历」改「水平之路」「彼路」「此路」（C86）。本條为无丧、有得之定义唯一之处（O6、C55）。"
+  },
+  {
+   "target": "十五·四",
+   "instruction": "經「有此体之水平」「无之之水平」等之「有之／无之」改「有体／无体」（C86）。本條为十六·二之留者，并收六·八之顾之形：證加 `Becoming.Flow.Balances.retains_iff_within_margin`、`Becoming.Flow.Balances.loses_iff_beyond_margin`、`Becoming.Flow.Balances.adds_iff_within_margin` 与记录 significance-retained-within-margin（自六·八、十六·二，已有者不重列）。"
+  },
+  {
+   "target": "NEW-14",
+   "instruction": "新條「活与作已之复现相交」。經：「有穷之宇，作复现者与作不复现者，各有凡事皆活之例，亦各有有事不活之例；有穷之宇之活动定然否，则已之复现恰随作之复现，亦然。故于有穷之宇，凡事皆活不随作或已之复现而定，作或已之复现亦不随之而定。」（`World.living_crosses` 是四个见证，须写「有例」；「活之所在是诸宇之一体」是讀，移入說。）說：活（十五·七）是一读，不是作；见证 shuttle、grazing、mutualism、drawdown；讀（AI，D2）：律属全，设属体，活是诸宇之一体，不与生起相合。證：`Becoming.World.Living`、`Becoming.World.living_crosses`、`Becoming.World.living_crosses_ceasing`；记录 [space-and-its-parts](../results/records/space-and-its-parts.md)。"
+  },
+  {
+   "target": "十五·九",
+   "instruction": "經「已成之界」「已成之关系」改「既成之界」「既成之关系」（C89）；十五·七、十五·十一、十五·十三同改。"
+  },
+  {
+   "target": "十三·二十二",
+   "instruction": "（已移至十五·九之后）經「若无亲（顾沿所出之关系尽传）」改为「若顾沿所出之关系尽传（无亲之一例，十五·九）」（C20）。"
+  },
+  {
+   "target": "十五·十",
+   "instruction": "說「生生是伦理方向之所向，以广比较（十五·一）」改为「生生是伦理方向之所向，以广比较（六·三）；其范围由凡续皆有顾定，称广为愈只在以广为愈（十六·六），二者皆设」（S10）。"
+  },
+  {
+   "target": "NEW-15",
+   "instruction": "新條「共同之所待使连通」。經：「以同预读连：凡活之待者皆预一所待，则诸活连通；故有一方、有一活之辞，则活皆有顾，恰当有萌且无亲、无方。以交读连（二·十三）：增一闲置之所待，诸活之事不改，以同预则连通全体，以交则连通与否如故。有例：二待者经一所待之资而以交相连，在此资不剥其所待之时；唯一之资剥之，则以交不连，以同预仍连。」（`Shared.connection_by_living_use` 是一见证，须写「有例」；`significant_iff_of_common` 须有一方与一活之事。）說：对应之纪律定哪些所待被计入；连通由活之用而成；一更新之所待只为一活之事所资，犹以交连通全体（`Becoming.Web.one_use_connects`）。證：`Becoming.Conditions.significant_iff_of_common`、`Becoming.Web.significant_iff_of_common`、`Becoming.Web.inert_connects`、`Becoming.Shared.connection_by_living_use`、`Becoming.Web.one_use_connects`；记录 [condition-correspondence-discipline](../results/records/condition-correspondence-discipline.md)。"
+  },
+  {
+   "target": "十五·二十",
+   "instruction": "本條为六·二十一、十六·三之留者；證并入二者之声明（未列者）。六·二十一之說并入本條之說时：「在水平之路上 C 成立，只因“更好”读作广」改为「在水平之路上广合 C 之式，只因“更好”读作广」（S2），「是篇十四所陈述而不断言的全称条件」改为「是十五·十六所陈述而不断言的全称条件」（S3），其对照二条并入本條之对照；說中「所容之较（十五·一）」改指六·三。"
+  },
+  {
+   "target": "十五·二十一",
+   "instruction": "經改为「若凡续皆有顾，互有所长之二路两向皆有得、皆不无丧（十五·二十）：此条件不排互有所长之较；凡为另一路所广之路，皆丧另一路所容之一有顾之续。」（「无丧之较不许任何终结」即十六·一之「此于彼无丧，则彼于此无得」，移入說；互有所长之推论只指十五·二十，不另陈。）證删 `Becoming.Web.mixed_iff_adds`、`Becoming.Web.adds_iff_exceeds`（在十五·二十）、`Becoming.Web.Retains.not_added`（在十六·一），留 `Becoming.Transfer.unordered`、`Becoming.Restoring.Inflow.retains_adds`（說之见证）。說「水平之路上以广为愈成立，是因为把“更好”读作广」改为「水平之路上广合以广为愈之式，是因为把“更好”读作广」（S2）。"
+  },
+  {
+   "target": "十五·二十二",
+   "instruction": "經「凡流之物皆相待，则以各我之扰域为界之别，即凡续皆有顾。」后加自十四·四移来之二形：「凡待者皆在凡待者之群域，则以各我之群域为界之别，亦即凡续皆有顾；交相资，则以各我之资域为界之别亦然。」（十四·四删，留此，C79）。證并入 `Becoming.Flow.SharesThroughout.unrestricted`、`Becoming.Flow.MutuallyFed.unrestricted`、`Becoming.Flow.feeding_unrestricted_of_common`、`Becoming.bounded`。"
+  },
+  {
+   "target": "NEW-16",
+   "instruction": "新條「应域之较」（自十一·七移来）。經：「凡二流皆衡，在场者同，起点同，余者经其感而应：凡顾自一方覆一切不可非其在应域（十一·七）中者，则一流之水平之路于他流者之顾无丧，恰当赅之；不有得，恰当无所长；两向皆然。」說：与十五·十五（较止于所及，余者守之）相对：余者经感而应时，较定于应域之内；余者依一经感而读之法而行时，不须另给第二流与应之前提（`Becoming.comparison_of_courses`，见 NEW-7）。證：`Becoming.Flow.Balances.comparison_within_response`、`Becoming.comparison_of_courses`；记录 [comparison-where-the-rest-responds](../results/records/comparison-where-the-rest-responds.md)。（`Becoming.Flow.withinResponse_iff_coupling` 是十一·七之律，留彼。）"
+  },
+  {
+   "target": "NEW-17",
+   "instruction": "新條「所导出之范围之所不及」。經：「一者之续所需者，沿资而导出之范围，其资域也（十一·四）。有宇焉：衡而有待，一者之续唯需其本，每步活动而见容；以其所与为生者，于其止与之后不活动：所导出之范围只循所需之一向，不及赖之者。有宇焉：衡而有待，一物生二步，生时所需皆足，其取终一共所待之更新；依此所待之后继者，于其亡后乃亡：所导出之范围随其续而止，不及其取之后果。有宇焉：衡、耗、有待，清除者每步活动而见容，所待唯一更新、每步自外来、出入相掩之所待；其清除于第一步剥栖居者之所待，栖居者自第二步起不活动：合此所导出之每一所需者，犹可终一非其所需之活。」說：承十五·十三（我不由待而定）、十五·十四（别）、十五·十五；此为不加条件之路之界，不说一中心欲其续、表其资域或知其所及；二·十一、五·十五之說中此三例改为指向本條。證：`Becoming.Downstream.one_way`、`Becoming.Mortal.after_its_end`、`Becoming.Clearing.undermines_within_renewal`；记录 [derived-extent-limits](../results/records/derived-extent-limits.md)。（O23 之三之「欲」未定义，改以所需言之。）"
+  },
+  {
+   "target": "十五·二十九",
+   "instruction": "經「以级为权之计数自每方排序皆同」改为「以级为重之计数，自每方所排之先后皆同（计数之先后，不是以广为愈之愈）」（S4、C14）；删末句「一路赅另一路，而其多容之项权皆零，则二路之加权计数相同。」（留六·二十，C60）；「加权计数」改「定重之计」。"
+  },
+  {
+   "target": "十五·三十",
+   "instruction": "經删首句（广为诸正定重之所共，留六·二十，C60）与末句「若凡续皆有顾，则一路广另一路，恰当自每方无丧于彼且有得于彼」（留十五·二十，C61），只留「于待网之水平之路：凡续皆有顾，恰当以每一被容之物于其步为辞、凡辞皆活之活皆有顾。」；「加权」改「定重」。說注：广为诸正定重之所共见六·二十；凡续皆有顾下广即无丧且有得见十五·二十；范围在凡续皆有顾，次序在以广为愈。"
+  }
+ ],
+ "added": [
+  {
+   "id": "NEW-14",
+   "title": "活与作已之复现相交"
+  },
+  {
+   "id": "NEW-15",
+   "title": "共同之所待使连通"
+  },
+  {
+   "id": "NEW-16",
+   "title": "应域之较"
+  },
+  {
+   "id": "NEW-17",
+   "title": "所导出之范围之所不及"
+  }
+ ],
+ "duizhao_issues": []
+}

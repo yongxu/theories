@@ -3,6 +3,8 @@ T = ('狀變動繫辭觀讀體餘諸網資絶絕結併與輸積來損竭圍開�
 S = ('状变动系辞观读体余诸网资绝绝结并与输积来损竭围开恒复归藏剥广狭赅长阖闭护机几势类并识数验征试闻见习过终参断达无约贯当应扰择缘劫环还报兆穷频续间继蛰实聚毁称让旧恶顾亲尽别权丧从设证说决错后独刚亡传争掩众节济备宽猛时随执拟内举测阙认愈致渐该遍异异万气于为后扰晓义静则转处斗岁劝礼学问听')
 assert len(T) == len(S), (len(T), len(S))
 MAP = dict(zip(T, S))
+# added with the names of 21 October (the naming pass of the drafts)
+MAP.update(zip('運總歷規輕對屢屬據擴曠碼組葉術觸許載連遞釋錄閾際項駁為憑膠場階儉極', '运总历规轻对屡属据扩旷码组叶术触许载连递释录阈际项驳为凭胶场阶俭极'))
 KEEP = {'闢': '闢'}  # 辟 would collide with 辟（譬）; the edition keeps 闢
 def simp(name):
     return ''.join(KEEP.get(c, MAP.get(c, c)) for c in name)

@@ -1,0 +1,729 @@
+{
+ "C16": {
+  "edits": 13,
+  "failed": [],
+  "lost": {
+   "凡·三": {
+    "declarations": [
+     "Becoming.Flow.excludes_tail_within",
+     "Becoming.Web.Excludes",
+     "Becoming.Web.tail_unexcluded"
+    ],
+    "quotations": []
+   },
+   "凡·四": {
+    "declarations": [
+     "Becoming.Branching.NecessarilyDrawnInto.possibly",
+     "Becoming.Branching.OneWay.possibly_not_necessarily"
+    ],
+    "quotations": []
+   },
+   "凡·十四": {
+    "declarations": [
+     "Becoming.Listed.coming_of_ceasing",
+     "Becoming.Web.Dependent",
+     "Becoming.Web.Supported",
+     "Becoming.Web.coextinct",
+     "Becoming.Web.supported_iff_admits",
+     "Becoming.World.census_one_way"
+    ],
+    "quotations": []
+   },
+   "凡·十五": {
+    "declarations": [
+     "Becoming.PropositionIdentity"
+    ],
+    "quotations": []
+   },
+   "凡·十七": {
+    "declarations": [
+     "Becoming.BoundaryInvariant",
+     "Becoming.Neutral",
+     "Becoming.Transfer.unordered",
+     "Becoming.Web.paths_comparison_widens"
+    ],
+    "quotations": []
+   },
+   "凡·十八": {
+    "declarations": [
+     "Becoming.LivingSignificance",
+     "Becoming.Unrestricted",
+     "Becoming.livingSignificance_of_unrestricted"
+    ],
+    "quotations": []
+   },
+   "凡·二一": {
+    "declarations": [
+     "Becoming.exists_undominated_iff_weakly"
+    ],
+    "quotations": []
+   },
+   "凡·二二": {
+    "declarations": [
+     "Becoming.World.arising_iff_ceasing_decided",
+     "Becoming.World.law_iff_em",
+     "Becoming.undominated_has_iff",
+     "Becoming.undominated_has_iff_em"
+    ],
+    "quotations": []
+   },
+   "凡·二三": {
+    "declarations": [
+     "Becoming.LastChange.lpo_iff_settles",
+     "Becoming.LastChange.not_not_settles",
+     "Becoming.LastChange.settles_iff_decided",
+     "Becoming.TailRuns.lpo_iff_runs",
+     "Becoming.World.lpo_of_finite_ends"
+    ],
+    "quotations": []
+   },
+   "凡·二四": {
+    "declarations": [
+     "Becoming.TailRuns.wlpo_iff_runs",
+     "Becoming.WLPO.of_rule",
+     "Becoming.not_through_sensitive_iff_rule"
+    ],
+    "quotations": []
+   },
+   "凡·二五": {
+    "declarations": [
+     "Becoming.ByPrefixes",
+     "Becoming.Passes",
+     "Becoming.Refutable",
+     "Becoming.Refutable.not_not",
+     "Becoming.refutable_passes_iff_markov"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C01": {
+  "edits": 33,
+  "failed": [],
+  "lost": {
+   "一·二": {
+    "declarations": [
+     "Becoming.Web",
+     "Becoming.withMove_open"
+    ],
+    "quotations": []
+   },
+   "一·五": {
+    "declarations": [
+     "Becoming.World.balances_iff_exchange"
+    ],
+    "quotations": []
+   },
+   "一·九": {
+    "declarations": [
+     "Becoming.World.balanced_iff_law"
+    ],
+    "quotations": []
+   },
+   "一·十": {
+    "declarations": [],
+    "quotations": [
+     "ZH1-S02:吾有待而然者邪？吾所待，"
+    ]
+   },
+   "一·十二": {
+    "declarations": [
+     "Becoming.World.contingent"
+    ],
+    "quotations": []
+   },
+   "一·十四": {
+    "declarations": [
+     "Becoming.Contextual.world",
+     "Becoming.Frame.world",
+     "Becoming.Run.world",
+     "Becoming.World.run"
+    ],
+    "quotations": []
+   },
+   "一·十五": {
+    "declarations": [
+     "Becoming.Alike",
+     "Becoming.Bisimulation"
+    ],
+    "quotations": []
+   },
+   "一·十七": {
+    "declarations": [
+     "Becoming.Contextual.glues_iff_agree",
+     "Becoming.ParitySystem.glues_iff"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C02": {
+  "edits": 22,
+  "failed": [],
+  "lost": {
+   "二·六": {
+    "declarations": [
+     "Becoming.Flow.nothing_supported_stays",
+     "Becoming.Flow.rise_given_by_supported",
+     "Becoming.Flow.unsupported_stays",
+     "Becoming.Web.Rises",
+     "Becoming.Web.Unloosened"
+    ],
+    "quotations": []
+   },
+   "三·十": {
+    "declarations": [
+     "Becoming.Web.Carries.arising_not_recurring",
+     "Becoming.Web.Carries.ends_within",
+     "Becoming.Web.Carries.lasts_within"
+    ],
+    "quotations": []
+   },
+   "二·十一": {
+    "declarations": [
+     "Becoming.Web.Carries.coextinct_lasts"
+    ],
+    "quotations": []
+   },
+   "二·十三": {
+    "declarations": [
+     "Becoming.Web.UnderminingOn",
+     "Becoming.Web.UnderminingOn.interacts"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C03": {
+  "edits": 12,
+  "failed": [],
+  "lost": {
+   "三·五": {
+    "declarations": [
+     "Becoming.Hexagram.waxWane"
+    ],
+    "quotations": []
+   },
+   "三·六": {
+    "declarations": [
+     "Becoming.Web.unceasing_iff",
+     "Becoming.World.stutter_arisingRecurs_iff",
+     "Becoming.World.stutter_ceasingRecurs_iff"
+    ],
+    "quotations": []
+   },
+   "三·十一": {
+    "declarations": [
+     "Becoming.HalvingPass.never_rests",
+     "Becoming.World.InAmounts",
+     "Becoming.World.InAmounts.rests_unrefuted_enclosed",
+     "Becoming.World.arising_opens",
+     "Becoming.World.comes_to_rest_unrefuted",
+     "Becoming.World.lpo_of_finite_ends",
+     "Becoming.World.rest_needs_census",
+     "Becoming.World.rest_needs_standing"
+    ],
+    "quotations": []
+   },
+   "十·二": {
+    "declarations": [
+     "Becoming.Web.reidentify_consumed",
+     "Becoming.Web.reidentify_lost",
+     "Becoming.Web.reidentify_renewed"
+    ],
+    "quotations": []
+   },
+   "三·十四": {
+    "declarations": [
+     "Becoming.Reidentify",
+     "Becoming.Web.rename_unceasing"
+    ],
+    "quotations": []
+   },
+   "三·二十": {
+    "declarations": [
+     "Becoming.Web.renewingIn_held"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C04": {
+  "edits": 21,
+  "failed": [],
+  "lost": {
+   "二·十六": {
+    "declarations": [
+     "Becoming.Flow.fed_from_beyond"
+    ],
+    "quotations": []
+   },
+   "四·十九": {
+    "declarations": [
+     "Becoming.World.rests_unrefuted_enclosed_read"
+    ],
+    "quotations": []
+   },
+   "四·二十七": {
+    "declarations": [
+     "Becoming.RegimeMargin.Adjusted.falls_iff_below",
+     "Becoming.RegimeMargin.Adjusted.threshold_falls",
+     "Becoming.RegimeMargin.threshold_regime"
+    ],
+    "quotations": []
+   },
+   "十二·十四": {
+    "declarations": [
+     "Becoming.LastChange.still_within"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C05": {
+  "edits": 36,
+  "failed": [],
+  "lost": {
+   "七·三": {
+    "declarations": [
+     "Becoming.Hexagram.basin_counts",
+     "Becoming.Hexagram.cycle_basin",
+     "Becoming.Hexagram.kun_basin",
+     "Becoming.Hexagram.qian_basin"
+    ],
+    "quotations": []
+   },
+   "七·四": {
+    "declarations": [
+     "Becoming.Law.Merges.not_both_return"
+    ],
+    "quotations": []
+   },
+   "三·二十二": {
+    "declarations": [
+     "Becoming.PatternRelay.relay",
+     "Becoming.PatternRelay.stopped_relay",
+     "Becoming.Web.ByPassing.empty_stays",
+     "Becoming.Web.ByPassing.ends_within",
+     "Becoming.Web.ByPassing.passes_within"
+    ],
+    "quotations": []
+   },
+   "五·七": {
+    "declarations": [
+     "Becoming.Web.ByPassing",
+     "Becoming.Web.PassesAt"
+    ],
+    "quotations": []
+   },
+   "五·十七": {
+    "declarations": [
+     "Becoming.Web.Continues"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C06": {
+  "edits": 26,
+  "failed": [],
+  "lost": {
+   "六·一": {
+    "declarations": [
+     "Becoming.Web.Supported",
+     "Becoming.Web.supported_iff_admits"
+    ],
+    "quotations": []
+   },
+   "六·八": {
+    "declarations": [
+     "Becoming.Flow.Balances.adds_iff_within_margin",
+     "Becoming.Flow.Balances.loses_iff_beyond_margin",
+     "Becoming.Flow.Balances.retains_iff_within_margin"
+    ],
+    "quotations": []
+   },
+   "六·十": {
+    "declarations": [
+     "Becoming.Flow.rise_netGiver",
+     "Becoming.Law.withHistory_new",
+     "Becoming.unheld_of_new",
+     "Becoming.unlisted_of_new"
+    ],
+    "quotations": []
+   },
+   "六·十一": {
+    "declarations": [
+     "Becoming.Recycle.closed_unceasing"
+    ],
+    "quotations": []
+   },
+   "六·二十": {
+    "declarations": [
+     "Becoming.Weighting.widens_iff_every_of_class"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C07": {
+  "edits": 18,
+  "failed": [],
+  "lost": {
+   "七·十二": {
+    "declarations": [
+     "Becoming.Law.identifiesAlike_of_law"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C17": {
+  "edits": 27,
+  "failed": [],
+  "lost": {
+   "八·十一": {
+    "declarations": [
+     "Becoming.Situations.situations_count",
+     "Becoming.Situations.situations_of_course",
+     "Becoming.Situations.situations_typical"
+    ],
+    "quotations": []
+   },
+   "八·十七": {
+    "declarations": [
+     "Becoming.Hexagram.Half",
+     "Becoming.Hexagram.Place"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C08": {
+  "edits": 29,
+  "failed": [],
+  "lost": {
+   "九·一": {
+    "declarations": [
+     "Becoming.Web.CoupledInto",
+     "Becoming.Web.selects_alike_iff"
+    ],
+    "quotations": []
+   },
+   "九·二": {
+    "declarations": [
+     "Becoming.Web.observed_level_couples"
+    ],
+    "quotations": []
+   },
+   "七·九": {
+    "declarations": [
+     "Becoming.Regulation.no_narrower_band",
+     "Becoming.Web.break_not_bounded",
+     "Becoming.Web.observed_raise_couples"
+    ],
+    "quotations": []
+   },
+   "九·十二": {
+    "declarations": [
+     "Becoming.counterfactual_is_course"
+    ],
+    "quotations": []
+   },
+   "九·十六": {
+    "declarations": [
+     "Becoming.Adheres"
+    ],
+    "quotations": []
+   },
+   "九·二十六": {
+    "declarations": [
+     "Becoming.Learning.determines_lumped_iff",
+     "Becoming.Learning.every_determines_nothing",
+     "Becoming.Learning.lumped_right_iff"
+    ],
+    "quotations": []
+   },
+   "九·二十九": {
+    "declarations": [
+     "Becoming.Situations.finerLaw_determined",
+     "Becoming.Situations.sum_finer"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C09": {
+  "edits": 19,
+  "failed": [],
+  "lost": {
+   "十·三": {
+    "declarations": [
+     "Becoming.Web.RenewingIn"
+    ],
+    "quotations": []
+   },
+   "十·六": {
+    "declarations": [
+     "Becoming.Alike",
+     "Becoming.IdentifiesAlike",
+     "Becoming.IdentifiesAlike.carries",
+     "Becoming.Twins.alike_one",
+     "Becoming.identifiesAlike_iff"
+    ],
+    "quotations": []
+   },
+   "十·七": {
+    "declarations": [
+     "Becoming.Learning.Lumped",
+     "Becoming.lumped_const_iff",
+     "Becoming.lumped_of_finer"
+    ],
+    "quotations": []
+   },
+   "十·十": {
+    "declarations": [
+     "Becoming.Contextual.glues_iff_agree"
+    ],
+    "quotations": []
+   },
+   "十·十三": {
+    "declarations": [
+     "Becoming.PartialReadout.ExactWithin.lumped",
+     "Becoming.PartialReadout.SoundWithin.silent",
+     "Becoming.PartialReadout.exact_exists_iff",
+     "Becoming.PartialReadout.silent_not_exact",
+     "Becoming.PartialReadout.silent_sound"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C10": {
+  "edits": 16,
+  "failed": [],
+  "lost": {
+   "十一·五": {
+    "declarations": [
+     "Becoming.Flow.system_whole_of_common"
+    ],
+    "quotations": []
+   },
+   "十一·七": {
+    "declarations": [
+     "Becoming.Flow.Balances.comparison_within_response",
+     "Becoming.Flow.RespondsThroughCoupling"
+    ],
+    "quotations": []
+   },
+   "十四·二十一": {
+    "declarations": [
+     "Becoming.Law.rests_iff"
+    ],
+    "quotations": []
+   },
+   "十一·十七": {
+    "declarations": [
+     "Becoming.Flow.more_exhausted",
+     "Becoming.Law.aboveAll_never_rests",
+     "Becoming.Law.fixed_rests",
+     "Becoming.Law.rests_iff",
+     "Becoming.aboveAll_unique"
+    ],
+    "quotations": []
+   },
+   "十一·十八": {
+    "declarations": [
+     "Becoming.Law.perturbation_reabsorbed"
+    ],
+    "quotations": []
+   },
+   "十一·十九": {
+    "declarations": [
+     "Becoming.Pace.never_reads_loses",
+     "Becoming.Pace.paced",
+     "Becoming.Pace.rule_alike_until_reading",
+     "Becoming.Pace.rule_at_reading",
+     "Becoming.Pace.rule_kept",
+     "Becoming.Switching.changing_regains",
+     "Becoming.Switching.fixed_loses"
+    ],
+    "quotations": []
+   },
+   "十一·二十二": {
+    "declarations": [
+     "Becoming.Flow.excludes_tail_within"
+    ],
+    "quotations": []
+   },
+   "十一·二十三": {
+    "declarations": [
+     "Becoming.Flow.excludes_tail_within",
+     "Becoming.Observation.Measure.loop_at",
+     "Becoming.Stationary.model_error",
+     "Becoming.apart_only_downstream",
+     "Becoming.route_forms_by_closing"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C11": {
+  "edits": 18,
+  "failed": [],
+  "lost": {
+   "六·十二": {
+    "declarations": [
+     "Becoming.Closing.Threshold.forms",
+     "Becoming.Closing.Threshold.level_after",
+     "Becoming.Closing.Threshold.not_formed",
+     "Becoming.Closing.Threshold.unforeseen",
+     "Becoming.carried_le_polynomial_before",
+     "Becoming.forms_by_closing",
+     "Becoming.responds_to_own_level"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C12": {
+  "edits": 20,
+  "failed": [],
+  "lost": {}
+ },
+ "C13": {
+  "edits": 22,
+  "failed": [],
+  "lost": {
+   "二·十五": {
+    "declarations": [
+     "Becoming.Clearing.shares_not_mutual",
+     "Becoming.Drawing.mutual_not_fed",
+     "Becoming.Flow.MutuallyDependent.sharesThroughout",
+     "Becoming.Flow.MutuallyDependent.unrestricted",
+     "Becoming.Flow.MutuallyFed",
+     "Becoming.Flow.MutuallyFed.mutuallyDependent",
+     "Becoming.Flow.mutuallyDependent_of_common"
+    ],
+    "quotations": []
+   },
+   "十四·五": {
+    "declarations": [
+     "Becoming.Exceeding.own_not_joint",
+     "Becoming.Flow.joint_keeps",
+     "Becoming.Flow.level_kept"
+    ],
+    "quotations": []
+   },
+   "十四·八": {
+    "declarations": [
+     "Becoming.LoopReturn.closes_within",
+     "Becoming.LoopReturn.closing_needs_less",
+     "Becoming.LoopReturn.closing_not_lossless",
+     "Becoming.LoopReturn.cut_closes",
+     "Becoming.LoopReturn.cut_reopened",
+     "Becoming.LoopReturn.never_closes_of_no_less",
+     "Becoming.LoopReturn.returnMap",
+     "Becoming.LoopReturn.whole_factors"
+    ],
+    "quotations": []
+   },
+   "十四·九": {
+    "declarations": [
+     "Becoming.Exceeding.own_not_joint",
+     "Becoming.Flow.Acting",
+     "Becoming.Flow.excess_bounded",
+     "Becoming.Flow.joint_excess_ends",
+     "Becoming.Web.Dependent"
+    ],
+    "quotations": []
+   },
+   "二·十七": {
+    "declarations": [
+     "Becoming.Dependence.DifferenceOnlyTogether.two_le_length",
+     "Becoming.Dependence.differenceOnlyTogether_iff"
+    ],
+    "quotations": [
+     "MI1-S-JS:損，偏去也"
+    ]
+   }
+  }
+ },
+ "C14": {
+  "edits": 46,
+  "failed": [],
+  "lost": {
+   "十五·四": {
+    "declarations": [
+     "Becoming.Web.Adds",
+     "Becoming.Web.Retains",
+     "Becoming.Web.Retains.not_added"
+    ],
+    "quotations": []
+   },
+   "十五·二十一": {
+    "declarations": [
+     "Becoming.Web.Retains.not_added",
+     "Becoming.Web.adds_iff_exceeds",
+     "Becoming.Web.mixed_iff_adds"
+    ],
+    "quotations": []
+   },
+   "十五·二十九": {
+    "declarations": [
+     "Becoming.Web.Retains.of_fewer",
+     "Becoming.Weighting.neutral_ranks_by_number",
+     "Becoming.Weighting.weighed_eq_of_unweighted"
+    ],
+    "quotations": []
+   },
+   "十五·三十": {
+    "declarations": [
+     "Becoming.Web.widens_iff_every_weighting",
+     "Becoming.Weighting.mixed_either_way",
+     "Becoming.Weighting.widens_iff_every_positive"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "C15": {
+  "edits": 20,
+  "failed": [],
+  "lost": {
+   "十六·四": {
+    "declarations": [
+     "Becoming.Flow.Balances.includes_of_renewed",
+     "Becoming.Flow.Balances.not_narrows_of_renewed"
+    ],
+    "quotations": []
+   },
+   "十六·八": {
+    "declarations": [
+     "Becoming.Web.Keeps.not_mixed",
+     "Becoming.Web.Widens.not_keeps",
+     "Becoming.Web.Widens.not_mixed",
+     "Becoming.Weighting.mixed_either_way"
+    ],
+    "quotations": []
+   },
+   "十六·十七": {
+    "declarations": [
+     "Becoming.Direction.widening_selected_by_pool"
+    ],
+    "quotations": []
+   },
+   "十六·十九": {
+    "declarations": [
+     "Becoming.LossMatching"
+    ],
+    "quotations": []
+   }
+  }
+ },
+ "TH": {
+  "edits": 20,
+  "failed": [],
+  "lost": {}
+ }
+}

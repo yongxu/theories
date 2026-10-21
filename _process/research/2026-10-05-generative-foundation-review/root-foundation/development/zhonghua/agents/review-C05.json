@@ -1,262 +1,221 @@
 {
- "pian": "C05 篇五　恒与复",
  "edits": [
   {
-   "find": "复（状之再得）、同归（二状合一）、无损即复、藏往（带着历史）与不重访需开；",
-   "replace": "复（状之再得）、同归（二异状至一状）、无同归即复、藏往（带着历史）与不重访则无表可尽；",
-   "why": "损名下降、开只名 arising_opens、合名物之合：无损、需开、合一皆借名"
+   "id": "五·一",
+   "find": "零步亦然（`Becoming.Reach`）。",
+   "replace": "零步亦然（`Becoming.Reach`）；于 n 步可得，是有一状经 n 个可许之动至之（`Becoming.Branching.Reachable`）。",
+   "why": "本条經「复者每步皆可得」、五·二經「于某步不可得」都用名表之「可得」，而本篇无一处释之；在其首见之條补一句，锚 Branching.Reachable（Recurrence.lean：∃ x as, as.length = n ∧ Trace P x as s）。"
   },
   {
-   "find": "它给意义不给正值，只定范围，本身不排序",
-   "replace": "它给顾不给正值，只定所顾之范围，本身不排序",
-   "why": "意义之名是顾"
+   "id": "五·一",
+   "find": "第七步初爻复为刚爻",
+   "replace": "第七步初爻再为刚爻",
+   "why": "「复」是本条所立之名（状之再得），说中又以「复为」作副词，且所说正是「不是状之再得」，一字二义；改「再为」，与 C03 把「可复其前状」改「可再至」同理。"
   },
   {
-   "find": "本篇之“续”只名跨步之同一，不带意义，而所表示的动力学本身不决定意义",
-   "replace": "本篇之“续”只名跨步之同一，不带顾，而所表示的动力学本身不定顾",
-   "why": "意义之名是顾"
+   "id": "五·二",
+   "find": "所归是迭至之所归时入之者可以不同归",
+   "replace": "所归是迭至之所归时入之者可以永不共一状",
+   "why": "于法，凡自外入一环者，入环前之状与环中前一状同归，所以「可以不同归」读作名表之同归时不成立；文句与名之差别在于入者是否终共一状（既济、未济异相而入者永不共一状），照此写。"
   },
   {
-   "find": "合者此后不再分开（`Becoming.Law.merged_stays`），所以被合之二状不能都复",
-   "replace": "同归之二状此后每步皆同（`Becoming.Law.merged_stays`），所以二者不能都复",
-   "why": "合名物之合（Web.NoMerge），状之合名同归"
+   "id": "五·二",
+   "find": "同归者不复异",
+   "replace": "同归者此后不再异",
+   "why": "在立「复」与「同归」之條中以「复」作副词，与名相混。"
   },
   {
-   "find": "所归是一个回环时入之者可以不合",
-   "replace": "所归是一个回环时入之者可以不同归",
-   "why": "合名物之合，状之合名同归"
+   "id": "NEW-2",
+   "find": "则须一无族可尽之全（",
+   "replace": "则诸状无族可尽（",
+   "why": "reset_unlisted 之结论是 ¬ ∃ all : List S, ∀ s, s ∈ all，即诸状无族可尽；「全」不是名表之名（C06 把「全」作「兼」之二名而去之），此处又名一状之全体，改为照 Lean 直说。"
   },
   {
-   "find": "所说便是同归而不是复：合者不复分",
-   "replace": "所说便是同归而不是复（此「复归」也不是名表之复归，扰而复归）：同归者不复分",
-   "why": "合不名状之合；复归是已采之名，须分开"
+   "id": "NEW-2",
+   "find": "体每步皆为假，全无同归",
+   "replace": "体每步皆为假，法无同归",
+   "why": "kept_by_rest 之第一合取是 Law.Lossless next，即法无同归；免用「全」。"
   },
   {
-   "find": "### 五·三　无损即复",
-   "replace": "### 五·三　无同归即复",
-   "why": "损名下降，lossless 之名是无同归"
+   "id": "五·五",
+   "find": "是归而无所收，有不息而无生生；",
+   "replace": "是归而无所收，复而无生生；",
+   "why": "不息是名表之名，只名 Web.Unceasing（屡有作），「有不息而无生生」是 Recycle.closed_unceasing 之读（C06 六·十四 用之）；此处所说是法下无同归之复（Lossless.returns），与作之屡无涉。"
   },
   {
-   "find": "这是复之根本律，不加任何前提（",
-   "replace": "这是复之根本律，除状有一表尽之外不加前提（",
-   "why": "三律皆以有穷为前提"
+   "id": "NEW-3",
+   "find": "以辞为门（每动之为门与否是一辞）：每动之门定然否，则",
+   "replace": "门以辞给之（每动之为门与否是一辞），而非门之动皆反守一辞：每动之门定然否，则",
+   "why": "原句「以辞为门」后之「此辞」可读作门之辞（动上之辞）而非所反守之状上之辞，且 origin_of_decides 之设「非门之动反守 p」未写出；改后「此辞」指最近之「反守一辞」，设亦写全。"
   },
   {
-   "find": "开放把它们分开：后继之法",
-   "replace": "状无表可尽时三者分开：后继之法",
-   "why": "开只名 arising_opens"
+   "id": "NEW-3",
+   "find": "门（约定之名，名表未收：取门户为出入所必经之义）",
+   "replace": "门（约定之名：取门户为出入所必经之义）",
+   "why": "「名表未收」是给整合者之说明，入名表后即为陈语，不宜留在正文；已在 notes 中交整合者。"
   },
   {
-   "find": "作为普遍断言，恰在状有穷且法无同归之处是定理，不是普遍律。",
-   "replace": "作为普遍断言不是普遍律：状有穷时，恰在法无同归之处成立；状无穷时，法无同归亦可无一状复（`Becoming.Law.succ_open`）。",
-   "why": "原句说复恰在有穷处成立，过强：无穷之状亦可皆复"
+   "id": "七·二",
+   "find": "复者之全为一闭",
+   "replace": "复者之域为一闭",
+   "why": "「全」不是名表之名（C06 去之）；一组状名表作「域」，returning_absorbing 说 Returns next 这一域为闭。"
   },
   {
-   "find": "失者在同法之内自己回来，以法无同归为条件；",
-   "replace": "失者在同法之内自己回来，以状有穷且法无同归为条件；",
-   "why": "无同归而状无穷不保复"
+   "id": "七·二",
+   "find": "复者之全（`Becoming.Law.returning_absorbing`）",
+   "replace": "复者之域（`Becoming.Law.returning_absorbing`）",
+   "why": "同上，一组状写域。"
   },
   {
-   "find": "无表能尽之（`Becoming.Law.withHistory_unlisted`）：藏往需开。",
-   "replace": "无表能尽之（`Becoming.Law.withHistory_unlisted`）：藏往不能在有穷多状中。",
-   "why": "开只名 arising_opens；名表明言 more_needs_open 之 open 不借此名"
+   "id": "七·二",
+   "find": "复者之全不必为常",
+   "replace": "复者之域不必为常",
+   "why": "同上；Transit.returning_not_invariant 说 Returns process 这一域不是常。"
   },
   {
-   "find": "所以无损只在两处：有穷多状中之复（五·三）与藏往（须开）。",
-   "replace": "所以法无同归时，或凡状皆复（状有穷则必然，五·三），或有不复之状而无表尽其状（`Becoming.Law.Lossless.unlisted`）；藏往属后者。",
-   "why": "“只在两处”无证且误：数下去无同归而非藏往；二分出自 Lossless.unlisted"
+   "id": "七·四",
+   "find": "所归，有状自外入之之闭也。",
+   "replace": "所归，其状皆复、而有状自外入之之闭也。",
+   "why": "名表之所归是吸引子，锚 drawnInto_returning（文档：what returns is the attractor）；原定义「有状自外入之之闭」使不复之状之 Ahead 集亦为所归，与锚不合，也使说中所归之计数不成立。补「其状皆复」。"
   },
   {
-   "find": "### 五·五　不重访需开",
-   "replace": "### 五·五　不重访则无表可尽",
-   "why": "开只名 arising_opens"
+   "id": "七·四",
+   "find": "复者之全为一闭",
+   "replace": "复者之域为一闭",
+   "why": "「全」不是名表之名；一组状写域（与七·二同改）。"
   },
   {
-   "find": "（`Becoming.Web.revisits_of_bounded`：只用水平，不用流、衡、耗，也不用宇之有穷）",
-   "replace": "（`Becoming.Web.revisits_of_bounded`：只用水平，不用流、衡、耗，也不用宇之有穷；但此律依于水平为自然数：有界之合计只有有穷多种分法）",
-   "why": "律依自然数之量，须写明"
+   "id": "七·四",
+   "find": "复者之全是一闭",
+   "replace": "复者之域是一闭",
+   "why": "同上。"
   },
   {
-   "find": "无损之复（`Becoming.Law.Lossless.returns`）是归而无所收",
-   "replace": "无同归之复（`Becoming.Law.Lossless.returns`，状有穷）是归而无所收",
-   "why": "损名下降；此律须有穷"
+   "id": "七·四",
+   "find": "所归为迭至之所归时入之者可以不同归（互卦之法有三所归，其一为既济、未济迭至之所归，⟦八·十七⟧）",
+   "replace": "所归为迭至之所归时入之者可以永不共一状（互卦之法下，三、四爻相异者二步之后入既济、未济迭至之所归，⟦八·十七⟧）",
+   "why": "一、自外入环者必经同归（入环前之状与环中前一状），「可以不同归」读作名表之同归时不成立，应说入者可以永不共一状；二、「有三所归」是计数，经无此律，且依经之定义诸复者之并亦为闭，计数不定；改为照八·十七所移来之律直说（C17 之 edit：相异者入既济、未济之迭至）。"
   },
   {
-   "find": "永不重访（本条）只在开放之宇中可能，唯此一种不归可以续入生。",
-   "replace": "永不重访（本条）只在无表尽其状之宇中可能，唯此一种不归可以为生。",
-   "why": "开只名 arising_opens；续名跨步之同一，不名“继续”"
+   "id": "七·五",
+   "find": "无一步复为此状",
+   "replace": "无一步再为此状",
+   "why": "經中前句「成闭，入而不复也」用名「复」，后句又以「复」作副词；DrawnInto.never_back 之结论是 ∀ k, orbit next s (n + k) ≠ s，写「再为」。"
   },
   {
-   "find": "远而必反，须状有穷且法无同归（五·三），或一族之水平有界而重访（本条）；状无穷时，数下去不合而永不返（`Becoming.Law.succ_open`）。",
-   "replace": "远而必反，在状有穷且法无同归时成立（五·三）；一族之水平有界则必重访（本条），重访不必是返其始；状无穷时，数下去无同归而永不返（`Becoming.Law.succ_open`）。",
-   "why": "“须”说成必要条件，无证；重访不等于反；不合借物之合"
+   "id": "七·五",
+   "find": "常外不可复至",
+   "replace": "常外不可再至",
+   "why": "副词「复」与名相混；七·八經已写「不可再至」。"
   },
   {
-   "find": "此逆律尚未证。",
-   "replace": "此逆律未决。",
-   "why": "无证者用名表之“未决”"
+   "id": "七·五",
+   "find": "自此不复为原卦",
+   "replace": "自此不再为原卦",
+   "why": "同上。"
   },
   {
-   "find": "名取「久，彌異時也」〔MI1-S-JS〕。",
-   "replace": "名取「久，彌異時也」〔MI1-S-JS〕（墨子经上，先秦）。",
-   "why": "补出处之层与时代"
+   "id": "七·五",
+   "find": "于那一途上入而不复（⟦七·六⟧、⟦七·七⟧）",
+   "replace": "于那一途上不可再至（⟦七·六⟧、⟦七·七⟧）",
+   "why": "句首说的是「复者」，再说它「入而不复」自相矛盾：复是对变整体而言（有一途能回），一途上失去它是或入（possiblyDrawn_iff），不是不复。"
   },
   {
-   "find": "载者两步一换、每步皆递之见证达到此界",
-   "replace": "载者两步一换、只在奇数步递之见证达到此界（每两步有一递，不是每步）",
-   "why": "PatternRelay.shifts 中偶数步无递，原文“每步皆递”错"
+   "id": "七·五",
+   "find": "原文对其所失之评价不带",
+   "replace": "原文对其失之评价不带",
+   "why": "「所失」是名表之名，只名截断于某阶所未计入之量（Remainder，⟦十二·五⟧）；C05 之 edit 亦明言不用「所失」。"
   },
   {
-   "find": "讀（AI，D48）：火传所递者不拣，劫持之样式与照料之样式一样可以递，律不说哪一个值得递。",
-   "replace": "讀（AI，D48）：递所载者不拣样式，律不说哪一个样式值得递。",
-   "why": "D48 只说递载其所载；劫持借劫之今语，照料是顾所不带之义"
+   "id": "七·五",
+   "find": "同章后句见⟦七·九⟧",
+   "replace": "同章后句见⟦十二·十八⟧",
+   "why": "《通书·势》后句「识其重而亟反之……识不早，力不易也」是⟦十二·十八⟧之名之出处（该条说「识不早之名出于此；同章「极重不可反」读作入」）；⟦七·九⟧依 C08 之 edit 收窄为 observed_level_couples，与此句之带律（Regulation.no_narrower_band）不再相连。"
   },
   {
-   "find": "恒持，凡于一步待一所待者，其待每步皆持也。",
-   "replace": "恒持，凡于一步待此所待者，其待于此步皆持也。",
-   "why": "Renewed 只要求每个待于其所在之步持，不要求每步"
+   "id": "七·八",
+   "find": "护闭，变之步其后犹能至 s 者也",
+   "replace": "护闭，于一状 s，变之步其后犹能至 s 者也",
+   "why": "本条經未引入 s 即用之；keeping P s 是对一状 s 而言。"
   },
   {
-   "find": "是最强之等：凡待皆每步皆持。",
-   "replace": "是最强之等：凡待于其步皆持。",
-   "why": "同上，合 Web.Renewed"
+   "id": "七·八",
+   "find": "（行之，则此途上 s 不可再至：s 或入而不复，⟦七·六⟧）",
+   "replace": "（行之，则此途上 s 不可再至；此步在自 s 之途上，则 s 或入，⟦七·六⟧）",
+   "why": "「s 或入而不复」与同條「s 复，则……」相抵：成闭之步只给此途上不可再至；s 或入还要此步在自 s 之途上（possiblyDrawn_iff：∃ t, Reach s t ∧ ¬ Reach t s），s 是否复不由此定。"
   },
   {
-   "find": "「未有能生」要在无容之段长于依之者之蓄时才可能成立（五·十六），由此到「未有能生」尚缺一条只问一段之律（未决）；病在依之者，不在所待",
-   "replace": "「未有能生」要在无容之段长于待之者之蓄时才可能成立（五·十六），由此到「未有能生」尚缺一条只问一段之律（未决）；病在待之者，不在所待",
-   "why": "依之者非名表之名；名表作待者"
+   "id": "七·八",
+   "find": "s 在此途上不可再至，于那一途上入而不复（`Becoming.Branching.possiblyDrawn_iff`）",
+   "replace": "s 在此途上不可再至；此机在自 s 之途上，则 s 或入（`Becoming.Branching.possiblyDrawn_iff`）",
+   "why": "同上：机处之 s 一般是复者，「入而不复」与之相抵；possiblyDrawn_iff 所给是或入，且须机在自 s 之途上。"
   },
   {
-   "find": "从终不足到亡须有待（五·十六）",
-   "replace": "终不足之后，有待而待不改者才亡（五·十六）",
-   "why": "原句说有待是必要条件，无证；律还须待不改"
+   "id": "七·八",
+   "find": "谁之所失算数由",
+   "replace": "谁之失在计内由",
+   "why": "「所失」只名 Remainder（⟦十二·五⟧）；C04 篇首同一意思写「只定谁之失在计内」，从之。"
   },
   {
-   "find": "王弼、孔疏读頻为頻蹙，是期较长之迟复；程頤、朱熹读为屡",
-   "replace": "王弼（魏晋·注）、孔疏（隋唐·疏）读頻为頻蹙，是期较长之迟复；程頤、朱熹（宋明·注）读为屡",
-   "why": "注疏之层与时代"
+   "id": "五·七",
+   "find": "谁之所失算数由",
+   "replace": "谁之失在计内由",
+   "why": "同七·八：「所失」是 Remainder 之名，不可兼名谁之失。"
   },
   {
-   "find": "（相合，yi-fu-mi-fu；复上六，先秦·经）",
-   "replace": "（相合，yi-fu-mi-fu，结构类比；复上六，先秦·经）",
-   "why": "条目明言是结构类比：经文所迷者是复者之路，与頻復同"
+   "id": "五·十",
+   "find": "读頻为頻蹙，是期较长之迟复；程頤、朱熹（宋明·注）读为屡，屡失屡复",
+   "replace": "读頻为频蹙，是期较长之终足；程颐、朱熹（宋明·注）读为屡，屡失屡足",
+   "why": "一、本篇明言三种「回」不相借，此处所对应的是终足之诸等，却写「迟复」「屡复」，把复借给了终足；二、正文用简体，「程頤」「頻蹙」改简体（所论之字「頻」照原文留）。"
   },
   {
-   "find": "季节性之所待每两步一足，依之者不恒亦不竭",
-   "replace": "季节性之所待每两步一足，待之者不恒亦不竭",
-   "why": "依之者非名表之名"
+   "id": "五·十三",
+   "find": "而扣下二行于界前之每次取",
+   "replace": "而不认二行于界前之每次取",
+   "why": "amount_reading 所证是此读于界前二行之每次取皆判否（¬ act t ≤ 1）；「扣下」是扣款、扣留之今语，带金融义，名规不许，且不确。"
   },
   {
-   "find": "持续支持每一个依之者",
-   "replace": "持续支持每一个待之者",
-   "why": "依之者非名表之名"
+   "id": "五·十三",
+   "find": "定于有穷之往而扣下每次过与，然则不认",
+   "replace": "定于有穷之往而不认每次过与，于是也不认",
+   "why": "同上，说与經一致。"
   },
   {
-   "find": "：断其与而资不止，所待终不足；此句与本律之间经存量耗尽之律（流之篇）相对应，不是一条定理；原文之财政义不取。",
-   "replace": "：断其与而资不止，所待终不足；「竭其源」之竭是存量之涸（流之篇），与本名之竭（物与所待之关系）字同而层异，二者之间经存量耗尽之律相对应，不是一条定理；原文之财政义不取。",
-   "why": "防同字为合：荀子之竭是涸"
+   "id": "五·十四",
+   "find": "此所待，其待被剥，而二者此步之事交",
+   "replace": "此所待，而二者此步之事交",
+   "why": "UnderminingOn.interacts 之结论只是 ∃ g, Bearing t g c ∧ Interacts c (f, t) (g, t)，不说此 g 之待即被剥之待；经只写 Lean 所证。"
   },
   {
-   "find": "二资者各每步所取不过其与，则独资者各恒；合取每步过与，则合资者竭，自某步起合资者及维持之物皆不活动。",
-   "replace": "二资之者每步所取各不过其与，则各自资之皆恒；二者共取每步过与，则共资之者竭，自某步起共资之者及维持之物皆不活动。",
-   "why": "合取是名表弃用之形（逻辑之∧），名作共取过与；独资、合资是金融词"
+   "id": "五·十四",
+   "find": "资之者之事与所剥之待之待者之事经此所待相关",
+   "replace": "资之者之事与一以正需待此所待者之事经此所待相关",
+   "why": "同上，说与经、与 Lean 之陈述一致。"
   },
   {
-   "find": "合起来则过之，合资者竭，与维持之物一同不复活动",
-   "replace": "合起来则过之，共资之者竭，与维持之物一同不复活动",
-   "why": "合资是金融词"
+   "id": "五·十四",
+   "find": "谁之所失算数由",
+   "replace": "谁之失在计内由",
+   "why": "同七·八：「所失」只名 Remainder。"
   },
   {
-   "find": "此族不能表示各资者之份；对每个衡之流，各自之取在所与之内而共取可以过之，见共取过与之律（流之篇，`Becoming.Flow.joint_excess_ends`）。",
-   "replace": "此族把共资读作一物，不能表示各资之者之份；对每个衡之流，见共取过与之律（流之篇，`Becoming.Flow.joint_excess_ends`：在其所列条件下，共取连数步过与，则与终止，凡以所需不低于门限待此所待者此后皆不活动，取者在内），此律只问共取，不分各取之份。",
-   "why": "原句所述非 joint_excess_ends 之所证"
+   "id": "五·十七",
+   "find": "⟦三·十三⟧）。沿相续而恒，恰当",
+   "replace": "⟦三·十三⟧）。沿相续而剥，物于一步资一所待，步后其积既在一待于其步之需之下，又在此待者沿相续所续之某者于其步曾足之需之下也（其间相续之每一步，前后皆待此所待）。沿相续而恒，恰当",
+   "why": "本條經两处断言「沿相续而剥」（改认不改之、唯自续者即剥），而全书未定义它；依 Web.UnderminingAlong 与 MetAboveAlong（Linked (W.holdingOn R c)：每一步 R 相连且前后皆待 c；所续者于其步之需曾足而高于步后之积）补定义，与⟦五·十四⟧剥之定义同式。"
   },
   {
-   "find": "则与于此步者每一个之取都少于共取",
-   "replace": "则在此步者每一个之取都少于共取",
-   "why": "与名给与，“与于”易读作给"
+   "id": "五·十七",
+   "find": "于是二者与沿相续而剥都不改（",
+   "replace": "于是二者与沿相续而剥（`Becoming.Web.UnderminingAlong`）都不改（",
+   "why": "补所定义之名之 Lean 锚。"
   },
   {
-   "find": "（复现既不能由有穷之段证实，也不能由之否证，`Becoming.Sequences.recurs_not_verifiable`）",
-   "replace": "（复现既不能由有穷之段证实，也不能由之否证，`Becoming.Sequences.recurs_not_verifiable`、`Becoming.Sequences.recurs_not_refutable`）",
-   "why": "不可否证另有其律"
-  },
-  {
-   "find": "他者可以与于此步，定义不说是这一次资单独所致。",
-   "replace": "他者可以同在此步资之，定义不说是这一次资单独所致。",
-   "why": "与名给与"
-  },
-  {
-   "find": "所削先是所依者，依之者之不活动可以在后",
-   "replace": "所削先是所待者，待之者之不活动可以在后",
-   "why": "依之者非名表之名"
-  },
-  {
-   "find": "物自身之恒不保它对他者无剥：一个清除者满足流之篇与本篇导出的每一个要求，每步活动而为所待所容",
-   "replace": "物所待者恒持不保它对他者无剥（物若恒，则其所资者亦恒持，不剥，五·十四）：一个清除者满足流之篇所列诸要求（衡、耗、有待），每步活动而为所待所容",
-   "why": "清除者资栖居之处而竭之，不恒；原句与五·十四相违"
-  },
-  {
-   "find": "所待终不足之后，依之者只有两途：待不改者此后不活动，即亡（`Becoming.Web.consumed_ends_when_fixed`），仍活动者已改其待（`Becoming.Web.consumed_continues_transformed`）；第三途在所待一边：水平终足（五·八）。",
-   "replace": "所待终不足之后，待之者只有两途：待不改者此后不活动，即亡（`Becoming.Web.consumed_ends_when_fixed`），仍活动者已改其待（`Becoming.Web.consumed_continues_transformed`）。一待绝而所待未终不足时，另有第三途在所待一边：水平终足（五·八）。",
-   "why": "终不足后不能终足；第三途属绝之后"
-  },
-  {
-   "find": "在待上有确切之形：能续者已改其待。",
-   "replace": "在待上有确切之形：所待终不足之后仍活动者已改其待。",
-   "why": "续名跨步之同一，不名仍活动"
-  },
-  {
-   "find": "链接越多，剥与竭只增不减，恒只减不增（`Becoming.Web.underminingAlong_itself_iff`、`Becoming.Web.underminingAlong_mono`）。",
-   "replace": "链接越多，剥与竭只增不减，恒只减不增（`Becoming.Web.underminingAlong_itself_iff`、`Becoming.Web.underminingAlong_reidentify`、`Becoming.Web.underminingAlong_mono`、`Becoming.Web.consumingAlong_mono`、`Becoming.Web.renewingAlong_mono`）。",
-   "why": "改认与竭、恒之单调各有其律"
-  },
-  {
-   "find": "衡之宇中，一步之后 d 与 c 同水平而立",
-   "replace": "衡之宇中，物之同异定然否，一步之后 d 与 c 同水平而立",
-   "why": "continues_as_alike 以 DecidableEq 为条件"
-  },
-  {
-   "find": "荀子以一实为可稽之事实，理论只在上述条件下给出它，其余处它是读法。",
-   "replace": "荀子以一实为可稽之事实，理论只在衡之宇中、一步之后无他物与之同水平而立处定之（`Becoming.World.fixed_iff`），其余处它是读法。",
-   "why": "“上述条件”所指不明，且上文之律是不定之一面"
-  },
-  {
-   "find": "不损之处，一单位在两处之间循环、总量恒为一，就有不息",
-   "replace": "上律诸前提皆成立而总量恒为一时，一单位在两处之间循环，就有不息",
-   "why": "此例中“损”之前提成立，不是“不损”"
-  },
-  {
-   "find": "在流行之外立一主宰之理，属本原与单一中心之层",
-   "replace": "在流行之外立一主宰之理（不是名表之理），属本原与单一中心之层",
-   "why": "理是已采之名，须分开"
-  },
-  {
-   "find": "——定域：恰在状有穷且法无同归之处是定理；开放中无同归亦可永不复（yi-tai-wuwang-bufu）。",
-   "replace": "——定域：状有穷时，恰在法无同归之处成立；状无穷时，无同归亦可永不复（yi-tai-wuwang-bufu）。",
-   "why": "同五·三；开只名 arising_opens"
-  },
-  {
-   "find": "——相合：兼久则其体不得 d 步无作",
-   "replace": "——相合：兼久而其体各短，则不得 d 步无体作",
-   "why": "律须体各短"
-  },
-  {
-   "find": "——相合：火传之下样式每 d 步有一递",
-   "replace": "——相合：火传之下，载者各短而样式久，则每 d 步有一递",
-   "why": "律须载者各短、样式自某步起每步在"
-  },
-  {
-   "find": "〔FO1-S-SA〕——相合：不与则作不复现",
-   "replace": "〔FO1-S-SA〕——相合（刘宋译，印度阿含传统）：不与则作不复现",
-   "why": "此段只见于对照，须标层与时代"
-  },
-  {
-   "find": "所表示的动力学本身不定意义（yi-xici-cheng-xing-cun-cun）",
-   "replace": "所表示的动力学本身不定顾（yi-xici-cheng-xing-cun-cun）",
-   "why": "意义之名是顾"
+   "id": "DUIZHAO",
+   "find": "自乾卦第七步初爻复刚",
+   "replace": "自乾卦第七步初爻再为刚",
+   "why": "同五·一：副词「复」与名「复」相混，而此行要说的正是初爻再来不是卦之复。"
   }
  ],
- "verdict": "sound after edits",
- "notes": "Checks I ran. All 31 quotations are exact in the frozen texts (ctq.py text). Every declaration cited in the draft resolves under its current full name with no rename (resolve.py). The two I add also resolve: Sequences.recurs_not_refutable and World.fixed_iff, and so do the monotonicity and re-identification laws I cite. All 22 record links exist. I read each clause (經) against the Lean hypotheses. I wrote the draft to /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c05review/draft.md and the result to .../c05review/after.md. Every find string occurs exactly once, and all 51 edits apply cleanly.\n\nSubstantive errors fixed:\n(a) 五·十五 says 物自身之恒不保它对他者无剥. This contradicts 五·十四: a 恒 formation is within renewal at every active step, so it never undermines. The clearer is not 恒, because it consumes the habitat. Only its one depended-on condition is renewed. The draft also claims the clearer meets \"every requirement of this 篇\", which is false.\n(b) 五·七 says the PatternRelay.shifts witness passes at every step. In fact it passes only at odd steps.\n(c) 五·十二: 「各自之取在所与之内而共取可以过之」 is not what Flow.joint_excess_ends proves.\n(d) 五·十六: the third outcome, restoration, is placed after 终不足, where it is impossible. It belongs after a break.\n(e) 五·四: \"无损只在两处…藏往\" is unproved and wrong, since counting on (succ) is lossless without kept history. The true split is Lossless.unlisted.\n(f) Over-strong scope on 「无往不復」, in 五·三 and its 对照 line: infinitely many configurations can also all return. On 「远而必反」, \"须\" is unproved and revisiting is not returning. 「喪馬勿逐」 omitted finiteness.\n(g) 五·三 says \"不加任何前提\", yet the three laws need finiteness.\n(h) Local conditions missing from the text: natural-number levels in revisits_of_bounded, decided identity in continues_as_alike, brief carriers and parts in the 对照 lines. 五·十七 lacked the laws for the monotonicity and re-identification claims. Recurrence is not refutable was cited without its law.\n(i) 恒持 was written as kept at every step. Web.Renewed only requires kept at the step of each dependence.\n\nName fixes:\n- 无损 (损 is depletion) becomes 无同归.\n- 开 and 开放 for \"no list holds it\" become 无表尽之. The name table reserves 开 for arising_opens and explicitly forbids it for more_needs_open.\n- 合 for merged configurations becomes 同归, because 合 is the merge of formations.\n- 合取 was rejected in the table; it is now 共取.\n- 合资 and 独资 are financial words.\n- 依之者 is not a table name; it becomes 待之者.\n- 与于 collides with 与 (giving).\n- 续 used for \"goes on\" collides with 续 (continuation).\n- 意义 becomes 顾 in the opening.\n- 理 and 复归 in quotations are now marked as different from the adopted names.\n\nDating: added for 墨经, for the 王弼, 孔疏 and 程朱 commentaries, and for 杂阿含 (Liu Song translation).\nKinds: 迷復 is now labelled 结构类比 like 頻復. 荀子's 竭 is marked as 涸, so the agreement does not rest on the shared character.\n\nNot edited, left to the integrator:\n(1) The 經 of 五·六 defines 久 with \"体各短或各亡\" built in. The spine has no 久 definition, so this is a convention, and the two law sentences already state those conditions. It could be shortened to \"兼自某步起每步皆活动\".\n(2) 维持之物 uses 维持, the modern gloss of 持, for the sustaining formation. Harmless, but 待此所待之物 would avoid the echo.\n(3) Several 說 run past eight sentences (五·二, 五·十二, 五·十七, 五·十八).\n(4) \"所以持续、成功与增长都不证明恒\" follows the English chapter. The Lean shows only that persistence fails to certify renewal.\nNo divergence is written as an agreement. The continuation condition is stated, not asserted, and ordering appears only in 以广为愈."
+ "notes": "I checked the whole part against the outline, the name table, the plain wordings, C05.json and the Lean files. Results:\n\n- **Lean citations.** Every one of the 197 backticked declarations exists on the current receipt. All 23 records exist. I read each 經 against the hypotheses, direction and conclusion of the Lean it cites, including Gated.lean (the whole module), Junctures, Attraction, Recurrence, LeastLoss, PatternPassing, Wholes, Restoration, Dependence, RenewalFlow, Horizon and ContinuedClasses.\n- **Quotations.** All 55 「…」〔ID〕 pass ctq.py text exactly.\n- **References.** Every ⟦id⟧ is in book-1-outline.txt and points to the right 條.\n- **Passage kinds.** Every passage id and its kind (相合, 定域, 相分) agrees with passages.json.\n- **Instructions.** All 15 edits in C05.json are carried out. I agree with the drafter's notes 二(1) through (7): the predicate parts of Web.Whole; ByPassing as the premise itself; origin_of_propositions_iff and no_juncture_of_keeps as written; the claim that no 經 uses a premise about the world (Restoration and Dependence don't use Dependent).\n\nThe edits above fix the defects that remained:\n- 經 that don't match their Lean: the extra 「其待被剥」 in 五·十四; the self-contradictory 「s 或入而不复」 in 七·八.\n- A name used but never defined: 沿相续而剥 in 五·十七; 「可得」 nowhere explained.\n- The definition of 所归 didn't match its anchor drawnInto_returning, so 「三所归」 couldn't be counted. Saying 「入之者可以不同归」 was also wrong, because anything entering a cycle from outside passes a merge.\n- One name used for another's concept: 所失 (it names only Remainder), 不息, 全, and adverbial 复 used beside the name 复. 「迟复」 and 「屡复」 borrowed 复 for 终足.\n- Wording: 扣下 has a financial sense; 程頤 is not simplified; 「名表未收」 is a note to the integrator left in the body; 七·五 points 「同章后句」 at the wrong 條.\n\nFor the integrator (no edit made):\n1. **⟦三·二十三⟧ and 五·六.** The C03 edit renames that 條 「族之兼」, but Web.Whole's parts are a predicate (parts : F → Prop); needs_new and Countless show they need not be finite. 族 is a finite list, so 「族之兼」 is wrong for this anchor. ⟦三·二十三⟧ and the name table should adopt 域之兼 (anchor Web.Whole), keeping 兼 for World.withRest.\n2. **往 in 五·四.** The 經 uses 往, a name defined in ⟦九·十二⟧, which comes later; 凡·二五 also uses it early. The 經 gives its local sense (前今入于往), so I left it. Either accept this or move the definition of 往 forward.\n3. **Name-table entries needed.** 门 (anchors Gated.origin and Gated.ReflectedBy; it does not carry the sense of a normative gate); 域之兼; 见容 (the passive of 容, already used throughout C02). 反守 has no name; its definition is written out in brackets in the 經.\n4. **Collisions with 门 in other 條.** 「门」 in the 經 of ⟦四·二十一⟧ and 「关卡步」 in ⟦十三·五⟧ clash with this 门. ⟦四·十五⟧'s 「（篇五）」 should point to ⟦NEW-2⟧.\n5. **The outline's titles are stale.** For 五·五 it still has 「不重访则无表可尽」 and for 五·十七 「续与沿续之恒竭」. The part's titles are 「日新则无族可尽」 and 「沿相续之恒与竭」. plain-wordings has 沿相续而恒／竭／剥 but also 「沿续而广」; one form should be chosen.\n6. **所归 elsewhere.** My new definition (its states all return, and something enters from outside) matches 「迭至之所归」 in plain-wordings. ⟦八·十七⟧ should not count 所归 either; giving the three classes of hexagrams by their third and fourth lines is enough.\n7. **證 length.** The 證 of 五·六 (11 declarations) and 五·十七 (15, 16 with the new UnderminingAlong) exceed STYLE's 3 to 8. They merge several deleted 條, and nothing in them is wrong."
 }

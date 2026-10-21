@@ -1,387 +1,77 @@
 {
- "pian": "篇三　作、已与续",
  "edits": [
   {
-   "find": "数存于所计者已定之处",
-   "replace": "数存于所计者定然否之处",
-   "why": "已是止息之名，已定当写名表之定然否"
+   "id": "三·八",
+   "find": "前步之数为所留者加毁者之数，后步之数为所留者加成者之数",
+   "replace": "前步之数为两步皆列者加毁者之数，后步之数为两步皆列者加成者之数",
+   "why": "所留 is a name in the table for a different concept: the level left after a prior draw (RegimeMargin.step, Optimum.course_beyond). The table's 所留 row asks that this C03 phrase be rewritten as the members listed at both ends of the step (\"两表皆列者\"; 表 is now 族/列). In FamilyCounts.tally (Tally: n t = k + c t, n (t+1) = k + a t), k is exactly the number of members listed at both steps."
   },
   {
-   "find": "每步之关系不定之，由相续读出",
-   "replace": "每步之关系一般不定之（衡而步后无他物同立之处除外，三·十五），由相续读出",
-   "why": "三·十五证明衡处同一可由关系固定，原句过强"
+   "id": "三·八",
+   "find": "计一有列者，每步所留者加其毁者为前步之数，加其成者为后步之数",
+   "replace": "计一有列者，跨每一步，两步皆列者加其毁者为前步之数，加其成者为后步之数",
+   "why": "The same 所留 name collision in the 說. Changed together with the 經 so the two use the same wording."
   },
   {
-   "find": "构造之例只作见证，不作律。",
-   "replace": "构造之例只为见证，不为律；步离散、量以自然数计、活动为一辞，是表示之选择，律依之处随文说明。",
-   "why": "作是生起之名，不作虚用；写出模型之选择"
+   "id": "三·十二",
+   "find": "其行无状复而其间有改者",
+   "replace": "其行无某步之状其后再得而其间有改者",
+   "why": "复 is defined only in ⟦五·一⟧, which comes later, so this 經 uses a later name. The plan for 三·十二 explicitly says 复定于五·一，不先用 (and it changed 可复其前状 to 可再至其前状 for the same reason). The new wording is the gloss already given in the 說 and matches Settling.ChangesInLoop (state (i+p+1) = state i with a change between) exactly."
   },
   {
-   "find": "以及兼与体：兼只经体之作而久。",
-   "replace": "以及兼与体：体各亡而有列之兼，只经体之作而久。",
-   "why": "无条件之说为 Immortal、Countless 所反"
+   "id": "三·十二",
+   "find": "第二律说何时可知一行自何步不再改：状复而其间有改，谓某步之状其后再得而其间某步有改；无此者",
+   "replace": "第二律说何时可知一行自何步不再改：某步之状其后再得而其间某步有改（即状复而其间有改，复见⟦五·一⟧）；无此者",
+   "why": "Keeps the 說 in line with the 經 after 复 is removed there. The fixed plain wording 状复而其间有改 is still named, with a pointer to where 复 is defined."
   },
   {
-   "find": "须每步之然否可判定（`Becoming.persists`）",
-   "replace": "此处用每步之然否可判定（`Becoming.persists`；以辞皆定然否代之亦可，`Becoming.persists_of_em`）",
-   "why": "脊柱未证判定之必需，只证其足"
+   "id": "三·十二",
+   "find": "诸若见其记录",
+   "replace": "诸若见记录 [where-a-run-of-a-regime-comes-to-rest](../results/records/where-a-run-of-a-regime-comes-to-rest.md)",
+   "why": "When RegimeMargin.Adjusted.comes_to_rest was moved into the 說, its record was dropped from the 證. As a result, \"see its record\" now points to a record that is linked nowhere in the 條. The record exists."
   },
   {
-   "find": "名取「已，成、亡。」〔MI1-S-JS〕（相合，mojing-yi-cheng-wang）：《經說上》以",
-   "replace": "名取「其分也，成也；其成也，毀也」〔ZH1-S02〕（名表所据）；墨经「已，成、亡。」〔MI1-S-JS〕（相合，mojing-yi-cheng-wang）只作旁证：《經說上》以",
-   "why": "名表成、毁出处是齐物论，墨经只作旁证"
+   "id": "三·十五",
+   "find": "则有使之仍衡之改认以 c 续为 d。物跨一步而作",
+   "replace": "则有使之仍衡之改认以 c 续为 d；物跨一步而作",
+   "why": "World.arises_fixed_iff needs both a balanced world and DecidableEq w.Relatum. With 。 the sentence moved here from 十·五 falls outside the scope of 宇衡而物之同异定然否：, so the 經 would state the law without its conditions. With ； the scope covers it."
   },
   {
-   "find": "正是一所然在步间的两种变；墨经以“已”兼成亡",
-   "replace": "正是一所然在步间的两种变化；墨经以“已”统成亡",
-   "why": "变是过程之名，兼是整体之名，不可借用"
+   "id": "三·二十",
+   "find": "存，待者于一步运，或其某待于此步成立也。",
+   "replace": "存，待者于一步运，或于此步待一所待也。",
+   "why": "Web.Holds t f := active t f ∨ ∃ c, requires t f c. 成立 in a 經 collides with the name 成 (comes to hold). The 然 row asks that 成立-sense uses be rewritten and that 成 be kept for 始然. The replacement uses only the table's 待 and 所待, and states the disjunct exactly."
   },
   {
-   "find": "正向两行可证",
-   "replace": "正向可直接证",
-   "why": "两行是名表之名，不作两行证明"
+   "id": "三·十八",
+   "find": "以出芽读之，亦有裂，而自第一步后无新作",
+   "replace": "以另一有裂之相续读之，自第一步后无新作",
+   "why": "出芽 is not a name in the table; the drafter's own note says it is not adopted. It stays in the 說 as a description of the example. The existential claim needs only another continuation with a split under which nothing newly arises after step 1. Budding.growth_without_arising gives exactly that: ¬NoSplit buds and ∀ t ≥ 1, ¬ArisesFrom."
   },
   {
-   "find": "作不是生：生（生成）与绝生（退化）以广比较（篇六）",
-   "replace": "作不是生：成生与绝生以广比较（篇六）",
-   "why": "名表以成生与绝生成对"
+   "id": "三·六",
+   "find": "读于运，族中屡有作恰当族中屡有已（`Becoming.Web.arising_recurs_iff`），只要自某步起有一族含每步之运者（`Becoming.Web.unceasing_iff_covering`）。",
+   "replace": "读于运，族中屡有作恰当族中屡有已（`Becoming.Web.arising_recurs_iff`）；不限于一族，自某步起有一族含每步之运者，则屡有作恰当屡有已（`Becoming.Web.unceasing_iff_covering`）。",
+   "why": "As written, the covering condition attaches to the family law, but arising_recurs_iff (a family fs) needs no covering. The covering list is the condition of unceasing_iff_covering, which is about Unceasing over all formations, not about one family."
   },
   {
-   "find": "不先设为好。名“作”",
-   "replace": "不先定为好。名“作”",
-   "why": "设专名陈述而不断言者"
+   "id": "三·十一",
+   "find": "止之律之结论只是不可非，要对每个有穷之宇名出那一步，即得无穷可尽；以任意之量读之亦然。",
+   "replace": "止之律之结论只是不可非（以任意之量读之亦然）；要对每个有穷、运定然否而合八设（⟦NEW-12⟧）之宇名出其后无作之步，即得无穷可尽。",
+   "why": "World.lpo_of_finite_ends assumes the step can be named for every world that has decided activity, is Premised (the eight premises) and is Finite. 每个有穷之宇 drops two of those hypotheses. The trailing 亦然 also reads as if the any-amounts reading gave LPO, when what carries over is only the not-refuted conclusion (InAmounts.rests_unrefuted_enclosed)."
   },
   {
-   "find": "讀（AI，D2、D6）",
-   "replace": "讀（AI，D2、D3）",
-   "why": "D6 论终结之步的汲取，与此无关；D2、D3 拒以活动读生成"
+   "id": "三·二十",
+   "find": "以存读运，入蛰非已，与此相应；",
+   "replace": "以存读运，入蛰非已，貌杀非杀即指此；",
+   "why": "相应 is the table's name for the relation between 爻. The plan removed it from 十·二 for this reason. 相合 or 一致 cannot replace it either: 相合 is a kind label and this passage is 定域, and 一致 is used for coordination."
   },
   {
-   "find": "聚无尽复现，恰当散无尽复现，不待他设。",
-   "replace": "聚无尽复现，恰当散无尽复现，不待定然否。",
-   "why": "所省者正是定然否；设专名陈述而不断言者"
-  },
-  {
-   "find": "是同一种变读于“水平为正”",
-   "replace": "是同一种变化读于“水平为正”",
-   "why": "变是过程之名"
-  },
-  {
-   "find": "量有界，则其升无尽复现，其降亦无尽复现。",
-   "replace": "量有界而其升无尽复现，则其降亦无尽复现。",
-   "why": "原句读如断言升复现；falling_recurs 以升复现为前提"
-  },
-  {
-   "find": "第一律是计账（`Becoming.over_stretch`",
-   "replace": "第一律是增减相抵（`Becoming.over_stretch`",
-   "why": "计账是财务之词，名表未收"
-  },
-  {
-   "find": "由此，量不低于零，降不能无尽而无升",
-   "replace": "由此，量为自然数，每降至少一，而量不低于零，故有穷之族中降不能无尽而无升",
-   "why": "只凭不低于零不足（稠密之量可无尽而降，三·十一），律依自然数之量"
-  },
-  {
-   "find": "消息（普查之衡，census balance；复词，消为已，息为长）是三·四之计账用于",
-   "replace": "消息（普查之衡，census balance；复词，消为毁，息为成）是三·四之增减相抵用于",
-   "why": "消息计任一所然之毁与成，不专指已；计账是财务之词"
-  },
-  {
-   "find": "剥彖此句所说是卦中刚柔之消长（十二消息卦，读作消长环，`Becoming.Hexagram.waxWane`），与此计账不同构",
-   "replace": "剥彖此句所说是柔变刚之消长（汉易以之立十二消息卦，读为消长环，`Becoming.Hexagram.waxWane`；十二消息卦是汉代卦气之说，不是彖传本文），与此增减相抵不同构",
-   "why": "十二消息卦为汉代后起，不可归于彖传；去财务之词"
-  },
-  {
-   "find": "定然否是这条律自己的条件：不加定然否而对每个有穷之宇要求它，恰等价于辞皆定然否（`Becoming.World.law_iff_em`，一·十二）。",
-   "replace": "不加定然否，此律仍有不可非之形：成无尽复现，则不可谓自某步起族中无毁，反之亦然（`Becoming.Recurs.ceasing_not_stopping`、`Becoming.Recurs.coming_not_stopping`）；自某步起定然否，即得恰当之形（`Becoming.coming_recurs_iff_decided`）。对每个有穷之宇不加定然否而要求恰当之形，等价于辞皆定然否（`Becoming.World.law_iff_em`，一·十二）：这是表示之逻辑（活动为一辞）的校准，不说展开的更多事。",
-   "why": "所引记录 recurrence-without-decidedness 正说此律不待每步定然否；law_iff_em 只是逻辑之校准"
-  },
-  {
-   "find": "`Becoming.World.law_iff_em`、`Becoming.World.stutter_arisingRecurs_iff`",
-   "replace": "`Becoming.World.law_iff_em`、`Becoming.Recurs.ceasing_not_stopping`、`Becoming.Recurs.coming_not_stopping`、`Becoming.coming_recurs_iff_decided`、`Becoming.World.stutter_arisingRecurs_iff`",
-   "why": "补上承载新说之声明"
-  },
-  {
-   "find": "以“命之行”为定数不带入",
-   "replace": "以“命之行”为命定之数，不带入",
-   "why": "定数是名表之名（列一次即定然否），不作命数用"
-  },
-  {
-   "find": "（定域，wangbi-gong-cheng-ze-yi）：作一般之言，只在有穷或有界时成立（三·七）。",
-   "replace": "（定域，wangbi-gong-cheng-ze-yi）：若为普遍之言（作无尽复现，则已亦无尽复现），只在有穷或每步活动者有界时成立（三·七）；物无穷时可作而永无已。",
-   "why": "作是生起之名，不作虚用；写出结构"
-  },
-  {
-   "find": "凡数随步不减而无界，皆有宇",
-   "replace": "凡界随步不减而无上限，皆有宇",
-   "why": "数是计数之名，此处是界"
-  },
-  {
-   "find": "其数存，恰当表中每物之然否已定。定数，一表之物各列一次也：能定数，恰当表中诸物之同异已定；能定数，不可非。凡于有列之族计其数，皆为计账；计数之逐点之律，恰为计账之律。",
-   "replace": "其数存，恰当表中每物定然否。定数，一表之物各列一次也：能定数，恰当表中诸物之同异定然否；能定数，不可非。凡于有列之族计其数，每步皆合消息（前表之数为所留加毁者，后表之数为所留加成者）；只依诸数之值之律，于每个定然否之有列之族皆然，恰当于每组逐步合消息之数皆然。",
-   "why": "已定与已（止息）相撞；计账是财务之词；counting_laws 之左方要求定然否"
-  },
-  {
-   "find": "它存在恰在所计者已定之处",
-   "replace": "它存在恰在所计者定然否之处",
-   "why": "已是止息之名"
-  },
-  {
-   "find": "定数（列一次即已定之同一）：一表能使每物只出现一次，恰当诸物两两之同异已定",
-   "replace": "定数（列一次即定然否之同一）：一表能使每物只出现一次，恰当诸物两两之同异定然否",
-   "why": "已是止息之名"
-  },
-  {
-   "find": "计一有列之族，每步所留者加其已者为前表，加其成者为后表，是为计账（`Becoming.FamilyCounts.tally`）；计账就是计数之全律（`Becoming.counting_laws`）。",
-   "replace": "计一有列之族，每步所留者加其毁者为前表之数，加其成者为后表之数，是为逐步之消息，不须定然否（`Becoming.FamilyCounts.tally`）；只依诸数之值之律，于定然否之有列之族皆然者，恰为逐步之消息所给之律（`Becoming.counting_laws`）。",
-   "why": "所然泛指时其变是毁不是已；计账是财务之词；写出 counting_laws 的条件"
-  },
-  {
-   "find": "反向（能列一次则同异已定）是理论所加；荀子之定数是动宾，不取命数、定数之义。",
-   "replace": "反向（能列一次则同异定然否）是理论所加；荀子之定数是动宾，不取命数（命定之数）之义。",
-   "why": "已定与已相撞；不可以定数自否其名"
-  },
-  {
-   "find": "不息依于谁续谁：同一展开分名则不息",
-   "replace": "不息依于命名：同一展开分名则不息",
-   "why": "Lineage.readings 与 rename_unceasing 讲改认（命名），不讲相续"
-  },
-  {
-   "find": "其“不息”读为补充之复现，生生不息是生生在兼之中继续而仍有更多可形成，所以无损之复不足为生生不息；止之一族是不息之另一面（三·十一）。",
-   "replace": "其“不息”读为作经补充而复现，生成之源不竭，不只是补充之复现（补充可复现而无一作，`Becoming.Tide.renewal_without_arising`）；生生不息是生生在兼之中继续而仍有更多可形成，所以只有复者（如二池之循环）有不息而无生生不息。",
-   "why": "D5 读不息为经补充而作之复现；“止之一族是不息之另一面”无所指"
-  },
-  {
-   "find": "后者之体不待任何所待，是模型之设。",
-   "replace": "后者之体不待任何所待，是模型所给，不是律。",
-   "why": "设专名陈述而不断言者"
-  },
-  {
-   "find": "把不亡当作个体可得的无条件持存；凡有所需者，其持存以容为条件，蓄只延亡。",
-   "replace": "把不亡当作个体凭养神即可得、不待所待之容的持存；在有待（活动则受容）或以蓄承其活动之处，持存以容为条件，蓄只延亡。",
-   "why": "养神本身是条件，不是无条件；写出律之前提"
-  },
-  {
-   "find": "凡有穷而合诸设之宇皆能名其自此无作之步，则无穷可尽。",
-   "replace": "若凡有穷、活动定然否而合八条件（有待、衡、唯活动者与、唯活动者取而所取唯其所资、耗、物皆有形、有列、传）之宇，皆能名其自此无作之步，则无穷可尽。",
-   "why": "lpo_of_finite_ends 之前提是 Premised 八条件且活动定然否；设专名陈述而不断言者"
-  },
-  {
-   "find": "停息之律（`Becoming.World.comes_to_rest_unrefuted`）的每一设都不可少，得止者",
-   "replace": "停息之律（`Becoming.World.comes_to_rest_unrefuted`）中，活动者之列与水平为正者之列皆不可少（`Becoming.World.rest_needs_census`、`Becoming.World.rest_needs_standing`）；得止者",
-   "why": "脊柱只证二列之不可少；原句无证"
-  },
-  {
-   "find": "要名出那一步，对每个有穷而合诸设之宇都名出，即得无穷可尽（LPO，`Becoming.World.lpo_of_finite_ends`）。",
-   "replace": "要对每个有穷、活动定然否而合八条件之宇都名出那一步，即得无穷可尽（`Becoming.World.lpo_of_finite_ends`），活动定然否亦不免。",
-   "why": "写出前提；只用中文"
-  },
-  {
-   "find": "一水平在二物之间对半相传，合其余诸设而作已永不止",
-   "replace": "一水平在二物之间以半相输，他条件皆合，而作已永不止",
-   "why": "传是名表之名（传递）；其余是名表之名；设专名陈述而不断言者"
-  },
-  {
-   "find": "作无尽复现则不围（`Becoming.World.arising_opens`，篇四）。",
-   "replace": "在有列、物皆有形、衡而耗之宇中，作无尽复现，则不可谓自某步起每步皆围（`Becoming.World.arising_opens`，篇四）。",
-   "why": "arising_opens 之前提"
-  },
-  {
-   "find": "对照（定域）：「物不可以終止」〔YD-OW-XG〕",
-   "replace": "对照（定域，xugua-zhong-dong-zhong-zhi）：「物不可以終止」〔YD-OW-XG〕",
-   "why": "补条目 id"
-  },
-  {
-   "find": "第二律说何时可知其已静：一般而言，知一行自何步不再改，须对每步判定此后是否再改（`Becoming.LastChange.settles_iff_decided`，一表所含而环中无改之行），对每个变要求此事恰等于无穷可尽（`Becoming.LastChange.lpo_iff_settles`）；若有一量记其改变，则在其量所余之步数内必静，可判定（`Becoming.LastChange.still_within`）",
-   "replace": "第二律说何时可知其行自何步不改：一般而言，一行自某步起不改，恰当对每步判定此后是否再改（`Becoming.LastChange.settles_iff_decided`，状之同异定然否、诸状在一表中而环中无改之行）；对每个状在一有穷之表中、自始无可复返之改的变，要求其每一行皆自某步起不改，恰等价于无穷可尽（`Becoming.LastChange.lpo_iff_settles`）；若有一量记其改变，则在其量所余之步数内必不再改，不待无穷可尽（`Becoming.LastChange.still_within`）",
-   "why": "已静与已（止息）相撞；D45 以停息名趋停，静只名状；写出 lpo_iff_settles 之条件"
-  },
-  {
-   "find": "体制之余地一例中，带内每行于 3hi+3 步内静于汲取或其下（`Becoming.RegimeMargin.Adjusted.comes_to_rest`）。",
-   "replace": "一例：一调整之行，自带内之始，于 3hi+3 步内不再改（`Becoming.RegimeMargin.Adjusted.comes_to_rest`，诸前提见其记录）。",
-   "why": "体制是社会之词且借体字；汲是名表之名（汲入），此处不是"
-  },
-  {
-   "find": "对照（定域，zhaolun-dong-jing）：「我之所謂靜者，亦以昔物不至今，故曰靜而非動。」〔CT1-S-ZL〕：僧肇之静是每步之关系自足、不待跨步之同一（三·十四），与此同字而所指不同，只取“一时成立”之义。",
-   "replace": "僧肇物不迁论之静与此同字异指：其所说是每步之关系自足、不待跨步之同一，结构在三·十四，对照列于彼。",
-   "why": "其锚是 reidentify_step（三·十四），在此只是同字；不可以同字取义"
-  },
-  {
-   "find": "“苦”之评价不带入。",
-   "replace": "“苦”之评价不带入。又（定域，zhaolun-dong-jing）：「我之所謂靜者，亦以昔物不至今，故曰靜而非動。」〔CT1-S-ZL〕：静之读是每步之关系自足、不待跨步之同一（`Becoming.Web.reidentify_step`），与三·十二之静同字异指；物不迁作普遍之言则定域。",
-   "why": "把僧肇之对照移到其结构所在之条"
-  },
-  {
-   "find": "续，待者于一步之后活动，而续一步之前某活动者也。",
-   "replace": "续，一步之后之待者，为相续所读而续一步之前某活动者也。",
-   "why": "Web.Continues 不要求续者于步后活动"
-  },
-  {
-   "find": "与无续而已（`Becoming.Web.CeasesFrom`）都是定义",
-   "replace": "与无续而已（`Becoming.Web.CeasesFrom`；新组合，无续＋而＋已；名表未收，待整合者定）都是定义",
-   "why": "无续而已不在名表，首见须说明并交整合者"
-  },
-  {
-   "find": "起信「二者相續相。」〔FO2-QX〕一类古代之相续都是一对一之流。",
-   "replace": "起信「二者相續相。」〔FO2-QX〕（相合，qixin-xiang-xu-xiang）：念念相续而不断，是每一待者唯续其自身之相续，无裂无合；以相续相为妄之评价不带入。",
-   "why": "由一段推“古代之相续都是”是过强之全称；补种类与条目 id"
-  },
-  {
-   "find": "宇中连一步于次步者，只有水平之衡：一物步后之水平加其所取，等于步前之水平加其所受；以此读出一续（守恒之续，`Becoming.World.Conserves`）。",
-   "replace": "宇之关系自身读出一续，即守恒之续（`Becoming.World.Conserves`）：步后之物 f 之水平，加步中取于步前之物 g 者，等于 g 步前之水平加与 g 者，则读 f 续 g；此只读一步之关系，不用跨步之同一。",
-   "why": "原句以“一物”先设跨步之同一，正是所要读出者；“只有”无证"
-  },
-  {
-   "find": "每步一一对应，不待他设。",
-   "replace": "每步一一对应，无设而然。",
-   "why": "设专名陈述而不断言者；用名表之无设而然"
-  },
-  {
-   "find": "；兼之新名存旧名之无间，则作与不息恰如故。",
-   "replace": "；二向皆存，则作与不息恰如故。",
-   "why": "兼是整体之名，不作“兼之”虚用"
-  },
-  {
-   "find": "凡有列，相续定然否，每步：",
-   "replace": "凡有列，活动与相续定然否，每步：",
-   "why": "Census.balanceFrom 所在节要求活动亦定然否"
-  },
-  {
-   "find": "二设各不可少：同一网中每步二物活动，读作萌出，则无合、已复现而无新作（`Becoming.Tandem.budding`）；读作合，则无裂、每步不过二物活动，新作复现而无已（`Becoming.Tandem.joining`）。",
-   "replace": "二条件各不可少：同一网中每步二物活动，以出芽读其相续（后者续为二），则无合，每步皆有无续而已，而新作不无尽复现（`Becoming.Tandem.budding`）；以合读之（二者续为一），则无裂、每步不过二物活动，每步皆有新作，而无一无续而已（`Becoming.Tandem.joining`）。",
-   "why": "设专名陈述而不断言者；萌是名表之种子；budding/joining 说的是无续而已，不是已；budding 只证新作不复现"
-  },
-  {
-   "find": "以相续读合与散是 AI 的延伸；“散则成始”不是律：同一循环读作萌出，第一步之后无新作",
-   "replace": "以相续读合与散是 AI 的延伸，此散读为裂，不是名表之散（三·三）；“散则成始”不是律：同一循环以出芽读其相续，第一步之后无新作",
-   "why": "散是名表之名（水平之正之毁）；萌字不借"
-  },
-  {
-   "find": "但读作萌出，同样的增长",
-   "replace": "但以出芽读其相续，同样的增长",
-   "why": "萌是名表之种子，自长义不入"
-  },
-  {
-   "find": "王夫之「貌杀非杀」〔YD-WF64〕（定域，wangfuzhi-zhe-mao-sha-fei-sha）：入蛰非已，相合于此。",
-   "replace": "王夫之「貌杀非杀」〔YD-WF64〕（定域，wangfuzhi-zhe-mao-sha-fei-sha）：以存读活动，入蛰非已，与此相应；以活动读之，入蛰即已，所以“非杀”只在存之读下成立。",
-   "why": "条目为定域，不可写作无条件之相合"
-  },
-  {
-   "find": "输送可由一物传于他物",
-   "replace": "输送可由一物递于他物",
-   "why": "传是名表之名（因而所需有界之传递）"
-  },
-  {
-   "find": "火传，样式之载者各暂，而样式经传而久也。设凡于次步载样式者，或本步已载之，或本步载之者传之：则凡始载者皆受传于载者；样式自某步起每步皆在，而载者无载于相隔 d 步之二步者，则自此每 d 步之内必有一传；自某步 T 起无传，则自 T 加 d 起无载者；一步无载，则此后皆无。",
-   "replace": "火传，样式之载者各暂，而样式经递而久也。若凡于次步载样式者，或本步即载之，或本步载之者递之：则凡始载者皆受递于载者；载者无载于相隔 d 步之二步者，而样式自某步起每步皆在，则自此每 d 步之内必有一递；载者无载于相隔 d 步之二步者，而自某步 T 起无递，则自 T 加 d 起无载者；一步无载，则此后皆无。",
-   "why": "传单用是名表之传递，递接之构只名火传；局部前提用若；已载与已相撞；ends_within 亦须载者各暂"
-  },
-  {
-   "find": "火传（样式经由传递而延续）之设（`Becoming.Web.ByPassing`）是对“载怎样形成”的读法，是所给的，不是推出的。在此设下，凡始载皆是受传（`Becoming.Web.ByPassing.begins_passed`），样式久则传不断（`Becoming.Web.ByPassing.passes_within`，所给之步与二载者皆明出），传止则样式于一跨度内尽（`Becoming.Web.ByPassing.ends_within`），一步之空即永空（`Becoming.Web.ByPassing.empty_stays`）。见证：每载者只载两步而皆终，样式每步皆在（`Becoming.PatternRelay.relay`）；自 T 止传，样式恰自 T＋2 起不在，界可达（`Becoming.PatternRelay.stopped_relay`）。所传为何、值不值得传，此处不说。",
-   "replace": "火传（样式经由递接而延续）之前提（`Becoming.Web.ByPassing`）是对“载怎样形成”的读法，是所给的，不是推出的。在此前提下，凡始载皆是受递（`Becoming.Web.ByPassing.begins_passed`）；载者各暂而样式久，则递不断（`Becoming.Web.ByPassing.passes_within`，所给之步与二载者皆明出）；载者各暂而递断，则样式于一跨度内尽（`Becoming.Web.ByPassing.ends_within`）；一步之空即永空（`Becoming.Web.ByPassing.empty_stays`）。见证：每载者只载两步而皆终，样式每步皆在（`Becoming.PatternRelay.relay`）；自 T 起不递，样式恰自 T＋2 起不在，界可达（`Becoming.PatternRelay.stopped_relay`）。所递为何、值不值得递，此处不说。单用“传”在名表中名因而所需有界之传递（篇十三），此处之递接只用火传之名。",
-   "why": "传字之名另有所指；设专名陈述而不断言者；写出 ends_within 之条件"
-  },
-  {
-   "find": "薪各尽而火传；“不知其尽”只在传不止时成立",
-   "replace": "薪各尽而火传；“不知其尽”只在递不止时成立",
-   "why": "传字之名另有所指"
-  },
-  {
-   "find": "（定域，huiyuan-xin-huo）：传之结构相合；若读“神”为不随化而不灭者，则相分。",
-   "replace": "（定域，huiyuan-xin-huo）：递接之结构相合；慧远同文以神为「感物而非物故物化而不滅」〔IN1-S03〕者，此一面属本原一层，相分。",
-   "why": "慧远明言神不灭，不是假设之读；条目读法亦以此为相分之面"
-  },
-  {
-   "find": "凡待者皆其自身之兼；二待者每步皆活动，则互为兼。",
-   "replace": "凡待者皆其自身之兼；有其例：二待者每步皆活动而互为兼。",
-   "why": "Immortal.each_other 是构造之见证，不是全称之律"
-  },
-  {
-   "find": "名取「體，分於兼也」〔MI1-S-JS〕：体是兼之一分，不带体用之本原义。",
-   "replace": "名取「體，分於兼也」〔MI1-S-JS〕：墨经之体是兼之一分，有构成之意；本编之兼是活动之相合，不取其构成之意，也不带体用之本原义。",
-   "why": "条目 mojing-sun-jian-ti 明言墨经之构成意不取；与析取之兼相合须说明"
-  },
-  {
-   "find": "若我是诸蕴之兼，我之作即某蕴之作；“我自身必生必灭”则不成立（三·二十四）。",
-   "replace": "若“我”是诸蕴之兼，“我”之作即某蕴之作；“我自身必生必灭”则不成立（三·二十四）。此“我”只是一种命名，不是名表中评价之中心。",
-   "why": "我是名表之名（中心），不可借作所论之物"
-  },
-  {
-   "find": "每设皆不可少：有一体永不亡",
-   "replace": "每一前提皆不可少：有一体永不亡",
-   "why": "设专名陈述而不断言者"
-  },
-  {
-   "find": "诸设相容：一代接一代",
-   "replace": "诸前提相容：一代接一代",
-   "why": "设专名陈述而不断言者"
-  },
-  {
-   "find": "讀（AI，D5）：生生不息读于兼之层，世系与成员是其中之层。",
-   "replace": "讀（AI，D5）：生生不息读于兼之层，谱系与成员是其中之层。",
-   "why": "世系是名表所出之释义（descent），此处是谱系（Lineage）"
-  },
-  {
-   "find": "理论中无无条件之持存之律，久者只经体之作。",
-   "replace": "理论中无无条件之持存之律：体各亡而有列之兼，只经体之作而久。",
-   "why": "无条件之说为 Immortal 所反"
-  },
-  {
-   "find": "——相合：一所然在步间的两种变，成与毁；墨经以已兼成亡",
-   "replace": "——相合：一所然在步间的两种变化，成与毁；墨经以已统成亡",
-   "why": "变是过程之名，兼是整体之名"
-  },
-  {
-   "find": "——定域：样式经传而久；传止则于一跨度内尽（zhuangzi-xin-huo）",
-   "replace": "——定域：样式经递而久；载者各暂而递止，则于一跨度内尽（zhuangzi-xin-huo）",
-   "why": "传字之名另有所指；写出条件"
-  },
-  {
-   "find": "——相分：与始终同在而不变之常属本原；兼只经体之作而久（hanfeizi-jielao-bu-ke-wei-chang）",
-   "replace": "——相分：与始终同在而不变之常属本原；体各亡而有列之兼，只经体之作而久（hanfeizi-jielao-bu-ke-wei-chang）",
-   "why": "无条件之说为 Immortal 所反"
-  },
-  {
-   "find": "二所待之族，总量恒一，而作不息",
-   "replace": "二所待之族，总量每步皆一，而作不息",
-   "why": "恒是名表之名（更新之类），不作“常”用"
-  },
-  {
-   "find": "二池之间一单位循环，总量恒一，作不息",
-   "replace": "二池之间一单位循环，总量每步皆一，作不息",
-   "why": "恒是名表之名，不作“常”用"
-  },
-  {
-   "find": "二恒活动者互为兼（`Becoming.Immortal.each_other`）",
-   "replace": "二每步皆活动者互为兼（`Becoming.Immortal.each_other`，构造）",
-   "why": "恒是名表之名；此是构造之见证"
-  },
-  {
-   "find": "：有为无常在有穷族之复现上成立",
-   "replace": "：“有为无常”只在有穷族之复现上成立（活动定然否）",
-   "why": "常是名表之名（不变量），佛典之无常须引号；补 Web.unceasing_iff 之条件"
-  },
-  {
-   "find": "——相分：设一外于作已之境",
-   "replace": "——相分：立一外于作已之境",
-   "why": "设专名陈述而不断言者"
-  },
-  {
-   "find": "无间（三·十六）只读两端皆活动或皆有待之物",
-   "replace": "无间（三·十六）只读两端皆活动之物（待之相续亦只读两端皆有待者）",
-   "why": "无间只锚 KeepsActive；两端皆有待者是另一种相续（KeepsTenure）"
-  },
-  {
-   "find": "`Becoming.persists`、`Becoming.stays_failing`；记录",
-   "replace": "`Becoming.persists`、`Becoming.persists_of_em`、`Becoming.stays_failing`；记录",
-   "why": "说中新引之声明入证"
-  },
-  {
-   "find": "`Becoming.HalvingPass.never_rests`、`Becoming.World.arising_opens`；记录",
-   "replace": "`Becoming.HalvingPass.never_rests`、`Becoming.World.arising_opens`、`Becoming.World.rest_needs_census`、`Becoming.World.rest_needs_standing`；记录",
-   "why": "说中二列不可少之证"
+   "id": "三·九",
+   "find": "族二所待之总积每步皆一",
+   "replace": "其族二所待，总积每步皆一",
+   "why": "Readability. 族二所待之总积 does not parse cleanly. 其族 ties the example to the family named in the premises above (Recycle.closed_unceasing: Depletes [a,b] and stock [a,b] = 1)."
   }
  ],
- "verdict": "sound after edits",
- "notes": "已核对的部分：草稿原有 158 个声明，用 resolve.py 按全名解析，全部是现名，没有改名。所链记录都在 theories/becoming/results/records/。36 段引文用 ctq.py text 核对，全部 exact。各对照的种类都与 work/passages/C03.json 一致。76 条编辑都在草稿副本上试过：每个 find 只出现一次，彼此不重叠。改后的副本里，所有声明仍能解析，38 段引文（包括新加和移动的）仍然 exact。改后的副本是 /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/rev-c03/after.md。\n\n已出编辑的主要问题：\n(1) 三·六把“定然否”说成这条律自己的条件。所引记录 recurrence-without-decidedness 说的正相反：不可非之形不须定然否（Recurs.ceasing_not_stopping、Recurs.coming_not_stopping），自某步起定然否即足（coming_recurs_iff_decided）。law_iff_em 只是对表示之逻辑的校准。篇一·十二有同一句，请整合者一并改。\n(2) 名的相撞：\n- 计账：财务之词，名表未收；Tally 暂写作逐步之消息。\n- 设：名表专名陈述而不断言者，局部前提应写“若”或“前提”。\n- 已定、已载、已静：“已”是止息之名。\n- 单用“传”：名表之传是 TransmitsWithin，递接只名火传。\n- 萌出：萌是种子，自长义不入。\n- 兼之、兼成亡：兼是整体之名。\n- 其他：两行、体制、汲取、恒一、二恒活动者、我、世系、变（过程）、数（作“界”用）。\n(3) 經缺 Lean 的条件：\n- 三·四 falling_recurs 一句，原文读如断言“升复现”。\n- 三·十一 lpo_of_finite_ends 的八条件与活动定然否。\n- 三·十七 活动定然否（Counting 一节所需）。\n- 三·二十二 ends_within 须“载者各暂”。\n- 三·十三 Web.Continues 不要求续者于步后活动。\n- 三·二十三 each_other 只是构造之例。\n(4) 过强之说：\n- “兼只经体之作而久”为 Immortal 所反（篇首与对照两处）。\n- 三·十一“每一设都不可少”，脊柱只证二列之不可少。\n- 三·十五以“一物”先设跨步之同一，并说“只有水平之衡”。\n- 三·十三由起信一段推及古代一切相续。\n- 三·四“量不低于零”不足以推出降须升，须自然数之量。\n(5) 断代：十二消息卦是汉代卦气之说，不归剥彖。\n(6) 种类与出处：\n- 王夫之“貌杀非杀”只在存之读下成立，原文写成无条件之相合。\n- 慧远明言神不灭，原文写成假设之读。\n- 僧肇之静锚在 reidentify_step，只与三·十二同字，已移到三·十四。\n- 三·一名之出处依名表应为齐物论，墨经只作旁证。\n(7) 决定编号：D6 与此无关，改为 D3。按 D5，不息读为“作经补充而复现”，不是“补充之复现”。\n\n留给整合者：\n(a) 下列不在名表，需定名或认可：\n- 无续而已（CeasesFrom）\n- 改名（每步同一之改认）\n- 守恒之续（World.Conserves；“守恒”含恒字；名表“与如其取”所名是 Flow.ConservingOn，与此不同）\n- 沿相续而恒、沿相续而竭\n- 谱系（Lineage）\n- 出芽（budding）\n- Tally\n(b) 名表“静”一名兼有 D45 的“一时成立者”与“法所不改之状”，两者不同。D45 以停息名趋停之行，所以三·十二已避免说“其已静”。D49 对“极”的读法，我在 DELEGATED-CHOICES 中没有找到。\n(c) 相代的出处，名表作 ZH1-S02，本篇用 ZH1-S05 同句，两处皆 exact。\n(d) 跨簇不一致：\n- 「无古今而後能入於不死不生」：C03 作相分，C17 作定域。\n- 「物不可以終止」：C04 作定域，C07 作相分。\n(e) 全篇未逐条注明引文的时期与层次，这一点原稿本来没有写，所以没有判为错。"
+ "notes": "I edited no files; my working copy is /private/tmp/claude-501/-Users-ren-theories/ab4fc732-b2ac-420a-aa49-cf63c999271c/scratchpad/c03rev/part.json, the drafter's part.json, which matched every passage I compared with the given text, including every find string above.\n\nWhat checked out:\n- **Quotations:** all 40 「…」〔ID〕 match the frozen text exactly (ctq.py text).\n- **Declarations:** all 129 resolve to current names (resolve.py) and exist under these full names in the worktree's Becoming/*.lean.\n- **Records:** all 20 linked records exist.\n- **Cross-references:** every ⟦id⟧ is in book-1-outline.txt, none is a deleted id, and each points to the right content (⟦八·五⟧ the stutter laws, ⟦二·十⟧ 有形, ⟦四·二⟧ 衡 with Balances.fall_taken, ⟦四·三⟧ 多而无已, ⟦七·十⟧ 同, ⟦NEW-12⟧ the eight premises, ⟦十一·十七⟧ 足而止之界, ⟦四·十三⟧ 开 with arising_opens, ⟦六·十一⟧ whole_not_new_of_rest_idle).\n- **Passage entries:** every id in the 說 and the 对照 is in passages.json with the same kind; the 对照 has 8 lines, 2 of them 相分.\n\nEach 經 checked against Lean:\n- **Matches, including hypotheses and the direction of each iff:** 三·二–三·七, 三·九, 三·十一, 三·十三, 十·二, 三·十四 (marked 讀（AI）, as the alike-key note requires), 三·十六, 三·十七, 三·二十三.\n- **三·九:** the depletion premise is now written as a condition, as the verify-G3 note asked.\n- **三·十二:** rests_iff, settles_iff_decided, not_not_settles, still_within (Marks, B ≤ d + q s), still_same, lpo_iff_settles and TailRuns.lpo_iff_runs all match.\n- **Defects fixed by the edits:** 所留 collides with a name (三·八); 复 is used before its definition (三·十二); the conditions of arises_fixed_iff drop out of scope (三·十五); 成立 in a 經 (三·二十); the unnamed 出芽 in a 經 (三·十八).\n\nThe plan's instructions were carried out, with three deviations I accept:\n- 化 is written 状跨步不同而续, following plain-wordings and the 同 row of the table.\n- The 五·十八 declarations were not merged into 三·九; they are already in ⟦六·十一⟧ and ⟦四·十三⟧.\n- The 族之兼 definition avoids 族中, because the parts of Web.Whole are given by a predicate.\n\nFor the integrator (no edit proposed):\n1. **数 is used before its definition.** 数 is defined only in ⟦三·八⟧, but 三·五, 三·六 and 三·七 use it in their 經 (成之数, 族之员数, 其数不过此界). 列 in 三·五 gets a pointer under the plan's C90 handling; 数 gets none. A pointer would not fix this; moving 三·八 before 三·五 would.\n2. **族之兼 states a wrong meaning.** 族 is a finite List, while Web.Whole parts is a predicate, and Countless shows the parts can be infinite. The 說 itself says 其体由一谓词给出. 域之兼 would be exact (域 = a set of things given by a predicate). This needs one book-wide decision and a 名表 row.\n3. **Title mismatch.** The outline gives 三·二十三 the title 兼与体; the part, as instructed, uses 族之兼与体.\n4. **Plain wording conflicts with the order.** 状复而其间有改 contains 复, which is defined in 五·一, while its uses (三·十二, the old 凡·二三) come earlier. Consider re-fixing it as 某步之状其后再得而其间有改.\n5. **静 row in the 名表.** Its 所名 column still says D45 一时成立者, while its anchor and note are D49 / Law.rests_iff.\n6. **Name-table additions pending.** 族之兼 must be added with anchor Web.Whole, and 兼's anchor reduced to World.withRest. The 十·三 and 五·十七 rewriters should pick up reidentify_renewed/consumed/lost and renewingIn_held, as the drafter notes."
 }
