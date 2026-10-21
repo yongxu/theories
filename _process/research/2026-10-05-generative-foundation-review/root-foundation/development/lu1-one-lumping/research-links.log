@@ -1,27 +1,12 @@
 python3 -B tools/research/research.py links
 {
-  "files_checked": 1266,
-  "links_checked": 72926,
-  "broken": 1,
-  "broken_by_kind": {
-    "missing-path": 1
-  },
-  "broken_by_role": {
-    "live": 1
-  },
-  "by_directory": {
-    "_process": 1
-  },
-  "list": [
-    {
-      "file": "_process/BECOMING-WORKBOARD.md",
-      "line": 36,
-      "target": "../sources/15-codex-theory-conversations/2026-10-21-aim-elegant-completion.md",
-      "kind": "missing-path",
-      "role": "live"
-    }
-  ],
+  "files_checked": 1270,
+  "links_checked": 73258,
+  "broken": 0,
+  "broken_by_kind": {},
+  "broken_by_role": {},
+  "by_directory": {},
+  "list": [],
   "not_in_repository": [],
   "scope": "Relative links and #anchors in live and generated Markdown (paths.py roles); history, evidence, sources and scratch are frozen and not checked. Paths must match tracked or untracked files exactly. Targets inside a submodule or excluded by .gitignore are listed under not_in_repository, not counted."
 }
-make: *** [research-links] Error 1

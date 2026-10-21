@@ -1,5 +1,5 @@
 {
- "records": 37,
+ "records": 38,
  "apply": true,
  "by_record": {
   "a-step-coupling-keeps-at-every-horizon": {
@@ -27,6 +27,12 @@
    "rebound": []
   },
   "consumption-ends-with-feeders": {
+   "paths": [
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md"
+   ],
+   "rebound": []
+  },
+  "coupled-regimes": {
    "paths": [
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md"
    ],

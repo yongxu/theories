@@ -9,7 +9,7 @@ python3 -B tools/research/research.py secrets
 }
 python3 -B tools/research/research.py check
 {
-  "records": 324,
+  "records": 326,
   "selected_records": [
     "a-code-formed-between-formations",
     "a-history-read-off-its-finite-stretches",
@@ -76,6 +76,7 @@ python3 -B tools/research/research.py check
     "counting-under-enclosure",
     "counting-where-the-counts-exist",
     "counts-exist-where-decided",
+    "coupled-regimes",
     "derivation-soundness",
     "derived-extent-limits",
     "derived-history-law-exactness",
@@ -238,6 +239,7 @@ python3 -B tools/research/research.py check
     "reserved-shutdown-during-recovery",
     "residual-continuation-correspondence",
     "rest-at-every-resolution",
+    "rest-exactly-where-falls-stop",
     "rest-from-a-finite-reading",
     "rest-theorem-in-any-amounts",
     "rest-with-refinement-counted",
@@ -337,44 +339,16 @@ python3 -B tools/research/research.py check
     "worlds-are-runs"
   ],
   "errors": [],
-  "source_drift": [
-    {
-      "id": "margin-of-a-regime",
-      "path": "experiments/margin-measured/README.md",
-      "reviewed_sha256": "4fddc5805679dce79d3e7ca2f379d3dc3d24425b23f85df8d659425ed30b5051",
-      "current_sha256": "24a411288bcc7e302f5d36a19fd3487933a217ff539d8e10a9a3aed389287954",
-      "changed_sections": [
-        "(before the first heading)"
-      ]
-    },
-    {
-      "id": "regime-point-under-adjusting-giving",
-      "path": "experiments/margin-measured/README.md",
-      "reviewed_sha256": "4fddc5805679dce79d3e7ca2f379d3dc3d24425b23f85df8d659425ed30b5051",
-      "current_sha256": "24a411288bcc7e302f5d36a19fd3487933a217ff539d8e10a9a3aed389287954",
-      "changed_sections": [
-        "(before the first heading)"
-      ]
-    },
-    {
-      "id": "where-a-run-of-a-regime-comes-to-rest",
-      "path": "experiments/margin-measured/README.md",
-      "reviewed_sha256": "4fddc5805679dce79d3e7ca2f379d3dc3d24425b23f85df8d659425ed30b5051",
-      "current_sha256": "24a411288bcc7e302f5d36a19fd3487933a217ff539d8e10a9a3aed389287954",
-      "changed_sections": [
-        "(before the first heading)"
-      ]
-    }
-  ],
+  "source_drift": [],
   "unrelated_source_drift": [],
   "style_warnings": {
-    "findings": 621,
-    "records": 193,
+    "findings": 629,
+    "records": 194,
     "by_severity": {
-      "warning": 621
+      "warning": 629
     },
     "by_rule": {
-      "length": 487,
+      "length": 493,
       "status-restatement": 34,
       "stock-boundary": 26,
       "negation-lead": 20,
@@ -382,19 +356,15 @@ python3 -B tools/research/research.py check
       "process-marker:round-number": 12,
       "process-marker:section-reference": 10,
       "market-word": 8,
+      "one-sentence": 2,
+      "item-count": 2,
       "process-marker:round-narration": 2,
-      "process-marker:date": 1,
-      "one-sentence": 1,
-      "item-count": 1
+      "process-marker:date": 1
     },
     "list": "python3 -B tools/research/research.py lint [--ids ...]"
   },
-  "changed_outside_cited": 452,
+  "changed_outside_cited": 459,
   "reading_drift": 89,
-  "stale_indexes": [
-    "_process/research/README.md",
-    "_process/research/2026-10-05-generative-foundation-review/root-foundation/INDEX.md"
-  ],
+  "stale_indexes": [],
   "scope": "Metadata, navigation, preserved history and proof-receipt bindings only. No new Lean or empirical validation."
 }
-make: *** [research-check] Error 2

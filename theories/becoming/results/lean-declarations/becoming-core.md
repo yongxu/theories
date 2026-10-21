@@ -1554,7 +1554,7 @@ Definitions and types:
 <a id="module-ce9bd104ba48"></a>
 
 <details>
-<summary>ClosedCapture.lean — 39 explicit declarations</summary>
+<summary>ClosedCapture.lean — 43 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
@@ -1564,48 +1564,52 @@ Imports: `Becoming.RuleCapture`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.ClosedCapture.turn_unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L80) | 80 |
-| [Becoming.ClosedCapture.unread_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L88) | 88 |
-| [Becoming.ClosedCapture.reads_beyond_of_apart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L104) | 104 |
-| [Becoming.ClosedCapture.join_unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L117) | 117 |
-| [Becoming.ClosedCapture.join_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L123) | 123 |
-| [Becoming.ClosedCapture.turn_join](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L132) | 132 |
-| [Becoming.ClosedCapture.join_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L140) | 140 |
-| [Becoming.ClosedCapture.loss_grows](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L169) | 169 |
-| [Becoming.ClosedCapture.turned_by_loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L183) | 183 |
-| [Becoming.ClosedCapture.lock_outlives_loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L199) | 199 |
-| [Becoming.ClosedCapture.Beyond.closed_locked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L257) | 257 |
-| [Becoming.ClosedCapture.Beyond.open_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L267) | 267 |
-| [Becoming.ClosedCapture.Beyond.lossRead_turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L271) | 271 |
-| [Becoming.ClosedCapture.Beyond.open_turned](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L277) | 277 |
-| [Becoming.ClosedCapture.Beyond.open_reads](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L283) | 283 |
-| [Becoming.ClosedCapture.both_reads](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L317) | 317 |
-| [Becoming.ClosedCapture.byRule_raises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L321) | 321 |
-| [Becoming.ClosedCapture.both_upper](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L325) | 325 |
-| [Becoming.ClosedCapture.readers_not_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L330) | 330 |
-| [Becoming.ClosedCapture.reading_absorbed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L347) | 347 |
-| [Becoming.ClosedCapture.readers_uniform_locks](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L362) | 362 |
-| [Becoming.ClosedCapture.Proportional.readMono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L388) | 388 |
-| [Becoming.ClosedCapture.Proportional.formed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L392) | 392 |
-| [Becoming.ClosedCapture.Proportional.start_locked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L395) | 395 |
-| [Becoming.ClosedCapture.Proportional.reform_absorbed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L402) | 402 |
+| [Becoming.ClosedCapture.turn_unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L92) | 92 |
+| [Becoming.ClosedCapture.goAlike_of_unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L104) | 104 |
+| [Becoming.ClosedCapture.identifiesAlike_iff_unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L123) | 123 |
+| [Becoming.ClosedCapture.unread_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L143) | 143 |
+| [Becoming.ClosedCapture.courses_alike_iff_unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L159) | 159 |
+| [Becoming.ClosedCapture.reads_beyond_of_apart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L169) | 169 |
+| [Becoming.ClosedCapture.join_unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L182) | 182 |
+| [Becoming.ClosedCapture.join_alike](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L188) | 188 |
+| [Becoming.ClosedCapture.turn_join](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L197) | 197 |
+| [Becoming.ClosedCapture.join_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L205) | 205 |
+| [Becoming.ClosedCapture.loss_grows](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L234) | 234 |
+| [Becoming.ClosedCapture.turned_by_loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L248) | 248 |
+| [Becoming.ClosedCapture.lock_outlives_loss](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L264) | 264 |
+| [Becoming.ClosedCapture.Beyond.closed_locked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L322) | 322 |
+| [Becoming.ClosedCapture.Beyond.open_falls](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L332) | 332 |
+| [Becoming.ClosedCapture.Beyond.lossRead_turns](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L336) | 336 |
+| [Becoming.ClosedCapture.Beyond.open_turned](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L342) | 342 |
+| [Becoming.ClosedCapture.Beyond.open_reads](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L348) | 348 |
+| [Becoming.ClosedCapture.both_reads](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L382) | 382 |
+| [Becoming.ClosedCapture.byRule_raises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L386) | 386 |
+| [Becoming.ClosedCapture.both_upper](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L390) | 390 |
+| [Becoming.ClosedCapture.readers_not_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L395) | 395 |
+| [Becoming.ClosedCapture.reading_absorbed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L412) | 412 |
+| [Becoming.ClosedCapture.readers_uniform_locks](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L427) | 427 |
+| [Becoming.ClosedCapture.Proportional.readMono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L453) | 453 |
+| [Becoming.ClosedCapture.Proportional.formed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L457) | 457 |
+| [Becoming.ClosedCapture.Proportional.start_locked](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L460) | 460 |
+| [Becoming.ClosedCapture.Proportional.reform_absorbed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L467) | 467 |
 
 Definitions and types:
 
-- `def` [Becoming.ClosedCapture.Unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L76) (L76)
-- `def` [Becoming.ClosedCapture.join](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L112) (L112)
-- `def` [Becoming.ClosedCapture.joinRead](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L115) (L115)
-- `def` [Becoming.ClosedCapture.Accrues](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L165) (L165)
-- `def` [Becoming.ClosedCapture.Beyond.lossStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L236) (L236)
-- `def` [Becoming.ClosedCapture.Beyond.closedRead](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L239) (L239)
-- `def` [Becoming.ClosedCapture.Beyond.lossRead](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L242) (L242)
-- `def` [Becoming.ClosedCapture.Beyond.closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L248) (L248)
-- `def` [Becoming.ClosedCapture.Beyond.opened](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L252) (L252)
-- `def` [Becoming.ClosedCapture.both](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L297) (L297)
-- `def` [Becoming.ClosedCapture.readers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L304) (L304)
-- `def` [Becoming.ClosedCapture.byRule](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L308) (L308)
-- `def` [Becoming.ClosedCapture.Proportional.mind](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L383) (L383)
-- `def` [Becoming.ClosedCapture.Proportional.read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L386) (L386)
+- `def` [Becoming.ClosedCapture.Unread](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L88) (L88)
+- `def` [Becoming.ClosedCapture.loopPart](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L100) (L100)
+- `def` [Becoming.ClosedCapture.join](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L177) (L177)
+- `def` [Becoming.ClosedCapture.joinRead](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L180) (L180)
+- `def` [Becoming.ClosedCapture.Accrues](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L230) (L230)
+- `def` [Becoming.ClosedCapture.Beyond.lossStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L301) (L301)
+- `def` [Becoming.ClosedCapture.Beyond.closedRead](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L304) (L304)
+- `def` [Becoming.ClosedCapture.Beyond.lossRead](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L307) (L307)
+- `def` [Becoming.ClosedCapture.Beyond.closed](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L313) (L313)
+- `def` [Becoming.ClosedCapture.Beyond.opened](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L317) (L317)
+- `def` [Becoming.ClosedCapture.both](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L362) (L362)
+- `def` [Becoming.ClosedCapture.readers](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L369) (L369)
+- `def` [Becoming.ClosedCapture.byRule](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L373) (L373)
+- `def` [Becoming.ClosedCapture.Proportional.mind](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L448) (L448)
+- `def` [Becoming.ClosedCapture.Proportional.read](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean#L451) (L451)
 
 </details>
 
