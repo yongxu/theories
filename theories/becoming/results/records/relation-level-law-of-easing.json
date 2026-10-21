@@ -70,8 +70,8 @@
       "kind": "scope"
     },
     {
-      "en": "Which reading of living to use; the form of L under the condition; J1 step by step.",
-      "zh": "应采用哪种生命读法；条件之下 L 的形式；逐步的 J1。",
+      "en": "Which reading of living to use; the form of L under the condition.",
+      "zh": "应采用哪种生命读法；条件之下 L 的形式。",
       "kind": "scope"
     }
   ],
@@ -89,8 +89,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T141520.308357Z）：Becoming.Ranking、Becoming.Relevance 与 Becoming.JointDraw 新增的 7 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 318 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A witness that participation kept cannot be dropped in the restraint theorem; the form of L under the condition; J1 step by step; an independent review.",
-    "zh": "表明节制定理中保持参与不可去掉的见证；条件之下 L 的形式；逐步的 J1；独立审查。"
+    "en": "A witness that participation kept cannot be dropped in the restraint theorem; the form of L under the condition; an independent review.",
+    "zh": "表明节制定理中保持参与不可去掉的见证；条件之下 L 的形式；独立审查。"
   },
   "correspondence": {
     "en": "The comparison laws are the theory's own. The three readings of living now each have an exact law of easing: the whole-run law needs easing and the gating of activity; the stepwise law adds that the easing course undermine no included event; the relation-level law adds that it keep taking part in every included relation.",
@@ -152,7 +152,15 @@
       }
     }
   ],
-  "related": [],
+  "related": [
+    {
+      "id": "basic-priority-step-by-step",
+      "detail": {
+        "en": "Read with the sustaining formation's events as the basic tier, J1 ranks absence above malignant growth under the stepwise and relation-level readings.",
+        "zh": "以维持者的事件为基本层读时，J1 在逐步与关系层读法下把不在场排在恶性增殖之上。"
+      }
+    }
+  ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
@@ -172,7 +180,7 @@
         "Becoming.Ranking.stepwise",
         "Becoming.Ranking.stepwise_unranked"
       ],
-      "sha256": "46ba3df510844a6b6183edec334803659e41235d9f99bea064ddac5880a43f8d"
+      "sha256": "350ef3b2aac032f7d0caaa612264a3cf7278b313e0b4ce26554520ee030cd04f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Relevance.lean",
@@ -211,13 +219,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b8d16f634717dc5a0cb232140fda7f83cec67a07f8ed0885dc1464fe8347f237"
+      "sha256": "e6794db69749231cbce5e116953bf9600b9fc98fc61b31c442949ce5eecff4c5"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json",
+      "role": "receipt",
+      "sha256": "e7b94bb5a47abcf0ee1701b57b77b3ce1ecf6c13919807b5dc068234f4fc4879",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Ranking",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -241,6 +255,10 @@
     {
       "en": "21 October 2026: added (RL1), the relation-level reading on courses, its exact law of easing, its whole-run form, restraint over any number of drawers under it and the two-part family unranked; study section 318.",
       "zh": "2026年10月21日：新增（RL1），进程上的关系层读法、其确切的缓和之律、其整段形式、其下对任意多个汲取者的节制，以及二元族不排序；研究第 318 节。"
+    },
+    {
+      "en": "21 October 2026, J1S: whether J1 yields \"better without malignant growth\" step by step is answered (record basic-priority-step-by-step, study section 320); the next step says so. Its laws are unchanged.",
+      "zh": "2026年10月21日，J1S：J1 能否逐步给出“没有恶性增殖更好”已回答（记录 basic-priority-step-by-step，研究第 320 节）；下一步如此说明。其规律不变。"
     }
   ]
 }

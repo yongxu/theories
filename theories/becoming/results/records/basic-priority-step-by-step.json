@@ -1,0 +1,222 @@
+{
+  "schema_version": 2,
+  "id": "basic-priority-step-by-step",
+  "title": {
+    "en": "The priority of basic conditions, step by step",
+    "zh": "逐步的基本条件优先"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T17:09:15+00:00",
+  "statement": {
+    "en": "Read with the sustaining formation's events as the basic tier, the priority of basic conditions (J1) ranks the absence of a malignant formation above its occurrence under the stepwise and relation-level readings, where C alone leaves them unranked.",
+    "zh": "以维持者的事件为基本层读时，基本条件优先（J1）在逐步与关系层读法下把恶性形成的不在场排在其在场之上，那里 C 单独不对两者排序。"
+  },
+  "laws": [
+    {
+      "en": "The two-part family read in two tiers over any claims with a part read off each: the sustaining formation's included claims, whose activity is the condition meeting its need, are basic; the focal formation's are gains.",
+      "zh": "在任何能读出所属部分的断言上把二元族读作两层：维持者被记入的断言为基本（其活动即条件达到所需），焦点形成的断言为增益。",
+      "declarations": [
+        "Becoming.Ranking.basicTier",
+        "Becoming.Ranking.gainTier"
+      ]
+    },
+    {
+      "en": "Under the stepwise reading's premises the course without the focal formation is lexically above the course with it: it keeps every basic event, the sustaining formation active and drawing nothing at every step of it, and holds one the other loses after the loss; the same relation by relation.",
+      "zh": "在逐步读法的前提下，没有焦点形成的进程在词典序上高于有它的进程：它保持每个基本事件（维持者在其每步都活动且不汲取），并持有另一进程在损失后失去的一个；逐个关系读亦然。",
+      "declarations": [
+        "Becoming.Ranking.basic_first_stepwise",
+        "Becoming.Ranking.basic_first_relational"
+      ]
+    },
+    {
+      "en": "Every comparison meeting J1 (BasicPriority with these tiers) ranks absence above malignant growth under the stepwise and relation-level readings, where C alone leaves the two unranked.",
+      "zh": "满足 J1（以这两层的 BasicPriority）的每个比较，在逐步与关系层读法下都把不在场排在恶性增殖之上，那里 C 单独不对两者排序。",
+      "declarations": [
+        "Becoming.Ranking.basic_first_ranks"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. The two-part family's premises as in stepwise_unranked (a positive need of the sustaining formation, the focal need within it, a start at that need, overdraw from some step on); J1/J2 as the condition BasicPriority on a comparison; the basic tier read as the sustaining formation's claims.",
+      "zh": "不加公理。二元族的前提同 stepwise_unranked（维持者所需为正、焦点所需不超过它、起点达到该所需、自某步起过度汲取）；J1/J2 作为比较上的条件 BasicPriority；基本层读作维持者的断言。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "That the sustaining formation's claims must be the basic tier: the assignment is a reading, its activity being the condition meeting its need; another assignment is not covered.",
+      "zh": "维持者的断言必须是基本层：此分派是一种读法（其活动即条件达到所需）；其他分派未涵盖。",
+      "kind": "non-implication"
+    },
+    {
+      "en": "Families beyond the two-part one; the form of L under the condition.",
+      "zh": "二元族之外的族；条件之下 L 的形式。",
+      "kind": "scope"
+    },
+    {
+      "en": "Which comparison to use, J1 or C alone: each is a premise the theorems take.",
+      "zh": "应采用哪种比较，J1 还是单独的 C：各是定理所取的前提。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T170709.920612Z): the 5 declarations Becoming.Ranking gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 320; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T170709.920612Z）：Becoming.Ranking 新增的 5 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 320 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "The same beyond the two-part family, with the basic tier read as the claims of formations whose activity is a condition meeting its need; the form of L under the condition; an independent review.",
+    "zh": "二元族之外的同一结论，基本层读作其活动即条件达到所需之形成的断言；条件之下 L 的形式；独立审查。"
+  },
+  "correspondence": {
+    "en": "The comparisons are the theory's own. C read on all living events weighs a malignant formation's early event against the sustaining formation's later ones and ranks neither course; J1 counts the basic tier first, and the course without the malignant formation keeps strictly more of it, so no gain of the malignant formation trades for the loss.",
+    "zh": "比较是本理论自己的。C 读所有活的事件时，把恶性形成的早期事件与维持者后来的事件相权，不对任一进程排序；J1 先计基本层，没有恶性形成的进程保持其中严格更多，故恶性形成的任何增益都不能换取那一损失。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+  "aliases": [
+    "the priority of basic conditions step by step",
+    "J1 ranks absence above malignant growth",
+    "逐步的基本条件优先",
+    "Becoming.Ranking.basic_first_ranks",
+    "Becoming.Ranking.basic_first_stepwise"
+  ],
+  "dependencies": [
+    {
+      "id": "ranking-under-readings",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The two-part family, its courses and the stepwise reading are reused; the question its next step asked is answered.",
+        "zh": "沿用二元族、其进程与逐步读法；回答了其下一步所问。"
+      },
+      "interface": {
+        "output": {
+          "en": "course, stepwise, stepwise_unranked, absent_sustains.",
+          "zh": "course、stepwise、stepwise_unranked、absent_sustains。"
+        },
+        "input": {
+          "en": "J1 ranks absence above malignant growth step by step.",
+          "zh": "J1 逐步把不在场排在恶性增殖之上。"
+        },
+        "conditions": {
+          "en": "The basic tier read as the sustaining formation's events.",
+          "zh": "基本层读作维持者的事件。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean"
+      }
+    },
+    {
+      "id": "relation-level-law-of-easing",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The relation-level reading and its unranked two-part family are reused.",
+        "zh": "沿用关系层读法及其二元族不排序。"
+      },
+      "interface": {
+        "output": {
+          "en": "relational, relational_unranked.",
+          "zh": "relational、relational_unranked。"
+        },
+        "input": {
+          "en": "The same ranking relation by relation.",
+          "zh": "逐个关系读的同一排序。"
+        },
+        "conditions": {
+          "en": "The two-part family.",
+          "zh": "二元族。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "protection-priority-excludes-uniform-aggregation",
+      "detail": {
+        "en": "That record states what basic-condition priority excludes among scores; here it ranks courses step by step.",
+        "zh": "该记录陈述基本条件优先在评分中排除什么；此处它逐步给进程排序。"
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Ranking.absent_sustains",
+        "Becoming.Ranking.basicTier",
+        "Becoming.Ranking.basic_first_ranks",
+        "Becoming.Ranking.basic_first_relational",
+        "Becoming.Ranking.basic_first_stepwise",
+        "Becoming.Ranking.course",
+        "Becoming.Ranking.gainTier",
+        "Becoming.Ranking.relational",
+        "Becoming.Ranking.relational_unranked",
+        "Becoming.Ranking.stepwise",
+        "Becoming.Ranking.stepwise_unranked"
+      ],
+      "sha256": "350ef3b2aac032f7d0caaa612264a3cf7278b313e0b4ce26554520ee030cd04f"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Lexical.Above",
+        "Becoming.Lexical.Above.anchor",
+        "Becoming.Lexical.BasicPriority"
+      ],
+      "sha256": "2b1cfc252a2099b5e7ae9da5dae21f20a5c7e1a2c73e8b31abe0c20378c1364b"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json",
+      "role": "receipt",
+      "sha256": "e7b94bb5a47abcf0ee1701b57b77b3ce1ecf6c13919807b5dc068234f4fc4879"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "82f7b01dfd5ac07c33a6248b6b0295393a7de1a107f4bff8513a304e7400799a"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "3769748c91b052a169cdc2a657d4855971e4a696c033aeaeac9ca359b53ab94d"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "e6794db69749231cbce5e116953bf9600b9fc98fc61b31c442949ce5eecff4c5"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Ranking",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lexical.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Lexical",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "21 October 2026: added (J1S), the priority of basic conditions step by step: read with the sustaining formation's events as the basic tier, J1 ranks absence above malignant growth under the stepwise and relation-level readings; study section 320.",
+      "zh": "2026年10月21日：新增（J1S），逐步的基本条件优先：以维持者的事件为基本层读时，J1 在逐步与关系层读法下把不在场排在恶性增殖之上；研究第 320 节。"
+    }
+  ]
+}

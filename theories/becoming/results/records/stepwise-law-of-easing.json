@@ -67,8 +67,8 @@
       "kind": "non-implication"
     },
     {
-      "en": "The form of L under the condition; whether J1 yields \"better without malignant growth\" step by step.",
-      "zh": "条件之下 L 的形式；J1 能否在逐步读法下给出“没有恶性增殖更好”。",
+      "en": "The form of L under the condition.",
+      "zh": "条件之下 L 的形式。",
       "kind": "scope"
     },
     {
@@ -99,8 +99,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T135044.825185Z）：Becoming.Ranking 与 Becoming.JointDraw 新增的 9 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 315 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A flow-level premise exactly equivalent to undermining no included event; the form of L under the condition; J1 step by step; an independent review.",
-    "zh": "与不侵蚀被记入事件恰好等价的流层前提；条件之下 L 的形式；逐步的 J1；独立审查。"
+    "en": "A flow-level premise exactly equivalent to undermining no included event; the form of L under the condition; an independent review.",
+    "zh": "与不侵蚀被记入事件恰好等价的流层前提；条件之下 L 的形式；独立审查。"
   },
   "correspondence": {
     "en": "The comparison laws are the theory's own: comparison principle C read through a frame whose realized claims are the events a reading includes, with the whole-run and stepwise readings of living. This record turns the stepwise reading's failure under easing (ThirdParty) into an exact law: what the stepwise valuation counts against a gentler course is exactly the undermining that course itself commits.",
@@ -147,6 +147,13 @@
         "en": "The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part ranks above overdraw under it too.",
         "zh": "进程上的关系层读法：在缓和下它所撤回的恰是缓和之进程不再参与或所侵蚀的关系；仍参与的节制在它之下也排在过度汲取之上。"
       }
+    },
+    {
+      "id": "basic-priority-step-by-step",
+      "detail": {
+        "en": "Read with the sustaining formation's events as the basic tier, J1 ranks absence above malignant growth under the stepwise and relation-level readings.",
+        "zh": "以维持者的事件为基本层读时，J1 在逐步与关系层读法下把不在场排在恶性增殖之上。"
+      }
     }
   ],
   "references": [
@@ -172,7 +179,7 @@
         "Becoming.Ranking.wholeRun_extends_iff_of_eases",
         "Becoming.Ranking.wholeRun_mono"
       ],
-      "sha256": "46ba3df510844a6b6183edec334803659e41235d9f99bea064ddac5880a43f8d"
+      "sha256": "350ef3b2aac032f7d0caaa612264a3cf7278b313e0b4ce26554520ee030cd04f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
@@ -203,19 +210,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "b8d16f634717dc5a0cb232140fda7f83cec67a07f8ed0885dc1464fe8347f237"
+      "sha256": "e6794db69749231cbce5e116953bf9600b9fc98fc61b31c442949ce5eecff4c5"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
       "role": "receipt",
       "sha256": "14abd1a84b98d3f519c76825b996cbaa902efe22e8948f4963ce691dd910a55e",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json",
+      "role": "receipt",
+      "sha256": "e7b94bb5a47abcf0ee1701b57b77b3ce1ecf6c13919807b5dc068234f4fc4879",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Ranking",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -236,6 +249,10 @@
     {
       "en": "21 October 2026, RL1: the relation-level reading is formalized on courses with its exact law of easing and restraint under it (record relation-level-law-of-easing, study section 318); what this record does not show and its next step say so. Its laws are unchanged.",
       "zh": "2026年10月21日，RL1：关系层读法在进程上形式化，带确切的缓和之律及其下的节制（记录 relation-level-law-of-easing，研究第 318 节）；本记录所不表明者与其下一步如此说明。其规律不变。"
+    },
+    {
+      "en": "21 October 2026, J1S: whether J1 yields \"better without malignant growth\" step by step is answered (record basic-priority-step-by-step, study section 320); the next step says so. Its laws are unchanged.",
+      "zh": "2026年10月21日，J1S：J1 能否逐步给出“没有恶性增殖更好”已回答（记录 basic-priority-step-by-step，研究第 320 节）；下一步如此说明。其规律不变。"
     }
   ]
 }

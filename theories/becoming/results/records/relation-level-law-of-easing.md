@@ -26,7 +26,7 @@
 
 - That participation kept is needed beyond each relation the other includes: the exact law asks it relation by relation.
 - Restraint by abstaining: a course that stops drawing on and depending on a condition loses its relations to it, so this law does not rank it.
-- Which reading of living to use; the form of L under the condition; J1 step by step.
+- Which reading of living to use; the form of L under the condition.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
 
@@ -40,7 +40,7 @@ Canonical source: [Ranking.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-A witness that participation kept cannot be dropped in the restraint theorem; the form of L under the condition; J1 step by step; an independent review.
+A witness that participation kept cannot be dropped in the restraint theorem; the form of L under the condition; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -60,6 +60,9 @@ The comparison laws are the theory's own. The three readings of living now each 
   - Output: stepwise, Eases, ExtendsUnder, stepwise_unranked, absent_sustains.
   - Input: The relation-level reading on courses and its comparisons.
   - Preserved conditions: The two-part family for the unranked instance. [Ranking.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean)
+- related, not a proved adapter: [basic-priority-step-by-step](basic-priority-step-by-step.md). Read with the sustaining formation's events as the basic tier, J1 ranks absence above malignant growth under the stepwise and relation-level readings.
+
+**Used by:** [basic-priority-step-by-step](basic-priority-step-by-step.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -73,6 +76,7 @@ The comparison laws are the theory's own. The three readings of living now each 
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json) | — |
 
 Aliases: `the relation-level law of easing`, `restraint under the relation-level reading`, `关系层的缓和之律`, `Becoming.Ranking.relational_extends_iff_of_eases`, `Becoming.Ranking.restraint_extends_iff_relational`
 
@@ -80,6 +84,7 @@ Aliases: `the relation-level law of easing`, `restraint under the relation-level
 ### History
 
 - 21 October 2026: added (RL1), the relation-level reading on courses, its exact law of easing, its whole-run form, restraint over any number of drawers under it and the two-part family unranked; study section 318.
+- 21 October 2026, J1S: whether J1 yields "better without malignant growth" step by step is answered (record basic-priority-step-by-step, study section 320); the next step says so. Its laws are unchanged.
 
 </details>
 

@@ -343,8 +343,8 @@
     "en": "Lean 4.29.1 checks, empty axiom reports: current Becoming.Ranking and Becoming.Bridge, receipt 20261013T221720.428753Z, core purity verified; this result's 19 theorems of Becoming.Relevance, receipt 20261013T094743.528770Z. Bridge adapters are not independent results. Author counterreview (integration note); the second independent review read it only for its question 4, anticipating the restraint result; the third reviewed it whole, accepted the mathematics, scoped restraint to the two-part family and supplied the included-event hypothesis. The possibility reading awaits independent review."
   },
   "next_delta": {
-    "en": "Whether the priority of basic conditions yields “better without malignant growth” stepwise.",
-    "zh": "检验基本条件优先能否在逐步读法下给出“没有恶性增殖更好”。"
+    "en": "The form of L under the condition; an independent review.",
+    "zh": "条件之下 L 的形式；独立审查。"
   },
   "correspondence": {
     "zh": "两个排序在逐步读法下分道。若 G0 与 C 共用逐步读法，C 仍把共享排在以消耗取胜之上，却不再把没有恶性增殖的继续排得更高；整段读法两者都保持，但不满足独立审查的判据 (b) 与 (c)。若 G0 的记入取逐步读法而 C 取整段读法，两者都保持，但 G0 与 C 不再共用一种 living 读法：形式上两者各以读法为参数，前提卡上 C 所说的“活的内容”却是 G0 的 living，分开取须公开。生生读作生成者生成新的生成，其方向以能形成者的扩大比较（DELEGATED-CHOICES D1，经修订由 Ren 2026-10-18 取）。可能性读法的解读（AI 论证，依 Ren 的交托采用）：它读“有意义的，就是能形成的”与 Ren 的“more possibilities of becoming”；它计能形成的，不计形成了的。在公理之下 C 以可能性读，排序来自部分失去的，而不是不计形成本身；Ren 2026-10-11 把比较的方式交 AI 决定（“Comparing courses - you decide”）：继续之间以可能性比较，理由见章节 §6.5。",
@@ -568,13 +568,20 @@
         "en": "The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part ranks above overdraw under it too.",
         "zh": "进程上的关系层读法：在缓和下它所撤回的恰是缓和之进程不再参与或所侵蚀的关系；仍参与的节制在它之下也排在过度汲取之上。"
       }
+    },
+    {
+      "id": "basic-priority-step-by-step",
+      "detail": {
+        "en": "Read with the sustaining formation's events as the basic tier, J1 ranks absence above malignant growth under the stepwise and relation-level readings.",
+        "zh": "以维持者的事件为基本层读时，J1 在逐步与关系层读法下把不在场排在恶性增殖之上。"
+      }
     }
   ],
   "references": [
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
       "role": "proof",
-      "sha256": "46ba3df510844a6b6183edec334803659e41235d9f99bea064ddac5880a43f8d",
+      "sha256": "350ef3b2aac032f7d0caaa612264a3cf7278b313e0b4ce26554520ee030cd04f",
       "declarations": [
         "Becoming.Ranking.frame",
         "Becoming.Ranking.ExtendsUnder",
@@ -898,12 +905,18 @@
       "role": "receipt",
       "sha256": "14abd1a84b98d3f519c76825b996cbaa902efe22e8948f4963ce691dd910a55e",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json",
+      "role": "receipt",
+      "sha256": "e7b94bb5a47abcf0ee1701b57b77b3ce1ecf6c13919807b5dc068234f4fc4879",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Ranking",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1060,6 +1073,10 @@
     {
       "en": "21 October 2026, RL1: the relation-level reading is formalized on courses with its exact law of easing and restraint under it (record relation-level-law-of-easing, study section 318); what this record does not show and its next step say so. Its laws are unchanged.",
       "zh": "2026年10月21日，RL1：关系层读法在进程上形式化，带确切的缓和之律及其下的节制（记录 relation-level-law-of-easing，研究第 318 节）；本记录所不表明者与其下一步如此说明。其规律不变。"
+    },
+    {
+      "en": "21 October 2026, J1S: whether J1 yields \"better without malignant growth\" step by step is answered (record basic-priority-step-by-step, study section 320); the next step says so. Its laws are unchanged.",
+      "zh": "2026年10月21日，J1S：J1 能否逐步给出“没有恶性增殖更好”已回答（记录 basic-priority-step-by-step，研究第 320 节）；下一步如此说明。其规律不变。"
     }
   ],
   "text_versions": [

@@ -14290,3 +14290,48 @@ Board item EC, its third step (the master law of finite runs, its rest part). Co
 **Output → input.** The finite-runs law has one rest theorem. What remains of EC's list is in the completion report's master-laws section.
 
 **The run.** Core 285 modules and 12,169 theorems, instances 7 and 567, applications 6 and 179; 39 Lean steps ran, 1,165 reused. 125 declarations of Becoming.InAmounts, 89 of them theorems, all with empty axiom reports. Connectivity: 647 of 12,915 apart, 0 of the module's 89; register check passes.
+
+## 320. The priority of basic conditions, step by step (J1S)
+
+```text
+Result(s): new record basic-priority-step-by-step (new laws of Becoming.Ranking, which now imports Becoming.Lexical);
+       reuses ranking-under-readings (the two-part family, its two courses, overdraw_consuming, absent_sustains, the
+       stepwise reading), relation-level-law-of-easing (the relation-level reading), and the lexical order J1/J2
+       (Lexical.Above, Above.anchor, BasicPriority).
+Delta: in the two-part family the stepwise and relation-level readings leave the absence and the occurrence of an
+       overdrawing formation unranked by C (stepwise_unranked, relational_unranked), and §8.1 item 11 asked whether the
+       priority of basic conditions yields "better without malignant growth" step by step. Read in two tiers, the
+       sustaining formation's included events or relations basic (basicTier) and the focal formation's gains
+       (gainTier), the course without the focal formation is lexically above the course with it under the stepwise
+       reading (Ranking.basic_first_stepwise) and the relation-level reading (Ranking.basic_first_relational): it keeps
+       every basic claim, the sustaining formation being active and drawing nothing at every step of it, and holds one
+       the other loses after the loss. So every comparison meeting J1 ranks absence above malignant growth under both
+       readings (Ranking.basic_first_ranks).
+Premises / correspondence: the two-part family's premises as in stepwise_unranked (a positive need of the sustaining
+       formation, the focal need within it, a start at that need, overdraw from some step on); J1/J2 as the condition
+       BasicPriority on a comparison; the reading of the basic tier as the sustaining formation's events.
+Evidence: core receipt 20261021T170709.920612Z (passed).
+Boundary: the basic tier is a reading: the sustaining formation's activity is the condition meeting its need, so its
+       events are the basic condition's being met; another assignment of tiers is not covered; the two-part family
+       only.
+Output → input: chapter §6 (the ranking bullet) and §8.1 item 11 (EN, ZH), the record table; Ranking's header; records
+       ranking-under-readings, stepwise-law-of-easing and relation-level-law-of-easing (their J1 items); significance
+       review, J1 check.
+```
+
+**The question.** Under the stepwise reading C alone does not rank the absence of a malignant formation above its occurrence: the formation's first event is included before the loss, so neither course extends the other (`Ranking.stepwise_unranked`), and the relation-level reading behaves the same (`Ranking.relational_unranked`, RL1). §8.1 item 11 asked whether the priority of basic conditions, J1/J2 (`Lexical.BasicPriority`), recovers the ranking step by step.
+
+**What was built** (new laws of `Becoming.Ranking`, pure core, every axiom report empty).
+
+- *Two tiers* (`Ranking.basicTier`, `Ranking.gainTier`). Over any type of claims with a part read off each (events, or relations), a reading's basic tier in the two-part family is the sustaining formation's included claims, whose activity is the condition meeting its need, and the gain tier the focal formation's.
+- *J1 ranks absence above malignant growth, stepwise* (`Ranking.basic_first_stepwise`). Under the stepwise reading's premises the course without the focal formation is lexically above the course with it: every basic event of the occurring course is one of the absent course, since there the sustaining formation is active at every step (`Ranking.absent_sustains`) and draws nothing, so undermines nothing; and the absent course holds the sustaining formation's event at the step of the loss, which the occurring course lacks (`Ranking.overdraw_consuming`). `Lexical.Above.anchor` then puts it above whatever the gains.
+- *The same, relation by relation* (`Ranking.basic_first_relational`): the sustaining formation requires the condition, so it takes part in it at every step.
+- *Every comparison meeting J1* (`Ranking.basic_first_ranks`): under `Lexical.BasicPriority` with these tiers, a comparison ranks the absent course above the occurring one, under either reading.
+
+**Against the prior form** ([significance review, J1 check](BECOMING-SIGNIFICANCE-REVIEW.md#j1-check)). The comparisons are the theory's own. The result places the difference between the readings exactly: C read on all living events weighs the malignant formation's first event against the sustaining formation's later ones and ranks neither course; J1 counts the basic tier first, and the absent course keeps strictly more of it, so no gain of the focal formation can trade for the loss (`Lexical.Above.no_trade`).
+
+*Reading* [AI reading, D45]. Step by step, a malignant formation's early activity is real living and is counted; what J1 adds is that the condition's being met for what depends on it comes first. The basic tier here is read as the sustaining formation's events because its activity is exactly the condition meeting its need; with that reading, the priority of basic conditions recovers "better without malignant growth" under every reading of living the theory has.
+
+**Self-review.** The tiers are defined over any claim type with a part read off each, so one definition serves events and relations. The proofs reuse `overdraw_consuming` and `absent_sustains` and add no premise beyond `stepwise_unranked`'s. `Ranking` now imports `Becoming.Lexical`, which imports `Becoming.Dependence` and `Becoming.Decidedness`, both already below `Ranking`'s users, so no cycle and no new dependency for the modules above. Limits: the two-part family; the assignment of tiers is a reading, stated in the record; the form of L stays open.
+
+**The run.** Core 285 modules and 12,172 theorems, instances 7 and 567, applications 6 and 179; 39 Lean steps ran, 1,165 reused. 5 declarations added to Becoming.Ranking, 3 of them theorems, none removed, all with empty axiom reports. Connectivity: 647 of 12,918 apart, unchanged; no new apart root, every new law stated on a run or read by one that is, the witnesses on the run; register check passes.

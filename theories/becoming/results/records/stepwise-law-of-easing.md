@@ -25,7 +25,7 @@
 ## Does not show
 
 - That taking within what is given is needed: it is sufficient; the exact condition is that the restrained course undermine no event the other includes.
-- The form of L under the condition; whether J1 yields "better without malignant growth" step by step.
+- The form of L under the condition.
 - Which reading of living to use, or any duty to restrain: the laws rank courses under each reading.
 - **Counterexample:** Ranking.ThirdParty.undermines_included: a restrained course that eases the other yet undermines an event the other includes is not ranked above it under the stepwise reading. [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean)
 
@@ -41,7 +41,7 @@ Canonical source: [Ranking.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-A flow-level premise exactly equivalent to undermining no included event; the form of L under the condition; J1 step by step; an independent review.
+A flow-level premise exactly equivalent to undermining no included event; the form of L under the condition; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -58,6 +58,7 @@ The comparison laws are the theory's own: comparison principle C read through a 
   - Input: The exact stepwise law of easing and restraint over any number of drawers under it.
   - Preserved conditions: Easing; the gating of activity; for restraint, balanced flows taking within what they give. [Ranking.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean)
 - related, not a proved adapter: [relation-level-law-of-easing](relation-level-law-of-easing.md). The relation-level reading on courses: under easing it withdraws exactly the relations the easing course no longer takes part in or undermines; restraint that keeps taking part ranks above overdraw under it too.
+- related, not a proved adapter: [basic-priority-step-by-step](basic-priority-step-by-step.md). Read with the sustaining formation's events as the basic tier, J1 ranks absence above malignant growth under the stepwise and relation-level readings.
 
 **Used by:** [relation-level-law-of-easing](relation-level-law-of-easing.md)
 
@@ -73,6 +74,7 @@ The comparison laws are the theory's own: comparison principle C read through a 
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T141520.308357Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T170709.920612Z/verification.json) | — |
 
 Aliases: `the stepwise law of easing`, `restraint under the stepwise reading`, `a course whose levels never fall undermines nothing`, `逐步的缓和之律`, `Becoming.Ranking.stepwise_extends_iff_of_eases`, `Becoming.Ranking.restraint_extends_iff_stepwise`
 
@@ -81,6 +83,7 @@ Aliases: `the stepwise law of easing`, `restraint under the stepwise reading`, `
 
 - 21 October 2026: added (ST1), the stepwise law of easing: under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing; restraint over any number of drawers under the stepwise reading where the restrained flow takes within what it gives; study section 315.
 - 21 October 2026, RL1: the relation-level reading is formalized on courses with its exact law of easing and restraint under it (record relation-level-law-of-easing, study section 318); what this record does not show and its next step say so. Its laws are unchanged.
+- 21 October 2026, J1S: whether J1 yields "better without malignant growth" step by step is answered (record basic-priority-step-by-step, study section 320); the next step says so. Its laws are unchanged.
 
 </details>
 
