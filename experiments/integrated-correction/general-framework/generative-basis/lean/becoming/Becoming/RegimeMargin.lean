@@ -32,19 +32,24 @@ the regime's and not the level's alone.
   (`Adjusted.RestsAtDraw`, which every giving between the recent and the regime's has where it moves
   wherever it differs from the regime's, `Adjusted.Between.restsAtDraw`), a level at or above the
   draw with a recent giving is left as it is exactly where the recent giving is the draw and the
-  regime's step leaves the level as it is (`Adjusted.rest_iff`): wherever a run comes to rest at or
-  above the draw, at any rate of adjustment, it rests at a point the regime's step leaves as it is,
-  while the frozen rest leaves every level at or above the draw as it is (`Adjusted.frozen_rests`).
-  Where the adjusted giving stays on the draw's side where the recent and the regime's giving both
-  are (`Adjusted.StaysShort`, `Adjusted.StaysMet`), below the point of no return with the recent
-  giving short of the draw the condition is gone (`Adjusted.ends_below`; where `y` is positive,
-  whatever is given from nothing, the draw takes all there is, `Adjusted.taken_whole`), at or above
-  it with the recent giving meeting the draw it holds (`Adjusted.holds`, `Adjusted.holds_from`), and
-  the point is exact on the state (`Adjusted.ends_iff_below`). The recent giving's side cannot be
-  dropped: under giving gated at two and a draw of three the point is five; the regime's step ends
-  the condition from four and holds it from five, while giving moving one unit a step toward the
-  regime's holds it from four with a recent giving of six and ends it from five with a recent giving
-  of nothing (`Crossing.crosses`).
+  regime's step leaves the level as it is (`Adjusted.rest_iff`), and its run stays where it started
+  exactly where the regime's run from the level stays at the level (`Adjusted.rests_iff`,
+  `Adjusted.Between.rests_iff`): wherever a run rests at or above the draw, at any rate of
+  adjustment, it rests at a level the regime's step leaves as it is. That premise cannot be dropped:
+  the frozen rest lies between the recent giving and the regime's, and from four with a recent
+  giving at a draw of three its run stays at four, where the regime's step ends the condition
+  (`Adjusted.frozen_rests`, `Crossing.frozen_stays`). Where the adjusted giving stays on the draw's
+  side where the recent and the regime's giving both are (`Adjusted.StaysShort`,
+  `Adjusted.StaysMet`, which every giving between them has), below the point of no return with the
+  recent giving short of the draw the condition is gone (`Adjusted.ends_below`; where `y` is
+  positive, whatever is given from nothing, the draw takes all there is, `Adjusted.taken_whole`), at
+  or above it with the recent giving meeting the draw it holds (`Adjusted.holds`,
+  `Adjusted.holds_from`), and the point is exact on the state (`Adjusted.ends_iff_below`,
+  `Adjusted.Between.ends_iff_below`). The recent giving's side cannot be dropped: under giving gated
+  at two and a draw of three the point is five; the regime's step ends the condition from four and
+  holds it from five, while giving moving one unit a step toward the regime's holds it from four
+  with a recent giving of six and ends it from five with a recent giving of nothing
+  (`Crossing.crosses`).
 * **The need is the regime's.** Where giving stops below a need `m` (`Gated g m`), every level at
   which giving meets a positive draw lies at or above the need (`root_above_need`), so the point of
   no return lies at least the draw above the need, and more than the draw above it exactly where
@@ -180,9 +185,6 @@ theorem regime_staysShort (g : Nat → Nat) (H : Nat) : StaysShort (fun e _ => g
 theorem regime_staysMet (g : Nat → Nat) (H : Nat) : StaysMet (fun e _ => g e) g H :=
   fun _ _ _ met => met
 
-theorem regime_restsAtDraw (g : Nat → Nat) (H : Nat) : RestsAtDraw (fun e _ => g e) g H :=
-  fun _ => Iff.rfl
-
 theorem regime_fromNothing {g : Nat → Nat} (nothing : RegimeMargin.FromNothing g) :
     FromNothing (fun e _ => g e) :=
   fun _ => nothing
@@ -255,6 +257,32 @@ theorem rest_iff {A : Nat → Nat → Nat} {g : Nat → Nat} {H x r : Nat} (rest
     have ar : A (x - H) r = r := (congrArg (A (x - H)) rH).trans (atDraw.trans rH.symm)
     show (x - H + A (x - H) r, A (x - H) r) = (x, r)
     rw [ar, rH, back]
+
+/-- **On the run, every rest at or above the draw is the regime's.** Where the adjusted giving rests
+at the draw exactly where the regime gives the draw, the run from a level at or above the draw with
+a recent giving stays where it started exactly where the recent giving is the draw and the regime's
+run from the level stays at the level. -/
+theorem rests_iff {A : Nat → Nat → Nat} {g : Nat → Nat} {H x r : Nat} (rests : RestsAtDraw A g H)
+    (atLeast : H ≤ x) :
+    (∀ n, (Law.run (step A H) (x, r)).state n = (x, r)) ↔
+      r = H ∧ ∀ n, (Law.run (RegimeMargin.step g H) x).state n = x :=
+  ⟨fun stays =>
+    have ⟨rH, fixed⟩ := (rest_iff rests atLeast).1 (stays 1)
+    ⟨rH, fun n => (congrArg (Law.orbit (RegimeMargin.step g H) x) (Nat.one_mul n)).symm.trans
+      (Law.orbit_mul (next := RegimeMargin.step g H) (s := x) (p := 1) fixed n)⟩,
+   fun ⟨rH, stays⟩ =>
+    have fixed := (rest_iff rests atLeast).2 ⟨rH, stays 1⟩
+    fun n => (congrArg (Law.orbit (step A H) (x, r)) (Nat.one_mul n)).symm.trans
+      (Law.orbit_mul (next := step A H) (s := (x, r)) (p := 1) fixed n)⟩
+
+/-- **Every giving between the recent and the regime's that moves wherever it differs from the
+regime's rests on the run only at the regime's point**: at or above the draw, its run stays where it
+started exactly where the recent giving is the draw and the regime's run stays at the level. -/
+theorem Between.rests_iff {A : Nat → Nat → Nat} {g : Nat → Nat} {H x r : Nat}
+    (between : Between A g) (settles : Settles A g) (atLeast : H ≤ x) :
+    (∀ n, (Law.run (step A H) (x, r)).state n = (x, r)) ↔
+      r = H ∧ ∀ n, (Law.run (RegimeMargin.step g H) x).state n = x :=
+  Adjusted.rests_iff (between.restsAtDraw settles H) atLeast
 
 /-! ### Below the point of no return -/
 
@@ -472,6 +500,16 @@ theorem ends_iff_below {A : Nat → Nat → Nat} {g : Nat → Nat} {H y hi x r :
       rw [zero] at at_least
       exact absurd (Nat.lt_of_lt_of_le pos at_least) (Nat.lt_irrefl 0)),
    fun below => ⟨x, ends_below short staysShort nothing below (side.2 below)⟩⟩
+
+/-- **For every giving between the recent and the regime's, the point of no return is exact on the
+state**: from a level up to `hi` whose recent giving falls short of the draw exactly where the level
+is below `H + y`, the condition ends exactly where the level starts below `H + y`, where nothing is
+given from nothing and the step keeps the band. -/
+theorem Between.ends_iff_below {A : Nat → Nat → Nat} {g : Nat → Nat} {H y hi x r : Nat}
+    (between : Between A g) (pos : 0 < H + y) (short : Short g H y) (nothing : FromNothing A)
+    (meets : Meets g H y hi) (keeps : Keeps A H hi) (high : x ≤ hi) (side : r < H ↔ x < H + y) :
+    (∃ n, ((Law.run (step A H) (x, r)).state n).1 = 0) ↔ x < H + y :=
+  Adjusted.ends_iff_below pos short (between.staysShort H) nothing meets (between.staysMet H) keeps high side
 
 end Adjusted
 
@@ -784,12 +822,6 @@ def giving (z : Nat) : Nat := if z < 2 then 0 else 4
 def toward (e r : Nat) : Nat :=
   if r < giving e then r + 1 else if giving e < r then r - 1 else r
 
-/-- A run left as it is by its law stays where it is. -/
-theorem orbit_rest {S : Type} {next : S → S} {s : S} (fixed : next s = s) :
-    ∀ n, Law.orbit next s n = s
-  | 0 => rfl
-  | n + 1 => (congrArg next (orbit_rest fixed n)).trans fixed
-
 theorem fromNothing : FromNothing giving := rfl
 
 theorem root : Root giving 3 2 :=
@@ -839,17 +871,15 @@ Under the gated giving and a draw of three the point of no return is five. The r
 the condition from four and holds it from five. Giving moving one unit a step toward the regime's
 (between the recent giving and the regime's, and resting only there) holds it at or above seven
 from the second step on where it starts at four with a recent giving of six, above the draw, and
-has it at nothing from the second step on where it starts at five with a recent giving of nothing.
-The frozen rest holds four as it is with a recent giving at the draw. -/
+has it at nothing from the second step on where it starts at five with a recent giving of
+nothing. -/
 theorem crosses :
     Root giving 3 2 ∧ Adjusted.Between toward giving ∧ Adjusted.Settles toward giving ∧
     (Law.run (step giving 3) 4).state 4 = 0 ∧ (∀ n, 5 ≤ (Law.run (step giving 3) 5).state n) ∧
     (∀ n, 7 ≤ ((Law.run (Adjusted.step toward 3) (4, 6)).state (n + 2)).1) ∧
-    (∀ n, ((Law.run (Adjusted.step toward 3) (5, 0)).state (n + 2)).1 = 0) ∧
-    Adjusted.step (fun _ r => r) 3 (4, 3) = (4, 3) := by
+    (∀ n, ((Law.run (Adjusted.step toward 3) (5, 0)).state (n + 2)).1 = 0) := by
   refine ⟨root, toward_between, toward_settles,
-    ends_below root.2 fromNothing (Nat.lt_succ_self 4), fun n => ?_, fun n => ?_, fun n => ?_,
-    Adjusted.frozen_rests (Nat.le_succ 3)⟩
+    ends_below root.2 fromNothing (Nat.lt_succ_self 4), fun n => ?_, fun n => ?_, fun n => ?_⟩
   · exact Nat.le_trans (Adjusted.holds_from (A := fun e _ => giving e) (r := 3) meets_from
       (Adjusted.regime_staysMet giving 3) (Nat.le_refl 5) (Nat.le_refl 3) n).1
       (Nat.le_of_eq (Adjusted.orbit_regime giving 3 (5, 3) n))
@@ -860,7 +890,21 @@ theorem crosses :
       (Nat.le_succ_of_le (Nat.le_succ 5)) (Nat.le_succ 3) n).1
   · have two : Law.orbit (Adjusted.step toward 3) (5, 0) 2 = (0, 0) := rfl
     show (Law.orbit (Adjusted.step toward 3) (5, 0) (n + 2)).1 = 0
-    rw [Nat.add_comm n 2, Law.orbit_add, two, orbit_rest (rfl : Adjusted.step toward 3 (0, 0) = (0, 0))]
+    rw [Nat.add_comm n 2, Law.orbit_add, two, ← Nat.one_mul n,
+      Law.orbit_mul (next := Adjusted.step toward 3) (s := (0, 0)) (p := 1) rfl n]
+
+/-- **Moving wherever it differs from the regime's cannot be dropped.** The frozen rest lies between
+the recent giving and the regime's, yet from four with a recent giving at the draw of three its run
+stays at four at every step, where the regime's step ends the condition from four. -/
+theorem frozen_stays :
+    Adjusted.Between (fun _ r => r) giving ∧
+    (∀ n, (Law.run (Adjusted.step (fun _ r => r) 3) (4, 3)).state n = (4, 3)) ∧
+    (Law.run (step giving 3) 4).state 4 = 0 :=
+  ⟨Adjusted.frozen_between giving,
+   fun n => (congrArg (Law.orbit (Adjusted.step (fun _ r => r) 3) (4, 3)) (Nat.one_mul n)).symm.trans
+     (Law.orbit_mul (next := Adjusted.step (fun _ r => r) 3) (s := (4, 3)) (p := 1)
+       (Adjusted.frozen_rests (Nat.le_succ 3)) n),
+   ends_below root.2 fromNothing (Nat.lt_succ_self 4)⟩
 
 end Crossing
 
