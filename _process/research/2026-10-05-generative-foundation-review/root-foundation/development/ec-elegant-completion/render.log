@@ -336,14 +336,14 @@ python3 -B tools/research/research.py render
   "source_drift": [],
   "unrelated_source_drift": [],
   "style_warnings": {
-    "findings": 631,
-    "records": 195,
+    "findings": 637,
+    "records": 197,
     "by_severity": {
-      "warning": 631
+      "warning": 637
     },
     "by_rule": {
-      "length": 495,
-      "status-restatement": 34,
+      "length": 499,
+      "status-restatement": 36,
       "stock-boundary": 26,
       "negation-lead": 20,
       "round-accretion": 19,
