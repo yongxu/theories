@@ -1,0 +1,24 @@
+{
+  "records": 1,
+  "summary": {
+    "findings": 1,
+    "records": 1,
+    "by_severity": {
+      "warning": 1
+    },
+    "by_rule": {
+      "negation-lead": 1
+    }
+  },
+  "findings": [
+    {
+      "id": "rest-on-coupled-webs",
+      "field": "statement",
+      "rule": "negation-lead",
+      "severity": "warning",
+      "detail": "1/1 sentences are negations; lead with what the result does"
+    }
+  ],
+  "errors": [],
+  "scope": "Form only: length, process narration, shared boundaries written out. Whether a boundary is substantive is the author's reading."
+}

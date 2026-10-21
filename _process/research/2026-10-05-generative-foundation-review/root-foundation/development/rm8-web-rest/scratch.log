@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/rm8/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rm8-web-rest/tree",
+  "modules": 62,
+  "ran": [
+    "Becoming.RegimeMargin",
+    "BecomingRegimeMarginAxiomAudit"
+  ],
+  "reused": 61,
+  "unclean": [],
+  "audits": {
+    "Becoming.RegimeMargin": {
+      "theorems": 202,
+      "declarations": 273,
+      "with_axioms": {}
+    }
+  }
+}
