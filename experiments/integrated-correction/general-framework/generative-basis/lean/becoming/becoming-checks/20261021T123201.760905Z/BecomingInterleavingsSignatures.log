@@ -1,0 +1,712 @@
+@Becoming.Interleavings.cons_ne_nil : ∀ {α : Type} {a : α} {l : List α}, a :: l ≠ []
+@Becoming.Interleavings.cons_heads : ∀ {α : Type} {a b : α} {l m : List α}, a :: l = b :: m → a = b
+@Becoming.Interleavings.cons_tails : ∀ {α : Type} {a b : α} {l m : List α}, a :: l = b :: m → l = m
+@Becoming.Interleavings.bool_absurd : ∀ {P : Prop} {b : Bool}, b = true → b = false → P
+@Becoming.Interleavings.split_first : ∀ {α : Type} (p : α → Bool) (L : List α),
+  (∀ (f : α), f ∈ L → p f = false) ∨ ∃ A f B, L = A ++ f :: B ∧ (∀ (a : α), a ∈ A → p a = false) ∧ p f = true
+@Becoming.Interleavings.length_tail_le : ∀ {α : Type} (l : List α), l.tail.length ≤ l.length
+@Becoming.Interleavings.LocalLaw.ownCourse_true : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {x : X}
+  {e : E} (es : List E), law.touches e x = true → law.ownCourse x (e :: es) = e :: law.ownCourse x es
+@Becoming.Interleavings.LocalLaw.ownCourse_false : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {x : X} {e : E} (es : List E), law.touches e x = false → law.ownCourse x (e :: es) = law.ownCourse x es
+@Becoming.Interleavings.LocalLaw.ownCourse_append : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (x : X) (A B : List E), law.ownCourse x (A ++ B) = law.ownCourse x A ++ law.ownCourse x B
+@Becoming.Interleavings.LocalLaw.ownCourse_untouched : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {x : X} {A : List E}, (∀ (a : E), a ∈ A → law.touches a x = false) → law.ownCourse x A = []
+@Becoming.Interleavings.LocalLaw.act_agree : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (e : E)
+  {s s' : X → σ}, (∀ (x : X), s x = s' x) → ∀ (x : X), law.act e s x = law.act e s' x
+@Becoming.Interleavings.LocalLaw.run_agree : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (L : List E)
+  {s s' : X → σ}, (∀ (x : X), s x = s' x) → ∀ (x : X), law.run L s x = law.run L s' x
+@Becoming.Interleavings.LocalLaw.Apart.symm : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {e f : E},
+  law.Apart e f → law.Apart f e
+@Becoming.Interleavings.LocalLaw.act_comm : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {e f : E},
+  law.Apart e f → ∀ (s : X → σ) (x : X), law.act f (law.act e s) x = law.act e (law.act f s) x
+@Becoming.Interleavings.LocalLaw.run_move : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {e : E}
+  (B A : List E),
+  (∀ (a : E), a ∈ A → law.Apart e a) → ∀ (s : X → σ) (x : X), law.run (A ++ e :: B) s x = law.run (e :: (A ++ B)) s x
+@Becoming.Interleavings.LocalLaw.run_idle : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {L : List E},
+  (∀ (x : X), law.ownCourse x L = []) → ∀ (s : X → σ) (x : X), law.run L s x = s x
+@Becoming.Interleavings.LocalLaw.shares_of_mem : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {e f : E} {x : X},
+  law.touches e x = true → law.touches f x = true → ∀ {xs : List X}, x ∈ xs → law.shares xs e f = true
+@Becoming.Interleavings.LocalLaw.exists_of_shares : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {e f : E} {xs : List X}, law.shares xs e f = true → ∃ x, law.touches e x = true ∧ law.touches f x = true
+@Becoming.Interleavings.LocalLaw.apart_of_shares : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X}, (∀ (x : X), x ∈ xs) → ∀ {e f : E}, law.shares xs e f = false → law.Apart e f
+@Becoming.Interleavings.LocalLaw.untouched_of_shares : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X}, (∀ (x : X), x ∈ xs) → ∀ {e : E}, law.shares xs e e = false → ∀ (x : X), law.touches e x = false
+@Becoming.Interleavings.LocalLaw.split_heads : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {e : E} {x₀ : X},
+      law.touches e x₀ = true →
+        ∀ {M : List E},
+          (∀ (x : X), law.touches e x = true → ∃ m, law.ownCourse x M = e :: m) →
+            ∃ A B,
+              M = A ++ e :: B ∧
+                (∀ (a : E), a ∈ A → law.Apart e a) ∧
+                  (∀ (x : X), law.touches e x = true → law.ownCourse x M = e :: law.ownCourse x (A ++ B)) ∧
+                    ∀ (x : X), law.touches e x = false → law.ownCourse x M = law.ownCourse x (A ++ B)
+@Becoming.Interleavings.LocalLaw.run_of_courses : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ (L M : List E),
+      (∀ (x : X), law.ownCourse x L = law.ownCourse x M) → ∀ (s : X → σ) (x : X), law.run L s x = law.run M s x
+@Becoming.Interleavings.LocalLaw.trace_run : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {s t : X → σ} {L : List E}, Generative.Trace law.process s L t → ∀ (x : X), t x = law.run L s x
+@Becoming.Interleavings.LocalLaw.run_trace : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (s : X → σ)
+  (L : List E), Generative.Trace law.process s L (law.run L s)
+@Becoming.Interleavings.LocalLaw.trace_of_courses : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {s t t' : X → σ} {L M : List E},
+      Generative.Trace law.process s L t →
+        Generative.Trace law.process s M t' → (∀ (x : X), law.ownCourse x L = law.ownCourse x M) → ∀ (x : X), t x = t' x
+@Becoming.Interleavings.LocalLaw.trace_of_interleavings : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {s t t' : X → σ} {L M : List E},
+      Generative.Trace law.process s L t →
+        Generative.Trace law.process s M t' → law.Interleaves c L → law.Interleaves c M → ∀ (x : X), t x = t' x
+@Becoming.Interleavings.LocalLaw.swap_courses : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {e f : E}, law.Apart e f → ∀ (x : X), law.ownCourse x [e, f] = law.ownCourse x [f, e]
+@Becoming.Interleavings.LocalLaw.trace_swap : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {e f : E},
+      law.Apart e f →
+        ∀ {s t t' : X → σ},
+          Generative.Trace law.process s [e, f] t → Generative.Trace law.process s [f, e] t' → ∀ (x : X), t x = t' x
+@Becoming.Interleavings.LocalLaw.eq_of_courses : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ},
+  law.Connected → ∀ (L M : List E), (∀ (x : X), law.ownCourse x L = law.ownCourse x M) → L = M
+@Becoming.Interleavings.LocalLaw.unique_iff : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) → ((∀ (L M : List E), (∀ (x : X), law.ownCourse x L = law.ownCourse x M) → L = M) ↔ law.Connected)
+@Becoming.Interleavings.LocalLaw.traced_unique_iff : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ (s : X → σ),
+      (∀ (L M : List E) (t t' : X → σ),
+          Generative.Trace law.process s L t →
+            Generative.Trace law.process s M t' → (∀ (x : X), law.ownCourse x L = law.ownCourse x M) → L = M) ↔
+        law.Connected
+@Becoming.Interleavings.LocalLaw.heads_eq : ∀ {E : Type} [inst : DecidableEq E] {l : List E} {e : E},
+  Becoming.Interleavings.LocalLaw.ready.heads l e = true → ∃ m, l = e :: m
+@Becoming.Interleavings.LocalLaw.heads_cons : ∀ {E : Type} [inst : DecidableEq E] (e : E) (m : List E),
+  Becoming.Interleavings.LocalLaw.ready.heads (e :: m) e = true
+@Becoming.Interleavings.LocalLaw.ready_heads : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] {c : X → List E} {e : E} {xs : List X},
+  law.ready c xs e = true →
+    ∀ (x : X), x ∈ xs → law.touches e x = true → Becoming.Interleavings.LocalLaw.ready.heads (c x) e = true
+@Becoming.Interleavings.LocalLaw.ready_of_heads : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] {c : X → List E} {e : E} {xs : List X},
+  (∀ (x : X), x ∈ xs → law.touches e x = true → Becoming.Interleavings.LocalLaw.ready.heads (c x) e = true) →
+    law.ready c xs e = true
+@Becoming.Interleavings.LocalLaw.pop_true : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {e : E}
+  {c : X → List E} {x : X}, law.touches e x = true → law.pop e c x = (c x).tail
+@Becoming.Interleavings.LocalLaw.pop_false : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {e : E}
+  {c : X → List E} {x : X}, law.touches e x = false → law.pop e c x = c x
+@Becoming.Interleavings.LocalLaw.done_nil : ∀ {X E : Type} {c : X → List E} {xs : List X},
+  Becoming.Interleavings.LocalLaw.done c xs = true → ∀ (x : X), x ∈ xs → c x = []
+@Becoming.Interleavings.LocalLaw.not_done : ∀ {X E : Type} {c : X → List E} {xs : List X},
+  Becoming.Interleavings.LocalLaw.done c xs = false → ∃ x e m, x ∈ xs ∧ c x = e :: m
+@Becoming.Interleavings.LocalLaw.pick_cons : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] (c : X → List E) (all : List X) (y : X) (xs : List X),
+  law.pick c all (y :: xs) =
+    match c y with
+    | [] => law.pick c all xs
+    | e :: tail =>
+      match law.touches e y && law.ready c all e with
+      | true => some e
+      | false => law.pick c all xs
+@Becoming.Interleavings.LocalLaw.pick_nil_head : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] {c : X → List E} {all : List X} {y : X} (xs : List X),
+  c y = [] → law.pick c all (y :: xs) = law.pick c all xs
+@Becoming.Interleavings.LocalLaw.pick_cons_head : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] {c : X → List E} {all : List X} {y : X} (xs : List X) {a : E} {m : List E},
+  c y = a :: m →
+    law.pick c all (y :: xs) =
+      match law.touches a y && law.ready c all a with
+      | true => some a
+      | false => law.pick c all xs
+@Becoming.Interleavings.LocalLaw.pick_spec : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] {c : X → List E} {all : List X} {e : E} {xs : List X},
+  law.pick c all xs = some e → ∃ x m, x ∈ xs ∧ c x = e :: m ∧ law.touches e x = true ∧ law.ready c all e = true
+@Becoming.Interleavings.LocalLaw.pick_some : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] {c : X → List E} {all : List X} {e : E} {x : X} {m : List E},
+  law.touches e x = true →
+    law.ready c all e = true → c x = e :: m → ∀ {xs : List X}, x ∈ xs → ∃ e', law.pick c all xs = some e'
+@Becoming.Interleavings.LocalLaw.schedule_zero : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] (xs : List X) (c : X → List E),
+  law.schedule xs 0 c =
+    match Becoming.Interleavings.LocalLaw.done c xs with
+    | true => some []
+    | false => none
+@Becoming.Interleavings.LocalLaw.schedule_succ : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] (xs : List X) (n : Nat) (c : X → List E),
+  law.schedule xs (n + 1) c =
+    match Becoming.Interleavings.LocalLaw.done c xs with
+    | true => some []
+    | false =>
+      match law.pick c xs xs with
+      | none => none
+      | some e => Option.map (fun x => e :: x) (law.schedule xs n (law.pop e c))
+@Becoming.Interleavings.LocalLaw.schedule_interleaves : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] {xs : List X},
+  (∀ (x : X), x ∈ xs) → ∀ (n : Nat) (c : X → List E) (L : List E), law.schedule xs n c = some L → law.Interleaves c L
+@Becoming.Interleavings.LocalLaw.pop_interleaves : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L : List E},
+      law.Interleaves c L →
+        ∀ {e : E} {x₀ : X},
+          law.touches e x₀ = true →
+            law.ready c xs e = true → ∃ A B, L = A ++ e :: B ∧ law.Interleaves (law.pop e c) (A ++ B)
+@Becoming.Interleavings.LocalLaw.total_le : ∀ {X E : Type} {c c' : X → List E},
+  (∀ (x : X), (c x).length ≤ (c' x).length) →
+    ∀ (xs : List X), Becoming.Interleavings.LocalLaw.total c xs ≤ Becoming.Interleavings.LocalLaw.total c' xs
+@Becoming.Interleavings.LocalLaw.total_lt : ∀ {X E : Type} {c c' : X → List E},
+  (∀ (x : X), (c x).length ≤ (c' x).length) →
+    ∀ {x₀ : X},
+      (c x₀).length + 1 ≤ (c' x₀).length →
+        ∀ {xs : List X},
+          x₀ ∈ xs → Becoming.Interleavings.LocalLaw.total c xs + 1 ≤ Becoming.Interleavings.LocalLaw.total c' xs
+@Becoming.Interleavings.LocalLaw.total_pos : ∀ {X E : Type} {c : X → List E} {x : X} {e : E} {m : List E},
+  c x = e :: m → ∀ {xs : List X}, x ∈ xs → 1 ≤ Becoming.Interleavings.LocalLaw.total c xs
+@Becoming.Interleavings.LocalLaw.total_pop : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X} {e : E} {c : X → List E} {x₀ : X} {m₀ : List E},
+  law.touches e x₀ = true →
+    c x₀ = e :: m₀ →
+      x₀ ∈ xs → Becoming.Interleavings.LocalLaw.total (law.pop e c) xs + 1 ≤ Becoming.Interleavings.LocalLaw.total c xs
+@Becoming.Interleavings.LocalLaw.schedule_some : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ (n : Nat) (c : X → List E) (L : List E),
+      law.Interleaves c L → Becoming.Interleavings.LocalLaw.total c xs ≤ n → ∃ L', law.schedule xs n c = some L'
+@Becoming.Interleavings.LocalLaw.schedule_iff : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ (c : X → List E),
+      (∃ L, law.Interleaves c L) ↔ ∃ L, law.schedule xs (Becoming.Interleavings.LocalLaw.total c xs) c = some L
+@Becoming.Interleavings.LocalLaw.traced_iff : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  [inst : DecidableEq E] {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ (c : X → List E) (s : X → σ),
+      (∃ L t, law.Interleaves c L ∧ Generative.Trace law.process s L t) ↔
+        ∃ L, law.schedule xs (Becoming.Interleavings.LocalLaw.total c xs) c = some L
+@Becoming.Interleavings.LocalLaw.standings_true : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {x : X}
+  {e : E} (es : List E) (s : X → σ),
+  law.touches e x = true → law.standings x (e :: es) s = law.act e s x :: law.standings x es (law.act e s)
+@Becoming.Interleavings.LocalLaw.standings_false : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {x : X} {e : E} (es : List E) (s : X → σ),
+  law.touches e x = false → law.standings x (e :: es) s = law.standings x es (law.act e s)
+@Becoming.Interleavings.LocalLaw.standings_agree : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (x : X) (L : List E) {s s' : X → σ}, (∀ (y : X), s y = s' y) → law.standings x L s = law.standings x L s'
+@Becoming.Interleavings.LocalLaw.standings_move : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (x : X)
+  {e : E} (B A : List E),
+  (∀ (a : E), a ∈ A → law.Apart e a) →
+    ∀ (s : X → σ), law.standings x (A ++ e :: B) s = law.standings x (e :: (A ++ B)) s
+@Becoming.Interleavings.LocalLaw.standings_idle : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (x : X)
+  {L : List E}, (∀ (y : X), law.ownCourse y L = []) → ∀ (s : X → σ), law.standings x L s = []
+@Becoming.Interleavings.LocalLaw.standings_of_courses : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ (L M : List E),
+      (∀ (x : X), law.ownCourse x L = law.ownCourse x M) →
+        ∀ (s : X → σ) (x : X), law.standings x L s = law.standings x M s
+@Becoming.Interleavings.LocalLaw.standings_of_interleavings : ∀ {X E σ : Type}
+  {law : Becoming.Interleavings.LocalLaw X E σ} {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L → law.Interleaves c M → ∀ (s : X → σ) (x : X), law.standings x L s = law.standings x M s
+@Becoming.Interleavings.LocalLaw.runUpTo_succ : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (L : List E) (s : X → σ) (t : Nat),
+  law.runUpTo L s (t + 1) =
+    match (motive := Option E → X → σ) Becoming.Interleavings.LocalLaw.exchangeAt L t with
+    | none => law.runUpTo L s t
+    | some e => law.act e (law.runUpTo L s t)
+@Becoming.Interleavings.LocalLaw.runUpTo_whole : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (L : List E) (s : X → σ) (t : Nat), L.length ≤ t → law.runUpTo L s t = law.run L s
+@Becoming.Interleavings.LocalLaw.runUpTo_append_le : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (A R : List E) (s : X → σ) (t : Nat), t ≤ A.length → law.runUpTo (A ++ R) s t = law.runUpTo A s t
+@Becoming.Interleavings.LocalLaw.runUpTo_append : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (A R : List E) (s : X → σ) (t : Nat), law.runUpTo (A ++ R) s (A.length + t) = law.runUpTo R (law.run A s) t
+@Becoming.Interleavings.LocalLaw.runUpTo_agree : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (L : List E) {s s' : X → σ}, (∀ (y : X), s y = s' y) → ∀ (t : Nat) (y : X), law.runUpTo L s t y = law.runUpTo L s' t y
+@Becoming.Interleavings.LocalLaw.ownCount_true : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {x : X}
+  {e : E} (L : List E) (t : Nat), law.touches e x = true → law.ownCount x (e :: L) (t + 1) = law.ownCount x L t + 1
+@Becoming.Interleavings.LocalLaw.ownCount_false : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {x : X}
+  {e : E} (L : List E) (t : Nat), law.touches e x = false → law.ownCount x (e :: L) (t + 1) = law.ownCount x L t
+@Becoming.Interleavings.LocalLaw.ownCount_zero : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (x : X)
+  (L : List E), law.ownCount x L 0 = 0
+@Becoming.Interleavings.LocalLaw.afterOwn_zero : ∀ {σ : Type} (d : σ) (ss : List σ),
+  Becoming.Interleavings.LocalLaw.afterOwn d ss 0 = d
+@Becoming.Interleavings.LocalLaw.runUpTo_own : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (x : X)
+  (L : List E) (s : X → σ) (t : Nat), law.runUpTo L s t x = law.standingAfter x L s (law.ownCount x L t)
+@Becoming.Interleavings.LocalLaw.standingAfter_of_interleavings : ∀ {X E σ : Type}
+  {law : Becoming.Interleavings.LocalLaw X E σ} {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M → ∀ (s : X → σ) (x : X) (n : Nat), law.standingAfter x L s n = law.standingAfter x M s n
+@Becoming.Interleavings.LocalLaw.runUpTo_of_own : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          ∀ (s : X → σ) (x : X) {t t' : Nat},
+            law.ownCount x L t = law.ownCount x M t' → law.runUpTo L s t x = law.runUpTo M s t' x
+@Becoming.Interleavings.LocalLaw.ownCount_le : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (x : X)
+  (L : List E) (t : Nat), law.ownCount x L t ≤ (law.ownCourse x L).length
+@Becoming.Interleavings.LocalLaw.firstAt_true : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {x : X}
+  {e : E} (M : List E) (n : Nat), law.touches e x = true → law.firstAt x (e :: M) (n + 1) = law.firstAt x M n + 1
+@Becoming.Interleavings.LocalLaw.firstAt_false : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {x : X}
+  {e : E} (M : List E) (n : Nat), law.touches e x = false → law.firstAt x (e :: M) (n + 1) = law.firstAt x M (n + 1) + 1
+@Becoming.Interleavings.LocalLaw.ownCount_firstAt : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (x : X) (M : List E) (n : Nat), n ≤ (law.ownCourse x M).length → law.ownCount x M (law.firstAt x M n) = n
+@Becoming.Interleavings.LocalLaw.firstAt_least : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (x : X)
+  (M : List E) (n t : Nat), law.ownCount x M t = n → law.firstAt x M n ≤ t
+@Becoming.Interleavings.LocalLaw.length_of_interleavings : ∀ {X E σ : Type}
+  {law : Becoming.Interleavings.LocalLaw X E σ} {c : X → List E} {L M : List E},
+  law.Interleaves c L → law.Interleaves c M → ∀ (x : X), (law.ownCourse x L).length = (law.ownCourse x M).length
+@Becoming.Interleavings.LocalLaw.ownCount_index : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {c : X → List E} {L M : List E},
+  law.Interleaves c L →
+    law.Interleaves c M → ∀ (x : X) (t : Nat), law.ownCount x M (law.indexMap x L M t) = law.ownCount x L t
+@Becoming.Interleavings.LocalLaw.runUpTo_index : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          ∀ (s : X → σ) (x : X) (t : Nat), law.runUpTo L s t x = law.runUpTo M s (law.indexMap x L M t) x
+@Becoming.Interleavings.LocalLaw.exchangeAt_lt : ∀ {E : Type} {l : List E} {n : Nat} {e : E},
+  Becoming.Interleavings.LocalLaw.exchangeAt l n = some e → n < l.length
+@Becoming.Interleavings.LocalLaw.exchangeAt_own : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (x : X)
+  (L : List E) (t : Nat) {e : E},
+  Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+    law.touches e x = true →
+      Becoming.Interleavings.LocalLaw.exchangeAt (law.ownCourse x L) (law.ownCount x L t) = some e ∧
+        law.ownCount x L (t + 1) = law.ownCount x L t + 1
+@Becoming.Interleavings.LocalLaw.firstAt_succ_step : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (x : X) (M : List E) (n : Nat),
+  n < (law.ownCourse x M).length →
+    ∃ p e,
+      law.firstAt x M (n + 1) = p + 1 ∧
+        Becoming.Interleavings.LocalLaw.exchangeAt M p = some e ∧
+          law.touches e x = true ∧ Becoming.Interleavings.LocalLaw.exchangeAt (law.ownCourse x M) n = some e
+@Becoming.Interleavings.LocalLaw.index_matches : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {c : X → List E} {L M : List E},
+  law.Interleaves c L →
+    law.Interleaves c M →
+      ∀ (x : X) {t : Nat} {e : E},
+        Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+          law.touches e x = true →
+            ∃ p, law.indexMap x L M (t + 1) = p + 1 ∧ Becoming.Interleavings.LocalLaw.exchangeAt M p = some e
+@Becoming.Interleavings.LocalLaw.world_level : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} (xs : List X) (L : List E) (s : X → Nat) (t : Nat),
+  (law'.world xs L s).web.level t = law'.runUpTo L s t
+@Becoming.Interleavings.LocalLaw.total_zero_of : ∀ {X : Type} (l : List X) (q : X → Nat),
+  (∀ (f : X), f ∈ l → q f = 0) → Becoming.total l q = 0
+@Becoming.Interleavings.LocalLaw.total_single : ∀ {X : Type} [inst : DecidableEq X] {c : X} {v : Nat} {l : List X},
+  List.Pairwise (fun a b => a ≠ b) l → c ∈ l → (Becoming.total l fun f => if f = c then v else 0) = v
+@Becoming.Interleavings.LocalLaw.total_absent : ∀ {X : Type} [inst : DecidableEq X] {c : X} {v : Nat} {l : List X},
+  ¬c ∈ l → (Becoming.total l fun f => if f = c then v else 0) = 0
+@Becoming.Interleavings.LocalLaw.touchedIn_mem : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {e : E}
+  {c : X} {xs : List X}, c ∈ xs → law.touches e c = true → c ∈ law.touchedIn e xs
+@Becoming.Interleavings.LocalLaw.touchedIn_not_mem : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {e : E} {c : X}, law.touches e c = false → ∀ {xs : List X}, ¬c ∈ law.touchedIn e xs
+@Becoming.Interleavings.LocalLaw.touchedIn_mem_of : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {e : E} {c : X} {xs : List X}, c ∈ law.touchedIn e xs → c ∈ xs
+@Becoming.Interleavings.LocalLaw.touchedIn_pairwise : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {e : E} {xs : List X}, List.Pairwise (fun a b => a ≠ b) xs → List.Pairwise (fun a b => a ≠ b) (law.touchedIn e xs)
+@Becoming.Interleavings.LocalLaw.world_balances : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    List.Pairwise (fun a b => a ≠ b) xs →
+      ∀ (L : List E) (s : X → Nat) (t : Nat) (c : X),
+        (law'.world xs L s).web.level (t + 1) c + ((law'.world xs L s).move t).taken c =
+          (law'.world xs L s).web.level t c + ((law'.world xs L s).move t).given c
+@Becoming.Interleavings.LocalLaw.world_final : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs xs' : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {L M : List E},
+      (∀ (x : X), law'.ownCourse x L = law'.ownCourse x M) →
+        ∀ (s : X → Nat) {t : Nat},
+          L.length ≤ t →
+            M.length ≤ t → ∀ (x : X), (law'.world xs' L s).web.level t x = (law'.world xs' M s).web.level t x
+@Becoming.Interleavings.LocalLaw.world_swap : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs : List X} (A B : List E) {e f : E},
+  law'.Apart e f →
+    ∀ (s : X → Nat) {t : Nat},
+      t ≠ A.length + 1 →
+        ∀ (x : X),
+          (law'.world xs (A ++ e :: f :: B) s).web.level t x = (law'.world xs (A ++ f :: e :: B) s).web.level t x
+@Becoming.Interleavings.LocalLaw.world_swap_between : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs : List X} (A B : List E) {e f : E},
+  law'.Apart e f →
+    ∀ (s : X → Nat) (x : X),
+      (law'.touches e x = true →
+          (law'.world xs (A ++ e :: f :: B) s).web.level (A.length + 1) x =
+              (law'.world xs (A ++ f :: e :: B) s).web.level (A.length + 2) x ∧
+            (law'.world xs (A ++ f :: e :: B) s).web.level (A.length + 1) x =
+              (law'.world xs (A ++ e :: f :: B) s).web.level A.length x) ∧
+        (law'.touches f x = true →
+            (law'.world xs (A ++ f :: e :: B) s).web.level (A.length + 1) x =
+                (law'.world xs (A ++ e :: f :: B) s).web.level (A.length + 2) x ∧
+              (law'.world xs (A ++ e :: f :: B) s).web.level (A.length + 1) x =
+                (law'.world xs (A ++ f :: e :: B) s).web.level A.length x) ∧
+          (law'.touches e x = false →
+            law'.touches f x = false →
+              (law'.world xs (A ++ e :: f :: B) s).web.level (A.length + 1) x =
+                (law'.world xs (A ++ f :: e :: B) s).web.level (A.length + 1) x)
+@Becoming.Interleavings.LocalLaw.world_own : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} (xs : List X) (L : List E) (s : X → Nat) (t : Nat) (x : X),
+  (law'.world xs L s).web.level t x = law'.standingAfter x L s (law'.ownCount x L t)
+@Becoming.Interleavings.LocalLaw.world_index : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs xs' : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law'.Interleaves c L →
+        law'.Interleaves c M →
+          ∀ (s : X → Nat) (x : X) (t : Nat),
+            (law'.world xs' L s).web.level t x = (law'.world xs' M s).web.level (law'.indexMap x L M t) x
+@Becoming.Interleavings.LocalLaw.world_of_own : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs xs' : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law'.Interleaves c L →
+        law'.Interleaves c M →
+          ∀ (s : X → Nat) (x : X) {t t' : Nat},
+            law'.ownCount x L t = law'.ownCount x M t' →
+              (law'.world xs' L s).web.level t x = (law'.world xs' M s).web.level t' x
+@Becoming.Interleavings.LocalLaw.world_reads_alike : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs xs' : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law'.Interleaves c L →
+        law'.Interleaves c M →
+          ∀ (s : X → Nat) (x : X) (P : Nat → Prop),
+            ((∃ t, P ((law'.world xs' L s).web.level t x)) ↔ ∃ t, P ((law'.world xs' M s).web.level t x)) ∧
+              ((∀ (t : Nat), P ((law'.world xs' L s).web.level t x)) ↔
+                ∀ (t : Nat), P ((law'.world xs' M s).web.level t x))
+@Becoming.Interleavings.LocalLaw.exchangeAt_mem : ∀ {E : Type} {L : List E} {t : Nat} {e : E},
+  Becoming.Interleavings.LocalLaw.exchangeAt L t = some e → e ∈ L
+@Becoming.Interleavings.LocalLaw.exchangeAt_append_lt : ∀ {E : Type} (A R : List E) {k : Nat},
+  k < A.length → Becoming.Interleavings.LocalLaw.exchangeAt (A ++ R) k = Becoming.Interleavings.LocalLaw.exchangeAt A k
+@Becoming.Interleavings.LocalLaw.exchangeAt_append : ∀ {E : Type} (A R : List E) (k : Nat),
+  Becoming.Interleavings.LocalLaw.exchangeAt (A ++ R) (A.length + k) = Becoming.Interleavings.LocalLaw.exchangeAt R k
+@Becoming.Interleavings.LocalLaw.exchangeAt_beyond : ∀ {E : Type} (L : List E) {t : Nat},
+  L.length ≤ t → Becoming.Interleavings.LocalLaw.exchangeAt L t = none
+@Becoming.Interleavings.LocalLaw.exchangeAt_none : ∀ {E : Type} {L : List E} {t : Nat},
+  Becoming.Interleavings.LocalLaw.exchangeAt L t = none → L.length ≤ t
+@Becoming.Interleavings.LocalLaw.exchangeAt_some : ∀ {E : Type} (L : List E) {t : Nat},
+  t < L.length → ∃ e, Becoming.Interleavings.LocalLaw.exchangeAt L t = some e
+@Becoming.Interleavings.LocalLaw.length_insert : ∀ {E : Type} (A B : List E) (a : E),
+  (A ++ a :: B).length = (A ++ B).length + 1
+@Becoming.Interleavings.LocalLaw.ownCount_append_le : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (x : X) (A R : List E) (k : Nat), k ≤ A.length → law.ownCount x (A ++ R) k = law.ownCount x A k
+@Becoming.Interleavings.LocalLaw.ownCount_append : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (x : X) (A R : List E) (k : Nat),
+  law.ownCount x (A ++ R) (A.length + k) = law.ownCount x A A.length + law.ownCount x R k
+@Becoming.Interleavings.LocalLaw.ownCount_untouched : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (x : X) {A : List E}, (∀ (a : E), a ∈ A → law.touches a x = false) → ∀ (k : Nat), law.ownCount x A k = 0
+@Becoming.Interleavings.LocalLaw.ownCount_mono : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (x : X)
+  (L : List E) {t t' : Nat}, t ≤ t' → law.ownCount x L t ≤ law.ownCount x L t'
+@Becoming.Interleavings.LocalLaw.step_of_ownCount : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (x : X) (L : List E) {t t' : Nat} {e e' : E},
+  Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+    law.touches e x = true →
+      Becoming.Interleavings.LocalLaw.exchangeAt L t' = some e' →
+        law.touches e' x = true → law.ownCount x L t = law.ownCount x L t' → t = t'
+@Becoming.Interleavings.LocalLaw.firstAt_after : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} (x : X)
+  (M : List E) {p : Nat} {e : E},
+  Becoming.Interleavings.LocalLaw.exchangeAt M p = some e →
+    law.touches e x = true → law.firstAt x M (law.ownCount x M p + 1) = p + 1
+@Becoming.Interleavings.LocalLaw.occurrence_matches : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ (L M : List E),
+      (∀ (x : X), law.ownCourse x L = law.ownCourse x M) →
+        ∀ (t : Nat) {e : E},
+          Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+            (∃ x, law.touches e x = true) →
+              ∃ p,
+                Becoming.Interleavings.LocalLaw.exchangeAt M p = some e ∧
+                  ∀ (x : X), law.touches e x = true → law.ownCount x M p = law.ownCount x L t
+@Becoming.Interleavings.LocalLaw.Touching.tail : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ} {a : E}
+  {L : List E}, law.Touching (a :: L) → law.Touching L
+@Becoming.Interleavings.LocalLaw.Touching.remove : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {A B : List E} {a : E}, law.Touching (A ++ a :: B) → law.Touching (A ++ B)
+@Becoming.Interleavings.LocalLaw.length_of_courses : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ (L M : List E),
+      law.Touching L → law.Touching M → (∀ (x : X), law.ownCourse x L = law.ownCourse x M) → L.length = M.length
+@Becoming.Interleavings.LocalLaw.touches_of_touchedIn : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {e : E} {c : X} {xs : List X}, c ∈ law.touchedIn e xs → law.touches e c = true
+@Becoming.Interleavings.LocalLaw.renumber_none : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X} {L M : List E} {t : Nat},
+  Becoming.Interleavings.LocalLaw.exchangeAt L t = none → law.renumber xs L M t = t
+@Becoming.Interleavings.LocalLaw.renumber_lead : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X} {L M : List E} {t : Nat} {e : E} {x : X} {rest : List X},
+  Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+    law.touchedIn e xs = x :: rest → law.renumber xs L M t = law.indexMap x L M (t + 1) - 1
+@Becoming.Interleavings.LocalLaw.renumber_spec : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {L M : List E},
+      (∀ (x : X), law.ownCourse x L = law.ownCourse x M) →
+        ∀ {t : Nat} {e : E},
+          Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+            (∃ x, law.touches e x = true) →
+              Becoming.Interleavings.LocalLaw.exchangeAt M (law.renumber xs L M t) = some e ∧
+                ∀ (x : X),
+                  law.touches e x = true →
+                    law.ownCount x M (law.renumber xs L M t) = law.ownCount x L t ∧
+                      law.indexMap x L M (t + 1) = law.renumber xs L M t + 1
+@Becoming.Interleavings.LocalLaw.renumber_exchange : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          law.Touching L →
+            law.Touching M →
+              ∀ (t : Nat),
+                Becoming.Interleavings.LocalLaw.exchangeAt M (law.renumber xs L M t) =
+                  Becoming.Interleavings.LocalLaw.exchangeAt L t
+@Becoming.Interleavings.LocalLaw.renumber_count : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          ∀ {t : Nat} {e : E},
+            Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+              ∀ {x : X}, law.touches e x = true → law.ownCount x M (law.renumber xs L M t) = law.ownCount x L t
+@Becoming.Interleavings.LocalLaw.renumber_index : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          ∀ {t : Nat} {e : E},
+            Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+              ∀ {x : X}, law.touches e x = true → law.indexMap x L M (t + 1) = law.renumber xs L M t + 1
+@Becoming.Interleavings.LocalLaw.renumber_renumber : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          law.Touching L → law.Touching M → ∀ (t : Nat), law.renumber xs M L (law.renumber xs L M t) = t
+@Becoming.Interleavings.LocalLaw.renumber_beyond : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X} {L M : List E} {t : Nat}, L.length ≤ t → law.renumber xs L M t = t
+@Becoming.Interleavings.LocalLaw.renumber_lt : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          law.Touching L → law.Touching M → ∀ {t : Nat}, t < L.length → law.renumber xs L M t < M.length
+@Becoming.Interleavings.LocalLaw.renumber_reindexes : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          law.Touching L → law.Touching M → Becoming.Reindexes 0 L.length (law.renumber xs L M) (law.renumber xs M L)
+@Becoming.Interleavings.LocalLaw.touchAt_some : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {L : List E} {t : Nat} {e : E},
+  Becoming.Interleavings.LocalLaw.exchangeAt L t = some e → ∀ (x : X), law.touchAt L t x = law.touches e x
+@Becoming.Interleavings.LocalLaw.touchAt_none : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {L : List E} {t : Nat}, Becoming.Interleavings.LocalLaw.exchangeAt L t = none → ∀ (x : X), law.touchAt L t x = false
+@Becoming.Interleavings.LocalLaw.touchAt_iff : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {L : List E} {t : Nat} {x : X},
+  law.touchAt L t x = true ↔ ∃ e, Becoming.Interleavings.LocalLaw.exchangeAt L t = some e ∧ law.touches e x = true
+@Becoming.Interleavings.LocalLaw.touchAt_renumber : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          law.Touching L →
+            law.Touching M → ∀ (t : Nat) (x : X), law.touchAt M (law.renumber xs L M t) x = law.touchAt L t x
+@Becoming.Interleavings.LocalLaw.runUpTo_untouched : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  (L : List E) (s : X → σ) {t : Nat} {x : X},
+  law.touchAt L t x = false → law.runUpTo L s (t + 1) x = law.runUpTo L s t x
+@Becoming.Interleavings.LocalLaw.runUpTo_renumber : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          ∀ (s : X → σ) {t : Nat} {e : E},
+            Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+              ∀ {x : X},
+                law.touches e x = true →
+                  law.runUpTo L s t x = law.runUpTo M s (law.renumber xs L M t) x ∧
+                    law.runUpTo L s (t + 1) x = law.runUpTo M s (law.renumber xs L M t + 1) x
+@Becoming.Interleavings.LocalLaw.reads_renumber : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          ∀ (s : X → σ) {t : Nat} {e : E},
+            Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+              ∀ (R : (X → σ) → Prop),
+                (∀ (l l' : X → σ), (∀ (y : X), law.touches e y = true → l y = l' y) → R l → R l') →
+                  (R (law.runUpTo L s t) ↔ R (law.runUpTo M s (law.renumber xs L M t))) ∧
+                    (R (law.runUpTo L s (t + 1)) ↔ R (law.runUpTo M s (law.renumber xs L M t + 1)))
+@Becoming.Interleavings.LocalLaw.change_renumber : ∀ {X E σ : Type} {law : Becoming.Interleavings.LocalLaw X E σ}
+  {xs : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law.Interleaves c L →
+        law.Interleaves c M →
+          law.Touching L →
+            law.Touching M →
+              ∀ (s : X → σ) (t : Nat) (x : X),
+                law.runUpTo M s (law.renumber xs L M t) x = law.runUpTo L s t x ∧
+                    law.runUpTo M s (law.renumber xs L M t + 1) x = law.runUpTo L s (t + 1) x ∨
+                  law.runUpTo L s (t + 1) x = law.runUpTo L s t x ∧
+                    law.runUpTo M s (law.renumber xs L M t + 1) x = law.runUpTo M s (law.renumber xs L M t) x
+@Becoming.Interleavings.LocalLaw.world_active_iff : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} (xs : List X) (L : List E) (s : X → Nat) (t : Nat) (x : X),
+  (law'.world xs L s).web.active t x ↔
+    ∃ e, Becoming.Interleavings.LocalLaw.exchangeAt L t = some e ∧ law'.touches e x = true
+@Becoming.Interleavings.LocalLaw.world_renumber_active : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs xs' : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law'.Interleaves c L →
+        law'.Interleaves c M →
+          law'.Touching L →
+            law'.Touching M →
+              ∀ (s : X → Nat) (t : Nat) (x : X),
+                (law'.world xs' L s).web.active t x = (law'.world xs' M s).web.active (law'.renumber xs L M t) x
+@Becoming.Interleavings.LocalLaw.world_renumber_level : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs xs' : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law'.Interleaves c L →
+        law'.Interleaves c M →
+          ∀ (s : X → Nat) {t : Nat} {e : E},
+            Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+              ∀ {x : X},
+                law'.touches e x = true →
+                  (law'.world xs' L s).web.level t x = (law'.world xs' M s).web.level (law'.renumber xs L M t) x ∧
+                    (law'.world xs' L s).web.level (t + 1) x =
+                        (law'.world xs' M s).web.level (law'.renumber xs L M t + 1) x ∧
+                      law'.indexMap x L M (t + 1) = law'.renumber xs L M t + 1
+@Becoming.Interleavings.LocalLaw.world_renumber_reads : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs xs' : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law'.Interleaves c L →
+        law'.Interleaves c M →
+          ∀ (s : X → Nat) {t : Nat} {e : E},
+            Becoming.Interleavings.LocalLaw.exchangeAt L t = some e →
+              ∀ (R : (X → Nat) → Prop),
+                (∀ (l l' : X → Nat), (∀ (y : X), law'.touches e y = true → l y = l' y) → R l → R l') →
+                  (R ((law'.world xs' L s).web.level t) ↔ R ((law'.world xs' M s).web.level (law'.renumber xs L M t))) ∧
+                    (R ((law'.world xs' L s).web.level (t + 1)) ↔
+                      R ((law'.world xs' M s).web.level (law'.renumber xs L M t + 1)))
+@Becoming.Interleavings.LocalLaw.fall_of_change : ∀ {X : Type} [inst : DecidableEq X] {l l' m m' : X → Nat} {c : X},
+  m c - m' c = l c - l' c →
+    ∀ (f : X), Becoming.Interleavings.LocalLaw.fall m m' f c = Becoming.Interleavings.LocalLaw.fall l l' f c
+@Becoming.Interleavings.LocalLaw.rise_of_change : ∀ {X : Type} [inst : DecidableEq X] {l l' m m' : X → Nat} {c : X},
+  m' c - m c = l' c - l c →
+    ∀ (f : X), Becoming.Interleavings.LocalLaw.rise m m' f c = Becoming.Interleavings.LocalLaw.rise l l' f c
+@Becoming.Interleavings.LocalLaw.world_renumber_flow : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs xs' : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law'.Interleaves c L →
+        law'.Interleaves c M →
+          law'.Touching L →
+            law'.Touching M →
+              ∀ (s : X → Nat) (t : Nat),
+                (law'.world xs' L s).flow.SameExchange t (law'.world xs' M s).flow (law'.renumber xs L M t)
+@Becoming.Interleavings.LocalLaw.bool_or_false_left : ∀ {a b : Bool}, (a || b) = false → a = false
+@Becoming.Interleavings.LocalLaw.bool_or_false_right : ∀ {a b : Bool}, (a || b) = false → b = false
+@Becoming.Interleavings.LocalLaw.bool_or_of_left : ∀ {a : Bool} (b : Bool), a = true → (a || b) = true
+Becoming.Interleavings.LocalLaw.bool_or_of_right : ∀ (a : Bool) {b : Bool}, b = true → (a || b) = true
+@Becoming.Interleavings.LocalLaw.untouched_unmoved : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs : List X} {L : List E} {s : X → Nat} {touch : Nat → X → Bool}
+  {n : Nat} {x : X},
+  law'.touchAt L n x = false →
+    law'.touchAt L (n + 1) x = false →
+      ¬x ∈ (law'.footprinted xs L s touch).flow.present n ∧ (law'.footprinted xs L s touch).web.Unmoved n x
+@Becoming.Interleavings.LocalLaw.touch_contains_iff : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} (xs : List X) (L : List E) (s : X → Nat),
+  (law'.footprinted xs L s (law'.touchAt L)).Contains ↔
+    ∀ (n : Nat) (x : X), law'.touchAt L n x = false → law'.touchAt L (n + 1) x = false
+@Becoming.Interleavings.LocalLaw.around_contains : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} (xs : List X) (L : List E) (s : X → Nat),
+  (law'.footprinted xs L s (law'.touchAround L)).Contains
+@Becoming.Interleavings.LocalLaw.around_joined : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} (xs : List X) {L : List E} (s : X → Nat),
+  law'.Touching L → ∀ {t : Nat}, t + 1 < L.length → (law'.footprinted xs L s (law'.touchAround L)).Joined t (t + 1)
+@Becoming.Interleavings.LocalLaw.keeps_consecutive : ∀ {X : Type} {r : Becoming.Footprinted X} {m : Nat}
+  {π ρ : Nat → Nat},
+  (∀ (i : Nat), i + 1 < m → r.Joined i (i + 1)) →
+    Becoming.Reindexes 0 m π ρ → r.Keeps 0 m π → ∀ (i : Nat), i < m → π i = i
+@Becoming.Interleavings.LocalLaw.around_keeps_identity : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} (xs : List X) {L : List E} (s : X → Nat),
+  law'.Touching L →
+    ∀ {π ρ : Nat → Nat},
+      Becoming.Reindexes 0 L.length π ρ →
+        (law'.footprinted xs L s (law'.touchAround L)).Keeps 0 L.length π → ∀ (i : Nat), i < L.length → π i = i
+@Becoming.Interleavings.LocalLaw.renumber_keeps : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs xs' : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law'.Interleaves c L →
+        law'.Interleaves c M →
+          ∀ (s : X → Nat), (law'.footprinted xs' L s (law'.touchAt L)).Keeps 0 L.length (law'.renumber xs L M)
+@Becoming.Interleavings.LocalLaw.world_renumber_correspondence : ∀ {X E : Type} [inst : DecidableEq X]
+  {law' : Becoming.Interleavings.LocalLaw X E Nat} {xs xs' : List X},
+  (∀ (x : X), x ∈ xs) →
+    ∀ {c : X → List E} {L M : List E},
+      law'.Interleaves c L →
+        law'.Interleaves c M →
+          law'.Touching L →
+            law'.Touching M →
+              ∀ (s : X → Nat),
+                Becoming.Reindexes 0 L.length (law'.renumber xs L M) (law'.renumber xs M L) ∧
+                  (∀ (t : Nat), L.length ≤ t → law'.renumber xs L M t = t) ∧
+                    (law'.footprinted xs' L s (law'.touchAt L)).Keeps 0 L.length (law'.renumber xs L M) ∧
+                      (∀ (t : Nat),
+                          (law'.footprinted xs' L s (law'.touchAt L)).flow.SameExchange t
+                            (law'.footprinted xs' M s (law'.touchAt M)).flow (law'.renumber xs L M t)) ∧
+                        ∀ (t : Nat) (x : X),
+                          (law'.footprinted xs' M s (law'.touchAt M)).touch (law'.renumber xs L M t) x =
+                            (law'.footprinted xs' L s (law'.touchAt L)).touch t x
+Becoming.Interleavings.Pair.keeps : ∀ (e : Nat) (s : Bool → Nat) (x : Bool),
+  Becoming.Interleavings.Pair.touches e x = false → Becoming.Interleavings.Pair.act e s x = s x
+Becoming.Interleavings.Pair.reads : ∀ (e : Nat) (s s' : Bool → Nat) (x : Bool),
+  (∀ (y : Bool), Becoming.Interleavings.Pair.touches e y = true → s y = s' y) →
+    Becoming.Interleavings.Pair.touches e x = true →
+      Becoming.Interleavings.Pair.act e s x = Becoming.Interleavings.Pair.act e s' x
+Becoming.Interleavings.Pair.apart_differs : Becoming.Interleavings.Pair.law.Interleaves
+    (fun x => Becoming.Interleavings.Pair.law.ownCourse x [0, 1]) [1, 0] ∧
+  Becoming.Interleavings.Pair.law.renumber [false, true] [0, 1] [1, 0] 0 = 1 ∧
+    Becoming.Interleavings.Pair.law.renumber [false, true] [0, 1] [1, 0] 1 = 0 ∧
+      (Becoming.Interleavings.Pair.law.world [false, true] [0, 1] Becoming.Interleavings.Pair.start).web.level 1 true <
+          (Becoming.Interleavings.Pair.law.world [false, true] [0, 1] Becoming.Interleavings.Pair.start).web.level 1
+            false ∧
+        ¬∃ t,
+            (Becoming.Interleavings.Pair.law.world [false, true] [1, 0] Becoming.Interleavings.Pair.start).web.level t
+                true <
+              (Becoming.Interleavings.Pair.law.world [false, true] [1, 0] Becoming.Interleavings.Pair.start).web.level t
+                false
+Becoming.Interleavings.Pair.touch_not_contains : ¬(Becoming.Interleavings.Pair.law.footprinted [false, true] [0, 1]
+      Becoming.Interleavings.Pair.start (Becoming.Interleavings.Pair.law.touchAt [0, 1])).Contains
+Becoming.Interleavings.Pair.idle_unmatched : (∀ (x : Bool),
+    Becoming.Interleavings.Pair.law.ownCourse x [2] = Becoming.Interleavings.Pair.law.ownCourse x []) ∧
+  Becoming.Interleavings.LocalLaw.exchangeAt [2] 0 = some 2 ∧
+    ¬∃ p, Becoming.Interleavings.LocalLaw.exchangeAt [] p = some 2

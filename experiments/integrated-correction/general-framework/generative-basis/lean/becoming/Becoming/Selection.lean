@@ -42,8 +42,8 @@ supplied, never derived.
   (`Flow.unselected_beyond_coupling`, `Flow.unscored_beyond_coupling`); so does every
   selection through the pooled couplings of a group within the closure
   (`Flow.unselected_beyond_coupling_all`), the case of one formation of a pool's law: a group's
-  closure under a relation is the union of its members' closures (`WithinClosureOf`,
-  `withinClosureOf_iff`), and every selection through the pooled coupling of any group within a
+  closure under a relation is the union of its members' closures, by definition at the frame
+  (`WithinClosureOf`), and every selection through the pooled coupling of any group within a
   pool's coupling closure selects the levels with and without a part beyond it alike
   (`Flow.uncoupled_beyond_pool`, `Flow.unselected_beyond_pool`). Where the members respond, under the hypotheses of
   `Flow.alike_within_coupling`, it selects the two flows alike
@@ -307,44 +307,8 @@ theorem separates_all (differ : ¬ W.AlikeThroughAll obs group l l' t) :
 
 end Web
 
-/-! ## A pool's coupling closure (from `Becoming.SelectionPool`) -/
-
-/-- `g` lies within a group's closure under a relation: every region closed under the relation
-that holds every member holds `g`. -/
-def WithinClosureOf (rel : F → F → Prop) (group : F → Prop) (g : F) : Prop :=
-  ∀ region, ClosedUnder rel region → (∀ f, group f → region f) → region g
-
-namespace WithinClosureOf
-
-variable {rel : F → F → Prop} {group : F → Prop}
-
-/-- What lies within a member's closure lies within the group's. -/
-theorem of_member {f g : F} (member : group f) (within : WithinClosure rel f g) :
-    WithinClosureOf rel group g :=
-  fun region closed holds => within region closed (holds f member)
-
-end WithinClosureOf
-
-/-- A group's closure is closed under the relation. -/
-theorem closedUnder_withinClosureOf {rel : F → F → Prop} {group : F → Prop} :
-    ClosedUnder rel (WithinClosureOf rel group) :=
-  fun g h within related region closed holds => closed g h (within region closed holds) related
-
-/-- **A group's closure is the union of its members' closures.** -/
-theorem withinClosureOf_iff {rel : F → F → Prop} {group : F → Prop} {g : F} :
-    WithinClosureOf rel group g ↔ ∃ f, group f ∧ WithinClosure rel f g :=
-  ⟨fun within => within (fun g => ∃ f, group f ∧ WithinClosure rel f g)
-      (fun _ _ ⟨f, member, inside⟩ related =>
-        ⟨f, member, inside.trans (WithinClosure.of_rel related)⟩)
-      (fun f member => ⟨f, member, WithinClosure.refl f⟩),
-   fun ⟨_, member, within⟩ => WithinClosureOf.of_member member within⟩
-
-/-- The closure of the group holding one formation is that formation's closure. -/
-theorem withinClosureOf_single {rel : F → F → Prop} {f g : F} :
-    WithinClosureOf rel (fun x => x = f) g ↔ WithinClosure rel f g :=
-  ⟨fun within => match withinClosureOf_iff.mp within with
-    | ⟨_, rfl, inside⟩ => inside,
-   WithinClosureOf.of_member rfl⟩
+/-! ## A pool's coupling closure (from `Becoming.SelectionPool`; the closure of a group is the frame's,
+`WithinClosureOf`) -/
 
 namespace Flow
 
@@ -407,7 +371,7 @@ theorem uncoupled_beyond_pool {l : Nat → C → Nat} (without : L.WithheldLevel
       L.BalancesOn W [c] t)
     (beyond : ∀ h, part h = true → ¬ L.WithinPoolCoupling W obs group h) :
     ∀ t g, L.WithinPoolCoupling W obs group g → W.AlikeThrough obs g W.level l t :=
-  fun t g within => match withinClosureOf_iff.mp within with
+  fun t g within => match within with
   | ⟨_, member, inside⟩ => uncoupled_beyond_coupling without
       (fun t g' c within' couples =>
         balanced t g' c (WithinClosureOf.of_member member within') couples)

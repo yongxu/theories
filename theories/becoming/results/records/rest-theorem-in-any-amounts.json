@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T13:33:42+00:00",
+  "reviewed_at_utc": "2026-10-21T12:45:50+00:00",
   "statement": {
     "en": "Read a world's standings and exchanges in any amounts. Balanced and dissipated on, a family's total falls strictly at every change of a level, with no least loss; where the census's total is read off configurations a list holds, the rest theorem holds there.",
     "zh": "以任何量读世界的水平与交换。平衡且被耗散时，一个族的总量在任何水平的每次变化处严格下降，不需要最小损失；普查的总量读自一个列表所容纳的构形之处，停息定理在那里成立。"
@@ -55,28 +55,26 @@
       ]
     },
     {
-      "en": "Every world is a world in whole-number amounts whose balance, dissipation, embodiment and enclosure are the world's own; so by the laws over any amounts a world meeting the premises of World.rests_unrefuted_enclosed whose census total is read off configurations a list holds rests, unrefuted, as does a finite world whose level functions a list holds. In whole numbers the reading is not needed: the least loss of one carries the whole-number laws.",
-      "zh": "每个世界都是自然数量中的世界，其平衡、耗散、具身与围合就是世界自己的；所以由任何量上的规律，满足 World.rests_unrefuted_enclosed 前提、且普查总量读自一个列表所容纳的构形的世界停息（不可否证），水平函数由一个列表容纳的有限世界也一样。在自然数中不需要这种读取：一个单位的最小损失承载了自然数的规律。",
+      "en": "Every world is a world in whole-number amounts whose balance, dissipation, embodiment and enclosure are the world's own; so the laws over any amounts apply to it with its own premises (record rest-exactly-where-falls-stop: with those premises and nothing more, it rests).",
+      "zh": "每个世界都是自然数量中的世界，其平衡、耗散、具身与围合就是世界自己的；所以任何量上的规律以其自己的前提适用于它（记录 rest-exactly-where-falls-stop：只用这些前提，它停息）。",
       "declarations": [
         "Becoming.World.wholeAmounts",
         "Becoming.World.balanced_whole",
         "Becoming.World.dissipative_whole",
         "Becoming.World.embodied_whole",
         "Becoming.World.arisingEmbodied_whole",
-        "Becoming.World.enclosed_whole",
-        "Becoming.World.rests_unrefuted_enclosed_read",
-        "Becoming.World.rests_unrefuted_listed"
+        "Becoming.World.enclosed_whole"
       ]
     },
     {
-      "en": "In dyadic amounts a standing halving as it passes between two relata meets every other premise of the covering form (balanced and dissipated on the pair, whatever arises embodied, every active relatum in the pair), and one relatum arises and the other ceases at every step; no list holds its levels.",
-      "zh": "在二进量中，在两个关系项之间传递、每传一次减半的水平满足覆盖形式的其他每个前提（在这一对上平衡且被耗散，生起者具身，每个活动关系项都在这一对中），而每一步都有一个关系项生起、另一个止息；没有列表容纳它的水平。",
+      "en": "Along an amount falling at every step, as the halving stock in dyadic amounts, a standing passing between two relata meets every other premise of the covering form and one relatum arises and the other ceases at every step; no list holds its levels.",
+      "zh": "沿着每步都下降的量，如二进量中减半的存量，在两个关系项之间传递的水平满足覆盖形式的其他每个前提，而每一步都有一个关系项生起、另一个止息；没有列表容纳它的水平。",
       "declarations": [
-        "Becoming.HalvingPass.balances",
-        "Becoming.HalvingPass.dissipates",
-        "Becoming.HalvingPass.embodied",
-        "Becoming.HalvingPass.never_rests",
-        "Becoming.HalvingPass.levels_unlisted"
+        "Becoming.Pass.balanced",
+        "Becoming.Pass.dissipative",
+        "Becoming.Pass.embodied",
+        "Becoming.Pass.never_rests",
+        "Becoming.Pass.levels_unlisted"
       ]
     }
   ],
@@ -98,8 +96,8 @@
       "kind": "scope"
     },
     {
-      "en": "That a least loss is derived: where the reading is finite none is needed; where it is not, as in HalvingPass, the world need not rest.",
-      "zh": "最小损失被推出：读取有限之处不需要它；不有限之处，如 HalvingPass，世界不必停息。",
+      "en": "That a least loss is derived: where the reading is finite none is needed; where it is not, as along an amount falling at every step (Pass), the world need not rest.",
+      "zh": "最小损失被推出：读取有限之处不需要它；不有限之处，如沿着每步都下降的量（Pass），世界不必停息。",
       "kind": "non-implication"
     },
     {
@@ -112,8 +110,8 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
       "detail": {
-        "en": "HalvingPass.never_rests: in dyadic amounts a standing halving as it passes between two relata is balanced and dissipated on the pair, whatever arises is embodied and every active relatum is in the pair, and one relatum arises and the other ceases at every step; HalvingPass.levels_unlisted: no list holds its levels.",
-        "zh": "HalvingPass.never_rests：在二进量中，在两个关系项之间传递、每次减半的水平，在这一对上平衡且被耗散，生起者具身，每个活动关系项都在这一对中，而每一步都有一个生起、另一个止息；HalvingPass.levels_unlisted：没有列表容纳它的水平。"
+        "en": "Pass.endless_keeps_from_rest: along any amount falling at every step, as the halving stock in dyadic amounts, a standing passing between two relata meets every other premise and arises and ceases at every step; Pass.levels_unlisted: no list holds its levels.",
+        "zh": "Pass.endless_keeps_from_rest：沿着每步都下降的任何量，如二进量中减半的存量，在两个关系项之间传递的水平满足其他每个前提，而每一步都生起与止息；Pass.levels_unlisted：没有列表容纳它的水平。"
       }
     }
   ],
@@ -130,8 +128,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261020T133130.717227Z）：Becoming.InAmounts 与 Becoming.LeastLoss 的声明公理报告为空；检查器核验核心的纯粹性。在一个会话中构建与审查，没有另外的审查者；作者自审与文献检查见研究第 267 节；未经人独立审查。"
   },
   "next_delta": {
-    "en": "The other laws of flows, webs and worlds over any amounts where a law needs more than the order of its amounts (needs and support, gain, the doubling of loops); a finite reading derived for a physical class of systems rather than supplied; an independent review.",
-    "zh": "流、依存网与世界的其他规律在任何量上的形式，凡规律需要量的序以外者（所需与支持、增益、回路的倍增）；为某类物理系统推出而非给出有限读取；独立审查。"
+    "en": "The other laws of flows, webs and worlds over any amounts where a law needs more than the order of its amounts; an independent review.",
+    "zh": "流、依存网与世界的其他规律在任何量上的形式，凡规律需要量的序以外者；独立审查。"
   },
   "correspondence": {
     "en": "Termination of a finite-state system under a potential that never rises and falls strictly at every change: a ranking function on a finite state space (Floyd 1967), the discrete LaSalle principle with a Lyapunov function (LaSalle 1976; Mei and Bullo 2017, arXiv 1710.03710), the potential arguments for chip-firing termination (Björner, Lovász and Shor 1991). The dense counterexample is a discrete Zeno behaviour: infinitely many switches with summable losses. Physically: a dissipative system with finitely many distinguishable states at the resolution its total is read stops changing; one whose losses shrink without floor and whose states are ever finer distinctions need not. Reading (the AI's): the rest theorem needs whole numbers only where its total is read off configurations no list holds.",
@@ -146,7 +144,7 @@
     "rest with no least loss for worlds",
     "Becoming.World.InAmounts",
     "Becoming.World.InAmounts.rests_unrefuted_enclosed",
-    "Becoming.HalvingPass.never_rests"
+    "Becoming.Pass.never_rests"
   ],
   "dependencies": [
     {
@@ -217,6 +215,13 @@
         "en": "The rest theorem there in whole numbers is the case this one reads in any amounts.",
         "zh": "那里自然数中的停息定理，是这里在任何量中读出的情形。"
       }
+    },
+    {
+      "id": "rest-exactly-where-falls-stop",
+      "detail": {
+        "en": "Rest over any amounts, exactly where the total stops falling.",
+        "zh": "任何量上的停息，恰在总量停止下降之处。"
+      }
     }
   ],
   "references": [
@@ -251,15 +256,13 @@
         "Becoming.World.embodied_whole",
         "Becoming.World.arisingEmbodied_whole",
         "Becoming.World.enclosed_whole",
-        "Becoming.World.rests_unrefuted_enclosed_read",
-        "Becoming.World.rests_unrefuted_listed",
-        "Becoming.HalvingPass.balances",
-        "Becoming.HalvingPass.dissipates",
-        "Becoming.HalvingPass.embodied",
-        "Becoming.HalvingPass.never_rests",
-        "Becoming.HalvingPass.levels_unlisted"
+        "Becoming.Pass.balanced",
+        "Becoming.Pass.dissipative",
+        "Becoming.Pass.embodied",
+        "Becoming.Pass.never_rests",
+        "Becoming.Pass.levels_unlisted"
       ],
-      "sha256": "5d8741300645240303887a7e1b391c1f0e2858019bd8cf26c44beab64545fd83"
+      "sha256": "228e58690a33f0ed43e167bf0dd8621951834e3cefcb233b7b7bef55b71a4151"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
@@ -267,7 +270,7 @@
       "declarations": [
         "Becoming.Amounts.rests_unrefuted_of_finite_reading"
       ],
-      "sha256": "fbd8477b11994153d7acb2d0d875c9167f0c7950c7cb5cdfc0107035c861b9fc"
+      "sha256": "15207336ebcbd438d39c4301862599bfc9dbc49b79880cc76cc8fd8cb595f035"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
@@ -287,25 +290,30 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
+      "sha256": "3241a8dac70e5caa379484b5cd223d36ee7ae495c3119594bbf76f7c0ba90624"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
+      "sha256": "a61c21e4dfeb49d21dab0250b99966a6ea7f63cf07ab2b31fd28e12f6de9f875"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
+      "role": "receipt",
+      "sha256": "fb5bb84d275aea291dd7c8c795027c4bb224eef26ab4ecdf66c14183439c0857"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.InAmounts",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -315,6 +323,10 @@
     {
       "en": "20 October 2026: added (LC2), section 8.1 item 6: the rest theorem over any amounts where the levels are read finitely; study section 267.",
       "zh": "2026年10月20日：新增（LC2），第 8.1 节第 6 项：水平有限读取之处任何量上的停息定理；研究第 267 节。"
+    },
+    {
+      "en": "21 October 2026, LC3: the rest theorem takes one premise, that the census's total stops falling (record rest-exactly-where-falls-stop), and this record's read forms are its corollaries with their statements unchanged. The whole-number instances World.rests_unrefuted_enclosed_read and World.rests_unrefuted_listed, which also asked for a reading, are superseded by World.rests_unrefuted_enclosed_whole and World.rests_unrefuted_whole, which ask only the world's own premises (law 4 restated); HalvingPass is generalized below to Pass, along any amount falling at every step (law 5 restated; board rule 9). Proof bindings re-pointed to receipt 20261021T124304.830826Z; study section 308.",
+      "zh": "2026年10月21日，LC3：停息定理只取一个前提，普查的总量停止下降（记录 rest-exactly-where-falls-stop），本记录的读取形式是其推论，陈述不变。同样要求读取的自然数实例 World.rests_unrefuted_enclosed_read 与 World.rests_unrefuted_listed，被只要求世界自身前提的 World.rests_unrefuted_enclosed_whole 与 World.rests_unrefuted_whole 取代（第 4 条规律重述）；HalvingPass 向下推广为 Pass，沿着每步都下降的任何量（第 5 条规律重述；工作板规则 9）。证明绑定改指回执 20261021T124304.830826Z；研究第 308 节。"
     }
   ]
 }

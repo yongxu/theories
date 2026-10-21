@@ -63,6 +63,7 @@ The pigeonhole principle, and termination of a ranking function on a finite stat
 - related, not a proved adapter: [merge-of-a-part-kept-by-the-rest](merge-of-a-part-kept-by-the-rest.md). The other half of LC1: inside a law that merges nothing a part's merge is kept by the rest.
 - related, not a proved adapter: [least-loss-from-entropy-production](least-loss-from-entropy-production.md). There physical premises give a least loss; here finitely many configurations make it unnecessary.
 - related, not a proved adapter: [rest-theorem-in-any-amounts](rest-theorem-in-any-amounts.md). The rest theorem of worlds over any amounts, read finitely.
+- related, not a proved adapter: [rest-exactly-where-falls-stop](rest-exactly-where-falls-stop.md). Rest over any amounts, exactly where the total stops falling.
 
 **Used by:** [rest-theorem-in-any-amounts](rest-theorem-in-any-amounts.md)
 
@@ -79,6 +80,7 @@ The pigeonhole principle, and termination of a ranking function on a finite stat
 | review | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json) | — |
 
 Aliases: `rest from a finite reading`, `由有限的读取而停息`, `rest with no least loss`, `没有最小损失的停息`, `finite distinguishability gives rest`, `Becoming.Amounts.rests_of_finite_reading`, `Becoming.Amounts.falls_within_reading`, `Becoming.Halving.stock_unlisted`
 
@@ -86,8 +88,8 @@ Aliases: `rest from a finite reading`, `由有限的读取而停息`, `rest with
 ### History
 
 - 20 October 2026: added (LC1), section 8.1 item 6: whether the least loss can be derived; study section 255.
-- 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](rest-from-a-finite-reading.json).
+- 2 rebinding entries (2026-10-20 to 2026-10-21): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](rest-from-a-finite-reading.json).
 
 </details>
 
-Documentary review UTC: `2026-10-20T13:33:42+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-21T12:45:50+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

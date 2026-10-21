@@ -1,0 +1,78 @@
+@Becoming.separated_of_whole : ∀ {A : Type u_1} {B : Type u_2} {whole : A × B → Prop} {p : A × B},
+  whole p → Becoming.Separated whole p
+@Becoming.separation_faithful_iff : ∀ {A : Type u_1} {B : Type u_2} {whole : A × B → Prop},
+  (∀ (p : A × B), Becoming.Separated whole p → whole p) ↔ Becoming.Rectangular whole
+Becoming.separation_admits_extra : Becoming.Separated (fun p => p.fst = p.snd) (true, false) ∧
+  ¬(fun p => p.fst = p.snd) (true, false)
+Becoming.whole_not_in_pairs : (∀ (x y : Bool), ∃ z, Becoming.EvenThree (x, y, z)) ∧
+  (∀ (y z : Bool), ∃ x, Becoming.EvenThree (x, y, z)) ∧
+    (∀ (x z : Bool), ∃ y, Becoming.EvenThree (x, y, z)) ∧ ¬Becoming.EvenThree (true, false, false)
+Becoming.flipIf_self : ∀ (x : Bool), Becoming.flipIf x x = false
+Becoming.even_first : ∀ (x y : Bool), Becoming.flipIf x (Becoming.flipIf y (Becoming.flipIf x y)) = false
+Becoming.even_third : ∀ (x z : Bool), Becoming.flipIf x (Becoming.flipIf (Becoming.flipIf z x) z) = false
+Becoming.evenBoxes_glued : ∀ (v : Becoming.Specker.Box → Bool),
+  Becoming.Glued (Becoming.restrict Becoming.Specker.within Becoming.evenBoxes) v
+Becoming.evenBoxes_not_determined : ¬Becoming.PartsDetermine Becoming.Specker.within Becoming.evenBoxes
+@Becoming.Rectangular.image_of_separate : ∀ {A : Type u_1} {B : Type u_2} {whole : A × B → Prop},
+  Becoming.Rectangular whole →
+    ∀ (f : A → A) (g : B → B), Becoming.Rectangular (Becoming.imageOf (fun p => (f p.fst, g p.snd)) whole)
+Becoming.copy_relates : (Becoming.Rectangular fun x => True) ∧
+  (∀ (p : Bool × Bool), Becoming.imageOf (fun p => (p.fst, p.fst)) (fun x => True) p ↔ p.fst = p.snd) ∧
+    ¬Becoming.Rectangular (Becoming.imageOf (fun p => (p.fst, p.fst)) fun x => True)
+@Becoming.Rectangular.of_image_injective : ∀ {A : Type u_1} {B : Type u_2} {whole : A × B → Prop} {f : A → A}
+  {g : B → B},
+  (∀ (a a' : A) (b b' : B), whole (a, b) → whole (a', b') → f a = f a' → a = a') →
+    (∀ (a a' : A) (b b' : B), whole (a, b) → whole (a', b') → g b = g b' → b = b') →
+      Becoming.Rectangular (Becoming.imageOf (fun p => (f p.fst, g p.snd)) whole) → Becoming.Rectangular whole
+@Becoming.relation_persists : ∀ {A : Type u_1} {B : Type u_2} {whole : A × B → Prop} {f : A → A} {g : B → B},
+  (∀ (a a' : A) (b b' : B), whole (a, b) → whole (a', b') → f a = f a' → a = a') →
+    (∀ (a a' : A) (b b' : B), whole (a, b) → whole (a', b') → g b = g b' → b = b') →
+      ¬Becoming.Rectangular whole → ¬Becoming.Rectangular (Becoming.imageOf (fun p => (f p.fst, g p.snd)) whole)
+@Becoming.forgetting_unrelates : ∀ {A : Type u_1} {B : Type u_2} (whole : A × B → Prop) (a₀ : A) (g : B → B),
+  Becoming.Rectangular (Becoming.imageOf (fun p => (a₀, g p.snd)) whole)
+Becoming.couple_couple : ∀ (p : Bool × Bool), Becoming.couple (Becoming.couple p) = p
+Becoming.coupling_relates_and_unrelates : (Becoming.Rectangular fun p => p.snd = false) ∧
+  ¬Becoming.Rectangular (Becoming.imageOf Becoming.couple fun p => p.snd = false) ∧
+    ∀ (p : Bool × Bool),
+      Becoming.imageOf Becoming.couple (Becoming.imageOf Becoming.couple fun p => p.snd = false) p ↔ p.snd = false
+Becoming.Motion.cancel : ∀ (k : Nat) {a b : Nat}, a + k = b + k → a = b
+Becoming.Motion.passing_alone : ¬Becoming.Law.SameFuture Becoming.Motion.move Prod.fst (0, 0) (1, 0)
+Becoming.Motion.orbit_still : ∀ (s : Nat × Nat) (n : Nat), Becoming.Law.orbit Becoming.Motion.still s n = s
+@Becoming.SameAhead.refl : ∀ {O : Type u_1} (o : Nat → O) (t : Nat), Becoming.SameAhead o t t
+@Becoming.SameAhead.symm : ∀ {O : Type u_1} {o : Nat → O} {t t' : Nat},
+  Becoming.SameAhead o t t' → Becoming.SameAhead o t' t
+@Becoming.SameAhead.trans : ∀ {O : Type u_1} {o : Nat → O} {t t' t'' : Nat},
+  Becoming.SameAhead o t t' → Becoming.SameAhead o t' t'' → Becoming.SameAhead o t t''
+@Becoming.SameAhead.next : ∀ {O : Type u_1} {o : Nat → O} {t t' : Nat},
+  Becoming.SameAhead o t t' → Becoming.SameAhead o (t + 1) (t' + 1)
+@Becoming.sameAhead_orbit_iff : ∀ {O : Type u_2} {S : Type u_1} {next : S → S} {o : S → O} {s : S} {t t' : Nat},
+  Becoming.SameAhead (fun n => o (Becoming.Law.orbit next s n)) t t' ↔
+    Becoming.Law.SameFuture next o (Becoming.Law.orbit next s t) (Becoming.Law.orbit next s t')
+@Becoming.SameAhead.new_each : ∀ {O : Type u_1} {o : Nat → O},
+  (∀ (t t' : Nat), o t = o t' → t = t') → ∀ {t t' : Nat}, Becoming.SameAhead o t t' → t = t'
+@Becoming.split_top : ∀ {P : Nat → Nat → Prop} {L : Nat} (K : Nat),
+  (∀ (n : Nat), n ≤ K → P n L ∨ ∃ i, i < L ∧ P n i) →
+    (∃ t t', t < t' ∧ t' ≤ K ∧ P t L ∧ P t' L) ∨
+      (∀ (n : Nat), n ≤ K → ∃ i, i < L ∧ P n i) ∨ ∃ m, m ≤ K ∧ P m L ∧ ∀ (n : Nat), n ≤ K → n ≠ m → ∃ i, i < L ∧ P n i
+Becoming.shared_below : ∀ (L : Nat) (P : Nat → Nat → Prop),
+  (∀ (n : Nat), n ≤ L → ∃ i, i < L ∧ P n i) → ∃ t t' i, t < t' ∧ t' ≤ L ∧ P t i ∧ P t' i
+@Becoming.statesBelow_of_same : ∀ {O : Type u_1} {o : Nat → O} {i j : Nat},
+  i < j → Becoming.SameAhead o i j → Becoming.StatesBelow o j
+@Becoming.finitely_many_states_iff : ∀ {O : Type u_1} {o : Nat → O},
+  (∃ L, Becoming.StatesBelow o L) ↔ ∃ i j, i < j ∧ Becoming.SameAhead o i j
+@Becoming.Law.Returns.states : ∀ {O : Type u_2} {S : Type u_1} {next : S → S} {s : S},
+  Becoming.Law.Returns next s →
+    ∀ (o : S → O), ∃ i j, i < j ∧ Becoming.SameAhead (fun n => o (Becoming.Law.orbit next s n)) i j
+Becoming.Negation.zero_two : Becoming.SameAhead Becoming.Negation.course 0 2
+Becoming.Negation.two_states : ¬Becoming.SameAhead Becoming.Negation.course 0 1 ∧
+  Becoming.SameAhead Becoming.Negation.course 0 2 ∧
+    ∀ (t : Nat), Becoming.SameAhead Becoming.Negation.course t 0 ∨ Becoming.SameAhead Becoming.Negation.course t 1
+Becoming.Negation.each_through_other : ∀ (t : Nat),
+  (Becoming.SameAhead Becoming.Negation.course t 0 →
+      Becoming.Negation.course t = true ∧ Becoming.SameAhead Becoming.Negation.course (t + 1) 1) ∧
+    (Becoming.SameAhead Becoming.Negation.course t 1 →
+      Becoming.Negation.course t = false ∧ Becoming.SameAhead Becoming.Negation.course (t + 1) 0)
+@Becoming.lasso_iff_sameAhead : ∀ {O : Type u_1} {o : Nat → O} {i q : Nat},
+  Becoming.Learning.Lasso o i q ↔ Becoming.SameAhead o i (i + (q + 1))
+@Becoming.finitely_many_states_iff_lasso : ∀ {O : Type u_1} {o : Nat → O},
+  (∃ L, Becoming.StatesBelow o L) ↔ ∃ i q, Becoming.Learning.Lasso o i q

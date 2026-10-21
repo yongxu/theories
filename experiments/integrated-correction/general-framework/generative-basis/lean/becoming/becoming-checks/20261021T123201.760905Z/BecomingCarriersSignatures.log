@@ -1,0 +1,89 @@
+Becoming.Carriers.idle_no_event : ∀ (s : Bool), ¬Generative.Enabled Becoming.Carriers.idle s ()
+Becoming.Carriers.static_event : ∀ (s : Bool), Becoming.Carriers.static.step s () s
+@Becoming.Carriers.static_never_changes : ∀ {s t : Bool}, Becoming.Carriers.static.step s () t → s = t
+Becoming.Carriers.toggle_event : ∀ (s : Bool), Becoming.Carriers.toggle.step s () !s
+@Becoming.Carriers.toggle_always_changes : ∀ {s t : Bool}, Becoming.Carriers.toggle.step s () t → s ≠ t
+@Becoming.Carriers.static_history_never_changes : ∀ {s t : Bool} {word : List Unit},
+  Generative.Trace Becoming.Carriers.static s word t → s = t
+Becoming.Carriers.toggle_two_event_cycle : ∀ (s : Bool), Generative.Trace Becoming.Carriers.toggle s [(), ()] s
+Becoming.Carriers.same_carrier_incompatible_laws : ¬Becoming.Carriers.idle.step false () true ∧
+  Becoming.Carriers.toggle.step false () true ∧
+    Becoming.Carriers.static.step false () false ∧ ¬Becoming.Carriers.toggle.step false () false
+Becoming.Carriers.event_without_state_distinction : Becoming.Carriers.singletonLoop.step () () () ∧
+  ∀ (s t : Unit), s = t
+@Becoming.Carriers.unique_predecessor_of_total_determined_symmetric : ∀ {S : Type u_1} {A : Type u_2}
+  (P : Generative.Process S A),
+  Becoming.Carriers.StepTotal P →
+    Becoming.Determined P → Becoming.Carriers.StepSymmetric P → Becoming.Carriers.UniquePredecessor P
+Becoming.Carriers.static_total : Becoming.Carriers.StepTotal Becoming.Carriers.static
+Becoming.Carriers.toggle_total : Becoming.Carriers.StepTotal Becoming.Carriers.toggle
+Becoming.Carriers.static_determined : Becoming.Determined Becoming.Carriers.static
+Becoming.Carriers.toggle_determined : Becoming.Determined Becoming.Carriers.toggle
+Becoming.Carriers.static_symmetric : Becoming.Carriers.StepSymmetric Becoming.Carriers.static
+Becoming.Carriers.toggle_symmetric : Becoming.Carriers.StepSymmetric Becoming.Carriers.toggle
+Becoming.Carriers.static_unique_predecessor : Becoming.Carriers.UniquePredecessor Becoming.Carriers.static
+Becoming.Carriers.toggle_unique_predecessor : Becoming.Carriers.UniquePredecessor Becoming.Carriers.toggle
+Becoming.Carriers.identity_bool_bijection : Becoming.Carriers.BoolBijection fun s => s
+Becoming.Carriers.negation_bool_bijection : Becoming.Carriers.BoolBijection not
+Becoming.Carriers.injective_bool_map_forms : ∀ (f : Bool → Bool),
+  Function.Injective f → (∀ (s : Bool), f s = s) ∨ ∀ (s : Bool), f s = !s
+Becoming.Carriers.injective_bool_map_commutes_not : ∀ (f : Bool → Bool),
+  Function.Injective f → ∀ (s : Bool), (f !s) = !f s
+Becoming.Carriers.static_renaming_invariant : Becoming.Carriers.BoolRenamingInvariant Becoming.Carriers.static
+Becoming.Carriers.toggle_renaming_invariant : Becoming.Carriers.BoolRenamingInvariant Becoming.Carriers.toggle
+Becoming.Carriers.static_symmetry_candidate : Becoming.Carriers.SymmetryCandidate Becoming.Carriers.static
+Becoming.Carriers.toggle_symmetry_candidate : Becoming.Carriers.SymmetryCandidate Becoming.Carriers.toggle
+Becoming.Carriers.static_ne_toggle : Becoming.Carriers.static ≠ Becoming.Carriers.toggle
+Becoming.Carriers.no_state_map_identifies_static_toggle : ∀ (f : Bool → Bool),
+  ¬∀ (s : Bool) (a : Unit) (t : Bool), Becoming.Carriers.static.step s a t ↔ Becoming.Carriers.toggle.step (f s) a (f t)
+Becoming.Carriers.symmetric_dynamics_remain_underdetermined : ∃ P Q,
+  Becoming.Carriers.SymmetryCandidate P ∧
+    Becoming.Carriers.SymmetryCandidate Q ∧ P ≠ Q ∧ P.step false () false ∧ ¬Q.step false () false
+@Becoming.Carriers.continuing_single_event_is_one_recurrence : ∀ {S : Type u_1} (P : Generative.Process S Unit),
+  (∀ (s : S), ∃ t, P.step s () t) →
+    Becoming.Bisimulation (Becoming.Carriers.bare P) (Becoming.Carriers.bare Becoming.Carriers.singletonLoop)
+      fun x x_1 => True
+Becoming.Carriers.static_is_one_recurrence : Becoming.Bisimulation (Becoming.Carriers.bare Becoming.Carriers.static)
+  (Becoming.Carriers.bare Becoming.Carriers.singletonLoop) fun x x_1 => True
+Becoming.Carriers.toggle_is_one_recurrence : Becoming.Bisimulation (Becoming.Carriers.bare Becoming.Carriers.toggle)
+  (Becoming.Carriers.bare Becoming.Carriers.singletonLoop) fun x x_1 => True
+Becoming.Carriers.static_toggle_one_dynamics : Becoming.Bisimulation (Becoming.Carriers.bare Becoming.Carriers.static)
+  (Becoming.Carriers.bare Becoming.Carriers.toggle) fun x x_1 => True
+Becoming.Carriers.static_toggle_same_histories : ∀ (s t : Bool) (word : List Unit),
+  Generative.Feasible Becoming.Carriers.static s word ↔ Generative.Feasible Becoming.Carriers.toggle t word
+Becoming.Carriers.states_relationally_identical : (Becoming.Bisimulation
+    (Becoming.Carriers.bare Becoming.Carriers.static) (Becoming.Carriers.bare Becoming.Carriers.static) fun x x_1 =>
+    True) ∧
+  Becoming.Bisimulation (Becoming.Carriers.bare Becoming.Carriers.toggle)
+    (Becoming.Carriers.bare Becoming.Carriers.toggle) fun x x_1 => True
+Becoming.Carriers.unchanged_reads_carrier_identity : (∃ s, Becoming.Carriers.static.step s () s) ∧
+  (¬∃ s, Becoming.Carriers.toggle.step s () s) ∧
+    Becoming.Bisimulation (Becoming.Carriers.bare Becoming.Carriers.static)
+      (Becoming.Carriers.bare Becoming.Carriers.toggle) fun x x_1 => True
+Becoming.Carriers.idle_differs_from_recurrence : ∀ (B : Bool → Unit → Prop),
+  (∃ s, B s ()) →
+    ¬Becoming.Bisimulation (Becoming.Carriers.bare Becoming.Carriers.idle)
+        (Becoming.Carriers.bare Becoming.Carriers.singletonLoop) B
+Becoming.Carriers.toggle_continues : ∀ (s : Bool),
+  ∃ states, states 0 = s ∧ ∀ (n : Nat), Becoming.Carriers.toggle.step (states n) () (states (n + 1))
+Becoming.Carriers.idle_cannot_continue : ∀ (s : Bool),
+  ¬∃ states, states 0 = s ∧ ∀ (n : Nat), Becoming.Carriers.idle.step (states n) () (states (n + 1))
+@Becoming.Carriers.feasible_of_step_total : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A},
+  Becoming.Carriers.StepTotal P → ∀ (s : S) (word : List A), Generative.Feasible P s word
+@Becoming.Carriers.total_processes_same_feasible : ∀ {S : Type u_1} {A : Type u_2} {P Q : Generative.Process S A},
+  Becoming.Carriers.StepTotal P →
+    Becoming.Carriers.StepTotal Q →
+      ∀ (s : S) (word : List A), Generative.Feasible P s word ↔ Generative.Feasible Q s word
+Becoming.Carriers.static_toggle_same_feasible : ∀ (s : Bool) (word : List Unit),
+  Generative.Feasible Becoming.Carriers.static s word ↔ Generative.Feasible Becoming.Carriers.toggle s word
+Becoming.Carriers.static_toggle_singleton_endpoints_differ : Generative.Trace Becoming.Carriers.static false [()]
+    false ∧
+  ¬Generative.Trace Becoming.Carriers.toggle false [()] false
+Becoming.Carriers.static_toggle_not_endpoint_trace_equivalent : ¬∀ (s : Bool) (word : List Unit) (t : Bool),
+    Generative.Trace Becoming.Carriers.static s word t ↔ Generative.Trace Becoming.Carriers.toggle s word t
+Becoming.Carriers.static_toggle_not_same_steps : ¬∀ (s : Bool) (a : Unit) (t : Bool),
+    Becoming.Carriers.static.step s a t ↔ Becoming.Carriers.toggle.step s a t
+Becoming.Carriers.word_feasibility_does_not_determine_endpoints : (∀ (s : Bool) (word : List Unit),
+    Generative.Feasible Becoming.Carriers.static s word ↔ Generative.Feasible Becoming.Carriers.toggle s word) ∧
+  Generative.Trace Becoming.Carriers.static false [()] false ∧
+    ¬Generative.Trace Becoming.Carriers.toggle false [()] false

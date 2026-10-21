@@ -1,0 +1,88 @@
+@Becoming.bounded_rival : ∀ {F Pos : Type} {region : Pos → F → Prop},
+  (Becoming.Within (fun i => region i.fst i.snd.snd) fun i => Becoming.bounded region i.fst i.snd.fst i.snd.snd) ∧
+    ((∃ p f, ¬region p f) → ¬Becoming.Unrestricted (Becoming.bounded region))
+@Becoming.Web.retains_iff_includes : ∀ {F C Pos : Type} {W : Becoming.Web F C} {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig → ∀ (p : Pos) {l l' : Nat → C → Nat}, W.Retains sig p l l' ↔ W.Includes l l'
+@Becoming.Web.adds_iff_exceeds : ∀ {F C Pos : Type} {W : Becoming.Web F C} {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig → ∀ (p : Pos) {l l' : Nat → C → Nat}, W.Adds sig p l l' ↔ W.Exceeds l l'
+@Becoming.Web.retains_agree : ∀ {F C Pos : Type} {W : Becoming.Web F C} {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig → ∀ (p q : Pos) {l l' : Nat → C → Nat}, W.Retains sig p l l' ↔ W.Retains sig q l l'
+@Becoming.Web.widens_iff_retains_adds : ∀ {F C Pos : Type} {W : Becoming.Web F C} {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (p : Pos) {l l' : Nat → C → Nat}, W.Widens l l' ↔ W.Retains sig p l l' ∧ W.Adds sig p l l'
+@Becoming.Web.keeps_iff_retains : ∀ {F C Pos : Type} {W : Becoming.Web F C} {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (p : Pos) {l l' : Nat → C → Nat}, W.Keeps l l' ↔ W.Retains sig p l l' ∧ W.Retains sig p l' l
+@Becoming.Web.mixed_iff_adds : ∀ {F C Pos : Type} {W : Becoming.Web F C} {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig → ∀ (p : Pos) {l l' : Nat → C → Nat}, W.Mixed l l' ↔ W.Adds sig p l l' ∧ W.Adds sig p l' l
+@Becoming.Web.Retains.within : ∀ {F C Pos : Type} {W : Becoming.Web F C} {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ {p : Pos} {l l' : Nat → C → Nat},
+      W.Retains sig p l l' → ∀ (region : Pos → F → Prop), W.Retains (Becoming.bounded region) p l l'
+@Becoming.Web.UnderminingOn.not_retains_unrestricted : ∀ {F C Pos : Type} {W : Becoming.Web F C} {l : Nat → C → Nat}
+  {t : Nat} {f : F} {c : C},
+  Becoming.Web.UnderminingOn t f c →
+    (∀ (g : F), W.requires t g c → W.requires (t + 1) g c ∧ W.need t g c ≤ W.need (t + 1) g c) →
+      (∀ (g : F), W.requires t g c → W.Admits (l (t + 1)) (t + 1) g) →
+        ∀ {sig : Pos → Nat → F → Prop}, Becoming.Unrestricted sig → ∀ (p : Pos), ¬W.Retains sig p W.level l
+@Becoming.Valuation.premises_of_unrestricted : ∀ {F Pos Q : Type} {V : Becoming.Valuation Pos Q}
+  {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (formation : Q → F) (step : Q → Nat),
+      (∀ (p : Pos) (c : Q), sig p (step c) (formation c) → V.sig p c) →
+        V.Significant ∧
+          (∀ (p : Pos), V.SelfSignificance p) ∧
+            Becoming.Neutral V.transmits ∧ Becoming.Neutral V.shares ∧ ∀ (c : Q), V.living c → ∀ (a : Pos), V.Seed
+@Becoming.Web.significant_of_unrestricted : ∀ {F C Pos : Type} (W : Becoming.Web F C) {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (own : Pos → F × Nat → Prop) (own' : Pos → F × C × Nat → Prop),
+      (W.valuation own fun p e => sig p e.snd e.fst).Significant ∧
+        (W.relations own' fun p e => sig p e.snd.snd e.fst).Significant
+@Becoming.Web.significance_undetermined : ∀ {F C Pos : Type} (W : Becoming.Web F C) (own : Pos → F × Nat → Prop)
+  (p : Pos) {e : F × Nat},
+  W.active e.snd e.fst ∧ ¬Becoming.Web.UnderminingAt e.snd e.fst →
+    (∀ (l l' : Nat → C → Nat), W.Retains (fun x x_1 x_2 => False) p l l' ∧ ¬W.Adds (fun x x_1 x_2 => False) p l l') ∧
+      (W.valuation own fun x x_1 => True).Significant ∧ ¬(W.valuation own fun x x_1 => False).Significant
+@Becoming.Clearing.clearer_loses_dweller : ∀ {Pos : Type} {l : Nat → Becoming.Clearing.Place → Nat},
+  Becoming.Clearing.flow.WithheldLevels Becoming.Clearing.clearerPart Becoming.Clearing.web l →
+    ∀ {sig : Pos → Nat → Becoming.Clearing.Formation → Prop},
+      Becoming.Unrestricted sig →
+        ∀ (p : Pos),
+          Becoming.Clearing.web.Adds sig p l Becoming.Clearing.web.level ∧
+            ¬Becoming.Clearing.web.Retains sig p Becoming.Clearing.web.level l ∧
+              Becoming.Clearing.web.Retains sig p l Becoming.Clearing.web.level ∧
+                ∀ (t : Nat),
+                  Becoming.Clearing.web.Supported t Becoming.Clearing.Formation.clearer ∧
+                    Becoming.Clearing.web.Admits (l t) t Becoming.Clearing.Formation.clearer
+@Becoming.Transfer.unordered : ∀ {Pos : Type} {l : Nat → Bool → Nat},
+  Becoming.Transfer.flow.WithheldLevels Becoming.Transfer.conveyorPart Becoming.Transfer.web l →
+    ∀ {sig : Pos → Nat → Becoming.Transfer.Formation → Prop},
+      Becoming.Unrestricted sig →
+        ∀ (p : Pos),
+          Becoming.Transfer.web.Adds sig p Becoming.Transfer.web.level l ∧
+            Becoming.Transfer.web.Adds sig p l Becoming.Transfer.web.level ∧
+              ¬Becoming.Transfer.web.Retains sig p Becoming.Transfer.web.level l ∧
+                ¬Becoming.Transfer.web.Retains sig p l Becoming.Transfer.web.level
+@Becoming.Restoring.Inflow.retains_adds : ∀ {Pos : Type} {l : Nat → Unit → Nat},
+  Becoming.Restoring.flow.WithheldLevels Becoming.Restoring.Inflow.giverPart Becoming.Restoring.Inflow.web l →
+    ∀ {sig : Pos → Nat → Bool → Prop},
+      Becoming.Unrestricted sig →
+        ∀ (p : Pos),
+          Becoming.Restoring.Inflow.web.Retains sig p Becoming.Restoring.Inflow.web.level l ∧
+            Becoming.Restoring.Inflow.web.Adds sig p Becoming.Restoring.Inflow.web.level l
+@Becoming.Preemption.not_undermining_yet_loses : ∀ {Pos : Type} {l : Nat → Unit → Nat},
+  Becoming.Preemption.flow.WithheldLevels Becoming.Preemption.drawerPart Becoming.Preemption.web l →
+    ∀ {sig : Pos → Nat → Bool → Prop},
+      Becoming.Unrestricted sig →
+        ∀ (p : Pos),
+          Becoming.Preemption.flow.Balances Becoming.Preemption.web ∧
+            Becoming.Preemption.flow.Acting Becoming.Preemption.web ∧
+              Becoming.Preemption.flow.Taking Becoming.Preemption.web ∧
+                Becoming.Preemption.web.Dependent ∧
+                  (Becoming.Preemption.web.active 0 true ∧ ¬Becoming.Web.UnderminingAt 0 true) ∧
+                    (∀ (t : Nat),
+                        Becoming.Preemption.web.Admits (l t) t false ∧
+                          ¬Becoming.Preemption.web.Supported (t + 1) false) ∧
+                      Becoming.Preemption.web.Includes l Becoming.Preemption.web.level ∧
+                        Becoming.Preemption.web.Adds sig p l Becoming.Preemption.web.level ∧
+                          ¬Becoming.Preemption.web.Retains sig p Becoming.Preemption.web.level l

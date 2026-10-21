@@ -1,0 +1,13 @@
+@Becoming.ContactCourses.blind_answers_steps_iff : ∀ {I : Type} {ρ : List I → Option I → List I},
+  Becoming.Contacts.Blind ρ →
+    ((∀ (D : List I) (i : I) (D' : List I), (Becoming.Assurance.ofMap ρ).step D (some i) D' → i ∈ D') ↔
+      ∀ (D : List I) (i : I) (D' : List I), (Becoming.Assurance.ofMap ρ).step D none D' → i ∈ D')
+Becoming.ContactCourses.finite_blind_answers_steps : (∀ (D : List Bool) (r : Option Bool) (D' : List Bool),
+    (Becoming.Assurance.ofMap fun x x_1 => [false, true]).step D r D' →
+      (Becoming.Assurance.ofMap fun x x_1 => [false, true]).step D none D') ∧
+  ∀ (D : List Bool) (i : Bool) (D' : List Bool),
+    (Becoming.Assurance.ofMap fun x x_1 => [false, true]).step D (some i) D' → i ∈ D'
+@Becoming.ContactCourses.run_stays_iff : ∀ {X : Type} {A : Type u_1} {P : Generative.Process (X → Bool) A}
+  (r : Becoming.Run P) {e : Bool → X},
+  (∀ (b : Bool), r.state 0 (e b) = b) →
+    ∀ (n : Nat), (∀ (b : Bool), r.state n (e b) = b) ↔ ∀ (b : Bool), r.state n (e b) = r.state 0 (e b)

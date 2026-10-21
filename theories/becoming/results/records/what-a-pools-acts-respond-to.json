@@ -288,6 +288,18 @@
   ],
   "references": [
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "role": "proof",
+      "sha256": "892cd79092aea2af1ec1dc801955a53bfa8794ba8574a9311ea1ea7092781451",
+      "declarations": [
+        "Becoming.WithinClosureOf",
+        "Becoming.WithinClosureOf.of_member",
+        "Becoming.withinClosureOf_iff",
+        "Becoming.WithinClosure",
+        "Becoming.WithinClosure.of_rel"
+      ]
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolResponse.lean",
       "role": "proof",
       "declarations": [
@@ -313,7 +325,7 @@
         "Becoming.TimedResponse.pool_alike_before",
         "Becoming.act_courses_response_alike_pool"
       ],
-      "sha256": "21bd5184154e747c084ac62053fad6e50ba9979b8425c7f4ded5dfcfb76588a7"
+      "sha256": "4f607c14fde351f4d24744683b94590f14b983747d1f3b304f93e1bd1493175b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean",
@@ -350,7 +362,7 @@
         "Becoming.Clearing.restLaw",
         "Becoming.Clearing.rest_follows_spared"
       ],
-      "sha256": "e966d4259d15dc89a800441e9d1e7796bdeea68b3a4df2d18a68e3e627cb5d9c"
+      "sha256": "013359d5e9d8ffaf9eaad3130bd3c904c110fed234ad16eb59fb9494fd7dc0e8"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionGap.lean",
@@ -395,12 +407,9 @@
         "Becoming.Web.SelectsThroughAll",
         "Becoming.Web.selects_alike_iff",
         "Becoming.Web.AlikeThroughUpTo.trans",
-        "Becoming.Clearing.dweller_spared",
-        "Becoming.WithinClosureOf",
-        "Becoming.WithinClosureOf.of_member",
-        "Becoming.withinClosureOf_iff"
+        "Becoming.Clearing.dweller_spared"
       ],
-      "sha256": "8f41fcf1bdbab92ede8b09ba5e9ce414ef8c42ea7be46f596eaf54bfec2287ce"
+      "sha256": "068eec35f455c8ea1e87b8dad5eb0b15b009767086adef96c7e895156854dc6b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean",
@@ -422,12 +431,10 @@
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
       "role": "proof",
       "declarations": [
-        "Becoming.WithinClosure",
-        "Becoming.WithinClosure.of_rel",
         "Becoming.Clearing.sparedFlow",
         "Becoming.Clearing.sparedWeb"
       ],
-      "sha256": "cb86cadd870f66707432b21b9b7f2d469a498fd413ab5cb4d4311d6c371d4f4a"
+      "sha256": "ddc680f4502c31fbd08f675edf87f279a72b91905f27603d804606f66c7df479"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean",
@@ -511,19 +518,25 @@
       "role": "receipt",
       "sha256": "fd53371479a40d41144bb90789da0ad740bfded46e028a5b35750542dfafc699",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "role": "receipt",
+      "sha256": "9596c1a0b53bd9a26d9975f2cf00180c6d63402a1459924d1016b3ddbc2edcb6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolResponse.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.PoolResponse",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Selection",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -532,6 +545,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Clearing",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frame.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Frame",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -567,6 +587,10 @@
     {
       "en": "2026-10-20: 29 bookkeeping notes condensed from 19 October 2026 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/25a40ea699859177/what-a-pools-acts-respond-to.json and in git.",
       "zh": "2026-10-20：29 条记账性说明合并（19 October 2026 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/25a40ea699859177/what-a-pools-acts-respond-to.json 和 git 中。"
+    },
+    {
+      "en": "21 October 2026, EC1 (study section 307): declarations moved with their full names: WithinClosureOf, WithinClosureOf.of_member, withinClosureOf_iff to Becoming.Frame; WithinClosure, WithinClosure.of_rel to Becoming.Frame. The cited Lean source and its proof binding follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC1（研究第 307 节）：声明以完整名称移动：WithinClosureOf, WithinClosureOf.of_member, withinClosureOf_iff to Becoming.Frame; WithinClosure, WithinClosure.of_rel to Becoming.Frame。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ],
   "text_versions": [

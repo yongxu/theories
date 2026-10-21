@@ -1,0 +1,90 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/blissful-borg-449b4b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/tree",
+  "modules": 59,
+  "ran": [
+    "Becoming.Frame",
+    "Becoming.World",
+    "Becoming.Witnesses",
+    "Becoming.Dependence",
+    "Becoming.Restoration",
+    "Becoming.Arising",
+    "Becoming.Flow",
+    "Becoming.Change",
+    "Becoming.Evolution",
+    "Becoming.Population",
+    "Becoming.Dissipation",
+    "Becoming.Locality",
+    "Becoming.Roles",
+    "Becoming.Reserve",
+    "Becoming.Space",
+    "Becoming.Admission",
+    "Becoming.Continuation",
+    "Becoming.Regions",
+    "Becoming.Retaining",
+    "Becoming.Clearing",
+    "Becoming.Interdependence",
+    "Becoming.Feedback",
+    "Becoming.Testing",
+    "Becoming.Recurrence",
+    "Becoming.Capture",
+    "Becoming.Selection",
+    "Becoming.Response",
+    "Becoming.Counterfactual",
+    "Becoming.SelectionGap",
+    "Becoming.Decidedness",
+    "Becoming.SelectionPool",
+    "Becoming.TimedResponse",
+    "Becoming.PoolResponse",
+    "Becoming.Lexical",
+    "Becoming.Frontier",
+    "Becoming.Extension",
+    "Becoming.FrontierFrames",
+    "Becoming.Inquiry",
+    "Becoming.Labelled",
+    "Becoming.Metaethics",
+    "Becoming.Significance",
+    "Becoming.ValuationFrames",
+    "Becoming.BoundedSignificance",
+    "Becoming.Correspondence",
+    "Becoming.Descent",
+    "Becoming.Standpoints",
+    "Becoming.Boundaries",
+    "Becoming.Ranking",
+    "Becoming.Relevance",
+    "Becoming.Direction",
+    "BecomingFrameAxiomAudit",
+    "BecomingSelectionAxiomAudit",
+    "BecomingSelectionPoolAxiomAudit",
+    "BecomingPoolResponseAxiomAudit",
+    "BecomingDirectionAxiomAudit"
+  ],
+  "reused": 9,
+  "unclean": [],
+  "audits": {
+    "Becoming.Frame": {
+      "theorems": 27,
+      "declarations": 37,
+      "with_axioms": {}
+    },
+    "Becoming.Selection": {
+      "theorems": 70,
+      "declarations": 95,
+      "with_axioms": {}
+    },
+    "Becoming.SelectionPool": {
+      "theorems": 41,
+      "declarations": 44,
+      "with_axioms": {}
+    },
+    "Becoming.PoolResponse": {
+      "theorems": 18,
+      "declarations": 21,
+      "with_axioms": {}
+    },
+    "Becoming.Direction": {
+      "theorems": 14,
+      "declarations": 17,
+      "with_axioms": {}
+    }
+  }
+}

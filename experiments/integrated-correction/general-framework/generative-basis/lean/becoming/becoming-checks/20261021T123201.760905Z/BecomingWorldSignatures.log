@@ -1,0 +1,2 @@
+Becoming.World.of_web : ∀ (R : Type) (L : Becoming.Flow R R) (W : Becoming.Web R R), (Becoming.World.of R L W).web = W
+Becoming.World.of_flow : ∀ (R : Type) (L : Becoming.Flow R R) (W : Becoming.Web R R), (Becoming.World.of R L W).flow = L

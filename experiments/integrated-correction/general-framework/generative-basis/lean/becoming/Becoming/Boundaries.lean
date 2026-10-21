@@ -261,7 +261,7 @@ theorem Web.selfValuation_empty_own {f : F} {e : F × Nat} :
 on. -/
 theorem Web.selfValuation_feeding_own (L : Flow F C) {f : F} {e : F × Nat} :
     (W.selfValuation (L.FedFrom W) sig).own f e ↔ L.WithinFeeding W f e.1 :=
-  Flow.withinFeeding_iff.symm
+  Iff.rfl
 
 /-- **Under the continuation condition the valuation from the formations has every premise**:
 living significance at the level of claims, self-significance at every formation, both
@@ -696,10 +696,9 @@ theorem without_invariance :
         (SignificantWithin (bounded (WithinClosure (flow.FedFrom web))) .clearer) ∧
       ¬ Unrestricted (bounded (WithinClosure (flow.FedFrom web))) :=
   ⟨(bounded_closure_least (flow.FedFrom web) id).1, fun p => Boundary.whole p,
-   fun invariant => dweller_beyond (Flow.withinFeeding_iff.mpr
-     (invariant _ _ (Boundary.closure Formation.clearer) (Boundary.whole Formation.clearer)
+   fun invariant => dweller_beyond ((invariant _ _ (Boundary.closure Formation.clearer) (Boundary.whole Formation.clearer)
        (fun _ within _ => within) .dweller trivial 0)),
-   fun all => dweller_beyond (Flow.withinFeeding_iff.mpr (all (.clearer, 0, .dweller)))⟩
+   fun all => dweller_beyond ((all (.clearer, 0, .dweller)))⟩
 
 /-- Without standpoint-invariance. Significance bounded by each formation's feeding closure makes
 every presupposition sub-true, and every formation lies within its own closure, while
@@ -711,8 +710,7 @@ theorem without_standpoint_invariance :
       (∀ g, ∃ q, WithinClosure (flow.FedFrom web) q g) ∧
       ¬ StandpointInvariant (bounded (WithinClosure (flow.FedFrom web))) :=
   ⟨(bounded_closure_least (flow.FedFrom web) id).1, fun g => ⟨g, WithinClosure.refl g⟩,
-   fun invariant => dweller_beyond (Flow.withinFeeding_iff.mpr
-     (invariant .dweller .clearer 0 .dweller (WithinClosure.refl _)))⟩
+   fun invariant => dweller_beyond ((invariant .dweller .clearer 0 .dweller (WithinClosure.refl _)))⟩
 
 /-- With a fixed boundary. Were each self's only admissible boundary its feeding closure,
 significance bounded by the closure would make every presupposition sub-true and invariant, and
@@ -729,8 +727,8 @@ theorem with_fixed_boundary :
   ⟨fun p => ⟨WithinClosure (flow.FedFrom web) p, fun _ => Iff.rfl, fun _ within _ => within⟩,
    fun _ _ _ _ fixed' _ g inside _ => (fixed' g).mp inside,
    fun ⟨_, fixed, inside⟩ =>
-     dweller_beyond (Flow.withinFeeding_iff.mpr ((fixed .dweller).mp inside)),
-   fun all => dweller_beyond (Flow.withinFeeding_iff.mpr (all (.clearer, 0, .dweller)))⟩
+     dweller_beyond (((fixed .dweller).mp inside)),
+   fun all => dweller_beyond ((all (.clearer, 0, .dweller)))⟩
 
 /-- The presupposition's sub-truth depends on the level; its super-truth does not
 (`superTrue_level_free`). Significance bounded by each formation's feeding closure makes the
@@ -742,8 +740,7 @@ theorem levels_differ :
       ¬ SubTrue (Boundary (flow.Shares web) .clearer)
         (SignificantWithin (bounded (WithinClosure (flow.FedFrom web))) .clearer) :=
   ⟨subTrue_significantWithin_iff.mpr fun _ _ within => within,
-   fun sub => dweller_beyond (Flow.withinFeeding_iff.mpr
-     (subTrue_significantWithin_iff.mp sub 0 .dweller levels.2.2))⟩
+   fun sub => dweller_beyond ((subTrue_significantWithin_iff.mp sub 0 .dweller levels.2.2))⟩
 
 /-- The clearer's own presupposition counts the dweller, unless it is drawn at the feeding
 closure. Held as the clearer's boundary is drawn somewhere along sharing a condition, and so also
@@ -769,7 +766,7 @@ theorem own_presupposition {l : Nat → Place → Nat}
    fun super => counts ⟨fun _ => True, Boundary.whole _, fun g _ t =>
      (superTrue_significantWithin_iff (Boundary.whole _)).mp super t g⟩,
    (system_counts_dweller without).2.2.of_fewer fun _ _ _ within =>
-     Flow.withinInfluence_of_withinFeeding (Flow.withinFeeding_iff.mpr within)⟩
+     Flow.withinInfluence_of_withinFeeding (within)⟩
 
 /-- The clearer's web is one system, so the continuation condition is exactly the presupposition drawn along sharing
 a condition at every standpoint. -/

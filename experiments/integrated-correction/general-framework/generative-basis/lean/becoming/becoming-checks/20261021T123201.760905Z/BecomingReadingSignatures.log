@@ -1,0 +1,93 @@
+@Becoming.Flow.readOff_acting : ∀ {F C : Type} {L : Becoming.Flow F C} {level : Nat → C → Nat}
+  {requires : Nat → F → C → Prop} {need : Nat → F → C → Nat}, L.Acting (L.readOff level requires need)
+@Becoming.Flow.readOff_taking : ∀ {F C : Type} {L : Becoming.Flow F C} {level : Nat → C → Nat}
+  {requires : Nat → F → C → Prop} {need : Nat → F → C → Nat}, L.Taking (L.readOff level requires need)
+@Becoming.Flow.acting_taking_iff_wider : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Acting W ∧ L.Taking W ↔
+    ∀ (t : Nat) (f : F), L.Exchanging t f → W.active t f ∧ ∀ (c : C), 0 < L.take t f c → W.draws t f c
+@Becoming.Flow.readOff_census : ∀ {F C : Type} {L : Becoming.Flow F C} {level : Nat → C → Nat}
+  {requires : Nat → F → C → Prop} {need : Nat → F → C → Nat},
+  (∀ (t : Nat), Becoming.Distinct (L.present t)) →
+    ∀ [inst : (t : Nat) → (f : F) → Decidable (L.Exchanging t f)],
+      (L.readOff level requires need).Census fun t => Becoming.keep (L.Exchanging t) (L.present t)
+@Becoming.Flow.some_mem_present : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {g : F},
+  some g ∈ (L.withImbalance W).present t ↔ g ∈ L.present t
+@Becoming.Flow.exchanging_some_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {g : F},
+  (L.withImbalance W).Exchanging t (some g) ↔ L.Exchanging t g
+@Becoming.Flow.rest_idle_at_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat},
+  ¬(L.adopt W).active t none ↔ ∀ (c : C), W.level (t + 1) c + L.taken t c = W.level t c + L.given t c
+@Becoming.Flow.rest_idle_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (∀ (t : Nat), ¬(L.adopt W).active t none) ↔ L.Balances W
+@Becoming.Flow.adopt_dependent_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (L.adopt W).Dependent ↔ ∀ (t : Nat) (g : F), L.Exchanging t g → W.Supported t g
+@Becoming.Flow.none_not_mem_some : ∀ {α : Type} {l : List α}, ¬none ∈ List.map some l
+@Becoming.Flow.present_distinct : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat},
+  Becoming.Distinct (L.present t) → Becoming.Distinct ((L.withImbalance W).present t)
+@Becoming.Flow.adopt_census : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  (∀ (t : Nat), Becoming.Distinct (L.present t)) →
+    ∀ [inst : (t : Nat) → (f : Option F) → Decidable ((L.withImbalance W).Exchanging t f)],
+      (L.adopt W).Census fun t => Becoming.keep ((L.withImbalance W).Exchanging t) ((L.withImbalance W).present t)
+@Becoming.ExchangeLaw.supported_of_responds : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  {l : Nat → C → Nat} {t : Nat} {f : F} {c : C} {n : Nat},
+  law.ExchangesUnder present l t f → law.RespondsBelow present l t f c n → n ≤ l t c
+@Becoming.ExchangeLaw.readWeb_dependent : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  (start : C → Nat) (need : Nat → F → C → Nat), (law.readWeb present start need).Dependent
+@Becoming.ExchangeLaw.reading_glue : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F}
+  (start : C → Nat) (need : Nat → F → C → Nat),
+  ((law.course present start).withImbalance (law.readWeb present start need)).Balances
+      ((law.course present start).adopt (law.readWeb present start need)) ∧
+    ((law.course present start).withImbalance (law.readWeb present start need)).Acting
+        ((law.course present start).adopt (law.readWeb present start need)) ∧
+      ((law.course present start).withImbalance (law.readWeb present start need)).Taking
+          ((law.course present start).adopt (law.readWeb present start need)) ∧
+        ((law.course present start).adopt (law.readWeb present start need)).Dependent
+@Becoming.ExchangeLaw.rest_idle_iff_feasible : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {present : Nat → List F},
+  law.Nonanticipating →
+    ∀ (start : C → Nat) (need : Nat → F → C → Nat),
+      (∀ (t : Nat), ¬((law.course present start).adopt (law.readWeb present start need)).active t none) ↔
+        law.Feasible present start
+Becoming.ExchangeLaw.responsive_levels : ∀ (t : Nat) (c : Unit),
+  Becoming.ExchangeLaw.responsive.levels Becoming.ExchangeLaw.single (fun x => 1) t c = 1
+Becoming.ExchangeLaw.unresponsive_levels : ∀ (t : Nat) (c : Unit),
+  Becoming.ExchangeLaw.unresponsive.levels Becoming.ExchangeLaw.single (fun x => 1) t c = 1
+Becoming.ExchangeLaw.responsive_requires : ∀ (t : Nat),
+  (Becoming.ExchangeLaw.responsive.readWeb Becoming.ExchangeLaw.single (fun x => 1)
+        Becoming.ExchangeLaw.needOne).requires
+    t () ()
+Becoming.ExchangeLaw.unresponsive_unrequired : ∀ (t : Nat),
+  ¬(Becoming.ExchangeLaw.unresponsive.readWeb Becoming.ExchangeLaw.single (fun x => 1)
+          Becoming.ExchangeLaw.needOne).requires
+      t () ()
+Becoming.ExchangeLaw.requirement_beyond_course : ((∀ (t : Nat) (c : Unit),
+      Becoming.ExchangeLaw.responsive.levels Becoming.ExchangeLaw.single (fun x => 1) t c =
+        Becoming.ExchangeLaw.unresponsive.levels Becoming.ExchangeLaw.single (fun x => 1) t c) ∧
+    ∀ (t : Nat) (f c : Unit),
+      (Becoming.ExchangeLaw.responsive.course Becoming.ExchangeLaw.single fun x => 1).take t f c =
+          (Becoming.ExchangeLaw.unresponsive.course Becoming.ExchangeLaw.single fun x => 1).take t f c ∧
+        (Becoming.ExchangeLaw.responsive.course Becoming.ExchangeLaw.single fun x => 1).give t f c =
+          (Becoming.ExchangeLaw.unresponsive.course Becoming.ExchangeLaw.single fun x => 1).give t f c) ∧
+  (∀ (t : Nat),
+      (Becoming.ExchangeLaw.responsive.readWeb Becoming.ExchangeLaw.single (fun x => 1)
+            Becoming.ExchangeLaw.needOne).requires
+        t () ()) ∧
+    ∀ (t : Nat),
+      ¬(Becoming.ExchangeLaw.unresponsive.readWeb Becoming.ExchangeLaw.single (fun x => 1)
+              Becoming.ExchangeLaw.needOne).requires
+          t () ()
+@Becoming.World.withRest_balanced : ∀ {w : Becoming.World}, w.withRest.Balanced
+@Becoming.World.withRest_exchanging_iff : ∀ {w : Becoming.World} {t : Nat} {x : w.Relatum},
+  w.restFlow.Exchanging t (some x) ↔ w.flow.Exchanging t x
+@Becoming.World.withRest_rest_iff : ∀ {w : Becoming.World} {t : Nat},
+  w.restFlow.Exchanging t none ↔ (w.flow.withImbalance w.web).Exchanging t none
+@Becoming.World.withRest_closed_iff : ∀ {w : Becoming.World}, (∀ (t : Nat), ¬w.withRest.web.active t none) ↔ w.Balanced
+@Becoming.World.withRest_dependent_iff : ∀ {w : Becoming.World},
+  w.withRest.Dependent ↔ ∀ (t : Nat) (x : w.Relatum), w.flow.Exchanging t x → w.web.Supported t x
+@Becoming.ExchangeLaw.readWorld_glue : ∀ {R : Type} {law : Becoming.ExchangeLaw R R} {present : Nat → List R}
+  {start : R → Nat} {need : Nat → R → R → Nat},
+  (law.readWorld present start need).withRest.Balanced ∧
+    (law.readWorld present start need).withRest.Acting ∧
+      (law.readWorld present start need).withRest.Taking ∧ (law.readWorld present start need).withRest.Dependent
+@Becoming.ExchangeLaw.readWorld_closed_iff : ∀ {R : Type} {law : Becoming.ExchangeLaw R R} {present : Nat → List R}
+  {start : R → Nat} {need : Nat → R → R → Nat},
+  law.Nonanticipating →
+    ((∀ (t : Nat), ¬(law.readWorld present start need).withRest.web.active t none) ↔ law.Feasible present start)

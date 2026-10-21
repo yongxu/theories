@@ -1,0 +1,274 @@
+@Becoming.Frequency.count_succ_on : ∀ {on : Nat → Bool} {t : Nat},
+  on t = true → Becoming.Frequency.count on (t + 1) = Becoming.Frequency.count on t + 1
+@Becoming.Frequency.count_succ_off : ∀ {on : Nat → Bool} {t : Nat},
+  on t = false → Becoming.Frequency.count on (t + 1) = Becoming.Frequency.count on t
+Becoming.Frequency.bif_le : ∀ (M : Nat) (b : Bool), (bif b then M else 0) ≤ M
+Becoming.Frequency.count_le_succ : ∀ (on : Nat → Bool) (t : Nat),
+  Becoming.Frequency.count on t ≤ Becoming.Frequency.count on (t + 1)
+Becoming.Frequency.count_mono : ∀ (on : Nat → Bool) {s t : Nat},
+  s ≤ t → Becoming.Frequency.count on s ≤ Becoming.Frequency.count on t
+Becoming.Frequency.count_le : ∀ (on : Nat → Bool) (t : Nat), Becoming.Frequency.count on t ≤ t
+Becoming.Frequency.marked_between : ∀ (on : Nat → Bool) (N t : Nat),
+  Becoming.Frequency.count on N < Becoming.Frequency.count on t → ∃ u, N ≤ u ∧ u < t ∧ on u = true
+@Becoming.Frequency.recurs_of_unbounded : ∀ {on : Nat → Bool},
+  (∀ (N : Nat), ∃ t, Becoming.Frequency.count on N < Becoming.Frequency.count on t) →
+    ∀ (N : Nat), ∃ u, N ≤ u ∧ on u = true
+Becoming.Frequency.step_eq : ∀ (on : Nat → Bool) (M D t : Nat),
+  D * (1 + M) ^ Becoming.Frequency.count on t +
+      (bif on t then M else 0) * (D * (1 + M) ^ Becoming.Frequency.count on t) =
+    D * (1 + M) ^ Becoming.Frequency.count on (t + 1)
+Becoming.Frequency.succ_le_two_pow : ∀ (M : Nat), 1 + M ≤ 2 ^ M
+Becoming.Frequency.pow_le_two_pow_pow : ∀ (M a : Nat), (1 + M) ^ a ≤ (2 ^ a) ^ M
+@Becoming.inflow_congr_strength : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {k' : Nat → F → C → Nat → C → Nat} {t : Nat} {c : C},
+  (∀ (h : F) (s : Nat) (d : C), k' t h c s d = k t h c s d) →
+    Becoming.inflow cs part k' present t c = Becoming.inflow cs part k present t c
+@Becoming.carried_le_count : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} {M D : Nat} {on : Nat → Bool},
+  (∀ (c : C), δ c ≤ D) →
+    (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+      (∀ (t : Nat) (c : C), on t = false → Becoming.inflow cs part k present t c = 0) →
+        ∀ (t : Nat) (c : C),
+          Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ t c ≤ D * (1 + M) ^ Becoming.Frequency.count on t
+@Becoming.carried_le_of_rare : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {δ : C → Nat} {M D A n : Nat} {on : Nat → Bool},
+  (∀ (c : C), δ c ≤ D) →
+    (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+      (∀ (t : Nat) (c : C), on t = false → Becoming.inflow cs part k present t c = 0) →
+        (∀ (t : Nat), 2 ^ Becoming.Frequency.count on t ≤ A * (t + 1) ^ n) →
+          ∀ (t : Nat) (c : C),
+            Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ t c ≤ D * A ^ M * (t + 1) ^ (n * M)
+@Becoming.Frequency.quiet_coupling : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F},
+  (∀ (c : C), c ∈ cs) →
+    ∀ (t : Nat) (c : C),
+      Becoming.Frequency.coupling cs part k present t = false → Becoming.inflow cs part k present t c = 0
+@Becoming.carried_le_coupling : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {δ : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {M D : Nat},
+      (∀ (c : C), δ c ≤ D) →
+        (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+          ∀ (t : Nat) (c : C),
+            Becoming.carried cs part (fun x x_1 x_2 => 0) k present δ t c ≤
+              D * (1 + M) ^ Becoming.Frequency.count (Becoming.Frequency.coupling cs part k present) t
+@Becoming.Frequency.SelfLoop.strengths_on : ∀ {on : Nat → Bool} {M u : Nat},
+  on u = true →
+    ∀ (h c : Unit) (s : Nat) (d : Unit),
+      Becoming.Frequency.SelfLoop.strengths on M u h c s d = Becoming.Loops.SelfLoop.strengths M u h c s d
+@Becoming.Frequency.SelfLoop.strengths_off : ∀ {on : Nat → Bool} {M u : Nat},
+  on u = false →
+    ∀ (h c : Unit) (s : Nat) (d : Unit),
+      Becoming.Frequency.SelfLoop.strengths on M u h c s d = Becoming.Loops.SelfLoop.strengths 0 u h c s d
+Becoming.Frequency.SelfLoop.give : ∀ (on : Nat → Bool) (M t : Nat) (l : Nat → Unit → Nat),
+  (Becoming.total [()] fun h =>
+      Becoming.carriedGive [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Frequency.SelfLoop.strengths on M) t h
+        () l) =
+    (bif on t then M else 0) * l t ()
+Becoming.Frequency.SelfLoop.inflow_eq : ∀ (on : Nat → Bool) (M t : Nat),
+  Becoming.inflow [()] (fun x => false) (Becoming.Frequency.SelfLoop.strengths on M) (fun x => [()]) t () =
+    bif on t then M else 0
+Becoming.Frequency.SelfLoop.into : ∀ (on : Nat → Bool) (M t : Nat) (c : Unit),
+  Becoming.inflow [()] (fun x => false) (Becoming.Frequency.SelfLoop.strengths on M) (fun x => [()]) t c ≤ M
+Becoming.Frequency.SelfLoop.quiet : ∀ (on : Nat → Bool) (M t : Nat) (c : Unit),
+  on t = false →
+    Becoming.inflow [()] (fun x => false) (Becoming.Frequency.SelfLoop.strengths on M) (fun x => [()]) t c = 0
+Becoming.Frequency.SelfLoop.carried_eq : ∀ (on : Nat → Bool) (M D t : Nat),
+  Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Frequency.SelfLoop.strengths on M)
+      (fun x => [()]) (fun x => D) t () =
+    D * (1 + M) ^ Becoming.Frequency.count on t
+Becoming.Frequency.SelfLoop.polynomial_iff : ∀ (on : Nat → Bool) {M D : Nat},
+  1 ≤ M →
+    1 ≤ D →
+      ((∃ A n,
+          ∀ (t : Nat),
+            Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Frequency.SelfLoop.strengths on M)
+                (fun x => [()]) (fun x => D) t () ≤
+              A * (t + 1) ^ n) ↔
+        ∃ A n, ∀ (t : Nat), 2 ^ Becoming.Frequency.count on t ≤ A * (t + 1) ^ n)
+@Becoming.carried_step_ge_at : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {u s : Nat} {d c : C},
+  Becoming.CouplesAt cs part k present u s d c →
+    Becoming.carried cs part σ k present δ u c + Becoming.carried cs part σ k present δ s d ≤
+      Becoming.carried cs part σ k present δ (u + 1) c
+@Becoming.ChainInTime.start_le : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {v : Nat → C} {T p T' : Nat}, Becoming.ChainInTime cs part k present v T p T' → T ≤ T'
+@Becoming.carried_along_in_time : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {v : Nat → C} {T p T' : Nat},
+  Becoming.ChainInTime cs part k present v T p T' →
+    Becoming.carried cs part σ k present δ T (v 0) ≤ Becoming.carried cs part σ k present δ T' (v p)
+@Becoming.RoundTrip.of_couplesAt : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {u s T : Nat} {e : C},
+  Becoming.CouplesAt cs part k present u s e e → T ≤ s → Becoming.RoundTrip cs part k present e T (u + 1)
+@Becoming.carried_doubles_roundTrip : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {e : C} {T T' : Nat},
+  Becoming.RoundTrip cs part k present e T T' →
+    Becoming.carried cs part σ k present δ T e + Becoming.carried cs part σ k present δ T e ≤
+      Becoming.carried cs part σ k present δ T' e
+@Becoming.carried_roundTrip : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {e : C} {T : Nat → Nat} (R : Nat),
+  (∀ (i : Nat), i < R → Becoming.RoundTrip cs part k present e (T i) (T (i + 1))) →
+    2 ^ R * Becoming.carried cs part σ k present δ (T 0) e ≤ Becoming.carried cs part σ k present δ (T R) e
+@Becoming.runaway_of_roundTrip : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {e : C} {T : Nat → Nat},
+  (∀ (i : Nat), Becoming.RoundTrip cs part k present e (T i) (T (i + 1))) →
+    0 < Becoming.carried cs part σ k present δ (T 0) e →
+      (∀ (A n : Nat), ∃ i, A * (T i + 1) ^ n < 2 ^ i) →
+        ¬∃ A n, ∀ (t : Nat), Becoming.carried cs part σ k present δ t e ≤ A * (t + 1) ^ n
+@Becoming.Frequency.SelfLoop.couplesAt : ∀ {on : Nat → Bool} {M u : Nat},
+  on u = true →
+    0 < M →
+      Becoming.CouplesAt [()] (fun x => false) (Becoming.Frequency.SelfLoop.strengths on M) (fun x => [()]) u u () ()
+@Becoming.Frequency.SelfLoop.recurs : ∀ {on : Nat → Bool} {M : Nat},
+  0 < M →
+    (∀ (N : Nat), ∃ u, N ≤ u ∧ on u = true) →
+      Becoming.CouplingRecurs [()] (fun x => false) (Becoming.Frequency.SelfLoop.strengths on M) (fun x => [()]) () ()
+@Becoming.Frequency.SelfLoop.roundTrip : ∀ {on : Nat → Bool} {M u : Nat},
+  on u = true →
+    0 < M →
+      Becoming.RoundTrip [()] (fun x => false) (Becoming.Frequency.SelfLoop.strengths on M) (fun x => [()]) () u (u + 1)
+@Becoming.Frequency.SelfLoop.couplesAt_iff : ∀ {on : Nat → Bool} {M u s : Nat},
+  Becoming.CouplesAt [()] (fun x => false) (Becoming.Frequency.SelfLoop.strengths on M) (fun x => [()]) u s () () ↔
+    on u = true ∧ s = u ∧ 0 < M
+Becoming.Frequency.Sparse.count_eq : ∀ (u : Nat),
+  Becoming.Frequency.count Becoming.Frequency.Sparse.on u = Becoming.Frequency.Sparse.marks u
+Becoming.Frequency.Sparse.bounds : ∀ (u : Nat),
+  u + 1 ≤ 2 ^ Becoming.Frequency.Sparse.marks u ∧ 2 ^ Becoming.Frequency.Sparse.marks u ≤ u + u + 1
+Becoming.Frequency.Sparse.double_eq : ∀ (x : Nat), x + x = 2 * x ^ 1
+Becoming.Frequency.Sparse.rare : ∀ (t : Nat),
+  2 ^ Becoming.Frequency.count Becoming.Frequency.Sparse.on t ≤ 2 * (t + 1) ^ 1
+Becoming.Frequency.Sparse.unbounded : ∀ (N : Nat),
+  ∃ t, Becoming.Frequency.count Becoming.Frequency.Sparse.on N < Becoming.Frequency.count Becoming.Frequency.Sparse.on t
+Becoming.Frequency.Sparse.often : ∀ (N : Nat), ∃ u, N ≤ u ∧ Becoming.Frequency.Sparse.on u = true
+@Becoming.Frequency.Sparse.recurs : ∀ {M : Nat},
+  0 < M →
+    Becoming.CouplingRecurs [()] (fun x => false) (Becoming.Frequency.SelfLoop.strengths Becoming.Frequency.Sparse.on M)
+      (fun x => [()]) () ()
+@Becoming.Frequency.Sparse.inexact : ∀ {M D : Nat},
+  0 < M →
+    0 < D →
+      ∀ (J : Nat),
+        ∃ t,
+          Becoming.carriedWithin [()] (fun x => false) (fun x x_1 x_2 => 0)
+              (Becoming.Frequency.SelfLoop.strengths Becoming.Frequency.Sparse.on M) (fun x => [()]) (fun x => D) J t
+              () <
+            Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0)
+              (Becoming.Frequency.SelfLoop.strengths Becoming.Frequency.Sparse.on M) (fun x => [()]) (fun x => D) t ()
+Becoming.Frequency.Sparse.polynomial : ∀ (M D t : Nat),
+  Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0)
+      (Becoming.Frequency.SelfLoop.strengths Becoming.Frequency.Sparse.on M) (fun x => [()]) (fun x => D) t () ≤
+    D * 2 ^ M * (t + 1) ^ (1 * M)
+@Becoming.StopsBy.mono : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {d c : C} {N N' : Nat},
+  N ≤ N' → Becoming.StopsBy cs part k present d c N → Becoming.StopsBy cs part k present d c N'
+@Becoming.StopsBy.not_recurs : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F} {d c : C} {N : Nat},
+  Becoming.StopsBy cs part k present d c N → ¬Becoming.CouplingRecurs cs part k present d c
+@Becoming.Frequency.bound_list : ∀ {α : Type} {Q : α → Nat → Prop},
+  (∀ (a : α) (N N' : Nat), N ≤ N' → Q a N → Q a N') →
+    ∀ (as : List α), (∀ (a : α), a ∈ as → ∃ N, Q a N) → ∃ N, ∀ (a : α), a ∈ as → Q a N
+@Becoming.settled_of_each : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F},
+  (∀ (c : C), c ∈ cs) →
+    (∀ (d c : C), Becoming.CouplingRecurs cs part k present d c ∨ ∃ N, Becoming.StopsBy cs part k present d c N) →
+      ∃ N, Becoming.SettledFrom cs part k present N
+@Becoming.Frequency.readsLate_of_couplesAt : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {d c : C} {n m s : Nat},
+  n ≤ s → Becoming.CouplesAt cs part k present m s d c → Becoming.Frequency.readsLate part k present d c n m = true
+@Becoming.Frequency.couplesAt_of_readsLate : ∀ {F C : Type} {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {d c : C} {n m : Nat},
+      Becoming.Frequency.readsLate part k present d c n m = true →
+        ∃ s, n ≤ s ∧ Becoming.CouplesAt cs part k present m s d c
+Becoming.RecursOrStops.lpo : Becoming.RecursOrStops → Becoming.LPO
+@Becoming.recurs_or_stops : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F},
+  (∀ (c : C), c ∈ cs) →
+    Becoming.RecursOrStops →
+      ∀ (d c : C), Becoming.CouplingRecurs cs part k present d c ∨ ∃ N, Becoming.StopsBy cs part k present d c N
+@Becoming.settled_of_recursOrStops : ∀ {F C : Type} {cs : List C} {part : F → Bool} {k : Nat → F → C → Nat → C → Nat}
+  {present : Nat → List F}, (∀ (c : C), c ∈ cs) → Becoming.RecursOrStops → ∃ N, Becoming.SettledFrom cs part k present N
+@Becoming.Frequency.First.of_couplesAt : ∀ {q : Nat → Bool} {u s : Nat},
+  Becoming.CouplesAt [()] (fun x => false) (Becoming.Frequency.First.strengths q) (fun x => [()]) u s () () →
+    s = u ∧ q u = true ∧ Becoming.clear q u = true
+@Becoming.Frequency.First.couplesAt_first : ∀ {q : Nat → Bool} {u : Nat},
+  Becoming.clear q u = true →
+    q u = true →
+      Becoming.CouplesAt [()] (fun x => false) (Becoming.Frequency.First.strengths q) (fun x => [()]) u u () ()
+@Becoming.Frequency.First.once : ∀ {q : Nat → Bool} {u s u' s' : Nat},
+  Becoming.CouplesAt [()] (fun x => false) (Becoming.Frequency.First.strengths q) (fun x => [()]) u s () () →
+    Becoming.CouplesAt [()] (fun x => false) (Becoming.Frequency.First.strengths q) (fun x => [()]) u' s' () () →
+      u = u' ∧ s = s'
+Becoming.Frequency.First.not_recurs : ∀ (q : Nat → Bool),
+  ¬Becoming.CouplingRecurs [()] (fun x => false) (Becoming.Frequency.First.strengths q) (fun x => [()]) () ()
+@Becoming.Frequency.First.decides : ∀ {q : Nat → Bool},
+  (∃ N, Becoming.SettledFrom [()] (fun x => false) (Becoming.Frequency.First.strengths q) (fun x => [()]) N) →
+    (∃ n, q n = true) ∨ ∀ (n : Nat), q n = false
+Becoming.lpo_of_settled : (∀ (q : Nat → Bool),
+    ∃ N, Becoming.SettledFrom [()] (fun x => false) (Becoming.Frequency.First.strengths q) (fun x => [()]) N) →
+  Becoming.LPO
+@Becoming.Frequency.Rows.anyUpTo_of : ∀ {f : Nat → Bool} {m : Nat},
+  f m = true → ∀ {u : Nat}, m ≤ u → Becoming.Frequency.Rows.anyUpTo f u = true
+@Becoming.Frequency.Rows.anyUpTo_true : ∀ {f : Nat → Bool} {u : Nat},
+  Becoming.Frequency.Rows.anyUpTo f u = true → ∃ m, m ≤ u ∧ f m = true
+@Becoming.Frequency.Rows.allUpTo_true : ∀ {g : Nat → Bool} {s : Nat},
+  Becoming.Frequency.Rows.allUpTo g s = true → ∀ (n : Nat), n ≤ s → g n = true
+@Becoming.Frequency.Rows.allUpTo_of : ∀ {g : Nat → Bool} {s : Nat},
+  (∀ (n : Nat), n ≤ s → g n = true) → Becoming.Frequency.Rows.allUpTo g s = true
+@Becoming.Frequency.Rows.found_of_couplesAt : ∀ {R : Nat → Nat → Bool} {u s : Nat},
+  Becoming.CouplesAt [()] (fun x => false) (Becoming.Frequency.Rows.strengths R) (fun x => [()]) u s () () →
+    Becoming.Frequency.Rows.found R s u = true
+@Becoming.Frequency.Rows.couplesAt_of_found : ∀ {R : Nat → Nat → Bool} {u s : Nat},
+  s ≤ u →
+    Becoming.Frequency.Rows.found R s u = true →
+      Becoming.CouplesAt [()] (fun x => false) (Becoming.Frequency.Rows.strengths R) (fun x => [()]) u s () ()
+Becoming.Frequency.Rows.witnessed : ∀ (R : Nat → Nat → Bool) (N : Nat),
+  (∀ (n : Nat), n ≤ N → ∃ m, R n m = true) → ∃ u, ∀ (n : Nat), n ≤ N → ∃ m, m ≤ u ∧ R n m = true
+@Becoming.Frequency.Rows.couplesAt_of_rows : ∀ {R : Nat → Nat → Bool} {N : Nat},
+  (∀ (n : Nat), n ≤ N → ∃ m, R n m = true) →
+    ∃ u, Becoming.CouplesAt [()] (fun x => false) (Becoming.Frequency.Rows.strengths R) (fun x => [()]) u N () ()
+Becoming.Frequency.Rows.recurs_iff : ∀ (R : Nat → Nat → Bool),
+  Becoming.CouplingRecurs [()] (fun x => false) (Becoming.Frequency.Rows.strengths R) (fun x => [()]) () () ↔
+    ∀ (n : Nat), ∃ m, R n m = true
+Becoming.Frequency.Rows.decide_rows : ∀ (R : Nat → Nat → Bool),
+  Becoming.LPO → ∀ (N : Nat), (∀ (n : Nat), n ≤ N → ∃ m, R n m = true) ∨ ∃ n, ∀ (m : Nat), R n m = false
+Becoming.settled_iff_recursOrStops : (∀ (k : Nat → Unit → Unit → Nat → Unit → Nat),
+    ∃ N, Becoming.SettledFrom [()] (fun x => false) k (fun x => [()]) N) ↔
+  Becoming.RecursOrStops
+Becoming.settled_every_iff : (∀ (F' C' : Type) (cs : List C') (part : F' → Bool) (k : Nat → F' → C' → Nat → C' → Nat)
+    (present : Nat → List F'), (∀ (c : C'), c ∈ cs) → ∃ N, Becoming.SettledFrom cs part k present N) ↔
+  Becoming.RecursOrStops
+Becoming.Frequency.count_always : ∀ (t : Nat), Becoming.Frequency.count (fun x => true) t = t
+Becoming.Frequency.count_before : ∀ (T t : Nat), t ≤ T → Becoming.Frequency.count T.ble t = 0
+Becoming.Frequency.count_from : ∀ (T r : Nat), Becoming.Frequency.count T.ble (T + r) = r
+Becoming.Frequency.SelfLoop.always : ∀ (M : Nat),
+  Becoming.Frequency.SelfLoop.strengths (fun x => true) M = Becoming.Loops.SelfLoop.strengths M
+Becoming.Frequency.SelfLoop.always_carried : ∀ (M D t : Nat),
+  Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Loops.SelfLoop.strengths M) (fun x => [()])
+      (fun x => D) t () =
+    D * (1 + M) ^ t
+Becoming.Frequency.SelfLoop.onset : ∀ (T : Nat),
+  Becoming.Frequency.SelfLoop.strengths T.ble 1 = Becoming.Closing.Onset.strengths T
+@Becoming.gap_le_count : ∀ {F C : Type} [DecidableEq C] {cs : List C} {part : F → Bool}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat},
+  (∀ (c : C), c ∈ cs) →
+    ∀ {M D : Nat} {on : Nat → Bool},
+      (∀ (c : C), δ c ≤ D) →
+        (∀ (t : Nat) (c : C), Becoming.inflow cs part k present t c ≤ M) →
+          (∀ (t : Nat) (c : C), on t = false → Becoming.inflow cs part k present t c = 0) →
+            ∀ {law : Becoming.ExchangeLaw F C} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+              law.Nonanticipating →
+                L.Balances W →
+                  L'.Balances W' →
+                    (∀ (t : Nat), L.present t = present t) →
+                      (∀ (t : Nat), L'.present t = present t) →
+                        L.Follows law part W.level →
+                          L'.Follows law part W'.level →
+                            (∀ (t : Nat) (h : F) (c : C) (s : Nat) (d : C),
+                                part h = false → s ≤ t → law.RespondsWithin t h c s d (k t h c s d)) →
+                              (∀ (t : Nat) (h : F) (c : C), part h = true → L.exchangeGap L' t h c ≤ 0) →
+                                (∀ (c : C), Becoming.gap (W.level 0 c) (W'.level 0 c) ≤ δ c) →
+                                  ∀ (t : Nat) (c : C),
+                                    Becoming.gap (W.level t c) (W'.level t c) ≤
+                                      D * (1 + M) ^ Becoming.Frequency.count on t

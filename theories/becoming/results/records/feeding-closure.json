@@ -20,7 +20,8 @@
       "declarations": [
         "Becoming.Flow.FedBy",
         "Becoming.Flow.FedClosed",
-        "Becoming.Flow.WithinFeeding"
+        "Becoming.Flow.WithinFeeding",
+        "Becoming.Flow.FedFrom"
       ]
     },
     {
@@ -100,6 +101,7 @@
       "zh": "跨步闭包是含 f、对跨步供给封闭的最小区域，含供给闭包；其外的形成在某步在场时，不在该步向这样的条件给予：该条件从该步被携带到成员需要它的同一步或更晚一步。",
       "en": "The closure across steps is the least region holding f and closed under feeding across steps; it contains the feeding closure, and a formation beyond it that takes part at a step gives nothing there to a condition carried from that step to a later or equal one at which a member requires it.",
       "declarations": [
+        "Becoming.Flow.FedFromAcross",
         "Becoming.Flow.ClosedAcross",
         "Becoming.Flow.WithinFeedingAcross",
         "Becoming.Flow.WithinFeedingAcross.refl",
@@ -272,7 +274,8 @@
     "Becoming.Provision.fed_across",
     "Becoming.Provision.young_alone",
     "Becoming.Provision.parent_beyond",
-    "Becoming.Provision.through_store"
+    "Becoming.Provision.through_store",
+    "Becoming.Flow.FedFromAcross"
   ],
   "dependencies": [
     {
@@ -388,7 +391,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean",
       "role": "proof",
-      "sha256": "3497a8d1c8531e36e41a9c1c309beb27cbae3ea0a4493795f138ddd5a9935bc9",
+      "sha256": "55f2143ca07e6fab04199f6fae8b059526e874800ce98dfaf0de4ce3986d3d62",
       "declarations": [
         "Becoming.Flow.FedClosed",
         "Becoming.Flow.WithinFeeding",
@@ -402,7 +405,8 @@
         "Becoming.Clearing.dependenceRegion_self",
         "Becoming.Clearing.dependenceRegion_iff",
         "Becoming.Clearing.dweller_beyond",
-        "Becoming.Clearing.closure_supported"
+        "Becoming.Clearing.closure_supported",
+        "Becoming.Flow.FedFrom"
       ]
     },
     {
@@ -480,7 +484,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feeding.lean",
       "role": "proof",
-      "sha256": "d92c72578b3fb86892a625bf3e7ed4d71636f0d511a0154b1c84b654bae0ec25",
+      "sha256": "4e06fa5905dd36abf70765b2e5703258e79dd192f51c39eb5a132b4fce794c09",
       "declarations": [
         "Becoming.Flow.CarriedTo",
         "Becoming.Flow.FollowsGiven",
@@ -521,7 +525,8 @@
         "Becoming.Provision.fed_across",
         "Becoming.Provision.young_alone",
         "Becoming.Provision.parent_beyond",
-        "Becoming.Provision.through_store"
+        "Becoming.Provision.through_store",
+        "Becoming.Flow.FedFromAcross"
       ]
     },
     {
@@ -631,12 +636,18 @@
       "role": "receipt",
       "sha256": "114b5ba1b619d4e81c138d098005583ee56aa8bd6d2295d9fb279cd92c2c3f9a",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
+      "role": "receipt",
+      "sha256": "9596c1a0b53bd9a26d9975f2cf00180c6d63402a1459924d1016b3ddbc2edcb6",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Interdependence",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -678,7 +689,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feeding.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Feeding",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -776,6 +787,10 @@
     {
       "en": "20 October 2026, LK1 (study section 237): the closest prior result named against the significance review's verdicts (study SA1), so that the record is not led with as a new finding; one does_not_show item added. The claim and its premises are unchanged.",
       "zh": "2026年10月20日，LK1（研究第237节）：按意义审查（研究 SA1）的裁定指名最接近的先前结果，使本记录不被当作新发现来领头；增加一条 does_not_show。主张与其前提不变。"
+    },
+    {
+      "en": "21 October 2026, EC1 (study section 307): the feeding closure and the closure across steps are now the frame's closure of a relation by definition (Flow.WithinFeeding is WithinClosure under Flow.FedFrom, Flow.WithinFeedingAcross under Flow.FedFromAcross), so their reflexivity, transitivity, closedness and what lies beyond them are proved through that closure's laws (WithinClosure.not_rel for Flow.beyond_gives_nothing and Flow.beyond_gives_nothing_across). Flow.FedFrom moved unchanged from Becoming.Feedback; Flow.FedFromAcross is new. The claim is unchanged.",
+      "zh": "2026年10月21日，EC1（研究第 307 节）：供给闭包与跨步闭包现按定义即框架上关系的闭包（Flow.WithinFeeding 是 Flow.FedFrom 下的 WithinClosure，Flow.WithinFeedingAcross 是 Flow.FedFromAcross 下的），故其自反、传递、封闭及其外者经该闭包之律证明（Flow.beyond_gives_nothing 与 Flow.beyond_gives_nothing_across 经 WithinClosure.not_rel）。Flow.FedFrom 原样由 Becoming.Feedback 移来；Flow.FedFromAcross 为新增。论断不变。"
     }
   ],
   "text_versions": [

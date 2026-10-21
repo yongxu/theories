@@ -218,9 +218,9 @@ theorem mutual_not_fed :
     flow.Balances web ∧ flow.MutuallyDependent web ∧
       ¬ flow.WithinFeeding web true false ∧ ¬ flow.WithinFeeding web false true :=
   ⟨balances, mutuallyDependent,
-   fun within => Bool.noConfusion ((Flow.withinFeeding_iff.mp within) (fun x => x = true)
+   fun within => Bool.noConfusion (within (fun x => x = true)
      (fun _ _ _ ⟨_, _, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)) rfl),
-   fun within => Bool.noConfusion ((Flow.withinFeeding_iff.mp within) (fun x => x = false)
+   fun within => Bool.noConfusion (within (fun x => x = false)
      (fun _ _ _ ⟨_, _, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)) rfl)⟩
 
 end Drawing

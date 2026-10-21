@@ -1557,16 +1557,6 @@
    "category": "model-witness",
    "reason": "density of the dyadic amounts: below every amount above nothing lies its half, above nothing; a fact about one constructed model of the amounts, which the base does not read"
   },
-  "Becoming.Layered.ext'": {
-   "module": "Becoming.LeastLoss",
-   "category": "support",
-   "reason": "two layered amounts with equal layers are equal; a one-line unpacking of the structure, used by the definition Layered.amounts"
-  },
-  "Becoming.Layered.never_rests": {
-   "module": "Becoming.LeastLoss",
-   "category": "model-witness",
-   "reason": "the counterexample in one constructed model of the amounts (a least loss, the stock beyond every multiple of it, never resting): it shows the bound premise of Amounts.rests is needed; not a law of the unfolding"
-  },
   "Becoming.Amounts.whole_losing_steps": {
    "module": "Becoming.Amounts",
    "category": "general-structure",
@@ -1576,11 +1566,6 @@
    "module": "Becoming.LeastLoss",
    "category": "model-witness",
    "reason": "the halving stock in one constructed model of the amounts approaches rest (an instance of Amounts.few_large_losses_of_archimedean and Amounts.approaches_rest) and falls at every step: approach without rest; not a law of the unfolding"
-  },
-  "Becoming.Layered.not_archimedean": {
-   "module": "Becoming.LeastLoss",
-   "category": "model-witness",
-   "reason": "one constructed model of the amounts is not Archimedean: the Archimedean premise of the approach law is needed; not a law of the unfolding"
   },
   "Becoming.Ideals.Open.interior_iff": {
    "module": "Becoming.Verification",
@@ -2206,6 +2191,11 @@
    "module": "Becoming.Weightings",
    "category": "general-structure",
    "reason": "lexical priority, the basic items first, ranks every widening higher: a law of any finite listing of items and any marking of basic items, with no world; with Weighting.widens_iff_every_of_class it places lexical priority within the classes whose shared order is widening"
+  },
+  "Becoming.withinClosureOf_iff": {
+   "module": "Becoming.Frame",
+   "category": "general-structure",
+   "reason": "A group's closure is the union of its members' closures, by definition (Iff.rfl): a law of every relation on any type, kept by name because records, chapters and frozen predictions cite it. The base reads it through the pooled coupling closure (Flow.WithinPoolCoupling), whose laws use the definition directly."
   }
  },
  "instances": {

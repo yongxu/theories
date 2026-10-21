@@ -1,4 +1,3 @@
-import Becoming.Feedback
 import Becoming.Frame
 
 /-!
@@ -9,9 +8,10 @@ A seed and a relation of edges give a one-label process whose steps are the edge
 holds the seeds, is closed under the edges, and lies within every property holding at the seeds
 and carried along the edges (`Closure.base`, `Closure.step`, `Closure.induction`).
 
-The core's closure under a relation (`WithinClosure`, `Becoming.Feedback`), what lies in every
+The core's closure under a relation (`WithinClosure`, `Becoming.Frame`), what lies in every
 region closed under it that holds a formation, is the seed–edge closure from that formation alone
-(`withinClosure_iff_closure`). `Becoming.Bridge` proves that the periphery's closures of seeds
+(`withinClosure_iff_closure`), since a process's reach is the closure of its steps
+(`reach_iff_withinClosure`, `Becoming.Frame`). `Becoming.Bridge` proves that the periphery's closures of seeds
 under edges are this closure (`reached_iff_closure`, `cutReach_iff_closure`), and
 `Becoming.SeedReachProcesses` states their laws for any process whose moves are the edges. Every
 declaration has an empty axiom report.
@@ -51,13 +51,14 @@ theorem induction {motive : X → Prop} (start : ∀ x, seed x → motive x)
 end Closure
 
 /-- The core's closure under a relation, what lies in every region closed under it that holds a
-formation (`Becoming.Feedback`), is the seed–edge closure from that formation alone. -/
+formation (`Becoming.Frame`), is the seed–edge closure from that formation alone: the edge
+process's reach, which is the closure of its steps (`reach_iff_withinClosure`), and its steps are
+the edges. -/
 theorem withinClosure_iff_closure {X : Type} {rel : X → X → Prop} {f g : X} :
     WithinClosure rel f g ↔ Closure (fun x => x = f) rel g :=
-  ⟨fun within => within (Closure (fun x => x = f) rel) (fun _ _ held e => held.step e)
-      (Closure.base rfl),
-   Closure.induction (motive := WithinClosure rel f)
-      (fun x (same : x = f) => same.symm ▸ WithinClosure.refl f)
-      (fun _ _ within e => within.trans (WithinClosure.of_rel e))⟩
+  ⟨fun within => ⟨f, rfl, reach_iff_withinClosure.mpr
+      (WithinClosure.mono (fun _ _ e => ⟨(), e⟩) within)⟩,
+   fun ⟨_, same, path⟩ => same ▸
+      WithinClosure.mono (fun _ _ ⟨_, e⟩ => e) (reach_iff_withinClosure.mp path)⟩
 
 end Becoming

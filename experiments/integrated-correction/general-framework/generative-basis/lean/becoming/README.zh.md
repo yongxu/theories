@@ -24,7 +24,7 @@
 |---|---|---|
 | L0 | `GenerativeCore`（基础） | 过程、轨迹及其组合与传递 |
 | L0 | [`Becoming.Prelude`](Becoming/Prelude.lean) | 各层所用的关于数、真值、列表与选项的引理，每条只陈述一次（不加前提；只导入 Init）：自然数的消去、减法与乘积（`add_right_cancel`、`Naturals.sub_sub`、`mul_assoc_nat`），`all`、`any`、`contains`、`filter`、`find?`、`bind` 与 `map` 检验什么（`ListTests.all_true_iff`、`ListTests.find_none_iff`），连接与映射之列表的成员（`mem_append_cases`、`preimage_of_mem_map`），在 Lean 自带版本用 `propext` 之处以递归证明 |
-| L0 | [`Becoming.Frame`](Becoming/Frame.lean) | 框架：过程加上每个配置实现的主张；运行、可达、不变量、新实现 |
+| L0 | [`Becoming.Frame`](Becoming/Frame.lean) | 框架：过程加上每个配置实现的主张；运行、关系的唯一闭包（`WithinClosure`）、可达即步的闭包、不变量即对步封闭的区域、新实现 |
 | L0 | [`Becoming.World`](Becoming/World.lean) | 展开的记录：依存、依存网（`Dependence Nat`）、流、交换，以及作为运行的世界（其构形是依存网、移动是交换；`World.of`、`World.web`、`World.flow`、`World.move`），彼此之间不设前提；导入框架 |
 | L1 | [`Becoming.Laws`](Becoming/Laws.lean) | 各层共用的律层概念，在框架之后只陈述一次（不加前提）：确定的过程（`Determined`），读作过程并沿历程运行的变化律与部分律（`Assurance.ofMap`、`Assurance.ofPartial`、`Assurance.trace_ofPartial_iff`），以及在描述下同行（`GoAlikeUnder`），`GoAlike` 是它在相等处的情形 |
 | L1 | [`Becoming.Inquiry`](Becoming/Inquiry.lean) | 探究的所见范围由实际执行给出，可靠策略在其上确保目标；判断即一步探究 |

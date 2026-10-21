@@ -1,0 +1,217 @@
+@Becoming.mem_of_mem_cons_ne : ∀ {α : Type} {x : α} {l : List α} {b : α}, b ∈ x :: l → b ≠ x → b ∈ l
+@Becoming.add_le_total_of_mem : ∀ {α : Type} {q : α → Nat} {as : List α} {a b : α},
+  a ≠ b → a ∈ as → b ∈ as → q a + q b ≤ Becoming.total as q
+@Becoming.Web.active_before : ∀ {F C : Type} {W : Becoming.Web F C} {g : F} {T j : Nat},
+  (∀ (i : Nat), W.active (T + i + 1) g → W.active (T + i) g) →
+    ∀ {s : Nat}, j ≤ s → W.active (T + s) g → W.active (T + j) g
+@Becoming.Flow.rest_le_taken : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat} {c : C} {rest : List F},
+  Becoming.Distinct rest →
+    (∀ (f : F), f ∈ rest → 0 < L.take t f c → f ∈ L.present t) →
+      (Becoming.total rest fun f => L.take t f c) ≤ L.taken t c
+@Becoming.Flow.outrun_excess : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat} {c : C} {rest : List F},
+  Becoming.Distinct rest →
+    (∀ (f : F), f ∈ rest → 0 < L.take t f c → f ∈ L.present t) →
+      (L.given t c < Becoming.total rest fun f => L.take t f c) → L.given t c < L.taken t c
+@Becoming.Flow.outrun_below : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (e : F), e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c) →
+            ∀ {T n : Nat} {rest : List F},
+              Becoming.Distinct rest →
+                (∀ (j : Nat) (f : F), j < n → f ∈ rest → 0 < L.take (T + j) f c → f ∈ L.present (T + j)) →
+                  (∀ (j : Nat), j < n → L.given (T + j) c < Becoming.total rest fun f => L.take (T + j) f c) →
+                    W.level T c < n + m → ∀ (k : Nat), W.level (T + n + k) c < m
+@Becoming.Flow.outrun_ends : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (e : F), e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c) →
+            ∀ {T n : Nat} {rest : List F},
+              Becoming.Distinct rest →
+                (∀ (j : Nat) (f : F), j < n → f ∈ rest → 0 < L.take (T + j) f c → f ∈ L.present (T + j)) →
+                  (∀ (j : Nat), j < n → L.given (T + j) c < Becoming.total rest fun f => L.take (T + j) f c) →
+                    W.level T c < n + m →
+                      ∀ (k : Nat) (h : F),
+                        W.requires (T + n + k) h c → m ≤ W.need (T + n + k) h c → ¬W.active (T + n + k) h
+@Becoming.Flow.outrun_reading_alike : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {L' : Becoming.Flow F C} {W' : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        L'.Balances W' →
+          L'.Acting W' →
+            W'.Dependent →
+              ∀ {c : C},
+                (∀ (t : Nat) (e : F), e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ 1 ≤ W.need t e c) →
+                  (∀ (t : Nat) (e : F), e ∈ L'.present t → 0 < L'.give t e c → W'.requires t e c ∧ 1 ≤ W'.need t e c) →
+                    ∀ {T n : Nat} {rest rest' : List F},
+                      Becoming.Distinct rest →
+                        Becoming.Distinct rest' →
+                          (∀ (j : Nat) (f : F), j < n → f ∈ rest → 0 < L.take (T + j) f c → f ∈ L.present (T + j)) →
+                            (∀ (j : Nat) (f : F),
+                                j < n → f ∈ rest' → 0 < L'.take (T + j) f c → f ∈ L'.present (T + j)) →
+                              (∀ (j : Nat),
+                                  j < n → L.given (T + j) c < Becoming.total rest fun f => L.take (T + j) f c) →
+                                (∀ (j : Nat),
+                                    j < n → L'.given (T + j) c < Becoming.total rest' fun f => L'.take (T + j) f c) →
+                                  W.level T c < n + 1 →
+                                    W'.level T c < n + 1 →
+                                      ∀ {score : (Nat → C → Nat) → Nat},
+                                        (∀ (l l' : Nat → C → Nat),
+                                            (∀ (k : Nat), l (T + n + k) c = l' (T + n + k) c) → score l = score l') →
+                                          score W.level = score W'.level
+@Becoming.Flow.excess_of_takesAll : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat} {f g : F} {c : C},
+  f ≠ g → L.TakesAll t f c → g ∈ L.present t → 0 < L.take t g c → L.given t c < L.taken t c
+@Becoming.Flow.full_taking_ends_at : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {c : C}
+  {m T n k : Nat} {f g h : F},
+  f ≠ g →
+    (∀ (j : Nat), j < n + k → L.BalancesOn W [c] (T + j)) →
+      (∀ (j : Nat) (e : F),
+          j < n + k →
+            e ∈ L.present (T + j) → 0 < L.give (T + j) e c → W.requires (T + j) e c ∧ m ≤ W.need (T + j) e c) →
+        (∀ (j : Nat), j < n + k → L.GiversSupported W (T + j) c) →
+          (∀ (j : Nat), j < n → L.TakesAll (T + j) f c) →
+            (∀ (j : Nat), j < n → g ∈ L.present (T + j) ∧ 0 < L.take (T + j) g c) →
+              W.level T c < n + m →
+                (W.active (T + n + k) h → W.Supported (T + n + k) h) →
+                  W.requires (T + n + k) h c → m ≤ W.need (T + n + k) h c → ¬W.active (T + n + k) h
+@Becoming.Flow.full_taking_ends : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (e : F), e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c) →
+            ∀ {T n : Nat} {f g : F},
+              f ≠ g →
+                (∀ (j : Nat), j < n → L.TakesAll (T + j) f c) →
+                  (∀ (j : Nat), j < n → g ∈ L.present (T + j) ∧ 0 < L.take (T + j) g c) →
+                    W.level T c < n + m →
+                      ∀ (k : Nat) (h : F),
+                        W.requires (T + n + k) h c → m ≤ W.need (T + n + k) h c → ¬W.active (T + n + k) h
+@Becoming.Flow.continuing_excludes : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (e : F), e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c) →
+            ∀ {f g : F},
+              f ≠ g →
+                (∀ (t : Nat), L.TakesAll t f c) →
+                  (∀ (t : Nat), W.requires t f c ∧ m ≤ W.need t f c) →
+                    (∀ (t : Nat), W.active t f) →
+                      ∀ (T : Nat), ¬∀ (j : Nat), j < W.level T c + 1 → g ∈ L.present (T + j) ∧ 0 < L.take (T + j) g c
+@Becoming.Flow.continuing_excludes_active : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (e : F), e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c) →
+            ∀ {f g : F},
+              f ≠ g →
+                (∀ (t : Nat), L.TakesAll t f c) →
+                  (∀ (t : Nat), W.requires t f c ∧ m ≤ W.need t f c) →
+                    (∀ (t : Nat), W.active t f) →
+                      (∀ (t : Nat), W.active t g → g ∈ L.present t ∧ 0 < L.take t g c) →
+                        ∀ (T : Nat), ¬∀ (j : Nat), j < W.level T c + 1 → W.active (T + j) g
+@Becoming.Flow.continuing_ends_taker : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (e : F), e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c) →
+            ∀ {f g : F},
+              f ≠ g →
+                (∀ (t : Nat), L.TakesAll t f c) →
+                  (∀ (t : Nat), W.requires t f c ∧ m ≤ W.need t f c) →
+                    (∀ (t : Nat), W.active t f) →
+                      (∀ (t : Nat), W.active t g → g ∈ L.present t ∧ 0 < L.take t g c) →
+                        ∀ {T : Nat},
+                          (∀ (j : Nat), W.active (T + j + 1) g → W.active (T + j) g) →
+                            ∀ (k : Nat), ¬W.active (T + (W.level T c + k)) g
+@Becoming.Flow.alongside_not_all : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (e : F), e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c) →
+            ∀ {f g : F},
+              f ≠ g →
+                (∀ (t : Nat), g ∈ L.present t ∧ 0 < L.take t g c) →
+                  (∀ (t : Nat), W.requires t f c ∧ m ≤ W.need t f c) →
+                    (∀ (t : Nat), W.active t f) →
+                      ∀ (T : Nat), ¬∀ (j : Nat), j < W.level T c + 1 → L.TakesAll (T + j) f c
+@Becoming.Flow.level_kept : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W → ∀ {c : C}, (∀ (t : Nat), L.WithinJoint t c) → ∀ (t : Nat), W.level 0 c ≤ W.level t c
+@Becoming.Flow.supported_of_within : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {c : C},
+      (∀ (t : Nat), L.WithinJoint t c) →
+        (∀ (t : Nat) (e : F) (d : C), W.requires t e d → d = c) →
+          (∀ (t : Nat) (e : F), W.requires t e c → W.need t e c ≤ W.level 0 c) → ∀ (t : Nat) (e : F), W.Supported t e
+Becoming.Excluding.balances : Becoming.Excluding.flow.Balances Becoming.Excluding.web
+Becoming.Excluding.acting : Becoming.Excluding.flow.Acting Becoming.Excluding.web
+Becoming.Excluding.level_two : ∀ (t : Nat), 2 ≤ Becoming.Excluding.level t
+Becoming.Excluding.dependent : Becoming.Excluding.web.Dependent
+Becoming.Excluding.gated : ∀ (t : Nat) (f : Becoming.Exceeding.Member),
+  f ∈ Becoming.Excluding.flow.present t →
+    0 < Becoming.Excluding.flow.give t f () →
+      Becoming.Excluding.web.requires t f () ∧ 1 ≤ Becoming.Excluding.web.need t f ()
+Becoming.Excluding.takes_all : ∀ (t : Nat), Becoming.Excluding.flow.TakesAll t Becoming.Witnesses.Member.first ()
+Becoming.Excluding.continues : ∀ (t : Nat),
+  Becoming.Excluding.web.active t Becoming.Witnesses.Member.renewer ∧
+    Becoming.Excluding.web.active t Becoming.Witnesses.Member.first ∧
+      ¬Becoming.Excluding.web.active (t + 1) Becoming.Witnesses.Member.second
+Becoming.Excluding.first_step : Becoming.Excluding.web.active 0 Becoming.Witnesses.Member.second ∧
+  Becoming.Witnesses.Member.second ∈ Becoming.Excluding.flow.present 0 ∧
+    0 < Becoming.Excluding.flow.take 0 Becoming.Witnesses.Member.second () ∧
+      Becoming.Excluding.present 0 = Becoming.Exceeding.present 0 ∧
+        Becoming.Excluding.level 0 = Becoming.Exceeding.level 0 ∧
+          Becoming.Excluding.level 1 = Becoming.Exceeding.level 1
+Becoming.Excluding.second_lives : ∀ (t : Nat),
+  Becoming.Excluding.web.active t Becoming.Witnesses.Member.second →
+    Becoming.Witnesses.Member.second ∈ Becoming.Excluding.flow.present t ∧
+      0 < Becoming.Excluding.flow.take t Becoming.Witnesses.Member.second ()
+Becoming.Excluding.second_lasting : ∀ (j : Nat),
+  Becoming.Excluding.web.active (0 + j + 1) Becoming.Witnesses.Member.second →
+    Becoming.Excluding.web.active (0 + j) Becoming.Witnesses.Member.second
+Becoming.Excluding.ends_by_law : ∀ (k : Nat),
+  ¬Becoming.Excluding.web.active (0 + (Becoming.Excluding.web.level 0 () + k)) Becoming.Witnesses.Member.second
+Becoming.Sharing.balances : Becoming.Sharing.flow.Balances Becoming.Sharing.web
+Becoming.Sharing.within : ∀ (t : Nat), Becoming.Sharing.flow.WithinJoint t ()
+Becoming.Sharing.dependent : Becoming.Sharing.web.Dependent
+Becoming.Sharing.neither_all : ∀ (t : Nat),
+  ¬Becoming.Sharing.flow.TakesAll t Becoming.Witnesses.Member.first () ∧
+    ¬Becoming.Sharing.flow.TakesAll t Becoming.Witnesses.Member.second ()
+Becoming.Sharing.full_taking_needed : (∀ (t : Nat),
+    Becoming.Sharing.web.active t Becoming.Witnesses.Member.second →
+      Becoming.Witnesses.Member.second ∈ Becoming.Sharing.flow.present t ∧
+        0 < Becoming.Sharing.flow.take t Becoming.Witnesses.Member.second ()) ∧
+  ∀ (t : Nat),
+    Becoming.Sharing.web.active t Becoming.Witnesses.Member.first ∧
+      Becoming.Sharing.web.active t Becoming.Witnesses.Member.second
+Becoming.Excluding.admits_all : ∀ (t : Nat) (f : Becoming.Exceeding.Member),
+  Becoming.Excluding.web.Admits (Becoming.Excluding.web.level t) t f
+Becoming.Excluding.admission_alike : Becoming.Excluding.web.Includes Becoming.Sharing.web.level
+    Becoming.Excluding.web.level ∧
+  Becoming.Excluding.web.Includes Becoming.Excluding.web.level Becoming.Sharing.web.level ∧
+    (∀ (t : Nat) (f : Becoming.Exceeding.Member), Becoming.Excluding.web.Admits (Becoming.Excluding.web.level t) t f) ∧
+      ¬Becoming.Excluding.web.active 1 Becoming.Witnesses.Member.second ∧
+        ∀ (t : Nat), Becoming.Sharing.web.active t Becoming.Witnesses.Member.second
+Becoming.Excluding.three_courses : (∀ (n : Nat) (f : Becoming.Exceeding.Member),
+    ¬Becoming.Exceeding.web.active (2 + n) f) ∧
+  (Becoming.Excluding.flow.Balances Becoming.Excluding.web ∧
+      Becoming.Excluding.web.Dependent ∧
+        ∀ (t : Nat),
+          Becoming.Excluding.flow.TakesAll t Becoming.Witnesses.Member.first () ∧
+            Becoming.Excluding.web.active t Becoming.Witnesses.Member.renewer ∧
+              Becoming.Excluding.web.active t Becoming.Witnesses.Member.first ∧
+                ¬Becoming.Excluding.web.active (t + 1) Becoming.Witnesses.Member.second) ∧
+    Becoming.Sharing.flow.Balances Becoming.Sharing.web ∧
+      Becoming.Sharing.web.Dependent ∧
+        ∀ (t : Nat),
+          Becoming.Sharing.flow.WithinJoint t () ∧
+            (∀ (f : Becoming.Exceeding.Member), Becoming.Sharing.web.active t f) ∧
+              ¬Becoming.Sharing.flow.TakesAll t Becoming.Witnesses.Member.first ()

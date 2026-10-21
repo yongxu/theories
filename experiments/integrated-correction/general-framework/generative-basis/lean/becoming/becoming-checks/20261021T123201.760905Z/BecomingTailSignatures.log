@@ -1,0 +1,129 @@
+@Becoming.Tail.eq_zero_of_nonzero_false : ∀ {x : Nat}, Becoming.nonzero x = false → x = 0
+@Becoming.Tail.add_eq : ∀ {a b c d : Nat}, a = c → b = d → a + b = c + d
+@Becoming.ChangedByNoCondition.eq_of_agree_from : ∀ {f : (Nat → Nat) → Nat},
+  Becoming.ChangedByNoCondition f → ∀ (n : Nat) {α β : Nat → Nat}, (∀ (m : Nat), n ≤ m → α m = β m) → f α = f β
+@Becoming.ChangedByNoCondition.of_agree_from : ∀ {f : (Nat → Nat) → Nat},
+  (∀ (n : Nat) (α β : Nat → Nat), (∀ (m : Nat), n ≤ m → α m = β m) → f α = f β) → Becoming.ChangedByNoCondition f
+@Becoming.wholeLaw_nonanticipating : ∀ {f : (Nat → Nat) → Nat},
+  Becoming.ChangedByNoCondition f → (Becoming.wholeLaw f).Nonanticipating
+@Becoming.wholeLaw_reads_from : ∀ {f : (Nat → Nat) → Nat},
+  Becoming.ChangedByNoCondition f →
+    ∀ (n : Nat) {t : Nat} {l l' : Nat → Nat → Nat},
+      (∀ (s : Nat), s ≤ t → ∀ (m : Nat), n ≤ m → l s m = l' s m) → (Becoming.wholeLaw f).GivesAlike t () l l'
+@Becoming.wholeLaw_insensitive : ∀ {f : (Nat → Nat) → Nat},
+  Becoming.ChangedByNoCondition f → ∀ (t c : Nat), (Becoming.wholeLaw f).InsensitiveAt t () c
+@Becoming.wholeLaw_not_sensitive : ∀ {f : (Nat → Nat) → Nat},
+  Becoming.ChangedByNoCondition f → ∀ (c : Nat), ¬(Becoming.wholeLaw f).Sensitive () c
+@Becoming.wholeLaw_through_from : ∀ {f : (Nat → Nat) → Nat},
+  Becoming.ChangedByNoCondition f →
+    ∀ {W : Becoming.Web Unit Nat} (n : Nat), (Becoming.wholeLaw f).Through W (fun x c => n ≤ c) fun x => false
+@Becoming.wholeLaw_not_through_sensitive : ∀ {f : (Nat → Nat) → Nat},
+  Becoming.ChangedByNoCondition f →
+    ∀ {α β : Nat → Nat},
+      f α ≠ f β →
+        ¬∀ (t : Nat) (l l' : Nat → Nat → Nat),
+            (∀ (c : Nat), (Becoming.wholeLaw f).Sensitive () c → ∀ (s : Nat), s ≤ t → l s c = l' s c) →
+              (Becoming.wholeLaw f).GivesAlike t () l l'
+@Becoming.wholeLaw_not_readsFinitely : ∀ {f : (Nat → Nat) → Nat},
+  Becoming.ChangedByNoCondition f → ∀ {α β : Nat → Nat}, f α ≠ f β → ¬(Becoming.wholeLaw f).ReadsFinitely
+@Becoming.wholeLaw_no_least_coupling : ∀ {f : (Nat → Nat) → Nat},
+  Becoming.ChangedByNoCondition f →
+    ∀ {α β : Nat → Nat},
+      f α ≠ f β →
+        ∀ {W : Becoming.Web Unit Nat},
+          (∀ (t c : Nat), ¬W.requires t () c) →
+            ¬∃ obs,
+                ((Becoming.wholeLaw f).Through W obs fun x => false) ∧
+                  ∀ (obs' : Unit → Nat → Prop),
+                    ((Becoming.wholeLaw f).Through W obs' fun x => false) → ∀ (c : Nat), obs () c → obs' () c
+Becoming.vanishIndicator_changedByNoCondition : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)),
+  Becoming.ChangedByNoCondition (Becoming.vanishIndicator decides)
+Becoming.tailLaw_eq_wholeLaw : ∀ (decides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)),
+  Becoming.tailLaw decides = Becoming.wholeLaw (Becoming.vanishIndicator decides)
+Becoming.WLPO.of_rule : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)), Becoming.WLPO
+Becoming.vanishesFrom_true : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)) {α : Nat → Nat}
+  {N : Nat}, Becoming.vanishesFrom decides α N = true → ∀ (m : Nat), N ≤ m → α m = 0
+Becoming.vanishesFrom_of : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)) {α : Nat → Nat}
+  {N : Nat}, (∀ (m : Nat), N ≤ m → α m = 0) → Becoming.vanishesFrom decides α N = true
+Becoming.vanishesFrom_never_iff : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)) {α : Nat → Nat},
+  (∀ (N : Nat), Becoming.vanishesFrom decides α N = false) ↔ ¬Becoming.VanishFrom α
+Becoming.neverIndicator_eq_one : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)) {α : Nat → Nat},
+  ¬Becoming.VanishFrom α → Becoming.neverIndicator decides α = 1
+Becoming.neverIndicator_eq_zero : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)) {α : Nat → Nat},
+  Becoming.VanishFrom α → Becoming.neverIndicator decides α = 0
+Becoming.neverIndicator_eq_of_agree : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false))
+  {α β : Nat → Nat} (n : Nat),
+  (∀ (m : Nat), n ≤ m → α m = β m) → Becoming.neverIndicator decides α = Becoming.neverIndicator decides β
+Becoming.neverIndicator_changedByNoCondition : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)),
+  Becoming.ChangedByNoCondition (Becoming.neverIndicator decides)
+Becoming.neverIndicator_zeros : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)),
+  (Becoming.neverIndicator decides fun x => 0) = 0
+Becoming.neverIndicator_ones : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)),
+  (Becoming.neverIndicator decides fun x => 1) = 1
+Becoming.neverIndicator_add_vanishIndicator : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false))
+  (vanishDecides : (α : Nat → Nat) → Decidable (Becoming.VanishFrom α)) (α : Nat → Nat),
+  Becoming.neverIndicator decides α + Becoming.vanishIndicator vanishDecides α = 1
+Becoming.neverLaw_nonanticipating : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)),
+  (Becoming.neverLaw decides).Nonanticipating
+Becoming.neverLaw_insensitive : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)) (t c : Nat),
+  (Becoming.neverLaw decides).InsensitiveAt t () c
+Becoming.neverLaw_not_sensitive : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)) (c : Nat),
+  ¬(Becoming.neverLaw decides).Sensitive () c
+Becoming.neverLaw_differs : ∀ (decides : (s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false)) (t c : Nat),
+  (Becoming.neverLaw decides).take t () (fun x x_1 => 0) c ≠ (Becoming.neverLaw decides).take t () (fun x x_1 => 1) c
+Becoming.changedByNoCondition_iff_rule : (∃ f, Becoming.ChangedByNoCondition f ∧ ∃ α β, f α ≠ f β) ↔
+  Nonempty ((s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false))
+Becoming.insensitive_differs_iff_rule : (∃ F law t h l l' c,
+    (∀ (e : Nat), law.InsensitiveAt t h e) ∧
+      ¬(law.take t h l c = law.take t h l' c ∧ law.give t h l c = law.give t h l' c)) ↔
+  Nonempty ((s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false))
+Becoming.not_through_sensitive_iff_rule : (∃ F law t h l l' c,
+    law.Nonanticipating ∧
+      (∀ (e : Nat), law.Sensitive h e → ∀ (s : Nat), s ≤ t → l s e = l' s e) ∧
+        ¬(law.take t h l c = law.take t h l' c ∧ law.give t h l c = law.give t h l' c)) ↔
+  Nonempty ((s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false))
+Becoming.raisedFrom_false : ∀ (decides : (s : Nat → Bool) → Decidable (∃ n, s n = true)) {α : Nat → Nat} {N : Nat},
+  Becoming.raisedFrom decides α N = false → ∀ (m : Nat), N ≤ m → α m = 0
+Becoming.raisedFrom_of : ∀ (decides : (s : Nat → Bool) → Decidable (∃ n, s n = true)) {α : Nat → Nat} {N : Nat},
+  (∀ (m : Nat), N ≤ m → α m = 0) → Becoming.raisedFrom decides α N = false
+Becoming.LPO.of_rule : ∀ (decides : (s : Nat → Bool) → Decidable (∃ n, s n = true)), Becoming.LPO
+Becoming.vanishDecision_iff_lpoRule : Nonempty ((α : Nat → Nat) → Decidable (Becoming.VanishFrom α)) ↔
+  Nonempty ((s : Nat → Bool) → Decidable (∃ n, s n = true))
+Becoming.TailRuns.falseRule_iff : Nonempty Becoming.TailRuns.FalseRule ↔
+  Nonempty ((s : Nat → Bool) → Decidable (∀ (n : Nat), s n = false))
+Becoming.TailRuns.trueRule_iff : Nonempty Becoming.TailRuns.TrueRule ↔
+  Nonempty ((s : Nat → Bool) → Decidable (∃ n, s n = true))
+Becoming.TailRuns.vanishRule_iff : Nonempty Becoming.TailRuns.VanishRule ↔
+  Nonempty ((α : Nat → Nat) → Decidable (Becoming.VanishFrom α))
+Becoming.TailRuns.wlpo_iff_runs : Becoming.WLPO ↔ Becoming.TailRuns.FalseDecided
+Becoming.TailRuns.lpo_iff_runs : Becoming.LPO ↔ Becoming.TailRuns.TrueDecided
+Becoming.TailRuns.changedByNoCondition_iff_runs : (∃ f, Becoming.ChangedByNoCondition f ∧ ∃ α β, f α ≠ f β) ↔
+  Nonempty Becoming.TailRuns.FalseRule
+Becoming.TailRuns.insensitive_differs_iff_runs : (∃ F law t h l l' c,
+    (∀ (e : Nat), law.InsensitiveAt t h e) ∧
+      ¬(law.take t h l c = law.take t h l' c ∧ law.give t h l c = law.give t h l' c)) ↔
+  Nonempty Becoming.TailRuns.FalseRule
+Becoming.TailRuns.not_through_sensitive_iff_runs : (∃ F law t h l l' c,
+    law.Nonanticipating ∧
+      (∀ (e : Nat), law.Sensitive h e → ∀ (s : Nat), s ≤ t → l s e = l' s e) ∧
+        ¬(law.take t h l c = law.take t h l' c ∧ law.give t h l c = law.give t h l' c)) ↔
+  Nonempty Becoming.TailRuns.FalseRule
+@Becoming.TailRuns.insensitive_differs_decides : ∀ {F : Type} {law : Becoming.ExchangeLaw F Nat} {t : Nat} {h : F},
+  (∀ (c : Nat), law.InsensitiveAt t h c) →
+    ∀ {l l' : Nat → Nat → Nat} {c : Nat},
+      ¬(law.take t h l c = law.take t h l' c ∧ law.give t h l c = law.give t h l' c) → Becoming.TailRuns.FalseDecided
+@Becoming.TailRuns.not_through_sensitive_decides : ∀ {F : Type} {law : Becoming.ExchangeLaw F Nat} {t : Nat} {h : F},
+  law.Nonanticipating →
+    ∀ {l l' : Nat → Nat → Nat},
+      (∀ (c : Nat), law.Sensitive h c → ∀ (s : Nat), s ≤ t → l s c = l' s c) →
+        ∀ {c : Nat},
+          ¬(law.take t h l c = law.take t h l' c ∧ law.give t h l c = law.give t h l' c) →
+            Becoming.TailRuns.FalseDecided
+Becoming.TailRuns.vanishRule_iff_trueRule : Nonempty Becoming.TailRuns.VanishRule ↔ Nonempty Becoming.TailRuns.TrueRule
+Becoming.TailRuns.vanish_decides : ∀ (decides : Becoming.TailRuns.VanishRule), Becoming.TailRuns.TrueDecided
+Becoming.TailRuns.indicators_sum : ∀ (falseRule : Becoming.TailRuns.FalseRule)
+  (vanishRule : Becoming.TailRuns.VanishRule) {S A : Type} {P : Generative.Process S A} (lev : S → Nat)
+  (r : Becoming.Run P),
+  ((Becoming.neverIndicator falseRule.sequences fun n => lev (r.state n)) +
+      Becoming.vanishIndicator vanishRule.sequences fun n => lev (r.state n)) =
+    1

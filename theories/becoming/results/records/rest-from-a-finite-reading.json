@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T13:33:42+00:00",
+  "reviewed_at_utc": "2026-10-21T12:45:50+00:00",
   "statement": {
     "en": "Read off configurations a list holds, an amount that does not rise falls strictly at most as often as the list is long, over any amounts: no least loss, Archimedean property, totality or decision. Falls that recur need a reading no list holds.",
     "zh": "读自一个列表所容纳的构形、不上升的量，严格下降的次数至多是列表的长度，对任何量成立：不需要最小损失、阿基米德性质、全序或判定。反复出现的下降需要没有列表容纳的读取。"
@@ -177,6 +177,13 @@
         "en": "The rest theorem of worlds over any amounts, read finitely.",
         "zh": "任何量上世界的停息定理，有限地读取。"
       }
+    },
+    {
+      "id": "rest-exactly-where-falls-stop",
+      "detail": {
+        "en": "Rest over any amounts, exactly where the total stops falling.",
+        "zh": "任何量上的停息，恰在总量停止下降之处。"
+      }
     }
   ],
   "references": [
@@ -193,7 +200,7 @@
         "Becoming.Amounts.extend_falls",
         "Becoming.Amounts.from_start"
       ],
-      "sha256": "fbd8477b11994153d7acb2d0d875c9167f0c7950c7cb5cdfc0107035c861b9fc"
+      "sha256": "15207336ebcbd438d39c4301862599bfc9dbc49b79880cc76cc8fd8cb595f035"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",
@@ -213,7 +220,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
+      "sha256": "3241a8dac70e5caa379484b5cd223d36ee7ae495c3119594bbf76f7c0ba90624"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -223,18 +230,23 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
+      "sha256": "a61c21e4dfeb49d21dab0250b99966a6ea7f63cf07ab2b31fd28e12f6de9f875"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
       "role": "receipt",
       "sha256": "8854e4c1a91979fbe1e87781e6c36ed8dad448d481b7c97b8bde443463df978a"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
+      "role": "receipt",
+      "sha256": "fb5bb84d275aea291dd7c8c795027c4bb224eef26ab4ecdf66c14183439c0857"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -248,6 +260,10 @@
     {
       "en": "20 October 2026, LC2: the law generalized below (board rule 9): the list need hold the configurations only from T on, and Amounts.rests_unrefuted_of_finite_reading states the stronger form, with the amount's not rising and the falls only not refuted, from which rests_of_finite_reading follows; falls_within_reading takes the same premises; the rest theorem of worlds over any amounts is built on it (record rest-theorem-in-any-amounts). The proof binding re-pointed to receipt 20261020T133130.717227Z after reading the change; the statement is unchanged, the declarations gain the unrefuted form; study section 267.",
       "zh": "2026年10月20日，LC2：规律向下推广（工作板规则 9）：列表只需从 T 起容纳构形，Amounts.rests_unrefuted_of_finite_reading 陈述更强的形式，量不上升与下降都只需不被否证，rests_of_finite_reading 由之得出；falls_within_reading 取同样的前提；任何量上世界的停息定理建立其上（记录 rest-theorem-in-any-amounts）。阅读改动后证明绑定改指回执 20261020T133130.717227Z；陈述不变，声明增加不可否证的形式；研究第 267 节。"
+    },
+    {
+      "en": "21 October 2026, LC3: Amounts.rests_unrefuted_of_finite_reading states its conclusion as Amounts.FallsStop, the one premise of rest over any amounts (record rest-exactly-where-falls-stop), the same proposition by definition; statements and declarations otherwise unchanged; the proof binding re-pointed to receipt 20261021T124304.830826Z after reading the change; study section 308.",
+      "zh": "2026年10月21日，LC3：Amounts.rests_unrefuted_of_finite_reading 以 Amounts.FallsStop 陈述其结论，即任何量上停息的唯一前提（记录 rest-exactly-where-falls-stop），按定义是同一命题；陈述与声明其余不变；阅读改动后证明绑定改指回执 20261021T124304.830826Z；研究第 308 节。"
     }
   ]
 }

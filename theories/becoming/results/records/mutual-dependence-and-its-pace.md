@@ -100,6 +100,7 @@ Reads the opening's "the whole Earth has become a highly entangled system", "hea
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T213206.644158Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 
 Aliases: `mutual dependence`, `相互依存`, `entangled`, `highly entangled system`, `exponential pace`, `mutually fed`, `shares conditions throughout`, `doubling draw`, `pace of a selection`, `Becoming.Flow.MutuallyDependent`, `Becoming.exponential_around`, `Becoming.share_ratio_pow`, `Becoming.Flow.Balances.half_stands`
 

@@ -22,14 +22,17 @@ bound compares with inclusion. Where this route meets the continuation condition
 assumes the condition.
 
 * **What a continuation depends on.** The continuation of a formation is fed by another at a
-  step when the other gives to a condition it requires (`Flow.FedBy`). A region of formations
-  is closed under feeding when whatever feeds a member is a member (`Flow.FedClosed`). A
-  formation lies within another's feeding closure when it lies in every region closed under
-  feeding that holds the other (`Flow.WithinFeeding`). The closure holds its formation and
-  every feeder, is transitive, and is itself closed under feeding
+  step when the other gives to a condition it requires (`Flow.FedBy`), and fed from it when
+  that happens at some step (`Flow.FedFrom`). A region of formations is closed under feeding
+  when whatever feeds a member is a member (`Flow.FedClosed`), and a formation lies within
+  another's feeding closure when it lies in every region closed under feeding that holds the
+  other (`Flow.WithinFeeding`): by definition the frame's one closure (`ClosedUnder`,
+  `WithinClosure`, `Becoming.Frame`) under being fed. So the closure holds its formation and
+  every feeder, is transitive, and is itself closed under feeding, by the laws of that closure
   (`Flow.WithinFeeding.refl`, `Flow.WithinFeeding.of_fedBy`, `Flow.WithinFeeding.trans`,
-  `Flow.fedClosed_within`). What lies beyond it gives nothing, at any step, to a condition a
-  member then requires (`Flow.beyond_gives_nothing`).
+  `Flow.fedClosed_within`), and what lies beyond it gives nothing, at any step, to a condition a
+  member then requires, since nothing within a closure bears the relation to what lies beyond
+  it (`Flow.beyond_gives_nothing`, through `WithinClosure.not_rel`).
 * **Consumption ends with its feeders.** Under balance, with only active formations giving and
   activity needing support, let a formation take from a condition at every step at which it is
   active, while nothing supported gives to the condition. Then it is active for at most as many
@@ -108,35 +111,41 @@ namespace Flow
 
 variable (L : Flow F C) (W : Web F C)
 
-/-- A region of formations is closed under feeding: whatever feeds the continuation of a
-member at a step is a member. -/
-def FedClosed (region : F → Prop) : Prop :=
-  ∀ e e' : F × Nat, region e.1 → L.FedBy W e e' → region e'.1
+/-- `g`'s continuation is fed from `h` at some step. -/
+def FedFrom (g h : F) : Prop :=
+  ∃ t, L.FedBy W (g, t) (h, t)
 
-/-- `g` lies within the feeding closure of `f`: every region closed under feeding that holds
-`f` holds `g`. -/
+/-- A region of formations is closed under feeding: whatever feeds the continuation of a
+member at some step is a member. The frame's closedness under being fed at some step. -/
+def FedClosed (region : F → Prop) : Prop :=
+  ClosedUnder (L.FedFrom W) region
+
+/-- `g` lies within the feeding closure of `f`: the frame's closure under being fed at some
+step, every region closed under feeding that holds `f` holding `g`. -/
 def WithinFeeding (f g : F) : Prop :=
-  ∀ region : F → Prop, L.FedClosed W region → region f → region g
+  WithinClosure (L.FedFrom W) f g
 
 variable {L W}
 
 /-- A formation lies within its own feeding closure. -/
 theorem WithinFeeding.refl (f : F) : L.WithinFeeding W f f :=
-  fun _ _ holds => holds
+  WithinClosure.refl f
 
 /-- The feeding closure is transitive. -/
 theorem WithinFeeding.trans {f g h : F} (first : L.WithinFeeding W f g)
     (second : L.WithinFeeding W g h) : L.WithinFeeding W f h :=
-  fun region closed holds => second region closed (first region closed holds)
+  WithinClosure.trans first second
 
 /-- What feeds a formation's continuation at some step lies within its feeding closure. -/
 theorem WithinFeeding.of_fedBy {e e' : F × Nat} (fed : L.FedBy W e e') :
     L.WithinFeeding W e.1 e'.1 :=
-  fun _ closed holds => closed e e' holds fed
+  match fed with
+  | ⟨same, c, requires, present, gives⟩ =>
+    WithinClosure.of_rel ⟨e'.2, rfl, c, same ▸ requires, present, gives⟩
 
 /-- The feeding closure of a formation is closed under feeding. -/
 theorem fedClosed_within (f : F) : L.FedClosed W (L.WithinFeeding W f) :=
-  fun _ _ within fed => within.trans (WithinFeeding.of_fedBy fed)
+  closedUnder_withinClosure f
 
 /-- What lies beyond a formation's feeding closure gives nothing, at any step, to a condition
 that a member of the closure then requires. -/
@@ -144,8 +153,7 @@ theorem beyond_gives_nothing {f g h : F} (within : L.WithinFeeding W f g)
     (beyond : ¬ L.WithinFeeding W f h) {t : Nat} {c : C} (requires : W.requires t g c)
     (present : h ∈ L.present t) : L.give t h c = 0 :=
   eq_zero_of_not_pos fun gives =>
-    beyond (within.trans (WithinFeeding.of_fedBy (e := (g, t)) (e' := (h, t))
-      ⟨rfl, c, requires, present, gives⟩))
+    WithinClosure.not_rel within beyond ⟨t, rfl, c, requires, present, gives⟩
 
 /-! ## Consumption without a feeder ends -/
 
@@ -459,17 +467,17 @@ namespace Clearing
 
 /-- The region along dependence is closed under feeding. -/
 theorem fedClosed : flow.FedClosed web alongDependence :=
-  fun _ e' _ fed => match e', fedBy_source fed with
-    | (.source, _), _ => trivial
-    | (.clearer, _), ⟨_, no⟩ => Formation.noConfusion no
-    | (.dweller, _), ⟨_, no⟩ => Formation.noConfusion no
+  fun _ h _ ⟨_, fed⟩ => match h, fedBy_source fed with
+    | .source, _ => trivial
+    | .clearer, ⟨_, no⟩ => Formation.noConfusion no
+    | .dweller, ⟨_, no⟩ => Formation.noConfusion no
 
 /-- Each formation's region along its dependence is closed under feeding. -/
 theorem dependenceRegion_closed : ∀ p, flow.FedClosed web (dependenceRegion p)
   | .clearer => fedClosed
-  | .source => fun _ _ inside fed =>
+  | .source => fun _ _ inside ⟨_, fed⟩ =>
       Formation.noConfusion ((fedBy_source fed).1.symm.trans inside)
-  | .dweller => fun _ _ inside fed =>
+  | .dweller => fun _ _ inside ⟨_, fed⟩ =>
       Formation.noConfusion ((fedBy_source fed).1.symm.trans inside)
 
 /-- Each formation lies in its own region along its dependence. -/

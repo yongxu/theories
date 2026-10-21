@@ -1,0 +1,26 @@
+import Becoming.WitnessRefinementRuns
+#print axioms Becoming.WitnessRefinementRuns.inspection
+#print axioms Becoming.WitnessRefinementRuns.testing
+#print axioms Becoming.WitnessRefinementRuns.Complete
+#print axioms Becoming.WitnessRefinementRuns.pool
+#print axioms Becoming.WitnessRefinementRuns.mem_step
+#print axioms Becoming.WitnessRefinementRuns.run_narrows
+#print axioms Becoming.WitnessRefinementRuns.silent_step
+#print axioms Becoming.WitnessRefinementRuns.step_admits
+#print axioms Becoming.WitnessRefinementRuns.step_pool_empty_iff
+#print axioms Becoming.WitnessRefinementRuns.step_certificate_candidate
+#print axioms Becoming.WitnessRefinementRuns.complete_step_agrees
+#print axioms Becoming.WitnessRefinementRuns.complete_run_agrees
+#print axioms Becoming.WitnessRefinementRuns.responsive_step_excludes
+#print axioms Becoming.WitnessRefinementRuns.covering_step_keeps_both
+#print axioms Becoming.WitnessRefinementRuns.diagnosable_iff
+#print axioms Becoming.WitnessRefinementRuns.all_append
+#print axioms Becoming.WitnessRefinementRuns.and_self'
+#print axioms Becoming.WitnessRefinementRuns.any_congr
+#print axioms Becoming.WitnessRefinementRuns.filter_congr
+#print axioms Becoming.WitnessRefinementRuns.doubled_roster_same
+#print axioms Becoming.WitnessRefinementRuns.total_fault_kept
+#print axioms Becoming.WitnessRefinementRuns.total_fault_blocks
+#print axioms Becoming.WitnessRefinementRuns.test_emptied
+#print axioms Becoming.WitnessRefinementRuns.test_step_completes
+#print axioms Becoming.WitnessRefinementRuns.inquiry_step_testing

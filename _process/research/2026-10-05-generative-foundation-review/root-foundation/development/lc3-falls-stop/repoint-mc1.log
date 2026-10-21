@@ -1,0 +1,25 @@
+{
+ "records": 3,
+ "apply": true,
+ "by_record": {
+  "margin-of-a-regime": {
+   "paths": [
+    "experiments/margin-measured/README.md"
+   ],
+   "rebound": []
+  },
+  "regime-point-under-adjusting-giving": {
+   "paths": [
+    "experiments/margin-measured/README.md"
+   ],
+   "rebound": []
+  },
+  "where-a-run-of-a-regime-comes-to-rest": {
+   "paths": [
+    "experiments/margin-measured/README.md"
+   ],
+   "rebound": []
+  }
+ },
+ "log": "_process/architecture/rebinds.jsonl"
+}

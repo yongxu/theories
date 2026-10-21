@@ -1,0 +1,25 @@
+import Becoming.Substitution
+#print axioms Becoming.ceasing_step
+#print axioms Becoming.Web.DependenceChanged
+#print axioms Becoming.Web.ConsumingThrough
+#print axioms Becoming.Web.consumingIn_kept_iff
+#print axioms Becoming.Web.consuming_survives_iff
+#print axioms Becoming.Web.ConsumingThrough.consumingIn
+#print axioms Becoming.Substitution.Source
+#print axioms Becoming.Substitution.requires
+#print axioms Becoming.Substitution.draws
+#print axioms Becoming.Substitution.level
+#print axioms Becoming.Substitution.active
+#print axioms Becoming.Substitution.web
+#print axioms Becoming.Substitution.web_dependent
+#print axioms Becoming.Substitution.persists_consuming
+#print axioms Becoming.Substitution.consuming_through_sustaining
+#print axioms Becoming.Substitution.extracting
+#print axioms Becoming.Substitution.extracting_persists_consuming
+#print axioms Becoming.Substitution.extracting_low
+#print axioms Becoming.Substitution.stepwise_includes_substitution
+#print axioms Becoming.Substitution.slow
+#print axioms Becoming.Substitution.slow_withheld_two_steps
+#print axioms Becoming.Substitution.Lone.web
+#print axioms Becoming.Substitution.Lone.substituted
+#print axioms Becoming.Substitution.Lone.own_witness_lost

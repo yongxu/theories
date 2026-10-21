@@ -1,0 +1,4 @@
+import Becoming.ClassifiedBeliefProcesses
+#check @Becoming.ClassifiedBeliefProcesses.after_empty_or_inhabited
+#check @Becoming.ClassifiedBeliefProcesses.classified_of_decidable
+#check @Becoming.ClassifiedBeliefProcesses.sufficiency_iff_implication_of_decidable

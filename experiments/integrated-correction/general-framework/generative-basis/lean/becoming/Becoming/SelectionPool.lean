@@ -17,7 +17,7 @@ theorem names.
 
 * **A pool's coupling closure, and blindness beyond it** (stated in `Becoming.Selection`, which
   derives the single formation's case from them). The closure of a group under a relation is the
-  union of the members' closures (`WithinClosureOf`, `withinClosureOf_iff`); a pool's coupling
+  union of the members' closures (`WithinClosureOf`, by definition); a pool's coupling
   closure is its closure under being affected through what is coupled into
   (`Flow.WithinPoolCoupling`), and every selection through the pooled coupling of any group within
   it selects the levels with and without a part beyond it alike (`Flow.unselected_beyond_pool`).
@@ -243,7 +243,7 @@ theorem Flow.act_alike_pool (through : law.Through W obs part)
     (acts : ∀ f, group f → L.ActsAlikeWithin L' W W' obs part f) :
     ∀ g, WithinClosureOf (L.CoupledFromEither W L' obs) group g →
       ∀ t, W.AlikeThroughUpTo obs g W.level W'.level t :=
-  fun _ within _ => match withinClosureOf_iff.mp within with
+  fun _ within _ => match within with
   | ⟨f, inGroup, inside⟩ => Web.selects_alike_iff.mp fun _ selectsThrough =>
       Flow.act_unselected through follows follows' balances balances' present start
         (acts f inGroup) inside selectsThrough
@@ -362,7 +362,7 @@ theorem act_courses_unselected_pool {act act' : ExchangeLaw F C} {present : Nat 
   have alike : ∀ g, pool g →
       W.AlikeThroughUpTo obs g ((law.withAct part act).levels present start)
         ((law.withAct part act').levels present start) t :=
-    fun g member => match withinClosureOf_iff.mp (members g member) with
+    fun g member => match (members g member) with
     | ⟨_, inGroup, within⟩ => Web.selects_alike_iff.mp fun _ selectsThrough =>
         act_courses_unselected na naAct naAct' through actThrough feasible feasible'
           (fun t h l c inPart ⟨g', within', couples⟩ =>
@@ -471,7 +471,7 @@ under `rel` lies within `o`'s under `rel'`. -/
 theorem WithinClosureOf.to_reads {rel rel' : F → F → Prop} {o a g : F}
     (larger : ∀ g h, rel g h → rel' g h) (reaches : WithinClosure rel' o a)
     (within : WithinClosureOf rel (fun x => x = o ∨ x = a) g) : WithinClosure rel' o g :=
-  match withinClosureOf_iff.mp within with
+  match within with
   | ⟨_, .inl same, inside⟩ => same ▸ WithinClosure.mono larger inside
   | ⟨_, .inr same, inside⟩ => reaches.trans (same ▸ WithinClosure.mono larger inside)
 
@@ -705,7 +705,7 @@ theorem reading_clearer_unselected :
       rest_follows rest_follows_spared balances spared_balances (fun _ => rfl) start_alike
       (fun h inPart _ c ⟨_, within, couples⟩ => match h, inPart with
         | .clearer, _ =>
-          match c, couples_resource (within clearerSide clearerSide_closed_either
+          match c, couples_resource (within.least clearerSide clearerSide_closed_either
               (fun f member => match f, member with
                 | .source, _ => trivial
                 | .clearer, _ => trivial

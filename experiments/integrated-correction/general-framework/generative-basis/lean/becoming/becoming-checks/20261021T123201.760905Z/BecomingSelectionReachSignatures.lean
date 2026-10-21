@@ -1,0 +1,14 @@
+import Becoming.SelectionReach
+#check @Becoming.exists_outside_of_total_lt
+#check @Becoming.Flow.Balances.gives_more_of_rise
+#check @Becoming.Flow.Balances.rise_draws_beyond
+#check @Becoming.Flow.Balances.rise_paid_from_beyond
+#check @Becoming.Flow.Balances.rise_takes_beyond
+#check @Becoming.Flow.Gainless.rise_takes_beyond
+#check @Becoming.Flow.favours_reaching_beyond
+#check @Becoming.Web.raises_selectsThrough
+#check @Becoming.Diversion.places_distinct
+#check @Becoming.Diversion.diverting_gainless
+#check @Becoming.Diversion.taker_listed
+#check @Becoming.Diversion.draws_beyond
+#check @Becoming.Diversion.supplying_raises_untaken

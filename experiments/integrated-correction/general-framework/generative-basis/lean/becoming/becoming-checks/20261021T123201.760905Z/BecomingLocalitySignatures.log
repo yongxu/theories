@@ -1,0 +1,182 @@
+@Becoming.pos_iff_lt : ∀ {a b d : Nat}, a + b = d → (0 < a ↔ b < d)
+@Becoming.exists_lt_of_total_lt : ∀ {α : Type} {p q : α → Nat} {as : List α},
+  Becoming.total as p < Becoming.total as q → ∃ a, a ∈ as ∧ p a < q a
+Becoming.rises_or_le : ∀ (r : Nat → Nat) (N n : Nat), r (N + n) ≤ r N ∨ ∃ s, N ≤ s ∧ r s < r (s + 1)
+@Becoming.unmet_or_lower : ∀ {r : Nat → Nat} {E Q : Nat → Prop},
+  (∀ (t : Nat), Q t → E t → r (t + 1) < r t) →
+    (∀ (t : Nat), Q t → r (t + 1) ≤ r t) →
+      (∀ (t : Nat), r t < r (t + 1) → E t) →
+        (∀ (N : Nat), ∃ t, N ≤ t ∧ E t) → ∀ (N : Nat), (∃ t, N ≤ t ∧ ¬Q t ∧ E t) ∨ ∃ t, N ≤ t ∧ r (t + 1) < r N
+@Becoming.unmet_from : ∀ {r : Nat → Nat} {E Q : Nat → Prop},
+  (∀ (t : Nat), Q t → E t → r (t + 1) < r t) →
+    (∀ (t : Nat), Q t → r (t + 1) ≤ r t) →
+      (∀ (t : Nat), r t < r (t + 1) → E t) →
+        (∀ (N : Nat), ∃ t, N ≤ t ∧ E t) → ∀ (k N : Nat), r N ≤ k → ∃ t, N ≤ t ∧ ¬Q t ∧ E t
+@Becoming.recurs_iff_unmet : ∀ {r : Nat → Nat} {E Q : Nat → Prop},
+  (∀ (t : Nat), Q t → E t → r (t + 1) < r t) →
+    (∀ (t : Nat), Q t → r (t + 1) ≤ r t) →
+      (∀ (t : Nat), r t < r (t + 1) → E t) → ((∀ (N : Nat), ∃ t, N ≤ t ∧ E t) ↔ ∀ (N : Nat), ∃ t, N ≤ t ∧ ¬Q t ∧ E t)
+@Becoming.Web.StandingCensus.stock_eq : ∀ {F C : Type} {W : Becoming.Web F C} {stand : Nat → List C},
+  W.StandingCensus stand →
+    ∀ {es : List C},
+      Becoming.Distinct es → ∀ {t : Nat}, (∀ (c : C), c ∈ stand t → c ∈ es) → W.stock (stand t) t = W.stock es t
+@Becoming.Web.StandingCensus.length_le_stock : ∀ {F C : Type} {W : Becoming.Web F C} {stand : Nat → List C},
+  W.StandingCensus stand → ∀ (t : Nat), (stand t).length ≤ W.stock (stand t) t
+@Becoming.Flow.BalancesOn.comesToStand_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat} {c : C}, L.BalancesOn W cs t → c ∈ cs → (W.ComesToStand t c ↔ W.level t c = 0 ∧ L.taken t c < L.given t c)
+@Becoming.Flow.BalancesOn.ceasesToStand_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {cs : List C} {t : Nat} {c : C},
+  L.BalancesOn W cs t → c ∈ cs → (W.CeasesToStand t c ↔ 0 < W.level t c ∧ L.taken t c = W.level t c + L.given t c)
+@Becoming.Flow.RunsDownOn.changes_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C}, L.RunsDownOn W es t → ((∃ c, W.Rises t c ∨ W.Falls t c) ↔ W.stock es (t + 1) < W.stock es t)
+@Becoming.Flow.RunsDownOn.exchanges_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C},
+  L.RunsDownOn W es t →
+    L.ClosedAt es t →
+      ((∃ f c, f ∈ L.present t ∧ (0 < L.take t f c ∨ 0 < L.give t f c)) ↔ W.stock es (t + 1) < W.stock es t)
+@Becoming.Flow.RunsDownOn.stock_eq : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C} {stand : Nat → List C},
+  W.StandingCensus stand →
+    L.RunsDownOn W es t → W.stock (stand t) t = W.stock es t ∧ W.stock (stand (t + 1)) (t + 1) = W.stock es (t + 1)
+@Becoming.Flow.RunsDown.standing_le : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {stand : Nat → List C},
+  W.StandingCensus stand → L.RunsDown W t → W.stock (stand (t + 1)) (t + 1) ≤ W.stock (stand t) t
+@Becoming.Flow.RunsDown.changes_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {stand : Nat → List C},
+  W.StandingCensus stand →
+    L.RunsDown W t → ((∃ c, W.Rises t c ∨ W.Falls t c) ↔ W.stock (stand (t + 1)) (t + 1) < W.stock (stand t) t)
+@Becoming.Flow.RunsDownClosed.exchanges_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {stand : Nat → List C},
+  W.StandingCensus stand →
+    L.RunsDownClosed W t →
+      ((∃ f c, f ∈ L.present t ∧ (0 < L.take t f c ∨ 0 < L.give t f c)) ↔
+        W.stock (stand (t + 1)) (t + 1) < W.stock (stand t) t)
+@Becoming.Flow.rise_of_standing : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {stand : Nat → List C},
+  W.StandingCensus stand → W.stock (stand t) t < W.stock (stand (t + 1)) (t + 1) → ∃ c, W.Rises t c
+@Becoming.Flow.RunsDownClosed.runsDown : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat},
+  L.RunsDownClosed W t → L.RunsDown W t
+@Becoming.Flow.change_recurs_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {stand : Nat → List C},
+  W.StandingCensus stand →
+    ((∀ (N : Nat), ∃ t, N ≤ t ∧ ∃ c, W.Rises t c ∨ W.Falls t c) ↔
+      ∀ (N : Nat), ∃ t, N ≤ t ∧ ¬L.RunsDown W t ∧ ∃ c, W.Rises t c ∨ W.Falls t c)
+@Becoming.Flow.exchange_recurs_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {stand : Nat → List C},
+  W.StandingCensus stand →
+    ((∀ (N : Nat),
+        ∃ t,
+          N ≤ t ∧ ((∃ f c, f ∈ L.present t ∧ (0 < L.take t f c ∨ 0 < L.give t f c)) ∨ ∃ c, W.Rises t c ∨ W.Falls t c)) ↔
+      ∀ (N : Nat),
+        ∃ t,
+          N ≤ t ∧
+            ¬L.RunsDownClosed W t ∧
+              ((∃ f c, f ∈ L.present t ∧ (0 < L.take t f c ∨ 0 < L.give t f c)) ∨ ∃ c, W.Rises t c ∨ W.Falls t c))
+@Becoming.Flow.RunsDown.rise_zero : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {stand : Nat → List C}, W.StandingCensus stand → L.RunsDown W t → Becoming.rise (fun t => W.stock (stand t) t) t = 0
+@Becoming.Flow.RunsDown.fall_pos_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {stand : Nat → List C},
+  W.StandingCensus stand →
+    L.RunsDown W t → (0 < Becoming.fall (fun t => W.stock (stand t) t) t ↔ ∃ c, W.Rises t c ∨ W.Falls t c)
+@Becoming.Flow.RunsDownOn.takers_le_fall : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {es : List C} {stand : Nat → List C},
+  W.StandingCensus stand → L.RunsDownOn W es t → L.takers es t ≤ Becoming.fall (fun t => W.stock (stand t) t) t
+@Becoming.Flow.standing_bounds_change : ∀ {F C : Type} {W : Becoming.Web F C} {stand : Nat → List C},
+  W.StandingCensus stand →
+    ∀ (T n : Nat),
+      (stand (T + n)).length + Becoming.count (Becoming.steps T n) (Becoming.fall fun t => W.stock (stand t) t) ≤
+        W.stock (stand T) T + Becoming.total (Becoming.steps T n) (Becoming.rise fun t => W.stock (stand t) t)
+@Becoming.Flow.RunsDown.lowers_mark : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {stand : Nat → List C},
+  W.StandingCensus stand →
+    L.RunsDown W t →
+      ∀ {q : Nat},
+        (0 < q → ∃ c, W.Rises t c ∨ W.Falls t c) →
+          W.stock (stand (t + 1)) (t + 1) + Becoming.mark (0 < q) ≤ W.stock (stand t) t
+@Becoming.Flow.runsDown_bounds_change : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {stand : Nat → List C},
+  W.StandingCensus stand →
+    ∀ {T n : Nat},
+      (∀ (t : Nat), t ∈ Becoming.steps T n → ¬¬L.RunsDown W t) →
+        (stand (T + n)).length + Becoming.count (Becoming.steps T n) (Becoming.fall fun t => W.stock (stand t) t) ≤
+          W.stock (stand T) T
+@Becoming.Flow.runsDown_change_bound : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {stand : Nat → List C},
+  W.StandingCensus stand →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → ¬¬L.RunsDown W t) →
+        ∀ {n c a : Nat → Nat},
+          (∀ (t : Nat), T ≤ t → n t ≤ W.stock (stand t) t) →
+            (∀ (t : Nat), T ≤ t → 0 < c t + a t → ∃ x, W.Rises t x ∨ W.Falls t x) →
+              Becoming.ChangeBound T (W.stock (stand T) T) n c a
+@Becoming.Flow.BalancesOn.arises_iff : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {xs : List X}
+  {t : Nat} {x : X},
+  L.BalancesOn W xs t →
+    x ∈ xs →
+      (W.active t x ↔ 0 < W.level t x) →
+        (W.active (t + 1) x ↔ 0 < W.level (t + 1) x) → (W.Arises t x ↔ W.level t x = 0 ∧ L.taken t x < L.given t x)
+@Becoming.Flow.BalancesOn.arises_given : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {xs : List X}
+  {t : Nat} {x : X},
+  L.BalancesOn W xs t →
+    x ∈ xs →
+      (W.active t x ↔ 0 < W.level t x) →
+        (W.active (t + 1) x ↔ 0 < W.level (t + 1) x) →
+          (∀ (f : X), f ∈ L.present t → 0 < L.give t f x → W.active t f) →
+            W.Arises t x → ∃ f, W.active t f ∧ f ∈ L.present t ∧ 0 < L.give t f x ∧ f ≠ x
+@Becoming.accumulates_or : ∀ {q : Nat → Nat} {R : Prop},
+  (∀ (N : Nat), ∃ t, N ≤ t ∧ (0 < q t ∨ R)) → ∀ (N K : Nat), R ∨ ∃ n, K ≤ Becoming.total (Becoming.steps N n) q
+@Becoming.stays_failing_within : ∀ {q : Nat → Prop} {S : Nat},
+  ¬q S → ∀ {n : Nat}, (∀ (k : Nat), k < n → ¬Becoming.ComesToBe q (S + k)) → ∀ (k : Nat), k ≤ n → ¬q (S + k)
+@Becoming.Covers.within : ∀ {α : Type} {p : α → Nat → Prop} [(a : α) → (t : Nat) → Decidable (p a t)] {L : List α}
+  {N n : Nat}, Becoming.Covers p L N → Becoming.NoneComes p N n → ∀ {k : Nat}, k ≤ n → Becoming.Covers p L (N + k)
+@Becoming.cohort_closes_iff : ∀ {α : Type} {p : α → Nat → Prop} [inst : (a : α) → (t : Nat) → Decidable (p a t)]
+  (L : List α) (N n : Nat),
+  ((Becoming.total L fun a => Becoming.mark (p a (N + n))) +
+        Becoming.total (Becoming.steps N n) (Becoming.ceasings L p) =
+      Becoming.total L fun a => Becoming.mark (p a N)) ↔
+    ∀ (s : Nat) (a : α), s ∈ Becoming.steps N n → a ∈ L → ¬Becoming.ComesToBe (p a) s
+@Becoming.ceasing_needs_arising : ∀ {α : Type} {p : α → Nat → Prop} [inst : (a : α) → (t : Nat) → Decidable (p a t)]
+  {L : List α} {N n : Nat},
+  Becoming.ListsAt p L N →
+    Becoming.NoneComes p N n →
+      (∀ (k : Nat), k ≤ n → Becoming.Covers p L (N + k)) ∧
+        (∀ (s : Nat) (a : α), N ≤ s → s < N + n → Becoming.CeasesToBe (p a) s → a ∈ L) ∧
+          (Becoming.total L fun a => Becoming.mark (p a (N + n))) +
+              Becoming.total (Becoming.steps N n) (Becoming.ceasings L p) =
+            L.length
+@Becoming.Covers.coming_from_of_ceasing : ∀ {α : Type} {p : α → Nat → Prop} [(a : α) → (t : Nat) → Decidable (p a t)]
+  {L : List α} {N : Nat},
+  Becoming.Covers p L N →
+    (∀ (M : Nat), ∃ t a, M ≤ t ∧ Becoming.CeasesToBe (p a) t) → ∃ s a, N ≤ s ∧ Becoming.ComesToBe (p a) s
+@Becoming.coming_of_ceasing_covered : ∀ {α : Type} {p : α → Nat → Prop} [(a : α) → (t : Nat) → Decidable (p a t)],
+  (∀ (M : Nat), ∃ N L, M ≤ N ∧ Becoming.Covers p L N) →
+    (∀ (M : Nat), ∃ t a, M ≤ t ∧ Becoming.CeasesToBe (p a) t) → ∀ (M : Nat), ∃ t a, M ≤ t ∧ Becoming.ComesToBe (p a) t
+@Becoming.Listed.covered : ∀ {α : Type} {p : α → Nat → Prop} {l : Nat → List α},
+  Becoming.Listed p l → ∀ (M : Nat), ∃ N L, M ≤ N ∧ Becoming.Covers p L N
+@Becoming.ceases_once : ∀ {α : Type} {p : α → Nat → Prop} {N n : Nat},
+  Becoming.NoneComes p N n → ∀ {a : α} {t t' : Nat}, N ≤ t → t' < N + n → t < t' → Becoming.CeasesToBe (p a) t → ¬p a t'
+@Becoming.Covers.ceasing_steps_within : ∀ {α : Type} {p : α → Nat → Prop} {L : List α} {N n : Nat},
+  Becoming.Covers p L N →
+    Becoming.NoneComes p N n →
+      ∀ {E : List Nat},
+        Becoming.Distinct E →
+          (∀ (t : Nat), t ∈ E → N ≤ t ∧ t < N + n ∧ ∃ a, Becoming.CeasesToBe (p a) t) → E.length ≤ L.length
+@Becoming.ceasing_steps_found : ∀ {α : Type} {p : α → Nat → Prop},
+  (∀ (M : Nat), ∃ t a, M ≤ t ∧ Becoming.CeasesToBe (p a) t) →
+    ∀ (N k : Nat),
+      ∃ E U,
+        Becoming.Distinct E ∧
+          E.length = k ∧ N ≤ U ∧ ∀ (t : Nat), t ∈ E → N ≤ t ∧ t < U ∧ ∃ a, Becoming.CeasesToBe (p a) t
+@Becoming.ceasing_steps_unrefuted : ∀ {α : Type} {p : α → Nat → Prop},
+  (∀ (M : Nat), ¬¬∃ t a, M ≤ t ∧ Becoming.CeasesToBe (p a) t) →
+    ∀ (N k : Nat),
+      ¬¬∃ E U,
+            Becoming.Distinct E ∧
+              E.length = k ∧ N ≤ U ∧ ∀ (t : Nat), t ∈ E → N ≤ t ∧ t < U ∧ ∃ a, Becoming.CeasesToBe (p a) t
+@Becoming.Covers.ceasing_stops_unrefuted : ∀ {α : Type} {p : α → Nat → Prop} {L : List α} {N : Nat},
+  Becoming.Covers p L N →
+    (∀ (n : Nat), Becoming.NoneComes p N n) → ¬∀ (M : Nat), ¬¬∃ t a, M ≤ t ∧ Becoming.CeasesToBe (p a) t
+@Becoming.Covers.ceasing_not_recurring : ∀ {α : Type} {p : α → Nat → Prop} {L : List α} {N : Nat},
+  Becoming.Covers p L N →
+    (∀ (n : Nat), Becoming.NoneComes p N n) → ¬∀ (M : Nat), ∃ t a, M ≤ t ∧ Becoming.CeasesToBe (p a) t
+@Becoming.Covers.not_not_coming_from : ∀ {α : Type} {p : α → Nat → Prop} {L : List α} {N : Nat},
+  Becoming.Covers p L N →
+    (∀ (M : Nat), ¬¬∃ t a, M ≤ t ∧ Becoming.CeasesToBe (p a) t) → ¬¬∃ s a, N ≤ s ∧ Becoming.ComesToBe (p a) s

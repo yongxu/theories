@@ -1,0 +1,16 @@
+import Becoming.Unrolling
+#check @Becoming.Learning.extendBy_of
+#check @Becoming.Learning.unroll_prefix
+#check @Becoming.Learning.ahead_accords
+#check @Becoming.Learnable.ahead_fixes
+#check @Becoming.Learnable.reading_predicts
+#check @Becoming.Learnable.given_nothing_not_every
+#check @Becoming.Learnable.eq_of_returns
+#check @Becoming.Learnable.fromWorld_respects
+#check @Becoming.Learnable.reads_of_agree
+#check @Becoming.Learnable.reading_predicts_from
+#check @Becoming.Learnable.learnable_iff_reading
+#check @Becoming.LearnableRuns.ahead_fixes
+#check @Becoming.LearnableRuns.given_nothing_not_every
+#check @Becoming.LearnableRuns.future_eq
+#check @Becoming.LearnableRuns.learnable_iff_reading

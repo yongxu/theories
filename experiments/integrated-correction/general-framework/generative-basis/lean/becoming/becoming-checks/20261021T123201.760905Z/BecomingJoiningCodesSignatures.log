@@ -1,0 +1,61 @@
+@Becoming.Joining.codes_apart_of_possible : ∀ {F : Type u_1} {C : Type u_2} {J : Becoming.Joining F}
+  {p : Becoming.Presentations.Presentation F (Becoming.Joining.Context F) C},
+  Becoming.Presentations.Exact J.possibleAnswers p →
+    ∀ {x y : F} {c : Becoming.Joining.Context F},
+      Becoming.Joining.Context.Possible J c x → ¬Becoming.Joining.Context.Possible J c y → p.encode x ≠ p.encode y
+@Becoming.Joining.image_domain_iff : ∀ {F : Type u_1} {C : Type u_2} {J : Becoming.Joining F}
+  {p : Becoming.Presentations.Presentation F (Becoming.Joining.Context F) C},
+  Becoming.Presentations.Exact J.possibleAnswers p →
+    ∀ (x y : F), (∃ c, J.image p.encode (p.encode x) (p.encode y) c) ↔ J.Composable x y
+@Becoming.Joining.image_realized_iff : ∀ {F : Type u_1} {C : Type u_2} {J : Becoming.Joining F},
+  J.Functional →
+    ∀ {p : Becoming.Presentations.Presentation F (Becoming.Joining.Context F) C},
+      Becoming.Presentations.Exact J.possibleAnswers p →
+        Becoming.Presentations.Reduced J.possibleAnswers p →
+          ∀ {x y z : F}, J x y z → ∀ (c : C), J.image p.encode (p.encode x) (p.encode y) c ↔ p.encode z = c
+@Becoming.Joining.image_functional : ∀ {F : Type u_1} {C : Type u_2} {J : Becoming.Joining F},
+  J.Functional →
+    ∀ {p : Becoming.Presentations.Presentation F (Becoming.Joining.Context F) C},
+      Becoming.Presentations.Exact J.possibleAnswers p →
+        Becoming.Presentations.Reduced J.possibleAnswers p → (J.image p.encode).Functional
+@Becoming.Joining.image_transport : ∀ {F : Type u_1} {C : Type u_2} {D : Type u_3} {J : Becoming.Joining F}
+  {p : Becoming.Presentations.Presentation F (Becoming.Joining.Context F) C}
+  {r : Becoming.Presentations.Presentation F (Becoming.Joining.Context F) D},
+  Becoming.Presentations.Exact J.possibleAnswers p →
+    Becoming.Presentations.Reduced J.possibleAnswers r →
+      ∀ {a b c : C} {a' b' c' : D},
+        Becoming.Presentations.Matches p r a a' →
+          Becoming.Presentations.Matches p r b b' →
+            Becoming.Presentations.Matches p r c c' → J.image p.encode a b c → J.image r.encode a' b' c'
+@Becoming.Joining.image_iff_of_matches : ∀ {F : Type u_1} {C : Type u_2} {D : Type u_3} {J : Becoming.Joining F}
+  {p : Becoming.Presentations.Presentation F (Becoming.Joining.Context F) C}
+  {r : Becoming.Presentations.Presentation F (Becoming.Joining.Context F) D},
+  Becoming.Presentations.Exact J.possibleAnswers p →
+    Becoming.Presentations.Reduced J.possibleAnswers p →
+      Becoming.Presentations.Exact J.possibleAnswers r →
+        Becoming.Presentations.Reduced J.possibleAnswers r →
+          ∀ {a b c : C} {a' b' c' : D},
+            Becoming.Presentations.Matches p r a a' →
+              Becoming.Presentations.Matches p r b b' →
+                Becoming.Presentations.Matches p r c c' → (J.image p.encode a b c ↔ J.image r.encode a' b' c')
+@Becoming.Joining.Context.holds_ask : ∀ {F : Type u_1} (J : Becoming.Joining F) (c : Becoming.Joining.Context F) (x : F)
+  (φ : Becoming.BranchingTest (Becoming.Joining.Move F) Empty),
+  Becoming.BranchingTest.Holds J.frame x (c.ask φ) ↔
+    ∃ y, Becoming.Joining.Context.Realizes J c x y ∧ Becoming.BranchingTest.Holds J.frame y φ
+@Becoming.Joining.ContextSame.of_sameBranchingTests : ∀ {F : Type u_1} {J : Becoming.Joining F} {x y : F},
+  Becoming.SameBranchingTests J.frame J.frame x y → J.ContextSame x y
+@Becoming.Joining.FiniteOutcomes.joined_sameBranchingTests_of_em : ∀ {F : Type u_1},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F},
+      J.FiniteOutcomes →
+        ∀ {a a' b b' z : F},
+          Becoming.SameBranchingTests J.frame J.frame a a' →
+            Becoming.SameBranchingTests J.frame J.frame b b' →
+              J a b z → ∃ z', J a' b' z' ∧ Becoming.SameBranchingTests J.frame J.frame z z'
+@Becoming.Joining.FiniteOutcomes.lifts_of_exact : ∀ {F : Type u_1} {C : Type u_2},
+  (∀ (p : Prop), Becoming.Decided p) →
+    ∀ {J : Becoming.Joining F},
+      J.FiniteOutcomes →
+        ∀ {p : Becoming.Presentations.Presentation F (Becoming.BranchingTest (Becoming.Joining.Move F) Empty) C},
+          Becoming.Presentations.Exact (Becoming.BranchingTest.Holds J.frame) p →
+            Becoming.Presentations.Reduced (Becoming.BranchingTest.Holds J.frame) p → J.Lifts p.encode

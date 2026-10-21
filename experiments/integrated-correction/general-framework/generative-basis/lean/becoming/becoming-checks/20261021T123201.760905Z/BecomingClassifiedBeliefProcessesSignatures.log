@@ -1,0 +1,25 @@
+@Becoming.ClassifiedBeliefProcesses.after_empty_or_inhabited : ∀ {S : Type u_1} {A : Type u_2} {k : Nat}
+  {P : Generative.Process S A} {sense : S → A → S → Fin k} {B : S → Prop} {a : A} {o : Fin k}
+  (decision :
+    Decidable (Generative.InquirySufficiency.InhabitedBelief (Generative.InquirySufficiency.After P sense B a o))),
+  Generative.InquirySufficiency.EmptyBelief (Generative.InquirySufficiency.After P sense B a o) ∨
+    Generative.InquirySufficiency.InhabitedBelief (Generative.InquirySufficiency.After P sense B a o)
+@Becoming.ClassifiedBeliefProcesses.classified_of_decidable : ∀ {S : Type u_1} {A : Type u_2} {k : Nat}
+  {P : Generative.Process S A} {sense : S → A → S → Fin k}
+  (decision :
+    (B : S → Prop) →
+      (a : A) →
+        (o : Fin k) →
+          Decidable (Generative.InquirySufficiency.InhabitedBelief (Generative.InquirySufficiency.After P sense B a o)))
+  (n : Nat) (B : S → Prop), Generative.InquirySufficiency.ClassifiedThrough P sense n B
+@Becoming.ClassifiedBeliefProcesses.sufficiency_iff_implication_of_decidable : ∀ {S : Type u_1} {A : Type u_2} {k : Nat}
+  {P : Generative.Process S A} {sense : S → A → S → Fin k} {R : Type u_3} {safe : S → A → S → Prop} {goal : S → Prop}
+  {response : R → List A}
+  (decision :
+    (B : S → Prop) →
+      (a : A) →
+        (o : Fin k) →
+          Decidable (Generative.InquirySufficiency.InhabitedBelief (Generative.InquirySufficiency.After P sense B a o)))
+  (n : Nat) (B : S → Prop),
+  Generative.InquirySufficiency.Sufficient P safe goal sense response n B ↔
+    Generative.InquirySufficiency.ImplicationSufficient P safe goal sense response n B

@@ -1,0 +1,254 @@
+@Becoming.Web.transmits_at_iff : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {x g : F} {c : C} {δ : Nat},
+  W.requires (t + 1) x c → W.requires t g c ∧ W.need (t + 1) x c ≤ W.need t g c + δ ↔
+    W.InheritsAt t x g c ∧ W.NeedsWithinAt t x g c δ
+@Becoming.Web.InheritsAt.split : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {x g : F} {c : C},
+  W.InheritsAt t x g c →
+    (W.Forms t x c → W.requires t g c) ∧ (W.requires t x c → W.requires (t + 1) x c → W.requires t g c)
+@Becoming.Web.inheritsAt_iff_forming : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {x g : F} {c : C},
+  ¬W.requires t x c → (W.InheritsAt t x g c ↔ W.Forms t x c → W.requires t g c)
+@Becoming.Web.inheritsAt_of_split : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {x g : F} {c : C}
+  [Decidable (W.requires t x c)],
+  (W.Forms t x c → W.requires t g c) →
+    (W.requires t x c → W.requires (t + 1) x c → W.requires t g c) → W.InheritsAt t x g c
+@Becoming.Web.inheritsAt_not_not : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {x g : F} {c : C},
+  (W.Forms t x c → W.requires t g c) →
+    (W.requires t x c → W.requires (t + 1) x c → W.requires t g c) → W.requires (t + 1) x c → ¬¬W.requires t g c
+@Becoming.Web.needsWithinAt_of_supported : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {x g : F} {c : C} {B : Nat},
+  W.Supported (t + 1) x → W.level (t + 1) c ≤ B → W.NeedsWithinAt t x g c B
+@Becoming.Web.drop_supported : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {g : F} {c : C} {s : Nat} {y : F},
+  W.Supported s y → (W.drop t g c).Supported s y
+@Becoming.Web.drop_dependent : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {g : F} {c : C},
+  W.Dependent → (W.drop t g c).Dependent
+@Becoming.Web.drop_keeps_next : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {g : F} {c : C} {x : F} {d : C},
+  W.requires (t + 1) x d → (W.drop t g c).requires (t + 1) x d
+@Becoming.Web.drop_not_inherits : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {g : F} {c : C} {x : F},
+  W.requires (t + 1) x c → ¬(W.drop t g c).InheritsAt t x g c
+Becoming.split_of_em : (∀ (p : Prop), p ∨ ¬p) →
+  ∀ {F C : Type} (W : Becoming.Web F C) (t : Nat) (x g : F) (c : C),
+    (W.Forms t x c → W.requires t g c) →
+      (W.requires t x c → W.requires (t + 1) x c → W.requires t g c) → W.InheritsAt t x g c
+Becoming.Split.descends : ∀ (p q : Prop), Becoming.Split.flow.DescendsAt (Becoming.Split.web p q) 0 true false
+Becoming.split_iff_em : (∀ (L : Becoming.Flow Bool Bool) (W : Becoming.Web Bool Bool) (t : Nat) (x g c : Bool),
+    L.DescendsAt W t x g →
+      (W.Forms t x c → W.requires t g c) →
+        (W.requires t x c → W.requires (t + 1) x c → W.requires t g c) → W.InheritsAt t x g c) ↔
+  ∀ (p : Prop), p ∨ ¬p
+@Becoming.Flow.transmitsWithin_iff : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {c : X} {δ : Nat},
+  L.TransmitsWithin W c δ ↔ L.Inherits W c ∧ L.NeedsWithin W c δ
+@Becoming.Flow.transmitsWithin_iff_forming : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {c : X}
+  {δ : Nat},
+  (∀ (t : Nat) (x g : X), L.DescendsAt W t x g → ¬W.requires t x c) →
+    (L.TransmitsWithin W c δ ↔
+      (∀ (t : Nat) (x g : X), L.DescendsAt W t x g → W.Forms t x c → W.requires t g c) ∧ L.NeedsWithin W c δ)
+@Becoming.Flow.transmitsWithin_iff_split : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {c : X} {δ : Nat}
+  [(t : Nat) → (x : X) → Decidable (W.requires t x c)],
+  L.TransmitsWithin W c δ ↔
+    (∀ (t : Nat) (x g : X), L.DescendsAt W t x g → W.Forms t x c → W.requires t g c) ∧
+      (∀ (t : Nat) (x g : X), L.DescendsAt W t x g → W.requires t x c → W.requires (t + 1) x c → W.requires t g c) ∧
+        L.NeedsWithin W c δ
+@Becoming.Flow.descends_of_comes : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat} {x : X},
+  W.level (t + 1) x + L.taken t x = W.level t x + L.given t x → W.ComesToStand t x → ∃ g, L.DescendsAt W t x g
+@Becoming.Flow.inherited_from_giver : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat} {x c : X},
+  W.level (t + 1) x + L.taken t x = W.level t x + L.given t x →
+    (∀ (g : X), L.DescendsAt W t x g → W.InheritsAt t x g c) →
+      W.ComesToStand t x → W.requires (t + 1) x c → ∃ g, L.DescendsAt W t x g ∧ W.requires t g c
+@Becoming.Flow.forms_from_giver : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat} {x c : X},
+  W.level (t + 1) x + L.taken t x = W.level t x + L.given t x →
+    (∀ (g : X), L.DescendsAt W t x g → W.InheritsAt t x g c) →
+      W.ComesToStand t x → W.Forms t x c → ∃ g, L.DescendsAt W t x g ∧ W.requires t g c
+@Becoming.Flow.no_new_dependence : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat} {x c : X},
+  W.level (t + 1) x + L.taken t x = W.level t x + L.given t x →
+    (∀ (g : X), L.DescendsAt W t x g → W.InheritsAt t x g c) →
+      (∀ (g : X), g ∈ L.present t → ¬W.requires t g c) → W.ComesToStand t x → ¬W.requires (t + 1) x c
+@Becoming.Flow.Inherits.from_giver : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    ∀ {c : X},
+      L.Inherits W c →
+        ∀ {t : Nat} {x : X}, W.ComesToStand t x → W.requires (t + 1) x c → ∃ g, L.DescendsAt W t x g ∧ W.requires t g c
+@Becoming.Flow.TransmitsWithin.fromSome : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W → ∀ {c : X} {δ : Nat}, L.TransmitsWithin W c δ → L.TransmitsFromSome W c δ
+@Becoming.Flow.inherited_supported_at : ∀ {X : Type} {W : Becoming.Web X X} {c : X} {δ t : Nat} {x g : X},
+  W.InheritsAt t x g c →
+    W.NeedsWithinAt t x g c δ → W.Supported t g → W.requires (t + 1) x c → W.need (t + 1) x c ≤ W.level t c + δ
+@Becoming.Flow.inherited_within_at : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {c : X} {δ S n : Nat}
+  {x g : X},
+  (∀ (s : Nat), S ≤ s → s < S + n → W.level (s + 1) c + L.taken s c = W.level s c + L.given s c) →
+    W.InheritsAt (S + n) x g c →
+      W.NeedsWithinAt (S + n) x g c δ →
+        W.Supported (S + n) g →
+          W.requires (S + n + 1) x c →
+            (W.need (S + n + 1) x c + Becoming.total (Becoming.steps S n) fun s => L.taken s c) ≤
+              (W.level S c + Becoming.total (Becoming.steps S n) fun s => L.given s c) + δ
+@Becoming.Flow.inherited_supported : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {c : X} {δ : Nat},
+        L.Inherits W c →
+          L.NeedsWithin W c δ →
+            ∀ {t : Nat} {x g : X}, L.DescendsAt W t x g → W.requires (t + 1) x c → W.need (t + 1) x c ≤ W.level t c + δ
+@Becoming.Flow.inherited_within : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : X} {δ : Nat},
+          L.Inherits W c →
+            L.NeedsWithin W c δ →
+              ∀ {S n : Nat} {x g : X},
+                L.DescendsAt W (S + n) x g →
+                  W.requires (S + n + 1) x c →
+                    W.need (S + n + 1) x c + Becoming.total (Becoming.steps S n) (L.uptake [c]) ≤
+                      W.level S c + Becoming.total (Becoming.steps S n) (L.replenishment [c]) + δ
+@Becoming.Flow.fromSome_supported : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {c : X} {δ : Nat},
+        L.TransmitsFromSome W c δ →
+          ∀ {t : Nat} {x : X}, W.ComesToStand t x → W.requires (t + 1) x c → W.need (t + 1) x c ≤ W.level t c + δ
+@Becoming.Flow.fromSome_within : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : X} {δ : Nat},
+          L.TransmitsFromSome W c δ →
+            ∀ {S n : Nat} {x : X},
+              W.ComesToStand (S + n) x →
+                W.requires (S + n + 1) x c →
+                  W.need (S + n + 1) x c + Becoming.total (Becoming.steps S n) (L.uptake [c]) ≤
+                    W.level S c + Becoming.total (Becoming.steps S n) (L.replenishment [c]) + δ
+@Becoming.Flow.descendant_supported_at : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat}
+  {x c : X},
+  W.Supported (t + 1) x →
+    W.level (t + 1) c + L.taken t c = W.level t c + L.given t c →
+      W.requires (t + 1) x c → W.need (t + 1) x c + L.taken t c ≤ W.level t c + L.given t c
+@Becoming.Flow.embodied_descendant : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    W.Dependent →
+      ∀ {t : Nat} {x g c : X},
+        W.Embodied x →
+          L.DescendsAt W t x g → W.requires (t + 1) x c → W.need (t + 1) x c + L.taken t c ≤ W.level t c + L.given t c
+@Becoming.Flow.needsWithin_of_embodied : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  W.Dependent →
+    (∀ (x : X), W.Embodied x) → ∀ {c : X} {B : Nat}, (∀ (t : Nat), W.level (t + 1) c ≤ B) → L.NeedsWithin W c B
+@Becoming.Flow.drop_untransmitted : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat} {x g c : X},
+  L.DescendsAt W t x g → W.requires (t + 1) x c → ∀ (δ : Nat), ¬L.TransmitsWithin (W.drop t g c) c δ
+@Becoming.Flow.inherits_of_drawn : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {c : X},
+  L.DependsOnDrawn W c → W.DrawingDepends c → L.Inherits W c
+@Becoming.Flow.dependsOnDrawn_of_fed : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Taking W → ∀ {c : X}, L.DependsOnFed W c → L.DependsOnDrawn W c
+@Becoming.Flow.inherits_of_fed : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Taking W → ∀ {c : X}, L.DependsOnFed W c → W.DrawingDepends c → L.Inherits W c
+@Becoming.Flow.DependsOnDrawn.drop : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {c : X},
+  L.DependsOnDrawn W c → ∀ (t : Nat) (g d : X), L.DependsOnDrawn (W.drop t g d) c
+@Becoming.Flow.DependsOnFed.drop : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {c : X},
+  L.DependsOnFed W c → ∀ (t : Nat) (g d : X), L.DependsOnFed (W.drop t g d) c
+@Becoming.World.drop_holds : ∀ {w : Becoming.World} {t : Nat} {g c : w.Relatum} (p : Becoming.World.Premise),
+  p ≠ Becoming.World.Premise.transmitting → p.Holds w → p.Holds (w.drop t g c)
+@Becoming.World.drop_finite : ∀ {w : Becoming.World} {t : Nat} {g c : w.Relatum}, w.Finite → (w.drop t g c).Finite
+@Becoming.World.drop_untransmitting : ∀ {w : Becoming.World} {t : Nat} {x g c : w.Relatum},
+  w.flow.DescendsAt w.web t x g → w.web.requires (t + 1) x c → ¬(w.drop t g c).Transmitting
+@Becoming.World.drop_but : ∀ {w : Becoming.World},
+  (∀ (p : Becoming.World.Premise), p ≠ Becoming.World.Premise.transmitting → p.Holds w) →
+    Becoming.World.Premise.transmitting.Binds w → ∃ t g c, (w.drop t g c).MeetsAllBut Becoming.World.Transmitting
+@Becoming.World.vacuous_of_drop_invariant : ∀ {w : Becoming.World} {R : Becoming.World → Prop},
+  (∀ (w : Becoming.World) (t : Nat) (g c : w.Relatum), R w → R (w.drop t g c)) →
+    (∀ (w : Becoming.World), R w → w.Transmitting) → R w → ¬Becoming.World.Premise.transmitting.Binds w
+@Becoming.World.stock_le_start : ∀ {w : Becoming.World} {all : List w.Relatum},
+  Becoming.Distinct all →
+    (∀ (x : w.Relatum), x ∈ all) → w.Balanced → w.Dissipative → ∀ (t : Nat), w.web.stock all t ≤ w.web.stock all 0
+@Becoming.World.Finite.level_le : ∀ {w : Becoming.World},
+  w.Finite → w.Balanced → w.Dissipative → ∃ B, ∀ (t : Nat) (c : w.Relatum), w.web.level t c ≤ B
+@Becoming.World.transmitting_iff_inherits_bounded : ∀ {w : Becoming.World},
+  w.Dependent →
+    w.Embodied →
+      ∀ {B : Nat},
+        (∀ (t : Nat) (c : w.Relatum), w.web.level t c ≤ B) →
+          (w.Transmitting ↔ ∀ (c : w.Relatum), w.flow.Inherits w.web c)
+@Becoming.World.transmitting_iff_inherits : ∀ {w : Becoming.World},
+  w.Finite →
+    w.Balanced →
+      w.Dissipative → w.Embodied → w.Dependent → (w.Transmitting ↔ ∀ (c : w.Relatum), w.flow.Inherits w.web c)
+@Becoming.World.transmitting_of_drawn : ∀ {w : Becoming.World},
+  w.Finite →
+    w.Balanced →
+      w.Dissipative →
+        w.Embodied →
+          w.Dependent →
+            (∀ (c : w.Relatum), w.flow.DependsOnDrawn w.web c) →
+              (∀ (c : w.Relatum), w.web.DrawingDepends c) → w.Transmitting
+@Becoming.World.transmitting_of_fed : ∀ {w : Becoming.World},
+  w.Finite →
+    w.Balanced →
+      w.Dissipative →
+        w.Embodied →
+          w.Dependent →
+            w.Taking →
+              (∀ (c : w.Relatum), w.flow.DependsOnFed w.web c) →
+                (∀ (c : w.Relatum), w.web.DrawingDepends c) → w.Transmitting
+Becoming.World.finiteHatch_descends : Becoming.World.finiteHatch.flow.DescendsAt Becoming.World.finiteHatch.web 0
+    Becoming.World.FiniteHatch.Relatum.child Becoming.World.FiniteHatch.Relatum.parent ∧
+  Becoming.World.finiteHatch.web.requires 1 Becoming.World.FiniteHatch.Relatum.child
+    Becoming.World.FiniteHatch.Relatum.food
+Becoming.World.finiteHatch_drawn : ∀ (c : Becoming.World.FiniteHatch.Relatum),
+  Becoming.World.finiteHatch.flow.DependsOnDrawn Becoming.World.finiteHatch.web c
+Becoming.World.finiteHatch_pair : Becoming.World.finiteHatch.Premised ∧
+  Becoming.World.droppedHatch.Finite ∧ Becoming.World.droppedHatch.MeetsAllBut Becoming.World.Transmitting
+Becoming.World.drawn_without_link : Becoming.World.droppedHatch.Finite ∧
+  Becoming.World.droppedHatch.MeetsAllBut Becoming.World.Transmitting ∧
+    (∀ (c : Becoming.World.droppedHatch.Relatum),
+        Becoming.World.droppedHatch.flow.DependsOnDrawn Becoming.World.droppedHatch.web c) ∧
+      ¬Becoming.World.droppedHatch.web.DrawingDepends Becoming.World.FiniteHatch.Relatum.food ∧
+        ¬Becoming.World.droppedHatch.flow.Inherits Becoming.World.droppedHatch.web
+            Becoming.World.FiniteHatch.Relatum.food
+Becoming.World.link_without_drawn : Becoming.World.novel.Finite ∧
+  Becoming.World.novel.MeetsAllBut Becoming.World.Transmitting ∧
+    Becoming.World.novel.web.DrawingDepends Becoming.World.Novel.Relatum.parent ∧
+      ¬Becoming.World.novel.flow.DependsOnDrawn Becoming.World.novel.web Becoming.World.Novel.Relatum.parent ∧
+        ¬Becoming.World.novel.flow.Inherits Becoming.World.novel.web Becoming.World.Novel.Relatum.parent
+Becoming.World.drawn_and_link_needed : (¬∀ (w : Becoming.World),
+      w.Finite →
+        (∀ (Q : Becoming.World → Prop), Q ∈ Becoming.World.premises → Q ≠ Becoming.World.Transmitting → Q w) →
+          ∀ (c : w.Relatum), w.flow.DependsOnDrawn w.web c → w.flow.Inherits w.web c) ∧
+  ¬∀ (w : Becoming.World),
+      w.Finite →
+        (∀ (Q : Becoming.World → Prop), Q ∈ Becoming.World.premises → Q ≠ Becoming.World.Transmitting → Q w) →
+          ∀ (c : w.Relatum), w.web.DrawingDepends c → w.flow.Inherits w.web c
+Becoming.World.drawn_not_enough : ¬∀ (w : Becoming.World),
+    w.Finite →
+      (∀ (p : Becoming.World.Premise), p ≠ Becoming.World.Premise.transmitting → p.Holds w) →
+        (∀ (c : w.Relatum), w.flow.DependsOnDrawn w.web c) → w.Transmitting
+Becoming.World.bearingHatch_derived : Becoming.World.bearingHatch.Finite ∧
+  Becoming.World.bearingHatch.Balanced ∧
+    Becoming.World.bearingHatch.Dissipative ∧
+      Becoming.World.bearingHatch.Embodied ∧
+        Becoming.World.bearingHatch.Dependent ∧
+          (∀ (c : Becoming.World.bearingHatch.Relatum),
+              Becoming.World.bearingHatch.flow.DependsOnDrawn Becoming.World.bearingHatch.web c) ∧
+            (∀ (c : Becoming.World.bearingHatch.Relatum), Becoming.World.bearingHatch.web.DrawingDepends c) ∧
+              Becoming.World.Premise.transmitting.Binds Becoming.World.bearingHatch ∧
+                Becoming.World.bearingHatch.Transmitting
+Becoming.Drawdown.carried : ¬Becoming.Drawdown.web.Supported 1 Becoming.Drawdown.Relatum.same ∧
+  Becoming.Drawdown.web.level 1 Becoming.Drawdown.Relatum.pool <
+      Becoming.Drawdown.web.need 1 Becoming.Drawdown.Relatum.same Becoming.Drawdown.Relatum.pool ∧
+    Becoming.Drawdown.web.need 1 Becoming.Drawdown.Relatum.same Becoming.Drawdown.Relatum.pool ≤
+      Becoming.Drawdown.web.level 0 Becoming.Drawdown.Relatum.pool + 0
+Becoming.TwoGivers.balances : Becoming.TwoGivers.flow.Balances Becoming.TwoGivers.web
+Becoming.TwoGivers.acting : Becoming.TwoGivers.flow.Acting Becoming.TwoGivers.web
+Becoming.TwoGivers.dependent : Becoming.TwoGivers.web.Dependent
+@Becoming.TwoGivers.comes_child : ∀ {t : Nat} {x : Becoming.TwoGivers.Relatum},
+  Becoming.TwoGivers.web.ComesToStand t x → t = 0 ∧ x = Becoming.TwoGivers.Relatum.child
+Becoming.TwoGivers.descends_first : Becoming.TwoGivers.flow.DescendsAt Becoming.TwoGivers.web 0
+  Becoming.TwoGivers.Relatum.child Becoming.TwoGivers.Relatum.first
+Becoming.TwoGivers.descends_second : Becoming.TwoGivers.flow.DescendsAt Becoming.TwoGivers.web 0
+  Becoming.TwoGivers.Relatum.child Becoming.TwoGivers.Relatum.second
+Becoming.TwoGivers.twofold : Becoming.TwoGivers.flow.Balances Becoming.TwoGivers.web ∧
+  Becoming.TwoGivers.flow.Acting Becoming.TwoGivers.web ∧
+    Becoming.TwoGivers.web.Dependent ∧
+      Becoming.TwoGivers.flow.TransmitsFromSome Becoming.TwoGivers.web Becoming.TwoGivers.Relatum.pool 0 ∧
+        (∀ (δ : Nat),
+            ¬Becoming.TwoGivers.flow.TransmitsWithin Becoming.TwoGivers.web Becoming.TwoGivers.Relatum.pool δ) ∧
+          Becoming.TwoGivers.flow.DescendsAt Becoming.TwoGivers.web 0 Becoming.TwoGivers.Relatum.child
+              Becoming.TwoGivers.Relatum.second ∧
+            Becoming.TwoGivers.web.requires 1 Becoming.TwoGivers.Relatum.child Becoming.TwoGivers.Relatum.pool ∧
+              ¬Becoming.TwoGivers.web.requires 0 Becoming.TwoGivers.Relatum.second Becoming.TwoGivers.Relatum.pool ∧
+                Becoming.TwoGivers.web.need 1 Becoming.TwoGivers.Relatum.child Becoming.TwoGivers.Relatum.pool ≤
+                  Becoming.TwoGivers.web.level 0 Becoming.TwoGivers.Relatum.pool + 0

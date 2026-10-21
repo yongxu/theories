@@ -1,0 +1,200 @@
+@Becoming.livingSignificance_of_unrestricted : ∀ {S A Q F Pos : Type} (M : Becoming.Frame S A Q) (living : Q → Prop)
+  {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (formation : Q → F) (step : Q → Nat), Becoming.LivingSignificance M living (M.relevance living sig formation step)
+@Becoming.relevance_least : ∀ {S A Q F Pos : Type} (M : Becoming.Frame S A Q) (living : Q → Prop)
+  {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (formation : Q → F) (step : Q → Nat),
+      (∀ (s : S) (c : Q), M.relevance living sig formation step s c ↔ living c ∧ M.realized s c) ∧
+        ∀ (relevance : S → Q → Prop),
+          Becoming.LivingSignificance M living relevance →
+            ∀ (s : S) (c : Q), M.relevance living sig formation step s c → relevance s c
+@Becoming.livingSignificance_relevance_iff : ∀ {S A Q F Pos : Type} (M : Becoming.Frame S A Q) (living : Q → Prop)
+  (sig : Pos → Nat → F → Prop) (formation : Q → F) (step : Q → Nat),
+  Becoming.LivingSignificance M living (M.relevance living sig formation step) ↔
+    ∀ (s : S) (c : Q), living c → M.realized s c → ∀ (p : Pos), sig p (step c) (formation c)
+@Becoming.unrestricted_iff_livingSignificance : ∀ {S A F Pos : Type} (M : Becoming.Frame S A (F × Nat)),
+  (∀ (e : F × Nat), ∃ s, M.realized s e) →
+    ∀ {sig : Pos → Nat → F → Prop},
+      Becoming.Unrestricted sig ↔
+        Becoming.LivingSignificance M (fun x => True) fun x e => ∀ (p : Pos), sig p e.snd e.fst
+@Becoming.Web.paths_somewhere : ∀ {F C : Type} (W : Becoming.Web F C) (e : F × Nat), ∃ l, W.paths.realized l e
+@Becoming.Web.unrestricted_iff_paths_livingSignificance : ∀ {F C Pos : Type} (W : Becoming.Web F C)
+  {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig ↔
+    Becoming.LivingSignificance W.paths (fun x => True) fun x e => ∀ (p : Pos), sig p e.snd e.fst
+@Becoming.Web.paths_one_object : ∀ {F C Pos : Type} (W : Becoming.Web F C) {sig : Pos → Nat → F → Prop},
+  (Becoming.Unrestricted sig ↔
+      Becoming.LivingSignificance W.paths (fun x => True) fun x e => ∀ (p : Pos), sig p e.snd e.fst) ∧
+    (∀ (l l' : Nat → C → Nat), Becoming.Extension W.paths (fun x => True) l' l ↔ W.Widens l l') ∧
+      (Becoming.Unrestricted sig →
+        ∀ (p : Pos) (l l' : Nat → C → Nat), W.Widens l l' ↔ W.Retains sig p l l' ∧ W.Adds sig p l l')
+@Becoming.securesNewContent_total : ∀ {Q H R : Type} {admitted : R → H → Prop} {before sig : H → Q → Prop},
+  (∀ (h : H) (c : Q), sig h c) →
+    ∀ (r : R), Becoming.SecuresNewContent admitted before sig r ↔ ∀ (h : H), admitted r h → ∃ c, ¬before h c
+@Becoming.articulates_total : ∀ {Q Pos H R : Type} {V : Becoming.Valuation Pos Q} {access : Pos → R → Prop}
+  {admitted : R → H → Prop} {before : H → Q → Prop} {Reason : Pos → R → Prop},
+  (∀ (p : Pos) (c : Q), V.sig p c) →
+    (Becoming.Neutral (Becoming.articulates V access admitted before Reason) ↔
+        ∀ (p : Pos) (r : R), access p r → (∀ (h : H), admitted r h → ∃ c, ¬before h c) → Reason p r) ∧
+      (Becoming.Neutral (Becoming.articulatesLiving V access admitted before Reason) ↔
+        ∀ (p : Pos) (r : R),
+          access p r → Becoming.SecuresNewContent admitted before (fun x c => V.living c) r → Reason p r)
+@Becoming.positioned_articulation_of_articulatesLiving : ∀ {Q Pos H R : Type} {V : Becoming.Valuation Pos Q}
+  {access : Pos → R → Prop} {admitted : R → H → Prop} {before : H → Q → Prop} {Reason : Pos → R → Prop},
+  Becoming.Neutral (Becoming.articulatesLiving V access admitted before Reason) →
+    Becoming.PositionedArticulation access admitted before (fun x c => V.living c ∧ ∀ (p : Pos), V.sig p c) Reason
+@Becoming.universal_reason_living : ∀ {S A Q Pos R : Type} {k : Nat} (M : Becoming.Frame S A Q)
+  (V : Becoming.Valuation Pos Q) (before : S → Q → Prop) {safe : S → A → S → Prop} {sense : S → A → S → Fin k}
+  {response : R → List A} {B : S → Prop} (access Reason : Pos → Generative.InquirySufficiency.Policy A R k → Prop),
+  V.Significant →
+    Becoming.Neutral (Becoming.articulatesLiving V access (Becoming.Scope M.P sense response B) before Reason) →
+      ∀ (policy : Generative.InquirySufficiency.Policy A R k),
+        Generative.InquirySufficiency.Sound M.P safe (Becoming.Novel M V.living before) sense response policy B →
+          ∀ (p : Pos), access p policy → Reason p policy
+@Becoming.universal_reason_of_unrestricted : ∀ {S A Q F Pos R : Type} {k : Nat} (M : Becoming.Frame S A Q)
+  (V : Becoming.Valuation Pos Q) (before : S → Q → Prop) {safe : S → A → S → Prop} {sense : S → A → S → Fin k}
+  {response : R → List A} {B : S → Prop} (access Reason : Pos → Generative.InquirySufficiency.Policy A R k → Prop)
+  {sig : Pos → Nat → F → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (formation : Q → F) (step : Q → Nat),
+      (∀ (p : Pos) (c : Q), sig p (step c) (formation c) → V.sig p c) →
+        Becoming.Neutral (Becoming.articulatesLiving V access (Becoming.Scope M.P sense response B) before Reason) →
+          ∀ (policy : Generative.InquirySufficiency.Policy A R k),
+            Generative.InquirySufficiency.Sound M.P safe (Becoming.Novel M V.living before) sense response policy B →
+              ∀ (p : Pos), access p policy → Reason p policy
+Becoming.BareSignificance.bare_forces_reason : (∀ (p : Unit) (c : Bool), Becoming.BareSignificance.valuation.sig p c) ∧
+  (∀ (Reason : Unit → Unit → Prop),
+      Becoming.Neutral
+          (Becoming.articulates Becoming.BareSignificance.valuation (fun x x_1 => True)
+            Becoming.BareSignificance.admitted Becoming.BareSignificance.before Reason) →
+        Reason () ()) ∧
+    Becoming.Neutral
+      (Becoming.articulatesLiving Becoming.BareSignificance.valuation (fun x x_1 => True)
+        Becoming.BareSignificance.admitted Becoming.BareSignificance.before fun x x_1 => False)
+@Becoming.Web.Includes.of_le : ∀ {F C : Type} {W : Becoming.Web F C} {l l' : Nat → C → Nat},
+  (∀ (t : Nat) (c : C), l' t c ≤ l t c) → W.Includes l l'
+@Becoming.Web.not_added_of_le : ∀ {F C : Type} {W : Becoming.Web F C} {Pos : Type} {sig : Pos → Nat → F → Prop}
+  {p : Pos} {l l' : Nat → C → Nat}, (∀ (t : Nat) (c : C), l' t c ≤ l t c) → ¬W.Adds sig p l' l
+@Becoming.Ranking.stepwise_iff : ∀ {W F C Pos : Type} (U : W → Becoming.Web F C) (w : W)
+  (own sig : Pos → F × Nat → Prop) (e : F × Nat), Becoming.Ranking.stepwise U w e ↔ ((U w).valuation own sig).living e
+@Becoming.Ranking.possible_of_active : ∀ {W F C : Type} {U : W → Becoming.Web F C} {w : W},
+  (U w).Dependent → ∀ {e : F × Nat}, (U w).active e.snd e.fst → Becoming.Ranking.possible U w e
+Becoming.Ranking.absent_admits_all : ∀ (L : RelationalRenewal.Law),
+  L.needF ≤ L.needG →
+    L.needG ≤ L.start →
+      ∀ (e : RelationalRenewal.Law.Part × Nat),
+        Becoming.Ranking.possible (Becoming.Ranking.course L) Becoming.Ranking.Course.absent e
+Becoming.Ranking.possible_extends : ∀ (L : RelationalRenewal.Law),
+  0 < L.needG →
+    L.needF ≤ L.needG →
+      L.needG ≤ L.start →
+        ∀ {T0 : Nat},
+          (∀ (t : Nat), T0 ≤ t → L.renew + L.contrib t < L.draw t) →
+            Becoming.Ranking.ExtendsUnder (Becoming.Ranking.possible (Becoming.Ranking.course L))
+              Becoming.Ranking.Course.occurs Becoming.Ranking.Course.absent
+Becoming.Ranking.possible_ranks : ∀ (L : RelationalRenewal.Law),
+  0 < L.needG →
+    L.needF ≤ L.needG →
+      L.needG ≤ L.start →
+        ∀ {T0 : Nat},
+          (∀ (t : Nat), T0 ≤ t → L.renew + L.contrib t < L.draw t) →
+            ∀ {Better : Becoming.Ranking.Course → Becoming.Ranking.Course → Prop},
+              Becoming.Ranking.ComparisonUnder (Becoming.Ranking.possible (Becoming.Ranking.course L)) Better →
+                Better Becoming.Ranking.Course.occurs Becoming.Ranking.Course.absent
+Becoming.Ranking.possible_course_iff : ∀ (L : RelationalRenewal.Law) (w : Becoming.Ranking.Course)
+  (e : RelationalRenewal.Law.Part × Nat),
+  Becoming.Ranking.possible (Becoming.Ranking.course L) w e ↔
+    (Becoming.Web.static L.unfolding).Admits ((Becoming.Ranking.course L w).level e.snd) e.snd e.fst
+Becoming.Ranking.possible_extends_iff : ∀ (L : RelationalRenewal.Law) {Pos : Type}
+  {sig : Pos → Nat → RelationalRenewal.Law.Part → Prop},
+  Becoming.Unrestricted sig →
+    ∀ (p : Pos) (w w' : Becoming.Ranking.Course),
+      Becoming.Ranking.ExtendsUnder (Becoming.Ranking.possible (Becoming.Ranking.course L)) w w' ↔
+        (Becoming.Web.static L.unfolding).Retains sig p (Becoming.Ranking.course L w').level
+            (Becoming.Ranking.course L w).level ∧
+          (Becoming.Web.static L.unfolding).Adds sig p (Becoming.Ranking.course L w').level
+            (Becoming.Ranking.course L w).level
+Becoming.Ranking.malignant_possible : Becoming.Ranking.ExtendsUnder
+    (Becoming.Ranking.possible (Becoming.Ranking.course RelationalRenewal.Law.malignant)) Becoming.Ranking.Course.occurs
+    Becoming.Ranking.Course.absent ∧
+  Becoming.Ranking.possible (Becoming.Ranking.course RelationalRenewal.Law.malignant) Becoming.Ranking.Course.occurs
+      (RelationalRenewal.Law.Part.focal, 0) ∧
+    Becoming.Ranking.stepwise (Becoming.Ranking.course RelationalRenewal.Law.malignant) Becoming.Ranking.Course.occurs
+        (RelationalRenewal.Law.Part.focal, 0) ∧
+      ¬Becoming.Ranking.wholeRun (Becoming.Ranking.course RelationalRenewal.Law.malignant)
+          Becoming.Ranking.Course.occurs (RelationalRenewal.Law.Part.focal, 0)
+Becoming.Ranking.possible_contest : Becoming.Ranking.ExtendsUnder (Becoming.Ranking.possible Becoming.Ranking.contest)
+  Becoming.Ranking.Contest.wins Becoming.Ranking.Contest.shares
+@Becoming.Ranking.possible_restraint : ∀ {stopping overdrawing : RelationalRenewal.Law},
+  (∀ (t : Nat), stopping.needG ≤ stopping.level t ∧ stopping.needF ≤ stopping.level t) →
+    0 < overdrawing.needG →
+      overdrawing.needF ≤ overdrawing.needG →
+        ∀ {T0 : Nat},
+          (∀ (t : Nat), T0 ≤ t → overdrawing.renew + overdrawing.contrib t < overdrawing.draw t) →
+            Becoming.Ranking.ExtendsUnder (Becoming.Ranking.possible (Becoming.Ranking.restraint stopping overdrawing))
+              Becoming.Ranking.Restraint.overdraws Becoming.Ranking.Restraint.stops
+Becoming.Ranking.ThirdParty.possible_extends : Becoming.Ranking.ExtendsUnder
+  (Becoming.Ranking.possible Becoming.Ranking.ThirdParty.courses) Becoming.Ranking.Restraint.overdraws
+  Becoming.Ranking.Restraint.stops
+Becoming.Ranking.possible_tie : ∀ (L : RelationalRenewal.Law),
+  (∀ (t : Nat), L.draw t ≤ L.renew + L.contrib t) →
+    L.needG ≤ L.start →
+      L.needF ≤ L.start →
+        (∀ (w : Becoming.Ranking.Course) (e : RelationalRenewal.Law.Part × Nat),
+            Becoming.Ranking.possible (Becoming.Ranking.course L) w e) ∧
+          ¬Becoming.Ranking.ExtendsUnder (Becoming.Ranking.possible (Becoming.Ranking.course L))
+                Becoming.Ranking.Course.occurs Becoming.Ranking.Course.absent ∧
+            ¬Becoming.Ranking.ExtendsUnder (Becoming.Ranking.possible (Becoming.Ranking.course L))
+                Becoming.Ranking.Course.absent Becoming.Ranking.Course.occurs
+Becoming.Ranking.readings_rank_presence : ∀ (L : RelationalRenewal.Law),
+  (∀ (t : Nat), L.draw t ≤ L.renew + L.contrib t) →
+    L.needG ≤ L.start →
+      L.needF ≤ L.start →
+        Becoming.Ranking.ExtendsUnder (Becoming.Ranking.wholeRun (Becoming.Ranking.course L))
+            Becoming.Ranking.Course.absent Becoming.Ranking.Course.occurs ∧
+          Becoming.Ranking.ExtendsUnder (Becoming.Ranking.stepwise (Becoming.Ranking.course L))
+            Becoming.Ranking.Course.absent Becoming.Ranking.Course.occurs
+Becoming.Ranking.sharing_presence : ¬Becoming.Ranking.ExtendsUnder
+      (Becoming.Ranking.possible (Becoming.Ranking.course RelationalRenewal.Law.sharing)) Becoming.Ranking.Course.absent
+      Becoming.Ranking.Course.occurs ∧
+  ¬Becoming.Ranking.ExtendsUnder (Becoming.Ranking.possible (Becoming.Ranking.course RelationalRenewal.Law.sharing))
+        Becoming.Ranking.Course.occurs Becoming.Ranking.Course.absent ∧
+    Becoming.Ranking.ExtendsUnder (Becoming.Ranking.wholeRun (Becoming.Ranking.course RelationalRenewal.Law.sharing))
+        Becoming.Ranking.Course.absent Becoming.Ranking.Course.occurs ∧
+      Becoming.Ranking.ExtendsUnder (Becoming.Ranking.stepwise (Becoming.Ranking.course RelationalRenewal.Law.sharing))
+        Becoming.Ranking.Course.absent Becoming.Ranking.Course.occurs
+@Becoming.Ranking.possibleFirst_order : ∀ {W F C : Type} (U : W → Becoming.Web F C) (reading : W → F × Nat → Prop),
+  Becoming.Ranking.ComparisonUnder (Becoming.Ranking.possible U) (Becoming.Ranking.possibleFirst U reading) ∧
+    (∀ (w : W), ¬Becoming.Ranking.possibleFirst U reading w w) ∧
+      ∀ (w w' w'' : W),
+        Becoming.Ranking.possibleFirst U reading w w' →
+          Becoming.Ranking.possibleFirst U reading w' w'' → Becoming.Ranking.possibleFirst U reading w w''
+Becoming.Ranking.possibleFirst_overdraw : ∀ (L : RelationalRenewal.Law)
+  (reading : Becoming.Ranking.Course → RelationalRenewal.Law.Part × Nat → Prop),
+  0 < L.needG →
+    L.needF ≤ L.needG →
+      L.needG ≤ L.start →
+        ∀ {T0 : Nat},
+          (∀ (t : Nat), T0 ≤ t → L.renew + L.contrib t < L.draw t) →
+            Becoming.Ranking.possibleFirst (Becoming.Ranking.course L) reading Becoming.Ranking.Course.occurs
+              Becoming.Ranking.Course.absent
+Becoming.Ranking.possibleFirst_presence : ∀ (L : RelationalRenewal.Law),
+  (∀ (t : Nat), L.draw t ≤ L.renew + L.contrib t) →
+    L.needG ≤ L.start →
+      L.needF ≤ L.start →
+        Becoming.Ranking.possibleFirst (Becoming.Ranking.course L)
+            (Becoming.Ranking.wholeRun (Becoming.Ranking.course L)) Becoming.Ranking.Course.absent
+            Becoming.Ranking.Course.occurs ∧
+          Becoming.Ranking.possibleFirst (Becoming.Ranking.course L)
+            (Becoming.Ranking.stepwise (Becoming.Ranking.course L)) Becoming.Ranking.Course.absent
+            Becoming.Ranking.Course.occurs
+Becoming.Ranking.Pause.pause_ranked_below : (∀ (w : Bool) (e : Unit × Nat),
+    Becoming.Ranking.possible Becoming.Ranking.Pause.courses w e) ∧
+  ¬Becoming.Ranking.ExtendsUnder (Becoming.Ranking.possible Becoming.Ranking.Pause.courses) true false ∧
+    ¬Becoming.Ranking.ExtendsUnder (Becoming.Ranking.possible Becoming.Ranking.Pause.courses) false true ∧
+      Becoming.Ranking.possibleFirst Becoming.Ranking.Pause.courses
+          (Becoming.Ranking.wholeRun Becoming.Ranking.Pause.courses) true false ∧
+        Becoming.Ranking.possibleFirst Becoming.Ranking.Pause.courses
+          (Becoming.Ranking.stepwise Becoming.Ranking.Pause.courses) true false

@@ -17,18 +17,15 @@ significance under it (`Flow.feeding_unrestricted_of_common`, `Flow.bounded_syst
 `Clearing.system_whole`, `Clearing.reach_counts_dweller`, `Trophic.mediated_uncoupled`,
 `Trophic.responsive_mixed`, `Trophic.mixed_part`) are stated in `Becoming.BoundedSignificance`.
 
-* **Closures.** A region is closed under a relation when whatever a member bears the relation
-  to is a member (`ClosedUnder`). A formation lies within another's closure when every closed
-  region holding the other holds it (`WithinClosure`). The closure is reflexive and transitive,
-  grows with the relation, and is symmetric under a symmetric relation (`WithinClosure.refl`,
-  `WithinClosure.trans`, `WithinClosure.mono`, `WithinClosure.symm`). It is what is reached from
-  the formation along the relation, the seed–edge closure of `Becoming.EdgeClosure` from one
-  seed (`withinClosure_iff_closure` there). A region is a formation's closure exactly when it holds
-  the formation, is closed under the relation and lies within the closure, which a finite
-  computation can certify (`closure_iff_certified`); a closed region holding one formation and
-  not another separates their closures (`not_within_of_closed`).
-* **Five levels.** The feeding closure of `Becoming.Interdependence` is the closure under being
-  fed at some step (`Flow.withinFeeding_iff`). A formation is affected by another when the other
+* **Closures.** Every level below is the one closure of `Becoming.Frame` under a relation
+  (`ClosedUnder`, `WithinClosure`, with its laws there): what is reached from the formation
+  along the relation, the seed–edge closure of `Becoming.EdgeClosure` from one seed
+  (`withinClosure_iff_closure` there), certified by a finite computation
+  (`closure_iff_certified`), and separated from another formation's by a closed region holding
+  one and not the other (`not_within_of_closed`). These moved to the frame unchanged, with their
+  names (board item EC1, 21 October 2026).
+* **Five levels.** The feeding closure of `Becoming.Interdependence` is, by definition, the
+  closure under being fed at some step (`Flow.WithinFeeding`, `Flow.FedFrom`). A formation is affected by another when the other
   exchanges with a condition it depends on (`Flow.AffectedBy`). The closure under being affected
   is the influence closure, what can affect the formation (`Flow.WithinInfluence`); the closure
   under affecting is the reach closure, what the formation's exchange can affect, link by link
@@ -156,77 +153,6 @@ namespace Becoming
 
 variable {F C : Type}
 
-/-! ## Closures under a relation -/
-
-/-- A region of formations is closed under a relation: whatever a member bears the relation to
-is a member. -/
-def ClosedUnder (rel : F → F → Prop) (region : F → Prop) : Prop :=
-  ∀ g h, region g → rel g h → region h
-
-/-- `g` lies within `f`'s closure under a relation: every region closed under it that holds `f`
-holds `g`. -/
-def WithinClosure (rel : F → F → Prop) (f g : F) : Prop :=
-  ∀ region, ClosedUnder rel region → region f → region g
-
-namespace WithinClosure
-
-variable {rel rel' : F → F → Prop}
-
-/-- A formation lies within its own closure. -/
-theorem refl (f : F) : WithinClosure rel f f :=
-  fun _ _ holds => holds
-
-/-- A closure is transitive. -/
-theorem trans {f g h : F} (first : WithinClosure rel f g) (second : WithinClosure rel g h) :
-    WithinClosure rel f h :=
-  fun region closed holds => second region closed (first region closed holds)
-
-/-- What a formation bears the relation to lies within its closure. -/
-theorem of_rel {f g : F} (related : rel f g) : WithinClosure rel f g :=
-  fun _ closed holds => closed f g holds related
-
-/-- A larger relation has a larger closure. -/
-theorem mono (larger : ∀ g h, rel g h → rel' g h) {f g : F} (within : WithinClosure rel f g) :
-    WithinClosure rel' f g :=
-  fun region closed holds =>
-    within region (fun a b inside related => closed a b inside (larger a b related)) holds
-
-/-- Under a symmetric relation the closure is symmetric. -/
-theorem symm (symmetric : ∀ g h, rel g h → rel h g) {f g : F} (within : WithinClosure rel f g) :
-    WithinClosure rel g f :=
-  within (fun x => WithinClosure rel x f)
-    (fun x y back related => (of_rel (symmetric x y related)).trans back) (refl f)
-
-/-- Nothing within a closure bears the relation to what lies beyond it. -/
-theorem not_rel {f g h : F} (within : WithinClosure rel f g) (beyond : ¬ WithinClosure rel f h) :
-    ¬ rel g h :=
-  fun related => beyond (within.trans (of_rel related))
-
-end WithinClosure
-
-/-- A formation's closure is closed under the relation. -/
-theorem closedUnder_withinClosure {rel : F → F → Prop} (f : F) :
-    ClosedUnder rel (WithinClosure rel f) :=
-  fun _ _ within related => within.trans (WithinClosure.of_rel related)
-
-/-- **A certificate of a closure.** A region is a formation's closure exactly when it holds the
-formation, is closed under the relation and lies within the formation's closure: what the region
-holds is reached, and nothing reached leaves it. -/
-theorem closure_iff_certified {rel : F → F → Prop} {region : F → Prop} {f : F} :
-    (∀ g, region g ↔ WithinClosure rel f g) ↔
-      region f ∧ ClosedUnder rel region ∧ ∀ g, region g → WithinClosure rel f g :=
-  ⟨fun exact => ⟨(exact f).mpr (WithinClosure.refl f),
-      fun g h inside related => (exact h).mpr (((exact g).mp inside).trans (WithinClosure.of_rel related)),
-      fun g inside => (exact g).mp inside⟩,
-   fun ⟨holds, closed, reached⟩ g => ⟨reached g, fun within => within region closed holds⟩⟩
-
-/-- **Certified regions apart are closures apart.** Where a closed region holds `f` but not `g`,
-`g` is not within `f`'s closure. -/
-theorem not_within_of_closed {rel : F → F → Prop} {region : F → Prop} {f g : F}
-    (closed : ClosedUnder rel region) (holds : region f) (outside : ¬ region g) :
-    ¬ WithinClosure rel f g :=
-  fun within => outside (within region closed holds)
-
 /-- `g` depends on `c` at some step. -/
 def Web.DependsOn (W : Web F C) (g : F) (c : C) : Prop :=
   ∃ t, W.requires t g c
@@ -236,10 +162,6 @@ def Web.DependsOn (W : Web F C) (g : F) (c : C) : Prop :=
 namespace Flow
 
 variable (L : Flow F C) (W : Web F C)
-
-/-- `g`'s continuation is fed from `h` at some step. -/
-def FedFrom (g h : F) : Prop :=
-  ∃ t, L.FedBy W (g, t) (h, t)
 
 /-- `h` exchanges with `c`: at some step it takes part and takes from or gives to `c`. -/
 def Exchanges (h : F) (c : C) : Prop :=
@@ -285,18 +207,6 @@ def ReachesBefore (part : F → Bool) (t : Nat) (g : F) : Prop :=
 
 variable {L W}
 
-/-- Closure under feeding at some step is closure under feeding. -/
-theorem fedClosed_iff {region : F → Prop} :
-    L.FedClosed W region ↔ ClosedUnder (L.FedFrom W) region :=
-  ⟨fun closed g h inside ⟨t, fed⟩ => closed (g, t) (h, t) inside fed,
-   fun closed e e' inside fed => match e, e', inside, fed with
-    | (g, t), (h, _), inside, ⟨rfl, rest⟩ => closed g h inside ⟨t, rfl, rest⟩⟩
-
-/-- The feeding closure is the closure under feeding at some step. -/
-theorem withinFeeding_iff {f g : F} : L.WithinFeeding W f g ↔ WithinClosure (L.FedFrom W) f g :=
-  ⟨fun within region closed holds => within region (fedClosed_iff.mpr closed) holds,
-   fun within region closed holds => within region (fedClosed_iff.mp closed) holds⟩
-
 /-- Feeding affects. -/
 theorem affectedBy_of_fedFrom {g h : F} : L.FedFrom W g h → L.AffectedBy W g h
   | ⟨t, _, c, requires, present, gives⟩ => ⟨c, ⟨t, requires⟩, t, present, .inr gives⟩
@@ -308,7 +218,7 @@ theorem shares_of_affectedBy {g h : F} : L.AffectedBy W g h → L.Shares W g h
 /-- The feeding closure lies within the influence closure. -/
 theorem withinInfluence_of_withinFeeding {f g : F} (within : L.WithinFeeding W f g) :
     L.WithinInfluence W f g :=
-  WithinClosure.mono (fun _ _ => affectedBy_of_fedFrom) (withinFeeding_iff.mp within)
+  WithinClosure.mono (fun _ _ => affectedBy_of_fedFrom) within
 
 /-- The influence closure lies within the system. -/
 theorem withinSystem_of_withinInfluence {f g : F} (within : L.WithinInfluence W f g) :
@@ -353,8 +263,7 @@ formation's feeding closure. -/
 theorem feeding_whole_of_common {t : Nat} {c : C}
     (common : ∀ g, g ∈ L.present t ∧ W.requires t g c ∧ 0 < L.give t g c) :
     ∀ f g, L.WithinFeeding W f g :=
-  fun f g => withinFeeding_iff.mpr
-    (WithinClosure.of_rel ⟨t, rfl, c, (common f).2.1, (common g).1, (common g).2.2⟩)
+  fun f g => WithinClosure.of_rel ⟨t, rfl, c, (common f).2.1, (common g).1, (common g).2.2⟩
 
 /-- What lies beyond a formation's influence closure never exchanges with a condition that a
 member of the closure depends on. -/
@@ -1016,15 +925,15 @@ def fed : Formation → Prop
   | .far => False
 
 theorem fed_closed : flow.FedClosed web fed
-  | (.sun, _), _, _, ⟨_, _, no, _, _⟩ => nomatch no
-  | (.forest, _), (.sun, _), _, _ => trivial
-  | (.forest, _), (.forest, _), _, ⟨_, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)
-  | (.forest, _), (.deer, _), _, ⟨_, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)
-  | (.forest, _), (.wolves, _), _, ⟨_, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)
-  | (.forest, _), (.far, _), _, ⟨_, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)
-  | (.deer, _), _, no, _ => nomatch no
-  | (.wolves, _), _, no, _ => nomatch no
-  | (.far, _), _, no, _ => nomatch no
+  | .sun, _, _, ⟨_, _, _, no, _, _⟩ => nomatch no
+  | .forest, .sun, _, _ => trivial
+  | .forest, .forest, _, ⟨_, _, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)
+  | .forest, .deer, _, ⟨_, _, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)
+  | .forest, .wolves, _, ⟨_, _, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)
+  | .forest, .far, _, ⟨_, _, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)
+  | .deer, _, no, _ => nomatch no
+  | .wolves, _, no, _ => nomatch no
+  | .far, _, no, _ => nomatch no
 
 /-- Everything but the far formation. -/
 def near : Formation → Prop

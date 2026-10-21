@@ -1,0 +1,408 @@
+Becoming.Reconfiguration.fails_mono : ∀ (a b : List Nat),
+  Becoming.Reconfiguration.Subset a b →
+    ∀ (e : Becoming.Reconfiguration.FaultFormula),
+      Becoming.Reconfiguration.fails e a = true → Becoming.Reconfiguration.fails e b = true
+Becoming.Reconfiguration.survives_of_included : ∀ (e : Becoming.Reconfiguration.FaultFormula) (a b : List Nat),
+  Becoming.Reconfiguration.Subset a b →
+    Becoming.Reconfiguration.fails e b = false → Becoming.Reconfiguration.fails e a = false
+Becoming.Reconfiguration.mem_induced_iff : ∀ (a : Becoming.Reconfiguration.Arrangement) (roots : List Nat)
+  (d : Becoming.FaultEnvelopes.Domain),
+  d ∈ Becoming.Reconfiguration.induced a roots ↔
+    d ∈ a.roster ∧ Becoming.Reconfiguration.fails (a.vulnerability d) roots = true
+Becoming.Reconfiguration.induced_mono : ∀ (a : Becoming.Reconfiguration.Arrangement) (x y : List Nat),
+  Becoming.Reconfiguration.Subset x y →
+    Becoming.Reconfiguration.Subset (Becoming.Reconfiguration.induced a x) (Becoming.Reconfiguration.induced a y)
+Becoming.Reconfiguration.outside_bound_survives : ∀ (a : Becoming.Reconfiguration.Arrangement)
+  (actual bound : List Nat),
+  Becoming.Reconfiguration.Subset actual bound →
+    ∀ (d : Becoming.FaultEnvelopes.Domain),
+      d ∈ a.roster →
+        ¬d ∈ Becoming.Reconfiguration.induced a bound →
+          Becoming.Reconfiguration.fails (a.vulnerability d) actual = false
+@Becoming.Reconfiguration.induced_mem_envelope : ∀ {a : Becoming.Reconfiguration.Arrangement} {bound : List Nat},
+  bound ∈ a.rootFaults → Becoming.Reconfiguration.induced a bound ∈ Becoming.Reconfiguration.envelope a
+Becoming.Reconfiguration.induced_certificate_sound : ∀ (a : Becoming.Reconfiguration.Arrangement) (actual : List Nat),
+  Becoming.Reconfiguration.Covered a actual →
+    ∀ (supports : Becoming.FaultEnvelopes.Domain → Bool) (P : Prop),
+      (∀ (d : Becoming.FaultEnvelopes.Domain),
+          d ∈ a.roster → Becoming.Reconfiguration.fails (a.vulnerability d) actual = false → supports d = true → P) →
+        Becoming.FaultEnvelopes.certificate a.roster (Becoming.Reconfiguration.envelope a) supports = true → P
+@Becoming.Reconfiguration.not_induced : ∀ {a : Becoming.Reconfiguration.Arrangement} {roots : List Nat}
+  {d : Becoming.FaultEnvelopes.Domain},
+  Becoming.Reconfiguration.fails (a.vulnerability d) roots = false → ¬d ∈ Becoming.Reconfiguration.induced a roots
+Becoming.Reconfiguration.ready_separates : ∀ (a : Becoming.Reconfiguration.Arrangement),
+  Becoming.Reconfiguration.ready a = true →
+    Becoming.FaultEnvelopes.separated a.roster (Becoming.Reconfiguration.envelope a)
+Becoming.Reconfiguration.ready_iff_nonempty_separated : ∀ (a : Becoming.Reconfiguration.Arrangement),
+  Becoming.Reconfiguration.ready a = true ↔
+    a.rootFaults ≠ [] ∧ Becoming.FaultEnvelopes.separated a.roster (Becoming.Reconfiguration.envelope a)
+Becoming.Reconfiguration.induced_certificate_available : ∀ (a : Becoming.Reconfiguration.Arrangement)
+  (actual : List Nat),
+  Becoming.Reconfiguration.Covered a actual →
+    Becoming.Reconfiguration.ready a = true →
+      ∀ (supports : Becoming.FaultEnvelopes.Domain → Bool),
+        (∀ (d : Becoming.FaultEnvelopes.Domain),
+            d ∈ a.roster → Becoming.Reconfiguration.fails (a.vulnerability d) actual = false → supports d = true) →
+          Becoming.FaultEnvelopes.certificate a.roster (Becoming.Reconfiguration.envelope a) supports = true
+Becoming.Reconfiguration.induced_completes : ∀ (a : Becoming.Reconfiguration.Arrangement) (actual : List Nat),
+  Becoming.Reconfiguration.Covered a actual →
+    Becoming.Reconfiguration.ready a = true →
+      ∀ (w : Becoming.Transactions.Installation) (p : Becoming.Transactions.Request)
+        (reads : Becoming.Transactions.Readings) (approvals : Becoming.Transactions.Approvals),
+        Becoming.Transactions.fresh w p = true →
+          (∀ (d : Becoming.FaultEnvelopes.Domain),
+              d ∈ a.roster →
+                Becoming.Reconfiguration.fails (a.vulnerability d) actual = false →
+                  reads d = some (Becoming.Transactions.expected p)) →
+            (∀ (d : Becoming.FaultEnvelopes.Domain),
+                d ∈ a.roster →
+                  Becoming.Reconfiguration.fails (a.vulnerability d) actual = false → approvals d = some p) →
+              (∀ (d : Becoming.FaultEnvelopes.Domain),
+                  d ∈ a.roster →
+                    Becoming.Reconfiguration.fails (a.vulnerability d) actual = false →
+                      ∀ (o : Becoming.Transactions.Observation),
+                        reads d = some o → o = Becoming.Transactions.observed w p.address) →
+                (∀ (d : Becoming.FaultEnvelopes.Domain),
+                    d ∈ a.roster →
+                      Becoming.Reconfiguration.fails (a.vulnerability d) actual = false →
+                        approvals d = some p → Becoming.Transactions.withinScope w p = true) →
+                  Becoming.Transactions.load a.roster p + 3 ≤ w.state.reserve →
+                    w.state.time + Becoming.Transactions.load a.roster p + 3 ≤ w.state.deadline →
+                      (Becoming.Transactions.guardedExecute a.roster (Becoming.Reconfiguration.envelope a)
+                              (Becoming.Reconfiguration.envelope a) w p reads approvals).succeeded =
+                          true ∧
+                        (Becoming.Transactions.guardedExecute a.roster (Becoming.Reconfiguration.envelope a)
+                                    (Becoming.Reconfiguration.envelope a) w p reads
+                                    approvals).installation.state.completed =
+                            true ∧
+                          Becoming.Transactions.withinScope w p = true
+@Becoming.Reconfiguration.admits_true_iff : ∀ {opened : Bool} {amount depth : Nat}
+  {candidate : Becoming.Reconfiguration.Arrangement} {old : Becoming.Reconfiguration.Managed},
+  Becoming.Reconfiguration.admits opened amount depth candidate old = true ↔
+    opened = true ∧
+      Becoming.Reconfiguration.ready candidate = true ∧
+        amount + Becoming.Reconfiguration.responseLoad candidate depth ≤ old.installation.state.reserve ∧
+          old.installation.state.time + amount + Becoming.Reconfiguration.responseLoad candidate depth ≤
+            old.installation.state.deadline
+@Becoming.Reconfiguration.reconfigure_some : ∀ {opened : Bool} {amount depth : Nat}
+  {candidate : Becoming.Reconfiguration.Arrangement} {old next : Becoming.Reconfiguration.Managed},
+  Becoming.Reconfiguration.reconfigure opened amount depth candidate old = some next →
+    Becoming.Reconfiguration.admits opened amount depth candidate old = true ∧
+      next = { arrangement := candidate, installation := Becoming.Reconfiguration.renewedBy amount old }
+Becoming.Reconfiguration.reconfigure_renews : ∀ (opened : Bool) (amount depth : Nat)
+  (candidate : Becoming.Reconfiguration.Arrangement) (old next : Becoming.Reconfiguration.Managed),
+  Becoming.Reconfiguration.reconfigure opened amount depth candidate old = some next →
+    opened = true ∧
+      Becoming.Reconfiguration.ready candidate = true ∧
+        next.arrangement = candidate ∧
+          next.installation.scope = old.installation.scope ∧
+            next.installation.root = old.installation.root ∧
+              next.installation.state.epoch = old.installation.state.epoch + 1 ∧
+                next.installation.serial = old.installation.serial + 1 ∧
+                  next.installation.state.signed = false ∧
+                    next.installation.state.drawn = old.installation.state.drawn + amount ∧
+                      next.installation.state.reserve + amount = old.installation.state.reserve ∧
+                        Becoming.Reconfiguration.responseLoad candidate depth ≤ next.installation.state.reserve ∧
+                          next.installation.state.time + Becoming.Reconfiguration.responseLoad candidate depth ≤
+                            next.installation.state.deadline
+Becoming.Reconfiguration.reconfigure_keeps_scope : ∀ (opened : Bool) (amount depth : Nat)
+  (candidate : Becoming.Reconfiguration.Arrangement) (old next : Becoming.Reconfiguration.Managed),
+  Becoming.Reconfiguration.reconfigure opened amount depth candidate old = some next →
+    ∀ (command : Becoming.Actuation.Command),
+      Becoming.Transactions.permits next.installation.scope command =
+        Becoming.Transactions.permits old.installation.scope command
+Becoming.Reconfiguration.reconfigure_stales_epoch : ∀ (opened : Bool) (amount depth : Nat)
+  (candidate : Becoming.Reconfiguration.Arrangement) (old next : Becoming.Reconfiguration.Managed),
+  Becoming.Reconfiguration.reconfigure opened amount depth candidate old = some next →
+    ∀ (p : Becoming.Transactions.Request),
+      p.epoch = old.installation.state.epoch → Becoming.Transactions.fresh next.installation p = false
+Becoming.Reconfiguration.responseLoad_mono : ∀ (a : Becoming.Reconfiguration.Arrangement) {short long : Nat},
+  short ≤ long → Becoming.Reconfiguration.responseLoad a short ≤ Becoming.Reconfiguration.responseLoad a long
+Becoming.Reconfiguration.reconfigure_covers_shorter : ∀ (opened : Bool) (amount depth : Nat)
+  (candidate : Becoming.Reconfiguration.Arrangement) (old next : Becoming.Reconfiguration.Managed),
+  Becoming.Reconfiguration.reconfigure opened amount depth candidate old = some next →
+    ∀ (actualDepth : Nat),
+      actualDepth ≤ depth →
+        Becoming.Reconfiguration.responseLoad candidate actualDepth ≤ next.installation.state.reserve ∧
+          next.installation.state.time + Becoming.Reconfiguration.responseLoad candidate actualDepth ≤
+            next.installation.state.deadline
+Becoming.Reconfiguration.reconfigure_then_completes : ∀ (opened : Bool) (amount depth : Nat)
+  (candidate : Becoming.Reconfiguration.Arrangement) (old next : Becoming.Reconfiguration.Managed),
+  Becoming.Reconfiguration.reconfigure opened amount depth candidate old = some next →
+    ∀ (actual : List Nat),
+      Becoming.Reconfiguration.Covered candidate actual →
+        ∀ (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+          (approvals : Becoming.Transactions.Approvals),
+          List.length p.address ≤ depth →
+            Becoming.Transactions.fresh next.installation p = true →
+              (∀ (d : Becoming.FaultEnvelopes.Domain),
+                  d ∈ candidate.roster →
+                    Becoming.Reconfiguration.fails (candidate.vulnerability d) actual = false →
+                      reads d = some (Becoming.Transactions.expected p)) →
+                (∀ (d : Becoming.FaultEnvelopes.Domain),
+                    d ∈ candidate.roster →
+                      Becoming.Reconfiguration.fails (candidate.vulnerability d) actual = false →
+                        approvals d = some p) →
+                  (∀ (d : Becoming.FaultEnvelopes.Domain),
+                      d ∈ candidate.roster →
+                        Becoming.Reconfiguration.fails (candidate.vulnerability d) actual = false →
+                          ∀ (o : Becoming.Transactions.Observation),
+                            reads d = some o → o = Becoming.Transactions.observed next.installation p.address) →
+                    (∀ (d : Becoming.FaultEnvelopes.Domain),
+                        d ∈ candidate.roster →
+                          Becoming.Reconfiguration.fails (candidate.vulnerability d) actual = false →
+                            approvals d = some p → Becoming.Transactions.withinScope next.installation p = true) →
+                      (Becoming.Transactions.guardedExecute next.arrangement.roster
+                              (Becoming.Reconfiguration.envelope next.arrangement)
+                              (Becoming.Reconfiguration.envelope next.arrangement) next.installation p reads
+                              approvals).succeeded =
+                          true ∧
+                        (Becoming.Transactions.guardedExecute next.arrangement.roster
+                                    (Becoming.Reconfiguration.envelope next.arrangement)
+                                    (Becoming.Reconfiguration.envelope next.arrangement) next.installation p reads
+                                    approvals).installation.state.completed =
+                            true ∧
+                          Becoming.Transactions.withinScope next.installation p = true
+Becoming.Reconfiguration.and_false : ∀ (b : Bool), (b && false) = false
+Becoming.Reconfiguration.unready_rejected : ∀ (opened : Bool) (amount depth : Nat)
+  (candidate : Becoming.Reconfiguration.Arrangement) (old : Becoming.Reconfiguration.Managed),
+  Becoming.Reconfiguration.ready candidate = false →
+    Becoming.Reconfiguration.reconfigure opened amount depth candidate old = none
+Becoming.Reconfiguration.closed_rejected : ∀ (amount depth : Nat) (candidate : Becoming.Reconfiguration.Arrangement)
+  (old : Becoming.Reconfiguration.Managed), Becoming.Reconfiguration.reconfigure false amount depth candidate old = none
+@Becoming.Reconfiguration.step_iff : ∀ {old new : Becoming.Reconfiguration.Managed}
+  {m : Becoming.Reconfiguration.Rearrangement},
+  Becoming.Reconfiguration.process.step old m new ↔
+    Becoming.Reconfiguration.reconfigure m.opened m.amount m.depth m.candidate old = some new
+@Becoming.Reconfiguration.enabled_iff : ∀ {old : Becoming.Reconfiguration.Managed}
+  {m : Becoming.Reconfiguration.Rearrangement},
+  Generative.Enabled Becoming.Reconfiguration.process old m ↔
+    (Becoming.Reconfiguration.reconfigure m.opened m.amount m.depth m.candidate old).isSome = true
+@Becoming.Reconfiguration.closed_no_step : ∀ {old : Becoming.Reconfiguration.Managed}
+  {m : Becoming.Reconfiguration.Rearrangement},
+  m.opened = false → ¬Generative.Enabled Becoming.Reconfiguration.process old m
+@Becoming.Reconfiguration.unready_no_step : ∀ {old : Becoming.Reconfiguration.Managed}
+  {m : Becoming.Reconfiguration.Rearrangement},
+  Becoming.Reconfiguration.ready m.candidate = false → ¬Generative.Enabled Becoming.Reconfiguration.process old m
+@Becoming.Reconfiguration.step_renews : ∀ {old new : Becoming.Reconfiguration.Managed}
+  {m : Becoming.Reconfiguration.Rearrangement},
+  Becoming.Reconfiguration.process.step old m new →
+    m.opened = true ∧
+      Becoming.Reconfiguration.ready m.candidate = true ∧
+        new.arrangement = m.candidate ∧
+          new.installation.scope = old.installation.scope ∧
+            new.installation.root = old.installation.root ∧
+              new.installation.state.epoch = old.installation.state.epoch + 1 ∧
+                new.installation.serial = old.installation.serial + 1 ∧
+                  new.installation.state.signed = false ∧
+                    new.installation.state.drawn = old.installation.state.drawn + m.amount ∧
+                      new.installation.state.reserve + m.amount = old.installation.state.reserve ∧
+                        Becoming.Reconfiguration.responseLoad m.candidate m.depth ≤ new.installation.state.reserve ∧
+                          new.installation.state.time + Becoming.Reconfiguration.responseLoad m.candidate m.depth ≤
+                            new.installation.state.deadline
+@Becoming.Reconfiguration.step_separated : ∀ {old new : Becoming.Reconfiguration.Managed}
+  {m : Becoming.Reconfiguration.Rearrangement},
+  Becoming.Reconfiguration.process.step old m new →
+    new.arrangement.rootFaults ≠ [] ∧
+      Becoming.FaultEnvelopes.separated new.arrangement.roster (Becoming.Reconfiguration.envelope new.arrangement)
+@Becoming.Reconfiguration.step_keeps_scope : ∀ {old new : Becoming.Reconfiguration.Managed}
+  {m : Becoming.Reconfiguration.Rearrangement},
+  Becoming.Reconfiguration.process.step old m new →
+    ∀ (command : Becoming.Actuation.Command),
+      Becoming.Transactions.permits new.installation.scope command =
+        Becoming.Transactions.permits old.installation.scope command
+@Becoming.Reconfiguration.step_stales_old_epoch : ∀ {old new : Becoming.Reconfiguration.Managed}
+  {m : Becoming.Reconfiguration.Rearrangement},
+  Becoming.Reconfiguration.process.step old m new →
+    ∀ (p : Becoming.Transactions.Request),
+      p.epoch = old.installation.state.epoch → Becoming.Transactions.fresh new.installation p = false
+@Becoming.Reconfiguration.step_certificate_available : ∀ {old new : Becoming.Reconfiguration.Managed}
+  {m : Becoming.Reconfiguration.Rearrangement},
+  Becoming.Reconfiguration.process.step old m new →
+    ∀ (actual : List Nat),
+      Becoming.Reconfiguration.Covered new.arrangement actual →
+        ∀ (supports : Becoming.FaultEnvelopes.Domain → Bool),
+          (∀ (d : Becoming.FaultEnvelopes.Domain),
+              d ∈ new.arrangement.roster →
+                Becoming.Reconfiguration.fails (new.arrangement.vulnerability d) actual = false → supports d = true) →
+            Becoming.FaultEnvelopes.certificate new.arrangement.roster
+                (Becoming.Reconfiguration.envelope new.arrangement) supports =
+              true
+@Becoming.Reconfiguration.step_then_completes : ∀ {old new : Becoming.Reconfiguration.Managed}
+  {m : Becoming.Reconfiguration.Rearrangement},
+  Becoming.Reconfiguration.process.step old m new →
+    ∀ (actual : List Nat),
+      Becoming.Reconfiguration.Covered m.candidate actual →
+        ∀ (p : Becoming.Transactions.Request) (reads : Becoming.Transactions.Readings)
+          (approvals : Becoming.Transactions.Approvals),
+          List.length p.address ≤ m.depth →
+            Becoming.Transactions.fresh new.installation p = true →
+              (∀ (d : Becoming.FaultEnvelopes.Domain),
+                  d ∈ m.candidate.roster →
+                    Becoming.Reconfiguration.fails (m.candidate.vulnerability d) actual = false →
+                      reads d = some (Becoming.Transactions.expected p)) →
+                (∀ (d : Becoming.FaultEnvelopes.Domain),
+                    d ∈ m.candidate.roster →
+                      Becoming.Reconfiguration.fails (m.candidate.vulnerability d) actual = false →
+                        approvals d = some p) →
+                  (∀ (d : Becoming.FaultEnvelopes.Domain),
+                      d ∈ m.candidate.roster →
+                        Becoming.Reconfiguration.fails (m.candidate.vulnerability d) actual = false →
+                          ∀ (o : Becoming.Transactions.Observation),
+                            reads d = some o → o = Becoming.Transactions.observed new.installation p.address) →
+                    (∀ (d : Becoming.FaultEnvelopes.Domain),
+                        d ∈ m.candidate.roster →
+                          Becoming.Reconfiguration.fails (m.candidate.vulnerability d) actual = false →
+                            approvals d = some p → Becoming.Transactions.withinScope new.installation p = true) →
+                      (Becoming.Transactions.guardedExecute new.arrangement.roster
+                              (Becoming.Reconfiguration.envelope new.arrangement)
+                              (Becoming.Reconfiguration.envelope new.arrangement) new.installation p reads
+                              approvals).succeeded =
+                          true ∧
+                        (Becoming.Transactions.guardedExecute new.arrangement.roster
+                                    (Becoming.Reconfiguration.envelope new.arrangement)
+                                    (Becoming.Reconfiguration.envelope new.arrangement) new.installation p reads
+                                    approvals).installation.state.completed =
+                            true ∧
+                          Becoming.Transactions.withinScope new.installation p = true
+Becoming.Reconfiguration.envelopes_compute : Becoming.Reconfiguration.envelope Becoming.Reconfiguration.separate3 =
+    [[0], [1], [2]] ∧
+  Becoming.Reconfiguration.envelope Becoming.Reconfiguration.merged3 = [[0, 1], [], [2]] ∧
+    Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4 = [[0, 1], [], [2], [3]]
+Becoming.Reconfiguration.readiness_cases : Becoming.Reconfiguration.ready Becoming.Reconfiguration.separate3 = true ∧
+  Becoming.Reconfiguration.ready Becoming.Reconfiguration.merged3 = false ∧
+    Becoming.Reconfiguration.ready Becoming.Reconfiguration.repaired4 = true ∧
+      Becoming.Reconfiguration.ready Becoming.Reconfiguration.duplicated4 = false
+Becoming.Reconfiguration.same_cause_not_redundant : Becoming.Reconfiguration.fails
+      ((Becoming.Reconfiguration.FaultFormula.cause 0).all (Becoming.Reconfiguration.FaultFormula.cause 0)) [0] =
+    true ∧
+  Becoming.Reconfiguration.fails
+        ((Becoming.Reconfiguration.FaultFormula.cause 0).all (Becoming.Reconfiguration.FaultFormula.cause 1)) [0] =
+      false ∧
+    Becoming.Reconfiguration.fails
+        ((Becoming.Reconfiguration.FaultFormula.cause 0).any (Becoming.Reconfiguration.FaultFormula.cause 1)) [0] =
+      true
+Becoming.Reconfiguration.stale_envelope_accepts_shared : (Becoming.FaultEnvelopes.certificate
+      Becoming.Reconfiguration.merged3.roster (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.separate3)
+      fun d => decide (d < 2)) =
+    true ∧
+  (Becoming.FaultEnvelopes.certificate Becoming.Reconfiguration.merged3.roster
+      (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.merged3) fun d => decide (d < 2)) =
+    false
+Becoming.Reconfiguration.shared_cause_rejected : Becoming.Reconfiguration.reconfigure true 2 0
+    Becoming.Reconfiguration.merged3 Becoming.Reconfiguration.original =
+  none
+Becoming.Reconfiguration.repaired_installs : (Becoming.Reconfiguration.reconfigure true 2 0
+        Becoming.Reconfiguration.repaired4 Becoming.Reconfiguration.original).isSome =
+    true ∧
+  Becoming.Reconfiguration.renewed.installation.state.reserve = 18 ∧
+    Becoming.Reconfiguration.renewed.installation.state.drawn = 2 ∧
+      Becoming.Reconfiguration.renewed.installation.state.epoch = 8 ∧
+        Becoming.Reconfiguration.renewed.installation.serial = 1
+Becoming.Reconfiguration.repaired_completes : (Becoming.Transactions.guardedExecute
+        Becoming.Reconfiguration.repaired4.roster (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+        (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+        Becoming.Reconfiguration.renewed.installation Becoming.Reconfiguration.renewedRequest
+        Becoming.Reconfiguration.survivingReads Becoming.Reconfiguration.survivingApprovals).succeeded =
+    true ∧
+  (Becoming.Transactions.guardedExecute Becoming.Reconfiguration.repaired4.roster
+              (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+              (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+              Becoming.Reconfiguration.renewed.installation Becoming.Reconfiguration.renewedRequest
+              Becoming.Reconfiguration.survivingReads
+              Becoming.Reconfiguration.survivingApprovals).installation.state.running =
+      false ∧
+    (Becoming.Transactions.guardedExecute Becoming.Reconfiguration.repaired4.roster
+                (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+                (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+                Becoming.Reconfiguration.renewed.installation Becoming.Reconfiguration.renewedRequest
+                Becoming.Reconfiguration.survivingReads
+                Becoming.Reconfiguration.survivingApprovals).installation.state.drawn =
+        13 ∧
+      (Becoming.Transactions.guardedExecute Becoming.Reconfiguration.repaired4.roster
+                  (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+                  (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+                  Becoming.Reconfiguration.renewed.installation Becoming.Reconfiguration.renewedRequest
+                  Becoming.Reconfiguration.survivingReads
+                  Becoming.Reconfiguration.survivingApprovals).installation.state.reserve =
+          7 ∧
+        (Becoming.Transactions.guardedExecute Becoming.Reconfiguration.repaired4.roster
+                (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+                (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+                Becoming.Reconfiguration.renewed.installation Becoming.Reconfiguration.renewedRequest
+                Becoming.Reconfiguration.survivingReads
+                Becoming.Reconfiguration.survivingApprovals).installation.serial =
+          2
+Becoming.Reconfiguration.old_approvals_fail : Becoming.Transactions.gate Becoming.Reconfiguration.repaired4.roster
+    (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+    (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4) Becoming.Reconfiguration.renewed.installation
+    Becoming.Transactions.request
+    (Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request)
+    (Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request) =
+  false
+Becoming.Reconfiguration.own_draw_short : 2 ≤ Becoming.Reconfiguration.lowReserve.installation.state.reserve ∧
+  Becoming.Reconfiguration.reconfigure true 2 0 Becoming.Reconfiguration.repaired4 Becoming.Reconfiguration.lowReserve =
+    none
+Becoming.Reconfiguration.combined_draw_suffices : (Becoming.Reconfiguration.reconfigure true 2 0
+      Becoming.Reconfiguration.repaired4 Becoming.Reconfiguration.combinedReserve).isSome =
+  true
+Becoming.Reconfiguration.omitted_cause_breaks : Becoming.Reconfiguration.ready Becoming.Reconfiguration.omitted = true ∧
+  Becoming.Reconfiguration.induced Becoming.Reconfiguration.omitted [9] = [0, 1, 2]
+Becoming.Reconfiguration.shared_cause_no_step : ¬Generative.Enabled Becoming.Reconfiguration.process
+    Becoming.Reconfiguration.original Becoming.Reconfiguration.toMerged
+@Becoming.Reconfiguration.renewed_of_step : ∀ {next : Becoming.Reconfiguration.Managed},
+  Becoming.Reconfiguration.process.step Becoming.Reconfiguration.original Becoming.Reconfiguration.toRepaired next →
+    Becoming.Reconfiguration.renewed = next
+Becoming.Reconfiguration.separated_repair_steps : Generative.Enabled Becoming.Reconfiguration.process
+    Becoming.Reconfiguration.original Becoming.Reconfiguration.toRepaired ∧
+  ∀ (next : Becoming.Reconfiguration.Managed),
+    Becoming.Reconfiguration.process.step Becoming.Reconfiguration.original Becoming.Reconfiguration.toRepaired next →
+      next.installation.state.reserve = 18 ∧
+        next.installation.state.drawn = 2 ∧ next.installation.state.epoch = 8 ∧ next.installation.serial = 1
+Becoming.Reconfiguration.own_draw_alone_no_step : Becoming.Reconfiguration.toRepaired.amount ≤
+    Becoming.Reconfiguration.lowReserve.installation.state.reserve ∧
+  ¬Generative.Enabled Becoming.Reconfiguration.process Becoming.Reconfiguration.lowReserve
+      Becoming.Reconfiguration.toRepaired
+Becoming.Reconfiguration.combined_draw_steps : Generative.Enabled Becoming.Reconfiguration.process
+  Becoming.Reconfiguration.combinedReserve Becoming.Reconfiguration.toRepaired
+@Becoming.Reconfiguration.repaired_step_rejects_old : ∀ {next : Becoming.Reconfiguration.Managed},
+  Becoming.Reconfiguration.process.step Becoming.Reconfiguration.original Becoming.Reconfiguration.toRepaired next →
+    Becoming.Transactions.gate Becoming.Reconfiguration.repaired4.roster
+        (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+        (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4) next.installation
+        Becoming.Transactions.request
+        (Becoming.Transactions.faithfulReads Becoming.Transactions.initial Becoming.Transactions.request)
+        (Becoming.Transactions.faithfulApprovals Becoming.Transactions.initial Becoming.Transactions.request) =
+      false
+@Becoming.Reconfiguration.repaired_step_completes : ∀ {next : Becoming.Reconfiguration.Managed},
+  Becoming.Reconfiguration.process.step Becoming.Reconfiguration.original Becoming.Reconfiguration.toRepaired next →
+    (Becoming.Transactions.guardedExecute Becoming.Reconfiguration.repaired4.roster
+            (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+            (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4) next.installation
+            Becoming.Reconfiguration.renewedRequest Becoming.Reconfiguration.survivingReads
+            Becoming.Reconfiguration.survivingApprovals).succeeded =
+        true ∧
+      (Becoming.Transactions.guardedExecute Becoming.Reconfiguration.repaired4.roster
+                  (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+                  (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4) next.installation
+                  Becoming.Reconfiguration.renewedRequest Becoming.Reconfiguration.survivingReads
+                  Becoming.Reconfiguration.survivingApprovals).installation.state.running =
+          false ∧
+        (Becoming.Transactions.guardedExecute Becoming.Reconfiguration.repaired4.roster
+                    (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+                    (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4) next.installation
+                    Becoming.Reconfiguration.renewedRequest Becoming.Reconfiguration.survivingReads
+                    Becoming.Reconfiguration.survivingApprovals).installation.state.drawn =
+            13 ∧
+          (Becoming.Transactions.guardedExecute Becoming.Reconfiguration.repaired4.roster
+                      (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+                      (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4) next.installation
+                      Becoming.Reconfiguration.renewedRequest Becoming.Reconfiguration.survivingReads
+                      Becoming.Reconfiguration.survivingApprovals).installation.state.reserve =
+              7 ∧
+            (Becoming.Transactions.guardedExecute Becoming.Reconfiguration.repaired4.roster
+                    (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4)
+                    (Becoming.Reconfiguration.envelope Becoming.Reconfiguration.repaired4) next.installation
+                    Becoming.Reconfiguration.renewedRequest Becoming.Reconfiguration.survivingReads
+                    Becoming.Reconfiguration.survivingApprovals).installation.serial =
+              2

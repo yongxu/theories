@@ -1,0 +1,16 @@
+import Becoming.SeedReach
+#check @Becoming.SeedReachProcesses.FromSeed.step
+#check @Becoming.SeedReachProcesses.fromSeed_invariant
+#check @Becoming.SeedReachProcesses.fromSeed_iff_closure
+#check @Becoming.SeedReachProcesses.fromSeed_iff_invariant
+#check @Becoming.SeedReachProcesses.covers_iff_invariant
+#check @Becoming.SeedReachProcesses.unreached_has_invariant
+#check @Becoming.SeedReachProcesses.substitute_seeds
+#check @Becoming.SeedReachProcesses.fromSeed_iff_seed_of_no_moves
+#check @Becoming.SeedReachProcesses.separated_iff_not_fromSeed
+#check @Becoming.SeedReachProcesses.not_not_fromSeed_of_not_separated
+#check @Becoming.SeedReachProcesses.not_separated_iff
+#check @Becoming.SeedReachProcesses.fromSeed_iff_not_separated_of_decidable
+#check @Becoming.SeedReach.conditional_not_separated
+#check @Becoming.SeedReach.conditional_reach
+#check @Becoming.SeedReachProcesses.fromSeed_of_not_separated_iff_dne

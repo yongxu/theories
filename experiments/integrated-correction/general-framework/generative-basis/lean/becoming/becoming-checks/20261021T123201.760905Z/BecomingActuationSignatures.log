@@ -1,0 +1,239 @@
+@Becoming.Actuation.draw_some : ∀ {amount delay : Nat} {s : Becoming.Actuation.State},
+  amount ≤ s.reserve →
+    s.time + delay ≤ s.deadline →
+      Becoming.Actuation.draw amount delay s =
+        some
+          { openRoute := s.openRoute, epoch := s.epoch, credential := s.credential, signed := s.signed,
+            requested := s.requested, reserve := s.reserve - amount, time := s.time + delay, deadline := s.deadline,
+            issued := s.issued, delivered := s.delivered, completed := s.completed, running := s.running,
+            generation := s.generation, version := s.version, drawn := s.drawn + amount }
+@Becoming.Actuation.draw_none : ∀ {amount delay : Nat} {s : Becoming.Actuation.State},
+  ¬(amount ≤ s.reserve ∧ s.time + delay ≤ s.deadline) → Becoming.Actuation.draw amount delay s = none
+@Becoming.Actuation.draw_eq_some : ∀ {amount delay : Nat} {s t : Becoming.Actuation.State},
+  Becoming.Actuation.draw amount delay s = some t →
+    amount ≤ s.reserve ∧
+      s.time + delay ≤ s.deadline ∧
+        t =
+          { openRoute := s.openRoute, epoch := s.epoch, credential := s.credential, signed := s.signed,
+            requested := s.requested, reserve := s.reserve - amount, time := s.time + delay, deadline := s.deadline,
+            issued := s.issued, delivered := s.delivered, completed := s.completed, running := s.running,
+            generation := s.generation, version := s.version, drawn := s.drawn + amount }
+@Becoming.Actuation.draw_conserves : ∀ {s t : Becoming.Actuation.State} {c d : Nat},
+  Becoming.Actuation.draw c d s = some t → t.reserve + t.drawn = s.reserve + s.drawn ∧ t.time ≤ t.deadline
+@Becoming.Actuation.beq_self : ∀ {α : Type} [inst : DecidableEq α] (n : α), (n == n) = true
+Becoming.Actuation.issue_unsigned : ∀ (s : Becoming.Actuation.State),
+  s.signed = false → Becoming.Actuation.issue s = none
+Becoming.Actuation.issue_stale : ∀ (s : Becoming.Actuation.State),
+  s.credential ≠ s.epoch → Becoming.Actuation.issue s = none
+Becoming.Actuation.enact_undelivered : ∀ (s : Becoming.Actuation.State),
+  s.delivered = false → Becoming.Actuation.enact s = none
+Becoming.Actuation.enact_revoked : ∀ (s : Becoming.Actuation.State),
+  s.credential ≠ s.epoch → Becoming.Actuation.enact s = none
+Becoming.Actuation.protocol_exact : ∀ (s : Becoming.Actuation.State) (r : Bool),
+  s.signed = true →
+    s.credential = s.epoch →
+      r = s.openRoute →
+        3 ≤ s.reserve →
+          s.time + 3 ≤ s.deadline →
+            ∃ t,
+              Becoming.Actuation.protocol r s = some t ∧
+                t.completed = true ∧
+                  t.delivered = true ∧
+                    t.issued = true ∧
+                      t.reserve + 3 = s.reserve ∧ t.time = s.time + 3 ∧ t.drawn = s.drawn + 3 ∧ t.epoch = s.epoch
+Becoming.Actuation.protocol_iff : ∀ (r : Bool) (s t : Becoming.Actuation.State),
+  Becoming.Actuation.protocol r s = some t ↔
+    Generative.Trace Becoming.Actuation.installation s (Becoming.Actuation.protocolMoves r) t
+Becoming.Actuation.run_iff : ∀ (p : Becoming.ContingentPlans.Plan Becoming.Actuation.Query Bool)
+  (s u : Becoming.Actuation.State),
+  Becoming.ContingentPlans.run Becoming.Actuation.interface p s = some u ↔
+    ∃ o, Generative.Trace Becoming.Actuation.installation s (Becoming.Actuation.planMoves p o) u
+Becoming.Actuation.passes_iff : ∀ (p : Becoming.ContingentPlans.Plan Becoming.Actuation.Query Bool)
+  (s : Becoming.Actuation.State),
+  Becoming.ContingentPlans.passes Becoming.Actuation.interface p s = true ↔
+    ∃ o u, Generative.Trace Becoming.Actuation.installation s (Becoming.Actuation.planMoves p o) u ∧ u.completed = true
+@Becoming.Actuation.chosen_completes : ∀ {states : List Becoming.Actuation.State}
+  {ps : List (Becoming.ContingentPlans.Plan Becoming.Actuation.Query Bool)}
+  {p : Becoming.ContingentPlans.Plan Becoming.Actuation.Query Bool},
+  Becoming.ContingentPlans.choose Becoming.Actuation.interface states ps = some p →
+    ∀ (s : Becoming.Actuation.State),
+      s ∈ states →
+        ∃ o u,
+          Generative.Trace Becoming.Actuation.installation s (Becoming.Actuation.planMoves p o) u ∧ u.completed = true
+@Becoming.Actuation.none_chosen : ∀ {s₁ s₂ : Becoming.Actuation.State}
+  {ps : List (Becoming.ContingentPlans.Plan Becoming.Actuation.Query Bool)},
+  Becoming.ContingentPlans.choose Becoming.Actuation.interface [s₁, s₂] ps = none →
+    ∀ (p : Becoming.ContingentPlans.Plan Becoming.Actuation.Query Bool),
+      p ∈ ps →
+        ¬((∃ o u,
+              Generative.Trace Becoming.Actuation.installation s₁ (Becoming.Actuation.planMoves p o) u ∧
+                u.completed = true) ∧
+            ∃ o u,
+              Generative.Trace Becoming.Actuation.installation s₂ (Becoming.Actuation.planMoves p o) u ∧
+                u.completed = true)
+@Becoming.Actuation.unsigned_no_issue : ∀ {s : Becoming.Actuation.State},
+  s.signed = false → ¬Generative.Enabled Becoming.Actuation.installation s Becoming.Actuation.Move.issue
+@Becoming.Actuation.stale_no_issue : ∀ {s : Becoming.Actuation.State},
+  s.credential ≠ s.epoch → ¬Generative.Enabled Becoming.Actuation.installation s Becoming.Actuation.Move.issue
+@Becoming.Actuation.undelivered_no_enact : ∀ {s : Becoming.Actuation.State},
+  s.delivered = false → ¬Generative.Enabled Becoming.Actuation.installation s Becoming.Actuation.Move.enact
+@Becoming.Actuation.revoked_no_enact : ∀ {s : Becoming.Actuation.State},
+  s.credential ≠ s.epoch → ¬Generative.Enabled Becoming.Actuation.installation s Becoming.Actuation.Move.enact
+@Becoming.Actuation.draws_then : ∀ {s t : Becoming.Actuation.State} {c d : Nat}
+  {f : Becoming.Actuation.State → Becoming.Actuation.State},
+  (∀ (u : Becoming.Actuation.State),
+      (f u).reserve = u.reserve ∧ (f u).drawn = u.drawn ∧ (f u).time = u.time ∧ (f u).deadline = u.deadline) →
+    (do
+          let u ← Becoming.Actuation.draw c d s
+          some (f u)) =
+        some t →
+      t.reserve + t.drawn = s.reserve + s.drawn ∧ t.time ≤ t.deadline
+@Becoming.Actuation.issue_conserves : ∀ {s t : Becoming.Actuation.State},
+  Becoming.Actuation.issue s = some t → t.reserve + t.drawn = s.reserve + s.drawn ∧ t.time ≤ t.deadline
+@Becoming.Actuation.deliver_conserves : ∀ {r : Bool} {s t : Becoming.Actuation.State},
+  Becoming.Actuation.deliver r s = some t → t.reserve + t.drawn = s.reserve + s.drawn ∧ t.time ≤ t.deadline
+@Becoming.Actuation.enact_conserves : ∀ {s t : Becoming.Actuation.State},
+  Becoming.Actuation.enact s = some t → t.reserve + t.drawn = s.reserve + s.drawn ∧ t.time ≤ t.deadline
+Becoming.Actuation.move_draws : ∀ (m : Becoming.Actuation.Move) {s t : Becoming.Actuation.State},
+  Becoming.Actuation.installation.step s m t → t = s ∨ t.reserve + t.drawn = s.reserve + s.drawn ∧ t.time ≤ t.deadline
+Becoming.Actuation.conserved_invariant : ∀ (c : Nat),
+  Becoming.Invariant Becoming.Actuation.installation fun s => s.reserve + s.drawn = c
+@Becoming.Actuation.conserved_trace : ∀ {s t : Becoming.Actuation.State} {ms : List Becoming.Actuation.Move},
+  Generative.Trace Becoming.Actuation.installation s ms t → t.reserve + t.drawn = s.reserve + s.drawn
+Becoming.Actuation.protocol_completes : ∀ (s : Becoming.Actuation.State) (r : Bool),
+  s.signed = true →
+    s.credential = s.epoch →
+      r = s.openRoute →
+        3 ≤ s.reserve →
+          s.time + 3 ≤ s.deadline →
+            ∃ t,
+              Generative.Trace Becoming.Actuation.installation s (Becoming.Actuation.protocolMoves r) t ∧
+                t.completed = true ∧
+                  t.delivered = true ∧
+                    t.issued = true ∧
+                      t.reserve + 3 = s.reserve ∧ t.time = s.time + 3 ∧ t.drawn = s.drawn + 3 ∧ t.epoch = s.epoch
+Becoming.Actuation.unknown_route_probes : Becoming.ContingentPlans.choose Becoming.Actuation.interface
+    [Becoming.Actuation.start false Becoming.Actuation.Command.update 4 4,
+      Becoming.Actuation.start true Becoming.Actuation.Command.update 4 4]
+    Becoming.Actuation.plans =
+  some { query := Becoming.Actuation.Query.route, negative := false, positive := true }
+Becoming.Actuation.known_route_no_probe : Becoming.ContingentPlans.choose Becoming.Actuation.interface
+    [Becoming.Actuation.start true Becoming.Actuation.Command.update 3 3] Becoming.Actuation.plans =
+  some { query := Becoming.Actuation.Query.none, negative := true, positive := false }
+Becoming.Actuation.statewise_not_uniform_run : (Becoming.Actuation.protocol false
+        (Becoming.Actuation.start false Becoming.Actuation.Command.update 3 3)).isSome =
+    true ∧
+  (Becoming.Actuation.protocol true (Becoming.Actuation.start true Becoming.Actuation.Command.update 3 3)).isSome =
+      true ∧
+    Becoming.ContingentPlans.choose Becoming.Actuation.interface
+        [Becoming.Actuation.start false Becoming.Actuation.Command.update 3 3,
+          Becoming.Actuation.start true Becoming.Actuation.Command.update 3 3]
+        Becoming.Actuation.plans =
+      none
+Becoming.Actuation.timely_run : (Becoming.ContingentPlans.run Becoming.Actuation.interface
+      { query := Becoming.Actuation.Query.route, negative := false, positive := true }
+      (Becoming.Actuation.start true Becoming.Actuation.Command.update 4 4)).isSome =
+  true
+Becoming.Actuation.late_probe_no_run : Becoming.ContingentPlans.run Becoming.Actuation.interface
+    { query := Becoming.Actuation.Query.slow, negative := false, positive := true }
+    (Becoming.Actuation.start true Becoming.Actuation.Command.update 4 4) =
+  none
+Becoming.Actuation.shutdown_run : Option.map (fun s => (s.completed, s.running, s.reserve, s.drawn))
+    (Becoming.ContingentPlans.run Becoming.Actuation.interface
+      { query := Becoming.Actuation.Query.route, negative := false, positive := true }
+      (Becoming.Actuation.start true Becoming.Actuation.Command.shutdown 4 4)) =
+  some (true, false, 0, 4)
+Becoming.Actuation.replacement_run : Option.map (fun s => (s.completed, s.generation, s.version))
+    (Becoming.ContingentPlans.run Becoming.Actuation.interface
+      { query := Becoming.Actuation.Query.route, negative := false, positive := true }
+      (Becoming.Actuation.start false Becoming.Actuation.Command.replace 4 4)) =
+  some (true, 1, 0)
+Becoming.Actuation.update_run : Option.map (fun s => (s.completed, s.generation, s.version))
+    (Becoming.ContingentPlans.run Becoming.Actuation.interface
+      { query := Becoming.Actuation.Query.route, negative := false, positive := true }
+      (Becoming.Actuation.start true Becoming.Actuation.Command.update 4 4)) =
+  some (true, 0, 1)
+Becoming.Actuation.omitted_route_fails_run : Becoming.ContingentPlans.choose Becoming.Actuation.interface
+      [Becoming.Actuation.start false Becoming.Actuation.Command.update 3 3] Becoming.Actuation.plans =
+    some { query := Becoming.Actuation.Query.none, negative := false, positive := false } ∧
+  Becoming.ContingentPlans.run Becoming.Actuation.interface
+      { query := Becoming.Actuation.Query.none, negative := false, positive := false }
+      (Becoming.Actuation.start true Becoming.Actuation.Command.update 3 3) =
+    none
+Becoming.Actuation.route_inquiry_completes_both : Becoming.ContingentPlans.choose Becoming.Actuation.interface
+      [Becoming.Actuation.start false Becoming.Actuation.Command.update 4 4,
+        Becoming.Actuation.start true Becoming.Actuation.Command.update 4 4]
+      Becoming.Actuation.plans =
+    some { query := Becoming.Actuation.Query.route, negative := false, positive := true } ∧
+  ∀ (s : Becoming.Actuation.State),
+    s ∈
+        [Becoming.Actuation.start false Becoming.Actuation.Command.update 4 4,
+          Becoming.Actuation.start true Becoming.Actuation.Command.update 4 4] →
+      ∃ o u,
+        Generative.Trace Becoming.Actuation.installation s
+            (Becoming.Actuation.planMoves
+              { query := Becoming.Actuation.Query.route, negative := false, positive := true } o)
+            u ∧
+          u.completed = true
+Becoming.Actuation.known_route_completes : ∃ o u,
+  Generative.Trace Becoming.Actuation.installation (Becoming.Actuation.start true Becoming.Actuation.Command.update 3 3)
+      (Becoming.Actuation.planMoves { query := Becoming.Actuation.Query.none, negative := true, positive := false } o)
+      u ∧
+    u.completed = true
+Becoming.Actuation.statewise_not_uniform : (∃ t,
+    Generative.Trace Becoming.Actuation.installation
+      (Becoming.Actuation.start false Becoming.Actuation.Command.update 3 3) (Becoming.Actuation.protocolMoves false)
+      t) ∧
+  (∃ t,
+      Generative.Trace Becoming.Actuation.installation
+        (Becoming.Actuation.start true Becoming.Actuation.Command.update 3 3) (Becoming.Actuation.protocolMoves true)
+        t) ∧
+    ∀ (p : Becoming.ContingentPlans.Plan Becoming.Actuation.Query Bool),
+      p ∈ Becoming.Actuation.plans →
+        ¬((∃ o u,
+              Generative.Trace Becoming.Actuation.installation
+                  (Becoming.Actuation.start false Becoming.Actuation.Command.update 3 3)
+                  (Becoming.Actuation.planMoves p o) u ∧
+                u.completed = true) ∧
+            ∃ o u,
+              Generative.Trace Becoming.Actuation.installation
+                  (Becoming.Actuation.start true Becoming.Actuation.Command.update 3 3)
+                  (Becoming.Actuation.planMoves p o) u ∧
+                u.completed = true)
+Becoming.Actuation.omitted_route_fails : (∃ o u,
+    Generative.Trace Becoming.Actuation.installation
+        (Becoming.Actuation.start false Becoming.Actuation.Command.update 3 3)
+        (Becoming.Actuation.planMoves { query := Becoming.Actuation.Query.none, negative := false, positive := false }
+          o)
+        u ∧
+      u.completed = true) ∧
+  ¬∃ o u,
+      Generative.Trace Becoming.Actuation.installation
+        (Becoming.Actuation.start true Becoming.Actuation.Command.update 3 3)
+        (Becoming.Actuation.planMoves { query := Becoming.Actuation.Query.none, negative := false, positive := false }
+          o)
+        u
+Becoming.Actuation.timely_trace : ∃ o u,
+  Generative.Trace Becoming.Actuation.installation (Becoming.Actuation.start true Becoming.Actuation.Command.update 4 4)
+    (Becoming.Actuation.planMoves { query := Becoming.Actuation.Query.route, negative := false, positive := true } o) u
+Becoming.Actuation.late_no_trace : ¬∃ o u,
+    Generative.Trace Becoming.Actuation.installation
+      (Becoming.Actuation.start true Becoming.Actuation.Command.update 4 4)
+      (Becoming.Actuation.planMoves { query := Becoming.Actuation.Query.slow, negative := false, positive := true } o) u
+Becoming.Actuation.shutdown_trace : ∃ o u,
+  Generative.Trace Becoming.Actuation.installation
+      (Becoming.Actuation.start true Becoming.Actuation.Command.shutdown 4 4)
+      (Becoming.Actuation.planMoves { query := Becoming.Actuation.Query.route, negative := false, positive := true } o)
+      u ∧
+    u.completed = true ∧ u.running = false ∧ u.reserve = 0 ∧ u.drawn = 4
+Becoming.Actuation.replacement_trace : ∃ o u,
+  Generative.Trace Becoming.Actuation.installation
+      (Becoming.Actuation.start false Becoming.Actuation.Command.replace 4 4)
+      (Becoming.Actuation.planMoves { query := Becoming.Actuation.Query.route, negative := false, positive := true } o)
+      u ∧
+    u.completed = true ∧ u.generation = 1 ∧ u.version = 0
+Becoming.Actuation.update_trace : ∃ o u,
+  Generative.Trace Becoming.Actuation.installation (Becoming.Actuation.start true Becoming.Actuation.Command.update 4 4)
+      (Becoming.Actuation.planMoves { query := Becoming.Actuation.Query.route, negative := false, positive := true } o)
+      u ∧
+    u.completed = true ∧ u.generation = 0 ∧ u.version = 1

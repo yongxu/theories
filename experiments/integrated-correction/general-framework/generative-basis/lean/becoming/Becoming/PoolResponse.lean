@@ -299,7 +299,7 @@ theorem act_courses_response_alike_pool {act act' : ExchangeLaw F C} {present : 
       start).CoupledFromEither W ((law.withAct part act').course present start) obs) group g →
       ∀ t, W.AlikeThroughUpTo obs g ((law.withAct part act).levels present start)
         ((law.withAct part act').levels present start) t :=
-    fun _ within _ => match withinClosureOf_iff.mp within with
+    fun _ within _ => match within with
     | ⟨_, inGroup, inside⟩ => Web.selects_alike_iff.mp fun _ selectsThrough =>
         act_courses_unselected na naAct naAct' through actThrough feasible feasible'
           (fun t h l c inPart ⟨g', within', couples⟩ =>
@@ -330,8 +330,8 @@ theorem pool_within_response_iff :
     (∃ g, group g ∧ L.WithinResponse L' W obs part g) ↔
       ∃ h, part h = true ∧ WithinClosureOf (L.CoupledFromEither W L' obs) group h :=
   ⟨fun ⟨g, member, within⟩ => match withinResponse_iff_coupling.mp within with
-    | ⟨h, inPart, closure⟩ => ⟨h, inPart, withinClosureOf_iff.mpr ⟨g, member, closure⟩⟩,
-   fun ⟨h, inPart, within⟩ => match withinClosureOf_iff.mp within with
+    | ⟨h, inPart, closure⟩ => ⟨h, inPart, ⟨g, member, closure⟩⟩,
+   fun ⟨h, inPart, within⟩ => match within with
     | ⟨g, member, closure⟩ => ⟨g, member, withinResponse_iff_coupling.mpr ⟨h, inPart, closure⟩⟩⟩
 
 /-- **A pool beyond a part's responsive reach does not respond to it.** Under the conditions of

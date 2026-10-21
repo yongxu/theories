@@ -1,0 +1,185 @@
+@Becoming.Learning.goAlike_iff_at : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  {π : S → K}, Becoming.GoAlike P π ↔ ∀ (s s' : S) (a : A), π s = π s' → Becoming.Learning.GoAlikeAt P π s s' a
+@Becoming.Learning.transfer_right_iff : ∀ {S : Type u_1} {A : Type u_2} {K : Type u_3} {P : Generative.Process S A}
+  {π : S → K},
+  Becoming.Determined P →
+    ∀ {s₀ s : S} {a : A} {u₀ : S},
+      P.step s₀ a u₀ → ((∀ (u : S), P.step s a u → π u = π u₀) ↔ Becoming.Learning.GoAlikeAt P π s₀ s a)
+@Becoming.Learning.goAlike_iff_lumped : ∀ {S : Type u_1} {K : Type u_2} {next : S → S} {π : S → K},
+  Becoming.GoAlike (Becoming.Law.process next) π ↔ Becoming.Learning.Lumped π fun s => π (next s)
+@Becoming.LearningRuns.missed_congr : ∀ {O : Type u_1} {c c' : Option O} {w w' : O},
+  c = c' → w = w' → Becoming.Learning.Misses c w → Becoming.Learning.Misses c' w'
+@Becoming.LearningRuns.missedAt_of_same : ∀ {O : Type u_1} {V : Type u_2} {pred : List O → Option V} {o o' : Nat → O}
+  {val val' : V} {t : Nat},
+  Becoming.Learning.prefixOf o t = Becoming.Learning.prefixOf o' t →
+    val = val' →
+      Becoming.Learning.Misses (pred (Becoming.Learning.prefixOf o t)) val →
+        Becoming.Learning.Misses (pred (Becoming.Learning.prefixOf o' t)) val'
+@Becoming.LearningRuns.holdFrom_missed : ∀ {O : Type u_1} {pred : List O → Option O} {o o' : Nat → O} {t : Nat},
+  (∀ (n : Nat), n < t → o n = o' n) →
+    Becoming.Learning.MissesAt pred (Becoming.Learning.holdFrom o t (o' t)) t → Becoming.Learning.MissesAt pred o' t
+@Becoming.LearningRuns.missed_on_one_of_part : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3}
+  {P : Generative.Process S A} [DecidableEq R] (pred : List R → Option R) {reg : S → R} {r r' : Becoming.Run P}
+  {t : Nat},
+  Becoming.Parting.PartAt reg r r' t →
+    ∀ {w : R},
+      pred (Becoming.Learning.prefixOf (Becoming.Parting.course reg r) t) = some w →
+        Becoming.Learning.MissesAt pred (Becoming.Parting.course reg r) t ∨
+          Becoming.Learning.MissesAt pred (Becoming.Parting.course reg r') t
+@Becoming.LearningRuns.prefix_fixes_no_next : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3}
+  {P : Generative.Process S A} (pred : List R → Option R) (reg : S → R) (r : Becoming.Run P) (t : Nat) {x y : R},
+  x ≠ y →
+    ∀ {w : R},
+      pred (Becoming.Learning.prefixOf (Becoming.Parting.course reg r) t) = some w →
+        ∃ q q',
+          Becoming.Learning.Lasso (Becoming.Parting.course id q) t 0 ∧
+            Becoming.Learning.Lasso (Becoming.Parting.course id q') t 0 ∧
+              Becoming.Learning.prefixOf (Becoming.Parting.course id q) t =
+                  Becoming.Learning.prefixOf (Becoming.Parting.course reg r) t ∧
+                Becoming.Learning.prefixOf (Becoming.Parting.course id q') t =
+                    Becoming.Learning.prefixOf (Becoming.Parting.course reg r) t ∧
+                  q.state t = x ∧
+                    q'.state t = y ∧
+                      ¬(¬Becoming.Learning.MissesAt pred (Becoming.Parting.course id q) t ∧
+                          ¬Becoming.Learning.MissesAt pred (Becoming.Parting.course id q') t)
+@Becoming.LearningRuns.byElimination_through_prefix : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3}
+  {P : Generative.Process S A} [inst : DecidableEq R] (H : Nat → List R → Option R) {reg : S → R}
+  {r r' : Becoming.Run P} {t : Nat},
+  (∀ (n : Nat), n < t → reg (r.state n) = reg (r'.state n)) →
+    Becoming.Learning.index H (Becoming.Parting.course reg r) t =
+        Becoming.Learning.index H (Becoming.Parting.course reg r') t ∧
+      Becoming.Learning.byElimination H (Becoming.Learning.prefixOf (Becoming.Parting.course reg r) t) =
+        Becoming.Learning.byElimination H (Becoming.Learning.prefixOf (Becoming.Parting.course reg r') t)
+@Becoming.LearningRuns.course_mem : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  (reg : S → R) (r : Becoming.Run P), Becoming.LearningRuns.Courses P reg (Becoming.Parting.course reg r)
+@Becoming.LearningRuns.loss_through_prefix : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {L : Type u_4} {t : Nat} (loss : (Nat → R) → L),
+  (∀ (g g' : Nat → R), Becoming.Learning.Training.AgreeOn (fun x => x < t) g g' → loss g = loss g') →
+    ∀ (choose : L → Prop) {reg : S → R} {r r' : Becoming.Run P},
+      (∀ (n : Nat), n < t → reg (r.state n) = reg (r'.state n)) →
+        (choose (loss (Becoming.Parting.course reg r)) ↔ choose (loss (Becoming.Parting.course reg r')))
+@Becoming.LearningRuns.unselected_beyond_prefix : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3}
+  {P : Generative.Process S A} {reg : S → R} {t x : Nat} {select : (Nat → R) → Prop},
+  Becoming.Learning.Training.Through (Becoming.Learning.Training.AgreeOn fun x => x < t) select →
+    Becoming.Learning.Free (Becoming.LearningRuns.Courses P reg) (fun x => x < t) x →
+      ∀ {r r' : Becoming.Run P},
+        select (Becoming.Parting.course reg r) →
+          ∃ h,
+            Becoming.LearningRuns.Courses P reg h ∧
+              select h ∧
+                Becoming.Learning.Training.AgreeOn (fun x => x < t) h (Becoming.Parting.course reg r) ∧
+                  h x = reg (r'.state x)
+@Becoming.LearningRuns.fit_right_iff_runs : ∀ {S : Type u_1} {A : Type u_2} {R : Type u_3} {P : Generative.Process S A}
+  {reg : S → R} {t x : Nat},
+  (∀ (r r' : Becoming.Run P),
+      (∀ (n : Nat), n < t → reg (r'.state n) = reg (r.state n)) → reg (r'.state x) = reg (r.state x)) ↔
+    Becoming.Learning.Determines (Becoming.LearningRuns.Courses P reg) (fun x => x < t) x
+@Becoming.LearningRuns.free_prefix_fixes_nothing : ∀ {V : Type u_1} {t x : Nat},
+  t ≤ x →
+    ∀ {y z : V},
+      y ≠ z →
+        ¬Becoming.Learning.Determines (Becoming.LearningRuns.Courses (Becoming.Parting.free V) id) (fun x => x < t) x
+@Becoming.LearningRuns.answer_course : ∀ {O : Type u_1} (pred : List O → Option O) (other : O → O) (x : O)
+  (r : Becoming.Run (Becoming.Law.process (Becoming.Learning.answerStep pred other x))),
+  r.state 0 = [] →
+    ∀ (n : Nat),
+      Becoming.Parting.course (Becoming.LearningRuns.answerReg pred other x) r n =
+        Becoming.Learning.diagonal pred other x n
+@Becoming.LearningRuns.answer_prefix : ∀ {O : Type u_1} (pred : List O → Option O) (other : O → O) (x : O)
+  (r : Becoming.Run (Becoming.Law.process (Becoming.Learning.answerStep pred other x))),
+  r.state 0 = [] →
+    ∀ (t : Nat),
+      Becoming.Learning.prefixOf (Becoming.Parting.course (Becoming.LearningRuns.answerReg pred other x) r) t =
+        Becoming.Learning.prefixOf (Becoming.Learning.diagonal pred other x) t
+@Becoming.LearningRuns.answer_open : ∀ {O : Type u_1} (pred : List O → Option O) (other : O → O) (x : O)
+  (r : Becoming.Run (Becoming.Law.process (Becoming.Learning.answerStep pred other x))),
+  r.state 0 = [] → ¬∃ l, ∀ (n : Nat), r.state n ∈ l
+@Becoming.LearningRuns.answer_misses : ∀ {O : Type u_1} [inst : DecidableEq O] (pred : List O → Option O) {a b : O},
+  a ≠ b →
+    ∀ (r : Becoming.Run (Becoming.Law.process (Becoming.Learning.answerStep pred (Becoming.Learning.swapTo a b) a))),
+      r.state 0 = [] →
+        ∀ {t : Nat} {w : O},
+          pred
+                (Becoming.Learning.prefixOf
+                  (Becoming.Parting.course (Becoming.LearningRuns.answerReg pred (Becoming.Learning.swapTo a b) a) r)
+                  t) =
+              some w →
+            Becoming.Learning.MissesAt pred
+              (Becoming.Parting.course (Becoming.LearningRuns.answerReg pred (Becoming.Learning.swapTo a b) a) r) t
+@Becoming.LearningRuns.merged_unrested : ∀ {O : Type u_1} [inst : DecidableEq O] (G : Nat → Nat → List O → Option O)
+  {other : O → O},
+  (∀ (v : O), other v ≠ v) →
+    ∀ (x : O)
+      (r :
+        Becoming.Run
+          (Becoming.Law.process
+            (Becoming.Learning.answerStep (Becoming.Learning.byElimination (Becoming.Learning.merged G)) other x))),
+      r.state 0 = [] →
+        ¬∃ T,
+            ∀ (t : Nat),
+              T ≤ t →
+                Becoming.Parting.RightAt (Becoming.Learning.byElimination (Becoming.Learning.merged G))
+                  (Becoming.LearningRuns.answerReg (Becoming.Learning.byElimination (Becoming.Learning.merged G)) other
+                    x)
+                  r t
+@Becoming.LearningRuns.held_byElimination_bounded : ∀ {S : Type u_1} {R : Type u_2} {next : S → S}
+  [inst : DecidableEq R] (r : Becoming.Run (Becoming.Law.process next)) {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) →
+    ∀ (reg : S → R),
+      (∀ (t : Nat),
+          Becoming.Learning.index Becoming.Learning.lassos (Becoming.LearnableRuns.course reg r) t <
+            Becoming.Learning.tri l.length) ∧
+        (∀ (t : Nat),
+            l.length ≤ t →
+              ∃ v,
+                Becoming.Learning.byElimination Becoming.Learning.lassos
+                    (Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r) t) =
+                  some v) ∧
+          ¬∀ (T : Nat),
+              ∃ t,
+                T ≤ t ∧
+                  Becoming.Learning.MissesAt (Becoming.Learning.byElimination Becoming.Learning.lassos)
+                    (Becoming.LearnableRuns.course reg r) t
+@Becoming.LearningRuns.held_rest_unrefuted : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} [inst : DecidableEq R]
+  (r : Becoming.Run (Becoming.Law.process next)) {l : List S},
+  (∀ (n : Nat), r.state n ∈ l) →
+    ∀ (reg : S → R),
+      ¬¬Becoming.LearnableRuns.Predicts reg reg (Becoming.Learning.byElimination Becoming.Learning.lassos) r
+@Becoming.LearningRuns.claim_not_right_on_both : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {V : Type u_3}
+  {reg : S → R} {val : S → V} (pred : List R → Option V) {r r' : Becoming.Run (Becoming.Law.process next)},
+  Becoming.Alike (Becoming.Law.frameBy next reg) (Becoming.Law.frameBy next reg) (r.state 0) (r'.state 0) →
+    ∀ {t : Nat},
+      val (r.state t) ≠ val (r'.state t) →
+        ¬(pred (Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r) t) = some (val (r.state t)) ∧
+            pred (Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r') t) = some (val (r'.state t)))
+@Becoming.LearningRuns.missed_on_one : ∀ {S : Type u_1} {R : Type u_2} {next : S → S} {V : Type u_3} [DecidableEq V]
+  {reg : S → R} {val : S → V} (pred : List R → Option V) {r r' : Becoming.Run (Becoming.Law.process next)},
+  Becoming.Alike (Becoming.Law.frameBy next reg) (Becoming.Law.frameBy next reg) (r.state 0) (r'.state 0) →
+    ∀ {t : Nat},
+      val (r.state t) ≠ val (r'.state t) →
+        ∀ {w : V},
+          pred (Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r) t) = some w →
+            (Becoming.Learning.Misses (pred (Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r) t))
+                  (val (r.state t)) ∨
+                Becoming.Learning.Misses (pred (Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r') t))
+                  (val (r'.state t))) ∧
+              ∀ (n : Nat),
+                Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r) n =
+                  Becoming.Learning.prefixOf (Becoming.LearnableRuns.course reg r') n
+Becoming.LearningRuns.negation_never_rests : ∀ (r : Becoming.Run (Becoming.Law.process not)) (n : Nat),
+  r.state (n + 1) ≠ r.state n
+Becoming.LearningRuns.alternate_rests : ∀ (r : Becoming.Run (Becoming.Law.process not)),
+  r.state 0 = false →
+    Becoming.LearnableRuns.PredictsFrom id id (Becoming.Learning.byElimination Becoming.Learning.lassos) r 3
+Becoming.LearningRuns.pair_world : ∀ (s : Bool × Bool), s ∈ [(true, true), (true, false), (false, true), (false, false)]
+Becoming.LearningRuns.pair_first_not_predicts : ∀ (pred : List Bool → Option Bool),
+  ¬(Becoming.LearnableRuns.Predicts Prod.fst Prod.snd pred
+        (Becoming.Law.run Becoming.Learnable.Pair.still (true, false)) ∧
+      Becoming.LearnableRuns.Predicts Prod.fst Prod.snd pred
+        (Becoming.Law.run Becoming.Learnable.Pair.still (true, true)))
+Becoming.LearningRuns.pair_not_learnable : ¬∃ pred,
+    ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Learnable.Pair.still)),
+      Becoming.LearnableRuns.Predicts Prod.fst Prod.snd pred r
+Becoming.LearningRuns.pair_whole_predicts : ∀ (r : Becoming.Run (Becoming.Law.process Becoming.Learnable.Pair.still)),
+  Becoming.LearnableRuns.PredictsFrom id Prod.snd
+    (fun l => Option.map Prod.snd (Becoming.Learning.byElimination Becoming.Learning.lassos l)) r 2

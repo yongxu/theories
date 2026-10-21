@@ -1,0 +1,200 @@
+@Becoming.Flow.still_dissipative : ∀ {F C : Type}, Becoming.Flow.still.Dissipative
+Becoming.quiet_of_once : (∀ (P : Prop), P ∨ ¬P) →
+  ∀ {α : Type} {E : α → Nat → Prop} {N : Nat},
+    (∀ (a : α) (T : Nat), N ≤ T → E a T → ∀ (T' : Nat), T < T' → ¬E a T') →
+      ∀ (L : List α), ∃ M, N ≤ M ∧ ∀ (a : α), a ∈ L → ∀ (T : Nat), M ≤ T → ¬E a T
+@Becoming.still_le : ∀ {q : Nat → Nat} {T M : Nat},
+  (∀ (n : Nat), T ≤ n → q (n + 1) ≤ q n) → T ≤ M → ∀ (k : Nat), q (M + k) ≤ q M
+@Becoming.unrefuted_falls_exceed : ∀ {q : Nat → Nat} {T : Nat},
+  (∀ (n : Nat), T ≤ n → q (n + 1) ≤ q n) →
+    (∀ (M : Nat), T ≤ M → ¬¬∃ t, M ≤ t ∧ q (t + 1) < q t) → ∀ (v M : Nat), T ≤ M → q M ≤ v → False
+@Becoming.stop_unrefuted_iff : ∀ {P : Nat → Prop} {T : Nat},
+  (¬∀ (M : Nat), T ≤ M → ¬¬∃ t, M ≤ t ∧ P t) ↔ ¬¬∃ M, T ≤ M ∧ ∀ (t : Nat), M ≤ t → ¬P t
+@Becoming.falls_stop_unrefuted : ∀ {q : Nat → Nat} {T : Nat},
+  (∀ (n : Nat), T ≤ n → q (n + 1) ≤ q n) → ¬∀ (M : Nat), T ≤ M → ¬¬∃ t, M ≤ t ∧ q (t + 1) < q t
+@Becoming.amount_still_unrefuted : ∀ {q : Nat → Nat} {T : Nat},
+  (∀ (n : Nat), T ≤ n → q (n + 1) ≤ q n) → ¬¬∃ M, T ≤ M ∧ ∀ (t : Nat), M ≤ t → q (t + 1) = q t
+@Becoming.Web.embodiedArising_stops_unrefuted : ∀ {X : Type} {W : Becoming.Web X X} {L : Becoming.Flow X X}
+  {ds : List X} {T : Nat},
+  (∀ (t : Nat), T ≤ t → L.BalancesOn W ds t) →
+    (∀ (t : Nat), T ≤ t → L.DissipatesOn ds t) →
+      ¬∀ (M : Nat), T ≤ M → ¬¬∃ t x, M ≤ t ∧ x ∈ ds ∧ W.Embodied x ∧ W.Arises t x
+@Becoming.World.Embodied.arising : ∀ {w : Becoming.World}, w.Embodied → w.ArisingEmbodied
+@Becoming.World.ceasingRecurs_ofRoles : ∀ {F C : Type} (L : Becoming.Flow F C) (W : Becoming.Web F C),
+  (Becoming.World.ofRoles L W).CeasingRecurs ↔ ∀ (N : Nat), ∃ t f, N ≤ t ∧ W.Ceases t f
+@Becoming.World.arising_iff_ceasing_covering : ∀ {w : Becoming.World}
+  [(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)] {L : List w.Relatum} {T : Nat},
+  (∀ (t : Nat), T ≤ t → ∀ (x : w.Relatum), w.web.active t x → x ∈ L) → (w.ArisingRecurs ↔ w.CeasingRecurs)
+@Becoming.World.arising_iff_ceasing : ∀ {w : Becoming.World}
+  [(t : Nat) → (x : w.Relatum) → Decidable (w.web.active t x)], w.Finite → (w.ArisingRecurs ↔ w.CeasingRecurs)
+@Becoming.World.rests_unrefuted_iff : ∀ {w : Becoming.World},
+  (¬¬∃ N, w.RestsFrom N) ↔
+    (¬∀ (M : Nat), ¬¬∃ t x, M ≤ t ∧ w.web.Arises t x) ∧ ¬∀ (M : Nat), ¬¬∃ t x, M ≤ t ∧ w.web.Ceases t x
+@Becoming.World.not_recurring_of_rests_unrefuted : ∀ {w : Becoming.World},
+  (¬¬∃ N, w.RestsFrom N) → ¬w.ArisingRecurs ∧ ¬w.CeasingRecurs
+@Becoming.World.arising_unrefuted_covering : ∀ {w : Becoming.World} {ds : List w.Relatum} {T : Nat},
+  (∀ (t : Nat), T ≤ t → ∀ (x : w.Relatum), w.web.active t x → x ∈ ds) →
+    (∀ (M : Nat), ¬¬∃ t x, M ≤ t ∧ w.web.Ceases t x) → ∀ (M : Nat), T ≤ M → ¬¬∃ t x, M ≤ t ∧ x ∈ ds ∧ w.web.Arises t x
+@Becoming.World.rests_unrefuted_covering : ∀ {w : Becoming.World} {ds : List w.Relatum} {T : Nat},
+  (∀ (t : Nat), T ≤ t → ∀ (x : w.Relatum), w.web.active t x → x ∈ ds) →
+    (∀ (t : Nat), T ≤ t → w.flow.BalancesOn w.web ds t) →
+      (∀ (t : Nat), T ≤ t → w.flow.DissipatesOn ds t) → w.ArisingEmbodied → ¬¬∃ N, w.RestsFrom N
+@Becoming.World.rests_unrefuted : ∀ {w : Becoming.World},
+  w.Finite → w.Balanced → w.Dissipative → w.ArisingEmbodied → ¬¬∃ N, w.RestsFrom N
+Becoming.World.shuttle_finite : Becoming.World.shuttle.Finite
+Becoming.World.shuttle_arising : Becoming.World.shuttle.ArisingRecurs
+Becoming.World.shuttle_world : Becoming.World.shuttle.Finite ∧
+  Becoming.World.shuttle.ArisingRecurs ∧
+    Becoming.World.shuttle.CeasingRecurs ∧
+      Becoming.World.shuttle.Living ∧
+        Becoming.World.shuttle.Dependent ∧
+          Becoming.World.shuttle.Balanced ∧
+            Becoming.World.shuttle.Acting ∧
+              ¬Becoming.World.shuttle.Taking ∧
+                ¬Becoming.World.shuttle.Dissipative ∧ Becoming.World.shuttle.Embodied ∧ Becoming.World.shuttle.Carried
+@Becoming.World.SelfDrawing.self_taken : ∀ {t : Nat} {x y : Bool}, 0 < Becoming.Shuttle.flow.take t x y → y = x
+Becoming.World.SelfDrawing.taking : Becoming.Shuttle.flow.Taking Becoming.World.SelfDrawing.web
+Becoming.World.SelfDrawing.undermines : Becoming.World.SelfDrawing.web.active 0 true ∧ Becoming.Web.UnderminingAt 0 true
+Becoming.World.selfDrawing_finite : Becoming.World.selfDrawing.Finite
+Becoming.World.selfDrawing_world : Becoming.World.selfDrawing.Finite ∧
+  Becoming.World.selfDrawing.ArisingRecurs ∧
+    Becoming.World.selfDrawing.CeasingRecurs ∧
+      ¬Becoming.World.selfDrawing.Living ∧
+        Becoming.World.selfDrawing.Dependent ∧
+          Becoming.World.selfDrawing.Balanced ∧
+            Becoming.World.selfDrawing.Acting ∧ Becoming.World.selfDrawing.Taking ∧ Becoming.World.selfDrawing.Embodied
+Becoming.World.mutualism_finite : Becoming.World.mutualism.Finite
+Becoming.World.mutualism_world : Becoming.World.mutualism.Finite ∧
+  ¬Becoming.World.mutualism.ArisingRecurs ∧
+    ¬Becoming.World.mutualism.CeasingRecurs ∧
+      Becoming.World.mutualism.Living ∧ Becoming.World.mutualism.Dependent ∧ Becoming.World.mutualism.Embodied
+Becoming.World.drawdown_finite : Becoming.World.drawdown.Finite
+Becoming.World.drawdown_quiet : ∀ (t : Nat) (x : Becoming.Drawdown.Relatum),
+  1 ≤ t → ¬Becoming.Drawdown.web.active (t + 1) x
+Becoming.World.drawdown_world : Becoming.World.drawdown.Finite ∧
+  ¬Becoming.World.drawdown.ArisingRecurs ∧
+    ¬Becoming.World.drawdown.CeasingRecurs ∧
+      ¬Becoming.World.drawdown.Living ∧
+        Becoming.World.drawdown.Dependent ∧ Becoming.World.drawdown.Taking ∧ ¬Becoming.World.drawdown.Embodied
+Becoming.World.unbalanced_world : Becoming.World.unbalanced.Finite ∧
+  Becoming.World.unbalanced.ArisingRecurs ∧
+    Becoming.World.unbalanced.Dissipative ∧ Becoming.World.unbalanced.Embodied ∧ ¬Becoming.World.unbalanced.Balanced
+Becoming.World.idle_world : Becoming.World.idle.Balanced ∧ ¬Becoming.World.idle.Acting
+Becoming.World.restless_world : ¬Becoming.World.restless.Carried
+Becoming.World.throughput_arising : Becoming.World.throughput.ArisingEmbodied
+Becoming.World.throughput_world : Becoming.World.throughput.Balanced ∧
+  Becoming.World.throughput.Dissipative ∧
+    Becoming.World.throughput.ArisingEmbodied ∧
+      Becoming.World.throughput.ArisingRecurs ∧ ¬Becoming.World.throughput.Finite
+Becoming.World.flicker_world : Becoming.World.flicker.Finite ∧
+  Becoming.World.flicker.Balanced ∧
+    Becoming.World.flicker.Dissipative ∧ Becoming.World.flicker.ArisingRecurs ∧ ¬Becoming.World.flicker.ArisingEmbodied
+Becoming.World.Grazing.sides_distinct : ¬Becoming.World.Grazing.Relatum.side true ∈
+    [Becoming.World.Grazing.Relatum.side false]
+Becoming.World.Grazing.side_mem : ∀ (x : Bool),
+  Becoming.World.Grazing.Relatum.side x ∈
+    [Becoming.World.Grazing.Relatum.pool, Becoming.World.Grazing.Relatum.grazer, Becoming.World.Grazing.Relatum.browser,
+      Becoming.World.Grazing.Relatum.side true, Becoming.World.Grazing.Relatum.side false]
+Becoming.World.Grazing.side_taking : ∀ (t : Nat) (x : Bool),
+  0 < Becoming.Shuttle.stands x t →
+    ∀ (c : Becoming.World.Grazing.Relatum),
+      0 < Becoming.World.Grazing.take t (Becoming.World.Grazing.Relatum.side x) c →
+        Becoming.World.Grazing.active t (Becoming.World.Grazing.Relatum.side x) ∧
+          Becoming.World.Grazing.draws t (Becoming.World.Grazing.Relatum.side x) c
+Becoming.World.grazing_finite : Becoming.World.grazing.Finite
+Becoming.World.grazing_arising : Becoming.World.grazing.ArisingRecurs
+Becoming.World.grazing_balanced : Becoming.World.grazing.Balanced
+Becoming.World.grazing_acting : Becoming.World.grazing.Acting
+Becoming.World.grazing_taking : Becoming.World.grazing.Taking
+Becoming.World.grazing_dependent : Becoming.World.grazing.Dependent
+Becoming.World.grazing_not_self : (∀ (t : Nat) (c : Becoming.World.Grazing.Relatum),
+    Becoming.World.Grazing.web.draws t Becoming.World.Grazing.Relatum.grazer c →
+      c = Becoming.World.Grazing.Relatum.pool) ∧
+  (∀ (t : Nat), ¬Becoming.World.Grazing.web.active t Becoming.World.Grazing.Relatum.pool) ∧
+    Becoming.World.Grazing.web.need 0 Becoming.World.Grazing.Relatum.grazer Becoming.World.Grazing.Relatum.pool ≤
+      Becoming.World.Grazing.web.level 1 Becoming.World.Grazing.Relatum.pool
+Becoming.World.grazing_world : Becoming.World.grazing.Finite ∧
+  Becoming.World.grazing.ArisingRecurs ∧
+    ¬Becoming.World.grazing.Living ∧
+      Becoming.World.grazing.Dependent ∧
+        Becoming.World.grazing.Balanced ∧ Becoming.World.grazing.Acting ∧ Becoming.World.grazing.Taking
+Becoming.World.grazing_browser_ends : ¬Becoming.World.grazing.web.active 1 Becoming.World.Grazing.Relatum.browser
+Becoming.World.Seedbank.distinct : Becoming.Distinct
+  [Becoming.World.Seedbank.Relatum.drawer, Becoming.World.Seedbank.Relatum.seed, Becoming.World.Seedbank.Relatum.soil]
+Becoming.World.seedbank_world : Becoming.World.seedbank.Dependent ∧
+  Becoming.World.seedbank.Embodied ∧
+    Becoming.World.seedbank.Balanced ∧
+      Becoming.World.seedbank.Finite ∧
+        Becoming.Web.UnderminingOn 0 Becoming.World.Seedbank.Relatum.drawer Becoming.World.Seedbank.Relatum.soil ∧
+          ¬Becoming.World.seedbank.Living ∧
+            (Becoming.World.seedbank.web.level 1 Becoming.World.Seedbank.Relatum.soil <
+                  Becoming.World.seedbank.web.need 0 Becoming.World.Seedbank.Relatum.seed
+                    Becoming.World.Seedbank.Relatum.soil ∧
+                Becoming.World.seedbank.web.requires 1 Becoming.World.Seedbank.Relatum.seed
+                    Becoming.World.Seedbank.Relatum.soil ∧
+                  Becoming.World.seedbank.web.need 0 Becoming.World.Seedbank.Relatum.seed
+                      Becoming.World.Seedbank.Relatum.soil ≤
+                    Becoming.World.seedbank.web.need 1 Becoming.World.Seedbank.Relatum.seed
+                      Becoming.World.Seedbank.Relatum.soil) ∧
+              (∀ (t : Nat), ¬Becoming.World.seedbank.web.active t Becoming.World.Seedbank.Relatum.seed) ∧
+                ∀ (t : Nat) (x : Becoming.World.seedbank.Relatum), ¬Becoming.World.seedbank.web.Ceases t x
+Becoming.World.Leaking.takes : ∀ (t : Nat),
+  0 < Becoming.total [true, false] (Becoming.World.Leaking.flow.take t (Becoming.Shuttle.holder t))
+Becoming.World.leaking_world : Becoming.World.leaking.Finite ∧
+  Becoming.World.leaking.ArisingRecurs ∧
+    Becoming.World.leaking.Dissipative ∧
+      Becoming.World.leaking.Embodied ∧
+        ¬Becoming.World.leaking.Balanced ∧
+          ∀ (t : Nat),
+            Becoming.World.Leaking.flow.ClosedAt [true, false] t ∧
+              0 < Becoming.total [true, false] (Becoming.World.Leaking.flow.take t (Becoming.Shuttle.holder t))
+Becoming.World.Undecided.le_four : ∀ (N : Nat), N ≤ Becoming.World.Undecided.four N
+Becoming.World.Undecided.arises_at : ∀ (Q : Prop) (N : Nat),
+  ¬Becoming.World.Undecided.act Q (Becoming.World.Undecided.four N) ∧
+    Becoming.World.Undecided.act Q (Becoming.World.Undecided.four N + 1)
+Becoming.World.Undecided.decides : ∀ (Q : Prop) (t : Nat),
+  Becoming.World.Undecided.act Q t → ¬Becoming.World.Undecided.act Q (t + 1) → Q ∨ ¬Q
+Becoming.World.undecided_world : ∀ (Q : Prop),
+  (Becoming.World.undecided Q).Finite ∧ (Becoming.World.undecided Q).ArisingRecurs
+Becoming.World.law_decides : (∀ (w : Becoming.World), w.Finite → w.ArisingRecurs → w.CeasingRecurs) →
+  ∀ (Q : Prop), Q ∨ ¬Q
+@Becoming.World.law_of_em : ∀ {w : Becoming.World},
+  (∀ (P : Prop), P ∨ ¬P) → w.Finite → (w.ArisingRecurs ↔ w.CeasingRecurs)
+Becoming.World.law_iff_em : (∀ (w : Becoming.World), w.Finite → (w.ArisingRecurs ↔ w.CeasingRecurs)) ↔
+  ∀ (Q : Prop), Q ∨ ¬Q
+Becoming.World.contingent : (Becoming.World.shuttle.Dependent ∧ ¬Becoming.World.unchecked.Dependent) ∧
+  (Becoming.World.shuttle.Balanced ∧ ¬Becoming.World.unbalanced.Balanced) ∧
+    (Becoming.World.shuttle.Acting ∧ ¬Becoming.World.idle.Acting) ∧
+      (Becoming.World.selfDrawing.Taking ∧ ¬Becoming.World.shuttle.Taking) ∧
+        (Becoming.World.throughput.Dissipative ∧ ¬Becoming.World.shuttle.Dissipative) ∧
+          (Becoming.World.shuttle.Embodied ∧ ¬Becoming.World.drawdown.Embodied) ∧
+            Becoming.World.shuttle.Carried ∧ ¬Becoming.World.restless.Carried
+Becoming.World.separate : (Becoming.World.accretion.ArisingRecurs ∧
+    ¬Becoming.World.accretion.CeasingRecurs ∧ ¬Becoming.World.accretion.Finite) ∧
+  Becoming.World.attrition.CeasingRecurs ∧ ¬Becoming.World.attrition.ArisingRecurs ∧ ¬Becoming.World.attrition.Finite
+Becoming.World.living_crosses : (Becoming.World.shuttle.Finite ∧
+    Becoming.World.shuttle.ArisingRecurs ∧ Becoming.World.shuttle.Living) ∧
+  (Becoming.World.grazing.Finite ∧ Becoming.World.grazing.ArisingRecurs ∧ ¬Becoming.World.grazing.Living) ∧
+    (Becoming.World.mutualism.Finite ∧ ¬Becoming.World.mutualism.ArisingRecurs ∧ Becoming.World.mutualism.Living) ∧
+      Becoming.World.drawdown.Finite ∧ ¬Becoming.World.drawdown.ArisingRecurs ∧ ¬Becoming.World.drawdown.Living
+Becoming.World.living_crosses_ceasing : (Becoming.World.shuttle.Finite ∧
+    Becoming.World.shuttle.CeasingRecurs ∧ Becoming.World.shuttle.Living) ∧
+  (Becoming.World.grazing.Finite ∧ Becoming.World.grazing.CeasingRecurs ∧ ¬Becoming.World.grazing.Living) ∧
+    (Becoming.World.mutualism.Finite ∧ ¬Becoming.World.mutualism.CeasingRecurs ∧ Becoming.World.mutualism.Living) ∧
+      Becoming.World.drawdown.Finite ∧ ¬Becoming.World.drawdown.CeasingRecurs ∧ ¬Becoming.World.drawdown.Living
+Becoming.World.rests_needs : (Becoming.World.throughput.Balanced ∧
+    Becoming.World.throughput.Dissipative ∧
+      Becoming.World.throughput.ArisingEmbodied ∧
+        Becoming.World.throughput.ArisingRecurs ∧ ¬Becoming.World.throughput.Finite) ∧
+  (Becoming.World.shuttle.Finite ∧
+      Becoming.World.shuttle.Balanced ∧
+        Becoming.World.shuttle.ArisingEmbodied ∧
+          Becoming.World.shuttle.ArisingRecurs ∧ ¬Becoming.World.shuttle.Dissipative) ∧
+    (Becoming.World.leaking.Finite ∧
+        Becoming.World.leaking.Dissipative ∧
+          Becoming.World.leaking.ArisingEmbodied ∧
+            Becoming.World.leaking.ArisingRecurs ∧ ¬Becoming.World.leaking.Balanced) ∧
+      Becoming.World.flicker.Finite ∧
+        Becoming.World.flicker.Balanced ∧
+          Becoming.World.flicker.Dissipative ∧
+            Becoming.World.flicker.ArisingRecurs ∧ ¬Becoming.World.flicker.ArisingEmbodied

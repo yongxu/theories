@@ -1,0 +1,140 @@
+@Becoming.total_const : ∀ {α : Type} (c : Nat) (ks : List α), (Becoming.total ks fun x => c) = ks.length * c
+@Becoming.length_mul_le : ∀ {α : Type} {ks : List α} {a b : Nat},
+  (∀ (k : α), k ∈ ks → a ≤ b) → ks.length * a ≤ ks.length * b
+@Becoming.price : ∀ {α : Type} (ps : List α) (kids : α → List α) (a b : α → Nat),
+  Becoming.offspring ps kids b + Becoming.lowered ps kids a b =
+    Becoming.selected ps kids a + Becoming.raised ps kids a b
+@Becoming.selected_uniform : ∀ {α : Type} (ps : List α) (kids : α → List α) (a : α → Nat) (k : Nat),
+  (∀ (p : α), (kids p).length = k) → Becoming.selected ps kids a = k * Becoming.total ps a
+Becoming.unselected : (Becoming.selected [()] (fun x => [()]) fun x => 5) = 5 ∧
+  (Becoming.raised [()] (fun x => [()]) (fun x => 5) fun x => 5) = 0 ∧
+    (Becoming.lowered [()] (fun x => [()]) (fun x => 5) fun x => 5) = 0 ∧
+      (Becoming.offspring [()] (fun x => [()]) fun x => 5) = 5
+@Becoming.Flow.DescendsAt.active : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W → ∀ {t : Nat} {x g : X}, L.DescendsAt W t x g → W.active t g
+@Becoming.Flow.DescendsAt.supported_at : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat}
+  {x g : X},
+  (g ∈ L.present t → 0 < L.give t g x → W.active t g) →
+    (W.active t g → W.Supported t g) → L.DescendsAt W t x g → W.Supported t g
+@Becoming.Flow.DescendsAt.supported : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W → W.Dependent → ∀ {t : Nat} {x g : X}, L.DescendsAt W t x g → W.Supported t g
+@Becoming.Flow.unsupported_childless_at : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat} {g : X},
+  ¬W.Supported t g →
+    ∀ {x : X},
+      (g ∈ L.present t → 0 < L.give t g x → W.active t g) → (W.active t g → W.Supported t g) → ¬L.DescendsAt W t x g
+@Becoming.Flow.unsupported_childless : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W → W.Dependent → ∀ {t : Nat} {g : X}, ¬W.Supported t g → ∀ (x : X), ¬L.DescendsAt W t x g
+@Becoming.Flow.never_supported_childless : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W → W.Dependent → ∀ {g : X}, (∀ (t : Nat), ¬W.Supported t g) → ∀ (x : X), ¬L.Descends W x g
+@Becoming.Flow.selected_le_at : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat} {c : X}
+  {ps : List X} {kids : X → List X},
+  (∀ (p k : X), p ∈ ps → k ∈ kids p → L.DescendsAt W t k p) →
+    (∀ (p : X), p ∈ ps → W.requires t p c) →
+      (∀ (p k : X), p ∈ ps → k ∈ kids p → 0 < L.give t p k → W.active t p) →
+        (∀ (p : X), p ∈ ps → W.active t p → W.Supported t p) →
+          (Becoming.selected ps kids fun p => W.need t p c) ≤ Becoming.selected ps kids fun x => W.level t c
+@Becoming.Flow.selection_within_at : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {t : Nat} {c : X}
+  {ps : List X} {kids : X → List X},
+  (∀ (p k : X), p ∈ ps → k ∈ kids p → L.DescendsAt W t k p) →
+    (∀ (p : X), p ∈ ps → W.requires t p c) →
+      (∀ (p k : X), p ∈ ps → k ∈ kids p → 0 < L.give t p k → W.active t p) →
+        (∀ (p : X), p ∈ ps → W.active t p → W.Supported t p) →
+          ∀ (b : X → Nat),
+            Becoming.offspring ps kids b + Becoming.lowered ps kids (fun p => W.need t p c) b ≤
+              (Becoming.selected ps kids fun x => W.level t c) + Becoming.raised ps kids (fun p => W.need t p c) b
+@Becoming.Flow.selected_le : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {t : Nat} {c : X} {ps : List X} {kids : X → List X},
+        (∀ (p k : X), p ∈ ps → k ∈ kids p → L.DescendsAt W t k p) →
+          (∀ (p : X), p ∈ ps → W.requires t p c) →
+            (Becoming.selected ps kids fun p => W.need t p c) ≤ Becoming.selected ps kids fun x => W.level t c
+@Becoming.Flow.selection_within : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {t : Nat} {c : X} {ps : List X} {kids : X → List X},
+        (∀ (p k : X), p ∈ ps → k ∈ kids p → L.DescendsAt W t k p) →
+          (∀ (p : X), p ∈ ps → W.requires t p c) →
+            ∀ (b : X → Nat),
+              Becoming.offspring ps kids b + Becoming.lowered ps kids (fun p => W.need t p c) b ≤
+                (Becoming.selected ps kids fun x => W.level t c) + Becoming.raised ps kids (fun p => W.need t p c) b
+@Becoming.Flow.transmitted_supported_at : ∀ {X : Type} {W : Becoming.Web X X} {c : X} {δ t : Nat} {x g : X},
+  (W.requires (t + 1) x c → W.requires t g c ∧ W.need (t + 1) x c ≤ W.need t g c + δ) →
+    W.Supported t g → W.requires (t + 1) x c → W.need (t + 1) x c ≤ W.level t c + δ
+@Becoming.Flow.transmitted_within_at : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X} {c : X} {δ S n : Nat}
+  {x g : X},
+  (∀ (s : Nat), S ≤ s → s < S + n → W.level (s + 1) c + L.taken s c = W.level s c + L.given s c) →
+    (W.requires (S + n + 1) x c → W.requires (S + n) g c ∧ W.need (S + n + 1) x c ≤ W.need (S + n) g c + δ) →
+      W.Supported (S + n) g →
+        W.requires (S + n + 1) x c →
+          (W.need (S + n + 1) x c + Becoming.total (Becoming.steps S n) fun s => L.taken s c) ≤
+            (W.level S c + Becoming.total (Becoming.steps S n) fun s => L.given s c) + δ
+@Becoming.Flow.transmitted_supported : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {c : X} {δ : Nat},
+        L.TransmitsWithin W c δ →
+          ∀ {t : Nat} {x g : X}, L.DescendsAt W t x g → W.requires (t + 1) x c → W.need (t + 1) x c ≤ W.level t c + δ
+@Becoming.Flow.transmitted_within : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : X} {δ : Nat},
+          L.TransmitsWithin W c δ →
+            ∀ {S n : Nat} {x g : X},
+              L.DescendsAt W (S + n) x g →
+                W.requires (S + n + 1) x c →
+                  W.need (S + n + 1) x c + Becoming.total (Becoming.steps S n) (L.uptake [c]) ≤
+                    W.level S c + Becoming.total (Becoming.steps S n) (L.replenishment [c]) + δ
+Becoming.Drawdown.balances : Becoming.Drawdown.flow.Balances Becoming.Drawdown.web
+Becoming.Drawdown.acting : Becoming.Drawdown.flow.Acting Becoming.Drawdown.web
+Becoming.Drawdown.taking : Becoming.Drawdown.flow.Taking Becoming.Drawdown.web
+Becoming.Drawdown.dependent : Becoming.Drawdown.web.Dependent
+Becoming.Drawdown.transmits : Becoming.Drawdown.flow.TransmitsWithin Becoming.Drawdown.web
+  Becoming.Drawdown.Relatum.pool 0
+Becoming.Drawdown.descends_same : Becoming.Drawdown.flow.DescendsAt Becoming.Drawdown.web 0
+  Becoming.Drawdown.Relatum.same Becoming.Drawdown.Relatum.parent
+Becoming.Drawdown.descends_varied : Becoming.Drawdown.flow.DescendsAt Becoming.Drawdown.web 0
+  Becoming.Drawdown.Relatum.varied Becoming.Drawdown.Relatum.parent
+Becoming.Drawdown.same_unsupported : ∀ (t : Nat),
+  1 ≤ t → ¬Becoming.Drawdown.web.Supported t Becoming.Drawdown.Relatum.same
+Becoming.Drawdown.drawdown : Becoming.Drawdown.flow.Balances Becoming.Drawdown.web ∧
+  Becoming.Drawdown.flow.Acting Becoming.Drawdown.web ∧
+    Becoming.Drawdown.flow.Taking Becoming.Drawdown.web ∧
+      Becoming.Drawdown.web.Dependent ∧
+        Becoming.Drawdown.flow.TransmitsWithin Becoming.Drawdown.web Becoming.Drawdown.Relatum.pool 0 ∧
+          Becoming.Drawdown.flow.DescendsAt Becoming.Drawdown.web 0 Becoming.Drawdown.Relatum.same
+              Becoming.Drawdown.Relatum.parent ∧
+            Becoming.Drawdown.web.need 1 Becoming.Drawdown.Relatum.same Becoming.Drawdown.Relatum.pool =
+                Becoming.Drawdown.web.need 0 Becoming.Drawdown.Relatum.parent Becoming.Drawdown.Relatum.pool ∧
+              Becoming.Drawdown.flow.DescendsAt Becoming.Drawdown.web 0 Becoming.Drawdown.Relatum.varied
+                  Becoming.Drawdown.Relatum.parent ∧
+                Becoming.Drawdown.web.need 1 Becoming.Drawdown.Relatum.varied Becoming.Drawdown.Relatum.pool <
+                    Becoming.Drawdown.web.need 0 Becoming.Drawdown.Relatum.parent Becoming.Drawdown.Relatum.pool ∧
+                  Becoming.Drawdown.web.level 1 Becoming.Drawdown.Relatum.pool <
+                      Becoming.Drawdown.web.level 0 Becoming.Drawdown.Relatum.pool ∧
+                    (∀ (t : Nat), 1 ≤ t → ¬Becoming.Drawdown.web.Supported t Becoming.Drawdown.Relatum.same) ∧
+                      Becoming.Drawdown.web.Supported 1 Becoming.Drawdown.Relatum.varied ∧
+                        Becoming.Drawdown.web.active 1 Becoming.Drawdown.Relatum.varied ∧
+                          0 <
+                            Becoming.Drawdown.flow.take 1 Becoming.Drawdown.Relatum.varied
+                              Becoming.Drawdown.Relatum.pool
+Becoming.Slack.dependent : Becoming.Slack.web.Dependent
+Becoming.Slack.slack : Becoming.Slack.flow.Balances Becoming.Slack.web ∧
+  Becoming.Slack.flow.Acting Becoming.Slack.web ∧
+    Becoming.Slack.web.Dependent ∧
+      Becoming.Slack.flow.TransmitsWithin Becoming.Slack.web Becoming.Slack.Relatum.pool 1 ∧
+        Becoming.Slack.flow.DescendsAt Becoming.Slack.web 0 Becoming.Slack.Relatum.child Becoming.Slack.Relatum.parent ∧
+          Becoming.Slack.web.level 0 Becoming.Slack.Relatum.pool <
+              Becoming.Slack.web.need 1 Becoming.Slack.Relatum.child Becoming.Slack.Relatum.pool ∧
+            ∀ (t : Nat),
+              ¬Becoming.Slack.web.need t Becoming.Slack.Relatum.child Becoming.Slack.Relatum.pool ≤
+                  Becoming.Slack.web.level t Becoming.Slack.Relatum.pool
+Becoming.Unchecked.unchecked : Becoming.Unchecked.flow.Balances Becoming.Unchecked.web ∧
+  Becoming.Unchecked.flow.Acting Becoming.Unchecked.web ∧
+    Becoming.Unchecked.flow.TransmitsWithin Becoming.Unchecked.web Becoming.Unchecked.Relatum.pool 0 ∧
+      Becoming.Unchecked.flow.DescendsAt Becoming.Unchecked.web 0 Becoming.Unchecked.Relatum.child
+          Becoming.Unchecked.Relatum.parent ∧
+        ¬Becoming.Unchecked.web.Dependent ∧
+          Becoming.Unchecked.web.level 0 Becoming.Unchecked.Relatum.pool + 0 <
+            Becoming.Unchecked.web.need 1 Becoming.Unchecked.Relatum.child Becoming.Unchecked.Relatum.pool

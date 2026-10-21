@@ -120,6 +120,7 @@ Continues place-relations-in-context (Y2), which listed 初上无位, the line a
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T231053.882924Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261019T235844.485705Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 
 Aliases: `初上无位`, `初上無位`, `初上无阴阳定位`, `辯位`, `卦主`, `一爻为主`, `独应`, `上下應之`, `上下應`, `乘五剛`, `周易略例`, `王弼`, `the sole line`, `places between the ends`, `second relation of phase`, `Becoming.Hexagram.top_no_parity`, `Becoming.Hexagram.holdsPlace`, `Becoming.Hexagram.sole_unique`, `Becoming.Hexagram.sole_top_passes`, `Becoming.Hexagram.placeStatements_hold`
 

@@ -1,0 +1,209 @@
+@Becoming.Distinct.identityDecided : ∀ {α : Type} {s : List α},
+  Becoming.Distinct s → ∀ (a b : α), a ∈ s → b ∈ s → Becoming.Decided (a = b)
+@Becoming.listsOnce_of_decided : ∀ {α : Type} {l : List α}, Becoming.IdentityDecided l → ∃ s, Becoming.ListsOnce s l
+@Becoming.ListsOnce.identityDecided : ∀ {α : Type} {s l : List α}, Becoming.ListsOnce s l → Becoming.IdentityDecided l
+@Becoming.listsOnce_iff_decided : ∀ {α : Type} {l : List α}, (∃ s, Becoming.ListsOnce s l) ↔ Becoming.IdentityDecided l
+@Becoming.Distinct.listsOnce : ∀ {α : Type} {s : List α}, Becoming.Distinct s → Becoming.ListsOnce s s
+@Becoming.not_not_identityDecided : ∀ {α : Type} (l : List α), ¬¬Becoming.IdentityDecided l
+@Becoming.not_not_listsOnce : ∀ {α : Type} (l : List α), ¬¬∃ s, Becoming.ListsOnce s l
+@Becoming.not_of_listsOnce : ∀ {α : Type} {B : Prop} (l : List α), (∀ (s : List α), Becoming.ListsOnce s l → ¬B) → ¬B
+@Becoming.of_listsOnce : ∀ {α : Type} {B : Prop} {l : List α},
+  Becoming.IdentityDecided l → (∀ (s : List α), Becoming.ListsOnce s l → B) → B
+@Becoming.total_eq_of_same : ∀ {α : Type} {q : α → Nat} {s s' : List α},
+  Becoming.Distinct s → Becoming.Distinct s' → (∀ (a : α), a ∈ s ↔ a ∈ s') → Becoming.total s q = Becoming.total s' q
+@Becoming.ListsOnce.total_eq : ∀ {α : Type} {s s' l : List α},
+  Becoming.ListsOnce s l → Becoming.ListsOnce s' l → ∀ (q : α → Nat), Becoming.total s q = Becoming.total s' q
+@Becoming.ListsOnce.length_eq : ∀ {α : Type} {s s' l : List α},
+  Becoming.ListsOnce s l → Becoming.ListsOnce s' l → s.length = s'.length
+@Becoming.Numbers.unique : ∀ {α : Type} {l : List α} {n n' : Nat}, Becoming.Numbers l n → Becoming.Numbers l n' → n = n'
+@Becoming.numbers_iff_decided : ∀ {α : Type} {l : List α}, (∃ n, Becoming.Numbers l n) ↔ Becoming.IdentityDecided l
+@Becoming.Distinct.numbers : ∀ {α : Type} {s : List α}, Becoming.Distinct s → Becoming.Numbers s s.length
+@Becoming.Numbers.le_length : ∀ {α : Type} {l : List α} {n : Nat}, Becoming.Numbers l n → n ≤ l.length
+@Becoming.ListsOnce.total_le : ∀ {α : Type} {s l : List α},
+  Becoming.ListsOnce s l → ∀ (q : α → Nat), Becoming.total s q ≤ Becoming.total l q
+@Becoming.keepFresh_spec : ∀ {α : Type} {a : α} {s l : List α},
+  Becoming.ListsOnce s l → ∀ (decide : Decidable (a ∈ l)), Becoming.ListsOnce (Becoming.keepFresh a s decide) (a :: l)
+@Becoming.listOnce_listsOnce : ∀ {α : Type} (l : List α) (dec : (a b : α) → a ∈ l → b ∈ l → Decidable (a = b)),
+  Becoming.ListsOnce (Becoming.listOnce l dec) l
+@Becoming.Flow.ClosedAt.widen : ∀ {F C : Type} {L : Becoming.Flow F C} {cs ds : List C} {t : Nat},
+  L.ClosedAt cs t → (∀ (c : C), c ∈ cs → c ∈ ds) → L.ClosedAt ds t
+@Becoming.Flow.enclosed_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat},
+  L.Enclosed t ↔ ∃ cs, Becoming.IdentityDecided cs ∧ L.ClosedAt cs t
+@Becoming.Flow.around_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {ds : List C} {t : Nat},
+  L.Around ds t ↔ ∃ es, Becoming.IdentityDecided es ∧ (∀ (c : C), c ∈ ds → c ∈ es) ∧ L.ClosedAt es t
+@Becoming.Flow.Around.of_same : ∀ {F C : Type} {L : Becoming.Flow F C} {ds es : List C} {t : Nat},
+  L.Around ds t → (∀ (c : C), c ∈ es → c ∈ ds) → L.Around es t
+@Becoming.Flow.DissipatesOn.of_same : ∀ {F C : Type} {L : Becoming.Flow F C} {es es' : List C} {t : Nat},
+  L.DissipatesOn es t →
+    Becoming.Distinct es → Becoming.Distinct es' → (∀ (c : C), c ∈ es ↔ c ∈ es') → L.DissipatesOn es' t
+@Becoming.Flow.Dissipative.listsOnce : ∀ {F C : Type} {L : Becoming.Flow F C},
+  L.Dissipative → ∀ {cs es : List C} {t : Nat}, L.ClosedAt cs t → Becoming.ListsOnce es cs → L.DissipatesOn es t
+@Becoming.Flow.dissipative_iff : ∀ {F C : Type} {L : Becoming.Flow F C},
+  L.Dissipative ↔
+    ∀ (cs : List C) (t : Nat), L.ClosedAt cs t → ∀ (es : List C), Becoming.ListsOnce es cs → L.DissipatesOn es t
+@Becoming.Flow.Dissipative.opens_listing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {cs ds : List C},
+        (∀ (c : C), c ∈ cs → c ∈ ds) →
+          (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t) → ∀ (T : Nat), ¬∀ (t : Nat), T ≤ t → L.ClosedAt ds t
+@Becoming.Flow.Dissipative.finite_taking_not_recurring_listing : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {all : List C}, (∀ (c : C), c ∈ all) → ∀ (cs : List C), ¬∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t
+@Becoming.Flow.total_pos_of_within : ∀ {C : Type} {q : C → Nat} {ds es : List C},
+  (∀ (c : C), c ∈ ds → c ∈ es) → 0 < Becoming.total ds q → 0 < Becoming.total es q
+@Becoming.Flow.Inward.of_same : ∀ {F C : Type} {L : Becoming.Flow F C} {ds es : List C} {t : Nat},
+  L.Inward ds t → (∀ (c : C), c ∈ ds ↔ c ∈ es) → L.Inward es t
+@Becoming.Flow.taking_draws_in_listing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C} {T₀ : Nat},
+        (∀ (t : Nat), T₀ ≤ t → L.Around ds t) →
+          (∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers ds t) → ∀ (N : Nat), ¬∀ (t : Nat), N ≤ t → L.Inward ds t
+@Becoming.Flow.standing_lowers_listing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C} {t : Nat},
+        L.ClosedAt ds t →
+          ∀ {c : C},
+            c ∈ ds → W.ComesToStand t c → ∀ {es : List C}, Becoming.ListsOnce es ds → W.stock es (t + 1) < W.stock es t
+@Becoming.Flow.standing_lowers_decided : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Dissipative →
+      ∀ {ds : List C},
+        Becoming.IdentityDecided ds →
+          ∀ {t : Nat},
+            L.ClosedAt ds t →
+              ∀ {c : C},
+                c ∈ ds → W.ComesToStand t c → ∃ es, Becoming.ListsOnce es ds ∧ W.stock es (t + 1) < W.stock es t
+@Becoming.Web.embodiedArising_not_recurring_listing : ∀ {X : Type} {W : Becoming.Web X X} {L : Becoming.Flow X X},
+  L.Balances W →
+    L.Dissipative → ∀ {all : List X}, (∀ (x : X), x ∈ all) → ¬∀ (N : Nat), ∃ t x, N ≤ t ∧ W.Embodied x ∧ W.Arises t x
+@Becoming.Flow.taking_not_recurring_listing : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {r : Nat → Nat},
+  L.BalancesAt r W →
+    L.Dissipative →
+      ∀ {cs : List C} {T : Nat},
+        (∀ (t : Nat), T ≤ t → L.ClosedAt cs t) →
+          (∀ (t : Nat), T ≤ t → r t = 1) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ 0 < L.takers cs t
+@Becoming.World.finite_iff : ∀ {w : Becoming.World},
+  w.Finite ↔ w.Enumerated ∧ ∀ (x y : w.Relatum), Becoming.Decided (x = y)
+@Becoming.World.Enumerated.not_not_finite : ∀ {w : Becoming.World}, w.Enumerated → ¬¬w.Finite
+@Becoming.World.Enumerated.not_recurring : ∀ {w : Becoming.World},
+  w.Enumerated → w.Balanced → w.Dissipative → w.ArisingEmbodied → ¬w.ArisingRecurs ∧ ¬w.CeasingRecurs
+@Becoming.Listed.identityDecided : ∀ {α : Type} {p : α → Nat → Prop} {l : Nat → List α},
+  Becoming.Listed p l → ∀ (t : Nat), Becoming.IdentityDecided (l t)
+@Becoming.Listed.of_listing : ∀ {α : Type} {p : α → Nat → Prop} {l : Nat → List α},
+  (∀ (t : Nat) (a : α), p a t ↔ a ∈ l t) →
+    ∀ (dec : (t : Nat) → (a b : α) → a ∈ l t → b ∈ l t → Decidable (a = b)),
+      Becoming.Listed p fun t => Becoming.listOnce (l t) (dec t)
+@Becoming.Web.arising_of_ceasing_listing : ∀ {F C : Type} (W : Becoming.Web F C)
+  [(t : Nat) → (f : F) → Decidable (W.active t f)] {l : Nat → List F},
+  (∀ (t : Nat) (f : F), W.active t f ↔ f ∈ l t) →
+    ∀ (dec : (t : Nat) → (a b : F) → a ∈ l t → b ∈ l t → Decidable (a = b)),
+      (∀ (N : Nat), ∃ t f, N ≤ t ∧ W.Ceases t f) → W.Unceasing
+Becoming.Doubled.balances : Becoming.Doubled.flow.Balances Becoming.Doubled.web
+Becoming.Doubled.dissipative : Becoming.Doubled.flow.Dissipative
+Becoming.Doubled.closed : Becoming.Doubled.flow.ClosedAt [true, true, false] 0
+Becoming.Doubled.comes : Becoming.Doubled.web.ComesToStand 0 true
+Becoming.Doubled.needs_once : Becoming.Doubled.flow.Balances Becoming.Doubled.web ∧
+  Becoming.Doubled.flow.Dissipative ∧
+    Becoming.Doubled.flow.ClosedAt [true, true, false] 0 ∧
+      Becoming.Doubled.web.ComesToStand 0 true ∧
+        ¬Becoming.Doubled.web.stock [true, true, false] 1 < Becoming.Doubled.web.stock [true, true, false] 0 ∧
+          ¬Becoming.Doubled.flow.DissipatesOn [true, true, false] 0 ∧
+            Becoming.Doubled.web.stock [true, false] 1 < Becoming.Doubled.web.stock [true, false] 0
+@Becoming.listsOnce_all_iff : ∀ {α : Type},
+  (∀ (l : List α), ∃ s, Becoming.ListsOnce s l) ↔ ∀ (a b : α), Becoming.Decided (a = b)
+@Becoming.repeated_same : ∀ {α : Type} (a : α), (∀ (x : α), x ∈ [a, a] ↔ x ∈ [a]) ∧ [a].length < [a, a].length
+@Becoming.DistinctUnder.decided : ∀ {α : Type} {R : α → α → Prop},
+  Equivalence R → ∀ {s : List α}, Becoming.DistinctUnder R s → ∀ (a b : α), a ∈ s → b ∈ s → Becoming.Decided (R a b)
+@Becoming.DistinctUnder.eq_of : ∀ {α : Type} {R : α → α → Prop},
+  Equivalence R → ∀ {s : List α}, Becoming.DistinctUnder R s → ∀ (a b : α), a ∈ s → b ∈ s → R a b → a = b
+@Becoming.DistinctUnder.distinct : ∀ {α : Type} {R : α → α → Prop},
+  Equivalence R → ∀ {s : List α}, Becoming.DistinctUnder R s → Becoming.Distinct s
+@Becoming.ListsOnceBy.decided : ∀ {α : Type} {R : α → α → Prop},
+  Equivalence R → ∀ {s l : List α}, Becoming.ListsOnceBy R s l → ∀ (a b : α), a ∈ l → b ∈ l → Becoming.Decided (R a b)
+@Becoming.listsOnceBy_of_decided : ∀ {α : Type} {R : α → α → Prop},
+  Equivalence R →
+    ∀ {l : List α}, (∀ (a b : α), a ∈ l → b ∈ l → Becoming.Decided (R a b)) → ∃ s, Becoming.ListsOnceBy R s l
+@Becoming.NumbersBy.unique : ∀ {α : Type} {R : α → α → Prop},
+  Equivalence R → ∀ {l : List α} {n n' : Nat}, Becoming.NumbersBy R l n → Becoming.NumbersBy R l n' → n = n'
+@Becoming.numbersBy_iff_decided : ∀ {α : Type} {R : α → α → Prop},
+  Equivalence R →
+    ∀ {l : List α}, (∃ n, Becoming.NumbersBy R l n) ↔ ∀ (a b : α), a ∈ l → b ∈ l → Becoming.Decided (R a b)
+@Becoming.distinctBy_eq_iff : ∀ {α : Type} {s : List α}, Becoming.DistinctUnder Eq s ↔ Becoming.Distinct s
+@Becoming.numbers_iff_numbersBy_eq : ∀ {α : Type} {l : List α} {n : Nat},
+  Becoming.Numbers l n ↔ Becoming.NumbersBy Eq l n
+Becoming.World.indiscernible_equivalence : ∀ (w : Becoming.World), Equivalence w.Indiscernible
+Becoming.World.probe_indiscernible : ∀ (Q : Prop), (Becoming.World.probe Q).Indiscernible true false ↔ Q
+Becoming.World.indiscernible_decided_iff_em : (∀ (w : Becoming.World) (x y : w.Relatum),
+    Becoming.Decided (w.Indiscernible x y)) ↔
+  ∀ (Q : Prop), Q ∨ ¬Q
+Becoming.World.numbers_indiscernible_iff_em : (∀ (w : Becoming.World) (l : List w.Relatum),
+    ∃ n, Becoming.NumbersBy w.Indiscernible l n) ↔
+  ∀ (Q : Prop), Q ∨ ¬Q
+@Becoming.World.probe_named_apart : ∀ {Q : Prop},
+  Q → Becoming.Numbers [true, false] 2 ∧ Becoming.NumbersBy (Becoming.World.probe Q).Indiscernible [true, false] 1
+@Becoming.placed_ge : ∀ {α : Type} {l : List α} {i : Nat} {o : Nat × α}, o ∈ Becoming.placed l i → i ≤ o.fst
+@Becoming.placed_distinct : ∀ {α : Type} (l : List α) (i : Nat), Becoming.Distinct (Becoming.placed l i)
+@Becoming.mem_of_placed : ∀ {α : Type} {l : List α} {i : Nat} {o : Nat × α}, o ∈ Becoming.placed l i → o.snd ∈ l
+@Becoming.placed_of_mem : ∀ {α : Type} {l : List α} {i : Nat} {a : α}, a ∈ l → ∃ k, (k, a) ∈ Becoming.placed l i
+@Becoming.total_placed : ∀ {α : Type} (q : α → Nat) (l : List α) (i : Nat),
+  (Becoming.total (Becoming.placed l i) fun o => q o.snd) = Becoming.total l q
+@Becoming.Flow.byOccurrence_once : ∀ {F C : Type} {L : Becoming.Flow F C}, L.byOccurrence.Once
+@Becoming.Flow.byOccurrence_alike : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (i k : Nat) (f : F)
+  (t : Nat) (c : C),
+  L.byOccurrence.take t (i, f) c = L.byOccurrence.take t (k, f) c ∧
+    L.byOccurrence.give t (i, f) c = L.byOccurrence.give t (k, f) c ∧
+      (W.byOccurrence.active t (i, f) ↔ W.byOccurrence.active t (k, f)) ∧
+        (W.byOccurrence.requires t (i, f) c ↔ W.byOccurrence.requires t (k, f) c) ∧
+          W.byOccurrence.need t (i, f) c = W.byOccurrence.need t (k, f) c ∧
+            (W.byOccurrence.draws t (i, f) c ↔ W.byOccurrence.draws t (k, f) c)
+@Becoming.Flow.byOccurrence_taken : ∀ {F C : Type} {L : Becoming.Flow F C} (t : Nat) (c : C),
+  L.byOccurrence.taken t c = L.taken t c
+@Becoming.Flow.byOccurrence_given : ∀ {F C : Type} {L : Becoming.Flow F C} (t : Nat) (c : C),
+  L.byOccurrence.given t c = L.given t c
+@Becoming.Flow.byOccurrence_takers : ∀ {F C : Type} {L : Becoming.Flow F C} (cs : List C) (t : Nat),
+  L.byOccurrence.takers cs t = L.takers cs t
+@Becoming.Flow.byOccurrence_renewers : ∀ {F C : Type} {L : Becoming.Flow F C} (cs : List C) (t : Nat),
+  L.byOccurrence.renewers cs t = L.renewers cs t
+@Becoming.Flow.byOccurrence_closedAt : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.byOccurrence.ClosedAt cs t ↔ L.ClosedAt cs t
+@Becoming.Flow.byOccurrence_dissipatesOn : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C} {t : Nat},
+  L.byOccurrence.DissipatesOn cs t ↔ L.DissipatesOn cs t
+@Becoming.Flow.byOccurrence_dissipative : ∀ {F C : Type} {L : Becoming.Flow F C},
+  L.byOccurrence.Dissipative ↔ L.Dissipative
+@Becoming.Flow.byOccurrence_balancesOn : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {cs : List C}
+  {t : Nat}, L.byOccurrence.BalancesOn W.byOccurrence cs t ↔ L.BalancesOn W cs t
+@Becoming.Flow.byOccurrence_balances : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.byOccurrence.Balances W.byOccurrence ↔ L.Balances W
+@Becoming.Flow.byOccurrence_acting : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.byOccurrence.Acting W.byOccurrence ↔ L.Acting W
+@Becoming.Flow.byOccurrence_taking : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.byOccurrence.Taking W.byOccurrence ↔ L.Taking W
+@Becoming.Flow.byOccurrence_more : ∀ {F C : Type} {L : Becoming.Flow F C} {cs : List C},
+  L.byOccurrence.More cs ↔ L.More cs
+@Becoming.Flow.byOccurrence_uncounted : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  W.active t f → ∀ (l : List (Nat × F)), ¬∀ (o : Nat × F), W.byOccurrence.active t o → o ∈ l
+@Becoming.Flow.BalancesOn.sample_byOccurrence : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  [inst : DecidableEq F] (σ : Nat → Nat) {cs : List C} {s : Nat},
+  Becoming.Strict σ →
+    (∀ (j : Nat), j ∈ Becoming.span σ s → L.BalancesOn W cs j) →
+      (L.byOccurrence.sample σ).BalancesOn (W.byOccurrence.sample σ) cs s
+@Becoming.Flow.present_repeated : ∀ {F C : Type} {L : Becoming.Flow F C} {t : Nat} {a : F},
+  L.present t = [a, a] → Becoming.Numbers (L.present t) 1 ∧ (L.present t).length = 2
+@Becoming.Flow.present_listsOnce_all_iff : ∀ {F C : Type},
+  (∀ (L : Becoming.Flow F C) (t : Nat), ∃ s, Becoming.ListsOnce s (L.present t)) ↔ ∀ (a b : F), Becoming.Decided (a = b)
+@Becoming.CensusWebs.keep_pace : ∀ {F C : Type} (W : Becoming.Web F C) {fs : List F} {S n A D : Nat},
+  Becoming.CountsAcross (fun x => fs) (fun t f => W.Arises t f) (Becoming.steps S n) A →
+    Becoming.CountsAcross (fun x => fs) (fun t f => W.Ceases t f) (Becoming.steps S n) D →
+      A ≤ fs.length + D ∧ D ≤ fs.length + A
+@Becoming.CensusWebs.stock_eq : ∀ {F C : Type} (W : Becoming.Web F C) {cs cs' ds : List C},
+  Becoming.ListsOnce cs ds → Becoming.ListsOnce cs' ds → ∀ (t : Nat), W.stock cs t = W.stock cs' t
+@Becoming.CensusWebs.stock_le : ∀ {F C : Type} (W : Becoming.Web F C) {cs ds : List C},
+  Becoming.ListsOnce cs ds → ∀ (t : Nat), W.stock cs t ≤ W.stock ds t
+Becoming.CensusWebs.indiscernible_numbers_unique : ∀ (w : Becoming.World) {l : List w.Relatum} {n n' : Nat},
+  Becoming.NumbersBy w.Indiscernible l n → Becoming.NumbersBy w.Indiscernible l n' → n = n'

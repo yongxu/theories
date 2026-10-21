@@ -1,0 +1,268 @@
+@Becoming.Web.carries_zero_across : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {f : F},
+  W.CarriesAcross (fun x x_1 => 0) t f ↔ W.active t f → W.Supported t f
+@Becoming.Web.carries_zero : ∀ {F C : Type} {W : Becoming.Web F C}, (W.Carries fun x x_1 => 0) ↔ W.Dependent
+@Becoming.Web.CarriesAcross.pos : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat} {t : Nat} {f : F},
+  W.CarriesAcross r t f → W.active t f → ¬W.Supported t f → 0 < r t f
+@Becoming.Web.Carries.pos : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat},
+  W.Carries r → ∀ {t : Nat} {f : F}, W.active t f → ¬W.Supported t f → 0 < r t f
+@Becoming.Web.active_not_recurring_from : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat} {f : F} {T : Nat},
+  (∀ (t : Nat), T ≤ t → W.CarriesAcross r t f) →
+    (∀ (t : Nat), T ≤ t → ¬W.Supported t f) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.active t f
+@Becoming.Web.Carries.active_not_recurring : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat},
+  W.Carries r → ∀ {f : F} {T : Nat}, (∀ (t : Nat), T ≤ t → ¬W.Supported t f) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.active t f
+@Becoming.Web.CarriesAcross.step : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat} {t : Nat} {f : F}
+  [inst : Decidable (W.active t f)],
+  W.CarriesAcross r t f → ¬W.Supported t f → r (t + 1) f + Becoming.mark (W.active t f) ≤ r t f
+@Becoming.Web.Carries.step : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat},
+  W.Carries r →
+    ∀ {t : Nat} {f : F} [inst : Decidable (W.active t f)],
+      ¬W.Supported t f → r (t + 1) f + Becoming.mark (W.active t f) ≤ r t f
+@Becoming.Web.lasts_on : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat} {f : F}
+  [inst : (t : Nat) → Decidable (W.active t f)] (S N : Nat),
+  (∀ (t : Nat), S ≤ t → t < S + N → W.CarriesAcross r t f) →
+    (∀ (t : Nat), S ≤ t → t < S + N → ¬W.Supported t f) →
+      (r (S + N) f + Becoming.total (Becoming.steps S N) fun t => Becoming.mark (W.active t f)) ≤ r S f
+@Becoming.Web.Carries.lasts : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat},
+  W.Carries r →
+    ∀ {f : F} [inst : (t : Nat) → Decidable (W.active t f)] (S N : Nat),
+      (∀ (t : Nat), S ≤ t → ¬W.Supported t f) →
+        (r (S + N) f + Becoming.total (Becoming.steps S N) fun t => Becoming.mark (W.active t f)) ≤ r S f
+@Becoming.Web.Carries.lasts_within : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat},
+  W.Carries r →
+    ∀ {f : F} [inst : (t : Nat) → Decidable (W.active t f)] {k : Nat},
+      (∀ (t : Nat), r t f ≤ k) →
+        ∀ (S N : Nat),
+          (∀ (t : Nat), S ≤ t → ¬W.Supported t f) →
+            (Becoming.total (Becoming.steps S N) fun t => Becoming.mark (W.active t f)) ≤ k
+@Becoming.Web.arising_not_recurring_from : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat} {f : F} {T : Nat},
+  (∀ (t : Nat), T ≤ t → W.CarriesAcross r t f) →
+    (∀ (t : Nat), T ≤ t → ¬W.Supported t f) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.Arises t f
+@Becoming.Web.Carries.arising_not_recurring : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat},
+  W.Carries r → ∀ {f : F} {T : Nat}, (∀ (t : Nat), T ≤ t → ¬W.Supported t f) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.Arises t f
+@Becoming.Web.decays_by_from : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat} {f : F} {S : Nat},
+  (∀ (t : Nat), S ≤ t → W.CarriesAcross r t f) →
+    (∀ (t : Nat), S ≤ t → W.DecaysAcross r t f) →
+      (∀ (t : Nat), S ≤ t → ¬W.Supported t f) → ∀ (n : Nat), r (S + n) f + n ≤ r S f ∨ r (S + n) f = 0
+@Becoming.Web.Carries.decays_by : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat},
+  W.Carries r →
+    W.Decays r →
+      ∀ {f : F} {S : Nat},
+        (∀ (t : Nat), S ≤ t → ¬W.Supported t f) → ∀ (n : Nat), r (S + n) f + n ≤ r S f ∨ r (S + n) f = 0
+@Becoming.Web.ends_within_from : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat} {f : F} {S : Nat},
+  (∀ (t : Nat), S ≤ t → W.CarriesAcross r t f) →
+    (∀ (t : Nat), S ≤ t → W.DecaysAcross r t f) →
+      (∀ (t : Nat), S ≤ t → ¬W.Supported t f) → ∀ {n : Nat}, r S f ≤ n → ¬W.active (S + n) f
+@Becoming.Web.Carries.ends_within : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat},
+  W.Carries r →
+    W.Decays r →
+      ∀ {f : F} {S : Nat}, (∀ (t : Nat), S ≤ t → ¬W.Supported t f) → ∀ {n : Nat}, r S f ≤ n → ¬W.active (S + n) f
+@Becoming.Web.unsupported_after_loss : ∀ {F C : Type} {W : Becoming.Web F C} {T : Nat} {g : F} {c : C},
+  (∀ (t : Nat), T < t → W.requires t g c ∧ W.need T g c ≤ W.need t g c) →
+    (∀ (t : Nat), T < t → W.level t c < W.need T g c) → ∀ (t : Nat), T < t → ¬W.Supported t g
+@Becoming.Web.Carries.consumed_lasts : ∀ {F C : Type} {W : Becoming.Web F C} {r : Nat → F → Nat},
+  W.Carries r →
+    ∀ {T : Nat} {g : F} {c : C},
+      (∀ (t : Nat), T < t → W.requires t g c ∧ W.need T g c ≤ W.need t g c) →
+        (∀ (t : Nat), T < t → W.level t c < W.need T g c) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.active t g
+@Becoming.Flow.carriesAcross_of_held : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {f : F}
+  (hold : F → C),
+  L.BalancesOn W [hold f] t →
+    (¬W.Supported t f → L.given t (hold f) = 0) →
+      (¬W.Supported t f → W.active t f → 0 < L.taken t (hold f)) → W.CarriesAcross (fun t f => W.level t (hold f)) t f
+@Becoming.Flow.carries_of_held : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ (hold : F → C),
+      (∀ (t : Nat) (f : F), ¬W.Supported t f → L.given t (hold f) = 0) →
+        (∀ (t : Nat) (f : F), ¬W.Supported t f → W.active t f → 0 < L.taken t (hold f)) →
+          W.Carries fun t f => W.level t (hold f)
+@Becoming.Flow.carries_of_own : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ (hold : F → C),
+      (∀ (t : Nat) (f : F), ¬W.Supported t f → L.given t (hold f) = 0) →
+        (∀ (t : Nat) (f : F), ¬W.Supported t f → W.active t f → f ∈ L.present t ∧ 0 < L.take t f (hold f)) →
+          W.Carries fun t f => W.level t (hold f)
+@Becoming.Web.redirect_same : ∀ {F C : Type} {W : Becoming.Web F C}
+  [inst : (t : Nat) → (f : F) → Decidable (W.Supported t f)] (hold : F → C),
+  (W.redirect hold).level = W.level ∧ (W.redirect hold).active = W.active ∧ (W.redirect hold).draws = W.draws
+@Becoming.Web.redirect_supported_at : ∀ {F C : Type} {W : Becoming.Web F C}
+  [inst : (t : Nat) → (f : F) → Decidable (W.Supported t f)] {hold : F → C} {t : Nat} {f : F},
+  W.CarriesAcross (fun t f => W.level t (hold f)) t f → W.active t f → (W.redirect hold).Supported t f
+@Becoming.Web.redirect_dependent : ∀ {F C : Type} {W : Becoming.Web F C}
+  [inst : (t : Nat) → (f : F) → Decidable (W.Supported t f)] {hold : F → C},
+  (W.Carries fun t f => W.level t (hold f)) → (W.redirect hold).Dependent
+@Becoming.Web.unsupported_after_end : ∀ {X : Type} {W : Becoming.Web X X} {y g : X},
+  W.Embodied y →
+    ∀ {T : Nat},
+      (∀ (t : Nat), T ≤ t → W.requires t g y ∧ 0 < W.need t g y) →
+        (∀ (t : Nat), T ≤ t → ¬W.active t y) → ∀ (t : Nat), T ≤ t → ¬W.Supported t g
+@Becoming.Web.Carries.coextinct_lasts : ∀ {X : Type} {W : Becoming.Web X X} {r : Nat → X → Nat},
+  W.Carries r →
+    ∀ {y g : X},
+      W.Embodied y →
+        ∀ {T : Nat},
+          (∀ (t : Nat), T ≤ t → W.requires t g y ∧ 0 < W.need t g y) →
+            (∀ (t : Nat), T ≤ t → ¬W.active t y) → ¬∀ (N : Nat), ∃ t, N ≤ t ∧ W.active t g
+@Becoming.Web.chainEnd_ge : ∀ {X : Type} (r : Nat → X → Nat) (chain : Nat → X) (T k : Nat),
+  T ≤ Becoming.Web.chainEnd r chain T k
+@Becoming.Web.chainEnd_zero : ∀ {X : Type} (chain : Nat → X) (T k : Nat),
+  Becoming.Web.chainEnd (fun x x_1 => 0) chain T k = T
+@Becoming.Web.chain_ends_from : ∀ {X : Type} {W : Becoming.Web X X} {r : Nat → X → Nat} {chain : Nat → X} {n T : Nat},
+  (∀ (k t : Nat), k < n → T ≤ t → W.CarriesAcross r t (chain (k + 1))) →
+    (∀ (k t : Nat), k < n → T ≤ t → W.DecaysAcross r t (chain (k + 1))) →
+      (∀ (k : Nat), k < n → W.Embodied (chain k)) →
+        (∀ (k t : Nat),
+            k < n → T ≤ t → W.requires t (chain (k + 1)) (chain k) ∧ 0 < W.need t (chain (k + 1)) (chain k)) →
+          (∀ (t : Nat), T ≤ t → ¬W.active t (chain 0)) →
+            ∀ (k : Nat), k ≤ n → ∀ (t : Nat), Becoming.Web.chainEnd r chain T k ≤ t → ¬W.active t (chain k)
+@Becoming.Web.Carries.chain_ends : ∀ {X : Type} {W : Becoming.Web X X} {r : Nat → X → Nat},
+  W.Carries r →
+    W.Decays r →
+      ∀ {chain : Nat → X} {n : Nat},
+        (∀ (k : Nat), k < n → W.Embodied (chain k)) →
+          ∀ {T : Nat},
+            (∀ (k t : Nat),
+                k < n → T ≤ t → W.requires t (chain (k + 1)) (chain k) ∧ 0 < W.need t (chain (k + 1)) (chain k)) →
+              (∀ (t : Nat), T ≤ t → ¬W.active t (chain 0)) →
+                ∀ (k : Nat), k ≤ n → ∀ (t : Nat), Becoming.Web.chainEnd r chain T k ≤ t → ¬W.active t (chain k)
+@Becoming.Web.chain_ends_of_em_from : ∀ {X : Type} {W : Becoming.Web X X},
+  (∀ (P : Prop), P ∨ ¬P) →
+    ∀ {r : Nat → X → Nat} {chain : Nat → X} {n T : Nat},
+      (∀ (k t : Nat), k < n → T ≤ t → W.CarriesAcross r t (chain (k + 1))) →
+        (∀ (k : Nat), k < n → W.Embodied (chain k)) →
+          (∀ (k t : Nat),
+              k < n → T ≤ t → W.requires t (chain (k + 1)) (chain k) ∧ 0 < W.need t (chain (k + 1)) (chain k)) →
+            (∀ (t : Nat), T ≤ t → ¬W.active t (chain 0)) →
+              ∀ (k : Nat), k ≤ n → ∃ E, T ≤ E ∧ ∀ (t : Nat), E ≤ t → ¬W.active t (chain k)
+@Becoming.Web.Carries.chain_ends_of_em : ∀ {X : Type} {W : Becoming.Web X X},
+  (∀ (P : Prop), P ∨ ¬P) →
+    ∀ {r : Nat → X → Nat},
+      W.Carries r →
+        ∀ {chain : Nat → X} {n : Nat},
+          (∀ (k : Nat), k < n → W.Embodied (chain k)) →
+            ∀ {T : Nat},
+              (∀ (k t : Nat),
+                  k < n → T ≤ t → W.requires t (chain (k + 1)) (chain k) ∧ 0 < W.need t (chain (k + 1)) (chain k)) →
+                (∀ (t : Nat), T ≤ t → ¬W.active t (chain 0)) →
+                  ∀ (k : Nat), k ≤ n → ∃ E, T ≤ E ∧ ∀ (t : Nat), E ≤ t → ¬W.active t (chain k)
+@Becoming.Web.climbs : ∀ {X : Type} {ρ : X → Nat} {chain : Nat → X},
+  (∀ (k : Nat), ρ (chain k) < ρ (chain (k + 1))) → ∀ (k : Nat), k ≤ ρ (chain k)
+@Becoming.Web.no_unending_chain : ∀ {X : Type} {W : Becoming.Web X X} {ρ : X → Nat} {K : Nat},
+  (∀ (t : Nat) (g c : X), W.requires t g c → ρ c < ρ g ∧ ρ g ≤ K) →
+    ∀ {chain : Nat → X} {T : Nat},
+      (∀ (k t : Nat), T ≤ t → W.requires t (chain (k + 1)) (chain k) ∧ 0 < W.need t (chain (k + 1)) (chain k)) → False
+@Becoming.Web.came_to_stand : ∀ {X : Type} {W : Becoming.Web X X} {x : X},
+  (∀ (t : Nat), W.active t x → 0 < W.level t x) →
+    ∀ {T t : Nat}, T ≤ t → ¬0 < W.level T x → W.active t x → ¬∀ (s : Nat), T ≤ s → s < t → ¬W.ComesToStand s x
+Becoming.Seed.dark : ∀ (t : Nat), ¬Becoming.Seed.web.Supported t ()
+Becoming.Seed.carries : Becoming.Seed.web.Carries fun t x => Becoming.Seed.reserve t
+Becoming.Seed.seed : ¬Becoming.Seed.web.Dependent ∧
+  (Becoming.Seed.web.Carries fun t x => Becoming.Seed.reserve t) ∧
+    Becoming.Seed.web.Arises 0 () ∧
+      Becoming.Seed.web.Arises 2 () ∧
+        (∀ (t : Nat), ¬Becoming.Seed.web.active (t + 4) ()) ∧
+          (Becoming.total (Becoming.steps 0 4) fun t => Becoming.mark (Becoming.Seed.web.active t ())) =
+            Becoming.Seed.reserve 0
+Becoming.Seed.not_decays : ¬Becoming.Seed.web.Decays fun t x => Becoming.Seed.reserve t
+Becoming.Seed.no_held : ∀ (hold : Unit → Unit), ¬Becoming.Seed.web.Carries fun t f => Becoming.Seed.web.level t (hold f)
+Becoming.Viable.dark : ∀ (t : Nat), ¬Becoming.Viable.web.Supported t ()
+Becoming.Viable.carries : Becoming.Viable.web.Carries fun t x => Becoming.Viable.viability t
+Becoming.Viable.decays : Becoming.Viable.web.Decays fun t x => Becoming.Viable.viability t
+Becoming.Viable.viable : ¬Becoming.Viable.web.Dependent ∧
+  (Becoming.Viable.web.Carries fun t x => Becoming.Viable.viability t) ∧
+    (Becoming.Viable.web.Decays fun t x => Becoming.Viable.viability t) ∧
+      Becoming.Viable.web.Arises 1 () ∧ ∀ (t : Nat), ¬Becoming.Viable.web.active (t + 3) ()
+Becoming.Viable.no_held : ∀ (hold : Unit → Unit),
+  ¬Becoming.Viable.web.Carries fun t f => Becoming.Viable.web.level t (hold f)
+Becoming.Famine.balances : Becoming.Famine.flow.Balances Becoming.Famine.web
+@Becoming.Famine.supported_of_ne_fox : ∀ {t : Nat} (x : Becoming.Famine.Relatum),
+  ¬x = Becoming.Famine.Relatum.fox → Becoming.Famine.web.Supported t x
+Becoming.Famine.fed : Becoming.Famine.web.Supported 0 Becoming.Famine.Relatum.fox
+Becoming.Famine.carries : Becoming.Famine.web.Carries fun t x => Becoming.Famine.web.level t (Becoming.Famine.hold x)
+Becoming.Famine.hare_embodied : Becoming.Famine.web.Embodied Becoming.Famine.Relatum.hare
+Becoming.Famine.transformed_dependent : Becoming.Famine.transformed.Dependent
+Becoming.Famine.undermines_one : Becoming.Web.UnderminingAt 1 Becoming.Famine.Relatum.fox
+Becoming.Famine.transformed_not_undermining : ¬Becoming.Web.UnderminingAt 1 Becoming.Famine.Relatum.fox
+Becoming.Famine.living_differs : (Becoming.Famine.web.active 1 Becoming.Famine.Relatum.fox ∧
+    Becoming.Web.UnderminingAt 1 Becoming.Famine.Relatum.fox) ∧
+  Becoming.Famine.transformed.active 1 Becoming.Famine.Relatum.fox ∧
+    ¬Becoming.Web.UnderminingAt 1 Becoming.Famine.Relatum.fox
+Becoming.Famine.famine : ¬Becoming.Famine.web.Dependent ∧
+  (Becoming.Famine.web.Carries fun t x => Becoming.Famine.web.level t (Becoming.Famine.hold x)) ∧
+    Becoming.Famine.web.Embodied Becoming.Famine.Relatum.hare ∧
+      (∀ (t : Nat), 1 ≤ t → ¬Becoming.Famine.web.active t Becoming.Famine.Relatum.hare) ∧
+        (∀ (t : Nat),
+            1 ≤ t →
+              Becoming.Famine.web.requires t Becoming.Famine.Relatum.fox Becoming.Famine.Relatum.hare ∧
+                0 < Becoming.Famine.web.need t Becoming.Famine.Relatum.fox Becoming.Famine.Relatum.hare) ∧
+          Becoming.Famine.web.active 2 Becoming.Famine.Relatum.fox ∧
+            (∀ (t : Nat), 3 ≤ t → ¬Becoming.Famine.web.active t Becoming.Famine.Relatum.fox) ∧
+              (Becoming.total (Becoming.steps 1 2) fun t =>
+                    Becoming.mark (Becoming.Famine.web.active t Becoming.Famine.Relatum.fox)) =
+                  Becoming.Famine.web.level 1 (Becoming.Famine.hold Becoming.Famine.Relatum.fox) ∧
+                Becoming.Famine.transformed.Dependent
+@Becoming.Cascade.upto_pos : ∀ {t x : Nat}, 0 < Becoming.Cascade.upto t x ↔ t ≤ x
+Becoming.Cascade.upto_le_one : ∀ (t x : Nat), Becoming.Cascade.upto t x ≤ 1
+Becoming.Cascade.upto_after : ∀ (x : Nat), Becoming.Cascade.upto (x + 1) x = 0
+Becoming.Cascade.upto_self : ∀ (x : Nat), Becoming.Cascade.upto x x = 1
+Becoming.Cascade.embodied : ∀ (x : Nat), Becoming.Cascade.web.Embodied x
+@Becoming.Cascade.supported_of_le : ∀ {t x : Nat}, t ≤ x → Becoming.Cascade.web.Supported t (x + 1)
+@Becoming.Cascade.unsupported_late : ∀ {t x : Nat}, ¬Becoming.Cascade.web.Supported t x → x ≤ t
+@Becoming.Cascade.falls : ∀ {t x : Nat},
+  ¬Becoming.Cascade.web.Supported t x → t ≤ x → Becoming.Cascade.reserve (t + 1) x < Becoming.Cascade.reserve t x
+Becoming.Cascade.never_rises : ∀ (t x : Nat), Becoming.Cascade.reserve (t + 1) x ≤ Becoming.Cascade.reserve t x
+Becoming.Cascade.carries : Becoming.Cascade.web.Carries Becoming.Cascade.reserve
+Becoming.Cascade.decays : Becoming.Cascade.web.Decays Becoming.Cascade.reserve
+Becoming.Cascade.ends : ∀ (k : Nat), Becoming.Web.chainEnd Becoming.Cascade.reserve (fun k => k) 1 k = k + 1
+Becoming.Cascade.cascade : Becoming.Cascade.web.Carries Becoming.Cascade.reserve ∧
+  Becoming.Cascade.web.Decays Becoming.Cascade.reserve ∧
+    (∀ (x : Nat), Becoming.Cascade.web.Embodied x) ∧
+      (∀ (k t : Nat), 1 ≤ t → Becoming.Cascade.web.requires t (k + 1) k ∧ 0 < Becoming.Cascade.web.need t (k + 1) k) ∧
+        (∀ (t : Nat), 1 ≤ t → ¬Becoming.Cascade.web.active t 0) ∧
+          ¬Becoming.Cascade.web.Dependent ∧
+            ∀ (k : Nat),
+              Becoming.Web.chainEnd Becoming.Cascade.reserve (fun k => k) 1 k = k + 1 ∧ Becoming.Cascade.web.active k k
+@Becoming.ShortCascade.unsupported : ∀ {t x : Nat},
+  ¬Becoming.ShortCascade.web.Supported t x → ¬Becoming.Cascade.web.Supported t x
+Becoming.ShortCascade.carries : Becoming.ShortCascade.web.Carries Becoming.Cascade.reserve
+Becoming.ShortCascade.decays : Becoming.ShortCascade.web.Decays Becoming.Cascade.reserve
+Becoming.ShortCascade.ranked : ∀ (t g c : Nat), Becoming.ShortCascade.web.requires t g c → c < g ∧ g ≤ 2
+Becoming.short_cascade : Becoming.ShortCascade.web.Carries Becoming.Cascade.reserve ∧
+  Becoming.ShortCascade.web.Decays Becoming.Cascade.reserve ∧
+    (∀ (t : Nat),
+        Becoming.Web.chainEnd Becoming.Cascade.reserve (fun k => k) 1 2 ≤ t → ¬Becoming.ShortCascade.web.active t 2) ∧
+      Becoming.Web.chainEnd Becoming.Cascade.reserve (fun k => k) 1 2 = 2 + 1 ∧
+        Becoming.ShortCascade.web.active 2 2 ∧
+          ∀ (chain : Nat → Nat) (T : Nat),
+            ¬∀ (k t : Nat),
+                T ≤ t →
+                  Becoming.ShortCascade.web.requires t (chain (k + 1)) (chain k) ∧
+                    0 < Becoming.ShortCascade.web.need t (chain (k + 1)) (chain k)
+Becoming.Once.ind_and_le : ∀ (b c : Bool), Becoming.Once.ind (b && c) ≤ Becoming.Once.ind b
+Becoming.Once.ind_fall : ∀ (b c : Bool), b = true → c = true → Becoming.Once.ind (b && !c) < Becoming.Once.ind b
+Becoming.Once.unsupported : ∀ (s : Nat → Bool) (t : Nat), ¬(Becoming.Once.web s).Supported t ()
+Becoming.Once.carries : ∀ (s : Nat → Bool), (Becoming.Once.web s).Carries (Becoming.Once.reserve s)
+Becoming.Once.once : ∀ (s : Nat → Bool) {t u : Nat},
+  (Becoming.Once.web s).active t () → (Becoming.Once.web s).active u () → t = u
+Becoming.Web.lpo_of_ending : (∀ (W : Becoming.Web Unit Unit) (r : Nat → Unit → Nat)
+    (a : (t : Nat) → Decidable (W.active t ())),
+    W.Carries r → (∀ (t : Nat), ¬W.Supported t ()) → ∃ E, ∀ (t : Nat), E ≤ t → ¬W.active t ()) →
+  Becoming.LPO
+Becoming.Sleeper.sleeper : Becoming.Sleeper.flow.Balances Becoming.Sleeper.web ∧
+  Becoming.Sleeper.flow.Dissipative ∧
+    Becoming.Sleeper.web.Dependent ∧
+      Becoming.Sleeper.web.Unceasing ∧
+        (∀ (t : Nat), Becoming.Sleeper.web.active t () → 0 < Becoming.Sleeper.web.level t ()) ∧
+          ¬Becoming.Sleeper.web.Embodied () ∧ ∀ (t : Nat), ¬Becoming.Sleeper.web.ComesToStand t ()
+Becoming.Provisioned.balances : Becoming.Provisioned.flow.Balances Becoming.Provisioned.web
+Becoming.Provisioned.acting : Becoming.Provisioned.flow.Acting Becoming.Provisioned.web
+Becoming.Provisioned.provisioned : Becoming.Provisioned.flow.Balances Becoming.Provisioned.web ∧
+  Becoming.Provisioned.flow.Acting Becoming.Provisioned.web ∧
+    Becoming.Provisioned.web.ComesToStand 0 Becoming.Provisioned.Relatum.seed ∧
+      Becoming.Provisioned.web.level 1 Becoming.Provisioned.Relatum.seed ≤
+          Becoming.Provisioned.flow.given 0 Becoming.Provisioned.Relatum.seed ∧
+        Becoming.Provisioned.web.Arises 1 Becoming.Provisioned.Relatum.seed ∧
+          Becoming.Provisioned.flow.given 1 Becoming.Provisioned.Relatum.seed = 0 ∧
+            (∀ (t : Nat),
+                Becoming.Provisioned.web.active t Becoming.Provisioned.Relatum.seed →
+                  0 < Becoming.Provisioned.web.level t Becoming.Provisioned.Relatum.seed) ∧
+              ¬Becoming.Provisioned.web.Embodied Becoming.Provisioned.Relatum.seed
