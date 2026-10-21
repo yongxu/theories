@@ -14,7 +14,8 @@
 2. Two histories the reader couples alike, the reader and the one read both couple alike, so every selection through the pooled coupling of the two is a selection through the reading. (`Becoming.Web.AlikeThrough.of_reads`, `Becoming.Web.SelectsThroughAll.reads`)
 3. The reader's coupling closure lies within the pool's, and is exactly the pool's, the union of the two closures, where the one read exchanges with a condition coupled into it; stated first for any relations. (`Becoming.WithinClosure.of_reads`, `Becoming.WithinClosureOf.to_reads`, `Becoming.Flow.CoupledFrom.of_reads`, `Becoming.Flow.withinCoupling_reads`, `Becoming.Flow.withinCoupling_reads_iff`)
 4. Beyond that union a part is selected alike through every reading, the rest of the exchange fixed; so is an act differing only beyond it, the rest following a law reading through the widened coupling, which a law reading through the narrower coupling does. (`Becoming.Flow.unselected_beyond_reads`, `Becoming.Flow.act_unselected_reads`, `Becoming.ExchangeLaw.Through.widen`)
-5. Witness: in Clearing the source reading the clearer's couplings selects the cleared and the spared world alike at every step, and reading the dweller's, a formation the act reaches, separates them. (`Becoming.Clearing.reading_clearer_unselected`, `Becoming.Clearing.reading_dweller_selects`)
+5. Knowing another's law is no coupling: every selection through another's couplings is one through a formation's own exactly when whatever it couples alike the other does, and otherwise some is not; then, under a law reading through the other's coupling, the other's acts are fixed by what the formation couples into. Reading the other's couplings is that fine. (`Becoming.Web.anticipates_iff`, `Becoming.Web.anticipation_misses`, `Becoming.Web.SelectsThrough.read`, `Becoming.ExchangeLaw.Through.anticipated`)
+6. Witness: in Clearing the source reading the clearer's couplings selects the cleared and the spared world alike at every step, and reading the dweller's, a formation the act reaches, separates them. (`Becoming.Clearing.reading_clearer_unselected`, `Becoming.Clearing.reading_dweller_selects`)
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -25,7 +26,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- Reading another's law, how it would exchange under histories not taken, is not stated; the reading here is of the levels of what the other couples into.
+- What another's law does under histories not taken: no run fixes it, so what a reader takes it to be there is a model.
 - That a system's internal states are conditions coupled into it, and which of them a reader can read, is a correspondence the laws do not supply.
 - Reading a system does not close what its own act does beyond its closure, unless the reader's own couplings reach there.
 - Without its hypothesis the closure identity can fail: where the one read exchanges with nothing it couples into, it need not lie within the reader's closure.
@@ -43,7 +44,7 @@ Canonical source: [SelectionPool.lean](../../../../experiments/integrated-correc
 <a id="next--下一步"></a>
 ## Next
 
-Reading another's law (how it would exchange under histories not taken); a correspondence for which internal states of a trained system are conditions coupled into it; an independent review.
+The converse for acts under laws of natural-number exchanges, where the reader is coarser (it needs the class decided); a correspondence for which internal states of a trained system are conditions coupled into it; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -73,11 +74,11 @@ Interpretability-based oversight (Olah et al. 2020; Elhage et al. 2021) and elic
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [SelectionPool.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean) | `Becoming.Clearing.acts_alike`, `Becoming.Clearing.clearerSide_closed_either`, `Becoming.Clearing.pool_closes_gap`, `Becoming.Clearing.reading_clearer_unselected`, `Becoming.Clearing.reading_dweller_selects`, `Becoming.Clearing.restLaw`, `Becoming.Clearing.restLaw_through`, `Becoming.Clearing.rest_follows`, `Becoming.Clearing.rest_follows_spared`, `Becoming.Clearing.source_within`, `Becoming.Clearing.start_alike`, `Becoming.Clearing.withheld_alike_for_clearer`, `Becoming.Clearing.within_closure_unseparated`, `Becoming.ExchangeLaw.Through.widen`, `Becoming.Flow.ActsAlikeOnPoolCoupled`, `Becoming.Flow.ActsAlikeOnPoolCoupled.within`, `Becoming.Flow.CoupledFrom.of_reads`, `Becoming.Flow.act_alike_pool`, `Becoming.Flow.act_selected_by_pool`, `Becoming.Flow.act_unselected_pool`, `Becoming.Flow.act_unselected_reads`, `Becoming.Flow.apart_beyond_pool`, `Becoming.Flow.consequence_unselected_pool`, `Becoming.Flow.separating_member_beyond`, `Becoming.Flow.unselected_beyond_reads`, `Becoming.Flow.withinCoupling_reads`, `Becoming.Flow.withinCoupling_reads_iff`, `Becoming.Web.AlikeThrough.of_reads`, `Becoming.Web.ReadsCouplings`, `Becoming.Web.SelectsThroughAll.reads`, `Becoming.Web.admission_separates_all`, `Becoming.Web.member_separates_all`, `Becoming.Web.pool_adds`, `Becoming.Web.pooledClass_selects`, `Becoming.Web.pooled_iff_member`, `Becoming.Web.separates_all_iff`, `Becoming.Web.separates_all_iff_member`, `Becoming.WithinClosure.of_reads`, `Becoming.WithinClosureOf.to_reads`, `Becoming.act_courses_unselected_pool` |
+| proof | [SelectionPool.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionPool.lean) | `Becoming.Clearing.acts_alike`, `Becoming.Clearing.clearerSide_closed_either`, `Becoming.Clearing.pool_closes_gap`, `Becoming.Clearing.reading_clearer_unselected`, `Becoming.Clearing.reading_dweller_selects`, `Becoming.Clearing.restLaw`, `Becoming.Clearing.restLaw_through`, `Becoming.Clearing.rest_follows`, `Becoming.Clearing.rest_follows_spared`, `Becoming.Clearing.source_within`, `Becoming.Clearing.start_alike`, `Becoming.Clearing.withheld_alike_for_clearer`, `Becoming.Clearing.within_closure_unseparated`, `Becoming.ExchangeLaw.Through.anticipated`, `Becoming.ExchangeLaw.Through.widen`, `Becoming.Flow.ActsAlikeOnPoolCoupled`, `Becoming.Flow.ActsAlikeOnPoolCoupled.within`, `Becoming.Flow.CoupledFrom.of_reads`, `Becoming.Flow.act_alike_pool`, `Becoming.Flow.act_selected_by_pool`, `Becoming.Flow.act_unselected_pool`, `Becoming.Flow.act_unselected_reads`, `Becoming.Flow.apart_beyond_pool`, `Becoming.Flow.consequence_unselected_pool`, `Becoming.Flow.separating_member_beyond`, `Becoming.Flow.unselected_beyond_reads`, `Becoming.Flow.withinCoupling_reads`, `Becoming.Flow.withinCoupling_reads_iff`, `Becoming.Web.AlikeThrough.of_reads`, `Becoming.Web.ReadsCouplings`, `Becoming.Web.SelectsThrough.read`, `Becoming.Web.SelectsThroughAll.reads`, `Becoming.Web.admission_separates_all`, `Becoming.Web.anticipates_iff`, `Becoming.Web.anticipation_misses`, `Becoming.Web.member_separates_all`, `Becoming.Web.pool_adds`, `Becoming.Web.pooledClass_selects`, `Becoming.Web.pooled_iff_member`, `Becoming.Web.separates_all_iff`, `Becoming.Web.separates_all_iff_member`, `Becoming.WithinClosure.of_reads`, `Becoming.WithinClosureOf.to_reads`, `Becoming.act_courses_unselected_pool` |
 | proof | [Selection.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean) | `Becoming.Flow.WithinPoolCoupling`, `Becoming.Flow.unselected_beyond_coupling`, `Becoming.Flow.unselected_beyond_pool`, `Becoming.Web.SelectsThrough`, `Becoming.Web.SelectsThroughAll` |
 | proof | [Testing.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Testing.lean) | `Becoming.Flow.CoupledFrom`, `Becoming.Flow.WithinCoupling`, `Becoming.Web.AlikeThrough` |
 | proof | [SelectionGap.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionGap.lean) | `Becoming.Flow.act_unselected`, `Becoming.Flow.act_unselected_of_coupled` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 
@@ -87,6 +88,7 @@ Aliases: `reading another's couplings`, `reading is pooling`, `reading a system`
 ### History
 
 - 21 October 2026: added (AP1), reading another's couplings is pooling with it: in closure exactly where the one read exchanges with what it couples into, in selection at least; study section 282.
+- 21 October 2026, AP2: reading another's law, anticipation exactly where the reader couples as finely, never reach (study section 305); a law, the first does-not-show item and the next delta revised to match; the earlier laws and the statement are unchanged.
 
 </details>
 

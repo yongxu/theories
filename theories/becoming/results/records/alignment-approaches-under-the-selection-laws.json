@@ -335,7 +335,7 @@
         "Becoming.Flow.withinCoupling_reads_iff",
         "Becoming.Web.pooled_iff_member"
       ],
-      "sha256": "3720090b16cbebf5f35e1715a56be5a8c68dfbea5138c8d6879692ddee2d47ce"
+      "sha256": "e966d4259d15dc89a800441e9d1e7796bdeea68b3a4df2d18a68e3e627cb5d9c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
@@ -346,7 +346,7 @@
         "Becoming.Weighting.widens_iff_every_of_class",
         "Becoming.Weighting.widens_iff_every_score"
       ],
-      "sha256": "ebad406963f387652a5e6c086e102cb0c7069ac8f8ebbb40cb1d3a1765a52452"
+      "sha256": "bad83c9cbc1745a3caa9df153bfaa5b579cb62e3a85c1ecb2fc54d8b13abe485"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
@@ -361,7 +361,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "1634b28f3667ea88678a1b78014e2e440cd421d6721d1036c6a7763cbfbace15"
+      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
     }
   ],
   "history": [

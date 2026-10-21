@@ -13476,3 +13476,41 @@ Output → input: section 7's alignment account now cites the laws for the outco
 ```
 
 **Self-review.** The earlier paragraph was accurate when written (20 October, before CG2 and SG3 landed); keeping it beside the new laws would have left live text saying the spine is silent where it speaks. The X5 post hoc reading ("one's own later acts are the outrunning rest") is not cited; CG3's correction is. X4's failed open side is not cited as support. "Sixteen times" is the ratio of CG2's end-reading weights, 32 to 2.
+
+## 305. Reading another's law, and lexical priority within the class (AP2)
+
+```text
+Result(s): record reading-anothers-couplings-is-pooling extended (Becoming.SelectionPool, rule 9); record
+       widening-as-what-every-weighting-ranks extended (Becoming.Weightings, rule 9); no new record, no definition
+       changed.
+Delta: chapter 8.1 item 7's sub-item "members reading one another's law". Knowing another's law is no coupling: every
+       selection through another's couplings is one through a formation's own exactly when whatever the formation
+       couples alike the other couples alike; where that fails at two histories, some selection through the other's
+       couplings goes through none of the formation's; where it holds, the other's acts under a law reading through
+       its coupling are fixed by what the formation couples into, and reading the other's couplings is that fine.
+       And lexical priority, the basic items first, ranks every widening higher, so it lies within the classes whose
+       shared order is widening (the hedge AP1 left in THE-STEP-OF-INVARIANCE section 6.5, made exact).
+Premises / correspondence: none beyond each law's (for the acts, a law reading through the other's coupling, the
+       other outside the part). Reading "knowing a law" as having a selection or exchange function in advance is the
+       AI's; so is reading Weighting.lexical as Lexical.Above on listed items.
+Evidence: core receipt 20261021T111912.398950Z (passed, empty axiom reports).
+Boundary: the refinement law is the measurability of a function under a finer partition (Revision.web_keeps_iff is
+       the case of one formation at two steps; Blackwell 1953 compares experiments so), not new mathematics. The
+       converse for acts, a law reading through the other's coupling that a coarser reader cannot anticipate, is
+       stated for selections only: a law of natural-number exchanges separating the class alike through the other
+       needs that class decided. What the law does under histories not taken stays a model.
+Output → input: chapter 7.3, 7.7 and 8.1 item 7 (the sub-item settled); chapter 6.5; THE-STEP-OF-INVARIANCE 5, 6.5
+       and 8; the two items AP1 left open (study section 282).
+```
+
+AP1 settled reading the levels of what another couples into: it is pooling with the other, and it reaches no further than the union of the two closures (§282). The sub-item of §8.1 item 7 it left open was reading another's *law*, how the other would exchange under histories, beyond the levels of what it couples into. A law is a function given in advance. Knowing it changes which function a formation can compute, not what the formation couples into. So the question becomes exact: what can a formation anticipate of another, through its own couplings, given the other's law?
+
+**Anticipation is coupling as finely.** `Web.anticipates_iff`: every selection through `a`'s couplings up to `t` is one through `o`'s, under any coupling by level `obs'` for `o`, exactly when whatever `o` couples alike up to `t`, `a` couples alike. Where that fails at two histories, `Web.anticipation_misses` exhibits a selection through `a`'s couplings that goes through none of `o`'s: the class of histories alike with the first through `a`. Knowing `a`'s law does not help here. A selection is any claim about histories, laws included, and `o` cannot compute one that separates what it couples alike. For acts, `ExchangeLaw.Through.anticipated`: where the law reads through `a`'s coupling, `a` lying outside the part, and `o`'s coupling is that fine, `a` exchanges alike across every step up to `t` under any two histories `o` couples alike. With the law, `o` anticipates `a`'s acts. Reading `a`'s couplings is that fine (`Web.SelectsThrough.read`, from `Web.AlikeThrough.of_reads`).
+
+So reading another's law adds anticipation, exactly where the reader couples as finely as the other, and never reach. What either selects stays within the union of their closures (`Flow.unselected_beyond_reads`, §282). What the law does under histories not taken is not fixed by any run (`not_fixes_of_untaken`). Knowing it there is a model, right beyond the data only where the class training can reach decides it (`Training.fit_right_iff`). [AI reading] An overseer that reads a system's couplings and knows its law anticipates every act of the system, its plans included where they are conditions the system couples into. It does not thereby see any consequence beyond the union, and what it takes the law to be beyond the runs it has seen is a model.
+
+**Lexical priority within the class.** AP1 wrote, in THE-STEP-OF-INVARIANCE §6.5, that lexical priority lies within the classes whose shared order is widening "where it ranks each widening higher". It always does. `Weighting.lexical items basic` ranks `a` above `b` when `a` widens `b` on the basic items, or admits exactly `b`'s basic items and widens `b` on the others. This is the order of `Lexical.Above` read on listed items, the basic claims being the basic items admitted and the gains the others [AI reading]. `Weighting.increasing_lexical`: it ranks every widening higher. Where a widening adds a basic item, the basic tier decides; otherwise the basic items are the same and the gains decide. So lexical priority, like priority to the worse off (`Weighting.increasing_prior`) and every positive weighting, is an order increasing in admission. A class holding all three shares exactly widening (`Weighting.widens_iff_every_of_class`), and lexical priority decides only comparisons widening leaves mixed.
+
+**Self-review.** Both laws are short. `anticipates_iff` is the measurability of a function under a finer partition, the two-formation case of `Revision.web_keeps_iff`. `increasing_lexical` is a case split on whether the widening adds a basic item. Their use is to close two open sentences exactly: §8.1 item 7's sub-item, and THE-STEP-OF-INVARIANCE's hedge. Not done: the converse for acts under laws of natural-number exchanges, which needs the class decided; a law over histories not taken, which stays a model; the bridge from `Weighting.lexical` to `Lexical.Above`, stated here as a correspondence only.
+
+**The run.** Core 284 modules and 11,988 theorems, instances 7 and 567, applications 6 and 179; 27 Lean steps ran, 1,173 reused. 44 declarations of Becoming.SelectionPool, 41 of them theorems (4 new), and 116 of Becoming.Weightings, 81 of them theorems (5 new), all with empty axiom reports. Connectivity: 656 of 12,734 apart; one new apart root, Weighting.increasing_lexical, registered as general structure; none in Becoming.SelectionPool; register check passes.
