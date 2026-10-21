@@ -1,11 +1,11 @@
 {
- "commit": "3942a5b99405abea3a31d7fad2b6f0cacc0ae859",
+ "commit": "1305aaa3fff2dcd182f017853809877079e95055",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261021T135044.825185Z",
+ "core_receipt_at_commit": "20261021T141520.308357Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 301,
- "constants": 39282,
- "spine_theorems": 12909,
+ "constants": 39294,
+ "spine_theorems": 12915,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -26,9 +26,9 @@
   "Process reaches World family": false
  },
  "classes": {
-  "statement on both families": 999,
+  "statement on both families": 1003,
   "statement on Process/Frame/Run/Trace": 2915,
-  "statement on World/Flow/Web": 3007,
+  "statement on World/Flow/Web": 3009,
   "statement on the base only through a law of its own module": 243,
   "proof through a base family": 155,
   "used by a theorem on the base": 4788,
@@ -96,9 +96,9 @@
   "Becoming.Openness": 33,
   "Becoming.Persistence": 31,
   "Becoming.ExchangePremises": 28,
+  "Becoming.Ranking": 23,
   "Becoming.Interleavings": 23,
   "Becoming.CensusBinding": 22,
-  "Becoming.Ranking": 20,
   "Becoming.CourseWorlds": 20,
   "Becoming.Transmission": 19,
   "Becoming.CensusCounts": 19,
@@ -126,10 +126,10 @@
   "Becoming.OrderNormal": 6,
   "Becoming.Decidedness": 6,
   "Becoming.ActiveReading": 6,
+  "Becoming.JointDraw": 6,
   "Becoming.ContextualRuns": 6,
   "Becoming.Horizon": 5,
   "Becoming.Stuttering": 5,
-  "Becoming.JointDraw": 5,
   "Becoming.ParityReadings": 5,
   "Becoming.Unfolding": 4,
   "Becoming.ValuationFrames": 4,
@@ -345,7 +345,7 @@
   ],
   "Becoming.Relevance": [
    4,
-   33
+   34
   ],
   "Becoming.Narrowing": [
    4,
@@ -583,12 +583,12 @@
  "rings": {
   "core": {
    "modules": 285,
-   "theorems": 12163,
+   "theorems": 12169,
    "apart": 567,
    "classes": {
-    "statement on both families": 985,
+    "statement on both families": 989,
     "statement on Process/Frame/Run/Trace": 2704,
-    "statement on World/Flow/Web": 2982,
+    "statement on World/Flow/Web": 2984,
     "statement on the base only through a law of its own module": 197,
     "proof through a base family": 144,
     "used by a theorem on the base": 4429,
@@ -688,7 +688,7 @@
   "theorems_outside_the_main_component": []
  },
  "records_by_best_alias_class": {
-  "statement on both families": 70,
+  "statement on both families": 71,
   "statement on Process/Frame/Run/Trace": 120,
   "statement on World/Flow/Web": 91,
   "statement on the base only through a law of its own module": 4,
@@ -5549,6 +5549,9 @@
   "Becoming.Ranking.level_never_falls": "statement on World/Flow/Web",
   "Becoming.Ranking.not_undermining_of_rising": "statement on World/Flow/Web",
   "Becoming.Ranking.stepwise_extends_iff_of_rising": "statement on both families",
+  "Becoming.Ranking.relational_kept_iff": "statement on World/Flow/Web",
+  "Becoming.Ranking.relational_extends_iff_of_eases": "statement on both families",
+  "Becoming.Ranking.relational_extends_iff_of_rising": "statement on both families",
   "Becoming.Ranking.undisturbed_sustains": "used by a theorem on the base",
   "Becoming.Ranking.absent_sustains": "statement on World/Flow/Web",
   "Becoming.Ranking.absent_renews": "statement on World/Flow/Web",
@@ -5557,6 +5560,7 @@
   "Becoming.Ranking.whole_run_ranks": "statement on both families",
   "Becoming.Ranking.included_before_loss": "statement on World/Flow/Web",
   "Becoming.Ranking.stepwise_unranked": "statement on both families",
+  "Becoming.Ranking.relational_unranked": "statement on both families",
   "Becoming.Ranking.preferOccurs_only": "statement on Process/Frame/Run/Trace",
   "Becoming.Ranking.admits_occurrence": "statement on Process/Frame/Run/Trace",
   "Becoming.Ranking.readings_rank_differently": "statement on both families",
@@ -6448,6 +6452,7 @@
   "Becoming.Ranking.restraint_ranks_over_drawers": "statement on both families",
   "Becoming.Ranking.restraint_extends_iff_stepwise": "statement on both families",
   "Becoming.Ranking.restraint_ranks_stepwise": "statement on both families",
+  "Becoming.Ranking.restraint_extends_iff_relational": "statement on both families",
   "Becoming.TwoDrawers.balances": "statement on World/Flow/Web",
   "Becoming.TwoDrawers.broken": "statement on World/Flow/Web",
   "Becoming.TwoDrawers.shared": "statement on World/Flow/Web",
@@ -11590,6 +11595,7 @@
   "Becoming.Web.Includes.of_le": "statement on World/Flow/Web",
   "Becoming.Web.not_added_of_le": "statement on World/Flow/Web",
   "Becoming.Ranking.stepwise_iff": "statement on World/Flow/Web",
+  "Becoming.Ranking.relational_iff": "statement on World/Flow/Web",
   "Becoming.Ranking.possible_of_active": "statement on World/Flow/Web",
   "Becoming.Ranking.absent_admits_all": "statement on World/Flow/Web",
   "Becoming.Ranking.possible_extends": "statement on both families",
