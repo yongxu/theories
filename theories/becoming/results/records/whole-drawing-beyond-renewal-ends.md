@@ -50,7 +50,7 @@ Witnesses for the gate on renewal and the finite listing; a whole whose parts' a
 <a id="correspondence--对应"></a>
 ### Correspondence
 
-OPENING note collective: "a collective made of lives that each end goes on only as new lives keep arising; one that consumes them consumes what it goes on through" (Ren's body sentence), read with a collective as the whole of its lives, the lives' renewal as the drawn family and consuming as the joint draw exceeding it (the AI's readings); TH1's revised proposal 8, its second clause. Reading: joint consumption has no single consumer (joint-difference-making).
+OPENING note collective: "a collective made of lives that each end goes on only as new lives keep arising; where it draws on them beyond what they renew, it ends what it goes on through" (Ren's body sentence since version 9, TH1's revised proposal 8), read with a collective as the whole of its lives, the lives' renewal as the drawn family and drawing beyond what they renew as the joint draw exceeding it (the AI's readings). Reading: joint consumption has no single consumer (joint-difference-making).
 
 <a id="dependencies--依赖"></a>
 ### Dependencies
@@ -85,7 +85,8 @@ Aliases: `a whole that draws its parts' arising beyond its renewal ends`, `a col
 ### History
 
 - 21 October 2026: added (WE1), a whole that draws its parts' arising beyond its renewal ends: the law below Whole.needs_arising (ending listed parts end together without arising, and their whole) and its join with Flow.family_excess_ends; OPENING note collective restated; study section 287.
+- 21 October 2026: correspondence restated for OPENING version 9 (OP9, Ren's "implement proposals"): the body sentence it reads is now TH1's revised proposal 8 ("where it draws on them beyond what they renew, it ends what it goes on through"), replacing "one that consumes them consumes what it goes on through"; the claim, premises and scope are unchanged.
 
 </details>
 
-Documentary review UTC: `2026-10-20T21:58:15+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-10-21T04:53:17+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-20T21:58:15+00:00",
+  "reviewed_at_utc": "2026-10-21T04:53:17+00:00",
   "statement": {
     "en": "Listed parts that each end, none arising from some step on, end with their whole; so a whole whose parts arise only where they depend on a family whose renewal is gated on it ends after the joint draw exceeds the renewal for longer than the margin.",
     "zh": "各自终结、可列出、从某步起无一生起的部分，与其整体一同终结；所以部分只在依存于更新以其为门控的条件族时生起的整体，在联合汲取超过更新长于余量之后终结。"
@@ -137,8 +137,8 @@
     "zh": "更新门控与有限列出的见证；部分的生起只部分地取自该族的整体（一些经被汲取者生起，一些经另一更新）；独立审查。"
   },
   "correspondence": {
-    "en": "OPENING note collective: \"a collective made of lives that each end goes on only as new lives keep arising; one that consumes them consumes what it goes on through\" (Ren's body sentence), read with a collective as the whole of its lives, the lives' renewal as the drawn family and consuming as the joint draw exceeding it (the AI's readings); TH1's revised proposal 8, its second clause. Reading: joint consumption has no single consumer (joint-difference-making).",
-    "zh": "OPENING 注 collective：“由各自终结的生命构成的集体，只在新生命不断生起时延续；消耗它们的集体消耗了它所赖以延续者”（Ren 的正文），读法为：集体是其生命的整体，生命的更新是被汲取的族，消耗是联合汲取超过它（AI 的读法）；TH1 修订的提议 8 的第二句。读法：联合消耗没有单一的消耗者。"
+    "en": "OPENING note collective: \"a collective made of lives that each end goes on only as new lives keep arising; where it draws on them beyond what they renew, it ends what it goes on through\" (Ren's body sentence since version 9, TH1's revised proposal 8), read with a collective as the whole of its lives, the lives' renewal as the drawn family and drawing beyond what they renew as the joint draw exceeding it (the AI's readings). Reading: joint consumption has no single consumer (joint-difference-making).",
+    "zh": "OPENING 注 collective：“由各自终结的生命构成的集体，只在新生命不断生起时延续；它汲取它们超过它们所更新者之处，便终结它所赖以延续者”（Ren 的正文，自第 9 版起，即 TH1 修订的提议 8），读法为：集体是其生命的整体，生命的更新是被汲取的族，汲取超过所更新者即联合汲取超过它（AI 的读法）。读法：联合消耗没有单一的消耗者。"
   },
   "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Wholes.lean",
   "aliases": [
@@ -303,7 +303,7 @@
     {
       "path": "theories/becoming/OPENING.md",
       "role": "statement",
-      "sha256": "7f3fb7921d12f5b177da0d83df6c3b55abec8058ef5cecebf9c0ad9a0426ea8f"
+      "sha256": "74a64536fce1b4c2b32c726fbf0fbb2a7f574847a77a27aae5de50bd1f49df56"
     }
   ],
   "proof_bindings": [
@@ -326,6 +326,10 @@
     {
       "en": "21 October 2026: added (WE1), a whole that draws its parts' arising beyond its renewal ends: the law below Whole.needs_arising (ending listed parts end together without arising, and their whole) and its join with Flow.family_excess_ends; OPENING note collective restated; study section 287.",
       "zh": "2026年10月21日：新增（WE1），汲取其部分之生起超过更新的整体终结：Whole.needs_arising 之下的律（无生起时可列出的终结部分一同终结，其整体亦然）及其与 Flow.family_excess_ends 的结合；OPENING 注 collective 重述；研究第 287 节。"
+    },
+    {
+      "en": "21 October 2026: correspondence restated for OPENING version 9 (OP9, Ren's \"implement proposals\"): the body sentence it reads is now TH1's revised proposal 8 (\"where it draws on them beyond what they renew, it ends what it goes on through\"), replacing \"one that consumes them consumes what it goes on through\"; the claim, premises and scope are unchanged.",
+      "zh": "2026年10月21日：依 OPENING 第 9 版（OP9，Ren 的“implement proposals”）重述对应：所读的正文句现为 TH1 修订的提议 8（“它汲取它们超过它们所更新者之处，便终结它所赖以延续者”），取代“消耗它们的集体消耗了它所赖以延续者”；主张、前提与范围不变。"
     }
   ]
 }
