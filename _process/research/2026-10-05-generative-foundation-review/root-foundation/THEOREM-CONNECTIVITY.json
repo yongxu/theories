@@ -1,11 +1,11 @@
 {
- "commit": "8316e7d7cd1b19577c93cbf066b7b042122f1232",
+ "commit": "34f96dfc44f21d1d562a3db5a2991d9f07e59ceb",
  "sources_match_commit": true,
- "core_receipt_at_commit": "20261021T093053.215253Z",
+ "core_receipt_at_commit": "20261021T095626.485439Z",
  "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
  "tracked_modules": 300,
- "constants": 38726,
- "spine_theorems": 12692,
+ "constants": 38766,
+ "spine_theorems": 12708,
  "base": {
   "Process family": [
    "Generative.Process",
@@ -27,11 +27,11 @@
  },
  "classes": {
   "statement on both families": 976,
-  "statement on Process/Frame/Run/Trace": 2891,
+  "statement on Process/Frame/Run/Trace": 2898,
   "statement on World/Flow/Web": 2986,
-  "statement on the base only through a law of its own module": 205,
+  "statement on the base only through a law of its own module": 208,
   "proof through a base family": 155,
-  "used by a theorem on the base": 4673,
+  "used by a theorem on the base": 4679,
   "instance on the base recorded": 155,
   "apart: own vocabulary": 595,
   "apart: prelude-only statement": 56
@@ -58,9 +58,9 @@
   "register entries naming what the run lacks": []
  },
  "statement_through_own_law_by_module": {
+  "Becoming.RegimeMargin": 26,
   "Becoming.HexagramLaws": 26,
   "Becoming.Undecided": 23,
-  "Becoming.RegimeMargin": 23,
   "Becoming.LoopReturn": 22,
   "Becoming.Pace": 22,
   "Becoming.Withholding": 21,
@@ -245,7 +245,7 @@
   ],
   "Becoming.RegimeMargin": [
    9,
-   87
+   101
   ],
   "Becoming.ProfileReach": [
    9,
@@ -579,15 +579,15 @@
  "rings": {
   "core": {
    "modules": 284,
-   "theorems": 11946,
+   "theorems": 11962,
    "apart": 571,
    "classes": {
     "statement on both families": 962,
-    "statement on Process/Frame/Run/Trace": 2680,
+    "statement on Process/Frame/Run/Trace": 2687,
     "statement on World/Flow/Web": 2961,
-    "statement on the base only through a law of its own module": 159,
+    "statement on the base only through a law of its own module": 162,
     "proof through a base family": 144,
-    "used by a theorem on the base": 4314,
+    "used by a theorem on the base": 4320,
     "instance on the base recorded": 155,
     "apart: own vocabulary": 516,
     "apart: prelude-only statement": 55
@@ -685,7 +685,7 @@
  },
  "records_by_best_alias_class": {
   "statement on both families": 68,
-  "statement on Process/Frame/Run/Trace": 116,
+  "statement on Process/Frame/Run/Trace": 117,
   "statement on World/Flow/Web": 91,
   "statement on the base only through a law of its own module": 3,
   "proof through a base family": 1,
@@ -10577,6 +10577,20 @@
   "Becoming.RegimeMargin.Alternation.keeps": "used by a theorem on the base",
   "Becoming.RegimeMargin.Alternation.returns": "used by a theorem on the base",
   "Becoming.RegimeMargin.Alternation.alternates": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.leading_le": "used by a theorem on the base",
+  "Becoming.RegimeMargin.leading_true": "used by a theorem on the base",
+  "Becoming.RegimeMargin.leading_false": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Adjusted.threshold_le": "statement on the base only through a law of its own module",
+  "Becoming.RegimeMargin.Adjusted.falls_of_below": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Adjusted.falls_iff": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Adjusted.falls_iff_below": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.Adjusted.threshold_falls": "statement on the base only through a law of its own module",
+  "Becoming.RegimeMargin.Adjusted.fates": "statement on Process/Frame/Run/Trace",
+  "Becoming.RegimeMargin.threshold_regime": "statement on the base only through a law of its own module",
+  "Becoming.RegimeMargin.Notch.keeps": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Notch.stays_three": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Notch.ends_four": "used by a theorem on the base",
+  "Becoming.RegimeMargin.Notch.no_threshold": "statement on Process/Frame/Run/Trace",
   "Becoming.Loops.zero_or_pos": "used by a theorem on the base",
   "Becoming.Loops.ble_succ_self": "used by a theorem on the base",
   "Becoming.Loops.extend_below": "used by a theorem on the base",
@@ -12535,6 +12549,8 @@
   "Becoming.LastChange.rests_of_settles": "statement on Process/Frame/Run/Trace",
   "Becoming.LastChange.assured_iff_of_lpo": "statement on Process/Frame/Run/Trace",
   "Becoming.LastChange.not_not_rests": "statement on Process/Frame/Run/Trace",
+  "Becoming.LastChange.still_stays": "statement on Process/Frame/Run/Trace",
+  "Becoming.LastChange.still_same": "statement on Process/Frame/Run/Trace",
   "Becoming.LastChange.lpo_iff_settles": "statement on Process/Frame/Run/Trace",
   "Becoming.LastChange.still_of_fixed": "statement on Process/Frame/Run/Trace",
   "Becoming.LastChange.still_succ": "statement on Process/Frame/Run/Trace",
