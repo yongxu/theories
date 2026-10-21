@@ -498,30 +498,38 @@
   ],
   "references": [
     {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "role": "proof",
+      "sha256": "ef8e753b8b55600286df7c327f36368f4a263732c3274270626056b4cf43157b",
+      "declarations": [
+        "Becoming.World.Finite",
+        "Becoming.World.Balanced",
+        "Becoming.World.Dissipative",
+        "Becoming.World.Embodied",
+        "Becoming.World.ArisingEmbodied",
+        "Becoming.World.rests_unrefuted",
+        "Becoming.World.RestsFrom",
+        "Becoming.World.rests_unrefuted_iff",
+        "Becoming.World.arising_unrefuted_covering"
+      ]
+    },
+    {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "d7cf70544495c135366166d401bf10bdfd0be55bf362bdd59b2b186258cff6cd",
+      "sha256": "8552cbaa9d1a2305a1e0e321a29898c29af337644010f3c04369fa9e7fd90a2d",
       "declarations": [
         "Becoming.Flow.still",
         "Becoming.Flow.still_dissipative",
-        "Becoming.World.Finite",
         "Becoming.World.ArisingRecurs",
         "Becoming.World.CeasingRecurs",
         "Becoming.World.Living",
         "Becoming.World.Dependent",
-        "Becoming.World.Balanced",
         "Becoming.World.Acting",
         "Becoming.World.Taking",
-        "Becoming.World.Dissipative",
-        "Becoming.World.Embodied",
-        "Becoming.World.ArisingEmbodied",
         "Becoming.World.Carried",
         "Becoming.World.ofRoles",
         "Becoming.World.ceasingRecurs_ofRoles",
         "Becoming.World.arising_iff_ceasing",
-        "Becoming.World.rests_unrefuted",
-        "Becoming.World.RestsFrom",
-        "Becoming.World.rests_unrefuted_iff",
         "Becoming.World.not_recurring_of_rests_unrefuted",
         "Becoming.World.shuttle_world",
         "Becoming.World.SelfDrawing.web",
@@ -576,8 +584,7 @@
         "Becoming.stop_unrefuted_iff",
         "Becoming.falls_stop_unrefuted",
         "Becoming.amount_still_unrefuted",
-        "Becoming.Web.embodiedArising_stops_unrefuted",
-        "Becoming.World.arising_unrefuted_covering"
+        "Becoming.Web.embodiedArising_stops_unrefuted"
       ]
     },
     {
@@ -808,12 +815,18 @@
       "role": "receipt",
       "sha256": "b6a6b44409cc5a7a85d845ba34686bbf6f2e01ca669b619c4aa06c03af636dbc",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "role": "receipt",
+      "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Space",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -871,6 +884,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T051144.879480Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.World",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.InAmounts",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -953,6 +973,10 @@
     {
       "en": "2026-10-20: 76 bookkeeping notes condensed from 2026-10-09 to 20 October 2026: receipts rebound, sources re-pointed or rehashed after reading their changes, with the claim unchanged. Each note is kept verbatim in the snapshot _process/architecture/history/d28a710a1c794de3/space-and-its-parts.json and in git.",
       "zh": "2026-10-20：76 条记账性说明合并（2026-10-09 至 20 October 2026）：收据重绑、来源重指或重算哈希，主张不变。每条原文保存在快照 _process/architecture/history/d28a710a1c794de3/space-and-its-parts.json 和 git 中。"
+    },
+    {
+      "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: World.Finite, World.Balanced, World.Dissipative, World.Embodied, World.ArisingEmbodied, World.rests_unrefuted, World.RestsFrom, World.rests_unrefuted_iff, World.arising_unrefuted_covering to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：World.Finite, World.Balanced, World.Dissipative, World.Embodied, World.ArisingEmbodied, World.rests_unrefuted, World.RestsFrom, World.rests_unrefuted_iff, World.arising_unrefuted_covering to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ],
   "text_versions": [

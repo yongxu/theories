@@ -260,22 +260,21 @@
         "Becoming.Pass.dissipative",
         "Becoming.Pass.embodied",
         "Becoming.Pass.never_rests",
-        "Becoming.Pass.levels_unlisted"
+        "Becoming.Pass.levels_unlisted",
+        "Becoming.Amounts.rests_unrefuted_of_finite_reading"
       ],
-      "sha256": "228e58690a33f0ed43e167bf0dd8621951834e3cefcb233b7b7bef55b71a4151"
+      "sha256": "ef8e753b8b55600286df7c327f36368f4a263732c3274270626056b4cf43157b"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
       "role": "proof",
-      "declarations": [
-        "Becoming.Amounts.rests_unrefuted_of_finite_reading"
-      ],
-      "sha256": "15207336ebcbd438d39c4301862599bfc9dbc49b79880cc76cc8fd8cb595f035"
+      "declarations": [],
+      "sha256": "d6ad7f2598fcaa3a77da932a52952ba5c2753d18ddef0b8ade69dd8c2c40ae4c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean",
       "role": "proof",
-      "sha256": "d7cf70544495c135366166d401bf10bdfd0be55bf362bdd59b2b186258cff6cd"
+      "sha256": "8552cbaa9d1a2305a1e0e321a29898c29af337644010f3c04369fa9e7fd90a2d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean",
@@ -295,25 +294,31 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "a61c21e4dfeb49d21dab0250b99966a6ea7f63cf07ab2b31fd28e12f6de9f875"
+      "sha256": "d70de3224cb798646e15aa833de81ab426073249e46ee818034929c2482e0777"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
       "role": "receipt",
       "sha256": "fb5bb84d275aea291dd7c8c795027c4bb224eef26ab4ecdf66c14183439c0857"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
+      "role": "receipt",
+      "sha256": "276674770ba470537ab6d2f4ea06c15418b4f22b325b4a634ac7cdc8fd9b95d1",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.InAmounts",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LeastLoss",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -327,6 +332,10 @@
     {
       "en": "21 October 2026, LC3: the rest theorem takes one premise, that the census's total stops falling (record rest-exactly-where-falls-stop), and this record's read forms are its corollaries with their statements unchanged. The whole-number instances World.rests_unrefuted_enclosed_read and World.rests_unrefuted_listed, which also asked for a reading, are superseded by World.rests_unrefuted_enclosed_whole and World.rests_unrefuted_whole, which ask only the world's own premises (law 4 restated); HalvingPass is generalized below to Pass, along any amount falling at every step (law 5 restated; board rule 9). Proof bindings re-pointed to receipt 20261021T124304.830826Z; study section 308.",
       "zh": "2026年10月21日，LC3：停息定理只取一个前提，普查的总量停止下降（记录 rest-exactly-where-falls-stop），本记录的读取形式是其推论，陈述不变。同样要求读取的自然数实例 World.rests_unrefuted_enclosed_read 与 World.rests_unrefuted_listed，被只要求世界自身前提的 World.rests_unrefuted_enclosed_whole 与 World.rests_unrefuted_whole 取代（第 4 条规律重述）；HalvingPass 向下推广为 Pass，沿着每步都下降的任何量（第 5 条规律重述；工作板规则 9）。证明绑定改指回执 20261021T124304.830826Z；研究第 308 节。"
+    },
+    {
+      "en": "21 October 2026, EC3 (study section 319): declarations moved with their full names: Amounts.rests_unrefuted_of_finite_reading to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.",
+      "zh": "2026年10月21日，EC3（研究第 319 节）：声明以完整名称移动：Amounts.rests_unrefuted_of_finite_reading to Becoming.InAmounts。所引 Lean 源及其证明绑定随之；论断不变。"
     }
   ]
 }

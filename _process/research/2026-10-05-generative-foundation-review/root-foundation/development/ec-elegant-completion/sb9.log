@@ -1,0 +1,52 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/blissful-borg-449b4b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/tree5",
+  "modules": 39,
+  "ran": [
+    "Becoming.InAmounts",
+    "Becoming.Space",
+    "Becoming.Premises",
+    "Becoming.Openness",
+    "Becoming.Resolution",
+    "Becoming.Unfolding",
+    "Becoming.Branching",
+    "Becoming.Histories",
+    "Becoming.Decidedness",
+    "Becoming.Refinement",
+    "Becoming.Likeness",
+    "Becoming.LeastLoss",
+    "BecomingInAmountsAxiomAudit",
+    "BecomingSpaceAxiomAudit",
+    "BecomingPremisesAxiomAudit",
+    "BecomingOpennessAxiomAudit",
+    "BecomingLeastLossAxiomAudit"
+  ],
+  "reused": 27,
+  "unclean": [],
+  "audits": {
+    "Becoming.InAmounts": {
+      "theorems": 89,
+      "declarations": 125,
+      "with_axioms": {}
+    },
+    "Becoming.Space": {
+      "theorems": 60,
+      "declarations": 124,
+      "with_axioms": {}
+    },
+    "Becoming.Premises": {
+      "theorems": 61,
+      "declarations": 132,
+      "with_axioms": {}
+    },
+    "Becoming.Openness": {
+      "theorems": 78,
+      "declarations": 110,
+      "with_axioms": {}
+    },
+    "Becoming.LeastLoss": {
+      "theorems": 55,
+      "declarations": 71,
+      "with_axioms": {}
+    }
+  }
+}

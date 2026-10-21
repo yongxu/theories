@@ -1,6 +1,7 @@
 import Becoming.Evolution
 import Becoming.Reserve
 import Becoming.Witnesses
+import Becoming.InAmounts
 
 /-!
 # Space: the whole and its parts
@@ -60,7 +61,10 @@ second. Ren confirmed arising and ceasing as the better names for it
   possibilities (D6).
 * **Dissipation brings a finite world to rest.** In a finite, balanced, dissipative world
   in which whatever arises is embodied, that the world rests from some step on cannot be
-  refuted (`World.rests_unrefuted`, `World.RestsFrom`), so neither arising nor ceasing recurs
+  refuted (`World.rests_unrefuted`, `World.RestsFrom`; since EC3 both, with the covering form's
+  premises, stated in `Becoming.InAmounts` below this module, the theorem as the whole-number case of
+  the rest theorem over any amounts, and the covering form `World.rests_unrefuted_covering` derived
+  from it here), so neither arising nor ceasing recurs
   (`World.not_recurring_of_rests_unrefuted`), with no decision procedure: the stock does not rise,
   so that generation stops from some step on cannot be refuted (`falls_stop_unrefuted`,
   `Web.embodiedArising_stops_unrefuted`; read through `stop_unrefuted_iff`), which refutes the arising
@@ -182,9 +186,6 @@ namespace World
 
 variable (w : World)
 
-/-- Finitely many relata are all there is, each listed once. -/
-def Finite : Prop :=
-  ∃ all : List w.Relatum, Distinct all ∧ ∀ x, x ∈ all
 
 /-- Arising recurs: some relatum arises at arbitrarily late steps. -/
 def ArisingRecurs : Prop :=
@@ -194,11 +195,6 @@ def ArisingRecurs : Prop :=
 def CeasingRecurs : Prop :=
   ∀ N, ∃ t x, N ≤ t ∧ w.web.Ceases t x
 
-/-- The world rests from step `N` on: at no step from `N` on does any relatum arise or cease.
-That some such step exists, with no decision procedure, can at most not be refuted: naming
-one for every finite world is a principle of omniscience (`World.lpo_of_finite_ends`). -/
-def RestsFrom (N : Nat) : Prop :=
-  ∀ t, N ≤ t → ∀ x, ¬ w.web.Arises t x ∧ ¬ w.web.Ceases t x
 
 /-- Every event is living in the stepwise reading: no active relatum undermines. -/
 def Living : Prop :=
@@ -208,9 +204,6 @@ def Living : Prop :=
 def Dependent : Prop :=
   w.web.Dependent
 
-/-- The flow balances. -/
-def Balanced : Prop :=
-  w.flow.Balances w.web
 
 /-- Only active relata give. -/
 def Acting : Prop :=
@@ -220,17 +213,8 @@ def Acting : Prop :=
 def Taking : Prop :=
   w.flow.Taking w.web
 
-/-- The flow dissipates. -/
-def Dissipative : Prop :=
-  w.flow.Dissipative
 
-/-- Every relatum stands as a condition exactly while it is active. -/
-def Embodied : Prop :=
-  ∀ x, w.web.Embodied x
 
-/-- Whatever arises is embodied. -/
-def ArisingEmbodied : Prop :=
-  ∀ t x, w.web.Arises t x → w.web.Embodied x
 
 /-- Some reserve carries activity beyond support (`Becoming.Reserve`). -/
 def Carried : Prop :=
@@ -238,8 +222,6 @@ def Carried : Prop :=
 
 variable {w}
 
-theorem Embodied.arising (embodied : w.Embodied) : w.ArisingEmbodied :=
-  fun _ x _ => embodied x
 
 /-- The two-kind reading of a flow and a web, as a world. -/
 def ofRoles {F C : Type} (L : Flow F C) (W : Web F C) : World :=
@@ -275,20 +257,6 @@ theorem arising_iff_ceasing [∀ t x, Decidable (w.web.active t x)] (finite : w.
   match finite with
   | ⟨_, _, every⟩ => arising_iff_ceasing_covering (T := 0) fun _ _ x _ => every x
 
-/-- That the world rests from some step on cannot be refuted exactly where, for arising and for
-ceasing each, it is not the case that after every step a later one stays unrefuted: the two
-stoppings, each unrefuted, give one common step unrefuted. No decidedness is needed. -/
-theorem rests_unrefuted_iff :
-    (¬ ¬ ∃ N, w.RestsFrom N) ↔
-      (¬ ∀ M, ¬ ¬ ∃ t x, M ≤ t ∧ w.web.Arises t x) ∧ (¬ ∀ M, ¬ ¬ ∃ t x, M ≤ t ∧ w.web.Ceases t x) :=
-  ⟨fun rest => ⟨fun arising => rest fun ⟨N, quiet⟩ =>
-      arising N fun ⟨t, x, later, arises⟩ => (quiet t later x).1 arises,
-    fun ceasing => rest fun ⟨N, quiet⟩ =>
-      ceasing N fun ⟨t, x, later, ceases⟩ => (quiet t later x).2 ceases⟩,
-   fun ⟨arising, ceasing⟩ no => arising fun M noArising => ceasing fun M' noCeasing =>
-     no ⟨M + M', fun t later x =>
-       ⟨fun arises => noArising ⟨t, x, Nat.le_trans (Nat.le_add_right M M') later, arises⟩,
-        fun ceases => noCeasing ⟨t, x, Nat.le_trans (Nat.le_add_left M' M) later, ceases⟩⟩⟩⟩
 
 /-- Where that the world rests from some step on cannot be refuted, neither arising nor ceasing
 recurs: the weaker form. -/
@@ -297,17 +265,6 @@ theorem not_recurring_of_rests_unrefuted (rest : ¬ ¬ ∃ N, w.RestsFrom N) :
   ⟨fun arising => (rests_unrefuted_iff.mp rest).1 fun M no => no (arising M),
    fun ceasing => (rests_unrefuted_iff.mp rest).2 fun M no => no (ceasing M)⟩
 
-/-- With a list covering what is active from step `T` on, where after every step a later
-ceasing is not refuted (as where ceasing recurs), after every step from `T` on a later arising of
-a member is not refuted. No decidedness is needed (`Covers.not_not_coming_from`). -/
-theorem arising_unrefuted_covering {ds : List w.Relatum} {T : Nat}
-    (covers : ∀ t, T ≤ t → ∀ x, w.web.active t x → x ∈ ds)
-    (ceasing : ∀ M, ¬ ¬ ∃ t x, M ≤ t ∧ w.web.Ceases t x) :
-    ∀ M, T ≤ M → ¬ ¬ ∃ t x, M ≤ t ∧ x ∈ ds ∧ w.web.Arises t x :=
-  fun M from_ none_ => Covers.not_not_coming_from (p := fun x t => w.web.active t x)
-    (L := ds) (N := M) (fun x active => covers M from_ x active) ceasing
-    fun ⟨t, x, later, arises⟩ => none_ ⟨t, x, later,
-      covers (t + 1) (Nat.le_succ_of_le (Nat.le_trans from_ later)) x arises.2, arises⟩
 
 /-- Rest, from a step on, unrefuted: in any world whose arising is embodied, where from some
 step on the active relata lie in one family, balanced and dissipated on at each of those steps,
@@ -321,27 +278,14 @@ theorem rests_unrefuted_covering {ds : List w.Relatum} {T : Nat}
     (balances : ∀ t, T ≤ t → w.flow.BalancesOn w.web ds t)
     (dissipates : ∀ t, T ≤ t → w.flow.DissipatesOn ds t) (embodied : w.ArisingEmbodied) :
     ¬ ¬ ∃ N, w.RestsFrom N :=
-  have unrefuted := Web.embodiedArising_stops_unrefuted balances dissipates
-  rests_unrefuted_iff.mpr
-  ⟨fun arising => unrefuted fun M from_ none_ => arising M fun ⟨t, x, later, arises⟩ =>
-      none_ ⟨t, x, later,
-          covers (t + 1) (Nat.le_succ_of_le (Nat.le_trans from_ later)) x arises.2,
-          embodied t x arises, arises⟩,
-   fun ceasing => unrefuted fun M from_ none_ =>
-      arising_unrefuted_covering covers ceasing M from_ fun ⟨t, x, later, mem, arises⟩ =>
-        none_ ⟨t, x, later, mem, embodied t x arises, arises⟩⟩
+  have balances' : ∀ t, T ≤ t → w.wholeAmounts.BalancesOn Amounts.whole ds t :=
+    fun t later => balancesOn_whole (balances t later)
+  have dissipates' : ∀ t, T ≤ t → w.wholeAmounts.DissipatesOn Amounts.whole ds t :=
+    fun t later => dissipatesOn_whole (dissipates t later)
+  InAmounts.rests_unrefuted_of_stops covers balances' dissipates' (arisingEmbodied_whole embodied)
+    (Amounts.whole_noEndlessFall _ T fun t later no =>
+      no (InAmounts.stock_still (balances' t later) (dissipates' t later)))
 
-/-- Dissipation brings a finite world to rest, unrefuted: where the flow balances and dissipates
-and whatever arises is embodied, that the world rests from some step on cannot be refuted. No
-decision procedure; naming the step is a principle of omniscience (`World.lpo_of_finite_ends`). -/
-theorem rests_unrefuted (finite : w.Finite)
-    (balanced : w.Balanced) (dissipative : w.Dissipative) (embodied : w.ArisingEmbodied) :
-    ¬ ¬ ∃ N, w.RestsFrom N :=
-  match finite with
-  | ⟨all, distinct, every⟩ =>
-    rests_unrefuted_covering (T := 0) (ds := all) (fun _ _ x _ => every x)
-      (fun t _ => Flow.Balances.on balanced all t)
-      (fun t _ => dissipative all t distinct fun _ _ c outside => absurd (every c) outside) embodied
 
 /-! ## Worlds -/
 

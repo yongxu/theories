@@ -72,7 +72,8 @@ The pigeonhole principle, and termination of a ranking function on a finite stat
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [LeastLoss.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean) | `Becoming.Amounts.rising_apart`, `Becoming.Amounts.falls_within_reading`, `Becoming.Amounts.rests_of_finite_reading`, `Becoming.Branching.rests_along_run`, `Becoming.Halving.stock_unlisted`, `Becoming.Amounts.rests_unrefuted_of_finite_reading`, `Becoming.Amounts.extend_falls`, `Becoming.Amounts.from_start` |
+| proof | [InAmounts.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean) | `Becoming.Amounts.rising_apart`, `Becoming.Amounts.falls_within_reading`, `Becoming.Amounts.rests_of_finite_reading`, `Becoming.Amounts.rests_unrefuted_of_finite_reading`, `Becoming.Amounts.extend_falls`, `Becoming.Amounts.from_start` |
+| proof | [LeastLoss.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LeastLoss.lean) | `Becoming.Branching.rests_along_run`, `Becoming.Halving.stock_unlisted` |
 | proof | [Recurrence.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean) | — |
 | proof | [Amounts.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Amounts.lean) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T104831.571462Z/verification.json) | — |
@@ -81,6 +82,7 @@ The pigeonhole principle, and termination of a ranking function on a finite stat
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T133130.717227Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T124304.830826Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T165640.090482Z/verification.json) | — |
 
 Aliases: `rest from a finite reading`, `由有限的读取而停息`, `rest with no least loss`, `没有最小损失的停息`, `finite distinguishability gives rest`, `Becoming.Amounts.rests_of_finite_reading`, `Becoming.Amounts.falls_within_reading`, `Becoming.Halving.stock_unlisted`
 
@@ -88,6 +90,7 @@ Aliases: `rest from a finite reading`, `由有限的读取而停息`, `rest with
 ### History
 
 - 20 October 2026: added (LC1), section 8.1 item 6: whether the least loss can be derived; study section 255.
+- 21 October 2026, EC3 (study section 319): declarations moved with their full names: Amounts.rising_apart, Amounts.falls_within_reading, Amounts.rests_of_finite_reading, Amounts.rests_unrefuted_of_finite_reading, Amounts.extend_falls, Amounts.from_start to Becoming.InAmounts. The cited Lean sources and their proof bindings follow them; the claim is unchanged.
 - 2 rebinding entries (2026-10-20 to 2026-10-21): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](rest-from-a-finite-reading.json).
 
 </details>

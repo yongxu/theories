@@ -14248,3 +14248,45 @@ Output → input: chapter §6 (the ranking bullet) and §8.1 item 11 (EN, ZH), t
 **Self-review.** The reading was defined on courses as the conjunction `Web.relations` already uses, so its identity with that `living` is `Iff.rfl`; no second definition of relations was added. The participation premise is stated as participation kept (`(U w).Participates → (U w').Participates`), which under easing (asks no more, draws on nothing more) means the restrained course asks or draws wherever the other does; it is sufficient, and the exact law states the condition relation by relation. The two-part instance reuses `overdraw_consuming` and `absent_sustains`, and the focal formation's participation comes from the overdraw premise (it draws). The connectivity check was planned before the checker ran: the new laws are stated on webs and flows. Limits: the form of L and J1 step by step.
 
 **The run.** Core 285 modules and 12,169 theorems, instances 7 and 567, applications 6 and 179; 33 Lean steps ran, 1,171 reused. 7 declarations added to Becoming.Ranking, Becoming.Relevance and Becoming.JointDraw, 6 of them theorems, none removed, all with empty axiom reports. Connectivity: 647 of 12,915 apart, unchanged; no new apart root, every new law stated on a run or read by one that is, the witnesses on the run; register check passes.
+
+## 319. One rest theorem, below the worlds that use it (EC3)
+
+Board item EC, its third step (the master law of finite runs, its rest part). Core receipt `20261021T165640.090482Z`.
+
+**Why.**
+- LC3 (study §308) made the rest theorem one law over any amounts: a balanced, dissipated family stops changing exactly where its total stops falling (`Amounts.FallsStop`, `World.InAmounts.change_stops_iff`). It states that law in `Becoming.InAmounts`.
+- `Becoming.InAmounts` imported `Becoming.LeastLoss` and `Becoming.Space`, so it lay above the worlds whose rest it states.
+- So the whole-number rest theorems kept their own proofs below it: `World.rests_unrefuted` in `Becoming.Space`, through the least-loss law at a fall of one, and `World.rests_unrefuted_enclosed` in `Becoming.Openness`, through its own census argument.
+- `Becoming.InAmounts` then proved each of them a second time under another name (`World.rests_unrefuted_whole`, `World.rests_unrefuted_enclosed_whole`): two proofs and two names for one statement.
+- Board rule 9 asks for the general law to lie below and be the reason for the special one.
+
+**What changed.**
+- **`Becoming.InAmounts` now imports only what lies below `Becoming.Space`**: `Becoming.Amounts`, `Becoming.Recurrence` and `Becoming.Roles`.
+- **The declarations the general law reads moved into it unchanged**, with their names:
+  - from `Becoming.Space`: `World.Finite`, `World.RestsFrom`, `World.Balanced`, `World.Dissipative`, `World.Embodied`, `World.ArisingEmbodied`, `World.Embodied.arising`, `World.rests_unrefuted_iff` and `World.arising_unrefuted_covering`;
+  - from `Becoming.Premises`: `World.Counted`;
+  - from `Becoming.LeastLoss`: the one premise and its laws (`Amounts.FallsStop`, `Amounts.NoEndlessFall`, `Amounts.EndlessFall`, `Amounts.FallsAtLeast`, `Amounts.fallsStop_congr`, `Amounts.noEndlessFall_of_fallsAtLeast`, `Amounts.whole_fallsAtLeast`, `Amounts.whole_noEndlessFall`), and rest from a finite reading (`Amounts.rests_unrefuted_of_finite_reading`, `Amounts.rests_of_finite_reading` and their lemmas).
+- **The whole-number rest theorems are the general law's cases, under their established names.**
+  - `World.rests_unrefuted` and `World.rests_unrefuted_enclosed` are now proved in `Becoming.InAmounts` from the law over any amounts, since no whole number falls without end (`Amounts.whole_noEndlessFall`).
+  - Their direct proofs in `Becoming.Space` and `Becoming.Openness` are gone, and so are the duplicate names `World.rests_unrefuted_whole` and `World.rests_unrefuted_enclosed_whole`.
+- **Space's covering form is derived.** `World.rests_unrefuted_covering` (`Becoming.Space`) is the general covering law in whole-number amounts, through two new bridges for one family at one step (`World.balancesOn_whole`, `World.dissipatesOn_whole`). The global bridge `World.dissipative_whole` now goes through `World.dissipatesOn_whole`.
+- **The examples moved up.** The worlds over dyadic and layered amounts that never rest (`Halving.worlds_need_not_rest`, `Layered.worlds_need_not_rest`) moved to `Becoming.LeastLoss`, which states those amounts.
+
+**Delta.**
+- One rest theorem at the lowest layer that holds the worlds it reads.
+- Two direct proofs and two duplicate names gone.
+- No statement changed.
+
+**Not done here.**
+- Openness's other rest forms (`World.comes_to_rest_unrefuted`, `World.rests_unrefuted_around`, under a standing census and enclosure around what stands) keep their own argument through `Flow.change_stops_unrefuted_around`. Whether they are cases of the general law under a standing reading is the next finite-runs question.
+- Space's helper laws (`falls_stop_unrefuted`, `Web.embodiedArising_stops_unrefuted`) remain, as laws of their own.
+
+**Evidence.** The checker run `20261021T165640.090482Z` passed with every axiom report empty. The connectivity measure is recorded below.
+
+**The measure.** It is unchanged: 63 of 127 central declarations rest on no master law. The rest results already rested on the finite-runs law, and now each rests on one proof of it instead of two.
+
+**Boundary.** This is a restructuring of proofs and a move of declarations with their names; no record's claim changes. Records citing a moved declaration cite it under the module that now holds it, and records citing a duplicate name cite the theorem it restated.
+
+**Output → input.** The finite-runs law has one rest theorem. What remains of EC's list is in the completion report's master-laws section.
+
+**The run.** Core 285 modules and 12,169 theorems, instances 7 and 567, applications 6 and 179; 39 Lean steps ran, 1,165 reused. 125 declarations of Becoming.InAmounts, 89 of them theorems, all with empty axiom reports. Connectivity: 647 of 12,915 apart, 0 of the module's 89; register check passes.

@@ -137,10 +137,6 @@ variable (w : World)
 
 /-! ## Two more premises -/
 
-/-- A census lists the relata active at each step, each once: finitely many are active at
-each step (`Web.Census`). -/
-def Counted : Prop :=
-  ∃ alive, w.web.Census alive
 
 /-- Descent transmits every dependence within one bound (`Flow.TransmitsWithin`). -/
 def Transmitting : Prop :=
