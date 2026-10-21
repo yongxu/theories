@@ -2482,6 +2482,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   such step is of its kind, a step raising or lowering both is followed by such steps for ever,
   and the rests are the regime's point or below the draw with level and recent giving equal; whole
   numbers are an instance.
+  Two conditions under draws, each giving from what is left of both: under mutual support the
+  coupled step keeps the order of states, so a condition ending from a state ends from every state
+  below it; within a band in whole numbers a run comes to rest and each condition's point of no
+  return is a least level that falls as its partner's level rises; a condition giving nothing
+  where nothing is left of its partner drains by its draw once its partner has nothing left.
+  Inhibition breaks the order of fates, and outside a band mutual support can hold a pair neither
+  of which holds alone in a cycle that never rests.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of
