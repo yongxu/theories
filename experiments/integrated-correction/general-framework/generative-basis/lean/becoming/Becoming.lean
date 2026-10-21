@@ -2463,13 +2463,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   the regime's crosses the point both ways.
   Where giving rises with what is left, a run of the regime's step moves one way only, and within
   a band up to a top it is still from some step at most the top. Where the adjustment rises with
-  what is left and with the recent giving, a run whose first step lowers neither its level nor
-  its recent giving, with the recent giving meeting the draw and within a band, comes to rest
-  with its recent giving at the draw and its level at a point the regime's step leaves as it is,
-  and a run whose first step raises neither comes to rest, where nothing gives from nothing, at
-  nothing or at such a point, each within a number of steps its start and band fix. A giving that
-  falls as what is left rises, a run with no band, and a constant giving resting short of the
-  draw show that each premise is needed.
+  what is left and with the recent giving, a step that neither raises nor lowers both the level
+  and the recent giving brings the recent giving toward the draw, so such steps run out, and from
+  the first step that does, the run moves one way only: every run within a band up to a top is
+  still within three times the top and three steps, at the draw with a level the regime's step
+  leaves as it is, or below the draw with level and recent giving equal. A giving that falls as
+  what is left rises, and a run with no band, show both premises are needed; a constant giving
+  resting short of the draw shows the rest below it.
 * `Becoming.Loops` (L1): how a carried difference grows, with no premise beyond the strengths each
   statement names. The carried amount expands by order: order `j`, what routes of at most `j`
   responses carry, rises to the carried amount and is exact up to step `j`. Where no loop of

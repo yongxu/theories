@@ -317,6 +317,13 @@ theorem still_of_fixed {s : S} (fixed : next s = s) : StillFrom (Law.run next s)
       (Law.orbit_mul (next := next) (s := s) (p := 1) fixed n)
   fun k => (stays (0 + k + 1)).trans (stays (0 + k)).symm
 
+/-- The run from the next configuration still from a step leaves the run still one step later. -/
+theorem still_succ {s : S} {N : Nat} (still : StillFrom (Law.run next (next s)) N) :
+    StillFrom (Law.run next s) (N + 1) := fun k => by
+  show Law.orbit next s (N + 1 + k + 1) = Law.orbit next s (N + 1 + k)
+  rw [Nat.add_right_comm N 1 k, Law.orbit_shift next s (N + k + 1), Law.orbit_shift next s (N + k)]
+  exact still k
+
 /-- **A law's run with a bounded mark comes to rest within the bound.** Where a quantity `q` marks
 the changes of a law's run (it never falls along the run and rises wherever the configuration
 changes) and stays at most `B` along it, and `B` is at most `d` above the mark at the start, the run
@@ -350,10 +357,7 @@ theorem still_within [DecidableEq S] {q : S → Nat} {B : Nat} :
         exact marks (n + 1)
       have ⟨N, le, still⟩ :=
         ih (next s) fuel' marks' (fun n => by rw [shifted n]; exact bounded (n + 1))
-      ⟨N + 1, Nat.succ_le_succ le, fun k => by
-        show Law.orbit next s (N + 1 + k + 1) = Law.orbit next s (N + 1 + k)
-        rw [Nat.add_right_comm N 1 k, ← shifted (N + k + 1), ← shifted (N + k)]
-        exact still k⟩
+      ⟨N + 1, Nat.succ_le_succ le, still_succ still⟩
 
 end LawRuns
 

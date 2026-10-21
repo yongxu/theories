@@ -57,21 +57,24 @@ the regime's and not the level's alone.
   every change and is bounded comes to rest within the bound, decided at each step
   (`LastChange.still_within`). Where giving rises with what is left, the regime's step keeps the
   order of levels (`step_mono`), so a run moves one way only, and within a band up to `hi` it is
-  still from some step at most `hi` (`rests_within`). Neither premise can be dropped: giving that is
-  two from nothing and nothing from more keeps every level up to two within two under a draw of one,
-  yet its run from one moves between one and two at every step (`Alternation.alternates`); and under
-  the gated giving, with no band, the regime's run from five rises by one at every step
-  (`Crossing.rises_without_rest`). Where the adjustment rises with what is left and with the recent
-  giving (`Adjusted.Rises`), a run whose first step lowers neither its level nor its recent giving
-  never lowers either (`Adjusted.run_rises`); with the recent giving meeting the draw and within a
-  band up to `hi`, it is still from some step at most `2 hi - (x + r)`, with its recent giving at
-  the draw and its level, at least where it started, at a point the regime's step leaves as it is
-  (`Adjusted.rises_to_rest`). A run whose first step raises neither never raises either
-  (`Adjusted.run_falls`); where nothing gives from nothing, it is still from some step at most
-  `x + r`, at nothing or at such a point (`Adjusted.falls_to_rest`). Nothing from nothing cannot be
-  dropped: a constant giving of one rests from a level of one with a recent giving of one under a
-  draw of two (`Adjusted.rests_short`). A run whose first step raises one of the two and lowers the
-  other is not covered.
+  still from some step at most `hi` (`rests_within`). Where the adjustment rises with what is left
+  and with the recent giving (`Adjusted.Rises`), a run whose first step lowers neither its level nor
+  its recent giving never lowers either, and one whose first step raises neither never raises either
+  (`Adjusted.run_rises`, `Adjusted.run_falls`); a step that does neither, from a state whose recent
+  giving is at most its level, lowers a count that is two more than the recent giving's distance
+  from the draw at or above the draw and at most one below it (`Adjusted.unordered`,
+  `Adjusted.unordered_falls`), so such steps run out. So, where the step keeps every state
+  with level and recent giving up to `hi` at a level up to `hi` (`Adjusted.Band`), every run from
+  such a state is still from some step at most `3 hi + 3` (`Adjusted.comes_to_rest`), at rest: at
+  the draw with a level the regime's step leaves as it is, or below the draw on that line, the giving
+  from nothing left giving it again (`Adjusted.AtRest`, `Adjusted.fixed_iff`). Where nothing gives
+  from nothing, that rest below the draw is nothing; otherwise it can be something
+  (`Adjusted.rests_short`). Every adjustment rests at the draw exactly where `fun e => A e H` gives
+  the draw, so the law holds of every rising adjustment within a band, and the regime only names the
+  point. Neither rising giving nor the band can be dropped: giving that is two from nothing and
+  nothing from more keeps every state up to two within two under a draw of one, yet the run from one
+  moves between one and two at every step (`Alternation.alternates`); under the gated giving, with no
+  band, the run from five rises by one at every step (`Crossing.rises_without_rest`).
 * **The need is the regime's.** Where giving stops below a need `m` (`Gated g m`), every level at
   which giving meets a positive draw lies at or above the need (`root_above_need`), so the point of
   no return lies at least the draw above the need, and more than the draw above it exactly where
@@ -933,15 +936,15 @@ end Crossing
 /-! ## Where a run comes to rest
 
 `Adjusted.rests_iff` says where a run of an adjusting giving can rest, not that it comes to rest; in
-general, settling needs the limited principle of omniscience (`LastChange.lpo_iff_settles`). Where
-giving rises with what is left, the regime's step moves a level one way only: a run whose first step
-raises it never lowers it, and one whose first step lowers it never raises it
-(`Lasting.orbit_mono`). The level, or its distance below the start, then marks the run's changes,
-and within a band the run comes to rest (`LastChange.still_within`), with nothing decided beyond
-the step. Where the adjustment rises with what is left and with the recent giving, the same holds of
-a run whose first step raises, or lowers, both its level and its recent giving: it comes to rest
-within its band at the regime's point, or within its level and recent giving at the regime's point
-or at nothing. -/
+general, settling needs the limited principle of omniscience (`LastChange.lpo_iff_settles`). A run of
+a law with a quantity that never falls along it, rises at every change and is bounded comes to rest
+within the bound, decided at each step (`LastChange.still_within`). Where giving rises with what is
+left, the regime's step moves a level one way only (`Lasting.orbit_mono`), so its level, or its
+distance below the start, is such a quantity, and within a band the run comes to rest. Where the
+adjustment rises with what is left and with the recent giving, a step that neither raises nor lowers
+both the level and the recent giving moves the recent giving strictly toward the draw, so such steps
+run out, and from the first step that raises or lowers both, the run moves one way only: every run
+within a band comes to rest, at the regime's point or at a rest below the draw. -/
 
 /-- The regime's step does not lower a higher level below a lower one's, where giving rises with
 what is left. -/
@@ -993,6 +996,23 @@ def Rises (A : Nat → Nat → Nat) : Prop := ∀ e e' r r', e ≤ e' → r ≤ 
 /-- One state at or below another, in level and in recent giving. -/
 def Below (p q : Nat × Nat) : Prop := p.1 ≤ q.1 ∧ p.2 ≤ q.2
 
+/-- The adjusted step keeps every state whose level and recent giving are at most `hi` at a level at
+most `hi`. -/
+def Band (A : Nat → Nat → Nat) (H hi : Nat) : Prop :=
+  ∀ x r, x ≤ hi → r ≤ hi → (step A H (x, r)).1 ≤ hi
+
+/-- A state the adjusted step leaves as it is: at or above the draw, with the recent giving at the
+draw and a level the regime's step leaves as it is; or below the draw, with the level and the recent
+giving equal and the adjusted giving from nothing left giving it again. -/
+def AtRest (A : Nat → Nat → Nat) (g : Nat → Nat) (H : Nat) (p : Nat × Nat) : Prop :=
+  (p.2 = H ∧ H ≤ p.1 ∧ RegimeMargin.step g H p.1 = p.1) ∨ (p.1 < H ∧ p.1 = p.2 ∧ A 0 p.2 = p.2)
+
+/-- A bound on how many more steps can leave the level and the recent giving neither both risen nor
+both fallen: at or above the draw, two more than the recent giving's distance from the draw; below
+it, one off the line where the level and the recent giving are equal, and none on it. -/
+def unordered (H : Nat) (p : Nat × Nat) : Nat :=
+  if H ≤ p.1 then p.2 - H + (H - p.2) + 2 else if p.1 = p.2 then 0 else 1
+
 /-- The adjusted step keeps the order of states where the adjustment rises. -/
 theorem step_mono {A : Nat → Nat → Nat} (rises : Rises A) (H : Nat) {p q : Nat × Nat}
     (below : Below p q) : Below (step A H p) (step A H q) :=
@@ -1007,6 +1027,21 @@ theorem sum_lt_of_below : ∀ {p q : Nat × Nat}, Below p q → q ≠ p → p.1 
       (fun ge => (Nat.lt_or_ge b d).elim (fun lt => Nat.add_lt_add_of_le_of_lt below.1 lt)
         (fun ge' => absurd (congr (congrArg Prod.mk (Nat.le_antisymm ge below.1))
           (Nat.le_antisymm ge' below.2)) apart))
+
+/-- After a step the recent giving is at most the level. -/
+theorem given_le_level (A : Nat → Nat → Nat) (H : Nat) (p : Nat × Nat) :
+    (step A H p).2 ≤ (step A H p).1 :=
+  Nat.le_add_left _ _
+
+/-- A run from a state within a band stays within it. -/
+theorem in_band {A : Nat → Nat → Nat} {H hi : Nat} (band : Band A H hi) {p : Nat × Nat}
+    (high : p.1 ≤ hi) (given : p.2 ≤ hi) :
+    ∀ n, (Law.orbit (step A H) p n).1 ≤ hi ∧ (Law.orbit (step A H) p n).2 ≤ hi
+  | 0 => ⟨high, given⟩
+  | n + 1 =>
+    have top : (step A H (Law.orbit (step A H) p n)).1 ≤ hi :=
+      band _ _ (in_band band high given n).1 (in_band band high given n).2
+    ⟨top, Nat.le_trans (given_le_level A H _) top⟩
 
 /-- A run whose first step lowers neither its level nor its recent giving never lowers either. -/
 theorem run_rises {A : Nat → Nat → Nat} (rises : Rises A) {H : Nat} {p : Nat × Nat}
@@ -1024,94 +1059,209 @@ theorem run_falls {A : Nat → Nat → Nat} (rises : Rises A) {H : Nat} {p : Nat
     (Law.orbit_shift (step A H) p n).symm
     (Lasting.orbit_mono (rel := Below) (fun _ _ below => step_mono rises H below) first n)
 
-/-- **A run whose first step rises comes to rest at the regime's point.** Where the adjustment rises
-with what is left and with the recent giving, rests at the draw exactly where the regime gives the
-draw, and keeps every level up to `hi` within it where the recent giving meets the draw, a run from
-a level up to `hi`, with the recent giving meeting the draw, whose first step lowers neither, is
-still from some step at most `2 hi - (x + r)`, at a state whose recent giving is the draw and whose
-level, at least `x`, the regime's step leaves as it is. A rest's level is never below its recent
-giving, so the rest lies at or above the draw wherever the run starts. -/
-theorem rises_to_rest {A : Nat → Nat → Nat} {g : Nat → Nat} {H hi x r : Nat} (rises : Rises A)
-    (restsAt : RestsAtDraw A g H) (keeps : Keeps A H hi) (high : x ≤ hi)
-    (met : H ≤ r) (first : Below (x, r) (step A H (x, r))) :
-    ∃ N, N ≤ hi + hi - (x + r) ∧ LastChange.StillFrom (Law.run (step A H) (x, r)) N ∧
-      ((Law.run (step A H) (x, r)).state N).2 = H ∧ x ≤ ((Law.run (step A H) (x, r)).state N).1 ∧
-      RegimeMargin.step g H ((Law.run (step A H) (x, r)).state N).1 =
-        ((Law.run (step A H) (x, r)).state N).1 := by
+/-- A run within a band whose first step lowers neither its level nor its recent giving is still
+from some step at most `2 hi - (x + r)`. -/
+theorem rests_rising {A : Nat → Nat → Nat} {H hi : Nat} {p : Nat × Nat} (rises : Rises A)
+    (band : Band A H hi) (high : p.1 ≤ hi) (given : p.2 ≤ hi) (first : Below p (step A H p)) :
+    ∃ N, N ≤ hi + hi - (p.1 + p.2) ∧ LastChange.StillFrom (Law.run (step A H) p) N :=
   have up := run_rises rises first
-  have from_start : ∀ n, Below (x, r) (Law.orbit (step A H) (x, r) n) := fun n => by
-    induction n with
-    | zero => exact ⟨Nat.le_refl x, Nat.le_refl r⟩
-    | succ n ih => exact ⟨Nat.le_trans ih.1 (up n).1, Nat.le_trans ih.2 (up n).2⟩
-  have top : ∀ n, (Law.orbit (step A H) (x, r) n).1 ≤ hi := fun n => by
-    induction n with
-    | zero => exact high
-    | succ n ih => exact keeps _ _ ih (Nat.le_trans met (from_start n).2)
-  have given : ∀ n, (Law.orbit (step A H) (x, r) n).2 ≤ hi := fun n =>
-    Nat.le_trans (up n).2 (Nat.le_trans (Nat.le_add_left _ _) (top (n + 1)))
-  have ⟨N, le, still⟩ := LastChange.still_within (q := fun p : Nat × Nat => p.1 + p.2)
-    (B := hi + hi) (hi + hi - (x + r)) (x, r)
-    (Nat.le_of_eq (Naturals.sub_add_cancel (Nat.add_le_add high (given 0))).symm)
+  have inside := in_band band high given
+  LastChange.still_within (q := fun v : Nat × Nat => v.1 + v.2) (B := hi + hi) (hi + hi - (p.1 + p.2)) p
+    (Nat.le_of_eq (Naturals.sub_add_cancel (Nat.add_le_add high given)).symm)
     (fun n => ⟨Nat.add_le_add (up n).1 (up n).2, sum_lt_of_below (up n)⟩)
-    (fun n => Nat.add_le_add (top n) (given n))
-  have fixed : step A H (Law.orbit (step A H) (x, r) N) = Law.orbit (step A H) (x, r) N := still 0
-  have level := congrArg Prod.fst fixed
-  have giving := congrArg Prod.snd fixed
-  have atLeast : H ≤ (Law.orbit (step A H) (x, r) N).1 :=
-    Nat.le_trans met (Nat.le_trans (from_start N).2 (Nat.le_trans (Nat.le_of_eq giving.symm)
-      (Nat.le_trans (Nat.le_add_left _ _) (Nat.le_of_eq level))))
-  have ⟨rH, regime⟩ := (rest_iff restsAt atLeast).1 fixed
-  exact ⟨N, le, still, rH, (from_start N).1, regime⟩
+    (fun n => Nat.add_le_add (inside n).1 (inside n).2)
 
-/-- **A run whose first step falls comes to rest at the regime's point or at nothing.** Where the
-adjustment rises with what is left and with the recent giving, rests at the draw exactly where the
-regime gives the draw, and gives nothing from nothing, a run whose first step raises neither its
-level nor its recent giving is still from some step at most `x + r`, at nothing, or at a state whose
-recent giving is the draw and whose level, at or above the draw, the regime's step leaves as it
-is. -/
-theorem falls_to_rest {A : Nat → Nat → Nat} {g : Nat → Nat} {H x r : Nat} (rises : Rises A)
-    (restsAt : RestsAtDraw A g H) (nothing : FromNothing A) (first : Below (step A H (x, r)) (x, r)) :
-    ∃ N, N ≤ x + r ∧ LastChange.StillFrom (Law.run (step A H) (x, r)) N ∧
-      ((Law.run (step A H) (x, r)).state N = (0, 0) ∨
-        ((Law.run (step A H) (x, r)).state N).2 = H ∧ H ≤ ((Law.run (step A H) (x, r)).state N).1 ∧
-        RegimeMargin.step g H ((Law.run (step A H) (x, r)).state N).1 =
-          ((Law.run (step A H) (x, r)).state N).1) := by
+/-- A run whose first step raises neither its level nor its recent giving is still from some step at
+most `x + r`. -/
+theorem rests_falling {A : Nat → Nat → Nat} {H : Nat} {p : Nat × Nat} (rises : Rises A)
+    (first : Below (step A H p) p) :
+    ∃ N, N ≤ p.1 + p.2 ∧ LastChange.StillFrom (Law.run (step A H) p) N := by
   have down := run_falls rises first
-  have to_start : ∀ n, Below (Law.orbit (step A H) (x, r) n) (x, r) := fun n => by
+  have to_start : ∀ n, Below (Law.orbit (step A H) p n) p := fun n => by
     induction n with
-    | zero => exact ⟨Nat.le_refl x, Nat.le_refl r⟩
+    | zero => exact ⟨Nat.le_refl _, Nat.le_refl _⟩
     | succ n ih => exact ⟨Nat.le_trans (down n).1 ih.1, Nat.le_trans (down n).2 ih.2⟩
-  have ⟨N, le, still⟩ := LastChange.still_within
-    (q := fun p : Nat × Nat => x + r - (p.1 + p.2)) (B := x + r) (x + r) (x, r)
-    (Nat.le_add_right (x + r) _)
-    (fun n => ⟨Optimum.sub_le_sub_left_of_le (Nat.add_le_add (down n).1 (down n).2) (x + r),
-      fun apart => Requirement.Formation.sub_lt_sub_of_lt (sum_lt_of_below (down n) fun same => apart same.symm)
+  exact LastChange.still_within (q := fun v : Nat × Nat => p.1 + p.2 - (v.1 + v.2)) (B := p.1 + p.2)
+    (p.1 + p.2) p (Nat.le_add_right _ _)
+    (fun n => ⟨Optimum.sub_le_sub_left_of_le (Nat.add_le_add (down n).1 (down n).2) _,
+      fun apart => Requirement.Formation.sub_lt_sub_of_lt
+        (sum_lt_of_below (down n) fun same => apart same.symm)
         (Nat.add_le_add (to_start n).1 (to_start n).2)⟩)
-    (fun n => Nat.sub_le (x + r) _)
-  have fixed : step A H (Law.orbit (step A H) (x, r) N) = Law.orbit (step A H) (x, r) N := still 0
-  refine ⟨N, le, still, ?_⟩
-  exact (Nat.lt_or_ge (Law.orbit (step A H) (x, r) N).1 H).elim
-    (fun lt => by
-      have gone : (Law.orbit (step A H) (x, r) N).1 - H = 0 := sub_eq_zero_of_le (Nat.le_of_lt lt)
-      have ended : step A H (Law.orbit (step A H) (x, r) N) = (0, 0) := by
-        show ((Law.orbit (step A H) (x, r) N).1 - H +
-            A ((Law.orbit (step A H) (x, r) N).1 - H) (Law.orbit (step A H) (x, r) N).2,
-          A ((Law.orbit (step A H) (x, r) N).1 - H) (Law.orbit (step A H) (x, r) N).2) = (0, 0)
-        rw [gone, nothing]
-      exact Or.inl (fixed.symm.trans ended))
-    (fun ge => have ⟨rH, regime⟩ := (rest_iff restsAt ge).1 fixed
-      Or.inr ⟨rH, ge, regime⟩)
+    (fun n => Nat.sub_le _ _)
 
-/-- **Without nothing from nothing, a falling run can rest short of the draw.** Giving one whatever
-is left and whatever was given before rises, and rests at a draw of two exactly where the regime's
-constant giving of one does (nowhere); from a level of one with a recent giving of one the first step
-raises neither, yet the run stays there, neither at nothing nor with a recent giving at the draw. -/
+/-- Below the draw, `unordered` is at most one. -/
+theorem unordered_below {H : Nat} {p : Nat × Nat} (low : ¬ H ≤ p.1) : unordered H p ≤ 1 := by
+  show (if H ≤ p.1 then p.2 - H + (H - p.2) + 2 else if p.1 = p.2 then 0 else 1) ≤ 1
+  rw [if_neg low]
+  exact if same : p.1 = p.2 then by rw [if_pos same]; exact Nat.zero_le 1
+    else by rw [if_neg same]; exact Nat.le_refl 1
+
+/-- `unordered` is at most two more than a bound on the level, where the recent giving is at most
+the level. -/
+theorem unordered_le {H hi : Nat} {p : Nat × Nat} (le : p.2 ≤ p.1) (high : p.1 ≤ hi) :
+    unordered H p ≤ hi + 2 :=
+  if at_least : H ≤ p.1 then by
+    show (if H ≤ p.1 then p.2 - H + (H - p.2) + 2 else if p.1 = p.2 then 0 else 1) ≤ hi + 2
+    rw [if_pos at_least]
+    refine Nat.add_le_add_right ?_ 2
+    exact (Nat.le_total p.2 H).elim
+      (fun short => by
+        rw [sub_eq_zero_of_le short, Nat.zero_add]
+        exact Nat.le_trans (Nat.sub_le H p.2) (Nat.le_trans at_least high))
+      (fun met => by
+        rw [sub_eq_zero_of_le met, Nat.add_zero]
+        exact Nat.le_trans (Nat.sub_le p.2 H) (Nat.le_trans le high))
+  else Nat.le_trans (unordered_below at_least) (Nat.le_add_left 1 (hi + 1))
+
+/-- **A step that neither raises nor lowers both moves toward the draw.** From a state whose recent
+giving is at most its level, a step after which the level and the recent giving neither both rise
+nor both fall lowers `unordered`: at or above the draw the new recent giving lies strictly between
+the old and the draw; below it the new state lies on the line where level and recent giving are
+equal. No property of the giving is needed. -/
+theorem unordered_falls {H x r a : Nat} (le : r ≤ x) (notUp : ¬ (x ≤ x - H + a ∧ r ≤ a))
+    (notDown : ¬ (x - H + a ≤ x ∧ a ≤ r)) : unordered H (x - H + a, a) < unordered H (x, r) := by
+  show (if H ≤ x - H + a then a - H + (H - a) + 2 else if x - H + a = a then 0 else 1) <
+    (if H ≤ x then r - H + (H - r) + 2 else if x = r then 0 else 1)
+  exact if at_least : H ≤ x then by
+    have back : x - H + H = x := Naturals.sub_add_cancel at_least
+    rw [if_pos at_least]
+    exact (Nat.lt_or_ge a H).elim
+      (fun short => by
+        have lowered : x - H + a ≤ x :=
+          Nat.le_trans (Nat.add_le_add_left (Nat.le_of_lt short) _) (Nat.le_of_eq back)
+        have rose : r < a := (Nat.lt_or_ge r a).elim id fun ge => absurd ⟨lowered, ge⟩ notDown
+        have closer : H - a < H - r :=
+          Requirement.Formation.sub_lt_sub_of_lt rose (Nat.le_of_lt short)
+        exact if up : H ≤ x - H + a then by
+          rw [if_pos up, sub_eq_zero_of_le (Nat.le_of_lt short),
+            sub_eq_zero_of_le (Nat.le_of_lt (Nat.lt_trans rose short)), Nat.zero_add, Nat.zero_add]
+          exact Nat.add_lt_add_right closer 2
+        else Nat.lt_of_le_of_lt (unordered_below (p := (x - H + a, a)) up)
+          (Nat.lt_of_lt_of_le (Nat.lt_succ_self 1) (Nat.le_add_left 2 _)))
+      (fun met => by
+        have raised : x ≤ x - H + a :=
+          Nat.le_trans (Nat.le_of_eq back.symm) (Nat.add_le_add_left met _)
+        have fell : a < r := (Nat.lt_or_ge a r).elim id fun ge => absurd ⟨raised, ge⟩ notUp
+        have above : H < a := (Nat.lt_or_ge H a).elim id fun le' =>
+          absurd ⟨Nat.le_trans (Nat.add_le_add_left le' _) (Nat.le_of_eq back), Nat.le_of_lt fell⟩
+            notDown
+        have closer : a - H < r - H := by
+          have shifted : a - H + 1 + H ≤ r - H + H := by
+            rw [Nat.add_right_comm, Naturals.sub_add_cancel met,
+              Naturals.sub_add_cancel (Nat.le_trans met (Nat.le_of_lt fell))]
+            exact fell
+          exact Naturals.le_of_add_le_add_right shifted
+        rw [if_pos (Nat.le_trans at_least raised), sub_eq_zero_of_le met,
+          sub_eq_zero_of_le (Nat.le_trans met (Nat.le_of_lt fell)), Nat.add_zero, Nat.add_zero]
+        exact Nat.add_lt_add_right closer 2)
+  else by
+    have gone : x - H = 0 := sub_eq_zero_of_le (Nat.le_of_lt (Nat.lt_of_not_le at_least))
+    rw [if_neg at_least]
+    rw [gone, Nat.zero_add] at notUp notDown ⊢
+    have fell : a < x := (Nat.lt_or_ge a x).elim id fun ge => absurd ⟨ge, Nat.le_trans le ge⟩ notUp
+    have rose : r < a := (Nat.lt_or_ge r a).elim id fun ge => absurd ⟨Nat.le_of_lt fell, ge⟩ notDown
+    rw [if_neg (fun up : H ≤ a => at_least (Nat.le_trans up (Nat.le_of_lt fell))), if_pos rfl,
+      if_neg (fun same : x = r => Nat.lt_irrefl r (Nat.lt_trans rose (same ▸ fell)))]
+    exact Nat.lt_succ_self 0
+
+/-- **Every rest of the state is the regime's or below the draw.** Where the adjusted giving rests at
+the draw exactly where the regime gives the draw, the adjusted step leaves a state as it is exactly
+where the state is at rest: at or above the draw with the recent giving at the draw and a level the
+regime's step leaves as it is, or below the draw on the line where level and recent giving are equal,
+the giving from nothing left giving it again. -/
+theorem fixed_iff {A : Nat → Nat → Nat} {g : Nat → Nat} {H : Nat} {p : Nat × Nat}
+    (restsAt : RestsAtDraw A g H) : step A H p = p ↔ AtRest A g H p :=
+  if at_least : H ≤ p.1 then
+    ⟨fun fixed => have ⟨rH, regime⟩ := (rest_iff (x := p.1) (r := p.2) restsAt at_least).1 fixed
+      Or.inl ⟨rH, at_least, regime⟩,
+     fun rest => rest.elim (fun ⟨rH, _, regime⟩ => (rest_iff (x := p.1) (r := p.2) restsAt at_least).2
+        ⟨rH, regime⟩)
+      (fun ⟨low, _, _⟩ => absurd at_least fun up => Nat.lt_irrefl _ (Nat.lt_of_lt_of_le low up))⟩
+  else
+    have low : p.1 < H := Nat.lt_of_not_le at_least
+    have gone : p.1 - H = 0 := sub_eq_zero_of_le (Nat.le_of_lt low)
+    ⟨fun fixed => by
+      have level : p.1 - H + A (p.1 - H) p.2 = p.1 := congrArg Prod.fst fixed
+      have giving : A (p.1 - H) p.2 = p.2 := congrArg Prod.snd fixed
+      rw [gone] at level giving
+      rw [giving, Nat.zero_add] at level
+      exact Or.inr ⟨low, level.symm, giving⟩,
+     fun rest => rest.elim (fun ⟨_, up, _⟩ => absurd up at_least) fun ⟨_, same, again⟩ => by
+      show (p.1 - H + A (p.1 - H) p.2, A (p.1 - H) p.2) = p
+      rw [gone, again, Nat.zero_add]
+      exact congrArg (fun v => (v, p.2)) same.symm⟩
+
+/-- Within a band, a run from a state whose recent giving is at most its level, with `unordered` at
+most `d`, is still from some step at most `d + 2 hi`. -/
+theorem rests_from {A : Nat → Nat → Nat} {H hi : Nat} (rises : Rises A) (band : Band A H hi) :
+    ∀ (d : Nat) (p : Nat × Nat), unordered H p ≤ d → p.2 ≤ p.1 → p.1 ≤ hi →
+      ∃ N, N ≤ d + (hi + hi) ∧ LastChange.StillFrom (Law.run (step A H) p) N := by
+  intro d
+  induction d with
+  | zero =>
+    intro p bound le high
+    exact if up : p.1 ≤ (step A H p).1 ∧ p.2 ≤ (step A H p).2 then
+      have ⟨N, n_le, still⟩ := rests_rising rises band high (Nat.le_trans le high) up
+      ⟨N, Nat.le_trans n_le (Nat.le_trans (Nat.sub_le _ _) (Nat.le_add_left _ 0)), still⟩
+    else if down : (step A H p).1 ≤ p.1 ∧ (step A H p).2 ≤ p.2 then
+      have ⟨N, n_le, still⟩ := rests_falling rises down
+      ⟨N, Nat.le_trans n_le (Nat.le_trans (Nat.add_le_add high (Nat.le_trans le high))
+        (Nat.le_add_left _ 0)), still⟩
+    else absurd (Nat.lt_of_lt_of_le (unordered_falls (a := A (p.1 - H) p.2) le up down) bound)
+      (Nat.not_lt_zero _)
+  | succ d ih =>
+    intro p bound le high
+    exact if up : p.1 ≤ (step A H p).1 ∧ p.2 ≤ (step A H p).2 then
+      have ⟨N, n_le, still⟩ := rests_rising rises band high (Nat.le_trans le high) up
+      ⟨N, Nat.le_trans n_le (Nat.le_trans (Nat.sub_le _ _) (Nat.le_add_left _ (d + 1))), still⟩
+    else if down : (step A H p).1 ≤ p.1 ∧ (step A H p).2 ≤ p.2 then
+      have ⟨N, n_le, still⟩ := rests_falling rises down
+      ⟨N, Nat.le_trans n_le (Nat.le_trans (Nat.add_le_add high (Nat.le_trans le high))
+        (Nat.le_add_left _ (d + 1))), still⟩
+    else
+      have fewer : unordered H (step A H p) ≤ d := Nat.le_of_lt_succ
+        (Nat.lt_of_lt_of_le (unordered_falls (a := A (p.1 - H) p.2) le up down) bound)
+      have ⟨N, n_le, still⟩ :=
+        ih (step A H p) fewer (given_le_level A H p) (band _ _ high (Nat.le_trans le high))
+      ⟨N + 1, Nat.le_trans (Nat.succ_le_succ n_le) (Nat.le_of_eq (Nat.add_right_comm d (hi + hi) 1)),
+        LastChange.still_succ still⟩
+
+/-- **Every run of a rising adjustment within a band comes to rest.** Where the adjustment rises with
+what is left and with the recent giving, rests at the draw exactly where the regime gives the draw,
+and the step keeps every state with level and recent giving up to `hi` at a level up to `hi`, the
+run from a level and a recent giving up to `hi` is still from some step at most `3 hi + 3`, at rest:
+at the draw with a level the regime's step leaves as it is, or below the draw on the line where level
+and recent giving are equal (at nothing, where nothing gives from nothing). Whether it changes again
+is decided at each step; no omniscience is needed. -/
+theorem comes_to_rest {A : Nat → Nat → Nat} {g : Nat → Nat} {H hi x r : Nat} (rises : Rises A)
+    (restsAt : RestsAtDraw A g H) (band : Band A H hi) (high : x ≤ hi) (given : r ≤ hi) :
+    ∃ N, N ≤ hi + hi + hi + 3 ∧ LastChange.StillFrom (Law.run (step A H) (x, r)) N ∧
+      AtRest A g H ((Law.run (step A H) (x, r)).state N) := by
+  have le := given_le_level A H (x, r)
+  have top : (step A H (x, r)).1 ≤ hi := band x r high given
+  have ⟨N, n_le, still⟩ := rests_from rises band (hi + 2) (step A H (x, r)) (unordered_le le top) le top
+  have still' := LastChange.still_succ (next := step A H) (s := (x, r)) still
+  have fixed : step A H ((Law.run (step A H) (x, r)).state (N + 1)) =
+      (Law.run (step A H) (x, r)).state (N + 1) := still' 0
+  refine ⟨N + 1, ?_, still', (fixed_iff restsAt).1 fixed⟩
+  exact Nat.le_trans (Nat.succ_le_succ n_le) (Nat.le_of_eq (by
+    show hi + 2 + (hi + hi) + 1 = hi + hi + hi + 3
+    rw [Nat.add_comm hi 2, Nat.add_assoc 2 hi (hi + hi), Nat.add_comm 2 (hi + (hi + hi)),
+      Nat.add_assoc (hi + (hi + hi)) 2 1, ← Nat.add_assoc hi hi hi]))
+
+/-- **A rest below the draw.** Giving one whatever is left and whatever was given before rises, and
+rests at a draw of two exactly where the regime's constant giving of one does (nowhere), and the step
+keeps every state up to one at a level up to one; from a level of one with a recent giving of one the
+run stays there at every step, below the draw, with its recent giving short of it. -/
 theorem rests_short :
-    Rises (fun _ _ => 1) ∧ RestsAtDraw (fun _ _ => 1) (fun _ => 1) 2 ∧
-    Below (step (fun _ _ => 1) 2 (1, 1)) (1, 1) ∧
+    Rises (fun _ _ => 1) ∧ RestsAtDraw (fun _ _ => 1) (fun _ => 1) 2 ∧ Band (fun _ _ => 1) 2 1 ∧
     ∀ n, (Law.run (step (fun _ _ => 1) 2) (1, 1)).state n = (1, 1) :=
-  ⟨fun _ _ _ _ _ _ => Nat.le_refl 1, fun _ => Iff.rfl, ⟨Nat.le_refl 1, Nat.le_refl 1⟩, fun n =>
-    (congrArg (Law.orbit (step (fun _ _ => 1) 2) (1, 1)) (Nat.one_mul n)).symm.trans
+  ⟨fun _ _ _ _ _ _ => Nat.le_refl 1, fun _ => Iff.rfl,
+   fun x _ high _ => by
+    show x - 2 + 1 ≤ 1
+    rw [sub_eq_zero_of_le (Nat.le_trans high (Nat.le_succ 1)), Nat.zero_add]
+    exact Nat.le_refl 1,
+   fun n => (congrArg (Law.orbit (step (fun _ _ => 1) 2) (1, 1)) (Nat.one_mul n)).symm.trans
       (Law.orbit_mul (next := step (fun _ _ => 1) 2) (s := (1, 1)) (p := 1) rfl n)⟩
 
 end Adjusted
@@ -1141,17 +1291,20 @@ theorem climbs : ∀ n, Law.orbit (step giving 3) 5 n = n + 5
         Nat.lt_irrefl 2 (Nat.lt_of_le_of_lt (Nat.le_add_left 2 n) lt)]
 
 /-- **Without a band, a rising run need not rest.** Giving gated at two rises with what is left, so
-the adjustment reading what is left alone rises, and from five with a recent giving of three the
-first step raises both the level and the recent giving; yet the regime's step raises the level by
-one at every step, so the run is never still. -/
+the adjustment reading what is left alone rises, and it rests at a draw of three exactly where the
+regime does; yet from five the regime's step raises the level by one at every step, so neither the
+regime's run from five nor the adjusted run from five with a recent giving of three is ever still. -/
 theorem rises_without_rest :
-    Adjusted.Rises (fun e _ => giving e) ∧
-    Adjusted.Below (5, 3) (Adjusted.step (fun e _ => giving e) 3 (5, 3)) ∧
+    Adjusted.Rises (fun e _ => giving e) ∧ Adjusted.RestsAtDraw (fun e _ => giving e) giving 3 ∧
     (∀ n, (Law.run (step giving 3) 5).state n = n + 5) ∧
-    ∀ N, ¬ LastChange.StillFrom (Law.run (step giving 3) 5) N :=
-  ⟨fun e e' _ _ le _ => giving_rises e e' le, ⟨Nat.le_succ 5, Nat.le_succ 3⟩, climbs,
-   fun N still => Naturals.succ_ne_self (N + 5)
-    ((climbs (N + 0 + 1)).symm.trans ((still 0).trans (climbs (N + 0))))⟩
+    (∀ N, ¬ LastChange.StillFrom (Law.run (step giving 3) 5) N) ∧
+    ∀ N, ¬ LastChange.StillFrom (Law.run (Adjusted.step (fun e _ => giving e) 3) (5, 3)) N :=
+  have never : ∀ N, ¬ LastChange.StillFrom (Law.run (step giving 3) 5) N := fun N still =>
+    Naturals.succ_ne_self (N + 5) ((climbs (N + 0 + 1)).symm.trans ((still 0).trans (climbs (N + 0))))
+  ⟨fun e e' _ _ le _ => giving_rises e e' le, fun _ => Iff.rfl, climbs, never,
+   fun N still => never N fun k =>
+    (Adjusted.orbit_regime giving 3 (5, 3) (N + k + 1)).symm.trans
+      ((congrArg Prod.fst (still k)).trans (Adjusted.orbit_regime giving 3 (5, 3) (N + k)))⟩
 
 end Crossing
 
@@ -1178,11 +1331,11 @@ theorem returns : ∀ k, Law.orbit (step giving 1) 1 (k + k) = 1 := fun k =>
 two from nothing and nothing from more does not rise with what is left. Under a draw of one the
 regime's step keeps every level up to two within two, and the adjustment reading what is left alone
 rests at the draw exactly where the regime does and keeps the band; from one with a recent giving of
-two its first step raises both. Yet the regime's run from one moves between one and two at every
+two its first step raises both, so no ordering of the start is enough either. Yet the regime's run from one moves between one and two at every
 step, and so does the level of the adjusted run, so neither is ever still. -/
 theorem alternates :
     ¬ (∀ a b, a ≤ b → giving a ≤ giving b) ∧ Keeps giving 1 2 ∧
-    Adjusted.RestsAtDraw (fun e _ => giving e) giving 1 ∧ Adjusted.Keeps (fun e _ => giving e) 1 2 ∧
+    Adjusted.RestsAtDraw (fun e _ => giving e) giving 1 ∧ Adjusted.Band (fun e _ => giving e) 1 2 ∧
     Adjusted.Below (1, 2) (Adjusted.step (fun e _ => giving e) 1 (1, 2)) ∧
     (∀ N, ¬ LastChange.StillFrom (Law.run (step giving 1) 1) N) ∧
     ∀ N, ¬ LastChange.StillFrom (Law.run (Adjusted.step (fun e _ => giving e) 1) (1, 2)) N :=
@@ -1190,7 +1343,7 @@ theorem alternates :
     absurd ((congrArg (step giving 1) (returns N)).symm.trans ((still N).trans (returns N)))
       (Naturals.succ_ne_self 1)
   ⟨fun grows => Nat.not_succ_le_zero 1 (grows 0 1 (Nat.zero_le 1)), keeps, fun _ => Iff.rfl,
-   Adjusted.regime_keeps keeps, ⟨Nat.le_succ 1, Nat.le_refl 2⟩, never,
+   fun x _ high _ => keeps x high, ⟨Nat.le_succ 1, Nat.le_refl 2⟩, never,
    fun N still => never N fun k =>
     (Adjusted.orbit_regime giving 1 (1, 2) (N + k + 1)).symm.trans
       ((congrArg Prod.fst (still k)).trans (Adjusted.orbit_regime giving 1 (1, 2) (N + k)))⟩
