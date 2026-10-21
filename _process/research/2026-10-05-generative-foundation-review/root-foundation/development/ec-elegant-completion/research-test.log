@@ -1,21 +1,21 @@
 python3 -B -m unittest discover -s tools/research/tests -p 'test_*.py'
-..........................................................................................................................................................................usage: python3 -m unittest [-h] --en EN --zh ZH [--report REPORT] file
+...........................................................................................................................................................................usage: python3 -m unittest [-h] --en EN --zh ZH [--report REPORT] file
 python3 -m unittest: error: an output path is the input file
 ..........................s.....
 ----------------------------------------------------------------------
-Ran 202 tests in 249.881s
+Ran 203 tests in 132.886s
 
 OK (skipped=1)
 {
   "source": "DOC.md",
   "source_bytes": 642,
   "en": {
-    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpcl_fhz1r/en.md",
+    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp7aokax2m/en.md",
     "bytes": 484,
     "lines": 27
   },
   "zh": {
-    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpcl_fhz1r/DOC.zh.md",
+    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp7aokax2m/DOC.zh.md",
     "bytes": 537,
     "lines": 33
   },
@@ -53,12 +53,12 @@ OK (skipped=1)
   "source": "DOC.md",
   "source_bytes": 642,
   "en": {
-    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpcl_fhz1r/en.md",
+    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp7aokax2m/en.md",
     "bytes": 484,
     "lines": 27
   },
   "zh": {
-    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmpcl_fhz1r/DOC.zh.md",
+    "path": "/var/folders/h6/tw6bmgcs5txbtn4swlpkpm4w0000gn/T/tmp7aokax2m/DOC.zh.md",
     "bytes": 537,
     "lines": 33
   },

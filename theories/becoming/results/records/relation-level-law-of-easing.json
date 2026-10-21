@@ -85,8 +85,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T141520.308357Z): the 7 declarations Becoming.Ranking, Becoming.Relevance and Becoming.JointDraw gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 317; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T141520.308357Z）：Becoming.Ranking、Becoming.Relevance 与 Becoming.JointDraw 新增的 7 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 317 节；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T141520.308357Z): the 7 declarations Becoming.Ranking, Becoming.Relevance and Becoming.JointDraw gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 318; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T141520.308357Z）：Becoming.Ranking、Becoming.Relevance 与 Becoming.JointDraw 新增的 7 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 318 节；未经人的独立审查。"
   },
   "next_delta": {
     "en": "A witness that participation kept cannot be dropped in the restraint theorem; the form of L under the condition; J1 step by step; an independent review.",
@@ -239,8 +239,8 @@
   ],
   "history": [
     {
-      "en": "21 October 2026: added (RL1), the relation-level reading on courses, its exact law of easing, its whole-run form, restraint over any number of drawers under it and the two-part family unranked; study section 317.",
-      "zh": "2026年10月21日：新增（RL1），进程上的关系层读法、其确切的缓和之律、其整段形式、其下对任意多个汲取者的节制，以及二元族不排序；研究第 317 节。"
+      "en": "21 October 2026: added (RL1), the relation-level reading on courses, its exact law of easing, its whole-run form, restraint over any number of drawers under it and the two-part family unranked; study section 318.",
+      "zh": "2026年10月21日：新增（RL1），进程上的关系层读法、其确切的缓和之律、其整段形式、其下对任意多个汲取者的节制，以及二元族不排序；研究第 318 节。"
     }
   ]
 }

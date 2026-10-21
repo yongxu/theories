@@ -377,6 +377,33 @@ def main():
             if best in APART:
                 apart_records.append({'id': record['id'], 'modules': sorted({where[a] for a in aliases})})
 
+    # The master laws (board item EC, not a criterion): for each central declaration of the coverage file, the laws
+    # whose anchors its type or value reaches, directly or through other constants.
+    coverage_path = ROOT / 'theories/becoming/results/completion/COVERAGE.json'
+    coverage = json.loads(coverage_path.read_text()) if coverage_path.exists() else {}
+    master_laws = None
+    if coverage.get('master_laws'):
+        law_anchors = {law['id']: set(law['anchors']) for law in coverage['master_laws']}
+
+        def reasons(n):
+            seen, stack = {n}, [n]
+            while stack:
+                for d in deps.get(stack.pop(), ()):
+                    if d in constants and d not in seen:
+                        seen.add(d)
+                        stack.append(d)
+            return seen
+        master_rows = []
+        for row in coverage.get('rows', []):
+            master_rows.append({'row': row['id'], 'declarations': [
+                {'declaration': n, 'laws': sorted(k for k, a in law_anchors.items() if reasons(n) & a)
+                 if n in constants else None} for n in row['declarations']]})
+        entries = [e for r in master_rows for e in r['declarations']]
+        master_laws = {'central_declarations': len(entries),
+                       'resting_on_no_master_law': sum(1 for e in entries if not e['laws']),
+                       'by_law': {k: sum(1 for e in entries if e['laws'] and k in e['laws']) for k in law_anchors},
+                       'rows': master_rows}
+
     head = subprocess.run(['git', 'rev-parse', 'HEAD'], text=True, stdout=subprocess.PIPE).stdout.strip()
     # The receipt the commit holds; a later run in the working tree is not this commit's.
     committed = subprocess.run(['git', 'show', 'HEAD:' + str((SPINE_DIR / 'becoming-verification.json').relative_to(ROOT))],
@@ -438,6 +465,7 @@ def main():
         },
         'records_by_best_alias_class': {c: records[c] for c in CLASSES if records[c]},
         'records_resting_only_on_apart_theorems': apart_records,
+        'master_laws': master_laws,
     }
     print(json.dumps(summary, ensure_ascii=False, indent=1))
     if '--check' in sys.argv[1:] and (unclassified or stale or bad_instances):
