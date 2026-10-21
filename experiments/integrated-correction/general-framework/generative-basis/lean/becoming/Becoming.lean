@@ -1438,8 +1438,8 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   t, the renewal law z + R z their case. Where others first draw from what an optimizer
   leaves at least what the remainder renews, every optimum of an order whose weighting falls
   at every step ends the base at once; where they draw more, so does every optimum of an
-  order weighting every step alike. Witness: from two, the doubling source is rebuilt alone
-  and ended with others drawing first, under the same weights.
+  order with positive weights rising at no step. Witness: from two, the doubling source is
+  rebuilt alone and ended with others drawing first, under the same weights.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
