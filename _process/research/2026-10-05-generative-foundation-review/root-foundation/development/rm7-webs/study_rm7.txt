@@ -1,0 +1,52 @@
+## {N}. Coupled webs: support across a web, and the cascade of ends (RM7)
+
+```text
+Result(s): new record coupled-webs (new laws of Becoming.RegimeMargin); generalizes coupled-regimes (RM6), whose laws
+       of order, ending, draining, ending after and ending together are now read off the web's (statements unchanged,
+       direct proofs gone, board rule 9); reuses regime-in-any-amounts (Drawn, sub_mono), Lasting.orbit_mono,
+       Law.run, Amounts.
+Delta: RM6 stated two coupled conditions. Coupled.Indexed states any number, indexed by any type, each under its
+       draw, taken first, and giving from what is left of all, in any amounts with a draw. Under mutual support the
+       web's step keeps the order of states condition by condition (Coupled.Indexed.step_mono, run_below), so raising
+       any condition's level never ends one that held (Coupled.Indexed.ends_of_below). Where a condition gives nothing
+       wherever nothing is left of another (Coupled.Indexed.DependsOn), it drains once the other stays within its draw
+       (Coupled.Indexed.drains), in whole numbers ending within as many steps as its level (Coupled.Indexed.ends_after,
+       ends_of_partner). Along every chain of dependence (Coupled.Indexed.Downstream), where every dependent's draw is
+       positive, the end of one ends everything downstream (Coupled.Indexed.ends_downstream), and conditions each
+       downstream of the other end together (Coupled.Indexed.ends_together). The pair is the web indexed by Bool
+       (Coupled.pair_run, Coupled.ends_pair, Coupled.pair_rises). Witnesses: a three-condition chain cascades past
+       direct dependence (Coupled.Indexed.Chain.cascades); a zero draw on the chain stops it (Chain.stopped).
+Premises / correspondence: discrete steps; conditions indexed by any type; each draw taken first, as much as there
+       is; each giving a law of what is left of all; for the order mutual support; for the cascade dependence and
+       positive draws, whole numbers for its count. Correspondence: cooperative (monotone) systems in any dimension
+       (Smith 1995; Hirsch and Smith 2005); secondary extinction and coextinction cascades in food webs and mutualistic
+       networks (Pimm 1980; Koh et al. 2004; Dunne, Williams and Martinez 2002).
+Evidence: core receipt {RECEIPT} (passed); the prior forms from memory, not reread.
+Boundary: rest and the threshold stay the pair's: a web's state is a function of the conditions, and saying a run
+       of it is still needs equality of functions, which the pure core does not assume; the cascade is stated for
+       dependence that is total (nothing given wherever nothing is left of the other), not for partial dependence;
+       the time of a cascade along a chain is not bounded beyond each link's; whether measured webs have positive
+       draws on their chains is not checked.
+Output → input: chapter 2.3 (coupled webs), thesis T1's standing, the record table; RegimeMargin's header; records
+       coupled-regimes (its laws now read off the web's), margin-of-a-regime and the regime records that left more
+       than two coupled conditions open; coverage row degeneration; significance review, web check.
+```
+
+**The question.** RM6 ([study §306](#306-coupled-regimes-a-margin-that-is-not-its-own-rm6)) stated two coupled conditions and left more than two open. A relation-first account reads conditions in webs, not pairs: what one gives back depends on what is left of many, and dependence runs in chains. So the question is which of the pair's laws hold of a web of any number of conditions, and what a web adds that a pair cannot show.
+
+**What was built** (new laws of `Becoming.RegimeMargin`, pure core, every axiom report empty).
+
+- *The web's step* (`Coupled.Indexed.step`). Levels indexed by any type `ι`; each condition `i` under its draw `H i`, taken first, as much as there is; its next level what the draw left of it with its giving `G i` of what is left of all (`Coupled.Indexed.left`). It is stated in any amounts with a draw (RM5's `Drawn`). A level read off the state *ends* where, from some step on, it is nothing (`Coupled.Indexed.Ends`).
+- *Mutual support keeps the order* (any amounts). Where every condition's giving rises with what is left of each (`Coupled.Indexed.Rises`), a state at or below another condition by condition stays so after a step (`Coupled.Indexed.step_mono`) and along the runs (`Coupled.Indexed.run_below`). So a level ending from a state ends from every state below it (`Coupled.Indexed.ends_of_below`): raising any condition's level never ends one that held.
+- *Dependence drains* (any amounts; whole numbers for the count). Condition `i` depends on `j` where it gives nothing wherever nothing is left of `j` (`Coupled.Indexed.DependsOn`). From a state whose level of `j` is within its draw, `i`'s next level is what its draw leaves of it (`Coupled.Indexed.drains`). In whole numbers, while `j` stays within its draw from step `N`, `i` falls by its draw at every step and, its draw positive, is nothing from step `N + y` on, `y` its level at `N` (`Coupled.Indexed.ends_after`); so `j`'s end ends `i` (`Coupled.Indexed.ends_of_partner`).
+- *The cascade.* `Coupled.Indexed.Downstream` is the chain of dependence: `i` is `k`, or depends on a condition downstream of `k`. Where every condition that depends on another has a positive draw, wherever `k` ends every condition downstream of it ends (`Coupled.Indexed.ends_downstream`), and two conditions each downstream of the other end together or not at all (`Coupled.Indexed.ends_together`). No mutual support is needed for these.
+- *The pair as a web.* The pair is the web indexed by `Bool`, `true` the first condition (`Coupled.pairGiving`, `Coupled.pairDraw`, `Coupled.ofPair`): at every step the web's run has the pair's levels (`Coupled.pair_run`), a pair's level ends exactly where the web's does (`Coupled.ends_pair`), and mutual support of the pair is the web's (`Coupled.pair_rises`). RM6's `Coupled.step_mono`, `Coupled.ends_of_below`, `Coupled.drains`, `Coupled.ends_after`, `Coupled.ends_of_partner` and `Coupled.ends_together` keep their statements and are now read off the web's laws; their direct proofs are gone (board rule 9).
+- *Witnesses* (`Coupled.Indexed.Chain`). Three conditions indexed by whole numbers: the first gives nothing, the second gives one where at least one is left of the first, the third where at least one is left of the second, each starting at two. Under draws of one the third depends on the second and the second on the first, but the third does not depend on the first; the first ends, and so does the third (`Chain.cascades`). With no draw on the second, the first still ends and the chain stands, yet the second never drains and the third holds at two at every step (`Chain.stopped`): the positive draws cannot be dropped.
+
+**Against the prior form** ([significance review, web check](BECOMING-SIGNIFICANCE-REVIEW.md#web-check)). Order preservation for cooperative systems holds in any dimension, and the down-closure of the states that go extinct with it (Smith 1995; Hirsch and Smith 2005, from memory). Secondary extinctions, the loss of species that depend on a lost one, cascade through food webs, and their reach depends on the web's structure (Pimm 1980; Dunne, Williams and Martinez 2002, from memory); coextinction of dependents is the mutualistic and parasitic case (Koh et al. 2004, from memory). What the spine adds is the exact, constructive form under the draw: the cascade along any chain of total dependence follows from one law of a single link, the count of a link's steps is exact, and the draw's positivity on the chain is shown needed.
+
+*Reading* [AI reading, D45]. An ending is not local. Where conditions depend on one another, the end of one is the end of everything downstream of it, however far down the chain, and a ring of mutual dependence lives or ends as one. Support works the other way: under mutual support, raising any condition's level can only keep others. A margin read on one condition, its web held fixed, misreads both directions.
+
+**Self-review.** The first plan stated rest and the threshold for webs too. They were left with the pair: a web's state is a function of the conditions, and a run being still is an equality of states, which for functions needs extensionality, an axiom the pure core does not assume; order, ending and dependence read the state condition by condition and need none. Dependence is total here (nothing given wherever nothing is left of the other); partial dependence, where giving falls but does not stop, would need a rate and is not stated. The positivity premise is placed on dependents only (`pos : ∀ i j, DependsOn G i j → 0 < H i`), not on every condition. RM6's pair laws were re-derived rather than left beside the web's, so the pair has one proof of each law, the web's; `Coupled.run_below`, `Coupled.run_swap` and the band and threshold laws keep their own. Re-deriving the pair's ending-after law from the web's left the pair's law of draining read by no law on a run, a new apart root at the first connectivity check; `Coupled.Relay.second_alone` now proves its dependent's fall by that law, which is what the witness shows, and the second check found none apart beyond main's. The connectivity check was planned before the checker ran: every new law is stated on a run or read by one that is. Limits: rest and thresholds of webs; partial dependence; the time of a cascade along a chain; webs with a recent giving.
+
+**The run.** {CORE_LINE}. {DECLS_RM} declarations added to Becoming.RegimeMargin, {THEOREMS_RM} of them theorems ({OLD_RM} before, {TOTAL_RM} now), none removed, all with empty axiom reports. Connectivity: {APART}.
