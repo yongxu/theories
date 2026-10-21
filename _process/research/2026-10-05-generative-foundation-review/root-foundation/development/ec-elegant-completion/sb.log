@@ -1,0 +1,74 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/blissful-borg-449b4b/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ec-elegant-completion/tree",
+  "modules": 53,
+  "ran": [
+    "Becoming.Feedback",
+    "Becoming.Metaethics",
+    "Becoming.Significance",
+    "Becoming.BoundedSignificance",
+    "Becoming.Recurrence",
+    "Becoming.Labelled",
+    "Becoming.Inquiry",
+    "Becoming.Extension",
+    "Becoming.ValuationFrames",
+    "Becoming.Correspondence",
+    "Becoming.Descent",
+    "Becoming.Standpoints",
+    "Becoming.Boundaries",
+    "Becoming.EdgeClosure",
+    "Becoming.Testing",
+    "Becoming.Response",
+    "Becoming.Counterfactual",
+    "Becoming.TimedResponse",
+    "Becoming.Propagation",
+    "Becoming.Loops",
+    "Becoming.Remainder",
+    "Becoming.Closing",
+    "Becoming.Frequency",
+    "Becoming.Capture",
+    "Becoming.MutualDependence",
+    "BecomingBoundariesAxiomAudit",
+    "BecomingEdgeClosureAxiomAudit",
+    "BecomingFeedbackAxiomAudit",
+    "BecomingMutualDependenceAxiomAudit"
+  ],
+  "reused": 31,
+  "unclean": [],
+  "audits": {
+    "Becoming.Boundaries": {
+      "theorems": 69,
+      "declarations": 77,
+      "with_axioms": {}
+    },
+    "Becoming.EdgeClosure": {
+      "theorems": 4,
+      "declarations": 6,
+      "with_axioms": {}
+    },
+    "Becoming.Feedback": {
+      "theorems": 84,
+      "declarations": 128,
+      "with_axioms": {}
+    },
+    "Becoming.Feeding": {
+      "theorems": 41,
+      "declarations": 65,
+      "with_axioms": {}
+    },
+    "Becoming.Frame": {
+      "theorems": 23,
+      "declarations": 32,
+      "with_axioms": {}
+    },
+    "Becoming.Interdependence": {
+      "theorems": 25,
+      "declarations": 32,
+      "with_axioms": {}
+    },
+    "Becoming.MutualDependence": {
+      "theorems": 30,
+      "declarations": 39,
+      "with_axioms": {}
+    }
+  }
+}
