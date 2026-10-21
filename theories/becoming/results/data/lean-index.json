@@ -18,12 +18,12 @@
     "classification": "Path-based documentary roles; working-source is not a claim of accepted, complete, canonical or checked status. A file containing only #print axioms and no inventoried named declarations is an audit-driver."
   },
   "statistics": {
-    "lean_paths": 1841,
-    "distinct_byte_contents": 1424,
+    "lean_paths": 1842,
+    "distinct_byte_contents": 1425,
     "byte_identical_duplicate_groups": 153,
     "roles": {
       "audit-driver": 13,
-      "development-attempt": 930,
+      "development-attempt": 931,
       "historical-draft": 3,
       "imported-archive": 23,
       "working-source": 872
@@ -4722,6 +4722,15 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rm5-amounts/tree/Becoming/RegimeMargin.lean",
       "sha256": "ec2fe17cdf7f46c009efc2beb311572fb79b7359f379c4cc8e2da40232537524",
+      "role": "development-attempt",
+      "group": "other",
+      "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
+      "direct_documentation_links_from": [],
+      "proof_status": "not_assessed_by_catalogue"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rm6-coupled/coupled_section.lean",
+      "sha256": "8b6c0b145944ca2a4f1704c32f42666866062172ccf77b02bcd03d1e25b7d6f8",
       "role": "development-attempt",
       "group": "other",
       "package_readme": "_process/research/2026-10-05-generative-foundation-review/root-foundation/README.md",
@@ -222556,6 +222565,355 @@
         "unsafe": []
       },
       "print_axioms_commands": 8
+    },
+    "8b6c0b145944ca2a4f1704c32f42666866062172ccf77b02bcd03d1e25b7d6f8": {
+      "byte_size": 35626,
+      "line_count": 535,
+      "imports": [],
+      "declarations": [
+        {
+          "kind": "def",
+          "name": "left",
+          "qualified_name_hint": "Coupled.left",
+          "line": 17
+        },
+        {
+          "kind": "def",
+          "name": "step",
+          "qualified_name_hint": "Coupled.step",
+          "line": 22
+        },
+        {
+          "kind": "def",
+          "name": "Ends",
+          "qualified_name_hint": "Coupled.Ends",
+          "line": 27
+        },
+        {
+          "kind": "def",
+          "name": "Band",
+          "qualified_name_hint": "Coupled.Band",
+          "line": 31
+        },
+        {
+          "kind": "theorem",
+          "name": "step_of_left",
+          "qualified_name_hint": "Coupled.step_of_left",
+          "line": 38
+        },
+        {
+          "kind": "theorem",
+          "name": "step_mono",
+          "qualified_name_hint": "Coupled.step_mono",
+          "line": 51
+        },
+        {
+          "kind": "theorem",
+          "name": "run_below",
+          "qualified_name_hint": "Coupled.run_below",
+          "line": 59
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_of_below",
+          "qualified_name_hint": "Coupled.ends_of_below",
+          "line": 67
+        },
+        {
+          "kind": "theorem",
+          "name": "run_swap",
+          "qualified_name_hint": "Coupled.run_swap",
+          "line": 77
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_swap",
+          "qualified_name_hint": "Coupled.ends_swap",
+          "line": 84
+        },
+        {
+          "kind": "theorem",
+          "name": "drains",
+          "qualified_name_hint": "Coupled.drains",
+          "line": 93
+        },
+        {
+          "kind": "theorem",
+          "name": "given_within",
+          "qualified_name_hint": "Coupled.given_within",
+          "line": 100
+        },
+        {
+          "kind": "theorem",
+          "name": "within_draw",
+          "qualified_name_hint": "Coupled.within_draw",
+          "line": 109
+        },
+        {
+          "kind": "theorem",
+          "name": "left_le",
+          "qualified_name_hint": "Coupled.left_le",
+          "line": 119
+        },
+        {
+          "kind": "theorem",
+          "name": "run_within",
+          "qualified_name_hint": "Coupled.run_within",
+          "line": 126
+        },
+        {
+          "kind": "theorem",
+          "name": "left_falls",
+          "qualified_name_hint": "Coupled.left_falls",
+          "line": 134
+        },
+        {
+          "kind": "theorem",
+          "name": "still_of_left",
+          "qualified_name_hint": "Coupled.still_of_left",
+          "line": 144
+        },
+        {
+          "kind": "theorem",
+          "name": "rests_by",
+          "qualified_name_hint": "Coupled.rests_by",
+          "line": 165
+        },
+        {
+          "kind": "theorem",
+          "name": "comes_to_rest",
+          "qualified_name_hint": "Coupled.comes_to_rest",
+          "line": 190
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_iff",
+          "qualified_name_hint": "Coupled.ends_iff",
+          "line": 199
+        },
+        {
+          "kind": "def",
+          "name": "ending",
+          "qualified_name_hint": "Coupled.ending",
+          "line": 219
+        },
+        {
+          "kind": "def",
+          "name": "threshold",
+          "qualified_name_hint": "Coupled.threshold",
+          "line": 224
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_iff_below",
+          "qualified_name_hint": "Coupled.ends_iff_below",
+          "line": 230
+        },
+        {
+          "kind": "theorem",
+          "name": "threshold_falls",
+          "qualified_name_hint": "Coupled.threshold_falls",
+          "line": 246
+        },
+        {
+          "kind": "theorem",
+          "name": "fates",
+          "qualified_name_hint": "Coupled.fates",
+          "line": 262
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_after",
+          "qualified_name_hint": "Coupled.ends_after",
+          "line": 286
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_of_partner",
+          "qualified_name_hint": "Coupled.ends_of_partner",
+          "line": 310
+        },
+        {
+          "kind": "theorem",
+          "name": "ends_together",
+          "qualified_name_hint": "Coupled.ends_together",
+          "line": 319
+        },
+        {
+          "kind": "theorem",
+          "name": "first_regime",
+          "qualified_name_hint": "Coupled.first_regime",
+          "line": 331
+        },
+        {
+          "kind": "theorem",
+          "name": "stays",
+          "qualified_name_hint": "Coupled.stays",
+          "line": 338
+        },
+        {
+          "kind": "theorem",
+          "name": "stays_from",
+          "qualified_name_hint": "Coupled.stays_from",
+          "line": 345
+        },
+        {
+          "kind": "theorem",
+          "name": "alternation_never_rests",
+          "qualified_name_hint": "Coupled.alternation_never_rests",
+          "line": 356
+        },
+        {
+          "kind": "def",
+          "name": "giving",
+          "qualified_name_hint": "Coupled.MutualActivation.giving",
+          "line": 371
+        },
+        {
+          "kind": "theorem",
+          "name": "giving_rises",
+          "qualified_name_hint": "Coupled.MutualActivation.giving_rises",
+          "line": 373
+        },
+        {
+          "kind": "theorem",
+          "name": "giving_le",
+          "qualified_name_hint": "Coupled.MutualActivation.giving_le",
+          "line": 378
+        },
+        {
+          "kind": "theorem",
+          "name": "band",
+          "qualified_name_hint": "Coupled.MutualActivation.band",
+          "line": 382
+        },
+        {
+          "kind": "theorem",
+          "name": "saves",
+          "qualified_name_hint": "Coupled.MutualActivation.saves",
+          "line": 390
+        },
+        {
+          "kind": "def",
+          "name": "first",
+          "qualified_name_hint": "Coupled.MutualInhibition.first",
+          "line": 406
+        },
+        {
+          "kind": "def",
+          "name": "second",
+          "qualified_name_hint": "Coupled.MutualInhibition.second",
+          "line": 409
+        },
+        {
+          "kind": "theorem",
+          "name": "first_le",
+          "qualified_name_hint": "Coupled.MutualInhibition.first_le",
+          "line": 411
+        },
+        {
+          "kind": "theorem",
+          "name": "second_le",
+          "qualified_name_hint": "Coupled.MutualInhibition.second_le",
+          "line": 414
+        },
+        {
+          "kind": "theorem",
+          "name": "band",
+          "qualified_name_hint": "Coupled.MutualInhibition.band",
+          "line": 418
+        },
+        {
+          "kind": "theorem",
+          "name": "breaks_order",
+          "qualified_name_hint": "Coupled.MutualInhibition.breaks_order",
+          "line": 427
+        },
+        {
+          "kind": "def",
+          "name": "first",
+          "qualified_name_hint": "Coupled.Relay.first",
+          "line": 449
+        },
+        {
+          "kind": "def",
+          "name": "second",
+          "qualified_name_hint": "Coupled.Relay.second",
+          "line": 452
+        },
+        {
+          "kind": "theorem",
+          "name": "first_rises",
+          "qualified_name_hint": "Coupled.Relay.first_rises",
+          "line": 454
+        },
+        {
+          "kind": "theorem",
+          "name": "second_rises",
+          "qualified_name_hint": "Coupled.Relay.second_rises",
+          "line": 459
+        },
+        {
+          "kind": "theorem",
+          "name": "first_zero",
+          "qualified_name_hint": "Coupled.Relay.first_zero",
+          "line": 464
+        },
+        {
+          "kind": "theorem",
+          "name": "first_of_zero",
+          "qualified_name_hint": "Coupled.Relay.first_of_zero",
+          "line": 466
+        },
+        {
+          "kind": "theorem",
+          "name": "second_zero",
+          "qualified_name_hint": "Coupled.Relay.second_zero",
+          "line": 468
+        },
+        {
+          "kind": "theorem",
+          "name": "second_of_zero",
+          "qualified_name_hint": "Coupled.Relay.second_of_zero",
+          "line": 470
+        },
+        {
+          "kind": "theorem",
+          "name": "first_alone",
+          "qualified_name_hint": "Coupled.Relay.first_alone",
+          "line": 473
+        },
+        {
+          "kind": "theorem",
+          "name": "second_alone",
+          "qualified_name_hint": "Coupled.Relay.second_alone",
+          "line": 481
+        },
+        {
+          "kind": "theorem",
+          "name": "between",
+          "qualified_name_hint": "Coupled.Relay.between",
+          "line": 490
+        },
+        {
+          "kind": "theorem",
+          "name": "cycles",
+          "qualified_name_hint": "Coupled.Relay.cycles",
+          "line": 505
+        }
+      ],
+      "declaration_counts": {
+        "def": 11,
+        "theorem": 44
+      },
+      "textual_markers": {
+        "sorry": [],
+        "admit": [],
+        "axiom": [],
+        "native_decide": [],
+        "unsafe": []
+      },
+      "print_axioms_commands": 0
     },
     "8b8688748f9cf7b5136c1e6eeef3d966f5b50cfc5d1462d7f901027d6924bef6": {
       "byte_size": 8406,
