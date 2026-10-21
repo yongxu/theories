@@ -129,8 +129,8 @@
       "kind": "scope"
     },
     {
-      "en": "Holding a level where what stands at it falls below it; an order valuing what is left at the horizon at another worth than what is drawn; steps met again after a fall; an overcompensating renewal.",
-      "zh": "在其处所立者低于它的水平上保持；以不同于所汲取之价值对视野末所留赋值之序；跌落后再被满足的步；过度补偿的更新。",
+      "en": "Holding a level where what stands at it falls below it; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; steps met again after a fall; an overcompensating renewal.",
+      "zh": "在其处所立者低于它的水平上保持；以最多所留不能一步再生的价值对视野末所留赋值之序；跌落后再被满足的步；过度补偿的更新。",
       "kind": "scope"
     },
     {
@@ -153,8 +153,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T075336.250274Z）：Becoming.Optimum 新增的 67 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 298 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Several optimizers each ranking courses at a mutual best response, and how they come to one; an order valuing what is left at the horizon at another worth than what is drawn; steps met again after a fall; an overcompensating renewal; an independent review.",
-    "zh": "多个各自对过程排序的优化者的相互最优回应及其如何达到；以不同于所汲取之价值对视野末所留赋值之序；跌落后再被满足的步；过度补偿的更新；独立审查。"
+    "en": "Several optimizers each ranking courses at a mutual best response, and how they come to one; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; steps met again after a fall; an overcompensating renewal; an independent review.",
+    "zh": "多个各自对过程排序的优化者的相互最优回应及其如何达到；以最多所留不能一步再生的价值对视野末所留赋值之序；跌落后再被满足的步；过度补偿的更新；独立审查。"
   },
   "correspondence": {
     "en": "Open access dissipates the rent of a common stock, what one harvester leaves being taken by another (Gordon 1954); in the dynamic commons each player's far-sight is cut by the others' draws, the equilibrium stock falling as players are added (Levhari and Mirman 1980; Clark 1990). On the spine, one optimizer's side, exact for every order rising with the weighted draw: the threshold for ending the base at once moves from what the base renews to what the others' leaving renews, and the same order that rebuilds the base alone ends it among others. The far-sighted laws hold over any law of what stands, decay and changing renewal among the cases. Reading (the AI's): keeping a shared base is not one optimizer's to give; the destruction comes from the relation, not from any change in the optimizer.",
@@ -286,6 +286,13 @@
         "en": "With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.",
         "zh": "视野末所留与所抽取一比一计值时，每个最优在视野内保持在最大更新的水平，终了的抽干不再被迫；高于每个这样水平的依存仍被打破。"
       }
+    },
+    {
+      "id": "valuing-what-is-left-at-any-worth",
+      "detail": {
+        "en": "At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.",
+        "zh": "对所留以大于一的任一价值计值时，每个最优都保持在最大更新的水平，只在最后一步再生；对保持的耦合如无此值时一样被胜过。"
+      }
     }
   ],
   "references": [
@@ -388,7 +395,7 @@
         "Becoming.Web.Next.frontier_leaves",
         "Becoming.Web.Next.frontier_rebuilds"
       ],
-      "sha256": "d2871524906c5d5d08906f1d4725d7acd21bcbd79011540b9e83966b89a07bd9"
+      "sha256": "0c23ec4c60623524dfe484d7b606afa0e0bc2dc0fb17a482529b5e0697ad6745"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -470,7 +477,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "ab9f23fa3d0d11abbccb1bd97fc485ef527adb0c081a8b7826cabf7c94427f38"
+      "sha256": "abd17d04482f6a8a26ee338809172a6f2f30a9cf2fef4b734cb12b1b84634a80"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json",
@@ -489,12 +496,18 @@
       "role": "receipt",
       "sha256": "4995c024b8e3f9c9f013718e4be2dbc8d218fbc1a65f064171400f3df5fc6932",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json",
+      "role": "receipt",
+      "sha256": "dd2d37696d0ee54ba3252cfa3c534aa67987ea38ec82bea6f08a64f7d5af2dde",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -557,6 +570,10 @@
     {
       "en": "22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.",
       "zh": "2026年10月22日，SG11：对视野末所留赋值之序已就一比一计值回答（记录 valuing-what-is-left-at-the-horizon，研究第 321 节）；开放项改为另一价值。其规律不变。"
+    },
+    {
+      "en": "22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.",
+      "zh": "2026年10月22日，SG12：最多所留能一步再生时，对所留以一比一之外的价值计值已回答（记录 valuing-what-is-left-at-any-worth，研究第 322 节）；开放项改为其余情形。其规律不变。"
     }
   ]
 }

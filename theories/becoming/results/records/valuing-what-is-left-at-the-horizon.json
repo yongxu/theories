@@ -69,8 +69,8 @@
   ],
   "does_not_show": [
     {
-      "en": "An order valuing what is left at another worth than what is drawn.",
-      "zh": "以不同于所汲取之价值对所留计值的序。",
+      "en": "An order valuing what is left at a worth whose most left is not regrown in one step.",
+      "zh": "以最多所留不能一步再生的价值对所留计值的序。",
       "kind": "scope"
     },
     {
@@ -103,8 +103,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T173313.402629Z；第一次回执 20261021T172745.076672Z 通过但留下四条游离之律，已被取代）：Becoming.Optimum 新增的 16 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 321 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A terminal value at another worth than the draw; what keeping a dependence forgoes under the order by what is drawn and left; several optimizers ranking courses; an independent review.",
-    "zh": "与汲取不同价值的终值；在按所抽取与所留之序下保持依存所放弃者；多个对过程排序的优化者；独立审查。"
+    "en": "A terminal value whose most left is not regrown in one step; what keeping a dependence forgoes under the order by what is drawn and left; several optimizers ranking courses; an independent review.",
+    "zh": "最多所留不能一步再生的终值；在按所抽取与所留之序下保持依存所放弃者；多个对过程排序的优化者；独立审查。"
   },
   "correspondence": {
     "en": "A terminal or salvage value in a finite-horizon problem: the payoff counts the stock left at the end. Without it a finite-horizon harvest ends by drawing everything (Clark 1976); valued one for one, the end drain disappears and the steady yield at a level of greatest renewal is an optimum to the end and after.",
@@ -194,6 +194,13 @@
         "en": "Its open item, an order valuing what is left at the horizon, is answered here for a one-for-one value.",
         "zh": "其开放项（对视野末所留赋值之序）在此就一比一计值得到回答。"
       }
+    },
+    {
+      "id": "valuing-what-is-left-at-any-worth",
+      "detail": {
+        "en": "At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.",
+        "zh": "对所留以大于一的任一价值计值时，每个最优都保持在最大更新的水平，只在最后一步再生；对保持的耦合如无此值时一样被胜过。"
+      }
     }
   ],
   "references": [
@@ -233,7 +240,7 @@
         "Becoming.Web.frontier_kept",
         "Becoming.Web.frontier_kept_left"
       ],
-      "sha256": "d2871524906c5d5d08906f1d4725d7acd21bcbd79011540b9e83966b89a07bd9"
+      "sha256": "0c23ec4c60623524dfe484d7b606afa0e0bc2dc0fb17a482529b5e0697ad6745"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
@@ -253,13 +260,19 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "ab9f23fa3d0d11abbccb1bd97fc485ef527adb0c081a8b7826cabf7c94427f38"
+      "sha256": "abd17d04482f6a8a26ee338809172a6f2f30a9cf2fef4b734cb12b1b84634a80"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json",
+      "role": "receipt",
+      "sha256": "dd2d37696d0ee54ba3252cfa3c534aa67987ea38ec82bea6f08a64f7d5af2dde",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -269,6 +282,10 @@
     {
       "en": "22 October 2026: added (SG11), valuing what is left at the horizon: with what is left valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken; study section 321.",
       "zh": "2026年10月22日：新增（SG11），对视野末所留的计值：所留与所抽取一比一计值时，每个最优在视野内保持在最大更新的水平，终了的抽干不再被迫；高于每个这样水平的依存仍被打破；研究第 321 节。"
+    },
+    {
+      "en": "22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.",
+      "zh": "2026年10月22日，SG12：最多所留能一步再生时，对所留以一比一之外的价值计值已回答（记录 valuing-what-is-left-at-any-worth，研究第 322 节）；开放项改为其余情形。其规律不变。"
     }
   ]
 }

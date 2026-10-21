@@ -135,8 +135,8 @@
       "kind": "scope"
     },
     {
-      "en": "An order with a terminal value at another worth than the draw, or a discount; the optimum rebuilding from below; several optimizers ranking courses.",
-      "zh": "带与汲取不同价值之终值或折现的序；自下重建的最优；多个对过程排序的优化者。",
+      "en": "An order with a terminal value whose most left is not regrown in one step, or a discount; the optimum rebuilding from below; several optimizers ranking courses.",
+      "zh": "带最多所留不能一步再生的终值或折现的序；自下重建的最优；多个对过程排序的优化者。",
       "kind": "scope"
     },
     {
@@ -159,8 +159,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T052543.695066Z）：Becoming.Optimum 新增的 49 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查，没有另设审查者；作者审查见研究第 293 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "A coupling added step by step; an order with a terminal value at another worth than the draw, or a discount; the optimum rebuilding from below; several optimizers ranking courses; an independent review.",
-    "zh": "按步加入的耦合；带与汲取不同价值之终值或折现的序；自下重建的最优；多个对过程排序的优化者；独立审查。"
+    "en": "A coupling added step by step; an order with a terminal value whose most left is not regrown in one step, or a discount; the optimum rebuilding from below; several optimizers ranking courses; an independent review.",
+    "zh": "按步加入的耦合；带最多所留不能一步再生的终值或折现的序；自下重建的最优；多个对过程排序的优化者；独立审查。"
   },
   "correspondence": {
     "en": "The exact penalty: a penalty beyond the value of a constraint makes the constrained optimum an unconstrained one (Zangwill 1967), here a lump-sum coupling whose threshold is the value gap itself; the yield given up by managing a prey for its predators' needs (May and others 1979; Pikitch and others 2012); impact penalties, whose coefficient trades task reward against side effects (Krakovna and others 2019; Turner, Hadfield-Menell and Tadepalli 2020). On the spine the gap is exact for every renewal law bounded by r and by q at or above the need, the thresholds cover every order rising with the worth and are attained on both sides, and the break is a law of the dependence web. Reading (the AI's): what keeping forgoes is no fixed sum; where the need lies above every level of greatest renewal it grows with the horizon, so far-sight outweighs every coupling fixed in total.",
@@ -253,6 +253,13 @@
         "en": "With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.",
         "zh": "视野末所留与所抽取一比一计值时，每个最优在视野内保持在最大更新的水平，终了的抽干不再被迫；高于每个这样水平的依存仍被打破。"
       }
+    },
+    {
+      "id": "valuing-what-is-left-at-any-worth",
+      "detail": {
+        "en": "At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.",
+        "zh": "对所留以大于一的任一价值计值时，每个最优都保持在最大更新的水平，只在最后一步再生；对保持的耦合如无此值时一样被胜过。"
+      }
     }
   ],
   "references": [
@@ -330,7 +337,7 @@
         "Becoming.Web.frontier_keeps",
         "Becoming.Web.frontier_keeps_above"
       ],
-      "sha256": "d2871524906c5d5d08906f1d4725d7acd21bcbd79011540b9e83966b89a07bd9"
+      "sha256": "0c23ec4c60623524dfe484d7b606afa0e0bc2dc0fb17a482529b5e0697ad6745"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",
@@ -416,7 +423,7 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "ab9f23fa3d0d11abbccb1bd97fc485ef527adb0c081a8b7826cabf7c94427f38"
+      "sha256": "abd17d04482f6a8a26ee338809172a6f2f30a9cf2fef4b734cb12b1b84634a80"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T060215.969427Z/verification.json",
@@ -459,12 +466,18 @@
       "role": "receipt",
       "sha256": "4995c024b8e3f9c9f013718e4be2dbc8d218fbc1a65f064171400f3df5fc6932",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json",
+      "role": "receipt",
+      "sha256": "dd2d37696d0ee54ba3252cfa3c534aa67987ea38ec82bea6f08a64f7d5af2dde",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -531,6 +544,10 @@
     {
       "en": "22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.",
       "zh": "2026年10月22日，SG11：对视野末所留赋值之序已就一比一计值回答（记录 valuing-what-is-left-at-the-horizon，研究第 321 节）；开放项改为另一价值。其规律不变。"
+    },
+    {
+      "en": "22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.",
+      "zh": "2026年10月22日，SG12：最多所留能一步再生时，对所留以一比一之外的价值计值已回答（记录 valuing-what-is-left-at-any-worth，研究第 322 节）；开放项改为其余情形。其规律不变。"
     }
   ]
 }

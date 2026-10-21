@@ -26,7 +26,7 @@
 ## Does not show
 
 - That the others' rule is itself a best response: this is one optimizer's side of the dynamic commons, not a mutual best response among several optimizers ranking courses, nor how optimizers come to one.
-- Holding a level where what stands at it falls below it; an order valuing what is left at the horizon at another worth than what is drawn; steps met again after a fall; an overcompensating renewal.
+- Holding a level where what stands at it falls below it; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; steps met again after a fall; an overcompensating renewal.
 - That a base ought to be kept, or that others ought not to draw: no evaluation enters; the laws say what the optima of an order do.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -41,7 +41,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-Several optimizers each ranking courses at a mutual best response, and how they come to one; an order valuing what is left at the horizon at another worth than what is drawn; steps met again after a fall; an overcompensating renewal; an independent review.
+Several optimizers each ranking courses at a mutual best response, and how they come to one; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; steps met again after a fall; an overcompensating renewal; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -72,6 +72,7 @@ Open access dissipates the rent of a common stock, what one harvester leaves bei
 - related, not a proved adapter: [several-optimizers-drain-by-their-joint-capacity](several-optimizers-drain-by-their-joint-capacity.md). In one step several optimizers at a mutual best response drain as one; over a course, others drawing first end what far-sight alone keeps.
 - related, not a proved adapter: [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md). Alone, every optimum rebuilds a depleted base; with others drawing first, the same order ends it.
 - related, not a proved adapter: [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md). With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.
+- related, not a proved adapter: [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md). At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.
 
 <a id="sources--来源"></a>
 ### Sources
@@ -93,6 +94,7 @@ Open access dissipates the rent of a common stock, what one harvester leaves bei
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json) | — |
 
 Aliases: `others drawing first end the base`, `over every law of what stands`, `the dynamic commons`, `open-access dissipation`, `他者先抽取则终结基础`, `Becoming.Optimum.Next.frontier_ends_drawn_first`, `Becoming.Web.Next.frontier_ends_drawn_first`, `Becoming.Optimum.Next.frontier_exhausts`
 
@@ -101,6 +103,7 @@ Aliases: `others drawing first end the base`, `over every law of what stands`, `
 
 - 21 October 2026: added (SG10), over every law of what stands: SG8's and SG9's laws hold over any law of what a level gives at a step, the renewal law the case; where others first draw from what an optimizer leaves at least what the remainder renews, every optimum of an order whose weighting falls at every step ends the base at once; study section 298.
 - 22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.
+- 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
 
 </details>
 

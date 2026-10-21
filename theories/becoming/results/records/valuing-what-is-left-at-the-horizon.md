@@ -24,7 +24,7 @@
 <a id="does-not-show--未表明"></a>
 ## Does not show
 
-- An order valuing what is left at another worth than what is drawn.
+- An order valuing what is left at a worth whose most left is not regrown in one step.
 - That valuing what is left keeps what depends on the levels passed through: a dependence above every level of greatest renewal is still broken at the first step.
 - Which optimum is taken: the last step's draw is left free, keeping and draining both optima.
 - Several optimizers ranking courses; steps met again after a fall.
@@ -41,7 +41,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-A terminal value at another worth than the draw; what keeping a dependence forgoes under the order by what is drawn and left; several optimizers ranking courses; an independent review.
+A terminal value whose most left is not regrown in one step; what keeping a dependence forgoes under the order by what is drawn and left; several optimizers ranking courses; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -65,6 +65,9 @@ A terminal or salvage value in a finite-horizon problem: the payoff counts the s
 - related, not a proved adapter: [a-weighting-faster-than-renewal-ends-the-base](a-weighting-faster-than-renewal-ends-the-base.md). Its open item, an order valuing what is left at the horizon, is answered here for a one-for-one value.
 - related, not a proved adapter: [optima-rebuild-a-depleted-base](optima-rebuild-a-depleted-base.md). Its open item, an order valuing what is left at the horizon, is answered here for a one-for-one value.
 - related, not a proved adapter: [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md). Its open item, an order valuing what is left at the horizon, is answered here for a one-for-one value.
+- related, not a proved adapter: [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md). At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.
+
+**Used by:** [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md)
 
 <a id="sources--来源"></a>
 ### Sources
@@ -76,6 +79,7 @@ A terminal or salvage value in a finite-horizon problem: the payoff counts the s
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
 | statement | [THE-THEORY-OF-BECOMING.md](../../chapters/THE-THEORY-OF-BECOMING.md) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json) | — |
 
 Aliases: `valuing what is left at the horizon`, `a terminal value at the worth of the draw`, `对视野末所留的计值`, `Becoming.Optimum.frontier_holds_left`, `Becoming.Optimum.frontier_left_iff`
 
@@ -83,6 +87,7 @@ Aliases: `valuing what is left at the horizon`, `a terminal value at the worth o
 ### History
 
 - 22 October 2026: added (SG11), valuing what is left at the horizon: with what is left valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken; study section 321.
+- 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
 
 </details>
 

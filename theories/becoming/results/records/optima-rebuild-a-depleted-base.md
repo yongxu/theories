@@ -26,7 +26,7 @@
 ## Does not show
 
 - The optimum where the next level does not rise with the level below y (an overcompensating renewal) or the gain has several peaks; that the rising course is then not an optimum.
-- A dependence needing more than y restored; an order valuing what is left at the horizon at another worth than what is drawn; steps met again after a fall; several optimizers ranking courses.
+- A dependence needing more than y restored; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; steps met again after a fall; several optimizers ranking courses.
 - That a base ought to be rebuilt: no evaluation enters; the laws say what the optima of an order do.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · A relation omitted by a weaker description does not refute the fuller account.
@@ -41,7 +41,7 @@ Canonical source: [Optimum.lean](../../../../experiments/integrated-correction/g
 <a id="next--下一步"></a>
 ## Next
 
-An overcompensating renewal or a gain with several peaks; an order valuing what is left at the horizon at another worth than what is drawn; steps met again after a fall; several optimizers ranking courses; an independent review.
+An overcompensating renewal or a gain with several peaks; an order valuing what is left at the horizon at a worth whose most left is not regrown in one step; steps met again after a fall; several optimizers ranking courses; an independent review.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -69,6 +69,7 @@ The most rapid approach path: with a linear objective, the optimal path from a s
 - related, not a proved adapter: [horizon-optima-hold-the-greatest-renewal](horizon-optima-hold-the-greatest-renewal.md). Every optimum holds a level of greatest renewal within one step's reach; here one out of reach is rebuilt to.
 - related, not a proved adapter: [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md). Over every law of what stands: these laws hold over any law of what a level gives at a step; with others drawing first, every optimum of a falling weighting ends the base at once.
 - related, not a proved adapter: [valuing-what-is-left-at-the-horizon](valuing-what-is-left-at-the-horizon.md). With what is left at the horizon valued one for one with what is drawn, every optimum holds a level of greatest renewal to the horizon, the drain at the end no longer forced; a dependence above every such level is still broken.
+- related, not a proved adapter: [valuing-what-is-left-at-any-worth](valuing-what-is-left-at-any-worth.md). At any worth above one for what is left, every optimum holds a level of greatest renewal and regrows only at the last step; a coupling of keeping is outweighed as without the value.
 
 **Used by:** [others-drawing-first-end-the-base](others-drawing-first-end-the-base.md)
 
@@ -91,6 +92,7 @@ The most rapid approach path: with a linear objective, the optimal path from a s
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T133545.845568Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T173313.402629Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T175617.330751Z/verification.json) | — |
 
 Aliases: `every optimum rebuilds a depleted base`, `rebuilding from below`, `the most rapid approach path`, `a course gaining the most against every open course`, `每个最优都重建耗竭的基础`, `Becoming.Optimum.frontier_rebuilds`, `Becoming.Optimum.rebuilding_frontier`, `Becoming.Web.frontier_rebuilds`
 
@@ -100,6 +102,7 @@ Aliases: `every optimum rebuilds a depleted base`, `rebuilding from below`, `the
 - 21 October 2026: added (SG9), rebuilding from below: a course gaining the most against every open course is an optimum and every optimum gains what it does; below a level out of one step's reach, where the next level and the weighted gain rise with the level, every optimum rebuilds as fast as the base renews, drawing nothing, restoring what the rising level meets; study section 296.
 - 21 October 2026, SG10: this record's laws hold over every law of what stands (Optimum.Next, Web.Next; record others-drawing-first-end-the-base, study section 298), the level with its renewal the case. Those still read in the renewal form keep their statements, each proof now one line; the renewal forms no law reads any more were removed, and this record cites their general forms (15 law citations moved, the proof references with them).
 - 22 October 2026, SG11: an order valuing what is left at the horizon is answered for a one-for-one value (record valuing-what-is-left-at-the-horizon, study section 321); the open item now names another worth. Its laws are unchanged.
+- 22 October 2026, SG12: a worth on what is left other than one for one is answered where the most a course can leave is regrown in one step (record valuing-what-is-left-at-any-worth, study section 322); the open item now names the rest. Its laws are unchanged.
 
 </details>
 
