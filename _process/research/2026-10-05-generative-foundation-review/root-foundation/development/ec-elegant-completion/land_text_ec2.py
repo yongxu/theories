@@ -70,7 +70,14 @@ core_line = (f'\n**The run.** Core {mods["core"]} modules and {fmt(thms["core"])
              f'ran, {fmt(reused)} reused. {n_mod_decl} declarations of {MOD}, {n_mod_thm} of them theorems, all with empty '
              f'axiom reports. Connectivity: {apart} of {fmt(spine_thms)} apart, {mod_apart} of the module\'s {n_mod_thm}; '
              'register check passes.\n')
-(ROOT / STUDY).write_text(stext.rstrip('\n') + '\n\n' + study.rstrip('\n') + '\n' + core_line, encoding='utf-8')
+study4 = (HERE / 'study_ec4.txt').read_text(encoding='utf-8').replace('@N@', str(N + 1)).replace('@N2@', str(N)).replace('@RECEIPT@', receipt_id)
+(ROOT / STUDY).write_text(stext.rstrip('\n') + '\n\n' + study.rstrip('\n') + '\n' + core_line + '\n' + study4.rstrip('\n') + '\n', encoding='utf-8')
+SLUG4 = f'{N + 1}-the-ethics-scope-as-the-one-closure-ec4'
+CHOICES = '_process/research/2026-10-05-generative-foundation-review/root-foundation/DELEGATED-CHOICES.md'
+dc = (ROOT / CHOICES).read_text(encoding='utf-8')
+assert dc.count('@N4@') == 2 and dc.count('@SLUG4@') == 1, (dc.count('@N4@'), dc.count('@SLUG4@'))
+(ROOT / CHOICES).write_text(dc.replace('@N4@', str(N + 1)).replace('@SLUG4@', SLUG4), encoding='utf-8')
+print('edited', CHOICES)
 print('appended', STUDY, 'section', N)
 SLUG = f'{N}-one-stretch-balance-in-the-prelude-ec2'
 SA = f'../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#{SLUG}'
@@ -85,7 +92,7 @@ i = ch.index('**The current receipt** is run [`')
 OLD_RECEIPT = ch[i:ch.index('\n', i)]
 NEW_RECEIPT = (f"**The current receipt** is run [`{receipt_id}`](../../../{PKG}/becoming-checks/{receipt_id}/verification.json) "
                f"(the [current pointer](../../../{PKG}/becoming-verification.json)), checked with Lean 4.29.1 on main "
-               f"{base[:9]} with EC2 in the working tree ([study §{N}]({SA})). It passed, the source unchanged during the "
+               f"{base[:9]} with EC2 and EC4 in the working tree ([study §{N}]({SA})). It passed, the source unchanged during the "
                "check and the core with the ring compiled from the prelude.")
 i = ch.index('| Core modules (with the root `Becoming`, 0 theorems) |')
 j = ch.index('\n', ch.index('| Generated `injEq` lemmas on `propext` |', i))
@@ -132,14 +139,18 @@ i = b.index('| **EC: an elegant completion**')
 row = b[i:b.index('\n', i) + 1]
 start = row.index('**EC2 (now): one stretch balance.**')
 end = row.index('Then EC3 finite runs')
+e4s = row.index('**EC4 (claimed, drafting in scratch)')
+e4e = row.index('after EC2 lands; ', e4s) + len('after EC2 lands; ')
+rest = row[end:e4s] + (f'**EC4 landed** with EC2 (the ethics\' scope as the one closure: relational neutrality is closedness, what the '
+       f'neutralities force is the closure, the whole forced exactly where connected; study §{N + 1}, readings D61); ') + row[e4e:]
 new_row = (row[:start] + f'**EC2 landed** (one stretch balance in the prelude, the stretch balances of flows, amounts and '
-           f'courses derived from it; core receipt `{receipt_id}`, study §{N}). ' + row[end:].replace('Then EC3', 'Next: EC3'))
+           f'courses derived from it; core receipt `{receipt_id}`, study §{N}). ' + rest.replace('Then EC3', 'Next: EC3'))
 new_row = re.sub(r'EC2 claimed 2026-10-21 on `[0-9a-f]+`', f'EC2 landed 2026-10-21 (receipt `{receipt_id}`, study §{N})', new_row)
 b = b.replace(row, new_row)
 OLDR = re.search(r"the latest core receipt is [^`]*`[^`]+` \(\d+ October 2026\)\.", b).group(0)
 b = b.replace(OLDR, f"the latest core receipt is EC2's `{receipt_id}` (21 October 2026).")
 assert b.count('- **Queue:** ') == 1
-b = b.replace('- **Queue:** ', f'- **Queue:** EC2 landed (one stretch balance: `balance_over_stretch_on` and its forms in the prelude, `Change.over_stretch`, `Flow.accumulates_on`, `Regulation.accumulates_at` and `Optimum.level_add_drawn_of_within` derived from it; core receipt `{receipt_id}`, study §{N}, row open for EC3–EC5); ')
+b = b.replace('- **Queue:** ', f'- **Queue:** EC2 and EC4 landed (one stretch balance: `balance_over_stretch_on` and its forms in the prelude, `Change.over_stretch`, `Flow.accumulates_on`, `Regulation.accumulates_at` and `Optimum.level_add_drawn_of_within` derived from it; the ethics\' scope as the one closure, `Valuation.forced_iff_reach`; core receipt `{receipt_id}`, study §{N}–§{N + 1}, row open for EC3 and EC5); ')
 (ROOT / BOARD).write_text(b, encoding='utf-8')
 print('board row updated; receipt', receipt_id, 'apart', apart, 'spine theorems', spine_thms)
 print('STUDY_SECTION', N)

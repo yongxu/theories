@@ -54,3 +54,41 @@ for f in sorted(RECORDS.glob('*.json')):
               '流、量与过程的跨段平衡现由其导出。所引 Lean 源及其证明绑定随之；论断不变。'})
     f.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')
     print('record', rec['id'], names)
+
+# EC4: the record of what the step across standpoints reaches gains the valuations' reading of the scope.
+f = RECORDS / 'what-the-step-across-standpoints-reaches.json'
+rec = json.loads(f.read_text())
+NEW = ['Becoming.Valuation.transmits_iff_closed', 'Becoming.Valuation.forced_iff_reach',
+       'Becoming.Valuation.forced_whole_iff_connected']
+for n in NEW:
+    assert n in elab['Becoming.ValuationFrames'], n
+rec['laws'].append({
+    'en': 'On valuations, relational neutrality is closedness of each standpoint\'s significance under the formed '
+          'relations\' steps; what the two neutralities force from a valued living claim is exactly what it reaches '
+          'through formed relations among living claims, and every living claim is forced exactly where the formed '
+          'relations connect the living claims: the scope is the closure, as on boundaries (forced_iff_within).',
+    'zh': '在赋值上，关系中立即各立场的意义对所成关系之步封闭；两种中立由一个有意义的存活主张所迫出者，恰是经存活主张间所成关系所及者；'
+          '恰在所成关系连通诸存活主张之处，每个存活主张都被迫出：范围即闭包，与边界上相同（forced_iff_within）。',
+    'declarations': NEW})
+vf = next((r for r in rec['references'] if r['path'] == src('ValuationFrames')), None)
+if vf is None:
+    vf = {'path': src('ValuationFrames'), 'role': 'proof', 'sha256': sha(src('ValuationFrames')), 'declarations': []}
+    rec['references'].insert(0, vf)
+vf['declarations'] += [n for n in NEW if n not in vf['declarations']]
+if not any(b['source'] == src('ValuationFrames') for b in rec['proof_bindings']):
+    rec['proof_bindings'].append({'source': src('ValuationFrames'), 'receipt': RECEIPT,
+                                  'sha256_pointer': '/source_sha256/Becoming.ValuationFrames',
+                                  'success_pointer': '/status', 'success_value': 'passed'})
+if not any(x['path'] == RECEIPT for x in rec['references']):
+    rec['references'].append({'path': RECEIPT, 'role': 'receipt', 'sha256': sha(RECEIPT), 'declarations': []})
+rec['aliases'] += [n for n in NEW if n not in rec['aliases']]
+rec['history'].append({
+    'en': f'21 October 2026, EC4 (study section {N + 1}): a law added, the valuations\' reading of the scope '
+          '(Valuation.transmits_iff_closed, Valuation.forced_iff_reach, Valuation.forced_whole_iff_connected in '
+          'Becoming.ValuationFrames): what the two neutralities force is the closure of a valued living claim, the same '
+          'law as forced_iff_within on boundaries. Readings D61. The record\'s earlier laws are unchanged.',
+    'zh': f'2026年10月21日，EC4（研究第 {N + 1} 节）：新增一律，即赋值上的范围读法（Becoming.ValuationFrames 中的 '
+          'Valuation.transmits_iff_closed、Valuation.forced_iff_reach、Valuation.forced_whole_iff_connected）：两种中立所迫出者'
+          '是一个有意义的存活主张的闭包，与边界上的 forced_iff_within 为同一律。读法 D61。本记录先前各律不变。'})
+f.write_text(json.dumps(rec, ensure_ascii=False, indent=2) + '\n')
+print('record', rec['id'], 'EC4 law')

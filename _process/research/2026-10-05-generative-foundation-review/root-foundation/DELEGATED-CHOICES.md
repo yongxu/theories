@@ -98,6 +98,7 @@ On 19 October 2026 Ren answered for the register as a whole, “integrate all, t
 | D58 | the readings of the meta-attractor's loop on the spine (20 October) | adopted with exact scope: the winners writing the next scorecard the premise `ReadsShare`; the winners forming the minds the scorecard reads `ReadsShare` on `mind`; the metric surviving its refutation `lock_outlives_loss` (the refutation lies beyond the share, unread); leaving 明, a reading of what lies beyond the share, or a change of the law; readers as minds a reading |
 | D59 | the readings of the step of invariance and its objections (20 October) | adopted with exact scope: “what wants its continuation” the centers of standpoints, whose own presupposition holds; a standpoint's order a positive weighting, partial in its weights and counting everything; the impartial order what every such weighting shares (C); partiality the mixed comparisons; a weight of zero a denial of scope; the de se question left open |
 | D60 | the readings of the de se question and of graded significance (20 October) | adopted with exact scope: a content held de se Lewis's self-ascribed property, held de dicto one proposition; a grade's positivity standing, the grade status; a formation's level the steps of its continuation admitted; priority a strictly increasing transform of levels, strictly concave up to a bound; sufficiency a transform rising no further from a threshold |
+| D61 | the ethics' scope as the one closure (21 October) | adopted with exact scope: relational neutrality read as closedness under the formed relations' steps, so that the scope the two neutralities force is the closure of a valued living claim; the step of invariance read as the claim that the relation carrying significance connects everything living; the same law as 无明's reach through couplings; the order untouched, C alone ranking |
 
 <a id="1-生生与生成的空间--生生-and-the-generative-space"></a>
 ## 1. 生生 and the generative space
@@ -584,6 +585,7 @@ L1, S1 and S2 are D40-D42.
 - Ren's message of 20 October 2026 on OPENING's note on the meta-attractor, “this needs to be fully taken care of” ([words](../../../../sources/15-codex-theory-conversations/2026-10-20-meta-attractor-note-taken-care-of.md)): D58 ([study section 242](BECOMING-RENEWAL-READING.md#242-the-meta-attractors-loop-closed-on-the-spine-ma1)).
 - The line toward the aim of 20 October 2026 set by the session that started board item IV1 (no source record of the aim's words; none is quoted): D59 ([study section 256](BECOMING-RENEWAL-READING.md#256-the-step-of-invariance-what-it-reaches-across-standpoints-and-the-order-every-weighting-shares-iv1)).
 - The same line, continued by board item IV2 (the de se question, graded significance): D60 ([study section 260](BECOMING-RENEWAL-READING.md#260-the-de-se-question-and-graded-significance-iv2)).
+- Ren's message of 21 October 2026, “aim elegant completion” ([words](../../../../sources/15-codex-theory-conversations/2026-10-21-aim-elegant-completion.md)), taken up by board item EC: D61 ([study section @N4@](BECOMING-RENEWAL-READING.md#@SLUG4@)).
 
 <a id="13-一个说明--one-account"></a>
 ## 13. One account
@@ -789,3 +791,18 @@ Where: the chapter [THE-STEP-OF-INVARIANCE](../../../../theories/becoming/chapte
 **Reasons.** Each reading names the declarations it rests on and says no more than they prove. Lewis's reading is the standard one, and it makes the de se question a question about which content the presupposition has, which the laws can then answer conditionally. Standing and status is the distinction under which Williams's partiality and Taurek's numbers become one premise (invariance of status). Levels as admitted steps are the measure the comparison already reads, so priority and sufficiency are stated on the same items as C.
 
 **What would change it.** A reading of de se content that is not a self-ascribed property (Castañeda's quasi-indicator, for instance) under which the parting law fails. An argument that the step, as argued, applies to grades. A measure of how a formation fares that is not the length of admitted continuation, under which priority would be stated differently.
+
+<a id="d61-the-ethics-scope-as-the-one-closure"></a>
+### The ethics' scope as the one closure
+
+Where: study section @N4@ (board item EC, its fourth step); the module `Becoming.ValuationFrames`; the record [what-the-step-across-standpoints-reaches](../../../../theories/becoming/results/records/what-the-step-across-standpoints-reaches.md).
+
+**Decision.** Adopted with exact scope.
+1. **Relational neutrality as closedness.** The rule that significance transmits along formed relations (N_rel) is read as the closedness of each standpoint's significance under the relations' steps (`Valuation.transmits_iff_closed`). So the scope the two neutralities force from a valued living claim is that claim's closure (`Valuation.forced_iff_reach`), the same closure as the frame's (`WithinClosure`, `reach_iff_withinClosure`).
+2. **The step of invariance as connectivity.** The continuation condition's content beyond the self is read as the claim that the relation carrying significance connects everything living (`Valuation.forced_whole_iff_connected`). IV2's privileged-relation question is then the question which relation's closure is the scope.
+3. **One law with 无明.** What a selection reaches through couplings, what a test can exclude, what the step across standpoints forces and what the neutralities force are read as one law: each is the closure of a relation, closed under it and reaching nothing beyond it.
+4. **Order untouched.** A closure fixes whose losses count and orders nothing; C alone ranks.
+
+**Reasons.** Each reading says no more than the laws it names: the equivalences are proved, and the readings name what they equate. Reading the scope as a closure keeps scope and order apart, as the theory requires, and puts the open warrant question in a form the laws can sharpen.
+
+**What would change it.** A representation of significance in which it spreads by something other than a relation's steps (by weights that decay along a path, for instance). There the scope would not be a closure, and graded significance (D60) would carry the scope as well as the status.

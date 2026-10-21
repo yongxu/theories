@@ -9,7 +9,11 @@ import Becoming.Extension
 `Becoming.Metaethics` states valuations over the relations a web or a flow forms, and
 `Becoming.Significance` states the continuation condition on them; neither imports the frame. This
 module holds their readings on frames and runs of a labelled process: formed relations as a process
-on claims (`Valuation.relations`, `Valuation.Connected`); living significance on a frame
+on claims (`Valuation.relations`, `Valuation.Connected`); the scope of the two neutralities as the
+frame's one closure, relational neutrality being closedness under the relations' steps
+(`Valuation.transmits_iff_closed`), what the neutralities force from a valued living claim being
+exactly what it reaches (`Valuation.forced_iff_reach`), and the whole forced exactly where it is
+connected (`Valuation.forced_whole_iff_connected`; board item EC4); living significance on a frame
 (`Valuation.livingSignificance`; the predicate `LivingSignificance` itself takes no valuation and
 is stated in `Becoming.Extension` since R34) and the reason a sound inquiry
 gives every position with access (`universal_reason`); access as a realized claim (`AccessAt`);
@@ -55,9 +59,34 @@ theorem reaches (neutral : Neutral V.transmits) {p : Pos} {c d : C}
     (linked : Reach V.relations c d) (held : V.sig p c) : V.sig p d :=
   (transmits_invariant neutral p).reach linked held
 
+
+/-- **The rule of relational neutrality is closedness.** Significance transmits along formed
+relations exactly where each standpoint's significance is a region closed under the relations'
+steps (`Steps`, `Becoming.Frame`). -/
+theorem transmits_iff_closed :
+    Neutral V.transmits ↔ ∀ p, ClosedUnder (Steps V.relations) (V.sig p) :=
+  ⟨fun neutral p c d held ⟨_, step⟩ => neutral (p, c, d) held step.1 step.2,
+   fun closed ⟨p, c, d⟩ held related alive => closed p c d held ⟨(), related, alive⟩⟩
+
+/-- **What the rules force is the closure.** From a living claim `c₀` significant from `p₀`, every
+significance meeting the two neutralities (N_rel, N_std) gives `d` significance from `q` exactly
+where `d` is reached from `c₀` through formed relations among living claims: the scope the rules
+fix is the closure of the valued claim, whatever the standpoints. -/
+theorem forced_iff_reach {p₀ q : Pos} {c₀ d : C} (alive₀ : V.living c₀) :
+    (∀ sig : Pos → C → Prop, Neutral ({ V with sig := sig } : Valuation Pos C).transmits →
+        Neutral ({ V with sig := sig } : Valuation Pos C).shares → sig p₀ c₀ → sig q d) ↔
+      Reach V.relations c₀ d :=
+  ⟨fun forced => forced (fun _ x => Reach V.relations c₀ x)
+      (fun ⟨_, _, _⟩ reached related alive => reached.trans (Reach.of_step (a := ()) ⟨related, alive⟩))
+      (fun ⟨_, _, _⟩ _ reached => reached) (Reach.refl _ c₀),
+   fun reached sig transmit share held =>
+     reaches (V := { V with sig := sig }) transmit reached (share (p₀, q, c₀) alive₀ held)⟩
+
+/-- On a connected whole the grounds give living significance: what the two neutralities force from
+the seed reaches every living claim, the closure being the whole (`forced_iff_reach`). -/
 theorem significant_of_grounds (connected : V.Connected) : V.Grounds → V.Significant
-  | ⟨⟨p₁, c₁, alive₁, held⟩, transmit, share⟩, p, c, alive =>
-    reaches transmit (connected c₁ c alive₁ alive) (share (p₁, p, c₁) alive₁ held)
+  | ⟨⟨_, c₁, alive₁, held⟩, transmit, share⟩, _, c, alive =>
+    (forced_iff_reach alive₁).mpr (connected c₁ c alive₁ alive) V.sig transmit share held
 
 /-- Characterization of living significance's content on a connected whole with some living claim. -/
 theorem significant_iff (connected : V.Connected) (p₀ : Pos) {c₀ : C}
@@ -66,6 +95,18 @@ theorem significant_iff (connected : V.Connected) (p₀ : Pos) {c₀ : C}
       fun ⟨p, _, d⟩ _ _ alive => all p d alive,
       fun ⟨_, q, c⟩ alive _ => all q c alive⟩,
     significant_of_grounds connected⟩
+
+/-- **The whole is forced exactly where it is connected.** Every living claim is forced significant
+from every standpoint by every valued living claim, under the two neutralities, exactly where the
+formed relations connect the living claims: the scope reaches the whole exactly where the closure
+is the whole. -/
+theorem forced_whole_iff_connected (p₀ q : Pos) :
+    (∀ c d, V.living c → V.living d →
+        ∀ sig : Pos → C → Prop, Neutral ({ V with sig := sig } : Valuation Pos C).transmits →
+          Neutral ({ V with sig := sig } : Valuation Pos C).shares → sig p₀ c → sig q d) ↔
+      V.Connected :=
+  ⟨fun forced c d alive alive' => (forced_iff_reach alive).mp (forced c d alive alive'),
+   fun connected c d alive alive' => (forced_iff_reach alive).mpr (connected c d alive alive')⟩
 
 end Valuation
 
