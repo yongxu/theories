@@ -1,0 +1,6 @@
+{
+ "real": true,
+ "why": "The finding is real. In book-2.json, stable 六·六 (rendered 六·七, titled 余地) defines 余地 as 偏去体之积过一需之量. Its 說 also says 余地 belongs to the relation between the level without the part and the need, and to neither the part nor the dependent. That makes 余地 a quantity of the level. Round 2 (agents/global2-consistency.json) therefore changed the sentence in 纲·一's 經 to 「涸界属常与，不属积：」. The chapter at line 3410 confirms the change. But 纲·一's 說 still summarises the tightening as 「久所示者是共取，余地属常与」 (chapter line 3420), so the 說 contradicts its own 經 and the definition in 六·六. The 經's wording is the one Lean supports. In RegimeMargin.lean, ends_iff_below (line 678) and beyond_draw_iff (line 710) place the point of no return at H＋y, where y is the root of the giving law g against the standing draw H. That point is read off 常取 and 常与, not off the level. That is the English \"the margin belongs to the regime, not to the level\" (English chapter line 1166), and NAMES-ZH names that point 涸界. The find occurs exactly once in the 纲·一 body; 余地属常与 also occurs only once there. Other uses of 余地 in the same 說 (绝落在余地…之域内, 那里之余地读自…所与之式) were not part of this finding and are left as they are.",
+ "find": "久所示者是共取，余地属常与",
+ "replace": "久所示者是共取，涸界属常与"
+}

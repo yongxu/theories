@@ -21,6 +21,7 @@ par = sum(len(c['parallels']) for c in P.values())
 rej = sum(len(c['rejected']) for c in P.values())
 cov = json.loads((HERE / 'coverage.json').read_text())['verdicts']
 flag = sum(v['c'] != '-' for v in cov.values())
+notad = sum(1 for l in open(HERE / 'work/symbols-not-adopted.tsv', encoding='utf-8') if l.strip()) - 1
 names = list(csv.DictReader(open(HERE / 'work/names-decisions.tsv', encoding='utf-8'), delimiter='\t'))
 chk = json.loads((HERE / 'work/names-checked.json').read_text())
 import build_tables as BT
@@ -57,7 +58,7 @@ Delta: every complete judgment of 《中华思想脉络》 v1.0 ({len(cov):,}) r
        exact scopes, {k['divergence']} divergences; {par:,} parallels; {rej} set aside with reasons); the thesis that the
        Chinese system "is naturally one, relational, dynamic" tested by domain and by era; {len(names)} classical names,
        one per concept, anchored on current main ({pre} of the {len(quoted)} quoted ones witnessed in pre-Qin texts),
-       41 symbols not adopted with reasons; the theory stated in those names in the 中华本《变化论》 (凡例, sixteen 篇
+       {notad} symbols not adopted with reasons; the theory stated in those names in the 中华本《变化论》 (凡例, sixteen 篇
        and 论纲, {ntiao} 條, each with 經, 說 and 證)
 Supplied premises / correspondence: none, and no Lean; kinds, readings and names are the AI's (D{D}); the 脉络's
        mechanisms and modern comparisons are editorial and no entry rests on them

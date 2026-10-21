@@ -1,0 +1,6 @@
+{
+ "real": false,
+ "why": "The reference is correct, so there is nothing to fix. The reviewer looked only at the 經 of ⟦三·六⟧ (相代, shown as 三·五). The example the 亡 說 cites is in the 說 of that same 條: 「有穷做了功：待者无穷时，可以屡有作而永无已（`Becoming.Accretion.unceasing`、`Becoming.Accretion.never_ceases`）……二者皆构造之例」. The Lean confirms it, in Change.lean, namespace Accretion. `unceasing : web.Unceasing` says arising recurs. `never_ceases : ∀ t f, ¬ web.Ceases t f` says nothing ever ceases. Together they are exactly 「屡作而无一已」. In this model formation f is active at every step t > f, so no 待者 ever 亡. That is the point of 「亡不是律」. ⟦三·七⟧ (列) also has such an example, `World.slow_world` in Openness.lean, which proves `ArisingRecurs ∧ ∀ t x, ¬ Ceases t x`. But that one is the narrower case of a census with an unbounded, non-decreasing bound. Accretion is the plain unconditional case. It also sits in the same 條 that the second ⟦三·六⟧ in this 說 already points to (「有为无常只在有穷之族之屡作屡已上成立」), so the two references agree. Changing ⟦三·六⟧ to ⟦三·七⟧ would not fix an error, only swap one valid witness for a narrower one.",
+ "find": "",
+ "replace": ""
+}

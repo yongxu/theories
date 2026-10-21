@@ -1,0 +1,6 @@
+{
+ "real": true,
+ "why": "Confirmed from the data. In zhonghua/passages.json, 259 entries carry an ro_passage. 25 differ in kind from RO ro-relational-sources/passages.json and 2 differ from Y1 y1-changes/passages.json (y1:zhen-fu-yi and y1:xugua-shouwei), which makes the chapter's 27. Three entries point at RO xunzi-hua-yi-shi, which RO marks agreement, and all three are scope here: C01 xunzi-zhengming-wu-zhuang-shi, C03 xunzi-zhengming-yi-shi and C09 xunzi-hua-yi-shi. Each quotes 「有化而无别，谓之一实」 and reads 化/一实 through World.fixed_iff, a theorem present in Persistence.lean. The table's other four passages give 孙子 1 (C13 sunzi-jiudi-tong-zhou), 系辞 1 (y1:zhen-fu-yi), 杂阿含 1 (C02 zaahan-ci-you-gu-bi-you) and 老子七十六章 2 (C05 and C11, so that row's '两簇' is right). With three 荀子 entries that is 3+1+1+1+2 = 8 pairs on 5 passages, as the chapter and landing_texts.py say. With 两簇 the table gives only 7. The find string occurs exactly once in theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md (line 293), and the reviewer's replacement is correct as given.",
+ "find": "荀子「有化而无别，谓之一实」〔RU2-S-XZ22〕（本章两簇各一条）",
+ "replace": "荀子「有化而无别，谓之一实」〔RU2-S-XZ22〕（本章三簇各一条）"
+}

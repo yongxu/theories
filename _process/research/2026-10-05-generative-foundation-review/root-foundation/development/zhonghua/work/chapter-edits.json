@@ -1,0 +1,233 @@
+[
+ {
+  "id": "CHAPTER",
+  "find": "由这些文字定出一套古典的名，共 446 个，每个理论概念一个（§五）；不采之字 41 个，各有理由。",
+  "replace": "由这些文字与《变化论》的起草定出一套古典的名，共 447 个，每个理论概念一个（§五）；不采之字 37 个，各有理由（附录同列的象、数、通三字各取一义，立为名）。",
+  "why": "final chapter (error): The figures are stale. The name table (work/names-decisions.tsv) now has 447 rows, and the chapter's own generated table §五·三 sums to 447. The prose still says 446, because 域之兼 was added in the second",
+  "sev": "error"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "446 个名中，246 个的出处是脉络冻结原文中的句子，逐字核对。",
+  "replace": "447 个名中，246 个的出处是脉络冻结原文中的句子，逐字核对。",
+  "why": "final chapter (error): §一 gives the name total as 446. The table has 447 names (240 + 6 quoted, 201 unquoted; see §五·三).",
+  "sev": "error"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "未录引文的 200 个分两种：\n\n- 104 个是新组合",
+  "replace": "未录引文的 201 个分两种：\n\n- 105 个是新组合",
+  "why": "final chapter (error): The generated table §五·三 gives 201 names without a quotation (新 105, 古 60, 复 36). The prose says 200. 域之兼 is 新 and has no quotation.",
+  "sev": "error"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "未录引文的 200 个分两种：\n\n- 104 个是新组合，由古字组成",
+  "replace": "未录引文的 201 个分两种：\n\n- 105 个是新组合，由古字组成",
+  "why": "final chapter (error): The table gives 105 new compounds without a quotation; 域之兼 was added. The prose says 104.",
+  "sev": "error"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "（例如步、亡、聚、散）",
+  "replace": "（例如聚、散、衡、相续）",
+  "why": "final chapter (error): Two of the four examples of unquoted 古/复 names do have recorded quotations. 步 has 「不積跬步」 at RU2-S-XZ01 and 亡 has 「死而不亡者寿」 at YD-LAO-BASE, both found in names-checked.json. 聚, 散, 衡 and 耗 really are 古 w",
+  "sev": "error"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "41 个字或词不立为名，[附录](THE-THEORY-OF-BECOMING-ZHONGHUA.md#附录二-不采之字)逐个写出理由与它们的相关条目。",
+  "replace": "[附录](THE-THEORY-OF-BECOMING-ZHONGHUA.md#附录二-不采之字)列出 40 个字或词，逐个写出决定、理由与它们的相关条目。其中象、数、通三字立为名，各只取一义（象为模型，数为计数，通为运行继续）；其余 37 个不立为名。",
+  "why": "final chapter (error): symbols-not-adopted.tsv has 40 rows, not 41. Three of them (象 采为「象」（模型）, 数 采为「数」（计数）, 通 采为「通」（运行继续）) are names in names-decisions.tsv. So 37 are not adopted and the appendix lists 40.",
+  "sev": "error"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "- 初不定终，出孔颖达《周易正义》，所引的「靡不有初，鮮克有終」本出《诗·大雅·荡》，脉络未收《诗经》；",
+  "replace": "- 初不定终，出王弼《周易注》乾·文言「知終終之」之注（脉络所收为孔颖达《周易正义》所载之本），所引的「靡不有初，鮮克有終」本出《诗·大雅·荡》，脉络未收《诗经》；",
+  "why": "final chapter (error): The attribution of 初不定终 is wrong. In the frozen YWH-Q text, 「靡不有初，鮮克有終」 stands inside 〈…〉. That bracket is 王弼's 注 on 乾·文言 九三 (知終終之，可與存義也): 「處終而能全其終…故「靡不有初，鮮克有終」。夫「可與存義」者…〉」. The edition note says the ",
+  "sev": "error"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "荀子「有化而无别，谓之一实」〔RU2-S-XZ22〕（本章两簇各一条）",
+  "replace": "荀子「有化而无别，谓之一实」〔RU2-S-XZ22〕（本章三簇各一条）",
+  "why": "final chapter (error): The 8 pairs on 5 passages need three 荀子 entries, not two. Of the 27 pairs whose kind differs from RO/Y1, three entries point at RO xunzi-hua-yi-shi, quote 「有化而无别，谓之一实」, read 化/一实 through World.fixed_i",
+  "sev": "error"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "韩非“三人言而成虎”：一个见证者的报告若是另一个的函数，加入它不改变任何检查。",
+  "replace": "韩非八经「十人云疑，百人然乎，千人不可解也」〔FA1-S-H48〕、八奸「不使羣臣相爲語」〔FA1-S-H09〕：一个见证者的报告若是另一个的函数，且与之在同样的情形下出错，加入它不改变任何检查。",
+  "why": "final chapter (error): §八 item 6 names a passage that is nowhere in the map: 「三人言而成虎」 does not occur in passages.json. The entries whose gap field states the correlated-witness gap (G1) are hanfei-shi-ren-yun-yi (八經 FA1-S-H",
+  "sev": "error"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "3. 名锚定在现行主干的 Lean 声明上。",
+  "replace": "3. 名锚定在现行主干的 Lean 声明上：447 个名中 376 个在名表录有锚。其余 71 个未录：设、无设而然、有设而然、证、未决、读、相合、定域、相分、以明等是体例、地位与对照之名，没有可锚的声明；足、生、顾、活、方、权等所名之结构，在其立义之条的证中有声明（如足之 `Becoming.Web.Supported`、顾之 `Becoming.Valuation` 字段 `sig`、活之 `Becoming.World.Living`），名表尚未录其锚。",
+  "why": "final chapter (error): Rule 3 says every name is anchored on a Lean declaration. 71 of the 447 names have no anchor in names-decisions.tsv or names-checked.json, among them 设, 无设而然, 有设而然, 证, 以明, 相合, 定域, 足, 生, 顾, 活, 方, 我, 己,",
+  "sev": "error"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "庄子自己说「道者，为之公」，它只是一个号。",
+  "replace": "则阳篇中太公调答少知「道者，爲之公。因其大，以號而讀之，則可也」〔ZH1-S25〕：道只是因其大而称之的一个号。",
+  "why": "final chapter (error): The quotation 「道者，为之公」 is in no frozen text; ZH1-S25 (庄子·則陽) has 「道者，爲之公。因其大，以號而讀之，則可也」. The point that 道 is only a 号 is in the second sentence, which is not quoted. The speaker is 太公調, answering 少知, ",
+  "sev": "error"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "结果是新增 120 个名，104 个概念归入已有之名，115 个技术概念不立名而定一种现代说法，全书统一。",
+  "replace": "有的概念分出几义，共作 339 个决定：新增 120 个名，104 个概念归入已有之名，115 个技术概念不立名而定一种现代说法，全书统一。审读全书时又为给定部分之整体立域之兼一名（`Becoming.Web.Whole`），名表共 447 个。",
+  "why": "final chapter (inconsistency): §五·二 does not add up. It says 263 concepts went to naming and then gives outcomes of 120 + 104 + 115 = 339. work/new-names.json holds 339 decisions over 319 keys: 262 of the 263 keys from names-to-dec",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "例如“指穷于为薪，火传也”，作为样式经传递而延续，是定域；作为取于族外之给，是相合。",
+  "replace": "例如「指窮於爲薪，火傳也」〔ZH1-S03〕，作为取于族外之给（新薪须自外来），是相合；作为样式经传递而延续，“不知其尽”只在传递不止时成立，是定域。",
+  "why": "final chapter (inconsistency): The §二 example contradicts the map. The 'pattern lasts through passing' reading of 指窮於爲薪 has two entries: C03 zhuangzi-xin-huo is 定域 (不知其盡 holds only while passing continues, ByPassing.ends_within), a",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "修订者改写 1,081 条、新增 132 条、原样保留 88 条；检查者读改写与新增者，通过 696 条，改正 517 条。",
+  "replace": "修订者改写 1,084 条、新增 133 条、原样保留 88 条、删去 30 条；检查者读改写与新增者，通过 696 条，改正 517 条，删去 4 条。",
+  "why": "final chapter (inconsistency): The stage counts do not match the agent outputs. The reviser files have 1,084 entries with status revised and 133 new, plus 88 kept and 30 dropped. The first checker read all 1,217: 696 passed, 517 co",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "定域多于相合（1,497 对 1,131）。",
+  "replace": "定域多于相合（1,498 对 1,130）。",
+  "why": "final chapter (inconsistency): The domain table places some judgments by the wrong cluster. build_tables.placements() checks the primary cluster for entries but not for parallels or rejections, so a later cluster's mention overwrit",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "- “不取”是阅读后判为没有可读结构的判断；",
+  "replace": "- “不取”是阅读后判为没有可读结构的判断；\n- 并列与不取两列按各簇所列计，其中 18 条判断的主簇在别簇或未标（并列 17 条，不取 1 条），所以不取之合计比 §四·一 多 1；",
+  "why": "final chapter (inconsistency): The cluster table's 并列 (1,742) and 不取 (251) columns count every row in each cluster's lists. That includes 17 parallels and 1 rejection of judgments whose primary cluster is another one or that were n",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "两者的比例相近：RO 中相合、定域、相分为 95、94、59。",
+  "replace": "两者方向相同，比例不尽相同：RO 中相合、定域、相分为 95、94、59，相分约占四分之一，相合与定域相当；本章条目中相分占 15%，判断中占 19%，定域多于相合，多因以现行主干重读时找到了全称形式所须的条件（§六）。",
+  "why": "final chapter (inconsistency): The proportions are not close. RO is 95/94/59 of 248: 38%, 38% and 24% 相分. This chapter is 35/50/15% by entry and 35/46/19% by judgment. 相分 is about a quarter in RO against 15–19% here, and 定域 outweig",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "5. 每个名写出它所不带之义（例如“天”不带意志，“性”不带先定之性，“生生”不带“凡新皆善”）。",
+  "replace": "5. 每个名写出它所不带之义（例如“理”不带“理先气后”，“生生”不带老子“生生之厚”的执生之义；“天”“性”所带的意志与先定之性，是它们不立为名的理由，见 §五·五）。",
+  "why": "final chapter (inconsistency): Rule 5 is about names, but two of its examples are not names. 天 and 性 are not in names-decisions.tsv; they are in the not-adopted list, and §五·五 gives exactly these senses as the reason. The table's o",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "另有两种相分不属于这四层。",
+  "replace": "不属于这四层的相分，除 §二 所说把只在条件之下给出者断言为无条件的一种（例如把某一方向称为善）外，还有两种。",
+  "why": "final chapter (inconsistency): The two sections give different lists of divergence kinds. §二 lists three: the four layers, asserting unconditionally what the theory gives only under a condition (calling a direction good), and asser",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "脊柱上，构形就是它怎样相关（`Becoming.alike_iff_sameTests`）。",
+  "replace": "脊柱上，构形就是它怎样相关：相同的构形通过同样的检验（`Becoming.Alike.tests`），在框架确定之处，相同恰由检验定下（`Becoming.alike_iff_sameTests`）。",
+  "why": "final chapter (inconsistency): The claim drops the theorem's hypothesis. alike_iff_sameTests (Histories.lean:302) needs both frames determined (DeterminedAt), so it gives the converse only there. The unconditional direction is Alik",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "名在形成者之间约成，改名不改所分（`Becoming.SharedCodes.renamed_carries_iff`）。",
+  "replace": "名在形成者之间约成；一一之改名不改所分（`Becoming.SharedCodes.renamed_tells_apart_iff`），所承载之律也不变（`Becoming.SharedCodes.renamed_carries_iff`）。",
+  "why": "final chapter (inconsistency): The cited theorem says something else. renamed_carries_iff (SharedCodes.lean:735) says that a description renamed injectively carries a law exactly where the original does. That the distinctions are k",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "复返恰是无损之处的运动（`Becoming.Law.lossless_iff_returns`），不是一切运动的性质。",
+  "replace": "在有限构形中，律无同归恰当每一构形皆复返（`Becoming.Law.lossless_iff_returns`）：复返是无损之处的运动，不是一切运动的性质。",
+  "why": "final chapter (inconsistency): Law.lossless_iff_returns (Recurrence.lean:674) holds only within finitely many configurations (every : ∀ s, s ∈ all). The C05 entry lao-40-fan-zhe-dao-zhi-dong says 「有限构形内」. The chapter leaves out the",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "脊柱上相续之结构是更新不从任何一步起停止（`Becoming.Web.Unceasing.activeRenewer_recurs`），这是读法。",
+  "replace": "脊柱上相续之结构是：作耗减一有限之族、每一上升都由更新者所为之处，不息使更新不从任何一步起停止（`Becoming.Web.Unceasing.activeRenewer_recurs`），这是读法。",
+  "why": "final chapter (inconsistency): Web.Unceasing.activeRenewer_recurs (Arising.lean:189) holds only where unceasing generation depletes a finite family and every rise is made by a renewer. The C06 entry xici-sheng-sheng-zhi-wei-yi stat",
+  "sev": "inconsistency"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "而「杀身以成仁」把仁排在生命之上",
+  "replace": "而「殺身以成仁」〔RU1-S-LY〕把仁排在生命之上",
+  "why": "final chapter (style): The quotation is given in simplified characters. The frozen text, 論語 at RU1-S-LY, has 「殺身以成仁」, and STYLE says quotations keep the frozen text's forms. Adding the source id lets verify_zh check it.",
+  "sev": "style"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "孔疏释为“不绝之辞”",
+  "replace": "孔疏释为「生生，不絕之辭」〔YWH-H5〕",
+  "why": "final chapter (style): The 孔疏 quotation is in simplified characters inside “” with no source. The frozen text, YWH-H5 (周易正義/07.05), has 「生生，不絕之辭」.",
+  "sev": "style"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "华严六相「去却椽即無舍」与墨经“谓其存者损”",
+  "replace": "华严六相「去却椽即無舍」〔FO2-FQ〕与墨经「謂其存者損」〔MI1-S-SS〕",
+  "why": "final chapter (style): Both classical quotations here lack source ids, and the 墨经 one is in simplified characters inside “”. The frozen texts are FO2-FQ 「去却椽即無舍」 and MI1-S-SS 「謂其存者損」.",
+  "sev": "style"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "吴子“一人学战，教成十人”",
+  "replace": "吴子「一人學戰，教成十人」〔BI1-S-WZ〕",
+  "why": "final chapter (style): The 吴子 quotation is in simplified characters. The frozen text, BI1-S-WZ, has 「一人學戰，教成十人」.",
+  "sev": "style"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "孙子“其势险，其节短”",
+  "replace": "孙子「其勢險，其節短」〔BI1-S-SZ〕",
+  "why": "final chapter (style): The 孙子 quotation is in simplified characters. The frozen text, BI1-S-SZ, has 「其勢險，其節短」.",
+  "sev": "style"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "不息之取用须有补充（`Becoming.Flow.uptake_needs_replenishment`）。",
+  "replace": "在衡（守恒）之流中，不息之取用须有补充（`Becoming.Flow.uptake_needs_replenishment`）。",
+  "why": "final chapter (style): uptake_needs_replenishment (Flow.lean:469) assumes a balanced flow (L.Balances W). The book's 說 says 「只用衡」, but the chapter states the law without its condition.",
+  "sev": "style"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "每个片段在其冻结原文中逐字可见（空白可异）",
+  "replace": "每个片段在其冻结原文中逐字可见（空白与标点可异）",
+  "why": "final chapter (style): verify_zh.pattern() strips punctuation (，。、；：) from a fragment and allows any punctuation as well as whitespace between characters. So punctuation may differ too, not only whitespace.",
+  "sev": "style"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "**文本。** 文本是维基文库、CBETA 与虚阁网的电子转录，未与刻本对校。",
+  "replace": "**文本。** 文本是维基文库、CBETA 与虚阁网的电子转录（另有两份《四书蕅益解》取自美国佛教会《蕅益全集》电子本），未与刻本对校。",
+  "why": "final chapter (style): The list of text sources is incomplete. Besides 维基文库 (372 sources), CBETA (25, one fetched as CBETA XML from GitHub) and 虚阁网 (3), two sources, IN2-S07 and IN2-S08 (四書蕅益解), come from tripitaka2.zensoul",
+  "sev": "style"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "[易传一章](YI-ZHUAN-AND-BECOMING.md)逐句读了易传。",
+  "replace": "[易传一章](YI-ZHUAN-AND-BECOMING.md)逐句对应了易传中所选的 90 段。",
+  "why": "final chapter (style): '逐句读了易传' says the whole 易传 was read sentence by sentence, but the next sentence calls both earlier maps 选读. The 易传 chapter maps 90 selected passages (y1-changes/passages.json) in its §4 逐句对应.",
+  "sev": "style"
+ },
+ {
+  "id": "CHAPTER",
+  "find": "每条有逐字核对的原文片段、对应的 Lean 声明与结果记录",
+  "replace": "每条有逐字核对的原文片段与对应的 Lean 声明，除 4 条外都有结果记录",
+  "why": "final chapter (style): Four of the 1,300 entries have an empty records list: C08 lunyu-gai-que-ru, C12 daxue-zu-fa-min-fa-zhi, C12 lunyu-xing-jin-xi-yuan and C12 lunyu-shang-zhi-xia-yu-bu-yi. 'Each has a result record' is t",
+  "sev": "style"
+ }
+]

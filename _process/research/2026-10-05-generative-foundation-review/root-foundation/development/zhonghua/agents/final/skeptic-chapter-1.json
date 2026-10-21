@@ -1,0 +1,6 @@
+{
+ "real": true,
+ "why": "The reviewer is right. The chapter is /Users/ren/theories/.claude/worktrees/zhonghua/theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md. Line 18 in §一 says 446 names, but the generated table in §五·三 (line 224) gives 447 in total: 240 quoted from pre-Qin texts plus 6 quoted only from later texts, which makes 246 quoted, and 201 with no quotation. I recounted NAMES-ZH.md and it has 447 name rows. A first count gave 446 because it dropped the row for the name 名 itself, which looks like a header row. The commit that added the sixth table pass (d9aceb0ef) also says 447. The 246 in the sentence is correct, so only 446 needs to change. The find occurs once in the chapter. A second stale count is in the summary paragraph on line 5, which reads 共 446 个. It needs its own edit, which is also unique in the chapter: find \"共 446 个，每个理论概念一个\" and replace it with \"共 447 个，每个理论概念一个\". This is a count, so the Lean has nothing to say about it.",
+ "find": "446 个名中，246 个的出处是脉络冻结原文中的句子，逐字核对。",
+ "replace": "447 个名中，246 个的出处是脉络冻结原文中的句子，逐字核对。"
+}

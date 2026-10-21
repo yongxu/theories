@@ -16,7 +16,7 @@ import book as B
 
 ROOT = os.path.abspath(os.path.join(HERE, *(['..'] * 6)))
 OUT = os.path.join(ROOT, 'theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md')
-ROUNDS = ['work/round2-edits.json', 'work/round3-edits.json', 'work/round4-edits.json']
+ROUNDS = ['work/round2-edits.json', 'work/round3-edits.json', 'work/round4-edits.json', 'work/round5-edits.json']
 DECL = re.compile(r'`(Becoming\.[^`]+)`')
 QUOTE = re.compile(r'「([^」]{2,})」〔([A-Za-z0-9\-]+)〕')
 
@@ -103,7 +103,7 @@ def main():
             elif ':' in i and i.split(':')[0] in parts:
                 tgt, field = parts[i.split(':')[0]], {'INTRO': 'intro', 'DUIZHAO': 'duizhao'}.get(i.split(':')[1], 'intro')
             elif i in tiao:
-                tgt, field = tiao[i], 'body'
+                tgt, field = tiao[i], ('title' if e['find'] in tiao[i]['title'] and e['find'] not in tiao[i]['body'] else 'body')
             else:
                 rep['failed'].append({'id': i, 'why': 'no such place', 'find': e['find'][:60]})
                 continue
