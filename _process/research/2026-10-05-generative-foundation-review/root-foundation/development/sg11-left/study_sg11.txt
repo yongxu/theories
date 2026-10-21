@@ -1,0 +1,55 @@
+## {N}. Valuing what is left at the horizon (SG11)
+
+```text
+Result(s): new record valuing-what-is-left-at-the-horizon (new laws of Becoming.Optimum); reuses
+       horizon-optima-hold-the-greatest-renewal (drawn_add_shortfall_after, holdingTo, holding, OpenCourse,
+       holding_open, frontier_holds, Web.frontier_kept, Web.frontier_broken) and keeping-forgoes-the-renewal-at-the-need
+       (the web laws' form with a start s, onSource).
+Delta: SG5's optima of every order rising with what is drawn drain the condition at the horizon's last step, and §8.1
+       item 10 listed an order valuing what is left at the horizon as open. With what is left after the horizon valued
+       one for one with what is drawn, a course draws and leaves at most the start with what is given there and r a step
+       after, exactly where r is given at every step after the first, whatever is left (Optimum.drawn_add_left_le_most,
+       Optimum.most_left_iff). So, with a capacity covering what the first step draws down to a level y of greatest
+       renewal and r, over any horizon, every optimum of every order rising with what is drawn and left stands at a
+       level of greatest renewal at every step to the horizon (Optimum.frontier_holds_left), and the optima of the
+       order by what is drawn and left are exactly the open courses doing so (Optimum.frontier_left_iff): the course
+       keeping y through and past the horizon is one (Optimum.keeping_frontier_left), the course draining y at the
+       end too (Optimum.holding_frontier_left), and where y is positive keeping is no optimum of the order by the draw
+       alone (Optimum.keeping_not_frontier). On a web, a dependence every such level meets stands through the horizon
+       under every such optimum (Web.frontier_kept_left), and one above every such level is broken at the first step
+       and unmet through the horizon (Web.frontier_broken_left).
+Premises / correspondence: R gives at most r at every level and r at y, with y ≤ s + R s; a capacity k with
+       s + R s ≤ y + k and r ≤ k, any horizon (for the draining course y + r ≤ k and at least two steps; for the broken
+       law at least two steps); what is left valued one for one with what is drawn; natural amounts, discrete steps.
+       Correspondence: a terminal (salvage) value in a finite-horizon problem.
+Evidence: core receipt {RECEIPT} (passed); the first receipt {FIRST} passed but left four of the new laws apart, and
+       is superseded.
+Boundary: a terminal value at another worth than the draw is not covered; the last step's draw is left free, neither
+       forced nor forbidden; several optimizers ranking courses and steps met again after a fall stay open.
+Output → input: chapter §3.4, §7.1 and §8.1 item 10 (EN, ZH), the record table and the relation-to-known-results row
+       6; Optimum's header; records horizon-optima-hold-the-greatest-renewal, keeping-forgoes-the-renewal-at-the-need,
+       a-step-coupling-keeps-at-every-horizon, a-weighting-faster-than-renewal-ends-the-base,
+       optima-rebuild-a-depleted-base and others-drawing-first-end-the-base (their open item narrowed); significance
+       review, left check.
+```
+
+**The question.** Every optimum of an order rising with what is drawn holds a level of greatest renewal through the horizon and draws everything at its last step (`Optimum.frontier_holds`, SG5, [§292](#292-courses-ranked-over-a-horizon-sg5)). The drain at the end is the order's: nothing after the horizon counts. The far-sighted objection's natural repair is to value what is left at the horizon. §8.1 item 10 listed that order as open: does a terminal value keep the base, and what it depends on?
+
+**What was built** (new laws of `Becoming.Optimum`, pure core, every axiom report empty).
+
+- *The bound with what is left* (`Optimum.drawn_add_left_le_most`, `Optimum.most_left_iff`, `Optimum.open_left_le_most`). From SG5's identity, what a course draws across `n + 1` steps, with what stands after them and everything the renewal falls short of `r` after the first step, is the start with what is given there and `r` a step. So what is drawn with what is left is at most that, exactly where `r` is given at every step after the first; what is left is not fixed.
+- *The order* (`Optimum.byDrawnLeft`): courses ranked by what they draw across `n + 1` steps with what they leave after them, valued alike.
+- *Keeping is an optimum* (`Optimum.holdingTo_same`, `Optimum.keeping_left_most`, `Optimum.keeping_open`, `Optimum.keeping_frontier_left`). The course standing at `y` at every step after the start draws and leaves the most. It is open over any horizon where the capacity covers what the first step draws down to `y` and `r`, since after the first step it draws only what is given.
+- *Draining is one too* (`Optimum.holding_frontier_left`). SG5's course, drawing `y` to nothing at the last step, draws `y` more and leaves `y` less. Valued alike, the last step's draw is indifferent.
+- *Without the value, keeping is none* (`Optimum.keeping_not_frontier`). Where `y` is positive, the course keeping it is no optimum of the order by the draw alone, every optimum of which leaves nothing.
+- *Every optimum, exactly* (`Optimum.frontier_holds_left`, `Optimum.frontier_left_iff`). Every optimum of every order rising with what is drawn and left stands at a level of greatest renewal at every step from the first to the `n`-th. The optima of `byDrawnLeft` are exactly the open courses doing so.
+- *On a web* (`Web.frontier_kept_left`, `Web.frontier_broken_left`). From a start `s`, as in SG6's web laws, a dependence every level of greatest renewal meets stands through the horizon under every such optimum. One above every such level is broken at the first step and unmet through the horizon.
+- *Witnesses* (`Optimum.Holding.gated_left`, `Optimum.Holding.logistic_left`). Under a gate renewing one unit at every level from one, from the dweller's need, with capacity three, the course keeping the source at the need through and past the horizon is an optimum and keeps the dweller at every step. Draining at the end is an optimum too. The optima are exactly the courses standing where the gate renews, and keeping is no optimum by the draw alone. Under the logistic law, every optimum breaks the dweller at the first step.
+
+**Against the prior form** ([significance review, left check](BECOMING-SIGNIFICANCE-REVIEW.md#left-check)). A value on the state left at the end is a terminal or salvage value. With none, a finite-horizon harvest ends by drawing everything (Clark 1976, from memory). The spine's form is exact for every order rising with what is drawn and left. Valued one for one, the end's drain is no longer forced, and the steady yield at a level of greatest renewal is an optimum through and past the horizon. Valuing what is left removes the drain and nothing else, so what depends on the condition above those levels is broken as before.
+
+*Reading* [AI reading, D45]. A far-sighted optimizer that values the stock it leaves keeps its own base. It does not thereby keep what lives on that base: the value attaches to the stock, not to the dependences the stock's levels meet. The objection "add a terminal value" is met exactly. It removes the end effect SG5 found and leaves the first-step break, which is the alignment gap.
+
+**Self-review.** Premises were checked for necessity. The keeping course draws only `r` a step after the first, so its capacity premise is `r ≤ k`, not SG5's `y + r ≤ k`. It needs no lower bound on the horizon, so `frontier_holds_left`, `frontier_left_iff` and `Web.frontier_kept_left` hold over any horizon. The draining course keeps SG5's premises. The broken law keeps `0 < n` for the step after the first. The first checker run passed (receipt {FIRST}), but the connectivity check found four new laws apart: `keeping_frontier_left`, `holding_frontier_left`, `frontier_left_iff` and `keeping_not_frontier`, read by no law on a flow or web. The fix restated the web laws with the start `s`, as SG6's are, so that they apply to the web of any course (`onSource`), and added the witnesses, which read all four. The lesson: run the connectivity check on a scratch commit before the checker when adding existence laws. Limits: the value is one for one; another worth is open.
+
+**The run.** {CORE_LINE}. {DECLS} declarations added to Becoming.Optimum, {THEOREMS} of them theorems, none removed, all with empty axiom reports. Connectivity: {APART}.

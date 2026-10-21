@@ -1,0 +1,17 @@
+{
+  "tree": "/Users/ren/theories/.claude/worktrees/sg11/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/sg11-left/tree",
+  "modules": 43,
+  "ran": [
+    "Becoming.Optimum",
+    "BecomingOptimumAxiomAudit"
+  ],
+  "reused": 42,
+  "unclean": [],
+  "audits": {
+    "Becoming.Optimum": {
+      "theorems": 381,
+      "declarations": 475,
+      "with_axioms": {}
+    }
+  }
+}
