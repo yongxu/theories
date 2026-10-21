@@ -1,0 +1,50 @@
+## {N}. Drawers in turn, each ranking courses (SG14)
+
+```text
+Result(s): new record drawers-in-turn-draw-everything (new laws of Becoming.Optimum); reuses
+       others-drawing-first-end-the-base (a law of what stands, the others' rule supplied there) and
+       horizon-optima-hold-the-greatest-renewal (gated_alike, the optimum alone).
+Delta: SG10 supplied the others' draws as a rule reading the level and left open whether that rule is itself a best
+       response, and §8.1 item 10 listed several optimizers each ranking courses at a mutual best response. With two
+       drawers in turn at each step (the first leaves first t z of the level z, the second second t a of what the
+       first left, and what the second leaves stands at the next step as G t of it), each ranking what it draws over
+       the steps that remain (Optimum.InTurn.firstDrawn, Optimum.InTurn.secondDrawn), a profile is perfect where each
+       leaves at most what it is given and the two are at a mutual best response at every step of the horizon from
+       every level (Optimum.InTurn.BestAt, Optimum.InTurn.Perfect). Every perfect profile has both leave nothing at
+       every step, whatever stands at nothing (Optimum.InTurn.step_ends, Optimum.InTurn.ends_at,
+       Optimum.InTurn.perfect_ends); the base stands from the first step at what stands at nothing
+       (Optimum.InTurn.perfect_levels); drawing everything is perfect over every horizon
+       (Optimum.InTurn.perfect_of_zero); on a web a dependence whose need, met at the start, is above what stands at
+       nothing is broken at the first step (Web.perfect_broken).
+Premises / correspondence: any law G of what stands; two drawers in turn, no capacity limiting a draw; each ranks the
+       plain sum of its draws over the steps that remain; Markov rules reading the step and the level; natural
+       amounts, discrete steps. Correspondence: the dynamic commons with linear payoffs (Levhari and Mirman 1980),
+       alternating moves.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: capacities limiting a draw, more than two drawers, drawing at once with a rule of sharing, and how
+       optimizers come to a mutual best response are not covered; the first drawer moving first at every step is the
+       model's choice.
+Output → input: chapter §3.4, §7.1, the relation-to-known-results row 6 and §8.1 item 10 (EN, ZH), the record table;
+       Optimum's header; records others-drawing-first-end-the-base (its open item) and
+       several-optimizers-drain-by-their-joint-capacity (related); significance review, in-turn check.
+```
+
+**The question.** SG10 showed that where others first draw from what an optimizer leaves at least what the remainder renews, every optimum of an order weighting later draws less ends the base at once ([§298](#298-over-every-law-of-what-stands-sg10)). The others' rule was supplied. Whether it is itself a best response, so that drawers each ranking courses reach this outcome at a mutual best response, was open.
+
+**What was built** (new laws of `Becoming.Optimum`, pure core, every axiom report empty).
+
+- *The profile* (`Optimum.InTurn.next`, `Optimum.InTurn.levels`, `Optimum.InTurn.firstDrawn`, `Optimum.InTurn.secondDrawn`). Two rules, each reading the step and the level it is given, fix the course from any level. What each draws over the steps that remain is defined backward from the horizon.
+- *Perfect* (`Optimum.InTurn.BestAt`, `Optimum.InTurn.Perfect`). At a step with `j` steps after it, the second leaves of whatever the first leaves what draws it the most over the rest. The first leaves what draws it the most, the second responding by its rule. Perfect over a horizon means each leaves at most what it is given and this holds at every step from every level: subgame perfection for rules reading the step and the level.
+- *Backward induction* (`Optimum.InTurn.zero_of_le_sub`, `Optimum.InTurn.step_ends`, `Optimum.InTurn.ends_at`, `Optimum.InTurn.perfect_ends`). Where the second draws nothing over the rest from any level, the second leaves nothing, since what it leaves the first draws at its next move. The first then leaves nothing, since whatever it leaves the second draws, and the continuation is the same whatever it leaves. The second's draw over the rest stays nothing, and the induction runs to the first step. No premise on what stands at nothing is needed.
+- *The base* (`Optimum.InTurn.perfect_levels`). Along every perfect profile the base stands from the first step at what stands at nothing; where nothing stands at nothing, it ends at once.
+- *Existence* (`Optimum.InTurn.zero_secondDrawn`, `Optimum.InTurn.perfect_of_zero`). Drawing everything is perfect over every horizon, so the law does not hold vacuously.
+- *On a web* (`Web.perfect_broken`). A dependence on the base whose need, met at the start, is above what stands at nothing at the first step is broken there.
+- *The witness* (`Optimum.Holding.gated_in_turn`). Under a gate, from the dweller's need two, alone the course holding the source at two is an optimum of the order by what the taker draws, keeping the dweller through the horizon (`gated_alike`). In turn, every perfect profile breaks the dweller at the first step.
+
+**Against the prior form** ([significance review, in-turn check](BECOMING-SIGNIFICANCE-REVIEW.md#in-turn-check)). In the dynamic commons with linear payoffs and no limit on a draw, the subgame-perfect outcome is immediate exhaustion. The spine's form proves it for every perfect profile rather than exhibiting one, over any law of what stands, with no discounting, and on the web as dependences broken.
+
+*Reading* [AI reading, D45]. Far-sight on both sides does not keep a base that either alone, far-sighted, may keep: each sees that what it leaves the other draws. SG10's supplied rule is what the other far-sighted drawer does. Restraint is no best response here, as at one step (SG3) and along a course of myopic steps (SG4).
+
+**Self-review.** Premises were checked for necessity. The first build assumed that nothing stands at nothing; it is not needed. In the first drawer's comparison the continuation is the same whatever it leaves, since the second leaves nothing of anything, so both leave nothing whatever stands at nothing, and the base stands at that. A lemma about the first drawer's draw under the draw-everything profile was dropped, since no law read it. The web law takes what stands at nothing below the need in place of its absence. The model's choices are stated: the first moves first at every step, no capacity limits a draw, and ranking is by the plain sum, the hardest case for exhaustion since no discounting pushes toward it. Limits: capacities, more drawers, drawing at once.
+
+**The run.** {CORE_LINE}. {DECLS} declarations added to Becoming.Optimum, {THEOREMS} of them theorems, none removed, all with empty axiom reports. Connectivity: {APART}.

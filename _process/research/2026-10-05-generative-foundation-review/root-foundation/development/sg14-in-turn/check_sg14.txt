@@ -1,0 +1,18 @@
+<a id="in-turn-check"></a>
+## A check: drawers in turn, each ranking courses (22 October 2026, SG14)
+
+An AI check (one session, 22 October), made while the Lean was written. It asks what SG10 ([drawn-first check](#drawn-first-check)) left open: whether the others' rule is itself a best response when the others too rank courses. **Verdict: the mathematics is known in its kind. In the dynamic commons with linear payoffs, where any player can take the whole stock, the subgame-perfect equilibrium exhausts the stock at once, and with alternating moves the argument is backward induction. The spine's form is exact for every perfect profile, rules reading the step and the level, over any law of what stands, with no discounting, and read on the web as dependences broken. That restraint is no mutual best response over courses either, as it is not at one step (SG3) or along myopic steps (SG4), is the reading.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| The dynamic commons: the equilibrium stock with several far-sighted players is below a sole owner's, and with linear payoffs and no limit on a draw it is exhausted at once | Levhari and Mirman, "The Great Fish War", Bell Journal of Economics 11 (1980); Clark, *Mathematical Bioeconomics*, second edition (1990) (from memory) | Every perfect profile of two drawers in turn leaves nothing at every step (`Optimum.InTurn.perfect_ends`), the base standing at what stands at nothing (`Optimum.InTurn.perfect_levels`), and drawing everything is perfect (`Optimum.InTurn.perfect_of_zero`) |
+| Subgame perfection by backward induction in finite games | Selten (1965); Kuhn (1953) (from memory) | `Optimum.InTurn.step_ends`, `Optimum.InTurn.ends_at`: from the horizon back, each step's mutual best response has both leave nothing |
+
+```text
+Result(s): new record drawers-in-turn-draw-everything (SG14, new laws of Becoming.Optimum)
+Delta: with two drawers in turn each ranking courses, every profile at a mutual best response at every step from every level has both leave nothing at every step, the base standing from the first step at what stands at nothing, and drawing everything is such a profile; the others' rule SG10 supplied is derived for this case
+Supplied premises / correspondence: any law of what stands; no capacity limiting a draw; plain sums; rules reading the step and the level; natural amounts; discrete steps. Correspondence: Levhari and Mirman 1980; backward induction
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; capacities, more drawers and drawing at once are not stated; the first moves first at every step
+Integration: chapter §3.4, §7.1, §8.1 item 10 and the relation-to-known-results row 6
+```
