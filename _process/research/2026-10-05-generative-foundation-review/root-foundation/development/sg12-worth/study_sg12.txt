@@ -1,0 +1,53 @@
+## {N}. Valuing what is left at any worth (SG12)
+
+```text
+Result(s): new record valuing-what-is-left-at-any-worth (new laws of Becoming.Optimum); reuses
+       valuing-what-is-left-at-the-horizon (most_left_iff, open_left_le_most), horizon-optima-hold-the-greatest-renewal
+       (holdingTo, the steps of holding courses, now holdingTo_steps_of) and keeping-forgoes-the-renewal-at-the-need
+       (Keeps, keeping_le_most, continued, coupledDraw, the web laws' form with a start s).
+Delta: SG11 valued what is left one for one with what is drawn and left another worth open. With v of at least one for
+       each unit left, what is drawn with v times what is left is what is drawn with what is left and v - 1 times what
+       is left (Optimum.valued_eq). Where no open course leaves more than one step's regrowth y + r from a level y of
+       greatest renewal, it is at most the start with what is given there, r a step after and v - 1 times y + r
+       (Optimum.open_valued_le_most), and the course holding y through the horizon and regrowing at the last step,
+       drawing nothing after, reaches it and is an optimum (Optimum.regrowing_valued, Optimum.regrowing_frontier).
+       Where v exceeds one, the bound is reached exactly where a course holds a level of greatest renewal at every
+       step to the horizon and leaves y + r (Optimum.valued_most_iff), so every optimum of every order rising with
+       that worth does so, and these are exactly the optima of the order by it (Optimum.frontier_holds_valued,
+       Optimum.frontier_valued_iff): on a web a dependence above every such level is broken at the first step,
+       unmet through the horizon and met again only at its end (Web.frontier_rebuilt_valued). At every worth of at
+       least one, a coupling w of keeping a need at or above which at most q is given leaves only optima falling
+       below the need within the horizon where w + q n < r n (Optimum.frontier_breaks_valued,
+       Web.frontier_breaks_valued).
+Premises / correspondence: R gives at most r at every level and r at y, with y ≤ s + R s; a capacity k with
+       s + R s ≤ y + k and r ≤ k; a horizon of at least two steps; no open course leaves more than y + r after the
+       horizon; v at least one (above one for the optima's characterization); natural amounts, discrete steps.
+       Correspondence: the turnpike (Dorfman, Samuelson and Solow 1958); Goodhart 1975.
+Evidence: core receipt {RECEIPT} (passed).
+Boundary: a worth where the most a course can leave is not regrown in one step from a level of greatest renewal is
+       not covered; with v = 0 and v = 1 the orders are SG5's and SG11's, each under its own premises; several
+       optimizers ranking courses and steps met again after a fall stay open.
+Output → input: chapter §3.4, §7.1 and §8.1 item 10 (EN, ZH), the record table, the relation-to-known-results row 6
+       and the standing clause; Optimum's header; records valuing-what-is-left-at-the-horizon and the six horizon
+       records whose open item it narrows; significance review, worth check.
+```
+
+**The question.** SG11 showed that valuing what is left one for one with what is drawn removes the forced drain at the horizon's end and nothing else ([§321](#321-valuing-what-is-left-at-the-horizon-sg11)). It left open a value at another worth. A value above the worth of the draw might seem to protect the condition: an optimizer that values the stock it leaves more than what it draws might keep the stock high throughout, and with it what depends on the stock.
+
+**What was built** (new laws of `Becoming.Optimum`, pure core, every axiom report empty).
+
+- *The identity* (`Optimum.valued_eq`). At a worth `v` of at least one, what is drawn with `v` times what is left is what is drawn with what is left and `v - 1` times what is left.
+- *The bound* (`Optimum.open_valued_le_most`). With SG11's bound on what is drawn and left, and where no open course leaves more than `e`, an open course's draw with `v` times what it leaves is at most the start with what is given there, `r` a step after and `v - 1` times `e`.
+- *The course regrowing at the end* (`Optimum.holdingTo_steps_of`, `Optimum.regrowing_valued`, `Optimum.regrowing_frontier`). The steps of a course holding `y` and ending at any `e` within `y` with `r` generalize the steps of a course ending at most at `y`, which are their case (`holdingTo_steps`, unchanged in statement). The course holding `y` through the horizon, regrowing to `y + r` at the last step and drawing nothing after (SG6's `continued`, so nothing is supposed beyond the horizon) is open and reaches the bound with `e = y + r`. Where no open course leaves more, it is an optimum at every worth of at least one.
+- *Every optimum above one, exactly* (`Optimum.valued_most_iff`, `Optimum.frontier_holds_valued`, `Optimum.frontier_valued_iff`, `Optimum.byDrawnLeftAt`). Where `v` exceeds one, the bound is reached exactly where a course holds a level of greatest renewal at every step to the horizon and leaves `y + r`. Every optimum of every order rising with that worth does so, and these are exactly the optima of the order by it. Two arithmetic lemmas carry the equality: two sums each at most another, equal, are each equal (`Optimum.eq_of_add_eq_of_le`), and multiplying by a positive number cancels (`Optimum.mul_left_cancel_of_pos`), written to keep the axiom report empty.
+- *A coupling at any worth* (`Optimum.lt_of_valued_below`, `Optimum.frontier_breaks_valued`). A keeping course draws with what it leaves at most the start with `q` a step (SG6), and leaves at most `y + r`. Against the course regrowing at the end, keeping forgoes `(r - q) n` whatever the worth: the value on what is left is had by both. So a coupling `w` with `w + q n < r n` leaves only optima falling below the need within the horizon.
+- *On a web* (`Web.frontier_rebuilt_valued`, `Web.frontier_breaks_valued`). Above one, a dependence above every level of greatest renewal is broken at the first step, unmet to the `n`-th and the condition stands at `y + r` after the last. At every worth of at least one, a coupling short of `(r - q) n` leaves the dependence broken within the horizon.
+- *The witness* (`Optimum.Holding.logistic_within`, `Optimum.Holding.logistic_open_le`, `Optimum.Holding.logistic_valued`). Under the logistic law from the dweller's need two, no open course stands above two, which is one step's regrowth from one. At every worth, the course drawing the source to one and regrowing it to two at the last step is an optimum. Above one, the optima are exactly the courses doing so, each breaking the dweller at the first step and restoring it only at the end. At every worth, a coupling of the dweller below `n + 1` is outweighed.
+
+**Against the prior form** ([significance review, worth check](BECOMING-SIGNIFICANCE-REVIEW.md#worth-check)). The finite-horizon optimum staying on the path of greatest yield and departing only at the end is the turnpike, here in exact form. The departure is set by the terminal value: a drain where what is left is worth nothing, freedom at one for one, a regrowth above. A dependence measured only at the end is restored for the measurement, a form of Goodhart's law.
+
+*Reading* [AI reading, D45]. Valuing the end state, at any worth, does not value the path. An optimizer that values the stock it leaves more than what it draws still draws the stock down where it renews most and rebuilds it for the horizon. What depends on the levels in between is broken, and a measure taken only at the end shows it whole. With SG5 (worth nothing) and SG11 (one for one), every worth in whole numbers gives the same verdict on the path: a terminal value is no substitute for keeping the dependence in the order, and a coupling fixed in total is outweighed by a long enough horizon whatever the terminal value.
+
+**Self-review.** Premises were checked for necessity. `bounded` is needed: where some course can leave more than one step's regrowth, a high enough worth can favour courses that stay high. Requiring `v ≥ 1` is needed for the identity and the witness, and `v > 1` is needed for leaving `y + r` to be forced, since at one the last step is free (SG11). `long` is needed for the regrowing course's first step to reach `y`. The end level was first a free `e` with `e ≤ y + r`. Since the course holding `y` and drawing nothing at the last step leaves `y + r`, the bound forces `e = y + r`, so the laws take `y + r` directly. The connectivity of every new law was planned before the checker: `frontier_valued_iff` and `regrowing_frontier` are read by the witness on the flow, the rest by the web laws (lesson of SG11). The first build carried `propext` through `Nat.le_of_add_le_add_left`, `Nat.add_left_cancel`, `Nat.eq_of_mul_eq_mul_left` and `Nat.sub_pos_of_lt`; the prelude's forms and a cancellation lemma by recursion replaced them. Limits: one-step regrowth; several optimizers stay open.
+
+**The run.** {CORE_LINE}. {DECLS} declarations added to Becoming.Optimum, {THEOREMS} of them theorems, none removed, all with empty axiom reports; `holdingTo_steps` now reads `holdingTo_steps_of`, its statement unchanged. Connectivity: {APART}.

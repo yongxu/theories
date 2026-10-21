@@ -1,0 +1,19 @@
+<a id="worth-check"></a>
+## A check: valuing what is left at any worth (22 October 2026, SG12)
+
+An AI check (one session, 22 October), made while the Lean was written, of what SG11 ([left check](#left-check)) left open: whether valuing what is left above the worth of the draw keeps what depends on the condition. **Verdict: the mathematics is known in its kind. A finite-horizon optimum stays on the path of greatest yield and departs from it near the end, the turnpike, and a quantity measured only at a fixed time is managed for that time, Goodhart's law. The spine's form is exact for every order rising with what is drawn and `v` times what is left. Above one, every optimum holds a level of greatest renewal through the horizon and regrows at the last step, the optima are exactly these courses, and what keeping a dependence forgoes is `(r - q) n` whatever `v`. With SG5 and SG11, every worth in whole numbers gives the same verdict on the path.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| The turnpike: a finite-horizon optimum stays near the path of greatest growth or yield and departs from it only near the end | Dorfman, Samuelson and Solow, *Linear Programming and Economic Analysis* (1958); McKenzie (1963) (from memory) | Exact here: every optimum holds a level of greatest renewal at every step to the horizon and departs at the last step alone, to drain (`Optimum.frontier_holds`), freely (`Optimum.frontier_holds_left`) or to regrow (`Optimum.frontier_holds_valued`) |
+| A terminal (salvage) value on the state left at the end | Finite-horizon optimal control; Clark, *Mathematical Bioeconomics* (1976) (from memory) | Above the worth of the draw, it sets the end level, not the path (`Optimum.valued_most_iff`, `Optimum.frontier_valued_iff`) |
+| A measure becoming a target: what is measured at a fixed time is managed for that time | Goodhart (1975) (from memory) | A dependence above every level of greatest renewal is broken at the first step and restored only at the end (`Web.frontier_rebuilt_valued`, `Optimum.Holding.logistic_valued`) |
+
+```text
+Result(s): new record valuing-what-is-left-at-any-worth (SG12, new laws of Becoming.Optimum)
+Delta: at any worth v of at least one for each unit left, where no course leaves more than one step's regrowth from a level of greatest renewal, the course holding that level and regrowing at the last step is an optimum; above one every optimum does so, a dependence above those levels broken at the first step and restored only at the end; a coupling of keeping is outweighed where w + q n < r n, whatever v
+Supplied premises / correspondence: a renewal law of the level with a greatest renewal r at some y within the start's reach; a capacity covering the first step's draw and r; no open course leaving more than y + r; natural amounts; discrete steps. Correspondence: the turnpike; terminal value; Goodhart 1975
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; a most left not regrown in one step is not stated; the witness's law, start and capacity chosen
+Integration: chapter §3.4, §7.1, §8.1 item 10, the relation-to-known-results row 6 and the standing clause
+```

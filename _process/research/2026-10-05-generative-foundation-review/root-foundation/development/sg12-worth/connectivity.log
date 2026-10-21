@@ -1,0 +1,1482 @@
+{
+ "commit": "ea84245d1d7f857f7cd567402a636337f16db6ae",
+ "sources_match_commit": true,
+ "core_receipt_at_commit": "20261021T175617.330751Z",
+ "lean": "Lean (version 4.29.1, arm64-apple-darwin24.6.0, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
+ "tracked_modules": 301,
+ "constants": 39350,
+ "spine_theorems": 12951,
+ "base": {
+  "Process family": [
+   "Generative.Process",
+   "Generative.Trace",
+   "Becoming.Frame",
+   "Becoming.Run"
+  ],
+  "World family": [
+   "Becoming.World",
+   "Becoming.Flow",
+   "Becoming.Web"
+  ]
+ },
+ "families_reach_each_other": {
+  "Flow reaches Process family": false,
+  "Web reaches Process family": false,
+  "World reaches Process family": true,
+  "Process reaches World family": false
+ },
+ "classes": {
+  "statement on both families": 1003,
+  "statement on Process/Frame/Run/Trace": 2915,
+  "statement on World/Flow/Web": 3019,
+  "statement on the base only through a law of its own module": 243,
+  "proof through a base family": 155,
+  "used by a theorem on the base": 4814,
+  "instance on the base recorded": 155,
+  "apart: own vocabulary": 588,
+  "apart: prelude-only statement": 59
+ },
+ "apart": 647,
+ "apart_general_structure_by_design": 186,
+ "apart_otherwise": 461,
+ "pure_forwarders": {
+  "spine theorems that are pure forwarders": 78,
+  "of them on the base": 63,
+  "their targets, by class": {
+   "statement on Process/Frame/Run/Trace": 11,
+   "instance on the base recorded": 11,
+   "statement on both families": 1,
+   "used by a theorem on the base": 29,
+   "statement on World/Flow/Web": 8,
+   "statement on the base only through a law of its own module": 1
+  }
+ },
+ "recorded_instances": {
+  "register entries": 92,
+  "examples": 0,
+  "examples on the base": 0,
+  "register entries naming what the run lacks": []
+ },
+ "statement_through_own_law_by_module": {
+  "Becoming.RegimeMargin": 61,
+  "Becoming.HexagramLaws": 26,
+  "Becoming.Undecided": 23,
+  "Becoming.LoopReturn": 22,
+  "Becoming.Pace": 22,
+  "Becoming.Withholding": 21,
+  "Becoming.SharedCodes": 15,
+  "Becoming.Hexagrams": 15,
+  "Becoming.Tolerance": 13,
+  "Becoming.Dephasing": 11,
+  "Becoming.HexagramSequences": 5,
+  "Becoming.Attraction": 4,
+  "Becoming.Recurrence": 3,
+  "Becoming.LeastLoss": 2
+ },
+ "apart_used_by_nothing": 436,
+ "apart_roots": 436,
+ "apart_roots_by_category": {
+  "model-witness": 239,
+  "support": 86,
+  "general-structure": 88,
+  "logical-strength": 12,
+  "restates": 9,
+  "calibration": 2
+ },
+ "apart_roots_unclassified": [],
+ "register_entries_not_apart_roots": [],
+ "statements_on_both_by_module": {
+  "Becoming.Counting": 172,
+  "Becoming.OneStep": 73,
+  "Becoming.InAmounts": 52,
+  "Becoming.Premises": 46,
+  "Becoming.Standing": 42,
+  "Becoming.Space": 39,
+  "Becoming.Resolution": 34,
+  "Becoming.Openness": 32,
+  "Becoming.Persistence": 31,
+  "Becoming.ExchangePremises": 28,
+  "Becoming.Ranking": 23,
+  "Becoming.Interleavings": 23,
+  "Becoming.CensusBinding": 22,
+  "Becoming.CourseWorlds": 20,
+  "Becoming.Transmission": 19,
+  "Becoming.CensusCounts": 19,
+  "Becoming.Correspondence": 18,
+  "Becoming.CensusTable": 17,
+  "Becoming.Relevance": 17,
+  "Becoming.Runs": 16,
+  "Becoming.Labelled": 15,
+  "Becoming.Sampling": 15,
+  "Becoming.Descent": 15,
+  "Becoming.Entropy": 14,
+  "Becoming.Direction": 10,
+  "Becoming.CourseRoles": 10,
+  "Becoming.PlaceTransitionNets": 10,
+  "Becoming.Listing": 9,
+  "Becoming.Joint": 8,
+  "Becoming.LabelledRoles": 8,
+  "Becoming.Regrouping": 8,
+  "Becoming.FrontierWorlds": 8,
+  "Becoming.IdleRemoval": 7,
+  "Becoming.Reading": 7,
+  "Becoming.FormedLoops": 7,
+  "Becoming.LawAlongRun": 6,
+  "Becoming.Reordering": 6,
+  "Becoming.OrderNormal": 6,
+  "Becoming.Decidedness": 6,
+  "Becoming.ActiveReading": 6,
+  "Becoming.JointDraw": 6,
+  "Becoming.ContextualRuns": 6,
+  "Becoming.Horizon": 5,
+  "Becoming.Stuttering": 5,
+  "Becoming.ParityReadings": 5,
+  "Becoming.Unfolding": 4,
+  "Becoming.ValuationFrames": 4,
+  "Becoming.Tolerance": 4,
+  "Becoming.RouteTraces": 4,
+  "Becoming.LoopReturn": 3,
+  "Becoming.Readings": 3,
+  "Becoming.Propagation": 3,
+  "Becoming.StrengthFlows": 3,
+  "Becoming.World": 2,
+  "Becoming.Stock": 2,
+  "Becoming.LeastLoss": 2,
+  "Becoming.Extension": 2,
+  "Becoming.Novelty": 2,
+  "Becoming.CounterfactualRuns": 2,
+  "Becoming.CouplingTraces": 2,
+  "Becoming.Hexagrams": 2,
+  "Becoming.HexagramSequences": 2,
+  "Becoming.ContinuedClasses": 1,
+  "Becoming.RegroupingSelection": 1,
+  "Becoming.Boundaries": 1,
+  "Becoming.Remainder": 1,
+  "Becoming.ListedWebs": 1,
+  "Becoming.SensitivityWebs": 1
+ },
+ "apart_by_module": {
+  "Becoming.Weightings": [
+   55,
+   81
+  ],
+  "Becoming.Drift": [
+   34,
+   46
+  ],
+  "Becoming.Reproduction": [
+   32,
+   66
+  ],
+  "Becoming.SelectionLevels": [
+   24,
+   55
+  ],
+  "Becoming.HexagramSites": [
+   23,
+   98
+  ],
+  "Becoming.HexagramPlaces": [
+   20,
+   109
+  ],
+  "Becoming.Frontier": [
+   18,
+   70
+  ],
+  "Becoming.GroupEnding": [
+   16,
+   38
+  ],
+  "Becoming.Ideals": [
+   15,
+   94
+  ],
+  "Becoming.IntegerOrder": [
+   15,
+   38
+  ],
+  "Becoming.SelectionTerm": [
+   13,
+   67
+  ],
+  "Becoming.CodeAcquisition": [
+   13,
+   37
+  ],
+  "Becoming.HexagramLaws": [
+   13,
+   129
+  ],
+  "Becoming.PropositionIdentity": [
+   12,
+   12
+  ],
+  "Becoming.Acceptance": [
+   12,
+   17
+  ],
+  "Becoming.StrictTransport": [
+   11,
+   18
+  ],
+  "Becoming.PartialReadout": [
+   11,
+   25
+  ],
+  "Becoming.Quantum": [
+   9,
+   35
+  ],
+  "Becoming.OrderNormal": [
+   9,
+   101
+  ],
+  "Becoming.ListFootprints": [
+   9,
+   9
+  ],
+  "Becoming.Sensitivity": [
+   9,
+   45
+  ],
+  "Becoming.RegimeMargin": [
+   9,
+   176
+  ],
+  "Becoming.ProfileReach": [
+   9,
+   16
+  ],
+  "Becoming.HexagramSequences": [
+   9,
+   94
+  ],
+  "Becoming.Openness": [
+   8,
+   78
+  ],
+  "Becoming.Amounts": [
+   8,
+   29
+  ],
+  "Becoming.SecuredContent": [
+   8,
+   30
+  ],
+  "Becoming.GuardHorizon": [
+   8,
+   32
+  ],
+  "Becoming.Derivation": [
+   7,
+   26
+  ],
+  "Becoming.LeastLoss": [
+   7,
+   55
+  ],
+  "Becoming.Reconfiguration": [
+   7,
+   51
+  ],
+  "Becoming.WitnessRefinement": [
+   7,
+   44
+  ],
+  "Becoming.Lexical": [
+   7,
+   39
+  ],
+  "Becoming.Weighted": [
+   6,
+   38
+  ],
+  "Becoming.PooledEnvelopes": [
+   6,
+   44
+  ],
+  "Becoming.Verification": [
+   6,
+   87
+  ],
+  "Becoming.ChanceFloors": [
+   5,
+   5
+  ],
+  "Becoming.Likeness": [
+   5,
+   176
+  ],
+  "Becoming.Presentations": [
+   5,
+   35
+  ],
+  "Becoming.LocalUnits": [
+   5,
+   45
+  ],
+  "Becoming.Tail": [
+   5,
+   49
+  ],
+  "Becoming.Coverage": [
+   5,
+   22
+  ],
+  "Becoming.MatchedCourses": [
+   4,
+   33
+  ],
+  "Becoming.Learning": [
+   4,
+   78
+  ],
+  "Becoming.Description": [
+   4,
+   35
+  ],
+  "Becoming.ProjectedLaws": [
+   4,
+   28
+  ],
+  "Becoming.ContingentPlans": [
+   4,
+   15
+  ],
+  "Becoming.Relevance": [
+   4,
+   34
+  ],
+  "Becoming.Narrowing": [
+   4,
+   60
+  ],
+  "Becoming.HistorySums": [
+   4,
+   39
+  ],
+  "Becoming.Decidedness": [
+   3,
+   65
+  ],
+  "Becoming.Entropy": [
+   3,
+   182
+  ],
+  "Becoming.Metaethics": [
+   3,
+   11
+  ],
+  "Becoming.Standpoints": [
+   3,
+   21
+  ],
+  "Becoming.ReferencePlan": [
+   3,
+   55
+  ],
+  "Becoming.FaultEnvelopes": [
+   3,
+   19
+  ],
+  "Becoming.CrossSituational": [
+   3,
+   34
+  ],
+  "Becoming.Routes": [
+   3,
+   28
+  ],
+  "Becoming.Interleavings": [
+   3,
+   162
+  ],
+  "Becoming.Frequency": [
+   3,
+   78
+  ],
+  "Becoming.MutualDependence": [
+   3,
+   30
+  ],
+  "Becoming.Gluing": [
+   3,
+   76
+  ],
+  "Becoming.LearnedGrouping": [
+   3,
+   41
+  ],
+  "Becoming.Prelude": [
+   2,
+   123
+  ],
+  "Becoming.Context": [
+   2,
+   25
+  ],
+  "Becoming.Space": [
+   2,
+   60
+  ],
+  "Becoming.Exclusion": [
+   2,
+   36
+  ],
+  "Becoming.Selection": [
+   2,
+   70
+  ],
+  "Becoming.Undecided": [
+   2,
+   63
+  ],
+  "Becoming.Revision": [
+   2,
+   33
+  ],
+  "Becoming.Dephasing": [
+   2,
+   63
+  ],
+  "Becoming.Composition": [
+   2,
+   40
+  ],
+  "Becoming.Joining": [
+   2,
+   65
+  ],
+  "Becoming.Granularity": [
+   2,
+   89
+  ],
+  "Becoming.HistoryLanguages": [
+   2,
+   34
+  ],
+  "Becoming.Carriers": [
+   2,
+   46
+  ],
+  "Becoming.Propagation": [
+   2,
+   75
+  ],
+  "Becoming.Remainder": [
+   2,
+   56
+  ],
+  "Becoming.ScoreRepresentation": [
+   2,
+   16
+  ],
+  "Becoming.Alternatives": [
+   2,
+   17
+  ],
+  "Becoming.RouteFormation": [
+   2,
+   67
+  ],
+  "Becoming.Frame": [
+   1,
+   28
+  ],
+  "Becoming.OneStep": [
+   1,
+   305
+  ],
+  "Becoming.Flow": [
+   1,
+   97
+  ],
+  "Becoming.Population": [
+   1,
+   121
+  ],
+  "Becoming.Evolution": [
+   1,
+   31
+  ],
+  "Becoming.RenewalFlow": [
+   1,
+   28
+  ],
+  "Becoming.Significance": [
+   1,
+   16
+  ],
+  "Becoming.Testing": [
+   1,
+   85
+  ],
+  "Becoming.Optimum": [
+   1,
+   399
+  ],
+  "Becoming.LoopReturn": [
+   1,
+   77
+  ],
+  "Becoming.RuleCapture": [
+   1,
+   51
+  ],
+  "Becoming.Contacts": [
+   1,
+   23
+  ],
+  "Becoming.Viability": [
+   1,
+   24
+  ],
+  "Becoming.Actuation": [
+   1,
+   45
+  ],
+  "Becoming.TreeSearch": [
+   1,
+   34
+  ],
+  "Becoming.Transactions": [
+   1,
+   59
+  ],
+  "Becoming.Lasting": [
+   1,
+   89
+  ],
+  "Becoming.JoiningRoles": [
+   1,
+   23
+  ],
+  "Becoming.Boundaries": [
+   1,
+   69
+  ],
+  "Becoming.Typicality": [
+   1,
+   40
+  ],
+  "Becoming.Observation": [
+   1,
+   27
+  ],
+  "Becoming.CensusCounts": [
+   1,
+   20
+  ],
+  "Becoming.Handoff": [
+   1,
+   22
+  ],
+  "Becoming.Dispatch": [
+   1,
+   33
+  ],
+  "Becoming.ScopedReach": [
+   1,
+   15
+  ]
+ },
+ "rings": {
+  "core": {
+   "modules": 285,
+   "theorems": 12205,
+   "apart": 567,
+   "classes": {
+    "statement on both families": 989,
+    "statement on Process/Frame/Run/Trace": 2704,
+    "statement on World/Flow/Web": 2994,
+    "statement on the base only through a law of its own module": 197,
+    "proof through a base family": 144,
+    "used by a theorem on the base": 4455,
+    "instance on the base recorded": 155,
+    "apart: own vocabulary": 509,
+    "apart: prelude-only statement": 58
+   }
+  },
+  "instances": {
+   "modules": 7,
+   "theorems": 567,
+   "apart": 65,
+   "classes": {
+    "statement on both families": 14,
+    "statement on Process/Frame/Run/Trace": 120,
+    "statement on World/Flow/Web": 25,
+    "statement on the base only through a law of its own module": 46,
+    "proof through a base family": 11,
+    "used by a theorem on the base": 286,
+    "instance on the base recorded": 0,
+    "apart: own vocabulary": 65,
+    "apart: prelude-only statement": 0
+   }
+  },
+  "applications": {
+   "modules": 6,
+   "theorems": 179,
+   "apart": 15,
+   "classes": {
+    "statement on both families": 0,
+    "statement on Process/Frame/Run/Trace": 91,
+    "statement on World/Flow/Web": 0,
+    "statement on the base only through a law of its own module": 0,
+    "proof through a base family": 0,
+    "used by a theorem on the base": 73,
+    "instance on the base recorded": 0,
+    "apart: own vocabulary": 14,
+    "apart: prelude-only statement": 1
+   }
+  }
+ },
+ "components": {
+  "count": 75,
+  "theorems_outside_the_main_component": [
+   "Becoming.Dispatch.add_three_assoc",
+   "Becoming.GuardHorizon.coverage_transports",
+   "Becoming.GuardHorizon.empty_requirement_hides_loss",
+   "Becoming.GuardHorizon.endpoint_access_hides_gap",
+   "Becoming.GuardHorizon.overlapping_handoff_keeps_access",
+   "Becoming.GuardHorizon.route_retirement_allowed",
+   "Becoming.IntegerOrder.le_iff",
+   "Becoming.IntegerOrder.lt_iff",
+   "Becoming.IntegerOrder.nonneg_or_neg",
+   "Becoming.ListTests.filter_of_all",
+   "Becoming.PartialReadout.safe_of_holds",
+   "Becoming.PropositionIdentity.Formula.eval_congr",
+   "Becoming.PropositionIdentity.Formula.read_congr",
+   "Becoming.PropositionIdentity.derivation_unique",
+   "Becoming.PropositionIdentity.iff_witness_unique",
+   "Becoming.PropositionIdentity.transport_const",
+   "Becoming.PropositionIdentity.transport_refl",
+   "Becoming.PropositionIdentity.two_equivalences",
+   "Becoming.Readout.agree_iff_parts",
+   "Becoming.Readout.supplied_agree_iff_parts",
+   "Becoming.Registration.retained_keeps",
+   "Becoming.Requirement.Collective.no_common_plan",
+   "Becoming.Requirement.separate_not_joint",
+   "Becoming.Routes.cond_zero_mul",
+   "Becoming.ceases_at_a_step"
+  ]
+ },
+ "periphery": {
+  "modules": 3,
+  "theorems": 74,
+  "classes": {
+   "statement on both families": 0,
+   "statement on Process/Frame/Run/Trace": 37,
+   "statement on World/Flow/Web": 0,
+   "statement on the base only through a law of its own module": 0,
+   "proof through a base family": 0,
+   "used by a theorem on the base": 36,
+   "instance on the base recorded": 0,
+   "apart: own vocabulary": 1,
+   "apart: prelude-only statement": 0
+  },
+  "apart": 1,
+  "apart_roots": 1,
+  "apart_roots_by_category": {
+   "restates": 1
+  },
+  "apart_by_module": {
+   "RelationalRenewal": [
+    1,
+    35
+   ]
+  },
+  "theorems_outside_the_main_component": []
+ },
+ "records_by_best_alias_class": {
+  "statement on both families": 71,
+  "statement on Process/Frame/Run/Trace": 120,
+  "statement on World/Flow/Web": 93,
+  "statement on the base only through a law of its own module": 4,
+  "proof through a base family": 1,
+  "used by a theorem on the base": 7,
+  "instance on the base recorded": 2,
+  "apart: own vocabulary": 5
+ },
+ "records_resting_only_on_apart_theorems": [
+  {
+   "id": "additive-part-of-offspring-variance",
+   "modules": [
+    "Becoming.Reproduction"
+   ]
+  },
+  {
+   "id": "finite-joining-tree-lifting",
+   "modules": [
+    "Becoming.Joining"
+   ]
+  },
+  {
+   "id": "fixation-by-drift",
+   "modules": [
+    "Becoming.Drift"
+   ]
+  },
+  {
+   "id": "graded-significance-and-priority",
+   "modules": [
+    "Becoming.Weightings"
+   ]
+  },
+  {
+   "id": "proposition-identity",
+   "modules": [
+    "Becoming.PropositionIdentity"
+   ]
+  }
+ ],
+ "master_laws": {
+  "central_declarations": 127,
+  "resting_on_no_master_law": 63,
+  "by_law": {
+   "closure": 16,
+   "balance": 39,
+   "return": 14,
+   "lumping": 1,
+   "order": 9
+  },
+  "rows": [
+   {
+    "row": "generation",
+    "declarations": [
+     {
+      "declaration": "Becoming.Web.Unceasing.rises",
+      "laws": [
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.uptake_needs_replenishment",
+      "laws": [
+       "balance",
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.Embodied.replenishes",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.new_beyond_every",
+      "laws": [
+       "balance",
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.onLoop_of_closing",
+      "laws": []
+     }
+    ]
+   },
+   {
+    "row": "maintenance",
+    "declarations": [
+     {
+      "declaration": "Becoming.Flow.restores",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.Balances.renewedBy",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.More.replenishment_unbounded",
+      "laws": [
+       "balance",
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.Tolerance.answers_restores_iff",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Viability.kernel_and_iff",
+      "laws": []
+     }
+    ]
+   },
+   {
+    "row": "transformation",
+    "declarations": [
+     {
+      "declaration": "Becoming.Law.drawn_iff_not_returns",
+      "laws": [
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.Law.lossless_iff_returns",
+      "laws": [
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.change_recurs_iff",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.World.balanced_reidentify_iff",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Pace.rule_until_reading",
+      "laws": []
+     }
+    ]
+   },
+   {
+    "row": "degeneration",
+    "declarations": [
+     {
+      "declaration": "Becoming.Flow.Balances.consumption_ends_with_feeders",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.Dissipative.opens",
+      "laws": [
+       "balance",
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.continuing_excludes",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.outrun_below",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Branching.loss_passes_juncture",
+      "laws": [
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.RuleCapture.favouring_locks",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.RegimeMargin.ends_iff_below",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.RegimeMargin.Adjusted.ends_iff_below",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.RegimeMargin.Adjusted.comes_to_rest",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.RegimeMargin.Adjusted.falls_iff_below",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.RegimeMargin.Drawn.run_shape",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.RegimeMargin.Coupled.threshold_falls",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.RegimeMargin.Coupled.Indexed.ends_downstream",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.course_lost_iff",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.frontier_broken",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.frontier_breaks_below",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.frontier_keeps_stepwise",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.frontier_exhausts",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.frontier_rebuilds",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
+      "laws": []
+     }
+    ]
+   },
+   {
+    "row": "dissolution",
+    "declarations": [
+     {
+      "declaration": "Becoming.Amounts.rests",
+      "laws": [
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.World.comes_to_rest_unrefuted",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.Carries.active_not_recurring",
+      "laws": [
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.Listed.coming_of_ceasing",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.CensusWebs.keep_pace",
+      "laws": []
+     }
+    ]
+   },
+   {
+    "row": "actor",
+    "declarations": [
+     {
+      "declaration": "Becoming.Web.roles_supported",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Dependence.differenceOnlyTogether_iff",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.counterfactual_is_course",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.partForms_iff",
+      "laws": []
+     }
+    ]
+   },
+   {
+    "row": "patient",
+    "declarations": [
+     {
+      "declaration": "Becoming.Web.roles_dependent",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Flow.beyond_gives_nothing",
+      "laws": [
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.withinSystem_of_withinInfluence",
+      "laws": [
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.responses_le_missBound",
+      "laws": []
+     }
+    ]
+   },
+   {
+    "row": "knowing",
+    "declarations": [
+     {
+      "declaration": "Becoming.Flow.unexcluded_beyond_coupling",
+      "laws": [
+       "balance",
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.Run.not_fixes_of_untaken",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Ideals.verifiableBy_iff_interior",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Learnable.learnable_iff",
+      "laws": [
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.apart_only_downstream",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.carried_iff_rising",
+      "laws": []
+     }
+    ]
+   },
+   {
+    "row": "evaluation",
+    "declarations": [
+     {
+      "declaration": "Becoming.Valuation.significant_iff",
+      "laws": [
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.Valuation.significant_iff_held",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.selfValuation_significant_iff",
+      "laws": [
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.significance_undetermined",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.renewingAt_iff_over_all",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.forced_iff_center",
+      "laws": [
+       "closure"
+      ]
+     }
+    ]
+   },
+   {
+    "row": "capacity",
+    "declarations": [
+     {
+      "declaration": "Becoming.WithinMoves.after_course",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Renewable.no_exact_finite_reading",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.paths_extension_iff_widens",
+      "laws": [
+       "order"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.Balances.retains_iff_within_margin",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.Balances.widens_iff_others_within",
+      "laws": [
+       "balance",
+       "order"
+      ]
+     }
+    ]
+   },
+   {
+    "row": "responsibility",
+    "declarations": [
+     {
+      "declaration": "Becoming.Flow.act_unselected",
+      "laws": [
+       "balance",
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.act_courses_unselected",
+      "laws": [
+       "balance",
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.Balances.comparison_within_response",
+      "laws": [
+       "balance",
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.presupposition_scopes",
+      "laws": [
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.Dependence.Overdetermined.only_together",
+      "laws": []
+     }
+    ]
+   },
+   {
+    "row": "life",
+    "declarations": [
+     {
+      "declaration": "Becoming.Web.roles_alive",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.living_on_reaches",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Flow.descent_reaches",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.Unceasing.activeRenewer_recurs",
+      "laws": [
+       "return"
+      ]
+     }
+    ]
+   },
+   {
+    "row": "evolution",
+    "declarations": [
+     {
+      "declaration": "Becoming.Flow.selection_within",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Flow.transmitted_supported",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Flow.selected_le",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.transmits_at_iff",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Flow.no_new_dependence",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.SelectionTerm.covariation",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.SelectionTerm.Flow.support_not_lower",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.SelectionTerm.Flow.support_moved_rises",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Reproduction.Flow.number_within_take",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Reproduction.Flow.lineage_ends",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Reproduction.Flow.closed_lineage_lowered",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.SelectionLevels.levels_sized",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.SelectionLevels.rises_exact_iff_levels",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.GroupEnding.Flow.rises_iff_inactive",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.GroupEnding.Flow.family_childless",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.GroupEnding.Flow.coupled_end_together",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.GroupEnding.Flow.all_end",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Drift.falls_back",
+      "laws": []
+     }
+    ]
+   },
+   {
+    "row": "learning",
+    "declarations": [
+     {
+      "declaration": "Becoming.Learning.goAlike_iff_lumped",
+      "laws": [
+       "lumping"
+      ]
+     },
+     {
+      "declaration": "Becoming.Learnable.learnable_iff",
+      "laws": [
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.LearnableRuns.learnable_iff_tracks",
+      "laws": [
+       "return"
+      ]
+     },
+     {
+      "declaration": "Becoming.Limit.identifies_iff_tracks",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Learning.Training.unselected_beyond_data",
+      "laws": []
+     }
+    ]
+   },
+   {
+    "row": "collective",
+    "declarations": [
+     {
+      "declaration": "Becoming.Flow.mutuallyDependent_iff_reach",
+      "laws": [
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.Withholding.withholding_spreads",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.SharedCodes.run_agrees_every_start_iff",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.RelativePosition.rise_needs_fall",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.RuleCapture.uniform_locks",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.ClosedCapture.lock_outlives_loss",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.Whole.family_excess_ends",
+      "laws": [
+       "balance"
+      ]
+     }
+    ]
+   },
+   {
+    "row": "significance",
+    "declarations": [
+     {
+      "declaration": "Becoming.unrestricted_iff_livingSignificance",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.widens_iff_retains_adds",
+      "laws": [
+       "order"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.paths_comparison_widens",
+      "laws": [
+       "order"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.paths_one_object",
+      "laws": [
+       "order"
+      ]
+     },
+     {
+      "declaration": "Becoming.Weighting.widens_iff_every_positive",
+      "laws": [
+       "order"
+      ]
+     }
+    ]
+   },
+   {
+    "row": "alignment",
+    "declarations": [
+     {
+      "declaration": "Becoming.Flow.unselected_beyond_coupling",
+      "laws": [
+       "balance",
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.optimum_broken_iff",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Optimum.optimum_beyond",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Optimum.mutual_beyond",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.course_lost_iff",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.frontier_broken",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.frontier_breaks_below",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.frontier_keeps_stepwise",
+      "laws": [
+       "balance"
+      ]
+     },
+     {
+      "declaration": "Becoming.Web.frontier_exhausts",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.frontier_rebuilds",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Web.Next.frontier_ends_drawn_first",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Flow.unselected_beyond_pool",
+      "laws": [
+       "balance",
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.withinCoupling_reads_iff",
+      "laws": [
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.act_selected_by_pool",
+      "laws": [
+       "balance",
+       "closure"
+      ]
+     },
+     {
+      "declaration": "Becoming.ExchangeLaw.response_not_fixed_by_coupling",
+      "laws": []
+     },
+     {
+      "declaration": "Becoming.Direction.extension_iff_widens",
+      "laws": [
+       "order"
+      ]
+     },
+     {
+      "declaration": "Becoming.Direction.widening_selected_by_pool",
+      "laws": [
+       "balance",
+       "closure",
+       "order"
+      ]
+     },
+     {
+      "declaration": "Becoming.Flow.Balances.widens_iff_others_within",
+      "laws": [
+       "balance",
+       "order"
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
