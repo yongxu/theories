@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "utc": "20261021T132228.303923Z",
+  "utc": "20261021T132557.057625Z",
   "toolchain": "leanprover/lean4:v4.29.1",
-  "retained_run": "becoming-checks/20261021T132228.303923Z",
+  "retained_run": "becoming-checks/20261021T132557.057625Z",
   "spine_modules": [
     "Becoming.Prelude",
     "Becoming.World",
@@ -1754,7 +1754,7 @@
     "Becoming.ReadingSchedule": "4bcbf3509a156cbb279bdfaadecc956c1ec46842f89e5062ba3a24ac12938473",
     "Becoming.Settling": "f6fe0bc4461279f43b1435b1bec0e568b0fb34e687a8e7e04bb73676163ed774",
     "Becoming.LastChange": "5785a039e1347f9b98022bd061ac741597e191a5a956378bc48e8dc08ffa9885",
-    "Becoming.RegimeMargin": "9976f1739615123c438946dcd3e8baa65d6cbb64eb29962fcd1cccf1c6794733",
+    "Becoming.RegimeMargin": "e7c7a7138cc1e20b42cd00002d392cd6d17b65188f5a524d613095425d6793d4",
     "Becoming.Routes": "91840d0f1dcfb77baa6b121672e7ebbc742c86cf034ea9029b9808e08810a0b1",
     "Becoming.Thresholds": "062babfffda150c6165c8bd8c120bcdd804c51960d19161109a418c6f5a4147d",
     "Becoming.Observation": "8049282015d17b6c40607a8c56a2cf9d5bc777ae18513e921e9b87883ff3fa72",
@@ -1831,7 +1831,7 @@
     "check.py": "4f9cb94de69bd0e7da6bc7ab1ae1cfd26e2d5848dabda5cbb88aebc36ac52da3"
   },
   "source_commit": {
-    "main": "57bdd4d9c7817298f1267df30aba0b10ed9b243b",
+    "main": "db23cf7bbbd0365634effa30463b4c3e16aae91c",
     "copied": [
       "Becoming.RegimeMargin.lean",
       "Becoming.lean",
@@ -4603,11 +4603,11 @@
         "retained": "/Users/ren/theories/.claude/worktrees/blissful-borg-449b4b/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T123201.760905Z"
       },
       "Becoming.RegimeMargin.log": {
-        "utc": "20261021T125452.679022Z",
+        "utc": "20261021T132542.475296Z",
         "retained": "scratch build, not retained: /Users/ren/theories/.claude/worktrees/rm7/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rm7-webs/tree"
       },
       "BecomingRegimeMarginAxiomAudit.log": {
-        "utc": "20261021T125452.679022Z",
+        "utc": "20261021T132542.475296Z",
         "retained": "scratch build, not retained: /Users/ren/theories/.claude/worktrees/rm7/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rm7-webs/tree"
       },
       "Becoming.Routes.log": {
@@ -7323,9 +7323,9 @@
       "Becoming.LastChange.log": "37903db94231f64df31506d1c2bc3e63fe991248d9553b972888a7279f476bb9",
       "BecomingLastChangeAxiomAudit.log": "02e62bfc6187d81004b034650a40b011bd913f61b97174e25698c8835b9cf0cc",
       "BecomingLastChangeSignatures.log": "9165034387bb044180d402a2c7a7e628661fd9dac683e6fadf72a18f6fb7518a",
-      "Becoming.RegimeMargin.log": "fa67816058dfff54a4972c1e6888985b868770484630d8f0afb84579ddaf3483",
-      "BecomingRegimeMarginAxiomAudit.log": "c4873c2f9178abe7cfabd42907a4f1656eaabff526ae254bf5b24019f2fbe53e",
-      "BecomingRegimeMarginSignatures.log": "e05ae1ea48da384bc348204e94a37dd88bd55f936491b3be0b66281998b35661",
+      "Becoming.RegimeMargin.log": "133f2506607b6c83c171920d70f29433e075890fc8bcc6ff2ca371dbdeb2d9a0",
+      "BecomingRegimeMarginAxiomAudit.log": "0e83718bb7f9b1b4db669788c1b733b217350658f506fe8240e58cf2c2a9baa0",
+      "BecomingRegimeMarginSignatures.log": "ca166a1f71923b57cc08b66bb89f6cfaee0bf482612b7f5a1199a5d5b734ab04",
       "Becoming.Routes.log": "454ff6785137bf47b195cb95221341ae6741baad1e6bea8827dfe859a866c450",
       "BecomingRoutesAxiomAudit.log": "59be79b7d04d19b27c5f18b4eed692c608a54c641add0ad8b331675e61008859",
       "BecomingRoutesSignatures.log": "a39eea258ada3fa9622d98785b2f37511b0823c30553617fee611a9f64c50df6",
@@ -7533,11 +7533,11 @@
       "Becoming.ResponseLearning.log": "7dfdae662749e361b743e328e7cf3865a34d8ee2b3e24596eb39b46a1400b6be",
       "BecomingResponseLearningAxiomAudit.log": "6f8041a4d959167aa2494a92b435d2786a2fd668ac36d7366158840164acb5bb",
       "BecomingResponseLearningSignatures.log": "e26d60e6af64f5f87057121bc7441a6036bcd967d651da6af33ca9214884561b",
-      "Becoming.log": "5c3205d28b9c5a5f0f15b64991318727dae2de5af40c9a4ce42516babfd5038c",
-      "BecomingAxiomAudit.log": "c95beaaaf975ab12cfd61ab4798c838a8c48f8f4a4ed52e2cc2d2e233fd0b45b",
-      "BecomingSignatures.log": "04963b2eac2eb8a26beebaf9460155b7e38b4684bdf4ebb6f317e8d0c7d1f254",
-      "EnvironmentAudit.log": "8ae8be611a143daddbaa7bc5f4dac43ebcd61fab188708ce1846c0ba5dc3ba4c",
-      "Controls.log": "9f5456fdf22088376c469274b324dc84f11bc68c2960f30e4e0702b3a6118c0f",
+      "Becoming.log": "339bc07d97eaf89276017aace6de37297dc4b7dd88c510fa63cf2a4361c1b6c1",
+      "BecomingAxiomAudit.log": "3fb7a41f7efa11e6b2fe369a058d437635b86dcfc9ff2082d5e911dd5061f619",
+      "BecomingSignatures.log": "1d19793b915aecd9ba2a432ce3212e915d6d07628af100878c9868c6843afe77",
+      "EnvironmentAudit.log": "b28ca1e7f29390d6f3298b91d02d9bca0b10b112a665332338ca7f3a3cecf8d4",
+      "Controls.log": "49fcefd94f27a90444d1f90332d9a24f79f6c75738f21931f54d58198c607b5c",
       "Becoming.Prelude.PreludeOnly.log": "32cdefc822715fda696890cf48603bd3ed560a8e6422e1777f6539627cc082a7",
       "GenerativeCore.PreludeOnly.log": "8b89f7b1018f5a43ae9994a797db0fc12d2d5fa076f5da8d895ce648ccee4367",
       "Becoming.Frame.PreludeOnly.log": "3d169e1627d0a48dbe8921820d6299f99a33c502e6c5752fbf11fe60770020f3",
@@ -7768,7 +7768,7 @@
       "Becoming.ReadingSchedule.PreludeOnly.log": "0361af33051cb78acd7dc6b3562f0107685a61a2000a5225ac8d0209b6eab6cc",
       "Becoming.Settling.PreludeOnly.log": "5879d05a950af3250341df2f77e8a7ab9608cb2d812010897447b9703b010243",
       "Becoming.LastChange.PreludeOnly.log": "6dca58c1e9fa138468e5b1f3ab8e45373ac496f7bae6697bb9b39bda30d64017",
-      "Becoming.RegimeMargin.PreludeOnly.log": "a17e20b8f3252adc08d69202889f3f437787e4ee59c75ecbcd8e5d1e709a156c",
+      "Becoming.RegimeMargin.PreludeOnly.log": "aae5b891734b6d8563b249fad681902e98aaaabceb17b3091629b958d520e774",
       "Becoming.Routes.PreludeOnly.log": "50f21a3dbf2d7c8e19f6171cd2d782b89ee30d6bea3847325b1292c769fea3e8",
       "Becoming.Thresholds.PreludeOnly.log": "93fe49b806c6f66ebccedcd2f63ceb5f44cf7dfc25ed83205401a6b3fc875284",
       "Becoming.Observation.PreludeOnly.log": "3720033ccc9d34e36a1145734c63cea8ecf8bcee341fe18fa3ebaa628c3fccd4",
@@ -7838,7 +7838,7 @@
       "Becoming.Coverage.PreludeOnly.log": "415d3ac8696bf47c7a51070a68c5410bfd906e4c4f20128b30f8eba9ca7c8800",
       "Becoming.PlaceTransitionNets.PreludeOnly.log": "28bc6804be47646d135c1a8e3a2422691e3ee4c3b83e5d999a8403759b95daf1",
       "Becoming.ResponseLearning.PreludeOnly.log": "42d957e81d507de755e3de5846e6dbb0402394b55f9e85b59885f7458ddab6b3",
-      "Becoming.PreludeOnly.log": "4211eb805fcc86925d311b305ed384080ef7da5f336659c30e2819da31cd0ef8"
+      "Becoming.PreludeOnly.log": "242f2d2ba50f5c69cfed0a86bc6624539a2048af866b815fe47d77e517cb0b12"
     }
   },
   "superseded_modules": {
@@ -102603,7 +102603,7 @@
   "artifact_sha256": {
     "Becoming.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "Becoming.RegimeMargin.PreludeOnly.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "Becoming.RegimeMargin.lean": "9976f1739615123c438946dcd3e8baa65d6cbb64eb29962fcd1cccf1c6794733",
+    "Becoming.RegimeMargin.lean": "e7c7a7138cc1e20b42cd00002d392cd6d17b65188f5a524d613095425d6793d4",
     "Becoming.lean": "baac78e32efe095a16e54db4d74a797d6e151c808a4b054016b39fa9806d2761",
     "Becoming.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "BecomingAxiomAudit.lean": "2a7bf199bf7a79a47a4f3057083c0b43f6c30c82bbab52299d38d436c6077bcb",
