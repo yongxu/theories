@@ -866,6 +866,8 @@ Integration: none applied; TH1's three corrections listed for its owner and for 
 
 *Version 10 (21 October 2026, OP10).* On Ren's "aim elegant completion" ([source](../../../../sources/15-codex-theory-conversations/2026-10-21-opening-v10.md)), the opening was read as one text. Two of this review's own points changed it. The ethics sentence now gives each premise its role: the step says whose losses count, and C orders them. B9's "how hard" now also meets the far-sighted objection, which TH1's revision left open: by SG5, SG8 and SG10, looking further ahead keeps only the optimizer's base, at the level of greatest renewal, and that only under a discount no faster than renewal and where no one draws first. B8's note now records VD1's failed verdicts on T5.
 
+*Version 11 (22 October 2026, OP11).* Version 10's far-sight clause repeated SA2's B9 finding: it stated a law of optima as what an optimizer does. On Ren's "please" ([source](../../../../sources/15-codex-theory-conversations/2026-10-22-opening-v11.md)), it now reads "at its optimum".
+
 <a id="horizon-check"></a>
 ## A check: courses ranked over a horizon (21 October 2026, SG5)
 
