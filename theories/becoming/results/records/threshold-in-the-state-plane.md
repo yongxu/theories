@@ -98,7 +98,7 @@ Aliases: `the threshold in the plane of level and recent giving`, `the point of 
 
 - 21 October 2026: added (RM4), the threshold in the plane of level and recent giving: under an adjustment rising in both arguments within a band, the runs resting below the draw are exactly those from levels below a least level for each recent giving, decided at step 3 hi + 3, and that level does not rise as the recent giving rises; under the regime's step it is H + y; study section 301.
 - 21 October 2026, RM5: over the reals every run of a rising adjustment within a band converges and the fates below the draw are down-closed and fewer as the recent giving rises (record regime-in-any-amounts, study section 302); what this record does not show and its next delta now say so. Its laws are unchanged.
-- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 303); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
+- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 304); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
 
 </details>
 

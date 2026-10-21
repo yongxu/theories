@@ -1097,6 +1097,7 @@ Supplied premises / correspondence: AI models under standpoint prompts stand in 
 Evidence: web searches on 21 October 2026; every source by abstract, listing or search summary, none reread in full
 Boundary: AI check, one session; the human literature is in levels and money, not admission; no human data
 Integration: experiments/valuer-agreement (VD2); board VD2; chapter T5 after the run
+```
 
 <a id="coupled-check"></a>
 ## A check: coupled regimes (21 October 2026, RM6)

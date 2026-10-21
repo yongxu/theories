@@ -94,7 +94,7 @@ Aliases: `the regime in any amounts`, `the shape of a run of the adjusted step`,
 ### History
 
 - 21 October 2026: added (RM5), the regime in any amounts, and its runs over the reals: the order, the shape of a run and its rests in any linearly ordered amounts with a draw; over the non-negative reals every run of a rising adjustment within a band converges, to a rest where the adjustment is continuous, with fates down-closed, and need not rest; study section 302.
-- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 303); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
+- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 304); what this record does not show and its next delta now say what stays open. Its laws are unchanged.
 
 </details>
 

@@ -88,7 +88,7 @@ Aliases: `the regime's point under giving that adjusts`, `giving that adjusts`, 
 - 21 October 2026: added (RM2), the regime's point over every adjustment of giving: RM1's laws on ending and holding hold over any law of what is left and of the recent giving, the regime's step the case; every rest at or above the draw is the regime's where the adjustment rests at the draw where the regime gives it; study section 299.
 - 21 October 2026, RM3: whether a run comes to rest, left open here, is answered for adjustments rising in both arguments within a band (record where-a-run-of-a-regime-comes-to-rest, study section 300); what this record does not show and its next delta now say so. Its laws are unchanged.
 - 21 October 2026, RM4: the threshold in the plane of level and recent giving, left open here, is stated for adjustments rising in both arguments within a band (record threshold-in-the-state-plane, study section 301); what this record does not show and its next delta now say so. Its laws are unchanged.
-- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 303); what this record does not show now says what stays open. Its laws are unchanged.
+- 21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 304); what this record does not show now says what stays open. Its laws are unchanged.
 
 </details>
 
