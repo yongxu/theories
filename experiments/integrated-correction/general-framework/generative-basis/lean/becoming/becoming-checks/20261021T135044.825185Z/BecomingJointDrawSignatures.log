@@ -1,0 +1,150 @@
+@Becoming.Web.Broken.of_need_le : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {g h : F} {c : C},
+  W.Broken t g c → W.requires t h c → W.need t g c ≤ W.need t h c → W.need t h c ≤ W.level t c → W.Broken t h c
+@Becoming.Web.kept_of_need_le : ∀ {F C : Type} {W : Becoming.Web F C} {t : Nat} {g h : F} {c : C},
+  W.need t h c ≤ W.level (t + 1) c → W.need t g c ≤ W.need t h c → W.need t g c ≤ W.level (t + 1) c
+@Becoming.Flow.Balances.broken_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {g : F}
+  {c : C},
+  L.Balances W →
+    W.requires t g c →
+      W.need t g c ≤ W.level t c → (W.Broken t g c ↔ W.level t c + L.given t c < W.need t g c + L.taken t c)
+@Becoming.Flow.Balances.kept_iff : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {g : F}
+  {c : C}, L.Balances W → (W.need t g c ≤ W.level (t + 1) c ↔ W.need t g c + L.taken t c ≤ W.level t c + L.given t c)
+@Becoming.Flow.Balances.broken_drawn : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {g : F}
+  {c : C},
+  L.Balances W → L.Taking W → W.Broken t g c → ∃ f, f ∈ L.present t ∧ 0 < L.take t f c ∧ W.active t f ∧ W.draws t f c
+@Becoming.Flow.Balances.breaks_beyond_drawn : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat}
+  {dep : C → F} {ds rest : List C},
+  L.Balances W →
+    L.Taking W →
+      L.GainlessOn (ds ++ rest) t →
+        W.MetOn dep rest t →
+          W.stock ds t + W.slack dep rest t < W.stock ds (t + 1) + L.lost (ds ++ rest) t →
+            ∃ c,
+              c ∈ rest ∧ W.Broken t (dep c) c ∧ ∃ f, f ∈ L.present t ∧ 0 < L.take t f c ∧ W.active t f ∧ W.draws t f c
+@Becoming.Flow.Balances.broken_shared : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} {t : Nat} {g : F}
+  {c : C},
+  L.Balances W →
+    W.Broken t g c →
+      (∀ (f : F), f ∈ L.present t → L.take t f c + W.need t g c ≤ W.level t c + L.given t c) →
+        ∀ (f : F), f ∈ L.present t → L.take t f c < L.taken t c
+@Becoming.Flow.Balances.kept_of_restrained : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C}
+  {t : Nat} {c : C},
+  L'.Balances W' →
+    ∀ {n e : Nat},
+      W.level t c ≤ W'.level t c →
+        L'.taken t c + e ≤ L.taken t c →
+          L.given t c ≤ L'.given t c → n + L.taken t c ≤ W.level t c + L.given t c + e → n ≤ W'.level (t + 1) c
+@Becoming.Flow.Balances.level_succ_le : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {t : Nat}
+  {c : C},
+  L.Balances W →
+    L'.Balances W' →
+      W.level t c ≤ W'.level t c →
+        L'.taken t c ≤ L.taken t c → L.given t c ≤ L'.given t c → W.level (t + 1) c ≤ W'.level (t + 1) c
+@Becoming.Flow.Balances.level_le_of_restrained : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (c : C), W.level 0 c ≤ W'.level 0 c) →
+        (∀ (t : Nat) (c : C), L'.taken t c ≤ L.taken t c) →
+          (∀ (t : Nat) (c : C), L.given t c ≤ L'.given t c) → ∀ (t : Nat) (c : C), W.level t c ≤ W'.level t c
+@Becoming.Flow.Balances.eases_of_restrained : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C},
+  L.Balances W →
+    L'.Balances W' →
+      (∀ (c : C), W.level 0 c ≤ W'.level 0 c) →
+        (∀ (t : Nat) (c : C), L'.taken t c ≤ L.taken t c) →
+          (∀ (t : Nat) (c : C), L.given t c ≤ L'.given t c) →
+            (∀ (t : Nat) (f : F) (c : C), W'.requires t f c → W.requires t f c) →
+              (∀ (t : Nat) (f : F) (c : C), W'.need t f c ≤ W.need t f c) →
+                (∀ (t : Nat) (f : F) (c : C), W'.draws t f c → W.draws t f c) → Becoming.Ranking.Eases W W'
+@Becoming.Ranking.restraint_extends_iff : ∀ {F C X : Type} {U : X → Becoming.Web F C} {L L' : Becoming.Flow F C}
+  {w w' : X},
+  L.Balances (U w) →
+    L'.Balances (U w') →
+      (∀ (c : C), (U w).level 0 c ≤ (U w').level 0 c) →
+        (∀ (t : Nat) (c : C), L'.taken t c ≤ L.taken t c) →
+          (∀ (t : Nat) (c : C), L.given t c ≤ L'.given t c) →
+            (∀ (t : Nat) (f : F) (c : C), (U w').requires t f c → (U w).requires t f c) →
+              (∀ (t : Nat) (f : F) (c : C), (U w').need t f c ≤ (U w).need t f c) →
+                (∀ (t : Nat) (f : F) (c : C), (U w').draws t f c → (U w).draws t f c) →
+                  (U w).Dependent →
+                    Becoming.Ranking.ActiveWhereSupported (U w') →
+                      (Becoming.Ranking.ExtendsUnder (Becoming.Ranking.wholeRun U) w w' ↔
+                        ∃ e, Becoming.Ranking.wholeRun U w' e ∧ ¬Becoming.Ranking.wholeRun U w e)
+@Becoming.Ranking.restraint_ranks_over_drawers : ∀ {F C X : Type} {U : X → Becoming.Web F C} {L L' : Becoming.Flow F C}
+  {w w' : X},
+  L.Balances (U w) →
+    L'.Balances (U w') →
+      (∀ (c : C), (U w).level 0 c ≤ (U w').level 0 c) →
+        (∀ (t : Nat) (c : C), L'.taken t c ≤ L.taken t c) →
+          (∀ (t : Nat) (c : C), L.given t c ≤ L'.given t c) →
+            (∀ (t : Nat) (f : F) (c : C), (U w').requires t f c → (U w).requires t f c) →
+              (∀ (t : Nat) (f : F) (c : C), (U w').need t f c ≤ (U w).need t f c) →
+                (∀ (t : Nat) (f : F) (c : C), (U w').draws t f c → (U w).draws t f c) →
+                  (U w).Dependent →
+                    Becoming.Ranking.ActiveWhereSupported (U w') →
+                      ∀ {e : F × Nat},
+                        Becoming.Ranking.wholeRun U w' e →
+                          ¬Becoming.Ranking.wholeRun U w e →
+                            ∀ {Better : X → X → Prop},
+                              Becoming.Ranking.ComparisonUnder (Becoming.Ranking.wholeRun U) Better → Better w w'
+@Becoming.Ranking.restraint_extends_iff_stepwise : ∀ {F C X : Type} {U : X → Becoming.Web F C}
+  {L L' : Becoming.Flow F C} {w w' : X},
+  L.Balances (U w) →
+    L'.Balances (U w') →
+      (∀ (c : C), (U w).level 0 c ≤ (U w').level 0 c) →
+        (∀ (t : Nat) (c : C), L'.taken t c ≤ L.taken t c) →
+          (∀ (t : Nat) (c : C), L.given t c ≤ L'.given t c) →
+            (∀ (t : Nat) (f : F) (c : C), (U w').requires t f c → (U w).requires t f c) →
+              (∀ (t : Nat) (f : F) (c : C), (U w').need t f c ≤ (U w).need t f c) →
+                (∀ (t : Nat) (f : F) (c : C), (U w').draws t f c → (U w).draws t f c) →
+                  (U w).Dependent →
+                    Becoming.Ranking.ActiveWhereSupported (U w') →
+                      (∀ (t : Nat) (c : C), L'.taken t c ≤ L'.given t c) →
+                        (Becoming.Ranking.ExtendsUnder (Becoming.Ranking.stepwise U) w w' ↔
+                          ∃ e, Becoming.Ranking.stepwise U w' e ∧ ¬Becoming.Ranking.stepwise U w e)
+@Becoming.Ranking.restraint_ranks_stepwise : ∀ {F C X : Type} {U : X → Becoming.Web F C} {L L' : Becoming.Flow F C}
+  {w w' : X},
+  L.Balances (U w) →
+    L'.Balances (U w') →
+      (∀ (c : C), (U w).level 0 c ≤ (U w').level 0 c) →
+        (∀ (t : Nat) (c : C), L'.taken t c ≤ L.taken t c) →
+          (∀ (t : Nat) (c : C), L.given t c ≤ L'.given t c) →
+            (∀ (t : Nat) (f : F) (c : C), (U w').requires t f c → (U w).requires t f c) →
+              (∀ (t : Nat) (f : F) (c : C), (U w').need t f c ≤ (U w).need t f c) →
+                (∀ (t : Nat) (f : F) (c : C), (U w').draws t f c → (U w).draws t f c) →
+                  (U w).Dependent →
+                    Becoming.Ranking.ActiveWhereSupported (U w') →
+                      (∀ (t : Nat) (c : C), L'.taken t c ≤ L'.given t c) →
+                        ∀ {e : F × Nat},
+                          Becoming.Ranking.stepwise U w' e →
+                            ¬Becoming.Ranking.stepwise U w e →
+                              ∀ {Better : X → X → Prop},
+                                Becoming.Ranking.ComparisonUnder (Becoming.Ranking.stepwise U) Better → Better w w'
+Becoming.TwoDrawers.balances : ∀ (d : Becoming.TwoDrawers.Draw),
+  (Becoming.TwoDrawers.flow d).Balances (Becoming.TwoDrawers.web d)
+Becoming.TwoDrawers.broken : (Becoming.TwoDrawers.web Becoming.TwoDrawers.Draw.joint).Broken 0
+    Becoming.TwoDrawers.Formation.held () ∧
+  ¬(Becoming.TwoDrawers.web Becoming.TwoDrawers.Draw.joint).active 1 Becoming.TwoDrawers.Formation.held
+Becoming.TwoDrawers.shared : (∀ (f : Becoming.TwoDrawers.Formation),
+    f ∈ (Becoming.TwoDrawers.flow Becoming.TwoDrawers.Draw.joint).present 0 →
+      (Becoming.TwoDrawers.flow Becoming.TwoDrawers.Draw.joint).take 0 f () +
+          (Becoming.TwoDrawers.web Becoming.TwoDrawers.Draw.joint).need 0 Becoming.TwoDrawers.Formation.held () ≤
+        (Becoming.TwoDrawers.web Becoming.TwoDrawers.Draw.joint).level 0 () +
+          (Becoming.TwoDrawers.flow Becoming.TwoDrawers.Draw.joint).given 0 ()) ∧
+  ∀ (f : Becoming.TwoDrawers.Formation),
+    f ∈ (Becoming.TwoDrawers.flow Becoming.TwoDrawers.Draw.joint).present 0 →
+      (Becoming.TwoDrawers.flow Becoming.TwoDrawers.Draw.joint).take 0 f () <
+        (Becoming.TwoDrawers.flow Becoming.TwoDrawers.Draw.joint).taken 0 ()
+Becoming.TwoDrawers.restrained_kept : (Becoming.TwoDrawers.web Becoming.TwoDrawers.Draw.restrained).Kept 0
+  Becoming.TwoDrawers.Formation.held ()
+Becoming.TwoDrawers.dependent : (Becoming.TwoDrawers.web Becoming.TwoDrawers.Draw.joint).Dependent
+Becoming.TwoDrawers.gated : Becoming.Ranking.ActiveWhereSupported
+  (Becoming.TwoDrawers.web Becoming.TwoDrawers.Draw.restrained)
+Becoming.TwoDrawers.start : ∀ (c : Unit),
+  (Becoming.TwoDrawers.web Becoming.TwoDrawers.Draw.joint).level 0 c ≤
+    (Becoming.TwoDrawers.web Becoming.TwoDrawers.Draw.restrained).level 0 c
+Becoming.TwoDrawers.restrained_less : ∀ (t : Nat) (c : Unit),
+  (Becoming.TwoDrawers.flow Becoming.TwoDrawers.Draw.restrained).taken t c ≤
+    (Becoming.TwoDrawers.flow Becoming.TwoDrawers.Draw.joint).taken t c
+@Becoming.TwoDrawers.restraint_ranks : ∀ {Better : Becoming.TwoDrawers.Draw → Becoming.TwoDrawers.Draw → Prop},
+  Becoming.Ranking.ComparisonUnder (Becoming.Ranking.wholeRun Becoming.TwoDrawers.web) Better →
+    Better Becoming.TwoDrawers.Draw.joint Becoming.TwoDrawers.Draw.restrained
