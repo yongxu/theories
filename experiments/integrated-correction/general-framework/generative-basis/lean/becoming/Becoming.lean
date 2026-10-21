@@ -1416,6 +1416,16 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   last step alone; where q + c < r a long horizon outweighs it. Optima exist in every case.
   Witness: under the logistic law three a step keeps the dweller at every horizon, two a
   step to the last step, at most one a step breaks it.
+  With the draw of the step from t weighted by w t, any weighting, what a course could draw
+  at a step with what it drew before changes by what the level it leaves gains, w (t + 1)
+  on it with its renewal against w t on it held; against an open course leaving nothing
+  whose level gains the most at each step, every optimum of every order rising with the
+  weighted draw gains what that course's level gains at each step and leaves nothing
+  weighted, and that course is one. Where the weighting falls faster than every positive
+  level renews, every optimum ends its own base at the first step; where some level within
+  reach renews faster and nothing is given at nothing, none does. Witness: under the
+  logistic law weights falling more than twofold end the source, less than twofold hold it
+  at one, and at twofold both are optima.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
