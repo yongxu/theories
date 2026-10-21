@@ -5,7 +5,7 @@
 
 Inputs: agents/draft-Cxx.json and agents/review-Cxx.json (harvested from the drafting workflow's journal by
 harvest.py), work/redraft/Cxx.md where a 篇 was redrafted by hand (it replaces the draft, and the review's edits
-are not applied to it), work/xu.md (the preface), work/appendices.md (the appendices, with generated blocks).
+are not applied to it), work/xu.fragment (the preface), work/appendices.fragment (the appendices, with generated blocks).
 Each review edit names a substring that occurs exactly once in the draft; the edits are applied in order, and an
 edit whose substring is not found exactly once is reported, not guessed. build_tables.py then fills the generated
 blocks and verify_zh.py checks the result.
@@ -63,8 +63,8 @@ def main():
         print(c, v.get('source'), v.get('verdict'), 'failed edits:', len(v.get('failed') or []))
     if '--report' in sys.argv:
         return
-    head = (HERE / 'work/xu.md').read_text(encoding='utf-8').strip()
-    tail = (HERE / 'work/appendices.md').read_text(encoding='utf-8').strip()
+    head = (HERE / 'work/xu.fragment').read_text(encoding='utf-8').strip()
+    tail = (HERE / 'work/appendices.fragment').read_text(encoding='utf-8').strip()
     OUT.write_text(head + '\n\n' + '\n\n'.join(parts) + '\n\n' + tail + '\n', encoding='utf-8')
     print('wrote', OUT.relative_to(ROOT), '(%d 篇)' % len(parts))
 

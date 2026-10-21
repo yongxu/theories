@@ -3,5 +3,17 @@
   "find": "族之兼",
   "replace": "域之兼",
   "why": "`Web.Whole` 之体由一谓词给出，不必为有穷之族；名表以域之兼名之，兼单言则指大化之一切（第二轮审）"
+ },
+ {
+  "find": "讀（AI）",
+  "replace": "讀（AI，D62）",
+  "why": "readings of the 中华本 not under an earlier decision are adopted by D62",
+  "readings": true
+ },
+ {
+  "find": "讀，AI）",
+  "replace": "讀，AI，D62）",
+  "why": "readings of the 中华本 not under an earlier decision are adopted by D62",
+  "readings": true
  }
 ]

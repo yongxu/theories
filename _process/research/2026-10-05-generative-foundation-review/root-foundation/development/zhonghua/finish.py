@@ -4,7 +4,7 @@ Reads work/book-1.json (the parsed book with the restructuring plan applied), ag
 rewritten, its 條 by id) and agents/review-<KEY>.json (exact edits by 條 id, INTRO or DUIZHAO), work/redo/<KEY>.json
 where a part was rewritten again by hand or by a later pass (it replaces the rewrite, and its own review edits, if
 any, are in work/redo/<KEY>-review.json), work/integrator-edits.json (the integrator's exact edits by 條 id, each
-with its reason, applied after the review's), work/xu.md (the preface) and work/appendices.md. Checks that each part
+with its reason, applied after the review's), work/xu.fragment (the preface) and work/appendices.fragment. Checks that each part
 keeps its 條 ids in order, applies each edit only where its text occurs exactly once, and reports what a 條 lost
 (declarations, quotations) against the parsed book; then renders the book (book.py), fills the generated tables
 (build_tables.py) and runs verify_zh.py. Writes work/finish-report.json."""
@@ -89,7 +89,7 @@ def main():
             if t['id'] in by:
                 t['title'], t['body'] = by[t['id']]['title'], by[t['id']]['body']
     ids = {t['id'] for p in b['parts'] for t in p['tiao']} | set(b['redirect'])
-    head = open(os.path.join(HERE, 'work/xu.md'), encoding='utf-8').read()
+    head = open(os.path.join(HERE, 'work/xu.fragment'), encoding='utf-8').read()
     b['head'] = B.REF.sub(lambda m: '⟦%s⟧' % m.group(1) if m.group(1) in ids else m.group(1), head)
     # review rounds after the rewrite: exact edits by 條 id, KEY:INTRO, KEY:DUIZHAO or HEAD, in file order
     parts = {p['key']: p for p in b['parts']}
@@ -114,7 +114,7 @@ def main():
                 rep['applied'] += 1  # already in place
             else:
                 rep['failed'].append({'id': i, 'count': tgt[field].count(e['find']), 'find': e['find'][:60], 'why': e['why'][:120]})
-    b['tail'] = open(os.path.join(HERE, 'work/appendices.md'), encoding='utf-8').read()
+    b['tail'] = open(os.path.join(HERE, 'work/appendices.fragment'), encoding='utf-8').read()
     for g in load(os.path.join(HERE, 'work/global-replacements.json')) or []:
         n = 0
         for p in b['parts']:

@@ -68,17 +68,11 @@ record = {
     'family': 'F01',
     'reviewed_at_utc': NOW,
     'statement': {
-        'en': (f'Every one of the {len(cov):,} complete judgments of 《中华思想脉络》 v1.0 is read against the spine: '
-               f'{flagged:,} bear on a structure of the theory and each lies in exactly one place, as one of {n:,} '
-               f'checked entries ({a} agreements, {s} exact scopes, {v} divergences), a parallel of one, or set aside '
-               f'with its reason. The relational start holds across the traditions and most at the earliest layer; '
-               f'universal forms mostly need a scope; divergences fall on the four non-relational layers and on claims a '
-               f'checked law refutes. {names} classical names, one per concept and each anchored on the current spine, '
-               f'state the theory in the 中华本《变化论》.'),
-        'zh': (f'《中华思想脉络》v1.0 的 {len(cov):,} 条完整判断逐条对照脊柱读过：{flagged:,} 条关乎理论的某一结构，各自恰好落在一处，'
-               f'或是 {n:,} 个已检查条目之一（相合 {a}、定域 {s}、相分 {v}），或与一个条目并列，或写明理由而不取。关系的起点贯穿诸传统，'
-               f'在最早的一层最强；全称形式大多需要定域；相分落在四种非关系之层，以及一条已检查之律所否定的断言上。{names} 个古典之名，'
-               f'每个概念一个、各锚定在现行脊柱上，在中华本《变化论》中陈述这一理论。')},
+        'en': (f'Every one of the {len(cov):,} judgments of 《中华思想脉络》 v1.0 is read against the spine: {flagged:,} bear on '
+               f'its structures, each placed once, in {n:,} checked entries ({a} agreements, {s} exact scopes, {v} '
+               f'divergences). {names} classical names, one per concept, state the theory in the 中华本《变化论》.'),
+        'zh': (f'《中华思想脉络》v1.0 的 {len(cov):,} 条判断逐条对照脊柱：{flagged:,} 条关乎其结构，各落一处，成 {n:,} 个已检查条目'
+               f'（相合 {a}、定域 {s}、相分 {v}）；{names} 个古典之名，每概念一个，写成中华本《变化论》。')},
     'hypotheses': [{
         'en': (f'No Lean and no premise is added: each entry is tied to audited declarations and records as they stand; '
                f'its kind, its reading and the names are the AI\'s (D{d}). A passage counts as relational when it reads '
@@ -112,13 +106,11 @@ record = {
     'standard_boundaries': ['no-ethical-premise', 'formal-not-empirical', 'names-provisional',
                             'omission-not-refutation', 'nondual-method-not-proof'],
     'validation_scope': {
-        'en': (f'verify_zh.py passes: the import ({files} files bound by SHA-256), one triage verdict per judgment, every '
-               f'flagged judgment placed once, every fragment verbatim in its frozen text, {decls} declarations in the '
-               f'current receipt, {len(records)} records, the name table (anchors current, quotations exact, no two names '
-               f'alike once simplified), and both chapters\' quotations, declarations, record links and generated tables. '
-               f'Each entry had three readings (mapper, reviser on current main, independent checker); the 中华本\'s 篇 '
-               f'were drafted and reviewed adversarially into exact edits. All readers were AI; no collation with a '
-               f'printed edition.'),
+        'en': (f'verify_zh.py passes: the import ({files} files by SHA-256), one verdict per judgment, each flagged one '
+               f'placed once, every fragment verbatim, {decls} declarations in the current receipt, {len(records)} '
+               f'records, the name table, and both chapters\' quotations, declarations, links, 对照 kinds and tables. '
+               f'Each entry had three readings (mapper, reviser, independent checker); the 中华本 was reviewed as one '
+               f'book three times. All readers were AI; no collation with a printed edition.'),
         'zh': (f'verify_zh.py 通过：导入（{files} 个文件以 SHA-256 绑定）、每条判断一个分拣裁定、每条所标判断恰落一处、每个片段在其冻结原文中'
                f'逐字可见、{decls} 个声明在现行回执中、{len(records)} 份记录、名表（锚为现行之名、引文逐字、简化后无重），以及两章的引文、'
                f'声明、记录链接与生成之表。每个条目经三读（映射者、以现行主干重读的修订者、独立检查者）；中华本各篇起草后经对抗审读改为'

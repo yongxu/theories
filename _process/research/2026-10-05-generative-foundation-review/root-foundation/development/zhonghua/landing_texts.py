@@ -82,7 +82,7 @@ Ren, 19 October 2026, after extending his database to Chinese culture: {ASK}; �
 - *The divergences* fall on the four non-relational layers RO named (a prior ground, a fixed nature or value, a will or single centre, contest and rank), and on two more: claims a checked law refutes (河上公's 不死) and knowing without coupling (「神以知来」).
 - *The names.* {pre} of the {len(quoted)} quoted names are witnessed in pre-Qin texts; six only in later ones (未決, 初不定終, 位分, 二體, 義項, 憑). Many core characters are two-place relational words (待 needs a 所待, 资 a 所资), and the 經上's 「X，Y也」 gives the definitional form. The names are a code among the theory's users (`Becoming.SharedCodes`), not a sense recovered from history.
 - *RO and the 易传 map.* Of 259 passages read in both maps, 232 have the same kind; of the 27 that differ, 19 read different sentences or structures, and 8 pairs on 5 passages are the same structure judged differently: each was decided for the newer reading (exact scope) with its reason, to be written into those maps.
-- *Gaps.* 61 entries name a structure the spine lacks: a conjunctive or graded whole (华严六相, 墨经 损), saturation of a coupling (老子 72), one-sided and local regulation (老子 37, 57), equal division (论语 不患寡而患不均), copying growth (吴子), witnesses that are functions of one another (三人成虎), measures of a juncture (孙子, 扁鹊), a pool weighted by share.
+- *Gaps.* 61 entries name a structure the spine lacks: a conjunctive or graded whole (华严六相, 墨经 损), saturation of a coupling (老子 72), one-sided and local regulation (老子 37, 57), equal division (论语 不患寡而患不均), copying growth (吴子), witnesses that are functions of one another (韩非 八经, 八奸), measures of a juncture (孙子, 扁鹊), a pool weighted by share.
 
 **What this changes.** The 脉络 is a checked part of the library, joined to RO's map, with the divergences kept so the texts can test the theory; the theory has a 中华 edition in one classical vocabulary, the same laws and checks as the English chapter, which is unchanged (Ren's request), as is its modern Chinese edition. The RO chapter points to both; the goal record `chinese-sources-and-becoming` is extended.
 
@@ -112,6 +112,7 @@ Where: the chapters [CIVILIZATION-THOUGHT-AND-BECOMING](../../../../theories/bec
 3. **The thesis.** One relational unfolding is the dominant thread, strongest at the earliest layer; universal forms mostly need a scope; it is not every system's property, and the language does not guarantee it.
 4. **The names.** The {len(names)} names are a convention among the theory's users, constrained by the attested senses (`Becoming.SharedCodes`); each states the sense taken and what it does not carry; 道, 气, 天, 心, 性, 仁 and the other symbols of the not-adopted list are not names.
 5. **RO and the 易传 map.** Where both maps read one structure of one passage and differ (荀子「一实」, 孙子「同舟」, 系辞「贞夫一」, 杂阿含「此有故彼有」, 老子「柔弱者生之徒」), the exact scope is adopted.
+6. **The edition's own readings.** The readings of the 中华本 that no earlier decision covers carry this number (讀（AI，D{D}）) and are adopted with the scope each states.
 
 **Reasons.** Each reading names the declarations it rests on and says no more than they prove; the layers are named before the test so the thesis can fail; the names are chosen by their attested sense and anchored on current declarations, so the vocabulary can be checked rather than trusted.
 
@@ -127,7 +128,7 @@ zsec = f'''<a id="d{D}-中华思想脉络在脊柱上之读与古典之名--the-
 
 所在：[《中华思想脉络》与变化论](../../../../theories/becoming/chapters/CIVILIZATION-THOUGHT-AND-BECOMING.md)与[中华本《变化论》](../../../../theories/becoming/chapters/THE-THEORY-OF-BECOMING-ZHONGHUA.md)；对应表 [passages.json](development/zhonghua/passages.json) 与名表 [names-decisions.tsv](development/zhonghua/work/names-decisions.tsv)；记录 [civilization-thought-on-the-spine](../../../../theories/becoming/results/records/civilization-thought-on-the-spine.md)；研究第 {S} 节。在 D45 的一个说明中决定；接续 D54。
 
-**决定。** 依所述范围采用。一、**关系与层。** D47 之三种关系与 D54 之四种非关系之层施于脉络之每一完整判断；相分另有两种：一条已检查之律所否定之断言，不经耦合之知。二、**读法。** 对应表之 {len(E):,} 条读法各以其所述范围采用；一段读出两种结构者有两个条目。三、**论题。** 一个关系之展开是主导之线索，在最早一层最强；全称形式大多需要定域；它不是每一体系之性质，语言也不保证它。四、**名。** {len(names)} 个名是理论之用者之间之约定，受所见之义约束（`Becoming.SharedCodes`）；每名写出所取之义与所不带之义；不采之字不是名。五、**RO 与易传之对应。** 两表读同一段之同一结构而类别不同者五段，采定域。
+**决定。** 依所述范围采用。一、**关系与层。** D47 之三种关系与 D54 之四种非关系之层施于脉络之每一完整判断；相分另有两种：一条已检查之律所否定之断言，不经耦合之知。二、**读法。** 对应表之 {len(E):,} 条读法各以其所述范围采用；一段读出两种结构者有两个条目。三、**论题。** 一个关系之展开是主导之线索，在最早一层最强；全称形式大多需要定域；它不是每一体系之性质，语言也不保证它。四、**名。** {len(names)} 个名是理论之用者之间之约定，受所见之义约束（`Becoming.SharedCodes`）；每名写出所取之义与所不带之义；不采之字不是名。五、**RO 与易传之对应。** 两表读同一段之同一结构而类别不同者五段，采定域。六、**本编自身之读。** 中华本中无先前决定所及之读，标此号（讀（AI，D{D}）），各以其所述范围采用。
 
 **理由。** 每条读法列出它所依的声明，所说不多于它们所证；四层先于检验而立，所以论题可以不成立；名依所见之义而选，锚定在现行声明上，所以词表可以检查而不必信任。
 
