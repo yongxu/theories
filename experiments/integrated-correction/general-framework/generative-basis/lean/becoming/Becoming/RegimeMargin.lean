@@ -2694,13 +2694,15 @@ theorem first_alone (x : Nat) :
     (congr (congrArg Prod.mk (congrArg (x - n - 1 + ·) (first_zero (x - n - 1))))
       (congrArg (0 + ·) (second_zero (x - n - 1))))
 
-/-- With the first at nothing, the second falls by one at every step and the first stays nothing. -/
+/-- With the first at nothing, the second drains by one at every step, by the pair's law of draining,
+and the first stays nothing. -/
 theorem second_alone (y : Nat) :
     ∀ n, (Law.run (step Drawn.whole first second 1 1) (0, y)).state n = (0, y - n)
   | 0 => rfl
   | n + 1 => (congrArg (step Drawn.whole first second 1 1) (second_alone y n)).trans
     (congr (congrArg Prod.mk (congrArg (0 + ·) (first_of_zero (y - n - 1))))
-      (congrArg (y - n - 1 + ·) (second_of_zero (y - n - 1))))
+      (drains (D := Drawn.whole) (g₁ := first) (H₁ := 1) (H₂ := 1) second_of_zero (p := (0, y - n))
+        (Nat.zero_le 1)))
 
 /-- From two and three, the run is at two and three or at three and two at every step, and the next is
 the other. -/
