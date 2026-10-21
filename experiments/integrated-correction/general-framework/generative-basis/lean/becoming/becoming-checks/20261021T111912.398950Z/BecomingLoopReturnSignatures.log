@@ -1,0 +1,310 @@
+@Becoming.LoopReturn.orbit_of_fixed : ∀ {f : Nat → Nat} {v : Nat},
+  f v = v → ∀ (n : Nat), (Becoming.Law.run f v).state n = v
+@Becoming.LoopReturn.stays_from_fixed : ∀ {f : Nat → Nat} {d k : Nat},
+  f ((Becoming.Law.run f d).state k) = (Becoming.Law.run f d).state k →
+    ∀ {n : Nat}, k ≤ n → (Becoming.Law.run f d).state n = (Becoming.Law.run f d).state k
+@Becoming.LoopReturn.eq_zero_of_add_le : ∀ {a b : Nat}, a + b ≤ b → a = 0
+Becoming.LoopReturn.one_pow : ∀ (n : Nat), 1 ^ n = 1
+@Becoming.LoopReturn.kept_of_identity : ∀ {f : Nat → Nat},
+  (∀ (x : Nat), f x = x) → ∀ (d n : Nat), (Becoming.Law.run f d).state n = d
+@Becoming.LoopReturn.returnMap_of_identity : ∀ {links : List (Nat → Nat)},
+  (∀ (g : Nat → Nat), g ∈ links → ∀ (x : Nat), g x = x) → ∀ (x : Nat), Becoming.LoopReturn.returnMap links x = x
+@Becoming.LoopReturn.loop_kept : ∀ {links : List (Nat → Nat)},
+  (∀ (g : Nat → Nat), g ∈ links → ∀ (x : Nat), g x = x) →
+    ∀ (d n : Nat), (Becoming.Law.run (Becoming.LoopReturn.returnMap links) d).state n = d
+@Becoming.LoopReturn.returnMap_ge : ∀ {links : List (Nat → Nat)},
+  (∀ (g : Nat → Nat), g ∈ links → ∀ (x : Nat), x ≤ g x) → ∀ (x : Nat), x ≤ Becoming.LoopReturn.returnMap links x
+@Becoming.LoopReturn.orbit_ge_of_ge : ∀ {f : Nat → Nat},
+  (∀ (x : Nat), x ≤ f x) → ∀ (d n : Nat), d ≤ (Becoming.Law.run f d).state n
+@Becoming.LoopReturn.never_closes_of_no_less : ∀ {links : List (Nat → Nat)},
+  (∀ (g : Nat → Nat), g ∈ links → ∀ (x : Nat), x ≤ g x) →
+    ∀ (d n : Nat), d ≤ (Becoming.Law.run (Becoming.LoopReturn.returnMap links) d).state n
+@Becoming.LoopReturn.below_of_falls : ∀ {f : Nat → Nat} {d n : Nat}, (Becoming.Law.run f d).state n < d → ∃ y, f y < y
+@Becoming.LoopReturn.link_below_of_below : ∀ {links : List (Nat → Nat)} {x : Nat},
+  Becoming.LoopReturn.returnMap links x < x → ∃ g, g ∈ links ∧ ∃ y, g y < y
+@Becoming.LoopReturn.closing_needs_less : ∀ {links : List (Nat → Nat)} {d n : Nat},
+  (Becoming.Law.run (Becoming.LoopReturn.returnMap links) d).state n < d → ∃ g, g ∈ links ∧ ∃ x, g x < x
+@Becoming.LoopReturn.difference_variant : ∀ {f : Nat → Nat},
+  (∀ (x : Nat), 0 < x → f x < x) →
+    ∀ (d : Nat), Becoming.Lasting.Variant (Becoming.Lasting.determined f) (fun x => True) (fun x => x = 0) d id
+@Becoming.LoopReturn.closes_within : ∀ {f : Nat → Nat},
+  f 0 = 0 →
+    (∀ (x : Nat), 0 < x → f x < x) →
+      ∀ (d : Nat), (Becoming.Law.run f d).state d = 0 ∧ ∀ (n : Nat), d ≤ n → (Becoming.Law.run f d).state n = 0
+@Becoming.LoopReturn.orbit_sub_const : ∀ {f : Nat → Nat} {c : Nat},
+  (∀ (x : Nat), f x = x - c) → ∀ (d n : Nat), (Becoming.Law.run f d).state n = d - n * c
+@Becoming.LoopReturn.sub_const_closes : ∀ {f : Nat → Nat} {c d n : Nat},
+  (∀ (x : Nat), f x = x - c) → d ≤ n * c → (Becoming.Law.run f d).state n = 0
+@Becoming.LoopReturn.sub_const_open : ∀ {f : Nat → Nat} {c d n : Nat},
+  (∀ (x : Nat), f x = x - c) → n * c < d → 0 < (Becoming.Law.run f d).state n
+Becoming.LoopReturn.closes_within_exact : Nat.pred 0 = 0 ∧
+  (∀ (x : Nat), 0 < x → x.pred < x) ∧ ∀ (d n : Nat), n < d → 0 < (Becoming.Law.run Nat.pred d).state n
+@Becoming.LoopReturn.last_positive : ∀ {f : Nat → Nat} {d : Nat},
+  0 < d →
+    ∀ {n : Nat},
+      (Becoming.Law.run f d).state n = 0 →
+        ∃ k, 0 < (Becoming.Law.run f d).state k ∧ (Becoming.Law.run f d).state (k + 1) = 0
+@Becoming.LoopReturn.closing_merges : ∀ {f : Nat → Nat} {d n : Nat},
+  f 0 = 0 → (Becoming.Law.run f d).state n = 0 → 0 < d → Becoming.Law.Merges f
+@Becoming.LoopReturn.closing_not_lossless : ∀ {f : Nat → Nat} {d n : Nat},
+  f 0 = 0 → (Becoming.Law.run f d).state n = 0 → 0 < d → ¬Becoming.Law.Lossless f
+@Becoming.LoopReturn.returnMap_zero : ∀ {links : List (Nat → Nat)},
+  (∀ (g : Nat → Nat), g ∈ links → g 0 = 0) → Becoming.LoopReturn.returnMap links 0 = 0
+@Becoming.LoopReturn.returnMap_cut : ∀ {c : Nat → Nat},
+  (∀ (x : Nat), c x = 0) →
+    ∀ (pre : List (Nat → Nat)) {post : List (Nat → Nat)},
+      (∀ (g : Nat → Nat), g ∈ post → g 0 = 0) → ∀ (x : Nat), Becoming.LoopReturn.returnMap (pre ++ c :: post) x = 0
+@Becoming.LoopReturn.cut_closes : ∀ {c : Nat → Nat},
+  (∀ (x : Nat), c x = 0) →
+    ∀ (pre : List (Nat → Nat)) {post : List (Nat → Nat)},
+      (∀ (g : Nat → Nat), g ∈ post → g 0 = 0) →
+        ∀ (d n : Nat), (Becoming.Law.run (Becoming.LoopReturn.returnMap (pre ++ c :: post)) d).state (n + 1) = 0
+Becoming.LoopReturn.cut_reopened : ∀ (d n : Nat),
+  (Becoming.Law.run (Becoming.LoopReturn.returnMap [fun x => 0, Nat.succ]) d).state (n + 1) = 1
+@Becoming.LoopReturn.never_rises : ∀ {f : Nat → Nat},
+  (∀ (x y : Nat), x ≤ y → f x ≤ f y) →
+    ∀ {d : Nat}, f d ≤ d → ∀ (n : Nat), (Becoming.Law.run f d).state (n + 1) ≤ (Becoming.Law.run f d).state n
+@Becoming.LoopReturn.never_falls : ∀ {f : Nat → Nat},
+  (∀ (x y : Nat), x ≤ y → f x ≤ f y) →
+    ∀ {d : Nat}, d ≤ f d → ∀ (n : Nat), (Becoming.Law.run f d).state n ≤ (Becoming.Law.run f d).state (n + 1)
+@Becoming.LoopReturn.settled_or_fallen : ∀ {f : Nat → Nat},
+  (∀ (x y : Nat), x ≤ y → f x ≤ f y) →
+    ∀ {d : Nat},
+      f d ≤ d →
+        ∀ (n : Nat),
+          (∃ k, k ≤ n ∧ f ((Becoming.Law.run f d).state k) = (Becoming.Law.run f d).state k) ∨
+            (Becoming.Law.run f d).state n + n ≤ d
+@Becoming.LoopReturn.settles_within : ∀ {f : Nat → Nat},
+  (∀ (x y : Nat), x ≤ y → f x ≤ f y) →
+    ∀ {d : Nat},
+      f d ≤ d →
+        ∃ k,
+          k ≤ d ∧
+            f ((Becoming.Law.run f d).state k) = (Becoming.Law.run f d).state k ∧
+              ∀ (n : Nat), k ≤ n → (Becoming.Law.run f d).state n = (Becoming.Law.run f d).state k
+Becoming.LoopReturn.settles_within_exact : (∀ (x y : Nat), x ≤ y → x.pred ≤ y.pred) ∧
+  (∀ (d : Nat), d.pred ≤ d) ∧
+    ∀ (d n : Nat), n < d → ((Becoming.Law.run Nat.pred d).state n).pred ≠ (Becoming.Law.run Nat.pred d).state n
+@Becoming.LoopReturn.returnMap_doubles : ∀ {g : Nat → Nat} {gs : List (Nat → Nat)},
+  (∀ (h : Nat → Nat), h ∈ g :: gs → ∀ (x : Nat), x + x ≤ h x) →
+    ∀ (x : Nat), x + x ≤ Becoming.LoopReturn.returnMap (g :: gs) x
+Becoming.LoopReturn.two_pow_succ_mul : ∀ (n d : Nat), 2 ^ (n + 1) * d = 2 ^ n * d + 2 ^ n * d
+@Becoming.LoopReturn.runs_away : ∀ {g : Nat → Nat} {gs : List (Nat → Nat)},
+  (∀ (h : Nat → Nat), h ∈ g :: gs → ∀ (x : Nat), x + x ≤ h x) →
+    ∀ (d n : Nat), 2 ^ n * d ≤ (Becoming.Law.run (Becoming.LoopReturn.returnMap (g :: gs)) d).state n
+@Becoming.LoopReturn.lt_two_pow_mul : ∀ {d : Nat}, 0 < d → ∀ (n : Nat), n < 2 ^ n * d
+@Becoming.LoopReturn.runs_away_unbounded : ∀ {g : Nat → Nat} {gs : List (Nat → Nat)},
+  (∀ (h : Nat → Nat), h ∈ g :: gs → ∀ (x : Nat), x + x ≤ h x) →
+    ∀ {d : Nat}, 0 < d → ∀ (B : Nat), ∃ n, B < (Becoming.Law.run (Becoming.LoopReturn.returnMap (g :: gs)) d).state n
+Becoming.LoopReturn.orbit_doubling : ∀ (d n : Nat),
+  (Becoming.Law.run (Becoming.LoopReturn.returnMap [fun x => x + x]) d).state n = 2 ^ n * d
+Becoming.LoopReturn.doubling_exact : (∀ (h : Nat → Nat), h ∈ [fun x => x + x] → ∀ (x : Nat), x + x ≤ h x) ∧
+  ∀ (d n : Nat), (Becoming.Law.run (Becoming.LoopReturn.returnMap [fun x => x + x]) d).state n = 2 ^ n * d
+Becoming.LoopReturn.empty_loop_kept : ∀ (d n : Nat), (Becoming.Law.run (Becoming.LoopReturn.returnMap []) d).state n = d
+Becoming.LoopReturn.returnMap_scaling : ∀ (as : List Nat) (x : Nat),
+  Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as) x = Becoming.LoopReturn.factor as * x
+Becoming.LoopReturn.orbit_scaling : ∀ (as : List Nat) (d n : Nat),
+  (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as)) d).state n =
+    Becoming.LoopReturn.factor as ^ n * d
+Becoming.LoopReturn.whole_factors : ∀ (as : List Nat) (d : Nat),
+  (Becoming.LoopReturn.factor as = 0 →
+      ∀ (n : Nat),
+        (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as)) d).state (n + 1) = 0) ∧
+    (Becoming.LoopReturn.factor as = 1 →
+        ∀ (n : Nat),
+          (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as)) d).state n = d) ∧
+      (2 ≤ Becoming.LoopReturn.factor as →
+        0 < d →
+          ∀ (B : Nat),
+            ∃ n, B < (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as)) d).state n)
+Becoming.LoopReturn.nothing_between : ∀ (as : List Nat) (d n : Nat),
+  (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as)) d).state (n + 1) = 0 ∨
+    (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as)) d).state n ≤
+      (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as)) d).state (n + 1)
+Becoming.LoopReturn.gradual_needs_another_link : (∀ (as : List Nat) (d n : Nat),
+    ¬(0 < (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as)) d).state (n + 1) ∧
+        (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as)) d).state (n + 1) <
+          (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as)) d).state n)) ∧
+  0 < (Becoming.Law.run (Becoming.LoopReturn.returnMap [fun x => x - 1]) 2).state 1 ∧
+    (Becoming.Law.run (Becoming.LoopReturn.returnMap [fun x => x - 1]) 2).state 1 <
+      (Becoming.Law.run (Becoming.LoopReturn.returnMap [fun x => x - 1]) 2).state 0
+Becoming.LoopReturn.factor_single : ∀ (a : Nat), Becoming.LoopReturn.factor [a] = a
+Becoming.LoopReturn.geomBound_eq_course : ∀ (M D t : Nat),
+  Becoming.Loops.geomBound M D t =
+    (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling [1 + M])) D).state t
+Becoming.LoopReturn.selfLoop_carried : ∀ (M D t : Nat),
+  Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Loops.SelfLoop.strengths M) (fun x => [()])
+      (fun x => D) t () =
+    (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling [1 + M])) D).state t
+Becoming.LoopReturn.selfLoop_gap : ∀ (M D t : Nat),
+  Becoming.gap
+      (Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Loops.SelfLoop.strengths M) (fun x => [()])
+        (fun x => D) t ())
+      (Becoming.carried [()] (fun x => false) (fun x x_1 x_2 => 0) (Becoming.Loops.SelfLoop.strengths M) (fun x => [()])
+        (fun x => 0) t ()) =
+    (Becoming.Law.run (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling [1 + M])) D).state t
+@Becoming.LoopReturn.carried_around_course : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {v : Nat → C} {w : Nat → Nat} {m : Nat}
+  {e : C},
+  v 0 = e →
+    v (m + 1) = e →
+      Becoming.CoupledWith cs part k present v w (m + 1) →
+        ∀ (t R : Nat),
+          (Becoming.Law.run
+                  (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling [1 + Becoming.Loops.product w (m + 1)]))
+                  (Becoming.carried cs part σ k present δ t e)).state
+              R ≤
+            Becoming.carried cs part σ k present δ (t + (m + 1) * R) e
+Becoming.LoopReturn.link_rearranged : ∀ (H w P X h : Nat), H + w * (P * X + h) = P * w * X + (H + w * h)
+@Becoming.LoopReturn.carried_along_exact : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {v : Nat → C} {w : Nat → Nat} {p : Nat},
+  Becoming.LoopReturn.GivesExactly cs part σ k present v w p →
+    ∀ (t : Nat),
+      Becoming.carried cs part σ k present δ (t + p) (v p) =
+        Becoming.Loops.product w p * Becoming.carried cs part σ k present δ t (v 0) +
+          Becoming.LoopReturn.heldAlong w (fun i => Becoming.carried cs part σ k present δ (t + i) (v (i + 1))) p
+@Becoming.LoopReturn.carried_around_exact : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {v : Nat → C} {w : Nat → Nat} {m : Nat}
+  {e : C},
+  v 0 = e →
+    v (m + 1) = e →
+      Becoming.LoopReturn.GivesExactly cs part σ k present v w (m + 1) →
+        ∀ (t : Nat),
+          Becoming.carried cs part σ k present δ (t + (m + 1)) e =
+            Becoming.Loops.product w (m + 1) * Becoming.carried cs part σ k present δ t e +
+              (Becoming.carried cs part σ k present δ (t + m) e +
+                w m *
+                  Becoming.LoopReturn.heldAlong w (fun i => Becoming.carried cs part σ k present δ (t + i) (v (i + 1)))
+                    m)
+@Becoming.LoopReturn.carried_around_excess : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {v : Nat → C} {w : Nat → Nat} {m : Nat}
+  {e : C},
+  v 0 = e →
+    v (m + 1) = e →
+      Becoming.LoopReturn.GivesExactly cs part σ k present v w (m + 1) →
+        ∀ (t : Nat),
+          Becoming.carried cs part σ k present δ (t + (m + 1)) e =
+            (Becoming.Law.run
+                    (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling [1 + Becoming.Loops.product w (m + 1)]))
+                    (Becoming.carried cs part σ k present δ t e)).state
+                1 +
+              (Becoming.carried cs part σ k present δ (t + m) e - Becoming.carried cs part σ k present δ t e +
+                w m *
+                  Becoming.LoopReturn.heldAlong w (fun i => Becoming.carried cs part σ k present δ (t + i) (v (i + 1)))
+                    m)
+@Becoming.LoopReturn.around_course_iff : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {v : Nat → C} {w : Nat → Nat} {m : Nat}
+  {e : C},
+  v 0 = e →
+    v (m + 1) = e →
+      Becoming.LoopReturn.GivesExactly cs part σ k present v w (m + 1) →
+        ∀ (t : Nat),
+          Becoming.carried cs part σ k present δ (t + (m + 1)) e =
+              (Becoming.Law.run
+                    (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling [1 + Becoming.Loops.product w (m + 1)]))
+                    (Becoming.carried cs part σ k present δ t e)).state
+                1 ↔
+            Becoming.carried cs part σ k present δ (t + m) e = Becoming.carried cs part σ k present δ t e ∧
+              w m *
+                  Becoming.LoopReturn.heldAlong w (fun i => Becoming.carried cs part σ k present δ (t + i) (v (i + 1)))
+                    m =
+                0
+@Becoming.LoopReturn.ring_even : ∀ {F C : Type} {cs : List C} {part : F → Bool} {σ : Nat → F → C → Nat}
+  {k : Nat → F → C → Nat → C → Nat} {present : Nat → List F} {δ : C → Nat} {pred : C → C} {w D : Nat},
+  Becoming.LoopReturn.RingGives cs part σ k present pred w →
+    (∀ (c : C), c ∈ cs → pred c ∈ cs) →
+      (∀ (c : C), c ∈ cs → δ c = D) →
+        ∀ (t : Nat) (c : C), c ∈ cs → Becoming.carried cs part σ k present δ t c = (1 + w) ^ t * D
+Becoming.LoopReturn.product_const : ∀ (w j : Nat), Becoming.Loops.product (fun x => w) j = w ^ j
+@Becoming.LoopReturn.one_add_pow_lt : ∀ {w : Nat}, 0 < w → ∀ (n : Nat), 1 + w ^ (n + 2) < (1 + w) ^ (n + 2)
+Becoming.LoopReturn.Ring.cycle_start : ∀ (m : Nat), Becoming.LoopReturn.Ring.cycle m 0 = 0
+Becoming.LoopReturn.Ring.cycle_back : ∀ (m : Nat), Becoming.LoopReturn.Ring.cycle m (m + 1) = 0
+@Becoming.LoopReturn.Ring.pred_cycle : ∀ {m i : Nat},
+  i < m + 1 →
+    Becoming.LoopReturn.Ring.pred m (Becoming.LoopReturn.Ring.cycle m (i + 1)) = Becoming.LoopReturn.Ring.cycle m i
+@Becoming.LoopReturn.Ring.pred_mem : ∀ {m c : Nat},
+  c ∈ Becoming.LoopReturn.Ring.conditions m → Becoming.LoopReturn.Ring.pred m c ∈ Becoming.LoopReturn.Ring.conditions m
+Becoming.LoopReturn.Ring.cycle_mem : ∀ (m i : Nat),
+  Becoming.LoopReturn.Ring.cycle m i ∈ Becoming.LoopReturn.Ring.conditions m
+@Becoming.LoopReturn.Ring.total_at : ∀ {q : Nat → Nat} {a : Nat} {as : List Nat},
+  (∀ (b : Nat), b ≠ a → q b = 0) → a ∈ as → Becoming.Distinct as → Becoming.total as q = q a
+Becoming.LoopReturn.Ring.gives : ∀ (m w : Nat),
+  Becoming.LoopReturn.RingGives (Becoming.LoopReturn.Ring.conditions m) (fun x => false) (fun x x_1 x_2 => 0)
+    (Becoming.LoopReturn.Ring.strengths m w) (fun x => [()]) (Becoming.LoopReturn.Ring.pred m) w
+Becoming.LoopReturn.Ring.coupled : ∀ (m w : Nat),
+  Becoming.CoupledWith (Becoming.LoopReturn.Ring.conditions m) (fun x => false) (Becoming.LoopReturn.Ring.strengths m w)
+    (fun x => [()]) (Becoming.LoopReturn.Ring.cycle m) (fun x => w) (m + 1)
+Becoming.LoopReturn.Ring.givesExactly : ∀ (m w : Nat),
+  Becoming.LoopReturn.GivesExactly (Becoming.LoopReturn.Ring.conditions m) (fun x => false) (fun x x_1 x_2 => 0)
+    (Becoming.LoopReturn.Ring.strengths m w) (fun x => [()]) (Becoming.LoopReturn.Ring.cycle m) (fun x => w) (m + 1)
+Becoming.LoopReturn.Ring.amount_eq : ∀ (m w D t c : Nat),
+  c ∈ Becoming.LoopReturn.Ring.conditions m → Becoming.LoopReturn.Ring.amount m w D t c = (1 + w) ^ t * D
+Becoming.LoopReturn.Ring.exceeds_course : ∀ (m : Nat) {w D : Nat},
+  0 < w →
+    0 < D →
+      (Becoming.Law.run
+              (Becoming.LoopReturn.returnMap
+                (Becoming.LoopReturn.scaling [1 + Becoming.Loops.product (fun x => w) (m + 2)]))
+              (Becoming.LoopReturn.Ring.amount (m + 1) w D 0 0)).state
+          1 <
+        Becoming.LoopReturn.Ring.amount (m + 1) w D (0 + (m + 2) * 1) 0
+Becoming.LoopReturn.Ring.bound_strict : ∀ (m : Nat) {w D : Nat},
+  0 < w →
+    0 < D →
+      (Becoming.Law.run
+                (Becoming.LoopReturn.returnMap
+                  (Becoming.LoopReturn.scaling [1 + Becoming.Loops.product (fun x => w) (m + 2)]))
+                (Becoming.LoopReturn.Ring.amount (m + 1) w D 0 0)).state
+            1 ≤
+          Becoming.LoopReturn.Ring.amount (m + 1) w D (0 + (m + 2) * 1) 0 ∧
+        (Becoming.Law.run
+                (Becoming.LoopReturn.returnMap
+                  (Becoming.LoopReturn.scaling [1 + Becoming.Loops.product (fun x => w) (m + 2)]))
+                (Becoming.LoopReturn.Ring.amount (m + 1) w D 0 0)).state
+            1 ≠
+          Becoming.LoopReturn.Ring.amount (m + 1) w D (0 + (m + 2) * 1) 0
+Becoming.LoopReturn.gap_add_right : ∀ (a b T : Nat), Becoming.gap (a + T) (b + T) = Becoming.gap a b
+@Becoming.LoopReturn.gap_succ : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C} {t : Nat},
+  L.BalancesOn W [c] t →
+    L'.BalancesOn W' [c] t →
+      Becoming.gap (W.level (t + 1) c) (W'.level (t + 1) c) =
+        Becoming.gap (W.level t c + L.given t c + L'.taken t c) (W'.level t c + L'.given t c + L.taken t c)
+@Becoming.LoopReturn.responds_iff : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C}
+  {f : Nat → Nat} {s : Nat},
+  (∀ (t : Nat), L.BalancesOn W [c] t) →
+    (∀ (t : Nat), L'.BalancesOn W' [c] t) →
+      (Becoming.LoopReturn.RespondsByReturn L L' W W' c f s ↔
+        ∀ (t : Nat),
+          s ≤ t → Becoming.gap (W.level (t + 1) c) (W'.level (t + 1) c) = f (Becoming.gap (W.level t c) (W'.level t c)))
+@Becoming.LoopReturn.gap_course : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C}
+  {f : Nat → Nat} {s : Nat},
+  (∀ (t : Nat), L.BalancesOn W [c] t) →
+    (∀ (t : Nat), L'.BalancesOn W' [c] t) →
+      Becoming.LoopReturn.RespondsByReturn L L' W W' c f s →
+        ∀ (n : Nat),
+          Becoming.gap (W.level (s + n) c) (W'.level (s + n) c) =
+            (Becoming.Law.run f (Becoming.gap (W.level s c) (W'.level s c))).state n
+@Becoming.LoopReturn.gap_scaling : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W W' : Becoming.Web F C} {c : C}
+  {as : List Nat} {s : Nat},
+  (∀ (t : Nat), L.BalancesOn W [c] t) →
+    (∀ (t : Nat), L'.BalancesOn W' [c] t) →
+      Becoming.LoopReturn.RespondsByReturn L L' W W' c (Becoming.LoopReturn.returnMap (Becoming.LoopReturn.scaling as))
+          s →
+        ∀ (n : Nat),
+          Becoming.gap (W.level (s + n) c) (W'.level (s + n) c) =
+            Becoming.LoopReturn.factor as ^ n * Becoming.gap (W.level s c) (W'.level s c)
+Becoming.LoopReturn.replenishing_responds : Becoming.LoopReturn.RespondsByReturn (Becoming.Replenishing.flow true)
+  (Becoming.Replenishing.flow false) (Becoming.Replenishing.web true) (Becoming.Replenishing.web false)
+  Becoming.Replenishing.Cond.held Nat.pred 1
+Becoming.LoopReturn.replenishing_course : ∀ (n : Nat),
+  Becoming.gap ((Becoming.Replenishing.web true).level (1 + n) Becoming.Replenishing.Cond.held)
+      ((Becoming.Replenishing.web false).level (1 + n) Becoming.Replenishing.Cond.held) =
+    (Becoming.Law.run Nat.pred 1).state n
+Becoming.LoopReturn.replenishing_no_return : ¬∃ f,
+    ∀ (n : Nat),
+      Becoming.gap ((Becoming.Replenishing.web true).level n Becoming.Replenishing.Cond.held)
+          ((Becoming.Replenishing.web false).level n Becoming.Replenishing.Cond.held) =
+        (Becoming.Law.run f
+              (Becoming.gap ((Becoming.Replenishing.web true).level 0 Becoming.Replenishing.Cond.held)
+                ((Becoming.Replenishing.web false).level 0 Becoming.Replenishing.Cond.held))).state
+          n

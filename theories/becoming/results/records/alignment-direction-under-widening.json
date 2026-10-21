@@ -105,6 +105,20 @@
         "en": "Reuses Flow.act_selected_by_pool: what a selection through a pool reaches beyond the actor.",
         "zh": "复用 Flow.act_selected_by_pool：经组的选择在行动者之外及于什么。"
       }
+    },
+    {
+      "id": "the-rest-outruns-the-renewal",
+      "detail": {
+        "en": "Why D2b failed: where the rest outruns the renewal, no weight of a reading after its end selects a member's restraint; CG2 tested the boundary on learners.",
+        "zh": "D2b 失败的缘故：其余者胜过更新之处，其终结之后的读取无论权重多大都不选择成员的节制；CG2 在学习者上检验此界。"
+      }
+    },
+    {
+      "id": "several-optimizers-drain-by-their-joint-capacity",
+      "detail": {
+        "en": "At a mutual best response restraint is no best response and a condition beyond every family falls by the joint capacity: the outcome D2b's learners reached.",
+        "zh": "在相互的最优回应中节制不是最优回应，每一族之外的条件按联合容量下降：D2b 的学习者所到达的结果。"
+      }
     }
   ],
   "counterexamples": [],
@@ -140,8 +154,8 @@
       "kind": "correspondence"
     },
     {
-      "en": "That widening the coupling suffices for what tells two moves apart to be kept: the pool part makes it necessary (selected only through a pool coupled into it) and does not say which of several self-consistent outcomes a selection reaches. In CG1's frozen commons test, three learners each coupled into the stock still emptied it in every episode of both rounds (D2b), harvesting at every step being a mutual best response.",
-      "zh": "扩大耦合足以使区分两个动作者被保持：池的部分使它成为必要（只经耦合入它的池被选择），而不说选择到达几个自洽结果中的哪一个。在 CG1 的冻结公地检验中，三个各自耦合入存量的学习者在两轮的每一回合仍把它取尽（D2b），每一步都收获是相互的最优回应。",
+      "en": "That widening the coupling suffices for what tells two moves apart to be kept: the pool part makes it necessary (selected only through a pool coupled into it), and where the rest outruns the renewal no weight of a reading after the rest's end selects a member's restraint (Flow.outrun_reading_alike), while at a mutual best response restraint is no best response and the condition falls by the joint capacity (Optimum.MutualBest.full, Optimum.mutual_beyond). In CG1's frozen commons test, three learners each coupled into the stock's end level still emptied it in every episode of both rounds (D2b). How learners come to one outcome where several are self-consistent is not shown.",
+      "zh": "扩大耦合足以使区分两个动作者被保持：池的部分使它成为必要（只经耦合入它的池被选择）；其余者胜过更新之处，其终结之后的读取无论权重多大都不选择成员的节制（Flow.outrun_reading_alike），在相互的最优回应中节制不是最优回应，条件按联合容量下降（Optimum.MutualBest.full、Optimum.mutual_beyond）。在 CG1 的冻结公地检验中，三个各自耦合入存量终末水平的学习者在两轮的每一回合仍把它取尽（D2b）。几个结果皆自洽时学习者怎样到达其一，未表明。",
       "kind": "non-implication"
     }
   ],
@@ -167,14 +181,14 @@
       "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#245-the-alignment-direction-on-a-worlds-moves-r44"
     },
     {
-      "en": "Measured (CG1, predictions frozen before the runs): the gap's contrast at the end of the coupling held (C1, round 2: an own-reward learner spends the last apple in 118 of 118 decisions, a coupled one in 0 of 2,360), and so did the late-reading band against learned adversaries (E3, 80 of 80); the pool's positive reading failed (D2b): widening the coupling is necessary, not sufficient.",
-      "zh": "已测量（CG1，预测在运行前冻结）：耦合末端差距的对照成立（C1，第二轮：只以自身收获为报酬的学习者在 118 次决定中 118 次取走最后一个苹果，耦合者在 2,360 次中 0 次），迟读之带对学习的对手亦成立（E3，80 中 80）；池的正面读法失败（D2b）：扩大耦合是必要的，不是充分的。",
-      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#240-a-commons-with-gated-renewal-the-first-falsifiable-test-on-learning-agents-cg1"
+      "en": "Measured (CG1 and CG2, predictions frozen before the runs): the gap's contrast at the end of the coupling held (C1, round 2: an own-reward learner spends the last apple in 118 of 118 decisions, a coupled one in 0 of 2,360), and so did the late-reading band against learned adversaries (E3, 80 of 80); the pool's positive reading failed (D2b). CG2 then found learners following the rest's draw against the renewal (X1), an end reading's weight changing nothing where the rest outruns (X2) and a reading after every step keeping the stock above its exact threshold (X3): widening the coupling is necessary, not sufficient, and where the coupling reads against what the rest does decides.",
+      "zh": "已测量（CG1 与 CG2，预测在运行前冻结）：耦合末端差距的对照成立（C1，第二轮：只以自身收获为报酬的学习者在 118 次决定中 118 次取走最后一个苹果，耦合者在 2,360 次中 0 次），迟读之带对学习的对手亦成立（E3，80 中 80）；池的正面读法失败（D2b）。CG2 随后发现学习者随其余者的取用对更新之界（X1），其余者胜过之处终末读取的权重不起作用（X2），每步读取在确切阈值之上保住存量（X3）：扩大耦合是必要的，不是充分的，决定者是耦合在何处相对于其余者之所为而读。",
+      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md#250-the-rest-outruns-the-renewal-what-decides-the-outcome-learners-reach-on-a-gated-renewal-cg2"
     }
   ],
   "validation_scope": {
-    "en": "The existing independent review accepts the direction argument and independently rebuilt 9 new theorems/16 new audits plus 46 inherited audits. The core schema (Becoming.Direction) is machine-checked with empty axiom reports (receipt 20261020T093308.742793Z, with the direction from the evaluation row since R40 and a world's exchanges as moves and the handover instance since R44); not independently reviewed. CG1 (study section 240) measured the selection side in a learning commons: C1 and E3 held, D2b failed.",
-    "zh": "既有独立审查接受方向论证，并独立重编译9项新定理／16项新审计及46项继承审计。核心模式（Becoming.Direction）经实查，公理报告为空（回执 20261020T093308.742793Z，自 R40 起含从评价一行出发的方向，自 R44 起含世界的交换作为动作与交接实例）；未经独立审查。CG1（研究第240节）在学习的公地中测量了选择一侧：C1 与 E3 成立，D2b 失败。"
+    "en": "The existing independent review accepts the direction argument and independently rebuilt 9 new theorems/16 new audits plus 46 inherited audits. The core schema (Becoming.Direction) is machine-checked with empty axiom reports (receipt 20261020T093308.742793Z, with the direction from the evaluation row since R40 and a world's exchanges as moves and the handover instance since R44); not independently reviewed. In learning commons, CG1 (study section 240): C1 and E3 held, D2b failed; CG2 (section 250): learners follow the rest's draw against the renewal (X1-X3).",
+    "zh": "既有独立审查接受方向论证，并独立重编译9项新定理／16项新审计及46项继承审计。核心模式（Becoming.Direction）经实查，公理报告为空（回执 20261020T093308.742793Z，自 R40 起含从评价一行出发的方向，自 R44 起含世界的交换作为动作与交接实例）；未经独立审查。CG1（研究第240节）在学习的公地中测量了选择一侧：C1 与 E3 成立，D2b 失败；CG2（研究第250节）发现学习者随其余者的取用对更新之界（X1-X3 成立）。"
   },
   "references": [
     {
@@ -487,6 +501,10 @@
     {
       "en": "20 October 2026, CG1b (study section 247): CG1's measured boundary added (does_not_show, progress, evidence; chapter 7.4, 7.5, 7.7): widening the coupling is necessary, not sufficient; C1 and E3 support the reading, D2b bounds it. No law, premise or status changed.",
       "zh": "2026年10月20日，CG1b（研究第247节）：加入 CG1 测得的边界（does_not_show、progress、证据；第 7.4、7.5、7.7 节）：扩大耦合是必要的，不是充分的；C1 与 E3 支持此读法，D2b 为其划界。规律、前提与状态都不变。"
+    },
+    {
+      "en": "21 October 2026, CG1c (study section 304): CG1's boundary read through the laws landed since (CG2's Flow.outrun_reading_alike, SG3's Optimum.MutualBest.full and Optimum.mutual_beyond, SG4's Web.mutual_course_lost): does_not_show, progress and evidence restated, two related records; chapter 7.4, 7.5, 7.7 (EN) and 7.5 (ZH). No law, premise or status changed.",
+      "zh": "2026年10月21日，CG1c（研究第304节）：经此后落地的规律（CG2 的 Flow.outrun_reading_alike，SG3 的 Optimum.MutualBest.full 与 Optimum.mutual_beyond，SG4 的 Web.mutual_course_lost）读 CG1 的边界：重述 does_not_show、progress 与证据，增两条相关记录；第 7.4、7.5、7.7 节（英文）与 7.5 节（中文）。规律、前提与状态都不变。"
     }
   ],
   "text_versions": [

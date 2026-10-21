@@ -351,7 +351,7 @@
         "Becoming.unrestricted_atCenters_iff",
         "Becoming.withinSome"
       ],
-      "sha256": "ebad406963f387652a5e6c086e102cb0c7069ac8f8ebbb40cb1d3a1765a52452"
+      "sha256": "bad83c9cbc1745a3caa9df153bfaa5b579cb62e3a85c1ecb2fc54d8b13abe485"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Boundaries.lean",
@@ -371,7 +371,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "168a1cfdf5d790c678b4792cf3daa11585109ecf9f5324a99f43ce2faa287405"
+      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -391,19 +391,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "1634b28f3667ea88678a1b78014e2e440cd421d6721d1036c6a7763cbfbace15"
+      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
       "role": "receipt",
       "sha256": "fd53371479a40d41144bb90789da0ad740bfded46e028a5b35750542dfafc699",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json",
+      "role": "receipt",
+      "sha256": "67b039a811c584e6830e9534e064ca22c400d553ded709a4942f7eb48aea2dfc",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"

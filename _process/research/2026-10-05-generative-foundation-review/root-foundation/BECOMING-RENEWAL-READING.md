@@ -12124,6 +12124,18 @@ Why D1 and D2 failed (post hoc, asked after the run; posthoc_mq5.py why, results
        New Zealand 20 against 14). Mis-timing on synthetic stocks hides a true lag (20 -> 8 detected),
        produced at most 18 of 149 detections without one, and produced S4's gain without one (32
        against 5).
+The premise of the regime's laws (post hoc, asked after the run; posthoc_mq5.py rises,
+       results/mq5/rises.json): the order laws over giving that adjusts (RM3-RM5: rest, the threshold
+       in the plane, convergence) need the adjustment to rise in what is left and in the recent giving
+       within a band. Read through the balance as an adjustment, the field's giving rises in the recent
+       giving in 65 of 69 test stocks (median slope 0.66; development 125 of 142), and not in what is
+       left: the one-step fit gives it no slope (median -0.01, positive in 17 of 69), and each stock's
+       fitted level law is humped, rising over a median 41% of its observed escapements and over the
+       whole band in 4 of 69 (development 12 of 142). MQ5's law rises in the recent giving (phi - lam =
+       0.41) and in what is left exactly where its level law does, so the premise holds below the level
+       law's peak, the low side where the point of no return lies; RM2's rests need no rising, and MQ5's
+       law at the draw is the draw plus (1 - phi)(g(e) - draw), the draw exactly where the regime gives
+       it (elementary).
 Output -> input: on stocks no analysis had read, the state is the level, the recent giving and the
        lag, and with the lag nothing more is needed in the median stock; read through the balance,
        giving moves toward the draw at about 0.3 a year in sample, with the same coefficients on both
@@ -12135,7 +12147,10 @@ Output -> input: on stocks no analysis had read, the state is the level, the rec
        catches closes little of the held draw's gap, the draw's law closes more only by damping the
        forecast's own error, and once giving moves toward the draw, how the draw is read makes no
        difference at ten years. Of the frozen rest's two held exchanges, both move in these stocks, and
-       the giving carries the forecast. The margin-of-a-regime record and chapter section 8.7 now say so.
+       the giving carries the forecast. The regime's order laws reach the field's state on the low side
+       of its level law, below the peak, where the point of no return lies; above it giving falls as the
+       level rises. The margin-of-a-regime record, the regime records' next steps, thesis T2 and the
+       margin README's finding 3 now say so.
        Open: separating the three readings of the lag (age structure, the other order, compensation),
        which survey series with an observation model or an age-structured reading could do; each
        series' timing read from its assessment before a balance is read off it; a lam per stock or per
@@ -13426,7 +13441,81 @@ Output → input: the CG3 line closes on three statements. (1) One's own later a
 
 **Self-review.** The band rule was read post hoc from rounds 1-3 and frozen before round 4; it failed V1 and V3 and is reported failed. The decision to stop is argued, not forced: each round's form came from the round before and failed on the next round's sharpest case, and the exact quantities of the condition did not yield a mechanistic index (round 3), so a further round would fit the learner rather than test a law of the condition.
 
-## 304. Coupled regimes: a margin that is not its own (RM6)
+## 304. CG1's boundary read through the laws landed since (CG1c)
+
+```text
+Result(s): none new; docs and records only. Chapter 7.5's CG1 paragraph (with one sentence each
+       in 7.4 and 7.7; ZH 7.5's summary) and record alignment-direction-under-widening restated as
+       one account: widening the coupling is necessary, not sufficient, and the spine now says what
+       decides D2b's outcome.
+Delta: section 247 left "which of several self-consistent outcomes is reached" open, with the laws
+       silent on it. Since then: Flow.outrun_reading_alike (CG2, section 250): where the rest
+       outruns the renewal, every reading after the rest's end is alike under a member's acts, so no
+       weight of such a reading selects restraint; Optimum.MutualBest.full and Optimum.mutual_beyond
+       (SG3, section 290): at a mutual best response restraint is no best response and a condition
+       beyond every family falls by the joint capacity, as under one optimizer;
+       Web.mutual_course_lost (SG4, section 291): along a course, several optimizers jointly above
+       the renewal lose it. CG2's frozen test found learners following the rest's boundary (X1),
+       the end reading's weight irrelevant where the rest outruns (X2: 32 against 2), and a reading
+       after every step keeping the patch above its exact threshold (X3). The live text said the
+       laws were silent where they now speak; it is replaced, not supplemented.
+Premises: none changed. Each law keeps its own (balance, the gate, need one for the reading law;
+       one step or a balanced course of mutual best responses, supplied optimizers, orders and
+       capacities). The learning verdicts are read through CG1's and CG2's named bridges.
+Evidence: experiments/commons-gated-renewal/README.md (C1, D2b, E3), experiments/commons-outrun/
+       README.md (X1-X3 passed; X4's open side and X5 failed, X5's post hoc reading corrected by
+       CG3, sections 254 and 303).
+Boundary: the laws say which outcome optimizers at a mutual best response reach and that an end
+       reading cannot open the lock; they do not say how learners come to one outcome where
+       several are self-consistent (CG2's open conditions, chapter 8.1 item 10's open part), and one
+       learner's own later acts are not a rest in the reading law's sense, its failures being of
+       sampling its own courses (CG3, sections 254 and 303).
+Output → input: section 7's alignment account now cites the laws for the outcome as well as for the
+       blindness; the open part is the dynamics of reaching an outcome (how optimizers come to a
+       mutual best response, chapter 8.1 item 10), not the outcome's characterization.
+```
+
+**Self-review.** The earlier paragraph was accurate when written (20 October, before CG2 and SG3 landed); keeping it beside the new laws would have left live text saying the spine is silent where it speaks. The X5 post hoc reading ("one's own later acts are the outrunning rest") is not cited; CG3's correction is. X4's failed open side is not cited as support. "Sixteen times" is the ratio of CG2's end-reading weights, 32 to 2.
+
+## 305. Reading another's law, and lexical priority within the class (AP2)
+
+```text
+Result(s): record reading-anothers-couplings-is-pooling extended (Becoming.SelectionPool, rule 9); record
+       widening-as-what-every-weighting-ranks extended (Becoming.Weightings, rule 9); no new record, no definition
+       changed.
+Delta: chapter 8.1 item 7's sub-item "members reading one another's law". Knowing another's law is no coupling: every
+       selection through another's couplings is one through a formation's own exactly when whatever the formation
+       couples alike the other couples alike; where that fails at two histories, some selection through the other's
+       couplings goes through none of the formation's; where it holds, the other's acts under a law reading through
+       its coupling are fixed by what the formation couples into, and reading the other's couplings is that fine.
+       And lexical priority, the basic items first, ranks every widening higher, so it lies within the classes whose
+       shared order is widening (the hedge AP1 left in THE-STEP-OF-INVARIANCE section 6.5, made exact).
+Premises / correspondence: none beyond each law's (for the acts, a law reading through the other's coupling, the
+       other outside the part). Reading "knowing a law" as having a selection or exchange function in advance is the
+       AI's; so is reading Weighting.lexical as Lexical.Above on listed items.
+Evidence: core receipt 20261021T111912.398950Z (passed, empty axiom reports).
+Boundary: the refinement law is the measurability of a function under a finer partition (Revision.web_keeps_iff is
+       the case of one formation at two steps; Blackwell 1953 compares experiments so), not new mathematics. The
+       converse for acts, a law reading through the other's coupling that a coarser reader cannot anticipate, is
+       stated for selections only: a law of natural-number exchanges separating the class alike through the other
+       needs that class decided. What the law does under histories not taken stays a model.
+Output → input: chapter 7.3, 7.7 and 8.1 item 7 (the sub-item settled); chapter 6.5; THE-STEP-OF-INVARIANCE 5, 6.5
+       and 8; the two items AP1 left open (study section 282).
+```
+
+AP1 settled reading the levels of what another couples into: it is pooling with the other, and it reaches no further than the union of the two closures (§282). The sub-item of §8.1 item 7 it left open was reading another's *law*, how the other would exchange under histories, beyond the levels of what it couples into. A law is a function given in advance. Knowing it changes which function a formation can compute, not what the formation couples into. So the question becomes exact: what can a formation anticipate of another, through its own couplings, given the other's law?
+
+**Anticipation is coupling as finely.** `Web.anticipates_iff`: every selection through `a`'s couplings up to `t` is one through `o`'s, under any coupling by level `obs'` for `o`, exactly when whatever `o` couples alike up to `t`, `a` couples alike. Where that fails at two histories, `Web.anticipation_misses` exhibits a selection through `a`'s couplings that goes through none of `o`'s: the class of histories alike with the first through `a`. Knowing `a`'s law does not help here. A selection is any claim about histories, laws included, and `o` cannot compute one that separates what it couples alike. For acts, `ExchangeLaw.Through.anticipated`: where the law reads through `a`'s coupling, `a` lying outside the part, and `o`'s coupling is that fine, `a` exchanges alike across every step up to `t` under any two histories `o` couples alike. With the law, `o` anticipates `a`'s acts. Reading `a`'s couplings is that fine (`Web.SelectsThrough.read`, from `Web.AlikeThrough.of_reads`).
+
+So reading another's law adds anticipation, exactly where the reader couples as finely as the other, and never reach. What either selects stays within the union of their closures (`Flow.unselected_beyond_reads`, §282). What the law does under histories not taken is not fixed by any run (`not_fixes_of_untaken`). Knowing it there is a model, right beyond the data only where the class training can reach decides it (`Training.fit_right_iff`). [AI reading] An overseer that reads a system's couplings and knows its law anticipates every act of the system, its plans included where they are conditions the system couples into. It does not thereby see any consequence beyond the union, and what it takes the law to be beyond the runs it has seen is a model.
+
+**Lexical priority within the class.** AP1 wrote, in THE-STEP-OF-INVARIANCE §6.5, that lexical priority lies within the classes whose shared order is widening "where it ranks each widening higher". It always does. `Weighting.lexical items basic` ranks `a` above `b` when `a` widens `b` on the basic items, or admits exactly `b`'s basic items and widens `b` on the others. This is the order of `Lexical.Above` read on listed items, the basic claims being the basic items admitted and the gains the others [AI reading]. `Weighting.increasing_lexical`: it ranks every widening higher. Where a widening adds a basic item, the basic tier decides; otherwise the basic items are the same and the gains decide. So lexical priority, like priority to the worse off (`Weighting.increasing_prior`) and every positive weighting, is an order increasing in admission. A class holding all three shares exactly widening (`Weighting.widens_iff_every_of_class`), and lexical priority decides only comparisons widening leaves mixed.
+
+**Self-review.** Both laws are short. `anticipates_iff` is the measurability of a function under a finer partition, the two-formation case of `Revision.web_keeps_iff`. `increasing_lexical` is a case split on whether the widening adds a basic item. Their use is to close two open sentences exactly: §8.1 item 7's sub-item, and THE-STEP-OF-INVARIANCE's hedge. Not done: the converse for acts under laws of natural-number exchanges, which needs the class decided; a law over histories not taken, which stays a model; the bridge from `Weighting.lexical` to `Lexical.Above`, stated here as a correspondence only.
+
+**The run.** Core 284 modules and 11,988 theorems, instances 7 and 567, applications 6 and 179; 27 Lean steps ran, 1,173 reused. 44 declarations of Becoming.SelectionPool, 41 of them theorems (4 new), and 116 of Becoming.Weightings, 81 of them theorems (5 new), all with empty axiom reports. Connectivity: 656 of 12,734 apart; one new apart root, Weighting.increasing_lexical, registered as general structure; none in Becoming.SelectionPool; register check passes.
+
+## 306. Coupled regimes: a margin that is not its own (RM6)
 
 ```text
 Result(s): new record coupled-regimes (new laws of Becoming.RegimeMargin); reuses margin-of-a-regime (the regime's

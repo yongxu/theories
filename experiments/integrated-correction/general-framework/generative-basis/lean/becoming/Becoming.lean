@@ -1455,7 +1455,11 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   another's couplings, coupled by level into everything the other couples into, selects through
   at least the pooled coupling of the two, and its coupling closure is the pool's where the other
   exchanges with a condition coupled into it, so it is blind beyond the union of the two closures:
-  reading another's couplings reaches no further than pooling with it. In `Clearing`, pooling
+  reading another's couplings reaches no further than pooling with it. Knowing another's law is
+  no coupling: every selection through another's couplings is one through a formation's own exactly
+  when whatever it couples alike the other couples alike, and then, under a law reading through the
+  other's coupling, the other's acts are fixed by what it couples into; reading the other's
+  couplings is that fine. In `Clearing`, pooling
   with the dweller closes the clearer's gap; reading the clearer's couplings does not, and reading
   the dweller's does.
 * `Becoming.PoolResponse` (L1): what a pool's acts respond to. Where a law of exchange reads
@@ -1780,9 +1784,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   weightings; a weight of zero ties a widening that adds only that item; one weight for every item
   ranks by number; on a web with decided admission and listed admissions this is `Web.Widens`. The
   additive representation is not needed: for any class of orders from the positive weightings up to
-  every order increasing in admission (ranking each widening higher; priority to the worse off is
-  one), what every order of the class ranks higher is exactly widening, and within the class a mixed
-  comparison is decided both ways. From
+  every order increasing in admission (ranking each widening higher; priority to the worse off and
+  lexical priority, basic items first, are such orders), what every order of the class ranks higher
+  is exactly widening, and within the class a mixed comparison is decided both ways. From
   each standpoint's presupposition about its own continuation and standpoint-invariance, exactly the
   centers' continuation is forced to have significance, the condition only where every formation is a
   center; a standpoint's own presupposition forces exactly its closure; drawn along being related at

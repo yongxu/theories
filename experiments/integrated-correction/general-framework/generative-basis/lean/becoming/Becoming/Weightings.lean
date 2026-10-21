@@ -30,7 +30,9 @@ order every standpoint shares when each weighs what can form in its own way.
   `Weighting.widens_iff_every_increasing`; every complete one, as a score,
   `Weighting.widens_iff_every_score`; on a web, `Web.widens_iff_every_of_class`), and within each
   such class a mixed comparison is decided both ways (`Weighting.mixed_either_way_of_class`). The
-  shared order does not depend on the representation.
+  shared order does not depend on the representation. Lexical priority, the basic items first, is
+  increasing in admission (`Weighting.lexical`, `Weighting.increasing_lexical`), so it lies within
+  such a class and decides only what the shared order leaves mixed.
 * **A weight of zero ties.** Where every item a course admits beyond another weighs nothing, the
   two weigh the same (`Weighting.weighed_eq_of_unweighted`): a weighting that leaves an item out
   does not rank a widening that adds only that item.
@@ -376,6 +378,53 @@ theorem mixed_either_way_of_class {items : List X} {a b : X → Bool}
   match mixed_either_way mixed with
   | ⟨⟨w, positive, lt⟩, ⟨w', positive', lt'⟩⟩ =>
     ⟨⟨ranks items w, weightings w positive, lt⟩, ⟨ranks items w', weightings w' positive', lt'⟩⟩
+
+/-! ### Lexical priority -/
+
+/-- A course restricted to the items `p` marks. -/
+def restrict (p a : X → Bool) : X → Bool :=
+  fun x => p x && a x
+
+theorem and_parts : ∀ {p q : Bool}, (p && q) = true → p = true ∧ q = true
+  | true, true, _ => ⟨rfl, rfl⟩
+  | true, false, no => Bool.noConfusion no
+  | false, _, no => Bool.noConfusion no
+
+theorem and_of_parts : ∀ {p q : Bool}, p = true → q = true → (p && q) = true
+  | _, _, rfl, rfl => rfl
+
+/-- Inclusion passes to the items `p` marks. -/
+theorem includes_restrict (p : X → Bool) {items : List X} {a b : X → Bool}
+    (includes : IncludesOn items a b) : IncludesOn items (restrict p a) (restrict p b) :=
+  fun x listed held => match and_parts held with
+    | ⟨marked, admits⟩ => and_of_parts marked (includes x listed admits)
+
+/-- Lexical priority on the listed items, the basic ones (`basic`) first: `a` is ranked above `b`
+when it widens `b` on the basic items, or admits exactly `b`'s basic items and widens `b` on the
+others. -/
+def lexical (items : List X) (basic : X → Bool) : (X → Bool) → (X → Bool) → Prop :=
+  fun b a => WidensOn items (restrict basic a) (restrict basic b) ∨
+    (IncludesOn items (restrict basic a) (restrict basic b) ∧
+      IncludesOn items (restrict basic b) (restrict basic a) ∧
+      WidensOn items (restrict (fun x => !basic x) a) (restrict (fun x => !basic x) b))
+
+theorem gain_at : ∀ {bx ax bbx : Bool}, ax = true → bbx = false →
+    ((bx && ax) = true → (bx && bbx) = true) → (!bx && ax) = true ∧ (!bx && bbx) = false
+  | false, _, _, rfl, rfl, _ => ⟨rfl, rfl⟩
+  | true, _, _, rfl, rfl, back => Bool.noConfusion (back rfl)
+
+/-- **Lexical priority is increasing in admission.** It ranks every widening higher, so it lies
+within the classes whose shared order is exactly widening (`widens_iff_every_of_class`), and it
+decides only comparisons that order leaves mixed. -/
+theorem increasing_lexical (items : List X) (basic : X → Bool) :
+    Increasing items (lexical items basic) :=
+  fun a b widens => match widens.2 with
+  | ⟨x, listed, admits, not⟩ =>
+    match exceeds_or_includes (restrict basic a) (restrict basic b) items with
+    | .inl exceeds => .inl ⟨includes_restrict basic widens.1, exceeds⟩
+    | .inr back => .inr ⟨includes_restrict basic widens.1, back,
+        includes_restrict (fun y => !basic y) widens.1,
+        ⟨x, listed, (gain_at admits not (back x listed)).1, (gain_at admits not (back x listed)).2⟩⟩
 
 end Weighting
 

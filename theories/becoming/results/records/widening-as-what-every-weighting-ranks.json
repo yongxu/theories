@@ -56,6 +56,15 @@
       ]
     },
     {
+      "en": "Lexical priority, the basic items first (a course above another where it widens it on the basic items, or admits exactly its basic items and widens it on the others), ranks every widening higher, so it lies within the classes whose shared order is widening and decides only mixed comparisons.",
+      "zh": "词典式优先，基本项在先（一条进程在基本项上扩大另一条，或恰好接纳其基本项而在其余项上扩大它，则排在其上），把每个扩大都排得更高，故在共有次序为扩大的诸类之内，只决定混合的比较。",
+      "declarations": [
+        "Becoming.Weighting.restrict",
+        "Becoming.Weighting.lexical",
+        "Becoming.Weighting.increasing_lexical"
+      ]
+    },
+    {
       "en": "Where every item a course admits beyond another weighs nothing, the two weigh the same: a weighting that leaves an item out does not rank a widening that adds only that item.",
       "zh": "一条进程超出另一条所接纳的每一项都权重为零时，两者等重：把某项排除在外的加权，不为只添这一项的扩大排序。",
       "declarations": [
@@ -239,17 +248,23 @@
         "Becoming.Weighting.StandingInvariant",
         "Becoming.Weighting.SufficientAt",
         "Becoming.Weighting.WidensOn",
+        "Becoming.Weighting.and_of_parts",
+        "Becoming.Weighting.and_parts",
         "Becoming.Weighting.concave_gap",
         "Becoming.Weighting.cond_mul",
         "Becoming.Weighting.cond_one_pos",
         "Becoming.Weighting.cond_pos",
         "Becoming.Weighting.exceeds_or_includes",
+        "Becoming.Weighting.gain_at",
+        "Becoming.Weighting.includes_restrict",
+        "Becoming.Weighting.increasing_lexical",
         "Becoming.Weighting.increasing_prior",
         "Becoming.Weighting.increasing_ranks",
         "Becoming.Weighting.le_of_strict",
         "Becoming.Weighting.level",
         "Becoming.Weighting.level_le_of_includes",
         "Becoming.Weighting.level_lt_of_includes_at",
+        "Becoming.Weighting.lexical",
         "Becoming.Weighting.lt_of_mul_lt",
         "Becoming.Weighting.mixed_either_way",
         "Becoming.Weighting.mixed_either_way_of_class",
@@ -266,6 +281,7 @@
         "Becoming.Weighting.prior_transfer",
         "Becoming.Weighting.ranks",
         "Becoming.Weighting.ranks_alike_of_gradeInvariant",
+        "Becoming.Weighting.restrict",
         "Becoming.Weighting.standingInvariant_of_gradeInvariant",
         "Becoming.Weighting.sufficient_ties",
         "Becoming.Weighting.term_le",
@@ -305,7 +321,7 @@
         "Becoming.unrestricted_atCenters_iff",
         "Becoming.withinSome"
       ],
-      "sha256": "ebad406963f387652a5e6c086e102cb0c7069ac8f8ebbb40cb1d3a1765a52452"
+      "sha256": "bad83c9cbc1745a3caa9df153bfaa5b579cb62e3a85c1ecb2fc54d8b13abe485"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Regions.lean",
@@ -313,14 +329,14 @@
       "sha256": "a360bf56d40bb977b686bd8756651357f995c5133d22cdd231ed79a71dc5899b"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json",
       "role": "receipt",
-      "sha256": "fd53371479a40d41144bb90789da0ad740bfded46e028a5b35750542dfafc699"
+      "sha256": "67b039a811c584e6830e9534e064ca22c400d553ded709a4942f7eb48aea2dfc"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "168a1cfdf5d790c678b4792cf3daa11585109ecf9f5324a99f43ce2faa287405"
+      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -340,13 +356,13 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "1634b28f3667ea88678a1b78014e2e440cd421d6721d1036c6a7763cbfbace15"
+      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261020T185635.903489Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T111912.398950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Weightings",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -364,6 +380,10 @@
     {
       "en": "21 October 2026, AP1: the class laws, so the shared order does not depend on the additive representation (study section 282); statement, the first hypothesis, the first does-not-show item and the next delta revised to match; the earlier laws are unchanged.",
       "zh": "2026年10月21日，AP1：类的诸律，故共有的次序不依赖可加的表示（研究第 282 节）；陈述、第一个假设、第一个“未表明”项与下一步随之修订；先前诸律不变。"
+    },
+    {
+      "en": "21 October 2026, AP2: lexical priority within the classes whose shared order is widening (study section 305); one law added; the statement and the earlier laws are unchanged.",
+      "zh": "2026年10月21日，AP2：词典式优先在共有次序为扩大的诸类之内（研究第 305 节）；新增一条定律；陈述与先前诸律不变。"
     }
   ]
 }

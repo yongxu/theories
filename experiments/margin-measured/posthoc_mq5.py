@@ -3,6 +3,8 @@
   python3 -I posthoc_mq5.py XLSX       writes results/mq5/posthoc-mq5.json
   python3 -I posthoc_mq5.py why XLSX   writes results/mq5/why-d1-d2.json (why D1 and D2 failed; asked after the
                                        first post hoc analyses)
+  python3 -I posthoc_mq5.py rises XLSX writes results/mq5/rises.json (whether the field's adjustment rises in both
+                                       arguments over its band, the premise of the regime's order laws)
 
   draw           why D1 failed while MQ4's form of it holds: per stock, the change in log catch on the change in log
                  level without the catch's own last level, with it (D1), and the coefficient on that last level (the
@@ -300,8 +302,61 @@ def why(xlsx):
         print('mistimed', k, json.dumps(v))
 
 
+def rises_group(stocks):
+    """The field's giving read as an adjustment A(e, r) of what is left e and the recent giving r, the premise of the
+    regime's order laws being that A rises in both over a band the step keeps.
+    free: per stock in sample, giving on E_t, r = SP_{t-1} and E_{t-1}; by the balance E_{t-1} = E_t + H_t - r, so as
+      an adjustment the slope in what is left is c_E + c_E1 and in the recent giving c_G1 - c_E1.
+    frozen: MQ5's law, (phi - lam) r + lam H + (1 - phi) g(e), rises in r (phi - lam = 0.41) and in e where the
+      stock's fitted g does: over the whole observed band, and the share of observed escapements below g's peak."""
+    free, band, share = [], 0, []
+    for st in stocks:
+        ys = mq5.insample_years(st)
+        if len(ys) >= 20:
+            co = mq5.ols_coef([mq5.gam(st, t) / st['scale'] for t in ys],
+                              mq5.state_cols(st, ys, st['kappa'], ['E', 'G1', 'E1']))
+            if co:
+                free.append((co[0] + co[2], co[1] - co[2]))
+        a, b = st['fit']
+        es = [mq5.esc(st, y) / st['scale'] for y in st['sp_years'] if y not in st['bad']]
+        up = [a + 2 * b * u > 0 for u in es]
+        band += all(up)
+        share.append(sum(up) / len(up))
+    return {'stocks': len(stocks),
+            'free': {'stocks': len(free), 'rises_in_left': sum(f[0] > 0 for f in free),
+                     'median_slope_in_left': statistics.median(f[0] for f in free) if free else None,
+                     'rises_in_recent': sum(f[1] > 0 for f in free),
+                     'median_slope_in_recent': statistics.median(f[1] for f in free) if free else None,
+                     'rises_in_both': sum(f[0] > 0 and f[1] > 0 for f in free)},
+            'frozen': {'phi_minus_lam': mq5.PHI - mq5.LAM, 'g_rises_over_whole_band': band,
+                       'median_share_of_escapements_below_peak': statistics.median(share) if share else None}}
+
+
+def rises(xlsx):
+    reg = regions(xlsx)
+    cat = mq3.method_categories(xlsx)
+    sel = mq5.selection(xlsx)
+    chosen = set(sel['chosen'].values())
+    test, _ = mq5.stocks_of(mq5.load_values(xlsx, chosen), sel['A'], cat, chosen, 'SSB')
+    A, devset = mq5.dev_assessments(xlsx)
+    ts = mq5.load_values(xlsx, devset)
+    out = {'scope': 'post hoc, after the frozen MQ5 test; a measurement of a premise, not a verdict'}
+    for name, stocks in (('test_primary', test.get('primary', [])),
+                         ('dev_SSB_primary', mq5.stocks_of(ts, A, cat, devset, 'SSB')[0].get('primary', [])),
+                         ('dev_TB_primary', mq5.stocks_of(ts, A, cat, devset, 'TB')[0].get('primary', []))):
+        out[name] = {'all': rises_group(stocks),
+                     'New Zealand': rises_group([s for s in stocks if reg.get(s['stockid']) == 'New Zealand']),
+                     'not New Zealand': rises_group([s for s in stocks if reg.get(s['stockid']) != 'New Zealand'])}
+    with open(os.path.join(mq5.OUT, 'rises.json'), 'w') as f:
+        json.dump(out, f, indent=1)
+    for name in ('test_primary', 'dev_SSB_primary', 'dev_TB_primary'):
+        print(name, json.dumps(out[name]['all']))
+
+
 if __name__ == '__main__':
     if sys.argv[1] == 'why':
         why(sys.argv[2])
+    elif sys.argv[1] == 'rises':
+        rises(sys.argv[2])
     else:
         main(sys.argv[1])

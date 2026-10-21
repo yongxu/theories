@@ -296,7 +296,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
       "role": "integration",
-      "sha256": "0e613aa07a836913dcf07dcc8a96d98fca85f9b85d65209bac3fa0a5c3397fc2"
+      "sha256": "83bf4a6b6028e205e0468b9c34aa1e0c9fb61cc863a1ba2bfa116b5796643336"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
@@ -306,12 +306,12 @@
     {
       "path": "experiments/margin-measured/README.md",
       "role": "integration",
-      "sha256": "767bdae047a5b6c860d55516cff595b06d8e60f66d620e59f0f9e2e78c30a3fd"
+      "sha256": "7cef043372ae46e4c10f8c90e8f456c2714b362abbb8086a755aa8db09cd9811"
     },
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "85122d33803455f4f74b7b9376e7bb01a23e20de153cab6369e3fa58f65b83f1"
+      "sha256": "9bbc6daf8011b4b5c302dd5eb794c9130ffdd73ac82e2d72929c61f0ac9e3baf"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T095626.485439Z/verification.json",
@@ -386,8 +386,8 @@
       "zh": "2026年10月21日，RM5：此处留下的实数上的收敛，对带内上升的调整已陈述，并有运行不必静止的见证（记录 regime-in-any-amounts，研究第 302 节）；本记录所不表明者与其下一步现已如此说明。其规律不变。"
     },
     {
-      "en": "21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 304); what this record does not show and its next delta now say what stays open. Its laws are unchanged.",
-      "zh": "2026年10月21日，RM6：此处留下的相互耦合条件，对体制之步下的两个条件已陈述（记录 coupled-regimes，研究第 304 节）；本记录所不表明者与其下一步现已说明仍开放者。其规律不变。"
+      "en": "21 October 2026, RM6: coupled conditions, left open here, are stated for two conditions under the regime's step (record coupled-regimes, study section 306); what this record does not show and its next delta now say what stays open. Its laws are unchanged.",
+      "zh": "2026年10月21日，RM6：此处留下的相互耦合条件，对体制之步下的两个条件已陈述（记录 coupled-regimes，研究第 306 节）；本记录所不表明者与其下一步现已说明仍开放者。其规律不变。"
     }
   ]
 }

@@ -67,6 +67,11 @@ History added nothing to the break-day distribution, and the same test detected 
   - every run within a band comes to rest (`Adjusted.comes_to_rest`);
   - the point of no return is a curve in the plane of level and recent giving (`Adjusted.falls_iff_below`);
   - none of this needs counted amounts (`RegimeReals`).
+- **Where the formal laws reach the field.** The laws that order runs and fates, from rest through the curve to convergence, assume the adjustment rises in both what is left and the recent giving. Read through the balance as an adjustment, the field's giving meets this assumption only partly (post hoc, MQ5 stocks, [`rises.json`](results/mq5/rises.json)):
+  - it rises in the recent giving in 65 of 69 stocks (median slope 0.66; development 125 of 142);
+  - it does not rise in what is left over the whole band: the one-step fit has no slope there (median −0.01), and each stock's fitted level law is humped, rising over a median 41% of its observed escapements and over the whole band in only 4 of 69.
+
+  So the order laws reach the field's state on the low side of its level law, below the peak, where the point of no return lies. Rests at or above the draw are the regime's on either side, since that law needs no rising.
 
 ### 4. Time to break: bounded in the model, ranked but not timed in the field
 
