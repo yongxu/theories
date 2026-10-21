@@ -250,6 +250,10 @@ def validate(cov: dict, decls: dict, record_ids: set) -> list[str]:
     for name in named:
         if name not in decls:
             errors.append(f'coverage: {name} is not a declaration of the core receipt')
+    for law in cov.get('master_laws', []):
+        for a in law.get('anchors', []):
+            if a not in decls:
+                errors.append(f'coverage: master law {law.get("id")}: anchor {a} is not a declaration of the core')
     return errors
 
 
@@ -489,6 +493,7 @@ def evaluate() -> dict:
         'met': {k: not v for k, v in criteria.items()}, 'findings': criteria,
         'rows': cov['rows'], 'natural_number_laws': cov['representation']['natural_number_laws'], 'premises_used': used, 'logical_premises': [p for p in cov['premises']['items'] if p.get('kind') == 'logical'], 'modelling': tags, 'parameters': params,
         'chain_start': cov['ethics_chain']['steps'][0], 'chain': links, 'normative_hypotheses': normative, 'open_items': items,
+        'master_laws': {'laws': cov['master_laws'], 'measured': conn.get('master_laws')} if cov.get('master_laws') else None,
     }
 
 
@@ -543,6 +548,28 @@ def render_report(result: dict) -> str:
             out += [f'Section 8.1 has {len(result["open_items"])} items: ' + '; '.join(
                 f'{i["n"]} ({i["class"]})' for i in result['open_items']) + '.', '']
         out += [f'- {f}' for f in result['findings'][k]] or ['No finding.']
+    ml = result.get('master_laws')
+    if ml and ml.get('measured'):
+        rows = ml['measured']['rows']
+        names = {r['id']: r['name'] for r in result['rows']}
+        total = sum(len(r['declarations']) for r in rows)
+        none = [(names.get(r['row'], r['row']), e['declaration']) for r in rows for e in r['declarations'] if not e['laws']]
+        out += ['', '<a id="master-laws"></a>', '## The master laws (EC, not a criterion)', '',
+                'Board item EC aims at an elegant completion: few laws, each stated once at the lowest layer, every central '
+                'result following from them (board rule 9). For each central declaration of the coverage file, the master '
+                'laws among its reasons: an anchor of the law that its type or value reaches in the compiled environment, '
+                'directly or through other constants, as the connectivity measure of the commit above records it '
+                '(`THEOREM-CONNECTIVITY.json`, `master_laws`). A measurement of dependency, not of meaning; it is not a criterion of K1–K7. '
+                f'Counted per row: {total - len(none)} of {total} central declarations rest on at least one master law.', '',
+                '| Law | Statement | Anchors | Central declarations resting on it |', '|---|---|---|---:|']
+        for law in ml['laws']:
+            n = sum(1 for r in rows for e in r['declarations'] if e['laws'] and law['id'] in e['laws'])
+            out.append(f'| {law["name"]} | {law["statement"]} | ' + ', '.join('`' + a.removeprefix('Becoming.') + '`' for a in law['anchors']) + f' | {n} |')
+        out += ['', f'Resting on no master law ({len(none)}), by row:', '']
+        by_row = collections.defaultdict(list)
+        for r, d in none:
+            by_row[r].append(d)
+        out += [f'- {r}: ' + ', '.join('`' + d.removeprefix('Becoming.') + '`' for d in ds) for r, ds in by_row.items()]
     return '\n'.join(out) + '\n'
 
 

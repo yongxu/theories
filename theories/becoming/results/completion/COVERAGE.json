@@ -946,5 +946,54 @@
         "note": "every flow is the flow of a world, whose history is a run"
       }
     ]
-  }
+  },
+  "master_laws": [
+    {
+      "id": "closure",
+      "name": "Closure",
+      "statement": "what a relation carries reaches exactly its closure, and nothing within a closure bears the relation to what lies beyond it",
+      "anchors": [
+        "Becoming.WithinClosure"
+      ]
+    },
+    {
+      "id": "balance",
+      "name": "Balance",
+      "statement": "a level changes by what is given and taken, at each step and over every stretch",
+      "anchors": [
+        "Becoming.Flow.Balances",
+        "Becoming.Flow.BalancesOn",
+        "Becoming.balance_over_stretch_on"
+      ]
+    },
+    {
+      "id": "return",
+      "name": "Finite runs",
+      "statement": "within finitely many configurations a law returns every configuration or is drawn, and rest is a case of being drawn",
+      "anchors": [
+        "Becoming.Branching.Returns",
+        "Becoming.Branching.Lossless",
+        "Becoming.revisits_within",
+        "Becoming.Amounts.rests",
+        "Becoming.Amounts.FallsStop"
+      ]
+    },
+    {
+      "id": "lumping",
+      "name": "Lumping",
+      "statement": "a part read alone carries a law exactly where the rest makes no difference to its next value",
+      "anchors": [
+        "Becoming.GoAlikeUnder"
+      ]
+    },
+    {
+      "id": "order",
+      "name": "Order",
+      "statement": "widening is retaining and adding; the ethics adds two premises, the continuation condition for scope and C for order",
+      "anchors": [
+        "Becoming.Web.Widens",
+        "Becoming.Weighting.WidensOn"
+      ]
+    }
+  ]
 }

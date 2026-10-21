@@ -1,0 +1,38 @@
+## @N@. The master laws, stated and measured (EC5)
+
+Board item EC, its fifth step; documents and tools, no Lean and no checker run.
+
+**What changed.**
+- **The chapter's preface states the master laws** (EN and ZH), each with its anchor and its sections: closure, balance, finite runs, lumping and order, with the ethics' two premises placed at order (scope read as connectivity of the relation that carries significance, D61) and the counts below.
+- **The measure runs at every landing.**
+  - `THEOREM-CONNECTIVITY.py` reads the master laws and their anchors from the coverage file (`COVERAGE.json`, `master_laws`). For each central declaration it records the laws whose anchors its type or value reaches in the compiled environment (`THEOREM-CONNECTIVITY.json`, `master_laws`).
+  - `completion.py` renders the counts and the declarations resting on none in a section of the completion report (`COMPLETION.md#master-laws`). The section is marked as not a criterion of K1–K7.
+  - `completion.py`'s validation rejects an anchor that is not a declaration of the core. A test covers it (`test_validation_reports_unknown_master_law_anchors`).
+- **The anchors are completed.** Finite runs gains the rest law and its premise (`Amounts.rests`, `Amounts.FallsStop`, LC3, study §308). Order gains widening on a listing (`Weighting.WidensOn`), the form in which C is what every positive weighting shares. The counts of studies §307 and §312 used the narrower anchors.
+- **The measure moved out of the kit.** The kit's `measure.py` stays as the record of how the measure was first taken; it gives the same counts.
+
+**The measure on this commit.** Of the @T@ central declarations, @ON@ rest on at least one master law (@BY@), and @NONE@ rest on none. The report lists the @NONE@ by row.
+
+**A first reading of what rests on none (AI-written, from the statements; each class is checked when its step is claimed).**
+- *Definitional characterizations.* No master law is needed for these.
+  - The roles of a web: `Web.roles_supported`, `Web.roles_dependent`, `Web.roles_alive`.
+  - Other unfoldings of definitions: `partForms_iff`, `Dependence.differenceOnlyTogether_iff`, `Dependence.Overdetermined.only_together`, `Viability.kernel_and_iff`, `Web.renewingAt_iff_over_all`, `Valuation.significant_iff_held`, `unrestricted_iff_livingSignificance`, `Web.significance_undetermined`.
+- *Levels whose step draws a level down, with their own arithmetic, not yet derived through balance.*
+  - The optimum and frontier laws over courses: `Optimum.optimum_beyond`, `Optimum.mutual_beyond`, `Web.optimum_broken_iff`, `Web.course_lost_iff`, `Web.frontier_exhausts`, `Web.frontier_rebuilds`, `Web.Next.frontier_ends_drawn_first`.
+  - The regime laws: `RegimeMargin.*`.
+  - `RelativePosition.rise_needs_fall`, `carried_iff_rising`, `responses_le_missBound`.
+
+  Their step is a level with what is given less what is drawn, which is balance by construction. Deriving them through `Flow.Balances` or the stretch balance is the next balance step.
+- *Selection over generations.* `Flow.selection_within`, `Flow.transmitted_supported`, `Flow.selected_le`, `Web.transmits_at_iff`, `SelectionTerm.*`, `Reproduction.Flow.number_within_take`, `SelectionLevels.*`, `GroupEnding.*` and `Drift.falls_back` count descendants across generations with their own totals. Whether those totals are a balance of what is given and taken across generations is the next question.
+- *Reach over runs or relations by its own induction.* These are candidates for the frame's closure or for finite runs.
+  - `Run.not_fixes_of_untaken`, `Ideals.verifiableBy_iff_interior`, `Limit.identifies_iff_tracks`, `Learning.Training.unselected_beyond_data`.
+  - `onLoop_of_closing`, `WithinMoves.after_course`, `Renewable.no_exact_finite_reading`, `SharedCodes.run_agrees_every_start_iff`, `ExchangeLaw.response_not_fixed_by_coupling`.
+  - `Web.living_on_reaches` and `Flow.descent_reaches`: significance passing one link.
+  - `Withholding.withholding_spreads`, `Pace.rule_until_reading`.
+- *Laws read off a law's own run.* `Tolerance.answers_restores_iff`, `RuleCapture.favouring_locks`, `RuleCapture.uniform_locks`, `ClosedCapture.lock_outlives_loss` and `CensusWebs.keep_pace`. Whether each is finite runs or lumping is open.
+
+**Delta.** The master laws are stated once in the chapter, and the measure is part of every landing, so the aim of an elegant completion has a count that moves with the work. No result changes.
+
+**Boundary.** This is a measurement of dependency, not of meaning, and elegance is not a criterion of K1–K7. The first reading of what rests on none is a plan, not a finding: each class is checked when its step is claimed.
+
+**Output → input.** EC3 (finite runs, on LC3's `Amounts.FallsStop`), the balance step for the optimum and regime laws, the generations question and the closure step for runs, each claimed on the board before its Lean.

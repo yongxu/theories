@@ -101,9 +101,18 @@ class RegisterTests(unittest.TestCase):
         decls.update({x: {} for c in cov.get('unity', {}).get('constructions', []) for x in c['declarations']})
         decls.update({n: {} for n in cov['ethics_chain']['steps']})
         decls.update({x[k]: {} for x in cov['representation']['natural_number_laws'] for k in ('law', 'dense') if x.get(k)})
+        decls.update({a: {} for law in cov.get('master_laws', []) for a in law['anchors']})
         records = {r for row in cov['rows'] for r in row['records']} - {'no-such-record'}
         errors = completion.validate(cov, decls, records)
         self.assertEqual(len(errors), 2, errors)
+
+    def test_validation_reports_unknown_master_law_anchors(self):
+        cov = json.loads((ROOT / completion.COVERAGE).read_text())
+        decls = completion.sources()
+        records = {p.stem for p in (ROOT / completion.RECORDS).glob('*.json')}
+        cov['master_laws'] = cov['master_laws'] + [{'id': 'none', 'name': 'None', 'statement': '', 'anchors': ['Becoming.no_such_anchor']}]
+        errors = completion.validate(cov, decls, records)
+        self.assertEqual(errors, ['coverage: master law none: anchor Becoming.no_such_anchor is not a declaration of the core'])
 
 
 class RepositoryTests(unittest.TestCase):
