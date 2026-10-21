@@ -135,6 +135,25 @@ it). The family `ds` is what couples in, `rest` the conditions beyond, listed ap
   optimum and breaks the dweller at the first step (`Holding.logistic_broken`); under a gate
   renewing one unit at every level from one, the courses holding the source at the dweller's need
   and below it are both optima and take the same (`Holding.gated_alike`).
+* **Valuing what is left at the horizon.** What a course draws across `n + 1` steps with what it
+  leaves after them is at most the start with what is given there and `r` for each step after
+  (`Optimum.drawn_add_left_le_most`, `Optimum.open_left_le_most`), exactly where `r` is given at
+  every step after the first, whatever is left (`Optimum.most_left_iff`). So where a level `y` of
+  greatest renewal is within reach and the capacity covers what the first step draws down to it and
+  `r`, over any horizon, every optimum of every order rising with what is drawn and left alike
+  stands at a level of greatest renewal at every step from the first to the `n`-th
+  (`Optimum.frontier_holds_left`), and the optima of the order by what is drawn and left
+  (`Optimum.byDrawnLeft`) are exactly the open courses doing so (`Optimum.frontier_left_iff`). The
+  course standing at `y` at every step after the start is one (`Optimum.keeping_frontier_left`,
+  `Optimum.holdingTo_same`), and where the capacity covers `y` with `r` over at least two steps so
+  is the course drawing `y` down to nothing at the last step (`Optimum.holding_frontier_left`):
+  valuing what is left as much as what is drawn makes the last step's draw indifferent, neither
+  forced nor forbidden. Where `y` is positive the course keeping it is no optimum of the order by
+  what is drawn alone (`Optimum.keeping_not_frontier`). A dependence every level of greatest
+  renewal meets stands through the horizon under every such optimum (`Web.frontier_kept_left`) and
+  past it along the keeping course; one above every such level is broken at the first step and
+  unmet through the horizon as before (`Web.frontier_broken_left`): what is left at the end is
+  valued, not what depends on the levels passed through.
 * **What keeping a dependence forgoes.** Where what is given at every level at or above a need `m`
   is at most `q`, what a course keeping the condition at `m` or above through the horizon draws,
   with what it leaves, is at most the start with what is given there and `q` for each step after
@@ -286,6 +305,14 @@ far-sighted optimizer's gain from breaking the dependence grows with how far it 
 added for each step the dependence is kept does not erode so: at the renewal forgone a step and
 above the need it keeps the dependence at every horizon, and below the need the horizon's end
 breaks it, at the last step alone where the coupling exceeds the renewal forgone a step.
+Valuing what is left at the horizon one for one with what is drawn is a terminal value of the stock
+at its worth in the draw, the salvage value of a finite-horizon problem in optimal control: with it
+the drain at the end is no longer forced, and the course holding a level of greatest renewal
+through the horizon and past it, the steady yield, is an optimum. What the spine's form adds: every
+optimum of every order rising with what is drawn and left holds such a level through the horizon,
+the optima of the order by what is drawn and left are exactly the open courses doing so, the
+capacity need cover only the renewal, and the terminal value removes the end's drain and nothing
+else: a dependence whose need lies above every such level is broken at the first step as before.
 Weighting later draws less is discounting (Ramsey 1928; Koopmans 1960). A level gains, weighted,
 `w (t + 1) (z + R z)` less `w t z`; at a constant rate `δ`, `w t = (1 + δ) w (t + 1)`, that is
 `w (t + 1) (R z - δ z)`, so a level of greatest weighted gain is one of greatest renewal less `δ`
@@ -324,7 +351,8 @@ may give what it takes to any condition of that family (a member giving only to 
 covered); over a course, against a renewal varying with the level, the optimum where a level of
 greatest gain is out of one step's reach and the next level does not rise with the level
 below it, or the capacity cannot draw down to it in one step or draw everything at the
-horizon's last step, an order valuing what is left at the horizon (a terminal value), the
+horizon's last step, an order valuing what is left at the horizon at another worth than what
+is drawn, the
 weighted optimum where no course gains the most against every open course, whether others' draws,
 supplied as a rule reading the level, are themselves a best response, so several optimizers each
 ranking courses at a mutual best response, and how optimizers come to one; for several optimizers,
@@ -3252,6 +3280,33 @@ theorem most_iff (within : ∀ t, x (t + 1) ≤ x t + g t) (renews : ∀ t, g t 
     rw [left, none] at whole
     exact whole⟩
 
+/-- **What a course draws and leaves, at most.** Where each step leaves at most the level with what
+is given and at most `r` is given at each step, what a course draws across `n + 1` steps with what
+stands after them is at most the starting level with what is given at the first step and `r` for each
+step after. -/
+theorem drawn_add_left_le_most (within : ∀ t, x (t + 1) ≤ x t + g t) (renews : ∀ t, g t ≤ r)
+    (n : Nat) :
+    Amounts.whole.sum (drawnAt x g) 0 (n + 1) + x (n + 1) ≤ x 0 + g 0 + r * n :=
+  Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq (drawn_add_shortfall_after within renews n))
+
+/-- **Exactly which courses draw and leave the most.** Where each step leaves at most the level with
+what is given and at most `r` is given at each step, what a course draws across `n + 1` steps with
+what stands after them is the starting level with what is given at the first step and `r` for each
+step after exactly where `r` is given at every step after the first, whatever stands after the last. -/
+theorem most_left_iff (within : ∀ t, x (t + 1) ≤ x t + g t) (renews : ∀ t, g t ≤ r) (n : Nat) :
+    Amounts.whole.sum (drawnAt x g) 0 (n + 1) + x (n + 1) = x 0 + g 0 + r * n ↔
+      ∀ t, t < n → g (t + 1) = r :=
+  have whole := drawn_add_shortfall_after within renews n
+  ⟨fun most =>
+    have none : Amounts.whole.sum (fun t => r - g (t + 1)) 0 n = 0 :=
+      add_left_cancel_of (whole.trans (most.symm.trans (Nat.add_zero _).symm))
+    fun t lt => Nat.le_antisymm (renews (t + 1)) (le_of_sub_zero (sum_eq_zero_iff.mp none t lt)),
+   fun renewed => by
+    have none : Amounts.whole.sum (fun t => r - g (t + 1)) 0 n = 0 :=
+      sum_eq_zero_iff.mpr fun t lt => (congrArg (r - ·) (renewed t lt)).trans (Nat.sub_self r)
+    rw [none] at whole
+    exact whole⟩
+
 end Horizon
 
 /-- What a course of levels `x` draws across `n` steps where `R` gives at each level. -/
@@ -3423,6 +3478,119 @@ theorem frontier_holds {better : (Nat → Nat) → (Nat → Nat) → Prop}
   (most_iff (fun t => (front.1.2 t).1) (fun t => renews (x t)) n).mp
     (Eq.subst (motive := fun z => drawnOver R x (n + 1) = z + R z + r * n) front.1.1.symm most)
 
+/-! ### Valuing what is left at the horizon -/
+
+/-- The order of courses by what they draw across `n + 1` steps with what they leave after them,
+valued alike: more is better. -/
+def byDrawnLeft (R : Nat → Nat) (n : Nat) (b a : Nat → Nat) : Prop :=
+  drawnOver R a (n + 1) + a (n + 1) < drawnOver R b (n + 1) + b (n + 1)
+
+/-- No open course draws and leaves across `n + 1` steps more than the start with what is given there
+and `r` for each step after, where `R` gives at most `r`. -/
+theorem open_left_le_most (renews : ∀ z, R z ≤ r) {x : Nat → Nat} (opens : OpenCourse R k s x)
+    (n : Nat) : drawnOver R x (n + 1) + x (n + 1) ≤ s + R s + r * n :=
+  Eq.subst (motive := fun z => drawnOver R x (n + 1) + x (n + 1) ≤ z + R z + r * n) opens.1
+    (drawn_add_left_le_most (fun t => (opens.2 t).1) (fun t => renews (x t)) n)
+
+/-- The course holding `y` and leaving it stands at `y` at every step after its start. -/
+theorem holdingTo_same (t : Nat) : holdingTo s y y n (t + 1) = y :=
+  match Nat.lt_or_ge t n with
+  | .inl before => holdingTo_before before
+  | .inr after => holdingTo_after after
+
+/-- **A course holding a level of greatest renewal and leaving it draws and leaves the most.** Where
+`R` gives at most `r` at every level and `r` at `y`, within the start with what is given there, the
+course holding `y` and leaving it draws across `n + 1` steps, with what it leaves after them, the
+start with what is given there and `r` for each step after. -/
+theorem keeping_left_most (renews : ∀ z, R z ≤ r) (greatest : R y = r) (reach : y ≤ s + R s)
+    (n : Nat) :
+    drawnOver R (holdingTo s y y n) (n + 1) + holdingTo s y y n (n + 1) = s + R s + r * n :=
+  (most_left_iff (x := holdingTo s y y n) (g := fun t => R (holdingTo s y y n t))
+    (holdingTo_within reach (Nat.le_refl y)) (fun _ => renews _) n).mpr
+    fun t _ => (congrArg R (holdingTo_same t)).trans greatest
+
+/-- **The course holding a level of greatest renewal and leaving it is open**, over any horizon, with
+a capacity covering what the first step draws down to it and `r`: after the first step it draws only
+what is given. -/
+theorem keeping_open (greatest : R y = r) (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k)
+    (holds : r ≤ k) : OpenCourse R k s (holdingTo s y y n) :=
+  ⟨rfl, fun t => ⟨holdingTo_within reach (Nat.le_refl y) t, match t with
+    | 0 => drawnAt_le_of (Nat.le_trans drawsDown
+        (Nat.le_of_eq (congrArg (· + k) (holdingTo_same 0).symm)))
+    | j + 1 => drawnAt_le_of (by
+        show holdingTo s y y n (j + 1) + R (holdingTo s y y n (j + 1)) ≤
+          holdingTo s y y n (j + 1 + 1) + k
+        rw [holdingTo_same j, holdingTo_same (j + 1), greatest]
+        exact Nat.add_le_add_left holds y)⟩⟩
+
+/-- **Keeping is an optimum when what is left is valued.** The course holding a level of greatest
+renewal and leaving it is an optimum of the order by what is drawn and left alike. -/
+theorem keeping_frontier_left (renews : ∀ z, R z ≤ r) (greatest : R y = r) (reach : y ≤ s + R s)
+    (drawsDown : s + R s ≤ y + k) (holds : r ≤ k) :
+    Frontier (OpenCourse R k s) (byDrawnLeft R n) (holdingTo s y y n) :=
+  ⟨keeping_open greatest reach drawsDown holds, fun _ opens more =>
+    Nat.not_le_of_gt more (Nat.le_trans (open_left_le_most renews opens n)
+      (Nat.le_of_eq (keeping_left_most renews greatest reach n).symm))⟩
+
+/-- **Draining at the end is an optimum too.** The course holding a level of greatest renewal and
+leaving nothing is an optimum of the order by what is drawn and left alike: valuing what is left as
+much as what is drawn makes the last step's draw indifferent. -/
+theorem holding_frontier_left (renews : ∀ z, R z ≤ r) (greatest : R y = r) (reach : y ≤ s + R s)
+    (drawsDown : s + R s ≤ y + k) (holds : y + r ≤ k) (long : 0 < n) :
+    Frontier (OpenCourse R k s) (byDrawnLeft R n) (holding s y n) :=
+  ⟨holding_open renews greatest reach drawsDown holds long, fun _ opens more =>
+    Nat.not_le_of_gt more (Nat.le_trans (open_left_le_most renews opens n)
+      (Nat.le_of_eq ((congr (congrArg HAdd.hAdd (holding_most renews greatest reach n))
+        (holding_after (Nat.le_refl n))).trans (Nat.add_zero _)).symm))⟩
+
+/-- **Without valuing what is left, keeping is no optimum.** Where a level of greatest renewal is
+positive, the course holding it and leaving it is not an optimum of the order by what is drawn alone,
+whose every optimum leaves nothing (`frontier_holds`). -/
+theorem keeping_not_frontier (renews : ∀ z, R z ≤ r) (greatest : R y = r) (reach : y ≤ s + R s)
+    (drawsDown : s + R s ≤ y + k) (holds : y + r ≤ k) (long : 0 < n) (positive : 0 < y) :
+    ¬ Frontier (OpenCourse R k s) (byDrawn R n) (holdingTo s y y n) := fun front =>
+  Nat.lt_irrefl 0 (Eq.subst (motive := fun z => 0 < z)
+    ((holdingTo_after (Nat.le_refl n)).symm.trans
+      (frontier_holds renews (fun _ _ more => more) greatest reach drawsDown holds long front).1)
+    positive)
+
+/-- **Every optimum valuing what is left holds a level of greatest renewal to the horizon.** Where `R`
+gives at most `r` at every level and `r` at some `y` within the start with what is given there, over
+any horizon, with a capacity covering what the first step draws down to `y` and `r`, every optimum of every order on the courses open from the start that rises with what is
+drawn across `n + 1` steps and what is left after them, valued alike, stands at a level of greatest
+renewal at every step from the first to the `n`-th; what it leaves is not fixed. -/
+theorem frontier_holds_left {better : (Nat → Nat) → (Nat → Nat) → Prop}
+    (renews : ∀ z, R z ≤ r)
+    (rising : ∀ a b, drawnOver R a (n + 1) + a (n + 1) < drawnOver R b (n + 1) + b (n + 1) →
+      better b a)
+    (greatest : R y = r) (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k)
+    (holds : r ≤ k) {x : Nat → Nat}
+    (front : Frontier (OpenCourse R k s) better x) : ∀ t, t < n → R (x (t + 1)) = r :=
+  have most : drawnOver R x (n + 1) + x (n + 1) = s + R s + r * n :=
+    Nat.le_antisymm (open_left_le_most renews front.1 n)
+      (match Nat.lt_or_ge (drawnOver R x (n + 1) + x (n + 1)) (s + R s + r * n) with
+      | .inl less => absurd (rising x (holdingTo s y y n) (Nat.lt_of_lt_of_le less
+          (Nat.le_of_eq (keeping_left_most renews greatest reach n).symm)))
+          (front.2 _ (keeping_open greatest reach drawsDown holds))
+      | .inr ge => ge)
+  (most_left_iff (fun t => (front.1.2 t).1) (fun t => renews (x t)) n).mp
+    (Eq.subst (motive := fun z => drawnOver R x (n + 1) + x (n + 1) = z + R z + r * n)
+      front.1.1.symm most)
+
+/-- **Exactly the optima valuing what is left.** Under the same conditions, the optima of the order by
+what is drawn and left alike are exactly the open courses standing at a level of greatest renewal at
+every step from the first to the `n`-th. -/
+theorem frontier_left_iff (renews : ∀ z, R z ≤ r) (greatest : R y = r) (reach : y ≤ s + R s)
+    (drawsDown : s + R s ≤ y + k) (holds : r ≤ k) {x : Nat → Nat} :
+    Frontier (OpenCourse R k s) (byDrawnLeft R n) x ↔
+      OpenCourse R k s x ∧ ∀ t, t < n → R (x (t + 1)) = r :=
+  ⟨fun front => ⟨front.1,
+     frontier_holds_left renews (fun _ _ more => more) greatest reach drawsDown holds front⟩,
+   fun ⟨opens, renewed⟩ => ⟨opens, fun _ opens' more => Nat.not_le_of_gt more
+     (Nat.le_trans (open_left_le_most renews opens' n) (Nat.le_of_eq
+       (Eq.subst (motive := fun z => drawnOver R x (n + 1) + x (n + 1) = z + R z + r * n) opens.1
+         ((most_left_iff (fun t => (opens.2 t).1) (fun t => renews (x t)) n).mpr renewed)).symm))⟩⟩
+
 end Optimum
 
 namespace Flow
@@ -3565,6 +3733,43 @@ theorem frontier_kept (renews : ∀ z, R z ≤ r)
     | t + 1, le => meets _ (held.2 t (Nat.lt_of_succ_le le))
   ⟨stands, depends, Nat.le_trans (Nat.le_of_eq need) (stands n (Nat.le_refl n)),
     Nat.lt_of_le_of_lt (Nat.le_of_eq held.1) (Nat.lt_of_lt_of_le needs (Nat.le_of_eq need.symm))⟩
+
+/-- **Valuing what is left, far-sight keeps a dependence every level of greatest renewal meets through
+the horizon.** Under the conditions of `frontier_kept`, with a capacity covering what the first step
+draws down to `y` and `r`, over any horizon and with no positive need, under every optimum of every order rising with
+what is drawn and what is left alike, the dependence stands at every step to the `n`-th. The course
+standing at `y` at every step after the start is such an optimum (`Optimum.keeping_frontier_left`,
+`Optimum.holdingTo_same`), keeping the dependence past the horizon, where under the order by what is
+drawn alone every optimum breaks it at the last step (`frontier_kept`). -/
+theorem frontier_kept_left (renews : ∀ z, R z ≤ r)
+    (rising : ∀ a b, drawnOver R a (n + 1) + a (n + 1) < drawnOver R b (n + 1) + b (n + 1) →
+      better b a)
+    (greatest : R y = r) (reach : y ≤ W.level 0 c + R (W.level 0 c))
+    (drawsDown : W.level 0 c + R (W.level 0 c) ≤ y + k) (holds : r ≤ k)
+    (front : Frontier (OpenCourse R k (W.level 0 c)) better fun t => W.level t c)
+    (meets : ∀ z, R z = r → m ≤ z) (start : m ≤ W.level 0 c) :
+    ∀ t, t ≤ n → m ≤ W.level t c := fun t le => match t, le with
+  | 0, _ => start
+  | t + 1, le => meets _ (frontier_holds_left renews rising greatest reach drawsDown holds front t
+      (Nat.lt_of_succ_le le))
+
+/-- **Valuing what is left does not reach a dependence above every level of greatest renewal.** Under
+the conditions of `frontier_broken`, with a capacity covering what the first step draws down to `y`
+and `r`, every optimum of every order rising with what is drawn and what
+is left alike breaks the dependence at the first step and leaves it unmet to the `n`-th. -/
+theorem frontier_broken_left (renews : ∀ z, R z ≤ r)
+    (rising : ∀ a b, drawnOver R a (n + 1) + a (n + 1) < drawnOver R b (n + 1) + b (n + 1) →
+      better b a)
+    (greatest : R y = r) (reach : y ≤ W.level 0 c + R (W.level 0 c))
+    (drawsDown : W.level 0 c + R (W.level 0 c) ≤ y + k) (holds : r ≤ k) (long : 0 < n)
+    (front : Frontier (OpenCourse R k (W.level 0 c)) better fun t => W.level t c)
+    (above : ∀ z, R z = r → z < m) (depends : W.requires 0 f c) (need : W.need 0 f c = m)
+    (start : m ≤ W.level 0 c) :
+    W.Broken 0 f c ∧ ∀ t, t < n → W.level (t + 1) c < m :=
+  have unmet : ∀ t, t < n → W.level (t + 1) c < m := fun t before =>
+    above _ (frontier_holds_left renews rising greatest reach drawsDown holds front t before)
+  ⟨⟨depends, Nat.le_trans (Nat.le_of_eq need) start,
+    Nat.lt_of_lt_of_le (unmet 0 long) (Nat.le_of_eq need.symm)⟩, unmet⟩
 
 end Web
 

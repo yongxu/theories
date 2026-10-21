@@ -1421,6 +1421,13 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   one they all meet is kept to the horizon and broken there. Witnesses: the logistic law,
   whose optimum draws a source from the level a dweller needs to where it renews most, and a
   gate, under which holding at the dweller's need and below it are both optima.
+  Valuing what is left after the horizon alike with what is drawn, the courses ranked most
+  are exactly those holding a level of greatest renewal through the horizon, whatever they
+  leave, and every optimum is one where such a level is within reach and the capacity
+  covers the renewal: the course keeping that level past the horizon is an optimum, as is
+  the one drawing it down at the end, so the drain at the end is no longer forced; a
+  dependence every such level meets is kept to the horizon, and one above them all is
+  broken at the first step as before.
   Kept at a need through the horizon, where what is given at or above the need is at most q,
   a course draws with what it leaves at most the start with q a step, and the optima among
   the keeping courses hold where q is given and leave exactly the need; so keeping forgoes,
