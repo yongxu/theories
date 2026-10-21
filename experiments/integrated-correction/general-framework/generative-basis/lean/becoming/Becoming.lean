@@ -1490,6 +1490,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   alone an optimum may keep the dweller; in turn every perfect profile breaks it at once.
   Revising toward best responses, from any profile, both come to leave nothing at every step
   within twice the horizon. Witness: from restraint under the gate, revision breaks the dweller.
+  Where capacities limit a draw, each draws to capacity at the last step and wherever what the
+  other draws after is fixed; with no limit this is the perfect profile. Witness: under doubling, a
+  one-unit limit on the second makes leaving everything the first's best response, keeping the dweller.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
