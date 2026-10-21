@@ -32,6 +32,8 @@ Board item EC, its third step (the master law of finite runs, its rest part). Co
 
 **Evidence.** The checker run `@RECEIPT@` passed with every axiom report empty. The connectivity measure is recorded below.
 
+**The measure.** It is unchanged: 63 of 127 central declarations rest on no master law. The rest results already rested on the finite-runs law, and now each rests on one proof of it instead of two.
+
 **Boundary.** This is a restructuring of proofs and a move of declarations with their names; no record's claim changes. Records citing a moved declaration cite it under the module that now holds it, and records citing a duplicate name cite the theorem it restated.
 
 **Output → input.** The finite-runs law has one rest theorem. What remains of EC's list is in the completion report's master-laws section.
