@@ -33,7 +33,7 @@ EN_ANCHOR = ('None of the ten is new mathematics: each is near-definitional or a
              'vocabulary, and [the relation to known results](#relation-to-known-results) names the closest prior result of each.\n')
 EN = EN_ANCHOR + f'''
 <a id="master-laws"></a>
-**The master laws.** Five laws are each stated once, at the lowest layer that holds them, and the central results that rest on one are proved through it rather than beside it (board item EC, [study §{N}]({SA})):
+**The master laws.** Five master laws carry what the central results share. Each is stated at the lowest layer that holds it, and the central results that rest on one are proved through it rather than beside it (board item EC, [study §{N}]({SA})):
 - *Closure* (`WithinClosure`, in the frame). What a relation carries reaches exactly its closure, and nothing within a closure bears the relation to what lies beyond it. A process's reach is the closure of its steps (`reach_iff_withinClosure`). Feeding, influence, reach, the system, coupling and pooled coupling are this closure under their relations (§2.5, §3.4), and so is the scope that the two neutralities force (`Valuation.forced_iff_reach`, §6.5).
 - *Balance* (`Flow.Balances`; over a stretch, `balance_over_stretch_on` in the prelude). A level changes by what is given and taken, at each step and over every stretch (§2.1–§2.3).
 - *Finite runs* (`Branching.Returns`, `revisits_within`; rest, `Amounts.rests`). Within finitely many configurations a law returns every configuration or is drawn, and rest comes where an amount's falls stop (`Amounts.FallsStop`; §1.2, §1.3).
@@ -50,7 +50,7 @@ z = (ROOT / ZH).read_text(encoding='utf-8')
 i = z.index(ZH_ANCHOR)
 j = z.index('\n', i) + 1
 ZH_TEXT = f'''
-**主律。** 五条律各只陈述一次，置于能容纳它的最低一层；依于其中一条的中心结果经它证明，而不在其旁另证（工作项 EC，[研究第 {N} 节]({SA})）。
+**主律。** 五条主律承载中心结果所共有者，各置于能容纳它的最低一层；依于其中一条的中心结果经它证明，而不在其旁另证（工作项 EC，[研究第 {N} 节]({SA})）。
 - *闭包*（`WithinClosure`，在框架中）。一个关系所带的恰及于其闭包，闭包之内无物以此关系通向其外。过程的所及即其步的闭包。供给、影响、所及、系统、耦合与合池的耦合都是各自关系下的这一闭包，两种中立所迫出的范围也是（`Valuation.forced_iff_reach`）。
 - *平衡*（`Flow.Balances`；跨段时为序言中的 `balance_over_stretch_on`）。水平按所给与所取而变，每一步如此，每一段亦然。
 - *有限的运行*（`Branching.Returns`、`revisits_within`；停息，`Amounts.rests`）。在有限多个构形之内，律或使每个构形返回，或被吸引；停息在量的下降停止之处到来（`Amounts.FallsStop`）。
