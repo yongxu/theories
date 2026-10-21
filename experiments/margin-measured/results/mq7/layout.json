@@ -1,0 +1,368 @@
+{
+ "scope": "presence of series and years only; no value was read",
+ "sources": {
+  "Stock SMART": "github.com/NOAA-EDAB/stocksmart, data/stock_assessment_data.rda and data/stock_assessment_summary.rda (pull of 2026-10-17)",
+  "ICES SAG": "sag.ices.dk/SAG_API: StockList 2015-2025 and the SummaryTable of each unread stock"
+ },
+ "counts": {
+  "ICES SAG | SSB | control | short": 1,
+  "ICES SAG | SSB | primary | eligible by presence": 10,
+  "ICES SAG | SSB | primary | short": 3,
+  "Stock SMART | SSB | primary | eligible by presence": 11,
+  "Stock SMART | TB | control | eligible by presence": 3,
+  "Stock SMART | TB | other | eligible by presence": 2,
+  "Stock SMART | TB | other | short": 1,
+  "Stock SMART | survey | other | eligible by presence": 5
+ },
+ "eligible": {
+  "SSB | primary": [
+   {
+    "source": "ICES SAG",
+    "stock": "ane.27.9aS",
+    "name": "Anchovy (Engraulis encrasicolus) in the southern part of Division 9.a (Gulf of Cadiz and southern coast of Portugal)",
+    "model": "SS3",
+    "assessment": 21266,
+    "assessment_year": 2025,
+    "level": "SSB",
+    "catch": "Landings",
+    "sp_years_present": 36
+   },
+   {
+    "source": "ICES SAG",
+    "stock": "anf.27.3a46",
+    "name": "Anglerfish (Lophius budegassa, Lophius piscatorius) in subareas 4 and 6 and in Division 3.a (North Sea, Rockall and West of Scotland, Skagerrak, Kattegat)",
+    "model": "SS3",
+    "assessment": 21004,
+    "assessment_year": 2025,
+    "level": "SSB",
+    "catch": "Catches",
+    "sp_years_present": 75
+   },
+   {
+    "source": "ICES SAG",
+    "stock": "ank.27.78abd",
+    "name": "Black-bellied anglerfish (Lophius budegassa) in Subarea 7 and in divisions 8.a, 8.b, and 8.d (Celtic Seas, Bay of Biscay)",
+    "model": "SS3",
+    "assessment": 19513,
+    "assessment_year": 2025,
+    "level": "SSB",
+    "catch": "Landings",
+    "sp_years_present": 38
+   },
+   {
+    "source": "ICES SAG",
+    "stock": "ank.27.8c9a",
+    "name": "Black-bellied anglerfish (Lophius budegassa) in divisions 8.c and 9.a (Cantabrian Sea, Atlantic Iberian waters)",
+    "model": "SS3",
+    "assessment": 20975,
+    "assessment_year": 2025,
+    "level": "SSB",
+    "catch": "Landings",
+    "sp_years_present": 35
+   },
+   {
+    "source": "ICES SAG",
+    "stock": "boc.27.6-8",
+    "name": "Boarfish (Capros aper) in subareas 6\u20138 (Celtic Seas, English Channel, Bay of Biscay)",
+    "model": "SS3",
+    "assessment": 21117,
+    "assessment_year": 2025,
+    "level": "SSB",
+    "catch": "Catches",
+    "sp_years_present": 26
+   },
+   {
+    "source": "ICES SAG",
+    "stock": "caa.27.5a",
+    "name": "Atlantic wolffish (Anarhichas lupus)  in Division 5.a (Iceland grounds)",
+    "model": "SAM",
+    "assessment": 20904,
+    "assessment_year": 2025,
+    "level": "SSB",
+    "catch": "Catches",
+    "sp_years_present": 45
+   },
+   {
+    "source": "ICES SAG",
+    "stock": "cod.27.1-2.coastN",
+    "name": "Cod (Gadus morhua) in subareas 1 and 2, north of 67\u00b0N (Norwegian Sea and Barents Sea), northern Norwegian coastal cod ",
+    "model": "SAM",
+    "assessment": 20955,
+    "assessment_year": 2025,
+    "level": "SSB",
+    "catch": "Catches",
+    "sp_years_present": 30
+   },
+   {
+    "source": "ICES SAG",
+    "stock": "ghl.27.561214",
+    "name": "Greenland halibut (Reinhardtius hippoglossoides) in subareas 5, 6, 12, and 14 (Iceland and Faroes grounds, West of Scotland, North of Azores, East of Greenland)",
+    "model": "GADGET",
+    "assessment": 19603,
+    "assessment_year": 2025,
+    "level": "SSB",
+    "catch": "Catches",
+    "sp_years_present": 40
+   },
+   {
+    "source": "ICES SAG",
+    "stock": "pol.27.67",
+    "name": "Pollack (Pollachius pollachius) in subareas 6 and 7 (Celtic Seas, English Channel)",
+    "model": "SS3",
+    "assessment": 20987,
+    "assessment_year": 2025,
+    "level": "SSB",
+    "catch": "Landings",
+    "sp_years_present": 74
+   },
+   {
+    "source": "ICES SAG",
+    "stock": "reb.27.5a14",
+    "name": "Beaked redfish  (Sebastes mentella) in Subarea 14 and in Division 5.a; Icelandic slope stock (East of Greenland, Iceland grounds)",
+    "model": "GADGET",
+    "assessment": 19553,
+    "assessment_year": 2025,
+    "level": "SSB",
+    "catch": "Catches",
+    "sp_years_present": 49
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "11997",
+    "name": "Flame snapper - American Samoa",
+    "model": "SS",
+    "assessment": 12849.0,
+    "assessment_year": 2023.0,
+    "level": "Spawning Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 52
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "11998",
+    "name": "Rusty jobfish - American Samoa",
+    "model": "SS",
+    "assessment": 12846.0,
+    "assessment_year": 2023.0,
+    "level": "Spawning Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 52
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "11999",
+    "name": "Green jobfish - American Samoa",
+    "model": "SS",
+    "assessment": 12847.0,
+    "assessment_year": 2023.0,
+    "level": "Spawning Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 52
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "12003",
+    "name": "Golden eye jobfish - American Samoa",
+    "model": "SS",
+    "assessment": 12852.0,
+    "assessment_year": 2023.0,
+    "level": "Spawning Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 52
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "12005",
+    "name": "Oblique-banded snapper - American Samoa",
+    "model": "SS",
+    "assessment": 12853.0,
+    "assessment_year": 2023.0,
+    "level": "Spawning Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 52
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "12007",
+    "name": "Black jack - American Samoa",
+    "model": "SS",
+    "assessment": 12848.0,
+    "assessment_year": 2023.0,
+    "level": "Spawning Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 52
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "12011",
+    "name": "Yellow-edged lyretail - American Samoa",
+    "model": "SS",
+    "assessment": 12854.0,
+    "assessment_year": 2023.0,
+    "level": "Spawning Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 52
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "12013",
+    "name": "Spotcheek emperor - American Samoa",
+    "model": "SS",
+    "assessment": 12850.0,
+    "assessment_year": 2023.0,
+    "level": "Spawning Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 52
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "12215",
+    "name": "Common bluestripe snapper - American Samoa",
+    "model": "SS",
+    "assessment": 12851.0,
+    "assessment_year": 2023.0,
+    "level": "Spawning Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 52
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "12809",
+    "name": "Hogfish - Florida Keys / East Florida",
+    "model": "SS3",
+    "assessment": 5097.0,
+    "assessment_year": 2014.0,
+    "level": "Mature Biomass",
+    "catch": "Reported Catch - Total Landings",
+    "sp_years_present": 26
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "14516",
+    "name": "Pacific Coast Blackspotted and Rougheye Rockfish Complex",
+    "model": "SS",
+    "assessment": 9604.0,
+    "assessment_year": 2019.0,
+    "level": "Spawning Biomass",
+    "catch": "Modeled Total Catch",
+    "sp_years_present": 102
+   }
+  ],
+  "TB | control": [
+   {
+    "source": "Stock SMART",
+    "stock": "11695",
+    "name": "American Samoa Bottomfish Multi-species Complex",
+    "model": "JABBA",
+    "assessment": 9446.0,
+    "assessment_year": 2019.0,
+    "level": "Exploitable Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 31
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "11696",
+    "name": "Guam Bottomfish Multi-species Complex",
+    "model": "JABBA",
+    "assessment": 13422.0,
+    "assessment_year": 2024.0,
+    "level": "Exploitable Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 41
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "11827",
+    "name": "Main Hawaiian Islands Deep 7 Bottomfish Multi-species Complex",
+    "model": "BSP-PIFSC",
+    "assessment": 5461.0,
+    "assessment_year": 2015.0,
+    "level": "Total Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 64
+   }
+  ],
+  "TB | other": [
+   {
+    "source": "Stock SMART",
+    "stock": "10516",
+    "name": "Red hake - Gulf of Maine / Northern Georges Bank",
+    "model": "Empirical Approach",
+    "assessment": 12885.0,
+    "assessment_year": 2023.0,
+    "level": "Total Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 41
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "11450",
+    "name": "Gulf of Alaska Shark Complex",
+    "model": "Index Method",
+    "assessment": 11257.0,
+    "assessment_year": 2020.0,
+    "level": "Spiny Dogfish Total Biomass",
+    "catch": "Estimated Total Catch",
+    "sp_years_present": 27
+   }
+  ],
+  "survey | other": [
+   {
+    "source": "Stock SMART",
+    "stock": "10192",
+    "name": "Windowpane - Gulf of Maine / Georges Bank",
+    "model": "Empirical Approach",
+    "assessment": 12887.0,
+    "assessment_year": 2023.0,
+    "level": "Survey-Estimated Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 47
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "10516",
+    "name": "Red hake - Gulf of Maine / Northern Georges Bank",
+    "model": "Survey Abundance",
+    "assessment": 10671.0,
+    "assessment_year": 2020.0,
+    "level": "Survey Estimated Total Stock Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 38
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "10517",
+    "name": "Red hake - Southern Georges Bank / Mid-Atlantic",
+    "model": "Empirical Approach",
+    "assessment": 12886.0,
+    "assessment_year": 2023.0,
+    "level": "Survey-Estimated Biomass",
+    "catch": "Total Catch",
+    "sp_years_present": 41
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "11448",
+    "name": "Gulf of Alaska Sculpin Complex",
+    "model": "Index Method",
+    "assessment": 13122.0,
+    "assessment_year": 2023.0,
+    "level": "Survey-Estimated Biomass",
+    "catch": "Total Complex Catch",
+    "sp_years_present": 25
+   },
+   {
+    "source": "Stock SMART",
+    "stock": "11803",
+    "name": "Gulf of Alaska Other Shallow Water Flatfish Complex",
+    "model": "random effects model based on area-swept biomass",
+    "assessment": 6970.0,
+    "assessment_year": 2016.0,
+    "level": "Random Effects Model Biomass (Mean)",
+    "catch": "Reported Catch - Total",
+    "sp_years_present": 31
+   }
+  ]
+ }
+}

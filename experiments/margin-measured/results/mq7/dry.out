@@ -1,0 +1,124 @@
+level | TB | seed 20261021 {"stocks": 428, "timing": {"0.0": 414, "0.5": 11, "1.0": 3}, "C1": {"difference": -0.08438818565400844, "lower_95": -0.20356234096692108, "episodes": {"True": 48, "False": 26}, "stocks_compared": 21, "verdict": "failed"}, "C2": {"difference": -0.10666666666666667, "lower_95": -0.32967032967032966, "episodes": {"True": 14, "False": 13}, "stocks_compared": 11, "verdict": "failed"}}
+level | TB | seed 20261121 {"stocks": 415, "timing": {"0.0": 403, "0.5": 12}, "C1": {"difference": -0.06493506493506494, "lower_95": -0.1396276595744681, "episodes": {"True": 25, "False": 13}, "stocks_compared": 11, "verdict": "failed"}, "C2": {"difference": -0.28571428571428575, "lower_95": -0.5, "episodes": {"True": 3, "False": 2}, "stocks_compared": 2, "verdict": "not testable"}}
+level | TB | seed 20261221 {"stocks": 420, "timing": {"0.0": 405, "0.5": 11, "1.0": 4}, "C1": {"difference": -0.07045342812842721, "lower_95": -0.17007286298205082, "episodes": {"True": 60, "False": 35}, "stocks_compared": 23, "verdict": "failed"}, "C2": {"difference": 0.031484257871064465, "lower_95": -0.18064516129032257, "episodes": {"True": 20, "False": 18}, "stocks_compared": 12, "verdict": "failed"}}
+level | TB | seed 20261321 {"stocks": 440, "timing": {"0.0": 421, "0.5": 18, "1.0": 1}, "C1": {"difference": 0.0051948051948051965, "lower_95": -0.0922803904170364, "episodes": {"True": 58, "False": 33}, "stocks_compared": 27, "verdict": "failed"}, "C2": {"difference": 0.04464285714285715, "lower_95": -0.14736842105263157, "episodes": {"True": 25, "False": 17}, "stocks_compared": 16, "verdict": "failed"}}
+level | SSB | seed 20261021 {"stocks": 428, "timing": {"0.0": 414, "0.5": 13, "1.0": 1}, "C1": {"difference": -0.08028673835125448, "lower_95": -0.19774011299435026, "episodes": {"True": 52, "False": 28}, "stocks_compared": 22, "verdict": "failed"}, "C2": {"difference": -0.1038961038961039, "lower_95": -0.32727272727272727, "episodes": {"True": 15, "False": 13}, "stocks_compared": 11, "verdict": "failed"}}
+level | SSB | seed 20261121 {"stocks": 415, "timing": {"0.0": 405, "0.5": 10}, "C1": {"difference": -0.15145631067961168, "lower_95": -0.2967914438502674, "episodes": {"True": 31, "False": 13}, "stocks_compared": 12, "verdict": "failed"}, "C2": {"difference": -0.28571428571428575, "lower_95": -0.5, "episodes": {"True": 3, "False": 2}, "stocks_compared": 2, "verdict": "not testable"}}
+level | SSB | seed 20261221 {"stocks": 420, "timing": {"0.0": 409, "0.5": 11}, "C1": {"difference": -0.05116019010343865, "lower_95": -0.15650406504065043, "episodes": {"True": 59, "False": 33}, "stocks_compared": 22, "verdict": "failed"}, "C2": {"difference": 0.0, "lower_95": -0.18823529411764708, "episodes": {"True": 24, "False": 19}, "stocks_compared": 13, "verdict": "failed"}}
+level | SSB | seed 20261321 {"stocks": 440, "timing": {"0.0": 429, "0.5": 10, "1.0": 1}, "C1": {"difference": 0.054313099041533544, "lower_95": -0.07568438003220611, "episodes": {"True": 61, "False": 37}, "stocks_compared": 29, "verdict": "failed"}, "C2": {"difference": 0.02857142857142857, "lower_95": -0.2, "episodes": {"True": 23, "False": 17}, "stocks_compared": 15, "verdict": "failed"}}
+level-law | TB | seed 20261021 {"stocks": 400, "timing": {"0.0": 352, "0.5": 39, "1.0": 9}, "C1": {"difference": -0.014449658224842366, "lower_95": -0.10303929954131506, "episodes": {"True": 98, "False": 52}, "stocks_compared": 24, "verdict": "failed"}, "C2": {"difference": -0.021946393236193563, "lower_95": -0.16366158113730928, "episodes": {"True": 42, "False": 32}, "stocks_compared": 15, "verdict": "failed"}}
+level-law | TB | seed 20261121 {"stocks": 400, "timing": {"0.0": 364, "0.5": 27, "1.0": 9}, "C1": {"difference": 0.04226307920231032, "lower_95": -0.028215140445899983, "episodes": {"True": 117, "False": 40}, "stocks_compared": 21, "verdict": "failed"}, "C2": {"difference": 0.11778417660770601, "lower_95": -0.05097777034932308, "episodes": {"True": 30, "False": 19}, "stocks_compared": 10, "verdict": "failed"}}
+level-law | TB | seed 20261221 {"stocks": 400, "timing": {"0.0": 355, "0.5": 37, "1.0": 8}, "C1": {"difference": -0.1396892492115648, "lower_95": -0.2488764606012184, "episodes": {"True": 95, "False": 36}, "stocks_compared": 24, "verdict": "failed"}, "C2": {"difference": -0.2842827004219409, "lower_95": -0.4428274428274429, "episodes": {"True": 40, "False": 13}, "stocks_compared": 10, "verdict": "failed"}}
+level-law | TB | seed 20261321 {"stocks": 400, "timing": {"0.0": 356, "0.5": 35, "1.0": 9}, "C1": {"difference": -0.10408474811490956, "lower_95": -0.23497505740755403, "episodes": {"True": 56, "False": 28}, "stocks_compared": 13, "verdict": "failed"}, "C2": {"difference": -0.04507042253521127, "lower_95": -0.12213740458015267, "episodes": {"True": 23, "False": 9}, "stocks_compared": 7, "verdict": "not testable"}}
+level-law | SSB | seed 20261021 {"stocks": 399, "timing": {"0.0": 360, "0.5": 33, "1.0": 6}, "C1": {"difference": -0.021385519483295222, "lower_95": -0.11769645179268064, "episodes": {"True": 124, "False": 60}, "stocks_compared": 30, "verdict": "failed"}, "C2": {"difference": -0.0916629314208875, "lower_95": -0.2127093858016485, "episodes": {"True": 65, "False": 42}, "stocks_compared": 20, "verdict": "failed"}}
+level-law | SSB | seed 20261121 {"stocks": 400, "timing": {"0.0": 363, "0.5": 26, "1.0": 11}, "C1": {"difference": 0.062002708929221, "lower_95": -0.048893966715762516, "episodes": {"True": 138, "False": 60}, "stocks_compared": 28, "verdict": "failed"}, "C2": {"difference": 0.14992053681794104, "lower_95": 0.0, "episodes": {"True": 55, "False": 29}, "stocks_compared": 17, "verdict": "failed"}}
+level-law | SSB | seed 20261221 {"stocks": 400, "timing": {"0.0": 368, "0.5": 28, "1.0": 4}, "C1": {"difference": -0.09926312702574164, "lower_95": -0.1916456513334539, "episodes": {"True": 136, "False": 52}, "stocks_compared": 32, "verdict": "failed"}, "C2": {"difference": -0.17245286906356244, "lower_95": -0.3496932515337423, "episodes": {"True": 63, "False": 25}, "stocks_compared": 17, "verdict": "failed"}}
+level-law | SSB | seed 20261321 {"stocks": 398, "timing": {"0.0": 370, "0.5": 21, "1.0": 7}, "C1": {"difference": 0.024591139360411022, "lower_95": -0.06415411864792869, "episodes": {"True": 91, "False": 43}, "stocks_compared": 21, "verdict": "failed"}, "C2": {"difference": 0.06082234290147401, "lower_95": -0.02673669133444736, "episodes": {"True": 45, "False": 22}, "stocks_compared": 13, "verdict": "failed"}}
+adjusting-law | TB | seed 20261021 {"stocks": 300, "timing": {"0.0": 289, "0.5": 11}, "C1": {"difference": 0.16921424241558222, "lower_95": 0.10451184753612558, "episodes": {"True": 530, "False": 324}, "stocks_compared": 77, "verdict": "passed"}, "C2": {"difference": 0.1718210494944717, "lower_95": 0.10278577839821498, "episodes": {"True": 401, "False": 257}, "stocks_compared": 76, "verdict": "passed"}}
+adjusting-law | TB | seed 20261121 {"stocks": 300, "timing": {"0.0": 291, "0.5": 9}, "C1": {"difference": 0.16165122830655754, "lower_95": 0.09715285860288066, "episodes": {"True": 448, "False": 300}, "stocks_compared": 67, "verdict": "passed"}, "C2": {"difference": 0.13481300347177622, "lower_95": 0.0695235864664405, "episodes": {"True": 344, "False": 254}, "stocks_compared": 65, "verdict": "passed"}}
+adjusting-law | TB | seed 20261221 {"stocks": 300, "timing": {"0.0": 292, "0.5": 8}, "C1": {"difference": 0.14250073348386805, "lower_95": 0.07965491819371592, "episodes": {"True": 553, "False": 361}, "stocks_compared": 86, "verdict": "passed"}, "C2": {"difference": 0.1187371493038875, "lower_95": 0.04798485135540502, "episodes": {"True": 398, "False": 267}, "stocks_compared": 76, "verdict": "passed"}}
+adjusting-law | TB | seed 20261321 {"stocks": 300, "timing": {"0.0": 289, "0.5": 11}, "C1": {"difference": 0.14779417079729107, "lower_95": 0.060941552163492674, "episodes": {"True": 406, "False": 266}, "stocks_compared": 66, "verdict": "passed"}, "C2": {"difference": 0.17208235270599034, "lower_95": 0.08683889948885569, "episodes": {"True": 315, "False": 217}, "stocks_compared": 62, "verdict": "passed"}}
+adjusting-law | SSB | seed 20261021 {"stocks": 300, "timing": {"0.0": 289, "0.5": 11}, "C1": {"difference": 0.19733069015424803, "lower_95": 0.12571294410924214, "episodes": {"True": 474, "False": 289}, "stocks_compared": 68, "verdict": "passed"}, "C2": {"difference": 0.21568242095699555, "lower_95": 0.13539857819244155, "episodes": {"True": 298, "False": 199}, "stocks_compared": 57, "verdict": "passed"}}
+adjusting-law | SSB | seed 20261121 {"stocks": 300, "timing": {"0.0": 286, "0.5": 13, "1.0": 1}, "C1": {"difference": 0.13687536169376338, "lower_95": 0.07415469250345316, "episodes": {"True": 434, "False": 261}, "stocks_compared": 59, "verdict": "passed"}, "C2": {"difference": 0.1489228301405367, "lower_95": 0.06835883617337739, "episodes": {"True": 264, "False": 177}, "stocks_compared": 50, "verdict": "passed"}}
+adjusting-law | SSB | seed 20261221 {"stocks": 300, "timing": {"0.0": 287, "0.5": 12, "1.0": 1}, "C1": {"difference": 0.08747729901371208, "lower_95": 0.02407311634187078, "episodes": {"True": 502, "False": 354}, "stocks_compared": 80, "verdict": "passed"}, "C2": {"difference": 0.10449508695245258, "lower_95": 0.028459410235377524, "episodes": {"True": 318, "False": 251}, "stocks_compared": 65, "verdict": "passed"}}
+adjusting-law | SSB | seed 20261321 {"stocks": 300, "timing": {"0.0": 289, "0.5": 9, "1.0": 2}, "C1": {"difference": 0.14592561234289342, "lower_95": 0.06913061334426866, "episodes": {"True": 366, "False": 216}, "stocks_compared": 56, "verdict": "passed"}, "C2": {"difference": 0.20417169438373298, "lower_95": 0.10274558581817517, "episodes": {"True": 224, "False": 143}, "stocks_compared": 46, "verdict": "passed"}}
+adjusting-reset | TB | seed 20261021 {"stocks": 201, "timing": {"0.0": 201}, "C1": {"difference": 0.36615384615384616, "lower_95": 0.18879855465221318, "episodes": {"True": 42, "False": 32}, "stocks_compared": 17, "verdict": "passed"}, "C2": {"difference": 0.29565217391304344, "lower_95": 0.043859649122807, "episodes": {"True": 27, "False": 18}, "stocks_compared": 11, "verdict": "passed"}}
+adjusting-reset | TB | seed 20261121 {"stocks": 189, "timing": {"0.0": 189}, "C1": {"difference": 0.5737519970318995, "lower_95": 0.4414806289457204, "episodes": {"True": 79, "False": 54}, "stocks_compared": 23, "verdict": "passed"}, "C2": {"difference": 0.5674358141046474, "lower_95": 0.4138915318744053, "episodes": {"True": 44, "False": 25}, "stocks_compared": 18, "verdict": "passed"}}
+adjusting-reset | TB | seed 20261221 {"stocks": 197, "timing": {"0.0": 196, "0.5": 1}, "C1": {"difference": 0.3152069297401347, "lower_95": 0.1788500678426051, "episodes": {"True": 90, "False": 55}, "stocks_compared": 25, "verdict": "passed"}, "C2": {"difference": 0.4188034188034189, "lower_95": 0.2654028436018957, "episodes": {"True": 45, "False": 35}, "stocks_compared": 20, "verdict": "passed"}}
+adjusting-reset | TB | seed 20261321 {"stocks": 180, "timing": {"0.0": 179, "0.5": 1}, "C1": {"difference": 0.09722691917483939, "lower_95": -0.17339312406576976, "episodes": {"True": 35, "False": 29}, "stocks_compared": 15, "verdict": "failed"}, "C2": {"difference": 0.29885057471264365, "lower_95": -0.047058823529411764, "episodes": {"True": 16, "False": 17}, "stocks_compared": 10, "verdict": "failed"}}
+adjusting-reset | SSB | seed 20261021 {"stocks": 201, "timing": {"0.0": 201}, "C1": {"difference": 0.27468230694037155, "lower_95": 0.04074074074074076, "episodes": {"True": 22, "False": 14}, "stocks_compared": 9, "verdict": "passed"}, "C2": {"difference": 0.2607758620689656, "lower_95": 0.009756097560975622, "episodes": {"True": 17, "False": 11}, "stocks_compared": 8, "verdict": "not testable"}}
+adjusting-reset | SSB | seed 20261121 {"stocks": 189, "timing": {"0.0": 189}, "C1": {"difference": 0.5725811098945426, "lower_95": 0.4613762193514369, "episodes": {"True": 66, "False": 47}, "stocks_compared": 20, "verdict": "passed"}, "C2": {"difference": 0.7204610951008644, "lower_95": 0.6255707762557078, "episodes": {"True": 36, "False": 22}, "stocks_compared": 13, "verdict": "passed"}}
+adjusting-reset | SSB | seed 20261221 {"stocks": 197, "timing": {"0.0": 195, "0.5": 2}, "C1": {"difference": 0.24086021505376348, "lower_95": 0.08568884932116624, "episodes": {"True": 58, "False": 45}, "stocks_compared": 23, "verdict": "passed"}, "C2": {"difference": 0.4499999999999999, "lower_95": 0.2071005917159763, "episodes": {"True": 24, "False": 21}, "stocks_compared": 15, "verdict": "passed"}}
+adjusting-reset | SSB | seed 20261321 {"stocks": 180, "timing": {"0.0": 179, "0.5": 1}, "C1": {"difference": 0.17835909631391197, "lower_95": 0.00881057268722467, "episodes": {"True": 28, "False": 20}, "stocks_compared": 10, "verdict": "passed"}, "C2": {"difference": 0.29508196721311475, "lower_95": 0.0, "episodes": {"True": 13, "False": 11}, "stocks_compared": 8, "verdict": "failed"}}
+mq5-state | TB | seed 20261021 {"stocks": 300, "timing": {"0.0": 288, "0.5": 12}, "C1": {"difference": -0.018994795505121627, "lower_95": -0.06554390007333218, "episodes": {"True": 440, "False": 243}, "stocks_compared": 62, "verdict": "failed"}, "C2": {"difference": -0.04365548150886909, "lower_95": -0.09788751168242196, "episodes": {"True": 339, "False": 196}, "stocks_compared": 57, "verdict": "failed"}}
+mq5-state | SSB | seed 20261021 {"stocks": 300, "timing": {"0.0": 266, "0.5": 22, "1.0": 12}, "C1": {"difference": 0.0033011440100326576, "lower_95": -0.07589557907667434, "episodes": {"True": 288, "False": 144}, "stocks_compared": 38, "verdict": "failed"}, "C2": {"difference": 0.00968251391123378, "lower_95": -0.08947553885006164, "episodes": {"True": 93, "False": 55}, "stocks_compared": 22, "verdict": "failed"}}
+relaxing | TB | seed 20261021 {"stocks": 145, "timing": {"0.0": 142, "0.5": 3}, "C1": {"difference": 0.5498412698412698, "lower_95": 0.15789473684210528, "episodes": {"True": 27, "False": 17}, "stocks_compared": 8, "verdict": "passed"}, "C2": {"difference": 0.6349206349206349, "lower_95": 0.14285714285714288, "episodes": {"True": 15, "False": 11}, "stocks_compared": 6, "verdict": "not testable"}}
+relaxing | SSB | seed 20261021 {"stocks": 145, "timing": {"0.0": 144, "0.5": 1}, "C1": {"difference": 0.48656178302195996, "lower_95": 0.0, "episodes": {"True": 25, "False": 18}, "stocks_compared": 8, "verdict": "failed"}, "C2": {"difference": 0.5925925925925927, "lower_95": 0.0, "episodes": {"True": 13, "False": 9}, "stocks_compared": 5, "verdict": "not testable"}}
+trend | TB | seed 20261021 {"stocks": 300, "timing": {"0.0": 271, "0.5": 25, "1.0": 4}, "C1": {"difference": -0.013486088393640936, "lower_95": -0.08686729064372943, "episodes": {"True": 350, "False": 301}, "stocks_compared": 115, "verdict": "failed"}, "C2": {"difference": -0.1719927469931629, "lower_95": -0.24638136205218364, "episodes": {"True": 157, "False": 177}, "stocks_compared": 74, "verdict": "failed"}}
+trend | TB | seed 20261121 {"stocks": 300, "timing": {"0.0": 267, "0.5": 31, "1.0": 2}, "C1": {"difference": -0.08637365031346217, "lower_95": -0.14112625785086916, "episodes": {"True": 313, "False": 301}, "stocks_compared": 111, "verdict": "failed"}, "C2": {"difference": -0.16924659486658328, "lower_95": -0.24483420359709024, "episodes": {"True": 142, "False": 173}, "stocks_compared": 74, "verdict": "failed"}}
+trend | SSB | seed 20261021 {"stocks": 300, "timing": {"0.0": 283, "0.5": 5, "1.0": 12}, "C1": {"difference": -0.07271207689093188, "lower_95": -0.22349435382685073, "episodes": {"True": 80, "False": 89}, "stocks_compared": 34, "verdict": "failed"}, "C2": {"difference": -0.1865203761755486, "lower_95": -0.3781512605042016, "episodes": {"True": 18, "False": 32}, "stocks_compared": 14, "verdict": "failed"}}
+trend | SSB | seed 20261121 {"stocks": 300, "timing": {"0.0": 289, "0.5": 4, "1.0": 7}, "C1": {"difference": 0.010648641854745485, "lower_95": -0.10085054678007291, "episodes": {"True": 109, "False": 100}, "stocks_compared": 38, "verdict": "failed"}, "C2": {"difference": -0.019024970273483946, "lower_95": -0.11030478955007257, "episodes": {"True": 32, "False": 34}, "stocks_compared": 17, "verdict": "failed"}}
+age | TB | seed 20261021 {"stocks": 300, "timing": {"0.0": 291, "0.5": 6, "1.0": 3}, "C1": {"difference": 0.1752523427898584, "lower_95": 0.1152891132919961, "episodes": {"True": 860, "False": 536}, "stocks_compared": 134, "verdict": "passed"}, "C2": {"difference": 0.13058587876581376, "lower_95": 0.060197249612833605, "episodes": {"True": 547, "False": 314}, "stocks_compared": 101, "verdict": "passed"}}
+age | SSB | seed 20261021 {"stocks": 297, "timing": {"0.0": 293, "0.5": 4}, "C1": {"difference": 0.09398884558542331, "lower_95": 0.05166966735513062, "episodes": {"True": 927, "False": 818}, "stocks_compared": 139, "verdict": "passed"}, "C2": {"difference": 0.006334743449453272, "lower_95": -0.043873413115228306, "episodes": {"True": 603, "False": 532}, "stocks_compared": 114, "verdict": "failed"}}
+adjusting-law, mistimed f = 0.5 | TB | timing read {"stocks": 300, "timing": {"0.0": 85, "0.5": 204, "1.0": 11}, "C1": {"difference": 0.13422476242038422, "lower_95": 0.07109318617406514, "episodes": {"True": 529, "False": 383}, "stocks_compared": 84, "verdict": "passed"}, "C2": {"difference": 0.13567513965633124, "lower_95": 0.06537527801810404, "episodes": {"True": 420, "False": 311}, "stocks_compared": 82, "verdict": "passed"}}
+adjusting-law, mistimed f = 0.5 | TB | read at f = 0 {"stocks": 300, "timing": {"0.0": 300}, "C1": {"difference": 0.13464769323403625, "lower_95": 0.07898914715896416, "episodes": {"True": 562, "False": 479}, "stocks_compared": 90, "verdict": "passed"}, "C2": {"difference": 0.11617608674548113, "lower_95": 0.05798587747285267, "episodes": {"True": 446, "False": 370}, "stocks_compared": 86, "verdict": "passed"}}
+adjusting-law, mistimed f = 0.5 | SSB | timing read {"stocks": 300, "timing": {"0.0": 48, "0.5": 157, "1.0": 95}, "C1": {"difference": 0.17502300660540496, "lower_95": 0.11609695146694698, "episodes": {"True": 534, "False": 304}, "stocks_compared": 72, "verdict": "passed"}, "C2": {"difference": 0.185753417691892, "lower_95": 0.10880655326343115, "episodes": {"True": 304, "False": 159}, "stocks_compared": 56, "verdict": "passed"}}
+adjusting-law, mistimed f = 0.5 | SSB | read at f = 0 {"stocks": 300, "timing": {"0.0": 300}, "C1": {"difference": 0.1312414810118166, "lower_95": 0.06693303657067547, "episodes": {"True": 466, "False": 263}, "stocks_compared": 60, "verdict": "passed"}, "C2": {"difference": 0.14703722821361448, "lower_95": 0.047506803876456206, "episodes": {"True": 253, "False": 112}, "stocks_compared": 43, "verdict": "passed"}}
+adjusting-law, mistimed f = 1.0 | TB | timing read {"stocks": 300, "timing": {"0.5": 85, "1.0": 215}, "C1": {"difference": 0.13492452182149817, "lower_95": 0.0716422459377413, "episodes": {"True": 523, "False": 382}, "stocks_compared": 84, "verdict": "passed"}, "C2": {"difference": 0.13609235926931582, "lower_95": 0.06560746801793138, "episodes": {"True": 415, "False": 310}, "stocks_compared": 82, "verdict": "passed"}}
+adjusting-law, mistimed f = 1.0 | TB | read at f = 0 {"stocks": 225, "timing": {"0.0": 225}, "C1": {"difference": 0.20698167173156387, "lower_95": 0.14929636964312595, "episodes": {"True": 276, "False": 178}, "stocks_compared": 52, "verdict": "passed"}, "C2": {"difference": 0.18938266840136203, "lower_95": 0.12523756238787945, "episodes": {"True": 188, "False": 118}, "stocks_compared": 45, "verdict": "passed"}}
+adjusting-law, mistimed f = 1.0 | SSB | timing read {"stocks": 300, "timing": {"0.0": 2, "0.5": 3, "1.0": 295}, "C1": {"difference": 0.16815228855977638, "lower_95": 0.10215623231779475, "episodes": {"True": 557, "False": 328}, "stocks_compared": 79, "verdict": "passed"}, "C2": {"difference": 0.19716923710076026, "lower_95": 0.12114345248076616, "episodes": {"True": 363, "False": 206}, "stocks_compared": 68, "verdict": "passed"}}
+adjusting-law, mistimed f = 1.0 | SSB | read at f = 0 {"stocks": 300, "timing": {"0.0": 300}, "C1": {"difference": 0.06797431823939513, "lower_95": -0.005997097753703637, "episodes": {"True": 304, "False": 206}, "stocks_compared": 35, "verdict": "failed"}, "C2": {"difference": 0.145564185664897, "lower_95": 0.012022724744203081, "episodes": {"True": 116, "False": 53}, "stocks_compared": 21, "verdict": "passed"}}
+{
+ "level | TB": {
+  "C1 failed": 4,
+  "C2 failed": 3,
+  "C2 not testable": 1
+ },
+ "level | SSB": {
+  "C1 failed": 4,
+  "C2 failed": 3,
+  "C2 not testable": 1
+ },
+ "level-law | TB": {
+  "C1 failed": 4,
+  "C2 failed": 3,
+  "C2 not testable": 1
+ },
+ "level-law | SSB": {
+  "C1 failed": 4,
+  "C2 failed": 4
+ },
+ "adjusting-law | TB": {
+  "C1 passed": 4,
+  "C2 passed": 4
+ },
+ "adjusting-law | SSB": {
+  "C1 passed": 4,
+  "C2 passed": 4
+ },
+ "adjusting-reset | TB": {
+  "C1 failed": 1,
+  "C1 passed": 3,
+  "C2 failed": 1,
+  "C2 passed": 3
+ },
+ "adjusting-reset | SSB": {
+  "C1 passed": 4,
+  "C2 failed": 1,
+  "C2 not testable": 1,
+  "C2 passed": 2
+ },
+ "mq5-state | TB": {
+  "C1 failed": 1,
+  "C2 failed": 1
+ },
+ "mq5-state | SSB": {
+  "C1 failed": 1,
+  "C2 failed": 1
+ },
+ "relaxing | TB": {
+  "C1 passed": 1,
+  "C2 not testable": 1
+ },
+ "relaxing | SSB": {
+  "C1 failed": 1,
+  "C2 not testable": 1
+ },
+ "trend | TB": {
+  "C1 failed": 2,
+  "C2 failed": 2
+ },
+ "trend | SSB": {
+  "C1 failed": 2,
+  "C2 failed": 2
+ },
+ "age | TB": {
+  "C1 passed": 1,
+  "C2 passed": 1
+ },
+ "age | SSB": {
+  "C1 passed": 1,
+  "C2 failed": 1
+ }
+}
+python3 -I mq7.py dry  511.18s user 1.46s system 96% cpu 8:52.01 total
