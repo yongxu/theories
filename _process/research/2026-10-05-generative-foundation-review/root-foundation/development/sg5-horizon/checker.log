@@ -1,0 +1,17 @@
+{
+ "note": "summary written from the receipt (the run printed its summary to the terminal)",
+ "status": "passed",
+ "source_commit": {
+  "main": "a2cac8b8f5848ecd2f29dad28d2b3a900ffc8c4c",
+  "copied": [
+   "Becoming.Optimum.lean",
+   "Becoming.lean",
+   "check_becoming.py"
+  ]
+ },
+ "core_compiles_from_prelude": true,
+ "source_unchanged_during_check": true,
+ "lean_steps_run": 11,
+ "lean_steps_reused": 1189,
+ "axiom_dependencies": 0
+}
