@@ -16,7 +16,14 @@ module states both on `Pace.paced`, with no premise beyond the hypotheses each s
   and the same rule at every step, whatever lies beyond (`unread_course`). The share's own
   two-level law with a step beyond it (`join`, `joinRead`) runs the share and the rule exactly as
   the share's law alone does (`join_course`), whatever its loss at the start (`join_alike`). Conversely, courses from starts alike in share and
-  rule that come apart in either read beyond the share (`reads_beyond_of_apart`).
+  rule that come apart in either read beyond the share (`reads_beyond_of_apart`). This is the
+  spine's law of a part read alone (`Law.part_identifiesAlike_iff_step` of
+  `Becoming.IdentificationRuns`) on the two-level step: what the loop reads, share, rule and step
+  count (`loopPart`), goes alike under the step where nothing beyond the share is read
+  (`goAlike_of_unread`); it makes sense by itself along every schedule exactly then
+  (`identifiesAlike_iff_unread`), and courses from starts alike in share and rule stay alike
+  along every schedule exactly then (`courses_alike_iff_unread`). `unread_course` is
+  `Law.sameFuture_of_goAlike` read along the course.
 * **A locked loop outlives its loss.** Where every step adds at least one to what lies beyond
   (`Accrues`), from a locked configuration the loss at step `t` is at least `t` above where it
   started, so it passes every bound, while the course stays locked and neither the share nor the
@@ -43,6 +50,11 @@ module states both on `Pace.paced`, with no premise beyond the hypotheses each s
   (`readers_uniform_locks`). `Proportional` meets every premise: the reading formed is the share's
   own proportion and the rule read is that reading, and a reading reversed to favour the others is
   absorbed at the next reading step (`Proportional.reform_absorbed`).
+
+A reader formed within the run is a reading of the run: nothing here supposes that what reads
+stands outside what it reads, and what the loop can tell apart is settled by the one law of
+lumping that settles what a learner can identify (`Learning.goAlike_iff_lumped`) and what a
+selection can reach (`Web.selects_alike_iff`).
 
 So a loop whose every level reads only the share is one two-level law of the share: no change of
 the share, of the rule's value or of how the rule is read, where the share forms it again, leaves
@@ -83,21 +95,74 @@ theorem turn_unread {f : A × B → R → A × B} {h : A × B → R → R} (unre
   | true, ((a, b), g), ((_, b'), _), rfl, rfl => ⟨unread.1 a b b' g, unread.2 a b b' g⟩
   | false, ((a, b), g), ((_, b'), _), rfl, rfl => ⟨unread.1 a b b' g, rfl⟩
 
+/-- **What the loop reads**: of a configuration of the two-level step, the share, the rule and the
+step count, leaving out what lies beyond the share. -/
+def loopPart (p : (A × B) × R × Nat) : A × R × Nat := (p.1.1, p.2.1, p.2.2)
+
+/-- **Unread, the two-level step goes alike by what the loop reads**, under every schedule of
+reading steps. -/
+theorem goAlike_of_unread {f : A × B → R → A × B} {h : A × B → R → R} (unread : Unread f h)
+    (reads : Nat → Bool) : GoAlike (Law.process (Pace.step f h reads)) (loopPart (A := A) (B := B) (R := R)) := by
+  apply Learning.goAlike_iff_lumped.mpr
+  intro p p' same
+  obtain ⟨⟨a, b⟩, g, n⟩ := p
+  obtain ⟨⟨a', b'⟩, g', n'⟩ := p'
+  cases same
+  have now := turn_unread unread (reads n) ((a, b), g) ((a, b'), g) rfl rfl
+  show ((turn f h (reads n) ((a, b), g)).1.1, (turn f h (reads n) ((a, b), g)).2, n + 1) =
+    ((turn f h (reads n) ((a, b'), g)).1.1, (turn f h (reads n) ((a, b'), g)).2, n + 1)
+  rw [now.1, now.2]
+
+/-- **The loop reads only the share exactly where what it reads makes sense by itself.** Share,
+rule and step count, read through themselves, identify exactly the configurations alike under the
+two-level step along every schedule (`IdentifiesAlike`, `Becoming.Unfolding`) exactly where
+neither the next share nor the rule read reads what lies beyond the share. This is
+`Law.now_identifiesAlike_iff_goAlike` read on the two-level step: a part read alone makes sense
+exactly where the rest makes no difference to its next value
+(`Law.part_identifiesAlike_iff_step`). -/
+theorem identifiesAlike_iff_unread {f : A × B → R → A × B} {h : A × B → R → R} :
+    (∀ reads : Nat → Bool,
+      IdentifiesAlike (Law.frameBy (Pace.step f h reads) (loopPart (A := A) (B := B) (R := R))) loopPart) ↔
+      Unread f h := by
+  constructor
+  · intro sense
+    have lumped := Learning.goAlike_iff_lumped.mp
+      (Law.now_identifiesAlike_iff_goAlike.mp (sense fun _ => true))
+    have next : ∀ (a : A) (b b' : B) (g : R),
+        ((f (a, b) g).1, h (a, b) g, 1) = ((f (a, b') g).1, h (a, b') g, 1) :=
+      fun a b b' g => lumped ((a, b), g, 0) ((a, b'), g, 0) rfl
+    exact ⟨fun a b b' g => congrArg (fun q : A × R × Nat => q.1) (next a b b' g),
+      fun a b b' g => congrArg (fun q : A × R × Nat => q.2.1) (next a b b' g)⟩
+  · intro unread reads
+    exact Law.now_identifiesAlike_iff_goAlike.mpr (goAlike_of_unread unread reads)
+
 /-- **What the loop does not read does not change it.** Two courses from starts alike in share and
-rule have the same share and the same rule at every step, whatever lies beyond. -/
+rule have the same share and the same rule at every step, whatever lies beyond: the future through
+what the loop reads is fixed by it (`Law.sameFuture_of_goAlike`), read along the two-level course
+(`Pace.paced_run`). -/
 theorem unread_course {f : A × B → R → A × B} {h : A × B → R → R} (unread : Unread f h)
-    (reads : Nat → Bool) {c c' : (A × B) × R} (same : c.1.1 = c'.1.1) (same' : c.2 = c'.2) :
-    ∀ t, (paced f h reads c t).1.1 = (paced f h reads c' t).1.1 ∧
-      (paced f h reads c t).2 = (paced f h reads c' t).2
-  | 0 => ⟨same, same'⟩
-  | t + 1 =>
-    have now := unread_course unread reads same same' t
-    Eq.subst (motive := fun p : (A × B) × R => p.1.1 = (paced f h reads c' (t + 1)).1.1 ∧
-        p.2 = (paced f h reads c' (t + 1)).2) (paced_succ c t).symm
-      (Eq.subst (motive := fun q : (A × B) × R =>
-          (turn f h (reads t) (paced f h reads c t)).1.1 = q.1.1 ∧
-            (turn f h (reads t) (paced f h reads c t)).2 = q.2) (paced_succ c' t).symm
-        (turn_unread unread (reads t) _ _ now.1 now.2))
+    (reads : Nat → Bool) {c c' : (A × B) × R} (same : c.1.1 = c'.1.1) (same' : c.2 = c'.2) (t : Nat) :
+    (paced f h reads c t).1.1 = (paced f h reads c' t).1.1 ∧
+      (paced f h reads c t).2 = (paced f h reads c' t).2 := by
+  have start : loopPart ((c.1, c.2, 0) : (A × B) × R × Nat) = loopPart (c'.1, c'.2, 0) := by
+    show (c.1.1, c.2, 0) = (c'.1.1, c'.2, 0)
+    rw [same, same']
+  have ahead : loopPart ((Law.run (Pace.step f h reads) (c.1, c.2, 0)).state t) =
+      loopPart ((Law.run (Pace.step f h reads) (c'.1, c'.2, 0)).state t) :=
+    Law.sameFuture_of_goAlike (goAlike_of_unread unread reads) _ _ start t
+  rw [paced_run, paced_run] at ahead
+  exact ⟨congrArg (fun q : A × R × Nat => q.1) ahead, congrArg (fun q : A × R × Nat => q.2.1) ahead⟩
+
+/-- **Courses alike in share and rule from every start alike in both, along every schedule,
+exactly where nothing beyond the share is read.** One direction is `unread_course`; the other reads
+the first step of the course that reads at every step. -/
+theorem courses_alike_iff_unread {f : A × B → R → A × B} {h : A × B → R → R} :
+    (∀ (reads : Nat → Bool) (c c' : (A × B) × R), c.1.1 = c'.1.1 → c.2 = c'.2 → ∀ t,
+      (paced f h reads c t).1.1 = (paced f h reads c' t).1.1 ∧
+        (paced f h reads c t).2 = (paced f h reads c' t).2) ↔ Unread f h :=
+  ⟨fun alike => ⟨fun a b b' g => (alike (fun _ => true) ((a, b), g) ((a, b'), g) rfl rfl 1).1,
+      fun a b b' g => (alike (fun _ => true) ((a, b), g) ((a, b'), g) rfl rfl 1).2⟩,
+   fun unread reads _ _ same same' t => unread_course unread reads same same' t⟩
 
 /-- **Courses that come apart in share or rule read beyond the share.** From starts alike in share
 and rule, a step at which the shares or the rules differ refutes `Unread`. -/

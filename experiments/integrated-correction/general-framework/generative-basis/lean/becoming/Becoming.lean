@@ -1643,7 +1643,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   two-level course with the fast configuration a pair, the share and what lies beyond it: where
   neither the next share nor the rule read reads what lies beyond, courses alike in share and rule
   stay alike in both, and the share's law joined with a step beyond runs exactly as the share's law
-  alone; so a locked loop stays locked while a loss rising by at least one a step passes every bound, and a
+  alone; this is the law of a part read alone (`IdentificationRuns`) on the two-level step: share,
+  rule and step count make sense by themselves along every schedule, and courses alike in share
+  and rule stay alike along every schedule, exactly where nothing beyond the share is read; so a locked loop stays locked while a loss rising by at least one a step passes every bound, and a
   reading favouring at no loss above a bound turns at the step after the first reading step past it
   (`Beyond`: the same selection locked read from the share, falling read from the loss). Where how
   the rule is read is itself formed from the share, rule and reading are one rule read from the
