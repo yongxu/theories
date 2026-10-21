@@ -1390,6 +1390,15 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   exceeds it. Witnesses: a taker re-optimizing its store against a renewing dweller, and two takers
   of capacity one at mutual best responses losing a source renewed by one that either alone
   keeps, holding less than the course in which one restrains.
+  Ranked as whole courses over a horizon, what a course draws, leaves and forgoes adds to the
+  start with the greatest renewal a step, so an order rising with what is drawn registers a
+  level only through what is renewed there; against a renewal given by a law of the level, the
+  courses drawing the most hold a level of greatest renewal through the horizon and leave
+  nothing at its end, and every optimum is one where such a level is within reach and the
+  capacity: a dependence whose need lies above every such level is broken at the first step,
+  one they all meet is kept to the horizon and broken there. Witnesses: the logistic law,
+  whose optimum draws a source from the level a dweller needs to where it renews most, and a
+  gate, under which holding at the dweller's need and below it are both optima.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
