@@ -1426,6 +1426,14 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   reach renews faster and nothing is given at nothing, none does. Witness: under the
   logistic law weights falling more than twofold end the source, less than twofold hold it
   at one, and at twofold both are optima.
+  A course gaining at each step at least what the level of any open course gains is an
+  optimum, and every optimum gains what it does. Below a level y out of one step's reach,
+  where the next level rises with the level below y, the course rising as fast as what is
+  given allows up to y stands at or above every open course below y; where the weighted gain
+  rises with the level up to y and is greatest there it is an optimum, and where the gain
+  rises strictly every optimum stands at its level, drawing nothing, while it is below y,
+  restoring what that level meets. Witness: a source doubling up to eight, from one, is
+  rebuilt by every optimum under weights falling less than twofold, ended at more.
 * `Becoming.SelectionPool` (L1): what selection through pooled coupling reaches. A pool's
   coupling closure is the union of its members' coupling closures, and with the rest of the
   exchange fixed, a part beyond it is selected alike by every selection through the pooled
