@@ -153,7 +153,12 @@ it). The family `ds` is what couples in, `rest` the conditions beyond, listed ap
   renewal meets stands through the horizon under every such optimum (`Web.frontier_kept_left`) and
   past it along the keeping course; one above every such level is broken at the first step and
   unmet through the horizon as before (`Web.frontier_broken_left`): what is left at the end is
-  valued, not what depends on the levels passed through.
+  valued, not what depends on the levels passed through. `Holding.gated_left` is the instance: under
+  a gate renewing one unit at every level from one, from the level the dweller needs, the course
+  keeping the source there through the horizon and after it is an optimum and keeps the dweller at
+  every step, the course drawing it to nothing at the end is one too, and keeping is no optimum of
+  the order by what is drawn alone; under the logistic law every optimum still breaks the dweller at
+  the first step (`Holding.logistic_left`).
 * **What keeping a dependence forgoes.** Where what is given at every level at or above a need `m`
   is at most `q`, what a course keeping the condition at `m` or above through the horizon draws,
   with what it leaves, is at most the start with what is given there and `q` for each step after
@@ -3735,40 +3740,44 @@ theorem frontier_kept (renews : ∀ z, R z ≤ r)
     Nat.lt_of_le_of_lt (Nat.le_of_eq held.1) (Nat.lt_of_lt_of_le needs (Nat.le_of_eq need.symm))⟩
 
 /-- **Valuing what is left, far-sight keeps a dependence every level of greatest renewal meets through
-the horizon.** Under the conditions of `frontier_kept`, with a capacity covering what the first step
-draws down to `y` and `r`, over any horizon and with no positive need, under every optimum of every order rising with
-what is drawn and what is left alike, the dependence stands at every step to the `n`-th. The course
-standing at `y` at every step after the start is such an optimum (`Optimum.keeping_frontier_left`,
-`Optimum.holdingTo_same`), keeping the dependence past the horizon, where under the order by what is
-drawn alone every optimum breaks it at the last step (`frontier_kept`). -/
-theorem frontier_kept_left (renews : ∀ z, R z ≤ r)
+the horizon.** Where what is given to a condition is a law `R` of its level, at most `r` at every level
+and `r` at some `y` within the start `s` with what is given there, with a capacity covering what the
+first step draws down to `y` and `r`, over any horizon, and every level where `R` gives `r` meets a
+need `m` met at the start: under every optimum, among the courses open from the start, of every order
+rising with what is drawn across `n + 1` steps and what is left after them, valued alike, the
+condition stands at `m` or above at every step to the `n`-th. The course standing at `y` at every step
+after the start is such an optimum (`Optimum.keeping_frontier_left`, `Optimum.holdingTo_same`),
+keeping the need met past the horizon, where under the order by what is drawn alone every optimum
+leaves nothing at the last step (`frontier_kept`; witness `Optimum.Holding.gated_left`). -/
+theorem frontier_kept_left {s : Nat} (renews : ∀ z, R z ≤ r)
     (rising : ∀ a b, drawnOver R a (n + 1) + a (n + 1) < drawnOver R b (n + 1) + b (n + 1) →
       better b a)
-    (greatest : R y = r) (reach : y ≤ W.level 0 c + R (W.level 0 c))
-    (drawsDown : W.level 0 c + R (W.level 0 c) ≤ y + k) (holds : r ≤ k)
-    (front : Frontier (OpenCourse R k (W.level 0 c)) better fun t => W.level t c)
-    (meets : ∀ z, R z = r → m ≤ z) (start : m ≤ W.level 0 c) :
+    (greatest : R y = r) (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k) (holds : r ≤ k)
+    (front : Frontier (OpenCourse R k s) better fun t => W.level t c)
+    (meets : ∀ z, R z = r → m ≤ z) (start : m ≤ s) :
     ∀ t, t ≤ n → m ≤ W.level t c := fun t le => match t, le with
-  | 0, _ => start
+  | 0, _ => Eq.subst (motive := fun z => m ≤ z) front.1.1.symm start
   | t + 1, le => meets _ (frontier_holds_left renews rising greatest reach drawsDown holds front t
       (Nat.lt_of_succ_le le))
 
-/-- **Valuing what is left does not reach a dependence above every level of greatest renewal.** Under
-the conditions of `frontier_broken`, with a capacity covering what the first step draws down to `y`
-and `r`, every optimum of every order rising with what is drawn and what
-is left alike breaks the dependence at the first step and leaves it unmet to the `n`-th. -/
-theorem frontier_broken_left (renews : ∀ z, R z ≤ r)
+/-- **Valuing what is left does not reach a dependence above every level of greatest renewal.** Where
+what is given to a condition is a law `R` of its level, at most `r` at every level and `r` at some `y`
+within the start `s` with what is given there, over a horizon of at least two steps, with a capacity
+covering what the first step draws down to `y` and `r`, and every level where `R` gives `r` lies below
+a formation's need on the condition, met at the start: every optimum, among the courses open from the
+start, of every order rising with what is drawn and what is left alike breaks the dependence at the
+first step and leaves it unmet to the `n`-th (witness `Optimum.Holding.logistic_left`). -/
+theorem frontier_broken_left {s : Nat} (renews : ∀ z, R z ≤ r)
     (rising : ∀ a b, drawnOver R a (n + 1) + a (n + 1) < drawnOver R b (n + 1) + b (n + 1) →
       better b a)
-    (greatest : R y = r) (reach : y ≤ W.level 0 c + R (W.level 0 c))
-    (drawsDown : W.level 0 c + R (W.level 0 c) ≤ y + k) (holds : r ≤ k) (long : 0 < n)
-    (front : Frontier (OpenCourse R k (W.level 0 c)) better fun t => W.level t c)
+    (greatest : R y = r) (reach : y ≤ s + R s) (drawsDown : s + R s ≤ y + k) (holds : r ≤ k)
+    (long : 0 < n) (front : Frontier (OpenCourse R k s) better fun t => W.level t c)
     (above : ∀ z, R z = r → z < m) (depends : W.requires 0 f c) (need : W.need 0 f c = m)
-    (start : m ≤ W.level 0 c) :
+    (start : m ≤ s) :
     W.Broken 0 f c ∧ ∀ t, t < n → W.level (t + 1) c < m :=
   have unmet : ∀ t, t < n → W.level (t + 1) c < m := fun t before =>
     above _ (frontier_holds_left renews rising greatest reach drawsDown holds front t before)
-  ⟨⟨depends, Nat.le_trans (Nat.le_of_eq need) start,
+  ⟨⟨depends, Nat.le_trans (Nat.le_of_eq need) (Eq.subst (motive := fun z => m ≤ z) front.1.1.symm start),
     Nat.lt_of_lt_of_le (unmet 0 long) (Nat.le_of_eq need.symm)⟩, unmet⟩
 
 end Web
@@ -4473,6 +4482,49 @@ theorem logistic_above : ∀ z, 2 ≤ z → logistic z ≤ 0 := fun _ le =>
   match le_dest le with
   | ⟨j, same⟩ => Nat.le_of_eq ((congrArg logistic (same.trans (Nat.add_comm 2 j))).trans
       (logistic_beyond j))
+
+/-- **The gate witness: valuing what is left keeps the dweller past the horizon.** From a source at
+two, the level the dweller needs, under a gate renewing one unit at every level from one, with
+capacity three: the course holding the source at two through the horizon and after it is an optimum
+of the order by what the taker draws across `n + 2` steps and leaves after them, and keeps the
+dweller's need met at every step; the course drawing the source to nothing at the last step is an
+optimum of that order too; the optima of that order are exactly the open courses standing where the
+gate renews at every step to the horizon; and the course keeping the dweller is no optimum of the
+order by what is drawn alone (`keeping_not_frontier`), whose every optimum leaves nothing at the last
+step (`frontier_holds`). -/
+theorem gated_left (n : Nat) :
+    Frontier (OpenCourse gate 3 2) (byDrawnLeft gate (n + 1)) (holdingTo 2 2 2 (n + 1)) ∧
+      (∀ t, (web (onSource (holdingTo 2 2 2 (n + 1)))).need t .dweller .source ≤
+        (web (onSource (holdingTo 2 2 2 (n + 1)))).level t .source) ∧
+      Frontier (OpenCourse gate 3 2) (byDrawnLeft gate (n + 1)) (holding 2 2 (n + 1)) ∧
+      (∀ x, Frontier (OpenCourse gate 3 2) (byDrawnLeft gate (n + 1)) x ↔
+        OpenCourse gate 3 2 x ∧ ∀ t, t < n + 1 → gate (x (t + 1)) = 1) ∧
+      ¬ Frontier (OpenCourse gate 3 2) (byDrawn gate (n + 1)) (holdingTo 2 2 2 (n + 1)) :=
+  ⟨keeping_frontier_left gate_le rfl (Nat.le_succ 2) (Nat.le_add_left 3 2) (Nat.le_add_left 1 2),
+   fun t => match t with
+    | 0 => Nat.le_refl 2
+    | t + 1 => Nat.le_of_eq (holdingTo_same (s := 2) (y := 2) (n := n + 1) t).symm,
+   holding_frontier_left gate_le rfl (Nat.le_succ 2) (Nat.le_add_left 3 2) (Nat.le_refl 3)
+     (Nat.succ_pos n),
+   fun _ => frontier_left_iff gate_le rfl (Nat.le_succ 2) (Nat.le_add_left 3 2) (Nat.le_add_left 1 2),
+   keeping_not_frontier gate_le rfl (Nat.le_succ 2) (Nat.le_add_left 3 2) (Nat.le_refl 3)
+     (Nat.succ_pos n) (Nat.succ_pos 1)⟩
+
+/-- **The logistic witness: valuing what is left does not keep the dweller.** From a source at two,
+the level the dweller needs, under the logistic law with capacity two, the course holding the source
+at one through the horizon and after it is an optimum of the order by what the taker draws across
+`n + 2` steps and leaves after them, and every optimum of that order breaks the dweller's dependence
+at the first step and leaves it unmet to the horizon (`Web.frontier_broken_left`). -/
+theorem logistic_left (n : Nat) :
+    Frontier (OpenCourse logistic 2 2) (byDrawnLeft logistic (n + 1)) (holdingTo 2 1 1 (n + 1)) ∧
+      ∀ x, Frontier (OpenCourse logistic 2 2) (byDrawnLeft logistic (n + 1)) x →
+        (web (onSource x)).Broken 0 .dweller .source ∧
+        ∀ t, t < n + 1 → (web (onSource x)).level (t + 1) .source < 2 :=
+  ⟨keeping_frontier_left logistic_le rfl (Nat.le_succ 1) (Nat.le_succ 2) (Nat.le_succ 1),
+   fun x front => Web.frontier_broken_left (W := web (onSource x)) (c := Place.source)
+     (f := Formation.dweller) (y := 1) (s := 2) logistic_le (fun _ _ more => more) rfl
+     (Nat.le_succ 1) (Nat.le_succ 2) (Nat.le_succ 1) (Nat.succ_pos n) front logistic_greatest trivial
+     rfl (Nat.le_refl 2)⟩
 
 /-- **The logistic witness: what keeping the dweller forgoes.** From a source at two, the level the
 dweller needs, under the logistic law with capacity two, keeping the dweller through `n + 2` steps

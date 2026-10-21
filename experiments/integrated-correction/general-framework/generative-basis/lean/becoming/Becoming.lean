@@ -1427,7 +1427,9 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   covers the renewal: the course keeping that level past the horizon is an optimum, as is
   the one drawing it down at the end, so the drain at the end is no longer forced; a
   dependence every such level meets is kept to the horizon, and one above them all is
-  broken at the first step as before.
+  broken at the first step as before. Witnesses: under a gate, keeping the source at the
+  dweller's need through and past the horizon is an optimum, no optimum by the draw alone;
+  under the logistic law every optimum still breaks the dweller.
   Kept at a need through the horizon, where what is given at or above the need is at most q,
   a course draws with what it leaves at most the start with q a step, and the optima among
   the keeping courses hold where q is given and leave exactly the need; so keeping forgoes,
