@@ -1343,3 +1343,22 @@ Evidence: the prior forms from memory, not reread; Lean in the record's receipt
 Boundary: AI check, one session; runs without bound, webs with a recent giving and amounts beyond whole numbers not stated
 Integration: chapter's coupled-web paragraph, thesis T1's sentence and record table
 ```
+
+<a id="capacity-check"></a>
+## A check: drawers in turn whose capacity limits a draw (22 October 2026, SG15)
+
+An AI check (one session, 22 October), made while the Lean was written, of whether a capacity on a draw changes SG14's open-access outcome ([in-turn check](#in-turn-check)). **Verdict: known in its kind. In the dynamic commons with alternating moves the stock is depleted at the unique subgame-perfect outcome where each can take everything, and a bound on extraction can make conservation an equilibrium, since what one leaves is no longer all available to the other. The spine's form gives the general part exactly, drawing to capacity at the last step and wherever the other's later draw is fixed, over any law of what stands, with SG14's laws the case without a limit, and gives a witness in which restraint is the unique best response and a dependence on the web is kept.**
+
+| Known form | Where | Bearing |
+|---|---|---|
+| The alternating-move dynamic commons: depletion at the subgame-perfect outcome | Levhari and Mirman (1980) (from memory) | `Optimum.InTurn.within_zero_iff`: with no limit, SG14's every perfect profile draws everything |
+| Capacity or quota constraints on extraction change equilibrium conservation | the resource-economics literature on harvest capacity (from memory, not reread) | `Optimum.Holding.doubling_capacity`: a one-unit limit on the second makes leaving everything the first's unique best response |
+
+```text
+Result(s): new record drawers-in-turn-within-capacities (SG15, new laws of Becoming.Optimum)
+Delta: within capacities, each draws to capacity at the last step and wherever the other's later draw is fixed; with no limit SG14's laws; a limit on the other's draw can make restraint the unique best response, keeping a dependence
+Supplied premises / correspondence: SG14's model with floors; natural amounts; discrete steps. Correspondence: the alternating-move dynamic commons; capacity-constrained extraction
+Evidence: the prior forms from memory, not reread; Lean in the record's receipt
+Boundary: AI check, one session; profiles perfect within capacities away from the last step not characterized
+Integration: chapter §3.4, §7.1, item 10 and the record table
+```

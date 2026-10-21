@@ -103,6 +103,7 @@ The maximum sustainable yield at the level of greatest renewal, half of room in 
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T182853.888304Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json) | — |
 
 Aliases: `horizon optima hold the greatest renewal`, `courses ranked over a horizon`, `far-sight holds the levels of greatest renewal`, `maximum sustainable yield level`, `在视野上，最优保持在最大更新处`, `Becoming.Optimum.frontier_holds`, `Becoming.Optimum.most_iff`, `Becoming.Web.frontier_broken`
 

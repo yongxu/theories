@@ -1,0 +1,199 @@
+{
+  "schema_version": 2,
+  "id": "drawers-in-turn-within-capacities",
+  "title": {
+    "en": "Drawers in turn within capacities",
+    "zh": "容量内的轮流抽取者"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-10-21T22:17:52+00:00",
+  "statement": {
+    "en": "Drawers in turn whose capacity limits a draw draw to capacity at the last step and wherever the other's later draw is fixed, and unlimited are SG14's perfect profiles; a limit on the other's draw can make restraint the best response and keep the base.",
+    "zh": "抽取受容量限制的轮流抽取者在最后一步、以及在对方此后所抽固定之处抽到容量，无限制时即 SG14 的完美组合；对方抽取受限可使克制成为最优回应并保持基底。"
+  },
+  "laws": [
+    {
+      "en": "Where leaving the floor draws no less than what was left, what was left is the floor; leaving nothing where nothing draws less is its case.",
+      "zh": "留下下限所抽不少于所留时，所留即是下限；不留而所抽不少时，是其情形。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.eq_of_sub_le_sub"
+      ]
+    },
+    {
+      "en": "Perfect within capacities: each leaves at least its floor and at most what it is given, and at every step from every level each leaves what draws it the most among what it may leave; with no floor this is perfect.",
+      "zh": "容量内完美：各自至少留其下限、至多留所给，且在每步、从每个水平各自在可留者中留下使自己抽取最多者；无下限时即完美。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.BestWithin",
+        "Becoming.Optimum.InTurn.PerfectWithin",
+        "Becoming.Optimum.InTurn.within_zero_iff"
+      ]
+    },
+    {
+      "en": "Each draws to capacity at the last step; the second wherever it draws nothing after, the first wherever what it draws after does not depend on what it leaves.",
+      "zh": "各自在最后一步抽到容量；第二者在其此后不抽之处，第一者在其此后所抽不依赖所留之处。",
+      "declarations": [
+        "Becoming.Optimum.InTurn.second_at_floor",
+        "Becoming.Optimum.InTurn.first_at_floor",
+        "Becoming.Optimum.InTurn.last_at_floor"
+      ]
+    },
+    {
+      "en": "Witness: doubling over two steps, the second able to take one unit a step; a profile perfect within the capacities exists, in every one the first leaves everything at the first step from three and the dweller is kept, while with neither draw limited every perfect profile breaks it.",
+      "zh": "见证：两步倍增，第二者每步至多取一单位；容量内完美的组合存在，每个中第一者自三在第一步全留，居者得以保持；两者都不受限时每个完美组合都打断它。",
+      "declarations": [
+        "Becoming.Optimum.Holding.keepsFirst",
+        "Becoming.Optimum.Holding.keepsFirst_le",
+        "Becoming.Optimum.Holding.twice_sum",
+        "Becoming.Optimum.Holding.keepsFirst_best",
+        "Becoming.Optimum.Holding.only_three",
+        "Becoming.Optimum.Holding.doubling_capacity"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. SG14's model: any law G of what stands; two drawers in turn; plain sums over the steps that remain; rules reading the step and the level; each leaving at least a floor at each step and level (a capacity c is the floor z - c); natural amounts, discrete steps.",
+      "zh": "不加公理。SG14 的模型：任一所立之律 G；两个轮流的抽取者；其后各步之和；规则读取步与水平；各自在每步、每个水平至少留一下限（容量 c 即下限 z - c）；自然数量，离散步。"
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Which profiles are perfect within capacities away from the last step and the steps where the other's later draw is fixed.",
+      "zh": "在最后一步与对方此后所抽固定之步之外，容量内何种组合完美。",
+      "kind": "scope"
+    },
+    {
+      "en": "More than two drawers, drawing at once, or capacities that vary with the base.",
+      "zh": "多于两个抽取者、同时抽取，或随基底变化的容量。",
+      "kind": "scope"
+    },
+    {
+      "en": "That a limit always keeps the base: the witness shows that one can; the general law leaves it open.",
+      "zh": "限制总保持基底：见证表明可以；一般律未定。",
+      "kind": "non-implication"
+    }
+  ],
+  "counterexamples": [],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation"
+  ],
+  "validation_scope": {
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T221434.504947Z): the 13 declarations Becoming.Optimum gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 329; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T221434.504947Z）：Becoming.Optimum 新增的 13 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 329 节；未经人的独立审查。"
+  },
+  "next_delta": {
+    "en": "Profiles perfect within capacities away from the last step; more drawers; an independent review.",
+    "zh": "最后一步之外容量内的完美组合；更多抽取者；独立审查。"
+  },
+  "correspondence": {
+    "en": "The alternating-move dynamic commons depletes the stock at its subgame-perfect outcome (Levhari and Mirman 1980); a bound on extraction can make conservation an equilibrium.",
+    "zh": "交替行动的动态公地在其子博弈完美结果中耗尽存量（Levhari 与 Mirman 1980）；抽取之界可使保存成为均衡。"
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "aliases": [
+    "drawers in turn within capacities",
+    "capacity limits a draw",
+    "容量内的轮流抽取者",
+    "Becoming.Optimum.InTurn.last_at_floor",
+    "Becoming.Optimum.Holding.doubling_capacity"
+  ],
+  "dependencies": [
+    {
+      "id": "drawers-in-turn-draw-everything",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "The profile, its draws and perfect profiles are reused; perfect within capacities with no floor is its perfect, and its open item on capacities is answered in part.",
+        "zh": "沿用组合、其所抽取与完美组合；无下限的容量内完美即其完美，部分回答其关于容量的开放项。"
+      },
+      "interface": {
+        "output": {
+          "en": "Perfect, BestAt, perfect_ends, zero_of_le_sub, Web.perfect_broken.",
+          "zh": "Perfect、BestAt、perfect_ends、zero_of_le_sub、Web.perfect_broken。"
+        },
+        "input": {
+          "en": "Drawers whose capacity limits a draw.",
+          "zh": "抽取受容量限制的抽取者。"
+        },
+        "conditions": {
+          "en": "Floors at each step and level.",
+          "zh": "每步每个水平的下限。"
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+      }
+    }
+  ],
+  "related": [],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Optimum.Holding.doubling_capacity",
+        "Becoming.Optimum.Holding.keepsFirst",
+        "Becoming.Optimum.Holding.keepsFirst_best",
+        "Becoming.Optimum.Holding.keepsFirst_le",
+        "Becoming.Optimum.Holding.only_three",
+        "Becoming.Optimum.Holding.twice_sum",
+        "Becoming.Optimum.InTurn.BestAt",
+        "Becoming.Optimum.InTurn.BestWithin",
+        "Becoming.Optimum.InTurn.Perfect",
+        "Becoming.Optimum.InTurn.PerfectWithin",
+        "Becoming.Optimum.InTurn.eq_of_sub_le_sub",
+        "Becoming.Optimum.InTurn.firstDrawn",
+        "Becoming.Optimum.InTurn.first_at_floor",
+        "Becoming.Optimum.InTurn.last_at_floor",
+        "Becoming.Optimum.InTurn.levels",
+        "Becoming.Optimum.InTurn.perfect_ends",
+        "Becoming.Optimum.InTurn.secondDrawn",
+        "Becoming.Optimum.InTurn.second_at_floor",
+        "Becoming.Optimum.InTurn.within_zero_iff",
+        "Becoming.Optimum.InTurn.zero_of_le_sub",
+        "Becoming.Optimum.sub_le_sub_left_of_le",
+        "Becoming.Web.perfect_broken"
+      ],
+      "sha256": "50c37906fce3a368e8dc9a3b1ff584665ae9238a3eefa3db341d1ae8b904232d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json",
+      "role": "receipt",
+      "sha256": "b8fdc6970f0440b71b6aee8a0eb438a962dc76cd97684430c56be2c94a4be82b"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-RENEWAL-READING.md",
+      "role": "integration",
+      "sha256": "38cdfd48f28ad361eb8e32ca230593462cb9c78e2a6e82a78c39a8ef344c32e4"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md",
+      "role": "integration",
+      "sha256": "ad5a97e81d7339317a7a0279eaca58b655a293b90b4bf5ae72cb89d41494323d"
+    },
+    {
+      "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
+      "role": "statement",
+      "sha256": "740f6d588bfb7232ee88dc26c5b728f0d92b60cb0bcbbf42172fe26f37745983"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.Optimum",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "22 October 2026: added (SG15), drawers in turn whose capacity limits a draw; zero_of_le_sub now the case of eq_of_sub_le_sub; study section 329.",
+      "zh": "2026年10月22日：新增（SG15），抽取受容量限制的轮流抽取者；zero_of_le_sub 今为 eq_of_sub_le_sub 的情形；研究第 329 节。"
+    }
+  ]
+}

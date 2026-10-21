@@ -68,8 +68,8 @@
   ],
   "does_not_show": [
     {
-      "en": "Drawers whose capacities limit a draw, more than two drawers, or drawing at once with a rule of sharing.",
-      "zh": "抽取受容量限制的抽取者、多于两个抽取者，或按分享规则同时抽取。",
+      "en": "More than two drawers, or drawing at once with a rule of sharing; with capacities limiting a draw, which profiles are perfect away from the last step (record drawers-in-turn-within-capacities).",
+      "zh": "多于两个抽取者，或按分享规则同时抽取；抽取受容量限制时，最后一步之外何种组合完美（记录 drawers-in-turn-within-capacities）。",
       "kind": "scope"
     },
     {
@@ -97,8 +97,8 @@
     "zh": "Lean 4.29.1 合并检查器实查（回执 20261021T184941.328469Z）：Becoming.Optimum 新增的 15 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 324 节；未经人的独立审查。"
   },
   "next_delta": {
-    "en": "Capacities limiting a draw; more than two drawers or drawing at once; noisy or partial revision; an independent review.",
-    "zh": "容量限制抽取；多于两个抽取者或同时抽取；有噪声或部分的修订；独立审查。"
+    "en": "More than two drawers or drawing at once; noisy or partial revision; an independent review.",
+    "zh": "多于两个抽取者或同时抽取；有噪声或部分的修订；独立审查。"
   },
   "correspondence": {
     "en": "The dynamic commons with linear payoffs (Levhari and Mirman 1980): with no limit on a draw the subgame-perfect outcome is immediate exhaustion, here for every perfect profile of drawers in turn, by backward induction (Kuhn 1953; Selten 1965).",
@@ -174,6 +174,13 @@
         "en": "Revising toward best responses, from any profile, drawers in turn come to drawing everything within 2N rounds.",
         "zh": "向最优回应修订，自任一组合出发，轮流的抽取者在 2N 轮之内达到全部抽取。"
       }
+    },
+    {
+      "id": "drawers-in-turn-within-capacities",
+      "detail": {
+        "en": "With capacities limiting a draw, each draws to capacity at the last step, and a limit on the other's draw can make restraint the best response.",
+        "zh": "抽取受容量限制时，各自在最后一步抽到容量；对方抽取受限可使克制成为最优回应。"
+      }
     }
   ],
   "references": [
@@ -204,7 +211,7 @@
         "Becoming.Optimum.byDrawn",
         "Becoming.Web.perfect_broken"
       ],
-      "sha256": "7f4b54c8c00bd717638629701e8ff67a502690bcba38f1dc4cdbeff01d3d9deb"
+      "sha256": "50c37906fce3a368e8dc9a3b1ff584665ae9238a3eefa3db341d1ae8b904232d"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T184941.328469Z/verification.json",
@@ -224,19 +231,25 @@
     {
       "path": "theories/becoming/chapters/THE-THEORY-OF-BECOMING.md",
       "role": "statement",
-      "sha256": "f1cfd4c102d716474c2f082886bfa41c11fc981890646964b856ce6c07367ba7"
+      "sha256": "740f6d588bfb7232ee88dc26c5b728f0d92b60cb0bcbbf42172fe26f37745983"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json",
       "role": "receipt",
       "sha256": "dc32210cb9097648288ee1bb87b274883428747de6279faafd9d154d352d043f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json",
+      "role": "receipt",
+      "sha256": "b8fdc6970f0440b71b6aee8a0eb438a962dc76cd97684430c56be2c94a4be82b",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T213117.130056Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261021T221434.504947Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Optimum",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -250,6 +263,10 @@
     {
       "en": "22 October 2026, SG16: how drawers come to a mutual best response is answered for best-response revision (record revision-comes-to-drawing-everything, study section 326). Its laws are unchanged.",
       "zh": "2026年10月22日，SG16：抽取者如何达到相互最优回应已就最优回应修订回答（记录 revision-comes-to-drawing-everything，研究第 326 节）。其规律不变。"
+    },
+    {
+      "en": "22 October 2026, SG15: capacities limiting a draw are stated in part (record drawers-in-turn-within-capacities, study section 329); zero_of_le_sub now reads eq_of_sub_le_sub. Its laws are unchanged.",
+      "zh": "2026年10月22日，SG15：容量限制抽取已部分陈述（记录 drawers-in-turn-within-capacities，研究第 329 节）；zero_of_le_sub 今读取 eq_of_sub_le_sub。其规律不变。"
     }
   ]
 }

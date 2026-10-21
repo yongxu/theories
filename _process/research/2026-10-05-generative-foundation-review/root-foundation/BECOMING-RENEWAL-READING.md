@@ -14727,3 +14727,47 @@ Ren, 19 October 2026, after extending his database to Chinese culture: “请把
 **Not done.** The gaps, each to be claimed before it is written; the five decided kinds written into RO's and the 易传 map; collation with printed editions; the pre-Qin use of the names without a recorded witness; an independent human reading of the edition.
 
 **Self-review.** Every entry had three readings; every quotation, declaration, record link and 对照 kind in both chapters is checked by verify_zh.py; the edition's 經 were reviewed twice as one book; every review edit was applied only where its text occurs once, and the integrator's own edits are recorded with their reasons (kit `development/zhonghua/`).
+
+## 329. Drawers in turn whose capacity limits a draw (SG15)
+
+```text
+Result(s): new record drawers-in-turn-within-capacities (new laws of Becoming.Optimum); reuses
+       drawers-in-turn-draw-everything (the profile, its draws over the steps that remain, Perfect, perfect_ends,
+       Web.perfect_broken) and revision-comes-to-drawing-everything (its witness's web).
+Delta: SG14 proved every perfect profile of two drawers in turn draws everything where no capacity limits a draw. A
+       capacity limits what a drawer can take at a step: it leaves at least a floor, z - c of z
+       (Optimum.InTurn.BestWithin, PerfectWithin). With no limit, perfect within capacities is perfect
+       (within_zero_iff). In every profile perfect within capacities each draws to capacity at the last step
+       (last_at_floor); the second does wherever it draws nothing after (second_at_floor), and the first wherever
+       what it draws after does not depend on what it leaves (first_at_floor), through one step: where leaving the
+       floor draws no less than what was left, what was left is the floor (eq_of_sub_le_sub, of which SG14's
+       zero_of_le_sub is now the case). Away from those steps a limit can keep the base: under doubling over two
+       steps, the second able to take one unit a step and the first any amount, a profile perfect within the
+       capacities exists, and in every one the first leaves everything at the first step from three, so the source
+       stands at four and the dweller is kept; with neither draw limited every perfect profile breaks it
+       (Holding.doubling_capacity).
+Premises / correspondence: SG14's model (any law G of what stands; two drawers in turn; plain sums; rules reading the
+       step and the level), each leaving at least a floor; natural amounts, discrete steps. Correspondence: the
+       alternating-move dynamic commons (Levhari and Mirman 1980), here with a capacity on a draw.
+Evidence: core receipt 20261021T221434.504947Z (passed).
+Boundary: which profiles are perfect within capacities away from the last step and the steps where what the other draws
+       after is fixed; more than two drawers or drawing at once; capacities that vary with the base.
+Output → input: chapter §3.4, §7.1, §8.1 item 10 (EN, ZH), the record table; Optimum's header; significance review,
+       capacity check.
+```
+
+**The question.** SG14 showed that where neither drawer's draw is limited, every perfect profile of two drawers in turn draws everything, so far-sight on both sides does not keep a base that either alone may keep ([§324](#324-drawers-in-turn-each-ranking-courses-sg14)); SG16 showed that adjustment comes to the same ([§326](#326-how-drawers-in-turn-come-to-a-mutual-best-response-sg16)). Both rest on drawers able to take everything. A capacity, the most a drawer can take at a step, is the first limit any actual drawer has. The question is whether the open-access outcome survives it.
+
+**What was built** (new laws of `Becoming.Optimum`, pure core, every axiom report empty).
+
+- *Perfect within capacities* (`Optimum.InTurn.BestWithin`, `Optimum.InTurn.PerfectWithin`, `Optimum.InTurn.within_zero_iff`). A drawer with a capacity leaves at least a floor; each best response ranges over what it may leave. With both floors at nothing, a profile is perfect within the capacities exactly where it is perfect, so SG14's laws are the case without a limit.
+- *Drawing to capacity* (`Optimum.InTurn.eq_of_sub_le_sub`, `Optimum.InTurn.second_at_floor`, `Optimum.InTurn.first_at_floor`, `Optimum.InTurn.last_at_floor`). Where leaving the floor draws no less than what was left, what was left is the floor; SG14's `zero_of_le_sub` is now its case (rule 9). The second leaves its floor wherever it draws nothing after, the first wherever what it draws after does not depend on what it leaves, and at the last step both do.
+- *The witness* (`Optimum.Holding.keepsFirst`, `Optimum.Holding.keepsFirst_le`, `Optimum.Holding.twice_sum`, `Optimum.Holding.keepsFirst_best`, `Optimum.Holding.only_three`, `Optimum.Holding.doubling_capacity`). What stands after a step is twice what is left; over two steps the second can take one unit a step and the first any amount. The profile in which the first leaves everything at the first step from two up and draws everything otherwise, and the second takes its unit, is perfect within the capacities, so the law is not vacuous. In every such profile, from three, the second takes its unit at both steps, since it draws nothing after the first; so what the first leaves at the first step, less the second's unit, doubles for it to draw at the last, and leaving all three, which draws four, is its only best response. The source stands at four after the first step, and a dweller needing two is kept across it. With neither draw limited, every perfect profile breaks it there (`Web.perfect_broken`).
+
+**Against the prior form** ([significance review, capacity check](BECOMING-SIGNIFICANCE-REVIEW.md#capacity-check)). In the dynamic commons with alternating moves the stock is depleted at the unique subgame-perfect outcome where each can take everything. A bound on extraction changes the game: what one leaves is no longer all available to the other, and conservation by the unconstrained player can be an equilibrium. The spine's form states the general part exactly, drawing to capacity where the other's later draw is fixed, over any law of what stands, and gives the witness on the web as a dependence kept.
+
+*Reading* [AI reading, D45]. Between drawers who each rank by what they draw, far-sight and adjustment do not keep a shared base (SG14, SG16); a limit on what the other can take can: where the other cannot take everything left, what one leaves renews for itself, and restraint is its best response. A limit on drawing is a relation of the drawers to the base, not a preference, and it is that relation that the ranking reads.
+
+**Self-review.** Every premise is used: the floors bound each best response, and the steps where the other's later draw is fixed are where the drawer's continuation does not depend on what it leaves. The general law is weaker than SG14's: away from those steps the limit can keep the base, and the witness shows that it does. The witness's uniqueness is shown from three, where leaving everything is strictly best; from two the first is indifferent between leaving everything and nothing. Which profiles are perfect within capacities away from the last step is not characterized. Limits: SG14's model; two drawers; capacities fixed at a step.
+
+**The run.** Core 285 modules and 12,304 theorems, instances 7 and 567, applications 6 and 179; 15 Lean steps ran, 1,189 reused. 13 declarations added to Becoming.Optimum, 10 of them theorems, none removed, all with empty axiom reports; `zero_of_le_sub` now reads `eq_of_sub_le_sub`. Connectivity: 647 of 13,050 apart, unchanged; no new apart root, every new law stated on the web or read by a law that is, the witness on the flow; register check passes.
