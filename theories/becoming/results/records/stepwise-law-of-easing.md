@@ -34,7 +34,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T135044.825185Z): the 9 declarations Becoming.Ranking and Becoming.JointDraw gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 314; not independently reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261021T135044.825185Z): the 9 declarations Becoming.Ranking and Becoming.JointDraw gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session, with no separate reviewer; author review in study section 315; not independently reviewed by a person.
 
 Canonical source: [Ranking.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean)
 
@@ -75,7 +75,7 @@ Aliases: `the stepwise law of easing`, `restraint under the stepwise reading`, `
 <a id="history--沿革"></a>
 ### History
 
-- 21 October 2026: added (ST1), the stepwise law of easing: under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing; restraint over any number of drawers under the stepwise reading where the restrained flow takes within what it gives; study section 314.
+- 21 October 2026: added (ST1), the stepwise law of easing: under easing the stepwise reading withdraws exactly the events the easing course undermines; a course whose levels never fall undermines nothing; restraint over any number of drawers under the stepwise reading where the restrained flow takes within what it gives; study section 315.
 
 </details>
 
