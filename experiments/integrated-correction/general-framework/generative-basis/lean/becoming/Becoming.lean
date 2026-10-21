@@ -320,8 +320,12 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   over `Nat` and `Prop`, importing the frame. Balance and the other premises are gluings or local
   states stated where they are used (`Becoming.Readings`).
 * `Becoming.Witnesses` (L1): the models the spine builds again and again.
-* `Becoming.Frame` (L0): a frame is a process with realized claims; runs,
-  reachability, invariants and new realization.
+* `Becoming.Frame` (L0): a frame is a process with realized claims; runs, the one closure
+  of a relation, reachability, invariants and new realization. A process's reach is the closure
+  of its steps and an invariant is a region closed under them, so what is kept by the steps
+  holds wherever the process reaches because the closure is closed; the closures of the later
+  layers (feeding, influence, reach, sharing, coupling, a presupposition's scope) are this
+  closure under their relations.
 * `Becoming.Laws` (L1): the law-level notions the layers share, stated once just after the frame (no premise):
   determined processes (`Determined`), laws of change and partial laws read as processes and run
   along a course (`Assurance.ofMap`, `Assurance.ofPartial`, `Assurance.trace_ofPartial_iff`), and
@@ -1236,7 +1240,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   exhibit that losing one need not return, and withholding both can leave no balancing path.
   The module distinguishes support from activity and possible from actual carrying.
 * `Becoming.Feedback` (L1): what feedback registers and what a part reaches, with no premise
-  beyond the representation. Closures under relations give five levels: a formation's feeding
+  beyond the representation. The frame's one closure under five relations gives five levels: a formation's feeding
   closure lies within its influence closure, what can affect it, and the influence closure and
   the reach closure, what its exchange can affect, lie within its system, the closure under
   sharing a condition, a class. Each inclusion can be strict, the influence and reach closures
@@ -1266,7 +1270,7 @@ every module importing one of them; L1 holds the rest. No module imports one of 
   link would, and a formation taking part only in one condition is alone without it.
 * `Becoming.EdgeClosure` (L1): the seed–edge closure, what the process whose steps are the
   edges reaches from a seed, and the core's closure under a relation as this closure from one
-  seed.
+  seed, derived from reach being the closure of the steps; it imports only the frame.
 * `Becoming.SeedReach` (L1): reach from seeds is the least invariant, with no premise. A
   configuration is separated from the seeds by an invariant property exactly where it is not
   reached; that every process reaches every configuration not so separated is double-negation

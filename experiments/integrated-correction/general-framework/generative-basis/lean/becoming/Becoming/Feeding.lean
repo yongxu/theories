@@ -28,13 +28,15 @@ under the local conditions each statement names.
   when the other takes part at a step no later and gives to a condition the first then
   requires, carried from the one step to the other (`Flow.FedAcross`). Same-step feeding is
   exactly feeding across steps at delay zero (`Flow.fedBy_iff_fedAcross`). The closure across
-  steps (`Flow.ClosedAcross`, `Flow.WithinFeedingAcross`) holds its formation, is transitive,
-  holds every feeder across steps and is itself closed (`Flow.WithinFeedingAcross.refl`,
-  `Flow.WithinFeedingAcross.trans`, `Flow.WithinFeedingAcross.of_fedAcross`,
-  `Flow.closedAcross_within`), so it is the least region closed under feeding across steps that
-  holds the formation. It contains the feeding closure (`Flow.WithinFeeding.across`). What lies
-  beyond it gives nothing, at any step, to a condition carried to a step at which a member
-  requires it (`Flow.beyond_gives_nothing_across`). Where nothing given stands after the step
+  steps (`Flow.ClosedAcross`, `Flow.WithinFeedingAcross`) is by definition the frame's one
+  closure under being fed across steps (`Flow.FedFromAcross`), so by that closure's laws it
+  holds its formation, is transitive, holds every feeder across steps and is itself closed
+  (`Flow.WithinFeedingAcross.refl`, `Flow.WithinFeedingAcross.trans`,
+  `Flow.WithinFeedingAcross.of_fedAcross`, `Flow.closedAcross_within`): the least region closed
+  under feeding across steps that holds the formation. It contains the feeding closure, the
+  closure of a smaller relation (`Flow.WithinFeeding.across`). What lies beyond it gives
+  nothing, at any step, to a condition carried to a step at which a member requires it
+  (`Flow.beyond_gives_nothing_across`, through `WithinClosure.not_rel`). Where nothing given stands after the step
   it is given across, feeding across steps is feeding at a common step
   (`Flow.fedBy_of_fedAcross_unheld`) and the two closures agree
   (`Flow.withinFeedingAcross_iff_of_unheld`): they part only through what is held.
@@ -231,15 +233,21 @@ def FedAcross (e e' : F × Nat) : Prop :=
   e'.2 ≤ e.2 ∧ ∃ c, W.requires e.2 e.1 c ∧ e'.1 ∈ L.present e'.2 ∧ 0 < L.give e'.2 e'.1 c ∧
     L.CarriedTo W c e'.2 e.2
 
-/-- A region of formations is closed under feeding across steps: whatever feeds the
-continuation of a member across steps is a member. -/
-def ClosedAcross (region : F → Prop) : Prop :=
-  ∀ e e' : F × Nat, region e.1 → L.FedAcross W e e' → region e'.1
+/-- `g`'s continuation is fed across steps from `h`: at some step `h` feeds it across steps
+from a step no later. -/
+def FedFromAcross (g h : F) : Prop :=
+  ∃ s t, L.FedAcross W (g, t) (h, s)
 
-/-- `g` lies within the closure across steps of `f`: every region closed under feeding across
-steps that holds `f` holds `g`. -/
+/-- A region of formations is closed under feeding across steps: whatever feeds the
+continuation of a member across steps is a member. The frame's closedness under being fed
+across steps. -/
+def ClosedAcross (region : F → Prop) : Prop :=
+  ClosedUnder (L.FedFromAcross W) region
+
+/-- `g` lies within the closure across steps of `f`: the frame's closure under being fed across
+steps, every region closed under feeding across steps that holds `f` holding `g`. -/
 def WithinFeedingAcross (f g : F) : Prop :=
-  ∀ region : F → Prop, L.ClosedAcross W region → region f → region g
+  WithinClosure (L.FedFromAcross W) f g
 
 variable {L W}
 
@@ -258,31 +266,31 @@ theorem FedAcross.of_fedBy {e e' : F × Nat} (fed : L.FedBy W e e') : L.FedAcros
 /-- A region closed under feeding across steps is closed under feeding. -/
 theorem ClosedAcross.fedClosed {region : F → Prop} (closed : L.ClosedAcross W region) :
     L.FedClosed W region :=
-  fun e e' holds fed => closed e e' holds (FedAcross.of_fedBy fed)
+  fun g h holds ⟨t, fed⟩ => closed g h holds ⟨t, t, FedAcross.of_fedBy fed⟩
 
 /-- The closure across steps contains the feeding closure. -/
 theorem WithinFeeding.across {f g : F} (within : L.WithinFeeding W f g) :
     L.WithinFeedingAcross W f g :=
-  fun region closed holds => within region closed.fedClosed holds
+  WithinClosure.mono (fun _ _ ⟨t, fed⟩ => ⟨t, t, FedAcross.of_fedBy fed⟩) within
 
 /-- A formation lies within its own closure across steps. -/
 theorem WithinFeedingAcross.refl (f : F) : L.WithinFeedingAcross W f f :=
-  fun _ _ holds => holds
+  WithinClosure.refl f
 
 /-- The closure across steps is transitive. -/
 theorem WithinFeedingAcross.trans {f g h : F} (first : L.WithinFeedingAcross W f g)
     (second : L.WithinFeedingAcross W g h) : L.WithinFeedingAcross W f h :=
-  fun region closed holds => second region closed (first region closed holds)
+  WithinClosure.trans first second
 
 /-- What feeds a formation's continuation across steps lies within its closure across
 steps. -/
 theorem WithinFeedingAcross.of_fedAcross {e e' : F × Nat} (fed : L.FedAcross W e e') :
     L.WithinFeedingAcross W e.1 e'.1 :=
-  fun _ closed holds => closed e e' holds fed
+  WithinClosure.of_rel ⟨e'.2, e.2, fed⟩
 
 /-- The closure across steps of a formation is closed under feeding across steps. -/
 theorem closedAcross_within (f : F) : L.ClosedAcross W (L.WithinFeedingAcross W f) :=
-  fun _ _ within fed => within.trans (WithinFeedingAcross.of_fedAcross fed)
+  closedUnder_withinClosure f
 
 /-- What lies beyond a formation's closure across steps gives nothing, at any step, to a
 condition carried from that step to a later or equal one at which a member requires it. -/
@@ -291,8 +299,7 @@ theorem beyond_gives_nothing_across {f g h : F} (within : L.WithinFeedingAcross 
     (requires : W.requires t g c) (carried : L.CarriedTo W c s t)
     (present : h ∈ L.present s) : L.give s h c = 0 :=
   eq_zero_of_not_pos fun gives =>
-    beyond (within.trans (WithinFeedingAcross.of_fedAcross (e := (g, t)) (e' := (h, s))
-      ⟨early, c, requires, present, gives, carried⟩))
+    WithinClosure.not_rel within beyond ⟨s, t, early, c, requires, present, gives, carried⟩
 
 /-- Where nothing given stands after the step it is given across, feeding across steps is
 feeding at a common step. -/
@@ -311,8 +318,8 @@ steps is the feeding closure: the two part only through what is held. -/
 theorem withinFeedingAcross_iff_of_unheld
     (unheld : ∀ s h c, h ∈ L.present s → 0 < L.give s h c → W.level (s + 1) c = 0)
     {f g : F} : L.WithinFeedingAcross W f g ↔ L.WithinFeeding W f g :=
-  ⟨fun within region closed holds => within region
-      (fun e e' inside fed => closed e e' inside (fedBy_of_fedAcross_unheld unheld fed)) holds,
+  ⟨WithinClosure.mono fun _ _ ⟨s, _, fed⟩ => match fedBy_of_fedAcross_unheld unheld fed with
+     | ⟨same, c, requires, present, gives⟩ => ⟨s, rfl, c, same ▸ requires, present, gives⟩,
    WithinFeeding.across⟩
 
 end Across
@@ -534,12 +541,11 @@ theorem fed_across : flow.FedAcross web (.young, 2) (.parent, 0) :=
 /-- The young alone is closed under feeding: nothing gives to the store at a step at which
 the young requires it. -/
 theorem young_alone : flow.FedClosed web fun f => f = .young
-  | (.parent, _), _, holds, _ => Formation.noConfusion holds
-  | (.young, 0), _, _, ⟨_, _, requires, _, _⟩ => nomatch requires
-  | (.young, 1), _, _, ⟨_, _, requires, _, _⟩ => nomatch requires
-  | (.young, _ + 2), (.young, _), _, _ => rfl
-  | (.young, _ + 2), (.parent, 0), _, ⟨same, _⟩ => Nat.noConfusion same
-  | (.young, _ + 2), (.parent, _ + 1), _, ⟨_, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)
+  | .parent, _, holds, _ => Formation.noConfusion holds
+  | .young, _, _, ⟨0, _, _, requires, _, _⟩ => nomatch requires
+  | .young, _, _, ⟨1, _, _, requires, _, _⟩ => nomatch requires
+  | .young, .young, _, _ => rfl
+  | .young, .parent, _, ⟨_ + 2, _, _, _, _, gives⟩ => absurd gives (Nat.lt_irrefl 0)
 
 /-- The parent lies beyond the young's feeding closure. -/
 theorem parent_beyond : ¬ flow.WithinFeeding web .young .parent :=
